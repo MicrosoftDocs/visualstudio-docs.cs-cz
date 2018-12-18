@@ -1,6 +1,6 @@
 ---
-title: Začínáme s R
-description: Návod k používání R v sadě Visual Studio, včetně vytváření projektu, interaktivních okna kódu úprav a ladění.
+title: Začít kurz jazyka R
+description: Návod k využití R v sadě Visual Studio včetně vytváření projektu, interaktivní okno kódu úprav a ladění.
 ms.date: 06/29/2017
 ms.prod: visual-studio-dev15
 ms.technology: vs-rtvs
@@ -10,72 +10,73 @@ ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: c4ec2ce9a399c363427ef80087c1db1e8ef68d2c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 88387485b952bf201a222741a6b3d02861df186c
+ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238376"
 ---
-# <a name="getting-started-with-r-tools-for-visual-studio"></a>Začínáme s R Tools pro sadu Visual Studio
+# <a name="get-started-with-r-tools-for-visual-studio"></a>Začínáme s nástroji R pro Visual Studio
 
-Až budete mít R nástrojů pro Visual Studio (RTVS) nainstalován (viz [instalace](installing-r-tools-for-visual-studio.md)), můžete rychle získat chuť prostředí, které poskytují tyto nástroje. 
+Jakmile budete mít nástroje R pro Visual Studio (RTVS) nainstalovaná (naleznete v tématu [instalace](installing-r-tools-for-visual-studio.md)), můžete rychle získat představu o tom, které poskytují tyto nástroje prostředí. 
 
-## <a name="create-an-r-project"></a>Vytvoření projektu R
+## <a name="create-an-r-project"></a>Vytvoření projektu jazyka R
 
-1. Spuštění sady Visual Studio.
-1. Zvolte **soubor > Nový > projekt...** (Ctrl + Shift + N)
-1. Vyberte z v části "R projekt" **šablony > R**, název a umístění poskytnout projekt a vyberte **OK**:
+1. Spusťte sadu Visual Studio.
+1. Zvolte **souboru** > **nové** > **projektu** (**Ctrl**+**Shift** + **N**)
+1. Vyberte "projekt R" v rámci **šablony** > **R**, dejte projektu název a umístění a pak vyberte **OK**:
 
    ![Dialogové okno Nový projekt pro R v sadě Visual Studio (RTVS v VS2017)](media/getting-started-01-new-project.png)
 
-1. Po vytvoření projektu, zobrazí se následující windows:
+1. Po vytvoření projektu se zobrazí následující okna:
 
-    - Na pravé straně je Průzkumníka Visual Studio řešení, kde uvidíte projektu uvnitř obsahujícího *řešení*. (Řešení může obsahovat libovolný počet projekty různých typů; viz [projekty](r-projects-in-visual-studio.md) podrobnosti.
-    - V levé horní části je nový soubor R (`script.R`) kde můžete upravit zdrojového kódu se všemi sady Visual Studio je úpravy funkce.
-    - V dolní vlevo **R interaktivní** okno, ve kterém můžete interaktivně vývoj a testování kódu.
+    - Na pravé straně je Průzkumníku řešení Visual Studio, kde se zobrazí váš projekt uvnitř obsahujícího *řešení*. (Řešení může obsahovat libovolný počet různých typů projektů, naleznete v tématu [projekty](r-projects-in-visual-studio.md) podrobnosti.
+    - V levém horním rohu se nový soubor R (`script.R`) ve kterém můžete upravit zdrojový kód se všemi sady Visual Studio je funkce úprav.
+    - V levém dolním je **interaktivní R** okno, ve kterém můžete interaktivně vyvíjet a testovat kód.
 
 > [!Note]
-> Můžete použít **R interaktivní** okno bez nutnosti všechny projekty otevřené a to i když je načten jiný typ projektu. Právě vyberte **R nástroje > Windows > R interaktivní** kdykoli.
+> Můžete použít **interaktivní R** okno bez nutnosti všechny projekty otevřít a dokonce i když se načte jiný typ projektu. Stačí vybrat **nástroje R** > **Windows** > **interaktivní R** kdykoli.
 
-## <a name="explore-the-interactive-window-and-intellisense"></a>Prozkoumat interaktivní okno a IntelliSense
+## <a name="explore-the-interactive-window-and-intellisense"></a>Prozkoumat interaktivní okno a technologie IntelliSense
 
-1. Test, který interaktivních okna pracuje tak, že zadáte v `3 + 4` a pak zadejte zobrazíte výsledek:
+1. Test, který interaktivní okno funguje tak, že zadáte `3 + 4` a potom **Enter** k zobrazení výsledku:
 
-    ![R interaktivních okna ve Visual Studio 2017 (VS2017)](media/getting-started-02-interactive1.png)
+    ![Interaktivní okno R v sadě Visual Studio 2017 (VS2017)](media/getting-started-02-interactive1.png)
 
-1. Zadejte něco obtížnější, `ds <- c(1.5, 6.7, 8.9) * 1:12`a potom zadejte `ds` zobrazíte výsledek:
+1. Zadejte něco o něco složitější, `ds <- c(1.5, 6.7, 8.9) * 1:12`a pak zadejte `ds` k zobrazení výsledku:
 
-    ![Další příklad interaktivní R v sadě Visual Studio](media/getting-started-03-interactive2.png)
+    ![Další příklad, interaktivní R v sadě Visual Studio](media/getting-started-03-interactive2.png)
 
-1. Zadejte `mean(ds)` , ale Všimněte si, že jakmile zadáte `m` nebo `me`, Visual Studio IntelliSense poskytuje možnosti automatického dokončování. Po dokončení, které chcete je vybrali v seznamu, stiskněte klávesu Tab, chcete-li vložit. Výběr pomocí klávesy se šipkami nebo myš, můžete změnit.
+1. Zadejte `mean(ds)` , ale Všimněte si, že nejdříve zadáte `m` nebo `me`, poskytuje možnosti automatického dokončování IntelliSense ve Visual Studio. Po dokončení chcete, aby se v seznamu vyberete, stisknutím klávesy **kartu** k vložení; můžete změnit výběr pomocí kláves se šipkami nebo myši.
 
-    ![Zobrazování kódu technologie IntelliSense](media/getting-started-04-intellisense1.png)
+    ![Povolí, nebude při zadávání kódu technologie IntelliSense](media/getting-started-04-intellisense1.png)
 
-1. Po dokončení `mean`, zadejte levé závorky `(` a poznamenejte si, jak technologie IntelliSense vám vložené nápovědy pro funkce:
+1. Po dokončení `mean`, zadejte levou závorku `(` a Všimněte si, jak technologie IntelliSense umožňuje vložená Nápověda pro funkci:
 
-    ![Zobrazení nápovědy pro funkci IntelliSense](media/getting-started-05-intellisense2.png)
+    ![Technologie IntelliSense zobrazuje nápovědu pro funkci](media/getting-started-05-intellisense2.png)
 
-1. Dokončení řádku `mean(ds)` a stiskněte klávesu Enter, chcete-li zobrazit výsledek (`[1] 39.51667`).
+1. Dokončení řádku `mean(ds)` a stiskněte klávesu Enter k zobrazení výsledku (`[1] 39.51667`).
 
-1. Interaktivních okna je integrována nápovědy, takže zadávání `?mean` zobrazí nápovědu pro tuto funkci v **pomoci R** oken v sadě Visual Studio. Podrobnosti najdete v tématu [Nápověda v R nástrojů pro Visual Studio](getting-started-help.md).
+1. Interaktivní okno je integrovaná s nápovědou, takže zadávání `?mean` zobrazí nápovědu pro tuto funkci v **nápovědy** okna v sadě Visual Studio. Podrobnosti najdete v tématu [nápovědu v nástroje jazyka R pro Visual Studio](getting-started-help.md).
 
-    ![R pomůže oken v sadě Visual Studio](media/getting-started-06-help.png)
+    ![Okno Nápověda jazyka R v sadě Visual Studio](media/getting-started-06-help.png)
 
-1. Některé příkazy, jako například `plot(1:100)`, otevřete nové okno v sadě Visual Studio, když nelze zobrazit výstup přímo v okně interaktivní:
+1. Některé příkazy, jako například `plot(1:100)`, otevřete nové okno v sadě Visual Studio, když výstup nelze zobrazit přímo v interaktivním okně:
 
-    ![Zobrazení vykreslení v sadě Visual Studio](media/getting-started-07-plot-window.png)
+    ![Zobrazení diagramů v sadě Visual Studio](media/getting-started-07-plot-window.png)
 
-Interaktivních okna také umožňuje zkontrolovat historii, načtěte a uložit pracovní prostory, připojení k ladicí program a interakci s soubory zdrojového kódu místo pomocí kopírování vkládání. V tématu [práce s interaktivních okna R](interactive-repl-for-r-in-visual-studio.md) podrobnosti.
+Interaktivní okno také umožňuje zkontrolovat historii, načíst a uložit pracovní prostory, připojit ladicí program a interakci s souborů se zdrojovým kódem místo pomocí kopírování a vkládání. Zobrazit [práce s interaktivním okně R](interactive-repl-for-r-in-visual-studio.md) podrobnosti.
 
 ## <a name="experience-code-editing-features"></a>Funkce pro úpravu kódu prostředí
 
-Práce s interaktivních okna stručně ukazuje základní úpravy funkce jako je technologie IntelliSense, které lze použít také v editoru kódu. Pokud zadáte stejný kód jako před, zobrazí stejné automatické doplňování a výzvy IntelliSense, ale není výstup.
+Práce s oknem interaktivní stručně ukazuje základních funkcí pro úpravy jako například IntelliSense, které fungují také v editoru kódu. Pokud zadáte stejný kód jako dříve, se zobrazí stejné automatického dokončování a výzev technologie IntelliSense, ale ne ve výstupu.
 
-Psaní kódu v `.R` souboru umožňuje zobrazit všech vašich kódech najednou a je jednodušší a provést změny malé rychle zjistit výsledek spuštěním kódu v okně interaktivní. Může mít libovolný počet souborů tak, jak chcete v projektu. Pokud je kód v souboru, můžete také spustit ho krok za krokem v ladicím programu (popsané dále v tomto článku). Tyto funkce jsou užitečné, když jste vývoj výpočetní algoritmy a psaní kódu k manipulaci s jeden nebo více datových sad, zejména v případě, že chcete prověřit všechna mezilehlých výsledků.
+Psaní kódu v *. R* soubor si můžete najednou zobrazit veškerý kód a usnadňuje dělat malé změny a pak se krátce zobrazit výsledek spuštěním kódu v interaktivním okně. Je také možné tolik souborů v projektu. Pokud je kód v souboru, můžete ho spustit také podrobné v ladicím programu (popsáno dále v tomto článku). Tyto funkce jsou užitečné při vývoji výpočetní algoritmy a psaní kódu pro manipulaci s jeden nebo více datových sad, zejména v případě, že chcete prozkoumat všechny mezilehlé výsledky.
 
-Jako příklad následující kroky vytvoření trochu kódu a prozkoumejte [centrální věta Limit](https://en.wikipedia.org/wiki/Central_limit_theorem) (Wikipedia). (V tomto příkladu je přizpůsobené z *R kuchařka* podle Paul Teetor.)
+Jako příklad, následujícím postupem se vytvoří pár kódu [centrální Limit věta](https://en.wikipedia.org/wiki/Central_limit_theorem) (Wikipedia). (V tomto příkladu jsou upraveny z *R kuchařka* podle Paul Teetor.)
 
-1. V `script.R` editor, zadejte následující kód:
+1. V `script.R` editoru zadejte následující kód:
 
     ```R
     mu <- 50
@@ -85,18 +86,18 @@ Jako příklad následující kroky vytvoření trochu kódu a prozkoumejte [cen
     plot(density(pop), main = "Population Density", xlab = "X", ylab = "")
     ```
 
-1. Rychle zobrazit výsledky, vyberte všechny kód (Ctrl + A) a potom stiskněte klávesu Ctrl + Enter nebo klikněte pravým tlačítkem a vyberte **provést v interaktivní**. Na vybraný úsek kódu je spusťte v okně interaktivní jako, pokud jste zadali přímo, zobrazuje výsledek v okně výkresu:
+1. Pokud chcete rychle zobrazit výsledky, vyberte veškerý kód (**Ctrl**+**A**), stiskněte klávesu **Ctrl**+**Enter** nebo Klikněte pravým tlačítkem a vyberte **provést v Interactive**. Všechny vybrané kód spuštěný v interaktivním okně, jako kdyby jste ho zadali přímo, v okně diagram zobrazující výsledek:
 
-    ![Zobrazení vykreslení v sadě Visual Studio](media/getting-started-08-plot1.png)
+    ![Zobrazení diagramů v sadě Visual Studio](media/getting-started-08-plot1.png)
 
-1. Pro jeden řádek stačí stisknout klávesu Ctrl + Enter kdykoli spustit tento řádek v okně interaktivní.
+1. Pro jeden řádek, stačí stisknout kombinaci kláves **Ctrl**+**Enter** kdykoli spustit tento řádek v interaktivním okně.
 
 > [!Tip]
-> Další informace vzor úpravou a kombinace kláves Ctrl + Enter (nebo Vybrat vše, co se Ctrl + a stisknutím klávesy Ctrl + Enter) rychlé spuštění kódu. Díky tomu je mnohem efektivnější než pomocí myši pro stejné operace.
+> Další vzor úpravou a stisknutím **Ctrl**+**Enter** (nebo výběr všechno, co s **Ctrl**+**A** a stisknutím klávesy **Ctrl**+**Enter**) rychlé spuštění kódu. To je mnohem efektivnější než pomocí myši pro stejné operace.
 > 
-> Kromě toho můžete můžete přetahování okno výkresu mimo rámec Visual Studio a umístěte ho jinak můžete kdykoli na zobrazení. Pak můžete nastavit velikost okna výkresu do dimenzí, které chcete a ukládat ho do obrazu nebo soubor PDF.
+> Kromě toho lze přetáhnout a rozevírací okno diagramů mimo rámec sady Visual Studio a umístěte ho jinak můžete kdykoli na obrazovce. Pak můžete změnit velikost okna diagramů dimenzím chcete a uložte ho do obrazu nebo souboru PDF.
 
-1. Přidejte další pár řádků kódu se má vložit druhého grafu:
+1. Přidejte několik další řádky kódu, které zahrnují druhý graf:
 
     ```R
     n <- 30
@@ -104,11 +105,11 @@ Jako příklad následující kroky vytvoření trochu kódu a prozkoumejte [cen
     lines(density(samp.means))
     ```
 
-1. Stiskněte kombinaci kláves Ctrl + A a Ctrl + Enter znovu spustit kód, který vytvořil následující výsledek:
+1. Stisknutím klávesy **Ctrl**+**A** a **Ctrl**+**Enter** znovu pro spuštění kódu, vytváření následující výsledky:
 
-    ![Aktualizované duální vykreslení v sadě Visual Studio](media/getting-started-09-plot2.png)
+    ![Aktualizované duální diagramů v sadě Visual Studio](media/getting-started-09-plot2.png)
 
-1. Problém je, že první výkresu Určuje svislé měřítko, druhý vykreslení (s `lines`) nevejde. Chcete-li tento problém, je potřeba nastavit `ylim` parametr na `plot` volání, ale provést, aby byly správně, je potřeba přidat kód pro výpočet maximální hodnoty svislé. Díky této řádek po řádku v okně interaktivní je nepohodlná, protože potřebujeme ke změně uspořádání kód, který použije `samp.means` před voláním `plot`. V souboru kódu ale snadno bychom mohli příslušné úpravy:
+1. Problém je, že první graf určuje vertikální škálování, tak druhá vykreslení (s `lines`) nevejde. Chcete-li tento problém, musíme nastavit `ylim` parametru u `plot` volat, ale udělat tak, aby správně potřebujeme přidat kód pro výpočet svislé maximální hodnoty. Provádění tento řádek po řádku v interaktivním okně je nevhodné, protože potřebujeme k uspořádání kódu pro použití `samp.means` před voláním `plot`. V souboru kódu ale snadno bychom mohli příslušné úpravy:
 
     ```R
     mu <- 50
@@ -126,45 +127,45 @@ Jako příklad následující kroky vytvoření trochu kódu a prozkoumejte [cen
     lines(density(samp.means))
     ```
 
-1. CTRL + A Ctrl + Enter znovu zobrazte a výsledek:
+1. **CTRL**+**A** a **Ctrl**+**Enter** znovu, abyste viděli výsledek:
 
-    ![Aktualizované duální vykreslení v sadě Visual Studio, škálovat správně](media/getting-started-10-plot3.png)
+    ![Aktualizované duální diagramů v sadě Visual Studio správně škálovat](media/getting-started-10-plot3.png)
 
-Je informace, které můžete provést v editoru. Podrobnosti najdete v tématu [úpravy kódu](editing-r-code-in-visual-studio.md), [IntelliSense](r-intellisense.md), a [výstřižky kódu](code-snippets-for-r.md).
+Existuje více, které vám pomůžou v editoru. Podrobnosti najdete v tématu [kódu jazyka R upravit](editing-r-code-in-visual-studio.md), [IntelliSense](r-intellisense.md), a [fragmenty kódu](code-snippets-for-r.md).
 
-## <a name="debugging-your-code"></a>Ladění kódu
+## <a name="debug-your-code"></a>Ladění kódu
 
-Jeden z klíčů síly sady Visual Studio je její ladění uživatelského rozhraní. RTVS staví na této silné foundation a přidá inovativní uživatelského rozhraní, jako [proměnné Průzkumníka a Data tabulky prohlížeč](variable-explorer.md). Zde právě Podívejme se první na ladění.
+Jednou z klíčových předností sady Visual Studio je jeho ladění uživatelského rozhraní. RTVS sestavení na tomto silné a přidá inovativní uživatelského rozhraní, jako [Průzkumníka proměnných](variable-explorer.md). Tady stačí Pojďme se první pohled na ladění.
 
-1. Pokud chcete začít, resetovat aktuální pracovní prostor Vymazat všechno, co provedete krok, pokud pomocí **R nástroje > relace > resetovat** příkazu nabídky. Ve výchozím nastavení vše, co můžete udělat v okně interaktivní nabíhají s aktuální relací, který pak používá také ladicího programu. Resetováním relace je zajistit, že relaci ladění začíná žádná existující data. **Resetovat** příkazu, ale neovlivní vaše `script.R` zdrojového souboru, vzhledem k tomu, který má spravovat a uložit mimo pracovní prostor.
+1. Pokud chcete začít, resetování aktuálního pracovního prostoru všechno, co jste provedli zatím pomocí zrušte **nástroje R** > **relace** > **resetování** příkazu nabídky. Ve výchozím nastavení všechno, co dělat v interaktivním okně běžné u aktuální relace, který potom slouží také ladicím programem. Resetováním relace, zajistíte tím, že ladicí relace začíná žádná existující data. **Resetování** příkazu, ale nemá vliv na vaše *skriptu. R* zdrojového souboru, protože, který obsahuje spravované a uložili mimo pracovní prostor.
 
-1. S `script.R` soubor vytvoří v předchozí části, nastavte zarážky v řádku, který začíná `pop <-` umístění pomocí kurzoru na tomto řádku a potom stisknutím klávesy F9 nebo výběrem **ladění > Přepnout zarážku** nabídky příkaz. Případně jednoduše klikněte v levém okraji (nebo oddělovací mezery) pro tento řádek, ve kterém se zobrazí červený zarážek tečky:
+1. S *skriptu. R* vytvoří soubor v předchozí části, nastavit zarážku na řádek, který začíná `pop <-` umístěním blikající kurzor na tomto řádku a stisknutím klávesy **F9**, nebo jeho výběru **ladění**  >  **Přepnout zarážku** příkazu nabídky. Stačí klikněte v levém okraji (nebo ovládací prvek) pro tento řádek, ve kterém se zobrazí červený zarážku tečka:
 
-    ![Nastavení boru přerušení v editoru](media/getting-started-11-debug1.png)
+    ![Nastavením zarážky v editoru](media/getting-started-11-debug1.png)
 
-1. Spuštění ladicího programu s kódem v `script.R` výběrem buď **zdrojový soubor spouštěcí** na panelu nástrojů zobrazí tlačítko pro výběr **ladění > zdrojový soubor spouštěcí** položky nabídky nebo stisknete F5. Visual Studio zadá režim ladění a spuštění kódu. Zastaví, ale na řádku, kde je nastavena zarážka:
+1. Spuštění ladicího programu s kódem v *skriptu. R* tak, že vyberete **zdrojový soubor spouštěcí** tlačítko na panelu nástrojů, vyberete **ladění** > **zdrojový soubor spouštěcí** položky nabídky nebo stisknutím klávesy **F5**. Visual Studio přejde do režimu její ladění a spuštění kódu. Zastaví, ale na řádku, kde nastavit zarážku:
 
-    ![Probíhá zastavení na zarážek v ladicím programu sady Visual Studio](media/getting-started-12-debug2.png)
+    ![Probíhá zastavení na zarážce v ladicím programu sady Visual Studio](media/getting-started-12-debug2.png)
 
-1. Během ladění, Visual Studio poskytuje schopnost krokovat kód řádek po řádku. Můžete také krok do funkce, krok přes, nebo z nich tak, aby kontext volání. Tyto možnosti, společně s ostatními, můžete najít na **ladění** nabídka, v místní nabídce klikněte pravým tlačítkem v editoru a ladění nástrojů:
+1. Během ladění, Visual Studio poskytuje možnost Procházet kódem řádek po řádku. Můžete také Krokovat s vnořením funkce, krok nad nich, nebo krok z nich na kontext volání. Tyto možnosti společně s ostatními, můžete najít na **ladění** nabídky, klikněte pravým tlačítkem na místní nabídky v editoru a panelu nástrojů ladění:
 
-    ![Ladění panelu nástrojů v sadě Visual Studio](media/getting-started-13-debug3.png)
+    ![Panel nástrojů v sadě Visual Studio pro ladění](media/getting-started-13-debug3.png)
 
-1. Při zastavení na zarážce, můžete zkontrolovat hodnoty proměnných. Vyhledejte **automobily** oken v sadě Visual Studio a vyberte kartu podél dolního s názvem **místní hodnoty –**. **Místní hodnoty** v okně se zobrazí místní proměnné k aktuálnímu bodu v programu. Při zastavení na zarážce nastavit dříve můžete vidět, že `pop` proměnná ještě není definován. Teď použít **ladění > Krokovat s přeskočením** příkazu (F10) a zobrazit tak hodnotu pro `pop` zobrazí:
+1. Při zastavení na zarážce, můžete zkoumat hodnoty proměnné. Vyhledejte **automatické hodnoty** okna v sadě Visual Studio a zvolte kartu v dolní části s názvem **lokální**. **Lokální** okno zobrazuje lokální proměnné do aktuálního místa v programu. Pokud jste zastavení na zarážce, sady použili náhodnost, uvidíte, že `pop` ještě není definována proměnná. Teď použijte **ladění** > **Krokovat s přeskočením** příkazu (**F10**), a zobrazí hodnotu `pop` zobrazí:
 
-    ![Místní hodnoty – okno v sadě Visual Studio](media/getting-started-14-debug4.png)
+    ![Okno místních hodnot v sadě Visual Studio](media/getting-started-14-debug4.png)
 
-1. K prozkoumání proměnné v různých oborech, včetně globální obor a balíček obory, použijte [proměnné Explorer](variable-explorer.md). Proměnné Explorer nabízí také umožňuje přepnout do tabulkového zobrazení s řazení sloupců a exportovat data do souboru CSV.
+1. Chcete-li zkontrolovat proměnné v různých oborech, včetně globální obor a balíček obory, použijte [Průzkumníka proměnných](variable-explorer.md). Průzkumník proměnných také poskytuje schopnost přepínat zobrazení na tabulkové zobrazení s řazení sloupců a export dat do souboru CSV.
 
-    ![Rozšířené zobrazení Průzkumníka proměnné](media/variable-explorer-expanded-results.png)
+    ![Rozšířené zobrazení Průzkumníka proměnných](media/variable-explorer-expanded-results.png)
 
-1. Můžete pokračovat v procházení programu řádek po řádku, nebo vybrat možnost **pokračovat** (F5) ke spuštění dokončení (nebo na další zarážku).
+1. Můžete pokračovat v krokování programem řádek po řádku, nebo vyberte **pokračovat** (**F5**) ke spuštění dokončení (nebo k další zarážce).
 
-Přechod hlubší naleznete v tématu [ladění](debugging-r-in-visual-studio.md) a [proměnné Explorer](variable-explorer.md).
+Seznamte se blíž, najdete v článku [ladění](debugging-r-in-visual-studio.md) a [Průzkumníka proměnných](variable-explorer.md).
 
 ## <a name="next-steps"></a>Další kroky
 
-V tomto návodu jste se naučili základy R projektů, použití interaktivních okna, úprav a ladění v sadě Visual Studio code. Chcete-li pokračovat, prohlížení další funkce, najdete na následující články a také články, které jsou uvedené v tabulce obsahu:
+V tomto návodu jste se naučili základy projekty v R, používání interaktivního okna, úpravy a ladění v sadě Visual Studio code. Pokračujte ve zkoumání další možnosti, naleznete následující články také články, které jsou uvedené v tabulce obsah:
 
 - [Ukázkové projekty](getting-started-samples.md)
 - [Úpravy kódu](editing-r-code-in-visual-studio.md)

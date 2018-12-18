@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_parambasepointerregisterid – | Microsoft Docs
+title: Idiasymbol::get_parambasepointerregisterid – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 80f707c94cc0fb22aa3f1a9aa1b9e91fc14a43a8
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 0b74250c453f42b4591bb87ef0a281d74de3b489
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49852879"
 ---
 # <a name="idiasymbolgetparambasepointerregisterid"></a>IDiaSymbol::get_paramBasePointerRegisterId
-Načte ID registrace, který obsahuje základní ukazatel na parametry. Použijte, když [SymTagEnum – výčet](../../debugger/debug-interface-access/symtagenum.md) je nastaven na `SymTagFunction`.  
+Načte ID do registru, který obsahuje základní ukazatele na parametry. Použít, když [symtagenum – výčet](../../debugger/debug-interface-access/symtagenum.md) je nastavena na `SymTagFunction`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,13 +34,13 @@ HRESULT get_paramBasePointerRegisterId (
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí ID registrace, který obsahuje základní ukazatel na parametry.  
+ [out] Vrátí ID do registru, který obsahuje základní ukazatele na parametry.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` nebo chybový kód.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
->  Vrácená hodnota `S_FALSE` znamená vlastnost není k dispozici pro symbol.  
+>  Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="remarks"></a>Poznámky  
   

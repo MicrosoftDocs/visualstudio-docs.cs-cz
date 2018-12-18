@@ -1,5 +1,5 @@
 ---
-title: Rozšíření na stavovém řádku | Microsoft Docs
+title: Rozšíření stavového řádku | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,29 +14,30 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a766e0c607d4d669fada794e1cf0779559f2346b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0e072814120f18c7cc1ea09bf0829266958691ba
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39497911"
 ---
-# <a name="extending-the-status-bar"></a>Rozšíření stavového řádku
-Stavový řádek sady Visual Studio můžete v dolní části rozhraní IDE pro zobrazení informací.  
+# <a name="extend-the-status-bar"></a>Rozšíření stavového řádku
+Stavový řádek sady Visual Studio můžete v dolní části rozhraní IDE zobrazíte informace.  
   
- Když rozšíříte stavového řádku, můžete zobrazit informace a uživatelského rozhraní v čtyři oblasti: oblasti zpětnou vazbu, indikátoru průběhu, oblast animace a oblasti návrháře. Oblasti zpětné vazby umožňuje zobrazit text a zvýraznit zobrazovaného textu. Indikátor průběhu ukazuje přírůstkové průběhu pro operace krátce běžící například ukládání souboru. Oblasti animace zobrazí animace průběžně smyčce dlouho běžící operace nebo operace neurčená délky, jako je například sestavování více projektů v řešení. A oblasti návrháře zobrazuje číslo řádku a ve sloupci umístění kurzoru.  
+ Když rozšíříte stavového řádku, můžete zobrazit informace a uživatelské rozhraní ve čtyřech oblastech: oblast zpětnou vazbu, indikátor průběhu, animace oblasti a oblasti návrháře. Oblast zpětné vazby umožňuje zobrazit text a zvýraznit zobrazovaného textu. Indikátor průběhu vám ukáže přírůstkového pokroku krátce běžící operací, jako je například ukládání souboru. Animace oblasti zobrazí animace průběžně opakuje pro dlouho běžící operace nebo operace neurčeném délky, jako je například sestavování více projektů v řešení. A návrháře oblasti zobrazuje spojnicový a sloupcový počet umístění kurzoru.  
   
- Stavový řádek můžete získat pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbar> rozhraní (z <xref:Microsoft.VisualStudio.Shell.Interop.SVsStatusbar> služby). Kromě toho můžete zaregistrovat libovolný objekt umístěný na rámec okna jako stavovém řádku objekt klienta implementací <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser> rozhraní. Vždy, když okno se aktivuje, Visual Studio dotazuje umístěný v tomto okně pro objekt `IVsStatusbarUser` rozhraní. Pokud se najde, zavolá <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser.SetInfo%2A> metodu na vrácených rozhraní a objekt můžete aktualizovat stavového řádku z v rámci této metody. Windows, například dokumentů, můžete použít <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser.SetInfo%2A> metoda aktualizovat informace v oblasti návrháře, když bude aktivní.  
+ Stavový řádek můžete získat pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbar> rozhraní (z <xref:Microsoft.VisualStudio.Shell.Interop.SVsStatusbar> služby). Kromě toho můžete zaregistrovat libovolného objektu umístěn na rámec okna jako stavového řádku objektu klienta implementací <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser> rozhraní. Při každé aktivaci okno Visual Studio dotaz se týká objektu umístěn tohoto okna pro `IVsStatusbarUser` rozhraní. Pokud se najde, zavolá <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser.SetInfo%2A> metodu na vrácené rozhraní a objekt můžete aktualizovat stavový řádek z v rámci této metody. Windows, například dokument, můžete použít <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser.SetInfo%2A> metoda k aktualizaci informací v oblasti návrháře po své aktivaci.  
   
- Následujících postupech se předpokládá, že rozumíte postup vytvoření projektu VSIX a přidání příkazu vlastní nabídky. Informace najdete v tématu [vytvoření rozšíření pomocí příkazu v nabídce](../extensibility/creating-an-extension-with-a-menu-command.md).  
+ V následující postupech se předpokládá, že vám pochopit, jak vytvořit projekt VSIX a přidejte vlastní příkaz. Informace najdete v tématu [vytváření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md).  
   
-## <a name="modifying-the-status-bar"></a>Úprava stavového řádku  
- Tento postup ukazuje, jak nastavit a získáte text, zobrazit statický text a zvýrazněte zobrazovaného textu v oblasti zpětnou vazbu na stavovém řádku.  
+## <a name="modify-the-status-bar"></a>Změnit stavový řádek  
+ Tento postup ukazuje, jak nastavit a získat text, zobrazit statický text a zvýraznit zobrazeného textu v oblasti zpětnou vazbu ve stavovém řádku.  
   
-#### <a name="reading-and-writing-to-the-status-bar"></a>Čtení a zápis do stavového řádku  
+### <a name="read-and-write-to-the-status-bar"></a>Čtení a zápis do stavového řádku  
   
-1.  Vytvoření projektu VSIX s názvem **TestStatusBarExtension** a přidejte příkaz nabídky s názvem **TestStatusBarCommand**.  
+1.  Vytvořte projekt VSIX s názvem **TestStatusBarExtension** a přidání příkazu nabídky s názvem **TestStatusBarCommand**.  
   
-2.  V TestStatusBarCommand.cs nahraďte kód metoda obslužná rutina příkazu (MenuItemCallback) s následujícími službami:  
+2.  V *TestStatusBarCommand.cs*, nahraďte kód metody obslužné rutiny příkazu (`MenuItemCallback`) následujícím kódem:  
   
     ```csharp  
     private void MenuItemCallback(object sender, EventArgs e)  
@@ -70,17 +71,17 @@ Stavový řádek sady Visual Studio můžete v dolní části rozhraní IDE pro 
     }  
     ```  
   
-3.  Zkompilovat kód a spusťte ladění.  
+3.  Zkompilování kódu a spuštění ladění.  
   
-4.  Otevřete **nástroje** nabídky v experimentální instanci sady Visual Studio. Klikněte **vyvolání TestStatusBarCommand** tlačítko.  
+4.  Otevřít **nástroje** nabídky v experimentální instanci sady Visual Studio. Klikněte na tlačítko **vyvolat TestStatusBarCommand** tlačítko.  
   
-     Měli byste vidět, který text ve stavovém řádku nyní čtení **"Právě napsali jsme na stavovém řádku."** a zobrazeném dialogovém okně se stejný text.  
+     Měli byste vidět, který text ve stavovém řádku nyní čtení **jsme teď napsali stavový řádek.** a, který se zobrazí okno se zprávou nemá stejný text.  
   
-#### <a name="updating-the-progress-bar"></a>Aktualizace indikátoru průběhu  
+### <a name="update-the-progress-bar"></a>Aktualizace indikátor průběhu  
   
-1.  V tomto postupu jsme se ukazují, jak k inicializaci a aktualizovat indikátor průběhu.  
+1.  V tomto postupu vám ukážeme, jak inicializovat a aktualizovat indikátor průběhu.  
   
-2.  Otevřete soubor TestStatusBarCommand.cs a metodu MenuItemCallback nahraďte následujícím kódem:  
+2.  Otevřít *TestStatusBarCommand.cs* soubor a nahradit `MenuItemCallback` metodu s následujícím kódem:  
   
     ```csharp  
     private void MenuItemCallback(object sender, EventArgs e)  
@@ -104,21 +105,21 @@ Stavový řádek sady Visual Studio můžete v dolní části rozhraní IDE pro 
     }  
     ```  
   
-3.  Zkompilovat kód a spusťte ladění.  
+3.  Zkompilování kódu a spuštění ladění.  
   
-4.  Otevřete **nástroje** nabídky v experimentální instanci sady Visual Studio. Klikněte na tlačítko **vyvolání TestStatusBarCommand** tlačítko.  
+4.  Otevřít **nástroje** nabídky v experimentální instanci sady Visual Studio. Klikněte na tlačítko **vyvolat TestStatusBarCommand** tlačítko.  
   
-     Měli byste vidět, který text ve stavovém řádku nyní čtení **"Zápis do indikátor průběhu."** Měli byste taky vidět indikátor průběhu aktualizovat každou sekundu 20 sekund. Následně se na stavovém řádku a indikátor průběhu, jsou vymazány.  
+     Měli byste vidět, který text ve stavovém řádku nyní čtení **zápisu do indikátor průběhu.** Také byste měli vidět indikátor průběhu aktualizovat každou sekundu po dobu 20 sekund. Následně se vymažou stavový řádek a indikátor průběhu.  
   
-#### <a name="displaying-an-animation"></a>Zobrazení animace  
+### <a name="display-an-animation"></a>Zobrazit animace  
   
-1.  Stavový řádek zobrazí opakování animace, která určuje, buď dlouho běžící operace (například sestavování více projektů v určitém řešení). Pokud se tato animace nezobrazí, ujistěte se, máte správný **Nástroje / možnosti** nastavení:  
+1.  Stavový řádek zobrazuje opakování animace, která označuje dlouhotrvající operace (například sestavování více projektů v řešení). Pokud nevidíte tuto animaci, ujistěte se, že máte správnou **nástroje** > **možnosti** nastavení:  
   
-     Přejděte na **Nástroje/možnosti / Obecné** kartě a zrušte zaškrtnutí políčka **automaticky upravit visual prostředí založené na výkon klienta**. Pak zkontrolujte možnost dílčí **Povolit plně funkčního klienta visual prostředí**. Teď by měla být animace uvidí, když vytváříte projekt v experimentální instanci sady Visual Studio.  
+     Přejděte **nástroje** > **možnosti** > **Obecné** kartu a zrušte zaškrtnutí políčka **automaticky upravit vzhled na základě klienta výkon**. Zaškrtněte možnost dílčí **povolit vzhled plně funkčního klienta**. Teď by měl být vidět animace při sestavování projektu v experimentální instanci sady Visual Studio.  
   
-     V tomto postupu, zobrazuje se standardní animace Visual Studio, která představuje vytváření projekt nebo řešení.  
+     V tomto postupu zobrazují standardní sady Visual Studio animace, která představuje sestavování projektu nebo řešení.  
   
-2.  Otevřete soubor TestStatusBarCommand.cs a metodu MenuItemCallback nahraďte následujícím kódem:  
+2.  Otevřít *TestStatusBarCommand.cs* soubor a nahradit `MenuItemCallback` metodu s následujícím kódem:  
   
     ```csharp  
     private void MenuItemCallback(object sender, EventArgs e)  
@@ -139,8 +140,8 @@ Stavový řádek sady Visual Studio můžete v dolní části rozhraní IDE pro 
     }  
     ```  
   
-3.  Zkompilovat kód a spusťte ladění.  
+3.  Zkompilování kódu a spuštění ladění.  
   
-4.  Otevřete **nástroje** nabídky v sadě Visual Studio a klikněte na tlačítko experimentální instanci **vyvolání TestStatusBarCommand**.  
+4.  Otevřít **nástroje** nabídky v experimentální instanci sady Visual Studio a klikněte na tlačítko **vyvolat TestStatusBarCommand**.  
   
-     Když se zobrazí okno se zprávou, měli byste taky vidět animace ve stavovém řádku úplně vpravo. Pokud jste zavřít okno se zprávou, animace zmizí.
+     Když se zobrazí okno se zprávou, měli byste také vidět animace ve stavovém řádku úplně vpravo. Při zavírání okna se zprávou, animace zmizí.

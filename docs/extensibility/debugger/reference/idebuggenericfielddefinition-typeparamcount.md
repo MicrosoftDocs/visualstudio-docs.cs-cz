@@ -1,5 +1,5 @@
 ---
-title: IDebugGenericFieldDefinition::TypeParamCount | Microsoft Docs
+title: IDebugGenericFieldDefinition::TypeParamCount | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 11e8dcebf06c5779ee51b11e315c5277d99b4971
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: baf6f6b7643c3d24a0f691a95477ad805823e541
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49922377"
 ---
 # <a name="idebuggenericfielddefinitiontypeparamcount"></a>IDebugGenericFieldDefinition::TypeParamCount
-Načte počet parametry typu, které jsou přidružené pole Obecné.  
+Získá počet parametrů typu, které jsou spojeny s obecné pole.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,13 +40,13 @@ int TypeParamCount(
   
 #### <a name="parameters"></a>Parametry  
  `pcParams`  
- [ve out] Počet parametrů typu.  
+ [out v] Počet parametrů typu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud seznam\<T >, tato metoda vrátí hodnotu 1 a pokud seznamu\<T1, T2 >, tato metoda vrátí hodnotu 2. Tato metoda vrátí hodnotu 0, pokud nejsou žádné parametry typu.  
+ Pokud seznam\<T >, tato metoda vrátí hodnotu 1 a pokud je seznam\<T1, T2 >, tato metoda vrátí hodnotu 2. Tato metoda vrátí hodnotu 0, pokud neexistují žádné parametry typu.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugGenericFieldDefinition](../../../extensibility/debugger/reference/idebuggenericfielddefinition.md)

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31128842"
 ---
 # <a name="registering-vspackages"></a>Registrace VSPackages
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] spoléhá na soubory .pkgdef popsat a vyhledejte VSPackage. Soubor .pkgdef obsahuje všechny informace o registraci, které by jinak bylo možné přidat do registru systému. Spravované VSPackages jsou registrované přidáním atributy ke zdrojovému kódu a pak spustit [CreatePkgDef nástroj](../../extensibility/internals/createpkgdef-utility.md) na výsledné sestavení můžete vytvořit soubor .pkgdef.  

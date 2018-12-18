@@ -1,5 +1,5 @@
 ---
-title: UsedCommand Element | Microsoft Docs
+title: Usedcommand – Element | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4888733abf142f6582706406decbea0bf84ce519
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4f7df36c05de0d8dc2f68ab8e41afa11366276b9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49856298"
 ---
-# <a name="usedcommand-element"></a>UsedCommand Element
-Umožňuje VSPackage k získání přístupu k příkazu, který je definován v jiném souboru .vsct. Například, pokud vaše VSPackage používá standardní **kopie** příkaz, který je definovaný [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] prostředí, můžete přidat příkaz nabídky nebo nástrojů bez implementace ho znovu.  
+# <a name="usedcommand-element"></a>UsedCommand – element
+Umožňuje pro přístup k příkazu, který je definován v jiném souboru .vsct VSPackage. Například, pokud vaše VSPackage používá standardní **kopírování** příkaz, který je definovaný [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] prostředí, můžete přidat příkaz nabídky nebo panelu nástrojů bez znova implementovány.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,9 +37,9 @@ Umožňuje VSPackage k získání přístupu k příkazu, který je definován v
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|Identifikátor GUID|Požadováno. Identifikátor GUID, které odpovídá páru GUID ID identifikující příkaz.|  
-|id|Požadováno. ID pár ID identifikátor GUID, který identifikuje příkaz.|  
-|Podmínka|Volitelné. V tématu [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
+|identifikátor GUID|Požadováno. Identifikátor GUID, které odpovídá páru ID identifikátoru GUID identifikující příkazu.|  
+|id|Požadováno. ID, které odpovídá páru ID identifikátoru GUID identifikující příkazu.|  
+|Podmínka|Volitelné. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
   
 ### <a name="child-elements"></a>Podřízené elementy  
   
@@ -50,10 +51,10 @@ Umožňuje VSPackage k získání přístupu k příkazu, který je definován v
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|[UsedCommands – element](../extensibility/usedcommands-element.md)|Elementy UsedCommand skupin a dalších UsedCommands seskupení.|  
+|[UsedCommands – element](../extensibility/usedcommands-element.md)|Seskupí usedcommand – elementy a ostatní usedcommands – seskupení.|  
   
 ## <a name="remarks"></a>Poznámky  
- Přidáním příkazu, který `<UsedCommands>` informuje VSPackage elementu, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] prostředí, VSPackage vyžaduje příkaz. Měli byste přidat `<UsedCommand>` element pro libovolný příkaz vašeho balíčku vyžaduje, aby nemusí obsahovat všechny verze a konfigurace sady Visual Studio. Například pokud váš balíček volá příkaz, který je specifický pro aplikaci Visual C++, příkaz nebude dostupný uživatelům aplikace Visual Web Developer nezahrnete `<UsedCommand>` element pro příkaz.  
+ Přidáním příkazu, který bude `<UsedCommands>` informuje VSPackage elementu, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] prostředí, že sady VSPackage vyžaduje, aby příkaz. Měli byste přidat `<UsedCommand>` – element pro kterýkoli příkaz vašeho balíčku vyžaduje, aby nemusí obsahovat všechny verze a konfigurace sady Visual Studio. Například pokud váš balíček volá příkaz, který je specifický pro aplikaci Visual C++, příkaz nebude dostupné uživatelům aplikace Visual Web Developer nezahrnete `<UsedCommand>` – element pro příkaz.  
   
 ## <a name="example"></a>Příklad  
   
@@ -66,5 +67,5 @@ Umožňuje VSPackage k získání přístupu k příkazu, který je definován v
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [UsedCommands Element](../extensibility/usedcommands-element.md)   
+ [Usedcommands – Element](../extensibility/usedcommands-element.md)   
  [Soubory tabulek příkazů sady Visual Studio (.Vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

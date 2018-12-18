@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Ladění chyb při vykreslování způsobených stínováním | Microsoft Docs'
+title: 'Návod: Ladění chyb stínováním při vykreslování | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -10,86 +10,87 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a8b03a8f88c5daa421a3d6a10870b8d66b209402
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 202f2fb0cdbfec6e52a2938365105f3d15327445
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920533"
 ---
 # <a name="walkthrough-debugging-rendering-errors-due-to-shading"></a>Návod: Ladění chyb při vykreslování způsobených stínováním
 Tento návod ukazuje, jak používat [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] diagnostiky grafiky k prozkoumání objekt, který je nesprávně barevný z důvodu chyby shaderu.  
   
  Tento návod ukazuje, jak:  
   
--   Zkontrolujte dokument grafických protokolů k identifikaci pixelů, které se zobrazí problém.  
+-   Zkontrolujte dokument grafických protokolů k identifikaci pixelů, které ukazují problém.  
   
--   Použití **historie pixelů grafiky** okno přesněji prozkoumat stav pixelů.  
+-   Použití **historie pixelů grafiky** okno, aby lépe zkoumat stav pixelů.  
   
--   Použití **ladicí program HLSL** prozkoumat shadery pixelů a vrcholy.  
+-   Použití **ladicí program HLSL** prozkoumat pixelů a vertex shader.  
   
 ## <a name="scenario"></a>Scénář  
- Nesprávný barevné zvýrazňování na objekty běžně nastane, když vrchol shaderu předá pixel shaderu nesprávné nebo neúplné informace.  
+ Nesprávný barevné zvýrazňování u objektů běžně nastane, pokud se předá vertex shader pixel shader nesprávných nebo neúplných informací.  
   
- V tomto scénáři jste nedávno přidali objekt do vaší aplikace, spolu s nový vrchol a shadery pixelů pro transformaci objektu a pojmenujte ho jedinečný vzhled. Při spuštění aplikace během testu, objekt je vykreslen v plné černé. Pomocí diagnostiky grafiky zaznamenáte tyto potíže k protokolu grafiky tak, že ladíte aplikaci. Problém je v aplikaci vypadat třeba takto:  
+ V tomto scénáři jste nedávno přidali objekt do vaší aplikace. Můžete také přidat nové vertex a pixel shaderů transformovat objekt a přiřaďte jí jedinečný vzhled. Při spuštění aplikace během testu, je objekt vykreslen v plné black. Pomocí diagnostiky grafiky můžete zaznamenat problém do protokolu grafiky, tak, že ladíte aplikaci. Tento problém bude vypadat jako na tomto obrázku v aplikaci:  
   
- ![Objekt je vykreslen pomocí nesprávné barvy. ] (media/gfx_diag_demo_render_error_shader_problem.png "gfx_diag_demo_render_error_shader_problem")  
+ ![Objekt je vykreslen pomocí nesprávných barev. ](media/gfx_diag_demo_render_error_shader_problem.png "gfx_diag_demo_render_error_shader_problem")  
   
 ## <a name="investigation"></a>Šetření  
- Dokument grafických protokolů kontrola rámce zaznamenané během testu můžete načíst pomocí nástroje diagnostiky grafiky.  
+ Pomocí nástrojů diagnostiky grafiky můžete načíst dokument grafických protokolů ke kontrole snímků, které byly zachyceny během testu.  
   
-#### <a name="to-examine-a-frame-in-a-graphics-log"></a>K prozkoumání rámce v protokolu grafiky  
+#### <a name="to-examine-a-frame-in-a-graphics-log"></a>Přezkoumání snímku v protokolu grafiky  
+   
+1. V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], načtěte protokol grafiky, která má snímek, který znázorňuje chybí model. Zobrazí se nové okno dokumentu protokolu grafiky v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. V horní části tohoto okna je výstup cíle vykreslení vybraného snímku. V dolní části je **seznam snímků**, který zobrazuje jako obrázek miniatury každého zachyceného snímku.  
   
-1.  V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], načíst grafiky protokol, který obsahuje rámce, který vykazuje chybějící modelu. Okno nového dokumentu protokolu grafiky se zobrazí v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. V horní části tohoto okna je výstup cíl vykreslení vybraného rámce. V dolní části je **rámce seznamu**, zobrazuje každou zaznamenané rámce jako miniatury.  
+2. V **seznam snímků**, vyberte snímek, ve kterém objekt nemá správný vzhled. Cíl vykreslování se aktualizuje tak, aby odrážely vybraného snímku. V tomto scénáři protokolu grafiky dokumentu okno vypadá jako na tomto obrázku:  
   
-2.  V **rámce seznamu**, vybrat rámec, ve kterém objekt nemá správný vzhled. Cíl vykreslení je aktualizována tak, aby odrážela vybraný snímek. V tomto scénáři protokolu grafiky dokumentu okno vypadá takto:  
+    ![Dokumentu protokolu grafiky v aplikaci Visual Studio. ](media/gfx_diag_demo_render_error_shader_step_1.png "gfx_diag_demo_render_error_shader_step_1")  
   
-     ![Grafika protokolu dokumentu v sadě Visual Studio. ] (media/gfx_diag_demo_render_error_shader_step_1.png "gfx_diag_demo_render_error_shader_step_1")  
+   Po vybrání rámce, který znázorňuje problém, můžete použít **historie pixelů grafiky** okna k provedení diagnostiky. **Historie pixelů grafiky** okno zobrazuje primitivních elementů, které by měly vliv na konkrétní pixel, jejich shadery, a jaké jejich dopadu na cíl vykreslování byly, v chronologickém pořadí.  
   
- Po výběru rámce, který ukazuje problém, můžete použít **historie pixelů grafiky** okno diagnostiky ho. **Historie pixelů grafiky** v okně se zobrazí primitivních elementů, které by mohly mít mají vliv na konkrétní pixelů, jejich shadery a co jejich důsledky pro vykreslení cíl byly, v chronologickém pořadí.  
+#### <a name="to-examine-a-pixel"></a>Prozkoumat pixel  
   
-#### <a name="to-examine-a-pixel"></a>K prozkoumání pixelů  
+1. Otevřít **historie pixelů grafiky** okna. Na **diagnostiky grafiky** nástrojů, zvolte **historie pixelů**.  
   
-1.  Otevřete **historie pixelů grafiky** okno. Na **diagnostiky grafiky** nástrojů vyberte **historie pixelu**.  
+2. Vyberte pixel prozkoumat. V okně dokumentu protokol grafiky vyberte jednu z pixelů na objekt, který je nesprávně barevný:  
   
-2.  Vyberte jeden bod prozkoumat. V okně dokumentu protokolu grafiky vyberte jednu z pixelů na objektu, která je nesprávně barevný:  
+    ![Výběr pixel zobrazí informace o jeho historie. ](media/gfx_diag_demo_render_error_shader_step_2.png "gfx_diag_demo_render_error_shader_step_2")  
   
-     ![Výběr pixel zobrazí informace o historii. ] (media/gfx_diag_demo_render_error_shader_step_2.png "gfx_diag_demo_render_error_shader_step_2")  
+    **Historie pixelů grafiky** okno se aktualizuje tak, aby odrážely vybraný pixel. V tomto scénáři **historie pixelů grafiky** okno vypadá takto:  
   
-     **Historie pixelů grafiky** okno aktualizován, aby odrážel vybrané pixelů. V tomto scénáři **historie pixelů grafiky** okno vypadá takto:  
+    ![Historie pixelů se zobrazí jedna DrawIndexed událost. ](media/gfx_diag_demo_render_error_shader_step_3.png "gfx_diag_demo_render_error_shader_step_3")  
   
-     ![Historie pixelu zobrazuje jeden DrawIndexed událostí. ] (media/gfx_diag_demo_render_error_shader_step_3.png "gfx_diag_demo_render_error_shader_step_3")  
+    Všimněte si, že výsledkem pixel shader je úplně neprůhledná černé (0, 0, 0, 1) a že **slučovací modul výstupu** kombinaci tento shader pixel se **předchozí** barvu pixelu takovým způsobem, který  **Výsledek** je taky plně neprůhledný černý.  
   
-     Všimněte si, že shaderu pixel výsledkem je plně neprůhledné černé (0, 0, 0, 1) a že **výstup fúze** o kombinaci **předchozí** barev pixelů tak, který **výsledek** je také plně neprůhledné černé.  
+   Po prozkoumání pixel, který je nesprávně barevný a zjistit, že výstup pixel shaderu není očekávaný barvy, můžete použít ladicí program HLSL sloužící ke zkoumání pixel shader a zjistěte, co se stalo s barva objektu. Můžete použít ladicí program HLSL a kontrolu stavu proměnných HLSL během provádění, krokovat kód HLSL a nastavit zarážky, které vám pomohou diagnostikovat problém.  
   
- Po zkontrolujte pixel, který je nesprávně barevný a zjistit, že výstup shaderu pixelů není očekávaný barvu, můžete použít ladicí program HLSL sloužící ke zkoumání shaderu pixelů a zjistit, co se stalo s barva objektu. Můžete použít pro zjištění stavu proměnných HLSL během provádění krok prostřednictvím kód HLSL ladicí program HLSL a nastavit zarážky při diagnostice problému.  
+#### <a name="to-examine-the-pixel-shader"></a>Prozkoumat pixel shader  
   
-#### <a name="to-examine-the-pixel-shader"></a>K prozkoumání shaderu pixelů  
+1. Spusťte ladění pixel shader. V **historie pixelů grafiky** okno, v rámci objektu na primitivní, vedle **Pixel Shader**, zvolte **spustit ladění** tlačítko.  
   
-1.  Spusťte ladění shaderu pixelů. V **historie pixelů grafiky** okno, v rámci objektu je vedle primitivní, **pixelů shaderu**, vyberte **spustit ladění** tlačítko.  
+2. V tomto scénáři protože pixel shader pouze předává barvu z vertex shader, je snadné podívejte se, že pixel shaderu není příčiny problému.  
   
-2.  V tomto scénáři protože shaderu pixelů jednoduše předají barvu prostřednictvím z vrchol shaderu, je snadné pozorovat, že shaderu pixelů není zdroj problému.  
+3. Ukazatele myši na `input.color`. Všimněte si, že její hodnota je zcela neprůhledný černý (0, 0, 0, 1).  
   
-3.  Ukazatele myši na `input.color`. Všimněte si, že její hodnota je plně neprůhledné černé (0, 0, 0, 1).  
+    ![Člen "color" "vstup" je černá. ](media/gfx_diag_demo_render_error_shader_step_5.png "gfx_diag_demo_render_error_shader_step_5")  
   
-     ![Je černá "Barva" členem "vstup". ] (media/gfx_diag_demo_render_error_shader_step_5.png "gfx_diag_demo_render_error_shader_step_5")  
+    V tomto scénáři ukáže průzkum nesprávné barva je pravděpodobně výsledkem vertex shader, který neposkytuje informace o Pravá barva pixel shader, který se má operace provést.  
   
-     V tomto scénáři ukáže průzkum barvu nesprávný je pravděpodobně výsledkem vrchol shaderu, která neposkytuje informace správná barva pro shaderu pixelů pracovat na.  
+   Jakmile potvrdíte, že vertex shader pravděpodobně není poskytuje správné informace pro pixel shader, dalším krokem je prozkoumat vertex shader.  
   
- Poté, co jste zjistili, že shaderu vrchol pravděpodobně není poskytuje náležité informace, které k shaderu pixelů, dalším krokem je prozkoumat shaderu vrchol.  
+#### <a name="to-examine-the-vertex-shader"></a>Prozkoumat vertex shader  
   
-#### <a name="to-examine-the-vertex-shader"></a>K prozkoumání vrchol shaderu  
+1. Spusťte ladění vertex shader. V **historie pixelů grafiky** okno, v rámci objektu na primitivní, vedle **Vertex Shader**, zvolte **spustit ladění** tlačítko.  
   
-1.  Spusťte ladění shaderu vrchol. V **historie pixelů grafiky** okno, v rámci objektu je vedle primitivní, **vrchol shaderu**, vyberte **spustit ladění** tlačítko.  
+2. Vyhledejte vertex shader výstup struktura – Toto je vstupem pixel shader. V tomto scénáři je název této struktury `output`. Zkoumání kódu shader vrcholu a Všimněte si, že `color` člena `output` struktury byla explicitně nastavena na plně neprůhledný černý, pravděpodobně v důsledku osoby je ladění úsilí.  
   
-2.  Vyhledejte struktura výstup shaderu vrchol – to je vstup shaderu pixelů. V tomto scénáři název tato struktura je `output`. Kontrola kódu shaderu vrchol a Všimněte si, že `color` členem `output` struktura byla explicitně nastavena na plně neprůhledné černé, pravděpodobně v důsledku z někdo je ladění úsilí.  
+3. Potvrďte, že je člen barva nikdy zkopírovány z ve vstupní struktuře. Protože hodnota `output.color` je nastavena na plně neprůhledný černý těsně před `output` vrátila strukturu, je vhodné Ujistěte se, že hodnota `output` nebyla správně inicializována na předchozí řádek. Krokovat kód vertex shader, dokud se nedostanete na řádek, který nastaví `output.color` na černou, při sledování hodnotu `output.color`. Všimněte si, že hodnota `output.color` není inicializován, dokud se nenastaví na černou. Tím potvrdíte, že řádek kódu, který nastaví `output.color` do černé by měl být upravit, spíše než odstraněn.  
   
-3.  Zkontrolujte, že je člen barva nikdy zkopírovány ve vstupní struktuře. Protože hodnota `output.color` je nastavena na plně neprůhledné černé těsně před `output` struktura je vrácena, je vhodné Ujistěte se, že hodnota `output` nebyla správně inicializována na předchozí řádek. Krok prostřednictvím kódu vrchol shaderu, dokud se nedostanete na řádek, který nastaví `output.color` do černé při sledování hodnotu `output.color`. Všimněte si, že hodnota `output.color` není inicializován, dokud je nastavený na černé. Tím se potvrzuje, že na řádek kódu, který nastaví `output.color` do černé by měla být upravena, nikoli odstranit.  
+    ![Hodnota "output.color" je černá. ](media/gfx_diag_demo_render_error_shader_step_7.png "gfx_diag_demo_render_error_shader_step_7")  
   
-     ![Hodnota "output.color" je černá. ] (media/gfx_diag_demo_render_error_shader_step_7.png "gfx_diag_demo_render_error_shader_step_7")  
+   Jakmile zjistíte příčinu problému vykreslování, vertex shader neposkytuje hodnota správná barva pixel shaderu, můžete použít tyto informace k vyřešení problému. V tomto scénáři můžete to napravit změnou následující kód do vertex shaderu  
   
- Když zjistíte, že příčinu problému vykreslování je, že shaderu vrchol nenabízí hodnota správná barva k shaderu pixelů, můžete tyto informace k vyřešení problému. V tomto scénáři můžete je vyřešit ho změnou následující kód v vrchol shaderu  
-  
-```  
+```hlsl  
 output.color = float3(0.0f, 0.0f, 0.0f);  
 ```  
   
@@ -99,10 +100,10 @@ output.color = float3(0.0f, 0.0f, 0.0f);
 output.color = input.color;  
 ```  
   
- Tento kód jednoduše předají barvu vrchol prostřednictvím z objektu vrcholy ponechat beze změny – složitější shadery vrchol může změnit barvu před předáním prostřednictvím. Opravené vrchol shaderu kód by měl vypadat takto:  
+ Tento kód jenom předává vrcholu barvu z objektu vrcholy bez jakýchkoli úprav – složitější vertex shader před předáním prostřednictvím změnit barvu. Vrchol Opravený kód shaderu by měl vypadat takto:  
   
- ![Kód shaderu opravené vrchol. ] (media/gfx_diag_demo_render_error_shader_step_8.png "gfx_diag_demo_render_error_shader_step_8")  
+ ![Kód shaderu opravený vrcholu. ](media/gfx_diag_demo_render_error_shader_step_8.png "gfx_diag_demo_render_error_shader_step_8")  
   
- Po opravě kód ho znovu sestavte a spusťte aplikaci znovu a zjistit, že se vyřešit problém vykreslování.  
+ Po opravě kód její opětovné sestavení a spuštění aplikace znovu a zjistit, že je vyřešen problém vykreslování.  
   
- ![Objekt je vykreslen pomocí správné barvy. ] (media/gfx_diag_demo_render_error_shader_resolution.png "gfx_diag_demo_render_error_shader_resolution")
+ ![Objekt je vykreslen pomocí správné barvy. ](media/gfx_diag_demo_render_error_shader_resolution.png "gfx_diag_demo_render_error_shader_resolution")

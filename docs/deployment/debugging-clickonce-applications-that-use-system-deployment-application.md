@@ -1,5 +1,5 @@
 ---
-title: Ladění aplikací ClickOnce používajících System.Deployment.Application | Microsoft Docs
+title: Ladění aplikací ClickOnce používajících System.Deployment.Application | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -19,63 +19,64 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 30cbf4aab2975b95703c24462604c1a43ed3554c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c877c3373f7d028291b521558a04fafd56e022c6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49836356"
 ---
-# <a name="debugging-clickonce-applications-that-use-systemdeploymentapplication"></a>Ladění aplikací ClickOnce používajících System.Deployment.Application
-V [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)], [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení můžete konfigurovat, jak je aktualizovat aplikaci. Ale pokud budete muset používat a přizpůsobit pokročilé [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení funkce, potřebujete pro přístup k modelu objektu nasazení poskytované <xref:System.Deployment.Application>. Můžete použít <xref:System.Deployment.Application> rozhraní API pro pokročilé úlohy, jako:  
+# <a name="debug-clickonce-applications-that-use-systemdeploymentapplication"></a>Ladění aplikací ClickOnce používajících System.Deployment.Application
+V [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)], [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení můžete konfigurovat, jak se aplikace aktualizuje. Nicméně, pokud je potřeba použít a přizpůsobit advanced [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] potřebuje pro funkce nasazení, musíte pro přístup k modelu objektu nasazení poskytované <xref:System.Deployment.Application>. Můžete použít <xref:System.Deployment.Application> rozhraní API pro pokročilé úlohy jako například:  
   
--   Vytváření v aplikaci možnost "Aktualizovat teď"  
+- Vytváření možnost "Aktualizace nyní" v aplikaci  
   
--   Stažení na vyžádání podmíněného, z různých součástí aplikace  
+- Podmíněné, ke stažení na vyžádání z různých částí aplikace  
   
--   Aktualizace integrované přímo do aplikace  
+- Aktualizace, které jsou integrované přímo do aplikace  
   
--   Zaručit, že klientská aplikace je vždy aktuální  
+- Zajištění, že klientská aplikace bude pořád aktuální  
   
- Protože <xref:System.Deployment.Application> rozhraní API fungovat pouze, když je aplikace nasazená s [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] technologie, je jediným způsobem, jak je ladění pro nasazení aplikace pomocí [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)], k němu připojí a následné ladění. Může být obtížné připojit ladicí program dostatečně včas, protože tento kód často spustí, když se aplikace spouští a provede předtím, než je možné připojit ladicí program. Řešení je umístění přerušení (nebo zastaví pro projekty Visual Basic) před aktualizace zkontrolujte kód nebo kód na vyžádání.  
+  Vzhledem k tomu, <xref:System.Deployment.Application> rozhraní API pracovat pouze, když je aplikace nasazená s [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] technologií, jediným způsobem, jak ladit je k nasazení aplikace pomocí [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)], připojit se k němu a pak ho ladit. Může být obtížné připojit ladicí program dostatečně včas, protože tento kód často se spustí při spuštění aplikace a spustí, než budete moct připojit ladicí program. Řešení je umístit před aktualizace zkontrolujte kód nebo kód na vyžádání přerušení (nebo zastavení pro projekty jazyka Visual Basic).  
   
- Doporučená technika ladění je následující:  
+  Ladění doporučený postup je následující:  
   
-1.  Než začnete, ujistěte se, že symbolu (.pdb) a zdrojové soubory jsou archivovány.  
+1. Než začnete, ujistěte se, že symbolu (.pdb) a zdrojové soubory jsou archivovány.  
   
-2.  Nasazení 1 verzi aplikace.  
+2. Nasazení aplikace verze 1.  
   
-3.  Vytvoření nové prázdné řešení. Z **soubor** nabídky, klikněte na tlačítko **nový**, pak **projektu**. V **nový projekt** dialogové okno, otevřete **jiné typy projektů** uzlu, pak vyberte **řešení sady Visual Studio** složky. V **šablony** podokně, vyberte **prázdného řešení**.  
+3. Vytvoření nové prázdné řešení. Z **souboru** nabídky, klikněte na tlačítko **nový**, pak **projektu**. V **nový projekt** dialogovém okně Otevřít **ostatní typy projektů** uzlu, vyberte **řešení sady Visual Studio** složky. V **šablony** vyberte **prázdné řešení**.  
   
-4.  Přidejte archivované zdrojové umístění pro vlastnosti pro toto nové řešení. V **Průzkumníku řešení**, klikněte pravým tlačítkem na uzel řešení a pak klikněte na tlačítko **vlastnosti**. V **stránky vlastností** dialogové okno, vyberte **zdrojové soubory ladění**, pak přidejte adresář archivovaného zdrojového kódu. Ladicí program, jinak hodnota zjistí zastaralé zdrojové soubory, protože zdrojové cesty k souborům se zaznamenávají do souboru pdb. Ladicí program používá zastaralé zdrojové soubory, zobrazí se zpráva, která neodpovídá zdroji.  
+4. Přidáte umístění archivované zdroje do vlastnosti pro toto nové řešení. V **Průzkumníka řešení**, klikněte pravým tlačítkem na uzel řešení a pak klikněte na tlačítko **vlastnosti**. V **stránky vlastností** dialogu **zdrojové soubory ladění**, pak přidejte adresář archivované zdrojového kódu. V opačném případě ladicí program najdete zastaralé zdrojové soubory, protože zdrojové cesty k souborům se zaznamenávají do souboru pdb. Pokud ladicí program používá zastaralý zdrojové soubory, zobrazí se zpráva, která neodpovídá zdroji.  
   
-5.  Zajistěte, aby že ladicí program můžete najít soubory PDB. Pokud jste je nasadili s vaší aplikací, ladicí program vyhledá je automaticky. Vždy vypadá vedle sestavení v první. Jinak, budete muset přidat cestu k archivu do **symbolů umístění souborů (.pdb)** (pro přístup k této možnosti z **nástroje** nabídky, klikněte na tlačítko **možnosti**, otevřete  **Ladění** uzel a klikněte na tlačítko **symboly**).  
+5. Ujistěte se, že ladicí program můžete najít *PDB* soubory. Pokud jste nasadili je s vaší aplikací, ladicí program nalezne je automaticky. Vždy vypadá vedle sestavení dotyčný nejprve. V opačném případě budete muset přidat cestu k archivu do **Symbol umístění souborů (.pdb)** (pro přístup k této možnosti z **nástroje** nabídky, klikněte na tlačítko **možnosti**, otevřete  **Ladění** uzel a klikněte na tlačítko **symboly**).  
   
-6.  Ladění, co se stane, že mezi `CheckForUpdate` a `Download` / `Update` volání metody.  
+6. Ladění, co se stane, že mezi `CheckForUpdate` a `Download` / `Update` volání metody.  
   
-     Kód aktualizace může být například takto:  
+    Aktualizace kódu může být například následujícím způsobem:  
   
-    ```  
-        Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
-            If My.Application.Deployment.IsNetworkDeployed Then  
+   ```vb
+       Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
+           If My.Application.Deployment.IsNetworkDeployed Then  
   
-                If (My.Application.Deployment.CheckForUpdate()) Then  
+               If (My.Application.Deployment.CheckForUpdate()) Then  
   
-                    My.Application.Deployment.Update()  
-                    Application.Restart()  
+                   My.Application.Deployment.Update()  
+                   Application.Restart()  
   
-                End If  
+               End If  
   
-            End If  
-        End Sub  
-    ```  
+           End If  
+       End Sub  
+   ```  
   
-7.  Nasazení verze 2.  
+7. Nasazení verze 2.  
   
-8.  Pokuste se připojit ladicí program k aplikaci verze 1 během stahování aktualizace pro verze 2. Případně můžete použít `System.Diagnostics.Debugger.Break` metoda nebo jednoduše `Stop` v jazyce Visual Basic. Samozřejmě by neměl ponechat volání této metody v produkčním kódu.  
+8. Pokus připojit ladicí modul k aplikace verze 1, protože stahuje aktualizace pro verzi 2. Případně můžete použít `System.Diagnostics.Debugger.Break` metoda nebo jednoduše `Stop` v jazyce Visual Basic. Samozřejmě by neměl nechat volání těchto metod v produkčním kódu.  
   
-     Předpokládejme například, vyvíjíte aplikace Windows Forms a máte obslužné rutiny události pro tuto metodu s logiku aktualizace ve frontě. Chcete-li ladit tento, jednoduše připojte před tlačítko stisknutí a potom nastavit zarážky (ujistěte se, otevřete odpovídající archivovaný soubor a nastavili zde zarážku).  
+    Předpokládejme například, vyvíjíte aplikace modelu Windows Forms a v něm máte obslužnou rutinu události pro tuto metodu spolu s logikou aktualizace. Chcete-li ladit tento, jednoduše připojte před tlačítko stiskne, pak nastavte zarážku (ujistěte se, že otevřete odpovídající archivovaný soubor a nastavte zarážku existuje).  
   
- Použití <xref:System.Deployment.Application.ApplicationDeployment.IsNetworkDeployed%2A> vlastnost má být vyvolán <xref:System.Deployment.Application> rozhraní API jenom v případě, že je aplikace nasazená; rozhraní API by neměla být volána během ladění v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
+   Použití <xref:System.Deployment.Application.ApplicationDeployment.IsNetworkDeployed%2A> vlastnost, která se má vyvolat <xref:System.Deployment.Application> rozhraní API, jenom když je aplikace nasazená, rozhraní API musí být volána během ladění v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  <xref:System.Deployment.Application>

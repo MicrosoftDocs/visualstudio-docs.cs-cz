@@ -1,5 +1,5 @@
 ---
-title: MSBuild. Cílem soubory | Microsoft Docs
+title: Nástroj MSBuild. Cílí na soubory | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 02/24/2017
 ms.technology: msbuild
@@ -18,34 +18,35 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fe88e0c8ee041682b8af4bbfaab2a83fb21defde
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 3282495219e92da38fc90c9a98fa115791190d80
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49834562"
 ---
-# <a name="msbuild-targets-files"></a>MSBuild – soubory .Targets
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] zahrnuje několik .TARGETS – soubory, které obsahují položky, vlastnosti, cílů a úloh pro běžné scénáře. Tyto soubory se automaticky importují do většinu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] soubory ke zjednodušení správy a čitelnost projektu.  
+# <a name="msbuild-targets-files"></a>MSBuild – soubory .targets
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] obsahuje několik *.targets* soubory, které obsahují položky, vlastnosti, cíle a úkoly pro běžné scénáře. Tyto soubory jsou automaticky importovány do většiny [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] soubory kvůli zjednodušení údržby a čitelnost projektu.  
 
- Projekty obvykle importovat jeden nebo více souborů .targets definovat jejich procesu sestavení. Například [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] projektu vytvořených [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] naimportuje Microsoft.CSharp.targets, který importuje Microsoft.Common.targets. [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Samotném projektu definují položky a vlastnosti specifické pro tento projekt, ale standardní pravidla pro sestavení [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] projektu jsou definovány v importovaných .TARGETS – soubory.  
+ Projekty obvykle importují jeden nebo více *.targets* soubory pro definování jejich procesu sestavení. Například [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] projekt vytvořený v rámci [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] naimportuje *Microsoft.CSharp.targets* které importy *cílů Microsoft.Common.targets*. [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Samotného projektu budou definovat položky a vlastnosti specifické pro daný projekt, ale standardní pravidla pro sestavení [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] projektu jsou definovány v importované *.targets* soubory.  
 
- `$(MSBuildToolsPath)` Hodnota Určuje cestu tyto společné soubory .targets. Pokud `ToolsVersion` 4.0, jsou soubory v následujícím umístění: `WindowsInstallationPath\Microsoft.NET\Framework\v4.0.30319\`  
+ `$(MSBuildToolsPath)` Hodnota Určuje cestu k těmto běžným *.targets* soubory. Pokud `ToolsVersion` 4.0, jsou soubory v následujícím umístění:  *\<WindowsInstallationPath > \Microsoft.NET\Framework\v4.0.30319\\*  
 
 > [!NOTE]
->  Informace o tom, jak vytvořit vlastní cíle najdete v tématu [cíle](../msbuild/msbuild-targets.md). Informace o tom, jak používat `Import` elementu, který chcete vložit soubor projektu do jiného souboru projektu, najdete v části [Import – Element (MSBuild)](../msbuild/import-element-msbuild.md) a [postupy: použití stejného cíle ve více souborech projektu](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md).  
+>  Informace o tom, jak vytvořit vlastní cíle, naleznete v tématu [cíle](../msbuild/msbuild-targets.md). Informace o tom, jak používat `Import` element soubor projektu lze vložit do jiného souboru projektu, viz [Import – element (MSBuild)](../msbuild/import-element-msbuild.md) a [postupy: použití stejného cíle ve více souborech projektu](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md).  
 
-## <a name="common-targets-files"></a>Běžné. Soubory cíle  
+## <a name="common-targets-files"></a>Běžné soubory .targets  
 
-|. Soubor cíle|Popis|  
-|-------------------|-----------------|  
-|Microsoft.Common.targets|Definuje podle kroků v procesu sestavení standardní pro [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] a [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] projekty.<br /><br /> Importovat pomocí Microsoft.CSharp.targets a Microsoft.VisualBasic.targets soubory, které zahrnují následující příkaz: `<Import Project="Microsoft.Common.targets" />`|  
-|Microsoft.CSharp.targets|Definuje podle kroků v procesu sestavení standardní pro projekty Visual C#.<br /><br /> Importovat pomocí Visual C# soubory projektu (.csproj), které zahrnují následující příkaz: `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />`|  
-|Microsoft.VisualBasic.targets|Definuje podle kroků v procesu sestavení standardní pro projekty Visual Basic.<br /><br /> Importovat pomocí souborů projektu jazyka Visual Basic (.vbproj), které zahrnují následující příkaz: `<Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />`|
+| *.TARGETS* souboru | Popis |
+|---------------------------------| - |
+| *Cílů Microsoft.Common.targets* | Definuje kroky v procesu standardní sestavení pro [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] a [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] projekty.<br /><br /> Importované tímto seznamem *Microsoft.CSharp.targets* a *Microsoft.VisualBasic.targets* soubory, které zahrnují následující příkaz: `<Import Project="Microsoft.Common.targets" />` |
+| *Microsoft.CSharp.targets* | Definuje kroky na standardní proces sestavení pro projekty Visual C#.<br /><br /> Importovaných projektovými soubory Visual C# (*.csproj*), mezi které patří následující příkaz: `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` |
+| *Microsoft.VisualBasic.targets* | Definuje kroky na standardní proces sestavení pro projekty jazyka Visual Basic.<br /><br /> Importovaných projektovými soubory Visual Basic (*.vbproj*), mezi které patří následující příkaz: `<Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />` |
 
 ## <a name="directorybuildtargets"></a>Directory.Build.targets
-Directory.Build.targets je soubor definovaný uživatelem, který poskytuje přizpůsobení projektů adresáře. Tento soubor je automaticky importovány ze Microsoft.Common.targets, pokud vlastnost **ImportDirectoryBuildTargets** je nastaven na **false**.
+*Directory.Build.targets* je uživatelem definovaného souboru, který obsahuje vlastní nastavení pro projekty v adresáři. Tento soubor je automaticky importován z *cílů Microsoft.Common.targets* není-li vlastnost **ImportDirectoryBuildTargets** je nastavena na **false**.
 
-## <a name="see-also"></a>Viz také  
- [Import – Element (MSBuild)](../msbuild/import-element-msbuild.md)   
+## <a name="see-also"></a>Viz také:  
+ [Import – element (MSBuild)](../msbuild/import-element-msbuild.md)   
  [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)  
  [MSBuild](../msbuild/msbuild.md)

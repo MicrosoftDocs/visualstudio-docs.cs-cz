@@ -1,6 +1,7 @@
 ---
 title: 'CA1003: Použijte instance obecných obslužných rutin události'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,15 +14,20 @@ ms.assetid: 402101b6-555d-4cf7-b223-1d9fdfaaf1cd
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 32eb25cb6bc3fc998f57a6ca6e4dad2e088f25ad
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 29bd98677715a8772143ab448206f2a5ccddd763
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45551615"
 ---
 # <a name="ca1003-use-generic-event-handler-instances"></a>CA1003: Použijte instance obecných obslužných rutin události
+
 |||
 |-|-|
 |TypeName|UseGenericEventHandlerInstances|
@@ -30,25 +36,25 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Typ obsahuje delegáta, který vrátí prázdnou hodnotu, jejíž podpis obsahuje dva parametry (první příslušný objekt a druhá a typ, který je přiřadit k EventArgs) a obsahující sestavení cílů [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)].
+ Typ obsahuje delegát vracející hodnotu void, jehož předpis obsahuje dva parametry (první je objekt a druhý typ přiřaditelný do typu EventArgs) a obsahující cíle sestavení [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)].
 
 ## <a name="rule-description"></a>Popis pravidla
- Před [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)], aby bylo možné předat vlastních informací do obslužné rutiny události museli nového delegáta deklarovat, zadat třídu, která odvozený z <xref:System.EventArgs?displayProperty=fullName> třídy. To platí už v [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)], který zavedl <xref:System.EventHandler%601?displayProperty=fullName> delegovat. Tento obecný delegát umožňuje všechny třídy, která je odvozena z <xref:System.EventArgs> má být použit spolu s obslužné rutiny události.
+ Před [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)], chcete-li předat informace o vlastním obslužné rutiny události Nový delegát museli použít deklaraci, která je určena třída, která byla odvozena z <xref:System.EventArgs?displayProperty=fullName> třídy. To platí už v [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)], který zavedl <xref:System.EventHandler%601?displayProperty=fullName> delegovat. Tento obecný delegát umožňuje jakoukoli třídu, která je odvozena od <xref:System.EventArgs> se použije spolu s obslužnou rutinu události.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení toto pravidlo, odeberte delegáta a nahraďte jeho použití pomocí <xref:System.EventHandler%601?displayProperty=fullName> delegovat. Pokud delegát je generován automaticky pomocí [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] kompilátoru, změnit syntaxe deklarace události používat <xref:System.EventHandler%601?displayProperty=fullName> delegovat.
+ Chcete-li opravit porušení tohoto pravidla, odeberte delegáta a nahraďte jeho použití pomocí <xref:System.EventHandler%601?displayProperty=fullName> delegovat. Pokud delegát je automaticky generována podle [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] kompilátoru, změníte syntaxi deklarace události použití <xref:System.EventHandler%601?displayProperty=fullName> delegovat.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Nepotlačujte upozornění na toto pravidlo.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje delegáta, který porušuje pravidlo. V [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] například komentáře popisují, jak upravit třeba splňovat pravidla. C# například následuje příklad zobrazující změny kódu.
+ Následující příklad ukazuje delegáta, který porušuje pravidla. V [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] například komentáře popisují, jak upravte příklad tak, že splňují pravidla. Pro příklad jazyka C# následuje příklad, který ukazuje změny kódu.
 
  [!code-vb[FxCop.Design.CustomEventHandler#1](../code-quality/codesnippet/VisualBasic/ca1003-use-generic-event-handler-instances_1.vb)]
  [!code-csharp[FxCop.Design.CustomEventHandler#1](../code-quality/codesnippet/CSharp/ca1003-use-generic-event-handler-instances_1.cs)]
 
 ## <a name="example"></a>Příklad
- Následující příklad odebere předchozí příklad, který splňuje pravidlo a nahradí jeho použití v deklaraci delegáta `ClassThatRaisesEvent` a `ClassThatHandlesEvent` metody pomocí <xref:System.EventHandler%601?displayProperty=fullName> delegovat.
+ Následující příklad odebere z předchozího příkladu, který splňuje pravidlo a nahradí jeho použití v deklaraci delegáta `ClassThatRaisesEvent` a `ClassThatHandlesEvent` metody pomocí <xref:System.EventHandler%601?displayProperty=fullName> delegovat.
 
  [!code-csharp[FxCop.Design.GenericEventHandler#1](../code-quality/codesnippet/CSharp/ca1003-use-generic-event-handler-instances_2.cs)]
 
@@ -67,5 +73,6 @@ ms.lasthandoff: 04/19/2018
 
  [CA1007: Použijte obecné typy, kde je to vhodné](../code-quality/ca1007-use-generics-where-appropriate.md)
 
-## <a name="see-also"></a>Viz také
- [Obecné typy](/dotnet/csharp/programming-guide/generics/index)
+## <a name="see-also"></a>Viz také:
+
+- [Obecné typy](/dotnet/csharp/programming-guide/generics/index)

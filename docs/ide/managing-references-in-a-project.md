@@ -1,6 +1,7 @@
 ---
 title: Správa odkazů v projektu
 ms.date: 04/11/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +23,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ef62d3ab0436ff8b20766f2ffe88506d73c8f03b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e772f4d861e4b16499ad9be9d7c814320e1a14f9
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31950943"
 ---
 # <a name="manage-references-in-a-project"></a>Správa odkazů v projektu
 
@@ -54,7 +56,7 @@ Můžete přidat odkaz na následující typy součástmi a službami:
 
 Projekty pro Universal Windows Platform (UWP) můžete vytvořit odkazy na další UWP projekty v řešení, nebo projekty Windows 8.1 nebo binární soubory, za předpokladu, že tyto projekty nepoužívají rozhraní API, která jsou zastaralé v systému Windows 10. Další informace najdete v tématu [přesunutí ze systému Windows 8 Runtime UWP](/windows/uwp/porting/w8x-to-uwp-root).
 
-Pokud zvolíte možnost změnit cílový projekty Windows 8.1 na Windows 10, najdete v části [Port, migrace a Upgrade projektů sady Visual Studio](../porting/port-migrate-and-upgrade-visual-studio-projects.md).
+Pokud zvolíte možnost změnit cílový projekty Windows 8.1 na Windows 10, najdete v části [Port, migrace a upgrade projektů sady Visual Studio](../porting/port-migrate-and-upgrade-visual-studio-projects.md).
 
 ### <a name="extension-sdk-references"></a>Reference na rozšíření sady SDK
 
@@ -89,9 +91,9 @@ Když do projektu odkaz na sestavení, Visual Studio vyhledává sestavení v n�
 - Další adresáře projektu ve stejném řešení. (Tyto sestavení můžete najít na **projekty** karta.)
 
 > [!NOTE]
-> - Všechny projekty obsahují implicitní odkaz na mscorlib.
+> - Všechny projekty obsahují implicitní odkaz na **mscorlib**.
 > - Všechny projekty obsahují implicitní odkaz na `System.Core`i v případě `System.Core` se odebere ze seznamu odkazů.
-> - Projekty Visual Basic obsahují implicitní odkaz na `Microsoft.VisualBasic`.
+> - Projekty Visual Basic obsahují implicitní odkaz na <xref:Microsoft.VisualBasic>.
 
 ## <a name="references-to-shared-components-at-run-time"></a>Odkazy na sdílené komponenty v době běhu
 
@@ -111,7 +113,7 @@ Další informace najdete v tématu [přehled cílení na více](../ide/visual-s
 
 Odkazy na projekt na projekt jsou odkazy na projekty, které obsahují sestavení; můžete vytvořit pomocí **projektu** kartě. Visual Studio můžete najít sestavení při zadána cesta k projektu.
 
-Až budete mít na projekt, který vytváří sestavení, by měla odkazovat na projekt a nechcete použít odkaz na soubor (viz níže). Výhodou odkaz na projekt na projekt je, že vytvoří závislost mezi projekty v systému sestavení. Závislé projektu budou vytvořeny, pokud se změnil od posledního odkazujícího projektu. Odkaz na soubor nevytvoří závislost sestavení, takže je možné vytvořit odkazující projekt bez vytváření závislého projektu a odkaz se může stát zastaralé. (To znamená, projekt může odkazovat na dřívější sestavené verze projektu.) Výsledkem může být několik verzí jednoho knihovny DLL se vyžaduje v adresáři bin, což není možné. Když dojde k tomuto konfliktu, zobrazí se zpráva, jako "Upozornění: závislost 'file' v projektu 'project' nelze zkopírovat do běhového adresáře, protože by přepsala odkaz 'file.'". Další informace najdete v tématu [řešení potíží s odkazy na přerušený](../ide/troubleshooting-broken-references.md) a [postupy: vytvoření a odebrání závislostí projektu](../ide/how-to-create-and-remove-project-dependencies.md).
+Až budete mít na projekt, který vytváří sestavení, by měla odkazovat na projekt a nechcete použít odkaz na soubor (viz níže). Výhodou odkaz na projekt na projekt je, že vytvoří závislost mezi projekty v systému sestavení. Závislé projektu budou vytvořeny, pokud se změnil od posledního odkazujícího projektu. Odkaz na soubor nevytvoří závislost sestavení, takže je možné vytvořit odkazující projekt bez vytváření závislého projektu a odkaz se může stát zastaralé. (To znamená, projekt může odkazovat na dřívější sestavené verze projektu.) To může způsobit v několika verzích jeden soubor DLL v nich vyžaduje *bin* adresáři, který není možné. Když dojde k tomuto konfliktu, zobrazí se zpráva, jako "Upozornění: závislost 'file' v projektu 'project' nelze zkopírovat do běhového adresáře, protože by přepsala odkaz 'file.'". Další informace najdete v tématu [Poradce při potížích přerušený odkazy](../ide/troubleshooting-broken-references.md) a [postupy: vytvoření a odebrání závislostí projektu](../ide/how-to-create-and-remove-project-dependencies.md).
 
 > [!NOTE]
 > Odkaz na soubor místo odkaz na projekt na projekt se vytvoří, pokud je cílová verze rozhraní .NET Framework projektu jeden verze 4.5 a cílovou verzi sady jiný projekt je verze 2, 3, 3.5 nebo 4.0.

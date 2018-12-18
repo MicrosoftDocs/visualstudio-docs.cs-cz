@@ -14,18 +14,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b193ff33d979917342679e115cdb973cb3b7ad5
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 6541ddecceff6d9e7867dd5feead3457b2248b45
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34844115"
 ---
 # <a name="markerimportance-enumeration"></a>marker_importance – výčet
 Představuje úroveň důležitosti značky Vizualizéru souběžnosti.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 enum marker_importance;  
 ```  
   
@@ -41,9 +42,9 @@ enum marker_importance;
 |`normal_importance`|Určuje, že značky je normální význam.|  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** cvmarkersobj.h  
+ **Záhlaví:** *cvmarkersobj.h*  
   
  **Namespace:** Concurrency::Diagnostic –  
   
-## <a name="see-also"></a>Viz také  
- [diagnostic – obor názvů](../profiling/diagnostic-namespace.md)
+## <a name="see-also"></a>Viz také:  
+ [Diagnostic – obor názvů](../profiling/diagnostic-namespace.md)

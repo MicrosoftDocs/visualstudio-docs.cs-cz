@@ -19,11 +19,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 860d6bd5f89ff85f3abf75f1beceb62b6b860d54
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: b41a65fb92615bf8b8e38cc13260187a6abc946f
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37058409"
 ---
 # <a name="how-to-test-and-debug-a-visualizer"></a>Postupy: Testování a ladění vizualizéru
 Jednou byly zapsány vizualizéru, budete muset ladění a testování.  
@@ -36,7 +37,7 @@ Jednou byly zapsány vizualizéru, budete muset ladění a testování.
   
 1.  Ve třídě ladicí program na straně zahrnují statickou metodu, která vytvoří <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerDevelopmentHost> objektu a volá metodu jeho zobrazit:  
   
-    ```  
+    ```csharp
     public static void TestShowVisualizer(object objectToVisualize)  
     {  
        VisualizerDevelopmentHost myHost = new VisualizerDevelopmentHost(objectToVisualize, typeof(DebuggerSide));  
@@ -48,7 +49,7 @@ Jednou byly zapsány vizualizéru, budete muset ladění a testování.
   
 2.  Přidejte následující příkaz k volání `TestShowVisualizer`. Pokud jste vytvořili vaší vizualizér v knihovně tříd, budete muset vytvořit spustitelný soubor volání knihovny tříd a umístěte tento příkaz ve vašem spustitelný soubor:  
   
-    ```  
+    ```csharp
     DebuggerSide.TestShowVisualizer(myString);  
     ```  
   

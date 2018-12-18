@@ -1,7 +1,8 @@
 ---
-title: ASP.NET – ladění, Visual Studio | Microsoft Docs
+title: Ladění technologie ASP.NET
+description: Ladění technologie ASP.NET pomocí ladicího programu sady Visual Studio
 ms.custom: mvc
-ms.date: 03/16/2018
+ms.date: 08/06/2018
 ms.technology: vs-ide-debug
 ms.topic: quickstart
 helpviewer_keywords:
@@ -12,35 +13,36 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: c9cc8022a6080b63792cdadcc87af07e08ef749e
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 74671401b3e3eaeae5840110dfc37c926266f98a
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39636984"
 ---
-# <a name="debug-aspnet-with-the-visual-studio-debugger"></a>Ladění technologie ASP.NET pomocí ladicího programu sady Visual Studio
+# <a name="quickstart-debug-aspnet-with-the-visual-studio-debugger"></a>Rychlý úvod: Ladění technologie ASP.NET v ladicím programu sady Visual Studio
 
-Ladicí program Visual Studio poskytuje mnoho výkonné funkce, které vám pomůže při ladění aplikace. Toto téma poskytuje rychlý způsob, jak další některé základní funkce.
+Ladicí program sady Visual Studio poskytuje mnoha výkonným funkcím, které vám pomůžou ladit vaše aplikace. Toto téma poskytuje rychlý způsob, jak Seznamte se s některými základními funkcemi.
 
 ## <a name="create-a-new-project"></a>Vytvoření nového projektu 
 
-1. V sadě Visual Studio, vyberte **soubor > Nový projekt**.
+1. V sadě Visual Studio, zvolte **soubor > Nový projekt**.
 
 1. V části **Visual C#**, zvolte **webové**a potom v prostředním podokně vyberte **webové aplikace ASP.NET Core**.
 
-1. Zadejte název jako **MyDbgApp** a klikněte na tlačítko **OK**.
+1. Zadejte název, například **MyDbgApp** a klikněte na tlačítko **OK**.
 
-1. V zobrazeném dialogu vyberte **webové aplikace** v prostředním podokně a pak klikněte na tlačítko **OK**.
+1. V dialogovém okně, které se zobrazí, zvolte **webovou aplikaci** v prostředním podokně a pak klikněte na tlačítko **OK**.
 
-     Pokud nevidíte **webové aplikace** projektu šablony, klikněte na tlačítko **otevřete instalační program Visual Studio** odkaz v levém podokně **nový projekt** dialogové okno. Spustí instalační program Visual Studio. Vyberte **ASP.NET** a **.NET Core** zatížení, zvolte **upravit**.
+     Pokud se nezobrazí **webovou aplikaci** šablony projektu, klikněte na tlačítko **otevřít instalační program Visual Studio** odkaz v levém podokně **nový projekt** dialogové okno. Spustí se instalační program pro Visual Studio. Zvolte **vývoj pro ASP.NET a web** úloh, klikněte na tlačítko **změnit**.
 
     ![Vyberte webovou aplikaci](../debugger/media/dbg-qs-aspnet-choose-web-app.png)
 
     Visual Studio vytvoří projekt.
 
-1. V Průzkumníku řešení otevřete About.cshtml.cs (v rámci Pages/About.cshtml) a nahraďte následujícím kódem
+1. V Průzkumníku řešení otevřete About.cshtml.cs (v rámci Pages/About.cshtml) a nahraďte následující kód
 
-    ```c#
+    ```csharp
     public void OnGet()
     {
         Message = "Your application description page.";
@@ -49,7 +51,7 @@ Ladicí program Visual Studio poskytuje mnoho výkonné funkce, které vám pom�
 
     s tímto kódem:
 
-    ```c#
+    ```csharp
     public void OnGet()
     {
         LinkedList<int> result = doWork();
@@ -70,68 +72,68 @@ Ladicí program Visual Studio poskytuje mnoho výkonné funkce, které vám pom�
     }
     ```
 
-## <a name="set-a-breakpoint"></a>Nastavit zarážky
+## <a name="set-a-breakpoint"></a>Nastavení zarážky
 
-A *zarážek* je značku, která určuje, kde by měl Visual Studio pozastavení vaší spuštěného kódu, můžete si prohlédněte hodnoty proměnných nebo chování paměti, nebo zda je získávání spustit větev kódu. Je nejzákladnější funkce při ladění.
+A *zarážku* je značku, která určuje, kde by měl Visual Studio pozastavit spuštěného kódu, se můžete podívat na hodnoty proměnných nebo chování paměti nebo zda je získávání běhových větve kódu. Je nejzákladnější funkce ladění.
 
-1. Chcete-li nastavit bod přerušení, klikněte na tlačítko v mřížky nalevo od `doWork` – funkce (nebo vyberte řádek kódu a stiskněte klávesu **F9**).
+1. Nastavit zarážku, klikněte na ovládací prvek vlevo od `doWork` – funkce (nebo vyberte řádek kódu a stiskněte klávesu **F9**).
 
-    ![Nastavit zarážky](../debugger/media/dbg-qs-set-breakpoint-aspnet.png)
+    ![Nastavení zarážky](../debugger/media/dbg-qs-set-breakpoint-aspnet.png)
 
-    Je nastavena zarážka nalevo od levá složená závorka (`{`).
+    Zarážka je nastavena na levé straně levou složenou závorku (`{`).
 
-1. Nyní stiskněte **F5** (nebo zvolte **ladění > Spustit ladění**).
+1. Nyní stiskněte **F5** (nebo zvolte **ladit > Spustit ladění**).
 
-1. Po načtení webové stránky, klikněte na tlačítko **o** odkaz v horní části webové stránky.
+1. Po načtení webové stránky, klikněte na tlačítko **o** odkazu v horní části webové stránky.
 
-    Ladicí program zastaví, kde nastavit bod přerušení. Příkaz, kde je pozastaven spuštění ladicího programu a aplikace je indikován žlutý šipku. Řádek s levá složená závorka (`{`) po `doWork` deklarace funkce ještě nebyla spuštěna.
+    Ladicí program pozastaví, kde nastavit zarážku. Příkaz, kde je pozastaven spuštění ladicího programu a aplikace je označen žlutou šipkou. Řádek s levou složenou závorku (`{`) po `doWork` ještě neprovedlo deklarace funkce.
 
-    ![Stiskněte tlačítko zarážky](../debugger/media/dbg-qs-hit-breakpoint-aspnet.png)
+    ![Na zarážku](../debugger/media/dbg-qs-hit-breakpoint-aspnet.png)
 
     > [!TIP]
-    > Pokud máte zarážka v smyčky nebo rekurze, nebo pokud máte mnoho zarážky, které často krok prostřednictvím, použijte [podmíněného zarážek](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression) a ujistěte se, že kód pozastaven jenom v případě, že jsou splněny určité podmínky. To šetří čas a můžete také usnadňují ladění problémů, které se těžko reprodukovat.
+    > Pokud máte zarážku ve smyčce nebo rekurzi, nebo pokud máte mnoho zarážky, které často projdete, použijte [podmíněné zarážky](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression) abyste měli jistotu, že váš kód je pozastavený, pouze v případě, že jsou splněny konkrétní podmínky. To šetří čas a můžete také usnadňují ladění problémů, které je těžké reprodukovat.
 
-## <a name="navigate-code"></a>Přejděte kódu
+## <a name="navigate-code"></a>Vyhledání kódu
 
-Existují jiné příkazy dáte pokyn, aby ladicí program pokračovat. Ukážeme příkaz navigační užitečné kód, který je nového ve Visual Studio 2017.
+Existují různé příkazy dáte pokyn, aby ladicí program pokračovat. Ukážeme příkaz navigace užitečné kód, který je nového v sadě Visual Studio 2017.
 
-Při pozastavena u zarážky, najeďte myší na příkaz `return c2` dokud zeleným **spustit a klikněte na tlačítko** tlačítko ![spustit kliknutím](../debugger/media/dbg-tour-run-to-click.png) se zobrazí a potom stiskněte klávesu **spustit a klikněte na tlačítko** tlačítko.
+Během pozastavení na zarážce, najeďte myší příkaz `return c2` až do zelené **běžet do kliknutí** tlačítko ![běžet do kliknutí](../debugger/media/dbg-tour-run-to-click.png) se zobrazí a potom stiskněte klávesu **běžet do kliknutí** tlačítko.
 
-![Spustit a klikněte na](../debugger/media/dbg-qs-run-to-click-aspnet.png)
+![Běžet do kliknutí](../debugger/media/dbg-qs-run-to-click-aspnet.png)
 
-Aplikace pokračuje v provádění a pozastaví na řádek kódu, kde kliknutí na tlačítko.
+Aplikace pokračuje v provádění kódu a pozastaví na řádek kódu, které jste klepnuli na tlačítku.
 
-Běžné příkazy klávesnice umožňuje zahrnout krok prostřednictvím kódu **F10** a **F11**. Další podrobné pokyny najdete v tématu [začátečníka](../debugger/getting-started-with-the-debugger.md).
+Běžné klávesové příkazy používá k procházejte kódem po krocích zahrnují **F10** a **F11**. Další podrobné pokyny najdete v tématu [Průvodce pro začátečníky](../debugger/getting-started-with-the-debugger.md).
 
-## <a name="inspect-variables-in-a-datatip"></a>Zkontrolujte proměnné v datového tipu
+## <a name="inspect-variables-in-a-datatip"></a>Kontrolovat proměnné v datovém tipu
 
-1. V aktuálním řádku kódu (označená žlutou provádění ukazatel), najeďte myší `c2` objekt se ukazatel myši zobrazíte datového tipu.
+1. Na aktuálním řádku kódu (označená žlutou provádění ukazatel), najeďte myší `c2` objektu pomocí myši a zobrazit datatip.
 
-    ![Zobrazení datového tipu](../debugger/media/dbg-qs-data-tip-aspnet.png)
+    ![Zobrazit datatip](../debugger/media/dbg-qs-data-tip-aspnet.png)
 
-    Popis dat se dozvíte, aktuální hodnota `c2` proměnné a umožňuje zkontrolovat její vlastnosti. Při ladění, pokud se zobrazí hodnota, kterou nepředpokládáte, pravděpodobně chyby v předchozích nebo volání řádků kódu. 
+    Datatip se dozvíte, aktuální hodnota `c2` proměnné a umožňuje vám umožní zkontrolovat její vlastnosti. Při ladění, pokud se zobrazí hodnotu, kterou nečekáte, pravděpodobně chyby v předchozích nebo volání řádků kódu. 
 
-2. Rozbalte popis dat se podívat na aktuální hodnoty vlastností `c2` objektu.
+2. Rozbalení datového tipu se podívat na aktuální hodnoty vlastností `c2` objektu.
 
-3. Pokud chcete připnout popis dat tak, aby se může nadále zobrazovat hodnota `c2` při je kód spuštěn, klikněte na ikonu malý kód pin. (Popis definovaného dat můžete přesunout do vhodného umístění.)
+3. Pokud chcete oblast připnout datatip tak, aby se může nadále zobrazovat hodnota `c2` když je kód spuštěn, kliknutím na ikonu Připnutí malé. (Definovaného datového tipu můžete přesunout do vhodného umístění.)
 
-## <a name="edit-code-and-continue-debugging"></a>Kód upravit a pokračovat, ladění
+## <a name="edit-code-and-continue-debugging"></a>Úprava kódu a pokračování ladění
 
-Pokud identifikovat změny, která chcete testovat ve vašem kódu při uprostřed relace ladění, můžete to udělat, příliš.
+Pokud zjistíte změnu, kterou chcete testovat ve vašem kódu, zatímco uprostřed relaci ladění, vám pomůžou, příliš.
 
 1. V `OnGet` metoda, klikněte na druhou instanci `result.First.Value` a změňte `result.First.Value` k `result.Last.Value`.
 
-1. Stiskněte klávesu **F10** (nebo **ladění > Krokovat s přeskočením**) několikrát k posunutí ladicího programu a spusťte upravená kód.
+1. Stisknutím klávesy **F10** (nebo **ladit > Krokovat s přeskočením**) několikrát k přechodu ladicí program a spusťte upravený kód.
 
     ![Upravit a pokračovat](../debugger/media/dbg-qs-edit-and-continue-aspnet.png "upravit a pokračovat")
 
-    **F10** přejde ladicí program jeden příkaz na dobu, ale kroky prostřednictvím funkce místo zanoříte se do nich (kód, který můžete přeskočit stále provádí).
+    **F10** přejde ladicí program jeden příkaz v době, ale postup přes funkce místo krokování do nich (kód, který můžete přeskočit, stále provádí).
 
-Další informace o používání upravit a pokračovat a na omezení funkcí najdete v tématu [upravit a pokračovat](../debugger/edit-and-continue.md).
+Další informace o používání edit-and-continue a na omezení funkcí najdete v tématu [upravit a pokračovat](../debugger/edit-and-continue.md).
 
 ## <a name="next-steps"></a>Další kroky
 
-V tomto kurzu když jste se naučili postup spuštění ladicího programu, krok prostřednictvím kódu a zkontrolovat proměnné. Chcete získat přehled funkcí ladicího programu spolu s odkazy na další informace.
+V tomto kurzu jste zjistili, jak spustit ladicí program, krokovat kód a můžete kontrolovat proměnné. Můžete chtít získat podrobný přehled funkcí ladicího programu spolu s odkazy na další informace.
 
 > [!div class="nextstepaction"]
 > [Prohlídka funkcí ladicího programu](../debugger/debugger-feature-tour.md)

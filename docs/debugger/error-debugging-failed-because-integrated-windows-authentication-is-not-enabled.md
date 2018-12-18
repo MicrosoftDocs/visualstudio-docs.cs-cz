@@ -1,5 +1,5 @@
 ---
-title: 'Chyba: Ladění se nezdařilo, protože integrované ověřování systému Windows není povoleno. | Microsoft Docs'
+title: 'Chyba: Ladění se nezdařilo, protože ověření integrované Windows není povoleno. | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -19,64 +19,65 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f189e9f3f85fd53941aa51cf2a2d969b9c9ed19
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: f56cca9fa637efaa66b6dcab4716d4a1900aa61d
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44278642"
 ---
 # <a name="error-debugging-failed-because-integrated-windows-authentication-is-not-enabled"></a>Chyba: Ladění se nezdařilo, protože integrované ověřování systému Windows není povoleno.
-Ověření uživatele, který požadovaný ladění zabránily chyby ověřování. Tato situace může nastat, když zkusíte krok do webové aplikace nebo webové služby XML. Jeden příčinu této chyby je, že integrované ověřování systému Windows není povoleno. Ho Pokud chcete zapnout, postupujte podle kroků v "K povolení integrované ověřování systému Windows."  
+Ověření uživatele, který požaduje ladění nebylo možné kvůli chybě ověřování. Tato situace může nastat, když zkusíte Krokovat s vnořením webovou aplikaci nebo webové služby XML. Jednou z příčin této chyby je, že integrované ověřování Windows není povoleno. Ho Pokud chcete povolit, postupujte podle kroků v "K povolení integrované ověřování Windows."  
   
- Pokud jste povolili integrované ověřování systému Windows a tato chyba, je stále zobrazena, je možné, že tato chyba se nezdařila, protože **Digest ověřování pro doménové servery Windows** je povoleno. V této situaci, obraťte se na správce sítě.  
+ Pokud je povoleno integrované ověřování Windows a stále se zobrazí tato chyba, je možné, že k této chybě dojde, protože **ověřování algoritmem Digest pro Windows domény serverů** je povolená. V této situaci byste se obrátit se na správce sítě.  
   
-### <a name="to-enable-integrated-windows-authentication"></a>Chcete-li povolit integrované ověřování systému Windows  
+### <a name="to-enable-integrated-windows-authentication"></a>Pokud chcete povolit integrované ověřování Windows  
   
 1.  Přihlaste se k webovému serveru pomocí účtu správce.  
   
-2.  Klikněte na tlačítko **spustit** a pak klikněte na **ovládací panely**.  
+2.  Klikněte na tlačítko **Start** a potom klikněte na tlačítko **ovládací panely**.  
   
-3.  V **ovládací panely**, dvakrát klikněte na **nástroje pro správu**.  
+3.  V **ovládací panely**, dvakrát klikněte na panel **nástroje pro správu**.  
   
-4.  Klikněte dvakrát na **Internetová informační služba**.  
+4.  Dvakrát klikněte na panel **Internetová informační služba**.  
   
 5.  Klikněte na uzel webového serveru.  
   
-     A **weby** složky otevře pod název serveru.  
+     A **weby** otevře složka pod název serveru.  
   
-6.  Můžete nakonfigurovat ověřování pro všechny weby nebo pro jednotlivé webové servery. Postup konfigurace ověřování pro všechny webové servery, klikněte pravým tlačítkem myši **weby** složku a pak klikněte na tlačítko **vlastnosti**. Chcete-li konfigurovat ověřování pro konkrétní webový server, otevřete **weby** složku, klikněte pravým tlačítkem na jednotlivé webu a pak klikněte na tlačítko **vlastnosti**.  
+6.  Můžete nakonfigurovat ověřování pro všechny webové servery nebo pro jednotlivé weby. Konfigurace ověřování pro všechny webové servery, klikněte pravým tlačítkem myši **weby** složku a pak klikněte na tlačítko **vlastnosti**. Chcete-li nakonfigurovat ověřování pro jednotlivé webové stránky, otevřete **weby** složku, klikněte pravým tlačítkem na jednotlivé webové stránky a pak klikněte na tlačítko **vlastnosti**.  
   
-     **Vlastnosti** se zobrazí dialogové okno.  
+     **Vlastnosti** zobrazí dialogové okno.  
   
-7.  Klikněte **zabezpečení adresáře** kartě.  
+7.  Klikněte na tlačítko **zabezpečení adresáře** kartu.  
   
 8.  V **anonymního přístupu a ověřování** klikněte na tlačítko **upravit**.  
   
-     **Metody ověřování** se zobrazí dialogové okno.  
+     **Metody ověřování** zobrazí dialogové okno.  
   
-9. V části **ověřeného přístupu**, vyberte **integrované ověřování systému Windows**.  
+9. V části **ověřeného přístupu**vyberte **ověření integrované Windows**.  
   
 10. Klikněte na tlačítko **OK** zavřete **metody ověřování** dialogové okno.  
   
 11. Klikněte na tlačítko **OK** zavřete **vlastnosti** dialogové okno.  
   
-12. Zavřít **Internetová informační služba** okno.  
+12. Zavřít **Internetová informační služba** okna.  
   
-### <a name="to-enable-integrated-windows-authentication-in-windows-vistaiis-7"></a>Chcete-li povolit integrované ověřování systému Windows v systému Windows Vista nebo IIS 7  
+### <a name="to-enable-integrated-windows-authentication-in-windows-vistaiis-7"></a>Pokud chcete povolit integrované ověřování Windows ve Windows Vista/IIS 7  
   
 1.  Přihlaste se k webovému serveru pomocí účtu správce.  
   
-2.  Zapněte ověřování systému Windows a II6 Kompatibilita správy, pokud jste ještě dřív, pomocí následujících kroků:  
+2.  Zapněte ověřování Windows a II6 Kompatibilita správy, pokud jste neudělali dříve, pomocí následujících kroků:  
   
-    1.  Klikněte na tlačítko **spustit**, klikněte na tlačítko **ovládací panely** a pak klikněte na **programy**.  
+    1.  Klikněte na tlačítko **Start**, klikněte na tlačítko **ovládací panely** a potom klikněte na tlačítko **programy**.  
   
     2.  V části **programy a funkce**, klikněte na tlačítko **Windows zapnout nebo vypnout funkce**.  
   
-         Dialogové okno řízení přístupu uživatelů se zobrazí a vás vyzve k zadání oprávnění pokračujte.  
+         Zobrazí se dialogové okno Řízení uživatelských účtů a vás vyzve k zadání oprávnění, abyste mohli pokračovat.  
   
     3.  Klikněte na tlačítko **pokračovat**.  
   
-         Zobrazí se dialogové okno funkce systému Windows.  
+         Zobrazí se dialogové okno funkcí Windows.  
   
     4.  V seznamu funkcí, rozbalte **Internetová informační služba** uzlu.  
   
@@ -84,37 +85,37 @@ Ověření uživatele, který požadovaný ladění zabránily chyby ověřován
   
     6.  V části **webové služby**, klikněte na tlačítko **zabezpečení**.  
   
-    7.  Klikněte na tlačítko **ověřování systému Windows**.  
+    7.  Klikněte na tlačítko **ověřování Windows**.  
   
     8.  V části **Internetová informační služba**, rozbalte **nástroje webové správy** uzlu.  
   
-    9. V části **nástroje webové správy**, rozbalte **IIS 6 Management Compatibility** uzel a vyberte možnost **metabáze služby IIS 6 a kompatibilita konfigurace služby IIS 6** zaškrtávací políčko.  
+    9. V části **nástroje webové správy**, rozbalte **IIS 6 Management Compatibility** uzel a vyberte **metabáze služby IIS 6 a IIS 6 konfigurace kompatibility** zaškrtávací políčko.  
   
-    10. V části **nástroje webové správy**, vyberte **konzoly pro správu služby IIS** a klikněte na tlačítko **OK.**  
+    10. V části **nástroje webové správy**vyberte **konzolu pro správu IIS** a klikněte na tlačítko **OK.**  
   
-    11. Po restartování počítače tyto změny se projeví.  
+    11. Restartujte počítač změny se projeví.  
   
-3.  Klikněte na tlačítko **spustit** a potom klikněte na **ovládací panely**.  
+3.  Klikněte na tlačítko **Start** a potom klikněte na **ovládací panely**.  
   
-4.  Klikněte na tlačítko **klasickém zobrazení**a potom dvakrát klikněte na **nástroje pro správu**.  
+4.  Klikněte na tlačítko **klasické zobrazení**a potom dvakrát klikněte na panel **nástroje pro správu**.  
   
-5.  V **název** sloupce a poklikejte na soubor **Správce Internetové informační služby (IIS)**.  
+5.  V **název** sloupce a dvakrát klikněte na **Správce Internetové informační služby (IIS)**.  
   
-6.  V **připojení** sloupce, rozbalte uzel serveru.  
+6.  V **připojení** sloupce, rozbalte uzel pro váš server.  
   
-     A **weby** složky otevře pod název serveru.  
+     A **weby** otevře složka pod název serveru.  
   
-7.  Rozbalte **weby** uzel a klikněte na web, pro který chcete povolit integrované ověřování systému Windows.  
+7.  Rozbalte **weby** uzel a klikněte na webové stránky, pro kterou chcete povolit integrované ověřování Windows.  
   
-8.  Název v prostředním podokně se změní na název webu, který jste vybrali. V tomto podokně v části **IIS** záhlaví, klikněte dvakrát na **ověřování**.  
+8.  Název v prostředním podokně změní název webu, který jste vybrali. V tomto podokně v části **IIS** záhlaví, klikněte dvakrát na **ověřování**.  
   
-     Název v podokně se změní na **ověřování**.  
+     Název panelu se změní na **ověřování**.  
   
-9. V **ověřování** podokně, v **název** sloupce, klikněte pravým tlačítkem na **ověřování systému Windows** a pak klikněte na **povolit**.  
+9. V **ověřování** podokno v **název** sloupce, klikněte pravým tlačítkem na **ověřování Windows** a potom klikněte na tlačítko **povolit**.  
   
-10. Zavřít **Správce Internetové informační služby (IIS)** okno.  
+10. Zavřít **Správce Internetové informační služby (IIS)** okna.  
   
 ## <a name="see-also"></a>Viz také  
  [Ladění webových aplikací: Chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md)   
- [Ověřování hodnotou hash Microsoft](http://go.microsoft.com/fwlink/?LinkId=77938)   
- [Spouštění webových aplikací v systému Windows Vista se službou IIS 7.0 a Visual Studio](http://msdn.microsoft.com/Library/262a82ac-dd0e-4096-86c6-fb463e88be66)
+ [Ověřování algoritmem Digest Microsoft](http://go.microsoft.com/fwlink/?LinkId=77938)   
+ [Spouštění webových aplikací v systému Windows Vista se službou IIS 7.0 a Visual Studio](https://msdn.microsoft.com/Library/262a82ac-dd0e-4096-86c6-fb463e88be66)

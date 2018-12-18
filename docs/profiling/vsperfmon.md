@@ -18,16 +18,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b0c19d009ddfb60d3e8fa33cf4a976df44ab4c2a
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e9754d4f324c178c117e14ff5949bd6c8ef352e9
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35254807"
 ---
 # <a name="vsperfmon"></a>VSPerfMon
-Vsperfmon – nástroj můžete použít ke shromažďování dat výkonu pro aplikace. Tento nástroj se obvykle spustit VSPerfCmd.exe. Vsperfmon – zobrazí informace o procesu připojení nebo odpojení, která není k dispozici pomocí vsperfcmd – nástroj. Chcete-li tyto informace zobrazit, spusťte vsperfmon – v samostatném okně. Vsperfmon – k vyvolání použijte následující syntaxi:  
+Vsperfmon – nástroj můžete použít ke shromažďování dat výkonu pro aplikace. Obvykle je tento nástroj spuštěn *VSPerfCmd.exe*. Vsperfmon – zobrazí informace o procesu připojení nebo odpojení, která není k dispozici pomocí vsperfcmd – nástroj. Chcete-li tyto informace zobrazit, spusťte vsperfmon – v samostatném okně. Vsperfmon – k vyvolání použijte následující syntaxi:  
   
-```  
+```cmd  
 VSPerfMon [/U] </TRACE [/COUNTER:cfg] | /SAMPLE | /COVERAGE> /CROSSSESSION /OUTPUT <file name> [/WINCOUNTER:cfg] [/USER [DOMAIN\]username]  
 ```  
   
@@ -47,7 +48,7 @@ VSPerfMon [/U] </TRACE [/COUNTER:cfg] | /SAMPLE | /COVERAGE> /CROSSSESSION /OUTP
 |**WINCOUNTER** `:path`|Určuje čítačů výkonu systému Windows mají být součástí značky data. `path` je řetězec čítače výkonu systému Windows v formát cesty PDH čítače. Příklad:<br /><br /> \Processor(0)\\% času procesoru<br /><br /> Přepnutí \System\Context za sekundu|  
 |**PRO AUTOMATICKÉ OZNAČOVÁNÍ** `:n`|Určuje časový interval (v milisekundách) mezi automatické značky, pokud používáte /WINCOUNTER. Zaokrouhlená na nejbližší 500ms.<br /><br /> Použijte hodnotu 0, chcete-li zakázat automatické značky. (výchozí = 500ms-li tento parametr)|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Vsinstr –](../profiling/vsinstr.md)   
  [Vsperfcmd –](../profiling/vsperfcmd.md)   
  [Vsperfreport –](../profiling/vsperfreport.md)   

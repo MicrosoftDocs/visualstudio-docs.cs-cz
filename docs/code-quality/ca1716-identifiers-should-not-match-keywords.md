@@ -1,6 +1,7 @@
 ---
 title: 'CA1716: Identifikátory by neměly odpovídat klíčovým slovům'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,13 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 079a3502b35807fed39070b59c6ded2e554bf511
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: cfaef87f8463c43c412c5db3c83a899fb22b4f66
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49862434"
 ---
 # <a name="ca1716-identifiers-should-not-match-keywords"></a>CA1716: Identifikátory by neměly odpovídat klíčovým slovům
+
 |||
 |-|-|
 |TypeName|IdentifiersShouldNotMatchKeywords|
@@ -30,23 +33,27 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Název oboru názvů, typ nebo člen viritual nebo rozhraní odpovídá rezervované klíčové slovo v programovacím jazyce.
+
+Název oboru názvů, typ nebo člen viritual nebo rozhraní odpovídá vyhrazenému klíčovému slovu programovacího jazyka.
 
 ## <a name="rule-description"></a>Popis pravidla
- Identifikátory pro obory názvů, typy a virtuální a členové rozhraní by neměly odpovídat klíčová slova, která jsou definovaná sadou jazyky, které cílí modul common language runtime. V závislosti na jazyk, který se používá a klíčové slovo chyby kompilátoru a nejednoznačnosti můžete nastavit knihovny obtížně použitelný.
 
- Toto pravidlo zkontroluje proti klíčová slova v těchto jazycích:
+Identifikátory pro obory názvů, typy a virtuální a interface členy by neměly odpovídat klíčová slova, která jsou definována jazyky cílenými na modul common language runtime. V závislosti na jazyk, ve kterém se používá a klíčové slovo chyby kompilátoru a nejednoznačnosti můžete nastavit knihovnu obtížně použitelnou.
 
--   Visual Basic
+Toto pravidlo zkontroluje proti klíčových slov v těchto jazycích:
 
--   C#
+- Visual Basic
 
--   C++/CLI
+- C#
 
- Porovnávání se používá pro [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] klíčová slova a porovnání malá a velká písmena se používá pro jiné jazyky.
+- C++/CLI
+
+Porovnávání se používá pro [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] klíčová slova a porovnání velká a malá písmena se používá pro jiné jazyky.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Vyberte název, který se nenachází v seznamu klíčová slova.
+
+Vyberte název, který se nezobrazí v seznamu klíčových slov.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Upozornění od tohoto pravidla můžete potlačit, pokud jste přesvědčeni, že identifikátor nesmí být pro uživatele matoucí rozhraní API, a že je použitelná ve všech jazycích k dispozici v knihovně [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)].
+
+Pokud jste se přesvědčili, že identifikátor nesmí být pro uživatele matoucí rozhraní API a, že je možné použít ve všech jazycích k dispozici v rozhraní .NET Framework knihovnu můžete potlačit upozornění tohoto pravidla.

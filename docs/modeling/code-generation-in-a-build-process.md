@@ -1,5 +1,5 @@
 ---
-title: Generování kódu v procesu sestavení v sadě Visual Studio
+title: Vytvoření kódu v procesu sestavení
 ms.date: 03/22/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,58 +10,60 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 9895e0cc6cb0b65df51af4ff165d7aa34960763d
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: ef7c49c514c9104ee4659db983b04c27036df889
+ms.sourcegitcommit: c9a01c599ce19a5845605b3b28c0229fd0abb93f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52281820"
 ---
 # <a name="code-generation-in-a-build-process"></a>Generování kódu v procesu sestavení
 
-[Transformace textu](../modeling/code-generation-and-t4-text-templates.md) nelze vyvolat v rámci [proces sestavení](http://msdn.microsoft.com/Library/a971b0f9-7c28-479d-a37b-8fd7e27ef692) z [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] řešení. Některé úlohy sestavení se specializují na transformaci textu. Úlohy sestavení T4 spouštějí textové šablony návrhu a rovněž kompilují textové šablony běhu (předzpracované).
+[Transformace textu](../modeling/code-generation-and-t4-text-templates.md) lze vyvolat jako součást [proces sestavení](/azure/devops/pipelines/index) řešení sady Visual Studio. Některé úlohy sestavení se specializují na transformaci textu. Úlohy sestavení T4 spouštějí textové šablony návrhu a rovněž kompilují textové šablony běhu (předzpracované).
 
-V závislosti na tom, který stroj sestavení používáte, jsou určité rozdíly v tom, co úlohy sestavení mohou provádět. Při sestavování řešení v sadě Visual Studio textové šablony otevřete Visual Studio rozhraní API (EnvDTE), pokud [hostspecific = "true"](../modeling/t4-template-directive.md) nastavený atribut. Ale který nemá hodnotu true, když vytvoříte řešení z příkazového řádku nebo při zahájení sestavení serveru pomocí sady Visual Studio. V těchto případech provádí sestavení nástroj MSBuild a používá se jiný hostitel T4.
+V závislosti na tom, který stroj sestavení používáte, jsou určité rozdíly v tom, co úlohy sestavení mohou provádět. Při sestavování řešení v sadě Visual Studio textové šablony můžete přístup k rozhraní API Visual Studio (EnvDTE) Pokud [hostspecific = "true"](../modeling/t4-template-directive.md) atribut je nastaven. To ale neplatí při sestavování řešení z příkazového řádku nebo při inicializaci sestavení na serveru pomocí sady Visual Studio. V těchto případech provádí sestavení nástroj MSBuild a používá se jiný hostitel T4.
 
-To znamená, že nelze přístup věcmi, jako jsou názvy souborů projektu stejným způsobem, když vytvoříte šablonu text v nástroji MSBuild. Můžete však [předání informací o prostředí do textové šablony a procesory direktiv pomocí parametrů sestavení](#parameters).
+To znamená, že můžete mít přístup k věci, jako jsou názvy souborů projektu v stejným způsobem jako při sestavování textové šablony v nástroji MSBuild. Můžete však [předání informací o prostředí do textových šablon a procesorů pro direktivy použít parametry sestavení](#parameters).
 
-##  <a name="buildserver"></a> Konfigurace vašich počítačů
+##  <a name="buildserver"></a> Konfigurace počítačů
 
-Chcete-li úlohami sestavení ve svém vývojovém počítači, nainstalujte modelování SDK pro Visual Studio.
+Pokud chcete povolit úlohy sestavení na vašem vývojovém počítači, instalace Modeling SDK pro Visual Studio.
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-Pokud [vašem serveru sestavení](http://msdn.microsoft.com/Library/788443c3-0547-452e-959c-4805573813a9) běží na počítači, na který [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] není nainstalovaný, zkopírujte následující soubory do počítače sestavení z vývojovém počítači. Nahraďte nejnovější číslo verze pro ' *'.
+Pokud [váš server sestavení](/azure/devops/pipelines/agents/agents) se spustí na počítači, na kterém není nainstalována sada Visual Studio, zkopírujte následující soubory do počítače sestavení z vývojového počítače. Nahraďte nejnovější čísla verzí pro "*".
 
--   $(ProgramFiles)\MSBuild\Microsoft\VisualStudio\v*.0\TextTemplating
+- $(ProgramFiles)\MSBuild\Microsoft\VisualStudio\v*.0\TextTemplating
 
-    -   Microsoft.VisualStudio.TextTemplating.Sdk.Host.*.0.dll
+    - Microsoft.VisualStudio.TextTemplating.Sdk.Host.*.0.dll
 
-    -   Microsoft.TextTemplating.Build.Tasks.dll
+    - Microsoft.TextTemplating.Build.Tasks.dll
 
-    -   Microsoft.TextTemplating.targets
+    - Microsoft.TextTemplating.targets
 
--   $(ProgramFiles) \Microsoft Visual Studio *.0\VSSDK\VisualStudioIntegration\Common\Assemblies\v4.0
+- *.0\VSSDK\VisualStudioIntegration\Common\Assemblies\v4.0 $(ProgramFiles) \Microsoft Visual Studio
 
-    -   Microsoft.VisualStudio.TextTemplating.*.0.dll
+    - Microsoft.VisualStudio.TextTemplating.*.0.dll
 
-    -   Microsoft.VisualStudio.TextTemplating.Interfaces.*.0.dll (několik souborů)
+    - Microsoft.VisualStudio.TextTemplating.Interfaces.*.0.dll (několik souborů)
 
-    -   Microsoft.VisualStudio.TextTemplating.VSHost.*.0.dll
+    - Microsoft.VisualStudio.TextTemplating.VSHost.*.0.dll
 
--   $(ProgramFiles) \Microsoft Visual Studio *.0\Common7\IDE\PublicAssemblies\
+- *.0\Common7\IDE\PublicAssemblies\ $(ProgramFiles) \Microsoft Visual Studio
 
-    -   Microsoft.VisualStudio.TextTemplating.Modeling.*.0.dll
+    - Microsoft.VisualStudio.TextTemplating.Modeling.*.0.dll
 
 ## <a name="to-edit-the-project-file"></a>Úprava souboru projektu
 
-Budete muset upravit soubor projektu do některé z funkcí konfigurace v nástroji MSBuild.
+Budete muset úpravou souboru projektu ke konfiguraci některých funkcí v nástroji MSBuild.
 
-V Průzkumníku řešení, zvolte **uvolnění** z místní nabídky projektu. Tím umožníte úpravu souborů .csproj nebo .vbproj v editoru XML.
+V **Průzkumníka řešení**, zvolte **uvolnění** v místní nabídce projektu. Tím umožníte úpravu souborů .csproj nebo .vbproj v editoru XML.
 
-Po dokončení úprav, vyberte **opětovného načtení**.
+Po dokončení úprav, vyberte **Reload**.
 
-## <a name="import-the-text-transformation-targets"></a>Import cíle transformace textu
+## <a name="import-the-text-transformation-targets"></a>Import cílů transformace textu
 
 V souboru .vbproj nebo .csproj vyhledejte řádek podobný následujícímu:
 
@@ -86,11 +88,11 @@ Za tento řádek vložte import šablonování textu:
   <Import Project="$(VSToolsPath)\TextTemplating\Microsoft.TextTemplating.targets" />
 ```
 
-## <a name="transform-templates-in-a-build"></a>Transformace šablony v sestavení
+## <a name="transform-templates-in-a-build"></a>Transformace šablon v sestavení
 
 Do souboru projektu lze vložit některé vlastnosti, které slouží k řízení úlohy transformace:
 
--   Spuštění úlohy transformace na začátku každého sestavení:
+- Spuštění úlohy transformace na začátku každého sestavení:
 
     ```xml
     <PropertyGroup>
@@ -98,7 +100,7 @@ Do souboru projektu lze vložit některé vlastnosti, které slouží k řízen
     </PropertyGroup>
     ```
 
--   Přepsání souborů, které jsou určeny jen pro čtení, protože například nejsou rezervovány:
+- Přepsání souborů, které jsou určeny jen pro čtení, protože například nejsou rezervovány:
 
     ```xml
     <PropertyGroup>
@@ -106,7 +108,7 @@ Do souboru projektu lze vložit některé vlastnosti, které slouží k řízen
     </PropertyGroup>
     ```
 
--   Transformace všech šablon při každém spuštění:
+- Transformace všech šablon při každém spuštění:
 
     ```xml
     <PropertyGroup>
@@ -116,31 +118,31 @@ Do souboru projektu lze vložit některé vlastnosti, které slouží k řízen
 
      Ve výchozím nastavení úloha T4 nástroje MSBuild znovu vygeneruje výstupní soubor, pokud je starší než její soubory šablony, nebo všechny vložené soubory, nebo všechny soubory, které byly předtím čteny šablonou nebo procesorem direktiv, který používá. Jedná se o mnohem komplexnější test závislostí, než jaký používá příkaz Transformovat všechny šablony v sadě Visual Studio, který pouze porovnává datum šablony a výstupního souboru.
 
- Pokud chcete v projektu provést pouze transformace textu, vyvolejte úlohu TransformAll:
+Pokud chcete v projektu provést pouze transformace textu, vyvolejte úlohu TransformAll:
 
- `msbuild myProject.csproj /t:TransformAll`
+`msbuild myProject.csproj /t:TransformAll`
 
- Transformace konkrétní textové šablony:
+Transformace konkrétní textové šablony:
 
- `msbuild myProject.csproj /t:Transform /p:TransformFile="Template1.tt"`
+`msbuild myProject.csproj /t:Transform /p:TransformFile="Template1.tt"`
 
- U příkazu TransformFile lze použít zástupné znaky:
+U příkazu TransformFile lze použít zástupné znaky:
 
- `msbuild dsl.csproj /t:Transform /p:TransformFile="GeneratedCode\**\*.tt"`
+`msbuild dsl.csproj /t:Transform /p:TransformFile="GeneratedCode\**\*.tt"`
 
-## <a name="source-control"></a>Správa zdrojového kódu
+## <a name="source-control"></a>Správy zdrojového kódu
 
 Systém správy zdrojového kódu není nijak integrován. Můžete však přidat vlastní rozšíření, například pro rezervaci a vrácení vygenerovaného souboru. Úloha transformace textu ve výchozím nastavení zabraňuje přepsání souboru, který je určený jen pro čtení, a když na takový soubor narazí, bude do seznamu chyb sady Visual Studio zaprotokolována chyba a tato úloha selže.
 
- Pokud chcete určit, že se soubory určené jen pro čtení mají přepisovat, vložte tuto vlastnost:
+Pokud chcete určit, že se soubory určené jen pro čtení mají přepisovat, vložte tuto vlastnost:
 
- `<OverwriteReadOnlyOutputFiles>true</OverwriteReadOnlyOuputFiles>`
+`<OverwriteReadOnlyOutputFiles>true</OverwriteReadOnlyOutputFiles>`
 
- Dokud tento krok následného zpracování neupravíte, při přepsání souboru se do seznamu chyb zaprotokoluje upozornění.
+Dokud tento krok následného zpracování neupravíte, při přepsání souboru se do seznamu chyb zaprotokoluje upozornění.
 
 ## <a name="customize-the-build-process"></a>Přizpůsobení procesu sestavení
 
-Transformace textu se provede před všemi ostatními úlohami v procesu sestavení. Můžete definovat úkoly, které jsou vyvolány před a po transformaci nastavení vlastností `$(BeforeTransform)` a `$(AfterTransform)`:
+Transformace textu se provede před všemi ostatními úlohami v procesu sestavení. Můžete definovat úkoly, které jsou vyvolány před a po transformaci nastavením vlastností `$(BeforeTransform)` a `$(AfterTransform)`:
 
 ```xml
 <PropertyGroup>
@@ -155,11 +157,11 @@ Transformace textu se provede před všemi ostatními úlohami v procesu sestav
   </Target>
 ```
 
-V `AfterTransform`, můžete odkazovat seznam souborů:
+V `AfterTransform`, lze odkazovat na seznamy souborů:
 
--   GeneratedFiles – seznam souborů zapsaných procesem. U souborů, které přepsaly existující soubory určené jen pro čtení, bude mít %(GeneratedFiles.ReadOnlyFileOverwritten) hodnotu true. Tyto soubory lze rezervovat ze správy zdrojového kódu.
+- GeneratedFiles – seznam souborů zapsaných procesem. U souborů, které přepsaly existující soubory určené jen pro čtení, bude mít %(GeneratedFiles.ReadOnlyFileOverwritten) hodnotu true. Tyto soubory lze rezervovat ze správy zdrojového kódu.
 
--   NonGeneratedFiles – seznam souborů určených jen pro čtení, které nebyly přepsány.
+- NonGeneratedFiles – seznam souborů určených jen pro čtení, které nebyly přepsány.
 
 Lze například definovat úlohu, která rezervuje GeneratedFiles.
 
@@ -177,9 +179,9 @@ Tyto vlastnosti používá pouze nástroj MSBuild. Neovlivňují generování k�
 </ItemGroup>
 ```
 
- Je užitečné složku pro přesměrování `$(IntermediateOutputPath).`
+Užitečnou složkou k přesměrování je `$(IntermediateOutputPath).`
 
- Zadáte-li název výstupního souboru, bude mít přednost před příponou zadanou v direktivě output v šablonách.
+Zadáte-li název výstupního souboru, bude mít přednost před příponou zadanou v direktivě output v šablonách.
 
 ```xml
 <ItemGroup>
@@ -191,9 +193,9 @@ Tyto vlastnosti používá pouze nástroj MSBuild. Neovlivňují generování k�
 </ItemGroup>
 ```
 
- Zadání Název_výstupního_souboru nebo OutputFilePath se nedoporučuje, pokud jsou také transformace šablony uvnitř VS pomocí transformace všechny nebo spuštění generátoru jeden soubor. Skončíte s odlišnými cestami souborů v závislosti na tom, jak jste transformaci spustili. To může být velmi matoucí.
+Nastavení OutputFileName nebo OutputFilePath není doporučeno, pokud rovněž transformujete šablony v sadě VS pomocí příkazu Transformovat vše nebo spuštěný generátor tvořený jedním souborem. Skončíte s odlišnými cestami souborů v závislosti na tom, jak jste transformaci spustili. To může být velmi matoucí.
 
-## <a name="add-reference-and-include-paths"></a>Přidání odkazu a cesty zahrnutí
+## <a name="add-reference-and-include-paths"></a>Přidání odkazu a cest zahrnutí
 
 Hostitel má nastavenu výchozí sadu cest, kde hledá sestavení odkazovaná v šablonách. Tuto sadu přidáte takto:
 
@@ -213,9 +215,9 @@ $(IncludeFolders);$(MSBuildProjectDirectory)\Include;AnotherFolder;And\Another</
 </PropertyGroup>
 ```
 
-##  <a name="parameters"></a> Předat data kontextu sestavení do šablony
+##  <a name="parameters"></a> Předání kontextových dat sestavení do šablon
 
-Hodnoty parametru lze nastavit v souboru projektu. Například můžete předat [sestavení](../msbuild/msbuild-properties.md) vlastnosti a [proměnné prostředí](../msbuild/how-to-use-environment-variables-in-a-build.md):
+Hodnoty parametru lze nastavit v souboru projektu. Můžete například předat [sestavení](../msbuild/msbuild-properties.md) vlastnosti a [proměnné prostředí](../msbuild/how-to-use-environment-variables-in-a-build.md):
 
 ```xml
 <ItemGroup>
@@ -226,7 +228,7 @@ Hodnoty parametru lze nastavit v souboru projektu. Například můžete předat
 </ItemGroup>
 ```
 
- V textové šablony, nastavte `hostspecific` v – direktiva šablony. Použití [parametr](../modeling/t4-parameter-directive.md) pro získání hodnoty:
+V textové šabloně nastavte `hostspecific` v direktivě šablony. Použití [parametr](../modeling/t4-parameter-directive.md) – direktiva k získání hodnot:
 
 ```
 <#@template language="c#" hostspecific="true"#>
@@ -234,7 +236,7 @@ Hodnoty parametru lze nastavit v souboru projektu. Například můžete předat
 The project folder is: <#= ProjectFolder #>
 ```
 
-Direktivy procesor, můžete volat [ITextTemplatingEngineHost.ResolveParameterValue](https://msdn.microsoft.com/library/microsoft.visualstudio.texttemplating.itexttemplatingenginehost.resolveparametervalue.aspx):
+V procesoru direktiv lze zavolat [ITextTemplatingEngineHost.ResolveParameterValue](/previous-versions/visualstudio/visual-studio-2012/bb126369\(v\=vs.110\)):
 
 ```csharp
 string value = Host.ResolveParameterValue("-", "-", "parameterName");
@@ -247,11 +249,11 @@ Dim value = Host.ResolveParameterValue("-", "-", "parameterName")
 > [!NOTE]
 > `ResolveParameterValue` získá data z `T4ParameterValues` pouze při použití nástroje MSBuild. Při transformaci šablony pomocí sady Visual Studio budou mít parametry výchozí hodnoty.
 
-##  <a name="msbuild"></a> Použít vlastnosti projektu v sestavení a obsahovat direktivy
+##  <a name="msbuild"></a> Používání vlastností projektu v sestavení a direktiv
 
-Visual Studio makra jako $(solutiondir) – nefungují v nástroji MSBuild. Místo toho můžete použít vlastnosti projektu.
+Makra sady Visual Studio, jako jsou **$ (SolutionDir)** nefungují v nástroji MSBuild. Místo toho můžete použít vlastnosti projektu.
 
-Úpravou souboru .csproj nebo .vbproj definujte vlastnost projektu. Tento příklad definuje vlastnost s názvem `myLibFolder`:
+Upravit vaše *.csproj* nebo *.vbproj* souboru definujte vlastnost projektu. Tento příklad definuje vlastnost s názvem **myLibFolder**:
 
 ```xml
 <!-- Define a project property, myLibFolder: -->
@@ -274,27 +276,25 @@ Nyní můžete vlastnost projektu použít v direktivách assembly a include:
 <#@ include file="$(myLibFolder)\MyIncludeFile.t4" #>
 ```
 
- Tyto direktivy získají z T4parameterValues hodnoty v hostitelích MSBuild i Visual Studio.
+Tyto direktivy získají z T4parameterValues hodnoty v hostitelích MSBuild i Visual Studio.
 
 ## <a name="q--a"></a>Dotazy a odpovědi
 
- **Proč byste měli k transformaci šablony na serveru sestavení? Šablony v sadě Visual Studio I již transformovat, než po kontrole v kódu.**
+**Proč byste měli k transformaci šablon na sestavovacím serveru? Šablony již transformovaly v sadě Visual Studio před vrácením kódu.**
 
- Pokud aktualizujete součástí souboru nebo jiného souboru, přečtěte si šablonou, Visual Studio nepodporuje transformaci souboru. Transformace šablony jako součást sestavení zajišťuje, že všechno, co je aktuální.
+Při aktualizaci vkládaného souboru nebo jiného souboru čteného šablonou, Visual Studio nepodporuje transformaci souboru. Transformace šablon během sestavení zajišťuje, že všechno je v aktuálním stavu.
 
- **Co další možnosti jsou pro transformace textových šablon?**
+**Jaké jsou další možnosti transformace textových šablon?**
 
--   [Texttransform – nástroj](../modeling/generating-files-with-the-texttransform-utility.md) lze použít v příkazu skripty. Ve většině případů je jednodušší použít MSBuild.
+- [Nástroj TextTransform](../modeling/generating-files-with-the-texttransform-utility.md) lze použít v příkazových skriptech. Ve většině případů je jednodušší použít nástroj MSBuild.
 
--   [Volání transformací textu v rozšíření VS](../modeling/invoking-text-transformation-in-a-vs-extension.md)
+- [Volání transformací textu v rozšíření VS](../modeling/invoking-text-transformation-in-a-vs-extension.md)
 
--   [Návrh textové šablony](../modeling/design-time-code-generation-by-using-t4-text-templates.md) jsou transformovány Visual Studio.
+- [Návrhové textové šablony](../modeling/design-time-code-generation-by-using-t4-text-templates.md) jsou transformovány sadou Visual Studio.
 
--   [Spuštění textové šablony čas](../modeling/run-time-text-generation-with-t4-text-templates.md) jsou transformovány v době běhu ve vaší aplikaci.
+- [Textové šablony běhu](../modeling/run-time-text-generation-with-t4-text-templates.md) jsou transformovány při běhu aplikace.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- Dobrý návod poskytuje šablona T4 nástroje MSbuild, $(VSToolsPath)\TextTemplating\Microsoft.TextTemplating.targets.
+- Je dobré pokyny v šablona T4 nástroje MSbuild v *% ProgramFiles (x86) %\Microsoft Visual Studio\2017\Enterprise\msbuild\Microsoft\VisualStudio\v15.0\TextTemplating\Microsoft.TextTemplating.targets*
 - [Zápis textové šablony T4](../modeling/writing-a-t4-text-template.md)
-- [Oleg Sych: Principy T4:MSBuild integrace](http://www.olegsych.com/2010/04/understanding-t4-msbuild-integration/)
-- [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]

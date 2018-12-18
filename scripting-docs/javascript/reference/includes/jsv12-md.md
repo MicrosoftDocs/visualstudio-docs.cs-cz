@@ -1,3 +1,0 @@
-Podporované v Microsoft Edge (prohlížeč Edge). Podporované taky v aplikacích pro Store (Microsoft Edge ve Windows 10). Viz [Informace o verzi](../../../javascript/reference/javascript-version-information.md).  
-  
- Nepodporuje se v následujících režimech dokumentů: adaptivní a režim standardů aplikace Internet Explorer 6, Internet Explorer 7, Internet Explorer 8, Internet Explorer 9, Internet Explorer 10 a Internet Explorer 11. Nepodporované ve Windows 8.1.

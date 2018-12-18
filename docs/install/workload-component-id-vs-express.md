@@ -1,11 +1,12 @@
 ---
-title: Visual Studio plochy Express 2017 pracovního vytížení a součást ID
-description: Pomocí úloh a ID součástí k instalaci sady Visual Studio pomocí příkazového řádku nebo zadejte v závislosti na manifestu VSIX
+title: ID pracovního vytížení a komponenta Visual Studio Desktop Express 2017
+titleSuffix: ''
+description: Použití pracovního vytížení a komponenta ID pro instalaci sady Visual Studio pomocí příkazového řádku nebo v závislosti na VSIX manifest
 keywords: ''
 author: TerryGLee
 ms.author: tglee
 manager: douge
-ms.date: 03/05/2018
+ms.date: 11/13/2018
 ms.topic: reference
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -17,97 +18,87 @@ ms.prod: visual-studio-dev15
 ms.assetid: a3c0cc76-e3ce-435c-a1af-a6318b5a4dbe
 ms.workload:
 - multiple
-ms.openlocfilehash: 9eb69c881745f5de934030cda042fca2656916ee
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 6b11aec1291847e917ad7c5d53ad81a3a5b37390
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051740"
 ---
-# <a name="visual-studio-desktop-express-2017-workload-and-component-ids"></a>Visual Studio plochy Express 2017 pracovního vytížení a součást ID
+# <a name="visual-studio-2017-desktop-express-component-directory"></a>Visual Studio 2017 Desktop Express součástí adresáře
 
-Tabulky v tomto seznamu stránky ID, můžete použít k instalaci sady Visual Studio pomocí příkazového řádku nebo je můžete zadat v závislosti na manifestu VSIX. Všimněte si, že přidáme další součásti, jako jsme vydání aktualizace pro Visual Studio.
+Tabulky v tomto seznamu stránce ID, můžete použít k instalaci sady Visual Studio pomocí příkazového řádku nebo je můžete zadat jako závislost v manifestu VSIX. Všimněte si, že přidáme další součásti vydaných aktualizací sady Visual Studio.
 
 Všimněte si také následující stránka:
 
-* Každé zatížení má vlastní části, a potom podle ID úlohy a tabulku součásti, které jsou k dispozici pro pracovní vytížení.
-* Ve výchozím nastavení **požadované** součásti se nainstalují při instalaci zatížení. Pokud zvolíte možnost, můžete taky nainstalovat **doporučeno** a **volitelné** součásti.
-* Přidali jsme také oddíl, který uvádí další součásti, které nejsou spojit s jakoukoli úlohu.
+* Každá úloha má vlastní oddíl, za nímž následuje Identifikátor pracovního vytížení a tabulku komponent, které jsou k dispozici pro pracovní vytížení.
+* Ve výchozím nastavení **vyžaduje** součásti nainstaluje, když jste si nainstalovali úlohu.
+* Pokud budete chtít, můžete nainstalovat také **doporučená** a **volitelné** komponenty.
+* Přidali jsme také oddíl, který obsahuje další součásti, které nejsou pod něj nespadá u jakékoli úlohy.
 
-Když nastavíte závislosti v manifestu VSIX, je nutné zadat ID součástí pouze. K určení závislostí naše minimální součástí použijte tabulky na této stránce. V některých případech to může znamenat, že zadáváte pouze jedna součást z pracovního vytížení. V jiných scénářích může znamenat, že zadáváte více součástí z jediné úlohy nebo více součástí z více úloh. Další informace najdete v tématu [postup: migrace rozšiřitelnost projektů pro Visual Studio 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md) stránky.
+Když nastavíte závislosti v manifestu VSIX, je nutné zadat ID součástí pouze. Určení závislostí naše minimální součástí pomocí tabulek na této stránce. V některých případech to může znamenat, že zadáváte pouze jednu komponentu z pracovního vytížení. V jiných scénářích může znamenat, že zadáte více komponent z jedné úlohy nebo více komponent z více úloh. Další informace najdete v tématu [postupy: migrace projektů rozšíření do sady Visual Studio 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md) stránky.
 
-Další informace o tom, jak používat tyto identifikátory najdete v tématu [pomocí parametrů příkazového řádku pro instalaci Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md) stránky. A seznam úloh a ID součástí pro ostatní produkty, naleznete v části [zatížení 2017 Visual Studio a ID součástí](workload-and-component-ids.md) stránky.
+Další informace o tom, jak pomocí těchto identifikátorů najdete v části [pomocí parametrů příkazového řádku instalace sady Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md) stránky. A seznam pracovního vytížení a komponenta ID pro ostatní produkty, naleznete v tématu [funkcí sady Visual Studio 2017 a ID součástí](workload-and-component-ids.md) stránky.
 
 ## <a name="express-for-windows-desktop"></a>Express for Windows Desktop
 
 **ID:** Microsoft.VisualStudio.Workload.WDExpress
 
-**Popis:** vytvářet nativní a spravované aplikace jako WPF, WinForms a Win32 s deklaracemi syntaxe kódu úpravy zdrojového kódu a pracovní položky správy. Zahrnuje podporu pro C#, Visual Basic a Visual C++.
+**Popis:** vytvářet nativní a spravované aplikace jako WPF, WinForms a Win32 pomocí úprav, správy zdrojového kódu podle syntaxe kódu a správy pracovních položek. Zahrnuje podporu pro C#, Visual Basic a Visual C++.
 
-### <a name="components-included-by-this-workload"></a>Součásti zahrnuté tímto zatížením
+### <a name="components-included-by-this-workload"></a>Pomocí této úlohy zahrnuté komponenty
 
 ID součásti | Název | Version | Typ závislosti
 --- | --- | --- | ---
-Microsoft.Component.ClickOnce | Publikování ClickOnce | 15.0.27205.0 | Požadováno
-Microsoft.Component.HelpViewer | Prohlížeč nápovědy | 15.6.27323.2 | Požadováno
-Microsoft.Component.MSBuild | MSBuild | 15.6.27309.0 | Požadováno
+Microsoft.Component.ClickOnce | Publikování ClickOnce | 15.8.27825.0 | Požadováno
+Microsoft.Component.HelpViewer | Aplikaci Help Viewer | 15.6.27323.2 | Požadováno
+Microsoft.Component.MSBuild | MSBuild | 15.7.27520.0 | Požadováno
 Microsoft.Component.VC.Runtime.OSSupport | Visual C++ runtime pro UPW | 15.6.27406.0 | Požadováno
-Microsoft.Net.Component.4.5.1.TargetingPack | Cílovou sadu rozhraní .NET framework 4.5.1 | 15.6.27406.0 | Požadováno
-Microsoft.Net.Component.4.5.2.TargetingPack | Cílovou sadu rozhraní .NET framework 4.5.2 | 15.6.27406.0 | Požadováno
-Microsoft.Net.Component.4.5.TargetingPack | Cílení na pack rozhraní .NET framework 4.5 | 15.6.27406.0 | Požadováno
+Microsoft.Net.Component.4.5.1.TargetingPack | Rozhraní .NET framework 4.5.1 targeting pack | 15.6.27406.0 | Požadováno
+Microsoft.Net.Component.4.5.2.TargetingPack | Rozhraní .NET framework 4.5.2 targeting pack | 15.6.27406.0 | Požadováno
+Microsoft.Net.Component.4.5.TargetingPack | .NET framework 4.5 targeting pack | 15.6.27406.0 | Požadováno
 Microsoft.Net.Component.4.6.1.SDK | Rozhraní .NET framework 4.6.1 SDK | 15.6.27406.0 | Požadováno
-Microsoft.Net.Component.4.6.1.TargetingPack | Cílovou sadu rozhraní .NET framework 4.6.1 | 15.6.27406.0 | Požadováno
-Microsoft.Net.Component.4.6.TargetingPack | Cílení na pack rozhraní .NET framework 4.6. | 15.6.27406.0 | Požadováno
-Microsoft.Net.Component.4.TargetingPack | Cílení na pack rozhraní .NET framework 4 | 15.6.27406.0 | Požadováno
-Microsoft.Net.ComponentGroup.DevelopmentPrerequisites | Nástroje pro vývoj rozhraní .NET framework 4.6.1 | 15.6.27406.0 | Požadováno
-Microsoft.Net.ComponentGroup.TargetingPacks.Common | Nástroje pro vývoj rozhraní .NET framework 4 – 4.6 | 15.6.27406.0 | Požadováno
-Microsoft.VisualStudio.Component.Common.Azure.Tools | Nástroje pro připojení a publikování | 1.10.50912.1 | Požadováno
-Microsoft.VisualStudio.Component.CoreEditor | Editor základní Visual Studio | 15.6.27309.0 | Požadováno
-Microsoft.VisualStudio.Component.EntityFramework | Entity Framework 6 nástrojů | 15.6.27406.0 | Požadováno
-Microsoft.VisualStudio.Component.NuGet | Správce balíčků NuGet | 15.6.27309.0 | Požadováno
-Microsoft.VisualStudio.Component.Roslyn.Compiler | Kompilátory jazyka C# a Visual Basic Roslyn | 15.6.27309.0 | Požadováno
-Microsoft.VisualStudio.Component.Roslyn.LanguageServices | C# a Visual Basic | 15.0.27205.0 | Požadováno
+Microsoft.Net.Component.4.6.1.TargetingPack | Rozhraní .NET framework 4.6.1 targeting pack | 15.6.27406.0 | Požadováno
+Microsoft.Net.Component.4.6.TargetingPack | .NET framework 4.6 targeting pack | 15.6.27406.0 | Požadováno
+Microsoft.Net.Component.4.TargetingPack | .NET framework 4 targeting pack | 15.6.27406.0 | Požadováno
+Microsoft.Net.ComponentGroup.DevelopmentPrerequisites | Vývojové nástroje .NET framework 4.6.1 | 15.8.27825.0 | Požadováno
+Microsoft.Net.ComponentGroup.TargetingPacks.Common | Vývojové nástroje .NET framework 4 – 4.6 | 15.6.27406.0 | Požadováno
+Microsoft.VisualStudio.Component.Common.Azure.Tools | Nástroje pro připojení a publikování | 15.9.28107.0 | Požadováno
+Microsoft.VisualStudio.Component.CoreEditor | Základním editoru sady Visual Studio | 15.8.27729.1 | Požadováno
+Microsoft.VisualStudio.Component.EntityFramework | Entity Framework 6 tools | 15.6.27406.0 | Požadováno
+Microsoft.VisualStudio.Component.NuGet | Správce balíčků NuGet | 15.9.28016.0 | Požadováno
+Microsoft.VisualStudio.Component.Roslyn.Compiler | Kompilátory C# a Visual Basic Roslyn | 15.6.27309.0 | Požadováno
+Microsoft.VisualStudio.Component.Roslyn.LanguageServices | C# a Visual Basic | 15.8.27729.1 | Požadováno
 Microsoft.VisualStudio.Component.SQL.ADAL | SQL ADAL runtime | 15.6.27406.0 | Požadováno
-Microsoft.VisualStudio.Component.SQL.CLR | Datové typy CLR systému SQL Server | 15.0.26208.0 | Požadováno
-Microsoft.VisualStudio.Component.SQL.CMDUtils | Nástroje příkazového řádku systému SQL Server | 15.0.26208.0 | Požadováno
-Microsoft.VisualStudio.Component.SQL.DataSources | Zdroje dat pro podporu systému SQL Server | 15.0.26621.2 | Požadováno
-Microsoft.VisualStudio.Component.SQL.LocalDB.Runtime | SQL Server Express 2016 LocalDB | 15.6.27406.0 | Požadováno
-Microsoft.VisualStudio.Component.SQL.NCLI | Nativní klient SQL serveru | 15.0.26208.0 | Požadováno
-Microsoft.VisualStudio.Component.SQL.SSDT | SQL Server Data Tools | 15.0.26906.1 | Požadováno
-Microsoft.VisualStudio.Component.Static.Analysis.Tools | Statické analytické nástroje | 15.0.26208.0 | Požadováno
+Microsoft.VisualStudio.Component.SQL.CLR | Datové typy CLR pro SQL Server | 15.0.26208.0 | Požadováno
+Microsoft.VisualStudio.Component.SQL.CMDUtils | Nástroje příkazového řádku SQL serveru | 15.0.26208.0 | Požadováno
+Microsoft.VisualStudio.Component.SQL.DataSources | Zdroje dat pro podporu SQL serveru | 15.0.26621.2 | Požadováno
+Microsoft.VisualStudio.Component.SQL.LocalDB.Runtime | SQL Server Express 2016 LocalDB | 15.7.27617.1 | Požadováno
+Microsoft.VisualStudio.Component.SQL.NCLI | Nativní klient systému SQL Server | 15.0.26208.0 | Požadováno
+Microsoft.VisualStudio.Component.SQL.SSDT | SQL Server Data Tools | 15.9.28107.0 | Požadováno
+Microsoft.VisualStudio.Component.Static.Analysis.Tools | Nástroje statické analýzy | 15.0.26208.0 | Požadováno
 Microsoft.VisualStudio.Component.TextTemplating | Transformace textové šablony | 15.0.26208.0 | Požadováno
 Microsoft.VisualStudio.Component.VC.CLI.Support | C + +/ CLI podpory | 15.6.27309.0 | Požadováno
-Microsoft.VisualStudio.Component.VC.Tools.ARM | Kompilátory jazyka Visual C++ a knihovny pro ARM | 15.6.27406.0 | Požadováno
-Microsoft.VisualStudio.Component.VC.Tools.ARM64 | Kompilátory jazyka Visual C++ a knihovny pro ARM64 | 15.6.27309.0 | Požadováno
-Microsoft.VisualStudio.Component.VisualStudioData | Zdroje dat a odkazy na službu | 15.6.27406.0 | Požadováno
+Microsoft.VisualStudio.Component.VC.Tools.ARM | Kompilátory jazyka Visual C++ a knihovny pro ARM | 15.8.27825.0 | Požadováno
+Microsoft.VisualStudio.Component.VC.Tools.ARM64 | Kompilátory jazyka Visual C++ a knihovny pro ARM64 | 15.9.28230.55 | Požadováno
+Microsoft.VisualStudio.Component.VisualStudioData | Zdroje dat a odkazy na služby | 15.6.27406.0 | Požadováno
 Microsoft.VisualStudio.Component.Windows10SDK.14393 | Windows 10 SDK (10.0.14393.0) | 15.6.27406.0 | Požadováno
-Microsoft.VisualStudio.Component.Windows10SDK.16299.Desktop | Windows 10 SDK (10.0.16299.0) pro plochy C++ [x86 a x64] | 15.6.27406.0 | Požadováno
-Microsoft.VisualStudio.Component.Windows10SDK.16299.Desktop.arm | Windows 10 SDK (10.0.16299.0) pro plochy C++ [ARM a ARM64] | 15.6.27406.0 | Požadováno
-Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP | Windows 10 SDK (10.0.16299.0) pro UPW: C#, VB, JS | 15.6.27406.0 | Požadováno
-Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP.Native | Windows 10 SDK (10.0.16299.0) pro UPW: C++ | 15.6.27406.0 | Požadováno
+Microsoft.VisualStudio.Component.Windows10SDK.17134 | Windows 10 SDK (10.0.17134.0) | 15.8.27924.0 | Požadováno
 
-## <a name="unaffiliated-components"></a>Nezávislou na komponenty
+## <a name="unaffiliated-components"></a>Nespojená komponenty
 
-Toto jsou součásti, které nejsou součástí žádné úlohy, ale může být vybraný jako jednotlivé součásti.
+Toto jsou komponenty, které nejsou zahrnuty u jakékoli úlohy, ale může vybrat jako jednotlivých komponent.
 
 ID součásti | Název | Version
 --- | --- | ---
 není k dispozici | není k dispozici | není k dispozici
 
-## <a name="get-support"></a>Získat podporu
+[!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-V některých případech může problémů. Pokud se nezdaří instalace Visual Studia, najdete v článku [problémy instalace a upgrade řešení potíží s Visual Studio 2017](troubleshooting-installation-issues.md) stránky. Pokud se žádný z kroků pro řešení potíží, kontaktujte nás pomocí živé konverzace pro pomoc s instalací (pouze v angličtině). Podrobnosti najdete v tématu [stránky podpory sady Visual Studio](https://www.visualstudio.com/vs/support/#talktous).
-
-Tady je několik další možnosti podpory:
-
-* Můžete hlášení problémů produktu pro nás prostřednictvím [nahlásit problém](../ide/how-to-report-a-problem-with-visual-studio-2017.md) nástroj, který se zobrazí v instalačním programu Visual Studio i v integrovaném vývojovém prostředí sady Visual Studio.
-* Návrh produktu s námi můžete sdílet na [UserVoice](https://visualstudio.uservoice.com/forums/121579).
-* Můžete sledovat problémy produktu a najít v odpovědi [Visual Studio Community vývojáře](https://developercommunity.visualstudio.com/).
-* Můžete také použít s námi a jinými vývojáři Visual Studio prostřednictvím [Visual Studio konverzace v komunitě Gitter](https://gitter.im/Microsoft/VisualStudio). (Tato možnost vyžaduje [Githubu](https://github.com/) účtu.)
-
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 * [ID úloh a komponent sady Visual Studio](workload-and-component-ids.md)
-* [Příručka správce Visual Studio](visual-studio-administrator-guide.md)
+* [Příručka pro správce aplikace Visual Studio](visual-studio-administrator-guide.md)
 * [Instalace sady Visual Studio s použitím parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
   * [Příklady parametrů příkazového řádku](command-line-parameter-examples.md)
 * [Vytvoření offline instalace sady Visual Studio](create-an-offline-installation-of-visual-studio.md)

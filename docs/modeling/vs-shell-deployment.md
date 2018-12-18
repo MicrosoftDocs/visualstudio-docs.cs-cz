@@ -7,25 +7,27 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 816997f971e90ddd27f8e24cdc1857559e04ff70
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 61cf6e716f082abf28043d56d1a8803853d894aa
+ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39566670"
 ---
 # <a name="vs-shell-deployment"></a>Nasazení prostředí VS
 
-Izolované prostředí umožňuje určit, které Visual Studio funkci, budete muset komunikovat s jazyka specifické pro doménu a jak by se měla objevit toto řešení. Další informace o prostředí sady Visual Studio izolované najdete v tématu [přizpůsobení izolované prostředí](../extensibility/customizing-the-isolated-shell.md).
+Izolované prostředí umožňuje určit, které Visual Studio funkce, je nutné pracovat s jazyka specifického pro doménu a jak by se měla zobrazit toto řešení. Další informace o prostředí sady Visual Studio, samostatný, naleznete v tématu [přizpůsobení izolovaného prostředí](../extensibility/customizing-the-isolated-shell.md).
 
-## <a name="to-set-a-visual-studio-shell-as-the-deployment-target"></a>Chcete-li nastavit jako cíl nasazení prostředí Visual Studio
+## <a name="to-set-a-visual-studio-shell-as-the-deployment-target"></a>Chcete-li nastavit Visual Studio Shell jako cíle nasazení
 
 1.  V **DslPackage** projekt, otevřete **source.extension.tt**.
 
 2.  V části `<SupportedProducts>` vložit:
 
-    ```
+    ```xml
     <IsolatedShell Version="1.0">MyIsolatedShell</IsolatedShell>
     ```
 
-     Nahraďte *MyIsolatedShell* s názvem vašeho balíčku izolované prostředí.
+     Nahraďte *MyIsolatedShell* s názvem vašeho balíčku izolovaného prostředí.

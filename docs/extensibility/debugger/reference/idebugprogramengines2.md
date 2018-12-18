@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31118905"
 ---
 # <a name="idebugprogramengines2"></a>IDebugProgramEngines2
 Toto rozhraní se používá program uzly určit všechny možné ladění motory (DE), které můžete ladit tento program.  

@@ -1,5 +1,5 @@
 ---
-title: Běžné vzory ovládacích prvků pro sadu Visual Studio | Microsoft Docs
+title: Vzory běžných ovládacích prvků pro sadu Visual Studio | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 04/26/2017
 ms.technology:
@@ -11,17 +11,18 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8383537a7e9d49f79e98da4dd95a3474803315d8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e10fdcea9819c34735f285c78a0e2ebb0650f64a
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39512314"
 ---
-# <a name="common-control-patterns-for-visual-studio"></a>Běžné vzory ovládacích prvků pro sadu Visual Studio
+# <a name="common-control-patterns-for-visual-studio"></a>Vzory běžných ovládacích prvků pro sadu Visual Studio
 ##  <a name="BKMK_CommonControls"></a> Běžné ovládací prvky  
   
 ### <a name="overview"></a>Přehled  
-Běžné ovládací prvky tvoří většinu uživatelského rozhraní v sadě Visual Studio. Postupujte podle většiny běžných ovládacích prvků používaná v sadě Visual Studio rozhraní [pokyny pro interakci Windows Desktop](https://msdn.microsoft.com/library/windows/desktop/dn742399.aspx). Toto téma je specifické pro Visual Studio a zahrnuje zvláštní situace nebo podrobnosti, které posílení tyto pokyny pro Windows.  
+Běžné ovládací prvky tvoří většinu uživatelského rozhraní v sadě Visual Studio. Většina běžných ovládacích prvků používaná v rozhraní sady Visual Studio by měly dodržovat [pokyny pro Windows Desktop interakci](/windows/desktop/uxguide/controls). Toto téma je specifické pro Visual Studio a zahrnuje speciální situace nebo podrobnosti, které rozšiřují tyto pokyny pro Windows.  
   
 #### <a name="common-controls-in-this-topic"></a>Běžné ovládací prvky v tomto tématu  
   
@@ -35,344 +36,344 @@ Běžné ovládací prvky tvoří většinu uživatelského rozhraní v sadě Vi
   
 -   [Přepínací tlačítka](../../extensibility/ux-guidelines/common-control-patterns-for-visual-studio.md#BKMK_RadioButtons)  
   
--   [Skupiny rámce](../../extensibility/ux-guidelines/common-control-patterns-for-visual-studio.md#BKMK_GroupFrames)  
+-   [Skupiny snímků](../../extensibility/ux-guidelines/common-control-patterns-for-visual-studio.md#BKMK_GroupFrames)  
   
--   [Ovládacích prvků textu](../../extensibility/ux-guidelines/common-control-patterns-for-visual-studio.md#BKMK_TextControls)  
+-   [Textových ovládacích prvků](../../extensibility/ux-guidelines/common-control-patterns-for-visual-studio.md#BKMK_TextControls)  
   
--   [Tlačítka a hypertextové odkazy](../../extensibility/ux-guidelines/common-control-patterns-for-visual-studio.md#BKMK_ButtonsAndHyperlinks)  
+-   [Tlačítka a hypertextových odkazů](../../extensibility/ux-guidelines/common-control-patterns-for-visual-studio.md#BKMK_ButtonsAndHyperlinks)  
   
 -   [Zobrazení stromu](../../extensibility/ux-guidelines/common-control-patterns-for-visual-studio.md#BKMK_TreeViews)  
   
 #### <a name="visual-style"></a>Vizuální styl  
-První věc vzít v úvahu při styly ovládacích prvků je, jestli ovládací prvky se použije v uživatelském rozhraní motivu. Ovládací prvky v standardní uživatelské rozhraní jsou – motivu uživatelského rozhraní a musí následovat [styl Normální Windows Desktop](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742399\(v=vs.85\).aspx), což znamená, že nejsou znovu použití šablon a by se měla objevit v jejich výchozí vzhled ovládacího prvku.  
+První věc, kterou vzít v úvahu při používání stylů pro ovládací prvky se určuje, zda ovládací prvky se použije v uživatelském rozhraní s motivem. Ovládací prvky ve standardní uživatelské rozhraní jsou – s motivem uživatelského rozhraní a musí dodržovat [stylu Normální Windows Desktop](/windows/desktop/uxguide/controls), což znamená, že nejsou opětovné použití šablon a by se měla objevit v jejich výchozí vzhled ovládacího prvku.  
   
--   **Dialogová okna Standard (Nástroje):** není motivu. Si šablonu znovu. Použijte výchozí styl základního ovládacího prvku.  
+-   **Dialogová okna Standard (nástroj):** není s motivem. Nemáte šablonu znovu. Použijte výchozí styl základního ovládacího prvku.  
   
--   **Nástroje systému windows, editory dokumentu, návrhové ploše a motivu dialogová okna:** používat specializované vzhled a motivy pomocí služby barev.  
+-   **Nástroje systému windows, editory dokumentu, návrhové ploše a dialogová okna s motivem:** použít specializované s motivem vzhled pomocí služby barvu.  
   
 ###  <a name="BKMK_Scrollbars"></a> Posuvníky  
- Postupujte podle posuvníky [obecné vzory interakce pro Windows posuvníky](https://msdn.microsoft.com/en-us/library/windows/desktop/bb787527\(v=vs.85\).aspx) Pokud jste se rozšířit o informace o obsahu, jako například v editoru kódu.  
+ Postupujte podle posuvníky [běžné vzory interakcí pro Windows posuvníky](/windows/desktop/Controls/about-scroll-bars) není-li, že jste doplněné o informace o obsahu, jako jsou v editoru kódu.  
   
 ###  <a name="BKMK_InputFields"></a> Vstupní pole  
- Chování typické interakce, postupujte podle [Windows Desktop pokyny pro textová pole](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742442\(v=vs.85\).aspx).  
+ Chování typické interakce, postupujte [pokyny pro Windows Desktop pro textová pole](/windows/desktop/uxguide/ctrl-text-boxes).  
   
 #### <a name="visual-style"></a>Vizuální styl  
   
--   Vstupní pole nesmí být navržen tak v dialogových oknech nástroje. Použijte styl základní vnitřní do ovládacího prvku.  
+-   Vstupních polí by neměly být ve stylu v dialogových oknech nástroje. Použijte základní styl vnitřní ovládací prvek.  
   
--   Motivu vstupní pole by měl použít pouze v motivu dialogová okna a nástroje systému windows.  
+-   S motivem vstupních polí byste měli použít pouze ve s motivem dialogová okna a okna nástrojů.  
   
 #### <a name="specialized-interactions"></a>Specializované interakce  
   
--   Pole jen pro čtení budou mít šedé (zakázáno) pozadí ale popředí výchozí (aktivní).  
+-   Pole jen pro čtení bude mít šedé (zakázáno) pozadí ale popředí výchozí (aktivní).  
   
--   Požadované pole by měl mít  **\<požadované >** jako vodoznaky v nich. Nesmí změnit barvu pozadí s výjimkou na velmi zřídka.  
+-   Povinné pole by měly mít  **\<vyžaduje >** jako vodoznaky v nich. Barva pozadí s výjimkou ve výjimečných případech byste neměli měnit.  
   
--   Chyba ověřování: najdete v části [oznámení a postup pro sadu Visual Studio](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md)  
+-   Chyba ověřování: viz [oznámení a postup pro Visual Studio](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md)  
   
--   Vstupní pole by měly mít velikost podle obsahu, není na šířku okna, ve kterém se zobrazují, ani nahodile odpovídat délka dlouho pole, podobně jako cestu. Délka mohlo by to znamenat uživateli omezení, kolik znaků jsou povoleny v poli.  
+-   Vstupní pole by měla být dimenzovány pro zobrazení celého obsahu, ne na šířku okna, ve kterém jsou uvedeny ani libovolně odpovídala délce dlouhé pole, třeba cestu. Délka mohlo by to znamenat uživateli omezení jde o tom, kolik znaky jsou povoleny v poli.  
   
-     ![Nesprávný vstupní pole Délka: není pravděpodobné, že název bude tento dlouho. ] (../../extensibility/ux-guidelines/media/0707-01_incorrectinputfieldcontrol.png "0707 01_IncorrectInputFieldControl")<br />Nesprávný vstupní pole Délka: není pravděpodobné, že název bude tento dlouho.
+     ![Nesprávný vstupní pole délky: není pravděpodobné, že název bude takto dlouhé. ](../../extensibility/ux-guidelines/media/0707-01_incorrectinputfieldcontrol.png "0707 01_IncorrectInputFieldControl")<br />Nesprávný vstupní pole délky: není pravděpodobné, že název bude takto dlouhé.
   
-     ![Opravte vstupní pole Délka: vstupní pole je možné logicky šířku pro očekávaný obsah. ] (../../extensibility/ux-guidelines/media/0707-02_correctinputfieldcontrol.png "0707 02_CorrectInputFieldControl")<br />Opravte vstupní pole Délka: vstupní pole je možné logicky šířku pro očekávaný obsah.
+     ![Opravte délka vstupní pole: vstupní pole je rozumné šířku pro očekávaný obsah. ](../../extensibility/ux-guidelines/media/0707-02_correctinputfieldcontrol.png "0707 02_CorrectInputFieldControl")<br />Opravte délka vstupní pole: vstupní pole je rozumné šířku pro očekávaný obsah.
   
 ###  <a name="BKMK_ComboBoxesAndDropDowns"></a> Pole se seznamem a rozevírací seznamy  
-Chování typické interakce, postupujte podle [Windows Desktop pokyny pro rozevírací seznamy a pole se seznamem](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742404\(v=vs.85\).aspx).  
+Pro typické interakce chování, postupujte [Windows Desktop pokyny pro rozevírací seznamy a pole se seznamem](/windows/desktop/uxguide/ctrl-drop).  
   
 #### <a name="visual-style"></a>Vizuální styl  
   
--   V dialogových oknech nástroj si znovu šablony ovládacího prvku. Použijte styl základní vnitřní do ovládacího prvku.  
+-   V dialogových oknech nástrojů nemusíte znovu šablony ovládacího prvku. Použijte základní styl vnitřní ovládací prvek.  
   
--   V motivu uživatelského rozhraní, pole se seznamem a rozevírací seznamy podle standardní motivů ovládacích prvků.  
+-   Postupujte podle standardní motivy pro ovládací prvky s motivem uživatelského rozhraní, pole se seznamem a rozevírací seznamy.  
   
 #### <a name="layout"></a>Rozložení  
-Pole se seznamem a rozevírací seznamy by měly mít velikost podle obsahu, není na šířku okna, ve kterém se zobrazují, ani nahodile odpovídat délka dlouho pole, podobně jako cestu.  
+Pole se seznamem a rozevírací seznamy by měl být dimenzovány pro zobrazení celého obsahu, ne na šířku okna, ve kterém jsou uvedeny ani libovolně odpovídala délce dlouhé pole, třeba cestu.  
   
-![Nesprávný: šířka rozevíracího seznamu je příliš dlouhý pro obsah, který se zobrazí. ] (../../extensibility/ux-guidelines/media/0707-03_incorrectdropdownlayout.png "0707 03_IncorrectDropDownLayout")<br />Nesprávný: šířka rozevíracího seznamu je příliš dlouhý pro obsah, který se zobrazí.
+![Nesprávný: šířka rozevíracího seznamu je příliš dlouhý pro obsah, který se zobrazí. ](../../extensibility/ux-guidelines/media/0707-03_incorrectdropdownlayout.png "0707 03_IncorrectDropDownLayout")<br />Nesprávný: šířka rozevíracího seznamu je příliš dlouhý pro obsah, který se zobrazí.
   
-![Správné: z rozevírací nabídky je velikost povolit pro překlad růst, ale není zbytečně dlouhé. ] (../../extensibility/ux-guidelines/media/0707-04_correctdropdownlayout.png "0707 04_CorrectDropDownLayout")<br />Správné: z rozevírací nabídky je velikost povolit pro překlad růst, ale není zbytečně dlouhé. 
+![Správné: rozevíracího seznamu přizpůsoben pro povolit pro růst překladu, ale dlouhé zbytečně. ](../../extensibility/ux-guidelines/media/0707-04_correctdropdownlayout.png "0707 04_CorrectDropDownLayout")<br />Správné: rozevíracího seznamu přizpůsoben pro povolit pro růst překladu, ale dlouhé zbytečně. 
   
 ###  <a name="BKMK_CheckBoxes"></a> Zaškrtávací políčka  
-Chování typické interakce, postupujte podle [Windows Desktop pokyny pro zaškrtávací políčka](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742401\(v=vs.85\).aspx).  
+Chování typické interakce, postupujte [pokyny pro Windows Desktop pro zaškrtávací políčka](/windows/desktop/uxguide/ctrl-check-boxes).  
   
 #### <a name="visual-style"></a>Vizuální styl  
   
--   V dialogových oknech nástroj si znovu šablony ovládacího prvku. Použijte styl základní vnitřní do ovládacího prvku.  
+-   V dialogových oknech nástrojů nemusíte znovu šablony ovládacího prvku. Použijte základní styl vnitřní ovládací prvek.  
   
--   Zaškrtávací políčka v motivu uživatelského rozhraní, postupujte podle standardní motivů ovládacích prvků.  
+-   Zaškrtávací políčka v uživatelském rozhraní s motivem, postupujte podle standardní motivy pro ovládací prvky.  
   
 #### <a name="specialized-interactions"></a>Specializované interakce  
   
--   Interakce se zaškrtávacím políčkem musí nikdy pop – dialogové okno nebo přejděte do jiné oblasti.  
+-   Interakce se zaškrtávacím políčkem musí nikdy vyvolat přes pop dialogové okno nebo přejít do jiné oblasti.  
   
--   Zarovnává zaškrtávací políčka se standardními hodnotami prvního řádku textu.  
+-   Zarovnejte zaškrtávací políčka se standardními hodnotami první řádek textu.  
   
-     ![Nesprávný: zaškrtávací políčko je na střed textu. ] (../../extensibility/ux-guidelines/media/0707-05_incorrectcheckboxalign.png "0707 05_IncorrectCheckBoxAlign")<br />Nesprávný: zaškrtávací políčko je na střed textu.
+     ![Nesprávný: zaškrtávací políčko je na střed textu. ](../../extensibility/ux-guidelines/media/0707-05_incorrectcheckboxalign.png "0707 05_IncorrectCheckBoxAlign")<br />Nesprávný: zaškrtávací políčko je na střed textu.
   
-     ![Správné: políčko je zarovnán s prvním řádkem textu. ] (../../extensibility/ux-guidelines/media/0707-06_correctcheckboxalign.png "0707 06_CorrectCheckBoxAlign")<br />Správné: políčko je zarovnán s prvním řádkem textu.
+     ![Správné: zaškrtávací políčko je v souladu s první řádek textu. ](../../extensibility/ux-guidelines/media/0707-06_correctcheckboxalign.png "0707 06_CorrectCheckBoxAlign")<br />Správné: zaškrtávací políčko je v souladu s první řádek textu.
   
 ###  <a name="BKMK_RadioButtons"></a> Přepínací tlačítka  
-Chování typické interakce, postupujte podle [Windows Desktop pokyny pro přepínací tlačítka](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742436\(v=vs.85\).aspx).  
+Chování typické interakce, postupujte [pokyny pro Windows Desktop pro přepínací tlačítka](/windows/desktop/uxguide/ctrl-radio-buttons).  
   
 #### <a name="visual-style"></a>Vizuální styl  
-V dialogových oknech nástroj to není styl přepínače. Použijte styl základní vnitřní do ovládacího prvku.  
+V dialogových oknech nástrojů to není styl přepínací tlačítka. Použijte základní styl vnitřní ovládací prvek.  
   
 #### <a name="specialized-interactions"></a>Specializované interakce  
-Není nutné k použití rámečku skupiny zavřít přepínač volby, pokud je třeba spravovat skupiny rozdíl v úzkou rozložení.  
+Není nutné pro používání skupinového rámečku uzavřít přepínač možnosti, pokud je třeba spravovat skupiny rozdíl v těsné rozložení.  
   
-###  <a name="BKMK_GroupFrames"></a> Skupiny rámce  
-Chování typické interakce, postupujte podle [Windows Desktop pokyny pro skupiny rámce](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742405\(v=vs.85\).aspx).  
+###  <a name="BKMK_GroupFrames"></a> Skupiny snímků  
+Chování typické interakce, postupujte [Windows Desktop pokyny pro skupinu snímků](/windows/desktop/uxguide/ctrl-group-boxes).  
   
 #### <a name="visual-style"></a>Vizuální styl  
-V dialogových oknech nástroj nemusíte stylů skupiny rámce. Použijte styl základní vnitřní do ovládacího prvku.  
+V dialogových oknech nástrojů styl skupiny snímků. Použijte základní styl vnitřní ovládací prvek.  
   
 #### <a name="layout"></a>Rozložení  
   
--   Není nutné k použití rámečku skupiny zavřít přepínač volby, pokud je třeba spravovat skupiny rozdíl v úzkou rozložení.  
+-   Není nutné pro používání skupinového rámečku uzavřít přepínač možnosti, pokud je třeba spravovat skupiny rozdíl v těsné rozložení.  
   
--   Nikdy nepoužívejte rámečku skupiny pro jeden ovládací prvek.  
+-   Nikdy nepoužívejte skupinového rámečku pro jeden ovládací prvek.  
   
--   Někdy se dá použít vodorovné pravítko místo kontejner skupiny rámce.  
+-   Někdy je nepřijatelné využívat vodorovná čára místo rámce kontejneru skupiny.  
   
-##  <a name="BKMK_TextControls"></a> Ovládacích prvků textu
+##  <a name="BKMK_TextControls"></a> Textových ovládacích prvků
 
-### <a name="static-text-fields"></a>Statické textové pole
+### <a name="static-text-fields"></a>Pole statického textu
 
-Statické textové pole prezentuje informace jen pro čtení a nelze ho vybrat uživatelem. Vyhněte se použití pro libovolný text, který uživatel může chtít zkopírujte do schránky. Jen pro čtení statický text však můžete změnit tak, aby odrážely změny ve stavu. V příkladu níže statický text název výstupu pod změny skupiny informace, aby se projevily změny provedené v textovém poli kořenové Namespace nad ním.
+Statické textové pole prezentuje informace jen pro čtení a nejde ho vybrat uživatelem. Nepoužívejte ho pro libovolný text, který uživatel může chtít zkopírovat do schránky. Jen pro čtení statický text však můžete změnit tak, aby odrážel změnu stavu. V příkladu níže je název výstupního statický text v rámci změny skupiny informace tak, aby odrážela všechny změny provedené v textovém poli kořenové Namespace nad ním.
 
 Existují dva způsoby, jak zobrazit informace o statický text.
 
-Statický text může být na vlastní, v dialogovém okně bez žádné omezení Pokud nedojde ke konfliktu seskupení. Rozhodněte, pokud jsou navíc řádků pole nezbytně nutné. Příkladem je zobrazení cesty k adresáři části vytvořené skupiny řádku, jak je uvedeno níže:  
+Statický text může být na vlastní, v dialogovém okně bez jakékoli členství ve skupině v případě nedojde ke konfliktu seskupení. Rozhodněte, pokud jsou nadbytečné řádky pole nezbytně nutné. Příkladem je zobrazení cestu k adresáři části vytvořené skupiny řádku, jak je znázorněno níže:  
 
-![Informace o statický text v ovládacích prvcích text](../../extensibility/ux-guidelines/media/DisplayingStaticText.png "DisplayingStaticText.png")<br />Informace o statický text v ovládacích prvků textu
+![Informace o statický text v textových ovládacích prvků](../../extensibility/ux-guidelines/media/DisplayingStaticText.png "DisplayingStaticText.png")<br />Informace o statický text v textových ovládacích prvků
 
-V dialogovém okně, kde existují další seskupené oblasti a členství ve skupině informace pomohou čitelnost a když můžete oddíl skrytý nebo zobrazí (jako v **vlastnosti – okno** podokno s popisem) nebo chcete být v souladu s podobnou uživatelského rozhraní, Umístěte statický text v poli. Toto pole skupiny by měl být jedno pravidlo a barva `ButtonShadow`:
+V dialogovém okně, kde existují další seskupené oblasti a členství ve skupině informací by pomohl čitelnost a kdy může oddíl skrytí nebo zobrazení (jako v **okno vlastností** podokno s popisem) nebo chcete být v souladu s podobným uživatelským rozhraním Umístěte statický text v poli. Toto pole skupiny by měl být jednoho pravidla a barvou `ButtonShadow`:
 
-![Statický text v okně vlastností](../../extensibility/ux-guidelines/media/PropertiesWindow.png "PropertiesWindow.png")<br />Statický text v okně vlastností
+![Statický text v okně Vlastnosti](../../extensibility/ux-guidelines/media/PropertiesWindow.png "PropertiesWindow.png")<br />Statický text v okně Vlastnosti
 
 ### <a name="read-only-text-box"></a>Textového pole určeného jen pro čtení
 
-To umožňuje uživateli vybrat text v rámci pole, ale nikoli pro úpravy. Tato textová pole jsou obrysy označující podle obvyklé 3D hranaté s `ButtonShadow` výplně.
+To umožňuje uživateli vybrat text v poli, ale nikoli upravovat. Tato textová pole jsou obrysy označující podle obvyklých 3D hranaté s `ButtonShadow` výplně.
 
-V textovém poli se může stát active (upravovat), když uživatel změní přidruženého ovládacího prvku, jako je kontrola nebo zrušte zaškrtnutí zaškrtávacího políčka nebo výběrem nebo zrušením výběru přepínače. Například v **nástroje &gt; možnosti** stránky je uvedená níž, **domovskou stránku** textového pole stane aktivní, kdy **použít výchozí** zaškrtávací políčko je zaškrtnuté políčko.
+Textové pole může být aktivní (Upravit), když uživatel změní na příslušný ovládací prvek, jako je kontrola/zrušením zaškrtnutí políčka zaškrtávací políčko nebo výběrem nebo zrušením výběru přepínače. Například v **nástroje &gt; možnosti** stránky zobrazené níže **domovskou stránku** textového pole, aktivují, když **použít výchozí** zaškrtávací políčko je zaškrtnuté políčko.
 
-![Jen pro čtení textového pole, zobrazující neaktivní a aktivní stavy](../../extensibility/ux-guidelines/media/ReadOnlyTextBox.png "ReadOnlyTextBox.png")<br />Jen pro čtení textového pole, zobrazující neaktivní a aktivní stavy
+![Jen pro čtení textového pole zobrazuje aktivní a neaktivní stavy](../../extensibility/ux-guidelines/media/ReadOnlyTextBox.png "ReadOnlyTextBox.png")<br />Jen pro čtení textového pole zobrazuje aktivní a neaktivní stavy
 
 ### <a name="using-text-in-dialogs"></a>Pomocí textu v dialogových oknech
 
-Klíče pokyny pro text v dialogových oknech:
+Klíče pokynů v dialogových oknech text:
 
--   Štítky pro textová pole, seznamy a rámce v dialogových oknech unthemed začínat operaci, mají počáteční kapitálové na první slovo a končit dvojtečkou.
+-   Popisky pro textová pole, pole se seznamem a snímků v dialogových oknech unthemed začínat sloveso, mít počáteční velké pouze první slovo a končit dvojtečkou.
 
-    > Postupujte podle ovládacích prvků textu v motivu dialogová okna [Windows desktop UX pokyny](https://msdn.microsoft.com/library/windows/desktop/dn742479.aspx) a nemusí provádět žádné koncové interpunkce, s výjimkou otazníky v odkazy na nápovědu.
+    > Postupujte podle textových ovládacích prvků v dialogových oknech s motivem [splnit pravidla pro klasické pracovní plochy Windows](/windows/desktop/uxguide/top-violations) a nemusí provádět žádné koncové interpunkce, s výjimkou otazníky v odkazy na nápovědu.
 
--   Štítky pro možnost tlačítka a zaškrtávací políčka začínat se slovesem, počáteční kapitálové na první slovo a mít bez koncové interpunkce.
+-   Popisky pro možnost tlačítka a zaškrtávací políčka začínat sloveso, počáteční velká na pouze první slovo a mají bez koncové interpunkce.
 
--   Popisky tlačítek, nabídek, položek nabídky a karty mít počátečních velkých písmen jednotlivých slov (první písmeno velké).
+-   Popisky tlačítek, nabídek, položky nabídky a karty mít počáteční velká písmena jednotlivých slov (všechna první písmena velká).
 
--   Popisek terminologie by měla být v souladu s podobné popisky v další dialogová okna.
+-   Popisek terminologie by měl být konzistentní s podobně jako popisky v dalších dialogových oknech.
 
--   Pokud je to možné mají zapisovače/editor, zápisu nebo schválit text předtím, než je pak nahlášena vývojáři pro implementaci.
+-   Pokud je to možné mají zapisovače/editor, zapsat nebo schválit text předtím, než je pak nahlášena vývojáři pro implementaci.
 
--   Všechny ovládací prvky měli popisky s výjimkou zvláštní okolnosti v které použití tabulátoru je dostačující.
-Pomocí textu Pomocník v případě nutnosti.
+-   Všechny ovládací prvky by měl mít popisky s výjimkou zvláštních okolností v tabulátor, které je dostačující.
+Použití pomocné rutiny textu v případě potřeby.
 
-### <a name="helper-text"></a>Textu Pomocník
+### <a name="helper-text"></a>Pomocné rutiny, textu
 
-Součástí dialogová okna pomoct pochopit účel dialogovém okně uživateli nebo označíte, jakou akci chcete provést. Textu Pomocník měli použít pouze v případě potřeby předejdete zbytečného jednoduché dialogová okna. Dvě varianty textu Pomocník jsou dialogové okno a vodoznaku.
+Zahrnuté v dialogových oknech umožňující uživateli snáze pochopit účel dialogového okna nebo označíte, jakou akci chcete provést. Pomocné rutiny text by měla sloužit pouze v případě potřeby k nezahlcujte jednoduché dialogová okna. Dvě varianty pomocné rutiny, textu se dialogové okno a vodoznak.
 
-Postupujte podle společné umístění textu Pomocník a vyberete, Představujeme nové oblasti. Běžné scénáře textu Pomocník jsou:
+Postupujte podle společné umístění pro pomocné rutiny, textu a pečlivě při zavádění nové oblasti. Časté scénáře pro text pomocné rutiny jsou:
 
--   Pomocník text v dialogových oknech poskytnout další směr o tom, jak pracovat s komplexní dialogové okno.
+-   Pomocné rutiny text v dialogových oknech, poskytnout další směr o tom, jak pracovat s komplexní dialogové okno.
 
--   Vodoznakového textu v prázdný nástroje systému windows nebo dialogová okna vysvětlit, proč je viditelná žádný obsah.
+-   Vodoznakového textu v oknech nástrojů prázdný nebo dialogová okna, který vysvětluje, proč se nezobrazuje žádný obsah.
 
--   Popis podokno, v dolní části, jako **vlastnosti – okno**.
+-   Podokno popisu, v dolní části, jako jsou **okno vlastností**.
 
--   Text v editoru prázdný vysvětlit, jakou akci uživatele má trvat Začínáme vodoznaku.
+-   Vodoznak text v prázdné editoru, a popisují, jaká akce by měl uživatel provést začít.
   
-### <a name="dialog-helper-text"></a>Dialogové okno Pomocník textu
+### <a name="dialog-helper-text"></a>Dialogové okno text pomocné rutiny
 
-Návrhář činnost koncového uživatele mohou pomoci určit, kdy je vhodné textu Pomocník. Návrháře můžete definovat, kde se zobrazí textu Pomocník i jeho obecné obsah. Pomoc uživateli můžete zápisu nebo upravit vlastní text.
+Návrhář uživatelského prostředí může pomoct zjistit, zda text pomocné rutiny odpovídající. Návrhář můžete definovat, kde text pomocné rutiny se zobrazí stejně jako jeho obecné obsah. Uživatelská asistence může zápisu nebo upravit vlastní text.
 
 ### <a name="watermarks"></a>Vodoznaky
 
-Dialogová okna těžit z mírně odlišné vodoznak pokyny. Vzhledem k tomu, zobrazí se dialogové okno se může vyskytovat zaneprázdněn prováděním mnoho prvky uživatelského rozhraní (popisky, textu nápovědy, tlačítek a jiných ovládacích prvků kontejner s textem), zvláště když těch, které se zobrazí jako černé, vodoznaky výraznější tmavý šedě (VSColor: `ButtonShadow`). Obvykle se zobrazí vodoznak uvnitř ovládacího prvku jako seznam s bílým pozadím (VSColor: `Window`).
+Dialogová okna výhod mírně odlišné vodoznak pokyny. Vzhledem k tomu dialogové okno se může objevit zaneprázdněný mnoho prvků uživatelského rozhraní (popisky, text nápovědy, tlačítka a další ovládací prvky kontejneru s textem), zejména pokud se zobrazí v ostatních případech černě, vodoznaky výraznější v tmavě šedé (VSColor: `ButtonShadow`). Obvykle se zobrazí v ovládacím prvku jako seznam s bílým pozadím vodoznak (VSColor: `Window`).
 
--   Text se zobrazí šedě Tmavý (VSColor: `ButtonShadow`). Ale pokud se zobrazí vodoznak na střední šedá nebo jiných stejné barvy (VSColor: `ButtonFace`) na pozadí a je o jeho čitelnost se týkají, přejděte černým textem (VSColor: `WindowText`).
+-   Text se zobrazí v tmavě šedé (VSColor: `ButtonShadow`). Nicméně pokud se zobrazí vodoznak na střední šedé nebo jiné barevné (VSColor: `ButtonFace`) na pozadí a je týkají o jeho čitelnost, přejděte pomocí černého textového (VSColor: `WindowText`).
 
--   Vodoznaky můžete zarovnaný na střed nebo Zarovnané vlevo. Standardní pravidla platí při rozhodování zarovnání. Vodoznak nelze vybrat na pozadí.
+-   Vodoznaky může být zarovnaný na střed nebo Zarovnané vlevo. Platí standardní pravidla při rozhodování o zarovnání. Vodoznak se nedá vybrat na pozadí.
 
 ![Příklad vodoznakového textu](../../extensibility/ux-guidelines/media/WatermarkTextExample.gif)<br />Příklad vodoznakového textu
 
-### <a name="context-specific-dynamic-text"></a>Konkrétní text (dynamické)
+### <a name="context-specific-dynamic-text"></a>Kontextové text (dynamické)
 
-Dynamický text může být použít jeden ze dvou způsobů v dialogovém okně nebo nemodální uživatelského rozhraní: buď jako dynamické štítek, nebo jako dynamický obsah.
+Dynamický text může být použité jednu ze dvou způsobů v dialogovém okně nebo nemodální uživatelského rozhraní: buď jako dynamické popisek nebo dynamický obsah.
 
--   Dynamické popisek: běžně používá dynamický text je v popisný panely, které nabízejí další informace pro vybranou položku, například v dialogovém okně, který obsahuje seznam elementy a vlastnosti pro tyto elementy zobrazí v mřížce vpravo. Popisek pro mřížku vlastností může být dynamické, takže když je položka vybrána na levé straně, mřížky doprava obsahuje informace o této konkrétní položku.
+-   Dynamické popisek: popisný panelech, které nabízejí další informace o položce vybrané v dialogovém okně, který obsahuje seznam prvků a vlastností pro tyto elementy zobrazí v mřížce doprava, jako je běžně používá dynamický text. Popisek pro vlastnost grid může být dynamický, tak, aby po výběru položky na levé straně mřížky doprava informacemi pro tuto konkrétní položku.
 
--   Dynamický text: může být užitečná v případech, kdy je třeba zobrazit konkrétní informace a není obecné informace tímto způsobem, ale byste měli věnovat plánování.
+-   Dynamický text: může být užitečné v případech, kdy je třeba zobrazit konkrétní informace a ne pro obecný tímto způsobem, ale mělo dbát plánování.
 
-Pokud chcete, aby uživatelé měli možnost Kopírovat informace, které, dynamické text by měl být v jen pro čtení textové pole.
+Pokud chcete, aby uživatelé měli možnost Kopírovat informace, které, dynamické text by měl být jen pro čtení textového pole.
   
-##  <a name="BKMK_ButtonsAndHyperlinks"></a> Tlačítka a hypertextové odkazy  
+##  <a name="BKMK_ButtonsAndHyperlinks"></a> Tlačítka a hypertextových odkazů  
   
 ### <a name="overview"></a>Přehled  
-Ovládací prvky tlačítek a odkaz (hypertextové odkazy) byste měli postupovat podle [základní pokyny Windows Desktop na hypertextové odkazy](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742406\(v=vs.85\).aspx) pro použití, formulaci, změny velikosti a mezer.  
+Ovládací prvky tlačítka a odkaz (hypertextové odkazy) by měly dodržovat [základní pokyny k Desktopu Windows na hypertextové odkazy](/windows/desktop/uxguide/ctrl-links) za využití, formulaci, změny velikosti a mezery.  
   
-### <a name="choosing-between-buttons-and-links"></a>Volba mezi odkazy a tlačítka  
-Obvyklým tlačítka byl použit pro akce a rezervováno hypertextové odkazy pro navigaci. Tlačítka lze ve všech případech, ale role odkazy rozšířila v sadě Visual Studio, aby odkazy a tlačítka více zaměňovat za některých podmínek.  
+### <a name="choosing-between-buttons-and-links"></a>Volba mezi tlačítka a odkazy  
+Tradičně tlačítka se používají pro akce a hypertextové odkazy byly vyhrazeny pro navigaci. Tlačítka lze ve všech případech ale role odkazů došlo k rozbalení v sadě Visual Studio tak, že jsou zaměnitelné více v některých tlačítka a odkazy.  
   
 Kdy použít příkazová tlačítka:  
   
 -   Primární příkazy  
   
--   Zobrazení systému windows slouží k shromažďování vstupu nebo volby, a to i v případě, že jsou sekundární příkazy  
+-   Zobrazení okna použitá ke shromažďování vstupu nebo rozhodování, a to i v případě, že jsou sekundární příkazy  
   
--   Škodlivý nebo nevratná akce  
+-   Destruktivní nebo nevratná akce  
   
--   Tlačítka závazků v průvodci a toky stránky  
+-   Tlačítka závazku v rámci průvodců a toků  
   
-Vyhněte se příkazová tlačítka v panelech nástrojů, nebo pokud potřebujete více než dva slova pro popisek. Odkazy mohou mít delší popisky.  
+Vyhněte se příkazových tlačítek v oknech nástrojů, nebo pokud potřebujete více než dvě slova pro popisek. Odkazy můžou mít delší popisky.  
   
  Kdy použít odkazy:  
   
--   Navigace do jiného okna, dokumentu nebo webové stránky  
+-   Navigace k jinému oknu, dokumentu nebo webové stránky  
   
--   Situace, které vyžadují delší popisek nebo krátkou větu k popisu záměr akce  
+-   Situace, které vyžadují delší popisek nebo krátká věta popisující cílem akce  
   
--   Úzkou prostory, kde by tlačítko zahlcovat uživatelského rozhraní, za předpokladu, že akce není škodlivý nebo nevratné  
+-   Úzkou prostory, ve kterém by tlačítko zahlcovat uživatelského rozhraní, za předpokladu, že akce není destruktivní nebo nevratné  
   
--   Deaktivace zdroje, výrazná sekundární příkazy v situacích, kde existuje mnoho příkazů  
+-   Deaktivace zdroje, výrazná sekundární příkazy v situacích, kdy existuje mnoho příkazů  
   
 #### <a name="examples"></a>Příklady  
-![Příkaz propojení použitých v informačním panelu následující stavovou zprávu](../../extensibility/ux-guidelines/media/070703-01_commandlinkinfobar.png "070703 01_CommandLinkInfobar")<br />Příkaz propojení použitých v informačním panelu následující stavovou zprávu
+![Příkaz odkazů použité v informačním panelu po stavovou zprávu](../../extensibility/ux-guidelines/media/070703-01_commandlinkinfobar.png "070703 01_CommandLinkInfobar")<br />Příkaz odkazů použité v informačním panelu po stavová zpráva
   
-![Propojení použitých v automaticky otevřeném okně Codelensu](../../extensibility/ux-guidelines/media/070703-02_linksincodelens.png "070703 02_LinksInCodeLens")<br />Propojení použitých v automaticky otevřeném okně Codelensu
+![Odkazů použité v místní nabídce CodeLens](../../extensibility/ux-guidelines/media/070703-02_linksincodelens.png "070703 02_LinksInCodeLens")<br />Odkazů použité v místní nabídce CodeLens
   
-![Použít pro sekundární příkazy, kde by tlačítka přitahují pozornost příliš mnoho odkazů](../../extensibility/ux-guidelines/media/070703-03_linksassecondarycommands.png "070703 03_LinksAsSecondaryCommands")<br />Použít pro sekundární příkazy, kde by tlačítka přitahují pozornost příliš mnoho odkazů
+![Odkazů použité pro sekundární příkazy, kde by tlačítka přilákat příliš mnoho pozornost](../../extensibility/ux-guidelines/media/070703-03_linksassecondarycommands.png "070703 03_LinksAsSecondaryCommands")<br />Odkazů použité pro sekundární příkazy, kde by tlačítka přilákat příliš mnoho pozornost
   
 ### <a name="common-buttons"></a>Běžné tlačítka  
   
 #### <a name="text"></a>Text  
-Postupujte podle pokynů zápis v [uživatelského rozhraní text a terminologie](../../extensibility/ux-guidelines/ui-text-and-help-for-visual-studio.md#BKMK_UITextAndTerminology).  
+Postupujte podle pokynů na zápis v [uživatelského rozhraní text a terminologie](../../extensibility/ux-guidelines/ui-text-and-help-for-visual-studio.md#BKMK_UITextAndTerminology).  
   
 #### <a name="visual-style"></a>Vizuální styl  
   
 ##### <a name="standard-unthemed"></a>Standard (unthemed)  
-Většina tlačítek v sadě Visual Studio se zobrazí v dialogových oknech nástroje a by neměl být ve. Standardní vzhled tlačítka odrážejí podle operačního systému.  
+Většina tlačítek v sadě Visual Studio se zobrazí v dialogových oknech nástrojů a by neměl být ve stylu. Standardní vzhled tlačítek odrážejí určený operační systém.  
   
-##### <a name="themed"></a>Motivu  
-V některých případech mohou být použity tlačítka v rámci stylem uživatelského rozhraní a tyto přepínače musí být ve správně. V tématu [v dialogových oknech](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md#BKMK_Dialogs) informace o tematické ovládací prvky.  
+##### <a name="themed"></a>S motivem  
+V některých případech slouží tlačítka v rámci upravený uživatelského rozhraní a tato tlačítka musí být navržen tak, odpovídajícím způsobem. Zobrazit [dialogová okna](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md#BKMK_Dialogs) o ovládací prvky s motivem.  
   
 ### <a name="special-buttons"></a>Speciální tlačítka  
   
-#### <a name="browse-buttons"></a>Procházet... tlačítka  
-**[Procházet...]**  tlačítka se používají v mřížky, dialogová okna a nástroje systému windows a další nemodální elementy uživatelského rozhraní. Zobrazené výběr, který pomáhá uživatele při vyplňování hodnotu do ovládacího prvku. Existují dvě varianty toto tlačítko, dlouhé a krátké.  
+#### <a name="browse-buttons"></a>Tlačítka Procházet...  
+**[Procházet...]**  tlačítka se používají v mřížkách, dialogová okna a okna nástrojů a dalších nemodální prvky uživatelského rozhraní. Zobrazí se ovládacího prvku pro výběr, který pomáhá uživateli při vyplňování hodnotu do ovládacího prvku. Existují dvě varianty toto tlačítko, dlouhé a krátké.  
   
-![Tlačítko dlouhá [Procházet...]](../../extensibility/ux-guidelines/media/070703-04_browselong.gif "070703 04_BrowseLong")<br />Tlačítko dlouhá [Procházet...]
+![Na dlouhé [...] Procházet](../../extensibility/ux-guidelines/media/070703-04_browselong.gif "070703 04_BrowseLong")<br />Dlouhé tlačítko [Procházet...]
   
-![Tlačítko jen třemi tečkami krátké [...]](../../extensibility/ux-guidelines/media/070703-05_browseshort.gif "070703 05_BrowseShort")<br />Tlačítko jen třemi tečkami krátké [...]
+![Tlačítko jen tlačítko se třemi tečkami short [...]](../../extensibility/ux-guidelines/media/070703-05_browseshort.gif "070703 05_BrowseShort")<br />Tlačítko jen tlačítko se třemi tečkami short [...]
   
-Kdy použít jen třemi tečkami krátké tlačítko:  
+Kdy použít jen pro tlačítko se třemi tečkami krátký tlačítko:  
   
--   Pokud existuje více než jeden dlouhý **[Procházet...]**  tlačítka v dialogovém okně, jako když povolit několik polí pro procházení. Použít krátké **[...]**  tlačítko pro každou předejdete matoucí přístupové klíče vytvořené v této situaci (**& Procházet** a **B & ocházet** v dialogovém okně stejné).  
+-   Pokud existuje více než jeden dlouhý **[Procházet...]**  tlačítko v dialogovém okně, například pokud několik polí Povolit pro procházení. Používat krátké **[...]**  tlačítko pro každý z nich matoucí přístupové klíče vytvořené v této situaci vyhnout (**& Procházet** a **B & rocházet** v dialogovém okně stejné).  
   
--   V dialogu úzkou, nebo když neexistuje žádné přiměřené místo, kam umístit tlačítko dlouho.  
+-   V dialogovém okně úzkou nebo neexistuje žádný přiměřené umísťovat dlouhé tlačítko.  
   
--   Je-li na tlačítko se zobrazí v ovládacím prvku mřížky.  
+-   Je-li na tlačítko se zobrazí v ovládacím prvku grid.  
   
-Pokyny k používání tlačítko:  
+Pokyny, pomocí tlačítka:  
   
--   Nepoužívejte přístupový klíč. K přístupu pomocí klávesnice, musí uživatel kartě z ovládacího prvku přiléhající. Zajistěte, aby pořadí tak, aby žádné tlačítko pro procházení spadá ihned po pole se vyplní. Nikdy nepoužívejte podtržítkem níže prvního období.  
+-   Nepoužívejte přístupový klíč. Pro přístup k ní pomocí klávesnice, musí uživatel karty sousedící ovládacího prvku. Ujistěte se, že je pořadí tak, aby žádné tlačítko pro procházení spadá ihned po pole bude vyplněn. Nikdy nepoužívejte podtržítka pod první období.  
   
--   Nastavte Microsoft Active Accessibility (MSAA) **název** vlastnost **Procházet...**  (včetně se třemi tečkami), který obrazovky budou uživatelé prohlížet ho jako "Browse" a není "tečkou teček" nebo "období období období." Pro spravované ovládací prvky, to znamená nastavení **AccessibleName** vlastnost.  
+-   Nastavení Microsoft Active Accessibility (MSAA) **název** vlastnost **Procházet...**  (včetně na tři tečky), který obrazovky čtenáři budou číst ho jako "Procházet" a "tečka – tečka – tečka" nebo "období období období." Pro spravované ovládací prvky, to znamená, že nastavení **AccessibleName** vlastnost.  
   
--   Nikdy nepoužívejte třemi tečkami **[...]**  tlačítko pro všechno, co s výjimkou procházení akce. Pokud potřebujete například **[nová...]**  tlačítko, ale nemáte dostatek místa pro text, potom dialogové okno musí být přepracovány.  
+-   Nikdy nepoužívejte trojtečka **[...]**  tlačítko pro všechno, co s výjimkou procházení akce. Například, pokud potřebujete **[nový …]**  tlačítko, ale nemají dostatek volného místa pro text, pak dialogového okna musí být přepracován.  
   
-##### <a name="sizing-and-spacing"></a>Nastavení velikosti a mezery  
-![Změna velikosti [Procházet...] tlačítka: standardní verzi je 75 x 23 pixelů, zkrácený je 26 x 23 pixelů](../../extensibility/ux-guidelines/media/070703-06_browsesizing.png "070703 06_BrowseSizing")<br />Změna velikosti tlačítka [Procházet...]
+##### <a name="sizing-and-spacing"></a>Dimenzování a mezery  
+![Tlačítka pro změnu velikosti [Procházet...]: standardní verze je 75 × 23 pixelů, zkrácený je 26 × 23 pixelů](../../extensibility/ux-guidelines/media/070703-06_browsesizing.png "070703 06_BrowseSizing")<br />Tlačítka pro změnu velikosti [Procházet...]
   
-![Mezera [Procházet...] tlačítka: mezer mezi související ovládací prvek a standardní procházet tlačítko 7 pixelů, mezery mezi související ovládací prvek a krátký procházet tlačítko 5 pixelů](../../extensibility/ux-guidelines/media/070703-07_browsespacing.png "070703 07_BrowseSpacing")<br />Mezery mezi tlačítka [Procházet...]
+![Tlačítka [Procházet...] mezery: mezery mezi související ovládací prvek a standardní tlačítko 7 pixelů procházet, mezery mezi související ovládací prvek a krátký procházet tlačítko 5 pixelů](../../extensibility/ux-guidelines/media/070703-07_browsespacing.png "070703 07_BrowseSpacing")<br />Mezery mezi tlačítka [Procházet...]
   
 #### <a name="graphical-buttons"></a>Grafické tlačítka  
-Některé tlačítka měli vždy použít grafické bitovou kopii a nikdy obsahovat text úspoře místa a zamezit tak lokalizace problémy. To se často používají v jiných řazení seznamy a ovládacích prvků Výběr pole.  
+Některá tlačítka by měla vždy použít grafické image a nikdy obsahovat text ušetřit místo a vyhnout se potíže s lokalizací. Často používají v jiných seřaditelné seznamy a pole výběr.  
   
-> **Poznámka:** uživatelé mají na kartě na tato tlačítka (nejsou žádné přístupové klávesy), takže umístit je rozumný pořadí. Mapy `name` vlastnost tlačítko pro akci, která trvá tak, aby čtečky obrazovky správně interpretovat akce tlačítka.  
+> **Poznámka:** uživatelé mají na kartě tato tlačítka (neexistují žádné přístupové klíče), takže je umístit v rozumné pořadí. Mapování `name` vlastnosti tlačítka na akci, která je potřebná tak, aby čtečky obrazovky správně interpretovat akce tlačítka.  
   
 | Funkce | Tlačítko |  
 | --- | --- |  
 | Přidejte | ![Grafické tlačítko "Přidat"](../../extensibility/ux-guidelines/media/070703-08_buttonadd.png "070703 08_ButtonAdd") |
-| Odebrat | ![Grafické tlačítko "Odebrat"](../../extensibility/ux-guidelines/media/070703-09_buttonremove.png "070703 09_ButtonRemove") |
-| Přidejte všechny | ![Grafické tlačítko "Přidat všechny"](../../extensibility/ux-guidelines/media/070703-10_buttonaddall.png "070703 10_ButtonAddAll") |
-| Odeberte všechny | ![Grafické "Odeberte všechny" tlačítko](../../extensibility/ux-guidelines/media/070703-11_buttonremoveall.png "070703 11_ButtonRemoveAll") |
+| odebrat | ![Grafické tlačítko "Remove"](../../extensibility/ux-guidelines/media/070703-09_buttonremove.png "070703 09_ButtonRemove") |
+| Přidat vše | ![Grafické tlačítko "Přidat vše"](../../extensibility/ux-guidelines/media/070703-10_buttonaddall.png "070703 10_ButtonAddAll") |
+| Odebrat vše | ![Grafické "Odstranit vše" tlačítko](../../extensibility/ux-guidelines/media/070703-11_buttonremoveall.png "070703 11_ButtonRemoveAll") |
 | Přesunout nahoru | ![Grafické tlačítko "Nahoru"](../../extensibility/ux-guidelines/media/070703-12_buttonmoveup.png "070703 12_ButtonMoveUp") |
-| Přesunout dolů | ![Grafické tlačítko "Dolů"](../../extensibility/ux-guidelines/media/070703-13_buttonmovedown.png "070703 13_ButtonMoveDown") |
+| Přesunout dolů | ![Grafické "tlačítko Přesunout dolů"](../../extensibility/ux-guidelines/media/070703-13_buttonmovedown.png "070703 13_ButtonMoveDown") |
 | Odstranit | ![Grafické tlačítko "Odstranit"](../../extensibility/ux-guidelines/media/070703-14_buttondelete.png "070703 14_ButtonDelete") |
   
-##### <a name="sizing-and-spacing"></a>Nastavení velikosti a mezery  
-Změna velikosti pro grafické tlačítka je stejné jako u zkrácené **[Procházet...]**  tlačítko (26 x 23 pixelů):  
+##### <a name="sizing-and-spacing"></a>Dimenzování a mezery  
+Změny velikosti pro grafické tlačítka je stejná jako zkrácené **[Procházet...]**  tlačítko (26 × 23 pixelů):  
   
-![Vzhled obrázek na tlačítko s i bez průhledná barva zobrazující](../../extensibility/ux-guidelines/media/070703-15_graphicalbuttonspacing.png "070703 15_GraphicalButtonSpacing")<br />Vzhled obrázek na tlačítko s i bez průhledná barva zobrazující
+![Vzhled grafického obrázku na tlačítku a nemusíte průhlednou barvu zobrazující](../../extensibility/ux-guidelines/media/070703-15_graphicalbuttonspacing.png "070703 15_GraphicalButtonSpacing")<br />Vzhled grafického obrázku na tlačítku a nemusíte průhlednou barvu zobrazující
   
 ### <a name="hyperlinks"></a>Hypertextové odkazy  
-Hypertextové odkazy jsou skvěle hodí pro akce na základě navigace, například otevření tématu nápovědy, modální dialogové okno nebo průvodce. Pokud hypertextový odkaz se používá pro příkaz, je vždy pro uživatelské rozhraní zobrazeno viditelné a výraznou změnu. Obecně platí akce, které potvrzení akce (jako jsou uložit, zrušit a odstranit) se lépe předávají pomocí tlačítka.  
+Hypertextové odkazy se skvěle hodí pro navigaci na základě akce, jako jsou otevření tématu nápovědy, modální dialogové okno nebo průvodce. Pokud hypertextový odkaz se používá pro příkaz, je vždy zobrazit viditelné a výrazné změny v uživatelském rozhraní. Obecně platí akce, které se zavázali k akci (třeba uložit, zrušit a odstranit) se lépe předávají pomocí tlačítka.  
   
 #### <a name="writing-style"></a>Styl psaní  
-Postupujte podle [Windows Desktop pokyny pro text v uživatelském rozhraní](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742478\(v=vs.85\).aspx). Nepoužívejte "Zjistěte více o," "Sdělte mi Další informace o" nebo "Get pomoc s to" frázového. Místo toho fráze text odkazu nápovědy z hlediska primární otázku odpověděli obsah nápovědy. Například "**jak přidat server do Průzkumníka serveru?**"  
+Postupujte podle [Windows Desktop pokyny pro text v uživatelském rozhraní](/windows/desktop/uxguide/text-ui). Nepoužívejte "Přečtěte si další informace o," "Řekněte mi více o" nebo "Get s tímto vám pomůže" frázového. Místo toho věta text nápovědy odkazu z hlediska primární otázku zodpoví technický obsah nápovědy. Například "**jak mohu přidat server do Průzkumníka serveru?**"  
   
 #### <a name="visual-style"></a>Vizuální styl  
   
--   Hypertextové odkazy měli vždycky používat [služba VSColor Service](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_TheVSColorService). Pokud je navržen tak hypertextový odkaz, není správně, bliká red při active nebo ukazuje barvu po přístupu.  
+-   Hypertextové odkazy vždy používejte [VSColor službu](../../extensibility/ux-guidelines/colors-and-styling-for-visual-studio.md#BKMK_TheVSColorService). Pokud není správně ve stylu hypertextového odkazu, bliká červená, pokud je aktivní nebo ukazuje na jinou barvu po přístupu.  
   
--   Neobsahují podtržení v ovládacím prvku spočívající stavu, není-li odkaz fragment větu v rámci úplné věty, jako v vodoznak.  
+-   Nezahrnují podtržení v ovládacím prvku není odkaz na fragment věty úplné větě, stejně jako v vodoznak, aby byla stavu.  
   
--   Podtržení by se neměla při přechodu myší. Místo toho zpětnou vazbu pro uživatele, že odkaz je aktivní je změna mírné barvy a příslušný odkaz kurzor.  
+-   Podtržení by se neměl zobrazit při najetí myší. Místo toho zpětná vazba pro uživatele, že je odkaz aktivní je změna mírné barvy a kurzoru příslušný odkaz.  
   
 ##  <a name="BKMK_TreeViews"></a> Zobrazení stromu  
   
-Zobrazení stromu poskytují způsob, jak uspořádat komplexní uvádí do nadřízených a podřízených skupin. Uživatele můžete rozbalit nebo sbalit nadřazené skupiny odhalit nebo skrytí základní podřízené položky. Poskytnout další akce lze vybrat každou položku v zobrazení stromu.  
+Zobrazení stromu poskytují způsob, jak uspořádat komplexní seznamy do skupin nadřazených a podřízených. Uživatele můžete rozbalit nebo sbalit nadřazené skupiny, které chcete zobrazit nebo skrýt základní podřízené položky. Poskytnout další akce lze vybrat každou položku v zobrazení stromu.  
   
-###  <a name="BKMK_TreeViewVisualStyle"></a> Vizuální styl zobrazení stromu  
+###  <a name="BKMK_TreeViewVisualStyle"></a> Stromové zobrazení vizuálního stylu  
   
-#### <a name="expanders"></a>Rozšíření, která jsou  
-Ovládací prvky stromového zobrazení by měl odpovídat expander návrh používá systém Windows a Visual Studio. Každý uzel používá ovládací prvek expander odhalit nebo skryjete základní položky. Použití ovládacího prvku expander poskytuje konzistence pro uživatele, kteří setkat jiného stromu zobrazení v systému Windows Server a Visual Studio.  
+#### <a name="expanders"></a>Rozšíření  
+Ovládací prvky zobrazení stromu by měl odpovídat rozšíření návrh používá Windows a Visual Studio. Chcete-li zobrazit nebo skrýt základní položky, používají jednotlivé uzly ovládacího prvku expander. Použití ovládacího prvku expander poskytuje konzistenci pro uživatele, kteří se mohou vyskytnout jiného stromu zobrazení v rámci Windows a Visual Studio.  
   
-![Správné: správné styl stromovém zobrazení pomocí ovládacího prvku expander](../../extensibility/ux-guidelines/media/070705-1_treeviewcorrect.png "070705 1_TreeViewCorrect")<br />Správné: správné styl stromovém zobrazení pomocí ovládacího prvku expander
+![Správné: správný styl zobrazení uzlu stromové struktury pomocí ovládacího prvku expander](../../extensibility/ux-guidelines/media/070705-1_treeviewcorrect.png "070705 1_TreeViewCorrect")<br />Správné: správný styl zobrazení uzlu stromové struktury pomocí ovládacího prvku expander
   
-![Nesprávný: nesprávné styl stromovém zobrazení](../../extensibility/ux-guidelines/media/070705-2_treeviewincorrect1.png "070705 2_TreeViewIncorrect1")<br />Nesprávný: nesprávné styl stromovém zobrazení
+![Chyba: nesprávný styl stromovém zobrazení](../../extensibility/ux-guidelines/media/070705-2_treeviewincorrect1.png "070705 2_TreeViewIncorrect1")<br />Chyba: nesprávný styl stromovém zobrazení
   
 #### <a name="selection"></a>Výběr  
-Pokud uzel je vybraný ve stromovém zobrazení, by měl zvýraznění rozšíření na celou šířku ovládacího prvku zobrazení stromu. Díky tomu mohou uživatelé jasně identifikovat které položku vyberou. Výběr barvy by měla odpovídat aktuální motiv sady Visual Studio.  
+Když je vybrán uzel ve stromovém zobrazení, zvýraznění by měl rozšířit na celou šířku ovládací prvek stromového zobrazení. Díky tomu uživatelé se tak jasně identifikovat položky, které jste vybrali. Výběr barvy by měly odrážet aktuální motiv sady Visual Studio.  
   
-![Správné: zvýraznění vybraného uzlu vyhovuje celou šířku ovládacího prvku zobrazení stromu. ] (../../extensibility/ux-guidelines/media/070705-1_treeviewcorrect.png "070705 1_TreeViewCorrect")<br />Správné: zvýraznění vybraného uzlu vyhovuje celou šířku ovládacího prvku zobrazení stromu.
+![Správné: zvýraznění z vybraného uzlu odpovídá celé jeho šířce ovládací prvek stromového zobrazení. ](../../extensibility/ux-guidelines/media/070705-1_treeviewcorrect.png "070705 1_TreeViewCorrect")<br />Správné: zvýraznění z vybraného uzlu odpovídá celé jeho šířce ovládací prvek stromového zobrazení.
   
-![Nesprávný: zvýraznění vybraného uzlu nevejde celou šířku ovládacího prvku zobrazení stromu. ] (../../extensibility/ux-guidelines/media/070705-3_treeviewincorrect2.png "070705 3_TreeViewIncorrect2")<br />Nesprávný: zvýraznění vybraného uzlu nevejde celou šířku ovládacího prvku zobrazení stromu.
+![Chyba: zvýraznění z vybraného uzlu nevejde celé jeho šířce ovládací prvek stromového zobrazení. ](../../extensibility/ux-guidelines/media/070705-3_treeviewincorrect2.png "070705 3_TreeViewIncorrect2")<br />Chyba: zvýraznění z vybraného uzlu nevejde celé jeho šířce ovládací prvek stromového zobrazení.
   
 #### <a name="icons"></a>Ikony  
-Ikony by měl použít v ovládací prvky zobrazení stromu jen v případě jejich pomoci při identifikaci vizuálně rozdíly mezi položkami. Obecně platí ikony by měl použít pouze v heterogenní seznamy, ve kterých ikony přenosu informací k odlišení typů elementů. V seznamu homogenní pomocí ikony, často se dají považovat za šumu a je nutno. Ikona skupiny (nadřazené) v takovém případě můžete předání typu položky v něm. Výjimka, která má toto pravidlo by Pokud ikonu dynamické a slouží k označení stavu.  
+Ikony by měla sloužit pouze v ovládacích prvcích stromů zobrazení Pokud podílí na vizuální určení rozdílů mezi položkami. Obecně platí ikony, které byste měli použít pouze ve heterogenní seznamy, ve kterých ikony nesou informaci k rozlišení mezi typy prvků. V homogenní seznamu pomocí ikon, často se dají považovat za šumu a mělo by se vyhnout. V takovém případě ikona skupiny (nadřazené) sdělí typem položek v něm. Výjimkou z tohoto pravidla by Pokud ikonu je dynamický a slouží k určení stavu.  
   
 #### <a name="scroll-bars"></a>Posuvníky  
-Posuvníky by být vždy skrytý, pokud se obsah vejde do ovládacího prvku zobrazení stromu. Je přijatelné pro posuvníky být skrytý nebo poloprůhledné ve posuvného okna a zobrazí, když má právě fokus, okno se stromovým zobrazením a při přechodu stromu zobrazit sám sebe.  
+Posuvníky vždy skryt, pokud se obsah vešel ovládací prvek stromového zobrazení. Je přijatelné pro posuvníky se seznamy skrytých nebo poloprůhledného posuvného okna a zobrazí, když okno obsahující stromové zobrazení má fokus nebo při přechodu ze stromu zobrazení samotný.  
   
-![Protože obsah překročil omezení stromové zobrazení, zobrazí se i svislého a vodorovného posuvníky. ] (../../extensibility/ux-guidelines/media/070705-4_scrollbars.png "070705 4_Scrollbars")<br />Protože obsah překročil omezení stromové zobrazení, zobrazí se i svislého a vodorovného posuvníky.
+![Protože obsah překročil omezení ovládací prvek stromového zobrazení, zobrazí se i vodorovné a svislé posuvníky. ](../../extensibility/ux-guidelines/media/070705-4_scrollbars.png "070705 4_Scrollbars")<br />Protože obsah překročil omezení ovládací prvek stromového zobrazení, zobrazí se i vodorovné a svislé posuvníky.
   
-###  <a name="BKMK_TreeViewInteractions"></a> Interakce zobrazení stromu  
+###  <a name="BKMK_TreeViewInteractions"></a> Stromové zobrazení interakce  
   
 #### <a name="context-menus"></a>Kontextové nabídky  
-Zobrazení uzlu stromu může odhalit dílčí možnosti v kontextové nabídce. Obvykle k tomu dochází, když uživatel má klepli pravým tlačítkem myši položku nebo stisknutím klávesy nabídky na klávesnici Windows obsahující vybrané položky. Je důležité, aby uzlu získá fokus a je vybraná. To pomáhá identifikovat které položku podnabídky patří do uživatele.  
+Uzel stromu zobrazení může odhalit podnabídky možnosti v kontextové nabídce. Obvykle k tomu dojde, když uživatel má klikli pravým tlačítkem myši položku nebo stisknutím klávesy nabídky na Windows klávesnice s zvolené položky. Je důležité, že uzel získá fokus a je vybrán. To pomáhá uživateli určit která položka patří podnabídky.  
   
-![Nebyla vybrána položka, která se má generovat zaměření kontextové nabídky zvýšení upozornit uživatele, která položka. ] (../../extensibility/ux-guidelines/media/070705-5_contextmenu.png "070705 5_ContextMenu")<br />Nebyla vybrána položka, která se má generovat zaměření kontextové nabídky zvýšení upozornit uživatele, která položka.
+![Byla vybrána položka, která se má generovat fokus místní nabídky zisky upozornit uživatele, která položka. ](../../extensibility/ux-guidelines/media/070705-5_contextmenu.png "070705 5_ContextMenu")<br />Byla vybrána položka, která se má generovat fokus místní nabídky zisky upozornit uživatele, která položka.
   
 #### <a name="keyboard"></a>Klávesnice  
-Zobrazení stromu by měl poskytovat možnost vybrat položky a rozbalit nebo sbalit uzly pomocí klávesnice. Tím se zajistí, že splňuje navigační naše požadavky na usnadnění přístupu.  
+Ve stromovém zobrazení by měla poskytnout možnost vybrat položky a rozbalení/sbalení uzlů pomocí klávesnice. Tím se zajistí, že splňuje navigace naše požadavky na usnadnění přístupu.  
   
-##### <a name="tree-view-control"></a>Ovládací prvek stromu  
-Ovládací prvky stromů Visual Studio postupujte podle běžné navigační klávesové:  
+##### <a name="tree-view-control"></a>Ovládací prvek stromového zobrazení  
+Visual Studio ovládacích prvků strom postupujte podle běžných navigaci pomocí klávesnice:  
   
--   **Šipku nahoru:** vyberte položky přesunutím do stromu  
+-   **Šipka nahoru:** vybrat položky přesunutím směrem nahoru  
   
--   **Šipku dolů:** přesunutím hlouběji ve stromové struktuře vyberte položky  
+-   **Šipky dolů:** vybrat položky přesunete dolů stromu  
   
 -   **Šipka doprava:** rozbalte uzel ve stromu  
   
@@ -381,12 +382,12 @@ Ovládací prvky stromů Visual Studio postupujte podle běžné navigační kl�
 -   **Zadejte klíč:** iniciovat, načíst, spustit vybranou položku  
   
 ##### <a name="trid-tree-view-and-grid-view"></a>Trid (stromové zobrazení a zobrazení mřížky)  
-Ovládací prvek trid je komplexní ovládací prvek, který obsahuje stromové zobrazení v mřížce. Rozbalení, sbalení a procházení stromu by měly dodržovat stejné příkazy klávesnice jako stromové zobrazení, s těmito přídavky:  
+Trid ovládacího prvku je komplexní ovládací prvek, který obsahuje zobrazení stromu v mřížce. Rozšíření, sbalování a procházení stromu by měly dodržovat stejné klávesových příkazů jako stromové zobrazení, s těmito přídavky:  
   
--   **Šipka doprava:** rozbalte uzel. Po rozbalení uzlu se by měly pokračovat, přejdete na nejbližší sloupec na pravé straně. Na konci řádku by se měla zastavit navigace.  
+-   **Šipka doprava:** rozbalte uzel. Po rozbalení uzlu pokračováním, že přejdete na nejbližší sloupec na pravé straně. Na konci řádku, který by se měla zastavit navigace.  
   
--   **Karta:** Navigates na buňku nejbližší na pravé straně.  Na konci řádku navigační pokračuje na další řádek.  
+-   **Karta:** Navigates na nejbližší buňku na pravé straně.  Na konci řádku navigace pokračuje na další řádek.  
   
--   **Shift + Tab:** Navigates na buňku nejbližší na levé straně.  Na začátku řádku, i nadále navigační buňky nejvíce vpravo v předchozím řádku.  
+-   **Shift + Tab:** Navigates na nejbližší buňku na levé straně.  Na začátku řádku, bude nadále navigace buňku vpravo na předchozím řádku.  
   
-![Ovládací prvek trid v sadě Visual Studio](../../extensibility/ux-guidelines/media/070705-6_trid.png "070705 6_Trid")<br />Ovládací prvek trid v sadě Visual Studio
+![Trid ovládací prvek v sadě Visual Studio](../../extensibility/ux-guidelines/media/070705-6_trid.png "070705 6_Trid")<br />Trid ovládací prvek v sadě Visual Studio

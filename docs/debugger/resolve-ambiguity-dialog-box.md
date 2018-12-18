@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31475477"
 ---
 # <a name="resolve-ambiguity-dialog-box"></a>Dialogové okno Vyřešit nejednoznačnosti
 `Resolve Ambiguity` Dialogové okno se zobrazí, když ladicí program nemůže vyberte umístění, k zobrazení. Například pokud používáte šablonami C++, můžete vytvořit víc funkcí z jedné funkce šablony. Pokud ladicí program zastaví v umístění zdroje v šabloně, a vy zvolíte `Go To Disassembly`, má více možností ladicího programu. Jednotlivé funkce z šablony má svou vlastní zpětný překlad kódu a ladicí program nebude vědět, který kód, který chcete zobrazit. `Resolve Ambiguity` Dialogové okno umožňuje vybrat umístění, bude ze seznamu všech odpovídajících umístění.  

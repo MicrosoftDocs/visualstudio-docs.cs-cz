@@ -1,8 +1,9 @@
 ---
-title: Glosář pro atribut | Nástroj pro testování Microsoft IntelliTest Developer | Microsoft Docs
+title: Glosář atributů | Nástroj pro testování Microsoft IntelliTest Developer
 ms.date: 05/02/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - IntelliTest, Attribute glossary
 ms.author: gewarren
@@ -10,15 +11,16 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: fd799598f7e497c217024965d7a83ff1df322acd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0a83a7bd2fc40862411bbfd85f72b804318983c5
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51294211"
 ---
-# <a name="attribute-glossary"></a>Atribut Glosář
+# <a name="attribute-glossary"></a>Glosář atributů
 
-## <a name="attributes-by-namespace"></a>Atributy podle oboru názvů
+## <a name="attributes-by-namespace"></a>Atributy oboru názvů
 
 * **Microsoft.Pex.Framework**
   * [PexAssumeNotNull](#pexassumenotnull)
@@ -46,11 +48,11 @@ ms.lasthandoff: 04/16/2018
 <a name="pexassumenotnull"></a>
 ## <a name="pexassumenotnull"></a>PexAssumeNotNull
 
-Tento atribut vyhodnotí, že upraveny hodnota nemůže být **null**. Je možné připojit k:
+Tento atribut vyhodnotí, že řídí hodnota nemůže být **null**. Může být připojen k:
 
-* **parametr** metody parametrizované testu
+* **parametr** metody parametrizovaný test
 
-  ```
+  ```csharp
   // assume foo is not null
   [PexMethod]
   public void SomeTest([PexAssumeNotNull]IFoo foo, ...) {}
@@ -58,7 +60,7 @@ Tento atribut vyhodnotí, že upraveny hodnota nemůže být **null**. Je možn�
 
 * **pole**
 
-  ```
+  ```csharp
   public class Foo {
      // this field should not be null
      [PexAssumeNotNull]
@@ -68,69 +70,69 @@ Tento atribut vyhodnotí, že upraveny hodnota nemůže být **null**. Je možn�
 
 * A **typu**
 
-  ```
+  ```csharp
   // never consider null for Foo types
   [PexAssumeNotNull]
   public class Foo {}
   ```
 
-Také se lze připojit k sestavení test, zkušebního přípravku nebo testovací metoda; v takovém případě musí označovat první argumenty, které pole nebo typ předpokladů použít. Atribut se vztahuje na typ, platí pro všechna pole s tímto typem formální.
+Může být také připojen k sestavení testu, testovací přípravek nebo testovací metody; v tomto případě musíte uvést první argumenty, které pole nebo typ předpoklady platí. Atribut se vztahuje na typ, platí pro všechna pole s tímto typem formální.
 
 <a name="pexclass"></a>
 ## <a name="pexclass"></a>PexClass
 
-Tento atribut označuje třídu, která obsahuje *explorations*. Jedná se o ekvivalent Mstestu **TestClassAttribute** (nebo NUnit **TestFixtureAttribute**). Tento atribut je volitelné.
+Tento atribut označí třídu, která obsahuje *průzkumy*. Jedná se o ekvivalent MSTest **atribut TestClassAttribute** (nebo NUnit **TestFixtureAttribute**). Tento atribut je volitelný.
 
-Třídy označené jako [PexClass](#pexclass) musí být *výchozí zkonstruovatelný*:
+Třídy označené [PexClass](#pexclass) musí být *výchozí constructible*:
 
-* veřejně exportovaný typu
+* veřejně exportovaného typu
 * výchozí konstruktor
-* není abstraktní.
+* není typu abstract
 
-Pokud třída těchto požadavků nesplňuje, zobrazí se chybová zpráva a průzkum nezdaří.
+Pokud třída těchto požadavků nesplňuje, dojde k chybě a průzkum se nezdaří.
 
-Chcete-li tyto třídy také důrazně doporučujeme **částečné** tak, aby IntelliTest může generovat nové testy, které jsou součástí třídy, ale v samostatném souboru. Tento přístup řeší mnohé problémy, kvůli [viditelnost](input-generation.md#visibility) a je typické technika v jazyce C#.
+Je také důrazně doporučuje provádět tyto třídy **částečné** tak, aby IntelliTest může generovat nové testy, které jsou součástí třídy, ale v samostatném souboru. Tento přístup řeší mnohé problémy kvůli [viditelnost](input-generation.md#visibility) a je o typickou techniku v C#.
 
-**Další sada a kategorie**:
+**Další sady a kategorie**:
 
-```
+```csharp
 [TestClass] // MSTest test fixture attribute
 [PexClass(Suite = "checkin")] // fixture attribute
 public partial class MyTests { ... }
 ```
 
-**Určení typu testovaného**:
+**Určení typu v rámci testu**:
 
-```
+```csharp
 [PexClass(typeof(Foo))] // this is a test for Foo
 public partial class FooTest { ... }
 ```
 
-Třída může obsahovat metody opatřen poznámkou [PexMethod](#pexmethod). Také rozumí IntelliTest [nastavit a přerušit metody](test-generation.md#setup-teardown).
+Třídy mohou obsahovat metody opatřen poznámkou [PexMethod](#pexmethod). IntelliTest také rozumí [nastavit a dovolí metody](test-generation.md#setup-teardown).
 
 <a name="pexgenericarguments"></a>
 ## <a name="pexgenericarguments"></a>PexGenericArguments
 
-Tento atribut obsahuje typ řazené kolekce členů pro vytváření instancí [testování částí obecný parametrizované](test-generation.md#generic-parameterized).
+Tento atribut obsahuje typ řazené kolekce členů pro vytvoření instance [obecný parametrizovaný test jednotek](test-generation.md#generic-parameterized).
 
 <a name="pexmethod"></a>
 ## <a name="pexmethod"></a>PexMethod
 
-Tento atribut určí metodu jako [testování částí parametrizované](test-generation.md#parameterized-unit-testing).
-Metoda se musí nacházet v rámci třídy označené jako [PexClass](#pexclass) atribut.
+Tento atribut určí metodu jako [parametrizovaný test jednotek](test-generation.md#parameterized-unit-testing).
+Metoda musí být umístěn v rámci třídy označené [PexClass](#pexclass) atribut.
 
-IntelliTest vygeneruje testy tradiční, bez parametrů, které volání [testování částí parametrizované](test-generation.md#parameterized-unit-testing) s odlišnými parametry.
+IntelliTest bude generovat konstruktor bez parametrů, tradiční testů, které volání [parametrizovaný test části](test-generation.md#parameterized-unit-testing) s různými parametry.
 
-Testování parametrizované částí:
+Parametrizovaný test jednotek:
 
-* musí být metoda instance
-* musí být [viditelné](input-generation.md#visibility) testovací třídy, do kterého se umístí generovaného testy podle [vodopádu nastavení](settings-waterfall.md)
-* může trvat libovolný počet parametrů
-* může být obecný
+* musí být metoda instance.
+* musí být [viditelné](input-generation.md#visibility) do testovací třídy, do které se umístí vygenerované testy podle [Vodopádové nastavení](settings-waterfall.md)
+* může přijmout libovolný počet parametrů
+* může být obecné
 
 **Příklad**
 
-```
+```csharp
 [PexClass]
 public partial class MyTests {
      [PexMethod]
@@ -142,14 +144,14 @@ public partial class MyTests {
 <a name="pexexplorationattributebase"></a>
 ## <a name="pexexplorationattributebase"></a>PexExplorationAttributeBase
 
-[Další informace](https://msdn.microsoft.com/library/microsoft.pex.framework.pexexplorationattributebase.aspx)
+[Další informace](xref:Microsoft.Pex.Framework.PexExplorationAttributeBase)
 
 <a name="pexassemblysettings"></a>
 ## <a name="pexassemblysettings"></a>PexAssemblySettings
 
-Tento atribut lze nastavit na úrovni sestavení přepsat výchozí hodnoty nastavení pro všechny explorations.
+Tento atribut lze nastavit na úrovni sestavení přepsat výchozí hodnoty nastavení pro všechny průzkumy.
 
-```
+```csharp
 using Microsoft.Pex.Framework;
 // overriding the test framework selection
 [assembly: PexAssemblySettings(TestFramework = "Naked")]
@@ -158,20 +160,20 @@ using Microsoft.Pex.Framework;
 <a name="pexassemblyundertest"></a>
 ## <a name="pexassemblyundertest"></a>PexAssemblyUnderTest
 
-Tento atribut určuje sestavení, která se testuje v aktuálním projektu testu. 
+Tento atribut určuje sestavení, které je právě testováno podle aktuálního testovacího projektu. 
 
-```
+```csharp
 [assembly: PexAssemblyUnderTest("MyAssembly")]
 ```
 
 <a name="pexinstrumentassemblyattribute"></a>
 ## <a name="pexinstrumentassemblyattribute"></a>PexInstrumentAssemblyAttribute
 
-Tento atribut slouží k zadání sestavení, které chcete instrumentovány.
+Tento atribut slouží k určení sestavení instrumentace.
 
 **Příklad**
 
-```
+```csharp
 using Microsoft.Pex.Framework;
 
 // the assembly containing ATypeFromTheAssemblyToInstrument should be instrumented
@@ -184,11 +186,11 @@ using Microsoft.Pex.Framework;
 <a name="pexusetype"></a>
 ## <a name="pexusetype"></a>PexUseType
 
-Tento atribut informuje IntelliTest, že konkrétní typ může použít k vytváření instancí rozhraní nebo základní typy (abstract).
+Tento atribut oznamuje IntelliTest, že určitý typ může použít k vytvoření instance základní typy (abstraktní) nebo rozhraní.
 
 **Příklad**
 
-```
+```csharp
 [PexMethod]
 [PexUseType(typeof(A))]
 [PexUseType(typeof(B))]
@@ -201,13 +203,13 @@ public void MyTest(object testParameter)
 <a name="pexallowedexception"></a>
 ## <a name="pexallowedexception"></a>PexAllowedException
 
-Pokud tento atribut je připojena k [PexMethod](#pexmethod) (nebo [PexClass](#pexclass), změní výchozí IntelliTest logiku, která určuje, kdy testů selže. Test se nepovažuje jako neúspěšný i v případě, že nastane zadanou výjimkou.
+Pokud tento atribut je připojen k [PexMethod](#pexmethod) (nebo [PexClass](#pexclass), změní výchozí IntelliTest logiku, která označuje, když dojde k selhání testů. Test se nepovažuje jako neúspěšný i v případě, že ji vyvolá zadanou výjimkou.
 
 **Příklad**
 
-Následující test Určuje, že konstruktoru **zásobníku** může vyvolat **výjimka ArgumentOutOfRangeException**:
+Následující testovací Určuje, že konstruktor třídy **zásobníku** může vyvolat **ArgumentOutOfRangeException**:
 
-```
+```csharp
 class Stack {
   int[] _elements;
   int _count;
@@ -220,9 +222,9 @@ class Stack {
 }
 ```
 
-Filtr je připojen k z přípravku následujícím způsobem (ho lze také definovat na úrovni sestavení nebo testovací):
+Tento filtr je připojen k testovacího přípravku následujícím způsobem (ji lze také definovat na úrovni sestavení nebo testovací):
 
-```
+```csharp
 [PexMethod]
 [PexAllowedException(typeof(ArgumentOutOfRangeException))]
 class CtorTest(int capacity) {
@@ -233,18 +235,18 @@ class CtorTest(int capacity) {
 <a name="pexallowedexceptionfromassembly"></a>
 ## <a name="pexallowedexceptionfromassembly"></a>PexAllowedExceptionFromAssembly
 
-[Další informace](https://msdn.microsoft.com/library/microsoft.pex.framework.validation.pexallowedexceptionfromassemblyattribute.aspx)
+[Další informace](xref:Microsoft.Pex.Framework.Validation.PexAllowedExceptionFromAssemblyAttribute)
 
 <a name="pexallowedexceptionfromtype"></a>
 ## <a name="pexallowedexceptionfromtype"></a>PexAllowedExceptionFromType
 
-[Další informace](https://msdn.microsoft.com/library/microsoft.pex.framework.validation.pexallowedexceptionfromtypeattribute.aspx)
+[Další informace](xref:Microsoft.Pex.Framework.Validation.PexAllowedExceptionFromTypeAttribute)
 
 <a name="pexallowedexceptionfromtypeundertest"></a>
 ## <a name="pexallowedexceptionfromtypeundertest"></a>PexAllowedExceptionFromTypeUnderTest
 
-[Další informace](https://msdn.microsoft.com/library/microsoft.pex.framework.validation.pexallowedexceptionfromtypeundertestattribute.aspx)
+[Další informace](xref:Microsoft.Pex.Framework.Validation.PexAllowedExceptionFromTypeUnderTestAttribute)
 
-## <a name="got-feedback"></a>Zpětné vazby máte?
+## <a name="got-feedback"></a>Máte nějakou zpětnou vazbu?
 
-Vystavení vašich nápadů a funkce požadavky na  **[UserVoice](https://visualstudio.uservoice.com/forums/121579-visual-studio-2015/category/157869-test-tools?query=IntelliTest)**.
+Publikovat své nápady a funkce na požadavky [komunity vývojářů](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).

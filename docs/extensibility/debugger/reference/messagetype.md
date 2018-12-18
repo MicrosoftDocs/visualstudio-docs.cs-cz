@@ -1,5 +1,5 @@
 ---
-title: TYP ZPRÁVY | Microsoft Docs
+title: TYP ZPRÁVY | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,13 +15,14 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3fa09d938e0e7c3853431369c7e0634242df2ee0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 66c254b56d5f7755a3578814ad5f3de7898f2f88
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872223"
 ---
-# <a name="messagetype"></a>TYP ZPRÁVY
+# <a name="messagetype"></a>MESSAGETYPE
 Určuje typ zprávy a důvod.  
   
 ## <a name="syntax"></a>Syntaxe  
@@ -51,19 +52,19 @@ public enum enum_MESSAGETYPE {
   
 ## <a name="members"></a>Členové  
  MT_OUTPUTSTRING  
- Označuje, že zpráva by měla být odesláno do okna výstupu. To se vzájemně vylučují z `MT_MESSAGEBOX`.  
+ Označuje, že zprávy by měl být odesláno do okna výstup. To se vzájemně vylučuje z `MT_MESSAGEBOX`.  
   
  MT_MESSAGEBOX  
- Označuje, že zpráva mají být zobrazeny v okně se zprávou. To se vzájemně vylučují z `MT_OUTPUTSTRING`.  
+ Určuje, že zprávy by měl zobrazeny v okně se zprávou. To se vzájemně vylučuje z `MT_OUTPUTSTRING`.  
   
  MT_TYPE_MASK  
  Hodnota masky izolovat cíl zprávy.  
   
  MT_REASON_EXCEPTION  
- Určuje, jestli se zprávou se zobrazují v důsledku výjimku. To se vzájemně vylučují z `MT_REASON_TRACEPOINT`.  
+ Označuje, že se zobrazuje okno se zprávou v důsledku výjimky. To se vzájemně vylučuje z `MT_REASON_TRACEPOINT`.  
   
  MT_REASON_TRACEPOINT  
- Určuje, zda se v důsledku stiskne tracepoint zobrazen okno se zprávou. To se vzájemně vylučují k `MT_REASON_EXCEPTION`.  
+ Označuje, že se v důsledku dosažení zarážku s trasováním zobrazuje okno se zprávou. Toto je vzájemně se vylučující k `MT_REASON_EXCEPTION`.  
   
  MT_REASON_MASK  
  Hodnota masky izolovat důvod se zobrazí zpráva.  
@@ -71,7 +72,7 @@ public enum enum_MESSAGETYPE {
 ## <a name="remarks"></a>Poznámky  
  Tyto hodnoty jsou vráceny z [GetMessage](../../../extensibility/debugger/reference/idebugmessageevent2-getmessage.md) a [GetErrorMessage](../../../extensibility/debugger/reference/idebugerrorevent2-geterrormessage.md) metody.  
   
- Jedna z hodnot Důvodem mohou být kombinovány s jednu z hodnot cílový výstup pomocí bitové `OR`.  
+ Jedna z hodnot z důvodu je možné kombinovat s některou z hodnot cíl výstupu pomocí logické bitové `OR`.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

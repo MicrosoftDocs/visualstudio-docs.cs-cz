@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::GetEngineID | Microsoft Docs
+title: IDebugEngine2::GetEngineID | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 97d5b4ec655838f32ccff7df562ae4f11bdc9a00
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: bd933653613b5819bab229077de0f2f6f6074485
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49935897"
 ---
 # <a name="idebugengine2getengineid"></a>IDebugEngine2::GetEngineID
-Získá identifikátor GUID modulu ladění (DE).  
+Získá identifikátor GUID ladicího stroje (DE).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,13 +44,13 @@ int GetEngineID(
  [out] Vrátí identifikátor GUID je DE.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Některé příklady typických identifikátory GUID `guidScriptEng`, `guidNativeEng`, nebo `guidSQLEng`. Nové ladění motory se vytvoří vlastní identifikátor GUID pro identifikaci.  
+ Tady je několik příkladů identifikátorů GUID typické `guidScriptEng`, `guidNativeEng`, nebo `guidSQLEng`. Nové ladicí stroj se vytvoří vlastní identifikátor GUID pro identifikaci.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchou `CEngine` objekt, který implementuje [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) rozhraní.  
+ Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CEngine` objekt, který implementuje [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) rozhraní.  
   
 ```cpp  
 HRESULT CEngine::GetEngineId(GUID *pguidEngine){    

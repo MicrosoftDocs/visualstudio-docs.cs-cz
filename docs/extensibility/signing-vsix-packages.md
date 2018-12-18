@@ -1,5 +1,5 @@
 ---
-title: Podepisování balíčků VSIX | Microsoft Docs
+title: Podepisování balíčků VSIX | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,36 +17,37 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 84166ed96fb49567f4ede3e8e0c4b7e8ba3cc814
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6520171619833fe3c74f87634e9e83c24da33d70
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49855934"
 ---
 # <a name="signing-vsix-packages"></a>Podepisování balíčků VSIX
-Rozšíření sestavení nemusíte být podepsané před jejich spuštěním v sadě Visual Studio, ale je dobrým zvykem Uděláte to tak.  
+Rozšíření sestavení není nutné před jejich spuštěním v sadě Visual Studio, ale je dobrým zvykem Uděláte to tak.  
   
- Pokud chcete zabezpečit rozšíření a ujistěte se, že nikdo neoprávněně nemanipuloval, přidáte do balíčku VSIX digitální podpis. Při podpisu VSIX VSIX instalační program zobrazí zprávu s upozorněním, že ho je podepsaná, plus další informace o podpisu sám sebe. Pokud obsah VSIX byly změněny a VSIX není podepsaný znovu, zobrazí instalační program VSIX, podpis není platný. Instalace nebyla zastavena, ale uživatel bude upozorněn.  
+ Pokud chcete zabezpečit vaše rozšíření a ujistěte se, že někdo nemanipuloval s, můžete přidat digitálního podpisu balíčku VSIX. Při podepsání VSIX instalátor VSIX se zobrazí zprávu s oznámením, že není podepsané, plus další informace o podpisu samotný. Pokud obsah VSIX byly změněny a VSIX nebyl znovu podepsán, instalátor VSIX se zobrazí, že podpis není platný. Instalace se zastaví, ale uživatel je upozorněn.  
   
 > [!IMPORTANT]
->  Od verze 2015, budou označeny VSIX balíčky podepsaná pomocí jakoukoli jinou hodnotu než SHA256 šifrování tak, že má neplatný podpis. VSIX instalace nezablokuje, ale uživatel se upozornění.  
+>  Od verze Visual Studio 2015, balíčků VSIX, které jsou podepsány pomocí nic jiného než SHA256 šifrování bude považovat za s neplatným podpisem. Instalace VSIX není blokován, ale uživatel zobrazí upozornění.  
   
-## <a name="signing-a-vsix-with-vsixsigntool"></a>Podepisování VSIX s VSIXSignTool  
- Existuje SHA256 šifrování, podepisování nástroje, které jsou k dispozici z [VisualStudioExtensibility](http://www.nuget.org/profiles/VisualStudioExtensibility) na nuget.org v [VsixSignTool](http://www.nuget.org/packages/Microsoft.VSSDK.Vsixsigntool).  
+## <a name="signing-a-vsix-with-vsixsigntool"></a>Podepsání souboru VSIX pomocí VSIXSignTool  
+ Je SHA256 šifrování podepisování nástroj dostupný z [VisualStudioExtensibility](http://www.nuget.org/profiles/VisualStudioExtensibility) na nuget.org na [VsixSignTool](http://www.nuget.org/packages/Microsoft.VSSDK.Vsixsigntool).  
   
-#### <a name="to-use-the-vsixsigntool"></a>Chcete-li použít VSIXSignTool  
+#### <a name="to-use-the-vsixsigntool"></a>Použít VSIXSignTool  
   
-1.  Přidání vaší VSIX do projektu.  
+1. Přidejte do projektu VSIX.  
   
-2.  Klikněte na uzel projektu v Průzkumníku řešení klikněte pravým tlačítkem na výběr **přidat &#124; spravovat balíčky NuGet**.  Další informace o NuGet a přidání balíčků NuGet naleznete v příručce najdete v článku [NuGet dokumentace](/NuGet) a [uživatelského rozhraní Správce balíčků](/NuGet/Tools/Package-Manager-UI) témata.  
+2. Klikněte pravým tlačítkem na uzel projektu v Průzkumníku řešení vyberte **přidat &#124; spravovat balíčky NuGet**.  Další informace o NuGet a přidání NuGet naleznete v tématu balíčky [dokumentace pro NuGet](/NuGet) a [uživatelské rozhraní Správce balíčků](/NuGet/Tools/Package-Manager-UI) témata.  
   
-3.  Vyhledejte VSIXSignTool z VisualStudioExtensibility a nainstalujte balíček NuGet.  
+3. Vyhledejte VSIXSignTool z VisualStudioExtensibility a nainstalujte balíček NuGet.  
   
-4.  Teď můžete spustit VSIXSignTool z umístění místní balíčky projektu. Získáte v nápovědě nástroje příkazového řádku pro váš scénář podpisový (VSIXSignTool.exe /?).  
+4. Nyní můžete spustit VSIXSignTool z umístění místního balíčky projektu. Najdete nápovědu k příkazovému řádku nástroje pro podepisování scénář (VSIXSignTool.exe /?).  
   
- Třeba se přihlásit s heslem chráněné soubor certifikátu:  
+   Třeba když chcete přihlásit s heslem chráněná soubor certifikátu:  
   
- /F přihlašovací VSIXSignTool.exe \<Soubor_certifikátu > /p \<heslo > \<VSIXfile >  
+   /F přihlašování VSIXSignTool.exe \<Soubor_certifikátu > /p \<heslo > \<VSIXfile >  
   
 ## <a name="see-also"></a>Viz také  
  [Odesílání rozšíření sady Visual Studio](../extensibility/shipping-visual-studio-extensions.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;přizpůsobení&gt; – Element (vývoj pro Office v sadě Visual Studio) | Microsoft Docs'
+title: '&lt;přizpůsobení&gt; – element (vývoj pro Office v sadě Visual Studio)'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -15,18 +15,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 4384dd8bea4fc5829362ccdb06ea3912607cd263
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1f1344b69aaf098f766aeafddfd23cea84d1a981
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35675891"
 ---
-# <a name="ltcustomizationgt-element-office-development-in-visual-studio"></a>&lt;přizpůsobení&gt; – Element (vývoj pro Office v sadě Visual Studio)
-  `customization` Element `vstov4` obor názvů popisuje konkrétní řešení Office. Podřízené elementy se liší pro přizpůsobení na úrovni dokumentu a doplňků VSTO.  
+# <a name="ltcustomizationgt-element-office-development-in-visual-studio"></a>&lt;přizpůsobení&gt; – element (vývoj pro Office v sadě Visual Studio)
+  `customization` Elementu `vstov4` obor názvů popisuje konkrétní řešení Office. Podřízené prvky se liší pro přizpůsobení na úrovni dokumentu a doplňky VSTO.  
   
-## <a name="syntax-for-document-level-customizations"></a>Syntaxe pro úpravy na úrovni dokumentů  
+## <a name="syntax-for-document-level-customizations"></a>Syntaxe pro přizpůsobení na úrovni dokumentu  
   
-```  
+```xml
 <customization  
   id  
   <document  
@@ -37,7 +38,7 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="syntax-for-vsto-add-ins"></a>Syntaxe pro doplňky VSTO  
   
-```  
+```xml
 <customization  
   id  
   <appAddin  
@@ -51,50 +52,50 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ## <a name="elements-and-attributes"></a>Elementy a atributy  
- `customization` Element obsahuje informace o přizpůsobení. Tento element musí být v oboru názvů následující: `vstov4=urn:schemas-microsoft-com:vsto.v4`. Existuje `customization` element pro každé řešení Office. Například pokud nasadíte tři řešení pro systém Office v vícenásobného projektu nasazení, existují tři `customization` elementy v manifestu aplikace.  
+ `customization` Prvek obsahuje informace specifické pro přizpůsobení. Tento element musí být v následujícím oboru názvů: `vstov4=urn:schemas-microsoft-com:vsto.v4`. Existuje jedna `customization` – element pro každé řešení Office. Například pokud nasadíte tři řešení pro systém Office v nasazení více projekty, existují tři `customization` prvky v manifestu aplikace.  
   
- Podřízené elementy sestavení musí také být v tomto oboru názvů.  
+ Podřízené prvky prvku sestavení musí být také v tomto oboru názvů.  
   
- `customization` Element má následující atribut.  
+ `customization` Element má tento atribut.  
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|`id`|Vyžaduje se pro nasazení vícenásobného projektu. `id` Element jednoznačně identifikuje řešení Office.|  
+|`id`|Vyžaduje se pro nasazení více projekty. `id` Element jednoznačně identifikuje řešení pro Office.|  
   
 ### <a name="document-level-customizations"></a>Přizpůsobení na úrovni dokumentu  
- `customization` Element má následující podřízený element.  
+ `customization` Element má následující podřízený prvek.  
   
 #### <a name="document"></a>dokument  
- `document` Element v `vstov4` obor názvů je definován v [ &#60;dokumentu&#62; Element &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/document-element-office-development-in-visual-studio.md).  
+ `document` Prvek `vstov4` obor názvů je definovaný v [ &#60;dokumentu&#62; element &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/document-element-office-development-in-visual-studio.md).  
   
-### <a name="vsto-add-ins"></a>Doplňků VSTO  
- `customization` Element má následující podřízený element.  
+### <a name="vsto-add-ins"></a>Doplňky VSTO  
+ `customization` Element má následující podřízený prvek.  
   
 #### <a name="appaddin"></a>appAddin  
- `appAddin` Element v `vstov4` obor názvů je definován v [ &#60;appAddin&#62; Element &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/appaddin-element-office-development-in-visual-studio.md).  
+ `appAddin` Prvek `vstov4` obor názvů je definovaný v [ &#60;appAddin&#62; element &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/appaddin-element-office-development-in-visual-studio.md).  
   
 ## <a name="example-of-a-document-level-customization"></a>Příklad přizpůsobení na úrovni dokumentu  
   
 ### <a name="description"></a>Popis  
- Následující příklad kódu ukazuje `customization` element pro přizpůsobení na úrovni dokumentu. Tento příklad kódu je součástí většího příkladu vztahujícího se v [manifesty aplikací pro řešení Office](../vsto/application-manifests-for-office-solutions.md).  
+ Následující příklad kódu ukazuje, `customization` – element pro přizpůsobení na úrovni dokumentu. Tento příklad kódu je součástí většího příkladu určeného v [manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).  
   
 ### <a name="code"></a>Kód  
   
-```  
+```xml
 <vstov4:customization>  
   <vstov4:document   
     solutionId="73e" />  
 </vstov4:customization>  
 ```  
   
-## <a name="example-of-an-vsto-add-in"></a>Příklad doplňku VSTO  
+## <a name="example-of-a-vsto-add-in"></a>Příklad doplňku VSTO  
   
 ### <a name="description"></a>Popis  
- Následující příklad kódu ukazuje `customization` element pro doplňku VSTO. Toto je VSTO pro Outlook doplněk, který zahrnuje oblasti formuláře. Tento příklad kódu je součástí většího příkladu vztahujícího se v [manifesty aplikací pro řešení Office](../vsto/application-manifests-for-office-solutions.md).  
+ Následující příklad kódu ukazuje, `customization` – element pro doplňku VSTO. Toto je VSTO pro Outlook doplněk, který zahrnuje oblasti formuláře. Tento příklad kódu je součástí většího příkladu určeného v [manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).  
   
 ### <a name="code"></a>Kód  
   
-```  
+```xml  
 <vstov4:customization>  
   <vstov4:appAddIn   
     application="Outlook"   
@@ -119,9 +120,9 @@ ms.lasthandoff: 04/16/2018
 </vstov4:customization>  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Manifesty aplikace pro řešení pro systém Office](../vsto/application-manifests-for-office-solutions.md)   
- [Manifesty nasazení pro řešení Office](../vsto/deployment-manifests-for-office-solutions.md)   
- [ClickOnce – manifest aplikace ](/visualstudio/deployment/clickonce-application-manifest)  
+ [Manifesty nasazení pro řešení pro systém Office](../vsto/deployment-manifests-for-office-solutions.md)   
+ [ClickOnce – manifest aplikace](/visualstudio/deployment/clickonce-application-manifest)  
   
   

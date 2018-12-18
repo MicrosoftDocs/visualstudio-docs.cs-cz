@@ -1,5 +1,5 @@
 ---
-title: NumberOfParentCategoriesToRollUp (šablony sady Visual Studio) | Microsoft Docs
+title: NumberOfParentCategoriesToRollUp (šablony sady Visual Studio) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e94e4b67727308657becac829bcdd30e571a2be6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e6c3eae15aaa4aa7b81148915fc2c59fee723230
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39639510"
 ---
 # <a name="numberofparentcategoriestorollup-visual-studio-templates"></a>NumberOfParentCategoriesToRollUp (šablony sady Visual Studio)
-Určuje počet nadřazené kategorie, které se zobrazí šablony **nový projekt** dialogové okno.  
+Určuje počet nadřazených kategoriích, které se zobrazí v šabloně **nový projekt** dialogové okno.  
   
- \<VSTemplate >  
+ \<Vstemplate – >  
  \<TemplateData >  
  \<NumberOfParentCategoriesToRollUp >  
   
@@ -43,25 +44,25 @@ Určuje počet nadřazené kategorie, které se zobrazí šablony **nový projek
 ### <a name="attributes"></a>Atributy  
  Žádné  
   
-### <a name="child-elements"></a>Podřízené elementy  
+### <a name="child-elements"></a>Podřízené prvky  
  Žádné  
   
-### <a name="parent-elements"></a>Nadřazené elementy  
+### <a name="parent-elements"></a>Nadřazené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Rozděluje šablonu a definuje, jak se zobrazuje v buď **nový projekt** nebo **přidat novou položku** dialogové okno.|  
+|[TemplateData –](../extensibility/templatedata-element-visual-studio-templates.md)|Rozděluje šablonu a definuje, jak se zobrazuje **nový projekt** nebo **přidat novou položku** dialogové okno.|  
   
 ## <a name="text-value"></a>Textová hodnota  
- `integer` Je vyžadována hodnota.  
+ `integer` Hodnota je povinná.  
   
- Tato hodnota určuje počet nadřazené kategorie, které se zobrazí šablony **nový projekt** dialogové okno.  
+ Tato hodnota určuje počet nadřazených kategoriích, které se zobrazí v šabloně **nový projekt** dialogové okno.  
   
 ## <a name="remarks"></a>Poznámky  
- `NumberOfParentCategoriesToRollUp` je volitelný element.  
+ `NumberOfParentCategoriesToRollUp` je volitelný prvek.  
   
 ## <a name="example"></a>Příklad  
- Tento příklad ukazuje metadata pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aplikací systému Windows. Pokud šablonu s Tato metadata pod nejvyšší úrovně je ponecháno dvě úrovně složky [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] uzlu, šablona se zobrazí v uzlu nejvyšší úrovně v **nový projekt** dialogové okno. Pokud `NumberOfParentCategoriesToRollUp` není nastaven, šablona se zobrazí pouze v uzlu ve kterém it se fyzicky nacházejí.  
+ Tento příklad ukazuje metadata [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aplikace Windows. Pokud šablonu s Tato metadata pod nejvyšší úrovně je ponecháno dvě úrovně složky [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] uzlu, šablony se zobrazí v uzlu na nejvyšší úrovni v **nový projekt** dialogové okno. Pokud `NumberOfParentCategoriesToRollUp` není nastaven, šablony se zobrazí jenom v uzlu ve které je fyzicky umístěn.  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  
@@ -88,6 +89,6 @@ Určuje počet nadřazené kategorie, které se zobrazí šablony **nový projek
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
+## <a name="see-also"></a>Viz také:  
+ [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)   
  [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

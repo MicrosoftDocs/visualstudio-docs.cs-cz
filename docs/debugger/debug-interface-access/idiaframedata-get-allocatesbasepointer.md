@@ -1,5 +1,5 @@
 ---
-title: Idiaframedata::get_allocatesbasepointer – | Microsoft Docs
+title: Idiaframedata::get_allocatesbasepointer – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: efbadae145fff951effc7413e432ab2570549c95
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: e981a29352c5adf192a0eb3cdccd59a088e29db6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49875239"
 ---
 # <a name="idiaframedatagetallocatesbasepointer"></a>IDiaFrameData::get_allocatesBasePointer
-Získá příznak označující, zda je základní ukazatele přidělené kód v tomto rozsahu adres. Tato metoda je zastaralá.  
+Získá příznak, který označuje, zda je základní ukazatel přidělen pro kód v tomto rozsahu adres. Tato metoda je zastaralá.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,13 +34,13 @@ HRESULT get_allocatesBasePointer (
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí `TRUE` Pokud základní ukazatel je přidělen; jinak vrátí `FALSE`.  
+ [out] Vrátí `TRUE` Pokud je základní ukazatel přidělen; v opačném případě vrátí `FALSE`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. Jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato vlastnost by měla být používány pouze kód, který dříve přístupné FPO_DATA, nebo když se program řetězec vrácený [idiaframedata::get_program –](../../debugger/debug-interface-access/idiaframedata-get-program.md) je metoda `NULL`. Program řetězec, jinak hodnota obsahuje všechny informace potřebné k výpočtu předchozí hodnot registru.  
+ Tato vlastnost by měly být používány pouze kód, který dřív přístupné FPO_DATA nebo když program řetězec vrácený [idiaframedata::get_program –](../../debugger/debug-interface-access/idiaframedata-get-program.md) je metoda `NULL`. V opačném případě program řetězec obsahuje všechny informace potřebné k výpočtu předchozí hodnoty registru.  
   
 ## <a name="see-also"></a>Viz také  
  [Idiaframedata –](../../debugger/debug-interface-access/idiaframedata.md)   

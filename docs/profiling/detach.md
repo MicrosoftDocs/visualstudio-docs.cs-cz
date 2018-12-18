@@ -10,11 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 40ef2e9e8cfcfd6c825723254f0d5a0891d2e1f1
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 91b93eb99b1068e1695e26136eacc6abf2886774
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34764488"
 ---
 # <a name="detach"></a>Odpojit
 VSPerfCmd.exe **odpojení** možnost-li zadán žádný odpojí profileru z zadaný procesy nebo všechny procesy. Profilace musí mít inicializovány pomocí metody vzorkování.  
@@ -28,7 +29,7 @@ VSPerfCmd.exe **odpojení** možnost-li zadán žádný odpojí profileru z zada
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cmd  
 VSPerfCmd.exe /Detach[:PIDs|ProcessNames]  
 ```  
   
@@ -51,7 +52,7 @@ VSPerfCmd.exe /Detach[:PIDs|ProcessNames]
 ## <a name="example"></a>Příklad  
  V tomto příkladu **odpojení** příkaz pozastaví profilace a **vypnutí** příkaz zavře datový soubor profileru.  
   
-```  
+```cmd  
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp  
 VSPerfCmd.exe /Launch:TestApp.exe  
 ;REM Excercise the application  
@@ -59,8 +60,8 @@ VSPerfCmd.exe /Detach
 VSPerfCmd.exe /Shutdown  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Vsperfcmd –](../profiling/vsperfcmd.md)   
- [Profilace samostatných aplikací](../profiling/command-line-profiling-of-stand-alone-applications.md)   
- [Profilace webových aplikací ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
- [Profilace služeb](../profiling/command-line-profiling-of-services.md)
+ [Profil samostatných aplikací](../profiling/command-line-profiling-of-stand-alone-applications.md)   
+ [Webové aplikace ASP.NET profilu](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
+ [Profil služby](../profiling/command-line-profiling-of-services.md)

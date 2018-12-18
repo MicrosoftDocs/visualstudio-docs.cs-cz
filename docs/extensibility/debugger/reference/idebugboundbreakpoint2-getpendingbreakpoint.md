@@ -1,5 +1,5 @@
 ---
-title: IDebugBoundBreakpoint2::GetPendingBreakpoint | Microsoft Docs
+title: IDebugBoundBreakpoint2::GetPendingBreakpoint | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 899afbc801baee88dd941763b559845b90be8500
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ed136217f9f5c7cffc72ba03562d308723ef5029
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49867777"
 ---
 # <a name="idebugboundbreakpoint2getpendingbreakpoint"></a>IDebugBoundBreakpoint2::GetPendingBreakpoint
-Získá čekající zarážek, ze kterého byl vytvořen zadaný vázané breakpoint.  
+Získá čekající zarážka, ze kterého byl vytvořen zadané vázaná zarážka.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,16 +42,16 @@ int GetPendingBreakpoint(
   
 #### <a name="parameters"></a>Parametry  
  `ppPendingBreakpoint`  
- [out] Vrátí [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) objekt, který reprezentuje čekající zarážek, která byla použita k vytvoření tohoto vázané breakpoint.  
+ [out] Vrátí [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) objekt, který reprezentuje čekající zarážka, která byla použita k vytvoření tohoto vázaná zarážka.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Čekající zarážek můžete představit jako kolekce všechny potřebné informace potřebné k vytvoření vazby boru přerušení. kód, který lze použít pro jednu nebo více programů.  
+ Čekající zarážkou můžete představit jako kolekce všechny potřebné informace potřebné k vytvoření vazby zarážky na kód, který lze použít na jeden nebo více programů.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchou `CBoundBreakpoint` objekt, který zveřejňuje [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) rozhraní.  
+ Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CBoundBreakpoint` objekt, který zveřejňuje [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) rozhraní.  
   
 ```  
 HRESULT CBoundBreakpoint::GetPendingBreakpoint(  

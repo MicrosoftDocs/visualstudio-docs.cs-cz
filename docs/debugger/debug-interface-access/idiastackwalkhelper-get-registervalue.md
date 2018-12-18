@@ -1,5 +1,5 @@
 ---
-title: IDiaStackWalkHelper::get_registerValue | Microsoft Docs
+title: IDiaStackWalkHelper::get_registerValue | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ccc491ec9e966b8d893b6d669aafc64ebc5c8cf
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: af5f68aaf5b2caed50d28a1a53022a095d478e60
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49887914"
 ---
 # <a name="idiastackwalkhelpergetregistervalue"></a>IDiaStackWalkHelper::get_registerValue
 Načte hodnotu registru.  
@@ -34,16 +35,16 @@ HRESULT get_registerValue (
   
 #### <a name="parameters"></a>Parametry  
  `index`  
- [v] Hodnota z [CV_HREG_e – výčet](../../debugger/debug-interface-access/cv-hreg-e.md) určující, které zaregistrovat k získání hodnoty z výčtu.  
+ [in] Hodnota z [cv_hreg_e – výčet](../../debugger/debug-interface-access/cv-hreg-e.md) výčet určující, které zaregistrovat k získání hodnoty z.  
   
  `pRetVal`  
- [out] Vrací aktuální hodnotu registru.  
+ [out] Vrátí aktuální hodnotu registru.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Bez ohledu velikost `pRetVal` parametr implementace by měla být uložena pouze co registru obvykle obsahuje. Například 8bitový registr obsahuje jenom je nejnižší 8 bitů předané hodnoty. Tato hodnota 8 bitů se rozšířit, aby 64bitovou když tato metoda vrátí.  
+ Bez ohledu na velikost `pRetVal` parametr, implementace by měla být uložena pouze co do registru obvykle obsahuje. Například 8bitový registr obsahuje pouze nejnižší 8 bitů předané hodnoty. Tato hodnota 8 bitů rozbalen do 64 bitů když tato metoda vrátí.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)   

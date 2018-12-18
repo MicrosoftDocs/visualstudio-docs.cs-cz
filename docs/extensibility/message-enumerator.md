@@ -1,5 +1,5 @@
 ---
-title: Zpráva enumerátor | Microsoft Docs
+title: Enumerátor zpráv | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,16 +14,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bc945908ac61a0eaa4df49c76725b2291686eac3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f83692db7755ae4b65f794a570b8c656d6dad145
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49897014"
 ---
 # <a name="message-enumerator"></a>Enumerátor zpráv
-Následující příznaky se používají pro `TEXTOUTPROC` funkci, která je funkce zpětného volání, která poskytuje rozhraní IDE při volání [SccOpenProject](../extensibility/sccopenproject-function.md) (najdete v části [LPTEXTOUTPROC](../extensibility/lptextoutproc.md) podrobnosti o zpětné volání funkce).  
+Následující příznaky se používají pro `TEXTOUTPROC` funkce, což je funkce zpětného volání, která poskytuje integrované vývojové prostředí při volání [sccopenproject –](../extensibility/sccopenproject-function.md) (naleznete v tématu [LPTEXTOUTPROC](../extensibility/lptextoutproc.md) podrobnosti o zpětné volání funkce).  
   
- Pokud IDE se zobrazí výzva k proces zrušit, ale může získat zpráv Storno. V takovém případě zdroj řízení modulu plug-in používá `SCC_MSG_STARTCANCEL` požádat IDE pro zobrazení **zrušit** tlačítko. Potom může být odeslán libovolnou sadu normální zprávy. Pokud platí jedna z těchto vrátí `SCC_MSG_RTN_CANCEL`, pak modul plug-in ukončí operaci a vrátí. Modul plug-in taky dotazuje `SCC_MSG_DOCANCEL` pravidelně k určení, pokud uživatel operaci zrušil. Pokud všechny operace se provádějí, nebo pokud uživatel zrušil, modul plug-in odešle `SCC_MSG_STOPCANCEL`. `SCC_MSG_INFO`, SCC_MSG_WARNING, a SCC_MSG_ERROR typy se používají pro zprávy, které se nezobrazí v posouvání seznam zpráv. `SCC_MSG_STATUS` je speciální typ, který označuje, že text by měl zobrazí v stavový řádek nebo dočasné oblasti. Není trvale zůstanou v seznamu.  
+ Pokud integrovaného vývojového prostředí se zobrazí výzva, proces zrušení, může zobrazit jedna z zprávy Storno. V tomto případě používá modul plug-in ovládací prvek zdroje `SCC_MSG_STARTCANCEL` žádat rozhraní IDE zobrazíte **zrušit** tlačítko. Potom může být odeslán libovolnou sadu normální zprávy. Pokud některý z těchto vrátí `SCC_MSG_RTN_CANCEL`, modul plug-in operace se ukončí a vrátí. Modul plug-in také dotazuje `SCC_MSG_DOCANCEL` pravidelně k určení, pokud uživatel operaci zrušil. Když se provádějí všechny operace, nebo pokud uživatel zrušil, modul plug-in odešle `SCC_MSG_STOPCANCEL`. `SCC_MSG_INFO`, SCC_MSG_WARNING, a SCC_MSG_ERROR typy se používají pro zprávy, která se zobrazí v posuvný seznam zpráv. `SCC_MSG_STATUS` je speciální typ, který označuje, že text by se zobrazit na stavovém řádku nebo dočasné oblasti. Není trvale zůstanou v seznamu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,32 +44,32 @@ enum {
   
 ## <a name="members"></a>Členové  
  SCC_MSG_RTN_CANCEL  
- Vrátí ze zpětného volání k označení zrušit.  
+ Návrat z zpětného volání k označení zrušit.  
   
  SCC_MSG_RTN_OK  
- Vrátí z zpětné volání pro pokračovat.  
+ Vrátí ze zpětného volání, abyste mohli pokračovat.  
   
  SCC_MSG_INFO  
  Zpráva je informační.  
   
  SCC_MSG_WARNING  
- Zpráva je upozornění.  
+ Zpráva se upozornění.  
   
  SCC_MSG_ERROR  
- Zpráva je chybná.  
+ Zpráva se o chybu.  
   
  SCC_MSG_STATUS  
  Zpráva je určená pro stavový řádek.  
   
  SCC_MSG_DOCANCEL  
- Žádný text; Vrátí IDE `SCC_MSG_RTN_OK` nebo `SCC_MSG_RTN_CANCEL`.  
+ Žádný text. Vrátí IDE `SCC_MSG_RTN_OK` nebo `SCC_MSG_RTN_CANCEL`.  
   
  SCC_MSG_STARTCANCEL  
  Zahájí cyklus Storno.  
   
  SCC_MSG_STOPCANCEL  
- Zastaví smyčky Storno.  
+ Ukončí smyčku Storno.  
   
-## <a name="see-also"></a>Viz také  
- [Moduly plug-in programu zdroj ovládacího prvku](../extensibility/source-control-plug-ins.md)   
+## <a name="see-also"></a>Viz také:  
+ [Ovládací prvek moduly plug-in zdrojového kódu](../extensibility/source-control-plug-ins.md)   
  [LPTEXTOUTPROC](../extensibility/lptextoutproc.md)

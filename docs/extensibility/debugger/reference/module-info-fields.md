@@ -1,5 +1,5 @@
 ---
-title: MODULE_INFO_FIELDS | Microsoft Docs
+title: MODULE_INFO_FIELDS | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fcc6bd76a4a9aecade72347613ed4f36968c65eb
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: cf01cb2573922adb5d8b5b4bc26b10b839009dda
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49832847"
 ---
 # <a name="moduleinfofields"></a>MODULE_INFO_FIELDS
-Určuje příznaky pro ladicí informace o modulu.  
+Určuje příznaky pro ladicí informace modulu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -65,50 +66,50 @@ public enum enum_MODULE_INFO_FIELDS {
   
 ## <a name="members"></a>Členové  
  MIF_NONE  
- Inicializace nebo použití žádné pole ve struktuře.  
+ Inicializace/použití žádné z polí ve struktuře.  
   
  MIF_NAME  
- Inicializace nebo použití `m_bstrName` pole [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) struktura.  
+ Inicializace/použít `m_bstrName` pole [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) struktury.  
   
  MIF_URL  
- Inicializace nebo použití `m_bstrUrl` pole `MODULE_INFO` struktura.  
+ Inicializace/použít `m_bstrUrl` pole `MODULE_INFO` struktury.  
   
  MIF_VERSION  
- Inicializace nebo použití `m_bstrVersion` pole `MODULE_INFO` struktura.  
+ Inicializace/použít `m_bstrVersion` pole `MODULE_INFO` struktury.  
   
  MIF_DEBUGMESSAGE  
- Inicializace nebo použití `m_bstrDebugMessage` pole `MODULE_INFO` struktura.  
+ Inicializace/použít `m_bstrDebugMessage` pole `MODULE_INFO` struktury.  
   
  MIF_LOADADDRESS  
- Inicializace nebo použití `m_addrLoadAddress` pole `MODULE_INFO` struktura.  
+ Inicializace/použít `m_addrLoadAddress` pole `MODULE_INFO` struktury.  
   
  MIF_PREFFEREDADDRESS  
- Inicializace nebo použití `m_addrPreferredLoadAddress` pole `MODULE_INFO` struktura.  
+ Inicializace/použít `m_addrPreferredLoadAddress` pole `MODULE_INFO` struktury.  
   
  MIF_SIZE  
- Inicializace nebo použití `m_dwSize` pole `MODULE_INFO` struktura.  
+ Inicializace/použít `m_dwSize` pole `MODULE_INFO` struktury.  
   
  MIF_LOADORDER  
- Inicializace nebo použití `m_dwLoadOrder` pole `MODULE_INFO` struktura.  
+ Inicializace/použít `m_dwLoadOrder` pole `MODULE_INFO` struktury.  
   
  MIF_TIMESTAMP  
- Inicializace nebo použití `m_TimeStamp` pole `MODULE_INFO` struktura.  
+ Inicializace/použít `m_TimeStamp` pole `MODULE_INFO` struktury.  
   
  MIF_URLSYMBOLLOCATION  
- Inicializace nebo použití `m_bstrUrlSymbolLocation` pole `MODULE_INFO` struktura.  
+ Inicializace/použít `m_bstrUrlSymbolLocation` pole `MODULE_INFO` struktury.  
   
  MIF_FLAGS  
- Inicializace nebo použití `m_dwModuleFlags` pole `MODULE_INFO` struktura.  
+ Inicializace/použít `m_dwModuleFlags` pole `MODULE_INFO` struktury.  
   
  MIF_ALLFIELDS  
- Inicializace nebo použití, všechna pole v `MODULE_INFO` struktura.  
+ Inicializace/použít všechna pole v `MODULE_INFO` struktury.  
   
 ## <a name="remarks"></a>Poznámky  
- Tyto hodnoty jsou předávány jako argument pro [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) metoda označíte, které pole [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) struktura mají být inicializován.  
+ Tyto hodnoty jsou předány jako argument [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) indikace které pole [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) struktury mají být inicializovány.  
   
- Tyto hodnoty se také používají v `MODULE_INFO` struktura označuje pole, která je platná a použitá.  
+ Tyto hodnoty jsou také používány v `MODULE_INFO` struktury k označení pole, která se používá a je platný.  
   
- Tyto příznaky mohou být kombinovány s bitové `OR`.  
+ Tyto příznaky lze kombinovat pomocí logické bitové `OR`.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

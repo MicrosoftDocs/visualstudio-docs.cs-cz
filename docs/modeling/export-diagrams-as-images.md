@@ -11,33 +11,35 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 003318b8c8e26112ee83dceb9cdc3c453dc6956f
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 7c1e7f7f642245fe4170c670fafd7366361e6de0
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47858521"
 ---
 # <a name="export-diagrams-as-images"></a>Exportovat diagramy jako obrázky
-V sadě Visual Studio můžete uložit modelování diagramů v formáty jen pro čtení tak, aby sdílet je s zúčastněným stranám, uživatele nebo členů týmu, kteří nepoužívají stejnou verzi sady Visual Studio.
+V sadě Visual Studio můžete ušetřit, modelování diagramů ve formátech, jen pro čtení, takže můžete je sdílet se zúčastněnými stranami, uživatele nebo členy projektového týmu, kteří nepoužívají stejnou verzi sady Visual Studio.
 
- Tuto funkci podporovat kterou verzí sady Visual Studio najdete v tématu [verze podpora architektura a modelování nástroje](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+ Chcete-li zjistit, jaké edice sady Visual Studio podporují tuto funkci, přečtěte si téma [podpora edice nástroje architektury a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
-### <a name="to-copy-a-diagram-or-part-of-a-diagram-to-another-application"></a>Kopírování diagram nebo součástí diagram do jiné aplikace
+### <a name="to-copy-a-diagram-or-part-of-a-diagram-to-another-application"></a>Kopírování diagramu nebo část diagramu do jiné aplikace
 
-1.  Na diagramu je vidět vyberte některé nebo všechny obrazce.
+1.  V diagramu vyberte některé nebo všechny obrazce.
 
-2.  Klikněte pravým tlačítkem na výběr a potom klikněte na **kopie**.
+2.  Klikněte pravým tlačítkem na svůj výběr a potom klikněte na tlačítko **kopírování**.
 
-3.  Vložte vybranou položku do aplikaci, kterou chcete.
+3.  Vložte svůj výběr do aplikace, které mají.
 
-### <a name="to-save-a-modeling-diagram-as-an-xml-paper-specification-xps-file"></a>Chcete-li uložit diagramu modelování jako soubor XML Paper Specification (XPS)
+### <a name="to-save-a-modeling-diagram-as-an-xml-paper-specification-xps-file"></a>Chcete-li uložit jako soubor XML Paper Specification (XPS) diagramu modelování
 
-1.  Na **soubor** nabídky, klikněte na tlačítko **tiskových** otevřete **tiskových** dialogové okno.
+1.  Na **souboru** nabídky, klikněte na tlačítko **tisk** otevřít **tisk** dialogové okno.
 
-2.  V **název** seznamu, vyberte **zapisovací modul dokumentů Microsoft XPS**a potom klikněte na **OK**.
+2.  V **název** seznamu vyberte **zapisovací modul dokumentů Microsoft XPS**a potom klikněte na tlačítko **OK**.
 
-3.  V **soubor uložte jako** dialogové okno, uložte soubor jako **dokument formátu XPS (\*XPS)** souboru.
+3.  V **uložte soubor jako** dialogové okno, uložte soubor jako **dokument XPS (\*XPS)** souboru.
 
 ## <a name="net-framework-security"></a>Zabezpečení rozhraní .NET Framework
 

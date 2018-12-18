@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31132012"
 ---
 # <a name="ide-defined-commands-for-extending-project-systems"></a>Příkazy definované IDE pro rozšíření projektu systémy
 Pokud chcete rozšířit projektu systémů, můžete použít příkazy a příkaz skupiny poskytované [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE.  

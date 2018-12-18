@@ -1,5 +1,5 @@
 ---
-title: Previewimage – Element (šablony sady Visual Studio) | Microsoft Docs
+title: Previewimage – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,16 +14,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ee25a764326572531e02eb91985aa6150c310715
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5265a2d5632bd014103b557a9f024d3b7d5c5062
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39638974"
 ---
-# <a name="previewimage-element-visual-studio-templates"></a>PreviewImage – element (šablony sady Visual Studio)
-Určuje obrázek náhledu jako název souboru, pro náhled obrázku, který se zobrazí v některém **nový projekt** nebo **přidat novou položku** dialogové okno.  
+# <a name="previewimage-element-visual-studio-templates"></a>Previewimage – element (šablony sady Visual Studio)
+Určuje obrázek, který ve verzi preview, jako název souboru, pro náhled obrázku, který se zobrazí buď **nový projekt** nebo **přidat novou položku** dialogové okno.  
   
- \<VSTemplate >  
+ \<Vstemplate – >  
  \<TemplateData >  
  \<Previewimage – >  
   
@@ -39,14 +40,14 @@ Určuje obrázek náhledu jako název souboru, pro náhled obrázku, který se z
 ### <a name="attributes"></a>Atributy  
  Žádné  
   
-### <a name="child-elements"></a>Podřízené elementy  
+### <a name="child-elements"></a>Podřízené prvky  
  Žádné  
   
-### <a name="parent-elements"></a>Nadřazené elementy  
+### <a name="parent-elements"></a>Nadřazené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Rozděluje šablonu a definuje, jak se zobrazí ve buď **nový projekt** nebo **přidat novou položku** dialogové okno.|  
+|[TemplateData –](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Rozděluje šablonu a definuje, jak se zobrazí buď **nový projekt** nebo **přidat novou položku** dialogové okno.|  
   
 ## <a name="text-value"></a>Textová hodnota  
  Je vyžadována textová hodnota.  
@@ -54,8 +55,8 @@ Určuje obrázek náhledu jako název souboru, pro náhled obrázku, který se z
  Text musí být řetězec, který představuje název souboru.  
   
 ## <a name="remarks"></a>Poznámky  
- `PreviewImage` je volitelný element.  
+ `PreviewImage` je volitelný prvek.  
   
-## <a name="see-also"></a>Viz také  
- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
+## <a name="see-also"></a>Viz také:  
+ [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)   
  [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_type – | Microsoft Docs
+title: Idiasymbol::get_type – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 414c66b000a7cd81783ec963d78105792d6b816b
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: b4c80a04d41df9548fafa2da869f2e6443c599c2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49896468"
 ---
 # <a name="idiasymbolgettype"></a>IDiaSymbol::get_type
 Načte symbol, který představuje typ pro tento symbol.  
@@ -36,13 +37,13 @@ HRESULT get_type (
  [out] Vrátí [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objekt, který představuje typ tento symbol.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` nebo chybový kód.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
->  Vrácená hodnota `S_FALSE` znamená vlastnost není k dispozici pro symbol.  
+>  Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="remarks"></a>Poznámky  
- K určení typu symbol má, musí volat tuto metodu a zkontrolujte výsledné [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objektu. Všimněte si, že je možné pro symbol k nejsou typu. Například název strukturou nemá žádný typ, ale může mít podřízené objekty symboly (použít [idiasymbol::findchildren –](../../debugger/debug-interface-access/idiasymbol-findchildren.md) metoda pro zjištění těchto podřízených objektů).  
+ Určit typ má symbol, musí volat tuto metodu a zkontrolujte výsledné [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objektu. Všimněte si, že je možné pro symbol není typu mít. Například název struktury nemá žádný typ, ale může mít podřízené objekty symboly (použít [idiasymbol::findchildren –](../../debugger/debug-interface-access/idiasymbol-findchildren.md) metodu ke kontrole tyto podřízené objekty).  
   
 ## <a name="example"></a>Příklad  
   

@@ -1,5 +1,5 @@
 ---
-title: Vývoj osvědčených postupů pro COM, VSTO a VBA doplňky v sadě Office | Microsoft Docs
+title: Osvědčené postupy při vývoji pro modelu COM, VSTO a VBA doplňky sady Office
 ms.custom: ''
 ms.date: 07/25/2017
 ms.technology:
@@ -14,56 +14,57 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6da083b12717606233d4c8dd9bc175b42722d53e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3f821b9769b9353fbee6379ddc1b3826f87ac2de
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50671090"
 ---
-# <a name="development-best-practices-for-com-vsto-and-vba--add-ins-in-office"></a>Vývoj osvědčené postupy pro COM, VSTO a VBA doplňky v Office
-  Pokud vyvíjíte COM, postupujte podle VSTO nebo VBA pro vytváření doplňků pro Office, vývoj osvědčené postupy, které jsou popsané v tomto článku.   To pomůže zajistit:
+# <a name="development-best-practices-for-com-vsto-and-vba-add-ins-in-office"></a>Osvědčené postupy při vývoji pro modelu COM, VSTO a VBA doplňky sady Office
+  Pokud vyvíjíte modelu COM, VSTO nebo VBA doplňky pro Office, dodržujte doporučené postupy vývoje popsaných v tomto článku.   To vám pomůže zajistit:
 
--  Kompatibilita doplňky mezi různými verzemi a nasazení systému Office.
--  Jednodušší nasazení doplňku pro vaše uživatele a správce IT.
--  Nedojde k neúmyslnému instalace nebo modul runtime selhání tohoto doplňku.
+-  Kompatibilita doplňky napříč různými verzemi a nasazení Office.
+-  Menší složitost nasazení doplňku pro uživatele a správce IT.
+-  Nežádoucí selhání instalace nebo modulu runtime vašeho doplňku nedojde.
 
->Poznámka: Pomocí [plochy most](/windows/uwp/porting/desktop-to-uwp-root) Příprava vašeho modelu COM, VSTO nebo VBA doplňku pro Windows Store se nepodporuje. Doplňky COM, VSTO a VBA nelze distribuovat úložiště systému Windows nebo Office úložiště. 
+>Poznámka: Pomocí [přemostění na Desktop](/windows/uwp/porting/desktop-to-uwp-root) Příprava vašeho modelu COM, VSTO nebo VBA doplněk pro Windows Store se nepodporuje. Doplňky modelu COM, VSTO a VBA nelze distribuovat ve Windows Store nebo Office Store. 
   
-## <a name="do-not-check-for-office-during-installation"></a>Nekontrolovat Office během instalace  
- Nedoporučujeme mít vaše add-in zjistit, zda je nainstalována Office během procesu instalace doplňku. Pokud není nainstalovaná Office, můžete nainstalovat doplněk a uživatel bude mít přístup k po dokončení instalace sady Office. 
+## <a name="do-not-check-for-office-during-installation"></a>Nezaškrtávejte políčko pro Office v průběhu instalace  
+ Nedoporučujeme s váš doplněk zjištění instalovaného Office během procesu instalace doplňku. Pokud není nainstalovaný Office, můžete nainstalovat doplněk a uživatel bude mít přístup k po dokončení instalace Office. 
   
-## <a name="use-embedded-interop-types-nopia"></a>Použití vložené typy spolupráce (NoPIA)  
-Pokud řešení používá rozhraní .NET 4.0 nebo novější, použijte vložené typy spolupráce (NoPIA) místo v závislosti na Office primární zprostředkovatel komunikace s objekty sestavení (primární) redistributable. Pomocí typu vložení snižuje velikost instalace řešení a k zajištění budoucí kompatibility. Office 2010 byl poslední verzi systému Office, která odeslaná PIA redistributable. Další informace najdete v tématu [návod: vložení informací o typu ze sestavení sady Microsoft Office](https://msdn.microsoft.com/en-us/library/ee317478.aspx) a [ekvivalence typů a vložené typy zprostředkovatel komunikace s objekty](/windows/uwp/porting/desktop-to-uwp-root).
+## <a name="use-embedded-interop-types-nopia"></a>Použití vestavěné typy spolupráce (NoPIA)  
+Pokud vaše řešení používá rozhraní .NET 4.0 nebo novější, použijte vložené typy spolupráce (NoPIA) místo v závislosti na Office primární spolupráce sestavení (PIA) redistributable. Pomocí vkládání typ zmenší velikost instalaci vašeho řešení a zajišťuje budoucí kompatibilitu. Office 2010 byl poslední verzi Office, dodávané PIA redistributable. Další informace najdete v tématu [návod: vložení informací o typu ze sestavení Microsoft Office](https://msdn.microsoft.com/library/ee317478.aspx) a [ekvivalence typů a vestavěné typy spolupráce](/windows/uwp/porting/desktop-to-uwp-root).
 
-Pokud řešení používá starší verzi rozhraní .NET, doporučujeme aktualizovat vaše řešení, aby používalo rozhraní .NET 4.0 nebo novější. Pomocí rozhraní .NET 4.0 nebo novější snižuje požadavky modulu runtime v novějších verzích systému Windows.
+Pokud vaše řešení používá starší verzi rozhraní .NET, doporučujeme aktualizovat vaše řešení, aby používalo rozhraní .NET 4.0 nebo novější. Pomocí rozhraní .NET 4.0 nebo novější snižuje požadavky na modul runtime na novější verze systému Windows.
   
-## <a name="avoid-depending-on-specific-office-versions"></a>Vyhněte se v závislosti na konkrétních verzí systému Office  
-Pokud řešení používá funkce, které jsou k dispozici v novější verzi systému Office, ověřte, zda funkce existuje (Pokud je to možné, na úrovni funkcí) za běhu (například používání výjimek zpracování nebo kontrolou verze). Ověřit minimální verze, místo konkrétních verzí, pomocí podporovaných rozhraní API v objektovém modelu, například [Application.Version vlastnost](https://msdn.microsoft.com/en-us/library/office/microsoft.office.interop.excel._application.version.aspx). Není doporučeno, protože tyto můžete volit mezi instalací, prostředí a verze závisí na binární metadata, instalační cesty nebo klíčů registru.
+## <a name="avoid-depending-on-specific-office-versions"></a>Vyhněte se v závislosti na konkrétní verze sady Office  
+Pokud vaše řešení používá funkce, které jsou k dispozici v novějších verzích Office, ověřte, zda funkce existuje (Pokud je to možné, na úrovni funkcí) za běhu (například používání výjimek zpracování nebo kontrolou verze). Ověřit minimální verze, místo konkrétních verzí, pomocí rozhraní API podporované v objektovém modelu, jako [Application.Version vlastnost](<xref:Microsoft.Office.Interop.Excel._Application.Version%2A>). Nedoporučujeme, protože ty můžete změnit mezi instalací, prostředí a verzí spoléhat na Office binární metadat instalačními cestami a klíče registru.
 
-## <a name="enable-both-32-bit-and-64-bit-office-usage"></a>Povolit 32bitové a 64bitové verze Office využití   
-Váš výchozí cíl sestavení by měly podporovat (x86) 32bitové i 64bitové (x64), pokud vaše řešení závisí na knihovny, které jsou dostupné pouze pro konkrétní počet bitů. Přijetí, zejména v prostředích velkých objemů dat roste 64bitová verze systému Office. Podpora 32bitových a 64-bit usnadňuje uživatelům přechod mezi 32bitové a 64bitové verze systému Office.
+## <a name="enable-both-32-bit-and-64-bit-office-usage"></a>Povolit používání 32bitová verze a 64bitová verze Office   
+Výchozí cíl sestavení by měly podporovat (x86) 32bitové a 64bitové (x64), pokud vaše řešení závisí na knihovny, které jsou dostupné jenom pro konkrétní bitové verze. Přijetí, zejména v prostředích velký objem dat roste 64bitovou verzi systému Office. Podporuje 32bitové i 64bitové usnadňuje uživatelům přechod mezi 32bitové a 64bitové verze systému Office.
 
-Při psaní kódu pro jazyk VBA, použijte 64-bit bezpečné deklarovat příkazy a proveďte převod proměnné podle potřeby. Dále ověřte, že dokumenty lze sdílet mezi uživateli, kteří používají 32bitovou nebo 64bitovou verzí systému Office zadáním kódu pro každý počtu bitů. Další informace najdete v tématu [64-Bit Visual Basic pro aplikace – přehled](https://msdn.microsoft.com/en-us/library/office/gg264421.aspx).
+Když píšete kód VBA, použití 64-bit deklarovat příkazy a převod proměnné podle potřeby. Dále ověřte, že dokumenty lze sdílet mezi uživateli, kteří používají 32bitové nebo 64bitové verze Office tím, že poskytuje kód pro každý bitové verze. Další informace najdete v tématu [64bitovým kompilátorem jazyka Visual Basic for applications – přehled](/office/vba/Language/Concepts/Getting-Started/64-bit-visual-basic-for-applications-overview).
 
-## <a name="support-restricted-environments"></a>Podpora prostředí s omezeným přístupem   
-Řešení by neměl vyžadovat zvýšení oprávnění účtu uživatele nebo správce oprávnění. Kromě toho by neměl řešení závisí na nastavení nebo změna:
+## <a name="support-restricted-environments"></a>Podporu prostředí s omezeným přístupem   
+Vaše řešení, neměli byste potřebovat oprávnění správce nebo uživatel účtu ke zvýšení úrovně oprávnění. Kromě toho řešení neměl záviset na nastavení nebo změna:
 
 - Aktuální pracovní adresář.
-- Knihovny DLL načíst adresáře.
+- Adresáře, načtení knihovny DLL.
 - Proměnné PATH.
 
-## <a name="change-the-save-location-of-shared-data-and-settings"></a>Změnit uložení umístění sdílených dat a nastavení
-Pokud řešení se skládá z doplňku a proces, který je externí Office, nepoužívejte složku dat aplikací uživatele nebo registru pro výměnu dat nebo nastavení mezi doplněk a externího procesu. Místo toho zvažte použití dočasné složky uživatele, složku Dokumenty nebo instalační adresář vaše řešení.
+## <a name="change-the-save-location-of-shared-data-and-settings"></a>Uložení změnit umístění sdílených dat a nastavení
+Pokud řešení obsahuje doplněk a proces, který je externí pro Office, nepoužívejte k výměně dat nebo nastavení mezi doplněk a externí proces složce data aplikací uživatele nebo registru. Místo toho zvažte použití uživatele dočasné složky, složky Dokumenty nebo instalačního adresáře vašeho řešení.
 
-## <a name="increment-the-version-number-with-each-update"></a>Zvýšit číslo verze se jednotlivé aktualizace
-Nastaví číslo verze binárních souborů ve vašem řešení a zvýší při každé aktualizaci. To bude usnadňují uživatelům identifikovat změny mezi verzemi a vyhodnocení kompatibility.
+## <a name="increment-the-version-number-with-each-update"></a>Zvýšit číslo verze při každé aktualizaci
+Nastavte číslo verze binárních souborů ve vašem řešení a zvýší při každé z nich. To vám usnadní to pro uživatele k identifikování změn mezi verzemi a vyhodnotit kompatibilitu.
 
-## <a name="provide-support-statements-for-the-latest-versions-of-office"></a>Zadejte příkazy podpory pro nejnovější verze sady Office
-Zákazníci žádáme ISV poskytnout příkazy podpory pro jejich COM, VSTO VBA doplňky a které běží v Office. Výpis zákazníky pomáhá příkazy explicitní podporu pomocí Office 365 ProPlus připravenosti nástroje pochopit podporu. 
+## <a name="provide-support-statements-for-the-latest-versions-of-office"></a>Poskytuje příkazy podpory pro nejnovější verze sady Office
+Zákazníci žádáme, nezávislým výrobcům softwaru poskytují příkazy podpory pro jejich modelu COM, VSTO a VBA doplňky, které běží v Office. Výpis explicitní podporu příkazy pomáhá zákazníkům pomocí Office 365 ProPlus pochopit připravenosti nástroje podpory. 
 
-Pokud chcete zadat příkazy podpory pro klientské aplikace sady Office (například Word nebo Excel), nejdřív ověřte, zda doplňky spustit v aktuální verzi Office a pak potvrzení poskytovat aktualizace, pokud vaše doplněk dělí v budoucí verzi. Nemáte k testování doplňků při vydání nového sestavení nebo aktualizace Office. Microsoft zřídka mění rozšiřitelnost platformy COM, VSTO a VBA v Office a tyto změny budou dobře zdokumentovat.
+Pokud chcete zadat příkazy podpory pro klientské aplikace Office (například Word nebo Excel), nejdříve ověřte, že poběží v aktuální verzi Office doplňky a poté potvrďte k poskytování aktualizací, pokud doplněk přestane fungovat v budoucí verzi. Nemáte k testování doplňky, když společnost Microsoft vydává nové sestavení nebo aktualizace Office. Microsoft mění jen zřídka rozšiřitelnosti platformy modelu COM, VSTO a VBA v Office a tyto změny budou dobře zdokumentovat.
 
->Důležité: Microsoft udržuje seznam podporovaných doplňky pro připravenosti sestavy a ISV kontaktní informace. Doplněk uvedené získáte v tématu [ https://aka.ms/readyforwindows ](https://aka.ms/readyforwindows).
+>Důležité: Microsoft udržuje seznam podporovaných doplňky pro sestavy připravenost a kontaktní údaje nezávislý výrobce softwaru. Pokud chcete získat doplněk uvedené, naleznete v tématu [ https://aka.ms/readyforwindows ](https://aka.ms/readyforwindows).
 
-## <a name="use-process-monitor-to-help-debug-installation-or-loading-issues"></a>Použijte nástroj Sledování procesu pomáhají ladit instalace nebo načítání problémy
-Pokud vaše doplněk má problémy s kompatibilitou při instalaci nebo zatížení, mohou být s problémy s přístupem k souborům a registru. Použití [monitorování procesu](/sysinternals/downloads/procmon) nebo podobné ladicí nástroj protokolování a porovnání chování proti pracovního prostředí, aby bylo možné identifikovat problém.
+## <a name="use-process-monitor-to-help-debug-installation-or-loading-issues"></a>Ladění instalace nebo načítání problémy pomocí monitorování procesu
+Pokud váš doplněk má problémy s kompatibilitou během instalace nebo zatížení, může být související s problémy při přístupu k souborům a registru. Použití [monitorování procesu](/sysinternals/downloads/procmon) nebo něco podobného ladicí protokolování a porovnání chování pro pracovní prostředí vám pomůže identifikovat problém.

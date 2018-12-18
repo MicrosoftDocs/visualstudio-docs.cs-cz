@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6eecf12f554a8a6143f9c040916da9f0e318b1f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 5551cb5e66eae9471f2e4e79d2aa6587bf440120
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34749213"
 ---
 # <a name="c-library-reference"></a>Referenční dokumentace knihoven jazyka C++
 Tato část obsahuje informace o sadě SDK Vizualizéru souběžnosti.  
@@ -25,7 +26,7 @@ Tato část obsahuje informace o sadě SDK Vizualizéru souběžnosti.
 >  Standardní jazyka C++ rezerv použití identifikátorů, které začínají podtržítkem (`_`) znak pro implementace například knihovny. Nepoužívejte názvy počínaje podtržítkem ve vašem kódu. Uvolní chování kódu elementy, jejichž názvy následují touto konvencí se nezaručuje a v budoucnu se mohou změnit. Z těchto důvodů jsou tyto elementy kódu vynechaný této dokumentace.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Obor názvů souběžnosti (Vizualizér souběžnosti)](../profiling/concurrency-namespace-concurrency-visualizer.md)  
+ [Obor názvů souběžnosti (vizualizér souběžnosti)](../profiling/concurrency-namespace-concurrency-visualizer.md)  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [SDK Vizualizéru souběžnosti](../profiling/concurrency-visualizer-sdk.md)

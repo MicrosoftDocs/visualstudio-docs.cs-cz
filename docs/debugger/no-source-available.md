@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31479734"
 ---
 # <a name="no-source-available"></a>Žádný zdroj není k dispozici.
 Projektu neobsahuje zdrojového kódu pro kód, který se pokoušíte zobrazit. Obvyklé příčiny je dvakrát klikněte na modul, který nemá zdrojového kódu v **okně zásobník volání** nebo **vlákna – okno**. Můžete pokračovat v ladění, ale okno zdroj nelze použít k nastavení zarážek a provádět další akce v tomto umístění. Pokud potřebujete nastavit zarážky, použijte **okno zpětný překlad** místo.  

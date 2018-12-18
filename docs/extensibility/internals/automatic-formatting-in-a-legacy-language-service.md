@@ -1,5 +1,5 @@
 ---
-title: Automatické formátování ve službě jazyk starší | Microsoft Docs
+title: Automatické formátování ve službě starší verze jazyka | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,19 +13,20 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e052c62afcf9551cc54373da15071fb3903fe950
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 56910a984fabb3ac4825fd438be17745126692a6
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39500667"
 ---
-# <a name="automatic-formatting-in-a-legacy-language-service"></a>Automatické formátování ve službě jazyk starší verze
-Pomocí automatického formátování, služba jazyka automaticky vloží fragment kódu, když uživatel zahájí na typ konstrukce známé kódu.  
+# <a name="automatic-formatting-in-a-legacy-language-service"></a>Automatické formátování ve službě starší verze jazyka
+Automatické formátování, služba jazyka automaticky vloží fragment kódu, když uživatel zahájí na typ známé kód konstrukce.  
   
-## <a name="automatic-formatting-behavior"></a>Automatické formátování chování  
- Například když zadáte `if`, služba jazyka automaticky vloží odpovídající složené závorky, nebo když stisknete klávesu ENTER, služba jazyka vynutí kurzor na novém řádku na úroveň odpovídající odsazení, podle toho, jestli předchozím Otevře se nový obor řádku.  
+## <a name="automatic-formatting-behavior"></a>Chování automatické formátování  
+ Například když zadáte *Pokud*, služba jazyka automaticky vloží odpovídající složené závorky, nebo pokud stisknete klávesu ENTER, služba jazyka vynutí kurzor na nový řádek do úrovně odpovídající odsazení, v závislosti na Určuje, zda na každém řádku vždy otevře nový obor.  
   
- Příkaz filtr použít pro zbytek služba jazyka lze také pro automatické formátování. Můžete také zvýraznění odpovídající složené závorky voláním <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.HighlightMatchingBrace%2A>.  
+ Příkaz Filtr používá pro ostatní služby jazyka je také možné pro automatické formátování. Můžete také zvýraznit odpovídající složené závorky voláním <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.HighlightMatchingBrace%2A>.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Vývoj služby starší verze jazyka](../../extensibility/internals/developing-a-legacy-language-service.md)

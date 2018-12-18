@@ -1,6 +1,7 @@
 ---
 title: 'CA1034: Vnořené typy by neměly být viditelné'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,15 +14,21 @@ ms.assetid: e9789a2c-2540-42a1-8705-ae7104011194
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CPP
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 0afc6d4eb388c93fb42d99adf242b669024444a2
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 14c0837d482341e1ba60191c8b6bb3f5bd8e6dd4
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45550944"
 ---
 # <a name="ca1034-nested-types-should-not-be-visible"></a>CA1034: Vnořené typy by neměly být viditelné
+
 |||
 |-|-|
 |TypeName|NestedTypesShouldNotBeVisible|
@@ -30,25 +37,26 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Typ externě viditelné obsahuje deklaraci externě viditelného typu. Vnořené výčty a chráněné typy vyjmuté z tohoto pravidla.
+
+Externě viditelný typ obsahuje externě viditelný typ deklarace. Chráněné typy a výčty vnořené jsou z tohoto pravidla vyjmuty.
 
 ## <a name="rule-description"></a>Popis pravidla
- Vnořené typy je typ deklarované v rámci oboru jiného typu. Vnořené typy jsou užitečné pro zapouzdření podrobnosti privátní implementace nadřazeného typu. Jsou-li vnořené typy používány za tímto účelem, neměly by být externě viditelné.
+ Vnořený typ je typ deklarovaný v rámci oboru jiného typu. Vnořené typy jsou užitečné pro zapouzdření soukromých podrobností implementace v nadřazeného typu. Jsou-li vnořené typy používány za tímto účelem, neměly by být externě viditelné.
 
- Nepoužívejte viditelné vnořené typy pro logické seskupení nebo aby se zabránilo kolize názvů; Místo toho použijte obory názvů.
+ Nepoužívejte externě viditelné typy vnořených logického seskupení nebo vyhnete kolize názvů; Místo toho použijte obory názvů.
 
- Vnořené typy zahrnují představu o usnadnění člen, který není srozumitelný jasně některé programátory v jazyce.
+ Vnořené typy zahrnují informace o usnadnění přístupu člena, který není srozumitelný jasně některé programátory.
 
- Chráněné typy lze v podtřídách a vnořené typy ve scénářích přizpůsobení zálohy.
+ Chráněné typy lze použít v podtřídy třídy a vnořené typy ve scénářích přizpůsobení zálohy.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Pokud nemáte v úmyslu vnořené typ, který má být externě viditelné, změňte přístupnost typu. Vnořené typy, jinak hodnota odebrání jeho nadřazený objekt. Pokud účelem vnoření je zařadit do kategorií vnořeného typu, použijte místo toho vytvořit hierarchii oboru názvů.
+ Pokud už nebudete vnořený typ externě viditelný, změňte přístupnost typu. V opačném případě odeberte vnořený typ ze svého nadřazeného objektu. Pokud účel vnořování je do kategorií vnořeného typu, použijte místo toho vytvářet hierarchii oboru názvů.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Nepotlačujte upozornění na toto pravidlo.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje typ, který porušuje pravidlo.
+ Následující příklad ukazuje typ, který porušuje pravidla.
 
  [!code-cpp[FxCop.Design.NestedTypes#1](../code-quality/codesnippet/CPP/ca1034-nested-types-should-not-be-visible_1.cpp)]
  [!code-csharp[FxCop.Design.NestedTypes#1](../code-quality/codesnippet/CSharp/ca1034-nested-types-should-not-be-visible_1.cs)]

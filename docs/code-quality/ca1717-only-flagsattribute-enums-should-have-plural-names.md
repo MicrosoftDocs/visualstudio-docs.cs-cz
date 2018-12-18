@@ -1,6 +1,7 @@
 ---
 title: 'CA1717: Pouze výčty FlagsAttribute by měly mít názvy v množném čísle'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,13 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: eddcdd47a79b925bf6601c25cf1343eacfa60aa0
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 1f923949b628d1ad5a3884acd17601daddd83460
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49889722"
 ---
 # <a name="ca1717-only-flagsattribute-enums-should-have-plural-names"></a>CA1717: Pouze výčty FlagsAttribute by měly mít názvy v množném čísle
+
 |||
 |-|-|
 |TypeName|OnlyFlagsEnumsShouldHavePluralNames|
@@ -30,20 +33,20 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Název externě viditelné výčet končí v množném čísle aplikaci word a výčtu není označen atributem <xref:System.FlagsAttribute?displayProperty=fullName> atribut.
+ Název externě viditelný výčet končí v množném čísle aplikace word a výčet není označen atributem <xref:System.FlagsAttribute?displayProperty=fullName> atribut.
 
 ## <a name="rule-description"></a>Popis pravidla
- Zásady vytváření názvů určují, že množném čísle název pro výčet udává, že více než jednu hodnotu výčtu lze zadat současně. <xref:System.FlagsAttribute> Kompilátory informuje, že výčtu má být použit jako pole bit, který umožňuje bitové operace na výčtu.
+ Zásady vytváření názvů diktovat, že název v množném čísle pro výčet udává, že více než jednu hodnotu výčtu lze zadat současně. <xref:System.FlagsAttribute> Říká kompilátoru, že výčet mají být považována za bitové pole, který umožňuje bitové operace výčtu.
 
- Pokud jen jedna hodnota výčtu lze najednou, název výčtu by měl být singulární aplikace word. Například výčet, který definuje dny v týdnu, může být určena pro použití v aplikaci, kde můžete určit více dní. Tento výčet by měl mít <xref:System.FlagsAttribute> a může být volána 'dny. Podobně jako výčet, který umožňuje zadat pouze jeden den by mít atribut a může být volána "Den".
+ Pokud pouze najednou můžete zadat jednu hodnotu výčtu, název výčtu by měl být singulární aplikace word. Například výčet, který definuje dny v týdnu může být určena pro použití v aplikaci ve kterém můžete zadat více dní. By měl mít tento výčet <xref:System.FlagsAttribute> a může mít název "dny. Podobně jako výčet, který umožňuje zadat pouze jeden den by obsahovat atribut a může být volána "Den".
 
- Zásady vytváření názvů zadejte obecný vzhled pro knihovny cílené modul common language runtime. Tím se snižuje čas, který je potřeba další nové knihovny softwaru a zvyšuje sebejistotu zákazníka, knihovny byla vyvinuta uživatelem s odbornými znalostmi v vývoj spravovaného kódu.
+ Zásady vytváření názvů poskytují obecný vzhled knihovnám využívajících common language runtime. To snižuje čas, který se vyžaduje další nové knihovny softwaru a zvyšuje důvěru zákazníků, že byla vyvinuta knihovny někdo, kdo má odborných znalostí v vývoj spravovaného kódu.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Nastavit název výčtu singulární slovo nebo přidat <xref:System.FlagsAttribute>.
+ Nastavit název výčtu singulární slova nebo přidat <xref:System.FlagsAttribute>.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Je bezpečné potlačit upozornění na pravidlo, je-li název končí v jednotném čísle aplikace word.
+ Je bezpečné potlačit upozornění pravidla, je-li název končí v jednotném čísle aplikace word.
 
 ## <a name="related-rules"></a>Související pravidla
  [CA1714: Výčty příznaků by neměly mít názvy v množném čísle](../code-quality/ca1714-flags-enums-should-have-plural-names.md)
@@ -52,5 +55,7 @@ ms.lasthandoff: 04/19/2018
 
  [CA2217: Neoznačujte výčty pomocí FlagsAttribute](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
 
-## <a name="see-also"></a>Viz také
- <xref:System.FlagsAttribute?displayProperty=fullName> [Návrh výčtu](/dotnet/standard/design-guidelines/enum)
+## <a name="see-also"></a>Viz také:
+
+- <xref:System.FlagsAttribute?displayProperty=fullName>
+- [Návrh výčtu](/dotnet/standard/design-guidelines/enum)

@@ -1,5 +1,5 @@
 ---
-title: Idiadatasource::loadandvalidatedatafrompdb – | Microsoft Docs
+title: Idiadatasource::loadandvalidatedatafrompdb – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e298edac96b311e8e25e41698aaa3db539ec154
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 272b43f7e33ce495aabd53f33022bdeaf4b951fc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948899"
 ---
 # <a name="idiadatasourceloadandvalidatedatafrompdb"></a>IDiaDataSource::loadAndValidateDataFromPdb
-Otevře a ověřuje, že soubor databáze (.pdb) programu shoduje podpis informací a připraví na soubor .pdb jako zdroj dat ladění.  
+Otevře a ověřuje, že soubor databáze (PDB) programu odpovídá podpis informací uvedených a připraví soubor typu .pdb jako zdroj dat ladění.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,37 +37,37 @@ HRESULT loadAndValidateDataFromPdb (
   
 #### <a name="parameters"></a>Parametry  
  `pdbPath`  
- [v] Cesta k souboru pdb.  
+ [in] Cesta k souboru .pdb.  
   
  `pcsig70`  
- [v] Identifikátor GUID podpis ověření proti podpis souboru pdb. Soubory PDB pouze [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] a novějším mají podpisy identifikátor GUID.  
+ [in] Identifikátor GUID podpis ověření proti podpis souboru pdb. Soubory PDB pouze [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] a později máte podpisů identifikátor GUID.  
   
  `sig`  
- [v] 32-bit podpis ověření proti podpis souboru pdb.  
+ [in] 32-bit podpis ověření proti podpis souboru pdb.  
   
  `age`  
- [v] Stáří hodnota ověření. Stáří neodpovídá nutně na jakoukoli hodnotu známý časový, se používá k určení, zda je soubor .pdb synchronizován s odpovídající soubor .exe.  
+ [in] Stáří hodnotu pro ověření. Stáří neodpovídá nutně na libovolnou hodnotu známý čas, se používá k určení, zda je soubor PDB synchronizován s odpovídající soubor .exe.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby. V následující tabulce jsou uvedeny možné návratové hodnoty pro tuto metodu.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. V následující tabulce jsou uvedeny možné návratové hodnoty pro tuto metodu.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
-|E_PDB_NOT_FOUND|Nepodařilo se otevřít soubor nebo soubor má neplatný formát.|  
-|E_PDB_FORMAT|Došlo k pokusu o přístup k souboru ve formátu, zastaralé.|  
+|E_PDB_NOT_FOUND|Nepovedlo se otevřít soubor nebo soubor má neplatný formát.|  
+|E_PDB_FORMAT|Došlo k pokusu o přístup k souboru se zastaralý formát.|  
 |E_PDB_INVALID_SIG|Podpis neodpovídá.|  
 |E_PDB_INVALID_AGE|Stáří neodpovídá.|  
 |E_INVALIDARG|Neplatný parametr.|  
-|E_UNEXPECTED|Zdroj dat již byla připravena.|  
+|E_UNEXPECTED, JE-|Zdroj dat je už připraven.|  
   
 ## <a name="remarks"></a>Poznámky  
- Soubor .pdb obsahuje podpis a stáří hodnoty. Tyto hodnoty jsou replikované v souboru .exe nebo .dll, který odpovídá na soubor .pdb. Než začnete připravovat zdroj dat, tato metoda ověří, jestli podpis a stáří souboru s názvem PDB shodují s hodnotami zadat.  
+ Soubor PDB obsahuje podpis a stáří hodnoty. Tyto hodnoty jsou replikované v souboru .exe nebo .dll, který odpovídá souboru .pdb. Než začnete připravovat zdroj dat, tato metoda ověří, že podpis a stáří souboru .pdb s názvem odpovídat hodnotám, které jsou k dispozici.  
   
- Chcete-li načíst soubor .pdb bez ověřování, použijte [idiadatasource::loaddatafrompdb –](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md) metoda.  
+ Chcete-li načíst soubor PDB bez ověřování, použijte [idiadatasource::loaddatafrompdb –](../../debugger/debug-interface-access/idiadatasource-loaddatafrompdb.md) metody.  
   
- Chcete-li získat přístup k proces načtení dat (prostřednictvím mechanismus zpětného volání), použijte [idiadatasource::loaddataforexe –](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) metoda.  
+ Chcete-li získat přístup k procesu načítání dat (prostřednictvím mechanismu zpětné volání), použijte [idiadatasource::loaddataforexe –](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) metody.  
   
- Chcete-li načíst soubor .pdb přímo z paměti, použijte [idiadatasource::loaddatafromistream –](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md) metoda.  
+ Chcete-li načíst soubor PDB přímo z paměti, použijte [idiadatasource::loaddatafromistream –](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md) metody.  
   
 ## <a name="example"></a>Příklad  
   

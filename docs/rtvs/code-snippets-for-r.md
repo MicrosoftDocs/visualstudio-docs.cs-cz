@@ -1,6 +1,6 @@
 ---
 title: Fragmenty kódu pro R
-description: Fragmenty kódu pro R v sadě Visual Studio poskytují zástupce rychle vložit bloky kódu o libovolné délce, pomoci vyhnout se opakovaně přepisování podobný kód.
+description: Fragmenty kódu pro R v sadě Visual Studio poskytují zástupce pro rychlé vkládání bloky kódu libovolné délky, což pomáhá vyhnout se pořád dokola přepisování podobný kód.
 ms.date: 01/24/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-rtvs
@@ -10,34 +10,35 @@ ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 0ce8e2ea6ec0cb0d2d70cfab36687f108dd73e82
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 0c9db243b3903ddcbaa310bbf5ba3fd911eee7fc
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35667727"
 ---
 # <a name="code-snippets"></a>Fragmenty kódu
 
-Fragmenty kódu v sadě Visual Studio poskytují zástupce rychle vložit bloky kódu o libovolné délce, pomoci vyhnout se opakovaně přepisování podobný kód. Kolekce Visual Studio přidat desítek užitečné fragmenty R R nástrojů pro Visual Studio (RTVS).
+Fragmenty kódu v sadě Visual Studio poskytují zástupce pro rychlé vkládání bloky kódu libovolné délky, což pomáhá vyhnout se pořád dokola přepisování podobný kód. Nástroje R pro Visual Studio (RTVS) přidejte desítky užitečné fragmenty kódu R do kolekce Visual Studio.
 
-Pokud chcete vložit fragment, typ zkrácený název fragmentu kódu (IntelliSense je zadáno), pak stiskněte klávesu Tab, vložit.
+Chcete-li vložit fragment kódu, typ zkrácený název fragmentu kódu (je k dispozici technologie IntelliSense), stiskněte klávesu **kartu** pro vložení.
 
-Příklady jednoduchých:
+Několik jednoduchých příkladů:
 
-- typ `=` pak kartě a RTVS rozšíří jeho `<-` operátor přiřazení.
-- typ `>` pak kartě a RTVS rozšíří ji `%>%` operátor kanálu.
+- typ `=` Tab a RTVS rozbalí `<-` operátor přiřazení.
+- typ `>` Tab a RTVS rozbalí `%>%` operátor kanálu.
 
-Fragmenty kódu může být mnohem víc než jenom znak dokončení znaků. Fragment kódu pro čtení souboru CSV se `read.csv` funkce, například zbavit můžete z si museli pamatovat názvy nebo parametry:
+Fragmenty kódu může být mnohem víc než jenom znak konce znaků. Fragment kódu pro čtení souboru CSV s `read.csv` funkce, například můžete snížit vás nebudou muset pamatovat názvy nebo parametry:
 
-![Animace vložit volání read.csv pomocí fragmentu kódu](media/code-snippet-expansion.gif)
+![Animace dvojice použitím fragment kódu pro vložení volání read.csv](media/code-snippet-expansion.gif)
 
-V takovém případě při psaní `readc`, IntelliSense zobrazí seznam dokončení. Výběrem tohoto dokončení v rozevíracím seznamu a stisknutím klávesy Tab vybere `readc`, a stisknutím klávesy Tab rozšíří fragmentu. (Z tohoto důvodu rozšíření fragmentu kódu je často představit jako "typ fragmentu a dvakrát stiskněte klávesu TAB"). Ve většině případů první kartě dokončí výběr IntelliSense a druhé kartě aktivuje rozšíření.
+V takovém případě při psaní `readc`, IntelliSense zobrazí seznam pro doplňování. Výběrem tohoto dokončení v rozevíracím seznamu a stisknutím klávesy **kartu** vybere `readc`a stisknutím klávesy **kartu** znovu rozbalí fragmentu kódu. (Z tohoto důvodu rozšíření fragment kódu je často představit jako "zadejte fragment kódu a dvakrát stiskněte klávesu TAB"). Ve většině případů na první kartě dokončí výběr IntelliSense a druhá karta se rozšíření aktivuje.
 
-Chcete-li zobrazit všechny dostupné fragmenty kódu, otevřete **nástroje > Správce fragmentů kódu...**  dialogové okno (Ctrl + K, B) a vyberte **R** pro **jazyk**. Skupiny rozbalte a vyberte jednotlivé fragmenty zobrazíte popis a text klávesové:
+Chcete-li zobrazit všechny dostupné fragmenty kódu, otevřete **nástroje** > **Správce fragmentů kódů** dialogové okno (**Ctrl**+**K**,**B**) a vyberte **R** pro **jazyka**. Rozbalte skupinu a vyberte jednotlivé fragmenty kódu popis a zástupce textu:
 
 ![Dialogové okno fragmenty kódu pro R](media/code-snippet-dialog.png)
 
-Chcete-li vytvořit vlastní kód fragmenty, postupujte podle pokynů na [návod: Vytvoření fragmentu kódu](../ide/walkthrough-creating-a-code-snippet.md). Nakonec fragmentu kódu je právě soubor XML. Například následující kód je fragment kódu pro operaci kanálu (zástupce `>`):
+K vytvoření vlastních fragmentech kódu, postupujte podle pokynů na [návod: Vytvoření fragmentu kódu](../ide/walkthrough-creating-a-code-snippet.md). Nakonec fragment kódu je právě soubor XML. Například následující kód je fragment kódu pro operace kanálu byla (místní `>`):
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -61,4 +62,4 @@ Chcete-li vytvořit vlastní kód fragmenty, postupujte podle pokynů na [návod
 </CodeSnippets>
 ```
 
-Soubory XML pro všechny fragmenty kódu jsou nainstalovány s RTVS; **umístění** pole **Správce fragmentů kódu** poskytuje cestu. Můžete také najít ve zdrojovém kódu RTVS na Githubu v části [src/balíček/Impl/fragmenty](https://github.com/Microsoft/RTVS/tree/master/src/Package/Impl/Snippets).
+Soubory XML pro všechny fragmenty kódu se instalují s RTVS; **umístění** pole **Správce fragmentů kódů** poskytuje cestu. Můžete také najít ve zdrojovém kódu na Githubu v rámci RTVS [src/balíček/Impl/fragmentů](https://github.com/Microsoft/RTVS/tree/master/src/Package/Impl/Snippets).

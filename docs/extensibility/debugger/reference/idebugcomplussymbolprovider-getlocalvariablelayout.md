@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::GetLocalVariablelayout | Microsoft Docs
+title: IDebugComPlusSymbolProvider::GetLocalVariablelayout | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1675fe871849247d2c9f9da2bda3c7445356aaea
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a691030ca2113acd0800ee11ca125884a7f4da8f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49916917"
 ---
 # <a name="idebugcomplussymbolprovidergetlocalvariablelayout"></a>IDebugComPlusSymbolProvider::GetLocalVariablelayout
-Načte rozložení místní proměnné pro sadu metod.  
+Načte rozložení lokální proměnné pro sadu metod.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,22 +48,22 @@ int GetLocalVariablelayout(
   
 #### <a name="parameters"></a>Parametry  
  `ulAppDomainID`  
- [v] Identifikátor domény aplikace.  
+ [in] Identifikátor domény aplikace.  
   
  `guidModule`  
- [v] Jedinečný identifikátor modulu.  
+ [in] Jedinečný identifikátor modulu.  
   
  `cMethods`  
- [v] Počet metoda tokeny v `rgMethodTokens` pole.  
+ [in] Počet metoda tokeny v `rgMethodTokens` pole.  
   
  `rgMethodTokens`  
- [v] Pole Metoda tokenů.  
+ [in] Pole, metoda tokenů.  
   
  `pStreamLayout`  
- [out] Text datový proud, který obsahuje proměnnou rozložení.  
+ [out] Textového datového proudu, který obsahuje proměnné rozložení.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugSymbolProvider** objekt, který zveřejňuje [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) rozhraní.  

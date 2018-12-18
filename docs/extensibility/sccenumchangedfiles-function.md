@@ -1,5 +1,5 @@
 ---
-title: Funkce SccEnumChangedFiles | Microsoft Docs
+title: Sccenumchangedfiles – funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 762bda21f8480224347bd0c8c202c282298e07cc
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7c0284dd268621fddeaa9322c9a3cc17de7a3e71
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49811618"
 ---
-# <a name="sccenumchangedfiles-function"></a>SccEnumChangedFiles – funkce
-Předložen seznam místních souborů, tato funkce určuje, které soubory se liší od odpovídající verze v databázi zdrojové kódu ovládacího prvku.  
+# <a name="sccenumchangedfiles-function"></a>Sccenumchangedfiles – funkce
+V daném seznamu místních souborů, tato funkce určuje soubory, které se liší od odpovídající verze v databázi správy zdrojového kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,29 +37,29 @@ SCCRTN SccEnumChangedFiles(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  pContext  
- [v] Ukazatel modulu plug-in kontextu zdroj ovládacího prvku.  
+ [in] Ukazatel kontext modulu plug-in zdroje ovládacího prvku.  
   
  hWnd  
- [v] Obslužná rutina do okna IDE, modul plug-in správy zdroje můžete použít jako nadřazený objekt pro všechna dialogová okna poskytuje.  
+ [in] Popisovač okna integrovaného vývojového prostředí, které modul plug-in správy zdrojového kódu můžete použít jako nadřazený pro všechna dialogová okna, které poskytuje.  
   
  cFiles  
- [v] Číslo zadané v souboru názvy `lpFileNames` pole. Taky Určuje velikost `plIsFileDifferent` pole.  
+ [in] Počet názvů souborů podle `lpFileNames` pole. Také určuje velikost `plIsFileDifferent` pole.  
   
  lpFileNames  
- [v] Pole názvy místních souborů ke kontrole.  
+ [in] Pole názvy místních souborů ke kontrole.  
   
  plIsFileDifferent  
- [ve out] Pole hodnot, který ukazuje rozdíl stav každého souboru (pole musí obsahovat alespoň `cFiles` položky). Nenulové hodnoty znamená, že soubor se liší.  
+ [out v] Pole hodnot, které ukazuje rozdíl stav každého souboru (pole musí mít alespoň `cFiles` položky). Nenulový znamená, že soubor je rozdílný.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Očekává se, že modul plug-in implementace zdroje řízení této funkce vrátí jednu z následujících hodnot:  
+ Modul plug-in implementaci ovládacího prvku zdroje této funkce má vracet instanci jednoho z následujících hodnot:  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |SCC_OK|Operace byla úspěšně dokončena.|  
 |SCC_UNSPECIFIEDERROR|Obecná chyba.|  
   
-## <a name="see-also"></a>Viz také  
- [Funkce modulu plug-in správy zdrojového kódu v rozhraní API](../extensibility/source-control-plug-in-api-functions.md)
+## <a name="see-also"></a>Viz také:  
+ [Funkce modulu plug-in API zdrojového ovládacího prvku](../extensibility/source-control-plug-in-api-functions.md)

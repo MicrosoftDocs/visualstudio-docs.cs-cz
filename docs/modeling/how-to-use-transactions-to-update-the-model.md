@@ -7,24 +7,26 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 4c508327f03d52195b3e3d9ea40c3e7565ec0f03
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 97eb050bb99c522f5c5e97ea3355f3146086c29e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49926290"
 ---
 # <a name="how-to-use-transactions-to-update-the-model"></a>Postupy: Používání transakcí k aktualizaci modelu
-Transakce, ujistěte se, že změny, které byly provedeny do úložiště jsou považovány za skupinu. Změny, které jsou seskupené, může být potvrzena nebo vrácena zpět jako na jednu jednotku.
+Transakce, ujistěte se, že změny, které byly provedeny do úložiště jsou považovány za skupinu. Změny, které jsou seskupeny může být potvrzena nebo vrácena zpět jako jednu jednotku.
 
- Vždy, když kód programu změní, přidá nebo odstraní libovolný element v úložišti [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] vizualizace a modelování SDK, je nutné provést v transakci. Musí být aktivní instance <xref:Microsoft.VisualStudio.Modeling.Transaction> přidružený k obchodu, když se stane změnu. To platí pro všechny elementy modelu, relace, tvarů, diagramy a jejich vlastnosti.
+ Pokaždé, když se váš kód programu změní, přidá nebo odstraní libovolný prvek v Store v aplikaci Visual Studio Visualization and Modeling SDK, se musí provést v transakci. Musí být aktivní instance <xref:Microsoft.VisualStudio.Modeling.Transaction> přidružené Store, když se stane, změny. To platí pro všechny prvky modelu, relace, tvary, diagramy a jejich vlastnosti.
 
- Tento mechanismus transakce umožňuje vyhnout se nekonzistentní stav. Pokud dojde k chybě během transakce, všechny změny budou vráceny. Pokud uživatel provede příkaz vrácení zpět, každou poslední transakci je považována za jediném kroku. Uživatele nelze vrátit zpět částí ke změnám, pokud je explicitně umístit do samostatné transakce.
+ Transakce mechanismus umožňuje vyhnout se nekonzistentní stavy. Pokud dojde k chybě během transakce, všechny změny se vrátí zpět. Pokud uživatel provede příkaz zpět, je považován za jeden krok každý posledních transakcí. Uživatel se nedá vrátit zpátky části ke změnám, pokud je explicitně umístíte v samostatných transakcích.
 
-## <a name="opening-a-transaction"></a>Otevírání transakce.
- Je nejvhodnější metody řízení transakce s `using` příkaz uzavřena v `try...catch` příkaz:
+## <a name="opening-a-transaction"></a>Otevírání transakce
+ Je nejpohodlnější způsob správy transakce s `using` ohraničeno příkaz `try...catch` – příkaz:
 
-```
+```csharp
 Store store; ...
 try
 {
@@ -48,37 +50,37 @@ catch (Exception ex)
 }
 ```
 
- Pokud výjimku, která zabraňuje konečné `Commit()` spadá změn, úložišti se resetuje do předchozího stavu. To umožňuje zajistit, že chyby nenechávejte modelu v nekonzistentním stavu.
+ Pokud výjimka, která brání finální `Commit()` spadá změn, resetuje Store do předchozího stavu. To vám pomůže zajistit, že chyby nenechala modelu v nekonzistentním stavu.
 
- Můžete vytvořit libovolný počet změny v jedné transakci. Můžete otevřít nové transakce uvnitř aktivní transakce. Vnořené transakce musí potvrzení nebo vrácení před koncem obsahující transakce. Další informace najdete v tématu na příklad <xref:Microsoft.VisualStudio.Modeling.Transaction.TransactionDepth%2A> vlastnost.
+ Můžete vytvořit libovolný počet změn v jedné transakci. Můžete otevřít nové transakce v aktivní transakci. Vnořené transakce musí potvrzení nebo vrátit zpět před ukončením obsahující transakce. Další informace, podívejte se na příklad pro <xref:Microsoft.VisualStudio.Modeling.Transaction.TransactionDepth%2A> vlastnost.
 
- Chcete-li provedené změny trvalé, měli byste `Commit` transakce předtím, než je zrušen. Pokud dojde k výjimce, která není zachycena uvnitř transakce, úložišti se resetuje do stavu před změny.
+ Aby byly provedené změny trvalé, měli byste `Commit` transakce před jejich likvidace. Pokud dojde k výjimce, která není zachycena uvnitř transakce, Store obnoví do stavu před změny.
 
 ## <a name="rolling-back-a-transaction"></a>Vrácení transakce zpět
- Chcete-li zajistit, aby zůstává v úložišti, a vrátí do stavu před transakce, můžete použít některý z těchto svoji:
+ Aby se zajistilo, že Store zůstává ve nebo se vrátí do stavu před transakce, můžete použít některý z těchto taktika:
 
-1.  Vyvolejte výjimku, která není zachycena v oboru transakce.
+1.  Vyvolat výjimku, která není zachycena uvnitř oboru transakce.
 
-2.  Explicitně vrácení transakce:
+2.  Explicitně navrátit transakci:
 
-    ```
+    ```csharp
     this.Store.TransactionManager.CurrentTransaction.Rollback();
     ```
 
-## <a name="transactions-do-not-affect-non-store-objects"></a>Transakce neovlivní bez úložiště objektů
- Transakce pouze řídí stav úložiště. Nelze vrátit zpět částečné změny, které byly provedeny na externí položek, jako jsou soubory, databáze nebo objekty, které mají deklarovat s běžné typy mimo definici DSL.
+## <a name="transactions-do-not-affect-non-store-objects"></a>Transakce nemají vliv na objekty bez Store
+ Transakce řízení pouze stav Store. Nelze vrátit zpět změny provedené na externí položky, jako jsou soubory, databáze nebo objekty, které je deklarován pomocí běžných typů mimo definici DSL.
 
- Pokud výjimku může nechat taková změna nekonzistentní s úložištěm, by se měl zabývat tato možnost v obslužná rutina výjimky. Jedním ze způsobů, abyste měli jistotu, že externím prostředkům zůstaly synchronizované s objekty úložiště je spojit každý externí objekt pro element v úložišti pomocí obslužné rutiny událostí. Další informace najdete v tématu [událost obslužné rutiny rozšíří změny mimo modelu](../modeling/event-handlers-propagate-changes-outside-the-model.md).
+ Pokud výjimka může nechat tuto změnu konzistentní s Store, by měl řešit pomocí této možnosti v obslužné rutině výjimky. Jedním ze způsobů, abyste měli jistotu, že externí prostředky budou synchronizovány s objekty Store je spojte každý externí objekt na element v obchodě s použitím obslužné rutiny událostí. Další informace najdete v tématu [obslužné rutiny rozšíření změny mimo the Model událostí](../modeling/event-handlers-propagate-changes-outside-the-model.md).
 
-## <a name="rules-fire-at-the-end-of-a-transaction"></a>Ještě efektivněji pravidla na konci transakce.
- Na konci transakce jsou před uvolněním transakce aktivována pravidla připojená k elementů v úložišti. Každé pravidlo je metoda, která se použije pro element modelu, který byl změněn. Například "oprava" pravidel, které aktualizovat stav obrazce, pokud došlo ke změně jeho element modelu a obrazce vytvořit při element modelu. Neexistuje žádné zadaného pořadí. Změny provedené pomocí pravidla můžete aktivovat jiné pravidlo.
+## <a name="rules-fire-at-the-end-of-a-transaction"></a>Pravidla Fire na konci transakce
+ Na konci transakce jsou předtím, než je transakce vyřazena, aktivuje pravidla připojená k prvkům v úložišti. Každé pravidlo je metoda, která se použije k prvku modelu, který se změnil. Například "Opravit" pravidla, které aktualizují stavu obrazce, když došlo ke změně jeho prvek modelu a obrazec vytvořit při prvku modelu. Neexistuje žádné zadané pořadí. Změny provedené pravidlo můžete vyvolat jiné pravidlo.
 
- Můžete definovat vlastní pravidla. Další informace o pravidlech, najdete v tématu [reakce na a šíření změny](../modeling/responding-to-and-propagating-changes.md).
+ Můžete definovat vlastní pravidla. Další informace o pravidlech najdete v tématu [šířící změny a reakce na](../modeling/responding-to-and-propagating-changes.md).
 
- Pravidla neaktivovat poté, co byla operace vrácení zpět, operaci znovu nebo příkaz vrácení zpět.
+ Pravidla neaktivuje po vrácení zpět, znovu nebo příkaz vrátit zpět.
 
 ## <a name="transaction-context"></a>Kontext transakce
- Každou transakci má slovník, ve kterém můžete uložit všechny informace, které chcete:
+ Každá transakce obsahuje slovník, ve kterém můžete uložit všechny informace, které chcete, aby:
 
  `store.TransactionManager`
 
@@ -86,18 +88,17 @@ catch (Exception ex)
 
  `.Context.Add(aKey, aValue);`
 
- To je zvlášť vhodné pro přenos informací mezi pravidla.
+ To je užitečné zejména pro přenos informací mezi pravidly.
 
 ## <a name="transaction-state"></a>Stav transakce
- V některých případech, které potřebujete, aby se zabránilo šíření změnu, pokud je tato změna způsobeno zrušení nebo při opětovném provádění transakcí. To může nastat například když napíšete obslužnou rutinu hodnotu vlastnosti, která můžete aktualizovat jinou hodnotu v úložišti. Protože operace zpět se obnoví všechny hodnoty v úložišti do předchozího stavu, není nutné výpočetní aktualizovanými hodnotami. Pomocí tohoto kódu:
+ V některých případech, které potřebujete, aby se zabránilo šíření změnu, je-li změnu rušení nebo znovu provedení transakce. To může nastat, například když napsat obslužnou rutinu hodnotu vlastnosti, která můžete aktualizovat jinou hodnotu v Store. Vzhledem k tomu, že operaci vrácení zpět obnoví všechny hodnoty Store na předchozím stavům, není nutné pro výpočet aktualizovanými hodnotami. Pomocí tohoto kódu:
 
-```
+```csharp
 if (!this.Store.InUndoRedoOrRollback) {...}
 ```
 
- Pravidla můžete aktivovat, pokud úložiště je právě načítán původně ze souboru. Abyste se vyhnuli, reagovat na tyto změny, použijte:
+ Pravidla můžete vyvolat při úložišti zpočátku načítání ze souboru. Aby se zabránilo reakce na tyto změny, použijte:
 
-```
+```csharp
 if (!this.Store.InSerializationTransaction) {...}
-
 ```

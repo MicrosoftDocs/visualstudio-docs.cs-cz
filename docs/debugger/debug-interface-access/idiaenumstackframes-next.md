@@ -1,5 +1,5 @@
 ---
-title: Idiaenumstackframes::Next – | Microsoft Docs
+title: Idiaenumstackframes::Next – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 68e84c31cb98cdbbe69e62aa1e572386100277a0
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 42d096ce41c5ff9f254e7f44d595159130e43548
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949848"
 ---
 # <a name="idiaenumstackframesnext"></a>IDiaEnumStackFrames::Next
-Načte zadaný počet elementů rámce zásobníku z pořadí výčtu.  
+Načte zadaný počet prvků rámce zásobníku v pořadí výčtu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,16 +36,16 @@ HRESULT Next(
   
 #### <a name="parameters"></a>Parametry  
  celt  
- [v] Počet elementů stackframe v enumerátor mají být načteny.  
+ [in] Počet prvků stackframe v enumerátor, který se má načíst.  
   
  rgelt  
- [out] Pole, které má být vyplněna s požadovaným [idiastackframe –](../../debugger/debug-interface-access/idiastackframe.md) objekty.  
+ [out] Pole, které je pro vyplnění s požadovaným [idiastackframe –](../../debugger/debug-interface-access/idiastackframe.md) objekty.  
   
  pceltFetched  
- [out] Vrátí počet zásobníku elementy rámce v načtených enumerátor.  
+ [out] Vrátí počet zásobníku rámce prvků načtených enumerátor.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE` Pokud nejsou žádné další rámce zásobníku. Jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud nejsou žádné další rámce zásobníku. V opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [Idiaenumstackframes –](../../debugger/debug-interface-access/idiaenumstackframes.md)   

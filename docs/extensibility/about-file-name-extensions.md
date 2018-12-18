@@ -1,5 +1,5 @@
 ---
-title: O přípony názvů souborů | Microsoft Docs
+title: O přípony názvů souborů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,18 +14,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2c940319cd0ce3204f6dd9bb62e731de49b8baac
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: fd181bb7daca21ff263dcb7989a0aecbef3ed278
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39081693"
 ---
 # <a name="about-file-name-extensions"></a>O přípony názvů souborů
-Při registraci příponu VSPackage přidružit verzi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. To je důležité v případě více než jednu verzi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] je nainstalován v počítači.  
+Když si zaregistrujete příponu souboru sady VSPackage, přiřaďte ji k verzi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. To je důležité, pokud více než jednu verzi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] je nainstalovaná na počítači.  
   
- Přípony souborů pro VSPackages je zaregistrovaný pod klíčem HKEY_CLASSES_ROOT výchozí hodnotu, která odkazuje na související programový identifikátor (ProgID).  
+ Přípony souborů pro balíčky VSPackages jsou registrována pod **HKEY_CLASSES_ROOT** klíče s výchozí hodnotou, která odkazuje na související programový identifikátor (ProgID).  
   
- Následuje příklad registrační informace pro tuto příponu .vcproj:  
+ Následující příklad ukazuje informace o registraci pro *.vcproj* příponu souboru:  
   
 ```  
 HKEY_CLASSES_ROOT\  
@@ -33,10 +34,10 @@ HKEY_CLASSES_ROOT\
       (default)=" VisualStudio.vcproj.8.0"   
 ```  
   
- Soubory spojené s [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] musí mít verzí ProgID, jako například `VisualStudio.vcproj.8.0`, aby souběžně sdílená instalací produktu udržovat souboru rozšíření přidružení mezi verze produktu. Specifické pro verzi ProgID také umožňuje používat standardní příkazy, jako třeba otevřít, upravit a tak dále, bez obav přepsání nebo přepsáním pomocí jiných aplikací nebo verze [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
+ Soubory přidružené k [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] musí mít ProgID označené verzí, jako například `VisualStudio.vcproj.8.0`. Verze ProgID umožňuje vedle sebe instalacích udržovat přidružení přípony souboru mezi verzemi tohoto produktu. Identifikátor ProgID specifické pro verzi také umožňuje používat standardní příkazy, jako třeba otevřít, upravit a tak dále, bez obav přepsat nebo přepsání jiné aplikace nebo verzí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
   
- V některých případech neměli byste ji měnit ProgID spojené s příponou souboru. Například ProgID pro příponu souboru .htm (progid = htmlfile) je pevný programového v počet míst v operačním systému a je známý a používá v přidružení se soubory .htm a .html.  
+ V některých případech by neměla změnit ProgID spojené s příponou souboru. Například ProgID pro *.htm* příponu souboru (progid = htmlfile) je pevně zakódovaný v řadě míst v operačním systému a je široce známé a používat v přidružení *.htm* a *.html* soubory.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Registrace přípony názvů souborů pro nasazení vedle sebe](../extensibility/registering-file-name-extensions-for-side-by-side-deployments.md)   
  [Určení popisovačů souborů pro přípony názvů souborů](../extensibility/specifying-file-handlers-for-file-name-extensions.md)

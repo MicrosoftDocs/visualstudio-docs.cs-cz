@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::Resume | Microsoft Docs
+title: IDebugThread2::Resume | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7f51fdb05fb44a23227a1a35fd6504f2d18aa804
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f41f26c824a779133a335c0d3d5080373b791d06
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920986"
 ---
 # <a name="idebugthread2resume"></a>IDebugThread2::Resume
 Pokračuje v provádění vlákna.  
@@ -40,16 +41,16 @@ int Resume (
   
 #### <a name="parameters"></a>Parametry  
  `pdwSuspendCount`  
- [out] Vrátí počet pozastavit po operaci obnovení.  
+ [out] Vrátí počet pozastavení po operaci obnovení.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Každé volání na tato metoda snižuje počet pozastavit dokud nedosáhne 0 na dobu, je ve skutečnosti obnoveno provádění. Tento počet pozastavit se zobrazí v **vláken** okno ladění.  
+ Každé volání této metody sníží počet potlačení dokud nedosáhne 0 na dobu, ve skutečnosti pokračování provádění. Zobrazí se tento počet pozastavení v **vlákna** okno ladění.  
   
- Pro každé volání tuto metodu, musí být předchozího volání [pozastavit](../../../extensibility/debugger/reference/idebugthread2-suspend.md) metoda. Počet pozastavit Určuje, jak často `IDebugThread2::Suspend` , pokud byla volána metoda.  
+ Pro každé volání této metody musí být předchozí volání [pozastavit](../../../extensibility/debugger/reference/idebugthread2-suspend.md) metody. Počet potlačení Určuje, kolikrát `IDebugThread2::Suspend` dosud byla volána metoda.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
- [Pozastavit](../../../extensibility/debugger/reference/idebugthread2-suspend.md)
+ [Suspend](../../../extensibility/debugger/reference/idebugthread2-suspend.md)

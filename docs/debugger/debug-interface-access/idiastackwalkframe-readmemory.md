@@ -1,5 +1,5 @@
 ---
-title: Idiastackwalkframe::readmemory – | Microsoft Docs
+title: Idiastackwalkframe::readmemory – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d23b46f0f487bddc678814e41b5cb96331ff46c
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 163895ecf16849e122c5ede042b1bc4842c2a5e1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49818312"
 ---
 # <a name="idiastackwalkframereadmemory"></a>IDiaStackWalkFrame::readMemory
-Přečte paměti z bitové kopie.  
+Přečte paměti z image.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,22 +38,22 @@ HRESULT readMemory (
   
 #### <a name="parameters"></a>Parametry  
  `type`  
- [v] Jeden z [MemoryTypeEnum – výčet](../../debugger/debug-interface-access/memorytypeenum.md) hodnot výčtu, která určuje druh paměti pro přístup.  
+ [in] Jeden z [memorytypeenum – výčet](../../debugger/debug-interface-access/memorytypeenum.md) hodnot výčtu, která určuje typ pro přístup k paměti.  
   
  `va`  
- [v] Virtuální adresu umístění obrázku má začínat čtení.  
+ [in] Virtuální adresa umístění obrázku má začínat čtení.  
   
  `cbData`  
- [v] Velikost vyrovnávací paměť dat v bajtech.  
+ [in] Velikost vyrovnávací paměti dat v bajtech.  
   
  `pcbData`  
  [out] Vrátí počet bajtů vrácených. Pokud `data` je `NULL`, pak `pcbData` obsahuje celkový počet bajtů dat, které jsou k dispozici.  
   
  `data`  
- [out] Vyrovnávací paměť, která je pro vyplnění data ze zadaného umístění.  
+ [out] Vyrovnávací paměť, která se vyplní data ze zadaného umístění.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaStackWalkFrame](../../debugger/debug-interface-access/idiastackwalkframe.md)

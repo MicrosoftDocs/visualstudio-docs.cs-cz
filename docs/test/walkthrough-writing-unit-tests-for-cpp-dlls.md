@@ -1,6 +1,7 @@
 ---
-title: 'Postupy: zápis testů částí pro knihovny DLL C++ | Microsoft Docs'
+title: 'Postupy: zápis testů jednotek pro knihovny DLL C++'
 ms.date: 11/04/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: mblome
@@ -8,61 +9,62 @@ manager: douge
 ms.workload:
 - cplusplus
 author: mikeblome
-ms.openlocfilehash: e4ff7d931b614d6d3c243539efc42bf051878fb0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9458fd6886243102f6479166fb9df21f9e4869fd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49877254"
 ---
-# <a name="how-to-write-unit-tests-for-c-dlls"></a>Postupy: zápis testů částí pro C++ – knihovny DLL
+# <a name="how-to-write-unit-tests-for-c-dlls"></a>Postupy: zápis testů jednotek pro knihovny DLL C++
 
-Tento návod popisuje, jak vyvíjet nativní knihovny DLL C++ pomocí metody včasného testování. Základní kroky jsou následující:
+Tento návod popisuje, jak vyvíjet nativní knihovny DLL C++ pomocí první testovací metody. Základní kroky jsou následující:
 
-1.  [Vytvoření projektu testování nativní](#create_test_project). K testovacímu projektu nachází ve stejném řešení jako projektu knihovny DLL.
+1.  [Vytvořte projekt pro nativní test](#create_test_project). Projekt testů je umístěn ve stejném řešení jako projekt knihovny DLL.
 
-2.  [Vytvoření projektu knihovny DLL](#create_dll_project). Tento návod vytvoří nová knihovna DLL, ale je podobný postup testování existující knihovnu DLL.
+2.  [Vytvoření projektu knihovny DLL](#create_dll_project). Tento návod vytvoří nová knihovna DLL, ale je podobný postup testování existující knihovny DLL.
 
-3.  [Zviditelnit funkcí knihovny DLL pro testy](#make_functions_visible).
+3.  [Zpřístupnění funkcí knihovny DLL pro testy](#make_functions_visible).
 
-4.  [Opakované posílení testy](#iterate). Doporučujeme, abyste cyklus "red refactor zelená", ve kterém vývoj kódu zobrazí Průvodce testy.
+4.  [Využívejte iterativní posílit testy](#iterate). Doporučujeme, abyste cyklus "červená zelená Refaktorujte", ve kterém je vývoj kódu vedené testy.
 
-5.  [Ladění selhání testy](#debug). Testy můžete spustit v režimu ladění.
+5.  [Ladit selhání testů](#debug). Testy můžete spustit v režimu ladění.
 
-6.  [Refaktorovat při zachování testy beze změny](#refactor). Refaktoring znamená zlepšení strukturu kód beze změny jeho externí chování. Můžete to provést pro zlepšení výkonu, rozšiřitelnost nebo čitelnost kód. Protože záměrem je nechcete změnit chování, se nezmění testy při vytváření kódu refaktoringu změnu. Testy pomoci, ujistěte se, že nepoužijete chyby při jsou refaktoring.
+6.  [Refaktoring při udržování testů beze změny](#refactor). Refaktoring zlepšení strukturu kódu beze změny jeho chování externí prostředky. Můžete to provést na zlepšení výkonu, rozšíření a čitelnost kódu. Protože záměrem nebudou je moci měnit chování, se nezmění testy při provedení refaktoringu změny kódu. Testy pomoct, ujistěte se, že když jsou refaktoring není způsobit chyby.
 
-7.  [Zkontrolujte pokrytí](using-code-coverage-to-determine-how-much-code-is-being-tested.md). Testy jednotek je více užitečný v případě využijí informace z vašeho kódu. Je-li zjistit, jaké části kódu použil testy.
+7.  [Zkontrolujte pokrytí](using-code-coverage-to-determine-how-much-code-is-being-tested.md). Testování jednotek je užitečnější, když využijí víc svého kódu. Je-li zjistit, které části kódu se používají testy.
 
-8.  [Izolovat jednotky z externích zdrojů](using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md). Obvykle je závislé na dalších komponentách systému, který vyvíjíte, například jiné knihovny DLL, databáze nebo vzdálené subsystémy knihovny DLL. Je užitečné pro testování jednotlivých jednotek izolovaně od jeho závislé součásti. Externí součásti provádět testy pracovat pomalu. Během vývoje ostatní součásti nemusí být kompletní.
+8.  [Izolace jednotky z externích zdrojů](using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md). Obvykle je závislé na dalších komponentách systému, kterou vyvíjíte, jako jsou jiné knihovny DLL, databáze nebo subsystémy vzdálené knihovny DLL. Je užitečné k testování jednotlivých jednotek v izolaci od jeho závislosti. Externí komponenty můžete provádět testy pomalý. Během vývoje nemusí být kompletní ostatní součásti.
 
-##  <a name="create_test_project"></a> Vytvoření projektu testování částí nativní
+##  <a name="create_test_project"></a> Vytvořte projekt testu jednotek native
 
-1.  Na **soubor** nabídce zvolte **nový | Projekt**.
+1.  Na **souboru** nabídce zvolte **nový** > **projektu**.
 
-     V dialogovém okně rozbalte **nainstalovaná | Šablony | Visual C++ | Test**.
+     V dialogovém okně rozbalte **nainstalováno** > **šablony** > **Visual C++** > **Test**.
 
-     Vyberte **nativní projektu testování částí** šablony, nebo ať nainstalovat vámi preferované rozhraní. Pokud zvolíte jinou šablonu, jako je například Google testu nebo Boost.Test, základní principy jsou stejné, i když některé podrobnosti se budou lišit.
+     Zvolte **nativní projekt testu jednotek** šablony nebo cokoli, co nainstalované rozhraní framework dáváte přednost. Pokud zvolíte jinou šablonu, jako je Google Test a Boost.Test, základní principy jsou stejné, i když některé podrobnosti se budou lišit.
 
-     V tomto návodu k testovacímu projektu jmenuje `NativeRooterTest`.
+     V tomto návodu je testovací projekt s názvem `NativeRooterTest`.
 
-     ![Vytvoření projektu testování částí C++](../test/media/utecpp01.png "UteCpp01")
+     ![Vytvoření projektu testů jednotek C++](../test/media/utecpp01.png)
 
 2.  V novém projektu, zkontrolujte **unittest1.cpp**
 
-     ![Testovacího projektu s testovací&#95;třídy a testovací&#95;metoda](../test/media/utecpp2.png "UteCpp2")
+     ![Testovací projekt s TESTEM&#95;třídy a testování&#95;– metoda](../test/media/utecpp2.png)
 
      Všimněte si, že:
 
     -   Každý test se definuje pomocí `TEST_METHOD(YourTestName){...}`.
 
-         Nemáte k zápisu podpis běžné funkce. Makro TEST_METHOD vytvoří podpis. Makro generuje instance funkce, který vrátí prázdnou hodnotu. Také vytváří statickou funkci, která vrací informace o metodě testu. Tyto informace umožňuje Průzkumníka testů najít metodu.
+         Není nutné zapsat signaturu konvenční funkce. Podpis je makro TEST_METHOD vytvořil. Makro generuje instance funkce vracející typ void. Zároveň vytvoří statickou funkci, která vrací informace o testovací metody. Tyto informace umožňují Průzkumníka testů se najít metodu.
 
-    -   Test metody jsou seskupené do třídy pomocí `TEST_CLASS(YourClassName){...}`.
+    -   Testovací metody jsou seskupené do třídy pomocí `TEST_CLASS(YourClassName){...}`.
 
-         Když se testy spouštějí, se vytvoří instance třídy každého testu. Test metody jsou volány v neurčené pořadí. Můžete definovat speciální metody, které jsou vyvolány před a po každém modulu, třída nebo metoda.
+         Při spuštění testů, je vytvořena instance každé testovací třídy. Testovací metody jsou zavolány v nespecifikovaném pořadí. Můžete definovat speciální metody, které jsou vyvolány před a za každého modulu, třídy nebo metody.
 
-3.  Ověřte, zda testy spustit v Průzkumníka testů:
+3.  Ověřte, že testy spustit v Průzkumníku testů:
 
-    1.  Vložte některá testovacího kódu:
+    1.  Vložte kód testu:
 
         ```cpp
         TEST_METHOD(TestMethod1)
@@ -71,39 +73,39 @@ Tento návod popisuje, jak vyvíjet nativní knihovny DLL C++ pomocí metody vč
         }
         ```
 
-         Všimněte si, že `Assert` třída poskytuje několik statických metod, které můžete ověřit výsledky v testovací metody.
+         Všimněte si, že `Assert` třída poskytuje několik statických metod, které slouží k ověření výsledků v testovacích metod.
 
-    2.  Na **Test** nabídce zvolte **spustit | Všechny testy**.
+    2.  Na **testovací** nabídce zvolte **spustit** > **všechny testy**.
 
          Test vytvoří a spustí.
 
-         Zobrazí se Průzkumníka testů.
+         **Průzkumník testů** se zobrazí.
 
-         Test se zobrazí pod **předán testy**.
+         Test je zobrazen **úspěšné testy**.
 
-         ![Jednotka testování Explorer se jeden předaný test](../test/media/utecpp04.png "UteCpp04")
+         ![Průzkumník testů jednotek s jeden úspěšných testů](../test/media/utecpp04.png)
 
 ##  <a name="create_dll_project"></a> Vytvoření projektu knihovny DLL
 
-1.  Vytvoření **Visual C++** projektu pomocí **projektu Win32** šablony.
+1.  Vytvoření **Visual C++** projektu pomocí **projekt Win32** šablony.
 
-     V tomto návodu je projekt s názvem `RootFinder`.
+     V tomto názorném postupu má projekt název `RootFinder`.
 
-     ![Vytvoření projektu C++ Win32](../test/media/utecpp05.png "UteCpp05")
+     ![Vytváří se projekt C++ Win32](../test/media/utecpp05.png)
 
-2.  Vyberte **DLL** a **exportovat symboly** v Průvodci aplikace Win32.
+2.  Vyberte **DLL** a **symboly exportu** v Průvodci aplikací Win32.
 
-     **Exportovat symboly** možnost generuje pohodlný makro, které můžete použít k deklaraci exportovaný metody.
+     **Exportovat symboly** možnost generuje pohodlný makro, které můžete použít k deklarování exportovaných metod.
 
-     ![C++ – Průvodce projektem nastavení pro knihovnu DLL a exportovat symboly](../test/media/utecpp06.png "UteCpp06")
+     ![Průvodce projektu C++ pro knihovny DLL a symboly exportu](../test/media/utecpp06.png)
 
-3.  Deklarujte exportované funkce v souboru hlavní h:
+3.  Deklarovat exportované funkce v objektu zabezpečení *.h* souboru:
 
-     ![Nový kód projektu a .h souboru DLL pomocí rozhraní API makra](../test/media/utecpp07.png "UteCpp07")
+     ![Nový kód projektu a .h souboru DLL s makry rozhraní API](../test/media/utecpp07.png)
 
-     Deklarátor `__declspec(dllexport)` způsobí, že veřejné a chráněné členy třídy viditelné mimo knihovnu DLL. Další informace najdete v tématu [používání příkazů dllimport a dllexport ve třídách jazyka C++](/cpp/cpp/using-dllimport-and-dllexport-in-cpp-classes).
+     Deklarátor `__declspec(dllexport)` způsobí, že veřejné a chráněné členy třídy viditelný mimo knihovnu DLL. Další informace najdete v tématu [používání příkazů dllimport a dllexport ve třídách jazyka C++](/cpp/cpp/using-dllimport-and-dllexport-in-cpp-classes).
 
-4.  V souboru hlavní sada přidejte minimální textu, funkce:
+4.  V objektu zabezpečení *.cpp* souboru, přidejte minimální tělo funkce:
 
     ```cpp
         // Find the square root of a number.
@@ -113,59 +115,59 @@ Tento návod popisuje, jak vyvíjet nativní knihovny DLL C++ pomocí metody vč
         }
     ```
 
-##  <a name="make_functions_visible"></a> Několik k testovacímu projektu do projektu knihovny DLL
+##  <a name="make_functions_visible"></a> Několik testů projektu do projektu knihovny DLL
 
-1.  Přidejte projektu knihovny DLL do odkazů projektu testovacího projektu:
+1. Přidejte projekt knihovny DLL do odkazů projektu testovacího projektu:
 
-    1.  Otevřete vlastnosti k testovacímu projektu a zvolte **společných vlastností**, **Framework a odkazy na**.
+   1.  Otevřete vlastnosti projektu testu a zvolte **společné vlastnosti** > **rámec a odkazy**.
 
-         ![Vlastnosti projektu C++ | Architektura a odkazy na](../test/media/utecpp08.png "UteCpp08")
+        ![Vlastnosti projektu C++ | Rámec a odkazy](../test/media/utecpp08.png)
 
-    2.  Zvolte **přidat nový odkaz**.
+   2.  Zvolte **přidat nový odkaz**.
 
-         V **přidat odkaz na** dialogovém okně vyberte projektu knihovny DLL a zvolte **přidat**.
+        V **přidat odkaz** dialogového okna, vyberte projekt knihovny DLL a vyberte **přidat**.
 
-         ![Vlastnosti projektu C++ | Přidat nový odkaz](../test/media/utecpp09.png "UteCpp09")
+        ![Vlastnosti projektu C++ | Přidat nový odkaz](../test/media/utecpp09.png)
 
-2.  V souboru hlavní jednotky testovací sada zahrňte soubor hlaviček kód knihovny DLL:
+2. V hlavní Jednotkový test *.cpp* souboru, zahrnují *.h* soubor zdrojového kódu knihovny DLL:
 
-    ```cpp
-    #include "..\RootFinder\RootFinder.h"
-    ```
+   ```cpp
+   #include "..\RootFinder\RootFinder.h"
+   ```
 
-3.  Přidáte základní test, který používá exportované funkce:
+3. Přidáte základní test, který používá exportované funkce:
 
-    ```cpp
-    TEST_METHOD(BasicTest)
-    {
-       CRootFinder rooter;
-       Assert::AreEqual(
-          // Expected value:
-          0.0,
-          // Actual value:
-          rooter.SquareRoot(0.0),
-          // Tolerance:
-          0.01,
-         // Message:
-         L"Basic test failed",
-         // Line number - used if there is no PDB file:
-         LINE_INFO());
-    }
-    ```
+   ```cpp
+   TEST_METHOD(BasicTest)
+   {
+      CRootFinder rooter;
+      Assert::AreEqual(
+         // Expected value:
+         0.0,
+         // Actual value:
+         rooter.SquareRoot(0.0),
+         // Tolerance:
+         0.01,
+        // Message:
+        L"Basic test failed",
+        // Line number - used if there is no PDB file:
+        LINE_INFO());
+   }
+   ```
 
-4.  Sestavte řešení.
+4. Sestavte řešení.
 
-     V Průzkumníku testů se zobrazí nový test.
+    Nový test se zobrazí v **Průzkumníka testů**.
 
-5.  V Průzkumníku testu zvolte **spustit všechny**.
+5. V **Průzkumník testů**, zvolte **spustit všechny**.
 
-     ![Průzkumníka testů jednotek &#45; základní Test proběhl](../test/media/utecpp10.png "UteCpp10")
+    ![Průzkumník testu jednotek &#45; základní Test prošel](../test/media/utecpp10.png)
 
- Máte nastavení testu a projektů kód a ověřit, že můžete spustit testy, které běží funkce v projektu kódu. Teď můžete začít zapisovat skutečné testy a kódu.
+   Máte nastavení testu a kódové projekty a ověřit, že je možné spustit testy, na kterých běží funkce v projektu kódu. Teď můžete začít psát skutečné testů a kódu.
 
-##  <a name="iterate"></a> Opakované posílení testy a ujistěte se, je předat
+##  <a name="iterate"></a> Využívejte iterativní posílit testy a daly se předat
 
-1.  Přidejte nový test:
+1.  Přidáte nový test:
 
     ```cpp
     TEST_METHOD(RangeTest)
@@ -180,20 +182,20 @@ Tento návod popisuje, jak vyvíjet nativní knihovny DLL C++ pomocí metody vč
     ```
 
     > [!TIP]
-    > Doporučujeme neměnit testy, které uplynuly. Místo toho přidejte nový test, aktualizujte kód tak, aby test bude provedeno úspěšně a poté přidejte jiného testu, a tak dále.
+    > Doporučujeme neměňte testy, které prošly. Místo toho přidat nový test, aktualizovat kód tak, aby byl test úspěšný a pak přidejte jiného testu, a tak dále.
     >
-    > Pokud vaši uživatelé změnit jejich požadavky, zakažte testy, které již nejsou správné. Zápis nových testů a jejich fungování jeden po druhém, stejným způsobem jako přírůstkové.
+    > Pokud uživatelé změní své požadavky, zakážete testy, které už nejsou správné. Psát nové testy a jejich fungování postupně, přírůstkové stejně.
 
-2.  Sestavte řešení a potom vyberte v Průzkumníku Test **spustit všechny**.
+2.  Sestavte řešení a potom v **Průzkumník testů**, zvolte **spustit všechny**.
 
      Nový test se nezdaří.
 
-     ![Selhání RangeTest](../test/media/ute_cpp_testexplorer_rangetest_fail.png "UTE_Cpp_TestExplorer_RangeTest_Fail")
+     ![RangeTest selže](../test/media/ute_cpp_testexplorer_rangetest_fail.png)
 
     > [!TIP]
-    > Ověřte, že každý test se nezdaří, ihned po jeho jste napsali. To umožňuje vyhnout se snadno chybu zápisu testu, který nikdy selže.
+    > Ověřte, že každý test selže okamžitě poté, co jste ho napsali. To umožňuje vyhnout se snadno chybu zápisu test, který se nikdy selže.
 
-3.  Vylepšení kódu knihovnu DLL tak, aby nový test předá:
+3.  Vylepšení váš kód knihovny DLL tak, aby byl nový test úspěšný:
 
     ```cpp
     #include <math.h>
@@ -212,18 +214,18 @@ Tento návod popisuje, jak vyvíjet nativní knihovny DLL C++ pomocí metody vč
     }
     ```
 
-4.  Sestavte řešení a potom vyberte v Průzkumníku Test **spustit všechny**.
+4.  Sestavte řešení a potom v **Průzkumník testů**, zvolte **spustit všechny**.
 
-     Oba testy byly úspěšné.
+     Oba testy jsou úspěšné.
 
-     ![Průzkumníka testů jednotek &#45; rozsah Test proběhl](../test/media/utecpp12.png "UteCpp12")
+     ![Průzkumník testu jednotek &#45; rozsah Test prošel](../test/media/utecpp12.png)
 
     > [!TIP]
-    > Vývoj kódu přidáním testy jeden najednou. Ujistěte se, že všechny testy byly úspěšné po každé iteraci.
+    > Vývoj kódu tak, že přidáte testy jeden po druhém. Ujistěte se, že všechny testy jsou úspěšné po každé iteraci.
 
-##  <a name="debug"></a> Ladění selhání testu
+##  <a name="debug"></a> Ladit test chybou
 
-1.  Přidání jiného testu:
+1.  Přidáte jiného testu:
 
     ```cpp
     #include <stdexcept>
@@ -258,21 +260,21 @@ Tento návod popisuje, jak vyvíjet nativní knihovny DLL C++ pomocí metody vč
 
 2.  Sestavte řešení a zvolte **spustit všechny**.
 
-3.  Otevřete (nebo dvakrát kliknout na) neúspěšných testů.
+3.  Otevřete (nebo dvakrát klikněte na panel) selhání testu.
 
-     Je označený selhání kontrolního výrazu. Zpráva o neúspěšném zpracování je zobrazen v podokně podrobností Průzkumníka testů.
+     Neplatnost kontrolního výrazu je zvýrazněn. Zpráva o selhání je viditelný v podokně podrobností **Průzkumník testů**.
 
-     ![NegativeRangeTests se nezdařilo](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png "UTE_Cpp_TestExplorer_NegativeRangeTest_Fail")
+     ![NegativeRangeTests se nezdařilo](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png)
 
-4.  Chcete-li zjistit, proč test se nezdaří, kroku prostřednictvím funkce:
+4.  Chcete-li zjistit, proč se test nezdaří, kroku pomocí funkce:
 
-    1.  Na začátku funkce SquareRoot nastavte zarážky.
+    1.  Nastavte zarážku na začátku funkce SquareRoot.
 
-    2.  V místní nabídce selhání testu, zvolte **ladění vybrané testy**.
+    2.  V místní nabídce neúspěšných testů, zvolte **ladit vybrané testy**.
 
-         Při spuštění, zastavení u zarážky, projděte kód.
+         Při spuštění se zastaví na zarážce, krokovat kód.
 
-5.  Vložení kódu ve funkci při vývoji:
+5.  Vložte kód ve funkci při vývoji:
 
     ```cpp
 
@@ -288,18 +290,19 @@ Tento návod popisuje, jak vyvíjet nativní knihovny DLL C++ pomocí metody vč
 
     ```
 
-6.  Všechny testy byly úspěšné teď.
+6.  Všechny testy jsou nyní úspěšné.
 
-     ![Všechny testy byly úspěšné](../test/media/ute_ult_alltestspass.png "UTE_ULT_AllTestsPass")
+     ![Všechny testy byly úspěšné](../test/media/ute_ult_alltestspass.png)
 
 > [!TIP]
->  Pokud jednotlivé testy žádné závislosti, které je zabránit spouštění v libovolném pořadí, zapnout spuštění testu paralelní s ![UTE&#95;parallelicon&#45;malé](../test/media/ute_parallelicon-small.png "UTE_parallelicon malé") přepínací tlačítko na panelu nástrojů. To může výrazně snížit čas potřebný k spustit všechny testy.
+> Je-li jednotlivé testy nemají žádné závislosti, které brání spuštění v libovolném pořadí, zapněte paralelní provádění testů s ![USTIT&#95;parallelicon&#45;malé](../test/media/ute_parallelicon-small.png) přepínacího tlačítka na panelu nástrojů. To může výrazně snížit čas potřebný ke spuštění všech testů.
 
-##  <a name="refactor"></a> Refaktorovat kód beze změny testů
+
+##  <a name="refactor"></a> Refaktorujte kód beze změn testů
 
 1.  Zjednodušení centrální výpočtu ve funkci SquareRoot:
 
-    ```
+    ```cpp
     // old code:
     //   result = result - (result*result - v)/(2*result);
     // new code:
@@ -307,27 +310,27 @@ Tento návod popisuje, jak vyvíjet nativní knihovny DLL C++ pomocí metody vč
 
     ```
 
-2.  Sestavte řešení a zvolte **spustit všechny**, abyste měli jistotu, že nebyla zavedena k chybě.
+2.  Sestavte řešení a zvolte **spustit všechny**, abyste měli jistotu, že nebyla zavedena chybu.
 
     > [!TIP]
-    > Dobrý sadu testů jednotek poskytuje jistotu, že nebyla zavedena chyby při změně kódu.
+    > Správnou sadu testů jednotek poskytuje jistotu, že nebyly zavedeny chyby při změně kódu.
     >
-    > Zachovat refaktoring oddělené od dalších změn.
+    > Zachovat refaktorování odděleně od jiných změn.
 
 ## <a name="next-steps"></a>Další kroky
 
--   **Izolace.** Většina knihovny DLL jsou závislá na jiných subsystémy, jako jsou databáze a další knihovny DLL. Tyto součásti jsou často vyvinuté paralelně. Pokud chcete povolit, zatímco ostatní součásti dosud nejsou k dispozici testování částí, budete muset nahraďte mock nebo
+-   **Izolace.** Většinu knihoven DLL jsou závislé na ostatních subsystémů, jako jsou databáze a další knihovny DLL. Tyto součásti jsou často paralelně. Pokud chcete povolit testování, která se má provést, zatímco ostatní součásti ještě nejsou k dispozici, budete muset nahradit mock nebo
 
--   **Sestavení testech pro ověření.** Můžete mít testy na váš tým sestavení serveru ve stanovených intervalech. Tím se zajistí, že nejsou chyby vniklých při práci při několik členů týmu je integrovaný.
+-   **Ověřovací testy sestavení.** Můžete mít testy provést na serveru sestavení vašeho týmu v nastavených intervalech. Tím se zajistí, že chyby nejsou zavedena při integraci pracovní několik členů týmu.
 
--   **Testy vrácení se změnami.** Můžete vyžádá, aby některé testy byly provedeny před každý člen týmu kontroluje kód do správy zdrojového kódu. To je obvykle podmnožinu kompletní sadu testů pro ověření sestavení.
+-   **Vrácení se změnami testy.** Můžete ukládat povinnost, aby některé testy byly provedeny před každý člen týmu vrátí kód do správy zdrojového kódu. To je obvykle podmnožinou všech ověřovacích testů sestavení.
 
-     Můžete také vyžádá minimální úroveň pokrytí kódu.
+     Lze také ukládat povinnost minimální úrovně pokrytí kódu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Přidání testů částí do stávajících aplikací C++](../test/unit-testing-existing-cpp-applications-with-test-explorer.md)
-- [Using Microsoft.VisualStudio.TestTools.CppUnitTestFramework](../test/using-microsoft-visualstudio-testtools-cppunittestframework.md)
+- [Přidání testů jednotek do stávajících aplikací C++](../test/unit-testing-existing-cpp-applications-with-test-explorer.md)
+- [Používání atributu Microsoft.VisualStudio.TestTools.CppUnitTestFramework](how-to-use-microsoft-test-framework-for-cpp.md)
 - [Ladění nativního kódu](../debugger/debugging-native-code.md)
-- [Návod: Vytvoření a použití dynamické knihovny DLL (C++)](/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp)
+- [Návod: Vytvoření a použití dynamické knihovny (C++)](/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp)
 - [Import a export](/cpp/build/importing-and-exporting)

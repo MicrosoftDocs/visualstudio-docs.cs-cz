@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 68561b5a814ba27f241cee3118ef1bae938adb20
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b7444a4d3e8ad6e3f5fdd91d34058e20e13caf38
+ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35237539"
 ---
-# <a name="functions-view---contention-data"></a>Zobrazení funkcí – Data kolizí
+# <a name="functions-view---contention-data"></a>Zobrazení funkcí – data kolizí
 Sestavy funkce Zobrazit seznamů dat kolizí funkce v profilaci spuštění, které byly blokované ze spuštění během spuštění profilování.  
   
  Následující tabulka vysvětluje hodnoty, které se zobrazují v zobrazení funkce profilování datový soubor, který byl shromážděn pomocí metoda souběžného zpracování.  
@@ -42,7 +43,7 @@ Sestavy funkce Zobrazit seznamů dat kolizí funkce v profilaci spuštění, kte
 |**Název procesu**|Název procesu.|  
 |**Zdrojový soubor**|Zdrojový soubor, který obsahuje definici pro tuto funkci.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Postupy: přizpůsobení sloupců zobrazení sestavy](../profiling/how-to-customize-report-view-columns.md)   
  [Zobrazení funkcí](../profiling/functions-view.md)   
  [Zobrazení funkcí – instrumentace](../profiling/functions-view-dotnet-memory-instrumentation-data.md)   

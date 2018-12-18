@@ -1,5 +1,5 @@
 ---
-title: dwTYPE_KIND | Microsoft Docs
+title: dwTYPE_KIND | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5eaa1b9edc128b5e13641bb5b38296fd96740ab4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4339c18f7aa745c8b741c0a431b6073300ff145b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49841764"
 ---
 # <a name="dwtypekind"></a>dwTYPE_KIND
 Určuje, jak interpretovat typ [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objektu.  
@@ -55,7 +56,7 @@ public enum enum_dwTYPE_KIND {
  `TYPE_INFO` Sjednocení by měl být interpretován jako [BUILT_TYPE](../../../extensibility/debugger/reference/built-type.md) struktury.  
   
 ## <a name="remarks"></a>Poznámky  
- Zobrazí hodnoty tento výčet v `dwKind` pole z [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) struktury a slouží k určení jak interpretovat `type` členů sjednocení. `TYPE_INFO` Struktura vrátí volání [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md) metoda.  
+ Joinkind hodnoty tento výčet `dwKind` pole [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) struktury a slouží k určení, jak interpretovat `type` člen sjednocení. `TYPE_INFO` Struktura je vrácený voláním [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md) metody.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: sh.h  

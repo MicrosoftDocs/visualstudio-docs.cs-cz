@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_isnaked – | Microsoft Docs
+title: Idiasymbol::get_isnaked – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6004652b9f47f39b8b083b4047b91613ec63bb03
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 32280a8b4baaf82867065898b5478c11842a33df
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49915071"
 ---
 # <a name="idiasymbolgetisnaked"></a>IDiaSymbol::get_isNaked
-Načte příznak, který určuje, zda je funkce [holé](/cpp/cpp/naked-cpp) atribut (to znamená, funkce nemá žádný kód prologu nebo epilogu přidal kompilátor).  
+Získá příznak, který určuje, zda má funkce [naked](/cpp/cpp/naked-cpp) atribut (to znamená, funkce nemá žádný kód prologu nebo epilogu přidali kompilátorem).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,20 +34,20 @@ HRESULT get_isNaked(
   
 #### <a name="parameters"></a>Parametry  
  `pFlag`  
- [out] Vrátí `TRUE` Pokud má funkce `naked` atributů; jinak vrátí `FALSE`.  
+ [out] Vrátí `TRUE` Pokud má funkce `naked` atribut; v opačném případě vrátí `FALSE`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` nebo chybový kód.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
->  Vrácená hodnota `S_FALSE` znamená vlastnost není k dispozici pro symbol.  
+>  Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Požadavek|Popis|  
 |-----------------|-----------------|  
-|Hlavičky:|dia2.h|  
-|Verze:|V8.0 DIA SDK|  
+|Záhlaví:|dia2.h|  
+|Verze:|Ve verzi 8.0 DIA SDK|  
   
 ## <a name="see-also"></a>Viz také  
  [Idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md)   

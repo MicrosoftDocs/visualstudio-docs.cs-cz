@@ -1,7 +1,7 @@
 ---
-title: Hledání v souborech | Microsoft Docs
-ms.custom: ''
+title: Najít v souborech
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
@@ -21,11 +21,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e7e181883fff125349949f081826157f2a3aa36f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e1470868e207687a7b35f46724b80b0da0a0e71c
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31946556"
 ---
 # <a name="find-in-files"></a>Najít v souborech
 
@@ -69,19 +70,19 @@ Určuje, že podsložky **naleznete v** prohledá složku.
 
 Můžete rozbalit nebo sbalit **najít možnosti** části. Následující možnosti může být vybrána nebo vymazána:
 
-**Malá a velká písmena**  
+**Malá a velká písmena**
 
 Při výběru **Najít výsledky** hledání bude malá a velká písmena
 
-**Celá slova**  
+**Celá slova**
 
 Při výběru, **Najít výsledky** windows vrátí jenom celá slova odpovídá.
 
-**Používání regulárních výrazů**  
+**Používání regulárních výrazů**
 
 Pokud je toto políčko zaškrtnuto, můžete použít speciální zápisy zadat textovou tak, aby odpovídaly v **najít** nebo **nahraďte** textových polí. Seznam těchto zápisy, naleznete v části [pomocí regulárních výrazů v sadě Visual Studio](../ide/using-regular-expressions-in-visual-studio.md).
 
-**Podívejte se na tyto typy souborů**  
+**Podívejte se na tyto typy souborů**
 
 Tento seznam uvádí typy souborů, pokud chcete hledat v **Hledat v** adresáře. Pokud je tato pole prázdná, všechny soubory v **Hledat v** prohledávaných adresářů.
 
@@ -91,7 +92,7 @@ Vyberte libovolnou položku v seznamu a zadejte předkonfigurované vyhledávac�
 
 Můžete rozbalit nebo sbalit **způsobit možnosti** části. Následující možnosti může být vybrána nebo vymazána:
 
-**Najít okno výsledků 1**  
+**Najít okno výsledků 1**
 
 Pokud vybraná, výsledky hledání aktuální nahradí obsah **najít 1 výsledky** okno. Toto okno se automaticky otevře a zobrazí výsledky hledání. Otevřete toto okno ručně, vyberte **ostatní okna** z **zobrazení** nabídky a zvolte **najít 1 výsledky**.
 
@@ -109,6 +110,6 @@ Připojí výsledků vyhledávání do předchozí výsledky hledání.
 
 ## <a name="see-also"></a>Viz také
 
-[Hledání a nahrazení textu](../ide/finding-and-replacing-text.md)  
-[Nahradit v souborech](../ide/replace-in-files.md)  
-[Příkazy sady Visual Studio](../ide/reference/visual-studio-commands.md)
+- [Hledání a nahrazení textu](../ide/finding-and-replacing-text.md)
+- [Nahradit v souborech](../ide/replace-in-files.md)
+- [Příkazy sady Visual Studio](../ide/reference/visual-studio-commands.md)

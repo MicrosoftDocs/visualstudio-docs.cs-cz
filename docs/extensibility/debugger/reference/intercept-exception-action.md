@@ -1,5 +1,5 @@
 ---
-title: INTERCEPT_EXCEPTION_ACTION | Microsoft Docs
+title: INTERCEPT_EXCEPTION_ACTION | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e8241ab85ad705200e256b4facccaecd0a50a1de
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1249e6b435f7cd396ea7912cb7aebf8d78cf94f7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948379"
 ---
 # <a name="interceptexceptionaction"></a>INTERCEPT_EXCEPTION_ACTION
-Určuje, jaké akce se má provést při zachycení výjimky.  
+Určuje, jaká opatření je třeba provést při zachycení výjimky.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,10 +44,10 @@ public enum enum_INTERCEPT_EXCEPTION_ACTION
   
 #### <a name="parameters"></a>Parametry  
  IEA_INTERCEPT  
- Povolí zachycení aktuální výjimku. Toto je jediná hodnota podporovaná v současné době a musí být zadán.  
+ Povolí zachycení na aktuální výjimku. Toto je jediná hodnota podporovaná v současné době a musí být zadán.  
   
 ## <a name="remarks"></a>Poznámky  
- Tyto hodnoty jsou předávány do [interceptcurrentexception –](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md) metoda.  
+ Tyto hodnoty jsou předány [interceptcurrentexception –](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md) metody.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  
@@ -57,4 +58,4 @@ public enum enum_INTERCEPT_EXCEPTION_ACTION
   
 ## <a name="see-also"></a>Viz také  
  [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [Interceptcurrentexception –](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md)
+ [InterceptCurrentException](../../../extensibility/debugger/reference/idebugstackframe3-interceptcurrentexception.md)

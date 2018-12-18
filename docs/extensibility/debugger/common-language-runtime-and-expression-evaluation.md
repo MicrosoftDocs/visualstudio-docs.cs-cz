@@ -1,5 +1,5 @@
 ---
-title: Modul Common Language Runtime a vyhodnocení výrazu | Microsoft Docs
+title: Modul Common Language Runtime a vyhodnocování výrazů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,28 +14,29 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 370b7963c71b74674c7d323a5fa1c2650d3f08d3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7db25e563e2728d30ade9f4c7f2dc6faf659721b
+ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39204372"
 ---
-# <a name="common-language-runtime-and-expression-evaluation"></a>Modul Common Language Runtime a vyhodnocení výrazu
+# <a name="common-language-runtime-and-expression-evaluation"></a>Common language runtime a výraz hodnocení
 > [!IMPORTANT]
->  V sadě Visual Studio 2015 se již nepoužívá tímto způsobem implementace vyhodnocovače výrazů. Informace o implementaci vyhodnocovače výrazů CLR, najdete v tématu [vyhodnocovače výrazů CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [spravované ukázka vyhodnocování výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
+>  V sadě Visual Studio 2015 je zastaralý tímto způsobem implementace vyhodnocovače výrazů. Informace o implementace vyhodnocovače výrazů modulu CLR najdete v tématu [vyhodnocovače výrazů modulu CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka Chyba při vyhodnocování výrazu spravované](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
   
- Kompilátory, například Visual Basic a C# (vyslovováno C ostré), která cílí na Common Language Runtime (CLR), vytvořit Microsoft zprostředkující jazyk (MSIL), která se později zkompilovat do nativního kódu. Modul CLR poskytuje modul ladění (DE) k ladění výsledný kód. Pokud budete chtít integrovat programovacího jazyka proprietární do prostředí Visual Studio IDE, můžete zvolit zkompilovat do MSIL a proto nebudete muset psát vlastní DE. Ale budete muset zápis vyhodnocení výrazu (EE), který je schopen vyhodnocení výrazů v kontextu programovacího jazyka.  
+ Kompilátory, jako například Visual Basic a C# (vyslovováno C sharp), který cílí Common Language Runtime (CLR), vytvořit Microsoft Intermediate Language (MSIL), která se později zkompilované do nativního kódu. CLR poskytuje ladicího stroje (DE) Chcete-li ladit výsledný kód. Pokud chcete integrovat proprietární programovacího jazyka do rozhraní IDE sady Visual Studio, můžete vybrat kompilace do jazyka MSIL a proto nebudete muset psát vlastní DE. Ale budete muset zápis vyhodnocovače výrazů (EE), který je schopen vyhodnocování výrazů v rámci kontextu svůj oblíbený programovací jazyk.  
   
-## <a name="discussion"></a>Diskusní  
- Výrazy jazyka pro počítač jsou obecně analyzovat k vytvoření sadu datové objekty a sadu operátory používá k manipulaci s nimi. Výraz, který "A + B" může analyzovat použít operátor sčítání (+) na data například objekty "A" a "B" může být výsledkem jiného datového objektu. Celkový počet sadu datových objektů, operátory a jejich přidružení jsou nejčastěji vyjádřené v programu strom, s operátory v uzlu stromu a datové objekty v větve. Výraz, který má rozdělit do stromu formuláře se často nazývá analyzovaný strom.  
+## <a name="discussion"></a>Diskuse  
+ Výrazy jazyka počítače jsou obecně analyzovat vytvoří sadu datových objektů a sadu operátorů používá k manipulaci s nimi. Například výraz, který "A + B" může být analyzován použít operátor sčítání (+) a data objektů "A" a "B" může být výsledkem jiného datového objektu. Úplnou sadu datových objektů, operátory a jejich přidružení jsou nejčastěji vyjádřené v programu stromové struktury s operátory na uzly stromu a datové objekty na větve. Výraz, který má rozdělené do stromu formuláře se často nazývá analyzovaný strom.  
   
- Po analýze výraz symbol zprostředkovatele (SP) se nazývá vyhodnotit každý datový objekt. Například, pokud "A" je definovaný v více než jedna metoda a potom na otázku "Které A?" musí být zodpovězena, než lze zjistit hodnotu A. Odpověď vrácená SP je něco podobného jako "Třetí položka páté rámec zásobníku" nebo "A, který je 50 bajty za spuštění statické paměti přidělené této metody."  
+ Jakmile má být výraz, poskytovatel symbolů (SP) je volána k vyhodnocení každý datový objekt. Například, pokud "A" je definován ve více než jednu metodu na otázku "Které A?" musí být zodpovězeny před hodnotou A lze zjistit. Odpověď vrácená této uložené Procedury je něco jako "Třetí položka v pátém zásobníku" nebo "A 50 bajtů nad rámec počáteční statické paměti přidělených této metody."  
   
- Kromě vytváření MSIL pro této aplikace, kompilátory CLR můžete také vytvořit velmi popisné informace pro ladění, která jsou zapsána do souboru databáze programu (.pdb). Tak dlouho, dokud kompilátoru jazyka nechráněný vytváří informace o ladění do stejný formát jako kompilátory CLR, modul CLR SP je dokáže zjistit, že tohoto jazyka s názvem datových objektů. Po objekt s názvem dat byla zjištěna, EE používá objekt vazač přiřadit (nebo vytvořit vazbu) datový objekt na oblast paměti, který uchovává hodnotu tohoto objektu. DE potom můžete získat nebo nastavit nové hodnoty pro datový objekt.  
+ Kromě vytváření jazyka MSIL pro program sám, může také CLR kompilátory vytvářejí velmi popisné informace o ladění, která jsou zapsána do databáze programu (*PDB*) soubor. Za předpokladu, kompilátor jazyka nechráněný vytvoří ladicí informace ve stejném formátu jako kompilátory CLR, je schopen identifikovat, že jazyk názvy datových objektů SP modulu CLR. Po zjistila pojmenované datový objekt EE používá objekt vazače pro přidružení (nebo vytvoření vazby) datového objektu do oblasti paměti, která obsahuje hodnotu tohoto objektu. DE můžete pak získat nebo nastavit novou hodnotu pro datový objekt.  
   
- Vlastní kompilátoru může poskytnout CLR ladicí informace voláním `ISymbolWriter` rozhraní (která je definována v rozhraní .NET Framework v oboru názvů `System.Diagnostics.SymbolStore`). Kompilování k MSIL a zápis informace o ladění tato rozhraní, můžete použít vlastní kompilátoru CLR DE a služeb. To výrazně zjednodušuje integraci vlastní jazyk do prostředí Visual Studio IDE.  
+ Proprietární kompilátor může poskytnout informace o ladění pomocí volání CLR `ISymbolWriter` rozhraní (která je definovaná v rozhraní .NET Framework v oboru názvů `System.Diagnostics.SymbolStore`). Kompilace do jazyka MSIL a zápisu ladicích informací prostřednictvím těchto rozhraní, můžete použít speciální kompilátoru CLR DE a SP. To výrazně zjednodušuje integraci proprietární jazyk do IDE sady Visual Studio.  
   
- Když CLR DE volá proprietární EE k vyhodnocení výrazu, DE poskytuje EE s rozhraními SP a objekt vazače. Zápis modulu prostředky na základě CLR ladění z toho důvodu je nezbytné pouze k implementaci rozhraní vyhodnocování odpovídající výraz; modul CLR má na starosti vazby a symbol zpracování za vás.  
+ Když CLR DE volá proprietární EE vyhodnocení výrazu, DE poskytuje EE s rozhraními pro SP a objekt vazače. Díky tomu se zápis prostředků modulu CLR ladění je potřeba pouze implementovat rozhraní Chyba při vyhodnocování výrazu odpovídající; vazby a symbol zpracování za vás postará o modulu CLR.  
   
-## <a name="see-also"></a>Viz také  
- [Zápis vyhodnocovací filtr výrazů CLR](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)
+## <a name="see-also"></a>Viz také:  
+ [Zápis vyhodnocovací filtr výrazů modulu CLR](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md)

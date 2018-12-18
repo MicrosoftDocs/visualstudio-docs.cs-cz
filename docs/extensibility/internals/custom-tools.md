@@ -1,5 +1,5 @@
 ---
-title: Vlastní nástroje | Microsoft Docs
+title: Vlastní nástroje | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,42 +15,43 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5f215cfbd5113377e7a98439976a7f44215eee02
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 306173876d0fd7c4d1da76d1b5432ecd5358c425
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39500236"
 ---
 # <a name="custom-tools"></a>Vlastní nástroje
-*Vlastní nástroje* vám umožní přidružit nástroj položku v projektu a spusťte tento nástroj vždy, když se soubor uložit. Některé vlastních nástrojů, někdy označovány jako *jedním souborem generátory*, se často používají k implementaci překladatele, které generují kód z dat a naopak. Můžete například vytvořit jeden soubor generátory [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] a [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] zdrojový kód soubory .settings a resx. Vygenerovaný zdrojový kód poskytuje silného typu přístup k datům v souborech .settings a resx. [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] a [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] typy projektů podporu vlastních nástrojů; [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] typy projektů nepodporují. Vlastní typy projektů může také podporovat vlastních nástrojů.  
+*Vlastní nástroje* vám umožní přidružit nástroj položky v projektu a spusťte tento nástroj pokaždé, když je soubor uložen. Některé vlastní nástroje, někdy označovány jako *generátorů tvořených jedním souborem*, jsou často používána k implementaci překladače, které generují kód z dat a naopak. Například vytvořit generátorů tvořených jedním souborem [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] a [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] zdrojový kód z celkového počtu *.settings* a *RESX* soubory. Generovaný zdrojový kód poskytuje silného typu přístup k datům v *.settings* a *RESX* soubory. [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] a [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] typy projektů podpory vlastního nástroje. [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] typy projektů nejsou. Vlastní typy projektů může také podporovat vlastních nástrojů.  
   
  Jsou registrované součásti, které implementují vlastní nástroje `IVsSingleFileGenerator` rozhraní.  
   
- Vlastní nástroje jsou přidružené `ProjectItem` rozhraní objektu a jsou podobné návrháři a editory. Vlastní nástroj trvá soubor reprezentována `ProjectItem` jako vstup a zapíše nový soubor od jejichž název souboru `DefaultExtension` metoda.  
+ Jsou přidružené k vlastní nástroje `ProjectItem` rozhraní objektu a jsou podobné návrháři a editory. Vlastní nástroj přebírá souboru reprezentována `ProjectItem` jako vstup a zapíše nový soubor, jehož název souboru poskytuje `DefaultExtension` metoda.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Implementace generátorů tvořených jedním souborem](../../extensibility/internals/implementing-single-file-generators.md)  
- Popisuje postup použití <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> rozhraní k implementaci vlastního nástroje.  
+ Popisuje způsob použití <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> rozhraní za účelem implementace vlastní nástroj.  
   
- [Registrace generátorů tvořených jedním souborem](../../extensibility/internals/registering-single-file-generators.md)  
+ [Registrace generátorů jedním souborem](../../extensibility/internals/registering-single-file-generators.md)  
  Obsahuje popis pro všechny položky registru pro vlastní nástroj.  
   
- [Zveřejnění typů pro vizuální návrháře](../../extensibility/internals/exposing-types-to-visual-designers.md)  
- Vysvětluje, jak projektu systémů poskytuje podporu pro vizuální nástroje přístupové generované třídy a typů prostřednictvím dočasné přenosné spustitelné soubory (PE).  
+ [Vystavení typů pro vizuální návrháře](../../extensibility/internals/exposing-types-to-visual-designers.md)  
+ Vysvětluje, jak systémů projektů poskytovat podporu pro vizuální návrhářské nástroje a typy tříd pro přístup k vygenerované pomocí souborů dočasné (PE portable executable).  
   
- [Trvalé uložení vlastnosti položky projektu](../../extensibility/persisting-the-property-of-a-project-item.md)  
- Ukazuje, jak se zachovat vlastnosti položky projektu, například autora zdrojový soubor, v souboru projektu.  
+ [Zachovat vlastnosti položky projektu](../../extensibility/persisting-the-property-of-a-project-item.md)  
+ Ukazuje, jak zachovat vlastnosti položky projektu, jako je například autor zdrojového souboru, v souboru projektu.  
   
 ## <a name="reference"></a>Odkaz  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>  
- Poskytuje podrobnosti o <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>, který transformuje jeden vstupní soubor do jednoho výstupního souboru, který můžete zkompilovat nebo přidat do projektu.  
+ Poskytuje podrobnosti o <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>, který transformuje jeden vstupní soubor do jednoho výstupního souboru, který má zkompilovat nebo přidat do projektu.  
   
  <xref:EnvDTE.ProjectItem>  
- Vysvětluje `ProjectItem` rozhraní, což představuje položku v projektu.  
+ Vysvětluje, `ProjectItem` rozhraní, která představuje položku v projektu.  
   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator.DefaultExtension%2A>  
- Poskytuje podrobnosti o `DefaultExtension` metodu, která načte příponu názvu souboru, který je přiřazen k názvu výstupního souboru.  
+ Poskytuje podrobnosti o `DefaultExtension` metodu, která načte příponu názvu souboru, který je uveden název výstupního souboru.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Rozšíření projektů](../../extensibility/extending-projects.md)  
- Popisuje způsob použití [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] projekty a řešení pro uspořádání soubory kódu a soubory prostředků a implementaci řízení zdrojů.
+ Popisuje způsob použití [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] projekty a řešení pro uspořádání souborů s kódem a soubory prostředků a jak implementovat správy zdrojového kódu.

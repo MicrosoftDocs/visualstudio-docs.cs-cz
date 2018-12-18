@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentPositionOffset2::GetRange | Microsoft Docs
+title: IDebugDocumentPositionOffset2::GetRange | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,14 +13,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 60d7ee73be7ccd421c7f5e0b4861e9cd935fbdb0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 70f878c7299ab716c764f5962d675691f4bb521a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49860107"
 ---
 # <a name="idebugdocumentpositionoffset2getrange"></a>IDebugDocumentPositionOffset2::GetRange
-Načte rozsah pro aktuální pozici dokumentu.  
+Načte rozsah pro aktuální pozice v dokumentu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,24 +41,24 @@ public int GetRange(
   
 #### <a name="parameters"></a>Parametry  
  `pdwBegOffset`  
- [ve out] Posun počáteční pozice rozsahu. Tento parametr nastavte na hodnotu null, pokud není nutné tyto informace.  
+ [out v] Posun počáteční pozice v rozsahu. Tento parametr nastavte na hodnotu null, pokud tyto informace není potřeba.  
   
  `pdwEndOffset`  
- [ve out] Posunutí pro koncová pozice rozsahu. Tento parametr nastavte na hodnotu null, pokud není nutné tyto informace.  
+ [out v] Posun koncová pozice rozsahu. Tento parametr nastavte na hodnotu null, pokud tyto informace není potřeba.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Rozsah zadaný v dokumentu pozici pro zarážek umístění používá stroj ladění (DE) k vyhledání dopředu příkaz, který ve skutečnosti přispívá kódu. Zvažte například následující kód:  
+ Rozsah zadaný v dokumentu umístění pro zarážku umístění používá ladicí stroj (DE) pro hledání dopředu příkaz, který ve skutečnosti přispívá kódu. Zvažte například následující kód:  
   
 ```  
 Line 5: // comment  
 Line 6: x = 1;  
 ```  
   
- Řádku 5 přispívá k programu laděné žádný kód. Pokud ladicí program, který nastaví zarážkou na řádku 5 chce DE budou prohledány určité množství pro první řádek, který přispívá kódu, chcete-li ladicí program zadejte rozsah, který obsahuje další candidate řádky, kde může správně umístit zarážku. DE by pak prohledávat dál tyto řádky dokud ho najít řádek, na kterém lze přijmout zarážky.  
+ Řádek 5 přispívá k laděnému programu žádný kód. Pokud ladicí program, který nastaví zarážku na řádku 5 požaduje DE budou prohledány určité doby pro první řádek, jež přispívají kód, ladicí program zadáte rozsah, který obsahuje další Release candidate řádky, kde může být správně umístit zarážky. DE by pak hledá směrem dopředu pomocí tyto řádky až do nalezení řádek, který by mohl přijmout zarážku.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugDocumentPositionOffset2](../../../extensibility/debugger/reference/idebugdocumentpositionoffset2.md)   
- [Getrange –](../../../extensibility/debugger/reference/idebugdocumentposition2-getrange.md)
+ [GetRange](../../../extensibility/debugger/reference/idebugdocumentposition2-getrange.md)

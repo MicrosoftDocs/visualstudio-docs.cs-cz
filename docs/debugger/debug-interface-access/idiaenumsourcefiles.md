@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsourcefiles – | Microsoft Docs
+title: Idiaenumsourcefiles – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,45 +14,46 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f9f0e1c751f9ab106be74418bc3d9e6b9a53b0c5
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 33960cf8cfde8d781d52e0519911093019a93941
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39511011"
 ---
 # <a name="idiaenumsourcefiles"></a>IDiaEnumSourceFiles
-Provede výčet různých zdrojové soubory obsažené v datovém zdroji.  
+Provede výčet různých zdrojové soubory obsažené ve zdroji dat.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-IDiaEnumSourceFiles : IUknown  
+IDiaEnumSourceFiles : IUnknown  
 ```  
   
 ## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
- Následující tabulka uvádí metody `IDiaEnumSourceFiles`.  
+ V následující tabulce jsou uvedeny metody objektu `IDiaEnumSourceFiles`.  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[IDiaEnumSourceFiles::get__NewEnum](../../debugger/debug-interface-access/idiaenumsourcefiles-get-newenum.md)|Načte `IEnumVARIANT Interface` verzi této enumerátor.|  
-|[IDiaEnumSourceFiles::get_Count](../../debugger/debug-interface-access/idiaenumsourcefiles-get-count.md)|Načte počet zdrojové soubory.|  
-|[IDiaEnumSourceFiles::Item](../../debugger/debug-interface-access/idiaenumsourcefiles-item.md)|Načte zdrojového souboru pomocí indexu.|  
-|[IDiaEnumSourceFiles::Next](../../debugger/debug-interface-access/idiaenumsourcefiles-next.md)|Načte zadaný počet zdrojové soubory v pořadí výčtu.|  
-|[IDiaEnumSourceFiles::Skip](../../debugger/debug-interface-access/idiaenumsourcefiles-skip.md)|Přeskočí zadaný počet zdrojové soubory v posloupnosti výčtu.|  
-|[IDiaEnumSourceFiles::Reset](../../debugger/debug-interface-access/idiaenumsourcefiles-reset.md)|Návrat na začátek v sekvenci výčtu.|  
-|[IDiaEnumSourceFiles::Clone](../../debugger/debug-interface-access/idiaenumsourcefiles-clone.md)|Vytvoří enumerátor, který obsahuje stav výčtu jako aktuální enumerátor.|  
+|[IDiaEnumSourceFiles::get__NewEnum](../../debugger/debug-interface-access/idiaenumsourcefiles-get-newenum.md)|Načte `IEnumVARIANT Interface` verzi výčet.|  
+|[IDiaEnumSourceFiles::get_Count](../../debugger/debug-interface-access/idiaenumsourcefiles-get-count.md)|Získá počet zdrojových souborů.|  
+|[IDiaEnumSourceFiles::Item](../../debugger/debug-interface-access/idiaenumsourcefiles-item.md)|Zkopíruje zdrojový soubor pomocí indexu.|  
+|[IDiaEnumSourceFiles::Next](../../debugger/debug-interface-access/idiaenumsourcefiles-next.md)|Načte zadaný počet zdrojových souborů v pořadí výčtu.|  
+|[IDiaEnumSourceFiles::Skip](../../debugger/debug-interface-access/idiaenumsourcefiles-skip.md)|Vynechá zadaný počet zdrojových souborů v sekvenci výčtu.|  
+|[IDiaEnumSourceFiles::Reset](../../debugger/debug-interface-access/idiaenumsourcefiles-reset.md)|Návrat na začátek sekvence výčtu.|  
+|[IDiaEnumSourceFiles::Clone](../../debugger/debug-interface-access/idiaenumsourcefiles-clone.md)|Vytvoří čítač, který obsahuje stejného stavu jako aktuální enumerátor výčtu.|  
   
 ## <a name="remarks"></a>Poznámky  
   
 ## <a name="notes-for-callers"></a>Poznámky pro volající  
- Získat toto rozhraní vyvoláním `QueryInterface` metodu [idiatable –](../../debugger/debug-interface-access/idiatable.md) objektu. Podívejte se na příklad podrobnosti.  
+ Získat po zavolání tohoto rozhraní `QueryInterface` metodu [idiatable –](../../debugger/debug-interface-access/idiatable.md) objektu. Podívejte se na příklad podrobnosti.  
   
 ## <a name="example"></a>Příklad  
- Tento příklad ukazuje, jak získat `IDiaEnumSourceFiles` rozhraní ze seznamu tabulek do objektu session DIA. Příklad přístup k informacím o zdrojového souboru, najdete v článku [idiasourcefile –](../../debugger/debug-interface-access/idiasourcefile.md) rozhraní.  
+ Tento příklad ukazuje, jak získat `IDiaEnumSourceFiles` rozhraní ze seznamu tabulek v objektu DIA relace. Příklad přístup k informacím o zdrojového souboru, najdete v článku [idiasourcefile –](../../debugger/debug-interface-access/idiasourcefile.md) rozhraní.  
   
 ```C++  
   
-IDiaEnumSourceFiles* GetEnumSourceFiless(IDiaSession *pSession)  
+IDiaEnumSourceFiles* GetEnumSourceFiles(IDiaSession *pSession)  
 {  
     IDiaEnumSourceFiles * pUnknown    = NULL;  
     REFIID                iid         = __uuidof(IDiaEnumSourceFiles);  
@@ -88,7 +89,7 @@ IDiaEnumSourceFiles* GetEnumSourceFiless(IDiaSession *pSession)
  Knihovny DLL: msdia80.dll  
   
 ## <a name="see-also"></a>Viz také  
- [Rozhraní (přístup k rozhraní SDK ladění)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
+ [Rozhraní (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
  [Idiasession::FindFile –](../../debugger/debug-interface-access/idiasession-findfile.md)   
  [Idiasession::findlinesbylinenum –](../../debugger/debug-interface-access/idiasession-findlinesbylinenum.md)   
  [IDiaTable](../../debugger/debug-interface-access/idiatable.md)

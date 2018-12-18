@@ -1,5 +1,5 @@
 ---
-title: Souhrnné zobrazení – Data instrumentace | Microsoft Docs
+title: Souhrnné zobrazení – Data instrumentace | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -12,39 +12,40 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a62c7dc2d8f0e0e80b3cfd8ba74b968ebd2e116
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 606ba5ebe7c485adb33fbcfa6884ad5e625d821e
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35675966"
 ---
-# <a name="summary-view---instrumentation-data"></a>Souhrnné zobrazení – Data instrumentace
-Souhrnné zobrazení zobrazí informace o výkonu nejnákladnější funkce v profilaci spustit. Další informace, včetně popisu odkazy oznámení a sestavy seznamů v tématu [zobrazení souhrnu](../profiling/summary-view.md).  
+# <a name="summary-view---instrumentation-data"></a>Souhrnné zobrazení – data instrumentace
+Souhrnné zobrazení zobrazuje informace o výkonu – nejdražší funkce v profilování. Další informace, včetně popisu odkazy oznámení a sestavy seznamy, naleznete v tématu [zobrazení se souhrnnými](../profiling/summary-view.md).  
   
 ## <a name="timeline-graph"></a>Časová osa grafu  
- Časová osa grafu v souhrnné zobrazení zobrazuje využití procesoru (CPU) podle PROFILOVANÉHO aplikace v průběhu času, který profilace došlo k chybě. Časová osa grafu můžete filtrovat zobrazení vybrané časové období. Další informace najdete v tématu [postupy: filtrování zobrazení sestav ze souhrnné časové osy](../profiling/how-to-filter-report-views-from-the-summary-timeline.md).  
+ Časová osa grafu v souhrnném zobrazení ukazuje využití procesoru (CPU) profilovaná aplikace v čase, které profilaci došlo k chybě. Časová osa grafu můžete použít k filtrování zobrazení tak, aby ve vybraném časovém rozsahu. Další informace najdete v tématu [postupy: filtrování zobrazení sestav ze časová osa souhrnu](../profiling/how-to-filter-report-views-from-the-summary-timeline.md).  
   
-## <a name="hot-path"></a>Aktivní trase  
- **Aktivní trase** zobrazuje cestu spuštění, který nejvíce času. Můžete kliknout na funkce, která se zobrazí zobrazení podrobností funkce pro funkci. Zobrazit další zobrazení pro funkce, klikněte pravým tlačítkem na funkci a potom klikněte na zobrazení ze seznamu.  
+## <a name="hot-path"></a>Kritická cesta  
+ **Kritickou cestu** cesta spuštění, které nejvíce času. Můžete kliknout na funkci, kterou chcete zobrazit podrobnosti o funkci pro funkci. Další zobrazení, pro funkce, klikněte pravým tlačítkem na funkci a potom klikněte na zobrazit ze seznamu.  
   
- **Aktivní trase** zahrnuje následující data pro jednotlivé funkce:  
-  
-|Sloupec|Popis|  
-|------------|-----------------|  
-|**Jméno**|Název funkce.|  
-|**% Uplynulá doba (včetně).**|Procento všech čas v profilaci data, která funkci stráví provádění kódu v jeho tělo funkce a funkce, které ji volat.|  
-|**Uplynulý čas výhradní %**|Procento všech čas v profilaci dat, který stráví funkce provádění kódu v jeho tělo funkce. Čas strávený v funkce, které volá funkci není součástí.|  
-  
-## <a name="functions-with-most-individual-work"></a>Funkce s nejvíce jednotlivé pracovní  
- Seznam funkcí, které využívat většinu času provádění kódu v tělo funkce a není funkce, které ji volat.  
-  
- **Funkce s nejvíce jednotlivé pracovní** zahrnuje následující data pro jednotlivé funkce:  
+ **Kritickou cestu** zahrnuje následující data pro každou funkci:  
   
 |Sloupec|Popis|  
 |------------|-----------------|  
 |**Jméno**|Název funkce.|  
-|**Výhradní čas: %**|Procento všech čas v profilaci dat, který stráví funkce provádění kódu v jeho tělo funkce. Čas strávený v funkce, které volá funkci není součástí.|  
+|**% Uplynulého celkového času**|Procento celou dobu profilování dat, které funkce strávený prováděním kódu v těle jeho funkce a funkce, které ji volaly.|  
+|**% Uplynulého výhradního času**|Procento všech času v profilaci dat, který funkce stráví prováděním kódu v těle jeho funkce. Času stráveného ve funkcích, které volá se, funkce není součástí.|  
   
-## <a name="see-also"></a>Viz také  
- [Souhrnné zobrazení](../profiling/summary-view-sampling-data.md)   
- [Souhrnné zobrazení](../profiling/summary-view-dotnet-memory-data.md)
+## <a name="functions-with-most-individual-work"></a>Funkce s většinou jednotlivé práce  
+ Seznam funkcí, které spotřebovávají nejvíce času prováděním kódu v těle funkce a ne v funkce, které ji volaly.  
+  
+ **Funkce s nejvíce individuální práce** zahrnuje následující data pro každou funkci:  
+  
+|Sloupec|Popis|  
+|------------|-----------------|  
+|**Jméno**|Název funkce.|  
+|**% Výhradního času**|Procento všech času v profilaci dat, který funkce stráví prováděním kódu v těle jeho funkce. Času stráveného ve funkcích, které volá se, funkce není součástí.|  
+  
+## <a name="see-also"></a>Viz také:  
+ [Souhrnné zobrazení – vzorkování dat](../profiling/summary-view-sampling-data.md)   
+ [Souhrnné zobrazení – data paměti .NET](../profiling/summary-view-dotnet-memory-data.md)

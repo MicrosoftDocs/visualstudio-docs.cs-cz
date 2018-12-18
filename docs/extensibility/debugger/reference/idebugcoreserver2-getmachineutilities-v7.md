@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer2::GetMachineUtilities_V7 | Microsoft Docs
+title: IDebugCoreServer2::GetMachineUtilities_V7 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,18 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 96f374d83af705d8e9376d8767c822af82ed4d4a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 265c5b414c53fb6dfe43f63c1016204b8ff02c81
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49908662"
 ---
 # <a name="idebugcoreserver2getmachineutilitiesv7"></a>IDebugCoreServer2::GetMachineUtilities_V7
-Tato metoda získá nástroje počítače pro server.  
+Tato metoda načte počítač nástroje pro server.  
   
 > [!NOTE]
->  Tato metoda je zastaralá: Nepoužívejte ([!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] vždy vrátí hodnotu `E_NOTIMPL` Pokud tato metoda je volána). Ho se uchovávají historických důvodů.  
+>  Tato metoda je zastaralá: Nepoužívejte ([!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] vždy vrátí `E_NOTIMPL` Pokud tato metoda je volána). Je zachován z historických důvodů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,13 +44,13 @@ int GetMachineUtilities_V7(
   
 #### <a name="parameters"></a>Parametry  
  `ppUtil`  
- [out] Vrátí `IDebugMDMUtil2_V7` rozhraní, které představuje informace nástroje pro počítač.  
+ [out] Vrátí `IDebugMDMUtil2_V7` rozhraní, které představuje informace o počítači nástroje.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vždy vrátí hodnotu `E_NOTIMPL`, která určuje, že metoda není implementována.  
+ Vždy vrátí `E_NOTIMPL`, která udává, že metoda není implementována.  
   
 ## <a name="remarks"></a>Poznámky  
- [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] vždy vrátí hodnotu `E_NOTIMPL` Pokud tato metoda je volána.  
+ [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] vždy vrátí `E_NOTIMPL` Pokud tato metoda je volána.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)

@@ -1,10 +1,11 @@
 ---
-title: Stránka vlastností aplikace pro aplikace UWP | Microsoft Docs
+title: Stránka vlastností aplikace pro aplikace pro UPW
 ms.date: 01/23/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
-- AppPackage.Properties.Application"
+- AppPackage.Properties.Application
 helpviewer_keywords:
 - Application page [UWP project]
 author: gewarren
@@ -12,41 +13,42 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 691a4d2c367bb8f283c4381629f33529fa743c62
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 206c856eb87243fd6021c4ff8bb9f6890b8eaf25
+ms.sourcegitcommit: 4708f0ba09b540424efcc344f8438f25432e3d51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44384211"
 ---
-# <a name="application-property-page-uwp-projects"></a>Stránka vlastností aplikace (projekty UWP)
+# <a name="application-property-page-uwp-projects"></a>Stránka vlastností aplikace (projektů UPW).
 
-Použití **aplikace** na stránce vlastností zadejte sestavení projektu univerzální platformu Windows (UWP) a informace o balíčku a verzi cíl Windows 10.
+Použití **aplikace** zadejte sestavení projektu univerzální platformu Windows (UPW) a informace o balíčku a verzi cíl Windows 10 na stránce vlastností.
 
 ![Stránka vlastností aplikace](media/application-page-uwp.png)
 
-Abyste měli přístup **aplikace** vyberte uzel projektu v **Průzkumníku řešení**. Zvolte **projektu** > **vlastnosti** v řádku nabídek. Stránky vlastností otevřít v **aplikace** kartě.
+Pro přístup **aplikace** zvolte uzel projektu v **Průzkumníka řešení**. Klikněte na tlačítko **projektu** > **vlastnosti** na řádku nabídek. Stránky vlastností otevřít v **aplikace** kartu.
 
-## <a name="general-section"></a>Obecné části
+## <a name="general-section"></a>Části Obecné
 
 **Název sestavení**&mdash;Určuje název výstupního souboru, který bude obsahovat manifest sestavení.
 
-Přístup prostřednictvím kódu programu naleznete v tématu <xref:VSLangProj.ProjectProperties.AssemblyName%2A>.
+Programový přístup k této vlastnosti, najdete v článku <xref:VSLangProj.ProjectProperties.AssemblyName%2A>.
 
-**Výchozí obor názvů**&mdash;určuje základní obor názvů pro soubory k projektu nepřidají. Další informace o oborech názvů najdete v tématu [obory názvů (C# Průvodce programováním)](/dotnet/csharp/programming-guide/namespaces/), [obory názvů (Visual Basic)](/dotnet/visual-basic/programming-guide/program-structure/namespaces), nebo [obory názvů (C++)](/cpp/cpp/namespaces-cpp).
+**Výchozí obor názvů**&mdash;určuje základní obor názvů pro soubory přidané do projektu. Další informace o oborech názvů najdete v tématu [obory názvů (C# programováním)](/dotnet/csharp/programming-guide/namespaces/), [oborů názvů (Visual Basic)](/dotnet/visual-basic/programming-guide/program-structure/namespaces), nebo [obory názvů (C++)](/cpp/cpp/namespaces-cpp).
 
-Přístup prostřednictvím kódu programu naleznete v tématu <xref:VSLangProj.ProjectProperties.RootNamespace%2A>.
+Programový přístup k této vlastnosti, najdete v článku <xref:VSLangProj.ProjectProperties.RootNamespace%2A>.
 
-**Informace o sestavení**&mdash;vyberete, zobrazí toto tlačítko [dialogové okno informace o sestavení](../../ide/reference/assembly-information-dialog-box.md).
+**Informace o sestavení**&mdash;zvolíte toto tlačítko se zobrazí [dialogové okno informace o sestavení](../../ide/reference/assembly-information-dialog-box.md).
 
-**Manifest balíčku**&mdash;výběr toto tlačítko otevře návrháře manifestu. Návrháře manifestu můžete také získat přístup tak, že zvolíte _Package.appxmanifest_ souboru v **Průzkumníku řešení**. Další informace najdete v tématu [konfigurace balíčku pomocí návrháře manifestu](/windows/uwp/packaging/packaging-uwp-apps#configure-an-app-package).
+**Manifest balíčku**&mdash;zvolíte toto tlačítko otevře manifest designer. Manifest designer lze rovněž přistupovat výběrem _Package.appxmanifest_ ve **Průzkumníka řešení**. Další informace najdete v tématu [konfigurace balíčku pomocí návrháře manifestu](/windows/uwp/packaging/packaging-uwp-apps#configure-an-app-package).
 
-## <a name="targeting-section"></a>Cílení na části
+## <a name="targeting-section"></a>Cílení na oddíl
 
-Pomocí rozevíracích seznamů v této části můžete nastavit cílovou verzi a minimální verzi Windows 10 pro vaši aplikaci. Je doporučeno, na které cílí nejnovější verzi Windows 10, a pokud vyvíjíte aplikace enterprise příliš podporují starší minimální verze. Další informace o Windows 10, kterou verzi má zvolte najdete v tématu [vyberte verzi UWP](/windows/uwp/updates-and-versions/choose-a-uwp-version).
+Pomocí rozevírací seznamy v této části můžete nastavit cílovou verzi a minimální verzi Windows 10 pro vaši aplikaci. Je doporučeno cílit na nejnovější verzi Windows 10, a pokud vyvíjíte podnikové aplikace, příliš podporují starší minimální verze. Další informace o verzi Windows 10, která se má vybrat, najdete v části [zvolte verzi UPW](/windows/uwp/updates-and-versions/choose-a-uwp-version).
 
-Informace o platformě cílení v Visual Studio 2017, najdete v části [cílení na platformy](https://www.visualstudio.com/productinfo/vs2017-compatibility-vs#a-iddevelopwindows-avisual-studio-2017-support-for-windows-development).
+Informace o platformě cílení v sadě Visual Studio 2017, najdete v části [cílení na platformy](/visualstudio/productinfo/vs2017-compatibility-vs#platform-targeting).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Vytvoření první aplikace UWP](/windows/uwp/get-started/your-first-app)  
-[Vyberte verzi UWP](/windows/uwp/updates-and-versions/choose-a-uwp-version)
+- [Vytvoření první aplikace pro UPW](/windows/uwp/get-started/your-first-app)
+- [Zvolte verzi UPW](/windows/uwp/updates-and-versions/choose-a-uwp-version)

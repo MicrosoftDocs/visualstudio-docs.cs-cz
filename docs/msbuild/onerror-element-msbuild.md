@@ -1,5 +1,5 @@
 ---
-title: OnError – Element (MSBuild) | Microsoft Docs
+title: Onerror – Element (MSBuild) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 03/13/2017
 ms.technology: msbuild
@@ -20,22 +20,23 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 787d1dd1f7ae9b005d1d61c5c0fb09a81f6dc17d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c33f32e46621bb2f56231b2c992712fd42126f1e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49841387"
 ---
-# <a name="onerror-element-msbuild"></a>OnError – element (MSBuild)
-Způsobí, že jeden nebo více cílů provést, pokud `ContinueOnError` atribut je `false` pro nezdařené úlohy.  
+# <a name="onerror-element-msbuild"></a>Onerror – element (MSBuild)
+Způsobí, že jeden nebo více cílů ke spuštění, pokud `ContinueOnError` atribut je `false` neúspěšné úlohy.  
 
  \<Project>  
  \<Cíl >  
- \<OnError >  
+ \<Onerror – >  
 
 ## <a name="syntax"></a>Syntaxe  
 
-```  
+```xml  
 <OnError ExecuteTargets="TargetName"  
     Condition="'String A'=='String B'" />  
 ```  
@@ -48,24 +49,24 @@ Způsobí, že jeden nebo více cílů provést, pokud `ContinueOnError` atribut
 |Atribut|Popis|  
 |---------------|-----------------|  
 |`Condition`|Nepovinný atribut.<br /><br /> Podmínku, která má být vyhodnocen. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|  
-|`ExecuteTargets`|Požadovaný atribut.<br /><br /> Cíle provést, pokud se úloha nezdaří. Více cílů oddělte středníky. Více cílů jsou provedeny v uvedeném pořadí.|  
+|`ExecuteTargets`|Požadovaný atribut.<br /><br /> Cílů ke spuštění neúspěšné úlohy. Několik cílů oddělte středníky. Několik cílů jsou spuštěny v uvedeném pořadí.|  
 
-### <a name="child-elements"></a>Podřízené elementy  
+### <a name="child-elements"></a>Podřízené prvky  
  Žádné  
 
-### <a name="parent-elements"></a>Nadřazené elementy  
+### <a name="parent-elements"></a>Nadřazené prvky  
 
-|Prvek|Popis|  
-|-------------|-----------------|  
-|[cíl](../msbuild/target-element-msbuild.md)|Element kontejneru pro [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] úlohy.|  
+| Prvek | Popis |
+| - | - |
+| [Cíl](../msbuild/target-element-msbuild.md) | Prvek kontejneru pro [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] úlohy. |
 
 ## <a name="remarks"></a>Poznámky  
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] Spustí `OnError` elementu, pokud jeden z `Target` elementu úlohy nezdaří a zobrazí se `ContinueOnError` atribut nastaven na `ErrorAndStop` (nebo `false`). Pokud úloha selže, cíle zadané v `ExecuteTargets` atribut se spustí. Pokud je více než jedna `OnError` element na cíli, `OnError` elementy jsou prováděny postupně, pokud úloha selže.  
+ [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] Spustí `OnError` element, pokud jeden z `Target` elementu úlohy nezdaří a zobrazí se `ContinueOnError` atribut nastaven na `ErrorAndStop` (nebo `false`). Pokud úloha selže, cíle zadané v `ExecuteTargets` atribut je proveden. Pokud existuje více než jeden `OnError` element v cíli, `OnError` prvky jsou spouštěny postupně, pokud se úloha nezdaří.  
 
- Informace o `ContinueOnError` atributů najdete v tématu [Task – Element (MSBuild)](../msbuild/task-element-msbuild.md). Informace o cílech najdete v tématu [cíle](../msbuild/msbuild-targets.md).  
+ Informace o tom, `ContinueOnError` atributu naleznete v tématu [Task – element (MSBuild)](../msbuild/task-element-msbuild.md). Informace o cílech naleznete v tématu [cíle](../msbuild/msbuild-targets.md).  
 
 ## <a name="example"></a>Příklad  
- Následující kód spustí `TaskOne` a `TaskTwo` úlohy. Pokud `TaskOne` selže, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] vyhodnotí `OnError` elementu a spouští `OtherTarget` cíl.  
+ Následující kód se provádí `TaskOne` a `TaskTwo` úlohy. Pokud `TaskOne` selže, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] vyhodnotí `OnError` elementu a spustí `OtherTarget` cíl.  
 
 ```xml  
 <Target Name="ThisTarget">  
@@ -77,6 +78,6 @@ Způsobí, že jeden nebo více cílů provést, pokud `ContinueOnError` atribut
 </Target>  
 ```  
 
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)   
  [Cíle](../msbuild/msbuild-targets.md)

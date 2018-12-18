@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider2::FunctionHasLineInfo | Microsoft Docs
+title: IDebugComPlusSymbolProvider2::FunctionHasLineInfo | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e8175946e7d4c01a2013e31ff39ba7d1ea4161f6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d169c57f612bf8a047387045dcc7e1b33dbc0afb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49888499"
 ---
 # <a name="idebugcomplussymbolprovider2functionhaslineinfo"></a>IDebugComPlusSymbolProvider2::FunctionHasLineInfo
-Určí, zda má zadanou metodu informace řádku.  
+Určuje, zda má zadanou metodu informace řádku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,10 +40,10 @@ int FunctionHasLineInfo(
   
 #### <a name="parameters"></a>Parametry  
  `pAddress`  
- [v] Ladění adresu, která je reprezentována [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) rozhraní. Tato adresa musí být METHOD_ADDRESS.  
+ [in] Adresa pro ladění, která je reprezentována [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) rozhraní. Tato adresa musí být METHOD_ADDRESS.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE`.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE`.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugSymbolProvider** objekt, který zveřejňuje [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) rozhraní.  

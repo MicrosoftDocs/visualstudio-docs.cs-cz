@@ -1,5 +1,5 @@
 ---
-title: O okně registr | Microsoft Docs
+title: Informace o okně registr | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -19,40 +19,38 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 37b2c34971750d8e6db0173f6034342b9efbfd97
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 0219418b754c93b8e5e50997ede73e0611ed496a
+ms.sourcegitcommit: a7de99f36e9ead7ea9e9bac23c88d05ddfc38b00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52257053"
 ---
-# <a name="about-the-registers-window-in-visual-studio"></a>O okně registr v sadě Visual Studio
-**Zaregistruje** okno je k dispozici pouze v případě, že je povoleno ladění úrovni adresu v **možnosti** dialogové okno, **ladění** uzlu.  
+# <a name="about-the-registers-window-in-visual-studio-c-c-visual-basic-f"></a>Informace o okně registr v sadě Visual Studio (C#, C++, Visual Basic, F#)
+
+**Zaregistruje** není k dispozici pouze v případě, že je povoleno ladění úrovni adres v interval **možnosti** dialogovém okně **ladění** uzlu.  
   
- Registry jsou speciální umístění v rámci procesoru (CPU), které se používají k ukládání dat, která procesor aktivně pracuje na malé části. Kompilování nebo interpretace zdrojový kód generuje pokyny, které přesun dat z paměti do registry a zpět znovu, podle potřeby. Přístup k datům v registrech je velmi rychlé ve srovnání s přístup k datům v paměti, proto obvykle spouštět rychleji než kód, který vyžaduje procesor, neustále zavedení a uvolnění zaregistruje kód, který umožňuje procesoru a ponechat data v rejstříku opakovaně k němu přístup. Aby bylo snazší pro kompilátor ponechat data v registrech a provádět další optimalizace, by měl nepoužívejte globální proměnné a závisí na lokální proměnné co nejvíc. Kód zapisovaný tímto způsobem se říká mají dobrou polohu odkazu. V některých jazycích, například C/C++ může programátorů deklarovat proměnnou registrace, která určuje, kompilátor a zkuste to je nejlepší zachovat proměnnou v rejstříku za všech okolností. Další informace najdete v tématu [zaregistrovat – klíčové slovo](http://msdn.microsoft.com/en-us/5b66905a-2f7f-4918-bb55-5e66d4bc50f9).  
+ Registry jsou speciální umístění v rámci procesoru (CPU), které se používají k ukládání dat, která procesor aktivně pracuje na malé části. Kompilace a interpretace zdrojový kód generuje pokyny, které přesouvají data z paměti do registrů a zpět, podle potřeby. Přístup k datům v registrech, je velmi rychlé zpracování ve srovnání s přístup k datům v paměti, takže kód, který umožňuje procesor zachovat data v registru a opakovaně k němu přístup se obvykle provádějí rychleji než kód, který vyžaduje procesor, který se neustále načtení a uvolnění registrů. Aby bylo snazší pro kompilátor zachovat data v registrech a provádět další optimalizace, by měl neměli používat globální proměnné a závisí na místních proměnných co nejvíc. Kód napsaný tímto způsobem se říká, že máte dobré místo odkazu. V některých jazycích, jako je C/C++ programátor můžete deklarovat proměnnou registru, který instruuje kompilátor, aby zkuste nejlépe, mějte na proměnné registru za všech okolností. Další informace najdete v tématu [zaregistrovat – klíčové slovo](https://msdn.microsoft.com/library/5b66905a-2f7f-4918-bb55-5e66d4bc50f9).  
   
- Zaregistruje je možné rozdělit do dvou typů: obecné účely a speciální účel. Pro obecné účely registry obsahovat data pro obecné operace, například přidávání dvou čísel společně nebo odkazující na element v matici. Zaregistruje speciální mají zvláštní účely a speciální význam. Dobrým příkladem je ukazatel zásobníku registr, která procesor používá ke sledování zásobníku volání programu. Jako programátory bude ukazatel zásobníku upravit pravděpodobně není přímo. Je však nezbytné pro správné fungování vašeho programu, protože bez ukazatel zásobníku, nebude procesor věděli, kde se vraťte do na konci volání funkce.  
+ Registry je možné rozdělit do dvou typů: obecné účely a zvláštní účely. Pro obecné účely registrů uchovávání dat pro obecné operace, jako jsou sečtení dvou čísel nebo odkazující na prvek v poli. Speciální registry mají zvláštní účely a zvláštní význam. Dobrým příkladem je ukazatel zásobníku registru, který procesor používá ke sledování zásobníku volání. Jako programátor bude ukazatel zásobníku manipulovat pravděpodobně není přímo. Je však nezbytné pro správné fungování programu, protože procesor nemusí bez ukazatel zásobníku věděli, kde se vraťte na konci volání funkce.  
   
- Většina pro obecné účely registry obsahovat pouze jeden datový prvek. Například jednom celé číslo, číslo s plovoucí desetinnou čárkou nebo element pole. Některé novější procesory mít větší zaregistruje, se nazývá vektoru registrů, které mohou být uloženy malé pole dat. Protože drží množství dat., vector registry povolit operací zahrnujících pole provést velmi rychle. Vector registry nejdřív na levnější a vysoce výkonné superpočítačů používaly ale se stávají nyní k dispozici na procesory, kde se používají k skvělé využít v grafické operace náročné na prostředky.  
+ Většina pro obecné účely registrů obsahovat pouze jeden datový prvek. Například celá čísla, čísla s plovoucí desetinnou čárkou nebo prvek pole. Některé novější procesory mají větší registrů, volá vektorové registry, které může obsahovat malé pole dat. Protože drží množství dat, povolit vektorové registry operace, které zahrnují pole, která se má provést velmi rychle. Vektorové registry na nákladné a vysoce výkonnou superpočítače nejprve používaly ale se stávají nyní k dispozici na mikroprocesory, kde se používá pro skvělé výhody v grafické operace náročné na prostředky.  
   
- Procesor obvykle má dvě sady pro obecné účely registrů, jeden optimalizovaným pro operace s plovoucí desetinnou čárkou a druhou pro operace celé číslo. Logicky toto nastavení se nazývá s plovoucí desetinnou čárkou a zaregistruje celé číslo.  
+ Procesor obvykle má dvě sady pro obecné účely registrů, jeden optimalizované pro operace s plovoucí desetinnou čárkou a druhou pro celočíselné operace. Logicky se označují jako s plovoucí desetinnou čárkou a celočíselné registry.  
   
- Spravovaný kód je kompilované za běhu do nativního kódu, který má přístup k fyzické registry mikroprocesoru. **Zaregistruje** okně se zobrazí tyto fyzické zaregistruje se pro modul common language runtime nebo nativního kódu. **Zaregistruje** okno nezobrazí informace o registraci pro skript nebo aplikaci SQL, protože skript a SQL jsou jazyky, které nepodporují koncept registrů.  
+ Spravovaný kód je zkompilován za běhu a nativní kód, který má přístup k fyzické registrech procesoru. **Zaregistruje** v okně se zobrazí tyto fyzické registrů pro modul common language runtime nebo nativní kód. **Zaregistruje** okno nezobrazí informace registru pro skript nebo aplikaci SQL, protože skript a SQL jsou jazyky, které nepodporují koncept registrů.  
   
- Další informace o zobrazení **zaregistruje** okně najdete v části [pomocí okna zaregistruje](../debugger/how-to-use-the-registers-window.md).  
+ Další informace o zobrazení **zaregistruje** okna, naleznete v tématu [použití okna Registry](../debugger/how-to-use-the-registers-window.md).  
   
- Když se podíváte na **zaregistruje** okno, zobrazí se položky, jako je například v tomto příkladu:  
+ Když se podíváte **zaregistruje** okně se zobrazí položky jako `EAX = 003110D8`.  
   
-```  
-EAX = 003110D8  
-```  
+ Symbol nalevo od `=` podpis je název registru `EAX`, v tomto případě. Číslo vpravo od `=` znak představuje obsah registru.  
   
- Symbol nalevo od přihlašovací = je název registrace, EAX, v tomto případě. Toto číslo napravo od přihlašovací = představuje obsah registrace.  
+ **Zaregistruje** okno umožňuje provádět více než jen zobrazení obsahu registru. Když jste v režimu pozastavení v nativním kódu, můžete kliknout na obsah registru a upravit její hodnotu. To je něco, co byste měli dělat náhodně. Pokud nerozumíte do registru, který upravujete a data, která obsahuje výsledek nepozorný úpravy by mohla být selhání program nebo jiné nežádoucí důsledky. Bohužel podrobné vysvětlení registr sady různých procesorů Intel a kompatibilní s verzí Intel dalece přesahuje rozsah Tento stručný úvod.  
   
- **Zaregistruje** okno umožňuje provést více než jen zobrazení obsah registru. Pokud jste v režimu pozastavení v nativním kódu, můžete kliknutím na obsah registru a upravit hodnotu. To však není něco, které byste měli udělat náhodně. Pokud budete rozumět tomu, registrace, který upravujete a k datům, které obsahuje, je pravděpodobně selhání programu nebo jiné nežádoucí důsledkem výsledek careless úpravy. Bohužel podrobné vysvětlení registrace sady různé procesory Intel a kompatibilní s Intel přejde daleko nad rámec Tento stručný úvod.  
-  
-## <a name="register-groups"></a>Skupiny registru  
- Pro lepší přehlednost, **zaregistruje** okno uspořádá zaregistruje do skupin. Pokud jste klikněte pravým tlačítkem na **zaregistruje** okně se zobrazí místní nabídku obsahující seznam skupin, které můžete zobrazit nebo skrýt podle svých potřeb.  
+## <a name="register-groups"></a>Registrovat skupiny  
+ Pro přehlednost, **zaregistruje** okno uspořádá registry do skupiny. Pokud kliknete pravým tlačítkem **zaregistruje** okně se zobrazí místní nabídku, který obsahuje seznam skupin, které můžete zobrazit nebo skrýt podle svých potřeb.  
   
 ## <a name="see-also"></a>Viz také  
  [Postupy: použití okna registry](../debugger/how-to-use-the-registers-window.md)   
- [Základy ladicího programu](../debugger/debugger-basics.md)
+ [Základy ladicího programu](../debugger/getting-started-with-the-debugger.md)

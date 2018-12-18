@@ -1,5 +1,5 @@
 ---
-title: Analýza výsledků zátěžových testů v sadě Visual Studio | Microsoft Docs
+title: Analýza výsledků zátěžových testů
 ms.date: 10/20/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,40 +10,46 @@ ms.assetid: 8a4ba300-425d-447c-91d9-c53f4345feee
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 7add3789d3c48fb405818f50efd47bb83cb9f899
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 719163e53b1f8c68850b3f4f211838631a25274a
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055605"
 ---
-# <a name="analyze-load-test-results-using-the-load-test-analyzer"></a>Analýza výsledků zátěžového testu pomocí Analyzéru zátěžového testu
+# <a name="analyze-load-test-results-using-the-load-test-analyzer"></a>Analýza výsledků zátěžových testů pomocí Analyzéru zátěžového testu
 
-Najít kritická místa a identifikovat chyby měření vylepšení v aplikaci při použití Analyzéru zátěžového testu. Analýza výsledků zátěžových testů v těchto způsobů:
+Nalezení problémových míst, identifikovat chyby a měřit zlepšení ve vaší aplikaci, když použijete **Analyzéru zátěžového testu**.
 
--   Sledování zátěžový test, zda je spuštěná.
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
--   Analýza zátěžový test, po jeho dokončení.
+Analýza výsledků zátěžových testů v těchto způsobů:
 
--   Zobrazení výsledků z předchozího zátěžový test.
+-   Sledujte zátěžový test, když je spuštěn.
 
-Můžete také vytvořit sestavy, které porovnávají dvou nebo více sestav pro analýzu trendů sdílet s zúčastněným stranám. V tématu [Reporting zátěžové testy s výsledky pro porovnávání testů a analýzu trendů](../test/compare-load-test-results.md).
+-   Analyzujte test zatížení po jeho dokončení.
 
-Můžete provést tyto úlohy jestli spuštění zátěžového testu z Visual Studio Enterprise nebo z příkazového řádku a jestli se v jednom počítači nebo ve vzdáleném počítači spusťte zátěžový test.
+-   Zobrazení výsledků z předchozího testu zatížení.
 
-## <a name="differences-between-analyzing-a-running-and-a-completed-load-test"></a>Rozdíly mezi analýza spuštěný a dokončeného zátěžového testu
+Můžete také vytvořit sestavy, které porovnávají dva nebo více sestav pro analýzu trendů sdílet se zúčastněnými stranami. Zobrazit [sestav zátěžové testy s výsledky pro porovnávání testů a analýzu trendů](../test/compare-load-test-results.md).
 
- Při spuštění zátěžového testu zatížení testování analyzátor zobrazí na samostatné kartě spolu s název zátěžový test a čas, který byl spuštěn test (například **LoadTest1 [12:40 PM]**). Po spuštění zátěžového testu menší sadu data čítače výkonu se udržuje v paměti. Tuto sadu dat můžete sledovat, při spuštění zátěžového testu. Po dokončení zátěžový test, můžete analyzovat kompletní data z databáze. Existují rozdíly v jaká data se zobrazí, když běží zátěžový test a co data, která se zobrazí po zatížení test byla dokončena. Například 90 procent a 95 procent času data odpovědi není vypočítat, dokud se nedokončí zátěžový test. Některé rozdíly ve funkci nástroje, které jsou k dispozici k analýze dat taky dojít.
+Tyto kroky můžete udělat, jestli spuštění zátěžového testu ze sady Visual Studio Enterprise nebo z příkazového řádku a určuje, zda spustit zátěžový test v jednom počítači nebo ve vzdáleném počítači.
 
- Když spustíte zátěžový test, jsou k dispozici dvě zobrazení: zobrazení grafů a tabulek zobrazení. Zobrazení grafů můžete graf čítače výkonu, které byly shromážděny. Zobrazení tabulky poskytuje informace o jednotlivých testů, stránky, transakce a požadavky, které byly shromážděny. Můžete také získat tabulku, která obsahuje chyby.
+## <a name="differences-between-analyzing-a-running-and-a-completed-load-test"></a>Rozdíly mezi analýzy spuštěné a dokončeného zátěžového testu
 
- Ve výchozím nastavení je po dokončení spuštění zátěžového testu zobrazí souhrnné zobrazení. Můžete přepínat mezi zobrazení souhrn, grafy, tabulky a podrobnosti s použitím panelu nástrojů. Analyzéru zátěžového testu může být ukotveno nebo nastavte na float pomocí technik manipulaci obvykle okno sady Visual Studio. Když analyzujete dokončeného zátěžového testu běží, může mít několik zatížení testování analyzátorů otevřete ve stejnou dobu k porovnání testovací spouští různé zatížení.
+ Při spuštění zátěžového testu **Analyzéru zátěžového testu** zobrazí na samostatné kartě, společně s názvem vašeho testu zatížení a čas, který byl spuštěn test (třeba **LoadTest1 [12:40 hodin]**). Při běhu zátěžového testu, menší sady dat čítače výkonu se zachová v paměti. Tato sada dat můžete sledovat, při spuštění zátěžového testu. Po dokončení zátěžového testu můžete analyzovat kompletní data z databáze. Existují rozdíly v jaká data se zobrazí, když běží zátěžové testy a co data, která se zobrazí po zátěžového testu byla dokončena. Například 90 až 95 procent data o době odezvy se nevypočítá až do dokončení zátěžového testu. Několik rozdílů dojít také funkčnosti nástroje, které jsou k dispozici, pokud chcete analyzovat data.
+
+ Při spuštění zátěžového testu, jsou k dispozici dvě zobrazení: **grafy** zobrazení a **tabulky** zobrazení. **Grafy** zobrazení vám umožní graf čítače výkonu, které se shromažďují. **Tabulky** zobrazení poskytuje informace o jednotlivých testů, stránek, transakce a požadavky, které byly shromážděny. Získáte také tabulku, která se zobrazí seznam chyb.
+
+ Ve výchozím nastavení po dokončení zátěžového testu **Souhrn** zobrazení. Můžete přepínat mezi **Souhrn**, **grafy**, **tabulky**, a **podrobnosti** zobrazeními pomocí panelu nástrojů. **Analyzéru zátěžového testu** můžete ukotvit nebo nastavit jako plovoucí prvek pomocí obvyklých technik zpracování okno Visual Studio. Při analýze spuštění dokončeného zátěžového testu můžete mít více **zatížení testování analyzátory** otevřít ve stejnou dobu pro porovnání různých zátěžový test běží.
 
 ## <a name="tasks"></a>Úlohy
 
 |Úlohy|Související témata|
-|-----------|-----------------------|
-|**Přístup k výsledků zátěžového testu:** při spuštění zátěžového testu z editoru načíst otestovat, automaticky otevře výsledků zátěžových testů a v analyzátor spouštění testů se zobrazí spuštěné zátěžový test.|-   [Postupy: přístup k výsledků zátěžového testu pro analýzu](../test/how-to-access-load-test-results-for-analysis.md)|
-|**Přidání poznámky k analýze do zátěžového testu:** komentáře můžete přidat do zátěžový test při provedení analýzy. Komentáře jsou uloženy trvale, společně s výsledků testů zatížení. Popis, který zadáte také zobrazí v **popis** sloupec, který je přidružen zátěžového testu v dialogovém okně Otevřít a správa výsledků testů v editoru načíst testování.<br /><br /> Další informace najdete v tématu [postupy: přístup výsledků zátěžového testu pro analýzu](../test/how-to-access-load-test-results-for-analysis.md).<br /><br /> Při vytvoření sestavy aplikace Excel pro zatížení výsledky testů se navíc nezobrazí komentáře.<br /><br /> Další informace najdete v tématu [Reporting výsledků zátěžových testů pro porovnávání testů a analýzu trendů](../test/compare-load-test-results.md).|-   [Postupy: přidávání komentářů během analýzy dokončeného zátěžového testu](../test/how-to-add-comments-on-a-completed-load-test.md)|
-|**Analýza výsledků zátěžového testu:** po získat přístup k zátěžový test, který spouští dat, výsledná data můžete analyzovat. Můžete zobrazit souhrn testu zatížení rychle pochopit výsledky. Souhrn testu zatížení zobrazuje výsledky klíče ve formátu compact a snadno pro čtení.<br /><br /> Můžete si ho vytisknout souhrn testu zatížení. Díky tomu je vhodnější použít při komunikaci výsledky zúčastněným stranám.<br /><br /> Podrobnosti o si výsledky testu zatížení můžete analyzovat pomocí grafů a tabulek ve výsledcích. Jedná se o chyby, stránky, požadavků, trasování SQL, testů, prahové hodnoty a transakce.|-   [Načíst přehled souhrnu výsledků testu](../test/load-test-results-summary-overview.md)<br />-   [Postupy: zobrazení doby odezvy webové stránky](../test/how-to-view-web-page-response-time-in-a-load-test.md)<br />-   [Analýza mezních pravidel](../test/analyze-threshold-rule-violations-in-load-tests.md)<br />-   [Analýza výsledků zátěžových testů v zobrazení grafů](../test/analyze-load-test-results-in-the-graphs-view.md)<br />-   [Analýza výsledků zátěžových testů a chyb v tabulkovém zobrazení](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)|
-|**Analýza aktivity virtuálních uživatelů ve vaší výsledcích zátěžového testu izolovat problémy s výkonem:** grafu aktivity virtuálního uživatele můžete použít k vizualizaci, co dělají virtuálních uživatelů během zátěžového testu. To vám může pomoct izolovat špičky v Procesorem nebo vyřazuje v požadavků za sekundu a zjistit, které testy nebo stránky počítač během těchto špičky a hodnota neklesne.|-   [Analýza aktivity virtuálních uživatelů v podrobném zobrazení](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md)|
+|-|-|
+|**Přístup k výsledky zátěžového testu:** při spuštění zátěžového testu z editoru zátěžových testů, výsledky zátěžového testu se automaticky otevře a spuštění zátěžového testu se zobrazí v **Analyzéru zátěžového testu**.|-   [Postupy: přístup k analýze výsledků zátěžového testu](../test/how-to-access-load-test-results-for-analysis.md)|
+|**Přidat poznámky analýzy do zátěžového testu:** přidáte komentáře do zátěžového testu při provádění analýzu. Komentáře jsou uloženy trvale, společně s výsledkem zátěžového testu. Popis, který můžete zadat také zobrazí v **popis** sloupec, který je spojen se zátěžovým testem v **otevřít a spravovat výsledky testu** dialogové okno v editoru zátěžového testu.<br /><br /> Další informace najdete v tématu [postupy: přístup k analýze výsledků zátěžového testu](../test/how-to-access-load-test-results-for-analysis.md).<br /><br /> Kromě toho komentáře se zobrazí, když vytváříte sestavu aplikace Excel pro zatížení výsledky testů.<br /><br /> Další informace najdete v tématu [sestav zátěžové testy s výsledky pro porovnávání testů a analýzu trendů](../test/compare-load-test-results.md).||
+|**Analýza výsledků zátěžových testů:** po přistupujete ke spuštění data zátěžového testu, můžete analyzovat Výsledná data. Můžete zobrazit souhrn zátěžového testu rychle porozumět výsledky. Souhrn zátěžového testu zobrazí klíčové výsledky ve formátu kompaktní a snadno čtení.<br /><br /> Souhrn zátěžového testu můžete vytisknout. Je to vhodné pro použití při komunikaci výsledky účastníkům.<br /><br /> Podrobnosti o výsledky zátěžového testu můžete analyzovat pomocí grafů a tabulek ve výsledcích. Patří mezi ně **chyby**, **stránky**, **požadavky**, **trasování SQL**, **testy**,  **Prahové hodnoty**, a **transakce**.|-   [Přehled souhrnu výsledků zátěžového testu](../test/load-test-results-summary-overview.md)<br />-   [Postupy: zobrazení webové stránky odpovědi](../test/how-to-view-web-page-response-time-in-a-load-test.md)<br />-   [Analýza mezních pravidel](../test/analyze-threshold-rule-violations-in-load-tests.md)<br />-   [Analýza výsledků zátěžových testů v zobrazení grafů](../test/analyze-load-test-results-in-the-graphs-view.md)<br />-   [Analýza výsledků zátěžových testů a chyb v tabulkovém zobrazení](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)|
+|**Analýza aktivity virtuálních uživatelů ve vašich výsledcích zátěžového testu k izolování problémů s výkonem:** graf aktivity virtuálního uživatele můžete použít k vizualizaci, co dělají virtuálních uživatelů během zátěžového testu. To může pomoci izolovat poraďte se špičkami Procesorem nebo výpadky požadavků za sekundu a určit, které testy nebo stránky jsou spuštěny během těchto provozní špičky a drops.|-   [Analýza aktivity virtuálních uživatelů v podrobném zobrazení](../test/analyze-load-test-virtual-user-activity-in-the-details-view.md)|

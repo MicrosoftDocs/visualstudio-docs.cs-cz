@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31473635"
 ---
 # <a name="how-to-expand-and-collapse-spy-trees"></a>Postupy: Rozbalení a sbalení stromů nástroje Spy++
 Můžete rozbalit nebo sbalit zobrazení Windows, procesy a vlákna pomocí dvou metod: Kliknutím na ikony v okně nebo pomocí **stromu** nabídky. + A - ikony ve stromové struktuře fungovat stejně jako v okně projektu Visual C++.  

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: připojení rozšíření spravovaného kódu k dokumentům | Microsoft Docs'
+title: 'Postupy: připojení spravovaných rozšíření kódu k dokumentům'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,14 +16,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: fe415cfb0635f133baf191f027ca7ae0111989a9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c6e39f27caf9d321bb83666d72114a9675091f03
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35257036"
 ---
-# <a name="how-to-attach-managed-code-extensions-to-documents"></a>Postupy: Připojení rozšíření spravovaného kódu k dokumentům
-  Přizpůsobení sestavení může připojit k existující dokument aplikace Microsoft Office Word nebo sešitu aplikace Microsoft Office Excel. Tento dokument nebo sešitu může být v libovolném formátu souboru, která je podporována projektů Microsoft Office a nástroje pro vývoj v sadě Visual Studio. Další informace najdete v tématu [architektura z úpravy na úrovni dokumentů](../vsto/architecture-of-document-level-customizations.md).  
+# <a name="how-to-attach-managed-code-extensions-to-documents"></a>Postupy: připojení spravovaných rozšíření kódu k dokumentům
+  Přizpůsobení sestavení může připojit k existující dokument aplikace Microsoft Office Word nebo sešitu aplikace Microsoft Office Excel. Tento dokument nebo sešitu může být v libovolném formátu souboru, která je podporována projektů Microsoft Office a nástroje pro vývoj v sadě Visual Studio. Další informace najdete v tématu [architektura přizpůsobení na úrovni dokumentu](../vsto/architecture-of-document-level-customizations.md).  
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
@@ -32,11 +33,11 @@ ms.lasthandoff: 04/16/2018
 > [!NOTE]  
 >  Přizpůsobení se nepodaří načíst, pokud kód očekává ovládacích prvků, které nemá zadaný dokument.  
   
- ![odkaz na video](../vsto/media/playvideo.gif "odkaz na video") související Videoukázka, najdete v části [provést jak I: připojit nebo odpojit sestavení VSTO z dokumentu aplikace Word?](http://go.microsoft.com/fwlink/?LinkId=136782).  
+ ![odkaz na video](../vsto/media/playvideo.gif "odkaz na video") související Videoukázka, najdete v části [jak I: připojit nebo odpojit sestavení VSTO z dokumentu aplikace Word?](http://go.microsoft.com/fwlink/?LinkId=136782).  
   
 ### <a name="to-attach-managed-code-extensions-to-a-document"></a>Připojení rozšíření spravovaného kódu do dokumentu.  
   
-1.  V projektu, který nevyžaduje Microsoft Office, jako je například konzolovou aplikaci nebo v projektu Windows Forms přidejte odkaz na Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll a Microsoft.VisualStudio.Tools.Applications.Runtime.dll sestavení.  
+1.  V projektu, který nevyžaduje Microsoft Office, jako je konzolová aplikace nebo projekt Windows Forms, přidejte odkaz na *Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll* a  *Microsoft.VisualStudio.Tools.Applications.Runtime.dll* sestavení.  
   
 2.  Přidejte následující **importy** nebo **pomocí** příkazy na začátek souboru kódu.  
   
@@ -52,8 +53,8 @@ ms.lasthandoff: 04/16/2018
   
 4.  Sestavte projekt a spusťte aplikaci v počítači, ve které chcete připojit přizpůsobení. Počítač musí mít Visual Studio 2010 Tools for Office Runtime nainstalována.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Správa dokumentů na serveru s použitím třídy ServerDocument](../vsto/managing-documents-on-a-server-by-using-the-serverdocument-class.md)   
- [Postupy: odebrání rozšíření spravovaného kódu z dokumentů](../vsto/how-to-remove-managed-code-extensions-from-documents.md)   
- [Manifesty aplikací a nasazení v řešeních pro systém Office](../vsto/application-and-deployment-manifests-in-office-solutions.md)  
+ [Postupy: odebrání spravovaných rozšíření kódu z dokumentů](../vsto/how-to-remove-managed-code-extensions-from-documents.md)   
+ [Manifesty aplikace a nasazení v řešeních pro systém Office](../vsto/application-and-deployment-manifests-in-office-solutions.md)  
   

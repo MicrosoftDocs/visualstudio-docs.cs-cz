@@ -1,6 +1,7 @@
 ---
 title: 'CA2133: Delegáti musejí být připojeni k metodám s konzistentní transparentností'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -11,13 +12,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: eee7b4857f91d4d201b79e0814113b36b03fc151
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 11f6738d1f280869d5390b8109e61a6efb9c64b9
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45545538"
 ---
 # <a name="ca2133-delegates-must-bind-to-methods-with-consistent-transparency"></a>CA2133: Delegáti musejí být připojeni k metodám s konzistentní transparentností
+
 |||
 |-|-|
 |TypeName|DelegatesMustBindWithConsistentTransparency|
@@ -26,19 +29,24 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Narušující|
 
 > [!NOTE]
->  Toto upozornění se použije pouze na kód, který běží CoreCLR (verze modulu CLR, které jsou specifické pro Silverlight webových aplikací).
+> Toto upozornění se použije pouze na kód, který je spuštěn CoreCLR (verze CLR, který je specifický pro webové aplikace Silverlight).
 
 ## <a name="cause"></a>příčina
- Toto upozornění se aktivuje na metodu, která sváže delegáta označené <xref:System.Security.SecurityCriticalAttribute> metodě průhledná nebo která je označena <xref:System.Security.SecuritySafeCriticalAttribute>. Upozornění je také vyvoláno na metodě, která vytvoří vazbu transparentního delegáta nebo bezpečně kritického delegáta na kritickou metodu.
+
+Toto upozornění je vyvoláno na metodě, která vytvoří vazbu delegáta označeného atributem <xref:System.Security.SecurityCriticalAttribute> na metodu, která je transparentní nebo která je označena pomocí <xref:System.Security.SecuritySafeCriticalAttribute>. Upozornění je také vyvoláno na metodě, která vytvoří vazbu transparentního delegáta nebo bezpečně kritického delegáta na kritickou metodu.
 
 ## <a name="rule-description"></a>Popis pravidla
- Delegát typy a metody, které se vytvořit vazbu k musí být konzistentní transparentnost. Delegáti transparentní a kritická pouze může vytvořit vazbu k jiné metody průhledných nebo kritická. Podobně kritické delegáti může svázat jenom nejdůležitější metody. Tato vazba pravidla ujistěte se, že pouze kód, který lze vyvolat metodu prostřednictvím delegáta může mít také vyvolat stejnou metodu přímo. Například pravidla vazby zabránit kód transparentní pro volání kód kritický pro přímo prostřednictvím transparentní delegáta.
+
+Typy delegátů a metody, které jsou svázat musí mít konzistentní transparentnost. Transparentní a bezpečné a kritické pro delegáty může být svázán pouze jiným metodám bezpečný a kritický nebo transparentní. Podobně kritické delegátů mohou být svázán pouze kritické metody. Tato pravidla vazby Ujistěte se, že pouze kód, který může vyvolat metodu prostřednictvím delegáta může mít také vyvolat stejnou metodu přímo. Například pravidel vazby zabránit transparentní kód volání kritický kód přímo prostřednictvím transparentního delegáta.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Opravit porušení toto upozornění, změňte průhlednost delegáta nebo metody, která se váže tak, aby průhlednost dva jsou ekvivalentní.
+
+Chcete-li opravit porušení tohoto upozornění, změňte průhlednost delegáta nebo metody, která se váže tak, že jsou ekvivalentní transparentnost z nich.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Nepotlačujte upozornění na toto pravidlo.
+
+Nepotlačujte upozornění na toto pravidlo.
 
 ### <a name="code"></a>Kód
- [!code-csharp[FxCop.Security.CA2133.DelegatesMustBindWithConsistentTransparency#1](../code-quality/codesnippet/CSharp/ca2133-delegates-must-bind-to-methods-with-consistent-transparency_1.cs)]
+
+[!code-csharp[FxCop.Security.CA2133.DelegatesMustBindWithConsistentTransparency#1](../code-quality/codesnippet/CSharp/ca2133-delegates-must-bind-to-methods-with-consistent-transparency_1.cs)]

@@ -1,5 +1,5 @@
 ---
-title: Globalizace a lokalizace v aplikaci Excel řešení | Microsoft Docs
+title: Globalizace a lokalizace řešení pro Excel
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -15,91 +15,92 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2baf3f9617b7401ac82bc7aff7f04bbc6bb6eb08
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ade59e757778ac7858732f5bf9880b9f88eacd69
+ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39567469"
 ---
 # <a name="globalization-and-localization-of-excel-solutions"></a>Globalizace a lokalizace řešení pro Excel
-  Tato část obsahuje informace o zvláštní upozornění pro aplikaci Microsoft Office Excel řešení, které se budou spouštět v počítačích s jinou než anglickou nastavení pro Windows. Většinu aspektů globalizace a lokalizace řešení Microsoft Office jsou stejné jako dojde při vytvoření jiných druhů řešení pomocí sady Visual Studio. Obecné informace najdete v tématu [Globalizing a lokalizace aplikací](/visualstudio/ide/globalizing-and-localizing-applications).  
+  Tato část obsahuje informace o důležité informace pro řešení Microsoft Office Excel, která se spustí na počítačích, které mají jiné než anglické jazykové nastavení pro Windows. Většinu aspektů globalizace a lokalizace řešení pro Microsoft Office jsou stejné jako dojde při vytvoření jiných typů řešení s využitím sady Visual Studio. Obecné informace najdete v tématu [Globalize a lokalizace aplikací](/visualstudio/ide/globalizing-and-localizing-applications).  
   
- Ve výchozím nastavení hostitelské ovládací prvky v aplikaci Microsoft Office Excel pracovní správně v místní nastavení systému Windows, tak dlouho, dokud všechna data, která je předána ani s nimi manipulovat pomocí spravovaného kódu je naformátován pomocí Czech (Czech Republic) formátování. V projektech cílených [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)], toto chování se řídí modul CLR (CLR).  
+ Ve výchozím nastavení hostitelské ovládací prvky v aplikaci Microsoft Office Excel práce správně v regionální nastavení Windows, tak dlouho, dokud všechna data, která je předána ani s nimi manipulovat, pomocí spravovaného kódu je naformátována pomocí formátování Angličtina (Spojené státy). V projektech, které se zaměřují [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)], toto chování je řízen modulem common language runtime (CLR).  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
-## <a name="formatting-data-in-excel-with-various-regional-settings"></a>Formátování dat v aplikaci Excel s různými místní nastavení  
- Je třeba naformátovat všechna data, která má závislé na národním prostředí formátování, jako je například kalendářních dat a měny pomocí formátu data Czech (Czech Republic) (národní prostředí ID 1033) před předejte ji do aplikace Microsoft Office Excel nebo číst data z kódu v projektu Office.  
+## <a name="format-data-in-excel-with-various-regional-settings"></a>Formátování dat v aplikaci Excel s různá místní nastavení  
+ Je nutné naformátovat všechna data, která obsahuje citlivé na národní prostředí formátování, jako je například kalendářní data a Měna, ve formátu data Angličtina (Spojené státy) (národní prostředí ID 1033) před předávat do aplikace Microsoft Office Excel nebo číst data z kódu v projektu Office.  
   
- Ve výchozím nastavení při vývoji řešení Office v sadě Visual Studio, model objektů aplikace Excel očekává, národní prostředí ID 1033 data formátování (to se nazývá také uzamčení objektový model pro národní prostředí ID 1033). Toto chování odpovídá způsobu, jakým Visual Basic pro aplikace funguje. Toto chování však lze upravit v řešení v sadě Office.  
+ Ve výchozím nastavení při vývoji řešení pro Office v sadě Visual Studio, objektový model aplikace Excel očekává, že formátování dat ID 1033 národního prostředí (to se také nazývá zamykání objektový model pro národní prostředí ID 1033). Toto chování odpovídá způsobu, jakým funguje Visual Basic for Applications. Toto chování však můžete upravit ve vašich řešeních pro Office.  
   
-### <a name="understanding-how-the-excel-object-model-always-expects-locale-id-1033"></a>Pochopení, jak Model objektů aplikace Excel vždy očekává ID národního prostředí 1033  
- Ve výchozím nastavení řešení pro systém Office, které vytvoříte pomocí sady Visual Studio neovlivní nastavení národního prostředí koncového uživatele a vždy chovat, jako kdyby národní prostředí je angličtina (Spojené státy). Například, pokud získání nebo nastavení <xref:Microsoft.Office.Interop.Excel.Range.Value2%2A> vlastností v aplikaci Excel, data musí být ve formátu tak, aby se očekává ID národního prostředí 1033. Pokud používáte jiný datový formát, můžete získat neočekávané výsledky.  
+### <a name="understand-how-the-excel-object-model-always-expects-locale-id-1033"></a>Vysvětlení, jak objektovému modelu Excelu. vždy očekává, že ID 1033 národního prostředí  
+ Ve výchozím nastavení řešení pro systém Office, které vytvoříte pomocí sady Visual Studio nevztahují na nastavení národního prostředí koncového uživatele a vždy se chovají jako by národní prostředí je angličtina (Spojené státy). Například, pokud je získání nebo nastavení <xref:Microsoft.Office.Interop.Excel.Range.Value2%2A> vlastnosti v aplikaci Excel, data musí být ve formátu tak, jak očekává, že ID národního prostředí 1033. Pokud používáte formát různých dat, může se zobrazit neočekávané výsledky.  
   
- I když použijete formát Czech (Czech Republic) pro data, která je předán nebo manipulovat spravovaného kódu, aplikace Excel interpretuje a zobrazí data správně podle nastavení národního prostředí koncového uživatele. Aplikace Excel můžete formátu dat správně, protože spravovaný kód předá formátu národního prostředí ID 1033 spolu s daty, která označuje, že data jsou v Czech (Czech Republic) a proto musí být naformátována tak, aby odpovídaly nastavení národního prostředí uživatele.  
+ I když použijete formát Angličtina (Spojené státy) pro data, která je předána ani s nimi manipulovat spravovaným kódem, aplikace Excel interpretuje a zobrazí data správně podle nastavení národního prostředí koncového uživatele. Aplikace Excel můžete naformátovat data správně, protože spravovaný kód předá národní prostředí ID 1033 spolu s daty, což znamená, že data jsou v angličtině (USA) formátu a proto musí být přeformátovali tak, aby odpovídaly nastavení národního prostředí uživatele.  
   
- Například pokud koncoví uživatelé mají svoje místní nastavení nastaven německou prostředí, očekávané datum 29. června 2005, chcete-li být naformátován takto: 29.06.2005. Ale pokud vaše řešení předá data do aplikace Excel jako řetězec, je třeba naformátovat datum podle formátu Czech (Czech Republic): 6/29/2005. Pokud buňky formátována jako datum buňku, aplikace Excel se zobrazí datum ve formátu němčina (Německo).  
+ Například pokud koncoví uživatelé mají svá místní nastavení nastavit s národním prostředím němčina (Německo), očekávané datum 29. června, 2005, má být formátováno tímto způsobem: 29.06.2005. Nicméně pokud vaše řešení předá data do aplikace Excel jako řetězec, je nutné naformátovat datum podle používaného Angličtina (Spojené státy) formát: 6/29/2005. Pokud buňky je formátován jako buňku data, aplikace Excel se zobrazí datum ve formátu němčina (Německo).  
   
-### <a name="passing-other-locale-ids-to-the-excel-object-model"></a>Předání jiné ID národního prostředí Model objektů aplikace Excel  
- Modul CLR (CLR) automaticky předá ID 1033 národního prostředí pro všechny metody a vlastnosti ve model objektů aplikace Excel, které přijímají národního prostředí důvěrná data. Neexistuje žádný způsob, jak změnit toto chování automaticky pro všechna volání do modelu objektu. Však můžete předat ID národního prostředí jiný do konkrétní metody pomocí <xref:System.Type.InvokeMember%2A> k volání metody a předáním ID národního prostředí, který má *jazykovou verzi* parametru metody.  
+### <a name="pass-other-locale-ids-to-the-excel-object-model"></a>Předání dalších ID národního prostředí k objektovému modelu Excelu.  
+ Common language runtime (CLR) automaticky předá národní prostředí ID 1033 pro všechny metody a vlastnosti v modelu objektů aplikace Excel, které přijímají data citlivé na národní prostředí. Neexistuje žádný způsob, jak změnit toto chování automaticky pro všechna volání do objektového modelu. Ale můžete předat ID jiné národní prostředí pro konkrétní metody pomocí <xref:System.Type.InvokeMember%2A> k volání metody a předáním ID národního prostředí pro *jazykovou verzi* parametru metody.  
   
-## <a name="localizing-document-text"></a>Lokalizace textového dokumentu  
- Dokument, šablony nebo sešitu ve vašem projektu pravděpodobně obsahuje statický text, který musí být lokalizované odděleně od sestavení a další spravované prostředky. Přímý způsob, jak to udělat, je vytvořit kopii dokumentu a převede text pomocí aplikace Microsoft Office Word nebo Microsoft Office Excel. Tento proces funguje, i když neprovedete žádné změny kódu, protože může být propojený libovolný počet dokumentů do stejného sestavení.  
+## <a name="localize-document-text"></a>Lokalizace textového dokumentu  
+ Dokument, šablonu nebo sešitu ve vašem projektu nejspíš obsahuje statický text, který musí být lokalizovaný odděleně od sestavení a další spravované prostředky. Jednoduchý způsob, jak to provést je vytvořit kopii dokumentu a překládat text pomocí aplikace Microsoft Office Word nebo Microsoft Office Excel. Tento proces funguje i když neprovedete žádné změny kódu, protože lze propojit libovolný počet dokumentů do stejného sestavení.  
   
- Dál musíte zkontrolovat, že libovolná součást váš kód, který komunikuje s textem dokumentu pokračuje tak, aby odpovídaly jazyk textu a že záložky pojmenované oblasti, a další pole zobrazení pojmout všechny přeformátování dokumentu Office, který je nezbytný k Upravte jinou délku gramatika a text. Šablonu dokumentů, které obsahují poměrně málo text můžete zvážit ukládání textu do souborů prostředků a pak načítání textu za běhu.  
+ Stále musíte zkontrolovat, že libovolné části kódu, který komunikuje s textem dokument i nadále jazyk textu, a to této záložky, pojmenované oblasti, a další pole zobrazení zvládnutí přeformátování dokument Office, který bylo nutné Upravte jinou délku gramatiky a text. Pro šablony dokumentů, které obsahují poměrně málo text můžete chtít zvážit ukládání textu do souborů prostředků a potom načítání textu za běhu.  
   
-### <a name="text-direction"></a>Směr textové  
- V aplikaci Excel můžete nastavit vlastnost listu k vykreslení textu zleva doprava. Hostování ovládacích prvků nebo libovolný ovládací prvek, který má `RightToLeft` vlastnost, která se automaticky umístí na návrháře odpovídat tato nastavení za běhu. Není k dispozici nastavení dokumentu obousměrný text (změnit jenom vaše zarovnání textu), takže ovládací prvky nelze mapovat na toto nastavení. Místo toho je nutné nastavit zarovnání textu pro každý ovládací prvek. Je možné napsat kód, který provede všechny ovládací prvky a nutí je k vykreslení textu zprava doleva.  
+### <a name="text-direction"></a>Směr textu  
+ V aplikaci Excel můžete nastavit vlastnost listu pro vykreslení textu zprava doleva. Hostování ovládacích prvků nebo libovolný ovládací prvek, který má `RightToLeft` vlastnost, která se přikládá návrháře automaticky odpovídat následujícímu nastavení za běhu. Není k dispozici nastavení dokument pro obousměrný text (stačí změnit váš zarovnání textu), takže ovládací prvky nelze mapovat na toto nastavení. Místo toho je nutné nastavit zarovnání textu pro každý ovládací prvek. Je možné napsat kód, který provede všechny ovládací prvky a vynuťte jejich vykreslení textu zprava doleva.  
   
-### <a name="changing-culture"></a>Změna jazykovou verzi  
- Kód přizpůsobení na úrovni dokumentu obvykle sdílí hlavního vlákna uživatelského rozhraní aplikace Excel, takže všechny změny provedené u jazykovou verzi vlákna ovlivňuje všechno ostatní, který běží v daném vláknu; Tato změna není omezen na vlastní.  
+### <a name="change-culture"></a>Změna jazykové verze  
+ Přizpůsobení na úrovni dokumentu kódu obvykle sdílí hlavního vlákna uživatelského rozhraní aplikace Excel, takže všechno ostatní, na kterém běží v daném vláknu; ovlivní všechny změny provedené u jazykové verzi vlákna změny se neomezuje na vašem vlastním přizpůsobení.  
   
- Ovládací prvky Windows Forms se inicializují před úrovni aplikace VSTO doplňky jsou spouštěné hostitelskou aplikaci. V těchto situacích jazykovou verzi by mělo být změněno před nastavením ovládacích prvků uživatelského rozhraní.  
+ Ovládací prvky Windows Forms jsou inicializovány před úrovni aplikace doplňků VSTO jsou spouštěny hostitelskou aplikaci. V těchto situacích by měl změnit jazykovou verzi před nastavením ovládacích prvků uživatelského rozhraní.  
   
-## <a name="installing-the-language-packs"></a>Instalace jazykové sady  
- Pokud používáte jinou než anglickou nastavení pro Windows, můžete nainstalovat [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] jazykových sad zobrazíte [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] zprávy ve stejném jazyce jako Windows. Pokud žádné koncovým uživatelům spustit řešení s jinou než anglickou nastavení pro Windows, musí mít správný jazyková sada zobrazíte runtime zprávy ve stejném jazyce jako Windows. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Jazykové sady jsou k dispozici na [Microsoft Download Center](http://www.microsoft.com/downloads).  
+## <a name="install-the-language-packs"></a>Instalace jazykové sady  
+ Pokud máte jiné než anglické jazykové nastavení pro Windows, můžete nainstalovat [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] jazykových sad zobrazíte [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] zprávy ve stejném jazyce jako Windows. Pokud koncové uživatele, spusťte řešení pomocí jiné než anglické jazykové nastavení pro Windows, musí mít správné jazykovou sadu pro zobrazení zpráv modulu runtime ve stejném jazyce jako Windows. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Jazykové sady jsou k dispozici [webu služby Stažení softwaru](http://www.microsoft.com/downloads).  
   
- Kromě toho jsou nezbytné pro zprávy ClickOnce redistributable jazykových sad rozhraní .NET Framework. Rozhraní .NET Framework jazykové sady jsou k dispozici na [Microsoft Download Center](http://www.microsoft.com/downloads).  
+ Kromě toho jsou nezbytné pro zprávy ClickOnce redistributable jazykové sady rozhraní .NET Framework. Jazykové sady rozhraní .NET Framework jsou k dispozici [webu služby Stažení softwaru](http://www.microsoft.com/downloads).  
   
-## <a name="regional-settings-and-excel-com-calls"></a>Místní nastavení a volání Excelu COM  
- Vždy, když se spravovaným klientem volá metodu na objekt COM a musí se předat informace specifické pro jazykovou verzi, nebude proto pomocí <xref:System.Globalization.CultureInfo.CurrentCulture%2A> (národní prostředí) odpovídající aktuální národní prostředí vlákna. Aktuální národní prostředí vlákna je zděděn z místní nastavení uživatele ve výchozím nastavení. Ale pokud provedete volání do modelu objektů aplikace Excel z aplikace Excel řešení vytvořená pomocí nástrojů pro vývoj pro Office v sadě Visual Studio, formát dat Czech (Czech Republic) (národní prostředí ID 1033) je předán model objektů aplikace Excel automaticky. Je třeba naformátovat všechna data, která má formátování závislé na národním prostředí, například data a měny, formátu dat Czech (Czech Republic) před předejte ji do aplikace Microsoft Office Excel nebo číst data z vašeho kódu projektu.  
+## <a name="regional-settings-and-excel-com-calls"></a>Místní nastavení a volání COM aplikace Excel  
+ Pokaždé, když se spravovaný klient volá metodu na objekt modelu COM a nepotřebuje předávat informace specifické jazykové verze, dělá to pomocí <xref:System.Globalization.CultureInfo.CurrentCulture%2A> (národní prostředí), který odpovídá aktuální národní prostředí pro vlákno. Aktuální národní prostředí pro vlákno se ve výchozím nastavení dědí z místní nastavení uživatele. Ale při volání do objektového modelu aplikace Excel z aplikace Excel řešení vytvořené pomocí nástroje pro vývoj pro Office v sadě Visual Studio, formát dat Angličtina (Spojené státy) (ID 1033 národní prostředí) je předán k objektovému modelu Excelu automaticky. Je nutné naformátovat všechna data, která má formátování citlivé na národní prostředí, jako je například kalendářní data a Měna, ve formátu Angličtina (Spojené státy) data před předávat do aplikace Microsoft Office Excel nebo číst data z vašeho kódu projektu.  
   
-## <a name="considerations-for-storing-data"></a>Důležité informace pro ukládání dat  
- Chcete, aby vaše data jsou správně interpretovat a zobrazí, měli byste také zvážit, problémy může dojít, když aplikace při ukládání dat, jako je například vzorce sešitu aplikace Excel, v textové literály (pevně zakódované) místo v objektů se silným typem. Měli byste použít dat, který je naformátovaný za předpokladu, že styl neutrální jazykovou verzi nebo angličtinu (Spojené státy) (LCID hodnota 1033).  
+## <a name="considerations-for-storing-data"></a>Důležité informace pro ukládání dat.  
+ Chcete-li zajistit, aby vaše data správně interpretován a zobrazen, měli byste taky zvážit, že může dojít k problémům při aplikace je ukládání dat, jako jsou vzorce listu aplikace Excel, v řetězcové literály (pevně zakódované) místo v silně typované objekty. Měli byste použít data, která je ve formátu za předpokladu, že styl invariantní jazykovou verzi nebo Angličtina (Spojené státy) (LCID hodnotu 1033).  
   
-### <a name="applications-that-use-string-literals"></a>Aplikace, které používají textové literály  
- Možné hodnoty, které mohou být pevně zahrnují literály data, které jsou zapsány ve formátu Czech (Czech Republic) a vzorce sešitu aplikace Excel, které obsahují funkce lokalizované názvy. Další možností může být pevně řetězec, který obsahuje počet třeba "1 000"; v některých jazykových verzí to interpretována jako jeden tisíc, ale v jiné jazykové verze, představuje jeden bod nula. Výpočty a porovnání provést v má nesprávný formát může mít za následek nesprávná data.  
+### <a name="applications-that-use-string-literals"></a>Aplikace, které používají řetězcové literály  
+ Možné hodnoty, které mohou být pevně zakódované zahrnují date – literály, které jsou napsané ve formátu Angličtina (Spojené státy) a vzorce listu aplikace Excel, které obsahují lokalizované názvy. Další možností, může být pevně zakódované řetězce, který obsahuje čísla, jako je například "1000;" v některých jazykových verzí to je interpretován jako tisíc, ale v jiné jazykové verze, představuje jeden bod nula. Výpočty a porovnání provedené na má nesprávný formát může mít za následek nesprávná data.  
   
- Aplikace Excel interpretuje všechny řetězce v souladu s LCID, který je předán řetězcem. Může to být problém, pokud neodpovídá žádnému formát řetězce LCID, který je předán. Při předávání všechna data, vytvořili pomocí nástroje pro vývoj pro Office v sadě Visual Studio řešení pro aplikaci Excel použít LCID 1033 (en US). Zobrazí aplikace Excel dat podle místní nastavení a jazyk uživatelského rozhraní aplikace Excel. Visual Basic for Applications (VBA) funguje i tímto způsobem; řetězce jsou formátovány jako en US a VBA téměř vždy předá 0 (jazykově neutrální) jako identifikátor LCID. Například následující kód VBA zobrazí hodnotu správně naformátován na 12 může 2004, v souladu s aktuální nastavení národního prostředí uživatele:  
+ Všechny řetězce v souladu s LCID, který je předán s řetězec interpretován. To může být problém, pokud formát řetězce neodpovídá LCID, který je předán. Při předávání všechna data, pomocí nástroje pro vývoj pro Office v sadě Visual Studio vytvoří řešení pro aplikaci Excel použít 1033 LCID (en US). Aplikace Excel zobrazuje data podle místní nastavení a jazyk uživatelského rozhraní aplikace Excel. Visual Basic for Applications (VBA) také funguje tímto způsobem; řetězce jsou formátovány jako en US a VBA skoro vždycky předá 0 (jazykově neutrální) jako identifikátor LCID. Například následující kód VBA zobrazí správně formátovaná hodnota pro May 12, 2004, v souladu s aktuální nastavení národního prostředí uživatele:  
   
-```  
+```vb
 'VBA  
 Application.ActiveCell.Value2 = "05/12/04"  
 ```  
   
- Stejný kód, když se používá v řešení vytvořená pomocí nástrojů pro vývoj pro Office v sadě Visual Studio a předává do aplikace Excel pomocí zprostředkovatele komunikace s objekty COM, vytvoří stejné výsledky při datum formátována ve stylu en US.  
+ Stejný kód, při použití v řešení vytvořené pomocí nástroje pro vývoj pro Office v sadě Visual Studio a předat do aplikace Excel prostřednictvím zprostředkovatele komunikace s objekty COM, vytvoří stejné výsledky, když se data formátují ve stylu en US.  
   
  Příklad:  
   
  [!code-vb[Trin_VstcoreCreatingExcel#6](../vsto/codesnippet/VisualBasic/Trin_VstcoreCreatingExcelVB/Sheet1.vb#6)]
  [!code-csharp[Trin_VstcoreCreatingExcel#6](../vsto/codesnippet/CSharp/Trin_VstcoreCreatingExcelCS/Sheet1.cs#6)]  
   
- Měli byste spolupracovat s místo textové literály, kdykoli je to možné dat silného typu. Například místo ukládání datum v řetězcový literál, uložte ho jako <xref:System.Double>, poté převeďte ho na <xref:System.DateTime> objekt pro zpracování.  
+ By měl pracovat s daty silného typu místo řetězcové literály, kdykoli je to možné. Například místo ukládání datum v řetězcovém literálu, uložte ho jako <xref:System.Double>, převeďte jej <xref:System.DateTime> objekt pro manipulaci s.  
   
- Následující příklad kódu trvá datum, které uživatel zadá do buňky A5, uloží ji jako <xref:System.Double>, potom převede jej na <xref:System.DateTime> objekt pro zobrazení v buňce A7. Zobrazí datum musí být ve formátu A7 buňky.  
+ Následující příklad kódu používá data, které uživatel zadá do buňky A5, uloží ho jako <xref:System.Double>, potom převede jej na <xref:System.DateTime> objektu pro zobrazení v buňce A7. Chcete-li zobrazit datum musí být naformátovaná A7 buňky.  
   
  [!code-vb[Trin_VstcoreCreatingExcel#7](../vsto/codesnippet/VisualBasic/Trin_VstcoreCreatingExcelVB/Sheet1.vb#7)]
  [!code-csharp[Trin_VstcoreCreatingExcel#7](../vsto/codesnippet/CSharp/Trin_VstcoreCreatingExcelCS/Sheet1.cs#7)]  
   
 ### <a name="excel-worksheet-functions"></a>Funkce listu aplikace Excel  
- Názvy funkcí listu jsou převedeny interně pro většinu jazykové verze Excelu. Ale kvůli potenciální jazyk a problémy zprostředkovatele komunikace s objekty COM důrazně doporučujeme použít názvy pouze anglické funkce ve vašem kódu.  
+ Názvy funkcí listu jsou přeloženy interně pro většinu jazykové verze aplikace Excel. Z důvodu možných jazyka a modelu COM interop problémy však doporučujeme použít pouze anglické funkce názvy v kódu.  
   
 ### <a name="applications-that-use-external-data"></a>Aplikace, které používají externích dat  
- Kód, který otevře nebo jinak používá externí data, jako jsou například soubory, které zahrnují hodnot oddělených čárkami (CSV soubory) exportovat ze starší verze systému, může mít vliv i, pokud tyto soubory jsou exportovány žádné formátu kromě en US. Přístup k databázi nemusí mít vliv, protože všechny hodnoty musí být v binárním formátu, pokud databáze ukládá kalendářních dat jako řetězce nebo provádí operace, které nepoužívají binární formát. Vytváříte dotazy SQL pomocí dat z aplikace Excel, může také muset ověřte, že jsou ve formátu en US, v závislosti na funkce, které používáte.  
+ Veškerý kód, který otevře nebo jinak používá externí data, jako jsou soubory, které obsahují textový soubor s oddělovači (CSV soubory) exportovat ze starší verze systému, může mít vliv i pokud tyto soubory jsou exportovány všechny formátu kromě en US. Přístup k databázi nemusí být ovlivněno, protože všechny hodnoty musí být v binárním formátu, pokud databáze ukládá data jako řetězce nebo provádí operace, které nepoužívají binární formát. Také pokud je možné vytvářet dotazy SQL pomocí dat z Excelu, potřebujete ověřte, že jsou ve formátu en US, v závislosti na funkci, kterou používáte.  
   
-## <a name="see-also"></a>Viz také  
- [Postupy: cíle vícejazyčné uživatelské rozhraní Office](../vsto/how-to-target-the-office-multilingual-user-interface.md)   
- [Návrh a vytváření řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)   
- [Volitelné parametry v řešeních pro systém Office](../vsto/optional-parameters-in-office-solutions.md)  
+## <a name="see-also"></a>Viz také:  
+ [Postupy: cílení na vícejazyčné uživatelské rozhraní sady Office](../vsto/how-to-target-the-office-multilingual-user-interface.md)   
+ [Návrh a vytvoření řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)   
+ [Volitelné parametry v řešeních pro systém Office](../vsto/optional-parameters-in-office-solutions.md)  
   
   

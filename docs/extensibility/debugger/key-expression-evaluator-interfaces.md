@@ -1,5 +1,5 @@
 ---
-title: Klíč rozhraní vyhodnocování výrazu | Microsoft Docs
+title: Klíč rozhraní vyhodnocovače výrazů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,49 +14,50 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fe0c592c65e2c6ab7429cef44a830325a834ecdc
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ba5affe8bd6b3e787f76863b29233b90a4ec0b72
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39230819"
 ---
-# <a name="key-expression-evaluator-interfaces"></a>Výraz klíče vyhodnocování rozhraní
+# <a name="key-expression-evaluator-interfaces"></a>Rozhraní vyhodnocovače klíčových výrazů
 > [!IMPORTANT]
->  V sadě Visual Studio 2015 se již nepoužívá tímto způsobem implementace vyhodnocovače výrazů. Informace o implementaci vyhodnocovače výrazů CLR, najdete v tématu [vyhodnocovače výrazů CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [spravované ukázka vyhodnocování výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
+>  V sadě Visual Studio 2015 je zastaralý tímto způsobem implementace vyhodnocovače výrazů. Informace o implementace vyhodnocovače výrazů modulu CLR najdete v tématu [vyhodnocovače výrazů modulu CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka Chyba při vyhodnocování výrazu spravované](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
   
- Při vyhodnocování výrazu (EE), spolu s kontext vyhodnocení zápisu, měli byste se seznámit s následující rozhraní.  
+ Při zápisu vyhodnocovače výrazů (EE), spolu s kontext vyhodnocení, měli byste se seznámit s následující rozhraní.  
   
 ## <a name="interface-descriptions"></a>Popis rozhraní  
   
 -   [IDebugAddress](../../extensibility/debugger/reference/idebugaddress.md)  
   
-     Obsahuje jedinou metodu, [getaddress –](../../extensibility/debugger/reference/idebugaddress-getaddress.md), který získá datová struktura, představuje aktuálního bodu provádění. Tato struktura dat je jedním z tři argumenty, které modul ladění (DE) předá do [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) metody k vyhodnocení výrazu. Toto rozhraní je implementováno obvykle zprostředkovatelem symbol.  
+     Obsahuje jedinou metodu, [GetAddress](../../extensibility/debugger/reference/idebugaddress-getaddress.md), která načte do datové struktury, která představuje aktuální bod provádění. Tuto datovou strukturu je jedním ze tří argumentů, které se předá ladicímu stroji (DE) [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) metodu pro vyhodnocení výrazu. Toto rozhraní je obvykle implementována zprostředkovatelem symbol.  
   
 -   [IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md)  
   
-     Má [vazby](../../extensibility/debugger/reference/idebugbinder-bind.md) metodu, která získá oblasti paměti, která obsahuje aktuální hodnotu symbol. Zadané obou obsahující metodu, reprezentovanou [IDebugObject](../../extensibility/debugger/reference/idebugobject.md) objekt a symbolu, reprezentována [IDebugField](../../extensibility/debugger/reference/idebugfield.md) objekt, `IDebugBinder::Bind` vrátí hodnotu symbolu. `IDebugBinder` Obvykle je implementováno modulem DE.  
+     Má [svázat](../../extensibility/debugger/reference/idebugbinder-bind.md) metoda, která načte oblast paměti, která obsahuje aktuální hodnotu symbolu. Zadané obě obsahující metodu, reprezentovaný [IDebugObject](../../extensibility/debugger/reference/idebugobject.md) objektu a symbolu, reprezentovaný [IDebugField](../../extensibility/debugger/reference/idebugfield.md) objektu, `IDebugBinder::Bind` vrací hodnotu symbolu. `IDebugBinder` Obvykle je implementované moduly DE.  
   
 -   [IDebugField](../../extensibility/debugger/reference/idebugfield.md)  
   
-     Představuje jednoduchého datového typu. Pro více komplexní typy, jako je například pole a metody, použijte odvozené [IDebugArrayField](../../extensibility/debugger/reference/idebugarrayfield.md) a [IDebugMethodField](../../extensibility/debugger/reference/idebugmethodfield.md) rozhraní v uvedeném pořadí. [IDebugContainerField](../../extensibility/debugger/reference/idebugcontainerfield.md) je jinou důležitá odvozené rozhraní, které představuje symboly obsahující další symboly, například metody nebo třídy. `IDebugField` Rozhraní (a odvozené) je obvykle implementované zprostředkovatelem symbol.  
+     Představuje jednoduchý datový typ. Pro složitější typy, jako jsou pole a metody, použijte odvozené [IDebugArrayField](../../extensibility/debugger/reference/idebugarrayfield.md) a [IDebugMethodField](../../extensibility/debugger/reference/idebugmethodfield.md) rozhraní v uvedeném pořadí. [IDebugContainerField](../../extensibility/debugger/reference/idebugcontainerfield.md) je jiný důležité odvozené rozhraní, která představuje symboly, který obsahuje jiné symboly, jako jsou metody nebo třídy. `IDebugField` Rozhraní (a odvozené) je většinou implementují moduly poskytovatel symbolů.  
   
-     `IDebugField` Objekt lze použít k vyhledání název a typ symbolu a společně s [IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md) objektu, můžete použít k vyhledání jeho hodnotu.  
+     `IDebugField` Objektu lze ji použít k vyhledání názvu a typu symbol nebo společně s [IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md) objektu, je možné vyhledat její hodnotu.  
   
 -   [IDebugObject](../../extensibility/debugger/reference/idebugobject.md)  
   
-     Představuje skutečný bity hodnota doby běhu symbolu. [Vytvoření vazby](../../extensibility/debugger/reference/idebugbinder-bind.md) trvá [IDebugField](../../extensibility/debugger/reference/idebugfield.md) objekt, který představuje symbol a vrátí [IDebugObject](../../extensibility/debugger/reference/idebugobject.md) objektu. [GetValue](../../extensibility/debugger/reference/idebugobject-getvalue.md) metoda vrátí hodnotu symbolu ve vyrovnávací paměti. Zavedenými obvykle implementuje toto rozhraní představující hodnotu vlastnosti v paměti.  
+     Představuje bitů za běhu hodnotu symbolu. [Vytvoření vazby](../../extensibility/debugger/reference/idebugbinder-bind.md) přebírá [IDebugField](../../extensibility/debugger/reference/idebugfield.md) objektu, který představuje symbol a vrátí [IDebugObject](../../extensibility/debugger/reference/idebugobject.md) objektu. [GetValue](../../extensibility/debugger/reference/idebugobject-getvalue.md) vrátí metoda hodnotu symbolu ve vyrovnávací paměti. Zavedenými obvykle implementuje toto rozhraní k reprezentaci hodnoty vlastností v paměti.  
   
 -   [IDebugExpressionEvaluator](../../extensibility/debugger/reference/idebugexpressionevaluator.md)  
   
-     Toto rozhraní představuje vyhodnocovací filtr výrazů sám sebe. Metoda klíče je [analyzovat](../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md), která vrátí [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md) rozhraní.  
+     Toto rozhraní představuje samotný vyhodnocovací filtr výrazů. Metoda klíče je [analyzovat](../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md), která vrátí [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md) rozhraní.  
   
 -   [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md)  
   
-     Toto rozhraní představuje výraz analyzovaný připravené k vyhodnocení. Metoda klíče je [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) která vrátí IDebugProperty2 představující hodnotu a typ výrazu.  
+     Toto rozhraní představuje analyzovaný připravený, který se má vyhodnotit výraz. Metoda klíče je [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) která vrátí IDebugProperty2 představující hodnotu a typ výrazu.  
   
 -   [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)  
   
      Toto rozhraní představuje hodnotu a její typ a je výsledkem vyhodnocení výrazu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Kontext vyhodnocení](../../extensibility/debugger/evaluation-context.md)

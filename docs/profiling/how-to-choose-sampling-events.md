@@ -20,13 +20,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: da44be7f972a75e143e00346bf4a39d0bdf65c27
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b8af903abb15d06d8d76d73cca4a9c337d45ee45
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34765629"
 ---
-# <a name="how-to-choose-sampling-events"></a>Postupy: Výběr událostí vzorkování
+# <a name="how-to-choose-sampling-events"></a>Postupy: výběr událostí vzorkování
 Ve výchozím nastavení [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nástrojích pro profilaci shromažďuje údaje o výkonu na časový interval, který je zadán jako počet cyklů procesoru, které jsou používány PROFILOVANÉHO proces. Výchozí počet cyklů v intervalu je 10 000 000, což je přibližně 0,01 sekund na 1 GH počítači. Můžete změnit počet cyklů v intervalu a můžete změnit událost vzorku. Následující ukázkové události jsou k dispozici:  
   
 -   Hodiny cykly - problémů vázané na procesor.  
@@ -59,9 +60,9 @@ Ve výchozím nastavení [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md
   
 5.  Když vyberete událost vzorku, zobrazí se výchozí hodnota intervalu vzorkování v **intervalu vzorkování** textové pole. V případě potřeby můžete zadat hodnotu, která chcete v textovém poli.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Konfigurace výkonnostních relací](../profiling/configuring-performance-sessions.md)   
  [Postupy: výběr metod kolekcí](../profiling/how-to-choose-collection-methods.md)   
- [Využití procesoru a čítačů systému Windows](../profiling/cpu-and-windows-counters.md)   
- [Porozumění hodnotám dat vzorkování](../profiling/understanding-sampling-data-values.md)   
- [Profilace z příkazového řádku](../profiling/using-the-profiling-tools-from-the-command-line.md)
+ [Čítače procesoru a systému Windows](../profiling/cpu-and-windows-counters.md)   
+ [Pochopení hodnotám dat vzorkování](../profiling/understanding-sampling-data-values.md)   
+ [Profil z příkazového řádku](../profiling/using-the-profiling-tools-from-the-command-line.md)

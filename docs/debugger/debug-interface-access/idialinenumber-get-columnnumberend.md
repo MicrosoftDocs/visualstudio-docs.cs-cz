@@ -1,5 +1,5 @@
 ---
-title: Idialinenumber::get_columnnumberend – | Microsoft Docs
+title: Idialinenumber::get_columnnumberend – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d3d7dd317cf24f2580d72fdc05ccbb8f60668fd1
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: b39cd627ab41d44ac65acbe13516fc3e5597b8a7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49875642"
 ---
 # <a name="idialinenumbergetcolumnnumberend"></a>IDiaLineNumber::get_columnNumberEnd
-Načte číslo na základě jedné zdrojové sloupce, které končí výraz nebo příkaz.  
+Načte založen na jedničce zdrojový sloupec Číslo ukončení výrazu nebo příkazu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,13 +34,13 @@ HRESULT get_columnNumberEnd (
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí číslo sloupce, které končí výraz nebo příkaz. Pokud je hodnota nula, pak informace o sloupci koncoví neexistuje.  
+ [out] Vrátí číslo sloupce, kde končí výraz nebo příkaz. Pokud je hodnota nula, není informace o sloupci end nainstalovaná.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. Jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda vrátí hodnotu sloupce je bajt posun na řádek na pozici za poslední znak příkaz na řádek.  
+ Hodnota sloupce vrácený touto metodou je bajt posun do řádku na pozici za posledním znakem příkazem na řádku.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

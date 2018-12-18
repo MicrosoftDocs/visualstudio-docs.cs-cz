@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_lexicalparent – | Microsoft Docs
+title: Idiasymbol::get_lexicalparent – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b8180b9110aeb0010398eea5e19efed34fefc921
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: ec761202f10f087f440c695d834f80045a0ac331
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49864112"
 ---
 # <a name="idiasymbolgetlexicalparent"></a>IDiaSymbol::get_lexicalParent
-Získá odkaz na nadřazený lexikální symbolu.  
+Získá odkaz na lexikální nadřazené symbolu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,15 +37,15 @@ HRESULT get_lexicalParent (
  [out] Vrátí [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objekt, který reprezentuje lexikální nadřazené symbolu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` nebo kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
->  Vrácená hodnota `S_FALSE` znamená vlastnost není k dispozici pro symbol.  
+>  Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="remarks"></a>Poznámky  
- Lexikální nadřazeného symbol je nadřazených modul nebo funkce. Lexikální nadřazený parametr funkce nebo místní proměnné je například funkce samotné lexikální nadřazené funkce je modul, který je definován v.  
+ Lexikální nadřazené symbol je nadřazené funkce nebo modulu. Lexikální nadřazený parametr funkce nebo místní proměnná například je lexikální nadřazené funkce je modul, který je definován v samotné funkce.  
   
- Možné symboly, které se mohou objevit jako lexikální nadřazené položky jsou dokumentovány v článku [lexikální hierarchie typů symbolů](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md).  
+ Je to možné symboly, které jsou popsané lexikální rodiče v se může objevit [lexikální hierarchie typů symbolů](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md)   

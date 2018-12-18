@@ -1,5 +1,5 @@
 ---
-title: Přidání příkazů a gest do diagramů závislostí
+title: Přidávání příkazů a gest do diagramů závislostí
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,138 +10,145 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 2f9a9893643583ac4b8fc286dd6c00ebe558050f
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 8e985aecf317d0bf66a77d0dd0c08a3f141f6193
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49909981"
 ---
-# <a name="add-commands-and-gestures-to-dependency-diagrams"></a>Přidání příkazů a gest do diagramů závislostí
-Můžete definovat příkazy nabídky kontextu a gesty obslužné rutiny v diagramech závislosti v sadě Visual Studio. Tato rozšíření můžete balíček do Visual Studio integrace rozšíření (VSIX), které můžete distribuovat jiným uživatelům v sadě Visual Studio.
+# <a name="add-commands-and-gestures-to-dependency-diagrams"></a>Přidávání příkazů a gest do diagramů závislostí
 
- Pokud chcete, můžete definovat několik obslužné rutiny příkazů a gesto ve stejném projektu sady Visual Studio. Můžete také kombinovat několik těchto projektů do jednoho VSIX. Můžete třeba definovat jeden VSIX, který obsahuje příkazy pro vrstvy a jazyk specifické pro doménu.
+Můžete definovat příkazy kontextové nabídky a obslužné rutiny gesta v diagramech závislostí v sadě Visual Studio. Tato rozšíření můžete zabalit do Visual Studio integrace rozšíření (VSIX), které můžete distribuovat ostatním uživatelům aplikace Visual Studio.
+
+Pokud chcete, můžete definovat několik obslužných rutin příkazů a gest ve stejném projektu sady Visual Studio. Můžete také kombinovat několik takových projektů do jednoho souboru VSIX. Můžete například definovat jeden VSIX obsahující příkazy vrstvy a jazyka specifického pro doménu.
 
 > [!NOTE]
->  Můžete také upravit Architektura ověření uživatele, jejichž zdroje kód je ve srovnání s diagramy závislostí. Architektura ověření byste měli definovat v samostatném projektu sady Visual Studio. Můžete ho přidat do stejné VSIX jako ostatní rozšíření. Další informace najdete v tématu [přidání ověřování vlastní architektury do diagramů závislostí](../modeling/add-custom-architecture-validation-to-layer-diagrams.md).
+> Můžete také přizpůsobit ověřování architektury, ve které uživatelé zdroji kód je ve srovnání s diagramy závislostí. Architektura ověření by měl definovat v samostatném projektu sady Visual Studio. Můžete ho přidat do stejného VSIX jako další rozšíření. Další informace najdete v tématu [přidání ověřování vlastní architektury do diagramů závislostí](../modeling/add-custom-architecture-validation-to-layer-diagrams.md).
 
 ## <a name="requirements"></a>Požadavky
- V tématu [požadavky](../modeling/extend-layer-diagrams.md#prereqs).
 
-## <a name="defining-a-command-or-gesture-in-a-new-vsix"></a>Definování příkazu nebo gesto v nové VSIX
- Nejrychlejší způsob vytváření rozšíření je pro použití šablony projektu. Tento kód a VSIX manifest umístí do stejného projektu.
+Zobrazit [požadavky](../modeling/extend-layer-diagrams.md#prereqs).
 
-#### <a name="to-define-an-extension-by-using-a-project-template"></a>Můžete definovat rozšíření pomocí šablony projektu
+## <a name="defining-a-command-or-gesture-in-a-new-vsix"></a>Definování příkazu nebo gesta v novém souboru VSIX
 
-1.  Vytvoření projektu v nové řešení pomocí **nový projekt** příkaz na **souboru** nabídky.
+Nejrychlejší způsob vytváření rozšíření je použití šablony projektu. To umístí kód a VSIX manifest do stejného projektu.
 
-2.  V **nový projekt** dialogovém **projekty modelování**, vyberte buď **rozšíření příkaz Návrhář vrstev** nebo **rozšíření gesto Návrhář vrstev** .
+### <a name="to-define-an-extension-by-using-a-project-template"></a>Definování rozšíření pomocí šablony projektu
 
-     Vytvoří šablona dílčí projekt, který obsahuje malé příklad práci.
+1. Vytvoření projektu v novém řešení pomocí **nový projekt** příkaz **souboru** nabídky.
 
-3.  Chcete-li otestovat rozšíření, stiskněte **CTRL + F5** nebo **F5**.
+2. V **nový projekt** dialogovém okně **projekty modelování**, vyberte buď **rozšíření příkazu návrháře vrstvy** nebo **vrstva rozšíření gesta návrháře** .
 
-     Spustí experimentální instanci sady Visual Studio. V tomto případě vytvořte diagram závislostí. Příkaz nebo gesto rozšíření by měla fungovat v tomto diagramu.
+    Šablona vytvoří projekt, který obsahuje malý funkční příklad.
 
-4.  Ukončete experimentální instanci a upravte ukázkový kód. Další informace najdete v tématu [vyhledání a aktualizace modelů v programovém kódu vrstvy](../modeling/navigate-and-update-layer-models-in-program-code.md).
+3. Chcete-li otestovat rozšíření, stiskněte **Ctrl**+**F5** nebo **F5**.
 
-5.  Další příkaz nebo gesto obslužné rutiny můžete přidat do stejné projektu. Další informace najdete v jednom z následujících částí:
+    Spustí se experimentální instanci sady Visual Studio. V takovém případě vytvořte diagram závislostí. Vaše rozšíření příkazu nebo gesta by měla fungovat v tomto diagramu.
 
-     [Definování příkazu nabídky](#command)
+4. Ukončete experimentální instanci a úprava vzorového kódu. Další informace najdete v tématu [navigace a aktualizace modelů v programovém kódu vrstvy](../modeling/navigate-and-update-layer-models-in-program-code.md).
 
-     [Definování obslužné rutiny gest](#gesture)
+5. Můžete přidat další obslužné rutiny příkazu nebo gesta do stejného projektu. Další informace naleznete v následující části:
 
-6.  Chcete-li nainstalovat rozšíření v hlavní instanci sady Visual Studio, nebo v jiném počítači, vyhledejte **VSIX** souboru v **bin\\\***. Zkopírujte jej do počítače, ve které chcete nainstalovat a pak na ni dvakrát kliknete. Chcete-li ho odinstalovat, použijte **rozšíření a aktualizace** na **nástroje** nabídky.
+    [Definování příkazu nabídky](#command)
 
-## <a name="adding-a-command-or-gesture-to-a-separate-vsix"></a>Přidání příkaz nebo gesto do samostatné VSIX
- Pokud chcete vytvořit jednu VSIX, který obsahuje příkazy, validátory vrstvy a ostatní rozšíření, doporučujeme vytvořit jeden projekt k definování VSIX a samostatné projekty pro obslužné rutiny.
+    [Definování obslužné rutiny gesta](#gesture)
 
-#### <a name="to-add-layer-extensions-to-a-separate-vsix"></a>Přidání rozšíření vrstvy do samostatné VSIX
+6. Chcete-li nainstalovat rozšíření v instanci hlavní aplikace Visual Studio nebo na jiném počítači, vyhledejte *VSIX* ve *bin* adresáře. Zkopírujte ho do počítače, ve které chcete nainstalovat a poklepejte na něj. Chcete-li ho odinstalovat, zvolte **rozšíření a aktualizace** na **nástroje** nabídky.
 
-1.  Vytvoření projektu knihovny tříd do nového nebo existujícího řešení sady Visual Studio. V **nový projekt** dialogové okno, klikněte na tlačítko **Visual C#** a pak klikněte na **knihovny tříd**. Tento projekt bude obsahovat příkaz nebo gesty třídy obslužné rutiny.
+## <a name="adding-a-command-or-gesture-to-a-separate-vsix"></a>Přidání příkazu nebo gesta do samostatného souboru VSIX
+
+Pokud chcete vytvořit jeden VSIX, který obsahuje příkazy, validátory vrstvy a další rozšíření, doporučujeme vytvořit jeden projekt k definování VSIX a samostatné projekty pro obslužné rutiny.
+
+### <a name="to-add-layer-extensions-to-a-separate-vsix"></a>Přidání rozšíření vrstvy do samostatného souboru VSIX
+
+1.  Vytvořte projekt knihovny tříd v nové nebo existující řešení sady Visual Studio. V **nový projekt** dialogové okno, klikněte na tlačítko **Visual C#** a potom klikněte na tlačítko **knihovny tříd**. Tento projekt bude obsahovat příkaz nebo třídy obslužné rutiny gesta.
 
     > [!NOTE]
-    >  Můžete definovat více než jeden příkaz nebo gesto třídu obslužné rutiny v knihovně tříd, ale byste měli definovat třídy ověření vrstvy v knihovně samostatné třídy.
+    > Můžete definovat více než jednu třídu obslužné rutiny příkazu nebo gesta v jedné knihovně tříd, ale měli byste definovat třídy ověřování vrstvy v samostatné knihovně tříd.
 
-2.  Identifikovat nebo vytvoření projektu VSIX ve vašem řešení. VSIX projekt obsahuje soubor s názvem **source.extension.vsixmanifest**. Chcete-li přidat VSIX projektu:
+2.  Určete nebo vytvořte VSIX projekt ve vašem řešení. Projekt VSIX obsahuje soubor s názvem **source.extension.vsixmanifest**. Přidání projektu VSIX:
 
-    1.  V **nový projekt** dialogové okno, rozbalte seznam **Visual C#**, pak klikněte na tlačítko **rozšiřitelnost**a potom klikněte na **projektu VSIX**.
+    1.  V **nový projekt** dialogového okna rozbalte **Visual C#**, klikněte na **rozšiřitelnost**a potom klikněte na tlačítko **projekt VSIX**.
 
-    2.  V Průzkumníku řešení klikněte pravým tlačítkem na projekt VSIX a pak klikněte na tlačítko **nastavit jako spouštěný projekt**.
+    2.  V Průzkumníku řešení klikněte pravým tlačítkem na projekt VSIX a potom klikněte na tlačítko **nastavit jako spouštěný projekt**.
 
-    3.  Klikněte na tlačítko **vyberte edice** a ujistěte se, že **Visual Studio** je zaškrtnuté.
+    3.  Klikněte na tlačítko **vybrat vydání** a ujistěte se, že **sady Visual Studio** je zaškrtnuté políčko.
 
-3.  V **source.extension.vsixmanifest**v části **prostředky**, přidejte příkaz nebo gesty obslužná rutina projektu jako součást MEF.
+3.  V **source.extension.vsixmanifest**v části **prostředky**, přidání příkazu nebo gesta projektu obslužné rutiny jako komponentu MEF.
 
     1.  V **prostředky**TAB, zvolte **nový**.
 
-    2.  V **typ**, vyberte **Microsoft.VisualStudio.MefComponent**.
+    2.  Na **typ**vyberte **Microsoft.VisualStudio.MefComponent**.
 
-    3.  V **zdroj**, vyberte **projekt v aktuálním řešení** a vyberte název projektu příkaz nebo gesto obslužné rutiny.
+    3.  Na **zdroj**vyberte **projekt v aktuálním řešení** a vyberte název projektu obslužné rutiny příkazu nebo gesta.
 
     4.  Uložte soubor.
 
-4.  Vraťte se na projektu obslužná rutina příkazu nebo gesto a přidejte následující odkazy na projekt.
+4.  Vraťte se do projektu obslužné rutiny příkazu nebo gesta a přidejte následující odkazy projektu:
 
-|**Referenční informace**|**Co můžete udělat**|
-|-------------------|------------------------------------|
-|Program Files\Microsoft Visual Studio [version]\Common7\IDE\Extensions\Microsoft\Architecture Tools\ExtensibilityRuntime\Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.dll|Vytvářet a upravovat vrstev.|
-|Microsoft.VisualStudio.Uml.Interfaces|Vytvářet a upravovat vrstev.|
-|Microsoft.VisualStudio.ArchitectureTools.Extensibility|Upravit obrazce v diagramech|
-|System.ComponentModel.Composition|Definování komponent pomocí Managed Extensibility Framework (MEF)|
-|Microsoft.VisualStudio.Modeling.Sdk.[version]|Definujte rozšíření modelování|
-|Microsoft.VisualStudio.Modeling.Sdk.Diagrams.[version]|Aktualizace tvarů a diagramy|
+   |**Referenční informace**|**To umožňuje provést**|
+   |-|-|
+   |Program Files\Microsoft Visual Studio [version]\Common7\IDE\Extensions\Microsoft\Architecture Tools\ExtensibilityRuntime\Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.dll|Vytvořit a upravit vrstvy|
+   |Microsoft.VisualStudio.Uml.Interfaces|Vytvořit a upravit vrstvy|
+   |Microsoft.VisualStudio.ArchitectureTools.Extensibility|Upravit tvary v diagramech|
+   |System.ComponentModel.Composition|Definovat součásti pomocí Managed Extensibility Framework (MEF)|
+   |Microsoft.VisualStudio.Modeling.Sdk.[version]|Definovat rozšíření modelování|
+   |Microsoft.VisualStudio.Modeling.Sdk.Diagrams.[version]|Aktualizovat tvary a diagramy|
 
-1.  Upravte soubor – třída v C# projektu knihovny tříd obsahuje kód pro rozšíření. Další informace najdete v jednom z následujících částí:
+5.  Upravte soubor třídy v jazyce C# projekt knihovny tříd obsahující kód pro rozšíření. Další informace naleznete v následující části:
 
      [Definování příkazu nabídky](#command)
 
-     [Definování obslužné rutiny gest](#gesture)
+     [Definování obslužné rutiny gesta](#gesture)
 
-     Viz také [vyhledání a aktualizace modelů v programovém kódu vrstvy](../modeling/navigate-and-update-layer-models-in-program-code.md).
+     Viz také [navigace a aktualizace modelů v programovém kódu vrstvy](../modeling/navigate-and-update-layer-models-in-program-code.md).
 
-2.  Chcete-li otestovat funkci, stiskněte CTRL + F5 nebo F5. Otevře se experimentální instanci sady Visual Studio. V tomto případě vytvořit nebo Otevřít diagram závislostí.
+6.  Chcete-li otestovat funkci, stiskněte kombinaci kláves CTRL + F5 nebo F5. Otevře se experimentální instanci sady Visual Studio. V takovém případě vytvořte nebo otevřete diagram závislostí.
 
-3.  Chcete-li nainstalovat VSIX hlavní instanci sady Visual Studio, nebo na jiném počítači, vyhledejte **VSIX** souboru v **bin** adresář projektu VSIX. Zkopírujte jej do počítače, ve které chcete nainstalovat VSIX. Poklikejte na soubor VSIX v Průzkumníku Windows.
+7.  Chcete-li nainstalovat VSIX v instanci hlavní aplikace Visual Studio nebo na jiném počítači, vyhledejte **VSIX** soubor **bin** adresáře projektu VSIX. Zkopírujte ho do počítače, ve které chcete nainstalovat VSIX. Poklikejte na soubor VSIX v Průzkumníku Windows.
 
      Chcete-li ho odinstalovat, použijte **rozšíření a aktualizace** na **nástroje** nabídky.
 
 ##  <a name="command"></a> Definování příkazu nabídky
- Další definice příkaz nabídky můžete přidat do existující gesto nebo příkaz projektu. Každý příkaz je definováno třídu, která má následující vlastnosti:
 
--   Třída je deklarovaná následujícím způsobem:
+K existujícímu gestu nebo projektu příkazu můžete přidat další definice příkazu nabídky. Každý příkaz je definován třídou, která má následující vlastnosti:
 
-     `[LayerDesignerExtension]`
+- Třída je deklarována následovně:
 
-     `[Export(typeof(ICommandExtension))]`
+   `[LayerDesignerExtension]`
 
-     `public class`  *MyLayerCommand*  `: ICommandExtension { ... }`
+   `[Export(typeof(ICommandExtension))]`
 
--   Obor názvů a název třídy jsou důležitý.
+   `public class`  *MyLayerCommand*  `: ICommandExtension { ... }`
 
--   Metody, které implementují `ICommandExtension` jsou následující:
+- Obor názvů a název třídy nejsou důležité.
 
-    -   `string Text {get;}` -Štítek, který se zobrazí v nabídce.
+- Metody, které implementují `ICommandExtension` jsou následující:
 
-    -   `void QueryStatus(IMenuCommand command)` -volána, když uživatel klikne na diagramu pravým tlačítkem myši a určuje, zda příkaz by měla být viditelné a povolené pro aktuální výběr uživatele.
+  -   `string Text {get;}` – Popisek, který se zobrazí v nabídce.
 
-    -   `void Execute(IMenuCommand command)` -volána, když uživatel vybere příkaz.
+  -   `void QueryStatus(IMenuCommand command)` – volána, když uživatel klepne pravým tlačítkem myši v diagramu a určuje, zda má být příkaz viditelný a povolený pro aktuální výběr uživatele.
 
--   Pokud chcete zjistit aktuální výběr, můžete importovat `IDiagramContext`:
+  -   `void Execute(IMenuCommand command)` – volána, když uživatel vybere příkaz.
 
-     `[Import]`
+- Chcete-li zjistit aktuální výběr, můžete importovat `IDiagramContext`:
 
-     `public IDiagramContext DiagramContext { get; set; }`
+   `[Import]`
 
-     `...`
+   `public IDiagramContext DiagramContext { get; set; }`
 
-     `DiagramContext.CurrentDiagram.SelectedShapes.Count()...`
+   `...`
 
- Další informace najdete v tématu [vyhledání a aktualizace modelů v programovém kódu vrstvy](../modeling/navigate-and-update-layer-models-in-program-code.md).
+   `DiagramContext.CurrentDiagram.SelectedShapes.Count()...`
 
- Pokud chcete přidat nový příkaz, vytvořte nový soubor kód, který obsahuje následující ukázka. Potom otestovat a upravit ho.
+Další informace najdete v tématu [navigace a aktualizace modelů v programovém kódu vrstvy](../modeling/navigate-and-update-layer-models-in-program-code.md).
 
-```
+Chcete-li přidat nový příkaz, vytvořte nový soubor kódu, který obsahuje následující ukázku. Potom ho otestujte a upravte.
+
+```csharp
 using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer;
 using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation;
 using Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement;
@@ -211,18 +218,20 @@ namespace MyLayerExtension // Change to your preference.
 }
 ```
 
-##  <a name="gesture"></a> Definování obslužné rutiny gest
- Obslužné rutiny gest odpoví, když uživatel nastavuje tažením položky do diagramu závislostí a při poklepání kdekoli v diagramu.
+##  <a name="gesture"></a> Definování obslužné rutiny gesta
 
- Chcete existující příkaz nebo gesto obslužná rutina VSIX projektu můžete přidat soubor kód, který definuje obslužné rutiny gest:
+Obslužná rutina gesta reaguje, když uživatel přetáhne položky do diagramu závislosti, a když uživatel poklepe kdekoli v diagramu.
 
-```
+Do vašeho existujícího příkazu nebo projektu VSIX obslužné rutiny gesta můžete přidat soubor kódu, který definuje obslužnou rutinu gesta:
+
+```csharp
 using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer;
 using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation;
 using Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement;
 using Microsoft.VisualStudio.Modeling.ExtensionEnablement;
 using System.ComponentModel.Composition;
 using System.Linq;
+
 namespace MyLayerExtensions // change to your preference
 {
   [LayerDesignerExtension]
@@ -233,19 +242,19 @@ namespace MyLayerExtensions // change to your preference
 }
 ```
 
- Všimněte si následujících bodů o gesto obslužné rutiny:
+Všimněte si následujících o obslužných rutinách gest:
 
 -   Členové `IGestureExtension` jsou následující:
 
-     **OnDoubleClick** -volána při poklepání kdekoli v diagramu.
+     **OnDoubleClick** – volána, když uživatel poklepe kdekoli v diagramu.
 
-     **CanDragDrop** – volané opakovaně jako uživatel přesune myši při přetažení položky do diagramu. Rychle musí fungovat.
+     **CanDragDrop** – voláno opakovaně, jak uživatel pohybuje ukazatelem myši při přetažení položky do diagramu. Musí pracovat rychle.
 
-     **OnDragDrop** -volána, když se uživatel přesune položku do diagramu.
+     **OnDragDrop** – volána, když uživatel zahodí položky do diagramu.
 
--   První argument pro každou metodu je `IShape`, ze kterého můžete získat element vrstvy. Příklad:
+-   První argument pro každou metodu je `IShape`, ze kterého můžete získat prvek vrstvy. Příklad:
 
-    ```
+    ```csharp
     public void OnDragDrop(IShape target, IDataObject data)
     {
         ILayerElement element = target.GetLayerElement();
@@ -256,10 +265,9 @@ namespace MyLayerExtensions // change to your preference
     }
     ```
 
--   Obslužné rutiny pro některé typy taženou položku je již definován. Například můžete uživatele přetáhnout položky v Průzkumníku řešení na diagram závislostí. Nelze definovat přetáhněte obslužnou rutinu pro tyto typy položky. V těchto případech vaší `DragDrop` uplatněny metody.
-
+-   Obslužné rutiny pro některé typy přetažených položek jsou již definovány. Například můžete uživateli přetáhnout položky z Průzkumníka řešení do diagram závislostí. Nelze definovat obslužnou rutinu přetažení pro tyto typy položky. V těchto případech vaše `DragDrop` metody nebudou vyvolány.
 
 ## <a name="see-also"></a>Viz také
 
-- [Procházení a aktualizace modelů vrstev v programovém kódu](../modeling/navigate-and-update-layer-models-in-program-code.md)
+- [Procházení a aktualizace modelů vrstev v programovém kódu](../modeling/navigate-and-update-layer-models-in-program-code.md)
 - [Přidání vlastního ověřování architektury do diagramů závislostí](../modeling/add-custom-architecture-validation-to-layer-diagrams.md)

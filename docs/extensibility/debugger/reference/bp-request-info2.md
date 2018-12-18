@@ -1,5 +1,5 @@
 ---
-title: BP_REQUEST_INFO2 | Microsoft Docs
+title: BP_REQUEST_INFO2 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 11402c5ad188b72600debb5cb64b7f2811e75ee9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 68bdf873cdd108428ec05bda6429de70a80e71a8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49888785"
 ---
 # <a name="bprequestinfo2"></a>BP_REQUEST_INFO2
-Obsahuje informace potřebné k implementaci zarážku, včetně dodavatele identifikátor GUID, omezení a tracepoint.  
+Obsahuje informace potřebné k implementaci zarážku, včetně dodavatele identifikátor GUID, omezení a zarážky s trasováním.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -64,46 +65,46 @@ public struct BP_REQUEST_INFO2 {
   
 ## <a name="members"></a>Členové  
  `dwFields`  
- Kombinace příznaků z [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) výčet, který určuje pole, která jsou vyplněna.  
+ Kombinace příznaků z [BPREQI_FIELDS](../../../extensibility/debugger/reference/bpreqi-fields.md) výčet, který určuje, která pole jsou vyplněna.  
   
  `guidLanguage`  
- Jazyk identifikátor GUID.  
+ Identifikátor GUID jazyka.  
   
  `bpLocation`  
- [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) struktura, která určuje typ zarážek umístění.  
+ [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) struktura, která určuje typ umístění zarážky.  
   
  `pProgram`  
- [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) objekt, který představuje aplikaci, ve kterém dojde k zarážku.  
+ [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) objekt, který reprezentuje aplikaci, ve kterém dochází k zarážce.  
   
  `bstrProgramName`  
- Název aplikace, dojde k zarážku.  
+ Název aplikace, ve kterém dochází k zarážce.  
   
  `pThread`  
- [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) objekt, který reprezentuje vláken, ve kterém dojde k zarážku.  
+ [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) objekt, který reprezentuje vláken, ve kterém dochází k zarážce.  
   
  `bstrThreadName`  
- Název vlákna, ve kterém dojde k zarážku.  
+ Název vlákna, ve kterém dochází k zarážce.  
   
  `bpCondition`  
- [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) struktura, která popisuje podmínky, za kterých se aktivují zarážku.  
+ [BP_CONDITION](../../../extensibility/debugger/reference/bp-condition.md) struktura, která popisuje podmínky, za kterých se zarážka aktivuje.  
   
  `bpPassCount`  
- [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) struktura, která obsahuje informace počet průchodu zarážkou.  
+ [BP_PASSCOUNT](../../../extensibility/debugger/reference/bp-passcount.md) strukturu, která obsahuje informace o počtu průchodu této zarážky.  
   
  `dwFlags`  
- Kombinace příznaků z [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) výčet, který určuje příznaky pro požadovaný zarážek.  
+ Kombinace příznaků z [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) výčet, který určuje příznaky pro požadované zarážky.  
   
  `guidVendor`  
  Identifikátor GUID dodavatele. Může mít hodnotu null.  
   
  `bstrConstraint`  
- Název omezení zarážek. Může mít hodnotu null.  
+ Název omezení zarážku. Může mít hodnotu null.  
   
  `bstrTracepoint`  
  Název bodu trasování. Může mít hodnotu null.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je vrácený [GetRequestInfo2](../../../extensibility/debugger/reference/idebugbreakpointrequest3-getrequestinfo2.md) metoda.  
+ Tato struktura je vrácený [GetRequestInfo2](../../../extensibility/debugger/reference/idebugbreakpointrequest3-getrequestinfo2.md) metody.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

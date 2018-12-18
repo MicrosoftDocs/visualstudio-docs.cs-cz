@@ -1,9 +1,8 @@
 ---
-title: Správa prostředků aplikace (.NET) | Microsoft Docs
-ms.custom: ''
+title: Správa prostředků aplikace (.NET)
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
 - msvse_resedit.dlg.SetCustomTool
@@ -20,35 +19,40 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5515796d34b12e95fe6c9a545e7a81e98a8f6a9a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b9a80a84276648f8a0f0d5a94992b5f58cbcfefa
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51348118"
 ---
-# <a name="managing-application-resources-net"></a>Správa prostředků aplikace (.NET)
+# <a name="manage-application-resources-net"></a>Správa prostředků aplikace (.NET)
 
-Soubory prostředků jsou soubory, které jsou součástí aplikace, ale nejsou kompilovány, pro soubory ikon příklad nebo zvukových souborů. Vzhledem k tomu, že tyto soubory nejsou součástí procesu kompilace, můžete je změnit bez nutnosti její kompilace vaší binární soubory. Pokud máte v úmyslu lokalizaci vaší aplikace, používejte zdrojové soubory pro všechny řetězce a další prostředky, které se musí změnit při lokalizaci berte vaší aplikace.
+Zdrojové soubory jsou soubory, které jsou součástí aplikace, ale nejsou zkompilovány, pro soubory ikon příklad nebo zvukové soubory. Protože tyto soubory nejsou součástí procesu kompilace, můžete je změnit bez nutnosti znovu kompilovat vaše binární soubory. Pokud máte v úmyslu lokalizovat vaši aplikaci, měli byste použít soubory prostředků pro všechny řetězce a další prostředky, které je potřeba změnit, pokud lokalizovat vaši aplikaci.
 
-Další informace o prostředcích v aplikacích klasické pracovní plochy rozhraní .NET najdete v tématu [prostředků v aplikacích plochy](/dotnet/framework/resources/index).
+> [!NOTE]
+> Toto téma se vztahuje k sadě Visual Studio ve Windows. Visual Studio pro Mac, najdete v části [Správa prostředků aplikace (Visual Studio for Mac)](/visualstudio/mac/managing-app-resources).
 
-## <a name="working-with-resources"></a>Práci s prostředky
+Další informace o prostředcích v desktopové aplikace .NET najdete v tématu [prostředky v desktopových aplikacích](/dotnet/framework/resources/index).
 
-V projektu spravovaného kódu otevřete okno Vlastnosti projektu. Buď můžete otevřít okno Vlastnosti:
+## <a name="work-with-resources"></a>Pracovat s prostředky
 
-- pravým tlačítkem myši na uzel projektu v **Průzkumníku řešení** a výběrem **vlastnosti**
-- zadáním "projektu vlastnosti" v **Snadné spuštění** okna
-- Výběr **Alt**+**Enter** v **Průzkumníku řešení** okna
+V spravovaný projekt kódu otevřete okno s vlastnostmi projektu. Otevřete okno Vlastnosti buď:
 
-Vyberte **prostředky** kartě. Pokud projekt není obsahovat jeden již, přidat a odstranit různé druhy prostředků a upravit stávající prostředky, můžete přidat souboru RESX.
+- Pravým tlačítkem myši na uzel projektu v **Průzkumníka řešení** a vyberete **vlastnosti**
+- Zadáním "vlastnosti projektu" v **Snadné spuštění** okna
+- Výběr **Alt**+**zadejte** v **Průzkumníka řešení**
 
-## <a name="resources-in-other-project-types"></a>Prostředky v jiné typy projektu
+Vyberte **prostředky** kartu. Můžete přidat *RESX* souboru, pokud váš projekt není již obsahovat jednu, přidat a odstraňovat různé druhy prostředků a úpravám stávajících prostředků.
 
-Prostředky se spravují jinak v rozhraní .NET projektů než jiné typy projektů. Další informace o prostředcích v:
+## <a name="resources-in-other-project-types"></a>Prostředky v jiných typů projektů
 
-- Univerzální platformu Windows (UWP) aplikace, najdete v části [prostředky aplikace a systém správy prostředků](/windows/uwp/app-resources/)
-- Projekty C++, najdete v části [práce se zdrojovými soubory](/cpp/windows/working-with-resource-files) a [postupy: vytvoření prostředku](/cpp/windows/how-to-create-a-resource)
+Prostředky se spravují odlišně v projektech .NET než v jiných typů projektů. Další informace o prostředcích v:
 
-## <a name="see-also"></a>Viz také
+- Univerzální aplikace pro platformu Windows (UPW), najdete v článku [prostředků aplikace a systém správy zdrojů](/windows/uwp/app-resources/)
+- Projekty C++, naleznete v tématu [práci se soubory prostředků](/cpp/windows/working-with-resource-files) a [postupy: vytvoření prostředku](/cpp/windows/how-to-create-a-resource)
 
-[Prostředky v aplikacích klasické pracovní plochy (rozhraní .NET Framework)](/dotnet/framework/resources/index)
+## <a name="see-also"></a>Viz také:
+
+- [Prostředky v aplikacích klasické pracovní plochy (.NET Framework)](/dotnet/framework/resources/index)
+- [Správa prostředků aplikace (Visual Studio for Mac)](/visualstudio/mac/managing-app-resources)

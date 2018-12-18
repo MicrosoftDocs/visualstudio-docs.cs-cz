@@ -1,6 +1,7 @@
 ---
 title: 'Postupy: Vytvoření přechodu shaderu založeného na geometrii'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: 4b204405-ba95-4c5e-bd51-ec033a3ebfb6
@@ -9,60 +10,61 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b386e3a607101774d755d8673e76557b0ef66ff
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: cfdf75c058d1786febda71b05d424b1032254754
+ms.sourcegitcommit: db680e8fa8066f905e7f9240342ece7ab9259308
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/09/2018
+ms.locfileid: "37923904"
 ---
-# <a name="how-to-create-a-geometry-based-gradient-shader"></a>Postupy: Vytvoření přechodu shaderu založeného na geometrii
+# <a name="how-to-create-a-geometry-based-gradient-shader"></a>Postupy: vytvoření shaderu přechodu na základě geometrie
 
-Tento článek ukazuje, jak vytvořit na základě geometrie přechodu shaderu pomocí návrháře shaderu a jazyk směrované shaderu grafu. Tato shaderu škáluje konstantní hodnotu barva RGB podle výšky každého bodu objektu v prostoru world.
+Tento článek popisuje způsob použití návrháře shaderu a Directed Graph Shader Language k vytvoření přechodu shader geometrie založené. Tento shader škáluje konstantní hodnota barvy RGB výška jednotlivých bodů objektu v prostoru světa.
 
-## <a name="create-a-geometry-based-gradient-shader"></a>Vytvořit na základě geometrie přechodu shaderu
+## <a name="create-a-geometry-based-gradient-shader"></a>Vytvoření přechodu shaderu založeného na geometrii
 
-Na základě geometrie shaderu můžete implementovat začleněním pozici pixelech do vaší shaderu. V jazyce stínování obsahuje jeden bod informace než jenom jeho barvy a umístění na 2D obrazovce. Jeden bod – označuje jako *fragment* v některé systémy – je kolekce hodnot, které popisují prostor, který odpovídá pixelu. Shaderu, který je popsaný v tomto dokumentu využívá výška jednotlivých pixelů 3D objektu v prostoru world ovlivnit barvu závěrečný výstup fragmentu.
+Začleňte do vašeho shaderu pozice pixelu můžete implementovat na základě geometry shader. V jazycích stínování pixel obsahuje více informace než jenom její barvu a umístění na obrazovce 2D. Pixel – označované jako *fragment* u některých systémů – je kolekce hodnot, které popisují, která odpovídá povrchu pixelu. Shader, který je popsaný v tomto dokumentu využívá výška každý pixel 3D objekt v prostoru světa ovlivní barvu závěrečný výstup fragmentu.
 
-Než začnete, ujistěte se, že **vlastnosti** okno a **sada nástrojů** jsou zobrazeny.
+Než začnete, ujistěte se, že **vlastnosti** okno a **nástrojů** jsou zobrazeny.
 
-1.  Vytvořte DGSL shaderu pro práci s. Informace o tom, jak do projektu přidejte shaderu DGSL, najdete v části Začínáme v [shaderu Návrhář](../designers/shader-designer.md).
+1.  Vytvořte shader DGSL se kterým chcete pracovat. Informace o tom, jak přidat do projektu DGSL shader naleznete v části Začínáme v [návrháře shaderu](../designers/shader-designer.md).
 
-2.  Odpojení **bodu barva** uzlu z **konečnou barvu** uzlu. Vyberte **RGB** Terminálové služby **bodu barva** uzel a potom vyberte **rozdělit odkazy**. Díky tomu místnosti uzlu, který je přidán v dalším kroku.
+2.  Odpojte **barva bodu** uzlu z **konečnou barvu** uzlu. Zvolte **RGB** z terminálu **barva bodu** uzel a klikněte na tlačítko **přerušit odkazy**. Díky tomu místo pro uzel, který je přidán v dalším kroku.
 
-3.  Přidat **násobení** uzel do grafu. V **sada nástrojů**v části **matematické**, vyberte **násobení** a přesunout ho na plochu návrháře.
+3.  Přidat **vynásobit** uzel do grafu. V **nástrojů**v části **matematické**vyberte **vynásobit** a přesuňte jej na návrhovou plochu.
 
-4.  Přidat **maska vektoru** uzel do grafu. V **sada nástrojů**v části **nástroj**, vyberte **maska vektoru** a přesunout ho na plochu návrháře.
+4.  Přidat **maskovat vektor** uzel do grafu. V **nástrojů**v části **nástroj**vyberte **maskovat vektor** a přesuňte jej na návrhovou plochu.
 
-5.  Zadejte hodnoty masky pro **maska vektoru** uzlu. V **vyberte** režimu, vyberte **maska vektoru** uzel a potom v **vlastnosti** nastavte **zelená / Y** vlastnost **True**a poté nastavte **Red / X**, **modrá nebo Z** a **Alpha / W** vlastnosti, které chcete **False**. V tomto příkladu **Red / X**, **zelená / Y**, a **Blue nebo Z** vlastnosti odpovídají x, y a z různých součástí **World pozice** uzel, a **Alpha / W** se nepoužívá. Protože pouze **zelená / Y** je nastaven na **True**, pouze y komponenta vstupní vektoru zůstává poté, co je maskování.
+5.  Zadejte hodnoty masky **maskovat vektor** uzlu. V **vyberte** režimu, vyberte **maskovat vektor** uzel a pak v **vlastnosti** okno, nastavte **zelená / Y** vlastnost **True**a pak nastavte **Červená / X**, **modrá / Z** a **alfa / W** vlastnosti, které chcete **False**. V tomto příkladu **Červená / X**, **zelená / Y**, a **modrá / Z** vlastnosti odpovídají x, y a z komponenty **pozice světa** uzel, a **alfa / W** se nepoužívá. Protože pouze **zelená / Y** je nastavena na **True**, jenom součásti y vstupní vektoru zůstává poté, co je zakryté hvězdičkami.
 
-6.  Přidat **World pozice** uzel do grafu. V **sada nástrojů**v části **konstanty**, vyberte **World pozice** a přesunout ho na plochu návrháře.
+6.  Přidat **pozice světa** uzel do grafu. V **nástrojů**v části **konstanty**vyberte **pozice světa** a přesuňte jej na návrhovou plochu.
 
-7.  Masku pozice místa na světě fragment. V **vyberte** režimu, přesunout **výstup** Terminálové služby **World pozice** uzlu **vektoru** Terminálové služby **maska Vektor** uzlu. Toto připojení zakrývá pozici fragment ignorovat x a z komponenty.
+7.  Maskovat pozice místa na světě fragmentu. V **vyberte** režimu, přesunout **výstup** z terminálu **pozice světa** uzlu **vektoru** z terminálu **maska Vektor** uzlu. Toto připojení zakrývá pozice fragment ignorovat x a z komponenty.
 
-8.  Vynásobte konstanta barva RGB místo umístěním maskované world. Přesunout **RGB** Terminálové služby **barva bodu** uzlu **Y** Terminálové služby **násobení** uzel a poté ho přesuňte  **Výstup** Terminálové služby **maska vektoru** uzlu **X** Terminálové služby **násobení** uzlu. Toto připojení škáluje hodnoty barvy podle výšku pixelů v prostoru world.
+8.  Vynásobte barevnou konstantu RGB umístěním maskované světě prostor. Přesunout **RGB** z terminálu **barva bodu** uzlu **Y** z terminálu **vynásobit** uzel a potom ho přesuňte  **Výstup** z terminálu **maskovat vektor** uzlu **X** z terminálu **vynásobit** uzlu. Toto připojení se škáluje hodnota barvy podle výšky pixelu v prostoru světa.
 
-9. Hodnota škálovat barvy se připojte k konečnou barvu. Přesunout **výstup** Terminálové služby **násobení** uzlu **RGB** Terminálové služby **konečnou barvu** uzlu.
+9. Hodnota barvy dokončeno škálování se připojte k konečnou barvu. Přesunout **výstup** z terminálu **vynásobit** uzlu **RGB** z terminálu **konečnou barvu** uzlu.
 
-Následující obrázek znázorňuje dokončené shaderu a náhled shaderu použít oblasti grafu.
+Následující obrázek znázorňuje dokončené shader graf a náhled shaderu u koule.
 
 > [!NOTE]
-> V tomto obrázku oranžovou barvu je určena k lépe ukazují účinek shaderu, ale protože preview tvar, který má žádné pozici v prostoru world, shaderu nemůže zobrazit jejich náhled plně v Návrháři shaderu. Shaderu musí zobrazit náhled v skutečné scény k předvedení plný vliv.
+> Na tomto obrázku je zadána oranžovou barvou lépe demonstruje účinek shaderu, ale protože tvar náhled nemá žádné pozice v prostoru světa, shader, nepůjde zobrazit náhled plně v Návrháři shaderu. Shader musí být zobrazen ve skutečných scéně k předvedení plný vliv.
 
- ![Graf shaderu a náhled jeho dopad](../designers/media/digit-gradient-effect-graph.png "číslice přechodu vliv grafu")
+ ![Graf shaderu a jeho účinkem ve verzi preview](../designers/media/digit-gradient-effect-graph.png)
 
- Určité tvarů může poskytovat lepší verze Preview pro některé shadery. Informace o tom, jak zobrazit náhled shadery v Návrháři shaderu najdete v tématu **náhled shadery** v [shaderu návrháře](../designers/shader-designer.md)
+ Určité tvary můžou poskytovat lepší verze Preview pro některé shadery. Informace o tom, jak shadery v Návrháři shaderu ve verzi preview najdete v tématu **náhled shadery** v [návrháře shaderu](../designers/shader-designer.md)
 
- Následující obrázek znázorňuje shaderu, který je popsaný v tomto dokumentu použít pro 3D scény, která je znázorněna v [postup: Model 3D geologické struktury](../designers/how-to-model-3-d-terrain.md). Intenzita barvy se zvyšuje s výšky bodu v celém světě.
+ Následující obrázek znázorňuje shaderu, který je popsaný v tomto dokumentu použitý pro 3D scény, což je znázorněno v [postupy: modelování 3D terénu](../designers/how-to-model-3-d-terrain.md). Intenzita barvy se zvyšuje s výšky bodu na světě.
 
- ![Přechodu vliv u a 3&#45;D geologické struktury modelu](../designers/media/digit-gradient-effect-result.png "číslice přechodu vliv výsledek")
+ ![Efekt přechodu použít na 3&#45;D terénu modelu](../designers/media/digit-gradient-effect-result.png)
 
- Další informace o tom, jak používat shaderu 3D modelu najdete v tématu [postupy: použití shaderu 3D modelu](../designers/how-to-apply-a-shader-to-a-3-d-model.md).
+ Další informace o tom, jak použití shaderu na 3D model, najdete v části [postupy: použití shaderu na 3D model](../designers/how-to-apply-a-shader-to-a-3-d-model.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Postupy: použití shaderu 3D modelu](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
-- [Postupy: Exportování shaderu](../designers/how-to-export-a-shader.md)
-- [Postupy: Model 3D geologické struktury](../designers/how-to-model-3-d-terrain.md)
+- [Postupy: Použití shaderu na 3D model](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
+- [Postupy: Export shaderu](../designers/how-to-export-a-shader.md)
+- [Postupy: Modelování 3D terénu](../designers/how-to-model-3-d-terrain.md)
 - [Postupy: Vytvoření shaderu textury stupňů šedé](../designers/how-to-create-a-grayscale-texture-shader.md)
 - [Návrhář shaderů](../designers/shader-designer.md)
 - [Uzly návrháře shaderů](../designers/shader-designer-nodes.md)

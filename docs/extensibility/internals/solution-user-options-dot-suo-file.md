@@ -22,6 +22,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130844"
 ---
 # <a name="solution-user-options-suo-file"></a>Možnosti uživatele řešení (. Soubor suo)
 Soubor řešení uživatelské možnosti (.suo) obsahuje možnosti řešení na uživatele. Tento soubor by neměl být vráceny se změnami do správy zdrojového kódu.  

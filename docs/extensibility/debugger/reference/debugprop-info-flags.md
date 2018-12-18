@@ -1,5 +1,5 @@
 ---
-title: DEBUGPROP_INFO_FLAGS | Microsoft Docs
+title: DEBUGPROP_INFO_FLAGS | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1d9ecaab348ca69a792c39a8cb74e998d8f3a6aa
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f92138aa9cb3867343ec1d83653d8b30f9b1a8a6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49927596"
 ---
 # <a name="debugpropinfoflags"></a>DEBUGPROP_INFO_FLAGS
-Určuje, jaké informace načíst o objekt vlastnosti ladění.  
+Určuje, jaké informace se mají načíst informace o objektu vlastnosti ladění.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -71,50 +72,50 @@ public enum enum_DEBUGPROP_INFO_FLAGS {
   
 ## <a name="members"></a>Členové  
  DEBUGPROP_INFO_FULLNAME  
- Inicializace nebo pomocí `bstrFullName` pole.  
+ Inicializace/použít `bstrFullName` pole.  
   
  DEBUGPROP_INFO_NAME  
- Inicializace nebo pomocí `bstrName` pole.  
+ Inicializace/použít `bstrName` pole.  
   
  DEBUGPROP_INFO_TYPE  
- Inicializace nebo pomocí `bstrType` pole.  
+ Inicializace/použít `bstrType` pole.  
   
  DEBUGPROP_INFO_VALUE  
- Inicializace nebo pomocí `bstrValue` pole.  
+ Inicializace/použít `bstrValue` pole.  
   
  DEBUGPROP_INFO_ATTRIB  
- Inicializace nebo pomocí `dwAttrib` pole.  
+ Inicializace/použít `dwAttrib` pole.  
   
  DEBUGPROP_INFO_PROP,  
- Inicializace nebo pomocí `pProperty` pole, která obsahuje [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) rozhraní.  
+ Inicializace/použít `pProperty` pole s údajem o [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) rozhraní.  
   
  DEBUGPROP_INFO_VALUE_AUTOEXPAND  
- Určuje, že pole hodnoty musí obsahovat hodnotu rozšířit automaticky, pokud je k dispozici pro tento typ objektu.  
+ Určuje, že hodnota pole by měl obsahovat hodnotu automaticky rozbaleny, pokud je k dispozici pro tento typ objektu.  
   
  DEBUGPROP_INFO_VALUE_NOFUNCEVAL  
  Zastaralé  
   
  DEBUGPROP_INFO_VALUE_RAW  
- Nevrátí žádné beautified hodnoty nebo členy (tedy Neformátovat hodnoty).  
+ Nevrátí žádné beautified hodnoty nebo členy (to znamená, Neformátovat hodnoty).  
   
  DEBUGPROP_INFO_VALUE_NO_TOSTRING  
- Nevrátí žádné speciální syntetizovaná hodnoty (například Nevolejte `ToString()` na objekt k vytvoření hodnoty).  
+ Nevrátí žádné speciální syntetizovaný hodnoty (například Nevolejte `ToString()` na objekt k vytvoření hodnoty).  
   
  DEBUGPROP_INFO_NONE  
  Určuje, jestli jsou nastavené žádné příznaky.  
   
  DEBUGPROP_INFO_STANDARD  
- Inicializace nebo pomocí `dwAttrib`, `bstrName`, `bstrType`, a `bstrValue` pole.  
+ Inicializace/použít `dwAttrib`, `bstrName`, `bstrType`, a `bstrValue` pole.  
   
  DEBUGPROP_INFO_All  
- Určuje masku všechny příznaky.  
+ Označuje masku všechny příznaky.  
   
 ## <a name="remarks"></a>Poznámky  
- Tyto hodnoty jsou předávány [GetPropertyInfo –](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md), [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md), a [enumproperties –](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md) metody, které určují pole, která se mají inicializovat [ DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) struktury.  
+ Tyto hodnoty jsou předány [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md), [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md), a [enumproperties –](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md) metody k označení pole, která mají být inicializovány [ DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) struktury.  
   
- Tyto hodnoty se rovněž používají při `dwFields` členem `DEBUG_PROPERTY_INFO` struktura označuje, která pole struktury je platný a použitá při vrácení strukturu.  
+ Tyto hodnoty se používají i pro `dwFields` člena `DEBUG_PROPERTY_INFO` struktury k označení, která pole struktury jsou používány a platný, pokud vrátí strukturu.  
   
- Tyto hodnoty mohou být kombinovány s bitové `OR`.  
+ Tyto hodnoty lze kombinovat pomocí logické bitové `OR`.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

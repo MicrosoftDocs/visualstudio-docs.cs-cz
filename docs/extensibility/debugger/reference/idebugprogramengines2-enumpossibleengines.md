@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramEngines2::EnumPossibleEngines | Microsoft Docs
+title: IDebugProgramEngines2::EnumPossibleEngines | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d30eb28398569aa3d14b4a7dd363abac785f352c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8f5977e7dbac34e247838efe1e8d0036e60f0416
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49887667"
 ---
 # <a name="idebugprogramengines2enumpossibleengines"></a>IDebugProgramEngines2::EnumPossibleEngines
-Vrátí identifikátory GUID pro všechny možné ladění motory (DE), které můžete ladit tento program.  
+Vrátí GUID pro všechny možné ladění motorů (DE), které můžete ladit tento program.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,19 +45,19 @@ int EnumPossibleEngines(
   
 #### <a name="parameters"></a>Parametry  
  `celtBuffer`  
- [v] Počet identifikátory GUID DE vrátit. Také určuje maximální velikost `rgguidEngines` pole.  
+ [in] Počet identifikátorů GUID DE vrátit. Také určuje maximální velikost `rgguidEngines` pole.  
   
  `rgguidEngines`  
- [ve out] Pole identifikátory GUID DE k vyplnění.  
+ [out v] Pole DE identifikátory GUID pro vyplnění.  
   
  `pceltEngines`  
  [out] Vrátí skutečný počet DE identifikátory GUID, které jsou vráceny.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby. Vrátí [C++] `HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)` nebo [C#] 0x8007007A, pokud vyrovnávací paměť není dostatečně velký.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí [C++] `HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)` nebo [C#] 0x8007007A, pokud vyrovnávací paměť není dostatečně velký.  
   
 ## <a name="remarks"></a>Poznámky  
- Chcete-li zjistit, kolik modulů existuje jsou, volejte tuto metodu jednou s `celtBuffer` parametr nastaven na hodnotu 0 a `rgguidEngines` parametr nastaven na hodnotu null. Tento příkaz vrátí `HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)` (0x8007007A pro jazyk C#) a `pceltEngines` parametr vrátí potřebná velikost vyrovnávací paměti.  
+ Aby bylo možné zjistit, kolik motory existuje jsou, volejte tuto metodu jednou se `celtBuffer` parametr nastaven na hodnotu 0 a `rgguidEngines` parametr nastaven na hodnotu null. Vrátí `HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)` (0x8007007A pro jazyk C#) a `pceltEngines` parametr vrací potřebná velikost vyrovnávací paměti.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProgramEngines2](../../../extensibility/debugger/reference/idebugprogramengines2.md)

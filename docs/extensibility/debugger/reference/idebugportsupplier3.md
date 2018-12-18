@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31116994"
 ---
 # <a name="idebugportsupplier3"></a>IDebugPortSupplier3
 Toto rozhraní umožňuje volající k určení, zda portu dodavatele můžete zachovat porty (podle jejich zápis na disk) mezi volání ladicího programu a potom získat seznam zachovaných porty.  

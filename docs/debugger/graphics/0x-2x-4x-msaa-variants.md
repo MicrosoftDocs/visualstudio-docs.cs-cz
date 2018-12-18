@@ -1,5 +1,5 @@
 ---
-title: 0 variant x-2 x-4 x MSAA | Microsoft Docs
+title: Varianty 0 x-2 x-4 x MSAA | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -10,55 +10,56 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f77e5635a333d6fb2f041f88ee96d817fe36ba2
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: cb5e20697e5dc5364fbcbac7a1d3052790a123a2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872652"
 ---
 # <a name="0x2x4x-msaa-variants"></a>0 x / 2 x / 4 x MSAA variant
-Přepsání více ukázku vyhlazení (MSAA) nastavení na všech vykreslení cíle a řetězy prohodit.  
+Přepsání více ukázka vyhlazování (MSAA) nastavení ve všech cíle vykreslování a Prohodit řetězy.  
   
-## <a name="interpretation"></a>Interpretace  
- Více ukázku vyhlazení zvyšuje visual kvality pomocí ukázky na víc umístění v každém bodě; vyšší úrovně MSAA využít další ukázky a bez MSAA, jenom jeden vzorek z centra pixelech. Povolení MSAA ve vaší aplikaci obvykle má mírný ale znatelné náklady v vykreslování výkon, ale u určité zatížení nebo v určitých grafickými procesory, může být měl s téměř žádný vliv.  
+## <a name="interpretation"></a>interpretace  
+ Více ukázka vyhlazení zvyšuje vizuální kvality pomocí odběru vzorků na více místech každý pixel; vyšší úrovně MSAA více vzorky a bez MSAA, pouze jeden vzorek odebírán z centra je pixel. Povolení MSAA v aplikaci obvykle má středně velká ale znatelný nákladů vykreslování výkonu, ale v rámci určitých úloh nebo na určité GPU, může být měli s téměř žádný vliv.  
   
- Pokud vaše aplikace už má MSAA povolené, menší variant MSAA znamenat náklady relativní výkon, který způsobuje MSAA existující, vyšší úrovně. Konkrétně 0 x MSAA variant určuje relativní výkon vaší aplikace bez MSAA.  
+ Pokud je vaše aplikace už MSAA povolena, označení menší varianty MSAA náklady relativní výkon, který způsobuje MSAA existující, vyšší úrovně. Zejména x MSAA varianty 0 označuje relativní výkon vaší aplikace bez MSAA.  
   
- Pokud vaše aplikace již nemá MSAA povolené, 2 x MSAA a 4 x MSAA variant udávající náklady relativní výkon povolení je ve vaší aplikaci. Po přijatelně nízké náklady, zvažte povolení MSAA k vylepšení kvality obrázku vaší aplikace.  
+ Pokud vaše aplikace ještě nemá MSAA povolena, 2 x MSAA a 4 variant x MSAA udávající náklady relativní výkon povolení v aplikaci. Po přijatelně nízké náklady na zvažte povolení MSAA vylepšit kvalitu vaší aplikace.  
   
 > [!NOTE]
->  Váš hardware nemusí podporovat plně MSAA pro všechny formáty. Pokud některá z těchto variant dojde k omezení hardwaru, který nelze pracoval kolem, jeho sloupec v tabulce shrnutí výkonu je prázdné a vytváří chybovou zprávu.  
+>  Hardware nemusí podporovat plně MSAA pro všechny formáty. Pokud některá z těchto variant dojde k omezení hardwaru, který nemůže být pracoval kolem, jeho sloupec v tabulce souhrnu výkonu je prázdný a je vytvořen chybovou zprávu.  
   
 ## <a name="remarks"></a>Poznámky  
- Ukázka počet a ukázkové kvality argumenty na volání přepsání těchto variant `ID3DDevice::CreateTexture2D` , vytvořit vykreslení cíle. Konkrétně se přepíšou těchto parametrů při:  
+ Ukázka počet a kvalita ukázky argumenty ve volání přepsat tyto varianty `ID3DDevice::CreateTexture2D` , vytvoření cíle vykreslování. Konkrétně se tyto parametry přepsat při:  
   
--   `D3D11_TEXTURE2D_DESC` Objekt předaný v `pDesc` popisuje cíl vykreslení; který je:  
+- `D3D11_TEXTURE2D_DESC` Objekt předaný v `pDesc` popisuje cíl vykreslování; který je:  
   
-    -   Člen BindFlags má buď D3D11_BIND_TARGET příznak nebo D3D11_BIND_DEPTH_STENCIL příznak nastavený.  
+  -   Člen BindFlags má příznak D3D11_BIND_TARGET nebo nastavený příznak D3D11_BIND_DEPTH_STENCIL.  
   
-    -   Člen využití je nastavena na D3D11_USAGE_DEFAULT.  
+  -   Využití člen je nastavený na D3D11_USAGE_DEFAULT.  
   
-    -   Člen CPUAccessFlags nastavena na hodnotu 0.  
+  -   Člen CPUAccessFlags je nastavený na hodnotu 0.  
   
-    -   Člen MipLevels nastavena na hodnotu 1.  
+  -   Člen MipLevels je nastavený na hodnotu 1.  
   
--   Zařízení podporuje počet požadovaný vzorků (0, 2 nebo 4) a ukázkové kvality (0) pro požadovanou cílový formát (D3D11_TEXTURE2D_DESC::Format člen), určeného vykreslení `ID3D11Device::CheckMultisampleQualityLevels`.  
+- Zařízení podporuje počet vzorků požadovaný (0, 2 nebo 4) a kvalita ukázky (0) pro požadovaný cílový formát (D3D11_TEXTURE2D_DESC::Format člen), vzhledem k vykreslení `ID3D11Device::CheckMultisampleQualityLevels`.  
   
- Pokud D3D11_TEXTURE2D_DESC::BindFlags člen má nastaveny příznaky D3D_BIND_SHADER_RESOUCE nebo D3D11_BIND_UNORDERED_ACCESS, vytvoří se dvě verze textury; první má tyto příznaky vymazán pro použití jako cíl vykreslování a druhá je jiný MSAA texture, který má tyto příznaky zůstává nedotčeno tak, aby fungoval jako vyřešte vyrovnávací paměť pro první verzi. To je nezbytné, protože použití MSAA texture jako prostředek shaderu nebo pro neuspořádaný přístup, je pravděpodobně být platný – například shaderu funguje na něm by vygenerovat nesprávné výsledky, protože očekáváte texture bez MSAA. Pokud varianta vytvořil texture sekundární jiný MSAA, pak vždy, když je cíl vykreslení MSAA nenastavené v kontextu zařízení její obsah se překládají do jiných MSAA textury. Podobně vždy, když MSAA vykreslení cílový svázání jako prostředek shaderu, nebo se používá v zobrazení neuspořádaný přístup, texture přeložit jiný MSAA vázán místo.  
+  Pokud člen D3D11_TEXTURE2D_DESC::BindFlags nemá nastaveny příznaky D3D_BIND_SHADER_RESOUCE nebo D3D11_BIND_UNORDERED_ACCESS, vytvoří se dvě verze textury; první má tyto příznaky pro použití jako cíl vykreslování a druhý je bez MSAA texturu, která má tyto příznaky ponechána beze změn tak, aby fungoval jako řešení vyrovnávací paměť pro první verzi. To je nezbytné, protože použití MSAA textury jako prostředek shaderu nebo neuspořádaným přístupem je pravděpodobně platný – například shaderu, který funguje na něm bude generovat nesprávné výsledky, protože očekáváte textury bez MSAA. Pokud varianty vytvořil sekundární bez MSAA textury, pak pokaždé, když cíl vykreslování MSAA není nastavena v kontextu zařízení, jsou vyřešeny její obsah do jiných MSAA textury. Podobně, pokaždé, když MSAA vykreslení cíl by měl být vázaný jako prostředek shaderu, nebo se používá v zobrazení s neuspořádaným přístupem, vyřešené bez MSAA textury vázán místo.  
   
- Tyto variant také přepsat nastavení MSAA na všechny řetězy swap vytvořily s použitím `IDXGIFactory::CreateSwapChain`, `IDXGIFactory2::CreateSwapChainForHwnd`, `IDXGIFactory2::CreateSwapChainForCoreWindow`, `IDXGIFactory2::CreateSwapChainForComposition`, a `ID3D11CreateDeviceAndSwapChain`.  
+  Tyto varianty také přepsat nastavení MSAA na všechny řetězce přepnutí vytvořené využitím `IDXGIFactory::CreateSwapChain`, `IDXGIFactory2::CreateSwapChainForHwnd`, `IDXGIFactory2::CreateSwapChainForCoreWindow`, `IDXGIFactory2::CreateSwapChainForComposition`, a `ID3D11CreateDeviceAndSwapChain`.  
   
- Projeví těchto změn je, že všechny vykreslování se provádí MSAA vykreslení cíl, ale pokud vaše aplikace používá jednu z těchto vykreslení cíle nebo vyrovnávací paměti odkládacího souboru řetězec jako zobrazení shaderu prostředku nebo zobrazení neuspořádaný přístup, a potom je vzorků dat z vyřešit , bez MSAA kopii cíl vykreslení.  
+  Výsledkem těchto změn je, že dokončení veškerého vykreslování do cíl vykreslování MSAA, ale pokud vaše aplikace používá jednu z těchto takto cíle nebo vyrovnávací paměti řetězce přepnutí na zobrazení prostředků shaderu nebo zobrazení s neuspořádaným přístupem, a potom Vzorkovaná data z vyřešení , bez MSAA kopii cíl vykreslování.  
   
 ## <a name="restrictions-and-limitations"></a>Omezení a omezení  
- V Direct3D11 více než jiné MSAA textury omezeny MSAA textury. Například nelze volat `ID3D11DeviceContext::UpdateSubresource` na MSAA texture a volání `ID3D11DeviceContext::CopySubresourceRegion` selže, pokud počet vzorků a ukázkové kvalitu prostředku zdrojového a cílového prostředku se neshodují, které může dojít, když tato varianta přepíše nastavení MSAA jednoho prostředek, ale ne na druhou.  
+ V Direct3D11 MSAA textur jsou omezeny více než jiné MSAA textury. Například nelze volat `ID3D11DeviceContext::UpdateSubresource` na MSAA textury a volání `ID3D11DeviceContext::CopySubresourceRegion` selže, pokud počet vzorků a kvalita ukázky prostředku zdrojového a cílového prostředku se neshodují, které může dojít, pokud tato varianta přepíše nastavení MSAA prostředek, ale nikoli u druhého.  
   
- Zjistí-li přehrávání tyto druhy je v konfliktu, má usilovně replikovat zamýšlené chování, ale nemusí být možné přesně shodují své výsledky. Přestože neobvyklé to mít vliv na výkon těchto variant způsobem, který špatně rozpozná jejich dopadu, je možné – například když řízení toku v pixelech shaderu je dáno přesný obsah texturou – protože replikované textury nemusí mít identické obsah.  
+ Při přehrávání rozpoznává tyto druhy je v konfliktu, provádí nezaručené replikovat zamýšlené chování, ale nemusí být možné přesně shodovat jeho výsledky. I když neobvyklé, že to mít vliv na výkon z těchto variant způsobem, který zkresluje skutečnost jejich dopadu, je možné – například při řízení toku v pixel shader je určeno přesný obsah textury – protože replikované textury nemusí mít identické obsah.  
   
 ## <a name="example"></a>Příklad  
- Tyto variant lze reprodukovat pro vykreslení cíle vytvořily s použitím `ID3D11Device::CreateTexture2D` pomocí kódu takto:  
+ Možné reprodukovat tyto varianty pro vykreslení cíle vytvořené využitím `ID3D11Device::CreateTexture2D` pomocí kódu takto:  
   
-```  
+```cpp
 D3D11_TEXTURE2D_DESC target_description;  
 target_description.BindFlags = D3D11_BIND_RENDER_TARGET;  
 target_description.SampleDesc.Count = 4; // 4x MSAA, can be 2 or 0 instead  
@@ -67,9 +68,9 @@ d3d_device->CreateTexture2D(&target_description, nullptr, &render_target);
 ```  
   
 ## <a name="example"></a>Příklad  
- Nebo pro swap řetězy vytvořily s použitím IDXGISwapChain::CreateSwapChain nebo D3D11CreateDeviceAndSwapChain pomocí kódu takto:  
+ Nebo pro řetězce přepnutí vytvořené s použitím IDXGISwapChain::CreateSwapChain nebo D3D11CreateDeviceAndSwapChain pomocí kódu takto:  
   
-```  
+```cpp
 DXGI_SWAP_CHAIN_DESC chain_description;  
 chain_description.SampleDesc.Count = 4; // 4x MSAA, can be 2 or 0 instead  
 chain_description.SampleDesc.Quality = 0;  

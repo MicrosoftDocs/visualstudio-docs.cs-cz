@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: vytváření a změny přizpůsobených vlastností dokumentu | Microsoft Docs'
+title: 'Postupy: vytváření a změny přizpůsobených vlastností dokumentu'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -17,13 +17,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 8c997fbe764ba355d16def278c9beda8c177faed
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: bb66d2fbd1af41cfa89fc38f7694ee3783d10f76
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35254433"
 ---
-# <a name="how-to-create-and-modify-custom-document-properties"></a>Postupy: Vytváření a změny přizpůsobených vlastností dokumentu
+# <a name="how-to-create-and-modify-custom-document-properties"></a>Postupy: vytváření a změny přizpůsobených vlastností dokumentu
   Aplikace Microsoft Office, které jsou uvedené výše zadejte předdefinované vlastnosti, které jsou uloženy s dokumenty. Kromě toho můžete vytvořit a upravit vlastní vlastnosti dokumentu, pokud nejsou další informace, které chcete k uložení dokumentu v platnosti.  
   
  [!INCLUDE[appliesto_docprops](../vsto/includes/appliesto-docprops-md.md)]  
@@ -32,7 +33,7 @@ ms.lasthandoff: 04/16/2018
   
  Následující příklad ukazuje, jak přidat vlastní vlastnosti v přizpůsobení na úrovni dokumentu pro Excel a přiřaďte ho hodnotu.  
   
- ![odkaz na video](../vsto/media/playvideo.gif "odkaz na video") související Videoukázka, najdete v části [jak provést I: přístup a upravit vlastnosti vlastní dokumentu v Microsoft Wordu?](http://go.microsoft.com/fwlink/?LinkId=136772).  
+ ![odkaz na video](../vsto/media/playvideo.gif "odkaz na video") související Videoukázka, najdete v části [jak I: přístup a manipulaci s vlastní vlastnosti dokumentu v Microsoft Wordu?](http://go.microsoft.com/fwlink/?LinkId=136772).  
   
 ## <a name="example"></a>Příklad  
  [!code-vb[Trin_VstcoreProgramming#6](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/ThisWorkbook.vb#6)]
@@ -41,9 +42,9 @@ ms.lasthandoff: 04/16/2018
 ## <a name="robust-programming"></a>Robustní programování  
  Při pokusu o přístup `Value` vlastnost pro nedefinované vlastnosti vyvolá výjimku.  
   
-## <a name="see-also"></a>Viz také  
- [Programování doplňků VSTO](../vsto/programming-vsto-add-ins.md)   
- [Programování přizpůsobení na úrovni dokumentu](../vsto/programming-document-level-customizations.md)   
- [Postupy: Čtení z vlastností dokumentu a zápis do nich](../vsto/how-to-read-from-and-write-to-document-properties.md)  
+## <a name="see-also"></a>Viz také:  
+ [Program doplňků VSTO](../vsto/programming-vsto-add-ins.md)   
+ [Úpravy na úrovni dokumentů programu](../vsto/programming-document-level-customizations.md)   
+ [Postupy: čtení z a zápis do vlastností dokumentu](../vsto/how-to-read-from-and-write-to-document-properties.md)  
   
   

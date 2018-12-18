@@ -1,5 +1,5 @@
 ---
-title: 'DA0504: Maximum pracovní sady v bajtech pro profilovaný proces | Microsoft Docs'
+title: 'DA0504: Maximum pracovní sady v bajtech pro profilovaný proces | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,31 +14,33 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6bb6c62a785815db0c678d0a1f0ff38ebea14d70
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 47b0c4494a4689983ed4fee62312d5085a31aa97
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49864696"
 ---
 # <a name="da0504-maximum-working-set-in-bytes-for-the-process-being-profiled"></a>DA0504: Maximum Pracovní sady v bajtech pro profilovaný Proces
+
 |||  
 |-|-|  
 |Id pravidla|DA0504|  
 |Kategorie|Správa prostředků|  
 |Metoda profilace|Všechny|  
-|Zpráva|Tyto informace byly získány pouze pro informaci. Čítač pracovní sady procesu měří využití fyzické paměti procesem, které jsou profilace. Hodnota hlášené, přes všechny intervaly měření pozorovanou maximální.|  
+|Zpráva|Tato informace byla shromážděna pouze pro informaci. Čítač pracovní sady procesu měří využití fyzické paměti procesem, který profilujete. Hlášená hodnota je maximum pozorované přes všechny intervaly měření.|  
 |Typ pravidla|Informace o|  
-  
- Pokud je profil s použitím vzorkování, využívání paměti rozhraním .NET nebo metody sporu prostředků, musí shromažďovat alespoň 10 vzorků pro aktivaci tohoto pravidla.  
-  
+
+ Při profilování pomocí vzorkování, paměti .NET nebo metodám sporu prostředků, musíte shromáždit minimálně 10 vzorky k aktivaci tohoto pravidla.  
+
 ## <a name="rule-description"></a>Popis pravidla  
- Tato zpráva hlásí maximální množství fyzické paměti, v bajtech, které proces aktuálně používá. Pracovní sada procesu představuje stránky z adresního prostoru procesu, které jsou aktuálně umístěny ve fyzické paměti. Toto pravidlo hlásí maximální hodnotu pracovní sady procesu, při vytváření profilu byl aktivní.  
-  
- Hodnotu hlášenou obsahuje trvalé stránek ze segmentů sdílené paměti, které proces odkázal. Proces odkazy jsou součástí segmenty sdílené paměti, které se počítají sdílené knihovny DLL. Hodnota procesu pracovní sady může být vyšší než velikost virtuální paměti, který tento proces alokoval z důvodu sdílené paměti segmenty.  
-  
- Velikost pracovní sady procesu odráží velikost virtuální paměti proces aktivně používá. Je rovněž ovlivněna množství fyzické paměti (nebo RAM) k dispozici pro spuštění aplikace a kolizí pro tuto fyzickou paměť z jiných spuštěných procesů. Další informace o sadách pracovní proces najdete v tématu [pracovní sady](http://go.microsoft.com/fwlink/?LinkId=177830) v dokumentaci k Windows Správa paměti z webu MSDN.  
-  
+ Tato zpráva znamená maximální velikost fyzické paměti, v bajtech, kterou aktuálně používá proces. Pracovní sada procesu představuje stránek z adresního prostoru procesu, která jsou aktuálně umístěny ve fyzické paměti. Toto pravidlo sestavy maximální hodnota pracovní sady procesu během profilace byl aktivní.  
+
+ Hodnotu hlášenou zahrnuje rezidenční stránky ze segmentu sdílené paměti, které odkazoval na proces. Odkazy procesu obsažené v příslušných segmentech sdílené paměti, které jsou započteny sdílené knihovny DLL. Hodnota procesu pracovní sada může být vyšší než velikost virtuální paměti, která byla přidělena procesu a z důvodu sdílené paměti segmenty.  
+
+ Velikost pracovní sady procesu odráží kolik virtuální paměti aktivně je využívána procesem. Je také vliv na množství fyzické paměti (nebo paměti RAM) k dispozici ke spuštění aplikace a množství kolizí pro tuto fyzickou paměť z jiných spuštěné procesy. Další informace o pracovní sady procesu najdete v tématu [pracovní sady](http://go.microsoft.com/fwlink/?LinkId=177830) v dokumentaci k Windows Správa paměti MSDN.  
+
 ## <a name="how-to-use-rule-data"></a>Jak používat Data pravidla  
- Toto pravidlo shromáždí tato data měření z objektu sledování výkonu systému Windows a sestavy pouze pro informaci. Použijte ho k porovnání výkonu různých verzí nebo sestavení tohoto programu nebo pochopit výkon aplikace v rámci jiného testovacího scénáře.  
-  
- Klikněte dvakrát na zprávy v okně Seznam chyb, přejděte na [značky zobrazení](../profiling/marks-view.md) profilování data. Najít **Process\Working nastavit** a **Paměť\Stránky/s** čítače sloupce. Vyhledejte maximální hodnota, která **Process\Working nastavit** a porovnat s **Paměť\Stránky/s** hodnotu. Často nastavte maximální pracovní je přidružen interval, ve kterém je ke snížení aktivity vstupně-výstupní operace stránkování, zvlášť pokud je počítač omezené paměti.
+ Toto pravidlo shromažďuje ze zařízení sledování výkonu Windows tato data měření a ohlásí ji pouze pro informaci. Použije k porovnání výkonu různých verzí nebo sestavení tohoto programu nebo porozumět výkonu aplikace v rámci různých testovacích scénářů.  
+
+ Dvakrát klikněte na zprávu v okně Seznam chyb, přejděte [zobrazení značky](../profiling/marks-view.md) dat profilování. Najít **Process\Working nastavit** a **Paměť\Stránky/s** čítač sloupce. Potom vrátí maximální hodnotu **Process\Working nastavit** a porovnat **Paměť\Stránky/s** hodnotu. Pracovní sady maximální je často přidružený interval, ve kterém je snížení vstupně-výstupní operace stránkování, zejména v případě, že tento počítač je omezenou pamětí.

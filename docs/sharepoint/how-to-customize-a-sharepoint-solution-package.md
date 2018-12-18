@@ -22,22 +22,23 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9ffe532653abf58e4af6297e69c1049a916144cf
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: fd1ebe9e49a0b3e26d090fdbbdbbe4dd37c0344a
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37120356"
 ---
-# <a name="how-to-customize-a-sharepoint-solution-package"></a>Postupy: Přizpůsobení balíčku řešení služby SharePoint
-  Návrháře balíčků můžete použít k vytvoření a úpravě balíčku (WSP). Můžete například přidat položky projektu služby SharePoint a funkcí, zadejte, jestli je webový server resetovat při nasazení řešení a nastavit typ serveru nasazení.  
+# <a name="how-to-customize-a-sharepoint-solution-package"></a>Postupy: přizpůsobení balíčku řešení služby SharePoint
+  Návrháře balíčků můžete použít k vytvoření a úpravě balíčku (*WSP*). Můžete například přidat položky projektu služby SharePoint a funkcí, zadejte, jestli je webový server resetovat při nasazení řešení a nastavit typ serveru nasazení.  
   
-## <a name="opening-the-package-designer"></a>Otevírání návrháře balíčků  
+## <a name="open-the-package-designer"></a>Otevřete návrháře balíčků  
   
-#### <a name="to-open-the-package-designer"></a>Chcete-li otevřít návrháře balíčků  
+#### <a name="to-open-the-package-designer"></a>Chcete-li otevřít návrháře balíčků
   
 -   V **Průzkumníku řešení**, dvakrát klikněte na **balíček**, nebo zvolte **Návrhář zobrazení** v místní nabídce pro **balíček**.  
   
-## <a name="viewing-the-packaged-manifest-file"></a>Zobrazení zabalené souboru manifestu  
+## <a name="view-the-packaged-manifestffile"></a>Zobrazení zabalené manifestfFile  
  Návrháře balíčků můžete upravit a vytvořit zabalené soubor manifestu. Kód XML pro tento soubor pak můžete zobrazit v sadě Visual Studio.  
   
 #### <a name="to-view-the-xml-source-file"></a>Chcete-li zobrazit zdrojový soubor XML  
@@ -48,12 +49,12 @@ ms.lasthandoff: 04/16/2018
   
 1.  V **Průzkumníku řešení**, zvolte **zobrazit všechny soubory**.  
   
-2.  Rozbalte balíček, Rozbalit Package.package a pak otevřete soubor Package.Template.xml.  
+2.  Rozbalte balíček, Rozbalit Package.package a pak otevřete *Package.Template.xml* souboru.  
   
     > [!NOTE]  
     >  Otevřete soubor XML manifestu balíčku šablony, soubory se automaticky ověřují a můžete ignorovat upozornění, které se zobrazují v okně Seznam chyb.  
   
-## <a name="changing-the-manifest-template"></a>Změna manifestu šablony  
+## <a name="change-the-manifest-template"></a>Změnit manifestu šablony  
  Můžete změnit kód XML pro zabalené souboru manifestu v editoru Visual Studio XML nebo v podokně manifestu šablony. Všechny změny kód XML jsou sloučeny do zabalené souboru manifestu balíčku.  
   
 #### <a name="to-change-the-manifest-template-by-using-the-xml-editor"></a>Chcete-li změnit manifestu šablony pomocí editoru XML  
@@ -68,8 +69,8 @@ ms.lasthandoff: 04/16/2018
   
      Změny kódu XML zobrazí v **Preview z zabalené Manifest** podokně.  
   
-## <a name="overwriting-the-packaged-manifest-file"></a>Přepsání zabalené souboru manifestu  
- Můžete zakázat návrháře balíčků a vytvoření souboru manifest.xml ručně. Při prvním provedení tohoto postupu, aktuální nastavení v Návrháři balíčku se ukládají do souboru XML balíčku šablony. Potom můžete upravit nebo přepsat kód XML.  
+## <a name="overwrite-the-packaged-manifest-file"></a>Přepsat zabalené souboru manifestu  
+ Můžete zakázat návrháře balíčků a vytvoření *manifest.xml* souborů ručně. Při prvním provedení tohoto postupu, aktuální nastavení v Návrháři balíčku se ukládají do souboru XML balíčku šablony. Potom můžete upravit nebo přepsat kód XML.  
   
 > [!NOTE]  
 >  Pokud přidáte nebo odeberete položky projektu služby SharePoint a funkce v souboru XML návrháře balíčků je zakázáno, tyto položky projektu a funkce nejsou zabalené.  
@@ -78,14 +79,12 @@ ms.lasthandoff: 04/16/2018
   
 1.  V **návrháře balíčků**, vyberte **Manifest** kartě.  
   
-2.  .  
-  
-3.  Rozbalte **upravit možnosti** uzlu, vyberte **přepsat vygenerovaný soubor XML a upravit manifest v editoru XML** propojit a potom zvolte **Ano** tlačítko.  
+2.  Rozbalte **upravit možnosti** uzlu, vyberte **přepsat vygenerovaný soubor XML a upravit manifest v editoru XML** propojit a potom zvolte **Ano** tlačítko.  
   
      Šablona se aktualizuje aktuální zabalené souboru manifestu.  
   
-## <a name="enabling-the-package-designer"></a>Povolení návrháře balíčků  
- Úprava souboru manifest.xml návrháře balíčků můžete znovu povolit.  
+## <a name="enable-the-package-designer"></a>Povolit návrháře balíčků  
+ Můžete je znovu povolit návrháře balíčků přizpůsobit *manifest.xml* souboru.  
   
 #### <a name="to-re-enable-the-designer"></a>Chcete-li znovu povolit návrháře  
   
@@ -93,7 +92,6 @@ ms.lasthandoff: 04/16/2018
   
      Šablony je obnoví a zobrazí se původní text, a budou ztraceny všechny změny do souboru XML.  
   
-## <a name="see-also"></a>Viz také  
- [Balení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
-  
+## <a name="see-also"></a>Viz také:
+ [Zabalení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
   

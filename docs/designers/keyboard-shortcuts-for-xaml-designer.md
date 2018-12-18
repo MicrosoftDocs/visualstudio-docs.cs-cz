@@ -1,6 +1,7 @@
 ---
 title: Klávesové zkratky pro Návrhář XAML
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: 40211cc7-294a-4943-85a4-941ad6418dad
@@ -9,43 +10,47 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: d4b663de90af06a9c258ec5625e8d2e2cbefccb1
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 86c7eea623401edbce5638c9385dc3a5d082548f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49855440"
 ---
-# <a name="keyboard-shortcuts--for-xaml-designer"></a>Klávesové zkratky pro Návrhář XAML
-Klávesové zkratky v Návrháři XAML urychlit práci snížením akci, která by vyžadovala více klikne na tlačítko myši do jednoho klávesové zkratky.
+# <a name="keyboard-shortcuts-for-xaml-designer"></a>Klávesové zkratky pro Návrhář XAML
 
-## <a name="element-shortcuts"></a>Element zástupců
- Tato tabulka uvádí klávesové zkratky, které jsou k dispozici pro práci s elementy na návrhové plochy.
+Klávesové zkratky v Návrháři XAML může urychlit práci díky snížení akce, které by vyžadovaly více kliknutí tlačítkem myši na jednu klávesovou zkratku.
 
-|**K provedení této akce**|**K tomu**|
-|--------------------------------|-----------------|
-|Vytvořte prvek|Stisknutím kláves Ctrl + N|
-|Duplicitní element|Podržte klávesu Alt a stiskněte klávesu se šipkou.|
-|Upravit text v ovládacím prvku|Stiskněte klávesu F2 (stisknutím klávesy Esc ukončete)|
-|Vyberte jeden prvek|Stiskněte klávesu Tab, abyste mohli vybrat elementy v pořadí, ve kterém se zobrazují v dokumentu. (Můžete také vybrat elementů pomocí klávesy se šipkami.)|
-|Vyberte víc elementů|Stisknete a podržíte klávesu Shift a vyberte každý prvek|
-|Vybrat více nesousedících elementy|Podržte stisknutou klávesu Ctrl, že při výběru první a poslední elementy|
-|Přesunout vybrané elementy|Stisknutím klávesy se šipkami (můžete podržet klávesu Shift, chcete-li zvýšit vzdálenost přesunout na stisknutí klávesy.)|
-|Otočit element po 15 stupních|Podržte stisknutou klávesu Shift a otáčení elementu|
-|Vybrat všechny elementy|Stiskněte klávesy Ctrl + A|
-|Zrušte výběr všech elementů|Stiskněte klávesy Ctrl + Shift + A|
-|Zobrazení nebo skrytí elementu obslužných rutin|Stiskněte klávesu F9|
-|Vyberte vlastnost pro daný element|Element vybrané a fokusu v okně Vlastnosti stiskněte klávesu Tab. (Použít kombinaci kláves Ctrl + Tab přejdete do okna vlastností.) Klávesy se šipkami můžete z rozevíracího seznamu vyberte hodnoty vlastností.|
+## <a name="element-shortcuts"></a>Klávesové zkratky – element
 
-## <a name="document-outline-window-shortcuts"></a>Zkratky okna Osnova dokumentu
- Následující tabulka uvádí zkratky, které jsou k dispozici při práci s prvky v okně Osnova dokumentu.
+Tato tabulka uvádí klávesové zkratky, které jsou k dispozici pro práci s elementy na návrhové ploše.
 
-|**K provedení této akce**|**K tomu**|
-|--------------------------------|-----------------|
-|Skrýt návrhové plochy objekty, když je aktivní okno Osnova dokumentu|CTRL + H|
-|Odkrýt návrhové plochy objekty, když je aktivní okno Osnova dokumentu|SHIFT + CTRL + H|
-|Zamknout návrhové plochy objekty, když je aktivní okno Osnova dokumentu|CTRL + L|
-|Odemknutí návrhové plochy objekty, když je aktivní okno Osnova dokumentu|SHIFT + CTRL + L|
+|**K provedení této akce**|**To udělat**|
+| - |-----------------|
+|Vytvořit element|Stisknutím klávesy **Ctrl**+**N**|
+|Duplicitní element|Podržte stisknutou klávesu **Alt** a stiskněte klávesu se šipkou.|
+|Úprava textu v ovládacím prvku|Stisknutím klávesy **F2** (stiskněte **Esc** ukončíte)|
+|Vyberte jeden element|Stisknutím klávesy **kartu** k výběru elementů v pořadí, jsou uvedeny v dokumentu. (Můžete také vybrat prvky pomocí kláves se šipkami.)|
+|Vyberte více elementů|Stiskněte a podržte **Shift** při výběru jednotlivých prvků|
+|Vybrat víc nesousedících elementy|Stiskněte a podržte **Ctrl** při výběru elementů jméno a příjmení|
+|Přesunout vybrané elementy|Stisknutím klávesy se šipkami (můžete podržet **Shift** zvýšit vzdálenost přesunout na stisknutí klávesy.)|
+|Otočit element v přírůstcích po 15 stupňů|Podržte stisknutou klávesu **Shift** při otáčení elementu|
+|Vybrat všechny elementy|Stisknutím klávesy **Ctrl**+**A**|
+|Zrušte výběr všech elementů|Stisknutím klávesy **Ctrl**+**Shift**+**A**|
+|Zobrazení nebo skrytí elementu popisovačů|Stisknutím klávesy **F9**|
+|Vyberte vlastnost pro daný element|Vybraný prvek a fokusu v okně Vlastnosti, stiskněte klávesu **kartu**. (Použití **Ctrl**+**kartu** změnit fokus do okna Vlastnosti.) Vyberte hodnoty vlastností z rozevíracích seznamech můžete použít klávesy se šipkami.|
 
-## <a name="see-also"></a>Viz také
+## <a name="document-outline-window-shortcuts"></a>Zkratky používané v okně osnovy dokumentu
 
-- [Vytvoření uživatelského rozhraní pomocí návrháře XAML](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)
+Následující tabulka uvádí klávesové zkratky, která je k dispozici při práci s elementy v okně osnovy dokumentu.
+
+|**K provedení této akce**|**To udělat**|
+| - |-----------------|
+|Skrýt objektů na návrhové ploše, když je fokus na okno osnovy dokumentu|**CTRL**+**H**|
+|Zobrazit objekty na návrhové ploše, když je fokus na okno osnovy dokumentu|**SHIFT**+**Ctrl**+**H**|
+|Zamknout objekty na návrhové ploše, když je fokus na okno osnovy dokumentu|**CTRL**+**L**|
+|Odemknout objektů na návrhové ploše, když je fokus na okno osnovy dokumentu|**SHIFT**+**Ctrl**+**L**|
+
+## <a name="see-also"></a>Viz také:
+
+- [Vytvoření uživatelského rozhraní pomocí Návrháře XAML](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)

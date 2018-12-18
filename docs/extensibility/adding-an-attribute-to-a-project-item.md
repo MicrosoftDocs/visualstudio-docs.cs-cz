@@ -1,5 +1,5 @@
 ---
-title: Přidání atributu do položka projektu | Microsoft Docs
+title: Přidání atributu do položky projektu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,22 +13,21 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d601a4cb3a7804520f0c9c95e746275e27db4bcd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: cdb911411be2c4398565d05309002b315971b1ff
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49926433"
 ---
-# <a name="adding-an-attribute-to-a-project-item"></a>Přidání atributu do položky projektu
-Metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.GetItemAttribute%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetItemAttribute%2A> získávat a nastavovat hodnoty atributů položka projektu. SetItemAttribute vytvoří atribut Pokud již neexistuje, přidání do metadata položky projektu.  
+# <a name="add-an-attribute-to-a-project-item"></a>Přidání atributu do položky projektu
+Metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.GetItemAttribute%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetItemAttribute%2A> získat a nastavit hodnotu vlastnosti položky projektu. SetItemAttribute vytvoří atribut Pokud ještě neexistuje, jeho přidání do metadata položky projektu.  
   
-## <a name="adding-an-attribute-to-a-project-item"></a>Přidání atributu do položky projektu  
+## <a name="add-an-attribute-to-a-project-item"></a>Přidání atributu do položky projektu  
   
-#### <a name="to-add-an-attribute-to-a-project-item"></a>Přidání atributu do položky projektu  
+-   Následující kód používá <xref:EnvDTE.DTE> automatizační objekt a <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetItemAttribute%2A> metoda pro přidání atributu do položky projektu. ID položky projektu se získávají z název položky projektu "program.cs". Atribut "MyAttribute" je přidána do tuto položku projektu a byla přidělena hodnota "MyValue".  
   
--   Následující kód používá <xref:EnvDTE.DTE> objekt automatizace a <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetItemAttribute%2A> metodu za účelem přidání atributu do položka projektu. ID položky projektu se získávají z název položky projektu "program.cs". Atribut "MyAttribute" na tuto položku projektu a je zadána hodnota "MyValue".  
-  
-    ```  
+    ```csharp  
     EnvDTE.DTE dte = (EnvDTE.DTE)Package.GetGlobalService(typeof(EnvDTE.DTE));  
     EnvDTE.Project project = dte.Solution.Projects.Item(1);  
   
@@ -48,5 +47,5 @@ Metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.GetIte
   
     ```  
   
-## <a name="see-also"></a>Viz také  
- [Trvalá data v souboru projektu nástroje MSBuild](../extensibility/internals/persisting-data-in-the-msbuild-project-file.md)
+## <a name="see-also"></a>Viz také:  
+ [Zachovat data v souboru projektu MSBuild](../extensibility/internals/persisting-data-in-the-msbuild-project-file.md)

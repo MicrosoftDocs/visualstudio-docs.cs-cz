@@ -1,7 +1,7 @@
 ---
-title: Procházení kódu s ladicím programem v sadě Visual Studio | Microsoft Docs
-ms.custom: H1Hack27Feb2017
-ms.date: 02/07/2017
+title: Vyhledání kódu s ladicím programem | Dokumentace Microsoftu
+ms.custom: seodec18
+ms.date: 11/12/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
@@ -16,174 +16,176 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ae96b360620a58fa323d080e6262c7f2966fa160
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: f951732704b178c2726d60f20fc4fedcbd4cde90
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53068270"
 ---
-# <a name="navigate-code-with-the-visual-studio-debugger"></a>Procházení kódu s ladicím programu sady Visual Studio
-Seznamte se s příkazy a zkratky přejděte kódu v ladicím programu a který bude rychlejší a snazší najít a vyřešte problémy v aplikaci. Když přejdete kódu v ladicím programu, můžete zkontrolovat stav vaší aplikace nebo Další informace o toku jeho spuštění.  
+# <a name="navigate-through-code-with-the-visual-studio-debugger"></a>Procházení kódu s ladicím programu sady Visual Studio
+
+Ladicí program sady Visual Studio můžete procházet kód pro kontrolu stavu aplikace a zobrazit jeho spuštění toku. Klávesové zkratky, příkazy ladění, zarážky a další funkce můžete rychle dostali k kód, který chcete prověřit. Seznámení se s navigačními příkazy ladicího programu a zkratky umožňuje rychlejší a snazší najít a řešení potíží v aplikacích.  Pokud je to poprvé, kterou jste se pokusili ladění kódu, můžete chtít číst [opravovat chyby napsáním lépe C# kód](../debugger/write-better-code-with-visual-studio.md) a [ladění pro naprosté začátečníky](../debugger/debugging-absolute-beginners.md) před provedením tohoto článku.
   
-## <a name="start-debugging"></a>Spuštění ladění  
- Často spustit ladění pomocí relace **F5** (**ladění** > **spustit ladění**). Tento příkaz spustí vaše aplikace s ladicím programem připojen.  
-  
- Na zelenou šipku také spuštění ladicího programu (stejné jako **F5**).  
+## <a name="basic-debugging"></a>Základní ladění  
+
+Chcete-li aplikaci spustit s připojeným ladícím nástrojem, stiskněte **F5**vyberte **ladění** > **spustit ladění**, nebo vyberte zelenou šipku na panelu nástrojů sady Visual Studio.  
   
  ![DBG&#95;Basics&#95;Start&#95;Debugging](../debugger/media/dbg_basics_start_debugging.png "DBG_Basics_Start_Debugging")  
   
- Zahrnují několik způsobů spuštění aplikace s ladicím programem připojené **F11** ([kroku do kódu](#BKMK_Step_into__over__or_out_of_the_code)), **F10** ([krok přes kód](#BKMK_Step_over_Step_out)), nebo pomocí **spustit ke kurzoru**.  Na co dělat tyto možnosti najdete v dalších částech tohoto tématu informace.  
+Při ladění, zobrazí žlutý zvýraznění řádek kódu, který provede další.  
   
- Při ladění, žlutý řádek zobrazuje kód, který provede další.  
+ ![DBG&#95;Základy&#95;přerušit&#95;režimu](../debugger/media/dbg_basics_break_mode.png "režimu pozastavení")  
   
- ![DBG&#95;Basics&#95;Break&#95;Mode](../debugger/media/dbg_basics_break_mode.png "DBG_Basics_Break_Mode")  
+Většina okna ladicího programu, jako je třeba **moduly** a **Watch** okna, jsou k dispozici pouze ladicí program je spuštěn. Některé funkce, jako je například zobrazení hodnot proměnných v ladicího programu **místní hodnoty** okno nebo vyhodnocování výrazů v **Watch** okna, jsou k dispozici pouze tehdy, když ladicí program je pozastaven na zarážce, také nazývané *režimu pozastavení*. 
+
+V režimu přerušení je spuštění aplikace pozastavené při funkce a proměnné, a objekty zůstanou v paměti. Můžete zkoumat pozice prvků a stavy pro vyhledání porušení nebo chyb. U některých typů projektů lze také provést úpravy aplikace v režimu přerušení. Na video zobrazující těchto funkcí naleznete v tématu [Začínáme s ladicím programem](https://www.youtube.com/watch?v=FtGCi5j30YU&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK&index=6).
+
+Pokud rozdělíte v kódu, který nemá zdroje nebo symbolu (*PDB*) souborů načtených, ladicí program zobrazí **zdrojové soubory nebyly nalezeny** nebo **symboly nebyly nalezeny** stránka, která vám může pomoct Najít a načíst soubory. Zobrazit [zadání symbolu (.pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md). Pokud nelze načíst symbol nebo zdrojové soubory, budete moci stále ladit instrukce sestavení v **zpětný překlad** okna. 
+
+Není vždy nutné pro spuštění ladění pomocí spuštění aplikace na začátku. Můžete také stisknout klávesu **F11** k [krokování s vnořením do kódu](#BKMK_Step_into__over__or_out_of_the_code), stiskněte klávesu **F10** k [krok za kód](#BKMK_Step_over_Step_out), nebo [spuštění do určitého umístění nebo funkce](#BKMK_Break_into_code_by_using_breakpoints_or_Break_All).    
+
+##  <a name="step-through-code"></a>Krokovat kód
+
+Krok příkazy ladicího programu můžete zkontrolovat stav vaší aplikace nebo si přečtěte Další informace o jeho spuštění toku. 
+
+Pokud je potřeba najít vstupní bod ve vaší aplikaci, začněte s **F10** nebo **F11**.  
+
+### <a name="BKMK_Step_into__over__or_out_of_the_code"></a> S vnořením do kódu řádek po řádku  
+
+Chcete-li zastavit na každém řádku kódu nebo příkazu při ladění, použijte **ladění** > **Krokovat s vnořením**, nebo stiskněte klávesu **F11**.  
+
+Ladicí program vás provede příkazy kódu, nikoli fyzické řádky. Například `if` klauzule může být napsána na jednom řádku:  
   
- Při ladění, můžete přepínat mezi příkazy, jako je **F5**, **F11** a používat další funkce popsané v tomto tématu (například zarážky) rychle získat na kód, který chcete zobrazit v.  
+  ```csharp  
+  int x = 42;  
+  string s = "Not answered";  
+  if( int x == 42) s = "Answered!";  
+  ```  
   
- Většinu funkcí ladicího programu, například zobrazení hodnot proměnných v místní hodnoty – okno nebo vyhodnocení výrazů v okně sledovat jsou k dispozici pouze tehdy, když je pozastaven ladicího programu (také nazývané *režimu pozastavení*). Když ladicího programu je pozastavena, vaše aplikace stav je pozastaveno při funkce a proměnné, a objekty zůstanou v paměti. V režimu pozastavení, můžete zkontrolovat elementy pozic a stavy jejich vyhledání porušení nebo oznámení chyb. Pro některé typy projektů můžete také provádět úpravy aplikace v režimu pozastavení. Pokud chcete přehrát video, zobrazuje tyto funkce, najdete v části [Začínáme s ladicím programem](https://www.youtube.com/watch?v=FtGCi5j30YU&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK&index=6).
+  ```vb  
+  Dim x As Integer = 42  
+  Dim s As String = "Not answered"  
+  If x = 42 Then s = "Answered!"  
+  ```  
+
+Ale při krokování s vnořením tohoto řádku, ladicí program zpracuje podmínku jako jeden krok a následek jako jiný. V předchozím příkladu je podmínka pravdivá.  
   
-##  <a name="BKMK_Step_into__over__or_out_of_the_code"></a> Krok do kódu, řádek po řádku  
- Chcete-li zastavit na každém řádku kódu (každý příkaz) při ladění, použijte **F11** klávesové zkratky (nebo **ladění** > **Krokovat s vnořením** v nabídce).  
+U volání vnořené funkce **Krokovat s vnořením** přejde k nejhlouběji vnořené funkci. Například, pokud používáte **Krokovat s vnořením** na volání, například `Func1(Func2())`, ladicí program vstoupí do funkce `Func2`.  
+
+>[!TIP]
+>Při spuštění každého řádku kódu, můžete najedete myší proměnných najdete v jejich hodnoty nebo použít [lokální](autos-and-locals-windows.md) a [Watch](watch-and-quickwatch-windows.md) windows ke sledování hodnoty změnit. Můžete také vizuální trasování zásobníku volání při krokování do funkce. Zobrazit [mapování metod v zásobníku volání při ladění](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md). 
+
+###  <a name="BKMK_Step_over_Step_out"></a> Krokovat kód a přeskočit některé funkce  
+
+Funkce nemusí záleží při ladění nebo ho znáte funguje, jako jsou dobře otestovaný knihovny kódu. Chcete-li přeskočit prostřednictvím kódu můžete použít následující příkazy. Funkce spustit, ale je přeskočen ladicí program.  
   
-> [!TIP]
->  Při spuštění všech řádků kódu, můžete podržet přes proměnné najdete v části jejich hodnoty, nebo používat [místní hodnoty –](../debugger/autos-and-locals-windows.md) a [sledovat](../debugger/autos-and-locals-windows.md) windows můžete sledovat jejich hodnoty změnit.  
-  
- Tady jsou některé podrobnosti o chování **Krokovat s vnořením**:  
-  
--   Při volání vnořené funkce **Krokovat s vnořením** kroky do nejvíce hluboko vnořené funkce. Pokud používáte **Krokovat s vnořením** při volání jako `Func1(Func2())`, ladicí program do funkce `Func2`.  
-  
--   Ve skutečnosti ladicí program prostřednictvím kódu příkazy spíše než fyzické řádky. Například `if` klauzule lze zapisovat na jeden řádek:  
-  
-    ```csharp  
-    int x = 42;  
-    string s = "Not answered";  
-    if( int x == 42) s = "Answered!";  
-    ```  
-  
-    ```VB  
-    Dim x As Integer = 42  
-    Dim s As String = "Not answered"  
-    If x = 42 Then s = "Answered!"  
-    ```  
-  
-     Když zanořte se do tohoto řádku, ladicí program považuje za jeden krok a důsledkem jako jiné podmínku (v tomto příkladu je podmínka true).  
-  
- Vizuální sledování zásobníku volání při zanoříte se do funkce, najdete v tématu [mapování metod v zásobníku volání při ladění](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md).  
-  
-##  <a name="BKMK_Step_over_Step_out"></a> Krok prostřednictvím kódu, přeskočení funkce  
- Při spuštění kódu v ladicím programu, často se zjistíte, že nemusíte najdete, co se stane, že v konkrétní funkce (vám nezáleží ho nebo vy víte, že funguje, jako například dobře otestované knihovny kódu). Pomocí následujících příkazů můžete přeskočit prostřednictvím kódu (funkce spustit, samozřejmě, ale je přeskočen ladicího programu).  
-  
-|Příkaz klávesnice|Příkaz nabídky|Popis|  
+|Příkaz klávesnice|Příkaz nabídky ladění|Popis|  
 |----------------------|------------------|-----------------|  
-|**F10**|**Krok přes**|Pokud aktuální řádek obsahuje volání funkce, **Krokovat s přeskočením** spustí kód pak pozastaví spuštění na prvním řádku kódu po vyvolání funkce vrátí hodnotu.|  
-|**Shift+F11**|**Krok**|**Krokovat s Vystoupením** pokračuje spuštění kódu a pozastaví spuštění, když aktuální funkce vrátí hodnotu (ladicí program přeskočí prostřednictvím funkci current).|  
+|**F10**|**Krok přes**|Pokud aktuální řádek obsahuje volání funkce **Krokovat s přeskočením** spouští kód, pak po volané funkci vrátí pozastaví provádění na prvním řádku kódu.|  
+|**SHIFT**+**F11**|**Krokovat s Vystoupením**|**Krokovat s Vystoupením** pokračuje v běhu programu a pozastaví provádění kódu po návratu aktuální funkce. Ladicí program přeskočí prostřednictvím aktuální funkce.|  
   
-> [!TIP]
->  Pokud potřebujete nalézt vstupní bod v aplikaci, začínat **F10** nebo **F11**. Tyto příkazy jsou často užitečné při kontrole stavu vaší aplikace nebo při pokusu o další informace o toku jeho spuštění.  
-  
-##  <a name="BKMK_Break_into_code_by_using_breakpoints_or_Break_All"></a> Spustit na konkrétní umístění nebo funkce  
- Často preferovanou metodu ladění kódu, tyto metody jsou užitečné, když víte přesně co kód, který chcete zkontrolovat nebo alespoň víte, ve které chcete spustit ladění.  
-  
--   **Nastavit zarážky v kódu**  
-  
-     Pokud chcete nastavit jednoduché zarážky v kódu, otevření zdrojového souboru v editoru Visual Studio. Nastavit kurzor na řádek kódu, kde chcete pozastavit provádění, klikněte pravým tlačítkem v okně kód, který chcete zobrazit kontextovou nabídku a vyberte možnost **zarážek > Vložit zarážku** (nebo stiskněte klávesu **F9**). Ladicí program pozastaví spuštění vpravo před provedením řádku.  
-  
-     ![Nastavit zarážky](../debugger/media/dbg_basics_setbreakpoint.png "DBG_Basics_SetBreakpoint")  
-  
-     Zarážky v sadě Visual Studio poskytují širokou škálu další funkce, například podmíněné zarážky a tracepoints. V tématu [použití zarážek](../debugger/using-breakpoints.md).  
-  
--   **Spustit, aby se umístění kurzoru**  
-  
-     Spustit na umístění kurzoru, umístěte kurzor na spustitelný soubor řádku kódu v okně zdroje. V okně editor kontextovou nabídku (v editoru klikněte pravým tlačítkem), zvolte **spustit ke kurzoru**. Toto je jako nastavení dočasné zarážky.
+##  <a name="BKMK_Break_into_code_by_using_breakpoints_or_Break_All"></a> Spuštění do určitého umístění nebo – funkce  
 
--   **Spustit kliknutím** 
+Můžete chtít spustit přímo do určitého umístění nebo funkce, když víte přesně jaký kód, který chcete zkontrolovat nebo víte, kde chcete spustit ladění.  
+  
+### <a name="run-to-a-breakpoint-in-code"></a>Spusťte zarážku v kódu  
+  
+Chcete-li nastavení jednoduché zarážky v kódu, klikněte na levém okraji vedle řádku kódu, ve které chcete pozastavit provádění. Můžete také vybrat řádku a stisknutím klávesy **F9**vyberte **ladění** > **Přepnout zarážku**, nebo klikněte pravým tlačítkem a vyberte **zarážku**  >  **Vložit zarážku**. Zarážka se zobrazí jako červená tečka na levém okraji vedle řádku kódu. Ladicí program přeruší provádění, stačí před provedením řádku.
+  
+![Nastavit zarážku](../debugger/media/dbg_basics_setbreakpoint.png "nastavte zarážku")  
+  
+Zarážky v sadě Visual Studio poskytují další funkce, jako je například podmíněné zarážky a sledované body. Podrobnosti najdete v tématu [pomocí zarážek](../debugger/using-breakpoints.md).  
+  
+### <a name="run-to-a-function-breakpoint"></a>Spusťte zarážku funkce  
 
-    Pokud chcete spustit na bod v kódu při pozastavena v ladicím programu, vyberte **spuštění zde** ikonu zelenou šipku (při se zobrazí ikona ukazatele myši na řádek kódu). Tím se eliminuje potřeba nastavit dočasné zarážky.
+Poznáte, ladicí program ke spuštění, dokud nedosáhne určenou funkci. Můžete zadat funkce podle názvu nebo je možné ji zvolit ze zásobníku volání.  
+  
+**Chcete-li určit zarážku funkce podle názvu**
 
-    ![Ladicí program je spustit kliknutím](../debugger/media/dbg-run-to-click.png "DbgRunToClick") 
+1. Vyberte **ladění** > **Nová zarážka** > **funkce zarážky**
+   
+1. V **Nová zarážka funkce** dialogové okno, zadejte název funkce a vyberte svůj jazyk.
+   
+   ![Dialogové okno nové zarážky funkce](../debugger/media/dbg_execution_newbreakpoint.png "Nová zarážka funkce")  
+   
+1. Vyberte **OK**. 
 
-    > [!NOTE]
-    > **Spustit kliknutím** je nového v [!include[vs_dev15](../misc/includes/vs_dev15_md.md)].
+Pokud je funkce přetížena nebo ve víc než jeden obor názvů, můžete zvolit ten, který chcete v **zarážky** okna.  
+
+![Přetížené funkce zarážky](../debugger/media/dbg_execution_overloadedbreakpoints.png "přetížené funkce zarážky")  
   
--   **Ručně rozdělit na kód**  
+**Vyberte zarážku funkce ze zásobníku volání** 
   
-     Chcete-li rozdělit na další řádky kódu v aplikaci, provádění, zvolte **ladění**, **přerušení všech** (klávesnice: **Ctrl + Alt + Break**). 
+1. Při ladění, otevřete **zásobník volání** okna tak, že vyberete **ladění** > **Windows** > **zásobník volání**. 
+   
+1. V **zásobník volání** okna, klikněte pravým tlačítkem na funkci a vyberte **provést do pozice kurzoru**, nebo stiskněte klávesu **Ctrl**+**F10**.  
+
+Vizuální trasování zásobníku volání, viz [mapování metod v zásobníku volání při ladění](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md).  
   
-     Pokud jste rozdělit při provádění kódu bez odpovídající zdroj nebo symbolu (.pdb) soubory), zobrazí ladicího programu **soubory nebyl nalezen zdroj** nebo **symboly nebyl nalezen** stránky, které vám pomůžou najít odpovídající soubory. V tématu [zadání symbolu (.pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md). Pokud máte přístup k podpůrné soubory, můžete stále ladění sestavení pokyny v okně zpětný překlad.  
-  
--   **Spusťte funkci v zásobníku volání**  
-  
-     V **zásobníkem volání** okno (k dispozici při ladění), vyberte funkce, klikněte pravým tlačítkem myši a zvolte **spustit ke kurzoru**. Vizuální sledování zásobníku volání, najdete v tématu [mapování metod v zásobníku volání při ladění](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md).  
-  
--   **Spusťte funkci zadaný podle názvu**  
-  
-     Ladicí program na aplikaci spustit, dokud nebude dosaženo zadaná funkce se dá zjistit. Funkce lze zadat pomocí názvu nebo je možné v zásobníku volání.  
-  
-     Určit název funkce, vyberte **ladění**, **nové zarážek**, **rozdělit na funkce**, pak zadejte název funkce a další identifikační informace.  
-  
-     ![Dialogové okno Nový zarážek](../debugger/media/dbg_execution_newbreakpoint.png "DBG_Execution_NewBreakpoint")  
-  
-     Pokud funkce je přetížena, nebo je v více názvů, můžete vybrat funkce, které chcete v **vybrat zarážky** dialogové okno.  
-  
-     ![Vybrat zarážky – dialogové](../debugger/media/dbg_execution_overloadedbreakpoints.png "DBG_Execution_OverloadedBreakpoints")  
-  
-##  <a name="BKMK_Set_the_next_statement_to_execute"></a> Přesuňte ukazatel na tok provádění změn  
- Při ladicího programu je pozastavena, můžete přesunout ukazatel instrukce nastavit další příkaz kódu, které by šlo spustit. Žlutý šipku na okraji zdroj nebo okno zpětný překlad označuje umístění další příkaz má být proveden. Přesunutím tento šipku, můžete přeskočit část kódu nebo vrátit do řádku dříve provést. Můžete použít pro situace, jako je přeskočení části kódu, který obsahuje známé chyby.  
-  
- ![Přesunutí ukazatele](../debugger/media/dbg_basics_example3.gif "DBG_Basics_Example3")
-  
- Pokud chcete nastavit další příkaz provést, použijte jeden z následujících postupů:  
-  
--   V okně zdroj přetáhněte šipku žlutý do umístění, kde chcete nastavit další příkaz ve stejném souboru zdroje  
-  
--   V okně zdroj, nastavte kurzor na řádek, který chcete spustit další, klikněte pravým tlačítkem a vyberte možnost **další příkaz Set**.  
-  
--   V okně zpětný překlad nastavte kurzor na pokyn sestavení, který chcete spustit další, klikněte pravým tlačítkem na a zvolte **další příkaz Set**.  
-  
-> [!CAUTION]
->  Nastavení další příkaz způsobí, že čítač program přejít přímo do nového umístění. Použijte tento příkaz s upozorněním:  
->   
->  -   Pokyny mezi body staré a nové spuštění nebudou provedeny.  
-> -   Pokud přesunete bodu spuštění zpětné, nejsou použité pokyny vrátit zpět.  
-> -   Přesunutí další příkaz jiné funkce nebo oboru obvykle za následek poškození zásobníku volání, způsobí spuštění chyby nebo výjimky. Pokud se pokusíte přesunutí další příkaz do jiného oboru, ladicího programu otevře dialogové okno s upozorněním a můžete tak na tlačítko Storno. V jazyce Visual Basic nelze přesunout do jiného oboru nebo funkce další příkaz.  
-> -   V nativním kódu C++ Pokud máte kontroly runtime povoleno, nastavení další příkaz může způsobit výjimku vyvolána, pokud se spuštění dosáhne konce metodu.  
-> -   Když upravit a pokračovat, je povoleno, **další příkaz Set** nezdaří, pokud jste provedli úpravy, které upravit a pokračovat nelze přemapovat okamžitě. Tato situace může nastat, například pokud jste upravili kódu do bloku catch. V takovém případě se zobrazí chybovou zprávu, která sděluje, že operace není podporována.  
-  
+### <a name="run-to-a-cursor-location"></a>Spuštění do umístění kurzoru  
+
+Ke spuštění do umístění kurzoru, ve zdrojovém kódu nebo **zásobník volání** okna, vyberte řádek, který má na zarážku, klikněte pravým tlačítkem a vyberte **provést do pozice kurzoru**, nebo stiskněte klávesu **Ctrl** + **F10**. Výběr **provést do pozice kurzoru** je stejná jako nastavení dočasné zarážky.
+
+### <a name="run-to-click"></a>Běžet do kliknutí 
+
+Během pozastavení v ladicím programu, můžete najedete myší příkaz ve zdrojovém kódu nebo **zpětný překlad** okna a vyberte **běžet do tohoto místa** ikonou zelené šipky. Pomocí **běžet do kliknutí** eliminuje nutnost nastavení dočasné zarážky.
+
+![Běžet do kliknutí](../debugger/media/dbg-run-to-click.png "běžet do kliknutí") 
+
 > [!NOTE]
->  Ve spravovaném kódu nemůžete přesunout další příkaz za následujících podmínek:  
->   
->  -   Další příkaz je v jinou metodu než aktuální příkaz.  
-> -   Ladění byl spuštěn s použitím těsně za běhu ladění.  
-> -   Probíhá unwind zásobník volání.  
-> -   Byla vyvolána výjimka System.StackOverflowException nebo System.Threading.ThreadAbortException.  
+> **Běžet do kliknutí** je novinkou systémů [!include[vs_dev15](../misc/includes/vs_dev15_md.md)].
   
- Další příkaz nelze nastavit, když aktivně vaše aplikace běží. Pokud chcete nastavit další příkaz, musí být ladicí program v režimu pozastavení.  
+### <a name="manually-break-into-code"></a>Ručně proniknout do kódu  
   
-## <a name="BKMK_Restrict_stepping_to_Just_My_Code"></a>Krok do neuživatelských kódu  
- Ve výchozím nastavení, ladicí program pokusí tak, aby zobrazovalo pouze kódu aplikace při ladění, což je dáno ladicí program názvem *pouze můj kód*. (Viz [pouze můj kód](../debugger/just-my-code.md) jak to funguje pro různé typy projektů a jazyky a jak může přizpůsobit chování.) Ale někdy při ladění, můžete se podívat na framework kódu, kód třetích stran knihovny nebo volání do operačního systému (systémová volání).  
+Pro přerušení v další dostupný řádek kódu ve spuštěné aplikaci vyberte **ladění** > **přerušit vše**, nebo stiskněte klávesu **Ctrl**+**Alt**  + **Přerušit**. 
   
- Pouze můj kód můžete vypnout tak, že přejdete do **nástroje** > **možnosti** > **ladění** a zrušte zaškrtnutí **povolit volbu pouze vlastní kód** zaškrtávací políčko.  
+##  <a name="BKMK_Set_the_next_statement_to_execute"></a> Přesuňte ukazatel Změna toku provádění  
+
+Když ladicí program je pozastavený, žlutá šipka na okraji zdrojový kód nebo **zpětný překlad** okno označuje umístění pro další příkaz, který se spustí. Můžete změnit dalšího příkazu ke spuštění přesunutím této šipky. Můžete přeskočit část kódu nebo vrátit na předchozí řádek. Ukazatele je užitečné v situacích, jako je například vynechání části kódu, který obsahuje známou chybu.  
+
+ ![Přesuňte ukazatel](../debugger/media/dbg_basics_example3.gif "přesuňte ukazatel myši")
   
- Pouze můj kód zakázána, ladicího programu můžete kroku do kódu neuživatelských a bez uživatelského kódu se zobrazí v ladicího programu.  
+Chcete-li změnit dalšího příkazu ke spuštění, musí být ladicí program v režimu pozastavení. Ve zdrojovém kódu nebo **zpětný překlad** okna, přetáhněte žlutou šipku na jiný řádek, nebo klikněte pravým tlačítkem na řádku, které chcete spustit jako další a vyberte **nastavit další příkaz**. 
+
+Čítač programu přejde přímo na nové umístění a pokyny mezi staré a nové spuštění nebudou provedeny body. Nicméně pokud přesunete bod spuštění zpět, intervenující pokyny se vrátit zpět.  
+
+>[!CAUTION]
+>- Přesunutí dalšího příkazu do jiné funkce nebo rozsahu obvykle za následek poškození zásobníku volání, což způsobí runtime chybu nebo výjimku. Při přesunutí dalšího příkazu do jiného oboru, ladicí program otevře dialogové okno s upozorněním a dává vám možnost zrušit operaci. 
+>- V jazyce Visual Basic nemůžete přesunout do jiného oboru nebo funkce další příkaz.  
+>- V nativním kódu C++ Pokud máte kontroly za běhu povoleno, nastavení dalšího příkazu může způsobit výjimku, která je vyvolána, když spuštění dosáhne konce metody.  
+>- Když upravit a pokračovat je povoleno, **nastavit další příkaz** nezdaří, pokud jste provedli změny, které upravit a pokračovat nemůže ihned opětovně mapovat. Tato situace může nastat, například, pokud se po úpravě kódu v bloku catch. Pokud k tomu dojde, chybová zpráva zjistíte, že operace není podporována.  
+>- Ve spravovaném kódu nelze přesunout další příkaz, pokud:  
+>   - Další příkaz je v jiné metody než aktuální příkaz.  
+>   - Ladění bylo zahájeno Just-In-Time ladění.  
+>   - Probíhá uvolnění zásobníku volání.  
+>   - Byla vyvolána výjimka System.StackOverflowException or System.Threading.ThreadAbortException.  
   
+## <a name="BKMK_Restrict_stepping_to_Just_My_Code"></a>Ladění kódu nepocházejícího od uživatele  
+
+Ve výchozím nastavení, ladicí program pokusí ladit jenom kód vaší aplikace tím, že nastavení nazývá *pouze můj kód*. Další podrobnosti o tom, jak tato funkce funguje pro různé typy projektů a jazyků a jak si můžete přizpůsobit, najdete v části [pouze můj kód](../debugger/just-my-code.md). 
+
+Podívat se na kód rozhraní framework, kód knihovny třetích stran nebo systémových volání při ladění, můžete zakázat pouze můj kód. V **nástroje** (nebo **ladění**) > **možnosti** > **ladění**, zrušte zaškrtnutí políčka **povolit volbu pouze vlastní kód** zaškrtávací políčko. Pokud funkce pouze můj kód je zakázán, neuživatelském kódu se zobrazí v oknech ladicího programu a ladicího programu můžete krokovat s vnořením neuživatelský kód.  
+
 > [!NOTE]
->  Pouze můj kód není podporována pro projekty zařízení.  
+> Funkce pouze můj kód není podporována pro projekty zařízení.  
   
- **Krokovat s vnořením systémová volání**  
+### <a name="debug-system-code"></a>Ladění kódu systému
+
+Pokud máte načíst symboly ladění pro kód systému Microsoft a zakázané funkce pouze můj kód, můžete krokovat s vnořením do volání systému stejně jako u ostatních volání.  
   
- Pokud načtený symboly pro ladění pro kód systému a pouze můj kód není povolena, můžete se stejně jako ostatní volání do systémového volání okna krok.  
+Načtení symbolů společnosti Microsoft, naleznete v tématu [konfigurovat umístění symbolu a načítání](specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md#configure-symbol-locations-and-loading-options).  
   
- Pro přístup k souborům symbol Microsoft, najdete v části [používat servery symbolů najít soubory symbolů není na místním počítači](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md#BKMK_Use_symbol_servers_to_find_symbol_files_not_on_your_local_machine) v [zadejte symbolu (.pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) tématu.  
+**Načtení symbolů pro určité součásti systému:**
+
+1. Při ladění, otevřete **moduly** okna tak, že vyberete **ladění** > **Windows** > **moduly**, nebo stisknutím klávesy **Ctrl**+**Alt**+**U**.  
   
- Načtení symbolů pro určité součásti systému při ladění:  
+1. V **moduly** okna, poznáte, které moduly mají symboly načteny v **Status symbolu** sloupce. Klikněte pravým tlačítkem na modul, který chcete načíst symboly pro a vyberte **načíst symboly**.  
   
-1.  Otevřete okno moduly (klávesové: **Ctrl + Alt + U**).  
-  
-2.  Vyberte modul, který chcete načíst symboly pro.  
-  
-     Můžete zjistit, které moduly mají symboly načíst prohlížením **Symbol stav** sloupce.  
-  
-3.  Zvolte **zatížení symboly** v místní nabídce.  
-  
-##  <a name="BKMK_Step_into_properties_and_operators_in_managed_code"></a> Krok do vlastnosti a operátory ve spravovaném kódu  
- Ladicí program přes operátory ve spravovaném kódu a vlastnosti ve výchozím nastavení. Ve většině případů to poskytuje lepší ladění prostředí. Chcete-li povolit zanoříte se do vlastnosti nebo operátory, zvolte **ladění** > **možnosti**. Na **ladění** > **Obecné** zrušte zaškrtnutí políčka **krok přes vlastnosti a operátory (pouze spravované)** zaškrtávací políčko
+##  <a name="BKMK_Step_into_properties_and_operators_in_managed_code"></a> Krokovat přes vlastnosti a operátory ve spravovaném kódu  
+ Ladicí program přes vlastnosti a operátory ve spravovaném kódu ve výchozím nastavení. Ve většině případů to poskytuje lepší možnosti ladění. Chcete-li povolit krokování s vnořením do vlastností nebo operátorů, zvolte **ladění** > **možnosti**. Na **ladění** > **Obecné** zrušte **Krokovat přes vlastnosti a operátory (pouze spravované)** zaškrtávací políčko.
+
+## <a name="see-also"></a>Viz také:
+ [Co je ladění?](../debugger/what-is-debugging.md)  
+ [Oprava chyb napsáním lépe C# kódu](../debugger/write-better-code-with-visual-studio.md)  
+ [První pohled na ladění](../debugger/debugger-feature-tour.md) 

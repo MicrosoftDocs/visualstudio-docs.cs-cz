@@ -1,5 +1,5 @@
 ---
-title: '&lt;entryPoint&gt; – Element (vývoj pro Office v sadě Visual Studio) | Microsoft Docs'
+title: '&lt;entryPoint&gt; – element (vývoj pro Office v sadě Visual Studio)'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -17,18 +17,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f4bd7a9a119a5e604461f44bb166f19e063ab4af
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6eb617b44eb5360ea8c313431c7d8609505efa16
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34447086"
 ---
-# <a name="ltentrypointgt-element-office-development-in-visual-studio"></a>&lt;entryPoint&gt; – Element (vývoj pro Office v sadě Visual Studio)
+# <a name="ltentrypointgt-element-office-development-in-visual-studio"></a>&lt;entryPoint&gt; – element (vývoj pro Office v sadě Visual Studio)
   Každý `entryPoint` element `vstav3` obor názvů identifikuje přizpůsobení sestavení, které by měl být spuštěn při to [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] je aplikace nainstalována.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```xml  
 <entryPoint class>  
     <assemblyIdentity />  
 </entryPoint>  
@@ -50,7 +51,7 @@ ms.lasthandoff: 04/16/2018
 ### <a name="assemblyidentity"></a>assemblyIdentity –  
  Požadováno. `assemblyIdentity` Element v `vstav3` obor názvů odkazuje na stávající `assemblyIdentity` element v [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] manifest aplikace.  
   
- Role `assemblyIdentity` a jeho atributy je definována v [ &#60;assemblyIdentity&#62; Element &#40;aplikaci ClickOnce&#41;](/visualstudio/deployment/assemblyidentity-element-clickonce-application).  
+ Role `assemblyIdentity` a jeho atributy je definována v [ &#60;assemblyIdentity&#62; element &#40;aplikaci ClickOnce&#41;](/visualstudio/deployment/assemblyidentity-element-clickonce-application).  
   
 ## <a name="document-level-customization-example"></a>Příklad přizpůsobení na úrovni dokumentu  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="code"></a>Kód  
   
-```  
+```xml  
 <vstav3:entryPoint   
   class="ContosoExcelWorkbook.ThisWorkbook">  
   <assemblyIdentity   
@@ -101,7 +102,7 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="code"></a>Kód  
   
-```  
+```xml
 <vstav3:entryPoint   
   class="ContosoOutlookAddIn.ThisAddIn">  
   <assemblyIdentity   
@@ -115,6 +116,6 @@ ms.lasthandoff: 04/16/2018
 ## <a name="see-also"></a>Viz také  
  [Manifesty aplikace pro řešení pro systém Office](../vsto/application-manifests-for-office-solutions.md)   
  [Manifesty nasazení pro řešení Office](../vsto/deployment-manifests-for-office-solutions.md)   
- [ClickOnce – manifest aplikace ](/visualstudio/deployment/clickonce-application-manifest)  
+ [ClickOnce – manifest aplikace](/visualstudio/deployment/clickonce-application-manifest)  
   
   

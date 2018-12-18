@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramProvider2::GetProviderProgramNode | Microsoft Docs
+title: IDebugProgramProvider2::GetProviderProgramNode | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1b6984a89d39dc99351acaa0e37f2c3d9b1e47f1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d26b74928985feefda3acdc8594c35096fc4e0b4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49821317"
 ---
 # <a name="idebugprogramprovider2getproviderprogramnode"></a>IDebugProgramProvider2::GetProviderProgramNode
-Načte uzlu program pro určitý program.  
+Načte uzel program pro konkrétní aplikaci.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,31 +51,31 @@ int GetProviderProgramNode(
   
 #### <a name="parameters"></a>Parametry  
  `Flags`  
- [v] Kombinace příznaků z [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) výčtu. Následující příznaky jsou typické pro toto volání:  
+ [in] Kombinace příznaků z [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) výčtu. Následující příznaky jsou typické pro toto volání:  
   
 |Příznak|Popis|  
 |----------|-----------------|  
 |`PFLAG_REMOTE_PORT`|Volající běží na vzdáleném počítači.|  
-|`PFLAG_DEBUGGEE`|Volající je právě laděn (Další informace o zařazování bude vrácen pro každý uzel).|  
-|`PFLAG_ATTACHED_TO_DEBUGGEE`|Volající byl připojen k ale není spuštěn ladicí program.|  
+|`PFLAG_DEBUGGEE`|Volající je momentálně laděna (Další informace o zařazování bude vrácen pro každý uzel).|  
+|`PFLAG_ATTACHED_TO_DEBUGGEE`|Volající, byl připojený k ale není spuštěn pomocí ladicího programu.|  
   
  `pPort`  
- [v] Port volající proces běží na.  
+ [in] Port volající proces běží na.  
   
  `processId`  
- [v] [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) struktura, která uchovává ID procesu, který obsahuje program dotyčném.  
+ [in] [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) struktura obsahující dotyčný ID procesu, který obsahuje program.  
   
  `guidEngine`  
- [v] Identifikátor GUID modulu ladicí program připojený k (pokud existuje).  
+ [in] Identifikátor GUID ladicího stroje, který program je připojen k (pokud existuje).  
   
  `programId`  
- [v] ID programu, pro které chcete získat uzlu programu.  
+ [in] ID aplikace, pro které chcete získat uzel programu.  
   
  `ppProgramNode`  
- [out] [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) objektu, který představuje uzel pro požadovaný program.  
+ [out] [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) objekt představující uzel pro požadovaný program.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md)   

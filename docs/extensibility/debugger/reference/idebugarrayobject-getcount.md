@@ -1,5 +1,5 @@
 ---
-title: IDebugArrayObject::GetCount | Microsoft Docs
+title: IDebugArrayObject::GetCount | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 81788423523837b6e8b29a8869abca7b393cf37a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4edfaf7b9ef655473244bdcd18bf6b2c31b8210d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49891398"
 ---
 # <a name="idebugarrayobjectgetcount"></a>IDebugArrayObject::GetCount
 Získá počet elementů v poli.  
@@ -45,10 +46,10 @@ int GetCount(
  [out] Vrátí počet.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí S_OK; jinak vrátí kód chyby.  
+ V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda zobrazí všechny elementy pole objektu jako jednorozměrné pole, i když je objekt array multidimenzionální. Například zadané pole `myarray[3][2][6]`, tato metoda by vrátit 36 v `pdwElements` parametr. Použití [GetElement](../../../extensibility/debugger/reference/idebugarrayobject-getelement.md) metoda pro načtení jednotlivé elementy jeden najednou.  
+ Tato metoda považuje všechny prvky objektu pole jednorozměrné pole, i když objekt pole je vícerozměrné. Mějme například pole `myarray[3][2][6]`, tato metoda vrátí 36 `pdwElements` parametru. Použití [GetElement](../../../extensibility/debugger/reference/idebugarrayobject-getelement.md) metodu pro načtení jednotlivých prvků jeden po druhém.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugArrayObject](../../../extensibility/debugger/reference/idebugarrayobject.md)

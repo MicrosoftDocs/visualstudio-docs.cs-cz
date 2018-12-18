@@ -1,5 +1,5 @@
 ---
-title: Vytváření diagramů závislost z vašeho kódu
+title: Vytváření diagramů závislostí z kódu
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,33 +12,38 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 1c2a6cdb3adb17203e7e9086a5f87244c16a5edb
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 7a613874a45939d9c9f2546edbb5545d8be31ccb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49951168"
 ---
-# <a name="create-dependency-diagrams-from-your-code"></a>Vytváření diagramů závislost z vašeho kódu
+# <a name="create-dependency-diagrams-from-your-code"></a>Vytváření diagramů závislostí z kódu
 
-K vizualizaci Architektura vysoké úrovně, logické systému softwaru, vytvořit *diagram závislostí* v sadě Visual Studio. Abyste měli jistotu, že váš kód zůstává konzistentní s Tento návrh, ověření kódu s diagram závislostí. Můžete vytvořit diagramy závislostí pro projekty Visual C# a Visual Basic. Tuto funkci podporovat kterou verzí sady Visual Studio najdete v tématu [verze podpora architektura a modelování nástroje](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+Můžete vizualizovat váš softwarový systém logické architektury vysoké úrovně, vytvořit *diagram závislostí* v sadě Visual Studio. Pokud chcete mít jistotu, že váš kód zůstane s tímto návrhem konzistentní, ověřte kód diagram závislostí. Můžete vytvářet diagramy závislostí pro projekty Visual C# a Visual Basic. Chcete-li zjistit, jaké edice sady Visual Studio podporují tuto funkci, přečtěte si téma [podpora edice nástroje architektury a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
-![Vytvoření diagramu závislostí](../modeling/media/layerdiagramvisualizecode.png "LayerDiagramVisualizeCode")
+![Vytvořit diagram závislostí](../modeling/media/layerdiagramvisualizecode.png)
 
-Diagram závislostí umožňuje uspořádat do logických, abstraktní skupin nazývaných položky řešení sady Visual Studio *vrstvy*. Pomocí vrstev můžete popsat hlavní úlohy, které provádějí tyto artefakty, nebo hlavní komponenty systému. Každá vrstva může obsahovat další vrstvy, které popisují podrobnější úlohy. Můžete také určit určené nebo existující *závislosti* mezi vrstvami. Tyto závislosti, které jsou reprezentovány šipkami, zobrazují, které vrstvy mohou použít nebo právě používají funkce představované ostatními vrstvami. Chcete-li si udržet architektonickou kontrolu nad kódem, zobrazte zamýšlené závislosti v diagramu a potom ověřte kód proti diagramu.
+Diagram závislostí umožňuje uspořádat položky řešení sady Visual Studio do logických, abstraktních skupin nazvaných *vrstvy*. Pomocí vrstev můžete popsat hlavní úlohy, které provádějí tyto artefakty, nebo hlavní komponenty systému. Každá vrstva může obsahovat další vrstvy, které popisují podrobnější úlohy. Můžete také určit zamýšlené nebo existující *závislosti* mezi vrstvami. Tyto závislosti, které jsou reprezentovány šipkami, zobrazují, které vrstvy mohou použít nebo právě používají funkce představované ostatními vrstvami. Chcete-li si udržet architektonickou kontrolu nad kódem, zobrazte zamýšlené závislosti v diagramu a potom ověřte kód proti diagramu.
 
-[Video: Ověření svoje závislosti architektury v reálném čase](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)
+[Video: Ověření závislostí architektury v reálném čase](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)
 
-##  <a name="CreateDiagram"></a> Vytvoření diagramu závislostí
+## <a name="CreateDiagram"></a> Vytvořit diagram závislostí
 
-Než vytvoříte diagram závislostí, ujistěte se, že vaše řešení s projektem modelování.
+Než začnete vytvářet diagram závislostí, ujistěte se, že má vaše řešení projekt modelování.
 
 > [!IMPORTANT]
-> Nepřidávejte, přetáhněte nebo zkopírujte existujícího diagramu závislost z projektem modelování, do jiného projektu modelování nebo na jiné místo v řešení. Tím budou zachovány odkazy z původního diagramu i v případě, že změníte diagram. Rovněž to způsobí, že ověřování vrstev nebude fungovat správně. Důsledkem mohou být i další problémy, jako jsou například chybějící prvky nebo jiné chyby při pokusu o otevření diagramu.
+> Není přidat, přetáhněte nebo zkopírujte existující diagram závislostí z jednoho projektu modelování do jiného projektu modelování nebo na jiné místo v řešení. Tím budou zachovány odkazy z původního diagramu i v případě, že změníte diagram. Rovněž to způsobí, že ověřování vrstev nebude fungovat správně. Důsledkem mohou být i další problémy, jako jsou například chybějící prvky nebo jiné chyby při pokusu o otevření diagramu.
 >
-> Místo toho přidejte nový diagram závislost na projekt modelování. Zkopírujte prvky ze zdrojového diagramu do nového diagramu. Uložte projekt modelování a nový diagram závislostí.
+> Místo toho přidejte nový diagram závislostí projektu modelování. Zkopírujte prvky ze zdrojového diagramu do nového diagramu. Uložte projekt modelování i nový diagram závislostí.
 
-#### <a name="to-add-a-new-dependency-diagram-to-a-modeling-project"></a>Chcete-li přidat nový diagram závislost na projekt modelování
+### <a name="add-a-new-dependency-diagram-to-a-modeling-project"></a>Přidat do projektu modelování nový diagram závislostí
+
+> [!NOTE]
+> Diagramy závislostí nejsou podporovány pro projekty .NET Core v sadě Visual Studio 2017.
 
 1.  Na **architektura** nabídce zvolte **nový Diagram závislostí**.
 
@@ -46,55 +51,55 @@ Než vytvoříte diagram závislostí, ujistěte se, že vaše řešení s proje
 
 3.  Pojmenujte diagram.
 
-4.  V **přidat do projektu modelování**, vyhledejte a vyberte existující projekt modelování ve vašem řešení.
+4.  V **přidat k projektu modelování**, vyhledejte a vyberte existující projekt modelování z řešení.
 
      -nebo-
 
-     Zvolte **vytvořte nový projekt modelování** přidat nový projekt modelování do řešení.
+     Zvolte **vytvořte nový projekt modelování** přidat nový projekt modelování řešení.
 
     > [!NOTE]
-    >  Diagram závislostí musí existovat v projektu modelování. Můžete jej však propojit s položkami kdekoli v řešení.
+    > Diagram závislostí musí existovat v projektu modelování. Můžete jej však propojit s položkami kdekoli v řešení.
 
-5.  Ujistěte se, že uložte projekt modelování a diagram závislostí.
+5.  Nezapomeňte uložit projekt modelování i diagram závislostí.
 
-## <a name="drag-and-drop-or-copy-and-paste-from-a-code-map"></a>Přetáhněte a vyřadit, nebo zkopírujte a vložte z Mapa kódu
+## <a name="drag-and-drop-or-copy-and-paste-from-a-code-map"></a>Přetahování, nebo zkopírujte a vložte z mapy kódu
 
-1. Generovat mapu kódu pro řešení pomocí **architektura** nabídky.
+1. Generovat mapu kódu řešení s využitím **architektura** nabídky.
 
-2. Zvažte použití filtru Map kódu k odebrání složek řešení a "Test aktiva", pokud chcete vynutit závislostí v kód produktu.
+2. Zvažte použití filtrování mapy kódu k odebrání složky řešení a "Testovací prostředky", pokud chcete vynutit závislosti v kódu produktu.
 
-3. Na generovaných Map kódu odeberte uzlu "Externí" nebo rozbalit a zobrazit externí sestavení, a to v závislosti na tom, jestli chcete vynutit závislosti obor názvů a odstranit bez potřeby sestavení z Mapa kódu.
+3. V generovaných Map kódu odebrat uzel "Externí", nebo rozbalit a zobrazit externí sestavení, v závislosti na tom, jestli chcete vynutit závislosti oborů názvů a odstranit nepovinné sestavení z mapy kódu.
 
-4. Vytvořit nový Diagram závislostí pro řešení pomocí **architektura** nabídky
+4. Vytvořit nový Diagram závislostí s využitím řešení **architektura** nabídky
 
-5. Vyberte všechny uzly na mapě kódu (použijte _Ctrl_ + _A_, nebo použijte výběr pružné vzdálené stisknutím _Shift_ klíče před klikněte na tlačítko, přetáhněte a verzi.
+5. Vybere všechny uzly na mapě kódu (použijte _Ctrl_ + _A_, nebo použijte výběr metodou pružných stisknutím klávesy _Shift_ před klikněte na tlačítko, přetáhněte a verzi klíče.
 
-6. Přetahování, nebo kopírování a vložení, vybrané elementy do nového diagramu závislostí ověření.
+6. Přetahování, nebo kopírování a vložení, vybrané elementy na nový diagram ověřování závislostí.
 
-7. Ukazuje to architektuře aktuální aplikace. Rozhodnete, co chcete architektura být a odpovídajícím způsobem upravit diagram závislostí.
+7. To ukazuje aktuální architekturu aplikace. Určit, co mají architektura být a odpovídajícím způsobem upravit diagram závislostí.
 
 ![Diagram závislostí generovaných Map kódu](media/dependency-validation-01.png)
 
-##  <a name="CreateLayers"></a> Vytvoření vrstev z artefaktů
+## <a name="CreateLayers"></a> Vytvořit vrstvu z artefaktů
  Vrstvy můžete vytvářet z položek řešení sady Visual Studio, jako jsou projekty, soubory kódu, obory názvů, třídy a metody. Tím se automaticky vytvoří spojení mezi vrstvami a položkami, čímž dojde k jejich zahrnutí do procesu ověření vrstev.
 
  Vrstvy můžete spojovat i s položkami, které ověřování nepodporují, jako například dokumenty aplikace Word nebo prezentace aplikace PowerPoint, takže vrstvu můžete přidružit ke specifikacím nebo plánům. Vrstvy můžete také spojovat se soubory v projektech, které jsou sdíleny napříč více aplikacemi, ale proces ověření nebude zahrnovat ty vrstvy, které se zobrazí s obecnými názvy, například „Vrstva 1“ a „Vrstva 2“.
 
- Pokud chcete zobrazit, pokud propojené položky podporuje ověřování, otevřete **vrstvy Průzkumníka** a prozkoumat **podporuje ověřování** vlastnosti položky. V tématu [Správa odkazy na artefakty](#Managing).
+ Chcete-li zobrazit, pokud propojená položka podporuje ověřování, otevřete **Průzkumník vrstev** a prozkoumejte **podporuje ověřování** vlastnosti položky. Zobrazit [Správa odkazy na artefakty](#Managing).
 
-|**K**|**Postupujte podle těchto kroků**|
-|------------|----------------------------|
-|Vytvoření vrstvy pro jeden artefakt|<ol><li>Přetáhněte ji do diagramu závislost z těchto zdrojů:<br /><br /> <ul><li>**Průzkumník řešení**<br /><br />         Přetáhnout můžete například soubory nebo projekty.</li><li>Mapy kódu<br /><br />         V tématu [mapování závislostí napříč vaším řešením](../modeling/map-dependencies-across-your-solutions.md) a [mapuje použití kódu k ladění aplikací](../modeling/use-code-maps-to-debug-your-applications.md).</li><li>**Třídy zobrazení** nebo **objektu prohlížeče**</li></ul><br />     Vrstva se zobrazí v diagramu a je propojena s artefaktem.</li><li>Přejmenujte vrstvu tak, aby odrážela odpovědnosti přidruženého kódu nebo artefaktů.</li></ol> **Důležité:** přetahování binární soubory do diagramu závislosti automaticky nepřidá jejich odkazy na projekt modelování. Binární soubory, které chcete ověřit, je třeba ručně přidat do projektu modelování. **Chcete-li přidat binární soubory do projektu modelování** <ol><li>V **Průzkumníku řešení**, otevřete místní nabídku pro modelování projekt a zvolte **přidat existující položku**.</li><li>V **přidat existující položku** dialogové okno, přejděte do binární soubory, vyberte je a pak zvolte **OK**.     Binární soubory se zobrazí v projektu modelování.</li><li>V **Průzkumníku řešení**, vyberte binární soubor, který jste přidali a stiskněte klávesu **F4** otevřete **vlastnosti** okno.</li><li>Na každý binární soubor, nastavte **akce sestavení** vlastnost **ověřením**.</li></ol>|
-|Vytvoření jedné vrstvy pro všechny vybrané artefakty|Přetáhněte všechny artefakty diagramu závislostí ve stejnou dobu.<br /><br /> Vrstva se zobrazí v diagramu a je propojena se všemi artefakty.|
-|Vytvoření vrstvy pro každý vybraný artefakt|Stisknutím a podržením **SHIFT** klíče a všechny artefakty přetáhněte do diagramu závislostí ve stejnou dobu. **Poznámka:** Pokud použijete **SHIFT** klíči vyberte položky, uvolněte klávesu po výběru artefakty. Stiskněte a podržte ji znovu, když přetahujete artefakty do diagramu. <br /><br /> Vrstva pro každý artefakt se zobrazí v diagramu a je propojena se všemi artefakty.|
+|**k**|**Postupujte podle těchto kroků**|
+|-|-|
+|Vytvoření vrstvy pro jeden artefakt|<ol><li>Přetáhněte položku na diagram závislostí z těchto zdrojů:<br /><br /> <ul><li>**Průzkumník řešení**<br /><br />         Přetáhnout můžete například soubory nebo projekty.</li><li>Mapy kódu<br /><br />         Zobrazit [mapování závislostí napříč vaším řešením](../modeling/map-dependencies-across-your-solutions.md) a [mapy kódu použít k ladění aplikací](../modeling/use-code-maps-to-debug-your-applications.md).</li><li>**Zobrazení tříd** nebo **Prohlížeč objektů**</li></ul><br />     Vrstva se zobrazí v diagramu a je propojena s artefaktem.</li><li>Přejmenujte vrstvu tak, aby odrážela odpovědnosti přidruženého kódu nebo artefaktů.</li></ol> **Důležité:** přetažením binárních souborů do závislostí diagramu automaticky nedojde k přidání jejich odkazů do projektu modelování. Binární soubory, které chcete ověřit, je třeba ručně přidat do projektu modelování. **Přidání binárních souborů do projektu modelování** <ol><li>V **Průzkumníka řešení**, otevřete místní nabídku pro projekt modelování a klikněte na tlačítko **přidat existující položku**.</li><li>V **přidat existující položku** dialogové okno, přejděte na binární soubory, vyberte je a klikněte na tlačítko **OK**.     Binární soubory se zobrazí v projektu modelování.</li><li>V **Průzkumníka řešení**, vyberte binární soubor, který jste přidali a potom stiskněte klávesu **F4** otevřít **vlastnosti** okna.</li><li>U každého binárního souboru nastavte **akce sestavení** vlastnost **ověřit**.</li></ol>|
+|Vytvoření jedné vrstvy pro všechny vybrané artefakty|Přetáhněte všechny artefakty do diagramu závislostí ve stejnou dobu.<br /><br /> Vrstva se zobrazí v diagramu a je propojena se všemi artefakty.|
+|Vytvoření vrstvy pro každý vybraný artefakt|Stiskněte a podržte **SHIFT** klíče přetáhněte všechny artefakty do diagramu závislostí ve stejnou dobu. **Poznámka:** používáte **SHIFT** klíč k výběru oblasti položek, po výběru artefaktů klávesu uvolněte. Stiskněte a podržte ji znovu, když přetahujete artefakty do diagramu. <br /><br /> Vrstva pro každý artefakt se zobrazí v diagramu a je propojena se všemi artefakty.|
 |Přidání artefaktu do vrstvy|Přetáhněte artefakt do vrstvy.|
-|Vytvoření nové nepropojené vrstvy|V **sada nástrojů**, rozbalte **Diagram závislostí** části a poté přetáhněte **vrstvy** diagramu závislostí.<br /><br /> Chcete-li přidat více vrstev, dvakrát na nástroj klikněte. Po dokončení klikněte **ukazatel** nástroj nebo klikněte na tlačítko **ESC** klíč.<br /><br /> - nebo -<br /><br /> Otevřete místní nabídku pro diagram závislostí, zvolte **přidat**a potom zvolte **vrstvy**.|
-|Vytvoření vnořených vrstev|Přetáhněte existující vrstvu na jinou vrstvu.<br /><br /> - nebo -<br /><br /> Otevřete místní nabídku pro vrstvu, zvolte **přidat**a potom zvolte **vrstvy**.|
-|Vytvoření nové vrstvy, která obsahuje dvě nebo více existujících vrstev|Vyberte vrstvy, otevřete místní nabídku pro váš výběr a potom zvolte **skupiny**.|
-|Změna barvy vrstvy|Nastavte její **barva** vlastnost na požadovanou barvu.|
-|Zadání toho, aby artefakty spojené s vrstvou nesměly patřit zadanému oboru názvů|Zadejte obory názvů na vrstvě **zakázáno obory názvů** vlastnost. Použijte středník (**;**) pro samostatné obory názvů.|
-|Zadání toho, aby artefakty spojené s vrstvou nemohly záviset na zadaných oborech názvů|Zadejte obory názvů na vrstvě **zakázáno závislosti Namespace** vlastnost. Použijte středník (**;**) pro samostatné obory názvů.|
-|Zadání toho, aby artefakty spojené s vrstvou musely patřit jednomu ze zadaných oborů názvů|Zadejte obor názvů na vrstvě **požadované obory názvů** vlastnost. Použijte středník (**;**) pro samostatné obory názvů.|
+|Vytvoření nové nepropojené vrstvy|V **nástrojů**, rozbalte **Diagram závislostí** části a pak přetáhněte **vrstvy** na diagram závislostí.<br /><br /> Chcete-li přidat více vrstev, dvakrát na nástroj klikněte. Až budete hotovi, zvolte **ukazatel** nástrojů nebo stisknete klávesu **ESC** klíč.<br /><br /> - nebo -<br /><br /> Otevřete místní nabídku pro diagram závislostí, zvolte **přidat**a klikněte na tlačítko **vrstvy**.|
+|Vytvoření vnořených vrstev|Přetáhněte existující vrstvu na jinou vrstvu.<br /><br /> - nebo -<br /><br /> Otevřete místní nabídku vrstvy, zvolte **přidat**a klikněte na tlačítko **vrstvy**.|
+|Vytvoření nové vrstvy, která obsahuje dvě nebo více existujících vrstev|Vyberte vrstvy, otevřete místní nabídku pro váš výběr a klikněte na tlačítko **skupiny**.|
+|Změna barvy vrstvy|Nastavte jeho **barva** vlastnost na požadovanou barvu.|
+|Zadání toho, aby artefakty spojené s vrstvou nesměly patřit zadanému oboru názvů|Zadejte obory názvů do vrstvy **zakázané obory názvů** vlastnost. Použijte středník (**;**) k oddělení oborů názvů.|
+|Zadání toho, aby artefakty spojené s vrstvou nemohly záviset na zadaných oborech názvů|Zadejte obory názvů do vrstvy **je zakázané závislosti Namespace** vlastnost. Použijte středník (**;**) k oddělení oborů názvů.|
+|Zadání toho, aby artefakty spojené s vrstvou musely patřit jednomu ze zadaných oborů názvů|Zadejte obor názvů vrstvy **požadované obory názvů** vlastnost. Použijte středník (**;**) k oddělení oborů názvů.|
 
  Číslo ve vrstvě udává počet artefaktů, které jsou spojeny s vrstvou. Při čtení tohoto čísla však pamatujte na následující skutečnosti:
 
@@ -104,48 +109,48 @@ Než vytvoříte diagram závislostí, ujistěte se, že vaše řešení s proje
 
 -   Pokud například vrstva obsahuje jiné vrstvy, které jsou spojeny s artefakty, pak je vrstva kontejneru také propojena s těmito artefakty, i když číslo vrstvy kontejneru tyto artefakty neobsahuje.
 
-##  <a name="Managing"></a> Správa odkazů mezi vrstvy a artefaktů
+## <a name="Managing"></a> Správa propojení mezi vrstvami a artefakty
 
-1.  Diagram závislostí, otevřete místní nabídku pro vrstvy a zvolte **zobrazení odkazy**.
+1.  Na diagram závislostí, otevřete místní nabídku vrstvy a klikněte na tlačítko **zobrazit odkazy**.
 
-     **Vrstvy Průzkumníka** artefaktů odkazy pro vybrané vrstvy.
+     **Průzkumník vrstev** zobrazuje propojení artefaktů pro vybranou vrstvu.
 
 2.  Ke správě těchto propojení použijte následující úlohy:
 
-|**K**|**V Průzkumníku vrstvy**|
-|------------|---------------------------|
-|Odstranění propojení mezi vrstvou a artefaktem|Otevřete místní nabídku pro odkaz artefaktů a zvolte **odstranit**.|
-|Přesunutí propojení z jedné vrstvy do druhé|Přetáhněte do diagramu propojení artefaktu s existující vrstvou.<br /><br /> - nebo -<br /><br /> 1.  Otevřete místní nabídku pro odkaz artefaktů a zvolte **Vyjmout**.<br />2.  Diagram závislostí, otevřete místní nabídku pro vrstvy a zvolte **vložení**.|
-|Kopírování propojení z jedné vrstvy do druhé|1.  Otevřete místní nabídku pro odkaz artefaktů a zvolte **kopie**.<br />2.  Diagram závislostí, otevřete místní nabídku pro vrstvy a zvolte **vložení**.|
+|**k**|**V Průzkumníku vrstev**|
+|-|-|
+|Odstranění propojení mezi vrstvou a artefaktem|Otevřete místní nabídku propojení artefaktu a následně zvolte **odstranit**.|
+|Přesunutí propojení z jedné vrstvy do druhé|Přetáhněte do diagramu propojení artefaktu s existující vrstvou.<br /><br /> - nebo -<br /><br /> 1.  Otevřete místní nabídku propojení artefaktu a následně zvolte **Vyjmout**.<br />2.  Na diagram závislostí, otevřete místní nabídku vrstvy a klikněte na tlačítko **vložit**.|
+|Kopírování propojení z jedné vrstvy do druhé|1.  Otevřete místní nabídku propojení artefaktu a následně zvolte **kopírování**.<br />2.  Na diagram závislostí, otevřete místní nabídku vrstvy a klikněte na tlačítko **vložit**.|
 |Vytvoření nové vrstvy z existujícího propojení artefaktu|Přetáhněte propojení artefaktu do prázdné oblasti na diagramu.|
-|Ověřte, zda propojené artefaktů podporuje ověřování pro diagram závislostí.|Podívejte se na **podporuje ověřování** sloupec pro odkaz artefaktů.|
+|Ověřte, zda propojený artefakt podporuje ověřování proti diagram závislostí.|Podívejte se na **podporuje ověřování** sloupec pro propojení artefaktu.|
 
-##  <a name="Discovering"></a> Provádět zpětnou analýzu stávající závislosti
+## <a name="Discovering"></a> Provádět zpětnou analýzu existujících závislostí
  Závislost existuje všude, kde artefakt, který je spojen s jednou vrstvou, odkazuje na artefakt, který je přidružen k jiné vrstvě. Třída v jedné vrstvě například deklaruje proměnnou, která má třídu v jiné vrstvě. Je možné provádět zpětnou analýzu existujících závislostí pro artefakty, které jsou propojeny s vrstvami v diagramu.
 
 > [!NOTE]
->  Pro určité druhy artefaktů nelze provádět zpětnou analýzu žádných závislostí. Zpětnou analýzou například nebudou získány žádné závislosti z vrstvy nebo do ní, když je propojena s textovým souborem. Pokud chcete zobrazit, jaké artefakty mít závislosti, můžete provádět zpětnou analýzu, otevřete místní nabídku pro jednu nebo více vrstev a zvolte **zobrazení odkazy**. V **vrstvy Explorer**, zkontrolujte **podporuje ověřování** sloupce. Závislosti nebude zpětnou analýzou pro artefakty, pro které tomto sloupci se zobrazuje **False**.
+> Pro určité druhy artefaktů nelze provádět zpětnou analýzu žádných závislostí. Zpětnou analýzou například nebudou získány žádné závislosti z vrstvy nebo do ní, když je propojena s textovým souborem. Pokud chcete zobrazit, které artefakty mají závislosti, které je možné provádět zpětnou analýzu, otevřete místní nabídku pro jednu nebo více vrstev a klikněte na tlačítko **zobrazit odkazy**. V **Průzkumník vrstev**, zkontrolujte **podporuje ověřování** sloupce. Závislosti se nebudou provést zpětnou analýzu pro artefakty, u kterých tento sloupec zobrazuje **False**.
 
--   Vyberte jednu nebo více vrstev, otevřete místní nabídku pro vybranou vrstvu a pak zvolte **generovat závislosti**.
+- Vyberte jednu nebo více vrstev, otevřete místní nabídku pro vybranou vrstvu a klikněte na tlačítko **generovat závislosti**.
 
- Obvykle se zobrazí nějaké závislosti, které by neměly existovat. Tyto závislosti lze upravit, aby odpovídaly zamýšlenému návrhu.
+  Obvykle se zobrazí nějaké závislosti, které by neměly existovat. Tyto závislosti lze upravit, aby odpovídaly zamýšlenému návrhu.
 
-##  <a name="EditDependencies"></a> Upravit vrstvy a závislosti zobrazíte určený návrhu
- Popis změny, které máte v úmyslu provést systému nebo zamýšlené architekturu, upravte diagram závislost:
+## <a name="EditDependencies"></a> Úprava vrstev a závislostí za účelem zobrazení zamýšleného návrhu
+ Chcete-li popsat změny, které máte v plánu provést vašeho systému nebo v požadované architektuře, upravte diagram závislostí:
 
-|**K**|**Proveďte tyto kroky**|
-|------------|-----------------------------|
-|Změna nebo omezení směru závislosti|Nastavte její **směr** vlastnost.|
-|Vytvoření nových závislostí|Použití **závislostí** a **obousměrného závislostí** nástroje.<br /><br /> Chcete-li nakreslit více závislostí, klikněte na nástroj dvakrát. Po dokončení klikněte **ukazatel** nástroj nebo klikněte na tlačítko **ESC** klíč.|
-|Zadání toho, aby artefakty spojené s vrstvou nemohly záviset na zadaných oborech názvů|Zadejte obory názvů na vrstvě **zakázáno závislosti Namespace** vlastnost. Použijte středník (**;**) pro samostatné obory názvů.|
-|Zadání toho, aby artefakty spojené s vrstvou nesměly patřit zadanému oboru názvů|Zadejte obory názvů na vrstvě **zakázáno obory názvů** vlastnost. Použijte středník (**;**) pro samostatné obory názvů.|
-|Zadání toho, aby artefakty spojené s vrstvou musely patřit jednomu ze zadaných oborů názvů|Zadejte obor názvů na vrstvě **požadované obory názvů** vlastnost. Použijte středník (**;**) pro samostatné obory názvů.|
+|**k**|**Proveďte tyto kroky**|
+|-|-|
+|Změna nebo omezení směru závislosti|Nastavte jeho **směr** vlastnost.|
+|Vytvoření nových závislostí|Použití **závislost** a **obousměrná závislost** nástroje.<br /><br /> Chcete-li nakreslit více závislostí, klikněte na nástroj dvakrát. Až budete hotovi, zvolte **ukazatel** nástrojů nebo stisknete klávesu **ESC** klíč.|
+|Zadání toho, aby artefakty spojené s vrstvou nemohly záviset na zadaných oborech názvů|Zadejte obory názvů do vrstvy **je zakázané závislosti Namespace** vlastnost. Použijte středník (**;**) k oddělení oborů názvů.|
+|Zadání toho, aby artefakty spojené s vrstvou nesměly patřit zadanému oboru názvů|Zadejte obory názvů do vrstvy **zakázané obory názvů** vlastnost. Použijte středník (**;**) k oddělení oborů názvů.|
+|Zadání toho, aby artefakty spojené s vrstvou musely patřit jednomu ze zadaných oborů názvů|Zadejte obor názvů vrstvy **požadované obory názvů** vlastnost. Použijte středník (**;**) k oddělení oborů názvů.|
 
-##  <a name="EditLayout"></a> Změnit způsob elementy diagram.
+## <a name="EditLayout"></a> Změna způsobu zobrazení prvků v diagramu
  Velikost, tvar, barvu a polohu vrstev nebo barvu závislostí můžete změnit úpravou jejich vlastností.
 
-##  <a name="Codemaps"></a> Zjistit vzory a závislosti na mapě kódu
- Při vytváření diagramů závislostí, můžete také vytvořit **code mapy**. Tyto diagramy můžete zjistit vzory a závislosti při prozkoumávání kód. Pomocí Průzkumníka řešení, zobrazení tříd nebo prohlížeč objektů a prozkoumejte sestavení, obory názvů a třídy - odpovídajících často i existující vrstvy. Další informace o map kódu najdete v tématu:
+## <a name="Codemaps"></a> Zjišťování vzorců a závislostí v mapě kódu
+ Při vytváření diagramů závislostí, můžete také vytvořit **map kódu**. Tyto diagramy vám můžou pomoct odhalit vzory a závislostí při zkoumání kódu. Prozkoumejte sestavení, oborů názvů a třídy – které často odpovídají existujících vrstev pomocí Průzkumníka řešení, zobrazení tříd nebo prohlížeči objektů. Další informace o mapách kódu naleznete v tématu:
 
 -   [Mapování závislostí napříč vaším řešením](../modeling/map-dependencies-across-your-solutions.md)
 
@@ -155,7 +160,7 @@ Než vytvoříte diagram závislostí, ujistěte se, že vaše řešení s proje
 
 ## <a name="see-also"></a>Viz také
 
-- [Video: Ověření svoje závislosti architektury v reálném čase](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)
+- [Video: Ověření závislostí architektury v reálném čase](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4)
 - [Diagramy závislostí: Referenční dokumentace](../modeling/layer-diagrams-reference.md)
 - [Diagramy závislostí: Pokyny](../modeling/layer-diagrams-guidelines.md)
 - [Ověřování kódu pomocí diagramů závislostí](../modeling/validate-code-with-layer-diagrams.md)

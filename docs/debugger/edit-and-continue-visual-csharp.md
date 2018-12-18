@@ -24,6 +24,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31474073"
 ---
 # <a name="edit-and-continue-visual-c"></a>Upravit a pokračovat (Visual C#)
  Upravit a pokračovat pro jazyk C# můžete provést změny kódu v režimu pozastavení při ladění. Změny lze použít bez nutnosti zastavit a restartovat relaci ladění. Editor zdrojového kódu v režimu spuštění, je jen pro čtení.  

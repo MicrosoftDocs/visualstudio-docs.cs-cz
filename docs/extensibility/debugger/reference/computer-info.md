@@ -1,5 +1,5 @@
 ---
-title: COMPUTER_INFO | Microsoft Docs
+title: COMPUTER_INFO | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,14 +13,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0f9f81532608a4919707b5acafbde7ce1d8fe400
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9a52247f36f3628d91e83a89ded88a35c6ee8e68
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49864215"
 ---
 # <a name="computerinfo"></a>COMPUTER_INFO
-Popisuje počítače, na kterém je spuštěný ladicího programu.  
+Popisuje počítače, na kterém je spuštěný ladicí program.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,16 +45,16 @@ public struct COMPUTER_INFO
   
 ## <a name="terms"></a>Podmínky  
  wProcessorArchitecture  
- Identifikuje architektuře mikroprocesoru.  
+ Architektura mikroprocesoru identifikuje.  
   
  wSuiteMask  
- Identifikuje maska suite.  
+ Identifikuje sadu masky.  
   
  dwOperatingSystemVersion  
  Číslo verze operačního systému.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je vrácený [GetComputerInfo](../../../extensibility/debugger/reference/idebugwindowscomputerport2-getcomputerinfo.md) metoda.  
+ Tato struktura je vrácený [GetComputerInfo](../../../extensibility/debugger/reference/idebugwindowscomputerport2-getcomputerinfo.md) metody.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: Msdbg.h  

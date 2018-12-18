@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: hledání e-mailových adres v kontaktech prostřednictvím kódu programu | Microsoft Docs'
+title: 'Postupy: hledání e-mailových adres v kontaktech prostřednictvím kódu programu'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -17,29 +17,30 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 16b79f5f14f1e0d8c5c82a00f5f2ccf2412b991b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e7b9c4c7d02f3cd1564e6733c46cb821eade7f54
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35676604"
 ---
-# <a name="how-to-programmatically-search-for-an-e-mail-address-in-contacts"></a>Postupy: Hledání e-mailových adres v kontaktech prostřednictvím kódu programu
-  Tento příklad vyhledá kontaktní složku pro kontakty, které mají název domény **example.com** v e-mailových adres.  
+# <a name="how-to-programmatically-search-for-an-email-address-in-contacts"></a>Postupy: hledání e-mailových adres v kontaktech prostřednictvím kódu programu
+  Tento příklad vyhledá složku kontaktů pro kontakty, které mají název domény **example.com** v e-mailové adresy.  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
 ## <a name="example"></a>Příklad  
  [!code-csharp[Trin_OL_SearchEmail#1](../vsto/codesnippet/CSharp/Trin_OL_SearchEmail/thisaddin.cs#1)]  
   
-## <a name="compiling-the-code"></a>Probíhá kompilace kódu  
+## <a name="compile-the-code"></a>Kompilace kódu  
  Tento příklad vyžaduje:  
   
--   Kontakty, které mají název domény **example.com** v e-mailových adres (například `somebody@example.com`), a které mají názvy první a poslední.  
+-   Kontakty, které mají název domény **example.com** v e-mailové adresy (například `somebody@example.com`), a jejichž křestní jména a příjmení.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Práce s položkami kontaktů](../vsto/working-with-contact-items.md)   
  [Postupy: odeslání e-mailu prostřednictvím kódu programu](../vsto/how-to-programmatically-send-e-mail-programmatically.md)   
- [Postupy: přístup programu ke kontaktům aplikace Outlook](../vsto/how-to-programmatically-access-outlook-contacts.md)   
- [Postupy: Přidání položky ke kontaktům aplikace Outlook prostřednictvím kódu programu](../vsto/how-to-programmatically-add-an-entry-to-outlook-contacts.md)  
+ [Postupy: programový přístup ke kontaktům aplikace Outlook](../vsto/how-to-programmatically-access-outlook-contacts.md)   
+ [Postupy: přidávání položky ke kontaktům aplikace Outlook prostřednictvím kódu programu](../vsto/how-to-programmatically-add-an-entry-to-outlook-contacts.md)  
   
   

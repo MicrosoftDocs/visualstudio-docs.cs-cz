@@ -1,6 +1,6 @@
 ---
-title: Jak mohu použít okna ladicího programu během ladění programu na popředí? | Microsoft Docs
-ms.custom: ''
+title: Použít okna ladicího programu během ladění aplikace na popředí | Dokumentace Microsoftu
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -23,19 +23,20 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 26654d13053c963ad86d46bee5a6fe6ed0d4d85d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 6497a2a21c85e7889b3b6538dace0f8c22f24944
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53063765"
 ---
 # <a name="how-can-i-use-debugger-windows-while-debugging-a-foreground-program"></a>Jak mohu použít okna ladicího programu během ladění programu na popředí?
 ## <a name="problem-description"></a>Popis problému  
- Pokouším k ladění obrazovky Malování problém. Sledovat tento problém, potřebuji uchovávat Moje programu na popředí, což znamená, že nemám přístup k ladění systému windows. Co mám udělat?  
+ Pokouším k ladění problému vykreslování obrazovky. Sledovat tento problém, budu muset zachovat programu na popředí, což znamená, že nemám přístup k ladění systému windows. Co mám udělat?  
   
 ## <a name="solution"></a>Řešení  
- Pokud máte druhý počítač, můžete použít vzdálené ladění. Při instalaci dva počítače můžete sledovat Malování obrazovky na vzdáleném počítači při provozu ladicí program na hostiteli. Další informace o vzdálené ladění najdete v tématu [vzdálené ladění](../debugger/remote-debugging.md).  
+ Pokud máte druhý počítač, můžete použít vzdálené ladění. Při instalaci dva počítače můžete sledovat Malování obrazovky na vzdáleném počítači při provozování ladicího programu na hostiteli. Další informace o vzdáleném ladění naleznete v tématu [vzdálené ladění](../debugger/remote-debugging.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Nativní kód nejčastější dotazy k ladění](../debugger/debugging-native-code-faqs.md)   
+ [Ladění nativního kódu nejčastější dotazy](../debugger/debugging-native-code-faqs.md)   
  [Ladění nativního kódu](../debugger/debugging-native-code.md)

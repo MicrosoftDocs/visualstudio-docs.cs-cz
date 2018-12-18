@@ -1,5 +1,5 @@
 ---
-title: Možnosti a možnosti stránky | Microsoft Docs
+title: Možnosti a stránky Možnosti | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,61 +17,62 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d85b900779a5df8af077b292b2e2f70b0592e35c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3607b67b34e778e0352cdb1159b16841c5a1211f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49865151"
 ---
-# <a name="options-and-options-pages"></a>Možnosti a možnosti stránky
-Kliknutím na tlačítko **možnosti** na **nástroje** otevře se nabídka **možnosti** dialogové okno. Možnosti v tomto dialogovém se souhrnně označují jako možnosti stránky. V navigačním podokně ovládacího prvku strom zahrnuje možnosti kategorií a každou kategorii má možnosti stránky. Když vyberete na stránce, v pravém podokně zobrazí jeho možnosti. Tyto stránek umožňují změnit hodnoty možnosti, které určují stav VSPackage.  
+# <a name="options-and-options-pages"></a>Možnosti a stránky Možnosti
+Kliknutím na **možnosti** na **nástroje** se otevře nabídka **možnosti** dialogové okno. Možnosti v tomto dialogovém se souhrnně označují jako možnosti stránky. Ovládací prvek stromové struktury v navigačním podokně zahrnuje možnosti kategorií a každou kategorii má možnosti stránky. Když vyberete na stránce, jeho možnosti se zobrazí v pravém podokně. Tyto stránky umožňují změnit hodnoty možnosti, které určují stav VSPackage.  
   
-## <a name="support-for-options-pages"></a>Podporu pro možnosti stránky  
- <xref:Microsoft.VisualStudio.Shell.Package> Třída poskytuje podporu pro vytváření možnosti stránky a možnosti kategorií. <xref:Microsoft.VisualStudio.Shell.DialogPage> Třída implementuje stránku možnosti.  
+## <a name="support-for-options-pages"></a>Podpora pro stránky Možnosti  
+ <xref:Microsoft.VisualStudio.Shell.Package> Třída poskytuje podporu pro vytváření stránek možnosti a možnosti kategorií. <xref:Microsoft.VisualStudio.Shell.DialogPage> Třída implementuje stránku možností.  
   
- Výchozí implementaci <xref:Microsoft.VisualStudio.Shell.DialogPage> nabízí jeho veřejné vlastnosti uživatele v obecné mřížku vlastností. Toto chování můžete přizpůsobit přepsáním různé metody na stránce a vytvořte vlastní možnosti stránku, která má své vlastní uživatelské rozhraní (UI). Další informace najdete v tématu [vytváření stránku možnosti](../../extensibility/creating-an-options-page.md).  
+ Výchozí implementace <xref:Microsoft.VisualStudio.Shell.DialogPage> nabízí jeho veřejné vlastnosti uživatele v obecné mřížky vlastností. Toto chování můžete přizpůsobit tak, že přepíšete různé metody na stránce vytvořit vlastní možnosti stránku, která má své vlastní uživatelské rozhraní (UI). Další informace najdete v tématu [vytvoření stránky možnosti](../../extensibility/creating-an-options-page.md).  
   
- <xref:Microsoft.VisualStudio.Shell.DialogPage> Třída implementuje <xref:Microsoft.VisualStudio.Shell.IProfileManager>, který poskytuje trvalosti pro možnosti stránky a také pro nastavení uživatele. Výchozí implementace <xref:Microsoft.VisualStudio.Shell.IProfileManager.LoadSettingsFromStorage%2A> a <xref:Microsoft.VisualStudio.Shell.IProfileManager.SaveSettingsToStorage%2A> metody zachovat změny vlastností do uživatele oddíl registru, pokud vlastnost převést do a z řetězce.  
+ <xref:Microsoft.VisualStudio.Shell.DialogPage> Implementuje třída <xref:Microsoft.VisualStudio.Shell.IProfileManager>, který poskytuje trvalosti pro stránky možnosti a také pro nastavení uživatele. Výchozí implementace <xref:Microsoft.VisualStudio.Shell.IProfileManager.LoadSettingsFromStorage%2A> a <xref:Microsoft.VisualStudio.Shell.IProfileManager.SaveSettingsToStorage%2A> metody zachovat změny vlastností do části uživatele z registru, pokud lze vlastnost převést do a z řetězce.  
   
-## <a name="options-page-registry-path"></a>Cesta v registru možnosti stránky  
- Ve výchozím nastavení, je určen vlastností spravuje stránku možnosti cestu registru tím, že zkombinujete <xref:Microsoft.VisualStudio.Shell.Package.UserRegistryRoot%2A>, word DialogPage a název typu třídy stránky možnosti. Například třída možností stránky mohou být definovány takto.  
+## <a name="options-page-registry-path"></a>Cesta v registru stránky Možnosti  
+ Ve výchozím nastavení, je určen cestu registru vlastností spravuje stránky možnosti tím, že zkombinujete <xref:Microsoft.VisualStudio.Shell.Package.UserRegistryRoot%2A>, slovo třídy DialogPage a název typu třídy stránky možnosti. Například třída stránky možností mohou být definovány následovně.  
   
  [!code-csharp[VSSDKSupportForOptionsPages#1](../../extensibility/internals/codesnippet/CSharp/options-and-options-pages_1.cs)]
  [!code-vb[VSSDKSupportForOptionsPages#1](../../extensibility/internals/codesnippet/VisualBasic/options-and-options-pages_1.vb)]  
   
- Pokud <xref:Microsoft.VisualStudio.Shell.Package.UserRegistryRoot%2A> je HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0Exp, pak jsou podklíče HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0Exp\DialogPage\ dvojice název a hodnota vlastnosti Company.OptionsPage.OptionsPageGeneral.  
+ Pokud <xref:Microsoft.VisualStudio.Shell.Package.UserRegistryRoot%2A> je HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0Exp, pak vlastnost dvojice název a hodnotu podklíče HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0Exp\DialogPage\ Company.OptionsPage.OptionsPageGeneral.  
   
- Cestu registru možnosti stránky je dáno kombinování <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A>, slovo, ToolsOptionsPages a možnosti stránky kategorie a název. Například, pokud na stránce Možnosti vlastní má kategorií, My možnost stránek a <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A> je HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp, pak na stránce Možnosti má klíč registru, HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ Možnost Pages\Custom VisualStudio\8.0Exp\ToolsOptionsPages\My.  
+ Cesta registru samotná stránka možností je určen tím, že zkombinujete <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A>, slovo, ToolsOptionsPages a možnosti stránce kategorie a název. Například, pokud kategorie Mé stránky možnost má vlastní stránky možnosti a <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A> je HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp, pak na stránce možnosti nemá klíč registru, HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ Možnost Pages\Custom VisualStudio\8.0Exp\ToolsOptionsPages\My.  
   
-## <a name="toolsoptions-page-attributes-and-layout"></a>Atributy stránky nástroje/Možnosti a rozložení  
- <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> Atribut určuje vlastní možnosti stránek seskupení do kategorií v navigačním stromu **možnosti** dialogové okno. <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> Atribut přidruží stránku možnosti VSPackage, která poskytuje rozhraní. Předpokládejme následující fragment kódu:  
+## <a name="toolsoptions-page-attributes-and-layout"></a>Nástroje/možnosti atributy stránky a rozložení  
+ <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> Určuje atribut seskupení vlastních stránek možností do kategorií v navigačním stromu **možnosti** dialogové okno. <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> Atribut přidruží sady VSPackage, která poskytuje rozhraní pro stránky možnosti. Předpokládejme následující fragment kódu:  
   
  [!code-csharp[VSSDKSupportForOptionsPages#2](../../extensibility/internals/codesnippet/CSharp/options-and-options-pages_2.cs)]
  [!code-vb[VSSDKSupportForOptionsPages#2](../../extensibility/internals/codesnippet/VisualBasic/options-and-options-pages_2.vb)]  
   
- To deklaruje, že MyPackage poskytuje dvě možnosti stránky, OptionsPageGeneral a OptionsPageCustom. V **možnosti** dialogové okno, zobrazí se v obou možnosti stránky **Moje stránky možnost** kategorie jako **Obecné** a **vlastní**, v uvedeném pořadí.  
+ To deklaruje, že MyPackage obsahuje dvě stránky možnosti OptionsPageGeneral a OptionsPageCustom. V **možnosti** dialogové okno, obě možnosti stránky se zobrazují v **vlastní stránky možnosti** kategorie jako **Obecné** a **vlastní**v uvedeném pořadí.  
   
 ## <a name="option-attributes-and-layout"></a>Možnost atributy a rozložení  
- Uživatelské rozhraní (UI), které poskytuje stránce určuje vzhled možnosti na stránce vlastní možnosti. Rozložení, označování a popis možnosti na stránce Obecné možnosti jsou určeny následující atributy:  
+ Uživatelské rozhraní (UI), které na stránce určuje vzhled možnosti na stránce vlastní možnosti. Rozložení, označování popisky a popis možnosti na stránce Obecné možnosti jsou určeny následující atributy:  
   
--   <xref:System.ComponentModel.CategoryAttribute> Určuje kategorii možnost.  
+- <xref:System.ComponentModel.CategoryAttribute> Určuje kategorii možnost.  
   
--   <xref:System.ComponentModel.DisplayNameAttribute> Určuje zobrazovaný název možnosti.  
+- <xref:System.ComponentModel.DisplayNameAttribute> Určuje zobrazovaný název možnosti.  
   
--   <xref:System.ComponentModel.DescriptionAttribute> Určuje popis možnosti.  
+- <xref:System.ComponentModel.DescriptionAttribute> Určuje popis možnosti.  
   
-    > [!NOTE]
-    >  Ekvivalentní atributy, SRCategory, LocDisplayName a SRDescription, používat prostředky řetězce pro lokalizaci a jsou definovány v [spravovaný projekt ukázka](http://go.microsoft.com/fwlink/?LinkId=122774).  
+  > [!NOTE]
+  >  Ekvivalentní atributy, SRCategory, LocDisplayName a SRDescription, použití řetězcových prostředků pro lokalizaci a jsou definovány v [spravovaný projekt ukázky](http://go.microsoft.com/fwlink/?LinkId=122774).  
   
- Předpokládejme následující fragment kódu:  
+  Předpokládejme následující fragment kódu:  
   
- [!code-csharp[VSSDKSupportForOptionsPages#3](../../extensibility/internals/codesnippet/CSharp/options-and-options-pages_3.cs)]
- [!code-vb[VSSDKSupportForOptionsPages#3](../../extensibility/internals/codesnippet/VisualBasic/options-and-options-pages_3.vb)]  
+  [!code-csharp[VSSDKSupportForOptionsPages#3](../../extensibility/internals/codesnippet/CSharp/options-and-options-pages_3.cs)]
+  [!code-vb[VSSDKSupportForOptionsPages#3](../../extensibility/internals/codesnippet/VisualBasic/options-and-options-pages_3.vb)]  
   
- OptionInteger možnost se zobrazí na stránce možnosti jako **celé číslo možnost** v **Moje možnosti** kategorie. Pokud je vybrána možnost, popis, **Moje celé číslo možnost**, zobrazí se v poli Popis.  
+  Možnost OptionInteger se zobrazí na stránce možnosti jako **celé číslo možnost** v **Moje možnosti** kategorie. Pokud je vybraná možnost, popis, **možnost Moje celé číslo**, zobrazí se v poli Popis.  
   
-## <a name="accessing-options-pages-from-another-vspackage"></a>Přístup k možnosti stránky z jiného VSPackage  
- VSPackage, který je hostitelem a spravuje stránku možnosti můžete programově přístupná z jiné VSPackage pomocí modelu automatizace. Například v následujícím kódu je VSPackage registrován jako hostování stránku možnost.  
+## <a name="accessing-options-pages-from-another-vspackage"></a>Přístup k možnosti stránky z jiného balíčku VSPackage  
+ VSPackage, která hostuje a spravuje stránky možnosti můžete programově přistupovat z jiného balíčku VSPackage pomocí modelu automatizace. Například v následujícím kódu se VSPackage zaregistruje jako hostování stránce možností.  
   
  [!code-csharp[VSSDKSupportForOptionsPages#4](../../extensibility/internals/codesnippet/CSharp/options-and-options-pages_4.cs)]
  [!code-vb[VSSDKSupportForOptionsPages#4](../../extensibility/internals/codesnippet/VisualBasic/options-and-options-pages_4.vb)]  
@@ -81,9 +82,9 @@ Kliknutím na tlačítko **možnosti** na **nástroje** otevře se nabídka **mo
  [!code-csharp[VSSDKSupportForOptionsPages#5](../../extensibility/internals/codesnippet/CSharp/options-and-options-pages_5.cs)]
  [!code-vb[VSSDKSupportForOptionsPages#5](../../extensibility/internals/codesnippet/VisualBasic/options-and-options-pages_5.vb)]  
   
- Když <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> atribut zaregistruje stránku možnosti, stránky je zaregistrovaný pod klíče Pokud AutomationProperties `SupportsAutomation` argument atributu je `true`. Automatizace prozkoumá této položky registru najít přidružené VSPackage a automatizace pak vlastnost přistupuje prostřednictvím hostované stránce Možnosti, v takovém případě stránku mřížky.  
+ Když <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> atribut zaregistruje stránky možnosti, na stránce je zaregistrovaný pod if klíče AutomationProperties `SupportsAutomation` argument atributu je `true`. Automatizace prozkoumá této položky registru najít související balíček VSPackage správy kódu a automatizaci pak přistupuje k vlastnosti prostřednictvím hostované možnosti stránky, v tomto případě stránku mřížky.  
   
- Cestu registru vlastnosti automatizace je dáno kombinování <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A>, slovo, AutomationProperties a možnosti stránky kategorie a název. Například, pokud na stránce Možnosti má Moje kategorie kategorie, název stránku mřížky a <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A>, HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp, pak vlastnost automatizace má klíč registru, HKEY_LOCAL_MACHINE\SOFTWARE\ Microsoft\VisualStudio\8.0Exp\AutomationProperties\My Category\My mřížky stránky.  
+ Vlastnosti automatizace cestu registru je určen tím, že zkombinujete <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A>, slovo, vlastnosti automatizace a možnosti stránce kategorie a název. Například, pokud na stránce Možnosti má kategorii mé kategorie, název mé stránky mřížky a <xref:Microsoft.VisualStudio.Shell.Package.ApplicationRegistryRoot%2A>, HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp a pak vlastnost automatizace má klíč registru, HKEY_LOCAL_MACHINE\SOFTWARE\ Microsoft\VisualStudio\8.0Exp\AutomationProperties\My Category\My mřížky stránky.  
   
 > [!NOTE]
->  Kanonický název stránky mřížky Moje Category.My, je hodnota podklíče název tohoto klíče.
+>  Kanonický název mé stránky mřížky Category.My, je hodnota podklíče název tohoto klíče.

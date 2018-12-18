@@ -1,10 +1,9 @@
 ---
-title: Upřesnit nastavení zabezpečení – dialogové okno | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+title: Dialogové okno Upřesnit nastavení zabezpečení
+ms.date: 06/27/2018
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - vs.err.debug_in_zone_no_hostproc
 helpviewer_keywords:
@@ -15,30 +14,31 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a1dad7843d42aeaf0c2871f8b76c840a12cd4186
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dce482f53f9f3e6dd0b57d6cb905f97cdfaa601a
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39180513"
 ---
-# <a name="advanced-security-settings-dialog-box"></a>Dialogové okno Upřesnit nastavení zabezpečení
-Toto dialogové okno umožňuje zadat nastavení zabezpečení související s laděním v zóně.  
-  
- Pro přístup k tohoto dialogového okna, vyberte uzel projektu v **Průzkumníku řešení**a pak klikněte na **projektu** nabídky, klikněte na tlačítko **vlastnosti**. Když **Návrhář projektu** se zobrazí, klikněte na tlačítko **zabezpečení** kartě. Na **zabezpečení** vyberte **povolení nastavení zabezpečení ClickOnce**, klikněte na tlačítko **Toto je aplikace s částečnou důvěryhodností**a pak klikněte na tlačítko **Upřesnit**.  
-  
-## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní  
- **Tuto aplikaci s vybraným nastavením oprávnění pro ladění**  
- Pokud vyberete toto políčko, nastavení oprávnění vybrané na **zabezpečení** stránky se používá během ladění. Ve výchozím nastavení je tato možnost vybrána.  
-  
- Pro ladění v zóně zabezpečení fungovat, musí být tato možnost povolená; Navíc **povolit sady Visual Studio proces hostování** možnost (k dispozici na **ladění** stránky **Návrhář projektu**) musí být povolena.  
-  
- Pro aplikace WPF webového prohlížeče projekty **ladění tuto aplikaci s vybraným nastavením oprávnění** je zaškrtnuta možnost a zakázaná možnost.  
-  
- **Udělit přístup k aplikaci do jeho lokality původu**  
- Pokud vyberete toto políčko, aplikaci přístup na webový server nebo sdílená složka serveru, na kterém je publikována. Ve výchozím nastavení je tato možnost vybrána.  
-  
- **Ladění této aplikace, jako kdyby byly staženy z následující adresy URL**  
- Pokud budete muset povolit aplikaci pro přístup na webový server nebo sdílená složka serveru odpovídající **adresy URL instalace** jste zadali na **publikovat** stránky, zadejte tuto adresu URL. Tato možnost je dostupná jenom v případě **udělit přístup k aplikaci do jeho lokality původu** je vybrána.  
-  
-## <a name="see-also"></a>Viz také  
- [Stránka Zabezpečení, Návrhář projektu](../../ide/reference/security-page-project-designer.md)
+# <a name="advanced-security-settings-dialog-box"></a>dialogové okno Upřesnit nastavení zabezpečení
+
+Toto dialogové okno umožňuje zadat nastavení zabezpečení související s laděním v zóně.
+
+![Dialogové okno Upřesnit nastavení zabezpečení v sadě Visual Studio](../media/advanced-security-settings.png)
+
+Pro přístup k tomuto dialogovému oknu, vyberte uzel projektu v **Průzkumníka řešení**a potom na **projektu** nabídky, klikněte na tlačítko **vlastnosti**. Když **Návrháře projektu** se zobrazí, klikněte na tlačítko **zabezpečení** kartu. Na **zabezpečení** stránce **povolit nastavení zabezpečení ClickOnce**, klikněte na tlačítko **Toto je aplikace s částečnou důvěryhodností**a potom klikněte na tlačítko **Upřesnit**.
+
+## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
+
+**Udělit aplikaci přístup ke stránce jejího původu**
+
+Pokud je toto políčko zaškrtnuto, aplikace přístup k webu nebo serveru sdílenou složku, ve kterém je publikována. Ve výchozím nastavení je tato možnost vybrána.
+
+**Ladit tuto aplikaci, jako kdyby byla stažena z následující adresy URL**
+
+Pokud budete muset povolit aplikaci přístup k webu nebo serveru sdílenou složku, odpovídá **adresa URL instalace** jste zadali na **publikovat** stránky, zadejte tuto adresu URL. Tato možnost je dostupná jenom v případě **udělit aplikaci přístup ke stránce jejího původu** zaškrtnuto.
+
+## <a name="see-also"></a>Viz také:
+
+- [Stránka Zabezpečení, Návrhář projektu](../../ide/reference/security-page-project-designer.md)

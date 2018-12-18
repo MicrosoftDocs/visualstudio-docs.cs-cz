@@ -1,6 +1,7 @@
 ---
 title: 'CA1724: Názvy typů by neměly odpovídat oborům názvů'
-ms.date: 11/04/2016
+ms.date: 09/28/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,13 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c1f9e13f8e02712ba4d0a0a492a9a6588f7a8a5e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: bf359ffcc098fa2b5653c28da302e2777216ea5b
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47860261"
 ---
 # <a name="ca1724-type-names-should-not-match-namespaces"></a>CA1724: Názvy typů by neměly odpovídat oborům názvů
+
 |||
 |-|-|
 |TypeName|TypeNamesShouldNotMatchNamespaces|
@@ -30,13 +33,17 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Název typu odpovídal [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] názvy oborů názvů v porovnání velká a malá písmena.
+
+Název typu odpovídá názvu odkazovaného oboru názvů, který má jeden nebo více externě viditelné typy. Název porovnání nerozlišuje velká a malá písmena.
 
 ## <a name="rule-description"></a>Popis pravidla
- Názvy typů by neměly odpovídat názvům oborů názvů, které jsou definovány v [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] knihovny tříd. Porušení tohoto pravidla může snížit použitelnost knihovny.
+
+Názvy uživatelsky vytvořených typů by neměly odpovídat názvům odkazované obory názvů, které mají externě viditelné typy. Porušení tohoto pravidla může snížit použitelnost knihovny.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Vyberte název typu, který neodpovídá názvu [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] obor názvů třídy knihovny.
+
+Přejmenujte typ tak, aby neodpovídá názvu odkazovaného oboru názvů, který má externě viditelné typy.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Pro nový vývoj žádné známé scénáře nastat, kde je třeba potlačit upozornění na toto pravidlo. Předtím, než toto upozornění potlačit, pečlivě zvažte, jak může být uživatelé vaše knihovna nerozumíte odpovídající název. Pro přesouvání knihovny, můžete chtít potlačit upozornění na toto pravidlo.
+
+Pro vývoj nových projektů, žádné známé scénáře nastat, pokud je třeba potlačit upozornění tohoto pravidla. Předtím, než můžete potlačit upozornění, pečlivě zvažte, jak uživatele vaše knihovna může být matoucí odpovídající název. Pro přesouvání knihovny, budete muset potlačit upozornění tohoto pravidla.

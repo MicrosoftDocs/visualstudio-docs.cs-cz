@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Správa aktualizací pro aplikaci ClickOnce | Microsoft Docs'
+title: 'Postupy: Správa aktualizací pro aplikaci ClickOnce | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -21,95 +21,96 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 388523a15ad4d1d4759287fcc1c8ddf32e7b464f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 5bd9d8d7e88bc9ee8c8b041571ddaa258067c300
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44283649"
 ---
 # <a name="how-to-manage-updates-for-a-clickonce-application"></a>Postupy: Správa aktualizací pro aplikaci ClickOnce
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace můžete vyhledat aktualizace automaticky nebo prostřednictvím kódu programu. Jako vývojář máte spoustu flexibilitu při určení, kdy a jak se provádí kontroly aktualizací, zda jsou povinné aktualizace a které aplikace by měla vyhledat aktualizace.  
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace můžete vyhledat aktualizace automaticky, nebo prostřednictvím kódu programu. Jako vývojář máte velké množství flexibilitu při určení, kdy a jak jsou provedeny aktualizace kontroly, zda jsou povinné aktualizace a kde by měla aplikace vyhledávat aktualizace.  
   
- Můžete nakonfigurovat aplikaci vyhledat aktualizace automaticky před spuštěním aplikace nebo v nastavených intervalech po spuštění aplikace. Kromě toho můžete zadat minimální požadovaná verze; Pokud verze uživatele je nižší než požadovaná verze je tedy instalována aktualizace.  
+ Můžete nakonfigurovat aplikace vyhledávat aktualizace automaticky před spuštěním aplikace nebo v nastavených intervalech po spuštění aplikace. Kromě toho můžete určit minimální požadovaná verze; Pokud uživatele verze je nižší než požadovaná verze je tedy instalována aktualizace.  
   
- Můžete nakonfigurovat aplikaci vyhledat aktualizace prostřednictvím kódu programu založené na události třeba požadavek uživatele. Postup "Vyhledat aktualizace pomocí programu" v tomto tématu ukazuje, jak by napsat kód, který používá <xref:System.Deployment.Application.ApplicationDeployment> třídy ke kontrole aktualizací založené na události.  
+ Můžete nakonfigurovat aplikace vyhledávat aktualizace prostřednictvím kódu programu na základě události jako je například požadavek uživatele. Postup "programová kontrola aktualizací" v tomto tématu ukazuje, jak byste napsat kód, který používá <xref:System.Deployment.Application.ApplicationDeployment> třída aktualizace na základě události.  
   
- Můžete také nasadit aplikaci z jednoho umístění a aktualizovat ji z jiného. Najdete v části "a zadejte jiné umístění aktualizace."  
+ Také můžete nasadit aplikace z jednoho místa a aktualizovat z jiného. Viz procedura "můžete zadat jiné umístění aktualizace."  
   
  Další informace najdete v tématu [Výběr strategie aktualizace ClickOnce](../deployment/choosing-a-clickonce-update-strategy.md).  
   
- Chování aktualizace je spravováno v **aktualizace aplikace** dialogové okno, k dispozici z **publikovat** stránky **Návrhář projektu.**  
+ Chování aktualizace se spravuje v **aktualizace aplikace** dialogovém okně k dispozici **publikovat** stránku **Návrháře projektu.**  
   
-### <a name="to-check-for-updates-before-the-application-starts"></a>Vyhledávat aktualizace, před spuštěním aplikace  
+### <a name="to-check-for-updates-before-the-application-starts"></a>Kontrolu aktualizací před spuštěním aplikace  
   
-1.  S projekt vybraný v **Průzkumníku řešení**na **projektu** nabídky, klikněte na tlačítko **vlastnosti**.  
+1.  S projekt vybraný v **Průzkumníka řešení**na **projektu** nabídky, klikněte na tlačítko **vlastnosti**.  
   
-2.  Klikněte **publikovat** kartě.  
-  
-3.  Klikněte na tlačítko **aktualizace** tlačítko Otevřít **aktualizace aplikace** dialogové okno.  
-  
-4.  V **aktualizace aplikace** dialogové okno pole, ujistěte se, že **aplikace by měla vyhledat aktualizace** je zaškrtnuté políčko.  
-  
-5.  V **zvolte, pokud aplikace vyhledávat aktualizace** vyberte **před spuštěním aplikace**. To zajistí, že uživatelé připojení k síti vždy použít aplikaci s nejnovějšími aktualizacemi.  
-  
-### <a name="to-check-for-updates-in-the-background-after-the-application-starts"></a>Vyhledávat aktualizace na pozadí po spuštění aplikace  
-  
-1.  S projekt vybraný v **Průzkumníku řešení**na **projektu** nabídky, klikněte na tlačítko **vlastnosti**.  
-  
-2.  Klikněte **publikovat** kartě.  
+2.  Klikněte na tlačítko **publikovat** kartu.  
   
 3.  Klikněte na tlačítko **aktualizace** tlačítko Otevřít **aktualizace aplikace** dialogové okno.  
   
-4.  V **aktualizace aplikace** dialogové okno pole, ujistěte se, že políčko **aplikace by měla vyhledat aktualizace** je vybrána.  
+4.  V **aktualizace aplikace** dialogové okno pole, ujistěte se, že **by měla aplikace vyhledávat aktualizace** zaškrtávací políčko je zaškrtnuto.  
   
-5.  V **zvolte, pokud aplikace vyhledávat aktualizace části**, vyberte **po spuštění aplikace**. Aplikace se spustí rychleji tímto způsobem, a pak ji bude kontrolovat aktualizace na pozadí a pouze upozornit uživatele, pokud je k dispozici aktualizace. Po instalaci aktualizace se projeví až po restartování aplikace.  
+5.  V **Vyberte prosím, kdy by měla aplikace vyhledávat aktualizace** vyberte **před spuštěním aplikace**. Tím se zajistí, že uživatelé připojení k síti vždy spustit aplikaci s nejnovější aktualizací.  
   
-6.  V **zadejte, jak často by měla aplikace vyhledat aktualizace** vyberte buď **zkontrolujte pokaždé, když je aplikace spuštěná** (výchozí) nebo **zkontrolujte každých** a zadejte interval čísel a času.  
+### <a name="to-check-for-updates-in-the-background-after-the-application-starts"></a>Chcete-li vyhledat aktualizace na pozadí po spuštění aplikace  
   
-### <a name="to-specify-a-minimum-required-version-for-the-application"></a>Chcete-li určit minimální požadovaná verze pro aplikaci  
+1.  S projekt vybraný v **Průzkumníka řešení**na **projektu** nabídky, klikněte na tlačítko **vlastnosti**.  
   
-1.  S projekt vybraný v **Průzkumníku řešení**na **projektu** nabídky, klikněte na tlačítko **vlastnosti**.  
-  
-2.  Klikněte **publikovat** kartě.  
+2.  Klikněte na tlačítko **publikovat** kartu.  
   
 3.  Klikněte na tlačítko **aktualizace** tlačítko Otevřít **aktualizace aplikace** dialogové okno.  
   
-4.  V **aktualizace aplikace** dialogové okno pole, ujistěte se, že **aplikace by měla vyhledat aktualizace** je zaškrtnuté políčko.  
+4.  V **aktualizace aplikace** dialogové okno pole, ujistěte se, že políčko **by měla aplikace vyhledávat aktualizace** zaškrtnuto.  
   
-5.  Vyberte **zadejte minimální požadovaná verze pro tuto aplikaci** zaškrtněte políčko a potom zadejte **hlavní**, **menší**, **sestavení**a  **Revize** čísla pro aplikaci.  
+5.  V **Vyberte prosím, kdy by měla aplikace vyhledávat aktualizace části**vyberte **po spuštění aplikace**. Aplikace se spustí rychleji tímto způsobem, a pak bude vyhledávat aktualizace na pozadí a pouze upozornit uživatele, pokud je k dispozici aktualizace. Po instalaci aktualizace se projeví až po restartování aplikace.  
+  
+6.  V **zadejte, jak často by měla aplikace vyhledávat aktualizace** vyberte buď **zkontrolovat při každém spuštění aplikace** (výchozí) nebo **Zkontrolujte každý** a zadejte číslo a čas intervalu.  
+  
+### <a name="to-specify-a-minimum-required-version-for-the-application"></a>Chcete-li určit minimální požadovaná verze aplikace  
+  
+1.  S projekt vybraný v **Průzkumníka řešení**na **projektu** nabídky, klikněte na tlačítko **vlastnosti**.  
+  
+2.  Klikněte na tlačítko **publikovat** kartu.  
+  
+3.  Klikněte na tlačítko **aktualizace** tlačítko Otevřít **aktualizace aplikace** dialogové okno.  
+  
+4.  V **aktualizace aplikace** dialogové okno pole, ujistěte se, že **by měla aplikace vyhledávat aktualizace** zaškrtávací políčko je zaškrtnuto.  
+  
+5.  Vyberte **zadat minimální požadovanou verzi této aplikace** zaškrtněte políčko a potom zadejte **hlavní**, **menší**, **sestavení**a  **Revize** čísla pro aplikaci.  
   
 ### <a name="to-specify-a-different-update-location"></a>Chcete-li zadat jiné umístění aktualizace  
   
-1.  S projekt vybraný v **Průzkumníku řešení**na **projektu** nabídky, klikněte na tlačítko **vlastnosti**.  
+1.  S projekt vybraný v **Průzkumníka řešení**na **projektu** nabídky, klikněte na tlačítko **vlastnosti**.  
   
-2.  Klikněte **publikovat** kartě.  
-  
-3.  Klikněte na tlačítko **aktualizace** tlačítko Otevřít **aktualizace aplikace** dialogové okno.  
-  
-4.  V **aktualizace aplikace** dialogové okno pole, ujistěte se, že **aplikace by měla vyhledat aktualizace** je zaškrtnuté políčko.  
-  
-5.  V **aktualizovat umístění** pole, zadejte umístění aktualizace s plně kvalifikovanou adresu URL ve formátu http://Hostname/ApplicationName, nebo cestu UNC pomocí formátu \\\Server\ApplicationName nebo klikněte na **Procházet** a vyhledejte umístění aktualizace.  
-  
-### <a name="to-check-for-updates-programmatically"></a>Ke kontrole aktualizací prostřednictvím kódu programu  
-  
-1.  S projekt vybraný v **Průzkumníku řešení**na **projektu** nabídky, klikněte na tlačítko **vlastnosti**.  
-  
-2.  Klikněte **publikovat** kartě.  
+2.  Klikněte na tlačítko **publikovat** kartu.  
   
 3.  Klikněte na tlačítko **aktualizace** tlačítko Otevřít **aktualizace aplikace** dialogové okno.  
   
-4.  V **aktualizace aplikace** dialogové okno pole, ujistěte se, že **aplikace by měla vyhledat aktualizace** zaškrtnutí políčka. (Můžete volitelně vybrat toto políčko, chcete-li kontrolovat aktualizace prostřednictvím kódu programu a také nechat ClickOnce aktualizace vyhledávat automaticky.)  
+4.  V **aktualizace aplikace** dialogové okno pole, ujistěte se, že **by měla aplikace vyhledávat aktualizace** zaškrtávací políčko je zaškrtnuto.  
   
-5.  V **aktualizovat umístění** pole, zadejte umístění aktualizace s plně kvalifikovanou adresu URL ve formátu http://Hostname/ApplicationName, nebo cestu UNC pomocí formátu \\\Server\ApplicationName nebo klikněte na **Procházet** a vyhledejte umístění aktualizace. Aktualizace umístění je, kde bude aplikace vyhledávat aktualizovaná verze sám sebe.  
+5.  V **aktualizovat umístění** zadejte umístění aktualizace s plně kvalifikovanou adresu URL pomocí formátu *http://Hostname/ApplicationName*, nebo cestu UNC ve formátu  *\\\Server\ ApplicationName*, nebo klikněte na tlačítko **Procházet** vyhledat umístění aktualizace.  
   
-6.  Vytvoření tlačítka, položku nabídky nebo jinou položku uživatelského rozhraní na formuláři, který budou uživatelé vybírat ke kontrole aktualizací. Z obslužné rutiny této položky volejte metodu pro kontrolu a instalaci aktualizací. Ukázkový kód jazyka Visual Basic a Visual C# můžete najít pro takovou metodu v [postup: vyhledejte aplikaci aktualizace programově pomocí rozhraní API nasazení ClickOnce](../deployment/how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api.md).  
+### <a name="to-check-for-updates-programmatically"></a>Kontrolu aktualizací prostřednictvím kódu programu  
+  
+1.  S projekt vybraný v **Průzkumníka řešení**na **projektu** nabídky, klikněte na tlačítko **vlastnosti**.  
+  
+2.  Klikněte na tlačítko **publikovat** kartu.  
+  
+3.  Klikněte na tlačítko **aktualizace** tlačítko Otevřít **aktualizace aplikace** dialogové okno.  
+  
+4.  V **aktualizace aplikace** dialogové okno pole, ujistěte se, že **by měla aplikace vyhledávat aktualizace** zrušení zaškrtnutí políčka. (Můžete volitelně vybrat toto políčko, chcete-li kontrolovat aktualizace prostřednictvím kódu programu a také nechat ClickOnce aktualizace vyhledávat automaticky.)  
+  
+5.  V **aktualizovat umístění** zadejte umístění aktualizace s plně kvalifikovanou adresu URL pomocí formátu *http://Hostname/ApplicationName*, nebo cestu UNC ve formátu  *\\\Server\ ApplicationName*, nebo klikněte na tlačítko **Procházet** vyhledat umístění aktualizace. Aktualizace umístění je, ve kterém bude aplikace vyhledávat aktualizovanou verzi sebe sama.  
+  
+6.  Vytvoření tlačítka, položka nabídky nebo jinou položku uživatelského rozhraní na formuláři Windows, který uživatelé zvolí kontrolu aktualizací. Z této položky obslužné rutiny události zavolejte metodu kontrolovat a instalovat aktualizace. Příklad kódu jazyka Visual Basic a Visual C# najdete metody v [postupy: Kontrola aktualizací aplikace programově pomocí rozhraní API nasazení ClickOnce](../deployment/how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api.md).  
   
 7.  Sestavení aplikace.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  <xref:System.Deployment.Application.ApplicationDeployment>   
- [Dialogové okno aktualizace aplikace](http://msdn.microsoft.com/en-us/8eca8743-8e68-4d04-bfd5-4dc0a9b2934f)   
- [Výběr strategie aktualizace ClickOnce](../deployment/choosing-a-clickonce-update-strategy.md)   
- [Publikování aplikací ClickOnce](../deployment/publishing-clickonce-applications.md)   
+ [Dialogové okno aktualizace aplikace](/previous-versions/visualstudio/visual-studio-2010/axw1fa38(v=vs.100))   
+ [Volba strategie aktualizace ClickOnce](../deployment/choosing-a-clickonce-update-strategy.md)   
+ [Publikování ClickOnce jejich](../deployment/publishing-clickonce-applications.md)   
  [Postupy: publikování aplikace ClickOnce pomocí Průvodce publikováním](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)   
- [Postupy: Programová kontrola aktualizací aplikace pomocí rozhraní API nasazení ClickOnce](../deployment/how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api.md)
+ [Postupy: Kontrola aktualizací aplikace programově pomocí rozhraní API nasazení ClickOnce](../deployment/how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api.md)

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31477352"
 ---
 # <a name="jit-optimization-and-debugging"></a>Optimalizace a ladění JIT
 **Jak fungují optimalizace v rozhraní .NET:** Pokud se pokoušíte ladění kódu, je jednodušší při zda kód je **není** optimalizované. Je to proto, že při optimalizaci kódu kompilátoru a prostředí runtime měnit kód emitovaného procesoru, aby rychleji spustí, ale má méně přímé mapování na původní zdrojový kód. To znamená, že jsou často nelze zjistíte hodnotu místní proměnné a kód, krokování ladicí programy a zarážky nemusí fungovat podle očekávání.

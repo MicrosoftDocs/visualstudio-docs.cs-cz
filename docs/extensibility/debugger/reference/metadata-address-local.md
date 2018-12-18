@@ -1,5 +1,5 @@
 ---
-title: METADATA_ADDRESS_LOCAL | Microsoft Docs
+title: METADATA_ADDRESS_LOCAL | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 720f150be1b7cf992f0949750dd52218939c7d2e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ca9a6b1fac3627020363c92db8a2f05e5b5900ff
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49846600"
 ---
 # <a name="metadataaddresslocal"></a>METADATA_ADDRESS_LOCAL
-Tato struktura představuje adresu místní proměnné v oboru (obvykle funkci nebo metodu).  
+Tato struktura představuje adresu místní proměnné v rámci oboru (obvykle funkce nebo metoda).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,20 +45,20 @@ public struct METADATA_ADDRESS_LOCAL {
   
 ## <a name="terms"></a>Podmínky  
  tokMethod  
- ID metody nebo funkce v místní proměnné je součástí.  
+ ID metody nebo funkce lokální proměnná je součástí.  
   
  [C++] `_mdToken` je `typedef` pro 32bitovou verzi `int`.  
   
  pLocal  
- Token, jejíž adresa představuje tuto strukturu.  
+ Token jehož adresa představuje tuto strukturu.  
   
  dwIndex  
- Může být index tento místní proměnné v metody nebo funkce nebo jinou hodnotu (pro specifický jazyk).  
+ Může být index tuto místní proměnnou v metodě nebo funkci nebo jinou hodnotu (specifické pro jazyk).  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je součástí sjednocení v [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) struktury, kdy `dwKind` pole z `DEBUG_ADDRESS_UNION` struktura je nastaven na `ADDRESS_KIND_LOCAL` (hodnotu z [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) výčet).  
+ Tato struktura je součástí sjednocení v [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) strukturu, kdy `dwKind` pole `DEBUG_ADDRESS_UNION` struktura je nastavena na `ADDRESS_KIND_LOCAL` (hodnotu z [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) výčet).  
   
- `Warning:` [Pouze C++]  Pokud `pLocal` nemá hodnotu null, pak musí volat `Release` na token ukazatele (`addr` je pole v [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) struktura):  
+ `Warning:` [Jenom C++]  Pokud `pLocal` nemá hodnotu null, pak je nutné volat `Release` na token ukazatel (`addr` je pole v [DEBUG_ADDRESS](../../../extensibility/debugger/reference/debug-address.md) struktura):  
   
 ```  
 if (addr.dwKind == ADDRESS_KIND_METADATA_LOCAL &&  addr.addr.addrLocal.pLocal != NULL)  

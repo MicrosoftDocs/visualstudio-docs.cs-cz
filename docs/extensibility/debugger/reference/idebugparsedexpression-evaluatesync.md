@@ -1,5 +1,5 @@
 ---
-title: IDebugParsedExpression::EvaluateSync | Microsoft Docs
+title: IDebugParsedExpression::EvaluateSync | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0b67294b6bb22ff9607be726415b6aae8a2a9524
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: cdf9fa9057e946d68da9f1e02d5aaf90b34e569a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49931763"
 ---
 # <a name="idebugparsedexpressionevaluatesync"></a>IDebugParsedExpression::EvaluateSync
-Tato metoda vyhodnocuje Analyzovaná výraz a volitelně vrhá výsledek, který má jiný typ data.  
+Tato metoda vyhodnotí výraz v analyzované a volitelně přetypování na jiný datový typ výsledku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,31 +53,31 @@ int EvaluateSync(
   
 #### <a name="parameters"></a>Parametry  
  `dwEvalFlags`  
- [v] Kombinace [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) konstanty, které řídí, jak se výraz vyhodnotí.  
+ [in] Kombinace [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) konstanty, které řídí, jak se má vyhodnotit výraz.  
   
  `dwTimeout`  
- [v] Určuje maximální dobu v milisekundách pro čekání před návratem od této metody. Použití `INFINITE` čekání po neomezenou dobu.  
+ [in] Určuje maximální dobu (v milisekundách) čekání před návratem z této metody. Použití `INFINITE` čekat po neomezenou dobu.  
   
  `pSymbolProvider`  
- [v] Symbol poskytovatele, vyjádřené jako [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md) rozhraní.  
+ [in] Poskytovatel symbolů, vyjádřené jako [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md) rozhraní.  
   
  `pAddress`  
- [v] Aktuální umístění spuštění v rámci metodu, vyjádřené jako [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) rozhraní.  
+ [in] Aktuální umístění pro spuštění v rámci metody, vyjádřené jako [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) rozhraní.  
   
  `pBinder`  
- [v] Vazač, vyjádřené jako [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md) rozhraní.  
+ [in] Vazač, vyjádřené jako [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md) rozhraní.  
   
  `bstrResultType`  
- [v] Typ výsledku by měl přetypovat. Tento argument může mít hodnotu null.  
+ [in] Typ výsledku by měl být přetypovat na. Tento argument může být hodnota null.  
   
  `ppResult`  
  [out] Vrátí [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) rozhraní, které představuje výsledky hodnocení.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Kontext vyhodnocení výrazu je dán `pAddress`, které umožňuje určit obsahující metody a pak oborů použití jazyka pravidla k určení hodnoty symbolů ve výrazu.  
+ Kontext vyhodnocení výrazu je dán `pAddress`, takže je možné určit obsahující metodu a poté oborů použití jazyka pravidla k určení hodnoty symbolů ve výrazu.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   

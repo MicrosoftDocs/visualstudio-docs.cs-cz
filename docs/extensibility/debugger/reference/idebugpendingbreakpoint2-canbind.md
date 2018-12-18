@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::CanBind | Microsoft Docs
+title: IDebugPendingBreakpoint2::CanBind | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e09bae8cfa6b4c2ba1b79ff74945e5256e23ed2c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 47a40691de66828a1b46067393cddaa7e303d118
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872600"
 ---
 # <a name="idebugpendingbreakpoint2canbind"></a>IDebugPendingBreakpoint2::CanBind
-Určuje, zda tento čekající zarážek můžete vázat na umístění kódu.  
+Určuje, zda tento čekající zarážka mohl vytvořit vazbu k umístění kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,16 +42,16 @@ int CanBind (
   
 #### <a name="parameters"></a>Parametry  
  `ppErrorEnum`  
- [out] Vrátí [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md) objekt, který obsahuje seznam [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) objekty, pokud může dojít k chybám.  
+ [out] Vrátí [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md) objekt, který obsahuje seznam [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) objektů, pokud může dojít k chybám.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK.` vrátí `S_FALSE` Pokud nelze vytvořit vazbu zarážek, v takovém případě chyby se vrátí pomocí `ppErrorEnum` parametr. Jinak vrátí kód chyby. Vrátí `E_BP_DELETED` Pokud zarážce byl odstraněn.  
+ Pokud je úspěšná, vrátí `S_OK.` vrátí `S_FALSE` Pokud nelze vytvořit vazbu k zarážce, v takovém případě vrátí chyby podle `ppErrorEnum` parametru. V opačném případě vrátí kód chyby. Vrátí `E_BP_DELETED` Pokud zarážka byla odstraněna.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda je volána k určení, co by se stalo, pokud to čekající na vyřízení zarážek byla vázána. Volání [vazby](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md) metoda pro vazbu ve skutečnosti čekající zarážek.  
+ Tato metoda je volána k určení, co by mohlo dojít v případě, že to čekající zarážka byla vázaná. Volání [svázat](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md) metoda ve skutečnosti vytvořit vazbu čekající zarážka.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchou `CPendingBreakpoint` objekt, který zveřejňuje [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) rozhraní.  
+ Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CPendingBreakpoint` objekt, který zveřejňuje [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) rozhraní.  
   
 ```cpp  
 HRESULT CPendingBreakpoint::CanBind(IEnumDebugErrorBreakpoints2** ppErrorEnum)    
@@ -141,4 +142,4 @@ HRESULT CPendingBreakpoint::CanBind(IEnumDebugErrorBreakpoints2** ppErrorEnum)
  [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)   
  [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md)   
  [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md)   
- [Vazby](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)
+ [Bind](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)

@@ -1,5 +1,5 @@
 ---
-title: Diaaddressmapentry – | Microsoft Docs
+title: Diaaddressmapentry – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a29de8f18a9d3123d73210d0e362c2ae2d32641
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 501defcd2274ab32624a97b9a1463e8f4a515c1e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49819053"
 ---
 # <a name="diaaddressmapentry"></a>DiaAddressMapEntry
-Popisuje položku v adres mapují.  
+Popisuje položky v mapování adres.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,23 +35,23 @@ struct DiaAddressMapEntry {
   
 ## <a name="elements"></a>Elementy  
  `rva`  
- Relativní virtuální adresy (RVA) v bitové kopii A.  
+ Relativní virtuální adresu (RVA) v bitové kopii A.  
   
  `rvaTo`  
- Relativní virtuální adresy `rva` je namapována na obrázku B.  
+ Relativní virtuální adresu `rva` je namapována na obrázku B.  
   
 ## <a name="remarks"></a>Poznámky  
- Adres mapují poskytuje překlad z jedné bitové kopie rozložení (A) do jiné (B). Pole `DiaAddressMapEntry` struktury seřazené podle `rva` definuje mapování adresy.  
+ Mapování adresy zajišťuje překlad z jedné image rozložení (A) do jiného (B). Pole `DiaAddressMapEntry` struktury seřazené podle `rva` definuje mapu adresu.  
   
- Chcete-li přeložit adresu, `addrA`, v bitové kopii A na adresu, `addrB`, v bitové kopii B, proveďte následující kroky:  
+ Přeložit adresy, `addrA`, obrázku A na adresu, `addrB`, obrázku B, proveďte následující kroky:  
   
-1.  Hledat mapy pro položku, `e`, s nejvyšší `rva` menší než nebo rovna hodnotě `addrA`.  
+1. Hledat na mapě položce, `e`, s největší `rva` menší než nebo rovno `addrA`.  
   
-2.  Nastavit `delta = addrA - e.rva`.  
+2. Nastavte `delta = addrA - e.rva`.  
   
-3.  Nastavit `addrB = e.rvaTo + delta`.  
+3. Nastavte `addrB = e.rvaTo + delta`.  
   
- Pole `DiaAddressMapEntry` struktury předána [idiaaddressmap::set_addressmap –](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md) metoda.  
+   Pole `DiaAddressMapEntry` struktury je předán [idiaaddressmap::set_addressmap –](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md) metody.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: dia2.h  

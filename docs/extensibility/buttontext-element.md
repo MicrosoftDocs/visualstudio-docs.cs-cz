@@ -1,5 +1,5 @@
 ---
-title: ButtonText Element | Microsoft Docs
+title: ButtonText – Element | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,18 +14,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2fca0fbb22bf51353eeaa64f519face53bfb23c8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f8ba4667a34594c764a57788ee468d32733ded8e
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39232005"
 ---
-# <a name="buttontext-element"></a>ButtonText Element
-Toto pole umožňuje zadat text, který se zobrazí v různých nabídky. Ve výchozím nastavení `ButtonText` prvek se zobrazuje v nabídce řadiče. `ButtonText` Element také změní výchozí, pokud textová pole jsou prázdné. `ButtonText` Element nemůže být prázdný, i když nejsou určeny v ostatních polích text.  
+# <a name="buttontext-element"></a>ButtonText – element
+Toto pole umožňuje zadat text, který se zobrazí v různých nabídkách. Ve výchozím nastavení `ButtonText` elementu se zobrazí v nabídce řadiče. `ButtonText` Prvek stane výchozí Pokud další textová pole jsou prázdné. `ButtonText` Element nemůže být prázdný, i když nejsou určeny další textová pole.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```xml  
 <ButtonText>My Command</ButtonText>  
 ```  
   
@@ -35,17 +36,17 @@ Toto pole umožňuje zadat text, který se zobrazí v různých nabídky. Ve vý
 ### <a name="attributes"></a>Atributy  
  Žádné  
   
-### <a name="child-elements"></a>Podřízené elementy  
+### <a name="child-elements"></a>Podřízené prvky  
  Žádné  
   
-### <a name="parent-elements"></a>Nadřazené elementy  
+### <a name="parent-elements"></a>Nadřazené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|[Strings – element](../extensibility/strings-element.md)|Skupiny elementy textu, například `ButtonText` a `CommandName`.|  
+|[Strings – element](../extensibility/strings-element.md)|Seskupí textové prvky, jako například `ButtonText` a `CommandName`.|  
   
 ## <a name="text-value"></a>Textová hodnota  
- Textovou hodnotu `ButtonText` element poskytuje text, který se zobrazí u položky nabídky, kláves a další prvky uživatelského rozhraní (UI), které mají viditelné text.  
+ Textová hodnota elementu `ButtonText` element obsahuje text, který se zobrazí u položek nabídky, kláves a jiných prvcích uživatelského rozhraní (UI), které mají viditelného textu.  
   
-## <a name="see-also"></a>Viz také  
- [Soubory tabulek příkazů sady Visual Studio (.Vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+## <a name="see-also"></a>Viz také:  
+ [Soubory tabulky (.vsct) příkaz pro Visual Studio](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

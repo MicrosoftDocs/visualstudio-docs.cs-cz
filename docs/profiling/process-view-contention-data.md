@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3bf40d5714810fd4beba9d5d75ffbffbf1895883
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 6c8772bd6426632093bb23cc3094fe42ad433a8d
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35257810"
 ---
-# <a name="process-view---contention-data"></a>Zobrazení procesů – Data kolizí
+# <a name="process-view---contention-data"></a>Zobrazení procesů – data kolizí
 Zobrazení procesů zobrazí data kolizí pro procesy a vláken, které byly provedeny během spuštění profilování.  
   
  Když symboly jsou k dispozici, procesy jsou uvedeny podle názvu. Pokud symboly nejsou k dispozici, procesy jsou uvedeny podle jejich adresa paměti v šestnáctkovém formátu. Vlákna jsou uvedeny jako podřízené objekty proces, který je vytvořil.  
@@ -39,6 +40,6 @@ Zobrazení procesů zobrazí data kolizí pro procesy a vláken, které byly pro
 |**Jméno**|Název procesu nebo přístup z více vláken.|  
 |**Jedinečné ID**|Identifikátor generovaný profileru, které jsou jedinečné pro proces nebo přístup z více vláken.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Postupy: přizpůsobení sloupců zobrazení sestavy](../profiling/how-to-customize-report-view-columns.md)   
  [Zobrazení procesů](../profiling/process-view.md)

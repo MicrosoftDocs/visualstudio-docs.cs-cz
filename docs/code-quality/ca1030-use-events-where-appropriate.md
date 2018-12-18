@@ -1,6 +1,7 @@
 ---
 title: 'CA1030: Použijte události, kde je to vhodné'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,13 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 66b9893d6ad0c47dde69fa2cb6d35ee228cff59e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 08f5ec37d38824ca640dd19827db3b1d355d0ad7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49815636"
 ---
 # <a name="ca1030-use-events-where-appropriate"></a>CA1030: Použijte události, kde je to vhodné
+
 |||
 |-|-|
 |TypeName|UseEventsWhereAppropriate|
@@ -30,23 +33,23 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
- Název veřejné, chráněný nebo privátní metoda začíná na jednu z těchto možností:
+ Metoda public, protected nebo private název začíná na jednu z následujících akcí:
 
--   Doplněk
+- Doplněk
 
--   RemoveOn
+- RemoveOn
 
--   Ještě efektivněji
+- Oheň
 
--   Vyvolat
+- Raise
 
 ## <a name="rule-description"></a>Popis pravidla
- Toto pravidlo zjišťuje metody, které mají názvy obvykle používané pro události. Události podle návrhový vzor pozorovatel nebo publikování a odběru; používají se při změně stavu v jeden objekt musí být oznamovat jiné objekty. Pokud metoda je volána v reakci na změnu stavu jasně definované, by měla být volána metoda obslužnou rutinou události. Objekty volající tuto metodu by měly místo přímého volání metody vyvolat událost.
+ Toto pravidlo zjišťuje metody, které mají názvy obvykle používané pro události. Události podle návrhový vzor pozorovatel nebo publikování a odběru; používají se při změně stavu do jednoho objektu musí sdělí další objekty. Pokud metoda volána jako odpověď jednoznačně definovanou změnu stavu, by měl vyvolat metodu obslužné rutiny události. Objekty volající tuto metodu by měly místo přímého volání metody vyvolat událost.
 
- Několik běžných příkladů událostí, které se nacházejí v uživatelské rozhraní aplikace, které způsobí, že akce uživatele, jako je například kliknutí na tlačítko segment kódu provést. [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] Model událostí není omezeno na uživatelská rozhraní; je určeno odkudkoli musí komunikovat, stav se změní na jeden nebo více objektů.
+ Některé běžné příklady událostí, které se nacházejí v uživatelských rozhraní aplikací, kde způsobí, že akce uživatele, jako je kliknutí na tlačítko segment kódu k provedení. Model události rozhraní .NET Framework není omezena pouze na uživatelské rozhraní; ji by měl být použít všude, kde musí komunikovat, že se stav změní na jeden nebo více objektů.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Pokud metoda je volána, když se stav objektu se změní, zvažte změnu návrhu používat [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] událostí modelu.
+ Pokud metoda je volána při změně stavu objektu, měli byste zvážit změnu návrhu a použít model události rozhraní .NET Framework.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Potlačit upozornění na toto pravidlo, je-li metoda nefunguje s [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] událostí modelu.
+ Potlačit upozornění tohoto pravidla, pokud metoda nefunguje s modelem události rozhraní .NET Framework.

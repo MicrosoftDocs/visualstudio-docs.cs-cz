@@ -1,10 +1,9 @@
 ---
-title: Přejděte na řádku | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+title: Přechod na řádek
+ms.date: 05/18/2018
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - vs.gotoline
 helpviewer_keywords:
@@ -16,19 +15,26 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 79b88ae959ef2fb4e63b30ced7c28d5c7c4a13ef
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: bfbe70232537556bee826653d533bab8728e3d1c
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34446511"
 ---
-# <a name="go-to-line"></a>Přechod na řádek
-Toto dialogové okno umožňuje přesunout na určitý řádek v aktivním dokumentu. Pro přístup k tohoto dialogového okna, otevřete dokument pro úpravy a pak vyberte **přejít na** na **upravit** nabídky.  
-  
- Číslo řádku (1 - `n`)  
- Umožňuje zadat číslo řádku v aktivním dokumentu, do které chcete přesunout. Zadané číslo se musí nacházet mezi 1 a `n`, počet řádků v aktuálním dokumentu.  
-  
-## <a name="see-also"></a>Viz také  
- [Nastavení záložek v kódu](../../ide/setting-bookmarks-in-code.md)   
- [Hledání a nahrazení textu](../../ide/finding-and-replacing-text.md)   
- [Psaní kódu](../../ide/writing-code-in-the-code-and-text-editor.md)
+# <a name="go-to-line-dialog-box"></a>Přejít na řádek – dialogové okno
+
+**Přejít na řádek** dialogové okno můžete přesouvat na určitý řádek v aktivním dokumentu. Chcete-li získat přístup k tohoto dialogového okna, otevřete dokument pro úpravy a pak vyberte **upravit** > **přejít na** > **přejít na řádek** nebo stiskněte klávesu **Ctrl**  + **G**.
+
+![Dialogové okno Přejít na řádek v sadě Visual Studio](media/go-to-line-dialog-box.png)
+
+## <a name="line-number-1---n"></a>Číslo řádku (1 - \<n >)
+
+V **číslo řádku (1 - \<n >)** zadejte číslo řádku v aktivním dokumentu, který chcete přesunout do. Zadané číslo se musí nacházet mezi 1 a poslední číslo řádku v aktuálním dokumentu.
+
+## <a name="see-also"></a>Viz také
+
+- [Vyhledání kódu pomocí příkazu Přejít](../../ide/go-to.md)
+- [Nastavení záložek v kódu](../../ide/setting-bookmarks-in-code.md)
+- [Vyhledání a nahrazení textu](../../ide/finding-and-replacing-text.md)
+- [Funkce editoru kódu](../../ide/writing-code-in-the-code-and-text-editor.md)

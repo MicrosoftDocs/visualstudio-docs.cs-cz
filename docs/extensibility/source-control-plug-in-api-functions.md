@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31144366"
 ---
 # <a name="source-control-plug-in-api-functions"></a>Funkce modulu Plug-in rozhraní API ovládacího prvku zdroje
 Rozhraní API ovládacího prvku Plug-in Zdroj poskytuje následující funkce, které musí být implementované v souladu s toto rozhraní API modulu plug-in zdrojového kódu. Podpisy jednotlivé funkce a sémantiky přidružené bitové příznaky a další parametry jsou podrobně popsané v této referenci.  
@@ -85,7 +86,7 @@ Rozhraní API ovládacího prvku Plug-in Zdroj poskytuje následující funkce, 
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: scc.h  
   
- (Zadaný v sadě SDK prostředí běžné zahrnuje složku, ve výchozím nastavení *[jednotka]*\Program Files\VSIP 8.0\EnvSDK\common\inc; také zadaný ve složce VSIP s ukázkou MSSCCI *[jednotka]*\Program Files\VSIP 8.0\MSSCCI).  
+ (Zadaný v sadě SDK prostředí běžné zahrnuje složku, ve výchozím nastavení *[jednotka]* \Program Files\VSIP 8.0\EnvSDK\common\inc; také zadaný ve složce VSIP s ukázkou MSSCCI *[jednotka]* \Program Files\VSIP 8.0\MSSCCI).  
   
 ## <a name="see-also"></a>Viz také  
  [Moduly plug-in programu zdroj ovládacího prvku](../extensibility/source-control-plug-ins.md)   

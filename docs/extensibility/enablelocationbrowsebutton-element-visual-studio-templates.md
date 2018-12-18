@@ -1,5 +1,5 @@
 ---
-title: Enablelocationbrowsebutton – Element (šablony sady Visual Studio) | Microsoft Docs
+title: Enablelocationbrowsebutton – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7d3573a1359cf7cc6347ede28b5361b01bbb7efb
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7bebf88b8d5c98722226f42f9a1b1666695a3b7e
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39639536"
 ---
-# <a name="enablelocationbrowsebutton-element-visual-studio-templates"></a>EnableLocationBrowseButton – element (šablony sady Visual Studio)
-Určuje, zda **Procházet** tlačítko je k dispozici v **nový projekt** dialogovém tak, aby uživatelé mohli snadno upravovat výchozí adresář, kde je uložena nový projekt.  
+# <a name="enablelocationbrowsebutton-element-visual-studio-templates"></a>Enablelocationbrowsebutton – element (šablony sady Visual Studio)
+Určuje, zda **Procházet** tlačítko je k dispozici v **nový projekt** dialogovém okně tak, aby uživatelé mohli snadno upravovat výchozí adresář, ve kterém je uložený nový projekt.  
   
- \<VSTemplate >  
+ \<Vstemplate – >  
  \<TemplateData >  
- \<EnableLocationBrowseButton >  
+ \<Enablelocationbrowsebutton – >  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,27 +41,27 @@ Určuje, zda **Procházet** tlačítko je k dispozici v **nový projekt** dialog
 ### <a name="attributes"></a>Atributy  
  Žádné  
   
-### <a name="child-elements"></a>Podřízené elementy  
+### <a name="child-elements"></a>Podřízené prvky  
  Žádné  
   
-### <a name="parent-elements"></a>Nadřazené elementy  
+### <a name="parent-elements"></a>Nadřazené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Rozděluje šablonu a definuje, jak se zobrazuje v buď **nový projekt** nebo **přidat novou položku** dialogové okno.|  
+|[TemplateData –](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Rozděluje šablonu a definuje, jak se zobrazuje **nový projekt** nebo **přidat novou položku** dialogové okno.|  
   
 ## <a name="text-value"></a>Textová hodnota  
  Je vyžadována textová hodnota.  
   
- Text musí být buď `true` nebo `false`, která určuje, zda se má zobrazit **Procházet** na tlačítko **nový projekt** dialogové okno.  
+ Text musí být buď `true` nebo `false`, označující, jestli se mají zobrazit **Procházet** tlačítko **nový projekt** dialogové okno.  
   
 ## <a name="remarks"></a>Poznámky  
- `EnableLocationBrowseButton` je volitelný element. Výchozí hodnota je `true`, které zobrazí **Procházet** v tlačítko **nový projekt** dialogové okno.  
+ `EnableLocationBrowseButton` je volitelný prvek. Výchozí hodnota je `true`, které ukazuje **Procházet** tlačítko **nový projekt** dialogové okno.  
   
- V **nový projekt** dialogové okno, **umístění** textového pole určuje adresář, kde je uložena nový projekt. **Procházet** tlačítko umožňuje upravit tento adresář zobrazením **umístění projektu** dialogové okno, které umožňují snadno přejít do jiného adresáře, který je dostupný z vašeho počítače, a Zvolte jej jako adresář, kde je uložena nový projekt.  
+ V **nový projekt** dialogové okno, **umístění** textového pole určuje adresář, ve kterém je uložený nový projekt. **Procházet** tlačítko umožňuje upravit tento adresář zobrazením **umístění projektu** dialogové okno, které umožňuje snadno přejít do jiného adresáře, který je dostupný z vašeho počítače, a vyberte ji jako adresář, ve kterém je uložený nový projekt.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ilustruje metadata pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aplikací systému Windows.  
+ Následující příklad ukazuje metadata [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aplikace Windows.  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  
@@ -87,6 +88,6 @@ Určuje, zda **Procházet** tlačítko je k dispozici v **nový projekt** dialog
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
+## <a name="see-also"></a>Viz také:  
+ [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)   
  [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

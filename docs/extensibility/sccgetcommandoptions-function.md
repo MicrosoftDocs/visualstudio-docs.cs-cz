@@ -1,5 +1,5 @@
 ---
-title: Funkce SccGetCommandOptions | Microsoft Docs
+title: Sccgetcommandoptions – funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 60245b7fab3c2a0b313ccbe1d7393b0783962a37
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 846d1667e1f990a5580520353be46ede76644145
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49923742"
 ---
-# <a name="sccgetcommandoptions-function"></a>SccGetCommandOptions – funkce
-Tato funkce zobrazí výzvu pro rozšířené možnosti pro daný příkaz.  
+# <a name="sccgetcommandoptions-function"></a>Sccgetcommandoptions – funkce
+Tato funkce se zobrazí výzva pro rozšířené možnosti pro daný příkaz.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,48 +36,48 @@ SCCRTN SccGetCommandOptions(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  pvContext  
- [v] Struktura modulu plug-in kontextu řízení zdroje.  
+ [in] Struktura kontext modulu plug-in zdroje ovládacího prvku.  
   
  hWnd  
- [v] Obslužná rutina do okna IDE, modul plug-in správy zdroje můžete použít jako nadřazený objekt pro všechna dialogová okna poskytuje.  
+ [in] Popisovač okna integrovaného vývojového prostředí, které modul plug-in správy zdrojového kódu můžete použít jako nadřazený pro všechna dialogová okna, které poskytuje.  
   
  rozhraní iCommand  
- [v] Příkaz, pro které jsou požadovány rozšířené možnosti (v tématu [příkaz kódu](../extensibility/command-code-enumerator.md) pro možné hodnoty).  
+ [in] Příkaz, pro které jsou požadovány v upřesňující možnosti (naleznete v tématu [příkaz kódu](../extensibility/command-code-enumerator.md) možných hodnot).  
   
  ppvOptions  
- [v] Struktura možnost (může být také `NULL`).  
+ [in] Struktura možnost (může být také `NULL`).  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Očekává se, že modul plug-in implementace zdroje řízení této funkce vrátí jednu z následujících hodnot:  
+ Modul plug-in implementaci ovládacího prvku zdroje této funkce má vracet instanci jednoho z následujících hodnot:  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |SCC_OK|Úspěch.|  
-|SCC_I_ADV_SUPPORT|Modul plug-in zdrojového kódu podporuje rozšířené možnosti pro příkaz.|  
-|SCC_I_OPERATIONCANCELED|Uživatel zrušil zdroj ovládacího prvku plug v na **možnosti** dialogové okno.|  
-|SCC_E_OPTNOTSUPPORTED|Modul plug-in správy zdroje nepodporuje tuto operaci.|  
-|SCC_E_ISCHECKEDOUT|Nelze provést tuto operaci na soubor, který je právě rezervována.|  
-|SCC_E_ACCESSFAILURE|Došlo k chybě při přístupu správy zdrojového kódu, pravděpodobně kvůli problémům s sítě nebo kolizí. Doporučuje se zkuste to znovu.|  
-|SCC_E_NONSPECIFICERROR|Došlo k nespecifikované chybě.|  
+|SCC_I_ADV_SUPPORT|Modul plug-in správy zdrojového kódu podporuje rozšířené možnosti pro příkaz.|  
+|SCC_I_OPERATIONCANCELED|Uživatel zrušil zdrojového ovládacího prvku plug-in **možnosti** dialogové okno.|  
+|SCC_E_OPTNOTSUPPORTED|Modul plug-in správy zdrojového kódu nepodporuje tuto operaci.|  
+|SCC_E_ISCHECKEDOUT|Nelze provést tuto operaci u souboru, který je právě rezervována.|  
+|SCC_E_ACCESSFAILURE|Došlo k problému, přístup k systému správy zdrojového kódu, pravděpodobně kvůli problémům se síti nebo kolize. Doporučuje se zkuste to znovu.|  
+|SCC_E_NONSPECIFICERROR|K nespecifikované chybě.|  
   
 ## <a name="remarks"></a>Poznámky  
- Prostředí IDE volání této funkce poprvé s `ppvOptions` = `NULL` k určení, pokud modul plug-in zdrojového kódu podporuje funkci Rozšířené možnosti pro tento příkaz. Pokud modul plug-in podporuje funkci pro tento příkaz, rozhraní IDE zavolá tato funkce znovu až uživatel požádá rozšířené možnosti (obvykle implementovaný jako **Upřesnit** tlačítka v dialogovém okně) a poskytuje pro ukazateljinouhodnotunežNULL`ppvOptions` odkazující `NULL` ukazatel. Modul plug-in ukládá rozšířené možnosti zadanou uživatelem v Soukromá struktura a vrací ukazatel na této struktury v `ppvOptions`. Tato struktura je předána do všech dalších funkcí rozhraní API modulu Plugin zdroj ovládacího prvku, které potřebujete vědět o, včetně následných volání `SccGetCommandOptions` funkce.  
+ Integrované vývojové prostředí volá tuto funkci s prvním `ppvOptions` = `NULL` k určení, jestli plug-in správy zdrojových kódů podporuje funkce Rozšířené možnosti pro zadaný příkaz. Pokud modul plug-in nepodporuje funkci pro tento příkaz, integrovaném vývojovém prostředí volá tuto funkci znovu když uživatel požádá o rozšířené možnosti (obvykle implementovány jako **Upřesnit** tlačítko v dialogovém okně) a poskytuje NENULOVÝ ukazatel pro `ppvOptions` , která odkazuje na `NULL` ukazatele. Modul plug-in ukládá všechny rozšířené možnosti určeného uživatele v soukromé struktury a vrací ukazatel na danou strukturu v `ppvOptions`. Tato struktura je pak předán všechny ostatní funkce rozhraní API modulu Plug-in zdroje ovládacího prvku, které je potřeba vědět o, včetně následných volání `SccGetCommandOptions` funkce.  
   
- Příklad mohou pomoci vysvětlení této situaci.  
+ Příklad může pomoci objasnit této situaci.  
   
- Uživatel rozhodne **získat** příkaz a rozhraní IDE zobrazuje **získat** dialogové okno. Volání IDE `SccGetCommandOptions` fungovat s `iCommand` nastavena na `SCC_COMMAND_GET` a `ppvOptions` nastavena na `NULL`. To je interpretována modulu plug-in jako otázka zdrojového kódu, "Máte rozšířené možnosti pro tento příkaz?" Pokud modul plug-in vrátí `SCC_I_ADV_SUPPORT`, rozhraní IDE zobrazuje **Upřesnit** tlačítko v jeho **získat** dialogové okno.  
+ Uživatel klikne **získat** příkazu a rozhraní IDE zobrazí **získat** dialogové okno. Volání rozhraní IDE `SccGetCommandOptions` s funkcí `iCommand` nastavena na `SCC_COMMAND_GET` a `ppvOptions` nastavena na `NULL`. To je interpretován jako dotaz modul plug-in správy zdrojového kódu, "Máte všechny rozšířené možnosti pro tento příkaz?" Pokud modul plug-in vrátí `SCC_I_ADV_SUPPORT`, rozhraní IDE zobrazí **Upřesnit** tlačítko v jeho **získat** dialogové okno.  
   
- Prvním uživatel klikne **Upřesnit** tlačítko IDE znovu volá `SccGetCommandOptions` fungovat, tentokrát s jinou hodnotu než`NULL``ppvOptions` který odkazuje na `NULL` ukazatel. Modul plug-in zobrazí vlastní **získat možnosti** dialogové okno, vyzve uživatele k informace, uloží je do vlastní struktury a vrací ukazatel na této struktury v `ppvOptions`.  
+ Při prvním uživatel klikne **Upřesnit** tlačítko, rozhraní IDE znovu volá `SccGetCommandOptions` fungovala, tentokrát s non -`NULL``ppvOptions` , která odkazuje na `NULL` ukazatel. Modul plug-in zobrazí jeho vlastní **získat možnosti** dialogovém okně se zobrazí výzva pro informace, vloží tyto informace do vlastní struktury a vrací ukazatel na danou strukturu v `ppvOptions`.  
   
- Pokud uživatel klikne na **Upřesnit** znovu v dialogovém okně stejné volá rozhraní IDE `SccGetCommandOptions` funkce znovu beze změny `ppvOptions`tak, aby strukturu je předán zpět do modulu plug-in. To umožňuje modul plug-in znovu inicializovat její dialogové okno na hodnoty, které uživatel dříve nastavené. Modul plug-in upravuje strukturu na místě před vrácením.  
+ Pokud uživatel klikne **Upřesnit** znovu v dialogovém okně stejné volání rozhraní IDE `SccGetCommandOptions` funkce znovu beze změny `ppvOptions`tak, aby struktura se předá zpět do modulu plug-in. To umožňuje modulu plug-in znovu inicializovat dialogové okno pro hodnoty, které uživatel dříve nastavené. Modul plug-in upraví struktury na místě před vrácením.  
   
- Nakonec, když uživatel klikne na **OK** v prostředí IDE **získat** dialogové okno, volání IDE [SccGet](../extensibility/sccget-function.md), předávání strukturu, vrátí se v `ppvOptions` obsahující Rozšířené možnosti.  
+ A konečně, když uživatel klikne na tlačítko **OK** v rozhraní IDE **získat** dialogové okno, volání integrované vývojové prostředí [sccget –](../extensibility/sccget-function.md), předejte strukturu vrácené v `ppvOptions` , která obsahuje Rozšířené možnosti.  
   
 > [!NOTE]
->  Příkaz `SCC_COMMAND_OPTIONS` se používá, pokud rozhraní IDE zobrazuje **možnosti** dialogové, který umožňuje uživatelům nastavit předvolby, které řídí funkce integrace. Pokud modul plug-in zdrojového kódu se chce zadat vlastní dialogové okno Předvolby, se může zobrazit z **Upřesnit** tlačítka na dialogového okna předvoleb prostředí IDE. Modul plug-in je výhradně vaší zodpovědností pro získávání a zachování tyto informace; prostředí IDE není používat nebo jej upravit.  
+>  Příkaz `SCC_COMMAND_OPTIONS` se používá, když se zobrazí rozhraní IDE **možnosti** dialogové okno, které umožní uživateli nastavit předvolby, které řídí, jak integrace funguje. Pokud chce, aby modul plug-in správy zdrojového kódu slouží k poskytování své vlastní dialogové okno Předvolby, může zobrazit z **Upřesnit** tlačítko v dialogovém okně Předvolby rozhraní IDE. Modul plug-in je výhradně zodpovědná za získání a při zachování tyto informace; rozhraní IDE není používat ji nebo ji změňte.  
   
-## <a name="see-also"></a>Viz také  
- [Funkce modulu Plug-in rozhraní API ovládacího prvku zdroje](../extensibility/source-control-plug-in-api-functions.md)   
- [Příkaz kódu](../extensibility/command-code-enumerator.md)
+## <a name="see-also"></a>Viz také:  
+ [Funkce modulu plug-in API zdrojového ovládacího prvku](../extensibility/source-control-plug-in-api-functions.md)   
+ [Kód příkazu.](../extensibility/command-code-enumerator.md)

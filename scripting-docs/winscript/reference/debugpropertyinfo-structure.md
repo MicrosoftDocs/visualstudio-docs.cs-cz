@@ -1,11 +1,11 @@
 ---
-title: "Debugpropertyinfo – struktura | Microsoft Docs"
-ms.custom: 
+title: Debugpropertyinfo – struktura | Dokumentace Microsoftu
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - DebugPropertyInfo
@@ -14,18 +14,19 @@ apilocation:
 helpviewer_keywords:
 - DebugPropertyInfo structure
 ms.assetid: 3246efbc-c212-4024-8f07-6414c2f85e75
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c9baade1a742a06c952906c05c574e752806bc9c
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 0dca3dac5c2e55e512bd4f798ca4a9bce82f7e00
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49874186"
 ---
 # <a name="debugpropertyinfo-structure"></a>DebugPropertyInfo – struktura
-Popisuje objekt hierarchické povahy, který má název, typ a hodnotu. Slouží k popisu vlastnosti ladění lokální proměnné, parametry, sledovat proměnné a výrazy a zaregistruje.  
+Popisuje objekt hierarchickou povahu, který má název, typ a hodnotu. Slouží k popisu vlastnosti ladění lokální proměnné, parametry, sledovat proměnné a výrazy a zaregistruje.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,25 +44,25 @@ typedef struct DebugPropertyInfo{
   
 ## <a name="members"></a>Členové  
  dwValidFields  
- Výčtový typ dat. slouží k zadání pole, která jsou inicializovány.  
+ Výčtový datový typ, používá k určení, která pole jsou inicializovány.  
   
  bstrName  
- Název vlastnosti v kontextu.  
+ Název vlastnosti v rámci kontextu.  
   
  bstrType  
- Typ vlastnosti jako formátovaný řetězec.  
+ Typ vlastnosti, jako formátovaný řetězec.  
   
  bstrValue  
- Hodnota vlastnosti, jako formátovaný řetězec.  
+ Hodnota vlastnosti jako formátovaný řetězec.  
   
  bstrFullName  
- Úplný název vlastnosti.  
+ Celý název vlastnosti.  
   
  dwAttrib  
  Výčet, který určuje příznaky pro atributy vlastnosti ladění.  
   
  pDebugProp  
- `IDebugProperty` Popsaného informace v tomto `DebugPropertyInfo` struktura.  
+ `IDebugProperty` Popsal informace v tomto `DebugPropertyInfo` struktury.  
   
 ## <a name="see-also"></a>Viz také  
  [Idebugproperty – rozhraní](../../winscript/reference/idebugproperty-interface.md)   

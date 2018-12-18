@@ -1,5 +1,5 @@
 ---
-title: Funkce SccUninitialize | Microsoft Docs
+title: Sccuninitialize – funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 41cb6b5cec0e0d9bb4c90cc284009ab7fc693912
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e9d992428dd6358cee2b6a46efc0816e7840c449
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948028"
 ---
 # <a name="sccuninitialize-function"></a>SccUninitialize – funkce
-Tato funkce vyčistíte žádné přidělení nebo otevřená připojení vytvořené z předchozího volání [SccInitialize](../extensibility/sccinitialize-function.md) v rámci přípravy vypínání modulu plug-in zdrojového kódu.  
+Tato funkce vyčistí všechny přidělení nebo otevřená připojení vytvořili podle předchozího volání [sccinitialize –](../extensibility/sccinitialize-function.md) při přípravě na vypínání modulu plug-in správy zdrojového kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,18 +35,18 @@ SCCRTN SccUninitialize (
   
 #### <a name="parameters"></a>Parametry  
  pvContext  
- [v] Ukazatel na strukturu zdroj ovládacího prvku modulu plug-in kontextu vytvořené v [SccInitialize](../extensibility/sccinitialize-function.md).  
+ [in] V vytvoří ukazatel na strukturu modulu plug-in kontext zdrojového ovládacího prvku [sccinitialize –](../extensibility/sccinitialize-function.md).  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Očekává se, že modul plug-in implementace zdroje řízení této funkce vrátí jednu z následujících hodnot:  
+ Modul plug-in implementaci ovládacího prvku zdroje této funkce má vracet instanci jednoho z následujících hodnot:  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |SCC_OK|Vyčištění byla úspěšně dokončena.|  
   
 ## <a name="remarks"></a>Poznámky  
- Správa zdrojového kódu modul plug-in je zodpovědný při přípravě na vypnout a uvolnit paměť, která má modul plug-in přidělené pro strukturu kontextu. Tato funkce volána jednou pro každou instanci daného modulu plug-in. Volání [SccInitialize](../extensibility/sccinitialize-function.md) předchází toto volání. Nejsou žádné projekty může být stále otevřete v době volání `SccUninitialize`.  
+ Modul plug-in správy zdrojového kódu je zodpovídá za připravuje se vypnout a uvolnit paměť, která má modul plug-in přidělené pro strukturu kontext. Funkce se volá jednou pro každou instanci daného modulu plug-in. Volání [sccinitialize –](../extensibility/sccinitialize-function.md) předchází toto volání. Žádné projekty nadále možné otevřít v okamžiku volání `SccUninitialize`.  
   
 ## <a name="see-also"></a>Viz také  
- [Funkce modulu Plug-in rozhraní API ovládacího prvku zdroje](../extensibility/source-control-plug-in-api-functions.md)   
+ [Funkce rozhraní API modulu Plug-in zdroje ovládacího prvku](../extensibility/source-control-plug-in-api-functions.md)   
  [SccInitialize](../extensibility/sccinitialize-function.md)

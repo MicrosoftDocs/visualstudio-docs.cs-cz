@@ -10,13 +10,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 53fe29f237ac4ae725bc18ab7ccde83d361ad736
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 12cbf2abc6c91a35439748ea3ee44a8ef23a98fa
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34845051"
 ---
-# <a name="how-to-view-performance-warnings"></a>Postupy: Zobrazování upozornění výkonu
+# <a name="how-to-view-performance-warnings"></a>Postupy: zobrazování upozornění výkonu
 Upozornění výkonu z [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nástroje pro profilaci nástrojích pro profilaci znamenat problémy v PROFILOVANÉHO aplikace, která může zpomalit spuštění programu. Upozornění můžete také označují, že můžete chtít změnit metod kolekcí ke shromažďování dat užitečnější. Upozornění výkonu jsou automaticky generovány v relace profilování a zobrazují v **seznam chyb** okno při datového souboru profilování je otevřen v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE.  
   
  Pokud **seznam chyb** při otevření datového souboru profilování nezobrazí okno, klikněte na tlačítko **zobrazení** nabídce a pak klikněte na tlačítko **seznam chyb**.

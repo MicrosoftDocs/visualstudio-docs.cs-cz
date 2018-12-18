@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: opětovné povolení doplňku VSTO, který byl zakázán | Microsoft Docs'
+title: 'Postupy: opětovné povolení VSTO doplňku, který byl zakázán'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -19,63 +19,64 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 25344d23e0c9f1d6d237d008b0f6b18372490d04
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c81e44b548f4d1139810780731741a489e624047
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35676445"
 ---
-# <a name="how-to-re-enable-a-vsto-add-in-that-has-been-disabled"></a>Návody: Opětovné povolení zakázaného doplňku VSTO
-  Aplikace Microsoft Office můžete zakázat doplňků VSTO které neočekávanému chování. Pokud při pokusu o jeho ladění nenačte vaší doplňku VSTO aplikace, aplikace může být pevný zakázaný nebo logicky zakázáno vaší doplňku VSTO.  
+# <a name="how-to-re-enable-a-vsto-add-in-that-has-been-disabled"></a>Postupy: opětovné povolení VSTO doplňku, který byl zakázán
+  Aplikace Microsoft Office můžete zakázat doplňků VSTO, které neočekávané chování. Pokud aplikace doplňku VSTO nenačte, při pokusu o ladění, aplikace může být zakázaný, pevný nebo obnovitelně zakázáno doplňku VSTO.  
   
  [!INCLUDE[appliesto_allapp](../vsto/includes/appliesto-allapp-md.md)]  
   
-## <a name="hard-disabled-vsto-add-ins"></a>Doplňků VSTO pevný zakázáno  
- Zakázání pevného může dojít, když doplňku VSTO způsobí, že aplikace neočekávaně ukončena. Ho může také dojít k ve svém vývojovém počítači zastavení ladicího programu při <xref:Microsoft.Office.Tools.AddIn.Startup> spouští obslužné rutiny událostí v doplňku VSTO.  
+## <a name="hard-disabled-vsto-add-ins"></a>Doplňky VSTO pevné zakázáno  
+ Intenzivně zakázání může dojít, když doplňku VSTO způsobí, že aplikace nečekaně zavře. To může vzniknout také ve svém vývojovém počítači zastavení ladicího programu při <xref:Microsoft.Office.Tools.AddIn.Startup> provádění obslužné rutiny události v doplňku VSTO.  
   
-#### <a name="to-re-enable-a-vsto-add-in"></a>Chcete-li znovu povolit doplňku VSTO  
+### <a name="to-re-enable-a-vsto-add-in"></a>Opětovné povolení doplňku VSTO  
   
-1.  V aplikaci, klikněte **souboru** kartě.  
+1.  V aplikaci, klikněte na tlačítko **souboru** kartu.  
   
-2.  Klikněte *ApplicationName* **možnosti** tlačítko.  
+2.  Klikněte na tlačítko *ApplicationName* **možnosti** tlačítko.  
   
-3.  V podokně kategorie, klikněte na **doplňky**.  
+3.  V podokně kategorie, klikněte na tlačítko **Add-ins**.  
   
-4.  V podokně podrobností ověřte, že doplňku VSTO zobrazuje v **aplikace zakázané doplňky** seznamu.  
+4.  V podokně podrobností ověřte, že doplňku VSTO zobrazuje v **zakázané aplikace Add-ins** seznamu.  
   
-     **Název** sloupce určuje název sestavení a **umístění** sloupce určuje úplnou cestu manifest aplikace.  
+     **Název** sloupci Určuje název sestavení a **umístění** sloupci Určuje úplnou cestu k manifestu aplikace.  
   
-5.  V **spravovat** pole, klikněte na tlačítko **zakázané položky**a potom klikněte na **přejděte**.  
+5.  V **spravovat** klikněte **zakázané položky**a potom klikněte na tlačítko **Přejít**.  
   
-6.  Vyberte doplněk VSTO a klikněte na **povolit**.  
+6.  Vyberte doplňku VSTO a klikněte na tlačítko **povolit**.  
   
 7.  Klikněte na tlačítko **Zavřít**.  
   
-## <a name="soft-disabled-vsto-add-ins"></a>Doplňků VSTO konfigurace soft zakázaný  
- Logicky zakázání může dojít, když doplňku VSTO vytvoří chybu, který nevyvolá aplikace neočekávaně zavřete. Například aplikace může soft zakázat doplňku VSTO případě, že nastane neošetřenou výjimku při <xref:Microsoft.Office.Tools.AddIn.Startup> spouští obslužné rutiny události.  
+## <a name="soft-disabled-vsto-add-ins"></a>Doplňky VSTO konfigurace soft zakázáno  
+ Zakázání obnovitelně může dojít, když doplňku VSTO dojde k chybě, který nevyvolá aplikace neočekávaně zavřít. Například aplikace může být obnovitelné zakázat doplňku VSTO Pokud vyvolá neošetřenou výjimku při <xref:Microsoft.Office.Tools.AddIn.Startup> provádění obslužné rutiny události.  
   
 > [!NOTE]  
->  Pokud znovu povolíte Add-in VSTO konfigurace soft zakázaný, pokusí se aplikace hned načíst doplňku VSTO. Pokud nebyl byl opraven problém, který původně důsledkem je aplikace logicky zakázat doplňku VSTO, aplikace bude soft zakázat doplňku VSTO znovu.  
+>  Při opětovném povolení doplňku VSTO konfigurace soft zakázáno, aplikace se okamžitě pokusí se načíst doplňku VSTO. Pokud problém, který původně způsobilo, že aplikace obnovitelně zakázání doplňku VSTO nebyl vyřešen, aplikace bude obnovitelné doplňku VSTO znovu zakázat.  
   
-#### <a name="to-re-enable-an-vsto-add-in"></a>Chcete-li znovu povolit doplňku VSTO  
+### <a name="to-re-enable-a-vsto-add-in"></a>Opětovné povolení doplňku VSTO  
   
-1.  V aplikaci, klikněte **souboru** kartě.  
+1.  V aplikaci, klikněte na tlačítko **souboru** kartu.  
   
-2.  Klikněte *ApplicationName* **možnosti** tlačítko.  
+2.  Klikněte na tlačítko *ApplicationName* **možnosti** tlačítko.  
   
-3.  V podokně kategorie, klikněte na **doplňky**.  
+3.  V podokně kategorie, klikněte na tlačítko **Add-ins**.  
   
-4.  V podokně podrobností ověřte, že doplňku VSTO zobrazuje v **neaktivní aplikace doplňky** seznamu.  
+4.  V podokně podrobností ověřte, že doplňku VSTO zobrazuje v **neaktivní aplikace Add-ins** seznamu.  
   
-     **Název** sloupce určuje název sestavení a **umístění** sloupce určuje úplnou cestu manifest aplikace.  
+     **Název** sloupci Určuje název sestavení a **umístění** sloupci Určuje úplnou cestu k manifestu aplikace.  
   
-5.  V **spravovat** pole, klikněte na tlačítko **COM Doplňky**a potom klikněte na **přejděte**.  
+5.  V **spravovat** klikněte **doplňky modelu COM**a potom klikněte na tlačítko **Přejít**.  
   
-6.  V **COM Doplňky** dialogové okno, zaškrtněte políčko vedle zakázané VSTO doplněk.  
+6.  V **doplňky modelu COM** dialogové okno, vyberte políčko vedle je zakázané doplňku VSTO.  
   
-7.  Click **OK**.  
+7.  Klikněte na tlačítko **OK**.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Vytváření řešení pro systém Office](../vsto/building-office-solutions.md)   
  [Ladění projektů Office](../vsto/debugging-office-projects.md)   
  [Programování doplňků VSTO](../vsto/programming-vsto-add-ins.md)  

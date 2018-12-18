@@ -1,6 +1,7 @@
 ---
 title: 'CA1063: Implementuje správně IDisposable'
 ms.date: 02/12/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,13 +14,16 @@ ms.assetid: 12afb1ea-3a17-4a3f-a1f0-fcdb853e2359
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 9205c20730681969550c3a2368e6ec889056648b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e202c35ee6bd8353170e758629b1cc6e739b775d
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39080968"
 ---
 # <a name="ca1063-implement-idisposable-correctly"></a>CA1063: Implementuje správně IDisposable
 
@@ -32,59 +36,59 @@ ms.lasthandoff: 04/19/2018
 
 ## <a name="cause"></a>příčina
 
-`IDisposable` není správně implementována. Jsou zde uvedeny některé příčiny tohoto problému:
+<xref:System.IDisposable?displayProperty=nameWithType> Není správně implementovaná rozhraní. Možné příčiny tohoto stavu:
 
-- Rozhraní IDisposable je znovu implementované v třídě.
+- <xref:System.IDisposable> je reimplemented ve třídě.
 
-- Dokončení znovu přepsána.
+- Dokončení je reoverridden.
 
-- Uvolnění přepsána.
+- Dispose() je přepsána.
 
-- Není veřejné, Dispose() zapečetěné nebo s názvem uvolnění.
+- Metoda Dispose() není veřejný, [zapečetěné](/dotnet/csharp/language-reference/keywords/sealed), nebo s názvem **Dispose**.
 
 - Dispose(bool) není chráněný, virtuální nebo nezapečetěné.
 
-- V nezapečetěných typy musí volat Dispose() Dispose(true).
+- V nezapečetěné typy musí volat Dispose() Dispose(true).
 
-- Pro nezapečetěné typy dokončení implementace nevyvolá obojím Dispose(bool) nebo finalizační metodu třídy případu.
+- Pro nezapečetěné typy nevolá Finalize implementaci Dispose(bool) jednoho nebo obou nebo finalizační metodu třídy base.
 
-Porušení některého z těchto vzory aktivují toto upozornění.
+Porušení některou z těchto vzorců se aktivuje upozornění CA1063.
 
-Každý nezapečetěné typ, který deklaruje a implementuje rozhraní IDisposable musíte zadat vlastní chráněná virtuální void Dispose(bool) metoda. Dispose() by měly volat Dipose(true) a dokončení by měly volat Dispose(false). Pokud vytváříte nezapečetěných typ, který deklaruje a implementuje rozhraní IDisposable, musíte definovat Dispose(bool) a pojmenujte ji. Další informace najdete v tématu [vymazání nespravovaných prostředků](/dotnet/standard/garbage-collection/unmanaged) v [pokynů pro návrh rozhraní .NET Framework](/dotnet/standard/design-guidelines/index).
+Každý nezapečetěný typ, který deklaruje a implementuje <xref:System.IDisposable> rozhraní musíte zadat své vlastní chráněné virtuální void Dispose(bool) metody. Dispose() by měly volat Dipose(true) a finalizační metody by měly volat Dispose(false). Pokud vytvoříte nezapečetěný typ, který deklaruje a implementuje <xref:System.IDisposable> rozhraní, je nutné definovat Dispose(bool) a jeho volání. Další informace najdete v tématu [vyčistit nespravované prostředky (Průvodce technologií .NET)](/dotnet/standard/garbage-collection/unmanaged) a [vzor Dispose](/dotnet/standard/design-guidelines/dispose-pattern).
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Všechny typy IDisposable by měly správně implementovat vzor Dispose.
+Všechny <xref:System.IDisposable> typy by měly implementovat [vzor Dispose](/dotnet/standard/design-guidelines/dispose-pattern) správně.
 
-## <a name="how-to-fix-violations"></a>Jak opravit porušení
+## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
 
-Zkontrolujte v kódu a zjistěte, který z následujících řešení opraví tento porušení.
+Prozkoumat kód a určit, které z následujících řešení vyřeší porušení:
 
-- Rozhraní IDisposable odeberte ze seznamu rozhraní, které jsou implementované {0} a místo toho přepsat implementace metody Dispose základní třídy.
+- Odebrat <xref:System.IDisposable> ze seznamu rozhraní, které jsou implementovány podle typu a místo toho přepište implementaci Dispose základní třídy.
 
-- Odeberte finalizační metodu z typu {0}, přepsat metodu Dispose (bool uvolnění) a uveďte logiku finalizace v kódové cestě 'uvolnění, pokud má hodnotu false.
+- Odeberte finalizační metodu z typu, přepište Dispose (bool disposing) a vložte finalizační logiku do cesty kódu, kde je 'disposing ' hodnoty false.
 
-- Odeberte {0}, přepsat metodu Dispose (bool uvolnění) a uveďte logiku uvolnění v kódové cestě 'uvolnění, kde je true.
+- Přepište Dispose (bool disposing) a vložte finalizační logiku do cesty kódu, kde je 'disposing ' hodnoty true.
 
-- Zkontrolujte, zda že tento {0} je deklarován jako veřejné a uzavřené.
+- Ujistěte se, že je deklarována jako veřejná Dispose() a [zapečetěné](/dotnet/csharp/language-reference/keywords/sealed).
 
-- Přejmenujte {0} 'uvolnění a ujistěte se, že je deklarován jako veřejné a uzavřené.
+- Přejmenovat metodu dispose k **Dispose** a ujistěte se, že je deklarována jako veřejná a [zapečetěné](/dotnet/csharp/language-reference/keywords/sealed).
 
-- Ujistěte se, že tento {0} je deklarován jako chráněný, virtuální a nezapečetěné.
+- Ujistěte se, že Dispose(bool) je deklarována jako chráněná, virtuální a nezapečetěná.
 
-- {0} upravte tak, aby volá Dispose(true) a potom volá GC. Funkce SuppressFinalize na aktuální instanci objektu ('this' nebo 'Mi' v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) a potom se vrátí.
+- Upravit Dispose() tak, že volá Dispose(true), poté volá <xref:System.GC.SuppressFinalize%2A> na aktuální instanci objektu (`this`, nebo `Me` v jazyce Visual Basic) a potom se vrací.
 
-- {0} upravte tak, aby volá Dispose(false) a potom se vrátí.
+- Upravte vaše finalizační metodu tak, že volá Dispose(false) a potom se vrací.
 
-- Pokud vytváříte nezapečetěných typ, který deklaruje a implementuje rozhraní IDisposable, ujistěte se, že implementace rozhraní IDisposable dodržuje vzor, který je popsán výše v této části.
+- Pokud vytvoříte nezapečetěný typ, který deklaruje a implementuje <xref:System.IDisposable> rozhraní, ujistěte se, že implementace <xref:System.IDisposable> má následující formát, který je popsán výše v této části.
 
-## <a name="when-to-suppress-warnings"></a>Při potlačení upozornění
+## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
 Nepotlačujte upozornění na toto pravidlo.
 
 ## <a name="pseudo-code-example"></a>Příklad pseudo kódu
 
-Následující kód pseudo poskytuje obecné příklad, jak by měla být Dispose(bool) implementována ve třídě, která používá spravovaná a nativní prostředky.
+Následující kód pseudo poskytuje obecné příklad, jak Dispose(bool) by měla být implementována ve třídě, která používá spravované a nativní prostředky.
 
 ```csharp
 public class Resource : IDisposable
@@ -100,7 +104,7 @@ public class Resource : IDisposable
     }
 
     // NOTE: Leave out the finalizer altogether if this class doesn't
-    // own unmanaged resources itself, but leave the other methods
+    // own unmanaged resources, but leave the other methods
     // exactly as they are.
     ~Resource()
     {
@@ -129,3 +133,8 @@ public class Resource : IDisposable
     }
 }
 ```
+
+## <a name="see-also"></a>Viz také:
+
+- [(Pokyny k návrhu architektury) vzor dispose](/dotnet/standard/design-guidelines/dispose-pattern)
+- [Vyčistit nespravované prostředky (Průvodce technologií .NET)](/dotnet/standard/garbage-collection/unmanaged)

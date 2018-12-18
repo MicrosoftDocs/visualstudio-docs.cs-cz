@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::GetAddressesInModuleFromPosition | Microsoft Docs
+title: IDebugComPlusSymbolProvider::GetAddressesInModuleFromPosition | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 64d34c7bfbfdac039692c7edbce83f69f8085800
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 08afe6dd2e9546b8d066f347d96105342cd268d0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49905113"
 ---
 # <a name="idebugcomplussymbolprovidergetaddressesinmodulefromposition"></a>IDebugComPlusSymbolProvider::GetAddressesInModuleFromPosition
-Pozice dokumentu v zadaný modul se mapuje na pole adres ladění.  
+Pozice dokumentu v zadaném modulu se mapuje na pole adresy ladění.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,16 +52,16 @@ int GetAddressesInModuleFromPosition(
   
 #### <a name="parameters"></a>Parametry  
  `ulAppDomainID`  
- [v] Identifikátor domény aplikace.  
+ [in] Identifikátor domény aplikace.  
   
  `guidModule`  
- [v] Jedinečný identifikátor modulu.  
+ [in] Jedinečný identifikátor modulu.  
   
  `pDocPos`  
- [v] Umístění dokumentu.  
+ [in] Pozice dokumentu.  
   
  `fStatmentOnly`  
- [v] Pokud `TRUE`, omezuje ladění adresy, které mají jeden příkaz.  
+ [in] Pokud `TRUE`, omezuje ladění adresy, které mají jeden příkaz.  
   
  `ppEnumBegAddresses`  
  [out] Vrátí enumerátor pro počáteční adresy ladění, které jsou přidružené k tomuto prohlášení nebo řádku.  
@@ -69,7 +70,7 @@ int GetAddressesInModuleFromPosition(
  [out] Vrátí enumerátor pro koncové adresy ladění, které jsou přidružené k tomuto prohlášení nebo řádku.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugSymbolProvider** objekt, který zveřejňuje [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) rozhraní.  

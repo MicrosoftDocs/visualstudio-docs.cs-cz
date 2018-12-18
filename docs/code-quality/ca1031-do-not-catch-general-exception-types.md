@@ -1,6 +1,7 @@
 ---
 title: 'CA1031: Nezachycujte výjimky obecného typu'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,15 +14,21 @@ ms.assetid: cbc283ae-2a46-4ec0-940e-85aa189b118f
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CPP
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: fb251798d4e1908c31d19356e711215baa52929d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 16b43aa25ef4e2d81b2d6f72e7e1c2bfa3e8b6f7
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45551619"
 ---
 # <a name="ca1031-do-not-catch-general-exception-types"></a>CA1031: Nezachycujte výjimky obecného typu
+
 |||
 |-|-|
 |TypeName|DoNotCatchGeneralExceptionTypes|
@@ -30,22 +37,22 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
- K obecné výjimce, jako <xref:System.Exception?displayProperty=fullName> nebo <xref:System.SystemException?displayProperty=fullName> je místo zachycení `catch` příkaz nebo klauzuli obecné catch jako `catch()` se používá.
+ Obecná výjimka jako například <xref:System.Exception?displayProperty=fullName> nebo <xref:System.SystemException?displayProperty=fullName> je zachycena v `catch` příkazu nebo obecnou klauzulí catch, jako `catch()` se používá.
 
 ## <a name="rule-description"></a>Popis pravidla
  Obecné výjimky by neměly být zachycovány.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Opravit porušení toto pravidlo, zachycení konkrétnější výjimky nebo opětovné obecné výjimky jako poslední příkaz v `catch` bloku.
+ Chcete-li opravit porušení tohoto pravidla, zachycení více specifické výjimky nebo znovu vyvolejte obecnou výjimku jako poslední příkaz v `catch` bloku.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Nepotlačujte upozornění na toto pravidlo. Zachytávání nezachycujte výjimky obecného typu problémy běhové knihovny uživatele můžete skrýt a může ztížit ladění.
+ Nepotlačujte upozornění na toto pravidlo. Zachycení výjimky obecného typu může skrýt problémy za běhu z knihovny uživatele a může ztížit ladění.
 
 > [!NOTE]
->  Od verze [!INCLUDE[net_v40_long](../code-quality/includes/net_v40_long_md.md)], modul CLR (CLR) již dodává výjimky v poškozeném stavu, ke kterým došlo v operačního systému a spravovaného kódu, například porušení přístupu v [!INCLUDE[TLA#tla_mswin](../code-quality/includes/tlasharptla_mswin_md.md)], zpracovávat spravovaného kódu. Pokud chcete kompilaci aplikace ve [!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)] nebo novější verze a Udržovat zpracování výjimky v poškozeném stavu, můžete použít <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute> atribut metoda, která zpracovává výjimku v poškozeném stavu.
+> Počínaje [!INCLUDE[net_v40_long](../code-quality/includes/net_v40_long_md.md)], modul CLR (CLR) poskytuje už výjimky v poškozeném stavu, ke kterým dochází v operačním systému a spravovaného kódu, jako je například porušení přístupu v [!INCLUDE[TLA#tla_mswin](../code-quality/includes/tlasharptla_mswin_md.md)], zpracovávat spravovaného kódu. Pokud chcete kompilovat aplikace [!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)] nebo novější verze a Udržovat zpracování výjimek v poškozeném stavu, můžete použít <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute> atributu na metodu, která zpracovává výjimku v poškozeném stavu.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje typ, který je v rozporu toto pravidlo a typ, který implementuje správně `catch` bloku.
+ Následující příklad ukazuje typ, který porušuje tato pravidla a typ, který implementuje správně `catch` bloku.
 
  [!code-cpp[FxCop.Design.ExceptionAndSystemException#1](../code-quality/codesnippet/CPP/ca1031-do-not-catch-general-exception-types_1.cpp)]
  [!code-vb[FxCop.Design.ExceptionAndSystemException#1](../code-quality/codesnippet/VisualBasic/ca1031-do-not-catch-general-exception-types_1.vb)]

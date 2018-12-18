@@ -1,5 +1,5 @@
 ---
-title: IDebugFunctionObject::CreateStringObject | Microsoft Docs
+title: IDebugFunctionObject::CreateStringObject | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d56356aee150680b4d3a21327e28db353da51469
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c7933b2d7082432bd4f9db567ad6bb5b7788e28b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49887681"
 ---
 # <a name="idebugfunctionobjectcreatestringobject"></a>IDebugFunctionObject::CreateStringObject
 Vytvoří objekt řetězce.  
@@ -42,16 +43,16 @@ int CreateStringObject(
   
 #### <a name="parameters"></a>Parametry  
  `pcstrString`  
- [v] Řetězcová hodnota pro objekt řetězce.  
+ [in] Řetězcová hodnota pro objekt řetězce.  
   
  `ppObject`  
- [out] Vrátí [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objekt, který reprezentuje objekt nově vytvořený řetězce.  
+ [out] Vrátí [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objekt, který reprezentuje objekt nově vytvořeného řetězce.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí S_OK; jinak vrátí kód chyby.  
+ V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Volat tuto metodu pro vytvoření objektu, který představuje řetězec, který je parametr pro funkci, která je reprezentována [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) rozhraní.  
+ Volejte tuto metodu za účelem vytvoření objektu, který představuje řetězec, který je parametr funkce, která je reprezentována [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) rozhraní.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)

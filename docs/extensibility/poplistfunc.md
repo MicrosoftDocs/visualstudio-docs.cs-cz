@@ -1,5 +1,5 @@
 ---
-title: POPLISTFUNC | Microsoft Docs
+title: POPLISTFUNC | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,19 +15,20 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 950807b0568a28763b369fef4041c69b264d12fc
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 061f7b4d1c1fb9ddeb76444f058a95fe30abe47c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920869"
 ---
 # <a name="poplistfunc"></a>POPLISTFUNC
-Je součástí této zpětného volání [SccPopulateList](../extensibility/sccpopulatelist-function.md) zařízení IDE a je používána modulu plug-in zdrojového kódu se aktualizovat seznam souborů a složek (také zadaný do `SccPopulateList` funkce).  
+Toto zpětné volání je zadán do [sccpopulatelist –](../extensibility/sccpopulatelist-function.md) integrovaným vývojovým prostředím a modulu plug-in správy zdrojového kódu slouží k aktualizaci seznamu souborů nebo adresářů (také zadaný pro `SccPopulateList` funkce).  
   
- Když uživatel vybere **získat** příkazů v prostředí IDE, rozhraní IDE zobrazuje seznam všech souborů, které může uživatel získat. Bohužel IDE nezná přesný seznam všech souborů, které může uživatel získat; pouze modul plug-in má tento seznam. Pokud ostatní uživatelé přidali soubory do projektu správy zdrojového kódu, tyto soubory by se zobrazit v seznamu, ale IDE nebude vědět o nich. Prostředí IDE sestavuje seznam souborů, které se domnívá, že uživatel může získat. Než se uživateli zobrazí tento seznam, zavolá [SccPopulateList](../extensibility/sccpopulatelist-function.md) `,` poskytnutí modulu plug-in zdrojového kódu šanci na Přidat a odstranit soubory ze seznamu.  
+ Když uživatel klikne **získat** příkazu v prostředí IDE, rozhraní IDE zobrazí seznam všech souborů, které můžete získat uživatele. Bohužel rozhraní IDE nezná přesný seznam všech souborů, které může uživatel získat; pouze modul plug-in je tento seznam. Pokud ostatním uživatelům přidali soubory do projektu ve správě zdrojového kódu, tyto soubory by se zobrazit v seznamu, ale rozhraní IDE neví o nich. Rozhraní IDE vytvoří seznam souborů, které se domnívá, že uživatel může dostat. Předtím, než se uživateli zobrazí tento seznam, zavolá [sccpopulatelist –](../extensibility/sccpopulatelist-function.md) `,` poskytuje modul plug-in správy zdrojového kódu příležitost pro přidávání a odstraňování souborů ze seznamu.  
   
-## <a name="signature"></a>Podpis  
- Modul plug-in správy zdroje upraví seznamu voláním funkce implementované IDE s následující prototyp:  
+## <a name="signature"></a>podpis  
+ Modul plug-in správy zdrojového kódu změní seznamu pomocí volání funkce implementované integrované vývojové prostředí s následující prototyp:  
   
 ```cpp  
 typedef BOOL (*POPLISTFUNC) (  
@@ -40,32 +41,32 @@ typedef BOOL (*POPLISTFUNC) (
   
 ## <a name="parameters"></a>Parametry  
  pvCallerData  
- `pvCallerData` Parametr předaný volající (IDE) [SccPopulateList](../extensibility/sccpopulatelist-function.md). Modul plug-in zdrojového kódu by měla předpokládají nic o obsah tohoto parametru.  
+ `pvCallerData` Byl předán parametr volající (IDE) [sccpopulatelist –](../extensibility/sccpopulatelist-function.md). Modul plug-in správy zdrojového kódu by měl předpokládat nic neříká o obsah tohoto parametru.  
   
  fAddRemove  
- Pokud `TRUE`, `lpFileName` je soubor, který musí být přidaní do seznamu souborů. Pokud `FALSE`, `lpFileName` je soubor, který měl by být odstraněn ze seznamu souborů.  
+ Pokud `TRUE`, `lpFileName` je soubor přidaný do seznamu. Pokud `FALSE`, `lpFileName` je soubor, který by měl být odstraněn ze seznamu souborů.  
   
  nStatus  
- Stav `lpFileName` (kombinaci `SCC_STATUS` bits; viz [souboru stavový kód](../extensibility/file-status-code-enumerator.md) podrobnosti).  
+ Stav `lpFileName` (kombinace `SCC_STATUS` bits; viz [souboru stavový kód](../extensibility/file-status-code-enumerator.md) podrobnosti).  
   
  lpFileName  
- Úplná cesta k adresáři názvu souboru můžete přidat nebo odstranit ze seznamu.  
+ Úplná cesta k adresáři názvu souboru přidat nebo odstranit ze seznamu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |`TRUE`|Modul plug-in můžete dál volání této funkce.|  
-|`FALSE`|Na straně IDE (například z důvodu nedostatku paměti situaci) došlo k potížím. Modul plug-in by se měla zastavit operaci.|  
+|`FALSE`|Na straně integrovaného vývojového prostředí (například z důvodu nedostatku paměti situace) došlo k potížím. Modul plug-in by se měla zastavit operaci.|  
   
 ## <a name="remarks"></a>Poznámky  
- Pro každý soubor, který chce, aby se modul plug-in zdrojového kódu pro přidání nebo odebrání ze seznamu souborů, zavolá tato funkce předávání v `lpFileName`. `fAddRemove` Příznak znamená vytvoření nového souboru přidejte do seznamu nebo starý soubor odstranit. `nStatus` Parametr poskytuje stav souboru. Po dokončení přidávání a odstraňování souborů modulu plug-in SCC vrátí z [SccPopulateList](../extensibility/sccpopulatelist-function.md) volání.  
+ Pro každý soubor, který chce, aby se modul plug-in správy zdrojového kódu pro přidání nebo odebrání ze seznamu souborů, které volá tuto funkci a předává jí `lpFileName`. `fAddRemove` Příznak označuje nového souboru do seznamu přidat nebo odstranit původní soubor. `nStatus` Parametr poskytuje stav souboru. Po dokončení přidávání a odstraňování souborů modulu plug-in SCC vrátí z [sccpopulatelist –](../extensibility/sccpopulatelist-function.md) volání.  
   
 > [!NOTE]
->  `SCC_CAP_POPULATELIST` Bit možnosti je vyžadována pro Visual Studio.  
+>  `SCC_CAP_POPULATELIST` Bit funkce se vyžaduje pro Visual Studio.  
   
-## <a name="see-also"></a>Viz také  
- [Funkce zpětného volání, které implementují rozhraní IDE](../extensibility/callback-functions-implemented-by-the-ide.md)   
- [Moduly plug-in programu zdroj ovládacího prvku](../extensibility/source-control-plug-ins.md)   
- [SccPopulateList](../extensibility/sccpopulatelist-function.md)   
- [Soubor stavový kód](../extensibility/file-status-code-enumerator.md)
+## <a name="see-also"></a>Viz také:  
+ [Funkce zpětného volání implementované integrovaným vývojovým prostředím](../extensibility/callback-functions-implemented-by-the-ide.md)   
+ [Ovládací prvek moduly plug-in zdrojového kódu](../extensibility/source-control-plug-ins.md)   
+ [Sccpopulatelist –](../extensibility/sccpopulatelist-function.md)   
+ [Kód stavu souboru](../extensibility/file-status-code-enumerator.md)

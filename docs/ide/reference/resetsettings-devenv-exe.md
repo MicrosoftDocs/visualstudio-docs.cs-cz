@@ -1,10 +1,9 @@
 ---
-title: -Resetsettings – (devenv.exe) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+title: -ResetSettings (devenv.exe)
+ms.date: 11/16/2018
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: reference
 helpviewer_keywords:
 - Devenv, /ResetSettings switch
 - ResetSettings switch
@@ -15,39 +14,50 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 22dd925755e996a927664e0a9a5846fc10247882
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c8f826db0c619e1dfb5811aaf9d0c5ef40093c97
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52388664"
 ---
 # <a name="resetsettings-devenvexe"></a>/ResetSettings (devenv.exe)
-Obnoví [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] výchozí nastavení a automaticky spouští [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE. Volitelně obnoví nastavení na soubor zadaný .vssettings.  
-  
- Určuje výchozí nastavení profilu, který byl vybrán při [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] byl nejprve spustit.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-Devenv /ResetSettings SettingsFile  
-```  
-  
-## <a name="arguments"></a>Arguments  
- `SettingsFile`  
- Úplná cesta a název souboru .vssettings použít [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].  
-  
- Chcete-li obnovit profil obecná nastavení pro vývoj, použijte `General`.  
-  
-## <a name="remarks"></a>Poznámky  
- Pokud žádné `SettingsFile` je zadán, zobrazí se výzva k výběru kolekce výchozí nastavení při dalším spuštění [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].  
-  
-## <a name="example"></a>Příklad  
- Následující příkazový řádek aplikuje nastavení uložené v souboru `MySettings.vssettings`.  
-  
-```  
-Devenv.exe /ResetSettings "C:\My Files\MySettings.vssettings"  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Přizpůsobení sady Visual Studio IDE](../../ide/personalizing-the-visual-studio-ide.md)   
- [Devenv – přepínače příkazového řádku](../../ide/reference/devenv-command-line-switches.md)
+
+Obnoví výchozí nastavení sady Visual Studio a automaticky spustí rozhraní IDE sady Visual Studio. Volitelně obnoví nastavení zadaného *vssettings* souboru.
+
+Výchozí nastavení jsou určena podle profilu, který byl vybrán při prvním spuštění sady Visual Studio.
+
+> [!TIP]
+> Zjistěte, jak resetovat nastavení pomocí integrovaného vývojového prostředí (IDE), najdete v článku [Resetovat nastavení](../environment-settings.md#reset-settings).
+
+## <a name="syntax"></a>Syntaxe
+
+```cmd
+Devenv /ResetSettings SettingsFile
+```
+
+## <a name="arguments"></a>Arguments
+
+`SettingsFile`
+
+Úplná cesta a název *vssettings* souboru do sady Visual Studio.
+
+K obnovení profilu Obecné vývojové nastavení použijte `General`.
+
+## <a name="remarks"></a>Poznámky
+
+Pokud ne `SettingsFile` není zadána, budete vyzváni k výběru výchozí kolekce nastavení při příštím spuštění aplikace Visual Studio.
+
+## <a name="example"></a>Příklad
+
+Následující příkazový řádek použije nastavení uložená v souboru `MySettings.vssettings`.
+
+```cmd
+Devenv.exe /ResetSettings "C:\My Files\MySettings.vssettings"
+```
+
+## <a name="see-also"></a>Viz také:
+
+- [Nastavení prostředí](../environment-settings.md)
+- [Přizpůsobení prostředí IDE sady Visual Studio](../../ide/personalizing-the-visual-studio-ide.md)
+- [Přepínače příkazového řádku nástroje devenv](../../ide/reference/devenv-command-line-switches.md)

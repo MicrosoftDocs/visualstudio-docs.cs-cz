@@ -1,5 +1,5 @@
 ---
-title: Vlastnost AsyncVoidMethodBuilder.ObjectIdForDebugger | Microsoft Docs
+title: Asyncvoidmethodbuilder.objectidfordebugger – vlastnost | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,20 +13,21 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 868deef955ce90f49ce3ba2719903bdcbb38f2a5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: cf0f8acbfbdc129371d288d64cc48b3e4b0704ad
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39151480"
 ---
-# <a name="asyncvoidmethodbuilderobjectidfordebugger-property"></a>Vlastnost AsyncVoidMethodBuilder.ObjectIdForDebugger
-Získá objekt, který se dá použít k jednoznačné identifikaci tohoto tvůrce pro ladicí program.  
+# <a name="asyncvoidmethodbuilderobjectidfordebugger-property"></a>Asyncvoidmethodbuilder.objectidfordebugger – vlastnost
+Získá objekt, který slouží k jednoznačné identifikaci tohoto Tvůrce ladicímu programu.  
   
  **Namespace:** <xref:System.Runtime.CompilerServices?displayProperty=fullName>  
   
- **Sestavení:** mscorlib (v mscorlib.dll)  
+ **Sestavení:** mscorlib (v knihovně mscorlib.dll)  
   
- Protože tento vnitřní člen nemůže získat přístup z rozhraní .NET Framework, je k dispozici společné Intermediate Language (soubor CIL) syntaxi.  
+ Protože tento člen interní nemůže získat přístup z rozhraní .NET Framework, je k dispozici v Common Intermediate Language (CIL) následující syntaxi.  
   
 ## <a name="syntax"></a>Syntaxe  
   

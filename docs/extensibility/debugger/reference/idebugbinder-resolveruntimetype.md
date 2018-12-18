@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder::ResolveRuntimeType | Microsoft Docs
+title: IDebugBinder::ResolveRuntimeType | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6aa911dba9d56996e048326737c1dd99ca89c49c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e2bfca2c360741b92c3a7ce3c4773671d8bf4d6f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49928123"
 ---
 # <a name="idebugbinderresolveruntimetype"></a>IDebugBinder::ResolveRuntimeType
-Tato metoda určuje běhového typu objektu.  
+Tato metoda určí run-time typu objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,16 +43,16 @@ int ResolveRuntimeType(
   
 #### <a name="parameters"></a>Parametry  
  `pObject`  
- [v] [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) být vyřešen.  
+ [in] [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) vyřešit.  
   
  `ppResolved`  
  [out] Vrátí typ objektu jako [IDebugField](../../../extensibility/debugger/reference/idebugfield.md).  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Typ spuštění objektu nezná vždy v době kompilace. Například pomocí polymorfismus, argument může být funkci předán jako svou základní třídu, například třída tlačítko. Skutečné argument může být odvozené třídy, například třídu tlačítko přepínač.  
+ Za běhu typ objektu není vždy znám v době kompilace. Například pomocí polymorfismus, argument může být předán funkci jako její základní třídě, jako je například třída tlačítek. Skutečný argument může být odvozené třídy, jako je například třída tlačítek přepínače.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugBinder](../../../extensibility/debugger/reference/idebugbinder.md)   

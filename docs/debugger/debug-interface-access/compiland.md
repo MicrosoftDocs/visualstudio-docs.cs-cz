@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31457836"
 ---
 # <a name="compiland"></a>Kompilace
 Existuje `SymTagCompiland` symbolů pro každý kompilace propojený soubor .exe. Kompilace informace je rozdělená mezi symboly s `SymTagCompiland` značku, která mohou být načteny bez načítání další kompilace symboly, a symboly, se `SymTagCompilandDetails` značku, která může vyžadovat další symboly načítání.  

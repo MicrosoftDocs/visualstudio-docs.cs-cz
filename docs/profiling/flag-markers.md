@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 76024adcc36a0925345025ac628e79c6e8b1b7bc
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f924089ef31e2b452419b107788357060a4c6bb6
+ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35237988"
 ---
 # <a name="flag-markers"></a>Značky příznaků
 Příznak značku představuje něco, co došlo k chybě v okamžiku v čase v aplikaci. Příznak může představovat různé druhy událostí aplikace. Příznak může například zobrazovat naplánovaného konkrétní pracovní položky nebo pokud došlo k výjimce. Moduly runtime například Task Parallel Library můžete také vygenerovat příznaky.  
@@ -47,6 +48,6 @@ Výstrahy značky
  ![Agregace flags čtyři úrovně zobrazuje důležité](../profiling/media/cvmarkeraggregate.png "CVMarkerAggregate")  
 Agregace příznaky podle úrovně důležitosti  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Značky Vizualizéru souběžnosti](../profiling/concurrency-visualizer-markers.md)   
  [SDK Vizualizéru souběžnosti](../profiling/concurrency-visualizer-sdk.md)

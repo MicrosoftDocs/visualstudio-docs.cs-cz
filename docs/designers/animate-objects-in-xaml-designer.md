@@ -1,6 +1,7 @@
 ---
 title: Animace objektů v Návrháři XAML
 ms.date: 04/11/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: fb88fa26-e835-47f5-9771-2f279441c83c
@@ -9,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 46b08815a320faf7043d860b4cd96f4120409854
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c8f8b1b62634c9da86a6aa152bd48cbd8c712198
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31921401"
 ---
 # <a name="animate-objects-in-xaml-designer"></a>Animace objektů v Návrháři XAML
 
@@ -27,4 +29,4 @@ Následující obrázek znázorňuje storyboard, s názvem **MoveUp**. Časová 
 
 ## <a name="see-also"></a>Viz také
 
-- [Vytvoření uživatelského rozhraní pomocí nástroje Blend for Visual Studio](../designers/creating-a-ui-by-using-blend-for-visual-studio.md)
+- [Vytvoření uživatelského rozhraní pomocí nástroje Blend pro Visual Studio](../designers/creating-a-ui-by-using-blend-for-visual-studio.md)

@@ -1,5 +1,5 @@
 ---
-title: Idiaimagedata::get_imagebase – | Microsoft Docs
+title: Idiaimagedata::get_imagebase – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9cd7cb16a4f6a6a629102eafbc212e4b2fff0f00
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 6e0037ef4bbbfc499d23e517e0fb3522b8f042c7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49822973"
 ---
 # <a name="idiaimagedatagetimagebase"></a>IDiaImageData::get_imageBase
-Načte paměti umístění, kde by měla být založena bitovou kopii.  
+Získá umístění v paměti, kde by měla být založena na obrázku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,13 +34,13 @@ HRESULT get_imageBase (
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí hodnotu základní navrhované bitové kopie.  
+ [out] Vrátí image navrhované základní hodnoty.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Kvůli konfliktům základní bitovou kopii může být obrázek automaticky rebased do umístění nevyužitou paměť po načtení. Tato metoda vrátí základní nápovědu (umístění navrhované paměti), která byla uložena v modulu v době kompilace.  
+ Kvůli konfliktům základní image image může přenese se změnami automaticky do umístění nevyužité paměti při spuštění. Tato metoda vrátí základní pomocný parametr (umístění v paměti navrhované), která byla uložená v modulu v době kompilace.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaImageData](../../debugger/debug-interface-access/idiaimagedata.md)

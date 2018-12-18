@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: shromažďování dat o výkonu pro webový server | Microsoft Docs'
+title: 'Postupy: shromažďování dat o výkonu pro web | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -19,90 +19,91 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e07594e9b90fabd8e0a2bcc66dd0920db0973aa
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a2d9cb832d8797eb4ebf16482f4bef02aa6644a3
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53064294"
 ---
 # <a name="how-to-collect-performance-data-for-a-web-site"></a>Postupy: shromažďování dat o výkonu pro webový server
 
-Můžete použít **Průvodce výkonu** ke shromažďování dat výkonu pro [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] webové aplikace. Můžete profil webové aplikace, která je otevřen v sadě Visual Studio, nebo můžete profil [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] webu, který je umístěn v místním počítači a není otevřen v prostředí Visual Studio IDE.
+Můžete použít **Průvodce výkonem** ke shromažďování dat výkonu pro [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] webovou aplikaci. Můžete profilovat webové aplikace, která je otevřený v sadě Visual Studio, nebo můžete provádět profilaci [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] web, který je umístěn v místním počítači a není otevřen v integrovaném vývojovém prostředí sady Visual Studio.
 
 > [!NOTE]
-> **Průvodce výkonu** umožňuje přidání dat interakce (TIP) vrstev, údaje o výkonu JScript nebo na shromážděná data profilování. Možnost TIP shromažďuje data z serverové procesy. Profilace JScript shromažďuje data z skripty, které běží na místním nebo vzdáleném webovém serveru. Ve většině případů měli byste vybrat pouze jednu z možností.
+> **Průvodce výkonem** umožňuje přidat dat (TIP) interakce vrstev, údaje o výkonu JScript nebo obojí, aby se shromážděná data profilace. Možnost TIP shromažďuje data z procesů na straně serveru. Profilace JScript shromažďuje data ze skriptů, které běží na místním nebo vzdáleném webovém serveru. Ve většině případů měli byste vybrat pouze jednu z možností.
 
- V závislosti na nastavení přístupová oprávnění uživatelů, které správce má k dispozici jednotlivého uživatele může nebo nemusí mít oprávnění zabezpečení k vytvoření relace profileru na počítači, který je hostitelem procesu ASP.NET. Následující příklady ilustrují možné rozdíly mezi uživateli:
+ V závislosti na nastavení oprávnění uživatelského přístupu, které správce má k dispozici jednotlivý uživatel může nebo nemusí mít oprávnění k vytvoření relace profileru v počítači, který je hostitelem procesu ASP.NET. Následující příklady znázorňují možné rozdíly mezi uživateli:
 
-- Někteří uživatelé přistupovat k pokročilé funkce profilování při správce nastavil ovladače a spuštění služby.
+- Někteří uživatelé mohou přístup k rozšířeným funkcím profilace, pokud správce nastavil ovladač a spouštění služby.
 
-- Uživatelé domény může přístup k ukázkové profilace jenom.
+- Uživatelé domény může přístup pouze profilace vzorku.
 
-- Někteří uživatelé mohou odepřít přístup k profilace všem ostatním uživatelům.
+- Někteří uživatelé mohou odepřít přístup k profilaci a všem ostatním uživatelům.
 
- Další informace najdete v tématu [profilování a zabezpečení systému Windows Vista](../profiling/profiling-and-windows-vista-security.md) a možnosti správce v [VSPerfCmd](../profiling/vsperfcmd.md).
+  Další informace najdete v tématu [profilace a Windows Vista zabezpečení](../profiling/profiling-and-windows-vista-security.md) a možností správy v [VSPerfCmd](../profiling/vsperfcmd.md).
 
-## <a name="to-profile-a-web-site-project"></a>Chcete-li profil webového projektu
+## <a name="to-profile-a-web-site-project"></a>Chcete-li Profilovat webového projektu
 
-1. Otevřete [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] webového projektu v sadě Visual Studio.
+1. Otevřít [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] webový projekt v sadě Visual Studio.
 
-2. Na **analyzovat** nabídce vyberte možnost **výkonu profileru**, vyberte **prohlížeč výkonu**a potom vyberte **spustit**.
+2. Na **analyzovat** nabídce vyberte možnost **Profiler výkonu**vyberte **prohlížeč výkonu**a pak vyberte **Start**.
 
-3. Na první stránce průvodce vyberte profilování metodu a pak klikněte na tlačítko **Další**. Další informace o metod profilace najdete v tématu [metody kolekce údajů o výkonu Principy](../profiling/understanding-performance-collection-methods.md). Všimněte si, že vizualizér souběžnosti metoda profilování není k dispozici pro webové aplikace.
+3. Na první stránce průvodce vyberte metodu profilace a potom klikněte na tlačítko **Další**. Další informace o metodách profilace naleznete v tématu [pochopit metody kolekce výkonu](../profiling/understanding-performance-collection-methods.md). Všimněte si, že metoda profilace vizualizátor souběžnosti není k dispozici pro webové aplikace.
 
-4. V **aplikaci, pro kterou chcete cílit pro profilace?** rozevíracího seznamu, ujistěte se, že je vybrána aktuální projekt a pak klikněte na **Další**.
+4. V **kterou aplikaci chcete Profilovat?** rozevíracího seznamu, zkontrolujte, že je vybrána aktuální projekt a potom klikněte na tlačítko **Další**.
 
-5. Na třetí stránce průvodce můžete přidat dat interakce vrstev profilování (TIP), data z JavaScript spuštěné v webové stránky, nebo obojí.
+5. Na třetí stránce průvodce můžete k přidání dat interakce vrstev profilování (TIP), data z JavaScript spuštěný ve webové stránky, nebo obojí.
 
-    - Chcete-li shromažďovat sledováním interakce vrstev, vyberte **povolit profilace interakce vrstvy** zaškrtávací políčko.
+    - Chcete-li shromažďovat interakce vrstev, vyberte **povolit profilaci interakce vrstev** zaškrtávací políčko.
 
-    - Chcete-li shromažďovat data z JavaScriptu spuštěné v webové stránky, vyberte **profil JavaScript** zaškrtávací políčko.
+    - Chcete-li shromažďovat data z JavaScript spuštěný ve webové stránky, vyberte **Profilovat jazyk JavaScript** zaškrtávací políčko.
 
 6. Klikněte na tlačítko **Další**.
 
 7. Na čtvrté stránce průvodce, klikněte na tlačítko **Dokončit**.
 
-8. Výkonnostní relace se vytvoří pro [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] spuštění aplikace a webovou stránku v prohlížeči. Prověření funkce, které chcete profil a pak zavřete prohlížeč.
+8. Pro vytvoření relace výkonu [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] spuštění aplikace a webové stránky v prohlížeči. Vykonává funkce, které chcete profil a potom ukončete prohlížeč.
 
-     Profileru generuje datový soubor a zobrazuje souhrnné zobrazení dat v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] hlavní okno.
+     Profiler generuje datový soubor a zobrazuje souhrnné zobrazení dat v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] hlavního okna.
 
-## <a name="to-profile-a-web-site-without-opening-a-project-in-visual-studio"></a>Chcete-li profil webu bez otevření projektu v sadě Visual Studio
+## <a name="to-profile-a-web-site-without-opening-a-project-in-visual-studio"></a>Chcete-li profilovat webové stránky bez otevření projektu v sadě Visual Studio
 
-1. Otevřete Visual Studio.
+1. Otevřít Visual Studio.
 
-2. Na **analyzovat** nabídce vyberte možnost **výkonu profileru**, vyberte **prohlížeč výkonu**a potom vyberte **spustit**.
+2. Na **analyzovat** nabídce vyberte možnost **Profiler výkonu**vyberte **prohlížeč výkonu**a pak vyberte **Start**.
 
-3. Na první stránce průvodce vyberte profilování metodu a pak klikněte na tlačítko **Další**. Další informace najdete v tématu [metody kolekce údajů o výkonu Principy](../profiling/understanding-performance-collection-methods.md).
+3. Na první stránce průvodce vyberte metodu profilace a potom klikněte na tlačítko **Další**. Další informace najdete v tématu [metody kolekce výkonu Principy](../profiling/understanding-performance-collection-methods.md).
 
-4. Na druhé stránce průvodce vyberte **profil aplikace ASP.NET nebo JavaScript** a potom klikněte na **Další**.
+4. Na druhé stránce průvodce, vyberte **Profilovat aplikaci ASP.NET nebo JavaScript** možnost a potom klikněte na tlačítko **Další**.
 
-5. V **jaké adresu URL nebo cestu spustí webovou aplikaci** pole na třetí stránce průvodce, zadejte adresu URL na domovskou stránku aplikace a pak klikněte na tlačítko **Další**.
+5. V **jaká adresa URL nebo cesta se spustí webovou aplikaci** na třetí stránce průvodce zadejte adresu URL na domovskou stránku aplikace a potom klikněte na tlačítko **Další**.
 
-    - Pro server (IIS) na základě webu, zadejte adresu URL, jako **http://localhost/MySite/default.aspx**. To způsobí, že [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikace v místním počítači v kořenovém adresáři aplikace server Chcete-li být profilovaným a default.aspx stránky v dané lokalitě spustit v aplikaci Internet Explorer spusťte relaci.
+   - Pro server (IIS) na základě webové stránky, zadejte adresu URL jako **< `http://localhost/MySite/default.aspx` >**. To způsobí, že [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikace v místním počítači v kořenovém adresáři aplikace MySite určených k profilaci a stránku default.aspx dané lokality ke spuštění v aplikaci Internet Explorer spustit relaci.
 
-    - Pro soubor na základě webu, zadejte cestu, například souboru / / /**c:\WebSites\MySite\default.aspx**. To způsobí, že [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikace umístěné v c:\webSites\MySite k být profilovaným a stránky http://localhost:nnnn/MySite/default.aspx spustit v aplikaci Internet Explorer spusťte relaci.
+   - Pro soubor založené na webu, zadejte umístění, například soubor / / / / /**c:\WebSites\MySite\default.aspx**. To způsobí, že [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikace umístěné v c:\webSites\MySite určených k profilaci a na stránce `http://localhost:nnnn/MySite/default.aspx` ke spuštění v aplikaci Internet Explorer spustit relaci.
 
-    - Pro externí lokality, které chcete shromažďovat JavaScript data na, zadejte adresu URL, například http://www.contoso.com.
+   - Pro externí servery, které chcete sbírat dat jazyka JavaScript, zadejte adresu URL, třeba `http://www.contoso.com`.
 
-     Další informace, zobrazení stránek vlastností pro [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] cílový binární soubor.
+     Další informace o zobrazení stránky vlastností [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] cílový binární soubor.
 
-6. Na třetí stránce průvodce můžete přidat dat interakce vrstev profilování (TIP), data z JavaScript spuštěné v webové stránky, nebo obojí.
+6. Na třetí stránce průvodce můžete k přidání dat interakce vrstev profilování (TIP), data z JavaScript spuštěný ve webové stránky, nebo obojí.
 
-    - Chcete-li shromažďovat sledováním interakce vrstev, vyberte **povolit profilace interakce vrstvy** zaškrtávací políčko.
+    - Chcete-li shromažďovat interakce vrstev, vyberte **povolit profilaci interakce vrstev** zaškrtávací políčko.
 
-    - Chcete-li shromažďovat data z JavaScriptu spuštěné v webové stránky, vyberte **profil JavaScript** zaškrtávací políčko.
+    - Chcete-li shromažďovat data z JavaScript spuštěný ve webové stránky, vyberte **Profilovat jazyk JavaScript** zaškrtávací políčko.
 
 7. Klikněte na tlačítko **Další**.
 
 8. Na čtvrté stránce průvodce, klikněte na tlačítko **Dokončit**.
 
-9. Výkonnostní relace se vytvoří pro aplikace ASP.NET a webový server je spuštěn v prohlížeči. Prověření funkce, které chcete profil a pak zavřete prohlížeč.
+9. Relace výkonu se vytvoří pro aplikace ASP.NET a webový server je spuštěn v prohlížeči. Vykonává funkce, které chcete profil a potom ukončete prohlížeč.
 
-     Profileru generuje datový soubor a zobrazuje souhrnné zobrazení dat v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] hlavní okno.
+     Profiler generuje datový soubor a zobrazuje souhrnné zobrazení dat v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] hlavního okna.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehledy](../profiling/overviews-performance-tools.md)  
 [Konfigurace výkonnostních relací](../profiling/configuring-performance-sessions.md)  
-[Porozumění hodnotám dat instrumentace](../profiling/understanding-instrumentation-data-values.md)  
-[Porozumění hodnotám dat vzorkování](../profiling/understanding-sampling-data-values.md)
+[Vysvětlení hodnotám dat instrumentace](../profiling/understanding-instrumentation-data-values.md)  
+[Vysvětlení hodnotám dat vzorkování](../profiling/understanding-sampling-data-values.md)

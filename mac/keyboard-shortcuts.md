@@ -1,47 +1,48 @@
 ---
-title: Editor zdroj běžné klávesové zkratky
-description: ''
-author: asb3993
-ms.author: amburns
-ms.date: 04/14/2017
+title: Editor zdrojového kódu běžné klávesové zkratky
+description: Tento článek popisuje některé běžné klávesové zkratky v sadě Visual Studio pro Mac Editor zdrojového kódu
+author: conceptdev
+ms.author: crdun
+ms.date: 11/06/2018
 ms.assetid: 48E06A61-7294-4EC8-A09D-1763C32AD910
-ms.openlocfilehash: ba0e1d7b5625dbe0b9bb86f43f5e402d6cf07043
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 2ac2a98223e86a564ff6ce733e11767a918bc55b
+ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51948787"
 ---
 # <a name="common-keyboard-shortcuts-in-visual-studio-for-mac"></a>Běžné klávesové zkratky v sadě Visual Studio pro Mac
 
 ## <a name="show-code-generation-window"></a>Zobrazit okno generování kódu
 
-Tento příkaz kontextově generuje kód:
+Tento příkaz vygeneruje kontextově kódu:
 
- `⌘ + 1`
+`⌘ + 1`
 
-![Panelu se zobrazí s možnostmi pro generování kódu související s vybraného symbolu](media/keyboard-shortcuts-image8.png)
+![Panel, ve kterém se zobrazí s možnostmi pro generování kódu související s vybraný symbol](media/keyboard-shortcuts-image8.png)
 
-## <a name="search-files-symbols-and-commands"></a>Hledat soubory, symbolů a příkazy
+## <a name="search-files-symbols-and-commands"></a>Hledání souborů symbolů a příkazy
 
-`control + .` 
+`control + .`
 
-## <a name="autocomplete"></a>Automatické dokončování 
+## <a name="autocomplete"></a>Automatické dokončování
 
-`control + /` 
+`control + /`
 
-## <a name="quick-fixes-and-actions"></a>Rychlé opravy a akcí
+## <a name="quick-fixes-and-actions"></a>Rychlé opravy a akce
 
-Zobrazí [refaktoring](~/refactoring.md) kontextu akce:
+Zobrazí [refaktoring](refactoring.md) kontextové akce:
 
 `option + enter`
 
 ![Zobrazí kontext akce](media/keyboard-shortcuts-image9.png)
 
-## <a name="find-in-files"></a>Hledání v souborech
+## <a name="find-in-files"></a>Najít v souborech
 
 `⌘ + shift + F`
 
-## <a name="file-switcher"></a>Soubor přepínači
+## <a name="file-switcher"></a>Přepínání souboru
 
 Umožňuje rychlé přepínání mezi soubory:
 
@@ -49,24 +50,28 @@ Umožňuje rychlé přepínání mezi soubory:
 
 ## <a name="move-lines-around-in-editor"></a>Pohyb řádků v editoru
 
-`alt + up/down` 
+`alt + up/down`
 
-Použít **alt + až** příkazu Přesunout nahoru aktuální řádek nebo aktuální vybrané řádky a použijte **alt + dolů** příkazu dolů řádky. Pokud doplňku pro jazyk podporuje, řádky znovu odsazeny tak, aby odpovídaly kontextu, když se přesouvají do/z oboru.
+Použít **alt + až** příkazu nahoru aktuální vybraných řádků nebo aktuálního řádku a použijte **alt + dolů** příkaz řádky dolů. Pokud doplněk jazyk podporuje, řádky znovu odsazena tak, aby odpovídaly kontextu, když se přesouvají do a z oboru.
 
-## <a name="word-navigation"></a>Navigace aplikace Word
+## <a name="word-navigation"></a>Navigační aplikace Word
 
-Přesune na další nebo předchozí slovo pomocí kurzoru:
+Přesune blikající kurzor na další nebo předchozí slovo:
 
 `option + left/right`
 
-## <a name="line-navigation"></a>Navigačním řádku
+## <a name="line-navigation"></a>Řádek navigace
 
-Přesune pomocí kurzoru na začátku nebo na konci řádku:
+Přesune blikající kurzor na začátek nebo konec řádku:
 
 `⌘ + left/right`
 
-## <a name="expands-the-selection"></a>Rozšíří výběr
+## <a name="expands-the-selection"></a>Rozšiřuje výběr
 
-Rozšíří word, dílčí výrazy, prohlášení a výběr členů řádku logickým způsobem:
+Rozbalí word, dílčí výrazy, prohlášení a výběr členů řádku logickým způsobem:
 
-`alt + shift + up` Chcete-li vybrat `alt + shift + down` k zrušte výběr
+`alt + shift + up` Chcete-li vybrat `alt + shift + down` chcete zrušit výběr
+
+## <a name="see-also"></a>Viz také:
+
+- [Klávesové zkratky v sadě Visual Studio (ve Windows)](/visualstudio/ide/tips-and-tricks-for-visual-studio)

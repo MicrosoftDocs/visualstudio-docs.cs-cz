@@ -1,43 +1,71 @@
 ---
-title: Nahlásit problém pomocí sady Visual Studio pro Mac
-description: Vytvoření sestavy problémy nebo návrhy zkušeného při použití sady Visual Studio for Mac.
+title: Ohlášení problému se sadou Visual Studio pro Mac
+description: Jak se nějaké návrhy nebo hlásit problémy zkušenosti při používání sady Visual Studio pro Mac.
 ms.topic: troubleshooting
-author: asb3993
-ms.author: amburns
-ms.date: 04/14/2017
+author: jmatthiesen
+ms.author: jomatthi
+ms.date: 11/16/2018
 ms.assetid: 1C7AC52E-754E-473F-A5B5-00C3A40DAACD
-ms.openlocfilehash: 7469399a697f5ab677f8130620685eb61c882b4a
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 510bdac23b29289687441b8a82620a1cede7542b
+ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51948826"
 ---
-# <a name="how-to-report-a-problem-in-visual-studio-for-mac"></a>Postup nahlásit problém v sadě Visual Studio pro Mac
+# <a name="how-to-report-a-problem-in-visual-studio-for-mac"></a>Jak chcete nahlásit problém v sadě Visual Studio pro Mac
 
-Pokud narazíte na potíže s Visual Studio pro Mac, chceme upozornit, takže jsme diagnostikovat a opravit. 
+Pokud dojde k potížím s Visual Studio pro Mac, chceme vědět o něm. Tady je postup, chcete nahlásit problém, který chcete [komunity vývojářů](https://developercommunity.visualstudio.com/spaces/41/index.html) tak, aby nám můžete diagnostikovat a opravit ho.
 
-## <a name="how-to-report-a-problem"></a>Postup nahlásit problém
+## <a name="how-to-report-a-problem"></a>Jak ohlásit problém
 
-Chcete-li nahlásit problém pomocí sady Visual Studio pro Mac, vyberte **pomoci > nahlásit problém** z řádku nabídek:
+Pokud chcete nahlásit problém pro sadu Visual Studio pro Mac, nejlepší možností je spustit sestavu ze sady Visual Studio pro Mac. Vytváření sestav pomocí sady Visual Studio for Mac umožňuje získat diagnostické informace, které mají být automaticky zahrnuty do sestavy. Pokud nemůžete použít Visual Studio pro Mac (z důvodu selhání, například), můžete nahlásit problém přímo na [komunity vývojářů](https://developercommunity.visualstudio.com/content/problem/post.html?space=41) lokality.
 
-![Sestava odkaz problém](media/report-problem-image1.png)
+K ohlášení problému se sadou Visual Studio pro Mac, vyberte **Nápověda > ohlásit problém** z řádku nabídek:
 
-Můžete také **nahlásit problém** odkaz umístěný na uvítací stránce.
+![nahlásit problém odkaz](media/report-problem-image1.png)
 
-Zobrazí se **nahlásit problém** webové stránky. Na této stránce můžete zobrazit všechny existující problémy, hlasovat o podobné problémy a odeslat řešení problémů ohlášených ostatní uživatelé:
+1. Pokud nejste přihlášení, vyberte **Sign In**; je na pravé straně nástroj, jak je znázorněno na následujícím snímku obrazovky. Postupujte podle pokynů na obrazovce pro přihlášení.
 
-![Sestava problém webové stránky](media/report-problem-image2.png)
+    ![Dialogové okno s tlačítkem "sign in"](media/report-problem-image2.png)
 
-Vyberte **nahlásit problém** tlačítko na webové stránce. 
+    Při přihlášení, můžete nahlásit problém, který se zobrazuje. Také můžete hlasovat nebo uvedené komentářů k tomuto jinému problému, který se zobrazí.
 
-Pokud již jste nepřihlásili do komunity vývojářů aplikace, budete vyzváni, tak na následující stránce. Vyberte **přijmout** tlačítko Autorizovat aplikaci komunity vývojářů pro svůj účet Microsoft:
+1. Jakmile se přihlásíte, budete moci zobrazit problémy a řešení v **problémy a řešení** obrazovky
 
-![Sestava problém webové stránky](media/report-problem-image3.png)
+    ![seznam problémy](media/report-problem-image3.png)
 
-Zadejte popisný název pro tento problém společně s žádné další informace o tento problém, který si myslíte, že může být užitečné. Pokud je to možné, pošlete nám svoje kopírování kroky jako budeme tak moct pochopit a opravit příslušný problém co nejrychleji.
+1. Visual Studio pro Mac poskytuje rozhraní pro hledání na váš problém a zobrazit, pokud ostatní ho nahlásili. Pokud někdo ohlásil ji, můžete kliknutím na nadpis a "nahoru vote" jej a dejte nám vědět.
+   > [!NOTE]
+   > Pokud chcete hledat, zadejte hledaný text do vyhledávacího pole a klikněte na tlačítko Enter nebo stiskněte ikonu hledání.
 
-![Sestava problém webové stránky](media/report-problem-image4.png)
+   ![Vyhledávání a můžete hlasovat pro podobné problémy](media/report-problem-image4.png)
 
-## <a name="provide-a-suggestion"></a>Zadejte návrh
+1. Pokud jste narazili na problém nenajdete, zvolte **nahlásit nový problém** na okraji obrazovky.
 
-Použití **poskytují zlepšení** odkaz na úvodní stránce, které vás k [Visual Studio pro Mac na stránku UserVoice](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac). Odsud můžete přidat nové požadavky nebo hlasovat o existující žádosti.
+   > [!NOTE]
+   > **Nahlásit nový problém** tlačítko se zobrazí jenom v sadě Visual Studio pro Mac rozhraní pro komunity vývojářů. Nelze ohlásit problém přímo na [komunity vývojářů](https://developercommunity.visualstudio.com/) webu.
+
+1. Vytvořte popisný název problému, který pomáhá nám směrovat do správné sady Visual Studio pro Mac týmu.
+
+1. Pokud je to možné, uveďte další podrobnosti a připojte postup, abychom mohli problém reprodukovat.
+
+   ![Nahlášení nového problému](media/report-problem-image5.png)
+
+1. Vyberte **Další** přesunete **zahrnout přílohy** kartu. Tady můžete zachytit aktuální obrazovce, která se odesílají je společnosti Microsoft. Připojení souborů protokolu, klikněte na ![připojit protokoly](media/report-problem-attach-logs.png) ikonu, nebo pokud chcete připojit další snímky obrazovky a další soubory, klikněte na ![připojit soubor](media/report-problem-attach-file.png) ikonu.
+
+   ![Snímek obrazovky připojení k sadě Visual Studio for Mac hlášení problému](media/report-problem-image6.png)
+
+1. Vyberte **odeslat** k odeslání zprávy, spolu s žádné obrázky a soubory protokolu.
+
+   Informace o tom, jaká data se shromažďují, naleznete v tématu [Data shromažďujeme](/visualstudio/ide/developer-community-privacy.md#data-we-collect).
+
+## <a name="search-for-solutions-or-provide-feedback"></a>Vyhledejte řešení nebo poskytnout zpětnou vazbu
+
+Pokud nechcete nebo nemůžete, pokud chcete nahlásit problém použít Visual Studio pro Mac, je pravděpodobné, že problém již oznámen a publikování řešení na [komunity vývojářů v aplikaci Visual Studio](https://developercommunity.visualstudio.com/) stránky.
+
+Pokud nemáte problém nahlásit, ale chcete navrhnout funkci, je místo, kde, příliš. Další informace najdete v tématu [navrhnout funkci](https://developercommunity.visualstudio.com/content/idea/post.html?space=41) stránky.
+
+## <a name="see-also"></a>Viz také:
+
+- [Ohlášení problému se sadou Visual Studio (ve Windows)](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)

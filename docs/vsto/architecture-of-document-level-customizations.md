@@ -1,9 +1,9 @@
 ---
-title: Architektura přizpůsobení na úrovni dokumentu | Microsoft Docs
+title: Architektura přizpůsobení na úrovni dokumentu
 ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
+ms.technology: office-development
+ms.prod: visual-studio-dev15
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,139 +17,140 @@ helpviewer_keywords:
 - document-level customizations [Office development in Visual Studio]
 - AddInLoader.dll
 - architecture [Office development in Visual Studio], document-level customizations
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 659950fee0e292a0e0c37a82bb8a18fe2783824d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4e07c8ae29c773a1f50fedd68376a062e2203570
+ms.sourcegitcommit: 20c0991d737c540750c613c380cd4cf5bb07de51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53248267"
 ---
 # <a name="architecture-of-document-level-customizations"></a>Architektura přizpůsobení na úrovni dokumentu
-  [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] zahrnuje projekty pro vytvoření úpravy na úrovni dokumentů pro Microsoft Office Word a Microsoft Office Excel. Toto téma popisuje následující aspektů přizpůsobení na úrovni dokumentu:  
+  [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] zahrnuje projekty pro vytvoření přizpůsobení na úrovni dokumentu pro aplikaci Microsoft Office Word a Microsoft Office Excel. Toto téma popisuje následující aspekty přizpůsobení na úrovni dokumentu:  
   
--   [Principy přizpůsobení](#UnderstandingCustomizations)  
+- [Vysvětlení přizpůsobení](#UnderstandingCustomizations)  
   
--   [Součásti přizpůsobení](#Components)  
+- [Součástí vlastní nastavení](#Components)  
   
--   [Jak fungují přizpůsobení pomocí aplikace Microsoft Office](#HowCustomizationsWork)  
+- [Jak fungují vlastní nastavení pomocí aplikace Microsoft Office](#HowCustomizationsWork)  
   
- [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
+  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
- Obecné informace o vytváření úpravy na úrovni dokumentů najdete v tématu [přehled vývoje řešení pro systém Office &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md), [získávání spuštění programování úpravy na úrovni dokumentů aplikace Word ](../vsto/getting-started-programming-document-level-customizations-for-word.md), a [Začínáme s programováním přizpůsobení na úrovni dokumentu pro Excel](../vsto/getting-started-programming-document-level-customizations-for-excel.md).  
+  Obecné informace o vytvoření přizpůsobení na úrovni dokumentu naleznete v tématu [přehled vývoje řešení pro Office &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md), [Začínáme programování přizpůsobení na úrovni dokumentu pro Word](../vsto/getting-started-programming-document-level-customizations-for-word.md), a [Začínáme programování přizpůsobení na úrovni dokumentu pro Excel](../vsto/getting-started-programming-document-level-customizations-for-excel.md).  
   
-##  <a name="UnderstandingCustomizations"></a> Principy přizpůsobení  
- Když používáte Office developer tools v sadě Visual Studio k vytvoření přizpůsobení na úrovni dokumentu, můžete vytvořit sestavení spravovaného kódu, který je přidružen konkrétní dokumentu. Dokument nebo sešitu s propojené sestavení se říká, že jste nahráli rozšíření kódu. Další informace najdete v tématu [návrh a vytváření řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md).  
+##  <a name="UnderstandingCustomizations"></a> Vysvětlení přizpůsobení  
+ Při použití nástroje Office developer tools v sadě Visual Studio k vytvoření přizpůsobení na úrovni dokumentu, můžete vytvořit sestavení spravovaného kódu, který je spojen s určitým dokumentem. Dokumentu nebo sešitu s propojené sestavení se říká, že jste rozšíření se spravovaným kódem. Další informace najdete v tématu [návrhu a vytvořte řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md).  
   
- Když uživatel otevře dokument, je načíst sestavení v aplikaci Microsoft Office. Po načíst sestavení přizpůsobení můžete reakce na události dokumentu je otevřen. Přizpůsobení můžete také volání do modelu objektu automatizovat a rozšířit aplikace, když je otevřený v dokumentu, a může použít jakékoli třídy v [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)].  
+ Když uživatel otevře dokument, sestavení je načteno aplikací Microsoft Office. Po sestavení je načteno, přizpůsobení můžou reagovat na události v otevřeném dokumentu. Přizpůsobení můžete také volat do objektového modelu automatizovat a rozšířit aplikaci a dokument je otevřen, můžete použít některý z třídy v [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)].  
   
- Sestavení komunikuje s komponentami aplikace modelu COM pomocí primární spolupracující sestavení aplikace. Další informace najdete v tématu [primární zprostředkovatel komunikace s objekty sestavení sady Office](../vsto/office-primary-interop-assemblies.md) a [přehled vývoje řešení pro systém Office &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).  
+ Sestavení komunikuje s komponentami vaší aplikace modelu COM pomocí primární spolupracující sestavení aplikace. Další informace najdete v tématu [primární spolupracující sestavení Office](../vsto/office-primary-interop-assemblies.md) a [přehled vývoje řešení pro Office &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).  
   
- Pokud uživatel otevře více přizpůsobení na úrovni dokumentu ve stejnou dobu, je v doméně jinou aplikaci načíst každé sestavení. To znamená, že jedno řešení, které se chová nesprávně nemohou způsobit jiných řešení selhání. Úpravy na úrovni dokumentů jsou navrženy pro práci s jedním dokumentem v jediné doméně aplikace. Nejsou určeny pro komunikaci mezi dokumenty. Další informace o doménách aplikací najdete v tématu [aplikační domény](/dotnet/framework/app-domains/application-domains).  
+ Pokud uživatel otevře více přizpůsobení na úrovni dokumentu ve stejnou dobu, každé sestavení je načteno v jiné aplikační doméně. To znamená, že jedno řešení, který se chová nesprávně nemůže způsobit jiná řešení k selhání. Přizpůsobení na úrovni dokumentu jsou navrženy pro práci s jednotlivý dokument v jediné doméně aplikace. Nejsou určeny pro komunikaci mezi dokumenty. Další informace o aplikačních doménách najdete v tématu [aplikačních doménách](/dotnet/framework/app-domains/application-domains).  
   
 > [!NOTE]  
->  Úpravy na úrovni dokumentů, které vytvoříte pomocí doplňku Office developer tools v sadě Visual Studio jsou určeny k použití jenom v případě, že se koncový uživatel spustí aplikaci. Pokud je aplikace spuštěna prostřednictvím kódu programu, například pomocí automatizace, přizpůsobení nemusí fungovat podle očekávání.  
+>  Přizpůsobení na úrovni dokumentu, které vytvoříte pomocí nástroje Office developer tools v sadě Visual Studio jsou navrženy pro se dá použít jenom při spuštění aplikace koncovým uživatelem. Pokud je aplikace spuštěna prostřednictvím kódu programu, například pomocí automatizace, přizpůsobení nemusí fungovat podle očekávání.  
   
-### <a name="design-time-and-run-time-experiences"></a>Návrh a běhové prostředí  
- Zjistit architektura přizpůsobení na úrovni dokumentu pomáhá pochopit možnosti návrhu řešení a spuštění řešení.  
+### <a name="design-time-and-run-time-experiences"></a>Možnosti návrhu a běhu  
+ Informace o tom architektura přizpůsobení na úrovni dokumentu, dobré pochopit možnosti návrhu řešení a spuštění řešení.  
   
-#### <a name="design-time"></a>V době návrhu  
- Možnosti návrhu zahrnuje následující kroky:  
+#### <a name="design-time"></a>Doby návrhu  
+ Možnosti času návrhu zahrnuje následující kroky:  
   
-1.  Vývojář vytvoří projektu úrovni dokumentu v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]. Projekt obsahuje dokument a sestavení, který se spouští za dokumentu. Dokument možná již existuje (pravděpodobně vytvořena návrhářem) nebo společně s projektu lze vytvořit nový dokument.  
+1.  Vývojář vytvoří projektu na úrovni dokumentu v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]. Projekt obsahuje dokument a sestavení, které běží na pozadí tohoto dokumentu. Možná již existuje (vytvořené návrhářem) dokumentu nebo spolu s projektu lze vytvořit nový dokument.  
   
-2.  Návrhář – buď vývojář, který vytvoří projekt nebo někdo jiný – vytvoří konečnou vzhledu a chování dokumentu pro koncového uživatele.  
+2.  Návrhář – buď vývojář, který vytvoří projekt, nebo někdo jiný – vytvoří konečné vzhled a chování dokumentu pro koncového uživatele.  
   
-#### <a name="run-time"></a>Čas spuštění  
+#### <a name="runtime"></a>Modul runtime  
  Běhové prostředí zahrnuje následující kroky:  
   
-1.  Koncový uživatel otevře dokument nebo sešit, který se má spravovat rozšíření kódu.  
+1.  Koncový uživatel otevře dokumentu nebo sešitu, který má rozšíření se spravovaným kódem.  
   
-2.  Tento dokument nebo sešit načte kompilované sestavení.  
+2.  Dokumentem nebo sešitem, načte zkompilovaného sestavení.  
   
-3.  Sestavení odpoví na události, protože uživatel pracuje v dokumentu nebo sešitu.  
+3.  Sestavení, reaguje na události, uživatel pracuje v dokumentu nebo sešitu.  
   
-#### <a name="developer-and-end-user-perspective-compared"></a>Pro vývojáře a porovnání perspektivy koncového uživatele  
- Protože vývojáři funguje hlavně v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]a koncový uživatel pracuje v Word či Excel, existují dva způsoby pochopení úpravy na úrovni dokumentů.  
+#### <a name="developer-and-end-user-perspective-compared"></a>Pro vývojáře a koncový uživatel pohledu porovnání  
+ Protože vývojář funguje především [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]a koncový uživatel pracuje v aplikaci Word nebo Excel, existují dva způsoby Principy přizpůsobení na úrovni dokumentu.  
   
-|Pro vývojáře perspektivy|Perspektivy koncového uživatele|  
+|Perspektiva pro vývojáře|Koncový uživatel perspektivy|  
 |-----------------------------|----------------------------|  
-|Pomocí [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], vývojář zapíše kód, který je přístupný pro Word a Excel.<br /><br /> I když se může zdát, že vývojář vytváří spustitelný soubor, který spouští Word či Excel, probíhá proces ve skutečnosti opačným způsobem. Dokument je přiřazena k sestavení a ukazatel na toto sestavení obsahuje. Po otevření dokumentu Word či Excel vyhledá sestavení a spustí kód v reakci na všechny zpracovávaný události.|Ty, kteří používají řešení jednoduše otevřít dokument nebo sešit (nebo vytvořit nový dokument ze šablony) stejným způsobem jako neotevřou by jakýkoli jiný soubor aplikace Microsoft Office.<br /><br /> Sestavení poskytuje přizpůsobení v dokumentu nebo sešitu, jako je například automaticky vyplní s aktuální data, nebo zobrazuje dialogové k požadavku na informace.|  
+|Pomocí [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], vývojář píše kód, který je přístupný pro aplikace Word a Excel.<br /><br /> I když to může zdát, že vývojáři vytváří spustitelný soubor, na kterém běží aplikace Word nebo Excel, tento proces funguje ve skutečnosti naopak. Dokument je přidružený k sestavení a obsahuje ukazatel na toto sestavení. Po otevření dokumentu aplikace Word nebo Excel vyhledá sestavení a spuštění kódu v reakci na všechny zpracované události.|Uživateli, kteří používají řešení jednoduše otevřete dokumentem nebo sešitem, (nebo vytvořit nový dokument ze šablony) stejně jako každý jiný dokument aplikace Microsoft Office rozepínají.<br /><br /> Sestavení obsahuje vlastní nastavení v dokumentem nebo sešitem, jako je například automaticky vyplní s aktuálními údaji, nebo zobrazuje dialogové okno pro žádost o informace.|  
   
-### <a name="supported-document-formats-for-document-level-customizations"></a>Podporované formáty dokumentů pro úpravy na úrovni dokumentů  
- Když vytvoříte vlastní nastavení projektu, můžete formát dokumentu, který chcete použít v projektu. Další informace najdete v tématu [postupy: vytváření projektů Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
+### <a name="supported-document-formats-for-document-level-customizations"></a>Podporované formáty dokumentu přizpůsobení na úrovni dokumentu  
+ Při vytváření vlastního nastavení projektu, můžete formát dokumentu, který chcete použít v projektu. Další informace najdete v tématu [jak: Vytvářet projekty pro Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
   
- Následující tabulka uvádí formáty dokumentů, které můžete použít v přizpůsobeních na úrovni dokumentu pro Excel a Word.  
+ V následující tabulce jsou uvedeny formáty dokumentu, která vám pomůže v přizpůsobeních na úrovni dokumentu pro Excel a Word.  
   
 |Excel|Word|  
 |-----------|----------|  
-|Sešit aplikace Excel (XLSX)<br /><br /> Sešit aplikace Excel s podporou maker (.xlsm)<br /><br /> Binární sešit aplikace Excel (XLSB)<br /><br /> Sešit aplikace Excel 97-2003 (XLS)<br /><br /> Šablony aplikace Excel (XLTX)<br /><br /> Šablona s podporou maker (XLTM) v aplikaci Excel<br /><br /> Šablony aplikace Excel 97-2003 (XLT)|Dokument aplikace Word (.docx)<br /><br /> Dokument aplikace Word s podporou maker (DOCM)<br /><br /> Dokument aplikace Word 97-2003 (DOC)<br /><br /> Šablony aplikace Word (dotx)<br /><br /> Šablony aplikace Word s podporou maker (dotm)<br /><br /> Šablony aplikace Word 97-2003 (dot)|  
+|Excelový sešit (*.xlsx*)<br /><br /> Excelový sešit s podporou maker (*.xlsm*)<br /><br /> Binární Excelový sešit (*.xlsb*)<br /><br /> Sešit Excelu 97 – 2003 (*.xls*)<br /><br /> Šablona aplikace Excel (*XLTX*)<br /><br /> Šablona aplikace Excel s podporou maker (*.xltm*)<br /><br /> Šablona Excelu 97 – 2003 (*.xlt*)|Wordový dokument (*.docx*)<br /><br /> Wordový dokument s podporou maker (*DOCM*)<br /><br /> Dokument Wordu 97 – 2003 (*doc*)<br /><br /> Šablona aplikace Word (*DOTX*)<br /><br /> Šablona aplikace Word s podporou maker (*.dotm*)<br /><br /> Šablona Wordu 97 – 2003 (*.dot*)|  
   
- Měli byste navrhnout rozšíření spravovaného kódu pouze pro dokumenty v podporovaném formátu. Určité události, jinak hodnota nemusí vyvolá, když dokument se otevře v aplikaci. Například <xref:Microsoft.Office.Tools.Excel.Workbook.Open> událost se vyvolá, když používáte rozšíření spravovaného kódu se sešity, které jsou uloženy v tabulkovém formátu XML aplikace Excel nebo ve formátu webové stránky (*.htm; .html).  
+ Měli byste navrhnout rozšíření spravovaného kódu pouze pro dokumenty v podporovaných formátů. V opačném případě určité události nemusí vyvolána při otevření dokumentu v aplikaci. Například <xref:Microsoft.Office.Tools.Excel.Workbook.Open> událost se vyvolá, když používáte rozšíření spravovaného kódu s sešity uložené ve formátu tabulky XML aplikace Excel nebo webové stránky (*.htm*; *.html*) formát.  
   
-### <a name="support-for-word-documents-that-have-xml-file-name-extensions"></a>Podpora pro dokumenty aplikace Word, které mají přípony názvů souborů .xml  
- Šablony projektu na úrovni dokumentu Nepovolit vytváření projektů podle následující formáty souborů:  
+### <a name="support-for-word-documents-that-have-xml-file-name-extensions"></a>Podpora pro Wordové dokumenty, které mají přípony názvů souborů XML  
+ Šablony projektu na úrovni dokumentu není umožňují vytvářet projekty založené na následující formáty souborů:  
   
--   Dokument aplikace Word XML (* xml).  
+- Wordový dokument XML (*\*xml*).  
   
--   Dokument aplikace Word 2003 XML (* xml).  
+- XML dokument aplikace Word 2003 (*\*xml*).  
   
- Pokud chcete, aby vaši koncoví uživatelé používat vlastní nastavení v těchto formátů souboru, vytvořit a nasadit vlastní nastavení, která používá jednu z podporovaných formátů, zadaný v předchozí tabulce. Po instalaci přizpůsobení, koncoví uživatelé mohou uložte dokument do Wordového dokumentu XML (* xml) formátu nebo dokument aplikace Word 2003 XML (\*xml) formát a přizpůsobení budou nadále fungovat podle očekávání.  
+  Pokud chcete koncovým uživatelům použít vlastní nastavení do těchto formátů souborů, sestavovat a nasazovat vlastní nastavení, která používá jeden z podporovaných formátů uvedená v tabulce výše. Po instalaci přizpůsobení, koncovým uživatelům můžete uložit dokument v dokumentu XML (*\*xml*) formát nebo XML dokument aplikace Word 2003 (*\*xml*) formátu a přizpůsobení budou nadále fungovat podle očekávání.  
   
-##  <a name="Components"></a> Součásti přizpůsobení  
- Hlavní součástí přizpůsobení jsou dokumentu a sestavení. Kromě těchto součástí existuje několik dalších částí, které hraje důležitou roli v tom, jak aplikace Microsoft Office zjišťovat a načíst přizpůsobení.  
+##  <a name="Components"></a> Součástí vlastní nastavení  
+ Hlavní součásti přizpůsobení se dokument a sestavení. Kromě těchto součástí existuje několik částí, které hrají důležitou roli v tom, jak aplikace Microsoft Office zjišťovat a načíst vlastní nastavení.  
   
-### <a name="deployment-manifest-and-application-manifest"></a>Manifest nasazení a Manifest aplikace  
- Přizpůsobení používat k identifikaci a načíst nejnovější verze sestavení přizpůsobení manifestů aplikace a manifesty nasazení. Nasazení manifest odkazuje na aktuální manifest aplikace. Aplikace manifest odkazuje na sestavení přizpůsobení a určuje vstupní bod – třída (nebo třídy) provést v sestavení. Další informace najdete v tématu [aplikace a manifesty nasazení v řešeních pro systém Office](../vsto/application-and-deployment-manifests-in-office-solutions.md).  
+### <a name="deployment-manifest-and-application-manifest"></a>Manifest nasazení a manifest aplikace  
+ Vlastní nastavení slouží k identifikaci a načíst nejnovější verzi sestavení přizpůsobení manifesty aplikace a manifesty nasazení. Nasazení manifestu odkazuje na aktuální manifest aplikace. Aplikace odkazuje na sestavení přizpůsobení manifestu a určuje vstupní bod třídy (nebo třídy) provádět v sestavení. Další informace najdete v tématu [aplikace a manifestů nasazení v řešeních pro systém Office](../vsto/application-and-deployment-manifests-in-office-solutions.md).  
   
 ### <a name="visual-studio-tools-for-office-runtime"></a>Visual Studio Tools for Office Runtime  
- Pokud chcete spustit úpravy na úrovni dokumentů, které jsou vytvořené pomocí doplňku Office developer tools v sadě Visual Studio, musí mít počítače koncového uživatele [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] nainstalována. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Obsahuje nespravované součásti, které zatížení přizpůsobení sestavení a sadu spravovaných sestavení. Tyto spravované sestavení poskytují objektový model, který používá váš kód přizpůsobení automatizovat a rozšířit hostitelskou aplikaci.  
+ Ke spuštění přizpůsobení na úrovni dokumentu, které jsou vytvořeny pomocí nástroje Office developer tools v sadě Visual Studio, musí mít počítačích koncových uživatelů [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] nainstalované. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Zahrnuje nespravovanými komponentami, které načítají vlastního nastavení sestavení a sadu spravovaných sestavení. Tato spravovaná sestavení poskytuje objektový model, který používá váš kód přizpůsobení automatizovat a rozšířit hostitelskou aplikaci.  
   
- Další informace najdete v tématu [Visual Studio Tools for Office Runtime přehled](../vsto/visual-studio-tools-for-office-runtime-overview.md).  
+ Další informace najdete v tématu [Visual Studio tools for Office runtime přehled](../vsto/visual-studio-tools-for-office-runtime-overview.md).  
   
-##  <a name="HowCustomizationsWork"></a> Jak fungují přizpůsobení pomocí aplikace Microsoft Office  
- Když uživatel otevře dokument, který je součástí přizpůsobení aplikace Microsoft Office, aplikace použije manifestu nasazení, který k dokumentu pro vyhledání a načtení nejaktuálnější verzi sestavení vlastní nastavení. V dokumentu vlastní vlastnost s názvem _AssemblyLocation je uloženo umístění manifestu nasazení. Řetězec, který identifikuje toto umístění se vloží do vlastnost při sestavování řešení.  
+##  <a name="HowCustomizationsWork"></a> Jak fungují vlastní nastavení pomocí aplikace Microsoft Office  
+ Když uživatel otevře dokument, který je součástí vlastní nastavení Microsoft Office, aplikace používá manifestu nasazení, který je propojený s dokumentu pro vyhledání a načtení nejaktuálnější verzi vlastního nastavení sestavení. Umístění manifestu nasazení je uloženo v vlastní vlastnost dokumentu s názvem **AssemblyLocation**. Řetězec, který určuje toto umístění je vložen do vlastnosti při sestavování řešení.  
   
- Nasazení manifestu body do manifestu aplikace, které pak odkazuje na nejnovější sestavení. Další informace najdete v tématu [aplikace a manifesty nasazení v řešeních pro systém Office](../vsto/application-and-deployment-manifests-in-office-solutions.md).  
+ Nasazení manifestu odkazuje na manifest aplikace, která pak odkazuje na aktuální sestavení. Další informace najdete v tématu [aplikace a manifestů nasazení v řešeních pro systém Office](../vsto/application-and-deployment-manifests-in-office-solutions.md).  
   
  Následující obrázek znázorňuje základní architektura přizpůsobení na úrovni dokumentu.  
   
- ![Architektura přizpůsobení office 2007](../vsto/media/office07-custom.png "architektura přizpůsobení Office 2007")  
+ ![Architektura přizpůsobení systému office 2007](../vsto/media/office07-custom.png "architektura přizpůsobení systému Office 2007")  
   
 > [!NOTE]  
->  V řešení pro systém Office cílených [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)], řešení volání do modelu objektu hostitelské aplikace podle pomocí informací o typu primární spolupracující sestavení (PIA), vložené v sestavení řešení, namísto volání do primární přímo. Další informace najdete v tématu [návrh a vytváření řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md).  
+>  V řešeních pro systém Office, které se zaměřují [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)], řešení pro volání do objektového modelu hostitelské aplikace podle pomocí primárních sestavení vzájemné spolupráce (PIA) informace o typu, který je vložen do sestavení řešení, namísto volání do PIA přímo. Další informace najdete v tématu [návrhu a vytvořte řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md).  
   
 ### <a name="loading-process"></a>Proces načítání  
- Následující kroky nastane, když uživatel otevře dokument, který je součástí řešení Microsoft Office.  
+ Když uživatel otevře dokument, který je součástí řešení Microsoft Office, dojde k následujícím krokům.  
   
-1.  Aplikace Microsoft Office kontroluje vlastnosti vlastní šablony dokumentů a zjistěte, zda jsou rozšíření spravovaného kódu, které jsou přidružené k dokumentu. Další informace najdete v tématu [přehled vlastností dokumentu vlastní](../vsto/custom-document-properties-overview.md).  
+1.  Aplikace Microsoft Office zkontroluje vlastní vlastnosti dokumentu chcete zobrazit, zda jsou spojené s dokumentem. rozšíření spravovaného kódu. Další informace najdete v tématu [přehled vlastností dokumentu vlastní](../vsto/custom-document-properties-overview.md).  
   
-2.  Pokud je rozšíření spravovaného kódu, načtení aplikace VSTOEE.dll, který načte VSTOLoader.dll. Toto nespravované knihovny DLL, které jsou součástí zavaděč pro Visual Studio 2010 Tools for Office Runtime. Další informace najdete v tématu [Visual Studio Tools for Office Runtime přehled](../vsto/visual-studio-tools-for-office-runtime-overview.md).  
+2.  Pokud je rozšíření spravovaného kódu, načtení aplikace *VSTOEE.dll*, který načte *knihovna VSTOLoader.dll*. Toto nespravovaných knihoven DLL, které jsou součástí zaváděcího programu pro Visual Studio 2010 Tools for Office runtime. Další informace najdete v tématu [Visual Studio Tools for Office runtime přehled](../vsto/visual-studio-tools-for-office-runtime-overview.md).  
   
-3.  Načte VSTOLoader.dll [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)] a spustí spravovaná část [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)].  
+3.  *Knihovna VSTOLoader.dll* načte [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)] a spustí spravované část [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)].  
   
-4.  Pokud otevření dokumentu z umístění než místní počítač, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] ověřuje, zda je v umístění dokumentu **důvěryhodné umístění** v seznamu **nastavení Centra zabezpečení** pro konkrétní aplikaci Office. Pokud umístění dokumentu není v důvěryhodném umístění, přizpůsobení není důvěryhodný a zastaví proces načítání sem.  
+4.  Pokud je dokument otevřít z jiného umístění než do místního počítače, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] ověří, jestli je umístění dokumentu v **důvěryhodná umístění** v seznamu **nastavení Centra zabezpečení** pro tu konkrétní aplikaci Office. Pokud umístění dokumentu není v důvěryhodném umístění, přizpůsobení není důvěryhodný a proces načítání se tady zastaví.  
   
-5.  [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Nainstaluje řešení, pokud dosud nebyl nainstalován, stáhne nejnovější manifestů aplikace a nasazení a provádí řadu kontrol zabezpečení. Další informace najdete v tématu [zabezpečení řešení pro systém Office](../vsto/securing-office-solutions.md).  
+5.  [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Nainstaluje řešení, pokud modul dosud nebyl nainstalován, stáhne nejnovější manifesty aplikace a nasazení a provádí sérii kontrol zabezpečení. Další informace najdete v tématu [řešení pro systém Office zabezpečení](../vsto/securing-office-solutions.md).  
   
-6.  Pokud přizpůsobení je důvěryhodný pro spuštění [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] používá ke kontrole aktualizací sestavení – manifest nasazení a manifest aplikace. Pokud je k dispozici nová verze sestavení, modul runtime stáhne novou verzi sestavení do [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] mezipaměti na klientském počítači. Další informace najdete v tématu [nasazení řešení Office](../vsto/deploying-an-office-solution.md).  
+6.  Pokud je důvěryhodný pro spuštění, přizpůsobení [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] používá ke kontrole aktualizací sestavení manifestu nasazení a manifest aplikace. Pokud je dostupná nová verze sestavení, modul runtime stáhne novou verzi sestavení [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] mezipaměti na klientském počítači. Další informace najdete v tématu [nasazení řešení Office](../vsto/deploying-an-office-solution.md).  
   
-7.  [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Vytvoří novou doménu aplikace, ve kterém se načíst sestavení vlastní nastavení.  
+7.  [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Vytvoří novou doménu aplikace, ve kterých se mají načíst vlastního nastavení sestavení.  
   
-8.  [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Načte přizpůsobení sestavení do domény aplikace.  
+8.  [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Načte vlastního nastavení sestavení do domény aplikace.  
   
-9. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Volání **spuštění** obslužné rutině událostí ve vaší vlastní nastavení sestavení. Další informace najdete v tématu [události v projektech pro systém Office](../vsto/events-in-office-projects.md)  
+9. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Volání **spuštění** obslužnou rutinu události do vašeho vlastního nastavení sestavení. Další informace najdete v tématu [události v projektech pro systém Office](../vsto/events-in-office-projects.md)  
   
-## <a name="see-also"></a>Viz také  
- [Architektura řešení pro systém Office v sadě Visual Studio](../vsto/architecture-of-office-solutions-in-visual-studio.md)   
+## <a name="see-also"></a>Viz také:  
+ [Architektura řešení pro Office v sadě Visual Studio](../vsto/architecture-of-office-solutions-in-visual-studio.md)   
  [Architektura doplňků VSTO](../vsto/architecture-of-vsto-add-ins.md)   
- [Visual Studio Tools for Office Runtime – přehled](../vsto/visual-studio-tools-for-office-runtime-overview.md)   
+ [Visual Studio Tools for Office runtime – přehled](../vsto/visual-studio-tools-for-office-runtime-overview.md)   
  [Zabezpečení řešení pro systém Office](../vsto/securing-office-solutions.md)   
- [Návrh a vytváření řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)   
+ [Návrh a vytvoření řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)   
  [Přehled přizpůsobených vlastností dokumentu](../vsto/custom-document-properties-overview.md)   
- [Data uložená v mezipaměti v přizpůsobeních na úrovni dokumentu](../vsto/cached-data-in-document-level-customizations.md)  
+ [Data uložená v mezipaměti v přizpůsobeních na úrovni dokumentu](../vsto/cached-data-in-document-level-customizations.md)  
   
   

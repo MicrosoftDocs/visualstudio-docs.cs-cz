@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31139848"
 ---
 # <a name="web-site-support"></a>Podpora webového serveru
 Systém lokality webového projektu je systém projektu, který vytvoří webové projekty. Webové projekty zase vytvářet webové aplikace. Webový projekt generuje jeden spustitelný soubor pro každou webovou stránku, který je spojen kódu. Soubory zdrojového kódu ve složce /App_Code se generují další spustitelné soubory.  

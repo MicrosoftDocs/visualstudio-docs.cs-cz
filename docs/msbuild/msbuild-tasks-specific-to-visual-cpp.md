@@ -1,7 +1,7 @@
 ---
-title: Úlohy nástroje MSBuild specifické pro Visual C++ | Microsoft Docs
+title: Úlohy nástroje MSBuild specifické pro Visual C++ | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/27/2018
 ms.technology: msbuild
 ms.topic: reference
 dev_langs:
@@ -17,38 +17,43 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 446326fb8219183774d3f90d70a0263e0fc057e0
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 2caacec2412ea0c188d9b987ae8a6e52a89fbe9b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49906751"
 ---
 # <a name="msbuild-tasks-specific-to-visual-c"></a>Úlohy nástroje MSBuild specifické pro Visual C++
-Úlohy zadejte kód, který spouští během procesu sestavení. Při instalaci Visual C++ následující úlohy jsou k dispozici, kromě těch, které jsou nainstalované s [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Další informace najdete v tématu [přehled nástroje MSBuild (Visual C++)](/cpp/build/msbuild-visual-cpp-overview).  
-  
- Kromě parametrů pro každý úkol má každý úkol, také následující parametry.  
-  
-|Parametr|Popis|  
-|---------------|-----------------|  
-|`Condition`|Volitelné `String` parametr.<br /><br /> A `Boolean` výrazu, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] modul se používá k určení, zda tato úloha bude provádět. Informace o podmínkách, které jsou podporovány [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], najdete v části [podmínky](../msbuild/msbuild-conditions.md).|  
-|`ContinueOnError`|Volitelný parametr. Může obsahovat jednu z následujících hodnot:<br /><br /> -   **WarnAndContinue** nebo **true**. Pokud úloha selže, úlohy v [cíl](../msbuild/target-element-msbuild.md) elementu a sestavení dále provést, a všechny chyby z úlohy se považují za upozornění<br />-   **ErrorAndContinue**. Pokud úloha selže, úlohy v `Target` elementu a sestavení dále provést, a všechny chyby z úlohy se považují za chyby.<br />-   **ErrorAndStop** nebo **false** (výchozí). Pokud úloha selže, ve zbývajících úkolech v`Target` elementu a sestavení nebudou provedeny a celý `Target` elementu a sestavení jsou považovány za za neúspěšný.<br /><br /> Verze rozhraní .NET Framework před 4.5 podporovaná jenom `true` a `false` hodnoty.<br /><br /> Další informace najdete v tématu [postupy: ignorování chyb v úlohách](../msbuild/how-to-ignore-errors-in-tasks.md).|  
-  
-## <a name="related-topics"></a>Související témata  
-  
+Úlohy poskytují kód, který se spustí během procesu sestavení. Při instalaci Visual C++ jsou k dispozici, kromě těch, které se instalují s následující úlohy [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Další informace najdete v tématu [přehled nástroje MSBuild (Visual C++)](/cpp/build/msbuild-visual-cpp-overview).  
+
+ Kromě parametrů pro každou úlohu Každá úloha má také následující parametry.  
+
+
+| Parametr | Popis |
+|-------------------| - |
+| `Condition` | Volitelné `String` parametru.<br /><br /> A `Boolean` výraz, který [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] modul se používá k určení, zda se tato úloha spustí. Informace o podmínkách, které jsou podporovány [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], naleznete v tématu [podmínky](../msbuild/msbuild-conditions.md). |
+| `ContinueOnError` | Volitelný parametr. Může obsahovat jednu z následujících hodnot:<br /><br /> -   **WarnAndContinue** nebo **true**. Při selhání úkolu, následné úlohy v [cílové](../msbuild/target-element-msbuild.md) elementu a sestavení budou dál spouštět a všechny chyby z úlohy jsou považovány za upozornění<br />-   **ErrorAndContinue**. Při selhání úkolu, následné úlohy v `Target` elementu a sestavení budou dál spouštět a všechny chyby z úlohy jsou považována za chyby.<br />-   **ErrorAndStop** nebo **false** (výchozí). Při selhání úkolu, ve zbývajících úkolech v`Target` elementu a sestavení nejsou provedeny a celé `Target` elementu a sestavení jsou považovány za neúspěšný.<br /><br /> Verze rozhraní .NET Framework před 4.5 podporována pouze `true` a `false` hodnoty.<br /><br /> Další informace najdete v tématu [postupy: ignorování chyb v úlohách](../msbuild/how-to-ignore-errors-in-tasks.md). |
+
+### <a name="related-topics"></a>Související témata  
+
 |Název|Popis|  
 |-----------|-----------------|  
-|[BscMake – úloha](../msbuild/bscmake-task.md)|Zabalí nástroj Microsoft procházet údržby nástroje pro konfiguraci (bscmake.exe).|  
-|[CL – úloha](../msbuild/cl-task.md)|Zabalí nástroj kompilátoru Visual C++ (cl.exe).|  
-|[CPPClean – úloha](../msbuild/cppclean-task.md)|Odstraní dočasné soubory, které MSBuild vytvoří při sestavení projektu Visual C++.|  
-|[LIB – úloha](../msbuild/lib-task.md)|Zabalí nástroj Microsoft 32bitový Správce knihovny (lib.exe).|  
-|[Odkaz – úloha](../msbuild/link-task.md)|Zabalí nástroj linkeru jazyka Visual C++ (link.exe).|  
-|[MIDL – úloha](../msbuild/midl-task.md)|Zabalí nástroj kompilátoru Microsoft rozhraní Definition Language (MIDL) (midl.exe).|  
-|[MT – úloha](../msbuild/mt-task.md)|Zabalí nástroj Microsoft Manifest (mt.exe).|  
-|[RC – úloha](../msbuild/rc-task.md)|Zabalí nástroj Microsoft kompilátor prostředků Windows (rc.exe).|  
-|[SetEnv – úloha](../msbuild/setenv-task.md)|Nastaví nebo odstraní hodnotu proměnné zadaného prostředí.|  
-|[VCMessage – úloha](../msbuild/vcmessage-task.md)|Protokoly upozornění a chybové zprávy během sestavení.|  
-|[XDCMake – úloha](../msbuild/xdcmake-task.md)|Zabalí nástroj dokumentace XML (xdcmake.exe), která sloučí soubory komentář (projektový) dokumentu XML do souboru .xml.|  
-|[XSD – úloha](../msbuild/xsd-task.md)|Zabalí nástroj definice schématu XML (xsd.exe), který generuje schématu nebo třída soubory ze zdroje.|  
-|[Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)|Popisuje elementy MSBuild systému.|  
-|[Úlohy](../msbuild/msbuild-tasks.md)|Popisuje úlohy, jako jsou jednotky kód, který mohou být kombinovány k vytvoření sestavení.|  
-|[Zápis úloh](../msbuild/task-writing.md)|Popisuje postup vytvoření úlohy.|
+|[BscMake – úloha](../msbuild/bscmake-task.md)|Zabalí nástroj Microsoft procházet informace nástroje pro správu (*bscmake.exe*).|  
+|[Cl – úloha](../msbuild/cl-task.md)|Zabalí nástroj kompilátoru Visual C++ (*cl.exe*).|  
+|[Cppclean – úloha](../msbuild/cppclean-task.md)|Odstraní dočasné soubory, které MSBuild vytvoří při vytváření projektu Visual C++.|  
+|[Lib – úloha](../msbuild/lib-task.md)|Zabalí nástroj Správce 32bitové Microsoft knihovny (*lib.exe*).|  
+|[Odkaz – úloha](../msbuild/link-task.md)|Zabalí nástroj linker Visual C++ (*link.exe*).|  
+|[MIDL – úloha](../msbuild/midl-task.md)|Zabalí nástroj kompilátoru Microsoft Interface Definition Language (MIDL) (*midl.exe*).|  
+|[MT – úloha](../msbuild/mt-task.md)|Zabalí nástroj Microsoft manifestu (*mt.exe*).|  
+|[RC – úloha](../msbuild/rc-task.md)|Zabalí nástroj Microsoft Windows Resource Compiler (*rc.exe*).|  
+|[SETENV – úloha](../msbuild/setenv-task.md)|Nastaví nebo vymaže hodnotu proměnné zadané prostředí.|  
+|[Vcmessage – úloha](../msbuild/vcmessage-task.md)|Protokoly upozornění a chybové zprávy během sestavení. (Není prodloužit. Pouze pro interní použití)|  
+|[Xdcmake – úloha](../msbuild/xdcmake-task.md)|Zabalí nástroj dokumentace XML (*xdcmake.exe*), která sloučí komentář k dokumentu XML (*.xdc*) soubory do *.xml* souboru.|  
+|[XSD – úloha](../msbuild/xsd-task.md)|Zabalí nástroj definici schématu XML (*xsd.exe*), který generuje schématu nebo třída soubory ze zdroje. *Viz poznámka níže.*|  
+|[Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)|Popisuje elementy systém MSBuild.|  
+|[Úlohy](../msbuild/msbuild-tasks.md)|Popisuje úlohy, jako jsou jednotky kódu, které mohou být kombinovány pro vytvoření sestavení.|  
+|[Zápis úloh](../msbuild/task-writing.md)|Popisuje, jak vytvořit úlohu.|
+
+> [!NOTE]
+> V sadě Visual Studio 2017, projekt C++ podpora *xsd.exe* je zastaralý. Můžete dál používat **Microsoft.VisualC.CppCodeProvider** rozhraní API tak, že ručně přidáte *CppCodeProvider.dll* do mezipaměti GAC.

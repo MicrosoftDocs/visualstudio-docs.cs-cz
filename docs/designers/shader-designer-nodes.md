@@ -1,6 +1,7 @@
 ---
 title: Uzly návrháře shaderů
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: f5192fbd-c78f-40a8-a4d4-443209610268
@@ -9,43 +10,44 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f7d4bb2633571a552c13bda0795d05447f9e340c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 827da75bb9faadf7506002780273979f628f20cb
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39078570"
 ---
 # <a name="shader-designer-nodes"></a>Uzly návrháře shaderů
-Články v této části dokumentace obsahují informace o různých shaderu Návrhář uzly, které můžete použít k vytvoření grafiky účinky.
+Články v této části dokumentace obsahují informace o různých uzlech návrháře shaderu, které vám umožní vytvářet grafické efekty.
 
-## <a name="nodes-and-node-types"></a>Uzly a typy uzlů
- Návrhář shaderu představuje vizuálních efektů jako graf. Tyto grafy jsou vytvořeny z uzlů, které jsou speciálně vybrali a připojené přesné způsoby k dosažení určený vliv. Každý uzel reprezentuje část informace nebo matematické funkce a připojení mezi nimi představují tok informací prostřednictvím grafu k vytvoření výsledku. Návrhář shaderu obsahuje šest typy jiný uzel – filtry, texture uzly, parametry, konstanty, nástroj uzlů a uzly matematické – a několik jednotlivé uzly patří do každého typu. Tyto uzly a typy uzlů, které jsou popsané v další články v této části – najdete v odkazech na konci tohoto dokumentu.
+## <a name="nodes-and-node-types"></a>Uzlů a typy uzlů
+ Návrháře shaderu představuje vizuálních efektů jako graf. Tyto grafy jsou sestaveny z uzlů, které jsou speciálně vybrali a připojené v přesné způsoby, jak dosáhnout zamýšlený účinek. Každý uzel představuje určitý údaj nebo matematické funkce a připojení mezi nimi představují tok informací v rámci graf tak, aby byla výsledkem. Návrhář shaderu poskytuje šest typů jiný uzel – filtry uzly textury, parametry, konstanty, nástroj uzly a matematické uzly – a několik jednotlivé uzly patří do jednotlivých typů. V dalších článcích v této části jsou popsány těchto uzlů a typy uzlů. Další informace najdete v odkazech na konci tohoto dokumentu.
 
-## <a name="node-structure"></a>Struktura uzlu
- Všechny uzly se skládají z kombinace společné prvky. Každý uzel má aspoň jeden výstup terminálu na jeho pravé straně (s výjimkou uzlu konečnou barvu, který reprezentuje výstup shaderu). Uzly, které představují výpočty nebo vzorkovací texture body mají vstupní terminály na jejich levé strany, ale uzly, které představují informace mít žádné vstupní terminály. Výstup terminály jsou připojené k vstupní terminály přesunout informace z jednoho uzlu.
+## <a name="node-structure"></a>Uzel struktury
+ Všechny uzly se skládá z kombinace společné prvky. Každý uzel má aspoň jeden výstup terminálu na jeho pravé straně (s výjimkou uzlu konečnou barvu, která představuje výstup shaderu). Uzly, které představují výpočtů nebo vzorkovače textury mají vstupní terminály v jejich levostranné, ale uzly, které představují informace jste žádné vstupní terminály. Výstup terminály jsou připojené k zadání terminály přesunout informace z jednoho uzlu.
 
 ### <a name="promotion-of-inputs"></a>Povýšení vstupy
- Protože návrháře shaderu nakonec vygenerovat HLSL zdrojový kód tak, aby účinek mohou být používány hry nebo aplikace, Návrhář shaderu uzly se vztahují propagace typu pravidla, která používá HLSL. Vzhledem k tomu, že hardware grafiky funguje hlavně na hodnoty s plovoucí desetinnou čárkou, zadejte povýšení mezi různými typy – například od `int` k `float`, nebo z `float` k `double`– neobvyklé. Místo toho protože grafiky hardwaru používá stejnou operaci pro více položek najednou informací, jiný druh povýšení může dojít, ve kterém je velikost nejdéle vstupní posunut kratší počtu vstupy. Jak je posunut závisí na typ vstupu a také na operaci sám sebe:
+ Protože Shader Designer musí nakonec HLSL zdrojový kód tak, aby efekt je možné ve hře nebo aplikaci, podléhají uzlech návrháře shaderu propagace typu pravidla, která používá HLSL. Vzhledem k tomu, že grafický hardware primárně pracuje hodnoty s plovoucí desetinnou čárkou, zadejte povýšení mezi různými typy – třeba z `int` k `float`, nebo z `float` k `double`– neobvyklé. Místo toho protože hardwarovou akceleraci používá stejnou operaci i u více kusů informace najednou, jiný druh propagační akce může dojít, ve kterém je tak, aby odpovídala velikosti nejdelší vstupní posunut kratší počet vstupů. Jak je posunut závisí na typ vstupu a také na samotný operace:
 
--   **Je-li menší typ skalární hodnotu, pak:**
+-   **Pokud je menší typu skalární hodnota, pak:**
 
-     Hodnota skalárních se replikují do vektor, který se rovná velikosti větší vstupu. Skalární vstup 5.0, například bude vektoru (5.0, 5.0, 5.0) po největší vstup operace tři element vektoru, bez ohledu na to, co je operaci.
+     Hodnota skalárních se replikují do vektoru, který se rovná velikosti větší vstup. Například skalární vstupní 5.0 stane vektor (5.0, 5.0, 5.0) po třech prvcích vektoru, bez ohledu na to, co je operace největší vstupu operace.
 
--   **Pokud je typ menší vektor a operace se multiplikativní (\*, /, % a tak dále), pak:**
+-   **Pokud je menší typ vektoru a je operace násobení (\*, /, % a tak dále), pak:**
 
-     Hodnota vektoru se zkopíruje do úvodní elementy vektor, který se rovná velikosti větší vstupu a koncové prvky jsou nastaveny na 1.0. Vstup vektoru (5.0, 5.0), například bude vektoru (5.0, 5.0, 1.0, 1.0) Pokud se násobí hodnotou vektoru čtyři element. Elementy třetí a čtvrtý výstupu se zachovají pomocí multiplikativní identity 1.0.
+     Hodnota vektoru se zkopíruje do přední elementů vektoru, který se rovná velikosti větší vstup a koncové prvky jsou nastaveny na 1.0. Například zadání vektorové (5.0, 5.0) bude vektor (5.0, 5.0, 1.0; 1,0) Pokud se násobí hodnotou vektor čtyřech prvcích. Toto nastavení zachovává třetí a čtvrtá prvky výstupu pomocí násobení identity 1.0.
 
--   **Pokud je menší typ vektor a tuto operaci je sčítání (+,-, a tak dále), pak:**
+-   **Pokud menší typ vektoru a je operace sčítání (+,-, a tak dále), pak:**
 
-     Hodnota vektoru se zkopíruje do úvodní elementy vektor, který se rovná velikosti větší vstupu a koncové prvky jsou nastaveny na 0,0. Vstup vektoru (5.0, 5.0), například bude vektoru (5.0, 5.0, 0,0, 0,0) při jejím přidání do vektoru čtyři elementu. Elementy třetí a čtvrtý výstupu se zachovají pomocí identitě doplňkové 0,0.
+     Hodnota vektoru je zkopírována do přední prvky vektoru, který se rovná velikosti větší vstup a koncové prvky jsou nastaveny na 0,0. Například zadání vektorové (5.0, 5.0) bude vektor (5.0, 5.0, 0.0, 0.0) při přidání na čtyřech prvcích vektoru. Toto nastavení zachovává třetí a čtvrtá prvky výstupu pomocí additive identity 0,0.
 
 ## <a name="related-topics"></a>Související témata
 
 |Název|Popis|
 |-----------|-----------------|
-|[Uzly konstanty](../designers/constant-nodes.md)|Popisuje uzlů, které můžete použít k reprezentaci literálových hodnot a interpolované vrchol stavu informace ve výpočtech shaderu. Protože vrchol stavu je interpolované – a proto se liší pro každý pixelů – každá instance pixelů shaderu obdrží jinou verzi konstanta.|
-|[Uzly parametru](../designers/parameter-nodes.md)|Popisuje uzlů, které můžete použít k vyjádření polohy kamery, vlastnosti materiálu, osvětlení parametry, čas a další informace o aplikaci stavu ve výpočtech shaderu.|
-|[Uzly textury](../designers/texture-nodes.md)|Popisuje uzly, které můžete použít k ukázkové různé typy texture a geometrie a k vytvoření nebo transformace texture souřadnice běžné způsoby.|
-|[Matematické uzly](../designers/math-nodes.md)|Popisuje uzly, které můžete použít k provedení algebraických, logiku, trigonometrické a další matematické operace, které mapují přímo na HLSL pokyny.|
-|[Uzly nástroje](../designers/utility-nodes.md)|Popisuje uzly, které můžete použít k provádění běžných osvětlení výpočty a dalších běžných operací, které se nemapují přímo na HLSL pokyny.|
-|[Uzly filtru](../designers/filter-nodes.md)|Popisuje uzly, které můžete použít pro filtrování texture a filtrování barev.|
+|[Uzly konstanty](../designers/constant-nodes.md)|Popisuje uzly, které můžete použít k reprezentaci hodnoty literálu a interpolované vrcholu stavové informace ve výpočtech shaderu. Protože interpolovaných stav vrcholu a proto se liší pro každý pixel – každá instance pixel shader obdrží jinou verzi konstanty.|
+|[Uzly parametru](../designers/parameter-nodes.md)|Popisuje uzly, které můžete použít k reprezentaci kamery, vlastností materiálu, parametry osvětlení, čas a další informace o stavu aplikace ve výpočtech shaderu.|
+|[Uzly textury](../designers/texture-nodes.md)|Popisuje uzly, které můžete použít pro vzorkování různé typy textury a geometrie a k vytvoření nebo transformaci souřadnice textury v běžné způsoby.|
+|[Matematické uzly](../designers/math-nodes.md)|Popisuje uzly, které můžete použít k provedení algebraických, logika, trigonometrických a jiných matematických operací, které se mapují přímo na HLSL pokyny.|
+|[Uzly nástroje](../designers/utility-nodes.md)|Popisuje uzly, které můžete použít k provádění běžných výpočtů osvětlení a dalších běžných operací, které se nemapují přímo na HLSL pokyny.|
+|[Uzly filtru](../designers/filter-nodes.md)|Popisuje uzly, které můžete použít k provedení filtrování textur a filtrování barvu.|

@@ -1,13 +1,13 @@
 ---
-title: "Byl očekáván objekt regulárního výrazu | Microsoft Docs"
-ms.custom: 
+title: Byl očekáván objekt regulárního výrazu | Dokumentace Microsoftu
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.WebClient.Help.SCRIPT5016
@@ -16,23 +16,24 @@ dev_langs:
 - TypeScript
 - DHTML
 ms.assetid: e226096c-c58f-4bcb-a71e-fa32ce474b67
-caps.latest.revision: 
+caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9a5a0f3cb3b86e2e01d522f85d0dae23e9c9d3ca
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 1b8e3c48b116680fe73d4cc318038cb2c13c4164
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44280309"
 ---
 # <a name="regular-expression-object-expected"></a>Byl očekáván objekt regulárního výrazu
-Pokoušíte se o vyvolání **RegExp.prototype.toString** nebo **RegExp.prototype.valueOf** metoda na objekt typu jinak než `RegExp`. Objekt typu volání musí být typu `RegExp`.  
+Pokusili jste se vyvolat **RegExp.prototype.toString** nebo **RegExp.prototype.valueOf** metodu na objekt typu než `RegExp`. Objekt tohoto typu volání musí být typu `RegExp`.  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
--   Vyvolat jenom **RegExp.prototype.toString** nebo **RegExp.prototype.valueOf** metody pro objekty typu `RegExp`.  
+-   Vyvolat pouze **RegExp.prototype.toString** nebo **RegExp.prototype.valueOf** metod u objektů typu `RegExp`.  
   
 ## <a name="see-also"></a>Viz také  
  [Objekt regulárního výrazu](../../javascript/reference/regular-expression-object-javascript.md)   
- [Syntaxi regulárního výrazu (JavaScript)](http://msdn.microsoft.com/en-us/ab0766e1-7037-45ed-aa23-706f58358c0e)
+ [Syntaxe regulárního výrazu (JavaScript)](https://msdn.microsoft.com/library/1400241x)

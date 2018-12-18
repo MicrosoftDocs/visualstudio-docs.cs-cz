@@ -1,5 +1,5 @@
 ---
-title: Port dodavatelé | Microsoft Docs
+title: Dodavatelé portů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,28 +14,29 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1f1ba09c1802bdeb1c6a402e95a6de408b277532
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 680f57878b3dd06e2f5935874f4a3f3bb06a2a1c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948223"
 ---
-# <a name="port-suppliers"></a>Port dodavatelů
-Z hlediska architektuře ladicího programu **port dodavatele**:  
+# <a name="port-suppliers"></a>Dodavatelé portů
+V architektuře ladicího programu *dodavatele portu*:  
   
--   Je obsažený v serveru a poskytuje porty na požadavek na tomto serveru.  
+- Je obsažen podle serveru a poskytuje porty na požadavek na tomto serveru.  
   
--   Můžete přidávat a odebírat porty ze serveru obsahující.  
+- Můžete přidávat a odebírat porty z nadřazeného serveru.  
   
--   Můžete vytvořit výčet všech portů, který má zadaný na server.  
+- Můžete zobrazit výčet všechny porty, který má zadaný na serveru.  
   
--   Je reprezentována [IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md) rozhraní, která je registrována pomocí sady Visual Studio prostřednictvím registru. Toto rozhraní je možné získat volání [GetPortSupplier](../../extensibility/debugger/reference/idebugcoreserver2-getportsupplier.md).  
+- Je reprezentován [IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md) rozhraní, která je registrována pomocí sady Visual Studio prostřednictvím registru. Toto rozhraní lze získat voláním [GetPortSupplier](../../extensibility/debugger/reference/idebugcoreserver2-getportsupplier.md).  
   
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] poskytuje výchozí port dodavatele a výchozí port. Pokud vlastní port musí být implementována, dodavatele vlastní port také musí být implementována k poskytování těchto vlastní porty.  
+  [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] poskytuje výchozí dodavatele portu a výchozí port. Pokud je nutné implementovat port. Tento vlastní port, dodavatel port. Tento vlastní port také nutné implementovat zadat vlastní porty.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Servery](../../extensibility/debugger/servers-visual-studio-sdk.md)   
  [Porty](../../extensibility/debugger/ports.md)   
- [Koncepty ladicí program](../../extensibility/debugger/debugger-concepts.md)   
+ [Koncepty ladicího programu](../../extensibility/debugger/debugger-concepts.md)   
  [IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md)   
  [GetPortSupplier](../../extensibility/debugger/reference/idebugcoreserver2-getportsupplier.md)

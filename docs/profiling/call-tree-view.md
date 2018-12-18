@@ -17,13 +17,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f098b18100bd54e8078ea0c855a1b3e51926b93
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f8973f1536ded24d2fd327aa3eac1ceee795cb54
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34262444"
 ---
-# <a name="call-tree-view"></a>Zobrazení stromu volání
+# <a name="call-tree-view"></a>zobrazení stromu volání
 Zobrazení stromu volání zobrazuje cesty provádění funkce, které byly provázán v PROFILOVANÉHO aplikaci. Kořen stromu je vstupním bodem do součást nebo aplikace. Každý uzel funkce uvádí všechny funkce, které ji volat a údaje o výkonu o těchto volání funkcí.  
   
  Zobrazení stromu volání můžete také rozšířit a zvýraznit cestu spuštění funkce, která nejvíce času spotřebovaného nebo byl vzorkovat nejčastěji. Zobrazení výkonu nejnákladnější cesty, klikněte pravým tlačítkem na funkci a pak klikněte na **rozbalte aktivní trase**.  
@@ -45,7 +46,7 @@ Zobrazení stromu volání zobrazuje cesty provádění funkce, které byly prov
   
  [Zobrazení stromu volání](../profiling/call-tree-view-instrumentation-data.md)  
   
- [Zobrazení stromu volání – vzorkování](../profiling/call-tree-view-dotnet-memory-sampling-data.md)  
+ [Volání stromové zobrazení – vzorkování](../profiling/call-tree-view-dotnet-memory-sampling-data.md)  
   
  [Zobrazení stromu volání](../profiling/call-tree-view-contention-data.md)  
   

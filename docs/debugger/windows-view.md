@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31478028"
 ---
 # <a name="windows-view"></a>Zobrazení oken
 Při prvním otevření nástroje Spy ++, zobrazí se systémem Windows zobrazení stromu všechna okna a ovládací prvky v systému. Název popisovače a třída okna se zobrazí. Plochy okno obsahuje v horní části stromu. Všechna ostatní okna jsou podřízené plochy a jsou uvedeny podle standardní okno hierarchii. V expansible seznamy odsazené pod svých nadřazených složek se zobrazí na stejné úrovni windows.  

@@ -1,0 +1,848 @@
+items:
+- name: Dokumentace k ladicímu programu
+  href: index.md
+- name: Přehled
+  items:
+  - name: Co je ladění?
+    href: what-is-debugging.md
+  - name: Méně chyb díky psaní lepšího kódu v C#
+    href: write-better-code-with-visual-studio.md
+- name: Rychlý start
+  items:
+  - name: První seznámení s ladicím programem
+    href: debugger-feature-tour.md
+  - name: Ladění aplikací v C# nebo Visual Basicu
+    href: quickstart-debug-with-managed.md
+  - name: Ladění aplikací v C++
+    href: quickstart-debug-with-cplusplus.md
+  - name: Ladění aplikace ASP.NET
+    href: quickstart-debug-aspnet.md
+- name: Kurzy
+  items:
+  - name: Naučte se ladit kód v C#
+    href: getting-started-with-the-debugger.md
+  - name: Naučte se ladit kód v C++
+    href: getting-started-with-the-debugger-cpp.md
+  - name: Naučte se ladit kód ve Visual Basicu
+    href: getting-started-with-the-debugger-vb.md
+  - name: Spouštění kódu Pythonu v ladicím programu...
+    href: ../python/tutorial-working-with-python-in-visual-studio-step-04-debugging.md
+  - name: Ladění živé aplikace Azure
+    href: debug-live-azure-applications.md
+  - name: Ladění kódu v jazyce C# i C++
+    href: how-to-debug-managed-and-native-code.md
+  - name: Kontrola předchozích stavů aplikace
+    href: view-historical-application-state.md
+  - name: Ladění pro naprosté začátečníky
+    href: debugging-absolute-beginners.md
+- name: Návody
+  items:
+  - name: Procházení kódu ladicím programem
+    href: navigating-through-code-with-the-debugger.md
+  - name: Použití zarážek
+    href: using-breakpoints.md
+    items:
+    - name: Řešení potíží se zarážkami
+      href: troubleshooting-breakpoints.md
+  - name: Kontrola dat
+    href: debugger-windows.md
+    items:
+    - name: Kontrola proměnných
+      href: autos-and-locals-windows.md
+    - name: Nastavení sledování proměnných
+      href: watch-and-quickwatch-windows.md
+      items:
+      - name: Výrazy v ladicím programu
+        href: expressions-in-the-debugger.md
+        items:
+        - name: Specifikátory formátu v jazyce C++
+          href: format-specifiers-in-cpp.md
+        - name: Kontextový operátor (C++)
+          href: context-operator-cpp.md
+        - name: Specifikátory formátu v jazyce C#
+          href: format-specifiers-in-csharp.md
+        - name: Pseudoproměnné
+          href: pseudovariables.md
+    - name: Zobrazení hodnot dat v nástroji DataTips
+      href: view-data-values-in-data-tips-in-the-code-editor.md
+    - name: Zobrazení hodnot řetězců ve vizualizéru
+      href: string-visualizer-dialog-box.md
+    - name: Zobrazení zpětného překladu kódu
+      href: how-to-use-the-disassembly-window.md
+      items:
+      - name: Posunutí paměti o stránku nahoru nebo dolů
+        href: how-to-page-up-or-down-in-memory.md
+    - name: Zobrazení hodnot registru
+      href: how-to-use-the-registers-window.md
+      items:
+      - name: Informace o okně Registr
+        href: debugging-basics-registers-window.md
+      - name: Zobrazení a skrytí skupin registru
+        href: how-to-display-and-hide-register-groups.md
+      - name: Úprava hodnoty registru
+        href: how-to-edit-a-register-value.md
+    - name: Zobrazení paměti proměnných
+      href: memory-windows.md
+    - name: Kontrola vlastností XAML při ladění
+      href: inspect-xaml-properties-while-debugging.md
+  - name: Zobrazení zásobníku volání
+    href: how-to-use-the-call-stack-window.md
+    items:
+    - name: Vytvoření vizuální mapy zásobníku volání
+      href: map-methods-on-the-call-stack-while-debugging-in-visual-studio.md
+    - name: Smíšený kód a chybějící informace v okně Zásobník volání
+      href: mixed-code-and-missing-information-in-the-call-stack-window.md
+  - name: Úprava kódu a pokračování ladění
+    href: edit-and-continue.md
+    items:
+    - name: Povolení a zakázání operace Upravit a pokračovat
+      href: how-to-enable-and-disable-edit-and-continue.md
+    - name: Zastavení změn kódu
+      href: how-to-stop-code-changes.md
+    - name: Upravit a pokračovat (Visual C++)
+      href: edit-and-continue-visual-cpp.md
+      items:
+      - name: Podporované změny kódu (C++)
+        href: supported-code-changes-cpp.md
+    - name: Upravit a pokračovat (Visual C#)
+      href: edit-and-continue-visual-csharp.md
+      items:
+      - name: Použití operace Upravit a pokračovat (C#)
+        href: how-to-use-edit-and-continue-csharp.md
+      - name: Podporované změny kódu
+        href: supported-code-changes-csharp.md
+    - name: Upravit a pokračovat (Visual Basic)
+      href: edit-and-continue-visual-basic.md
+      items:
+      - name: Použití úprav v režimu pozastavení operace Upravit a pokračovat
+        href: how-to-apply-edits-in-break-mode-with-edit-and-continue.md
+    - name: Nepodporovaná operace Upravit a pokračovat v F#
+      href: edit-and-continue-not-supported-for-f-hash.md
+  - name: Zobrazení dat ladicího programu
+    items:
+    - name: Zobrazení modulů
+      href: how-to-use-the-modules-window.md
+      items:
+      - name: Hledání knihovny DLL, ve které program selhal
+        href: how-to-find-which-dll-your-program-crashed-in.md
+    - name: Zobrazení skriptových dokumentů
+      href: how-to-view-script-documents.md
+  - name: Tipy a triky pro ladicí program
+    href: debugger-tips-and-tricks.md
+    items:
+    - name: Připojení ladicího programu ke spuštěným procesům
+      href: attach-to-running-processes-with-the-visual-studio-debugger.md
+    - name: Ladění během návrhu
+      href: walkthrough-debugging-at-design-time.md
+    - name: Použití ladicího programu pro ladění za běhu
+      href: debug-using-the-just-in-time-debugger.md
+      items:
+      - name: Zakázání ladicího programu pro ladění za běhu
+        href: just-in-time-debugging-in-visual-studio.md
+  - name: Konfigurace ladění
+    items:
+    - name: Správa výjimek pomocí ladicího programu
+      href: managing-exceptions-with-the-debugger.md
+      items:
+      - name: Pokračování v provádění po výjimce
+        href: continuing-execution-after-an-exception.md
+      - name: Kontrola systémového kódu po výjimce
+        href: how-to-examine-system-code-after-an-exception.md
+      - name: Použití nativních kontrol za běhu
+        href: how-to-use-native-run-time-checks.md
+        items:
+        - name: Přizpůsobení nativních kontrol za běhu
+          href: native-run-time-checks-customization.md
+        - name: Zápis funkce zasílání zpráv o chybách za běhu
+          href: how-to-write-a-run-time-error-reporting-function.md
+        - name: Použití kontrol za běhu bez knihovny run-time jazyka C
+          href: using-run-time-checks-without-the-c-run-time-library.md
+    - name: Zadání symbolu (.pdb) a zdrojových souborů v ladicím programu
+      href: specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md
+    - name: Ladění uživatelského kódu
+      href: just-my-code.md
+    - name: Nastavení a příprava ladicího programu
+      href: debugger-settings-and-preparation.md
+      items:
+      - name: Nastavení projektu ladicího programu
+        href: debugger-project-settings.md
+        items:
+        - name: Určení nastavení ladicího programu
+          href: how-to-specify-debugger-settings.md
+        - name: Nastavení konfigurace ladění a verzí
+          href: how-to-set-debug-and-release-configurations.md
+        - name: Nastavení projektu pro konfiguraci ladění jazyka C++
+          href: project-settings-for-a-cpp-debug-configuration.md
+          items:
+          - name: Povolení funkcí ladění v jazyce Visual C++ (/D_DEBUG)
+            href: enabling-debug-features-in-visual-cpp-d-debug.md
+        - name: Nastavení stránek s vlastnostmi webových projektů
+          href: property-pages-settings-for-web-projects.md
+        - name: Nastavení projektu pro konfiguraci ladění jazyka C#
+          href: project-settings-for-csharp-debug-configurations.md
+        - name: Nastavení projektu pro konfiguraci ladění jazyka Visual Basic
+          href: project-settings-for-a-visual-basic-debug-configuration.md
+      - name: Ladění projektů knihovny DLL
+        href: debugging-dll-projects.md
+        items:
+        - name: Ladění z projektu knihovny DLL
+          href: how-to-debug-from-a-dll-project.md
+        - name: Ladění ve smíšeném režimu
+          href: how-to-debug-in-mixed-mode.md
+      - name: 'Příprava ladění: Projekty konzoly'
+        href: debugging-preparation-console-projects.md
+      - name: Ladění spustitelného souboru, který není součástí řešení sady Visual Studio
+        href: how-to-debug-an-executable-not-part-of-a-visual-studio-solution.md
+      - name: Ladění a proces hostování
+        href: debugging-and-the-hosting-process.md
+      - name: Určení verze rozhraní .NET Framework pro ladění
+        href: how-to-specify-a-dotnet-framework-version-for-debugging.md
+    - name: Vytváření vlastních zobrazení dat
+      href: viewing-data-in-the-debugger.md
+      items:
+      - name: Vytváření vlastních pohledů nativních objektů
+        href: create-custom-views-of-native-objects.md
+      - name: Vytváření vlastních zobrazení spravovaných objektů
+        href: create-custom-views-of-dot-managed-objects.md
+        items:
+        - name: Používání atributu DebuggerTypeProxy
+          href: using-debuggertypeproxy-attribute.md
+        - name: Používání atributu DebuggerDisplay
+          href: using-the-debuggerdisplay-attribute.md
+      - name: Vytváření vlastních vizualizérů dat
+        href: create-custom-visualizers-of-data.md
+        items:
+        - name: Architektura vizualizéru
+          href: visualizer-architecture.md
+        - name: 'Návod: Zápis vizualizéru v jazyce C#'
+          href: walkthrough-writing-a-visualizer-in-csharp.md
+        - name: 'Návod: Zápis vizualizéru v jazyce Visual Basic'
+          href: walkthrough-writing-a-visualizer-in-visual-basic.md
+        - name: Instalace vizualizéru
+          href: how-to-install-a-visualizer.md
+        - name: Testování a ladění vizualizéru
+          href: how-to-test-and-debug-a-visualizer.md
+        - name: Informace o zabezpečení vizualizéru
+          href: visualizer-security-considerations.md
+        - name: Referenční dokumentace k rozhraní API vizualizéru
+          href: visualizer-api-reference.md
+    - name: Obnovení skrytých příkazů ladicího programu
+      href: how-to-restore-hidden-debugger-commands.md
+  - name: Vzdálené ladění
+    href: remote-debugging.md
+    items:
+    - name: Vzdálené ladění ASP.NET Core na počítači se službou IIS
+      href: remote-debugging-aspnet-on-a-remote-iis-computer.md
+    - name: Vzdálené ladění ASP.NET na počítači se službou IIS
+      href: remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md
+    - name: Vzdálené ladění ASP.NET v Azure
+      href: remote-debugging-azure.md
+    - name: Vzdálené ladění projektu v jazyce C# nebo Visual Basic
+      href: remote-debugging-csharp.md
+    - name: Vzdálené ladění projektu v jazyce C++
+      href: remote-debugging-cpp.md
+    - name: Přiřazení portů vzdáleného ladicího programu
+      href: remote-debugger-port-assignments.md
+    - name: Konfigurace brány firewall ve Windows pro vzdálené ladění
+      href: configure-the-windows-firewall-for-remote-debugging.md
+    - name: Odblokování stahování na Windows Serveru
+      href: remote-debugging-unblock-file-download.md
+    - name: Chyby při vzdáleném ladění a jejich řešení
+      href: remote-debugging-errors-and-troubleshooting.md
+      items:
+      - name: Sledování vzdáleného ladění sady Microsoft Visual Studio na vzdáleném počítači nemá oprávnění pro připojení k tomuto počítači.
+        href: error-the-microsoft-visual-studio-remote-debugging-monitor-no-permission.md
+      - name: Při pokusu o spojení se vzdáleným počítačem došlo k chybě modelu DCOM. Přístup byl zamítnut.
+        href: a-dcom-error-occurred-trying-to-contact-the-remote-computer-access-is-denied.md
+      - name: Sledování vzdáleného ladění sady Microsoft Visual Studio je na vzdáleném počítači spuštěné pod jiným uživatelským účtem.
+        href: error-the-microsoft-visual-studio-remote-debugging-monitor-on-the-remote-computer-is-running-as-a-different-user.md
+      - name: Automatické krokování s vnořením do serveru se nezdařilo.
+        href: error-unable-to-automatically-step-into-the-server.md
+      - name: Chyba vzdáleného přihlášení k pracovní skupině
+        href: error-workgroup-remote-logon-failure.md
+      - name: Ověření protokolem Kerberos se nezdařilo.
+        href: error-kerberos-authentication-failed.md
+      - name: Ověřte, zda je na cílovém počítači správně nakonfigurován server DNS
+        href: error-ensure-that-dns-is-correctly-configured-on-the-target-computer.md
+      - name: Zdá se, že na vzdáleném počítači neběží sledování vzdáleného ladění sady Microsoft Visual Studio (MSVSMON.EXE)
+        href: error-the-microsoft-visual-studio-remote-debugging-monitor-msvsmon-exe-does-not-appear-to-be-running-on-the-remote-computer.md
+      - name: Nepodařilo se připojit ke sledování vzdáleného ladění sady Microsoft Visual Studio.
+        href: unable-to-connect-to-the-microsoft-visual-studio-remote-debugging-monitor.md
+      - name: Nelze inicializovat komunikaci modelu DCOM.
+        href: error-unable-to-initiate-dcom-communication.md
+      - name: Vzdálený počítač nemohl inicializovat komunikaci modelu DCOM.
+        href: error-remote-computer-could-not-initiate-dcom-communications.md
+      - name: Brána firewall v místním počítači
+        href: error-firewall-on-local-machine.md
+      - name: Bez ověřování brány firewall
+        href: error-firewall-no-authentication.md
+      - name: RPC vyžaduje ověření.
+        href: error-rpc-requires-authentication.md
+      - name: Nemáte oprávnění ke kontrole identity procesu.
+        href: error-you-do-not-have-permission-to-inspect-the-process-s-identity.md
+      - name: Služba vzdáleného ladicího programu sady Visual Studio na cílovém počítači se nemůže připojit zpět k tomuto počítači.
+        href: error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer.md
+      - name: Pracovní proces webu byl ukončen službou IIS.
+        href: error-web-site-worker-process-has-been-terminated-by-iis.md
+      - name: Není možné se připojit k počítači <name>. Počítač se v síti nepodařilo najít.
+        href: error-unable-to-connect-to-the-machine-name-the-machine-cannot-be-found-on-the-network.md
+      - name: Ladění ve smíšeném režimu je podporované, jenom pokud používáte rozhraní Microsoft .NET Framework 2.0 nebo vyšší.
+        href: error-mixed-mode-debugging-is-supported-only-when-using-microsoft-dotnet-framework-2-0-or-greater.md
+      - name: Ladění ve smíšeném režimu není pro procesy IA64 podporované.
+        href: error-mixed-mode-debugging-for-ia64-processes-is-unsupported.md
+      - name: Ladění ve smíšeném režimu pro procesy x64 je podporované, jenom pokud používáte rozhraní Microsoft .NET Framework 4 nebo vyšší.
+        href: error-mixed-mode-debugging-for-x64-processes-is-supported-only-when-using-microsoft-dotnet-framework-4-or-greater.md
+      - name: Vzdálený počítač se nezobrazuje v dialogovém okně Vzdálená připojení.
+        href: error-remote-machine-does-not-appear-in-a-remote-connections-dialog.md
+  - name: Ladění vícevláknových aplikací
+    href: debug-multithreaded-applications-in-visual-studio.md
+    items:
+    - name: Začínáme s laděním vícevláknových aplikací
+      href: get-started-debugging-multithreaded-apps.md
+    - name: Nástroje pro ladění vláken a procesů
+      href: debug-threads-and-processes.md
+      items:
+      - name: Použití okna Paralelní zásobníky
+        href: using-the-parallel-stacks-window.md
+      - name: Použití okna Paralelní sledování
+        href: how-to-use-the-parallel-watch-window.md
+      - name: Použití okna vláken
+        href: walkthrough-debugging-a-multithreaded-application.md
+      - name: Použití okna úloh
+        href: using-the-tasks-window.md
+      - name: Použití okna vláken GPU
+        href: how-to-use-the-gpu-threads-window.md
+    - name: Ladění více procesů
+      href: debug-multiple-processes.md
+    - name: 'Návod: Ladění pomocí okna Vlákna'
+      href: how-to-use-the-threads-window.md
+    - name: 'Návod: Ladění paralelní aplikace'
+      href: walkthrough-debugging-a-parallel-application.md
+    - name: Přepnutí na jiné vlákno během ladění
+      href: how-to-switch-to-another-thread-while-debugging.md
+    - name: Označení a odstranění označení vlákna
+      href: how-to-flag-and-unflag-threads.md
+    - name: Ladění na clusteru s vysokým výkonem
+      href: how-to-debug-on-a-high-performance-cluster.md
+    - name: Tipy k ladění vláken v nativním kódu
+      href: tips-for-debugging-threads-in-native-code.md
+    - name: Nastavení názvu vlákna v nativním kódu
+      href: how-to-set-a-thread-name-in-native-code.md
+    - name: Nastavení názvu vlákna ve spravovaném kódu
+      href: how-to-set-a-thread-name-in-managed-code.md
+  - name: IntelliTrace
+    href: intellitrace.md
+    items:
+    - name: Zobrazení snímků s IntelliTrace
+      href: view-snapshots-with-intellitrace.md
+    - name: Zobrazení událostí s IntelliTrace
+      href: walkthrough-using-intellitrace.md
+    - name: Funkce IntelliTrace
+      href: intellitrace-features.md
+    - name: Historické ladění
+      href: historical-debugging.md
+    - name: Kontrola aplikace pomocí historického ladění
+      href: historical-debugging-inspect-app.md
+    - name: Diagnostika problémů po nasazení
+      href: diagnose-problems-after-deployment.md
+      items:
+      - name: Použití samostatného kolektoru IntelliTrace
+        href: using-the-intellitrace-stand-alone-collector.md
+      - name: Použití služby Microsoft Monitoring Agent
+        href: using-the-microsoft-monitoring-agent.md
+    - name: Použití dat uložených nástrojem IntelliTrace
+      href: using-saved-intellitrace-data.md
+    - name: Referenční dokumentace k rozhraní API pro rozšiřitelnost technologie IntelliTrace
+      href: api-reference-for-intellitrace-extensibility.md
+  - name: Ladění služeb Azure
+    href: debug-azure-apps.md
+    items:
+    - name: Ladění živé aplikace Azure
+      href: debug-live-azure-applications.md
+      items:
+      - name: Nejčastější dotazy k ladění snímků
+        href: debug-live-azure-apps-faq.md
+      - name: Řešení potíží při ladění snímků
+        href: debug-live-azure-apps-troubleshooting.md
+  - name: Ladění určitých typů aplikací
+    href: debugging-applications.md
+    items:
+    - name: Ladění 64bitových aplikací
+      href: debug-64-bit-applications.md
+    - name: Ladění aplikací pro UPW
+      href: debugging-windows-store-and-windows-universal-apps.md
+      items:
+      - name: Spuštění ladicí relace aplikace pro UPW
+        href: start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md
+        items:
+        - name: Ladění aplikací pro UPW na vzdáleném počítači
+          href: run-windows-store-apps-on-a-remote-machine.md
+        - name: Spouštění aplikací pro UPW na simulátoru
+          href: run-windows-store-apps-in-the-simulator.md
+        - name: Nasazení aplikací pro UPW ze sady Visual Studio
+          href: deploy-windows-store-apps-from-visual-studio.md
+      - name: Ladění balíčku nainstalované aplikace
+        href: debug-installed-app-package.md
+      - name: Ladění kódu XAML v programu Blend
+        href: debug-xaml-in-blend.md
+      - name: Ladění kódu HTML a CSS
+        href: quickstart-debug-html-and-css.md
+        items:
+        - name: Aktualizace aplikace (JavaScript)
+          href: refresh-an-app-javascript.md
+        - name: Ladění ovládacího prvku WebView
+          href: debug-a-webview-control.md
+        - name: Klávesové zkratky (HTML a JavaScript)
+          href: keyboard-shortcuts-html-and-javascript.md
+        - name: Ladění ukázkového kódu HTML a CSS
+          href: debug-html-css-and-javascript-sample-code.md
+      - name: Ladění JavaScriptu pomocí konzoly
+        href: quickstart-debug-javascript-using-the-console.md
+        items:
+        - name: Příkazy konzoly jazyka JavaScript
+          href: javascript-console-commands.md
+      - name: Aktivace událostí pozastavení a obnovení a událostí na pozadí
+        href: how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md
+      - name: Předběžné načtení obsahu pro aplikace pro Microsoft Store
+        href: prefetch-content-for-windows-store-apps.md
+    - name: Ladění spravovaného kódu
+      href: debugging-managed-code.md
+      items:
+      - name: 'Příprava ladění: Typy projektů jazyka C#, F# a Visual Basic'
+        href: debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md
+        items:
+        - name: 'Spravované ladění: Doporučené nastavení vlastností'
+          href: managed-debugging-recommended-property-settings.md
+        - name: 'Příprava ladění: Formulářové aplikace Windows'
+          href: debugging-preparation-windows-forms-applications.md
+        - name: 'Příprava ladění: Služby systému Windows'
+          href: debugging-preparation-windows-services.md
+      - name: Odesílání zpráv do okna výstupu
+        href: diagnostic-messages-in-the-output-window.md
+      - name: Kontrolní výrazy ve spravovaném kódu
+        href: assertions-in-managed-code.md
+      - name: Příkazy Stop v jazyce Visual Basic
+        href: stop-statements-in-visual-basic.md
+      - name: 'Návod: Ladění formuláře systému Windows'
+        href: walkthrough-debugging-a-windows-form.md
+      - name: Ladění metody OnStart
+        href: how-to-debug-the-onstart-method.md
+      - name: Ladění aplikací ve smíšeném režimu
+        href: debugging-mixed-mode-applications.md
+      - name: Optimalizace a ladění za běhu
+        href: jit-optimization-and-debugging.md
+      - name: Ladění LINQ
+        href: debugging-linq.md
+      - name: Ladění není možné, protože v systému je povolen ladicí program protokolu Kernel.
+        href: error-debugging-isn-t-possible-because-a-kernel-debugger-is-enabled-on-the-system.md
+      - name: Ladění zdroje rozhraní .NET Framework
+        href: how-to-debug-dotnet-framework-source.md
+      - name: Ladění WPF
+        href: debugging-wpf.md
+        items:
+        - name: Použití vizualizéru stromu WPF
+          href: how-to-use-the-wpf-tree-visualizer.md
+        - name: Zobrazení informací o trasování WPF
+          href: how-to-display-wpf-trace-information.md
+      - name: Ladění F#
+        href: debugging-f-hash.md
+    - name: Ladění nativního kódu
+      href: debugging-native-code.md
+      items:
+      - name: 'Příprava ladění: Typy projektů jazyka Visual C++'
+        href: debugging-preparation-visual-cpp-project-types.md
+      - name: Ladění optimalizovaného kódu
+        href: how-to-debug-optimized-code.md
+      - name: DebugBreak a __debugbreak
+        href: debugbreak-and-debugbreak.md
+      - name: Kontrolní výrazy jazyka C/C++
+        href: c-cpp-assertions.md
+      - name: Ladění vnořeného kódu sestavení
+        href: how-to-debug-inline-assembly-code.md
+      - name: Techniky ladění MFC
+        href: mfc-debugging-techniques.md
+      - name: Techniky ladění CRT
+        href: crt-debugging-techniques.md
+        items:
+        - name: Použití knihovny ladění CRT
+          href: crt-debug-library-use.md
+        - name: Makra pro hlášení
+          href: macros-for-reporting.md
+        - name: Ladění verzí funkcí přidělení haldy
+          href: debug-versions-of-heap-allocation-functions.md
+        - name: Podrobnosti haldy ladění CRT
+          href: crt-debug-heap-details.md
+        - name: Zápis funkce volání pro ladění
+          href: debug-hook-function-writing.md
+          items:
+          - name: Funkce volání bloku klienta
+            href: client-block-hook-functions.md
+          - name: Funkce volání přidělení
+            href: allocation-hook-functions.md
+            items:
+            - name: Volání přidělení a přidělení běhové paměti jazyka C
+              href: allocation-hooks-and-c-run-time-memory-allocations.md
+          - name: Funkce volání sestavy
+            href: report-hook-functions.md
+        - name: Hledání nevrácené paměti pomocí knihovny CRT
+          href: finding-memory-leaks-using-the-crt-library.md
+      - name: Nejčastější dotazy k ladění nativního kódu
+        href: debugging-native-code-faqs.md
+        items:
+        - name: Jak mohu ladit narušení přístupu?
+          href: how-can-i-debug-an-access-violation-q.md
+        - name: Jak mohu ladit porušení přístupu, když program spouštím mimo ladicí program?
+          href: how-can-i-debug-access-violations-when-running-my-program-outside-the-debugger-q.md
+        - name: Jak zjistím, že moje ukazatele poškodily adresu paměti?
+          href: how-can-i-find-out-if-my-pointers-corrupt-a-memory-address-q.md
+        - name: Jak zjistím, kdo předává nesprávnou hodnotu parametru?
+          href: how-can-i-find-out-who-is-passing-a-wrong-parameter-value-q.md
+        - name: Jak při opakovaném volání funkce zjistím, jaké volání bylo neúspěšné?
+          href: when-calling-a-function-hundreds-of-times-how-do-i-know-which-call-failed-q.md
+        - name: Kde najdu kódy chyb systému Win32?
+          href: where-can-i-look-up-win32-error-codes-q.md
+        - name: Jak zachovám fokus při procházení programu?
+          href: how-can-i-keep-focus-when-stepping-through-my-program-q.md
+        - name: Jak mohu použít okna ladicího programu během ladění programu na popředí?
+          href: how-can-i-use-debugger-windows-while-debugging-a-foreground-program-q.md
+        - name: Jak mohu ladit funkce rozhraní API systému Windows?
+          href: how-can-i-debug-windows-api-functions-q.md
+        - name: Přechod zpět na funkci, která při zastavení volala MFC.
+          href: how-to-get-back-to-the-function-that-called-mfc-if-halted.md
+      - name: Ladění modelů COM a prvků ActiveX
+        href: com-and-activex-debugging.md
+        items:
+        - name: Ladění serveru a kontejneru modelu COM
+          href: com-server-and-container-debugging.md
+          items:
+          - name: Ladění serverů modelu COM
+            href: how-to-debug-com-servers.md
+            items:
+            - name: aplikace serveru SDI
+              href: sdi-server-applications.md
+          - name: Ladění klientů a serverů modelu COM pomocí ladění RPC
+            href: how-to-debug-com-clients-and-servers-using-rpc-debugging.md
+        - name: Ladění ovládacího prvku ActiveX
+          href: how-to-debug-an-activex-control.md
+          items:
+          - name: Ladění ovládacího prvku ActiveX vázaného na data
+            href: debugging-a-data-bound-activex-control.md
+        - name: Nástroje pro ladění modelu COM
+          href: com-debugging-tools.md
+      - name: Ladění vloženého kódu
+        href: how-to-debug-injected-code.md
+    - name: Ladění kódu GPU
+      href: debugging-gpu-code.md
+    - name: Diagnostika grafiky
+      href: graphics/toc.yml
+    - name: Ladění aplikací ASP.NET
+      href: how-to-enable-debugging-for-aspnet-applications.md
+      items:
+      - name: 'Ladění ASP.NET: Požadavky na systém'
+        href: aspnet-debugging-system-requirements.md
+      - name: Spuštění pracovního procesu pod uživatelským účtem
+        href: how-to-run-the-worker-process-under-a-user-account.md
+      - name: Hledání názvu procesu ASP.NET
+        href: how-to-find-the-name-of-the-aspnet-process.md
+      - name: Ladění nasazených webových aplikací
+        href: debugging-deployed-web-applications.md
+      - name: 'Návod: Ladění webového formuláře'
+        href: walkthrough-debugging-a-web-form.md
+      - name: Ladění výjimek ASP.NET
+        href: how-to-debug-aspnet-exceptions.md
+      - name: 'Ladění webových aplikací: Chyby a řešení potíží'
+        href: debugging-web-applications-errors-and-troubleshooting.md
+        items:
+        - name: 'Ladění webových aplikací: Řešení potíží'
+          href: debugging-web-applications-troubleshooting.md
+          items:
+          - name: Ověření nastavení vlastnosti služby IIS
+            href: how-to-verify-iis-property-settings.md
+        - name: Server používá IP adresu
+          href: error-site-uses-ip-address.md
+        - name: Kontrola zabezpečení selhala, protože služba správy služby IIS neodpověděla.
+          href: error-a-security-check-failed-because-the-iis-admin-service-did-not-respond.md
+        - name: Prostředí ASP.NET není nainstalováno.
+          href: error-aspnet-not-installed.md
+        - name: Ladění se nezdařilo, protože integrované ověřování systému Windows není povoleno.
+          href: error-debugging-failed-because-integrated-windows-authentication-is-not-enabled.md
+        - name: Webový server byl uzamčen a blokuje příkaz DEBUG.
+          href: error-the-web-server-has-been-locked-down-and-is-blocking-the-debug-verb.md
+        - name: Během ladění webových služeb vypršel časový limit.
+          href: error-timeout-while-debugging-web-services.md
+        - name: Na webovém serveru nejde spustit ladění.
+          href: error-unable-to-start-debugging-on-the-web-server.md
+          items:
+          - name: Webový server nemohl najít požadovaný prostředek.
+            href: error-the-web-server-could-not-find-the-requested-resource.md
+          - name: Webový server není správně nakonfigurovaný.
+            href: error-the-web-server-is-not-configured-correctly.md
+    - name: Ladění webových aplikací
+      href: debugging-web-applications.md
+      items:
+      - name: Ladění skriptů na straně klienta
+        href: client-side-script-debugging.md
+        items:
+        - name: Omezení při ladění skriptů
+          href: limitations-on-script-debugging.md
+        - name: Připojení ke skriptu
+          href: how-to-attach-to-script.md
+          items:
+          - name: 'Upozornění: Ladění skriptů zakázáno'
+            href: warning-script-debugging-disabled.md
+    - name: Ladění služeb WCF
+      href: debugging-wcf-services.md
+      items:
+      - name: Omezení ladění WCF
+        href: limitations-on-wcf-debugging.md
+      - name: Krokování s vnořením služeb WCF
+        href: how-to-step-into-wcf-services.md
+      - name: Ladění služby WCF s vlastním hostováním
+        href: how-to-debug-a-self-hosted-wcf-service.md
+  - name: Použití souborů výpisů paměti
+    href: using-dump-files.md
+    items:
+    - name: Rozhraní API rozšíření souhrnu souboru výpisu paměti
+      href: dump-file-summary-extensibility-api.md
+  - name: Zabezpečení ladicího programu
+    href: debugger-security.md
+- name: Odkaz
+  items:
+  - name: Ladění odkazu uživatelského rozhraní
+    href: debugging-user-interface-reference.md
+    items:
+    - name: Vybrat zarážky – dialogové okno
+      href: choose-breakpoints-dialog-box.md
+    - name: Konfigurace brány firewall pro vzdálené ladění – dialogové okno
+      href: configure-firewall-for-remote-debugging-dialog-box.md
+    - name: Ladění, dialogové okno Možnosti
+      href: debugging-options-dialog-box.md
+      items:
+      - name: Obecné, ladění, dialogové okno Možnosti
+        href: general-debugging-options-dialog-box.md
+      - name: Za běhu, ladění, dialogové okno Možnosti
+        href: just-in-time-debugging-options-dialog-box.md
+      - name: Okno Výstup, ladění, dialogové okno Možnosti
+        href: output-window-debugging-options-dialog-box.md
+    - name: Vizualizér DataSetu – dialogové okno
+      href: dataset-visualizer-dialog-box.md
+    - name: Ladění zdrojových souborů, běžné vlastnosti, dialogové okno stránek vlastností řešení
+      href: debug-source-files-common-properties-solution-property-pages-dialog-box.md
+    - name: Upravit a pokračovat – dialogové okno
+      href: edit-and-continue-dialog-box.md
+    - name: Dialogové okno Vybrat typ kódu
+      href: select-code-type-dialog-box.md
+    - name: Ukončit probíhající ladění – dialogové okno
+      href: stop-debugging-in-progress-dialog-box.md
+    - name: Informace o načtení symbolů – dialogové okno
+      href: symbol-load-information-dialog-box.md
+    - name: Při průchodu zarážkou – dialogové okno
+      href: when-breakpoint-is-hit-dialog-box.md
+    - name: Ladění chyb a upozornění – dialogové okno
+      href: debugging-errors-and-warning-dialog-boxes.md
+      items:
+      - name: Kontrolní výraz je neplatný – dialogové okno
+        href: assertion-failed-dialog-box.md
+      - name: Nelze změnit hodnotu – dialogové okno
+        href: cannot-change-value-dialog-box.md
+      - name: Ladicí program nemůže zobrazit zdrojový kód nebo zpětný překlad.
+        href: debugger-cannot-display-source-code-or-disassembly.md
+      - name: Spustitelný soubor pro relaci ladění – dialogové okno
+        href: executable-for-debugging-session-dialog-box.md
+      - name: Upravit a pokračovat – dialogové okno (C++)
+        href: edit-and-continue-dialog-box-cpp.md
+      - name: Microsoft Visual Studio Debugger (vyvolána výjimka) – dialogové okno
+        href: microsoft-visual-studio-debugger-exception-thrown-dialog-box.md
+      - name: Žádný zdroj není k dispozici.
+        href: no-source-available.md
+      - name: Vyřešit nejednoznačnosti – dialogové okno
+        href: resolve-ambiguity-dialog-box.md
+      - name: Upozornění na starý kód – dialogové okno
+        href: stale-code-warning-dialog-box.md
+      - name: Nelze připojit k procesu.
+        href: unable-to-attach-to-the-process.md
+      - name: Chybové zprávy operace Upravit a pokračovat – dialogové okno
+        href: edit-and-continue-error-message-dialog-box.md
+      - name: Při vyhodnocování funkce „function“ vypršel časový limit, a proto bylo potřeba ji přerušit nebezpečným způsobem.
+        href: error-evaluating-the-function-function-timed-out-and-needed-to-be-aborted-in-an-unsafe-way.md
+      - name: Při vyhodnocování funkce „function“ byl cílový proces ukončen s kódem „code“.
+        href: error-evaluating-the-function-process-exited.md
+      - name: Na vzdáleném počítači se nepodařilo připojit k SQL Serveru.
+        href: error-unable-to-connect-to-sql-server-on-remote-machine.md
+      - name: Nepodařilo se získat přístup k ladicímu prostředí SQL serveru.
+        href: error-unable-to-access-the-sql-server-debugging-interface.md
+      - name: Příkaz SQL nemůže najít SSDEBUGPS.
+        href: error-sql-can-t-find-ssdebugps.md
+      - name: Spuštění Transact-SQL skončilo bez ladění.
+        href: error-transact-sql-execution-ended-without-debugging.md
+      - name: Uživatel nemohl spustit uloženou proceduru sp_enable_sql_debug.
+        href: error-user-could-not-execute-stored-procedure-sp-enable-sql-debug.md
+      - name: Sdílení souborů systému Windows bylo nakonfigurováno...
+        href: error-windows-file-sharing-has-been-configured-dot-dot-dot.md
+      - name: 'Upozornění zabezpečení: Připojení k procesu, jehož vlastníkem je nedůvěryhodný uživatel, může být nebezpečné. Pokud následující údaje vypadají podezřele nebo si nejste jistí, k tomuto procesu se nepřipojujte.'
+        href: security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md
+      - name: 'Upozornění zabezpečení: Ladicí program musí spustit nedůvěryhodný příkaz.'
+        href: security-warning-debugger-must-execute-untrusted-command.md
+      - name: Výstraha zabezpečení zdrojového serveru
+        href: source-server-security-alert.md
+      - name: Ladění ve smíšeném režimu pro procesy x64 je podporováno, pouze pokud používáte rozhraní Microsoft .NET Framework 4 nebo vyšší
+        href: mixed-mode-debugging-for-x64-processes-is-only-supported-when-using-microsoft-dotnet-framework-4-or-greater.md
+      - name: Ladění ve smíšeném režimu není pro procesy IA64 podporováno.
+        href: mixed-mode-debugging-for-ia64-processes-is-unsupported.md
+      - name: Ladění ve smíšeném režimu je podporováno, pouze pokud používáte rozhraní Microsoft .NET Framework 2.0 nebo 3.0.
+        href: mixed-mode-debugging-is-only-supported-when-using-microsoft-dotnet-framework-2-0-or-3-0.md
+  - name: Přístup k rozhraní ladění SDK
+    href: debug-interface-access/debug-interface-access-sdk.md
+  - name: Nápověda nástroje Spy++
+    href: spy-increment-help.md
+    items:
+    - name: Použití nástroje Spy++
+      href: using-spy-increment.md
+      items:
+      - name: Představení nástroje Spy++
+        href: introducing-spy-increment.md
+      - name: Spuštění nástroje Spy++
+        href: how-to-start-spy-increment.md
+      - name: panel nástrojů nástroje Spy++
+        href: spy-increment-toolbar.md
+      - name: Zobrazení nástroje Spy++
+        href: how-to-display-spy-increment-views.md
+      - name: Aktualizace zobrazení
+        href: how-to-refresh-the-view.md
+      - name: Změna písem
+        href: how-to-change-fonts.md
+      - name: Rozbalení a sbalení stromů nástroje Spy++
+        href: how-to-expand-and-collapse-spy-increment-trees.md
+    - name: Zobrazení nástroje Spy++
+      href: spy-increment-views.md
+      items:
+      - name: Zobrazení oken
+        href: windows-view.md
+        items:
+        - name: Použití nástroje Hledání
+          href: how-to-use-the-finder-tool.md
+        - name: Hledání okna v zobrazení oken
+          href: how-to-search-for-a-window-in-windows-view.md
+        - name: Zobrazení vlastností okna
+          href: how-to-display-window-properties.md
+      - name: Zobrazení zpráv
+        href: messages-view.md
+        items:
+        - name: Řízení zobrazení zpráv
+          href: how-to-control-messages-view.md
+        - name: Otevření zobrazení zpráv z vyhledávacího okna
+          href: how-to-open-messages-view-from-find-window.md
+        - name: Hledání zprávy v zobrazení zpráv
+          href: how-to-search-for-a-message-in-messages-view.md
+        - name: Spuštění a zastavení zobrazení protokolu zpráv
+          href: how-to-start-and-stop-the-message-log-display.md
+        - name: Kódy zpráv
+          href: message-codes.md
+        - name: Zobrazení vlastností zprávy
+          href: how-to-display-message-properties.md
+      - name: Zobrazení procesů
+        href: processes-view.md
+        items:
+        - name: Hledání procesu v zobrazení procesů
+          href: how-to-search-for-a-process-in-processes-view.md
+        - name: Zobrazení vlastností procesu
+          href: how-to-display-process-properties.md
+      - name: Zobrazení vláken
+        href: threads-view.md
+        items:
+        - name: Hledání vlákna v zobrazení vláken
+          href: how-to-search-for-a-thread-in-threads-view.md
+        - name: Zobrazení vlastností vlákna
+          href: how-to-display-thread-properties.md
+    - name: Referenční dokumentace nástroje Spy++
+      href: spy-increment-reference.md
+      items:
+      - name: Příkazy nabídky
+        href: menu-commands.md
+        items:
+        - name: příkazy nabídky nástroje Spy
+          href: spy-menu-commands.md
+        - name: příkazy nabídky stromu
+          href: tree-menu-commands.md
+        - name: příkazy nabídky vyhledávání
+          href: search-menu-commands.md
+        - name: příkazy nabídky zobrazení
+          href: view-menu-commands.md
+        - name: příkazy nabídky zpráv
+          href: messages-menu-commands.md
+        - name: příkazy nabídky okna
+          href: window-menu-commands.md
+        - name: příkazy nabídky nápovědy
+          href: help-menu-commands.md
+      - name: Dialogové okno písem (nápověda nástroje Microsoft Spy++)
+        href: font-dialog-box-microsoft-spy-increment-help.md
+      - name: Vyhledávací nástroje pro zobrazení nástroje Spy++
+        href: search-tools-for-spy-increment-views.md
+        items:
+        - name: Dialogové okno vyhledávacího okna
+          href: find-window-dialog-box.md
+        - name: Dialogové okno hledání oken
+          href: window-search-dialog-box.md
+        - name: dialogové okno pro vyhledávání zpráv
+          href: message-search-dialog-box.md
+        - name: Dialogové okno hledání procesů
+          href: process-search-dialog-box.md
+        - name: Dialogové okno hledání vláken
+          href: thread-search-dialog-box.md
+      - name: dialogové okno vlastností oken
+        href: window-properties-dialog-box.md
+        items:
+        - name: Karta Obecné, dialogové okno vlastnosti okna
+          href: general-tab-window-properties-dialog-box.md
+        - name: Karta Styly, dialogové okno vlastnosti okna
+          href: styles-tab-window-properties-dialog-box.md
+        - name: Karta Okna, dialogové okno vlastnosti okna
+          href: windows-tab-window-properties-dialog-box.md
+        - name: Karta Třída, dialogové okno vlastnosti okna
+          href: class-tab-window-properties-dialog-box.md
+        - name: Karta Proces, dialogové okno vlastnosti okna
+          href: process-tab-window-properties-dialog-box.md
+      - name: Dialogové okno možností zpráv
+        href: message-options-dialog-box.md
+        items:
+        - name: Karta Okna, dialogové okno možností zpráv
+          href: windows-tab-message-options-dialog-box.md
+        - name: Karta Zprávy, dialogové okno možností zpráv
+          href: messages-tab-message-options-dialog-box.md
+        - name: Karta Výstup, dialogové okno možností zpráv
+          href: output-tab-message-options-dialog-box.md
+      - name: Dialogové okno vlastností zpráv
+        href: message-properties-dialog-box.md
+      - name: Dialogové okno vlastností procesů
+        href: process-properties-dialog-box.md
+        items:
+        - name: Karta Obecné, dialogové okno vlastností procesu
+          href: general-tab-process-properties-dialog-box.md
+        - name: Karta Paměť, dialogové okno vlastností procesu
+          href: memory-tab-process-properties-dialog-box.md
+        - name: Karta Soubor stránky, dialogové okno vlastností procesu
+          href: page-file-tab-process-properties-dialog-box.md
+        - name: Karta Prostor, dialogové okno vlastností procesu
+          href: space-tab-process-properties-dialog-box.md
+      - name: Dialogové okno vlastností vláken
+        href: thread-properties-dialog-box.md
+        items:
+        - name: Karta Obecné, dialogové okno vlastností vlákna
+          href: general-tab-thread-properties-dialog-box.md
+      - name: Jiná dialogová okna
+        href: other-dialog-boxes.md
+        items:
+        - name: O nástroji Microsoft Spy++
+          href: about-microsoft-spy-increment.md
+        - name: Prohlášení o autorských právech pro nápovědu nástroje Spy++
+          href: copyright-notice-for-spy-increment-help.md
+- name: Prostředky
+  items:
+  - name: Novinky v ladicím programu sady Visual Studio
+    href: what-s-new-for-the-debugger-in-visual-studio.md
+ms.openlocfilehash: 82809574dbbecf01e26e1677a4bb22ce9a482cf6
+ms.sourcegitcommit: d7f232a7596420e40ff8051d42cdf90203af4a74
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52821393"

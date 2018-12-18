@@ -1,5 +1,5 @@
 ---
-title: IDiaPropertyStorage::ReadPropertyNames | Microsoft Docs
+title: IDiaPropertyStorage::ReadPropertyNames | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a13ac0e3a1af8dc20fe63f832e7a19d7bf40c271
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 4d51eaed785932703a5eb97714be8dc7b407fc81
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49891814"
 ---
 # <a name="idiapropertystoragereadpropertynames"></a>IDiaPropertyStorage::ReadPropertyNames
-Načte odpovídající názvy řetězec pro danou vlastnost identifikátory.  
+Načte odpovídající názvů řetězce pro daný vlastnost identifikátory.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,19 +36,19 @@ HRESULT ReadPropertyNames (
   
 #### <a name="parameters"></a>Parametry  
  `cpropid`  
- [v] Počet ID vlastnosti v `rgpropid`.  
+ [in] Počet ID vlastnosti v `rgpropid`.  
   
  `rgpropid`  
- [v] Pole ID vlastnost, pro které chcete získat názvy (`PROPID` je definována v WTypes.h jako `ULONG`).  
+ [in] Pole ID vlastnost, pro které chcete načíst názvy (`PROPID` je definována v WTypes.h jako `ULONG`).  
   
  `rglpwstrName`  
- [ve out] Pole názvy vlastností pro zadanou vlastnost ID. Pole musí být předběžně přidělených pro uložení požadovaný počet názvů vlastností a musí být schopna uchovat alespoň `cpropid``BSTR` řetězce.  
+ [out v] Pole názvy vlastností pro zadanou vlastnost ID. Pole musí být předběžně přidělit k uložení požadovaného počtu názvy vlastností a musí být do něj vejít aspoň `cpropid``BSTR` řetězce.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Názvy vrácených vlastností, které musí být uvolněno (voláním `SysFreeString` funkce) Pokud jsou už nepotřebují.  
+ Názvy vráceného vlastností, které musí být uvolněna (voláním `SysFreeString` funkce) když jsou už nepotřebujete.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

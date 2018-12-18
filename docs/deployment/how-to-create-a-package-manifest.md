@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: vytvoření manifestu balíčku | Microsoft Docs'
+title: 'Postupy: vytvoření manifestu balíčku | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -20,30 +20,31 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 54c2e6a231ce597e2ec6a3e04cf74521b6c10d2e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 38a0c448bcf629c4e914393cb8eabad93ced574c
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39154626"
 ---
-# <a name="how-to-create-a-package-manifest"></a>Postupy: Vytvoření manifestu balíčku
-K nasazení požadovaných součástí pro aplikaci, můžete použít balíček zaváděcího nástroje. Balíček zaváděcího nástroje obsahuje jeden produkt soubor manifestu ale manifest balíčku pro každé národní prostředí. Sdílené funkce přes různé lokalizované verze by měli přejít do manifestu produktu.  
+# <a name="how-to-create-a-package-manifest"></a>Postupy: vytvoření manifestu balíčku
+Nasazení nezbytných součástí pro vaši aplikaci, můžete balíček zaváděcího nástroje. Balíček zaváděcího nástroje obsahuje jeden produkt soubor manifestu ale manifest balíčku pro každé národní prostředí. Sdílené funkce přes různé lokalizované verze by měly patřit do manifestu produktu.  
   
- Další informace o balíčku manifesty najdete v tématu [postupy: vytvoření produktu Manifest](../deployment/how-to-create-a-product-manifest.md).  
+ Další informace o manifestech balíčku najdete v tématu [postupy: vytvoření manifestu produktu](../deployment/how-to-create-a-product-manifest.md).  
   
-## <a name="creating-the-package-manifest"></a>Vytvoření manifestu balíčku  
+## <a name="create-the-package-manifest"></a>Vytvoření manifestu balíčku  
   
-#### <a name="to-create-the-package-manifest"></a>Chcete-li vytvořit manifest balíčku  
+#### <a name="to-create-the-package-manifest"></a>K vytvoření manifestu balíčku  
   
-1.  Vytvořte adresář pro balíček zaváděcího nástroje. Tento příklad používá C:\package.  
+1.  Vytvořte adresář pro balíček zaváděcího nástroje. Tento příklad používá *C:\package*.  
   
-2.  Vytvořte podadresáři s názvem národní prostředí, jako je například en pro angličtinu.  
+2.  Vytvořte podadresář s názvem národního prostředí, jako například *en* pro angličtinu.  
   
-3.  V sadě Visual Studio, vytvořte soubor XML, který je pojmenován `package.xml`a uložte ho do složky C:\package\en.  
+3.  V sadě Visual Studio, vytvořit soubor XML, který je pojmenován *package.xml*a uložit ho. tím *C:\package\en* složky.  
   
-4.  Přidejte XML pro název balíčku zaváděcího nástroje, jazykovou verzi pro tohoto lokalizovaného manifestu balíčku a volitelné licenční smlouvy. Následující kód XML používá proměnné `DisplayName` a `Culture`, které jsou definovány v předchozím prvku.  
+4.  Přidejte XML pro název balíčku zaváděcího nástroje, jazykovou verzi pro tento manifest balíčku lokalizované a volitelné licenční smlouvu. Následující kód XML používá proměnné `DisplayName` a `Culture`, které jsou definovány v prvku novější.  
   
-    ```  
+    ```xml  
     <Package  
         xmlns="http://schemas.microsoft.com/developer/2004/01/bootstrapper"  
         Name="DisplayName"  
@@ -51,17 +52,17 @@ K nasazení požadovaných součástí pro aplikaci, můžete použít balíček
         LicenseAgreement="eula.txt">  
     ```  
   
-5.  Přidejte XML pro všechny soubory, které jsou v adresáři specifická pro národní prostředí. Následující kód XML používá soubor s názvem eula.txt, které platí pro **en** národního prostředí.  
+5.  Přidejte XML pro všechny soubory, které jsou v adresáři specifických pro národní prostředí. Následující kód XML používá soubor s názvem *eula.txt* , který je možné použít **en** národní prostředí.  
   
-    ```  
+    ```xml  
     <PackageFiles>  
       <PackageFile Name="eula.txt"/>  
     </PackageFiles>  
     ```  
   
-6.  Přidejte XML tak, aby definovat lokalizovatelný řetězce pro balíček zaváděcího nástroje. Následující kód XML přidá chyby řetězce pro národní prostředí cs.  
+6.  Přidejte kód jazyka XML pro definování lokalizovatelných řetězců pro balíček zaváděcího nástroje. Přidá chybové řetězce pro následující kód XML **en** národní prostředí.  
   
-    ```  
+    ```xml  
       <Strings>  
         <String Name="DisplayName">Custom Bootstrapper Package</String>  
         <String Name="CultureName">en</String>  
@@ -72,12 +73,12 @@ K nasazení požadovaných součástí pro aplikaci, můžete použít balíček
     </Strings>  
     ```  
   
-7.  Zkopírujte složku C:\package do adresáře zaváděcího nástroje Visual Studio. Pro Visual Studio 2010 je to adresář SDKs\Windows\v7.0A\Bootstrapper\Packages \Program Files\Microsoft.  
+7.  Kopírovat *C:\package* složky zaváděcího nástroje adresáře sady Visual Studio. Pro Visual Studio 2010, je to *\Program Files\Microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages* adresáře.  
   
 ## <a name="example"></a>Příklad  
- Manifest balíčku obsahuje informace specifické pro národní prostředí, například chybové zprávy, licenční podmínky pro software a jazykových sad.  
+ Manifest balíčku obsahuje informace o specifických pro národní prostředí, jako jsou chybové zprávy, licenční podmínky pro software a jazykových sad.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <Package  
   xmlns="http://schemas.microsoft.com/developer/2004/01/bootstrapper"  
@@ -99,5 +100,5 @@ installing this package.</String>
 </Package>  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [Referenční schéma balíčku a produktu](../deployment/product-and-package-schema-reference.md)
+## <a name="see-also"></a>Viz také:  
+ [Referenční dokumentace schématu produktů a balíčků](../deployment/product-and-package-schema-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: MODULE_INFO_FLAGS | Microsoft Docs
+title: MODULE_INFO_FLAGS | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ee2676b85889226e2fbb9665462d83aa4b0d6520
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2422c2578979b1fc8c5f07ba92aa4117c87042d1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49933908"
 ---
 # <a name="moduleinfoflags"></a>MODULE_INFO_FLAGS
 Určuje stav symbolů pro modul.  
@@ -41,10 +42,10 @@ public enum enum_MODULE_INFO_FLAGS {
   
 ## <a name="members"></a>Členové  
  MIF_SYMBOLS_LOADED  
- Alespoň jednu sadu symbolů byl načten modulem (jinak byly načteny žádné symboly).  
+ Aspoň jedna sada symboly byl načten modulem (jinak nebyly načteny žádné symboly).  
   
 ## <a name="remarks"></a>Poznámky  
- Tato hodnota je vrácený [getsymbolsearchinfo –](../../../extensibility/debugger/reference/idebugsymbolsearchevent2-getsymbolsearchinfo.md) metoda.  
+ Tato hodnota je vrácený [getsymbolsearchinfo –](../../../extensibility/debugger/reference/idebugsymbolsearchevent2-getsymbolsearchinfo.md) metody.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  
@@ -55,4 +56,4 @@ public enum enum_MODULE_INFO_FLAGS {
   
 ## <a name="see-also"></a>Viz také  
  [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [Getsymbolsearchinfo –](../../../extensibility/debugger/reference/idebugsymbolsearchevent2-getsymbolsearchinfo.md)
+ [GetSymbolSearchInfo](../../../extensibility/debugger/reference/idebugsymbolsearchevent2-getsymbolsearchinfo.md)

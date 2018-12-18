@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31480212"
 ---
 # <a name="inspect-xaml-properties-while-debugging"></a>Kontrola vlastností XAML při ladění
 Můžete získat v reálném čase zobrazení spuštěného kódu XAML s **dynamickém vizuálním stromu** a **Live Explorer vlastnost**. Tyto nástroje získáte stromové zobrazení prvků uživatelského rozhraní spuštěné aplikace XAML a můžete zobrazit vlastnosti runtime libovolný element uživatelského rozhraní, které vyberete.  

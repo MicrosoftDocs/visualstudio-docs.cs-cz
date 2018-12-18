@@ -1,7 +1,8 @@
 ---
-title: Analyzovat data o využití procesoru (spravovaný kód) | Microsoft Docs
-ms.custom: ''
-ms.date: 12/05/2017
+title: Analýza dat o využití procesoru (spravovaný kód)
+description: Měřit výkon aplikace v C# a Visual Basic pomocí diagnostického nástroje využití CPU
+ms.custom: mvc
+ms.date: 08/06/2018
 ms.technology: vs-ide-debug
 ms.topic: quickstart
 helpviewer_keywords:
@@ -12,41 +13,43 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: cac26376df6a5e7dc26b55e07fbebe240b1511de
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 35c6fd1ea079dd95367bcb7763787f0b06839ecb
+ms.sourcegitcommit: db94ca7a621879f98d4c6aeefd5e27da1091a742
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42624252"
 ---
-# <a name="analyze-cpu-usage-data-in-visual-studio-managed-code"></a>Analyzovat data o využití procesoru v sadě Visual Studio (spravovaný kód)
+# <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-managed-code"></a>Rychlý start: Analýza dat o využití procesoru v aplikaci Visual Studio (spravovaný kód)
 
-Visual Studio poskytuje mnoho výkonné funkce, které vám pomůžou analyzovat problémy s výkonem v aplikaci. Toto téma poskytuje rychlý způsob, jak další některé základní funkce. Zde podíváme na nástroj, který identifikovat kritická místa výkonu z důvodu vysoké využití procesoru. Diagnostické nástroje jsou podporované pro .NET – vývoj v sadě Visual Studio, včetně ASP.NET a pro vývoj nativní/C++.
+Visual Studio poskytuje mnoha výkonným funkcím, které vám pomůžou analyzovat problémy s výkonem v aplikaci. Toto téma poskytuje rychlý způsob, jak Seznamte se s některými základními funkcemi. Tady podíváme na nástroj, který identifikovat kritické body výkonu kvůli vysokému využití procesoru. Diagnostické nástroje jsou podporované pro vývoj rozhraní .NET v sadě Visual Studio, včetně ASP.NET, nativního vývoje a vývoje v jazyce C++.
 
-Centrum diagnostiky nabízí mnoho dalších možností spouštět a spravovat relace diagnostiky. Pokud **využití procesoru** nástroj zde popsané nezískáte data, která budete potřebovat, [jiných nástrojů pro profilaci](../profiling/profiling-feature-tour.md) poskytují různé druhy informace, které mohou být užitečné pro vás. V mnoha případech kritická místa výkonu aplikace může být způsobeno něco jiného než procesoru, jako je například paměť, vykreslování uživatelského rozhraní nebo doba požadavku sítě. Centrum diagnostiky nabízí spoustu dalších možností zaznamenávat a analyzovat tento druh data.
+Diagnostické centrum nabízí řadu dalších možností, jak spustit a spravovat diagnostické relace. Pokud **využití procesoru** nástroj je zde popsáno, vám neuděluje data, která budete potřebovat, [jiných nástrojů pro profilaci](../profiling/profiling-feature-tour.md) poskytují různé druhy informací, které může být pro vás užitečné. V řadě případů může být kritickým bodem aplikace něco jiného než procesor, třeba paměť, vykreslování uživatelského rozhraní nebo dlouhá odezva síťového požadavku. Diagnostické centrum nabízí řadu dalších možností, jak data tohoto druhu zaznamenávat a analyzovat.
 
-> [!NOTE]
-> Pro .NET Core a ASP.NET Core nástroje využití CPU aktuálně neposkytuje přesné výsledky s přenosné PBDs. Místo toho použijte úplný soubory PDB.
+Windows 8 a novější se vyžaduje pro spuštění nástrojů pro profilaci s ladicím programem (**diagnostické nástroje** okno). Ve Windows 7 a novější, můžete použít nástroj a dodatečně [Profiler výkonu](../profiling/profiling-feature-tour.md).
 
 ## <a name="create-a-project"></a>Vytvoření projektu
 
-1. V sadě Visual Studio, vyberte **soubor > Nový projekt**.
+1. V sadě Visual Studio, zvolte **souboru** > **nový projekt**.
 
-2. V části **Visual C#** nebo **jazyka Visual Basic**, zvolte **Windows Classic Desktop**a potom v prostředním podokně vyberte **konzolovou aplikaci (rozhraní .NET Framework)**.
+2. V části **Visual C#** nebo **jazyka Visual Basic**, zvolte **Windows Desktop**a potom v prostředním podokně vyberte **Konzolová aplikace (.NET Framework)**.
 
-3. Zadejte název jako **MyProfilerApp** a klikněte na tlačítko **OK**.
+    Pokud se nezobrazí **konzolovou aplikaci** šablony projektu, klikněte na tlačítko **otevřít instalační program Visual Studio** odkaz v levém podokně **nový projekt** dialogové okno. Spustí se instalační program pro Visual Studio. Zvolte **.NET Desktop development** úloh, klikněte na tlačítko **změnit**.
+
+3. Zadejte název, například **MyProfilerApp** a klikněte na tlačítko **OK**.
 
     Visual Studio vytvoří projekt.
 
-2. Otevřete Program.cs a všechny kódu nahraďte následujícím kódem:
+2. Otevřít *Program.cs* a nahraďte kód následujícím kódem:
 
-    ```cs
+    ```csharp
     using System;
     using System.Threading;
     public class ServerClass
     {
         const int MIN_ITERATIONS = int.MaxValue / 1000;
         const int MAX_ITERATIONS = MIN_ITERATIONS + 10000;
-    
+
         long m_totalIterations = 0;
         readonly object m_totalItersLock = new object();
         // The method that will be called when the thread is started.
@@ -54,10 +57,10 @@ Centrum diagnostiky nabízí mnoho dalších možností spouštět a spravovat r
         {
             Console.WriteLine(
                 "ServerClass.InstanceMethod is running on another thread.");
-    
+
             var x = GetNumber();
         }
-    
+
         private int GetNumber()
         {
             var rand = new Random();
@@ -67,8 +70,8 @@ Centrum diagnostiky nabízí mnoho dalších možností spouštět a spravovat r
             {
                 m_totalIterations += iters;
             }
-            // we're just spinning here  
-            // and using Random to frustrate compiler optimizations  
+            // we're just spinning here
+            // and using Random to frustrate compiler optimizations
             for (var i = 0; i < iters; i++)
             {
                 result = rand.Next();
@@ -76,7 +79,7 @@ Centrum diagnostiky nabízí mnoho dalších možností spouštět a spravovat r
             return result;
         }
     }
-    
+
     public class Simple
     {
         public static void Main()
@@ -89,14 +92,14 @@ Centrum diagnostiky nabízí mnoho dalších možností spouštět a spravovat r
         public static void CreateThreads()
         {
             ServerClass serverObject = new ServerClass();
-    
+
             Thread InstanceCaller = new Thread(new ThreadStart(serverObject.DoWork));
             // Start the thread.
             InstanceCaller.Start();
-    
+
             Console.WriteLine("The Main() thread calls this after "
                 + "starting the new InstanceCaller thread.");
-    
+
         }
     }
     ```
@@ -104,21 +107,21 @@ Centrum diagnostiky nabízí mnoho dalších možností spouštět a spravovat r
     ```vb
     Imports System
     Imports System.Threading
-    
+
     Namespace MyProfilerApp
         Public Class ServerClass
             Const MIN_ITERATIONS As Integer = Integer.MaxValue / 1000
             Const MAX_ITERATIONS As Integer = MIN_ITERATIONS + 10000
-    
+
             Private m_totalIterations As Long = 0
             ReadOnly m_totalItersLock As New Object()
             ' The method that will be called when the thread is started.
             Public Sub DoWork()
                 Console.WriteLine("ServerClass.InstanceMethod is running on another thread.")
-    
+
                 Dim x = GetNumber()
             End Sub
-    
+
             Private Function GetNumber() As Integer
                 Dim rand = New Random()
                 Dim iters = rand.[Next](MIN_ITERATIONS, MAX_ITERATIONS)
@@ -126,15 +129,15 @@ Centrum diagnostiky nabízí mnoho dalších možností spouštět a spravovat r
                 SyncLock m_totalItersLock
                     m_totalIterations += iters
                 End SyncLock
-                ' we're just spinning here  
-                ' and using Random to frustrate compiler optimizations  
+                ' we're just spinning here
+                ' and using Random to frustrate compiler optimizations
                 For i As Integer = 0 To iters - 1
                     result = rand.[Next]()
                 Next
                 Return result
             End Function
         End Class
-    
+
         Public Class Simple
             Public Shared Sub Main()
                 For i As Integer = 0 To 199
@@ -143,24 +146,24 @@ Centrum diagnostiky nabízí mnoho dalších možností spouštět a spravovat r
             End Sub
             Public Shared Sub CreateThreads()
                 Dim serverObject As New ServerClass()
-    
+
                 Dim InstanceCaller As New Thread(New ThreadStart(AddressOf serverObject.DoWork))
                 ' Start the thread.
                 InstanceCaller.Start()
-    
+
                 Console.WriteLine("The Main() thread calls this after " + "starting the new InstanceCaller thread.")
-    
+
             End Sub
         End Class
     End Namespace
     ```
 
     > [!NOTE]
-    > V jazyce Visual Basic, ujistěte se objekt spuštění je nastavena na `Sub Main` (**vlastnosti > aplikace > spouštěcí objekt**).
+    > V jazyce Visual Basic, ujistěte se, že spouštěcí objekt je nastavena na `Sub Main` (**vlastnosti** > **aplikace** > **spouštěcí objekt**).
 
-##  <a name="BKMK_Quick_start__Collect_diagnostic_data"></a> Krok 1: Shromáždění data profilování 
-  
-1.  Nejdřív nastavit zarážky ve vaší aplikaci tento řádek kódu `Main` funkce:
+##  <a name="step-1-collect-profiling-data"></a>Krok 1: Shromáždění profilačních dat
+
+1.  Nejprve nastavte zarážku v aplikaci na tomto řádku kódu v `Main` funkce:
 
     `for (int i = 0; i < 200; i++)`
 
@@ -168,72 +171,72 @@ Centrum diagnostiky nabízí mnoho dalších možností spouštět a spravovat r
 
     `For i As Integer = 0 To 199`
 
-    Nastavte zarážky kliknutím v mřížky doleva řádek kódu.
+    Po kliknutí na ovládací prvek vlevo od řádku kódu, nastavte zarážku.
 
-2.  V dalším kroku nastavení druhý zarážky na pravé složené závorce na konci `Main` funkce:
+2.  Dále nastavte zarážku druhý na pravou složenou závorku na konci `Main` funkce:
 
-     ![Nastavte zarážky pro profilace](../profiling/media/quickstart-cpu-usage-breakpoints.png "nastavit zarážky pro profilaci")
-
-    > [!TIP]
-    > Nastavením dvě zarážky můžete omezit shromažďování dat na části kódu, který chcete analyzovat.
-  
-3.  **Diagnostické nástroje** okno již viditelné, pokud jste vypnuli ho. Zobrazte okno znovu, klikněte na tlačítko **ladění / Windows / zobrazit diagnostické nástroje**.
-
-4.  Klikněte na tlačítko **ladění / spusťte ladění** (nebo **spustit** na panelu nástrojů nebo **F5**).
-
-     Po dokončení načítání, aplikace **Souhrn** diagnostické nástroje se zobrazí.
-
-5.  Při ladicího programu je pozastavena, povolení shromažďování těchto dat o využití procesoru výběrem **záznam procesoru profil**a pak otevřete **využití procesoru** kartě.
-
-     ![Diagnostické nástroje povolit profilace procesoru](../profiling/media/quickstart-cpu-usage-summary.png "diagnostické nástroje povolit procesoru profilace")
-
-     Pokud je povoleno shromažďování dat, zobrazí tlačítko záznam červeném kroužku.
-
-     Pokud vyberete **záznam procesoru profil**, Visual Studio bude nahráváním funkcí a jak dlouho budou chtít provést a také poskytuje časová osa grafu, můžete se zaměřit na konkrétní segmenty relace vzorkování. Tato shromážděná data můžete zobrazit, jenom když aplikace se zastavilo na zarážce.
-
-6.  Stiskněte F5 a spusťte aplikaci k vaší zarážce druhý.
-
-     Nyní nyní máte údaje o výkonu pro vaši aplikaci speciálně pro oblast kód, který běží mezi dvěma zarážky.
-
-     Profileru začne přípravu dat přístup z více vláken. Počkejte na její dokončení.
-  
-     Zobrazí sestavu v nástroj využití procesoru **využití procesoru** kartě.
-
-     V tomto okamžiku můžete začít analyzovat data.
-
-## <a name="Step2"></a> Krok 2: Analyzovat data o využití procesoru
-
-Doporučujeme začít analýza dat kontrolou seznamu funkcí podle využití procesoru, určení funkcí, které pracujeme na maximum a pak trvá bližší pohled na každé z nich.
-
-1. V seznamu funkce zkontrolujte funkce, které pracujeme na maximum.
-
-     ![Diagnostické nástroje využití CPU karta](../profiling/media/quickstart-cpu-usage-cpu.png "DiagToolsCPUUsageTab")
+     ![Nastavení zarážek pro profilování](../profiling/media/quickstart-cpu-usage-breakpoints.png "nastavit zarážky pro profilaci")
 
     > [!TIP]
-    > Funkce jsou uvedeny v pořadí od těch, které nejvíce pracuje (nejsou v pořadí volání). Díky tomu můžete rychle zjistit nejdelší spuštěné funkce.
+    > Nastavením dvou zarážek omezíte shromažďování dat jenom na analyzovanou část kódu.
 
-2. V seznamu funkce dvakrát klikněte `ServerClass::GetNumber` funkce.
+3.  **Diagnostické nástroje** okno již viditelné, pokud jste ji vypnuli. Otevřete okno znovu, klikněte na tlačítko **ladění** > **Windows** > **zobrazit diagnostické nástroje**.
 
-    Když dvakrát kliknete funkce **volající/volaný** zobrazení se otevře v levém podokně. 
+4.  Klikněte na tlačítko **ladění** > **spustit ladění** (nebo **Start** na panelu nástrojů nebo **F5**).
 
-    ![Diagnostické nástroje volající volaný – zobrazení](../profiling/media/quickstart-cpu-usage-caller-callee.png "DiagToolsCallerCallee")
+     Po dokončení načítání, aplikace **Souhrn** zobrazí diagnostické nástroje.
 
-    V tomto zobrazení vybrané funkce se zobrazí v záhlaví a v **aktuální funkce** pole (`GetNumber`, v tomto příkladu). Funkce, která volá funkci current se zobrazí na levé straně v části **volání funkce**, a všechny funkce volá funkci current se zobrazují v **volat funkce** pole na pravé straně. (Můžete vybrat buď použijte ke změně aktuální funkce.)
+5.  Když ladicí program je pozastavený, Povolit shromažďování dat o využití procesoru výběrem **profil CPU záznam**a pak otevřete **využití procesoru** kartu.
 
-    Toto zobrazení uvádí celkový čas (ms) a procento celkového aplikaci spuštěnou dobu, po kterou funkce provedlo v návaznosti na Dokončit.
+     ![Diagnostické nástroje povolit profilaci procesoru](../profiling/media/quickstart-cpu-usage-summary.png "diagnostické nástroje povolit profilaci procesoru")
 
-    **Funkce text** také ukazuje celkové množství času (a procentuální hodnotu času) věnovaný tělo funkce bez doby věnovaný volání a funkce s názvem. (V tomto obrázku byly tělo funkce a zbývající čas strávený 2856 mimo 2863 ms (< 20 ms) byl stráven v externí kódu volaného pomocí této funkce). Skutečné hodnoty se liší v závislosti na vašem prostředí.
+     Když je povolené shromažďování dat, tlačítko záznam zobrazí červený kruh.
+
+     Při výběru **profil CPU záznam**, Visual Studio bude nahráváním vašich funkcí a jak dlouho jim trvá spuštění a také obsahuje graf časové osy vám umožní zaměřit se na určité segmenty relace odběru vzorků. Tato shromážděná data můžete zobrazit pouze, když vaše aplikace je zastaven na zarážce.
+
+6.  Stisknutím klávesy **F5** ke spuštění aplikace na druhém zarážku.
+
+     Teď máte údaje o výkonu aplikace přesně pro oblast kódu spuštěnou mezi dvěma zarážkami.
+
+     Profiler začne připravovat údaje o vlákně. Počkejte, až skončí.
+
+     V nástroji Využití procesoru se na kartě **Využití procesoru** zobrazí sestava.
+
+     Teď můžete začít analyzovat data.
+
+## <a name="step-2-analyze-cpu-usage-data"></a>Krok 2: Analýza dat o využití procesoru
+
+Analýzu dat doporučujeme začít tím, že zkontrolujete seznam funkcí na kartě Využití procesoru. Zjistěte nejaktivnější funkce a pak se na každou z nich podívejte podrobněji.
+
+1. V seznamu funkcí se podívejte, jaké funkce vykonávají většinu práce.
+
+     ![Karta Využití procesoru v diagnostických nástrojích](../profiling/media/quickstart-cpu-usage-cpu.png "DiagToolsCPUUsageTab")
 
     > [!TIP]
-    > Vysoce hodnoty v **tělo funkce** může znamenat přetížení v rámci funkce sám sebe.
+    > Funkce jsou seřazené od nejvíce pracujících po nejméně pracující (nejsou seřazené podle pořadí, v jakém byly volány). Pomůže vám to rychle identifikovat funkce, které běží nejdéle.
+
+2. V seznamu funkcí dvakrát klikněte `ServerClass::GetNumber` funkce.
+
+    Když dvakrát kliknete funkce **volající/volaný** zobrazení se otevře v levém podokně.
+
+    ![Zobrazení Volající/volaný v diagnostických nástrojích](../profiling/media/quickstart-cpu-usage-caller-callee.png "DiagToolsCallerCallee")
+
+    V tomto zobrazení vybrané funkce se zobrazí v záhlaví a **aktuální funkci** pole (`GetNumber`, v tomto příkladu). Funkce, která volala aktuální funkci, se zobrazí vlevo v části **Volající funkce** a všechny funkce volané aktuální funkcí se zobrazí vpravo v poli **Volané funkce**. (Pokud chcete aktuální funkci změnit, vyberte libovolné pole.)
+
+    V tomto zobrazení vidíte celkový čas (ms) a procento z celkové doby spuštění aplikace, kterou funkce potřebovala k dokončení.
+
+    **Tělo funkce** také zobrazuje celkovou dobu (a procento času) spotřebovanou tělem funkce, ale bez doby spotřebované volajícími a volanými funkcemi. (Na tomto obrázku 2856 mimo 2863 ms byly trvání tělo funkce a zbývající dobu (< 20 ms) se využilo na externí kód volaných touto funkcí). Skutečné hodnoty se liší v závislosti na vašem prostředí.
+
+    > [!TIP]
+    > Vysoké hodnoty v **těle funkce** pravděpodobně znamenají kritické místo výkonu samotné funkce.
 
 ## <a name="next-steps"></a>Další kroky
 
-- [Analýza využití paměti](../profiling/memory-usage.md)identifikovat kritická místa výkonu.
-- [Analýza využití procesoru](../profiling/cpu-usage.md) podrobnější informace o nástroji využití procesoru.
-- Analýza využití procesoru bez připojit ladicí program nebo cílením spuštěné aplikaci - Další informace najdete v tématu [shromažďování dat profilaci bez ladění](../profiling/running-profiling-tools-with-or-without-the-debugger.md#collect-profiling-data-without-debugging) v [spustit profilování nástroje s nebo bez ladicího programu](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
+- [Analýza využití paměti](../profiling/memory-usage.md)identifikovat kritické body výkonu.
+- [Analýza využití procesoru](../profiling/cpu-usage.md) další podrobné informace o nástroj využití procesoru.
+- Analýza využití procesoru bez připojen jiný ladicí program, nebo cílení na spuštění aplikace – Další informace najdete v tématu [shromažďovat data profilování bez ladění](../profiling/running-profiling-tools-with-or-without-the-debugger.md#collect-profiling-data-without-debugging) v [spustit s nebo bez ladicího programu nástroje pro profilaci](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
 
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:
 
- [Profilace v sadě Visual Studio](../profiling/index.md)  
- [Průvodce funkcí profilování](../profiling/profiling-feature-tour.md)
+- [Profilace v sadě Visual Studio](../profiling/index.md)
+- [Nejdřív se podívejte na nástroje pro profilaci](../profiling/profiling-feature-tour.md)

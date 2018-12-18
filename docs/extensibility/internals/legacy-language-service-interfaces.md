@@ -1,5 +1,5 @@
 ---
-title: Rozhraní služeb starší verze jazyka | Microsoft Docs
+title: Rozhraní služby starší verze jazyka | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,44 +14,45 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b2861c4d6307442e1650b44d2b15f2a084ac7715
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e195862ae2cd164a2c62ac16eb17c7a2f07e5c09
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49821601"
 ---
-# <a name="legacy-language-service-interfaces"></a>Rozhraní služeb starší verze jazyka
-Pro žádný konkrétní programovací jazyk může být pouze jednu instanci služby jazyk najednou. Služba jednoho jazyka však může sloužit více než jeden editor.  
+# <a name="legacy-language-service-interfaces"></a>Rozhraní služby starší verze jazyka
+Pro konkrétní programovací jazyk může být pouze jedna instance služby jazyka v čase. Jeden jazyk služby ale může sloužit více než jeden editoru.  
   
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Nepřidruží žádné konkrétní editor služba jazyka. Proto pokud budete požadovat jazyk operace služby, musíte určit editor odpovídající jako parametr.  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Služba jazyka nepřidruží k žádné konkrétní editoru. Proto pokud požádáte o operaci služby jazyka, je nutné určit vhodného editoru jako parametr.  
   
-## <a name="common-interfaces-associated-with-language-services"></a>Společné rozhraní související s jazyk službami  
- Editor voláním získá vaše služba jazyka <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A> na příslušné VSPackage. Službu, kterou ID (SID) předaná toto volání identifikuje požadované služby jazyk.  
+## <a name="common-interfaces-associated-with-language-services"></a>Společné rozhraní přidružené k jazykových služeb  
+ Editor voláním získá vaše služba jazyka <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider.QueryService%2A> na odpovídající VSPackage. Na službu, kterou toto volání předané ID (SID) určuje požadované služby jazyka.  
   
- Rozhraní služeb základní jazyk můžete implementovat na libovolný počet samostatné třídy. Běžný postup je však k implementaci rozhraní následující do jedné třídy:  
+ Rozhraní služeb jazyka core můžete implementovat v libovolném počtu samostatné třídy. Běžným přístupem je však implementovat následující rozhraní do jedné třídy:  
   
--   <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo>  
+- <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo>  
   
--   <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems>  
+- <xref:Microsoft.VisualStudio.TextManager.Interop.IVsProvideColorableItems>  
   
--   <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageDebugInfo>  
+- <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageDebugInfo>  
   
--   <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageBlock> (volitelné)  
+- <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageBlock> (volitelné)  
   
- <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo> Rozhraní musí být implementováno na všechny služby jazyk. Poskytuje informace o službě jazyk, jako je například lokalizovaný název jazyka, přidružená služba jazyka a jak načíst colorizer přípony názvů souborů.  
+  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo> Na všech jazykových služeb musí implementovat rozhraní. Poskytuje informace o vaší služby jazyka, jako je například lokalizovaný název jazyka, přípony názvů souborů, který je přidružený k službě jazyka a jak načíst colorizer.  
   
-## <a name="additional-language-service-interfaces"></a>Rozhraní pro další jazyk služeb  
- Pomocí služby jazyk lze zadat dalších rozhraní. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] požádá o samostatnou instanci tato rozhraní pro každou instanci textová vyrovnávací paměť. Proto měli byste implementovat každé z těchto rozhraní u svého vlastního objektu. V následující tabulce jsou uvedeny rozhraní, které vyžadují jednu instanci na instanci textové vyrovnávací paměti.  
+## <a name="additional-language-service-interfaces"></a>Rozhraní služeb další jazyk  
+ Jiná rozhraní lze zadat ve vaší službě jazyka. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] požádá o samostatnou instanci tato rozhraní pro každou instanci textové vyrovnávací paměti. Proto se každá z těchto rozhraní by měly implementovat na vlastní objekt. V následující tabulce jsou uvedeny rozhraní, které vyžadují jednu instanci a instanci vyrovnávací paměti textu.  
   
 |Rozhraní|Popis|  
 |---------------|-----------------|  
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>|Spravuje kód okno vylepšení, například panelu rozevíracího seznamu. Toto rozhraní můžete získat pomocí <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetCodeWindowManager%2A> metoda. Existuje <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager> za kódu – okno.|  
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer>|Vybarví klíčová slova jazyka a oddělovače. Toto rozhraní můžete získat pomocí <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetColorizer%2A> metoda. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> je volána v době Malování. Vyhněte se výpočetně náročných na výpočetní uvnitř <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> nebo může sníží výkon.|  
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData>|Poskytuje popisy tlačítek parametr IntelliSense. Když služba jazyk rozpozná znak, který označuje dat metoda by měla být zobrazeny, jako je například otevřené závorky, zavolá <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow.SetMethodData%2A> zobrazit metoda oznámit text, který služba jazyka je připraven k zobrazení popisu tlačítka informace o parametru. Textového zobrazení pak zavolá zpátky do provozu jazyk podle pomocí metody <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData> rozhraní získat požadované informace k zobrazení popisu tlačítka.|  
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet>|Poskytuje dokončování IntelliSense. Jazyk služba je připravena k zobrazení seznamu dokončení, zavolá <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A> metodu textového zobrazení. Textového zobrazení pak zavolá zpátky do provozu jazyk podle pomocí metody na <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet> objektu.|  
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewFilter>|Umožňuje úpravu textového zobrazení pomocí obslužná rutina příkazu. Třída, ve kterém můžete implementovat <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewFilter> také musí implementovat rozhraní <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní. Načte textového zobrazení <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewFilter> objekt pomocí dotazu <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> objekt, který je předán do <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.AddCommandFilter%2A> metoda. By měl být jeden <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewFilter> objekt pro každého zobrazení.|  
-|<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>|Zabrání příkazy, že uživatel zadá do okna kódu. Monitorování výstup z vaší <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> implementace Zobrazit úpravy a poskytují informace o vlastní dokončení<br /><br /> Předat vaše <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> objekt, který chcete textového zobrazení, volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.AddCommandFilter%2A>.|  
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager>|Spravuje vylepšení okna kódu, jako je například panel rozevíracího seznamu. Toto rozhraní můžete získat pomocí <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetCodeWindowManager%2A> metody. Existuje jedna <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager> za okna kódu.|  
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer>|Vybarví oddělovače a klíčová slova jazyka. Toto rozhraní můžete získat pomocí <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo.GetColorizer%2A> metody. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> je volána v době Malování. Vyhněte se práce náročné na výpočty uvnitř <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer> nebo může trpět výkon.|  
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData>|Poskytuje popisy parametrů technologie IntelliSense. Když služba jazyka rozpozná znak, který označuje, tato metoda data by měla být zobrazena, jako je otevřena závorka, volá <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow.SetMethodData%2A> metoda oznámit text zobrazení, které služba jazyka je připravený k zobrazení popisu informace o parametru. Zobrazení textu pak zavolá služba jazyka podle použití metod <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData> rozhraní získat požadované informace zobrazit v popisu.|  
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet>|Poskytuje doplňování technologie IntelliSense. Služba jazyka je připravený k zobrazení seznamu dokončení, zavolá <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateCompletionStatus%2A> metodu pro zobrazení textu. Zobrazení textu pak zavolá zpět do služby jazyka podle pomocí metod na <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet> objektu.|  
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewFilter>|Umožňuje úpravu zobrazení textu pomocí obslužné rutiny příkazu. Třída, ve kterém je implementovat <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewFilter> musí implementovat také rozhraní <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní. Načte zobrazení textu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewFilter> objektu pomocí dotazu <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> objektu, který je předán do <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.AddCommandFilter%2A> metody. Měl by existovat jeden <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewFilter> objekt pro každé zobrazení.|  
+|<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>|Zachycuje příkazy, že uživatel zadá do okna kódu. Sledovat výstup z vaší <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> implementace poskytují informace o vlastních dokončení a zobrazit změny<br /><br /> K předání vašeho <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> objektu k zobrazení textu, volání <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.AddCommandFilter%2A>.|  
   
 ## <a name="see-also"></a>Viz také  
- [Vývoj služby jazyk starší verze](../../extensibility/internals/developing-a-legacy-language-service.md)   
+ [Vývoj služby starší verze jazyka](../../extensibility/internals/developing-a-legacy-language-service.md)   
  [Kontrolní seznam: Vytvoření služby starší verze jazyka](../../extensibility/internals/checklist-creating-a-legacy-language-service.md)

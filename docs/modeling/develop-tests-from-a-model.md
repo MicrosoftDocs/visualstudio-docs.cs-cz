@@ -9,78 +9,80 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: db4fdcf6a672188ef00ab61cfdbb15395c596cec
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: e1fd3b1cd19efa9032b7b92576a489e3b17373db
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49919328"
 ---
 # <a name="develop-tests-from-a-model"></a>Vývoj testů z modelu
-Požadavky a architektury modely můžete uspořádat testy systému a jeho součástí. Tento postup pomáhá, zajistěte, aby test požadavky, které jsou důležité pro uživatele a dalších zúčastněných osob a pomůže vám rychle aktualizovat testy při změně požadavky. Pokud používáte [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)], můžete také zachovat propojení mezi modely a testy.
+Požadavky a architektury modely můžete pomoci vám organizovat testy systému a jeho součástí. Tento postup pomáhá zajistit, že testování požadavků, které jsou důležité pro uživatele a další zainteresované uživatele, a pomůže vám rychle aktualizovat testů při změně požadavků. Pokud používáte [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)], můžete také zachovat propojení mezi modely a testy.
 
- Informace, které verze sady Visual Studio podporují tyto funkce, najdete v tématu [verze podpora architektura a modelování nástroje](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+ Které verze sady Visual Studio podporují tyto funkce najdete v tématu [podporované verze pro nástroje architektury a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
-## <a name="system-and-subsystem-testing"></a>Systém a testování subsystému
- *Testování systému* také označované jako *testování přijetí*, znamená testování, zda byly splněny požadavky uživatelů. Tyto testy se zajímá externě viditelné chování systému místo interní návrhu.
+## <a name="system-and-subsystem-testing"></a>Systému a subsystému testování
+ *Systémové testování,* označované také jako *akceptační testování*, testování, zda byly splněny požadavky uživatelů prostředky. Tyto testy, které jsou zajímá externě viditelného chování systému namísto vnitřního návrhu.
 
- Systémových testů jsou velmi cenné při rozšíření nebo přepracování systému. Mohou pomoci vyhnout se představení chyby při změně kódu.
+ Systémové testy jsou velmi užitečné, když rozšíření nebo změna návrhu systému. Mohou pomoci vyhnout vzniku chyb při změně kódu.
 
- Při plánování všech změn nebo rozšíření na systém, je užitečné začít s sadu systémových testů, které běží na stávajícím systému. Pak můžete rozšířit nebo upravit testů na testování nové požadavky, proveďte změny kódu a znovu spusťte kompletní sadu testů.
+ Pokud máte v úmyslu změnit ani rozšíření do systému, je užitečné začít se sadou systémové testy, které běží ve stávajícím systému. Potom můžete rozšířit nebo upravit testy pro nové požadavky na testovací, proveďte požadované změny pro kód a znovu spusťte kompletní sadu testů.
 
- Při vývoji nového systému, můžete začít vytvářet testy ihned zahájí vývoj. Definováním testy předtím, než budete vyvíjet jednotlivých funkcí, můžete zaznamenat diskusí požadavky způsobem, velmi konkrétní.
+ Při vývoji nového systému můžete začít ihned vývoj vytvořit testy. Definováním testů předtím, než při vývoji jednotlivých funkcí, můžete zachytit požadavky na diskuse velmi určitým způsobem.
 
- Testování subsystému platí stejné zásady pro hlavní součásti systému. Jednotlivé komponenty je testován odděleně od ostatních součástí. Subsystém testuje se zaměřují na chování viditelné v součásti uživatelského rozhraní nebo rozhraní API.
+ Subsystém testování platí stejné zásady pro hlavní součásti systému. Jednotlivé komponenty se testovali odděleně od jiných komponent. Subsystém testuje zaměřit se na chování viditelné v součásti uživatelského rozhraní nebo rozhraní API.
 
 ## <a name="deriving-system-tests-from-a-requirements-model"></a>Odvozování systémových testů z modelu požadavky
- Můžete vytvořit a Udržovat vztah mezi systémových testů a požadavky na modelu. Chcete-li vytvořit tento vztah, zápisu testy, které odpovídají hlavních prvků modelu požadavky. Visual Studio je chránit vaše dosavadní relace umožňují vytvářet propojení mezi testy a součástí modelu. Další informace o modelech požadavky najdete v tématu [modelování uživatelských požadavků](../modeling/model-user-requirements.md).
+ Můžete vytvořit a Udržovat vztah mezi testy systému a model požadavků. K navázání tohoto vztahu, psaní testů, které odpovídají hlavních prvků model požadavků. Visual Studio pomáhá udržovat relace umožňují vytvářet propojení mezi testy a součástí modelu. Další informace o modelech požadavky najdete v části [modelování uživatelských požadavků](../modeling/model-user-requirements.md).
 
 ### <a name="write-tests-for-each-use-case"></a>Zápis testů pro každý případ použití
- Pokud používáte [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)], můžete vytvořit skupinu testů pro každý případ použití, který jste definovali ve model požadavky. Například pokud máte případ použití pořadí jídlem, což zahrnuje vytvoření pořadí a přidat položku pořadí, můžete vytvořit testů pro obě celkovým a podrobnější z těchto případů použití.
+ Pokud používáte [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)], můžete vytvořit skupinu testů pro každý případ použití, který jste definovali ve vašem modelu požadavky. Například pokud máte případu použití objednávka jídla, která zahrnuje vytvoření objednávky a přidat položku pořadí, můžete vytvořit testy pro obě celkové a podrobnější tyto případy použití.
 
- Může být užitečné tyto pokyny:
+ Tyto pokyny mohou být užitečné:
 
--   Každý případ použití by měl mít několik testů pro hlavní cesty a výjimečných výstupy.
+-   Každý případ použití by měl mít několik testů pro hlavní cesty a mimořádných výsledků.
 
--   Pokud jste popisují případu použití v modelu požadavky, je důležitější zadat jeho koncová podmínka, který je cíl, který je dosaženo, než k popisu podrobné postupy uživatel bude postupovat aby bylo možné dosáhnout. Koncová podmínka pořadí jídlem může být například která restaurace se připravuje jídlem pro zákazníka a že zákazník má placené. Koncová podmínka je kritérium, které by měl ověřit testy.
+-   Když popíšete případ použití v modelu požadavky, je důležitější k definování jeho neplatná následná, to znamená, cíl, který je dosaženo, než k podrobnému popisu, postupy uživatel sleduje, aby bylo možné dosáhnout. Neplatná následná objednávky pokrmu může být například, který restaurace připravuje pokrmu zákazníka a že má zákazník zaplatí. Neplatná následná je kritérium, které testy by měly ověřit.
 
--   Základní samostatné testy na samostatné klauzulích koncová podmínka. Můžete například vytvořte samostatné testy pro oznamování restaurace objednávky a za vyjádření platby od zákazníka. Toto oddělení má tyto výhody:
+-   Základní samostatných testů na samostatné klauzulí neplatná následná. Například vytvořte samostatné testy pro oznamování restaurace pořadí a pro provádění platby od zákazníka. Toto oddělení má tyto výhody:
 
-    -   Změny v různých aspektů požadavky nastat často nezávisle. Oddělením testů na různé aspekty tímto způsobem můžete usnadňují aktualizovat testy při změně požadavků.
+    -   Změny v různých aspektů požadavky dochází často nezávisle na sobě. Oddělením testů na různé aspekty tímto způsobem můžete usnadnit Neaktualizovat testy při změně požadavků.
 
-    -   Pokud plán vývoj implementuje jeden aspekt jejich případ použití před jiný, můžete povolit testy samostatně jako postupuje vývoj.
+    -   Pokud plán vývoje implementuje jeden aspekt jejich případu použití dříve než jiné, můžete povolit testy samostatně v průběhu vývoje.
 
--   Při návrhu testy oddělte volba testovací data z kódu nebo skriptu, který určuje, zda bylo dosaženo koncová podmínka. Například může být testu jednoduché aritmetické funkce: vstup 4; Ověřte, zda je výstup 2. Místo toho návrh do skriptu jako: Zvolte vstup; násobení výstup samostatně a ověřte, zda je výsledek původní vstup. Tento styl umožňuje lišit vstupy testovací beze změny hlavního textu testu.
+-   Při návrhu testy oddělte od kódu nebo skript, který určuje, zda bylo dosaženo neplatná následná volba testovací data. Například může být zkoušku jednoduchou funkci aritmetické: vstup 4; Ověřte, zda výstup je 2. Místo toho navrhnout skript jako: Zvolte vstupní; vynásobit výstup samostatně a ověřte, že výsledek je původní vstup. Tento styl umožňuje měnit testovací vstupy beze změny hlavní části testu.
 
-#### <a name="linking-tests-to-use-cases"></a>Propojování testy na případy použití
- Pokud používáte [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] návrh a spouštění testů, můžete uspořádat testů v části požadavky, případ použití nebo uživatelské scénáře pracovních položek. Můžete se propojit tyto pracovní položky pro případy použití v modelu. To vám umožňuje rychle změny trasování požadavků na testy a pomáhá sledovat průběh každý případ použití.
+#### <a name="linking-tests-to-use-cases"></a>Propojení testy s případy použití
+ Pokud používáte [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)] k navrhování a spuštění testů, můžete uspořádat testy v rámci požadavků, případu použití nebo uživatelské scénáře pracovních položek. Můžete propojit tyto pracovní položky s případy použití v modelu. To vám umožní rychle trasování požadavky na změny na testy a umožňuje sledovat průběh každého případu použití.
 
-###### <a name="to-link-tests-to-a-use-case"></a>Propojení případu použití testů
+###### <a name="to-link-tests-to-a-use-case"></a>Propojení případu použití testy
 
-1.  V [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)], vytvořit požadavek a základní sady testů na něm.
+1. V [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)], vytvořit požadavek a základní sadu testů v něm.
 
-     Požadavek, který vytvoříte je pracovní položku v [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)]. Může to být uživatelský scénář, požadavek nebo případ použití pracovní položkou, v závislosti na šabloně procesu, kterou používá váš projekt s [!INCLUDE[esprfound](../code-quality/includes/esprfound_md.md)]. Další informace najdete v tématu [sledování práce pomocí sady Visual Studio Team Services nebo Team Foundation Server](http://msdn.microsoft.com/Library/52aa8bc9-fc7e-4fae-9946-2ab255ca7503).
+    Je požadavek, který vytvoříte pracovní položku v [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)]. Může to být uživatelský scénář, požadavek nebo případ použití pracovní položky, v závislosti na šabloně procesu, který váš projekt používá s Team Foundation. Další informace najdete v tématu [o agilní nástroje a agilní řízení projektů](/azure/devops/boards/backlogs/overview?view=vsts).
 
-2.  Pracovní položky požadavku na odkaz na jeden nebo více případy použití v modelu.
+2. Propojte pracovní položky požadavku na jeden nebo více případy použití v modelu.
 
-     V diagramu případu použití, klikněte pravým tlačítkem na případ použití a pak klikněte na tlačítko **odkaz na pracovní položku**.
+    Diagram případu použití, klikněte pravým tlačítkem na případu použití a pak klikněte na **odkaz na pracovní položku**.
 
-3.  Přidejte do testovací sada, testovací případy, které ověřují případy použití.
+3. Přidejte do testovací sady, testovací případy, které ověřují případy použití.
 
- Obvykle každé uživatelské scénáře nebo požadavky pracovní položky bude propojit několik případů použití v modelu a každý případ použití odkaz na několik uživatelské scénáře nebo požadavky. Je to proto, že každý uživatelský scénář nebo požadavek popisuje sadu úloh, které vyvíjet několik případů použití. Například v iterace časná projektu, může vyvíjet základní uživatelské scénáře, ve kterém můžete zvolit položky z katalogu a bylo dodáno zákazníka. Článek v novější iteraci, může být, že uživatel platí při dokončení pořadí a dodavatel obdrží peníze po odešle zboží.  Každý článek přidá klauzuli koncová podmínka případu použití zboží pořadí.
+   Obvykle každé uživatelské scénáře nebo požadavky pracovní položky se propojit několik případů použití ve vašem modelu a každý případ použití se propojit s několika uživatelské scénáře nebo požadavky. Je to proto, že každý uživatelský scénář nebo požadavek zahrnuje sadu úloh, které vývoj několik případů použití. V rané fázi iterace projektu, byste třeba vytvořit základní uživatelský scénář, ve kterém můžete vybrat položky z katalogu a ho doručit zákazník. V pozdější iterace může být sdělení, že uživatel platí při dokončení pořadí a dodavatel obdrží peněz po odešle zboží.  Každý scénář přidá klauzuli neplatná následná případu použití pořadí zboží.
 
- Můžete vytvořit samostatné odkazy z požadavky do klauzulích koncová podmínka napsáním tyto klauzule v samostatných komentáře v diagramu případu použití. Můžete propojit každý komentář k pracovní položce požadavek a propojit případ použití v diagramu komentář.
+   Můžete vytvořit samostatné odkazy z požadavky do klauzule neplatná následná napsáním těchto klauzulí v samostatných komentáře na diagramu případu použití. Můžete každý komentář k propojení s pracovní položkou požadavku a propojit komentář v diagramu případu použití.
 
 ### <a name="base-tests-on-the-requirements-types"></a>Základní testy na typy požadavků
- Typy, které je, třídy, rozhraní a výčty modelu požadavky popisují koncepty a vztahy z hlediska jak uživatelé myslíte a komunikaci o své firmy. S vyloučením typy zajímají pouze k internímu řešení systému.
+ Typy, které je, třídy, rozhraní a výčty, požadavky na modelu popisují koncepty a vztahy z hlediska jak myslíte, že uživatelé a komunikovat o své firmě. Vyloučí typy týká pouze interních návrhu systému.
 
- Návrh testů z hlediska tyto typy požadavků. Tento postup umožňuje Ujistěte se, že když jsou popsány změny požadavků na, je snadné se týkají změny potřebné změny v testech. Ji umožňuje zabývat testy a jejich zamýšlený výsledky přímo s koncovým uživatelům a dalších zúčastněných osob. To znamená, že uživatelů musí je udržovat mimo procesu vývoje a zabraňuje nechtěnému návrhu testů kolem možné nedostatky v návrhu.
+ Návrh testy z hlediska tyto typy požadavků. Tento postup vám pomůže zajistit, že když jsou popsány změny požadavky, je snadné se vztahují změny potřebné změnám v testech. To umožňuje prodiskutovat testy a jejich zamýšlený výsledky přímo s koncovým uživatelům a další zainteresované uživatele. To znamená, že uživatelů potřebuje lze udržovat mimo proces vývoje a zabraňuje nechtěnému návrhu testy kolem možné chyby v návrhu.
 
- Pro ruční testy tento postup zahrnuje se termínů modelu požadavky ve skriptech testu. Pro automatizované testy tento postup zahrnuje použití diagramů tříd požadavky jako základ pro testovacího kódu a vytváření přistupujícího objektu a aktualizační funkce propojení požadavek model pomocí kódu.
+ U ručních testů zahrnuje tento postup týkajícími se slovník model požadavků v testovacích skriptech. Pro automatizované testy zahrnuje tento postup pomocí diagramů tříd požadavky jako základ pro váš testovací kód a vytvoření přístupového objektu a aktualizační funkce k propojení požadavků modelu kódu.
 
- Například požadavky, které mohou zahrnovat modelu typy nabídky, položky nabídky, pořadím a přidružení mezi nimi. Tento model představuje informace, které je uložený a řešil jídlem řazení systému, ale nepředstavuje složitosti jeho implementace. V pracovní systému může být několik různých realizations každého typu v databázích, v uživatelská rozhraní a na rozhraní API. V distribuované systému může být několik variant každá instance uložené v různé části systému ve stejnou dobu.
+ Například požadavky, které mohou zahrnovat model typy nabídek, položka nabídky, pořadí a přidružení mezi nimi. Tento model představuje informace, které je uložený a řešil jídla systém objednávek, ale nepředstavuje složitosti jeho implementace. V systému práci může být několik různých realizations každého typu v databázích, v uživatelských rozhraní a rozhraní API. V distribuovaném systému může být několik variant každé instance uložená v různých částí systému ve stejnou dobu.
 
- K testování případ použití, jako je například přidat položku pořadí, můžou zahrnovat metoda testovací kód podobná této:
+ K otestování případu použití, jako je například přidat položku pořadí, testovací metoda může obsahovat kód podobný tomuto:
 
 ```
 Order order = ... ; // set up an order
@@ -94,70 +96,70 @@ int countAfter = order.MenuItems.Count;
 Assert (countAfter == countBefore = 1);
 ```
 
- Všimněte si, že tato metoda používá třídy modelu požadavky. Přidružení a atributy jsou realizovány jako vlastnosti .NET.
+ Všimněte si, že tato testovací metoda používá třídy model požadavků. Přidružení a atributy jsou realizovány jako vlastnosti rozhraní .NET.
 
- Chcete-li tato práce, vlastnosti třídy musí být definovaný jako funkce jen pro čtení nebo přístupové objekty, které přístup k systému k načtení informací o aktuálním stavu. Metody, které simulují případy použití, jako je AddItemToOrder musí jednotky systému prostřednictvím jejího rozhraní API nebo vrstva pod jeho uživatelské rozhraní. Konstruktory testovací objektů, jako je například pořadí a MenuItem musí také jednotky systému vytvořte odpovídající položky v rámci systému.
+ Chcete-li tuto práci, vlastnosti třídy musí být definován jako funkce jen pro čtení nebo přístupové objekty, které potřebují přístup k systému k načtení informací o aktuálním stavu. Metody, které simulují případy použití, jako například AddItemToOrder musí řídit systému prostřednictvím jejího rozhraní API nebo vrstvy pod jeho uživatelské rozhraní. Konstruktory test objektů, jako jsou například objednávka a položka nabídky musí také využívat systém k vytvoření odpovídající položky v systému.
 
- Řadu přístupové objekty a operace Updater bude již k dispozici prostřednictvím rozhraní API normální aplikace. Ale některé další funkce možná má být proveden zápis, aby bylo možné povolit testy. Tyto další přístupové objekty a operace Updater se někdy označují jako 'test instrumentace'. Protože závisejí na interní návrh systému, je zodpovědností systému vývojáři získají, zatímco testery napsat kód testů z hlediska požadavků modelu.
+ Přístupové objekty a operace Updater již bude k dispozici prostřednictvím rozhraní API normální aplikace. Ale některé další funkce může mít k zapsání Chcete-li povolit testy. Tyto dodatečné přístupové objekty a operace Updater jsou někdy označovány jako 'test instrumentace'. Protože jsou závislé na interní návrhu systému, je odpovědností vývojáře v systému a umožnit jim, že testeři psát kód testy z hlediska model požadavků.
 
- Při psaní automatizovaných testů můžete zabalit přístupové objekty a operace Updater obecné testy.
+ Při psaní automatizované testy můžete zabalit přístupové objekty a operace Updater obecné testy.
 
-### <a name="tests-for-business-rules"></a>Testy u obchodních pravidel
- Některé požadavky přímo nesouvisejí s žádné jeden případ použití. Například obchodní DinnerNow umožňuje zákazníkům vybrat z mnoha nabídky, ale vyžaduje, aby v každé pořadí všechny zvolené položky musí být z jednoho nabídky. Toto obchodní pravidlo může být vyjádřený jako neutrální o přidružení mezi objednávky, nabídky a položky v modelu třída požadavky.
+### <a name="tests-for-business-rules"></a>Testy pro obchodní pravidla
+ Některé požadavky přímo nesouvisí žádné jeden případ použití. Například obchodní DinnerNow umožňuje zákazníkům vybrat z mnoha nabídky, ale vyžaduje, aby každý mohl, všechny zvolené položky musí být v jediné nabídce. Toto obchodní pravidlo může být vyjádřený jako invariantní o přidružení mezi příkazy, nabídky a položky v třídě modelu požadavky.
 
- Výchozí pravidlo druhu řídí pouze všechny případy použití, které jsou aktuálně definovány, ale také všechny další případy použití, které budou později určené. Proto je užitečný pro zápis samostatně z jakékoli případ použití a k testování samostatně z případy použití.
+ Výchozí pravidlo tohoto druhu se řídí nejen všechny případy použití, které jsou aktuálně definován, ale také všechny ostatní případy použití, které bude obsahovat definici později. Proto je užitečné pro zápis odděleně od případ použití a otestovat samostatně z případů využití.
 
-## <a name="deriving-subsystem-tests-from-models"></a>Odvozování subsystému testy z modelů
- V návrhu vysoké úrovně velké systému můžete identifikovat součásti nebo subsystémy. Tyto představují částí, které může být navrženy samostatně, nebo jsou umístěny na různých počítačích nebo jsou opakovaně použitelné moduly, které můžete rekombinované mnoha způsoby.
+## <a name="deriving-subsystem-tests-from-models"></a>Odvozování testy subsystému z modelů
+ V návrhu vysoké úrovně v rozsáhlém systému je určit, komponenty nebo subsystémů. Představují části, které může být navržena samostatně, nebo jsou umístěné na různých počítačích nebo jsou opakovaně použitelné moduly, které mohou být rekombinované mnoha způsoby.
 
- Můžete použít pro každou hlavní součást stejnými zásadami jako použijte pro celý systém. Ve velkých projektech jednotlivé komponenty může mít vlastní požadavky model. V menší projekty Architektonický model nebo hlavnímu návrhu vytvořit zobrazíte součástech a jejich interakce. Další informace najdete v tématu [modelování architektury aplikace](../modeling/model-your-app-s-architecture.md).
+ Můžete použít pro každou hlavní součást stejné zásady používání pro celý systém. Ve velkých projektech Každá komponenta může mít svůj vlastní model požadavků. V projektech pro menší Architektonický model nebo hlavnímu návrhu vytvořit zobrazíte hlavní součásti a jejich interakce. Další informace najdete v tématu [modelování architektury aplikace](../modeling/model-your-app-s-architecture.md).
 
- V obou případech můžete vytvořit vztah mezi prvků modelu a testy subsystém stejným způsobem, jako byste mezi požadavky modelu a systémových testů.
+ V obou případech můžete vytvořit vztah mezi prvků modelu a testy subsystému stejným způsobem, jako byste mezi modelem požadavky a testy systému.
 
-### <a name="isolate-components-with-provided-and-required-interfaces"></a>Izolace součásti pomocí zadaného a požadované rozhraní
- Je užitečný k identifikaci všechny závislosti, které má komponentu na dalších částí systému nebo externích služeb a k reprezentaci jako požadované rozhraní. Tento postup obvykle vede k některé změna, která zůstane komponentu mnohem víc odpojeného a snadno oddělit od ostatního návrhu.
+### <a name="isolate-components-with-provided-and-required-interfaces"></a>Izolace komponenty s poskytovaných a požadovaných rozhraní
+ Slouží k identifikaci všechny závislosti, které má součást na ostatní části systému nebo externími službami a k reprezentaci jako požadované rozhraní. V tomto cvičení se obvykle vede k některé přepracování, které se zasílají součást dalšího oddělení a snadno oddělit od zbývající části návrhu.
 
- Výhodou tohoto oddělení je, že součást mohou být provedeny pro testování nahrazením mock objektů služby, které se obvykle používá. Tyto jsou komponenty, které jsou nastavené pro účely testování. Komponentu imitované poskytuje rozhraní, které vyžaduje příslušné součásti, odpovídá na dotazy simulované daty. Komponenty imitované součástí dokončení testovacího harness, který můžete připojit na všechna rozhraní, které součásti.
+ Výhodou díky tomuto oddělení je, že komponenty mohou být provedeny pro testování nahrazením mock objektů služby, které se obvykle používá. Toto jsou komponenty, které jsou nastavené pro účely testování. Komponentu mock poskytuje rozhraní, která vyžaduje vaše komponenta odpovídá na dotazy s Simulovaná data. Součástí dokončení testovacího prostředí, se můžete připojit na všechna rozhraní komponenty mock komponenty.
 
- Výhodou imitované testování je, že můžete vyvíjet příslušné součásti při s ostatními součástmi, jejichž služby se bude používat jsou stále ve vývoji.
+ Výhodou mock testování je, že vám umožní vytvářet vaše komponenta při další komponenty, jejichž služby se bude používat jsou stále ve vývoji.
 
-## <a name="maintain-the-relationships-between-tests-and-model"></a>Spravovat vztahy mezi testy a modelu
- V typické projektu, který provádí iterace každých několik týdnů trvá Zkontrolujte požadavky na začátku každé iteraci. Schůzka popisuje funkce, které jsou dodávány v další iterace. Požadavky na modelu slouží k pomoci zabývat koncepty, scénáře a pořadí akcí, které se vyvinul. Účastníci firmy nastavit prioritu, vývojáři zkontrolujte odhad a testery Ujistěte se, že očekávané chování každé funkce pořízen správně.
+## <a name="maintain-the-relationships-between-tests-and-model"></a>Údržbu relací mezi testy a Model
+ V typickém projektu, který provádí iteraci každých několik týdnů Zkontrolujte požadavky se nachází na začátku každé iterace. Schůzky popisuje funkce, které se doručí do další iterace. Model požadavků lze pomoci diskutovat o koncepty, scénáře a pořadí z akcí, které budou vytvořeny. Zúčastněné obchodní strany priority nastavit, vývojář podá odhady a testeři Ujistěte se, že očekávané chování jednotlivých funkcí jsou zachyceny správně.
 
- Zápis testů je co nejúčinnější způsob, jak definovat požadavek, který je taky efektivní způsob, jak zkontrolujte, zda uživatel má vědět, co je požadováno. Ale že zápis testy trvá příliš dlouho udělat během dílny specifikace, vytváření modelů lze provést mnohem rychleji.
+ Zápis testů je nejúčinnější způsob, jak definovat požadavek a je také účinný způsob, jak zajistit, že v osoba jistotou určit, co je potřeba. Ale že psaní testů trvá příliš dlouho udělat během seminář o specifikace, vytváření modelů můžete udělat mnohem rychleji.
 
- Z testování hlediska se dají považovat za sdruženou hodnotu pro testy model požadavky. Proto je důležité zachovat vztah mezi testy a modelu v rámci projektu.
+ Z testování pohledu se dají považovat za zkratka pro testy model požadavků. Proto je důležité zachovat vztah mezi testy a modelu v celém projektu.
 
-##  <a name="Attaching"></a> Připojení testovacích případů pro modelování elementy
- Pokud váš projekt používá [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)], můžete propojit testy elementy v modelu. To umožňuje rychle najít testy vliv na změny v požadavcích na a vám pomůže sledovat v rozsahu, ke kterému bylo dosaženo požadavek.
+## <a name="Attaching"></a> Připojení testovací případy k elementům modelu
+ Pokud váš projekt používá [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)], testy můžete propojit s prvky v modelu. To vám umožní rychle najít testy ovlivněné změnou v požadavcích a umožňuje sledovat v rozsahu, do které byl proveden požadavek.
 
- Testy můžete propojit všechny typy elementu. Následuje několik příkladů:
+ Testy můžete propojit všechny druhy elementu. Následuje několik příkladů:
 
--   Propojení případu použití pro testy, které vykonávají ho.
+-   Propojení případu použití s testy výkonu.
 
--   Zápis klauzulích koncová podmínka případů použití, nebo cílem na komentáře, které jsou propojeny s případ použití a testy propojit každý komentář.
+-   Zápis klauzule neplatná následná případu použití, nebo cílem, do komentářů, které jsou propojeny s případu použití a propojit testy se všechny komentáře.
 
--   Zápis invariantní pravidla v komentářích na diagramů tříd nebo diagramy činnosti a propojit je s testy.
+-   Zápis invariantní pravidla v komentářích v diagramech tříd nebo diagramy činnosti a propojují se s testy.
 
--   Propojit testy diagram činnosti, nebo se jednotlivé aktivity.
+-   Propojit testy do diagramu činnosti nebo do jednotlivých aktivit.
 
--   Sady testů propojte součásti nebo podsystém, který testuje.
+-   Součásti či subsystém, který ověřuje propojte testovací sady.
 
-#### <a name="to-link-tests-to-a-model-element-or-relationship"></a>Propojení testy element modelu nebo relace
+#### <a name="to-link-tests-to-a-model-element-or-relationship"></a>Propojení prvku modelu nebo vztah testy
 
-1.  V [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)], vytvořit požadavek a základní sady testů na něm.
+1. V [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)], vytvořit požadavek a základní sadu testů v něm.
 
-     Požadavek, který vytvoříte je pracovní položku v [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)]. Může to být uživatelský scénář, požadavek nebo případ použití pracovní položkou, v závislosti na šabloně procesu, kterou používá váš projekt s [!INCLUDE[esprfound](../code-quality/includes/esprfound_md.md)]. Další informace najdete v tématu [sledování práce pomocí sady Visual Studio Team Services nebo Team Foundation Server](http://msdn.microsoft.com/Library/52aa8bc9-fc7e-4fae-9946-2ab255ca7503).
+    Je požadavek, který vytvoříte pracovní položku v [!INCLUDE[vstsTfsShort](../modeling/includes/vststfsshort_md.md)]. Může to být uživatelský scénář, požadavek nebo případ použití pracovní položky, v závislosti na šabloně procesu, který váš projekt používá s Team Foundation. Další informace najdete v tématu [o agilní nástroje a agilní řízení projektů](/azure/devops/boards/backlogs/overview?view=vsts).
 
-2.  Pracovní položky požadavku propojte jeden či více elementů v modelu.
+2. Propojte pracovní položky požadavku na jeden nebo více prvků ve vašem modelu.
 
-     V diagramu modelování, klikněte pravým tlačítkem na prvek, komentáře nebo relace a pak klikněte na tlačítko **odkaz na pracovní položku**.
+    V diagramu modelování, klikněte pravým tlačítkem na elementu, komentáře nebo relaci a potom klikněte na **odkaz na pracovní položku**.
 
-3.  Přidejte do testovací sadu, testovacích případů, které ověřují požadavek vyjádřené v elementu modelu.
+3. Přidejte do testovací sady, testovací případy, které ověřují požadavek vyjádřené v elementu modelu.
 
 ## <a name="see-also"></a>Viz také
 
 - [Vytváření modelů pro aplikaci](../modeling/create-models-for-your-app.md)
 - [Modelování uživatelských požadavků](../modeling/model-user-requirements.md)
 - [Modelování architektury aplikace](../modeling/model-your-app-s-architecture.md)
-- [Analýza a modelování vaší architektury](../modeling/analyze-and-model-your-architecture.md)
+- [Analýza a modelování architektury](../modeling/analyze-and-model-your-architecture.md)

@@ -1,5 +1,5 @@
 ---
-title: Idiaframedata::get_program – | Microsoft Docs
+title: Idiaframedata::get_program – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c78c6f1c2c6e8368efd86dc3ffa03a021e46da3
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 125c809f32b34b077fae0bb661ef9c2f010a4b8b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49849460"
 ---
 # <a name="idiaframedatagetprogram"></a>IDiaFrameData::get_program
-Načte řetězec program, který se používá k výpočtu registrace nastavit před voláním funkce aktuální.  
+Načte řetězec program, který se používá k výpočtu do registru, nastavte před voláním na aktuální funkci.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,20 +37,20 @@ HRESULT get_program (
  [out] Vrátí řetězec programu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. Jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Řetězec programu je posloupnost makra, která je za účelem vytvoření prologu interpretovat. Například typický zásobníku může použít program řetězec `"$T0 $ebp = $eip $T0 4 + ^ = $ebp $T0 ^ = $esp $T0 8 + ="`. Formát je zpětné polština zápis, kde operátory podle operandy. `T0` představuje proměnnou dočasné v zásobníku. Tento příklad provede následující kroky:  
+ Program řetězec je posloupnost makra, která je interpretován, aby bylo možné navázat prologu. Například typické zásobníku použít program řetězec `"$T0 $ebp = $eip $T0 4 + ^ = $ebp $T0 ^ = $esp $T0 8 + ="`. Formát je polština zpětného zápisu, ve kterém operátory následují operandy. `T0` představuje dočasné proměnné do zásobníku. V tomto příkladu provede následující kroky:  
   
-1.  Přesuňte obsah registru `ebp` k `T0`.  
+1. Přesunout obsah registru `ebp` k `T0`.  
   
-2.  Přidat `4` na hodnotu v `T0` adresu vytvořit, získat hodnotu z této adresy a uložení hodnoty v registru `eip`.  
+2. Přidat `4` s hodnotou v `T0` vytvářel adresu, získat hodnotu z této adresy a uložení hodnoty v registru `eip`.  
   
-3.  Získat hodnotu z adresy uložené v `T0` a uložit do registru tuto hodnotu `ebp`.  
+3. Získá hodnotu z adresu uloženou v `T0` a uložit do registru tuto hodnotu `ebp`.  
   
-4.  Přidat `8` na hodnotu v `T0` a uložit do registru tuto hodnotu `esp`.  
+4. Přidat `8` s hodnotou v `T0` a uložit do registru tuto hodnotu `esp`.  
   
- Všimněte si, že řetězec programu je specifické pro procesor a konvence volání, nastavení pro funkci reprezentována aktuální rámec zásobníku.  
+   Všimněte si, že je řetězec program konkrétním procesoru a konvence volání pro funkci reprezentované aktuální rámec zásobníku.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md)

@@ -1,5 +1,5 @@
 ---
-title: Vytváření parametrizovaných dotazů TableAdapter
+title: Vytvoření parametrizovaných dotazů TableAdapter
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,69 +16,70 @@ ms.assetid: 104d1d19-b5a9-4071-b81e-1b3af08e9c7b
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: e65809d479c9cac40d7d4c79066e8becd81b09b6
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9d344fdd444a46b3e0434e70850946ef242864b0
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52388475"
 ---
-# <a name="create-parameterized-tableadapter-queries"></a>Vytváření parametrizovaných dotazů TableAdapter
-Zadání parametrizovaného dotazu vrátí data, která splňuje podmínky klauzule WHERE v dotazu. Například můžete parametrizovat seznam zákazníků k zobrazení pouze zákazníků v určitém městě přidáním `WHERE City = @City` na konec příkazu SQL, který vrátí seznam zákazníků.
+# <a name="create-parameterized-tableadapter-queries"></a>Vytvoření parametrizovaných dotazů TableAdapter
 
- Vytváření parametrizovaných dotazů TableAdapter v **návrháře Dataset**. Můžete také vytvořit v aplikaci Windows s **Parametrizace zdroj dat** příkaz na **Data** nabídky. **Parametrizace zdroj dat** příkaz vytvoří ovládacích prvků do formuláře, kde můžete zadat hodnoty parametrů a spusťte dotaz.
+Parametrický dotaz vrací data, která splňuje podmínky klauzuli WHERE v dotazu. Například můžete parametrizovat seznam zákazníků na Zobrazit pouze zákazníkům v určitých město přidáním `WHERE City = @City` na konec příkazu SQL, který vrátí seznam zákazníků.
 
-> [!NOTE]
-> Při vytváření parametrizovaného dotazu, použijte parametr zápis, která je specifická pro databázi, kterou jste kódování proti. Například přístup a OleDb zdroje dat použít znaky otazníku '?' k označení parametrů, takže klauzule WHERE bude vypadat takto: `WHERE City = ?`.
+Vytvoření parametrizovaných dotazů TableAdapter v **Návrhář Dataset**. Můžete také vytvořit v aplikaci Windows se **parametrizovat zdroj dat** příkaz **Data** nabídky. **Parametrizovat zdroj dat** příkaz vytvoří ovládací prvky na formuláři kde vstupní hodnoty parametrů a spusťte dotaz.
 
 > [!NOTE]
-> Dialogová okna a příkazy nabídky, které vidíte, se může lišit od těch popsaných v nápovědě, v závislosti na nastavení aktivní nebo edici, kterou používáte. Chcete-li změnit nastavení, přejděte na **nástroje** nabídku a vyberte **nastavení importu a exportu**. Další informace najdete v tématu [přizpůsobení prostředí Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).
+> Při vytváření parametrický dotaz, použijte parametr zápis, která je specifická pro databáze, kterou můžete kódovat. Přístup a OleDb zdroje dat použít například otazník "?" k označení parametrů, takže v klauzuli WHERE bude vypadat takto: `WHERE City = ?`.
 
 ## <a name="create-a-parameterized-tableadapter-query"></a>Vytvoření parametrického dotazu TableAdapter
 
-#### <a name="to-create-a-parameterized-query-in-the-dataset-designer"></a>Vytvoření parametrického dotazu v Návrháři Dataset
+### <a name="to-create-a-parameterized-query-in-the-dataset-designer"></a>Vytvoření parametrického dotazu v návrháři datových sad
 
--   Vytvořte nový TableAdapter, přidáte klauzuli WHERE se požadované parametry do příkazu SQL. Další informace najdete v tématu [vytvořit a nakonfigurovat TableAdapters](../data-tools/create-and-configure-tableadapters.md).
+-   Vytvoření nového TableAdapter, přidáte klauzuli WHERE se požadované parametry do příkazu SQL. Další informace najdete v tématu [vytvoření a konfigurace objektů TableAdapter](../data-tools/create-and-configure-tableadapters.md).
 
      -nebo-
 
--   Přidejte dotaz do existující TableAdapter, přidáte klauzuli WHERE se požadované parametry do příkazu SQL.
+-   Přidáte dotaz na existující TableAdapter, přidáte klauzuli WHERE se požadované parametry do příkazu SQL.
 
-#### <a name="to-create-a-parameterized-query-while-designing-a-data-bound-form"></a>Vytvoření parametrického dotazu při návrhu formuláře vázané na data
+### <a name="to-create-a-parameterized-query-while-designing-a-data-bound-form"></a>Chcete-li vytvořit parametrický dotaz při návrhu formuláře vázané na data
 
-1.  Vyberte ovládací prvek na formuláři, který je již vázána na datovou sadu. Další informace najdete v tématu [vazby Windows Forms – ovládací prvky k datům v sadě Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md).
+1.  Vyberte ovládací prvek na formuláři, který je již vázán na datovou sadu. Další informace najdete v tématu [ovládací prvky vazby Windows Forms k datům v sadě Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md).
 
-2.  Na **Data** nabídce vyberte možnost **přidat dotazu**.
+2.  Na **Data** nabídce vyberte možnost **přidat dotaz**.
 
-3.  Dokončení **Tvůrce kritérií vyhledávání** dialogové okno, přidáte klauzuli WHERE se požadované parametry do příkazu SQL.
+3.  Dokončení **Tvůrce kritérií vyhledávání** dialogovém okně Přidání klauzuli WHERE se požadované parametry pro příkaz jazyka SQL.
 
-### <a name="to-add-a-query-to-an-existing-data-bound-form"></a>Přidání dotazu do existujícího formuláře vázané na data
+### <a name="to-add-a-query-to-an-existing-data-bound-form"></a>Chcete-li přidat dotaz do existujícího formuláře vázané na data
 
-1.  Otevřete formulář v **Návrhář formulářů Windows**.
+1.  Otevřete formulář v nástrojích pro **Návrháře formulářů Windows**.
 
-2.  Na **Data** nabídce vyberte možnost **přidat dotazu** nebo **inteligentních značek Data**.
+2.  Na **Data** nabídce vyberte možnost **přidat dotaz** nebo **inteligentní značky dat**.
 
     > [!NOTE]
-    >  Pokud **přidat dotazu** není k dispozici na **Data** nabídky, vyberte ovládací prvek na formuláři, zobrazí zdroj dat, které chcete přidat Parametrizace k. Například, pokud formulář zobrazuje data <xref:System.Windows.Forms.DataGridView> řídit, vyberte ji. Pokud formuláře zobrazí data v jednotlivých ovládacích prvků, vyberte všechny ovládací prvky vázané na data.
+    > Pokud **přidat dotaz** není k dispozici na **Data** nabídku, vyberte ovládací prvek na formuláři, zobrazí zdroj dat, které chcete přidat Parametrizace do. Například, pokud data ve formuláři se zobrazí <xref:System.Windows.Forms.DataGridView> ovládací prvek, vyberte ji. Pokud formulář pro zobrazení dat v jednotlivých ovládacích prvků, vyberte libovolný ovládací prvek vázaný na data.
 
-3.  V **vyberte data zdrojová tabulka** oblasti, vyberte tabulku, která chcete přidat Parametrizace k.
+3.  V **tabulky zdroje dat vyberte** oblasti, vyberte tabulku, do které chcete přidat parametrizace.
 
-4.  Zadejte název do **nový název dotazu** pole, pokud vytváříte nový dotaz.
+4.  Zadejte název **nový název dotazu** pole, pokud vytváříte nový dotaz.
 
      -nebo-
 
-     Vybrat v dotazu **název dotazu existující** pole.
+     Vybrat dotaz v **existující název dotazu** pole.
 
 5.  V **Text dotazu** zadejte dotaz, který používá parametry.
 
 6.  Vyberte **OK**.
 
-     Ovládací prvek pro vstupní parametr a **zatížení** tlačítko jsou přidány do formuláře v <xref:System.Windows.Forms.ToolStrip> ovládacího prvku.
+     Ovládací prvek pro vstupní parametr a s **zatížení** tlačítko se přidá na formulář v nástrojích <xref:System.Windows.Forms.ToolStrip> ovládacího prvku.
 
-#### <a name="querying-for-null-values"></a>Dotazování pro hodnoty null
-TableAdapter parametry můžete přiřadit hodnoty null, pokud chcete zadat dotaz na záznamy, které nemají aktuální hodnotu. Zvažte například následující dotaz, který má `ShippedDate` parametr v jeho `WHERE` klauzule:
+### <a name="query-for-null-values"></a>Dotaz na hodnoty null
+
+Parametry třídy TableAdapter lze přiřadit hodnoty null, pokud chcete zadat dotaz pro záznamy, které nemají žádnou aktuální hodnotu. Zvažte například následující dotaz, který má `ShippedDate` parametr v jeho `WHERE` klauzule:
 
  ```sql
 SELECT CustomerID, OrderDate, ShippedDate
@@ -86,19 +87,19 @@ FROM Orders
 WHERE (ShippedDate = @ShippedDate) OR (ShippedDate IS NULL)
 ```
 
- Pokud to byly dotazů v TableAdapter, můžete dotazovat pro všechny příkazy, které byly dodány s následujícím kódem:
+Pokud tento dotaz na objektu typu TableAdapter, můžete dotazovat na pro všechny objednávky, které nebyly dodány s následujícím kódem:
 
- [!code-csharp[VbRaddataTableAdapters#8](../data-tools/codesnippet/CSharp/create-parameterized-tableadapter-queries_1.cs)]
- [!code-vb[VbRaddataTableAdapters#8](../data-tools/codesnippet/VisualBasic/create-parameterized-tableadapter-queries_1.vb)]
+[!code-csharp[VbRaddataTableAdapters#8](../data-tools/codesnippet/CSharp/create-parameterized-tableadapter-queries_1.cs)]
+[!code-vb[VbRaddataTableAdapters#8](../data-tools/codesnippet/VisualBasic/create-parameterized-tableadapter-queries_1.vb)]
 
- Chcete-li povolit dotaz tak, aby přijímal hodnoty null:
+Pokud chcete povolit dotaz tak, aby přijímal hodnoty null:
 
-1.  V **návrháře Dataset**, vyberte TableAdapter dotaz, který je potřeba přijmout parametr null hodnoty.
+1.  V **Návrhář Dataset**, vyberte dotaz TableAdapter, které je potřeba přijmout hodnoty null parametrů.
 
-2.  V **vlastnosti** vyberte **parametry**, pak klikněte na tlačítko se třemi tečkami (**...** ) tlačítko Otevřít **Editor kolekce parametrů**.
+2.  V **vlastnosti** okně **parametry**, pak klikněte na tlačítko se třemi tečkami (**...** ) tlačítko Otevřít **Editor kolekce parametrů**.
 
 3.  Vyberte parametr, který povoluje hodnoty null a nastavte **AllowDbNull** vlastnost `true`.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Vyplnění datové sady s použitím objektů TableAdapters](../data-tools/fill-datasets-by-using-tableadapters.md)
+- [Vyplnění datových sad pomocí objektů TableAdapter](../data-tools/fill-datasets-by-using-tableadapters.md)

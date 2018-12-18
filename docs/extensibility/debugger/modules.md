@@ -1,5 +1,5 @@
 ---
-title: Moduly | Microsoft Docs
+title: Moduly | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,21 +14,22 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f587e015263336436588d14edeeb5c6935872950
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8750c1f6676966be8564fbf4a175a66fa180a401
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39233162"
 ---
 # <a name="modules"></a>Moduly
-Z hlediska architektuře ladicího programu **modulu**:  
+Z hlediska architektury ladicího programu *modulu*:  
   
--   Je fyzický kontejner kódu, třeba spustitelný soubor nebo knihovny DLL.  
+-   Je fyzický kontejneru kódu, jako je spustitelný soubor nebo knihovny DLL.  
   
--   Můžete znovu načíst jeho symboly a popisují sám sebe. Modul jsou zobrazovány v okně moduly rozhraní IDE.  
+-   Můžete znovu načíst jeho symboly a popsat sám sebe. Modul popisy jsou zobrazovány v okně moduly v integrovaném vývojovém prostředí.  
   
--   Je reprezentována [IDebugModule2](../../extensibility/debugger/reference/idebugmodule2.md) rozhraní, modul ladění k popisu modul vytvoří.  
+-   Je reprezentován [IDebugModule2](../../extensibility/debugger/reference/idebugmodule2.md) rozhraní vytvořené ladicí stroj pro popis modulu.  
   
-## <a name="see-also"></a>Viz také  
- [Koncepty ladicí program](../../extensibility/debugger/debugger-concepts.md)   
+## <a name="see-also"></a>Viz také:  
+ [Koncepty ladicího programu](../../extensibility/debugger/debugger-concepts.md)   
  [IDebugModule2](../../extensibility/debugger/reference/idebugmodule2.md)

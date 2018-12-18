@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Vytvoření sloupce webu, typu obsahu a seznamu pro službu SharePoint | Microsoft Docs'
+title: 'Návod: Vytvoření sloupce webu, typu obsahu a seznamu pro službu SharePoint | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -24,66 +24,67 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a6fc193ba73c040042e7d19d5b86f0acf61e69ac
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2fb78f5c40a04bb69d2f95d7f872b05e3d501113
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49900121"
 ---
 # <a name="walkthrough-create-a-site-column-content-type-and-list-for-sharepoint"></a>Návod: Vytvoření sloupce webu, typu obsahu a seznamu pro službu SharePoint
-  Následující postupy ukazují, jak vytvořit vlastní sloupců webu služby SharePoint – nebo *pole*– a také typ obsahu, který používá sloupců webu. Také ukazuje, jak můžete vytvořit seznam, který používá nový typ obsahu.  
+  Následující postupy ukazují, jak vytvořit vlastní sloupce webu služby SharePoint, nebo *pole*– stejně jako typ obsahu, který používá sloupce webu. Také ukazuje, jak vytvořit seznam, který používá nového typu obsahu.  
   
  Tento návod zahrnuje následující úlohy:  
   
--   [Vytváření sloupců webu vlastní](#BKMK_CreatingCustSiteCols).  
+- [Vytváření sloupců webu vlastní](#BKMK_CreatingCustSiteCols).  
   
--   [Vytvoření vlastního obsahu typu](#BKMK_CreateCustContType).  
+- [Vytváří se vlastní typ obsahu](#BKMK_CreateCustContType).  
   
--   [Vytvoření seznamu](#BKMK_CreateList).  
+- [Vytvoření seznamu](#BKMK_CreateList).  
   
--   [Vytvoření seznamu](#BKMK_CreateList).  
+- [Vytvoření seznamu](#BKMK_CreateList).  
   
--   [Testování aplikace](#BKMK_TestApp).  
+- [Testování aplikace](#BKMK_TestApp).  
   
- [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
 ## <a name="prerequisites"></a>Požadavky  
  K dokončení tohoto návodu budete potřebovat následující komponenty:  
   
--   Podporované edice systému Windows a služby SharePoint. Další informace najdete v tématu [požadavky pro vývoj řešení služby SharePoint](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
+-   Podporované edice systému Windows a SharePoint.
   
 -   Visual Studio.  
   
-##  <a name="BKMK_CreatingCustSiteCols"></a> Vytváření sloupců vlastního webu  
- Tento příklad vytvoří seznam pro správu pacientů v nemocnice. Nejprve musíte vytvořit projektu služby SharePoint v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] a přidat sloupce webu, následujícím způsobem.  
+## <a name="create-custom-site-columns"></a>Vytvoření vlastní stránky sloupců
+ Tento příklad vytvoří seznam pro správu pacientů v nemocnici. Nejprve musíte vytvořit projekt služby SharePoint v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] a přidat sloupce webu, následujícím způsobem.  
   
 #### <a name="to-create-the-project"></a>Vytvoření projektu  
   
-1.  Na [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] **soubor** nabídce zvolte **nový**, **projektu**.  
+1.  Na [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] **souboru** nabídce zvolte **nový** > **projektu**.  
   
-2.  V **nový projekt** dialogové okno, v části buď **Visual C#** nebo **jazyka Visual Basic**, rozbalte **SharePoint** uzel a potom zvolte **2010**.  
+2.  V **nový projekt** dialogové okno, v části **Visual C#** nebo **jazyka Visual Basic**, rozbalte **SharePoint** uzel a klikněte na tlačítko **2010**.  
   
-3.  V **šablony** podokně vyberte **projektu služby SharePoint 2010**, změňte název projektu do **Klinika**a potom zvolte **OK** tlačítko.  
+3.  V **šablony** podokně zvolte **projektu služby SharePoint 2010**, změňte název projekt tak, aby **Clinic**a klikněte na tlačítko **OK** tlačítko.  
   
-     Šablona projektu služby SharePoint 2010 je prázdný projekt, který se používá v tomto příkladu obsahovat sloupce webu a další položky projektu, které jsou přidány později.  
+     Šablona projektu služby SharePoint 2010 je prázdný projekt, který se používá v tomto příkladu tak, aby obsahovala sloupců webu a dalších položek projektu, které jsou přidány později.  
   
-4.  Na **zadejte úroveň lokality a zabezpečení pro ladění** stránky, zadejte adresu URL pro místní web služby SharePoint, do které chcete přidat novou položku vlastní pole nebo použijte výchozí umístění (`http://<`*SystemName* `>/)`.  
+4.  Na **zadejte web a úroveň zabezpečení pro ladění** stránky, zadejte adresu URL pro místní Sharepointový web, ke kterému chcete přidat novou položku vlastní pole nebo použijte výchozí umístění (`http://<`*SystemName* `>/)`.  
   
-5.  V **co je úrovně důvěryhodnosti pro toto řešení služby SharePoint?** část, použijte výchozí hodnotu **nasadit jako řešení v izolovaném prostoru**.  
+5.  V **co je úroveň důvěryhodnosti pro toto řešení SharePoint?** oddílu, použijte výchozí hodnotu **nasadit jako řešení v izolovaném prostoru**.  
   
-     Další informace o v izolovaném prostoru a řešení farmy najdete v tématu [v izolovaném prostoru aspekty řešení](../sharepoint/sandboxed-solution-considerations.md).  
+     Další informace o v izolovaném prostoru a farmách, přečtěte si [aspekty řešení v izolovaném prostoru](../sharepoint/sandboxed-solution-considerations.md).  
   
-6.  Vyberte **Dokončit** tlačítko. Projekt by měl být teď uvedený v **Průzkumníku řešení**.  
+6.  Zvolte **Dokončit** tlačítko. Projekt by měl být nyní obsažena v **Průzkumníka řešení**.  
   
 #### <a name="to-add-site-columns"></a>Chcete-li přidat sloupce webu  
   
-1.  Přidáte nový sloupec webu. Chcete-li to provést, v **Průzkumníku řešení**, otevřete místní nabídku pro **Klinika**a potom zvolte **přidat**, **novou položku**.  
+1.  Přidáte nový sloupec webu. Chcete-li to provést, v **Průzkumníka řešení**, otevřete místní nabídku pro **Clinic**a klikněte na tlačítko **přidat** > **nová položka**.  
   
-2.  V **přidat novou položku** dialogovém okně vyberte **sloupec lokality**, změňte název **pacienta název**a potom zvolte **přidat** tlačítko.  
+2.  V **přidat novou položku** dialogového okna zvolte **sloupce webu**, změňte název na **pacienta název**a klikněte na tlačítko **přidat** tlačítko.  
   
-3.  V souboru Elements.xml sloupec lokality, ponechte **typ** nastavení jako **Text**a změňte **skupiny** nastavení **sloupců webu Klinika**. Po dokončení soubor Elements.xml sloupec lokality by měl vypadat jako v následujícím příkladu.  
+3.  Ve sloupci lokality *Elements.xml* souboru, ponechte **typ** nastavení jako **Text**a změnit **skupiny** nastavení  **Sloupce webu Clinic**. Po dokončení sloupce webu *Elements.xml* soubor by měl vypadat jako v následujícím příkladu.  
   
-    ```  
+    ```xml  
     <Field  
          ID="{f9ba60d1-5631-41fb-b016-a38cf48eef63}"  
          Name="Clinic - Patient Name"  
@@ -94,66 +95,66 @@ ms.lasthandoff: 04/16/2018
     </Field>  
     ```  
   
-4.  Další dva sloupce webu pomocí stejného postupu, přidejte do projektu: **pacienta ID** (typ = "Celé číslo") a **Doctor název** (typ = "Text"). Nastavte na hodnotu jejich skupiny **sloupců webu Klinika**.  
+4.  Další dva sloupce webu pomocí stejného postupu, přidejte do projektu: **pacienta ID** (typ = "Celočíselné") a **lékař název** (typ = "Text"). Nastavte na hodnotu jejich skupiny **sloupců webu Clinic**.  
   
-##  <a name="BKMK_CreateCustContType"></a> Vytváření vlastní typ obsahu.  
- Dále vytvořte typ obsahu – na základě typu obsahu Kontakty – obsahující sloupce webu, které jste vytvořili v předchozím postupu. Typ obsahu založit na existující typ obsahu, můžete ušetřit čas, protože základní typ obsahu poskytuje několik sloupců webu pro použití v nový typ obsahu.  
+## <a name="create-a-custom-content-type"></a>Vytvořit vlastní typ obsahu
+ Dále vytvořte typu obsahu – na základě typu obsahu kontakty –, který obsahuje sloupce webu, které jste vytvořili v předchozím postupu. Podle typu obsahu založenou na stávající typ obsahu, můžete ušetřit čas, protože základní typ obsahu poskytuje několik sloupců webu pro použití v nového typu obsahu.  
   
-#### <a name="to-create-a-custom-content-type"></a>Chcete-li vytvořit vlastní typ obsahu.  
+#### <a name="to-create-a-custom-content-type"></a>Chcete-li vytvořit vlastní typ obsahu  
   
-1.  Typ obsahu přidáte k projektu. Chcete-li to provést, v **Průzkumníku**, vyberte uzel projektu  
+1.  Přidáte typ obsahu do projektu. Chcete-li to provést, v **Průzkumníka řešení**, zvolte uzel projektu  
   
-2.  Na řádku nabídek zvolte **projektu**, **přidat novou položku**.  
+2.  V panelu nabídky zvolte **projektu** > **přidat novou položku**.  
   
-3.  V části buď **Visual C#** nebo **jazyka Visual Basic**, rozbalte **SharePoint** uzel a potom vyberte **2010** uzlu.  
+3.  V části **Visual C#** nebo **jazyka Visual Basic**, rozbalte **SharePoint** uzel a klikněte na tlačítko **2010** uzlu.  
   
-4.  V **šablony** podokně, vyberte **typ obsahu** šablony, změňte název **pacienta informace**a potom zvolte **přidat** tlačítko.  
+4.  V **šablony** podokně, vyberte **typ obsahu** šablony, změňte název na **informací o pacientech**a klikněte na tlačítko **přidat** tlačítko.  
   
-     **Průvodce vlastním nastavením SharePoint** otevře.  
+     **Průvodce přizpůsobením SharePoint** otevře.  
   
-5.  V **které základní obsahu typ měli tento typ obsahu dědit z** vyberte **kontaktujte** jako typ obsahu, na které chcete vytvořit nový typ obsahu a potom vyberte **Dokončit**tlačítko.  
+5.  V **které základní typ obsahu by měl tento typ obsahu dědit z** klikněte na položku **kontakt** jako typ obsahu, na kterém chcete založit nový typ obsahu a klikněte na tlačítko **Dokončit**tlačítko.  
   
-     Tato funkce umožňuje přístup k jiné sloupce potenciálně užitečné webu v obraťte se na typ obsahu, kromě sloupců webu, které jste definovali dříve.  
+     To poskytuje přístup k ostatním sloupcům potenciálně užitečné webu v kontaktu typ obsahu, kromě sloupců webu, které jste definovali dříve.  
   
-6.  Po typ obsahu designer se zobrazí v **sloupce** přidejte jsou tři sloupce, které jste definovali dříve lokality: **pacienta název**, **pacienta ID**a **Doctor název**. Přidat tyto sloupce, vyberte v seznamu sloupců lokality pod první pole se seznamem **zobrazovaný název**a potom vyberte sloupec každé lokality v seznamu, jeden v čase.  
+6.  Po typ obsahu návrháře zobrazení v **sloupce** kartu, přidejte tři sloupce, které jste definovali dříve webu: **pacienta název**, **pacienta ID**a **Lékař název**. Pro přidání těchto sloupců, vyberte v seznamu sloupců webu první seznam **zobrazovaný název**a pak zvolte každý sloupec v seznamu, jeden po druhém.  
   
     > [!TIP]  
-    >  Chcete-li zvolit sloupce webu rychleji, filtrovat seznam tak, že zadáte několik prvních písmen názvu sloupce.  
+    >  Seznam sloupců webu zvolte rychleji, můžete filtrovat tak, že zadáte několik prvních písmen názvu sloupce.  
   
-7.  Kromě tři sloupce vlastního webu, přidejte **komentáře** sloupec webu ze seznamu sloupců lokality.  
+7.  Kromě tři sloupce vlastního webu, přidejte **komentáře** sloupce webu ze seznamu sloupců webu.  
   
-8.  Vyberte **požadované** políčko u **pacienta název** a **pacienta ID** sloupců webu, aby byly požadovaná pole.  
+8.  Vyberte **požadované** zaškrtávací políčko pro **pacienta název** a **pacienta ID** sloupců webu, aby se daly požadovaných polí.  
   
-9. Na **typ obsahu** a ujistěte se, zda je název typu obsahu **pacienta informace**a poté změňte popis na **kartu s informacemi o pacientech**.  
+9. Na **Content Type** kartu, ujistěte se, že je název typu obsahu **informací o pacientech**a potom změňte popis, který **kartu s informacemi o pacientech**.  
   
-10. Změna **název skupiny** k **typy obsahu Klinika**a nechte ostatní nastavení na jejich výchozí hodnoty.  
+10. Změna **název skupiny** k **typy obsahu Clinic**a další nastavení ponechte na výchozích hodnotách.  
   
-11. Na řádku nabídek zvolte **soubor**, **Uložit vše**a pak zavřete Editor typ obsahu.  
+11. V panelu nabídky zvolte **souboru** > **Uložit vše**a pak zavřete návrháře typu obsahu.  
   
-##  <a name="BKMK_CreateList"></a> Vytvoření seznamu  
- Teď vytvořte seznam, který používá nové obsahu sloupce typu a lokality.  
+## <a name="create-a-list"></a>Vytvoření seznamu
+ Teď vytvořte seznam, který používá novou obsahu sloupce typu a lokality.  
   
-#### <a name="to-create-a-list"></a>Můžete vytvořit seznam  
+#### <a name="to-create-a-list"></a>Chcete-li vytvořit seznam  
   
-1.  Seznam přidejte do projektu. Chcete-li to provést, v **Průzkumníku**, vyberte uzel projektu.  
+1.  Přidání seznamu do projektu. Chcete-li to provést, v **Průzkumníka řešení**, zvolte uzel projektu.  
   
-2.  Na řádku nabídek zvolte **projektu**, **přidat novou položku**.  
+2.  V panelu nabídky zvolte **projektu** > **přidat novou položku**.  
   
-3.  V části buď **Visual C#** nebo **jazyka Visual Basic**, rozbalte **SharePoint** uzel a potom vyberte **2010** uzlu.  
+3.  V části **Visual C#** nebo **jazyka Visual Basic**, rozbalte **SharePoint** uzel a klikněte na tlačítko **2010** uzlu.  
   
-4.  V **šablony** podokně, vyberte **seznamu** šablony, změňte název **pacientů**a potom zvolte **přidat** tlačítko.  
+4.  V **šablony** podokně, vyberte **seznamu** šablony, změňte název na **pacientů**a klikněte na tlačítko **přidat** tlačítko.  
   
-5.  Ponechte **přizpůsobit seznam na základě** nastavení jako **výchozí (prázdný)**a potom zvolte **Dokončit** tlačítko.  
+5.  Nechte **vlastní seznam na základě** nastavení jako **výchozí (prázdné)** a klikněte na tlačítko **Dokončit** tlačítko.  
   
-6.  V Návrháři seznamu zvolte **typy obsahu** tlačítko pro zobrazení **nastavení typu obsahu** dialogové okno.  
+6.  V Návrháři seznamu zvolte **typy obsahu** tlačítka pro zobrazení **nastavení typu obsahu** dialogové okno.  
   
-7.  Zvolte nový řádek, vyberte **pacienta informace** obsahu typu v seznamu typů obsahu a potom vyberte **OK** tlačítko.  
+7.  Vyberte nový řádek, vyberte **informací o pacientech** obsah typu v seznamu typů obsahu a klikněte na tlačítko **OK** tlačítko.  
   
-     Díky tomuto přidá všechny sloupce lokality z **pacienta informace** typ do seznamu obsahu.  
+     To přidá všechny sloupce webu z **informací o pacientech** typ do seznamu obsahu.  
   
 8.  Odstraňte všechny sloupce webu v seznamu s těmito výjimkami:  
   
-    -   Pacienta ID  
+    -   ID pacientů  
   
     -   Jméno pacienta  
   
@@ -161,32 +162,32 @@ ms.lasthandoff: 04/16/2018
   
     -   E-mailu  
   
-    -   Název Doctor  
+    -   Název lékař  
   
     -   Komentáře  
   
-9. V části **zobrazovaný název sloupce**, zvolte prázdný řádek, přidejte vlastní seznamu sloupec a pojmenujte ji **měla nemocnice**. Ponechat jeho datového typu jako **jeden řádek textu**.  
+9. V části **zobrazovaný název sloupce**, zvolte na prázdný řádek, přidejte vlastní seznam sloupců a pojmenujte ho **nemocnice**. Ponechat jeho datový typ jako **jeden řádek textu**.  
   
-     Sloupec vlastní seznamu se vztahuje pouze na tomto seznamu. Když přidáte vlastní seznamu sloupec do seznamu, je nový typ obsahu seznamu, včetně všech sloupců, které jsou přidány do seznamu a nastavit jako výchozí seznam.  
+     Vlastní seznam sloupců se vztahuje pouze na tento seznam. Při přidání vlastního seznamu sloupců do seznamu se nový seznam typ obsahu, včetně všech sloupců, přidá se do seznamu a nastavit jako výchozí seznam.  
   
     > [!TIP]  
-    >  Pokud si zvolíte sloupce ze seznamu sloupců webu, se používá existující sloupec webu. Ale pokud zadáte název hodnota sloupce bez výběr žádné sloupce v seznamu, sloupec vlastní seznamu je vytvořen, i v případě, že sloupec se stejným názvem již existuje v seznamu.  
+    >  Pokud zvolíte sloupce ze seznamu sloupců webu, použije se existující sloupec webu. Nicméně pokud zadáte hodnotu pro název sloupce bez výběru žádné sloupce v seznamu, vlastní seznam sloupců je vytvořena, i v případě, že sloupce se stejným názvem již existuje v seznamu.  
   
-     Volitelně můžete místo nastavení datový typ sloupce vlastní seznamu **jeden řádek textu**, můžete místo toho nastavit na datový typ pro tento sloupec na vyhledávání a jeho hodnoty by načíst z tabulky nebo jiného seznamu. Informace o vyhledávání sloupce najdete v tématu [seznamu vztahy v produktu SharePoint 2010](http://go.microsoft.com/fwlink/?LinkId=224994) a [vyhledávání a vztahy seznamu](http://go.microsoft.com/fwlink/?LinkID=224995).  
+     Volitelně můžete místo nastavení datový typ pro sloupec vlastní seznam, který se **jeden řádek textu**, může místo toho nastavte datový typ pro tento sloupec k vyhledávání a jeho hodnoty by načteny z tabulky nebo jiného seznamu. Informace o sloupcích vyhledávání najdete v tématu [vztahy seznamu v Sharepointu 2010](http://go.microsoft.com/fwlink/?LinkId=224994) a [vyhledávání a seznam relací](http://go.microsoft.com/fwlink/?LinkID=224995).  
   
-10. Vedle položky **pacienta ID** a **pacienta název** polí, vyberte **požadované** zaškrtávací políčko.  
+10. Vedle položky **pacienta ID** a **pacienta název** polí, vyberte **vyžaduje** zaškrtávací políčko.  
   
-11. Na **zobrazení** , zvolte prázdný řádek můžete vytvořit zobrazení. Zadejte **pacienta podrobnosti**.  
+11. Na **zobrazení** , vyberte prázdný řádek můžete vytvořit zobrazení. Zadejte **podrobnosti o pacientech**.  
   
-     Na **zobrazení** kartě můžete zadat sloupce, které se má zobrazit v seznamu serveru SharePoint.  
+     Na **zobrazení** kartu, můžete určit sloupce, které chcete zobrazit v seznamu služby SharePoint.  
   
-12. Zvolte nový **pacienta podrobnosti** řádek a potom vyberte **nastavit jako výchozí** tlačítko.  
+12. Zvolte nový **podrobnosti o pacientech** řádek a klikněte na tlačítko **nastavit jako výchozí** tlačítko.  
   
-     Nové zobrazení je nyní výchozí zobrazení seznamu.  
+     Výchozí zobrazení seznamu je nyní nové zobrazení.  
   
 13. Přidejte následující sloupce, které chcete **vybrané sloupce** seznamu v následujícím pořadí:  
   
-    -   Pacienta ID  
+    -   ID pacientů  
   
     -   Jméno pacienta  
   
@@ -194,42 +195,41 @@ ms.lasthandoff: 04/16/2018
   
     -   E-mailu  
   
-    -   Název Doctor  
+    -   Název lékař  
   
-    -   Měla nemocnice  
+    -   Nemocnice  
   
     -   Komentáře  
   
-14. V **vlastnosti** seznam, vyberte **řazení a seskupování** vlastnost a potom zvolte tlačítko se třemi tečkami ![třemi tečkami ikonu](../sharepoint/media/ellipsisicon.gif "třemi tečkami ikonu")zobrazíte **řazení a seskupování** dialogové okno.  
+14. V **vlastnosti** klikněte na položku **řazení a seskupování** vlastnost a klikněte na tlačítko se třemi tečkami ![ikonu se třemi tečkami](../sharepoint/media/ellipsisicon.gif "ikonu se třemi tečkami")zobrazíte **řazení a seskupování** dialogové okno.  
   
-15. V **název sloupce** vyberte **pacienta název**, ujistěte se, že **Sorting** sloupec je nastavený na **vzestupné**a potom vyberte  **OK** tlačítko.  
+15. V **název sloupce** klikněte na položku **pacienta název**, ujistěte se, že **řazení** sloupec je nastaven na **vzestupně**a klikněte na tlačítko  **OK** tlačítko.  
   
-##  <a name="BKMK_TestApp"></a> Testování aplikace  
- Teď, když sloupce vlastního webu, typu obsahu a seznamu jsou připravené, jejich nasazení do služby SharePoint a spusťte aplikaci otestovat.  
+## <a name="test-the-application"></a>Testování aplikace
+ Teď, když sloupců vlastního webu, typu obsahu a seznamu jsou připravené, nasadíte do služby SharePoint a spusťte aplikaci a otestovat ho.  
   
 #### <a name="to-test-the-application"></a>Testování aplikace  
   
-1.  Na řádku nabídek zvolte **soubor**, **Uložit vše**.  
+1.  V panelu nabídky zvolte **souboru** > **Uložit vše**.  
   
-2.  Zvolte klávesy F5 a spusťte aplikaci.  
+2.  Zvolte **F5** klíč ke spuštění aplikace.  
   
-     Kompiluje aplikace a pak se jeho funkce aktivována a nasazena do služby SharePoint.  
+     Aplikace je kompilována a pak se jeho funkce nasazují na server SharePoint a aktivují.  
   
-3.  V rychlé navigačním panelu zvolte **pacientů** odkaz zobrazíte **pacientů** seznamu.  
+3.  Na panelu rychlou navigaci, zvolte **pacientů** odkazu zobrazíte **pacientů** seznamu.  
   
-     Názvy sloupců v seznamu má odpovídající těm, které jste zadali na **zobrazení** kartě v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
+     Názvy sloupců v seznamu by měly odpovídat těm, které jste zadali na **zobrazení** kartu [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
   
-4.  Vyberte **přidat novou položku** odkaz pro vytvoření informací o pacientech karty.  
+4.  Zvolte **přidat novou položku** odkaz můžete vytvořit kartu s informacemi o pacientech.  
   
-5.  Zadejte informace do polí a potom zvolte **Uložit** tlačítko.  
+5.  Zadejte informace do polí a klikněte na tlačítko **Uložit** tlačítko.  
   
-     V seznamu se zobrazí nový záznam.  
+     Nový záznam se zobrazí v seznamu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:
  [Vytváření sloupců webu, typů obsahu a seznamů pro službu SharePoint](../sharepoint/creating-site-columns-content-types-and-lists-for-sharepoint.md)   
  [Vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md)   
  [Postupy: vytvoření vlastního pole typu](http://go.microsoft.com/fwlink/?LinkId=192079)   
  [Typy obsahu](http://go.microsoft.com/fwlink/?LinkId=192080)   
- [sloupce](http://go.microsoft.com/fwlink/?LinkId=192081)  
-  
+ [Sloupce](http://go.microsoft.com/fwlink/?LinkId=192081)  
   

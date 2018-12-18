@@ -3,48 +3,29 @@ title: Postup opětovné odeslání přiřazení předplatné E-maily z v rámci
 author: evanwindom
 ms.author: jaunger
 manager: evelynp
-ms.date: 02/13/2018
+ms.date: 04/18/2018
 ms.topic: Get-Started-Article
 description: Zjistěte, jak znovu odeslat přiřazení předplatné odběratelům z manage.visualstudio.com nebo VLSC
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 080ec95c73ed649168838d823a0dcc5d809ee89a
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: 2edabf44637672f45241299703cb3d3f88348b6c
+ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34335954"
 ---
 # <a name="how-to-resend-subscription-assignment-emails-in-the-visual-studio-subscription-management-portal"></a>Postup opětovné odeslání odběr e-mailů přiřazení v portálu pro správu předplatného sady Visual Studio
 
-Kroky potřebné k opětovnému odeslání e-mailu přiřazení závisí na portálu, který používáte ke správě vašich předplatných. 
-
-## <a name="resending-assignment-emails-from-within-managevisualstudiocom"></a>Odešlete přiřazení e-mailů z v rámci manage.visualstudio.com
 
 Proces pro odešlete přiřazení e-mailů z portálu manage.visualstudio.com je velmi jednoduchý:
 
 1. Přejděte [manage.visualstudio.com](https://manage.visualstudio.com) portál a přihlaste se. 
-2. Použití **filtru** karta používá k hledání pro odběratele, do kterého chcete znovu odeslat e-mail přiřazení. (Další informace o filtrování, najdete v tématu [vyhledejte předplatné](/visualstudio/subscriptions/search-license).)
+2. Použití **filtru** karta používá k hledání pro odběratele, do kterého chcete znovu odeslat e-mail přiřazení. (Další informace o filtrování, najdete v tématu [vyhledejte předplatné](search-license.md).)
 3. Klikněte na subscriber(s).  Můžete pomocí kombinace Ctrl + klikněte na tlačítko nebo Shift + kliknutí myši a vyberte více odběrateli.
 4. Klikněte na tlačítko **znovu odeslal** v horní části výsledků vyhledávání.  
 
-## <a name="resending-assignment-emails-from-within-vlsc"></a>Odešlete přiřazení e-mailů z v rámci VLSC
-Pokud odběr byl přiřazen odběratel v VLSC a odběrateli si vyžádá odeslat znovu přiřazení e-mailu, můžete ji provést úpravou informace e-mailu odběratele a potom je změna zpět na původní adresu. To bude automaticky aktivuje, odešlete e-mailu přiřazení.
-
-Postupujte podle níže pokyny o odeslání e-mailu přiřazení:
-
-
-1. Navštivte Volume Licensing Service Center (VLSC) a přihlaste se.
-2. Ze stránky VLSC správce, klikněte na tlačítko **odběry** a potom **Visual Studio odběry**.
-3. Klikněte **číslo smlouvy** přidruženou k odběru Visual Studio.
-4. Klikněte na šipku dolů na **vyhledávání** panelu.  
-5. Vyhledávání pro odběratele pomocí pole e-mailovou adresu.
-6. V seznamu výsledků klepněte **příjmení** odběratele.
-7. Klikněte na tlačítko **upravit**.
-8. Ujistěte se, upravíte k předplatnému. Jedno konkrétní změny, které provedete – jenom je potřeba ke změně.  Například odebrat znak z e-mailovou adresu odběratele - odebrání "m". com. Klikněte **Uložit** tlačítko
-9. Jakmile informace se ukládají, klikněte na možnost **upravit** tlačítko znovu a opravte chybí znak v e-mailu. Klikněte na tlačítko **Uložit**.
-   
-To způsobí, že je na webu VLSC rozpozná, že byly změny u předplatného a znovu odeslat e-mail přiřazení k e-mailu uvedené na portálu. 
 
 > [!NOTE]
 > - Nově přiřazené odběry bude automaticky generovat e-mailu přiřazení. Výše je nutné pouze když si uživatel vyžádá, že se neposílají nové přiřazení e-mailových oznámení nebo oznámení z jakéhokoli důvodu.

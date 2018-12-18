@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::RemoveAllSetExceptions | Microsoft Docs
+title: IDebugEngine2::RemoveAllSetExceptions | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e3446b910aa1e728319d0f4c7acdbf65b01d1cb4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5d569362de2e71a462bcfe90bd5c7180256f981b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49921038"
 ---
 # <a name="idebugengine2removeallsetexceptions"></a>IDebugEngine2::RemoveAllSetExceptions
-Odebere seznamu výjimek nastavený rozhraní IDE pro konkrétní architekturu běhu a jazyka.  
+Odebere seznam výjimek, integrovaném vývojovém prostředí má nastavit pro konkrétní architekturu za běhu nebo jazyk.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,15 +41,15 @@ int RemoveAllSetExceptions(
   
 #### <a name="parameters"></a>Parametry  
  `guidType`  
- [v] Identifikátor GUID pro jazyk nebo identifikátor GUID pro modul ladění, která je specifická pro spuštění architektura.  
+ [in] Identifikátor GUID pro jazyk nebo identifikátor GUID pro ladicí stroj, který je specifický pro architekturu za běhu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Výjimky odebrat pomocí této metody, které byly nastavené zásadami starší volání [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md) metoda.  
+ Výjimky odebrat touto metodou byly nastavené zásadami předchozích volání [SetException](../../../extensibility/debugger/reference/idebugengine2-setexception.md) metody.  
   
- Chcete-li odebrat konkrétní výjimky, zavolejte [RemoveSetException](../../../extensibility/debugger/reference/idebugengine2-removesetexception.md) metoda.  
+ Chcete-li odebrat určité výjimky, zavolejte [RemoveSetException](../../../extensibility/debugger/reference/idebugengine2-removesetexception.md) metody.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)   

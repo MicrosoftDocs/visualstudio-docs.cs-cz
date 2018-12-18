@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31470470"
 ---
 # <a name="debugbreak-and-debugbreak"></a>DebugBreak a __debugbreak
 Můžete volat funkci debugbreak – Win32 nebo [__debugbreak –](/cpp/intrinsics/debugbreak) vnitřní v libovolném bodě v kódu. `DebugBreak` a `__debugbreak` mají stejný účinek jako nastavení boru přerušení v tomto umístění.  

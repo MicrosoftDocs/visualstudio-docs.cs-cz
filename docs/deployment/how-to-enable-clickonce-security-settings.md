@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: povolení nastavení zabezpečení ClickOnce | Microsoft Docs'
+title: 'Postupy: povolení nastavení zabezpečení ClickOnce | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -18,46 +18,47 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bc3f87e590c6b915d5b3d9db5d2517d80965dd6c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f21b58a0ec9e8fe26cb02f72912fd23424cdfc7a
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39150934"
 ---
-# <a name="how-to-enable-clickonce-security-settings"></a>Postupy: Povolení nastavení zabezpečení ClickOnce
-Chcete-li publikovat aplikace musí být povoleno zabezpečení přístupu kódu pro aplikace ClickOnce. To se provádí automaticky při publikování aplikace pomocí Průvodce publikování.  
+# <a name="how-to-enable-clickonce-security-settings"></a>Postupy: povolení nastavení zabezpečení ClickOnce
+Chcete-li publikovat aplikace musí být povoleno zabezpečení přístupu ke kódu pro aplikace ClickOnce. To se provádí automaticky při publikování aplikace pomocí Průvodce publikováním.  
   
- V některých případech může povolení zabezpečení přístupu kódu ovlivnit výkon při vytváření nebo ladění aplikace; v těchto případech můžete chtít dočasně zakázat nastavení zabezpečení.  
+ V některých případech povolení zabezpečení přístupu kódu může mít vliv na výkon při sestavování nebo ladění aplikace; v těchto případech můžete chtít dočasně zakázat nastavení zabezpečení.  
   
- Nastavení zabezpečení ClickOnce můžete povolit nebo zakázat na **zabezpečení** stránky **Návrhář projektu**.  
+ Nastavení zabezpečení ClickOnce můžete povolit nebo zakázat na **zabezpečení** stránku **Návrháře projektu**.  
   
-### <a name="to-enable-clickonce-security-settings"></a>Chcete-li povolit nastavení zabezpečení ClickOnce  
+### <a name="to-enable-clickonce-security-settings"></a>Povolení nastavení zabezpečení ClickOnce  
   
-1.  S projekt vybraný v **Průzkumníku řešení**na **projektu** nabídky, klikněte na tlačítko **vlastnosti**.  
+1.  S projekt vybraný v **Průzkumníka řešení**na **projektu** nabídky, klikněte na tlačítko **vlastnosti**.  
   
-2.  Klikněte **zabezpečení** kartě.  
+2.  Klikněte na tlačítko **zabezpečení** kartu.  
   
-3.  Vyberte **povolení nastavení zabezpečení ClickOnce** zaškrtávací políčko.  
+3.  Vyberte **povolit nastavení zabezpečení ClickOnce** zaškrtávací políčko.  
   
-     Nyní můžete přizpůsobit nastavení zabezpečení pro vaši aplikaci na stránce zabezpečení.  
+     Teď můžete přizpůsobit nastavení zabezpečení pro vaši aplikaci na stránce zabezpečení.  
   
     > [!NOTE]
-    >  Toto zaškrtávací políčko se vybere automaticky pokaždé, když je aplikace publikována s **publikovat** průvodce.  
+    >  Toto zaškrtávací políčko je zaškrtnuto automaticky pokaždé, když je aplikace publikována s **publikovat** průvodce.  
   
 ### <a name="to-disable-clickonce-security-settings"></a>Chcete-li zakázat nastavení zabezpečení ClickOnce  
   
-1.  S projekt vybraný v **Průzkumníku řešení**na **projektu** nabídky, klikněte na tlačítko **vlastnosti**.  
+1.  S projekt vybraný v **Průzkumníka řešení**na **projektu** nabídky, klikněte na tlačítko **vlastnosti**.  
   
-2.  Klikněte **zabezpečení** kartě.  
+2.  Klikněte na tlačítko **zabezpečení** kartu.  
   
-3.  Vymazat **povolení nastavení zabezpečení ClickOnce** zaškrtávací políčko.  
+3.  Zrušte **povolit nastavení zabezpečení ClickOnce** zaškrtávací políčko.  
   
-     Vaše aplikace spustí s nastavením zabezpečení úplný vztah důvěryhodnosti; všechna nastavení na **zabezpečení** stránky budou ignorovány.  
+     Vaše aplikace bude spuštěna pomocí nastavení zabezpečení úplný vztah důvěryhodnosti. všechna nastavení **zabezpečení** stránky se bude ignorovat.  
   
     > [!NOTE]
-    >  Pokaždé, když je aplikace publikována pomocí Průvodce publikováním, toto zaškrtávací políčko bude vybrána; je třeba ji zrušit znovu po každém úspěšném publikování.  
+    >  Pokaždé, když je aplikace publikována pomocí Průvodce publikováním toto zaškrtávací políčko bude vybrána; je třeba ji zrušit po každém úspěšném publikování.  
   
-## <a name="see-also"></a>Viz také  
- [Zabezpečování aplikací ClickOnce](../deployment/securing-clickonce-applications.md)   
+## <a name="see-also"></a>Viz také:  
+ [Zabezpečení aplikací ClickOnce](../deployment/securing-clickonce-applications.md)   
  [Zabezpečení přístupu ke kódu pro aplikace ClickOnce](../deployment/code-access-security-for-clickonce-applications.md)   
  

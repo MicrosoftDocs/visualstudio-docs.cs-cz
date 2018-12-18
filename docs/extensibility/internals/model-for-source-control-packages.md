@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31129440"
 ---
 # <a name="model-for-source-control-packages"></a>Model pro balíčky zdroj ovládacího prvku
 Následující model představuje příklad implementace ovládacího prvku zdroje. V modelu uvidíte rozhraní, které je nutné implementovat a prostředí služby, které je třeba volat. Všechny služby, jako je ve skutečnosti volání metody určité rozhraní, které jste získali mimo službu. Aby bylo snazší zjistit, jak se provádí kontrola zdroje jsou identifikovány názvy tříd.  

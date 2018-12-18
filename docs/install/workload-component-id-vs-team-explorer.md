@@ -1,11 +1,12 @@
 ---
-title: Visual Studio Team Explorer 2017 pracovního vytížení a součást ID
-description: Pomocí ID úlohy a součást Visual Studio pro zajištění integrované testovací nástroje Všestranní technici testerům, sada
+title: ID pracovního vytížení a komponenta Visual Studio Team Explorer 2017
+titleSuffix: ''
+description: Pomocí ID pracovního vytížení a komponenta Visual Studio poskytuje integrované testovací nástroje pro všeobecně testery
 keywords: ''
 author: TerryGLee
 ms.author: tglee
 manager: douge
-ms.date: 03/05/2018
+ms.date: 11/13/2018
 ms.topic: reference
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -17,60 +18,55 @@ ms.prod: visual-studio-dev15
 ms.assetid: c6ef9a3b-d13d-49b4-9faa-51fa06b21e1f
 ms.workload:
 - multiple
-ms.openlocfilehash: dce63fa1288922212e091a255a5f766a4292a4c1
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 7b54e0f73f4f0d504df3757ffc881b2282fc9471
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53066103"
 ---
 # <a name="visual-studio-team-explorer-2017-component-directory"></a>Visual Studio Team Explorer 2017 součástí adresáře
 
-V tabulkách na této stránce najdete ID, které můžete použít k instalaci sady Visual Studio pomocí příkazového řádku. Všimněte si, že přidáme další součásti, jako jsme vydání aktualizace pro Visual Studio.
+Tabulky v tomto seznamu stránce ID, můžete použít k instalaci sady Visual Studio pomocí příkazového řádku nebo je můžete zadat jako závislost v manifestu VSIX. Všimněte si, že přidáme další součásti vydaných aktualizací sady Visual Studio.
 
-Všimněte si také následující o tuto stránku:
+Všimněte si také následující stránka:
 
-* Každé zatížení má vlastní části, a potom podle ID úlohy a tabulku součásti, které jsou k dispozici pro pracovní vytížení.
-* Ve výchozím nastavení **požadované** součásti se nainstalují při instalaci zatížení. Pokud zvolíte možnost, můžete taky nainstalovat **doporučeno** a **volitelné** součásti.
-* Přidali jsme také oddíl, který uvádí další součásti, které nejsou spojit s jakoukoli úlohu.
+* Každá úloha má vlastní oddíl, za nímž následuje Identifikátor pracovního vytížení a tabulku komponent, které jsou k dispozici pro pracovní vytížení.
+* Ve výchozím nastavení **vyžaduje** součásti nainstaluje, když jste si nainstalovali úlohu.
+* Pokud budete chtít, můžete nainstalovat také **doporučená** a **volitelné** komponenty.
+* Přidali jsme také oddíl, který obsahuje další součásti, které nejsou pod něj nespadá u jakékoli úlohy.
 
-Další informace o tom, jak používat tyto identifikátory najdete v tématu [pomocí parametrů příkazového řádku pro instalaci Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md) stránky. A seznam úloh a ID součástí pro ostatní produkty, naleznete v části [zatížení 2017 Visual Studio a ID součástí](workload-and-component-ids.md) stránky.
+Když nastavíte závislosti v manifestu VSIX, je nutné zadat ID součástí pouze. Určení závislostí naše minimální součástí pomocí tabulek na této stránce. V některých případech to může znamenat, že zadáváte pouze jednu komponentu z pracovního vytížení. V jiných scénářích může znamenat, že zadáte více komponent z jedné úlohy nebo více komponent z více úloh. Další informace najdete v tématu [postupy: migrace projektů rozšíření do sady Visual Studio 2017](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2017.md) stránky.
 
-## <a name="visual-studio-core-editor-included-with-visual-studio-team-explorer-2017"></a>Visual Studio základní editor (je součástí Visual Studio Team Explorer 2017)
+Další informace o tom, jak pomocí těchto identifikátorů najdete v části [pomocí parametrů příkazového řádku instalace sady Visual Studio 2017](use-command-line-parameters-to-install-visual-studio.md) stránky. A seznam pracovního vytížení a komponenta ID pro ostatní produkty, naleznete v tématu [funkcí sady Visual Studio 2017 a ID součástí](workload-and-component-ids.md) stránky.
+
+## <a name="visual-studio-core-editor-included-with-visual-studio-team-explorer-2017"></a>Základní editor Visual Studio (je součástí sady Visual Studio Team Explorer 2017)
 
 **ID:** Microsoft.VisualStudio.Workload.CoreEditor
 
-**Popis:** prostředí prostředí sady Visual Studio jádra, včetně syntaxe využívající kód úpravy, pro řízení zdrojového kódu a pracovní položky správy.
+**Popis:** příkazové prostředí sady Visual Studio core, včetně úprav kódu podle syntaxe, zdrojového kódu a správy pracovních položek.
 
-### <a name="components-included-by-this-workload"></a>Součásti zahrnuté tímto zatížením
+### <a name="components-included-by-this-workload"></a>Pomocí této úlohy zahrnuté komponenty
 
 ID součásti | Název | Version | Typ závislosti
 --- | --- | --- | ---
-Microsoft.VisualStudio.Component.CoreEditor | Editor základní Visual Studio | 15.6.27309.0 | Požadováno
-Microsoft.VisualStudio.Component.StartPageExperiment.Cpp | Visual Studio úvodní stránka pro uživatele C++ | 15.0.27128.1 | Nepovinné
+Microsoft.VisualStudio.Component.CoreEditor | Základním editoru sady Visual Studio | 15.8.27729.1 | Požadováno
+Microsoft.VisualStudio.Component.StartPageExperiment.Cpp | Visual Studio úvodní stránka pro uživatele jazyka C++ | 15.0.27128.1 | volitelná,
 
-## <a name="unaffiliated-components"></a>Nezávislou na komponenty
+## <a name="unaffiliated-components"></a>Nespojená komponenty
 
-Toto jsou součásti, které nejsou součástí žádné úlohy, ale může být vybraný jako jednotlivé součásti.
+Toto jsou komponenty, které nejsou zahrnuty u jakékoli úlohy, ale může vybrat jako jednotlivých komponent.
 
 ID součásti | Název | Version
 --- | --- | ---
 není k dispozici | není k dispozici | není k dispozici
 
-## <a name="get-support"></a>Získat podporu
+[!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-V některých případech může problémů. Pokud se nezdaří instalace Visual Studia, najdete v článku [problémy instalace a upgrade řešení potíží s Visual Studio 2017](troubleshooting-installation-issues.md) stránky. Pokud se žádný z kroků pro řešení potíží, kontaktujte nás pomocí živé konverzace pro pomoc s instalací (pouze v angličtině). Podrobnosti najdete v tématu [stránky podpory sady Visual Studio](https://www.visualstudio.com/vs/support/#talktous).
-
-Tady je několik další možnosti podpory:
-
-* Můžete hlášení problémů produktu pro nás prostřednictvím [nahlásit problém](../ide/how-to-report-a-problem-with-visual-studio-2017.md) nástroj, který se zobrazí v instalačním programu Visual Studio i v integrovaném vývojovém prostředí sady Visual Studio.
-* Návrh produktu s námi můžete sdílet na [UserVoice](https://visualstudio.uservoice.com/forums/121579).
-* Můžete sledovat problémy produktu a najít v odpovědi [Visual Studio Community vývojáře](https://developercommunity.visualstudio.com/).
-* Můžete také použít s námi a jinými vývojáři Visual Studio prostřednictvím [Visual Studio konverzace v komunitě Gitter](https://gitter.im/Microsoft/VisualStudio). (Tato možnost vyžaduje [Githubu](https://github.com/) účtu.)
-
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 * [ID úloh a komponent sady Visual Studio](workload-and-component-ids.md)
-* [Příručka správce Visual Studio](visual-studio-administrator-guide.md)
+* [Příručka pro správce aplikace Visual Studio](visual-studio-administrator-guide.md)
 * [Instalace sady Visual Studio s použitím parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
   * [Příklady parametrů příkazového řádku](command-line-parameter-examples.md)
 * [Vytvoření offline instalace sady Visual Studio](create-an-offline-installation-of-visual-studio.md)

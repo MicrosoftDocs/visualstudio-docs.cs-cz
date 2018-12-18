@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: c04ecdc1de848a95ad9f5051cc9ec54da02a3625
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a0dd74f25ed5dc7f76b9d35ae3d2d9833f8e4ab8
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35255522"
 ---
-# <a name="modules-view---net-memory-instrumentation-data"></a>Zobrazení modulů – Data instrumentace paměti .NET
+# <a name="modules-view---net-memory-instrumentation-data"></a>Zobrazení modulů – data instrumentace paměti .NET
 Zobrazení modulů .NET paměti přidělení dat shromažďovaných pomocí metody instrumentace skupiny paměti a dat časování moduly, které byly provedeny v profilaci spustit. Profilace data pro funkce modulu je uvedena pod tímto uzlem modulu.  
   
 ## <a name="general"></a>Obecné  
@@ -98,7 +99,7 @@ Zobrazení modulů .NET paměti přidělení dat shromažďovaných pomocí meto
 |**Maximální doba výhradní aplikace**|-Pro funkce, době výhradní maximální aplikace volání této funkce.<br />-Pro modul, doba výhradní maximální aplikace všechna volání funkce v modulu.|  
 |**Doba výhradní aplikace min.**|-Pro funkce, době výhradní minimální aplikace volání tohoto modulu nebo funkce.<br />-Pro modul, doba výhradní minimální aplikace všechna volání funkce v modulu.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Moduly zobrazení – vzorkování](../profiling/modules-view-dotnet-memory-sampling-data.md)   
  [Zobrazení modulů](../profiling/modules-view-instrumentation-data.md)   
  [Zobrazení modulů](../profiling/modules-view-sampling-data.md)

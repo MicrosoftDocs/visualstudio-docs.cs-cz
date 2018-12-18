@@ -1,5 +1,5 @@
 ---
-title: 'Chyba: Nelze automatické krokování s vnořením serveru | Microsoft Docs'
+title: 'Chyba: Automatické krokování s vnořením do serveru nelze | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -19,24 +19,25 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a8c79669da0e20bc7376d68c4ea782d280eb6df3
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 37298dcbb2443755136c4c57eb4633fcb3197a87
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49849512"
 ---
 # <a name="error-unable-to-automatically-step-into-the-server"></a>Chyba: Automatické krokování s vnořením do serveru se nezdařilo.
 Chyba čtení:  
   
- Nelze automaticky krok do serveru. Ladicí program nebyl upozorněn předtím, než se spustí vzdálené procedury  
+ Nepovedlo se automatické krokování s vnořením do serveru. Ladicí program nebyl upozorněn, než se provedl vzdálené procedury  
   
- K této chybě může dojít, když se pokoušíte krok do webové služby (viz [Zanoříte se do XML webové služby](http://msdn.microsoft.com/en-us/8e67de38-bf5f-41cc-a457-1b88ce63d764)). Dochází vždy, když [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] není správně nastaven.  
+ Této chybě může dojít, když se pokoušíte Krokovat s vnořením webové služby (viz [krokování do webové služby XML](https://msdn.microsoft.com/library/8e67de38-bf5f-41cc-a457-1b88ce63d764)). To může nastat, když [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] není správně nastavený.  
   
- Možné příčiny jsou:  
+ Možné příčiny:  
   
--   Souboru web.config pro vaše [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikace není nastavena na hodnotu "true" debug (viz [režim ladění v aplikacích ASP.NET](../debugger/how-to-enable-debugging-for-aspnet-applications.md)).  
+- Soubor web.config pro vaše [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikace v není nastaven na hodnotu "true" debug (naleznete v tématu [režim ladění v aplikacích ASP.NET](../debugger/how-to-enable-debugging-for-aspnet-applications.md)).  
   
--   Verzi [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] byl nainstalován po instalaci sady Visual Studio. [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] by měly být nainstalovány před Visual Studio. Chcete-li tento problém vyřešit, použijte Windows **ovládací panely > programy a funkce** k opravě instalace sady Visual Studio.  
+- Verze [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] instaloval po instalaci sady Visual Studio. [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] musí se nainstalovat před Visual Studio. Chcete-li tento problém vyřešit, použijte Windows **ovládací panely > programy a funkce** opravit instalaci sady Visual Studio.  
   
 ## <a name="see-also"></a>Viz také  
  [Vzdálené ladění chyby a řešení potíží](../debugger/remote-debugging-errors-and-troubleshooting.md)   

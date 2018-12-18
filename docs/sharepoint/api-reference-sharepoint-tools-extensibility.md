@@ -15,16 +15,17 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0aca731f3f57b7c7024135a3d06d7b17481ba924
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 39b324d2eda0544482c1f2f5ca9f54941ea8d8d4
+ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36325791"
 ---
-# <a name="api-reference-sharepoint-tools-extensibility"></a>Referenční dokumentace rozhraní API (rozšíření nástrojů SharePoint)
+# <a name="api-reference-sharepoint-tools-extensibility"></a>Referenční dokumentace rozhraní API (rozšíření nástrojů služby SharePoint)
   Tato část obsahuje referenční dokumentace rozhraní API pro rozšíření nástrojů SharePoint v sadě Visual Studio.  
   
-## <a name="in-this-section"></a>V tomto oddílu  
+## <a name="in-this-section"></a>V tomto oddílu
  <xref:Microsoft.VisualStudio.SharePoint>  
  Obsahuje typy, které můžete použít k rozšíření systému projektu služby SharePoint. Například můžete rozšířit předdefinovaný projektů služby SharePoint a položky projektu, nebo můžete vytvořit svoje vlastní položky projektu.  
   
@@ -58,12 +59,11 @@ ms.lasthandoff: 04/16/2018
  <xref:Microsoft.VisualStudio.SharePoint.Validation>  
  Obsahuje typy, které můžete použít k přizpůsobení chování funkce a balíku ověřování služby projektu služby SharePoint.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:
  [Referenční dokumentace &#40;rozšíření nástrojů SharePoint&#41;](../sharepoint/reference-sharepoint-tools-extensibility.md)   
- [Přehled modelu programování SharePoint rozšíření nástrojů](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)   
+ [Přehled modelu programování služby SharePoint rozšíření nástrojů](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)   
  [Rozšíření systému projektu služby SharePoint](../sharepoint/extending-the-sharepoint-project-system.md)   
  [Rozšíření uzlu připojení služby SharePoint v Průzkumníku serveru](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)   
  [Rozšíření balení a nasazení SharePoint](../sharepoint/extending-sharepoint-packaging-and-deployment.md)   
  [Volání do objektových modelů služby SharePoint](../sharepoint/calling-into-the-sharepoint-object-models.md)  
-  
   

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31459737"
 ---
 # <a name="exe"></a>Exe
 Exe je jediným symbolů bez buď lexikální nebo třídy nadřazeným prvkem, jako reprezentuje globálním oboru souboru .exe nebo .dll. Je jen jeden symbol `SymTagExe` značky na soubor. [Idiasession::get_globalscope –](../../debugger/debug-interface-access/idiasession-get-globalscope.md) metoda vrátí symbol.  

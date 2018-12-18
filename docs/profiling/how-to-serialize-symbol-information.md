@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: serializace informací o symbolu | Microsoft Docs'
+title: 'Postupy: serializace informací o symbolu | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -15,26 +15,27 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 69c59395eb74f2c79c6a7d7e1b9c56f420e9705a
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 8b608b41ea4fd1b5b7544604e8d04bed02361b06
+ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51220863"
 ---
-# <a name="how-to-serialize-symbol-information"></a>Postupy: Serializace informací o symbolu
-Znaky, které musí mít k analýze vaše aplikace může serializovat. Symbol serializace přidá do souboru .vsp symboly. Přidáním informací o symbolu k souboru .vsp ostatní můžete analyzovat Sestava výkonu bez nutnosti přístupu k původní symboly. Pokud nejsou serializované symboly, musíte mít soubory PDB k analýze souboru .vsp původní instrumentovaného .exe a.  
+# <a name="how-to-serialize-symbol-information"></a>Postupy: serializace informací o symbolu
+Může serializovat symboly, které potřebujete k analýze vaší aplikace. Serializace symbolu přidá symboly. *vsp* souboru. Přidejte informace o symbolech pro. *vsp* souboru, ostatní analyzovat sestavu výkonu bez nutnosti přístupu k původní symboly. Pokud nejsou serializován symboly, musíte mít původní instrumentovány. *exe* a. *soubor PDB* souborů k analýze. *Vsp* souboru.  
   
-### <a name="to-automatically-serialize-symbol-information"></a>Chcete-li automaticky serializace informací o symbolu  
+### <a name="to-automatically-serialize-symbol-information"></a>Automaticky serializovat informace o symbolech  
   
 1.  Na **nástroje** nabídky, klikněte na tlačítko **možnosti**.  
   
      **Možnosti** se zobrazí dialogové okno.  
   
-2.  Klikněte na tlačítko **nástroje pro sledování výkonu**.  
+2.  Klikněte na tlačítko **nástroje pro měření výkonu**.  
   
-3.  V části **obecné nastavení**, vyberte **automaticky serializace informací o symbolu**.  
+3.  V části **obecné nastavení**vyberte **automaticky serializovat informace o symbolech**.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Konfigurace výkonnostních relací](../profiling/configuring-performance-sessions.md)   
- [Postupy: referenční informace o symbolech Windows](../profiling/how-to-reference-windows-symbol-information.md)   
- [Postupy: uložení analyzovali souborů sestav](http://msdn.microsoft.com/en-us/0340ddde-caf4-48ac-8af3-d15dcdade556)
+ [Postupy: informace o symbolech Windows odkaz](../profiling/how-to-reference-windows-symbol-information.md)   
+ [Postupy: uložení analyzovat soubory sestav](/previous-versions/visualstudio/visual-studio-2010/bb763106\(v\=vs.100\))

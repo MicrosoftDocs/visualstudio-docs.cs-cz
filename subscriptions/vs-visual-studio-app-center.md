@@ -1,71 +1,73 @@
 ---
-title: Benefit centra aplikace Visual Studio v sadě Visual Studio předplatných | Microsoft Docs
+title: Výhoda Visual Studio App Center v předplatných sady Visual Studio | Dokumentace Microsoftu
 author: evanwindom
 ms.author: jaunger
 manager: evelynp
 ms.date: 01/15/2018
 ms.topic: Get-Started-Article
-description: Další informace o benefitech Center aplikace Visual Studio, zahrnuté v sadě Visual Studio předplatných.
+description: Další informace o benefitech Visual Studio App Center, které jsou součástí předplatných sady Visual Studio.
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 9c425e675deb97236665d328774e0b9c2fab4e77
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 112597455bbabe9f42cc2834bd06bf5c52d7cc9f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49940980"
 ---
-# <a name="visual-studio-app-center-in-visual-studio-subscriptions"></a>Středisko pro aplikaci Visual Studio v sadě Visual Studio předplatných
+# <a name="visual-studio-app-center-in-visual-studio-subscriptions"></a>Visual Studio App Center v předplatných sady Visual Studio
 
-Aplikace Center je zvláště řízení pro aplikace.
+App Center je řídicím střediskem pro aplikace.
 
--  Automaticky sestavení aplikace, otestovat ji na skutečné zařízení a distribuovat ji pro beta testery
--  Shromážděte zprávy o chybách a analýzy chování uživatelů, včetně vlastních událostí.
--  Přidání nabízených oznámení do vaší aplikace v minutách
+-  Automaticky sestavit aplikaci, testovat na skutečných zařízeních a distribuovat testerům beta verzí
+-  Shromážděte analýzy chování uživatelů, včetně vlastních událostí a zpráv o chybách.
+-  Přidání nabízených oznámení do vaší aplikace během několika minut
 
 ## <a name="activation-steps"></a>Postup aktivace
-Začínáme s Visual Studio aplikace Center je snadné. 
+Začínáme se službou Visual Studio App Center je snadný.
 1.  Přihlaste se k [ https://my.visualstudio.com/benefits ](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs).
 
-2. Najděte dlaždici Centrum aplikace Visual Studio a klikněte na **Začínáme**.
+2. Vyhledejte dlaždici Visual Studio App Center a klikněte na tlačítko **Začínáme**.
+    > [!div class="mx-imgBorder"]
+    > ![Dlaždice VS App Center](_img/vs-app-center/vs-app-center-tile.png)
 
-    ![Dlaždice aplikace Center VS](_img/vs-app-center/vs-app-center-tile.png)
+3. Dále vytvořte účet.  Můžete používat existující účty pro Google, Facebook, GitHub nebo Microsoftu k přihlášení nebo vytvoření nového účtu zadáním uživatelského jména, e-mailu a hesla.  Klikněte na tlačítko **vytvořit účet** pokračujte.
+    > [!div class="mx-imgBorder"]
+    > ![Vytvoření účtu VS App Center](_img/vs-app-center/vs-app-center-create-account.png)
 
-3. Dále vytvořte účet.  Můžete použít existující účty pro Google, Facebook, GitHub nebo Microsoftu pro přihlášení nebo vytvořit nový účet zadáním uživatelského jména, e-mailu a hesla.  Klikněte na tlačítko **vytvořit účet** pokračujte. 
+4. To je všechno je to.  Stačí kliknout na **přidat novou organizaci** nebo **přidat novou aplikaci** začít!
+    > [!div class="mx-imgBorder"]
+    > ![Portál App Center VS](_img/vs-app-center/vs-app-center-portal.png)
 
-    ![Vytvoření účtu Center aplikace VS](_img/vs-app-center/vs-app-center-create-account.png)
+## <a name="eligibility"></a>Způsobilost
 
-4. To je všechno je k němu.  Stačí kliknout na **přidat nové organizace** nebo **přidat novou aplikaci** začít!
-
-    ![Portál aplikace Center VS](_img/vs-app-center/vs-app-center-portal.png)
-
-## <a name="eligibility"></a>Podmínky
-| Úrovni předplatného                                                 |     Kanály                                            | Výhody                                                          | Obnovitelných?    |
+| Úroveň předplatného                                                 |     Kanály                                            | Výhody                                                          | Obnovitelné?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (standardní, roční cloud, měsíční cloudu)   | VL, Azure, prodejní, NFR<sup>1</sup> | Zahrnuté       |  Ano          |
-| Visual Studio Professional (standardní, roční cloud, měsíční cloudu) | VL, Azure, maloobchodní                                       | Zahrnuté                                                            |Ano |
-| Visual Studio Test Professional (standardní)                         | VL, prodejní                                              | Zahrnuté                                                            |Ano |
-| MSDN platformy (standardní)                                          | VL, prodejní                                              | Zahrnuté                                                            |Ano |
-| Visual Studio Dev Essentials | NÁ  | Zahrnuté                                                            |Ano |
+| Visual Studio Enterprise (standardní a roční cloudové, měsíčních cloudových)   | VL, Azure, maloobchod, NFR<sup>1</sup> | Zahrnuté       |  Ano          |
+| Visual Studio Professional (standardní a roční cloudové, měsíčních cloudových) | VL, Azure, maloobchodního prodeje                                       | Zahrnuté                                                            |Ano |
+| Visual Studio Test Professional (Standard)                         | VL maloobchodního prodeje                                              | Zahrnuté                                                            |Ano |
+| Předplatné MSDN Platforms (Standard)                                          | VL maloobchodního prodeje                                              | Zahrnuté                                                            |Ano |
+| Visual Studio Dev Essentials | NENÍ K DISPOZICI  | Zahrnuté                                                            |Ano |
 
 
-<sup>1</sup>*zahrnuje: není pro prodej (NFR) FTE, Visual Studio Industry Partner (VSIP), představte si, Microsoft Partner Network (MPN), MCT softwaru & služby, MCT softwaru a služeb Developer, BizSpark, Microsoft s hodnotou partnera (MVP ), Oblast ředitel (RD).* 
+<sup>1</sup>*zahrnuje: není pro prodej (NFR) FTE, Visual Studio Industry Partner (VSIP), představte si, Microsoft Partner Network (MPN), MCT Software & Services, MCT Software a služby pro vývojáře, BizSpark, Microsoft s hodnotou Professional (MVP), ředitel pro oblast (RD).* 
 
-Nejste si jistí jaké předplatné používáte?  Připojení k [ https://my.visualstudio.com/subscriptions ](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) zobrazíte všechny odběry, které jsou přiřazeny k e-mailovou adresu. Pokud nevidíte všechny odběry, můžete mít jeden nebo více přiřadit jinou e-mailovou adresu.  Musíte se přihlásit pomocí tohoto e-mailovou adresu zobrazíte těchto předplatných. 
+Nejste si jistí které předplatné používáte?  Připojte se k [ https://my.visualstudio.com/subscriptions ](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) zobrazíte všechna předplatná, která jsou přiřazená e-mailovou adresu. Pokud se nezobrazí všechna předplatná, může mít jeden nebo více přiřazené na jinou e-mailovou adresu.  Bude potřeba přihlásit se přes tento e-mailovou adresu najdete v těchto předplatných.
 
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy
 
-### <a name="q--i-get-an-error-that-my-browser-is-unsupported--whats-wrong"></a>Otázka: zobrazí chybová zpráva, že v prohlížeči není podporována.  Co je? 
-A: Center aplikace vyžaduje novější funkce, které nemusí být poskytované některé starší prohlížeče.  Pokud váš prohlížeč není podporovaný, postupujte podle těchto kroků:
-1.  Otevřete jiný prohlížeč, jako je například Microsoft Edge nebo nejnovější verze nástroje Google Chrome, Firefox nebo Safari.  
-2.  Připojení k sadě Visual Studio [ https://my.visualstudio.com/benefits ](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) a přihlaste se. 
-3.  Nyní klikněte na **Začínáme** odkaz na dlaždici Centrum aplikace Visual Studio. 
+### <a name="q--i-get-an-error-that-my-browser-is-unsupported--whats-wrong"></a>Otázka: nemůžu dojde k chybě, že v prohlížeči se nepodporuje.  Co je?
+Odpověď: app Center vyžaduje novější funkce, které nemusí být k dispozici některé starší prohlížeče.  Pokud váš prohlížeč není podporovaný, postupujte podle těchto kroků:
+1.  Otevřete jiný prohlížeč, jako je například Microsoft Edge nebo nejnovější verze Google Chrome nebo Firefox a Safari.
+2.  Připojení ke službě Visual Studio [ https://my.visualstudio.com/benefits ](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) a přihlaste se.
+3.  Nyní klikněte na **Začínáme** odkaz na dlaždici Visual Studio App Center.
 
-Teď by měla být přístup k portálu aplikace Center a vytvoření účtu. 
+Teď by měl být mít přístup k portálu App Center a vytvořte si účet.
 
-## <a name="support-resources"></a>Podpora prostředky
--  Potřebujete pomoc s centrem aplikace?  
-    - Získat Rady a odpovědi od týmu Center aplikace v [aplikace Centrum pro nápovědu](https://intercom.help/appcenter/). 
-    - Podívejte se na dokončení [aplikace Centrum dokumentace](/appcenter/) 
--  Požádejte o pomoc s prodej, odběry, účtech a cenách pro Visual Studio předplatné sady Visual Studio [odběry podporu](https://www.visualstudio.com/subscriptions/support/).
--  Máte dotaz týkající se Visual Studio IDE, Visual Studio Team Services nebo jiné produkty Visual Studio nebo službám?  Navštivte [Visual Studio – podpora](https://www.visualstudio.com/support/). 
+## <a name="support-resources"></a>Informační zdroje podpory
+-  Potřebujete pomoc s App Center?
+    - Získejte Rady a odpovědi od týmu App Center v [aplikace centrum nápovědy](https://intercom.help/appcenter/).
+    - Podívejte se na dokončení [dokumentace k App Center](/appcenter/)
+-  Potřebujete pomoc se prodeje, předplatnými, účty a fakturací pro předplatná sady Visual Studio, obraťte se na Visual Studio [podpora předplatných](https://visualstudio.microsoft.com/subscriptions/support/).
+-  Máte dotaz k Visual Studio IDE, DevOps služby Azure nebo jiných produktů Visual Studio nebo služeb?  Navštivte [Visual Studio – podpora](https://visualstudio.microsoft.com/support/).

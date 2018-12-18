@@ -1,11 +1,11 @@
 ---
-title: "SCRIPTTHREADSTATE – výčet | Microsoft Docs"
-ms.custom: 
+title: SCRIPTTHREADSTATE – výčet | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - SCRIPTTHREADSTATE
@@ -14,7 +14,7 @@ apilocation:
 helpviewer_keywords:
 - SCRIPTTHREADSTATE enum
 ms.assetid: 975ec66b-c095-40ac-8ba9-631adb97b589
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -23,6 +23,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24796329"
 ---
 # <a name="scriptthreadstate-enumeration"></a>SCRIPTTHREADSTATE – výčet
 Určuje stav vlákna v skriptovacího stroje. Tento výčet je používán [IActiveScript::GetScriptThreadState](../../winscript/reference/iactivescript-getscriptthreadstate.md) metoda.  

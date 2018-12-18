@@ -1,5 +1,5 @@
 ---
-title: Getframeworksdkpath – úloha | Microsoft Docs
+title: Getframeworksdkpath – úloha | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -20,11 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 44d128df04ef13ea6ee4b5b20368b5932842cc3d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a3ce43a9b2acae5589e4b746ce4bf2b2a47b0111
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37946830"
 ---
 # <a name="getframeworksdkpath-task"></a>GetFrameworkSdkPath – úloha
 Načte cestu k [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)].  
@@ -34,16 +35,16 @@ Načte cestu k [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)].
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|`FrameworkSdkVersion20Path`|Volitelné `String` jen pro čtení výstupní parametr.<br /><br /> Vrátí cestu k sadě SDK .NET verze 2.0, pokud je k dispozici. V opačném případě vrátí `String.Empty`.|  
-|`FrameworkSdkVersion35Path`|Volitelné `String` jen pro čtení výstupní parametr.<br /><br /> Vrátí cestu k sadě SDK .NET verze 3.5, pokud je k dispozici. V opačném případě vrátí `String.Empty`.|  
-|`FrameworkSdkVersion40Path`|Volitelné `String` jen pro čtení výstupní parametr.<br /><br /> Vrací cestu k .NET SDK verze 4.0, pokud je k dispozici. V opačném případě vrátí `String.Empty`.|  
-|`Path`|Volitelné `String` výstupní parametr.<br /><br /> Obsahuje cestu k nejnovější sady .NET SDK, pokud se nachází všechny verze. V opačném případě vrátí `String.Empty`.|  
+|`FrameworkSdkVersion20Path`|Volitelné `String` jen pro čtení výstupního parametru.<br /><br /> Vrátí cestu k sadě .NET SDK verze 2.0, pokud jsou k dispozici. V opačném případě vrátí `String.Empty`.|  
+|`FrameworkSdkVersion35Path`|Volitelné `String` jen pro čtení výstupního parametru.<br /><br /> Vrátí cestu k sadě .NET SDK verze 3.5, pokud jsou k dispozici. V opačném případě vrátí `String.Empty`.|  
+|`FrameworkSdkVersion40Path`|Volitelné `String` jen pro čtení výstupního parametru.<br /><br /> Vrátí cestu k sadě .NET SDK verze 4.0, pokud jsou k dispozici. V opačném případě vrátí `String.Empty`.|  
+|`Path`|Volitelné `String` výstupní parametr.<br /><br /> Obsahuje cestu k nejnovější sady .NET SDK, pokud je k dispozici žádné verze. V opačném případě vrátí `String.Empty`.|  
   
 ## <a name="remarks"></a>Poznámky  
- Kromě výše uvedených parametrů tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třída, které dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrech a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).  
+ Kromě výše uvedených parametrů zdědí tento úkol parametry ze <xref:Microsoft.Build.Tasks.TaskExtension> třída, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).  
   
 ## <a name="example"></a>Příklad  
- Následující příklad používá `GetFrameworkSdkPath` úloh pro cestu k uložení [!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)] v `SdkPath` vlastnost.  
+ V následujícím příkladu `GetFrameworkSdkPath` úloh pro uložení této cesty do [!INCLUDE[winsdkshort](../debugger/debug-interface-access/includes/winsdkshort_md.md)] v `SdkPath` vlastnost.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -58,6 +59,6 @@ Načte cestu k [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)].
 </Project>  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Úlohy](../msbuild/msbuild-tasks.md)   
  [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)

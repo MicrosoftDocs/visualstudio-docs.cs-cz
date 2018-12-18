@@ -1,5 +1,5 @@
 ---
-title: MACHINE_INFO_FIELDS | Microsoft Docs
+title: MACHINE_INFO_FIELDS | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5d0ff6f75c0ee17bef57b1f2632c4d6926948528
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 631ef4bbb23d4b0cedbf86d7eedb019580cf7e5b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942501"
 ---
 # <a name="machineinfofields"></a>MACHINE_INFO_FIELDS
-Určuje, jaký druh informací se načíst pro konkrétní počítač.  
+Určuje, jaké informace se mají načíst pro konkrétní počítač.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,20 +46,20 @@ public enum enum_MACHINE_INFO_FIELDS {
   
 ## <a name="members"></a>Členové  
  MCIF_NAME  
- Inicializace nebo pomocí `bstrName` pole ve struktuře.  
+ Inicializace/použít `bstrName` pole ve struktuře.  
   
  MCIF_FLAGS  
- Inicializace nebo pomocí `Flags` pole ve struktuře.  
+ Inicializace/použít `Flags` pole ve struktuře.  
   
  MIF_ALL  
- Inicializace nebo použití všechna pole ve struktuře.  
+ Inicializace/použít všechna pole ve struktuře.  
   
 ## <a name="remarks"></a>Poznámky  
- Tyto hodnoty jsou předávány [GetMachineInfo](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineinfo.md) metoda označíte, kteří členové [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) struktura mají být inicializován.  
+ Tyto hodnoty jsou předány [GetMachineInfo](../../../extensibility/debugger/reference/idebugcoreserver2-getmachineinfo.md) metoda označíte, kteří členové [MACHINE_INFO](../../../extensibility/debugger/reference/machine-info.md) struktury mají být inicializovány.  
   
- Používat i v `Fields` členem `MACHINE_INFO` struktura označuje pole, která je platná a použitá.  
+ Používá se také v `Fields` člen `MACHINE_INFO` struktury k označení pole, která se používá a je platný.  
   
- Tyto příznaky mohou být kombinovány s bitové `OR`.  
+ Tyto příznaky lze kombinovat pomocí logické bitové `OR`.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

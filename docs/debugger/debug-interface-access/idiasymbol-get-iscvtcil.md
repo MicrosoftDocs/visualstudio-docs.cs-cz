@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_iscvtcil – | Microsoft Docs
+title: Idiasymbol::get_iscvtcil – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a959b145775bdc1ea5e6073e03b304ad33f84c83
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 7d721338e1dfc21a54ce663377aba0aa71c83a87
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49836460"
 ---
 # <a name="idiasymbolgetiscvtcil"></a>IDiaSymbol::get_isCVTCIL
-Získá příznak označující, zda modul byl převeden do modulu Common mezilehlá jazyk souboru CIL () na nativní modul.  
+Získá příznak označující, zda modul byl převeden z modulu Common Intermediate Language (CIL) do nativního modulu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,23 +34,23 @@ HRESULT get_isCVTCIL(
   
 #### <a name="parameters"></a>Parametry  
  `pFlag`  
- [out] Vrátí `TRUE` Pokud modul byla převedená z soubor CIL do nativního kódu; jinak vrátí `FALSE`.  
+ [out] Vrátí `TRUE` Pokud modul převedený ze souboru CIL do nativního kódu; v opačném případě vrátí `FALSE`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` nebo chybový kód.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
->  Vrácená hodnota `S_FALSE` znamená vlastnost není k dispozici pro symbol.  
+>  Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato vlastnost je k dispozici z `SymTagCompilandDetails` typu symbolu (viz [compilanddetails –](../../debugger/debug-interface-access/compilanddetails.md).  
+ Tato vlastnost je k dispozici `SymTagCompilandDetails` typu symbolu (naleznete v tématu [compilanddetails –](../../debugger/debug-interface-access/compilanddetails.md).  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Požadavek|Popis|  
 |-----------------|-----------------|  
-|Hlavičky:|dia2.h|  
-|Verze:|V8.0 DIA SDK|  
+|Záhlaví:|dia2.h|  
+|Verze:|Ve verzi 8.0 DIA SDK|  
   
 ## <a name="see-also"></a>Viz také  
  [Idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md)   

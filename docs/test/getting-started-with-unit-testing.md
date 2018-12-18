@@ -1,155 +1,158 @@
 ---
-title: Začínáme s jednotkou testování v sadě Visual Studio | Microsoft Docs
+title: Začínáme s testováním částí
 ms.date: 05/02/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 helpviewer_keywords:
 - unit testing, create unit test plans
+author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: fa3c92a2b42da7946d9f5b4b9cc0bf208704f079
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6e8835edb2b340778c4431d3de5b554d6aeb6c6d
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53158811"
 ---
-# <a name="get-started-with-unit-testing"></a>Začínáme s testování částí
+# <a name="get-started-with-unit-testing"></a>Začínáme s testováním částí
 
-Pomocí sady Visual Studio můžete definovat a spouštění testů jednotek Udržovat kód stavu, zkontrolujte pokrytí kódu a k nalezení chyb a závad před vašich zákazníků.
+Pomocí sady Visual Studio můžete definovat a spouštět testy jednotek Údržba kódu stavu, ujistěte se, pokrytí kódu a najít chyby a závad, než se vaši zákazníci.
 
-## <a name="create-unit-tests"></a>Vytvářet testy částí
+## <a name="create-unit-tests"></a>Vytvořit testy jednotek
 
-Vytvářet testy částí a spustit je často a ujistěte se, že váš kód pracuje správně.
+Vytvořit testy jednotek a spouštět je často abyste měli jistotu, že váš kód funguje správně.
 
-1. Vytvoření projektu testování částí.
+1. Vytvořte projekt testu jednotek.
 
-   ![Přidání projektu testů jednotek do řešení](media/createunittest1.png)
+   ![Přidejte do svého řešení projekt testu jednotek](media/createunittest1.png)
 
-1. Název projektu.
+1. Pojmenujte svůj projekt.
 
-   ![Šablona projektu testů jednotek](media/createunittest2.png)
+   ![Šablona projektu pro test jednotek](media/createunittest2.png)
 
-   Projekt se přidá do vašeho řešení.
+   Projekt je přidán do řešení.
 
-   ![Projektu testů jednotek v Průzkumníku řešení](media/createunittest5.png)
+   ![Projekt testu jednotek v Průzkumníku řešení](media/createunittest5.png)
 
-1. V projektu testování částí přidáte odkaz na projekt, který chcete testovat.
+1. V projektu testování částí přidejte odkaz na projekt, který chcete testovat.
 
-   ![Přidat odkaz na vaši projektu testování částí](media/createunittest6.png)
+   ![Přidání odkazu do projektu jednotkového testu](media/createunittest6.png)
 
 1. Vyberte projekt, který obsahuje kód, který budete testovat.
 
-   ![Vyberte odkazu pro přidání](media/createunittest7.png)
+   ![Vyberte odkaz na přidání](media/createunittest7.png)
 
-1. Vaše testování částí kódu.
+1. Kód pro testování částí.
 
-   ![Přidání kódu do vaší testování částí](media/createunittest8.png)
+   ![Přidejte kód pro testování částí](media/createunittest8.png)
 
-Můžete také vytvořit testování částí zástupných procedury metoda s **vytvořit testování částí** [příkaz](create-unit-tests-menu.md).
+Můžete také vytvořit test jednotky metoda zástupné procedury s **vytvořit testy jednotek** [příkaz](create-unit-tests-menu.md).
 
 ![Pomocí příkazu Vytvořit testy jednotek](media/createunittestcommand2.png)
 
-## <a name="run-unit-tests"></a>Spouštění testování částí
+## <a name="run-unit-tests"></a>Spouštění testů jednotek
 
-1. Otevřete Průzkumníka testů.
+1. Otevřít **Průzkumník testů**.
 
-   ![V nabídce testovací otevřete Průzkumníka testů](media/rununittest1.png)
+   ![V nabídce Test otevřete Průzkumníka testů](media/rununittest1.png)
 
 1. Spouštění testů jednotek.
 
-   ![Spouštění testů jednotek v Průzkumníka testů](media/rununittest2.png)
+   ![Spouštění testování částí v Průzkumníku testů](media/rununittest2.png)
 
-   Uvidíte, že jednotka testy, které předán nebo selhání v Průzkumníka testů.
+   Můžete zobrazit, která úspěšný nebo neúspěšný v testování částí **Průzkumník testů**.
 
-   ![Zkontrolujte výsledky testů jednotek v Průzkumníku testování](media/rununittest3.png)
+   ![Zkontrolujte výsledky testování částí v Průzkumníku testů](media/rununittest3.png)
 
-## <a name="view-live-unit-test-results"></a>Zobrazení výsledků testů jednotek za provozu
+## <a name="view-live-unit-test-results"></a>Zobrazení výsledků testu jednotek
 
-Pokud používáte Mstestu, xUnit nebo NUnit testování framework Visual Studio 2017 nebo novější, se zobrazí za provozu výsledky testů jednotek.
+Pokud používáte MSTest, xUnit a NUnit testovací rozhraní v sadě Visual Studio 2017 nebo později, zobrazí se živé výsledků testování částí.
 
-1. Zapnout testování z částí za provozu **Test** nabídky.
+> [!NOTE]
+> Živé testování částí je pouze k dispozici v aplikaci Visual Studio 2017 Enterprise Edition.
 
-   ![Zapnout za provozu testování částí](media/live-test-results-start.png)
+1. Zapnout z testování jednotek **Test** nabídky.
 
-1. Zápis a úpravy kódu zobrazte výsledky testů v okně editoru kódu.
+   ![Zapnout živé testování částí](media/live-test-results-start.png)
+
+1. Zobrazte výsledky testů v rámci okna editoru kódu během psaní a úpravy kódu.
 
    ![Zobrazit výsledky testů](media/live-test-results-ui.png)
 
-1. Vyberte testovací výsledek indikátory zobrazíte další informace.
+1. Vyberte test výsledek ukazatelů pro zobrazení dalších informací.
 
-   ![Zvolte indikátory výsledků testu](media/live-test-results-details.png)
+   ![Vyberte test výsledek ukazatelů](media/live-test-results-details.png)
 
-Další podrobnosti najdete v tématu [za provozu testování částí](../test/live-unit-testing-intro.md).
+Další podrobnosti najdete v tématu [živé testování částí](../test/live-unit-testing-intro.md).
 
-## <a name="generate-unit-tests-with-intellitest"></a>Generování testů částí s IntelliTest
+## <a name="generate-unit-tests-with-intellitest"></a>Generování testů jednotek pomocí funkce IntelliTest
 
-Při spuštění IntelliTest snadno uvidíte které testy se nedaří a přidejte všechny nezbytné kód je opravit. Můžete vybrat, které generovaného testů uložit do testovacího projektu zajistit sada regrese. Při změně kódu se znovu spustí IntelliTest pro synchronizaci generovaného testy s vašimi změnami kódu. Další informace, jak zjistit, [generování testů částí kódu s IntelliTest](../test/generate-unit-tests-for-your-code-with-intellitest.md).
+Při spuštění IntelliTest můžete snadno zobrazit, jaké testy se nedaří a přidejte všechny nezbytné kód a opravte je. Můžete vybrat, které z vygenerované testy k uložení do testovacího projektu poskytnout sadu regrese. Po provedení změny kódu, znovu spusťte IntelliTest pro synchronizaci vygenerované testy se změnami kódu. Další informace o postupu [generování testů jednotek pro kód pomocí funkce IntelliTest](../test/generate-unit-tests-for-your-code-with-intellitest.md).
 
-![Generování testů jednotek s IntelliTest](media/intellitest.png)
+![Generování testů jednotek pomocí funkce IntelliTest](media/intellitest.png)
 
 ## <a name="run-unit-tests-with-test-explorer"></a>Spouštění testů jednotek pomocí Průzkumníka testů
 
-Pomocí Průzkumníka testů spouštění testování částí v sadě Visual Studio nebo projektů testování částí třetích stran, seskupení testů do kategorií, filtrování seznamu testů a vytvořit, uložit a spustit seznamy stop testů. Můžete také ladění testy a analyzovat pokrytí test výkonu a kód. Další informace, jak zjistit, [spouštění testů jednotek pomocí Průzkumníka testů](../test/run-unit-tests-with-test-explorer.md).
+Použití **Průzkumníka testů** spouštění testů jednotek sady Visual Studio nebo projektů testování jednotky třetí strany, seskupte testy do kategorií, filtrovat seznam testů a vytvořit, uložit, a spusťte seznamy stop testů. Můžete také ladit testy a analyzovat pokrytí testu výkonu a kódu. Další informace o postupu [spouštění testů jednotek pomocí Průzkumníka testů](../test/run-unit-tests-with-test-explorer.md).
 
-![Spouštění testů jednotek pomocí Průzkumníka testů](media/testexplorer.png)
+![Provádění testů jednotek pomocí Průzkumníka testů](media/testexplorer.png)
 
-## <a name="use-code-coverage-to-determine-how-much-code-is-being-tested"></a>Použití pokrytí kódu k určení, kolik kódu se testuje
+## <a name="use-code-coverage-to-determine-how-much-code-is-being-tested"></a>Určení rozsahu testovaného kódu pomocí pokrytí kódu
 
-Funkci pokrytí kódu sady Visual Studio lze použít ke zjištění toho, jaký podíl kódu projektu je skutečně testován kódovanými testy, jako jsou například jednotkové testy. Pro efektivní ochranu před chybami je vhodné testovat, neboli „pokrýt“, velkou část kódu projektu. Další informace, jak zjistit, [použití pokrytí kódu k určení jak mnohem kódu se testuje](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md).
+Funkci pokrytí kódu sady Visual Studio lze použít ke zjištění toho, jaký podíl kódu projektu je skutečně testován kódovanými testy, jako jsou například jednotkové testy. Pro efektivní ochranu před chybami, vaše testy měly využít velká část kódu. Další informace o postupu [použití pokrytí kódu k určení, kolik kódu je právě testováno](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md).
 
-![Použití pokrytí kódu k určení, kolik kódu se testuje](media/codecoverage.png)
+## <a name="use-a-different-unit-test-framework"></a>Používat různé testování částí
 
-## <a name="use-a-different-unit-test-framework"></a>Použít různých částí unit test framework
+Můžete spustit testy jednotek v sadě Visual Studio s použitím rozhraní testování třetích stran, jako jsou Boost, Google a NUnit. Používání tak, že Visual Studio test runner můžete pracovat s tímto rozhraním pro rozhraní modulu plug-in.
 
-Testování částí v sadě Visual Studio můžete spustit pomocí rozhraní test třetích stran například nárůst, Google a nUnit. Používání, že Visual Studio test runner mohli pracovat s dané platformy pro rozhraní modulu plug-in.
+Postup povolení rozhraní pro testování třetích stran jsou následující:
 
-Následují postup povolení systémů testování částí třetí:
+1. Zvolte **nástroje** > **rozšíření a aktualizace** z řádku nabídek.
 
-1. Zvolte **nástroje** > **rozšíření a aktualizace...**  z řádku nabídek.
-
-1. V **rozšíření a aktualizace** dialogové okno, rozbalte seznam **Online** kategorie a potom **Visual Studio Marketplace**. Pak zvolte **nástroje** > **testování**.
+1. V **rozšíření a aktualizace** dialogového okna rozbalte **Online** kategorie a potom **Visual Studio Marketplace**. Potom kliknutím na možnost **nástroje** > **testování**.
 
    ![Visual Studio Marketplace](media/extensions-and-updates-testing.png)
 
-1. Vyberte framework nebo adaptér chcete nainstalovat a potom vyberte **Stáhnout**.
+1. Vyberte rozhraní framework nebo adaptér, kterou chcete nainstalovat a klikněte na tlačítko **Stáhnout**.
 
-1. Vytvoření projektu knihovny tříd a přidejte ji do vašeho řešení.
+1. Vytvořte projekt knihovny tříd a přidejte do svého řešení.
 
-   ![Název projektu knihovny tříd a přidejte ji](media/create3rdpartyunittest3.png)
+   ![Pojmenujte projekt knihovny tříd a přidejte ji](media/create3rdpartyunittest3.png)
 
-1. Instalace modulu plug-in. V **Průzkumníku řešení**, vyberte projektu knihovny tříd a poté zvolte **spravovat balíčky NuGet...**  z jeho klikněte pravým tlačítkem nebo kontextové nabídky.
+1. Instalace modulu plug-in. V **Průzkumníka řešení**, vyberte projekt knihovny tříd a pak zvolte **spravovat balíčky NuGet** její nabídce klepněte pravým tlačítkem myši nebo kontext.
 
-   ![Správa balíčků NuGet k instalaci modulu plug-in](media/create3rdpartyunittest3a.png)
+   ![Správa balíčků NuGet nainstalujte modul plug-in](media/create3rdpartyunittest3a.png)
 
-   [NuGet](https://www.nuget.org/) je rozšíření sady Visual Studio, který můžete použít k přidání a aktualizace knihovny a nástroje pro projekty.
+   [NuGet](https://www.nuget.org/) je rozšíření sady Visual Studio, můžete přidávat a aktualizovat knihovny a nástroje pro vaše projekty.
 
-1. V **Správce balíčků NuGet** vyhledejte a vyberte modul plug-in a potom zvolte **nainstalovat**.
+1. V **Správce balíčků NuGet** vyhledejte a vyberte modul plug-in a klikněte na tlačítko **nainstalovat**.
 
-   ![Nainstalujte rozhraní framework vaší strany 3.](media/create3rdpartyunittest4.png)
+   ![Nainstalujte rozhraní framework 3rd třetích stran](media/create3rdpartyunittest4.png)
 
-   Rozhraní framework odkazuje ve vašem projektu.
+   Rozhraní je odkazováno v projektu.
 
-   ![Referenční dokumentace pro systém testování částí 3. stran se přidá do vašeho řešení](media/create3rdpartyunittest6.png)
+   ![Referenční dokumentace pro rozhraní pro testování částí od 3. stran se přidá do vašeho řešení](media/create3rdpartyunittest6.png)
 
-1. Z projektu knihovny tříd **odkazy** uzlu, vyberte **přidat odkaz na...** .
+1. Z projektu knihovny tříd **odkazy** uzlu, vyberte **přidat odkaz**.
 
-   ![Přidat odkaz na projekt](media/createunittest6.png)
+   ![Přidejte odkaz na projekt](media/createunittest6.png)
 
-1. V **správce odkazů** dialogovém okně vyberte projekt, který obsahuje kód, který budete testovat.
+1. V **správce odkazů** dialogového okna, vyberte projekt, který obsahuje kód, který budete testovat.
 
-   ![Vyberte kód projekt testování](media/createunittest7.png)
+   ![Vyberte projekt kódu k otestování](media/createunittest7.png)
 
-1. Vaše testování částí kódu.
+1. Kód pro testování částí.
 
-   ![Přidání kódu do vaší testování částí](media/create3rdpartyunittest7.png)
+   ![Přidejte kód do souboru kódu jednotkového testu](media/create3rdpartyunittest7.png)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 * [Vytvoření příkazu pro testování částí](create-unit-tests-menu.md)
-* [Generování testů s IntelliTest](generate-unit-tests-for-your-code-with-intellitest.md)
+* [Generování testů s Intellitestem](generate-unit-tests-for-your-code-with-intellitest.md)
 * [Spouštění testů pomocí Průzkumníka testů](run-unit-tests-with-test-explorer.md)
 * [Určení pokrytí kódu](using-code-coverage-to-determine-how-much-code-is-being-tested.md)
 * [Zlepšení kvality kódu](improve-code-quality.md)

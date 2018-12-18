@@ -1,5 +1,5 @@
 ---
-title: Idiaaddressmap::put_addressmapenabled – | Microsoft Docs
+title: Idiaaddressmap::put_addressmapenabled – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cb640a46825d720c5305a408fa716c6e3bed66c4
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: f139e6d034fc3b738e345f385fbb8e8ad2150da4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49915383"
 ---
 # <a name="idiaaddressmapputaddressmapenabled"></a>IDiaAddressMap::put_addressMapEnabled
-Určuje, zda má být použita adres mapují k překladu adres symbol.  
+Určuje, zda mapování adres má použít k překladu adres symbol.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,17 +34,17 @@ HRESULT put_addressMapEnabled (
   
 #### <a name="parameters"></a>Parametry  
  NewVal  
- [v] Nastavte na `TRUE` Povolit překlad symbolů, nebo `FALSE` zakázat.  
+ [in] Nastavte na `TRUE` Povolit překlad symbolů, nebo `FALSE` zakázat.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Spustitelný soubor po procesory někdy aktualizovat spustitelný soubor. DIA obsahuje mechanismus pro podporu překlad symbolů do nového rozložení.  
+ Spustitelný soubor po procesory někdy aktualizovat spustitelný soubor. DIA obsahuje mechanismus pro podporu překladu symboly do nového rozložení.  
   
- Při načítání souboru PDB adres mapují uložené v souboru je povoleno. V určitých časech, ale když klientskou aplikaci muset zadat vlastní adres mapují voláním [idiaaddressmap::set_addressmap –](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md) metoda. Pokud `set_addressMap` metoda je úspěšné, musí volat klientské aplikace `put_addressMapEnabled` metoda s `NewVal` parametr `TRUE` povolit používání tohoto adres mapují.  
+ Při načítání souboru PDB je povolená mapa adres, které jsou uložené v souboru. Existují však situace, když klientská aplikace může potřebovat dodání vlastní mapa adres voláním [idiaaddressmap::set_addressmap –](../../debugger/debug-interface-access/idiaaddressmap-set-addressmap.md) metody. Pokud `set_addressMap` metoda je úspěšná, musí volat klientské aplikace `put_addressMapEnabled` metody `NewVal` parametr `TRUE` chcete povolit použití adresu, která je namapována.  
   
- Aktuální stav adres mapují zapínání se dá načíst pomocí volání [idiaaddressmap::get_addressmapenabled –](../../debugger/debug-interface-access/idiaaddressmap-get-addressmapenabled.md) metoda.  
+ Aktuální stav mapa adres neodebraly se dá načíst pomocí volání [idiaaddressmap::get_addressmapenabled –](../../debugger/debug-interface-access/idiaaddressmap-get-addressmapenabled.md) metody.  
   
 ## <a name="see-also"></a>Viz také  
  [Idiaaddressmap –](../../debugger/debug-interface-access/idiaaddressmap.md)   

@@ -1,5 +1,5 @@
 ---
-title: Element kláves | Microsoft Docs
+title: Combos – Element | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 103ce59fe8303f7d044eb7b28ea135f0f449956a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 02f0fac933ea719b712d9b3bba4117915065aa65
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49939017"
 ---
-# <a name="combos-element"></a>Element kláves
-Skupiny [Element pole se seznamem](../extensibility/combo-element.md) elementy.  
+# <a name="combos-element"></a>Combos – element
+Skupiny [prvek pole se seznamem](../extensibility/combo-element.md) elementy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,16 +40,16 @@ Skupiny [Element pole se seznamem](../extensibility/combo-element.md) elementy.
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|Podmínka|Volitelné. V tématu [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
+|Podmínka|Volitelné. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
   
-### <a name="child-elements"></a>Podřízené elementy  
+### <a name="child-elements"></a>Podřízené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
 |[Combos – element](../extensibility/combos-element.md)|Prvky pole se seznamem skupin.|  
-|[Combo – element](../extensibility/combo-element.md)|Definuje příkazy, které se zobrazují v pole se seznamem.|  
+|[Combo – element](../extensibility/combo-element.md)|Definuje příkazy, které se zobrazí v poli se seznamem.|  
   
-### <a name="parent-elements"></a>Nadřazené elementy  
+### <a name="parent-elements"></a>Nadřazené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
@@ -78,6 +79,6 @@ Skupiny [Element pole se seznamem](../extensibility/combo-element.md) elementy.
 </Combos>  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [Jak přidat VSPackages prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
+## <a name="see-also"></a>Viz také:  
+ [Jak balíčky VSPackages přidávají prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
  [Příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md)

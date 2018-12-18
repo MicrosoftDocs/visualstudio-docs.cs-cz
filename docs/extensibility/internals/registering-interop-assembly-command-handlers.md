@@ -1,5 +1,5 @@
 ---
-title: Registrace sestavení vzájemné spolupráce obslužné rutiny příkazů | Microsoft Docs
+title: Registrace sestavení zprostředkovatele komunikace obslužné rutiny příkazů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,60 +14,62 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a4b2c0d40029cbc84d64a4ffe5ee50c59c893b95
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2a9bd306f6c43b5facef5c114a99f2ae05e41cce
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49893777"
 ---
-# <a name="registering-interop-assembly-command-handlers"></a>Registrace sestavení vzájemné spolupráce obslužné rutiny příkazů
-VSPackage musíte zaregistrovat u [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] tak, aby integrované vývojové prostředí (IDE) směruje jeho příkazy správně.  
-  
- Ruční úpravou nebo pomocí souboru registrátora (.rgs), můžete aktualizovat registr. Další informace najdete v tématu [vytváření skripty registrátora](/cpp/atl/creating-registrar-scripts).  
-  
- Spravované balíček Framework (MPF) poskytuje tuto funkci prostřednictvím <xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute> třídy.  
-  
- [Příkaz odkaz na tabulku formátu](http://msdn.microsoft.com/en-us/09e9c6ef-9863-48de-9483-d45b7b7c798f) prostředky jsou umístěny v nespravované satelitní knihovny DLL uživatelského rozhraní.  
-  
-## <a name="command-handler-registration-of-a-vspackage"></a>Příkaz obslužná rutina registrace VSPackage  
- VSPackage funguje jako obslužná rutina pro uživatelské rozhraní (UI) – na základě příkazy vyžaduje záznam registru s názvem, jako VSPackage `GUID`. Tato položka registru určuje umístění souboru prostředků VSPackage uživatelského rozhraní a nabídky prostředek v rámci tohoto souboru. Položky registru, samotné se nachází v HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\\*\<verze >*\Menus, kde  *\<verze >* je verze [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], například 9.0.  
-  
+# <a name="registering-interop-assembly-command-handlers"></a>Registrace obslužných rutin příkazů definičních sestavení
+Musíte zaregistrovat VSPackage [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] tak, aby integrované vývojové prostředí (IDE) směruje příkazy správně.  
+
+ Ruční úpravou nebo pomocí souboru registrátora (.rgs) je možné aktualizovat registr. Další informace najdete v tématu [vytváření skriptů registrátoru](/cpp/atl/creating-registrar-scripts).  
+
+ Tuto funkci pomocí Managed Package Framework (MPF) poskytuje <xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute> třídy.  
+
+ [Příkaz referenční příručka pro formátování tabulky](https://msdn.microsoft.com/library/09e9c6ef-9863-48de-9483-d45b7b7c798f) prostředky jsou umístěny v nespravované satelitní knihovny DLL uživatelského rozhraní.  
+
+## <a name="command-handler-registration-of-a-vspackage"></a>Registrace obslužná rutina příkazu VSPackage  
+ VSPackage funguje jako obslužné rutiny pro uživatelské rozhraní (UI) – na základě příkazů vyžaduje položku registru s názvem po sady VSPackage `GUID`. Tato položka registru určuje umístění souboru prostředků sady VSPackage uživatelského rozhraní a nabídky prostředků v rámci tohoto souboru. Samotné položky registru je umístěna ve složce HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\\*\<verze >* \Menus, kde  *\<verze >* je verze [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], například 9.0.  
+
 > [!NOTE]
->  Kořenové cestě HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\*\<verze >* lze přepsat pomocí náhradní root, kdy [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] prostředí je inicializován. Další informace o kořenovou cestu najdete v tématu [instalaci VSPackages pomocí Instalační služby systému Windows](../../extensibility/internals/installing-vspackages-with-windows-installer.md).  
-  
-### <a name="the-ctmenu-resource-registry-entry"></a>Položky registru prostředků CTMENU  
+>  Kořenová cesta HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\*\<verze >* lze přepsat pomocí alternativního root, kdy [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] prostředí je inicializován. Další informace o kořenovou cestu, naleznete v tématu [instalace rozšíření VSPackages s Windows Installer](../../extensibility/internals/installing-vspackages-with-windows-installer.md).  
+
+### <a name="the-ctmenu-resource-registry-entry"></a>Položky registru CTMENU prostředků  
  Struktura položky registru je:  
-  
+
 ```  
 HKEY_LOCAL_MACHINE\Software\VisualStudio\<Version>\  
   Menus\  
     <GUID> = <Resource Information>  
 ```  
-  
- \<*Identifikátor GUID*> je `GUID` z VSPackage ve formuláři {XXXXXX-XXXX-XXXX-XXXX-XXXXXXXXX}.  
-  
- *\<Informace o prostředku >* se skládá z uvedených položek oddělených čárkami. Tyto prvky jsou v pořadí:  
-  
- \<*Cesta prostředku DLL*>, \< *ID prostředku nabídky*>, \< *verze nabídky*>  
-  
+
+ \<*Identifikátor GUID*> je `GUID` sady VSPackage ve formuláři {XXXXXX-XXXX-XXXX-XXXX-XXXXXXXXX}.  
+
+ *\<Informace o prostředku >* se skládá ze tří prvků oddělených čárkami. Tyto prvky jsou v pořadí:  
+
+ \<*Cesta k knihovna DLL prostředků*>, \< *ID prostředku nabídky*>, \< *nabídka verze*>  
+
  Následující tabulka popisuje pole \< *informace o prostředku*>.  
-  
-|Prvek|Popis|  
-|-------------|-----------------|  
-|\<*Cesta k DLL prostředků*>|Toto je úplná cesta prostředku DLL, která obsahuje prostředek nabídky nebo to je ponecháno prázdné, označující, že VSPackage prostředků knihovny DLL je pro použití (jak je uvedeno v podklíči balíčky, kde je registrovaná VSPackage sám sebe).<br /><br /> Se obvykle to pole ponechat prázdné.|  
-|\<*ID prostředku nabídky*>|Toto je ID prostředku `CTMENU` prostředek, který obsahuje všechny prvky uživatelského rozhraní pro VSPackage jako kompilují ze [.vsct](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md) souboru.|  
-|\<*Nabídka verze*>|Toto je použité jako verze pro `CTMENU` prostředků. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Tato hodnota používá k určení, jestli je třeba remerge obsah `CTMENU` prostředek s své mezipaměti všech `CTMENU` prostředky. Remerge se aktivuje při provádění příkazu devenv instalační program.<br /><br /> Tato hodnota by měl původně být nastavena na hodnotu 1 a zvýší po každé změně v `CTMENU` prostředků a před provedením remerge.|  
-  
+
+
+| Prvek | Popis |
+|---------------------------| - |
+| \<*Cesta k prostředku knihovny DLL*> | Toto je úplná cesta k prostředku knihovny DLL, která obsahuje prostředek nabídky nebo toto pole je ponecháno prázdné, že sady VSPackage prostředků knihovny DLL pro použití (jak je uvedeno v podklíči balíčky, ve kterém je zaregistrován VSPackage samotné).<br /><br /> Je to obvyklé toto pole nechat prázdné. |
+| \<*ID prostředku nabídky*> | To je ID prostředku `CTMENU` prostředek, který obsahuje všechny prvky uživatelského rozhraní pro sady VSPackage jako zkompilovaná ze [.vsct](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md) souboru. |
+| \<*Nabídka verze*> | Toto je číslo používané jako verze pro `CTMENU` prostředků. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] používá tuto hodnotu k určení, jestli je potřeba remerge obsah `CTMENU` prostředek s uloženou v mezipaměti všech `CTMENU` prostředky. Spuštěním příkazu devenv instalace se aktivuje remerge.<br /><br /> By měla tuto hodnotu původně nastavena na hodnotu 1 a zvýší po každé změně v `CTMENU` prostředků a před provedením remerge. |
+
 ### <a name="example"></a>Příklad  
- Tady je příklad několik položek prostředků:  
-  
+ Tady je příklad z několika záznamů prostředků:  
+
 ```  
 HKEY_LOCAL_MACHINE\Software\VisualStudio\9.0Exp\  
   Menus\  
     {019971D6-4685-11D2-B48A-0000F87572EB} = ,1, 10  
     {1b027a40-8f43-11d0-8d11-00a0c91bc942} = , 10211, 3  
 ```  
-  
+
 ## <a name="see-also"></a>Viz také  
- [Jak přidat VSPackages prvky uživatelského rozhraní](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
+ [Jak balíčky VSPackages přidávají prvky uživatelského rozhraní](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
  [Příkazy a nabídky, které používají spolupracující sestavení](../../extensibility/internals/commands-and-menus-that-use-interop-assemblies.md)

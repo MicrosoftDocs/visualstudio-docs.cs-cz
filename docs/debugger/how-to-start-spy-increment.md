@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: spuštění nástroje Spy ++ | Microsoft Docs'
+title: 'Postupy: spuštění nástroje Spy ++ | Dokumentace Microsoftu'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 11/12/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,36 +12,37 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 064a78f9665d2a700a328979b8de169733c09d93
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 5e2e5ffabbb560165bd19bb3d52b940a5cc9e858
+ms.sourcegitcommit: a7de99f36e9ead7ea9e9bac23c88d05ddfc38b00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52257160"
 ---
 # <a name="how-to-start-spy"></a>Postupy: Spuštění nástroje Spy++
-Můžete spustit nástroje Spy ++ ze sady Visual Studio nebo na příkazovém řádku.  
+Můžete spustit nástroje Spy ++ ze sady Visual Studio nebo příkazového řádku.  
   
- Při prvním spuštění nástroje Spy ++, pokud chcete požádejte oprávnění k provedení změny v počítači, klikněte na tlačítko se zobrazí zpráva **Ano**.  
+ Při spuštění nástroje Spy ++, pokud se zobrazí zpráva požádat oprávnění k provádění změn do počítače, vyberte **Ano**.  
   
 > [!NOTE]
->  Můžete spustit pouze jedna instance nástroje Spy ++. Pokud se pokusíte spustit jiná instance, stačí způsobuje, že aktuálně spuštěné instance získat fokus.  
+>  Můžete spustit pouze jedna instance nástroje Spy ++. Pokud se pokusíte spustit druhé instance, způsobí pouze aktuálně spuštěnou instanci získat fokus.  
   
-### <a name="to-start-spy-from-visual-studio"></a>Spuštění nástroje Spy ++ ze sady Visual Studio  
+### <a name="start-spy-from-visual-studio"></a>Spuštění nástroje Spy ++ ze sady Visual Studio  
   
--   Na **nástroje** nabídky, klikněte na tlačítko **nástroje Spy ++**.  
+Na **nástroje** nabídce vyberte možnost **nástroje Spy ++**.  
   
-     Vzhledem k tomu nástroje Spy ++ běží nezávisle po jeho spuštění, můžete zavřít Visual Studio.  
+Protože nástroje Spy ++ běží nezávisle na sobě po spuštění sady Visual Studio můžete zavřít.  
   
-    > [!NOTE]
-    >  Když pomocí nástroje Spy ++ zpráv, může to způsobit operačního systému a provést pomaleji.  
+> [!NOTE]
+>  Při protokolování zpráv pomocí nástroje Spy ++, může to způsobit pomalejší operačního systému.  
   
-### <a name="to-start-spy-at-a-command-prompt"></a>Spuštění nástroje Spy ++ na příkazovém řádku  
+### <a name="start-spy-at-a-command-prompt"></a>Spuštění nástroje Spy ++ z příkazového řádku  
   
-1.  V okně příkazového řádku změňte adresář na složku, která obsahuje spyxx.exe. Cesta této složky je obvykle... \\ *Instalační složka nástroje visual Studio*\Common7\Tools\\.  
+1.  V okně příkazového řádku přejděte do složky, která obsahuje spyxx.exe. Obvykle je cesta k této složce... \\ *Instalační složky sady visual Studio*\Common7\Tools\\.  
   
-2.  Typ **spyxx.exe** a stiskněte klávesu ENTER.  
+2.  Zadejte **spyxx.exe**. 
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Použití nástroje Spy ++](../debugger/using-spy-increment.md)   
  [Zobrazení nástroje Spy ++](../debugger/spy-increment-views.md)   
  [Referenční dokumentace nástroje Spy++](../debugger/spy-increment-reference.md)

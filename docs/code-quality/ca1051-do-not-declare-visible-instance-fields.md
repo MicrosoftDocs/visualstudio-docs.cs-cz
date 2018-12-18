@@ -1,6 +1,7 @@
 ---
 title: 'CA1051: Nedeklarujte viditelná pole instance'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,13 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fb322ffb6f3603001e9fa673eb9daf9f28d73b18
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f907b1d8626e8babc88137ed70cf6330386ab92a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49832196"
 ---
 # <a name="ca1051-do-not-declare-visible-instance-fields"></a>CA1051: Nedeklarujte viditelná pole instance
+
 |||
 |-|-|
 |TypeName|DoNotDeclareVisibleInstanceFields|
@@ -30,26 +33,26 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Typ externě viditelné má poli externě viditelné instance.
+ Externě viditelný typ obsahuje pole instance externě viditelné.
 
 ## <a name="rule-description"></a>Popis pravidla
- Hlavní použití pole by mělo být jako podrobnost implementace. Pole by měla být `private` nebo `internal` a by měly být vystaveny pomocí vlastností. Je stejně snadná o přístup k vlastnosti, jako je přístup k poli a kód v přístupové objekty vlastnosti můžete změnit podle funkce typu rozbalte bez zavedení nejnovější změny. Vlastnosti, které právě vrátí hodnotu pole soukromý nebo interní jsou optimalizované pro provedení srovnatelné s přístup k poli. prostřednictvím vlastnosti je přidružen k použití externě viditelná pole výkonu zanedbatelné.
+ Hlavní použití pole by mělo být jako podrobnost implementace. Pole by měla být `private` nebo `internal` a měla by být vystavena s použitím vlastností. Je snadné přístup k vlastnosti, jako je přístup k poli a kód v přistupující objekty vlastnosti můžete změnit, protože funkce typu rozbalte bez vnášení rozbíjející změny. Vlastnosti, které právě vracejí hodnotu privátní nebo interní pole jsou optimalizována pro provedení ji přístup k poli. velmi malé zvýšení výkonu je spojené s použitím externě viditelné pole prostřednictvím vlastností.
 
- Externě viditelné odkazuje na `public`, `protected`, a `protected internal` (`Public`, `Protected`, a `Protected Friend` v jazyce Visual Basic) úrovní přístupu.
+ Externě viditelný odkazuje na `public`, `protected`, a `protected internal` (`Public`, `Protected`, a `Protected Friend` v jazyce Visual Basic) úrovní přístupu.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Opravit porušení toto pravidlo, ujistěte se, pole `private` nebo `internal` a vystavit pomocí externě viditelné vlastnosti.
+ Chcete-li opravit porušení tohoto pravidla, ujistěte se, pole `private` nebo `internal` a zpřístupnit ji pomocí externě viditelné vlastnosti.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Nepotlačujte upozornění na toto pravidlo. Externě viditelná pole neposkytují žádné výhody, které jsou k dispozici na vlastnosti. Kromě toho veřejná pole nemůže být chráněn [požadavky propojení](/dotnet/framework/misc/link-demands). V tématu [CA2112: zabezpečené typy by neměly vystavovat pole](../code-quality/ca2112-secured-types-should-not-expose-fields.md).
+ Nepotlačujte upozornění na toto pravidlo. Externě viditelné pole neposkytují žádné výhody, které nejsou k dispozici pro vlastnosti. Kromě toho veřejné polí se nedají chránit pomocí [požadavky propojení](/dotnet/framework/misc/link-demands). Zobrazit [CA2112: zabezpečené typy by neměly vystavovat pole](../code-quality/ca2112-secured-types-should-not-expose-fields.md).
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje typ (`BadPublicInstanceFields`) porušil toto pravidlo. `GoodPublicInstanceFields` Zobrazuje opravené kód.
+ Následující příklad ukazuje typ (`BadPublicInstanceFields`), který porušuje tato pravidla. `GoodPublicInstanceFields` zobrazuje opravený kód.
 
  [!code-csharp[FxCop.Design.TypesPublicInstanceFields#1](../code-quality/codesnippet/CSharp/ca1051-do-not-declare-visible-instance-fields_1.cs)]
 
 ## <a name="related-rules"></a>Související pravidla
  [CA2112: Zabezpečené typy by neměly vystavovat pole](../code-quality/ca2112-secured-types-should-not-expose-fields.md)
 
-## <a name="see-also"></a>Viz také
- [Požadavky na odkaz](/dotnet/framework/misc/link-demands)
+## <a name="see-also"></a>Viz také:
+ [Požadavky propojení](/dotnet/framework/misc/link-demands)

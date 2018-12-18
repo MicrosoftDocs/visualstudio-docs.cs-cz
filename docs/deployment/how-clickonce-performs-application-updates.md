@@ -1,5 +1,5 @@
 ---
-title: Jak ClickOnce provádí aktualizaci aplikací | Microsoft Docs
+title: Jak ClickOnce provádí aktualizaci aplikací | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -18,24 +18,25 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bbe09cfe546d947bf07334e9dd6468226884e9e3
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a1f5d9b67633ffa2b14f780b9588f526372a4f5d
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39152510"
 ---
 # <a name="how-clickonce-performs-application-updates"></a>Jak ClickOnce provádí aktualizaci aplikací
-ClickOnce používá informace o verzi souboru zadané v manifestu nasazení aplikace se rozhodnout, zda se má aktualizovat soubory aplikace. Po začátku aktualizace ClickOnce využívá techniku, nazývá *opravy souborů* předejdete redundantní stahování souborů aplikace.  
+Informace o verzi souboru, zadaný v manifestu nasazení aplikace ClickOnce využívající rozhodnout, jestli se má aktualizovat soubory aplikace. Po zahájení aktualizace ClickOnce pomocí techniky označované jako *soubor opravy* aby se zabránilo redundantní stahování souborů aplikace.  
   
-## <a name="file-patching"></a>Soubor opravy  
- Při aktualizaci aplikace, ClickOnce nestahuje všechny soubory pro novou verzi aplikace, pokud soubory se změnily. Místo toho porovná podpisy hodnoty hash soubory zadané v manifestu aplikace pro aktuální aplikaci proti podpisů v manifestu pro novou verzi. Pokud soubory podpisů liší, ClickOnce stáhne na novou verzi. Pokud se podpisů shodují, soubor nebyl změněn z jedné verze na další. V takovém případě ClickOnce zkopíruje existující soubor a používá je v nové verzi aplikace. Tento přístup zabraňuje ClickOnce stáhnout znovu, bude celá aplikace i v případě, že pouze jeden nebo dva soubory se změnily.  
+## <a name="file-patching"></a>Oprava souborů  
+ Při aktualizaci aplikace ClickOnce všechny soubory pro novou verzi aplikace nebude stahovat Pokud soubory se změnily. Místo toho porovná podpisy hodnoty hash souborů zadaných v manifestu aplikace pro aktuální aplikaci proti podpisy v manifestu pro novou verzi. Pokud se podpisy souboru liší, ClickOnce, soubory ke stažení na novou verzi. Pokud se podpisy shodují, soubor nebyl změněn z jedné verze na další. V tomto případě ClickOnce zkopíruje existující soubor a používá ho v nové verzi aplikace. Tento postup brání ClickOnce museli stáhnout celý aplikaci znovu spustit, i v případě, že pouze jeden nebo dva soubory se změnily.  
   
- Soubor opravy funguje i pro sestavení, které jsou staženy na vyžádání pomocí <xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroup%2A> a <xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupAsync%2A> metody.  
+ Soubor opravy také funguje pro sestavení, které se stáhnou na vyžádání pomocí <xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroup%2A> a <xref:System.Deployment.Application.ApplicationDeployment.DownloadFileGroupAsync%2A> metody.  
   
- Pokud používáte Visual Studio kompilace aplikace, vygeneruje vždy, když celý projekt znovu sestavte nový podpisy hodnoty hash pro všechny soubory. V takovém případě ve všech sestaveních bude stažen do klienta, i když pouze několik sestavení se mohl změnit.  
+ Pokud používáte sadu Visual Studio ke kompilaci vaší aplikace, vygeneruje se nové podpisy hodnoty hash pro všechny soubory pokaždé, když se je znovu sestavit celý projekt. V takovém případě všechna sestavení se stáhne do klienta, i když možná změnily pouze několik sestavení.  
   
- Oprava souborů pro soubory, které jsou označeny jako data a uložené v adresáři data nefunguje. Tyto budou staženy vždy bez ohledu na podpis hodnoty hash souboru. Další informace o do adresáře dat najdete v tématu [přístup k místním a vzdáleným datům v aplikacích ClickOnce](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md).  
+ Oprava souborů pro soubory, které jsou označeny jako data a uloženy v adresáři dat nefunguje. Tyto budou staženy vždy bez ohledu na hodnoty hash podpisu souboru. Další informace o do adresáře dat, naleznete v tématu [přístup k lokálním a vzdáleným datům v aplikacích ClickOnce](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md).  
   
-## <a name="see-also"></a>Viz také  
- [Výběr strategie aktualizace ClickOnce](../deployment/choosing-a-clickonce-update-strategy.md)   
- [Výběr strategie nasazení ClickOnce](../deployment/choosing-a-clickonce-deployment-strategy.md)
+## <a name="see-also"></a>Viz také:  
+ [Volba strategie aktualizace ClickOnce](../deployment/choosing-a-clickonce-update-strategy.md)   
+ [Volba strategie nasazení ClickOnce](../deployment/choosing-a-clickonce-deployment-strategy.md)

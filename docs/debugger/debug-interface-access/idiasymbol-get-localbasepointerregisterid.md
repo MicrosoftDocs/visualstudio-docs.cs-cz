@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_localbasepointerregisterid – | Microsoft Docs
+title: Idiasymbol::get_localbasepointerregisterid – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fa7796cf4d69066b7c129c00b142c6fc807d99d8
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 7775de97e8bdd37223b772999f30f5808bf1b2b9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49819977"
 ---
 # <a name="idiasymbolgetlocalbasepointerregisterid"></a>IDiaSymbol::get_localBasePointerRegisterId
-Načte ID registrace, který obsahuje základní ukazatel na místní proměnné v zásobníku. Použijte, když [SymTagEnum – výčet](../../debugger/debug-interface-access/symtagenum.md) je nastaven na `SymTagFunction`.  
+Načte ID do registru, který obsahuje základní ukazatel na místní proměnné v zásobníku. Použít, když [symtagenum – výčet](../../debugger/debug-interface-access/symtagenum.md) je nastavena na `SymTagFunction`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,13 +34,13 @@ HRESULT get_localBasePointerRegisterId (
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí ID registrace, který obsahuje základní ukazatel na místní proměnné v zásobníku.  
+ [out] Vrátí ID do registru, který obsahuje základní ukazatel na místní proměnné v zásobníku.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` nebo chybový kód.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
->  Vrácená hodnota `S_FALSE` znamená vlastnost není k dispozici pro symbol.  
+>  Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="remarks"></a>Poznámky  
   

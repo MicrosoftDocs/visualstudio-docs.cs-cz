@@ -1,5 +1,5 @@
 ---
-title: MODULE_INFO | Microsoft Docs
+title: MODULE_INFO | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6e28756873339d504efba417d9e2fe2cc00000b4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b28770482357b7e006793f15438e7880f7efb1ec
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49897001"
 ---
 # <a name="moduleinfo"></a>MODULE_INFO
 Popisuje konkrétního modulu (knihovny DLL, EXE nebo sestavení).  
@@ -62,7 +63,7 @@ public struct MODULE_INFO {
   
 ## <a name="members"></a>Členové  
  dwValidFields  
- Kombinace příznaků z [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md) výčet, který určuje pole, která jsou vyplněna.  
+ Kombinace příznaků z [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md) výčet, který určuje, která pole jsou vyplněna.  
   
  m_bstrName  
  Název modulu.  
@@ -74,13 +75,13 @@ public struct MODULE_INFO {
  Verze modulu.  
   
  m_bstrDebugMessage  
- Volitelné zprávu o modulu, například "symboly nelze načíst."  
+ Volitelnou zprávu o modulu, třeba "symboly nelze načíst."  
   
  m_addrLoadAddress  
- Adresa zatížení modulu.  
+ Adresa načtení modulu.  
   
  m_addrPreferredLoadAddress  
- Adresa upřednostňovaného zatížení modul.  
+ Adresa upřednostňovaného zatížení modulu.  
   
  m_dwSize  
  Velikost modulu.  
@@ -89,18 +90,18 @@ public struct MODULE_INFO {
  Pořadí načítání modulu.  
   
  m_TimeStamp  
- Čas poslední úpravy souboru symbol.  
+ Čas poslední změny souboru symbolů.  
   
  m_bstrUrlSymbolLocation  
- Umístění souboru se symboly (například ".\\") zadaný v modulu. Použít jako výchozí umístění k vyhledání symboly pro modul.  
+ Umístění souboru symbolů (například ".\\") zadaný v modulu. Najít symboly pro modul se používá jako výchozí umístění.  
   
  m_dwModuleFlags  
- Kombinace příznaků z [MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md) výčet, který popisuje modul.  
+ Kombinace příznaků z [MODULE_FLAGS](../../../extensibility/debugger/reference/module-flags.md) výčet, který popisuje modulu.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je předána [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) metoda, kde je vyplněna.  
+ Tato struktura je předán [GetInfo](../../../extensibility/debugger/reference/idebugmodule2-getinfo.md) metody, kde je vyplněna.  
   
- Tato struktura odpovídá každý modul uvedené v **moduly** okno.  
+ Tato struktura odpovídá jednotlivých modulů uvedených v **moduly** okna.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

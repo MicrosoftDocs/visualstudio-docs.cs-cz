@@ -1,5 +1,5 @@
 ---
-title: PROCESS_INFO | Microsoft Docs
+title: PROCESS_INFO | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d35b94b6153b65672453ed8b4e7d2c0d9c2bd5eb
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2a8f07cfb99ac42704d3829c30dbf5adbb16e9d0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49864618"
 ---
 # <a name="processinfo"></a>PROCESS_INFO
 Obsahuje informace o procesu.  
@@ -56,34 +57,34 @@ public struct PROCESS_INFO {
   
 ## <a name="members"></a>Členové  
  Pole  
- Kombinace příznaků z [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md) výčet, který zadejte pole, která jsou vyplněna.  
+ Kombinace příznaků z [PROCESS_INFO_FIELDS](../../../extensibility/debugger/reference/process-info-fields.md) výčet určující, která pole jsou vyplněna.  
   
  bstrFileName  
- Úplná cesta a název procesu. Odpovídá volání [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md) metoda s parametrem `GN_FILENAME`.  
+ Úplná cesta a název procesu. Ekvivalentní volání [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md) metody s parametrem `GN_FILENAME`.  
   
  bstrBaseName  
- Název souboru a rozšíření procesu. Odpovídá volání `IDebugProcess2::Getname` metoda s parametrem `GN_BASENAME`.  
+ Název souboru a příponu procesu. Ekvivalentní volání `IDebugProcess2::Getname` metody s parametrem `GN_BASENAME`.  
   
  bstrTitle  
- Název procesu, pokud existuje. Odpovídá volání `IDebugProcess2::Getname` metoda s parametrem `GN_TITLE`.  
+ Název procesu, pokud existuje. Ekvivalentní volání `IDebugProcess2::Getname` metody s parametrem `GN_TITLE`.  
   
  ID procesu  
- [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) struktura, která identifikuje proces. Odpovídá volání [GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md) metoda.  
+ [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) strukturu, která identifikuje procesu. Ekvivalentní volání [GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md) metody.  
   
  dwSessionId  
- Identifikátor relace ladění, který tento proces běží v.  
+ Identifikátor, na kterém běží tento proces v relaci ladění.  
   
  bstrAttachedSessionName  
- Název připojené relace. Odpovídá volání [GetAttachedSessionName](../../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md) metoda.  
+ Název připojené relaci. Ekvivalentní volání [GetAttachedSessionName](../../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md) metody.  
   
- Čas vytvoření  
+ CreationTime  
  Čas vytvoření procesu.  
   
  Příznaky  
- Kombinace příznaků z [PROCESS_INFO_FLAGS](../../../extensibility/debugger/reference/process-info-flags.md) výčet, který zadat vlastnosti procesu.  
+ Kombinace příznaků z [PROCESS_INFO_FLAGS](../../../extensibility/debugger/reference/process-info-flags.md) výčet, který určit vlastnosti procesu.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je předána [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md) metoda, kde je vyplněna.  
+ Tato struktura je předán [GetInfo](../../../extensibility/debugger/reference/idebugprocess2-getinfo.md) metody, kde je vyplněna.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

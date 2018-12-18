@@ -7,28 +7,30 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 566558390e29f9198b2328463dfce26327f76565
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 332d7599543efbe5ee6e15ccc89d5fce595e5341
+ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39566876"
 ---
 # <a name="customizing-element-tools"></a>Přizpůsobení nástrojů elementu
-V některých z nich DSL představují jeden koncept jako skupinu elementů. Například pokud vytvoříte model, ve kterém součást má pevnou sadu portů, vždy chcete porty, které mají být vytvořeny ve stejnou dobu jako jejich nadřazené součásti. Proto musíte přizpůsobit nástroj pro vytváření element tak, aby vytvoří skupinu elementů ne o jeden. Jak toho docílit, můžete přizpůsobit, jak je nástroj pro vytváření element inicializován.
+V definice DSL představují jeden koncept jako skupiny prvků. Pokud jste vytvořili model, ve kterém má součást fixní sadu porty, je vždy třeba porty, které chcete vytvořit ve stejnou dobu jako jejich nadřazené komponenty. Proto budete muset přizpůsobit nástroj pro vytváření element tak, aby, vytvoří se skupina elementů nikoli jen jeden. Za tím účelem můžete přizpůsobit, jak inicializovat nástroj pro vytváření elementu.
 
- Můžete také přepsat, co se stane, když je nástroj přetáhli diagramu nebo element.
+ Můžete také přepsat, co se stane, když nástroj je přetáhnout do diagramu nebo prvku.
 
-## <a name="customizing-the-content-of-an-element-tool"></a>Přizpůsobení obsah nástroj na Element
- Každý element nástroj ukládá instance <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> (EGP), který obsahuje serializovaná verze jeden nebo více prvků modelu a odkazy. Ve výchozím nastavení obsahuje EGP nástroje k elementu jedna instance třídy, které zadáte pro nástroj. Toto můžete změnit přepsáním *YourLanguage*`ToolboxHelper.CreateElementToolPrototype`. Tato metoda je volána, když je balíček DSL načíst.
+## <a name="customizing-the-content-of-an-element-tool"></a>Přizpůsobení obsahu nástroj – Element
+ Každý prvek nástroj ukládá instance <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> (EGP), který obsahuje serializovaná verze jednoho nebo více prvků modelu a odkazy. Ve výchozím nastavení EGP nástroj element obsahuje jednu instanci třídy, která zadáte pro nástroj. Toto můžete změnit tak, že přepíšete *YourLanguage*`ToolboxHelper.CreateElementToolPrototype`. Tato metoda je volána při načtení balíčku DSL.
 
- Parametr metody je ID třídy, která jste zadali v definici DSL. Když metoda je volána s třídou, která vás zajímá, můžete přidat další prvky do EGP.
+ Parametr metody je ID třídy, která jste zadali v definici DSL. Při volání metody s třídou, která vás zajímají, můžete přidat další prvky do EGP.
 
- EGP musí obsahovat odkazy na jeden element main na jiné elementy vložení. Může také zahrnovat referenční odkazy.
+ EGP musí obsahovat, vkládání odkazů z jeden hlavní prvek na pobočkách elementy. Může také obsahovat referenční odkazy.
 
- Následující příklad vytvoří main element a dvě vložené prvky. Hlavní třídy se nazývá odpor a má dvě relace vnoření elementů s názvem terminálu. Vnoření vlastnosti role jsou pojmenované Terminal1 a Terminal2 a mohou mít násobnost 1..1.
+ Následující příklad vytvoří hlavní prvek a dva prvky vložené. Hlavní třída se nazývá odpor a obsahuje dvě relace vkládání elementů s názvem terminálu. Vkládání vlastnosti role jsou pojmenovány Terminal1 a Terminal2 a mít násobnost 1..1.
 
-```
+```csharp
 using Microsoft.VisualStudio.Modeling; ...
 public partial class CircuitDiagramToolboxHelper
 {

@@ -1,5 +1,5 @@
 ---
-title: Assignprojectconfiguration – úloha | Microsoft Docs
+title: Assignprojectconfiguration – úloha | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -15,35 +15,36 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d771117829ab8ef37ea495b4862ffa492e686770
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d5fefc8098d94967b06bbe60f398a8a734d55202
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37946599"
 ---
-# <a name="assignprojectconfiguration-task"></a>AssignProjectConfiguration – úloha
-Tato úloha přijímá konfiguračním řetězce seznamu a přiřadí zadaný projekty.  
+# <a name="assignprojectconfiguration-task"></a>Assignprojectconfiguration – úloha
+Tato úloha přijímá řetězec seznamu konfigurace a přiřadí ho k zadaným projektům.  
   
 ## <a name="task-parameters"></a>Parametry úlohy  
  Následující tabulka popisuje parametry `AssignProjectConfiguration` úloh.  
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|`SolutionConfigurationContents`|Volitelné `string` výstupní parametr.<br /><br /> Obsahuje řetězec XML obsahující projekt konfiguraci pro každý projekt. Konfigurace jsou přiřazeny k pojmenované projekty.|  
-|`DefaultToVcxPlatformMapping`|Volitelné `string` výstupní parametr.<br /><br /> Obsahuje seznam mapování z názvů platform používaných oddělený středníkem<br /><br /> Většina typy těm, které jsou používané VCXPROJ soubory.<br /><br /> Příklad:<br /><br /> `"AnyCPU=Win32;X86=Win32;X64=X64"`|  
-|`VcxToDefaultPlatformMapping`|Nepovinné<br /><br /> `string` Výstupní parametr.<br /><br /> Obsahuje seznam mapování z názvů platform VCXPROJ platformy názvy používané většinu typů oddělených středníky.<br /><br /> Příklad:<br /><br /> `"Win32=AnyCPU;X64=X64"`|  
+|`SolutionConfigurationContents`|Volitelné `string` výstupní parametr.<br /><br /> Obsahuje řetězec XML obsahující projekt konfigurace pro každý projekt. Konfigurace jsou přiřazeny k projektům s názvem.|  
+|`DefaultToVcxPlatformMapping`|Volitelné `string` výstupní parametr.<br /><br /> Obsahuje seznam oddělený středníkem mapování názvů platforem používaných ve většině typů používaných *.vcxproj* soubory.<br /><br /> Příklad:<br /><br /> `"AnyCPU=Win32;X86=Win32;X64=X64"`|  
+|`VcxToDefaultPlatformMapping`|Nepovinné<br /><br /> `string` Výstupní parametr.<br /><br /> Obsahuje seznam oddělený středníkem mapování z *.vcxproj* názvů platform na názvy platformy používat ve většině typů.<br /><br /> Příklad:<br /><br /> `"Win32=AnyCPU;X64=X64"`|  
 |`CurrentProjectConfiguration`|Volitelné `string` výstupní parametr.<br /><br /> Obsahuje konfiguraci pro aktuální projekt.|  
-|`CurrentProjectPlatform`|Volitelné `string` výstupní parametr.<br /><br /> Obsahuje platforma pro aktuální projekt.|  
-|`OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration`|Volitelné `bool` výstupní parametr.<br /><br /> Obsahuje příznak, který udává, že by měly být vytvořeny odkazy i v případě, že byla zakázána v konfiguraci projektu.|  
-|`ShouldUnsetParentConfigurationAndPlatform`|Volitelné `bool` výstupní parametr.<br /><br /> Obsahuje příznak, který udává, pokud by měla být platformu a nadřazené konfiguraci nastavení.|  
-|`OutputType`|Volitelné `string` výstupní parametr.<br /><br /> Obsahuje výstupní typ pro projekt.|  
-|`ResolveConfigurationPlatformUsingMappings`|Volitelné `bool` výstupní parametr.<br /><br /> Obsahuje příznak, který udává, pokud sestavení by měl použít výchozí mapování k vyřešení konfigurace a platforma předaný v odkazy na projekt.|  
-|`AssignedProjects`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje seznam přeložit odkaz na cesty.|  
-|`UnassignedProjects`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje seznam položek odkaz na projekt, které nebylo možné přeložit pomocí předem přeložit seznam výstupy.|  
+|`CurrentProjectPlatform`|Volitelné `string` výstupní parametr.<br /><br /> Obsahuje platformu pro aktuální projekt.|  
+|`OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration`|Volitelné `bool` výstupní parametr.<br /><br /> Obsahuje příznak označující, že odkazy by měly být sestaveny, i když byly zakázány v konfiguraci projektu.|  
+|`ShouldUnsetParentConfigurationAndPlatform`|Volitelné `bool` výstupní parametr.<br /><br /> Obsahuje příznak označující, pokud nadřazená konfigurace a platforma mají být zrušeny.|  
+|`OutputType`|Volitelné `string` výstupní parametr.<br /><br /> Obsahuje typ výstupu projektu.|  
+|`ResolveConfigurationPlatformUsingMappings`|Volitelné `bool` výstupní parametr.<br /><br /> Obsahuje příznak označující, pokud sestavení má použít výchozí mapování k řešení konfigurace a platformy předané v odkazech projektu.|  
+|`AssignedProjects`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje seznam cest vyřešených odkazů.|  
+|`UnassignedProjects`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje seznam referenčních položek projektu, které nelze vyřešit pomocí předem vyřešených seznamů výstupů.|  
   
 ## <a name="remarks"></a>Poznámky  
- Kromě výše uvedených parametrů tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třída, které dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrech a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).  
+ Kromě výše uvedených parametrů zdědí tento úkol parametry ze <xref:Microsoft.Build.Tasks.TaskExtension> třída, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Úlohy](../msbuild/msbuild-tasks.md)   
  [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)

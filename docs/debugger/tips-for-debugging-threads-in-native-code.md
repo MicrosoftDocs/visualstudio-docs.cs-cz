@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31476169"
 ---
 # <a name="tips-for-debugging-threads-in-native-code"></a>Tipy k ladění vláken v nativním kódu
 Zde jsou některé tipy, které můžete použít při ladění vláken v nativním kódu:  

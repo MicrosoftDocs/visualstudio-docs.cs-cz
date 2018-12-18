@@ -10,11 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b759d5ac7f86fe366a5a0394b4c288904ef5c589
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 62c7f173f278e03f5e28d6b03c117c7b69415abb
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35255142"
 ---
 # <a name="profiling-tools-apis"></a>Rozhraní API nástrojů pro profilaci
 Můžete vložit spravovaným nebo nativním metody rozhraní API systému [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] profilace nástrojů pro shromažďování dat ovládacího prvku v profilaci spustit. Tato část popisuje metody rozhraní API a popisuje, jak je používat.  
@@ -32,5 +33,5 @@ Můžete vložit spravovaným nebo nativním metody rozhraní API systému [!INC
 ## <a name="related-sections"></a>Související oddíly  
  [Řízení shromažďování dat](../profiling/controlling-data-collection.md)  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Prohlížeč výkonu](../profiling/performance-explorer.md)

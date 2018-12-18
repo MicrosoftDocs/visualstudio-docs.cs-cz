@@ -13,11 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ea0937af4a697b3cf789738d06b5e2ad0282a7d0
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9929fc5acfe58d51de9142abc7addd539cf2b74e
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34549003"
 ---
 # <a name="common-patterns-for-poorly-behaved-multithreaded-applications"></a>Obecné vzory pro vícevláknové aplikace s nevhodným chováním
 
@@ -31,7 +32,7 @@ Někdy parallelized aplikace stubbornly bude pokračovat v provádění sériov�
 
 Jak je znázorněno na následujícím obrázku, vizualizér souběžnosti můžete také zveřejnit tento příznak v zobrazení využití procesoru, kde, bez ohledu na přítomnost více vláken, aplikace využívá jenom jednoho logického jádra.
 
-Další informace najdete v tématu "Výkonu vzor 1: identifikace zámků" v Hazim Shafi [paralelní výkon nástroje pro systém Windows](http://go.microsoft.com/fwlink/?LinkID=160569) příspěvku na blogu webu MSDN.
+Další informace najdete v tématu "výkonu vzor 1: identifikace zámků" v Hazim Shafi [paralelní nástroje pro sledování výkonu pro systém Windows](http://go.microsoft.com/fwlink/?LinkID=160569) příspěvku na blogu webu MSDN.
 
 ![Zamknout kolizí](../profiling/media/lockcontention_2.png "LockContention_2")
 
@@ -69,6 +70,6 @@ Nadměrné využití nebo zneužití vstupně-výstupních operací je obvyklou 
 
 Při zámky v pořadí dřív přijde, dřív získá aplikace, a jestliže je míra přijetí na zámek vyšší než počet pořízení dojde k uzamčení sestavy. Kombinace těchto dvou případů způsobí, že žádosti o zámek spusťte zálohování. Jedním ze způsobů boje proti tomuto problému se má používat "nekalé" zámky nebo zámky, která umožňují přístup k první vlákno, kde je najít v odemknout stavy. Toto chování convoy na předchozím obrázku. Chcete-li problém vyřešit, zkuste zmenšit kolizí pro objekty synchronizace a zkuste to pomocí nekalé zámky.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

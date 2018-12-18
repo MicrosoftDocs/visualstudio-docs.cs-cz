@@ -1,5 +1,5 @@
 ---
-title: Zobrazení podrobností funkce | Microsoft Docs
+title: Zobrazení podrobností funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -15,100 +15,101 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a7ce7bfbe9d68a7edcc0711c1f7e954612e67d0c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 7bfc700f0757d99686e28942ff796cf117b1456f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49951220"
 ---
 # <a name="function-details-view"></a>Zobrazení podrobností funkce
 **Zobrazení podrobností funkce** okně zobrazí následující informace:  
   
--   **Distribuce nákladů** vztahy mezi funkce, kterou jste vybrali a volání funkce, které provedeny vybrané funkce a mezi vybrané funkce a funkce, které byly volány představuje pruhový graf ho.  
+- **Distribuce nákladů** vztahy mezi funkce, která jste vybrali a volání funkcí, které provedeny vybrané funkce a mezi vybranou funkci a funkce, které byly volány představuje pruhový graf ho.  
   
--   **Podrobností výkonu funkce** tabulku, která zobrazuje souhrn profilování data pro funkce, která zadáte.  
+- **Podrobnosti o výkonu funkci** tabulky, který zobrazuje souhrnná data profilování pro funkci, která zadáte.  
   
--   **Zobrazení kódu funkce** okna, která zobrazuje funkce kódu, pokud kód je k dispozici.  
+- **Zobrazení kódu funkce** okna, která zobrazuje kód funkce, pokud kód je k dispozici.  
   
- **Zobrazení kódu funkce** okno je samostatný podokně. Ve výchozím nastavení, jsou dvě podokna Rozdělit vodorovně a **zobrazení kódu funkce** okno je umístěno v dolní části rámečku.  
+  **Zobrazení kódu funkce** okno je na samostatném stavového řádku. Ve výchozím nastavení, jsou dvě podokna Rozdělit horizontálně a **zobrazení kódu funkce** okna je umístěn v dolní části rámce.  
   
--   Dvě podokna Rozdělit svisle, klikněte na tlačítko **rozdělení obrazovky svisle** na panelu nástrojů.  
+- Dvě podokna Rozdělit svisle, klikněte na tlačítko **rozdělit svisle obrazovky** na panelu nástrojů.  
   
--   Chcete-li změnit relativní velikost podoken, klikněte na šedé ohraničení mezi snímky a přetáhněte ohraničení do jiného umístění.  
+- Chcete-li změnit relativní velikosti podoken, klikněte na tlačítko šedé ohraničení mezi snímky a přetažením ohraničení do jiného umístění.  
   
-## <a name="cost-distribution-bar-chart"></a>Náklady na distribuční pruhový graf  
+## <a name="cost-distribution-bar-chart"></a>Náklady na distribuci pruhový graf  
   
 ### <a name="performance-metrics"></a>Metriky výkonu  
- V **metrika výkonu** rozevíracího seznamu můžete zadat hodnoty, které se v zobrazení. Hodnoty, které jsou k dispozici závisí na metodě profilování, který se používal v profilaci datového souboru. Názvy v závorkách jsou názvy řádků v **podrobností výkonu funkce** tabulky.  
+ V **metrika výkonu** rozevíracího seznamu, můžete zadat hodnoty, které se zobrazí v zobrazení. Hodnoty, které jsou k dispozici, závisí na metodě profilování, která byla použita v souboru dat profilování. Názvy v závorkách jsou názvy řádků v **podrobnosti o výkonu funkci** tabulky.  
   
 ### <a name="bar-chart"></a>Pruhový graf  
  **Volání funkcí**  
   
- **Volání funkce** panelu ukazuje funkce, které volá vybrané funkce. Velikost bloku, která obsahuje volání funkce je v poměru k příspěvku volání funkce na celkovou hodnotu metrika výkonu pro vybrané funkce.  
+ **Volání funkce** panel ukazuje funkce, které volá vybrané funkce. Velikost bloku, který obsahuje volání funkce je výkonový zisk příspěvek volání funkce k celkové hodnotě metrika výkonu pro vybrané funkce.  
   
- Můžete kliknout na název volání funkce, aby bylo v zobrazení vybrané funkce.  
+ Můžete kliknout na název volající funkce pro zvolení vybrané funkce v zobrazení.  
   
--   Pokud jsou moc volání funkcí seznam, funkce s nejnižší příspěvky se shromažďují v **jiných** bloku. Klikněte na tlačítko **jiných** zobrazíte všechny volající a volaná funkce vybrané funkce v **volající/volaný – zobrazení** okno. Další informace najdete v tématu [volající/volaný – zobrazení](../profiling/caller-callee-view.md).  
+- Pokud existuje příliš mnoho volání funkce do seznamu, funkce s nejmenší příspěvky jsou shromážděny v **jiných** bloku. Klikněte na tlačítko **jiných** zobrazíte všechny volající a volané funkce z vybrané funkce v **zobrazení volající/volaný** okna. Další informace najdete v tématu [zobrazení volající/volaný](../profiling/caller-callee-view.md).  
   
--   Pokud neexistují žádné volání funkcí, nebo pokud je funkce funkce položka vlákna nebo proces, **horní části zásobníku** bloku se zobrazí.  
+- Pokud neexistují žádné volání funkce, nebo pokud je funkce funkci vstupního vlákna nebo procesu, **horní části zásobníku** bloku se zobrazí.  
   
- **Vybrané funkce**  
+  **Vybrané funkce**  
   
- Na panelu vybrané funkce zobrazí příspěvky volaných funkcí a kódu ve vybrané funkci metriky celkový výkon vybrané funkce. Velikost bloku, která obsahuje volané funkce nebo tělo funkce je poměr jeho příspěvku celkové hodnoty metriky výkonu pro vybrané funkce.  
+  Na panelu vybranou funkci zobrazí příspěvky volané funkce a kódu ve funkci vybrané metriky celkového výkonu z vybrané funkce. Velikost bloku, který obsahuje volané funkce nebo tělo funkce je poměr svého příspěvku k celkové hodnotě metrika výkonu pro vybrané funkce.  
   
- Můžete kliknout na název volané funkce, aby bylo v zobrazení vybrané funkce.  
+  Můžete kliknout na název volané funkce pro zvolení vybrané funkce v zobrazení.  
   
--   **Celkový** hodnota je metrika výkonu pro vybrané funkce.  
+- **Celkový** hodnota je metrika výkonu pro vybrané funkce.  
   
--   **Tělo funkce** bloku představuje velikost celkové hodnoty metriky výkonu, které došlo v přímé provádění kódu v těle funkce.  
+- **Tělo funkce** bloku představuje velikost celkové hodnoty metriky výkonu, ke které došlo v přímé provádění kódu v těle funkce.  
   
--   Funkce, které se nazývají vybrané funkce jsou uvedeny v blocích. Velikost bloku vybrané funkce představují množství celkový výkon Metrika pro vybrané funkce, která došlo k chybě v volaná funkce.  
+- Funkce, které jsou volány vybranou funkcí jsou uvedeny v blocích. Velikost bloku vybrané funkce představují množství celkový výkon metriky pro vybrané funkce, ke které došlo ve volané funkci.  
   
--   Pokud jsou moc volání funkcí seznam, funkce s nejnižší příspěvky se shromažďují v **jiných** bloku. Klikněte na tlačítko **jiných** zobrazíte všechny volající a volaná funkce vybrané funkce v **volající/volaný – zobrazení** okno. Další informace najdete v tématu [volající/volaný – zobrazení](../profiling/caller-callee-view.md).  
+- Pokud existuje příliš mnoho volání funkce do seznamu, funkce s nejmenší příspěvky jsou shromážděny v **jiných** bloku. Klikněte na tlačítko **jiných** zobrazíte všechny volající a volané funkce z vybrané funkce v **zobrazení volající/volaný** okna. Další informace najdete v tématu [zobrazení volající/volaný](../profiling/caller-callee-view.md).  
   
--   Pokud neexistují žádné volaných funkcí **dolní zásobník** bloku se zobrazí.  
+- Pokud neexistují žádné volané funkce **dolní části zásobníku** bloku se zobrazí.  
   
-## <a name="function-performance-details"></a>Detaily výkonu funkce  
- Tabulky podrobností výkonu funkce poskytuje souhrnná data pro metriku výkonu vybrané funkce. Zobrazí se hodnota a procento. Zadejte zadejte profilování data, která se zobrazí v grafu a podrobnosti tabulky v **metrika výkonu** seznamu.  
+## <a name="function-performance-details"></a>Podrobnosti výkonu – funkce  
+ Detaily výkonu funkce tabulce souhrnná data pro metriku výkonu vybrané funkce. Zobrazí se hodnota a procenta. Zadejte zadejte v tabulku dat profilování, které se zobrazí v grafu a podrobnosti **metrika výkonu** seznamu.  
   
 |Sloupec|Popis|  
 |------------|-----------------|  
-|**Exkluzivní**|-Množství metriku výkonu, došlo k chybě při provádění tělo funkce.|  
-|**Ve volání**|-Množství metriku výkonu, došlo k chybě ve funkcích, které vybrané funkce volána.|  
-|**Celkový počet (včetně).**|-Celkem **výhradní** a **volání v** hodnoty.|  
+|**Exkluzivní**|– Velikost metriku výkonu, ke které došlo při provádění těla funkce.|  
+|**Ve volání**|– Velikost metriku výkonu, ke které došlo v funkce, které volaly vybrané funkce.|  
+|**Celkový součet**|-Celkový součet **exkluzivní** a **ve volání** hodnoty.|  
   
-## <a name="function-code-view"></a>Zobrazení kódu – funkce  
- **Zobrazení kódu funkce** okno zobrazí seznam ve zdrojovém kódu, jakmile bude k dispozici. Vedle řádky kódu zdroje, které volat další funkce šedou barvou sloupec obsahuje hodnoty metriky výkonu pro volaná funkce. Chcete-li upravit zdrojový kód, klikněte na odkaz k souboru zdrojového kódu.  
+## <a name="function-code-view"></a>Zobrazení kódu funkce  
+ **Zobrazení kódu funkce** okně se zobrazí seznam zdrojového kódu, až bude k dispozici. Vedle řádky zdrojového kódu, které volají dalších funkcí označeno šedou barvou sloupec obsahuje hodnoty metriky výkonu pro volanou funkci. Chcete-li upravit zdrojový kód, klikněte na odkaz k souboru se zdrojovým kódem.  
   
-## <a name="cost-distribution-bar-chart-values"></a>Hodnoty grafu panelu distribuční náklady  
+## <a name="cost-distribution-bar-chart-values"></a>Hodnoty v grafu panelu rozdělení nákladů  
   
 ### <a name="sampling"></a>Vzorkování  
- Následující tabulka vysvětluje hodnoty v seznamu metrika výkonu pro profilaci data, která nebyla shromážděna pomocí metody vzorkování.  
+ Následující tabulka vysvětluje hodnoty v seznamu metrika výkonu pro profilování dat, která byla shromážděna pomocí metody vzorkování.  
   
 |||  
 |-|-|  
-|**Včetně ukázky (shromážděných ukázky)**|-Pro volání funkce, počet vzorků, které byly shromážděny při vybrané funkce byla zavolána pomocí této funkce volání.<br />-Pro tělo funkce, počet vzorků, které byly shromážděny při provádění vlastní kód vybrané funkce.<br />-Pro vyvolání funkce, počet vzorků, které byly shromážděny při byla volaná funkce provádění z důvodu volání z vybrané funkce.|  
+|**Celkových vzorků (shromážděných vzorků)**|-Pro volání funkce, počet vzorků, které byly shromážděny při vybrané funkce jmenovala tato volání funkce.<br />-Pro tělo funkce počet vzorků, které byly shromážděny při provádění vlastní kód vybrané funkce.<br />-Pro volaná funkce počet vzorků, které byly shromážděny při volané funkce byla spuštěna z důvodu volání z vybrané funkce.|  
   
 ### <a name="instrumentation"></a>Instrumentace  
- Následující tabulka vysvětluje hodnoty v seznamu metrika výkonu pro profilaci data, která nebyla shromážděna pomocí metody instrumentace.  
+ Následující tabulka vysvětluje hodnoty v seznamu metrika výkonu pro profilování dat, která byla shromážděna pomocí metody instrumentace.  
   
 |||  
 |-|-|  
-|**Uplynulá doba včetně (uplynulý čas)**|Uplynulý čas zahrnuje času stráveného v volání operačního systému, jako jsou přepínače kontextu a vstupně výstupní operace.<br /><br /> -Pro **volání funkce**, množství času, po který byl potřebná k provedení instancí vybrané funkce, které byly volá funkci. Čas strávený v funkce volané vybrané funkce je zahrnuta.<br />-Pro **tělo funkce**, celkovou velikost uplynulá doba potřebná k provedení kód vybrané funkce. Čas strávený v volaná funkce není součástí.<br />-Pro volaná funkce velikost doba potřebná k provedení instancí funkce, které byly volány vybrané funkce. Celkový počet zahrnuje času stráveného v funkce, které funkce volána. Čas strávený v funkce volané vybrané funkce je zahrnuta.|  
-|**Aplikace včetně čas (Time aplikace)**|Doba aplikace nezahrnuje času stráveného v volání operačního systému, jako jsou přepínače kontextu a vstupně výstupní operace.<br /><br /> -Pro **volání funkce**, množství času aplikace, která byla potřebná k provedení instancí vybrané funkce, které byly volá funkci. Čas strávený v funkce volané vybrané funkce je zahrnuta.<br />-Pro **tělo funkce**, celkovou dobu provádění aplikace potřebná k provedení kód vybrané funkce. Čas strávený v volaná funkce není součástí.<br />-Pro volaná funkce velikost aplikace doba potřebná k provedení instancí funkce, které byly volány vybrané funkce. Celkový počet zahrnuje času stráveného v funkce, které funkce volána.|  
+|**Uplynulý celkový čas (uplynulý čas)**|Uplynulý čas obsahuje čas, který byl stráven ve volání do operačního systému, například vstupně výstupní operace a přepnutí kontextu.<br /><br /> – **Volání funkce**, jaká část uplynulého času, který byl stráven spouštěním instance vybrané funkce, které byly volány funkce. Přikládáme času stráveného ve funkcích volaných vybrané funkce.<br />– **Tělo funkce**, celkové množství uplynulý čas strávený prováděním kódu vybrané funkce. Čas strávený ve volané funkce není součástí.<br />-Pro volaná funkce doba potřebná k provedení instance funkce, které byly volány vybranou funkcí. Celkový počet zahrnuje čas, který byl stráven ve funkcích, které funkce volána. Přikládáme času stráveného ve funkcích volaných vybrané funkce.|  
+|**Celkový čas aplikace (aplikace čas)**|Čas aplikace nezahrnuje čas, který byl stráven ve volání do operačního systému, například vstupně výstupní operace a přepnutí kontextu.<br /><br /> -U **volání funkce**, dobu aplikace, který byl stráven spouštěním instance vybrané funkce, které byly volány funkce. Přikládáme času stráveného ve funkcích volaných vybrané funkce.<br />– **Tělo funkce**, celkovou velikost aplikace čas strávený prováděním kódu vybrané funkce. Čas strávený ve volané funkce není součástí.<br />-Pro volaná funkce aplikace doba potřebná k provedení instance funkce, které byly volány vybranou funkcí. Celkový počet zahrnuje čas, který byl stráven ve funkcích, které funkce volána.|  
   
-### <a name="net-memory"></a>Využívání paměti rozhraním .NET  
- Následující tabulka vysvětluje hodnoty v seznamu metrika výkonu pro profilaci data, která nebyla shromážděna pomocí metody profilace paměti .NET.  
+### <a name="net-memory"></a>Paměť .NET  
+ Následující tabulka vysvětluje hodnoty v seznamu metrika výkonu pro profilování dat, která byla shromážděna pomocí metody profilace paměti .NET.  
   
 |||  
 |-|-|  
-|**Včetně přidělení (přidělení)**|-Pro **volání funkce**, počet objektů, které byly přiděleny instancemi vybrané funkce, která je volána funkce. Počet zahrnuje objekty, které byly přiděleny podle funkce, které vybrané funkce volána.<br />-Pro **tělo funkce**, počet objektů, které byly přiděleny podle vybrané funkce při provádělo vlastní kód. Přidělené v funkce volá funkci vybrané objekty nejsou zahrnuty.<br />-Pro vyvolání funkce počet objektů, které byly přiděleny instancemi funkce, které byly volány vybrané funkce. Počet zahrnuje objekty, které byly přiděleny podle funkce, které funkce volána.|  
-|**Včetně bajtů (bajty)**|-Pro **volání funkce**, počet bajtů, které byly přiděleny instancemi vybrané funkce, která je volána funkce. Obsahuje počet bajtů, které byly přiděleny podle funkce, které vybrané funkce volána.<br />-Pro **tělo funkce**, celkový počet bajtů, které byly přiděleny podle vybrané funkce, když se při spouštění vlastní kód. Bajtů přidělených v funkce volané vybrané funkce nejsou zahrnuty.<br />-Pro vyvolání funkce počet bajtů, které byly přiděleny instancemi funkce, které byly volány vybrané funkce. Obsahuje počet bajtů, které byly přiděleny podle funkce, které volá funkci.|  
+|**Celkově přidělení (přidělení)**|-U **volání funkce**, počet objektů, které byly přiděleny instance vybrané funkce, která volá funkci. Číslo obsahuje objekty, které byly přiděleny pomocí funkcí, které vybrané funkce volána.<br />– **Tělo funkce**, počet objektů, které byly přiděleny podle vybrané funkce, když probíhal vlastní kód. Přidělené ve funkcích volaných funkcí vybrané objekty nejsou zahrnuty.<br />-Pro volaná funkce počet objektů, které byly přiděleny instancí funkce, které byly volány vybranou funkcí. Číslo obsahuje objekty, které byly přiděleny pomocí funkcí, které funkce volána.|  
+|**Celkově bajtů (v bajtech)**|-U **volání funkce**, počet bajtů, které byly přiděleny instance vybrané funkce, která volá funkci. Číslo obsahuje počet bajtů, které byly přiděleny pomocí funkcí, které vybrané funkce volána.<br />– **Tělo funkce**, celkový počet bajtů, které byly přiděleny podle vybrané funkce, když probíhal vlastní kód. Bajtů přidělených funkce volány vybranou funkcí nejsou zahrnuty.<br />-Pro volaná funkce, počet bajtů, které byly přiděleny instancí funkce, které byly volány vybranou funkcí. Číslo obsahuje počet bajtů, které byly přiděleny pomocí funkcí, které funkce volána.|  
   
 ### <a name="concurrency"></a>Souběžnost  
- Následující tabulka vysvětluje hodnoty v seznamu metrika výkonu pro profilaci data, která nebyla shromážděna pomocí metoda souběžného zpracování.  
+ Následující tabulka vysvětluje hodnoty v seznamu metrika výkonu pro profilování dat, která byla shromážděna pomocí metody souběžnosti.  
   
 |||  
 |-|-|  
-|**Včetně kolizí (kolizí)**|-Pro **volání funkce**, počet prostředků kolizní události, k nimž došlo v instance vybrané funkce, která je volána funkce. Počet zahrnuje kolizní události ve funkcích, které vybrané funkce volána.<br />-Pro **tělo funkce**, celkový počet kolizní události, které došlo k chybě při provádění vlastní kód funkce. Kolizí, ke kterým dochází v funkce, které byly volány vybrané funkce nejsou zahrnuty.<br />-Pro vyvolání funkce počet kolizní události, k nimž došlo v instancí funkce, které byly volány vybrané funkce. Počet zahrnuje kolizní události, k nimž došlo v funkce, které funkce volána.|  
-|**Včetně blokované čas (Time blokovaných)**|-Pro volání funkce času stráveného v prostředku kolizí, že události pro instance vybrané funkce, která bude volána funkce. Čas zahrnuje blokované čas ve funkcích, které vybrali volaná funkce.<br />-Pro **tělo funkce**, celková doba strávená v kolizní události, které došlo k chybě při provádění vlastní kód funkce. Kolizí, ke kterým dochází v funkce, které bude volána vybrané funkce nejsou zahrnuty.<br />-Pro vyvolání funkce času stráveného v prostředku kolizní události pro instance funkce, která bude volána vybrané funkce. Čas zahrnuje blokované dobu, po kterou došlo k chybě v funkce, které funkce volána.|
+|**Celkově sporů (sporů)**|-U **volání funkce**, počet prostředků kolizní události, ke kterým došlo v instancích vybrané funkce, která volá funkci. Číslo obsahuje kolizní události ve funkcích, které vybrané funkce volána.<br />– **Tělo funkce**, celkový počet kolizní události, ke kterým došlo při provádění vlastní kód funkce. Kolizí, ke kterým dochází ve funkcích, které byly volány vybranou funkcí nejsou zahrnuty.<br />-Pro volaná funkce číslo kolizní události, ke kterým došlo v instanci funkce, které byly volány vybranou funkcí. Číslo obsahuje kolizní události, ke kterým došlo ve funkcích, které funkce volána.|  
+|**Celkový čas (čas zablokování) zablokování**|-Pro volání funkce čas, který byl stráven v prostředku kolize, že události pro instance vybrané funkce, které funkce volána. Čas obsahuje čas zablokování ve funkcích, které vybraná funkce volána.<br />– **Tělo funkce**, celkový čas, který byl stráven v kolizní události, ke kterým došlo při provádění vlastní kód funkce. Kolizí, ke kterým dochází v funkce, které volaly vybrané funkce nejsou zahrnuty.<br />-Pro volaná funkce čas, který se využilo na události kolize prostředků pro instance funkce, která vybrané funkce volána. Čas obsahuje čas zablokování, ke které došlo ve funkcích, které funkce volána.|

@@ -14,18 +14,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f0b54fc676a9e7e6ee523bba7f94f58aef49916b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f968ffaa4e11953fd3321861b884e6dda1f39a3c
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750074"
 ---
-# <a name="cvreleaseprovider-function"></a>CvReleaseProvider – funkce
+# <a name="cvreleaseprovider-function"></a>Cvreleaseprovider – funkce
 Verze zprostředkovatele značky. Uvolňování poskytovatele značky nebude mít vliv na dříve vytvořenou značky řadu tohoto zprostředkovatele. Značky řady musí být verze samostatně voláním cvreleasemarkerseries –. Chyby k uvolnění zprostředkovatele způsobí, že nevrácenou pamětí.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```C  
 HRESULT CvReleaseProvider(  
    _In_ PCV_PROVIDER pProvider  
 );  
@@ -39,7 +40,7 @@ HRESULT CvReleaseProvider(
  S_OK, když je zprostředkovatel úspěšně vydání nebo kód chyby v případě, že existuje byly všechny chyby. Makra úspěšné nebo NEÚSPĚŠNÉ použijte ke kontrole chybový stav.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** cvmarkers.h  
+ **Záhlaví:** *cvmarkers.h*  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Referenční dokumentace knihoven jazyka C++](../profiling/cpp-library-reference.md)

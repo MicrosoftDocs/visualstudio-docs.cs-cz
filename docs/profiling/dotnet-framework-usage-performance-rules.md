@@ -10,11 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ddfe3d7bdc4cb274a7b70dca48e45794d5f1cac
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 1903b61fce39bdd68b471472530857d720bac906
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34766019"
 ---
 # <a name="net-framework-usage-performance-rules"></a>Pravidla výkonu použití rozhraní .NET Framework
 Pravidla výkonu v rozhraní.NET Framework využití kategorii identifikovat konkrétní metody, které lze optimalizovat a také určit další obecné vzorce použití, jako je například uvolňování paměti a spory uzamčení, který můžete prozkoumat pro problémy s výkonem.  
@@ -33,6 +34,6 @@ Pravidla výkonu v rozhraní.NET Framework využití kategorii identifikovat kon
 |[DA0021: Vysoká míra 1. generace kolekce pamětí](../profiling/da0021-high-rate-of-gen-1-garbage-collections.md)|Relativně velké množství paměti objekty .NET jsou se uvolní v uvolňování paměti generace 1. Pokud příliš mnoho objektů krátkodobou zůstanou platné i po 0. generace kolekce, můžete snadno stanou se náklady na správu paměti nadměrné.|  
 |[DA0022: Vysoká míra 2. generace kolekce pamětí](../profiling/da0022-high-rate-of-gen-2-garbage-collections.md)|Vysoký počet objekty paměti .NET jsou se uvolní v uvolňování paměti generace 2. Pokud příliš mnoho objektů krátkodobou zůstanou platné i po 1. generace kolekce, náklady na správu paměti můžete snadno stát nadměrné. Toto pravidlo aktivuje se v případě míra kolizí zámků překročí vyšší prahová hodnota pravidla DA0005.|  
 |[DA0023: Vysoký čas procesoru uvolňování paměti](../profiling/da0023-high-gc-cpu-time.md)|Data výkonu systému, která se shromažďují při vytváření profilu označuje, že množství času stráveného v uvolňování paměti je důležité ve srovnání s časem zpracování celkový počet aplikací.|  
-|[DA0024: Nadměrný čas procesoru uvolňování paměti](../profiling/da0024-excessive-gc-cpu-time.md)|Data výkonu systému, která se shromažďují při vytváření profilu označuje, že množství času stráveného v uvolňování paměti je příliš vysoké ve srovnání s časem zpracování celkový počet aplikací. Toto pravidlo aktivuje se v případě vyšší prahová hodnota pravidla DA0023 přesahuje množství času strávené v uvolňování paměti.|  
+|[DA0024: Čas nadměrný procesoru uvolňování paměti](../profiling/da0024-excessive-gc-cpu-time.md)|Data výkonu systému, která se shromažďují při vytváření profilu označuje, že množství času stráveného v uvolňování paměti je příliš vysoké ve srovnání s časem zpracování celkový počet aplikací. Toto pravidlo aktivuje se v případě vyšší prahová hodnota pravidla DA0023 přesahuje množství času strávené v uvolňování paměti.|  
 |[DA0038: Vysoká míra kolizí zámků](../profiling/da0038-high-rate-of-lock-contentions.md)|Systém data výkonu, která se shromažďují se data profilování označuje, že výrazně vysoká míra kolizí zámků došlo k chybě při spuštění aplikace. Vezměte v úvahu profilace znovu pomocí metoda profilování souběžného zpracování nalézt příčinu kolizí.|  
 |[DA0039: Velmi vysoká míra kolizí zámků](../profiling/da0039-very-high-rate-of-lock-contentions.md)|Systém data výkonu, která se shromažďují se data profilování označuje, že nadměrně vysoká míra kolizí zámků došlo k chybě při spuštění aplikace. Vezměte v úvahu profilace znovu pomocí metoda profilování souběžného zpracování nalézt příčinu kolizí. Toto pravidlo aktivuje se v případě míra kolizí zámků překročí vyšší prahová hodnota pravidla DA0038.|

@@ -1,5 +1,5 @@
 ---
-title: StopTrackingAndCleanup | Microsoft Docs
+title: StopTrackingAndCleanup | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -17,14 +17,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 731e8091a91c49c8e17dbcd00c3aea32001115a0
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 1ffbebd651087d9aa877d0e257947352a0d0275e
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39154821"
 ---
 # <a name="stoptrackingandcleanup"></a>StopTrackingAndCleanup
-Zastaví všechny sledování a uvolní všechny paměti, které sledování relace.  
+Zastaví všechna sledování a uvolnění paměti používané sledování relace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,10 +34,10 @@ HRESULT WINAPI StopTrackingAndCleanup(void);
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrátí **HRESULT** s **úspěšné** nastaven bit, pokud sledování byla zastavena.  
+ Vrátí **HRESULT** s **SUCCEEDED** sadu bitů, pokud se zastavila sledování.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** FileTracker.h  
+ **Záhlaví:** *FileTracker.h*  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [StartTrackingContext](../msbuild/starttrackingcontext.md)

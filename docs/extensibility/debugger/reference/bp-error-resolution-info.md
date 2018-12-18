@@ -1,5 +1,5 @@
 ---
-title: BP_ERROR_RESOLUTION_INFO | Microsoft Docs
+title: BP_ERROR_RESOLUTION_INFO | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9fdf3b6aee272990fb22feee13f8e46ee8550073
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: eb2388d93c05500dc3c12bb5d57cd17293f5e16c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49816773"
 ---
 # <a name="bperrorresolutioninfo"></a>BP_ERROR_RESOLUTION_INFO
-Popisuje řešení zarážek k chybě, včetně umístění, program a přístup z více vláken.  
+Popisuje řešení k chybě zarážku, včetně umístění, aplikace a vlákna.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,25 +51,25 @@ public struct BP_ERROR_RESOLUTION_INFO {
   
 ## <a name="members"></a>Členové  
  `dwFields`  
- Kombinace hodnot z [BPERESI_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md) výčtu určení, která pole tato struktura jsou vyplněna.  
+ Kombinací hodnot z [BPERESI_FIELDS](../../../extensibility/debugger/reference/bperesi-fields.md) výčet určující, která pole této struktury jsou vyplněna.  
   
  `bpResLocation`  
- [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md) union, která určuje umístění zarážek řešení.  
+ [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md) unii, která určuje umístění zarážky řešení.  
   
  `pProgram`  
- [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) objekt, který představuje aplikaci, v němž došlo k chybě zarážek.  
+ [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md) objekt, který reprezentuje aplikaci, ve kterém došlo k chybě zarážku.  
   
  `pThread`  
- [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) objekt, který reprezentuje vláken, na kterém běží aplikace, který vytvořil chybu zarážek.  
+ [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) objekt, který reprezentuje vlákno, na kterém běží aplikace, která generovala chybu zarážku.  
   
  `bstrMessage`  
- Řetězec obsahující jakékoli upozornění nebo chybové zprávy vyplývající z řešení této chyby.  
+ Řetězec obsahující všechny upozornění nebo chybové zprávy vyplývající z řešení této chyby.  
   
  `dwType`  
- Hodnota z [BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md) výčet, který určuje typ zarážek chyby.  
+ Hodnota z [BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md) výčet, který určuje typ chyby zarážky.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je vrácen z [GetResolutionInfo](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md) metoda.  
+ Tato struktura je vrácen z [GetResolutionInfo](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md) metody.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

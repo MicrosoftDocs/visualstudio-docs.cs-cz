@@ -1,5 +1,5 @@
 ---
-title: Vytvoření nastavení testu pro distribuovaný zátěžový Test v sadě Visual Studio | Microsoft Docs
+title: Vytvořit nastavení testu pro distribuovaný zátěžový Test
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,188 +8,192 @@ ms.assetid: b63d4b71-3b74-4872-b2d1-f0bd1a9a8544
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 30b9cf45b60b108e51cc1cbe5defd5e8d8cac0e4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 69ce0f2504741c0bc48df0245202cdf0eefee20f
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53063313"
 ---
-# <a name="how-to-create-a-test-setting-for-a-distributed-load-test"></a>Postupy: Vytvoření nastavení testu pro distribuovaný zátěžový test
+# <a name="how-to-create-a-test-setting-for-a-distributed-load-test"></a>Postupy: vytvoření nastavení testu pro distribuovaný zátěžový test
 
-Konfigurace *nastavení testů* pro vaše zátěžové testy, abyste mohli tyto testy distribuovat do více počítačů pomocí testovacích agentů a testovací kontrolery. Můžete taky nakonfigurovat nastavení testu *adaptérů diagnostických dat*, který zadejte typů dat, který chcete shromáždit, nebo postup ovlivnit testovacích počítačů při spuštění zátěžových testů ze sady Visual Studio.
+Konfigurace *nastavení testu* pro zátěžové testy, abyste mohli distribuce těchto testů mezi více počítačů pomocí testovacích agentů a řadičů testu. Můžete také nakonfigurovat nastavení testu *adaptéry diagnostických dat*, který určuje typy dat, která chcete shromažďovat nebo způsob, jak ovlivnit testovací počítače při spuštění zátěžových testů ze sady Visual Studio.
 
-Například můžete použít adaptér diagnostických dat ASP.NET Profiler ke shromažďování výkonu rozpis kódu. Kromě toho adaptérů diagnostických dat slouží k simulaci potenciální problémová místa na testovacím počítači nebo snižte dostupné systémové paměti.
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Nastavení testů pro sadu Visual Studio jsou uloženy v souboru. Test nastavení zadejte následující informace o každé role:
+Například můžete použít adaptér diagnostiky dat Profiler technologie ASP.NET ke shromažďování rozdělení práce kódu. Navíc adaptéry diagnostických dat slouží k simulaci potenciálních slabých míst v testovacím počítači nebo snížení dostupné systémové paměti.
 
--   Role, které jsou vyžadovány pro aplikaci v testovací sadu
+Nastavení testu pro sadu Visual Studio jsou uloženy v souboru. Nastavení testu definuje následující informace o jednotlivých rolích:
 
--   Role, kterou chcete použít ke spuštění testů
+-   Sadu rolí, které jsou požadovány pro vaši testovanou aplikaci
 
--   Adaptérů diagnostických dat pro každou roli
+-   Role se použije ke spuštění testů
 
-Pokud spustíte testy, vyberte nastavení testů pro použití jako aktivního nastavení testování v závislosti na tom, co budete potřebovat pro tento konkrétní test spustit. Soubor s nastavením testu ukládána v rámci vašeho řešení. Název souboru má příponu *.testsettings*.
+-   Adaptéry diagnostických dat pro každou roli
 
-Když přidáte výkonu webu a zatížení testování projektu a řešení, *Default.testsettings* soubor je vytvořen. Soubor je automaticky přidán do řešení v části **položky řešení** složky. Tento soubor spouští testy místně bez adaptérů diagnostických dat. Můžete přidat další *.testsettings* souboru, nebo upravit *.testsettings* souboru zadejte adaptérů diagnostických dat a testovací kontrolery.
+Při spuštění testů vyberte nastavení testu jako aktivní test nastavení v závislosti na tom, co vyžadujete pro tento konkrétní spuštění testu. Soubor nastavení testu je uložen jako součást vašeho řešení. Název souboru má příponu *.testsettings*.
 
-Testovací kontroler bude mít agentů, které lze použít pro každou roli v nastavení testu. Další informace o testovacích kontrolérů a testovacích agentů najdete v tématu [Správa testovací Kontroléry a testovací agenty pomocí sady Visual Studio](../test/manage-test-controllers-and-test-agents.md).
+Když přidáte webový výkon a zátěžové testování projektu do řešení, *Default.testsettings* se vytvoří soubor. Soubor je automaticky přidán do řešení ve složce **položky řešení** složky. Tento soubor se spustí lokálně bez jakýchkoli adaptérů diagnostických dat. Můžete přidat další *.testsettings* souboru, nebo upravit *.testsettings* soubor k určení adaptérů diagnostických dat a řadičů testu.
 
-Postupujte podle těchto kroků k vytvoření a odebrat nastavení testu v řešení pro zátěžové testy, které chcete spustit ze sady Visual Studio.
+Testovací kontrolér bude mít agenty, které můžete použít pro každou roli v nastavení testu. Další informace o testovacích kontrolérů a testovacích agentů najdete v tématu [Správa testovacích kontrolérů a testovacích agentů v sadě Visual Studio](../test/manage-test-controllers-and-test-agents.md).
 
-## <a name="create-a-test-setting-for-a-distributed-load-test"></a>Vytvoření nastavení testu pro distribuovaný zátěžový Test
+Postupujte podle těchto kroků k vytvoření a odebrání nastavení testu v rámci vašeho řešení pro zátěžové testy, které máte v úmyslu spustit ze sady Visual Studio.
+
+## <a name="create-a-test-setting-for-a-distributed-load-test"></a>Vytvořit nastavení testu pro distribuovaný zátěžový test
 
 ### <a name="to-add-a-test-settings-for-a-distributed-load-test"></a>Chcete-li přidat nastavení testu pro distribuovaný zátěžový test
 
-1.  V Průzkumníku řešení klikněte pravým tlačítkem na **položky řešení**, přejděte na příkaz **přidat**a potom zvolte **novou položku**.
+1.  V **Průzkumníka řešení**, klikněte pravým tlačítkem na **položky řešení**, přejděte na **přidat**a klikněte na tlačítko **nová položka**.
 
      **Přidat novou položku** zobrazí se dialogové okno.
 
-2.  V **nainstalovaných šablonách** podokně vyberte **nastavení testu**.
+2.  V **nainstalované šablony** podokně zvolte **nastavení testu**.
 
-3.  (Volitelné) V **název** pole, změňte název souboru s nastavením testu.
+3.  (Volitelné) V **název** pole, změňte název souboru nastavení testu.
 
 4.  Zvolte **přidat**.
 
-     Nový soubor nastavení testů se zobrazí v Průzkumníku řešení klikněte v části **položky řešení** složky.
+     Nový soubor nastavení testu se zobrazí v **Průzkumníka řešení**v části **položky řešení** složky.
 
     > [!NOTE]
-    > Seznam nastavení testů, které zobrazí Visual Studio Enterprise je odvozena ze seznamu souborů nastavení testů v **položky řešení** složky. Například testovací nastavení soubory ve složce položky řešení se zobrazují, když použijete **vyberte Active Test nastavení** možnost **testování** nabídky. To znamená, že souborů nastavení testů se přesunout do jiného umístění v hierarchii řešení, je už lze nastavit jako nastavení testu z integrované vývojové prostředí sady Visual Studio.
+    > Seznam nastavení testu, které zobrazí Visual Studio Enterprise je odvozen ze seznamu souborů s nastavením testu v **položky řešení** složky. Například soubory nastavení v testu **položky řešení** složky se zobrazí při použití **vybrat aktivní nastavení testu** možnost **testování** nabídky. To znamená, že pokud přesunete soubor nastavení testu do jiného umístění v hierarchii řešení, může už sloužit jako nastavení testu z integrovaného vývojového prostředí sady Visual Studio.
 
-5.  **Nastavení testu** se zobrazí dialogové okno. **Obecné** je vybrány.
+5.  **Nastavení testu** se zobrazí dialogové okno. **Obecné** je vybrána stránka.
 
-     Nyní můžete upravit a uložit testování nastavení hodnoty.
+     Teď můžete upravit a uložit hodnoty nastavení testu.
 
     > [!NOTE]
-    > Každý test nastavení, které vytvoříte je uveden jako volba pro **vyberte Active Test nastavení** a **upravit Test nastavení** možnosti na **testování** nabídky.
+    > Každé nastavení testu, které vytvoříte, je uvedeno jako volba pro **vybrat aktivní nastavení testu** a **upravit nastavení testu** možnosti **testování** nabídky.
 
 6.  V části **název**, zadejte název pro nastavení testu.
 
-7.  (Volitelné) V části **popis**, zadejte popis nastavení testu, ostatní členové týmu vědět, co je určený pro.
+7.  (Volitelné) V části **popis**, zadejte popis nastavení testu, aby ostatní členové týmu věděli, co je určený pro.
 
-8.  (Volitelné) Chcete-li vybrat výchozí schéma pojmenování při testovacím běhu, vyberte **výchozí schéma pojmenování**. Chcete-li definovat vlastní schéma pojmenování, vyberte **uživatelem definované schéma** a pak zadejte text, který chcete v **textu předpony**. Datum a časové razítko připojit k názvu testu, vyberte **razítka data a času připojení**.
+8.  (Volitelné) Chcete-li vybrat výchozí schéma pojmenování pro vaše testovací běhy, vyberte **výchozí schéma pojmenování**. Chcete-li definovat vlastní schéma pojmenování, vyberte **uživatelem definované schéma** a pak zadejte text, který má v **text předpony**. Chcete-li datum a časové razítko se připojit k názvu běhu testu, vyberte **připojit časové razítko**.
 
 9. Zvolte **role**.
 
      **Role** zobrazí se stránka.
 
-     ![Test nastavení role](../test/media/load_testtestrole.png "Load_TestTestRole")
+     ![Roli nastavení testu](../test/media/load_testtestrole.png)
 
-10. Ke spuštění testů vzdáleně, nebo pokud chcete spustit testy vzdáleně a vzdáleně shromažďování dat, použijte **Test provádění metody** rozevíracího seznamu a vyberte možnost **vzdálené spuštění**.
+10. Pro spouštění testů vzdáleně, nebo chcete-li vzdáleně spustit testy a vzdáleně shromažďovat data, použijte **metoda spuštění testu** rozevíracího seznamu a vyberte **vzdálené spuštění**.
 
-11. Použití **řadič** rozevíracího seznamu vyberte testovací kontroler pro testovací agenty z **řadič** který se použije ke spuštění testů nebo shromažďování dat.
+11. Použití **řadič** rozevíracího seznamu vyberte řadič testu pro testovací agenty z **řadič** , který se použije ke spuštění testů nebo shromažďování dat.
 
     > [!NOTE]
-    > Pokud přidáváte řadič poprvé, objeví se v rozevíracím seznamu žádné řadiče. Naplnění seznamu předchozí řadiče, které jste zadali v jiných nastavení testu. Musíte zadat název kontroleru, do pole (například **TestControllerMachine1**).
+    > Pokud je to poprvé, co přidáváte řadič, žádné řadiče, zobrazí se v rozevíracím seznamu. Seznam je vyplněn předchozími řadiči, které jste zadali v rámci jiných nastaveních testu. Do pole musíte zadat název kontroleru (například **TestControllerMachine1**).
 
 12. K přidání rolí, které chcete použít ke spuštění testů a shromažďování dat, v části **role**, zvolte **přidat**.
 
-13. Zadejte název role v **název** sloupce. Role může být například "Web Server".
+13. Zadejte název pro roli v **název** sloupce. Role může být například "Webový Server".
 
-14. Opakujte kroky 12 a 13 přidat všechny role, které potřebujete.
+14. Opakujte kroky 12 a 13, chcete-li přidat všechny role, které potřebujete.
 
-     Každá role používá agentem test agent, který je spravovaný nástrojem testovací kontroler.
+     Každá role používá testovacího agenta, který je spravovaný řadičem testu.
 
-15. Vyberte roli, kterou chcete spustit testy a potom vyberte **nastavit jako roli ke spuštění testů**.
+15. Vyberte roli, kterou chcete spustit testy a klikněte na tlačítko **nastavit jako roli pro spouštění testů**.
 
     > [!IMPORTANT]
-    > Jiných rolí, které můžete vytvořit a definovat testy se nespustí, ale slouží pouze ke shromažďování dat podle dat a diagnostická adaptéry, které zadáte pro role v **diagnostiky a dat** stránky.
+    > Ostatní role, které vytvoříte a definujete nebudou spouštět testy, ale budou použity pouze ke sběru dat podle dat a diagnostických adaptérů zadaných pro role v **Data a Diagnostika** stránky.
 
-16. Chcete-li omezit agentů, které lze použít pro roli, vyberte roli a poté zvolte **přidat** na panelu nástrojů v části **agenta atributy pro vybraný karta**e.
+16. Budou limitovat agenty, které můžete použít pro roli, vyberte roli a klikněte na tlačítko **přidat** na panelu nástrojů v rámci **atributy agenta pro vybranou roli**.
 
-     **Pravidlo Výběr agenta** se zobrazí dialogové okno.
+     **Pravidlo výběru agenta** se zobrazí dialogové okno.
 
-     Zadejte název v **název atributu** a hodnotou v **hodnota atributu**a potom zvolte **OK**. Přidáte libovolný počet atributů, které potřebujete.
+     Zadejte název do **název atributu** a hodnotou v **hodnota atributu**a klikněte na tlačítko **OK**. Přidejte tolik atributů, kolik potřebujete.
 
-     Můžete například přidat atribut, který je s názvem "RAM > 16GB", má hodnotu "True" nebo "Nepravda" pro filtrování testovací počítače agenta, které mají víc než 16GB paměti. Použít stejný atribut na jeden nebo více testovacích agentů, použijte dialogové okno Spravovat Kontroleru testů. Další informace najdete v tématu [Správa testovacích Kontrolérů a testovacích agentů v sadě Visual Studio](../test/manage-test-controllers-and-test-agents.md).
+     Můžete například přidat atribut s názvem "RAM > 16GB", který má hodnotu "True" nebo "False", chcete-li filtrovat počítače testovacího agenta, které mají více než 16GB paměti. Chcete-li použít stejný atribut pro jeden nebo více testovacích agentů, je použít **spravovat řadič testu** dialogové okno. Další informace najdete v tématu [Správa testovacích kontrolérů a testovacích agentů v sadě Visual Studio](../test/manage-test-controllers-and-test-agents.md).
 
-17. Zvolte **datové a diagnostické**.
+17. Zvolte **dat a diagnostiky**.
 
-     **Datové a diagnostické** zobrazí se stránka.
+     **Dat a diagnostiky** zobrazí se stránka.
 
-     ![Test nastavení data a Diagnostika](../test/media/load_testtest.png "Load_TestTest")
+     ![Test nastavení data a Diagnostika](../test/media/load_testtest.png)
 
-18. V **diagnostiky a dat** stránky, můžete definovat, co roli nemá výběrem *adaptérů diagnostických dat* , roli použijete ke shromažďování dat. Proto pokud jeden nebo více dat a diagnostická adaptéry jsou povolené pro roli, testovací kontroler vyberte dostupné testovací počítač agenta ke shromažďování dat pro zadaná data a adaptérů diagnostických na základě atributů, které jste zadali pro roli. Vyberte data a adaptérů diagnostických dat, které chcete shromažďovat pro každou roli, vyberte roli. Pro každou roli vyberte adaptérů diagnostických dat podle potřeb testů. Chcete-li konfigurovat každý adaptér diagnostických dat, který jste vybrali pro každou roli, zvolte **konfigurace**.
+18. V **Data a Diagnostika** stránce definujete význam role výběrem *adaptéry diagnostických dat* , které role bude využívat ke shromažďování dat. Proto pokud jeden nebo více data a diagnostické adaptéry jsou povoleny pro roli, řadič testu vybere dostupného testovacího agenta pro počítač shromažďovat data pro zadaná data a diagnostické adaptéry založené na parametrech definovaných pro danou roli. Pokud chcete vybrat data a adaptérů diagnostických dat, které chcete shromáždit pro každou roli, vyberte roli. Pro každou roli vyberte adaptéry diagnostických dat podle potřeby testů. Chcete-li konfigurovat jednotlivé adaptéry diagnostických dat, který jste vybrali pro každou roli, zvolte **konfigurovat**.
 
      **Příklad rolí a adaptérů diagnostických dat:**
 
-     Můžete například vytvořit roli klienta, která je s názvem "Desktop klient, který má atribut"Používá SQL"nastavena na"True"a role serveru, která je s názvem"SQL Server", který má atribut nastavena na"16 RAM > GB". Pokud určíte, že klient"plocha" bude spouštět testy výběrem **nastavit jako roli ke spuštění testů** v **role** , testovací kontroler bude vyberte počítače, které mají testovacích agentů, které zahrnují atribut "Používá SQL" nastavit na hodnotu "True", na kterém chcete spustit testy. Testovací kontroler bude také vybrat počítače serveru SQL, které mají testovacích agentů, které zahrnují atribut "RAM > 16GB" pouze ke shromažďování dat, která je definována dat a diagnostická adaptéry, které jsou součástí role. Agent testy "Desktop Client" může taky shromažďovat data pro počítače, na kterých se spustí, pokud vyberete příliš dat a diagnostická adaptéry pro tuto roli.
+     Můžete například vytvořit roli klienta s názvem "Desktop Client", který má atribut "Uses SQL" nastavený na "hodnotu True" a roli serveru s názvem "SQL Server" s atributem nastaveným na "RAM > 16GB". Pokud určíte, že "Klient plochy" spustí testy výběrem **nastavit jako roli pro spouštění testů** v **role** stránky, řadič testu vybere stroje testovacími agenty, které obsahují atribut "Používá SQL" nastaveným na hodnotu "True" na základě které chcete spustit testy. Řadič testu také vybere stroje serveru SQL testovacími agenty, které obsahují atribut "RAM > 16GB" pouze ke sběru dat, která je definovaná pomocí dat a diagnostických adaptérů zahrnutých v roli. Testovací agenti "Stolní klient" mohou také shromažďovat data pro počítače, na kterých jsou spuštěni, pokud příliš vybrat adaptéry dat a diagnostiky pro danou roli.
 
-     Další podrobnosti o každý adaptér diagnostických dat a jeho konfiguraci můžete zobrazit související téma v následující tabulce.
+     Další podrobnosti o všech adaptérech diagnostiky dat a jeho konfiguraci můžete zobrazit v souvisejících tématech v následující tabulce.
 
-     Další informace o adaptérů diagnostických dat najdete v tématu [shromažďovat diagnostické informace využitím testovacích nastavení](../test/collect-diagnostic-information-using-test-settings.md).
+     Další informace o adaptérech diagnostických dat naleznete v tématu [shromažďování diagnostických informací pomocí nastavení testu](../test/collect-diagnostic-information-using-test-settings.md).
 
-     **Adaptérů diagnostických dat pro zátěžové testy**
+     **Adaptéry diagnostických dat pro zátěžové testy**
 
-    |Adaptér diagnostiky dat|Použití v zátěžových testech|Přidružené tématu|
-    |-----------------------------|-------------------------|----------------------|
-    |**Proxy server klienta ASP.NET pro IntelliTrace a dopadu testu:** tento proxy server umožňuje shromažďování informací o volání protokolu http od klienta na webový server pro adaptérů diagnostických dat IntelliTrace a dopadu testu.|![Informační ikona, která](../test/media/vc364f4.gif)<br /><br /> Pokud máte konkrétní potřebu shromažďovat informace o systému pro testovací počítače agenta, nezahrnujte tento adaptér. **Upozornění:** nedoporučujeme používání IntelliTrace adaptéru v zátěžových testech z důvodu, ke kterým dochází z důvodu velkého množství dat, které jsou shromážděny. <br /><br /> Testovací dopad data nejsou shromažďovány pomocí zátěžové testy.||
-    |**IntelliTrace:** můžete nakonfigurovat konkrétní diagnostické trasování informací, které jsou uloženy v souboru protokolu. Soubor protokolu má rozšíření .tdlog. Když spustíte test a test krok nezdaří, můžete vytvořit chyby. Soubor protokolu, který obsahuje diagnostické trasování se automaticky přiloží k této chyby. Data, která se shromažďují v souboru protokolu zvyšuje produktivitu ladění snížením čas, který je potřeba reprodukujte a diagnostikovat chybu v kódu. Z tohoto protokolu soubor místní relace můžete je znovu vytvořit na jiném počítači. Tím se snižuje riziko, že chyby nelze reprodukovat.<br /><br /> Další informace najdete v tématu [dat shromažďování IntelliTrace](../test/how-to-collect-intellitrace-data-to-help-debug-difficult-issues.md).|![Ikona důležité](../test/media/vc364f3.gif)<br /><br /> Nedoporučujeme použití IntelliTrace adaptéru v zátěžových testech z důvodu, ke kterým dochází z důvodu velkého množství dat, který se shromažďuje a přihlášení. Pokuste se použít adaptér IntelliTrace pouze v zátěžových testech, které se nespustí dlouhé a nepoužívejte mnoho testovacích agentů.|[Postupy: shromáždění dat technologie IntelliTrace pro snazší ladění složitých problémů](../test/how-to-collect-intellitrace-data-to-help-debug-difficult-issues.md)|
-    |**ASP.NET Profiler:** můžete vytvořit testovací nastavení, které zahrnuje tvorbě profilace ASP.NET, který shromažďuje údaje o výkonu na webových aplikací ASP.NET.|Adaptér diagnostických dat profileru ASP.NET profily proces Internetové informační služby (IIS), takže nebudou fungovat u webového serveru vývoj. Profilu webové stránky v zátěžovém testu, budete muset nainstalovat testovacího agenta na počítači, který běží služby IIS na. Testovací agent nebude generování zatížení, ale bude pouze agenta kolekce. Další informace najdete v tématu [instalace a konfigurace testovacích agentů](../test/lab-management/install-configure-test-agents.md).|[Postupy: Konfigurace služby ASP.NET Profiler pro zátěžové testy s využitím testovacích nastavení](../test/how-to-configure-aspnet-profiler-for-load-tests-using-test-settings.md)|
-    |**Protokol událostí:** můžete nakonfigurovat testu nastavení zahrnout shromažďování protokolu událostí, který bude součástí výsledků testů.||[Postupy: Konfigurace shromažďování událostí protokolu pomocí nastavení testů](http://msdn.microsoft.com/en-us/48d67891-6018-4549-83e3-213d5d824a02)|
-    |**Emulace sítě:** můžete určit, že se mají vrátit zatížení umělé sítě na svůj test s použitím nastavení testu. Emulace sítě s ovlivňuje komunikace do a z počítače pomocí emulace rychlost konkrétní síťového připojení, jako je například telefonického připojení. **Poznámka:** emulace sítě nelze použít ke zvýšení rychlosti připojení k síti.|Emulace sítě s adaptér je ignorován v zátěžových testech. Zátěžové testy místo toho použijte nastavení, které jsou určené v síti směs scénáře zátěžového testu.<br /><br /> Další informace najdete v tématu [určení typů virtuálních síťových](../test/specify-virtual-network-types-in-a-load-test-scenario.md).||
-    |**Informace o systému:** nastavení testu můžete nastavit tak, aby zahrnují systémové informace o počítačích, na kterých běží informace o systému Diagnostika a data kolekce. Informace o systému je zadán ve výsledcích testu s použitím nastavení testu.|![Informační ikona, která](../test/media/vc364f4.gif)<br /><br /> Zatížení agenty a systém testovaného lze shromažďovat informace o systému.|Tyto informace můžete shromáždit není nutná žádná konfigurace.|
-    |**Test dopad:** můžete shromáždit informace o tom, které byly používány metody kódu aplikace při spuštění testovacího případu. To lze použít společně s změny kódu aplikace, které jsou vytvářeny vývojáři k určení, které testy situace měla vliv na tyto změny vývoj.|Testovací dopad data nejsou shromažďovány se zátěžovými testy.||
-    |**Záznam videa:** můžete vytvořit záznam videa plochy relace při spuštění automatizovaných testů. To může být užitečné k zobrazení akce uživatelů pro programového testu uživatelského rozhraní. Video může pomoci ostatní členové týmu izolovat aplikace problémy, které je obtížné reprodukovat. **Poznámka:** při spouštění testů vzdáleně záznam videa nebude fungovat, pokud je agent spuštěn v režimu interaktivní proces.|![Ikona důležité](../test/media/vc364f3.gif) **upozornění:** nedoporučujeme používání adaptéru záznam videa pro zátěžové testy.|[Postupy: zahrnují záznam obrazovky a zvuku během testů s použitím nastavení testu](../test/how-to-include-recordings-of-the-screen-and-voice-during-tests.md)|
+    |Adaptér diagnostiky dat|Použití v zátěžových testech|Související téma|
+    |-|-------------------------|-|
+    |**Klient Proxy ASP.NET pro IntelliTrace a dopad testu:** tento server proxy umožňuje shromažďovat informace o voláních http z klienta na webový server pro adaptéry diagnostických dat IntelliTrace a dopad testu.|![Informační ikona](../test/media/vc364f4.gif)<br /><br /> Pokud nemáte specifickou potřebu shromažďovat informace o systému pro počítače testovacího agenta, nezahrnujte tento adaptér. **Upozornění:** nedoporučujeme používat adaptér IntelliTrace v zátěžových testech kvůli problémům, k nimž dochází kvůli velkému množství dat, která je shromažďována. <br /><br /> Údaje o vlivu testu nejsou při použití zátěžových testů shromažďovány.||
+    |**IntelliTrace:** můžete nakonfigurovat informace o specifickém diagnostickém trasování, která je uložena v souboru protokolu. Soubor protokolu má příponou *.tdlog*. Při spuštění testu a testovací krok nezdaří, můžete vytvořit chybu. Soubor protokolu, který obsahuje diagnostické trasování je automaticky připojen k této chybě. Data sbírána do souboru protokolu zvyšují efektivitu ladění zkrácením doby potřebné k reprodukci a diagnostice chyby v kódu. Z tohoto protokolu souboru místní relace můžete znovu vytvořit na jiném počítači. Tím se snižuje riziko, že není možné reprodukovat chyby.<br /><br /> Další informace najdete v tématu [data IntelliTrace shromažďování](../test/how-to-collect-intellitrace-data-to-help-debug-difficult-issues.md).|![Ikona důležité](../test/media/vc364f3.gif)<br /><br /> Nedoporučujeme používat adaptér IntelliTrace v zátěžových testech kvůli problémům, k nimž dochází kvůli velkému množství dat, která jsou shromažďována a zaznamenána. Měli byste se pokusit použít adaptér IntelliTrace pouze v zátěžových testech, které neběží dlouho a nepoužívají spoustu testovacích agentů.|[Postupy: shromažďování dat IntelliTrace pro ladění složitých problémů](../test/how-to-collect-intellitrace-data-to-help-debug-difficult-issues.md)|
+    |**Profiler technologie ASP.NET:** můžete vytvořit nastavení testu, které zahrnuje profilování technologie ASP.NET, které shromažďuje údaje o výkonu webových aplikací ASP.NET.|Adaptér diagnostiky dat profiler technologie ASP.NET profily procesu Internetové informační služby (IIS), nebude fungovat proti vývojovému webovému serveru. Chcete-li Profilovat webu v zátěžovém testu, budete muset nainstalovat testovacího agenta na počítači, na kterém běží služby IIS na. Testovací agent nebude generovat zatížení, ale bude pouze agenta do kolekce. Další informace najdete v tématu [instalace a konfigurace testovacích agentů](../test/lab-management/install-configure-test-agents.md).|[Postupy: Konfigurace služby ASP.NET profiler pro zátěžové testy pomocí nastavení testu](../test/how-to-configure-aspnet-profiler-for-load-tests-using-test-settings.md)|
+    |**Protokol událostí:** můžete nakonfigurovat tak, aby shromažďoval události protokolu, nastavení testu, který bude zahrnut ve výsledcích testu.||[Postupy: Konfigurace shromažďování událostí protokolů pomocí nastavení testů](https://msdn.microsoft.com/48d67891-6018-4549-83e3-213d5d824a02)|
+    |**Emulace sítě:** můžete určit, že chcete do vašeho testu umělé zatížení sítě tak, že pomocí nastavení testu. Emulace sítě ovlivňuje komunikaci do a z počítače emulací konkrétního síťového připojení s rychlostí, vytáčeného. **Poznámka:** emulaci sítě nelze použít ke zvýšení rychlosti připojení k síti.|Adaptér emulace sítě je testy zatížení ignorován. Místo toho zátěžové testy pomocí nastavení, které jsou určené v síťové skladbě scénáře testování zatížení.<br /><br /> Další informace najdete v tématu [určení typů virtuálních sítí](../test/specify-virtual-network-types-in-a-load-test-scenario.md).||
+    |**Informace o systému:** nastavení testu lze upravit na obsahovalo systémové informace o počítačích, na kterých běží systémové informace diagnostiky a dat kolekce. Systémové informace jsou uvedeny ve výsledcích testu s použitím nastavení testu.|![Informační ikona](../test/media/vc364f4.gif)<br /><br /> Informace o systému může shromažďovat z agentů zatížení i testovaného systému.|Tyto informace můžete shromáždit není nutná žádná konfigurace.|
+    |**Dopad testu:** můžete shromažďovat informace o metodách kódu aplikace byly použity při spuštění testovacího procesu. To je možné společně se změnami kódu aplikace, která vyrábí celá vývojářům určit, jaké zkoušky byly ovlivněny změnami vývoje.|Data dopadu testů není použití zátěžových testů shromažďovány.||
+    |**Záznam videa:** můžete vytvořit záznam videa relace plochy při spuštění automatického testování. To může být užitečné, chcete-li zobrazit akce uživatele pro kódovaný test uživatelského rozhraní. Video může pomoci ostatním členům týmu izolovat problémy aplikací, které je obtížné reprodukovat. **Poznámka:** při vzdáleném spuštění testů nebude záznamník videa fungovat, pokud je agent spuštěn v režimu interaktivního procesu.|![Ikona důležité](../test/media/vc364f3.gif) **upozornění:** společnost Microsoft nedoporučuje použití adaptéru nahrávacího pro zátěžové testy.|[Postupy: patří nahrávání obrazovky a hlasu během testů pomocí nastavení testu](../test/how-to-include-recordings-of-the-screen-and-voice-during-tests.md)|
 
 19. Zvolte **nasazení**.
 
      **Nasazení** zobrazí se stránka.
 
-20. Vytvořit samostatný adresář pro nasazení pokaždé, když spustíte testy, vyberte **povolit nasazení**.
+20. Chcete-li vytvořit samostatný adresář pro nasazení pokaždé, když spustíte testy, vyberte **povolit nasazení**.
 
     > [!NOTE]
-    > Pokud to uděláte, můžete sestavit aplikaci při spuštění testů.
+    > Pokud to uděláte, můžete pokračovat k sestavení aplikace při spuštění testů.
 
-21. Chcete-li přidat soubor do adresáře, který používáte pro spouštění testů, zvolte **přidat soubor**a potom vyberte soubor, který chcete přidat.
+21. Chcete-li přidat soubor do adresáře, který používáte ke spuštění testů, zvolte **přidat soubor**a potom vyberte soubor, který chcete přidat.
 
     > [!NOTE]
-    > Když spustíte testy zatížení, modul plug-in sestavení, datové soubory a odeslané soubory se automaticky nasadí.
+    > Při spuštění zátěžového testu se automaticky nasadí sestavení s moduly plug-in, datové soubory a odeslané soubory.
 
-22. Přidejte adresář na adresář, který používáte ke spuštění testů, zvolte **adresáře přidat** a poté vyberte adresář, který chcete přidat.
+22. Chcete-li přidat adresář do adresáře, který používáte ke spuštění testů, zvolte **přidat adresář** a potom vyberte adresář, který chcete přidat.
 
-23. Ke spouštění skriptů před a po testy, vyberte **instalační program a skriptů čištění**.
+23. Chcete-li spouštět skripty před a po testech, zvolte **instalační a čistící skripty**.
 
-     **Instalační program a skriptů čištění** zobrazí se stránka.
+     **Instalační a čistící skripty** zobrazí se stránka.
 
-    1.  Zadejte umístění souboru skriptu v **nastavení skriptu** nebo zvolte se třemi tečkami (**...** ) vyhledejte instalační skript.
+    1.  Zadejte umístění souboru skriptu v **instalační skript** nebo zvolte tři tečky (**...** ) a vyhledejte skript nastavení.
 
-    2.  Zadejte umístění souboru skriptu v **skript pro vyčištění** nebo zvolte se třemi tečkami (**...** ) vyhledejte skript pro vyčištění.
+    2.  Zadejte umístění souboru skriptu v **skript pro vyčištění** nebo zvolte tři tečky (**...** ) a vyhledejte skript vyčištění.
 
-24. Pokud chcete spustit testy s použitím jiného hostitele, vyberte **hostitele**.
+24. Chcete-li spustit testy pomocí jiného hostitele, zvolte **hostitele**.
 
-    1.  V **typ hostitele**, ověřte, zda **výchozí** je vybrána.
-
-        > [!NOTE]
-        > **ASP.NET** v **hostitele typ** není podporována v zátěžových testech.
-
-    2.  Použijte spuštění testu v 32bitové nebo 64bitové verze procesu rozevíracího seznamu můžete určit, zda chcete webové testy výkonu a jednotka v testu zatížení ke spuštění jako 32bitové nebo 64bitové procesy.
+    1.  V **typ hostitele**, ověřte, že **výchozí** zaškrtnuto.
 
         > [!NOTE]
-        > Flexibilní, by měl zkompilování výkon vašich webových a načtení projektů testů pomocí **libovolný procesor** konfigurace. Potom můžete spustit na 32bitové a 64bitové verze agentů. Kompilace výkonu webu a zatížení testování projektů pomocí **64-bit** konfigurace nabízí žádnou výhodu.
+        > **ASP.NET** v **hostovat typ** není podporována v zátěžových testech.
 
-25. (Volitelné) Chcete-li omezit dobu, pro každou testu a jednotlivých testů, zvolte **testování vypršení časových limitů.**
+    2.  Použití **spuštění testu v 32bitové nebo 64bitové** procesu rozevíracího seznamu vyberte, jestli chcete, aby webové testy výkonu a jednotky v zátěžovém testu ke spuštění jako 32bitový nebo 64bitové proces.
 
-    1.  Na zrušení testu spustit, když dojde k překročení časového limitu, vyberte **Abort celkový čas překročí-li spustit test** a pak zadejte hodnotu pro tento limit.
+        > [!NOTE]
+        > Pro maximální flexibilitu byste kompilace webového výkonu a načtěte projekty testů s použitím **jakýkoli procesor** konfigurace. Poté můžete spouštět na 32bitových a 64bitových agentech. Kompilace webového výkonu a zátěžové testování projektů pomocí **64-bit** konfigurace nenabízí žádnou výhodu.
 
-    2.  Při překročení časového limitu, selhání na jednotlivé testy, vyberte **označit jednotlivé testy jako neúspěšná, pokud jeho čas provádění překročí**a zadejte hodnotu pro tento limit.
+25. (Volitelné) Chcete-li omezit dobu pro jednotlivé testovací běhy a jednotlivé testy, zvolte **časový limit testu.**
 
-26. Přeskočit **testování částí**. Zátěžové testy se nedoporučuje používat tato nastavení.
+    1.  Chcete-li přerušit testovací běh při překročení časového limitu, vyberte **přerušit spuštění testu, pokud překročí celkový čas** a potom zadejte hodnotu pro toto omezení.
 
-27. Přeskočit **webový Test**. Zátěžové testy se nedoporučuje používat tato nastavení.
+    2.  Chcete-li jednotlivé testy selhat při překročení časového limitu, vyberte **označit individuální test jako neúspěšný, pokud jeho doba běhu překročí**a zadejte hodnotu pro toto omezení.
+
+26. Přeskočit **Jednotkový Test**. Zátěžové testy toto nastavení nepoužívají.
+
+27. Přeskočit **webového testu**. Zátěžové testy toto nastavení nepoužívají.
 
 28. Chcete-li uložit nastavení testu, zvolte **uložit jako**. Zadejte název souboru, který chcete v **název objektu**.
 
     > [!NOTE]
-    > Pokud je nutné změnit nastavení testu, zvolte **testování** a potom zvolte **upravit Test nastavení** a přejděte na nastavení testů, které jste vytvořili.
+    > Pokud musíte změnit nastavení testu, zvolte **testování** a klikněte na tlačítko **upravit nastavení testu** a přejděte na nastavení testu, které jste vytvořili.
 
-### <a name="to-remove-a-test-settings-from-your-solution"></a>Odebrání řešení nastavení testů
+### <a name="to-remove-a-test-settings-from-your-solution"></a>Odebrání nastavení testu z řešení
 
-Ve složce položky řešení v Průzkumníku řešení klikněte pravým tlačítkem na testovací nastavení, které chcete odebrat a potom vyberte **odebrat**.
+V části **položky řešení** složky **Průzkumníka řešení**, klikněte pravým tlačítkem na nastavení testu, které chcete odebrat a klikněte na tlačítko **odebrat**.
 
-Soubor nastavení testu je odebrán z vašeho řešení. Tato změna se odrazí v seznamu nabízených možností pro **vyberte testovací upgrade nastavení Active** a **upravit nastavení testu** možnosti na **Test** nabídky.
+Soubor nastavení testu je odebrán z řešení. Tato změna se projeví v seznamu voleb pro **vybrat aktivní nastavení testu** a **upravit nastavení testu** možnosti **Test** nabídky.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Kontrolery testů a testovací agenti](configure-test-agents-and-controllers-for-load-tests.md)
-- [Shromažďování diagnostických informací s použitím nastavení testu](../test/collect-diagnostic-information-using-test-settings.md)
+- [Shromažďování diagnostických údajů pomocí nastavení testů](../test/collect-diagnostic-information-using-test-settings.md)

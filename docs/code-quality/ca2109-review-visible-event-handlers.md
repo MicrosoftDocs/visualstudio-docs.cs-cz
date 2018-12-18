@@ -1,6 +1,7 @@
 ---
 title: 'CA2109: Revize viditelných obslužných rutin událostí'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,13 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cf11564e7420231ac6ab65c6dc00762bb4077ef2
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 4df271f5427d005ef94c4c09d6c0a1eb05c850b0
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45548860"
 ---
 # <a name="ca2109-review-visible-event-handlers"></a>CA2109: Revize viditelných obslužných rutin událostí
+
 |||
 |-|-|
 |TypeName|ReviewVisibleEventHandlers|
@@ -33,32 +36,34 @@ ms.lasthandoff: 04/19/2018
  Byla zjištěna veřejná nebo chráněná metoda zpracování událostí.
 
 ## <a name="rule-description"></a>Popis pravidla
- Zpracování událostí metodu externě viditelné uvede problém zabezpečení, která vyžaduje kontrolu.
+ Externě viditelná metoda zpracování událostí představuje problém zabezpečení, která vyžaduje kontrolu.
 
- Metody zpracování událostí by neměly být vystaveny, pokud to není nezbytně nutné. Obslužné rutiny události, typem delegáta, která volá metodu zveřejněné lze přidat na libovolnou událost tak dlouho, dokud obslužné rutiny a událostí podpisů shodují. Události lze zvýšit potenciálně žádný kód a jsou často vydané kódem vysoce důvěryhodných systému v odpovědi na akce uživatele, jako je například kliknutí na tlačítko. Přidání kontrolu zabezpečení pro metodu zpracování událostí nezabrání kód registraci obslužné rutiny události, která volá metodu.
+Nezveřejňujte metody zpracování událostí, pokud není nezbytně nutné. Obslužné rutiny události, delegát typu, který vyvolá metodu vystavené lze přidat na libovolnou událost shodují signatury obslužné rutiny a události. Události může potenciálně navýšit tak, že veškerý kód a jsou často vydané kódem vysoce důvěryhodných systému v odpovědi s uživatelskými akcemi, jako je kliknutí na tlačítko. Přidání kontrolu zabezpečení metody zpracování událostí nebrání kód obslužné rutiny události, která volá metodu registrace.
 
- Požadavek nelze chránit spolehlivě metodu vyvolat obslužnou rutinu události. Zabezpečení vyžaduje nápovědy chránit kód z nedůvěryhodného volající prověřením volající v zásobníku volání. Kód, který přidá obslužnou rutinu události pro událost se nutně nenachází v zásobníku volání při spuštění metody obslužné rutiny události. Proto zásobníku volání může mít pouze vysoce důvěryhodné volající při vyvolání metody obslužné rutiny události. To způsobí, že požadavky provedené obslužná rutina události proběhla úspěšně. Požadované oprávnění také, může se uplatní při vyvolání metody. Z těchto důvodů může riziko není oprava porušení toto pravidlo hodnoceno pouze po zkontrolování metodu zpracování událostí. Při kontrole kódu, zvažte následující skutečnosti:
+ Požadavek nelze spolehlivě chránit metoda vyvolá obslužnou rutinu události. Pomoc se požadavky na zabezpečení chránit kódu z nedůvěryhodných volajících prozkoumáním volající v zásobníku volání. Kód, který přidá obslužnou rutinu události pro událost se nutně nenachází v zásobníku volání při spuštění metody obslužné rutiny události. Proto zásobník volání může mít pouze vysoce důvěryhodné volající při vyvolání metody obslužné rutiny události. To způsobí, že požadavky metodu obslužné rutiny události úspěšné. Požadované oprávnění může být také, uplatněna při vyvolání metody. Z těchto důvodů riziko není opravit porušení tohoto pravidla lze pouze použit k vyhodnocení po kontrole metody zpracování událostí. Při kontrole kódu, zvažte následující skutečnosti:
 
--   Vaší obslužné rutiny událostí provádět žádné operace, které jsou nebezpečné nebo využitelných, jako je například potvrzující oprávnění nebo potlačení oprávnění nespravovaného kódu?
+- Obslužnou rutinu události provádět žádné operace, které jsou nebezpečné nebo zneužitelné, jako je například potvrzující oprávnění nebo potlačení oprávnění nespravovaného kódu?
 
--   Co jsou bezpečnostní hrozby do a z vašeho kódu, protože ho můžete spustit kdykoli bez pouze vysoce důvěryhodné volající v zásobníku?
+- Co jsou bezpečnostní hrozby na a z vašeho kódu, protože může probíhat kdykoli bez pouze vysoce důvěryhodné volající v zásobníku?
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení toto pravidlo, metoda kontrola a vyhodnocení následující:
+ Chcete-li opravit porušení tohoto pravidla, zkontrolujte metodu a vyhodnoťte následující:
 
--   Můžete provádět metodu zpracování událostí neveřejný?
+- Budete moct nastavit metodu zpracování událostí neveřejné?
 
--   Můžete přesunout všechny nebezpečné funkce mimo obslužné rutiny události?
+- Můžete přesunout všechny funkce nebezpečné mimo obslužnou rutinu události?
 
--   Pokud je požadavek zabezpečení zařízení, můžete to udělat jiným způsobem?
+- Pokud je zavedena požadavku zabezpečení, můžete to provést jiným způsobem?
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Potlačíte upozornění od tohoto pravidla až po kontrolu zabezpečení pozor, abyste měli jistotu, že kód není představovat ohrožení zabezpečení.
+ Potlačení upozornění tohoto pravidla až po přezkoumání pečlivé ověření zabezpečení, abyste měli jistotu, že váš kód nepředstavuje bezpečnostní hrozbu.
 
 ## <a name="example"></a>Příklad
- Následující kód ukazuje metodu zpracování událostí, která může došlo ke zneužití škodlivý kód.
+ Následující kód ukazuje metodu zpracování událostí, které mohou být zneužity škodlivý kód.
 
  [!code-csharp[FxCop.Security.EventSecLib#1](../code-quality/codesnippet/CSharp/ca2109-review-visible-event-handlers_1.cs)]
 
-## <a name="see-also"></a>Viz také
- <xref:System.Security.CodeAccessPermission.Demand%2A?displayProperty=fullName><xref:System.EventArgs?displayProperty=fullName>
+## <a name="see-also"></a>Viz také:
+
+- <xref:System.Security.CodeAccessPermission.Demand%2A?displayProperty=fullName>
+- <xref:System.EventArgs?displayProperty=fullName>

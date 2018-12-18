@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_datakind – | Microsoft Docs
+title: Idiasymbol::get_datakind – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c50dea6154b1616d18b7f4159468b3e22f0aa200
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: e01dbb38b512832db4c3629f6169fbe3be9c3f79
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49880520"
 ---
 # <a name="idiasymbolgetdatakind"></a>IDiaSymbol::get_dataKind
 Načte proměnné klasifikace dat symbolu.  
@@ -33,10 +34,10 @@ HRESULT get_dataKind (
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí hodnotu z [DataKind – výčet](../../debugger/debug-interface-access/datakind.md) určením typu dat, jako jsou globální, statické nebo konstantní, například výčtu.  
+ [out] Vrátí hodnotu z [datakind – výčet](../../debugger/debug-interface-access/datakind.md) výčet určující druh dat, jako je například globální, statická nebo konstantní, např.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` nebo chybový kód.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
 >  Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
@@ -45,7 +46,7 @@ HRESULT get_dataKind (
   
 |Požadavek|Popis|  
 |-----------------|-----------------|  
-|Hlavičky:|dia2.h|  
+|Záhlaví:|dia2.h|  
 |Verze:|V7.0 DIA SDK|  
   
 ## <a name="see-also"></a>Viz také  

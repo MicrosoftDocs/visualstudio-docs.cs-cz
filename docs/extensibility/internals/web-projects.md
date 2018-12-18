@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31141116"
 ---
 # <a name="web-projects"></a>Webové projekty
 Systém webového projektu je systém projektu, který vytvoří webové projekty. Webové projekty zase vytvářet webové aplikace. Budete programu na webové stránce pomocí tradičních programovacích jazyků, jako třeba [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] nebo [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)], ke shromažďování a zpracování informací od uživatele, uchovávat v databázi a tak dále. Webové stránky s přidružený kód se nazývají inteligentní webové stránky.  

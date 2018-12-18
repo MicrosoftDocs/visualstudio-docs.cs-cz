@@ -1,130 +1,130 @@
 ---
 title: Interaktivní okno Python (REPL)
-description: Jak používat interaktivních okna (REPL) pro kód Python v sadě Visual Studio pro vývoj rychlé kódu.
-ms.date: 07/13/2017
+description: Použití interaktivního okna (REPL) pro rychlý vývoj kódu Python v sadě Visual Studio.
+ms.date: 10/29/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 81c4b2cceb75874135f6d18cbf167f719ced48b9
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 3c3a3a6cd3694a0affa6ca1d5cfabac58b124ec9
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055712"
 ---
-# <a name="working-with-the-python-interactive-window"></a>Práce s oknem interaktivní Python
+# <a name="work-with-the-python-interactive-window"></a>Práce s interaktivní okno Pythonu
 
-Visual Studio poskytuje okno s interaktivní čtení vyhodnotit tiskových smyčky (REPL) pro každé prostředí Python, která vylepšuje REPL dostanete s `python.exe` na příkazovém řádku. Interaktivních okna (otevřít pomocí **zobrazení > ostatní okna > &lt;prostředí&gt; interaktivní** příkazy nabídky) vám umožní zadat libovolný kód Python a zobrazte výsledky okamžitě. Tento způsob kódování pomáhá Další informace a experimentovat s rozhraní API a knihovny a interaktivně vyvíjet funkční kód pro zahrnutí do vašich projektů.
+Visual Studio poskytuje oknem interaktivní čtení vyhodnocení print smyčky (REPL) pro každé prostředí Pythonu, které dále to vylepšuje REPL všechno získáte s *python.exe* na příkazovém řádku. **Interaktivní** okno (Otevřít **zobrazení** > **ostatní Windows** > **&lt;prostředí&gt; Interaktivní** příkazy nabídky) vám umožní zadat libovolný kód Pythonu a zobrazit výsledky okamžitě. Tímto způsobem kódování pomáhá informace a experimentovat s rozhraním API a knihoven a interaktivně vyvíjet pracovní kód přikazující zahrnutí ve vašich projektech.
 
-![Okno interaktivní Python](media/interactive-window.png)
+![Interaktivní okno Pythonu](media/interactive-window.png)
 
-Visual Studio má počet Python REPL režimy zvolit:
+Visual Studio má několik režimů REPL Pythonu na výběr:
 
 | REPL | Popis | Úpravy | Ladění | Obrázky |
 | --- | --- | --- | --- | --- |
-| Standard | Výchozí REPL, rozhovory Python přímo | Standardní úpravy (víceřádkových atd.). | Ano, prostřednictvím `$attach` | Ne |
-| Ladit | Výchozí REPL rozhovory vyladěnou procesu Python | Standardní úpravy | Pouze ladění | Ne |
-| IPython | REPL komunikuje se IPython back-end | Příkazy IPython, výhody, které Pylab | Ne | Ano, vložené v REPL |
-| IPython bez Pylab | REPL komunikuje se IPython back-end | Standardní IPython | Ne | Ano, oddělte okna | 
+| Standard | Výchozí REPL, přednášky na Python přímo | Standardní editační (multiline atd.). | Ano, prostřednictvím `$attach` | Ne |
+| Ladit | Výchozí REPL, přednášky na laděném procesu Pythonu | Standardní úpravy | Ladění | Ne |
+| IPython | Přednášky REPL, IPython back-endu | Příkazy IPython, Pylab usnadnění | Ne | Ano, vložený v REPL |
+| IPython bez Pylab | Přednášky REPL, IPython back-endu | Standardní IPython | Ne | Ano, oddělte okna | 
 
-Tento článek popisuje **standardní** a **ladění** REPL režimy. Informace o režimech IPython v [pomocí IPython REPL](interactive-repl-ipython.md).
+Tento článek popisuje **standardní** a **ladění** REPL režimy. Informace o režimech IPython, naleznete v tématu [použití Ipythonu REPL](interactive-repl-ipython.md).
 
-Podrobný návod s příklady, včetně interakce s editoru, jako je například Ctrl + Enter, najdete v části [kurzu krok 3: použití okna interaktivní REPL](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md). 
+Podrobný návod s příklady, včetně interakcí s editoru **Ctrl**+**Enter**, naleznete v tématu [kurzu krok 3: použití okna interaktivní okno REPL](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md). 
 
 |   |   |
 |---|---|
-| ![film ikonu fotoaparátu pro video](../install/media/video-icon.png "přehrát video") | [Podívejte se na video (Microsoft Virtual Academy)](https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Python-Interactive-Window-gJYKY5LWE_4605918567) v okně interaktivní (2 m 22s).|
+| ![Ikona filmové kamery pro video](../install/media/video-icon.png "Sledovat video") | [Podívejte se na video (Microsoft Virtual Academy)](https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Python-Interactive-Window-gJYKY5LWE_4605918567) na **interaktivní** okno (2 miliony 22s).|
 
-## <a name="opening-an-interactive-window"></a>Otevření interaktivních okna
+## <a name="open-an-interactive-window"></a>Otevřít interaktivní okno
 
-Existuje několik způsobů otevřete okno interaktivní pro prostředí.
+Existuje několik způsobů, jak otevřít **interaktivní** okno pro prostředí.
 
-Nejdřív přejít do okna prostředí Python (**zobrazení > ostatní okna > prostředí Python** nebo Ctrl-K, Ctrl-') a vyberte **otevřete okno interaktivní** příkaz nebo tlačítko pro zvolený prostředí .
+Nejprve, přepněte do okna prostředí Pythonu (**zobrazení** > **ostatní Windows** > **prostředí Pythonu** nebo **Ctrl** + **K** > **Ctrl**+**`**) a vyberte **otevřít interaktivní Okno** příkazu nebo tlačítko pro zvolený prostředí.
 
-![Interaktivní okno odkaz v okně prostředí Python](media/interactive-window-opening.png)
+![Interaktivní okno odkaz v okně prostředí Pythonu](media/interactive-window-opening.png)
 
-Druhý, u dolního okraje **zobrazení > ostatní okna** nabídky, je **interaktivní okno Python** příkaz pro vaše prostředí výchozí, stejně jako příkaz, který má přejít do okna prostředí:
+Za druhé u dolního okraje **zobrazení** > **ostatní Windows** nabídky, je **interaktivním okně Pythonu** příkaz pro výchozí prostředí, stejně jako příkaz pro přepnutí na **prostředí** okno:
 
-![Položky nabídky interaktivních okna v zobrazení > ostatní okna](media/interactive-window-menu.png)
+![Interaktivní okno položky v zobrazení > ostatní Windows](media/interactive-window-menu.png)
 
-Třetí, můžete otevřít okno s interaktivní v souboru spuštění ve vašem projektu, nebo pro soubor samostatné výběrem **ladění > spustit [projekt | V interaktivní Python soubor]** příkazu nabídky (Shift + Alt + F5):
+Třetí, můžete otevřít **interaktivní** na spouštěcí soubor ve vašem projektu, nebo pro samostatný soubor, tak, že vyberete okno **ladění** > **Execute \<projektu | Soubor > v Pythonu interaktivní** příkazu nabídky (**Shift**+**Alt**+**F5**):
 
-![Spustit projekt v nabídce interaktivní Python](media/interactive-execute-project.png)
+![Provést projekt v nabídce interaktivní Python](media/interactive-execute-project.png)
 
-Nakonec můžete vybrat kód v souboru a použít [kód poslat interaktivního příkazu](#send-code-to-interactive-command) popsané dole.
+Nakonec můžete vybrat kód v souboru a použít [ **zaslat do Interactive** příkaz](#send-to-interactive-command) je popsáno níže.
 
 ## <a name="interactive-window-options"></a>Interaktivní okno Možnosti
 
-Můžete ovládat různé aspekty interaktivních okna prostřednictvím **nástroje > Možnosti > Python Tools > Interaktivní Windows** (najdete v části [možnosti](python-support-options-and-settings-in-visual-studio.md)):
+Můžete určit různé aspekty **interaktivní** okno prostřednictvím **nástroje** > **možnosti** > **nástroje Python Tools**  >  **Interaktivní Windows** (viz [možnosti](python-support-options-and-settings-in-visual-studio.md)):
 
-![Možnosti interaktivních okna Python](media/options-interactive-windows.png)
+![Možnosti interaktivního okna Pythonu](media/options-interactive-windows.png)
 
-## <a name="using-the-interactive-window"></a>Pomocí interaktivních okna
+## <a name="use-the-interactive-window"></a>Pomocí interaktivního okna
 
-Jakmile je otevřené okno interaktivní, můžete začít zadávání kódu řádek po řádku v `>>>` řádku. Okno interaktivní provádí každý řádek, zadejte ji, která zahrnuje importu modulů, definování proměnných, a tak dále:
+Jednou **interaktivní** je otevřeno okno, můžete začít zadávat kódu řádek po řádku na **\> \> \>** řádku. **Interaktivní** okno vykonává každý řádek tak, jak zadat, která zahrnuje importu modulů, definující proměnné a tak dále:
 
-![Okno interaktivní Python](media/interactive-window.png)
+![Interaktivní okno Pythonu](media/interactive-window.png)
 
-Výjimkou je, aby dokončení příkazu, jako např. kdy jsou potřeby další řádky kódu `for` příkaz končí v dvojtečkou jako v příkladu nahoře. Příkaz řádku v těchto případech se změní na `...` označující, že je třeba zadat další řádky bloku, jak je znázorněno na řádcích čtvrté a páté v na obrázku výše. Po stisknutí klávesy Enter na prázdný řádek, interaktivní okno zavře bloku a běží v překladač.
+Výjimkou je další řádky kódu, které jsou potřebné k tomu úplný příkaz, třeba při `for` příkaz končí za dvojtečkou, jak je uvedeno výše. V těchto případech řádku příkazový řádek se změní **...**  označující, že budete muset zadat další řádky pro blok, jak je znázorněno na řádcích čtvrtý a pátý na obrázku výše. Když stisknete klávesu **Enter** na prázdný řádek, **interaktivní** okno zavře bloku a běží v překladač.
 
 > [!Tip]
-> Okno interaktivní vylepšuje obvyklé Python prostředí příkazového řádku REPL automaticky odsazením příkazy, které patří do okolního oboru. Historii (třeba připomenout s na šipku nahoru) také poskytuje Víceřádkový položek, zatímco příkazového řádku REPL obsahuje pouze jeden řádky.
+> **Interaktivní** okno dále to vylepšuje obvykle Python prostředí REPL příkazového řádku, které automaticky odsazení příkazy, které patří do rozsah obklopujícím rozsahem. Historii (třeba připomenout pomocí kláves Šipka nahoru) také nabízí Víceřádkový položky, že REPL příkazového řádku obsahuje pouze jeden řádek.
 
-<a name="meta-commands"></a> Okno interaktivní také podporuje několik meta příkazy. Všechny příkazy meta začínat `$`, a zadat `$help` získáte seznam příkazů meta a `$help <command>` získat podrobnosti o použití pro konkrétní příkaz.
+<a name="meta-commands"></a> **Interaktivní** okna podporuje také několik meta příkazů. Všechny příkazy meta začínat `$`, a zadáte `$help` zobrazíte seznam meta příkazů a `$help <command>` zobrazíte podrobnosti o použití ke konkrétnímu příkazu.
 
-| Meta-příkazu | Popis |
+| Meta příkazu | Popis |
 | --- | --- |
-| `$$` | Vloží poznámku, která je vhodné komentář kódu v rámci relace. |
-| `$attach` | Připojí ladicí program Visual Studio pro proces REPL okna pro povolení ladění. |
-| `$cls`, `$clear` | Vymaže obsah okna editoru a ponechá historie a provádění kontextu. |
-| `$help` | Zobrazit seznam příkazů nebo v nápovědě k určitému příkazu. |
-| `$load` | Načte příkazy ze souboru a provede až do dokončení. |
-| `$mod` | Název zadaného modulu přepínačů aktuálního oboru. |
-| `$reset` | Obnoví prostředí pro spuštění na počáteční stav, ale zachová historii. |
-| `$wait` | Čeká na alespoň zadanou hodnotu v milisekundách. |
+| `$$` | Vloží poznámku, což je užitečné komentáře kódu v průběhu relace. |
+| `$attach` | Ladicí program sady Visual Studio připojí k procesu okno REPL pro povolení ladění. |
+| `$cls`, `$clear` | Vymaže obsah okna editor uživatele zůstanou nedotčena historie a spuštění kontextu. |
+| `$help` | Zobrazit seznam příkazů a nápovědy ke konkrétnímu příkazu. |
+| `$load` | Načte příkazy ze souboru a spustí, až do dokončení. |
+| `$mod` | Přepne aktuální obor na zadaný název modulu. |
+| `$reset` | Obnoví prostředí pro spuštění do původního stavu, ale zachová historii. |
+| `$wait` | Čeká na alespoň zadaný počet milisekund. |
 
-Příkazy jsou také rozšiřitelné rozšířeními sady Visual Studio pomocí implementace a export `IInteractiveWindowCommand` ([příklad](https://github.com/Microsoft/PTVS/blob/master/Python/Product/PythonTools/PythonTools/Repl/InteractiveWindowCommands.cs#L85)).
+Příkazy se také dají rozšířit pomocí rozšíření sady Visual Studio pomocí implementace a export `IInteractiveWindowCommand` ([příklad](https://github.com/Microsoft/PTVS/blob/master/Python/Product/PythonTools/PythonTools/Repl/InteractiveWindowCommands.cs#L85)).
 
-## <a name="switching-scopes"></a>Přepínání oborů
+## <a name="switch-scopes"></a>Přepnout obory
 
-Ve výchozím nastavení je vymezen interaktivních okna pro projekt do projektu po spuštění souboru jako v případě, že jste spustili z příkazového řádku. Pro soubor samostatné ho je obory na daný soubor. V každém okamžiku ale rozevírací nabídce v horní části okna interaktivní vám umožní změnit obor kdykoli během relace REPL:
+Ve výchozím nastavení **interaktivní** okno projektu působí na projektu po spuštění souboru, jako kdyby jste spustili z příkazového řádku. Pro soubor samostatné obory pro daný soubor. Kdykoli při relaci REPL, ale v rozevírací nabídce podél horního okraje **interaktivní** okna umožňuje změnit obor:
 
-![Interaktivní okno oborů](media/interactive-scopes.png)
+![Interaktivní okno obory](media/interactive-scopes.png)
 
-Po importování modulu, jako je například zadáním `import importlib`, možnosti se zobrazí v rozevíracím seznamu přepnout do kteréhokoliv oboru v tomto modulu. Zprávy v okně interaktivní také označuje nový obor, takže můžete sledovat, jak jste získali do určité stavu během relace.
+Po importování modulu, například `import importlib`, možnosti se zobrazí rozevírací seznam pro přepnutí do žádný rozsah v tomto modulu. Zpráva v **interaktivní** okna také určuje nový obor, takže můžete sledovat, jak jste získali na a jejich určitého stavu během vaší relace.
 
-Zadání `dir()` v oboru zobrazí platné identifikátory v tomto oboru, včetně funkce názvů, třídy a proměnné. Například pomocí `import importlib` následuje `dir()` ukazuje následující:
+Zadání `dir()` v oboru zobrazí platné identifikátory v tomto oboru, včetně názvy funkcí, tříd a proměnné. Například použití `import importlib` následovaný `dir()` zobrazuje následující:
 
-![Interaktivní okno v oboru importlib –](media/interactive-importlib-scope.png)
+![Interaktivní okno v rámci importlib](media/interactive-importlib-scope.png)
 
-<a name="sending-code-to-interactive"</a>
+## <a name="send-to-interactive-command"></a>Odeslání do interaktivního příkazu
 
-## <a name="send-code-to-interactive-command"></a>Kód poslat interaktivního příkazu
+Kromě práci v rámci **interaktivní** okno přímo, vyberte kód v editoru klikněte pravým tlačítkem a zvolte **zaslat do Interactive** nebo stiskněte klávesu **Ctrl** + **Zadejte**.
 
-Kromě přímo pracovní interaktivních okna, můžete vybrat kódu v editoru klikněte pravým tlačítkem a zvolte **poslat interaktivní** nebo stiskněte klávesu Ctrl + Enter.
+![Poslat příkaz interaktivní nabídky](media/interactive-send-to.png)
 
-![Odeslat příkaz interaktivní nabídky](media/interactive-send-to.png)
-
-Tento příkaz je užitečné pro vývoj iterativní nebo evolučním kód, včetně testování kódu, když budete vyvíjet ho. Jakmile jste odeslané úsek kódu do okna interaktivní a zobrazit její výstup, stisknutí klávesy na šipku nahoru nezobrazovat kód, upravte ho a otestovat ji rychle stisknutím kláves Ctrl + Enter. (Stisknutím klávesy Enter na konci vstupu provádí, ale stisknutím klávesy Enter uprostřed vstup vloží nový řádek.) Jakmile se kód, který chcete, můžete snadno zkopírovat ji zpět do souboru projektu.
+Tento příkaz je užitečné pro vývoj iterativní nebo evoluční kódu, včetně testování kódu při vývoji. Například jednou odeslali jste část kódu, který **interaktivní** okno a zobrazit jeho výstup, stisknete šipku nahoru znovu zobrazit kód upravit a otestujte rychle stisknutím klávesy **Ctrl** + **Zadejte**. (Stisknutím klávesy **Enter** na konci vstupu spustí ho, ale klávesy **Enter** uprostřed vstup vloží nový řádek.) Jakmile budete mít kód, který chcete, můžete ho snadno zkopírovat zpět do souboru projektu.
 
 > [!Tip]
-> Ve výchozím nastavení, Visual Studio odebere >>> a... REPL zobrazí výzvu, při vkládání do editoru kódu pomocí interaktivních okna. Toto chování lze změnit na **nástroje > Možnosti > textový Editor > Python > Upřesnit** kartě pomocí **vložení odebere REPL výzvy** možnost. V tématu [možnosti - různé možnosti](python-support-options-and-settings-in-visual-studio.md#miscellaneous-options).
+> Ve výchozím nastavení, Visual Studio odebere **>>>** a **...** REPL zobrazí výzvu, při vkládání kódu z **interaktivní** okno do editoru. Toto chování můžete změnit na **nástroje** > **možnosti** > **textový Editor** > **Python**  >  **Upřesnit** kartu pomocí **vložit odebere REPL výzvy** možnost. Zobrazit [možnosti - různé možnosti](python-support-options-and-settings-in-visual-studio.md#miscellaneous-options).
 
-<!-- After 15.3 is released, you can also press "Undo" after pasting to restore prompts. Press "Undo" a second time to remove the pasted code entirely. -->
+<!-- After 15.3 is released, you can also press **Undo** after pasting to restore prompts. Press **Undo** a second time to remove the pasted code entirely. -->
 
-Při použití souboru kódu jako zápisník, často mají malý blok kódu, který chcete odeslat všechny najednou. K seskupení kódu, označit jako kód *buňky kódu* přidáním komentář počínaje `#%%` na začátek buňky, které končí předchozí. Buňky kódu můžete sbalené a rozbalené a uvnitř buňky kódu pomocí kláves Ctrl + Enter odesílá celý buňky do okna interaktivní a přesune na další stránku.
+Používáte-li soubor kódu jako zápisník, mají často malého bloku kódu, který chcete odeslat všechny najednou. K seskupení kódu, označit kód jako *buňku kódu* tak, že přidáte komentář začíná `#%%` začátek buňku, která končí předchozí. Buňky kódu může být sbalené a rozšířená a pomocí **Ctrl**+**Enter** uvnitř kód odešle buňky celé buňky do **interaktivní** okna a přejde Další příkaz.
 
-Sada Visual Studio také zjistí buňky kódu počínaje komentáře jako `# In[1]:`, který je formátem, kterou dostanete při exportu poznámkového bloku Jupyter jako soubor Python. Toto zjišťování umožňuje snadné spuštění Poznámkový blok z [poznámkových bloků Azure](https://notebooks.azure.com/) stáhnout jako soubor Python, otevřete v sadě Visual Studio a pomocí kláves Ctrl + Enter ke spuštění jednotlivých buněk.
+Visual Studio také detekuje buňky kódu počínaje komentáře jako `# In[1]:`, což je formát, který získáte při exportu Poznámkový blok Jupyter jako soubor Pythonu. Toto zjišťování umožňuje snadno spustit z poznámkového bloku [poznámkových bloků Azure](https://notebooks.azure.com/) stažením jako soubor Pythonu, otevřete v sadě Visual Studio a použitím **Ctrl**+**Enter**ke spuštění každého buňky.
 
-![Interaktivní kód buněk](media/interactive-code-cells.png)
+![Interaktivní kód buňky](media/interactive-code-cells.png)
 
-## <a name="intellisense-behavior"></a>Chování IntelliSense
+## <a name="intellisense-behavior"></a>Chování technologie IntelliSense
 
-Okno interaktivní zahrnuje IntelliSense podle živé objekty, na rozdíl od editoru kódu, ve kterém je IntelliSense podle pouze analýza zdrojového kódu. Tyto návrhy jsou více správné v okně interaktivní, zejména s dynamicky generovaného kódu. Nevýhodou je, že funkce s vedlejšími účinky (například protokolování zpráv) může mít vliv na vaše vývojové prostředí.
+**Interaktivní** okno obsahuje rozšíření IntelliSense na základě živých objektů, na rozdíl od editor kódu, ve kterém je IntelliSense podle pouze analýzu zdrojového kódu. Doporučení jsou uvedená ve více správná **interaktivní** okna, zejména v případě dynamicky generovaného kódu. Nevýhodou je, že funkce s vedlejšími účinky (například protokolování zpráv) může mít vliv na vaše zkušenosti s vývojem.
 
-Pokud toto chování je problém, změňte nastavení v části **nástroje > Možnosti > Python Tools > Interaktivní Windows** v **režim dokončení** skupiny, jak je popsáno na [možnosti - Interaktivní možnosti Windows](python-support-options-and-settings-in-visual-studio.md#interactive-windows-options).
+Pokud toto chování je nějaký problém, změňte nastavení v části **nástroje** > **možnosti** > **nástroje Python Tools**  >   **Interaktivní Windows** v **Doplňovacím režimem** skupině, jak je popsáno na [možnosti - interaktivních oken](python-support-options-and-settings-in-visual-studio.md#interactive-windows-options).

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: vyhledání DLL, které Program selhal v | Microsoft Docs'
+title: 'Postupy: hledání knihovny DLL které Program selhal v | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -24,32 +24,33 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 350cd8a78780eb8ddb2a197ed1e8920fda23bbf3
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 40f27e0bec20e1dd037beaa5f60ea648c0ccb171
+ms.sourcegitcommit: a7de99f36e9ead7ea9e9bac23c88d05ddfc38b00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52257094"
 ---
-# <a name="how-to-find-which-dll-your-program-crashed-in"></a>Postupy: Hledání knihovny DLL, ve které program selhal.
+# <a name="how-to-find-which-dll-your-program-crashed-in-c-c-visual-basic-f"></a>Postupy: hledání knihovny DLL které Program selhal v (C#, C++, Visual Basic, F#)
   
- Pokud vaše aplikace, dojde k chybě při volání systémové knihovny DLL nebo kód jiného uživatele, budete muset najít na které byl aktivní knihovny DLL, když došlo k havárii. Pokud dojde k chybě v knihovně DLL mimo vlastní program, můžete identifikovat pomocí umístění **moduly** okno.  
+ Pokud vaše aplikace dojde k chybě během volání systémové knihovny DLL nebo kód někoho jiného, budete muset najít který byl aktivní knihovny DLL, kdy došlo k selhání. Pokud dojde k chybovému ukončení v knihovně DLL mimo svůj program, můžete určit pomocí umístění **moduly** okna.  
   
-### <a name="to-find-where-a-crash-occurred-using-the-modules-window"></a>Najít kde havárie došlo k použití okna moduly  
+### <a name="to-find-where-a-crash-occurred-using-the-modules-window"></a>Najde, pro které selhání došlo k použití okna moduly  
   
-1.  Poznamenejte si adresu, kde došlo k havárii.
+1.  Poznamenejte si adresu, kde došlo k selhání.
 
-    Pokud adresu není zobrazený v chybové zprávě, musíte použít alternativní metody k identifikaci knihovny DLL. Pokud máte podezření systémové knihovny DLL, můžete [načíst symboly](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) ze serverů Microsoft Symbol při ladění. Jinak, budete muset [vytvořte soubor výpisu](../debugger/using-dump-files.md) s haldy informace místo. Různé [nástroje](https://blogs.msdn.microsoft.com/andrehal/2009/12/31/what-is-a-dump-and-how-do-i-create-one/) jsou k dispozici pro vytvoření výpisu souborů.
+    Pokud adresa není zobrazený v chybové zprávě, budete muset použít alternativní metody k identifikaci knihovny DLL. Pokud máte podezření na systémové knihovny DLL, můžete si [načíst symboly](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) ze serverů Microsoft Symbol, při ladění. V opačném případě budete muset [vytvořit soubor s výpisem paměti](../debugger/using-dump-files.md) pomocí haldy informace místo. Různé [nástroje](https://blogs.msdn.microsoft.com/andrehal/2009/12/31/what-is-a-dump-and-how-do-i-create-one/) je možné vytvořit soubory s výpisem paměti.
   
 2.  Na **ladění** nabídce zvolte **Windows**a klikněte na tlačítko **moduly**.  
   
-3.  V **moduly** okně Najít **adresu** sloupce. Musíte použít posuvník k jeho zobrazení.  
+3.  V **moduly** okně Najít **adresu** sloupce. Budete muset použít posuvník a prohlédněte si ho.  
   
-4.  Klikněte **adresu** tlačítka v horní části Tento sloupec seřadit podle adresy knihovny DLL.  
+4.  Klikněte na tlačítko **adresu** tlačítko v horní části Tento sloupec seřadit podle adresy knihovny DLL.  
   
-5.  Kontrola seřazený seznam najít knihovnu DLL, jejichž rozsah adres obsahuje umístění havárií.  
+5.  Kontrola seřazeného seznamu k nalezení knihovny DLL, jejichž rozsah adres obsahuje umístění při selhání.  
   
-6.  Podívejte se na **název** a **cesta** sloupce zobrazíte DLL název a cesta.  
+6.  Podívejte se na **název** a **cesta** sloupce, které chcete zobrazit název knihovny DLL a cestu.  
   
 ## <a name="see-also"></a>Viz také  
  [Ladění projektů knihovny DLL](../debugger/debugging-dll-projects.md)   
- [Postupy: použití okna moduly](../debugger/how-to-use-the-modules-window.md)
+ [Postupy: Použití okna Moduly](../debugger/how-to-use-the-modules-window.md)

@@ -1,5 +1,5 @@
 ---
-title: Funkce SccDiff | Microsoft Docs
+title: Sccdiff – funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 30d8d6a4b8b400088d5feed663c8257215a0f8a1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 898c5b1b9de186a7ac704b4987fb090de5381f07
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49884768"
 ---
-# <a name="sccdiff-function"></a>SccDiff – funkce
-Tato funkce zobrazí (nebo volitelně právě vyhledává) rozdíly mezi aktuální soubor (na místním disku) a jeho poslední verze, vráceno se změnami ve zdroji řízení systému.  
+# <a name="sccdiff-function"></a>Sccdiff – funkce
+Tato funkce zobrazí (nebo volitelně právě vyhledává) systém správy rozdíly mezi aktuálního souboru (na místním disku) a její verzi poslední vrácené se změnami ve zdroji.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,53 +37,53 @@ SCCRTN SccDiff(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  pvContext  
- [v] Struktura modulu plug-in kontextu řízení zdroje.  
+ [in] Struktura kontext modulu plug-in zdroje ovládacího prvku.  
   
  hWnd  
- [v] Obslužná rutina do okna IDE, modul plug-in správy zdroje můžete použít jako nadřazený objekt pro všechna dialogová okna poskytuje.  
+ [in] Popisovač okna integrovaného vývojového prostředí, které modul plug-in správy zdrojového kódu můžete použít jako nadřazený pro všechna dialogová okna, které poskytuje.  
   
  lpFileName  
- [v] Název souboru, pro které je požadováno rozdíl.  
+ [in] Název souboru, pro kterou je požadována rozdíl.  
   
  fOptions  
- [v] Příkaz příznaky. Podrobnosti najdete v části poznámky.  
+ [in] Příkaz příznaky. Podrobnosti najdete v části poznámky.  
   
  pvOptions  
- [v] Zdroj ovládacího prvku plug-konkrétní možnosti.  
+ [in] Možností správy zdrojového kódu plug-konkrétní.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Očekává se, že modul plug-in implementace zdroje řízení této funkce vrátí jednu z následujících hodnot:  
+ Modul plug-in implementaci ovládacího prvku zdroje této funkce má vracet instanci jednoho z následujících hodnot:  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
-|SCC_OK|Pracovní verze kopírování a serveru jsou stejné.|  
-|SCC_I_FILESDIFFERS|Je pracovní kopie se liší od verze v části Správa zdrojového kódu.|  
-|SCC_I_RELOADFILE|Musí být znovu načíst soubor nebo projektu.|  
-|SCC_E_FILENOTCONTROLLED|Soubor není ve správě zdrojového kódu.|  
-|SCC_E_NOTAUTHORIZED|Uživatel nemůže provést tuto operaci.|  
-|SCC_E_ACCESSFAILURE|Došlo k chybě při přístupu správy zdrojového kódu, pravděpodobně kvůli problémům s sítě nebo kolizí. Doporučuje se zkuste to znovu.|  
-|SCC_E_NONSPECIFICERROR|Nespecifikované chybě; nebyla získat soubor rozdíl.|  
-|SCC_E_FILENOTEXIST|Místní soubor nebyl nalezen.|  
+|SCC_OK|Verze v pracovní kopie a serveru jsou stejné.|  
+|SCC_I_FILESDIFFERS|Pracovní kopie se liší od verze pod správou zdrojových kódů.|  
+|SCC_I_RELOADFILE|Soubor nebo projekt je potřeba znovu načíst.|  
+|SCC_E_FILENOTCONTROLLED|Soubor není pod správou zdrojových kódů.|  
+|SCC_E_NOTAUTHORIZED|Uživatel nemůže k provedení této operace.|  
+|SCC_E_ACCESSFAILURE|Došlo k problému, přístup k systému správy zdrojového kódu, pravděpodobně kvůli problémům se síti nebo kolize. Doporučuje se zkuste to znovu.|  
+|SCC_E_NONSPECIFICERROR|Obecná chyba; rozdíl souboru nebyl získán.|  
+|SCC_E_FILENOTEXIST|Místní soubor se nenašel.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato funkce slouží dva různé účely. Ve výchozím nastavení zobrazí seznam změny do souboru. Modul plug-in zdrojového kódu se otevře vlastní okno, v jakémkoli formátu rozhodne, chcete-li zobrazit rozdíly mezi uživatele soubor na disku a nejnovější verzi souboru ve správě zdrojového kódu.  
+ Tato funkce slouží dva různé účely. Ve výchozím nastavení zobrazí seznam změny do souboru. Modul plug-in správy zdrojového kódu se otevře vlastního okna, v libovolné formátu zvolí, chcete-li zobrazit rozdíly mezi uživatele souboru na disku a nejnovější verzi souboru pod správou zdrojových kódů.  
   
- Alternativně IDE může jednoduše je potřeba určit, zda došlo ke změně souboru. Prostředí IDE může například potřebovat k určení, zda je bezpečné rezervovat soubor bez informující uživatele. V takovém případě předá prostředí IDE `SCC_DIFF_CONTENTS` příznak. Modul plug-in zdrojového kódu musí zkontrolujte soubor na disku, bajt po bajtu proti řízenou zdrojový soubor a vrátí hodnotu, která určuje, zda jsou dva soubory bez zobrazení nic uživateli jiný.  
+ Můžete také integrovaného vývojového prostředí může jednoduše je potřeba určit, zda má soubor změněn. Rozhraní IDE může například potřebovat k určení, jestli je bezpečný pro rezervovat soubor bez informující uživatele. V takovém případě předá integrovaného vývojového prostředí `SCC_DIFF_CONTENTS` příznak. Modul plug-in správy zdrojového kódu musí najdete v souboru na disku, bajt po bajtu pro tento soubor se spravovanými zdroji a vrátí hodnotu určující, zda jsou dva soubory bez zobrazení nic uživateli jiný.  
   
- Stejně jako optimalizace výkonu, modul plug-in zdrojového kódu použít alternativu na základě kontrolní součet nebo časové razítko místo volá pro porovnání bajtové byte `SCC_DIFF_CONTENTS`: tyto formuláře porovnání jsou samozřejmě rychlejší, ale méně spolehlivé. Ne všechny systémy správy zdrojového může podporovat tyto metody alternativní porovnání a modul plug-in může být nutné vrátit zpět k porovnání obsahu. Všechny zdrojové řízení moduly plug-in musí, minimálně, podporovat porovnání obsahu.  
+ Optimalizace výkonu, modul plug-in správy zdrojového kódu použít alternativu založené na součtu nebo časové razítko namísto porovnání bajt po bajtu volané pro `SCC_DIFF_CONTENTS`: porovnání jsou samozřejmě rychlejší, ale méně spolehlivé. Ne všechny systémy správy zdrojového kódu může podporovat tyto alternativní porovnávací metody a modulu plug-in může být nutné vrátit zpět k porovnání obsahu. Minimálně musí všechny zdroje moduly plug-in správy podporují porovnání obsahu.  
   
 > [!NOTE]
->  Příznaky rychlé rozdíl se vzájemně vylučují. Je platný předat žádné příznaky, ale není platné. současně předat více než jednou. `SCC_DIFF_QUICK_DIFF`, což je masku, která spojuje všechny příznaky, dá použít k testování, ale jeho nikdy mají být předány jako parametr.  
+>  Rychlé rozdíl příznaky se vzájemně vylučují. Je možné předat žádné příznaky, ale není platné. současně předat více než jeden. `SCC_DIFF_QUICK_DIFF`, což je masku, která kombinuje všechny příznaky, lze použít k testování, ale je nikdy byste je předat jako parametr.  
   
 |`fOption`|Význam|  
 |---------------|-------------|  
-|SCC_DIFF_IGNORECASE|Porovnávání (lze použít pro rychlé nebo visual rozdíl).|  
-|SCC_DIFF_IGNORESPACE|Ignoruje mezer (lze použít pro rychlé nebo visual rozdíl).|  
-|SCC_DIFF_QD_CONTENTS|Bezobslužná porovná soubor bajtů podle bajtů.|  
+|SCC_DIFF_IGNORECASE|Porovnávání (lze použít pro rychlé nebo vizuální rozdíl).|  
+|SCC_DIFF_IGNORESPACE|Ignoruje prázdné znaky (lze použít pro rychlé nebo vizuální rozdíl).|  
+|SCC_DIFF_QD_CONTENTS|Bezobslužná porovná soubor bajt po bajtu.|  
 |SCC_DIFF_QD_CHECKSUM|Bezobslužná porovná soubor prostřednictvím kontrolního součtu, pokud je podporovaná. Pokud není podporován, přejde k porovnání obsahu.|  
 |SCC_DIFF_QD_TIME|Bezobslužná porovná soubor prostřednictvím její časové razítko, pokud je podporovaná. Pokud není podporován, přejde k porovnání obsahu.|  
   
-## <a name="see-also"></a>Viz také  
- [Funkce modulu plug-in správy zdrojového kódu v rozhraní API](../extensibility/source-control-plug-in-api-functions.md)
+## <a name="see-also"></a>Viz také:  
+ [Funkce modulu plug-in API zdrojového ovládacího prvku](../extensibility/source-control-plug-in-api-functions.md)

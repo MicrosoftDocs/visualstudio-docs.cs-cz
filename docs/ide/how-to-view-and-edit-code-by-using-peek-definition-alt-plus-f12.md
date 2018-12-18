@@ -1,7 +1,7 @@
 ---
-title: Použitím funkce Náhled definice v sadě Visual Studio | Microsoft Docs
-ms.custom: ''
+title: Použitím funkce Náhled definice
 ms.date: 01/10/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 author: gewarren
@@ -9,82 +9,83 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 316b49a08d5a2cddf92a09e583f432db96ce730b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 518256c550f56832c6711ab6d2ca2dae4eb0aa2c
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059649"
 ---
 # <a name="how-to-view-and-edit-code-by-using-peek-definition-altf12"></a>Postupy: zobrazení a úpravy kódu s použitím funkce Náhled definice (Alt + F12)
 
-Můžete použít **funkce Náhled definice** příkaz k zobrazení a úpravy kódu, aniž by se přepnula od kód, který píšete. **Funkce Náhled definice** a **přejít k definici** zobrazovat stejné informace, ale **funkce Náhled definice** zobrazuje v místním okně, a **přejít k definici** ukazuje kód v okně samostatného kódu. **Přejít k definici** způsobí, že váš kontext (tedy active kódu – okno, aktuálního řádku a pozice kurzoru) přejděte do okna Definice kódu. Pomocí **funkce Náhled definice**, můžete zobrazit a upravit definici a pohyb v souboru definice a zachovat přitom vaše místní v původní soubor kódu.
+Můžete použít **definice operace Peek** příkaz k zobrazení a úpravám kódu bez přepnutí mimo kód, který píšete. **Náhled definice** a **přejít k definici** obsahují stejné informace, ale **definice operace Peek** zobrazí v místním okně a **přejít k definici** ukazuje kód v samostatném okně s kódem. **Přejít k definici** způsobí, že váš kontext (tedy okno s aktivním kódem, aktuální řádek a pozice kurzoru) přejděte do okna Definice kódu. S použitím **definice operace Peek**, můžete zobrazit a upravit definici a pohyb uvnitř souboru definice při zachování svého místa v původním souboru kódu.
 
-Můžete použít **funkce Náhled definice** s kódem jazyka C#, Visual Basic a C++. V jazyce Visual Basic **funkce Náhled definice** zobrazuje odkaz **Prohlížeč objektů** pro symboly, které nemají definice metadat (například typy rozhraní .NET Framework, které jsou integrované v).
+Můžete použít **definice operace Peek** s kódem jazyka C#, Visual Basic a C++. V jazyce Visual Basic **definice operace Peek** zobrazuje odkaz **prohlížeče objektů** pro symboly, které neobsahují metadata definice (například typy rozhraní .NET Framework, které jsou integrované v).
 
 ## <a name="working-with-peek-definition"></a>Práce s náhledem definice
 
 ### <a name="to-open-a-peek-definition-window"></a>Otevření okna Náhled definice
 
-1. Definice můžete prohlížet výběrem **funkce Náhled definice** z kontextové nabídky pro typ nebo člen, který chcete prozkoumat. V aplikaci Visual Studio 2017 verze 15,4 a novější, pokud je povolená možnost, můžete lze také prohlížet definici pomocí myši, stisknutím klávesy **Ctrl** (nebo jiné modifikátor) a kliknutím na název člena. Nebo z klávesnice, stiskněte klávesu **Alt**+**F12**.
+1. Výběrem můžete prohlížet definici **funkce Náhled definice** v místní nabídce pro typ nebo člen, který chcete prozkoumat. V sadě Visual Studio 2017 verze 15.4 nebo novější, pokud je povolena možnost, je můžete také prohlížet definice pomocí myši, stisknutím klávesy **Ctrl** (nebo jiného modifikátoru) a kliknutím na název členu. Nebo z klávesnice, stiskněte klávesu **Alt**+**F12**.
 
-     Na tomto obrázku **funkce Náhled definice** okna pro metodu, která je s názvem `Print()`:
+     Tento obrázek ukazuje **definice operace Peek** okna pro metodu s názvem `Print()`:
 
-     ![Prohlížení okno](../ide/media/peekwindow.png "PeekWindow")
+     ![Okno náhledu](../ide/media/peekwindow.png)
 
-     Definice okna se zobrazí pod `printer.Print("Hello World!")` řádku v původní soubor. Okno neskryje žádný kód v původním souboru. Řádky, které následují `printer.Print("Hello World!")` vyskytovat v části okna definice.
+     Zobrazí se okno Definice pod `printer.Print("Hello World!")` řádku v původním souboru. Okno neskryje žádný kód v původním souboru. Řádky, které následují `printer.Print("Hello World!")` se zobrazí pod oknem definice.
 
-1. Přesunutím kurzoru do různých umístění, v okně funkce Náhled definice. Můžete také stále pohybovat v okně původní kód.
+1. Kurzor můžete přesunout na jiné místo v okně Náhled definice. Můžete i nadále pohybovat v původním okně kódu.
 
 1. Můžete zkopírovat řetězec v okně definice a vložit ho do původního kódu. Můžete také přetáhnout řetězec z okna definice do původního kódu, aniž by byl v okně definice odstraněn.
 
-1. Definice okno můžete zavřít výběrem **Esc** klíč nebo **zavřete** tlačítko na kartě okno definice.
+1. Můžete zavřít okno Definice výběrem **Esc** klíč nebo **zavřete** tlačítko na kartě okna definice.
 
-### <a name="open-a-peek-definition-window-from-within-a-peek-definition-window"></a>Otevřete okno funkce Náhled definice z v rámci funkce Náhled definice období
+### <a name="open-a-peek-definition-window-from-within-a-peek-definition-window"></a>Otevření okna Náhled definice z okna Náhled definice
 
-Pokud již máte **funkce Náhled definice** okno otevřít, můžete volat **funkce Náhled definice** znovu na kód v okně. Otevře se jiné okno definice. Vedle karty okna definice se zobrazí sada teček s popisem cesty, která slouží k navigaci mezi okny definice. Popisek tlačítka na každé tečce zobrazuje název souboru a cestu k souboru definice, který tečka přestavuje.
+Pokud už máte **definice operace Peek** otevřené okno, můžete volat **definice operace Peek** znovu na kód v tomto okně. Otevře se jiné okno definice. Vedle karty okna definice se zobrazí sada teček s popisem cesty, která slouží k navigaci mezi okny definice. Popisek tlačítka na každé tečce zobrazuje název souboru a cestu k souboru definice, který tečka přestavuje.
 
-   ![Funkce Náhled okna v rámci časového období funkce Náhled](../ide/media/peekwithinpeek.png "PeekWithinPeek")
+   ![Operace Peek okna nejvyšší úrovně v okně Náhled](../ide/media/peekwithinpeek.png)
 
-### <a name="peek-definition-with-multiple-results"></a>Funkce Náhled definice s více výsledků
+### <a name="peek-definition-with-multiple-results"></a>Náhled definice s více výsledky
 
-Pokud používáte **funkce Náhled definice** na kód, který má více než jednu definici (například částečné třídy), zobrazí se seznam výsledků napravo od definice zobrazení kódu. Můžete zvolit některý z výsledků v seznamu k zobrazení jeho definice.
+Pokud používáte **definice operace Peek** na kód, který obsahuje více než jednu definici (například částečné třídy), seznam výsledků se zobrazí napravo od zobrazení definice kódu. Můžete zvolit některý z výsledků v seznamu k zobrazení jeho definice.
 
-   ![Funkce Náhled okno z více výsledků](../ide/media/peekmultiple.png "PeekMultiple")
+   ![Operace Peek okna z více výsledků](../ide/media/peekmultiple.png)
 
-### <a name="edit-inside-the-peek-definition-window"></a>Upravit v okně funkce Náhled definice
+### <a name="edit-inside-the-peek-definition-window"></a>Upravit v okně Náhled definice
 
-Když spustíte upravit uvnitř **funkce Náhled definice** okno, soubor, který upravujete, automaticky se otevře jako samostatné kartě v editoru kódu a odráží změny, které jste udělali. Můžete vytvořit, vrátit zpět a změny uložit do **funkce Náhled definice** okno a na kartě budou nadále tyto změny projevily. I když zavřete **funkce Náhled definice** okno bez uložení změn, můžete nastavit, vrátit zpět a další změny uložit na kartě Výběr přesně tam, kde jste přestali v **funkce Náhled definice** okno.
+Při zahájení úprav v **definice operace Peek** okna, soubor, který modifikujte, automaticky se otevře jako samostatná karta v editoru kódu a odráží změny, které jste udělali. Ujistěte se, rušit a ukládat změny v můžete pokračovat **definice operace Peek** okně a na kartě budou odrážet provedené změny. I když zavřete **definice operace Peek** okno bez uložení změn, můžete provést, vrátit zpět a ukládat změny na kartě Výběr přesně tam, kde jste přestali v **definice operace Peek** okno.
 
-   ![Úpravy v rámci časového období funkce Náhled](../ide/media/peekedit.png "PeekEdit")
+   ![Úpravy v rámci okna Náhled](../ide/media/peekedit.png)
 
-### <a name="to-change-options-for-peek-definition"></a>Chcete-li změnit možnosti pro prohlížení definice
+### <a name="to-change-options-for-peek-definition"></a>Chcete-li změnit možnosti pro náhled definice
 
-1. Přejděte na **nástroje** > **možnosti** > **textového editoru** > **Obecné**.
+1. Přejděte na **nástroje** > **možnosti** > **textový Editor** > **Obecné**.
 
-1. Vyberte možnost **otevřít v zobrazení funkce Náhled definice**.
+1. Vyberte možnost **Otevřít definici v zobrazení náhledu**.
 
 1. Klikněte na tlačítko **OK** zavřete **možnosti** dialogové okno.
 
-   ![Nastavení možnosti kliknutí myší funkce Náhled definice](../ide/media/editor_options_peek_view.png)  
+   ![Nastavení možnosti kliknutí myší funkce Náhled definice](../ide/media/editor_options_peek_view.png)
 
-### <a name="keyboard-shortcuts-for-peek-definition"></a>Klávesové zkratky pro prohlížení definice
+### <a name="keyboard-shortcuts-for-peek-definition"></a>Klávesové zkratky pro náhled definice
 
-Můžete použít tyto klávesové zkratky s **funkce Náhled definice** okno:
+Můžete použít tyto klávesové zkratky v **definice operace Peek** okno:
 
 |Funkce|Klávesová zkratka|
 |-------------------|:-----------------------:|
-|Otevřít okno definice|**ALT**+**F12**|
+|Otevřít okno definice|**Alt**+**F12**|
 |Zavřít okno definice|**ESC**|
-|Povýšit okno definice na běžnou kartu dokumentu|**Posunutí**+**Alt**+**Domů**|
+|Povýšit okno definice na běžnou kartu dokumentu|**SHIFT**+**Alt**+**Domů**|
 |Navigace mezi okny definice|**CTRL**+**Alt** + **-** a **Ctrl**+**Alt**+**=**|
 |Navigace mezi několika výsledky|**F8** a **Shift**+**F8**|
-|Přepnout mezi oknem editoru kódu a oknem definice|**Posunutí**+**Esc**|
+|Přepnout mezi oknem editoru kódu a oknem definice|**SHIFT**+**Esc**|
 
 > [!NOTE]
-> Můžete také použít stejné klávesové zkratky úprav kódu v **funkce Náhled definice** okno jako můžete použít na jiném místě v sadě Visual Studio.
+> Můžete také použít stejné klávesové zkratky pro úpravu kódu v **definice operace Peek** okno jako můžete použít na jiném místě v sadě Visual Studio.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Přejděte kódu](../ide/navigating-code.md)  
-[Přejít k definici a Náhled definice](../ide/go-to-and-peek-definition.md)  
-[Tipy pro vyšší produktivitu](../ide/productivity-tips-for-visual-studio.md)
+- [Vyhledání kódu](../ide/navigating-code.md)
+- [Přejít k definici a Náhled definice](../ide/go-to-and-peek-definition.md)
+- [Tipy pro vyšší produktivitu](../ide/productivity-tips-for-visual-studio.md)

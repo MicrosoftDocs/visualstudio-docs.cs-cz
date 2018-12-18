@@ -1,5 +1,5 @@
 ---
-title: 'DA0002: Chybí VSPerfCorProf.dll | Microsoft Docs'
+title: 'Da0002: chybí knihovna VSPerfCorProf.dll chybí | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -15,26 +15,28 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dd86c14b9364bc9dfe7796cfdedc80f270fa52bf
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 79d2352891f040f0824719d7a8f0f0b6164e2a69
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49919205"
 ---
 # <a name="da0002-vsperfcorprofdll-is-missing"></a>DA0002: Chybí knihovna VSPerfCorProf.dll
+
 |||  
 |-|-|  
-|Id pravidla|DA0002|  
+|Id pravidla|DA0002 KNIHOVNA|  
 |Kategorie|Použití nástroje pro profilaci|  
-|Metod profilace|Profilace pomocí nástroje příkazového řádku VSPerfCmd a VSPerfASPNETCmd|  
-|Zpráva|Zdá se, že soubor byl shromážděn bez správně nastavení proměnných prostředí pomocí VSPerfCLREnv.cmd. Symboly pro spravované binární soubory nemusí vyřešit.|  
+|Metod profilace|Použití nástroje VSPerfCmd a VSPerfASPNETCmd příkazového řádku pro profilaci|  
+|Zpráva|Zdá se, že soubor byl shromážděn bez správného nastavení proměnných prostředí pomocí *VSPerfCLREnv.cmd*. Nemůže vyřešit symboly pro spravované binární soubory.|  
 |Typ pravidla|Informace o|  
-  
+
 ## <a name="cause"></a>příčina  
- Během spuštění profilování nebyla nalezena VSPerfCorProf.dll profileru. Toto upozornění se zobrazí v případě nástroje příkazového řádku pro shromažďování dat profileru používají bez použití nástroje VSPerfCLREnv.cmd k chybě při inicializaci nezbytné proměnné prostředí. Toto upozornění můžete také provést, pokud jiné profileru běží při spuštění nástroje pro profilaci.  
-  
+ Nelze najít profiler *VSPerfCorProf.dll* během spuštění profilování. K tomuto upozornění dochází v případě nástroje příkazového řádku pro shromažďování dat profileru používají bez použití *VSPerfCLREnv.cmd* nástroj k inicializaci nezbytné proměnné prostředí. Upozornění můžete také provést, pokud jiný profiler je spuštěna při spuštění nástroje pro profilaci.  
+
 ## <a name="rule-description"></a>Popis pravidla  
- Určité proměnné prostředí musí být nastavená před spuštění profilace pro profileru přeložit symboly v binárních souborech rozhraní .NET Framework. Toto upozornění naznačuje, že nástroj VSPerfCLREnv.cmd nebyl spuštěn před profilování data nebyla shromážděna. Symboly pro spravované binární soubory nemusí vyřešit. Další informace o použití nástrojů pro profilaci z příkazového řádku najdete v tématu [profilace z příkazového řádku](../profiling/using-the-profiling-tools-from-the-command-line.md)  
-  
+ Určité proměnné prostředí musí být nastavena před spuštění profilování profileru, chcete-li vyřešit symboly v rozhraní .NET Framework binární soubory. Toto upozornění naznačuje, že *VSPerfCLREnv.cmd* nástroj nebyla spuštěna před shromáždění dat profilování. Symboly pro spravované binární soubory nemusí vyřešit. Další informace o používání nástrojů pro profilaci z příkazového řádku najdete v tématu [profilace z příkazového řádku](../profiling/using-the-profiling-tools-from-the-command-line.md)  
+
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení  
- Když jsou profilace spravovaných aplikací pomocí nástroje příkazového řádku v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nástrojích pro profilaci, spusťte [vsperfclrenv –](../profiling/vsperfclrenv.md) nástroj pro příkazový řádek před zahájením shromažďování dat.
+ Když provádíte profilaci spravované aplikace pomocí nástroje příkazového řádku v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nástroje pro profilaci, spusťte [VSPerfCLREnv](../profiling/vsperfclrenv.md) nástroj pro příkazový řádek před zahájením shromažďování dat.

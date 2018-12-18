@@ -1,7 +1,7 @@
 ---
-title: XSD – úloha | Microsoft Docs
+title: XSD – úloha | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 06/27/2018
 ms.technology: msbuild
 ms.topic: reference
 f1_keywords:
@@ -22,31 +22,35 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7505f3d18e0b32ebdbc8b82d447e49b26fe4182e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 3eb81e05a16eb504b14e94de2c1270057311b85a
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39231594"
 ---
 # <a name="xsd-task"></a>XSD – úloha
-Zabalí nástroj definice schématu XML (xsd.exe), který generuje schématu nebo třída soubory ze zdroje.  
+Zabalí nástroj definici schématu XML (*xsd.exe*), který generuje schématu nebo třída soubory ze zdroje.  
+
+> [!NOTE]
+> V sadě Visual Studio 2017, projekt C++ podpora *xsd.exe* je zastaralý. Můžete dál používat **Microsoft.VisualC.CppCodeProvider** rozhraní API tak, že ručně přidáte *CppCodeProvider.dll* do mezipaměti GAC. 
   
 ## <a name="parameters"></a>Parametry  
  Následující tabulka popisuje parametry **XSD** úloh.  
   
 -   **AdditionalOptions**  
   
-     Volitelné **řetězec** parametr.  
+     Volitelné **řetězec** parametru.  
   
-     Seznam možností jako zadaného na příkazovém řádku. Například "*/option1 /option2 /option#*". Tento parametr použijte k určení možnosti, které nejsou reprezentovány jakékoliv **XSD** parametr úloh.  
+     Seznam možností, jak je uvedeno na příkazovém řádku. Třeba /\<možnost1 > /\<možnost2 > /\<možnost #>. Tento parametr použijte k určení možností, které nejsou reprezentovány jakýkoli jiný **XSD** parametr úlohy.  
   
 -   **GenerateFromSchema**  
   
-     Volitelné **řetězec** parametr.  
+     Volitelné **řetězec** parametru.  
   
      Určuje typy, které se generují z určené schéma.  
   
-     Zadejte jednu z následujících hodnot, z nichž každý odpovídá XSD možnost.  
+     Zadejte jednu z následujících hodnot, z nichž každý odpovídá možnost XSD.  
   
     -   **třídy** -   **/třídy**  
   
@@ -54,35 +58,35 @@ Zabalí nástroj definice schématu XML (xsd.exe), který generuje schématu neb
   
 -   **Jazyk**  
   
-     Volitelné **řetězec** parametr.  
+     Volitelné **řetězec** parametru.  
   
-     Určuje programovací jazyk, který chcete použít pro generovaný kód.  
+     Určuje programovací jazyk pro použití generovaného kódu.  
   
-     Vybírejte z těchto možností **CS** (C#, což výchozí nastavení), **VB** (Visual Basic), nebo **JS** (JScript). Můžete také zadat plně kvalifikovaný název pro třídu, která implementuje `System.CodeDom.Compiler.CodeDomProvider Class`.  
+     Vyberte si z **CS** (C#, což je výchozí hodnota), **VB** (Visual Basic), nebo **JS** (JScript). Můžete také zadat plně kvalifikovaný název pro třídu, která implementuje `System.CodeDom.Compiler.CodeDomProvider Class`.  
   
--   **obor názvů**  
+-   **Namespace**  
   
-     Volitelné **řetězec** parametr.  
+     Volitelné **řetězec** parametru.  
   
      Určuje runtime obor názvů pro generovaný typy.  
   
 -   **Zdroje**  
   
-     Požadované `ITaskItem[]` parametr.  
+     Vyžaduje `ITaskItem[]` parametru.  
   
-     Definuje pole MSBuild zdrojového souboru položek, které je možné využívat a vygenerované úlohami.  
+     Definuje pole objektů položky nástroje MSBuild zdrojových souborů, které lze používat a, protože ho vygeneroval úlohy.  
   
 -   **SuppressStartupBanner**  
   
-     Volitelné **Boolean** parametr.  
+     Volitelné **logická** parametru.  
   
-     Pokud `true`, zabraňuje zobrazení číslo zprávy o autorských právech a verzi, po spuštění úlohy.  
+     Pokud `true`, zabraňuje zobrazování čísel zprávu o autorských právech a verze při spuštění úlohy.  
   
 -   **TrackerLogDirectory**  
   
-     Volitelné **řetězec** parametr.  
+     Volitelné **řetězec** parametru.  
   
-     Určuje adresář pro protokol sledovací modul.  
+     Určuje adresář protokolu sledovacího modulu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)

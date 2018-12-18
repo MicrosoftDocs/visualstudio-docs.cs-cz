@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: eaf8e9176c389aecf2844f3e4bcaeea9bcaa5803
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 3b42cce6c9134a668d5096150d986e950ed8a8e7
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34262228"
 ---
-# <a name="call-tree-view---instrumentation-data"></a>Zobrazení stromu volání – Data instrumentace
+# <a name="call-tree-view---instrumentation-data"></a>Zobrazení stromu volání – data instrumentace
 Hodnoty pro funkci ve stromové struktuře volání označuje datum a čas pro instance funkce, které byly volá funkci nadřazené ve stromové struktuře volání. Procentní hodnoty se počítá srovnáním hodnotu instance funkce celkovou dobu uplynulá včetně všechny funkce v profilaci spustit.  
   
 ## <a name="general"></a>Obecné  
@@ -87,4 +88,4 @@ Hodnoty pro funkci ve stromové struktuře volání označuje datum a čas pro i
  [Postupy: přizpůsobení sloupců zobrazení sestavy](../profiling/how-to-customize-report-view-columns.md)   
  [Zobrazení stromu volání](../profiling/call-tree-view-sampling-data.md)   
  [Zobrazení stromu volání – instrumentace](../profiling/call-tree-view-dotnet-memory-instrumentation-data.md)   
- [Zobrazení stromu volání – vzorkování](../profiling/call-tree-view-dotnet-memory-sampling-data.md)
+ [Volání stromové zobrazení – vzorkování](../profiling/call-tree-view-dotnet-memory-sampling-data.md)

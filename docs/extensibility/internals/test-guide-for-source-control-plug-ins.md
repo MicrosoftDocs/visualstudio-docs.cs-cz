@@ -1,5 +1,5 @@
 ---
-title: Průvodce pro zdroj ovládacího prvku zásuvné moduly testovací | Microsoft Docs
+title: Testovací Příručka pro ovládací prvek moduly plug-in zdrojového kódu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,85 +17,86 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 37af6a289b59b6066a71836e4d44e380b584ec70
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8df70ef5fcaffb7fe2e06df5b6d47e526ff5162f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49828257"
 ---
-# <a name="test-guide-for-source-control-plug-ins"></a>Příručka pro testovací modulů plug-in programu zdroj ovládacího prvku
-Tato část obsahuje pokyny pro testování vaší zdrojového kódu pomocí modulu plug-in [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Přehled rozsáhlé nejběžnější testování oblastech, jakož i některé z komplikovanější oblastí, které mohou způsobovat je k dispozici. Tento přehled není určená jako vyčerpávající seznam testovací případy.  
+# <a name="test-guide-for-source-control-plug-ins"></a>Testovací příručka pro moduly plug-in správy zdrojového kódu
+Tato část obsahuje pokyny pro testování vašich plug-in správy zdrojových kódů s [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Je k dispozici rozsáhlý přehled nejběžnějších oblastí testování, jakož i některé komplikovanější oblastí, které může být problematické. Tento přehled není určena k tudíž nepředstavuje kompletní seznam testovacích případů.  
   
 > [!NOTE]
->  Některé opravy chyb a vylepšení nejnovější [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE může odkrýt problémy s existující zdroj ovládacího prvku zásuvné moduly, které nebyly dříve došlo při používání předchozích verzích [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Důrazně doporučujeme, abyste otestovali vaší existující modulu plug-in pro oblasti uvedené v této části zdrojového kódu i v případě, že byly provedeny žádné změny v modulu plug-in od předchozí verze [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].  
+>  Několik oprav chyb a vylepšení na nejnovější verzi [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaného vývojového prostředí může odhalit problémy s existující ovládací prvek moduly plug-in zdrojového kódu, které dříve nebyly nalezeny při používání předchozích verzích [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Důrazně doporučujeme, jakým testujete vaše stávající plug-in správy zdrojových kódů pro oblasti, které jsou uvedené v této části i v případě, že byly provedeny žádné změny v modulu plug-in od předchozí verze [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].  
   
 ## <a name="common-preparation"></a>Běžné přípravy  
- Počítač s [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] a zdroje pro cílový ovládací prvek modulu plug-in nainstalovaná, je potřeba. Druhý počítač nakonfigurovaný Podobně lze použít pro některé otevření ze zdrojového kódu testy.  
+ Počítač s [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] a nainstalovaný, je potřeba cílového plug-in správy zdrojových kódů. Do druhého počítače podobně nakonfigurovaného lze použít pro některý ze otevřít ze správy zdrojových kódů testy.  
   
 ## <a name="definition-of-terms"></a>Definice pojmů  
- Pro účely tohoto průvodce testovací použijte následující definice období:  
+ Pro účely tohoto průvodce testu použijte následující definice období:  
   
- Klientského projektu  
- Žádný typ, které jsou k dispozici v projektu [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] podporující integrace ovládacích prvků zdrojového (například [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)], [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)], nebo [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]).  
+ Klientský projekt  
+ Žádný typ k dispozici v projektu [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrace správy zdrojového kódu, která podporuje (třeba [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)], [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)], nebo [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)]).  
   
- Webového projektu  
- Existují čtyři typy webové projekty: systém souborů, místní služba IIS, vzdálenými lokalitami a FTP.  
+ Webový projekt  
+ Existují čtyři typy webových projektů: systém souborů, místní služby IIS, vzdálených lokalit a FTP.  
   
--   Projektů v systému souborů, které jsou vytvořené v místní cestě, ale nevyžadují Internetové informační služby (IIS) nainstalovaná, jak interně přistupuje pomocí cesty UNC a může být umístěn v zdrojového kódu z uvnitř integrovaného vývojového prostředí, podobně jako klient projekty.  
+- Projekty systému souborů se vytvoří v místní cestě, ale nevyžadují Internet informační služby (IIS) k instalaci tak, jak interně přistupuje pomocí cesty UNC a můžete umístit pod správou zdrojových kódů z zevnitř rozhraní IDE, podobně jako klientské projekty.  
   
--   Místní projekty služby IIS pracovat se službou IIS, který je nainstalovaný na stejném počítači a ke kterým se přistupuje pomocí adresy URL odkazující na místním počítači.  
+- Místní služby IIS projekty pracovat s IIS, která je nainstalovaná na stejném počítači a ke kterým se přistupuje pomocí adresy URL odkazující na místním počítači.  
   
--   Vzdálené lokality projekty jsou také vytvářeny pod služby IIS, ale jsou umístěny ve správě zdrojového kódu na počítači serveru služby IIS a nikoli z uvnitř [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE.  
+- Projekty vzdálené lokality se také vytvoří v rámci služby IIS, ale jsou umístěny pod správou zdrojového kódu na počítači serveru služby IIS a ne z uvnitř [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaného vývojového prostředí.  
   
--   FTP projekty jsou přístupné prostřednictvím vzdáleného serveru FTP, ale nemůže být umístěn v části Správa zdrojového kódu.  
+- FTP projekty jsou přístupné prostřednictvím vzdáleného serveru FTP, ale nemůže být umístěn pod správou zdrojových kódů.  
   
- Zařazení  
- Jiný termín pro řešení nebo projektu ve správě zdrojového kódu.  
+  Zařazení  
+  Jiný termín pro řešení nebo projekt pod správou zdrojových kódů.  
   
- Úložiště verzí  
- Zdroj ovládacího prvku databáze, která přistupuje prostřednictvím rozhraní API ovládacího prvku Plug-in zdroje.  
+  Verze Store  
+  Databázi správy zdrojových kódů, které je přistupováno prostřednictvím rozhraní API modulu Plug-in zdroje ovládacího prvku.  
   
-## <a name="test-areas-covered-in-this-section"></a>Testovací oblasti uvedenými v této části  
+## <a name="test-areas-covered-in-this-section"></a>Oblasti testů, které jsou popsané v této části  
   
--   [Oblasti test 1: Přidání do nebo otevřete od správy zdrojového kódu](../../extensibility/internals/test-area-1-add-to-open-from-source-control.md)  
+-   [Testovací oblast 1: Přidání nebo otevření ze správy zdrojového kódu](../../extensibility/internals/test-area-1-add-to-open-from-source-control.md)  
   
-    -   Případ 1a: přidání řešení do správy zdrojového kódu  
+    -   Malá a velká 1a: Přidat řešení do správy zdrojového kódu  
   
-    -   Případ 1b: otevřete řešení od správy zdrojového kódu  
+    -   Malá a velká 1b: otevřít řešení ze správy zdrojového kódu  
   
-    -   Případ 1c: Přidat řešení od správy zdrojového kódu  
+    -   Případ 1c: Přidat řešení ze správy zdrojového kódu  
   
 -   [Testovací oblast 2: Načtení ze správy zdrojového kódu](../../extensibility/internals/test-area-2-get-from-source-control.md)  
   
--   [Test oblasti 3: Rezervovat / vrátit zpět rezervaci](../../extensibility/internals/test-area-3-check-out-undo-checkout.md)  
+-   [Testovací oblast 3: Rezervace a zrušení rezervace](../../extensibility/internals/test-area-3-check-out-undo-checkout.md)  
   
-    -   Případ 3: Rezervovat / vrátit zpět rezervaci  
+    -   Případ 3: Přečtěte si / zrušit rezervaci  
   
-    -   Případ 3a: Podívejte se na  
+    -   Malá a velká 3a: Podívejte se na  
   
-    -   Případ 3b: odpojení rezervovat  
+    -   Malá a velká 3b: odpojení rezervace  
   
-    -   Případ 3c: Upravit dotaz nebo dotaz uložit (QEQS)  
+    -   Případ 3c: dotaz upravit a dotaz uložte (QEQS)  
   
-    -   Případ 3d: Tichou Checkout  
+    -   Malá a velká 3d: Bezobslužné ověření  
   
-    -   Případ 3e: vrátit zpět rezervaci  
+    -   Malá a velká 3e: vrátit zpět rezervaci  
   
 -   [Testovací oblast 4: Vrácení se změnami](../../extensibility/internals/test-area-4-check-in.md)  
   
-    -   Případ 4a: Upravit položky  
+    -   Malá a velká 4a: Upravit položky  
   
-    -   Případ 4b: přidávání souborů  
+    -   Malá a velká 4b: přidávání souborů  
   
     -   Případ 4c: Přidání projektů  
   
 -   [Testovací oblast 5: Změna správy zdrojového kódu](../../extensibility/internals/test-area-5-change-source-control.md)  
   
-    -   Případ 5a: vytvoření vazby  
+    -   Malá a velká 5a: vytvoření vazby  
   
-    -   Případ 5b: odpojení  
+    -   Malá a velká 5b: odpojení  
   
-    -   Případ 5c: Rebind  
+    -   Malá a velká 5c: obnovení vazby  
   
 -   [Testovací oblast 6: Odstranění](../../extensibility/internals/test-area-6-delete.md)  
   
@@ -103,9 +104,9 @@ Tato část obsahuje pokyny pro testování vaší zdrojového kódu pomocí mod
   
 -   [Testovací oblast 8: Přepínání modulu plug-in](../../extensibility/internals/test-area-8-plug-in-switching.md)  
   
-    -   Případ 8a: Automatická změna  
+    -   Malá a velká 8a: Automatická změna  
   
-    -   Případ 8b: na základě řešení změn  
+    -   Malá a velká 8b: Změna založené na řešení  
   
 ## <a name="see-also"></a>Viz také  
  [Moduly plug-in správy zdrojového kódu](../../extensibility/source-control-plug-ins.md)

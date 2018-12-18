@@ -1,7 +1,9 @@
 ---
-title: Klávesové zkratky v Návrháři pracovních postupů | Microsoft Docs
+title: Návrhář postupu provádění - klávesové zkratky v Návrháři postupu provádění
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - WFDKeyboardShortcuts.UI
 ms.assetid: 9be75438-a4a3-4781-94e5-45b7ec082358
@@ -10,79 +12,80 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 29d96eb6d738fbf23749bec601743002a451ad06
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e4040a5b370674e7794b09e4d1cae68f424c7792
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49887368"
 ---
-# <a name="keyboard-shortcuts-in-the-workflow-designer"></a>Klávesové zkratky v Návrháři pracovních postupů
+# <a name="keyboard-shortcuts-in-the-workflow-designer"></a>Klávesové zkratky v návrháři postupu provádění
 
-Všechny základní funkce návrháře pracovního postupu systému Windows byla přístupná pomocí klávesnice.
+Všechny základní funkce návrháře postupu provádění můžete přistupovat pomocí klávesnice.
 
-## <a name="navigating-the-workflow-designer-using-the-keyboard"></a>Navigace návrháře pracovních postupů pomocí klávesnice
+## <a name="navigating-the-workflow-designer-using-the-keyboard"></a>Navigace pomocí klávesnice návrháře postupu provádění
 
-Uvnitř [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)], globální zkratky a zkratky ladění týkají [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]. Navíc několik [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] konkrétní klávesové zkratky byly vytvořeny. V [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)], můžete přemapovat všechny klávesové zkratky. Opětovné hostování nástroje aplikace, ale tyto klávesové zkratky jsou pevně zakódované.
+V sadě Visual Studio Globální klávesové zkratky a zkratky ladění platí pro návrháře postupu provádění. Kromě toho byly vytvořeny počet konkrétní klávesové zkratky v Návrháři pracovních postupů. V sadě Visual Studio mají přemapovat všechny klávesové zkratky. V provádění se změněným hostováním aplikací, ale tyto klávesové zkratky jsou pevně zakódované.
 
 ### <a name="workflow-designer-keyboard-shortcuts"></a>Klávesové zkratky v Návrháři pracovních postupů
 
-Následující tabulka shrnuje výchozí klávesové zkratky, která je přiřazená [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] příkazy.
+Následující tabulka shrnuje výchozí klávesové zkratky, která je přiřazena k příkazům návrháře postupu provádění.
 
 |Zástupce|Účel|
-|--------------|-------------|
-|CTRL+E, A|Zobrazí nebo skryje Argument Designer.|
-|CTRL+E, C|Sbalí vybranou aktivitou na místě.|
-|CTRL+E, E|Rozšíří vybranou aktivitou na místě.|
-|CTRL + E, F|Připojí vybrané aktivity v vývojový diagram.|
-|CTRL + E, I|Zobrazí nebo skryje importy návrháře.|
-|CTRL + E, M|Přesouvá fokus klávesnice na další položku v pořadí.|
-|CTRL+E, N|Vytvoří novou proměnnou v oboru vybrané aktivity (nebo na nejbližší).|
-|CTRL+E, O|Zobrazit nebo skrýt mapu přehledu.|
-|CTRL + E, P|Přejde do nadřazené vybranou aktivitou. Tím přejde jednu úroveň v navigačním panelu s popisem cesty a změní kořenové aktivity na plochu návrháře.|
-|CTRL + E, S|Přidá položku s fokus klávesnice na aktuálně vybrané položky.|
-|CTRL+E, V|Zobrazí nebo skryje návrháře proměnné.|
+|-|-------------|
+|CTRL+E, A|Zobrazí nebo skryje Návrhář argumentů.|
+|CTRL+E, C|Sbalí vybraný aktivity na místě.|
+|CTRL+E, E|Rozbalí vybrané aktivity na místě.|
+|CTRL + E, F|Připojí vybrané aktivity ve vývojovém diagramu.|
+|CTRL + E, MŮŽU|Zobrazí nebo skryje Návrhář importů.|
+|CTRL + E, M|Přesune fokus klávesnice na další položku v pořadí.|
+|CTRL+E, N|Vytvoří novou proměnnou v oboru vybrané aktivity (nebo nejbližší).|
+|CTRL+E, O|Zobrazí nebo skryje přehledovou mapu.|
+|CTRL + E, P|Přejde na nadřazený vybranou aktivitou. To platí nahoru o jednu úroveň ve navigace s popisem cesty a změní kořenové aktivity na plochu návrháře.|
+|CTRL + E, S|Přidá položku s fokus klávesnice do aktuálního výběru.|
+|CTRL+E, V|Zobrazí nebo skryje Návrhář proměnných.|
 |CTRL + E, X|Rozbalí všechny aktivity v pracovním postupu.|
-|CTRL+ALT+F6|Přesune fokus klávesnice z aktuální oblasti uživatelského rozhraní další oblasti v sekvenci. Pořadí je následující:<br /><br /> 1.  Navigační panel s popisem cesty.<br />2.  Plochu návrháře<br />3.  Argumenty, proměnné nebo importy Návrhář Pokud otevřete<br />4.  Prostředí|
+|CTRL+ALT+F6|Přesune fokus klávesnice z aktuální oblasti uživatelského rozhraní k další oblasti v sekvenci. Pořadí je následujícím způsobem:<br /><br /> 1.  Navigační panel s popisem cesty.<br />2.  Návrhové ploše<br />3.  Návrhář argumentů/proměnné/importů-li otevřít<br />4.  Prostředí|
 
 ### <a name="flowchart"></a>Vývojový diagram
 
-V následujícím seznamu jsou gesta použitý k vytvoření vývojový diagram pomocí klávesnice. Jako zbytek [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)], aktivity jsou přidány na plochu návrháře pomocí zástupce globální sady nástrojů součástí [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)].
+Následující seznam uvádí gesta použitý k vytvoření vývojový diagram pomocí klávesnice. Stejně jako v rest návrháře postupu provádění přidají se aktivity součástí sady Visual Studio zkratky globální sada nástrojů na plochu návrháře.
 
-- Chcete-li přesunout aktivitu, vyberte aktivitu a použijte klávesy se šipkami do jiného umístění.
+- Chcete-li přesunout aktivitu, vyberte aktivitu a pomocí kláves se šipkami do jiného umístění.
 
-- Ke změně velikosti vývojový diagram, přesuňte aktivitu po aktuální ohraničení vývojový diagram pomocí klávesy se šipkami. Vývojový diagram je automaticky nastavena velikost.
+- Pokud chcete změnit velikost vývojového diagramu, přesune aktivitu za aktuální ohraničení vývojový diagram pomocí kláves se šipkami. Vývojový diagram se velikost automaticky.
 
-- Pokud chcete nastavit aktivitu jako počáteční uzel, použijte **nastavit jako Počáteční_uzel** příkaz v místní nabídce.
+- Chcete-li nastavit aktivitu jako počáteční uzel, použijte **nastavit jako StartNode** příkazu v místní nabídce.
 
 - Připojení aktivity:
 
-    1.  Vyberte zdrojové aktivity pomocí klávesy tabulátor do aktivity.
+    1.  Vyberte zdrojová aktivita tabulátor do aktivity.
 
-    2.  Stiskněte kombinaci kláves CTRL + E, M tolikrát, kolikrát podle potřeby přesunout fokus klávesnice k cílové aktivitě.
+    2.  Stiskněte kombinaci kláves CTRL + E, M tolikrát, kolikrát podle potřeby přesuňte fokus klávesnice na cílovou aktivitu.
 
-    3.  Stisknutím kombinace kláves CTRL + E, chcete-li přidat cílové aktivitě výběru S.
+    3.  Stiskněte kombinaci kláves CTRL + E, S přidat cílová aktivita do výběru.
 
-    4.  Stiskněte kombinaci kláves CTRL + E, F přidat konektor ze zdroje do cíle.
+    4.  Stiskněte kombinaci kláves CTRL + E, F, přidání konektoru ze zdroje do cíle.
 
-Poznámky o připojení aktivity pomocí klávesnice:
+Poznámky o připojení pomocí klávesnice aktivity:
 
-- Přidáním další aktivity výběru ještě před stisknutím klávesy CTRL + E, F. můžete nastavit víc připojení ve stejnou dobu Připojení jsou vytvářeny v pořadí, aktivity byly přidány do výběru.
+- Několik připojení současně lze vytvořit tak, že přidáte další aktivity do výběru před stisknutím kláves CTRL + E, f Připojení jsou provedeny v pořadí, aktivity byly přidány do výběru.
 
-- Pokud nemůže být připojen pár aktivity, například pokud zdrojové aktivity již odchozí připojení, jsou stále vytvořit další připojení mezi aktivitami ve výběru, kdykoli je to možné.
+- Pokud nemůže být připojen pár aktivity, například pokud zdrojová aktivita již má odchozí připojení, další připojení mezi aktivitami ve výběru probíhají stále kdykoli je to možné.
 
-- Když **FlowDecision** je zahrnutá ve výběru a **FlowDecision** neobsahuje žádné výstupní spojnice, na které je umístěn konektor **True** větve.
+- Když **FlowDecision** je zahrnutá ve výběru a **FlowDecision** nemá žádná odchozí konektory, konektor je umístěn na **True** větve.
 
 ### <a name="expression-editing"></a>Úpravy výrazů
 
-Ve výchozím nastavení, výchozí klávesové zkratky pro [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] úpravy textu použít uvnitř výrazu editor v [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)], s těmito omezeními:
+Ve výchozím nastavení použije výchozí klávesové zkratky pro úpravu textu jazyka Visual Basic v editoru výrazů v Návrháři pracovních postupů s těmito omezeními:
 
-- Přemapování klávesové zkratky pro následující příkazy nemá žádný vliv. Výchozí klávesové zkratky můžete použít pouze pro přístup k tyto příkazy při úpravě výrazu.
+- Přemapování klávesové zkratky pro následující příkazy nemá žádný vliv. Výchozí klávesové zkratky můžete použít pouze přístup k těmto příkazům při úpravě výrazu.
 
    - Vyjmout
    - Kopírovat
    - Vložit
    - Vybrat vše
-   - vrácení zpět
-   - znovu:
+   - Vrácení zpět
+   - Znovu:
 
-- Přemapování klávesové zkratky pro úpravy příkazy uvnitř výrazu [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] v [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)], upravit klávesové zkratky v [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] oboru. Změny provedené v textovém editoru oboru nelze použít automaticky na [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]. Pokud chcete namapovat zástupce na obou místech, musíte použít změny dvakrát (jednou pro každý obor).
+- Přemapování klávesové zkratky pro příkazy pro úpravy výrazu v Návrháři postupu provádění v sadě Visual Studio, upravte klávesové zkratky v oboru pracovního postupu návrháře. Změny provedené v textovém editoru oboru se nevztahují automaticky návrháře postupu provádění. Pokud chcete přemapovat klávesové zkratky na obou místech, musíte použít změny dvakrát (jednou pro každý obor).

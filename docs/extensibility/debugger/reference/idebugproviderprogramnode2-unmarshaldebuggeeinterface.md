@@ -1,5 +1,5 @@
 ---
-title: IDebugProviderProgramNode2::UnmarshalDebuggeeInterface | Microsoft Docs
+title: IDebugProviderProgramNode2::UnmarshalDebuggeeInterface | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b9ebadbc35ee8752e9f3b985a99155444caff5f8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 464c840c9f3009c1ed763bdc8dbbf66b8491bfe8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49917047"
 ---
 # <a name="idebugproviderprogramnode2unmarshaldebuggeeinterface"></a>IDebugProviderProgramNode2::UnmarshalDebuggeeInterface
 Získá zadaný rozhraní přes hranice procesu.  
@@ -42,16 +43,16 @@ int UnmarshalDebuggeeInterface(
   
 #### <a name="parameters"></a>Parametry  
  `riid`  
- [v] Identifikátor GUID rozhraní k získání.  
+ [in] Identifikátor GUID rozhraní získat.  
   
  `ppvObject`  
- [out] Vrátí objekt implementující rozhraní požadované. [C++] Toto lze převést přímo na typ pro požadované rozhraní. Použití [C#] <xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A> metoda získat požadované rozhraní.  
+ [out] Vrátí objekt implementaci požadovaných rozhraní. [C++] to může být převeden přímo na typ požadované rozhraní. [C#] použití <xref:System.Runtime.InteropServices.Marshal.GetObjectForIUnknown%2A> metodu k získání požadovaných rozhraní.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda se používá, když modul ladění běží v [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] prostoru procesu a program laděné běží ve vlastním procesu prostoru.  
+ Tato metoda se používá při spuštění ladicího stroje [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] prostoru procesu a laděný program běží ve vlastním procesu.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProviderProgramNode2](../../../extensibility/debugger/reference/idebugproviderprogramnode2.md)

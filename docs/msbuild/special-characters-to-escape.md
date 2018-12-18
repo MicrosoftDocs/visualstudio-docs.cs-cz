@@ -1,5 +1,5 @@
 ---
-title: Speciální řídicí znaky | Microsoft Docs
+title: Speciální řídicí znaky | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -18,31 +18,32 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a155d2d85f0b6208b98587f6907c8dadfd92d737
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a57316904aa1075484a4d33c6e2259586c88fe78
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39151377"
 ---
 # <a name="special-characters-to-escape"></a>Speciální řídicí znaky
-Speciální znaky, je nutné uvést pouze v případě, že mají zvláštní význam v kontextu, ve kterém se právě používají. Například se tedy hvězdička (*) je speciální znak pouze v atributech "Zahrnout" a "Vyloučit" definice položky, nebo volání <xref:Microsoft.Build.Tasks.CreateItem>. Ve všech ostatních případech se tedy hvězdička považován za literálu hvězdičky. Pokud nepotřebujete, abyste se vyhnuli hvězdičky everywhere v souborech projektu, to tak neškodí.  
+Speciální znaky musí být uvozena pouze v případě, že mají zvláštní význam v kontextu, ve kterém se používají. Například hvězdičku (*) je speciální znak pouze v atributech definici položky "Zahrnout" a "Vyloučit", nebo ve volání <xref:Microsoft.Build.Tasks.CreateItem>. Ve všech ostatních případech hvězdička je považován za literál hvězdičku. Zatímco nepotřebujete řídicí hvězdičky z obou stran kdekoli v souborech projektu, učiníte tak neškodí.  
   
- Použít zápis %*xx* místo speciální znak, kde *xx* představuje šestnáctkové hodnoty znaků ASCII. Například jako literál znak používat hvězdičku (*), použijte hodnotu `%2A`.  
+ Použití notace %\<xx > místo speciální znaky, kde \<xx > představuje šestnáctkovou hodnotu znaku standardu ASCII. Například pokud chcete použít hvězdičku (*) jako literální znak, použijte hodnotu `%2A`.  
   
  Úplný seznam speciální řídicí znaky takto:  
   
 |Znak|Popis|  
 |---------------|-----------------|  
-|%|Symbol procent, slouží k odkazování metadat.|  
-|$|Dolaru slouží k odkazování vlastnosti.|  
-|@|Znak, slouží k odkazování položky seznamů.|  
-|(|Otevřete závorky, použít v seznamech.|  
-|)|Zavřete závorky, použít v seznamech.|  
-|`|Apostrof (nebo značky), používají v podmínkách a jiné výrazy.|  
+|%|Znak procent, slouží jako odkaz na metadata.|  
+|$|Znak dolaru, používá k odkazování na vlastnosti.|  
+|@|Znak, slouží jako odkaz na seznamy položek.|  
+|(|Levou (otevírací), použít v seznamech.|  
+|)|Zavřít závorky používané seznamy.|  
+|`|Apostrof (nebo značky zaškrtnutí), použít v podmínkách a jiných výrazech.|  
 |;|Středník, oddělovač seznamu.|  
-|?|Otazník, zástupný znak při popisu specifikaci souboru v části na položku vložit/vyloučit.|  
-|*|Znak hvězdičky zástupný znak při popisu specifikaci souboru v části na položku vložit/vyloučit.|  
+|?|Otazník, zástupný znak při popisu specifikace souboru v části zahrnout/vyloučit položky.|  
+|*|Hvězdička, zástupný znak při popisu specifikace souboru v části zahrnout/vyloučit položky.|  
   
-## <a name="see-also"></a>Viz také  
- [Postupy: vyhnuli speciální znaky v nástroji MSBuild](../msbuild/how-to-escape-special-characters-in-msbuild.md)   
+## <a name="see-also"></a>Viz také:  
+ [Postupy: řídicí speciální znaky v nástroji MSBuild](../msbuild/how-to-escape-special-characters-in-msbuild.md)   
  [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)

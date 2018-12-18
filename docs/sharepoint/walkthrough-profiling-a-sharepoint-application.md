@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Profilace aplikace SharePoint | Microsoft Docs'
+title: 'Návod: Profilace aplikace SharePoint | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,69 +18,70 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f6eb4e9f78a9defaafb774551e301d6101cc40d0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5db5e9408a64df80311667267561ee69234fd7d5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49852742"
 ---
-# <a name="walkthrough-profiling-a-sharepoint-application"></a>Postupy: Profilace aplikace SharePoint
-  Tento návod ukazuje způsob použití nástrojů pro profilaci k optimalizaci výkonu aplikace SharePoint v sadě Visual Studio. Ukázková aplikace je příjemce událostí funkce služby SharePoint, obsahující nečinné smyčky, která snižuje výkon přijímače událostí funkcí. Visual Studio profiler umožňuje nalézt a eliminovat nejnákladnější (nejpomalejší provádění) součástí projektu, také známé jako *aktivní trase*.  
+# <a name="walkthrough-profile-a-sharepoint-application"></a>Návod: Profilovat aplikaci služby SharePoint
+  Tento návod ukazuje, jak pomocí nástrojů pro profilaci v sadě Visual Studio za účelem optimalizace výkonu aplikace SharePoint. Ukázková aplikace je příjemce událostí funkce Sharepointu, který obsahuje nečinné smyčky, která snižuje výkon příjemce událostí funkce. Profiler sady Visual Studio umožňuje vyhledat a odstranit nejdražší (nejpomalejší provádění) součást projektu, označované také jako *kritickou cestu*.  
   
- Tento návod ukazuje následující úlohy:  
+ Tento návod demonstruje následující úkoly:  
   
--   [Přidání funkce a příjemce událostí funkce](#BKMK_AddFtrandFtrEvntReceiver).  
+- [Přidání funkcí a příjemce událostí funkce](#BKMK_AddFtrandFtrEvntReceiver).  
   
--   [Konfigurace a nasazení aplikace SharePoint](#BKMK_ConfigSharePointApp).  
+- [Konfigurace a nasazení aplikace služby SharePoint](#BKMK_ConfigSharePointApp).  
   
--   [Spuštění aplikace SharePoint](#BKMK_RunSPApp).  
+- [Spuštění aplikace SharePoint](#BKMK_RunSPApp).  
   
--   [Zobrazení a interpretací výsledků profilování](#BKMK_ViewResults).  
+- [Zobrazení a interpretace výsledků profilace](#BKMK_ViewResults).  
   
- [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
 ## <a name="prerequisites"></a>Požadavky  
  K dokončení tohoto návodu budete potřebovat následující komponenty:  
   
--   Podporované edice systému Microsoft Windows a služby SharePoint. [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)] [Požadavky na vývoj řešení služby SharePoint](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
+-   Podporované vydání systému Microsoft Windows a SharePoint.
   
 -   [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)].  
   
-## <a name="creating-a-sharepoint-project"></a>Vytvoření projektu SharePoint  
- Nejprve vytvořte projektu služby SharePoint.  
+## <a name="create-a-sharepoint-project"></a>Vytvoření projektu služby SharePoint
+ Nejprve vytvořte projekt služby SharePoint.  
   
 #### <a name="to-create-a-sharepoint-project"></a>Vytvoření projektu služby SharePoint  
   
-1.  Na řádku nabídek zvolte **soubor**, **nový**, **projektu** zobrazíte **nový projekt** dialogové okno.  
+1. V panelu nabídky zvolte **souboru** > **nový** > **projektu** zobrazíte **nový projekt** dialogové okno.  
   
-2.  Rozbalte **SharePoint** uzel v rámci buď **Visual C#** nebo **jazyka Visual Basic**a potom zvolte **2010** uzlu.  
+2. Rozbalte **SharePoint** uzlu buď **Visual C#** nebo **jazyka Visual Basic**a klikněte na tlačítko **2010** uzlu.  
   
-3.  V podokně šablon vyberte **projektu služby SharePoint 2010** šablony.  
+3. V podokně šablony vyberte **projektu služby SharePoint 2010** šablony.  
   
-4.  V **název** zadejte **ProfileTest**a potom zvolte **OK** tlačítko.  
+4. V **název** zadejte **ProfileTest**a klikněte na tlačítko **OK** tlačítko.  
   
-     **Průvodce vlastním nastavením SharePoint** se zobrazí.  
+    **Průvodce přizpůsobením SharePoint** se zobrazí.  
   
-5.  Na **zadejte úroveň lokality a zabezpečení pro ladění** stránky, zadejte adresu URL pro web služby SharePoint server, kde chcete ladit definici lokality nebo použijte výchozí umístění (http://*systémový název*nebo) .  
+5. Na **zadejte web a úroveň zabezpečení pro ladění** stránky, zadejte adresu URL webu služby SharePoint server, ve kterém chcete ladit definice webu nebo použijte výchozí umístění (http://<em>systémový název</em>/) .  
   
-6.  V **co je úrovně důvěryhodnosti pro toto řešení služby SharePoint?** zvolte **nasadit jako řešení farmy** tlačítko.  
+6. V **co je úroveň důvěryhodnosti pro toto řešení SharePoint?** zvolte **nasadit jako řešení farmy** přepínač.  
   
-     V současné době můžete pouze profil řešení ve farmách. Další informace o řešení v izolovaném prostoru a řešení ve farmách najdete v tématu [v izolovaném prostoru aspekty řešení](../sharepoint/sandboxed-solution-considerations.md).  
+    V současné době je možné pouze řešení farmy profilu. Další informace o řešení v izolovaném prostoru a řešení farmy najdete v tématu [aspekty řešení v izolovaném prostoru](../sharepoint/sandboxed-solution-considerations.md).  
   
-7.  Vyberte **Dokončit** tlačítko. Projekt se objeví v **Průzkumníku řešení**.  
+7. Zvolte **Dokončit** tlačítko. Projekt se objeví v **Průzkumníka řešení**.  
   
-##  <a name="BKMK_AddFtrandFtrEvntReceiver"></a> Přidání funkce a příjemce událostí funkce  
- Funkce v dalším kroku přidejte do projektu spolu s přijímače událostí pro funkci. Tento příjemce událostí bude obsahovat kód, který se profilovaným.  
+## <a name="add-a-feature-and-feature-event-receiver"></a>Přidání funkcí a příjemce událostí funkce
+ V dalším kroku přidejte funkce do projektu spolu s přijímače událostí pro funkci. Tento příjemce událostí bude obsahovat kód, který má být profilována.  
   
-#### <a name="to-add-a-feature-and-feature-event-receiver"></a>Chcete-li přidat funkce a příjemce událostí funkce  
+#### <a name="to-add-a-feature-and-feature-event-receiver"></a>Chcete-li přidat funkci a příjemce událostí funkce  
   
-1.  V **Průzkumníku řešení**, otevřete místní nabídku pro **funkce** uzlu, zvolte **přidat funkce**a v výchozí hodnotu, ponechte název **Feature1**.  
+1.  V **Průzkumníku řešení**, otevřete místní nabídku **funkce** uzlu, zvolte **přidat funkci**a název ponechte výchozí hodnotu **Feature1**.  
   
-2.  V **Průzkumníku řešení**, otevřete místní nabídku pro **Feature1**a potom zvolte **přidat příjemce událostí**.  
+2.  V **Průzkumníka řešení**, otevřete místní nabídku pro **Feature1**a klikněte na tlačítko **přidat příjemce událostí**.  
   
-     Tím přidáte souboru kódu na funkci s několika obslužné rutiny událostí komentované a otevře soubor pro úpravy.  
+     To přidá soubor kódu na funkci s několik obslužných rutin událostí komentované a otevře soubor pro úpravy.  
   
-3.  Ve třídě příjemce událostí přidejte následující deklarace proměnných.  
+3.  V třídě příjemce události přidejte následující deklarace proměnných.  
   
     ```vb  
     ' SharePoint site/subsite.  
@@ -94,7 +95,7 @@ ms.lasthandoff: 04/16/2018
     private string webUrl = "/";  
     ```  
   
-4.  Nahraďte `FeatureActivated` postup následujícím kódem.  
+4.  Nahradit `FeatureActivated` procedury s následujícím kódem.  
   
     ```vb  
     Public Overrides Sub FeatureActivated(properties As SPFeatureReceiverProperties)  
@@ -153,7 +154,7 @@ ms.lasthandoff: 04/16/2018
     }  
     ```  
   
-5.  Přidejte následující následující postup `FeatureActivated`postupu.  
+5.  Přidejte následující následující postup `FeatureActivated`postup.  
   
     ```vb  
   
@@ -180,104 +181,103 @@ ms.lasthandoff: 04/16/2018
     }  
     ```  
   
-6.  V **Průzkumníku řešení**, otevřete místní nabídky projektu (**ProfileTest**) a potom zvolte **vlastnosti**.  
+6.  V **Průzkumníka řešení**, otevřete místní nabídku pro projekt (**ProfileTest**) a klikněte na tlačítko **vlastnosti**.  
   
-7.  V **vlastnosti** dialogovém okně vyberte **SharePoint** kartě.  
+7.  V **vlastnosti** dialogového okna zvolte **SharePoint** kartu.  
   
-8.  V **aktivní konfigurace nasazení** vyberte **bez aktivace**.  
+8.  V **aktivní konfiguraci nasazení** klikněte na položku **bez aktivace**.  
   
-     Výběr tuto konfiguraci nasazení umožňuje ručně aktivovat funkci později ve službě SharePoint.  
+     Vyberte tuto konfiguraci nasazení můžete ručně aktivovat funkci později v Sharepointu.  
   
 9. Uložte projekt.  
   
-##  <a name="BKMK_ConfigSharePointApp"></a> Konfigurace a nasazení aplikace SharePoint  
- Teď, když projektu služby SharePoint je připraveno, ho nakonfigurovat a nasadit server služby SharePoint.  
+## <a name="configure-and-deploy-the-sharepoint-application"></a>Nakonfigurujte a nasaďte aplikace služby SharePoint
+ Teď, když je projekt SharePoint připravený, nakonfigurovat a nasadit na server SharePoint.  
   
-#### <a name="to-configure-and-deploy-the-sharepoint-application"></a>Umožňuje nakonfigurovat a nasadit aplikace SharePoint  
+#### <a name="to-configure-and-deploy-the-sharepoint-application"></a>Ke konfiguraci a nasazení aplikace služby SharePoint  
   
-1.  Na **analyzovat** nabídce zvolte **spusťte Průvodce výkonu**.  
+1.  Na **analyzovat** nabídce zvolte **spustit Průvodce výkonem**.  
   
-2.  Na stránce jeden **Průvodce výkonu**, nechte metodě profilace jako **procesoru vzorkování** a zvolte **Další** tlačítko.  
+2.  Na stránce jeden **Průvodce výkonem**, leave – metoda profilování jako **vzorkování procesoru** a zvolte **Další** tlačítko.  
   
-     Profilování metody lze použít v pokročilejší profilace situacích. Další informace najdete v tématu [metody kolekce údajů o výkonu Principy](/visualstudio/profiling/understanding-performance-collection-methods).  
+     Jiných metod profilace je možné v rozšířené profilace situacích. Další informace najdete v tématu [metody kolekce výkonu Principy](/visualstudio/profiling/understanding-performance-collection-methods).  
   
-3.  Na druhou stránku **Průvodce výkonu**, nechte cíl profil jako **ProfileTest** a zvolte **Další** tlačítko.  
+3.  Na stránce dvě **Průvodce výkonem**, ponechat cíl profilu jako **ProfileTest** a zvolte **Další** tlačítko.  
   
-     Pokud má více projektů řešení, zobrazí se v tomto seznamu.  
+     Pokud řešení obsahuje více projektů, zobrazí se v tomto seznamu.  
   
-4.  Na stránce tři **Průvodce výkonu**, zrušte **povolit profilace interakce vrstvy** zaškrtněte políčko a potom vyberte **Další** tlačítko.  
+4.  Na stránce tři **Průvodce výkonem**, zrušte zaškrtnutí políčka **povolit profilaci interakce vrstev** zaškrtněte políčko a klikněte na tlačítko **Další** tlačítko.  
   
-     Profilace interakce vrstvy (TIP) funkce je užitečná pro měření výkonu aplikací dotazy na databáze, a pro ukazuje počet, kolikrát se požaduje na webové stránce. Protože tato data se nevyžaduje v tomto příkladu, jsme nebude povolit tuto funkci.  
+     Profilování interakce vrstvy (TIP) funkce je užitečná pro měření výkonu aplikace tento dotazování databází, a pro zobrazují počet, kolikrát se žádá na webové stránce. Protože tato data se nevyžaduje v tomto příkladu, nebude jsme tuto funkci povolit.  
   
-5.  Na stránce čtyři **Průvodce výkonu**, ponechte **spuštění profilace po ukončení průvodce** zaškrtnuté políčko a potom vyberte **Dokončit** tlačítko.  
+5.  Na stránce čtyř **Průvodce výkonem**, nechat **spustit profilaci po dokončení průvodce** zaškrtnuté políčko a klikněte na tlačítko **Dokončit** tlačítko.  
   
-     Průvodce umožňuje profilace aplikací na serveru, zobrazí **prohlížeč výkonu** okna a potom sestavení nasadí a spouští aplikace SharePoint.  
+     Průvodce umožňuje profilace aplikací na serveru, zobrazí **prohlížeč výkonu** okna a pak sestavení, nasadí a spustí aplikaci služby SharePoint.  
   
-##  <a name="BKMK_RunSPApp"></a> Spuštění aplikace SharePoint  
- Aktivovat funkci ve službě SharePoint, která aktivuje `FeatureActivation` událostí kód pro spuštění.  
+## <a name="run-the-sharepoint-application"></a>Spuštění aplikace SharePoint
+ Aktivovat funkci v Sharepointu, aktivuje `FeatureActivation` události kód ke spuštění.  
   
 #### <a name="to-run-the-sharepoint-application"></a>Ke spuštění aplikace SharePoint  
   
-1.  Ve službě SharePoint, otevřete **Akce webu** nabídce a potom zvolte **nastavení lokality**.  
+1.  V Sharepointu, otevřete **Akce webu** nabídky a klikněte na tlačítko **nastavení webu**.  
   
-2.  V **Akce webu** seznam, vyberte **spravovat funkce webu** odkaz.  
+2.  V **Akce webu** klikněte na položku **spravovat funkce webu** odkaz.  
   
-3.  V **funkce** seznam, vyberte **aktivovat** vedle položky **ProfileTest Feature1**.  
+3.  V **funkce** klikněte na položku **aktivovat** vedle **ProfileTest Feature1**.  
   
-     Při tomto, z důvodu nečinné smyčky volané pozastavení je `FeatureActivated` funkce.  
+     Se pozastavení, pokud to provedete, protože nečinné smyčky volána `FeatureActivated` funkce.  
   
-4.  Na **Snadné spuštění** panel, vyberte **uvádí** a pak v **uvádí** vyberte **oznámení**.  
+4.  Na **Snadné spuštění** vyberte možnosti **uvádí** a pak v **uvádí** klikněte na položku **oznámení**.  
   
-     Všimněte si, že byl přidán do seznamu, s informacemi o tom, že funkci aktivovala nové oznámení.  
+     Všimněte si, že nové oznámení byla přidána do seznamu s informacemi o tom, že se aktivoval funkci.  
   
-5.  Zavřete stránku služby SharePoint.  
+5.  Zavřete webu služby SharePoint.  
   
-     Po ukončení služby SharePoint, profileru vytvoří a zobrazí zprávu o ukázka profilace a uloží ji jako soubor .vsp v **ProfileTest** složce projektu.  
+     Po ukončení služby SharePoint, profiler vytvoří a zobrazí ukázková sestava profilace a uloží ho jako soubor .vsp **ProfileTest** složky projektu.  
   
-##  <a name="BKMK_ViewResults"></a> Zobrazení a interpretací výsledků profilace  
- Teď, když máte spustit a profilovaným aplikace SharePoint, zobrazíte výsledky testů.  
+## <a name="view-and-interpret-the-profile-results"></a>Zobrazení a interpretace výsledků profilu
+ Teď, když máte spouštění a profilované aplikace služby SharePoint, prohlédněte si výsledky testu.  
   
-#### <a name="to-view-and-interpret-the-profiling-results"></a>K zobrazení a interpretovat výsledky profilace  
+#### <a name="to-view-and-interpret-the-profile-results"></a>K zobrazení a interpretace výsledků profilu
   
-1.  V **nejvíce jednotlivých pracuje funkce** části ukázkové sestavy profilace, Všimněte si, že `TimeCounter` je v horní části seznamu.  
+1.  V **funkce provádějící nejvíce individuální práce** části ukázkové sestavy profilování, Všimněte si, že `TimeCounter` je v horní části seznamu.  
   
-     Toto umístění znamená, že `TimeCounter` byla jedna z funkcí s nejvyšší počet vzorků, což znamená, je jednou z největších kritické v aplikaci. Není k této situaci překvapení, ale protože je účelově určená tímto způsobem pro demonstrační účely.  
+     Toto umístění znamená, že `TimeCounter` byla jedna z funkcí s nejvyšší počet vzorků, to znamená, je jedním z největších kritické body výkonu v aplikaci. Tato situace není překvapení, ale protože je úmyslně navržený tak pro demonstrační účely.  
   
-2.  V **nejvíce jednotlivých pracuje funkce** zvolte `ProcessRequest` odkaz na distribuci náklady pro `ProcessRequest` funkce.  
+2.  V **funkce provádějící nejvíce individuální práce** zvolte `ProcessRequest` odkazu zobrazíte rozdělení nákladů pro `ProcessRequest` funkce.  
   
-     V **volat funkce** část `ProcessRequest`, Všimněte si, že **FeatureActiviated** funkce je uveden jako nejnákladnější volal funkci.  
+     V **volat funkce** části `ProcessRequest`, Všimněte si, že **FeatureActiviated** funkce je uveden jako nejdražší MS DTC volal funkci.  
   
 3.  V **volat funkce** zvolte **FeatureActivated** tlačítko.  
   
-     V **volat funkce** část **FeatureActivated**, `TimeCounter` funkce je uveden jako nejnákladnější volal funkci. V **zobrazení kódu funkce** podokně, zvýrazněný (`TimeCounter`) je aktivního bodu a určuje, kde je potřeba oprava.  
+     V **volat funkce** části **FeatureActivated**, `TimeCounter` funkce je uveden jako nejdražší MS DTC volal funkci. V **zobrazení kódu funkce** podokno, zvýrazněný kód (`TimeCounter`) aktivního bodu a hlásit, které vyžadují opravu.  
   
-4.  Ukázková sestava profilace zavřete.  
+4.  Zavřete sestava profilace vzorku.  
   
-     Chcete-li zobrazit sestavu kdykoli znovu, otevřete soubor .vsp v **prohlížeč výkonu** okno.  
+     Chcete-li zobrazit sestavu kdykoli znovu, otevřete soubor .vsp ve **prohlížeč výkonu** okna.  
   
-## <a name="fixing-the-code-and-reprofiling-the-application"></a>Oprava kód a Reprofiling aplikace  
- Teď, když byla zjištěna hotspotů funkce v aplikaci služby SharePoint, opravte ji.  
+## <a name="fix-the-code-and-reprofile-the-application"></a>Opravit kód a reprofile aplikace
+ Teď, když byla zjištěna hotspot funkce v aplikaci SharePoint, opravte ji.  
   
-#### <a name="to-fix-the-code-and-reprofile-the-application"></a>Kód, a reprofile aplikace  
+#### <a name="to-fix-the-code-and-reprofile-the-application"></a>Chcete-li opravit kód a reprofile aplikace  
   
-1.  V kódu příjemce událostí funkce komentář `TimeCounter` volání metody `FeatureActivated` zabráníte volána.  
+1.  V kódu příjemce událostí funkce, okomentujte `TimeCounter` volání metody `FeatureActivated` tak, aby volána.  
   
 2.  Uložte projekt.  
   
-3.  V **prohlížeč výkonu**, otevřete složku cíle a potom zvolte **ProfileTest** uzlu.  
+3.  V **prohlížeč výkonu**, otevřete složku cíle a klikněte na tlačítko **ProfileTest** uzlu.  
   
-4.  Na **prohlížeč výkonu** panelu nástrojů v **akce** , zvolte **spuštění profilace** tlačítko.  
+4.  Na **prohlížeč výkonu** nástrojů v **akce** , vyberte **spustit profilování** tlačítko.  
   
-     Pokud chcete změnit z vlastností profilování před reprofiling aplikace, vyberte **spusťte Průvodce výkonu** tlačítko místo.  
+     Pokud chcete změnit vlastnosti profilování před reprofiling aplikaci, zvolte **spustit Průvodce výkonem** tlačítko místo.  
   
 5.  Postupujte podle pokynů **spuštění aplikace SharePoint** části dříve v tomto tématu.  
   
-     Funkce by měly aktivovat mnohem rychleji teď, když se odstranilo volání nečinné smyčky. Ukázková sestava profilace musí tuto skutečnost.  
+     Funkce by měla aktivovat mnohem rychleji teď, když volání nečinné smyčky se odstranilo. Sestava profilace vzorku by tyto změny projeví.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:
  [Prohlížeč výkonu](/visualstudio/profiling/performance-explorer)   
  [Přehled výkonnostní relace](/visualstudio/profiling/performance-session-overview)   
  [Průvodce začátečníka profilací výkonu](/visualstudio/profiling/beginners-guide-to-performance-profiling)   
- [Najít kritická místa aplikace pomocí sady Visual Studio Profiler](http://go.microsoft.com/fwlink/?LinkID=137266)  
-  
+ [Vyhledat problémová místa aplikace pomocí sady Visual Studio Profiler](http://go.microsoft.com/fwlink/?LinkID=137266)  
   

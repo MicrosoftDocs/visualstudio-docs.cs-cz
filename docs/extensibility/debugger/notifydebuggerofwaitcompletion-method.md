@@ -1,5 +1,5 @@
 ---
-title: Metoda NotifyDebuggerOfWaitCompletion | Microsoft Docs
+title: Notifydebuggerofwaitcompletion – metoda | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,18 +13,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 95c510cd0b9be97c53d2026a54335b07bcd1da9f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1288034f171c56e78f17d02f39843cf4ff600e5e
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39233097"
 ---
-# <a name="notifydebuggerofwaitcompletion-method"></a>NotifyDebuggerOfWaitCompletion – metoda
-Metoda zástupný symbol používá jako cíl zarážek ladicího programu. Tato metoda nesmí být vložená nebo optimalizované.  
+# <a name="notifydebuggerofwaitcompletion-method"></a>Notifydebuggerofwaitcompletion – metoda
+Zástupný symbol metoda použitá jako cíl zarážku ladicím programem. Tato metoda nesmí být vložená ani optimalizované.  
   
  **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **Sestavení:** mscorlib (v mscorlib.dll)  
+ **Sestavení:** mscorlib (v *mscorlib.dll*)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,9 +34,9 @@ private void NotifyDebuggerOfWaitCompletion()
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Všechny operace spojení s úlohami by měly volat tuto metodu, pokud je nastaven bit oznámení jejich ladicí program.  
+ Všechny operace spojení s úlohami by měly volat tuto metodu, pokud je nastaven bit oznámení jejich ladicího programu.  
   
 ## <a name="requirements"></a>Požadavky  
   
-## <a name="see-also"></a>Viz také  
- [Task – třída](../../extensibility/debugger/task-class-internal-members.md)
+## <a name="see-also"></a>Viz také:  
+ [Třída úlohy](../../extensibility/debugger/task-class-internal-members.md)

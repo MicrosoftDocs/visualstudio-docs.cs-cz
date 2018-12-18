@@ -1,6 +1,7 @@
 ---
 title: 'CA1801: Revize nepoužitých parametrů'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -16,48 +17,50 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: aae1661d848e2b7a49dc1873dbe1f555bef6abc0
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 0c5f288b57a377c69bf159f9e92ccc575f983083
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948210"
 ---
 # <a name="ca1801-review-unused-parameters"></a>CA1801: Revize nepoužitých parametrů
+
 |||
 |-|-|
 |TypeName|ReviewUnusedParameters|
 |CheckId|CA1801|
 |Kategorie|Microsoft.Usage|
-|Narušující změna|Bez narušující – Pokud člen není zobrazen mimo sestavení, bez ohledu na změny, které provedete.<br /><br /> Bez narušující – Pokud změníte člen použití parametru v jeho textu.<br /><br /> Pozastavení – Pokud odeberte parametr a je viditelný mimo sestavení.|
+|Narušující změna|Pevné – Pokud člen není viditelný mimo sestavení, bez ohledu na to, které provedete změnu.<br /><br /> Pevné – Pokud změníte členu, který chcete použít parametr v rámci svého těla.<br /><br /> Rozdělení – odeberte parametr a je viditelný mimo sestavení.|
 
 ## <a name="cause"></a>příčina
- Podpis metody obsahuje parametr, který není použit v těle metody. Toto pravidlo není zkontrolujte následující metody:
+ Podpis metody obsahuje parametr, který není použit v těle metody. Toto pravidlo nezkoumá následujících metod:
 
--   Metody odkazuje delegáta.
+- Metody odkazuje delegáta.
 
--   Metody použité jako obslužné rutiny událostí.
+- Metody používané jako obslužné rutiny událostí.
 
--   Metody deklarovat s `abstract` (`MustOverride` v jazyce Visual Basic) modifikátor.
+- Metody deklarované s `abstract` (`MustOverride` v jazyce Visual Basic) modifikátor.
 
--   Metody deklarovat s `virtual` (`Overridable` v jazyce Visual Basic) modifikátor.
+- Metody deklarované s `virtual` (`Overridable` v jazyce Visual Basic) modifikátor.
 
--   Metody deklarovat s `override` (`Overrides` v jazyce Visual Basic) modifikátor.
+- Metody deklarované s `override` (`Overrides` v jazyce Visual Basic) modifikátor.
 
--   Metody deklarovat s `extern` (`Declare` v jazyce Visual Basic) modifikátor.
+- Metody deklarované s `extern` (`Declare` v sadě Visual Studio) modifikátor.
 
 ## <a name="rule-description"></a>Popis pravidla
- Zkontrolujte parametry v nevirtuálních metody, které nejsou používány v těle metoda a ujistěte se, zda že existuje žádné správnost kolem selhání o přístup k nim. Nepoužité parametry vynakládá Údržba a výkon.
+ Zkontrolujte parametry v nevirtuálních metodách, které nejsou používány v těle metody, abyste měli jistotu, že nesprávnosti kolem selhání k nim přístup. Nevyužité parametry zvyšují náklady na náklady na údržbu a výkonu.
 
- Někdy je porušení toto pravidlo může ukazovat na implementaci chyb v metodě. Například parametr by měl již byly použity v těle metoda. Potlačíte upozornění na toto pravidlo, pokud má parametr existovat z důvodu zpětné kompatibility.
+ Porušení tohoto pravidla může někdy odkazovat na implementační chybě v metodě. Například parametr by měl byly použity v těle metody. Potlačení upozornění tohoto pravidla, pokud parametr existuje z důvodu zpětné kompatibility.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení toto pravidlo, odeberte nepoužívané parametr (narušující změně) nebo použijte parametr v těle – metoda (pevné změnit).
+ Chcete-li opravit porušení tohoto pravidla, odebrat Nepoužitý parametr (k zásadní změně) nebo pomocí parametru v těle metody (nevýznamných změn).
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Je bezpečné pro potlačení upozornění od tohoto pravidla pro dříve dodané kód, pro které by bylo opravu narušující změně.
+ Je bezpečné potlačit upozornění tohoto pravidla pro dříve dodané kód, pro kterou bude oprava rozbíjející změny.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje dva způsoby. Jedna z metod porušuje pravidlo a jiné metody splňuje pravidlo.
+ Následující příklad ukazuje dva způsoby. Jedna metoda porušuje pravidlo a jiná metoda splňuje pravidlo.
 
  [!code-csharp[FxCop.Usage.ReviewUnusedParameters#1](../code-quality/codesnippet/CSharp/ca1801-review-unused-parameters_1.cs)]
 

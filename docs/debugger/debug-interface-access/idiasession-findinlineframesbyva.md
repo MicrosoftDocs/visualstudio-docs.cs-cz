@@ -1,5 +1,5 @@
 ---
-title: IDiaSession::findInlineFramesByVA | Microsoft Docs
+title: IDiaSession::findInlineFramesByVA | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -12,14 +12,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b8288f152e7c134dd770eef4b2a33af96c767352
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: bad59015ef6f70e049403269e77aee04dc226765
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49950638"
 ---
 # <a name="idiasessionfindinlineframesbyva"></a>IDiaSession::findInlineFramesByVA
-Načte výčet, který umožňuje klientům k iteraci v rámci celé vložené rámce zadané virtuální adresy (VA).  
+Načte výčet, který umožňuje klientovi iterovat přes všechny vložené rámce na zadanou virtuální adresu (VA).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,16 +33,16 @@ HRESULT findInlineFramesByVA (
   
 #### <a name="parameters"></a>Parametry  
  `parent`  
- [v] `IDiaSymbol` Představující nadřazený objekt.  
+ [in] `IDiaSymbol` Představující nadřazeného objektu.  
   
  `va`  
- [v] Určuje adresu jako VA.  
+ [in] Určuje adresu jako VA.  
   
  `ppResult`  
- [out] Obsahuje `IDiaEnumSymbols` objekt, který obsahuje seznam rámců, které jsou načteny.  
+ [out] Obsahuje `IDiaEnumSymbols` objekt, který obsahuje seznam snímků, které jsou načteny.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [Idiasession –](../../debugger/debug-interface-access/idiasession.md)   

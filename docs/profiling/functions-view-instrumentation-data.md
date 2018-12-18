@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ddbffefe729f0b4c5b89b46b96b32a90f05f297
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 7787e974b093156b27b2ace4353e94db05063d7d
+ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238222"
 ---
-# <a name="functions-view---instrumentation-data"></a>Zobrazení funkcí – Data instrumentace
+# <a name="functions-view---instrumentation-data"></a>Zobrazení funkcí – data instrumentace
 Zobrazení sestavy funkce uvádí data profilování podle názvu funkce.  
   
 ## <a name="general"></a>Obecné  
@@ -82,7 +83,7 @@ Zobrazení sestavy funkce uvádí data profilování podle názvu funkce.
 |**Maximální doba výhradní aplikace**|Čas výhradní maximální aplikace volání této funkce.|  
 |**Doba výhradní aplikace min.**|Čas výhradní minimální aplikace volání této funkce.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Postupy: přizpůsobení sloupců zobrazení sestavy](../profiling/how-to-customize-report-view-columns.md)   
  [Zobrazení funkcí](../profiling/functions-view-sampling-data.md)   
  [Zobrazení funkcí – vzorkování](../profiling/functions-view-dotnet-memory-sampling-data.md)   

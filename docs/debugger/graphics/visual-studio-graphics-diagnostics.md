@@ -1,6 +1,6 @@
 ---
-title: Diagnostika grafiky sady Visual Studio | Microsoft Docs
-ms.custom: ''
+title: Diagnostika grafiky | Dokumentace Microsoftu
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -12,74 +12,76 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9e48abba7c137e40cef1e03f9d127adea08145e9
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: e40a8ce0f2785aa606922d3f9c49f3aad48f7591
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058614"
 ---
 # <a name="visual-studio-graphics-diagnostics"></a>Diagnostika grafiky sady Visual Studio
-Visual Studio*diagnostiky grafiky* je sada nástrojů pro záznam a pak analýza vykreslování a výkonu problémům v Direct3D – aplikace. Diagnostika grafiky lze použít na aplikace, které běží místně na počítači s Windows v emulátoru Windows zařízení nebo na vzdálený počítač nebo zařízení.  
-  
- Pracovní postup diagnostiky grafiky začíná zachytáváním záznamy o tom, jak vaše aplikace používá Direct3D – live, při jeho spuštění – tak, že její chování lze okamžitě analyzovat, sdílet nebo uložit pro pozdější. Zaznamenání relace lze inicializovat a řídit ručně ze sady Visual Studio nebo pomocí nástroje příkazového řádku zachycení **dxcap.exe**. Zaznamenání relace lze také zahájit a řídit programově pomocí zachycení diagnostiky grafiky rozhraní API.  
-  
- Po zachycení relace byl zaznamenán jeho obsah je možné přehrát Visual Studio *analyzátor grafiky* kdykoli znovu vytvořit zaznamenané rámce pomocí přesně stejné prostředky a vykreslování příkazy aplikace použít. Potom pomocí nástrojů v okně Analyer grafiky, všechny zaznamenané snímků mohou být analyzovány podrobně. Tyto nástroje můžete použít k prozkoumání všech volání rozhraní API Direct3D –, prostředku, objekt kanálu stavu, fáze kanálu nebo i úplnou historii všech pixelů zaznamenané rámce. Pomocí těchto nástrojů ve vzájemné součinnosti vykreslování problém může být zkoumána intuitivně, od, jak se zobrazuje v zaznamenané rámečkem a přecházení na jeho hlavní příčinou aplikace zdrojového kódu, shadery nebo grafické prostředky.  
-  
- Při diagnostice potíží s výkonem, zaznamenané rámce lze analyzovat pomocí *analýza snímků* nástroj. Tento nástroj prozkoumá potenciální optimalizací výkonu automaticky mění způsob aplikace používá Direct3D – a srovnávací testy všechny varianty za vás. V minulosti, jste zadali a ručně právě benchmarked změny tohoto typu najít se na ty, které provedené rozdíl. Rámce analýzy stačí provést změny, které už znáte, se vyplatí.  
-  
- Diagnostika grafiky pomáhá aplikace graficky bohaté Direct3D – vzhled a spustit je nejlepší.  
-  
- Nadále [přehled](overview-of-visual-studio-graphics-diagnostics.md) Další informace o co nabízí diagnostiky grafiky Visual Studio.  
-  
+Visual Studio*diagnostiky grafiky* je sada nástrojů pro nahrávání a pak analýzu problémů vykreslování a výkon v aplikacích rozhraní Direct3D. Diagnostika grafiky je použít v aplikacích, které běží místně v počítači Windows v emulátoru zařízení Windows nebo na vzdálený počítač nebo zařízení.  
+
+ Pracovní postup diagnostiky grafiky začíná zachytáváním záznam o tom, jak vaše aplikace používá rozhraní Direct3D – live během jejího běhu – tak, aby jeho chování mohou být analyzovány okamžitě, sdílet nebo uložit pro pozdější. Relace zachycení lze spustit a řídit ručně ze sady Visual Studio nebo pomocí nástroje příkazového řádku pro zachytávání **dxcap.exe**. Relace zachycení se navíc dají inicializovat a řídit prostřednictvím kódu programu pomocí zachycení diagnostiky grafiky rozhraní API.  
+
+ Po zachycení relace byla zaznamenána jeho obsah je možné přehrát pomocí sady Visual Studio *analyzátoru grafiky sady* kdykoli znovu vytvořit zachycené snímky pomocí přesně stejné prostředky a vykreslování příkazy aplikace používá. Potom pomocí nástrojů v okně Analyer grafiky, některé z zachycené snímky mohou být analyzovány podrobně. Tyto nástroje slouží ke kontrole jakékoli volání rozhraní API Direct3D, prostředků, objekt stavu kanálu, fázi zřetězení nebo dokonce celou historii všech pixel v zachyceném snímku. Pomocí těchto nástrojů ve vzájemné součinnosti problém vykreslování se dají zkoumat intuitivně, počínaje jak se zobrazuje v zachyceném snímku a jeho hlavní příčinou aplikace zdrojového kódu, shadery nebo grafické prostředky podrobnostem.  
+
+ Chcete-li diagnostikovat problémy s výkonem, mohou být analyzovány zachyceného snímku s použitím *analýza snímků* nástroj. Tento nástroj vám umožní prozkoumat potenciální optimalizací výkonu tak, že automaticky mění způsob, jak aplikace používá rozhraní Direct3D a srovnávací testy všechny varianty pro vás. V minulosti, možná jste udělali a ručně jednoduše benchmarked změny tohoto typu se najít ty, které provedli rozdíl na více instancí. S analýzu snímků stačí provést změny, které už znáte, se vyplatí.  
+
+ Diagnostika grafiky pomáhá aplikacím Direct3D bohatou grafikou vypadat a spustit co nejlépe.  
+
+ I nadále [přehled](overview-of-visual-studio-graphics-diagnostics.md) Další informace o co Diagnostika grafiky sady Visual Studio nabízí.  
+
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Přehled](overview-of-visual-studio-graphics-diagnostics.md)  
- Představuje pracovního postupu diagnostiky grafiky a nástroje.  
-  
+ Představuje pracovní postup diagnostiky grafiky a nástroje.  
+
  [Začínáme](getting-started-with-visual-studio-graphics-diagnostics.md)  
- V této části se dozvíte, jak nainstalovat diagnostiky grafiky Visual Studio a jak začít používat diagnostiky grafiky s vaší aplikací Direct3D –.  
-  
+ V této části se dozvíte, jak nainstalovat Diagnostika grafiky sady Visual Studio a jak můžete začít s vaší aplikací Direct3D použití diagnostiky grafiky.  
+
  [Zaznamenání grafických informací](capturing-graphics-information.md)  
- Použití diagnostiky grafiky k prozkoumání vykreslování problém v aplikaci, byste nejprve zaznamenat informace o tom, jak aplikace používá rozhraní DirectX. Během relace záznam jako vaše aplikace běží za normálních okolností je *zaznamenat* (to znamená, vyberte) rámců, které vás zajímají. Zachytávání obsahují podrobné informace o způsobu vykreslení snímky. Součástí zaznamenaných informací můžete uložit jako grafiky protokolu dokumentu zkontrolujte později nebo sdílet s ostatními členy týmu.  
-  
+ Chcete-li diagnostiku grafiky použít k prozkoumání problému vykreslování ve vaší aplikaci, první záznam informace o tom, jak aplikace používá rozhraní DirectX. Během relace nahrávání jako vaše aplikace běží za normálních okolností je *zachycení* (to znamená, vyberte) rámce, které vás zajímají. Zachycení obsahují podrobné informace o způsobu vykreslení rámce. Součástí zaznamenaných informací můžete uložit jako graphics log dokument dále prozkoumat nebo sdílet s ostatními členy týmu.  
+
  [Využití GPU](gpu-usage.md)  
- Chcete-li použít diagnostiky grafiky k profilu aplikace, použijte nástroj využití GPU. Využití GPU ve vzájemné součinnosti pomocí jiných profilování nástrojů, jako je například využití procesoru, lze použít ke korelaci procesoru a GPU aktivity, která může přispět k problémům s výkonem v aplikaci.  
-  
+ K použití diagnostiky grafiky, chcete-li Profilovat aplikaci, použijte nástroj využití GPU. Využití GPU je možné společně s další nástroje pro profilaci, jako je například využití procesoru, korelovat CPU a GPU aktivita, která může přispět k problémy s výkonem ve vaší aplikaci.  
+
  [Dokument grafických protokolů](graphics-log-document.md)  
- Pokud chcete spustit zkoumání protokolu zaznamenaná grafiky, použijete pro výběr zaznamenané rámce okna dokumentu protokolu grafiky – nebo dokonce konkrétní pixelů – tak, aby můžete zkontrolovat podrobně *události* (to znamená DirectX volání rozhraní API), vliv na jeho .  
-  
+ Spustit posouzení protokol grafiky nahrané, použijete pro výběr zachyceného snímku okno dokumentu protokolu grafiky – nebo dokonce konkrétní pixel – tak, aby můžete prozkoumat podrobněji *události* (to znamená, rozhraní DirectX volání rozhraní API), které by ovlivnily ho .  
+
  [Analýza snímků](graphics-frame-analysis.md)  
- Po výběru rámečku, použijete analýza grafických snímků sloužící ke zkoumání a vyladit výkon vykreslování.  
-  
+ Po vybrání rámce, použijete k prozkoumání a vyladit výkon vykreslování analýza grafických snímků.  
+
  [Seznam událostí](graphics-event-list.md)  
- Když vyberete snímek, můžete použít **seznam událostí grafiky** a zkontrolujte jeho události, abyste zjistili, zda se jedná o problém vykreslování.  
-  
+ Po vybrání rámce, můžete použít **seznam událostí grafiky** prozkoumat jeho události a určit, zda se vztahují k problému vykreslování.  
+
  [Stav](graphics-state.md)  
- Okno Stav vám pomůže pochopit stav grafiky, která je aktivní v okamžiku aktuální událost.  
-  
+ Okno stavu vám pomůže pochopit stav grafiky, která je aktivní v okamžiku aktuální událost.  
+
  [Fáze zřetězení](graphics-pipeline-stages.md)  
- V **fáze zřetězení grafiky** okně byste prozkoumat, jak aktuálně vybrané události zpracovává každá fáze v kanálu grafiky, aby mohli identifikovat, kde se nejprve zobrazí vykreslování problém. Zkoumání fázemi kanálu je zvláště užitečné, pokud objekt nezobrazí z důvodu nesprávné transformace, nebo pokud jeden z fází vytváří výstupu, který neodpovídá, jaké další fáze očekává.  
-  
+ V **fáze zřetězení grafiky** okně byste prozkoumat, jak aktuálně vybrané události je zpracována každé fáze zřetězení grafiky, aby mohli identifikovat, kde se nejprve zobrazí problému vykreslování. Zkoumání fáze zřetězení je zvláště užitečné, pokud objekt nezobrazí z důvodu nesprávné transformace, nebo pokud jeden z těchto fází vytvoří výstup, který neodpovídá co do další fáze očekává, že.  
+
  [Zásobník volání událostí](graphics-event-call-stack.md)  
- Můžete použít **zásobník volání událostí grafiky** si prohlédnout zásobníku volání aktuálně vybrané události, můžete přejít na kód aplikace, který má vztah k vykreslování problém.  
-  
+ Můžete použít **zásobník volání událostí grafiky** prozkoumat zásobníku volání aktuálně vybrané události, takže můžete přejít na kód aplikace, které se vztahují k problému vykreslování.  
+
  [Historie pixelu](graphics-pixel-history.md)  
- Pomocí **historie pixelů grafiky** okno analyzovat, jak je aktuálně vybrané pixelů ovlivňován události, které vliv, můžete identifikovat události nebo kombinaci událostí, které způsobí určité druhy problémů vykreslování. Historie pixelu je zvláště užitečné, pokud objekt je nesprávně vykreslit, protože výstup shaderu pixelů je buď nesprávný nebo zkombinovaná nesprávně s rámečkem vyrovnávací paměti, nebo když objekt nezobrazí i vzhledem k tomu, že byly vyřazeny jeho pixelů než dosáhnou vyrovnávací paměť snímku.  
-  
+ S použitím **historie pixelů grafiky** okno analyzovat, jak je aktuálně vybraný pixel ovlivněna události, které k nim, identifikujete událost nebo kombinaci těchto událostí, které způsobí určité druhy problémů s vykreslováním. Historie pixelů je zvláště užitečný, pokud objekt je vykreslen nesprávně, protože výstup pixel shaderu je buď nesprávný nebo byl sloučen nesprávně s Snímková vyrovnávací paměť, nebo objekt nemá dokonce zdát, že vzhledem k tomu, že byly vyřazeny jeho pixelů dřív, než dorazí vyrovnávací paměť snímku.  
+
  [Tabulka objektů](graphics-object-table.md)  
- Můžete použít **tabulka grafických objektů** prozkoumat vlastnosti a obsah objektů konkrétní Direct3D – a prostředky, které jsou platné pro aktuálně vybrané události. Objekt tabulky můžete určit kontextu zařízení grafiky, která je aktivní během události a zkontrolujte obsah grafických prostředků, jako jsou konstantní vyrovnávacích pamětí, vrchol vyrovnávací paměti a textury.  
-  
+ Můžete použít **Graphics Object Table** prozkoumat vlastnosti a obsah konkrétní objekty Direct3D a zdroje, které platí pro aktuálně vybrané události. Tabulka objektů můžete určit, která je aktivní během události kontextu zařízení grafiky a zkontrolovat obsah grafické prostředky jako vyrovnávací paměť konstant, vyrovnávací paměti vrcholů a textury.  
+
  [Ladicí program HLSL](hlsl-shader-debugger.md)  
- Pro zjištění, jak kód shaderu pro aktuálně vybrané události a grafika kanálu fáze chová, můžete použít **ladicí program HLSL** ke krokování kódu, zkontrolujte obsah proměnných a provádět další typické úlohy ladění. Ladicí program HLSL můžete taky kontrola výpočetního shaderu kódu, bez ohledu na to, jestli výsledky se dále zpracovávat v kanálu grafiky nebo jen pro čtení zpět vaší aplikace.  
-  
+ Prozkoumat, jak kód shaderu pro aktuálně vybrané události a grafickém kanálu fáze se chová, můžete použít **ladicí program HLSL** krokovat kód, zkontrolovat obsah proměnné a provádět další typické úlohy ladění. Ladicí program HLSL můžete také použít k prozkoumání výpočetní kód shaderu, bez ohledu na to, jestli výsledky jsou dále zpracovávat v zřetězení grafiky nebo jsou jen pro čtení zpět o vaši aplikaci.  
+
  [Nástroj příkazového řádku pro zachytávání](command-line-capture-tool.md)  
- Pomocí nástroje příkazového řádku zachycení rychle zachycení a přehrání grafických informací bez použití sady Visual Studio nebo zachytávání prostřednictvím kódu programu. Nástroj příkazového řádku zachycení, můžete pro automatizaci nebo v testovacím prostředí.  
-  
+ Použijte nástroj příkazového řádku pro zachytávání k rychlému zachytávání a přehrávání grafické informace bez použití sady Visual Studio nebo zachytávání prostřednictvím kódu programu. Konkrétně můžete použít nástroj příkazového řádku pro zachytávání pro službu automation, nebo v testovacím prostředí.  
+
  [Příklady](graphics-diagnostics-examples.md)  
- Několik příkladů ukazují, jak pomocí nástroje diagnostiky grafiky společně diagnostikovat různé druhy vykreslování problémy.  
-  
+ Několik příklady ukazují, jak pomocí nástrojů diagnostiky grafiky společně diagnostikovat různé druhy problémů s vykreslováním.  
+
 ## <a name="related-sections"></a>Související oddíly  
-  
-|Název|Popis|  
-|-----------|-----------------|  
-|[Prohlídka funkce ladicí program](../debugging-in-visual-studio.md)|Zavádí ladění funkce v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].|  
-|[Grafiky DirectX a herní](http://go.microsoft.com/fwlink/?LinkId=256498)|Obsahuje články, které popisují technologie grafiky DirectX.|
+
+| Název | Popis |
+| - | - |
+| [Prohlídka funkcí ladicího programu](../debugging-in-visual-studio.md) | Představuje funkce ladění v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. |
+| [Grafika DirectX a hraní her](http://go.microsoft.com/fwlink/?LinkId=256498) | Obsahuje články, které popisují technologií grafiky DirectX. |
+

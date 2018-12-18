@@ -1,5 +1,5 @@
 ---
-title: IDiaStackWalkHelper::pdataForVA | Microsoft Docs
+title: IDiaStackWalkHelper::pdataForVA | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9eb500539184d6ac5e7e3cb00e753a00f3585057
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: ec11596091f7039d9f711acc0d96510340a77c6c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49901421"
 ---
 # <a name="idiastackwalkhelperpdataforva"></a>IDiaStackWalkHelper::pdataForVA
 Vrátí přidružený virtuální adresu PDATA datového bloku.  
@@ -36,24 +37,24 @@ HRESULT pdataForVA(
   
 #### <a name="parameters"></a>Parametry  
  `va`  
- [v] Určuje adresu virtuální dat získat.  
+ [in] Určuje virtuální adresu dat, která poskytuje.  
   
  `cbData`  
- [v] Velikost dat v bajtech získat.  
+ [in] Velikost dat v bajtech získat.  
   
  `pcbData`  
- [out] Vrátí skutečná velikost dat v bajtech, které byl získán.  
+ [out] Vrátí skutečný objem dat v bajtech, ke které byl získán.  
   
  `pbData`  
- [ve out] Vyrovnávací paměť, která obsahuje požadovaná data. Nemůže být `NULL`.  
+ [out v] Vyrovnávací paměť je vyplní požadovaná data. Nemůže být `NULL`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE` Pokud neexistuje žádné PDATA zadané adresy. Jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud neexistuje žádný PDATA pro zadanou adresu. V opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- PDATA (části s názvem ".pdata") z kompilace obsahuje informace o zpracování výjimek pro funkce.  
+ PDATA (oddíl s názvem ".pdata") kompilace obsahuje informace o zpracování výjimek pro funkce.  
   
- Volající ví, kolik dat má být vrácen, takže není nutné požádat, kolik dat je k dispozici má volající. Proto je přijatelné pro implementace této metody vrátit chybu, pokud `pbData` parametr `NULL`.  
+ Volající ví, kolik dat má být vrácen tak má volající není potřeba zeptejte, kolik dat je k dispozici. Proto je přijatelné pro implementace této metody vrátit chybu, pokud `pbData` parametr `NULL`.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)

@@ -1,5 +1,5 @@
 ---
-title: Pozdní vazba v řešeních pro systém Office | Microsoft Docs
+title: Pozdní vazba v řešeních pro systém Office
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,20 +18,21 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7e205874e1c5c4e5de639e28768d6369b43c1e1a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5616ce958747f90c8015df858f657299ba52852b
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34572547"
 ---
-# <a name="late-binding-in-office-solutions"></a>Pozdní vazba v řešeních pro systém Office
+# <a name="late-binding-in-office-solutions"></a>Pozdní vazba v řešeních pro systém Office
   Některé typy v objektové modely aplikací Office poskytují funkce, které jsou k dispozici prostřednictvím funkce pozdní vazba. Například některé metody a vlastnosti, může vracet různé typy objektů v závislosti na kontextu aplikace Office a některé typy můžou zpřístupnit různé metody nebo vlastnosti v různých kontextech.  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
  Visual Basic, projekty, kde **možnost striktní** je vypnuto a Visual C# projektů cílených [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] může spolupracovat přímo s typy, které využívají tyto funkce pozdní vazba.  
   
-## <a name="implicit-and-explicit-casting-of-object-return-values"></a>Implicitní a explicitní přetypování objekt návratových hodnot  
+## <a name="implicit-and-explicit-casting-of-object-return-values"></a>Implicitní a explicitní přetypování objektu návratové hodnoty  
  Mnoho metod a vlastností v aplikaci Microsoft Office, vrátí primární spolupracující sestavení (PIA) <xref:System.Object> hodnoty, protože se může vracet různé typy objektů. Například <xref:Microsoft.Office.Tools.Excel.Workbook.ActiveSheet%2A> vlastnost vrátí <xref:System.Object> vzhledem k tomu může být hodnoty <xref:Microsoft.Office.Interop.Excel.Worksheet> nebo <xref:Microsoft.Office.Interop.Excel.Chart> objekt, v závislosti na tom, co je aktivním listem.  
   
  Při vrácení metody nebo vlastnosti <xref:System.Object>, je nutné explicitně převést (v jazyce Visual Basic) objekt správný typ v projekty Visual Basic kde **možnost striktní** zapnutý. Není nutné explicitně přetypovat <xref:System.Object> návratové hodnoty v projektech Visual Basic kde **možnost striktní** je vypnutý.  
@@ -50,7 +51,7 @@ ms.lasthandoff: 04/16/2018
  [!code-vb[Trin_VstcoreProgramming#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/Sheet1.vb#10)]
  [!code-csharp[Trin_VstcoreProgramming#10](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingExcelCS/Sheet1.cs#10)]  
   
-## <a name="accessing-members-that-are-available-only-through-late-binding"></a>Přístup ke členům, které jsou k dispozici pouze prostřednictvím pozdní vazba  
+## <a name="access-members-that-are-available-only-through-late-binding"></a>Přístupu členů, které jsou dostupné pouze prostřednictvím pozdní vazba  
  Některé vlastnosti a metody v PIA Office jsou k dispozici pouze prostřednictvím pozdní vazba. V jazyce Visual Basic projekty kde **možnost striktní** je v projektech Visual C# nebo vypnout cílených [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)], pozdní vazba funkce v těchto jazycích můžete použít pro přístup ke členům pozdní vazbu. V jazyce Visual Basic projekty kde **možnost striktní** zapnutý, reflexe musí používat pro přístup tito členové.  
   
 ### <a name="examples"></a>Příklady  
@@ -63,13 +64,13 @@ ms.lasthandoff: 04/16/2018
   
  [!code-vb[Trin_VstcoreWordAutomation#102](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#102)]  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Psaní kódu v řešeních pro systém Office](../vsto/writing-code-in-office-solutions.md)   
  [Volitelné parametry v řešeních pro systém Office](../vsto/optional-parameters-in-office-solutions.md)   
  [Použití typu dynamic &#40;C&#35; Průvodce programováním&#41;](/dotnet/csharp/programming-guide/types/using-type-dynamic)   
  [Option Strict – příkaz](/dotnet/visual-basic/language-reference/statements/option-strict-statement)   
  [Reflexe (C#)](/dotnet/csharp/programming-guide/concepts/reflection)  
  [Reflexe (Visual Basic)](/dotnet/visual-basic/programming-guide/concepts/reflection)  
- [Navrhování a tvorba řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)  
+ [Návrh a vytvoření řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)  
   
   

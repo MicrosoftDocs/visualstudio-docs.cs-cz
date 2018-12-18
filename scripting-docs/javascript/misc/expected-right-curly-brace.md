@@ -1,13 +1,13 @@
 ---
-title: "Očekávaný & č. 39;} & č. 39; | Microsoft Docs"
-ms.custom: 
+title: Byl očekáván '}' | Dokumentace Microsoftu
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.WebClient.Help.SCRIPT1009
@@ -16,22 +16,23 @@ dev_langs:
 - TypeScript
 - DHTML
 ms.assetid: dff04495-9a6e-4604-9231-e40433fec152
-caps.latest.revision: 
+caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2273d0c98ba3d65bd7b9e855532ca5355d25af66
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 42e0c220466291f845209f22917d728dee3e553e
+ms.sourcegitcommit: 75e02ed88a1ace6e8265fd4e3a82a1bc78f3adca
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53348311"
 ---
-# <a name="expected-3939"></a>Očekávaný & č. 39;} & č. 39;
-Není pravé složené závorce, který označuje konec tělo funkce, smyčky, blok kódu zahrnout nebo inicializátoru objektu. Příkladem této chyby může být **pro** smyčky pomocí pouze levé závorky označení do těla smyčky.  
+# <a name="expected-"></a>Byl očekáván znak '}'
+Není zahrnout pravou složenou závorku, který označuje konec těla funkce, smyčky, blok kódu nebo inicializátoru objektu. Příkladem této chyby může být **pro** smyčky s pouze levou závorkou označení tělo smyčky.  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
--   Přidejte pravé složené závorce, který označuje koncové funkce, smyčky, bloku nebo inicializátoru objektu.  
+-   Přidejte pravou složenou závorku, který označuje konec funkce, smyčky, bloku nebo inicializátoru objektu.  
   
 ## <a name="see-also"></a>Viz také  
  [Function – objekt](../../javascript/reference/function-object-javascript.md)   

@@ -35,6 +35,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31467953"
 ---
 # <a name="crt-debug-library-use"></a>Použití knihovny ladění CRT
 Běhové knihovny jazyka C poskytuje rozsáhlou podporu ladění. Pokud chcete používat jeden z knihovny ladění CRT, je nutné propojit s [/DEBUG](/cpp/build/reference/debug-generate-debug-info) a kompilaci s **/MDd**, **/MTd**, nebo **/LDd**.  

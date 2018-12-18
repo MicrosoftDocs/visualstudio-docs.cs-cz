@@ -1,7 +1,9 @@
 ---
-title: CorrelationInitializers dialogové okno Přidat | Microsoft Docs
+title: Návrhář postupu provádění – přidat inicializátory korelace dialogové okno
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - AddCorrelationInitializers.UI
 ms.assetid: c0517467-d54a-4ee6-aef0-c19b96b6f395
@@ -10,31 +12,39 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1dda343758925e1cece9d796bee8f0d225729c36
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 724c4e3ac911e5fda62304a08565937f38425368
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948951"
 ---
-# <a name="add-correlationinitializers-dialog-box"></a>CorrelationInitializers dialogové okno Přidat
-**Přidat inicializátory korelace** dialogové okno v Návrháři pracovních postupů Windows slouží ke konfiguraci **CorrelationInitializers** vlastnosti <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>, a <xref:System.ServiceModel.Activities.ReceiveReply> aktivity. Další informace o návrháře aktivit, které používají toto políčko, najdete v článku [odeslat](../workflow-designer/send-activity-designer.md), [Receive](../workflow-designer/receive-activity-designer.md), [ReceiveAndSendReply](../workflow-designer/receiveandsendreply-template-designer.md), a [SendAndReceiveReply ](../workflow-designer/sendandreceivereply-template-designer.md) témata.
+# <a name="add-correlationinitializers-dialog-box"></a>Dialogové okno Přidat inicializátory korelace
 
- Inicializátory korelace v kolekci zadaným tohoto dialogového okna můžete inicializovat založených na dotazech kontextu, zpětného volání kontextu nebo požadavku a odpovědi korelací mezi aktivitami zasílání zpráv.
+**Přidat inicializátory korelace** dialogové okno se používá v Návrháři pracovních postupů ke konfiguraci **correlationinitializers uveden** vlastnosti <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>, a <xref:System.ServiceModel.Activities.ReceiveReply> aktivity. Další informace o návrháři aktivit, které používají toto políčko, najdete v článku [odeslat](../workflow-designer/send-activity-designer.md), [Receive](../workflow-designer/receive-activity-designer.md), [ReceiveAndSendReply](../workflow-designer/receiveandsendreply-template-designer.md), a [SendAndReceiveReply ](../workflow-designer/sendandreceivereply-template-designer.md) témata.
 
- Následující tabulka popisuje prvky uživatelského rozhraní (UI) **přidat inicializátory korelace** dialogové okno.
+Inicializátory korelace v kolekci specifikované se toto dialogové okno můžete inicializovat následující korelace mezi zasílání zpráv aktivity:
+
+- založené na dotazech
+- kontext
+- kontext zpětného volání
+- požadavek odpověď
+
+Následující tabulka popisuje prvky uživatelského rozhraní (UI) **přidat inicializátory korelace** dialogové okno:
 
 |Prvek uživatelského rozhraní (UI)|Popis|
-|----------------|-----------------|
-|**Přidat inicializátoru**|Klikněte na tlačítko **přidat inicializovat** políčko k přidání dalších inicializátoru do kolekce.|
-|**Typ korelace**|Určuje typ inicializátoru korelace. Existují čtyři typy:<br /><br /> 1.  Korelace inicializátoru zpětného volání k určení <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer>.<br />2.  Korelace inicializátoru kontext k určení <xref:System.ServiceModel.Activities.CorrelationInitializer>.<br />3.  Inicializátoru korelace požadavku a odpovědi k určení <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>.<br />4.  Korelace inicializátoru dotazu zadat <xref:System.ServiceModel.Activities.QueryCorrelationInitializer>.<br /><br /> Chcete-li upravit **CorrelationType**<br /><br /> 1.  Karta na konkrétní řádek v **přidat inicializátoru** DataGrid.<br />2.  Stisknutím kláves Ctrl + Tab k nastavení fokusu **CorrelationTypeComboBox**<br />3.  Stiskněte klávesu Alt + Šipka dolů objevil **ComboBox** a upravit ho.|
-|**Dotazy XPath**|Dvojice klíč/hodnota, která obsahuje dotazy použitou k extrakci korelace data z příchozí a odchozí zprávy. Tento seznam je platný pouze při použití <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> typy.|
+|-|-----------------|
+|**Přidat inicializátor**|Klikněte na tlačítko **přidat inicializační** políčko k přidání dalších inicializátor kolekce.|
+|**Typ korelace**|Určuje typ korelace. Existují čtyři typy lze vybírat:<br /><br /> 1. Korelace inicializátoru zpětného volání k určení <xref:System.ServiceModel.Activities.CallbackCorrelationInitializer>.<br />2. Korelace inicializátoru kontext k určení <xref:System.ServiceModel.Activities.CorrelationInitializer>.<br />3. Inicializátoru korelace požadavku a odpovědi k určení <xref:System.ServiceModel.Activities.RequestReplyCorrelationInitializer>.<br />4. Inicializátor korelace dotazu k určení <xref:System.ServiceModel.Activities.QueryCorrelationInitializer>.<br /><br /> Chcete-li upravit **CorrelationType**<br /><br /> 1. Karty na konkrétní řádek v **přidat inicializátor** ovládacího prvku DataGrid.<br />2. K nastavení fokusu **CorrelationTypeComboBox**, stiskněte klávesu **Ctrl**+**kartu**.<br />3. Stisknutím klávesy Alt + Šipka dolů objevil **– pole se seznamem** a upravit ho.|
+|**Dotazy XPath**|Dvojice klíč/hodnota, která obsahuje dotazy používané k extrakci korelace dat z příchozí a odchozí zprávy. Tento seznam je platný pouze při použití <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> typy.|
 
 ## <a name="to-launch-the-add-correlation-initializers-dialog-box"></a>Chcete-li spustit dialogové okno Přidat inicializátory korelace
- **Přidat inicializátory korelace** dialogové okno používá **odeslat**, **Receive**, **ReceiveAndSendReply**, a  **SendAndReceiveReply** Designer. K nim přistupovat je podobný v každém případě a případu, který zahrnuje **Receive** Návrhář znázorňují postup je tady použijte.
 
- **Receive** Návrhář aktivity můžete přetáhnout z **sada nástrojů** a vynechaných na [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] prostor kdekoli aktivity jsou obvykle umístěny. Tím se vytvoří <xref:System.ServiceModel.Activities.Receive> aktivitu výchozí <xref:System.Activities.Activity.DisplayName%2A> Receive. Vyberte **Receive** Návrhář aktivity a klikněte na tlačítko se třemi tečkami vedle textu (kolekce) pro **CorrelationInitializers** v mřížce vlastnost pro vlastnost **přidat Inicializátory korelace** dialogové okno se objeví.
+ **Přidat inicializátory korelace** dialogové okno používá **odeslat**, **Receive**, **ReceiveAndSendReply**, a  **SendAndReceiveReply** návrháře. Přístup k nim je podobné jako v každém případě a případ, který zahrnuje **Receive** návrháře se zde používá k znázorňují postup.
 
-## <a name="see-also"></a>Viz také
+ **Receive** návrháře aktivit můžete přetáhnout z **nástrojů** a vyřadit na povrch návrháře postupu provádění bez ohledu na to aktivity jsou umístěny. Vyřazení **Receive** vytvoří Návrhář aktivity <xref:System.ServiceModel.Activities.Receive> aktivity s výchozím <xref:System.Activities.Activity.DisplayName%2A> Receive. Vyberte **Receive** návrháře aktivit a klikněte na tlačítko se třemi tečkami vedle textu (kolekce) pro **correlationinitializers uveden** v mřížce vlastností pro vlastnost **přidat Inicializátory korelace** dialogového okna.
+
+## <a name="see-also"></a>Viz také:
 
 - [Korelace dialogové okno Přidat](http://msdn.microsoft.com/en-us/9e41a149-e8ab-41b1-8886-ea06a63041b6)
 - [Dialogové okno Inicializace korelace](../workflow-designer/initialize-correlation-dialog-box.md)

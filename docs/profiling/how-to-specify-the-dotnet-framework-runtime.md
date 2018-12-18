@@ -13,13 +13,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: c52cecb30bdaa4daab46c7359e255d52d71d1597
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e85e1c571ecb900d5ce7ffdecf8e85b8c367de5c
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34844131"
 ---
-# <a name="how-to-specify-the-net-framework-runtime"></a>Postupy: Zadejte modul Runtime rozhraní .NET Framework
+# <a name="how-to-specify-the-net-framework-runtime"></a>Postupy: Zadejte modul runtime rozhraní .NET Framework
 
 S vydáním [!INCLUDE[net_v40_long](../code-quality/includes/net_v40_long_md.md)], aplikace se může skládat z modulů, které byly vytvořeny pomocí různých verzích [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] spuštění. Ve výchozím nastavení profilu profilace nástroje sady Visual Studio první modul runtime, který je načten aplikací. Můžete zadat běhu profilu při spuštění aplikace s profilerem a při připojení profileru k aplikaci již spuštěné.
 
@@ -37,9 +38,9 @@ S vydáním [!INCLUDE[net_v40_long](../code-quality/includes/net_v40_long_md.md)
 
 ## <a name="to-specify-the-net-framework-run-time-to-profile-when-attaching-the-profiler-to-an-application"></a>Chcete-li určit běhu rozhraní .NET Framework profil při připojení profileru k aplikaci
 
-1. V nabídce analyzovat přejděte na profileru a pak klikněte na tlačítko Připojit nebo odpojit.
+1. Na **analyzovat** nabídky, přejděte **profileru**, klikněte **Attach/Detach**.
 
-2. Na připojení profileru k procesu – dialogové okno klikněte na proces, který chcete profil.
+2. Na **připojit profileru proces** dialogovém okně klikněte na proces, který chcete profil.
 
      **Cílová verze CLR** pole se seznamem s **automatické** a verze [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] modulu runtime, zda jsou nainstalovány v počítači.
 

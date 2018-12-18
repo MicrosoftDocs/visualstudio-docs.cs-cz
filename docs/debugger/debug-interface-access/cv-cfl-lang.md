@@ -1,5 +1,5 @@
 ---
-title: CV_CFL_LANG | Microsoft Docs
+title: CV_CFL_LANG – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c383fd188c035dfacf41cdf86a84b4afe8dfa40d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 63426af550894df0e9796babaec91ff5758bbf1e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49909905"
 ---
 # <a name="cvcfllang"></a>CV_CFL_LANG
-Určuje jazyk zdrojového kódu aplikace nebo propojené modulu.  
+Určuje jazyk zdrojového kódu aplikace nebo propojeném modulu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,16 +50,16 @@ typedef enum CV_CFL_LANG {
   
 ## <a name="elements"></a>Elementy  
  CV_CFL_C  
- Jazyk aplikace je C.  
+ Je aplikace jazyka C.  
   
  CV_CFL_CXX  
- Jazyk aplikace je C++.  
+ Je aplikace jazyka C++.  
   
  CV_CFL_FORTRAN  
- Jazyk aplikace je FORTRAN.  
+ Jazyk aplikace je až po FORTRAN.  
   
  CV_CFL_MASM  
- Jazyk aplikace je programu Microsoft Macro Assembler.  
+ Microsoft Macro Assembler je jazyk aplikace.  
   
  CV_CFL_PASCAL  
  Jazyk aplikace je Pascal.  
@@ -70,37 +71,37 @@ typedef enum CV_CFL_LANG {
  Jazyk aplikace je COBOL.  
   
  CV_CFL_LINK  
- Aplikace je modul generované linkeru.  
+ Aplikace je modul vytvořeného v propojovacím programu.  
   
  CV_CFL_CVTRES  
  Aplikace je modul prostředků převést pomocí nástroje CVTRES.  
   
  CV_CFL_CVTPGD  
- Aplikace je modul POGO optimalizované generovaný nástrojem CVTPGD.  
+ Aplikace je modul optimalizovaný POGO generovaný nástrojem CVTPGD.  
   
  CV_CFL_CSHARP  
- Jazyk aplikace je C#.  
+ Je aplikace jazyka C#.  
   
  CV_CFL_VB  
- Jazyk aplikace je jazyka Visual Basic.  
+ Je aplikace jazyka Visual Basic.  
   
  CV_CFL_ILASM  
- Jazyk aplikace je převodní jazyk sestavení (tedy sestavení Common Language Runtime (CLR)).  
+ Jazyk aplikace je sestavení převodní jazyk (to znamená, že sestavení Common Language Runtime (CLR)).  
   
  CV_CFL_JAVA  
- Jazyk aplikace je Java.  
+ Je aplikace jazyka Java.  
   
  CV_CFL_JSCRIPT  
  Jazyk aplikace je Jscript.  
   
  CV_CFL_MSIL  
- Jazyk aplikace je neznámý Microsoft zprostředkující jazyk (MSIL), může být způsobeno tím, pomocí [/ltgc (vytváření kódu v době propojování)](/cpp/build/reference/ltcg-link-time-code-generation) přepínače.  
+ Jazyk aplikace je neznámý Microsoft Intermediate Language (MSIL), může být způsobeno použitím [parametru/LTCG (generování kódu při propojování odkaz)](/cpp/build/reference/ltcg-link-time-code-generation) přepnout.  
   
  CV_CFL_HLSL  
- Aplikace jazyk je jazyk shaderu vysoké úrovně.  
+ Jazyk aplikace je vysoká úroveň shaderu jazyk.  
   
 ## <a name="remarks"></a>Poznámky  
- Hodnoty v tento výčet jsou vráceny prostřednictvím volání [idiasymbol::get_language –](../../debugger/debug-interface-access/idiasymbol-get-language.md) metoda.  
+ Hodnoty v tomto výčtu jsou vráceny prostřednictvím volání [idiasymbol::get_language –](../../debugger/debug-interface-access/idiasymbol-get-language.md) metody.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: cvconst.h  

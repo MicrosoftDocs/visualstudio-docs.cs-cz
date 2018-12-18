@@ -1,6 +1,7 @@
 ---
 title: 'CA2000: Uvolňujte objekty před ztrátou oboru'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -14,15 +15,20 @@ ms.assetid: 0c3d7d8d-b94d-46e8-aa4c-38df632c1463
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 436dec37598aac31d0de2e7cb495f49b2a0bf41e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 041cade3d1c65a40826920b94adf012aa9a4b021
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45549856"
 ---
 # <a name="ca2000-dispose-objects-before-losing-scope"></a>CA2000: Uvolňujte objekty před ztrátou oboru
+
 |||
 |-|-|
 |TypeName|DisposeObjectsBeforeLosingScope|
@@ -43,11 +49,11 @@ ms.lasthandoff: 04/19/2018
 
  Níže jsou uvedeny některé situace, ve kterých příkaz using nepostačuje pro ochranu objektů IDisposable a může způsobit výskyt upozornění CA2000.
 
--   Vracení uvolnitelného objektu vyžaduje, aby byl objekt zkonstruován v rámci bloku try/finally mimo blok using.
+- Vracení uvolnitelného objektu vyžaduje, aby byl objekt zkonstruován v rámci bloku try/finally mimo blok using.
 
--   Inicializace členů uvolnitelného objektu by neměla být provedena v rámci konstruktoru příkazu using.
+- Inicializace členů uvolnitelného objektu by neměla být provedena v rámci konstruktoru příkazu using.
 
--   Vnořené konstruktory, které jsou chráněny pouze jednou obslužnou rutinou výjimky. Například
+- Vnořené konstruktory, které jsou chráněny pouze jednou obslužnou rutinou výjimky. Například
 
     ```csharp
     using (StreamReader sr = new StreamReader(new FileStream("C:\myfile.txt", FileMode.Create)))
@@ -56,7 +62,7 @@ ms.lasthandoff: 04/19/2018
 
      způsobí výskyt upozornění CA2000, protože selhání vytvoření objektu StreamReader může vést k tomu, že objekt FileStream nebude nikdy uzavřen.
 
--   Dynamické objekty by k implementaci vzoru odstranění objektů IDisposable měly používat stínový objekt.
+- Dynamické objekty by k implementaci vzoru odstranění objektů IDisposable měly používat stínový objekt.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Nepotlačujte upozornění tohoto pravidla, pokud jste volali metodu na objekt, který volá metodu `Dispose`, jako například <xref:System.IO.Stream.Close%2A>, nebo pokud metoda, která vyvolala upozornění, vrátí objekt IDisposable zabalující objekt.
@@ -67,19 +73,20 @@ ms.lasthandoff: 04/19/2018
  [CA2202: Neuvolňujte objekty několikrát](../code-quality/ca2202-do-not-dispose-objects-multiple-times.md)
 
 ## <a name="example"></a>Příklad
- Při implementaci metody, která vrací uvolnitelný objekt, je zapotřebí použít blok try/finally bez použití bloku catch. Jedině tak zajistíte, aby byl objekt uvolněn. Pomocí bloku try/finally lze povolit vyvolání výjimek v místě selhání a zajistit, aby byl objekt uvolněn.
 
- V metodě OpenPort1 se volání za účelem otevření objektu ISerializable SerialPort nebo volání metody SomeMethod nemusí zdařit. V této implementaci je vyvoláno upozornění CA2000.
+Při implementaci metody, která vrací uvolnitelný objekt, je zapotřebí použít blok try/finally bez použití bloku catch. Jedině tak zajistíte, aby byl objekt uvolněn. Pomocí bloku try/finally lze povolit vyvolání výjimek v místě selhání a zajistit, aby byl objekt uvolněn.
 
- V metodě OpenPort2 jsou deklarovány dva objekty SerialPort a jsou nastaveny na hodnotu null:
+V metodě OpenPort1 se volání za účelem otevření objektu ISerializable SerialPort nebo volání metody SomeMethod nemusí zdařit. V této implementaci je vyvoláno upozornění CA2000.
 
--   Objekt `tempPort`, který se používá k testování toho, zda operace metody proběhly úspěšně.
+V metodě OpenPort2 jsou deklarovány dva objekty SerialPort a jsou nastaveny na hodnotu null:
 
--   Objekt `port`, který se používá pro návratovou hodnotu metody.
+- Objekt `tempPort`, který se používá k testování toho, zda operace metody proběhly úspěšně.
 
- Objekt `tempPort` je vytvořen a otevřen v rámci bloku `try` a jakákoli jiná požadovaná činnost je vykonána v rámci stejného bloku `try`. Na konci bloku `try` je otevřený port přiřazen objektu `port`, který bude vrácen, a objekt `tempPort` je nastaven na hodnotu `null`.
+- Objekt `port`, který se používá pro návratovou hodnotu metody.
 
- Blok `finally` ověřuje hodnotu `tempPort`. Pokud hodnota není null, operace se v rámci metody nezdařila a blok `tempPort` je uzavřen, aby bylo možné zajistit uvolnění jakýchkoli prostředků. Vrácený objekt portu bude obsahovat otevřený objekt SerialPort, pokud byly operace metody úspěšné, nebo bude mít hodnotu null, pokud se operace nezdaří.
+Objekt `tempPort` je vytvořen a otevřen v rámci bloku `try` a jakákoli jiná požadovaná činnost je vykonána v rámci stejného bloku `try`. Na konci bloku `try` je otevřený port přiřazen objektu `port`, který bude vrácen, a objekt `tempPort` je nastaven na hodnotu `null`.
+
+Blok `finally` ověřuje hodnotu `tempPort`. Pokud hodnota není null, operace se v rámci metody nezdařila a blok `tempPort` je uzavřen, aby bylo možné zajistit uvolnění jakýchkoli prostředků. Vrácený objekt portu bude obsahovat otevřený objekt SerialPort, pokud byly operace metody úspěšné, nebo bude mít hodnotu null, pokud se operace nezdaří.
 
 ```csharp
 public SerialPort OpenPort1(string portName)
@@ -125,7 +132,6 @@ Public Function OpenPort1(ByVal PortName As String) As SerialPort
 
 End Function
 
-
 Public Function OpenPort2(ByVal PortName As String) As SerialPort
 
    Dim tempPort As SerialPort = Nothing
@@ -157,9 +163,11 @@ End Function
 
  Chcete-li tento problém vyřešit, můžete zakázat generování kontrol přetečení kompilátorem jazyka Visual Basic v rámci projektu nebo upravit kód tak, jak je tomu v následující funkci CreateReader2.
 
- Zakázat generování kontroly přetečení, klikněte pravým tlačítkem na název projektu v Průzkumníku řešení a potom klikněte na **vlastnosti**. Klikněte na tlačítko **zkompilovat**, klikněte na tlačítko **Upřesnit možnosti kompilace**a potom zkontrolujte **odebrat kontroly přetečení celých**.
+ Pokud chcete zakázat generování kontrol přetečení, klikněte pravým tlačítkem na název projektu v Průzkumníku řešení a potom klikněte na **vlastnosti**. Klikněte na tlačítko **kompilaci**, klikněte na tlačítko **Upřesnit možnosti kompilace**a potom zkontrolujte **odebrat kontroly přetečení celých čísel**.
 
   [!code-vb[FxCop.Reliability.CA2000.DisposeObjectsBeforeLosingScope#1](../code-quality/codesnippet/VisualBasic/ca2000-dispose-objects-before-losing-scope-vboverflow_1.vb)]
 
-## <a name="see-also"></a>Viz také
- <xref:System.IDisposable> [Dispose – vzor](/dotnet/standard/design-guidelines/dispose-pattern)
+## <a name="see-also"></a>Viz také:
+
+- <xref:System.IDisposable>
+- [Vzor pro metodu Dispose](/dotnet/standard/design-guidelines/dispose-pattern)

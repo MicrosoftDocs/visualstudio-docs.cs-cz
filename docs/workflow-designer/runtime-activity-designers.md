@@ -1,21 +1,24 @@
 ---
-title: Modul runtime návrháře aktivit | Microsoft Docs
+title: Návrhář postupu provádění - návrháře aktivit pro modul Runtime
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 ms.assetid: be18aa36-7909-4dd6-a786-b46959675a58
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3069d4c5dde1235e9563c26c10af586001af007c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a519e59538501ceb9f698c89cb2f0c762c08fcd3
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31971542"
 ---
 # <a name="runtime-activity-designers"></a>Modul runtime návrháře aktivit
-Modul runtime návrháře aktivit se používají k zachování a ukončení aktivity pracovního postupu. Témata obsažené v této části poskytují pokyny o tom, jak používat [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] návrháře aktivit.
+Modul runtime návrháře aktivit se používají k zachování a ukončení aktivity pracovního postupu. Témata obsažené v této části poskytují pokyny o tom, jak používat návrháře aktivit pracovního postupu návrháře.
 
 ## <a name="related-sections"></a>Související oddíly
  [Tok řízení](../workflow-designer/control-flow-activity-designers.md)

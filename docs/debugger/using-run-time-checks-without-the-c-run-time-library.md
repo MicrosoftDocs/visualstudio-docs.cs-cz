@@ -25,18 +25,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 533e4254b6222af1713691a0c448cad1383cd273
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: a4fb9f61242490b30e1b89132f4e79fbb56d48de
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37056013"
 ---
 # <a name="using-run-time-checks-without-the-c-run-time-library"></a>Použití kontrol za běhu bez běhové knihovny jazyka C
 Pokud jste váš program bez běhové knihovny jazyka C, pomocí **/NODEFAULTLIB**a chcete použít kontroly runtime, je nutné propojit s RunTmChk.lib.  
   
  `_RTC_Initialize` Inicializuje váš program pro spuštění kontroly. Pokud nepropojíte s běhové knihovny jazyka C, musíte zkontrolovat, v tématu, jestli je váš program kompilovat s Kontrola chyb za běhu před voláním `_RTC_Initialize`, a to takto:  
   
-```  
+```cpp
 #ifdef __MSVC_RUNTIME_CHECKS  
     _RTC_Initialize();  
 #endif  
@@ -44,7 +45,7 @@ Pokud jste váš program bez běhové knihovny jazyka C, pomocí **/NODEFAULTLIB
   
  Pokud nepropojíte s běhové knihovny jazyka C, musí definovat taky funkci s názvem `_CRT_RTC_INITW`. `_CRT_RTC_INITW` uživatelem definované funkce se nainstaluje jako výchozí zpráv o chybách funkce, následujícím způsobem:  
   
-```  
+```cpp
 // C version:  
 _RTC_error_fnW __cdecl _CRT_RTC_INITW(  
         void *res0, void **res1, int res2, int res3, int res4)  

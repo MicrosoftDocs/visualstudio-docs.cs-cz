@@ -1,5 +1,5 @@
 ---
-title: Přidávání a odebírání stránky vlastností | Microsoft Docs
+title: Přidávání a odebírání stránek vlastností | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,22 +15,23 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8a8130056437bf35a1617544ae7d1ecfb9068946
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c487eb6bafdc66c715bc9466ea6aafed2e78d6fe
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39077877"
 ---
-# <a name="adding-and-removing-property-pages"></a>Přidávání a odebírání stránky vlastností
-Návrhář projektu poskytuje centralizované umístění pro správu vlastnosti projektu, nastavení a prostředky v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Zobrazí se jako v jednom okně systému [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] integrované vývojové prostředí (IDE) a obsahuje počet podokna na pravé straně, které jsou přístupné prostřednictvím karet na levé straně. Podokna (často označované jako stránky vlastností) v Návrháři projektu se liší podle typu projektu a jazyk. Návrhář projektu lze přistupovat pomocí **vlastnosti** příkaz na **projektu** nabídky.  
+# <a name="add-and-remove-property-pages"></a>Přidávat a odebírat stránky vlastností
+Poskytuje centralizovaného umístění pro správu vlastnosti projektu, nastavení a prostředky v Návrháři projektu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Zobrazí se jako v jednom okně [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] integrovaného vývojového prostředí (IDE) a obsahuje mnoho podokna na pravé straně, které jsou přístupné prostřednictvím karty na levé straně. Podokna (často označované jako stránky vlastností) v Návrháři projektu se liší podle typu projektu a jazyk. Návrhář projektu lze přistupovat pomocí **vlastnosti** příkaz **projektu** nabídky.  
   
- Dílčí projektu je často potřeba zobrazí další stránky vlastností v Návrháři projektu. Některé podtypy projektu, může vyžadovat odebrat stránky předdefinovaných vlastností. Buď provedete musí implementovat dílčí vašeho projektu <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> rozhraní a přepsat <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> metoda. Potlačení této metody a použitím `propId` parametr obsahuje jednu z hodnot <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> výčtu, můžete filtrovat, přidat nebo odebrat vlastnosti projektu. Například může být potřeba přidání stránky na stránkách vlastností závislá na konfiguraci. K tomu potřebujete filtrovat stránky závislá na konfiguraci vlastností a pak přidejte novou stránku do existujícího seznamu.  
+ Podtyp projektu je často potřeba zobrazí další stránky vlastností v Návrháři projektu. Některé podtypů projektů, může vyžadovat odebrat integrované vlastnosti stránky. Provést buď, musí implementovat vaše podtyp projektu <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> rozhraní a přepsat <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> metody. Přepíše tuto metodu a použitím `propId` parametr obsahující jednu z hodnot <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> výčet, můžete filtrovat, přidat nebo odebrat vlastnosti projektu. Například můžete potřebovat přidat stránku na stránkách vlastností závislé na konfiguraci. Chcete-li to provést, musíte k filtrování stránky vlastností závislé na konfiguraci a pak přidejte novou stránku do existujícího seznamu.  
   
-## <a name="adding-and-removing-property-pages-in-project-designer"></a>Přidávání a odebírání stránky vlastností v Návrháři projektu  
+## <a name="add-and-remove-property-pages-in-project-designer"></a>Přidávat a odebírat stránky vlastností v Návrháři projektu  
   
-#### <a name="to-remove-a-property-page-in-project-designer"></a>Chcete-li odebrat stránky vlastností v Návrháři projektu  
+### <a name="to-remove-a-property-page-in-project-designer"></a>Chcete-li odebrat stránky vlastností v Návrháři projektu  
   
-1.  Přepsání `GetProperty(uint itemId, int propId, out object property)` metoda k filtrování stránky vlastností a získat `clsids` seznamu.  
+1.  Přepsat `GetProperty(uint itemId, int propId, out object property)` metoda k filtrování stránky vlastností a získat `clsids` seznamu.  
   
     ```vb  
     Protected Overrides int GetProperty(uint itemId, int propId, out object property)  
@@ -75,7 +76,7 @@ Návrhář projektu poskytuje centralizované umístění pro správu vlastnosti
     }  
     ```  
   
-2.  Odeberte **události sestavení** získat stránky z `clsids` seznamu.  
+2.  Odeberte **události sestavení** stránky získané `clsids` seznamu.  
   
     ```vb  
     Private buildEventsPageGuid As String = "{1E78F8DB-6C07-4D61-A18F-7514010ABD56}"  
@@ -109,7 +110,7 @@ Návrhář projektu poskytuje centralizované umístění pro správu vlastnosti
     property = propertyPagesList;  
     ```  
   
-#### <a name="to-add-a-property-page-in-project-designer"></a>Přidání stránky vlastností v Návrháři projektu  
+### <a name="to-add-a-property-page-in-project-designer"></a>Přidání stránky vlastností v Návrháři projektu  
   
 1.  Vytvoření stránky vlastností, které chcete přidat.  
   
@@ -166,7 +167,7 @@ Návrhář projektu poskytuje centralizované umístění pro správu vlastnosti
     [MSVSIP.ProvideObject(typeof(DeployPropertyPage), RegisterUsing = RegistrationMethod.CodeBase)]  
     ```  
   
-3.  Přepsání `GetProperty(uint itemId, int propId, out object property)` metodu filtrovat stránky vlastností, získat `clsids` seznamu a přidat nové stránky vlastností.  
+3.  Přepsat `GetProperty(uint itemId, int propId, out object property)` metoda k filtrování stránky vlastností, získání `clsids` seznamu a přidat nové stránky vlastností.  
   
     ```vb  
     Protected Overrides Function GetProperty(ByVal itemId As UInteger, ByVal propId As Integer, ByRef [property] As Object) As Integer  
@@ -205,7 +206,7 @@ Návrhář projektu poskytuje centralizované umístění pro správu vlastnosti
     ```  
   
 > [!NOTE]
->  Všechny ukázky kódu, poskytnuté v tomto tématu jsou součástí většího příkladu v [VSSDK ukázky](http://aka.ms/vs2015sdksamples).  
+>  Všechny příklady kódu, které jsou uvedeny v tomto tématu jsou součástí většího příkladu v [VSSDK ukázky](http://aka.ms/vs2015sdksamples).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Podtypy projektů](../extensibility/internals/project-subtypes.md)

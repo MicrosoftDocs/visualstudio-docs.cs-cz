@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31477762"
 ---
 # <a name="graphics-object-table"></a>Tabulka grafických objektů
 Tabulka grafických objektů v aplikaci Visual Studio analýza grafických vám pomůže pochopit Direct3D – objekty, které podporují rámec hry nebo aplikace.  

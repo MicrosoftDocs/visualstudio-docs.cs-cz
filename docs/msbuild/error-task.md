@@ -1,5 +1,5 @@
 ---
-title: Error – úloha | Microsoft Docs
+title: Error – úloha | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -20,35 +20,37 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f43f585320c34da17948e30d2672de9c9aa51e4
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a9568b27b65045c1b3a4495adff83f0b972e342f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49911262"
 ---
 # <a name="error-task"></a>Error – úloha
-Zastaví sestavení a protokoly chybu založené na příkazu vyhodnotí podmíněného.  
-  
+Sestavení se zastaví a protokoly chybu na základě Vyhodnocená podmíněného příkazu.  
+
 ## <a name="parameters"></a>Parametry  
- V následující tabulce jsou popsány parametry `Error` úloh.  
-  
-|Parametr|Popis|  
-|---------------|-----------------|  
-|`Code`|Volitelné `String` parametr.<br /><br /> Kód chyby pro přidružení k chybě.|  
-|`File`|Volitelné `String` parametr.<br /><br /> Název souboru, který obsahuje chybu. Pokud je zadán žádný název souboru, použije se souboru, který obsahuje chyby úlohy.|  
-|`HelpKeyword`|Volitelné `String` parametr.<br /><br /> Klíčové slovo nápovědy pro přidružení k chybě.|  
-|`Text`|Volitelné `String` parametr.<br /><br /> Text chyby, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] protokoly, pokud `Condition` vyhodnocen jako parametr `true`.|  
-  
+ Následující tabulka popisuje parametry `Error` úloh.  
+
+
+| Parametr | Popis |
+|---------------| - |
+| `Code` | Volitelné `String` parametru.<br /><br /> Kód chyby, které chcete přidružit k chybě. |
+| `File` | Volitelné `String` parametru.<br /><br /> Název souboru, který obsahuje chybu. Pokud je k dispozici žádný název souboru, soubor obsahující chyby úkolů se použije. |
+| `HelpKeyword` | Volitelné `String` parametru.<br /><br /> Klíčové slovo nápovědy pro přidružení k chybě. |
+| `Text` | Volitelné `String` parametru.<br /><br /> Text chyby, která [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] protokoly, pokud `Condition` vyhodnotí jako parametr `true`. |
+
 ## <a name="remarks"></a>Poznámky  
- `Error` Úloha umožňuje [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projekty vydávat text chyby protokolovacích nástrojů a zastavit provádění sestavení.  
-  
- Pokud `Condition` vyhodnocen jako parametr `true`, sestavení se zastaví a zaznamenána chyba. Pokud `Condition` parametr neexistuje, chyba je zaznamenána do protokolu a sestavení provádění zastaví. Další informace o protokolování naleznete v tématu [získání sestavení protokoly](../msbuild/obtaining-build-logs-with-msbuild.md).  
-  
- Kromě výše uvedených parametrů tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třída, které dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrech a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).  
-  
+ `Error` Úloha umožňuje [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] sestavení projektů vydat Protokolovací nástroje text chyby a zastavit provádění.  
+
+ Pokud `Condition` vyhodnotí jako parametr `true`, sestavení je zastavená a je zaznamenána chyba. Pokud `Condition` neexistuje parametr, se protokoluje chyby a sestavení zastaví provádění. Další informace o protokolování naleznete v tématu [protokoly o sestavení získání](../msbuild/obtaining-build-logs-with-msbuild.md).  
+
+ Kromě výše uvedených parametrů zdědí tento úkol parametry ze <xref:Microsoft.Build.Tasks.TaskExtension> třída, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).  
+
 ## <a name="example"></a>Příklad  
- Následující příklad kódu ověřuje, že všechny požadované, jsou nastavené vlastnosti. Pokud nejsou nastavená, vyvolá událost chyby projekt a protokoly hodnotu `Text` parametr `Error` úloh.  
-  
+ Následující příklad kódu ověřuje, že všechny požadované vlastnosti nastavené. Pokud nejsou nastavená, projektu vyvolá událost chyby a protokoly hodnotu `Text` parametr `Error` úloh.  
+
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
     <Target Name="ValidateCommandLine">  
@@ -62,7 +64,7 @@ Zastaví sestavení a protokoly chybu založené na příkazu vyhodnotí podmín
     ...  
 </Project>  
 ```  
-  
-## <a name="see-also"></a>Viz také  
+
+## <a name="see-also"></a>Viz také:  
  [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)   
- [Získávání protokolů o sestavení](../msbuild/obtaining-build-logs-with-msbuild.md)
+ [Získání protokolů o sestavení](../msbuild/obtaining-build-logs-with-msbuild.md)

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31139367"
 ---
 # <a name="validating-breakpoints-in-a-legacy-language-service"></a>Ověřování zarážky ve službě jazyk starší verze
 Zarážku označuje, že spuštění programu by se měla zastavit na určitém místě, když je spuštěn v ladicí program. Uživatele můžete umístit zarážku na kterýkoli řádek v zdrojový soubor, protože editoru nemá žádné informace o co se považuje za platné umístění pro zarážky. Při spuštění ladicího programu všechny označený zarážky (označovaný jako čekající na vyřízení zarážky) je vázána na požadované místo v běžící aplikaci. Ve stejnou dobu, kdy se ověřují zarážky zajistit, aby se označit platný kód umístění. Například zarážky na komentář není platný, protože neexistuje žádný kód v tomto umístění ve zdrojovém kódu. Ladicí program zakáže neplatný zarážky.  

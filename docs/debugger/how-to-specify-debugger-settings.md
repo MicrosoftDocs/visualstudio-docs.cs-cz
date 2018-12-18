@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: určení nastavení ladicího programu | Microsoft Docs'
+title: 'Postupy: určení nastavení ladicího programu | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -21,29 +21,30 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 489966bb3a596551e1b687f3dedac228171f7ebf
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 04d309c8d0395869e1a86b4b01dfaba4245447bd
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44279199"
 ---
 # <a name="how-to-specify-debugger-settings"></a>Postupy: Určení nastavení ladicího programu
-V [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], můžete určit různé nastavení ladicího programu chování, včetně zobrazení proměnné, jestli jsou uvedené některé upozornění, jak jsou nastavit zarážky a jak ovlivňuje narušující spuštěné programy. Určení nastavení ladicího programu v **možnosti** dialogové okno.  
+V [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], můžete zadat různá nastavení pro chování ladicího programu, včetně zobrazení proměnné, určuje, zda jsou uvedeny některé upozornění, jak nastavit zarážky a jak zásadní ovlivňuje spuštěné programy. Určení nastavení ladicího programu v **možnosti** dialogové okno.  
   
-### <a name="to-set-debugger-options"></a>Nastavení možností ladicího programu  
+### <a name="to-set-debugger-options"></a>Chcete-li nastavit možnosti ladicího programu  
   
 1.  Na **nástroje** nabídky, klikněte na tlačítko **možnosti**.  
   
-2.  V **možnosti** dialogové okno, otevřete **ladění** složky.  
+2.  V **možnosti** dialogovém okně Otevřít **ladění** složky.  
   
-3.  V **ladění** složky, vyberte kategorii požadované možnosti.  
+3.  V **ladění** složky, zvolte kategorii požadované možnosti.  
   
-     Nejběžnější možnosti jsou umístěné v **Obecné** kategorie. Další informace najdete v tématu [Obecné, ladění, dialogové okno Možnosti](../debugger/general-debugging-options-dialog-box.md).  
+     Nejběžnější možnosti jsou umístěny v **Obecné** kategorie. Další informace najdete v tématu [Obecné, ladění, dialogové okno Možnosti](../debugger/general-debugging-options-dialog-box.md).  
   
-4.  Vyberte nebo zrušte zaškrtnutí možnosti na požadovanou možnost. Stisknutím klávesy F1 nápovědu o možnostech.  
+4.  Vyberte nebo zrušte zaškrtnutí možnosti na požadovanou možnost. Stisknutím klávesy F1 zobrazíte nápovědu o možnostech.  
   
 ## <a name="see-also"></a>Viz také  
  [Obecné, ladění, dialogové okno Možnosti](../debugger/general-debugging-options-dialog-box.md)   
- [Upravit a pokračovat, ladění, dialogové okno Možnosti](http://msdn.microsoft.com/Library/009d225f-ef65-463f-a146-e4c518f86103)   
+ [Upravit a pokračovat, ladění, dialogové okno Možnosti](https://msdn.microsoft.com/library/bcew296c.aspx)   
  [Nastavení ladicího programu a příprava](../debugger/debugger-settings-and-preparation.md)   
  [Běžná makra pro příkazy a vlastnosti sestavení](/cpp/ide/common-macros-for-build-commands-and-properties)

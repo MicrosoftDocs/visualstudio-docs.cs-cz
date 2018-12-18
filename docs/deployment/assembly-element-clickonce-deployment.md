@@ -1,5 +1,5 @@
 ---
-title: '&lt;sestavení&gt; – Element (ClickOnce – nasazení) | Microsoft Docs'
+title: '&lt;sestavení&gt; – Element (nasazení ClickOnce) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -18,18 +18,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ab58cb90f9486c3a233d5173db340be3ee5f034
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c9d72eafb03f22a01d22894bb887085648c324e3
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39080630"
 ---
-# <a name="ltassemblygt-element-clickonce-deployment"></a>&lt;sestavení&gt; – Element (ClickOnce – nasazení)
+# <a name="ltassemblygt-element-clickonce-deployment"></a>&lt;sestavení&gt; – element (nasazení ClickOnce)
 Element nejvyšší úrovně pro manifest nasazení.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```xml  
   
       <assembly    
    manifestVersion  
@@ -37,18 +38,18 @@ Element nejvyšší úrovně pro manifest nasazení.
 ```  
   
 ## <a name="elements-and-attributes"></a>Elementy a atributy  
- `assembly` Element je kořenový element a musí se. Musí být jeho první prvek `assemblyIdentity` elementu. Manifestu elementy musí být v následujících oborů názvů: `urn:schemas-microsoft-com:asm.v1`, `urn:schemas-microsoft-com:asm.v2`, a `http://www.w3.org/2000/09/xmldsig#`. Podřízené elementy sestavení musí být také v těchto oborů názvů dědičnosti nebo označení.  
+ `assembly` Prvek je kořenovým elementem a je povinný. Musí být jeho první prvek `assemblyIdentity` elementu. Manifestu elementy musí být v následujících oborů názvů: `urn:schemas-microsoft-com:asm.v1`, `urn:schemas-microsoft-com:asm.v2`, a `http://www.w3.org/2000/09/xmldsig#`. Podřízené prvky prvku sestavení musí být také v těchto oborech názvů, dědičnosti nebo označování.  
   
- `assembly` Element má následující atribut.  
+ `assembly` Element má tento atribut.  
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|`manifestVersion`|Požadováno. Tento atribut musí být nastaven na `1.0`.|  
+|`manifestVersion`|Požadováno. Tento atribut musí být nastaven `1.0`.|  
   
 ## <a name="example"></a>Příklad  
- Následující příklad kódu ukazuje `assembly` element v manifestu nasazení pro aplikace nasazené pomocí [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]. Tento příklad kódu je součástí většího příkladu vztahujícího se pro [Manifest aplikace ClickOnce](../deployment/clickonce-deployment-manifest.md) tématu.  
+ Následující příklad kódu ukazuje `assembly` elementu v manifestu nasazení pro aplikace nasazené pomocí [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]. Tento příklad kódu je součástí většího příkladu určeného pro [Manifest nasazení ClickOnce](../deployment/clickonce-deployment-manifest.md) tématu.  
   
-```  
+```xml  
 <asmv1:assembly   
   xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd"  
   manifestVersion="1.0"  
@@ -63,6 +64,6 @@ Element nejvyšší úrovně pro manifest nasazení.
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [ClickOnce – Manifest nasazení](../deployment/clickonce-deployment-manifest.md)   
- [\<sestavení > elementu](../deployment/assembly-element-clickonce-application.md)
+## <a name="see-also"></a>Viz také:  
+ [ClickOnce – manifest nasazení](../deployment/clickonce-deployment-manifest.md)   
+ [\<sestavení > – element](../deployment/assembly-element-clickonce-application.md)

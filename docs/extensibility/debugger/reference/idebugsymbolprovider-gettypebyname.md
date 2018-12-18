@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetTypeByName | Microsoft Docs
+title: IDebugSymbolProvider::GetTypeByName | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 565972b0f1f7d1f2e5e2ffd751cba60621fe284d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8b95117cd37f9ca6c2bfe3d2276bb03994f7a07b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49924734"
 ---
 # <a name="idebugsymbolprovidergettypebyname"></a>IDebugSymbolProvider::GetTypeByName
-Tato metoda mapuje na typ symbolu názvu symbolu.  
+Tato metoda název symbolu mapuje na typ symbolu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,16 +45,16 @@ int GetTypeByName(
   
 #### <a name="parameters"></a>Parametry  
  `pszClassName`  
- [v] Název symbolu.  
+ [in] Název symbolu.  
   
  `nameMatch`  
- [v] Vybere typ shodu, například malá a velká písmena. Hodnota z [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md) výčtu.  
+ [in] Vybere typ shody, například velká a malá písmena. Hodnota z [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md) výčtu.  
   
  `ppField`  
  [out] Vrátí typ symbolu jako [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objektu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
  Tato metoda je obecná verze [GetClassTypeByName](../../../extensibility/debugger/reference/idebugsymbolprovider-getclasstypebyname.md).  

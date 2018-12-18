@@ -14,18 +14,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6469e6f1b2e32993dbca196b0d4b86999569d71d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: faff304831f8f2ffabed925d2ab3dfc5d64c18af
+ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35237455"
 ---
 # <a name="markerserieswriteflag-method"></a>marker_series::write_flag – metoda
 Zapíše příznak vizualizér souběžnosti trasovacího souboru.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void write_flag(  
    _In_ LPCTSTR _Format,  
    ...  
@@ -59,9 +60,9 @@ void write_flag(
  Kategorie.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** cvmarkersobj.h  
+ **Záhlaví:** *cvmarkersobj.h*  
   
  **Namespace:** Concurrency::Diagnostic –  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [marker_series – třída](../profiling/marker-series-class.md)

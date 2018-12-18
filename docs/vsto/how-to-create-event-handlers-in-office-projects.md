@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: vytváření obslužných rutin událostí v projektech Office | Microsoft Docs'
+title: 'Postupy: vytváření obslužných rutin událostí v projektech pro systém Office'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,13 +18,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 833e41979d1dac9def7e647b396161d0ac5e2b67
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8b7e55ee7f094ad104d9c8eb6ef3057621bcccee
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35254241"
 ---
-# <a name="how-to-create-event-handlers-in-office-projects"></a>Postupy: Vytváření obslužných rutin událostí v projektech pro systém Office
+# <a name="how-to-create-event-handlers-in-office-projects"></a>Postupy: vytváření obslužných rutin událostí v projektech pro systém Office
   Existuje několik způsobů vytvoření obslužné rutiny událostí v jazyce Visual Basic a C#. V návrhovém zobrazení můžete vytvořit výchozí obslužné rutiny události pro ovládací prvky poklepáním na ovládací prvek nebo pomocí podokna události **vlastnosti** okno pro vytvoření obslužné rutiny pro všechny události v ovládacím prvku. Pokud jste v zobrazení kódu, nemusí ale chcete přepnout do zobrazení návrhu a vytvořit obslužnou rutinu události.  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
@@ -52,9 +53,9 @@ ms.lasthandoff: 04/16/2018
   
      Visual Studio automaticky dokončení řádek kódu, vytvoří obslužné rutiny události a Posune kurzor na nově vytvořený obslužné rutině.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Psaní kódu v řešeních pro systém Office](../vsto/writing-code-in-office-solutions.md)   
- [Návod: Programové ošetření událostí ovládacího prvku NamedRange](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)   
- [Sestavování řešení pro systém Office](../vsto/building-office-solutions.md)  
+ [Návod: Program ošetření událostí ovládacího prvku NamedRange](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)   
+ [Sestavení řešení pro systém Office](../vsto/building-office-solutions.md)  
   
   

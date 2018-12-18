@@ -1,5 +1,5 @@
 ---
-title: CV_HREG_e | Microsoft Docs
+title: Cv_hreg_e – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,17 +14,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: aa6e567f811f163f8b79b277f5e0c8d2e4fc775b
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 091b91cb896d0e2d5753f9c3b55cac58deee8cd5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49848602"
 ---
 # <a name="cvhrege"></a>CV_HREG_e
-Určuje cílový registrace.  
+Určuje cílový registru.  
   
 > [!NOTE]
->  Protože `CV_HREG_e` výčet je duplicitní v celé jeho šíři zde příliš velký, zkrácenou verzi k dispozici jako odkaz. Položky jsou označeno kurzívou. Úplný výčet je k dispozici v záhlaví souboru cvconst.h.  
+>  Vzhledem k tomu, `CV_HREG_e` výčet je příliš velký, aby duplicitní v celém rozsahu tady, zkrácenou verzi se poskytuje jako odkaz. Chybějící položky jsou zapisované kurzívou. V souboru hlaviček cvconst.h je k dispozici úplný výčet.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -411,42 +412,42 @@ enum CV_HREG_e {
   
 ## <a name="elements"></a>Elementy  
  CV_REG_ *  
- Zaregistruje používá Intel 80 x 86 a ix86 procesory a p kód.  
+ Registry používají Intel 80 x 86 a ix86 procesory a p-code.  
   
  CV_R68_ *  
- Zaregistruje používané 68K procesoru.  
+ Registry používané 68K procesoru.  
   
  CV_M4_ *  
- Zaregistruje používané MIPS 4000 řady procesoru.  
+ Registry používá řadu procesorem MIPS 4000.  
   
  CV_ALPHA_ *  
- Zaregistruje používá digitální zařízení Corporation Alpha AXP řady procesoru.  
+ Použít procesorem řady Digital Equipment Corporation alfa AXP registrů.  
   
  CV_PPC_ *  
- Zaregistruje používané Motorola/IBM PowerPC procesoru.  
+ Registry používané procesoru Motorola/IBM PowerPC.  
   
  CV_SH3_ * a CV_SH_\*  
- Zaregistruje používané Hitachi SH3 a Hitachi SH řady procesoru.  
+ Použít procesorem řady Hitachi SH3 a Hitachi SH registrů.  
   
  CV_ARM_ *  
- Zaregistruje používané procesory Advanced RISC Machine (ARM).  
+ Registry používané procesory Advanced RISC Machine (ARM).  
   
  CV_IA64_ *  
- Zaregistruje používané procesory Intel IA64 řady.  
+ Registry používá řadu procesorů Intel IA64.  
   
  CV_TRI_ *  
- Zaregistruje se používá technologie TriCore Infineon procesoru.  
+ Registry používané technologie TriCore Infineon procesoru.  
   
  CV_AM33_ *  
- Zaregistruje používané jednotky/Panasonic AM33 a související procesory.  
+ Registry používat jednotky/Panasonic AM33 a související s procesory.  
   
  CV_M32R_ *  
- Zaregistruje používané Mitsubishi M32R procesoru.  
+ Registry používané Mitsubishi M32R procesoru.  
   
 ## <a name="remarks"></a>Poznámky  
- Každý typ procesoru používá vlastní sadou registrů.  
+ Každý typ procesoru používá svou vlastní jedinečnou sadu registrů.  
   
- Hodnoty v tento výčet jsou předávány následujících metod:  
+ Hodnoty v tento výčet se předají do následujících metod:  
   
 -   [IDiaStackWalkFrame::get_registerValue](../../debugger/debug-interface-access/idiastackwalkframe-get-registervalue.md)  
   

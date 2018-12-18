@@ -1,5 +1,5 @@
 ---
-title: Spustit | Microsoft Docs
+title: Spuštění | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -10,24 +10,25 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cf374c03f7918e48c57f221ada22e43b435c0a78
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: dbecc61e5203495e33aa4417e954607d8cdf6be8
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35676527"
 ---
 # <a name="start"></a>Spustit
-**Spustit** možnost je VSPerfCmd.exe možnost, která inicializuje profileru pro zadanou metodu profilování.  
+**Start** volba je *VSPerfCmd.exe* možnost, která inicializuje možnost profileru zadané metodě profilování.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cmd  
 VSPerfCmd.exe /Start:Method /Output:FileName [Options]  
 ```  
   
 #### <a name="parameters"></a>Parametry  
  `Method`  
- Musí mít jednu z následujících klíčových slov:  
+ Musí být jedna z následujících klíčových slov:  
   
 -   **TRASOVÁNÍ** -určuje metody instrumentace.  
   
@@ -35,45 +36,45 @@ VSPerfCmd.exe /Start:Method /Output:FileName [Options]
   
 -   **POKRYTÍ** -určuje pokrytí kódu.  
   
--   **CONCURRENCY** -určuje metodu kolizí prostředku.  
+-   **SOUBĚŽNOST** -určuje metodu kolize prostředků.  
   
 ## <a name="required-options"></a>Požadované možnosti  
- **Výstup** možnost musí být zadán při **spustit** je zadán v příkazovém řádku.  
+ **Výstup** možnost musí být zadán při **Start** je zadán v příkazovém řádku.  
   
  **Výstup:** `filename`  
  Určuje název výstupního souboru.  
   
-## <a name="exclusive-options"></a>Vylučující možnosti  
- Tyto možnosti lze použít pouze s **spustit** možnost na příkazovém řádku.  
+## <a name="exclusive-options"></a>Výhradní možnosti  
+ Tyto možnosti lze použít pouze s **Start** možnost příkazového řádku.  
   
  **CrossSession**&#124;**CS**  
- Umožňuje napříč procesem vytváření profilů. Názvy možností **CrossSession** a **CS** jsou obě podporována.  
+ Umožňuje procesy profilace. Názvy možností **CrossSession** a **CS** jsou podporovány.  
   
  **Uživatel:**[`domain\`]`username`  
- Umožňuje klientský přístup k monitorování ze zadaného účtu.  
+ Umožňuje přístup klienta k monitoru ze zadaného účtu.  
   
- **WinCounter:** `Path` [**pro automatické označování**:`n`]  
- **WinCounter** určuje čítačů výkonu systému Windows má být zahrnut jako značky v profilaci datového souboru. **Pro automatické označování** Určuje interval v milisekundách mezi kolekcí datového souboru.  
+ **WinCounter:** `Path` [**Automark**:`n`]  
+ **WinCounter** určuje čítač výkonu Windows zahrnout jako značky v souboru dat profilování. **AutoMark** Určuje interval v milisekundách mezi kolekcemi datového souboru.  
   
 ## <a name="invalid-options"></a>Neplatné možnosti  
- Tyto možnosti nelze použít s **spustit** možnost na příkazovém řádku.  
+ Tyto možnosti nelze použít s **Start** možnost příkazového řádku.  
   
  **Status**  
- **Stav** se vztahují na tyto procesy, které jsou profilovaným. Zobrazí seznam procesy a vláken a jejich aktuální stav profilu (zapnuto nebo vypnuto). Například, pokud proces je zastavena **stav** nebude oznámí v sestavě. **Stav** vám ukáže, že je proces buď profilovaným nebo ne.  
+ **Stav** se vztahuje na tyto procesy, které jsou profilovány. Vypíše procesy a vlákna a jejich aktuální stavy profilu (zapnuto/vypnuto). Například, pokud proces zastavená **stav** nebude to znamenat v sestavě. **Stav** se zobrazí, že je buď profilována procesu nebo ne.  
   
  **Vypnutí**[**:**`Timeout`]  
- Vypne profileru.  
+ Vypne profilování.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak používat VSPerfCmd.exe **spustit** možnost k chybě při inicializaci profileru.  
+ Následující příklad ukazuje způsob použití *VSPerfCmd.exe* **Start** možnost pro inicializaci profileru.  
   
-```  
+```cmd  
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp  
 VSPerfCmd.exe /Launch:TestApp.exe  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [Vsperfcmd –](../profiling/vsperfcmd.md)   
- [Profilace samostatných aplikací](../profiling/command-line-profiling-of-stand-alone-applications.md)   
- [Profilace webových aplikací ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
- [Profilace služeb](../profiling/command-line-profiling-of-services.md)
+## <a name="see-also"></a>Viz také:  
+ [Nástroj VSPerfCmd](../profiling/vsperfcmd.md)   
+ [Samostatné aplikace profilu](../profiling/command-line-profiling-of-stand-alone-applications.md)   
+ [Webové aplikace ASP.NET profilu](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
+ [Profil služby](../profiling/command-line-profiling-of-services.md)

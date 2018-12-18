@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: programové ukládání a načítání hodnot data do oblastí aplikace Excel | Microsoft Docs'
+title: 'Postupy: Programová ukládání a načítání hodnot data do oblastí aplikace Excel'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -22,72 +22,73 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b67bc45218aa6fb537516f426f1ac3b25fad698c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0f1abe0e797a65886f595913f8e6495ec084b7e2
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35676065"
 ---
-# <a name="how-to-programmatically-store-and-retrieve-date-values-in-excel-ranges"></a>Postup: Ukládání hodnot data do oblastí aplikace Excel a jejich načítání prostřednictvím kódu programu
-  Můžete ukládat a načítat hodnoty v <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek nebo objekt rozsahu nativní aplikace Excel.  
+# <a name="how-to-programmatically-store-and-retrieve-date-values-in-excel-ranges"></a>Postupy: Programová ukládání a načítání hodnot data do oblastí aplikace Excel
+  Můžete ukládat a načítat hodnoty v <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek nebo rozsah objekt nativní aplikace Excel.  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
- Pokud ukládáte hodnotu data, která spadá na nebo po 1/1/1900 v rozsahu pomocí nástrojů pro vývoj pro Office v sadě Visual Studio, je uložený ve formátu OLE automatizace (OA). Je nutné použít <xref:System.DateTime.FromOADate%2A> metoda se načíst hodnotu dat OLE automatizace (OA). Pokud je starší než 1/1/1900 datum, je uložený jako řetězec.  
+ Pokud uložíte hodnotu data, která nebo po 1/1/1900 v rozsahu pomocí nástroje pro vývoj pro Office v sadě Visual Studio, je uložen ve formátu OLE Automation (OA). Je nutné použít <xref:System.DateTime.FromOADate%2A> metody k načtení hodnoty data OLE Automation (OA). Pokud je datum starší než 1/1/1900, uloží se jako řetězec.  
   
 > [!NOTE]  
->  Data aplikace Excel se liší od automatizace OLE data pro prvních dvou měsíců 1900. Existují také rozdíly pokud **1904 datum systému** zaškrtnutá možnost. Příklady kódu níže nezabývají tyto rozdíly.  
+>  Data aplikace Excel se liší od data OLE Automation na prvních dvou měsíců 1900. Existují také rozdíly pokud **1904 datum systému** zaškrtnutá možnost. Následující příklady kódu se nezabývají tyto rozdíly.  
   
-## <a name="using-a-namedrange-control"></a>Použití ovládacího prvku NamedRange  
+## <a name="use-a-namedrange-control"></a>Použití ovládacího prvku NamedRange  
   
--   V tomto příkladu je pro úpravy na úrovni dokumentů. Následující kód musí být umístěny v listu třída, není v `ThisWorkbook` třídy.  
+-   Tento příklad je určený pro přizpůsobení na úrovni dokumentu. Následující kód musí být umístěn ve třídě list, není v `ThisWorkbook` třídy.  
   
-#### <a name="to-store-a-date-value-in-a-named-range"></a>K uložení hodnota kalendářního data v pojmenované oblasti  
+### <a name="to-store-a-date-value-in-a-named-range"></a>K uložení hodnoty datum v pojmenované oblasti  
   
-1.  Vytvoření <xref:Microsoft.Office.Tools.Excel.NamedRange> řízení na buňky **A1**.  
+1.  Vytvoření <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacího prvku v buňce **A1**.  
   
      [!code-csharp[Trin_VstcoreExcelAutomation#50](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#50)]
      [!code-vb[Trin_VstcoreExcelAutomation#50](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#50)]  
   
-2.  Nastavená jako hodnota pro dnešní datum `NamedRange1`.  
+2.  Nastavit jako hodnotu pro dnešní datum `NamedRange1`.  
   
      [!code-csharp[Trin_VstcoreExcelAutomation#51](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#51)]
      [!code-vb[Trin_VstcoreExcelAutomation#51](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#51)]  
   
-#### <a name="to-retrieve-a-date-value-from-a-named-range"></a>Načíst hodnotu data z pojmenované oblasti  
+### <a name="to-retrieve-a-date-value-from-a-named-range"></a>Načíst hodnotu data z pojmenované oblasti  
   
 1.  Načíst hodnotu data z `NamedRange1`.  
   
      [!code-csharp[Trin_VstcoreExcelAutomation#52](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#52)]
      [!code-vb[Trin_VstcoreExcelAutomation#52](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#52)]  
   
-## <a name="using-native-excel-ranges"></a>Pomocí nativní oblastí aplikace Excel  
+## <a name="use-native-excel-ranges"></a>Použít nativní oblastí aplikace Excel  
   
-#### <a name="to-store-a-date-value-in-a-native-excel-range-object"></a>K uložení hodnota kalendářního data v objektu rozsah nativní aplikace Excel  
+### <a name="to-store-a-date-value-in-a-native-excel-range-object"></a>K uložení hodnoty datum v rozsahu objektu nativní aplikace Excel  
   
-1.  Vytvoření <xref:Microsoft.Office.Interop.Excel.Range> buňku, která představuje **A1**.  
+1.  Vytvoření <xref:Microsoft.Office.Interop.Excel.Range> , který představuje buňku **A1**.  
   
      [!code-csharp[Trin_VstcoreExcelAutomationAddIn#25](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#25)]
      [!code-vb[Trin_VstcoreExcelAutomationAddIn#25](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#25)]  
   
-2.  Nastavená jako hodnota pro dnešní datum `rng`.  
+2.  Nastavit jako hodnotu pro dnešní datum `rng`.  
   
      [!code-csharp[Trin_VstcoreExcelAutomationAddIn#26](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#26)]
      [!code-vb[Trin_VstcoreExcelAutomationAddIn#26](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#26)]  
   
-#### <a name="to-retrieve-a-date-value-from-a-native-excel-range-object"></a>Načíst hodnotu data z objektu rozsah nativní aplikace Excel  
+### <a name="to-retrieve-a-date-value-from-a-native-excel-range-object"></a>Načíst hodnotu data z nativní objektu Excelového rozsahu  
   
 1.  Načíst hodnotu data z `rng`.  
   
      [!code-csharp[Trin_VstcoreExcelAutomationAddIn#27](../vsto/codesnippet/CSharp/trin_vstcoreexcelautomationaddin/ThisAddIn.cs#27)]
      [!code-vb[Trin_VstcoreExcelAutomationAddIn#27](../vsto/codesnippet/VisualBasic/trin_vstcoreexcelautomationaddin/ThisAddIn.vb#27)]  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Práce s oblastmi](../vsto/working-with-ranges.md)   
  [Přehled modelu objektů aplikace Excel](../vsto/excel-object-model-overview.md)   
- [NamedRange – ovládací prvek](../vsto/namedrange-control.md)   
+ [Namedrange – ovládací prvek](../vsto/namedrange-control.md)   
  [Postupy: odkazování na oblasti listů v kódu programu](../vsto/how-to-programmatically-refer-to-worksheet-ranges-in-code.md)   
  [Postupy: Přidání ovládacích prvků NamedRange do listů](../vsto/how-to-add-namedrange-controls-to-worksheets.md)   
- [Volitelné parametry v řešeních pro systém Office](../vsto/optional-parameters-in-office-solutions.md)  
+ [Volitelné parametry v řešeních pro systém Office](../vsto/optional-parameters-in-office-solutions.md)  
   
   

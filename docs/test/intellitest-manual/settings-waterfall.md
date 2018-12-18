@@ -1,6 +1,7 @@
 ---
-title: Nastavení vodopádu | Nástroj pro testování Microsoft IntelliTest Developer | Microsoft Docs
+title: Vodopádové nastavení | Nástroj pro testování Microsoft IntelliTest Developer
 ms.date: 05/02/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,27 +11,28 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 9265fd0ada4f966f5d5fba01591e10f5f0a4194f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 27eb9b7e3cda7c05515f5a7413b067dce2b8567e
+ms.sourcegitcommit: e481d0055c0724d20003509000fd5f72fe9d1340
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51000397"
 ---
-# <a name="settings-waterfall"></a>Nastavení vodopádu
+# <a name="settings-waterfall"></a>Vodopádové nastavení
 
-Koncept vodopádu nastavení znamená, že může uživatel zadat nastavení na **sestavení**, **přípojka** a **zkoumání** úroveň: 
+Koncept vodopádové nastavení znamená, že uživatel může zadat nastavení na **sestavení**, **testovacího přípravku**, a **zkoumání** úroveň:
 
-* Sestavení – [PexAssemblySettings](attribute-glossary.md#pexassemblysettings)
-* Přípojka - [PexClass](attribute-glossary.md#pexclass)
+* Sestavení - [PexAssemblySettings](attribute-glossary.md#pexassemblysettings)
+* Testovací přípravek - [PexClass](attribute-glossary.md#pexclass)
 * Zkoumání - [PexExplorationAttributeBase](attribute-glossary.md#pexexplorationattributebase)
 
-Nastavení zadané **sestavení** úroveň ovlivní všechny příslušenství a zkoumání v rámci této položky assembly. Nastavení zadané **přípojka** úroveň ovlivní všechny explorations v rámci této přípojka. Podřízené nastavení win: Pokud je nastavení definované v **sestavení** a **přípojka** úrovně, **přípojka** nastavení budou použita.
+Zadaný v nastavení **sestavení** úroveň ovlivňují všechny komunikací a zkoumání v rámci tohoto sestavení. Zadaný v nastavení **testovacího přípravku** úroveň ovlivňují všechny průzkumů v rámci této testovací přípravek. Nastavení win podřízené&mdash;Pokud nastavení je definován na **sestavení** a **testovacího přípravku** úrovně, **testovacího přípravku** nastavení jsou použita.
 
-Všimněte si, že některá nastavení jsou specifické pro **sestavení** úroveň nebo **přípojka** úroveň. 
+Všimněte si, že některá nastavení jsou specifická pro **sestavení** úroveň nebo **testovacího přípravku** úroveň.
 
 **Příklad**
 
-```
+```csharp
 using Microsoft.Pex.Framework;
 
 [assembly: PexAssemblySettings(MaxBranches = 1000)] // we override the default value of maxbranches
@@ -46,6 +48,6 @@ namespace MyTests
 }
 ```
 
-## <a name="got-feedback"></a>Zpětné vazby máte?
+## <a name="got-feedback"></a>Máte nějakou zpětnou vazbu?
 
-Vystavení vašich nápadů a funkce požadavky na  **[UserVoice](https://visualstudio.uservoice.com/forums/121579-visual-studio-2015/category/157869-test-tools?query=IntelliTest)**.
+Publikovat své nápady a funkce na požadavky [komunity vývojářů](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).

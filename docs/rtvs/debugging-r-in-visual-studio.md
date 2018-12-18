@@ -10,17 +10,18 @@ ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 3cc04188695daaf15821707350a84df9dfa5d891
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c89eed2f3e15259489ce43920b912db14ab862a6
+ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238323"
 ---
-# <a name="debugging-r-in-visual-studio"></a>Ladění R v sadě Visual Studio
+# <a name="debug-r-in-visual-studio"></a>Ladění R v sadě Visual Studio
 
 R nástrojů pro Visual Studio (RTVS) se integruje s úplné ladění prostředí sady Visual Studio (viz [ladění v sadě Visual Studio](../debugger/debugging-in-visual-studio.md). Tato podpora zahrnuje zarážky, připojení ke spuštěným procesům, proměnné provádějící kontrolu a sledováním a zkontrolujete zásobníku volání. V tomto článku, pak jsou zde popsány aspekty o ladění, které jsou jedinečné pro R a RTVS.
 
-Spuštění ladicího programu pro spuštění R soubor v projektu R je stejné jako u jiných typů projektů: použijte **ladění > Spustit ladění**, klávesy F5 nebo **zdrojový soubor spouštěcí** na panelu nástrojů ladění: 
+Spuštění ladicího programu pro spuštění R soubor v projektu R je stejné jako u jiných typů projektů: použijte **ladění** > **spustit ladění**, **F5** klíč, nebo **Zdrojový soubor spouštěcí** na panelu nástrojů ladění: 
 
 ![Ladicí program tlačítko start pro R](media/debugger-start-button.png)
 
@@ -36,7 +37,7 @@ Sourcing: c:\proj\rproject1\rproject1\Settings.R
 
 Všimněte si, že `rtvs::debug_source` funkce slouží k zdroje skriptu. Tato funkce není nutná, protože RTVS je potřeba upravit kód v rámci přípravy pro ladění. Při připojení pomocí žádné zdrojové příkaz RTVS a ladicí program Visual Studio automaticky použije `rtvs::debug_source`.
 
-Můžete také ručně připojit ladicí program z okna interaktivní přímo pomocí **R nástroje > relace > připojit ladicí program** příkazu, **ladění > připojit k R interaktivní** příkaz nebo  **Připojit ladicí program** příkazu na panelu nástrojů interaktivních okna. Po dokončení tak je vaší povinností zdrojové soubory, které chcete ladit. Pokud chcete ručně zdrojové soubory, ujistěte se, že používáte `rtvs::debug_source` a ne regulární `source` příkazu v jazyce R.
+Můžete také ručně připojit ladicí program z okna interaktivní přímo pomocí **R nástroje** > **relace** > **připojit ladicí program** příkaz, **ladění** > **připojit k R interaktivní** příkazu, nebo **připojit ladicí program** příkazu na panelu nástrojů interaktivních okna. Po dokončení tak je vaší povinností zdrojové soubory, které chcete ladit. Pokud chcete ručně zdrojové soubory, ujistěte se, že používáte `rtvs::debug_source` a ne regulární `source` příkazu v jazyce R.
 
 Toto připojení mezi ladicího programu a interaktivních okna usnadňuje provádět akce, jako je volání (a ladění) funkce s jiným parametrem hodnotami. Předpokládejme například, že máte následující funkci v souboru z domácích zdrojů (tj., který je načten do relace):
 

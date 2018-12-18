@@ -16,22 +16,23 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: eb86cc9809bcb620033820b8c422313305d95d53
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: fcafc9960f9ff4c053e63b1fc5abfd75bb41c995
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35254573"
 ---
 # <a name="modules-view"></a>Zobrazení modulů
 Zobrazení modulů uvádí moduly data profilování. Každý modul je kořenový uzel je hierarchický strom. PROFILOVANÉHO funkce modulu jsou uvedené pod tímto uzlem modulu. Pokud data profilování nebyla shromážděna pomocí metody vzorkování, informace z řádku je uvedena pod uzlu funkce a data ukazatel instrukce je uvedena pod uzlu řádku.  
   
  Rozbalit nebo sbalit na název modulu k zobrazení nebo zobrazení dat výkonu modulu zavřít.  
   
- Chcete-li přidat nebo odebrat sloupce, v okně sestavy klikněte pravým tlačítkem a pak vyberte **přidat nebo odebrat sloupce**. Data můžete seřadit kliknutím na název sloupce. Další informace najdete v tématu [postupy: přizpůsobení sloupců zobrazení sestavy](../profiling/how-to-customize-report-view-columns.md).  
+ Chcete-li přidat nebo odebrat sloupce, v okně sestavy klikněte pravým tlačítkem a pak vyberte **přidat nebo odebrat sloupce**. Data můžete seřadit kliknutím na název sloupce. Další informace najdete v tématu [postupy: přizpůsobení zobrazení sestav sloupce](../profiling/how-to-customize-report-view-columns.md).  
   
  Sloupce, které jsou k dispozici v zobrazení modulů závisí na profilování metody (vzorkování nebo instrumentace), která se používá ke shromažďování dat a jestli dat paměti .NET nebyla shromážděna v profilaci spustit.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Zobrazení modulů](../profiling/modules-view-sampling-data.md)   
  [Zobrazení modulů](../profiling/modules-view-instrumentation-data.md)   
  [Zobrazení modulů – instrumentace](../profiling/modules-view-dotnet-memory-instrumentation-data.md)   

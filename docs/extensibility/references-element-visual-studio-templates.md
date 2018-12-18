@@ -1,5 +1,5 @@
 ---
-title: Odkazuje na Element (šablony sady Visual Studio) | Microsoft Docs
+title: Odkazuje na Element (šablony sady Visual Studio) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8e758bb0bc493086d9e8090c14eaca744129c277
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 24b1e29faf2a322bf8dd40d48622b3e2a0c8da65
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39639159"
 ---
-# <a name="references-element-visual-studio-templates"></a>Element odkazů (šablony sady Visual Studio)
-Skupiny odkazy na sestavení, které šablona se přidá do projektů.  
+# <a name="references-element-visual-studio-templates"></a>References – element (šablony sady Visual Studio)
+Seskupuje odkazy na sestavení, které šablona přidá do projektů.  
   
- \<VSTemplate >  
- \<TemplateContent >  
- \<Odkazy na >  
+ \<Vstemplate – >  
+ \<TemplateContent – >  
+ \<Odkazy >  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```xml  
 <References>  
     <Reference>... </Reference>  
     <Reference>... </Reference>  
@@ -45,27 +46,27 @@ Skupiny odkazy na sestavení, které šablona se přidá do projektů.
 ### <a name="attributes"></a>Atributy  
  Žádné  
   
-### <a name="child-elements"></a>Podřízené elementy  
+### <a name="child-elements"></a>Podřízené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|[Referenční informace](../extensibility/reference-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Určuje odkaz na sestavení přidat, pokud položka byla přidána do projektu. Musí být jeden nebo více `Reference` elementů v `References` elementu.|  
+|[Referenční informace](../extensibility/reference-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Určuje odkaz na sestavení přidat, pokud je položka přidána do projektu. Musí být jeden nebo více `Reference` prvky `References` elementu.|  
   
-### <a name="parent-elements"></a>Nadřazené elementy  
+### <a name="parent-elements"></a>Nadřazené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|Určuje obsah šablony.|  
+|[TemplateContent –](../extensibility/templatecontent-element-visual-studio-templates.md)|Určuje obsah značek šablony.|  
   
 ## <a name="remarks"></a>Poznámky  
- `References` představuje volitelný podřízený prvek `TemplateContent`.  
+ `References` je volitelný podřízený prvek `TemplateContent`.  
   
- `Reference` a `References` elementy lze použít pouze v souborech .vstemplate, které mají `Type` hodnotu atributu `Item`.  
+ `Reference` a `References` prvky lze použít pouze v *.vstemplate* soubory, které mají `Type` hodnotu atributu `Item`.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje `TemplateContent` element šablony položky. Tato konfigurace XML přidá odkazy na sestavení System.dll a System.Data.dll.  
+ Následující příklad ukazuje, `TemplateContent` elementu šablony položky. Přidá odkazy na tato konfigurace XML *System.dll* a *System.Data.dll* sestavení.  
   
-```  
+```xml  
 <TemplateContent>  
     <References>  
         <Reference>  
@@ -83,6 +84,6 @@ Skupiny odkazy na sestavení, které šablona se přidá do projektů.
 </TemplateContent>  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
+## <a name="see-also"></a>Viz také:  
+ [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)   
  [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

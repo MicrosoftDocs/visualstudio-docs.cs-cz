@@ -22,6 +22,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130726"
 ---
 # <a name="optimizing-menu-and-toolbar-commands"></a>Optimalizace nabídek a příkazů panelu nástrojů
 Přidání VSPackages a jejich odpovídající příkazů [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] může způsobit frekventované uživatelského rozhraní. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] poskytuje způsoby, jak zachování přehlednosti příkaz uživatelského rozhraní.  

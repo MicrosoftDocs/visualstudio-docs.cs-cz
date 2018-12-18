@@ -14,13 +14,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ab1aab1be9fa8ebb8667a7cf7c524da71fa013d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 8edd84e68b7fbf2f361fe7f3b04807ce2feda95f
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35257875"
 ---
-# <a name="no-thread-activity-to-show-threads-view"></a>Žádná aktivita vláken k zobrazení (Zobrazení vláken)
+# <a name="no-thread-activity-to-show-threads-view"></a>Žádná aktivita vláken k zobrazení (zobrazení vláken)
 Tato oblast zobrazuje data o zobrazí vláken v současné době viditelný časový rozsah.  
   
  Pokud nejsou viditelné žádné informace, zkontrolujte následující nastavení:  
@@ -33,5 +34,5 @@ Tato oblast zobrazuje data o zobrazí vláken v současné době viditelný čas
   
 -   Ujistěte se, že snížení šumu je nastavená na nízké prahové hodnoty.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

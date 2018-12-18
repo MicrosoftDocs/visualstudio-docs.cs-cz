@@ -1,6 +1,7 @@
 ---
 title: 'CA1016: Označte sestavení pomocí atributu AssemblyVersionAttribute'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,15 +14,21 @@ ms.assetid: 4340aed8-d92b-4cde-a398-cb6963c6da5a
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CPP
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 6c4f05003fdd05a4dde82d19ba11e47c35666fbc
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 7fbc3fa747171892066705ddc32a114cb34e1b02
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47858172"
 ---
 # <a name="ca1016-mark-assemblies-with-assemblyversionattribute"></a>CA1016: Označte sestavení pomocí atributu AssemblyVersionAttribute
+
 |||
 |-|-|
 |TypeName|MarkAssembliesWithAssemblyVersion|
@@ -30,33 +37,37 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
- Sestavení nemá číslo verze.
+
+Sestavení nemá číslo verze.
 
 ## <a name="rule-description"></a>Popis pravidla
- Identita sestavení se skládá z následujících informací:
 
--   Název sestavení
+Identita sestavení se skládá z následujících informací:
 
--   Číslo verze
+- Název sestavení
 
--   Jazyková verze
+- Číslo verze
 
--   Veřejný klíč (pro sestavení se silným názvem).
+- Jazyková verze
 
- [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] k jednoznačné identifikaci sestavení a vytvoření vazby na typy v sestavení se silným názvem používá číslo verze. Číslo verze je používáno spolu se zásadou verze a vydavatele. Ve výchozím nastavení mohou být aplikace spuštěny pouze ve verzi sestavení, v níž byly sestaveny.
+- Veřejný klíč (pro sestavení se silným názvem).
+
+Rozhraní .NET Framework používá číslo verze k jednoznačné identifikaci sestavení a pro svázání s typy v sestaveních se silným názvem. Číslo verze je používáno spolu se zásadou verze a vydavatele. Ve výchozím nastavení mohou být aplikace spuštěny pouze ve verzi sestavení, v níž byly sestaveny.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení toto pravidlo, přidat číslo verze sestavení pomocí <xref:System.Reflection.AssemblyVersionAttribute?displayProperty=fullName> atribut. Podívejte se na téma v následujícím příkladu.
+ Chcete-li opravit porušení tohoto pravidla, přidejte číslo verze na sestavení s použitím <xref:System.Reflection.AssemblyVersionAttribute?displayProperty=fullName> atribut. Podívejte se na téma v následujícím příkladu.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Upozornění z toto pravidlo potlačit není pro sestavení, které se používají třetích stran nebo v provozním prostředí.
+ Nepotlačujte upozornění tohoto pravidla pro sestavení, které jsou používány třetími stranami, nebo v produkčním prostředí.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje, sestavení, který má <xref:System.Reflection.AssemblyVersionAttribute> atribut použitý.
+ Následující příklad ukazuje sestavení, který má <xref:System.Reflection.AssemblyVersionAttribute> atribut.
 
  [!code-csharp[FxCop.Design.AssembliesVersion#1](../code-quality/codesnippet/CSharp/ca1016-mark-assemblies-with-assemblyversionattribute_1.cs)]
  [!code-vb[FxCop.Design.AssembliesVersion#1](../code-quality/codesnippet/VisualBasic/ca1016-mark-assemblies-with-assemblyversionattribute_1.vb)]
  [!code-cpp[FxCop.Design.AssembliesVersion#1](../code-quality/codesnippet/CPP/ca1016-mark-assemblies-with-assemblyversionattribute_1.cpp)]
 
-## <a name="see-also"></a>Viz také
- [Správa verzí sestavení](/dotnet/framework/app-domains/assembly-versioning) [postupy: vytváření zásad vydavatele](/dotnet/framework/configure-apps/how-to-create-a-publisher-policy)
+## <a name="see-also"></a>Viz také:
+
+- [Správa verzí sestavení](/dotnet/framework/app-domains/assembly-versioning)
+- [Postupy: Vytváření zásad vydavatele](/dotnet/framework/configure-apps/how-to-create-a-publisher-policy)

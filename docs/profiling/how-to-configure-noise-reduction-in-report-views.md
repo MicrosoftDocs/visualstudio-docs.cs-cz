@@ -16,11 +16,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fa2ec4a797b7018a7a9e017760afd8849912cd35
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 460251aaa89c22d7bb1320d19882af4f68736cc0
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815181"
 ---
 # <a name="how-to-configure-noise-reduction-in-report-views"></a>Postupy: Konfigurace snížení šumu v zobrazeních sestav
 Sestavy pro zvýšení výkonu mohou být konfigurovány pro snížení šumu omezením množství dat, který se zobrazí v zobrazení stromu volání a zobrazení přidělení. Pomocí snížení šumu jsou výraznější problémy s výkonem. To je užitečné, když analyzujete sestavy pro zvýšení výkonu.  
@@ -77,8 +78,8 @@ Sestavy pro zvýšení výkonu mohou být konfigurovány pro snížení šumu om
   
 4.  Click **OK**.  
   
-## <a name="see-also"></a>Viz také  
- [Zobrazení sestav nástrojů pro přizpůsobení výkonu](../profiling/customizing-performance-tools-report-views.md)   
+## <a name="see-also"></a>Viz také:  
+ [Přizpůsobení zobrazení sestav nástrojů výkonu](../profiling/customizing-performance-tools-report-views.md)   
  [Postupy: vyloučení nebo zahrnutí funkce CShort z instrumentace](../profiling/how-to-exclude-or-include-short-functions-from-instrumentation.md)   
  [Zobrazení stromu volání](../profiling/call-tree-view.md)   
  [Přidělení – zobrazení](../profiling/dotnet-memory-allocations-view.md)

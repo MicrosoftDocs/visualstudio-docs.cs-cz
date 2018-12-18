@@ -1,5 +1,5 @@
 ---
-title: Idiasegment::get_execute – | Microsoft Docs
+title: Idiasegment::get_execute – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 326d315485e7c3d62d60f2a3c8bfa2232e33ecf1
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: e18aba27c0588f60f1e1f5ab3c0612eddc8f120c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49843012"
 ---
 # <a name="idiasegmentgetexecute"></a>IDiaSegment::get_execute
-Načte příznak, který určuje, zda je spustitelný soubor segmentu.  
+Získá příznak, který určuje, zda je spustitelný soubor segmentu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,10 +34,10 @@ HRESULT get_execute (
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí `TRUE` Pokud segmentu je označen jako spustitelného souboru; jinak hodnota, vrátí `FALSE`.  
+ [out] Vrátí `TRUE` , pokud segment je označená jako spustitelného souboru; jinak vrátí hodnotu, vrátí `FALSE`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. Jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

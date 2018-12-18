@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Import opakovaně použitelného pracovního postupu návrháře služby SharePoint do sady Visual Studio | Microsoft Docs'
+title: 'Návod: Import opakovaně použitelného pracovního postupu návrháře služby SharePoint do sady Visual Studio | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -20,199 +20,200 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 443502fdb6b018772e4dde833c5d53d27a68dbe8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 249799bc9daf13992bd9fe03dff8c86263f91263
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49851475"
 ---
-# <a name="walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio"></a>Návod: Import opakovaně použitelného pracovního postupu návrháře služby SharePoint do sady Visual Studio
-  Tento návod ukazuje, jak importovat znovu použitelné pracovní postup vytvořený v SharePoint Designer 2010 do [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projektu pracovního postupu služby SharePoint.  
+# <a name="walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio"></a>Návod: Importujte opakovaně použitelného pracovního postupu návrháře služby SharePoint do sady Visual Studio
+  Tento návod ukazuje, jak pro import opakovaně použitelného pracovního postupu v Návrháři SharePoint 2010 do vytvoří [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projektu pracovního postupu služby SharePoint.  
   
- Pracovní postupy vytvořené v aplikaci SharePoint Designer nebo *deklarativní pracovních*, obsahovat [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] příkazy místo kódu. Zavádí SharePoint Designer 2010 *znovu použitelné pracovní postupy*, které jsou přenosné, deklarativní pracovní postupy, které můžete používat různé seznamy na webech služby SharePoint.  
+ Pracovní postupy vytvořené v aplikaci SharePoint Designer nebo *deklarativní pracovních postupů*, obsahovat [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] příkazy namísto kódu. Zavádí SharePoint Designer 2010 *opakovaně použitelných pracovních postupů*, které jsou přenosná deklarativní pracovní postupy, které můžete používat různé seznamy na webech služby SharePoint.  
   
- Pracovní postupy vytvořené v [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)], jako je například počítač sekvenční a stavu pracovních postupů, se nazývají *code pracovních*. Pracovní postupy kódu obsahovat soubory XML a kódové moduly, které mohou uživatelé přizpůsobit chování pracovního postupu.  
+ Pracovní postupy vytvořené v [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)], jako jsou pracovní postupy stroje sekvenční federace a jednotlivých států, se nazývají *kódu pracovních postupů*. Pracovní postupy kódu obsahovat soubory XML a kódové moduly, ve kterých mohou uživatelé přizpůsobit chování pracovního postupu.  
   
- Visual Studio můžete importovat znovu použitelné pracovní postupy vytvořené v Návrháři SharePoint 2010 a je převést na kód pracovní postupy pro použití v webů služby SharePoint.  
+ Visual Studio umožňuje import opakovaně použitelných pracovních postupů, které jsou vytvořené v Návrháři SharePoint 2010 a převede je do pracovních postupů kód pro použití v Sharepointové weby.  
   
- Tento návod ukazuje následující úlohy:  
+ Tento návod demonstruje následující úkoly:  
   
--   Vytvoření pracovního postupu jednoduchý, opakovaně použitelný v návrháře služby SharePoint.  
+- Vytvoření jednoduché, opakovaně použitelný pracovní postup v SharePoint designeru.  
   
--   Export opakovaně použitelného pracovního postupu návrháře služby SharePoint do souboru WSP a do služby SharePoint.  
+- Export opakovaně použitelného pracovního postupu návrháře služby SharePoint k *.wsp* soubor a do služby SharePoint.  
   
--   Import souborů WSP do [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] pomocí projektu Import opakovaně použitelného pracovního postupu.  
+- Import *.wsp* soubor do [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] pomocí aplikace project Import opakovaně použitelných pracovních postupů.  
   
--   Změna pracovního postupu tak, že přidáte kód.  
+- Změna pracovního postupu přidáním kódu.  
   
--   Pomocí importovaných pracovního postupu na webu služby SharePoint.  
+- Pomocí importovaných pracovních postupů na Sharepointovém webu.  
   
- [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
 ## <a name="prerequisites"></a>Požadavky  
  K dokončení tohoto návodu budete potřebovat následující komponenty:  
   
--   Podporované edice systému [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] a služby SharePoint. Další informace najdete v tématu [požadavky pro vývoj řešení služby SharePoint](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
+-   Podporované edice systému [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] a SharePoint.  
   
 -   Visual Studio.  
   
 -   Microsoft [!INCLUDE[TLA2#tla_office](../sharepoint/includes/tla2sharptla-office-md.md)] SharePoint Designer 2010.  
   
-## <a name="create-target-sharepoint-subsites"></a>Vytvoření cílových podřízených webů SharePoint  
- Nejprve vytvořte dva nové podřízené weby služby SharePoint: jeden pro hostování znovu použitelné pracovní postupy z Návrháře služby SharePoint, jiné k hostování převedený pracovních postupů.  
+## <a name="create-target-sharepoint-subsites"></a>Vytvoření cílových podřízených webů SharePoint
+ Nejprve vytvořit dvě nové podřízené weby služby SharePoint: jeden pro hostování opakovaně použitelných pracovních postupů z Návrháře služby SharePoint, další k hostování převedené pracovní postupy.  
   
 #### <a name="to-create-sharepoint-subsites"></a>Vytvoření podřízených webů služby SharePoint  
   
-1.  V SharePoint Designer 2010 na řádku nabídek zvolte **soubor**, **nový prázdný web**.  
+1. V Návrháři SharePoint 2010, na panelu nabídek zvolte **souboru** > **nového prázdného webu**.  
   
-2.  V **nový prázdný web** dialogové okno, přejděte na web služby SharePoint, kde chcete vytvořit pracovní postup, nebo použijte hodnotu http://*SystemName*/ a potom zvolte **OK** tlačítko.  
+2. V **nového prázdného webu** dialogové okno, přejděte na web služby SharePoint, ve kterém chcete vytvořit pracovní postup, nebo použijte hodnotu http://<em>SystemName</em>/ a klikněte na tlačítko **OK** tlačítko.  
   
-     Zobrazí se na domovskou stránku.  
+    Na domovské stránce se zobrazí.  
   
-3.  V **podřízené lokality** zvolte **nový** tlačítko.  
+3. V **podřízené lokality** zvolte **nový** tlačítko.  
   
-4.  V **nový** dialogovém okně vyberte **šablony služby SharePoint** ze seznamu v levém podokně a zvolte **týmový web** ze seznamu v pravém podokně.  
+4. V **nový** dialogového okna zvolte **šablon služby SharePoint** ze seznamu v levém podokně a zvolte **týmový web** ze seznamu v pravém podokně.  
   
-5.  V **zadejte umístění na webu** pole, nahraďte slovo **podřízeného webu** v adrese URL s **SPD1**a potom zvolte **OK** tlačítko.  
+5. V **zadejte umístění webu** pole, nahraďte slovo **podřízeného webu** v adrese URL s **SPD1**a klikněte na tlačítko **OK** tlačítko.  
   
-     Otevře se nové podřízené lokality do seznamu služby SharePoint. Zavřete tuto instanci služby SharePoint Designer a přejděte zpět na první instance (lokalitě nejvyšší úrovně).  
+    Otevře se nové podřízené lokality do návrháře služby SharePoint. Zavřete tuto instanci aplikace SharePoint Designer a vraťte se k první instanci (lokality nejvyšší úrovně).  
   
-6.  Opakujte kroky 3 až 5 vytvořte druhý podřízený web, tentokrát nahrazení slovo **podřízeného webu** v [!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)] s **SPD2**.  
+6. Zopakujte kroky 3 až 5 vytvořte druhý podřízený web, tentokrát nahrazující slovo **podřízeného webu** v [!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)] s **SPD2**.  
   
-## <a name="create-a-sharepoint-designer-reusable-workflow"></a>Vytvoření opakovaně použitelného pracovního postupu aplikace SharePoint Designer  
- Protože SharePoint nezahrnuje znovu použitelné pracovní postupy, které můžete použít v tomto příkladu, vytvoříte jeden. V tomto jednoduché pracovním postupu když uživatel zadá novou úlohu v seznamu úloh, která má konkrétní softwarový produkt, úloha je přiřazená tomuto uživateli.  
+## <a name="create-a-sharepoint-designer-reusable-workflow"></a>Vytvoření opakovaně použitelného pracovního postupu návrháře služby SharePoint
+ Protože SharePoint neobsahuje opakovaně použitelných pracovních postupů, které můžete použít v tomto příkladu, můžete ho vytvoří. V tomto jednoduchý pracovní postup když uživatel zadá nový úkol v seznamu úkolů, která má konkrétní softwarový úloha je přiřazená tomuto uživateli.  
   
-#### <a name="to-create-a-sharepoint-designer-reusable-workflow"></a>Vytvoření opakovaně použitelného pracovního postupu aplikace SharePoint Designer  
+#### <a name="to-create-a-sharepoint-designer-reusable-workflow"></a>Vytvoření opakovaně použitelného pracovního postupu aplikace SharePoint Designer
   
 1.  V **podřízené lokality** zvolte **SPD1** lokality jej upravit.  
   
-2.  Na pásu karet, vyberte **opakovaně použitelného pracovního postupu** tlačítko.  
+2.  Na pásu karet, zvolte **opakovaně použitelných pracovních postupů** tlačítko.  
   
-     Zobrazí se Průvodce vytvořením opakovaně použitelného pracovního postupu.  
+     Zobrazí se průvodce vytvořit opakovaně použitelných pracovních postupů.  
   
-3.  V **název** zadejte **postupu úlohy SPD**.  
+3.  V **název** zadejte **pracovního postupu úloh SPD**.  
   
-4.  V **typ obsahu** vyberte **úloh**a potom zvolte **OK** tlačítko.  
+4.  V **typ obsahu** klikněte na položku **úloh**a klikněte na tlačítko **OK** tlačítko.  
   
-     Pracovní postup se otevře v Návrháři pracovních postupů služby SharePoint Designer.  
+     Pracovní postup se otevře v Návrháři pracovního postupu návrháře služby SharePoint.  
   
-5.  V Návrháři pracovních postupů, zvolte krok 1 a pak na pásu karet **podmínku** tlačítko.  
+5.  V Návrháři postupu provádění, zvolte krok 1 a pak na pásu karet, zvolte **podmínku** tlačítko.  
   
-6.  V seznamu podmínek, vyberte **Pokud se hodnota rovná aktuální položky pole**.  
+6.  V seznamu podmínek, vyberte **Pokud pole aktuální položky rovná hodnotě**.  
   
-     Tento krok přidává podmínku, která je s názvem **Pokud pole rovná hodnotě**.  
+     Tento krok přidává podmínku, která má název **Pokud pole se rovná hodnotě**.  
   
-7.  V **Pokud pole rovná hodnotě** podmínek, vyberte **pole** odkaz.  
+7.  V **Pokud pole se rovná hodnotě** podmínky, zvolte **pole** odkaz.  
   
-8.  V seznamu hodnot, zvolte **název**.  
+8.  V seznamu hodnot, zvolte **Title**.  
   
-9. V **Pokud pole rovná hodnotě** podmínek, vyberte **hodnotu** odkaz.  
+9. V **Pokud pole se rovná hodnotě** podmínky, zvolte **hodnotu** odkaz.  
   
-10. V dialogovém okně zadejte **nová úloha**.  
+10. V dialogovém okně zadejte **nový úkol**.  
   
-     Načte příkaz podmínky **Pokud aktuální položka: název rovná nová úloha**.  
+     Načte příkaz podmínky **Pokud aktuální položky: název rovná se nový úkol**.  
   
-11. Zvolte řádku pod příkaz podmínky a pak na pásu karet **akce** tlačítko.  
+11. Zvolte řádek pod příkaz podmínky a pak na pásu karet, zvolte **akce** tlačítko.  
   
-12. V seznamu akcí, vyberte **sadu pole v aktuální položky**.  
+12. V seznamu akcí vyberte **sadu pole v aktuální položce**.  
   
-13. V **pole nastavit na hodnotu** akce, vyberte **pole** propojit a potom v seznamu zvolte **přiřazené**.  
+13. V **pole nastavit na hodnotu** akce, zvolte **pole** propojit a pak v seznamu zvolte **přiřazená**.  
   
-14. V **pole nastavit na hodnotu** akce, vyberte **hodnotu** propojit a potom v seznamu existující uživatelů a skupin, zvolte **uživatele, který vytvořil položku**.  
+14. V **pole nastavit na hodnotu** akce, zvolte **hodnotu** propojit a pak v seznamu existující uživatele a skupiny, zvolte **uživatele, který vytvořil položku**.  
   
-15. Vyberte **přidat** tlačítko a potom vyberte **OK** tlačítko.  
+15. Zvolte **přidat** tlačítko a klikněte na tlačítko **OK** tlačítko.  
   
-     Načte příkaz akce **nastavit přiřazeno uživateli pro aktuální položku: vytvořená**.  
+     Načte příkaz akce **nastavit přiřazeno k aktuální položky: CreatedBy**.  
   
-## <a name="save-and-deploy-the-reusable-workflow"></a>Uložení a nasazení opakovaně použitelného pracovního postupu  
- Protože [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] můžete importovat pouze souborů WSP, je nutné uložit jako soubor WSP opakovaně použitelného pracovního postupu a nasadíte ho do služby SharePoint před importem do [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
+## <a name="save-and-deploy-the-reusable-workflow"></a>Uložení a nasazení opakovaně použitelného pracovního postupu
+ Protože [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] můžete importovat pouze *.wsp* soubory, je nutné uložit opakovaně použitelného pracovního postupu jako *.wsp* souboru a nasadit ho do Sharepointu, než je naimportujete do [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
   
 > [!IMPORTANT]  
->  Pokud se zobrazí chyba v běhu provedením tohoto postupu, budete muset proveďte postup v systému, který má přístup k webu služby SharePoint.  
+>  Pokud se zobrazí chyba za běhu provedením následujících kroků, budete muset provést postup v systému, který má přístup k webu služby SharePoint.  
   
 #### <a name="to-save-and-deploy-the-reusable-workflow"></a>Uložení a nasazení opakovaně použitelného pracovního postupu  
   
-1.  V horní části seznamu služby SharePoint, vyberte **Uložit** tlačítko pro rozdělanou práci uložit a potom vyberte **publikovat** tlačítko nasazení pracovního postupu **SPD1** web služby SharePoint .  
+1.  V horní části stránky návrháře služby SharePoint, zvolte **Uložit** tlačítko rozdělanou práci uložit a klikněte na tlačítko **publikovat** tlačítko nasazení pracovního postupu **SPD1** webu služby SharePoint .  
   
-2.  V navigačním podokně, vyberte **pracovních** objektu.  
+2.  V navigačním podokně, vyberte **pracovních postupů** objektu.  
   
-3.  V části **opakovaně použitelného pracovního postupu**, zvolte **postupu úlohy SPD**.  
+3.  V části **opakovaně použitelných pracovních postupů**, zvolte **pracovního postupu úloh SPD**.  
   
-4.  Na pásu karet, vyberte **uložit jako šablonu** tlačítko Uložit jako soubor WSP pracovního postupu.  
+4.  Na pásu karet, zvolte **uložit jako šablonu** tlačítko Uložit jako pracovní postup *.wsp* souboru.  
   
-5.  Otevřete **SPD1** web služby SharePoint v prohlížeči zobrazit soubor WSP ve službě SharePoint.  
+5.  Otevřít **SPD1** webu služby SharePoint v prohlížeči pro zobrazení *.wsp* soubor v Sharepointu.  
   
-6.  Na panel Rychlé spuštění, zvolte **knihovny** odkaz.  
+6.  Na panelu Rychlé spuštění zvolte **knihovny** odkaz.  
   
 7.  V **knihovny dokumentů** zvolte **prostředky lokality** odkaz.  
   
-     **Postupu úlohy SPD** souboru je uveden s prostředky jiné lokality.  
+     **Pracovního postupu úloh SPD** souboru je uvedený s další prostředky serveru.  
   
 8.  V seznamu souborů zvolte název tohoto souboru  
   
-9. V **stažení souboru** dialogovém okně vyberte **Uložit** tlačítko pro uložení souborů WSP v místním systému.  
+9. V **stažení souboru** dialogového okna zvolte **Uložit** tlačítko Uložit *.wsp* souboru v místním systému.  
   
-## <a name="import-the-wsp-file-into-visual-studio"></a>Import souboru WSP do sady Visual Studio  
- Import souborů WSP do [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] pomocí projektu Import opakovaně použitelného pracovního postupu. Tento projekt převede do pracovního postupu kód pracovního postupu z opakovaně použitelný deklarativní pracovní postup. Po převodu pracovního postupu použijete kód změnit její chování.  
+## <a name="import-the-wsp-file-into-visual-studio"></a>Import souboru WSP do sady Visual Studio
+ Import *.wsp* soubor do [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] pomocí projektu Import opakovaně použitelných pracovních postupů. Tento projekt převede pracovního postupu z deklarativní, opakovaně použitelného pracovního postupu do kódu pracovního postupu. Po převodu pracovního postupu použijete změnit její chování kódu.  
   
 #### <a name="to-import-a-workflow-from-a-wsp-file-and-modify-it"></a>Import pracovního postupu ze souboru WSP a jeho úpravy  
   
-1.  V [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], na řádku nabídek zvolte **soubor**, **nový**, **projektu**.  
+1. V [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], na panelu nabídek zvolte **souboru** > **nový** > **projektu**.  
   
-2.  V **nový projekt** dialogové okno, rozbalte seznam **SharePoint** uzel v rámci buď **Visual C#** nebo **jazyka Visual Basic**a potom vyberte **2010** uzlu.  
+2. V **nový projekt** dialogového okna rozbalte **SharePoint** uzlu buď **Visual C#** nebo **jazyka Visual Basic**a klikněte na tlačítko **2010** uzlu.  
   
-3.  V **šablony** podokně, vyberte **pracovního postupu Import opakovaně použitelného služby SharePoint 2010** šablony, ponechejte pole název projektu jako **WorkflowImportProject1**a potom vyberte **OK** tlačítko.  
+3. V **šablony** podokně, vyberte **pracovního postupu Import opakovaně použitelného služby SharePoint 2010** šablony, ponechte název projektu jako **WorkflowImportProject1**a klikněte na tlačítko **OK** tlačítko.  
   
-     Zobrazí se Průvodce nastavením služby SharePoint.  
+    Zobrazí se Průvodce přizpůsobením SharePoint.  
   
-4.  Na **zadejte úroveň lokality a zabezpečení pro ladění** stránky, zadejte [!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)] pro druhý podřízeného webu služby SharePoint, kterou jste vytvořili dříve: http://*systémový název*/SPD2.  
+4. Na **zadejte web a úroveň zabezpečení pro ladění** stránky, zadejte [!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)] pro druhý podřízeného webu služby SharePoint, který jste vytvořili dříve: http://<em>systémový název</em>/SPD2.  
   
-5.  V **co je úrovně důvěryhodnosti pro toto řešení služby SharePoint?** zvolte **nasadit jako řešení farmy** možnost tlačítko a potom vyberte **Další** tlačítko.  
+5. V **co je úroveň důvěryhodnosti pro toto řešení SharePoint?** zvolte **nasadit jako řešení farmy** přepínač a klikněte na tlačítko **Další** tlačítko.  
   
-     Další informace o v izolovaném prostoru a řešení ve farmách, najdete v části [v izolovaném prostoru aspekty řešení](../sharepoint/sandboxed-solution-considerations.md).  
+    Další informace o izolovaných oproti řešení ve farmách, naleznete v tématu [aspekty řešení v izolovaném prostoru](../sharepoint/sandboxed-solution-considerations.md).  
   
-6.  V **zadejte nový zdroj projektu** stránky, přejděte do umístění na serveru, kam jste dříve uložili soubor WSP, otevřete soubor a potom zvolte **Další** tlačítko.  
+6. V **zadat nový zdroj projektu** stránce, přejděte do umístění v systému, které jste dříve uložili *.wsp* soubor, otevřete soubor a klikněte na tlačítko **Další** tlačítko.  
   
-    > [!NOTE]  
-    >  Vyberte **Dokončit** tlačítko naimportovány všechny položky k dispozici v souboru WSP.  
+   > [!NOTE]  
+   >  Zvolte **Dokončit** tlačítko naimportovány všechny položky k dispozici v *.wsp* souboru.  
   
-     Zobrazí se seznam dostupných pro import znovu použitelné pracovní postupy.  
+    Zobrazí se seznam dostupných pro import opakovaně použitelných pracovních postupů.  
   
-7.  V **vybrat položky k importu** , vyberte **postupu úlohy SPD** pracovního postupu a potom vyberte **Dokončit** tlačítko.  
+7. V **vybrat položky k importu** zvolte **pracovního postupu úloh SPD** pracovního postupu a klikněte na tlačítko **Dokončit** tlačítko.  
   
-     Po dokončení operace importu projektu s názvem **WorkflowImportProject1** je vytvořen obsahující pracovního postupu s názvem **SPD_Workflow_TestFT**. V této složce je soubor definice pracovního postupu Elements.xml a soubor návrháře pracovních postupů (XOML). Návrhář obsahuje dva soubory: soubor pravidla (.rules) a souboru kódu na pozadí (cs nebo VB, v závislosti na programovací jazyk vašeho projektu).  
+    Po dokončení operace importu projektu s názvem **WorkflowImportProject1** se vytvoří s pracovním postupem s názvem **SPD_Workflow_TestFT**. V této složce je soubor definice pracovního postupu *Elements.xml* a soubor návrháře pracovního postupu (*XOML*). Návrhář obsahuje dva soubory: soubor pravidel (.rules) a soubor kódu na pozadí (buď *.cs* nebo *.vb*, v závislosti na programovacím jazyce vašeho projektu).  
   
-8.  V **Průzkumníku řešení**, odstraňte **ostatní soubory importovat** složky.  
+8. V **Průzkumníka řešení**, odstranit **ostatní soubory importovat** složky.  
   
-9. V souboru Elements.xml odstranit `InstantiationURL="_layouts/IniErkflIP.sspx"`.  
+9. V *Elements.xml* souborů, odstranění `InstantiationURL="_layouts/IniErkflIP.sspx"`.  
   
-10. V **Průzkumníku řešení**, zvolte **WorkflowImportProject1**a potom na řádku nabídek zvolte **projektu**, **nastavit jako spouštěný projekt** na nastavit **WorkflowImportProject1** jako položku při spuštění.  
+10. V **Průzkumníka řešení**, zvolte **WorkflowImportProject1**a potom na panelu nabídek zvolte **projektu** > **nastavit jako spouštěný projekt**  nastavit **WorkflowImportProject1** jako položku při spuštění.  
   
-     Při ladění projektu okamžitě zobrazí v seznamu.  
+     V seznamu zobrazí okamžitě při ladění projektu.  
   
-11. Protože **Import opakovaně použitelného 2010 pracovního postupu služby SharePoint** šablony neimportuje přidružení hodnoty vlastností pro importované pracovní postup, je nutné je zadat. Provedete to následujícím způsobem:  
+11. Vzhledem k tomu, **Import opakovaně použitelného 2010 pracovního postupu služby SharePoint** šablony neimportuje přidružení hodnoty vlastností pro importované pracovního postupu, je nutné zadat. To uděláte takto:  
   
-    1.  V **Průzkumníku řešení**, vyberte **SPD_Workflow_TestFT** uzlu.  
+    1.  V **Průzkumníka řešení**, zvolte **SPD_Workflow_TestFT** uzlu.  
   
-    2.  Zvolte se třemi tečkami (![ASP.NET – Návrhář mobilních řešení elipsy](../sharepoint/media/mwellipsis.gif "elipsy ASP.NET – Návrhář mobilních řešení")) tlačítko vedle jeden seznam vlastností, jako **cílového seznamu** vlastnost.  
+    2.  Zvolte tři tečky (![elipsa ASP.NET – Návrhář mobilních řešení](../sharepoint/media/mwellipsis.gif "elipsa ASP.NET – Návrhář mobilních řešení")) tlačítko vedle jeden seznam vlastností, jako **cílového seznamu** vlastnost.  
   
-    3.  Vyplňte chybějící hodnoty v průvodce nastavením služby SharePoint a potom vyberte **Dokončit** tlačítko.  
+    3.  Zadejte chybějící hodnoty v průvodce přizpůsobením SharePoint a klikněte na tlačítko **Dokončit** tlačítko.  
   
-12. Zvolte soubor XOML a potom na panelu nabídek **zobrazení**, **Návrhář** zobrazíte importovaných pracovních postupů v Návrháři pracovních postupů.  
+12. Zvolte soubor XOML a pak na panelu nabídek zvolte **zobrazení** > **návrháře** zobrazíte importovaných pracovních postupů v Návrháři pracovních postupů.  
   
-13. V **Windows Workflow v3.0** uzlu **sada nástrojů**, proveďte jednu z následujících kroků:  
+13. V **pracovního postupu Windows v3.0** uzlu **nástrojů**, proveďte jednu z následujících kroků:  
   
-    -   Otevřete místní nabídku pro **kód** aktivitu a potom zvolte **kopie**. V Návrháři pracovních postupů otevřete místní nabídku pro řádek v části **SequenceActivity1** aktivitu a potom zvolte **vložení**.  
+    - Otevřete místní nabídku **kód** aktivitu a klikněte na tlačítko **kopírování**. V Návrháři postupu provádění, otevřete místní nabídku pro řádek u **SequenceActivity1** aktivitu a klikněte na tlačítko **vložit**.  
   
-    -   Přetáhněte **kód** aktivity z **sada nástrojů** pro návrháře pracovních postupů a připojte ho k řádku pod **SequenceActivity1** aktivity.  
+    - Přetáhněte **kód** aktivita z **nástrojů** do Návrháře pracovního postupu a připojte ho k řádku pod **SequenceActivity1** aktivity.  
   
-     Tento postup přidá aktivitu do pracovního postupu návrháře s názvem **CodeActivity1**. V rámci této aktivity přidáte kód akci, která vytvoří oznámení v seznamu oznámení, když uživatel spustí pracovní postup.  
+      Tento postup přidá aktivitu do pracovního postupu návrháře s názvem **CodeActivity1**. V této činnosti přidejte kód akce, která vytvoří oznámení v seznamu oznámení, když uživatel spustí pracovní postup.  
   
 14. Proveďte jednu z následujících sad kroků:  
   
-    -   Klikněte dvakrát na **CodeActivity1** Generovat obslužné rutiny události a zobrazení kódu.  
+    -   Dvakrát klikněte na panel **CodeActivity1** Generovat obslužné rutiny události a zobrazení kódu.  
   
-    -   V **vlastnosti** okna pro **CodeActivity1**, nastavte hodnotu **ExecuteCode** vlastnost **codeActivity_ExecuteCode**.  
+    -   V **vlastnosti** okně **CodeActivity1**, nastavte hodnotu **ExecuteCode** vlastnost **codeActivity_ExecuteCode**.  
   
 15. Přidejte následující pod existující **pomocí** nebo **importy** příkazy:  
   
@@ -224,49 +225,48 @@ ms.lasthandoff: 04/16/2018
      [!code-csharp[SP_SPDWFImport#2](../sharepoint/codesnippet/CSharp/workflowimportproject1/workflows/spd_task_workflowft/spd task workflow.xoml.cs#2)]
      [!code-vb[SP_SPDWFImport#2](../sharepoint/codesnippet/VisualBasic/workflowimportproject1/workflows/spd_task_workflowft/spd task workflow.xoml.vb#2)]  
   
-## <a name="deploy-the-project-and-associate-the-workflow"></a>Nasazení projektu a přidružení pracovního postupu  
- Potom spusťte WorkflowImportProject1 k nasazení na web služby SharePoint a pak přidružit pracovního postupu k seznamu úloh pro zobrazení a testování upravené, převést pracovního postupu.  
+## <a name="deploy-the-project-and-associate-the-workflow"></a>Nasazení projektu a přidružení pracovního postupu
+ V dalším kroku spusťte WorkflowImportProject1 ji nasadit na Sharepointový web a pracovní postup přidružit seznamu Úkoly k zobrazení a otestovat změny, převést pracovní postup.  
   
 #### <a name="to-deploy-the-project-and-associate-the-workflow"></a>Nasazení projektu a přidružení pracovního postupu  
   
-1.  V [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], zvolte klávesy F5 spusťte a nasadit projekt převedený pracovního postupu.  
+1.  V [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], zvolte **F5** klíč ke spuštění a nasazení projektu převedený pracovního postupu.  
   
-2.  Na panel Rychlé spuštění, zvolte **úlohy** odkaz k zobrazení seznamu úloh.  
+2.  Na panelu Rychlé spuštění zvolte **úlohy** odkaz k zobrazení seznamu úloh.  
   
-3.  Na **nástroje seznamu** , zvolte **položky** tlačítko a potom vyberte **nová položka** tlačítko.  
+3.  Na **nástroje seznamu** , vyberte **položky** tlačítko a klikněte na tlačítko **nová položka** tlačítko.  
   
-     **Úlohy – nová položka** otevře se dialogové okno.  
+     **Úkoly – nová položka** zobrazí se dialogové okno.  
   
-4.  V **název** zadejte **nová úloha**a potom zvolte **Uložit** tlačítko.  
+4.  V **Title** zadejte **nový úkol**a klikněte na tlačítko **Uložit** tlačítko.  
   
-5.  Na **nástroje seznamu** , zvolte **seznamu** tlačítko a potom vyberte **nastavení seznamu** tlačítko.  
+5.  Na **nástroje seznamu** , vyberte **seznamu** tlačítko a klikněte na tlačítko **nastavení seznamu** tlačítko.  
   
      **Nastavení seznamu** se zobrazí stránka.  
   
-6.  V **oprávnění a správa** zvolte **nastavení pracovních postupů** odkaz.  
+6.  V **oprávnění a správa** zvolte **nastavení pracovního postupu** odkaz.  
   
-     **Nastavení pracovních postupů** se zobrazí stránka.  
+     **Nastavení pracovního postupu** se zobrazí stránka.  
   
-7.  Vyberte **přidat pracovní postup** odkaz.  
+7.  Zvolte **přidat pracovní postup** odkaz.  
   
-8.  V **pracovního postupu** vyberte **WorkflowImportProject1 - SPD pracovní postup Test**.  
+8.  V **pracovního postupu** klikněte na položku **WorkflowImportProject1 – pracovní postup Test SPD**.  
   
-9. V **název** zadejte **SPD pracovní postup Test**a potom zvolte **OK** tlačítko.  
+9. V **název** zadejte **SPD pracovní postup Test**a klikněte na tlačítko **OK** tlačítko.  
   
-10. V panel Rychlé spuštění, vyberte **úlohy** seznamu.  
+10. Na panelu Rychlé spuštění, zvolte **úlohy** seznamu.  
   
-11. Vyberte šipku vedle **nová úloha**a potom v seznamu, vyberte **pracovních**.  
+11. Klikněte na šipku vedle položky **nový úkol**a pak v seznamu zvolte **pracovních postupů**.  
   
-12. V **spustit nový pracovní postup** zvolte odkaz pro **SPD pracovní postup Test**a potom zvolte **spustit** tlačítko zahájíte pracovního postupu.  
+12. V **spustit nový pracovní postup** zvolte odkaz pro **SPD pracovní postup Test**a klikněte na tlačítko **Start** tlačítko započít pracovní postup.  
   
     > [!NOTE]  
-    >  Alternativně můžete můžete automaticky přidružení pracovního postupu se seznamem spuštěním Průvodce nastavením pracovního postupu a nastavení pracovní postup automaticky přidružení.  
+    >  Alternativně je můžete automatické přidružení pracovního postupu se seznamem spuštěním Průvodce nastavení pracovního postupu a nastavení automatické přidružení pracovního postupu.  
   
-     Všimněte si, že dvě akce provádí pracovního postupu: vaše jméno se zobrazí v úkolu **přiřazeno** sloupce a oznámení se zobrazí v **oznámení** seznamu.  
+     Všimněte si, že dvě akce provádí pracovní postup: název se zobrazí v úkolu **přiřazeno** sloupce a oznámení se zobrazí v **oznámení** seznamu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:
  [Import položek z existující stránky SharePoint](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)   
  [Vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md)   
- [Vytváření opakovaně použitelných ovládacích prvků pro webové části nebo stránky aplikací](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)  
-  
+ [Vytvoření opakovaně použitelné ovládací prvky webové části nebo stránky aplikace](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)  
   

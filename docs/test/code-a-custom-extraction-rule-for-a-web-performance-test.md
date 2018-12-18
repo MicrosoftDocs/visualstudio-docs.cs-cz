@@ -1,5 +1,5 @@
 ---
-title: Kódování vlastního pravidla extrakce pro test výkonnosti webu v sadě Visual Studio | Microsoft Docs
+title: Vytvoření vlastního pravidla extrakce pro test výkonnosti webu
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,19 +13,23 @@ dev_langs:
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 748b1f726a74fd0af1545a5bdb9c620b1ffb2a4d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 41e9a025db4ec9c8425e0de6ba4ecad25f775d50
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53066675"
 ---
-# <a name="coding-a-custom-extraction-rule-for-a-web-performance-test"></a>Vytvoření vlastního pravidla extrakce pro test výkonnosti webu
+# <a name="code-a-custom-extraction-rule-for-a-web-performance-test"></a>Kód vlastního pravidla extrakce pro test výkonnosti webu
 
 Můžete vytvořit vlastní pravidla pro extrakci, a to odvozením vlastních pravidel od třídy pravidla pro extrakci. Pravidla pro extrakci se odvozují od základní třídy <xref:Microsoft.VisualStudio.TestTools.WebTesting.ExtractionRule>.
 
 > [!NOTE]
 > Lze také vytvořit vlastní ověřovací pravidla. Další informace najdete v tématu [vytvoření vlastního kódu a modulů Plugin pro zátěžové testy](../test/create-custom-code-and-plug-ins-for-load-tests.md).
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 ## <a name="to-create-a-custom-extraction-rule"></a>Vytvoření vlastního pravidla pro extrakci
 
@@ -42,15 +46,15 @@ Můžete vytvořit vlastní pravidla pro extrakci, a to odvozením vlastních pr
 
 5.  (Volitelné) Vytvořte nový projekt knihovny tříd.
 
-6.  (Volitelné) V projektu testů přidejte odkaz na projekt knihovny tříd, který obsahuje vlastní pravidlo pro extrakci.
+6.  (Volitelné) V testovacím projektu přidejte odkaz na projekt knihovny tříd, který obsahuje vlastní pravidlo pro extrakci.
 
-7.  V projektu otestovat, otevřete v testu výkonnosti webu **Editor testů výkonnosti webu**.
+7.  V projektu testů otevřete test výkonnosti webu v **editoru testu výkonnosti webu**.
 
-8.  Chcete-li přidat pravidlo vlastní extrakce, klikněte pravým tlačítkem na žádost o test výkonu webové a vyberte **přidat pravidla pro extrakci**.
+8.  Chcete-li přidat vlastní pravidlo pro extrakci, klikněte pravým tlačítkem na požadavek testu výkonnosti webu a vyberte **přidat pravidlo pro extrakci**.
 
-     **Přidat pravidla pro extrakci** zobrazí se dialogové okno. Zobrazí se vlastní ověřovací pravidlo v **, vyberte pravidlo** seznamu, společně s předdefinované ověřovacích pravidel. Vyberte vlastní extrakce pravidla a potom zvolte **OK**.
+     **Přidat pravidlo pro extrakci** zobrazí se dialogové okno. Zobrazí se vlastní ověřovací pravidlo v **vyberte pravidlo** seznamu, společně s předdefinovanými ověřovacími pravidly. Vyberte vlastní pravidlo pro extrakci a klikněte na tlačítko **OK**.
 
-9. Spusťte test výkonnosti webu.
+9. Spuštění testu výkonnosti webu.
 
 ## <a name="example"></a>Příklad
 
@@ -202,9 +206,9 @@ Namespace ClassLibrary2
 End Namespace
 ```
 
-Metoda <xref:Microsoft.VisualStudio.TestTools.WebTesting.ExtractionRule.Extract*> obsahuje základní funkce pravidla pro extrakci. Metoda <xref:Microsoft.VisualStudio.TestTools.WebTesting.ExtractionRule.Extract*> v předchozím příkladu přebírá objekt <xref:Microsoft.VisualStudio.TestTools.WebTesting.ExtractionEventArgs>, jenž poskytuje odpověď generovanou požadavkem, který toto pravidlo pro extrakci pokrývá. Odpověď obsahuje objekt <xref:Microsoft.VisualStudio.TestTools.WebTesting.HtmlDocument>, který obsahuje všechny značky v odpovědi. Vstupní značky jsou z dokumentu <xref:Microsoft.VisualStudio.TestTools.WebTesting.HtmlDocument> odfiltrovány. Každý vstupní značka je zkontrolován pro atribut nazvaný `name` jehož hodnota se rovná uživatele zadaná hodnota `Name` vlastnost. Pokud je nalezen značku k tomuto odpovídající atributu, je proveden pokus o extrahování hodnotu, která je obsažený v `value` atribut, pokud existuje atribut value. Pokud existuje, budou název a hodnota značky extrahovány a přidány do kontextu testu výkonnosti webu. Pravidlo pro extrakci bude splněno.
+Metoda <xref:Microsoft.VisualStudio.TestTools.WebTesting.ExtractionRule.Extract*> obsahuje základní funkce pravidla pro extrakci. Metoda <xref:Microsoft.VisualStudio.TestTools.WebTesting.ExtractionRule.Extract*> v předchozím příkladu přebírá objekt <xref:Microsoft.VisualStudio.TestTools.WebTesting.ExtractionEventArgs>, jenž poskytuje odpověď generovanou požadavkem, který toto pravidlo pro extrakci pokrývá. Odpověď obsahuje objekt <xref:Microsoft.VisualStudio.TestTools.WebTesting.HtmlDocument>, který obsahuje všechny značky v odpovědi. Vstupní značky jsou z dokumentu <xref:Microsoft.VisualStudio.TestTools.WebTesting.HtmlDocument> odfiltrovány. Každá vstupní značka je zkontrolována, zda neobsahuje atribut s názvem `name` jehož hodnota se rovná uživatelem zadaná hodnota `Name` vlastnost. Pokud je značka s odpovídajícím atributem nalezena, je proveden pokus o extrahování hodnotu, která je obsažena ve `value` atribut, pokud existuje atribut hodnoty. Pokud existuje, budou název a hodnota značky extrahovány a přidány do kontextu testu výkonnosti webu. Pravidlo pro extrakci bude splněno.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - <xref:Microsoft.VisualStudio.TestTools.WebTesting.ExtractionRule>
 - <xref:Microsoft.VisualStudio.TestTools.WebTesting.Rules>

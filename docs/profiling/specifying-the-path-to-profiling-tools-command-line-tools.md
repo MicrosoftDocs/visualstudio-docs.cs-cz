@@ -10,25 +10,26 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e25d5052cbc70e4a45040f8ebadb8cb36daa053
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 1afb0b00a7e121c611dedbc235684a67cc9cec53
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34814492"
 ---
-# <a name="specifying-the-path-to-profiling-tools-command-line-tools"></a>Určení cesty k nástrojům příkazového řádku pro profilaci
+# <a name="specify-the-path-to-profiling-tools-command-line-tools"></a>Zadejte cestu k nástrojům příkazového řádku pro profilaci
 Cesta [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nástroje příkazového řádku v nástrojích pro profilaci nebyla přidána do proměnné prostředí PATH. Na počítačích 32bitová verze nástroje jsou v jednom adresáři. Existují 32bitové a 64bitové verze nástrojů pro profilaci na 64bitových počítačích.  
   
 ## <a name="32-bit-computers"></a>32bitové počítače  
- Na 32bitové počítače, je výchozí adresář profileru nástroje *jednotka*\Program Files\Microsoft 11.0\Team Visual Studio Tools nástroje.  
+ Na 32bitové počítače, je výchozí adresář profileru nástroje *disk\Program 11.0\Team Files\Microsoft Visual Studio Tools nástroje*.  
   
 ## <a name="64-bit-computers"></a>64bitové počítače  
  Na 64bitových počítačích zadejte cestu podle cílové platformy PROFILOVANÉHO aplikace.  
   
 -   Pro 32bitové aplikace je výchozí adresář profiler nástrojů:  
   
-     *Jednotka*\Program soubory (x86) \Microsoft Visual Studio 11.0\Team nástroje nástroje  
+     *disk\Program soubory (x86) \Microsoft Visual Studio 11.0\Team nástrojů nástroje*  
   
 -   Pro 64bitové aplikace je výchozí adresář profiler nástrojů:  
   
-     *Jednotka*\Program soubory (x86) \Microsoft Visual Studio 11.0\Team nástroje Tools\x64
+     *disk\Program soubory (x86) \Microsoft Visual Studio 11.0\Team Tools\x64 nástroje*

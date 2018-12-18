@@ -1,5 +1,5 @@
 ---
-title: Povolení funkcí ladění v jazyce Visual C++ (-D_DEBUG) | Microsoft Docs
+title: Povolení funkcí ladění v jazyce Visual C++ (-D_DEBUG) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -26,22 +26,23 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5298879d93bf4e86df7610d5891e73bdbb67c4a1
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 772467caf74a381fc2ef5cc74e8e31bf2ff0503c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949614"
 ---
 # <a name="enabling-debug-features-in-visual-c-ddebug"></a>Povolení funkcí ladění v jazyce Visual C++ (/D_DEBUG)
-V [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)], ladění funkcí, jako je kontrolní výrazy jsou povolené, když zkompilujete váš program symbolem **_DEBUG –** definované. Můžete definovat **_DEBUG –** v jednom ze dvou způsobů:  
+V [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)], funkce ladění, jako je kontrolní výrazy jsou povolené při kompilaci programu symbol **_DEBUG** definované. Můžete definovat **_DEBUG** v jednom ze dvou způsobů:  
   
--   Zadejte **#define _DEBUG –** ve zdrojovém kódu, nebo  
+- Zadejte **#define _DEBUG** ve zdrojovém kódu, nebo  
   
--   Zadejte **/D_DEBUG** – možnost kompilátoru. (Pokud vytvoříte projekt v sadě Visual Studio pomocí průvodců, **/D_DEBUG** je automaticky definována v konfiguraci ladění.)  
+- Zadejte **/D_DEBUG** – možnost kompilátoru. (Pokud vytváříte projekt v sadě Visual Studio pomocí průvodců **/D_DEBUG** je automaticky definovaný v konfiguraci ladění.)  
   
- Když **_DEBUG –** je definován, kompilátor zkompiluje sekcí kódu obklopená **_DEBUG #ifdef –** a `#endif`.  
+  Když **_DEBUG** je definován, kompilátor zkompiluje částech kód obklopený **#ifdef _DEBUG** a `#endif`.  
   
- Ladicí verze knihovny MFC musí propojení konfiguraci ladění MFC programu. Soubory hlaviček MFC určit správnou verzi knihovny MFC propojit s podle symboly jste definovali, jako například **_DEBUG –** a **_UNICODE**. Podrobnosti najdete v tématu [verze knihovny MFC](/cpp/mfc/mfc-library-versions).  
+  Konfigurace ladění pro aplikace MFC je třeba propojit s ladicí verzí knihovny MFC. Soubory hlaviček knihovny MFC určit správnou verzi knihovny MFC pro propojení s založený na symboly, které jste definovali, jako například **_DEBUG** a **_UNICODE**. Podrobnosti najdete v tématu [MFC – knihovní verze](/cpp/mfc/mfc-library-versions).  
   
 ## <a name="see-also"></a>Viz také  
  [Ladění nativního kódu](../debugger/debugging-native-code.md)   

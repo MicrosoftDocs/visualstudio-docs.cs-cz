@@ -1,147 +1,322 @@
 ---
-title: Změnit protokolu (Visual Studio Tools for Unity, Windows) | Microsoft Docs
+title: Protokol změn (Visual Studio Tools for Unity, Windows) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 03/23/2018
+ms.date: 11/28/2018
 ms.technology: vs-unity-tools
 ms.topic: conceptual
 ms.assetid: ea490b7e-fc0d-44b1-858a-a725ce20e396
-author: dantogno
-ms.author: v-davian
+author: therealjohn
+ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 4d7f965cd2a0cd34ea3cb889f25809d32bee2270
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4db1d1d5340465b2e977a651eea2e6ad592c22e0
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53068377"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-windows"></a>Protokol změn (Visual Studio Tools for Unity, Windows)
-Visual Studio Tools for Unity změnit protokolu.
+Protokol změn Visual Studio Tools for Unity.
 
-## <a name="3605"></a>3.6.0.5
- Vydaná 2018-03-13
-
-### <a name="new-features"></a>Nové funkce
-
--   **Generování projektu:**
-
-    -   Přidaná podpora pro nový generátor projektu v Unity 2018.1
+## <a name="3903"></a>3.9.0.3
+ vydáno 28. listopadu 2018
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
 -   **Integrace:**
 
-    -   Pevné zpracování poškozená stavy s vlastní projekty.
+    -   Oprava problémů projekt znovu načíst a technologii intellisense při přidávání nebo odebírání skripty, které jsou umístěné v úplně první projekt.
+
+## <a name="3902"></a>3.9.0.2
+ vydáno 19. listopadu 2018
+
+### <a name="bug-fixes"></a>Opravy chyb
 
 -   **Ladicí program:**
 
-    -   Opravit nastavení další příkaz.
+    -   Oprava vzájemné zablokování v knihovně používaný ke komunikaci s modulem Unity a ladicí program, nastavení sady Visual Studio nebo Unity ukotvit, zejména v případě dosažení "Připojit k Unity" nebo restartování hry.
 
-## <a name="3604"></a>3.6.0.4
- Vydaná 2018-03-05
+## <a name="3901"></a>3.9.0.1
+ Vydáno 15. listopadu 2018
 
 ### <a name="bug-fixes"></a>Opravy chyb
-
--   **Generování projektu:**
-
-    -   Detekce pevné Mono verze.
 
 -   **Integrace:**
 
-    -   Pevné problémy načasování s 2018.1 a aktivaci modulu plug-in.
+    -   Oprava Unity modulu plug-in aktivace byla vyberete jiný výchozí editor.
 
-## <a name="3603"></a>3.6.0.3
- Vydaná 2018-02-23
-
-### <a name="new-features"></a>Nové funkce
-
--   **Generování projektu:**
-
-    -   Přidaná podpora pro .NET Standard.
+## <a name="3900"></a>3.9.0.0
+ Vydáno 13. listopadu 2018
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
 -   **Generování projektu:**
 
-    -   Opravené Unity cílový framework detekce.
+    -   Alternativní řešení pro chybu Unity výkonu, která byla opravena Unity vrácena zpět.
+
+## <a name="3807"></a>3.8.0.7
+ Vydáno 20. září 2018
+
+### <a name="bug-fixes"></a>Opravy chyb
 
 -   **Ladicí program:**
 
-    -   Opravené narušující na výjimky, které jsou vyvolány mimo usercode.
+    -   (Přeneseny zpět z 3.9.0.2) Oprava vzájemné zablokování v knihovně používaný ke komunikaci s modulem Unity a ladicí program, nastavení sady Visual Studio nebo Unity ukotvit, zejména v případě dosažení "Připojit k Unity" nebo restartování hry.
 
-## <a name="3602"></a>3.6.0.2
- Vydaná 2018-02-07
-
-### <a name="new-features"></a>Nové funkce
-
--   **Integrace:**
-
-    -   Aktualizujte plochy UnityMessage API pro 2017.3.
+## <a name="3806"></a>3.8.0.6
+ Vydáno 27. srpna 2018
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
 -   **Integrace:**
 
-    -   Znovu načte pouze projektů externí změn (pomocí omezení).
- 
-## <a name="3601"></a>3.6.0.1
- Vydaná 2018-01-24
+    -   Opravili jsme opětovném načtení projektů a řešení.
+
+## <a name="3805"></a>3.8.0.5
+ vydáno 20. srpna 2018
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
 -   **Integrace:**
 
-    -   Opravené automatické pdb do mdb ladění symbol převodu.
-    
-    -   Opravené nepřímé volání EditorPrefs.GetBool při pokusu změnit velikost pole, které mají vliv inspector.
- 
-## <a name="3600"></a>3.6.0.0
- Vydaná 2018-01-10
+    -   Oprava projektu monitorování integrity předplatného.
+
+## <a name="3804"></a>3.8.0.4
+ Vydáno 14. srpna 2018
 
 ### <a name="new-features"></a>Nové funkce
-
--   **Generování projektu:**
-
-    -   Přidaná podpora pro 2018.1 MonoIsland referenčního modelu.
 
 -   **Vyhodnocení:**
 
-    -   Přidaná podpora pro $exception identifikátor.
+    -   Přidání podpory pro hodnoty ukazatele.
 
--   **Ladicí program:**
-
-    -   Byla přidána podpora pro atributy DebuggerHidden/DebuggerStepThrough se nový modul runtime Unity.
-    
--   **Průvodci:**
-
-    -   Zavést 'Nejnovější' verze pro průvodce.
-
-### <a name="bug-fixes"></a>Opravy chyb
-
--   **Generování projektu:**
-
-    -   Opravené projektu výpočetní identifikátor guid pro projekty přehrávač.
-
--   **Ladicí program:**
-
-    -   Pevné soupeření při zpracování události ukončování řádků.
-    
--   **Průvodci:**
-
-    -   Před vložením metoda aktualizujte roslyn kontext.
-
-## <a name="3503"></a>3.5.0.3
- Vydaná 2018-01-09
+    -   Přidání podpory pro obecné metody.
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
 -   **Integrace:**
 
-    -   Opravené automatické pdb do mdb ladění symbol převodu.
+    -   Inteligentní načíst znovu s více projekty změnit.
+
+## <a name="3803"></a>3.8.0.3
+ Vydáno 24. července 2018
+
+### <a name="bug-fixes"></a>Opravy chyb
+
+-   **Generování projektu:**
+
+    -   (Přeneseny zpět z 3.9.0.0) Alternativní řešení pro chybu Unity výkonu, která byla opravena Unity vrácena zpět.
+
+## <a name="3802"></a>3.8.0.2
+ Vydáno 7. července 2018
+
+### <a name="bug-fixes"></a>Opravy chyb
+
+-   **Generování projektu:**
+
+    -   Přechodné alternativní řešení pro chyby výkonu Unity: při vytváření projektů do mezipaměti MonoIslands.
+
+## <a name="3801"></a>3.8.0.1
+ Vydáno 26. června 2018
+
+### <a name="new-features"></a>Nové funkce
+
+-   **Ladění:**
+
+    -   Přidání podpory pro příkazy UserLog a UserBreak.
+
+    -   Podpora přidání opožděné načtení typu (optimalizace síťová latence odezvy zatížení a ladicí program).
+
+### <a name="bug-fixes"></a>Opravy chyb
+
+-   **Vyhodnocení:**
+
+    -   Vylepšené vyhodnocení výrazu binární operátor a metoda vyhledávání.
+
+## <a name="3800"></a>3.8.0.0
+ Vydáno 30. května 2018
+
+### <a name="new-features"></a>Nové funkce
+
+-   **Ladění:**
+
+    -   Přidání podpory pro zobrazení proměnné v asynchronní konstrukce.
+
+    -   Přidání podpory pro vnořené typy zpracování, při nastavení zarážek, aby se zabránilo upozornění s kompilátoru konstrukce.
+
+-   **Integrace:**
+
+    -   Přidání podpory pro gramatik textmate shadery (úlohy pro C++ je už je nepotřebujete pro zabarvení kódu shaderu).
+
+### <a name="bug-fixes"></a>Opravy chyb
+
+-   **Generování projektu:**
+
+    -   Nelze převést souboru PDB typu portable mdb zobrazovat při používání nového modulu runtime Unity.
+
+## <a name="3701"></a>3.7.0.1
+ Vydáno 7. května 2018
+
+### <a name="bug-fixes"></a>Opravy chyb
+
+-   **Instalační program:**
+
+    -   Oprava závislostí problém při používání experimentální sestavení.
+
+## <a name="3700"></a>3.7.0.0
+ Vydáno 7. května 2018
+
+### <a name="new-features"></a>Nové funkce
+
+-   **Ladění:**
+
+    -   Přidání podpory pro iniciovat organizovaně, což ladění (ladění více hráči nebo editoru pomocí stejné relaci sady Visual Studio).
+
+    -   Přidání podpory pro Android USB player ladění.
+
+    -   Přidání podpory pro UPW/endem IL2CPP player ladění.
+
+-   **Vyhodnocení:**
+
+    -   Přidání podpory pro šestnáctkové specifikátorů.
+
+    -   Vylepšené sledování okno hodnocení.
+
+### <a name="bug-fixes"></a>Opravy chyb
+
+-   **Integrace:**
+
+    -   Oprava využití nastavení výjimek.
+
+-   **Generování projektu:**
+
+    -   Vyloučíte z generování balíčku správce kompilačních jednotek.
+
+## <a name="3605"></a>3.6.0.5
+ Vydáno 13. března 2018
+
+### <a name="new-features"></a>Nové funkce
+
+-   **Generování projektu:**
+
+    -   Přidání podpory pro nový generátor projektu v Unity 2018.1.
+
+### <a name="bug-fixes"></a>Opravy chyb
+
+-   **Integrace:**
+
+    -   Opravili jsme zpracování poškozená státy, s vlastní projekty.
+
+-   **Ladicí program:**
+
+    -   Oprava, nastavení dalšího příkazu.
+
+## <a name="3604"></a>3.6.0.4
+ Vydané 5. března 2018
+
+### <a name="bug-fixes"></a>Opravy chyb
+
+-   **Generování projektu:**
+
+    -   Detekce Mono opravenou verzi.
+
+-   **Integrace:**
+
+    -   Oprava problémy načasování s 2018.1 a aktivace modulu plug-in.
+
+## <a name="3603"></a>3.6.0.3
+ Vydáno 23. února 2018
+
+### <a name="new-features"></a>Nové funkce
+
+-   **Generování projektu:**
+
+    -   Přidání podpory pro .NET Standard.
+
+### <a name="bug-fixes"></a>Opravy chyb
+
+-   **Generování projektu:**
+
+    -   Oprava Unity cílové rozhraní framework zjišťování.
+
+-   **Ladicí program:**
+
+    -   Oprava přerušení při výjimkách, které jsou zahozeny mimo usercode.
+
+## <a name="3602"></a>3.6.0.2
+ Vydáno 7. února 2018
+
+### <a name="new-features"></a>Nové funkce
+
+-   **Integrace:**
+
+    -   Aktualizujte rovinu rozhraní API UnityMessage pro 2017.3.
+
+### <a name="bug-fixes"></a>Opravy chyb
+
+-   **Integrace:**
+
+    -   Jenom znovu načte projekty na externí změně (omezení využití sítě).
+
+## <a name="3601"></a>3.6.0.1
+ Vydáno 24. ledna 2018
+
+### <a name="bug-fixes"></a>Opravy chyb
+
+-   **Integrace:**
+
+    -   Oprava automatické pdb do mdb ladicí symbol převodu.
+
+    -   Oprava nepřímé volání EditorPrefs.GetBool vliv na okně Inspektor. při pokusu o změnu velikosti pole.
+
+## <a name="3600"></a>3.6.0.0
+ Vydáno 10. ledna 2018
+
+### <a name="new-features"></a>Nové funkce
+
+-   **Generování projektu:**
+
+    -   Přidání podpory pro 2018.1 MonoIsland referenční model.
+
+-   **Vyhodnocení:**
+
+    -   Přidání podpory pro identifikátor $exception.
+
+-   **Ladicí program:**
+
+    -   Přidání podpory pro atributy DebuggerHidden/DebuggerStepThrough se nový modul runtime Unity.
+
+-   **Průvodci:**
+
+    -   Zavést ' nejnovější ' pro průvodce.
+
+### <a name="bug-fixes"></a>Opravy chyb
+
+-   **Generování projektu:**
+
+    -   Opravili jsme výpočet identifikátoru guid projektu pro projekty přehrávače.
+
+-   **Ladicí program:**
+
+    -   Opravili jsme soupeření při zpracování události zásadní.
+
+-   **Průvodci:**
+
+    -   Před vložením metoda aktualizujte roslyn kontextu.
+
+## <a name="3503"></a>3.5.0.3
+ Vydáno 9. ledna 2018
+
+### <a name="bug-fixes"></a>Opravy chyb
+
+-   **Integrace:**
+
+    -   Oprava automatické pdb do mdb ladicí symbol převodu.
 
 ## <a name="3502"></a>3.5.0.2
- Vydaná 2017-12-04
+ Vydáno 4. prosince 2017
 
 ### <a name="new-features"></a>Nové funkce
 
@@ -151,335 +326,335 @@ Visual Studio Tools for Unity změnit protokolu.
 
 -   **Ladicí program:**
 
-    -   Přidat možnost k použití Mono ladicí program sdílí Xamarin a Visual Studio pro Mac k ladění editoru Unity.
+    -   Přidat možnost použít ladicí program Mono, sdílený produkty Xamarin a Visual Studio for Mac k ladění nástroje Unity Editor.
 
-    -   Byla přidána podpora pro soubory symbolů přenosné ladění.
+    -   Přidání podpory pro soubory symbolů ladění přenosné.
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
 -   **Integrace:**
 
-    -   Opravit potíže s instalací závislosti.
+    -   Opravili jsme potíže s instalací závislosti.
 
-    -   Opravené Unity API nápovědy nabídky se nezobrazují.
+    -   Oprava rozhraní API Unity Nápověda není zobrazen.
 
 -   **Generování projektu:**
 
-    -   Generování projektu pevné player při práci na UWP hry s 4.6 IL2CPP/.NET back-end.
+    -   Oprava player generování projektu při práci na hře pro UPW s back-endem IL2CPP/.NET 4.6 end.
 
-    -   Pevné navíc .dll rozšíření neoprávněně přidat k názvu souboru sestavení.
+    -   Opravili jsme navíc DLL rozšíření chybně přidá k názvu souboru sestavení.
 
-    -   Opravené využití konkrétní projektu rozhraní API úroveň kompatibility místo globální jeden.
+    -   Oprava využití určitého projektu, API úroveň kompatibility místo globální.
 
-    -   Nevynucovat příznak AllowAttachedDebuggingOfEditor Unity jako výchozí hodnota je nyní "true".
+    -   Nesnažte se vynutit příznak AllowAttachedDebuggingOfEditor Unity jako výchozí hodnota je "true".
 
 ## <a name="3402"></a>3.4.0.2
- Vydaná 2017-09-19
+ Vydáno 19. září 2017
 
 ### <a name="new-features"></a>Nové funkce
 
 -   **Generování projektu:**
 
-    -   Přidaná podpora pro assembly.json kompilačních jednotek.
+    -   Přidání podpory pro assembly.json kompilačních jednotek.
 
     -   Zastavit kopírování Unity sestavení do složky projektu.
 
 -   **Ladicí program:**
 
-    -   Byla přidána podpora pro nastavení další příkaz s nový modul runtime Unity.
+    -   Přidání podpory pro nastavení dalšího příkazu pomocí nového modulu runtime Unity.
 
-    -   Byla přidána podpora pro typ Decimal s nový modul runtime Unity.
+    -   Přidání podpory pro typ desetinné se nový modul runtime Unity.
 
-    -   Přidaná podpora pro implicitní nebo explicitní převody.
+    -   Přidání podpory pro implicitní a explicitní převody.
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
 -   **Vyhodnocení:**
 
-    -   Vytváření dlouhodobého pole s velikostí implicitní.
+    -   Oprava vytvoření pole s implicitní velikostí.
 
-    -   Opravené kompilátoru vygenerované položky s místní hodnoty.
+    -   Generovaný kompilátorem opravené položky, místní hodnoty.
 
 -   **Generování projektu:**
 
-    -   Pevný odkaz na Microsoft.CSharp 4.6 úrovně rozhraní API.
+    -   Pevný odkaz na Microsoft.CSharp obsahují třídy pro 4.6 úroveň rozhraní API.
 
 ## <a name="3302"></a>3.3.0.2
- Vydaná 2017-08-15
+ Vydáno: 15. srpna 2017
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
 -   **Generování projektu:**
 
-    -   Pevné generování řešení sady Visual Studio Unity 5.5 a předchozí verze.
+    -   Opravili jsme generování řešení sady Visual Studio na Unity 5.5 a předchozích verzích.
 
 ## <a name="3300"></a>3.3.0.0
- Vydaná 2017-08-14
+ Vydáno 14. srpna 2017
 
 ### <a name="new-features"></a>Nové funkce
 
 -   **Vyhodnocení:**
 
-    -   Byla přidána podpora pro vytváření struktur s nový modul runtime Unity.
+    -   Přidání podpory pro vytváření struktury se nový modul runtime Unity.
 
-    -   Přidaná podpora minimalist pro ukazatele.
+    -   Přidání podpory minimalist pro ukazatele.
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
 -   **Vyhodnocení:**
 
-    -   Volání metody pevné primitiv.
+    -   Opravili jsme volání metody na primitiv.
 
-    -   Pole pevné vyhodnocení s typy, které jsou označené jako BeforeFieldInit.
+    -   Pole pevné hodnocení s typy označené BeforeFieldInit.
 
-    -   Opravené nepodporovaný volání s binárními operátory (odečíst).
+    -   Oprava nepodporovaném volání s binárními operátory (odečíst).
 
-    -   Opravené problémy při přidávání položek pro Visual Studio sledovat.
+    -   Opravené problémy při přidávání položek do Visual Studio Watch.
 
 -   **Generování projektu:**
 
-    -   Pevné odkazy název sestavení s mcs.rsp soubory.
+    -   Pevné odkazy na název sestavení se mcs.rsp soubory.
 
-    -   Opravené definuje úrovně rozhraní API.
+    -   Oprava definuje s úrovní rozhraní API.
 
 ## <a name="3200"></a>3.2.0.0
- Vydaná 2017-05-10
+ Vydáno 10. května 2017
 
 ### <a name="new-features"></a>Nové funkce
 
 -   **Instalační program:**
 
-    -   Přidaná podpora pro čištění mezipaměť MEF.
+    -   Přidání podpory pro čištění mezipaměť MEF.
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
 -   **Editor kódu:**
 
-    -   Opravené klasifikace nebo dokončení s vlastní atributy.
+    -   Oprava klasifikace/dokončení s vlastními atributy.
 
-    -   Pevné blikání s Unity zprávy.
+    -   Opravili jsme blikání s zprávy Unity.
 
 ## <a name="3100"></a>3.1.0.0
- Vydaná 2017-04-07
+ Vydáno 7. dubna 2017
 
 ### <a name="new-features"></a>Nové funkce
 
 -   **Ladicí program:**
 
-    -   Přidaná podpora pro nový modul runtime Unity (s .NET 4.6 / kompatibilita C# 6).
+    -   Přidali jsme podporu pro nový modul runtime Unity (s .NET 4.6 / kompatibilita C# 6).
 
 -   **Generování projektu:**
 
-    -   Byla přidána podpora pro profil .NET 4.6.
+    -   Přidání podpory pro profil .NET 4.6.
 
-    -   Byla přidána podpora pro mcs.rsp soubory.
+    -   Přidání podpory pro mcs.rsp soubory.
 
-    -   Při použití Unity 5.6 vždy povolte nezabezpečený kompilace přepínače.
+    -   Vždy povolte přepínač nebezpečné kompilace při použití Unity 5.6.
 
-    -   Přidaná podpora pro generování projektu "Player" při použití Windows Store platformy a il2cpp back-end.
+    -   Přidali jsme podporu pro generování projektu "Player" při použití Windows Store platformy a endem il2cpp back-endu.
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
 -   **Editor kódu:**
 
-    -   Opravené vsuvka pozice po vložení metoda s automatickým dokončováním.
+    -   Opravili jsme pozici blikajícího kurzoru po vložení metody s automatickým dokončováním.
 
 -   **Generování projektu:**
 
-    -   Po zpracování verze odebrané sestavení.
+    -   Odebrané sestavení verze následné zpracování.
 
 ## <a name="3001"></a>3.0.0.1
- Vydaná 2017-03-07
+ Vydáno 7. března 2017
 
-### <a name="this-version-includes-all-new-features-and-bug-fixes-introduced-with-28x-series"></a>Tato verze obsahuje všechny nové funkce a opravy chyb zavedené 2.8.x řady.
+### <a name="this-version-includes-all-new-features-and-bug-fixes-introduced-with-28x-series"></a>Tato verze zahrnuje všechny nové funkce a opravy chyb nepředchází 2.8.x řady.
 
-## <a name="2820---30-preview-3"></a>2.8.2.0 - 3.0 preview 3
- Vydaná 2017-01-25
+## <a name="2820---30-preview-3"></a>2.8.2.0 - 3.0 ve verzi preview 3
+ Vydáno 25. ledna 2017
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
 -   **Generování projektu:**
 
-    -   Pevné regrese, kde modulů plug-in projekty tam, kde je odkazováno dvakrát, nejprve jako binární knihovny DLL pak jako projekt odkazovat.
+    -   Oprava regrese, kde moduly plug-in projekty tam, kde odkazováno dvakrát, nejprve jako binární knihovnu DLL jako projekt odkázat na.
 
-## <a name="2810---30-preview-2"></a>2.8.1.0 - 3.0 preview 2
- Vydaná 2017-01-23
+## <a name="2810---30-preview-2"></a>2.8.1.0 - 3.0 ve verzi preview 2
+ Vydáno 23. ledna 2017
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
 -   **Editor kódu:**
 
-    -   Vyřešili selhání při spouštění deklarace atributu bez závorek dokončení.
+    -   Oprava chyby při počáteční deklaraci atributu bez uzavírání hranatých závorek.
 
 -   **Ladicí program:**
 
-    -   Fixed – funkce zarážky coroutines pod nový Unity kompilátoru nebo modul runtime.
+    -   Fixed – funkce zarážky u korutin v rámci nového Unity kompilátoru a modulu runtime.
 
-    -   Přidání upozornění v případě unbindable bod přerušení (Pokud je nalezen žádný odpovídající umístění zdroje).
+    -   Přidání upozornění v případě unbindable bod přerušení (když je nalezena žádná odpovídající umístění zdroje).
 
 -   **Generování projektu:**
 
-    -   Opravené csproj generace s lokalizovaným nebo speciální znaky.
+    -   Opravili jsme generování souboru csproj pomocí speciální/lokalizované znaky.
 
-    -   Pevné odkazy mimo prostředky, jako je Library (jako je Facebook SDK).
+    -   Pevné odkazy mimo prostředky, jako jsou knihovny (jako je Facebook SDK).
 
 -   **Různé:**
 
-    -   Přidání zkontrolujte Unity zabrání spuštění při instalaci nebo odinstalaci.
+    -   Přidání kontroly pro Unity Zabraňte jejich spuštění při instalaci nebo odinstalaci.
 
-    -   Přepnout do https do cíle vzdálené dokumentace Unity.
+    -   Přepnout na https cílit na vzdálené dokumentace k Unity.
 
-## <a name="2800---30-preview"></a>2.8.0.0 - 3.0 preview
- Vydaná 2016-11-17
+## <a name="2800---30-preview"></a>2.8.0.0 - 3.0 ve verzi preview
+ Vydáno 17. listopadu 2016
 
 ### <a name="new-features"></a>Nové funkce
 
 -   **Obecné:**
 
-    -   Byla přidána podpora pro Visual Studio 2017 Instalační služby.
+    -   Přidání podpory instalačního programu sady Visual Studio 2017.
 
-    -   Byla přidána podpora pro Visual Studio 2017 rozšíření.
+    -   Byla přidána podpora rozšíření sady Visual Studio 2017.
 
     -   Podpora přidání lokalizace.
 
 -   **Editor kódu:**
 
-    -   Přidaný C# IntelliSense pro Unity zprávy.
+    -   Přidání C# IntelliSense pro zprávy Unity.
 
-    -   Přidaný C# kódu zabarvení pro Unity zprávy.
+    -   Přidání C# kód zabarvení pro zprávy Unity.
 
 -   **Ladicí program:**
 
-    -   Přidání podpory pro `is`, `as`, přímé cast `default`, `new` výrazy.
+    -   Přidání podpory pro `is`, `as`přímé přetypování, `default`, `new` výrazy.
 
-    -   Byla přidána podpora pro řetězec concat výrazy.
+    -   Přidání podpory pro řetězec concat výrazy.
 
-    -   Přidaná podpora pro šestnáctkové zobrazení celočíselné hodnoty.
+    -   Přidání podpory pro hexadecimální zobrazení celočíselných hodnot.
 
-    -   Byla přidána podpora pro vytvoření nové proměnné dočasného (příkazů).
+    -   Přidání podpory pro vytváření nové dočasné proměnné (příkazů).
 
-    -   Přidaná podpora pro implicitní převody primitivní.
+    -   Přidání podpory pro primitivní implicitní převody.
 
-    -   Když je očekávané nebo nebyl nalezen typ přidat lépe chybové zprávy.
+    -   Přidání lepší chybové zprávy při typ je očekáván nebo nebyl nalezen.
 
 -   **Generování projektu:**
 
-    -   Odebrat příponu CSharp z názvy projektů.
+    -   Přípona CSharp odebrán názvy projektů.
 
-    -   Odebrán odkaz na soubor systému široké msbuild cíle.
+    -   Odebrán odkaz na soubor cílů široké msbuild systému.
 
 -   **Průvodci:**
 
-    -   Byla přidána podpora pro Unity zprávy v jiných chování typy jako Editor nebo EditorWindow.
+    -   Přidání podpory pro zprávy Unity v jiné chování typy, například Editor nebo okna editoru.
 
-    -   Přepnout do Roslyn k vložení a formátování zprávy Unity.
+    -   Přepnout na platformě Roslyn vložit a formátovat zprávy Unity.
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
 -   **Ladicí program:**
 
-    -   Opravit chyby chybám Unity při vyhodnocování obecné typy.
+    -   Je opravená chyba při vyhodnocování obecných typů chyb Unity.
 
-    -   Opravené zpracování typů s povolenou hodnotou Null.
+    -   Oprava zpracování typů s povolenou hodnotou Null.
 
-    -   Opravené zpracování výčty.
+    -   Oprava zpracování výčtů.
 
-    -   Opravené zpracování typy vnořených členů.
+    -   Oprava zpracování typů vnořeného člena.
 
-    -   Opravené kolekce indexer přístup.
+    -   Opravili jsme kolekci přístup indexeru.
 
-    -   Opravené podpora ladění iterátorů rámce s novou kompilátor jazyka C#.
+    -   Oprava podpory ladění snímků iterátor s nový kompilátor jazyka C#.
 
 -   **Generování projektu:**
 
-    -   Opravené chyby, která zabránila kompilace, pokud je cílem Unity Web player.
+    -   Oprava chyby, který zabránil kompilace při cílení na Unity Web Playeru.
 
-    -   Opravené chyby, která zabránila kompilace při kompilování skriptu s webové kódovaný název souboru.
+    -   Oprava chyby, který zabránil kompilace při kompilaci skriptu s webovým kódovaný název souboru.
 
 ## <a name="2300"></a>2.3.0.0
- Vydaná 2016-07-14
+ Vydáno 14. července 2016
 
 ### <a name="new-features"></a>Nové funkce
 
 -   **Obecné:**
 
-    -   Přidat možnost zakázat Unity konzoly protokoly v sadě Visual Studio seznam chyb.
+    -   Přidat možnost zakázat Unity konzole protokoly v seznamu chyb sady Visual Studio.
 
-    -   Přidat k povolení vlastnosti generovaného projektu má být změněn.
+    -   Přidat možnost povolit vlastnosti vygenerované projekt má být upraven.
 
 -   **Ladicí program:**
 
-    -   Přidání textu, XML, HTML a JSON řetězec vizualizérech.
+    -   Přidání textu, XML, HTML a JSON řetězec vizualizéry.
 
 -   **Průvodci:**
 
-    -   Přidat chybí MonoBehaviors.
+    -   Přidat chybějící MonoBehaviors.
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
 -   **Obecné:**
 
-    -   Vyřešili konflikt s ReSharper, která zabránila ovládacích prvků v sadě Visual Studio nastavení zobrazení.
+    -   Oprava ke konfliktu s ReSharper, který zabránil ovládacích prvků uvnitř sady Visual Studio nastavení zobrazení.
 
-    -   Vyřešili konflikt s Xamarinem, která zabránila v některých případech ladění.
+    -   Opravili jsme konflikt s využitím kódu Xamarin, která bránila v některých případech ladění.
 
 -   **Ladicí program:**
 
-    -   Byl opraven problém, která způsobila, že chcete ukotvit při ladění Visual Studio.
+    -   Opravili jsme problém, která způsobila zablokování při ladění sady Visual Studio.
 
-    -   Oprava problému s zarážky funkce v sadě Visual Studio 2015.
+    -   Opravili jsme problém s zarážky funkcí v sadě Visual Studio 2015.
 
-    -   Vyřešili několik výraz vyhodnocení problémů.
+    -   Opravili jsme několik výrazů vyhodnocení problémů.
 
 ## <a name="2200"></a>2.2.0.0
- Vydaná 2016-02-04
+ Vydáno 4. února 2016
 
 ### <a name="new-features"></a>Nové funkce
 
 -   **Průvodci:**
 
-    -   Přidání inteligentní vyhledávání v **MonoBehavior implementace** průvodce.
+    -   Přidání inteligentní vyhledávání v **implementace MonoBehavior** průvodce.
 
-    -   Kontext učiněna průvodců vědět; například NetworkBehavior zprávy jsou k dispozici pouze při práci se službou NetworkBehavior.
+    -   Vytvořit průvodce kontextu vědět; například NetworkBehavior zprávy jsou k dispozici pouze při práci s NetworkBehavior.
 
-    -   Byla přidána podpora pro NetworkBehavior zprávy v průvodci.
+    -   Přidání podpory pro NetworkBehavior zprávy v průvodci.
 
 -   **UŽIVATELSKÉ ROZHRANÍ:**
 
-    -   Přidat konfiguraci zobrazení zprávy MonoBehavior možnost.
+    -   Přidat možnost konfigurovat, zda se MonoBehavior zprávy.
 
-    -   Odebrat stránky vlastností sady Visual Studio, které nejsou požadovanou do projektů Unity.
+    -   Odebrání stránky vlastností sady Visual Studio, které nejsou relevantní pro projekty Unity.
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
 -   **Generování projektu:**
 
-    -   Pevné odkazy na UnityEngine a UnityEditor na Unity 4.6.
+    -   Pevné odkazy na UnityEngine a UnityEditor na 4.6 v Unity.
 
-    -   Opravené generování souborů projektu, když Unity běží na OSX.
+    -   Oprava generování souborů projektu při spuštění Unity na os x.
 
-    -   Opravené zpracování projektu názvy obsahující znaky hashmark (#).
+    -   Oprava zpracování názvy projektů obsahující znaky hashmark (#)
 
-    -   Vygenerovaný projekty omezena na 4 C#.
+    -   S omezením pomocí specifikátoru generované projekty jazyka C# 4.
 
 -   **Ladicí program:**
 
-    -   Oprava problému s vyhodnocení výrazu při ladění uvnitř Unity coroutine.
+    -   Opravili jsme problém s vyhodnocování výrazů při ladění v korutině Unity.
 
-    -   Byl opraven problém, která způsobila, že chcete ukotvit při ladění Visual Studio.
+    -   Opravili jsme problém, která způsobila zablokování při ladění sady Visual Studio.
 
 -   **UŽIVATELSKÉ ROZHRANÍ:**
 
-    -   Pevné nekompatibility s [karty Studio](https://tabsstudio.com/) rozšíření sady Visual Studio.
+    -   Oprava nekompatibility s [karty Studio](https://tabsstudio.com/) rozšíření sady Visual Studio.
 
 -   **Instalační program:**
 
-    -   Tím, že vytvoříte položky registru HKLM podporují instalaci celého systému VSTU (instalace pro všechny uživatele).
+    -   Tím, že vytvoříte položky registru HKLM podporují instalaci celý počítač vstu (instalace pro všechny uživatele).
 
-    -   Opravené problémy s odinstalace VSTU po instalaci stejnou verzi nástroje VSTU několik různých verzí sady Visual Studio. Například když VSTU **2015** 2.1.0.0 a VSTU **2013** 2.1.0.0 byly oba nainstalovány.
+    -   Opravené problémy odinstalaci VSTU při instalaci stejnou verzi VSTU pro několik různých verzí sady Visual Studio. Například když VSTU **2015** 2.1.0.0 a VSTU **2013** 2.1.0.0 oba nainstalovaly.
 
 ## <a name="2100"></a>2.1.0.0
- Vydaná 2015-09-08
+ Vydáno 8. září 2015
 
 ### <a name="new-features"></a>Nové funkce
 
@@ -487,703 +662,703 @@ Visual Studio Tools for Unity změnit protokolu.
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
--   Zobrazení položek nabídky v Unity < 4.2
+-   Zobrazit položky nabídky na Unity < 4.2
 
--   Když Visual Studio zamkne soubory XML intellisense, se už zobrazí chybová zpráva.
+-   Chybová zpráva zmizí při uzamčení soubory intellisense XML sady Visual Studio.
 
--   Zpracování <\<při Změnit >> podmíněné zarážky při podmíněného argument není logická hodnota.
+-   Zpracování <\<při změně >> podmíněné zarážky, pokud podmíněné argument není logická hodnota.
 
 -   Pevné odkazy na sestavení UnityEngine a UnityEditor pro aplikace Windows Store.
 
--   Pevné chyby při krokování v ladicím programu: nelze krok obecné výjimce.
+-   Oprava chyby při krokování v ladicím programu: nelze krokovat obecnou výjimku.
 
--   Pevný počet vstupů do zarážky ve Visual Studiu 2015.
+-   Pevný počet průchodů zarážky v sadě Visual Studio 2015.
 
 ## <a name="2000"></a>2.0.0.0
- Vydaná 2015-07-20
+ Vydáno 20. července 2015
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
 -   **Integrace Unity:**
 
-    -   Pevné převodu symboly ladění vytvořené pomocí sady Visual Studio 2015, při importu knihovny DLL a jeho symboly ladění (PDB).
+    -   Opravili jsme převod symboly ladění, které jsou vytvořené pomocí sady Visual Studio 2015, při importu knihovny DLL a jeho ladění symbolů (PDB).
 
-    -   Vždy Vygenerujte soubory MDB při importu knihovny DLL a jeho symboly ladění (PDB), s výjimkou případů, kdy se soubor MDB také poskytuje.
+    -   Vždy generovat soubory MDB při importu knihovny DLL a jeho ladění symbolů (PDB), s výjimkou případů, kdy se soubor MDB také poskytuje.
 
-    -   Opravené znečištění adresáře projektu Unity s adresářem obj.
+    -   Oprava znečištění adresáře Unity projektů s adresářem obj.
 
-    -   Pevné odkazy na System.Xml.Link a System.Runtime.Serialization generování.
+    -   Oprava generování odkazů na System.Xml.Link a System.Runtime.Serialization.
 
-    -   Přidaná podpora pro více odběrateli na generování souboru projektu rozhraní API moduly přiřazení.
+    -   Přidání podpory pro několik předplatitelů do generování souboru projektu rozhraní API zavěšení.
 
-    -   I když jeden ze souborů má být vygenerován uzamčeno generování souboru vždy dokončení projektu.
+    -   Generování souboru vždy dokončený projekt i v případě, že jeden ze souborů, které chcete vygenerovat je.
 
-    -   Přidání podpory pro * zástupné znaky v rozšíření filtrovat při zadávání soubory mají být zahrnuty do projektu C#.
+    -   Přidání podpory pro * zástupné znaky v rozšíření filtrování při určování souborů, které mají být zahrnuty v projektu C#.
 
--   **Integrace aplikace Visual Studio:**
+-   **Integrace se sadou Visual Studio:**
 
-    -   Opravit potíže s kompatibilitou s nástroji Power produktivitu.
+    -   Opravili jsme potíže s kompatibilitou se nástrojů Productivity Power Tools.
 
-    -   Pevné generování MonoBehaviors kolem deklarace události a delegáti.
+    -   Opravili jsme generování MonoBehaviors kolem deklarace události a delegáti.
 
 -   **Ladicí program:**
 
-    -   Pevné potenciální zablokování při ladění.
+    -   Opravili jsme potenciální zablokování při ladění.
 
-    -   Byl opraven problém s místní hodnoty by níž se má zobrazit v určitých rámce zásobníku.
+    -   Opravili jsme problém, kde by lokální proměnné zobrazí v některých rámců zásobníku.
 
-    -   Pevné zkontrolujete prázdné pole.
+    -   Oprava kontroly prázdné pole.
 
 ## <a name="1990---20-preview-2"></a>1.9.9.0 - 2.0 preview 2
- Vydaná 2015-04-02
+ Vydáno 2. dubna 2015
 
 ### <a name="new-features"></a>Nové funkce
 
 -   **Unity Project Exploreru:**
 
-    -   Při přejmenování souboru v prohlížeči projektu Unity automaticky přejmenovat – třída (viz **možnosti** dialogové okno).
+    -   Automatické přejmenování tříd při přejmenování souboru v Průzkumníku projektů Unity (viz **možnosti** dialogového okna).
 
-    -   Automaticky vyberte nově vytvořenou skripty v prohlížeči projektu Unity.
+    -   Automatický výběr nově vytvořený skripty v Průzkumníku projektů Unity.
 
-    -   Sledování aktivních skriptů v prohlížeči projektu Unity (viz **možnosti** dialogové okno).
+    -   Sledování aktivních skriptů v Průzkumníku projektů Unity (viz **možnosti** dialogového okna).
 
-    -   Dual synchronizovat Průzkumníku řešení Visual Studio (viz **možnosti** dialogové okno).
+    -   Duální synchronizovat Průzkumníku řešení sady Visual Studio (viz **možnosti** dialogového okna).
 
-    -   Přijmout sady Visual Studio ikony v prohlížeči projektu Unity.
+    -   Osvojte si ikony sady Visual Studio v Průzkumníku projektů Unity.
 
 -   **Ladicí program:**
 
-    -   Vyberte cíl aktivní ladicí ze seznamu cíle ladění uloženém nebo nedávno použité (viz **možnosti** dialogové okno).
+    -   Vyberte cíl active ladění ze seznamu cílů ladění uložené nebo naposledy použitých (viz **možnosti** dialogového okna).
 
-    -   Vytvoření funkce zarážky na MonoBehavior metody a použít je několik tříd MonoBehavior.
+    -   Vytvořit zarážky funkcí na MonoBehavior metody a použít je u více MonoBehavior tříd.
 
-    -   V ladicím programu podporovat Zkontrolujte ID objektu.
+    -   Ujistěte se, ID objektu se podporují v ladicím programu.
 
-    -   Podpora počet v ladicím programu volání zarážek.
+    -   Podpora v ladicím programu počet průchodů zarážky.
 
-    -   Podpora přerušení na výjimka v ladicím programu (experimentální. V tématu **možnosti** dialogové okno).
+    -   Podpora přerušení na výjimky v ladicím programu (experimentální. Zobrazit **možnosti** dialogového okna).
 
-    -   Při vyhodnocování výrazy v ladicím programu, podporují vytvoření objekty a pole.
+    -   Podporuje vytváření objekty a pole při vyhodnocení výrazů v ladicím programu.
 
-    -   Podpora porovnání null při vyhodnocení výrazy v ladicím programu.
+    -   Podporuje porovnání null při vyhodnocování výrazů v ladicím programu.
 
-    -   Zastaralé členy v ladicího programu Sledování vyfiltrujte.
+    -   Zastaralé členy v oknech ladicího programu Sledování filtru
 
 -   **Instalační program:**
 
-    -   Optimalizované Visual Studio Tools for Unity rozšíření registrace.
+    -   Optimalizované Visual Studio Tools for Unity registrace rozšíření.
 
-    -   Nainstalujte Visual Studio Tools pro Unity balíček pro Unity 5.
+    -   Instalace Visual Studio Tools pro Unity balíček pro Unity 5.
 
--   **Dokumentace:** zvýšit výkon při generování dokumentace.
+-   **Dokumentace ke službě:** zlepšení výkonu při generování dokumentace.
 
--   **Průvodci:** podpora nových metod MonoBehavior Unity 4.6 a Unity 5.
+-   **Průvodce:** podporu nových MonoBehavior metod 4.6 v Unity a Unity 5.
 
--   **Unity:** unsafe příznaky vyhledávání a vlastní definuje v soubory .rsp během generování souboru projektu.
+-   **Unity:** nebezpečné příznaků vyhledávání a vlastních definuje v soubory .rsp při generování souboru projektu.
 
--   **Uživatelské rozhraní:** přidat Visual Studio Tools for Unity **možnosti** dialogové okno v sadě Visual Studio.
+-   **Uživatelské rozhraní:** přidali Visual Studio Tools for Unity **možnosti** dialogového okna v sadě Visual Studio.
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
 -   **Unity Project Exploreru:**
 
-    -   Po soubory jsou přesunut nebo přejmenován ze Průzkumníku řešení Visual Studio, obnovte Prohlížeč projektu Unity.
+    -   Aktualizujte Průzkumníka projektů Unity po soubory se přesunout nebo přejmenovat v Průzkumníku řešení sady Visual Studio.
 
-    -   Zachovejte výběr při přejmenování souborů v prohlížeči projektu Unity.
+    -   Zachovat výběr při přejmenování souborů v Průzkumníku projektů Unity.
 
-    -   Zakázat automatické rozbalení a sbalení při soubory jsou dvojité kliknutí na v prohlížeči projektu Unity.
+    -   Zakázat automatické rozbalovat a sbalovat se soubory dvojité kliknutí v Průzkumníku projektů Unity.
 
-    -   Zajistěte, aby nově vybrané soubory jsou viditelné v prohlížeči projektu Unity.
+    -   Ujistěte se, že nově vybrané soubory jsou viditelné v Průzkumníku projektů Unity.
 
 -   **Ladicí program:**
 
-    -   Zabránit možného freeze – při vyhodnocování výrazy v ladicím programu sady Visual Studio.
+    -   Zabraňte možný výskyt sady Visual Studio zablokovat při vyhodnocení výrazů v ladicím programu.
 
-    -   Ujistěte se, že volání metod dojít ve správné doméně v ladicím programu.
+    -   Ujistěte se, že volání metod provádělo na správné domény v ladicím programu.
 
 -   **Unity:**
 
-    -   Opravte umístění UnityVS.OpenFile s Unity 5.
+    -   Opravte umístění UnityVS.OpenFile pomocí Unity 5.
 
-    -   Opravte umístění pdb2mdb s Unity 5.
+    -   Opravte umístění pdb2mdb pomocí Unity 5.
 
-    -   Zabránit možnou výjimkou během generování souboru projektu.
+    -   Zabraňte možnou výjimkou při generování souboru projektu.
 
-    -   Při spuštění Unity na OSX, zabránit možné zablokování.
+    -   Zabránit možný zablokování při spuštění Unity na os x.
 
-    -   Zpracování vnitřní výjimky.
+    -   Zpracování interních výjimek.
 
-    -   Protokoly konzoly Unity poslat seznam chyb VS.
+    -   Odeslat protokoly konzoly s Unity v seznamu chyb VS.
 
--   **Dokumentace:** opravte generování dokumentace pro novou dokumentaci unity.
+-   **Dokumentace ke službě:** opravte generování dokumentace pro nové dokumentace k unity.
 
--   **Projekt:** přesunout a přejmenujte soubory .meta Unity v případě potřeby i ve složkách.
+-   **Projekt:** přesunutí a přejmenování souborů .meta Unity v případě potřeby i ve složkách.
 
--   **Průvodci:** opravte pořadí parametrů metody MonoBehavior při generování kódu.
+-   **Průvodce:** opravte pořadí parametrů metody MonoBehavior při generování kódu.
 
--   **Uživatelské rozhraní:** motivy podpora Visual Studio pro místní nabídky a ikony.
+-   **Uživatelské rozhraní:** motivů aplikace Visual Studio podporu pro místní nabídky a ikony.
 
 ## <a name="1980---20-preview"></a>1.9.8.0 - 2.0 preview
- Vydaná 2014-11-12
+ Vydáno 12. listopadu 2014
 
 ### <a name="new-features"></a>Nové funkce
 
--   Podpora pro Visual Studio 2015.
+-   Podpora pro sadu Visual Studio 2015.
 
--   Kód zabarvení pro Unity shadery ve Visual Studiu 2015.
+-   Zabarvení kódu pro shadery Unity v sadě Visual Studio 2015.
 
--   Lepší vizualizaci hodnoty při ladění:
+-   Lepší vizualizace hodnot při ladění:
 
-    -   Lepší vizualizaci ArrayLists, seznamy, zatřiďovacích tabulkách a slovník.
+    -   Lepší vizualizace pro instance třídy ArrayList, seznamy, zatřiďovacích tabulkách a slovníky.
 
-    -   Zobrazit členy jiné veřejné a statické členy jako kategorie v místní zobrazení a sledovat.
+    -   Zobrazit jako kategorií v kukátka a místních zobrazeních neveřejné členy a statické členy.
 
-    -   Vylepšené zobrazení na Unity SerializedProperty pouze vyhodnotit pole hodnota platná pro vlastnost.
+    -   Vylepšené zobrazení SerializedProperty Unity a pouze vyhodnotit pole hodnotu pro vlastnost platná.
 
-    -   DebuggerDisplayAttribute podpora třídy a struktury.
+    -   Debuggerdisplayattribute – podpora pro třídy a struktury.
 
     -   Debuggertypeproxyattribute – podpora.
 
--   Ujistěte se, vkládání MonoBehaviour metody pomocí našich průvodců dodržovat konvence kódování uživatele.
+-   Ujistěte se, vložení metody třídy MonoBehaviour. pomocí naší průvodců dodržovat konvence psaní kódu uživatele.
 
--   V projektech UnityVS generované implementovat podporu pro kompilaci čas textové šablony.
+-   Implementovat podporu pro kompilaci textové šablony v projektech UnityVS vygenerována.
 
--   Implementovat podporu pro ResX prostředky v projektech UnityVS vygenerovat.
+-   Podpora prostředků ResX implementovat v projektech UnityVS vygenerována.
 
 -   Podpora otevírání shadery v sadě Visual Studio z Unity.
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
--   Vyčistit sockets před počínaje hra Unity po připojit a Play byla spuštěna v sadě Visual Studio. To při používání připojit a Play opravuje některé problémy s stabilitu připojení mezi Unity a VS.
+-   Vyčištění sockets před zahájením hry v Unity po připojení a Play se aktivovalo v sadě Visual Studio. To řeší některé problémy se stabilitou připojení mezi Unity a VS při použití připojení a Play.
 
--   Vyhněte se volání metody v Unity je skriptovací stroj ladicího programu rozhraní, které jsou náchylné k zmrazení Unity. To opravy zablokování Unity při připojení ladicího programu.
+-   Vyhněte se volání metody v Unity a skriptovací stroj rozhraní ladicího programu, které jsou náchylné k zablokování Unity. To řeší Unity zablokování při připojování ladicího programu.
 
--   Opravte zobrazení z callstacks, když jsou k dispozici žádné symboly.
+-   Opravte, když není k dispozici žádné symboly zobrazení zásobníky volání.
 
--   Pokud ale nemáme pro Neregistrovat zpětné volání protokolu.
+-   Pokud nemusíme neregistrujte zpětné volání protokolu.
 
 ## <a name="1920"></a>1.9.2.0
- Vydaná 2014-10-09
+ Vydáno 9. října 2014
 
 ### <a name="new-features"></a>Nové funkce
 
--   Zlepšení detekce přehrávače Unity.
+-   Vylepšení detekce hráči Unity.
 
--   Pokud používáte naše otevírající soubor, ujistěte se, Unity předat číslo řádku, jakož i název souboru.
+-   Při používání našich otevírající soubor, ujistěte se, Unity předat číslo řádku, jakož i název souboru.
 
--   Výchozí v online dokumentaci Unity, pokud neexistuje žádná místní dokumentace.
+-   Pokud neexistuje žádná místní dokumentace výchozí si online dokumentaci k Unity.
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
--   Opravte potenciální havárií Unity při stiskne boru přerušení po domény znovu načíst.
+-   Při dosažení zarážky po znovu načíst domény byla opravena chyba vyskytující potenciální Unity.
 
--   Opravte výjimky uvedené v konzole Unity při zavření naše konfigurace nebo o systému windows, doména znovu načíst.
+-   Oprava výjimky uvedené v konzole nástroje Unity při uzavření naše konfigurace nebo o časových obdobích, po domény znovu načíst.
 
--   Opravte detekce 64bitový Unity spuštěn místně.
+-   Opravte detekce 64bitový Unity spuštěná místně.
 
--   Opravte filtrování MonoBehaviours za verzi Unity v průvodci.
+-   Oprava na Unity verze v průvodcích závislé filtrování toho třídy Monobehaviour.
 
--   Opravte chyby, kde byly všechny prostředky zahrnuté v souborech projektu, pokud filtr rozšíření byla prázdná.
+-   Oprava chyby, kde všechny prostředky byly obsaženy v souborech projektu Pokud filtr přípon byla prázdná.
 
 ## <a name="1910"></a>1.9.1.0
- Vydaná 2014-09-22
+ Vydáno 22. září 2014
 
 ### <a name="new-features"></a>Nové funkce
 
--   Optimalizujte zarážek vazby do zdrojového umístění.
+-   Optimalizujte vazby zarážku do zdrojového umístění.
 
--   Podpora pro přetížené metody při vyhodnocení výrazu ladicího programu.
+-   Podpora pro přetížené metody v pořadí vyhodnocování výrazů ladicího programu.
 
--   Podpora pro primitiva zabalení a typy hodnot při vyhodnocení výrazu ladicího programu.
+-   Podpora zabalení primitivních elementů a typů hodnot v pořadí vyhodnocování výrazů ladicího programu.
 
--   Podpora při ladění anonymní metody znovu vytvořit místní proměnné prostředí C#.
+-   Podpora opětovného vytvoření lokálních proměnných prostředí jazyka C#, při ladění anonymní metody.
 
--   Odstranění a přejmenování souborů .meta při odstranění nebo přejmenování souborů ze sady Visual Studio.
+-   Odstranění a přejmenování .meta souborů, když se odstranění nebo přejmenování souborů ze sady Visual Studio.
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
--   Opravte zpracování sady Visual Studio motivů. Dříve, může zobrazit dialogová okna na černé motivy prázdný (připojit problémy [#932637](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/932637/) a [#936439](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/936439/)).
+-   Opravte zpracování motivů aplikace Visual Studio. Dialogová okna na černé motivy dříve, může zobrazovat prázdný.
 
--   Oprava Unity zmrazení při připojování ladicí program, když je rekompilace Unity (připojit problémy [#947119](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/947119/) a [#969211](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/969211/)).
+-   Zablokování Unity stanovit při připojování ladicího programu během rekompilace Unity.
 
--   Opravte zarážky při ladění vzdáleného editory nebo přehrávače zkompilovány v jiném systému.
+-   Oprava zarážky při ladění vzdáleného editory nebo hráči zkompilovány v jiném systému.
 
--   Opravte možné havárií Visual Studio, když je dosaženo zarážky.
+-   Opravte možné chybovému ukončení sady Visual Studio při dosažení zarážky.
 
--   Oprava zarážky vazby předejdete zarážky zobrazuje jako odpojeno.
+-   Oprava zarážky vazby zarážky zobrazuje jako, aby byla uvolněna.
 
--   Opravte zpracování obor proměnné v ladicím programu, aby se zabránilo za provozu proměnné, které se zobrazují mimo rozsah.
+-   Opravte zpracování obor proměnné v ladicím programu, aby se zabránilo živé proměnné, které se zobrazují mimo rozsah.
 
--   Při vyhodnocení výrazu ladicího programu opravte vyhledávání statické členy (připojit problém [#953379](https://connect.microsoft.com/VisualStudio/feedbackdetail/view/953379/)).
+-   Opravte vyhledávání statické členy v pořadí vyhodnocování výrazů ladicího programu.
 
--   Opravte zobrazení typů při vyhodnocení výrazu ladicího programu pro zobrazení statických polí a vlastností.
+-   Opravte zobrazení typů v pořadí vyhodnocování výrazů ladicího programu k zobrazení statická pole a vlastnosti.
 
--   Opravte generování řešení, pokud názvy projektů Unity obsahuje speciální znaky, Visual Studio zakazuje (připojit problém #948666).
+-   Oprava generování řešení, když názvy projektů Unity zahrnuje speciální znaky, že Visual Studio zakazuje (problém připojit #948666).
 
--   Opravte Visual Studio Tools Unity balíček, který chcete okamžitě zastavit odesílání událostí konzole po nezaškrtnuté (připojit problém #933357) možnost.
+-   Oprava aplikace Visual Studio nástroje Unity balíček okamžitě zastavit odesílání událostí konzole po nezaškrtnuto (připojit problém #933357) možnost.
 
--   Opravte detekce odkazy na správně obnovit odkazy na nových rozhraní API jako UnityEngine.UI v projektech UnityVS vygenerovat.
+-   Opravte detekce odkazy se správně obnovit odkazy na nová rozhraní API jako UnityEngine.UI v projektech UnityVS vygenerována.
 
--   Opravte instalační program vyžadovat, že Visual Studio je uzavřena před instalací, aby se zabránilo poškozená instalace.
+-   Opravte instalační program tak, aby vyžadovala, že Visual Studio zavřená před instalací, aby se zabránilo poškozená instalace.
 
--   Opravte instalační program nainstalovat jako součást správné samostatné, sdílena mezi všechny verze VSTU Unity referenční sestavení.
+-   Opravte instalační program jako součást správné samostatné, sdílet mezi všechny verze VSTU referenční sestavení Unity.
 
--   Opravte otevírání skripty v 64bitová verze verzích Unity s VSTU.
+-   Oprava otevření skripty ve verzích 64 bitů v Unity s VSTU.
 
 ## <a name="1900"></a>1.9.0.0
- Vydaná 2014-07-29
+ Vydáno 29. července 2014
 
 ### <a name="new-features"></a>Nové funkce
 
--   V okně připojit ladicí program Unity přidáte schopnost zadejte vlastní IP a portu k ladění.
+-   V okně připojit ladicí program Unity verze podporují možnost zadat vlastní IP a portu pro ladění.
 
--   Přidejte konfigurační možnost pro nastavení Unity ke spuštění na pozadí, nebo ne.
+-   Přidáte konfigurační možnost nastavit Unity běžet na pozadí nebo ne.
 
--   Přidejte konfigurační možnost pro generování soubory řešení a projektu nebo pouze soubory projektu.
+-   Přidáte konfigurační možnost Generovat soubory řešení a projektu nebo jenom soubory projektu.
 
--   Spuštění cílového: připojit Unity nebo připojit Unity a Play.
+-   Při spuštění cílového: připojit k Unity nebo připojit k Unity a hrát.
 
 -   Zobrazení vícerozměrných polí v ladicím programu.
 
--   Zpracujte nové Unity Player ladění porty.
+-   Zpracujte nové Unity Playeru ladění porty.
 
--   Zpracování odkazy na nové sestavení Unity stejně jako na Unity 4.6 grafickým uživatelským rozhraním sestavení.
+-   Popisovač odkazy na nové sestavení Unity, jako je Unity a 4.6 grafickým uživatelským rozhraním sestavení.
 
--   Deconstructs uzavření pro správné zobrazení místní proměnné při ladění.
+-   Deconstructs uzávěry ke správnému zobrazení místní proměnné při ladění.
 
--   Deconstructs generovaného iterátory proměnné do argumenty při ladění.
+-   Deconstructs generované iterátory proměnné do argumenty při ladění.
 
--   Zachování stavu Unity Project Exploreru po znovu načíst projekt.
+-   Zachovat stav Průzkumník projektů Unity po znovu načíst projekt.
 
--   Přidejte příkaz, který chcete synchronizovat Project Exploreru Unity s aktuálním dokumentu.
+-   Přidáte příkaz Synchronizovat Průzkumník projektů Unity s aktuální dokument.
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
--   Opravte podmíněné zarážky, jejichž podmínky jsou nastavené před zahájením ladicího programu.
+-   Opravte podmíněné zarážky, jejíž podmínky jsou nastavit před spuštěním ladicí program.
 
 -   Opravte odkazy na UnityEngine, aby se zabránilo upozornění.
 
--   Opravte analýzy verze pro Unity beta.
+-   Oprava analýzy verze pro Unity beta verze.
 
--   Vyřešte problém, kde proměnné nezobrazilo v okně místní proměnné při stiskne zarážku nebo krokování s.
+-   Tento problém vyřešit, kde by proměnné zobrazí v okně místních proměnných při dosažení zarážky a krokování.
 
--   Opravte proměnné popisů tlačítek v sadě Visual Studio 2013.
+-   Opravte proměnné popisy v sadě Visual Studio 2013.
 
--   Opravte generování dokumentace technologie IntelliSense pro Unity 4.5.
+-   Oprava generování dokumentace technologie IntelliSense pro Unity 4.5.
 
--   Opravte Unity nebo Visual Studio komunikace po domény znovu načíst (play/stop v Unity).
+-   Opravit v Unity a sady Visual Studio komunikace po domény znovu načíst (Přehrát a zastavit v Unity).
 
--   Opravte zpracování částí sady Visual Studio motivů.
+-   Opravte zpracování částí motivů aplikace Visual Studio.
 
 > [!IMPORTANT]
->  C# se převládá jazyk v ekosystému Unity - nové ukázkové prostředky jsou v jazyce C#, použije výchozí Unity dokumentace jazyka C# – jsme odebrali naše základní podpora UnityScript a poč lepší zaměřit se na uživatelské prostředí C#. V důsledku toho VSTU řešení jsou teď C# pouze a je mnohem rychlejší načíst.
+>  C# se převládající jazyk v ekosystému Unity – nové ukázkové prostředky jsou v jazyce C#, dokumentace k Unity budou ve výchozím nastavení jazyka C# – odebrali jsme naše základní podporu UnityScript a poč lépe zaměřit se na prostředí jazyka C#. V důsledku toho VSTU řešení jsou nyní C# pouze a je mnohem rychlejší načíst.
 
 ## <a name="1820"></a>1.8.2.0
- Vydaná 2014-01-07
+ Vydáno 7. ledna 2014
 
 ### <a name="new-features"></a>Nové funkce
 
--   Obejít problém v síťové vrstvy pro Unity skriptovací stroj na Mavericks pro vzdálené zjišťování editory.
+-   Vyřešit problém v Unity a skriptovací stroj síťovou vrstvou na Mavericks vzdálené zjišťování editory.
 
--   Zpracujte nové porty ke zjištění vzdáleného přehrávače Unity.
+-   Zpracujte nové porty ke zjištění vzdáleného hráči Unity.
 
--   Odkaz sestavení UnityEngine konkrétní na aktuální vytvořit cíl.
+-   Odkaz na konkrétní UnityEngine sestavení do aktuální sestavení cíl.
 
--   Přidáte nastavení filtru soubory pro zahrnutí do vygenerované projekty.
+-   Přidáte nastavení k filtrování souborů, které mají být zahrnuty generované projekty.
 
--   Přidejte nastavení zakázat odesílání protokoly konzoly k sadě Visual Studio seznam chyb. To je užitečné, pokud používáte PlayMaker nebo konzoly Pro jako může být pouze jeden zpětné volání registrací v Unity přijímat protokoly konzoly.
+-   Přidáte nastavení zakázat odesílání protokoly konzoly do seznamu chyb sady Visual Studio. To je užitečné, pokud používáte PlayMaker nebo konzoly Pro jako může být jen jedno zpětné volání, které jsou zaregistrované v Unity přijímat protokoly konzoly.
 
--   Přidáte nastavení pro zakažte generování mdb ladicími symboly. To je užitečné, pokud jste mdb generování sami.
+-   Přidejte nastavení zakáže generování symbolů pro ladění mdb. To je užitečné, pokud jste mdb generuje sami.
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
--   Opravit to regrese při soubory otevřít v sadě VS z Unity > = 4.2 by dojít ke ztrátě IntelliSense.
+-   Oprava regrese, když soubory otevřít v sadě Visual Studio z Unity > = 4.2 ztratí technologie IntelliSense.
 
--   Opravte naše VS dialogová okna pro zpracování vlastní motivy.
+-   Opravte naši VS dialogová okna pro zpracování vlastní motivy.
 
--   Opravte zavření v kontextové nabídce UPE.
+-   Oprava zavření kontextovou nabídku UPE.
 
--   Zabránit havárie v Unity generování konkrétní verze sestavení Pokud synchronizován.
+-   Bránící zhroucení v Unity, když konkrétní verze generovaného sestavení, pokud je synchronizovaný.
 
 ## <a name="1810"></a>1.8.1.0
- Vydané 11 – 21 2013
+ Vydáno 21. listopadu 2013
 
 ### <a name="new-features"></a>Nové funkce
 
--   Upraví průvodců MonoBehaviour s rozhraními API 4.3 Unity.
+-   Upravit třídy MonoBehaviour průvodců s rozhraními API Unity 4.3.
 
--   Průvodci MonoBehaviour jsou filtrování Unity rozhraní API v závislosti na verzi, kterou používáte.
+-   Třída MonoBehaviour průvodců jsou filtrování rozhraní API Unity v závislosti na verzi, kterou používáte.
 
 -   K projektům přidat odkaz na System.Xml.Linq pro Unity > 4.1.
 
--   Prettify naše volání Debug.Log tak, aby neobsahoval začátku stacktrace ve zprávě.
+-   Prettify naše volání Debug.Log tak, aby nezahrnovala začátku stacktrace ve zprávě.
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
--   Opravit chyby, kde by jsme konfliktu s výchozí zpracování souborů JavaScript v sadě Visual Studio.
+-   Je opravená chyba, kde jsme by mohly narušit výchozí zpracování souborů JavaScript v sadě Visual Studio.
 
--   Pevné bílé pixelů zobrazovaných v sadě VS skutečných této doby.
+-   Oprava povolí, v sadě Visual Studio, pro skutečné tentokrát bílé pixel.
 
--   Opravené odstranění UnityVS.VersionSpecific sestavení, pokud je určen jen pro čtení pomocí SCM.
+-   Oprava odstranění UnityVS.VersionSpecific sestavení, pokud je označena jako jen pro čtení pomocí Správce řízení služeb.
 
--   Při vytváření sockets v balíčku UnityVS pevné výjimky.
+-   Oprava výjimky při vytváření balíčku UnityVS sokety.
 
--   Při načítání uložené bitové kopie ze sestavení sady Visual Studio, pevné havárie v sadě Visual Studio.
+-   Oprava chyby v sadě Visual Studio při načítání uložené obrázky ze sestavení sady Visual Studio.
 
--   Pevné chyby při generování UnityVS.VersionSpecific pro zdroj buildů Unity.
+-   Oprava chyby při generování UnityVS.VersionSpecific pro zdrojové sestavení Unity.
 
--   Při otevírání soket v balíčku Unity, pevné možné zablokování.
+-   Oprava možné zablokování při otevřeme soket v balíčku Unity.
 
 -   Vyřešilo se zpracování Unity projektu s pomlčkou (-) v názvu.
 
--   Otevírání skripty vyřešili z Unity není zaměnit pořadí ALT + TAB pro Unity 4.2 a vyšší.
+-   Opravili jsme otevření skriptů z Unity nelze zaměňovat pořadí ALT + TAB pro Unity 4.2 a novější.
 
 ## <a name="1800"></a>1.8.0.0
- Vydaná 2013-09-24
+ Vydáno 24. září 2013
 
 ### <a name="new-features"></a>Nové funkce
 
--   Rychlost připojení výrazně Vylepšená ladicí program.
+-   Výrazně zlepšit rychlost připojení ladicího programu.
 
--   Automaticky zpracujte navigace k souboru a řádku pro Unity 4.2 a vyšší.
+-   Automaticky zpracovává navigace k souboru a řádku v Unity 4.2 a vyšší.
 
 -   Podmíněné zarážky.
 
--   Generátor souborů projektu teď zpracovává šablon T4.
+-   Generátor souboru projektu nyní zpracovává šablony T4.
 
 -   Aktualizujte MonBehavior průvodců pomocí nových rozhraní API.
 
--   Dokumentace IntelliSense v jazyce C# pro typy Unity.
+-   Dokumentace technologie IntelliSense v jazyce C# pro typy Unity.
 
--   Vyhodnocení aritmetické a logických výrazů.
+-   Aritmetické a logické výrazy hodnocení.
 
--   Lepší zjišťování vzdálené editory pro vzdálené ladění preview.
+-   Lepší zjišťování vzdálené editory pro vzdálené ladění ve verzi preview.
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
--   Pevné chyby kde jsme by úniku vlákna v sadě VS po odpojení ladicího programu.
+-   Opravená chyba, kde jsme by způsobit únik těchto vlákno v sadě Visual Studio po odpojení ladicí program.
 
--   Pevné bílé pixelů, které jsou uvedeny v sadě VS.
+-   Opravili jsme bílé pixel povolí, v sadě Visual Studio.
 
--   Vyřešilo se zpracování kliknutí na ikonu stavu panelu.
+-   Vyřešilo se zpracování kliknutí na ikonu panelu stavu.
 
--   Dlouhodobý generování odkazů se sestavení ve složkách modulů plug-in.
+-   Opravili jsme generování odkazů se sestavení ve složkách moduly plug-in.
 
--   Opravené vytváření soketů z balíčku UnityVS v případě výjimky.
+-   Oprava vytvoření soketů z balíčku UnityVS v případě výjimky.
 
--   Detekce nové verze UnityVS vyřešený.
+-   Opravili jsme zjišťování nových verzí UnityVS.
 
--   Pevné řádku správce licencí, pokud vypršela platnost licence.
+-   Opravili jsme řádku správce licencí, když platnost licence vypršela.
 
--   Opravit chyby, která může vykreslit seznamu proces prázdný v ladicím programu připojit k procesu okno VS.
+-   Je opravená chyba, která může vykreslit seznam procesů v ladicím programu připojit k procesu okno VS prázdný.
 
--   Opravené změna hodnoty logických výrazů v místní zobrazení.
+-   Oprava změny hodnot logických výrazů v místním okně.
 
 ## <a name="1220"></a>1.2.2.0
- Vydaná 2013-07-09
+ Vydáno 9. července 2013
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
--   Zpracování plně kvalifikované názvy v vyhodnocovací filtr výrazů.
+-   Zpracování plně kvalifikované názvy ve vyhodnocovací filtr výrazů.
 
--   Kde Unity skriptovací stroj je odeslání nám nesprávné stackframe dat pevné zablokování, související s výjimek.
+-   Oprava zablokování související se zpracování výjimek, kde Unity skriptovací stroj je odeslání stackframe nesprávná data.
 
--   Pevné procesu sestavení pro Web cíle.
+-   Opravili jsme proces sestavení pro Web cíle.
 
--   Opravit chybu, která může nastat, pokud byla spuštěna sada Visual Studio a který byl odstraněný soubor v seznamu souborů, které se otevře při spuštění.
+-   Opravili jsme chybu, která se může stát, pokud byl spuštěn Visual Studio a který byl odstraněný soubor v seznamu souborů, které se otevře při spuštění.
 
--   Opravené UnityVS.OpenFile zpracovat soubory bez skriptu, jako je kompilovat, shadery.
+-   Oprava UnityVS.OpenFile ke zpracování souborů bez skriptů, jako je zkompilován shadery.
 
--   Jsme teď referenční Boo.Lang a UnityScript.Lang ze všech C# projektů.
+-   Nyní odkazujeme Boo.Lang a UnityScript.Lang ze všech projekty jazyka C#.
 
--   Opravené generování odkazů v projektech, pokud projekt obsahuje speciální znaky.
+-   Oprava generování odkazů v projektech, pokud projekt obsahuje speciální znaky.
 
--   Alternativní řešení VS problém, kde volání metod k uvolnění projekty by aktivovat více MessageBox výjimky NullReferenceException.
+-   Alternativní řešení VS problém, pokud volání metody uvolnění projektů se aktivuje více NullReferenceException MessageBox.
 
--   Opravené zpracování Unity 4.2 Beta sestavení.
+-   Oprava zpracování sestavení, beta verze 4.2 Unity.
 
 ## <a name="1210"></a>1.2.1.0
- Vydaná 2013-04-09
+ Vydáno 9. dubna 2013
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
--   Pevné místní nasazení Unity sestavení pro doplňování kódu, pokud dojde k chybě vstupně-výstupní operace (jako jsou například soubory jen pro čtení, nebo soubory uzamčený Visual Studio).
+-   Oprava místní nasazení sestavení Unity pro doplňování kódu v případě chyby vstupně-výstupní operace (jako jsou soubory jen pro čtení, nebo soubory uzamčené sady Visual Studio).
 
--   Opravit to regrese, kde otevření skriptu z Unity nebude zaměřit soubor pokud již byl otevřen v sadě Visual Studio.
+-   Oprava regrese, kde otevřením skriptu z Unity by zaměřit soubor pokud již byl otevřen v sadě Visual Studio.
 
--   Vyřešený problém výkonu nové zpracování výjimky.
+-   Oprava potíží s výkonem nové zpracování výjimky.
 
--   Opravené vazba zarážky v některé externí knihovny DLL.
+-   Pevné vazby zarážky v některé externí knihovny DLL.
 
 ## <a name="1200"></a>1.2.0.0
- Vydaná 2013-03-25
+ Vydáno 25. března 2013
 
 ### <a name="new-features"></a>Nové funkce
 
--   Rychlost připojení výrazně Vylepšená ladicí program.
+-   Výrazně zlepšit rychlost připojení ladicího programu.
 
--   Optimalizované Project Exploreru Unity pro větší projekty.
+-   Optimalizované Unity Project Exploreru pro větší projekty.
 
--   Nastavení sady Visual Studio pro přerušení (nebo ne) respektovat zpracovat a neošetřené výjimky.
+-   Bude respektovat nastavení sady Visual Studio pro přerušení (nebo nemusíte) na ošetřené i neošetřené výjimky.
 
--   Respektovat nastavení sady Visual Studio volat ToString lokální proměnné.
+-   Respektovat nastavení sady Visual Studio pro volání ToString na lokální proměnné.
 
--   Přidat nové nabídky Ladění -> Unity připojit ladicí program, který můžete použít k ladění přehrávače Unity.
+-   Přidat nové nabídky Ladění -> ladicí program připojit Unity, který můžete použít k ladění Unity přehrávače.
 
--   Zachovejte vlastní projekty, které jsou přidány k řešení UnityVS při generování souboru řešení.
+-   Zachovat vlastní projekty do řešení UnityVS při generování souboru řešení.
 
--   Přidat nové klávesové zkratky CTRL + ALT + M -> CTRL + H zobrazíte Unity dokumentace pro funkce Unity nebo člen na pozici pomocí kurzoru.
+-   Přidat nové klávesové zkratky CTRL + ALT + M -> CTRL + H k zobrazení dokumentace k Unity pro Unity funkce nebo člen na pozici blikajícího kurzoru.
 
--   Při kompilování ze sady Visual Studio, vezměte v úvahu soubory odezvy kompilátoru (konfigurace).
+-   Při kompilaci ze sady Visual Studio, vezměte v úvahu kompilátoru soubory odpovědí (rsp).
 
--   Deconstruct kompilátoru generované typy zobrazíte proměnné při ladění generátor metody.
+-   Dekonstruovat typů generovaný kompilátorem, který chcete zobrazit proměnné při ladění generátor metody.
 
--   Zjednodušení vzdálené ladění odebráním potřeba nakonfigurovat sdílenou složku a Unity. Teď právě musíte mít přístup k projektu Unity ze systému Windows.
+-   Zjednodušení, vzdálené ladění odstraňují potřebu nakonfigurovat sdílenou složku a Unity. Teď stačí mít přístup ke svým projektem Unity z Windows.
 
--   Vlastní profil Unity nainstalujte jako standardní profil cílového rozhraní .net. To opraví všechny falešně pozitivních zjištění, které může zobrazit ReSharper.
+-   Instalace vlastního profilu Unity jako standardní profil cílového rozhraní .net. To řeší všechny počet falešně pozitivních výsledků, které se může zobrazit ReSharper.
 
--   Práce mimo Unity, skriptování modul chyb, tak nebudou porušovat ladicí program na jiný správně zaregistrován vláken.
+-   Alternativní Unity skriptování chyby modulu, aby ladicí program nebude správně přerušit na jiných zaregistrovaný vlákna.
 
--   Přepracování otevírající soubor tak, aby se zabránilo časování v sadě VS, kde se vydával za moct otevřít soubory, při selhání na soubor otevřený.
+-   Přepracujte otevírající soubor tak, aby se zabránilo časování v sadě Visual Studio, ve kterém se vydával za nebudou moct otevřít soubory, při k chybě při požadavku na otevření souboru.
 
--   UnityVS je nyní požádá o aktualizaci sestavení při VS je sestavení projektu a už není v souboru uložte.
+-   UnityVS se nyní chce aktualizovat sestavení při sestavení projektu VS a už není v souboru uložte.
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
--   Pevné naše vlastní profil .net
+-   Opravili naše vlastní profil .net
 
--   Pevná integrace motivů, to opravuje naše potíže s VS 2012 tmavým motivem.
+-   Oprava integrace motivy, to řeší naše problémy s tmavým motivem VS 2012.
 
--   Opravené rychlé chování zástupce v VS 2012.
+-   Rychlá oprava chování zástupce ve VS 2012.
 
--   Pevná taktování problém, který může nastat při ladění a jiný hlavní vlákno by dosáhl zarážky.
+-   Opravili jsme krokování problém, který se může stát při ladění a mimo hlavní vlákno byste dostali na zarážku.
 
--   Opravené UnityScript a poč dokončení aliasy typu, jako je například int.
+-   Oprava UnityScript a poč dokončení aliasy typů, jako je například int.
 
--   Opravené výjimky při zápisu nového UnityScript nebo poč řetězce.
+-   Oprava výjimky při zápisu nový UnityScript nebo poč řetězec.
 
--   Opravené výjimky v nabídkách Unity při řešení nebyla načtena.
+-   Oprava výjimky v nabídkách Unity při řešení nebyl načten.
 
--   Opravené chyby UVS 48: zadáním double uvozovky někdy vytvořit chyba a rozdělit všechny funkce (doplňování kódu, zvýraznění syntaxe atd).
+-   Oprava chyby UVS 48: zadáním dvojité uvozovky někdy chybě a přerušení všech – funkce (dokončování kódu, zvýraznění syntaxe atd).
 
--   Opravené chyby UVS 46: Duplicitní souboru otevřenou skriptu (UnityScript), když kliknete na seznamu Visual Studio chyby.
+-   Oprava chyby UVS 46: Duplicitní soubor otevřen skriptu (UnityScript), když kliknou na chyby seznam sady Visual Studio.
 
--   Opravené chyby UVS 42: Unity připojení logo ve stavovém řádku nemůže pracovat s událostí myši v VS 2012.
+-   Oprava chyby UVS 42: logo připojení k Unity ve stavovém řádku nezpracuje události myši ve VS 2012.
 
--   Opravené chyby UVS 44: kombinace kláves CTRL + SHIFT + Q není k dispozici v VS 2012 pro rychlé MonoBehaviours.
+-   Oprava chyby UVS 44: CTRL + SHIFT + Q není k dispozici v sadě VS 2012 pro rychlé třídy Monobehaviour.
 
--   Opravené chyby UVS-40: Pokud je v VS2012 "tmavý" motiv neaktivní okno se nečitelná vybrané položky v prohlížeči projektu Unity.
+-   Oprava chyby UVS 40: vybrané položky v Průzkumníku projektů Unity jsou nejde přečíst, pokud je okno v VS2012 "" tmavé neaktivní.
 
--   Opravené chyby UVS 39: tokenizaci problém uvozené řetězce.
+-   Oprava chyby UVS 39: tokenizaci problém uvozeny řídicími znaky řetězce.
 
--   Opravené chyby UVS 35: vyvolání ToString na objekty při kontrole proměnné.
+-   Oprava chyby UVS 35: vyvolat ToString u objektů při kontrole proměnných.
 
--   Opravené chyby UVS 27: nekonzistence okno Goto Symbol s "tmavý" motiv VS2012.
+-   Oprava chyby UVS 27: Goto Symbol okno nesoulad s "" tmavé v VS2012.
 
--   Opravené chyby UVS 11: místní hodnoty v coroutines.
+-   Oprava chyby UVS-11: místní hodnoty v korutinách.
 
-## <a name="1100---beta-release"></a>1.1.0.0 - beta verze
- Vydaná 2014-10-09
+## <a name="1100---beta-release"></a>1.1.0.0 – beta verze
+ Vydáno 9. března, 2013
 
 ## <a name="10130"></a>1.0.13.0
- Vydaná 2013-01-21
+ Vydáno 21. ledna 2013
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
--   Pevné Zamknutí sady Visual Studio, který může nastat, pokud cíl ladění odesílá události neplatný vlákno. Které by obvykle mohlo dojít při ladění vzdáleného Unity na OSX.
+-   Oprava sady Visual Studio uzamkne, který se může stát, pokud cíl laděný proces je odesílání událostí neplatné vlákno. Která by obvykle stát při ladění vzdáleného Unity na os x.
 
--   Pevné Zamknutí sady Visual Studio, který může nastat, pokud dojde k výjimce ladicího programu.
+-   Opravili jsme sady Visual Studio se uzamkne, který se může stát, pokud výjimka ukončí ladicí program.
 
--   Pevné naše MonoBehavior Pomocníci po MonoBehavior C# v oboru názvů.
+-   Oprava naše MonoBehavior pomocné rutiny při MonoBehavior C# je v oboru názvů.
 
--   Popisy tlačítek pevné ladicí program pro UnityScript v sadě Visual Studio 2012.
+-   Opravili jsme popisky ladicího programu pro UnityScript v sadě Visual Studio 2012.
 
--   Pevné generování projektu, kdy jsou pouze konstanty ladění se změnil z Unity.
+-   Opravili jsme generování projektu, když se změní pouze konstanty ladění z Unity.
 
--   Opravené klávesnice navigace v prohlížeči projektu Unity.
+-   Oprava navigaci pomocí klávesnice v Průzkumníku projektů Unity.
 
--   Opravené UnityScript zabarvení pro uvozovacími znaky řetězce.
+-   Oprava UnityScript obarvení uvozovacími znaky řetězce.
 
--   Pevné naše otevírající soubor tak snadno uhodnout lepší název projektu při použití mimo Unity. Které je potřeba, pokud uživatel používá třetí otevírající soubor část v Unity Delegující na UnityVS.
+-   Opravili jsme naše otevírající soubor uhodnutelné lepší název projektu při použití mimo Unity. Který je nezbytné, pokud uživatel použije v Unity, který se delegoval UnityVS třetí otevírající soubor část.
 
--   Opravené zpracování dlouho zpráv odeslaných z Unity UnityVS. Před dlouhou zprávy mohlo způsobit chybu naše zasílání zpráv součástí UnityVS. V důsledku toho někdy UnityVS nebude otevřete soubor z Unity.
+-   Oprava zpracování dlouhé zprávy odeslané z Unity UnityVS. Před tímto dlouhých zpráv mohlo dojít k selhání naše zasílání zpráv součástí UnityVS. V důsledku toho někdy UnityVS nepůjde dokument otevřít soubor z Unity.
 
 ## <a name="10120"></a>1.0.12.0
- Vydaná 2013-01-03
+ Vydáno 3. lednu 2013
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
--   Opravené Zamknutí sady Visual Studio, může dojít v případě sady Visual Studio odstraňoval zarážky.
+-   Oprava sady Visual Studio se uzamkne, může dojít v případě sady Visual Studio bylo odstranění zarážky.
 
--   Opravit chyby, kde některé by být zarážky po Unity překompilovat herní skripty.
+-   Je opravená chyba, kdy některé by zarážky po Unity překompilovány herní skripty.
 
--   Pevné ladicí program na správně upozornit Visual Studio, pokud nevázaný zarážky.
+-   Opravili jsme ladicí program správně upozornit sady Visual Studio nevázaná zarážky.
 
--   Vyřešený problém registrace, které by mohlo ohrozit ladicího programu sady Visual Studio k ladění nativního programy.
+-   Oprava potíží registrace, které by mohlo ohrozit ladicího programu sady Visual Studio k ladění nativní aplikace.
 
--   Pevné výjimku, která může dojít při vyhodnocování UnityScript a rezervace výrazy.
+-   Oprava výjimky, které může dojít v případě, že vaše rozhodnutí vyzkoušet UnityScript a rezervace výrazy.
 
--   Opravit to regrese, kde by změna úrovně rozhraní API .net v Unity aktivovat aktualizaci souborů projektu.
+-   Oprava regrese, kde by změna úrovně rozhraní API .net v Unity aktivovat aktualizaci souborů projektu.
 
--   Pevné chybě rozhraní API, kde nelze uživatelského kódu účastnit obslužná rutina zpětného volání protokolu.
+-   Opravili jsme poruchu rozhraní API, kde uživatelský kód nelze účastnit obslužná metoda zpětného volání protokolu.
 
 ## <a name="10110"></a>1.0.11.0
- Vydaná 2012-11-28
+ Vydáno 28. listopadu 2012
 
 ### <a name="new-features"></a>Nové funkce
 
--   Oficiální podporu Unity 4.
+-   Oficiální podpora 4 Unity.
 
--   Manipulace s skriptů z Project Exploreru Unity.
+-   Manipulace s skriptů z Průzkumníku projektů Unity.
 
 -   Integrace v sadě Visual Studio přejděte do okna.
 
--   Analýza informací zprávu konzoly, tak, aby kliknutím na položku v seznamu chyb můžete přejít na první stackframe se symboly.
+-   Analýza zprávu s informacemi o konzolu, tak, aby kliknutím na položku v seznamu chyb můžete přejít k první stackframe se symboly.
 
--   Přidat [rozhraní API](../cross-platform/customize-project-files-created-by-vstu.md) aby mohl uživatel účastnit generování projektu.
+-   Přidat [API](../cross-platform/customize-project-files-created-by-vstu.md) aby mohl uživatel součástí generování projektu.
 
--   Přidat [rozhraní API](../cross-platform/share-the-unity-log-callback-with-vstu.md) aby mohl uživatel účastnit LogCallback.
+-   Přidat [API](../cross-platform/share-the-unity-log-callback-with-vstu.md) aby mohl uživatel účastnit LogCallback.
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
--   Opravené regrese na pozadí Project Exploreru Unity v sadě Visual Studio 2012.
+-   Oprava regrese na pozadí Průzkumník projektů Unity v sadě Visual Studio 2012.
 
--   Generování pevné projektu pro uživatele úplné profilu .net.
+-   Opravili jsme generování projektu pro uživatele celého profilu .net.
 
--   Generování pevné projektu pro uživatele webové cíle.
+-   Opravili jsme generování projektu pro uživatele webový cíl.
 
--   Generování pevné projektu zahrnout ladění, trasování kompilace symboly jako Unity nemá.
+-   Generování pevné projektu zahrnout ladění a trasování kompilace symboly jako Unity nemá.
 
--   Opravené havárie, při použití speciálních znaků v okně naše Goto Symbol.
+-   Oprava chyb při použití speciálních znaků v našich Goto Symbol okna.
 
--   Opravit chyby, pokud nelze vložíme naše ikony v sadě Visual Studio stavový řádek.
+-   Oprava chyb, pokud jsme nedá se dosadit naše ikonu na stavovém řádku v sadě Visual Studio.
 
 ## <a name="10100"></a>1.0.10.0
- Vydaná 2012-10-09
+ Vydáno 9. října 2012
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
--   Pevné pozadí Project Exploreru Unity v sadě Visual Studio 2010.
+-   Oprava na pozadí v Průzkumníku projektů Unity v sadě Visual Studio 2010.
 
--   Pevné zablokování Visual Studio, který může nastat, pokud UnityVS se pokusil připojit ladicí program pro Unity, jehož rozhraní ladicího programu dříve došlo k chybě.
+-   Opravili jsme zablokování sady Visual Studio, který se může stát, pokud UnityVS pokusili připojit ladicí modul k Unity, jehož rozhraní ladicího programu dříve došlo k chybě aplikace.
 
--   Pevné zablokování Visual Studio, který může dojít v případě, že byl nastavený bod přerušení a načtěte AppDomain by tomu bylo.
+-   Oprava, která může dojít v případě, že byla nastavena zarážka a opětovné načtení domény aplikace by dojít k zablokování sady Visual Studio.
 
--   Opravit, jak jsou načítány sestavení z Unity chcete zabránit zamykání souborů a matou procesu sestavení Unity.
+-   Opravili jsme, jak se načítají sestavení z Unity vyhnout zamykání souborů a obcházení proces sestavení Unity.
 
 ## <a name="1090"></a>1.0.9.0
- Vydaná 2012-10-03
+ Vydáno 3 říjen 2012
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
--   Když projekt Unity zahrnuje skutečné prostředky JavaScript generování pevné projektu.
+-   Opravili jsme generování projektu, pokud obsahuje skutečné prostředky jazyka JavaScript Unity projektu.
 
--   Opravené chyby zpracování při vyhodnocení výrazu.
+-   Oprava chyby ve vyhodnocení výrazu.
 
--   Opravit, nastavení nové hodnoty pro pole typů hodnot.
+-   Opravili jsme nastavení nových hodnot pro pole typů hodnot.
 
--   Opravené možné vedlejší efekty při ukazatele myši na výrazy z editoru kódu.
+-   Oprava možné vedlejší efekty při přechodu myši nad výrazy z editoru kódu.
 
--   Opravit, jak jsou typy prohledávány v načíst sestavení pro vyhodnocení výrazu.
+-   Opravili jsme, jak jsou typy prohledaný načtená sestavení pro vyhodnocení výrazu.
 
--   Opravené chyby UVS – 21: vyhodnocení přiřazení na objekty Unity nemá žádný vliv.
+-   Oprava chyby UVS – 21: hodnocení přiřazení na objektech Unity nemá žádný vliv.
 
--   Opravené chyby UVS – 21: neplatný ukazatel při vyhodnocování volání metody Unity matematické API.
+-   Oprava chyby UVS – 21: neplatný ukazatel při vyhodnocení volání metody matematické API Unity.
 
 ## <a name="1080"></a>1.0.8.0
- Vydaná 2012-09-26
+ Vydáno 26. září 2012
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
--   Opravené způsob, jak naše skriptu otevírající získat cestu k projekt, který má být Opravdu to je možné otevřít v sadě Visual Studio a skripty.
+-   Dlouhodobý způsob, jak naše skript otevírající získat cestu k projektu se ujistěte, zda je možné otevřít Visual Studio a skripty.
 
--   Opravené chyby se zarážkami vytvořit relaci ladění byl spuštěn, který by mohl způsobit zamčení sady Visual Studio.
+-   Oprava chyby se zarážkami vytvořené během relace ladění byla spuštěna, který může způsobit sady Visual Studio k uzamčení.
 
--   Opravit, jak je UnityVS zaregistrovaná na Visual Studio 2010.
+-   Opravili jsme, jak je UnityVS zaregistrovaná na Visual Studio 2010.
 
 ## <a name="1070"></a>1.0.7.0
- Vydaná 2012-09-14
+ Vydáno 14. září 2012
 
 ### <a name="new-features"></a>Nové funkce
 
--   Podpora Visual Studio 2012.
+-   Podpora v sadě Visual Studio 2012.
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
--   Opravené generování souborů projektu editoru a moduly plug-in tak, aby odpovídaly chování pro Unity.
+-   Oprava generování editoru a moduly plug-in projektových souborů tak, aby odpovídaly Unity a chování.
 
--   Pevné překlad PDB symbolů Unity 4.
+-   Opravili jsme překlad symbolů .pdb v Unity 4.
 
 > [!IMPORTANT]
->  Kvůli podpoře Visual Studio 2012 jsme museli přejmenování několik souborů a některé další pohyb. UnityVS balíček, který chcete importovat Unity teď jmenuje UnityVS 2010 nebo UnityVS 2012, v uvedeném pořadí Visual Studio 2010 a Visual Studio 2012. Tato verze také vyžaduje, aby se soubory projektu UnityVS obnovovaly.
+>  Z důvodu podpory Visual Studio 2012 museli jsme přejmenovat několik souborů a některých dalších pohybovat. UnityVS balíčku k importu Unity teď jmenuje UnityVS 2010 nebo UnityVS 2012, respektive Visual Studio 2010 a Visual Studio 2012. Tato verze také vyžaduje, že UnityVS soubory projektu jsou znovu vygenerovány.
 
-## <a name="1060---internal-build"></a>1.0.6.0 - interní sestavení
- Vydaná 2012-09-12
+## <a name="1060---internal-build"></a>1.0.6.0 – interní sestavení
+ Vydáno 12. září 2012
 
 ## <a name="1050"></a>1.0.5.0
- Vydaná 2012-09-10
+ Vydáno 10. září 2012
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
--   Opravené generování souborů projektu při skripty nebo shadery měl znakem neplatný kód xml.
+-   Oprava generování souborů projektu, kdy skripty nebo shadery znak neplatný kód xml.
 
--   Opravené zjišťování instancí Unity při Unity byl připojen k serveru Asset. Tento stav aktivován selhání otevírat soubory z Unity a automatické připojení ladicího programu sady Visual Studio.
+-   Oprava zjišťování instancí Unity Unity bylo připojení k serveru Asset. Aktivuje toto selhání k otevírání souborů z Unity a automatické připojení ladicího programu sady Visual Studio.
 
 ## <a name="1040"></a>1.0.4.0
- Vydaná 2012-09-05
+ Vydané 5. září 2012
 
 ### <a name="new-features"></a>Nové funkce
 
--   Automatický převod ladicími symboly v Unity.
+-   Automatický převod symbolů pro ladění v Unity.
 
-     Pokud máte ve složce Asset o sestavení .dll .NET s jeho přidružené pdb, jednoduše znovu importujte sestavení a UnityVS převede PDB do souboru symboly ladění rozumí skriptovací stroj pro Unity, a budete moci na krok do vaší sestavení .NET z UnityVS.
+     Pokud máte .dll sestavení .NET s jeho přidružené .pdb ve složce Asset, jednoduše znovu importujte sestavení a UnityVS převede na soubor symbolů ladění, Unity a skriptovací stroj rozumí a budete mít ke kroku do vašeho sestavení .NET z pdb UnityVS.
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
--   Pevné UnityVS havárie, při ladění způsobené výjimky vyvolané metody nebo vlastnosti uvnitř Unity.
+-   Oprava chyb UnityVS během ladění způsobeno výjimky vyvolané z metody nebo vlastnosti v Unity.
 
 ## <a name="1030"></a>1.0.3.0
- Vydaná 2012-09-04
+ Vydáno 4. září 2012
 
 ### <a name="new-features"></a>Nové funkce
 
--   Nová možnost konfigurace zakázat použití UnityVS otevírat soubory z Unity.
+-   Nová možnost konfigurace zakázat použití UnityVS pro otevření souborů z Unity.
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
--   Opravené generace odkazy na UnityEditor pro projekty jiný editor.
+-   Oprava generování odkazů na UnityEditor pro projekty mimo editor.
 
--   Opravené definice symbolu UNITY_EDITOR pro projekty jiný editor.
+-   Oprava definice symbolu UNITY_EDITOR pro projekty mimo editor.
 
--   Opravené náhodných VS chyby způsobené naše vlastní stavový řádek.
+-   Oprava náhodné VS případ chyby způsobené naše vlastní stavový řádek.
 
 ## <a name="1020"></a>1.0.2.0
- Vydaná 2012-08-30
+ Vydáno 30. srpna 2012
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
--   Opravené konflikt s ladicím programem PythonTools.
+-   Oprava konflikt s ladicím programem PythonTools.
 
 -   Pevné odkazy na Mono.Cecil.
 
--   Opravené chyby v tom, jak skriptování sestavení byly získány ze Unity s b7 Unity 4.
+-   Oprava chyby v sestaveních jak skriptovací byly načteny z Unity s b7 Unity 4.
 
 ## <a name="1010"></a>1.0.1.0
- Vydaná 2012-08-28
+ Vydáno 28. srpna 2012
 
 ### <a name="new-features"></a>Nové funkce
 
--   Zobrazte náhled podporu Unity 4.0 Beta.
+-   Podpora pro Unity 4.0 beta verze Preview.
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
--   Pevné kontroly vlastností vyvolávání výjimek.
+-   Oprava kontroly vlastnosti vyvolávání výjimek.
 
--   Pevné sestupném do základní objektů při kontrole objekty.
+-   Opravili jsme sestupně do základní objekty při kontrole objekty.
 
--   Opravené prázdné rozevíracího seznamu pro kurzor v Průvodci MonoBehavior.
+-   Oprava prázdný rozevírací seznam pro kurzor v Průvodci MonoBehavior.
 
--   Opravené dokončení pro knihovnu dll ve složce Asset UnityScript a poč.
+-   Oprava dokončování pro knihovny dll ve složce Asset UnityScript a poč.
 
 ## <a name="1000---initial-release"></a>1.0.0.0 – počáteční verze
- Vydaná 2012-08-22
+ Vydáno 22. srpna 2012

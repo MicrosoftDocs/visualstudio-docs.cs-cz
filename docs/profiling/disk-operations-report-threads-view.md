@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: afe999ea56dbbdfd2179307f69ec12df92c612e9
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d145b57b2cacce68b609ddc7aea5cef41cf69762
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34764615"
 ---
 # <a name="disk-operations-report-threads-view"></a>Sestava diskových operací (Zobrazení vláken)
 Sestava diskových operací zobrazí diskové vstupně-výstupních operací v kanály disku.  
@@ -43,5 +44,5 @@ Sestava diskových operací zobrazí diskové vstupně-výstupních operací v k
   
 -   Latence zápisu, v milisekundách  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

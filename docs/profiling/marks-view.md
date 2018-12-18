@@ -1,5 +1,5 @@
 ---
-title: Zobrazení značek | Microsoft Docs
+title: Zobrazení značek | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -15,36 +15,37 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1008f09e7511a26613b6cb5984513c1d049f61ba
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 93dbaf0d8c3d1f3542683a05b175c43c0c43b948
+ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51220708"
 ---
 # <a name="marks-view"></a>Zobrazení značek
-Značky zobrazení vzorkování a události trasování událostí pro Windows, které byly vloženy do aplikace.  
+Zobrazení značky zobrazuje vzorkování a události trasování událostí pro Windows, které byly vloženy do aplikace.  
   
- Výchozí značky, které jsou předem v sestavě označení spuštění programu a ukončení programu.  
+ Výchozí značky, které jsou předem v sestavě označují začátek programu a konec programu.  
   
- Data čítače systému Windows z automaticky generované značky se také zobrazí v tomto zobrazení. Další informace najdete v tématu [postupy: shromažďování dat čítačů Windows](../profiling/how-to-collect-windows-counter-data.md).  
+ Data čítačů Windows z automaticky vygenerovaných značek jsou také zobrazena v tomto zobrazení. Další informace najdete v tématu [jak: Windows shromažďování dat čítače](../profiling/how-to-collect-windows-counter-data.md).  
   
- Chcete-li vytvořit filtr mezi dvě značky, vyberte značky, klikněte pravým tlačítkem a pak klikněte na tlačítko **přidat filtrovat podle značky** nebo **přidat filtr pomocí časového razítka**.  
+ Chcete-li vytvořit filtr mezi dvěma značkami, vyberte značky, klikněte pravým tlačítkem a pak klikněte na tlačítko **přidat filtr podle značek** nebo **přidat filtr podle časového razítka**.  
   
- Následující tabulka obsahuje definice sloupce, které jsou k dispozici v zobrazení značky.  
+ Následující tabulka obsahuje definice sloupců, které jsou k dispozici v zobrazení značky.  
   
  **ID značky**  
- Jedinečný identifikátor profilace značek.  
+ Jedinečný identifikátor značky profilování.  
   
  **Název značky**  
  Název události  
   
- **časové razítko**  
- Čas od začátku profilace na čas, který se zaznamená událost.  
+ **Časové razítko**  
+ Čas od zahájení profilování na dobu, která je zaznamenána událost.  
   
- Data čítače výkonu systému Windows  
- Když jsou shromažďována data čítače výkonu systému Windows hodnoty jsou zobrazeny ve sloupci, který má název čítače.  
+ Data čítače výkonu Windows  
+ Když jsou shromážděna data čítače výkonu Windows zobrazení hodnot ve sloupci, který má název čítače.  
   
-## <a name="see-also"></a>Viz také  
- [Přehled sestavy výkonu](../profiling/performance-report-overview.md)   
+## <a name="see-also"></a>Viz také:  
+ [Přehled sestav výkonu](../profiling/performance-report-overview.md)   
  [Postupy: shromažďování dat čítačů Windows](../profiling/how-to-collect-windows-counter-data.md)   
- [&#91;NIB&#93; okno řízení kolekce dat](http://msdn.microsoft.com/en-us/98d740d8-459f-4605-bf04-fb17aafaaa8f)
+ [&#91;NIB&#93; okna ovládacího prvku sběru dat](https://msdn.microsoft.com/98d740d8-459f-4605-bf04-fb17aafaaa8f)

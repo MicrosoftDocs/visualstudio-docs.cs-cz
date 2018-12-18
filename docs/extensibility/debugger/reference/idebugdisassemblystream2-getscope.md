@@ -1,5 +1,5 @@
 ---
-title: IDebugDisassemblyStream2::GetScope | Microsoft Docs
+title: IDebugDisassemblyStream2::GetScope | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1a155c521370670ecf141177a29f70e67d812d68
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 739c2515d402d4132b2fd5eb10c7ba2cbd5e04b2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49814841"
 ---
 # <a name="idebugdisassemblystream2getscope"></a>IDebugDisassemblyStream2::GetScope
 Získá obor datového proudu zpětný překlad.  
@@ -40,13 +41,13 @@ int GetScope(
   
 #### <a name="parameters"></a>Parametry  
  `pdwScope`  
- [out] Vrátí hodnotu z [DISASSEMBLY_STREAM_SCOPE](../../../extensibility/debugger/reference/disassembly-stream-scope.md) výčet, který popisuje obor Tento datový proud zpětný překlad.  
+ [out] Vrátí hodnotu z [DISASSEMBLY_STREAM_SCOPE](../../../extensibility/debugger/reference/disassembly-stream-scope.md) výčet, který popisuje obor tohoto datového proudu zpětný překlad.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Rozsah zpětný překlad může být funkce nebo celý modulu, například.  
+ Rozsah zpětný překlad může být funkce nebo celý modul, třeba.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)   

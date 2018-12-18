@@ -1,5 +1,5 @@
 ---
-title: Idiareadexeatrvacallback::readexecutableatrva – | Microsoft Docs
+title: Idiareadexeatrvacallback::readexecutableatrva – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f71db30a3e4cba957e6aba0981587276af714e3e
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 69afacf68c77dcb2bca7c951dbd2a1ee9a344cfb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49917275"
 ---
 # <a name="idiareadexeatrvacallbackreadexecutableatrva"></a>IDiaReadExeAtRVACallback::ReadExecutableAtRVA
-Přečte zadaný počet bajtů, počínaje zadaný relativní virtuální adresa (RVA) ze spustitelného souboru.  
+Přečte zadaný počet bajtů počínaje zadanou relativní virtuální adresu (RVA) ze spustitelného souboru.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,19 +37,19 @@ HRESULT ReadExecutableAtRVA (
   
 #### <a name="parameters"></a>Parametry  
  `relativeVirtualAddress`  
- [v] RVA ve spustitelném souboru má začínat čtení.  
+ [in] RVA spustitelného souboru, který má začínat čtení.  
   
  `cbData`  
- [v] Počet bajtů ke čtení.  
+ [in] Počet bajtů ke čtení.  
   
  `pcbData`  
- [out] Vrátí počet bajtů přečtených.  
+ [out] Vrátí počet přečtených bajtů.  
   
  `data[]`  
- [ve out] Pole, které obsahuje bajtů přečtených ze souboru.  
+ [out v] Pole, které se vyplní Bajty čtení z tohoto souboru.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda je volána DIA podporu kód pro načtení datových bajtů z spustitelný soubor pomocí relativní virtuální adresy. Tato metoda je volána v podporu systému [idiadatasource::loaddataforexe –](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) metoda.  
+ Tato metoda je volána kód podpory, který DIA načtení bajtů dat ze spustitelného souboru pomocí relativní virtuální adresu. Tato metoda je volána z podporu [idiadatasource::loaddataforexe –](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) metody.  
   
 ## <a name="see-also"></a>Viz také  
  [Idiareadexeatrvacallback –](../../debugger/debug-interface-access/idiareadexeatrvacallback.md)   

@@ -1,117 +1,120 @@
 ---
-title: Kontextové nabídky (XML Schema Explorer) | Microsoft Docs
-ms.custom: ''
+title: Kontextové nabídky v Průzkumník schémat XML
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-xml-tools
+ms.topic: reference
 ms.assetid: 42ab17ca-b8c1-40d7-beda-d033f66fe874
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 07ce9b5cc1c390d9bad108df417855a733d5dcef
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e6f13a2dc434602819a423b8122a97675e332cab
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49939117"
 ---
-# <a name="context-menus-xml-schema-explorer"></a>Kontextové nabídky (Explorer schématu XML)
-Následující položky kontextové nabídky se používají k provádění schématu konkrétní hledání a dalších operací.  
-  
-## <a name="node-type-schema-set"></a>Typ uzlu: Schématu sady  
- Následující tabulka popisuje možnosti, které jsou dostupné pro schéma nastavte uzel.  
-  
-|Možnost|Popis|  
-|------------|-----------------|  
-|**Zobrazit nejpravděpodobnější kořenových elementů**|Vyhledá a označuje všechny globální prvky, které nejsou na něj odkazovat z globální prvky výjimkou sama sebe.|  
-|**Zobrazit globální typy**|Vyhledá a označuje všechny globální typy v sadě schématu.|  
-|**Zobrazit globální prvky**|Vyhledá a označuje všechny globální elementy ve schématu sady.|  
-|**Okno Vlastnosti**|Otevře se **vlastnosti** okno (pokud ještě není otevřený). Toto okno se zobrazí informace o uzlu.|  
-  
-## <a name="node-type-namespace"></a>Typ uzlu: Namespace  
- Následující tabulka popisuje možnosti, které jsou k dispozici pro uzlu oboru názvů.  
-  
-|Možnost|Popis|  
-|------------|-----------------|  
-|**Zobrazit všechny příchozí odkazy**|Vyhledá a označuje soubory, které importovat vybraný obor názvů.|  
-|**Zobrazit všechny odchozí odkazy**|Pro každý soubor v oboru názvů vybrané najde a klade důraz následující:<br /><br /> -Všechny obory názvů, kterou se odkazuje v importovat příkazy bez `schemaLocation` atribut.<br />-Všechny soubory v oborech názvů než vybrané ve stanoveném `schemaLocation` v importu a zahrnují příkazy.|  
-|**Zobrazit globální typy**|Vyhledá a označuje všechny globální typy v vybraný obor názvů.|  
-|**Zobrazit globální prvky**|Vyhledá a označuje všechny globální elementy ve vybrané obor názvů.|  
-|**Okno Vlastnosti**|Otevře se **vlastnosti** okno (pokud ještě není otevřený). Toto okno se zobrazí informace o uzlu.|  
-  
-## <a name="node-type-file"></a>Typ uzlu: soubor  
- Následující tabulka popisuje možnosti, které jsou k dispozici pro uzel souboru.  
-  
-|Možnost|Popis|  
-|------------|-----------------|  
-|**Zobrazit všechny příchozí odkazy**|Najde a všechny soubory, které určují vybraného souboru v klade důraz `schemaLocation` atributy jejich příkazy include a import.|  
-|**Zobrazit všechny odchozí odkazy**|Vyhledá a upozorňuje na následující:<br /><br /> -Import všech oborů názvů zadaný v oboru názvů atributy všechny příkazy, které nemají `schemaLocation` atribut.<br />-Všechny soubory v zadané `schemaLocation` atributy všech importovat a zahrnují příkazy.|  
-|**Zobrazit globální typy**|Vyhledá a označuje všechny globální typy v tomto souboru.|  
-|**Zobrazit globální prvky**|Vyhledá a označuje všechny globální prvky v tomto souboru.|  
-|**Zobrazení kódu**|Otevře se soubor, který obsahuje vybraný uzel v editoru XML. Položky vybrané v Průzkumníku schématu XML bude také vybrána v editoru XML.|  
-|**Okno Vlastnosti**|Otevře se **vlastnosti** okno (pokud ještě není otevřený). Toto okno se zobrazí informace o uzlu.|  
-  
-## <a name="all-global-node-types"></a>Všechny typy globální uzlu  
- Následující tabulka popisuje možnosti, které jsou k dispozici pro všechny uzly globální.  
-  
-|Možnost|Popis|  
-|------------|-----------------|  
-|**V zobrazení grafů**|Otevře zobrazení grafu. Pokud vybraný uzel není v pracovním prostoru, přidá do pracovního prostoru a vybírá uzel.|  
-|**V zobrazení modelu obsahu**|Otevře zobrazení modelu obsahu. Pokud vybraný uzel není v pracovním prostoru, přidá do pracovního prostoru a vybírá uzel.|  
-|**Zobrazení kódu**|Otevře se soubor, který obsahuje vybraný uzel v editoru XML. Položky vybrané v Průzkumníku schématu XML bude také vybrána v editoru XML.|  
-|**Okno Vlastnosti**|Otevře se **vlastnosti** okno (pokud ještě není otevřený). Toto okno se zobrazí informace o uzlu.|  
-  
-## <a name="node-type-element"></a>Typ uzlu: Element  
- Kromě možností globální uzlu popsané výše kontextovou nabídku uzly elementu obsahuje následující možnosti:  
-  
-|Možnost|Popis|  
-|------------|-----------------|  
-|**Přejděte do definice typu**|Přejde na definici typu vybraného prvku. To se vztahuje, když typ, který se používá pro element je typu globální.|  
-|**Přejděte do původní elementu**|Pro element odkazy přejde do skutečné definice elementu.|  
-|**Zobrazit všechny odkazy**|Pro globální prvky, najde a označuje všechny odkazy (elementy, které mají `ref="selectedElement"`) na vybraný prvek.|  
-|**Zobrazit členy substituční skupiny.**|Oznámení substituční skupiny, vyhledá a zvýrazňuje všechny elementy, které jsou členy skupiny nahrazení, který je členem je vybraný prvek. Ukazuje to přímé a nepřímé účastníky.|  
-|**Zobrazit substituční skupiny oznámení**|Pro globální prvky, které jsou členy skupiny nahrazení, vyhledá a označuje všechny přímé a nepřímé oznámení pro vybraný prvek, například následující:<br /><br /> -A nahrazování head skupiny zadáno u vybraného elementu.<br />-A nahrazování head skupiny zadané v jeho element head.|  
-|**Generovat ukázkovém kódu XML**|K dispozici pouze pro globální elementy. Generuje a ukázkový soubor XML pro element globální.|  
-  
-## <a name="node-type-global-types"></a>Typ uzlu: Globální typy  
- Kromě možností globální uzlu popsané výše kontextové nabídky pro uzly globální typ obsahuje následující možnosti:  
-  
-|Možnost|Popis|  
-|------------|-----------------|  
-|**Zobrazit základní typ**|Pokud je vybraný typ je odvozen od typu globální, přejde na základní typ vybraného typu.|  
-|**Zobrazit všechny odkazy**|Vyhledá a označuje všechny odkazy k vybranému typu. To zahrnuje elementy a atributy vybraného typu a typy odvozené z vybraného typu.|  
-|**Zobrazit všechny odvozené typy**|Vyhledá a označuje všechny typy, které jsou přímo a nepřímo odvozeny od vybraného typu.|  
-|**Zobrazení všech nadřazených**|Zobrazit všechny typy nadřazené (základní).|  
-  
-## <a name="node-type-attribute"></a>Typ uzlu: atribut  
- Kromě možností globální uzlu popsané výše kontextové nabídky pro uzly atribut obsahuje následující možnosti:  
-  
-|Možnost|Popis|  
-|------------|-----------------|  
-|**Přejděte do definice typu**|Pokud typ, který se používá pro atribut typu globální, přejde do definice typu vybraného atributu.|  
-|**Přejděte do atribut původní**|Pro atribut odkazy přejde do skutečné definice atributu.|  
-|**Zobrazit všechny odkazy**|Globálními atributy, vyhledá a zvýrazňuje všechny odkazy (Další atributy, které mají `ref="selectedAttribute"`) pro vybraný atribut.|  
-  
-## <a name="node-type-attribute-group"></a>Typ uzlu: Skupinu atributů  
- Kromě možností globální uzlu popsané výše kontextové nabídky pro uzly skupiny atribut obsahuje následující možnosti:  
-  
-|Možnost|Popis|  
-|------------|-----------------|  
-|**Přechod na definici**|Odkazy přejde do skutečné definice atributu.|  
-|**Zobrazit všechny členy**|Vyhledá a označuje všechny členy skupiny atributů.|  
-|**Zobrazit všechny odkazy**|Vyhledá a zvýrazňuje všechny odkazy (atribut skupiny, které mají `ref="selectedAttributeGroup"`) ke skupině vybraného atributu.|  
-  
-## <a name="node-type-named-group"></a>Typu uzlu: Skupina s názvem  
- Kromě možností globální uzlu popsané výše kontextové nabídky pro uzly s názvem skupiny obsahuje následující možnosti:  
-  
-|Možnost|Popis|  
-|------------|-----------------|  
-|**Přechod na definici**|Odkazy přejde do skutečné definice atributu.|  
-|**Zobrazit všechny členy**|Vyhledá a zvýrazňuje všichni členové s názvem skupiny.|  
-|**Zobrazit všechny odkazy**|Vyhledá a zvýrazňuje všechny odkazy (skupiny, které mají `ref="selectedGroup"`) do vybrané skupiny.|  
-  
-## <a name="see-also"></a>Viz také  
- [Průzkumník schématu XML](../xml-tools/xml-schema-explorer.md)   
- [Hledání v sadě schémat](../xml-tools/searching-the-schema-set.md)
+# <a name="context-menus-xml-schema-explorer"></a>Kontextové nabídky (Průzkumník schémat XML)
+
+Následující položky místní nabídky jsou používány k provádění specifické pro schéma vyhledávání a další operace.
+
+## <a name="node-type-schema-set"></a>Typ uzlu: schéma nastavení
+
+Následující tabulka popisuje možnosti, které jsou k dispozici pro schéma, nastavte uzel.
+
+|Možnost|Popis|
+|-|-----------------|
+|**Zobrazit pravděpodobně kořenové prvky**|Vyhledá a zvýrazní všechny globální prvky, které nejsou odkazovány z globální prvky výjimkou sama sebe.|
+|**Zobrazit globální typy**|Vyhledá a zvýrazní všechny globální typy v sadě schémat.|
+|**Zobrazit globální prvky**|Vyhledá a zvýrazní všechny globální prvky v sadě schémat.|
+|**Okno Vlastnosti**|Otevře **vlastnosti** okna (pokud ještě není otevřený). Toto okno zobrazuje informace o uzlu.|
+
+## <a name="node-type-namespace"></a>Typ uzlu: Namespace
+ Následující tabulka popisuje možnosti, které jsou k dispozici pro uzel oboru názvů.
+
+|Možnost|Popis|
+|-|-----------------|
+|**Zobrazit všechny příchozí odkazy**|Vyhledá a zvýrazní soubory, které importují vybraný obor názvů.|
+|**Zobrazit všechny odchozí odkazy**|Pro každý soubor ve vybraném oboru názvů, najde a zvýrazní následující:<br /><br /> -Všechny obory názvů odkazované v příkazy bez importu `schemaLocation` atribut.<br />-Všechny soubory v oborech názvů než vybraný ve stanoveném `schemaLocation` atribut v importu a #include.|
+|**Zobrazit globální typy**|Vyhledá a zvýrazní všechny globální typy ve vybraném oboru názvů.|
+|**Zobrazit globální prvky**|Vyhledá a zvýrazní všechny globální prvky ve vybraném oboru názvů.|
+|**Okno Vlastnosti**|Otevře **vlastnosti** okna (pokud ještě není otevřený). Toto okno zobrazuje informace o uzlu.|
+
+## <a name="node-type-file"></a>Typ uzlu: soubor
+ Následující tabulka popisuje možnosti, které jsou k dispozici pro uzel souboru.
+
+|Možnost|Popis|
+|-|-----------------|
+|**Zobrazit všechny příchozí odkazy**|Vyhledá a zvýrazní všechny soubory, které určují, na vybraný soubor na `schemaLocation` atributů jejich zahrnutí a import příkazů.|
+|**Zobrazit všechny odchozí odkazy**|Najde a upozorňuje na následující:<br /><br /> -Import všechny obory názvů určen v oboru názvů atributů všechny příkazy, které nemají `schemaLocation` atribut.<br />-Všechny soubory v zadané `schemaLocation` všechny atributy import a #include.|
+|**Zobrazit globální typy**|Vyhledá a zvýrazní všechny globální typy v tomto souboru.|
+|**Zobrazit globální prvky**|Vyhledá a zvýrazní všechny globální prvky v tomto souboru.|
+|**Zobrazit kód**|Otevře soubor, který obsahuje vybraný uzel v editoru XML. Položky vybrané v Průzkumník schémat XML bude také vybrána v editoru XML.|
+|**Okno Vlastnosti**|Otevře **vlastnosti** okna (pokud ještě není otevřený). Toto okno zobrazuje informace o uzlu.|
+
+## <a name="all-global-node-types"></a>Všechny typy globální uzlu
+ Následující tabulka popisuje možnosti, které jsou k dispozici pro všechny globální uzly.
+
+|Možnost|Popis|
+|-|-----------------|
+|**Zobrazit v zobrazení grafu**|Otevře se zobrazení grafu. Pokud vybraný uzel není v pracovním prostoru, přidá ho do pracovního prostoru a vybere uzel.|
+|**Zobrazit v zobrazení modelu obsahu**|Otevře se zobrazení modelu obsahu. Pokud vybraný uzel není v pracovním prostoru, přidá ho do pracovního prostoru a vybere uzel.|
+|**Zobrazit kód**|Otevře soubor, který obsahuje vybraný uzel v editoru XML. Položky vybrané v Průzkumník schémat XML bude také vybrána v editoru XML.|
+|**Okno Vlastnosti**|Otevře **vlastnosti** okna (pokud ještě není otevřený). Toto okno zobrazuje informace o uzlu.|
+
+## <a name="node-type-element"></a>Typ uzlu: Element
+ Kromě možností globální uzlu je popsáno výše kontextovou nabídku pro uzly element má následující možnosti:
+
+|Možnost|Popis|
+|-|-----------------|
+|**Přejít k definici typu**|Přejde do definice typu vybraného prvku. To se vztahuje, pokud je typ, který se používá pro element globálního typu.|
+|**Přejít na původní Element**|Pro element reference přejde na skutečnou definici elementu.|
+|**Zobrazit všechny odkazy**|Globální prvky, najde a zvýrazní všechny odkazy (elementy, které mají `ref="selectedElement"`) na vybraný prvek.|
+|**Zobrazit členy skupiny nahrazení**|Vedoucích Substituční skupina, najde a zvýrazní všechny elementy, které jsou členy skupiny nahrazení, který vybraný prvek je jejím členem. Ukazuje to přímé a nepřímé účastníky.|
+|**Zobrazit nahrazování skupinu vedoucích**|Pro globální prvky, které jsou členy skupiny nahrazení, najde a zvýrazní všechny přímou a nepřímou heads pro vybraný element, jako je následující:<br /><br /> -Substituční skupiny head na vybraný prvek.<br />-Substituční skupiny head na jeho element head.|
+|**Generovat ukázkový soubor XML**|K dispozici pouze pro globální prvky. Generuje ukázkový soubor XML pro prvek globální.|
+
+## <a name="node-type-global-types"></a>Typ uzlu: globální typy
+ Kromě možností globální uzlu je popsáno výše obsahuje místní nabídku pro uzel typu globální následující možnosti:
+
+|Možnost|Popis|
+|-|-----------------|
+|**Zobrazit základní typ**|Pokud je vybraný typ je odvozen od typu globální, přejde na základní typ vybraného typu.|
+|**Zobrazit všechny odkazy**|Vyhledá a zvýrazní všechny odkazy na vybraného typu. To zahrnuje elementy a atributy vybraného typu a typy odvozené od vybraného typu.|
+|**Zobrazit všechny odvozené typy**|Vyhledá a zvýrazní všechny typy, které jsou přímo i nepřímo odvozeny z vybraného typu.|
+|**Zobrazení všech nadřazených**|Zobrazit všechny typy nadřazené (základní).|
+
+## <a name="node-type-attribute"></a>Typ uzlu: atribut
+ Kromě možností globální uzlu je popsáno výše kontextovou nabídku pro uzlů atributů obsahuje následující možnosti:
+
+|Možnost|Popis|
+|-|-----------------|
+|**Přejít k definici typu**|Pokud je typ, který se používá pro atribut globálního typu, přejde do definice typu vybraného atributu.|
+|**Přejít na původní atribut**|Pro atribut odkazy přejde na skutečné definice atributu.|
+|**Zobrazit všechny odkazy**|Globální atributy, najde a zvýrazní všechny odkazy (jiné atributy, které mají `ref="selectedAttribute"`) pro vybraný atribut.|
+
+## <a name="node-type-attribute-group"></a>Typ uzlu: skupinu atributů
+ Kromě možností globální uzlu je popsáno výše obsahuje místní nabídku pro atribut skupiny uzlů následující možnosti:
+
+|Možnost|Popis|
+|-|-----------------|
+|**Přejít k definici**|Odkazy přejde na skutečné definice atributu.|
+|**Zobrazit všechny členy**|Vyhledá a zvýrazní všechny členy skupiny atributů.|
+|**Zobrazit všechny odkazy**|Vyhledá a zvýrazní všechny odkazy (atribut skupiny, které mají `ref="selectedAttributeGroup"`) ke skupině pro vybraný atribut.|
+
+## <a name="node-type-named-group"></a>Typ uzlu: pojmenované skupiny
+ Kromě možností globální uzlu je popsáno výše obsahuje místní nabídku pro pojmenovanou skupinu uzlů následující možnosti:
+
+|Možnost|Popis|
+|-|-----------------|
+|**Přejít k definici**|Odkazy přejde na skutečné definice atributu.|
+|**Zobrazit všechny členy**|Vyhledá a zvýrazní všechny členy pojmenované skupiny.|
+|**Zobrazit všechny odkazy**|Vyhledá a zvýrazní všechny odkazy (skupiny, které mají `ref="selectedGroup"`) do vybrané skupiny.|
+
+## <a name="see-also"></a>Viz také:
+
+- [Průzkumník schémat XML](../xml-tools/xml-schema-explorer.md)
+- [Hledání v sadě schémat](../xml-tools/searching-the-schema-set.md)

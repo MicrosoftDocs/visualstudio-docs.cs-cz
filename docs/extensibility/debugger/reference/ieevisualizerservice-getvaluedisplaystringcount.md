@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerService::GetValueDisplayStringCount | Microsoft Docs
+title: IEEVisualizerService::GetValueDisplayStringCount | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5f67c1f0566f9e5749f4ff9233f1d2a803754550
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5ef642e48ee4389e48c1141c18a70f9ad5d0b793
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949666"
 ---
 # <a name="ieevisualizerservicegetvaluedisplaystringcount"></a>IEEVisualizerService::GetValueDisplayStringCount
-Načte počet řetězce hodnoty má být zobrazen pro zadanou vlastnost nebo pole.  
+Získá počet řetězců hodnota má být zobrazen pro zadanou vlastnost nebo pole.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,16 +44,16 @@ int GetValueDisplayStringCount (
   
 #### <a name="parameters"></a>Parametry  
  `displayKind`  
- [v] Z hodnoty [DisplayKind](../../../extensibility/debugger/reference/displaykind.md) výčtu.  
+ [in] Hodnota z [DisplayKind](../../../extensibility/debugger/reference/displaykind.md) výčtu.  
   
  `propertyOrField`  
- [v] [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) rozhraní, které představuje vlastnost nebo pole.  
+ [in] [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) rozhraní, které představuje vlastnost nebo pole.  
   
  `pcelt`  
- [out] Vrátí počet řetězce hodnoty pro zobrazení.  
+ [out] Vrátí hodnotu řetězce k zobrazení.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IEEVisualizerService](../../../extensibility/debugger/reference/ieevisualizerservice.md)

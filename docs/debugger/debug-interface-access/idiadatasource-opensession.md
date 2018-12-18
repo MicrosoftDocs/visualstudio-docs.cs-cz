@@ -1,5 +1,5 @@
 ---
-title: Idiadatasource::opensession – | Microsoft Docs
+title: Idiadatasource::opensession – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 39fe9bf3a67d3ad5f26ff7c4ccdaa9772cf1346b
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 8266102e8bc2c347ed8a554a3c64d9504f1e863b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49933505"
 ---
 # <a name="idiadatasourceopensession"></a>IDiaDataSource::openSession
-Otevře relaci pro dotazování symboly.  
+Otevře relaci pro dotazování na symboly.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,21 +34,21 @@ HRESULT openSession (
   
 #### <a name="parameters"></a>Parametry  
  ppSession  
- [out] Vrátí [idiasession –](../../debugger/debug-interface-access/idiasession.md) objekt reprezentující otevřít relaci.  
+ [out] Vrátí [idiasession –](../../debugger/debug-interface-access/idiasession.md) objekt představující otevřít relaci.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby. V následující tabulce jsou uvedeny možné návratové hodnoty pro tuto metodu.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. V následující tabulce jsou uvedeny možné návratové hodnoty pro tuto metodu.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
-|E_UNEXPECTED|[Idiadatasource –](../../debugger/debug-interface-access/idiadatasource.md) objekt nebyl inicializován dříve se zdrojem symbolů.|  
-|E_INVALIDARG|Neplatný `ppSession` parametr.|  
-|E_OUTOFMEMORY|K otevření relace není dostatek paměti.|  
+|E_UNEXPECTED, JE-|[Idiadatasource –](../../debugger/debug-interface-access/idiadatasource.md) objekt nebyl inicializován dříve se zdrojem symboly.|  
+|E_INVALIDARG|Neplatný `ppSession` parametru.|  
+|E_OUTOFMEMORY|Nedostatek paměti k otevření relace.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda otevře [idiasession –](../../debugger/debug-interface-access/idiasession.md) objekt zdroje dat.  
+ Tato metoda se otevře [idiasession –](../../debugger/debug-interface-access/idiasession.md) objekt pro zdroj dat.  
   
- `IDiaSession` objekty implementovat dotazy do zdroje dat. Relace spravuje jeden adresní prostor pro každou sadu ladicími symboly. Pokud soubor .exe nebo .dll popsaného symboly zdroj dat je aktivní v více adres rozsahy (například proto více procesy mít ji načíst) a potom slouží jedna relace pro každý rozsah adres.  
+ `IDiaSession` objekty implementovat dotazy do zdroje dat. Relace slouží ke správě více adresních prostorů pro každou sadu symboly ladění. Pokud je soubor .exe nebo .dll popsal symboly zdroje dat aktivní více adresy rozsahů adres (například, protože více procesů byl načten) a pak jednu relaci pro každý rozsah adres by měl sloužit.  
   
 ## <a name="example"></a>Příklad  
   

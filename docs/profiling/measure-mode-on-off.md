@@ -14,18 +14,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0dd15e739b08ef32fa74853fd1927936e202ad61
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 73f995fa0aa87d434f9cd7f19d751045c4081a95
+ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35237416"
 ---
-# <a name="measure-mode-onoff"></a>Zapnutí nebo vypnutí režimu míry
+# <a name="measure-mode-onoff"></a>Režimu míry zapnout nebo vypnout
 Pomocí tohoto nástroje lze přesně změřit časový interval v časové ose. Pokud chcete povolit režim měr, klikněte na tlačítko měr (což je ikona pravítka) a poté přetáhněte v časové ose. Při tažení Všimněte si, že oblasti pod ukazatelem je zvýrazněn žlutě a měření času se zobrazí na panelu nástrojů pravé tlačítko. Tato hodnota je vypočítána dynamicky a přetáhněte tak, aby okamžitě uvidíte, jak dlouho trvá určitá událost. Po uvolnění tlačítka myši, zůstává viditelná hodnoty time.  
   
  Proces měření můžete opakovat, ale je zobrazena pouze nejnovější měření. Klikněte na tlačítko měr znovu k vypnutí režimu míry.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Správa kanálů](../profiling/manage-channels.md)   
  [Ovládací prvek Lupa (zobrazení vláken)](../profiling/zoom-control-threads-view.md)   
  [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

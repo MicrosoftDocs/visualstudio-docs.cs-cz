@@ -1,5 +1,5 @@
 ---
-title: Velikost souboru pro zátěžové testy protokolu v sadě Visual Studio | Microsoft Docs
+title: Velikost souboru protokolu pro zátěžové testy
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,22 +8,26 @@ ms.assetid: 417059bf-37ae-4e7a-b9b0-29bd71f1414f
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: b7ce416a587a325565a274ddb8a9f8e9bd5730c3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: eb77c9c037a46ad1195482abfddd102f50bcd1ae
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53067272"
 ---
 # <a name="how-to-specify-the-maximum-size-for-the-log-file-for-load-tests"></a>Postupy: určení maximální velikosti souboru protokolu pro zátěžové testy
 
-Ve výchozím nastavení je maximální velikost souboru protokolu, který se používá pro zátěžové testy hodnotu 20 megabajtů. Tuto hodnotu můžete změnit úpravou konfiguračního souboru, který je přidružený k službě řadiče.
+Ve výchozím nastavení je nastavena maximální velikost souboru protokolu, který se používá pro zátěžové testy 20 megabajtů. Tuto hodnotu můžete změnit úpravou konfiguračního souboru přidruženého ke službě kontroleru.
 
-## <a name="specify-the-maximum-log-file-size-for-load-test"></a>Zadejte maximální velikosti souboru pro zátěžový Test
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-1.  Otevřete *QTCcontroller.exe.config* nachází v % ProgramFiles (x86) %\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\QTCcontroller.exe.config konfigurační soubor XML.
+## <a name="specify-the-maximum-log-file-size-for-load-test"></a>Zadejte maximální velikosti souboru pro zátěžový test
 
-2.  Vyhledejte `<add key="LogSizeLimitInMegs" value="20"/>` položky v rámci `<appSettings>` značky.
+1.  Otevřít *QTCcontroller.exe.config* konfigurační soubor XML v *% ProgramFiles (x86) %\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\QTCcontroller.exe.config*.
+
+2.  Vyhledejte `<add key="LogSizeLimitInMegs" value="20"/>` položku `<appSettings>` značky.
 
     ```xml
     <appSettings>
@@ -37,12 +41,12 @@ Ve výchozím nastavení je maximální velikost souboru protokolu, který se po
       </appSettings>
     ```
 
-3.  Upravit `value ="20"` na maximální povolenou velikost chcete určit soubor protokolu.
+3.  Upravit `value ="20"` na maximální povolenou velikost, které se mají určit pro soubor protokolu.
 
     > [!NOTE]
-    > Zadáním hodnoty 0, určuje, že soubor protokolu omezenou velikost podle volného místa na disku.
+    > Zadáním hodnoty "0" Určuje, že soubor protokolu je pouze omezen velikostí volného místa na disku.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Úprava nastavení protokolování zátěžových testů](../test/modify-load-test-logging-settings.md)
-- [Konfigurace portů pro testovací Kontroléry a testovací agenty](../test/configure-ports-for-test-controllers-and-test-agents.md)
+- [Úprava nastavení protokolování zátěžového testu](../test/modify-load-test-logging-settings.md)
+- [Konfigurace portů pro testovací kontroléry a testovací agenty](../test/configure-ports-for-test-controllers-and-test-agents.md)

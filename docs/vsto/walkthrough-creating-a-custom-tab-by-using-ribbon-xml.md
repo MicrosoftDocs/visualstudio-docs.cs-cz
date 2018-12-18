@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Vytvoření vlastní karty pomocí kódu XML pásu karet | Microsoft Docs'
+title: 'Návod: Vytvoření vlastní karty pomocí kódu XML pásu karet'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -20,25 +20,26 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 759aee9692ee905e33ce55ff068b74d4a289c78a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 45e35b7cf97a6b9a1f310149817f8e79956a47aa
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38808921"
 ---
-# <a name="walkthrough-creating-a-custom-tab-by-using-ribbon-xml"></a>Návod: Vytvoření vlastní karty pomocí kódu XML pásu karet
-  Tento návod ukazuje, jak vytvořit vlastní karty pásu karet pomocí **pásu karet (XML)** položky.  
+# <a name="walkthrough-create-a-custom-tab-by-using-ribbon-xml"></a>Návod: Vytvoření vlastní karty pomocí kódu XML pásu karet
+  Tento návod ukazuje, jak vytvořit vlastní kartu pásu karet pomocí **pásu karet (XML)** položky.  
   
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]  
   
  Tento návod znázorňuje následující úlohy:  
   
--   Přidání tlačítek do **doplňky** kartě. **Doplňky** karta je karta výchozí, který je definován v souboru XML pásu karet.  
+-   Přidání tlačítek **Add-Ins** kartu. **Add-Ins** karta je výchozí kartu, která je definována v souboru XML pásu karet.  
   
--   Automatizace aplikace Microsoft Office Word s použitím tlačítka na **doplňky** kartě.  
+-   Automatizace aplikace Microsoft Office Word s použitím tlačítka na **Add-Ins** kartu.  
   
 > [!NOTE]  
->  Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [přizpůsobení prostředí Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
+>  Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [přizpůsobení integrovaného vývojového prostředí sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).  
   
 ## <a name="prerequisites"></a>Požadavky  
  K dokončení tohoto návodu budete potřebovat následující komponenty:  
@@ -47,49 +48,49 @@ ms.lasthandoff: 04/16/2018
   
 -   Aplikace Microsoft Word.  
   
-## <a name="creating-the-project"></a>Vytvoření projektu  
- Prvním krokem je vytvoření projektu doplňku VSTO pro Word. Bude později upravit **doplňky** karta tohoto dokumentu.  
+## <a name="create-the-project"></a>Vytvoření projektu  
+ Prvním krokem je vytvoření projektu doplňku VSTO pro Word. Můžete se později ji přizpůsobíme, **Add-Ins** kartu tohoto dokumentu.  
   
-#### <a name="to-create-a-new-project"></a>Chcete-li vytvořit nový projekt  
+### <a name="to-create-a-new-project"></a>Chcete-li vytvořit nový projekt  
   
-1.  Vytvoření **doplňku pro aplikaci Word** projektu s názvem **MyRibbonAddIn**.  
+1.  Vytvoření **doplňku aplikace Word** projektu s názvem **MyRibbonAddIn**.  
   
-     Další informace najdete v tématu [postupy: vytváření projektů Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
+     Další informace najdete v tématu [postupy: vytvoření Office projekty v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Otevře se **ThisAddIn.cs** nebo **ThisAddIn.vb** kód soubor a přidá **MyRibbonAddIn** projektu do **Průzkumníku řešení**.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Otevře **ThisAddIn.cs** nebo **ThisAddIn.vb** soubor kódu a přidá **MyRibbonAddIn** projektu **Průzkumníka řešení**.  
   
-## <a name="creating-the-vsto-add-ins-tab"></a>Vytvoření karty doplňků VSTO  
- Chcete-li vytvořit **doplňky** přidejte **pásu karet (XML)** položku do projektu. Dále v tomto návodu přidáte některé tlačítka na této kartě.  
+## <a name="create-the-vsto-add-ins-tab"></a>Vytvoření karty doplňků VSTO  
+ Chcete-li vytvořit **Add-Ins** kartu, přidejte **pásu karet (XML)** položky do projektu. Dále v tomto názorném postupu přidáte několik tlačítek na této kartě.  
   
-#### <a name="to-create-the-add-ins-tab"></a>K vytvoření karty doplňky  
+### <a name="to-create-the-add-ins-tab"></a>K vytvoření karty doplňků  
   
 1.  Na **projektu** nabídky, klikněte na tlačítko **přidat novou položku**.  
   
-2.  V **přidat novou položku** dialogové okno, vyberte **pásu karet (XML)**.  
+2.  V **přidat novou položku** dialogu **pásu karet (XML)**.  
   
-3.  Změňte název nové pásu karet na **MyRibbon**a klikněte na tlačítko **přidat**.  
+3.  Změňte název nového pásu karet na **MyRibbon**a klikněte na tlačítko **přidat**.  
   
-     **MyRibbon.cs** nebo **MyRibbon.vb** soubor se otevře v návrháři. Soubor XML, který je pojmenován **MyRibbon.xml** je také přidán do projektu.  
+     **MyRibbon.cs** nebo **MyRibbon.vb** soubor se otevře v návrháři. Soubor XML, který je pojmenován **MyRibbon.xml** je taky přidaný do projektu.  
   
-4.  V **Průzkumníku řešení**, klikněte pravým tlačítkem na **ThisAddin.cs** nebo **ThisAddin.vb**a potom klikněte na **kód zobrazení**.  
+4.  V **Průzkumníka řešení**, klikněte pravým tlačítkem na **ThisAddin.cs** nebo **ThisAddin.vb**a potom klikněte na tlačítko **zobrazit kód**.  
   
-5.  Přidejte následující kód, který **ThisAddin** třídy. Tento kód přepíše metodu CreateRibbonExtensibilityObject a vrátí třídy XML pásu karet do aplikace Office.  
+5.  Přidejte následující kód, který **ThisAddin** třídy. Tento kód přepíše `CreateRibbonExtensibilityObject` třídu metodu a vrátí kódu XML pásu karet aplikace sady Office.  
   
      [!code-csharp[Trin_Ribbon_Custom_Tab_XML#1](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.cs#1)]
      [!code-vb[Trin_Ribbon_Custom_Tab_XML#1](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab_XML_O12/ThisAddIn.vb#1)]  
   
-6.  V **Průzkumníku řešení**, klikněte pravým tlačítkem myši **MyRibbonAddIn** projektu a pak klikněte na **sestavení**. Ověřte, že sestavení projektu bez chyb.  
+6.  V **Průzkumníku řešení**, klikněte pravým tlačítkem myši **MyRibbonAddIn** projektu a pak klikněte na tlačítko **sestavení**. Ověřte, že projekt se sestaví bez chyb.  
   
-## <a name="adding-buttons-to-the-add-ins-tab"></a>Přidání tlačítka na kartu doplňky  
- Cílem pro tento doplněk VSTO je umožnit uživateli, způsob, jak přidat často používaný text a určité tabulky v aktivním dokumentu. Poskytnout uživatelské rozhraní, přidávat dvě tlačítka **doplňky** kartě úpravou souboru XML pásu karet. Dále v tomto návodu určíte metody zpětného volání pro tlačítka. Další informace o souboru XML karet najdete v tématu [XML karet](../vsto/ribbon-xml.md).  
+## <a name="add-buttons-to-the-add-ins-tab"></a>Přidání tlačítek do Add-ins kartu  
+ Cílem tohoto doplňku VSTO je uživatelům poskytnout způsob, jak přidat často používaný text a určité tabulky v aktivním dokumentu. K poskytování uživatelského rozhraní, přidejte dvě tlačítka **Add-Ins** kartu úpravou souboru XML pásu karet. Dále v tomto názorném postupu určíte metody zpětného volání pro tlačítka. Další informace o souboru XML pásu karet najdete v tématu [kódu XML pásu karet](../vsto/ribbon-xml.md).  
   
-#### <a name="to-add-buttons-to-the-add-ins-tab"></a>Přidání tlačítka do karta Doplňky  
+### <a name="to-add-buttons-to-the-add-ins-tab"></a>K přidání tlačítek do Add-ins kartu  
   
-1.  V **Průzkumníku řešení**, klikněte pravým tlačítkem na **MyRibbon.xml** a pak klikněte na **otevřete**.  
+1.  V **Průzkumníka řešení**, klikněte pravým tlačítkem na **MyRibbon.xml** a potom klikněte na tlačítko **otevřít**.  
   
-2.  Nahraďte obsah **kartě** element s následující kód XML. Tato konfigurace XML změní štítek výchozí skupinu ovládací prvek pro **obsahu**, a přidá dvě nová tlačítka s popisky **vložit Text** a **Vložit tabulku**.  
+2.  Nahraďte obsah **kartu** element s následující kód XML. Tato konfigurace XML se změní popisek skupiny ovládací prvek výchozí **obsahu**, a přidá dvě nová tlačítka s popisky **vložit Text** a **Vložit tabulku**.  
   
-    ```  
+    ```xml  
     <tab idMso="TabAddIns">  
         <group id="ContentGroup" label="Content">  
             <button id="textButton" label="Insert Text"  
@@ -102,63 +103,63 @@ ms.lasthandoff: 04/16/2018
     </tab>  
     ```  
   
-## <a name="automating-the-document-by-using-the-buttons"></a>Automatizace v dokumentu s použitím tlačítka  
- Je nutné přidat `onAction` metody zpětného volání pro **vložit Text** a **Vložit tabulku** tlačítka k provádění akcí, když uživatel klikne, je. Další informace o metody zpětného volání pro ovládací prvky pásu karet najdete v tématu [XML karet](../vsto/ribbon-xml.md).  
+## <a name="automate-the-document-by-using-the-buttons"></a>Automatizace dokumentu s použitím tlačítka  
+ Je nutné přidat `onAction` metody zpětného volání pro **vložit Text** a **Vložit tabulku** tlačítka k provádění akcí po klepnutí na ně. Další informace o metody zpětného volání pro ovládací prvky pásu karet najdete v tématu [kódu XML pásu karet](../vsto/ribbon-xml.md).  
   
-#### <a name="to-add-callback-methods-for-the-buttons"></a>Chcete-li přidat metody zpětného volání pro tlačítka  
+### <a name="to-add-callback-methods-for-the-buttons"></a>Chcete-li přidat metody zpětného volání pro tlačítka  
   
-1.  V **Průzkumníku řešení**, klikněte pravým tlačítkem na **MyRibbon.cs** nebo **MyRibbon.vb**a potom klikněte na **otevřete**.  
+1.  V **Průzkumníka řešení**, klikněte pravým tlačítkem na **MyRibbon.cs** nebo **MyRibbon.vb**a potom klikněte na tlačítko **otevřít**.  
   
-2.  Přidejte následující kód do horní části **MyRibbon.cs** nebo **MyRibbon.vb** souboru. Tento kód vytvoří alias <xref:Microsoft.Office.Interop.Word> oboru názvů.  
+2.  Přidejte následující kód do horní části **MyRibbon.cs** nebo **MyRibbon.vb** souboru. Tento kód vytvoří alias pro <xref:Microsoft.Office.Interop.Word> oboru názvů.  
   
      [!code-csharp[Trin_RibbonButtons#1](../vsto/codesnippet/CSharp/Trin_RibbonButtons/MyRibbon.cs#1)]
      [!code-vb[Trin_RibbonButtons#1](../vsto/codesnippet/VisualBasic/Trin_RibbonButtons/MyRibbon.vb#1)]  
   
-3.  Přidejte následující metodu do `MyRibbon` třídy. Toto je metoda zpětného volání pro **vložit Text** tlačítko, které přidá řetězec do aktuálního umístění kurzoru v aktivním dokumentu.  
+3.  Přidejte následující metodu do `MyRibbon` třídy. Toto je metoda zpětného volání pro **vložit Text** tlačítko, které přidá řetězec do aktivního dokumentu v aktuálním umístění kurzoru.  
   
      [!code-csharp[Trin_Ribbon_Custom_Tab_XML#2](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab_XML_O12/MyRibbon.cs#2)]
      [!code-vb[Trin_Ribbon_Custom_Tab_XML#2](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab_XML_O12/MyRibbon.vb#2)]  
   
-4.  Přidejte následující metodu do `MyRibbon` třídy. Toto je metoda zpětného volání pro **Vložit tabulku** tlačítko, která přidává tabulku pro aktivní dokument na aktuální pozici kurzoru.  
+4.  Přidejte následující metodu do `MyRibbon` třídy. Toto je metoda zpětného volání pro **Vložit tabulku** tlačítko, které se přidá do aktivního dokumentu v aktuálním umístění kurzoru tabulky.  
   
      [!code-csharp[Trin_Ribbon_Custom_Tab_XML#3](../vsto/codesnippet/CSharp/Trin_Ribbon_Custom_Tab_XML_O12/MyRibbon.cs#3)]
      [!code-vb[Trin_Ribbon_Custom_Tab_XML#3](../vsto/codesnippet/VisualBasic/Trin_Ribbon_Custom_Tab_XML_O12/MyRibbon.vb#3)]  
   
 ## <a name="testing-the-vsto-add-in"></a>Testování doplňku VSTO  
- Při spuštění projektu, otevře se aplikace Word a na kartě s názvem **doplňky** se zobrazí na pásu karet. Klikněte na tlačítko **vložit Text** a **Vložit tabulku** tlačítka na **doplňky** kartě k testování kódu.  
+ Při spuštění projektu, otevře se aplikace Word a na kartě s názvem **Add-Ins** se zobrazí na pásu karet. Klikněte na tlačítko **vložit Text** a **Vložit tabulku** tlačítka **Add-Ins** kartu pro otestování kódu.  
   
-#### <a name="to-test-your-vsto-add-in"></a>K testování vaší doplňku VSTO  
+### <a name="to-test-your-vsto-add-in"></a>K otestování vašeho doplňku VSTO  
   
-1.  Stisknutím klávesy F5 spusťte projekt.  
+1.  Stisknutím klávesy **F5** ke spuštění projektu.  
   
-2.  Potvrďte, že **doplňky** karta je zobrazena na pásu karet.  
+2.  Ujistěte se, že **Add-Ins** karta je viditelný na pásu karet.  
   
-3.  Klikněte **doplňky** kartě.  
+3.  Klikněte na tlačítko **Add-Ins** kartu.  
   
-4.  Potvrďte, že **obsahu** skupiny je zobrazen na pásu karet.  
+4.  Ujistěte se, že **obsahu** skupina je viditelný na pásu karet.  
   
-5.  Klikněte **vložit Text** tlačítka na **obsahu** skupiny.  
+5.  Klikněte na tlačítko **vložit Text** tlačítko **obsahu** skupiny.  
   
      Řetězec se přidá do dokumentu na aktuální pozici kurzoru.  
   
-6.  Klikněte **Vložit tabulku** tlačítka na **obsahu** skupiny.  
+6.  Klikněte na tlačítko **Vložit tabulku** tlačítko **obsahu** skupiny.  
   
      Tabulka se přidá do dokumentu na aktuální pozici kurzoru.  
   
 ## <a name="next-steps"></a>Další kroky  
- Další informace o tom, jak přizpůsobit rozhraní Office z těchto témat:  
+ Další informace o tom, jak přizpůsobit uživatelské rozhraní sady Office naleznete v těchto tématech:  
   
--   Přizpůsobení pásu karet jinou aplikaci Office. Další informace o aplikacích, které podporují přizpůsobení pásu karet najdete v tématu [přehled pásu karet](../vsto/ribbon-overview.md).  
+-   Přizpůsobení pásu karet z jiné aplikace Office. Další informace o aplikacích, které podporují přizpůsobení pásu karet najdete v tématu [přehled pásu karet](../vsto/ribbon-overview.md).  
   
--   Přizpůsobení pásu karet Office aplikace pomocí Návrháře pásu karet. Další informace najdete v tématu [Návrhář pásu karet](../vsto/ribbon-designer.md).  
+-   Přizpůsobení pásu karet aplikace sady Office pomocí Návrháře pásu karet. Další informace najdete v tématu [Návrháře pásu karet](../vsto/ribbon-designer.md).  
   
--   Vytvořte vlastní akce podokně. Další informace najdete v tématu [přehled podokna akcí](../vsto/actions-pane-overview.md).  
+-   Vytvoření vlastní akce podokna. Další informace najdete v tématu [přehled podokna akcí](../vsto/actions-pane-overview.md).  
   
--   Přizpůsobení uživatelského rozhraní systému Microsoft Office Outlook pomocí oblastí formulářů aplikace Outlook. Další informace najdete v tématu [návod: Návrh oblasti formuláře aplikace Outlook](../vsto/walkthrough-designing-an-outlook-form-region.md).  
+-   Přizpůsobení uživatelského rozhraní aplikace Microsoft Office Outlook s použitím oblastí formulářů aplikace Outlook. Další informace najdete v tématu [návod: Návrh oblasti formuláře Outlooku](../vsto/walkthrough-designing-an-outlook-form-region.md).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Přehled pásu karet](../vsto/ribbon-overview.md)   
- [Kódu XML pásu karet](../vsto/ribbon-xml.md)   
- [Návod: Vytvoření vlastní karty pomocí návrháře pásu karet](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)  
+ [Pás karet – XML](../vsto/ribbon-xml.md)   
+ [Návod: Vytvoření vlastní karty pomocí Návrháře pásu karet](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)  
   
   

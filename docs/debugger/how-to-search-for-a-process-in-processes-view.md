@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: hledání procesu v zobrazení procesů | Microsoft Docs'
+title: 'Postupy: hledání procesu v zobrazení procesů | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -13,32 +13,33 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d23199031ce46e57e44a01720493fad4e77c7430
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 8129516476977e526cde9c3eb3dbe546bdbe3876
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49822914"
 ---
 # <a name="how-to-search-for-a-process-in-processes-view"></a>Postupy: Hledání procesu v zobrazení procesů
-Můžete hledat specifickém procesu v zobrazení procesů pomocí jeho ID nebo modul řetězce procesu jako kritéria vyhledávání. Můžete také zadat počáteční směr hledání. Pole v dialogovém okně se zobrazí atributy proces vybrané ve stromu procesu.  
+Můžete vyhledat konkrétního procesu v zobrazení procesů pomocí jeho ID nebo modul řetězec proces jako kritéria hledání. Můžete také zadat počáteční směr hledání. Pole v dialogovém okně se zobrazí atributy vybraný proces strom procesu.  
   
-### <a name="to-search-for-a-process-in-processes-view"></a>K vyhledání procesu v zobrazení procesů  
+### <a name="to-search-for-a-process-in-processes-view"></a>Hledání procesu v zobrazení procesů  
   
-1.  Uspořádat váš windows proto tohoto nástroje Spy ++ a aktivní [zobrazení procesů](../debugger/processes-view.md) okna jsou viditelné.  
+1. Uspořádat okna tak tohoto nástroje Spy ++ a aktivní [zobrazení procesy](../debugger/processes-view.md) okna jsou viditelné.  
   
-2.  Z **vyhledávání** nabídce zvolte **najít procesu**  
+2. Z **hledání** nabídce zvolte **najít proces**  
   
-     [Dialogové okno hledání procesů](../debugger/process-search-dialog-box.md) otevře.  
+    [Dialogové okno hledání procesů](../debugger/process-search-dialog-box.md) otevře.  
   
-3.  Zadejte ID procesu nebo řetězec modulu jako kritéria vyhledávání.  
+3. Zadejte ID procesu nebo řetězce modulu, jako kritéria hledání.  
   
-4.  Vymažte všechna pole, pro které nechcete zadat hodnoty.  
+4. Zrušte zaškrtnutí všech polí, u kterých nechcete k určení hodnot.  
   
-    > [!TIP]
-    >  Chcete-li najít všechny procesy, které vlastní modul, zrušte **proces** pole a zadejte název modulu v **modulu** pole. Potom pomocí **najít další** Hledat další procesy.  
+   > [!TIP]
+   >  Pokud chcete najít všechny procesy vlastní modul, zrušte **procesu** pole a zadejte název modulu v **modulu** pole. Pak pomocí **najít další** chcete pokračovat ve vyhledávání pro procesy.  
   
-5.  Zvolte **až** nebo **dolů** pro počáteční směr hledání.  
+5. Zvolte **nahoru** nebo **dolů** pro počáteční směr hledání.  
   
-6.  Click **OK**.  
+6. Klikněte na tlačítko **OK**.  
   
- Pokud je nalezen odpovídající proces, je označený na **zobrazení procesů** okno.
+   Pokud je nalezen odpovídající proces, je zvýrazněn **zobrazení procesů** okna.

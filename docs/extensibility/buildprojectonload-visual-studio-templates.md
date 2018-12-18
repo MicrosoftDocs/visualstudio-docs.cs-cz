@@ -1,5 +1,5 @@
 ---
-title: BuildProjectOnLoad (šablony sady Visual Studio) | Microsoft Docs
+title: BuildProjectOnLoad (šablony sady Visual Studio) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 58493c8e3c4668f1cd94c7f892d727479b755f3f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b70cc3522d59c2abe4633f38f746aeeb3159fe8a
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39150662"
 ---
 # <a name="buildprojectonload-visual-studio-templates"></a>BuildProjectOnLoad (šablony sady Visual Studio)
-Určuje, jestli pro sestavení projektu ihned po jeho vytvoření.  
+Určuje, jestli se projekt sestavil ihned po jeho vytvoření.  
   
- \<VSTemplate >  
+ \<Vstemplate – >  
  \<TemplateData >  
  \<BuildProjectOnLoad>  
   
@@ -41,25 +42,25 @@ Určuje, jestli pro sestavení projektu ihned po jeho vytvoření.
 ### <a name="attributes"></a>Atributy  
  Žádné  
   
-### <a name="child-elements"></a>Podřízené elementy  
+### <a name="child-elements"></a>Podřízené prvky  
  Žádné  
   
-### <a name="parent-elements"></a>Nadřazené elementy  
+### <a name="parent-elements"></a>Nadřazené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Rozděluje šablonu a definuje, jak se zobrazuje v buď **nový projekt** nebo **přidat novou položku** dialogové okno.|  
+|[TemplateData –](../extensibility/templatedata-element-visual-studio-templates.md)|Rozděluje šablonu a definuje, jak se zobrazuje **nový projekt** nebo **přidat novou položku** dialogové okno.|  
   
 ## <a name="text-value"></a>Textová hodnota  
  Je vyžadována textová hodnota.  
   
- Text musí být buď `true` nebo `false`, která určuje, zda pro sestavení projektu ihned po jeho vytvoření.  
+ Text musí být buď `true` nebo `false`, která určuje, jestli se projekt sestavil ihned po jeho vytvoření.  
   
 ## <a name="remarks"></a>Poznámky  
  `BuildProjectOnLoad` je volitelný atribut. Výchozí hodnota je `false`.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ilustruje metadata pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] šablony.  
+ Následující příklad ukazuje metadata [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] šablony.  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  
@@ -86,7 +87,7 @@ Určuje, jestli pro sestavení projektu ihned po jeho vytvoření.
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [TemplateContent – Element (šablony sady Visual Studio)](../extensibility/templatecontent-element-visual-studio-templates.md)   
+## <a name="see-also"></a>Viz také:  
+ [TemplateContent – element (šablony sady Visual Studio)](../extensibility/templatecontent-element-visual-studio-templates.md)   
  [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)   
- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
+ [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: Zadejte testovacích agentů pro použití v zatížení scénáře otestovat v sadě Visual Studio | Microsoft Docs
+title: Určení testovacích agentů pro použití ve scénářích zátěžových testů
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,57 +12,61 @@ ms.assetid: e86806dd-5897-4e4c-bfd4-8d687fb72a6e
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: dd6ca0c9b92f8eaa27c2a8726cc9d2cea49636b2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: db7c901dd081155fe7341433f700f60de415a153
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061014"
 ---
-# <a name="how-to-specify-test-agents-to-use-in-load-test-scenarios"></a>Postupy: Určení testovacích agentů, kteří mají být použiti ve scénářích zátěžových testů
+# <a name="how-to-specify-test-agents-to-use-in-load-test-scenarios"></a>Postupy: určení testu agentů v zátěžového testování scénářů
 
-Jakmile vytvoříte zátěžový test pomocí **načíst testování Průvodce novým**, můžete použít **načíst Editor testů** ke změně vlastností scénáře pro splnění vašich potřeb testování a cíle.
+Po vytvoření zátěžového testu s použitím **nového Průvodce zátěžovým testem**, můžete použít **editoru zátěžového testu** Chcete-li změnit vlastnosti scénářů pro splnění potřebám a cílům testování.
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 > [!NOTE]
-> Úplný seznam vlastnosti scénáře zátěžového testu a jejich popisy najdete v tématu [načíst vlastnosti scénář otestovat](../test/load-test-scenario-properties.md).
+> Úplný seznam vlastnosti scénáře zátěžového testu a jejich popis najdete v tématu [vlastnosti scénáře zátěžového testu](../test/load-test-scenario-properties.md).
 
-Agenti nejsou zadány pomocí editoru zátěžových testů změnit **agentů pro použití** vlastnost v okně Vlastnosti.
+Agenti jsou zadány pomocí **editoru zátěžových testů** změnit **agenty k použití** vlastnost v **vlastnosti** okna.
 
-Můžete zadat agentů, které chcete, aby váš scénář má použít, pokud používáte řadiče a testovací agenty ke spuštění zatížení vzdáleně. Může být například potřeba určit konkrétní sadu agentů, aby byla při analýze trendů výkonu zachována konzistence. Navíc agenti mohou být geograficky distribuovány, tak, aby spřažení existuje mezi skripty, které mohou být spuštěny a kde se nachází agent.
+Můžete zadat agenty, které má váš scénář použít, pokud používáte kontroléry a agenty ke spuštění zátěžového testu vzdáleně. Může být například potřeba určit konkrétní sadu agentů, aby byla při analýze trendů výkonu zachována konzistence. Navíc agentů může být geograficky distribuovanou, tak, že existuje spřažení mezi skripty, které mohou být spuštěny a kde se nachází agent.
 
 > [!TIP]
-> Místo fyzicky uvedení agenta vzdálené sítě, Další možností je použít emulace sítě k emulaci pomalé síti. Další informace najdete v tématu [určení typů virtuálních síťových](../test/specify-virtual-network-types-in-a-load-test-scenario.md) a [určení typů virtuálních síťových](../test/specify-virtual-network-types-in-a-load-test-scenario.md).
+> Místo vložíte fyzicky agenta ve vzdálené lokalitě, Další možností je použití emulace sítě emulovat pomalou síť. Další informace najdete v tématu [určení typů virtuálních sítí](../test/specify-virtual-network-types-in-a-load-test-scenario.md).
 
-Další informace najdete v tématu [testovací kontrolery a testovací agenti](configure-test-agents-and-controllers-for-load-tests.md).
+Další informace najdete v tématu [testovací kontrolery a testovací agenty](configure-test-agents-and-controllers-for-load-tests.md).
 
-Dalším důvodem je, že některé, ale ne všechny agenty může mít na nich být nainstalovaný software, který je vyžadován pro konkrétní scénář.
+Dalším důvodem je, že některé, ale ne ve všech agentů může být software nainstalovaný v nich, která je požadována pro konkrétní scénář.
 
-Můžete řídit výběr agenta pro danou test spusťte pomocí rolí v nastavení testu. Další informace najdete v tématu [shromažďovat diagnostické informace využitím testovacích nastavení](../test/collect-diagnostic-information-using-test-settings.md).
+Můžete řídit výběr agenta pro daný test spustit s použitím rolí v nastavení testu. Další informace najdete v tématu [shromažďování diagnostických informací pomocí nastavení testu](../test/collect-diagnostic-information-using-test-settings.md).
 
-Pokud testovacího počítače agenta má více než 75 procent využití procesoru nebo menší než 10 procent dostupné fyzické paměti, přidejte do vaší zátěžový test, abyste měli jistotu, že se počítač agenta nestane kritická místa v zátěžovém testu více agentů.
+Pokud počítač testovacího agenta má více než 75 % využití procesoru nebo má méně než 10 procent fyzické paměti, ujistěte se, že přidejte další agenty do zátěžového testu počítači agenta se nestane problémem při zátěžovém testu.
 
-## <a name="to-specify-the-agents-to-use-for-a-scenario"></a>Chcete-li určit agenty používat pro scénáře
+## <a name="to-specify-the-agents-to-use-for-a-scenario"></a>Chcete-li určit agentů pro scénář
 
 1.  Otevřete zátěžový test.
 
-     Zobrazí se Editor zátěžového testu. Zobrazí se strom zátěžového testu.
+     **Editoru zátěžových testů** se zobrazí. Zobrazí se strom zátěžového testu.
 
-2.  V zatížení testovat stromy **scénáře** složky, vyberte uzel scénář, pro který chcete určit agenty používat.
+2.  V zátěžového testu stromů **scénáře** složky, vyberte uzel scénář, pro kterou chcete určit agenty k použití.
 
-3.  Na **zobrazení** nabídce vyberte možnost **vlastnosti – okno**.
+3.  Na **zobrazení** nabídce vyberte možnost **okno vlastností**.
 
-     Kategorií a vlastností scénáře jsou zobrazeny v okně Vlastnosti.
+     Kategorie a vlastnosti scénáře jsou zobrazeny v **vlastnosti** okna.
 
-4.  Do textového pole pro **agentů pro použití** vlastnost, zadejte seznam agentů, na kterých může spustit tento scénář.
+4.  V textovém poli pro **agenty k použití** vlastnost, zadejte seznam agentů, se kterými se může spouštět scénář.
 
-     Agenti musí být oddělené čárkami, například "**Agent1, Agent2, Agent3**". Je-li tato vlastnost ponechána prázdná, scénář bude používat všechny dostupné agenty.
+     Agenty musí být odděleny čárkami, například "**Agent1, Agent2, Agent3**". Je-li tato vlastnost ponechána prázdná, scénář bude používat všechny dostupné agenty.
 
     > [!NOTE]
-    > **Agentů pro použití** vlastnost se ignoruje při místním spuštění. Pro vzdálené spuštění, pokud není k dispozici z agentů, zadaný v **agentů pro použití** neexistuje, testy v tomto scénáři se nespustí.
+    > **Agenty k použití** vlastnost se ignoruje pro místní běhy. Pro vzdálená spuštění, pokud žádná z agentů uvedených v **agenty k použití** neexistuje, nebudou spouštět testy ve scénáři.
 
-5.  Po provedení změny vlastnosti, vyberte **Uložit** na **souboru** nabídky. Když pak spustíte zátěžový test pomocí nové **agentů pro použití** hodnotu.
+5.  Po změně vlastnosti zvolte **Uložit** na **souboru** nabídky. Potom můžete spustit zátěžový test pomocí nového **agenty k použití** hodnotu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Úpravy scénářů zátěžových testů](../test/edit-load-test-scenarios.md)
 - [Návod: Vytvoření a spuštění zátěžového testu](../test/walkthrough-create-and-run-a-load-test.md)

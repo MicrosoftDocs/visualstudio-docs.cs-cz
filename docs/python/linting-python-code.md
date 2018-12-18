@@ -1,58 +1,62 @@
 ---
-title: Použití PyLint pro linting kód Python
-description: Jak používat PyLint v sadě Visual Studio Zkontrolujte problémy v kódu jazyka Python.
-ms.date: 07/12/2017
+title: Použití Pylintu pro kód Python
+description: Spusťte PyLint v sadě Visual Studio ke kontrole problémů v kódu Pythonu, včetně možnosti příkazového řádku k přizpůsobení linting.
+ms.date: 10/29/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 4e47de7be6587f0e8c967ba458a65906c80f2e5b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 52b9abf49176f37de98d47d87bc1d7ae265ded1e
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53066175"
 ---
-# <a name="using-pylint-to-check-python-code"></a>Použití PyLint ke kontrole kód Python
+# <a name="use-pylint-to-check-python-code"></a>Použití Pylintu ke kontrole kódu v Pythonu
 
-[PyLint](https://www.pylint.org/), často používaný nástroj, který kontroluje chybami v kódu jazyka Python a může vést ke vzniku dobrý Python kódování vzory, je integrovaná do sady Visual Studio pro projektů v jazyce Python.
+[Pylintu](https://www.pylint.org/), je často používaný nástroj, který kontroluje chyby v kódu Pythonu a může vést ke vzniku dobré psaní kódu, Python integrované do sady Visual Studio pro projekty v Pythonu.
 
-Právě Python projekt v Průzkumníku řešení klikněte pravým tlačítkem a vyberte **Python > spustit PyLint...** :
+## <a name="run-pylint"></a>Spustit PyLint
 
-![Příkaz PyLint na kontextovou nabídku projektů v jazyce Python](media/code-pylint-command.png)
+Stačí pravým tlačítkem na projekt Python v **Průzkumníka řešení** a vyberte **Python** > **spustit Pylintu**:
 
-Použití tohoto příkazu výzvu k instalaci PyLint do aktivního prostředí, pokud již není přítomen.
+![Příkaz Pylintu kontextové nabídky pro projekty v Pythonu](media/code-pylint-command.png)
 
-PyLint upozornění a chyb se zobrazí v okně Seznam chyb:
+Pomocí tohoto příkazu vás vyzve k instalaci Pylintu do vašeho prostředí active, pokud ještě není k dispozici.
 
-![Seznam chyb PyLint](media/code-pylint-error-list.png)
+Pylintu upozornění a chyby se zobrazí **seznam chyb** okno:
 
-Poklepáním na chybu přejdete přímo na zdrojový kód, který vygeneroval tento problém.
+![Seznam chyb Pylintu](media/code-pylint-error-list.png)
+
+Poklepáním na chybu přejdete přímo ke zdrojovému kódu, který vygeneroval tento problém.
 
 > [!Tip]
-> Najdete v článku [PyLint funkce odkaz](https://pylint.readthedocs.io/en/latest/technical_reference/features.html) podrobný seznam všech PyLint výstup zpráv.
+> Najdete v článku [Pylintu funkce odkaz](https://pylint.readthedocs.io/en/latest/technical_reference/features.html) podrobný seznam všech Pylintu výstupní zprávy.
 
-## <a name="setting-pylint-command-line-options"></a>Nastavení možnosti příkazového řádku PyLint
+## <a name="set-pylint-command-line-options"></a>Nastavení možností příkazového řádku Pylintu
 
-[Možnosti příkazového řádku](https://pylint.readthedocs.io/en/latest/user_guide/run.html#command-line-options) část PyLint dokumentace popisuje, jak můžete řídit chování na PyLint prostřednictvím `.pylintrc` konfigurační soubor. Takový soubor mohou být umístěny v kořenu projektu Python v sadě Visual Studio nebo jinde v závislosti na tom, jak často chcete tato nastavení použita (viz [možnosti příkazového řádku](https://pylint.readthedocs.io/en/latest/user_guide/run.html#command-line-options) podrobnosti).
+[Možnosti příkazového řádku](https://pylint.readthedocs.io/en/latest/user_guide/run.html#command-line-options) část Pylintu dokumentace popisuje, jak řídit chování Pylintu společnosti prostřednictvím *.pylintrc* konfigurační soubor. Tento soubor je možné použít v kořenovém adresáři projektu Pythonu v sadě Visual Studio nebo jinde v závislosti na tom, jak často chcete tato nastavení použijí (najdete v článku [možnosti příkazového řádku](https://pylint.readthedocs.io/en/latest/user_guide/run.html#command-line-options) podrobnosti).
 
-Například potlačení upozornění "chybějící docstring" viz předchozí obrázek s `.pylintrc` souboru v projektu, postupujte podle kroků:
+Například tato upozornění už nezobrazovala "chybí docstring" je vidět na předchozím obrázku s *.pylintrc* soubor v projektu, proveďte kroky:
 
-1. Na příkazovém řádku přejděte do kořenového adresáře projektu (která obsahuje vaše `.pyproj` souboru) a spusťte následující příkaz pro vytvoření komentáři konfiguračního souboru:
+1. Na příkazovém řádku přejděte do kořenového adresáře projektu (který má vaše *.pyproj* soubor) a spusťte následující příkaz pro vytvoření komentářem konfiguračního souboru:
 
    ```command
    pylint --generate-rcfile > .pylintrc
    ```
 
-1. V Průzkumníku řešení Visual Studio, klikněte pravým tlačítkem na projekt, vyberte **Přidat > ukončení položky...** , přejděte do a vyberte novou `.pylintrc` soubor a vyberte **přidat**.
+1. V Průzkumníku řešení Visual Studio, klikněte pravým tlačítkem na projekt, vyberte **přidat** > **existující položku**, přejděte k novému *.pylintrc* souboru, vyberte ho, a Vyberte **přidat**.
 
-1. Otevřete soubor pro úpravy, který obsahuje řadu nastavení, se kterými můžete pracovat. Chcete-li zakázat upozornění, vyhledejte `[MESSAGES CONTROL]` části a pak vyhledejte `disable` nastavení v této části. Není dlouhý řetězec konkrétní zpráv, na které můžete připojit upozornění, podle toho, která má. V tomto příkladu, připojit `,missing-docstring` (včetně vymezování čárkou).
+1. Otevřete soubor pro úpravy, který má několik nastavení, které můžete pracovat. Chcete-li zakázat upozornění, vyhledejte `[MESSAGES CONTROL]` části a pak vyhledejte `disable` nastavení v této části. Je to dlouhý řetězec určitých zpráv, ke kterým můžete připojit libovolným upozornění chcete. V tomto příkladu, připojte `,missing-docstring` (včetně vymezování čárkami).
 
-1. Uložit `.pylintrc` souboru a spusťte PyLint zjistíte, že jsou teď potlačovány upozornění.
+1. Uložit *.pylintrc* souboru a spustit PyLint znovu, abyste viděli, že jsou nyní potlačit upozornění.
 
 > [!Tip]
-> Použít `.pylintrc` souboru ze sdílené síťové složky, vytvořit proměnnou prostředí s názvem `PYLINTRC` s hodnotou název souboru v síti sdílet pomocí cesty UNC nebo písmeno mapovaná jednotka. Například `PYLINTRC=\\myshare\python\.pylintrc`.
+> Použití *.pylintrc* souboru ze sdílené síťové složky, vytvořte proměnnou prostředí s názvem `PYLINTRC` s hodnotou název souboru v síti sdílet pomocí cesty UNC nebo písmeno jednotky pro mapovanou. Například `PYLINTRC=\\myshare\python\.pylintrc`.

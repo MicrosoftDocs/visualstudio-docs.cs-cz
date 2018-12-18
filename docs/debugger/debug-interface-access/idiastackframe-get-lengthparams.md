@@ -1,5 +1,5 @@
 ---
-title: Idiastackframe::get_lengthparams – | Microsoft Docs
+title: Idiastackframe::get_lengthparams – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a78e85e505c86c3b33b6803433dd8c7af0100d8
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 6754a729d6493defaad05266fd8b44d996b3ebfd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49875201"
 ---
 # <a name="idiastackframegetlengthparams"></a>IDiaStackFrame::get_lengthParams
-Získá počet bajtů parametrů nabídnutých v zásobníku.  
+Získá počet bajtů z parametrů předaných v zásobníku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,7 +37,7 @@ HRESULT get_lengthParams (
  [out] Vrátí počet bajtů parametrů.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE` Pokud vlastnost není podporována. Jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

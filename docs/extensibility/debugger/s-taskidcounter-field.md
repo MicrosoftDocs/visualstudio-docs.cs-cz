@@ -1,5 +1,5 @@
 ---
-title: s_taskIdCounter pole | Microsoft Docs
+title: s_taskidcounter – pole | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,28 +13,29 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7d49881eb16e05edfc1cfc57dd9520de8991942d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: bf5c6b0578495e56086abb8637054e0650b07195
+ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39252387"
 ---
-# <a name="staskidcounter-field"></a>s_taskIdCounter pole
-Identifikátor další k dispozici pro <xref:System.Threading.Tasks.Task> objektu.  
+# <a name="staskidcounter-field"></a>s_taskIdCounter – pole
+Další dostupné identifikátorem <xref:System.Threading.Tasks.Task> objektu.  
   
  **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **Sestavení:** mscorlib (v mscorlib.dll)  
+ **Sestavení:** mscorlib (v knihovně mscorlib.dll)  
   
- Protože tento vnitřní člen nemůže získat přístup z rozhraní .NET Framework, je k dispozici společné Intermediate Language (soubor CIL) syntaxi.  
+ Protože tento člen interní nemůže získat přístup z rozhraní .NET Framework, je k dispozici v Common Intermediate Language (CIL) následující syntaxi.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```csharp  
 .field static assembly int32 s_taskIdCounter  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
   
-## <a name="see-also"></a>Viz také  
- [Task – třída](../../extensibility/debugger/task-class-internal-members.md)
+## <a name="see-also"></a>Viz také:  
+ [Třída úlohy](../../extensibility/debugger/task-class-internal-members.md)

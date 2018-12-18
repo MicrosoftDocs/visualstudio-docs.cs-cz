@@ -1,5 +1,5 @@
 ---
-title: Důležité informace pro uvolnění a načíst vnořený projekty | Microsoft Docs
+title: Důležité informace pro uvolnění a opětovné načtení vnořených projektů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,29 +14,30 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7f22575c4affa6e6a13ea80b32674a3e517202fb
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c38b50f661ed7ea16c56d9a877b809d2d60dd51c
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39513455"
 ---
-# <a name="considerations-for-unloading-and-reloading-nested-projects"></a>Důležité informace pro uvolnění a překladní vnořené projekty
+# <a name="considerations-for-unloading-and-reloading-nested-projects"></a>Důležité informace pro uvolnění a opětovné načtení vnořených projektů
 
-Při implementaci projektu vnořené typy, musíte provést další kroky, když jste a opětovném načtení projektů. Oznámit správně naslouchací procesy pro řešení události, musíte správně zvýšit `OnBeforeUnloadProject` a `OnAfterLoadProject` události.
+Při implementaci typy vnořených projektů, je nutné provést další kroky při odebrat a znovu načíst projekty. Pokud chcete informovat správně naslouchacích procesů událostí řešení, musíte správně zvýšit `OnBeforeUnloadProject` a `OnAfterLoadProject` události.
 
-Jedním z důvodů k vyvolání těchto událostí je pro řízení zdrojového kódu (SCC). Nechcete, aby SCC odstranit položky ze serveru a pak je přidejte zpět jako *nové* Pokud dojde `Get` operaci provést z SCC. V takovém případě by mimo SCC načíst nový soubor. Je třeba a opětovném načtení všechny soubory v případě, že jsou různé.
+Jedním z důvodů pro vyvolání těchto událostí je pro správu zdrojového kódu (SCC). Nechcete SCC k odstranění položek ze serveru a potom je přidat zpět jako *nové* dojde `Get` zamezil operacím SCC. V takovém případě by mimo SCC načíst nový soubor. Je třeba odebrat a znovu načíst všechny soubory v případě, že charakteristik.
 
-Zdroj ovládacího prvku kód zavolá metodu `ReloadItem`. Implementace <xref:Microsoft.VisualStudio.Shell.Interop.IVsFireSolutionEvents> pro volání rozhraní `OnBeforeUnloadProject` a `OnAfterLoadProject` odstraňte projekt a znovu vytvořit. Při implementaci rozhraní tímto způsobem je informován SCC, že projekt byl dočasně odstraněn a znovu přidat. Proto SCC nepracuje na projekt jako kdyby byla projektu *ve skutečnosti* odstraněna a znovu přidat.
+Zdrojový kód ovládacího prvku volá `ReloadItem`. Implementace <xref:Microsoft.VisualStudio.Shell.Interop.IVsFireSolutionEvents> rozhraní volat `OnBeforeUnloadProject` a `OnAfterLoadProject` odstraňte projekt a znovu ji vytvořit. Při implementaci rozhraní tímto způsobem SCC je informován, že projekt dočasně odstranila a znovu přidat. Proto SCC nepracuje v projektu jako kdyby byl projekt *skutečně* odstranit a znovu přidat.
 
-## <a name="reloading-projects"></a>Opětovném načtení projektů
+## <a name="reload-projects"></a>Znovu načte projekty
 
-Pro podporu opětovném načtení projektů vnořené, můžete implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.ReloadItem%2A> metoda. V implementaci `ReloadItem`, zavřete vnořené projekty a potom je znovu vytvořit.
+Probíhá opětovné načtení vnořených projektů účelem je implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistHierarchyItem2.ReloadItem%2A> metoda. Ve vaší implementaci `ReloadItem`, zavřete vnořených projektů a pak je znovu vytvořit.
 
-Většinou když je znovu načíst projekt, rozhraní IDE vyvolá <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnBeforeUnloadProject%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterLoadProject%2A> události. Pro vnořené projekty, které jsou odstraněna a znovu, ale nadřazený projekt zahájí se proces, není rozhraní IDE. Protože nadřazený projekt není vyvolávání událostí řešení a rozhraní IDE nemá žádné informace o inicializaci procesu, nejsou vyvolány události.
+Obvykle po opětovném načtení nástroje projekt rozhraní IDE vyvolá <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnBeforeUnloadProject%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterLoadProject%2A> události. Pro vnořené projekty, které se odstraní a znovu načten, ale nadřazený projekt zahájí proces, není rozhraní IDE. Protože nadřazený projekt nebude vyvolat události řešení a integrovaného vývojového prostředí nemá žádné informace o inicializaci procesu, události nejsou započteny.
 
-Ke zpracování tohoto procesu volání nadřazený projekt `QueryInterface` na <xref:Microsoft.VisualStudio.Shell.Interop.IVsFireSolutionEvents> rozhraní. `IVsFireSolutionEvents` obsahuje funkce, které informují IDE pro vyvolání `OnBeforeUnloadProject` události uvolnění vnořený projekt a poté zvýšit `OnAfterLoadProject` událost, která má stejnou projekt znovu načíst.
+Pro zpracování tohoto procesu, volání nadřazený projekt `QueryInterface` na <xref:Microsoft.VisualStudio.Shell.Interop.IVsFireSolutionEvents> rozhraní. `IVsFireSolutionEvents` obsahuje funkce, které sdělení rozhraní IDE, aby se vyvolala `OnBeforeUnloadProject` události uvolněte vnořený projekt a poté `OnAfterLoadProject` na stejný projekt znovu načíst události.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3>
 - [Vnoření projektů](../../extensibility/internals/nesting-projects.md)

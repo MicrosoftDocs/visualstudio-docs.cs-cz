@@ -1,5 +1,5 @@
 ---
-title: DISASSEMBLY_STREAM_FIELDS | Microsoft Docs
+title: DISASSEMBLY_STREAM_FIELDS | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1a8735992574699ba2b108fc493e9003ca52c9b2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9489b8c4399ae72bf7f6a70011eec347d870ca80
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49928331"
 ---
 # <a name="disassemblystreamfields"></a>DISASSEMBLY_STREAM_FIELDS
-Určuje, jaké informace načíst o pole zpětný překlad.  
+Určuje, jaké informace se mají načíst o pole zpětný překlad.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -65,37 +66,37 @@ public enum enum_DISASSEMBLY_STREAM_FIELDS {
   
 ## <a name="members"></a>Členové  
  DSF_ADDRESS  
- Inicializace nebo pomocí `bstrAddress` pole.  
+ Inicializace/použít `bstrAddress` pole.  
   
  DSF_ADDRESSOFFSET  
- Inicializace nebo pomocí `bstrAddressOffset` pole.  
+ Inicializace/použít `bstrAddressOffset` pole.  
   
  DSF_CODEBYTES  
- Inicializace nebo pomocí `bstrCodeBytes` pole.  
+ Inicializace/použít `bstrCodeBytes` pole.  
   
  DSF_OPCODE  
- Inicializace nebo pomocí `bstrOpCode` pole.  
+ Inicializace/použít `bstrOpCode` pole.  
   
  DSF_OPERANDS  
- Inicializace nebo pomocí `bstrOperands` pole.  
+ Inicializace/použít `bstrOperands` pole.  
   
  DSF_SYMBOL  
- Inicializace nebo pomocí `bstrSymbol` pole.  
+ Inicializace/použít `bstrSymbol` pole.  
   
  DSF_CODELOCATIONID  
- Inicializace nebo pomocí `uCodeLocationId` pole.  
+ Inicializace/použít `uCodeLocationId` pole.  
   
  DSF_POSITION  
- Inicializace nebo pomocí `posBeg` a `posEnd` pole.  
+ Inicializace/použít `posBeg` a `posEnd` pole.  
   
  DSF_DOCUMENTURL  
- Inicializace nebo pomocí `bstrDocumentUrl` pole.  
+ Inicializace/použít `bstrDocumentUrl` pole.  
   
  DSF_BYTEOFFSET  
- Inicializace nebo pomocí `dwByteOffset` pole.  
+ Inicializace/použít `dwByteOffset` pole.  
   
  DSF_FLAGS  
- Inicializace nebo pomocí `dwFlags` ([DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)) pole.  
+ Inicializace/použít `dwFlags` ([DISASSEMBLY_FLAGS](../../../extensibility/debugger/reference/disassembly-flags.md)) pole.  
   
  DSF_OPERANDS_SYMBOLS  
  Zahrnout názvy symbolů v `bstrOperands` pole.  
@@ -104,11 +105,11 @@ public enum enum_DISASSEMBLY_STREAM_FIELDS {
  Určuje všechna pole pro datový proud zpětný překlad.  
   
 ## <a name="remarks"></a>Poznámky  
- Předány jako parametr, který se [čtení](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) metoda označíte, které pole [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) struktura mají být inicializován.  
+ Předán jako parametr [čtení](../../../extensibility/debugger/reference/idebugdisassemblystream2-read.md) indikace polí s [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) struktury mají být inicializovány.  
   
- Použít pro `dwFields` členem `DisassemblyData` struktura označuje pole, která je platná a použitá při vrácení strukturu.  
+ Používá pro `dwFields` člena `DisassemblyData` struktury k označení pole, která se používá a je platný vrátila strukturu.  
   
- Tyto hodnoty mohou být kombinovány s bitové `OR`.  
+ Tyto hodnoty lze kombinovat pomocí logické bitové `OR`.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

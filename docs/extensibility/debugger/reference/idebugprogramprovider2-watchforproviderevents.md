@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramProvider2::WatchForProviderEvents | Microsoft Docs
+title: IDebugProgramProvider2::WatchForProviderEvents | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1dd2dcaa930db97ee8bab9b2bba168c80444dda8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1e245087cdd74ced1b47e2cd02da1e450474fa1b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49875135"
 ---
 # <a name="idebugprogramprovider2watchforproviderevents"></a>IDebugProgramProvider2::WatchForProviderEvents
-Umožňuje proces oznámení událostí portů.  
+Umožňuje proces oznámení o událostech portu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,35 +51,35 @@ int WatchForProviderEvents(
   
 #### <a name="parameters"></a>Parametry  
  `Flags`  
- [v] Kombinace příznaků z [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) výčtu. Následující příznaky jsou typické pro toto volání:  
+ [in] Kombinace příznaků z [PROVIDER_FLAGS](../../../extensibility/debugger/reference/provider-flags.md) výčtu. Následující příznaky jsou typické pro toto volání:  
   
 |Příznak|Popis|  
 |----------|-----------------|  
 |`PFLAG_REMOTE_PORT`|Volající běží na vzdáleném počítači.|  
-|`PFLAG_DEBUGGEE`|Volající je právě laděn (Další informace o zařazování se vrátí pro každý uzel).|  
-|`PFLAG_ATTACHED_TO_DEBUGGEE`|Volající byl připojen k ale není spuštěn ladicí program.|  
-|`PFLAG_REASON_WATCH`|Volající se chce sledovat události. Pokud tento příznak není nastavený. pak se odebere událost zpětného volání a volající už přijímat oznámení.|  
+|`PFLAG_DEBUGGEE`|Volající je momentálně laděna (Další informace o zařazování se vrací pro každý uzel).|  
+|`PFLAG_ATTACHED_TO_DEBUGGEE`|Volající, byl připojený k ale není spuštěn pomocí ladicího programu.|  
+|`PFLAG_REASON_WATCH`|Volající vyžaduje sledovat události. Pokud tento příznak není nastavený. pak odebrat událost zpětného volání a volající už nebude dostávat oznámení.|  
   
  `pPort`  
- [v] Port volající proces běží na.  
+ [in] Port volající proces běží na.  
   
  `processId`  
- [v] [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) struktura, která uchovává ID procesu, který obsahuje program dotyčném.  
+ [in] [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) struktura obsahující dotyčný ID procesu, který obsahuje program.  
   
  `EngineFilter`  
- [v] Pole identifikátory GUID modulů ladění spojených s procesem.  
+ [in] Pole identifikátorů GUID ladicími stroji spojených s procesem.  
   
  `guidLaunchingEngine`  
- [v] Identifikátor GUID modulu ladění, který spuštění tohoto procesu (pokud existuje).  
+ [in] Identifikátor GUID ladicího stroje, který spustil tento proces (pokud existuje).  
   
  `pEventCallback`  
- [v] [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md) objekt, který obdrží oznámení události.  
+ [in] [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md) objekt, který obdrží oznámení události.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Když volající chce odstranění obslužné rutiny události, který byl vytvořen s předchozím voláním této metody, volající předá stejnými parametry, stejně jako při prvním ale nechá vypnout `PFLAG_REASON_WATCH` příznak.  
+ Pokud volající chce odebrat obslužnou rutinu události, které bylo vytvořeno předchozí volání této metody, volající předá stejné parametry jako první, ale ponechá vypnout `PFLAG_REASON_WATCH` příznak.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugEngine** objekt, který zveřejňuje [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md) rozhraní.  

@@ -1,5 +1,5 @@
 ---
-title: Requiredframeworkversion – Element (šablony sady Visual Studio) | Microsoft Docs
+title: Requiredframeworkversion – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,20 +14,21 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: adc1a138c50c0fe13962f6601449eb3498d90398
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 23538e8e00553322f4f04e50414a8b3ddbd73b91
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39635913"
 ---
-# <a name="requiredframeworkversion-element-visual-studio-templates"></a>RequiredFrameworkVersion – element (šablony sady Visual Studio)
+# <a name="requiredframeworkversion-element-visual-studio-templates"></a>Requiredframeworkversion – element (šablony sady Visual Studio)
 
-Určuje minimální verze rozhraní .NET Framework, který je požadován pro šablonu. Způsobuje, že **cílová verze Framework** rozevíracího seznamu, který se má zobrazit v **nový projekt** dialogové okno. `RequiredFrameworkVersion` Element také určuje nejnižší hodnotu, která je k dispozici v rozevírací nabídce.
+Určuje minimální verzi rozhraní .NET Framework, která je vyžadované šablonou. Způsobí, že **cílovou verzi rozhraní Framework** rozevírací seznam, který se má zobrazit **nový projekt** dialogového okna. `RequiredFrameworkVersion` Element také určuje nejnižší hodnota, která je k dispozici v rozevírací nabídce.
 
 > [!IMPORTANT]
-> Od verze Visual Studio 2017 verze 15,6 operací, **cílová verze Framework** rozevírací již není filtr pro zobrazený šablony v **šablony** části **nový projekt** dialogové okno. Místo toho rozevíracího seznamu funguje jako výběr framework pro vybranou šablonu.
+> Od verze Visual Studio 2017 verze 15.6 a **cílovou verzi rozhraní Framework** rozevíracího seznamu už není filtr pro zobrazený šablony v **šablony** část **nový projekt** dialogového okna. Místo toho rozevírací seznam funguje jako výběr framework pro vybranou šablonu.
 
- \<VSTemplate > \<TemplateData > \<RequiredFrameworkVersion >
+ \<Vstemplate – > \<TemplateData > \<requiredframeworkversion – >
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,27 +42,27 @@ Určuje minimální verze rozhraní .NET Framework, který je požadován pro š
 ### <a name="attributes"></a>Atributy
  Žádné
 
-### <a name="child-elements"></a>Podřízené elementy
+### <a name="child-elements"></a>Podřízené prvky
  Žádné
 
-### <a name="parent-elements"></a>Nadřazené elementy
+### <a name="parent-elements"></a>Nadřazené prvky
 
 |Prvek|Popis|
 |-------------|-----------------|
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Rozděluje šablonu a definuje, jak se zobrazí ve buď **nový projekt** nebo **přidat novou položku** dialogové okno.|
+|[TemplateData –](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Rozděluje šablonu a definuje, jak se zobrazí buď **nový projekt** nebo **přidat novou položku** dialogové okno.|
 
 ## <a name="text-value"></a>Textová hodnota
  Je vyžadována textová hodnota.
 
- Text musí být číslo minimální verze rozhraní .NET Framework, která je požadována pro šablonu.
+ Text musí být číslo minimální verze rozhraní .NET Framework, který je požadovaný pro šablonu.
 
 ## <a name="remarks"></a>Poznámky
 
-`RequiredFrameworkVersion` je volitelný element. Použijte tento element pouze v případě, že šablona podporuje konkrétní minimální verzi (a novější verze, pokud existuje) rozhraní .NET Framework. Pokud zadáte `RequiredFrameworkVersion` elementu a šablony nepodporuje konkrétní minimální verze rozhraní .NET Framework **cílová verze Framework** rozevíracího seznamu se zobrazí, když se nedá použít.
+`RequiredFrameworkVersion` je volitelný prvek. Použijte tento prvek jenom v případě, že šablony podporují konkrétní minimální verzi (a novějších verzích, pokud existuje) rozhraní .NET Framework. Pokud zadáte `RequiredFrameworkVersion` elementu a šablony nepodporuje konkrétní minimální verzi rozhraní .NET Framework **cílovou verzi rozhraní Framework** rozevíracího seznamu se zobrazí, když se nedá použít.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ilustruje metadata pro standardní [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] šablona třídy.
+Následující příklad ukazuje metadata pro standardní [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] šablony třídy.
 
 ```xml
 <VSTemplate Type="Item" Version="3.0.0"
@@ -81,10 +82,10 @@ Následující příklad ilustruje metadata pro standardní [!INCLUDE[csprcs](..
 </VSTemplate>
 ```
 
-V tomto příkladu, minimální verze rozhraní .NET Framework, vyžadované šablonou, reprezentována `RequiredFrameworkVersion`, je 3.0. Projekt vytvořené pomocí této šablony můžete cílové verze rozhraní .NET Framework 3.0 od.
+V tomto příkladu, minimální verze rozhraní .NET Framework, která je nutná šablonou, reprezentovaný `RequiredFrameworkVersion`, je 3.0. Do projektu vytvořeného s touto šablonou můžete cílit na rozhraní .NET Framework verze 3.0 od.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
+- [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)
 - [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
-- [Cílení na konkrétní verzi rozhraní .NET Framework](../ide/targeting-a-specific-dotnet-framework-version.md)
+- [Cílení na určitou konkrétní verzi rozhraní .NET Framework](../ide/targeting-a-specific-dotnet-framework-version.md)

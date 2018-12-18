@@ -1,7 +1,7 @@
 ---
 title: Azure SDK pro Python
-description: Sada Azure SDK pro Python snadno využívat služby Microsoft Azure z Python aplikací běžících na jakékoli platformě.
-ms.date: 01/22/2018
+description: Sada Azure SDK pro Python usnadňuje používání služeb Microsoft Azure z aplikací Pythonu běží na libovolné platformě.
+ms.date: 12/06/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -12,52 +12,50 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 91f51f91008552e602991505f28ef4f076692f52
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b9c8f5193e55d86ea4ff5e4d68fb7a66a1044d2e
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53062881"
 ---
-# <a name="azure-sdk-for-python"></a>Azure SDK pro Python
+# <a name="consume-azure-services-using-the-azure-sdk-for-python"></a>Využívání služeb Azure pomocí sady Azure SDK pro Python
 
-Sada Azure SDK pro Python usnadňuje využívat a spravovat služby Microsoft Azure z aplikací, které běží na systému Windows, Mac OSX a Linux.
+Sada Azure SDK pro Python umožňuje snadno využívat a spravovat služby Micorosft Azure z aplikací běžících ve Windows, MacOS a Linux.
 
 ## <a name="installation"></a>Instalace
 
-Azure SDK je nainstalovat z [indexu balíčků Pythonu](https://pypi.python.org/pypi/azure).
+Při instalaci sady Azure SDK z [indexu balíčků Pythonu](https://pypi.python.org/pypi/azure).
 
-Nainstalujte **nejnovější stabilní verze** (podporuje Python 2.7 a 3.x) následujícím způsobem:
+Nainstalujte **nejnovější stabilní verzi** (podporuje Python 2.7 a 3.x) následujícím způsobem:
 
 ```command
 pip install azure
 ```
 
-Můžete také provést [instalaci Pythonu a sady SDK](https://docs.microsoft.com/azure/python-how-to-install/) v dokumentaci k Azure.
+Můžete také postupovat [instalace Pythonu a sady SDK](https://docs.microsoft.com/azure/python-how-to-install/) v dokumentaci k Azure.
 
 ## <a name="documentation"></a>Dokumentace
 
-Dokumentaci můžete najít na [azure sdk pro python.readthedocs.org](https://docs.microsoft.com/en-us/python/azure/?view=azure-python).
+[Sady Azure SDK for středisko pro vývojáře Python](https://docs.microsoft.com/python/azure/?view=azure-python) má také některé užitečné zdroje informací, včetně počtu kurzy:
 
-[Azure SDK pro středisku pro vývojáře Python](http://azure.microsoft.com/develop/python/) má také počet užitečné zdroje, včetně počtu kurzy:
-
-- Vytvoření webové aplikace s [Django](/azure/app-service-web/web-sites-python-create-deploy-django-app) [Flask](/azure/app-service-web/web-sites-python-create-deploy-flask-app), a [Bottle](/azure/app-service-web/web-sites-python-create-deploy-bottle-app).
-- [Úložiště objektů BLOB](/azure/storage/storage-python-how-to-use-blob-storage)
-- [Úložiště Table](/azure/storage/storage-python-how-to-use-table-storage)
-- [Fronty úložiště](/azure/storage/storage-python-how-to-use-queue-storage)
+- [Vytváření webových aplikací ve službě Azuyre App Service v Linuxu](/azure/app-service/containers/quickstart-python).
+- [Blob Storage](/azure/storage/blobs/storage-quickstart-blobs-python)
+- [Table Storage](/azure/cosmos-db/table-storage-how-to-use-python)
+- [Queue Storage](/azure/storage/storage-python-how-to-use-queue-storage)
 - [Azure Cosmos DB](/azure/cosmos-db/sql-api-python-application)
 - [Fronty služby Service Bus](/azure/service-bus-messaging/service-bus-python-how-to-use-queues)
-- [Předplatné témata sběrnice služeb](/azure/service-bus-messaging/service-bus-python-how-to-use-topics-subscriptions)
+- [Témata a odběry Service Bus](/azure/service-bus-messaging/service-bus-python-how-to-use-topics-subscriptions)
 - [Správa služeb](/azure/cloud-services/cloud-services-python-how-to-use-service-management)
 
-Pro veřejná rozhraní API bez dokumentaci, jednotka testů v [sady SDK úložiště GitHub](https://github.com/Azure/azure-sdk-for-python) jsou dobrou zdroje informací:
+Pro veřejné rozhraní API bez dokumentaci, testování částí [úložiště SDK GitHub](https://github.com/Azure/azure-sdk-for-python) jsou dobré zdroje informací:
 
-- [Testy jednotek](https://github.com/Azure/azure-storage-python/tree/master/tests)
-- [Testování částí Service Bus](https://github.com/Azure/azure-sdk-for-python/tree/master/azure-servicebus/tests)
-- [Správa služeb testování částí](https://github.com/Azure/azure-sdk-for-python/tree/master/azure-servicemanagement-legacy/tests)
-- [Testování částí správy prostředků](https://github.com/Azure/azure-sdk-for-python/tree/master/azure-mgmt/tests)
+- [Testy jednotky úložiště](https://github.com/Azure/azure-storage-python/tree/master/tests)
+- [Testy jednotek služby Service Bus](https://github.com/Azure/azure-sdk-for-python/tree/master/azure-servicebus/tests)
+- [Testy jednotek pro správu služby](https://github.com/Azure/azure-sdk-for-python/tree/master/azure-servicemanagement-legacy/tests)
 
 ## <a name="support"></a>Podpora
 
-Se nachází v úložišti Git sady SDK [ https://github.com/Azure/azure-sdk-for-python ](https://github.com/Azure/azure-sdk-for-python).
+Úložiště GitHub pro sadu SDK se nachází na [ https://github.com/Azure/azure-sdk-for-python ](https://github.com/Azure/azure-sdk-for-python).
 
-[Soubor problémy v úložišti](https://github.com/Azure/azure-sdk-for-python/issues) -li vyhledat potíže nebo máte otázky týkající se použití sady SDK.
+[Soubor problémy v úložišti](https://github.com/Azure/azure-sdk-for-python/issues) najít jakékoli problémy nebo máte otázky týkající se použití sady SDK.

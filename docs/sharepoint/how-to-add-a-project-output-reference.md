@@ -19,18 +19,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 8be3cd7576dcd42391c2f1bda1bd2d997ea958ac
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 47b6a3d164bbe1ddcda6d131275427fb1f815198
+ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36755474"
 ---
 # <a name="how-to-add-a-project-output-reference"></a>Postupy: Přidání odkazu na výstup projektu
   Pokud chcete nasadit sestavení projektu jiný než služby SharePoint (nebo souborů .xap v projekty Silverlight) do služby SharePoint, přidejte je jako odkazu na výstup projektu.  
   
  Tento proces vytvoří závislost sestavení řešení mezi dva projekty. Sestavení projektů, které jsou spojené s odkazy na výstup projektu předtím, než je vytvořen a nasazení projektu služby SharePoint.  
   
-### <a name="to-add-a-project-output-reference"></a>Přidání odkazu na výstup projektu  
+### <a name="to-add-a-project-output-reference"></a>Přidání odkazu na výstup projektu
   
 1.  Načtěte řešení, které obsahuje alespoň jeden projektu služby SharePoint a jeden jiný než služby SharePoint projektu.  
   
@@ -44,9 +45,9 @@ ms.lasthandoff: 04/16/2018
   
 6.  Vyberte šipku vedle **název projektu**, zvolte název položky projektu jiný než služby SharePoint a poté **OK** tlačítko.  
   
-## <a name="see-also"></a>Viz také  
- [Poskytnutí balení a informace o nasazení v položkách projektu](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)   
+## <a name="see-also"></a>Viz také:
+ [Zadejte informace o balení a nasazení v položkách projektu](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)   
  [Postupy: označení ovládacích prvků jako bezpečných ovládacích prvků](../sharepoint/how-to-mark-controls-as-safe-controls.md)   
- [Balení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
+ [Zabalení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
   
   

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31147125"
 ---
 # <a name="web-site-support-templates"></a>Podpora šablony webových serverů
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Šablony projektů a položek webu poskytují opakovaně použitelný a přizpůsobitelné webové stránky projektů a položek zástupnými procedurami, které urychlit proces vývoje odebráním potřebu vytvářet nové webové projekty a položky od začátku. Další informace o [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] šablony, viz [vytváření projektů a šablon položek](../../ide/creating-project-and-item-templates.md).

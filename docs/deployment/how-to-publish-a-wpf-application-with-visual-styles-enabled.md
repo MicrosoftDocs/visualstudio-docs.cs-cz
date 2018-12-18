@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: publikování aplikace WPF s povolenými vizuálními styly | Microsoft Docs'
+title: 'Postupy: publikování aplikace WPF s povolenými vizuálními styly | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -10,158 +10,175 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b265806a15d5a2b3f08862432c7c8e2a94d119c5
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 4dc45c624d44ed550fb491fc57638ba033090346
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52388105"
 ---
-# <a name="how-to-publish-a-wpf-application-with-visual-styles-enabled"></a>Postupy: Publikování aplikace WPF s povolenými vizuálními styly
-Vizuální styly povolit vzhled běžné ovládací prvky, chcete-li změnit podle motiv volená uživatelem. Ve výchozím nastavení nejsou povolené vizuální styly pro aplikace Windows Presentation Foundation (WPF), takže je nutné ručně povolit. Povolení vizuální styly pro aplikaci WPF a poté publikujete řešení způsobí chybu. Toto téma popisuje, jak vyřešit tuto chybu a proces pro publikování aplikace WPF s povolenými vizuálními styly. Další informace o vizuální styly najdete v tématu [vizuální styly přehled](http://msdn.microsoft.com/5b5d7bb6-684f-478d-bf5f-b8d18bbcff2e). Další informace o chybovou zprávu najdete v tématu [řešení potíží s konkrétní chyby v nasazeních ClickOnce](../deployment/troubleshooting-specific-errors-in-clickonce-deployments.md).  
+# <a name="how-to-publish-a-wpf-application-with-visual-styles-enabled"></a>Postupy: publikování aplikace WPF s povolenými vizuálními styly
+Vizuální styly povolit vzhled běžných ovládacích prvků do měnit v závislosti na motiv uživatelem. Ve výchozím nastavení nejsou povoleny vizuální styly pro aplikace Windows Presentation Foundation (WPF), takže je potřeba povolit ručně. Povolení vizuálních stylů pro aplikace WPF a pak tuto aplikaci publikovat řešení způsobí chybu. Toto téma popisuje, jak vyřešit tuto chybu a proces pro publikování aplikace WPF s povolenými vizuálními styly. Další informace o vizuálních stylů, najdete v části [vizuální styly přehled](/windows/desktop/Controls/visual-styles-overview). Další informace o chybové zprávě naleznete v tématu [řešení konkrétních chyb v nasazeních ClickOnce](../deployment/troubleshooting-specific-errors-in-clickonce-deployments.md).  
   
- Chcete-li vyřešit chyby a publikování řešení, je třeba provést následující úlohy:  
+ Chcete-li vyřešit chybu a publikovat řešení, je třeba provést následující úkoly:  
   
--   [Publikování řešení bez povolenými vizuálními styly](#BKMK_publishsolwovs).  
+- [Publikování řešení bez povolenými vizuálními styly](#publish-the-solution-without-visual-styles-enabled).  
   
--   [Vytvořte soubor manifestu](#BKMK_CreateManifest).  
+- [Vytvořit soubor manifestu](#create-a-manifest-file).  
   
--   [Vložení souboru manifestu do spustitelného souboru publikované řešení](#BKMK_embedmanifest).  
+- [Vložit soubor manifestu do spustitelného souboru publikované řešení](#embed-the-manifest-file-into-the-executable-file-of-the-published-solution).  
   
--   [Podepisování manifestů aplikace a nasazení](#BKMK_signappdeplyman).  
+- [Podepsání manifestů aplikace a nasazení](#sign-the-application-and-deployment-manifests).  
   
- Potom můžete přesunout publikované soubory do umístění, ze kterého chcete koncovým uživatelům k instalaci aplikace.  
+  Potom můžete přesunout publikované soubory do umístění, ze kterého chcete, aby koncoví uživatelé k instalaci aplikace.  
   
-##  <a name="BKMK_publishsolwovs"></a> Publikování řešení bez povolenými vizuálními styly  
+##  <a name="publish-the-solution-without-visual-styles-enabled"></a>Publikování řešení bez povolenými vizuálními styly  
   
-1.  Ujistěte se, že váš projekt nemá povolenými vizuálními styly. Nejdřív zkontrolujte soubor manifestu vašeho projektu, pro následující kód XML. Poté Pokud se nachází soubor XML, uzavřete XML s značkou komentář.  
+1.  Ujistěte se, že váš projekt nemá povolenými vizuálními styly. Nejprve zkontrolujte soubor manifestu projektu následující kód XML. Potom Pokud kód XML je k dispozici, uzavřete s značka komentáře XML.  
   
-     Vizuální styly nejsou ve výchozím nastavení povolené.  
+     Ve výchozím nastavení nejsou povoleny vizuální styly.  
   
+    ```xml  
+    <dependency>
+        <dependentAssembly>
+            <assemblyIdentity type="win32" name="Microsoft.Windows.Common-Controls" version="6.0.0.0" processorArchitecture="*" publicKeyToken="6595b64144ccf1df" language="*" />
+        </dependentAssembly>
+    </dependency>
     ```  
-    <dependency>    <dependentAssembly>      <assemblyIdentity          type="win32"          name="Microsoft.Windows.Common-Controls"          version="6.0.0.0"          processorArchitecture="*"          publicKeyToken="6595b64144ccf1df"          language="*"        />    </dependentAssembly>  </dependency>  
-    ```  
   
-     Následující postupy ukazují, jak otevřít soubor manifestu, které jsou přidružené k projektu.  
+     Následující postupy ukazují, jak otevřít soubor manifestu, který je přidružený k projektu.  
   
-    ###### <a name="to-open-the-manifest-file-in-a-visual-basic-project"></a>Otevřete soubor manifestu v projektu jazyka Visual Basic  
+    ###### <a name="to-open-the-manifest-file-in-a-visual-basic-project"></a>Chcete-li otevřít soubor manifestu v projektu jazyka Visual Basic  
   
-    1.  Na řádku nabídek zvolte **projektu**, * ProjectName ***vlastnosti**, kde *ProjectName* je název projektu WPF.  
+    1.  V panelu nabídky zvolte **projektu**, *ProjectName* **vlastnosti**, kde *ProjectName* je název vašeho projektu WPF.  
   
-         Stránky vlastností pro svůj projekt WPF zobrazí.  
+         Stránky vlastností pro váš projekt WPF se zobrazí.  
   
-    2.  Na **aplikace** , zvolte **zobrazení nastavení systému Windows**.  
+    2.  Na **aplikace** kartě **nastavení Windows zobrazení**.  
   
          Otevře se soubor app.manifest v **Editor kódu**.  
   
-    ###### <a name="to-open-the-manifest-file-in-a-c-project"></a>Otevřete soubor manifestu v projektu jazyka C#  
+    ###### <a name="to-open-the-manifest-file-in-a-c-project"></a>Chcete-li otevřít soubor manifestu v projektu v jazyce C#  
   
-    1.  Na řádku nabídek zvolte **projektu**, * ProjectName ***vlastnosti**, kde *ProjectName* je název projektu WPF.  
+    1.  V panelu nabídky zvolte **projektu**, *ProjectName* **vlastnosti**, kde *ProjectName* je název vašeho projektu WPF.  
   
-         Stránky vlastností pro svůj projekt WPF zobrazí.  
+         Stránky vlastností pro váš projekt WPF se zobrazí.  
   
-    2.  Na **aplikace** kartě, poznamenejte si název, který se zobrazí v poli manifestu. Toto je název manifestu, který je přidružen projektu.  
+    2.  Na **aplikace** kartu, poznamenejte si název, který se zobrazí v poli manifestu. Jde o název manifestu, který je přidružený k projektu.  
   
         > [!NOTE]
-        >  Pokud **vložení manifestu s výchozím nastavením** nebo **vytvořit aplikaci bez manifestu** objeví v poli manifestu vizuální styly nejsou povoleny. Pokud název souboru manifestu se zobrazí v poli manifestu, pokračujte dalším krokem v tomto postupu.  
+        >  Pokud **Vložit manifest s výchozím nastavením** nebo **vytvořit aplikaci bez manifestu** zobrazí v poli manifestu nejsou povoleny vizuální styly. Pokud název souboru manifestu se zobrazí v poli manifestu, pokračujte k dalšímu kroku v tomto postupu.  
   
-    3.  V **Průzkumníku řešení**, zvolte **zobrazit všechny soubory** ().  
+    3.  V **Průzkumníka řešení**, zvolte **zobrazit všechny soubory**.  
   
-         Toto tlačítko se zobrazí všechny položky projektu, včetně těch, které byly vyloučeny a ty, které jsou obvykle skryta. Soubor manifestu se zobrazí jako položka projektu.  
+         Toto tlačítko zobrazí všechny položky projektu, včetně těch, které byly vyloučeny a ty, které jsou obvykle skryta. Soubor manifestu se zobrazí jako položku projektu.  
   
-2.  Sestavení a publikování řešení. Další informace o tom, jak publikovat řešení najdete v tématu [postupy: publikování aplikace ClickOnce pomocí Průvodce publikováním](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md).  
+2.  Vytvářejte a publikujte vaše řešení. Další informace o tom, jak publikovat řešení, najdete v části [postupy: publikování aplikace ClickOnce pomocí Průvodce publikováním](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md).  
   
-##  <a name="BKMK_CreateManifest"></a> Vytvořte soubor manifestu  
+## <a name="create-a-manifest-file"></a>Vytvořit soubor manifestu  
   
 1.  Vložte následující kód XML do souboru poznámkového bloku.  
   
-     Tato konfigurace XML popisuje sestavení, které obsahuje ovládací prvky, které podporují vizuální styly.  
+     Tato konfigurace XML popisuje sestavení, která obsahuje ovládací prvky, které podporují vizuální styly.  
   
+    ```xml  
+    <?xml version="1.0" encoding="utf-8"?>
+    <asmv1:assembly manifestVersion="1.0" 
+        xmlns="urn:schemas-microsoft-com:asm.v1" 
+        xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" 
+        xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <dependency>
+            <dependentAssembly>
+                <assemblyIdentity type="win32" name="Microsoft.Windows.Common-Controls" version="6.0.0.0" processorArchitecture="*" publicKeyToken="6595b64144ccf1df" language="*" />
+            </dependentAssembly>
+        </dependency>
+    </asmv1:assembly>
     ```  
-    <?xml version="1.0" encoding="utf-8"?><asmv1:assembly manifestVersion="1.0"                xmlns="urn:schemas-microsoft-com:asm.v1"                xmlns:asmv1="urn:schemas-microsoft-com:asm.v1"                xmlns:asmv2="urn:schemas-microsoft-com:asm.v2"                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  <dependency>    <dependentAssembly>      <assemblyIdentity        type="win32"        name="Microsoft.Windows.Common-Controls"        version="6.0.0.0"        processorArchitecture="*"        publicKeyToken="6595b64144ccf1df"        language="*"        />    </dependentAssembly>  </dependency></asmv1:assembly>  
-    ```  
   
-2.  V poznámkovém bloku klikněte na tlačítko **soubor**a potom klikněte na **uložit jako**.  
+2.  V programu Poznámkový blok, klikněte na tlačítko **souboru**a potom klikněte na tlačítko **uložit jako**.  
   
-3.  V **uložit jako** dialogu **uložit jako typ** rozevíracího seznamu vyberte **všechny soubory**.  
+3.  V **uložit jako** v dialogu **uložit jako typ** rozevíracího seznamu vyberte **všechny soubory**.  
   
-4.  V **název souboru** zadejte název souboru a připojit **manifest** na konci názvu souboru. Příklad: **themes.manifest**.  
+4.  V **název_souboru** pole, zadejte název souboru a připojit *.manifest* na konec názvu souboru. Příklad: *themes.manifest*.  
   
-5.  Vyberte **procházet složky** tlačítko, vyberte libovolné složky a potom klikněte na **Uložit**.  
+5.  Zvolte **procházet složky** tlačítko, vyberte libovolnou složku a potom klikněte na tlačítko **Uložit**.  
   
     > [!NOTE]
-    >  Zbývající postupech se předpokládá, že název tohoto souboru je **themes.manifest** a který je uložený soubor do adresáře C:\temp ve vašem počítači.  
+    >  Zbývající postupech se předpokládá, že název tohoto souboru je *themes.manifest* a zda je soubor uložen *C:\temp* adresáře v počítači.  
   
-##  <a name="BKMK_embedmanifest"></a> Vložení souboru manifestu do spustitelného souboru publikované řešení  
+## <a name="embed-the-manifest-file-into-the-executable-file-of-the-published-solution"></a>Vložit soubor manifestu do spustitelného souboru publikované řešení  
   
-1.  Otevřete **příkazového řádku Visual Studia**.  
+1. Otevřít **příkazový řádek sady Visual Studio**.  
   
-     Další informace o tom, jak otevřít **Visual Studio – příkazový řádek**, najdete v části [příkazového řádku](/dotnet/framework/tools/developer-command-prompt-for-vs).  
+    Další informace o tom, jak otevřít **příkazový řádek sady Visual Studio**, naleznete v tématu [příkazové řádky](/dotnet/framework/tools/developer-command-prompt-for-vs).  
   
-    > [!NOTE]
-    >  Příklady zbývajících kroků zkontrolujte následující předpoklady týkající se řešení:  
-    >   
-    >  -   Název řešení je **MyWPFProject**.  
-    > -   Řešení se nachází v následujícím adresáři: `%UserProfile%\Documents\Visual Studio 2010\Projects\`.  
-    >   
-    >      Řešení je publikována na následující adresář: `%UserProfile%\Documents\Visual Studio 2010\Projects\publish`.  
-    > -   Nejnovější verzi souborů publikované aplikace se nachází v následujícím adresáři: `%UserProfile%\Documents\Visual Studio 2010\Projects\publish\Application Files\WPFApp_1_0_0_0`  
-    >   
-    >  Nemusíte používat název nebo umístění adresáře, které jsou popsané výše. Název a umístění, které jsou popsané výše slouží pouze k objasnění kroky potřebné k publikování vašeho řešení.  
+   > [!NOTE]
+   >  Ve zbývajících krocích vytvořit následující předpoklady o řešení:  
+   > 
+   > - Název řešení je **MyWPFProject**.  
+   >   -   Řešení se nachází v následujícím adresáři: `%UserProfile%\Documents\Visual Studio 2010\Projects\`.  
+   > 
+   >   Publikování řešení na následující adresář: `%UserProfile%\Documents\Visual Studio 2010\Projects\publish`.  
+   >   -   Překopírujte nejnovější verzi souborů publikované aplikace se nachází v následujícím adresáři: `%UserProfile%\Documents\Visual Studio 2010\Projects\publish\Application Files\WPFApp_1_0_0_0`  
+   > 
+   >   Není nutné použít název nebo umístění adresáře je popsáno výše. Název a umístění je popsáno výše se používají pouze pro ilustraci kroky potřebné k publikování vašich řešení.  
   
-2.  Na příkazovém řádku změňte cestu k adresáři, který obsahuje nejnovější verzi souborů publikované aplikace. Následující příklad ukazuje, tento krok.  
+2. Na příkazovém řádku změňte cestu k adresáři, který obsahuje nejnovější verzi souborů publikované aplikace. Následující příklad ukazuje tento krok.  
   
-    ```  
-    cd "%UserProfile%\Documents\Visual Studio 2010\Projects\MyWPFProject\publish\Application Files\WPFApp_1_0_0_0"  
-    ```  
+   ```cmd  
+   cd "%UserProfile%\Documents\Visual Studio 2010\Projects\MyWPFProject\publish\Application Files\WPFApp_1_0_0_0"  
+   ```  
   
-3.  Na příkazovém řádku spusťte následující příkaz pro vložení souboru manifestu do spustitelný soubor aplikace.  
+3. Na příkazovém řádku spusťte následující příkaz, který vložit soubor manifestu do spustitelného souboru aplikace.  
   
-    ```  
-    mt -manifest c:\temp\themes.manifest -outputresource:MyWPFApp.exe.deploy  
-    ```  
+   ```cmd
+   mt -manifest c:\temp\themes.manifest -outputresource:MyWPFApp.exe.deploy  
+   ```  
   
-##  <a name="BKMK_signappdeplyman"></a> Podepisování manifestů aplikace a nasazení  
+## <a name="sign-the-application-and-deployment-manifests"></a>Podepsání manifestů aplikace a nasazení  
   
-1.  Na příkazovém řádku spusťte následující příkaz pro odebrání `.deploy` rozšíření ze spustitelného souboru v aktuálním adresáři.  
+1. Na příkazovém řádku spusťte následující příkaz k odebrání *.deploy* rozšíření ze spustitelného souboru v aktuálním adresáři.  
   
-    ```  
-    ren MyWPFApp.exe.deploy MyWPFApp.exe  
-    ```  
+   ```cmd  
+   ren MyWPFApp.exe.deploy MyWPFApp.exe  
+   ```  
   
-    > [!NOTE]
-    >  Tento příklad předpokládá, že pouze jeden soubor má `.deploy` příponu souboru. Ujistěte se, že přejmenujete všechny soubory v tomto adresáři, které mají `.deploy` příponu souboru.  
+   > [!NOTE]
+   >  Tento příklad předpokládá, že má pouze jeden soubor *.deploy* příponu souboru. Ujistěte se, že je přejmenovat všechny soubory v tomto adresáři, které mají *.deploy* příponu souboru.  
   
-2.  Na příkazovém řádku spusťte následující příkaz k podepsání manifestu aplikace.  
+2. Na příkazovém řádku spusťte následující příkaz k podepsání manifestu aplikace.  
   
-    ```  
-    mage -u MyWPFApp.exe.manifest -cf ..\..\..\MyWPFApp_TemporaryKey.pfx  
-    ```  
+   ```cmd  
+   mage -u MyWPFApp.exe.manifest -cf ..\..\..\MyWPFApp_TemporaryKey.pfx  
+   ```  
   
-    > [!NOTE]
-    >  Tento příklad předpokládá podepsání manifestu pomocí `.pfx` souboru projektu. Pokud nejsou podepsání manifestu, můžete vynechat `-cf` parametr, který se používá v tomto příkladu. Pokud se registrujete manifest s certifikátem, který vyžaduje heslo, zadejte `-password` možnost (`For example: mage -u MyWPFApp.exe.manifest -cf ..\..\..\MyWPFApp_TemporaryKey.pfx - password Password`).  
+   > [!NOTE]
+   >  Tento příklad předpokládá podepsání manifestu pomocí *.pfx* souboru projektu. Pokud nejsou podepsání manifestu, můžete vynechat `-cf` parametr, který se používá v tomto příkladu. Pokud se přihlašujete manifest certifikátem, který vyžaduje heslo, zadejte `-password` možnost (`For example: mage -u MyWPFApp.exe.manifest -cf ..\..\..\MyWPFApp_TemporaryKey.pfx - password Password`).  
   
-3.  Na příkazovém řádku spusťte následující příkaz pro přidání `.deploy` rozšíření k názvu souboru, který jste přejmenovali v předchozím kroku tohoto postupu.  
+3. Na příkazovém řádku spusťte následující příkaz pro přidání *.deploy* příponu názvu souboru, který jste přejmenovali v předchozím kroku tohoto postupu.  
   
-    ```  
-    ren MyWPFApp.exe MyWPFApp.exe.deploy  
-    ```  
+   ```  
+   ren MyWPFApp.exe MyWPFApp.exe.deploy  
+   ```  
   
-    > [!NOTE]
-    >  Tento příklad předpokládá, že pouze jeden soubor měl `.deploy` příponu souboru. Ujistěte se, že přejmenujete všechny soubory v tomto adresáři, ve kterém byla dříve `.deploy` příponou názvu souboru.  
+   > [!NOTE]
+   >  Tento příklad předpokládá, že pouze jeden soubor měl *.deploy* příponu souboru. Ujistěte se, že je přejmenovat všechny soubory v tomto adresáři, které dříve měly *.deploy* příponu názvu souboru.  
   
-4.  Na příkazovém řádku spusťte následující příkaz k podepsání manifestu nasazení.  
+4. Na příkazovém řádku spusťte následující příkaz k podepsání manifestu nasazení.  
   
-    ```  
-    mage -u ..\..\MyWPFApp.application -appm MyWPFApp.exe.manifest -cf ..\..\..\MyWPFApp_TemporaryKey.pfx  
-    ```  
+   ```  
+   mage -u ..\..\MyWPFApp.application -appm MyWPFApp.exe.manifest -cf ..\..\..\MyWPFApp_TemporaryKey.pfx  
+   ```  
   
-    > [!NOTE]
-    >  Tento příklad předpokládá podepsání manifestu pomocí `.pfx` souboru projektu. Pokud nejsou podepsání manifestu, můžete vynechat `-cf` parametr, který se používá v tomto příkladu. Pokud se registrujete manifest s certifikátem, který vyžaduje heslo, zadejte `-password` možnost, jak ukazuje tento příklad:`For example: mage -u MyWPFApp.exe.manifest -cf ..\..\..\MyWPFApp_TemporaryKey.pfx - password Password`.  
+   > [!NOTE]
+   >  Tento příklad předpokládá podepsání manifestu pomocí *.pfx* souboru projektu. Pokud nejsou podepsání manifestu, můžete vynechat `-cf` parametr, který se používá v tomto příkladu. Pokud se přihlašujete manifest certifikátem, který vyžaduje heslo, zadejte `-password` možnosti, jako v následujícím příkladu:`For example: mage -u MyWPFApp.exe.manifest -cf ..\..\..\MyWPFApp_TemporaryKey.pfx - password Password`.  
   
- Po provedení těchto kroků můžete přesunout publikované soubory do umístění, ze kterého chcete koncovým uživatelům k instalaci aplikace. Pokud máte v úmyslu často aktualizovat řešení, můžete přesunout tyto příkazy do skriptu a spusťte skript každém publikování nové verze.  
+   Po provedení těchto kroků můžete přesunout publikované soubory do umístění, ze kterého chcete, aby koncoví uživatelé k instalaci aplikace. Pokud máte v úmyslu často aktualizovat řešení, můžete přesunout tyto příkazy do skriptu a spusťte skript pokaždé, když že publikujete novou verzi.  
   
-## <a name="see-also"></a>Viz také  
- [Řešení konkrétních chyb v nasazeních ClickOnce](../deployment/troubleshooting-specific-errors-in-clickonce-deployments.md)   
- [Vizuální styly – přehled](http://msdn.microsoft.com/5b5d7bb6-684f-478d-bf5f-b8d18bbcff2e)   
- [Povolení vizuální styly](https://msdn.microsoft.com/library/bb773175.aspx)   
- [Příkazové řádky](/dotnet/framework/tools/developer-command-prompt-for-vs)
+## <a name="see-also"></a>Viz také:
+
+-[Řešení konkrétních chyb v nasazeních ClickOnce](../deployment/troubleshooting-specific-errors-in-clickonce-deployments.md)
+- [Vizuální styly – přehled](/windows/desktop/Controls/visual-styles-overview)
+- [Povolení vizuálních stylů](/windows/desktop/Controls/cookbook-overview)
+- [Příkazové řádky](/dotnet/framework/tools/developer-command-prompt-for-vs)

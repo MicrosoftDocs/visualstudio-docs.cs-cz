@@ -20,14 +20,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 185876ec788bc3fcba917df77a7044a395bc8375
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 63374f4d96c86ea3eafbd4c6fa3fbe3d1f5a5899
+ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36755596"
 ---
 # <a name="how-to-add-a-filter-descriptor-to-a-finder-method"></a>Postupy: Přidání deskriptoru filtru do vyhledávací metody
-  Deskriptory filtrů povolení příjemcům modelu předat hodnoty metody před jejich provedení. Další informace najdete v tématu [navrhování modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md).  
+  Deskriptory filtrů povolení příjemcům modelu předat hodnoty metody před jejich provedení. Další informace najdete v tématu [návrhu modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md).  
   
  Jeden běžný scénář je, že uživatele ve službě SharePoint chcete načíst instancí na externí typ obsahu, které odpovídají některé kritériím. Tento scénář může podporovat přidáním deskriptoru filtru do vyhledávací metody.  
   
@@ -37,7 +38,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  V **podrobnosti o metodě** okně zvolte popisovač typu parametru.  
   
-3.  Na řádku nabídek zvolte **zobrazení**, **vlastnosti – okno**.  
+3.  Na řádku nabídek zvolte **zobrazení** > **vlastnosti – okno**.  
   
 4.  V **vlastnosti** nastavte **název typu** vlastnost, která má datový typ, který je vhodný pro filtr.  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/16/2018
   
      Nový popisovač filtru se zobrazí pod **deskriptory filtrů** uzlu.  
   
-7.  Na řádku nabídek zvolte **zobrazení**, **vlastnosti – okno**.  
+7.  Na řádku nabídek zvolte **zobrazení** > **vlastnosti – okno**.  
   
 8.  V **vlastnosti** okně zvolte **typ** vlastnost.  
   
@@ -71,7 +72,7 @@ ms.lasthandoff: 04/16/2018
      [!code-csharp[SP_BDC#11](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/salesorderservice.cs#11)]
      [!code-vb[SP_BDC#11](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderservice.vb#11)]  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:
  [Postupy: přidání vyhledávací metody](../sharepoint/how-to-add-a-finder-method.md)   
  [Postupy: Přidání specifické vyhledávací metody](../sharepoint/how-to-add-a-specific-finder-method.md)   
  [Postupy: Přidání parametru k metodě](../sharepoint/how-to-add-a-parameter-to-a-method.md)   

@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramPublisher2::UnpublishProgramNode | Microsoft Docs
+title: IDebugProgramPublisher2::UnpublishProgramNode | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d62c68bfc8e43370105a94818437bb0cfa2221e8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b707f63aaf9e4873fe851c9b9db1d175fdb51ce2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49926472"
 ---
 # <a name="idebugprogrampublisher2unpublishprogramnode"></a>IDebugProgramPublisher2::UnpublishProgramNode
-Odebere zadaný program uzel dostupnost pro ladění moduly (DEs) a správce ladicí relace (SDM).  
+Odebere zadaný program uzel z dostupnost pro ladění modulů (DEs) a správce ladění relace (SDM).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,15 +41,15 @@ int UnpublishProgramNode(
   
 #### <a name="parameters"></a>Parametry  
  `pProgramNode`  
- [v] [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) objekt reprezentující uzlu program, který je právě odebírán.  
+ [in] [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) objekt představující uzel program odebírá.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Po odebrání uzlu program již není k dispozici pro dotázat na informace o programu.  
+ Po odebrání uzlu program již není k dispozici bude Dotazováno pro informace o programu.  
   
- Chcete-li program uzel k dispozici, volání [PublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogramnode.md) metoda.  
+ Uzel programu zpřístupnění, zavolejte [PublishProgramNode](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogramnode.md) metody.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md)   

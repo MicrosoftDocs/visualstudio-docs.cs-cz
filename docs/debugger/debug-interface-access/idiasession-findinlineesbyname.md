@@ -1,5 +1,5 @@
 ---
-title: IDiaSession::findInlineesByName | Microsoft Docs
+title: IDiaSession::findInlineesByName | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -12,14 +12,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2551e68e2563570d4b72df2438bd747da36e59ac
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 47d01237d7e2235f2d50e82a8fd599384e930d2c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49896260"
 ---
 # <a name="idiasessionfindinlineesbyname"></a>IDiaSession::findInlineesByName
-Načte výčet, který umožňuje klientům k iteraci v rámci řádku informace o čísle všechny vloženou obslužnou funkcí, které odpovídají zadaným názvem.  
+Načte výčet, který umožňuje klientovi k iteraci v rámci informace o číslech řádků všech vložených funkcí, které odpovídají zadaným názvem.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,20 +34,20 @@ HRESULT findInlineesByName (
   
 #### <a name="parameters"></a>Parametry  
  `name`  
- [v] Určuje název, který má použít pro porovnání.  
+ [in] Určuje název, který má použít pro porovnání.  
   
  `option`  
- [v] Určuje možnosti porovnání použita k hledání názvu. Hodnoty z [NameSearchOptions – výčet](../../debugger/debug-interface-access/namesearchoptions.md) výčet může být použito samostatně nebo v kombinaci.  
+ [in] Určení možností porovnání použitý k hledání názvu. Hodnoty z [namesearchoptions – výčet](../../debugger/debug-interface-access/namesearchoptions.md) výčtu lze použít samostatně nebo v kombinaci.  
   
  `ppResult`  
- [out] Vrátí [idiaenumlinenumbers –](../../debugger/debug-interface-access/idiaenumlinenumbers.md) objekt, který obsahuje seznam čísla řádků, které byly načteny.  
+ [out] Vrátí [idiaenumlinenumbers –](../../debugger/debug-interface-access/idiaenumlinenumbers.md) objekt, který obsahuje seznam čísel řádků, které byly načteny.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [Idiasession –](../../debugger/debug-interface-access/idiasession.md)   
  [Idiasourcefile –](../../debugger/debug-interface-access/idiasourcefile.md)   
  [Idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md)   
- [SymTagEnum – výčet](../../debugger/debug-interface-access/symtagenum.md)   
+ [Symtagenum – výčet](../../debugger/debug-interface-access/symtagenum.md)   
  [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)

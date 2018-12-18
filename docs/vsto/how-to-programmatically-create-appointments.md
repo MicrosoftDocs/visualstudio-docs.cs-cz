@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: vytváření událostí prostřednictvím kódu programu | Microsoft Docs'
+title: 'Postupy: vytváření událostí prostřednictvím kódu programu'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,13 +16,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 15fc247e088e435e19ea42b5920fe01f62d66859
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f39584841638a242ab06323736556bc22260f91d
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35257745"
 ---
-# <a name="how-to-programmatically-create-appointments"></a>Postupy: Vytváření událostí prostřednictvím kódu programu
+# <a name="how-to-programmatically-create-appointments"></a>Postupy: vytváření událostí prostřednictvím kódu programu
   Tento příklad vytvoří událost a přidá do žádosti o schůzku schůzku příjemce.  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
@@ -30,9 +31,9 @@ ms.lasthandoff: 04/16/2018
 ## <a name="example"></a>Příklad  
  [!code-csharp[Trin_OL_CreateAppts#1](../vsto/codesnippet/CSharp/Trin_OL_CreateAppts/thisaddin.cs#1)]  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Práce s položkami kalendáře](../vsto/working-with-calendar-items.md)   
  [Postupy: vytváření vlastních kalendářů prostřednictvím kódu programu](../vsto/how-to-programmatically-create-a-custom-calendar.md)   
- [Postupy: Přidání položky ke kontaktům aplikace Outlook prostřednictvím kódu programu](../vsto/how-to-programmatically-add-an-entry-to-outlook-contacts.md)  
+ [Postupy: přidávání položku ke kontaktům aplikace Outlook prostřednictvím kódu programu](../vsto/how-to-programmatically-add-an-entry-to-outlook-contacts.md)  
   
   

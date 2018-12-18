@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31474603"
 ---
 # <a name="general-tab-thread-properties-dialog-box"></a>Karta Obecné, dialogové okno vlastností vlákna
 Další informace o konkrétní vlákno pomocí tohoto dialogového okna. K zobrazení tohoto dialogového okna, přesunout fokus [zobrazení vláken](../debugger/threads-view.md) okno nebo otevřete [zobrazení zpráv](../debugger/messages-view.md) a rozbalte zprávu. Vyberte libovolný uzel přístup z více vláken ve stromové struktuře, a potom vyberte **vlastnosti** z **zobrazení** nabídky.  

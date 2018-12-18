@@ -1,5 +1,5 @@
 ---
-title: Možnosti konfigurace přehled | Microsoft Docs
+title: Možnosti konfigurace – přehled | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,64 +14,65 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 85ee328b278ef9eb1d81acfc5a8299920a221e59
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: fde39c346313dc66d5d94a5beb0e9e3b256ea436
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920212"
 ---
 # <a name="configuration-options-overview"></a>Přehled možností konfigurace
-Projekty v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] může podporovat víc konfigurací, které mohou být vytvořeny, vyladěnou, spuštění nebo nasazené. Konfigurace je typu sestavení popsané s pojmenovanou sadu vlastností, obvykle přepínače kompilátoru a umístění souborů. Ve výchozím nastavení nová řešení obsahovat dvě konfigurace Debug a Release. Tyto konfigurace provádět pomocí obnoveno výchozí nastavení, nebo upravit tak, aby splňovaly vaše konkrétní požadavky řešení a projektu. Některé balíčky se dají vytvářet dvěma způsoby: jako ActiveX editor nebo jako součást na místě. Projekty pro podporu více konfigurací, ale není nutné. Pokud je dostupný pouze jednu konfiguraci, tato konfigurace je namapována na všechny konfigurace řešení.  
+Projekty v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] může podporovat více konfigurací, které je možné sestavit, ladění, běhu a/nebo nasazené. Konfigurace je popsané společně s pojmenovanou sadu vlastností, obvykle přepínače kompilátoru a umístění souborů typu sestavení. Ve výchozím nastavení, nová řešení obsahovat dvě konfigurace *ladění* a *vydání*. Tyto konfigurace lze použít pomocí jejich výchozí nastavení, nebo upravit tak, aby podle svých specifických požadavků řešení nebo projektu. Některé balíčky se dají dvěma způsoby: jako ActiveX editor nebo jako součást na místě. Projekty není nutné pro podporu více konfigurací, ale. Pokud není k dispozici pouze jedné konfigurace, tuto konfiguraci je namapována na všechny konfigurace řešení.  
   
- Konfigurace obvykle skládají ze dvou částí – název konfigurace (například ladění a vydání) a nastavení platformy. Název platformy konfigurace identifikuje prostředí, které cíle konfigurace, jako je například rozhraní API nastavit nebo platformu operačního systému. Uživatelé [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] platformu; nelze vytvořit. musíte vybrat z výběr projektu VSPackage umožňuje. Když uživatel nainstaluje VSPackage platformou doručení vytvořit během vývoje balíčku můžete surface libovolný název platformy potřeby založené na všechna kritéria nastavené autorem balíčku. Uživatel pak můžete vybrat ze seznamu platformy, které jsou k dispozici prostřednictvím VSPackage, když jsou vytvářeny instance stránky vlastností.  
+ Konfigurace se obvykle skládají ze dvou částí: název konfigurace (například *ladění* nebo *vydání*) a nastavení platformy. Název platformy konfigurace identifikuje prostředí, které nastavení konfigurace cíle, jako je například rozhraní API nebo platformu operačního systému. Uživatelé [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nelze vytvořit platformu; musí zvolit ze výběr projektu umožňuje VSPackage. Když uživatel nainstaluje VSPackage platformu doručování vytvořené při vývoji v balíčku můžete surface libovolný název platformy desired podle jakékoli kritéria stanovená Tvůrce balíčku. Uživatel může vyberte ze seznamu platformy, které jsou k dispozici prostřednictvím sady VSPackage, když jsou vytvořeny na stránkách vlastností.  
   
- Platformy názvy jsou volitelné, protože ne všechny projekty podporují koncept platformy. Při konfiguraci chybí název platformy, řetězec "není k dispozici" se zobrazí v uživatelském rozhraní.  
+ Platforma názvy jsou volitelné, protože ne všechny projekty podporují koncept platformy. Při konfiguraci chybí název platformy, řetězec **není k dispozici** se zobrazí v uživatelském rozhraní.  
   
- Každé řešení má svou vlastní sadu konfigurace, pouze jeden z nich může být najednou aktivní. Konfigurace řešení je sada více než jednu konfiguraci z každého projektu. Uvedení "více než" je z důvodu možnost vyloučit projektu z konfigurace řešení. Uživatelé mohou vytvářet své vlastní konfigurace vlastní řešení.  
+ Každé řešení má svou vlastní sadu konfigurací, jenom jeden z nich může být současně aktivní. Konfigurace řešení je sada více než jednu konfiguraci z každého projektu. Uvedení "více než" je možnost vyloučit projektu z konfigurace řešení. Uživatelé můžou vytvářet své vlastní konfigurace vlastní řešení.  
   
- Následující tabulka ukazuje nastavení typické konfigurace pro projekt. Řádky jsou označeny názvy konfigurace a sloupce s názvy platformy.  
+ Následující tabulka ukazuje typické konfigurace nastavení pro projekt. Řádky jsou označeny jako s názvy konfigurací a sloupce s názvy platformy.  
   
-|Název konfigurace|Platforma – Win32|Platforma – Win64|  
+|Název konfigurace|Platforma: Win32|Platforma: Win64|  
 |------------------------|----------------------|----------------------|  
-|Ladit|\<Ladit nastavení Win32 >|\<Ladit nastavení Win64 >|  
-|Vydaná verze|\<Verze Win32 Nastavení >|\<Verze Win64 Nastavení >|  
-|MyConfig|Není k dispozici|\<Nastavení MyConfig Win64 >|  
+|*Ladění*|\<Win32 nastavení ladění >|\<Nastavení Win64 ladění >|  
+|*Vydaná verze*|\<Verze Win32 Nastavení >|\<Nastavení Win64 vydání >|  
+|*MyConfig*|Není k dispozici|\<Nastavení MyConfig Win64 >|  
   
 > [!NOTE]
->  Nelze vytvořit konfiguraci řešení "MyConfig", který vylučuje platformy "Win32" Pokud projektu, které se zaměříte nepodporuje Win32.  
+>  Nelze vytvořit *MyConfig* konfiguraci řešení, která nezahrnuje Win32 platformy, pokud cílíte projekt, nepodporuje Win32.  
   
- Změna aktivní konfigurace pro řešení vybere sadu konfigurace projektu, které jsou vytvořené, spouštět, ladit nebo nasazení v tomto řešení. Například pokud změníte konfiguraci aktivního řešení z verze pro ladění, všechny projekty v rámci tohoto řešení jsou automaticky vytvořeny s konfigurací projekty, které jsou uvedené v konfiguraci ladění na řešení. Konfigurace projekty jsou obvykle také s názvem ladění pouze tehdy, pokud uživatel má ruční změny v prostředí nástroje Configuration Manager.  
+ Změna aktivní konfigurace řešení vybere sadu konfigurace projektu, které je vytvořené, spouštět, ladit nebo nasazení v tomto řešení. Například, pokud změníte konfiguraci aktivního řešení z *vydání* k *ladění*, všechny projekty v rámci tohoto řešení jsou automaticky vytvořené s konfigurací projektu podle konfigurace řešení ladění. Konfigurace projektu se také nazývají *ladění* pouze tehdy, pokud uživatel má ručních změn v prostředí Configuration Manageru.  
   
- Vlastnosti konfigurace řešení uložené pro každý projekt, patří název projektu, název konfigurace projektu, příznaky indikující, zda se k vytvoření nebo pro nasazení a název platformy. Další informace najdete v tématu [konfigurace řešení](../../extensibility/internals/solution-configuration.md).  
+ Součástí vlastností konfigurace řešení uložené u každého projektu i název projektu, název konfigurace projektu, příznaky označující, jestli se k sestavení nebo nasazení a název platformy. Další informace najdete v tématu [konfigurace řešení](../../extensibility/internals/solution-configuration.md).  
   
- Uživatele můžete zobrazit a nastavit řešení parametry konfigurace výběrem řešení v hierarchii (Průzkumník řešení) a otevření stránek vlastností. Podobně můžete zobrazit a nastavit parametry konfigurace projektu výběrem na projekt v Průzkumníku řešení a otevření stránek vlastností pro tento projekt.  
+ Uživatel můžete zobrazit a nastavte parametry konfigurace řešení vyberte řešení v hierarchii (Průzkumníku řešení) a otevřením stránky vlastností. Podobně můžete zobrazit a nastavte parametry konfigurace projektu výběrem projektu v Průzkumníku řešení a otevřením stránky vlastností pro daný projekt.  
   
- Uživatele můžete také vytvořit jeden projektu pomocí konfigurace nastavení pro vydání a ostatní konfigurace nastavení pro ladění v případě potřeby. Další informace najdete v tématu [konfigurace projektu pro vytvoření](../../extensibility/internals/project-configuration-for-building.md).  
+ Uživatele můžete také vytvořit jeden projekt pomocí konfigurace nastavení pro ladění v případě potřeby konfiguraci nastavení pro vydání a všechny ostatní. Další informace najdete v tématu [konfigurace projektu pro sestavení](../../extensibility/internals/project-configuration-for-building.md).  
   
- Následující diagram znázorňuje, jak jsou implementované rozhraní, která podporují řešení a projektu konfigurace:  
+ Následující diagram znázorňuje, jak se implementují rozhraní, která podporují konfigurace řešení a projektu:  
   
  ![Obrázek konfigurace rozhraní](../../extensibility/internals/media/vsconfiginterfaces.gif "vsConfigInterfaces")  
-Konfigurace rozhraní  
+Rozhraní pro konfiguraci  
   
- Několik poznámek k předchozímu diagramu:  
+ Několik poznámek týkajících se na předchozím obrázku:  
   
--   `IDispatch` je označená jako volitelná v objektu konfigurace. Konkrétně je volitelný tak, aby měl rozhraní konfigurace v objektu Procházet.  
+- `IDispatch` je označené jako nepovinné v objektu konfigurace. Konkrétně je volitelný, aby rozhraní konfigurace v objektu Procházet.  
   
--   `IVsDebuggableProjectCfg` je označen jako volitelný v objekt konfigurace, ale je nutná pro ladění podpory.  
+- `IVsDebuggableProjectCfg` je označen jako volitelný v objekt konfigurace, ale je vyžadováno pro podporu ladění.  
   
--   `IVsProjectCfg2` je označen jako volitelný v objekt konfigurace, ale je nutný pro výstup seskupování podpory.  
+- `IVsProjectCfg2` je označen jako volitelný v objekt konfigurace, ale je potřeba pro podporu seskupování výstup.  
   
--   `Config Provider` Objekt je označen jako objekt volitelné, ale je možnost, kdy k implementaci. Objekt může implementovat na objekt projektu nebo na samostatném objektu.  
+- Objekt konfigurace zprostředkovatele, který je označen jako volitelné objektu, ale možnost je tam, kde na jeho implementaci. Objekt může implementovat na objekt projektu nebo na samostatném objektu.  
   
--   `IVsCfgProvider2` je potřeba pro podporu platformy a úpravu konfigurace. `IVsCfgProvider` Stačí, pokud není implementací této funkce.  
+- `IVsCfgProvider2` je potřeba pro podporu platforem a úpravu konfigurace. `IVsCfgProvider` Stačí, pokud není implementace, které tuto funkci.  
   
--   Některé z těchto objektů na obrázku znázorněné jako samostatné objekty lze spojovat do stejné třídy, kde je to praktické podle požadavků na konkrétní návrh. V dalších tématech v této části ale objekty a rozhraní přidružené k těmto objektům probereme podle scénáře uvedené v diagramu.  
+- Některé z těchto objektů je vidět na obrázku jako samostatné objekty je možné kombinovat do stejné třídy, kde je to praktické podle požadavků konkrétního návrhu. V dalších tématech v této části ale objekty a rozhraní přidružené k těmto objektům probereme podle scénáře uvedené v diagramu.  
   
--   Některé objekty jsou implementované samostatně. Například projektu a sestavení řešení docházet v samostatných vláknech a objekt, který chcete spravovat život sestavení odděleně od objekt popisující konfigurace pro sestavení.  
+- Některé objekty jsou implementovány samostatně. Projekt a sestavení řešení, například probíhat v samostatných vláknech a objekt, který chcete spravovat život sestavení odděleně od objektu popisující konfiguraci sestavení.  
   
- Další informace o rozhraní konfigurace objektu a objekt konfigurace poskytovatele rozhraní v předchozím diagramu najdete v tématu [objekt konfigurace projektu](../../extensibility/internals/project-configuration-object.md). Kromě toho [konfigurace projektu pro vytvoření](../../extensibility/internals/project-configuration-for-building.md) poskytuje další informace o rozhraní konfigurace tvůrce a sestavení objektu závislostí a [konfigurace projektu pro správu nasazení](../../extensibility/internals/project-configuration-for-managing-deployment.md) Popisuje další rozhraní připojené ke konfiguraci nástroje pro nasazení a závislostí objekty nasazení. Nakonec [konfigurace projektu pro výstup](../../extensibility/internals/project-configuration-for-output.md) popisuje výstup skupiny a výstupní objekt rozhraní a použití stránky vlastností k zobrazení a nastavte vlastnosti závislá na konfiguraci.  
+  Další informace o rozhraní objektu konfigurace a konfigurace poskytovatele rozhraní objektu na předchozím obrázku, naleznete v tématu [objekt konfigurace projektu](../../extensibility/internals/project-configuration-object.md). Kromě toho [konfigurace projektu pro sestavení](../../extensibility/internals/project-configuration-for-building.md) poskytuje další informace o konfiguraci závislost tvůrce a sestavení rozhraní objektu a [konfigurace projektu pro správu nasazení](../../extensibility/internals/project-configuration-for-managing-deployment.md) Dále popisuje rozhraní připojené ke konfiguraci nástroje pro nasazení a nasazení objekty závislosti. Nakonec [konfigurace projektu pro výstup](../../extensibility/internals/project-configuration-for-output.md) popisuje výstupní skupinu a výstup objektu rozhraní a použijte stránky vlastností k zobrazení a nastavit vlastnosti závislé na konfiguraci.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2>   
- [Konfigurace projektu pro vytváření](../../extensibility/internals/project-configuration-for-building.md)   
+ [Konfigurace projektu pro sestavení](../../extensibility/internals/project-configuration-for-building.md)   
  [Konfigurace řešení](../../extensibility/internals/solution-configuration.md)

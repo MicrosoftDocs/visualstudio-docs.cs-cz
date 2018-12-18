@@ -17,16 +17,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f7b97aa665062b0d0388764cb0ab75956087924
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 41c6793e1fdf4e3ed2d7e42fbd32bd20ad9f494a
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37056265"
 ---
 # <a name="error-timeout-while-debugging-web-services"></a>Chyba: Během ladění webových služeb vypršel časový limit.
 Pokud jste se zanoříte se do webové služby XML z volání kódu, volání může někdy v důsledku vypršení časového limitu že nemůže pokračovat, ladění. Může zobrazit chybová zpráva typu to.  
   
-```  
+```cmd
 An unhandled exception of type 'System.Net.WebException' occurred in   
 system.Web.services.dll  
 Additional information: The operation has timed-out.  
@@ -35,7 +36,7 @@ Additional information: The operation has timed-out.
 ## <a name="solution"></a>Řešení  
  K tomuto problému nedošlo, nastavte hodnotu časového limitu pro volání webové služby XML na nekonečný, jak je znázorněno v tomto příkladu:  
   
-```  
+```csharp
 Service1 obj = new Service1();  
 obj.TimeOut = -1; // infinite time out.  
 ```  

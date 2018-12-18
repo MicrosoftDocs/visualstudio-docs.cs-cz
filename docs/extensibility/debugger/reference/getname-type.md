@@ -1,5 +1,5 @@
 ---
-title: GETNAME_TYPE | Microsoft Docs
+title: GETNAME_TYPE | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 17cd40938d177f3ea74af13bd84fcf1b873dd650
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 40ee5cb4bf552b04683c4c2119a8c43a595b2105
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49900303"
 ---
 # <a name="getnametype"></a>GETNAME_TYPE
-Určuje typ názvu souborů k načtení.  
+Určuje název typu souborů, které mají načíst.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,28 +54,28 @@ public enum enum_GETNAME_TYPE {
   
 ## <a name="members"></a>Členové  
  GN_NAME  
- Určuje popisný název dokumentu nebo kontextu.  
+ Určuje popisný název dokumentu nebo kontext.  
   
  GN_FILENAME  
- Určuje úplnou cestu dokumentu nebo kontextu.  
+ Určuje úplnou cestu dokumentu nebo kontext.  
   
  GN_BASENAME  
- Určuje název základního souboru místo úplné cesty dokumentu nebo kontextu.  
+ Určuje název základního souboru místo úplnou cestu k dokumentu nebo kontext.  
   
  GN_MONIKERNAME  
- Určuje jedinečný název dokumentu nebo kontextu ve formě přezdívka.  
+ Určuje jedinečný název dokumentu nebo kontext ve formě monikeru.  
   
  GN_URL  
- Určuje název adresy URL dokumentu nebo kontextu.  
+ Určuje název adresy URL dokumentu nebo kontext.  
   
  GN_TITLE  
- Určuje název dokumentu, pokud nějaká existuje.  
+ Určuje název dokumentu, pokud existuje.  
   
  GN_STARTPAGEURL  
  Získá počáteční adresa URL stránky pro procesy.  
   
 ## <a name="remarks"></a>Poznámky  
- Tyto hodnoty jsou předávány jako parametry, které [getName –](../../../extensibility/debugger/reference/idebugdocument2-getname.md), [getName –](../../../extensibility/debugger/reference/idebugdocumentcontext2-getname.md), a [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md) metody k určení jaký druh názvu vyhledat.  
+ Tyto hodnoty jsou předány jako parametry [GetName](../../../extensibility/debugger/reference/idebugdocument2-getname.md), [GetName](../../../extensibility/debugger/reference/idebugdocumentcontext2-getname.md), a [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md) metody k určení, jaký typ název, který vrátí.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  
@@ -87,4 +88,4 @@ public enum enum_GETNAME_TYPE {
  [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [GetName –](../../../extensibility/debugger/reference/idebugdocument2-getname.md)   
  [GetName –](../../../extensibility/debugger/reference/idebugdocumentcontext2-getname.md)   
- [GetName –](../../../extensibility/debugger/reference/idebugprocess2-getname.md)
+ [GetName](../../../extensibility/debugger/reference/idebugprocess2-getname.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;customhostspecified –&gt; – Element (vývoj pro Office v sadě Visual Studio) | Microsoft Docs'
+title: '&lt;customhostspecified –&gt; – element (vývoj pro Office v sadě Visual Studio)'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -17,18 +17,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9d74dac27e4d4a5735dc73ebb069d985d17022d4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d4eaf874a259251c35a6b01c08f544993092ff4d
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34264032"
 ---
-# <a name="ltcustomhostspecifiedgt-element-office-development-in-visual-studio"></a>&lt;customhostspecified –&gt; – Element (vývoj pro Office v sadě Visual Studio)
+# <a name="ltcustomhostspecifiedgt-element-office-development-in-visual-studio"></a>&lt;customhostspecified –&gt; – element (vývoj pro Office v sadě Visual Studio)
   `customHostSpecified` Element signalizuje, že toto řešení není samostatné aplikace. Řešení Office obsahovat součásti, které jsou hostované v rámci aplikace Microsoft Office.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```xml
 <customHostSpecified />  
 ```  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="example"></a>Příklad  
  Následující příklad kódu ukazuje `customHostSpecified` element v manifestu aplikace pro řešení Office. Tento příklad kódu je součástí většího příkladu vztahujícího se v [manifesty aplikací pro řešení Office](../vsto/application-manifests-for-office-solutions.md).  
   
-```  
+```xml
 <entryPoint>  
     <co.v1:customHostSpecified />  
 </entryPoint>  
@@ -51,6 +52,6 @@ ms.lasthandoff: 04/16/2018
 ## <a name="see-also"></a>Viz také  
  [Manifesty aplikace pro řešení pro systém Office](../vsto/application-manifests-for-office-solutions.md)   
  [Manifesty nasazení pro řešení Office](../vsto/deployment-manifests-for-office-solutions.md)   
- [ClickOnce – manifest aplikace ](/visualstudio/deployment/clickonce-application-manifest)  
+ [ClickOnce – manifest aplikace](/visualstudio/deployment/clickonce-application-manifest)  
   
   

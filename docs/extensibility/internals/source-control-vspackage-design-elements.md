@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130219"
 ---
 # <a name="source-control-vspackage-design-elements"></a>Zdrojové elementy VSPackage návrhu ovládacího prvku
 Témata v této části popisují strukturu zdrojového kódu, kterou musí implementovat VSPackage pro těsná integrace. Také seznam rozhraní a služby, který zdroj ovládacího prvku VSPackage můžete implementovat a rozhraní a služeb můžete použít VSPackage zdrojového kódu z jiných [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] součásti pro podporu zdrojem řídit modelu a funkce.  

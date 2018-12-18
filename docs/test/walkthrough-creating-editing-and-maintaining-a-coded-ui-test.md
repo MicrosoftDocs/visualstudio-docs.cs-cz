@@ -1,6 +1,7 @@
 ---
-title: Vytvoření programového testu UI v sadě Visual Studio | Microsoft Docs
+title: Vytvoření programového testu UI
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: gewarren
@@ -8,51 +9,54 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 1861915f50961bb3b07513d69d9799717694e1be
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: fe8bed9c1f1f8aee9ae8e6d1ba460bf226d7b818
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895519"
 ---
-# <a name="walkthrough-creating-editing-and-maintaining-a-coded-ui-test"></a>Návod: Vytváření, upravování a údržba programového testu UI
+# <a name="walkthrough-create-edit-and-maintain-a-coded-ui-test"></a>Návod: Vytvoření, úpravy a správy programového testu uživatelského rozhraní
 
-V tomto návodu vytvoříte jednoduchou aplikaci Windows Presentation Foundation (WPF) pro demonstraci vytvoření, úpravy a správy programového testu uživatelského rozhraní. Návod poskytuje řešení pro opravu testů, které byly poškozeny různými chybami časování a refaktoringem ovládacích prvků.
+V tomto podrobném návodu se dozvíte, jak vytvářet, upravovat a udržovat programového uživatelského rozhraní testu aplikace Windows Presentation Framework (WPF). Návod poskytuje řešení pro opravu testů, které byly poškozeny různými problémy načasování a refaktoring ovládacích prvků.
 
-## <a name="create-a-simple-wpf-application"></a>Vytvoření jednoduché aplikace WPF
+[!INCLUDE [coded-ui-test-deprecation](includes/coded-ui-test-deprecation.md)]
 
-1.  Na **soubor** nabídky, přejděte na příkaz **nový**a potom vyberte **projektu**.
+## <a name="create-a-wpf-app"></a>Vytvoření aplikace WPF
+
+1.  Na **souboru** nabídky, přejděte k **nový**a pak vyberte **projektu**.
 
      **Nový projekt** zobrazí se dialogové okno.
 
-2.  V **nainstalovaná** podokně rozbalte **Visual C#**a potom vyberte **Windows Desktop**.
+2.  V **nainstalováno** podokně rozbalte **Visual C#** a pak vyberte **Windows Desktop**.
 
-3.  Výše v prostředním podokně, ověřte, že cílový framework rozevíracího seznamu je nastavena na **rozhraní .NET Framework 4.5**.
+3.  Nad prostředním podoknem ověřte, že cílové rozhraní framework rozevíracího seznamu je nastavena na **rozhraní .NET Framework 4.5**.
 
-4.  V prostředním podokně, vyberte **aplikaci WPF** šablony.
+4.  V prostředním podokně, vyberte **aplikace WPF** šablony.
 
-5.  V **název** textového pole, typ **SimpleWPFApp**.
+5.  V **název** textového pole, typ **aplikaci SimpleWPFApp**.
 
 6.  Zvolte složku, do které bude projekt uložen. V **umístění** textové pole, zadejte název složky.
 
 7.  Zvolte **OK**.
 
-     WPF Designer pro sadu Visual Studio otevře a zobrazí hlavní okno MainWindow projektu.
+     **WPF Designer pro Visual Studio** otevře a zobrazí hlavní okno MainWindow projektu.
 
-8.  Pokud není panel nástrojů otevřen, otevřete jej. Vyberte **zobrazení** nabídce a potom zvolte **sada nástrojů**.
+8.  Pokud není panel nástrojů otevřen, otevřete jej. Zvolte **zobrazení** nabídky a klikněte na tlačítko **nástrojů**.
 
-9. V části **všech ovládacích prvků WPF** část, přetáhněte **tlačítko**, **zaškrtávací políčko** a **ProgressBar** na MainWindow v návrhu ovládací prvek prostor.
+9. V části **všechny ovládací prvky WPF** přetáhněte **tlačítko**, **zaškrtávací políčko** a **ProgressBar** ovládacího prvku do hlavního okna MainWindow v návrhu povrchu.
 
-10. Vyberte ovládací prvek Tlačítko. V okně vlastností změňte hodnotu **název** vlastnost z \<ne Name > na button1. Pak změňte hodnotu **obsahu** vlastnost z tlačítko Start.
+10. Vyberte **tlačítko** ovládacího prvku. V **vlastnosti** okna, změňte hodnotu **název** vlastnost z \<bez názvu > na button1. Změňte hodnotu **obsahu** vlastnost z tlačítka Start.
 
-11. Vyberte ovládací prvek Indikátor průběhu. V okně vlastností změňte hodnotu **název** vlastnost z \<ne Name > k progressBar1. Pak změňte hodnotu **maximální** vlastnost z **100** k **10000**.
+11. Vyberte **ProgressBar** ovládacího prvku. V **vlastnosti** okna, změňte hodnotu **název** vlastnost z \<bez názvu > na indikátor průběhu 1. Změňte hodnotu **maximální** vlastnost z **100** k **10000**.
 
-12. Vyberte ovládací prvek Zaškrtávací políčko. V okně vlastností změňte hodnotu **název** vlastnost z \<ne název > checkBox1 a clear **hodnotu IsEnabled** vlastnost.
+12. Vyberte **zaškrtávací políčko** ovládacího prvku. V **vlastnosti** okno, změňte hodnotu **název** vlastnost z \<bez názvu > na checkBox1 a zrušte **IsEnabled** vlastnost.
 
-     ![Aplikace WPF jednoduché](../test/media/codedui_wpfapp.png "CodedUI_WPFApp")
+     ![Jednoduché aplikace WPF](../test/media/codedui_wpfapp.png)
 
-13. Dvakrát klikněte na ovládací prvek tlačítko pro přidání obslužnou rutinu události kliknutí.
+13. Dvakrát klikněte na přidat obslužnou rutinu události click ovládacího prvku tlačítka.
 
-     V editoru kódu se zobrazí MainWindow.xmal.cs s kurzorem v nové metodě button1_Click.
+     *MainWindow.xmal.cs* se zobrazí v editoru kódu s kurzorem v nové metodě button1_Click.
 
 14. V horní části třídy hlavního okna MainWindow přidejte delegáta. Delegát bude použit pro indikátor průběhu. Chcete-li přidat delegáta, přidejte následující kód:
 
@@ -95,128 +99,133 @@ V tomto návodu vytvoříte jednoduchou aplikaci Windows Presentation Foundation
 
 16. Uložte soubor.
 
-### <a name="verify-the-wpf-application-runs-correctly"></a>Ověření správného běhu aplikace WPF
+### <a name="run-the-wpf-app"></a>Spuštění aplikace WPF
 
 1.  Na **ladění** nabídce vyberte možnost **spustit ladění** nebo stiskněte klávesu **F5**.
 
-2.  Všimněte si, že ovládací prvek zaškrtávací políčko je zakázán. Zvolte **spustit**.
+2.  Všimněte si, že je ovládací prvek zaškrtávací políčko zakázán. Zvolte **Start**.
 
      Během několika sekund by měl indikátor průběhu ukazovat 100 %.
 
-3.  Teď si můžete vybrat ovládací prvek zaškrtávací políčko.
+3.  Teď můžete vybrat ovládací prvek zaškrtávací políčko.
 
 4.  Ukončete aplikaci SimpleWPFApp.
 
-### <a name="create-and-run-a-coded-ui-test-for-simplewpfapp"></a>Vytvoření a spuštění programového testu uživatelského rozhraní pro aplikaci SimpleWPFApp
+## <a name="create-a-shortcut-to-the-wpf-app"></a>Vytvořit zástupce aplikace WPF
 
-1.  Vyhledejte SimpleWPFApp aplikaci, kterou jste vytvořili dříve. Ve výchozím nastavení, budou aplikace umístěné v C:\Users\\< uživatelské jméno\>\Documents\Visual Studio \<verze > \Projects\SimpleWPFApp\SimpleWPFApp\bin\Debug\SimpleWPFApp.exe
+1.  Vyhledejte aplikaci SimpleWPFApp, kterou jste vytvořili dříve.
 
-2.  Vytvořte pro aplikaci SimpleWPFApp zástupce na ploše. Klikněte pravým tlačítkem na SimpleWPFApp.exe a zvolte **kopie**. Na ploše, klikněte pravým tlačítkem a zvolte **Vložit zástupce**.
+2.  Vytvořte pro aplikaci SimpleWPFApp zástupce na ploše. Klikněte pravým tlačítkem na *SimpleWPFApp.exe* a zvolte **kopírování**. Na ploše, klikněte pravým tlačítkem a zvolte **Vložit zástupce**.
 
     > [!TIP]
-    > Zástupce aplikace usnadňuje přidávání nebo úpravu programových testů uživatelského rozhraní pro vaši aplikaci, protože umožňuje rychlé spuštění aplikace.
+    > Zástupce aplikace usnadňuje přidávat nebo upravovat programové testy uživatelského rozhraní pro vaši aplikaci, protože umožňuje rychlé spuštění aplikace.
 
-3.  V Průzkumníku řešení klikněte pravým tlačítkem na řešení, zvolte **přidat** a pak vyberte **nový projekt**.
+## <a name="create-a-coded-ui-test-for-simplewpfapp"></a>Vytvoření programového testu uživatelského rozhraní pro aplikaci SimpleWPFApp
+
+1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na řešení, zvolte **přidat** a pak vyberte **nový projekt**.
 
      **Přidat nový projekt** zobrazí se dialogové okno.
 
-4.  V **nainstalovaná** podokně rozbalte **Visual C#**a potom vyberte **Test**.
+1. V **nainstalováno** podokně rozbalte **Visual C#** a pak vyberte **Test**.
 
-5.  V prostředním podokně, vyberte **programového uživatelského rozhraní testovacího projektu** šablony.
+1. V prostředním podokně, vyberte **projekt programového testu UI** šablony.
 
-6.  Zvolte **OK**.
+   > [!NOTE]
+   > Pokud se nezobrazí **projekt testu uživatelského rozhraní programového** šablony, budete muset [nainstalovat komponentu programového testu uživatelského rozhraní](../test/use-ui-automation-to-test-your-code.md#install-the-coded-ui-test-component).
 
-     V Průzkumníku řešení nové programového uživatelského rozhraní testovacího projektu s názvem **CodedUITestProject1** se přidá do vašeho řešení.
+1. Zvolte **OK**.
 
-     **Generovat kód pro programového testu uživatelského rozhraní** zobrazí se dialogové okno.
+     Nový projekt programového testu UI s názvem **CodedUITestProject1** se přidá do vašeho řešení.
 
-7.  Vyberte **záznam akcí, upravte mapování uživatelského rozhraní nebo přidání kontrolních výrazů** možnost a zvolte **OK**.
+     **Generovat kód pro programový Test uživatelského rozhraní** zobrazí se dialogové okno.
 
-     Se zobrazí zdroje UIMap - Tvůrce programového testu uživatelského rozhraní a je minimalizován okně Visual Studio.
+1. Vyberte **zaznamenat akce, upravit mapu uživatelského rozhraní nebo přidat kontrolní výrazy** možnost a vyberte **OK**.
 
-     Další informace o možnostech v dialogovém okně najdete v tématu [vytváření programových testů uživatelského rozhraní](../test/use-ui-automation-to-test-your-code.md).
+     **UIMap – Tvůrce programového testu UI** se zobrazí dialogové okno a minimalizovat okno sady Visual Studio.
 
-8.  Zvolte **spustit záznam** na zdroje UIMap - programového Tvůrce testu uživatelského rozhraní.
+     Další informace o možnostech v dialogovém okně najdete v tématu [vytvořit kódované testy uživatelského rozhraní](../test/use-ui-automation-to-test-your-code.md).
 
-     ![Spusťte záznam](../test/media/cuit_builder_record.png "CUIT_Builder_Record")
+1. Zvolte **spustit záznam** na **UIMap – Tvůrce programového testu UI** dialogového okna.
 
-     Je možné pozastavit záznamu v případě potřeby, například pokud budete muset řešit příchozí pošty.
+     ![Spustit záznam](../test/media/cuit_builder_record.png)
 
-     ![Pozastavení záznamu](../test/media/cuit_.png "CUIT_")
+     Je možné pozastavit nahrávání, v případě potřeby, například pokud budete muset řešit příchozí pošty.
+
+     ![Pozastavit záznam](../test/media/cuit_.png)
 
     > [!WARNING]
-    > Všechny akce prováděné na ploše, bude zaznamenán. Pozastavení záznamu při provedení akce, které může vést k citlivá data nebudou zahrnuty do záznamu.
+    > Všechny akce provedené v klientských počítačích, bude zaznamenán. Pozastavte záznam, pokud provádíte akce, které může vést k citlivá data nebudou zahrnuty v záznamu.
 
-9. Spusťte SimpleWPFApp pomocí zástupce na ploše.
+1. Spusťte aplikaci SimpleWPFApp pomocí zástupce na ploše.
 
-     Jako dříve Všimněte si, že ovládací prvek zaškrtávací políčko je zakázán.
+     Stejně jako předtím Všimněte si, že je ovládací prvek zaškrtávací políčko zakázán.
 
-10. Na SimpleWPFApp, zvolte **spustit**.
+1. V aplikaci SimpleWPFApp zvolte **Start**.
 
      Během několika sekund by měl indikátor průběhu ukazovat 100 %.
 
-11. Zkontrolujte ovládací prvek zaškrtávací políčko, který je teď povolené.
+1. Zkontrolujte ovládací prvek zaškrtávací políčko, která je nyní povolena.
 
-12. Ukončete aplikaci SimpleWPFApp.
+1. Ukončete aplikaci SimpleWPFApp.
 
-13. Na zdroje UIMap - Tvůrce programového testu uživatelského rozhraní, zvolte **generovat kód**.
+1. Na **UIMap – Tvůrce programového testu UI** dialogovém okně zvolte **generovat kód**.
 
-14. V typu název metody **SimpleAppTest** a zvolte **přidat a generovat**. Během několika sekund se programový test uživatelského rozhraní zobrazí a přidá k řešení.
+1. V **název metody** zadejte **SimpleAppTest** a zvolte **přidat a vytvořit**. Během několika sekund programový test uživatelského rozhraní se zobrazí a je přidán do řešení.
 
-15. Zavřete zdroje UIMap - programového Tvůrce testu uživatelského rozhraní.
+1. Zavřít **UIMap – Tvůrce programového testu UI**.
 
-     V Editoru kódu se zobrazí soubor CodedUITest1.cs.
+     *CodedUITest1.cs* souboru se zobrazí v editoru kódu.
 
-16. Uložte projekt.
+1. Uložte projekt.
 
-### <a name="run-the-coded-ui-test"></a>Spuštění programového testu uživatelského rozhraní
+### <a name="run-the-test"></a>Spuštění testu
 
-1.  Z **Test** nabídce zvolte **Windows** a potom zvolte **Průzkumníka testů**.
+1. Z **testovací** nabídce zvolte **Windows** a klikněte na tlačítko **Průzkumník testů**.
 
-2.  Z **sestavení** nabídce zvolte **sestavit řešení**.
+2. Z **sestavení** nabídce zvolte **sestavit řešení**.
 
-3.  V souboru CodedUITest1.cs vyhledejte **CodedUITestMethod** metodu, klikněte pravým tlačítkem a vyberte **spuštění testů**, nebo spuštění testu z Průzkumníka testů.
+3. V *CodedUITest1.cs* souboru, vyhledejte **CodedUITestMethod** metodu, klikněte pravým tlačítkem a vyberte **spustit testy**, nebo spustit test z **Průzkumníka testů**.
 
-     V průběhu programového testu uživatelského rozhraní je zobrazena aplikace SimpleWPFApp. Provádí kroky, které jste učinili v předchozí proceduře. Ale pokud test se pokusí zaškrtněte políčko pro ovládací prvek zaškrtávací políčko, okno výsledky testu zobrazuje, test se nezdařilo. To je proto test pokusí zaškrtněte políčko ale neví o tom, že ovládací prvek zaškrtávací políčko je zakázána, dokud indikátor průběhu je 100 % dokončení. Můžete to vyřešit a podobné problémy s použitím různých `UITestControl.WaitForControlXXX()` metody, které jsou k dispozici pro programové testování uživatelského rozhraní. Následující postup popisuje, pomocí `WaitForControlEnabled()` metoda opravit problém, který tento test selhání. Další informace najdete v tématu [provedení programového uživatelského rozhraní testy počkejte pro konkrétní události při přehrávání](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md).
+   V průběhu programového testu uživatelského rozhraní je zobrazena aplikace SimpleWPFApp. Provádí kroky, které jste učinili v předchozí proceduře. Však při test pokouší vybrat zaškrtávací políčko pro ovládací prvek zaškrtávací políčko **výsledky testu** okno zobrazuje, že se test nezdařil. Toto je vzhledem k tomu, že test pokouší vybrat zaškrtávací políčko, ale neví, že je ovládací prvek zaškrtávací políčko zakázán, dokud indikátor průběhu ukazovat 100 %. Můžete tento problém můžete vyřešit a podobné problémy s použitím různých `UITestControl.WaitForControlXXX()` metody, které jsou k dispozici pro programové testování uživatelského rozhraní. Další postup vám ukáže pomocí `WaitForControlEnabled()` metody, chcete-li opravit problém, který způsobil selhání testu. Další informace najdete v tématu [vytvořit kódované testy uživatelského rozhraní čekání na konkrétní události při přehrávání](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md).
 
-### <a name="edit-and-rerun-the-coded-ui-test"></a>Úprava a opětovné spuštění programového testu uživatelského rozhraní
+## <a name="edit-and-rerun-the-coded-ui-test"></a>Úprava a opětovné spuštění programového testu uživatelského rozhraní
 
-1.  V okně Průzkumníka testů vyberte neúspěšných testů a **trasování zásobníku** zvolte první odkaz na **UIMap.SimpleAppTest()**.
+1.  V **Průzkumníka testů** okna, vyberte neúspěšných testů a **trasování zásobníku** zvolte první odkaz na **UIMap.SimpleAppTest()**.
 
-2.  Otevře se soubor UIMap.Designer.cs se zvýrazněným chybovým místem v kódu:
+2.  *UIMap.Designer.cs* soubor se otevře s bodem chyby v kódu zvýrazněno:
 
     ```csharp
     // Select 'CheckBox' check box
     uICheckBoxCheckBox.Checked = this.SimpleAppTestParams.UICheckBoxCheckBoxChecked;
     ```
 
-3.  Chcete-li tento problém, můžete provést programového testu UI čekat na ovládací prvek zaškrtávací políčko Povolit než budete pokračovat na tento řádek pomocí `WaitForControlEnabled()` metoda.
+3.  Chcete-li tento problém, můžete vytvořit programový test uživatelského rozhraní čekal pro ovládací prvek zaškrtávací políčko Povolit před pokračováním tohoto řádku pomocí `WaitForControlEnabled()` metody.
 
     > [!WARNING]
-    > Neupravujte soubor UIMap.Designer.cs. Jakékoli změny kódu v souboru UIMapDesigner.cs budou při každém vytvoření kódu pomocí nástroje UIMap – Tvůrce programového testu UI přepsány. Pokud je třeba změnit zaznamenanou metodu, musíte ji zkopírovat do souboru UIMap.cs a přejmenovat ji. Soubor UIMap.cs lze použít k přepsání metod a vlastností v souboru UIMapDesigner.cs. Je třeba odebrat odkaz na původní metodu v kódovaném souboru UITest.cs a nahradit ji názvem přejmenované metody.
+    > Neprovádějte žádné změny *UIMap.Designer.cs* souboru. Žádné změny, které provedete, bude přepsán při každém generování kódu pomocí kódu **UIMap – Tvůrce programového testu UI**. Pokud je třeba změnit zaznamenanou metodu, zkopírujte ho do *UIMap.cs* souboru a přejmenujte jej. *UIMap.cs* soubor lze použít k přepsání metod a vlastností v *UIMapDesigner.cs* souboru. Je nutné odebrat odkaz na původní metodu v *CodedUITest.cs* soubor a nahradit ji názvem přejmenované metody.
 
-4.  V Průzkumníku řešení, vyhledejte **UIMap.uitest** v projektu programových testů uživatelského rozhraní.
+4.  V **Průzkumníka řešení**, vyhledejte *UIMap.uitest* v projektu programového testu UI.
 
-5.  Otevřete místní nabídku pro **UIMap.uitest** a zvolte **otevřete**.
+5.  Otevřete místní nabídku pro *UIMap.uitest* a zvolte **otevřít**.
 
      Programový test uživatelského rozhraní se zobrazí v Editoru programového testu uživatelského rozhraní. Nyní můžete zobrazit a upravit programový test uživatelského rozhraní.
 
-6.  V **akci uživatelského rozhraní** podokně, vyberte znovu zkompiluje metodu testu (SimpleAppTest), které chcete přesunout do souboru UIMap.cs nebo UIMap.vb usnadňuje funkce vlastní kód, který nebude přepsána při testovacího kódu.
+6.  V **akce uživatelského rozhraní** podokně, vyberte testovací metody (SimpleAppTest), který chcete přesunout *UIMap.cs* nebo *UIMap.vb* souboru. Přesunutí metody do jiného souboru umožňuje přidat vlastní kód, který nebude přepsány při testovací kód je znovu zkompilovat.
 
-7.  Vyberte **přesunout kód** tlačítka na panelu nástrojů editoru programových testů UI.
+7.  Zvolte **přesunout kód** tlačítko **editoru programového testu UI** nástrojů.
 
-8.  Zobrazí se dialogové okno aplikace Microsoft Visual Studio. Upozorňuje vás, že metoda bude přesunuta ze souboru UIMap.uitest do souboru UIMap.cs a že již nebude možné upravit metodu pomocí funkce Editor programového testu uživatelského rozhraní. Zvolte **Ano**.
+8.  Zobrazí se dialogové okno aplikace Microsoft Visual Studio. Upozorňuje vás, že metoda bude přesunuta ze *UIMap.uitest* do souboru *UIMap.cs* souboru a že již budete moci upravit metodu pomocí editoru programového testu uživatelského rozhraní. Zvolte **Ano**.
 
-     Testovací metoda je odebrána ze souboru UIMap.uitest a v podokně Akce uživatelského rozhraní se již nezobrazí. Chcete-li upravit přesunutý soubor testu, otevřete soubor UIMap.cs z Průzkumníku řešení.
+     Testovací metoda je odebrána z *UIMap.uitest* souboru a už nebude zobrazovat v podokně Akce uživatelského rozhraní. Chcete-li upravit přesunutý soubor testu, otevřete *UIMap.cs* souboru z **Průzkumníka řešení**.
 
-9. Na [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nástrojů vyberte **Uložit**.
+9. Na panelu nástrojů sady Visual Studio **Uložit**.
 
-     Aktualizace testovací metody jsou uloženy do souboru UIMap.Designer.
+     Aktualizace testovací metody jsou uloženy v *UIMap.Designer* souboru.
 
     > [!WARNING]
     > Po přesunutí metody ji nemůžete nadále upravovat pomocí Editoru programového testu uživatelského rozhraní. Musíte přidat vlastní kód a spravovat jej pomocí Editoru kódu.
 
-10. Přejmenujte metodu z `SimpleAppTest()` na `ModifiedSimpleAppTest()`
+10. Přejmenujte metodu z `SimpleAppTest()` do `ModifiedSimpleAppTest()`
 
 11. Přidejte do souboru následující příkaz Using:
 
@@ -224,7 +233,7 @@ V tomto návodu vytvoříte jednoduchou aplikaci Windows Presentation Foundation
     using Microsoft.VisualStudio.TestTools.UITesting.WpfControls;
     ```
 
-12. Přidejte následující `WaitForControlEnabled()` metoda před problematické řádek kódu identifikuje dříve:
+12. Přidejte následující `WaitForControlEnabled()` metoda před problematický řádek kódu byl dříve identifikován:
 
     ```csharp
     uICheckBoxCheckBox.WaitForControlEnabled();
@@ -233,7 +242,7 @@ V tomto návodu vytvoříte jednoduchou aplikaci Windows Presentation Foundation
     uICheckBoxCheckBox.Checked = this.SimpleAppTestParams.UICheckBoxCheckBoxChecked;
     ```
 
-13. V souboru CodedUITest1.cs vyhledejte **CodedUITestMethod** metoda a buď komentář nebo přejmenujte odkaz na původní metodou SimpleAppTest() a nahraďte ji metodou nové ModifiedSimpleAppTest():
+13. V *CodedUITest1.cs* souboru, vyhledejte **CodedUITestMethod** metoda a buď okomentovat nebo přejmenujte odkaz na původní metodu SimpleAppTest() a poté ji nahraďte novou Metodou ModifiedSimpleAppTest():
 
     ```csharp
     [TestMethod]
@@ -248,68 +257,66 @@ V tomto návodu vytvoříte jednoduchou aplikaci Windows Presentation Foundation
 
 14. Na **sestavení** nabídce zvolte **sestavit řešení**.
 
-15. Klikněte pravým tlačítkem myši **CodedUITestMethod** metoda a vyberte **spuštění testů**.
+15. Klikněte pravým tlačítkem myši **CodedUITestMethod** metody a vyberte **spustit testy**.
 
-16. Tentokrát programového testu UI úspěšném dokončení všech kroků v testu a **předané** se zobrazí v okně Průzkumníka testů.
+16. Tentokrát programový test uživatelského rozhraní úspěšně dokončí všechny kroky v testu, a **proběhl** se zobrazí **Průzkumníka testů** okno.
 
-### <a name="refactor-a-control-in-the-simplewpfapp"></a>Refaktorování ovládacího prvku v aplikaci SimpleWPFApp
+## <a name="refactor-a-control-in-simplewpfapp"></a>Refaktorování ovládacího prvku v aplikaci SimpleWPFApp
 
-1.  V souboru MainWindow.xaml v položce Návrhář vyberte ovládací prvek Tlačítko.
+1.  V *souboru MainWindow.xaml* souboru, v Návrháři vyberte ovládací prvek tlačítko.
 
-2.  V horní části okna vlastností, změnit **název** hodnotu vlastnosti z button1 buttonA.
+2.  V horní části **vlastnosti** okno Změnit **název** hodnota vlastnosti z **button1** k **Tlačítkoa**.
 
 3.  Na **sestavení** nabídce zvolte **sestavit řešení**.
 
-4.  Spusťte Průzkumníka testů **CodedUITestMethod1**.
+4.  V **Průzkumník testů**spusťte **CodedUITestMethod1**.
 
      Test se nezdaří, protože programový test uživatelského rozhraní nemůže najít ovládací prvek Tlačítko, který byl původně namapován ve třídě UIMap jako Tlačítko1. Refaktoring může tímto způsobem ovlivnit programové testy uživatelského rozhraní.
 
-5.  V okně Průzkumníka testů v **trasování zásobníku** zvolte první odkaz vedle položky **(UIMpa.ModifiedSimpleAppTest)**.
+5.  V **Průzkumník testů**v **trasování zásobníku** zvolte první odkaz vedle položky **(UIMpa.ModifiedSimpleAppTest)**.
 
-     Otevře se soubor UIMap.cs. Místo chyby bude v kódu zvýrazněno:
+     *UIMap.cs* soubor otevře. Místo chyby bude v kódu zvýrazněno:
 
     ```csharp
     // Click 'Start' button
     Mouse.Click(uIStartButton, new Point(27, 10));
     ```
 
-     Všimněte si, že používá řádek kódu dříve v tomto postupu `UiStartButton`, což je název zdroje UIMap předtím, než byla rozdělili.
+     Všimněte si, že řádek kódu dříve v tomto postupu používá `UiStartButton`, což je název třídy UIMap předtím, než byla refaktorována.
 
-     Chcete-li tento problém vyřešit, můžete pomocí položky Tvůrce programového testu UI přidat refaktorovaný ovládací prvek do třídy UIMap. Testu kódu pro použití kódu, můžete aktualizovat, jak je předvedeno v dalším postupu.
+     Chcete-li tento problém, můžete přidat refaktorovaný ovládací prvek do třídy UIMap pomocí **Tvůrce programového testu UI**. Můžete aktualizovat kód testu tak, aby použil tento kód, jak je ukázáno v následujícím postupu.
 
-### <a name="map-refactored-control-and-edit-and-rerun-the-coded-ui-test"></a>Mapování refaktorovaného ovládacího prvku a úprava a opětovné spuštění programového testu uživatelského rozhraní
+## <a name="map-refactored-control-rerun-the-test"></a>Mapování refaktorovaného ovládacího prvku znovu spustit test
 
-1.  V souboru CodedUITest1.cs v **CodedUITestMethod1()** metoda, klikněte pravým tlačítkem, vyberte **generovat kód pro programového testu uživatelského rozhraní** a potom zvolte **Tvůrce testu programového uživatelského rozhraní použijte**.
+1.  V *CodedUITest1.cs* souboru **CodedUITestMethod1()** metody, klikněte pravým tlačítkem, vyberte **generovat kód pro programový Test uživatelského rozhraní** a klikněte na tlačítko **použití Tvůrce programového testu UI**.
 
-     Zdroje UIMap - Tvůrce programového testu uživatelského rozhraní se zobrazí.
+     **UIMap – Tvůrce programového testu UI** se zobrazí.
 
-2.  Pomocí zástupce na ploše, které jste vytvořili dříve, spusťte aplikaci SimpleWPFApp, kterou jste vytvořili dříve.
+2.  Pomocí zástupce na ploše, kterou jste vytvořili dříve, spusťte aplikaci SimpleWPFApp, kterou jste vytvořili dříve.
 
-3.  Na zdroje UIMap - Tvůrce programového testu uživatelského rozhraní, přetáhněte nástroj záměrný kříž, který **spustit** na SimpleWPFApp tlačítko.
+3.  Na **UIMap – Tvůrce programového testu UI** dialogového okna, přetáhněte ikonu křížku na **Start** tlačítko v aplikaci SimpleWPFApp.
 
-     **Spustit** tlačítko ohraničeno blue pole a Tvůrce programového testu uživatelského rozhraní trvá několik sekund, zpracování dat pro vybraný ovládací prvek a zobrazí vlastnosti ovládacích prvků. Všimněte si, že **AutomationUId** jmenuje **buttonA**.
+     **Start** tlačítko je ohraničeno modrým polem. **Tvůrce programového testu UI** trvá několik sekund na zpracování dat pro vybraný ovládací prvek a zobrazení vlastností ovládacího prvku. Všimněte si, že hodnota **AutomationUId** je **Tlačítkoa**.
 
-4.  Ve vlastnostech ovládacího prvku vyberte šipku v levém horním rohu a rozbalte mapování ovládacího prvku uživatelského rozhraní. Všimněte si, že **UIStartButton1** je vybrána.
+4.  Ve vlastnostech ovládacího prvku vyberte šipku v levém horním rohu a rozbalte mapování ovládacího prvku uživatelského rozhraní. Všimněte si, že **UIStartButton1** zaškrtnuto.
 
-5.  Na panelu nástrojů vyberte **přidání ovládacího prvku na ovládací prvek mapy uživatelského rozhraní**.
+5.  Na panelu nástrojů položku **přidat ovládací prvek do mapování ovládacích prvků uživatelského rozhraní**.
 
-     Stav v dolní části okna ověřuje akce zobrazením **vybrané řízení se přidal do mapy ovládacího prvku uživatelského rozhraní**.
+     Stav v dolní části okna ověří akci zobrazením **vybraný ovládací prvek byl přidán do mapování ovládacích prvků uživatelského rozhraní**.
 
-6.  Na zdroje UIMap - Tvůrce programového testu uživatelského rozhraní, zvolte **generovat kód**.
+6.  Na **UIMap – Tvůrce programového testu UI** dialogovém okně zvolte **generovat kód**.
 
-     Tvůrce programový Test uživatelského rozhraní – generování kódu se zobrazí s poznámku označující, že není vyžadováno žádné nové metody a že kódu se budou generovat pouze změny se mapy ovládacího prvku uživatelského rozhraní.
+     **Tvůrce programového testu UI – vytvořit kód** s poznámku určující, že žádná nová metoda nevyžadují, a tento kód bude vytvořen pouze pro změny mapování ovládacího prvku uživatelského rozhraní se zobrazí dialogové okno.
 
 7.  Zvolte **generovat**.
 
-8.  Ukončete aplikaci SimpleWPFApp.exe.
+8.  Ukončete aplikaci SimpleWPFApp.
 
-9. Zavřete zdroje UIMap - Tvůrce testu programové uživatelského rozhraní.
+9. Zavřít **UIMap – Tvůrce programového testu UI**.
 
-     Zdroje UIMap - Tvůrce programového testu uživatelského rozhraní trvá několik sekund, proces kontrolní mechanismus uživatelského rozhraní mapovat změny.
+10. V **Průzkumníka řešení**, otevřete *UIMap.Designer.cs* souboru.
 
-10. V Průzkumníku řešení otevřete soubor UIMap.Designer.cs.
-
-11. V souboru UIMap.Designer.cs najděte vlastnost UIStartButton1. Upozornění `SearchProperties` je nastaven na `"buttonA"`:
+11. V *UIMap.Designer.cs* souboru, vyhledejte **UIStartButton1** vlastnost. Všimněte si, že `SearchProperties` je nastavena na `"buttonA"`:
 
     ```csharp
     public WpfButton UIStartButton1
@@ -329,9 +336,9 @@ V tomto návodu vytvoříte jednoduchou aplikaci Windows Presentation Foundation
             }
     ```
 
-     Nyní můžete upravit programový test uživatelského rozhraní tak, aby používal nově namapovaný ovládací prvek. Jak bylo uvedeno v předchozím postupu, pokud chcete přepsat jakékoliv metody nebo vlastnosti v programovém testu uživatelského rozhraní, musíte tak učinit v souboru UIMap.cs.
+     Nyní můžete upravit programový test uživatelského rozhraní tak, aby používal nově namapovaný ovládací prvek. Jak bylo uvedeno v předchozím postupu. Pokud chcete přepsat jakékoliv metody nebo vlastnosti v programovém testu uživatelského rozhraní, musíte udělat, *UIMap.cs* souboru.
 
-12. V souboru UIMap.cs přidejte konstruktor a zadejte `SearchProperties` vlastnost `UIStartButton` vlastnost na používání `AutomationID` vlastnosti s hodnotou `"buttonA":`
+12. V *UIMap.cs* souboru, přidejte konstruktor a zadejte `SearchProperties` vlastnost `UIStartButton` použít vlastnost `AutomationID` vlastnost s hodnotou `"buttonA":`
 
     ```csharp
     public UIMap()
@@ -342,26 +349,24 @@ V tomto návodu vytvoříte jednoduchou aplikaci Windows Presentation Foundation
 
 13. Na **sestavení** nabídce zvolte **sestavit řešení**.
 
-14. V Průzkumníku Test spusťte CodedUITestMethod1.
+14. V **Průzkumník testů**spusťte **CodedUITestMethod1**.
 
-     Tentokrát programový test uživatelského rozhraní úspěšně dokončí všechny kroky v testu.  V okně výsledky testů se zobrazí stav **předané**.
+     Tentokrát programový test uživatelského rozhraní úspěšně dokončí všechny kroky v testu. V **výsledky testů** okně se zobrazí stav **proběhl**.
 
-## <a name="external-resources"></a>Externí zdroje
+## <a name="videos"></a>Videa
 
-### <a name="videos"></a>Videa
+![odkaz na video](../data-tools/media/playvideo.gif) [začít pomocí programových testů uživatelského rozhraní](http://go.microsoft.com/fwlink/?LinkID=230573)
 
-![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [Začínáme s testy programového uživatelského rozhraní](http://go.microsoft.com/fwlink/?LinkID=230573)
+![odkaz na video](../data-tools/media/playvideo.gif) [Údržba a ladění kódované testy uživatelského rozhraní](http://go.microsoft.com/fwlink/?LinkID=230574)
 
-![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [údržbu a ladění programové testy uživatelského rozhraní](http://go.microsoft.com/fwlink/?LinkID=230574)
+![odkaz na video](../data-tools/media/playvideo.gif) [ručního kódování kódované testy uživatelského rozhraní](http://go.microsoft.com/fwlink/?LinkID=230575)
 
-![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") [ruční kódování programové testy uživatelského rozhraní](http://go.microsoft.com/fwlink/?LinkID=230575)
+## <a name="faq"></a>Nejčastější dotazy
 
-### <a name="faq"></a>Nejčastější dotazy
+[Programové testy UI – nejčastější dotazy](https://social.msdn.microsoft.com/Forums/vsautotest/3a74dd2c-cef8-4923-abbf-7a91f489e6c4/faqs)
 
-[Programové testy uživatelského rozhraní – nejčastější dotazy](https://social.msdn.microsoft.com/Forums/en-US/3a74dd2c-cef8-4923-abbf-7a91f489e6c4/faqs?forum=vsautotest)
-
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Použití automatizace uživatelského rozhraní k testování kódu](../test/use-ui-automation-to-test-your-code.md)
-- [Podporované konfigurace a platformy pro programové testy uživatelského rozhraní a zaznamenávání akcí](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
-- [Úpravy programových testů uživatelského rozhraní pomocí Editoru programových testů uživatelského rozhraní](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)
+- [Podporované konfigurace a platformy pro programové testy uživatelského rozhraní a zaznamenávání akcí](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
+- [Úprava programových testů UI pomocí editoru programového testu UI](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)

@@ -13,13 +13,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f4b1eddfd2d4b0ab0f285b727b6bc6638ca2e8d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9084aad27d14825f4b3d0a648f0880d4db329c78
+ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35237491"
 ---
-# <a name="functions-view---sampling-data"></a>Zobrazení funkcí – Data vzorkování
+# <a name="functions-view---sampling-data"></a>Zobrazení funkcí – data vzorkování
 Zobrazení sestavy funkce pro metody vzorkování profil obsahuje seznam funkcí, které byly vzorkovat při vytváření profilu spustit.  
   
 > [!NOTE]
@@ -40,7 +41,7 @@ Zobrazení sestavy funkce pro metody vzorkování profil obsahuje seznam funkcí
 |**Výhradní ukázky**|Celkový počet vzorků, které byly shromážděny při provádění kódu v těle této funkce; To znamená, když tato funkce byla v horní části zásobníku volání. Ukázky, které byly shromážděny v funkce, které byly volat pomocí této funkce nejsou zahrnuty.|  
 |**% Výhradní ukázky**|Procento všechny ukázky v profilaci spuštění, které byly výhradní ukázky této funkce.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Postupy: přizpůsobení sloupců zobrazení sestavy](../profiling/how-to-customize-report-view-columns.md)   
  [Zobrazení funkcí – instrumentace](../profiling/functions-view-dotnet-memory-instrumentation-data.md)   
  [Zobrazení funkcí – vzorkování](../profiling/functions-view-dotnet-memory-sampling-data.md)   

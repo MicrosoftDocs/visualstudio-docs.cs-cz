@@ -11,27 +11,29 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: e41ece25a3dbf3caec47f55c6eb8ec865805d17b
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 0d697f1fed2a7b17862ff4c6f72488674859f754
+ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50967295"
 ---
 # <a name="writing-a-t4-text-template"></a>Tvorba textové šablony T4
-Textová šablona obsahuje text, který z ní bude vygenerován. Například bude obsahovat šablonu, která vytvoří webovou stránku "\<html >..." a všechny ostatní standardní části na stránce HTML. Vložit do šablony jsou *řízení bloky*, které jsou fragmenty kódu programu. Řídicí bloky poskytují různé hodnoty a umožňují, aby části textu byly podmíněné a opakované.
+Textová šablona obsahuje text, který z ní bude vygenerován. Například šablonu, která vytvoří webovou stránku bude obsahovat "\<html >..." a všechny ostatní standardní části stránky HTML. Do šablony jsou *řídicí bloky*, což jsou fragmenty kódu programu. Řídicí bloky poskytují různé hodnoty a umožňují, aby části textu byly podmíněné a opakované.
 
  Tato struktura usnadňuje vývoj šablon, protože lze začít s prototypem generovaného souboru a postupně vkládat řídicí bloky, které změní výsledek.
 
  Textové šablony se skládají z těchto částí:
 
--   **Direktivy** – elementy, které řídí zpracování šablony.
+-   **Direktivy** – prvky, které určují způsob zpracování šablony.
 
--   **Text bloky** – obsahu, který se zkopíruje přímo do výstupu.
+-   **Textové bloky** – obsah, který je zkopírován přímo do výstupu.
 
--   **Řízení bloky** -programu kód, který vloží hodnoty proměnné do textu a ovládací prvky podmíněný nebo opakovaných části textu.
+-   **Řídicí bloky** – programový kód, který do textu vloží hodnoty proměnných a řídí podmíněné nebo opakované části textu.
 
- Pokud chcete vyzkoušet příklady v tomto tématu, zkopírujte je do souboru šablony jak je popsáno v [vytvoření kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md). Po dokončení úprav souboru šablony, uložit jej a poté zkontrolujte výstup **.txt** souboru.
+Pokud chcete vyzkoušet příklady v tomto tématu, zkopírujte je do souboru šablony podle popisu v [vytvoření kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md). Po úpravě souboru šablony jej uložte a poté zkontrolujte výstupní **.txt** souboru.
 
 ## <a name="directives"></a>Direktivy
  Direktivy textové šablony poskytují obecné pokyny modulu šablon textu o tom, jak generovat kód transformace a výstupní soubor.
@@ -39,11 +41,10 @@ Textová šablona obsahuje text, který z ní bude vygenerován. Například bud
  Například následující direktiva určuje, že výstupní soubor má mít příponu .txt:
 
 ```
-
 <#@ output extension=".txt" #>
 ```
 
- Další informace o direktivy najdete v tématu [direktivy textových šablon T4](../modeling/t4-text-template-directives.md).
+ Další informace o direktivách najdete v tématu [direktivy textové šablony T4](../modeling/t4-text-template-directives.md).
 
 ## <a name="text-blocks"></a>Bloky textu
  Blok textu vloží text přímo do výstupního souboru. Pro bloky textu neexistuje žádné zvláštní formátování. Například následující textová šablona vytvoří textový soubor, který obsahuje slovo „Hello“:
@@ -70,8 +71,7 @@ Hello
  Například následující řídicí blok a blok textu způsobí, že výstupní soubor bude obsahovat řádek „0, 1, 2, 3, 4 Hello!“:
 
 ```
-
-      <#
+<#
     for(int i = 0; i < 4; i++)
     {
         Write(i + ", ");
@@ -80,7 +80,7 @@ Hello
 #> Hello!
 ```
 
- Namísto použití explicitních příkazů `Write()` lze text a kód prokládat. Následující příklad zobrazí "text Hello"! čtyřikrát:
+ Namísto použití explicitních příkazů `Write()` lze text a kód prokládat. Následující příklad vytiskne "Hello!" čtyřikrát:
 
 ```
 <#
@@ -96,7 +96,7 @@ Hello!
  Blok textu lze vložit všude, kde je v kódu povolen příkaz `Write();`.
 
 > [!NOTE]
->  Když vložíte bloku textu v rámci složený příkaz například smyčku nebo podmíněného, vždy používejte složené závorky {...} tak, aby obsahovala bloku textu.
+>  Při vložení textového bloku do složeného příkazu, jako je například smyčky nebo podmínky, vždy používejte složené závorky {...} Chcete-li obsahující textový blok.
 
 ### <a name="expression-control-blocks"></a>Řídicí bloky výrazu
  Řídicí blok výrazu vyhodnotí výraz a převede jej na řetězec. Ten je vložen do výstupního souboru.
@@ -126,7 +126,7 @@ This is hello number <#= i+1 #>: Hello!
 ```
 
 ### <a name="class-feature-control-blocks"></a>Řídicí bloky s funkcí třídy
- Řídicí blok s funkcí třídy definuje vlastnosti, metody nebo jiný kód, který by neměl být zařazen do hlavní transformace. Bloky s funkcí třídy jsou často používány pro pomocné funkce.  Obvykle bloky funkce třídy jsou umístěny v samostatné soubory tak, aby mohly být [zahrnuté](#Include) více než jeden text šablony.
+ Řídicí blok s funkcí třídy definuje vlastnosti, metody nebo jiný kód, který by neměl být zařazen do hlavní transformace. Bloky s funkcí třídy jsou často používány pro pomocné funkce.  Obvykle jsou bloky s funkcí třídy umístěny do samostatných souborů tak, aby mohly být [zahrnuté](#Include) ve více než jedné textové šablony.
 
  Řídicí bloky s funkcí třídy jsou ohraničeny pomocí symbolů `<#+ ... #>`.
 
@@ -154,7 +154,7 @@ private int Square(int i)
 
  Funkce třídy musí být umístěny na konci souboru, ve kterém jsou zapsány. Lze však provést `<#@include#>` souboru, který obsahuje funkce třídy, i když je direktiva `include` následována standardními bloky a textem.
 
- Další informace o řídicí bloky najdete v tématu [řídicí bloky textových šablon](../modeling/text-template-control-blocks.md).
+ Další informace o řídicích blocích naleznete v tématu [řídicí bloky textových šablon](../modeling/text-template-control-blocks.md).
 
 ### <a name="class-feature-blocks-can-contain-text-blocks"></a>Bloky s funkcí třídy mohou obsahovat textové bloky.
  Lze zapsat metodu, která generuje text. Příklad:
@@ -193,7 +193,7 @@ private void WriteSquareLine(int i)
 <#@ assembly name="$(SolutionDir)library\MyAssembly.dll" #>
 ```
 
- Assembly – direktiva v nemá žádný účinek [předběžně zpracované textové šablony](../modeling/run-time-text-generation-with-t4-text-templates.md).
+ Direktiva assembly nemá žádný účinek [Předzpracované textové šablony](../modeling/run-time-text-generation-with-t4-text-templates.md).
 
  Další informace najdete v tématu [T4 – Direktiva Assembly](../modeling/t4-assembly-directive.md).
 
@@ -208,10 +208,12 @@ private void WriteSquareLine(int i)
 
  Další informace najdete v tématu [T4 – Direktiva Import](../modeling/t4-import-directive.md).
 
-###  <a name="Include"></a> Včetně kódu a text.
+### <a name="Include"></a> Vložení kódu a textu
  Direktiva `include` vloží text z jiného souboru šablony. Tato direktiva například vloží obsah souboru `test.txt`.
 
- `<#@ include file="c:\test.txt" #>`
+```
+<#@ include file="c:\test.txt" #>
+```
 
  Vložený obsah se zpracuje téměř jako kdyby byl součástí textové šablony, která ho vkládá. Můžete však vložit soubor obsahující blok s funkcí třídy `<#+...#>`, i když za direktivou include následuje běžný text a standardní řídicí bloky.
 
@@ -229,21 +231,21 @@ private void WriteSquareLine(int i)
 
  Existuje několik způsobů čtení zdrojového souboru.
 
- **Čtení souboru v textové šablony**. Toto je nejjednodušší způsob, jak vložit data do šablony:
+ **Čtení souboru v textové šabloně**. Toto je nejjednodušší způsob, jak vložit data do šablony:
 
 ```
 <#@ import namespace="System.IO" #>
 <# string fileContent = File.ReadAllText(@"C:\myData.txt"); ...
 ```
 
- **Načíst soubor jako navigaci model**. Výkonnější metodou je načíst data jako model, kterým kód textové šablony může procházet. Lze například načíst soubor XML a procházet jím pomocí výrazů XPath. Můžete také použít [xsd.exe](http://go.microsoft.com/fwlink/?LinkId=178765) vytvořit sadu tříd, pomocí kterých můžete číst XML data.
+ **Načtení souboru jako modelu navigaci**. Výkonnější metodou je načíst data jako model, kterým kód textové šablony může procházet. Lze například načíst soubor XML a procházet jím pomocí výrazů XPath. Můžete také použít [xsd.exe](http://go.microsoft.com/fwlink/?LinkId=178765) k vytvoření sadu tříd, pomocí kterých můžete číst XML data.
 
- **Upravte soubor modelu v diagramu nebo formuláře.** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] poskytuje nástroje, které umožňují upravit model jako diagram nebo formuláře Windows. Můžete tak tento model snáze prodiskutovat s uživateli generované aplikace. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] také vytvoří sadu typově silných tříd, které odrážejí strukturu modelu. Další informace najdete v tématu [generování kódu z jazyka domény](../modeling/generating-code-from-a-domain-specific-language.md).
+ **Úprava souboru modelu ve formuláři nebo diagramu.** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] poskytuje nástroje, které umožňují upravit model, jako je diagram nebo formulář Windows. Můžete tak tento model snáze prodiskutovat s uživateli generované aplikace. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] také vytvoří sadu typově silných tříd, které odrážejí strukturu modelu. Další informace najdete v tématu [generování kódu z jazyka specifického pro doménu](../modeling/generating-code-from-a-domain-specific-language.md).
 
 ### <a name="relative-file-paths-in-design-time-templates"></a>Relativní cesty k souborům v návrhových šablonách
- V [návrhu textové šablony](../modeling/design-time-code-generation-by-using-t4-text-templates.md), pokud chcete odkazovat na soubor v umístění relativně k šabloně text použití `this.Host.ResolvePath()`. Je také nutné nastavit hodnotu `hostspecific="true"` v direktivě `template`:
+ V [návrhová textová šablona](../modeling/design-time-code-generation-by-using-t4-text-templates.md), pokud chcete odkazovat na soubor v relativním umístění vzhledem k textu šablony, použijte `this.Host.ResolvePath()`. Je také nutné nastavit hodnotu `hostspecific="true"` v direktivě `template`:
 
-```csharp
+```
 <#@ template hostspecific="true" language="C#" #>
 <#@ output extension=".txt" #>
 <#@ import namespace="System.IO" #>
@@ -253,27 +255,26 @@ private void WriteSquareLine(int i)
 #>
 Content of MyFile.txt is:
 <#= myFile #>
-
 ```
 
-Lze také získat další služby, které jsou poskytovány tímto hostitelem. Další informace najdete v tématu [přístup k sadě Visual Studio nebo k jiným hostitelům z šablony](http://msdn.microsoft.com/0556f20c-fef4-41a9-9597-53afab4ab9e4).
+Lze také získat další služby, které jsou poskytovány tímto hostitelem. Další informace najdete v tématu [přístup k sadě Visual Studio nebo k jiným hostitelům z šablony](/previous-versions/visualstudio/visual-studio-2010/gg604090\(v\=vs.100\)).
 
 ### <a name="design-time-text-templates-run-in-a-separate-appdomain"></a>Návrhové textové šablony běží v oddělené doméně AppDomain.
 
- Je třeba věnovat pozornost, [návrhu textové šablony](../modeling/design-time-code-generation-by-using-t4-text-templates.md) běží v objektu AppDomain, která je oddělená od hlavní aplikace. Ve většině případů to není důležité, ale v některých složitých případech lze narazit na omezení. Pokud například chcete předat data do nebo ze šablony ze samostatné služby, musí tato služba poskytovat serializovatelné rozhraní API.
+ Byste měli vědět, který [návrhová textová šablona](../modeling/design-time-code-generation-by-using-t4-text-templates.md) běží v doméně AppDomain, která je oddělená od hlavní aplikace. Ve většině případů to není důležité, ale v některých složitých případech lze narazit na omezení. Pokud například chcete předat data do nebo ze šablony ze samostatné služby, musí tato služba poskytovat serializovatelné rozhraní API.
 
- (Tato akce není platí [spuštění textové šablony](../modeling/run-time-text-generation-with-t4-text-templates.md), který poskytuje kód, který se zkompiluje spolu s ostatními vašeho kódu.)
+ (To neplatí u [šablony textu za běhu](../modeling/run-time-text-generation-with-t4-text-templates.md), která obsahuje kód, který je sestaven společně se zbytkem kódu.)
 
 ## <a name="editing-templates"></a>Úpravy šablon
- Speciální editory textových šablon lze stáhnout z online galerie správce rozšíření. Na **nástroje** nabídky, klikněte na tlačítko **Správce rozšíření**. Klikněte na tlačítko **Online galerie**a potom pomocí nástroje vyhledávání.
+ Speciální editory textových šablon lze stáhnout z online galerie správce rozšíření. Na **nástroje** nabídky, klikněte na tlačítko **Správce rozšíření**. Klikněte na tlačítko **Online galerie**a potom použijte nástroj hledání.
 
 ## <a name="related-topics"></a>Související témata
 
 |Úloha|Téma|
-|----------|-----------|
+|-|-|
 |Vytvoření šablony|[Pokyny pro zápis textových šablon T4](../modeling/guidelines-for-writing-t4-text-templates.md)|
 |Generování textu pomocí kódu programu|[Struktura textové šablony](../modeling/writing-a-t4-text-template.md)|
-|Generování souborů v řešení systému [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]|[Vytvoření kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md)|
-|Spuštění generování textu mimo [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].|[Generování souborů pomocí nástroje TextTransform](../modeling/generating-files-with-the-texttransform-utility.md)|
-|Transformovat data ve formátu jazyka domény.|[Vytváření kódu z jazyka specifického pro doménu](../modeling/generating-code-from-a-domain-specific-language.md)|
-|Zápis procesory direktiv k transformaci zdrojům dat.|[Přizpůsobení transformace textu T4](../modeling/customizing-t4-text-transformation.md)|
+|Generování souborů v řešení sady Visual Studio.|[Vytvoření kódu v době návrhu pomocí textových šablon T4](../modeling/design-time-code-generation-by-using-t4-text-templates.md)|
+|Spuštění generování textu mimo sadu Visual Studio.|[Generování souborů pomocí nástroje TextTransform](../modeling/generating-files-with-the-texttransform-utility.md)|
+|Transformujte svá data ve formě jazyka specifického pro doménu.|[Vytváření kódu z jazyka specifického pro doménu](../modeling/generating-code-from-a-domain-specific-language.md)|
+|Procesory direktiv pro transformaci zdrojích dat zápisu.|[Přizpůsobení transformace textu T4](../modeling/customizing-t4-text-transformation.md)|

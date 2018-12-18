@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31116188"
 ---
 # <a name="idebugprocessqueryproperties"></a>IDebugProcessQueryProperties
 Toto rozhraní je implementováno modulem rozhraní rozšíření [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) implementátory informačních technologií. To umožňuje implementátor informace o ladění procesu prostředí.  

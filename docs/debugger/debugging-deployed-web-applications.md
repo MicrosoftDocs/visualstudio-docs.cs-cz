@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31472433"
 ---
 # <a name="debugging-deployed-aspnet-applications"></a>Ladění aplikace nasazené ASP.NET
 Použít [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] k ladění nasazených aplikací, je nutné se připojit k [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] pracovní zpracovat a ujistěte se, že ladicí program má přístup k symboly pro aplikaci. Musíte také najít a otevřít zdrojové soubory pro aplikaci. Další informace najdete v tématu [zadejte symbolu (.pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md), [postupy: hledání názvu procesu ASP.NET](../debugger/how-to-find-the-name-of-the-aspnet-process.md), a [požadavky na systém](../debugger/aspnet-debugging-system-requirements.md).  

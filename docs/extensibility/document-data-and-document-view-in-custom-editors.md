@@ -1,5 +1,5 @@
 ---
-title: Data dokumentu a dokument zobrazit vlastní editorů | Microsoft Docs
+title: Data dokumentu a dokument zobrazit ve vlastních editorech | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,38 +13,39 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bb445ca70ac74cf2601e9f1035549bb686fca798
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2076f1a6c96aea717470fa1e955e5b9786f7fcc5
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39639812"
 ---
-# <a name="document-data-and-document-view-in-custom-editors"></a>Data dokumentu a zobrazení dokumentu vlastní editorů
-Vlastní editor se skládá ze dvou částí: objekt dat dokumentu a objekt zobrazení dokumentu. Jako názvy naznačují, dokumentu datový objekt představuje textových dat, který se má zobrazit, a objekt zobrazení dokumentu (nebo "Zobrazit") představuje jeden nebo více windows, ve kterém chcete zobrazit data objektu dokumentu.  
+# <a name="document-data-and-document-view-in-custom-editors"></a>Data dokumentu a zobrazení dokumentu ve vlastních editorech
+Vlastní editor se skládá ze dvou částí: datový objekt dokumentu a objekt zobrazení dokumentu. Jak naznačují názvy, představuje datový objekt dokumentu textových dat, který se má zobrazit. Podobně objekt zobrazení dokumentů (nebo "Zobrazit") představuje jedno nebo více oken, ve kterém chcete zobrazit datový objekt dokumentu.  
   
 ## <a name="document-data-object"></a>Datový objekt dokumentu  
- Datový objekt dokumentu je znázornění dat textu v textová vyrovnávací paměť. Je objekt COM, který ukládá text dokumentu a další informace, zpracovává trvalost dokumentu a umožňuje více zobrazení jeho data. Další informace naleznete v tématu  
+ Datový objekt dokumentu je reprezentace dat textu ve vyrovnávací paměti textu. Je objekt modelu COM, který ukládá textu v dokumentu a další informace. Datový objekt dokumentu také zpracovává trvalost dokumentu a umožňuje více zobrazení jeho data. Další informace naleznete v tématu  
   
  <xref:EnvDTE80.Window2.DocumentData%2A> a [dokumentu Windows](../extensibility/internals/document-windows.md).  
   
- Vlastní editory a návrhářů, se můžete rozhodnout pro použití <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> objekt nebo vlastní vlastní vyrovnávací paměti. <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> Následuje zjednodušené vnoření modelu pro standardní editor, podporuje více zobrazení a poskytuje rozhraní událostí, které se používají ke správě více zobrazení.  
+ Vlastních editorů a návrhářů můžete se rozhodnout použít <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> objektu nebo své vlastní vlastní vyrovnávací paměti. <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> Následující zjednodušený model vkládání pro standardní editor, podporuje více zobrazení a poskytuje rozhraní, které se používají ke správě více zobrazení.  
   
 ## <a name="document-view-object"></a>Objekt zobrazení dokumentu  
- Okno, které zobrazí kódu a další text se označuje jako dokument zobrazení nebo zobrazení. Když vytvoříte editoru, můžete jednoho zobrazení, ve kterém text se zobrazuje v okně jednoho nebo více zobrazení, ve kterém se zobrazí text ve více než jeden interval. Výběr závisí na vaší aplikace. Například pokud potřebujete úpravy vedle sebe, vyberte více zobrazení. Každé zobrazení je přidružená položce v integrovaném vývojovém prostředí na (IDE) spuštěna dokumentu tabulky (r...). Zobrazení windows patří do projektu nebo <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> objektu.  
+ Okno, které se zobrazí kód a další texty se označuje jako dokument zobrazení nebo zobrazení. Při vytváření editoru můžete buď jedno zobrazení, ve kterém se zobrazí text v jednom okně. Nebo můžete použít několik zobrazení, ve kterém se zobrazí text ve více než jedno okno. Výběr závisí na vaší aplikace. Například pokud potřebujete úpravy vedle sebe, vybrali byste více zobrazení. Každé zobrazení souvisí s položkou v integrovaném vývojovém prostředí (IDE) spuštěná tabulka dokumentů (r...). Zobrazení windows patří do projektu nebo <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> objektu.  
   
- Pokud vaše editor podporuje více zobrazení dokumentu datový objekt, pak dokument data a objekty zobrazení dokumentu musí být samostatné. Jinak že je možné seskupit. Další informace najdete v tématu [podpora více zobrazení dokumentu](../extensibility/supporting-multiple-document-views.md).  
+ Pokud editor podporuje několik zobrazení datového objektu dokumentu, pak vaše data dokumentu a dokument zobrazit objekty musí být odděleny. V opačném případě že mohou být seskupeny. Další informace najdete v tématu [podporovat více zobrazení dokumentů](../extensibility/supporting-multiple-document-views.md).  
   
- Prostředí IDE upozorní zobrazení o událostech (například při zavření řešení obsahující dokumentu) pomocí odpovídajících identifikátor položky (ItemID) pro každou položku ve spuštěné tabulce dokumentu. Další informace najdete v tématu [systémem dokumentu tabulky](../extensibility/internals/running-document-table.md).  
+ Rozhraní IDE upozorní zobrazení o událostech (například při zavření řešení obsahujícího dokumentu) to provede spárováním odpovídajících identifikátor položky (ItemID) pro každý záznam v tabulce spuštěných dokumentů. Další informace najdete v části [spuštěná tabulka dokumentů](../extensibility/internals/running-document-table.md).  
   
- Existují dvě možnosti pro vytvoření zobrazení pro vlastní editor. Jeden je model aktivace na místě, je hostitelem zobrazení v okně pomocí ovládacího prvku ActiveX nebo datový objekt dokumentu. Druhá je zjednodušené vnoření modelu, kde je hostován zobrazení [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> je implementována pro zpracování příkazy okna. Informace týkající se aktivace na místě modelu najdete v tématu [aktivace na místě](../extensibility/in-place-activation.md). Informace o modelu zjednodušené vnoření najdete v tématu [zjednodušené vložení](../extensibility/simplified-embedding.md).  
+ Existují dvě možnosti pro vytvoření zobrazení pro vlastní editor. Jeden je modelu aktivace na místě, kde se hostuje zobrazení v okně pomocí ovládacího prvku ActiveX nebo datový objekt dokumentu. Druhým je zjednodušený model vkládání, kde je hostitelem zobrazení [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> je implementováno s cílem zpracovat příkazy okna. Informace o modelu aktivace na místě, naleznete v tématu [aktivace na místě](../extensibility/in-place-activation.md). Informace o modelu zjednodušená vkládání najdete v tématu [zjednodušená vkládání](../extensibility/simplified-embedding.md).  
   
-## <a name="see-also"></a>Viz také  
- [Podpora více zobrazení dokumentu](../extensibility/supporting-multiple-document-views.md)   
- [Zjednodušená vložení](../extensibility/simplified-embedding.md)   
- [Postupy: zobrazení dokumentů datové připojení](../extensibility/how-to-attach-views-to-document-data.md)   
- [Správa vlastníka zámku dokumentu](../extensibility/document-lock-holder-management.md)   
- [Zobrazení jeden a více karta](../extensibility/single-and-multi-tab-views.md)   
- [Ukládání standardní dokumentu](../extensibility/internals/saving-a-standard-document.md)   
- [Trvalosti a tabulce dokument spuštěná](../extensibility/internals/persistence-and-the-running-document-table.md)   
- [Určení Editor otevře soubor v projektu](../extensibility/internals/determining-which-editor-opens-a-file-in-a-project.md)   
- [Objekty Factory editoru](../extensibility/editor-factories.md)
+## <a name="see-also"></a>Viz také:  
+ [Podpora více zobrazení dokumentů](../extensibility/supporting-multiple-document-views.md)   
+ [Zjednodušená vkládání](../extensibility/simplified-embedding.md)   
+ [Postupy: připojení zobrazení k datům dokumentu](../extensibility/how-to-attach-views-to-document-data.md)   
+ [Správa vlastník zámku dokumentu](../extensibility/document-lock-holder-management.md)   
+ [Zobrazení jedné a více karet](../extensibility/single-and-multi-tab-views.md)   
+ [Uložení standardního dokumentu](../extensibility/internals/saving-a-standard-document.md)   
+ [Trvalost a spuštění tabulky dokumentů](../extensibility/internals/persistence-and-the-running-document-table.md)   
+ [Určení, které editor otevře soubor v projektu](../extensibility/internals/determining-which-editor-opens-a-file-in-a-project.md)   
+ [Objekty pro vytváření editoru](../extensibility/editor-factories.md)

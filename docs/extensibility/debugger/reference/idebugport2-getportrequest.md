@@ -1,5 +1,5 @@
 ---
-title: IDebugPort2::GetPortRequest | Microsoft Docs
+title: IDebugPort2::GetPortRequest | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6897c3085f14be785e4baaace0de7a4e92fea9ae
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 433f9724a712620e86cb78ab64e1ce27e6151d30
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920102"
 ---
 # <a name="idebugport2getportrequest"></a>IDebugPort2::GetPortRequest
-Získá Popis portu, který byl dříve používán k vytvoření port (Pokud je k dispozici).  
+Získá Popis portu, který byl předtím použit k vytvoření portu (Pokud je k dispozici).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,10 +41,10 @@ int GetPortRequest(
   
 #### <a name="parameters"></a>Parametry  
  `ppRequest`  
- [out] Vrátí [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) objektu, který představuje požadavek, který byl použit k vytvoření port.  
+ [out] Vrátí [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) objekt představující žádost, která byla použita k vytvoření portu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  Vrátí `E_PORT_NO_REQUEST` Pokud port nebyl vytvořen pomocí [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) port požadavku.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  Vrátí `E_PORT_NO_REQUEST` Pokud port nebyl vytvořen pomocí [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) port požadavku.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md)   

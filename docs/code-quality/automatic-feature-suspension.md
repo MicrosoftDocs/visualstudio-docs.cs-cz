@@ -1,5 +1,5 @@
 ---
-title: Pozastavení automatické funkce v sadě Visual Studio
+title: Automatické pozastavení funkce
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,46 +10,48 @@ ms.assetid: 572c15aa-1fd0-468c-b6be-9fa50e170914
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.workload:
 - multiple
-ms.openlocfilehash: d7b3659716decd542980c1d4b69481b7064d4916
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b97a58a7f5ba3808c658b838de942e94c12b9b79
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53049091"
 ---
-# <a name="automatic-feature-suspension"></a>Funkce Automatické pozastavení
+# <a name="automatic-feature-suspension"></a>Automatické pozastavení funkce
 
-Pokud dostupné systémové paměti klesne na 200 MB nebo méně, Visual Studio zobrazí následující zprávu v editoru kódu:
+Pokud dostupné systémové paměti klesne na 200 MB nebo méně, sada Visual Studio zobrazí následující zpráva v editoru kódu:
 
-![Pozastavení úplnou analýzu řešení textu výstrahy](../code-quality/media/fsa_alert.png)
+![Upozornění text pozastavení úplné analýzy řešení](../code-quality/media/fsa_alert.png)
 
-Když Visual Studio zjistí ke stavu nedostatku paměti, automaticky pozastaví některé pokročilé funkce, které pomáhají se zůstat stabilní. Visual Studio i nadále fungovat jako předtím, ale dojde ke snížení jeho výkon.
+Když Visual Studio zjistí ke stavu nedostatku paměti, automaticky pozastaví některé pokročilé funkce, které pomohou vypnutý stabilní. Visual Studio i nadále fungovat jako předtím, ale jeho výkon.
 
-Se ke stavu nedostatku paměti tyto akce uskutečnit:
+V ke stavu nedostatku paměti proveďte následující akce místo:
 
-- Úplnou analýzu řešení pro Visual C# a Visual Basic je zakázána.
+- Úplná analýza řešení pro Visual C# a Visual Basic je zakázaná.
 
-- [Uvolňování paměti](/dotnet/standard/garbage-collection/index) režimu s nízkou latencí (GC) pro Visual C# a Visual Basic je zakázána.
+- [Uvolňování paměti](/dotnet/standard/garbage-collection/index) režimu s nízkou latencí (GC) pro vizuál C# a Visual Basic je zakázaná.
 
-- Jsou vyprázdněných mezipamětí Visual Studio.
+- Visual Studio mezipamětí, vyprázdní.
 
 ## <a name="improve-visual-studio-performance"></a>Zlepšení výkonu sady Visual Studio
 
-Tipy a triky pro zlepšení výkonu sady Visual Studio při plánování práce s nedostatku paměti nebo velké řešení najdete v tématu [důležité informace o výkonu pro velká řešení](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions).
+Tipy a triky pro zlepšení výkonu sady Visual Studio, když se zabývají velká řešení nebo nedostatku paměti najdete v tématu [faktory ovlivňující výkon u velkých řešení](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions).
 
-## <a name="full-solution-analysis-suspended"></a>Úplnou analýzu řešení pozastaveno
+## <a name="full-solution-analysis-suspended"></a>Úplná analýza řešení pozastaveno
 
-Ve výchozím nastavení úplnou analýzu řešení povoleno jazyka Visual Basic a zakázáno pro Visual C#. Ale v ke stavu nedostatku paměti, úplnou analýzu řešení je automaticky zakázaná pro Visual Basic a Visual C#, bez ohledu na jejich nastavení v dialogovém okně Možnosti. Však můžete znovu povolit úplnou analýzu řešení tak, že zvolíte **znovu povolit** tlačítka na panelu když se zobrazí, výběrem informace o službě **povolit úplnou analýzu řešení** políčko v dialogovém okně Možnosti, případně podle spustit sadu Visual Studio. Dialogové okno Možnosti vždy zobrazuje aktuální úplné řešení nastavení analýzy. Další informace najdete v tématu [postupy: povolení a zákaz analýzy celého řešení](../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md).
+Ve výchozím nastavení je úplné analýzy řešení povolené v jazyce Visual Basic a zakázán pro jazyk Visual C#. Ale v ke stavu nedostatku paměti, úplné analýzy řešení je automaticky zakázána pro Visual Basic a Visual C#, bez ohledu na jejich nastavení v dialogovém okně Možnosti. Však můžete znovu povolit úplné analýzy řešení kliknutím **znovu povolit** v informačního panelu Pokud je zobrazeno, tak, že vyberete tlačítko **povolení úplné analýzy řešení** zaškrtávací políčko v dialogovém okně Možnosti, nebo podle restartování sady Visual Studio. Dialogové okno Možnosti vždy zobrazuje aktuální úplné řešení analýzy nastavení. Další informace najdete v tématu [postupy: povolení a zákaz analýzy celého řešení](../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md).
 
-## <a name="gc-low-latency-disabled"></a>Globální Katalog s nízkou latencí zakázáno
+## <a name="gc-low-latency-disabled"></a>Uvolňování paměti s nízkou latencí zakázáno
 
-Znovu povolit GC režimu s nízkou latencí, restartujte Visual Studio. Ve výchozím nastavení povoluje Visual Studio režimu s nízkou latencí GC vždy, když napíšete zajistit, že zadání nebrání žádné operace GC. Pokud ke stavu nedostatku paměti způsobí, že chcete zobrazit upozornění na automatické pozastavení Visual Studio, režimu s nízkou latencí GC zakázána dané relace. Spustit sadu Visual Studio znovu povolí výchozí chování GC. Další informace naleznete v tématu <xref:System.Runtime.GCLatencyMode>.
+Opětovné povolení režimu uvolňování paměti s nízkou latencí, restartujte aplikaci Visual Studio. Ve výchozím nastavení sada Visual Studio umožňuje režim s nízkou latencí uvolňování paměti pokaždé, když jsou psát, ujistěte se, že zadaný dotaz nebrání žádné operace uvolňování paměti. Pokud ke stavu nedostatku paměti způsobí, že Visual Studio zobrazit upozornění na automatické pozastavení, s nízkou latencí režimu uvolňování paměti zakázáno pro danou relaci. Restartování sady Visual Studio znovu povolí výchozí chování uvolňování paměti. Další informace naleznete v tématu <xref:System.Runtime.GCLatencyMode>.
 
-## <a name="visual-studio-caches-flushed"></a>Visual Studio mezipaměti vyprázdněny
+## <a name="visual-studio-caches-flushed"></a>Visual Studio mezipamětí vyprázdněných
 
-Je-li pokračovat v aktuální relaci vývoj nebo restartujte Visual Studio, jsou všechny sady Visual Studio mezipaměti okamžitě vyprázdněny, ale začít znovu vytvořit. Mezipaměti vyprázdněny patří mezipaměti pro následující funkce:
+Je-li pokračovat v aktuální relaci vývoj nebo restartujte sadu Visual Studio, všechny mezipaměti sady Visual Studio jsou vyprázdněny okamžitě, ale začít znovu vytvořit. Vyprázdnění mezipaměti patří mezipaměť pro následující funkce:
 
 - Najít všechny odkazy
 
@@ -57,13 +59,13 @@ Je-li pokračovat v aktuální relaci vývoj nebo restartujte Visual Studio, jso
 
 - Přidání direktivy Using
 
-Kromě toho jsou vymazány mezipamětí použít pro interní operace v sadě Visual Studio.
+Kromě toho jsou vymazány mezipamětí použít pro interní operace sady Visual Studio.
 
 > [!NOTE]
-> Upozornění na automatické funkce pozastavení dojde pouze jednou na základě za řešení, ne na bázi relací. To znamená, že pokud přepnete z jazyka Visual Basic, Visual C# (nebo naopak) a spustit do jiné ke stavu nedostatku paměti, pravděpodobně vám jiné funkce automatického pozastavení upozornění.
+> Funkce automatického pozastavení se vaše upozornění se vyskytuje jen jednou na základě každé řešení, ne na bázi relací. To znamená, že pokud přejděte z jazyka Visual Basic do jazyka Visual C# (nebo naopak) a spusťte do jiného ke stavu nedostatku paměti, můžete případně získat další funkce automatického pozastavení se vaše upozornění.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Postupy: povolení a zákaz úplnou analýzu řešení](../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md)
+- [Postupy: Povolení a zakázání úplné analýzy řešení](../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md)
 - [Základy kolekce paměti](/dotnet/standard/garbage-collection/fundamentals)
-- [Důležité informace o výkonu pro velká řešení](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions)
+- [Faktory ovlivňující výkon u velkých řešení](https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions)

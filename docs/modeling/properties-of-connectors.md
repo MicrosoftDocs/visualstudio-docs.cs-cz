@@ -9,45 +9,47 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: c42c1ded5bb7460cfdfee13e29f8b944872311c9
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: e26401247c2b6cefc3d86dbd5b6e80adfe473937
+ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50967308"
 ---
 # <a name="properties-of-connectors"></a>Vlastnosti konektorů
-Konektory představují vztahy domén v generované návrháře.
+Konektory představují vztahy domén ve vygenerovaném návrháři.
 
- Další informace najdete v tématu [jak definovat jazyka domény](../modeling/how-to-define-a-domain-specific-language.md). Další informace o tom, jak používat tyto vlastnosti najdete v tématu [přizpůsobení a rozšíření jazyka domény](../modeling/customizing-and-extending-a-domain-specific-language.md).
+ Další informace najdete v tématu [jak se definuje jazyk specifický pro doménu](../modeling/how-to-define-a-domain-specific-language.md). Další informace o tom, jak pomocí těchto vlastností najdete v tématu [přizpůsobení a rozšíření jazyka specifického pro doménu](../modeling/customizing-and-extending-a-domain-specific-language.md).
 
- Konektory mít vlastnosti, které jsou uvedeny v následující tabulce.
+ Konektory mají vlastnosti, které jsou uvedeny v následující tabulce.
 
 |Vlastnost|Popis|Výchozí|
-|--------------|-----------------|-------------|
-|Barva|Barva tohoto konektoru.|černé|
-|Přerušovaná čára|Přerušovaná čára řádku pro tento konektor (ucelený, čárku, tečku, DashDot, DashDotDot nebo vlastní).|Plnou|
-|Styl End zdroj|Styl end zdroj pro tento konektor (HollowArrow EmptyArrow, FilledArrow, EmptyDiamond, FilledDiamond nebo None).|Žádné|
-|Cílový End styl|Styl cílový end pro tento konektor (HollowArrow EmptyArrow, FilledArrow, EmptyDiamond, FilledDiamond nebo None).|Žádné|
-|Barva textu|Barva, který se používá pro dekoratéry textu, které jsou přidruženy tento konektor.|černé|
-|Tloušťka|Tloušťka čáry pro tento konektor se měří v palcích.|0.03125|
+|-|-|-|
+|Barva|Barva této spojnice.|Černá|
+|Styl přerušování|Styl přerušování čáry této spojnice (plný, Dash, tečka, DashDot, DashDotDot nebo vlastní).|Plná|
+|Styl počátku|Styl počátku této spojnice (HollowArrow, EmptyArrow, FilledArrow, EmptyDiamond, FilledDiamond nebo žádný).|Žádné|
+|Styl konce|Styl konce této spojnice (HollowArrow, EmptyArrow, FilledArrow, EmptyDiamond, FilledDiamond nebo žádný).|Žádné|
+|Barva textu|Barva, která je použitá pro dekoratéry textu, které jsou spojeny s tímto konektorem.|Černá|
+|Tloušťka|Tloušťka čáry této spojnice v palcích.|0.03125|
 |Modifikátor přístupu|Úroveň přístupu třídy (`public` nebo `internal`).|Public|
-|Vlastní atributy|Použít k přidání atributů do zdrojového kódu třídu, která se generují z tohoto konektoru.|\<žádné >|
-|Generuje dvojitou odvozené|Pokud `True`, budou generovány základní třídu a částečné třídy (pro podporu přizpůsobení prostřednictvím přepsání). Další informace najdete v tématu [přepsání a rozšíření třídy generované](../modeling/overriding-and-extending-the-generated-classes.md).|False|
-|Má vlastní – konstruktor|Pokud `True`, bude k dispozici vlastní konstruktor v zdrojového kódu. Další informace najdete v tématu [přepsání a rozšíření třídy generované](../modeling/overriding-and-extending-the-generated-classes.md).|False|
-|Modifikátor dědičnosti|Popisuje typ dědičnosti zdrojovou třídu kódu, která se generují z konektoru (`none`, `abstract` nebo `sealed`).|žádná|
-|Základní konektoru|Základní třída tohoto konektoru.|(žádný)|
+|Vlastní atributy|Použít k přidání atributů do třídy zdrojový kód, který je generován z tohoto konektoru.|\<žádné >|
+|Generuje Double odvozené|Pokud `True`, se vygeneruje základní třídu a částečné třídy (pro podporu přizpůsobení pomocí přepisů). Další informace najdete v tématu [přepisování a rozšiřování třídy generované v](../modeling/overriding-and-extending-the-generated-classes.md).|False|
+|Má vlastní konstruktor|Pokud `True`, poskytneme vám vlastního konstruktoru ve zdrojovém kódu. Další informace najdete v tématu [přepisování a rozšiřování třídy generované v](../modeling/overriding-and-extending-the-generated-classes.md).|False|
+|Modifikátor dědičnosti|Popisuje druh dědičnosti třídy zdrojový kód, který je generován z konektoru nástroje (`none`, `abstract` nebo `sealed`).|žádná|
+|Základní spojnice|Základní třída tento konektor.|(žádné)|
 |Název|Název tohoto konektoru.|Aktuální název|
-|Obor názvů|Obor názvů, který je přidružený tento konektor.|Aktuální obor názvů|
-|ToolTip – typ|Jak popisek je definována (pevná, proměnné nebo žádný). Pokud odstraněna, pak hodnota `Fixed Tooltip Text` vlastnost se používá jako popisek; Pokud proměnné, pak popisek je definována v vlastní kód.|\<žádné >|
-|Poznámky|Neformální poznámky, které jsou přidruženy tento konektor.|\<žádné >|
-|Styl směrování|Styl, který se používá pro směrování konektor. A `Rectilinear` konektor umožňuje Pravoúhlá oplátku podle potřeby; `Straight` konektor neexistuje.|Lomené|
-|Barva zveřejněné jako vlastnost<br /><br /> Zveřejněné přerušovaná čára jako vlastnost<br /><br /> Tloušťka zveřejněné jako vlastnost<br /><br /> Barva textu zpřístupňuje|Pokud `True`, může uživatel nastavit vlastnost stanovené obrazce. Chcete-li tuto možnost nastavíte, klikněte pravým tlačítkem na definici tvar a klikněte na **přidat zveřejněné**.|False|
-|Popis|Používá k dokumentu generovaný návrháře.|\<žádné >|
-|Zobrazovaný název|Název, který se zobrazí v Návrháři vygenerovaný pro tento konektor.|\<žádné >|
-|Opravené Text popisku|Text, který se používá pro pevnou popisek.|\<žádné >|
-|Nápověda – klíčové slovo|Klíčové slovo, které se používá k indexu F1 – Nápověda pro tento element.|\<žádné >|
+|Obor názvů|Obor názvů, který je přidružen s tímto konektorem.|Aktuální obor názvů|
+|Popis typu|Jak popisek je definován (fixní, proměnná nebo žádný). Pokud pevně daná, a potom hodnoty `Fixed Tooltip Text` vlastnost se používá jako popis tlačítka; Pokud je proměnná, pak popisek je definován ve vlastním kódu.|\<žádné >|
+|Poznámky|Neformální poznámky, které jsou spojeny s tímto konektorem.|\<žádné >|
+|Styl směrování|Styl, který se používá pro směrování na spojnici. A `Rectilinear` konektor umožňuje pravoúhlé zapíná podle potřeby; `Straight` spojnice nikoli.|Pravoúhlá|
+|Vystavené barvu jako vlastnost<br /><br /> Styl přerušování vystavené jako vlastnost<br /><br /> Tloušťka vystavené jako vlastnost<br /><br /> Zpřístupní barvu textu|Pokud `True`, může uživatel nastavit vlastnost stanovených tvaru. Nastavit, klikněte pravým tlačítkem na definici obrazce a klikněte na tlačítko **přidat vystavený**.|False|
+|Popis|Používá se k dokumentu vygenerovaného návrháře.|\<žádné >|
+|Zobrazovaný název|Název, který se zobrazí ve vygenerovaném návrháři u tohoto konektoru.|\<žádné >|
+|Pevný Text popisu tlačítka|Text, který se používá pro pevný popis.|\<žádné >|
+|Klíčové slovo nápovědy|Klíčové slovo, je použít k indexování nápovědy klávesy F1 pro tento element.|\<žádné >|
 
 ## <a name="see-also"></a>Viz také
 
-- [Glosář nástroje jazyka domény](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Glosář nástrojů jazyka specifického pro doménu](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

@@ -1,5 +1,5 @@
 ---
-title: Idiaenumdebugstreams::Next – | Microsoft Docs
+title: Idiaenumdebugstreams::Next – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 780aaca4d840d87df17572ec7d58cebc84e84d4c
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: acd95d68ed32e5bb9116123f4cbdfd9d30e26f16
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50220447"
 ---
 # <a name="idiaenumdebugstreamsnext"></a>IDiaEnumDebugStreams::Next
 Načte zadaný počet datové proudy debug v pořadí výčtu.  
@@ -26,7 +27,7 @@ Načte zadaný počet datové proudy debug v pořadí výčtu.
 ## <a name="syntax"></a>Syntaxe  
   
 ```C++  
-HRESULT Next (   
+HRESULT Next (   
    ULONG                     celt,   
    IDiaEnumDebugStreamData** rgelt,  
    ULONG*                    pceltFetched  
@@ -35,16 +36,16 @@ HRESULT Next (
   
 #### <a name="parameters"></a>Parametry  
  celt  
- [v] **T**mu počet datových proudů ladění enumerátor mají být načteny.  
+ [in] Počet datových proudů ladění enumerátor, který se má načíst.  
   
  rgelt  
- [out] Vrátí pole [idiaenumdebugstreamdata –](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) objekty, které představuje ladění datové proudy, dojde k načtení.  
+ [out] Vrátí pole [idiaenumdebugstreamdata –](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) objekty, které představují ladění streamuje načítají.  
   
  pceltFetched  
  [out] Vrátí počet datových proudů ladění vrátila.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE` Pokud neexistují žádné další datové proudy. Jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud neexistují žádné další datové proudy. V opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaEnumDebugStreams](../../debugger/debug-interface-access/idiaenumdebugstreams.md)

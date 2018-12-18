@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130309"
 ---
 # <a name="source-control-runtime-details"></a>Podrobnosti o modulu Runtime zdroj ovládacího prvku
 Projekt je přidán do správy zdrojového kódu, pokud uživatel přidá soubor projektu do správy zdrojového kódu, nebo prostřednictvím řadič služby automation, například Průvodce. Projekt neurčuje pro sebe sama, že je ve správě zdrojového; podporuje zdrojového kódu, ale musí být přidaný do ji ručně.  

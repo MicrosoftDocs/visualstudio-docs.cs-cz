@@ -1,5 +1,5 @@
 ---
-title: EVENTATTRIBUTES | Microsoft Docs
+title: EVENTATTRIBUTES | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 87d6a2176dcd3c4cf748549f94d071b181d0d14f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7df726716e464ccc4bf8382b38fbb0b8d277df86
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49893818"
 ---
 # <a name="eventattributes"></a>EVENTATTRIBUTES
-Určuje atributy událostí.  
+Určuje atributy události.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,30 +54,30 @@ public enum enum_EVENTATTRIBUTES {
   
 ## <a name="members"></a>Členové  
  EVENT_ASYNCHRONOUS  
- Označuje, že událost je asynchronní, a je potřeba žádné odpovědi na události.  
+ Označuje, že událost je asynchronní a je potřeba žádná odpověď na události.  
   
  EVENT_SYNCHRONOUS  
- Označuje, že událost je synchronní; odpověď prostřednictvím [ContinueFromSynchronousEvent](../../../extensibility/debugger/reference/idebugengine2-continuefromsynchronousevent.md).  
+ Označuje, že událost je synchronní; Odpovědět prostřednictvím [ContinueFromSynchronousEvent](../../../extensibility/debugger/reference/idebugengine2-continuefromsynchronousevent.md).  
   
  EVENT_STOPPING  
- Označuje, že se jedná o zastavení událost. Musí být kombinován s buď `EVENT_ASYNCHRONOUS` nebo `EVENT_SYNCHRONOUS`.  
+ Označuje, že se jedná o událostí ukončení. Musí být kombinován se buď `EVENT_ASYNCHRONOUS` nebo `EVENT_SYNCHRONOUS`.  
   
  EVENT_ASYNC_STOP  
- Označuje událost asynchronní zastavit. Aktuálně neexistuje žádná taková událost. Tento příznak je pouze zástupce.  
+ Označuje asynchronní zastavení událost. Aktuálně neexistuje žádná taková událost. Tento příznak je jen zástupný symbol.  
   
  EVENT_SYNC_STOP  
- Označuje synchronní zastavení událostí (kombinaci `EVENT_SYNCHRONOUS` a `EVENT_STOPPING`). Tato hodnota se používá modul ladění (DE) při odesílání událostí zastavit. Odpověď se provádí prostřednictvím volání [Execute](../../../extensibility/debugger/reference/idebugprogram2-execute.md), [krok](../../../extensibility/debugger/reference/idebugprogram2-step.md), nebo [pokračovat](../../../extensibility/debugger/reference/idebugprogram2-continue.md).  
+ Označuje událostí synchronní ukončení (kombinace `EVENT_SYNCHRONOUS` a `EVENT_STOPPING`). Tato hodnota se používá modul ladění (DE) při odesílání událostí ukončení. Odpověď se provádí prostřednictvím volání [Execute](../../../extensibility/debugger/reference/idebugprogram2-execute.md), [krok](../../../extensibility/debugger/reference/idebugprogram2-step.md), nebo [pokračovat](../../../extensibility/debugger/reference/idebugprogram2-continue.md).  
   
  EVENT_IMMEDIATE  
- Označuje událost, která je odeslána okamžitě a synchronně k prostředí IDE. Tento příznak se zkombinuje s další příznaky jako `EVENT_ASYNCHRONOUS`, `EVENT_SYNCHRONOUS`, nebo `EVENT_SYNC_STOP` označující typ události a fakt, že se označuje mechanismus odpověď (pokud existuje).  
+ Určuje události, které je odesláno okamžitě a synchronně integrovaného vývojového prostředí. Tento příznak číslo zkombinuje s další příznaky jako `EVENT_ASYNCHRONOUS`, `EVENT_SYNCHRONOUS`, nebo `EVENT_SYNC_STOP` označující typ události a fakt, že se označuje mechanismus odpověď (pokud existuje).  
   
  EVENT_EXPRESSION_EVALUATION  
  Událost je výsledkem vyhodnocení výrazu.  
   
 ## <a name="remarks"></a>Poznámky  
- Tyto hodnoty jsou předávány v `dwAttrib` parametr [událostí](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) metoda.  
+ Tyto hodnoty jsou předány v `dwAttrib` parametr [události](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) metody.  
   
- Tyto hodnoty mohou být kombinovány s bitové `OR`.  
+ Tyto hodnoty lze kombinovat pomocí logické bitové `OR`.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  
@@ -88,4 +89,4 @@ public enum enum_EVENTATTRIBUTES {
 ## <a name="see-also"></a>Viz také  
  [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
  [ContinueFromSynchronousEvent](../../../extensibility/debugger/reference/idebugengine2-continuefromsynchronousevent.md)   
- [Události](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)
+ [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)

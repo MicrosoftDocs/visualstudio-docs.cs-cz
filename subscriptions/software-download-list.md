@@ -9,11 +9,12 @@ description: Najít seznam stahování softwaru, které jsou součástí vašeho
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: c59565e903947df54ec0ae593421ee0cc447e8c5
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: 7958ccedb28a14763264cd590e83d5e8e7fbbcdf
+ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34335837"
 ---
 # <a name="how-do-i-know-what-software-is-available-for-download"></a>Jak poznám, jaký software je k dispozici ke stažení?
 
@@ -21,7 +22,7 @@ ms.lasthandoff: 04/06/2018
 
 Pokud již máte předplatné sady Visual Studio: 
 1. Přejít na [https://my.visualstudio.com/downloads](https://my.visualstudio.com/downloads?wt.mc_id=o~msft~docs)
-2. Přihlaste se k předplatnému.  (Nápovědu [přihlášení](/visualstudio/subscriptions/signing-in).)
+2. Přihlaste se k předplatnému.  (Nápovědu [přihlášení](signing-in.md).)
 3. Po úspěšném přihlášení se bude vyhledávat vaše požadované soubory ke stažení.  Můžete také zobrazit seznam oblíbených souborů ke stažení, které se dají řadit podle několika kritérií. 
 
 Rychle najít produkty, použít funkce "Vyhledat" v horní části stránky nebo klikněte na typy jiné produktu na levé straně.

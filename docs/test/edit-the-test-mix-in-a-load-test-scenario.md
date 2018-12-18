@@ -1,5 +1,5 @@
 ---
-title: Poměr testů pro scénáře zátěžového testu v sadě Visual Studio | Microsoft Docs
+title: Poměr testů pro scénář testování zatížení
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,81 +11,87 @@ ms.assetid: 303e1d70-5d98-424a-b51e-e0898e16d3f8
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 9c7f0cb4c25c99c7ab68400d63e1ec52253a5f61
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3b3bd0ae4df657d7234a77413003b18d5db86138
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52895987"
 ---
-# <a name="edit-the-test-mix-to-specify-which-web-performance-unit-and-coded-ui-tests-to-include-in-a-load-test-scenario"></a>Úpravy poměru testů k určení, které výkonnosti webu, částí a programové testy uživatelského rozhraní mají být zahrnuty scénáře zátěžového testu
+# <a name="edit-the-test-mix-to-specify-which-web-performance-unit-and-coded-ui-tests-to-include-in-a-load-test-scenario"></a>Úpravy poměru testů určit, které webového výkonu, jednotek a programové testy uživatelského rozhraní mají být zahrnuty do scénáře zátěžového testu
 
-*Kombinace testů* scénáře je kombinací výběru webové výkonu a jednotka testy, které jsou obsažené v tomto scénáři a distribuci tyto testy ve scénáři. Distribuce je nastavení, které můžete zadat pro pravděpodobnost, že konkrétní test bude vybrán ve virtuálních uživatelů během spuštění testu zatížení.
+*Poměr testů* scénáře je kombinací výběr webového výkonu a testy jednotek, které jsou součástí scénáře a distribuce těchto testů ve scénáři. Distribuce je nastavení, které určíte pro pravděpodobnost, že určitého testu bude vybrán ve virtuálních uživatelů během spuštění testu zatížení.
 
- Po přidání sadu testů pro zátěžový test, *kombinace testů* funguje jako jiný kombinovat možnosti. Virtuální uživatel náhodně vybere testu podle pravděpodobnost, že jste zadali v kombinaci. Například pokud máte dva testy, každý 50 procent v kombinaci, nový virtuální uživatel rozhodne ke spuštění prvního testu přibližně poloviny doby. V kombinaci 50/50 Pokud jeden test je dlouhá a jiné short, pochází další zatížení z dlouho test.
+Po přidání sady testů k zátěžovému testu *poměr testů* kombinovat funguje stejně jako jiné možnosti. Virtuálních uživatelů náhodně vybere test, založený na pravděpodobnost, že jste zadali v kombinaci. Například pokud máte dva testy, každý 50 procent v kombinaci, nový virtuální uživatel zvolí pro spuštění prvního testu přibližně polovinu času. V kombinaci rozdělení 50/50 Pokud jeden test je dlouhý a další je krátký, pochází větší zatížení z dlouhého testu.
 
- Po přidání testy s různými, můžete je odebrat. Pomocí ovládacího prvku kombinace můžete určit také distribuci poměru testů. Ovládací prvek kombinace umožňuje snadno nastavit distribuce testů ve scénáři.
+Po přidání testy na kombinaci, můžete ho odebrat. Distribuce poměru testů můžete také změnit pomocí kombinace ovládacího prvku. Kombinace řízení umožňuje snadno upravit distribuci testů ve scénáři.
 
 > [!NOTE]
-> Distribuce je míra pravděpodobnosti, že konkrétní test bude vybrán ve virtuálních uživatelů během spuštění testu zatížení. Distribuce je vyjádřený v procentech. Proto součet čísel distribuce pro všechny testy, které jsou obsaženy ve scénáři je 100. Například pokud scénář obsahuje pouze jeden test, distribuce pro tento test je 100 procent.
+> Distribuce je míru pravděpodobnosti, že určitého testu bude vybrán ve virtuálních uživatelů během spuštění testu zatížení. Distribuce je vyjádřený v procentech. Proto součet čísel distribuce pro všechny testy, které jsou obsaženy ve scénáři je 100. Například pokud scénář obsahuje pouze jeden test, distribuce pro tento test je 100 % jeho obsahu.
 
-## <a name="add-new-tests-to-a-test-mix-in-an-existing-scenario"></a>Přidat nové testů do poměru testů ve scénáři s existující
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-Když vytvoříte nový scénář pomocí Průvodce novým testování zatížení, můžete zadat webových testů výkonu a jednotky pro přidání do nové scénáře poměru testů.
+## <a name="add-new-tests-to-a-test-mix-in-an-existing-scenario"></a>Přidejte nové testy do kombinace testů v existující scénář
 
-Pomocí editoru zátěžových testů, můžete přidat další výkon webové a testování částí pro text směs scénáři.
+Když vytvoříte nový scénář s využitím **testování Průvodce novým zátěžovým**, můžete zadat testy webového výkonu a jednotky pro přidání do poměru testů nový scénář.
 
-![Přidání testu do existující zátěžový test](../test/media/ltest_addingtests.png "LTest_AddingTests")
+Můžete přidat další testy webového výkonu a jednotku s různými text scénáře pomocí **editoru zátěžových testů**.
 
-### <a name="to-add-more-tests-to-an-existing-scenario"></a>Chcete-li přidat další testy se scénářem existující
+![Přidání testu pro existující zátěžový test](../test/media/ltest_addingtests.png)
 
-1.  Otevřete zátěžový test.
-
-2.  V editoru zátěžových testů, klikněte pravým tlačítkem na existující scénář a pak zvolte **přidat testy**.
-
-     **Přidat testy** se zobrazí dialogové okno. Všechny webové výkon, částí a programové testy uživatelského rozhraní ve vašem řešení, které ještě nejsou ve vašem scénáři je možné přidat do scénáře.
-
-3.  V **dostupné testy** podokně vyberte výkonu webové, částí a programové testy uživatelského rozhraní, které chcete přidat. Zvolte se šipkou doprava přidejte testy, abyste **vybrané testy** podokně.
-
-4.  Po dokončení přidávání testy, vyberte **OK**.
-
-     Testy jsou přidány do poměru testů. Nová distribuce je automaticky přiřadit k testy v poměru testů.
-
-5.  (Volitelné) Upravte ovládacího prvku kombinace určení distribučních testu. Další informace najdete v tématu [o kombinaci řídicí](../test/edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario.md).
-
-##  <a name="EditingTestMixRemoveTest"></a> Odebírání testů z scénáři
- ![Odebrání testu z existující zátěžový test](../test/media/ltest_removetest.png "LTest_RemoveTest")
-
-### <a name="to-remove-tests-from-a-scenario"></a>K odebrání scénáři testů
+### <a name="to-add-more-tests-to-an-existing-scenario"></a>Chcete-li přidat další testy do existujícího scénáře
 
 1.  Otevřete zátěžový test.
 
-2.  V načíst testování editoru ve stromové struktuře zatížení testu, klikněte pravým tlačítkem na scénář, ze kterého chcete odebrat test a vyberte **úpravy kombinace testů**. **Úpravy poměru testů** se zobrazí dialogové okno.
+2.  V **editoru zátěžových testů**, klikněte pravým tlačítkem na existující scénář a pak zvolte **přidat testy**.
 
-3.  Vyberte Web výkonu, jednotky nebo programového testu uživatelského rozhraní v mřížce a zvolte **odebrat**.
+     **Přidat testy** se zobrazí dialogové okno. Webového výkonu, jednotek a programové testy uživatelského rozhraní v rámci vašeho řešení, které ještě nejsou ve vašem scénáři je možné přidat do scénáře.
+
+3.  V **dostupné testy** podokně, vyberte webového výkonu, jednotek a programové testy uživatelského rozhraní, které chcete přidat. Klikněte na šipku doprava, chcete-li přidat testy **vybrané testy** podokně.
+
+4.  Po dokončení přidávání testů, zvolte **OK**.
+
+     Testy jsou přidány do kombinace testů. Nová distribuce se automaticky přiřadí testy v kombinaci testů.
+
+5.  (Volitelné) Upravte poměr ovládacího prvku k určení distribuci testů. Další informace najdete v tématu [o ovládacím prvku kombinace](../test/edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario.md).
+
+##  <a name="remove-tests-from-a-scenario"></a>Odebrat testy ze scénáře
+ ![Odebrání testu z existujícího testu zatížení](../test/media/ltest_removetest.png)
+
+### <a name="to-remove-tests-from-a-scenario"></a>Chcete-li odebrat testy ze scénáře
+
+1.  Otevřete zátěžový test.
+
+2.  V **editoru zátěžového testu**, v zátěžového testování stromu, klikněte pravým tlačítkem na scénář, ze kterého chcete odebrat test a vyberte **upravit kombinaci testů**. **Upravit kombinaci testů** se zobrazí dialogové okno.
+
+3.  Vyberte v mřížce webového výkonu, jednotek nebo programový test uživatelského rozhraní a klikněte na tlačítko **odebrat**.
 
     > [!NOTE]
-    > Po odebrání test upravte poměru testů do upřednostňovaných distribučních.
+    > Po odebrání test upravte kombinaci testů do upřednostňovaných distribučních.
 
-4.  Po dokončení odstraňování testy, vyberte **OK**.
+4.  Po dokončení odebírání testů, zvolte **OK**.
 
-##  <a name="EditingTestMixAboutMixControl"></a> O ovládacím prvku kombinaci
- Ovládací prvek kombinace umožňuje upravit procento zatížení, která se distribuuje mezi testy, typu prohlížeče nebo typy sítí ve scénáři zátěžového testu. Procentní hodnoty můžete upravit posunutím jezdce. Úprava kombinace pro testy určuje pravděpodobnost virtuální uživatel, který se spustil konkrétní test ve scénáři zátěžového testu.
+##  <a name="EditingTestMixAboutMixControl"></a> O ovládacím prvku kombinace
+ Ovládací prvek kombinace umožňuje upravit procento zatížení, která je distribuovaná mezi testy, typu prohlížeče nebo typy sítí ve scénáři testu zatížení. Procentní hodnoty se upravit posunutím jezdce. Úpravy poměru testů určuje pravděpodobnost, že virtuální uživatel spustí konkrétní test ve scénáři testu zatížení.
 
- Při přesunutí jezdce procento hodnoty dostupné všechny položky změnit. Pokud máte více než dvě položky, velikost, můžete přidat nebo odebrat je rovnoměrně rozdělené mezi další položky. Je možné toto chování potlačit. Pokud vyberete políčko ve sloupci zámek pro konkrétní položky, zamknete tak zadaný procentuální hodnotu pro tuto položku. Pak, když přesouváte jezdce, velikost, můžete přidat nebo odebrat se použije pouze na všechny zbývající odemknout položky.
+ Při přesunutí posuvníku procentuální hodnoty všechny dostupné položky změnit. Pokud máte více než dvě položky, velikost, přidat nebo odebrat rovnoměrně distribuovaných mezi ostatní položky. Je možné toto chování přepsat. Pokud vyberete zaškrtávací políčko ve sloupci zámek pro konkrétní položku, uzamknout specifikované procentuální hodnotou pro danou položku. Pak při přesunutí posuvníku, velikost, přidat nebo odebrat platí jenom pro všechny zbývající položky odemknout.
 
- **Distribuovat** tlačítko se používá k rozdělení procenta rovnoměrně mezi všechny položky. Například pokud máte tři položky, výběr **distribuovat** nastaví procentní hodnoty 34, 33 a 33.
+ **Rozmístit** tlačítko slouží k přidělení procenta rovnoměrně mezi všechny položky. Například pokud máte tři položky, výběrem **rozmístit** nastaví procentní hodnoty 34 33 a 33.
 
 > [!WARNING]
->  **Distribuovat** tlačítko přepíše všechny položky, které jsou zamčené.
+> **Rozmístit** tlačítko přepíše všechny položky, které jsou zamknuté.
 
- Je také možné zadejte procentní hodnoty přímo do **%** sloupec místo pomocí posuvníků. Pokud zadáte hodnotu v procentech přímo, nebude automaticky upravte ostatní položky.
+
+ Je také možné zadat procentní hodnoty přímo do **%** sloupce namísto použití posuvníků. Pokud zadáte hodnotu v procentech přímo, nebude se automaticky upraví další položky.
 
 > [!NOTE]
->  Posuvníků jsou zakázané, když celkové nepřidá až o 100 %, nebo při procentní hodnoty do **%** sloupce jsou desetinných míst.
+> Posuvníky jsou zakázané, pokud celkový počet nepřidá do 100 %, nebo pokud procentní hodnoty zadané do **%** sloupce jsou desetinná čísla.
 
- Když ručně zadáte procentní hodnoty, měli byste si ověřit, že součet všech položek je 100 %. Při ukládání kombinaci, pokud součet není 100 %, vyzve tak, aby přijímal procentní hodnoty, jako jsou, nebo se vrátit a jejich nastavení. Pokud zvolíte možnost je přijmout, protože se jedná o, bude poměrně rozložen na 100 %.  Například pokud máte dvě položky a je ručně nastavte na 80 % a 40 %, první položka bude nastavena pro 66.67 % (80 dělený 120) a druhá položka bude nastavena pro 33,33 % (40 dělený 120).
 
-## <a name="see-also"></a>Viz také
+ Když ručně zadáte procentní hodnoty, by měl Ujistěte se, že součet všech položek je 100 %. Při ukládání kombinaci, nejsou-li součet 100 %, vyzve tak, aby přijímal procentní hodnoty, jak jsou, nebo se vrátit a upravte je tak. Pokud budete chtít nepřijmete, jak jsou, budou se poměrné přepočítání na 100 %.  Pokud máte dvě položky a je ručně nastaveno na 80 % až 40 %, nastaví se první položka % 66.67 (80 dělený 120) a nastaví se druhá položka % 33,33 (40 dělený 120).
+
+## <a name="see-also"></a>Viz také:
 
 - [Úpravy scénářů zátěžových testů](../test/edit-load-test-scenarios.md)

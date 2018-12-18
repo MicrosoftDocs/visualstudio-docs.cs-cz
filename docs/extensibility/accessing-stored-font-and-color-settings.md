@@ -1,5 +1,5 @@
 ---
-title: Přístup k uložené písma a barev nastavení | Microsoft Docs
+title: Přístup k uložené písma a barev | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,71 +15,72 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1280555a2b8a293fcdd0f86891a1d198ef3c99d6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 953f74b309d8dc147d04d86b843f138002de972f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49910677"
 ---
-# <a name="accessing-stored-font-and-color-settings"></a>Přístup k uložené písma a barev
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Integrované vývojové prostředí (IDE) ukládá změny u nastavení písma a barev v registru. Můžete použít <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage> rozhraní pro přístup k tato nastavení.
+# <a name="access-stored-font-and-color-settings"></a>Přístup uložená nastavení písma a barvy
+[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Integrované vývojové prostředí (IDE) ukládá změny nastavení písem a barev v registru. Můžete použít <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage> rozhraní pro přístup k nastavení.
 
-## <a name="to-initiate-state-persistence-of-fonts-and-colors"></a>Chcete-li zahájit stavu trvalost písma a barev
- Písma a barev informace jsou uloženy podle kategorie v následujícím umístění registru: [HKCU\SOFTWARE\Microsoft \Visual Studio\\*\<verze sady Visual Studio >*\FontAndColors\\  *\<CategoryGUID >*], kde  *\<CategoryGUID >* je kategorie identifikátor GUID.
+## <a name="to-initiate-state-persistence-of-fonts-and-colors"></a>K zahájení trvalost stavu písma a barvy
+ Písma a barvy informace jsou uloženy podle kategorií v následujícím umístění registru: [HKCU\SOFTWARE\Microsoft \Visual Studio\\*\<verze sady Visual Studio >* \FontAndColors\\  *\<CategoryGUID >*], kde  *\<CategoryGUID >* je kategorie identifikátor GUID.
 
  Proto zahájíte trvalost VSPackage musí:
 
--   Získat <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage> rozhraní voláním `QueryService` vůči poskytovateli globální služby.
+-   Získat <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage> rozhraní voláním `QueryService` proti globální poskytovatel.
 
-     `QueryService` musí být volána pomocí argumentu služby ID `SID_SVsFontAndColorStorage` a argument ID rozhraní `IID_IVsFontAndColorStorage`.
+     `QueryService` musí být volána pomocí argumentu služby ID `SID_SVsFontAndColorStorage` a interface ID argument `IID_IVsFontAndColorStorage`.
 
--   Použití <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.OpenCategory%2A> metoda otevřete kategorii, která nastavit jako trvalý, s použitím kategorie GUID a příznak režimu jako argumenty.
+-   Použití <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.OpenCategory%2A> metodu otevření kategorie natrvalo pomocí identifikátoru GUID kategorii a příznak režimu jako argumenty.
 
-     Režim, určeného `fFlags` argument, se vytvářejí na základě hodnot v <xref:Microsoft.VisualStudio.Shell.Interop.__FCSTORAGEFLAGS> výčtu. Tento režim ovládací prvky:
+     Režimu určeném `fFlags` argument, je vytvořen z hodnot v <xref:Microsoft.VisualStudio.Shell.Interop.__FCSTORAGEFLAGS> výčtu. Tento režim – ovládací prvky:
 
     -   Nastavení, která je přístupná prostřednictvím <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage> rozhraní.
 
-    -   Všechna nastavení nebo jen ta nastavení, které uživatelé změnit a který se dá načíst pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage> rozhraní.
+    -   Všechna nastavení nebo jen nastavení, která uživatelé upravovat a, které jsou získat prostřednictvím <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage> rozhraní.
 
-    -   Způsob šíření změny nastavení pro uživatele.
+    -   Metody šíření změn nastavení pro uživatele.
 
-    -   Formát hodnoty barev, které se používají.
+    -   Formát hodnot barev, které se používají.
 
-## <a name="to-use-state-persistence-of-fonts-and-colors"></a>Použití stavu trvalost písma a barev
- Zachování písma a barev zahrnuje:
+## <a name="to-use-state-persistence-of-fonts-and-colors"></a>Použití trvalost stavu písma a barvy
+ Zachování písma a barvy zahrnuje:
 
--   Synchronizace nastavení IDE s nastaveními uloženými v registru.
+- Synchronizace nastavení prostředí IDE s nastaveními uloženými v registru.
 
--   Šíření informace úpravy registru.
+- Přenos informací o úpravy registru.
 
--   Nastavení nebo načtení nastavení uložená v registru.
+- Nastavení nebo načtení nastavení uložené v registru.
 
- Synchronizace nastavení úložiště s nastavení IDE je z velké části transparentní. Základní IDE automaticky zapisuje aktualizované nastavení pro **zobrazení položky** pro položky registru kategorií.
+  Synchronizace nastavení úložiště se nastavení rozhraní IDE je z velké části transparentní. Základní rozhraní IDE automaticky zapíše aktualizované nastavení pro **zobrazit položky** položky registru kategorií.
 
- Pokud více VSPackages sdílet určité kategorie, VSPackage měli vyžadovat, aby se události generují při metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage> rozhraní se používají k úpravě nastavení registru uložené.
+  Pokud více rozšíření VSPackages sdílet určité kategorie, VSPackage by od vás vyžadovat, že jsou generovány události při metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage> rozhraní se používají pro úpravy nastavení registru uložené.
 
- Ve výchozím nastavení není povoleno generování událostí. Chcete-li povolit generování událostí, musí být otevřeno kategorii pomocí <xref:Microsoft.VisualStudio.Shell.Interop.__FCSTORAGEFLAGS>. Otevírání kategorii způsobí, že rozhraní IDE pro volání odpovídající <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorEvents> metodu, která implementuje VSPackage.
-
-> [!NOTE]
->  Úpravy prostřednictvím **písma a barev** stránka vlastností generovat události, které jsou nezávislé na <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage>. Můžete použít <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorCacheManager> rozhraní k určení, zda je před voláním metody třeba aktualizace mezipaměti nastavení písma a barev <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage> třídy.
-
-### <a name="storing-and-retrieving-information"></a>Ukládání a načítání informací o
- Chcete-li získat nebo nakonfigurovat informace, které uživatel může změnit pro položku s názvem zobrazení v otevřené kategorie, volejte VSPackages <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetItem%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.SetItem%2A> metody.
-
- Informace o písma atributy pro určité kategorie se získávají pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetFont%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.SetFont%2A> metody.
+  Ve výchozím nastavení není povolené generování události. Pokud chcete povolit generování události, kategorii musí otevřeli pomocí <xref:Microsoft.VisualStudio.Shell.Interop.__FCSTORAGEFLAGS>. Otevírání kategorii způsobí, že rozhraní IDE volat odpovídající <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorEvents> metody, která implementuje VSPackage.
 
 > [!NOTE]
->  `fFlags` Argument, který je předán <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.OpenCategory%2A> metoda při otevření této kategorie definuje chování <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetItem%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetFont%2A> metody. Ve výchozím nastavení tyto metody vrací jenom informace o zobrazení položek, které se změnily. Ale kategorie se při otevření pomocí <xref:Microsoft.VisualStudio.Shell.Interop.__FCSTORAGEFLAGS> příznak i aktualizovat a beze změny zobrazit položky byla přístupná pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetItem%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetFont%2A>.
+>  Změny pomocí **písma a barvy** stránku vlastností generovat události, které jsou nezávislé na <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage>. Můžete použít <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorCacheManager> rozhraní k určení, zda aktualizace mezipaměti nastavení písem a barev je potřeba před voláním metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage> třídy.
 
- Ve výchozím nastavení, změnit jenom **zobrazení položky** informace jsou uchovávány v registru. <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage> Rozhraní nelze použít k načtení všech nastavení pro písma a barev.
+### <a name="store-and-retrieve-information"></a>Store a načítání informací
+ Chcete-li získat nebo konfigurovat informace, které uživatel může změnit pro položku s názvem zobrazení otevřít kategorie, zavolejte rozšíření VSPackages <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetItem%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.SetItem%2A> metody.
+
+ Informace o písma atributy pro určité kategorie je získat pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetFont%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.SetFont%2A> metody.
 
 > [!NOTE]
->  <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetItem%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetFont%2A> metody vrací REGDB_E_KEYMISSING (0x80040152L), když je budete používat k načtení informací o beze změny **zobrazení položky**.
+>  `fFlags` Argument, který je předán <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.OpenCategory%2A> metodu, když se otevřel dané kategorie definuje chování <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetItem%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetFont%2A> metody. Ve výchozím nastavení tyto metody vrací pouze informace o zobrazit položky, které se změnily. Nicméně pokud kategorie se otevře pomocí <xref:Microsoft.VisualStudio.Shell.Interop.__FCSTORAGEFLAGS> příznak, jak aktualizovat a beze změny viditelné položky je možný přes <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetItem%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetFont%2A>.
 
- Nastavení všech **zobrazení položky** v konkrétní **kategorie** lze získat pomocí metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaults> rozhraní.
+ Ve výchozím nastavení, měnit jenom **zobrazit položky** informace se ukládají v registru. <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage> Rozhraní nelze použít k načtení všech nastavení písem a barev.
 
-## <a name="see-also"></a>Viz také
+> [!NOTE]
+>  <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetItem%2A> a <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage.GetFont%2A> metody vrací REGDB_E_KEYMISSING (0x80040152L) při použití k načtení informací o beze změny **zobrazit položky**.
+
+ Nastavení všech **zobrazit položky** v konkrétní **kategorie** můžete získat pomocí metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaults> rozhraní.
+
+## <a name="see-also"></a>Viz také:
 
 - <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorStorage>
 - <xref:Microsoft.VisualStudio.Shell.Interop.__FCSTORAGEFLAGS>
-- [Implementace vlastních kategorií a zobrazit položky](../extensibility/implementing-custom-categories-and-display-items.md)
+- [Implementovat vlastní kategorie a zobrazení položek](../extensibility/implementing-custom-categories-and-display-items.md)

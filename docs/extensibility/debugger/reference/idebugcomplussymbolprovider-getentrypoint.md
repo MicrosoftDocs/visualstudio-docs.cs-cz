@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::GetEntryPoint | Microsoft Docs
+title: IDebugComPlusSymbolProvider::GetEntryPoint | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,11 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f9105a346bc21287f008453d9b705b4fd4a5d543
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c39a9e21add35cc2aa8ee3c61f964cfc45e0ef15
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49898977"
 ---
 # <a name="idebugcomplussymbolprovidergetentrypoint"></a>IDebugComPlusSymbolProvider::GetEntryPoint
 Načte vstupní bod aplikace.  
@@ -43,16 +44,16 @@ int GetEntryPoint(
   
 #### <a name="parameters"></a>Parametry  
  `ulAppDomainID`  
- [v] Identifikátor pro doménu aplikace.  
+ [in] Identifikátor pro doménu aplikace.  
   
  `guidModule`  
- [v] Jedinečný identifikátor pro modul.  
+ [in] Jedinečný identifikátor pro modul.  
   
  `ppAddress`  
- [out] Vrátí vstupní bod reprezentována [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) rozhraní.  
+ [out] Vrátí vstupní bod, který je reprezentován [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) rozhraní.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugSymbolProvider** objekt, který zveřejňuje [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) rozhraní.  

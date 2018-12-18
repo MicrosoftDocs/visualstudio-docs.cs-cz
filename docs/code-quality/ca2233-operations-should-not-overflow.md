@@ -1,6 +1,7 @@
 ---
 title: 'CA2233: Operace by neměly přetéct'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,49 +14,53 @@ ms.assetid: 3a2b06ba-6d1b-4666-9eaf-e053ef47ffaa
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: a79c69e12aa1b4d8e8c4bd9ff4b637b788b68ee8
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 73c0e616eb527a2213c77cdae00c42635d49b130
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49938900"
 ---
 # <a name="ca2233-operations-should-not-overflow"></a>CA2233: Operace by neměly přetéct
+
 |||
 |-|-|
 |TypeName|OperationsShouldNotOverflow|
 |CheckId|CA2233|
 |Kategorie|Microsoft.Usage|
-|Narušující změna|Bez ukončování řádků|
+|Narušující změna|Pevné|
 
 ## <a name="cause"></a>příčina
- Metoda provádí aritmetické operace a neověřuje operandy předem, aby zabránil přetečení.
+
+Metoda provádí aritmetické operace a neověřuje operandy předem, aby zabránil přetečení.
 
 ## <a name="rule-description"></a>Popis pravidla
- Aritmetické operace nebude prováděna bez první ověření a ujistěte se, že výsledek operace není mimo rozsah možných hodnot pro typy dat zahrnutých operandy. V závislosti na kontextu spuštění a datové typy související se situací, aritmetického přetečení může mít za následek buď <xref:System.OverflowException?displayProperty=fullName> nebo zrušených nejvýznamnějších bits výsledku.
+
+Aritmetické operace není provést bez prvního ověřování operandů, abyste měli jistotu, že výsledek operace není mimo rozsah možných hodnot pro typy dat zapojených. V závislosti na kontextu spuštění a souvisejících datových typech, může způsobit přetečení aritmetické operace v jednom <xref:System.OverflowException?displayProperty=fullName> nebo zahozeny nejvýznamnější části výsledku.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení toto pravidlo, ověřte operandy před provedením operace.
+
+Chcete-li opravit porušení tohoto pravidla, ověření operandů před provedením operace.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Je bezpečné potlačit upozornění na toto pravidlo, je-li možné hodnoty operandy nikdy způsobí přetečení aritmetické operace.
+
+Je bezpečné potlačit upozornění tohoto pravidla, je-li možné hodnoty z operandů nikdy nezpůsobí Přetečení aritmetické operace.
 
 ## <a name="example-of-a-violation"></a>Příkladem porušení
 
-### <a name="description"></a>Popis
- Metoda v následujícím příkladu manipuluje celé číslo, které je v rozporu toto pravidlo. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] vyžaduje **odebrat** možnost přetečení celé číslo se zakáže tento postup provést.
+Metoda v následujícím příkladu manipuluje s celým číslem, který porušuje tato pravidla. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] vyžaduje **odebrat** možnost přetečení celého čísla pro to, aby se mohly aktivovat deaktivuje.
 
-### <a name="code"></a>Kód
- [!code-vb[FxCop.Usage.OperationOverflow#1](../code-quality/codesnippet/VisualBasic/ca2233-operations-should-not-overflow_1.vb)]
- [!code-csharp[FxCop.Usage.OperationOverflow#1](../code-quality/codesnippet/CSharp/ca2233-operations-should-not-overflow_1.cs)]
+[!code-vb[FxCop.Usage.OperationOverflow#1](../code-quality/codesnippet/VisualBasic/ca2233-operations-should-not-overflow_1.vb)]
+[!code-csharp[FxCop.Usage.OperationOverflow#1](../code-quality/codesnippet/CSharp/ca2233-operations-should-not-overflow_1.cs)]
 
-### <a name="comments"></a>Komentáře
- Pokud metoda v tomto příkladu je předán <xref:System.Int32.MinValue?displayProperty=fullName>, operace by podtečení. To způsobí, že nejvyšší bit výsledku budou zahozeny. Následující kód ukazuje, jak k tomu dochází.
+Pokud je předán metodě v tomto příkladu <xref:System.Int32.MinValue?displayProperty=fullName>, operace by podtečení. To způsobí, že nejvýznamnější bit výsledek, který má být zrušena. Následující kód ukazuje, jak k tomu dochází.
 
- [C#]
-
-```
+```csharp
 public static void Main()
 {
     int value = int.MinValue;    // int.MinValue is -2147483648
@@ -64,9 +69,7 @@ public static void Main()
 }
 ```
 
- [VB]
-
-```
+```vb
 Public Shared Sub Main()
     Dim value = Integer.MinValue    ' Integer.MinValue is -2147483648
     value = Calculator.Decrement(value)
@@ -74,41 +77,41 @@ Public Shared Sub Main()
 End Sub
 ```
 
-### <a name="output"></a>Výstup
+Výstup:
 
-```
+```text
 2147483647
 ```
 
-## <a name="fix-with-input-parameter-validation"></a>Oprava se vstupní parametr ověření
+## <a name="fix-with-input-parameter-validation"></a>Oprava pomocí ověření vstupu parametru
 
-### <a name="description"></a>Popis
- Následující příklad opravy předchozí porušení ověřením hodnota vstupu.
+Následující příklad opravuje předchozí porušení ověřením hodnotu vstupu.
 
-### <a name="code"></a>Kód
- [!code-csharp[FxCop.Usage.OperationOverflowFixed#1](../code-quality/codesnippet/CSharp/ca2233-operations-should-not-overflow_2.cs)]
- [!code-vb[FxCop.Usage.OperationOverflowFixed#1](../code-quality/codesnippet/VisualBasic/ca2233-operations-should-not-overflow_2.vb)]
+[!code-csharp[FxCop.Usage.OperationOverflowFixed#1](../code-quality/codesnippet/CSharp/ca2233-operations-should-not-overflow_2.cs)]
+[!code-vb[FxCop.Usage.OperationOverflowFixed#1](../code-quality/codesnippet/VisualBasic/ca2233-operations-should-not-overflow_2.vb)]
 
-## <a name="fix-with-a-checked-block"></a>Oprava se zaškrtnuté bloku
+## <a name="fix-with-a-checked-block"></a>Oprava s bloku Checked
 
-### <a name="description"></a>Popis
- Následující příklad opravy předchozí porušení podle zabalení operaci v zaškrtnuté bloku. Pokud operace způsobí přetečení, <xref:System.OverflowException?displayProperty=fullName> bude vyvolána.
+Následující příklad opravuje předchozí porušení obalením operaci v vybraný blok. Pokud operace způsobí přetečení, <xref:System.OverflowException?displayProperty=fullName> bude vyvolána výjimka.
 
- Všimněte si, že zaškrtnuté bloky nejsou podporovány v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)].
+Checked bloků nejsou podporovány v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)].
 
-### <a name="code"></a>Kód
- [!code-csharp[FxCop.Usage.OperationOverflowChecked#1](../code-quality/codesnippet/CSharp/ca2233-operations-should-not-overflow_3.cs)]
+[!code-csharp[FxCop.Usage.OperationOverflowChecked#1](../code-quality/codesnippet/CSharp/ca2233-operations-should-not-overflow_3.cs)]
 
-## <a name="turn-on-checked-arithmetic-overflowunderflow"></a>Zapnout zaškrtnuté aritmetického přetečení nebo podtečení
- Pokud zapnete zaškrtnuté aritmetického přetečení nebo podtečení v jazyce C#, je ekvivalentní zabalení každé operace celé číslo v zaškrtnuté bloku.
+## <a name="turn-on-checked-arithmetic-overflowunderflow"></a>Zapnout Checked aritmetické přetečení a podtečení
 
- **Chcete-li zaškrtnutí aritmetického přetečení nebo podtečení v jazyce C#**
+Pokud zapnete checked aritmetické přetečení a podtečení v jazyce C#, je ekvivalentní obtékání každé operace celé číslo v vybraný blok.
 
-1.  V **Průzkumníku řešení**, klikněte pravým tlačítkem na projekt a vyberte možnost **vlastnosti**.
+Chcete-li kontrolovat aritmetické přetečení a podtečení v jazyce C#:
 
-2.  Vyberte **sestavení** a klikněte na **Upřesnit**.
+1.  V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt a zvolte **vlastnosti**.
 
-3.  Vyberte **Kontrola aritmetického přetečení nebo podtečení** a klikněte na tlačítko **OK**.
+2.  Vyberte **sestavení** kartě a klikněte na tlačítko **Upřesnit**.
 
-## <a name="see-also"></a>Viz také
- <xref:System.OverflowException?displayProperty=fullName> [Operátory jazyka C#](/dotnet/csharp/language-reference/operators/index) [zaškrtnuto a nezaškrtnuto](/dotnet/csharp/language-reference/keywords/checked-and-unchecked)
+3.  Vyberte **kontrolovat aritmetické přetečení a podtečení** a klikněte na tlačítko **OK**.
+
+## <a name="see-also"></a>Viz také:
+
+- <xref:System.OverflowException?displayProperty=fullName>
+- [Operátory jazyka C#](/dotnet/csharp/language-reference/operators/index)
+- [Zaškrtnuto a nezaškrtnuto](/dotnet/csharp/language-reference/keywords/checked-and-unchecked)

@@ -1,6 +1,7 @@
 ---
-title: 'CA1700: Nepojmenovávejte hodnoty výčtu &#39;vyhrazena&#39;'
+title: 'CA1700: Nepojmenovávejte hodnoty výčtu &#39;Reserved&#39;'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,13 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 13d662e33a7fdd3fc9fe8395d2ae71355b14e958
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 3c5d1cff8f6833696bdb74dbf145b14aaaaaf509
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49883663"
 ---
-# <a name="ca1700-do-not-name-enum-values-39reserved39"></a>CA1700: Nepojmenovávejte hodnoty výčtu &#39;vyhrazena&#39;
+# <a name="ca1700-do-not-name-enum-values-39reserved39"></a>CA1700: Nepojmenovávejte hodnoty výčtu &#39;Reserved&#39;
+
 |||
 |-|-|
 |TypeName|DoNotNameEnumValuesReserved|
@@ -30,34 +33,39 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Název člena výčtu obsahuje slovo "vyhrazené".
+
+Název na člena výčtu obsahuje slovo "vyhrazených".
 
 ## <a name="rule-description"></a>Popis pravidla
- Toto pravidlo předpokládá, že člen výčtu, který má název obsahující výraz „reserved“, není aktuálně používán, ale je zástupným symbolem k přejmenování nebo odstranění v budoucí verzi. Přejmenování nebo odstranění členu je narušující změna. Není pravděpodobné, že uživatelům ignorovat členem právě, protože její název obsahuje "vyhrazené" ani můžete byste tedy spoléhat na uživatelé pro čtení nebo dodržováním dokumentaci. Navíc vzhledem vyhrazené členy se zobrazí v prohlížeči objektů a inteligentní integrované vývojové prostředí, se může způsobit nejasnosti o tom, které jsou členy ve skutečnosti používány.
 
- Místo použití vyhrazené člena, přidejte nový člen výčtu v budoucí verzi. Ve většině případů není přidání nového člena narušující změně, tak dlouho, dokud nedojde k přidání hodnoty z původní členů a změnit.
+Toto pravidlo předpokládá, že člen výčtu, který má název obsahující výraz „reserved“, není aktuálně používán, ale je zástupným symbolem k přejmenování nebo odstranění v budoucí verzi. Přejmenování nebo odstranění členu je narušující změna. Uživatelům ignorovat člen to, že název obsahuje "vyhrazených" ani můžete spolehnout na uživatelům číst a dodržováním dokumentaci, by neměli očekávat. Navíc protože vyhrazené členy se zobrazí v prohlížeči objektů a inteligentní Integrovaná vývojová prostředí, mohou způsobit zmatení, o tom, které jsou členy ve skutečnosti používá.
 
- V některých případech je přidání člena narušující změně i v případě, že původní členy zachovat původní hodnoty. Především se stává, nejde vrátit nového člena z existující cesty kódu, aniž by vás volající, které používají `switch` (`Select` v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) příkaz na návratovou hodnotu seznamu celý člen, který zahrnuje a které způsobí výjimku výchozí případu. Sekundární problém je, že kód klienta, jako nemusí zpracovat změny v chování z metody reflexe <xref:System.Enum.IsDefined%2A?displayProperty=fullName>. Podle toho, pokud nového člena musí být vrácená z existující metody nebo nekompatibilita známé aplikace k tomu dochází kvůli využití reflexe nízký, jenom pevných řešení je:
+Namísto použití vyhrazeným členem, přidání nového člena výčtu v budoucí verzi. Ve většině případů není přidání nového člena k zásadní změně, za předpokladu, přidání nezpůsobí hodnoty původní členů, chcete-li změnit.
 
-1.  Přidáte nový výčet, který obsahuje původní a nové členy.
+Pro omezený počet případů, je přidání člena k zásadní změně i v případě, že původní členy zachovat původní hodnoty. Především, nejde vrátit nového člena z existující cesty kódu bez narušení volajícím, které používají `switch` (`Select` v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) příkaz na návratovou hodnotu, která zahrnuje celou člena seznamu a, která vyvolají výjimku výchozí případ. Sekundární problém je, že kód klienta, jako nemusí zpracovávat změny v chování z metody reflexe <xref:System.Enum.IsDefined%2A?displayProperty=fullName>. Podle toho, pokud má nový člen má být vrácena z existující metody nebo nekompatibilita známé aplikace nastává z důvodu špatného reflexe využití, pouze pevná řešení, je:
 
-2.  Označit původní výčet s <xref:System.ObsoleteAttribute?displayProperty=fullName> atribut.
+1. Přidáte nový výčet, který obsahuje původní a nové členy.
 
- Postupujte stejným způsobem pro všechny externě viditelné typy a členy, které zveřejňují původní výčtu.
+2. Označte výčet pomocí původní <xref:System.ObsoleteAttribute?displayProperty=fullName> atribut.
+
+   Postupujte stejným způsobem pro žádné externě viditelné typy nebo členy, které zveřejňují původní výčtu.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení toto pravidlo, odebrat nebo člen.
+
+Chcete-li opravit porušení tohoto pravidla, odeberte nebo změňte jeho název.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Je bezpečné pro potlačení upozornění od tohoto pravidla pro člena, který je aktuálně používána nebo knihovny, které byly dříve součástí.
+
+Je bezpečné potlačit upozornění tohoto pravidla pro člena, který je aktuálně používán nebo pro knihovny, které byly dříve součástí.
 
 ## <a name="related-rules"></a>Související pravidla
- [CA2217: Neoznačujte výčty pomocí FlagsAttribute](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
 
- [CA1712: Nezačínejte hodnoty výčtu s názvem typu](../code-quality/ca1712-do-not-prefix-enum-values-with-type-name.md)
+[CA2217: Neoznačujte výčty pomocí FlagsAttribute](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
 
- [CA1028: Úložiště výčtu by měl být Int32](../code-quality/ca1028-enum-storage-should-be-int32.md)
+[CA1712: Nezačínejte hodnoty výčtu s názvem typu](../code-quality/ca1712-do-not-prefix-enum-values-with-type-name.md)
 
- [CA1008: Výčty by měly mít nulovou hodnotu](../code-quality/ca1008-enums-should-have-zero-value.md)
+[CA1028: Úložiště výčtu by měl být Int32](../code-quality/ca1028-enum-storage-should-be-int32.md)
 
- [CA1027: Označte výčty pomocí FlagsAttribute](../code-quality/ca1027-mark-enums-with-flagsattribute.md)
+[CA1008: Výčty by měly mít nulovou hodnotu](../code-quality/ca1008-enums-should-have-zero-value.md)
+
+[CA1027: Označte výčty pomocí FlagsAttribute](../code-quality/ca1027-mark-enums-with-flagsattribute.md)

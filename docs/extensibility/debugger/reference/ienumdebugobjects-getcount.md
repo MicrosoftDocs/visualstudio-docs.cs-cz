@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugObjects::GetCount | Microsoft Docs
+title: IEnumDebugObjects::GetCount | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 34bc27a5f523a04b44d77fd7df9038c6571a45b0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: af64ea13c12eddb700985ec285a7394a3dc837f2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49902883"
 ---
 # <a name="ienumdebugobjectsgetcount"></a>IEnumDebugObjects::GetCount
-Tato metoda vrátí počet elementů ve výčtu.  
+Tato metoda vrátí počet prvků ve výčtu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +41,13 @@ int GetCount(
   
 #### <a name="parameters"></a>Parametry  
  `pcelt`  
- [out] Vrátí počet elementů ve výčtu.  
+ [out] Vrátí počet prvků ve výčtu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda není součástí obvyklé výčtu rozhraní modelu COM, která určuje, že je nutné implementovat jenom další, klonování, přeskočit a resetování.  
+ Tato metoda není součástí obvyklé výčet rozhraní modelu COM, která určuje, že je potřeba je implementovat pouze další, klonování, přeskočit a obnovení.  
   
 ## <a name="see-also"></a>Viz také  
  [IEnumDebugObjects](../../../extensibility/debugger/reference/ienumdebugobjects.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: hledání zprávy v zobrazení zpráv | Microsoft Docs'
+title: 'Postupy: hledání zprávy v zobrazení zpráv | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,40 +14,41 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 368d10f2285c94f053e536da77966e9b2fb26da9
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: f9c00eea2034651298ff62bc50741971fc0369a8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49844910"
 ---
 # <a name="how-to-search-for-a-message-in-messages-view"></a>Postupy: Hledání zprávy v zobrazení zpráv
-Můžete hledat konkrétní zprávy v zobrazení zpráv pomocí jeho popisovač, typ nebo ID zprávy jako kritéria vyhledávání. Kterákoli z těchto – nebo jejich kombinaci – bude platný vyhledávací kritéria. Můžete také zadat počáteční směr hledání. Atributy zprávu aktuálně vybranou se předem načtou pole v dialogovém okně.  
+Můžete vyhledat konkrétní zprávy v zobrazení zpráv s použitím jeho popisovač, typ nebo ID zprávy jako kritéria hledání. Některou z těchto – nebo ke kombinaci – bude platný vyhledávací kritéria. Je taky možné specifikovat Počáteční směr hledání. Atributy zprávu aktuálně vybranou se předem načtou pole v dialogovém okně.  
   
-### <a name="to-search-for-a-message-in-messages-view"></a>K vyhledání zprávy v zobrazení zpráv  
+### <a name="to-search-for-a-message-in-messages-view"></a>Hledání zprávy v zobrazení zpráv  
   
-1.  Uspořádat váš windows proto tohoto nástroje Spy ++ a aktivní [zobrazení zpráv](../debugger/messages-view.md) okna jsou viditelné.  
+1. Uspořádat okna tak tohoto nástroje Spy ++ a aktivní [zobrazení zpráv](../debugger/messages-view.md) okna jsou viditelné.  
   
-2.  Z **vyhledávání** nabídce zvolte **najít zprávu**.  
+2. Z **hledání** nabídce zvolte **najít zprávu**.  
   
-     [Dialogové okno hledání zpráv](../debugger/message-search-dialog-box.md) otevře.  
+    [Dialogové okno hledání zpráv](../debugger/message-search-dialog-box.md) otevře.  
   
-3.  Přetáhněte **nástroj pro vyhledávání** přes požadované okno. Přetahování nástroj, **zpráva vyhledávání** dialogové okno zobrazí podrobnosti o na vybrané okno.  
+3. Přetáhněte **tažením nástroje hledání** požadované období. Při přetahování nástroj, **hledání zpráv** dialogové okno zobrazí podrobnosti o vybrané okno.  
   
-     - nebo –  
+   - nebo –  
   
-     Pokud máte popisovač okna jejichž zprávy, které chcete prověřit, zadejte ji do **zpracování** textové pole.  
+     Pokud máte popisovač okna jejichž zprávy, které chcete prověřit, zadejte ho do **zpracování** textového pole.  
   
-     - nebo –  
+   - nebo –  
   
-     Pokud znáte typ zprávy nebo ID zprávy, které chcete, vyberte z **typ** a **zpráva** rozevírací nabídky a zrušte zaškrtnutí **zpracování** textové pole.  
+     Pokud víte, typ nebo ID zprávy, které chcete, vyberte z **typ** a **zpráva** rozevíracích nabídek a zrušte **zpracování** textového pole.  
   
-4.  Vymažte všechna pole, pro které nechcete zadat hodnoty.  
+4. Zrušte zaškrtnutí všech polí, u kterých nechcete k určení hodnot.  
   
-    > [!TIP]
-    >  Chcete-li přehlednost obrazovky, vyberte **skrýt Spy** možnost. Tato možnost ukrývá hlavní nástroje Spy ++ okně ponechat pouze **najít okno** dialogové okno zobrazené na jiné aplikace. Hlavní okno nástroje Spy ++ obnovení po kliknutí na tlačítko **OK** nebo **zrušit**, nebo když zrušíte **skrýt nástroje Spy ++** možnost.  
+   > [!TIP]
+   >  Chcete-li přehlednost obrazovky, vyberte **skrýt Spy** možnost. Tato možnost ukrývá hlavním nástroje Spy ++ okně byste museli opustit pouze **najít okno** dialogové okno viditelné nad vaší aplikace. Obnovení hlavního okna nástroje Spy ++, po kliknutí na **OK** nebo **zrušit**, nebo pokud zrušíte výběr **skrýt Spy ++** možnost.  
   
-5.  Zvolte **až** nebo **dolů** pro počáteční směr hledání.  
+5. Zvolte **nahoru** nebo **dolů** pro počáteční směr hledání.  
   
-6.  Click **OK**.  
+6. Klikněte na tlačítko **OK**.  
   
- Pokud je nalezen odpovídající zprávu, zvýrazní se v okně zobrazení zprávy. V tématu [zobrazení zpráv](../debugger/messages-view.md).
+   Pokud je nalezen odpovídající zprávu, je zvýrazněn v okně zobrazení zprávy. Zobrazit [zobrazení zpráv](../debugger/messages-view.md).

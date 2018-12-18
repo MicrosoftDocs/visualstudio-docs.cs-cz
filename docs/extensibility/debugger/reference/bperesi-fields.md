@@ -1,5 +1,5 @@
 ---
-title: BPERESI_FIELDS | Microsoft Docs
+title: BPERESI_FIELDS | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2280740766e20a048f57e58590cc529d98b85264
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a9530e950ddd5dbf75fb10b5391dc658bdf899fc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49869935"
 ---
 # <a name="bperesifields"></a>BPERESI_FIELDS
-Určuje informace, které mají být načteny o selhání rozlišení zarážky.  
+Určuje informace, které se mají načíst informace o neúspěšných rozlišení zarážku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,29 +52,29 @@ public enum enum_BPERESI_FIELDS {
   
 ## <a name="members"></a>Členové  
  PERESI_BPRESLOCATION  
- Inicializovat nebo použití `bpResLocation` (zarážek umístění řešení) pole [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) struktury.  
+ Inicializace/použít `bpResLocation` oblasti (umístění zarážky řešení) [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) struktury.  
   
  BPERESI_PROGRAM  
- Inicializace nebo použití `pProgram` pole z `BP_ERROR_RESOLUTION_INFO` struktura.  
+ Inicializace/použít `pProgram` pole `BP_ERROR_RESOLUTION_INFO` struktury.  
   
  BPERESI_THREAD  
- Inicializace nebo použití `pThread` pole z `BP_ERROR_RESOLUTION_INFO` struktura.  
+ Inicializace/použít `pThread` pole `BP_ERROR_RESOLUTION_INFO` struktury.  
   
  BPERESI_MESSAGE  
- Inicializace nebo použití `bstrMessage` pole z `BP_ERROR_RESOLUTION_INFO` struktura.  
+ Inicializace/použít `bstrMessage` pole `BP_ERROR_RESOLUTION_INFO` struktury.  
   
  BPERESI_TYPE  
- Inicializovat nebo použití `dwType` (typ zarážek) pole `BP_ERROR_RESOLUTION_INFO` struktura.  
+ Inicializace/použít `dwType` pole (typ zarážky) `BP_ERROR_RESOLUTION_INFO` struktury.  
   
  BPERESI_ALLFIELDS  
- Inicializace nebo použití všechna pole `BP_ERROR_RESOLUTION_INFO` struktura.  
+ Inicializace/použít všechna pole `BP_ERROR_RESOLUTION_INFO` struktury.  
   
 ## <a name="remarks"></a>Poznámky  
- Předá jako parametr, který se [GetResolutionInfo](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md) metoda označíte, které pole [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) struktura mají být inicializován.  
+ Předán jako parametr [GetResolutionInfo](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2-getresolutioninfo.md) indikace polí s [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) struktury mají být inicializovány.  
   
- Tyto hodnoty se také používají k označení, která pole v `BP_ERROR_RESOLUTION_INFO` struktura jsou používané a platné, pokud je vrácen této struktury.  
+ Tyto hodnoty jsou také použity k označení, která pole v `BP_ERROR_RESOLUTION_INFO` struktury jsou používány a platné při vrácení této struktury.  
   
- Tyto hodnoty mohou být kombinovány s bitové `OR`.  
+ Tyto hodnoty lze kombinovat pomocí logické bitové `OR`.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

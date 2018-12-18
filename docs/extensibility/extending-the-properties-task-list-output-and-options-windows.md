@@ -1,5 +1,5 @@
 ---
-title: Rozšíření vlastnosti, seznam úkolů, výstupní a možnosti Windows | Microsoft Docs
+title: Rozšíření vlastností, seznamu úloh, výstup a možnosti Windows | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,40 +18,41 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4db9bb9101bd06921814132856fab0335a4a2530
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ebff9aaeb49d99b26b92d1908e22397b9ab0a20d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49868687"
 ---
-# <a name="extending-the-properties-task-list-output-and-options-windows"></a>Rozšíření vlastnosti, seznam úkolů, výstupní a možnosti Windows
-Žádné okno nástroje v sadě Visual Studio můžete přistupovat. Tento návod ukazuje, jak integrovat do nové informace o vaší okno nástroje **možnosti** stránky a nové nastavení na **vlastnosti** stránky a také jak k zápisu do **seznam úkolů** a **výstup** systému windows.  
+# <a name="extend-the-properties-task-list-output-and-options-windows"></a>Rozšíření vlastností, seznamu úkolů, výstupu a možnosti systému windows
+Jakékoli okno nástroje v sadě Visual Studio můžete přistupovat. Tento návod ukazuje, jak integrovat informace o vaší panelu nástrojů do nového **možnosti** stránky a nové nastavení na **vlastnosti** stránky a také způsob zápisu do **seznamu úkolů** a **výstup** systému windows.  
   
 ## <a name="prerequisites"></a>Požadavky  
- Od sady Visual Studio 2015 se neinstalovat sadu Visual Studio SDK z webu Stažení softwaru. Je zahrnuta jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+ Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK ze služby Stažení softwaru. Je zahrnut jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## <a name="create-an-extension-with-a-tool-window"></a>Vytvoření rozšíření s okno nástroje  
+## <a name="create-an-extension-with-a-tool-window"></a>Vytváření rozšíření pomocí panelu nástrojů  
   
-1.  Vytvoření projektu s názvem **TodoList** pomocí VSIX šablony a přidat vlastní nástroj šablonu položky okno s názvem **TodoWindow**.  
-  
-    > [!NOTE]
-    >  Další informace o vytváření rozšíření s okno nástroje najdete v tématu [vytváření rozšíření s okno nástroje](../extensibility/creating-an-extension-with-a-tool-window.md).  
-  
-## <a name="set-up-the-tool-window"></a>Nastavit okno nástroje  
- Přidáte textové pole pro zadání nová položka ToDo, tlačítko Přidat novou položku do seznamu a ListBox k zobrazení položek v seznamu.  
-  
-1.  V TodoWindow.xaml odstraňte, textové pole a StackPanel ovládacích prvků z UserControl.  
+1.  Vytvoření projektu s názvem **TodoList** VSIX šablony a přidat šablonu vlastního nástroje okna položku s názvem **TodoWindow**.  
   
     > [!NOTE]
-    >  Tím nedojde k odstranění **button1_Click** obslužná rutina události, která bude používat v pozdější fázi.  
+    >  Další informace o vytváření rozšíření pomocí panelu nástrojů najdete v tématu [vytváření rozšíření pomocí panelu nástrojů](../extensibility/creating-an-extension-with-a-tool-window.md).  
   
-2.  Z **všech ovládacích prvků WPF** části **sada nástrojů**, přetáhněte **plátno** řízení k mřížce.  
+## <a name="set-up-the-tool-window"></a>Vytvořit panel nástrojů  
+ Přidáte textové pole pro zadání nová položka ToDo, tlačítko Přidat novou položku do seznamu a seznam pro zobrazení položek v seznamu.  
   
-3.  Přetáhněte **TextBox**, **tlačítko**a **ListBox** na plátno. Umožňuje uspořádejte prvky, aby do textového pole a tlačítko jsou na stejné úrovni, a ListBox vyplní zbytek okna uvedenou pod nimi, stejně jako na obrázku níže.  
+1.  V *TodoWindow.xaml*, odstraňte z uživatelský ovládací prvek tlačítko, textového pole a StackPanel – ovládací prvky.  
   
-     ![Dokončení okno nástroje](../extensibility/media/t5-toolwindow.png "okno T5 nástrojů")  
+    > [!NOTE]
+    >  Tím nedojde k odstranění **button1_Click** obslužnou rutinu události, která bude znovu použít v pozdějším kroku.  
   
-4.  V podokně XAML najít tlačítko a nastavte vlastnost obsahu na **přidat**. Znovu připojit tlačítko obslužné rutiny události pro ovládací prvek tlačítko přidáním `Click="button1_Click"` atribut. Blok plátno by měl vypadat takto:  
+2.  Z **všechny ovládací prvky WPF** část **nástrojů**, přetáhněte **plátna** ovládací prvek mřížky.  
+  
+3.  Přetáhněte **TextBox**, **tlačítko**a **ListBox** na plátno. Uspořádejte prvky tak, aby textového pole a tlačítko se na stejné úrovni, a objekt ListBox vyplní rest v okně níže, stejně jako v následujícím obrázku.  
+  
+     ![Dokončení panel nástrojů](../extensibility/media/t5-toolwindow.png "T5 – okno")  
+  
+4.  V podokně XAML najít tlačítko a nastavte jeho vlastnost obsahu **přidat**. Znovu připojte obslužné rutiny události tlačítka pro ovládací prvek tlačítka tak, že přidáte `Click="button1_Click"` atribut. Blok plátna by měl vypadat nějak takto:  
   
     ```xml  
     <Canvas HorizontalAlignment="Left" Width="306">  
@@ -61,15 +62,15 @@ ms.lasthandoff: 04/16/2018
     </Canvas>  
     ```  
   
-#### <a name="customize-the-constructor"></a>Přizpůsobení konstruktoru  
+### <a name="customize-the-constructor"></a>Přizpůsobení konstruktoru  
   
-1.  V souboru TodoWindowControl.xaml.cs, přidejte následující příkaz using:  
+1.  V *TodoWindowControl.xaml.cs* soubor, přidejte následující příkaz using:  
   
     ```csharp  
     using System;  
     ```  
   
-2.  Přidejte veřejný odkaz na TodoWindow a mít konstruktor TodoWindowControl přebírají parametr TodoWindow. Kód by měl vypadat takto:  
+2.  Přidejte veřejný odkaz na TodoWindow a mít konstruktor TodoWindowControl TodoWindow parametr. Kód by měl vypadat takto:  
   
     ```csharp  
     public TodoWindow parent;  
@@ -81,7 +82,7 @@ ms.lasthandoff: 04/16/2018
     }  
     ```  
   
-3.  V TodoWindow.cs změňte TodoWindowControl konstruktor zahrnout parametr TodoWindow. Kód by měl vypadat takto:  
+3.  V *TodoWindow.cs*, změňte TodoWindowControl konstruktor zahrnout parametr TodoWindow. Kód by měl vypadat takto:  
   
     ```csharp  
     public TodoWindow() : base(null)  
@@ -94,65 +95,65 @@ ms.lasthandoff: 04/16/2018
     }  
     ```  
   
-## <a name="create-an-options-page"></a>Vytvořit stránku možnosti  
- Můžete zadat na stránce v nástroji **možnosti** dialogu tak, aby uživatelé mohou změnit nastavení pro panel nástrojů. Vytvoření stránku možnosti vyžaduje, aby obě třídu, která popisuje možnosti a položku v souboru TodoListPackage.cs nebo TodoListPackage.vb.  
+## <a name="create-an-options-page"></a>Vytvoření stránky Možnosti  
+ Můžete zadat stránku **možnosti** dialogové okno tak, aby uživatelé mohou změnit nastavení pro panel nástrojů. Vytvoření stránky možnosti vyžaduje obě třídy, která popisuje možnosti a položky v *TodoListPackage.cs* nebo *TodoListPackage.vb* souboru.  
   
-1.  Přidejte třídu s názvem `ToolsOptions.cs`. Ujistěte se, dědí z třídy ToolsOptions <xref:Microsoft.VisualStudio.Shell.DialogPage>.  
+1. Přidejte třídu pojmenovanou `ToolsOptions.cs`. Ujistěte se, `ToolsOptions` třída dědí <xref:Microsoft.VisualStudio.Shell.DialogPage>.  
   
-    ```csharp  
-    class ToolsOptions : DialogPage  
-    {  
-    }  
-    ```  
+   ```csharp  
+   class ToolsOptions : DialogPage  
+   {  
+   }  
+   ```  
   
-2.  Přidejte následující příkaz using:  
+2. Přidejte následující příkaz using:  
   
-    ```csharp  
-    using Microsoft.VisualStudio.Shell;  
-    ```  
+   ```csharp  
+   using Microsoft.VisualStudio.Shell;  
+   ```  
   
-3.  Na stránce Možnosti v tomto návodu obsahuje pouze jednu možnost s názvem DaysAhead. Přidejte soukromé pole s názvem **daysAhead** a vlastnost s názvem **DaysAhead** k třídě ToolsOptions:  
+3. Na stránce Možnosti v tomto názorném postupu obsahuje pouze jednu možnost s názvem DaysAhead. Přidat soukromé pole s názvem **daysAhead** a vlastnost s názvem **DaysAhead** k `ToolsOptions` třídy:  
   
-    ```csharp  
-    private double daysAhead;  
+   ```csharp  
+   private double daysAhead;  
   
-    public double DaysAhead  
-    {  
-        get { return daysAhead; }  
-        set { daysAhead = value; }  
-    }  
-    ```  
+   public double DaysAhead  
+   {  
+       get { return daysAhead; }  
+       set { daysAhead = value; }  
+   }  
+   ```  
   
- Nyní je nutné provést projektu vědět, tato stránka Možnosti.  
+   Nyní je třeba projekt vědět, tato stránka možností.  
   
-#### <a name="make-the-options-page-available-to-users"></a>Na stránce Možnosti zpřístupnit uživatelům  
+### <a name="make-the-options-page-available-to-users"></a>Na stránce Možnosti zpřístupnit uživatelům  
   
-1.  V TodoWindowPackage.cs, přidejte <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> k třídě TodoWindowPackage:  
+1.  V *TodoWindowPackage.cs*, přidejte <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> k `TodoWindowPackage` třídy:  
   
     ```csharp  
     [ProvideOptionPage(typeof(ToolsOptions), "ToDo", "General", 101, 106, true)]  
     ```  
   
-2.  První parametr konstruktoru ProvideOptionPage je typ třídy ToolsOptions, který jste vytvořili dříve. Druhý parametr "ToDo", je název kategorie **možnosti** dialogové okno. Třetí parametr "Obecné", je název podkategorie **možnosti** dialogové, kde bude k dispozici na stránce Možnosti. Následující dva parametry jsou ID prostředku pro řetězce; Název kategorie je první a druhý je název podkategorie. Konečný parametr určuje, zda tato stránka je přístupná pomocí automatizace.  
+2.  První parametr konstruktoru ProvideOptionPage je typem třídy `ToolsOptions`, který jste vytvořili dříve. Druhý parametr "ToDo", je název kategorie **možnosti** dialogové okno. Třetí parametr, název podkategorie "Obecné", je **možnosti** dialogovému oknu, kde bude k dispozici na stránce Možnosti. Následující dva parametry jsou ID prostředků pro řetězce; Název kategorie je první a druhý je název podkategorie. Poslední parametr určuje, zda tato stránka je přístupná pomocí automatizace.  
   
-     Když uživatel otevře stránka Možnosti, by měl vypadat podobně jako na následujícím obrázku.  
+     Když uživatel otevře vaše stránka Možnosti, by měla vypadat podobně jako na následujícím obrázku.  
   
      ![Stránka Možnosti](../extensibility/media/t5optionspage.gif "T5OptionsPage")  
   
-     Všimněte si, kategorii **ToDo** a podkategorii **Obecné**.  
+     Všimněte si kategorie **ToDo** a subcategory **Obecné**.  
   
-## <a name="make-data-available-to-the-properties-window"></a>Zpřístupnit Data do okna vlastností  
- Chcete-li proveďte informace o seznamu můžete zpřístupnit vytvořením třídy s názvem úkolu, který obsahuje informace o jednotlivých položek v seznamu úkolů.  
+## <a name="make-data-available-to-the-properties-window"></a>Zpřístupnění dat v okně Vlastnosti  
+ Můžete zpřístupnit informace o seznamu ToDo tak, že vytvoříte třídu s názvem `TodoItem` , která uchovává informace o jednotlivých položek v seznamu úkolů.  
   
-1.  Přidejte třídu s názvem `TodoItem.cs`.  
+1.  Přidejte třídu pojmenovanou `TodoItem.cs`.  
   
-     Pokud okno nástroje jsou k dispozici uživatelům, položky v seznamu budou odpovídat TodoItems. Když uživatel vybere jeden z těchto položek v ovládacím prvku rozevíracího seznamu, **vlastnosti** okně se zobrazí informace o položce.  
+     Když je okno nástroje dostupné pro uživatele, položky v seznamu se bude reprezentovat pomocí TodoItems. Když uživatel vybere jeden z těchto položek v seznamu, **vlastnosti** okně se zobrazí informace o položce.  
   
-     Jak zpřístupnit data v **vlastnosti** okně zapnout data do veřejné vlastnosti, které mají dva speciální atributy `Description` a `Category`. `Description` je text, který se zobrazí v dolní části **vlastnosti** okno. `Category` Určuje, kde, vlastnost by se měla objevit, když **vlastnosti** okno se zobrazí v **Categorized** zobrazení. Na následujícím obrázku **vlastnosti** je okno **Categorized** zobrazení, **název** vlastnost v **ToDo pole** kategorie vybrané a popis **název** vlastnosti se zobrazí v dolní části okna.  
+     Chcete-li data zpřístupnit ve **vlastnosti** okně zapnout data do veřejné vlastnosti, které mají speciální dva atributy, `Description` a `Category`. `Description` je text, který se zobrazí v dolní části **vlastnosti** okna. `Category` Určuje, kde vlastnost by měla zobrazit **vlastnosti** okna se zobrazí v **Categorized** zobrazení. Na následujícím obrázku **vlastnosti** je okno v **Categorized** zobrazení, **název** vlastnost v **ToDo pole** kategorie je Vybraná a popis **název** vlastnost se zobrazí v dolní části okna.  
   
-     ![Vlastnosti – okno](../extensibility/media/t5properties.png "T5Properties")  
+     ![Okno vlastností](../extensibility/media/t5properties.png "T5Properties")  
   
-2.  Přidejte následující příkazy using TodoItem.cs souboru.  
+2.  Přidejte následující příkazy using *TodoItem.cs* souboru.  
   
     ```csharp  
     using System.ComponentModel;  
@@ -160,7 +161,7 @@ ms.lasthandoff: 04/16/2018
     using Microsoft.VisualStudio.Shell.Interop;  
     ```  
   
-3.  Přidat `public` – modifikátor přístupu k deklaraci třídy.  
+3.  Přidat `public` modifikátor přístupu k deklaraci třídy.  
   
     ```csharp  
     public class TodoItem  
@@ -168,7 +169,7 @@ ms.lasthandoff: 04/16/2018
     }  
     ```  
   
-     Přidáte dvě vlastnosti Name a DueDate. Provedeme UpdateList() a CheckForErrors() později.  
+     Přidejte dvě vlastnosti `Name` a `DueDate`. Použijeme `UpdateList()` a `CheckForErrors()` později.  
   
     ```csharp  
     public class TodoItem  
@@ -203,7 +204,7 @@ ms.lasthandoff: 04/16/2018
     }  
     ```  
   
-4.  Přidejte privátní odkaz na uživatelský ovládací prvek. Přidejte konstruktor, který přebírá název pro tuto položku úkolů a uživatelského ovládacího prvku. Najít hodnotu pro daysAhead, získá vlastnost stránka Možnosti.  
+4.  Přidejte privátní odkaz na uživatelský ovládací prvek. Přidejte konstruktor, který přebírá uživatelského ovládacího prvku a název pro tuto položku seznamu úkolů. Najít hodnotu pro `daysAhead`, získá vlastnost stránky možnosti.  
   
     ```csharp  
     private TodoWindowControl parent;  
@@ -232,7 +233,7 @@ ms.lasthandoff: 04/16/2018
     }  
     ```  
   
-5.  Protože instance `TodoItem` třída bude uložen v seznamu a ListBox zavolá `ToString` funkce, musí přetížení `ToString` funkce. Přidejte následující kód do TodoItem.cs, po konstruktoru a před ukončením třídy.  
+5.  Protože instance `TodoItem` třídy se uloží v seznamu a seznam bude volat `ToString` funkce, třeba přetížení `ToString` funkce. Přidejte následující kód, který *TodoItem.cs*po konstruktoru a před ukončením třídy.  
   
     ```csharp  
     public override string ToString()  
@@ -241,7 +242,7 @@ ms.lasthandoff: 04/16/2018
     }  
     ```  
   
-6.  V TodoWindowControl.xaml.cs, přidejte do třídy TodoWindowControl pro metody se zakázaným inzerováním `CheckForError` a `UpdateList` metody. Umístěte je po ProcessDialogChar a před konec souboru.  
+6.  V *TodoWindowControl.xaml.cs*, přidejte metody zástupných procedur `TodoWindowControl` třídy pro `CheckForError` a `UpdateList` metody. Vytvořte z nich po ProcessDialogChar a do konce souboru.  
   
     ```csharp  
     public void CheckForErrors()  
@@ -252,14 +253,14 @@ ms.lasthandoff: 04/16/2018
     }  
     ```  
   
-     `CheckForError` Metoda zavolá metodu, která má stejný název v nadřazeném objektu a dané metody bude zkontrolujte, jestli všechny chyby mít došlo k chybě a je správně zpracovat. `UpdateList` Metoda zaktualizuje ListBox v nadřazeného ovládacího prvku; metoda je volána, když `Name` a `DueDate` vlastnosti v této změně třídy. Budou prováděny později.  
+     `CheckForError` Metoda bude volat metodu, která má stejný název v nadřazeném objektu a tato metoda zkontroluje, jestli došlo k nějaké chyby a správně zpracovávat. `UpdateList` Metoda aktualizuje objekt ListBox nadřazeného ovládacího prvku; metoda je volána, když `Name` a `DueDate` vlastnosti v této změně třídy. Budou prováděny později.  
   
-## <a name="integrate-into-the-properties-window"></a>Integrovat do okna vlastností  
- Nyní napsat kód, který spravuje ListBox, které bude být vázáno **vlastnosti** okno.  
+## <a name="integrate-into-the-properties-window"></a>Integrace do okna Vlastnosti  
+ Teď zadejte kód, který spravuje objekt ListBox, které budou svázány s **vlastnosti** okna.  
   
- Je nutné změnit tlačítko klikněte na obslužnou rutinu do textového pole číst, vytvářet úkolu a přidá ji do seznamu.  
+ Je nutné změnit na tlačítko klikněte obslužná rutina se má číst textové pole, vytvoření úkolu a přidá ho do objektu ListBox.  
   
-1.  Nahradit existující `button1_Click` funkce s kódem, který vytvoří nový TodoItem a přidá ji do seznamu. Volá TrackSelection(), který bude později definovaný.  
+1.  Nahraďte existující `button1_Click` funkce s kódem, který vytvoří nové TodoItem a přidá ho do objektu ListBox. Volá `TrackSelection()`, která bude obsahovat definici později.  
   
     ```csharp  
     private void button1_Click(object sender, RoutedEventArgs e)  
@@ -274,9 +275,9 @@ ms.lasthandoff: 04/16/2018
     }  
     ```  
   
-2.  V návrhovém zobrazení vyberte ListBox – ovládací prvek. V **vlastnosti** okno kliknutím **obslužné rutiny událostí** tlačítko a vyhledejte události SelectionChanged. Zadejte do textového pole s **listBox_SelectionChanged**. Díky tomuto přidá zástupnou proceduru pro obslužnou rutinu SelectionChanged a přiřadí ji k události.  
+2.  V návrhovém zobrazení vyberte ovládací prvek ListBox. V **vlastnosti** okno kliknutím **obslužné rutiny událostí** tlačítko a najít **SelectionChanged** událostí. Zadejte do textového pole **listBox_SelectionChanged**. To přidá zástupnou proceduru pro obslužnou rutinu SelectionChanged a přiřadí ji k události.  
   
-3.  Implementujte metodu TrackSelection(). Vzhledem k tomu, že budete muset získat <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> služby, je nutné provést <xref:Microsoft.VisualStudio.Shell.WindowPane.GetService%2A> přístupné TodoWindowControl. Přidejte následující metodu do třídy TodoWindow:  
+3.  Implementace `TrackSelection()` metody. Protože je budete potřebovat získat <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell> <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> služby, třeba provedete <xref:Microsoft.VisualStudio.Shell.WindowPane.GetService%2A> přístupné TodoWindowControl. Přidejte následující metodu do `TodoWindow` třídy:  
   
     ```  
     internal object GetVsService(Type service)  
@@ -285,7 +286,7 @@ ms.lasthandoff: 04/16/2018
     }  
     ```  
   
-4.  Přidejte následující příkazy using do TodoWindowControl.xaml.cs:  
+4.  Přidejte následující příkazy using do *TodoWindowControl.xaml.cs*:  
   
     ```csharp  
     using System.Runtime.InteropServices;  
@@ -294,7 +295,7 @@ ms.lasthandoff: 04/16/2018
     using Microsoft.VisualStudio.Shell;  
     ```  
   
-5.  Obslužná rutina SelectionChanged vyplňte takto:  
+5.  Obslužná rutina SelectionChanged vyplňte následujícím způsobem:  
   
     ```  
     private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)  
@@ -303,7 +304,7 @@ ms.lasthandoff: 04/16/2018
     }  
     ```  
   
-6.  Nyní, vyplňte TrackSelection funkce, který bude poskytovat integrace s **vlastnosti** okno. Tato funkce je volána, když uživatel přidá položku do seznamu, nebo kliknutím na položku v seznamu. Přidá obsah objektu ListBox SelectionContainer a předá SelectionContainer k **vlastnosti** uživatele systému Windows <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A> obslužné rutiny události. Služba TrackSelection sleduje vybrané objekty v uživatelském rozhraní (UI) a zobrazí jejich vlastnosti  
+6.  Nyní, vyplňte TrackSelection funkce, který bude zajišťovat integrace s **vlastnosti** okna. Tato funkce je volána, když uživatel přidá položku do seznamu nebo klepne na položku v seznamu. Přidá obsah objektu ListBox SelectionContainer a předává SelectionContainer k **vlastnosti** okna <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A> obslužné rutiny události. Služba TrackSelection sleduje vybrané objekty v uživatelském rozhraní (UI) a zobrazí jejich vlastnosti  
   
     ```csharp  
     private SelectionContainer mySelContainer;  
@@ -351,9 +352,9 @@ ms.lasthandoff: 04/16/2018
     }  
     ```  
   
-     Teď, když máte třídu, **vlastnosti** okno můžete použít, můžete integrovat **vlastnosti** okno s okno nástroje. Když uživatel klikne na položku v ovládacím prvku rozevíracího seznamu v okně nástroje **vlastnosti** okně by měly být aktualizovány odpovídajícím způsobem. Podobně platí, když uživatel změní položky ToDo v **vlastnosti** okna, je třeba aktualizovat související položku.  
+     Teď, když máte třídu, která **vlastnosti** okna můžete použít, můžete integrovat **vlastnosti** okna panel nástrojů. Když uživatel klikne na položku v seznamu v panelu nástrojů **vlastnosti** okno by měla být podle nich aktualizuje. Podobně, když uživatel změní položku seznamu úkolů v **vlastnosti** okna, je třeba aktualizovat související položku.  
   
-7.  Nyní přidejte zbývající kód funkce UpdateList v TodoWindowControl.xaml.cs. Měl by vyřadit a znovu přidat upravené TodoItem ze seznamu.  
+7.  Teď přidejte zbytek kódu funkce UpdateList v *TodoWindowControl.xaml.cs*. Měli byste ho vyřadit a znovu přidejte upravené TodoItem ze seznamu.  
   
     ```csharp  
     public void UpdateList(TodoItem item)  
@@ -365,20 +366,20 @@ ms.lasthandoff: 04/16/2018
     }  
     ```  
   
-8.  Otestujte svůj kód. Sestavte projekt a spusťte ladění. Experimentální instanci by se zobrazit.  
+8.  Otestujte svůj kód. Sestavte projekt a spusťte ladění. Experimentální instanci aplikace by se zobrazit.  
   
-9. Otevřete **Nástroje / možnosti** stránky. Měli byste vidět kategorii úkolů v levém podokně. Kategorie jsou uvedeny v abecedním, takže podívejte se do části Ts.  
+9. Otevřít **nástroje** > **možnosti** stránky. Měli byste vidět kategorii ToDo v levém podokně. Kategorie jsou uvedeny v abecedním, takže podívejte se do části Ts.  
   
-10. Na stránce Možnosti Todo, měli byste vidět vlastnost nastavena na DaysAhead **0**. Změňte ho na **2**.  
+10. Na **Todo** stránka Možnosti, měli byste vidět `DaysAhead` vlastnost nastavena na hodnotu **0**. Změňte ho na **2**.  
   
-11. V zobrazení nebo ostatní okna nabídce otevřete **TodoWindow**. Typ **koncovým datem** textového pole a klikněte na **přidat**.  
+11. Na **zobrazení / ostatní Windows** nabídce otevřete **TodoWindow**. Typ **EndDate** na textové pole a klikněte na **přidat**.  
   
 12. V seznamu byste měli vidět dva dny pozdější než dnešní datum.  
   
-## <a name="add-text-to-the-output-window-and-items-to-the-task-list"></a>Přidat Text do okna výstupu a položky do seznamu úkolů  
- Pro **seznam úkolů**, vytvořit nový objekt typu úloh a poté přidejte tento objekt úlohy pro **seznam úkolů** voláním metody jeho přidat. Zapsat do **výstup** volat jeho getpane – metoda pro získání objektu podokně a potom volejte metodu OutputString objektu podokně.  
+## <a name="add-text-to-the-output-window-and-items-to-the-task-list"></a>Přidejte text do okna výstup a položky do seznamu úkolů  
+ Pro **seznamu úkolů**, vytvořit nový objekt typu úlohy a pak přidejte tento objekt úlohy k **seznamu úkolů** voláním jeho `Add` metoda. Zapsat do **výstup** okna, můžete volat jeho `GetPane` volání metody k získání objektu podokně a pak `OutputString` metodu objektu podokně.  
   
-1.  V TodoWindowControl.xaml.cs v `button1_Click` metoda, přidat kód slouží k získání **Obecné** podokně **výstup** okno (což je výchozí nastavení) a zápis do. Metoda by měla vypadat takto:  
+1.  V *TodoWindowControl.xaml.cs*v `button1_Click` metodu, přidejte kód pro získání **Obecné** podokně **výstup** okno (což je výchozí hodnota) a do ní zapisovat. Metoda by měla vypadat nějak takto:  
   
     ```csharp  
     private void button1_Click(object sender, EventArgs e)  
@@ -405,7 +406,7 @@ ms.lasthandoff: 04/16/2018
     }  
     ```  
   
-2.  Chcete-li přidat položky do seznamu úkolů, musíte třídy TodoWindowControl přidat vnořené třídy. Vnořené třídy musí být odvozen z <xref:Microsoft.VisualStudio.Shell.TaskProvider>. Přidejte následující kód na konec TodoWindowControl třídy.  
+2.  Chcete-li přidat položky do seznamu úkolů, musíte třídy TodoWindowControl přidat vnořené třídy. Vnořené třídy musí být odvozen od <xref:Microsoft.VisualStudio.Shell.TaskProvider>. Přidejte následující kód do konce `TodoWindowControl` třídy.  
   
     ```csharp  
     [Guid("72de1eAD-a00c-4f57-bff7-57edb162d0be")]  
@@ -418,7 +419,7 @@ ms.lasthandoff: 04/16/2018
     }  
     ```  
   
-3.  Dále přidejte privátní odkaz na TodoTaskProvider a CreateProvider() metodu do třídy TodoWindowControl. Kód by měl vypadat takto:  
+3.  Dále přidejte odkaz na privátní `TodoTaskProvider` a `CreateProvider()` metodu `TodoWindowControl` třídy. Kód by měl vypadat takto:  
   
     ```csharp  
     private TodoWindowTaskProvider taskProvider;  
@@ -432,7 +433,7 @@ ms.lasthandoff: 04/16/2018
     }  
     ```  
   
-4.  Přidejte do třídy TodoWindowControl ClearError(), který vymaže seznamu úkolů, a ReportError(), který přidá položku do seznamu úkolů.  
+4.  Přidat `ClearError()`, který zruší seznam úkolů a `ReportError()`, které přidá položku do seznamu úkolů na `TodoWindowControl` třídy.  
   
     ```csharp  
     private void ClearError()  
@@ -464,7 +465,7 @@ ms.lasthandoff: 04/16/2018
     }  
     ```  
   
-5.  Teď následujícím způsobem implementujte metodu CheckForErrors.  
+5.  Teď implementovat `CheckForErrors` metodu následujícím způsobem.  
   
     ```csharp  
     public void CheckForErrors()  
@@ -480,30 +481,30 @@ ms.lasthandoff: 04/16/2018
     }  
     ```  
   
-## <a name="trying-it-out"></a>Vyzkoušení ho  
+## <a name="try-it-out"></a>Vyzkoušejte si to  
   
-1.  Sestavte projekt a spusťte ladění. Zobrazí se experimentální instanci.  
+1.  Sestavte projekt a spusťte ladění. Zobrazí se experimentální instance.  
   
-2.  Otevřete TodoWindow (**zobrazení nebo jiných Windows nebo TodoWindow**).  
+2.  Otevřít **TodoWindow** (**zobrazení** > **jiných Windows** > **TodoWindow**).  
   
-3.  Zadejte text do textového pole a pak klikněte na **přidat**.  
+3.  Zadejte text do textového pole a potom klikněte na tlačítko **přidat**.  
   
-     Datum splatnosti 2 dní od dnešního dne se přidá do seznamu. Nebudou vygenerovány žádné chyby a **seznam úkolů** (**zobrazení / úloh seznamu**) by měl mít žádné položky.  
+     Termín splnění 2 dní od dnešního dne je přidán do seznamu. Nebudou vygenerovány žádné chyby a **seznamu úkolů** (**zobrazení** > **seznamu úkolů**) by měly obsahovat žádné položky.  
   
-4.  Teď změňte nastavení na **nástroje / Možnosti / ToDo** stránku z **2** zpět na **0**.  
+4.  Teď změňte nastavení na **nástroje** > **možnosti** > **ToDo** stránku ze **2** zpět do **0**.  
   
-5.  Zadejte jiný v **TodoWindow** a pak klikněte na **přidat** znovu. Tím se spustí chybu a také položku v **seznam úkolů**.  
+5.  Zadejte jiný v **TodoWindow** a potom klikněte na tlačítko **přidat** znovu. Tím se spustí chybu a také položku v **seznamu úkolů**.  
   
-     Při přidávání položek, počáteční datum je nastaveno nyní plus dvou dnů.  
+     S přidáváním položek, počáteční datum je nastaveno na nyní plus 2 dny.  
   
-6.  Na **zobrazení** nabídky, klikněte na tlačítko **výstup** otevřete **výstup** okno.  
+6.  Na **zobrazení** nabídky, klikněte na tlačítko **výstup** otevřít **výstup** okna.  
   
-     Všimněte si, že vždy, že přidáte položku, zobrazí se zpráva v **seznam úkolů** podokně.  
+     Všimněte si, že pokaždé, když se, že přidáte položku, zobrazí se zpráva v **seznamu úkolů** podokně.  
   
-7.  Klikněte na některou z položek v seznamu.  
+7.  Klikněte na jednu z položek v seznamu.  
   
-     **Vlastnosti** zobrazují dvě vlastnosti pro položku.  
+     **Vlastnosti** okně se zobrazí dvě vlastnosti položky.  
   
-8.  Jedna z vlastností změňte a stiskněte klávesu ENTER.  
+8.  Změňte jednu z vlastností a potom stiskněte klávesu **Enter**.  
   
-     Položka k aktualizaci v seznamu.
+     Při aktualizaci položky v seznamu.

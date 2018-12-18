@@ -1,0 +1,61 @@
+- name: Přehled
+  items:
+    - name: R Tools for Visual Studio
+      href: index.md
+    - name: Úloha Aplikace pro datovou vědu a analýzu
+      href: data-science-and-analytical-applications-workload.md
+- name: Rychlý start
+  items:
+    - name: Instalace
+      href: installing-r-tools-for-visual-studio.md
+    - name: Získání nápovědy
+      href: getting-started-help.md
+- name: Kurzy
+  items:
+    - name: Začínáme s R
+      href: getting-started-with-r.md
+- name: Ukázky kódu
+  href: getting-started-samples.md
+- name: Návody
+  items:
+    - name: Projekty v R
+      href: r-projects-in-visual-studio.md
+      items:
+        - name: Správce balíčků
+          href: r-package-manager-in-visual-studio.md
+        - name: Integrace SQL Serveru
+          href: integrating-sql-server-with-r.md
+    - name: Úpravy kódu
+      href: editing-r-code-in-visual-studio.md
+      items:
+        - name: IntelliSense
+          href: r-intellisense.md
+        - name: Analyzování kódu
+          href: linting-r-code.md
+        - name: Fragmenty kódu
+          href: code-snippets-for-r.md
+    - name: Pracovní prostory (místní a vzdálené)
+      href: r-workspaces-in-visual-studio.md
+      items:
+        - name: Nastavení vzdálených pracovních prostorů
+          href: setting-up-remote-r-workspaces.md
+        - name: Vzdálená služba R pro Linux
+          href: setting-up-remote-r-service-on-linux.md
+        - name: Použití kontejnerů Dockeru
+          href: using-docker-containers-with-r.md
+    - name: R Markdown
+      href: rmarkdown-with-r-in-visual-studio.md
+    - name: Interactive REPL
+      href: interactive-repl-for-r-in-visual-studio.md
+    - name: Vizualizace dat
+      href: visualizing-data-with-r-in-visual-studio.md
+    - name: Průzkumník proměnných
+      href: variable-explorer.md
+    - name: Ladění
+      href: debugging-r-in-visual-studio.md
+- name: Odkaz
+  items:
+    - name: Možnosti
+      href: options-for-r-tools-in-visual-studio.md
+    - name: Nejčastější dotazy
+      href: faq.md

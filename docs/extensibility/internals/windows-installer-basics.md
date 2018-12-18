@@ -1,5 +1,5 @@
 ---
-title: Základy Instalační služby systému Windows | Microsoft Docs
+title: Základy Instalační služby systému Windows | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,64 +14,65 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8fba35aba1e1947ee4eeeb59ca2225253e2aa3a8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 73d1462cd6a5dacf57939ae06e7b490235483a60
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49843129"
 ---
-# <a name="windows-installer-basics"></a>Základy Instalační služby systému Windows
-Instalační služba systému Windows instaluje a odinstaluje aplikace nebo softwarové produkty na počítači uživatele, provádění těchto úkolů v jednotkách nazývané jako komponenty Instalační služby systému Windows (někdy nazývané WICs nebo jenom komponenty). Identifikátor GUID identifikuje každého WIC, což je základní jednotkou instalace a u instalace pomocí Instalační služby systému Windows při počítání referencí.  
+# <a name="windows-installer-basics"></a>Základní informace o Instalační službě systému Windows
+Instalační program Windows instaluje a odinstaluje aplikací nebo softwarové produkty na počítači uživatele, provedení těchto úloh v jednotkách nazývaných součásti Instalační služby systému Windows (říká se jim WICs nebo pouze komponenty). Identifikátor GUID identifikuje každý WIC, což je základní jednotkou instalace a pro nastavení pomocí Instalační služby systému Windows pro počítání odkazů.  
   
  Úplnou dokumentaci Instalační služby systému Windows, naleznete v tématu Platform SDK [Instalační služby systému Windows](http://msdn.microsoft.com/library/aa372866.aspx).  
   
 ## <a name="authoring-a-vspackage"></a>Vytváření VSPackage  
- Instalační služba systému Windows používá instalační balíčky, které obsahují informace, které instalační služba systému Windows je potřeba instalovat, odinstalovat nebo oprava produktu a spustit instalační program uživatelské rozhraní (UI). Každý instalační balíček obsahuje soubor MSI, která obsahuje instalační databázi, souhrnné informace a datové proudy pro různé součásti instalace. Pokud chcete použít instalační program, musíte napsat instalace. Vzhledem k tomu, že instalační program organizuje instalace kolem koncept součásti a ukládá informace o instalaci v relační databázi, proces vytváření instalační balíček široce zahrnuje následující kroky:  
+ Instalační služby systému Windows používá instalační balíčky, které obsahují informace, které instalační služby systému Windows potřebuje k instalaci, odinstalaci nebo oprava produktu a spusťte instalační program uživatelského rozhraní (UI). Každý instalační balíček obsahuje soubor MSI, který obsahuje instalační databáze, datového proudu souhrnné informace a datových proudů různými částmi instalace. Pokud chcete použít instalační program, je nutné vytvořit instalace. Vzhledem k tomu, že instalační program uspořádá zařízení kolem koncepce součásti a ukládá informace o instalaci v relační databázi, proces vytváření instalačního balíčku široce zahrnuje následující kroky:  
   
-1.  Plánování vašeho nastavení vytváření pro podporu správy verzí a strategie vedle sebe.  
+1. Plánování nastavení pro vytváření pro podporu správy verzí a strategie vedle sebe.  
   
-2.  Určete funkce, která předkládá uživatelům.  
+2. Určete funkce, které se budou zobrazovat uživateli.  
   
-3.  Uspořádání VSPackage a závislosti do součásti.  
+3. VSPackage a závislosti uspořádejte do složek.  
   
-4.  Naplnění databáze instalace informace.  
+4. Naplnění databáze instalace informace.  
   
-5.  Ověření instalace balíčku.  
+5. Ověření instalace balíčku.  
   
- Tato dokumentace se týká především první a třetí kroky procesu. Při provádění těchto kroků můžete uspořádat vaše VSPackage funkce do WICs tak můžete rámce vaší verze a údržba strategie pro účet pro další verze [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Zbývající tři kroky jsou podrobně popsány v dokumentaci Instalační služby systému Windows v sadě SDK pro platformu.  
+   Tato dokumentace se týká především první a třetí kroků procesu. Při provádění těchto kroků můžete uspořádat vaše funkce balíčku VSPackage do WICs, můžete snímek vaší správy verzí a údržba strategie pro další verze [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Zbývající tři kroky jsou podrobně popsány v dokumentaci Platform SDK Instalační služby systému Windows.  
   
-## <a name="key-terms"></a>Klíčových pojmů  
- Následují definice klíčových pojmů související technologie Instalační služby systému Windows.  
+## <a name="key-terms"></a>Klíčové pojmy  
+ Následují definice klíčových pojmů související s technologií Instalační služby systému Windows.  
   
  Prostředek  
- Soubory, zástupce a klíče registru nebo a tak dále, může se nainstalovat do počítače. Tyto prostředky jsou logicky seskupeny do součásti Instalační služby systému Windows.  
+ Soubory, klíče registru, klávesové zkratky, nebo a tak dále, který může být instalován do počítače. Tyto prostředky jsou logicky seskupeny do součásti Instalační služby systému Windows.  
   
  Součást Instalační služby systému Windows (WIC)  
- Základní jednotka instalace představující logické seskupení souvisejících prostředků, které se instaluje a odinstaluje jako jednotku. Instalační služba systému Windows součásti jsou označeny součást jedinečné ID nebo identifikátor GUID. Navíc Instalační služby systému Windows udržuje jeho na úrovni WIC při počítání referencí. Maximální verze flexibilitu zahrnují více než jeden primární prostředek, například knihovny DLL, v dané WIC. Všimněte si, že po identifikaci a naplnit WIC, zadejte pro něj identifikátor GUID a nasadíte ji, nelze změnit jeho složení. Další informace najdete v tématu [uspořádání aplikace do komponenty](http://msdn.microsoft.com/library/aa370561.aspx).  
+ Základní jednotka instalace představující logické seskupení souvisejících prostředků, které se instaluje a odinstaluje jako celek. Instalační služby systému Windows součásti jsou označeny ID jedinečné součásti nebo identifikátor GUID. Kromě toho Instalační služby systému Windows udržuje jeho úrovni WIC pro počítání odkazů. Pro správu verzí maximální flexibilitu a zahrnout do dané WIC více než jednu primární prostředek, jako je například knihovny DLL. Všimněte si, že po identifikaci a naplnit WIC, poskytněte identifikátor GUID a nasaďte ho, nelze změnit jeho složení. Další informace najdete v tématu [uspořádání aplikace do komponenty](/windows/desktop/Msi/organizing-applications-into-components).  
   
  Balíček (Redist balíček)  
- Jednotka nasazení, který se skládá z soubor MSI a externí zdrojové soubory, ke kterým může bod tohoto souboru. Balíček obsahuje všechny informace, které instalační služba systému Windows je potřeba ke spuštění uživatelského rozhraní a instalace nebo odinstalace aplikace.  
+ Jednotka nasazení, které obsahuje soubor .msi a externí zdrojové soubory, ke kterým může odkazovat tento soubor. Balíček obsahuje všechny informace, které instalační služby systému Windows je potřeba ke spuštění uživatelského rozhraní a instalace nebo odinstalace aplikace.  
   
  Soubor MSI  
- Soubor strukturovaná COM úložiště obsahující pokyny a data požadovaná k instalaci aplikace. Každý balíček obsahuje alespoň jeden soubor .msi. Soubor MSI obsahuje instalační databáze, datový proud s souhrnné informace a může být jeden nebo více transformací a interní zdrojové soubory. Soubory k instalaci můžete buď být komprimované do soubor CAB a uložená v datovém proudu v souboru .msi nebo uložené, komprimované nebo nekomprimovaným mimo soubor .msi na zdrojovém médiu. Další informace najdete v tématu [přípony souborů Instalační služby systému Windows](http://msdn.microsoft.com/library/aa372842\(VS.85\).aspx).  
+ Soubor modelu COM strukturované úložiště obsahující pokyny a data požadovaná k instalaci aplikace. Každý balíček obsahuje alespoň jeden soubor MSI. Tento soubor .msi obsahuje instalační databáze, datový proud souhrnné informace a může být jeden nebo více transformací a interní zdrojové soubory. Soubory k instalaci můžete buď být komprimována do souboru a uložená v datovém proudu v souboru MSI nebo uložené, komprimované nebo nekomprimovaný mimo soubor .msi na zdrojové médium. Další informace najdete v tématu [přípony souborů Instalační služby systému Windows](/windows/desktop/Msi/windows-installer-file-extensions).  
   
 ## <a name="windows-installer-rules-enforcement"></a>Vynucení pravidel Instalační služby systému Windows  
- Dvě sady pravidel určit nasazení prostředků prostřednictvím součástí vašeho nastavení. Jedna sada pravidel se spravuje pomocí Instalační služby systému Windows, samostatně, zatímco by měl vynutit druhé sadě jako autor instalace.  
+ Dvě sady pravidel určit nasazení prostředků prostřednictvím součásti vašeho nastavení. Jedna sada pravidel se spravuje pomocí Instalační služby systému Windows, samostatně, zatímco druhá sada jako autor instalace by měl vynutit.  
   
 > [!NOTE]
->  Pouze v případě, že spustíte ověření vašeho souboru .msi, dojde k vynucení pravidel Instalační služby systému Windows. Nicméně jsou cautioned pro tato pravidla považovat za osvědčené postupy. Další informace najdete v tématu [ověřování instalační databázi](http://msdn.microsoft.com/library/aa372477\(VS.85\).aspx) a [ověřování balíčku](http://msdn.microsoft.com/library/aa370569\(VS.85\).aspx).  
+>  Vynucení pravidla Instalační služby systému Windows dojde pouze v případě, že spuštění ověření souboru .msi. Nicméně můžete se zobrazí se upozornění považovat za těchto pravidel osvědčených postupů. Další informace najdete v tématu [ověřování databáze instalace](/windows/desktop/Msi/validating-an-installation-database) a [ověřování balíčku](/windows/desktop/Msi/package-validation).  
   
-#### <a name="installer-enforced-rules"></a>Vynucené instalační program pravidla  
+#### <a name="installer-enforced-rules"></a>Pravidla vynucovat instalačního programu  
   
--   Všechny soubory v dané součásti musí být nainstalována na stejném adresáři. Naopak soubory nainstalované do samostatné složky musí patřit do samostatné součásti.  
+-   Všechny soubory v dané součásti musí být nainstalovány do stejného adresáře. Naopak soubory nainstalovat do samostatné složky musí patřit do samostatné součásti.  
   
--   Může existovat jenom jednu cestu ke klíči za součást. Cesta klíče je jednoduše souborů nebo registru klíč, který představuje celou součást.  
+-   Může existovat jenom jedna cesta ke klíči jednotlivé komponenty. Jako cestu ke klíči je jednoduše souborů nebo registru klíč, který představuje celé součást.  
   
-#### <a name="component-provider-responsibilities"></a>Součást zprostředkovatele odpovědnosti  
+#### <a name="component-provider-responsibilities"></a>Součást poskytovatele odpovědnosti  
   
--   Všechny dva prostředky, které může dodávat samostatně v budoucích verzích by měla existovat v samostatné součásti. Prostředky by měly být seskupené do stejné komponenty jenom v případě, že jste si jisti, že tyto prostředky se nikdy dodávat samostatně. Ve skutečnosti se doporučuje, všechny primární prostředky (například DLL) vždy existují v samostatných WICs. Další informace najdete v tématu [definování instalační program součásti](http://msdn.microsoft.com/library/aa368269\(VS.85\).aspx).  
+-   Žádné dva prostředky, které může dodávat odděleně v budoucích verzích by měla existovat v jednotlivých součástí. Prostředky by měly být seskupeny do pod stejnou komponentou pouze v případě, že jste si jisti, že tyto prostředky se nikdy dodávat odděleně. Ve skutečnosti se doporučuje, všechny primární prostředky (například DLL) vždy v samostatných WICs existovat. Další informace najdete v tématu [definování komponenty instalačního programu](/windows/desktop/Msi/defining-installer-components).  
   
--   Žádný verzí prostředek by měl někdy dodat ve více než jeden WIC.  
+-   Ve více než jeden WIC by nikdy dodávat systémovou správou verzí se žádný prostředek.  
   
 ## <a name="see-also"></a>Viz také  
- [Co se stane, když součást pravidla jsou přerušená?](http://msdn.microsoft.com/library/aa372795\(VS.85\).aspx)
+ [Co se stane, pokud jsou porušení pravidla komponenty?](/windows/desktop/Msi/what-happens-if-the-component-rules-are-broken)

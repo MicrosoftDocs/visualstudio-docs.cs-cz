@@ -1,0 +1,1 @@
+[Stáhněte si Visual Studio Community](http://go.microsoft.com/fwlink/?LinkId=524433) nebo [porovnejte edice sady Visual Studio](https://www.visualstudio.com/vs-2015-product-editions)

@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Programové ošetření událostí ovládacího prvku NamedRange | Microsoft Docs'
+title: 'Návod: Program ošetření událostí ovládacího prvku NamedRange'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -19,27 +19,28 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 623177120d58b7abd29b57d55db22b8490057bab
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3f8b55cda9576a0203857b3fdaeccbb205b42168
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49812515"
 ---
-# <a name="walkthrough-programming-against-events-of-a-namedrange-control"></a>Návod: Programové ošetření událostí ovládacího prvku NamedRange
-  Tento návod ukazuje, jak přidat <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacího prvku na listu aplikace Microsoft Office Excel a program před jeho události za použití pomocí nástroje pro vývoj pro Office v sadě Visual Studio.  
+# <a name="walkthrough-program-against-events-of-a-namedrange-control"></a>Návod: Program ošetření událostí ovládacího prvku NamedRange
+  Tento návod ukazuje, jak přidat <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacího prvku na list aplikace Microsoft Office Excel a program před jeho událostmi s využitím vývojových nástrojů Office v sadě Visual Studio.  
   
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]  
   
- Během tohoto návodu se dozvíte, jak:  
+ V tomto návodu se dozvíte, jak:  
   
 -   Přidat <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacího prvku do listu.  
   
--   Program proti <xref:Microsoft.Office.Tools.Excel.NamedRange> řídit události.  
+-   Programovat proti <xref:Microsoft.Office.Tools.Excel.NamedRange> řídit události.  
   
--   Testování projektu.  
+-   Otestování vašeho projektu.  
   
 > [!NOTE]  
->  Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [přizpůsobení prostředí Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
+>  Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [přizpůsobení integrovaného vývojového prostředí sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).  
   
 ## <a name="prerequisites"></a>Požadavky  
  K dokončení tohoto návodu budete potřebovat následující komponenty:  
@@ -48,122 +49,122 @@ ms.lasthandoff: 04/16/2018
   
 -   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] nebo [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].  
   
-## <a name="creating-the-project"></a>Vytvoření projektu  
- V tomto kroku vytvoříte projekt sešitu aplikace Excel pomocí sady Visual Studio.  
+## <a name="create-the-project"></a>Vytvoření projektu  
+ V tomto kroku vytvoříte pomocí sady Visual Studio projektu sešitu aplikace Excel.  
   
-#### <a name="to-create-a-new-project"></a>Chcete-li vytvořit nový projekt  
+### <a name="to-create-a-new-project"></a>Chcete-li vytvořit nový projekt  
   
-1.  Vytvoření projektu sešitu aplikace Excel s názvem **Moje rozsah událostí s názvem**. Ujistěte se, že **vytvoříte nový textový dokument** je vybrána. Další informace najdete v tématu [postupy: vytváření projektů Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
+1.  Vytvořte projekt sešitu aplikace Excel s názvem **Moje události s názvem rozsah**. Ujistěte se, že **vytvoříte nový textový dokument** zaškrtnuto. Další informace najdete v tématu [postupy: vytvoření Office projekty v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
   
-     Visual Studio otevře nové sešitu aplikace Excel v návrháři a přidá **Moje rozsah událostí s názvem** projektu do **Průzkumníku řešení**.  
+     Visual Studio otevře nový sešit aplikace Excel v návrháři a přidá **Moje události s názvem rozsah** projektu **Průzkumníka řešení**.  
   
-## <a name="adding-text-and-named-ranges-to-the-worksheet"></a>Přidávání textu a pojmenované oblasti na listu  
- Protože hostitelské ovládací prvky jsou rozšířených objektů Office, můžete je přidat do dokumentu stejným způsobem by přidejte nativní objekt. Například můžete přidat aplikace Excel <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacího prvku do listu otevřením **vložit** nabídky, přejdete na příkaz **název**a výběr **definovat**. Můžete také přidat <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacího prvku tak, že přetáhnete z **sada nástrojů** do listu.  
+## <a name="add-text-and-named-ranges-to-the-worksheet"></a>Přidání textu a pojmenované oblasti do listu  
+ Protože hostitelské ovládací prvky jsou rozšířených objektů Office, můžete je přidat do dokumentu stejným způsobem by přidat nativní objekt. Například můžete přidat aplikace Excel <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacího prvku do listu tak, že otevřete **vložit** nabídky, přejdete na **název**a zvolíte **definovat**. Můžete také přidat <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacího prvku z jeho přetažením **nástrojů** do listu.  
   
- V tomto kroku přidáte dvou pojmenované oblasti ovládacích prvků na list pomocí **sada nástrojů**a pak přidejte text do listu.  
+ V tomto kroku přidáte ovládací prvky dvou pojmenované oblasti do listu pomocí **nástrojů**a pak přidejte text do listu.  
   
-#### <a name="to-add-a-range-to-your-worksheet"></a>Chcete-li přidat rozsah do listu  
+### <a name="to-add-a-range-to-your-worksheet"></a>Chcete-li přidat rozsah list  
   
-1.  Ověřte, zda **Moje s názvem rozsah Events.xlsx** je sešit otevřít v návrháři Visual Studio s `Sheet1` zobrazí.  
+1.  Ověřte, že *Moje Events.xlsx oblast s názvem* sešitu je otevřen v návrháři aplikace Visual Studio s `Sheet1` zobrazí.  
   
-2.  Z **ovládací prvky aplikace Excel** karty z panelu nástrojů, přetáhněte <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacího prvku do buňky **A1** v `Sheet1`.  
+2.  Z **ovládací prvky Excelu** kartu na panelu nástrojů přetáhněte <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacího prvku do buňky **A1** v `Sheet1`.  
   
-     **Přidat NamedRange – ovládací prvek** zobrazí se dialogové okno.  
+     **Přidat ovládací prvek NamedRange** zobrazí se dialogové okno.  
   
-3.  Ověřte, že **$A 1 USD** se zobrazí v upravitelné textového pole a dané buňky **A1** je vybrána. Pokud není, klikněte na buňku **A1** ji vyberte.  
+3.  Ověřte, že **$A$ 1** se zobrazí v upravitelné textové pole a buňka **A1** zaškrtnuto. Pokud není, klikněte na buňku **A1** ji vyberte.  
   
-4.  Click **OK**.  
+4.  Klikněte na tlačítko **OK**.  
   
-     Buňky **A1** stane oblast s názvem `namedRange1`. Není nijak viditelně naznačeno na listu, ale `namedRange1` se zobrazí v **název** pole (umístěný nad listu na levé straně) Pokud buňka **A1** je vybrána.  
+     Buňka **A1** stane oblast s názvem `namedRange1`. Není by na listu, ale `namedRange1` se zobrazí v **název** políčka (přímo nad listu na levé straně) při buňky **A1** zaškrtnuto.  
   
 5.  Přidejte další <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacího prvku do buňky **B3**.  
   
-6.  Ověřte, že **$B$ 3** se zobrazí v upravitelné textového pole a dané buňky **B3** je vybrána. Pokud není, klikněte na buňku **B3** ji vyberte.  
+6.  Ověřte, že **$B$ 3** se zobrazí v upravitelné textové pole a buňka **B3** zaškrtnuto. Pokud není, klikněte na buňku **B3** ji vyberte.  
   
-7.  Click **OK**.  
+7.  Klikněte na tlačítko **OK**.  
   
-     Buňky **B3** stane oblast s názvem `namedRange2`.  
+     Buňka **B3** stane oblast s názvem `namedRange2`.  
   
-#### <a name="to-add-text-to-your-worksheet"></a>Chcete-li přidat text do listu  
+### <a name="to-add-text-to-your-worksheet"></a>Chcete-li přidat text do listu  
   
-1.  V buňce **A1**, zadejte následující text:  
+1. V buňce **A1**, zadejte následující text:  
   
-     **Jedná se o příklad ovládacího prvku NamedRange.**  
+    **Toto je příklad namedrange – ovládací prvek.**  
   
-2.  V buňce **A3** (nalevo od `namedRange2`), zadejte následující text:  
+2. V buňce **A3** (nalevo od `namedRange2`), zadejte následující text:  
   
-     **Události:**  
+    **Události:**  
   
- V následujících částech můžete psát kód, který se vloží text do `namedRange2` a upravit vlastnosti `namedRange2` ovládací prvek v reakci <xref:Microsoft.Office.Tools.Excel.NamedRange.BeforeDoubleClick>, <xref:Microsoft.Office.Tools.Excel.NamedRange.Change>, a <xref:Microsoft.Office.Tools.Excel.NamedRange.SelectionChange> události `namedRange1`.  
+   V následujících částech můžete psát kód, který vloží text do `namedRange2` a upraví vlastnosti `namedRange2` ovládacího prvku v reakci <xref:Microsoft.Office.Tools.Excel.NamedRange.BeforeDoubleClick>, <xref:Microsoft.Office.Tools.Excel.NamedRange.Change>, a <xref:Microsoft.Office.Tools.Excel.NamedRange.SelectionChange> události `namedRange1`.  
   
-## <a name="adding-code-to-respond-to-the-beforedoubleclick-event"></a>Přidání kódu reagovat na událost BeforeDoubleClick  
+## <a name="add-code-to-respond-to-the-beforedoubleclick-event"></a>Přidejte kód pro reakce na událost BeforeDoubleClick  
   
-#### <a name="to-insert-text-into-namedrange2-based-on-the-beforedoubleclick-event"></a>Vložení textu do NamedRange2 založené na události BeforeDoubleClick  
+### <a name="to-insert-text-into-namedrange2-based-on-the-beforedoubleclick-event"></a>Pro vložení textu na NamedRange2 na základě BeforeDoubleClick události  
   
-1.  V **Průzkumníku řešení**, klikněte pravým tlačítkem na **Sheet1.vb** nebo **Sheet1.cs** a vyberte **kód zobrazení**.  
+1.  V **Průzkumníka řešení**, klikněte pravým tlačítkem na **Sheet1.vb** nebo **Sheet1.cs** a vyberte **zobrazit kód**.  
   
-2.  Přidejte kód, proto `namedRange1_BeforeDoubleClick` obslužné rutiny události vypadá takto:  
+2.  Přidejte kód proto `namedRange1_BeforeDoubleClick` obslužná rutina události vypadat takhle:  
   
      [!code-csharp[Trin_VstcoreHostControlsExcel#24](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#24)]
      [!code-vb[Trin_VstcoreHostControlsExcel#24](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#24)]  
   
-3.  V jazyce C#, musíte přidat obslužné rutiny událostí pojmenovaného rozsahu, jak je znázorněno <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> následující událost. Informace o vytváření obslužných rutin událostí najdete v tématu [postupy: vytvoření obslužné rutiny událostí v projektech Office](../vsto/how-to-create-event-handlers-in-office-projects.md).  
+3.  V jazyce C#, musíte přidat obslužné rutiny událostí pro pojmenované oblasti, jak je znázorněno <xref:Microsoft.Office.Tools.Excel.Worksheet.Startup> následující událost. Informace o vytváření obslužných rutin událostí, naleznete v tématu [postupy: vytváření obslužných rutin událostí v projektech pro systém Office](../vsto/how-to-create-event-handlers-in-office-projects.md).  
   
      [!code-csharp[Trin_VstcoreHostControlsExcel#25](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#25)]  
   
-## <a name="adding-code-to-respond-to-the-change-event"></a>Přidání kódu reagovat na událost změny  
+## <a name="add-code-to-respond-to-the-change-event"></a>Přidejte kód pro reakce na událost změny  
   
-#### <a name="to-insert-text-into-namedrange2-based-on-the-change-event"></a>Vložení textu do namedRange2 založené na události změny  
+### <a name="to-insert-text-into-namedrange2-based-on-the-change-event"></a>Vložit text do namedRange2 založené na události změny  
   
-1.  Přidejte kód, proto `NamedRange1_Change` obslužné rutiny události vypadá takto:  
+1.  Přidejte kód proto `NamedRange1_Change` obslužná rutina události vypadat takhle:  
   
      [!code-csharp[Trin_VstcoreHostControlsExcel#26](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#26)]
      [!code-vb[Trin_VstcoreHostControlsExcel#26](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#26)]  
   
     > [!NOTE]  
-    >  Protože dvakrát klikněte na buňku v oblasti aplikace Excel vstupuje do režimu úprav <xref:Microsoft.Office.Tools.Excel.NamedRange.Change> události dojde, když na výběr je přesunut mimo rozsah, i v případě, že nedošlo k žádným změnám na text.  
+    >  Vzhledem k tomu, že poklikáte na buňku v oblasti aplikace Excel přejde do režimu úprav <xref:Microsoft.Office.Tools.Excel.NamedRange.Change> události dojde, když se výběr je přesunut mimo rozsah, i v případě, že nedošlo k žádným změnám na text.  
   
-## <a name="adding-code-to-respond-to-the-selectionchange-event"></a>Přidání kódu reagovat na SelectionChange – událost  
+## <a name="add-code-to-respond-to-the-selectionchange-event"></a>Přidejte kód pro reakce na SelectionChange – událost  
   
-#### <a name="to-insert-text-into-namedrange2-based-on-the-selectionchange-event"></a>Vložení textu do namedRange2 podle SelectionChange – událost  
+### <a name="to-insert-text-into-namedrange2-based-on-the-selectionchange-event"></a>Pro vložení textu na namedRange2 podle SelectionChange – událost  
   
-1.  Přidejte kód, proto **NamedRange1_SelectionChange** obslužné rutiny události vypadá takto:  
+1.  Přidejte kód, tak na **NamedRange1_SelectionChange** obslužnou rutinu události vypadá následovně:  
   
      [!code-csharp[Trin_VstcoreHostControlsExcel#27](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet1.cs#27)]
      [!code-vb[Trin_VstcoreHostControlsExcel#27](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#27)]  
   
     > [!NOTE]  
-    >  Protože dvakrát klikněte na buňku v oblasti aplikace Excel způsobí, že přesunutí do rozsahu, <xref:Microsoft.Office.Tools.Excel.NamedRange.SelectionChange> události dojde před <xref:Microsoft.Office.Tools.Excel.NamedRange.BeforeDoubleClick> dojde k události.  
+    >  Vzhledem k tomu, že poklikáte na buňku v oblasti aplikace Excel způsobí, že přesunutí do rozsahu, <xref:Microsoft.Office.Tools.Excel.NamedRange.SelectionChange> před dojde k události <xref:Microsoft.Office.Tools.Excel.NamedRange.BeforeDoubleClick> dojde k události.  
   
-## <a name="testing-the-application"></a>Testování aplikace  
- Nyní můžete otestovat ověření tento text popisu události z vašeho sešitu <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek je vložit do jiného pojmenované oblasti při události jsou vyvolány.  
+## <a name="test-the-application"></a>Testování aplikace  
+ Teď můžete otestovat sešit ověřit tento text popisující událostí <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek je vložen do jiné oblasti s názvem při události jsou vyvolány.  
   
-#### <a name="to-test-your-document"></a>K testování dokumentu  
+### <a name="to-test-your-document"></a>K otestování vašeho dokumentu  
   
-1.  Stisknutím klávesy F5 spusťte projekt.  
+1.  Stisknutím klávesy **F5** ke spuštění projektu.  
   
-2.  Umístěte ukazatel myši v `namedRange1`a ověřte, zda text ohledně <xref:Microsoft.Office.Tools.Excel.NamedRange.SelectionChange> událostí je vložen a který komentář je vložen do listu.  
+2.  Umístěte ukazatel myši v `namedRange1`a ověřte, zda text týkající <xref:Microsoft.Office.Tools.Excel.NamedRange.SelectionChange> událostí je vložen a komentář se vloží do listu.  
   
-3.  Dvakrát klikněte na tlačítko uvnitř `namedRange1`a ověřte, zda text ohledně <xref:Microsoft.Office.Tools.Excel.NamedRange.BeforeDoubleClick> události vložena s červenou text kurzívou v `namedRange2`.  
+3.  Poklikejte na uvnitř `namedRange1`a ověřte, zda text ohledně <xref:Microsoft.Office.Tools.Excel.NamedRange.BeforeDoubleClick> události se vloží s červený text kurzívou v `namedRange2`.  
   
-4.  Klikněte na tlačítko mimo `namedRange1` a Všimněte si, že dojde k události změny při ukončení režimu úprav, i když nebyla provedena žádná změna na text.  
+4.  Klikněte na tlačítko mimo `namedRange1` a Všimněte si, že dojde k události změny při ukončení režimu úprav, přestože se neprovedly žádné změny textu.  
   
-5.  Změňte text v rámci `namedRange1`.  
+5.  Změní celý text v rámci `namedRange1`.  
   
 6.  Klikněte na tlačítko mimo `namedRange1`a ověřte, zda text ohledně <xref:Microsoft.Office.Tools.Excel.NamedRange.Change> vložena událost s modrý text do `namedRange2`.  
   
 ## <a name="next-steps"></a>Další kroky  
- Tento návod ukazuje základní informace o programování ošetření událostí <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacího prvku. Zde je úkol, který by mohl pocházet Další:  
+ Tento návod ukazuje základy programování v události <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacího prvku. Tady je úkol, který by mohl pocházet Další:  
   
 -   Nasazení projektu. Další informace najdete v tématu [nasazení řešení Office](../vsto/deploying-an-office-solution.md).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Přehled ovládacích prvků hostitele a hostitelské položky](../vsto/host-items-and-host-controls-overview.md)   
  [Automatizace aplikace Excel s použitím rozšířených objektů](../vsto/automating-excel-by-using-extended-objects.md)   
- [NamedRange – ovládací prvek](../vsto/namedrange-control.md)   
+ [Namedrange – ovládací prvek](../vsto/namedrange-control.md)   
  [Postupy: Změna velikosti ovládacích prvků NamedRange](../vsto/how-to-resize-namedrange-controls.md)   
  [Postupy: Přidání ovládacích prvků NamedRange do listů](../vsto/how-to-add-namedrange-controls-to-worksheets.md)   
  [Programová omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
- [Postupy: Vytváření obslužných rutin událostí v projektech pro systém Office](../vsto/how-to-create-event-handlers-in-office-projects.md)  
+ [Postupy: vytváření obslužných rutin událostí v projektech pro systém Office](../vsto/how-to-create-event-handlers-in-office-projects.md)  
   
   

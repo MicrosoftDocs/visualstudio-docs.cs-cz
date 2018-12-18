@@ -21,11 +21,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5909d8ac37ee77c43b5ddbd2625c3de92de32cad
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 74be447f523713cdef9ee5c52876ee0acf4c25b2
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37056140"
 ---
 # <a name="stop-statements-in-visual-basic"></a>Příkazy Stop v jazyce Visual Basic
 Příkaz jazyka Visual Basic zastavit poskytuje programovací alternativou k nastavení boru přerušení. Když v ladicím programu dojde příkaz Stop, dělí spuštění programu (přejde do režimu přerušení). Stejného efektu pomocí volání do System.Diagnostics.Debugger.Break můžete dosáhnout programátory v jazyce C#.  
@@ -38,7 +39,7 @@ Příkaz jazyka Visual Basic zastavit poskytuje programovací alternativou k nas
   
  Abyste se vyhnuli nutnosti odebírání příkazech Stop, můžete použít Podmíněná kompilace:  
   
-```  
+```cpp
 #If DEBUG Then  
    Stop  
 #Else  
@@ -48,13 +49,13 @@ Příkaz jazyka Visual Basic zastavit poskytuje programovací alternativou k nas
   
  Další alternativou je použití příkazu Assert místo příkaz Zastavit. Příkaz Debug.Assert – dělí provádění, pouze pokud je zadaná podmínka není splněná a je automaticky odstraněna při sestavování prodejní verzi. Další informace najdete v tématu [kontrolní výrazy ve spravovaného kódu](../debugger/assertions-in-managed-code.md). Pokud chcete příkazu Assert, který vždy dělí provádění v ladicí verze, můžete provést toto:  
   
-```  
+```csharp
 Debug.Assert(false)  
 ```  
   
  Další alternativou je ještě použít metodu Debug.Fail:  
   
-```  
+```csharp
 Debug.Fail("a clever output string goes here")  
 ```  
   

@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_compilergenerated – | Microsoft Docs
+title: Idiasymbol::get_compilergenerated – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 27a3e432784d7164c14b99fa15c135cc09052800
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 207a92e8e510b01b817e6633830b0478b325254b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49918776"
 ---
 # <a name="idiasymbolgetcompilergenerated"></a>IDiaSymbol::get_compilerGenerated
-Načte příznak, který určuje, zda je symbol byla vygenerována kompilátorem.  
+Získá příznak označující, zda byl symbol generovány kompilátorem.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,19 +34,19 @@ HRESULT get_compilerGenerated (
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí `TRUE` Pokud kompilátor generována symbol; jinak vrátí `FALSE` Pokud symbol byla vygenerována z uživatele zapsat zdroje.  
+ [out] Vrátí `TRUE` Pokud kompilátor vygeneruje symboly; v opačném případě vrátí `FALSE` Pokud symbolu byla vygenerována z uživatelem zapsaný zdroje.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` nebo kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
->  Vrácená hodnota `S_FALSE` znamená vlastnost není k dispozici pro symbol.  
+>  Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Požadavek|Popis|  
 |-----------------|-----------------|  
-|Hlavičky:|dia2.h|  
+|Záhlaví:|dia2.h|  
 |Verze:|V7.0 DIA SDK|  
   
 ## <a name="see-also"></a>Viz také  

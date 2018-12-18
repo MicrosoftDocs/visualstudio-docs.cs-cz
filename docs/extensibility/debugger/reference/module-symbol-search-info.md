@@ -1,5 +1,5 @@
 ---
-title: MODULE_SYMBOL_SEARCH_INFO | Microsoft Docs
+title: MODULE_SYMBOL_SEARCH_INFO | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bb62fb0a830c8c3bf6bb9b7ca186e001573b7b37
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9deadc13f8cbe3678282bb2d9ac619959ecd26b3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49875915"
 ---
 # <a name="modulesymbolsearchinfo"></a>MODULE_SYMBOL_SEARCH_INFO
-Obsahuje informace o cesty pro hledání symbolu, které byly prohledány stavu.  
+Obsahuje informace o vyhledávací cesty symbolů, které byly prohledány stavu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,21 +44,21 @@ public struct MODULE_SYMBOL_SEARCH_INFO {
   
 #### <a name="parameters"></a>Parametry  
  `dwValidFields`  
- Kombinace příznaků z [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) výčtu zadání druh vyhledávání informace popsané v této struktuře.  
+ Kombinace příznaků z [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) výčet určující druh hledání informace popsané v této struktuře.  
   
  `bstrVerboseSearchInfo`  
- Cesty pro hledání a výsledky zřetězen do jednoho řetězce.  
+ Cesta pro vyhledávání a výsledky, které jsou spojeny do jednoho řetězce.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je vrácená z volání [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) metoda.  
+ Tato struktura je vrácená z volání [GetSymbolInfo](../../../extensibility/debugger/reference/idebugmodule3-getsymbolinfo.md) metody.  
   
- Pokud `bstrVerboseSearchInfo` pole není prázdný a obsahuje seznam cest vyhledávat a výsledky vyhledávání. V seznamu je naformátován s cestou, za nímž následuje třemi tečkami ("..."), za nímž následuje výsledek. Pokud existuje více než jednu dvojici výsledek cestu, každý pár jsou oddělené oddělovačem pár "\r\n" (znaků CR vrátit/konce řádku). Vzor vypadá takto:  
+ Pokud `bstrVerboseSearchInfo` pole není prázdné a obsahuje seznam cest prohledávat a výsledky hledání. V seznamu je formátováno s cestou, následované třemi tečkami ("..."), za nímž následuje výsledek. Pokud existuje více než jednu dvojici výsledek cestu, každý pár oddělený pár "\r\n" (návrat na začátek řádku return nebo odřádkování). Vzor vypadá takto:  
   
- \<cesta >... \<výsledek > \r\n\<cesta >... \<výsledek > \r\n\<cesta >... \<výsledek >  
+ \<cesta >... \<výsledku > \r\n\<cesta >... \<výsledku > \r\n\<cesta >... \<výsledku >  
   
  Všimněte si, že poslední položka nemá \r\n pořadí.  
   
- Tady je možného `bstrVerboseSearchInfo` řetězec, který byl odeslán do standardní na více systémů.  
+ Tady je možný výskyt `bstrVerboseSearchInfo` řetězec, který se poslal na standardní výstup.  
   
  `c:\symbols\user32.pdb... File not found.`  
   

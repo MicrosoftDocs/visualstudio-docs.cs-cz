@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Export pásu karet z Návrháře pásu karet do kódu XML pásu karet | Microsoft Docs'
+title: 'Postupy: Export pásu karet z Návrháře pásu karet do kódu XML pásu karet'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -21,13 +21,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7aff56d1d7ee3533a83ef3edbdd8ba9271efd862
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f1b9e988ce6d1ad722766f3994c39827cc4272a3
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35255074"
 ---
-# <a name="how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml"></a>Postupy: Export pásu karet z návrháře pásu karet do kódu XML pásu karet
+# <a name="how-to-export-a-ribbon-from-the-ribbon-designer-to-ribbon-xml"></a>Postupy: Export pásu karet z Návrháře pásu karet do kódu XML pásu karet
   **Pásu karet (vizuálního návrháře)** položku nepodporuje všechny možné typy přizpůsobení pásu karet. Přizpůsobení pásu karet pokročilé způsoby, můžete exportovat na pásu karet z Návrháře do kódu XML pásu karet a přímo upravit soubor XML.  
   
 > [!NOTE]  
@@ -66,7 +67,7 @@ ms.lasthandoff: 04/16/2018
   
      Informace o psaní metody zpětného volání a pomocí programovacího modelu RibbonX najdete v tématu [XML karet](../vsto/ribbon-xml.md).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Přehled pásu karet](../vsto/ribbon-overview.md)   
  [Návrhář pásu karet](../vsto/ribbon-designer.md)   
  [Kódu XML pásu karet](../vsto/ribbon-xml.md)   

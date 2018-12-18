@@ -1,5 +1,5 @@
 ---
-title: Čas synchronizace | Microsoft Docs
+title: Čas synchronizace | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,20 +14,21 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b968ead26d632c70f0b1adc8864600769629a90
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 67f63f292a20e21a00f733dd1190521fd573b98b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49861173"
 ---
 # <a name="synchronization-time"></a>Čas synchronizace
-Tyto segmenty v časové ose jsou přidruženy k blokování pokusů, které jsou klasifikovány jako synchronizace. Když vlákno je označený jako blokované při synchronizaci, je implicitní jednu z těchto věcí:  
+Tyto segmenty na časové ose jsou přidruženy k blokování časy, které jsou klasifikovány jako synchronizace. Pokud vlákno je označena jako blokováno při synchronizaci, je vyjádřena jednu z těchto věcí:  
   
--   Spuštění podprocesu bylo pravděpodobně způsobeno v volání synchronizace dobře známé vláken rozhraní API, jako `EnterCriticalSection()` nebo `WaitForSingleObject()`.  
+- Provádění vlákna bylo pravděpodobně způsobeno při volání k synchronizaci dobře známé vlákno rozhraní API, jako `EnterCriticalSection()` nebo `WaitForSingleObject()`.  
   
--   Algoritmus odpovídající rozhraní API nemůže být zcela komplexní, a proto některé rozhraní API, který může být namapovaný na ostatních kategorií může také zobrazit jako synchronizace, protože rámce ve volání zásobníku nakonec dosažen základní jádra blokování primitivní, který byl mapovat na tuto kategorii.  
+- Porovnávací algoritmus rozhraní API nemůže být zcela komplexní, a proto některá rozhraní API, která by mohla být namapovány na jiných kategorií může také dojít, protože synchronizace, protože rámce při volání funkce zásobníku nakonec dosažena základní jádra blokování primitivní, který byl mapovat do této kategorie.  
   
- Abyste pochopili základní příčinu události blokující přístup z více vláken, pečlivě zkontrolujte blokování zásobníky volání a profilu, sestavy.  
+  Informace o tom základní příčinu události blokování vlákna, pečlivě zkontrolujte blokování zásobníky volání a profilu, sestavy.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

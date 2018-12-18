@@ -1,5 +1,5 @@
 ---
-title: Zpracování příkazů | Microsoft Docs
+title: Zpracování příkazů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,41 +13,42 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 542277c5d8ab1b9b130f31bbb06215d8da7bc2ef
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a155927bb69c55c15a06cb058692038c8b309a30
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39230866"
 ---
 # <a name="command-handling"></a>Zpracování příkazů
-Jako editor můžete definovat nové příkazy. Příkazy se obvykle zobrazují v nabídce, na panelu nástrojů nebo v kontextové nabídce.  
+Editoru můžete definovat nové příkazy. Příkazy se obvykle zobrazují v nabídce, na panelu nástrojů nebo v místní nabídce.  
   
- Další informace o definování příkazy a nabídky najdete v tématu [příkazy, nabídek a panelů nástrojů](../extensibility/internals/commands-menus-and-toolbars.md).  
+ Další informace o definování příkazů a nabídek, naleznete v tématu [příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md).  
   
- Služba jazyka můžete řídit, jaké kontextové nabídky se zobrazují v editoru tím, že zachytává <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> výčtu. Alternativně můžete řídit v místní nabídce na základě za značky. Další informace najdete v části [důležité příkazy pro filtry služby jazyk](../extensibility/internals/important-commands-for-language-service-filters.md).  
+ Služba jazyka můžete řídit, jaké kontextové nabídky se zobrazí v editoru, tím, že zachytává <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> výčtu. Alternativně můžete řídit kontextové nabídky na základě jednotlivé značky. Další informace najdete v tématu [důležité příkazy pro filtry služby jazyka](../extensibility/internals/important-commands-for-language-service-filters.md).  
   
-## <a name="adding-commands-to-the-editor-context-menu"></a>Přidání příkazů do editoru kontextové nabídky  
- Pokud chcete přidat příkaz do kontextové nabídky, nejdřív je nutné definovat sadu příkazů nabídky patřící do určité skupiny. Následující příklad je převzat ze souboru .vsct generované v rámci tohoto průvodce [návod: Přidání funkce do vlastního editoru](../extensibility/walkthrough-adding-features-to-a-custom-editor.md):  
+## <a name="add-commands-to-the-editor-context-menu"></a>Přidání příkazů do kontextové nabídky editoru  
+ Přidání příkazu do místní nabídky, je nutné nejprve definovat sadu příkazy nabídek, které patří do konkrétní skupiny. V následujícím příkladu se přebírá ze *.vsct* souboru vygenerovaného jako součást návodu [návod: přidání funkcí do vlastního editoru](../extensibility/walkthrough-adding-features-to-a-custom-editor.md):  
   
- \<Identifikátor guid nabídky = "guidCustomEditorCmdSet" id = "IDMX_RTF" priority = "0x0000" type = "Context" >  
+ \<Guid nabídky = "guidCustomEditorCmdSet" id = "IDMX_RTF" priority = "0x0000" type = "Kontext" >  
   
- \<Nadřazený identifikátor guid = "guidCustomEditorCmdSet" id = "0" / >  
+ \<Identifikátor guid nadřazené = "guidCustomEditorCmdSet" id = "0" / >  
   
  \<Řetězce >  
   
- \<ButtonText > CustomEditor kontextovou nabídku\</ButtonText >  
+ \<ButtonText – > CustomEditor kontextovou nabídku\</ButtonText >  
   
  \<CommandName > CustomEditorContextMenu\</CommandName >  
   
  \</ Řetězce >  
   
- \<A nabídek >  
+ \</ Nabídka >  
   
- \<Či nabídek >  
+ \</ Nabídky >  
   
- Výše uvedený text přidá příkaz nabídky kontextu textem **CustomEditor kontextovou nabídku**. Identifikátor GUID nabídky je, že sadu příkazů, které je vytvořené pomocí tohoto editoru a typ je "Context".  
+ Výše uvedený text přidá příkazu kontextové nabídky s textem **CustomEditor kontextovou nabídku**. Identifikátor GUID nabídky je součástí sady příkazů, který je vytvořen pomocí tohoto editoru. Typ je "Kontext".  
   
- Můžete také použít předdefinované příkazy, které nemusejí být definován v souboru .vsct. Například pokud si projdete soubor EditorPane.cs vygenerované šablony balíček Visual Studio, zjistíte, že sadu předdefinovaných příkazy, jako například <xref:Microsoft.VisualStudio.VSConstants.VSStd97CmdID> definované <xref:Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97>, jsou zpracovávány v obslužné rutiny příkazů, jako je například metoda onSelectAll.  
+ Můžete také použít předdefinované příkazy, které nemusí být definován v *.vsct* souboru. Například zkoumat *EditorPane.cs* soubor generovaný nástrojem pro Visual Studio balíček šablony. Zjistíte, sadu předdefinovaných příkazů, jako například <xref:Microsoft.VisualStudio.VSConstants.VSStd97CmdID> určené <xref:Microsoft.VisualStudio.VSConstants.GUID_VSStandardCommandSet97>, jsou zpracovány v obslužné rutiny příkazů, jako `onSelectAll` metoda.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md)

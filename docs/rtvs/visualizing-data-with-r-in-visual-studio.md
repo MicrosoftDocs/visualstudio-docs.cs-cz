@@ -10,13 +10,14 @@ ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 0a11ef12a4ca38c2973c01575b59ef35826bc4a8
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f44ba213defef153acd2f5d1ef247bb093448263
+ms.sourcegitcommit: f685fa5e2df9dc307bf1230dd9dc3288aaa408b5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36238328"
 ---
-# <a name="creating-visual-data-plots-with-r"></a>Vytváření vizuální data ukazuje zeměpisný s R
+# <a name="create-visual-data-plots-with-r"></a>Vytvoření pozemků vizuální data s R
 
 Vykreslení je klíčovou součástí vědecký pracovník dat pracovního postupu. V R nástrojů pro Visual Studio (RTVS) veškeré aktivity související s výkresu soustředí kolem jeden nebo více výkresu windows, které jsou určeny ke zlepšení efektivity práce se tato aktivita klíče.
 
@@ -24,7 +25,7 @@ Vykreslení je klíčovou součástí vědecký pracovník dat pracovního postu
 
 |   |   |
 |---|---|
-| ![film ikonu fotoaparátu pro video](../install/media/video-icon.png "přehrát video") | [Podívejte se na video (webu youtube.com)](https://www.youtube.com/watch?v=ZTbKmz5RSgY) na vykreslení s R (2 m 02s). |
+| ![Ikona filmové kamery pro video](../install/media/video-icon.png "Sledovat video") | [Podívejte se na video (webu youtube.com)](https://www.youtube.com/watch?v=ZTbKmz5RSgY) na vykreslení s R (2 m 02s). |
 
 ## <a name="the-plot-window"></a>Okno vykreslení.
 
@@ -44,7 +45,7 @@ Změna velikosti okna výkresu vždy znovu vykreslí výkresu zajistit nejlepš�
 
 ## <a name="plot-window-commands"></a>Příkazy okna vykreslení.
 
-Obsahuje použít příkazy, většina z nich jsou také k dispozici prostřednictvím nástrojů okna výkresu **R nástroje > pozemků** nabídky.
+Obsahuje použít příkazy, většina z nich jsou také k dispozici prostřednictvím nástrojů okna výkresu **R nástroje** > **pozemků** nabídky.
 
 | Tlačítko | Příkaz | Popis | 
 | --- | --- | --- |
@@ -63,17 +64,17 @@ Obsahuje použít příkazy, většina z nich jsou také k dispozici prostředni
 
 Protože datových vědců často pracovat s mnoha pozemků z mnoha různých datových sad, RTVS umožňuje vytvářet tolik nezávislé výkresu windows. Potom můžete uspořádat tyto windows ale chcete zcela v rámci sady Visual Studio nebo mimo rámec. (Viz [přizpůsobení rozložení oken v sadě Visual Studio](../ide/customizing-window-layouts-in-visual-studio.md) obecné informace o ukotvení a změna velikosti windows.)
 
-Vytvoření nového okna výkresu pomocí tlačítka panelu nástrojů nebo **R nástroje > pozemků > nové okno výkresu**. Stane se nové okno výkresu *active* okno, které je, kde jsou vykreslovány nové pozemků. Chcete-li změnit aktivní okno, do něj a vyberte tlačítka panelu nástrojů okna aktivovat vykreslení nebo **R nástroje > ukazuje zeměpisný > aktivovat vykreslení okno**.
+Vytvoření nového okna výkresu pomocí tlačítka panelu nástrojů nebo **R nástroje** > **pozemků** > **nové okno výkresu**. Stane se nové okno výkresu *active* okno, které je, kde jsou vykreslovány nové pozemků. Chcete-li změnit aktivní okno, přejděte do něj a vyberte **aktivovat vykreslení okno** tlačítka panelu nástrojů nebo **R nástroje** > **ukazuje zeměpisný**  >  **Aktivovat okno výkresu**.
 
 Jsou příliš, pozemků, nezávislé objekty, což znamená, můžete zkopírovat nebo je přesouvat mezi windows výkresu pomocí buď přetažení myší pomocí myši nebo pomocí **kopie**, **Vyjmout**, a **vložení** příkazy v kontextu klikněte pravým tlačítkem a **upravit** nabídky.
 
-Výchozí chování pro přetažení myší je kopie; Chcete-li přesunout, a přetáhněte při podržíte stisknutou klávesu Shift.
+Výchozí chování pro přetažení myší je kopie; Chcete přesunout, a přetáhněte stisknutým **Shift** klíč.
 
 ## <a name="plot-history"></a>Vykreslení historie
 
-Vykreslení příkazy jsou zachována ve výkresu historii jednotlivých období, zajistíte, že všechny vaše vykreslení v rámci relace se zachová. Přejděte v historii, pomocí tlačítek na panelu nástrojů okna výkresu, nebo Ctrl + Alt + F11 a Ctrl + Alt + F12. Můžete také odebrat jednoho pozemků nebo zrušte všechny pozemků z okna znovu pomocí tlačítka panelu nástrojů nebo **R nástroje > ukazuje zeměpisný** příkazy nabídky.
+Vykreslení příkazy jsou zachována ve výkresu historii jednotlivých období, zajistíte, že všechny vaše vykreslení v rámci relace se zachová. Přejděte v historii, pomocí tlačítek na panelu nástrojů okna výkresu nebo **Ctrl**+**Alt**+**F11** a **Ctrl** + **Alt**+**F12**. Můžete také odebrat jednoho pozemků nebo zrušte všechny pozemků z okna znovu pomocí tlačítka panelu nástrojů nebo **R nástroje** > **ukazuje zeměpisný** příkazy nabídky.
 
-Pokud chcete zobrazit celou kolekci pozemků, otevřete okno historie výkresu pomocí tlačítka panelu nástrojů nebo **R nástroje > ukazuje zeměpisný > okno historie výkresu**.
+Pokud chcete zobrazit celou kolekci pozemků, otevřete okno historie výkresu pomocí tlačítka panelu nástrojů nebo **R nástroje** > **ukazuje zeměpisný** > **okno historie výkresu**.
 Historie poskytuje seznam miniatury o zobrazené v okně, seskupené podle různých výkresu windows (nebo zařízení). Pomocí zvětšení tlačítek na panelu nástrojů změní velikost miniatur.
 
 ![Okno historie vykreslení.](media/plotting-plot-history-window.png)
@@ -82,7 +83,7 @@ Otevřete vykreslení v jeho přidružené okně, dvakrát klikněte na tento v�
 
 Životnost interaktivní relace R je vázána životnost historii výkresu mezi všechny systémy windows. Pokud resetování relace R, nebo ukončete a restartujte Visual Studio, je resetovat historii vykreslení.
 
-## <a name="programmatically-manipulating-plot-windows"></a>Manipulace se prostřednictvím kódu programu windows vykreslení.
+## <a name="programmatically-manipulate-plot-windows"></a>Programově měnit windows vykreslení.
 
 Vykreslení windows z kódu jazyka R, můžete upravit prostřednictvím kódu programu pomocí čísla zařízení identifikovat konkrétní výkresu windows. 
 

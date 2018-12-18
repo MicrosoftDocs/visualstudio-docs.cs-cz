@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31120959"
 ---
 # <a name="idebugprogramex2"></a>IDebugProgramEx2
 Toto rozhraní umožňuje relace ladění manager (SDM) připojit k programu a získat uzlu program přidružených k programu.  

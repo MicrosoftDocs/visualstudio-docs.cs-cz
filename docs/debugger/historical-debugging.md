@@ -1,5 +1,5 @@
 ---
-title: Historické ladění | Microsoft Docs
+title: Historické ladění | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -10,27 +10,28 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a75dfc04bd5ce3b1e61cc2c8e8fe293c13560cf9
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 0a622fcb91ad40e7d0777f37ce87e9a2cb950695
+ms.sourcegitcommit: a749c287ec7d54148505978e8ca55ccd406b71ee
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46542400"
 ---
 # <a name="historical-debugging"></a>Historické ladění
-Historické ladění je režim ladění, která závisí na informacích shromažďovaných IntelliTrace. Umožňuje přesunout zpátky a předávat prostřednictvím spuštění vaší aplikace a zkontrolovat stav.  
+Historické ladění je režim ladění, který závisí na informace shromážděné funkcí technologie IntelliTrace. Umožňuje přejít zpět a vpřed prostřednictvím spuštění vaší aplikace a zkontrolovat její stav.  
   
- Můžete vytvořit IntelliTrace ve Visual Studio Enterprise edition (ale ne edice Professional nebo komunity).  
+ Můžete použít nástroj IntelliTrace v sadě Visual Studio Enterprise edition (ale ne edice Professional nebo Community).  
   
 ## <a name="why-use-historical-debugging"></a>Proč používat historické ladění?  
- Nastavení zarážek najít chyby může být místo hit-or-miss záležitost. Nastavte zarážky blízko místa ve vašem kódu kde podezření chyb jako a pak spusťte aplikaci v Doufáme, že vaší zarážce získá stiskněte klávesu a že na místě, kde provádění dělí může odhalit zdroj chyb a ladicí program. Pokud ne, budete muset zkuste nastavit zarážky někde jinde v kódu a znovu spusťte ladicí program, provádění testovací kroky opakovaně, dokud narazíte potíže.  
+ Nastavení zarážek, abyste odhalili chyby může být místo toho hit-or-miss záležitost. Nastavit zarážku blízko místa v kódu kde máte podezření na chybu na a pak spusťte aplikaci v ladicím programu a Doufáme, že zarážku získá přístupů a že na místě, kde se přeruší provádění může odhalit příčiny chyby. V opačném případě bude nutné vyzkoušet, nastavením zarážky někde jinde v kódu a znovu spusťte ladicí program, spuštění testovací kroky pořád dokola, dokud nalezení příčiny problému.  
   
- ![nastavení boru přerušení](../debugger/media/breakpointprocesa.png "BreakpointProcesa")  
+ ![nastavením zarážky](../debugger/media/breakpointprocesa.png "BreakpointProcesa")  
   
- Můžete použít IntelliTrace a historické ladění přemístit kolem ve vaší aplikaci a zkontrolovat stav (zásobník volání a místní proměnné) bez nutnosti nastavit zarážky, znovu spusťte ladění a opakujte kroky testu. To můžete ušetřit mnoho času, zejména při chybě nachází hloubky ve scénáři testu, která trvá dlouhou dobu spuštění.  
+ Můžete přesouvat kolem ve vaší aplikaci a zkontrolujte jeho stav (zásobník volání a místní proměnné) bez nutnosti nastavovat zarážky, restart ladění pomocí IntelliTrace a historické ladění a testovací kroky. To vám ušetří spoustu času, zejména při chyby se nachází hlouběji ve scénáři testu, která trvá dlouhou dobu spuštění.  
   
-## <a name="how-do-i-start-using-historical-debugging"></a>Jak spustit pomocí historické ladění?  
- Ve výchozím nastavení zapnutý IntelliTrace. Všechny, které musíte udělat je, rozhodněte, které události a volání funkce jsou vás zajímají, a jestli chcete zobrazit snímky vaší úplném stavu aplikace. Další informace o definování, co chcete hledat najdete v tématu [funkce IntelliTrace](../debugger/intellitrace-features.md).  
+## <a name="how-do-i-start-using-historical-debugging"></a>Jak můžu začít používat historické ladění?  
+ Nástroj IntelliTrace je ve výchozím. Všechno, co musíte udělat, je rozhodnout, které událostí a volání funkce jsou vás zajímají, a určuje, zda chcete zobrazit snímky stavu vaší celou aplikaci. Další informace o definování co chcete hledat, naleznete v tématu [funkce IntelliTrace](../debugger/intellitrace-features.md).  
 
- - Snímky s historické ladění najdete v tématu [zobrazit snímky pomocí zpětný krok IntelliTrace](../debugger/how-to-use-intellitrace-step-back.md)
- - Zjistěte, jak zkontrolovat proměnné a přejděte kód, najdete v tématu [zkontrolovat vaší aplikace pomocí historické ladění](../debugger/historical-debugging-inspect-app.md)
- - Další informace o ladění pomocí událostí IntelliTrace, najdete v části [návod: použití IntelliTrace](../debugger/walkthrough-using-intellitrace.md).
+ - Chcete-li zobrazit snímky pomocí historického ladění, naleznete v tématu [kontrolovat předchozí nové aplikace pomocí nástroje IntelliTrace](../debugger/view-historical-application-state.md)
+ - Zjistěte, jak kontrolovat proměnné a vyhledání kódu, naleznete v tématu [Kontrola aplikace s využitím historického ladění](../debugger/historical-debugging-inspect-app.md)
+ - Další informace o ladění pomocí událostí IntelliTrace, naleznete v tématu [návod: použití IntelliTrace](../debugger/walkthrough-using-intellitrace.md).

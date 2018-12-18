@@ -10,11 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 64bcd93e6d9045558c231c3b47ff967ffe14c078
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9f3c3176ea0b865ecf4a433a7a0a22a316720229
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35257706"
 ---
 # <a name="querycounters"></a>QueryCounters
 **QueryCounters** možnost uvádí čítače výkonu procesoru (hardware), které jsou k dispozici v počítači.  
@@ -23,7 +24,7 @@ ms.lasthandoff: 04/19/2018
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cmd  
 VSPerfCmd.exe /QueryCounters  
 ```  
   
@@ -35,8 +36,8 @@ VSPerfCmd.exe /QueryCounters
   
  Různé procesory zpřístupnit různé čítače výkonu procesoru. Profileru definuje sadu Obecné čítače, které lze použít na téměř všechny procesory. **QueryCounters** možnost uvádí názvy Obecné čítače i názvy čítačů, které jsou specifické pro procesor.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Vsperfcmd –](../profiling/vsperfcmd.md)   
- [Profilace samostatných aplikací](../profiling/command-line-profiling-of-stand-alone-applications.md)   
- [Profilace webových aplikací ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
- [Profilace služeb](../profiling/command-line-profiling-of-services.md)
+ [Profil samostatných aplikací](../profiling/command-line-profiling-of-stand-alone-applications.md)   
+ [Webové aplikace ASP.NET profilu](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
+ [Profil služby](../profiling/command-line-profiling-of-services.md)

@@ -1,5 +1,5 @@
 ---
-title: Idiastackwalkframe::get_registervalue – | Microsoft Docs
+title: Idiastackwalkframe::get_registervalue – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d45f9df66783223c78822d631a2bbfc04316e2b
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 98c7ba6fdca3c9d2fd7bf898d864e9aca0670e6d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49843116"
 ---
 # <a name="idiastackwalkframegetregistervalue"></a>IDiaStackWalkFrame::get_registerValue
 Načte hodnotu registru.  
@@ -34,13 +35,13 @@ HRESULT get_registerValue (
   
 #### <a name="parameters"></a>Parametry  
  `index`  
- [v] Hodnota z [CV_HREG_e – výčet](../../debugger/debug-interface-access/cv-hreg-e.md) zadání registrovat získána hodnota výčtu.  
+ [in] Hodnota z [cv_hreg_e – výčet](../../debugger/debug-interface-access/cv-hreg-e.md) výčet určující, do registru k získání hodnoty pro.  
   
  `pRetVal`  
- [out] Vrací aktuální hodnotu registru.  
+ [out] Vrátí aktuální hodnotu registru.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [Idiastackwalkframe –](../../debugger/debug-interface-access/idiastackwalkframe.md)   

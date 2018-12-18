@@ -1,7 +1,7 @@
 ---
-title: Kód generování funkce v sadě Visual Studio | Microsoft Docs
-ms.custom: ''
+title: Funkce generování kódu
 ms.date: 01/11/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 author: gewarren
@@ -9,28 +9,31 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 83b222d0c6318b1664b28e3c0259c2ff6de9b00e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 79e3f2d47aee0bc2de43ab9db657cfa96bc1c2ac
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53063137"
 ---
 # <a name="code-generation-features-in-visual-studio"></a>Funkce generování kódu v sadě Visual Studio
 
-Existuje mnoho způsobů, které Visual Studio můžete vygenerovat, opravte a Refaktorovat kódu.
+Existuje mnoho způsobů, které Visual Studio vám pomůže generovat, opravit a Refaktorovat kód.
 
-- Můžete použít [výstřižky kódu](../ide/code-snippets.md) například vložit šablonu [přepínač](/dotnet/csharp/language-reference/keywords/switch) bloku nebo [výčtu](/dotnet/csharp/language-reference/keywords/enum) deklarace.
+## <a name="features"></a>Funkce
 
-- Můžete použít [rychlé akce](../ide/quick-actions.md) pro generování kódu, jako jsou třídy a vlastnosti, nebo zavést místní proměnné. Můžete také použít rychlé akce [zlepšení kód](../ide/common-quick-actions.md), například k odebrání nepotřebných přetypování a proměnné, nebo chcete-li přidat kontroly hodnoty null před přístupem k proměnné.
+- Můžete použít [fragmenty kódu](../ide/code-snippets.md) například vložit šablonu [přepnout](/dotnet/csharp/language-reference/keywords/switch) bloku nebo [výčtu](/dotnet/csharp/language-reference/keywords/enum) deklarace.
 
-- Můžete [Refaktorovat kód](../ide/refactoring-in-visual-studio.md) přejmenování proměnné, změnit pořadí parametrů metody nebo typu synchronizovat s její název souboru, a další.
+- Můžete použít [rychlé akce](../ide/quick-actions.md) ke generování kódu, jako jsou třídy a vlastnosti nebo k přidání místní proměnné. Můžete použít také rychlé akce pro [vylepšení kódu](../ide/common-quick-actions.md), třeba odebrat nepotřebné přetypování a nepoužité proměnné, nebo přidat kontroly hodnot null před přístupem k proměnné.
+
+- Je možné [Refaktorovat kód](../ide/refactoring-in-visual-studio.md) přejmenujte proměnnou, změnit pořadí parametrů metody nebo typu synchronizovat s její název souboru pár.
 
 > [!NOTE]
-> Každý služba jazyka v sadě Visual Studio poskytuje vlastní kód, možnosti generování tak, aby některé funkce jsou dostupné jenom v C# a některé jsou k dispozici v jak C# a Visual Basic.
+> Každá služba jazyka v sadě Visual Studio nabízí svůj vlastní kód možnosti generování, tak některé funkce jsou dostupné jenom v C#, a některé jsou k dispozici v C# a Visual Basic.
 
-### <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Fragmenty kódu](../ide/code-snippets.md)  
-[Rychlé akce](../ide/quick-actions.md)  
-[Refactoring](../ide/refactoring-in-visual-studio.md)  
-[Generování kódu a textové šablony T4](../modeling/code-generation-and-t4-text-templates.md)
+- [Fragmenty kódu](../ide/code-snippets.md)
+- [Rychlé akce](../ide/quick-actions.md)
+- [Refactoring](../ide/refactoring-in-visual-studio.md)
+- [Generování kódu a textové šablony T4](../modeling/code-generation-and-t4-text-templates.md)

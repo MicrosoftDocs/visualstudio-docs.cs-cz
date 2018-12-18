@@ -1,10 +1,9 @@
 ---
-title: -Out (devenv.exe) | Microsoft Docs
-ms.custom: ''
+title: -Out (devenv.exe)
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: reference
 helpviewer_keywords:
 - errors [Visual Studio], builds
 - Devenv, /out switch
@@ -21,40 +20,43 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: af8d41a8a401e3087845e6d698163626f120a52e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a5778cb281ca6edcf8045620aee049b0f115a50a
+ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51948241"
 ---
 # <a name="out-devenvexe"></a>/Out (devenv.exe)
-Určuje soubor pro uložení a zobrazení chyb při spouštění, sestavení, znovu sestavit nebo nasazení řešení.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-devenv /out FileName  
-```  
-  
-## <a name="arguments"></a>Arguments  
- `FileName`  
- Požadováno. Cesta a název souboru, který se zobrazí chyby při sestavování spustitelný soubor.  
-  
-## <a name="remarks"></a>Poznámky  
- Pokud je zadán název souboru, který ještě neexistuje, vytvoří se automaticky soubor. Pokud soubor již existuje, výsledky jsou připojena k existující obsah souboru.  
-  
- Chyby sestavení příkazového řádku se zobrazí v **příkaz** okno a řešení Tvůrce zobrazení **výstup** okno. Tato možnost je užitečná, pokud běží bezobslužné sestavení a musí zobrazit výsledky.  
-  
-## <a name="example"></a>Příklad  
- Tento příklad spustí `MySolution` a zapíše chyby do souboru `MyErrorLog.txt`.  
-  
-```  
-devenv /run "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\MySolution\MySolution.sln" /out "C:\MyErrorLog.txt"  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Přepínače příkazového řádku nástroje devenv](../../ide/reference/devenv-command-line-switches.md)   
- [Nebo spusťte (devenv.exe)](../../ide/reference/run-devenv-exe.md)   
- [/ Sestavení (devenv.exe)](../../ide/reference/build-devenv-exe.md)   
- [/ Rebuild (devenv.exe)](../../ide/reference/rebuild-devenv-exe.md)   
- [/ Nasadit (devenv.exe)](../../ide/reference/deploy-devenv-exe.md)
+Určuje soubor k uložení a zobrazení chyb při spuštění, sestavování, znovu sestavit nebo nasadit řešení.
+
+## <a name="syntax"></a>Syntaxe
+
+```cmd
+devenv /out FileName
+```
+
+## <a name="arguments"></a>Arguments
+ `FileName`
+
+ Požadováno. Cesta a název souboru, který se zobrazí chyby při vytváření spustitelného souboru.
+
+## <a name="remarks"></a>Poznámky
+ Pokud je zadaný název souboru, který neexistuje, vytvoří se soubor automaticky. Pokud soubor již existuje, výsledky jsou připojena k existující obsah souboru.
+
+ Chyby sestavení příkazového řádku se zobrazují v **příkaz** okno a Tvůrce řešení zobrazení **výstup** okna. Tato možnost je užitečná, pokud jsou spuštěny bezobslužném sestavování a potřebujete pro zobrazení výsledků.
+
+## <a name="example"></a>Příklad
+ Tento příklad se spouští `MySolution` a zapíše chyby do souboru `MyErrorLog.txt`.
+
+```cmd
+devenv /run "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\MySolution\MySolution.sln" /out "C:\MyErrorLog.txt"
+```
+
+## <a name="see-also"></a>Viz také
+
+- [Přepínače příkazového řádku nástroje devenv](../../ide/reference/devenv-command-line-switches.md)
+- [Nebo spuštění (devenv.exe)](../../ide/reference/run-devenv-exe.md)
+- [/ Sestavení (devenv.exe)](../../ide/reference/build-devenv-exe.md)
+- [/ Sestavení (devenv.exe)](../../ide/reference/rebuild-devenv-exe.md)
+- [/ Nasazení (devenv.exe)](../../ide/reference/deploy-devenv-exe.md)

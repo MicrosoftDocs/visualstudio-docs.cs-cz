@@ -22,11 +22,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ecc7bba2cd33f0c7f4d78ef8607d078eb7f752a0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ac95ffcaf686c3ab086f994680e7bce80c330f0f
+ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36756227"
 ---
 # <a name="how-to-add-a-custom-property"></a>Postupy: Přidání uživatelské vlastnosti
   Můžete přidat vlastní vlastnosti modelu pomocí **Editor vlastností**. Tyto vlastnosti můžete načíst informace, jako je připojovací řetězce a dalších dat za běhu v kódu můžete přistupovat.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  V **Průzkumník modelu BDC**, vyberte uzel, který reprezentuje element modelu, do které chcete použít vlastní vlastnost.  
   
-2.  Na řádku nabídek zvolte **zobrazení**, **vlastnosti – okno**.  
+2.  Na řádku nabídek zvolte **zobrazení** > **vlastnosti – okno**.  
   
 3.  V **vlastnosti** okně zvolte **vlastní vlastnosti** vlastnost a potom zvolte tlačítko se třemi tečkami (![ASP.NET – Návrhář mobilních řešení elipsy](../sharepoint/media/mwellipsis.gif "ASP. Asp.net – Návrhář mobilních řešení elipsy")).  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 04/16/2018
   
 6.  Pro **hodnotu** pole vlastní vlastnosti, zadejte hodnotu a pak zvolte **OK** tlačítko.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:
  [Navrhování modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md)   
  [Navrhování modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md)   
  [Vytvoření modelu připojení obchodních dat](../sharepoint/creating-a-business-data-connectivity-model.md)   

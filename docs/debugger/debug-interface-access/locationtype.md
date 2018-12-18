@@ -1,5 +1,5 @@
 ---
-title: LocationType | Microsoft Docs
+title: Locationtype – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fb46eb1c7477f93ed63dfc4424d881886c8d0c8f
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: e816ac9dca3c70e88ae023b4fda4edf0b99f9c96
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872093"
 ---
 # <a name="locationtype"></a>LocationType
-Určuje druh informace o umístění, které jsou obsaženy v symbolu.  
+Označuje druh informace o poloze, které jsou obsaženy v symbolu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,42 +48,42 @@ enum LocationType {
  Informace o umístění není k dispozici.  
   
  `LocIsStatic`  
- Umístění je statický.  
+ Umístění je statická.  
   
  `LocIsTLS`  
- Umístění je v místní úložiště vláken.  
+ Umístění je v místním úložišti vláken.  
   
  `LocIsRegRel`  
- Umístění je relativní vzhledem k registraci.  
+ Umístění je relativní k registru.  
   
  `LocIsThisRel`  
  Umístění je `this`– relativní.  
   
  `LocIsEnregistered`  
- Umístění je do registru.  
+ Umístění je v registru.  
   
  `LocIsBitField`  
- Umístění je v poli verze.  
+ Umístění je ve bitového pole.  
   
  `LocIsSlot`  
  Umístění je slot Microsoft Intermediate Language (MSIL).  
   
  `LocIsIlRel`  
- Umístění je relativní vůči MSIL.  
+ Umístění je relativní vůči jazyka MSIL.  
   
  `LocInMetaData`  
  Umístění je v metadatech.  
   
  `LocIsConstant`  
- Umístění je v konstantní hodnotu.  
+ Umístění je konstantní hodnotu.  
   
  `LocTypeMax`  
- Počet typů umístění v tento výčet.  
+ Počet typů umístění tohoto výčtu.  
   
 ## <a name="remarks"></a>Poznámky  
- Vlastnosti, které jsou k dispozici [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) rozhraní závisí na umístění symbolu v souboru bitové kopie. Další informace najdete v tématu [umístění symbolu](../../debugger/debug-interface-access/symbol-locations.md).  
+ Vlastnosti, které jsou k dispozici [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) rozhraní závisí na umístění symbolu v souboru bitové kopie. Další informace najdete v tématu [umístění symbolů](../../debugger/debug-interface-access/symbol-locations.md).  
   
- Hodnoty v tento výčet jsou vráceny prostřednictvím volání [idiasymbol::get_locationtype –](../../debugger/debug-interface-access/idiasymbol-get-locationtype.md) metoda.  
+ Hodnoty v tomto výčtu jsou vráceny prostřednictvím volání [idiasymbol::get_locationtype –](../../debugger/debug-interface-access/idiasymbol-get-locationtype.md) metody.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: cvconst.h  

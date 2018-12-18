@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: zobrazení vlastností okna | Microsoft Docs'
+title: 'Postupy: zobrazení vlastností okna | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -12,17 +12,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a345f5ac8fc6a77b10ef549a6c2be859106ee00
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 204121f40fa1cfc32040185286e7c566bbb59214
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872418"
 ---
 # <a name="how-to-display-window-properties"></a>Postupy: Zobrazení vlastností okna
-Chcete-li získat další informace o okno uvedené v [zobrazení oken](../debugger/windows-view.md), použijte [dialogové okno Vlastnosti okna](../debugger/window-properties-dialog-box.md).  
+Najít další informace o okně uvedené v [zobrazení Windows](../debugger/windows-view.md), použijte [dialogové okno Vlastnosti okna](../debugger/window-properties-dialog-box.md).  
   
 ### <a name="to-open-the-window-properties-dialog-box"></a>Chcete-li otevřít dialogové okno Vlastnosti okna  
   
-1.  Vyberte položku, a potom vyberte **vlastnosti** z **zobrazení** nabídky.  
+1. Vyberte položku a pak zvolte **vlastnosti** z **zobrazení** nabídky.  
   
- Nejsou modální dialogová okna vlastností. Jako kliknete na tlačítko položek se v okně zobrazení, se automaticky aktualizují dialogové okno s informacemi o každé vybrané položky.
+   Nejsou modální dialogová okna Vlastnosti. Klikněte na položku v okně zobrazení, se automaticky aktualizují dialogové okno s informacemi o každé vybrané položky.

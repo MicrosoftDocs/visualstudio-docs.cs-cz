@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::SetThreadName | Microsoft Docs
+title: IDebugThread2::SetThreadName | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: aae43ba6b9a7aa658a7c4e47afd0405ea15556eb
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 910f4f0f26295d8e826736aa24585a1e02b41e37
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49866282"
 ---
 # <a name="idebugthread2setthreadname"></a>IDebugThread2::SetThreadName
-Nastaví název vlákno.  
+Nastaví název vlákna.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,14 +41,14 @@ int SetThreadName (
   
 #### <a name="parameters"></a>Parametry  
  `pszName`  
- [v] Název vlákna.  
+ [in] Název vlákna.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Chcete-li získat přístup z více vláken název, volání [GetName](../../../extensibility/debugger/reference/idebugthread2-getname.md) metoda.  
+ Získejte název vlákna, volání [GetName](../../../extensibility/debugger/reference/idebugthread2-getname.md) metody.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
- [GetName –](../../../extensibility/debugger/reference/idebugthread2-getname.md)
+ [GetName](../../../extensibility/debugger/reference/idebugthread2-getname.md)

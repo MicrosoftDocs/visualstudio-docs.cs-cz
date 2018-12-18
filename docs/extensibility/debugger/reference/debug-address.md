@@ -1,5 +1,5 @@
 ---
-title: DEBUG_ADDRESS | Microsoft Docs
+title: DEBUG_ADDRESS | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 07312208967aeccfbd81f44587f84a43dfebf4c0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1d5851fd9fe7224d060b1454a7123b98f77216b4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49813476"
 ---
 # <a name="debugaddress"></a>DEBUG_ADDRESS
 Tato struktura představuje adresu.  
@@ -49,23 +50,23 @@ public struct DEBUG_ADDRESS {
  ID procesu.  
   
  guidModule  
- Identifikátor GUID modul, který obsahuje tuto adresu.  
+ Identifikátor GUID modulu, který obsahuje tuto adresu.  
   
  tokClass  
- Token, určete třídu nebo typ tuto adresu.  
+ Token třídy nebo typu tuto adresu.  
   
 > [!NOTE]
->  Tato hodnota je specifický pro zprostředkovatele symbol a proto nemá žádný obecné význam než jako identifikátor pro typ třídy.  
+>  Tato hodnota je specifické pro zprostředkovatele symbolů a proto nemá žádný význam obecné jiných než jako identifikátor pro typ třídy.  
   
- Addr  
- A [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) strukturu, která obsahuje spojení struktury, které popisují typy jednotlivých adres. Hodnota `addr`.`dwKind` pochází z [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) výčtu, která vysvětluje, jak interpretovat sjednocení.  
+ addr  
+ A [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) struktura, která obsahuje sjednocení, struktur, které popisují typy jednotlivých adres. Hodnota `addr`.`dwKind` pochází z [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) výčet, který vysvětluje, jak interpretovat sjednocení.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je předána [getaddress –](../../../extensibility/debugger/reference/idebugaddress-getaddress.md) metoda k vyplnění.  
+ Tato struktura je předán [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md) metoda být vyplněna.  
   
  **Upozornění [pouze C++]**  
   
- Pokud `addr.dwKind` je `ADDRESS_KIND_METADATA_LOCAL` a pokud `addr.addr.addrLocal.pLocal` není hodnotu null, pak musí volat `Release` na token ukazatele:  
+ Pokud `addr.dwKind` je `ADDRESS_KIND_METADATA_LOCAL` a pokud `addr.addr.addrLocal.pLocal` není hodnotou null, pak je nutné volat `Release` token ukazatele:  
   
 ```  
 if (addr.dwKind == ADDRESS_KIND_METADATA_LOCAL &&  addr.addr.addrLocal.pLocal != NULL)  
@@ -83,6 +84,6 @@ if (addr.dwKind == ADDRESS_KIND_METADATA_LOCAL &&  addr.addr.addrLocal.pLocal !=
   
 ## <a name="see-also"></a>Viz také  
  [Struktury a sjednocení](../../../extensibility/debugger/reference/structures-and-unions.md)   
- [Getaddress –](../../../extensibility/debugger/reference/idebugaddress-getaddress.md)   
+ [GetAddress](../../../extensibility/debugger/reference/idebugaddress-getaddress.md)   
  [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md)   
  [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md)

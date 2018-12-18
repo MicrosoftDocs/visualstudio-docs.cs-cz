@@ -21,26 +21,27 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f22ec947e9aa3cae15427915bd5aff4122a67797
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9be9ba70bb94e743a788db11b55c188275bcad64
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37120174"
 ---
-# <a name="how-to-customize-a-sharepoint-feature"></a>Postupy: Přizpůsobení funkce služby SharePoint
+# <a name="how-to-customize-a-sharepoint-feature"></a>Postupy: přizpůsobení funkce služby SharePoint
   Můžete vytvořit a přizpůsobit funkcí služby SharePoint pomocí návrháře funkce v sadě Visual Studio. Můžete například nastavit obor funkcí a přidat další funkce, jako závislosti. Ve výchozím nastavení je otevřené návrháře funkce při přidání nové funkce v Průzkumníku řešení nebo balíček Průzkumníka služby SharePoint.  
   
 ## <a name="opening-the-feature-designer"></a>Otevírání návrháře funkce  
  Můžete přidat nebo odebrat položky projektu služby SharePoint pomocí návrháře funkce funkce.  
   
-#### <a name="to-open-the-feature-designer"></a>Chcete-li spustit funkci návrháře  
+#### <a name="to-open-the-feature-designer"></a>Chcete-li spustit funkci návrháře
   
 1.  V **Průzkumníku řešení**, rozbalte položku **funkce**.  
   
 2.  Dvakrát klikněte *Feature1* položku nebo otevřít místní nabídku pro *Feature1* položky a potom zvolte **Návrhář zobrazení**.  
   
-## <a name="viewing-the-packaged-manifest-file"></a>Zobrazení zabalené souboru manifestu  
- Návrhář funkce můžete upravit a vytvořit zabalené soubor manifestu pro funkci (souboru funkce.XML). Kód XML pro tento soubor pak můžete zobrazit v sadě Visual Studio.  
+## <a name="view-the-packaged-manifest-file"></a>Zobrazení zabalené souboru manifestu  
+ Můžete použít Návrháře funkce upravit a vytvořit zabalené soubor manifestu pro funkci (*souboru funkce.xml*). Kód XML pro tento soubor pak můžete zobrazit v sadě Visual Studio.  
   
 #### <a name="to-view-the-packaged-manifest-file"></a>Chcete-li zobrazit zabalené souboru manifestu  
   
@@ -50,12 +51,12 @@ ms.lasthandoff: 04/16/2018
   
 1.  V **Průzkumníku řešení**, vyberte **zobrazit všechny soubory** ikonu.  
   
-2.  Rozbalte funkce, rozbalte FeatureName, rozbalte položku FeatureName.feature a pak otevřete *FeatureName*. Souboru template.XML.  
+2.  Rozbalte funkce, rozbalte FeatureName, rozbalte položku FeatureName.feature a pak otevřete  *\<FeatureName >. Template.xml* souboru.  
   
     > [!NOTE]  
     >  Otevřete soubor manifestu XML funkce šablony, soubory se automaticky ověřují a můžete ignorovat upozornění, která se zobrazí v okně Seznam chyb.  
   
-## <a name="changing-the-manifest-template"></a>Změna manifestu šablony  
+## <a name="change-the-manifest-template"></a>Změnit manifestu šablony  
  Můžete změnit kód XML pro soubor manifestu funkce v editoru Visual Studio XML nebo v podokně manifestu šablony. Všechny změny kód XML je pro funkci sloučí zabalené souboru manifestu. Můžete například změnit manifestu šablony, chcete-li přizpůsobit vlastnosti funkce.  
   
 #### <a name="to-change-the-manifest-template-by-using-the-xml-editor"></a>Chcete-li změnit manifestu šablony pomocí editoru XML  
@@ -70,8 +71,8 @@ ms.lasthandoff: 04/16/2018
   
      Změny kódu XML zobrazí v **Preview z zabalené Manifest** podokně.  
   
-## <a name="overwriting-the-packaged-manifest-file"></a>Přepsání zabalené souboru manifestu  
- Můžete zakázat návrháře funkce a vytvoření souboru souboru funkce.XML ručně. Při prvním provedení tohoto postupu, aktuální nastavení v Návrháři funkce se ukládají do souboru XML šablony funkce. Potom můžete upravit nebo přepsat kód XML.  
+## <a name="overwrite-the-packaged-manifest-file"></a>Přepsat zabalené souboru manifestu  
+ Můžete zakázat funkci Designer a vytvořit *souboru funkce.xml* souborů ručně. Při prvním provedení tohoto postupu, aktuální nastavení v Návrháři funkce se ukládají do souboru XML šablony funkce. Potom můžete upravit nebo přepsat kód XML.  
   
 > [!NOTE]  
 >  Je-li přidat nebo odebrat SharePoint – položky projektu v souboru XML, zatímco návrháře funkce je zakázaná, nejsou zabalené tyto položky projektu.  
@@ -84,8 +85,8 @@ ms.lasthandoff: 04/16/2018
   
      Šablona se aktualizuje aktuální zabalené souboru manifestu.  
   
-## <a name="enabling-the-feature-designer"></a>Povolení funkce návrháře  
- Můžete znovu povolit funkci návrháře k přizpůsobení souboru funkce.XML souboru.  
+## <a name="enable-the-feature-designer"></a>Povolit funkci návrháře  
+ Můžete je znovu povolit funkci návrháře k přizpůsobení *souboru funkce.xml* souboru.  
   
 #### <a name="to-re-enable-the-designer"></a>Chcete-li znovu povolit návrháře  
   
@@ -93,7 +94,6 @@ ms.lasthandoff: 04/16/2018
   
 2.  Šablony je obnoví a zobrazí se původní text, a budou ztraceny všechny změny do souboru XML.  
   
-## <a name="see-also"></a>Viz také  
- [Balení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
-  
+## <a name="see-also"></a>Viz také:
+ [Zabalení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
   

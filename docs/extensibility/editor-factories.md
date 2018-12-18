@@ -1,5 +1,5 @@
 ---
-title: Objekty Factory editoru | Microsoft Docs
+title: Objekty pro vytváření editoru | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,46 +13,47 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 676918b6366837b6ee77cf27bd5fba9fbf608729
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9f4dc0eca2c74161abb9cc4afe3917a160a18422
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49933128"
 ---
-# <a name="editor-factories"></a>Objekty Factory editoru
-Objekt factory editoru vytvoří editor objektů a umístí je do rámec okna, označované jako fyzické zobrazení. Vytvoří dokument data a objekty zobrazení dokumentu, které jsou potřebné k vytvoření editory a návrháři. Objekt factory editoru potřebné pro vytvoření základní editoru Visual Studio a všechny standardní editor. Vlastní editor lze volitelně také můžete vytvořit pomocí objekt factory editoru.  
+# <a name="editor-factories"></a>Objekty pro vytváření editoru
+Objekt pro vytváření editoru vytvoří objekty editoru a umístí je do okna rámce, označované jako fyzické zobrazení. Vytvoří data dokumentu a dokument zobrazit objekty, které jsou potřebné k vytvoření editorech a návrhářích. Objekt pro vytváření editoru je potřeba vytvořit základní editor sady Visual Studio a všechny standardní editor. Vlastní editor lze vytvořit také v případě potřeby pomocí objektu pro vytváření editoru.  
   
- Vytvoříte objekt pro vytváření editor implementací <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> rozhraní. Následující příklad ukazuje, jak implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> pro vytváření editoru:  
+ Vytvoříte objekt pro vytváření editoru implementací <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> rozhraní. Následující příklad ukazuje, jak implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> pro vytváření editoru:  
   
  [!code-vb[VSSDKEditorFactories#1](../extensibility/codesnippet/VisualBasic/editor-factories_1.vb)]
  [!code-csharp[VSSDKEditorFactories#1](../extensibility/codesnippet/CSharp/editor-factories_1.cs)]  
   
- Editor je načteno při prvním otevření typu souboru, který zpracovává tohoto editoru. Můžete otevřít konkrétní editoru nebo editoru výchozí. Pokud vyberete editor výchozího, určuje správné editoru otevřete integrované vývojové prostředí (IDE) a pak ho otevře. Další informace najdete v tématu [určení Editor, který otevře soubor v projektu](../extensibility/internals/determining-which-editor-opens-a-file-in-a-project.md).  
+ Editor je načteno při prvním otevření souboru typu zpracovat tento editor. Můžete otevřít konkrétní editoru nebo editoru výchozí. Pokud vyberete výchozí editor, integrované vývojové prostředí (IDE) určuje správný editor otevřít a pak ho otevře. Další informace najdete v tématu [určit, které editor otevře soubor v projektu](../extensibility/internals/determining-which-editor-opens-a-file-in-a-project.md).  
   
-## <a name="registering-editor-factories"></a>Registrace objekty Factory editoru  
- Předtím, než budete moct použít editor, který jste vytvořili, je nejprve nutné zaregistrovat informace o tom, včetně přípony souborů, které může zpracovat.  
+## <a name="register-editor-factories"></a>Zaregistrovat objekty pro vytváření editoru  
+ Předtím, než je můžete použít editor, který jste vytvořili, nejprve musíte zaregistrovat informace o tom, včetně přípony souborů, které dokáže zpracovat.  
   
- Pokud je vaše VSPackage zapsané ve spravovaném kódu, můžete použít metodu spravované Framework balíčku (MPF) <xref:Microsoft.VisualStudio.Shell.Package.RegisterEditorFactory%2A> po načtení vaší VSPackage zaregistrovat objekt factory editoru. Pokud vaše VSPackage je zapsán v nespravovaném kódu, pak je nutné zaregistrovat vaše objekt factory editoru pomocí <xref:Microsoft.VisualStudio.Shell.Interop.SVsRegisterEditors> služby.  
+ Pokud vaše VSPackage je zapsána ve spravovaném kódu, můžete použít metodu Managed Package Framework (MPF) <xref:Microsoft.VisualStudio.Shell.Package.RegisterEditorFactory%2A> zaregistrovat objekt pro vytváření editoru po načtení vašeho balíčku VSPackage. Pokud je vaše VSPackage napsanou v nespravovaném kódu, pak musí zaregistrovat objekt pro vytváření editoru pomocí <xref:Microsoft.VisualStudio.Shell.Interop.SVsRegisterEditors> služby.  
   
-### <a name="registering-an-editor-factory-by-using-managed-code"></a>Objekt Factory editoru registraci pomocí spravovaného kódu  
- Je nutné zaregistrovat vaše objekt factory editoru v vaší VSPackage `Initialize` metoda. Nejdřív voláním `base.Initialize`a pak zavolají <xref:Microsoft.VisualStudio.Shell.Package.RegisterEditorFactory%2A> pro každý objekt factory editoru  
+### <a name="register-an-editor-factory-by-using-managed-code"></a>Zaregistrovat objekt pro vytváření editoru pomocí spravovaného kódu  
+ Objekt pro vytváření editoru musí registrovat v vašeho balíčku VSPackage `Initialize` metody. Nejprve volat `base.Initialize`a pak vyvolejte <xref:Microsoft.VisualStudio.Shell.Package.RegisterEditorFactory%2A> pro každý objekt factory editoru  
   
- Ve spravovaném kódu není třeba se zrušit registraci objekt pro vytváření editor, protože VSPackage toto zpracování. Navíc pokud vaše objekt factory editoru implementuje <xref:System.IDisposable>, jsou automaticky odstraněny po zrušení registrace.  
+ Ve spravovaném kódu není nutné zrušit registraci objektu pro vytváření editoru, protože sady VSPackage to postarají za vás. Také pokud objekt pro vytváření editoru implementuje <xref:System.IDisposable>, je automaticky odstraněn, když se registrace.  
   
-### <a name="registering-an-editor-factory-by-using-unmanaged-code"></a>Objekt factory editoru registraci pomocí nespravovaného kódu  
- V <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A> implementace pro editor balíček, použijte `QueryService` metoda k volání `SVsRegisterEditors`. Díky tomuto vrací ukazatel na <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterEditors>. Volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterEditors.RegisterEditor%2A> metoda předáním vaši implementaci <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> rozhraní. Je nutné měny cen <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> v samostatné třídy.  
+### <a name="register-an-editor-factory-by-using-unmanaged-code"></a>Zaregistrovat objekt pro vytváření editoru pomocí nespravovaného kódu  
+ V <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A> implementace editor balíčku, použijte `QueryService` metodu chce volat `SVsRegisterEditors`. To vrací ukazatel na <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterEditors>. Volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterEditors.RegisterEditor%2A> metodu předáním vaši implementaci <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> rozhraní. Je nutné implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> v samostatné třídě.  
   
-## <a name="the-editor-factory-registration-process"></a>Proces registrace Factory editoru  
- Při svém editoru pomocí vaší objekt factory editoru načte Visual Studio se spustí následující proces:  
+## <a name="the-editor-factory-registration-process"></a>Proces registrace factory editoru  
+ Když Visual Studio načte objekt pro vytváření editoru pomocí editoru se spustí následující proces:  
   
-1.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Projektu systémová volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A>.  
+1. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Projektu systémových volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A>.  
   
-2.  Tato metoda vrátí objekt factory editoru. Načítání editoru balíček, ale dokud systému projektu ve skutečnosti potřebuje editoru Visual Studio zpoždění.  
+2. Tato metoda vrátí objekt pro vytváření editoru. Načítání balíčku editoru, ale dokud bude systém projektu skutečně potřebuje editoru sady Visual Studio zpoždění.  
   
-3.  Když se systém projektu potřebuje editoru, Visual Studio volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>, specializované metodu, která vrátí zobrazení dokumentu a dokument datové objekty.  
+3. Když bude systém projektu potřebuje editoru, Visual Studio volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>, specializované metodu, která vrátí zobrazení dokumentu a dokument datové objekty.  
   
-4.  Pokud volání Visual Studio pomocí editoru objektu pro vytváření <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> vrátit datový objekt dokumentů a zobrazení objektu dokumentu, Visual Studio pak vytvoří okna dokumentu, umístí objekt zobrazení dokumentu a vytvoří položku do spuštěné dokumentu Tabulka (r...) pro dokument datový objekt.  
+4. Pokud volání pomocí sady Visual Studio pomocí objekt pro vytváření editoru <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> vrátit datový objekt dokumentu a objekt zobrazení dokument, Visual Studio pak vytvoří okno dokumentu, umístí objekt zobrazení dokumentu a vytvoří položku do spuštěného dokumentu Tabulka (r...) pro datový objekt dokumentu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>   
- [Spuštění tabulky dokumentů](../extensibility/internals/running-document-table.md)
+ [spuštění tabulky dokumentů](../extensibility/internals/running-document-table.md)

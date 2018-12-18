@@ -11,11 +11,12 @@ ms.author: svukel
 manager: viveis
 ms.workload:
 - vssdk
-ms.openlocfilehash: d916ea30dd9b72a2d8bd59e8d3d34f9e73c74877
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dcb2d1d922b4ebd4943c42c478400c5873af9cc4
+ms.sourcegitcommit: 498e39e89a89ad7bf9dcb0617424fff999b1c3b2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36302973"
 ---
 # <a name="open-folder-extensibility"></a>Otevřete složku rozšíření
 
@@ -53,7 +54,7 @@ Funkce, které používají následující typy bude muset přijmout nová rozhr
 
 ## <a name="feedback-comments-issues"></a>Zpětná vazba, komentáře, problémy
 
-Otevřete složku a `Microsoft.VisualStudio.Workspace.*` rozhraní API jsou ve vývoji aktivní. Pokud se zobrazí neočekávanému chování, pak najdete v části Známé problémy pro tuto verzi, které vás zajímají. Komunity vývojářů je doporučené místo, hlasování a vytvořit všechny problémy. Pro každý zpětnou vazbu důrazně doporučujeme podrobný popis vašeho problému. Zahrnují verzi sady Visual Studio, které vyvíjíte pro, rozhraní API používáte (co jste implementovali i jste interakci s), očekávaný výsledek a skutečný výsledek. Pokud je to možné zahrnují výpis procesu devenv.exe. Pomocí sledování pro odeslání názoru na tento problém Githubu a související dokumentaci.
+Otevřete složku a `Microsoft.VisualStudio.Workspace.*` rozhraní API jsou ve vývoji aktivní. Pokud se zobrazí neočekávanému chování, pak najdete v části Známé problémy pro tuto verzi, které vás zajímají. [Komunity vývojářů](https://developercommunity.visualstudio.com) je doporučené místo, hlasování a vytvořit všechny problémy. Pro každý zpětnou vazbu důrazně doporučujeme podrobný popis vašeho problému. Zahrnují verzi sady Visual Studio, které vyvíjíte pro, rozhraní API používáte (co jste implementovali i jste interakci s), očekávaný výsledek a skutečný výsledek. Pokud je to možné zahrnují výpis procesu devenv.exe. Pomocí sledování pro odeslání názoru na tento problém Githubu a související dokumentaci.
 
 ## <a name="next-steps"></a>Další kroky
 

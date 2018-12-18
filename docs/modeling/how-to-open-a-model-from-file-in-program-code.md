@@ -7,64 +7,66 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 832cd34b2461a07e895272816324e41508fdbbd5
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 18cad086419be13a666d4eddbf454885c9cf9c36
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49812488"
 ---
 # <a name="how-to-open-a-model-from-file-in-program-code"></a>Postupy: Otevření modelu ze souboru v kódu programu
-Modely DSL můžete otevřít v libovolné aplikaci.
+DSL modely můžete otevřít v libovolné aplikaci.
 
- Z [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] rozšíření, ModelBus můžete použít pro tento účel. ModelBus poskytuje standardní mechanismus pro odkazování na model nebo elementů ve model a hledání modelu, pokud se přesunul. Další informace najdete v tématu [integrace modelů pomocí Visual Studio Modelbus](../modeling/integrating-models-by-using-visual-studio-modelbus.md).
+ Z rozšíření sady Visual Studio můžete použít pro tento účel ModelBus. ModelBus poskytuje standardní mechanismus pro odkazování na modelu nebo prvky v modelu a pro vyhledání modelu, pokud se přesunula. Další informace najdete v tématu [integrace modelů pomocí Visual Studio Modelbus](../modeling/integrating-models-by-using-visual-studio-modelbus.md).
 
 ## <a name="target-framework"></a>Cílová architektura
- Nastavte **cílové rozhraní** projektu aplikace pro **rozhraní .NET Framework 4**.
+ Nastavte **Cílová architektura** projektu aplikace pro **rozhraní .NET Framework 4**.
 
 #### <a name="to-set-the-target-framework"></a>Chcete-li nastavit cílové rozhraní
 
-1.  Otevřete [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projekt pro aplikace, ve kterém chcete číst DSL modelu.
+1.  Otevřete projekt sady Visual Studio pro aplikace, ve kterém chcete číst modelu DSL.
 
-2.  V **Průzkumníku řešení**, klikněte pravým tlačítkem na projekt a pak klikněte na tlačítko **vlastnosti**.
+2.  V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt a potom klikněte na tlačítko **vlastnosti**.
 
-3.  V okně Vlastnosti projektu na **aplikace** nastavte **cílové rozhraní** do **rozhraní .NET Framework 4**.
+3.  V okně Vlastnosti projektu na **aplikace** kartu, nastavte **Cílová architektura** pole **rozhraní .NET Framework 4**.
 
 > [!NOTE]
->  Možná budete muset provést i v případě, že jste vybrali **rozhraní .NET Framework 4** v dialogovém okně projekt vytvoření. Cílovém Frameworku, který by neměl být **rozhraní .NET Framework 4 Client Profile**.
+>  Můžete potřebovat k tomu i v případě, že jste vybrali **rozhraní .NET Framework 4** v dialogovém okně vytvoření projektu. Cílová architektura, která by neměla být **rozhraní .NET Framework 4 Client Profile**.
 
 ## <a name="references"></a>Odkazy
- Je nutné přidat tyto odkazy na vaše [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projekt aplikace:
+ Je nutné přidat tyto odkazy do projektu aplikace Visual Studio:
 
 -   `Microsoft.VisualStudio.Modeling.Sdk.11.0`
 
-    -   Pokud nevidíte to v části **.NET** ve **přidat odkazy** dialogové okno, klikněte na tlačítko **Procházet** kartě a přejděte do `%Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Assemblies\`.
+    -   Pokud nevidíte příkazem **.NET** kartu **Add References** dialogovém okně klikněte na tlačítko **Procházet** kartu a přejít na `%Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Common\Assemblies\`.
 
--   Sestavení vaší DSL, která je k dispozici ve složce Koš DSL projektu. Jeho název je obvykle ve formátu: *společnost*. *YourProject*`.Dsl.dll`.
+-   Sestavení DSL, který najdete ve složce bin projektu DSL. Jeho název je obvykle ve formátu: *společnost*. *YourProject*`.Dsl.dll`.
 
 ## <a name="important-classes-in-the-dsl"></a>Důležité třídy v DSL
- Než napíšete kód, který čte vaší DSL, byste měli znát názvy některé třídy generované vaší DSL. V řešení DSL, otevřete **Dsl** projektu a hledat v **GeneratedCode** složky. Případně, dvakrát klikněte na sestavení DSL ve vašem projektu **odkazy**a otevřete DSL oboru názvů v **Prohlížeč objektů**.
+ Předtím, než můžete napsat kód, který čte vašeho DSL, byste měli znát názvy některých prostor tříd vygenerovaných podle vašeho DSL. Ve vašem řešení DSL, otevřete **Dsl** projektu a podívejte se **GeneratedCode** složky. Případně, poklepejte na sestavení DSL ve vašem projektu **odkazy**a otevřete obor názvů DSL v **prohlížeče objektů**.
 
- Toto jsou třídy, které byste měli určit:
+ Jedná se o třídy, které byste měli identifikovat:
 
--   *YourDslRootClass* -Toto je název kořenové třídy ve vaší `DslDefinition.dsl`.
+-   *YourDslRootClass* – jde o název kořenové třídy ve vašich `DslDefinition.dsl`.
 
--   *YourDslName* `SerializationHelper` -Tato třída je definována v `SerializationHelper.cs` ve vašem projektu DSL.
+-   *YourDslName* `SerializationHelper` – Tato třída je definována v `SerializationHelper.cs` ve vašem projektu DSL.
 
--   *YourDslName* `DomainModel` -Tato třída je definována v `DomainModel.cs` ve vašem projektu DSL.
+-   *YourDslName* `DomainModel` – Tato třída je definována v `DomainModel.cs` ve vašem projektu DSL.
 
 ## <a name="reading-from-a-file"></a>Čtení ze souboru
- Následující příklad je navržen pro čtení DSL, ve kterém jsou důležité třídy následujícím způsobem:
+ Následující příklad je určen ke čtení DSL, ve kterém jsou důležité třídy následujícím způsobem:
 
--   FamilyTreeModel
+- FamilyTreeModel
 
--   FamilyTreeSerializationHelper
+- FamilyTreeSerializationHelper
 
--   FamilyTreeDomainModel
+- FamilyTreeDomainModel
 
- Jiná třída domény v této DSL je osoba.
+  Doménová třída v tomto DSL je osoba.
 
-```
+```csharp
 using System;
 using Microsoft.VisualStudio.Modeling;
 using Company.FamilyTree; // Your DSL namespace
@@ -101,9 +103,9 @@ namespace StandaloneReadDslConsole
 ```
 
 ## <a name="saving-to-a-file"></a>Ukládání do souboru
- Následujícím dodatkem k předchozí kód provede změny do modelu a pak ji uloží je do souboru.
+ Následujícím dodatkem k předchozí kód provede změny modelu a uloží jej do souboru.
 
-```
+```csharp
 using (Transaction t =
   store.TransactionManager.BeginTransaction("update model"))
 {

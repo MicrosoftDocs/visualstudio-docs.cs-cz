@@ -9,13 +9,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c94e8f2ba852600c14ede7419619c711b70f0b0b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 2b1e2291ff5c4b7ff072e45df9e2d32768011bca
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815779"
 ---
-# <a name="how-to-filter-profiling-tools-report-views-to-display-just-my-code"></a>Postupy: Filtrování zobrazení sestav nástrojů pro profilaci k zobrazení pouze vlastního kódu
+# <a name="how-to-filter-profiling-tools-report-views-to-display-just-my-code"></a>Postupy: filtrování nástrojů pro profilaci zobrazení sestav k zobrazení pouze můj kód
 
 Visual Studio poskytuje tak, aby se zobrazovala pouze kód, který jste implementovali filtrování pro sestavy pro zvýšení výkonu. Tuto funkci, která se nazývá pouze můj kód, je povoleno ve výchozím nastavení. Je nakonfigurovaný pomocí **pouze můj kód** možnost **možnosti** dialogové okno.
 
@@ -35,6 +36,6 @@ Visual Studio poskytuje tak, aby se zobrazovala pouze kód, který jste implemen
 
 3. V části **obecné nastavení**, zrušte **povolit volbu pouze vlastní kód** zaškrtávací políčko.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Zobrazení sestav nástrojů pro přizpůsobení výkonu](../profiling/customizing-performance-tools-report-views.md)
+[Přizpůsobení zobrazení sestav nástrojů výkonu](../profiling/customizing-performance-tools-report-views.md)

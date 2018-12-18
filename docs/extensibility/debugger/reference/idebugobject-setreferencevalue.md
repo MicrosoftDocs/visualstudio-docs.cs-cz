@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::SetReferenceValue | Microsoft Docs
+title: IDebugObject::SetReferenceValue | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8941b09a18968fccba72c6e03a2fe612234909d5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1b597d7a62880e00a570a1971a6fec2becaaddca
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49908623"
 ---
 # <a name="idebugobjectsetreferencevalue"></a>IDebugObject::SetReferenceValue
-Nastaví hodnotu odkaz na tento objekt.  
+Nastaví odkaz na hodnotu tohoto objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +41,13 @@ int SetReferenceValue(
   
 #### <a name="parameters"></a>Parametry  
  `pObject`  
- [v] [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objektu, který představuje novou hodnotu odkazu.  
+ [in] [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objekt představující novou hodnotu odkazu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí S_OK; jinak vrátí kód chyby.  
+ V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda je tato [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objektu odkaz na hodnotu zadanou v objektu `pObject` parametr vyvolání rychle jakékoli předchozí odkaz. Poznámka: Tento to `IDebugObject` objektu už musí být odkazového typu.  
+ Tato metoda provádí to [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) odkazu na hodnotu objektu, který je uveden v objektu `pObject` parametr odhazuje všechny předchozí odkazy. Všimněte si, že tento `IDebugObject` objekt již musí být typ odkazu.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)   

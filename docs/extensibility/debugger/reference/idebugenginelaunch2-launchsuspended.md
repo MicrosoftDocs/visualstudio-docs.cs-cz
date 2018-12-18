@@ -1,5 +1,5 @@
 ---
-title: IDebugEngineLaunch2::LaunchSuspended | Microsoft Docs
+title: IDebugEngineLaunch2::LaunchSuspended | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a05e8f034ec30f0f387675759cb7601f7b3fc3e7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ffe5bdd0619ae5954a34fde50518adb3767d1825
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49926498"
 ---
 # <a name="idebugenginelaunch2launchsuspended"></a>IDebugEngineLaunch2::LaunchSuspended
-Tato metoda spustí proces prostřednictvím modul ladění (DE).  
+Tato metoda spustí nějaký proces pomocí ladicího stroje (DE).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -64,51 +65,51 @@ int LaunchSuspended(
   
 #### <a name="parameters"></a>Parametry  
  `pszMachine`  
- [v] Název počítače, ve kterém se má spustit proces. Chcete-li určit místní počítač, použijte hodnotu null.  
+ [in] Název počítače, ve kterém chcete spustit proces. Chcete-li určit místní počítač použijte hodnotu null.  
   
  `pPort`  
- [v] [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) rozhraní představující port, který se bude program spouštět v.  
+ [in] [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) představující port, který se bude program spouštět v rozhraní.  
   
  `pszExe`  
- [v] Název spustitelného souboru, který má být spuštěna.  
+ [in] Název spustitelného souboru, která se má spustit.  
   
  `pszArgs`  
- [v] Argumenty, které mají být předána do spustitelného souboru. Může mít hodnotu null, pokud žádné argumenty.  
+ [in] Argumenty k předání do spustitelného souboru. Může mít hodnotu null, pokud nejsou žádné argumenty.  
   
  `pszDir`  
- [v] Název pracovní adresář používá spustitelný soubor. Může mít hodnotu null, pokud není třeba žádné pracovní adresář.  
+ [in] Název pracovní adresář, který používá spustitelný soubor. Může mít hodnotu null, pokud je potřeba žádné pracovní adresář.  
   
  `bstrEnv`  
- [v] Blok prostředí řetězce ukončené hodnotou NULL, za nímž následuje další ukončovací hodnotu NULL.  
+ [in] Blok prostředí řetězec zakončený NULL, za nímž následuje další ukončovací znak NULL.  
   
  `pszOptions`  
- [v] Parametry pro spustitelný soubor.  
+ [in] Parametry pro spustitelný soubor.  
   
  `dwLaunchFlags`  
- [v] Určuje, [LAUNCH_FLAGS](../../../extensibility/debugger/reference/launch-flags.md) pro relaci.  
+ [in] Určuje, [LAUNCH_FLAGS](../../../extensibility/debugger/reference/launch-flags.md) pro relaci.  
   
  `hStdInput`  
- [v] Popisovač alternativní vstupního datového proudu. Může být 0, pokud přesměrování není potřeba.  
+ [in] Popisovač alternativní vstupní datový proud. Může být 0, pokud se nevyžaduje přesměrování.  
   
  `hStdOutput`  
- [v] Zpracování alternativní výstupního proudu. Může být 0, pokud přesměrování není potřeba.  
+ [in] Popisovač alternativní výstupní datový proud. Může být 0, pokud se nevyžaduje přesměrování.  
   
  `hStdError`  
- [v] Zpracování do výstupního datového proudu alternativní chyby. Může být 0, pokud přesměrování není potřeba.  
+ [in] Zpracování do výstupního datového proudu alternativní chyby. Může být 0, pokud se nevyžaduje přesměrování.  
   
  `pCallback`  
- [v] [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) objekt, který přijme události ladicí program.  
+ [in] [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) objekt, který přijímá události ladicího programu.  
   
  `ppDebugProcess`  
- [out] Vrátí výsledná [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) objekt, který reprezentuje spuštěného procesu.  
+ [out] Vrátí výsledný [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) objekt, který reprezentuje spuštěn proces.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Za normálních okolností [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] spustí program pomocí [LaunchSuspended](../../../extensibility/debugger/reference/idebugportex2-launchsuspended.md) metoda a potom připojí ladicí program pozastavenou programu. Existují však případech, ve kterých se ladění modul může třeba spustit program (například pokud modul ladění je součástí překladač a program laděné je interpretovaný jazyk), v takovém případě [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] používá `IDebugEngineLaunch2::LaunchSuspended` – metoda .  
+ Za normálních okolností [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] spustí program pomocí [LaunchSuspended](../../../extensibility/debugger/reference/idebugportex2-launchsuspended.md) metoda a potom připojí ladicí program k programu pozastavené. Ale existují okolnosti, ve kterých ladicí stroj možná bude nutné ke spuštění programu (například, pokud ladicí stroj je součástí interpretu a laděný program je interpretovaný jazyk), v takovém případě [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] používá `IDebugEngineLaunch2::LaunchSuspended` – metoda .  
   
- [ResumeProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-resumeprocess.md) metoda je volána před zahájením procesu po proces byla úspěšně spuštěna v pozastaveném stavu.  
+ [ResumeProcess](../../../extensibility/debugger/reference/idebugenginelaunch2-resumeprocess.md) metoda je volána po v pozastaveném stavu se úspěšně spustila proces zahájíte proces.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugEngineLaunch2](../../../extensibility/debugger/reference/idebugenginelaunch2.md)   

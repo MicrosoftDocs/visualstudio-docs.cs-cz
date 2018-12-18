@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: zahrnutí datového souboru v aplikaci ClickOnce | Microsoft Docs'
+title: 'Postupy: zahrnutí datového souboru do aplikace ClickOnce | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -18,72 +18,71 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8240e4bb8ba540fcdd4453e39d9fa6b00b31bef2
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: cfba7612ec0e019b8c8dfa7c7406435b6e43e6cc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49917918"
 ---
-# <a name="how-to-include-a-data-file-in-a-clickonce-application"></a>Postupy: Zahrnutí datového souboru do aplikace ClickOnce
-Každý [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] instalací aplikací je přiřazen adresář na místní disk cílového počítače, kde aplikace může spravovat svá vlastní data. Datové soubory mohou zahrnovat souborů všech typů: textové soubory, soubory XML nebo i soubory databáze (.mdb) Microsoft Access. Následující postupy ukazují, jak přidat datový soubor libovolného typu do vaší [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace.  
+# <a name="how-to-include-a-data-file-in-a-clickonce-application"></a>Postupy: zahrnutí datového souboru do aplikace ClickOnce
+Každý [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci nainstalujete, je přiřazen adresář data na místním disku cílového počítače, kde aplikace může spravovat svoje vlastní data. Datové soubory můžete zahrnout soubory libovolného typu: textové soubory, soubory XML nebo dokonce i databáze Microsoft Access (*.mdb*) soubory. Následující postupy ukazují, jak přidat soubor dat libovolného typu do vašeho [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace.  
   
-### <a name="to-include-a-data-file-by-using-mageexe"></a>Chcete-li zahrnout datový soubor pomocí Mage.exe  
+### <a name="to-include-a-data-file-by-using-mageexe"></a>Zahrnout soubor dat s využitím Mage.exe  
   
-1.  Přidáte datový soubor do adresáře aplikace s ostatními soubory aplikace.  
+1. Přidáte datový soubor do adresáře aplikace se zbytkem soubory vaší aplikace.  
   
-     Obvykle adresáře aplikace bude adresář s názvem bez přípony s aktuální verzí nasazení – například v1.0.0.0.  
+    Obvykle adresáře aplikace bude označen s aktuální verzí nasazení – například v1.0.0.0.  
   
-2.  Aktualizujte manifest aplikace do seznamu datového souboru.  
+2. Aktualizujte manifest aplikace do seznamu datový soubor.  
   
-     **Mage -u v1.0.0.0\Application.manifest - FromDirectory v1.0.0.0**  
+    `mage -u v1.0.0.0\Application.manifest -FromDirectory v1.0.0.0`  
   
-     Jak tento úkol provést znovu vytvoří seznam souborů v manifestu aplikace a také automaticky vygeneruje podpisy hodnoty hash.  
+    Jak tento úkol provést znovu vytvoří seznam souborů v manifestu aplikace a také automaticky vygeneruje podpisy hodnoty hash.  
   
-3.  Otevřete manifest aplikace v upřednostňovaném textovém editoru nebo editoru XML a najděte `file` element nedávno přidaného souboru.  
+3. Otevřete manifest aplikace v upřednostňovaném textovém editoru nebo editoru XML a najděte `file` – element pro nedávno přidaný soubor.  
   
-     Pokud jste přidali soubor XML s názvem `Data.xml`, soubor bude vypadat podobně jako následující příklad kódu.  
+    Pokud jste přidali soubor XML s názvem `Data.xml`, soubor bude vypadat podobně jako v následujícím příkladu kódu.  
   
- `<file name="Data.xml" hash="23454C18A2DC1D23E5B391FEE299B1F235067C59" hashalg="SHA1" asmv2:size="39500" />`  
+   `<file name="Data.xml" hash="23454C18A2DC1D23E5B391FEE299B1F235067C59" hashalg="SHA1" asmv2:size="39500" />`  
   
-1.  Přidat atribut `type` do tohoto elementu a zadejte s hodnotou `data`.  
+4. Přidejte atribut `type` na tento element a zadejte ji s hodnotou `data`.  
   
- `<file name="Data.xml" writeableType="applicationData" hash="23454C18A2DC1D23E5B391FEE299B1F235067C59" hashalg="SHA1" asmv2:size="39500" />`  
+   `<file name="Data.xml" writeableType="applicationData" hash="23454C18A2DC1D23E5B391FEE299B1F235067C59" hashalg="SHA1" asmv2:size="39500" />`  
   
-1.  Opětovné podepsání manifestu aplikace pomocí páru klíčů nebo certifikátu a znovu podepsání manifestu nasazení.  
+5. Znovu podepsat manifest aplikace pomocí páru klíčů nebo certifikát a nové podepsání manifestu nasazení.  
   
-     Manifest nasazení musíte znovu podepsat, protože došlo ke změně jeho hodnoty hash manifestu aplikace.  
+    Musíte znovu podepsat manifestu nasazení, protože došlo ke změně jeho hodnoty hash manifestu aplikace.  
   
-     **manifest aplikace Mage -s - CR cert_file - pwd heslo**  
+    `mage -s app manifest -cf cert_file -pwd password`
   
-     **manifest Mage -u nasazení manifestu - appm aplikace.**  
+    `mage -u deployment manifest -appm app manifest`
   
-     **manifest nasazení Mage -s - CR Soubor_certifikátu - pwd heslo**  
+    `mage -s deployment manifest -cf certfile -pwd password`
   
-2.  
+### <a name="to-include-a-data-file-by-using-mageuiexe"></a>Zahrnout soubor dat s využitím MageUI.exe  
   
-### <a name="to-include-a-data-file-by-using-mageuiexe"></a>Chcete-li zahrnout datový soubor pomocí MageUI.exe  
+1.  Přidáte datový soubor do adresáře aplikace se zbytkem soubory vaší aplikace.  
   
-1.  Přidáte datový soubor do adresáře aplikace s ostatními soubory aplikace.  
+2.  Obvykle adresáře aplikace bude označen s aktuální verzí nasazení – například v1.0.0.0.  
   
-2.  Obvykle adresáře aplikace bude adresář s názvem bez přípony s aktuální verzí nasazení – například v1.0.0.0.  
+3.  Na **souboru** nabídky, klikněte na tlačítko **otevřete** otevřete manifest aplikace.  
   
-3.  Na **soubor** nabídky, klikněte na tlačítko **otevřete** otevřete manifest aplikace.  
+4.  Vyberte **soubory** kartu.  
   
-4.  Vyberte **soubory** kartě.  
-  
-5.  V textovém poli v horní části karty zadejte adresář obsahující soubory aplikace a pak klikněte na tlačítko **vyplnit**.  
+5.  Do textového pole v horní části karty zadejte adresář, který obsahuje soubory vaší aplikace a pak klikněte na tlačítko **naplnit**.  
   
      Datový soubor se zobrazí v mřížce.  
   
 6.  Nastavte **typ souboru** hodnotu datového souboru **Data**.  
   
-7.  Uložte manifest aplikace a pak se znovu přihlaste soubor.  
+7.  Uložit manifest aplikace a opětovné podepsání souboru.  
   
-     MageUI.exe vás vyzve k znovu podepsat soubor.  
+     *MageUI.exe* vás vyzve k opětovné podepsání souboru.  
   
 8.  Opětovné podepsání manifestu nasazení  
   
-     Manifest nasazení musíte znovu podepsat, protože došlo ke změně jeho hodnoty hash manifestu aplikace.  
+     Musíte znovu podepsat manifestu nasazení, protože došlo ke změně jeho hodnoty hash manifestu aplikace.  
   
-## <a name="see-also"></a>Viz také  
- [Přístup k místním a vzdáleným datům v aplikacích ClickOnce](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md)
+## <a name="see-also"></a>Viz také:  
+ [Přístup k lokálním a vzdáleným datům v aplikacích ClickOnce](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md)

@@ -10,19 +10,20 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0687b4f56906aeca0866f8d5d6ad7d329bb84df6
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f2f9d47107d8a5e0fb4c10e058c2fc4c7ca3ed5e
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34844466"
 ---
 # <a name="how-to-set-performance-data-file-name-options"></a>Postupy: nastavení možností názvu datového souboru výkonu
 
-Ve výchozím nastavení uložte soubor profilování dat (.vsp) pomocí následující syntaxe:
+Ve výchozím nastavení, můžete uložit data profilování (. *Vsp*) souborů pomocí následující syntaxe:
 
 *Path\VSP-File\YYMMDD(N)* **.vsp**
 
-Pro relaci, výkon, můžete změnit libovolný pojmenování parametr na stránce Obecné v dialogovém okně Vlastnosti.
+Všechny pojmenování parametru můžete změnit na **Obecné** stránky dialogové okno Vlastnosti výkonnostní relace.
 
 |||
 |-|-|

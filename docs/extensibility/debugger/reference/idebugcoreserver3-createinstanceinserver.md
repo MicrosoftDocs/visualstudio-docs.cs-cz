@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer3::CreateInstanceInServer | Microsoft Docs
+title: IDebugCoreServer3::CreateInstanceInServer | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 71995e38cf58c23437cbb9a6d6973fbd09cab8ab
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 171eda8b7c1b206ea54839366686ad43f690afe0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49886471"
 ---
 # <a name="idebugcoreserver3createinstanceinserver"></a>IDebugCoreServer3::CreateInstanceInServer
-Vytvoří instanci modul ladění na serveru.  
+Vytvoří instanci ladicího stroje na serveru.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,23 +49,23 @@ int CreateInstanceInServer(
   
 #### <a name="parameters"></a>Parametry  
  `szDll`  
- [v] Cesta k souboru dll, která implementuje CLSID zadaný v `clsidObject` parametr. Pokud je to `NULL`, pak COM na `CoCreateInstance` funkce je volána.  
+ [in] Cesta k souboru dll, která implementuje identifikátor CLSID určený v `clsidObject` parametru. Pokud je to `NULL`, pak modelu COM `CoCreateInstance` funkce je volána.  
   
  `wLangId`  
- [v] Národní prostředí ladění stroje. To může být 0, pokud [SetLocale](../../../extensibility/debugger/reference/idebugengine2-setlocale.md) neměla být volána metoda.  
+ [in] Národní prostředí ladicího stroje. To může být 0, pokud [SetLocale](../../../extensibility/debugger/reference/idebugengine2-setlocale.md) by neměla být volána metoda.  
   
  `clsidObject`  
- [v] CLSID modul ladění k vytvoření.  
+ [in] Identifikátor CLSID ladicího stroje vytvořit.  
   
  `riid`  
- [v] Rozhraní ID načíst z objektu třídy konkrétní rozhraní.  
+ [in] Rozhraní ID pro načtení z objektu třídy konkrétní rozhraní.  
   
  `ppvObject`  
- [out] `IUnknown` rozhraní z instancí objektu. Přetypování nebo zařazování tento objekt požadované rozhraní.  
+ [out] `IUnknown` rozhraní z instance objektu. Přetypování nebo přeuspořádat tento objekt na požadované rozhraní.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)   
- [Setlocale –](../../../extensibility/debugger/reference/idebugengine2-setlocale.md)
+ [SetLocale](../../../extensibility/debugger/reference/idebugengine2-setlocale.md)

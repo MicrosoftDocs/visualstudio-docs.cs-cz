@@ -1,6 +1,7 @@
 ---
 title: 'CA1064: Výjimky by měly být veřejné'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,35 +16,37 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 73daa2d834342cf9d4759d569cd637661696e34d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 904aa1fe83677e2d53d2e93964619a5c2aa82625
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49816819"
 ---
 # <a name="ca1064-exceptions-should-be-public"></a>CA1064: Výjimky by měly být veřejné
+
 |||
 |-|-|
 |TypeName|ExceptionsShouldBePublic|
 |CheckId|CA1064|
 |Kategorie|Microsoft.Design|
-|Narušující změna|Bez ukončování řádků|
+|Narušující změna|Pevné|
 
 ## <a name="cause"></a>příčina
- Výjimka neveřejný odvozena přímo z <xref:System.Exception>, <xref:System.SystemException>, nebo <xref:System.ApplicationException>.
+ Neveřejné výjimka je odvozena přímo z <xref:System.Exception>, <xref:System.SystemException>, nebo <xref:System.ApplicationException>.
 
 ## <a name="rule-description"></a>Popis pravidla
- Vnitřní výjimkou je jenom viditelné v její vlastní interní oboru. Jakmile výjimka přesáhne hranice vnitřního rozsahu, lze pro zachycení výjimky použít pouze základní výjimku. Pokud je zděděn vnitřní výjimku z <xref:System.Exception>, <xref:System.SystemException>, nebo <xref:System.ApplicationException>, kód externí nebude mít dostatečné informace k vědět, co dělat s výjimkou.
+ Interní výjimka je jenom viditelné uvnitř svého vlastního vnitřního rozsahu. Jakmile výjimka přesáhne hranice vnitřního rozsahu, lze pro zachycení výjimky použít pouze základní výjimku. Pokud je vnitřní výjimka zděděna z <xref:System.Exception>, <xref:System.SystemException>, nebo <xref:System.ApplicationException>, externí kód nebude mít dostatečné informace o tom, co dělat, s výjimkou.
 
- Ale pokud kód veřejné výjimka, která později slouží jako základ pro vnitřní výjimku, je možné logicky předpokládat, že další kód se bude moct dělat něco inteligentního s výjimkou základní. Veřejné výjimka bude mít další informace, než co je poskytováno <xref:System.Exception>, <xref:System.SystemException>, nebo <xref:System.ApplicationException>.
+ Ale pokud kód má veřejnou výjimek, který později slouží jako základ pro vnitřní výjimku, je možné logicky předpokládat, že kód dál si budete moct udělat něco inteligentní s základní výjimku. Veřejné výjimka bude mít více informací, než co poskytují <xref:System.Exception>, <xref:System.SystemException>, nebo <xref:System.ApplicationException>.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Zveřejnit výjimku a vnitřní výjimku z veřejné výjimky, který není odvozen <xref:System.Exception>, <xref:System.SystemException>, nebo <xref:System.ApplicationException>.
+ Zveřejněte výjimku nebo odvozovat vnitřní výjimka z veřejné výjimka, která není <xref:System.Exception>, <xref:System.SystemException>, nebo <xref:System.ApplicationException>.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Zprávu od toto pravidlo potlačit, pokud jste si jistí ve všech případech, že privátní výjimka bude zachycena v rámci vlastní interní oboru.
+ Potlačí zprávy z tohoto pravidla, pokud máte jistotu, že ve všech případech, že privátní výjimka bude zachycena v rámci svého vlastního vnitřního rozsahu.
 
 ## <a name="example"></a>Příklad
- Toto pravidlo aktivuje v prvním příkladu metoda FirstCustomException, protože třída výjimky je odvozena přímo z výjimky a je interní. Pravidlo k třídě SecondCustomException neaktivuje, protože Přestože třída je odvozen také přímo z výjimky, je třída deklarována veřejné. Třída třetí také neaktivuje pravidlo protože neodvozuje přímo z <xref:System.Exception?displayProperty=fullName>, <xref:System.SystemException?displayProperty=fullName>, nebo <xref:System.ApplicationException?displayProperty=fullName>.
+ Toto pravidlo je vyvoláno na první příklad metody FirstCustomException, protože třída výjimky je odvozena přímo z výjimky a je interní. Toto pravidlo ve třídě SecondCustomException neaktivuje, protože i když třída je odvozena přímo z výjimky, třída je deklarována jako veřejné. Třída třetí také neaktivuje pravidla vzhledem k tomu, že není odvozena přímo z <xref:System.Exception?displayProperty=fullName>, <xref:System.SystemException?displayProperty=fullName>, nebo <xref:System.ApplicationException?displayProperty=fullName>.
 
  [!code-csharp[FxCop.Design.ExceptionsShouldBePublic.CA1064#1](../code-quality/codesnippet/CSharp/ca1064-exceptions-should-be-public_1.cs)]

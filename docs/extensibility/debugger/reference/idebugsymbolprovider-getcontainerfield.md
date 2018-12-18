@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetContainerField | Microsoft Docs
+title: IDebugSymbolProvider::GetContainerField | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 41709f658da15001b6f604b78bf081edefd88b8c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ac7acc5d12ecce72119f19a51b1f4313a1aabe08
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49926399"
 ---
 # <a name="idebugsymbolprovidergetcontainerfield"></a>IDebugSymbolProvider::GetContainerField
-Tato metoda získá pole, které obsahuje adresu ladění.  
+Tato metoda načte pole s údajem o adresa pro ladění.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,13 +43,13 @@ int GetContainerField(
   
 #### <a name="parameters"></a>Parametry  
  `pAddress`  
- [v] Adresu reprezentovaná [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) rozhraní.  
+ [in] Adresa reprezentovaná [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) rozhraní.  
   
  `ppContainerField`  
  [out] Vrátí pole kontejneru reprezentována [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) rozhraní.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   

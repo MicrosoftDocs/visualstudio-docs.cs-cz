@@ -1,7 +1,7 @@
 ---
-title: Extrahování rozhraní refaktoring se v sadě Visual Studio | Microsoft Docs
-ms.custom: ''
+title: Rozhraní refaktoring extrahovat
 ms.date: 01/26/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: reference
 author: gewarren
@@ -14,71 +14,72 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7abdc017c4d57e17685671539a4b053e6241b424
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 62d79251d0ec93c92ec13450e9110e08143d7966
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061653"
 ---
-# <a name="extract-an-interface-refactoring"></a>Extrahování refaktoring rozhraní
+# <a name="extract-an-interface-refactoring"></a>Rozhraní refaktoring extrahovat
 
-Tato refaktoring platí pro:
+Tento refaktoring platí pro:
 
 - C#
 
 - Visual Basic
 
-**Co:** umožňuje vytvářet rozhraní pomocí stávající členy z třída, struktura nebo rozhraní.
+**Co:** vám umožní vytvářet rozhraní pomocí stávajících členů ze třídy, struktury nebo rozhraní.
 
-**Kdy:** máte několik tříd, struktur nebo rozhraní s metody, které se může provést běžné a použít jiné třídy, struktury nebo rozhraní.
+**Kdy:** máte několik třídy, struktury nebo rozhraní s metodami, které by mohly být provedeny běžné a používá jiné třídy, struktury nebo rozhraní.
 
-**Důvod:** rozhraní jsou skvělý konstrukce pro objektově orientované návrhy. Představte si s třídy pro různé zvířat (PSA Cat, ptačí perspektivy), která může mít běžné metody, jako je například Eat nápoj, přejít do režimu spánku. Pomocí rozhraní jako IAnimal by umožnilo PSA Cat a ptačí perspektivy tak, aby měl běžné "podpis" pro tyto metody.
+**Důvod, proč:** rozhraní jsou skvělé konstrukce pro objektově orientované vzory. Představte si tříd pro různé zvířata (Dog Cat, Bird), které by mohly běžné metody, jako je například Eat nápoje, přejít do režimu spánku. Použití rozhraní jako IAnimal by umožnilo pes, Cat a Bird mají společnou "podpis" pro tyto metody.
 
 ## <a name="how-to"></a>Postupy
 
-1. Zvýrazněte název třídy provést akci na nebo umístěte kurzor text právě někde v názvu třídy.
+1. Zvýrazněte název třídy pro akci provést, nebo jenom někam umístit kurzor textu v názvu třídy.
 
    - C#:
 
-    ![Zvýrazněný - C#](media/extractinterface-highlight-cs.png)
+       ![Zvýrazněný kód:C#](media/extractinterface-highlight-cs.png)
 
    - Visual Basic:
 
-    ![Zvýrazněný - jazyka Visual Basic](media/extractinterface-highlight-vb.png)
+       ![Zvýrazněný kód – Visual Basic](media/extractinterface-highlight-vb.png)
 
-1. Dále proveďte jednu z následujících akcí:
+2. Dále proveďte jednu z následujících akcí:
 
    - **Klávesnice**
-     - Stiskněte klávesu **Ctrl + R**, pak **Ctrl + I**. (Všimněte si, že klávesové zkratky se může lišit na základě na profilu, které jste vybrali.)
-     - Stiskněte klávesu **Ctrl**+**.** spuštění **rychlé akce a refaktoring** nabídku a vyberte **extrahování rozhraní** z okna náhledu – místní nabídka.
-   - **Myš**
-     - Vyberte **Upravit > Refaktorovat > extrahování rozhraní**.
-     - Klikněte pravým tlačítkem na název třídy, vyberte **rychlé akce a refaktoring** nabídku a vyberte **extrahování rozhraní** z okna náhledu – místní nabídka.
+      - Stisknutím klávesy **Ctrl + R**, pak **Ctrl + I**. (Všimněte si, že klávesová zkratka může být jiný platformě, na který profil vyberete.)
+      - Stisknutím klávesy **Ctrl**+**.** aktivační událost **rychlé akce a Refaktoringy** nabídky a vybereme **extrahování rozhraní** z automaticky otevíraného okna okno náhledu.
+   - **Myši**
+      - Vyberte **Upravit > Refaktorovat > extrahování rozhraní**.
+      - Klikněte pravým tlačítkem na název třídy, vyberte **rychlé akce a Refaktoringy** nabídky a vybereme **extrahování rozhraní** z automaticky otevíraného okna okno náhledu.
 
-1. V **extrahování rozhraní** dialogu, který se zobrazí, zadejte informace o výzva:
+3. V **extrahování rozhraní** dialogové okno, která se otevře, zadejte informace o dotaz:
 
    ![extrahování rozhraní](media/extractinterface-dialog-cs.png)
 
+
    | Pole | Popis |
-   | --- | --- |
-   | **Nový název rozhraní** | Název rozhraní, který se má vytvořit. To bude použita výchozí I*ClassName*, kde *ClassName* je název třídy, které jste vybrali výše. |
-   | **Nový název souboru** | Název souboru, který se budou generovat a která bude obsahovat rozhraní. Jako s názvem rozhraní to bude použita výchozí I*ClassName*, kde *ClassName* je název třídy, které jste vybrali výše. |
-   | **Vyberte veřejné členy do formuláře rozhraní** | Položky k extrakci do rozhraní. Můžete vybrat libovolný počet. Chcete. |
+   | - | - |
+   | **Název nového rozhraní** | Název rozhraní, který se má vytvořit. To bude ve výchozím nastavení můžu*ClassName*, kde *ClassName* je název třídy, které vyberete nahoře. |
+   | **Nový název souboru** | Název souboru, který se vygeneruje, která bude obsahovat rozhraní. Jako název rozhraní, to budou ve výchozím nastavení můžu*ClassName*, kde *ClassName* je název třídy, které vyberete nahoře. |
+   | **Vybrat veřejné členy rozhraní** | Položky, které chcete extrahovat do rozhraní. Můžete vybrat libovolný počet podle potřeby. |
 
-1. Zvolte **OK**.
 
-   Rozhraní je vytvořen v souboru zadaným názvem. Kromě toho implementuje třídy, na kterou jste vybrali tohoto rozhraní.
+4. Zvolte **OK**.
+
+   Rozhraní se vytvoří v souboru zadaný název. Kromě toho, kterou jste vybrali třída implementuje rozhraní.
 
    - C#:
 
-    ![Výsledné třídy - C#](media/extractinterface-class-cs.png)
-    ![výsledné rozhraní - C#](media/extractinterface-interface-cs.png)
+      ![Výsledné třídy – C# ](media/extractinterface-class-cs.png) ![výsledný rozhraní -C#](media/extractinterface-interface-cs.png)
 
    - Visual Basic:
 
-    ![Výsledná třída - jazyka Visual Basic](media/extractinterface-class-vb.png)
-    ![výsledné rozhraní - jazyka Visual Basic](media/extractinterface-interface-vb.png)
+      ![Výsledné třídy – Visual Basic](media/extractinterface-class-vb.png) ![výsledný rozhraní - jazyka Visual Basic](media/extractinterface-interface-vb.png)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Refactoring](../refactoring-in-visual-studio.md)
+- [Refactoring](../refactoring-in-visual-studio.md)

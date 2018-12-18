@@ -1,5 +1,5 @@
 ---
-title: m_stateObject pole | Microsoft Docs
+title: m_stateobject – pole | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,20 +13,21 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 79313460d380b2b505f6fa75f35351811ddaa470
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4d33879ca8aaaba08288f9e16d54ab462d92f67b
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39231314"
 ---
-# <a name="mstateobject-field"></a>m_stateObject pole
-Objekt, který představuje data, která budou používat akce.  
+# <a name="mstateobject-field"></a>m_stateobject – pole
+Objekt představující data, která bude používat akce.  
   
  **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **Sestavení:** mscorlib (v mscorlib.dll)  
+ **Sestavení:** mscorlib (v *mscorlib.dll*)  
   
- Protože tento vnitřní člen nemůže získat přístup z rozhraní .NET Framework, je k dispozici společné Intermediate Language (soubor CIL) syntaxi.  
+ Protože tento člen interní nemůže získat přístup z rozhraní .NET Framework, je k dispozici v Common Intermediate Language (CIL) následující syntaxi.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,7 +36,7 @@ Objekt, který představuje data, která budou používat akce.
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Toto je `state` parametr ve <xref:System.Threading.Tasks.Task.%23ctor%2A> konstruktor. Je také základní pole pro <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=fullName> vlastnost.  
+ Toto je `state` parametr <xref:System.Threading.Tasks.Task.%23ctor%2A> konstruktoru. Je také pomocné pole <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=fullName> vlastnost.  
   
-## <a name="see-also"></a>Viz také  
- [Task – třída](../../extensibility/debugger/task-class-internal-members.md)
+## <a name="see-also"></a>Viz také:  
+ [Třída úlohy](../../extensibility/debugger/task-class-internal-members.md)

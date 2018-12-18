@@ -1,5 +1,5 @@
 ---
-title: IDebugPortSupplier2::CanAddPort | Microsoft Docs
+title: IDebugPortSupplier2::CanAddPort | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 00b1c1303be8ccc326a58a20d132ad38db3b426d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f7f4494aa41613f93396389176436dcf0c40be53
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49902305"
 ---
 # <a name="idebugportsupplier2canaddport"></a>IDebugPortSupplier2::CanAddPort
-Ověřuje, že port dodavatele můžete přidat nové porty.  
+Ověřuje, že dodavatele portu můžete přidat nové porty.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,10 +38,10 @@ int CanAddPort();
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud port je možné přidat, vrátí `S_OK`, jinak vrátí `S_FALSE` udávajících žádné porty lze přidat do tohoto portu dodavatele.  
+ Pokud port, který lze přidat, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` k označení žádné porty lze přidat do tohoto dodavatele portu.  
   
 ## <a name="remarks"></a>Poznámky  
- Volání před voláním této metody [AddPort](../../../extensibility/debugger/reference/idebugportsupplier2-addport.md) metoda vzhledem k tomu, že druhá metoda vytvoří port, jakož i přidávání, což může být časově náročná operace.  
+ Volání před voláním této metody [AddPort](../../../extensibility/debugger/reference/idebugportsupplier2-addport.md) metody, protože tato metoda vytvoří port, jakož i přidáním, což může být časově náročná operace.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)   

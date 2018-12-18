@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionContext2::ParseText | Microsoft Docs
+title: IDebugExpressionContext2::ParseText | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e95a8a76e7315f8963ea415f88bd9615f3b123a4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8672dcdf92ce7341c7ae540c4836a1775671da7c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49832391"
 ---
 # <a name="idebugexpressioncontext2parsetext"></a>IDebugExpressionContext2::ParseText
-Analyzuje výrazu v textové podobě novější zkušební verze.  
+Analyzuje výrazu v textové podobě pro pozdější vyhodnocení.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,16 +51,16 @@ int ParseText(
   
 #### <a name="parameters"></a>Parametry  
  `pszCode`  
- [v] Výraz, který má být analyzován.  
+ [in] Výraz, který má být analyzován.  
   
  `dwFlags`  
- [v] Kombinace příznaků z [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) výčet, který řídí analýze.  
+ [in] Kombinace příznaků z [PARSEFLAGS](../../../extensibility/debugger/reference/parseflags.md) výčet, který řídí, analýza kódu.  
   
  `nRadix`  
- [v] Základ – který se má použít při analýze jakékoli číselné informace v `pszCode`.  
+ [in] Základ číselné soustavy, který se má použít při analýze všechny informace numerické `pszCode`.  
   
  `ppExpr`  
- [out] Vrátí [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) objekt, který reprezentuje Analyzovaná výraz, který je připraven k vyhodnocení a vazeb.  
+ [out] Vrátí [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) objekt, který reprezentuje analyzovaný výraz, který je připravený pro vazby a hodnocení.  
   
  `pbstrError`  
  [out] Vrátí chybovou zprávu, pokud výraz obsahuje chybu.  
@@ -68,15 +69,15 @@ int ParseText(
  [out] Vrátí znakový index chyby v `pszCode` Pokud výraz obsahuje chybu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Když tato metoda je volána, modul ladění (DE) by měl analyzovat výraz a ověřit správnost. `pbstrError` a `pichError` může být parametry vyplněno, pokud výraz je neplatný.  
+ Když tato metoda je volána, by měl ladicí stroj (DE) parsovat výraz a ověřit správnost. `pbstrError` a `pichError` parametrů může být vyplněno Pokud výraz není platný.  
   
- Všimněte si, že tento výraz není vyhodnocen, pouze analyzovat. Novější volání [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) nebo [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) metody vyhodnocuje Analyzovaná výraz.  
+ Všimněte si, že tento výraz není vyhodnocen, pouze analyzovat. Pozdější volání [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) nebo [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) metody vyhodnotí výraz v analyzované.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchou `CEnvBlock` objekt, který zveřejňuje [IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md) rozhraní. Tento příklad zvažuje výraz, který má být přeložena jako název proměnné prostředí a načte hodnotu z tuto proměnnou.  
+ Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CEnvBlock` objekt, který zveřejňuje [IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md) rozhraní. V tomto příkladu bere v úvahu výraz, který má být analyzován jako název proměnné prostředí a načte hodnotu z této proměnné.  
   
 ```cpp  
 HRESULT CEnvBlock::ParseText(  

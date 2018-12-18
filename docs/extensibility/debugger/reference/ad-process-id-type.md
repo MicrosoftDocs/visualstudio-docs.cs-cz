@@ -1,5 +1,5 @@
 ---
-title: AD_PROCESS_ID_TYPE | Microsoft Docs
+title: AD_PROCESS_ID_TYPE | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f8318efdc64adf9792e44ccf2f4ad4aa9f74dd67
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1fa934610778479551d411a4b231a4b190f29bcd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49937405"
 ---
 # <a name="adprocessidtype"></a>AD_PROCESS_ID_TYPE
-Určuje, jak interpretovat s ID procesu v [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) struktury.  
+Určuje, jak interpretovat ID procesu v [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) struktury.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,13 +44,13 @@ public enum enum_AD_PROCESS_ID {
   
 ## <a name="members"></a>Členové  
  AD_PROCESS_ID_SYSTEM  
- ID procesu je identifikátor systému. Použití `ProcessId.dwProcessId` pole z [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) struktury.  
+ ID procesu je identifikátor systému. Použití `ProcessId.dwProcessId` pole [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) struktury.  
   
  AD_PROCESS_ID_GUID  
- ID procesu je identifikátor GUID. Použití `ProcessId.guidProcessId` pole z `AD_PROCESS_ID` struktura.  
+ ID procesu je identifikátor GUID. Použití `ProcessId.guidProcessId` pole `AD_PROCESS_ID` struktury.  
   
 ## <a name="remarks"></a>Poznámky  
- Použít pro `ProcessIdType` členem [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) strukturu, která určuje typ ID procesu, který je obsažen ve struktuře. Určuje, jak interpretovat `ProcessId` union ve struktuře.  
+ Používá pro `ProcessIdType` člena [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) strukturu, která určuje typ ID procesu, který je obsažen ve struktuře. Určuje, jak interpretovat `ProcessId` sjednocení ve struktuře.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

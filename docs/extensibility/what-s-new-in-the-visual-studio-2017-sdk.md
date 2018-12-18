@@ -1,5 +1,5 @@
 ---
-title: Co&#39;s ve Visual Studio 2017 SDK | Microsoft Docs
+title: Co&#39;nového ve Visual Studio 2017 SDK | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 10/31/2017
 ms.technology:
@@ -11,41 +11,42 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: abc1f12a5a6c7368bc47e8f4e924d109dcf87f57
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6f2a003bc19764aa07262552d3f0cc41316835b6
+ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39566905"
 ---
-# <a name="what39s-new-in-the-visual-studio-2017-sdk"></a>Co&#39;s ve Visual Studio 2017 SDK
+# <a name="what39s-new-in-the-visual-studio-2017-sdk"></a>Co&#39;nového ve Visual Studio 2017 SDK
 
 Visual Studio SDK obsahuje následující nové a aktualizované funkce pro Visual Studio 2017.
 
-## <a name="vsix-v3-format"></a>Formát v3 VSIX
+## <a name="vsix-v3-format"></a>Formát VSIX v3
 
-Pro podporu nového šedé – instalace Visual Studio 2017, formát manifestu rozšíření VSIX aktualizovaný verze 3 (VSIX v3).
+Pro podporu nové odlehčené instalace sady Visual Studio 2017, byla aktualizována na verzi 3 (VSIX v. 3) formát manifestu rozšíření VSIX.
 
-Nový formát má podporu pro:
+Nový formát obsahuje podporu pro:
 
-* Explicitní deklarace požadavky rozpozná a nainstalovat VSIXInstaller.
-* Sestavení Ngen'ing na instalace rozšíření.
-* Instalace prostředky mimo kořenový adresář obvyklé rozšíření.
+* Požadované součásti zjištěny a nainstalovat VSIXInstaller explicitní deklarace.
+* Ngen sestavení na instalaci rozšíření.
+* Instalace prostředky mimo kořenový obvykle rozšíření.
 
-Další informace o těchto změnách, najdete v následujících tématech:
+Další informace o těchto změnách, naleznete v následujících tématech:
 
-* [Změny rozšiřitelnosti pro 2017](breaking-changes-2017.md)
+* [Změny do rozšíření pro 2017](breaking-changes-2017.md)
 * [Podpora Ngen ve VSIX v. 3](ngen-support.md)
 * [Instalace mimo složku rozšíření](set-install-root.md)
-* [Nejčastější dotazy pro Visual Studio 2017 rozšiřitelnosti](faq-2017.md)
+* [Nejčastější dotazy pro rozšiřitelnost sady Visual Studio 2017](faq-2017.md)
 
-## <a name="migrating-extensibility-project-to-visual-studio-2017"></a>Migrace – projekt rozšíření pro Visual Studio 2017
+## <a name="migrate-extensibility-project-to-visual-studio-2017"></a>Migrovat projekt rozšíření sady Visual Studio 2017
 
-Informace o tom, které chcete aktualizovat projekty, rozšíření a jejich VSIX manifesty Visual Studio 2017, najdete v části [postup: migrace rozšiřitelnost projektů pro Visual Studio 2017](how-to-migrate-extensibility-projects-to-visual-studio-2017.md).
+Zjistěte, jak aktualizovat vaše rozšíření projektů a jejich manifestů VSIX do sady Visual Studio 2017, najdete v článku [postupy: migrace projektů rozšíření do sady Visual Studio 2017](how-to-migrate-extensibility-projects-to-visual-studio-2017.md).
 
 ## <a name="custom-project-and-item-templates"></a>Vlastní šablony projektů a položek
 
-Od verze Visual Studio 2017, hledání vlastních projektů a šablon položek už se provede. Místo toho rozšíření, musíte zadat soubory manifestu šablony, které popisují umístění instalace služby tyto šablony. Visual Studio 2017 můžete použít k aktualizaci VSIX rozšíření. Pokud nasadíte rozšíření pomocí souboru MSI, je nutné ručně Generovat soubory manifestu šablony. Další informace najdete v tématu [upgrade vlastních šablon projektů a položek pro Visual Studio 2017](../extensibility/upgrading-custom-project-and-item-templates-for-visual-studio-2017.md). Schéma manifestu šablony je popsána v [Visual Studio Manifest odkaz na schéma šablon](../extensibility/visual-studio-template-manifest-schema-reference.md).
+Spouští se v sadě Visual Studio 2017, vyhledávání vlastních projektů a šablon položek už se provede. Rozšíření místo toho musíte zadat soubory manifestu šablon, které popisují umístění instalace služby tyto šablony. Visual Studio 2017 můžete použít k aktualizaci rozšíření VSIX. Pokud provádíte nasazení vašeho rozšíření pomocí MSI, musíte soubory manifestu šablony vygenerovat ručně. Další informace najdete v tématu [Upgrade vlastních šablon projektů a položek pro Visual Studio 2017](../extensibility/upgrading-custom-project-and-item-templates-for-visual-studio-2017.md). Schéma manifestu šablony je popsána v [odkaz na schéma manifestu šablon sady Visual Studio](../extensibility/visual-studio-template-manifest-schema-reference.md).
 
-## <a name="updated-extension-performance-guidelines"></a>Pravidla výkonu aktualizované rozšíření
+## <a name="updated-extension-performance-guidelines"></a>Pokyny k výkonu aktualizované rozšíření
 
-Nová [postupy: diagnostikování rozšíření výkonu](how-to-diagnose-extension-performance.md) tématu v části [Správa VSPackages](managing-vspackages.md) ukazují, jak zjišťovat a analyzovat dopad rozšíření v sadě Visual Studio spuštění a řešení zatížení časy.
+Je tu nový [postupy: Diagnostika výkonu rozšíření](how-to-diagnose-extension-performance.md) článku v části [Správa balíčky VSPackages](managing-vspackages.md) ukazují, jak detekovat a analyzovat dopad rozšíření v sadě Visual Studio při spuštění a řešení zatížení časy.

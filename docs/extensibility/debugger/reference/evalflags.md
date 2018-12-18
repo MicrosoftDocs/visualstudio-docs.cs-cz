@@ -1,5 +1,5 @@
 ---
-title: EVALFLAGS | Microsoft Docs
+title: EVALFLAGS | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7c718414749bb6c748f25fb90837644fe984a274
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ef229fb06f8b265b76dc40019b18ae3c796740f7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49829960"
 ---
 # <a name="evalflags"></a>EVALFLAGS
 Určuje příznaky, které řídí vyhodnocení výrazu.  
@@ -53,10 +54,10 @@ public enum enum_EVALFLAGS {
   
 ## <a name="members"></a>Členové  
  EVAL_RETURNVALUE  
- Určuje, že návratovou hodnotu, pokud existuje, vyhodnotí.  
+ Určuje, že návratová hodnota, pokud existuje, vyhodnocen.  
   
  EVAL_NOSIDEEFFECTS  
- Určuje, že nebyla povolen vedlejší účinky.  
+ Určuje, že nebudou povoleny vedlejší účinky.  
   
  EVAL_ALLOWBPS  
  Určuje zastavení zarážky.  
@@ -65,18 +66,18 @@ public enum enum_EVALFLAGS {
  Určuje zpráv o chybách k hostiteli mají být povolena. Používá se především pro vyhodnocení výrazu ve skriptu v aplikaci Internet Explorer.  
   
  EVAL_FUNCTION_AS_ADDRESS  
- Vynutí funkce, který se má vyhodnotit jako adresy místo vyvolání funkce.  
+ Funkce sil má být vyhodnocen jako adresy, namísto volání funkce.  
   
  EVAL_NOFUNCEVAL  
- Zabrání vyhodnocovaný funkce. Představte si třeba `int` tokenu ve výrazu `myExpression(int) + 10`. Tuto funkci lze správně vyhodnotit jako adresu, ale ne jako hodnotu.  
+ Zabraňuje vyhodnocení funkce. Představme si třeba, `int` token ve výrazu `myExpression(int) + 10`. Tato funkce může být správně vyhodnocen jako adresa, ale ne jako hodnotu.  
   
  EVAL_NOEVENTS  
- Příznak, který označuje, že by se neměly posílat události, které nastaly během vyhodnocování výrazu, správce ladicí relace (SDM) nebo rozhraní IDE.  
+ Příznak označující, že správce ladění relace (SDM) nebo integrovaném vývojovém prostředí by se neměly posílat události, ke kterým dochází při vyhodnocení výrazu.  
   
 ## <a name="remarks"></a>Poznámky  
- Tyto příznaky jsou předávány jako argument pro [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) a [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) metody.  
+ Tyto příznaky jsou předány jako argument [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) a [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) metody.  
   
- Tyto příznaky může být kombinován s bitové operace OR.  
+ Tyto příznaky lze kombinovat s bitový operátor OR.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

@@ -1,5 +1,5 @@
 ---
-title: IEnumDebugFrameInfo2::Reset | Microsoft Docs
+title: IEnumDebugFrameInfo2::Reset | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6a73d89db4c821c78e75c37b44e961dcfbd7d189
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 63dccd87e556c5d29b6411603d5b3f6acfd598bb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49875954"
 ---
 # <a name="ienumdebugframeinfo2reset"></a>IEnumDebugFrameInfo2::Reset
-Obnoví výčtu první prvek.  
+Obnoví výčtu na první prvek.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,10 +38,10 @@ int Reset();
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Po tato metoda je volána, další volání [Další](../../../extensibility/debugger/reference/ienumdebugframeinfo2-next.md) metoda vrátí první prvek výčtu.  
+ Až tato metoda je volána, další volání [Další](../../../extensibility/debugger/reference/ienumdebugframeinfo2-next.md) metoda vrátí první prvek výčtu.  
   
 ## <a name="see-also"></a>Viz také  
  [IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md)

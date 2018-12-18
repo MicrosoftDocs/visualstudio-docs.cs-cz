@@ -16,13 +16,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c138e8b823977d95f2630040a0690628396503d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a060506f818ac000611fc0c29988ed324ae89226
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843650"
 ---
-# <a name="how-to-relocate-instrumented-binaries"></a>Postupy: Přemístění instrumentovaných binárních souborů
+# <a name="how-to-relocate-instrumented-binaries"></a>Postupy: přemístění instrumentovaných binárních souborů
 
 Během instrumentace sondy vloženy do binárního souboru k měření výkonu aplikace. Výběrem přesunovat instrumentované binární je kopii původní binární instrumentovány a put v zadaném umístění. Tato možnost je užitečná, pokud nechcete, aby profileru přejmenovat vašeho původního binární. Pokud není přemístění binárního souboru, původní verze binárního souboru se přepíše.
 
@@ -36,7 +37,7 @@ Během instrumentace sondy vloženy do binárního souboru k měření výkonu a
 
 4. Zadejte umístění pro instrumentované binární.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Konfigurace výkonnostních relací](../profiling/configuring-performance-sessions.md)  
 [VSInstr](../profiling/vsinstr.md)

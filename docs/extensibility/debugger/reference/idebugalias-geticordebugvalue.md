@@ -1,5 +1,5 @@
 ---
-title: IDebugAlias::GetICorDebugValue | Microsoft Docs
+title: IDebugAlias::GetICorDebugValue | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bfe0d8e4734c0d836b2dc6009fdedfa264720778
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 393d5a7310a136ad83b7cbd74fca966633ffb62e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49833171"
 ---
 # <a name="idebugaliasgeticordebugvalue"></a>IDebugAlias::GetICorDebugValue
-Načte rozhraní spravovaného kódu, který představuje hodnotu přidruženou tento alias.  
+Načte rozhraní spravovaného kódu, které představuje hodnotu přidruženou k tento alias.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +41,13 @@ int GetICorDebugValue(
   
 #### <a name="parameters"></a>Parametry  
  `ppUnk`  
- [out] `IUnknown` rozhraní, které představuje hodnotu přidruženou tento alias. Toto rozhraní může být dotázán na `ICorDebugValue` rozhraní.  
+ [out] `IUnknown` rozhraní, které představuje hodnotu přidruženou k tento alias. Toto rozhraní je možné zadávat dotazy pro `ICorDebugValue` rozhraní.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí S_OK; jinak vrátí kód chyby.  
+ V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tuto metodu lze použít pouze spravovaný hodnoty ( `ICorDebugValue` je k dispozici v rozhraní [!INCLUDE[dnprdnshort](../../../code-quality/includes/dnprdnshort_md.md)] a je definována v [!INCLUDE[dnprdnshort](../../../code-quality/includes/dnprdnshort_md.md)] SDK v souboru cordebug.idl).  
+ Tento postup se vztahuje jenom na spravované hodnoty ( `ICorDebugValue` je k dispozici v rozhraní [!INCLUDE[dnprdnshort](../../../code-quality/includes/dnprdnshort_md.md)] a je definován v [!INCLUDE[dnprdnshort](../../../code-quality/includes/dnprdnshort_md.md)] sady SDK v souboru cordebug.idl).  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)

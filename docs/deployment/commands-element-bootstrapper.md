@@ -1,5 +1,5 @@
 ---
-title: '&lt;Příkazy&gt; prvek (zavaděče) | Microsoft Docs'
+title: '&lt;Příkazy&gt; – Element (zaváděcí nástroj) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -17,18 +17,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ac3ae61012bec5f8134a48714678110951c03b76
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 785df23b3d76573182eeb97efc5b359e7298a009
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39077952"
 ---
-# <a name="ltcommandsgt-element-bootstrapper"></a>&lt;Příkazy&gt; – Element (zaváděcího nástroje)
-`Commands` Element implementuje testy popsané prvky pod `InstallChecks` elementu a deklaruje balíčky, které [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] zaváděcího nástroje měli nainstalovat, pokud se test nezdaří.  
+# <a name="ltcommandsgt-element-bootstrapper"></a>&lt;Příkazy&gt; – element (zaváděcí nástroj)
+`Commands` Prvek implementuje testy, které jsou popsané prvky pod `InstallChecks` elementu a deklaruje balíčky, které [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] zaváděcího nástroje by měla nainstalovat, pokud se test nezdaří.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```xml  
 <Commands  
     Reboot  
 >  
@@ -67,69 +68,69 @@ ms.lasthandoff: 04/19/2018
 ```  
   
 ## <a name="elements-and-attributes"></a>Elementy a atributy  
- `Commands` Prvek je nutný. Element obsahuje následující atribut.  
+ `Commands` Je vyžadován element. Element má tento atribut.  
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|`Reboot`|Volitelné. Určuje, zda by měl restart systému, pokud žádný z balíčků vrátí ukončovací kód restartování. V následujícím seznamu jsou platné hodnoty:<br /><br /> `Defer`. Restartování je odloženo až do příště.<br /><br /> `Immediate`. Způsobí okamžité restartování, pokud jeden z balíčků vrátil ukončovací kód restartování.<br /><br /> `None`. Způsobí, že všechny žádosti restart, budou ignorovány.<br /><br /> Výchozí hodnota je `Immediate`.|  
+|`Reboot`|Volitelné. Určuje, zda by měl restartování systému, pokud žádný z balíčků vrátí kód ukončení restartování. Následující seznam uvádí platné hodnoty:<br /><br /> `Defer`. Restart je odložena až do později.<br /><br /> `Immediate`. Pokud některý z balíčků vrátí kód ukončení restartování způsobí, že okamžité restartování.<br /><br /> `None`. Způsobí, že všechny požadavky na Ignorovat restartování.<br /><br /> Výchozí hodnota je `Immediate`.|  
   
 ## <a name="command"></a>Příkaz  
- `Command` Element je podřízený element `Commands` elementu. A `Commands` element může obsahovat jednu nebo více `Command` elementy. Element má následující atributy.  
+ `Command` Prvek je podřízený prvek `Commands` elementu. A `Commands` prvek může mít jeden nebo více `Command` elementy. Element má následující atributy.  
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|`PackageFile`|Požadováno. Název balíčku pro instalaci má jeden nebo více podmínek určeného `InstallConditions` vrátí hodnotu false. Balíček musí být definován ve stejném souboru pomocí `PackageFile` elementu.|  
+|`PackageFile`|Požadováno. Jeden nebo více z určených podle podmínek by měl název balíčku pro instalaci `InstallConditions` vrátí false. Balíček musí být definován ve stejném souboru s použitím `PackageFile` elementu.|  
 |`Arguments`|Volitelné. Sada argumenty příkazového řádku k předání do souboru balíčku.|  
-|`EstimatedInstallSeconds`|Volitelné. Odhadovaný čas v sekundách, bude třeba k instalaci balíčku. Tato hodnota určuje velikost indikátoru průběhu, který zavaděč zobrazí uživateli. Výchozí hodnota je 0, v takovém případě žádný čas, který je zadán odhad.|  
-|`EstimatedDiskBytes`|Volitelné. Odhadovaná velikost místa na disku v bajtech, které bude balíček zabírat po dokončení instalace je dokončena. Tato hodnota se používá v požadavky na místo pevného disku, které zavaděč zobrazí uživateli. Výchozí hodnota je 0, ve kterém zaváděcí nejsou zobrazeny žádné požadavky na místo na pevném disku.|  
-|`EstimatedTempBytes`|Volitelné. Odhadovaná velikost dočasného prostoru na disku v bajtech, které bude vyžadovat balíček.|  
-|`Log`|Volitelné. Cesta k souboru protokolu, který generuje balíček relativně k kořenový adresář balíčku.|  
+|`EstimatedInstallSeconds`|Volitelné. Odhadovaný čas v sekundách, bude trvat k instalaci balíčku. Tato hodnota určuje velikost indikátoru průběhu, který zaváděcí nástroj zobrazí uživateli. Výchozí hodnota je 0, v takovém případě žádný čas zadaný odhad.|  
+|`EstimatedDiskBytes`|Volitelné. Odhadovaná velikost místa na disku v bajtech, které budou zaměstnávat balíčku po instalaci je dokončena. Tato hodnota se používá v pevném místo na disku, které zaváděcí nástroj zobrazí uživateli. Výchozí hodnota je 0, ve kterém zaváděcí nejsou zobrazeny žádné požadavky na místo pevného disku.|  
+|`EstimatedTempBytes`|Volitelné. Odhadovaná velikost dočasného prostoru na disku v bajtech, která bude vyžadovat balíček.|  
+|`Log`|Volitelné. Cesta k souboru protokolu, který generuje balíček, vzhledem k kořenový adresář balíčku.|  
   
 ## <a name="installconditions"></a>InstallConditions  
- `InstallConditions` Element je podřízená `Command` elementu. Každý `Command` element může obsahovat maximálně jeden `InstallConditions` elementu. Pokud žádné `InstallConditions` element existuje, balíček určený pomocí `Condition` bude vždy spuštěn.  
+ `InstallConditions` Element je podřízeným prvkem `Command` elementu. Každý `Command` prvek může mít maximálně jeden `InstallConditions` elementu. Pokud ne `InstallConditions` existuje element, balíček určený pomocí `Condition` bude vždy spuštěn.  
   
 ## <a name="bypassif"></a>BypassIf  
- `BypassIf` Element je podřízená `InstallConditions` elementu a popisuje pozitivní podmínky, pod kterým by neměl být příkaz provést. Každý `InstallConditions` element může obsahovat nula nebo více `BypassIf` elementy.  
+ `BypassIf` Element je podřízeným prvkem `InstallConditions` prvek a popisuje pozitivní podmínku, pod kterým by neměl být spouštěn příkazu. Každý `InstallConditions` prvek může mít nula nebo více `BypassIf` elementy.  
   
  `BypassIf` má následující atributy.  
   
 |Atribut|Popis|  
 |---------------|-----------------|  
 |`Property`|Požadováno. Název vlastnosti pro testování. Vlastnost musí být dříve definována podřízený `InstallChecks` elementu. Další informace najdete v tématu [ \<InstallChecks > Element](../deployment/installchecks-element-bootstrapper.md).|  
-|`Compare`|Požadováno. Typ porovnání k provedení. V následujícím seznamu jsou platné hodnoty:<br /><br /> `ValueEqualTo`, `ValueNotEqualTo`, `ValueGreaterThan`, `ValueGreaterThanOrEqualTo`, `ValueLessThan`, `ValueLessThanOrEqualTo`, `VersionEqualTo`, `VersionNotEqualTo`, `VersionGreaterThan`, `VersionGreaterThanOrEqualTo`, `VersionLessThan`, `VersionLessThanOrEqualTo`, `ValueExists`, `ValueNotExists`|  
-|`Value`|Požadováno. Hodnoty k porovnání s vlastností.|  
-|`Schedule`|Volitelné. Název `Schedule` značku, která definuje, kdy by mělo být vyhodnoceno toto pravidlo.|  
+|`Compare`|Požadováno. Typ porovnání k provedení. Následující seznam uvádí platné hodnoty:<br /><br /> `ValueEqualTo`, `ValueNotEqualTo`, `ValueGreaterThan`, `ValueGreaterThanOrEqualTo`, `ValueLessThan`, `ValueLessThanOrEqualTo`, `VersionEqualTo`, `VersionNotEqualTo`, `VersionGreaterThan`, `VersionGreaterThanOrEqualTo`, `VersionLessThan`, `VersionLessThanOrEqualTo`, `ValueExists`, `ValueNotExists`|  
+|`Value`|Požadováno. Hodnota určená k porovnání s vlastností.|  
+|`Schedule`|Volitelné. Název `Schedule` značka, která definuje, kdy by se mělo vyhodnotit pravidlo.|  
   
 ## <a name="failif"></a>FailIf  
- `FailIf` Element je podřízená `InstallConditions` elementu a popisuje pozitivní podmínky, pod kterým bude instalace zastavena. Každý `InstallConditions` element může obsahovat nula nebo více `FailIf` elementy.  
+ `FailIf` Element je podřízeným prvkem `InstallConditions` prvek a popisuje pozitivní podmínku, pod kterým by se měla zastavit instalaci. Každý `InstallConditions` prvek může mít nula nebo více `FailIf` elementy.  
   
  `FailIf` má následující atributy.  
   
 |Atribut|Popis|  
 |---------------|-----------------|  
 |`Property`|Požadováno. Název vlastnosti pro testování. Vlastnost musí být dříve definována podřízený `InstallChecks` elementu. Další informace najdete v tématu [ \<InstallChecks > Element](../deployment/installchecks-element-bootstrapper.md).|  
-|`Compare`|Požadováno. Typ porovnání k provedení. V následujícím seznamu jsou platné hodnoty:<br /><br /> `ValueEqualTo`, `ValueNotEqualTo`, `ValueGreaterThan`, `ValueGreaterThanOrEqualTo`, `ValueLessThan`, `ValueLessThanOrEqualTo`, `VersionEqualTo`, `VersionNotEqualTo`, `VersionGreaterThan`, `VersionGreaterThanOrEqualTo`, `VersionLessThan`, `VersionLessThanOrEqualTo`, `ValueExists`, `ValueNotExists`|  
-|`Value`|Požadováno. Hodnoty k porovnání s vlastností.|  
-|`String`|Volitelné. Text, který se má zobrazit uživateli při selhání.|  
-|`Schedule`|Volitelné. Název `Schedule` značku, která definuje, kdy by mělo být vyhodnoceno toto pravidlo.|  
+|`Compare`|Požadováno. Typ porovnání k provedení. Následující seznam uvádí platné hodnoty:<br /><br /> `ValueEqualTo`, `ValueNotEqualTo`, `ValueGreaterThan`, `ValueGreaterThanOrEqualTo`, `ValueLessThan`, `ValueLessThanOrEqualTo`, `VersionEqualTo`, `VersionNotEqualTo`, `VersionGreaterThan`, `VersionGreaterThanOrEqualTo`, `VersionLessThan`, `VersionLessThanOrEqualTo`, `ValueExists`, `ValueNotExists`|  
+|`Value`|Požadováno. Hodnota určená k porovnání s vlastností.|  
+|`String`|Volitelné. Text zobrazený uživateli, nebude úspěšná.|  
+|`Schedule`|Volitelné. Název `Schedule` značka, která definuje, kdy by se mělo vyhodnotit pravidlo.|  
   
 ## <a name="exitcodes"></a>ExitCodes  
- `ExitCodes` Element je podřízená `Command` elementu. `ExitCodes` Element obsahuje jeden nebo více `ExitCode` elementy, které určují, co dělat v reakci na ukončovací kód z balíčku instalace. Může být jedna volitelné `ExitCode` element pod `Command` elementu. `ExitCodes` Nemá žádné atributy.  
+ `ExitCodes` Element je podřízeným prvkem `Command` elementu. `ExitCodes` Element obsahuje jeden nebo více `ExitCode` prvky, které určují, co dělat v reakci na ukončovací kód z balíčku instalace. Může dojít k jednomu volitelné `ExitCode` element pod `Command` elementu. `ExitCodes` nemá žádné atributy.  
   
-## <a name="exitcode"></a>exitCode  
- `ExitCode` Element je podřízená `ExitCodes` elementu. `ExitCode` Element určuje, co by měla provést instalaci v reakci na ukončovací kód z balíčku. `ExitCode` neobsahuje žádné podřízené prvky a má následující atributy.  
+## <a name="exitcode"></a>Ukončovací kód  
+ `ExitCode` Element je podřízeným prvkem `ExitCodes` elementu. `ExitCode` Element určuje, co dělat v reakci na ukončovací kód z balíčku instalace. `ExitCode` neobsahuje žádné podřízené prvky a má následující atributy.  
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|`Value`|Požadováno. Hodnotu ukončovacího kódu, ke kterému tato `ExitCode` element platí.|  
-|`Result`|Požadováno. Instalace měla jak reagovat na tento ukončovací kód. V následujícím seznamu jsou platné hodnoty:<br /><br /> `Success`. Označuje jako úspěšně nainstaloval balíček.<br /><br /> `SuccessReboot`. Označuje balíček jako úspěšně nainstalován a dává pokyn restartování systému.<br /><br /> `Fail`. Balíček se označuje jako neúspěšný.<br /><br /> `FailReboot`. Označuje balíček jako neúspěšný a dává pokyn restartování systému.|  
-|`String`|Volitelné. Hodnota pro zobrazení pro uživatele v odpovědi na tento ukončovací kód.|  
-|`FormatMessageFromSystem`|Volitelné. Určuje, jestli se má použít poskytované systémem chybová zpráva odpovídající ukončovací kód, nebo použijte hodnotu podle `String`. Platné hodnoty jsou `true`, což znamená použití poskytované systémem chyby, a `false`, což znamená použití řetězce poskytované `String`. Výchozí hodnota je `false`. Pokud je tato vlastnost `false`, ale `String` není nastaven, použije se chyba poskytované systémem.|  
+|`Value`|Požadováno. Hodnotu ukončovacího kódu, ke kterému je tento `ExitCode` vztahuje k elementu.|  
+|`Result`|Požadováno. Jak by instalace měla reagovat na tento kód ukončení. Následující seznam uvádí platné hodnoty:<br /><br /> `Success`. Příznaky balíčku jako úspěšně nainstalován.<br /><br /> `SuccessReboot`. Označuje jako úspěšně nainstaloval balíček a dává pokyn k restartování systému.<br /><br /> `Fail`. Balíček se označuje jako neúspěšný.<br /><br /> `FailReboot`. Příznaky balíčku jako neúspěšný a dává pokyn k restartování systému.|  
+|`String`|Volitelné. Hodnota, která se budou zobrazovat uživateli v odpovědi na tento kód ukončení.|  
+|`FormatMessageFromSystem`|Volitelné. Určuje, jestli se má použít poskytované systémem chybová zpráva odpovídá ukončovací kód, nebo použijte hodnotu podle `String`. Platné hodnoty jsou `true`, což znamená, že použití poskytovaných systémem chyby, a `false`, což znamená, že použití řetězce poskytované `String`. Výchozí hodnota je `false`. Pokud je tato vlastnost `false`, ale `String` není nastaven, chyba poskytnuté systémem, který se použije.|  
   
 ## <a name="example"></a>Příklad  
  Následující příklad kódu definuje příkazy pro instalaci rozhraní .NET Framework 2.0.  
   
-```  
+```xml  
 <Commands Reboot="Immediate">  
     <Command PackageFile="instmsia.exe"  
              Arguments= ' /q /c:"msiinst /delayrebootq"'  
@@ -204,6 +205,6 @@ ms.lasthandoff: 04/19/2018
 </Commands>  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [Referenční schéma balíčku a produktu](../deployment/product-and-package-schema-reference.md)   
- [\<InstallChecks > elementu](../deployment/installchecks-element-bootstrapper.md)
+## <a name="see-also"></a>Viz také:  
+ [Referenční dokumentace schématu produktů a balíčků](../deployment/product-and-package-schema-reference.md)   
+ [\<InstallChecks > – element](../deployment/installchecks-element-bootstrapper.md)

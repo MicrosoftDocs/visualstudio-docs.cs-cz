@@ -1,5 +1,5 @@
 ---
-title: Filtrování AddItem dialogových oken pro vnořené projekty | Microsoft Docs
+title: Filtrování dialogového okna pro vnořené projekty | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,25 +14,26 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 50a9491dad92e4f1dd090a6de1ebf48ef1b88085
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 61a51c69857f9bd8f5b2ad84448b0170b809c18a
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39497076"
 ---
-# <a name="filtering-the-additem-dialog-box-for-nested-projects"></a>Filtrování AddItem dialogových oken pro vnořené projekty
-Při zobrazení **AddItem** dialogové okno pro vnořený projekt, nadřazený projekt můžete řídit, které položky se zobrazují v dialogovém okně.  
+# <a name="filter-the-additem-dialog-box-for-nested-projects"></a>Filtrovat AddItem dialogových oken pro vnořené projekty
+Při zobrazení **AddItem** dialogové okno pro vnořený projekt nadřazený projekt můžete řídit, které položky se zobrazí v dialogovém okně.  
   
- <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2> Rozhraní umožňuje filtrovat uzly, které bude mít **AddItem** dialogové okno. Pokud projekt podřízené zobrazí **AddItem** dialogové okno, můžete implementovat nadřazené `IVsFilterAddProjectItemDlg` rozhraní a filtrování položek, které by jinak zobrazit v projektu dítěte.  
+ <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2> Rozhraní umožňuje filtrovat uzly, které bude mít **AddItem** dialogové okno. Pokud podřízený projekt zobrazí **AddItem** dialogovém okně můžete implementovat nadřazené `IVsFilterAddProjectItemDlg` rozhraní a filtrování položek, které by jinak zobrazeného v prvku projektu.  
   
- Pokud projekty jsou seskupené podle funkce v rámci konkrétní nadřazené projekty, můžete implementovat `IVsFilterAddProjectItemDlg` když uživatel vybere **přidat položku projektu** v místní nabídce v vnořený projekt. Implementace `IvsFilterAddProjectItemDlg displays` projektu pouze položky nebo soubory specifické pro tuto skupinu. Položky projektu pro další skupiny jsou filtrovány mimo dialogové okno, i když jsou uložené ve stejném adresáři.  
+ Pokud projekty jsou seskupeny podle funkce v rámci určité nadřazené projektů, můžete implementovat `IVsFilterAddProjectItemDlg` když uživatel vybere **přidat položku projektu** v místní nabídce v vnořený projekt. Implementace `IvsFilterAddProjectItemDlg displays` projektu pouze položky, nebo soubory specifické pro tuto skupinu. Položky projektu pro jiné skupiny, jsou odfiltrovány z dialogu, i v případě, že jsou uložené ve stejném adresáři.  
   
- Když uživatel otevře **AddItem** dialogové okno pro podřízenou implementace nadřazený projekt `IVsFilterAddProjectItemDlg` se označuje jako rozhraní.  
+ Když uživatel otevře **AddItem** dialogové okno pro podřízený, nadřazené projektu provádění `IVsFilterAddProjectItemDlg` je názvem rozhraní.  
   
- `IVsFilterAddProjectItemDlg` Rozhraní můžete taky implementovat pomocí filtrování podle kategorie. Další informace najdete v tématu [přidávání položek přidat novou položku dialogových oknech](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md) a [registrace projektů a šablon položek](../../extensibility/internals/registering-project-and-item-templates.md).  
+ `IVsFilterAddProjectItemDlg` Rozhraní můžete taky implementovat pomocí filtrování podle kategorie. Další informace najdete v tématu [přidání položek do dialogových oken přidat novou položku](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md) a [registrace šablon projektů a položek](../../extensibility/internals/registering-project-and-item-templates.md).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>   
- [Přidávání položek do pro přidání nové položky dialogových oken](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)   
+ [Přidání položek do dialogových oken přidat novou položku](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)   
  [Registrace šablon projektů a položek](../../extensibility/internals/registering-project-and-item-templates.md)   
  [Vnoření projektů](../../extensibility/internals/nesting-projects.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugActivateDocumentEvent2::GetDocumentContext | Microsoft Docs
+title: IDebugActivateDocumentEvent2::GetDocumentContext | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 03fbc1499372221a815eb639442af586f7020cf1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b3eaf98fe0c60a23f519bd6ec86ae6c674ac3b4e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49877033"
 ---
 # <a name="idebugactivatedocumentevent2getdocumentcontext"></a>IDebugActivateDocumentEvent2::GetDocumentContext
-Získá kontext dokumentu, který popisuje pozici v dokumentu, který má být provedeno active balíček ladění.  
+Získá kontext dokumentu, který popisuje pozici v dokumentu, který má být provedeno aktivní balíčkem ladění.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,13 +42,13 @@ int GetDocumentContext (
   
 #### <a name="parameters"></a>Parametry  
  `ppDocContext`  
- [out] Vrátí [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) objekt, který představuje pozici ve zdrojovém souboru dokumentu.  
+ [out] Vrátí [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) objekt, který představuje umístění ve zdrojovém souboru dokumentu.  
   
 ## <a name="remarks"></a>Poznámky  
- Zobrazíte pomocí kurzoru, například mohou používat tuto pozici.  
+ Této pozici může být použit k zobrazení blikající kurzor, třeba.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugActivateDocumentEvent2](../../../extensibility/debugger/reference/idebugactivatedocumentevent2.md)   

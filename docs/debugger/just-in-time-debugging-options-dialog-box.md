@@ -1,5 +1,5 @@
 ---
-title: V běhu, ladění, dialogové okno Možnosti | Microsoft Docs
+title: Just-In-Time, ladění, dialogové okno Možnosti | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -22,40 +22,41 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7be7dacbe7b3b89b8bdc09515c23d7597e7e55e5
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: a6736e0646193754dbd932e5501a6473ee18c7e6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49936326"
 ---
 # <a name="just-in-time-debugging-options-dialog-box"></a>Za běhu, ladění, dialogové okno Možnosti
-Pro přístup k **pouze za běhu** stránky, přejděte na **nástroje** nabídky a klikněte na tlačítko **možnosti**. V **možnosti** dialogové okno, rozbalte seznam **ladění** uzel a vyberte možnost **pouze za běhu**. Tato stránka umožňuje povolit pouze za běhu ladění pro spravovaný kód, nativního kódu a skript. Další informace najdete v tématu [ladění JIT](../debugger/just-in-time-debugging-in-visual-studio.md).  
+Pro přístup **Just-In-Time** stránky, přejděte na **nástroje** nabídky a klikněte na tlačítko **možnosti**. V **možnosti** dialogového okna rozbalte **ladění** uzel a vyberte možnost **Just-In-Time**. Tato stránka umožňuje povolit Just-In-Time ladění pro spravovaný kód, nativního kódu a skriptů. Další informace najdete v tématu [ladění za běhu](../debugger/just-in-time-debugging-in-visual-studio.md).  
   
- Můžete povolit pouze za běhu ladění pro tyto typy program:  
+ Můžete povolit Just-In-Time ladění pro tyto typy programu:  
   
--   Spravované  
+- Spravované  
   
--   Nativní  
+- Nativní  
   
--   Skript  
+- skript  
   
- Ladění za běhu je technika pro ladění programu, který je spuštěn mimo [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Můžete spustit program vytvořené v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] mimo [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] prostředí. Pokud je povolena pouze za běhu ladění, havárie se zobrazí dialogové okno s dotazem, pokud chcete ladit.  
+  Ladění Just-In-Time je postup pro ladění programu, který je spuštěn mimo [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Můžete spustit aplikaci vytvořen [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] mimo [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] prostředí. Pokud jste povolili Just-in-time ladění, chyby se zobrazí dialogové okno s dotazem, zda chcete ladit.  
   
-## <a name="associated-warnings"></a>Přidružené upozornění  
- Při návštěvě této stránce **možnosti** dialogové okno, může se zobrazit zpráva s upozorněním takto:  
+## <a name="associated-warnings"></a>Související upozornění  
+ Při návštěvě této stránky **možnosti** dialogové okno, může se zobrazit zpráva s upozorněním takto:  
   
- **Ladicí program jiné zaregistroval jako pouze v době ladicí program. Chcete-li opravit, povolte pouze za běhu ladění nebo spustit opravu Visual Studio.**  
+ **Jiný ladicí program se registroval jako Just-In-Time debugger. Pokud chcete opravit, povolte Just-In-Time ladění nebo spuštěním opravy sady Visual Studio.**  
   
- Tato zpráva se zobrazí, pokud máte jiný ladicího programu, které by mohly mít starší verze [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ladicí program, nastavte jako pouze v době ladicí program.  
+ Tato zpráva se zobrazí, pokud máte jiný ladicí program, případně starší verze [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ladicího programu, nastavit jako Just-In-Time debugger.  
   
- Další zprávu, může se zobrazit vypadá takto:  
+ Další zprávu, zobrazí se pravděpodobně vypadá takto:  
   
- **Za běhu ladění registrace byly zjištěny chyby. Chcete-li opravit, povolte pouze za běhu ladění nebo spustit opravu Visual Studio.**  
+ **Just-In-Time ladění registrace byly zjištěny chyby. Pokud chcete opravit, povolte Just-In-Time ladění nebo spuštěním opravy sady Visual Studio.**  
   
- Pokud tato upozornění se zobrazí pouze za běhu ladění pomocí [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] vyžaduje oprávnění správce, dokud opravě problému. Pokud se pokusíte povolit jenom-jako bez oprávnění správce v těchto podmínkách, zobrazí se následující chybová zpráva:  
+ Pokud se zobrazí některá z těchto upozornění Just-In-Time ladění pomocí [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] vyžaduje oprávnění správce, dokud nebude tento problém opravili. Pokud se pokusíte povolit pouze – jako bez oprávnění správce za těchto podmínek, zobrazí se následující chybová zpráva:  
   
- **Přístup byl odepřen. Máte povolit pouze za běhu správce ladění, nebo opravte instalaci sady Visual Studio.**  
+ **Přístup byl odepřen. Nemáte povolení Just-In-Time správce ladění nebo opravte instalaci sady Visual Studio.**  
   
 ## <a name="see-also"></a>Viz také  
  [Ladění, dialogové okno Možnosti](../debugger/debugging-options-dialog-box.md)   
- [Postupy: určení nastavení ladicího programu](../debugger/how-to-specify-debugger-settings.md)
+ [Postupy: Určení nastavení ladicího programu](../debugger/how-to-specify-debugger-settings.md)

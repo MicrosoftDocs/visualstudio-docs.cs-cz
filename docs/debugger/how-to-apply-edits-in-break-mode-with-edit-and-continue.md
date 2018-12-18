@@ -1,6 +1,6 @@
 ---
-title: 'Postupy: použití úprav v režimu pozastavení pomocí operace upravit a pokračovat | Microsoft Docs'
-ms.custom: ''
+title: Použití úprav v režimu pozastavení pomocí operace upravit a pokračovat | Dokumentace Microsoftu
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -24,41 +24,42 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f031598e0c8f290907e759bcfceac85c1b063f5f
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 51a69414a8b61368cbb492494187567554f98e4c
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53063723"
 ---
-# <a name="how-to-apply-edits-in-break-mode-with-edit-and-continue"></a>Postupy: Použití úprav v režimu pozastavení pomocí operace Upravit a pokračovat
-Úprava kódu v režimu pozastavení a pokračujte bez zastavení a restartování provádění můžete upravit a pokračovat.  
+# <a name="how-to-apply-edits-in-break-mode-with-edit-and-continue-visual-basic"></a>Postupy: použití úprav v režimu pozastavení pomocí operace upravit a pokračovat (Visual Basic)
+Můžete upravit a pokračovat pro úpravy kódu v režimu pozastavení a potom pokračujte bez zastavení a restartování spuštění.  
   
-Omezení použití upravit a pokračovat při ladění, najdete v části [podporované změny kódu (C# a Visual Basic](../debugger/supported-code-changes-csharp.md)]
+Omezení pomocí funkce upravit a pokračovat při ladění, naleznete v tématu [podporované změny kódu (C# a Visual Basic](../debugger/supported-code-changes-csharp.md)]
   
-### <a name="to-edit-code-in-break-mode"></a>Chcete-li upravit kód v režimu pozastavení  
+### <a name="to-edit-code-in-break-mode"></a>Pro úpravu kódu v režimu pozastavení  
   
-1.  Zadejte režim pozastavení jedním z následujících akcí:  
+1.  Zadejte režimu pozastavení pomocí jedné z následujících akcí:  
   
-    -   Nastavte zarážky v kódu, a potom vyberte **spustit ladění** z **ladění** nabídky a počkejte průchodu zarážkou aplikace.  
-  
-         -nebo-  
-  
-    -   Spuštění ladění a potom vyberte **přerušení všech** z **ladění** nabídky.  
+    -   Nastavte zarážku v kódu a pak zvolte **spustit ladění** z **ladění** nabídky a vyčkat, než aplikace k zarážce.  
   
          -nebo-  
   
-    -   Když dojde k výjimce, zvolte **povolit úpravy** na**Pomocníka pro výjimky**.  
+    -   Spustit ladění a pak vyberte **příkaz Pozastavit vše** z **ladění** nabídky.  
   
-2.  Proveďte požadované změny kódu požadované a podporované.  
+         -nebo-  
+  
+    -   Když dojde k výjimce, zvolte **povolit úpravy** na **Pomocníka pro výjimky**.  
+  
+2.  Žádné změny kódu požadované a podporované.  
   
      Další informace najdete v tématu [podporované změny kódu (C# a Visual Basic](../debugger/supported-code-changes-csharp.md).  
   
     > [!NOTE]
-    >  Pokud se pokusíte aby kódu změňte, která není povolena upravit a pokračovat, úpravy bude podtržené fialové vlnovkami čára a úlohy se zobrazí v seznamu úloh. Nebudete moci pokračovat v provádění kódu Pokud vrátit změnu neplatný kód.  
+    >  Při pokusu o aby kód změnit, která není povolena funkce upravit a pokračovat, úpravy bude podtržené podle fialovou vlnovkou a úloha se zobrazí v seznamu úkolů. Nebude moct pokračovat v provádění kódu není-li vrátit změnu neplatný kód.  
   
-3.  Na **ladění** nabídky, klikněte na tlačítko **pokračovat** Chcete-li pokračovat v provádění.  
+3.  Na **ladění** nabídky, klikněte na tlačítko **pokračovat** pokračovat provádění.  
   
-     Váš kód teď provede úpravy dokončíte použité součástí projektu.  
+     S použité úpravy do projektu se teď spustí váš kód.  
   
 ## <a name="see-also"></a>Viz také  
  [Podporované změny kódu (C# a Visual Basic](../debugger/supported-code-changes-csharp.md)   

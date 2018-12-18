@@ -22,11 +22,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f59f5e1b31baf9f731f58c9f21163c2a54f2a238
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 72dbebd8ff9b2e7bf7b001d540158656271c0556
+ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36757706"
 ---
 # <a name="how-to-add-an-entity-to-a-model"></a>Postupy: Přidání entity do modelu
   Pokud chcete vytvořit entitu, přidání ovládacího prvku entity ze sady Visual Studio **sada nástrojů** do návrháře Business Data Connectivity (BDC).  
@@ -51,11 +52,11 @@ ms.lasthandoff: 04/16/2018
      [!code-csharp[SP_BDC_Entity_Data_Class#1](../sharepoint/codesnippet/CSharp/sp_bdc_entity_data_class/bdcmodel1/contact.cs#1)]
      [!code-vb[SP_BDC_Entity_Data_Class#1](../sharepoint/codesnippet/VisualBasic/sp_bdc_entity_data_class/bdcmodel1/contact.vb#1)]  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:
  [Postupy: přidání metody vytvoření](../sharepoint/how-to-add-a-creator-method.md)   
  [Postupy: přidání metody odstranění](../sharepoint/how-to-add-a-deleter-method.md)   
  [Postupy: Přidání aktualizační metody](../sharepoint/how-to-add-an-updater-method.md)   
  [Postupy: přidání vyhledávací metody](../sharepoint/how-to-add-a-finder-method.md)   
  [Postupy: Přidání specifické vyhledávací metody](../sharepoint/how-to-add-a-specific-finder-method.md)  
   
-  
+ 

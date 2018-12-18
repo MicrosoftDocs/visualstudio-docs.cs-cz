@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_arrayindextypeid – | Microsoft Docs
+title: Idiasymbol::get_arrayindextypeid – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 793e4479a848978a41991c217fcbca578b033495
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: bc761032c3a64200057f5e793aca80b1684c0d20
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49818650"
 ---
 # <a name="idiasymbolgetarrayindextypeid"></a>IDiaSymbol::get_arrayIndexTypeId
-Načte identifikátor pole indexu typ symbolu.  
+Načte identifikátor typu pole index symbolu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,22 +34,22 @@ HRESULT get_arrayIndexTypeId (
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí ID typu index pole symbolu.  
+ [out] Vrátí ID pole indexu typ symbolu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` nebo chybový kód.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
 >  Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="remarks"></a>Poznámky  
- Identifikátor je jedinečný hodnota vytvořené DIA SDK k označení všechny symboly jako jedinečný.  
+ Identifikátor je jedinečná hodnota vytvořené DIA SDK označit všechny symboly jako jedinečný.  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Požadavek|Popis|  
 |-----------------|-----------------|  
-|Hlavičky:|dia2.h|  
+|Záhlaví:|dia2.h|  
 |Verze:|V7.0 DIA SDK|  
   
 ## <a name="see-also"></a>Viz také  

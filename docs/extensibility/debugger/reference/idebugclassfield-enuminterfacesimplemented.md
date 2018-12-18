@@ -1,5 +1,5 @@
 ---
-title: IDebugClassField::EnumInterfacesImplemented | Microsoft Docs
+title: IDebugClassField::EnumInterfacesImplemented | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6a8a313be7c24b4e3778a4e4890eaf2c5eb67b4b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9119668cf4eb8ddb6196aec774acf171db04e868
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872678"
 ---
 # <a name="idebugclassfieldenuminterfacesimplemented"></a>IDebugClassField::EnumInterfacesImplemented
-Vytvoří enumerátor pro rozhraní implementované touto třídou.  
+Vytvoří čítač pro rozhraní implementována touto třídou.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +41,13 @@ int EnumInterfacesImplemented(
   
 #### <a name="parameters"></a>Parametry  
  `ppEnum`  
- [out] Vrátí [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) objektu, který představuje seznam rozhraní implementovat. Vrátí hodnotu null, pokud nejsou žádné rozhraní.  
+ [out] Vrátí [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) objekt představující seznam rozhraní implementovaná. Vrátí hodnotu null, pokud nejsou žádná rozhraní.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí S_OK nebo vrátí S_FALSE, pokud nejsou žádné rozhraní implementované na této třídě. Jinak vrátí kód chyby.  
+ V případě úspěchu vrátí hodnotu S_OK nebo vrátí S_FALSE v případě, že neexistují žádná rozhraní implementované na této třídě. V opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Každý prvek výčtu je [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) objekt popisující rozhraní. Všimněte si, že nespravované [!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)] kód nepoužívá rozhraní jako samostatné entity, takže tato metoda vždy vrátí hodnotu null pro nespravované [!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)] kódu.  
+ Každý prvek výčtu je [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) objekt popisující rozhraní. Všimněte si, že nespravované [!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)] kódu nepoužívá rozhraní jako samostatné entity, takže tato metoda vždy vrátí hodnotu null pro nespravované [!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)] kódu.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)   

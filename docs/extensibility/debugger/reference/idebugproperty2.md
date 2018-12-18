@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31121570"
 ---
 # <a name="idebugproperty2"></a>IDebugProperty2
 Toto rozhraní představuje vlastnost rámce zásobníku, vlastnost dokumentu programu nebo některé jiné vlastnosti. Vlastnost je obvykle výsledkem vyhodnocení výrazu.  

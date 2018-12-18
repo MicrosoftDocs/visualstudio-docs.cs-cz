@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31468424"
 ---
 # <a name="com-and-activex-debugging"></a>Ladění modelů COM a prvků ActiveX
 Tato část obsahuje tipy k ladění aplikací modelu COM a ovládací prvky ActiveX.  

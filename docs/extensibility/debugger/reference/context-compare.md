@@ -1,5 +1,5 @@
 ---
-title: CONTEXT_COMPARE | Microsoft Docs
+title: CONTEXT_COMPARE | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0563f037f77c18cc5e686c1ea6acf429c91ad06d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9a17d0b422b65093721a55d4bf8d632aba271a55
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49950793"
 ---
 # <a name="contextcompare"></a>CONTEXT_COMPARE
 Určuje kritéria pro porovnání dvou kontextů paměti.  
@@ -57,36 +58,36 @@ public enum enum_CONTEXT_COMPARE {
   
 ## <a name="members"></a>Členové  
  CONTEXT_EQUAL  
- Najít první kontextu paměti v seznamu, který se rovná cílový kontext paměti.  
+ Vyhledá první kontext paměti v seznamu, který je roven cílový kontext paměti.  
   
  CONTEXT_LESS_THAN  
- Najít první kontextu paměti v seznamu, která je menší, než cílový kontext paměti.  
+ Vyhledá první kontext paměti v seznamu, která je menší než cílový kontext paměti.  
   
  CONTEXT_GREATER_THAN  
- Najít první kontextu paměti v seznamu, který je větší než cílový kontext paměti.  
+ Vyhledá první kontext paměti v seznamu, která je větší než cílový kontext paměti.  
   
  CONTEXT_LESS_THAN_OR_EQUAL  
- Najít první kontextu paměti v seznamu, která je menší než nebo rovno cílový kontext paměti.  
+ Vyhledá první kontext paměti v seznamu, která je menší než nebo rovna hodnotě cílový kontext paměti.  
   
  CONTEXT_GREATER_THAN_OR_EQUAL  
- Najít první kontextu paměti v seznamu, který je větší než nebo rovno cílový kontext paměti.  
+ Najdete první paměťové oblasti v seznamu, který je větší než nebo rovna hodnotě cílový kontext paměti.  
   
  CONTEXT_SAME_SCOPE  
- Najít první kontextu paměti v seznamu, který je ve stejném oboru jako cílový kontext paměti.  
+ Vyhledá první kontext paměti v seznamu, který je ve stejném oboru jako cílový kontext paměti.  
   
  CONTEXT_SAME_FUNCTION  
- Najít první kontextu paměti v seznamu, který je ve stejné funkce jako cílový obor paměti.  
+ Najdete první paměťové oblasti v seznamu, který je ve stejné funkci jako cílový obor paměti.  
   
  CONTEXT_SAME_MODULE  
- Najít první kontextu paměti v seznamu, který je ve stejném modulu jako cílový kontext paměti.  
+ Vyhledá první kontext paměti v seznamu, který je ve stejném modulu jako cílový kontext paměti.  
   
  CONTEXT_SAME_PROCESS  
- Najít první kontextu paměti v seznamu, který je v rámci jednoho procesu jako cílový kontext paměti.  
+ Vyhledá první kontext paměti v seznamu, který je ve stejném procesu jako cílový kontext paměti.  
   
 ## <a name="remarks"></a>Poznámky  
- Předat jako argument k [porovnat](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md) metoda.  
+ Předán jako argument [porovnání](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md) metody.  
   
- Tyto hodnoty se používají k vyhledání prvního kontextu paměti v seznamu, která splňuje kritéria zadaná porovnání. Kontext paměti je uveden seznam kontexty paměti se porovnat proti prostřednictvím `IDebugMemoryContext2::Compare` metoda. Kontext paměti první v seznamu, pro který relační operátor `true` je pak vrácen.  
+ Tyto hodnoty se používají k vyhledání prvního kontextu paměti v seznamu, který splňuje zadané porovnávací kritéria. Kontext paměti je uveden seznam kontexty paměti se porovnat proti prostřednictvím `IDebugMemoryContext2::Compare` metody. První kontext paměti v seznamu, pro který je operátor porovnání `true` je poté vrácen.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  
@@ -97,4 +98,4 @@ public enum enum_CONTEXT_COMPARE {
   
 ## <a name="see-also"></a>Viz také  
  [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [Porovnání](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md)
+ [Compare](../../../extensibility/debugger/reference/idebugmemorycontext2-compare.md)

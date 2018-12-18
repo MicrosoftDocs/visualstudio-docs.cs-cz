@@ -1,6 +1,7 @@
 ---
-title: Hodnota (vlastnost XAttribute dynamické)
+title: Hodnota (dynamická vlastnost XAttribute)
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 ms.topic: reference
 apiname:
@@ -12,37 +13,38 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b98272fe2c86137eb925a54924e1b0e8411ed0e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 473ff5b0124a050b60c9dc02929b2bad83f3661e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49842336"
 ---
-# <a name="value-xattribute-dynamic-property"></a>Hodnota (vlastnost XAttribute dynamické)
+# <a name="value-xattribute-dynamic-property"></a>Hodnota (dynamická vlastnost XAttribute)
 
 Získá nebo nastaví hodnotu atributu XML.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```xaml
 attrib.Value
 ```
 
-## <a name="property-valuereturn-value"></a>Hodnota vlastnosti / návratová hodnota
+## <a name="property-valuereturn-value"></a>Vlastnost hodnota nebo návratová hodnota
 
-A <xref:System.String> obsahujícího hodnotu tohoto atributu.
+A <xref:System.String> obsahující hodnotu tohoto atributu.
 
 ## <a name="exceptions"></a>Výjimky
 
 |Typ výjimky|Podmínka|
-|--------------------|---------------|
+| - |---------------|
 |<xref:System.ArgumentNullException>|Při nastavování, `value` je `null`.|
 
 ## <a name="remarks"></a>Poznámky
 
 Tato vlastnost je ekvivalentní <xref:System.Xml.Linq.XAttribute.Value%2A> vlastnost <xref:System.Xml.Linq.XAttribute?displayProperty=fullName> třídy, ale tato dynamická vlastnost také podporuje oznámení o změnách.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=fullName>
 - [Dynamické vlastnosti třídy XAttribute](../designers/xattribute-class-dynamic-properties.md)

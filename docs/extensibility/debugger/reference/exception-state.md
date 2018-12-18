@@ -1,5 +1,5 @@
 ---
-title: EXCEPTION_STATE | Microsoft Docs
+title: EXCEPTION_STATE | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1faa847d907af938bb5f91206a5f438bcba886a3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f1032be313c6be8c71799ea493e82c03fd9e96ad
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49818247"
 ---
 # <a name="exceptionstate"></a>EXCEPTION_STATE
 Určuje stav výjimky.  
@@ -77,37 +78,37 @@ public enum enum_EXCEPTION_STATE {
   
 ## <a name="members"></a>Členové  
  EXCEPTION_NONE  
- Není zastavit výjimku.  
+ Nedojde k zastavení při výjimce.  
   
  EXCEPTION_STOP_FIRST_CHANCE  
- Zastavte první pálení výjimky. Při popisu události výjimky, tento příznak označuje, že událost výjimky je první odpovídající výjimce událostí.  
+ Zastavení při jeho prvním spuštění výjimky. Při popisu události výjimky, tento příznak signalizuje událost výjimky první odpovídající výjimce události.  
   
  EXCEPTION_STOP_SECOND_CHANCE  
- Zastavte druhý pálení výjimky. Při popisu události výjimky, označuje, že událost výjimky je sekundu odpovídající výjimce událostí.  
+ Zastavení při jeho druhého spuštění výjimky. Při popisu události výjimky, označuje, že události výjimky je výjimka sekundu odpovídající události.  
   
  EXCEPTION_STOP_USER_FIRST_CHANCE  
- Zastavte první pálení výjimka režimu uživatele. Při popisu události výjimky, označuje, že událost výjimky je událost uživatele první odpovídající výjimce.  
+ Zastavení při jeho prvním spuštění výjimky režimu uživatele. Při popisu události výjimky, znamená, že události výjimky události výjimka první příležitosti uživatele.  
   
  EXCEPTION_STOP_USER_UNCAUGHT  
- Zastavte při není zachycena výjimka režimu uživatele. Při popisu události výjimky, označuje, že událost výjimky je událost výjimky režimu nezachycená uživatele.  
+ Zastavte, když není zachycena výjimka režimu uživatele. Při popisu události výjimky, označuje, že události výjimky je výjimka události režimu nezachycené uživatele.  
   
  EXCEPTION_STOP_ALL  
- Ukončete všechny výjimky. Nepoužívá se při popisu události výjimky.  
+ Zastavte na jakékoli výjimce. Nepoužívá se při popisu události výjimky.  
   
  EXCEPTION_CANNOT_BE_CONTINUED  
- Při popisu události výjimky, označuje, že výjimky nelze pokračovat z.  
+ Při popisu události výjimky, označuje, že výjimka nemůže pokračovat z.  
   
  EXCEPTION_CODE_SUPPORTED  
- Označuje, že výjimka má kód je podpora. Použité při zobrazování výjimku  
+ Znamená, že výjimka má kód ho podporuje. Použité při zobrazování výjimku  
   
  EXCEPTION_CODE_DISPLAY_IN_HEX  
- Označuje, že kód výjimky se mají zobrazit v šestnáctkové soustavě. Použité při zobrazování výjimku.  
+ Označuje, že kód výjimky by měly zobrazovat v šestnáctkové soustavě. Použité při zobrazování výjimku.  
   
  EXCEPTION_JUST_MY_CODE_SUPPORTED  
  Označuje, že kód výjimky podporuje JustMyCode. Použité při zobrazování výjimku.  
   
  EXCEPTION_MANAGED_DEBUG_ASSISTANT  
- Označuje, že ladicí program spravovaného kódu by měla zpracování výjimek. Pokud není sada, výchozí program pro ladění zpracovává výjimky. To je předán [SetAllExceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md) metoda a nesmí se používat v [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) struktury.  
+ Označuje, že by měl ladicí program spravovaný kód zpracování výjimek. Pokud není set, výchozí ladicí program zpracovává výjimky. To je předáno [SetAllExceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md) metoda a nesmí se používat v [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) struktury.  
   
  EXCEPTION_STOP_FIRST_CHANCE_USE_PARENT  
  ZASTARALÉ, NEPOUŽÍVEJTE.  
@@ -122,11 +123,11 @@ public enum enum_EXCEPTION_STATE {
  ZASTARALÉ, NEPOUŽÍVEJTE.  
   
 ## <a name="remarks"></a>Poznámky  
- Použít jako `dwState` členem [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) struktura k označení stavu výjimku a co můžete udělat o něm.  
+ Použít jako `dwState` člena [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md) struktury k označení stavu výjimku a co se dá dělat o něm.  
   
- Tyto hodnoty jsou také předávány [SetAllExceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md) metodu a nastavit stav všechny výjimky.  
+ Tyto hodnoty jsou předány také [SetAllExceptions](../../../extensibility/debugger/reference/idebugengine3-setallexceptions.md) metodu pro nastavení stavu všechny výjimky.  
   
- Tyto příznaky může být kombinován s bitové operace OR.  
+ Tyto příznaky lze kombinovat s bitový operátor OR.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

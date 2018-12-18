@@ -1,6 +1,7 @@
 ---
 title: 'CA1802: Použijte literály, kde je to vhodné'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,15 +14,20 @@ ms.assetid: 2515e4cd-9e61-486d-b067-58ba1a743ce4
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 861e03251a8d3f8ee461b82afdbc6ff55b254684
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 13cfc8b090d289173975b0ef2ee55562955de0c8
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45548741"
 ---
 # <a name="ca1802-use-literals-where-appropriate"></a>CA1802: Použijte literály, kde je to vhodné
+
 |||
 |-|-|
 |TypeName|UseLiteralsWhereAppropriate|
@@ -30,23 +36,23 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
- Pole je deklarovaná `static` a `readonly` (`Shared` a `ReadOnly` v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) a je inicializovaný s hodnotou, která je computable v době kompilace.
+ Pole je deklarován `static` a `readonly` (`Shared` a `ReadOnly` v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) a je inicializován s hodnotou, kterou lze vypočítat v době kompilace.
 
 ## <a name="rule-description"></a>Popis pravidla
- Hodnota `static``readonly` pole se vypočítává za běhu, při volání statického konstruktoru pro deklarující typ. Pokud `static``readonly` pole je inicializováno, když je deklarován a statického konstruktoru není deklarovaný explicitně, kompilátor vydává statického konstruktoru k chybě při inicializaci pole.
+ Hodnota `static``readonly` pole je vypočítán za běhu při volání statického konstruktoru pro deklarujícího typu. Pokud `static``readonly` pole je inicializováno při deklaraci a statický konstruktor není explicitně deklarované, kompilátor vydává statický konstruktor k inicializaci pole.
 
- Hodnota `const` pole je počítaný v době kompilace a uložená v metadatech, což zvyšuje výkon modulu runtime srovnání s `static``readonly` pole.
+ Hodnota `const` pole je vypočítána v době kompilace a uložená v metadatech, což zvyšuje výkon modulu runtime srovnání s `static``readonly` pole.
 
- Hodnota přiřazená k cílové pole je computable v době kompilace, změnou deklaraci k `const` pole tak, aby hodnota je vypočítána v době kompilace místo v době běhu.
+ Protože hodnotu přiřazenou cílovému poli je nelze vypočítat v době kompilace, změňte deklaraci do `const` pole tak, aby hodnota byla vypočítána v době kompilace místo za běhu.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li porušení toto pravidlo, nahraďte `static` a `readonly` modifikátory s `const` modifikátor.
+ Chcete-li opravit porušení tohoto pravidla, nahraďte `static` a `readonly` modifikátory `const` modifikátor.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Je bezpečné upozornění toto pravidlo potlačit, nebo zakázat pravidlo, pokud výkon není zájmu.
+ Je bezpečné potlačit upozornění tohoto pravidla nebo zakázat pravidlo, pokud výkon není žádný problém.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje typu, `UseReadOnly`, která porušuje pravidlo a typu, `UseConstant`, která by splnila pravidlo.
+ Následující příklad ukazuje typ, `UseReadOnly`, který porušuje pravidla a typ, `UseConstant`, vyhovující pravidlo.
 
  [!code-vb[FxCop.Performance.UseLiterals#1](../code-quality/codesnippet/VisualBasic/ca1802-use-literals-where-appropriate_1.vb)]
  [!code-csharp[FxCop.Performance.UseLiterals#1](../code-quality/codesnippet/CSharp/ca1802-use-literals-where-appropriate_1.cs)]

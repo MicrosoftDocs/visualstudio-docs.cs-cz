@@ -1,6 +1,7 @@
 ---
-title: Roslyn analyzátorů v sadě Visual Studio
+title: Analýza kódu pomocí analyzátorů Roslyn
 ms.date: 03/26/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: overview
 helpviewer_keywords:
@@ -12,71 +13,75 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: f5a434a47bac73aef86e83d220605b196fc2a74a
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 620f2905e2511ed403f0d25f32fa1bfc9b1eca68
+ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51948839"
 ---
-# <a name="overview-of-net-compiler-platform-analyzers"></a>Přehled platformy .NET kompilátoru analyzátory
+# <a name="overview-of-net-compiler-platform-analyzers"></a>Přehled analyzátory pro .NET Compiler Platform
 
-Visual Studio 2017 zahrnuje integrovanou sadu analyzátorů kompilátoru platformy .NET, které při psaní analýza kódu C# nebo Visual Basic. Jako balíčku NuGet, můžete nainstalovat další analyzátorů jako rozšíření sady Visual Studio, nebo na jednotlivých projektů. Podívejte se na kód styl, kvality kódu a udržovatelnosti, návrh kódu a další problémy analyzátorů.
+Visual Studio 2017 obsahuje integrovanou sadu .NET Compiler Platform analyzátory, které analýza kódu C# nebo Visual Basic během psaní. Podívejte se na styl kódu, kvalitu kódu a udržovatelnosti, návrh kódu a další problémy analyzátory. Jako balíček NuGet můžete nainstalovat další analyzátory jako rozšíření sady Visual Studio nebo na základě jednotlivých projektů.
 
-Pokud jsou funkcí Analýza porušení pravidel, se zvyšují v editoru kódu jako *vlnovkou* pod kód problematické a v **seznam chyb**.
+Pokud analyzátor se objevila porušení pravidel, jsou hlášeny v editoru kódu jako *podtržení* problematického kódu a v **seznam chyb**.
 
-Mnoho pravidla analyzátoru nebo *diagnostiky*, mít jeden nebo více přidružené *code opravy* , můžete použít k odstranění problému. Analyzátor diagnostiky, které jsou součástí sady Visual Studio mít oprava přidružený kód. V nabídce ikonu žárovky společně s jiné typy jsou uvedeny opravy kódu *rychlé akce*. Informace o tyto opravy kódu najdete v tématu [běžné rychlé akce](../ide/common-quick-actions.md).
+Mnoho pravidla analyzátoru nebo *diagnostiky*, mají jednu nebo více přidružené *opravy kódu* , můžete použít k opravě problému. Diagnostika analyzátoru, které jsou součástí sady Visual Studio máte to napravit přidružený kód. Opravy kódu se zobrazují v nabídce ikonu žárovky společně s další typy *rychlé akce*. Informace o těchto opravy kódu, naleznete v tématu [běžné rychlé akce](../ide/common-quick-actions.md).
 
-![Analyzátor porušení a opravte kód rychlé akce](../code-quality/media/built-in-analyzer-code-fix.png)
+![Analýza porušení a opravu kódu rychlé akce](../code-quality/media/built-in-analyzer-code-fix.png)
 
-## <a name="roslyn-analyzers-vs-static-code-analysis"></a>Roslyn analyzátorů oproti Statická analýza kódu
+## <a name="roslyn-analyzers-vs-static-code-analysis"></a>Analyzátory Roslyn a statické analýzy kódu
 
-Nakonec analyzátorů kompilátoru platformu .NET ("Roslyn") nahradí [analýza statické kódu](../code-quality/code-analysis-for-managed-code-overview.md) pro spravovaný kód. Řadu pravidel analýzy kódu statických mít již přepsána jako Roslyn analyzátor diagnostiky.
+Analyzátory .NET compiler Platform ("Roslyn") bude nakonec nahradí [statickou analýzu kódu](../code-quality/code-analysis-for-managed-code-overview.md) pro spravovaný kód. Mnoho pravidel analýzy kódu statických již byla přepsali jsme jako Roslyn analyzátor diagnostiky.
 
-Jako je porušení pravidel analýzy kódu statických, porušení analyzátor Roslyn zobrazí v **seznam chyb**. Kromě toho Roslyn analyzátor porušení také zobrazí v editoru kódu jako *squigglies* pod problematické kódu. Barva vlnovkou závisí na [nastavení závažnosti](../code-quality/use-roslyn-analyzers.md#rule-severity) pravidla. Následující snímek obrazovky ukazuje tři porušení&mdash;jednomu red, jeden zelený a jeden gray:
+Jako je porušení pravidel pro analýzu statického kódu, porušení analyzátor Roslyn joinkind **seznam chyb**. Kromě toho Roslyn analyzátor porušení zobrazí také v editoru kódu jako *squigglies* pod problematický kód. Barva podtržení závisí [nastavení závažnosti](../code-quality/use-roslyn-analyzers.md#rule-severity) pravidla. Následující snímek obrazovky ukazuje tři porušení&mdash;jeden červené, jedna, zelené a jeden gray:
 
 ![Squigglies v editoru kódu](media/diagnostics-severity-colors.png)
 
-Roslyn analyzátorů analýza kódu v době sestavení, jako je analýza statické kódu, pokud je povoleno, ale také live při psaní! Roslyn analyzátorů můžete zadat taky návrhu analýzu soubory kódu, které nejsou otevřen v editoru, pokud povolíte [úplné analýzy řešení](../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md#to-toggle-full-solution-analysis).
+Analyzátory Roslyn analýza kódu v okamžiku sestavení, jako je analýza statického kódu, pokud je povoleno, ale také na live při psaní! Analyzátory Roslyn můžete také zadat návrhu analýzy kódu souborů, které nejsou otevřené v editoru, pokud povolíte [úplné analýzy řešení](../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md#to-toggle-full-solution-analysis).
 
 > [!NOTE]
-> Čase vytvoření buildu chyby a upozornění z Roslyn analyzátorů se zobrazí, jenom Pokud Analyzátory se instalují jako balíčku NuGet.
+> Čas sestavení chyby a upozornění z analyzátory Roslyn se zobrazí, jenom Pokud jsou nainstalované analyzátory jako balíček NuGet.
 
-Pouze provést Roslyn analyzátorů sestavy stejné typy problémy, které nemá analýza statické kódu, ale jejich snadno můžete opravit jednoho nebo všech výskytů porušení v souboru nebo projektu. Tyto akce se nazývají *code opravy*. Opravy kódu jsou specifické pro IDE; v sadě Visual Studio jsou implementované jako [rychlé akce](../ide/quick-actions.md). Ne všechny diagnostiky analyzátor mít oprava přidružený kód.
+Pouze proveďte analyzátory Roslyn sestavy stejné typy problémů, které provádí statickou analýzu kódu, ale jejich usnadňují vás nutí opravovat jednu nebo všechny výskyty narušení v souboru nebo projektu. Tyto akce jsou volány *opravy kódu*. Opravy kódu jsou specifické pro prostředí IDE; v sadě Visual Studio, jsou implementovány jako [rychlé akce](../ide/quick-actions.md). Ne všechny analyzátor diagnostiky mít to napravit přidružený kód.
 
 > [!NOTE]
-> Možnost nabídky **analyzovat** > **spuštění analýzy kódu** se vztahuje pouze na statickou analýzu kódu. Kromě toho na projektu **analýza kódu** stránka vlastností **povolit analýza kódu v sestavení** a **potlačit výsledky z generovaného kódu** zaškrtávací políčka platí pouze pro Analýza kódu statické. Nemají žádný vliv na Roslyn analyzátorů.
+> Možnost nabídky **analyzovat** > **spustit analýzu kódu** platí pouze pro statickou analýzu kódu. Kromě toho v projektu **analýzy kódu** stránku vlastností **povolit analýzu kódu na sestavení** a **potlačit Výsledky generovaného kódu** zaškrtávací políčka platí pouze pro Analýza statického kódu. Nemají žádný účinek na analyzátory Roslyn.
 
-K rozlišení mezi porušení z Roslyn analyzátorů a analýza statické kódu v **seznam chyb**, podívejte se na **nástroj** sloupce. Pokud nástroj hodnota odpovídá jednomu z analyzátor sestavení v **Průzkumníku řešení**, například **Microsoft.CodeQuality.Analyzers**, porušení pochází z Roslyn analyzátor. Narušení, jinak hodnota pochází z analýza statické kódu.
+Rozlišovat mezi porušení z analyzátory Roslyn a statickou analýzu kódu v **seznam chyb**, podívejte se na **nástroj** sloupce. Pokud nástroj hodnota odpovídá jednomu z sestavení analyzátoru v **Průzkumníka řešení**, například **Microsoft.CodeQuality.Analyzers**, porušení pochází z Roslyn analyzátor. V opačném případě porušení pochází ze statické analýzy kódu.
 
 ![Nástroj pro sloupec v seznamu chyb](media/code-analysis-tool-in-error-list.png)
 
-## <a name="nuget-package-vs-extension"></a>Balíček NuGet oproti rozšíření
+## <a name="nuget-package-versus-vsix-extension"></a>Balíček NuGet a rozšíření VSIX
 
-Kompilátoru platformu .NET, který může být analyzátorů nainstalovat na projektu prostřednictvím balíčku NuGet, nebo Visual Studio celou jako rozšíření sady Visual Studio. Existují určité rozdíly klíče chování mezi tyto dvě metody [instalaci analyzátorů](../code-quality/install-roslyn-analyzers.md).
+Sada .NET compiler Platform analyzátory může být nainstalována na projektu prostřednictvím balíčku NuGet, nebo Visual Studio na úrovni jako rozšíření sady Visual Studio. Existují některé klíčové rozdíly mezi těmito dvěma metodami [instalace analyzátorů](../code-quality/install-roslyn-analyzers.md).
 
 ### <a name="scope"></a>Rozsah
 
-Pokud instalujete analyzátorů jako rozšíření sady Visual Studio, vztahují se na úrovni řešení pro všechny instance sady Visual Studio. Pokud instalujete analyzátory jako balíčku NuGet, který je upřednostňovaná metoda, se vztahují pouze k projektu, které byl nainstalován balíček NuGet. V prostředích team analyzátorů nainstalovat jako balíčky NuGet jsou v oboru pro *všechny vývojáře* že fungovat na tomto projektu.
+Pokud nainstalujete analyzátory jako rozšíření sady Visual Studio, na všechny instance sady Visual Studio se vztahují na úrovni řešení. Pokud nainstalujete analyzátory jako balíček NuGet, který je upřednostňovanou metodou, se vztahují pouze k projektu, kam se nainstaloval balíček NuGet. V prostředích team analyzátory nainstalována jako balíčky NuGet jsou v oboru pro *všichni vývojáři* , které fungují v daném projektu.
 
 ### <a name="build-errors"></a>Chyby sestavení
 
-Tak, aby měl pravidla vynucují v čase vytvoření buildu, včetně pomocí příkazového řádku nebo jako součást průběžnou integraci sestavení (CI), nainstalujte analyzátory jako balíčku NuGet. Analyzátor upozornění a chyby nejsou zobrazena v sestavě sestavení při instalaci analyzátory jako rozšíření.
+Pokud chcete mít nastavená pravidla vynucovat v okamžiku sestavení, včetně prostřednictvím příkazového řádku nebo v rámci kontinuální integrace (CI) sestavení, nainstalujte analyzátory jako balíček NuGet. Analyzátor upozornění a chyby nezobrazují v sestavě sestavení při instalaci analyzátory jako rozšíření.
 
-Následující snímek obrazovky ukazuje vytváření projekt, který obsahuje pravidlo porušení analyzátor výstup sestavení příkazového řádku:
+Následující snímek obrazovky ukazuje sestavení z příkazového řádku výstup z operace sestavení projektu, který obsahuje porušení pravidla analyzátoru:
 
-![Výstup nástroje MSBuild s porušení pravidel](media/command-line-build-analyzers.png)
+![Výstup nástroje MSBuild s porušení pravidla](media/command-line-build-analyzers.png)
 
-### <a name="rule-severity"></a>Pravidlo závažnosti
+### <a name="rule-severity"></a>Závažnost pravidla
 
-Nelze nastavit závažnost pravidla z analyzátory, které byly nainstalovány jako rozšíření sady Visual Studio. Ke konfiguraci [pravidlo závažnost](../code-quality/use-roslyn-analyzers.md#rule-severity), nainstalujte analyzátory jako balíčku NuGet.
+Závažnost pravidla nelze nastavit v analyzátory, které byly nainstalovány jako rozšíření sady Visual Studio. Ke konfiguraci [pravidlo závažnost](../code-quality/use-roslyn-analyzers.md#rule-severity), instalace analyzátorů jako balíček NuGet.
 
 ## <a name="next-steps"></a>Další kroky
 
-- [Nainstalujte Roslyn analyzátorů v sadě Visual Studio](../code-quality/install-roslyn-analyzers.md)
-- [Použití Roslyn analyzátorů v sadě Visual Studio](../code-quality/use-roslyn-analyzers.md)
+> [!div class="nextstepaction"]
+> [Instalace analyzátorů Roslyn v sadě Visual Studio](../code-quality/install-roslyn-analyzers.md)
 
-## <a name="see-also"></a>Viz také
+> [!div class="nextstepaction"]
+> [Používání analyzátorů Roslyn v sadě Visual Studio](../code-quality/use-roslyn-analyzers.md)
+
+## <a name="see-also"></a>Viz také:
 
 - [Rychlé akce v sadě Visual Studio](../ide/quick-actions.md)
-- [Zápis vlastní analyzátor Roslyn](../extensibility/getting-started-with-roslyn-analyzers.md)
-- [Kompilátoru platformy .NET SDK](/dotnet/csharp/roslyn-sdk/)
+- [Napsat vlastní analyzátor Roslyn](../extensibility/getting-started-with-roslyn-analyzers.md)
+- [.NET compiler Platform SDK](/dotnet/csharp/roslyn-sdk/)

@@ -1,5 +1,5 @@
 ---
-title: IDebugPortSupplier2::AddPort | Microsoft Docs
+title: IDebugPortSupplier2::AddPort | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ab6348739feba7006e5c18eee6f7dc5f301242d9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 09303ac64d042df0d563f113e3c181d523719554
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49820617"
 ---
 # <a name="idebugportsupplier2addport"></a>IDebugPortSupplier2::AddPort
 Přidá port.  
@@ -42,16 +43,16 @@ int AddPort(
   
 #### <a name="parameters"></a>Parametry  
  `pRequest`  
- [v] [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) objekt, který popisuje port, který chcete přidat.  
+ [in] [IDebugPortRequest2](../../../extensibility/debugger/reference/idebugportrequest2.md) objekt, který popisuje port, který chcete přidat.  
   
  `ppPort`  
  [out] Vrátí [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) objekt, který reprezentuje port.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda vytvoří ve skutečnosti požadovaném portu, jakož i přidáním do portu dodavatele interní seznam aktivních portů. [CanAddPort](../../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md) nelze volat metodu nejprve aby se zabránilo možné časově náročné zpožděním.  
+ Tato metoda ve skutečnosti vytváří požadovaný port, jakož i přidáním do dodavatele portu vnitřní seznam aktivních portů. [CanAddPort](../../../extensibility/debugger/reference/idebugportsupplier2-canaddport.md) metodu lze volat nejprve aby se vyhnuli prodlevám možné časově náročné.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)   

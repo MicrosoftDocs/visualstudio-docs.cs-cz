@@ -10,20 +10,21 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e610644713d630ce4f54befa8535c3b00c7aaf92
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 89a26a3a3729241cb4ec9180e6cb16f131194b86
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34844791"
 ---
 # <a name="mark"></a>Označení
-VSPerfCmd.exe **označit** možnost vloží informace o zadaném do profilování datového souboru. Označit může být uvedený v samostatných vsperfreport – sestavy nebo v zobrazení sestavy označit profilování uživatelského rozhraní. **Označit** dá použít k zadání počátečního a koncového bodu v sestavu a zobrazte filtry.  
+*VSPerfCmd.exe* **označit** možnost vloží informace o zadaném do profilování datového souboru. Označit může být uvedený v samostatných vsperfreport – sestavy nebo v zobrazení sestavy označit profilování uživatelského rozhraní. **Označit** dá použít k zadání počátečního a koncového bodu v sestavu a zobrazte filtry.  
   
  **Označit** možnost musí být pouze možnost zadat na příkazovém řádku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cmd  
 VSPerfCmd.exe /Mark:MarkID,[MarkName]  
 ```  
   
@@ -37,14 +38,14 @@ VSPerfCmd.exe /Mark:MarkID,[MarkName]
 ## <a name="example"></a>Příklad  
  Tento příklad vloží značku s ID 123 a název značky "TestMark".  
   
-```  
+```cmd  
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp  
 VSPerfCmd.exe /Launch:TestApp.exe  
 VSPerfCmd.exe /Mark:123,TestMark  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Vsperfcmd –](../profiling/vsperfcmd.md)   
- [Profilace samostatných aplikací](../profiling/command-line-profiling-of-stand-alone-applications.md)   
- [Profilace webových aplikací ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
- [Profilace služeb](../profiling/command-line-profiling-of-services.md)
+ [Profil samostatných aplikací](../profiling/command-line-profiling-of-stand-alone-applications.md)   
+ [Webové aplikace ASP.NET profilu](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
+ [Profil služby](../profiling/command-line-profiling-of-services.md)

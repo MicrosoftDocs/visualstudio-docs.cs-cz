@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsymbolsbyaddr::symbolbyrva – | Microsoft Docs
+title: Idiaenumsymbolsbyaddr::symbolbyrva – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4cdeaef2bc963eca894403bf90e1c9fb720efd4d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 1e746cf0b93f5a9c0944a80c6cbaabedfbb9cc23
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49895221"
 ---
 # <a name="idiaenumsymbolsbyaddrsymbolbyrva"></a>IDiaEnumSymbolsByAddr::symbolByRVA
-Umisťuje enumerátor provedením vyhledávání podle relativní virtuální adresy (RVA).  
+Pozice výčtu pomocí provádí vyhledávání podle relativní virtuální adresu (RVA).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,13 +35,13 @@ HRESULT symbolByRVA (
   
 #### <a name="parameters"></a>Parametry  
  relativeVirtualAddress  
- [v] Adres relativní spuštění bitové kopie.  
+ [in] Adresa vzhledem ke spuštění bitové kopie.  
   
  ppsymbol  
- [out] Vrátí [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objektu, který představuje symbol nalezen.  
+ [out] Vrátí [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objekt představující symbol nalezen.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE` Pokud je symbol nebyl nalezen. Jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud symbol se nenašel. V opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [Idiaenumsymbolsbyaddr –](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)   

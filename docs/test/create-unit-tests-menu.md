@@ -1,68 +1,72 @@
 ---
-title: Vytvoření testu jednotky zástupných procedur metoda v sadě Visual Studio | Microsoft Docs
+title: Vytvoření zástupné procedury metodu testu jednotek
 ms.date: 05/02/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 helpviewer_keywords:
 - unit testing, create unit tests
+author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-author: gewarren
-ms.openlocfilehash: 8a5f33cfc8ebc7a45f02e3626289d496eac66e37
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 55b6af26064edc3eecb942b70aa2b4f5bc5307fd
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51296408"
 ---
-# <a name="create-unit-test-method-stubs-with-the-create-unit-tests-command"></a>Vytvořte jednotky zástupných procedur metoda test pomocí příkazu Vytvořit testování částí
+# <a name="create-unit-test-method-stubs-with-the-create-unit-tests-command"></a>Metoda zástupné procedury s příkaz Vytvořit testy jednotek pro testování částí Create
 
-Visual Studio **vytvořit testování částí** příkaz nabízí možnost vytvářet jednotky zástupných procedur metoda test. Tato funkce umožňuje snadno konfiguraci projekt testu, test třídu a stub metoda testu v něm.
+Visual Studio **vytvořit testy jednotek** příkaz poskytuje možnost vytvořit jednotku zástupné procedury testovací metody. Tato funkce umožňuje snadno konfigurace testovacího projektu, testovací třídy a pahýl metody testu v rámci něj.
 
 ## <a name="availability-and-extensions"></a>Dostupnost a rozšíření
 
-**Vytvořit testování částí** příkazu v nabídce:
+**Vytvořit testy jednotek** příkazu nabídky:
 
-* Je k dispozici v Community, Professional a Enterprise edice nástroje Visual Studio 2015 a novější.
+* Je k dispozici v Community, Professional a Enterprise edice sady Visual Studio 2015 a novější.
 
-* Podporuje pouze C# kód, který cílí rozhraní .NET Framework.
+* Podporuje pouze kód jazyka C#, který cílí na .NET Framework.
 
-* Rozšiřitelný a podporuje generování testů v Mstestu, Mstestu V2, NUnit, xUnit formátu.
+* Je možné rozšířit a podporuje generování testů MSTest, nástroji MSTest V2, NUnit, xUnit formátu.
+
+* Ještě není k dispozici v projektech .NET Core.
 
 ## <a name="get-started"></a>Začínáme
 
-Abyste mohli začít, vyberte v editoru kódu v projektu, které chcete testovat, otevřete místní nabídku a vyberte metodu, typ nebo obor názvů **vytvořit testování částí**. Tím se otevře **vytvořit testování částí** dialogové okno, kde lze vybrat možnosti vytvoření nové testování částí.
+Abyste mohli začít, vyberte metodu, typ nebo obor názvů v editoru kódu v projektu, kterou chcete testovat, otevřete místní nabídku a zvolte **vytvořit testy jednotek**. **Vytvořit testy jednotek** otevře se dialogové okno, které je možné vybrat možnosti vytvoření nové jednotkové testy.
 
 ![Pomocí příkazu Vytvořit testy jednotek](media/createunittestcommand.png)
 
-## <a name="setting-unit-test-traits"></a>Nastavení vlastnosti testů jednotek
+## <a name="setting-unit-test-traits"></a>Nastavení vlastností testu jednotek
 
-Pokud plánujete spouštět tyto testy je součást automatizace procesu test, můžete zvážit s testovací vytvořené v jiné testovacího projektu (druhá možnost v dialogovém okně výše) a nastavení jednotkové testování vlastnosti pro testování částí. To vám umožní snadno zahrnout nebo vyloučit tyto konkrétní testy v rámci průběžnou integraci nebo průběžné nasazování kanálu. Jsou vlastnosti se nastavují přidáním metadata do testu jednotek přímo, jak je uvedeno níže.
+Pokud budete chtít spustit tyto testy jako součást procesu automatizace testů, můžete zvážit s testů vytvořené v jiném projektu testu (druhá možnost v dialogovém okně výše) a vlastnosti pro test jednotek pro testování částí nastavení. To umožňuje snadněji zahrňte nebo vylučte tyto specifické testy jako součást průběžné integrace nebo průběžného nasazování kanálu. Rysy jsou nastavené tak, že přidáte metadat pro testování částí přímo, jak je znázorněno níže.
 
-![Nastavení vlastnosti testů jednotek](media/createunittest.png)
+![Nastavení vlastností testu jednotek](media/createunittest.png)
 
-## <a name="using-third-party-unit-test-frameworks"></a>Použití systémů testů jednotek třetích stran
+## <a name="using-third-party-unit-test-frameworks"></a>Pomocí rozhraní pro testování jednotky třetí strany
 
-Pomocí sady Visual Studio můžete snadno mít testování částí vytvořená pomocí libovolnou architekturu testu. K instalaci jiných systémů testů:
+Pomocí sady Visual Studio můžete snadno mít vytvořené pomocí libovolné rozhraní testování částí. Chcete-li nainstalovat další rozhraní pro testování:
 
 1. Zvolte **nástroje** > **rozšíření a aktualizace**.
-2. Rozbalte položku **Online** > **Visual Studio Marketplace** > **nástroje**a potom zvolte **testování**.
+2. Rozbalte **Online** > **Visual Studio Marketplace** > **nástroje**a klikněte na tlačítko **testování**.
 
-![Pomocí rozhraní test třetích stran](media/createunittestfx.png)
+![Pomocí rozhraní pro testování třetích stran](media/createunittestfx.png)
 
-Test framework – rozšíření jsou k dispozici ve Visual Studio Marketplace:
+Testovací rozhraní framework rozšíření jsou k dispozici v aplikaci Visual Studio Marketplace:
 
-* [Rozšíření NUnit pro Test generátory](https://marketplace.visualstudio.com/items?itemName=NUnitDevelopers.TestGeneratorNUnitextension)
-* [Rozšíření xUnit.net pro Test generátory](https://marketplace.visualstudio.com/items?itemName=BradWilson.xUnitnetTestExtensions)
+* [NUnit rozšíření pro generátory testu](https://marketplace.visualstudio.com/items?itemName=NUnitDevelopers.TestGeneratorNUnitextension)
+* [rozšíření xUnit.net pro generátory testu](https://marketplace.visualstudio.com/items?itemName=BradWilson.xUnitnetTestExtensions)
 
 ## <a name="when-should-i-use-this-feature"></a>Kdy použít tuto funkci?
 
-Tuto funkci použít vždy, když je potřeba vytvářet testy částí, ale konkrétně při testování existující kód s velmi málo nebo žádné pokrytí test a žádná dokumentace. Jinými slovy kde je kód omezenou nebo žádnou specifikaci. Efektivně implementuje podobná přístup [inteligentní testování částí](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/19/introducing-smart-unit-tests.aspx) který charakterizovat zjištěnou chování kód.
+Tuto funkci použít vždy, když je potřeba vytvořit testy jednotek, ale specificky při testování existující kód, který má žádné nebo téměř žádné pokrytí testu a žádná dokumentace. Jinými slovy ve kterých je specifikace omezené nebo neexistující kódu. Efektivně implementuje podobný přístup [inteligentní testování částí](https://blogs.msdn.microsoft.com/devops/2014/11/19/introducing-smart-unit-tests/) , které charakterizují zjištěnou chování kódu.
 
-Tato funkce je však rovněž na situaci, kdy vývojář spustí napsáním nějakého kódu a použije ho k bootstrap testování disciplíně částí. V rámci toku kódování vývojář chtít rychle vytvořit jednotku testovací metoda zástupnou proceduru (s třídu vhodné testovací a vhodný testovacího projektu) pro konkrétní kód.
+Tato funkce je však vztahuje rovněž na situaci, kdy vývojář spustí napsáním nějakého kódu a, který používá ke spuštění testování disciplíny. Ve službě flow kódování může být vhodné Vývojář můžete rychle vytvořit jednotku testovací metoda zástupnou proceduru (s vhodné testovací třídy a vhodný testovacího projektu) pro konkrétní část kódu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Vytváření testů jednotek zástupných procedur metoda s testování částí"vytvoření"](https://blogs.msdn.microsoft.com/visualstudioalm/2015/03/06/creating-unit-test-method-stubs-with-create-unit-tests/)
-- [Příspěvky blogu testování částí](https://blogs.msdn.microsoft.com/devops/?s=unit+testing)
+- [Vytvoření testu jednotek metoda zástupné procedury s "Vytvoření Unit Tests"](https://blogs.msdn.microsoft.com/devops/2015/03/06/creating-unit-test-method-stubs-with-create-unit-tests/)
+- [Testování blogové příspěvky](https://blogs.msdn.microsoft.com/devops/?s=unit+testing)

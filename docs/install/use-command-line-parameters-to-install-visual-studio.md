@@ -1,8 +1,9 @@
 ---
-title: Používání parametrů příkazového řádku pro instalaci sady Visual Studio
-description: Další informace o použití parametrů příkazového řádku řízení nebo upravit instalace Visual Studia.
-ms.custom: ''
-ms.date: 01/17/2018
+title: Instalace sady Visual Studio s použitím parametrů příkazového řádku
+titleSuffix: ''
+description: Další informace o použití parametrů příkazového řádku k řízení nebo přizpůsobit instalaci sady Visual Studio.
+ms.custom: seodec18
+ms.date: 11/14/2018
 ms.technology: vs-acquisition
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
@@ -16,143 +17,142 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 566e662c55589424f04e93d0dd182faed8a4b757
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: ba270b4d7240d30db5b20388d6c75782dba6a256
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53159721"
 ---
-# <a name="use-command-line-parameters-to-install-visual-studio-2017"></a>Nainstalujte Visual Studio 2017 pomocí parametrů příkazového řádku
+# <a name="use-command-line-parameters-to-install-visual-studio-2017"></a>Použití parametrů příkazového řádku pro instalaci sady Visual Studio 2017
 
-Když instalujete Visual Studio 2017 z příkazového řádku, můžete řídit nebo upravit instalaci různých parametry příkazového řádku. Z příkazového řádku můžete provádět následující akce:
+Při instalaci sady Visual Studio 2017 z příkazového řádku, můžete použít různé parametry příkazového řádku řídit nebo přizpůsobení instalace. Z příkazového řádku můžete provést následující akce:
 
-- Spusťte instalaci pomocí určitých možností předem vybrali.
-- Automatizovat proces instalace.
+- Spusťte instalaci s možnostmi předem vybrali.
+- Automatizujte proces instalace.
 - Vytvoření mezipaměti (rozložení) instalačních souborů pro pozdější použití.
 
-Možnosti příkazového řádku se používají ve spojení s zaváděcí nástroj instalační program, který je soubor malá (přibližně 1MB), který zahájí proces stahování. Zavaděč je první spustitelný soubor, který se spustí, když si stáhnout z webu sady Visual Studio. Chcete-li získat přímý odkaz na nejnovější verzi bootstrapper pro edici produktu, který instalujete pomocí následujících odkazů:
+Možnosti příkazového řádku se používají ve spojení s zaváděcí nástroj instalační program, který je soubor malé (přibližně 1MB), který zahájí proces stahování. Zaváděcí nástroj je první spustitelný soubor, který se spustí, když si stáhnete z webu Visual Studio. Chcete-li získat přímý odkaz na nejnovější verzi bootstrapper pro edici produktu, které chcete instalovat pomocí následujících odkazů:
 
-* [Visual Studio 2017 Enterprise](https://aka.ms/vs/15/release/vs_enterprise.exe)
-* [Visual Studio 2017 Professional](https://aka.ms/vs/15/release/vs_professional.exe)
-* [Visual Studio 2017 Community](https://aka.ms/vs/15/release/vs_community.exe)
+- [Visual Studio 2017 Enterprise](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&rel=15?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=link+cta&utm_content=download+commandline+parameters+vs2017)
+- [Visual Studio 2017 Professional](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=professional&rel=15?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=link+cta&utm_content=download+commandline+parameters+vs2017)
+- [Visual Studio 2017 Community](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&rel=15?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=link+cta&utm_content=download+commandline+parameters+vs2017)
 
 ## <a name="list-of-command-line-parameters"></a>Seznam parametrů příkazového řádku
 
- Parametry příkazového řádku Visual Studio jsou velká a malá písmena.
+ Parametry příkazového řádku aplikace Visual Studio jsou malá a velká písmena.
 
 > Syntaxe: `vs_enterprise.exe [command] <options>...`
 
-(Nahraďte `vs_enterprise.exe` podle potřeby pro edici produktu instalujete.)
+(Nahradit `vs_enterprise.exe` odpovídajícím způsobem pro edici produktu instalujete.)
 
 >[!TIP]
-> Další příklady použití příkazového řádku pro instalaci Visual Studio 2017 najdete v tématu [příklady parametr příkazového řádku](command-line-parameter-examples.md) stránky.)
+> Další příklady použití příkazového řádku pro instalaci sady Visual Studio 2017, najdete v článku [příklady parametrů příkazového řádku](command-line-parameter-examples.md) stránky.)
 
-| **příkaz** | **Popis** |
+| **Příkaz** | **Popis** |
 | ----------------------- | --------------- |
-| (prázdný) | Nainstaluje produkt. |
-| `modify` | Upravuje nainstalovaný produkt. |
-| `update` | Aktualizuje nainstalovaný produkt. |
-| `repair` | Opraví nainstalovaný produkt. |
-| `uninstall` | Odinstaluje nainstalovaný produkt. |
+| (prázdné) | Nainstaluje produkt. |
+| `modify` | Upraví zobrazí nainstalovaný produkt. |
+| `update` | Aktualizuje zobrazí nainstalovaný produkt. |
+| `repair` | Opraví zobrazí nainstalovaný produkt. |
+| `uninstall` | Odinstaluje zobrazí nainstalovaný produkt. |
+| `export` | **Novinka v 15.9**: Exportuje výběr instalace na konfigurační soubor instalace. |
 
 | **Možnost instalace** | **Popis** |
 | ----------------------- | --------------- |
-| `--installPath <dir>` | Instalační adresář pro instanci k provedení akce. Pro příkaz instalace jde **volitelné** a nainstalovanou instanci. Pro jiné příkazy jde **požadované** a nainstalovanou dříve nainstalovanou instanci. |
-| `--addProductLang <language-locale>` | **Volitelné**: během instalace nebo upravte činnost, tato hodnota určuje jazykové sady uživatelského rozhraní, které jsou nainstalovány do produktu. Může se objevit vícekrát na příkazový řádek pro přidání více jazykových sad. Pokud není přítomný, instalace používá národní prostředí počítače. Další informace najdete v tématu [seznam národní prostředí](#list-of-language-locales) části na této stránce.|
-| `--removeProductLang <language-locale>` | **Volitelné**: během instalace nebo upravte činnost, tato hodnota určuje jazykové sady uživatelského rozhraní, které budou odebrány z produktu. Může se objevit vícekrát na příkazový řádek pro přidání více jazykových sad. Další informace najdete v tématu [seznam národní prostředí](#list-of-language-locales) části na této stránce.|
-| `--add <one or more workload or component IDs>` | **Volitelné**: jeden nebo více úloh nebo ID součástí, které chcete přidat. Artefaktu požadované součásti jsou nainstalovány, ale ne doporučené nebo volitelné součásti. Můžete řídit další součásti globálně pomocí `--includeRecommended` nebo `--includeOptional`. Pro řízení citlivější, můžete připojit `;includeRecommended` nebo `;includeOptional` ID (například `--add Workload1;includeRecommended` nebo `--add Workload2;includeRecommended;includeOptional`). Další informace najdete v tématu naše [zatížení a ID součástí](workload-and-component-ids.md) stránky. Tato možnost v případě potřeby můžete opakovat.|
-| `--remove <one or more workload or component IDs>` | **Volitelné**: jeden nebo více úloh nebo ID součástí odebrat. Další informace najdete v tématu naše [zatížení a ID součástí](workload-and-component-ids.md) stránky. Tato možnost v případě potřeby můžete opakovat.|
-| `--in <path>` | **Volitelné**: URI nebo cestu k souboru odpovědí.  |
-| `--all` | **Volitelné**: jestli se mají nainstalovat všechny úlohy a součásti pro produkt. |
-| `--allWorkloads` | **Volitelné**: nainstaluje všechny úlohy a součásti žádné doporučené nebo volitelné součásti. |
-| `--includeRecommended` | **Volitelné**: obsahuje doporučené součásti pro všechny úlohy, které jsou nainstalovány, ale nikoli volitelné součásti. Úlohy jsou zadány buď pomocí `--allWorkloads` nebo `--add`. |
-| `--includeOptional` | **Volitelné**: obsahuje volitelné součásti pro všechny úlohy, které jsou nainstalovány, ale ne doporučené součásti. Úlohy jsou zadány buď pomocí `--allWorkloads` nebo `--add`.  |
-| `--quiet, -q` | **Volitelné**: nezobrazí žádné uživatelské rozhraní během instalace. |
-| `--passive, -p` | **Volitelné**: Zobrazit uživatelské rozhraní, ale není vyžádání zásahu od uživatele. |
-| `--norestart` | **Volitelné**: Pokud existuje, příkazy pomocí `--passive` nebo `--quiet` nebude automaticky restartuje počítač (v případě potřeby).  To je ignorována, pokud ani `--passive` ani `--quiet` nejsou zadány.  |
-| `--nickname <name>` | **Volitelné**: definuje Přezdívka přiřadit nainstalovaný produkt. Přezdívka nesmí být delší než 10 znaků.  |
-| `--productKey` | **Volitelné**: definuje kód product key pro nainstalovaný produkt. Skládá se z 25 alfanumerických znaků, buď ve formátu `xxxxx-xxxxx-xxxxx-xxxxx-xxxxx` nebo `xxxxxxxxxxxxxxxxxxxxxxxxx`. |
+| `--installPath <dir>` | Instalační adresář pro instance, kterou chcete použít. Pro instalačního příkazu, to je **volitelné** a nainstalovanou instanci. Pro další příkazy jde **vyžaduje** a kam se nainstaloval dříve nainstalovanou instanci. |
+| `--addProductLang <language-locale>` | **Volitelné**: Při instalaci nebo upravte činnost, určuje uživatelského rozhraní jazykových sad, které jsou nainstalovány do produktu. Může se objevit více než jednou v příkazovém řádku, chcete-li přidat více jazykových sad. Pokud není k dispozici, instalace používá národní prostředí počítače. Další informace najdete v tématu [seznam národních prostředí jazyka](#list-of-language-locales) části na této stránce.|
+| `--removeProductLang <language-locale>` | **Volitelné**: Při instalaci nebo upravte činnost, určuje uživatelského rozhraní jazykových sad, které budou odebrány z produktu. Může se objevit více než jednou v příkazovém řádku, chcete-li přidat více jazykových sad. Další informace najdete v tématu [seznam národních prostředí jazyka](#list-of-language-locales) části na této stránce.|
+| `--add <one or more workload or component IDs>` | **Volitelné**: Jeden nebo více úloh nebo ID komponenty pro přidání. Ale ne doporučené a volitelné komponenty jsou nainstalovány požadované součásti artefaktu. Můžete určit další součásti globálně pomocí `--includeRecommended` a/nebo `--includeOptional`. Chcete-li zahrnout více úloh nebo komponenty, opakujte `--add` příkazu (například `--add Workload1 --add Workload2`). Pro citlivější ovládací prvek, můžete připojit `;includeRecommended` nebo `;includeOptional` ID (například `--add Workload1;includeRecommended` nebo `--add Workload2;includeRecommended;includeOptional`). Další informace najdete v tématu [pracovního vytížení a komponenta ID](workload-and-component-ids.md) stránky. Tato možnost podle potřeby, můžete opakovat.|
+| `--remove <one or more workload or component IDs>` | **Volitelné**: Jeden nebo více úloh nebo ID komponenty odebrat. Další informace najdete v tématu naše [pracovního vytížení a komponenta ID](workload-and-component-ids.md) stránky. Tato možnost podle potřeby, můžete opakovat.|
+| `--in <path>` | **Volitelné**: Identifikátor URI nebo cesta k souboru odpovědí.  |
+| `--all` | **Volitelné**: Určuje, zda nainstalovat všechny úlohy a komponenty pro produkt. |
+| `--allWorkloads` | **Volitelné**: Nainstaluje všechny úlohy a komponenty, žádné doporučené nebo volitelné součásti. |
+| `--includeRecommended` | **Volitelné**: Obsahuje doporučené komponenty pro všechny úlohy, které jsou nainstalovány, ale nikoli volitelné komponenty. Úlohy jsou zadány buď pomocí `--allWorkloads` nebo `--add`. |
+| `--includeOptional` | **Volitelné**: Zahrnuje volitelné komponenty pro všechny úlohy, které jsou nainstalovány, ale ne doporučené komponenty. Úlohy jsou zadány buď pomocí `--allWorkloads` nebo `--add`.  |
+| `--quiet, -q` | **Volitelné**: Při provádění instalace nezobrazují žádné uživatelské rozhraní. |
+| `--passive, -p` | **Volitelné**: Zobrazení uživatelského rozhraní, ale nikoli požadavku zásahu od uživatele. |
+| `--norestart` | **Volitelné**: Pokud jsou k dispozici, příkazů s `--passive` nebo `--quiet` neprovede automatický restart počítače (v případě potřeby).  To je ignorováno, pokud žádná `--passive` ani `--quiet` jsou uvedeny.  |
+| `--nickname <name>` | **Volitelné**: Definuje Přezdívka přiřadit zobrazí nainstalovaný produkt. Přezdívka nesmí být delší než 10 znaků.  |
+| `--productKey` | **Volitelné**: Definuje kód product key pro zobrazí nainstalovaný produkt. Skládá se z 25 alfanumerických znaků buď ve formátu `xxxxx-xxxxx-xxxxx-xxxxx-xxxxx` nebo `xxxxxxxxxxxxxxxxxxxxxxxxx`. |
 | `--help, --?, -h, -?` | Zobrazte offline verzi této stránky. |
+| `--config <path>` | **Volitelné** a **novinkou 15.9**: Při instalaci nebo upravte činnost, určuje, úlohy a komponenty pro přidání založeny na konfigurační soubor instalace předtím uložili. Tato operace je additive a nedojde k odebrání jakékoli úlohy nebo komponenty, pokud nejsou k dispozici v souboru. Navíc nepřidá položky, které se nevztahují na produkt. Během operace exportu určuje umístění pro uložení konfigurační soubor instalace. |
 
-> Poznámka: Při zadávání více úloh a součásti, je nutné zopakovat `--add` nebo `--remove` přepínač příkazového řádku pro každou položku.
+> Poznámka: Při zadávání více úloh a součástí, je nutné opakovat `--add` nebo `--remove` přepínač příkazového řádku pro každou položku.
 
 | **Možnosti rozložení** | **Popis** |
 | ----------------------- | --------------- |
-| `--layout <dir>` | Určuje adresář, který chcete vytvořit offline instalovat mezipaměti. Další informace najdete v tématu [vytvořit síťovou instalaci sady Visual Studio](create-a-network-installation-of-visual-studio.md).|
-| `--lang <one or more language-locales>` | **Volitelné**: použít s `--layout` Příprava offline nainstalovat mezipaměti s balíčků prostředků s zadaný jazyk(y). Další informace najdete v tématu [seznam národní prostředí](#list-of-language-locales) části na této stránce.|
-| `--add <one or more workload or component IDs>` | **Volitelné**: jeden nebo více úloh nebo ID součástí, které chcete přidat. Artefaktu požadované součásti jsou nainstalovány, ale ne doporučené nebo volitelné součásti. Můžete řídit další součásti globálně pomocí `--includeRecommended` nebo `--includeOptional`. Pro řízení citlivější, můžete připojit `;includeRecommended` nebo `;includeOptional` ID (například `--add Workload1;includeRecommended` nebo `--add Workload2;includeOptional`). Další informace najdete v tématu naše [zatížení a ID součástí](workload-and-component-ids.md) stránky. <br/>**Poznámka:**: Pokud `--add` je použít, pouze zadané úlohy a součásti a jejich závislosti se stáhnou. Pokud `--add` není zadán, všechny úlohy a součásti se stáhnou do rozložení.|
-| `--includeRecommended` | **Volitelné**: obsahuje doporučené součásti pro všechny úlohy, které jsou nainstalovány, ale nikoli volitelné součásti. Úlohy jsou zadány buď pomocí `--allWorkloads` nebo `--add`. |
-| `--includeOptional` | **Volitelné**: obsahuje doporučené *a* volitelné součásti pro všechny úlohy, nebudou zahrnuty do rozložení. Úlohy zadávají s `--add`.  |
-| `--keepLayoutVersion` | **Novinka v 15.3, volitelné**: použít změny v rozložení bez aktualizace verze rozložení. |
-| `--verify` | **Novinka v 15.3, volitelné**: Ověřte obsah rozložení.  Jsou uvedeny všechny soubory poškozeno nebo chybí. |
-| `--fix` | **Novinka v 15.3, volitelné**: Ověřte obsah rozložení.  Pokud se zjistí, že všechny soubory poškozený nebo chybí, jsou znovu načtena.  Přístup k Internetu je potřeba opravit rozložení. |
-| `--clean <one or more paths to catalogs>` | **Novinka v 15.3, volitelné**: Odebere staré verze součástí z rozložení, který byl aktualizován na novější verzi. |
+| `--layout <dir>` | Určuje adresář, který chcete vytvořit offline instalaci mezipaměti. Další informace najdete v tématu [vytvoření síťové instalace sady Visual Studio](create-a-network-installation-of-visual-studio.md).|
+| `--lang <one or more language-locales>` | **Volitelné**: Použít s `--layout` Příprava offline instalace mezipaměti pomocí balíčků prostředků se zadaným jazyk(y). Další informace najdete v tématu [seznam národních prostředí jazyka](#list-of-language-locales) části na této stránce.|
+| `--add <one or more workload or component IDs>` | **Volitelné**: Jeden nebo více úloh nebo ID komponenty pro přidání. Ale ne doporučené a volitelné komponenty jsou nainstalovány požadované součásti artefaktu. Můžete určit další součásti globálně pomocí `--includeRecommended` a/nebo `--includeOptional`. Pro citlivější ovládací prvek, můžete připojit `;includeRecommended` nebo `;includeOptional` ID (například `--add Workload1;includeRecommended` nebo `--add Workload2;includeOptional`). Další informace najdete v tématu [pracovního vytížení a komponenta ID](workload-and-component-ids.md) stránky. <br/>**Poznámka:**: Pokud `--add` se používá, pouze zadané úlohy a komponenty a jejich závislosti se stáhnou. Pokud `--add` neurčíte, všechny úlohy a komponenty se stáhnou do rozložení.|
+| `--includeRecommended` | **Volitelné**: Obsahuje doporučené komponenty pro všechny úlohy, které jsou nainstalovány, ale nikoli volitelné komponenty. Úlohy jsou zadány buď pomocí `--allWorkloads` nebo `--add`. |
+| `--includeOptional` | **Volitelné**: Obsahuje doporučené *a* volitelné komponenty pro všechny úlohy nebudou zahrnuty do rozložení. Úlohy jsou zadány s `--add`.  |
+| `--keepLayoutVersion` | **Novinka v 15.3, volitelné**: Použijte změny na rozložení bez aktualizace verze rozložení. |
+| `--verify` | **Novinka v 15.3, volitelné**: Ověřte obsah rozložení. Jsou uvedeny všechny soubory poškozen nebo chybí. |
+| `--fix` | **Novinka v 15.3, volitelné**: Ověřte obsah rozložení.  Pokud nejsou nalezeny žádné soubory je poškozený nebo chybí, že jsou znovu staženy. Přístup k Internetu je potřeba opravit rozložení. |
+| `--clean <one or more paths to catalogs>` | **Novinka v 15.3, volitelné**: Odstraní staré verze komponent z rozložení, který byl aktualizován na novější verzi. |
 
-| **Instalace rozšířené možnosti** | **Popis** |
+| **Možnosti rozšířené instalace** | **Popis** |
 | ----------------------- | --------------- |
-| `--channelId <id>` | **Volitelné**: ID kanálu pro instanci k instalaci. To je potřeba pro příkaz instalace, pokud ignorována pro jiné příkazy `--installPath` je zadán. |
-| `--channelUri <uri>` | **Volitelné**: identifikátoru URI manifestu kanálu. V případě potřeby aktualizace nejsou `--channelUri` může ukazovat na neexistující soubor. (například – channelUri C:\doesntExist.chman) To lze použít pro instalační příkaz; je ignorován u ostatních příkazů. |
-| `--installChannelUri <uri>` | **Volitelné**: identifikátoru URI manifestu kanál sloužící k instalaci. Identifikátor URI určeného `--channelUri` (která musí být zadán při `--installChannelUri` je zadána) se používá pro zjišťování aktualizací. To lze použít pro instalační příkaz; je ignorován u ostatních příkazů. |
-| `--installCatalogUri <uri>` | **Volitelné**: identifikátoru URI manifestu katalogu pro instalaci. -Li zadána, správce kanál pokusí stáhnout manifest katalogu z tento identifikátor URI před použitím identifikátoru URI v manifestu kanál instalace. Tento parametr se používá pro podporu offline instalace, které se vytvoří mezipaměť rozložení s katalog produktů, které jsou staženy. To lze použít pro instalační příkaz; je ignorován u ostatních příkazů. |
-| `--productId <id>` | **Volitelné** ID produktu pro instanci, kterou bude nainstalována. To je předem v běžných podmínek instalace. |
-| `--wait` | **Volitelné**: proces budou čekat na dokončení instalace před vrácením ukončovací kód. To je užitečné v případě automatizace instalace, kde jeden musí počkat pro instalaci na dokončení zpracování návratový kód od instalace. |
-| `--locale <language-locale>` | **Volitelné**: změnit jazyk zobrazení uživatelského rozhraní pro instalační program sám sebe. Nastavení bude natrvalo. Další informace najdete v tématu [seznam národní prostředí](#list-of-language-locales) části na této stránce.|
-| `--cache` | **Novinka v 15.2 volitelné**: Pokud existuje, balíčky se zachová po nainstalování pro následné opravy. Přepíše nastavení má být použit pro následné nainstaluje, opraví nebo úpravy globální zásady. Výchozí zásada je do mezipaměti balíčků. To je pro příkaz odinstalace ignorovat. Najdete v návodu k [zakázat nebo přesunout do mezipaměti balíček](disable-or-move-the-package-cache.md) Další informace. |
-| `--nocache` | **Novinka v 15.2 volitelné**: Pokud existuje, balíčky se odstraní poté, co byla nainstalována nebo opravit. Budou se znovu stáhnou jenom v případě potřeby a znovu za použití odstraní. Přepíše nastavení má být použit pro následné nainstaluje, opraví nebo úpravy globální zásady. Výchozí zásada je do mezipaměti balíčků. To je pro příkaz odinstalace ignorovat. Najdete v návodu k [zakázat nebo přesunout do mezipaměti balíček](disable-or-move-the-package-cache.md) Další informace. |
-| `--noUpdateInstaller` | **Novinka v 15.2 volitelné**: Pokud existuje, brání instalačnímu programu aktualizace samotné, pokud je zadán tichý. Instalační program se nezdaří příkazu a vrátí nenulový ukončovací kód, pokud noUpdateInstaller je definován s Tichý, když je nutná aktualizace Instalační služby. |
-| `--noWeb` | **Novinka v 15.3, volitelné**: Instalační program nyní stáhnout veškerý obsah, který je instalace z Internetu.  Veškerý obsah, který se instaluje musí být k dispozici v offline rozložení.  Pokud rozložení chybí obsah, instalace se nezdaří.  Další informace najdete v tématu [nasazení z síťovou instalaci](create-a-network-installation-of-visual-studio.md). |
+| `--channelId <id>` | **Volitelné**: ID kanálu pro instanci k instalaci. Toto je nezbytné instalační příkaz ignorován pro další příkazy `--installPath` je zadán. |
+| `--channelUri <uri>` | **Volitelné**: Identifikátor URI manifest kanálu. V případě potřeby aktualizace nejsou `--channelUri` může odkazovat na neexistující soubor. (například--channelUri C:\doesntExist.chman) To je možné pro příkaz install; u ostatních příkazů se ignoruje. |
+| `--installChannelUri <uri>` | **Volitelné**: Identifikátor URI manifest kanálu, který má použít pro instalaci. Určený identifikátor URI `--channelUri` (který musí být zadán při `--installChannelUri` určena) slouží ke zjištění aktualizací. To je možné pro příkaz install; u ostatních příkazů se ignoruje. |
+| `--installCatalogUri <uri>` | **Volitelné**: Identifikátor URI manifestu katalogu použít k instalaci Je-li zadána, Správce kanálu se pokusí stáhnout manifest katalogu z tohoto identifikátoru URI před použitím tohoto identifikátoru URI v manifestu kanálu instalace. Tento parametr se používá pro podporu offline instalace, ve kterém se vytvoří mezipaměť rozložení s katalog produktů, které jsou staženy. To je možné pro příkaz install; u ostatních příkazů se ignoruje. |
+| `--productId <id>` | **Volitelné** ID produktu pro instanci, která se nainstaluje. To je předem v běžných podmínek instalace. |
+| `--wait` | **Volitelné**: Proces bude čekat, dokud nebude dokončena instalace před vrácením ukončovací kód. To je užitečné, když automatizace instalace, ve kterém musí jeden čekání na instalaci pro dokončení zpracování návratový kód od instalace. |
+| `--locale <language-locale>` | **Volitelné**: Změňte jazyk zobrazení uživatelského rozhraní pro samotný instalační služby. Nastavení budou zachována. Další informace najdete v tématu [seznam národních prostředí jazyka](#list-of-language-locales) části na této stránce.|
+| `--cache` | **Novinka v 15.2, volitelné**: Pokud jsou k dispozici, balíčky se uchovají po nainstalování pro další opravy. Tím se přepíše nastavení pro následné nainstaluje, opraví nebo úpravy globální zásady. Výchozí zásada je do mezipaměti balíčků. To se ignoruje pro příkaz odinstalovat. Přečtěte si, jak k [zakázání nebo přesunutí mezipaměti balíčku](disable-or-move-the-package-cache.md) Další informace. |
+| `--nocache` | **Novinka v 15.2, volitelné**: Pokud jsou k dispozici, balíčky se odstraní po se nainstalovat ani opravit. Že se znovu stáhnou pouze v případě potřeby a znovu po použití odstraněna. Tím se přepíše nastavení pro následné nainstaluje, opraví nebo úpravy globální zásady. Výchozí zásada je do mezipaměti balíčků. To se ignoruje pro příkaz odinstalovat. Přečtěte si, jak k [zakázání nebo přesunutí mezipaměti balíčku](disable-or-move-the-package-cache.md) Další informace. |
+| `--noUpdateInstaller` | **Novinka v 15.2, volitelné**: Pokud jsou k dispozici, lze zabránit instalačnímu programu ze samotné aktualizace, pokud je zadán tichý. Instalační program příkaz selže a vrátí nenulový ukončovací kód, pokud noUpdateInstaller je zadána s quiet, když se vyžaduje se aktualizace instalačního programu. |
+| `--noWeb` | **Novinka v 15.3, volitelné**: Instalační program teď stáhnout veškerý obsah, který je instalace z Internetu.  Veškerý obsah, který se instaluje musí být k dispozici v offline rozložení.  Pokud se rozložení chybí obsah, instalace selže.  Další informace najdete v tématu [nasazení z instalace v síti](create-a-network-installation-of-visual-studio.md). |
+| `--path <name>=<path>` | **Nové ve verzi 15.7 volitelné**: Slouží k určení vlastní instalační cesty pro instalaci. Podporované cesty, které jsou sdíleny názvy, mezipaměť a instalace. |
+| `--path cache=<path>` | **Nové ve verzi 15.7 volitelné**: Používá umístění, které zadáte ke stažení instalačních souborů. Toto umístění lze nastavit pouze při prvním je nainstalována aplikace Visual Studio. Příklad: `--path cache="C:\VS\cache"` |
+| `--path shared=<path>` | **Nové ve verzi 15.7 volitelné**: Obsahuje sdílené soubory pro instalaci sady Visual Studio vedle sebe. Některé nástroje a sady SDK nainstalovat do umístění na této jednotce, zatímco jiné můžou toto nastavení přepsat a nainstalovat na jinou jednotku. Příklad: `--path shared="C:\VS\shared"` <br><br>Důležité: To lze nastavit pouze jednou a na prvním je nainstalována aplikace Visual Studio. |
+| `--path install=<path>` | **Nové ve verzi 15.7 volitelné**: Ekvivalentní `–-installPath`. Konkrétně `--installPath "C:\VS"` a `--path install="C:\VS"` jsou ekvivalentní. Pouze jeden z nich je možné najednou. |
 
-## <a name="list-of-workload-ids-and-component-ids"></a>Seznam ID úlohy a ID součástí
+## <a name="list-of-workload-ids-and-component-ids"></a>Seznam ID pracovního vytížení a komponenta ID
 
-Seznam úloh a ID součástí, které jsou seřazené podle produktu Visual Studio, najdete v článku [zatížení 2017 Visual Studio a ID součástí](workload-and-component-ids.md) stránky.
+Seznam pracovního vytížení a komponenta ID seřazené podle produktu Visual Studio, najdete v článku [funkcí sady Visual Studio 2017 a ID součástí](workload-and-component-ids.md) stránky.
 
-## <a name="list-of-language-locales"></a>Seznam národní prostředí
+## <a name="list-of-language-locales"></a>Seznam národních prostředí jazyka
 
-| **Národní prostředí** | **Jazyk** |
+| **Jazyk národního prostředí** | **Jazyk** |
 | ----------------------- | --------------- |
-| cs-CZ | Čeština |
-| de-DE | Němčina |
-| en US | Angličtina |
-| ES-ES | Španělština |
-| fr-FR | Francouzština |
-| IT-IT | Italština |
-| ja-JP | Japonština |
-| ko-KR | Korejština |
-| pl-PL | Polština |
-| pt-BR | Portugalština – Brazílie |
-| ru-RU | Ruština |
-| tr-TR | Turečtina |
-| zh-CN | -Čínština, zjednodušená čínština |
-| zh-TW | Tradiční čínština – |
+| Cs-cz | Čeština |
+| De-de | Němčina |
+| En-us | Angličtina |
+| ES-es | Španělština |
+| Fr-fr | Francouzština |
+| IT-it | Italština |
+| Ja-jp | Japonština |
+| Ko-kr | Korejština |
+| PL-pl | Polština |
+| pt-br | Portugalština – Brazílie |
+| Ru-ru | Ruština |
+| TR-tr | Turečtina |
+| Zh-cn | Čínština (zjednodušená) |
+| Zh-tw | Čínština (tradiční) |
 
 ## <a name="error-codes"></a>Kódy chyb
 
-V závislosti na výsledku operace `%ERRORLEVEL%` proměnné prostředí se nastaví na jednu z následujících hodnot:
+V závislosti na výsledek operace `%ERRORLEVEL%` proměnnou prostředí je nastavená na jednu z následujících hodnot:
 
 | **Hodnota** | **výsledek** |
 | --------- | ---------- |
 | 0 | Operace byla úspěšně dokončena |
 | 1602 | Operace byla zrušena |
-| 3010 | Operace úspěšně dokončena, ale instalace vyžaduje restart, před použitím |
+| 3010 | Operace byla úspěšně dokončena, ale instalace aktualizace vyžaduje restartování, než je možné |
 | 5004 | Operace byla zrušena |
 | 5007 | Operace byla blokována – počítač nesplňuje požadavky |
-| Ostatní | Došlo k selhání podmínku – Zkontrolujte protokoly pro další informace |
+| Ostatní | Došlo k selhání podmínku – Další informace v protokolech |
 
-Generuje několik souborů protokolu v každé operace `%TEMP%` adresář, který informace o průběhu instalace. Řazení podle data složce a hledat soubory, které začínají `dd_bootstrapper`, `dd_client`, a `dd_setup` pro zavaděč, instalační program aplikace a potom instalaci modul, v uvedeném pořadí.
+Každá operace vygeneruje několik souborů protokolu v `%TEMP%` adresáře, které označují průběh instalace. Řadit podle data složce a vyhledat soubory, které začínají `dd_bootstrapper`, `dd_client`, a `dd_setup` pro zaváděcí nástroj, instalační program aplikace a nastavení modulu, v uvedeném pořadí.
 
-## <a name="get-support"></a>Získat podporu
+[!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-V některých případech může problémů. Pokud se nezdaří instalace Visual Studia, najdete v článku [problémy instalace a upgrade řešení potíží s Visual Studio 2017](troubleshooting-installation-issues.md) stránky. Pokud se žádný z kroků pro řešení potíží, kontaktujte nás pomocí živé konverzace pro pomoc s instalací (pouze v angličtině). Podrobnosti najdete v tématu [stránky podpory sady Visual Studio](https://www.visualstudio.com/vs/support/#talktous).
+## <a name="see-also"></a>Viz také:
 
-Tady je několik další možnosti podpory:
-
-* Můžete hlášení problémů produktu pro nás prostřednictvím [nahlásit problém](../ide/how-to-report-a-problem-with-visual-studio-2017.md) nástroj, který se zobrazí v instalačním programu Visual Studio i v integrovaném vývojovém prostředí sady Visual Studio.
-* Návrh produktu s námi můžete sdílet na [UserVoice](https://visualstudio.uservoice.com/forums/121579).
-* Můžete sledovat problémy produktu a najít v odpovědi [Visual Studio Community vývojáře](https://developercommunity.visualstudio.com/).
-* Můžete také použít s námi a jinými vývojáři Visual Studio prostřednictvím [Visual Studio konverzace v komunitě Gitter](https://gitter.im/Microsoft/VisualStudio). (Tato možnost vyžaduje [Githubu](https://github.com/) účtu.)
-
-## <a name="see-also"></a>Viz také
-
-* [Příklady parametr příkazového řádku pro instalaci Visual Studio 2017](command-line-parameter-examples.md)
-* [Vytvoření offline instalace Visual Studio 2017](create-an-offline-installation-of-visual-studio.md)
-* [Automatizace instalace sady Visual Studio souborem odpovědí](automated-installation-with-response-file.md)
+- [Příklady parametrů příkazového řádku pro instalaci sady Visual Studio 2017](command-line-parameter-examples.md)
+- [Vytvoření offline instalace sady Visual Studio 2017](create-an-offline-installation-of-visual-studio.md)
+- [Automatizace instalace sady Visual Studio souborem odpovědí](automated-installation-with-response-file.md)
+- [ID pracovního vytížení a komponenta Visual Studio 2017](workload-and-component-ids.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttributeQuery2::EnumCustomAttributes | Microsoft Docs
+title: IDebugCustomAttributeQuery2::EnumCustomAttributes | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: cf7647371246e74ba99bc79233007539e03f9782
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 18342a7879458f7463ccf76baa17afd0d7f8be96
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49855505"
 ---
 # <a name="idebugcustomattributequery2enumcustomattributes"></a>IDebugCustomAttributeQuery2::EnumCustomAttributes
-Získá enumerátor pro všechny vlastní atributy připojené k toto pole.  
+Získá enumerátor pro všechny vlastní atributy připojené k tomuto poli.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +41,13 @@ int EnumCustomAttributes(
   
 #### <a name="parameters"></a>Parametry  
  `ppEnum`  
- [out] Vrátí [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md) objekt reprezentující seznam vlastních atributů; jinak vrátí hodnotu null, pokud neexistují žádné vlastní atributy.  
+ [out] Vrátí [IEnumDebugCustomAttributes](../../../extensibility/debugger/reference/ienumdebugcustomattributes.md) objekt představující seznam vlastních atributů; jinak vrátí hodnotu null, pokud neexistují žádné vlastní atributy.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí S_OK nebo S_FALSE, pokud neexistují žádné vlastní atributy na toto pole. Jinak vrátí kód chyby;  
+ V případě úspěchu, vrátí hodnotu S_OK nebo S_FALSE, pokud nejsou žádné vlastní atributy v tomto poli. V opačném případě vrátí kód chyby;  
   
 ## <a name="remarks"></a>Poznámky  
- Pole může mít více vlastních atributů.  
+ Pole může mít několik vlastních atributů.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugCustomAttributeQuery2](../../../extensibility/debugger/reference/idebugcustomattributequery2.md)   

@@ -1,72 +1,96 @@
 ---
-title: Přiřazení licencí odběry Visual Studio | Microsoft Docs
-author: evanwindom
-ms.author: jaunger
-manager: evelynp
-ms.date: 10/03/2017
-ms.topic: Get-Started-Article
-description: Zjistěte, jak mohou správci přiřadit licence odběratele
+title: Přiřazení licencí pro předplatná sady Visual Studio | Dokumentace Microsoftu
+author: TerryGLee
+ms.author: tglee
+manager: douge
+ms.date: 07/16/2018
+ms.topic: conceptual
+description: Zjistěte, jak správci mohou přiřadit licence pro předplatitele
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 62336656e551a085c6c8753e6baea06730f49510
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6f0bbded7682bd8f7162ae415c6c83711df04a04
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49931230"
 ---
-# <a name="assigning-licenses-in-the-visual-studio-subscriptions-administrator-portal"></a>Přiřazování licencí na portálu správce předplatných Visual Studio
+# <a name="assign-licenses-in-the-visual-studio-subscriptions-administrator-portal"></a>Přiřazení licencí na portálu správce předplatných sady Visual Studio
 
-Jako správce předplatného sady Visual Studio můžete portál správce Visual Studio odběry přiřadit odběry pro jednotlivé uživatele.  
-Můžete přiřadit jednu po druhé, nebo použít funkci "hromadné přidání" k nahrání seznam odběratelé s jejich informace o předplatném snadno a rychle. 
+Jako správce předplatných sady Visual Studio můžete použít portál správce předplatných přiřadit jednotlivým uživatelům a skupinám uživatelů.
 
-## <a name="assigning-a-single-user"></a>Přiřazení jenom jednoho konkrétního uživatele
-Pokud máte k dispozici licence pro předplatné sady Visual Studio, můžete přiřadit těchto licencí pro nové uživatele pro ně pro přístup k jejich odběru výhody. 
-1.  Přihlaste se k [portálu správce](https://manage.visualstudio.com)
+Pro skupiny uživatelů, můžete přiřadit předplatných k nim jednu v čase, nebo použijte **hromadné přidání** funkce rychle a snadno nahrát seznam předplatitelů a jejich informace o předplatném.
 
-2.  Přiřadit jeden odběratel Visual Studio, v horní části tabulky, klikněte na tlačítko **přidat**.
+## <a name="individual-assignments"></a>Jednotlivé přiřazení
 
-    ![Přidat odběratele](_img\assign-license-add\assign-license-add.png)
+Tady je postup, chcete-li přiřadit licenci předplatného sady Visual Studio s novým uživatelem, takže bude mít přístup k výhodám předplatného.
 
-3.  Zadejte informace do polí formuláře pro nové odběratele. Pokud vaše organizace používá Azure Active Directory, v tomto poli funguje jako funkce vyhledávání, která se v aktuálním adresáři najít účastníka, takže můžete vybrat správné uživatelské ve výsledcích hledání. Jakmile vyberete osoba, jeho název, přihlášení e-mailu a e-mailové oznámení bude automaticky vyplnit jak vidíte níže. 
+1. Přihlaste se k [portálu správce](https://manage.visualstudio.com).
 
-    Pokud má vaše organizace jiný e-mail pro příjem e-mailů než ten, který se má použít pro přihlášení, máte možnost pro zadání ho sem. Vyberte na odkaz, který označuje "Jinou e-mailovou komunikaci než přihlášení?". 
+2. Chcete-li přiřadit licenci na jednoho předplatitele sady Visual Studio, v horní části v tabulce vyberte **přidat**.
+   > [!div class="mx-imgBorder"]
+   > ![Přidat jednoho předplatitele](media/add-single-subscriber.png)
 
-    **Přístup ke stažení:**  
-    Pokud chcete mít přístupu pro stahování softwaru při zápisu do tohoto odběratele [Visual Studio odběry portál](https://my.visualstudio.com?wt.mc_id=o~msft~docs), ponechte zaškrtnutým políčkem stahování. Pokud zvolíte možnost zrušte zaškrtnutí tohoto políčka, uživatel nebude mít přístup k stažení softwaru, ale bude mít dál přístup k všechny další výhody, které jsou zahrnuty v rámci předplatného. 
-    
-    Po dokončení výběru možnosti tohoto odběratele, klikněte na tlačítko **přidat**.
+3. Zadejte informace do polí formuláře pro nové předplatitele. Pokud vaše organizace používá Azure Active Directory, toto pole funguje jako vyhledávací funkce, která se najít v aktuálním adresáři, můžete vybrat správný uživatel ve výsledcích hledání. Jakmile vyberete osoby, se automaticky vyplní své jméno, přihlašovací e-mailu a e-mailové oznámení.
+   > [!div class="mx-imgBorder"]
+   > ![Přidáte novou e-mailovou adresu oznámení](media/add-new-subscriber-notification-email.png)
 
-    ![Zadejte informace o odběru](_img\assign-license-add\add-subscriber-1.png)
-    ![zadejte informace o odběru](_img\assign-license-add\add-subscriber-2.png)
+    Pokud chcete mít přístup ke stahování softwaru při přihlašování do tohoto předplatného [portál předplatného sady Visual Studio](https://my.visualstudio.com?wt.mc_id=o~msft~docs), ujistěte se, že nechat tento přepínač soubory ke stažení v povolená **nastavení stahování** oddíl. Pokud budete chtít zakázat soubory ke stažení, uživatel nebude mít přístup k souborům ke stažení softwaru, ale budou mít dál přístup ke všem výhodám zahrnutý v předplatném.
+   > [!div class="mx-imgBorder"]
+   > ![Přístup k souborům ke stažení](media/access-to-downloads.png)
 
-4.  Po přidání odběratele, se automaticky odesílat e-mailu přiřazení nové odběratele s další pokyny. Přiřazení e-mailu můžete kdykoli znovu odeslat výběrem odběratele a kliknutím na **znovu odeslal** tlačítka v horní nabídce.
+    Pokud chcete změnit jazyk, ve kterém přijímá odběratele informace, můžete k tomu, **předvolby komunikace** oddílu.
+   > [!div class="mx-imgBorder"]
+   > ![Změnit jazyk, který chcete použít při odesílání oznámení e-mailů](media/change-subscriber-communication-preference.png)
 
-    ![Přidat odběratele](_img\assign-license-add\add-subscriber-complete.png)
+    Pokud chcete přidat odkaz poznámek k předplatnému, můžete k tomu, **přidat odkaz na** oddílu.
+   > [!div class="mx-imgBorder"]
+   > ![Přidat poznámky odkaz na předplatné](media/add-subscriber-reference-notes.png) 
+
+    Když budete mít vyberou možnosti a zadávání dat pro odběratele, zvolte **přidat** v dolní části **přidat předplatitele** nabídka.
+   > [!div class="mx-imgBorder"]
+   > ![Klikněte na tlačítko Přidat](media/add-button.png)
+
+4. Po přidání odběratele, E-mail s přiřazením automaticky se pošle na nový odběratel se další pokyny. Můžete kdykoli znovu odeslat E-mail s přiřazením tak odběratele vyberete a kliknete na **znovu odeslal** tlačítko v horní nabídce.
+   > [!div class="mx-imgBorder"]
+   > ![Znovu poslat aktivační e-mail pro všechny uživatele nebo více uživatelů, pokaždé, když chcete](media/resend-subscriber-activation-emails.png) 
 
 ## <a name="bulk-assignments"></a>Hromadné přiřazení
-1.  Chcete-li přidat více odběrateli, přejděte na **Odběratelé, kteří** kartě. Na pásu karet v horní části, klikněte na tlačítko **hromadné přidání**. 
 
-    ![Hromadné přidání](_img\assign-license-add\bulk-assign-add.png)
+1. Chcete-li přidat několik předplatitelů najednou, přejděte na **spravovat předplatitele** kartu. Na pásu karet v horní části klikněte na tlačítko **hromadné přidání**.
+   > [!div class="mx-imgBorder"]
+   > ![Přidat několik předplatitelů](media/add-multiple-subscribers.png)
 
-2. Hromadně přiřadit používá šablonu aplikace Microsoft Excel nahrát odběratele. V dialogovém okně nahrát více odběrateli, klikněte na tlačítko **Stáhnout** stáhnout šablonu. Vždy stáhněte nejnovější verzi této šablony. Pokud používáte starší verzi, odeslání hromadné se pravděpodobně nezdaří.
+2. Hromadné přiřazení používá šablonu aplikace Microsoft Excel k odeslání odběratele. V dialogovém okně nahrát několik předplatitelů klikněte na tlačítko **Stáhnout** stáhnout šablonu.
+   > [!div class="mx-imgBorder"]
+   > ![Stáhněte si šablonu v Excelu na načíst několik předplatitelů](media/download-template-upload-subscribers.png)
+   > 
+   > [!NOTE]
+   > Kdykoli stáhněte nejnovější verzi této šablony. Pokud používáte starší verzi, hromadné načtení může selhat.
 
-    ![Nahrát několik odběratele](_img\assign-license-add\bulk-assign-upload.png)
+3. V Excelovém listu vyplňte pole s informacemi pro jednotlivce, které chcete přiřadit odběrů. (*Odkaz* je volitelné pole.) Uložte soubor místně, až budete hotovi.
 
-3.  Vyplňte pole pomocí informací pro jednotlivce, které chcete přiřadit odběry v tabulce aplikace Excel. Odkaz je volitelné pole. Pokud jste vyplnili všechny součástí šablony nesprávně, měli byste vidět chybová zpráva s popisem problému. Uložte soubor na vašem pevném disku po dokončení.
-**K zajištění načtení smooth, sledujte následující osvědčené postupy:**
-    - Ujistěte se, že žádná z pole formuláře obsahovat čárky.
-    - Odebrání mezer před a po polí formuláře, jako jsou jména uživatelů.
-    - Zajistěte, aby se jména uživatelů neobsahují mezery mezi názvy první nebo poslední dvě části (například dvě části křestní jméno, například "Maggie může" by neměl být zadán jako "Maggie může" jako systém nebude trim volné místo) ![hromadné přidání šablony](_img\assign-license-add\bulk-template.png)
+   Zajistit hladký průběh nahrávání, dodržujte následující osvědčené postupy:
 
-4.  Vrátit na portál pro správu předplatných Visual Studio a v dialogovém okně nahrát více odběrateli, klikněte na tlačítko **Procházet**. Přejděte k souboru aplikace Excel, který jste uložili a klikněte na tlačítko **OK**. Průběh nahrávání se zobrazí na obrazovce. 
+    - Ujistěte se, že žádná z polí formuláře obsahovat čárky.
+    - Odeberte mezery před a za pole formuláře.
+    - Ujistěte se, že uživatele názvy neobsahují mezery mezi dvěma částmi první nebo poslední názvy (například pokud uživatel má dvě části jméno jako je například "Maggie může", to by měla být zadána jako "MaggieMay" protože systém nebude trim místo navíc.)
 
-    ![Hromadné přidání nahrávání](_img\assign-license-add\bulk-assign-upload-2.png)
+4. Vraťte se do portálu pro správu předplatných sady Visual Studio. V **nahrát několik předplatitelů** dialogové okno, klikněte na tlačítko **Procházet**.
+   > [!div class="mx-imgBorder"]
+   > ![Procházet šablony uložené na načíst několik předplatitelů](media/bulk-add-browse-saved-template.png)
 
-Pokud šablona obsahuje chyby, nahrávání se nezdaří a se zobrazí chyby tak můžete opravte šablony a opakujte pokus hromadné nahrávání.
+5. Přejděte na Excelový soubor, který jste uložili a potom klikněte na **OK**.
+   > [!div class="mx-imgBorder"]
+   > ![Nahrát šablonu v Excelu na načíst několik předplatitelů](media/bulk-upload-subscribers.png)
 
-   ![Nahrát služeb při selhání](_img\assign-license-add\bulk-assign-upload-fail.png)
+    Zobrazí se dialogové okno průběhu nahrání.
 
-Až se nahrávání úspěšná, zobrazí se seznam odběratele a potvrzovací zpráva.
+    Pokud šablona obsahuje chyby, nahrávání se nezdaří a zobrazí chyby, mohli opravte šablonu a pokuste se znovu hromadné načtení.
+   > [!div class="mx-imgBorder"]
+   > ![Chybová zpráva, pokud se nezdaří nahrát několik předplatitelů](media/bulk-add-template-failed.png)
 
-   ![Nahrát dokončení](_img\assign-license-add\bulk-assign-upload-complete.png)
+    Při nahrání je úspěšné, zobrazí se vám seznam předplatitelů a potvrzovací zpráva.
+   > [!div class="mx-imgBorder"]
+   > ![Potvrzení, pokud je úspěšná nahrát několik předplatitelů](media/bulk-add-template-success.png)

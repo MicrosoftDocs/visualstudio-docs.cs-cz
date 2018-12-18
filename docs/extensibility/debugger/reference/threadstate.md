@@ -1,5 +1,5 @@
 ---
-title: THREADSTATE | Microsoft Docs
+title: THREADSTATE | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a5a2153b6f97727cbf436c66686160cece15c287
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8fafceac4da4b80bea73a8ab969f0ecfb52b394d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49825826"
 ---
 # <a name="threadstate"></a>THREADSTATE
-Určuje stav vlákno.  
+Určuje stav vlákna.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,22 +50,22 @@ public enum enum_THREADSTATE {
   
 ## <a name="members"></a>Členové  
  THREADSTATE_RUNNING  
- Označuje, že vlákno je spuštěno.  
+ Určuje, zda je spuštěn podproces.  
   
  THREADSTATE_STOPPED  
- Označuje, že vlákno je zastavena z důvodu zarážky.  
+ Označuje, že vlákno zastavena kvůli zarážku.  
   
  THREADSTATE_FRESH  
- Určuje, že vlákno byla vytvořena, ale ještě neběží kódu.  
+ Označuje, že se vytvořila vlákno, ale ještě není spuštěno kódu.  
   
  THREADSTATE_DEAD  
  Označuje, že vlákno je neaktivní.  
   
  THREADSTATE_FROZEN  
- Označuje, že vlákno nereaguje (bez spuštění lze provést).  
+ Označuje, že je zmrazené vlákno (bez spuštění lze provést).  
   
 ## <a name="remarks"></a>Poznámky  
- Použít pro `dwThreadState` pole z [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) struktury.  
+ Používá pro `dwThreadState` pole [THREADPROPERTIES](../../../extensibility/debugger/reference/threadproperties.md) struktury.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

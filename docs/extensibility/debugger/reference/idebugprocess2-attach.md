@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess2::Attach | Microsoft Docs
+title: IDebugProcess2::Attach | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 56f14b399a904c2584e81c2b6c8f344654b69a18
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 587104668449fe9c2ec0dd36fe20e76fec6be6fa
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49837500"
 ---
 # <a name="idebugprocess2attach"></a>IDebugProcess2::Attach
-Připojí správce ladicí relace (SDM) do procesu.  
+Správce ladění relace (SDM) se připojí k procesu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,30 +47,30 @@ int Attach(
   
 #### <a name="parameters"></a>Parametry  
  `pCallback`  
- [v] [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) objekt, který se používá pro oznámení o události ladění.  
+ [in] [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) objekt, který se používá pro oznámení události ladění.  
   
  `rgguidSpecificEngines`  
- [v] Pole identifikátorů GUID modulů ladění, který se má použít k ladění aplikace spuštěné v procesu. Tento parametr může mít hodnotu null. Podrobnosti najdete v části poznámky.  
+ [in] Pole identifikátory GUID ladicími stroji, který se má použít pro ladění programů spuštěných v rámci procesu. Tento parametr může být hodnota null. Podrobnosti najdete v části poznámky.  
   
  `celtSpecificEngines`  
- [v] Počet ladění motory ve `rgguidSpecificEngines` pole a velikost `rghrEngineAttach` pole.  
+ [in] Počet ladicí stroje v `rgguidSpecificEngines` pole a velikost `rghrEngineAttach` pole.  
   
  `rghrEngineAttach`  
- [ve out] Pole kódy HRESULT vrácený moduly ladění. Velikost toto pole je uveden v `celtSpecificEngines` parametr. Každý kód je obvykle buď `S_OK` nebo `S_ATTACH_DEFERRED`. Ta označuje, zda je DE je aktuálně připojena k žádné programy.  
+ [out v] Pole vrácené ladicími stroji kódy HRESULT. Velikost tohoto pole se zadává v `celtSpecificEngines` parametru. Každý z kódů je obvykle buď `S_OK` nebo `S_ATTACH_DEFERRED`. Ten označuje, že DE je v současnosti připojená k žádné programy.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby. V následující tabulce jsou uvedeny další možné hodnoty.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. V následující tabulce jsou uvedeny další možné hodnoty.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
-|`E_ATTACH_DEBUGGER_ALREADY_ATTACHED`|Určený proces je již připojen k ladicího programu.|  
-|`E_ATTACH_DEBUGGEE_PROCESS_SECURITY_VIOLATION`|Během procesu připojení došlo k narušení zabezpečení.|  
-|`E_ATTACH_CANNOT_ATTACH_TO_DESKTOP`|Plochy procesu nelze připojit k ladicího programu.|  
+|`E_ATTACH_DEBUGGER_ALREADY_ATTACHED`|Zadaný proces je již připojen k ladicímu programu.|  
+|`E_ATTACH_DEBUGGEE_PROCESS_SECURITY_VIOLATION`|Během procesu připojení došlo k porušení zabezpečení.|  
+|`E_ATTACH_CANNOT_ATTACH_TO_DESKTOP`|Klasické pracovní plochy proces nelze připojit k ladicímu programu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Připojení k procesu pro všechny aplikace spuštěné v tomto procesu, který můžete ladit ladění motory (DE) zadaný v připojí SDM `rgguidSpecificEngines` pole. Nastavte `rgguidSpecificEngines` parametr s hodnotou null hodnotu nebo zahrnují `GUID_NULL` v poli pro připojení k všechny programy v procesu.  
+ Připojení k procesu, na položku Všechny programy spuštěné v tomto procesu, který lze ladit pomocí ladicí stroj (DE) zadaný v připojí SDM `rgguidSpecificEngines` pole. Nastavte `rgguidSpecificEngines` parametr s hodnotou null hodnotu, nebo zahrnout `GUID_NULL` v poli se připojit k všechny programy v procesu.  
   
- Všechny události ladění, které v průběhu procesu se posílají danou [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) objektu. To `IDebugEventCallback2` při SDM volá tuto metodu je zadán objekt.  
+ Všechny ladění události, ke kterým dochází v procesu se posílají daného [IDebugEventCallback2](../../../extensibility/debugger/reference/idebugeventcallback2.md) objektu. To `IDebugEventCallback2` objekt víceklientského modelu SDM volá tuto metodu.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md)   

@@ -1,5 +1,5 @@
 ---
-title: IEnumCodePaths2::Clone | Microsoft Docs
+title: IEnumCodePaths2::Clone | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7466051b7dd541e4361feb654c4ae5dfcd3c21bd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d061f6a059fba9f43a57efe2c7f22b75b77cbef8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49925471"
 ---
 # <a name="ienumcodepaths2clone"></a>IEnumCodePaths2::Clone
-Vrátí kopii do aktuálního výčtu jako samostatný objekt.  
+Vrátí kopii objektu do aktuálního výčtu jako samostatný objekt.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +41,13 @@ int Clone(
   
 #### <a name="parameters"></a>Parametry  
  `ppEnum`  
- [out] Vrátí kopii tento výčet jako samostatný objekt.  
+ [out] Vrátí kopii objektu tento výčet jako samostatný objekt.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Kopii výčtu má stejného stavu jako původní v době, kdy tato metoda je volána. Však bude pro kopii a původní stavy jsou samostatné a lze změnit jednotlivě.  
+ Kopírování výčet má stejného stavu jako původní v době, kdy tato metoda je volána. Ale tuto kopii a původní stavy jsou oddělené a je možné změnit individuálně.  
   
 ## <a name="see-also"></a>Viz také  
  [IEnumCodePaths2](../../../extensibility/debugger/reference/ienumcodepaths2.md)

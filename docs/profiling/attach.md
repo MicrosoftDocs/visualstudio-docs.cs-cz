@@ -1,5 +1,5 @@
 ---
-title: Připojit | Microsoft Docs
+title: Připojit | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -10,72 +10,73 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 98e18456ad4665359e33d7a9b5f064585f8195be
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 80b4000a8fc8657c1b82490b1ddb6dec0dbdd3ce
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49907232"
 ---
 # <a name="attach"></a>Připojit
-VSPerfCmd.exe **Attach** možnost začne ukázka profilace z běžící proces zadaný pomocí ID procesu (PID).  
+*VSPerfCmd.exe* **připojit** možnost zahájení profilace vzorku spuštěný proces zadaný pomocí ID procesu (PID).  
   
- Použít **Attach** možnost, musíte zadat **ukázka** metoda v možnosti spuštění.  
+ Použít **připojit** možnost, je nutné zadat **ukázka** metoda ve variantě pro spuštění.  
   
 > [!NOTE]
->  Pokud **spustit** s byla zadána možnost **Crosssession** možnost, všechny volání **VSPerfCmd /Attach** nebo **VSPerfCmd /Detach** musí zadat také **Crosssession**.  
+>  Pokud **Start** s byl zadán příkaz **Crosssession** možnost, všechna volání do **VSPerfCmd /Attach** nebo **VSPerfCmd/Detach** musí také zadejte **Crosssession**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cmd  
 VSPerfCmd.exe /Attach:ProcessID [Options]  
 ```  
   
 #### <a name="parameters"></a>Parametry  
  `ProcessID`  
- ID procesu (PID) spuštěné procesu. Identifikátor PID spuštěných procesů je uvedena na kartě procesy ve Správci úloh systému Windows.  
+ ID procesu (PID) spuštěného procesu. Na kartě procesy ve Správci úloh Windows je uvedena PID spuštěnému procesu.  
   
-## <a name="valid-options"></a>Platné možnosti.  
- Následující **VSPerfCmd** možnosti mohou být kombinovány s **Attach** možnost na jednoho příkazového řádku.  
+## <a name="valid-options"></a>Platné možnosti  
+ Následující **VSPerfCmd** možnosti lze kombinovat s **připojit** možnost v jednom příkazovém řádku.  
   
  **Crosssession**  
- Umožňuje profilace – aplikace v relacích než přihlašovací relace. Požadováno pokud **spustit** s byla zadána možnost **Crosssession** možnost.  
+ Umožňuje profilování aplikace v relacích než přihlašovací relace. Požadováno pokud **Start** s byl zadán příkaz **Crosssession** možnost.  
   
  **Spusťte:** `Method`  
- Inicializuje relaci příkazového řádku profileru a nastaví zadanou metodu profilování.  
+ Inicializuje relaci příkazového řádku profileru a nastaví zadané metodě profilování.  
   
  **TargetCLR**  
- Určuje verzi systému rozhraní .NET Framework CLR Common Language Runtime () do profilu při více než jedna verze je načten do relace profilování. Ve výchozím nastavení je první načíst verze profilovaným.  
+ Určuje verzi nástroje rozhraní .NET Framework CLR Common Language Runtime () do profilu načtena více než jedna verze v relaci profilování. Ve výchozím nastavení je Profilovat první načtené verze.  
   
  **GlobalOn GlobalOff**  
- Obnoví (**GlobalOn**) nebo pozastaví (**GlobalOff**) profilace, ale nemá na konci relace profilování.  
+ Obnoví (**GlobalOn**) nebo pozastavení (**GlobalOff**) profilace, ale nemá na konci relace profilování.  
   
  **ProcessOn:** `PID` **ProcessOff:** `PID`  
- Obnoví (**ProcessOn**) nebo pozastaví (**ProcessOff**) profilace pro proces zadaný.  
+ Obnoví (**ProcessOn**) nebo pozastavení (**ProcessOff**) profilace pro zadaný proces.  
   
 ## <a name="interval-options"></a>Možnosti intervalu  
- Jeden z následujících možností intervalu vzorkování lze zadat na příkazovém řádku připojit. Výchozí interval vzorkování je 10 000 000 hodinových cyklů procesoru.  
+ Jeden z následujících možností interval vzorkování se dá nastavit na příkazovém řádku připojit. Výchozí interval vzorkování je 10 000 000 hodinových cyklů procesoru.  
   
- **Časovač**[**:**`Cycles`]**PF**[**:**`Events`]**Sys**[**:** Události]**čítač**[**:**`Name`,`Reload`,`FriendlyName`]  
- Určuje počet a typ intervalu vzorkování.  
+ **Časovač**[**:**`Cycles`]**PF**[**:**`Events`]**Sys**[<strong>:</strong> Události]**čítač**[**:**`Name`,`Reload`,`FriendlyName`]  
+ Určuje počet a typ použitého intervalu vzorkování.  
   
--   **Časovač** – ukázky každých `Cycles` hodinových cyklů procesoru. Pokud `Cycles` není zadán, jsou používány 10 000 000 cykly.  
+-   **Časovač** – ukázky každý `Cycles` hodinových cyklů procesoru. Pokud `Cycles` není zadán, 10 000 000 cykly se používají.  
   
--   **PF** – ukázky každých `Events` chyby stránek. Pokud `Events` není zadán, jsou používány 10 chyb stránek.  
+-   **PF** – ukázky každý `Events` chyby stránek. Pokud `Events` není zadán, 10 chyb stránky se používají.  
   
--   **Sys** – ukázky každých `Events` volání operačního systému. Pokud `Events` není zadán, jsou používány 10 systémová volání.  
+-   **Sys** – ukázky každý `Events` volání do operačního systému. Pokud `Events` není zadán, 10 volání systému se používají.  
   
--   **Čítač** – ukázky každých `Reload` počet výkonu procesoru čítač určeného `Name`. Volitelně můžete `FriendlyName` můžete zadejte řetězec, který bude použit jako záhlaví sloupce v sestav profileru.  
+-   **Čítač** – ukázky každý `Reload` počet výkon procesoru čítač určené `Name`. Volitelně můžete `FriendlyName` můžete zadejte řetězec, který se použije jako záhlaví sloupce v sestavy profileru.  
   
 ## <a name="example"></a>Příklad  
- Tento příklad ukazuje, jak připojit k běžící instanci aplikace s ID procesu 12345.  
+ Tento příklad ukazuje, jak se připojit ke spuštěné instanci aplikace s ID procesu 12345.  
   
-```  
+```cmd  
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp  
 VSPerfCmd.exe /Attach:12345  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [Vsperfcmd –](../profiling/vsperfcmd.md)   
- [Profilace samostatných aplikací](../profiling/command-line-profiling-of-stand-alone-applications.md)   
- [Profilace webových aplikací ASP.NET](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
- [Profilace služeb](../profiling/command-line-profiling-of-services.md)
+## <a name="see-also"></a>Viz také:  
+ [Nástroj VSPerfCmd](../profiling/vsperfcmd.md)   
+ [Samostatné aplikace profilu](../profiling/command-line-profiling-of-stand-alone-applications.md)   
+ [Webové aplikace ASP.NET profilu](../profiling/command-line-profiling-of-aspnet-web-applications.md)   
+ [Profil služby](../profiling/command-line-profiling-of-services.md)

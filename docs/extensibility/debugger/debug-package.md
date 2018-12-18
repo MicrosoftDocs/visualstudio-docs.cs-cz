@@ -1,5 +1,5 @@
 ---
-title: Ladění balíček | Microsoft Docs
+title: Ladění balíčku | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,23 +13,24 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6ca438b7ed8c9b6a4b84693f975144040f998f01
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 04eb6802cabd4ae36151580c573d28b977ca348e
+ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39204041"
 ---
 # <a name="debug-package"></a>Ladění balíčku
-Balíček ladění běží v prostředí sady Visual Studio a zpracovává všechny uživatelské rozhraní. Ho využívá ladění v rozhraní sady Visual Studio a komunikuje s správce ladicí relace (SDM).  
+Ladění balíčku běží v prostředí sady Visual Studio a zpracovává všechny uživatelské rozhraní. Využívá rozhraní pro ladění sady Visual Studio a komunikuje se službou Správce ladění relace (SDM).  
   
- Rozdělení událostí odeslaných prostřednictvím SDM přepínače ladicí program z režimu spuštění do režimu pozastavení a změna výběru programu, kde došlo k přerušení. Balíček ladění sleduje informace odeslané události rámce zásobníku a přístup z více vláken.  
+ Konec události odesílat prostřednictvím SDM přepnout režim přerušení a změnit zaměření na aplikace, kde došlo k přerušení ladicího programu v režimu spuštění. Ladění balíčku sleduje rámec zásobníku a vlákna z informace odeslané události.  
   
- Ladění balíček nemá žádný jazyk nebo běhové prostředí závislosti. Není nutné implementovat nebo upravit balíček ladění.  
+ Ladění balíčku nemá žádný jazyk nebo závislosti běhového prostředí. Není nutné k implementaci nebo upravit balíček ladění.  
   
- Ladění balíčku je implementováno modulem vsdebug.dll.  
+ Balíček ladění je implementováno *vsdebug.dll*.  
   
-## <a name="see-also"></a>Viz také  
- [Správce ladicí relace](../../extensibility/debugger/session-debug-manager.md)   
+## <a name="see-also"></a>Viz také:  
+ [Správce ladění relace](../../extensibility/debugger/session-debug-manager.md)   
  [Rámce zásobníku](../../extensibility/debugger/stack-frames.md)   
- [Vláken](../../extensibility/debugger/threads.md)   
+ [Vlákna](../../extensibility/debugger/threads.md)   
  [Komponenty ladicího programu](../../extensibility/debugger/debugger-components.md)

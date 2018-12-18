@@ -5,76 +5,78 @@ ms.author: jaunger
 manager: evelynp
 ms.date: 03/13/2018
 ms.topic: Get-Started-Article
-description: Další informace o odpovědnosti správců odběry.
+description: Další informace o odpovědnosti správce předplatných.
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 1eb8dc3cf47241632085e86f589ba377343aa4f1
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: 9fdefa652a368c344f11fdaf70dbf5db9b172fbf
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39638095"
 ---
 # <a name="overview-of-administrator-responsibilities"></a>Přehled odpovědnosti správce
-Jako správce máte možnost Spravovat odběry pro vaši organizaci.  Role Správce také představuje odpovědnosti zajistit, že předplatná se spravují v souladu s licenčními podmínkami. Tento článek popisuje odpovědnosti, výhody a omezení role správce.
+Jako správce budete mít možnost ke správě předplatných pro vaši organizaci.  Role správce taky mají odpovědnost zajistit, že předplatná se spravují v souladu s licenčními podmínkami. Tento článek popisuje povinnosti, výhody a omezení role správce.
 
-## <a name="roles--responsibilities"></a>Role a odpovědnosti
-Visual Studio správce má čtyři klíče zodpovědnosti:
-1.  **Pochopit výhody a omezení předplatných Visual Studio.** Správně pochopení vašeho výhody můžete povolit pomocí cloudové služby snížit náklady na hardware a snížit náklady na software s uživatelské licence pro předprodukční prostředí. 
-2.  **Přiřadit Visual Studio odběry konkrétní, s názvem jednotlivce a podporovat použití.** Smlouva vyžaduje, aby se konkrétní, s názvem jednotlivcům přiřazenou odběry Visual Studio. Následnou akci s vaší přiřazené jednotlivce zajistit, že přístup a plně využít výhod součástí svoje předplatné sady Visual Studio.
-3.  **Přesně inventáře předprovozní prostředí.** To je nezbytné k zajištění, že všichni uživatelé, kteří budou pracovat s Visual Studio licencovaný software správně licenci s předplatným vlastní sadě Visual Studio. 
-4.  **Sledovat změny v přiřazení uživatele a získat další licence podle plánu.** Smlouvy na produkty Microsoft Volume Licensing (VL) a MPSA poskytují flexibilitu v tom, jak používat a přiřaďte odběry Visual Studio. Předpokládá se, že ke sledování změn využití softwaru a přiřazení uživatelských a objednávky proces pro další licence podle plánu, uvedených ve smlouvě.
+## <a name="roles--responsibilities"></a>Role a zodpovědnosti
+Správce sady Visual Studio obsahuje čtyři klíčové odpovědnosti:
+1.  **Pochopit výhody a omezení předplatných sady Visual Studio.** Správně porozumění výhodám můžete vám umožní snížit náklady na hardware pomocí cloudových služeb a snížit náklady na software s uživatelských licencí pro předprodukční prostředí. 
+2.  **Přiřazení předplatných sady Visual Studio ke konkrétnímu, s názvem osoby a podporovat používání.** Kontrakt vyžaduje, že konkrétní, pojmenované jednotlivce přiřadit předplatná sady Visual Studio. Proveďte s vaší přiřazené uživatelům zajistit přístup k a plně využít výhod, které je součástí jejich předplatného sady Visual Studio.
+3.  **Přesně inventáře předprovozním prostředí.** To je nezbytné k zajištění, že všichni uživatelé, kteří pracují s Visual Studio licencovaný software jsou odpovídajícím způsobem licenci na své vlastní předplatné sady Visual Studio. 
+4.  **Sledovat změny v přiřazení uživatele a získat další licence na plán.** Smlouvy Microsoft Volume Licensing (VL) a MPSA získáte flexibilitu v tom, jak používat a přiřazení předplatných sady Visual Studio. Na oplátku předpokládá, že ke sledování změn využití softwaru a přiřazení uživatelských a zpracovávat objednávky pro další licence na plán uvedené ve smlouvě.
 
 ## <a name="benefits-and-limitations"></a>Výhody a omezení
-Visual Studio odběry umožňují vývoj členové týmu pro instalaci a používání softwaru k návrhu, vývoj, testování, vyhodnocení a ukazují na ostatní software. Visual Studio odběrů softwaru nemá licenci pro produkční prostředí. 
+Předplatná sady Visual Studio umožňují vývoj členům týmu. budou instalovat a používat software pro návrh, vývoj, testování, vyhodnocení a ukazují dalšího softwaru. Visual Studio odběrů softwaru nemá licenci pro produkční prostředí. 
 
 |                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Na základě uživatele licencování                     | MSDN platformy a všechny úrovně odběry Visual Studio jsou licencovaná podle jednotlivých uživatelů. Každý člen týmu vývoj, který bude v interakci (instalovat, konfigurovat nebo přístup) softwarem, který je součástí těchto produktů a služeb vyžaduje vlastní předplatné sady Visual Studio.                                                                                                                                                                                                                                                                                                                                  |
-| Neomezená instalace                  | Každý licencovaný uživatel může nainstalovat a pomocí softwaru na libovolný počet zařízení pro návrh, vývoj, testování, hodnocení a předvedení softwaru. Výjimkou je aplikace Microsoft Office, který má licenci pro jeden počítač. Visual Studio licencovaný software můžete nainstalovat a použít v práci, home, školy a na zařízeních v pobočce zákazníka nebo na vyhrazeném hardwaru hostované třetí strany.                                                                                                                                                                                                                                  |
-| Není určena pro produkční prostředí | Visual Studio odběrů softwaru nemá licenci pro produkční prostředí, včetně jakékoli prostředí přístup koncovým uživatelům k více než testování přijetí nebo připomínky, připojení k databázi produkční prostředí podporuje zotavení po havárii nebo produkční zálohování, nebo použít pro produkční špičky aktivity. Výjimky patří výhody pro určité úrovně předplatné uvedených v [Visual Studio licencování dokumentu White Paper](http://aka.ms/vslicensing).                                                                                            |
-| Opětovné přiřazení licencí                     | Když uživatel odejde, tým a již nevyžaduje licenci, může se po 90 dnech přiřadit licence. Když měníte přiřazení licence, bude stále k dispozici žádné kódy product key, které již byly použity ale nebude nahrazen. Pro organizace, které mají smlouvy Enterprise (EA) se obnoví všechny výhody, které byly používány původního uživatele, jako je například Pluralsight školení.                                                                                                                                                                                                                                                 |
-| Výjimka pro koncové uživatele                  | Na konci vývojového projektu softwaru koncoví uživatelé obvykle zkontrolujte aplikace a zjistit, zda splňuje potřeby kritéria pro verzi. Tento proces se nazývá testování přijetí uživateli. Členové týmu, jako je například obchodní sponzor nebo správce produktu vystupovat jako proxy pro koncové uživatele. Koncoví uživatelé, kteří nemají předplatné sady Visual Studio může přistupovat k softwaru pro UAT, pokud používání softwaru jinak v souladu s licenční smlouvy, které všechny Visual Studio. Navíc není obvyklé, že někdo jejichž primární role je návrh, vývoj nebo testování softwaru by také kvalifikaci jako "koncový uživatel". |
+| Licencování na základě uživatele                     | Předplatné MSDN Platforms a všechny úrovně předplatných sady Visual Studio jsou licencovaná podle jednotlivých uživatelů. Každý člen týmu vývoje, který bude pracovat (instalovat, konfigurovat nebo přístup k) softwarem, který je součástí těchto produktů a služeb vyžaduje vlastní předplatné sady Visual Studio.                                                                                                                                                                                                                                                                                                                                  |
+| Neomezený počet instalací                  | Každý licencovaný uživatel může nainstalovat a používat software v libovolném počtu zařízení pro návrh, vývoj, testování, vyhodnocení a ukazují softwaru. Výjimkou je Microsoft Office, který je pro desktop jednu licenci. Visual Studio licencovaný software můžete nainstalovat a používat v práci, home, školy a na zařízeních ve pobočce zákazníka nebo na vyhrazeném hardwaru hostitelem třetích stran.                                                                                                                                                                                                                                  |
+| Není určená pro produkční prostředí | Předplatné softwaru Visual Studio nemá licenci pro produkční prostředí, včetně všech prostředí přístup koncoví uživatelé déle než akceptačního testování a zpětnou vazbu, připojení k produkční databázi prostředí podporuje zotavení po havárii nebo produkční zálohování ani používat pro produkční prostředí během špiček. Výjimky zahrnout výhody určitých úrovní předplatného uvedených v [Visual Studio dokumentu White Paper licencování](http://aka.ms/vslicensing).                                                                                            |
+| Opětovné přiřazení licence                     | Když uživatel opustí tým a už nevyžaduje licenci, může znovu přiřadíte licence, které jsou po uplynulo 90 dnů. Při opětovném přiřazení licence, bude stále k dispozici žádné kódy product key, které již byly použity ale nebudou nahrazeny. Pro organizace, které mají smlouvy Enterprise (EA) se resetuje veškeré výhody, které byly používány původního uživatele, jako jsou školení od Pluralsightu.                                                                                                                                                                                                                                                 |
+| Výjimky pro koncové uživatele                  | Koncoví uživatelé na konci projektu vývoje softwaru, obvykle zkontrolujte aplikaci a zjistit, zda splňuje kritéria pro vydanou verzi. Tento proces se nazývá akceptační testování (UAT). Členové týmu, jako je například sponzor firmy nebo produktový manažer může fungovat jako proxy pro koncové uživatele. Koncoví uživatelé, kteří nemají předplatné sady Visual Studio může přistupovat k softwaru pro UAT, pokud užívání softwaru jinak v souladu s všechny sady Visual Studio licenční podmínky. Je vzácné, že uživatel jehož primární role je návrh, vývoj nebo testování softwaru by také můžou kvalifikovat jako "koncový uživatel". |
 
-## <a name="inventory-of-pre-production-environment"></a>Inventář předprovozní prostředí
-Visual Studio odběry zjednodušit správu prostředků, protože počítání uživatelům, nikoli zařízení.
+## <a name="inventory-of-pre-production-environment"></a>Seznam musí předprovozní prostředí
+Předplatná sady Visual Studio zjednodušuje správu majetku podle počtu uživatelů, spíše než zařízení.
 
-Visual Studio správci musí přiřadit Visual Studio odběrů **konkrétní, s názvem jednotlivce**. Konvence vytváření názvů, jako jsou Dev1, Dev2 nebo Dev3 se **není povoleno**.
+Visual Studio správci musí přiřazení předplatných sady Visual Studio na **konkrétní, pojmenované jednotlivce**. Zásady vytváření názvů, jako jsou Dev1, Dev2 nebo Dev3 **nepovoluje**.
 
-Tady jsou některé způsoby zjednodušení pořízení inventář předprovozní prostředí:
-- Zkontrolujte vaše uživatele přiřazení. Společnost Microsoft poskytuje web volat [portálu pro správu Visual Studio](https://manage.visualstudio.com/) můžete sledovat přiřazení předplatné sady Visual Studio.
-- Pomocí vaší místní nebo cloudové služby Active Directory na seznam uživatelů. Pokud používáte ke správě přístupu uživatele služby Active Directory, bude pravděpodobně možné identifikovat vývoj a testování uživatelů podle jejich členství v adresáři.
-- Pomocí nástrojů pro automatizované systémy inventáře. Můžete také spravovat vaše prostředky softwaru a rozlišit předprovozní prostředí z výroby ty, které jsou pomocí nástroje pro inventář softwaru. Mnoho zákazníků s nástrojem Microsoft System Center vytvořit zásady vytváření názvů automatizovat tuto součást procesu inventáře.
-- Získáte pomoc s ruční odsouhlasení. Zařazení pracovníci pomohou sjednotit uživatelům vývoj a testování bez vaše vývojová a testovací prostředí. 
+Tady jsou některé způsoby, jak zjednodušit a současně inventáře musí předprovozní prostředí:
+- Zkontrolujte přiřazení uživatele. Společnost Microsoft poskytuje webu, volá se, [portál pro správu sady Visual Studio](https://manage.visualstudio.com/) abychom vám pomohli sledovat přiřazení předplatného sady Visual Studio.
+- Použijte váš místní nebo cloudové služby Active Directory do seznamu uživatelů. Pokud používáte ke správě přístupu uživatelů služby Active Directory, může být schopni identifikovat vývojové a testovací uživatele na základě jejich členství v adresáři.
+- Pomocí automatizovaných nástrojů k systémům inventáře. Také budete muset použít nástroje pro inventář softwaru ke správě vašeho softwarového majetku a rozlišení předprodukčních prostředích z produkčního prostředí z nich. Mnoho zákazníků s Microsoft System Center vytvoří konvence pojmenování a využít k automatizaci tuto část procesu inventáře.
+- Získejte pomoc s ruční sloučení. Uvést vaši pracovníci umožňující sjednotit uživatele vývoj a testování pomocí vývojových a testovacích prostředí. 
 
-## <a name="large-teams-and-external-contractors"></a>Velkými týmy a externích dodavatelů
-Visual Studio odběry správci jsou zodpovědní za zajištění, že každý uživatel, který komunikuje s Visual Studio licencovaný software má správně licenci na své vlastní předplatné sady Visual Studio.
+## <a name="large-teams-and-external-contractors"></a>Velké týmy a externích dodavatelů
+Správce předplatných Visual Studio jsou vaší odpovědností, že každý uživatel, který komunikuje se službou Visual Studio licencovaný software je odpovídajícím způsobem licenci na své vlastní předplatné sady Visual Studio.
 
 ### <a name="internal-teams"></a>Interními týmy
-Moderní softwaru organizace obvykle zahrnují účastníky z několika skupin. Identifikujte kontakty z každé skupiny, který vám může pomoci při sledování inventáře uživatele a změny. Každá organizace se liší, ale seznam zahrnutých v vývoj týmy typické mohou zahrnovat:
-- Software inženýrství týmy. 
-- Obchodní týmů, včetně produktu vlastníci a obchodní analytici.
+Obvykle moderní softwarové organizace dokážete zapojit zúčastněné strany z několika skupin. Identifikujte kontakty z každé skupiny, který vám může pomoct udržovat přehled o inventáři uživatele a změny. Každá organizace se liší, ale typické seznamu týmů účastnících vývoj mohou zahrnovat:
+- Software engineering týmy. 
+- Obchodní týmy, včetně vlastníci produktů a obchodními analytiky.
 - Projektové týmy správy. 
-- Kvalita týmů, včetně zaměstnancům QA a ruční testerům, sada.
+- Kvalitní týmy, včetně dotazů a odpovědí oddělení a pro ruční testery.
 - IT oddělení, včetně infrastruktury správci předprodukční režim a testovacího prostředí.
 
-### <a name="external-contractors-and-partners"></a>Externích dodavatelů a partnery
-Externích dodavatelů, mohou způsobit licencí, které chcete používat s vaším prostředím licenci sady Visual Studio. Certifikovanými partnery společnosti Microsoft obdržet několik bezplatných předplatných Visual Studio pro jejich interní použití. Tyto odběry ale nepokrývají výnosy aktivity, například vývoj vlastních softwaru pro zákazníka. Požádejte partnerům vám pošleme certifikovaných písmeno, které popisuje licencí, které se poskytují a ty, které potřebují k zajištění.
+### <a name="external-contractors-and-partners"></a>Externí dodavatelé a partneři
+Externí dodavatelé mohou využít licence pomoc s vaším prostředím licenci sady Visual Studio. Partnerů Microsoft Certified Partner se může zobrazit několik předplatných sady Visual Studio zdarma pro svoje interní použití. Nicméně tato předplatná se nevztahují na generování příjmů aktivity, jako je například vývoj vlastního softwaru pro zákazníka. Požádejte partnerů k odeslání ověřené písmeno, který vysvětluje licencí, které přináší a těch, které potřebují můžete zřizovat.
 
-## <a name="track-user-assignment-and-process-orders"></a>Sledovat proces a přiřazení objednávky uživatele
-Visual Studio odběry správce se očekává sledovat využití sady Visual Studio a zpracování objednávky pro všechny nárůst využití podle plánu, uvedených v jejich multilicenční smlouvu nebo Products společnosti Microsoft a smlouvou o poskytování služeb. Nový portál pro správu předplatných Visual Studio udělal to jednoduché s užitečné sledování zobrazující licencí k dispozici a použít.
-### <a name="high-water-mark-of-usage"></a>Horní mez využití
-**Vaše společnost povinnost zakoupit předplatné sady Visual Studio se projeví okamžitě, když:**
-- Licence je přiřazen k uživateli.
-- Uživatel pracuje s softwaru Visual Studio.
+## <a name="track-user-assignment-and-process-orders"></a>Sledování přiřazení a zpracování objednávek uživatele
+Správce předplatných Visual Studio se očekává sledování využití sady Visual Studio a zpracování objednávek pro jakékoli zvýšení využití podle plánu, uvedené v jejich multilicenční smlouvu nebo Microsoft Products a smlouvu o poskytování služeb. Na novém portálu pro správu předplatných sady Visual Studio je jednodušší to s užitečné sledování zobrazující dostupné a použité licence.
 
-Vaši povinnost dokončení nákupu je dáno **horní mez využití**. Tento vodoznak je vysoce bod v denní přiřazení uživatelských nebo v uživatelům interakci s Visual Studio softwaru, podle toho, která je vyšší.
-1.  Visual Studio odběry správci může zvýšit horní mez využití přiřazením Visual Studio odběry jednotlivce.
-2.  Visual Studio odběry správci může přiřadit odběry z jednoho odběratele, pokud uplynulo 90 dnů od doby původní přiřazení. Abyste se vyhnuli uměle horní mez, vždy k tomu nejdřív odebráním stávajícího předplatného a následným přidáním nového.
-3.  Visual Studio odběry správce může změnit úrovni přiřazené předplatného pro jednotlivce, který představuje pokles v jedné přiřazení a o zvýšení v jiném. Při snížení odběratele přiřazené úrovni předplatného jednotlivých hned přestat používat a odinstalovat všechno, co je pouze ve vyšší úrovně předplatného. 
+### <a name="high-water-mark-of-usage"></a>Označuje jako horní mez vysoké využití
+**Povinnost vaší společnosti nákup předplatných sady Visual Studio se projeví okamžitě, když:**
+- Licence se přiřadí uživateli.
+- Uživatel komunikuje s software Visual Studio.
 
-### <a name="cloud-subscriptions-open-license-or-open-value"></a>Cloudová předplatná, otevřete licence nebo počáteční hodnota
-Může být přiřazení odběry prostřednictvím programu jako Microsoft Cloudová předplatná, otevřete licence nebo počáteční hodnota. Pokud ano, je nutné v měsíci, ve kterém uživatelé (zaměstnanců nebo externích dodavatelů) komunikovat s Visual Studio licencovaný software zpracovat vaši objednávku pro všechny další uživatele.
+Je vaší povinností dokončení nákupu určená **horní mez využití**. Tuto mez je vysoce bod v denní přiřazení uživatele nebo v uživatelů pracujících s Visual Studio software, podle toho, co je vyšší.
+1.  Správce předplatných Visual Studio mohou zvýšit horní mez využití přiřazování předplatných sady Visual Studio pro jednotlivce.
+2.  Správce předplatných Visual Studio může změnit přiřazení předplatných z jednoho odběratele, pokud uplynulo 90 dnů od doby původní přiřazení. Aby se zabránilo uměle horní mez, vždy k tomu nejdřív odebrat existující předplatné a následným přidáním nového.
+3.  Správce předplatných Visual Studio může změnit úroveň přiřazené předplatné pro jednotlivce, což by představovalo pokles v jedné úlohy a zvýšení v jiném. Při snížení předplatitel sady přiřadila se úroveň předplatného uživatele musíte okamžitě přestat používat a odinstalovat cokoli, co je pouze ve vyšší úrovně předplatného. 
+
+### <a name="cloud-subscriptions-open-license-or-open-value"></a>Cloudová předplatná, Open License nebo Open Value
+Může přiřazovat předplatná prostřednictvím programu, jako je Microsoft Cloudová předplatná, Open License nebo Open Value. Pokud ano, musí zpracovat objednávku pro další uživatele v měsíci, ve kterém uživatelé (zaměstnanci nebo externí dodavatelé) komunikovat s Visual Studio licencovaný software.
 
 ### <a name="enterprise-mpsa-and-select-agreements"></a>Enterprise, MPSA a vyberte smlouvy
-Microsoft Enterprise smlouvy (EA), MPSA a vyberte Plus smlouvy poskytují flexibilitu v tom, jak použít a licencí softwaru v sadě Visual Studio v čase. Visual Studio správci musíte nastavit roční pořadí True-Up aby softwarové licence až horní mez využití navázat během období smlouvy.
+Microsoft EA (Enterprise Agreement), MPSA a vyberte Plus smlouvy poskytují flexibilitu při jak používat a licenci sady Visual Studio software v čase. Visual Studio správci provést objednávku roční True nahoru využít svoje licence softwaru až po horní mez využití vytvořeno v období smlouvy.

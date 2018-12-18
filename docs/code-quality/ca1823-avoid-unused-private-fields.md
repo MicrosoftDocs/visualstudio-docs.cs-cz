@@ -1,6 +1,7 @@
 ---
 title: 'CA1823: Vyhněte se nepoužitým privátním polím'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,13 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b8d3e1738b217d836bd0e4ca60178d2d65ac686
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 3a9ef0e63e13ab6e05025ef1a24c4032feb5eacd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49923703"
 ---
 # <a name="ca1823-avoid-unused-private-fields"></a>CA1823: Vyhněte se nepoužitým privátním polím
+
 |||
 |-|-|
 |TypeName|AvoidUnusedPrivateFields|
@@ -30,16 +33,16 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
- Toto pravidlo je hlášené soukromé pole ve vašem kódu existuje, ale není používán všechny cesty kódu.
+ Toto pravidlo je oznamují soukromé pole ve vašem kódu existuje, ale nepoužívá všechny cesty kódu.
 
 ## <a name="rule-description"></a>Popis pravidla
  Byla zjištěna soukromá pole, která v rámci sestavení zjevně nejsou přístupná.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Opravit porušení toto pravidlo, odeberte pole nebo přidejte kód, který používá je.
+ Chcete-li opravit porušení tohoto pravidla, odeberte pole nebo přidejte kód, který ji používá.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Je bezpečné upozornění toto pravidlo potlačit.
+ Je bezpečné potlačit upozornění tohoto pravidla.
 
 ## <a name="related-rules"></a>Související pravidla
  [CA1812: Vyhněte se nevytvořeným instancím vnitřních tříd](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)

@@ -1,5 +1,5 @@
 ---
-title: AsyncTaskMethodBuilder&lt;TResult&gt;.m_task pole | Microsoft Docs
+title: AsyncTaskMethodBuilder&lt;TResult&gt;.m_task – pole | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,27 +13,28 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e9c2bbd8e0cb148f7575f2adbc6fec8fa62052e2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8c22566247a773beffa5f6fb79f1cb2aac51ac6b
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39154356"
 ---
-# <a name="asynctaskmethodbuilderlttresultgtmtask-field"></a>AsyncTaskMethodBuilder&lt;TResult&gt;.m_task pole
-Představuje líné inicializovaného vytvořené úloh.  
+# <a name="asynctaskmethodbuilderlttresultgtmtask-field"></a>AsyncTaskMethodBuilder&lt;TResult&gt;.m_task – pole
+Představuje laxně inicializovaný vytvořené úlohy.  
   
  **Namespace:** <xref:System.Runtime.CompilerServices?displayProperty=fullName>  
   
- **Sestavení:** mscorlib (v mscorlib.dll)  
+ **Sestavení:** mscorlib (v knihovně mscorlib.dll)  
   
- Protože tento vnitřní člen nemůže získat přístup z rozhraní .NET Framework, je k dispozici společné Intermediate Language (soubor CIL) syntaxi.  
+ Protože tento člen interní nemůže získat přístup z rozhraní .NET Framework, je k dispozici v Common Intermediate Language (CIL) následující syntaxi.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```csharp  
 .field private class System.Threading.Tasks.Task`1<!TResult> m_task  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  <xref:System.Runtime.CompilerServices.AsyncTaskMethodBuilder%601>   
  [Interní informace o paralelním rozšíření pro rozhraní .NET Framework](../../extensibility/debugger/parallel-extension-internals-for-the-dotnet-framework.md)

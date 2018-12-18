@@ -1,38 +1,48 @@
 ---
-title: Odinstalace Visual Studio pro Mac
-description: Pokyny k odinstalaci Visual Studio pro Mac a související nástroje.
-author: asb3993
-ms.author: amburns
-ms.date: 04/14/2017
+title: Odinstalace sady Visual Studio pro Mac
+description: Pokyny k odinstalaci sady Visual Studio pro Mac a související nástroje.
+author: conceptdev
+ms.author: crdun
+ms.date: 05/06/2018
 ms.technology: vs-ide-install
 ms.assetid: 4EB95F75-BC2E-4982-9564-2975805712D8
-ms.openlocfilehash: b3da59c949204f7363276ce9631604af9fadcad6
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 4a0ecef49d8c3493ff6094be66f1d05ad588077c
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51295667"
 ---
-# <a name="uninstalling-visual-studio-for-mac"></a>Odinstalace Visual Studio pro Mac
+# <a name="uninstalling-visual-studio-for-mac"></a>Odinstalace sady Visual Studio pro Mac
 
-Existuje řada produktů Xamarin, které umožňují vývoj aplikací pro různé platformy, včetně samostatné aplikace, jako je Visual Studio for Mac.
+Existuje několik produktů Xamarin, které umožňují vývoj aplikací napříč platformami, včetně samostatné aplikace, jako je Visual Studio pro Mac.
 
-Tato příručka slouží k odinstalaci každý produkt jednotlivě tak, že přejdete do části relevantní. Celá sada nástrojů Xamarin, můžou se odinstalovat podle této příručky úplně prostřednictvím.
+Tato příručka slouží k odinstalaci jednotlivých produktů jednotlivě tak, že přejdete do příslušné části, nebo můžete použít skripty v [skript](#uninstall-script) část týkající se odinstalace všechno.
 
-Pokud jste dřív měli Xamarin Studio v počítači nainstalován, budete možná muset taky postupujte podle pokynů v [odinstalovat](https://developer.xamarin.com/guides/cross-platform/getting_started/installation/uninstalling_xamarin/) Průvodce na developer.xamarin.com, kromě následující kroky.
+Pokud jste dřív měli Xamarin Studio v počítači byly nainstalovány, budete také muset postupujte podle pokynů v [společnosti Xamarin odinstalovat](/xamarin/cross-platform/get-started/installation/uninstalling-xamarin#uninstall-xamarin-studio-on-mac) průvodce, kromě následujících kroků.
 
-## <a name="uninstall-script"></a>Odinstalujte skriptu
+## <a name="uninstall-script"></a>Odinstalace skriptu
 
-Odinstalujete Visual Studio a jeho přidružených součásti v jednom přejít pomocí [odinstalovat skriptu](https://raw.githubusercontent.com/MicrosoftDocs/visualstudio-docs/master/mac/resources/uninstall-vsmac.sh).
+Existují dva skripty, které lze použít k odinstalaci sady Visual Studio pro Mac a všechny komponenty pro váš počítač:
 
-Tento skript odinstalovat obsahuje většinu příkazů, které najdete v článku. Existují dvě hlavní opomenutí ze skriptu a nejsou zahrnuty z důvodu možných externí závislosti:
+- [Skript sady Visual Studio a Xamarin](#visual-studio-for-mac-and-xamarin-script)
+- [Skript .NET core](#net-core-script)
+
+Následující části poskytují informace o stahování a pomocí skriptů.
+
+### <a name="visual-studio-for-mac-and-xamarin-script"></a>Visual Studio pro Mac a Xamarin skriptu
+
+Odinstalujete Visual Studio a Xamarin komponenty v jednom přejít pomocí [odinstalovat skript](https://raw.githubusercontent.com/MicrosoftDocs/visualstudio-docs/master/mac/resources/uninstall-vsmac.sh).
+
+Tento skript pro odinstalaci obsahuje většinu příkazů, které najdete v článku. Existují dva hlavní opomenutí ze skriptu a nejsou zahrnuty z důvodu možných externích závislostí:
 
 - **Odinstalace Mono**
-- **Odinstalace Android AVD**
+- **Probíhá odinstalace AVD na Androidu**
 
-Chcete-li spustit skript, proveďte následující kroky:
+Spusťte skript, proveďte následující kroky:
 
-1. Klikněte pravým tlačítkem na skript a vyberte **uložit jako...** Uložte soubor na vašem Mac.
-2. Otevřete terminál a změnit pracovní adresář, do které jste stáhli skript:
+1. Klikněte pravým tlačítkem na skript a vyberte **uložit jako** k uložení souboru na vašem počítači Mac.
+2. Otevřete terminál a přejděte ve kterém se skript stáhl pracovní adresář:
 
     ```bash
     $ cd /location/of/file
@@ -43,17 +53,37 @@ Chcete-li spustit skript, proveďte následující kroky:
     $ chmod +x ./uninstall-vsmac.sh
     $ sudo ./uninstall-vsmac.sh
     ```
-4. Nakonec odstraňte odinstalační skript.
+4. Nakonec odstraňte skript pro odinstalaci.
 
-## <a name="uninstall-visual-studio-for-mac"></a>Odinstalace Visual Studio pro Mac
+### <a name="net-core-script"></a>Skript .NET core
 
-Prvním krokem při odinstalaci Visual Studio z algoritmu Mac, je nalezení **Visual Studio.app** v **/Applications** adresáře a přetáhněte ji do **odpadkový koš**. Případně, klikněte pravým tlačítkem a vyberte **přesunout do Koš** jak je znázorněno na následujícím obrázku:
+Skript pro odinstalaci pro .NET Core se nachází v [úložiště rozhraní příkazového řádku dotnet](https://raw.githubusercontent.com/dotnet/cli/master/scripts/obtain/uninstall/dotnet-uninstall-pkgs.sh)
 
-![Přesunutí aplikace Visual Studio koše](media/uninstall-image1.png)
+Spusťte skript, proveďte následující kroky:
 
-Visual Studio pro Mac, odstraněním této sady prostředků aplikace odebere, i když může být další soubory týkající se Xamarin stále v systému souborů.
+1. Klikněte pravým tlačítkem na skript a vyberte **uložit jako** k uložení souboru na vašem počítači Mac.
+2. Otevřete terminál a přejděte ve kterém se skript stáhl pracovní adresář:
 
-K odebrání všech trasování sady Visual Studio pro Mac, by měl v terminálu spustit následující příkazy:
+    ```bash
+    $ cd /location/of/file
+    ```
+3. Spustitelný soubor skriptu a spustit ji s **sudo**:
+
+    ```bash
+    $ chmod +x ./dotnet-uninstall-pkgs.sh
+    $ sudo ./dotnet-uninstall-pkgs.sh
+    ```
+4. Nakonec odstraňte skript pro odinstalaci .NET Core.
+
+## <a name="uninstall-visual-studio-for-mac"></a>Odinstalace sady Visual Studio pro Mac
+
+Prvním krokem při odinstalaci sady Visual Studio na macu, je nalezení **Visual Studio.app** v **/Applications** adresáře a přetáhněte ji do **koše**. Alternativně klepněte pravým tlačítkem myši a vyberte **přesunout do koše** jak je znázorněno na následujícím obrázku:
+
+![Aplikace Visual Studio přesunout do koše](media/uninstall-image1.png)
+
+Odstraněním této sady prostředků aplikace dojde k odebrání sady Visual Studio pro Mac, i když může být souborů souvisejících s Xamarin stále v systému souborů.
+
+Chcete-li odebrat všechna trasování sady Visual Studio pro Mac, spuštěním následujících příkazů v terminálu:
 
 ```bash
 sudo rm -rf "/Applications/Visual Studio.app"
@@ -68,15 +98,15 @@ rm -rf ~/Library/Application\ Support/VisualStudio
 rm -rf ~/Library/Application\ Support/VisualStudio/7.0/LocalInstall/Addins/
 ```
 
-## <a name="uninstall-mono-sdk-mdk"></a>Odinstalujte Mono SDK (MDK)
+## <a name="uninstall-mono-sdk-mdk"></a>Odinstalujte modul Mono SDK (MDK)
 
-Mono je implementací open-source společnosti Microsoft .NET Framework a umožňuje Xamarin Products—Xamarin.iOS, Xamarin.Android a Xamarin.Mac vývoj těchto platforem v jazyce C#.
+Mono je open source implementace rozhraní .NET Framework společnosti Microsoft a umožňují tak, že všechny Xamarin Products—Xamarin.iOS, Xamarin.Android a Xamarin.Mac vývoj z těchto platforem v jazyce C#.
 
 > [!WARNING]
-> Existují další aplikace mimo Visual Studio pro Mac kteří také používají Mono, jako je například Unity.
-> Ujistěte se, že neexistují žádné další závislosti na Mono před odinstalací jej.
+> Existují další aplikace mimo sadu Visual Studio pro Mac využívající Mono, jako je Unity.
+> Ujistěte se, že neexistují žádné závislosti na Mono před odinstalací.
 
-Rozhraní Framework Mono odebrat z počítače, spusťte následující příkazy v terminálu:
+Pokud chcete z počítače odebrat Mono Frameworku, spuštěním následujících příkazů v terminálu:
 
 ```bash
 sudo rm -rf /Library/Frameworks/Mono.framework
@@ -84,11 +114,11 @@ sudo pkgutil --forget com.xamarin.mono-MDK.pkg
 sudo rm -rf /etc/paths.d/mono-commands
 ```
 
-## <a name="uninstall-xamarinandroid"></a>Odinstalace Xamarin.Android
+## <a name="uninstall-xamarinandroid"></a>Odinstalujte Xamarin.Android
 
-Existuje několik položek, které jsou potřebné pro instalaci a použití Xamarin.Android, jako je například Android SDK a sadu Java SDK.
+Existuje několik položek, které jsou potřebné pro instalaci a použití Xamarin.Android, jako jsou sady Android SDK a sady Java SDK.
 
-Chcete-li odebrat Xamarin.Android použijte následující příkazy:
+Chcete-li odebrat Xamarin.Android, použijte následující příkazy:
 
 ```bash
 sudo rm -rf /Developer/MonoDroid
@@ -97,37 +127,34 @@ sudo pkgutil --forget com.xamarin.android.pkg
 sudo rm -rf /Library/Frameworks/Xamarin.Android.framework
 ```
 
-### <a name="uninstall-android-sdk-and-java-sdk"></a>Odinstalování SDK pro Android SDK a Java
+### <a name="uninstall-android-sdk-and-java-sdk"></a>Odinstalace Android SDK a Java SDK
 
-Je vyžadována pro vývoj aplikací pro Android SDK pro Android. Pokud chcete úplně odebrat všechny části sady SDK pro Android, vyhledejte soubor v **~/Library/Developer/Xamarin/** a přesunout ji do **Koš**.
+Sady Android SDK je vyžadována pro vývoj aplikací pro Android. K úplnému odebrání všech součástí sady Android SDK, vyhledávat soubor za **~/Library/Developer/Xamarin/** a přesuňte ho do **koše**.
 
-Java SDK (JDK) není nutné odinstalovat, protože je již předběžně zabalen jako součást systému Mac OS X nebo systému macOS.
+Java SDK (JDK) není nutné odinstalovat, protože je již předběžně zabalen jako součást systému Mac OS X / macOS.
 
-### <a name="uninstall-android-avd"></a>Odinstalujte Android AVD
+### <a name="uninstall-android-avd"></a>Odinstalace Android AVD
 
 > [!WARNING]
-> Existují další aplikace mimo Visual Studio pro Mac kteří také používají Android AVD a tyto další android součásti, jako je například Android Studio.
-> Odebrání tento adresář může způsobit, že projekty pro přerušení v Android Studio. 
+> Existují jiné aplikace mimo sadu Visual Studio pro Mac, které také používají Android AVD a tyto další součásti pro android, jako je například Android Studio.Removing tento adresář může způsobit, že projekty přerušení v nástroji Android Studio.
 
-Chcete-li odebrat všechny Android AVDs a další Android součásti použijte následující příkaz:
+Chcete-li odebrat všechny Avd Android a další Android součásti použijte následující příkaz:
 
 ```bash
 rm -rf ~/.android
 ```
 
-Chcete-li odebrat pouze Android AVDs použijte následující příkaz:
+Chcete-li odebrat jenom Android Avd použijte následující příkaz:
 
 ```bash
 rm -rf ~/.android/avd
 ```
 
- 
+## <a name="uninstall-xamarinios"></a>Odinstalujte Xamarin.iOS
 
-## <a name="uninstall-xamarinios"></a>Odinstalace Xamarin.iOS
+Xamarin.iOS umožňuje vývoj pro iOS aplikace s využitím C# nebo F# pomocí sady Visual Studio pro Mac.
 
-Xamarin.iOS umožňuje iOS vývoj aplikací pomocí jazyka C# nebo F # pomocí sady Visual Studio for Mac.
-
-Použijte následující příkazy v terminálu odebere všechny soubory Xamarin.iOS systému souborů:
+Pomocí následujících příkazů v terminálu odeberte všechny soubory Xamarin.iOS systému souborů:
 
 ```bash
 rm -rf ~/Library/MonoTouch
@@ -138,39 +165,39 @@ sudo pkgutil --forget com.xamarin.xamarin-ios-build-host.pkg
 sudo pkgutil --forget com.xamarin.xamarin.ios.pkg
 ```
 
-## <a name="uninstall-xamarinmac"></a>Odinstalace Xamarin.Mac
+## <a name="uninstall-xamarinmac"></a>Odinstalujte Xamarin.Mac
 
-Xamarin.Mac může být odstraněn z počítače pomocí následujících příkazů pro eradikaci produktu a licenci pro počítače Mac v uvedeném pořadí:
+Xamarin.Mac lze odebrat z počítače tento kyberzločinec odstranit produkt a licenci z počítače Mac pomocí následujících příkazů:
 
 ```bash
 sudo rm -rf /Library/Frameworks/Xamarin.Mac.framework
 rm -rf ~/Library/Xamarin.Mac
 ```
 
-## <a name="uninstall-workbooks-and-inspector"></a>Odinstalujte sešitů a Inspector
+## <a name="uninstall-workbooks-and-inspector"></a>Odinstalujte sešity a inspektoru
 
-Počínaje 1.2.2, Xamarin sešity & Kontrola můžou se odinstalovat z terminálu spuštěním:
+Počínaje 1.2.2, sešity ke Xamarinu & Kontrola můžou se odinstalovat z terminálu spuštěním:
 
 ```bash
 sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstall
 ```
 
-Pro starší verze budete muset ručně odstranit následující artefakty:
+Pro starší verze budete muset ručně odebrat následující artefakty:
 
-* Odstranit aplikaci sešity v `"/Applications/Xamarin Workbooks.app"`
-* Odstranit aplikaci Inspector ve `"Applications/Xamarin Inspector.app"`
-* Odstranit doplňky: `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` a `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
-* Odstraňte Inspector a podpůrné soubory. zde: `/Library/Frameworks/Xamarin.Interactive.framework` a `/Library/Frameworks/Xamarin.Inspector.framework`
+* Odstranit sešity aplikace na adrese `"/Applications/Xamarin Workbooks.app"`
+* Odstranit inspektoru aplikace na adrese `"Applications/Xamarin Inspector.app"`
+* Odstranit doplňků: `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` a `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
+* Odstranit Inspector a podpůrné soubory. tady: `/Library/Frameworks/Xamarin.Interactive.framework` a `/Library/Frameworks/Xamarin.Inspector.framework`
 
-## <a name="uninstall-the-xamarin-profiler"></a>Odinstalace Xamarin profileru
+## <a name="uninstall-the-xamarin-profiler"></a>Odinstalujte Xamarin Profiler
 
 ```bash
 sudo rm -rf "/Applications/Xamarin Profiler.app"
 ```
 
-## <a name="uninstall-the-visual-studio-installer"></a>Odinstalujte instalační program sady Visual Studio
+## <a name="uninstall-the-visual-studio-installer"></a>Odinstalace instalačního programu sady Visual Studio
 
-K odebrání všech trasování Xamarin Universal instalačního programu, použijte následující příkazy:
+Chcete-li odebrat všechna trasování Xamarin univerzální instalačního programu použijte následující příkazy:
 
 ```bash
 rm -rf ~/Library/Caches/XamarinInstaller/
@@ -180,3 +207,7 @@ rm -rf ~/Library/Logs/VisualStudioInstaller/
 rm -rf ~/Library/Preferences/Xamarin/
 rm -rf "~/Library/Preferences/Visual Studio/"
 ```
+
+## <a name="see-also"></a>Viz také:
+
+- [Odinstalace sady Visual Studio (ve Windows)](/visualstudio/install/uninstall-visual-studio)

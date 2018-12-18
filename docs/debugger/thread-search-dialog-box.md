@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31475123"
 ---
 # <a name="thread-search-dialog-box"></a>Dialogové okno hledání vláken
 Pomocí tohoto dialogového okna můžete najít a vybrat uzel pro konkrétní vlákna v [zobrazení vláken](../debugger/threads-view.md). K zobrazení tohoto dialogového okna, přesunout fokus **vláken** okno zobrazení. Zvolte **najít vláken** z **vyhledávání** nabídky.  

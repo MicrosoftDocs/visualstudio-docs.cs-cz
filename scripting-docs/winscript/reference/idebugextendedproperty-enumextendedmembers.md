@@ -1,11 +1,11 @@
 ---
-title: IDebugExtendedProperty::EnumExtendedMembers | Microsoft Docs
-ms.custom: 
+title: IDebugExtendedProperty::EnumExtendedMembers | Dokumentace Microsoftu
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - IDebugExtendedProperty.EnumExtendedMembers
@@ -14,18 +14,19 @@ apilocation:
 helpviewer_keywords:
 - IDebugExtendedProperty::EnumExtendedMembers
 ms.assetid: 27cdb091-da4e-44d2-a631-31ae00468b98
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 81b1cbb9b36d7ae237551aad2677f9480c615b88
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 400145cf3981b7266a796f66576eb12f979d2750
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949835"
 ---
 # <a name="idebugextendedpropertyenumextendedmembers"></a>IDebugExtendedProperty::EnumExtendedMembers
-Vytvoří výčet členů rozšířené vlastnosti.  
+Vytvoří výčet členy rozšířené vlastnosti.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,18 +40,18 @@ HRESULT EnumExtendedMembers(
   
 #### <a name="parameters"></a>Parametry  
  `dwFieldSpec`  
- [v] Určuje, že EX_DBGPROP_INFO_FLAGS konstanty, které určují, že pole v výčtové rozšířené vlastnosti struktury ladění který mají být vyplněna.  
+ [in] Určuje, že EX_DBGPROP_INFO_FLAGS konstanty, které určují, že pole výčet Rozšířené ladicí vlastnosti struktury, která mají být vyplněna.  
   
  `nRadix`  
- [v] Základ – který se má použít při interpretaci všechny číselné informace.  
+ [in] Základ, který se má použít při interpretaci jakékoli číselné informace.  
   
  `ppeepi`  
- [out] Vrátí `IEnumDebugExtendedPropertyInfo` rozhraní, které se zobrazí vlastnosti člena.  
+ [out] Vrátí `IEnumDebugExtendedPropertyInfo` rozhraní, které zobrazuje výčet vlastností člena.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrací platnou `HRESULT`, obvykle `S_OK`.  
+ Bude vracet platnou `HRESULT`, obvykle `S_OK`.  
   
 ## <a name="see-also"></a>Viz také  
  [Idebugextendedproperty – rozhraní](../../winscript/reference/idebugextendedproperty-interface.md)   
  [EX_DBGPROP_INFO_FLAGS](../../winscript/reference/ex-dbgprop-info-flags.md)   
- [Extendeddebugpropertyinfo – struktura](../../winscript/reference/extendeddebugpropertyinfo-structure.md)
+ [ExtendedDebugPropertyInfo – struktura](../../winscript/reference/extendeddebugpropertyinfo-structure.md)

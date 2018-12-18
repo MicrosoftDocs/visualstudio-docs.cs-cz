@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Chybějící objekty z důvodu použití funkce Vertex Shading | Microsoft Docs'
+title: 'Návod: Chybějící objekty z důvodu použití funkce Vertex Shading | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -10,119 +10,120 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b669962fe1a0668b42aec29745072f3451966323
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: a3ee92eb8418fce37182b78364d08c2570f32da9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49861563"
 ---
 # <a name="walkthrough-missing-objects-due-to-vertex-shading"></a>Návod: Chybějící objekty z důvodu použití funkce vertex shading
-Tento návod ukazuje, jak používat [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] diagnostiky grafiky nástrojům pro zkoumání objekt, který nebyl nalezen z důvodu chyby, ke kterému dochází během fáze shaderu vrchol.  
+Tento návod ukazuje, jak používat [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nástrojů diagnostiky grafiky k prozkoumání objekt, který nebyl nalezen z důvodu chyby, ke které dojde během fáze vertex shader.  
   
- Tento návod ukazuje tyto úlohy:  
+ Tento návod ilustruje tyto úkoly:  
   
--   Pomocí **seznam událostí grafiky** najít potenciální zdroje problému.  
+-   Použití **seznam událostí grafiky** k vyhledání potenciálních zdrojů problému.  
   
--   Pomocí **fáze zřetězení grafiky** okně a zkontrolujte účinek `DrawIndexed` volání Direct3D – rozhraní API.  
+-   Použití **fáze zřetězení grafiky** okna zkontrolovat dopad `DrawIndexed` volání rozhraní API Direct3D.  
   
--   Pomocí **ladicí program HLSL** Prozkoumat shaderu vrchol.  
+-   Použití **ladicí program HLSL** prozkoumat vertex shader.  
   
--   Pomocí **zásobník volání událostí grafiky** pomohou najít zdroj nesprávné HLSL konstanty.  
+-   Použití **zásobník volání událostí grafiky** vám pomohou najít zdroje nesprávné konstanty HLSL.  
   
 ## <a name="scenario"></a>Scénář  
- Jednou z běžných příčin chybějící objektu v 3D aplikace nastane, když shaderu vrchol transformuje objektu vrcholy způsobem nesprávné nebo neočekávané – například objekt může být nastavit na velmi malou velikost, nebo transformovat tak, aby se objeví za fotoaparátu , nikoli úrovních před ním.  
+ Jednou z běžných příčin chybí objekt v 3D aplikaci nastane vertex shader vrcholů objektu transformuje nesprávné nebo neočekávaným způsobem, například objekt může být škálovat velmi malé velikosti, nebo transformovat tak, aby se zobrazí za fotoaparátu/kamery , spíše než před tímto prvkem.  
   
- V tomto scénáři při spuštění aplikace to vyzkoušíte, pozadí se vykresluje podle očekávání, ale jeden z objektů se nezobrazí. Pomocí diagnostiky grafiky zaznamenáte tyto potíže k protokolu grafiky tak, že ladíte aplikaci. Problém je v aplikaci vypadat třeba takto:  
+ V tomto scénáři při spuštění aplikace a otestovat ho pozadí se vykresluje podle očekávání, ale jeden z objektů se nezobrazí. Pomocí diagnostiky grafiky můžete zaznamenat problém do protokolu grafiky, tak, že ladíte aplikaci. Problém je v aplikace vypadá například takto:  
   
- ![Objekt je nemohou vidět. ] (media/gfx_diag_demo_missing_object_shader_problem.png "gfx_diag_demo_missing_object_shader_problem")  
+ ![Objekt nelze zobrazit. ](media/gfx_diag_demo_missing_object_shader_problem.png "gfx_diag_demo_missing_object_shader_problem")  
   
 ## <a name="investigation"></a>Šetření  
- Soubor protokolu grafiky kontrola rámce zaznamenané během testu můžete načíst pomocí diagnostiky grafiky nástrojů.  
+ Pomocí nástrojů diagnostiky grafiky můžete načíst soubor protokolu grafiky kontrolovat rámce, které se zaznamenalo během testu.  
   
-#### <a name="to-examine-a-frame-in-a-graphics-log"></a>K prozkoumání rámce v protokolu grafiky  
+#### <a name="to-examine-a-frame-in-a-graphics-log"></a>Přezkoumání snímku v protokolu grafiky  
   
-1.  V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], načíst grafiky protokol, který obsahuje rámce, který vykazuje chybějící objekt. Novou kartu protokolu grafiky se zobrazí v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. V horní části na této kartě je výstup cíl vykreslení vybraného rámce. V dolní části je **rámce seznamu**, zobrazuje každou zaznamenané rámce jako miniatury.  
+1. V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], načtěte protokol grafiky, který obsahuje rámec vykazující chybějícím objektu. Zobrazí se nová karta protokolu grafiky v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. V horní části této karty je výstup cíle vykreslení vybraného snímku. V dolní části je **seznam snímků**, který zobrazuje jako obrázek miniatury každého zachyceného snímku.  
   
-2.  V **rámce seznamu**, vyberte snímek, který ukazuje, že se nezobrazí, objekt. Cíl vykreslení je aktualizována tak, aby odrážela vybraný snímek. V tomto scénáři protokolu grafiky karta vypadá takto:  
+2. V **seznam snímků**, vyberte snímek, který ukazuje, že objekt se nezobrazuje. Cíl vykreslování se aktualizuje tak, aby odrážely vybraného snímku. V tomto scénáři vypadá karta protokolu grafiky:  
   
-     ![Grafika protokolu dokumentu v sadě Visual Studio](media/gfx_diag_demo_missing_object_shader_step_1.png "gfx_diag_demo_missing_object_shader_step_1")  
+    ![Dokumentu protokolu grafiky v aplikaci Visual Studio](media/gfx_diag_demo_missing_object_shader_step_1.png "gfx_diag_demo_missing_object_shader_step_1")  
   
- Po výběru rámce, který ukazuje problém, můžete začít diagnostikovat pomocí **seznam událostí grafiky**. **Seznam událostí grafiky** obsahuje každou Direct3D – volání rozhraní API, došlo k vykreslení active rámečku, například volání rozhraní API k nastavení stavu zařízení, abyste mohli vytvářet a aktualizovat vyrovnávací paměti a k vykreslení objekty, které se zobrazují v rámečku. Různé druhy volání je zajímavé, protože není často (ale ne vždy) odpovídající změnu cíl vykreslení, když aplikace funguje podle očekávání, například kreslení, odesílání, kopírování nebo zrušte volání. Kreslení volání jsou zvláště zajímavé, protože každé z nich představuje geometry, který vykreslí aplikace (volání odesílání může také zpracovat geometrie).  
+   Po výběru rámce, který znázorňuje problém, můžete začít pro diagnostiku pomocí **seznam událostí grafiky**. **Seznam událostí grafiky** obsahuje každé volání API rozhraní Direct3D, která byla vytvořená pro vykreslení aktivního rámce, například volání rozhraní API k nastavení stavu zařízení můžete taky vytvářet a aktualizovat vyrovnávací paměti a chcete-li nakreslit objekty, které se zobrazují v rámci. Různé druhy volání je zajímavé, protože není často (ale ne vždy) odpovídající změnu cíle vykreslování, pokud aplikace funguje podle očekávání, například kreslení, odesílání, kopírování nebo vymazat volání. Volání příkazu pro vykreslení jsou zvlášť zajímavý, protože každé z nich představuje geometrii, která vykresluje aplikace (odeslání volání může také vykreslit geometrii).  
   
- Protože víte, že chybí objekt není přitahuje k cíli vykreslení (v tomto případě) – ale, že zbývající scény vykreslením podle očekávání – můžete použít **seznam událostí grafiky** společně s **kanálu grafiky Fáze** nástroj k určení, které kreslení volání odpovídá geometrie chybějící objektu. **Fáze zřetězení grafiky** v okně se zobrazí geometry, který vám byl zaslán každé volání kreslení, bez ohledu na jeho dopad na cíl vykreslení. Při přesouvání prostřednictvím volání kreslení je fázemi kanálu se aktualizují zobrazíte geometry, který je přidružen toto volání a vykreslování cílový výstup se aktualizuje na Zobrazit stav cíl vykreslení po dokončení volání.  
+   Protože víte, že chybí objekt není nakreslena na cíl vykreslování (v tomto případě) – ale, že zbývající části scény je vykreslena podle očekávání, můžete použít **seznam událostí grafiky** spolu s **zřetězení grafiky Fáze** nástroje k určení, které nakreslit volání odpovídá chybějícím objektu geometry. **Fáze zřetězení grafiky** okno zobrazuje geometrii, která byla odeslána pro každé volání draw, bez ohledu na jeho dopad na cíl vykreslování. Při procházení volání draw, fáze zřetězení se aktualizuje a zobrazí geometrii, která souvisí s voláním a výstup cíle vykreslení se aktualizuje a zobrazí stav cíle vykreslování po volání bylo dokončeno.  
   
-#### <a name="to-find-the-draw-call-for-the-missing-geometry"></a>Najít kreslení volání pro chybějící geometrie  
+#### <a name="to-find-the-draw-call-for-the-missing-geometry"></a>K vyhledání volání draw pro chybějící geometrie  
   
-1.  Otevřete **seznam událostí grafiky** okno. Na **diagnostiky grafiky** nástrojů vyberte **seznam událostí**.  
+1. Otevřít **seznam událostí grafiky** okna. Na **diagnostiky grafiky** nástrojů, zvolte **seznam událostí**.  
   
-2.  Otevřete **fáze zřetězení grafiky** okno. Na **diagnostiky grafiky** nástrojů vyberte **fázemi kanálu**.  
+2. Otevřít **fáze zřetězení grafiky** okna. Na **diagnostiky grafiky** nástrojů, zvolte **fáze zřetězení**.  
   
-3.  Jak přesunout iteraci v každém kreslení volání **seznam událostí grafiky** okno, sledovat **fáze zřetězení grafiky** okna pro objekt chybí. Chcete-li usnadnit tuto činnost, zadejte "Kreslení" v **vyhledávání** pole v pravém horním rohu **seznam událostí grafiky** okno. Tento filtrování seznamu tak, aby obsahoval jenom události, které mají "Kreslení" v jejich názvy.  
+3. Při přesunu jednotlivými kreslete volání **seznam událostí grafiky** okna, podívejte **fáze zřetězení grafiky** okně chybějícím objektu. Abychom to usnadnili, zadejte "Draw" **hledání** pole v pravém horním rohu **seznam událostí grafiky** okna. Vyfiltruje seznam tak, aby obsahoval pouze události, které mají "Draw" v názvech.  
   
-     V **fáze zřetězení grafiky** okně **vstup assembleru** fáze ukazuje geometrie objektu před jeho transformovaných a **vrchol shaderu** fáze zobrazuje stejné objekt po jeho transformaci. V tomto scénáři víte, že jste chybějícím objektu nalézt, jakmile se zobrazí v **vstup assembleru** fáze a nic se zobrazí v **vrchol shaderu** fáze.  
+    V **fáze zřetězení grafiky** okně **vstupní Assembler** fáze ukazuje geometrie objektu před jeho transformovaný a **Vertex Shader** fáze zobrazuje stejné objekt po je transformaci. V tomto scénáři, víte, že jakmile se zobrazí v nenajdete chybějícím objektu **vstupní Assembler** fáze, ale nic se zobrazí v **Vertex Shader** fázi.  
   
-    > [!NOTE]
-    >  Pokud dalších fázích geometrie – například fáze trupu shaderu, shaderu domény nebo geometrie shaderu – zpracovat objekt, by mohly být příčinou problému. Problém se obvykle týká nejdřívější fáze, ve kterém výsledek se nezobrazí, nebo způsobem, který se zobrazí.  
+   > [!NOTE]
+   >  Pokud jiných geometrie fází – například, Shader trupu, Shader domény a Shader geometrie fází – proces objektu, mohou být příčinou problému. Obvykle problém souvisí s první fáze, ve kterém se nezobrazuje výsledek, nebo se zobrazí neočekávaným způsobem.  
   
-4.  Zastavte při dosažení kreslení volání, která odpovídá chybějícím objektu. V tomto scénáři **fáze zřetězení grafiky** okno označuje, že geometrie byl vydán pro grafický procesor (označená miniaturu assembleru vstup), ale nezobrazí v cílové vykreslování, protože došlo k chybě během fáze shaderu vrchol (označená miniaturu vrchol shaderu):  
+4. Zastavte při dosažení volání draw, která odpovídá chybějícím objektu. V tomto scénáři **fáze zřetězení grafiky** okno znamená, že byl vydán geometrii GPU (označená miniaturu vstupní Assembler), ale nezobrazí v cíle vykreslování, protože došlo k chybě během fáze shader vrcholu (označená miniaturu Vertex Shader):  
   
-     ![Událost DrawIndexed a jeho dopad na kanálu](media/gfx_diag_demo_missing_object_shader_step_2.png "gfx_diag_demo_missing_object_shader_step_2")  
+    ![Událost DrawIndexed a její vliv na kanálu](media/gfx_diag_demo_missing_object_shader_step_2.png "gfx_diag_demo_missing_object_shader_step_2")  
   
- Po potvrzení, že aplikace vydala kreslení volání pro chybějící objekt geometrie a zjistit, že problém přetrvávat během fáze shaderu vrchol, můžete použít ladicí program HLSL sloužící ke zkoumání shaderu vrchol a zjistit, co se stalo s geometrie objektu. Můžete použít pro zjištění stavu proměnných HLSL během provádění krok prostřednictvím kód HLSL ladicí program HLSL a nastavit zarážky při diagnostice problému.  
+   Po potvrzení, že aplikace vydala volání draw pro geometrii chybějícím objektu a zjistit, že tento problém nastává během fáze shader vrcholu, můžete použít ladicí program HLSL sloužící ke zkoumání vertex shader a zjistěte, co se stalo s geometrie objektu. Můžete použít ladicí program HLSL a kontrolu stavu proměnných HLSL během provádění, krokovat kód HLSL a nastavit zarážky, které vám pomohou diagnostikovat problém.  
   
-#### <a name="to-examine-the-vertex-shader"></a>K prozkoumání vrchol shaderu  
+#### <a name="to-examine-the-vertex-shader"></a>Prozkoumat vertex shader  
   
-1.  Spusťte ladění fázi shaderu vrchol. V **fáze zřetězení grafiky** okno, v části **vrchol shaderu** dvoufázové instalace, vyberte **spustit ladění** tlačítko.  
+1. Spusťte ladění vrcholu fázi shaderu. V **fáze zřetězení grafiky** okně v části **Vertex Shader** fáze, zvolte **spustit ladění** tlačítko.  
   
-2.  Protože **vstup assembleru** fázi se zobrazí k poskytování dobrých dat shaderu vrchol a **vrchol shaderu** fáze se vytvořit žádný výstup, které chcete prověřit výstup shaderu vrchol struktura, `output`. Krocích kód HLSL pořídíte blíže vypadat při `output` je upravit.  
+2. Protože **vstupní Assembler** fázi se zobrazí k poskytování dobré data do vertex shaderu a **Vertex Shader** fáze se žádný výstup, které chcete prověřit výstup vertex shaderu strukturu, `output`. Krocích kódu HLSL je provést blíže podívat při `output` se mění.  
   
-3.  Prvním `output` je změněn, člen `worldPos` je zapsán do.  
+3. Prvním `output` se změní, člen `worldPos` se zapisují do.  
   
-     ![Zobrazí se hodnota "output.worldPos" přiměřené](media/gfx_diag_demo_missing_object_shader_step_4.png "gfx_diag_demo_missing_object_shader_step_4")  
+    ![Zobrazí se hodnota "output.worldPos" přiměřené](media/gfx_diag_demo_missing_object_shader_step_4.png "gfx_diag_demo_missing_object_shader_step_4")  
   
-     Protože za přijatelné, zobrazí se jeho hodnota, budete pokračovat, procházení kódu až na další řádek, který upravuje `output`.  
+    Zdá se, že její hodnota být přijatelný, můžete pokračovat, protože krokování kódu až do další řádek, který upravuje `output`.  
   
-4.  Při příštím `output` je změněn, člen `pos` je zapsán do.  
+4. Při příštím `output` se změní, člen `pos` se zapisují do.  
   
-     ![Hodnota "output.pos" byla vynulován](media/gfx_diag_demo_missing_object_shader_step_5.png "gfx_diag_demo_missing_object_shader_step_5")  
+    ![Hodnota "output.pos" byly vynulován](media/gfx_diag_demo_missing_object_shader_step_5.png "gfx_diag_demo_missing_object_shader_step_5")  
   
-     Tentokrát, hodnota `pos` člen – samými nulami – zdá se, že podezřelé. V dalším kroku, do které chcete určit, jak `output.pos` byly dodány s hodnotou samými nulami.  
+    Tentokrát, hodnota `pos` člen – samými nulami – zdá podezřelá. Dále byste měli určit, jak `output.pos` přišel s hodnotou samými nulami.  
   
-5.  Zjistíte, že `output.pos` trvá svou hodnotu z proměnné, která se jmenuje `temp`. V předchozím řádku, můžete vidět, že hodnota `temp` je výsledkem násobení jejich předchozí hodnotu konstanta, která je s názvem `projection`. Máte podezření, že `temp`na podezřelé hodnota je výsledkem této násobení. Při přesunutí ukazatele myši na `projection`, si všimnete, že její hodnota je také samými nulami.  
+5. Všimněte si, že `output.pos` trvá svou hodnotu z proměnné s názvem `temp`. Na předchozím řádku, můžete vidět, že hodnota `temp` je výsledek násobení původní hodnotu konstantu, která má název `projection`. Máte podezření, že `temp`společnosti podezřelá hodnota je výsledek této násobení. Při přesunutí ukazatele myši na `projection`, Všimněte si, že její hodnota je také samými nulami.  
   
-     ![Projekce matice obsahuje chybný transformace](media/gfx_diag_demo_missing_object_shader_step_6.png "gfx_diag_demo_missing_object_shader_step_6")  
+    ![Projekce matice obsahuje chybný transformace](media/gfx_diag_demo_missing_object_shader_step_6.png "gfx_diag_demo_missing_object_shader_step_6")  
   
-     V tomto scénáři, co zjistí, že `temp`na podezřelé hodnota je pravděpodobně způsobená jeho násobení podle `projection`a protože `projection` je konstanta, která má určené tak, aby obsahovala projekce matice, víte, že neměli obsahovat samými nulami.  
+    V tomto scénáři zkoumání zjistí, že `temp`společnosti podezřelá hodnota je s největší pravděpodobností způsobené jeho násobení hodnotou `projection`a protože `projection` je konstanta, která je určená obsahovat projekce matice, víte, že by neměla obsahují samými nulami.  
   
- Jakmile zjistíte, že konstanta HLSL `projection`– předaná do shaderu aplikace – je pravděpodobně zdroj problému, dalším krokem je možné vyhledat umístění ve zdrojovém kódu vaší aplikace kde vyplněno konstantní vyrovnávací paměti. Můžete použít **zásobník volání událostí grafiky** k vyhledání tohoto umístění.  
+   Až zjistíte, že – konstanta HLSL `projection`– předán shaderu aplikací pro – je pravděpodobně zdroj problému, dalším krokem je najít umístění ve zdrojovém kódu vaší aplikace ve kterém se naplní vyrovnávací paměť konstant. Můžete použít **zásobník volání událostí grafiky** k vyhledání tohoto umístění.  
   
-#### <a name="to-find-where-the-constant-is-set-in-your-apps-source-code"></a>Najít, kde je nastaven na konstantu ve zdrojovém kódu vaší aplikace  
+#### <a name="to-find-where-the-constant-is-set-in-your-apps-source-code"></a>Chcete-li najít, kde je konstanta nastavena ve zdrojovém kódu vaší aplikace  
   
-1.  Otevřete **zásobník volání událostí grafiky** okno. Na **diagnostiky grafiky** nástrojů vyberte **zásobník volání událostí grafiky**.  
+1. Otevřít **zásobník volání událostí grafiky** okna. Na **diagnostiky grafiky** nástrojů, zvolte **zásobník volání událostí grafiky**.  
   
-2.  Přejděte do zásobníku volání do zdrojového kódu vaší aplikace. V **zásobník volání událostí grafiky** okně zvolte volání nejvyšší chcete zobrazit, pokud existuje se naplní konstantní vyrovnávací paměti. Pokud není, dokud zjistíte, kde se naplní pokračujte zásobníkem volání. V tomto scénáři zjistíte, naplní konstantní vyrovnávací paměti – pomocí `UpdateSubresource` Direct3D rozhraní API – další až zásobníku volání ve funkci, která je s názvem `MarbleMaze::Render`, a že jeho hodnota pochází z objektu konstantní vyrovnávací paměti, který je pojmenován `m_marbleConstantBufferData` :  
+2. Procházet nahoru o zásobníku volání do zdrojového kódu vaší aplikace. V **zásobník volání událostí grafiky** okně zvolte volání nejvrchnější zobrazíte, pokud existuje se naplní vyrovnávací paměť konstant. Pokud není, dokud nenajdete, kde se naplní pokračujte v zásobníku volání. V tomto scénáři zjistíte, že se naplní vyrovnávací paměť konstant – s použitím `UpdateSubresource` rozhraní Direct3D API – další nahoru v zásobníku volání ve funkci s názvem `MarbleMaze::Render`, a že jeho hodnota pochází z objektu vyrovnávací paměť konstant, který je pojmenován `m_marbleConstantBufferData` :  
   
-     ![Kód, který nastaví vyrovnávací paměť konstantní objektu](media/gfx_diag_demo_missing_object_shader_step_7.png "gfx_diag_demo_missing_object_shader_step_7")  
+    ![Kód, který nastaví konstantní vyrovnávací paměti objektu](media/gfx_diag_demo_missing_object_shader_step_7.png "gfx_diag_demo_missing_object_shader_step_7")  
   
-    > [!TIP]
-    >  Pokud jsou současně ladění aplikace, můžete nastavit zarážky v tomto umístění a při vykreslení další rámečku se setkají. Pak si můžete prohlédnout členů `m_marbleConstantBufferData` zkontrolujte, že hodnota `projection` člen je nastavený samými nulami, pokud je vyplněno konstantní vyrovnávací paměti.  
+   > [!TIP]
+   >  Pokud jsou současně ladění vaší aplikace, můžete nastavit zarážku na tomto místě a při vykreslení dalšího snímku se dostanou. Pak si můžete prohlédnout členy `m_marbleConstantBufferData` potvrdit, že hodnota `projection` člen je nastavený na samými nulami, když se naplní vyrovnávací paměť konstant.  
   
- Po vyhledat umístění, kde se naplní konstantní vyrovnávací paměti a zjistit, že jeho hodnoty pocházejí z proměnnou `m_marbleConstantBufferData`, dalším krokem je zjistit, kde `m_marbleConstantBufferData.projection` členů je nastaven na samými nulami. Můžete použít **najít všechny odkazy** rychle kontrolovala kód, který změní hodnotu `m_marbleConstantBufferData.projection`.  
+   Po vyhledání umístění, kde se naplní vyrovnávací paměť konstant a zjistit, že jeho hodnoty pocházejí z proměnné `m_marbleConstantBufferData`, dalším krokem je zjistit, kde `m_marbleConstantBufferData.projection` člen je nastavený na samými nulami. Můžete použít **najít všechny odkazy** rychle vyhledávat kód, který změní hodnotu `m_marbleConstantBufferData.projection`.  
   
-#### <a name="to-find-where-the-projection-member-is-set-in-your-apps-source-code"></a>Najít, kde je nastaven člen projekce ve zdrojovém kódu vaší aplikace  
+#### <a name="to-find-where-the-projection-member-is-set-in-your-apps-source-code"></a>Chcete-li najít, kde je nastaven člen projekce ve zdrojovém kódu vaší aplikace  
   
-1.  Najít odkazy na `m_marbleConstantBufferData.projection`. Otevřete místní nabídku pro proměnnou `m_marbleConstantBufferData`a potom zvolte **najít všechny odkazy**.  
+1. Najít odkazy na `m_marbleConstantBufferData.projection`. Otevřete místní nabídku pro proměnnou `m_marbleConstantBufferData`a klikněte na tlačítko **najít všechny odkazy**.  
   
-2.  Přejděte do umístění řádku ve zdrojovém kódu vaší aplikace kde `projection` člen je upravit, vyberte tento řádek ve **Najít výsledky Symbol** okno. Vzhledem k tomu, že na první výsledek, který mění člena projekce nemusí být příčinou problému, bude pravděpodobně nutné prozkoumat několika oblastech zdrojového kódu vaší aplikace.  
+2. Přejděte do umístění na řádku ve zdrojovém kódu vaší aplikace ve kterém `projection` člen je upravit, vyberte tento řádek v **výsledky hledáni symbolu** okno. Protože první výsledek, který upraví člen projekce nemusí být příčinou problému, budete muset zkontrolovat několik oblastí zdrojovém kódu vaší aplikace.  
   
- Po nalezení umístění kde `m_marbleConstantBufferData.projection` není nastaven, můžete zkontrolovat okolního zdrojového kódu k určení původu nesprávnou hodnotu. V tomto scénáři je zjistit hodnotu `m_marbleConstantBufferData.projection` nastavena na místní proměnné s názvem `projection` před inicializací na hodnotu, která je dán kód `m_camera->GetProjection(&projection);` na následujícím řádku.  
+   Po nalezení umístění kde `m_marbleConstantBufferData.projection` je nastaven, můžete prozkoumat okolního zdrojový kód k určení původu nesprávnou hodnotu. V tomto scénáři zjistíte, že hodnota `m_marbleConstantBufferData.projection` je nastavena na místní proměnnou s názvem `projection` předtím, než byl inicializován na hodnotu, která je přidělena kódem `m_camera->GetProjection(&projection);` na dalším řádku.  
   
- ![Před inicializací je nastaven mramor projekce](media/gfx_diag_demo_missing_object_shader_step_9.png "gfx_diag_demo_missing_object_shader_step_9")  
+   ![Marble projekce nastaven před inicializací](media/gfx_diag_demo_missing_object_shader_step_9.png "gfx_diag_demo_missing_object_shader_step_9")  
   
- Chcete-li problém vyřešit, je přesunout na řádek kódu, který nastaví hodnotu `m_marbleConstantBufferData.projection` po řádek, který inicializuje hodnoty místní proměnné `projection`.  
+   Chcete-li problém vyřešit, je přesunout řádek kódu, který nastaví hodnotu `m_marbleConstantBufferData.projection` po řádek, který inicializuje hodnotu místní proměnné `projection`.  
   
- ![Opravené C&#43; &#43; zdrojový kód](media/gfx_diag_demo_missing_object_shader_step_10.png "gfx_diag_demo_missing_object_shader_step_10")  
+   ![Opravené C&#43; &#43; zdrojový kód](media/gfx_diag_demo_missing_object_shader_step_10.png "gfx_diag_demo_missing_object_shader_step_10")  
   
- Po opravě kód, můžete ho znovu sestavte a spusťte aplikaci znovu a zjistit, že se vyřešit problém vykreslování:  
+   Po opravě kód, můžete její opětovné sestavení a spuštění aplikace znovu a zjistit, že je vyřešen problém vykreslování:  
   
- ![Objekt v nyní zobrazeny. ] (media/gfx_diag_demo_missing_object_shader_resolution.png "gfx_diag_demo_missing_object_shader_resolution")
+   ![Objekt v nyní zobrazen. ](media/gfx_diag_demo_missing_object_shader_resolution.png "gfx_diag_demo_missing_object_shader_resolution")

@@ -1,13 +1,13 @@
 ---
-title: "Neočekávaný kvantifikátor (JavaScript) | Microsoft Docs"
-ms.custom: 
+title: Neočekávaný kvantifikátor (JavaScript) | Dokumentace Microsoftu
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.WebClient.Help.SCRIPT5018
@@ -16,42 +16,43 @@ dev_langs:
 - TypeScript
 - DHTML
 ms.assetid: ba6d34f9-2d6f-486c-a929-6cd9818be322
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fb6d6d3129057c399dd7369c6f69eb7396f07ab4
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: ef0955bac35009d9b6c82f1856bb9005a08043ad
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44282260"
 ---
 # <a name="unexpected-quantifier-javascript"></a>Neočekávaný kvantifikátor (JavaScript)
-Při sestavování vaší vzor hledání regulárního výrazu, vytvořili jste vzor element s faktor neplatný opakování. Například vzoru  
+Při vytváření vaší vyhledávací vzor regulárního výrazu, vytvoříte prvek modelu s faktorem neplatné opakování. Například vzor  
   
 ```  
 /^+/  
 ```  
   
- je neplatná, protože element ^ (začátku vstupu) nemůže mít faktor opakování. Následující tabulka uvádí prvky, které nemají faktory opakování.  
+ je neplatné. protože elementu ^ (začátku vstupu) nemůže mít faktor opakování. Následující tabulka uvádí prvky, které nelze mít faktory opakování.  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
 |^|Začátku vstupu|  
 |$|Konec vstupu|  
 |\b|Hranice slova|  
-|\B|Hranice mimo slovo|  
-|*|Opakování nula nebo více|  
+|\B|Mimoslovní hranic|  
+|*|Nula nebo více opakování|  
 |+|Jeden nebo více opakování|  
-|?|Žádnou nebo jednu opakování|  
+|?|Žádný nebo jeden opakování|  
 |{n}|n opakování|  
 |{n}|n nebo další opakování|  
-|{n, m}|Z n m opakování (včetně).|  
+|{n, m}|Z n až m, včetně opakování|  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
--   Zajistěte, aby že vaše element vzor hledání obsahuje pouze faktory právní opakování.  
+-   Zajistěte, aby že vaše vyhledávací vzor prvek obsahuje pouze faktory právní opakování.  
   
 ## <a name="see-also"></a>Viz také  
  [Objekt regulárního výrazu](../../javascript/reference/regular-expression-object-javascript.md)   
- [Syntaxi regulárního výrazu (JavaScript)](http://msdn.microsoft.com/en-us/ab0766e1-7037-45ed-aa23-706f58358c0e)
+ [Syntaxe regulárního výrazu (JavaScript)](https://msdn.microsoft.com/library/1400241x)

@@ -1,5 +1,5 @@
 ---
-title: Jak přidat VSPackages prvky uživatelského rozhraní | Microsoft Docs
+title: Jak balíčky VSPackages přidávají prvky uživatelského rozhraní | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,30 +15,31 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 930ab9e741b2fd5bbc0ca2954192fe5e2c4313d4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8b498f9df752fd5ac1f1212649aa5b8bb62d27fb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49839112"
 ---
-# <a name="how-vspackages-add-user-interface-elements"></a>Jak přidat VSPackages prvky uživatelského rozhraní
-VSPackage můžete přidávat prvky uživatelského rozhraní (UI, například nabídky panely nástrojů) a nástroje systému windows pro Visual Studio prostřednictvím .vsct souboru.  
+# <a name="how-vspackages-add-user-interface-elements"></a>Jak balíčky VSPackages přidávají prvky uživatelského rozhraní
+Můžete přidat prvky uživatelského rozhraní (UI), například nabídky, panely nástrojů a nástrojů systému windows, do sady Visual Studio prostřednictvím VSPackage *.vsct* souboru.  
   
- Můžete najít pokynů pro návrh pro prvky uživatelského rozhraní v [Visual Studio prostředí pro práci uživatelů](../../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md).  
+ Můžete najít pokyny k návrhu pro prvky uživatelského rozhraní na [zkušenosti uživatelů sady Visual Studio](../../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md).  
   
 ## <a name="the-visual-studio-command-table-architecture"></a>Architektura sady Visual Studio příkaz tabulky  
- Jak jsme uvedli, podporuje architekturu tabulky příkaz uvedenou architektury zásady. Principů za abstrakce, datové struktury a nástroje architektury tabulka příkazu jsou následující:  
+ Jak je uvedeno, architektura tabulky příkaz podporuje předchozí architektonických principů. Principy za abstrakce, datové struktury a nástroje pro architekturu tabulka příkazu jsou následující:  
   
--   Existují tři základní typy položek: nabídky, příkazy a skupiny. Nabídky mohou být zpřístupněny v uživatelském rozhraní jako nabídky dílčích, panely nástrojů nebo nástroje systému windows. Příkazy jsou postupy, které uživatel může spustit v prostředí IDE, a mohou být zpřístupněny jako položky nabídky, tlačítek, seznamy nebo další ovládací prvky. Skupiny jsou kontejnery pro nabídek a příkazů.  
+-   Existují tři základní typy položek: nabídky, příkazy a skupiny. Nabídky můžou zveřejnit v uživatelském rozhraní jako nabídky, dílčích nabídek, panelů nástrojů nebo okna nástrojů. Příkazy jsou postupy, které uživatel může spustit v prostředí IDE, a může být vystavena jako položky nabídky, tlačítka, seznamy nebo další ovládací prvky. Skupiny jsou kontejnery pro nabídek a příkazů.  
   
--   Každá položka je určena definicí, která popisuje položky, jeho prioritu relativně k dalším položkám a příznaky, které mění své chování.  
+-   Každá položka je určená popisující položku, jeho prioritu ve vztahu k jiné položky a příznaky, které upravují chování při jeho definici.  
   
--   Každá položka má umístění, která popisuje nadřazené položky. Položka může mít několik nadřazených objektů, tak, aby se může objevit v několika umístěních v uživatelském rozhraní.  
+-   Každá položka má umístění, která popisuje nadřazené položky. Položka může mít více nadřazených objektů, aby se může objevit v několika umístěních v uživatelském rozhraní.  
   
-     Každý příkaz musí mít skupinu jako jeho nadřazeným prvkem, i když je jediným podřízeným v této skupině. Každé standardní nabídky musí také mít nadřazenou skupinu. Panely nástrojů a nástroje systému windows fungovat jako vlastní nadřazené položky. Skupina může mít jako nadřazené hlavní nabídce sady Visual Studio, nebo všechny nabídky, panelu nástrojů nebo okno nástroje.  
+     Každý příkaz musí mít skupinu jako jeho nadřazeným prvkem, i když je jediným podřízeným v této skupině. Každý standardní nabídky musí také mít nadřazenou skupinu. Panely nástrojů a oken nástrojů slouží jako jejich nadřazené položky. Skupina může mít jako nadřazeného hlavního řádku nabídek sady Visual Studio, nebo všechny nabídky, nástrojů nebo panelu nástrojů.  
   
 ### <a name="how-items-are-defined"></a>Jak jsou definovány položky  
- . Vsct soubory jsou ve formátu XML. Soubor .vsct definuje prvky uživatelského rozhraní pro balíček a určuje, kde se zobrazí tyto prvky v prostředí IDE. Všechny nabídky, skupinu nebo příkaz v balíčku poprvé přiřazen GUID a ID v `Symbols` oddílu. Po celý zbytek .vsct soubor, každou nabídku, příkaz a skupiny je určen kombinací GUID a ID. Následující příklad ukazuje typické `Symbols` části generovaná balíček šablonou Visual Studio při **příkaz nabídky** je vybraný v šabloně.  
+ A *.vsct* soubor je ve formátu XML. Definuje prvky uživatelského rozhraní pro balíček a určuje, kde se zobrazí tyto prvky v integrovaném vývojovém prostředí. Každou nabídku, skupinu nebo příkaz v balíčku poprvé přiřazen identifikátor GUID a ID v `Symbols` oddílu. Ve zbývající části *.vsct* souboru, každé nabídky, příkaz a skupiny je identifikován jeho identifikátor GUID a ID kombinaci. Následující příklad ukazuje typickou `Symbols` části vygenerovaný balíček šablony sady Visual Studio při **příkazu nabídky** vybrány v šabloně.  
   
 ```xml  
 <Symbols>  
@@ -62,42 +63,42 @@ VSPackage můžete přidávat prvky uživatelského rozhraní (UI, například n
 </Symbols>  
 ```  
   
- Element nejvyšší úrovně z `Symbols` je oddíl [GuidSymbol Element](../../extensibility/guidsymbol-element.md). `GuidSymbol` Elementy mapování názvů pro identifikátory GUID, které používají rozhraní IDE pro identifikaci balíčky a jejich části.  
+ Element nejvyšší úrovně `Symbols` oddíl je [guidsymbol – element](../../extensibility/guidsymbol-element.md). `GuidSymbol` prvky mapování jména na identifikátory GUID, které používají rozhraní IDE k identifikaci balíčky a jejich součásti.  
   
 > [!NOTE]
->  Identifikátory GUID automaticky generované šabloně balíček Visual Studio. Kliknutím můžete také vytvořit jedinečný identifikátor GUID **vytvořit GUID** na **nástroje** nabídky.  
+>  GUID se automaticky generován balíček šablony sady Visual Studio. Jedinečný identifikátor GUID můžete také vytvořit kliknutím **Create GUID** na **nástroje** nabídky.  
   
- První `GuidSymbol` elementu "guid [název balíčku] Pkg", je identifikátor GUID balíčku sám sebe. Toto je identifikátor GUID, který je používán Visual Studio načíst balíček. Nemá obvykle podřízené elementy.  
+ První `GuidSymbol` elementu `guid<PackageName>Pkg`, je GUID samotném balíčku. Toto je identifikátor GUID, který se používá sada Visual Studio k načtení balíčku. Obvykle nemá podřízené prvky.  
   
- Podle konvence, nabídek a příkazů jsou seskupené v rámci druhý `GuidSymbol` elementu "guid [název balíčku] CmdSet", a jsou v části třetí `GuidSymbol` element, "guidImages". Není nutné postupovat podle touto konvencí, ale každý nabídky, skupiny, příkaz a rastrový obrázek musí být podřízenou `GuidSymbol` elementu.  
+ Podle konvence, nabídek a příkazů jsou seskupené v sekundy `GuidSymbol` elementu `guid<PackageName>CmdSet`, a rastrové obrázky mají v části třetí `GuidSymbol` elementu `guidImages`. Nemáte odpovídají této konvenci, ale každé nabídky, skupiny, příkaz a rastrový obrázek musí být podřízeným `GuidSymbol` elementu.  
   
- Ve druhém `GuidSymbol` element, který představuje sadu příkazů nástroje balíčku, je několik `IDSymbol` elementy. Každý [IDSymbol Element](../../extensibility/idsymbol-element.md) mapuje název na číselnou hodnotu a může představovat nabídky, skupinu nebo příkaz, který je součástí sadu příkazů. `IDSymbol` Elementů ve třetí `GuidSymbol` bitmap představují element, který se dá použít jako ikony pro příkazy. Protože dvojice GUID nebo ID musí být jedinečný v aplikaci, žádné dva podřízené objekty na stejné `GuidSymbol` element může mít stejnou hodnotu.  
+ Ve druhém `GuidSymbol` element, který představuje sadu příkazů balíčku, několik `IDSymbol` elementy. Každý [idsymbol – element](../../extensibility/idsymbol-element.md) mapuje název na číselnou hodnotu a může představovat nabídky, skupiny nebo příkaz, který je součástí sady příkazů. `IDSymbol` Elementy ve třetím `GuidSymbol` představují rastrové obrázky element, který může sloužit jako ikony pro příkazy. Protože identifikátor GUID a ID dvojice musejí být jedinečné v aplikaci, dva podřízené prvky stejného `GuidSymbol` element může obsahovat stejnou hodnotu.  
   
-### <a name="menus-groups-and-commands"></a>Nabídky, skupiny a příkazy  
- Když nabídky, skupinu nebo příkaz obsahuje GUID a ID, můžete ho přidat do prostředí IDE. Každý element uživatelského rozhraní musí mít následující akce:  
+### <a name="menus-groups-and-commands"></a>Příkazy, nabídky a skupiny  
+ Když nabídky, skupiny nebo příkaz má identifikátor GUID a ID, můžete přidat do integrovaného vývojového prostředí. Každý prvek uživatelského rozhraní musí mít následující věci:  
   
--   A `guid` atribut, který odpovídá názvu `GuidSymbol` element definovaný v rámci elementu uživatelského rozhraní.  
+-   A `guid` atribut, který odpovídá názvu `GuidSymbol` element, který je definován prvek uživatelského rozhraní v části.  
   
 -   `id` Atribut, který odpovídá názvu přidruženého `IDSymbol` elementu.  
   
-     Společně `guid` a `id` tvoří atributy *podpis* prvku uživatelského rozhraní.  
+     Společně `guid` a `id` compose atributy *podpis* prvku uživatelského rozhraní.  
   
--   A `priority` atribut, který určuje umístění prvku uživatelského rozhraní v jeho nadřazený nabídky nebo skupině.  
+-   A `priority` atribut, který určuje umístění prvku uživatelského rozhraní v jeho nadřazené nabídky nebo skupiny.  
   
--   A [nadřazený Element](../../extensibility/parent-element.md) s `guid` a `id` atributy, které určují podpis nadřazené nabídky nebo skupiny.  
+-   A [nadřazeného elementu](../../extensibility/parent-element.md) , který má `guid` a `id` atributy, které určují podpis nadřazené nabídky nebo skupiny.  
   
 #### <a name="menus"></a>Nabídky  
- Jednotlivé nabídky je definován jako [Menu Element](../../extensibility/menu-element.md) v `Menus` oddílu. Nabídky musí mít `guid`, `id`, a `priority` atributů a `Parent` elementu a také následující další atributy a podřízené položky:  
+ Každou nabídku je definován jako [Menu element](../../extensibility/menu-element.md) v `Menus` oddílu. Nabídky musí mít `guid`, `id`, a `priority` atributy a `Parent` element a také následující doplňkové atributy a podřízené položky:  
   
--   A `type` atribut, který určuje, zda se má v nabídce Zobrazit v integrovaném vývojovém prostředí jako typ nabídky nebo panelu nástrojů.  
+- A `type` atribut, který určuje, zda by měl zobrazit v nabídce v integrovaném vývojovém prostředí jako typ nabídky nebo panelu nástrojů.  
   
--   A [řetězce Element](../../extensibility/strings-element.md) obsahující [ButtonText Element](../../extensibility/buttontext-element.md), která určuje název v nabídce v prostředí IDE a [CommandName Element](../../extensibility/commandname-element.md), která určuje název, který je používány **příkaz** okna pro přístup k nabídce.  
+- A [Strings – element](../../extensibility/strings-element.md) , která obsahuje [ButtonText – element](../../extensibility/buttontext-element.md), který určuje název nabídky v integrovaném vývojovém prostředí a [CommandName – element](../../extensibility/commandname-element.md), který určuje název, který je používané **příkaz** okna pro přístup k nabídce.  
   
--   Volitelné příznaky. A [Element Command příznak](../../extensibility/command-flag-element.md) se mohou objevit v nabídce definice změnit jeho vzhled a chování v prostředí IDE.  
+- Volitelné příznaky. A [CommandFlag element](../../extensibility/command-flag-element.md) může objevit v definici nabídce můžete změnit její vzhled nebo chování v integrovaném vývojovém prostředí.  
   
- Každý `Menu` element musí mít skupinu jako jeho nadřazeným prvkem, pokud je element lze ukotvit například panelu nástrojů. Lze ukotvit nabídka je vlastní nadřazený objekt. Další informace o nabídky a hodnoty `type` atributů najdete v tématu [Menu Element](../../extensibility/menu-element.md) dokumentaci.  
+  Každý `Menu` element musí mít skupinu jako jeho nadřazeným prvkem, pokud není prvek ukotvitelné jako je například panel nástrojů. Ukotvitelné nabídka je vlastní nadřazený objekt. Další informace o nabídkách a hodnoty pro `type` atributu naleznete v tématu [Menu element](../../extensibility/menu-element.md) dokumentaci.  
   
- Následující příklad ukazuje nabídky, který se zobrazí na panelu nabídek Visual Studio vedle **nástroje** nabídky.  
+  Následující příklad ukazuje, které se zobrazí na řádku nabídek sady Visual Studio, vedle položky nabídky **nástroje** nabídky.  
   
 ```xml  
 <Menu guid="guidTopLevelMenuCmdSet"  
@@ -112,18 +113,18 @@ id="TopLevelMenu" priority="0x700" type="Menu">
 ```  
   
 #### <a name="groups"></a>Skupiny  
- Skupina je položku, která je definována v `Groups` oddílu .vsct souboru. Skupiny jsou jenom kontejnery. Že se nezobrazí v integrovaném vývojovém prostředí s výjimkou jako dělicí čáru v nabídce. Proto [skupinového elementu](../../extensibility/group-element.md) je definována pouze jeho podpis, prioritu a nadřazené.  
+ Skupinu je to položka, která je definována v `Groups` část *.vsct* souboru. Skupiny jsou pouze kontejnery. Se nezobrazují v integrovaném vývojovém prostředí s výjimkou jako zřejmý v nabídce. Proto [skupinového elementu](../../extensibility/group-element.md) je definována pouze jeho podpis, priority a nadřazené.  
   
- Skupina může mít nabídky, jiné skupiny nebo sám sebe jako nadřazený. Nadřazený je však obvykle nabídky nebo panelu nástrojů. V nabídce v předchozím příkladu je podřízená `IDG_VS_MM_TOOLSADDINS` skupiny a že skupiny je podřízená nabídek v sadě Visual Studio. Skupina v následujícím příkladu je podřízená položka nabídky v předchozího příkladu.  
+ Skupina může mít nabídku, jinou skupinu nebo samotný jako nadřazený. Nadřazené je však obvykle nabídky nebo panelu nástrojů. V nabídce v předchozím příkladu je podřízeným prvkem `IDG_VS_MM_TOOLSADDINS` skupiny a skupiny je podřízeným prvkem řádku nabídek sady Visual Studio. Skupiny v následujícím příkladu je podřízeným prvkem v nabídce v předchozím příkladu.  
   
-```  
+```xml  
  <Group guid="guidTopLevelMenuCmdSet" id="MyMenuGroup"  
 priority="0x0600">  
    <Parent guid="guidTopLevelMenuCmdSet" id="TopLevelMenu"/>  
  </Group>  
 ```  
   
- Protože je součástí nabídky, tato skupina by obvykle obsahovat příkazy. Však mohou obsahovat také jiné nabídky. Toto je, jak jsou definovány dílčích, jak je znázorněno v následujícím příkladu.  
+ Protože je součástí nabídky, tato skupina by obvykle obsahují příkazy. Ale mohou obsahovat také jiných nabídek. To je, jak jsou definované podnabídky, jak je znázorněno v následujícím příkladu.  
   
 ```xml  
 <Menu guid="guidTopLevelMenuCmdSet" id="SubMenu"  
@@ -137,14 +138,14 @@ priority="0x0100" type="Menu">
 ```  
   
 #### <a name="commands"></a>Příkazy  
- Příkaz, který je zadán pro IDE je definován jako buď [Button Element](../../extensibility/button-element.md) nebo [Element pole se seznamem](../../extensibility/combo-element.md). Chcete-li zobrazen v nabídce nebo panel nástrojů, příkaz, musíte mít skupinu jako svůj nadřazený uzel.  
+ Příkaz, který je k dispozici rozhraní IDE je definován jako buď [Button element](../../extensibility/button-element.md) nebo [prvek pole se seznamem](../../extensibility/combo-element.md). Aby se zobrazovaly na nabídky nebo panelu nástrojů, musí mít příkaz skupinu jako jeho nadřazený objekt.  
   
 ##### <a name="buttons"></a>Tlačítka  
- Tlačítka jsou definovány v `Buttons` oddílu. Všechny položky nabídky, tlačítko nebo jiného elementu, který uživatel klikne na spuštění jednoduchého příkazu je považován za tlačítko. Některé typy tlačítko může zahrnovat funkce seznamu. Tlačítka mají stejné požadované a volitelné atributy, které mají nabídky, a může mít také [Element ikony](../../extensibility/icon-element.md) určující identifikátor GUID a ID rastrový obrázek, který reprezentuje tlačítko v prostředí IDE. Další informace o tlačítka a jejich atributy, najdete v článku [tlačítka Element](../../extensibility/buttons-element.md) dokumentaci.  
+ Tlačítka jsou definovány v `Buttons` oddílu. Všechny položky nabídky, tlačítka nebo jiný element, který uživatel klikne na provedení jednoho příkazu je považován za tlačítko. Seznam funkcí mohou zahrnovat také některé typy tlačítek. Tlačítka mají stejné požadované a volitelné atributy, které mají nabídky, a může mít také [Icon – element](../../extensibility/icon-element.md) , který určuje identifikátor GUID a ID rastrového obrázku, který představuje tlačítko v integrovaném vývojovém prostředí. Další informace o tlačítka a jejich atributy, najdete v článku [Buttons – element](../../extensibility/buttons-element.md) dokumentaci.  
   
- Tlačítko v následujícím příkladu je podřízená skupiny v předchozího příkladu a se zobrazí v prostředí IDE jako položku nabídky v nabídce nadřazené této skupiny.  
+ Tlačítko v následujícím příkladu je podřízenou skupinu v předchozím příkladu a se zobrazí v integrovaném vývojovém prostředí jako položku nabídky v nabídce nadřazené skupiny.  
   
-```  
+```xml  
 <Button guid="guidTopLevelMenuCmdSet" id="cmdidTestCommand" priority="0x0100" type="Button">  
   <Parent guid="guidTopLevelMenuCmdSet" id="MyMenuGroup" />  
   <Icon guid="guidImages" id="bmpPic1" />  
@@ -155,14 +156,14 @@ priority="0x0100" type="Menu">
 </Button>  
 ```  
   
-##### <a name="combos"></a>Kláves  
- Kláves jsou definovány v `Combos` oddílu. Každý `Combo` element reprezentuje rozevíracím seznamu v prostředí IDE. Pole se seznamem může nebo nemusí být zápis uživatelů, v závislosti na hodnotě `type` atribut se seznamem se. Kláves mají stejné prvky a chování, které tlačítka mít a může mít následující další atributy:  
+##### <a name="combos"></a>Combos –  
+ Combos – jsou definovány v `Combos` oddílu. Každý `Combo` element reprezentuje pole rozevíracího seznamu v integrovaném vývojovém prostředí. Pole se seznamem může nebo nemusí být zapisovat i jiní uživatelé, závisí na hodnotě `type` atribut pole se seznamem. Combos – mají stejné prvky a chování, které tlačítka mají a může mít také následující doplňkové atributy:  
   
--   A `defaultWidth` atribut, který určuje šířka v pixelech.  
+- A `defaultWidth` atribut, který určuje šířka v pixelech.  
   
--   `idCommandList` Atribut, který určuje seznam, který obsahuje položky, které se zobrazí v seznamu. Příkaz seznamu musí být deklarován stejným `GuidSymbol` uzlu, který obsahuje se seznamem se.  
+- `idCommandList` Atribut, který určuje seznam, který obsahuje položky, které se zobrazí v seznamu. Seznam příkazů musí být deklarována ve stejném `GuidSymbol` uzel, který obsahuje pole se seznamem.  
   
- V následujícím příkladu definuje prvku pole se seznamem.  
+  Následující příklad definuje prvek pole se seznamem.  
   
 ```xml  
 <Combos>  
@@ -185,34 +186,34 @@ priority="0x0100" type="Menu">
 ```  
   
 ##### <a name="bitmaps"></a>Rastrové obrázky  
- Musí obsahovat příkazy, které se zobrazí spolu s ikonu `Icon` element, který odkazuje na rastrový obrázek pomocí jeho identifikátoru GUID a ID. Každý rastrového obrázku je definován jako [rastrový obrázek Element](../../extensibility/bitmap-element.md) v `Bitmaps` části. Jediné požadované atributy `Bitmap` jsou definice `guid` a `href`, který odkazuje na zdrojový soubor. Pokud zdrojový soubor barevný proužek prostředků **usedList** atribut je také nutný, seznam dostupných imagí v pruh. Další informace najdete v tématu [rastrový obrázek Element](../../extensibility/bitmap-element.md) dokumentaci.  
+ Musí obsahovat příkazy, které se zobrazí spolu s ikonou `Icon` element, který odkazuje na rastrový obrázek pomocí jeho identifikátoru GUID a ID. Každý rastrového obrázku je definován jako [rastrový obrázek element](../../extensibility/bitmap-element.md) v `Bitmaps` oddílu. Pouze požadované atributy `Bitmap` definice jsou `guid` a `href`, která odkazuje na zdrojový soubor. Pokud zdrojový soubor pruh prostředků **usedList** atribut je také potřeba, seznam dostupných imagí v pruhu. Další informace najdete v tématu [rastrový obrázek element](../../extensibility/bitmap-element.md) dokumentaci.  
   
 ### <a name="parenting"></a>Správa nadřazených  
- Následující pravidla řídí, jak položky může volat jinou položku jako svůj nadřazený uzel.  
+ Následující pravidla určují, jak položku může volat jinou položku jako jeho nadřazený objekt.  
   
-|Prvek|Definované v této části tabulky příkaz|Mohou být obsaženy (jako nadřazená nebo umístění v `CommandPlacements` oddílu, nebo obojí)|Může obsahovat (označované jako nadřízenou položku.)|  
-|-------------|--------------------------------------------------|---------------------------------------------------------------------------------------------------|---------------------------------------------|  
-|Skupina|[Groups – Element](../../extensibility/groups-element.md), IDE, ostatní VSPackages|Z nabídky, skupinu, samotné položky|Nabídky, skupiny a příkazy|  
-|Nabídka|[Element nabídky](../../extensibility/menus-element.md), IDE, ostatní VSPackages|1 *n* skupiny|0 *n* skupiny|  
-|Panel nástrojů|[Element nabídky](../../extensibility/menus-element.md), IDE, ostatní VSPackages|Samotnou položku|0 *n* skupiny|  
-|Položka nabídky|[Tlačítka Element](../../extensibility/buttons-element.md), IDE, ostatní VSPackages|1 *n* skupin, samotné položky|-0 *n* skupiny|  
-|Tlačítko|[Tlačítka Element](../../extensibility/buttons-element.md), IDE, ostatní VSPackages|1 *n* skupin, samotné položky||  
-|Pole se seznamem|[Element kláves](../../extensibility/combos-element.md), IDE, ostatní VSPackages|1 *n* skupin, samotné položky||  
+|Prvek|Definované v této části tabulky příkazů|Mohou být obsaženy (jako nadřazená nebo podle umístění v `CommandPlacements` části nebo obojí)|Může obsahovat (označované jako nadřazená)|  
+|-------------| - | - | - |  
+|Skupina|[Groups – element](../../extensibility/groups-element.md), rozhraní IDE, ostatní rozšíření VSPackages|Nabídka, skupiny, přímo s příslušnou položkou|Příkazy, nabídky a skupiny|  
+|Nabídka|[Menus – element](../../extensibility/menus-element.md), rozhraní IDE, ostatní rozšíření VSPackages|1 *n* skupiny|0 na *n* skupiny|  
+|Panel nástrojů|[Menus – element](../../extensibility/menus-element.md), rozhraní IDE, ostatní rozšíření VSPackages|Přímo s příslušnou položkou|0 na *n* skupiny|  
+|Položka nabídky|[Buttons – element](../../extensibility/buttons-element.md), rozhraní IDE, ostatní rozšíření VSPackages|1 *n* ve skupině, přímo s příslušnou položkou|-0 pro *n* skupiny|  
+|Tlačítko|[Buttons – element](../../extensibility/buttons-element.md), rozhraní IDE, ostatní rozšíření VSPackages|1 *n* ve skupině, přímo s příslušnou položkou||  
+|Pole se seznamem|[Combos – element](../../extensibility/combos-element.md), rozhraní IDE, ostatní rozšíření VSPackages|1 *n* ve skupině, přímo s příslušnou položkou||  
   
-### <a name="menu-command-and-group-placement"></a>Nabídky, příkazu a umístění skupiny  
- Nabídky, skupinu nebo příkaz můžete zobrazit na více než jednom místě v prostředí IDE. Pro položku, kterou chcete jsou zobrazeny na několika místech, musí být přidaný do `CommandPlacements` části jako [CommandPlacement Element](../../extensibility/commandplacement-element.md). Všechny nabídky, skupinu nebo příkaz se dá přidat jako příkaz umístění. Panely nástrojů nelze však umístit tímto způsobem, protože nelze vložit do víc kontextová umístění.  
+### <a name="menu-command-and-group-placement"></a>Nabídky, příkaz a skupiny umístění  
+ Nabídky, skupiny nebo příkaz může zobrazit ve více než jedné oblasti v rozhraní IDE. Položky se zobrazí v několika umístěních, musí být přidané na `CommandPlacements` oddíl jako [commandplacement – element](../../extensibility/commandplacement-element.md). Všechny nabídky, skupiny nebo příkaz lze přidat jako příkaz umístění. Panely nástrojů nelze však umístit tímto způsobem, protože se nemůže objevit v několika umístěních kontextové.  
   
- Příkaz umísťováním mít `guid`, `id`, a `priority` atributy. Identifikátor GUID a ID musí odpovídat názvům položky, které je umístěné. `priority` Atribut určuje umístění položky s ohledem na ostatní položky. Při IDE Sloučí dvě nebo více položek, které mají stejnou prioritu, jsou jejich umísťováním definován, protože rozhraní IDE není zaručeno, že se balíček prostředků ve stejném pořadí čtou pokaždé, když je balíček založený.  
+ Příkaz umístění mají `guid`, `id`, a `priority` atributy. Identifikátor GUID a ID musí odpovídat ty položky, který je umístěn. `priority` Atribut určuje umístění položky s ohledem na další položky. Když rozhraní IDE Sloučí dvě nebo více položek, které mají stejnou prioritu, jejich umístění nejsou definovány, protože integrovaného vývojového prostředí nezaručuje, že se balíček prostředků ve stejném pořadí čtení pokaždé, když je sestaven balíček.  
   
- Z nabídky nebo skupiny se zobrazí na více místech, zobrazí se všechny podřízené objekty dané nabídky nebo skupiny v každé instanci.  
+ Nabídka nebo skupina se zobrazí v několika umístěních, zobrazí se všechny podřízené objekty z této nabídky nebo skupiny v každé instanci.  
   
 ## <a name="command-visibility-and-context"></a>Příkaz viditelnost a kontext  
- Při instalaci více VSPackages připojovaném nabídek, položek nabídek a panelů nástrojů může zaplnit rozhraní IDE. Chcete-li se tomuto problému vyhnout, můžete řídit viditelnost jednotlivé prvky uživatelského rozhraní pomocí *omezení viditelnosti* a příznaky příkazu.  
+ Při instalaci více balíčků VSPackage připojovaném nabídek, položky nabídky a panely nástrojů může dál sbližuje tyto integrovaného vývojového prostředí. K tomuto problému vyhnout, můžete řídit viditelnost jednotlivé prvky uživatelského rozhraní pomocí *viditelnost omezení* a příznaků příkazů.  
   
-##### <a name="visibility-constraints"></a>Omezení viditelnosti  
- Omezení viditelnosti je nastaven jako [VisibilityItem Element](../../extensibility/visibilityitem-element.md) v `VisibilityConstraints` oddílu. Omezení viditelnosti definuje konkrétní kontexty uživatelského rozhraní, ve kterých je cílová položka viditelné. Nabídky nebo příkazu, který je zahrnut v této části je viditelná jenom v případě, že jedna z definovaných kontexty je aktivní. Pokud nabídky nebo příkaz není odkazy v této části, je vždy viditelné ve výchozím nastavení. Tato část se nevztahuje na skupiny.  
+### <a name="visibility-constraints"></a>Omezení viditelnosti  
+ Viditelnost omezení je nastaven jako [visibilityitem – element](../../extensibility/visibilityitem-element.md) v `VisibilityConstraints` oddílu. Přehled omezení definuje konkrétní kontexty uživatelského rozhraní, ve kterých je cílová položka viditelná. Nabídka nebo příkaz, který je zahrnuta v této části je viditelná pouze v případě, že jedna z definovaných kontexty je aktivní. Pokud příkazu nebo nabídky se neodkazuje v této části, je vždy zobrazen ve výchozím nastavení. Tato část se nevztahuje na skupiny.  
   
- `VisibilityItem` elementy musí mít tři atributy takto: `guid` a `id` prvku uživatelského rozhraní, a `context`. `context` Určuje atribut, když cílová položka se bude zobrazovat a trvá jakýkoli platný kontext uživatelského rozhraní jako jeho hodnotu. Konstanty kontextu uživatelského rozhraní pro sadu Visual Studio jsou členy <xref:Microsoft.VisualStudio.VSConstants> třídy. Každý `VisibilityItem` element může trvat kontextu pouze jednu hodnotu. Druhý kontextu použít, vytvořte druhý `VisibilityItem` element, který odkazuje na položku stejné, jak je znázorněno v následujícím příkladu.  
+ `VisibilityItem` elementy musí mít tři atributy, následujícím způsobem: `guid` a `id` cílového prvku uživatelského rozhraní, a `context`. `context` Atribut určuje, kdy cílovou položku se nebude zobrazovat a přijímá libovolný platný kontext jako hodnotu uživatelského rozhraní. Konstanty kontextu uživatelského rozhraní pro sadu Visual Studio jsou členy <xref:Microsoft.VisualStudio.VSConstants> třídy. Každý `VisibilityItem` element může trvat pouze jeden kontext hodnotu. Druhý kontextu použít, vytvořte druhý `VisibilityItem` element, který odkazuje na jedné položce, jak je znázorněno v následujícím příkladu.  
   
 ```xml  
 <VisibilityConstraints>  
@@ -225,81 +226,81 @@ priority="0x0100" type="Menu">
 </VisibilityConstraints>  
 ```  
   
-##### <a name="command-flags"></a>Příkaz příznaky  
- Následující příznaky příkazu může ovlivnit viditelnost nabídek a příkazů, které se vztahují na.  
+### <a name="command-flags"></a>Příkaz příznaky  
+ Následující příkaz příznaky mohou ovlivnit viditelnost nabídek a příkazů, které se vztahují na.  
   
- AlwaysCreate  
- I když nemá žádné skupiny nebo tlačítek, vytvoří se nabídky.  
+ `AlwaysCreate`  
+ Nabídka se vytvoří i v případě, že nemá žádné skupiny ani tlačítka.  
   
- Platné pro: `Menu`  
+ Platí pro: `Menu`  
   
- CommandWellOnly  
- Použít tento příznak Pokud příkaz nezobrazí v nabídce nejvyšší úrovně a chcete, aby byl k dispozici pro přizpůsobení další prostředí, například vazbu klíče. Po instalaci VSPackage uživatele můžete přizpůsobit tyto příkazy otevřením **možnosti** dialogové okno a potom úpravy příkaz umístění v rámci **klávesnice prostředí** kategorie. Nemá vliv na umístění v místní nabídky, panely nástrojů, nabídky řadiče nebo dílčích.  
+ `CommandWellOnly`  
+ Použijte tento příznak Pokud tento příkaz nezobrazí v nabídce nejvyšší úrovně a chcete ji dejte k dispozici pro přizpůsobení další prostředí, například jeho vazbu klíče. Po instalaci sady VSPackage, může uživatel přizpůsobit tyto příkazy tak, že otevřete **možnosti** dialogové okno a poté úpravou příkaz umístění v rámci **klávesnice prostředí** kategorie. Nemá vliv na umístění v místní nabídky, panely nástrojů, nabídky řadiče nebo dílčích nabídek.  
   
- Platná pro: `Button`, `Combo`  
+ Platné pro: `Button`, `Combo`  
   
- DefaultDisabled  
- Ve výchozím nastavení příkaz vypnutá, pokud VSPackage, který implementuje příkaz není načten nebo nebyla zavolána metoda QueryStatus.  
+ `DefaultDisabled`  
+ Ve výchozím nastavení příkaz zakázaná, pokud není načtena sady VSPackage, která implementuje příkaz nebo nebyla zavolána metoda QueryStatus.  
   
- Platná pro: `Button`, `Combo`  
+ Platné pro: `Button`, `Combo`  
   
- DefaultInvisible  
- Ve výchozím nastavení je příkaz Pokud VSPackage, který implementuje příkaz není načten nebo nebyla zavolána metoda QueryStatus neviditelná.  
+ `DefaultInvisible`  
+ Ve výchozím nastavení příkaz je neviditelný, pokud sady VSPackage, která implementuje příkazu nebyla načtena, nebo nebyla zavolána metoda QueryStatus.  
   
- Měly být spojeny s `DynamicVisibility` příznak.  
+ By měly být kombinované pomocí `DynamicVisibility` příznak.  
   
- Platná pro: `Button`, `Combo`, `Menu`  
+ Platné pro: `Button`, `Combo`, `Menu`  
   
- DynamicVisibility  
- Viditelnost příkazu můžete změnit pomocí metody QueryStatus nebo kontextu identifikátor GUID, který je součástí `VisibilityConstraints` části.  
+ `DynamicVisibility`  
+ Viditelnost příkazu můžete změnit pomocí `QueryStatus` metoda nebo kontext identifikátor GUID, který je součástí `VisibilityConstraints` oddílu.  
   
- Platí pro příkazy, které se zobrazují v nabídkách, nikoli na panely nástrojů. Položky panelu nástrojů nejvyšší úrovně můžete zakázat, ale není skryté, když je příznak OLECMDF_INVISIBLE vrátila z metody QueryStatus.  
+ Platí pro příkazy, které se zobrazují v nabídkách, ne na panely nástrojů. Položky panelu nástrojů nejvyšší úrovně zakázané, ale není skrytý, pokud `OLECMDF_INVISIBLE` příznak je vrácen z `QueryStatus` metoda.  
   
- V nabídce tento příznak také znamená, že ho měli při jeho členové budou skryti automaticky skryty. Tento příznak je přiřazen dílčích obvykle, protože už máte toto chování nabídek nejvyšší úrovně.  
+ V nabídce tento příznak také určuje, že ho automaticky skryt, pokud její členové budou skryti. Tento příznak se obvykle přiřadí podnabídek vzhledem k tomu, že už máte toto chování nabídek nejvyšší úrovně.  
   
- Měly být spojeny s `DefaultInvisible` příznak.  
+ By měly být kombinované pomocí `DefaultInvisible` příznak.  
   
- Platná pro: `Button`, `Combo`, `Menu`  
+ Platné pro: `Button`, `Combo`, `Menu`  
   
- NoShowOnMenuController  
- Pokud je příkaz, který má tento příznak nastavený na řadiči nabídky, příkaz se v rozevíracím seznamu nezobrazí.  
+ `NoShowOnMenuController`  
+ Pokud příkaz, který má tento příznak je umístěn na kontroleru nabídky, příkaz se v rozevíracím seznamu nezobrazí.  
   
- Platné pro: `Button`  
+ Platí pro: `Button`  
   
- Další informace o příkazu příznaky najdete v tématu [Element Command příznak](../../extensibility/command-flag-element.md) dokumentaci.  
+ Další informace o příznaků příkazů najdete v článku [CommandFlag element](../../extensibility/command-flag-element.md) dokumentaci.  
   
-##### <a name="general-requirements"></a>Obecné požadavky  
- Váš příkaz musí projít následující řadu testů, než lze zobrazit a povolit:  
+#### <a name="general-requirements"></a>Obecné požadavky  
+ Váš příkaz musí projít následující série testů předtím, než je možné zobrazit a povoleno:  
   
--   Příkaz je správně nastavený.  
+-   Příkaz je správně umístěná.  
   
 -   `DefaultInvisible` Není nastaven příznak.  
   
 -   Nadřazené nabídky nebo panelu nástrojů je viditelný.  
   
--   Příkaz není z důvodu kontextu položku v neviditelná [VisibilityConstraints Element](../../extensibility/visibilityconstraints-element.md) části.  
+-   Příkaz není kvůli kontextu položku v neviditelná [visibilityconstraints – element](../../extensibility/visibilityconstraints-element.md) oddílu.  
   
--   VSPackage kód, který implementuje <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní zobrazuje a umožňuje příkazu. Žádný kód rozhraní zachytili ji a u něj.  
+-   VSPackage kód, který implementuje <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní zobrazuje a umožňuje svých rukou. Žádný kód rozhraní zachytili ji a u něj.  
   
--   Když uživatel klikne příkazu, stane se v rámci postupu popsané v [směrování algoritmus](../../extensibility/internals/command-routing-algorithm.md).  
+-   Když uživatel klikne na svých rukou, bude v souladu s postupem, který je popsaný v [algoritmus směrování](../../extensibility/internals/command-routing-algorithm.md).  
   
-## <a name="calling-pre-defined-commands"></a>Předem definované příkazy volání  
- [UsedCommands Element](../../extensibility/usedcommands-element.md) VSPackages umožňuje přístup k příkazům, které jsou k dispozici další VSPackages nebo rozhraní IDE. Chcete-li to provést, vytvořte [UsedCommand Element](../../extensibility/usedcommand-element.md) s identifikátorem GUID a ID pomocí příkazu. To zajistí, že příkaz budou načteny Visual Studio, i v případě, že není součástí aktuální konfigurace sady Visual Studio. Další informace najdete v tématu [UsedCommand Element](../../extensibility/usedcommand-element.md).  
+## <a name="call-pre-defined-commands"></a>Volání předdefinovaných příkazů  
+ [Usedcommands – element](../../extensibility/usedcommands-element.md) rozšíření VSPackages umožňuje přístup k příkazům, které jsou k dispozici další balíčky VSPackages nebo integrovaného vývojového prostředí. K tomuto účelu vytvořte [usedcommand – element](../../extensibility/usedcommand-element.md) , který má identifikátor GUID a ID příkazu k použití. Tím se zajistí, že příkaz načtou pomocí sady Visual Studio, i když to není součástí aktuální konfiguraci sady Visual Studio. Další informace najdete v tématu [usedcommand – element](../../extensibility/usedcommand-element.md).  
   
 ## <a name="interface-element-appearance"></a>Vzhled elementu rozhraní  
  Důležité informace pro výběr a umístění prvků příkazu jsou následující:  
   
--   [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nabízí mnoho prvky uživatelského rozhraní, které se zobrazují odlišně v závislosti na umístění.  
+- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nabízí mnoho prvků uživatelského rozhraní, které se zobrazují odlišně v závislosti na umístění.  
   
--   Prvku uživatelského rozhraní, která je definována pomocí `DefaultInvisible` příznak se nezobrazí v prostředí IDE, pokud je buď zobrazí jeho implementace VSPackage <xref:EnvDTE.IDTCommandTarget.QueryStatus%2A> metoda, nebo ve spojení s konkrétní kontext uživatelského rozhraní v `VisibilityConstraints` části.  
+- Prvek uživatelského rozhraní, který je definován pomocí `DefaultInvisible` příznak se nezobrazí v integrovaném vývojovém prostředí, pokud to není buď zobrazí jeho implementace VSPackage <xref:EnvDTE.IDTCommandTarget.QueryStatus%2A> metodu, nebo ve spojení s konkrétním kontextu uživatelského rozhraní v `VisibilityConstraints` oddílu.  
   
--   I úspěšně umístěného příkaz se nemusí zobrazit. Tato možnost je vzhledem k tomu, že rozhraní IDE automaticky skryje nebo zobrazí některé příkazy, v závislosti na rozhraní, která VSPackage má (nebo nejsou) implementovaná. Například VSPackage implementace některých sestavení rozhraní položky související s sestavení nabídky příčiny automaticky zobrazený.  
+- Úspěšně umístěné příkaz se nemusí zobrazit. Toto je vzhledem k tomu, že rozhraní IDE automaticky skryje nebo zobrazí některé příkazy, v závislosti na rozhraní, které sady VSPackage má (nebo ne) implementováno. Například na VSPackage provádění některých sestavení rozhraní položky související s buildem nabídky způsobí, že má být zobrazen automaticky.  
   
--   Použití `CommandWellOnly` příznak v definici elementu uživatelského rozhraní znamená, že příkaz lze přidat pouze pomocí vlastního nastavení.  
+- Použití `CommandWellOnly` příznak v definici prvku uživatelského rozhraní znamená, že příkaz lze přidat pouze pomocí vlastního nastavení.  
   
--   Příkazy může být k dispozici pouze v určitých uživatelského rozhraní kontextů, například jenom v případě, že když integrovaného vývojového prostředí v zobrazení návrhu, zobrazí se dialogové okno.  
+- Příkazy mohou být k dispozici pouze v určitých uživatelského rozhraní kontextech, například pouze v případě, že po integrovaného vývojového prostředí v návrhovém zobrazení, zobrazí se dialogové okno.  
   
--   Chcete-li způsobit, že některé prvky uživatelského rozhraní, který se má zobrazit v prostředí IDE, musíte implementovat jednu nebo více rozhraní nebo napsat kód.  
+- Způsobí některé prvky uživatelského rozhraní, který se má zobrazit v integrovaném vývojovém prostředí, musí implementovat jedno nebo více rozhraní nebo napsat kód.  
   
-## <a name="see-also"></a>Viz také  
- [Rozšiřování nabídek a příkazů](../../extensibility/extending-menus-and-commands.md)
+## <a name="see-also"></a>Viz také:  
+ [Rozšíření nabídek a příkazů](../../extensibility/extending-menus-and-commands.md)

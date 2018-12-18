@@ -1,5 +1,5 @@
 ---
-title: Nové nebo změněné chování Editor adaptéry | Microsoft Docs
+title: Nové nebo změněné chování editoru adaptéry | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,48 +13,49 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 22028b1b2725f184c3d5748f2885a17d4bff0c60
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b2b32eeb110240cabfec5d81cc862611a0d32fe2
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39639231"
 ---
-# <a name="new-or-changed-behavior-with-editor-adapters"></a>Nové nebo změněné chování adaptéry editoru
-Pokud aktualizujete kód, který byl napsaných pro starší verze sady Visual Studio základní editoru a máte v úmyslu použít editor adaptérů (nebo překrytí) místo pomocí nového rozhraní API, byste měli vědět následující rozdíly v chování nástroje adaptéry editoru s ohledem na předchozí základní editor.  
+# <a name="new-or-changed-behavior-with-editor-adapters"></a>Nové nebo změněné chování editoru adaptéry
+Pokud provádíte aktualizaci kódu napsaného pro starší verze sady Visual Studio core editor a plánujete používat editor adaptéry (nebo překrytí) místo použití nového rozhraní API, byste měli vědět následující rozdíly v chování editoru adaptéry s ohledem na předchozí základní editor.  
   
 ## <a name="features"></a>Funkce  
   
-#### <a name="using-setsite"></a>Pomocí SetSite()  
- Je třeba volat <xref:Microsoft.VisualStudio.OLE.Interop.IObjectWithSite.SetSite%2A> při vytvořit textové vyrovnávací paměti, zobrazení textu a kódu windows, před provedením další operace s nimi. Je to ale není nutné v případě, že používáte <xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService> vytvořit, protože volání metody Create() této služby, sami <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.SetSite%2A>.  
+### <a name="use-setsite"></a>Použití SetSite()  
+ Je nutné volat <xref:Microsoft.VisualStudio.OLE.Interop.IObjectWithSite.SetSite%2A> při souběžné vytvoření součásti vyrovnávací paměti textu, zobrazení textu a kódu windows před provedením jakékoli další operace, které jsou na nich. Ale to není nezbytné, pokud použijete <xref:Microsoft.VisualStudio.Editor.IVsEditorAdaptersFactoryService> vytvořit, protože tato služba `Create()` volání metody sami <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.SetSite%2A>.  
   
-#### <a name="hosting-ivscodewindow-and-ivstextview-in-your-own-content"></a>Hostování IVsCodeWindow a IVsTextView v svůj vlastní obsah  
- Je možné hostovat obě <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow> a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> vlastní obsah pomocí Win32 režim nebo režim WPF. Nicméně byste měli mít na paměti, že jsou některé rozdíly ve dvou režimech.  
+### <a name="host-ivscodewindow-and-ivstextview-in-your-own-content"></a>Hostování IVsCodeWindow a IVsTextView ve vlastní obsah  
+ Můžete hostovat i <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow> a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> ve vlastním obsahu pomocí Win32 režim nebo režim WPF. Nicméně byste měli mít na paměti, že existují určité rozdíly ve dvou režimech.  
   
-##### <a name="using-win32-and-wpf-versions-of-ivscodewindow"></a>Použití Win32 a WPF verzí IVsCodeWindow  
- Okno editoru kódu je odvozený od <xref:Microsoft.VisualStudio.Shell.WindowPane>, které implementuje starší Win32 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> rozhraní a také nové WPF <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIElementPane> rozhraní. Můžete použít <xref:Microsoft.VisualStudio.Shell.WindowPane.Microsoft%23VisualStudio%23Shell%23Interop%23IVsWindowPane%23CreatePaneWindow%2A> metodu pro vytvoření na základě HWND hostování prostředí, nebo <xref:Microsoft.VisualStudio.Shell.WindowPane.Microsoft%23VisualStudio%23Shell%23Interop%23IVsUIElementPane%23CreateUIElementPane%2A> metodu pro vytvoření hostitelského prostředí WPF. Základní editor vždy používá WPF, ale můžete vytvořit druh podokna, který vyhovuje požadavků na hostování, pokud v tomto podokně okna jsou vložení přímo do vlastní obsah.  
+#### <a name="use-win32-and-wpf-versions-of-ivscodewindow"></a>Verze IVsCodeWindow použití Win32 a WPF  
+ Okno editor kódu je odvozen z <xref:Microsoft.VisualStudio.Shell.WindowPane>, které implementuje starší Win32 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> rozhraní a také novou WPF <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIElementPane> rozhraní. Můžete použít <xref:Microsoft.VisualStudio.Shell.WindowPane.Microsoft%23VisualStudio%23Shell%23Interop%23IVsWindowPane%23CreatePaneWindow%2A> metodu pro vytvoření založené na HWND hostitelské prostředí, nebo <xref:Microsoft.VisualStudio.Shell.WindowPane.Microsoft%23VisualStudio%23Shell%23Interop%23IVsUIElementPane%23CreateUIElementPane%2A> metodu pro vytvoření prostředí hostování WPF. Základní editor vždy používá WPF, ale můžete vytvořit typ podokno okna, která vyhovuje hostování požadavky, pokud vkládáte obsah tohoto podokna přímo do vlastní obsah.  
   
-##### <a name="using-win32-and-wpf-versions-of-ivstextview"></a>Použití Win32 a WPF verzí IVsTextView  
+#### <a name="use-win32-and-wpf-versions-of-ivstextview"></a>Verze IVsTextView použití Win32 a WPF  
  Můžete nastavit <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> Win32 režim nebo režim WPF.  
   
- Pokud objekt factory editoru vytvoří textového zobrazení, ve výchozím nastavení je umístěn uvnitř popisovačem HWND a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.GetWindowHandle%2A> vrací HWND. Tento režim byste neměli používat pro vložení editoru uvnitř ovládací prvek WPF.  
+ Pokud objekt pro vytváření editoru ve výchozím nastavení je umístěn uvnitř HWND, vytvoří zobrazení textu a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.GetWindowHandle%2A> vrací HWND. Tento režim byste neměli používat pro vložení editoru uvnitř ovládacího prvku WPF.  
   
- Nastavit na režim WPF textového zobrazení, musí volat <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.Initialize%2A> a předat <xref:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags3> jako jeden z inicializace flags v `InitView` parametr. Můžete získat <xref:System.Windows.FrameworkElement> voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIElementPane.CreateUIElementPane%2A>.  
+ Zobrazení textu nastavit na režim WPF, musíte volat <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.Initialize%2A> a předejte mu <xref:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags3> jako jeden z inicializace příznaky `InitView` parametru. Můžete získat <xref:System.Windows.FrameworkElement> voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIElementPane.CreateUIElementPane%2A>.  
   
- WPF režimu se liší od režimu Win32 dvěma způsoby. Nejprve textového zobrazení může být hostovaný v kontextu WPF. V podokně WPF můžete přejít pomocí přetypování <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> k <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIElementPane> a volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIElement.GetUIObject%2A>. Druhý, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.GetWindowHandle%2A> stále vrátí popisovačem HWND, ale tato HWND slouží pouze k zkontrolujte jeho umístění a zaměřit se na něm. Vzhledem k tomu, že ji nebude mít vliv na to, jak editoru vybarví okna, nesmí používat tento HWND reagovat na zprávu WM_PAINT. Tato HWND není k dispozici pouze pro usnadnění přechodu na nový kód editor prostřednictvím adaptéry. Důrazně doporučujeme byste neměli používat `VIF_NO_HWND_SUPPORT` Pokud příslušné součásti vyžaduje popisovačem HWND pracovat z důvodu omezení v HWND vrácená z `GetWindowHandle` při v tomto režimu.  
+ Režim WPF se liší od režimu Win32 dvěma způsoby. Nejprve je možné hostovat zobrazení textu v kontextu WPF. V podokně WPF se zpřístupní po přetypování <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> k <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIElementPane> a volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIElement.GetUIObject%2A>. Druhý, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.GetWindowHandle%2A> stále vrací HWND, ale tento HWND lze použít pouze ke kontrole jeho pozice a zaměřit se na něj. Tento HWND nesmí používat reagovat na zprávu WM_PAINT, protože to nebude mít vliv na to, jak editoru jsou vykreslovány v okně. Tato HWND je k dispozici pouze pro usnadnění přechodu na Nový editor kódu prostřednictvím adaptérů. Důrazně doporučujeme, že byste neměli používat `VIF_NO_HWND_SUPPORT` Pokud vaše komponenta vyžaduje HWND pracovat z důvodu omezení v HWND vrácená `GetWindowHandle` během činnosti v tomto režimu.  
   
-#### <a name="passing-arrays-as-parameters-in-native-code"></a>Předávání polí jako parametrů v nativním kódu  
- Existuje mnoho způsobů v editoru starší verze rozhraní API, které mají parametry, které obsahují pole a jeho počet. Mezi příklady patří:  
+#### <a name="pass-arrays-as-parameters-in-native-code"></a>Předávání polí jako parametrů v nativním kódu  
+ Existuje mnoho metod v editoru starší verze rozhraní API, které mají parametry, které zahrnují pole a její vlastnosti count. Mezi příklady patří:  
   
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewEx.AppendViewOnlyMarkerTypes%2A>  
   
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewEx.RemoveViewOnlyMarkerTypes%2A>  
   
- Při volání těchto metod v nativním kódu, musí projít v pouze jeden element najednou. Pokud předáte ve více než jeden element, volání se odmítne kvůli problémům s primární spolupráce implementace.  
+ Při volání těchto metod v nativním kódu, musíte předat v pouze jeden element najednou. Pokud předáte ve více než jeden element, volání budou odmítnuty, kvůli problémům s primární spolupráce implementace.  
   
- Problém je složitější s metodami, jako <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewEx.SetIgnoreMarkerTypes%2A>. Pokaždé, když tato metoda je volána, vymaže předchozí seznam typů ignorováno značky, takže není možné jednoduše mohli volat tuto metodu třikrát s tři typy jiné značky. Pouze remedy je mohli volat tuto metodu jenom ve spravovaném kódu.  
+ Problém je složitější s metodami, jako <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewEx.SetIgnoreMarkerTypes%2A>. Pokaždé, když se tato metoda je volána, vymaže předchozí seznam ignorovaných značky typů, takže ho není možné jednoduše mohli volat tuto metodu třikrát s tři typy jiné značky. Jediným řešením je volání této metody pouze ve spravovaném kódu.  
   
 #### <a name="threading"></a>Dělení na vlákna  
- Adaptér vyrovnávací paměti by měly vždy volat z vlákna uživatelského rozhraní. Adaptér pro vyrovnávací paměť je spravovaný objekt, což znamená, že se volání do ní ze spravovaného kódu vynechat zařazování COM a volání nebude automaticky zařadit do vlákna uživatelského rozhraní.  Pokud adaptér vyrovnávací paměti se volá z vlákna na pozadí, musíte použít <xref:System.Windows.Threading.Dispatcher.Invoke%2A> nebo podobné metody.  
+ Adaptér vyrovnávací paměti musí vždy volat z vlákna uživatelského rozhraní. Adaptér vyrovnávací paměti je spravovaný objekt, což znamená, že volání do něj ze spravovaného kódu obejde zařazování COM a volání nebude automaticky zařadit do vlákna uživatelského rozhraní.  Pokud adaptér vyrovnávací paměti při volání z vlákna na pozadí, je nutné použít <xref:System.Windows.Threading.Dispatcher.Invoke%2A> nebo podobné metody.  
   
 #### <a name="lockbuffer-methods"></a>LockBuffer metody  
  Všechny metody LockBuffer() jsou zastaralé. Mezi příklady patří:  
@@ -66,7 +67,7 @@ Pokud aktualizujete kód, který byl napsaných pro starší verze sady Visual S
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines.LockBuffer%2A>  
   
 #### <a name="commit-events"></a>Potvrzení události  
- Potvrzení události nejsou podporovány. Volání metody, která informuje o tom, aby se tyto události způsobí, že metoda vrátí kód chyby.  
+ Potvrzení události nejsou podporovány. Volání metody, která vás informuje o tom tyto události způsobí, že metoda vrátí kód chyby.  
   
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsPreliminaryTextChangeCommitEvents>  
   
@@ -75,13 +76,13 @@ Pokud aktualizujete kód, který byl napsaných pro starší verze sady Visual S
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsUndoRedoClusterWithCommitEvents>  
   
 #### <a name="texteditorevents"></a>TextEditorEvents  
- <xref:EnvDTE.TextEditorEvents> Už fire na Commit(). Místo toho budou platit při každé změně textu.  
+ <xref:EnvDTE.TextEditorEvents> Už se aktivuje při Commit(). Místo toho se aktivuje při každé změně textu.  
   
 #### <a name="text-markers"></a>Text značky  
- Je třeba volat <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarker.Invalidate%2A> na <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarker> objekty, když je odebrat. V předchozích verzích je potřeba pouze na verzi značek.  
+ Je nutné volat <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarker.Invalidate%2A> na <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarker> objekty při jejich odebrání. V předchozích verzích je potřeba pouze na verzi značek.  
   
 #### <a name="line-numbers"></a>Čísla řádků  
- Pro celou řadu metod na <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewEx>čísla řádků odpovídají základní čísla řádků vyrovnávací paměti, které hrají roli v přehledy a word-wrap, jako v sadě Visual Studio 2008 čísla řádků není.  
+ Pro celou řadu metod v <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewEx>, čísla řádků, které odpovídají základní čísla řádků vyrovnávací paměti, nikoli čísla faktor sbalování a zalamování slov, stejně jako v sadě Visual Studio 2008.  
   
  Metody vliv patří (seznam není vyčerpávající):  
   
@@ -110,26 +111,26 @@ Pokud aktualizujete kód, který byl napsaných pro starší verze sady Visual S
 -   <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.SetTopLine%2A>  
   
 #### <a name="outlining"></a>Sbalování  
- Klienti v <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession> se zobrazí pouze popisující oblasti, které byly přidány pomocí <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession.AddHiddenRegions%2A>nebo <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSessionEx.AddHiddenRegionsEx%2A>. Neuvidí ad hoc oblastech, protože nebyly přidány prostřednictvím adaptérů editor. Tito klienti, se nezobrazí osnovy oblasti přidal jazyky (včetně c a C++), které používají nový kód editor spíše než adaptéry editor.  
+ Klienti v <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession> se zobrazí pouze sbalování oblastí, které byly přidány pomocí <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSession.AddHiddenRegions%2A>nebo <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextSessionEx.AddHiddenRegionsEx%2A>. Neuvidí ad hoc oblastí, protože nejsou přidány prostřednictvím adaptérů editoru. Podobně tito klienti nezobrazí sbalování oblastí přidal jazycích (včetně C# a C++), které používají nový editor kódu, spíše než adaptéry editoru.  
   
-#### <a name="line-heights"></a>Výšky řádku  
- V editoru nové řádky textu může mít různé výšky, v závislosti na velikosti písma a možné řádku transformace, které může přesunout na řádku vzhledem k další řádky. Výška řádku vrácené metody, jako <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.GetLineHeight%2A> je height výšky řádku pomocí žádný řádek transformací použitá výchozí velikost písma. Tato výška může nebo nemusí odrážet skutečné height výšky řádku v zobrazení.  
+#### <a name="line-heights"></a>Výška řádku  
+ V novém editoru řádky textu může mít různé výšky v závislosti na velikost písma a možné řádek transformace, které může Přesun o řádek relativně k další řádky. Výška řádku vrátí metody jako například <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.GetLineHeight%2A> výšku řádku pomocí výchozí velikost písma použité transformace žádný řádek. Tato výška může nebo nemusí odrážet skutečné height výšky řádku v zobrazení.  
   
 #### <a name="eventing-and-undo"></a>Zpracování událostí a vrácení zpět  
- V editoru nové zobrazení nadále provádět operace, jako je například vykreslování a vyvolávání událostí nepřetržitě, i v případě, že cluster služby vrácení zpět je otevřený. Toto chování se liší od starších verzí zobrazení, která není provedli tyto operace až po zavření clusteru vrácení zpět.  
+ V novém editoru i nadále provádět operace, jako je vykreslování a vyvolávání událostí průběžně zobrazení. Operace pokračovat i v případě, cluster vrácení zpět je otevřít. Toto chování se liší od starších verzí zobrazení, která neprovedli tyto operace až po zavření clusteru zpět.  
   
 #### <a name="intellisense"></a>IntelliSense  
   
--   <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost.UpdateTipWindow%2A> Metoda se nezdaří, pokud je předat ve třídě, která buď neimplementuje <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextTipWindow2> nebo <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow3>. Vlastní Win32 vykreslovaných vlastníkem automaticky otevíraná okna jsou již není podporována.  
+-   <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost.UpdateTipWindow%2A> Metoda selže, pokud předáte do třídy, která buď nemá implementaci <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextTipWindow2> nebo <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow3>. Vlastní Win32 vykreslovaných vlastníkem automaticky otevíraná okna již nejsou podporovány.  
   
 #### <a name="smarttags"></a>Inteligentní značky  
- Neexistuje žádná podpora adaptéru pro inteligentní značky vytvořené, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsSmartTagData>, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsSmartTagTipWindow>, a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsSmartTagTipWindow2> rozhraní.  
+ Není dostupná podpora adaptér pro inteligentní značky, které jsou vytvořené pomocí, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsSmartTagData>, <xref:Microsoft.VisualStudio.TextManager.Interop.IVsSmartTagTipWindow>, a <xref:Microsoft.VisualStudio.TextManager.Interop.IVsSmartTagTipWindow2> rozhraní.  
   
 #### <a name="dte"></a>DTE  
  <xref:EnvDTE80.IncrementalSearch> Není implementováno.  
   
-## <a name="unimplemented-methods"></a>Neimplementované metody  
- Některé metody nebyla provedena na adaptéru textové vyrovnávací paměti, adaptér zobrazení textu a text vrstvy adaptéru.  
+## <a name="unimplemented-methods"></a>Neimplementovaná metody  
+ Některé metody nejsou implementované adaptér vyrovnávací paměti textu, adaptéru zobrazení textu a text vrstvy adaptéru.  
   
 |Rozhraní|Není implementováno|  
 |---------------|---------------------|  
@@ -143,5 +144,5 @@ Pokud aktualizujete kód, který byl napsaných pro starší verze sady Visual S
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewEx>|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewEx.GetSmartTagRect%2A><br /><br /> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewEx.InvokeInsertionUI%2A><br /><br /> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewEx.SetHoverWaitTimer%2A>|  
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow>|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindow.SetViewClassID%2A>|  
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost>|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost.AfterCompletorCommit%2A><br /><br /> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost.BeforeCompletorCommit%2A><br /><br /> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost.Exec%2A><br /><br /> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost.GetContextLocation%2A><br /><br /> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost.GetServiceProvider%2A><br /><br /> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost.GetSmartTagRect%2A><br /><br /> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost.GetSubjectCaretPos%2A><br /><br /> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost.GetSubjectSelection%2A><br /><br /> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost.GetSubjectText%2A><br /><br /> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost.QueryStatus%2A><br /><br /> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost.ReplaceSubjectTextSpan%2A><br /><br /> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost.SetSubjectCaretPos%2A><br /><br /> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost.SetSubjectSelection%2A><br /><br /> <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost.UpdateSmartTagWindow%2A>|  
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewIntellisenseHost>|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewIntellisenseHost.SetSubjectFromPrimaryBuffer%2A> je implementována, adaptérů, ale ignoruje podle osnovy uživatelského rozhraní.|  
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenRegionEx>|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenRegionEx.GetBannerAttr%2A> je implementována, adaptérů, ale ignoruje podle osnovy uživatelského rozhraní.|
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewIntellisenseHost>|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewIntellisenseHost.SetSubjectFromPrimaryBuffer%2A> je implementován v adaptéry ale sbalování uživatelského rozhraní se ignoruje.|  
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenRegionEx>|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenRegionEx.GetBannerAttr%2A> je implementován v adaptéry ale sbalování uživatelského rozhraní se ignoruje.|

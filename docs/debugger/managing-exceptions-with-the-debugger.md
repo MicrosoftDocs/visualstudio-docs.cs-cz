@@ -1,7 +1,7 @@
 ---
-title: Správa výjimek pomocí ladicího programu sady Visual Studio | Microsoft Docs
-ms.custom: ''
-ms.date: 04/05/2017
+title: Správa výjimek pomocí ladicího programu | Dokumentace Microsoftu
+ms.custom: seodec18
+ms.date: 10/09/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
@@ -34,166 +34,197 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ed17cc303bfb7194c7f438e32afb1be7f484eb5
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 02c7fbfca9a63ac736972ebea01a854e24f90188
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057915"
 ---
 # <a name="manage-exceptions-with-the-debugger-in-visual-studio"></a>Správa výjimek pomocí ladicího programu v sadě Visual Studio
 
-Výjimkou je to znamenat stav chyby, ke kterému dochází, když se program spouští. Ladicí program můžete zjistit, které výjimky (nebo sady výjimek) na přerušení na a na bod, který chcete, aby ladicí program na přerušení (když dělí ladicího programu, jeho ukazuje, kde byla výjimka vydána). Můžete také přidat nebo odstranit výjimky. S řešením otevřete v sadě Visual Studio, použijte **ladění > Windows > Nastavení výjimky** otevřete **nastavení výjimky** okno. 
+Výjimkou je údaj o chybovém stavu, ke které dojde při spuštění programu. Ladicí program můžete zjistit, jaké výjimky nebo sady výjimky na přerušení na a kdy chcete, aby ladicí program na přerušení. Pokud ladicí program přeruší, to se dozvíte, kde byla výjimka vydána. Můžete také přidat nebo odstranit výjimky. Pomocí řešení otevřít v sadě Visual Studio, **ladit > Windows > Nastavení výjimek** otevřít **nastavení výjimek** okna.
 
-Můžete a měl by poskytnout obslužné rutiny, které reagují na nejdůležitější výjimky, ale je důležité vědět, jak nakonfigurovat ladicí program na vždy přerušení spuštění pro některé výjimky.
-  
-Když dojde k výjimce, ladicího programu zapíše zprávu výjimky do okna výstupu. Spuštění se může přerušit v následujících případech:  
-  
--   Když výjimku je vyvolána a není zpracován.  
-  
--   Když ladicí program nastaven tak, aby před vyvoláním všechny obslužné rutiny přerušení spuštění.  
-  
--   Pokud jste nastavili [pouze můj kód](../debugger/just-my-code.md), a ladicí program je nakonfigurováno na přerušení na všechny výjimka, která nejsou zpracovávány v uživatelského kódu.  
-  
+Poskytuje rutiny, které reagují na nejdůležitější výjimky. Naučte se konfigurovat ladicí program přeruší běh o některých výjimkách, vždy.
+
+Když dojde k výjimce, ladicí program zapíše zprávu o výjimce do **výstup** okna. To může přerušit provádění, v následujících případech, kdy:
+
+- Je vyvolána výjimka, která není zpracována.
+- Ladicí program je nakonfigurován na přerušit provádění, před vyvoláním libovolné obslužné rutiny.
+- Jste nastavili [pouze můj kód](../debugger/just-my-code.md), a ladicí program je nakonfigurován na přerušení na jakékoli výjimce, která není ošetřena v uživatelském kódu.
+
 > [!NOTE]
->  Technologie ASP.NET má obslužnou rutinu výjimky nejvyšší úrovně, která zobrazuje chybové stránky v prohlížeči. Nezalamuje spuštění, pokud **pouze můj kód** je zapnutý. Příklad, naleznete v části [nastavení ladicího programu pokračoval na výjimky neošetřené uživatelem](../debugger/managing-exceptions-with-the-debugger.md#BKMK_UserUnhandled) níže.  
-  
+> Technologie ASP.NET obsahuje obslužnou rutinu výjimky nejvyšší úrovně, která se zobrazí chybové stránky v prohlížeči. Nelze přerušit provádění, není-li **pouze můj kód** zapnutý. Příklad najdete v tématu [řekněte ladicího programu, pokračujte na uživatelem neošetřené výjimky](#BKMK_UserUnhandled) níže.
+
+<!-- Two consecutive notes are intentional here...-->
+
 > [!NOTE]
->  V aplikaci Visual Basic ladicí program spravuje všechny chyby jako výjimky, i když používáte obslužných rutin chyba stylu chyby.    
-  
-## <a name="tell-the-debugger-to-break-when-an-exception-is-thrown"></a>Řekněte ladicí program na přerušení při vyvolání k výjimce  
-Ladicí program může dojít k narušení provádění v okamžiku, kdy je vyvolána výjimka, s možností prozkoumat výjimka před vyvoláním obslužnou rutinu.  
-  
-V **nastavení výjimky** okno (**ladění > Windows > Nastavení výjimky**), rozbalte uzel pro kategorii výjimek (například **běžné výjimky za běhu jazyka**, což znamená výjimky .NET) a zaškrtněte políčko pro konkrétní výjimky v rámci této kategorie (například **System.AccessViolationException**). Můžete také vybrat celou kategorii výjimky.  
-  
-![Zaškrtnutí AccessViolationException](../debugger/media/exceptionsettingscheckaccess.png "ExceptionSettingsCheckAccess")  
+> V aplikaci Visual Basic ladicí program spravuje všechny chyby jako výjimky, i v případě, že se používá ve stylu obslužné rutiny chyb.
+
+## <a name="tell-the-debugger-to-break-when-an-exception-is-thrown"></a>Řekněte ladicí program na přerušení při vyvolání výjimky
+
+Ladicí program může přerušit provádění v místě, kde je vyvolána výjimka, tak může zkoumat výjimky, předtím, než je vyvolána obslužná rutina.
+
+V **nastavení výjimek** okno (**ladit > Windows > Nastavení výjimek**), rozbalte uzel pro kategorii výjimek, jako například **výjimky modulu Common Language Runtime**. Zaškrtněte políčko pro určité výjimky v rámci dané kategorie, jako například **System.AccessViolationException**. Můžete také vybrat celou kategorii výjimek.
+
+![Checked výjimka AccessViolationException](../debugger/media/exceptionsettingscheckaccess.png "ExceptionSettingsCheckAccess")
 
 > [!TIP]
-> Specifických výjimek můžete najít pomocí **vyhledávání** okno v **nastavení výjimky** nástrojů, nebo použijte vyhledávání k filtrování pro konkrétní obory názvů (například **System.IO**).
-  
-Pokud jste vybrali k výjimce v **nastavení výjimky** okně spuštění ladicího programu poruší bez ohledu na je vyvolána výjimka, bez ohledu na to, jestli je zpracovává nebo neošetřená. Výjimka v tomto okamžiku se nazývá první odpovídající výjimce. Například tady je několik scénářů:  
-  
-*  V následující C# aplikaci konzoly, vyvolá metoda Main **AccessViolationException** uvnitř `try/catch` bloku:  
-  
-    ```csharp  
-    static void Main(string[] args)  
-    {  
-        try  
-        {  
-            throw new AccessViolationException();  
-            Console.WriteLine("here");  
-        }  
-        catch (Exception e)  
-        {  
-            Console.WriteLine("caught exception");  
-        }  
-        Console.WriteLine("goodbye");  
-    }  
-    ```  
-  
-     Pokud máte **AccessViolationException** změnami **nastavení výjimky**, při spuštění tohoto kódu při provádění ladicí program bude rozdělit na `throw` řádku. Pak můžete pokračovat v provádění. Konzola by měl zobrazit i řádky:  
-  
-    ```  
-    caught exception  
-    goodbye  
-    ```  
-  
-     nejsou zde uvedeny, ale `here` řádku.  
-  
-*  Konzolovou aplikaci C# odkazuje na knihovny tříd s třídu, která má dvě metody, metodu, vyvolá výjimku, která ji zpracovává a druhý metoda, která vyvolala výjimku stejné a nemůže pracovat:  
-  
-    ```csharp 
-    public class Class1  
-    {  
-        public void ThrowHandledException()  
-        {  
-            try  
-            {  
-                throw new AccessViolationException();  
-            }  
-            catch (AccessViolationException ave)  
-            {  
-                Console.WriteLine("caught exception" + ave.Message);  
-            }  
-        }  
-  
-        public void ThrowUnhandledException()  
-        {  
-            throw new AccessViolationException();  
-        }  
-    }  
-    ```  
-  
-     Tady je metoda Main() aplikace konzoly:  
-  
-    ```csharp  
-    static void Main(string[] args)  
-    {  
-        Class1 class1 = new Class1();  
-        class1.ThrowHandledException();  
-        class1.ThrowUnhandledException();  
-    }  
-    ```  
-  
-     Pokud máte **AccessViolationException** změnami **nastavení výjimky**, při spuštění tohoto kódu při provádění ladicí program bude rozdělit na `throw` řádku v obou  **ThrowHandledException()** a **ThrowUnhandledException()**.  
-  
- Pokud chcete obnovit výchozí hodnoty nastavení výjimky, můžete kliknout **obnovení** na panelu nástrojů zobrazí tlačítko:  
-  
- ![Obnovit výchozí nastavení v nastavení výjimky](../debugger/media/restoredefaultexceptions.png "RestoreDefaultExceptions")  
-  
-##  <a name="BKMK_UserUnhandled"></a> Řekněte ladicí program na pokračovat při výjimkách neošetřených uživatelem  
- Pokud ladíte .NET nebo JavaScript kód s [pouze můj kód](../debugger/just-my-code.md), se dá zjistit ladicího programu není na přerušení na výjimky, které nejsou zpracovány v uživatelském kódu, ale jsou zpracovávány jinde.  
-  
-1.  V **nastavení výjimky** okno, otevřete v místní nabídce kliknete pravým tlačítkem do okna a potom výběrem **zobrazit sloupce**. (Pokud jste vypnuli **pouze můj kód**, tento příkaz nezobrazí.)  
-  
-2.  Měli byste vidět druhý sloupec s názvem **další akce**. V tomto sloupci se zobrazuje **pokračovat v případě neošetřené pomocí uživatelského kódu** na konkrétních výjimek, což znamená, že ladicí program nezalamuje Pokud této výjimky nejsou zpracovávány v uživatelském kódu, ale je zpracována v externí kódu.  
-  
-3.  Můžete změnit toto nastavení, buď pro konkrétní výjimky (vyberte výjimku, klikněte pravým tlačítkem a vyberte nebo zrušte výběr **pokračovat v případě neošetřené v uživatelském kódu**) nebo pro celý druh výjimky (například všechny nejběžnější Výjimky za běhu jazyka).  
-  
- Například webové aplikace ASP.NET zpracování výjimek převedením na stavový kód HTTP 500 ([zpracování výjimek v rozhraní API ASP.NET](http://www.asp.net/web-api/overview/error-handling/exception-handling)), který nemusí vám pomůže určit zdroj výjimky. V následujícím příkladu uživatelský kód zavolá `String.Format()` , vyvolá <xref:System.FormatException>. Provádění dělí takto:  
-  
- ![dělí na uživatele&#45;unhanlded výjimka](../debugger/media/exceptionunhandledbyuser.png "ExceptionUnhandledByUser")  
-  
-## <a name="add-and-delete-exceptions"></a>Přidávání a odstraňování výjimek  
- Můžete přidat a odstranit výjimky. Odstraněním libovolného typu výjimka kategorie výjimka výběrem a kliknutím na **odstranit** na tlačítko (znaménka minus) **nastavení výjimky** panelu nástrojů nebo kliknete pravým tlačítkem na výjimku a Výběr **odstranit** v místní nabídce. Odstraňování výjimku má stejný účinek jako s výjimkou není zaškrtnuto, což je, že nebudou porušovat ladicí program, když je vyvolána.  
-  
- Přidat výjimku: v **nastavení výjimky** okno, vyberte jednu z výjimka kategorie (například **modul Common Language Runtime**) a klikněte na tlačítko **přidat** tlačítko. Zadejte název výjimky (například. **System.UriTemplateMatchException**). Výjimka je přidán do seznamu (v abecedním pořadí) a automaticky kontroluje.  
-  
- Pokud chcete přidat výjimku výjimky přístupu paměti grafického procesoru, výjimek jazyka JavaScript Runtime nebo výjimky Win32 kategorií, budete muset zahrnují kód chyby a také popis.  
-  
+> Specifické výjimky můžete najít pomocí **hledání** okna v **nastavení výjimek** nástrojů nebo pomocí vyhledávání filtrujte pro konkrétní obory názvů (například **System.IO**).
+
+Pokud vyberete výjimku v **nastavení výjimek** okně spuštění ladicího programu se přeruší, bez ohledu na to je vyvolána výjimka bez ohledu na to, zda je zpracována. Výjimka je teď jmenuje první odpovídající výjimce. Například tady je několik scénářů:
+
+- V následující konzoly aplikace v C#, vyvolá metoda Main **výjimka AccessViolationException** uvnitř `try/catch` bloku.
+
+  ```csharp
+  static void Main(string[] args)
+  {
+      try
+      {
+          throw new AccessViolationException();
+          Console.WriteLine("here");
+      }
+      catch (Exception e)
+      {
+          Console.WriteLine("caught exception");
+      }
+      Console.WriteLine("goodbye");
+  }
+  ```
+
+  Pokud máte **výjimka AccessViolationException** změnami **nastavení výjimek**, spuštění se přeruší na `throw` řádku při spuštění tohoto kódu v ladicím programu. Potom můžete pokračovat v provádění. Konzole by měl zobrazit obě čáry:
+
+  ```cmd
+  caught exception
+  goodbye
+  ```
+
+  ale nejsou zobrazeny `here` řádku.
+
+- Konzolová aplikace jazyka C# odkazuje na knihovnu tříd s třídou, která má dvě metody. Jedna metoda vyvolá výjimku a to všechno zvládne, zatímco druhá metoda vyvolá výjimku stejné, ale nemůže pracovat.
+
+  ```csharp
+  public class Class1
+  {
+      public void ThrowHandledException()
+      {
+          try
+          {
+              throw new AccessViolationException();
+          }
+          catch (AccessViolationException ave)
+          {
+              Console.WriteLine("caught exception" + ave.Message);
+          }
+      }
+
+      public void ThrowUnhandledException()
+      {
+          throw new AccessViolationException();
+      }
+  }
+  ```
+
+  Tady je metoda Main() konzolové aplikace:
+
+  ```csharp
+  static void Main(string[] args)
+  {
+      Class1 class1 = new Class1();
+      class1.ThrowHandledException();
+      class1.ThrowUnhandledException();
+  }
+  ```
+
+  Pokud máte **výjimka AccessViolationException** změnami **nastavení výjimek**, spuštění se přeruší na `throw` řádku v obou **ThrowHandledException()** a **ThrowUnhandledException()** při spuštění tohoto kódu v ladicím programu.
+
+Chcete-li obnovit výchozí hodnoty nastavení výjimek, zvolte **obnovit seznam do výchozího nastavení** tlačítka:
+
+![Obnovit výchozí nastavení v nastavení výjimek](../debugger/media/restoredefaultexceptions.png "RestoreDefaultExceptions")
+
+## <a name="BKMK_UserUnhandled"></a>Informace ladicího programu, pokračujte na výjimkách neošetřených uživatelem
+
+Pokud ladíte kód .NET nebo JavaScript s [pouze můj kód](../debugger/just-my-code.md), poznáte, ladicí program, aby se zabránilo přerušení při výjimkách, které nejsou zpracovány v uživatelském kódu, ale jsou zpracovány jinde.
+
+1. V **nastavení výjimek** okno, otevřete místní nabídku kliknutím pravým tlačítkem myši popisky sloupců a pak vyberte **zobrazit sloupce > Další akce**. (Pokud jste vypnuli **pouze můj kód**, tento příkaz nezobrazí.) Třetí sloupec s názvem **další akce** se zobrazí.
+
+   ![Další sloupec akce](../debugger/media/additionalactionscolumn.png "AdditionalActionsColumn")
+
+   Pro výjimku, která ukazuje **pokračovat, pokud není ošetřená v uživatelském kódu** v tomto sloupci, ladicí program pokračuje, pokud tato výjimka není ošetřena v uživatelském kódu, ale se řeší externě.
+
+2. Chcete-li změnit toto nastavení pro konkrétní výjimky, vyberte výjimky, klikněte pravým tlačítkem myši zobrazit místní nabídku a vyberte **pokračovat po neošetřené v uživatelském kódu**. Můžete také změnit nastavení pro celou kategorii výjimek, jako je například celý výjimky Common Language Runtime).
+
+   ![** Pokračovat, pokud není ošetřená v nastavení uživatelského kódu **](../debugger/media/continuewhenunhandledinusercodesetting.png "ContinueWhenUnhandledInUserCodeSetting")
+
+Například webové aplikace ASP.NET zpracování výjimek převedením na stavový kód HTTP 500 ([zpracování výjimek v rozhraní ASP.NET Web API](http://www.asp.net/web-api/overview/error-handling/exception-handling)), které možná vám pomůže určit zdroj výjimky. V následujícím příkladu kód uživatele provede volání `String.Format()` , které vyvolá <xref:System.FormatException>. Provádění přeruší následujícím způsobem:
+
+![Dojde k porušení uživatele&#45;neošetřená výjimka](../debugger/media/exceptionunhandledbyuser.png "ExceptionUnhandledByUser")
+
+## <a name="add-and-delete-exceptions"></a>Přidávání a odstraňování výjimek
+
+Můžete přidat a odstranit výjimky. Pokud chcete odstranit typ výjimky z kategorie, vyberte výjimku a zvolte **odstraní vybranou výjimku ze seznamu** na tlačítko (znaménko minus) **nastavení výjimek** nástrojů. Případně může klikněte pravým tlačítkem na výjimku a vybrat **odstranit** z místní nabídky. Odstraňuje se výjimka má stejný účinek jako s výjimkou není zaškrtnuto, což je, že ladicí program nebude přerušit, pokud je vyvolána výjimka.
+
+Chcete-li přidat výjimku:
+
+1. V **nastavení výjimek** okna, vyberte jednu z výjimek kategorií (například **Common Language Runtime**).
+
+2. Zvolte **přidat výjimku do vybrané kategorie** tlačítko (znaménko plus).
+
+   ![** Přidat výjimku do vybrané kategorie ** tlačítko](../debugger/media/addanexceptiontotheselectedcategorybutton.png "AddAnExceptionToTheSelectedCategoryButton")
+
+3. Zadejte název výjimky (například **System.UriTemplateMatchException**).
+
+   ![Zadejte název výjimky](../debugger/media/typetheexceptionname.png "TypeTheExceptionName")
+
+   Výjimka je přidán do seznamu (v abecedním pořadí) a automaticky zaškrtnuto.
+
+Pokud chcete přidat výjimku do výjimky přístupu k paměti GPU, zahrnují výjimky modulu Runtime jazyka JavaScript nebo kategorie výjimky Win32, kód chyby a popis.
+
 > [!TIP]
->  Zkontrolujte zadané informace! **Nastavení výjimky** okno neohlásí přítomnost přidané výjimky. Pokud zadáte **Sytem.UriTemplateMatchException**, získáte položku pro této výjimky (a ne pro **System.UriTemplateMatchException**).  
-  
- Nastavení výjimky jsou v souboru .suo na řešení, nastavené jako trvalé, takže se vztahují na konkrétní řešení. Nelze znovu použít nastavení konkrétní výjimky v řešeních. V tomto okamžiku pouze přidané výjimky jsou nastavené jako trvalé; odstraněné výjimky nejsou. Jinými slovy můžete přidat výjimku, zavřete a znovu otevřete řešení a výjimka bude stále existovat. Ale pokud odstraníte výjimku a zavřete řešení znovu otevřít, se znovu zobrazí výjimka.  
-  
- **Nastavení výjimky** okno podporuje typy obecné výjimek v jazyce C#, ale není v jazyce Visual Basic. Na přerušení na výjimky jako `MyNamespace.GenericException<T>`, je nutné přidat výjimku jako **MyNamespace.GenericException'1**. To znamená pokud jste vytvořili výjimku takto:  
-  
-```csharp  
-public class GenericException<T> : Exception  
-{  
-    public GenericException() : base("This is a generic exception.")  
-    {  
-    }  
-}  
-```  
-  
- Můžete přidat výjimku **nastavení výjimky** podobné výjimky:  
-  
- ![Přidání obecné výjimky](../debugger/media/addgenericexception.png "AddGenericException")  
+> Zkontrolujte pravopis! **Nastavení výjimek** okna nebude kontrolovat přítomnost přidané výjimky. Pokud zadáte **Sytem.UriTemplateMatchException**, zobrazí se položka pro tuto výjimku (a ne pro **System.UriTemplateMatchException**).
 
-## <a name="add-conditions-to-an-exception"></a>Přidání podmínek do výjimku
+Nastavení výjimek jsou zachované v soubor .suo řešení, takže se vztahují na konkrétní řešení. Nastavení konkrétní výjimky nelze opětovně použít napříč řešeními. Nyní jsou trvalé pouze přidaných výjimek; odstraněné výjimky nejsou. Můžete přidat výjimku, zavřete a znovu otevřete řešení a výjimka bude stále existovat. Ale pokud odstraníte výjimku a zavřete a znova otevřete řešení, se znovu zobrazí výjimka.
 
-Můžete nastavit podmínky, na výjimky v **nastavení výjimky** dialogové okno. Aktuálně podporované podmínky zahrnují názvy modulu pro zahrnutí nebo vyloučení pro výjimku. Nastavením názvy modulů jako podmínky můžete rozdělit pro výjimky pouze na konkrétní kódové moduly nebo se můžete vyhnout narušující na konkrétní moduly.
+**Nastavení výjimek** okna podporuje výjimek obecného typu v jazyce C#, ale ne v jazyce Visual Basic. Na přerušení na jako `MyNamespace.GenericException<T>`, je nutné přidat výjimku jako **MyNamespace.GenericException'1**. To znamená pokud jste vytvořili výjimku přibližně takto:
+
+```csharp
+public class GenericException<T> : Exception
+{
+    public GenericException() : base("This is a generic exception.")
+    {
+    }
+}
+```
+
+Můžete přidat výjimku **nastavení výjimek** pomocí předchozího postupu:
+
+![Přidání obecné výjimky](../debugger/media/addgenericexception.png "AddGenericException")
+
+## <a name="add-conditions-to-an-exception"></a>Přidání podmínky do výjimky
+
+Použití **nastavení výjimek** okno Nastavení podmínek v výjimky. Aktuálně se podporují příkladem podmínek může být její název modulu pro zahrnutí nebo vyloučení pro výjimku. Nastavením názvů modulů jako podmínky můžete přerušit pro výjimku pouze na určité moduly kódu. Také můžete vyhnout rozdělení na konkrétní moduly.
 
 > [!NOTE]
-> Přidání podmínek do výjimku je nového v [!include[vs_dev15](../misc/includes/vs_dev15_md.md)]
+> Přidání podmínky do výjimky je novinkou systémů [!include[vs_dev15](../misc/includes/vs_dev15_md.md)].
 
-Chcete-li přidat podmíněného výjimky, zvolte **upravit podmínky** ikona v dialogovém okně Nastavení výjimky nebo klikněte pravým tlačítkem na výjimku a zvolte **upravit podmínky**.
+Přidat podmíněné výjimky:
 
-![Podmínky se u výjimku](../debugger/media/dbg-conditional-exception.png "DbgConditionalException")
-  
-## <a name="see-also"></a>Viz také  
- [Pokračování v provádění po výjimce](../debugger/continuing-execution-after-an-exception.md)   
- [Postupy: Kontrola systémového kódu po výjimce](../debugger/how-to-examine-system-code-after-an-exception.md)   
- [Postupy: použití nativních kontrol za běhu](../debugger/how-to-use-native-run-time-checks.md)   
- [Run-Time zkontroluje bez běhové knihovny jazyka C](../debugger/using-run-time-checks-without-the-c-run-time-library.md)   
- [Základy ladicího programu](../debugger/debugger-basics.md)
+1. Zvolte **upravit podmínky** tlačítko v okně Nastavení výjimek nebo klikněte pravým tlačítkem na výjimku a zvolte **upravit podmínky**.
+
+   ![Podmínky pro výjimku](../debugger/media/dbg-conditional-exception.png "DbgConditionalException")
+
+2. Chcete-li přidat další požadované podmínky na výjimku, **přidat podmínku** pro každou novou podmínku. Další podmínky řádky se zobrazí.
+
+   ![Dodatečné podmínky pro výjimku](../debugger/media/extraconditionsforanexception.png "ExtraConditionsForAnException")
+
+3. Pro každý řádek podmínku, zadejte název modulu a změny seznamu operátor porovnání k **rovná** nebo **nerovná**. Můžete zadat zástupné znaky (**\\***) v názvu k určení více než jeden modul.
+
+4. Pokud je potřeba odstranit podmínky, zvolte **X** na konci řádku podmínku.
+
+## <a name="see-also"></a>Viz také:
+
+[Pokračování ve spuštění po výjimce](../debugger/continuing-execution-after-an-exception.md)<br/>
+[Postupy: Kontrola systémového kódu po výjimce](../debugger/how-to-examine-system-code-after-an-exception.md)<br/>
+[Postupy: Použití nativních kontrol za běhu](../debugger/how-to-use-native-run-time-checks.md)<br/>
+[Použití kontrol za běhu bez běhové knihovny jazyka C](../debugger/using-run-time-checks-without-the-c-run-time-library.md)<br/>
+[Kurz: Zjistěte, jak ladit pomocí sady Visual Studio](../debugger/getting-started-with-the-debugger.md)

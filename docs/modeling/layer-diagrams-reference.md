@@ -1,6 +1,6 @@
 ---
-title: Závislý odkaz diagramy
-ms.date: 11/04/2016
+title: Odkaz na diagramů závislostí
+ms.date: 09/28/2018
 ms.topic: reference
 f1_keywords:
 - vs.teamarch.layerdiagram.layerexplorer.artifactlink
@@ -20,50 +20,55 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 5235d459a77ef85212b9e03cd18149c4bfb539a2
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 1ef2d68cb0f8e3d6904bdf3f3ebbab321649c3e1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920923"
 ---
-# <a name="dependency-diagrams-reference"></a>Diagramy závislost: referenční dokumentace
+# <a name="dependency-diagrams-reference"></a>Diagramy závislostí: referenční dokumentace
 
-V sadě Visual Studio, můžete použít *diagram závislostí* můžete vizualizovat podrobný, logické architekturu systému. Diagram závislostí organizuje fyzické artefakty ve vašem systému do logické, abstraktní skupin nazývaných *vrstvy*. Tyto vrstvy popisují hlavní úlohy, které provádějí artefakty nebo hlavní součásti systému. Jednotlivé úrovně může také obsahovat vnořené vrstvy, které popisují podrobnější úlohy.
+V sadě Visual Studio, můžete použít *diagram závislostí* můžete vizualizovat vysoké úrovně, logickou architekturu systému. Diagram závislostí slouží k uspořádání fyzické artefaktů ve vašem systému do logických, abstraktních skupin nazvaných *vrstvy*. Tyto vrstvy popsat hlavní úlohy, které tyto artefakty provádějí nebo hlavní součásti systému. Každá vrstva může také obsahovat vnořené vrstvy, které popisují podrobnější úlohy.
 
-Tuto funkci podporovat kterou verzí sady Visual Studio najdete v tématu [verze podpora architektura a modelování nástroje](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+Chcete-li zjistit, jaké edice sady Visual Studio podporují tuto funkci, přečtěte si téma [podpora edice nástroje architektury a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
-Můžete zadat určené nebo existující závislosti mezi vrstvami. Tyto závislosti, které jsou reprezentovány jako dvojice šipek, znamenat vrstvy, které můžete použít nebo používají funkci reprezentována jiných vrstev. Uspořádání systému do vrstvy, které popisují odlišné role a funkce, diagram závislostí může pomoci snadno pochopit, opakovaně používat a údržbu vašeho kódu.
+> [!NOTE]
+> Diagramy závislostí nejsou podporovány pro projekty .NET Core v sadě Visual Studio 2017.
 
-Pomocí závislosti diagram můžete provádět následující úlohy:
+Můžete určit zamýšlené nebo existující závislosti mezi vrstvami. Tyto závislosti, které jsou reprezentovány šipkami, označení, které vrstvy mohou použít nebo právě používají funkce představované ostatními vrstvami. Uspořádání vašeho systému do vrstev, které popisují různé role a funkce, diagram závislostí může pomoci bylo snazší porozumět, opakovaně používat a spravovat váš kód.
 
--   Komunikaci existující, nebo určený Logická architektura vašeho systému.
+Použijte diagram závislostí můžete provádět následující úlohy:
 
--   Zjistit konflikty mezi váš stávající kód a určený architektura.
+-   Komunikaci existující, nebo určený logickou architekturu systému.
 
--   Vizualizace dopad změny na určený architektuře při Refaktorovat, aktualizovat nebo momentální systému.
+-   Zjištění konfliktu mezi váš stávající kód a zamýšlenou architekturu.
 
--   Posílení určený architektura během vývoj a údržba kódu včetně ověřování pomocí vašeho změnami a sestavení operace.
+-   Vizualizujte dopad změn na zamýšlenou architekturu. při refaktorování, aktualizovat nebo vyvíjí vašeho systému.
 
-Toto téma popisuje elementy, které můžete použít v diagramu závislostí. Podrobné informace o tom, jak vytvořit a kreslení diagramů závislostí, najdete v části [diagramy závislost: pokyny](../modeling/layer-diagrams-guidelines.md). Další informace o rozvrstvení vzorech, najdete [postupy společnosti lokality](http://go.microsoft.com/fwlink/?LinkId=145794).
+-   Posílení zamýšlenou architekturu během vývoje a údržba kódu včetně ověření pomocí vrácení se změnami a operací sestavení.
 
-## <a name="reading-dependency-diagrams"></a>Čtení diagramy závislostí
+Toto téma popisuje elementy, které můžete použít na diagram závislostí. Podrobné informace o tom, jak vytvořit a kreslit diagramy závislostí, přečtěte si [diagramy závislostí: pokyny](../modeling/layer-diagrams-guidelines.md). Další informace o vzorech vrstev najdete [vzory a postupy site](http://go.microsoft.com/fwlink/?LinkId=145794).
 
-![Elementů v diagramech závislostí](../modeling/media/uml_layerrefreading.png)
+## <a name="reading-dependency-diagrams"></a>Čtení diagramů závislostí
 
-Následující tabulka popisuje prvky, které můžete použít v diagramu závislostí.
+![Prvky na diagramů závislostí](../modeling/media/uml_layerrefreading.png)
 
-|**Obrazce**|**Element**|**Popis**|
-|---------------|-----------------|---------------------|
-|1|**Vrstva**|Logické skupiny fyzické artefakty ve vašem systému. Tyto artefakty může být obory názvů, projekty, tříd, metod a tak dále.<br /><br /> Informace o artefakty, které jsou propojeny s vrstvou, otevřete místní nabídku pro vrstvy a zvolte **zobrazení odkazy** otevřete **Explorer vrstvy**.<br /><br /> Další informace najdete v tématu [Explorer vrstvy](#Explorer).<br /><br /> -   **Je zakázané Namespace závislosti** -Určuje, že artefakty přidružené k této vrstvy nemůže záviset na zadaných oborů názvů.<br />-   **Je zakázané obory názvů** -Určuje, že artefakty přidružené k této vrstvy nesmí patří do zadaných oborů názvů.<br />-   **Požadované obory názvů** -Určuje, že artefakty přidružené k této vrstvy musí patřit do jedné ze zadaných oborů názvů.|
-|2|**závislosti**|Označuje, že jedné vrstvy můžete použít funkci v jiné vrstvě, ale ne naopak.<br /><br /> -   **Směr** -Určuje směr, závislosti.|
-|3|**Obousměrné závislostí**|Označuje, že jedné vrstvy můžete použít funkci v jiné vrstvě a naopak.<br /><br /> -   **Směr** -Určuje směr, závislosti.|
-|4|**Komentář**|Slouží k přidání obecné poznámky diagram nebo elementy v diagramu.|
-|5|**Odkaz na komentáře**|Slouží k propojení komentáře k prvkům v diagramu.|
+Následující tabulka popisuje prvky, které můžete použít na diagram závislostí.
 
-##  <a name="Explorer"></a> Průzkumník vrstvy
+|**Obrazec**|**Element**|**Popis**|
+|-|-|-|
+|1|**Vrstvy**|Logické skupiny fyzické artefaktů ve vašem systému. Tyto artefakty mohou být obory názvů, projekty, třídy, metody a tak dále.<br /><br /> Chcete-li zobrazit artefakty, které jsou propojeny s vrstvou, otevřete místní nabídku vrstvy a klikněte na tlačítko **zobrazit odkazy** otevřete **Průzkumník vrstev**.<br /><br /> Další informace najdete v tématu [Průzkumník vrstev](#Explorer).<br /><br /> -   **Je zakázané závislosti Namespace** – Určuje, že artefakty přidružené k této vrstvě nemůže záviset na zadaných oborů názvů trasy.<br />-   **Je zakázané obory názvů** – Určuje, že artefakty přidružené k této vrstvě nesměly patřit zadanému oboru názvů.<br />-   **Požadované obory názvů** – Určuje, že artefakty přidružené k této vrstvě musí patřit do jedné ze zadaných oborů názvů trasy.|
+|2|**Závislost**|Označuje, že jedna vrstva může použít funkci v jiné vrstvě, ale ne naopak.<br /><br /> -   **Směr** -Určuje směr závislost.|
+|3|**Obousměrná závislost**|Označuje, že jedna vrstva může použít funkci v jiné vrstvě a naopak.<br /><br /> -   **Směr** -Určuje směr závislost.|
+|4|**Komentář**|Slouží k přidání obecné poznámky diagramu nebo prvku v diagramu.|
+|5|**Odkaz na komentář**|Použijte k propojení komentářů k prvkům v diagramu.|
 
-Jednotlivé úrovně můžete propojit artefakty ve vašem řešení, jako jsou projekty, třídy, obory názvů, soubory projektu a dalšími částmi váš software. Číslo na vrstvě zobrazuje číslo artefaktů, které jsou propojeny s vrstvě. Ale při čtení počtu artefakty na vrstvě, mějte na paměti následující:
+## <a name="Explorer"></a> Průzkumník vrstev
+
+Můžete propojit s každou vrstvu artefaktů ve vašem řešení, jako jsou projekty, třídy, obory názvů, soubory projektu a jiné části vašeho softwaru. Číslo ve vrstvě zobrazuje počet artefaktů, které jsou spojeny s vrstvou. Ale při čtení počtu artefaktů ve vrstvě mějte na paměti následující:
 
 -   Pokud vrstva odkazuje na artefakt, který obsahuje jiné artefakty, ale vrstva není propojena přímo s jiným artefaktem, pak číslo obsahuje pouze propojené artefakty. Jiné artefakty jsou však zahrnuty do analýzy během ověřování vrstvy.
 
@@ -71,28 +76,28 @@ Jednotlivé úrovně můžete propojit artefakty ve vašem řešení, jako jsou 
 
 -   Pokud například vrstva obsahuje jiné vrstvy, které jsou spojeny s artefakty, pak je vrstva kontejneru také propojena s těmito artefakty, i když číslo vrstvy kontejneru tyto artefakty neobsahuje.
 
-Další informace o propojení vrstev a artefaktů najdete v tématu:
+Další informace o propojení vrstvami a artefakty naleznete v tématu:
 
--   [Diagramy závislost: pokyny](../modeling/layer-diagrams-guidelines.md)
+-   [Diagramy závislostí: pokyny](../modeling/layer-diagrams-guidelines.md)
 
 -   [Vytváření diagramů závislostí z kódu](../modeling/create-layer-diagrams-from-your-code.md)
 
-#### <a name="to-examine-the-linked-artifacts"></a>K prozkoumání propojené artefaktů.
+### <a name="examine-the-linked-artifacts"></a>Prozkoumejte propojených artefaktů
 
--   Diagram závislostí, otevřete místní nabídku pro jednu nebo více vrstev a zvolte **zobrazení odkazy**.
+Na diagram závislostí, otevřete místní nabídku pro jednu nebo více vrstev a klikněte na tlačítko **zobrazit odkazy**.
 
-     **Vrstvy Průzkumníka** otevře a zobrazuje artefaktů, které jsou propojeny s vybrané vrstvy. **Vrstvy Průzkumníka** má sloupec, který znázorňuje všechny vlastnosti odkazy artefaktů.
+**Průzkumník vrstev** otevře a zobrazí artefakty, které jsou propojeny s vrstvami vybrané. **Průzkumník vrstev** má sloupec, který zobrazuje vlastnosti propojení artefaktů.
 
-    > [!NOTE]
-    > Pokud nevidíte všechny tyto vlastnosti, rozbalte **vrstvy Explorer** okno.
+> [!NOTE]
+> Pokud nevidíte všechny tyto vlastnosti, rozbalte **Průzkumník vrstev** okna.
 
-    |**Sloupec v Průzkumníku vrstvy**|**Popis**|
-    |----------------------------------|---------------------|
-    |**Kategorie**|Druh artefaktů, jako je například třída, obor názvů, zdrojový soubor a tak dále|
-    |**Vrstva**|Vrstva, která odkazuje na artefaktu|
-    |**Podporuje ověřování**|Pokud **True**, pak proces ověření vrstvy, můžete ověřit, že projekt odpovídá závislosti do nebo z tohoto elementu.<br /><br /> Pokud **False**, potom na odkaz není součástí procesu ověření vrstvy.<br /><br /> Další informace najdete v tématu [diagramy závislost: pokyny](../modeling/layer-diagrams-guidelines.md).|
-    |**Identifikátor**|Odkaz na propojenou artefaktů|
+|**Sloupec v Průzkumníku vrstev**|**Popis**|
+|-|-|
+|**Kategorie**|Druh artefaktu, jako jsou třídy, oboru názvů, zdrojový soubor a tak dále|
+|**Vrstvy**|Vrstva, která odkazuje na artefakt|
+|**Podporuje ověřování**|Pokud **True**, pak do procesu ověření vrstev můžete ověřit, že projekt odpovídá závislostí do nebo z tohoto elementu.<br /><br /> Pokud **False**, potom na odkaz není součástí procesu ověření vrstev.<br /><br /> Další informace najdete v tématu [diagramy závislostí: pokyny](../modeling/layer-diagrams-guidelines.md).|
+|**identifikátor**|Odkaz na propojeného artefaktu|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Vytváření modelů pro aplikaci](../modeling/create-models-for-your-app.md)

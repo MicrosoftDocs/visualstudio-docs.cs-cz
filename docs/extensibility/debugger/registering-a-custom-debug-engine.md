@@ -1,5 +1,5 @@
 ---
-title: Vlastní registrace ladění modul | Microsoft Docs
+title: Registrace vlastního ladicího stroje | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,28 +13,29 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 99ff41f116e569baaae312acd17408928a6c79f4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7c87b3749c2ea63e89e2e8fb0caf773434a38df2
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44281387"
 ---
-# <a name="registering-a-custom-debug-engine"></a>Registrace modulu vlastní ladění
-Modul ladění musí registrovat jako objekt pro vytváření tříd souladu s konvencemi prostředí COM a také zaregistrovat pomocí sady Visual Studio prostřednictvím podklíč registru Visual Studio.  
+# <a name="register-a-custom-debug-engine"></a>Registrace vlastního ladicího stroje
+Ladicí stroj musí registrovat jako objekt pro vytváření tříd, následující konvence COM také zaregistrovat pomocí sady Visual Studio prostřednictvím podklíč registru sady Visual Studio.  
   
 > [!NOTE]
->  Příklad toho, jak zaregistrovat modul ladění naleznete v ukázce TextInterpreter, která je integrována jako součást [kurz: vytvoření ladění modulu pomocí knihovny ATL COM](http://msdn.microsoft.com/en-us/9097b71e-1fe7-48f7-bc00-009e25940c24).  
+>  Najdete příklad toho, jak zaregistrovat ladicího stroje v ukázce TextInterpreter, který je vytvořen jako součást [kurz: vytváření ladicího stroje pomocí knihovny ATL modelu COM](https://msdn.microsoft.com/library/9097b71e-1fe7-48f7-bc00-009e25940c24).  
   
 ## <a name="dll-server-process"></a>Proces serveru knihovny DLL  
- Obvykle je modul ladění implementovaný v jeho vlastní knihovny DLL jako COM server. To znamená, že modul ladění musí zaregistrovat CLSID jeho třída objektu pro vytváření u modelu COM, než Visual Studio k němu přístup. Potom modul ladění musí se registrovat pomocí sady Visual Studio, samotné aby bylo možné navázat žádné vlastnosti (jinak se označuje jako metriky) ladění modul podporuje. Volba metriky, které se zapisují do podklíče registru Visual Studio pro modul ladění závisí na funkce, které podporuje modul ladění.  
+ Ladicí stroj je obvykle nastavený v jeho vlastní knihovny DLL jako COM server. Ladicí stroj v důsledku toho musíte zaregistrovat CLSID jeho objekt pro vytváření tříd pomocí modelu COM před Visual Studio k němu přístup. Potom ladicí stroj musí registrovat pomocí sady Visual Studio k vytvoření libovolné vlastnosti (jinak známé jako metriky) ladění modul podporuje. Výběr metriky se zapisují do sady Visual Studio podklíč registru závisí na funkcích, které podporuje ladicí stroj.  
   
- [Pomocníci SDK pro ladění](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) popisuje nejen v umístění registru potřebné k registraci modul ladění; také popisuje dbgmetric.lib knihovny, který obsahuje počet užitečné funkce a deklarace pro vývojáře C++, které manipulace s registru jednodušší.  
+ [Pomocníci sad SDK pro ladění](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) popisuje nejen umístění v registru potřeba zaregistrovat ladicí stroj; také popisuje *dbgmetric.lib* knihovny, která obsahuje mnoho užitečných funkcí a deklarace pro vývojáře v jazyce C++, které usnadňují manipulace s jednodušší registru.  
   
 ### <a name="example"></a>Příklad  
- Následuje typický příklad (z ukázka TextInterpreter) ukazující způsob použití `SetMetric` funkci (z dbgmetric.lib), aby se zaregistrovat modul ladění pomocí sady Visual Studio. Metriky předávány je definována v dbgmetric.lib.  
+ Následující příklad (z ukázky TextInterpreter) ukazuje způsob použití `SetMetric` – funkce (z *dbgmetric.lib*), k registraci ladicího stroje pomocí sady Visual Studio. Metriky předávaný jsou také definovány v *dbgmetric.lib*.  
   
 > [!NOTE]
->  TextInterpreter je modul základní ladění; neimplementuje – a proto nezaregistruje – další funkce. Modul obsáhlejší ladění by měla mít celý seznam `SetMetric` volání nebo ekvivalenty, jeden pro každou funkci ladění modul podporuje.  
+>  TextInterpreter je základní ladicí stroj; nejsou nastaveny – a tedy nezaregistruje – další funkce. Úplnější ladicí stroj bude mít celý seznam `SetMetric` volání nebo ekvivalentní, jeden pro každou funkci ladicí stroj podporuje.  
   
 ```  
 // Define base registry subkey to Visual Studio.  
@@ -50,7 +51,7 @@ HRESULT CTextInterpreterModule::RegisterServer(BOOL bRegTypeLib, const CLSID * p
 }  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [Vytváření vlastních ladění modulu](../../extensibility/debugger/creating-a-custom-debug-engine.md)   
- [Pomocníci SDK pro ladění](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)   
- [Kurz: Vytvoření modul ladění pomocí knihovny ATL COM](http://msdn.microsoft.com/en-us/9097b71e-1fe7-48f7-bc00-009e25940c24)
+## <a name="see-also"></a>Viz také:  
+ [Vytvoření vlastního ladicího stroje](../../extensibility/debugger/creating-a-custom-debug-engine.md)   
+ [Pomocníci sad SDK pro ladění](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md)   
+ [Kurz: Vytváření ladicího stroje pomocí knihovny ATL modelu COM](https://msdn.microsoft.com/library/9097b71e-1fe7-48f7-bc00-009e25940c24)

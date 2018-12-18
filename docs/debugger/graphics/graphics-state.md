@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31476377"
 ---
 # <a name="graphics-state"></a>Stav grafiky
 Okno stavu v sadě Visual Studio grafiky diagnostiky vám pomůže pochopit stav grafiky, která je aktivní v okamžiku aktuální událost, jako je například volání kreslení.  

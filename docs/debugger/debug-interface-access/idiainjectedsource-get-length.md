@@ -1,5 +1,5 @@
 ---
-title: Idiainjectedsource::get_length – | Microsoft Docs
+title: Idiainjectedsource::get_length – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 09a52457eae3d925b910617cadba12c0bda4c508
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 9d6cd689989cb622e0e2c70c89d26f47238fcc58
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49917439"
 ---
 # <a name="idiainjectedsourcegetlength"></a>IDiaInjectedSource::get_length
 Získá počet bajtů kódu.  
@@ -36,10 +37,10 @@ HRESULT get_length (
  [out] Vrátí počet bajtů kódu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. Jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Hodnota vrácená touto metodou je délka zdrojový kód a se stejnou hodnotu, jak ho vrátila [idiainjectedsource::get_source –](../../debugger/debug-interface-access/idiainjectedsource-get-source.md) metoda.  
+ Hodnota vrácená touto metodou je délka zdrojového kódu a je stejná jako hodnota vrácená rozhraním [idiainjectedsource::get_source –](../../debugger/debug-interface-access/idiainjectedsource-get-source.md) metody.  
   
 ## <a name="see-also"></a>Viz také  
  [Idiainjectedsource –](../../debugger/debug-interface-access/idiainjectedsource.md)   

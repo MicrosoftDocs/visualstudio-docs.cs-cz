@@ -1,14 +1,16 @@
 ---
-title: Vývoj aplikací pomocí návrháře pracovních postupů | Microsoft Docs
+title: Vývoj aplikací pomocí návrháře pracovních postupů
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - DefaultWorkflowDesigner
 - DefaultWorkflowDesigner.UI
 helpviewer_keywords:
-- Visual Studio 2010 Workflow Designer [WFD], overview
+- Visual Studio Workflow Designer [WFD], overview
 - Workflow Designer [WFD]
-- Visual Studio 2010 Workflow Designer [WFD]
+- Visual Studio Workflow Designer [WFD]
 - Workflow Designer [WFD], overview
 ms.assetid: 4cd062b1-b496-4668-bbc1-ee85545e066d
 author: gewarren
@@ -16,34 +18,33 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c48e7b43b23e7bfe8887f437cc17e6db077c0e4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f6fa987303ccbc3c6dc9122fb03daef02896a327
+ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36756418"
 ---
-# <a name="developing-applications-with-the-workflow-designer"></a>Vývoj aplikací pomocí návrháře pracovních postupů
+# <a name="develop-apps-with-the-workflow-designer"></a>Vývoj aplikací pomocí návrháře pracovních postupů
 
-Návrháři pracovních postupů Windows je vizuálního návrháře a ladicí program pro grafické vytváření a ladění [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] aplikace v [!INCLUDE[netfx40_long](../workflow-designer/includes/netfx40_long_md.md)] který je hostován v [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] vývojové prostředí. Umožňuje vytvořit aplikace složené pracovního postupu, knihovna aktivit nebo [!INCLUDE[indigo1](../workflow-designer/includes/indigo1_md.md)] službu pomocí šablony a návrháře aktivit. Další informace o pracovních postupech najdete v tématu [modelu Windows Workflow Foundation &#91;rozhraní .NET Framework 4&#93;](http://msdn.microsoft.com/Library/9a23ea6b-d600-483e-89cd-8889cfec5f66).
+Návrhář postupu provádění je vizuálního návrháře a ladicí program pro grafické vytváření a ladění [modelu Windows Workflow Foundation](/dotnet/framework/windows-workflow-foundation/index) aplikace (WF) v sadě Visual Studio. Umožňuje vytvořit aplikace složené pracovního postupu, knihovna aktivit nebo služby Windows Communication Foundation (WCF) pomocí šablony a návrháře aktivit.
 
- Toto jsou některé nové funkce návrhu, které nastavit tuto novou verzi [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] vedle starších verzí [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]:
+## <a name="install-windows-workflow-foundation"></a>Nainstalujte Windows Workflow Foundation
 
--   [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] Je sestaven pomocí [!INCLUDE[avalon1](../workflow-designer/includes/avalon1_md.md)]. To vylepšuje možnosti Návrhář aktivity a zvyšuje výkon pro rozsáhlé a složité pracovní postupy.
+Chcete-li používat pracovní postup šablony projektů Visual Studio 2017, nejprve nainstalovat **modelu Windows Workflow Foundation** součásti.
 
--   Vlastní aktivity jsou nyní navrženy s [!INCLUDE[avalon2](../workflow-designer/includes/avalon2_md.md)], použití XAML a programovací model pro vytváření návrháře aktivit je jednodušší.
+1. Spusťte instalační program sady Visual Studio. Rychlý způsob, jak ho otevřete je tak, že vyberete **nástroje** > **funkcí a nástrojů pro získání** v sadě Visual Studio.
 
--   Vývojový diagram aktivity byl implementován, takže můžete vizualizovat toku programu pomocí známých vývojový diagram modelování styl.
+1. Instalační program Visual Studio, vyberte **jednotlivých součástí** kartě.
 
--   [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] Má nové proměnné návrháře umožňující deklarace a obor proměnné v rámci vaše pracovní postupy, je vytvoření vazby na aktivity.
+1. Přejděte dolů k položce **vývoj aktivity** kategorií a pak vyberte **modelu Windows Workflow Foundation** součásti.
 
--   V [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)], [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] nabízí úplné funkce IntelliSense, při vytváření výrazy jazyka Visual Basic v rámci vaší [!INCLUDE[netfx40_short](../workflow-designer/includes/netfx40_short_md.md)] pracovních postupů.
+   ![Součást Windows Workflow Foundation pro Visual Studio 2017](media/windows-workflow-foundation-component.png)
 
--   Zkušenosti s laděním teď zasahuje do XAML, abyste mohli nastavit zarážky ve vaší definice pracovního postupu XAML a ke kroku do kódu XAML v modul runtime, který poskytuje podobné jako v spravovaného kódu.
+1. Vyberte **upravit**.
 
--   Opětovné hostování [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] mimo [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] je výrazně jednodušší porovnání s předchozími verzemi, současnosti vyžaduje jenom pár řádků kódu.
+   Visual Studio nainstaluje **modelu Windows Workflow Foundation** součásti.
 
--   Nové <xref:System.Activities.Statements.Flowchart> aktivita a její [vývojový diagram](../workflow-designer/flowchart-activity-designer.md) umožňují vizualizovat vaše toku programu pomocí známých vývojový diagram modelování stylu.
+## <a name="see-also"></a>Viz také:
 
--   Zasílání zpráv aktivity vylepšily, což umožňuje zapsat plně deklarativního (žádný kód) [!INCLUDE[indigo1](../workflow-designer/includes/indigo1_md.md)] služby.
-
--   **Přidat odkaz na službu...**  funkce vám umožní generovat aktivity, automaticky které přístup k webovým službám.
+- [Modelu Windows Workflow Foundation (rozhraní .NET Framework)](/dotnet/framework/windows-workflow-foundation/index)

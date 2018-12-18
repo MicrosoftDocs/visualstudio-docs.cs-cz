@@ -1,5 +1,5 @@
 ---
-title: SetThreadCount | Microsoft Docs
+title: SetThreadCount | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -17,27 +17,28 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 059c3015bf542dda6a420c80620bc74c9ee6ca6b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9cc9a1ae5f7fb51981f3cebc4d6fa658f614de6d
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39151837"
 ---
 # <a name="setthreadcount"></a>SetThreadCount
 Nastaví počet globální vláken a přiřadí tento počet aktuální vlákno.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cmd  
 HRESULT WINAPI SetThreadCount(int threadCount);  
 ```  
   
 #### <a name="parameters"></a>Parametry  
- [v] `threadCount`  
- Počet vláken používaných.  
+ [in] `threadCount`  
+ Počet vláken.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- **HRESULT** s **úspěšné** nastaven bit, pokud byl aktualizován počet vláken.  
+ **HRESULT** s **SUCCEEDED** sadu bitů, pokud byl aktualizován počet vláken.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** FileTracker.h
+ **Záhlaví:** *FileTracker.h*

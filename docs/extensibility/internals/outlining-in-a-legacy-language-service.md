@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31135648"
 ---
 # <a name="outlining-in-a-legacy-language-service"></a>Osnova ve službě jazyk starší verze
 Osnova umožňuje sbalit komplexní program do přehled nebo outline. Například v jazyce C# všechny metody lze sbalit na jeden řádek, zobrazuje pouze podpis metody. Kromě toho struktury a třídy lze sbalit zobrazit pouze názvy třídy a struktury. V jedné metody, lze sbalit komplexní logiku k zobrazení celkového toku zobrazením pouze první řádek příkazy `foreach`, `if`, a `while`.  

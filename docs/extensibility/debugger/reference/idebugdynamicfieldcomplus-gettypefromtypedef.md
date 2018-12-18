@@ -1,5 +1,5 @@
 ---
-title: IDebugDynamicFieldCOMPlus::GetTypeFromTypeDef | Microsoft Docs
+title: IDebugDynamicFieldCOMPlus::GetTypeFromTypeDef | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7143892f71a798db1aa9f922a64eac320f973eb8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0238da9c435fcfc02aacf00e4e54459d0fc59c10
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49853221"
 ---
 # <a name="idebugdynamicfieldcomplusgettypefromtypedef"></a>IDebugDynamicFieldCOMPlus::GetTypeFromTypeDef
-Načte typ zadané jeho token.  
+Získá typ zadané svůj token.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,19 +46,19 @@ int GetTypeFromTypeDef(
   
 #### <a name="parameters"></a>Parametry  
  `ulAppDomainID`  
- [v] Identifikátor domény aplikace.  
+ [in] Identifikátor domény aplikace.  
   
  `guidModule`  
- [v] Jedinečný identifikátor modulu.  
+ [in] Jedinečný identifikátor modulu.  
   
  `tokClass`  
- [v] Token, který představuje typ.  
+ [in] Token, který představuje typ.  
   
  `ppType`  
- [out] Vrátí [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objekt, který obsahuje typu.  
+ [out] Vrátí [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) objekt, který obsahuje typ.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugDynamicFieldCOMPlus](../../../extensibility/debugger/reference/idebugdynamicfieldcomplus.md)

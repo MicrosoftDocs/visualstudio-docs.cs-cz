@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130133"
 ---
 # <a name="properties-window-object-list"></a>Seznam objektů vlastnosti – okno
 Seznam objektů v **vlastnosti** okno je rozevíracího seznamu, který vám umožní změnit výběr na další objekty, které jsou k dispozici v rámci jednoho nebo více vybraných windows. Vyberte jiný objekt z v tomto seznamu se aktivuje volání <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer.SelectObjects%2A> k informování prostředí vybral nový objekt. Informace zobrazené v **vlastnosti** okno se poté změní na Zobrazit vlastnosti přidružené k nově vybraný objekt.  

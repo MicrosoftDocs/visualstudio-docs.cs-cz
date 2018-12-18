@@ -1,0 +1,49 @@
+### YamlMime:YamlDocument
+ms.openlocfilehash: 74548e58da6430888387e300974f4e48d1138c07
+ms.sourcegitcommit: db680e8fa8066f905e7f9240342ece7ab9259308
+ms.translationtype: MT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 07/09/2018
+ms.locfileid: "44342988"
+documentType: LandingData
+title: Visual Studio Tools for AI
+metadata:
+  document_id: 83ceabb5-fb4f-a709-3fd2-37d024409f31
+  title: Visual Studio Tools for AI | Dokumentace Microsoftu
+  ms.prod: visual-studio-dev15
+  ms.technology: vs-ai-tools
+  author: lisawong19
+  ms.author: liwong
+  manager: routlaw
+  ms.topic: landing-page
+  ms.date: 10-25-2017
+abstract:
+  description: Visual Studio Tools for AI je integrované vývojové prostředí pro sestavení, testování a nasazení řešení hloubkového učení. Další informace o použití nástroje AI pomocí našich šablon rychlý start, kurzů a ukázek.
+sections:
+- title: Zprovoznění během 5 minut
+  items:
+  - type: paragraph
+    text: 'Další informace o spuštění řešení hloubkového učení pomocí:'
+  - type: list
+    style: icon48
+    items:
+    - image:
+        src: media/Tensorflow_logo.png
+      text: TensorFlow a Python
+      href: tensorflow-local.md
+- title: Podrobné kurzy
+  items:
+  - type: paragraph
+    text: 'Informace o vývoji pro hloubkové učení řešení:'
+  - type: list
+    style: ordered
+    items:
+    - html: <a href="/visualstudio/ai/tensorflow-vm">Trénování TensorFlow modelu v cloudu</a>
+- title: Ukázky kódu
+  items:
+  - type: list
+    style: unordered
+    className: spaced noBullet
+    items:
+    - html: <a href="https://github.com/Microsoft/samples-for-ai">Ukázky úložiště</a>
+    - html: <a href="https://gallery.cortanaintelligence.com/projects">Galerie služby Machine Learning</a>

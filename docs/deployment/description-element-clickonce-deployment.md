@@ -1,5 +1,5 @@
 ---
-title: '&lt;Popis&gt; – Element (ClickOnce – nasazení) | Microsoft Docs'
+title: '&lt;Popis&gt; – Element (nasazení ClickOnce) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -18,18 +18,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 06a8f1a1e5ec5f4663ed999566158d104c6a7364
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b8985bc83299f55cec3c5f41fd3d76c8801fdf34
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39079807"
 ---
-# <a name="ltdescriptiongt-element-clickonce-deployment"></a>&lt;Popis&gt; – Element (ClickOnce – nasazení)
-Identifikuje informace o aplikaci použít k vytvoření přítomnosti prostředí a **přidat nebo odebrat programy** položky v Ovládacích panelech.  
+# <a name="ltdescriptiongt-element-clickonce-deployment"></a>&lt;Popis&gt; – element (nasazení ClickOnce)
+Určuje informace o aplikaci použít k vytvoření prostředí prezentace a **přidat nebo odebrat programy** v Ovládacích panelech.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```xml  
   
       <description   
    publisher   
@@ -40,27 +41,27 @@ Identifikuje informace o aplikaci použít k vytvoření přítomnosti prostřed
 ```  
   
 ## <a name="elements-and-attributes"></a>Elementy a atributy  
- `description` Element je povinná a je v `urn:schemas-microsoft-com:asm.v1` oboru názvů. Neobsahuje žádné podřízené elementy a má následující atributy.  
+ `description` Element je povinný a je v `urn:schemas-microsoft-com:asm.v1` oboru názvů. Neobsahuje žádné podřízené prvky a má následující atributy.  
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|`publisher`|Požadováno. Určuje název společnosti používat pro umístění ikony v systému Windows **spustit** nabídky a **přidat nebo odebrat programy** položky v Ovládacích panelech, když je nasazení nakonfigurované pro instalaci.|  
-|`product`|Požadováno. Identifikuje úplný název produktu. Použít jako název ikonu nainstalovaná v systému Windows **spustit** nabídky.|  
-|`suiteName`|Volitelné. Identifikuje podsložku v rámci `publisher` složku v systému Windows **spustit** nabídky.|  
-|`supportUrl`|Volitelné. Určuje adresu URL podpory, které se zobrazí v **přidat nebo odebrat programy** položky v Ovládacích panelech. Pro podporu aplikace v systému Windows je taky vytvořit zástupce odkazující na tuto adresu URL **spustit** nabídky, když je nasazení nakonfigurované pro instalaci.|  
+|`publisher`|Požadováno. Určuje název společnosti použít pro umístění ikony v Windows **Start** nabídky a **přidat nebo odebrat programy** v Ovládacích panelech, když je nasazení nakonfigurováno pro instalaci.|  
+|`product`|Požadováno. Určuje úplný název produktu. Použít jako název ikona nainstalované v Windows **Start** nabídky.|  
+|`suiteName`|Volitelné. Identifikuje podsložku v rámci `publisher` složky v Windows **Start** nabídky.|  
+|`supportUrl`|Volitelné. Určuje adresu URL podpory, který je zobrazen v **přidat nebo odebrat programy** v Ovládacích panelech. Je také vytvořen zástupce na tuto adresu URL pro podporu aplikace v Windows **Start** nabídky, pokud je nasazení nakonfigurováno pro instalaci.|  
   
 ## <a name="remarks"></a>Poznámky  
- Element popisu je požadována všechny konfigurace nasazení.  
+ Ve všech konfiguracích nasazení je vyžadován popis prvek.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad kódu ukazuje `description` element v [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] – manifest nasazení. Tento příklad kódu je součástí většího příkladu vztahujícího se pro [Manifest aplikace ClickOnce](../deployment/clickonce-deployment-manifest.md) tématu.  
+ Následující příklad kódu ukazuje `description` prvek [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifestu nasazení. Tento příklad kódu je součástí většího příkladu určeného pro [Manifest nasazení ClickOnce](../deployment/clickonce-deployment-manifest.md) tématu.  
   
-```  
+```xml  
 <description   
   asmv2:publisher="My Company Name"  
   asmv2:product="My Application"  
   xmlns="urn:schemas-microsoft-com:asm.v1" />  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [ClickOnce – manifest nasazení](../deployment/clickonce-deployment-manifest.md)

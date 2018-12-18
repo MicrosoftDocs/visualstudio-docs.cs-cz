@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c10695eacdf680d247be8ef95ae14c3208ae92af
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ee31b1547f9607f54cc5db9d056b997f071633ff
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34691584"
 ---
 # <a name="cores-view-legend"></a>Legenda zobrazení jader
 Legenda zobrazení jader identifikuje každé vlákno barva a název. Obsahuje sloupce, které se zobrazí počty pro přepnutí kontextu cross-core, celkový kontextu přepínače a procent kontextu přepínače, které zasahují jader. Řádky v legendě jsou seřazené podle počtu přepnutí kontextu cross-core, v sestupném pořadí.  
@@ -36,5 +37,5 @@ Legenda zobrazení jader identifikuje každé vlákno barva a název. Obsahuje s
 |Celkový počet kontextu přepínače|Celkový počet přepínačů kontext pro dané vlákno během intervalu získávání vzorků. Pokaždé, když vlákno změny kontextu (například ze spuštění se synchronizací) jeden kontextu přepínač se počítá.|  
 |Procento kontextu přepínače, které zasahují jader|Počítá se jako procento vydělením počtu přepnutí kontextu jádra mezi počtem celkový kontextu přepínače. Tím vyšší toto procento, tím vyšší celkový efekt režii mezi základní kontext přepne na výkon této konkrétní přístup z více vláken.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Zobrazení jader](../profiling/cores-view.md)

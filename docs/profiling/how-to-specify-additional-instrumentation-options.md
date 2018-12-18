@@ -15,13 +15,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dd5b18f4bcf3358592b191c2593fd020f99d4cf5
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f97bc28277adfe1e181e0f6a5be210e45b250717
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34845246"
 ---
-# <a name="how-to-specify-additional-instrumentation-options"></a>Postupy: Určení dalších možností instrumentace
+# <a name="how-to-specify-additional-instrumentation-options"></a>Postupy: určení dalších možností instrumentace
 
 Můžete instrumentace binárních souborů pomocí prostředí Visual Studio IDE, nebo pomocí nástroje příkazového řádku. Pokud jste instrumentace binárního souboru z integrovaného vývojového prostředí, můžete řídit objem dat, které jsou shromážděny během instrumentace zadáním dalších možností instrumentace na [vsinstr –](../profiling/vsinstr.md) nástroj. Tyto možnosti jsou dostupné na úrovni cíl nebo relace. Například pokud chcete zahrnout nebo vyloučit konkrétní funkce během procesu instrumentace, použijte parametr další instrumentace na cílové úrovni.
 
@@ -40,7 +41,7 @@ Můžete instrumentace binárních souborů pomocí prostředí Visual Studio ID
 
 4. Click **OK**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Konfigurace výkonnostních relací](../profiling/configuring-performance-sessions.md)  
-[Profilace z příkazového řádku](../profiling/using-the-profiling-tools-from-the-command-line.md)
+[Profil z příkazového řádku](../profiling/using-the-profiling-tools-from-the-command-line.md)

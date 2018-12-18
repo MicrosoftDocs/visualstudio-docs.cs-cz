@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess3::SetHostingProcessLanguage | Microsoft Docs
+title: IDebugProcess3::SetHostingProcessLanguage | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4c6102761e69f8e6cc8bf0d94a81740c934d558f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 537b2c2b682db1e1bed8131df6f010e55ef47744
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49900342"
 ---
 # <a name="idebugprocess3sethostingprocesslanguage"></a>IDebugProcess3::SetHostingProcessLanguage
-Tato metoda nastaví jazyk, který tento proces bude hostován v části. Tento jazyk pak lze modul ladění (DE) zatížení vyhodnocení odpovídající výrazu.  
+Tato metoda nastaví jazyk, který proces bude hostována v rámci. Tento jazyk pak lze pomocí ladicího stroje (DE) načíst vyhodnocovací filtr výrazů odpovídající.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +41,13 @@ int SetHostingProcessLanguage(
   
 #### <a name="parameters"></a>Parametry  
  `guidLang`  
- [v] `GUID` jazyka, který by měly používat DE. Zadejte `GUID_NULL` (C++) nebo `Guid.Empty` (C#) tak, aby měl DE použít výchozí jazyk.  
+ [in] `GUID` jazyka, který by měl používat DE. Zadejte `GUID_NULL` (C++) nebo `Guid.Empty` (C#), který jste DE použít výchozí jazyk.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- [GetHostingProcessLanguage](../../../extensibility/debugger/reference/idebugprocess3-gethostingprocesslanguage.md) slouží k načtení aktuální nastavení jazyka.  
+ [GetHostingProcessLanguage](../../../extensibility/debugger/reference/idebugprocess3-gethostingprocesslanguage.md) je možné načíst aktuální nastavení jazyka.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)   

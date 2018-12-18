@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31457339"
 ---
 # <a name="debug-hook-function-writing"></a>Zápis funkce háku ladění
 Tato část popisuje několik funkce háku vlastní ladění, můžete napsat a které vám umožní vložení kódu do některé předdefinované body v normálním zpracování ladicího programu.  

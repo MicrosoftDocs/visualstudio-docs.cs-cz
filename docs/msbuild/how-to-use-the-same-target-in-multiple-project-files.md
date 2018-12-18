@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: použití stejného cíle ve více souborech projektu | Microsoft Docs'
+title: 'Postupy: použití stejného cíle ve více souborech projektu | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -13,32 +13,33 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 41c1ed02a32136d6c80e24f0644e0fab660e8ed0
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 8fe68d4d6d970ee0c1e5db566caf7c812436589c
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39077517"
 ---
-# <a name="how-to-use-the-same-target-in-multiple-project-files"></a>Postupy: Použití stejného cíle ve více souborech projektu
-Pokud jste vytvořili několik [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] soubory projektu, vám může zjistit, budete muset použít stejné úlohy a cíle v souborech jiný projekt. Místo v každém projektu souboru, včetně úplný popis těchto úloh nebo cíle, můžete uložit do samostatného souboru cíl a poté importovat do jiné projekt, který potřebuje používat cíl daného projektu.  
+# <a name="how-to-use-the-same-target-in-multiple-project-files"></a>Postupy: použití stejného cíle ve více souborech projektu
+Pokud jste vytvořili několik [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] soubory projektu, jste možná zjistili, že budete muset použít stejné úlohy a cíle v různé soubory projektu. Namísto do každého souboru projektu, včetně úplný popis těchto úloh nebo cíle, můžete uložit cíl v souboru samostatný projekt a následným importem tohoto projektu do jiného projektu, kterou je potřeba použít cíl.  
   
-## <a name="using-the-import-element"></a>Pomocí Import – Element  
- `Import` Element slouží k vložení jednoho souboru projektu do jiného souboru projektu. Soubor projektu, která se importují musí být platná [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] souboru projektu a obsahuje kód XML ve správném formátu. `Project` Atribut určuje cestu k souboru importované projektu. Další informace o `Import` elementu, najdete v části [Import – Element (MSBuild)](../msbuild/import-element-msbuild.md).  
+## <a name="use-the-import-element"></a>Použijte Import element  
+ `Import` Element slouží k vložení jeden soubor projektu do jiného souboru projektu. Soubor projektu, která se importují musí být platný [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] soubor projektu a obsahuje kód XML ve správném formátu. `Project` Atribut určuje cestu k souboru importovaném projektu. Další informace o `Import` prvku, naleznete v tématu [Import – element (MSBuild)](../msbuild/import-element-msbuild.md).  
   
-#### <a name="to-import-a-project"></a>Import projektu  
+#### <a name="to-import-a-project"></a>Chcete-li importovat projekt  
   
-1.  Definujte v import souboru projektu, všechny vlastnosti a položky, které se používají jako parametry pro vlastnosti a položky v importovaných projektu.  
+1.  Definujte v souboru importu projektu, všechny vlastnosti a položky, které se používají jako parametry pro vlastnosti, položky v importovaném projektu.  
   
-2.  Použití `Import` elementu, který chcete importovat projekt. Příklad:  
+2.  Použití `Import` prvek, který chcete importovat projekt. Příklad:  
   
      `<Import Project="MyCommon.targets"/>`  
   
-3.  Následující `Import` elementu, definujte všechny vlastnosti a položky, které musí přepsat výchozí definice vlastností a položek v importovaných projektu.  
+3.  Následující `Import` elementu, definujte všechny vlastnosti a položky, které se musí přepsat výchozí definice vlastností a položek v importovaném projektu.  
   
 ## <a name="order-of-evaluation"></a>Pořadí vyhodnocení  
- Když [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] dosáhne `Import` elementu, importovaný projekt efektivně vložený do Import projektu na umístění `Import` elementu. Proto umístění `Import` element může mít vliv na hodnoty vlastností a položek. Je důležité si uvědomit, vlastnosti a položky, které jsou nastaveny sadou importované projektu a vlastnosti a položky používané importované projektu.  
+ Když [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] dosáhne `Import` element importovaném projektu účinně vložený do importu projektu na umístění `Import` elementu. Proto umístění `Import` prvek může mít vliv na hodnoty vlastností a položek. Je důležité pochopit vlastnosti a položky, které určil institut NIST importovaném projektu a vlastnosti a položky, které používá importovaném projektu.  
   
- Při sestavení projektu všechny vlastnosti se vyhodnocují jako první, za nímž následuje položky. Například následující kód XML definuje importovaný soubor projektu MyCommon.targets:  
+ Při sestavení projektu, budou se všechny vlastnosti vyčíslen první, za nímž následuje položky. Například následující kód XML definuje importovaný soubor projektu *MyCommon.targets*:  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -52,7 +53,7 @@ Pokud jste vytvořili několik [!INCLUDE[vstecmsbuild](../extensibility/internal
 </Project>  
 ```  
   
- Následující kód XML definuje MyApp.proj, který importuje MyCommon.targets:  
+ Následující kód XML definuje *MyApp.proj*, který importuje *MyCommon.targets*:  
   
 ```xml  
 <Project  
@@ -65,24 +66,24 @@ Pokud jste vytvořili několik [!INCLUDE[vstecmsbuild](../extensibility/internal
 </Project>  
 ```  
   
- Při sestavení projektu, se zobrazí následující zprávu:  
+ Po sestavení projektu, se zobrazí následující zpráva:  
   
  `Name="MyCommon"`  
   
- Protože je po vlastnost Importovat projekt `Name` byla definována v MyApp.proj, definice `Name` MyCommon.targets přepsání definici v MyApp.proj. Pokud projekt importu před vlastnost, kterou je definován název sestavení by zobrazí se následující zpráva:  
+ Vzhledem k tomu, že projekt je importovat po vlastnost `Name` je definována v *MyApp.proj*, definice `Name` v *MyCommon.targets* přepíše definice v *MyApp.proj*. Pokud projekt je importován před vlastnost, která je definována, sestavení zobrazí následující zpráva:  
   
  `Name="MyApp"`  
   
-#### <a name="use-the-following-approach-when-importing-projects"></a>Použijte následující postup při importu projekty  
+#### <a name="use-the-following-approach-when-importing-projects"></a>Použijte následující postup při importu projektů  
   
-1.  Definování v souboru projektu, všechny vlastnosti a položky, které se používají jako parametry pro vlastnosti a položky v importovaných projektu.  
+1.  Definování v souboru projektu, všechny vlastnosti a položky, které se používají jako parametry pro vlastnosti, položky v importovaném projektu.  
   
-2.  Importujte projekt.  
+2.  Importujte projektu.  
   
-3.  V souboru projektu definujte všechny vlastnosti a položky, které musí přepsat výchozí definice vlastností a položek v importovaných projektu.  
+3.  V souboru projektu definujte všechny vlastnosti a položky, které se musí přepsat výchozí definice vlastností a položek v importovaném projektu.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad kódu ukazuje soubor MyCommon.targets, který importuje druhém příkladu kódu. Souboru .targets vyhodnotí vlastnosti z Import konfigurace sestavení projektu.  
+ Následující příklad kódu ukazuje *MyCommon.targets* soubor, který importuje druhý příklad kódu. *.Targets* soubor vyhodnotí jako vlastnosti z importu projektu ke konfiguraci sestavení.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -100,7 +101,7 @@ Pokud jste vytvořili několik [!INCLUDE[vstecmsbuild](../extensibility/internal
 ```  
   
 ## <a name="example"></a>Příklad  
- Následující příklad kódu importuje soubor MyCommon.targets.  
+ Následující příklad importuje kódu *MyCommon.targets* souboru.  
   
 ```xml  
 <Project DefaultTargets="Build"  
@@ -112,6 +113,6 @@ Pokud jste vytvořili několik [!INCLUDE[vstecmsbuild](../extensibility/internal
 </Project>  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [Import – Element (MSBuild)](../msbuild/import-element-msbuild.md)   
+## <a name="see-also"></a>Viz také:  
+ [Import – element (MSBuild)](../msbuild/import-element-msbuild.md)   
  [Cíle](../msbuild/msbuild-targets.md)

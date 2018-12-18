@@ -1,7 +1,7 @@
 ---
-title: Povolení ladění pro aplikace ASP.NET | Microsoft Docs
+title: Povolit ladění pro aplikace ASP.NET | Dokumentace Microsoftu
 ms.custom: H1HackMay2017
-ms.date: 09/21/17
+ms.date: 09/21/18
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
@@ -19,214 +19,176 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: 3418e1d2e05d687f8cb73a7857178ae1060d56f8
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 41da2eb360bac4c50f85bd908f980f5ee3c1d141
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49813417"
 ---
-# <a name="debug-aspnet-applications-in-visual-studio"></a>Ladění aplikací ASP.NET v sadě Visual Studio
+# <a name="debug-aspnet-or-aspnet-core-apps-in-visual-studio"></a>Ladění aplikací ASP.NET nebo ASP.NET Core v sadě Visual Studio
 
-Můžete ladit aplikace ASP.NET v sadě Visual Studio.
+Můžete ladit aplikace ASP.NET a ASP.NET Core v sadě Visual Studio. Proces se liší mezi ASP.NET a ASP.NET Core, a určuje, zda jeho spuštění na službu IIS Express nebo místního serveru služby IIS. 
 
-## <a name="requirements"></a>Požadavky
+>[!NOTE]
+>Následující kroky a nastavení platí pouze pro ladění aplikací na místním serveru. Ladění aplikací na vzdálené služby IIS používá server **připojit k procesu**a tato nastavení ignoruje. Další informace a pokyny pro vzdálené ladění aplikace v ASP.NET ve službě IIS najdete v tématu [vzdálené ladění ASP.NET na počítači se službou IIS](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md) nebo [vzdálené ladění ASP.NET Core ve vzdáleném počítači IIS](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md).
 
-Podle pokynů v tomto tématu, potřebujete:
+Integrovaný server služby IIS Express je součástí sady Visual Studio. Služba IIS Express je výchozí server pro ladění pro projekty ASP.NET a ASP.NET Core a byl předem nakonfigurován. Je nejjednodušší způsob, jak ladit a je ideální pro počáteční ladění a testování. 
 
-- Služba IIS Express, který je zahrnutý ve výchozím nastavení v sadě Visual Studio 2012 a novější
+Můžete také ladit ASP.NET nebo ASP.NET Core aplikaci na místním serveru služby IIS (verze 8.0 nebo novější), který je nakonfigurován ke spuštění aplikace. Chcete-li ladit na místním serveru IIS, musí splňovat následující požadavky: 
 
-    -nebo-
+<a name="iis"></a>
+- Vyberte **dobu vývoje podpora služby IIS** při instalaci sady Visual Studio. (V případě potřeby znovu spusťte instalační program sady Visual Studio, vyberte **změnit**a přidejte tuto součást.)
+- Spustíte aplikaci Visual Studio jako správce. 
+- Instalace a správnou konfiguraci služby IIS s odpovídající verzí technologie ASP.NET nebo ASP.NET Core. Další informace a pokyny najdete v tématu [IIS 8.0 pomocí technologie ASP.NET 3.5 a technologii ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45) nebo [hostitele ASP.NET Core ve Windows se službou IIS](https://docs.microsoft.com/aspnet/core/host-and-deploy/iis/index).
+- Ujistěte se, že aplikace běží ve službě IIS bez chyb.
 
-- Místní služby IIS webový server (verze 8.0 nebo novější), správně nakonfigurovaná, a můžete spustit aplikace ASP.NET bez chyb.
+## <a name="debug-aspnet-apps"></a>Ladění aplikací ASP.NET 
 
-Pokud je vzdálený server, musí být na vzdáleném počítači spuštěny vzdáleného ladicího programu. Chcete-li ladit na vzdáleném serveru služby IIS, přečtěte si téma [vzdáleného ladění ASP.NET na počítači se službou IIS](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md). 
+Služba IIS Express je výchozí a je předem nakonfigurován. Pokud ladíte na místním serveru IIS, ujistěte se, že splňujete [požadavky pro místní ladění služby IIS](#iis). 
 
-## <a name="configure-debug-settings"></a>Konfigurace nastavení pro ladění
+1. Vyberte projekt ASP.NET v sadě Visual Studio **Průzkumníka řešení** a klikněte na tlačítko **vlastnosti** ikonu, stiskněte klávesu **Alt**+**Enter**, nebo klikněte pravým tlačítkem a zvolte **vlastnosti**.
+   
+1. Vyberte **webové** kartu.
+   
+1. V **vlastnosti** podokně v části **servery**, 
+   - Pro službu IIS Express, vyberte **služby IIS Express** z rozevíracího seznamu.
+   - Pro místní služby IIS
+     1. Vyberte **místní služby IIS** z rozevíracího seznamu.
+     1. Vedle položky **adresa URL projektu** pole, vyberte **vytvořit virtuální adresář**, pokud jste ještě nenastavili aplikace ve službě IIS.
+   
+1. V části **ladicí programy**vyberte **ASP.NET**.
+   
+   ![Nastavení ladicího programu ASP.NET](media/dbg-aspnet-enable-debugging2.png "ASP.NET nastavení ladicího programu")
+   
+1. Použití **souboru** > **uložit vybrané položky** nebo **Ctrl**+**S** ukládat změny. 
+   
+1. Ladění aplikací ve vašem projektu, nastavte zarážky v kódu. Na panelu nástrojů sady Visual Studio, ujistěte se, že v konfiguraci nastavená na **ladění**, a zobrazí se v prohlížeči chcete **služby IIS Express (\<názvu prohlížeče >)** nebo **místní služby IIS (\< Název prohlížeče >)** v poli emulátoru. 
+   
+1. Chcete-li spustit ladění, vyberte **služby IIS Express (\<názvu prohlížeče >)** nebo **místní služby IIS (\<názvu prohlížeče >)** na panelu nástrojů vyberte **spustit ladění**z **ladění** nabídky nebo stisknutím klávesy **F5**. Ladicí program pozastavení na zarážce. Pokud ladicí program nemůže dosažení zarážky, přečtěte si téma [ladění Poradce při potížích](#troubleshoot-debugging).
 
-### <a name="enable-aspnet-debugging-in-the-project-properties"></a>Povolit ladění ASP.NET ve vlastnostech projektu
+## <a name="debug-aspnet-core-apps"></a>Ladění aplikací ASP.NET Core 
 
-1. Otevřete projekt ASP.NET v sadě Visual Studio.
+Služba IIS Express je výchozí a je předem nakonfigurován. Pokud ladíte na místním serveru IIS, ujistěte se, že splňujete [požadavky pro místní ladění služby IIS](#iis). 
 
-2. Klikněte pravým tlačítkem na projekt v **Průzkumníku řešení**, zvolte **vlastnosti**a klikněte **webové** karta.
+1. Vyberte projekt ASP.NET Core v sadě Visual Studio **Průzkumníka řešení** a klikněte na tlačítko **vlastnosti** ikonu, stiskněte klávesu **Alt**+**Enter**, nebo klikněte pravým tlačítkem a zvolte **vlastnosti**.
 
-    Pro některé typy projektů vyberte **vlastnosti > ladění** místo. Pro projekt webové formuláře ASP.NET, klikněte pravým tlačítkem na projekt a vyberte **stránky vlastností > Možnosti spuštění**.
-  
-3.  V části **ladicí programy**, vyberte **ASP.NET** zaškrtávací políčko.
+1. Vyberte **ladění** kartu.
+   
+1. V **vlastnosti** podokno, další **profilu**, 
+   - Pro službu IIS Express, vyberte **služby IIS Express** z rozevíracího seznamu.
+   - Pro místní služby IIS, vyberte název aplikace z rozevíracího seznamu nebo **nový**, vytvořte nový název profilu a vyberte **OK**.
+   
+1. Vedle položky **spuštění**, vyberte buď **služby IIS Express** nebo **IIS** z rozevíracího seznamu. 
+   
+1. Ujistěte se, že **spuštění prohlížeče** zaškrtnuto.
+   
+1. V části **proměnné prostředí**, ujistěte se, že **ASPNETCORE_ENVIRONMENT** je k dispozici s hodnotou **vývoj**. Pokud ne, vyberte **přidat** a přidejte ji.
+   
+   ![Nastavení ladění ASP.NET Core](../debugger/media/dbg-aspnet-enable-debugging3.png "nastavení ladicího programu ASP.NET Core")
+   
+1. Použití **souboru** > **uložit vybrané položky** nebo **Ctrl**+**S** ukládat změny. 
+   
+1. Ladění aplikací ve vašem projektu, nastavte zarážky v kódu. Na panelu nástrojů sady Visual Studio, ujistěte se, že v konfiguraci nastavená na **ladění**a buď **služby IIS Express**, nebo název nového profilu služby IIS, se zobrazí v poli emulátoru. 
+   
+1. Chcete-li spustit ladění, vyberte **služby IIS Express** nebo  **\<název profilu služby IIS >** na panelu nástrojů vyberte **spustit ladění** z **ladění** nabídky nebo stisknutím klávesy **F5**. Ladicí program pozastavení na zarážce. Pokud ladicí program nemůže dosažení zarážky, přečtěte si téma [ladění Poradce při potížích](#troubleshoot-debugging).
 
-    ![Nastavení ladicího programu](../debugger/media/dbg-aspnet-enable-debugging.png "nastavení ladicího programu")
+## <a name="troubleshoot-debugging"></a>Řešení potíží s ladění
+
+Pokud místní ladění služby IIS nelze průběh až k zarážce, použijte následující postup řešení potíží. 
+
+1. Spusťte webovou aplikaci služby IIS a ujistěte se, že běží správně. Ponechte webová aplikace spuštěná.
+   
+2. Ze sady Visual Studio, vyberte **ladit > připojit k procesu** nebo stiskněte klávesu **Ctrl**+**Alt**+**P**, a připojit k procesu ASP.NET nebo ASP.NET Core (obvykle **w3wp.exe** nebo **dotnet.exe**). Další informace najdete v tématu [připojit k procesu](attach-to-running-processes-with-the-visual-studio-debugger.md) a [postupy hledání názvu procesu ASP.NET](how-to-find-the-name-of-the-aspnet-process.md).
+
+Pokud se můžete připojit a zarážce pomocí **připojit k procesu**, ale ne prostřednictvím **ladění** > **spustit ladění** nebo **F5**, nastavení je pravděpodobně nesprávná ve vlastnostech projektu. Pokud používáte soubor HOSTITELŮ, ujistěte se, že je také nakonfigurováno správně.
+
+## <a name="configure-debugging-in-the-webconfig-file"></a>Konfigurovat ladění v souboru web.config  
+
+Projekty ASP.NET mají *web.config* soubory ve výchozím nastavení, které obsahují obě konfigurace a spuštění informace o aplikaci, včetně nastavení pro ladění. *Web.config* soubory musí být správně nakonfigurované pro ladění. **Vlastnosti** nastavení v předchozí části aktualizace *web.config* soubory, ale můžete také nakonfigurovat jejich ručně. 
 
 > [!NOTE]
-> Pokud vytvoříte nový projekt ASP.NET (**soubor > Nový projekt**), nastavení pro ladění jsou již nakonfigurované správně.
-
-### <a name="enable-debugging-in-the-webconfig-file"></a>Povolit ladění v souboru web.config  
-
-Chcete-li ladit webové aplikace, musí být správně nakonfigurované souboru web.config aplikace. Soubor web.config je požadována, pokud hostování aplikace služby IIS nebo IIS Express.
-
-Pro ASP.NET Core v souboru web.config se vytvoří automaticky při nasazení aplikace (Pokud již není přítomen).
+> Projekty ASP.NET Core nemají zpočátku *web.config* soubory, ale použijte *appsettings.json* a *launchSettings.json* souborů pro konfiguraci aplikací a spuštění informace. Nasazení aplikace vytvoří *web.config* soubor či soubory v projektu, ale obvykle neobsahují informace o ladění.
 
 > [!TIP]
-> Váš proces nasazení může aktualizovat nastavení v souboru web.config. Proto před pokusem o ladění, ověřte nastavení web.config na serveru.
+> Proces nasazení může aktualizovat *web.config* nastavení, takže před pokusem o ladění, ujistěte se, že *web.config* je nakonfigurovaná pro ladění.
   
-1.  V sadě Visual Studio otevřete soubor web.config.  
-  
-    > [!NOTE]  
-    > V souboru web.config nelze přistupovat vzdáleně pomocí webového prohlížeče. Z bezpečnostních důvodů konfiguruje [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] službu Microsoft IIS pro zabránění přímého přístupu prohlížeče k souborům Web.config. Pokud se pokusíte přístup k souboru konfigurace pomocí prohlížeče, dojde k chybě přístup protokolu HTTP 403 (zakázáno).  
-  
-2.  Vyhledejte element `configuration/system.web/compilation`. Pokud element compilation neexistuje, vytvořte jej.
+**Jak ručně nakonfigurovat *web.config* soubor pro ladění:**
 
-    Soubor web.config je soubor XML, obsahuje proto vnořené oddíly označené značkami.
+1. V sadě Visual Studio, otevřete projekt ASP.NET *web.config* souboru.  
   
-3.  Pokud element `compilation` neobsahuje atribut `debug`, přidejte tento atribut do elementu.  
+2. *Soubor Web.config* je soubor XML, obsahuje proto vnořené oddíly označené značkami. Vyhledejte `configuration/system.web/compilation` oddílu. (Pokud `compilation` element neexistuje, vytvořte ji.)
   
-4.  Ujistěte se, že je hodnota atributu `debug` nastavena na `true`.  
+3. Ujistěte se, že `debug` atribut `compilation` prvek je nastaven na `true`. (Pokud `compilation` neobsahuje element `debug` atribut, přidejte ho a nastavte ho na `true`.) 
   
-V souboru web.config by měl vypadat jako v následujícím příkladu:
+   Pokud používáte místní služby IIS místo výchozí server služby IIS Express, ujistěte se, že `targetFramework` hodnotu v atributu `compilation` neshodují elementy rozhraní na serveru služby IIS.
+  
+   `compilation` Elementu *web.config* soubor by měl vypadat jako v následujícím příkladu:
 
-> [!NOTE]
-> V tomto příkladu je soubor web.config částečné. Další části XML nejsou obvykle mezi konfiguračním a system.web elementy. Element kompilace může také obsahovat další atributy a elementy.
+   > [!NOTE]
+   > V tomto příkladu je částečné *web.config* souboru. Jsou obvykle další části XML `configuration` a `system.web` elementy a `compilation` element může také obsahovat jiné atributy a elementy.
   
-#### <a name="example"></a>Příklad  
-  
-```  
-<configuration>  
-    ...  
-    <system.web>  
-        <compilation  
-            debug="true"  
-            ...  
-        >  
-        ...  
-        </compilation>  
-    </system.web>  
-</configuration>  
-```
+   ```xml
+   <configuration>  
+      ...  
+      <system.web>  
+          <compilation  debug="true"  targetFramework="4.6.1" ... > 
+             ...  
+          </compilation>  
+      </system.web>  
+   </configuration>  
+   ```
 
-Pokud používáte externí server místo výchozí server služby IIS Express, je nutné také zkontrolujte, zda `targetFramework` hodnota atributu odpovídá konfiguraci na serveru.
+[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] automaticky detekuje jakékoli změny *web.config* soubory a aplikuje nové nastavení konfigurace. Není nutné restartovat počítač nebo server služby IIS se změny projevily.  
+  
+Web může obsahovat několik virtuálních adresářů a podadresářů, *web.config* soubory v každém z nich. [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikace dědit nastavení z *web.config* soubory na vyšších úrovních v cestě adresy URL. Hierarchických *web.config* soubor nastavení platí pro všechny [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikace pod nimi v hierarchii. Nastavení jiné konfiguraci *web.config* souboru níže v hierarchii, přepíše nastavení v souboru vyšší.  
+  
+Pokud zadáte například `debug="true"` v <em>www.microsoft.com/aaa/web.config</em>, libovolnou aplikaci v *aaa* složce nebo v libovolné podsložce *aaa* zdědí toto nastavení s výjimkou Pokud některou z těchto aplikací přepíše nastavení vlastní *web.config* souboru.  
+  
+## <a name="publish-in-debug-mode-using-the-file-system"></a>Publikování v režimu ladění pomocí systému souborů
+
+Existují různé způsoby, jak publikovat aplikace do služby IIS. Tyto kroky ukazují, jak vytvořit a nasadit ladicí profil publikování pomocí systému souborů. Chcete-li to provést, musíte používat Visual Studio jako správce. 
 
 > [!IMPORTANT]
-> Pro nejlepší výkon, nastavte produkční aplikace `debug=false` a zadat sestavení pro vydání, při vytvoření a publikování aplikace.
+> Pokud změníte kód nebo znovu sestavit, musíte opakováním těchto kroků znovu publikovat. 
 
-## <a name="configure-project-settings-for-the-server"></a>Konfigurace nastavení projektu pro server
+1. V sadě Visual Studio, klikněte pravým tlačítkem na projekt a zvolte **publikovat**.
 
-Pro ladění na místní webový server, nastavte vlastnosti projektu. Pro ladění na vzdáleném serveru, postupujte podle pokynů komplexnější popsané v [vzdáleného ladění ASP.NET ve službě IIS](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md) místo.
+3. Zvolte **služby IIS, FTP atd** a klikněte na tlačítko **publikovat**.
 
-1. V **webové** Karta projektu vlastnosti, vyberte buď **IIS Express** nebo **externího serveru** pod **Server** nastavení. (Pro některé typy projektů, tato nastavení se zobrazí pod **ladění** kartě místo.)
+    ![Publikování do služby IIS](media/dbg-aspnet-local-iis.png "publikovat do služby IIS")
 
-    ![Nastavení serveru](../debugger/media/dbg-aspnet-server-settings.png "nastavení serveru")
+4. V **CustomProfile** dialogovém okně pro **metodu publikování**, zvolte **systém souborů**.
 
-    Služba IIS Express je výchozí server pro technologii ASP.NET a obvykle nevyžaduje žádnou zvláštní konfiguraci. Toto je nejjednodušší způsob, jak ladit aplikaci ASP.NET.
+5. Pro **cílové umístění**vyberte **Procházet** (**...** ).
+   
+   - Pro technologii ASP.NET, vyberte **místní služby IIS**, vyberte web, který jste vytvořili pro aplikaci a pak vyberte **otevřít**.
+     
+     ![Publikovat do technologie ASP.NET na IIS](media/dbg-aspnet-local-iis1.png "publikovat ASP.NET do služby IIS")
+     
+   - ASP.NET Core, vyberte **systému souborů**, vyberte složku, nastavení pro aplikaci a pak vyberte **otevřít**.
 
-    Pro projekt webové formuláře ASP.NET, klikněte pravým tlačítkem na projekt, vyberte **stránky vlastností > Možnosti spuštění**a vyberte buď **použít výchozí webový server** nebo **použít vlastní server** () místo **externího serveru**).
+1. Vyberte **Další**. 
 
-    ![Nastavení serveru pro aplikace webových formulářů](../debugger/media/dbg-aspnet-server-settings-webforms.png "nastavení serveru pro aplikace webových formulářů")
+1. V části **konfigurace**vyberte **ladění** z rozevíracího seznamu.
 
-2. Pokud si zvolíte externího serveru (vlastní), zadejte správnou adresu URL v **adresa URL projektu** (nebo **základní adresa URL**) pole.
+1. Vyberte **Uložit**.
 
-    Pokud je externí server místní služba IIS, IIS musí být správně nainstalována a nakonfigurována. Například musí být nakonfigurován správnou verzi technologie ASP.NET ve službě IIS. Další informace najdete v tématu [IIS 8.0 pomocí technologie ASP.NET 3.5 a technologii ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45). Pokud budete chtít otestovat nasazení, jakož i ladění, přečtěte si téma [nasazení otestovat](/aspnet/web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-iis).
+1. V **publikovat** dialogového okna, ujistěte se, že **CustomProfile** (nebo název profilu, který jste právě vytvořili) se zobrazí, a **LastUsedBuildConfiguration** je nastavena na  **Ladění**. 
 
-    Pokud je externí server [vzdáleného](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md), místo toho připojit k procesu a nepoužívají se tato nastavení projektu pro ladění.
+1. Vyberte **publikovat**.
 
-## <a name="local-iis-web-server-configure-iis"></a>(Místní služba IIS webový server) Konfigurace služby IIS
+    ![Publikování do služby IIS](media/dbg-aspnet-local-iis-select-site.png "publikovat do služby IIS")
 
-Pro službu IIS Express, nemusíte konfigurovat webový server (tuto část přeskočte). Služba IIS Express se doporučuje pro počáteční testování.
-
-Pokud používáte místní webový server IIS, postupujte podle těchto kroků.
-
-1. Ujistěte se, zda je služba IIS správně nainstalován. Další informace najdete v tématu [IIS 8.0 pomocí technologie ASP.NET 3.5 a technologii ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45).
-
-    * Ujistěte se, že instalujete správnou verzi ASP.NET na serveru. Instalace webové platformy (WebPI) použít k instalaci technologie ASP.NET 4.5 (z uzlu serveru v systému Windows Server 2012 R2, zvolte **získat nové komponenty webové platformy** a poté vyhledejte ASP.NET). K instalaci ASP.NET Core, najdete v části [publikování do služby IIS](https://docs.asp.net/en/latest/publishing/iis.html#iis-configuration).
-
-    > [!NOTE]
-    > Pokud používáte Windows Server 2008 R2, nainstalujte technologii ASP.NET 4 místo použití tohoto příkazu:
-
-     **C:\Windows\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe -ir**
-
-2. Otevřete **Internetová informační služba (IIS) Manager**. (V levém podokně Správce serveru, vyberte **IIS**. Pravým tlačítkem na server a vyberte **Správce Internetové informační služby (IIS)**.)
-
-3. V části **připojení** v levém podokně přejděte do **lokality**.
-
-4. Klikněte pravým tlačítkem myši **Default Web Site** uzel a vyberte možnost **přidat aplikaci**.
-
-5. Nastavte **Alias** do **MyASPApp**, přijměte výchozí nastavení fondu aplikací (**DefaultAppPool**) a nastavte **fyzická cesta** k  **C:\inetpub\myNewFolder** (vytvořit novou složku pro aplikaci).
-
-6. V části **připojení**, vyberte **fondy aplikací**. Otevřete **DefaultAppPool** a nastavte hodnotu pole fondu aplikací na hodnotu, která je správný pro vaši aplikaci (používá technologii ASP.NET 4 pro technologii ASP.NET 4.5. Použít **bez spravovaného kódu** pro ASP.NET Core).
-
-## <a name="local-iis-web-server-deploy-the-app"></a>(Místní služba IIS webový server) Nasazení aplikace
-
-Pro službu IIS Express, webové aplikace je nasazená automaticky při spuštění ladění (tuto část přeskočte).
-
-Pokud používáte místní webový server IIS, postupujte podle těchto kroků. Publikování aplikace do služby IIS různými způsoby. V následujícím postupu ukážeme, jak vytvořit a použít profil publikování, abyste mohli nasadit pomocí systému souborů.
-
-1. Restartujte Visual Studio jako správce.
-
-    Pokud chcete nasadit pomocí této metody, potřebujete práva správce.
-
-2. V sadě Visual Studio, klikněte pravým tlačítkem na projekt a zvolte **publikovat** (webových formulářů, použijte **publikování webové aplikace**).
-
-3. Zvolte **služby IIS, FTP, atd.** a klikněte na tlačítko **publikovat**.
-
-    ![Publikování do služby IIS](../debugger/media/dbg-aspnet-local-iis.png "publikování do služby IIS")
-
-    Pro aplikace webových formulářů, zvolte **vlastní** v dialogovém okně Publikovat zadejte název profilu a vyberte **OK**.
-
-4. V **metodu publikování** pole, zvolte **systém souborů**.
-
-5. Pro **cílové umístění**, klikněte **Procházet** tlačítko.
-
-6. (ASP.NET jader) Zvolte **systém souborů** a vyberte složku, kam jste dříve vytvořili pro aplikaci.
-
-6. (ASP.NET) Zvolte **místní služba IIS**a vyberte web dřív vytvořili a pak klikněte na tlačítko **otevřete**.
-
-    ![Publikování do služby IIS](../debugger/media/dbg-aspnet-local-iis-select-site.png "publikování do služby IIS")
-
-    > [!TIP]
-    > Pokud uvidíte, že zpráva, že webový server není správně nakonfigurován, ujistěte se, že je nainstalována správná verze technologie ASP.NET pro službu IIS.
-
-7. Klikněte na tlačítko **Další** a vyberte **ladění** konfigurace.
-
-    > [!NOTE]
-    > Pokud nasadíte s konfigurací verze, nastaví tato `debug=false` v souboru web.config serveru.
-
-8. Klikněte na tlačítko **Uložit** uložit nastavení publikování, a pak klikněte na **publikovat**.
-
-    > [!CAUTION]
-    >  Pokud potřebujete provést změny kódu nebo opětovné sestavení, musíte znovu publikovat a opakujte tento krok. Spustitelný soubor, který jste zkopírovali ke vzdálenému počítači se musí přesně shodovat místního zdroje a symboly.
-
-## <a name="set-a-breakpoint-and-start-debugging"></a>Nastavit zarážky a spuštění ladění
-
-1. Ve vašem projektu v sadě Visual Studio, sada zarážek na nějaký kód, který víte, poběží.
-
-2. Chcete-li začít, ladění, stiskněte **F5** (**ladění > Spustit ladění**).
-
-3. Kroky k spustit kód, který obsahuje zarážku.
-
-    Ladicí program zastaví, kde nastavit bod přerušení.
-
-### <a name="local-iis-troubleshooting-cannot-hit-the-breakpoint"></a>(Místní služba IIS) Řešení potíží: Nelze průchodu zarážkou
-
-1. Spustí webovou aplikaci služby IIS a ujistěte se, že běží správně. Ponechte webová aplikace spuštěná.
-
-2. Ze sady Visual Studio, vyberte **ladění > připojit k procesu** a připojte se k procesu ASP.NET (obvykle **w3wp.exe** nebo **dotnet.exe**). Další informace najdete v tématu [připojit k procesu](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).
-
-    Pokud budete moci připojit pomocí **připojit k procesu** a zasáhnout zarážku, ale nelze spustit ladění pomocí **F5**, pak je pravděpodobné, že je nastavení nesprávná ve vlastnostech projektu. Pokud používáte souboru HOSTITELŮ, ověřte, zda je správně nakonfigurována.
-
-  
-## <a name="robust-programming"></a>Robustní programování  
-[!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] automaticky detekuje jakékoli změny v souboru Web.config a aplikuje nové nastavení konfigurace. Není nutné restartovat počítač nebo restartujte server IIS pro změny se projeví.  
-  
-Webová stránka může obsahovat více virtuálních adresářů a podadresářů a soubory Web.config mohou existovat v každém z nich. Aplikace [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] dědí nastavení ze souborů Web.config, které jsou v cestě adresy URL výše. Hierarchické konfigurační soubory umožňují změnit nastavení pro několik aplikací [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] současně, jako například pro všechny aplikace v hierarchii pod ní. Ale pokud `debug` je nastavena v souboru, která je nižší úrovni v hierarchii, přepíše vyšší hodnotu.  
-  
-Například můžete zadat `debug="true"` v www.microsoft.com/aaa/Web.config a všechny aplikace ve složce aaa nebo v jakékoli podsložkou aaa toto nastavení dědí. Takže když vaše [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikace je na www.microsoft.com/aaa/bbb, dědí nastavení, protože se některé [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikace v www.microsoft.com/aaa/ccc, www.microsoft.com/aaa/ddd a tak dále. Jedinou výjimkou je, pokud jedna z těchto aplikací přepíše nastavení pomocí vlastního nižšího souboru Web.config.  
-  
 > [!IMPORTANT]
-> Povolení režimu ladění výrazně ovlivní výkon vaší [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikace. Nezapomeňte vypnout režim ladění před nasazením vydání aplikace nebo před měřením výkonu.  
-  
-## <a name="see-also"></a>Viz také  
-[ASP.NET ladění: systémové požadavky](aspnet-debugging-system-requirements.md)   
-[Postupy: spuštění pracovního procesu pod účtem uživatele](how-to-run-the-worker-process-under-a-user-account.md)   
+> Režim ladění výrazně snižuje výkon vaší aplikace. Pro zajištění nejlepšího výkonu nastavte `debug="false"` v *web.config* a určení verze sestavení při nasazení aplikace v produkčním prostředí nebo měřením výkonu.  
+
+## <a name="see-also"></a>Viz také:  
+[Ladění ASP.NET: systémové požadavky](aspnet-debugging-system-requirements.md)   
+[Postupy: spuštění pracovního procesu v rámci uživatelského účtu](how-to-run-the-worker-process-under-a-user-account.md)   
 [Postupy: hledání názvu procesu ASP.NET](how-to-find-the-name-of-the-aspnet-process.md)   
 [Ladění nasazených webových aplikací](debugging-deployed-web-applications.md)   
 [Návod: Ladění webového formuláře](walkthrough-debugging-a-web-form.md)   
 [Postupy: ladění výjimek ASP.NET](how-to-debug-aspnet-exceptions.md)   
-[Ladění webových aplikací: Chyby a řešení potíží](debugging-web-applications-errors-and-troubleshooting.md)
+[Ladění webových aplikací: chyby a řešení potíží](debugging-web-applications-errors-and-troubleshooting.md)
   

@@ -1,6 +1,7 @@
 ---
 title: 'CA2219: Nevyvolávejte výjimky v klauzulích výjimky'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,13 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f8b542c88c62230f60b11ba9927873d2593157c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 49baf6fe645df35949f47f2796197977d428427e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49885964"
 ---
 # <a name="ca2219-do-not-raise-exceptions-in-exception-clauses"></a>CA2219: Nevyvolávejte výjimky v klauzulích výjimky
+
 |||
 |-|-|
 |TypeName|DoNotRaiseExceptionsInExceptionClauses|
@@ -30,23 +33,23 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Pevné dopadem na dřívější kód|
 
 ## <a name="cause"></a>příčina
- K výjimce `finally`, filtr nebo selhání klauzule.
+ Z je vyvolána výjimka `finally`, filtr nebo klauzule fault.
 
 ## <a name="rule-description"></a>Popis pravidla
- Když dojde k výjimce v klauzuli výjimky, výrazně zvyšuje je obtížné ladění.
+ Když v klauzuli výjimka je vyvolána výjimka, výrazně zvyšuje obtížnost ladění.
 
- Pokud je vyvolána výjimka v `finally` nebo selhání klauzule novou výjimku skryje active výjimka, pokud je k dispozici. Díky tomu původní chyba obtížné zjistit a ladění.
+ Když je výjimka vyvolána v `finally` nebo klauzule fault, nová výjimka skryje aktivní výjimku, pokud jsou k dispozici. To díky obtížné rozpoznání a ladění původní chyby.
 
- Pokud v klauzuli filtru je vyvolána výjimka, modul runtime bezobslužně zachytí výjimky a způsobí, že filtr vyhodnotit na hodnotu false. Neexistuje žádný způsob, jak určit rozdíl mezi filtr vyhodnocení na hodnotu false a výjimku se výjimku z filtru. Díky tomu je obtížné zjistit a ladění chyby v jeho logiku.
+ Pokud je v klauzuli filtru vyvolána výjimka, modul runtime bezobslužně zachytí výjimku a způsobí, že byl filtr vyhodnocen na hodnotu false. Neexistuje žádný způsob, jak zjistit rozdíl mezi vyhodnocení filtru na hodnotu false a výjimky se vyvolat z filtru. Tím je obtížné rozpoznat a ladit chyby v logice filtru.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li odstranit tento porušení toto pravidlo, není vyvolat explicitně výjimku z `finally`, filtr nebo selhání klauzule.
+ Chcete-li vyřešit porušení tohoto pravidla, nevyvolávejte explicitně výjimky z `finally`, filtr nebo klauzule fault.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Není potlačení upozornění pro toto pravidlo. Neexistují žádné situací, za kterých výjimka vyvolána v klauzuli výjimka výhoda provádění kódu.
+ Nepotlačujte upozornění tohoto pravidla. Nejsou žádné scénáře, kdy výjimka vyvolána v klauzuli výjimek poskytuje výhoda pro provádění kódu.
 
 ## <a name="related-rules"></a>Související pravidla
  [CA1065: Nevyvolávejte výjimky v neočekávaných umístěních](../code-quality/ca1065-do-not-raise-exceptions-in-unexpected-locations.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
  [Upozornění ohledně návrhu](../code-quality/design-warnings.md)

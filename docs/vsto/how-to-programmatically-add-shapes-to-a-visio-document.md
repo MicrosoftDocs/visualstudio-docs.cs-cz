@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: přidávání obrazců do dokumentů aplikace Visio prostřednictvím kódu programu | Microsoft Docs'
+title: 'Postupy: přidávání obrazců do dokumentů aplikace Visio prostřednictvím kódu programu'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,32 +16,33 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1cc4369977e1989960fe9448d4dd7d56e67ed7a9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 94e8b43830c26aad82937cc0533ca19e109f33d0
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50671869"
 ---
-# <a name="how-to-programmatically-add-shapes-to-a-visio-document"></a>Postupy: Přidávání obrazců do dokumentů aplikace Visio prostřednictvím kódu programu
-  Tvary můžete přidat do dokumentu aplikace Microsoft Office Visio načítání je hlavní servery z vzorníku a umístěním obrazce na stránce active.  
+# <a name="how-to-programmatically-add-shapes-to-a-visio-document"></a>Postupy: přidávání obrazců do dokumentů aplikace Visio prostřednictvím kódu programu
+  Tvary můžete přidat do dokumentu aplikace Microsoft Office Visio načítání si hlavní počítače z vzorníku a umístěním tvary na aktivní stránce.  
   
- Další informace najdete v tématu referenční dokumentaci VBA pro [Microsoft.Office.Interop.Visio.Documents.Add](http://msdn.microsoft.com/library/office/ff766868.aspx) metody [Microsoft.Office.Interop.Visio.Application.ActivePage](http://msdn.microsoft.com/library/office/ff765484.aspx) vlastnost a [Microsoft.Office.Interop.Visio.Page.Drop](http://msdn.microsoft.com/library/office/ff765054.aspx) metoda.  
+ Další informace najdete v tématu referenční dokumentaci jazyka VBA pro [Microsoft.Office.Interop.Visio.Documents.Add](/office/vba/api/Visio.Documents.Add) metody [Microsoft.Office.Interop.Visio.Application.ActivePage](/office/vba/api/Visio.Application.ActivePage) vlastnosti a [Microsoft.Office.Interop.Visio.Page.Drop](/office/vba/api/Visio.Page.Drop) metody.  
   
-## <a name="adding-shapes-to-a-visio-document"></a>Přidávání obrazců do dokumentů aplikace Visio  
+## <a name="add-shapes-to-a-visio-document"></a>Přidávání obrazců do dokumentů aplikace Visio  
   
-#### <a name="to-add-shapes-to-a-visio-document"></a>K přidávání obrazců do dokumentů aplikace Visio  
+### <a name="to-add-shapes-to-a-visio-document"></a>K přidávání obrazců do dokumentů aplikace Visio  
   
--   S aktivním dokumentem načíst je hlavní servery z kolekce Documents.Masters a odpojit obrazce v aktivním dokumentu. Hlavní server můžete načíst pomocí indexu nebo hlavní název.  
+-   S aktivním dokumentem načtěte si hlavní počítače z kolekce Documents.Masters a vyřadit tvary v aktivním dokumentu. Hlavní můžete načíst pomocí index nebo název předlohy.  
   
-     Následující příklad kódu vytvoří prázdné dokumentů aplikace Visio a pak ho se otevře **základní tvary** vzorníku ukotven. Kód pak načte několik tvarů a zahodí je na stránce aktivní.  
+     Následující příklad kódu vytvoří prázdný dokument Visia a pak ho otevře **základních tvarů** vzorníku ukotven. Kód poté načte několik tvarů a sníží na aktivní stránce.  
   
      [!code-csharp[Trin_VstcoreVisioAutomationAddIn#13](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#13)]
      [!code-vb[Trin_VstcoreVisioAutomationAddIn#13](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#13)]  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Řešení pro aplikaci Visio](../vsto/visio-solutions.md)   
  [Přehled modelu objektů aplikace Visio](../vsto/visio-object-model-overview.md)   
  [Práce s obrazci aplikace Visio](../vsto/working-with-visio-shapes.md)   
- [Postupy: Kopírování a vkládání obrazců do dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-copy-and-paste-shapes-in-a-visio-document.md)  
+ [Postupy: Programová kopírování a vkládání obrazců do dokumentů aplikace Visio](../vsto/how-to-programmatically-copy-and-paste-shapes-in-a-visio-document.md)  
   
   

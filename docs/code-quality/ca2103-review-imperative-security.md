@@ -1,6 +1,7 @@
 ---
 title: 'CA2103: Revize naléhavého zabezpečení'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,13 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d107690e8835f118861832da99b4aef92e86a5cc
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 0f8975e3118e9907bf4688efe93dc60646b6d80b
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45547688"
 ---
 # <a name="ca2103-review-imperative-security"></a>CA2103: Revize naléhavého zabezpečení
+
 |||
 |-|-|
 |TypeName|ReviewImperativeSecurity|
@@ -33,15 +36,17 @@ ms.lasthandoff: 04/19/2018
  Metoda používá imperativní zabezpečení a může vytvářet oprávnění pomocí stavové informace nebo návratové hodnoty, která se může změnit, pokud je žádost aktivní.
 
 ## <a name="rule-description"></a>Popis pravidla
- Naléhavého zabezpečení používá spravované objekty k zadání oprávnění a akce zabezpečení při spuštění kódu ve srovnání s deklarativní zabezpečení, která využívá atributy pro uložení oprávnění a akce v metadatech. Naléhavého zabezpečení je velmi flexibilní, protože můžete nastavit stav objektu oprávnění a výběr akce zabezpečení pomocí informace, které jsou k dispozici až běhu. Společně s, který se dodává flexibilitu riziko, že informace o běhu programu, který použijete k určení, že stav oprávnění není zůstanou beze změny, dokud akce je v platnosti.
+ Imperativní zabezpečení používá k určení oprávnění a akce zabezpečení při provádění kódu, ve srovnání s deklarativní zabezpečení, která využívá atributy pro uložení oprávnění a akcí v metadatech spravovaných objektů. Imperativní zabezpečení je velmi flexibilní, protože můžete nastavit stav objektu oprávnění a výběr akce zabezpečení pomocí informace, které nejsou k dispozici až do spuštění. Spolu s, která se dodává flexibilitu riziko, že informace o modulu runtime, který používáte k určení, že stav oprávnění nezůstávat beze změny, dokud akce je v platnosti.
 
- Používejte deklarativní zabezpečení vždy, když je to možné. Deklarativní požadavky jsou lépe pochopit.
+ Používejte deklarativní zabezpečení vždy, když je to možné. Jsou Jednoduší na porozumění deklarativní požadavky.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Zkontrolujte naléhavé zabezpečení požadavky a ujistěte se, že stav oprávnění nespoléhá se na informace, které můžete změnit, dokud se používá tato oprávnění.
+ Zkontrolujte požadavky imperativní zabezpečení, abyste měli jistotu, že stav oprávnění nevyžaduje informace, které můžete změnit tak dlouho, dokud se používá oprávnění.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Je bezpečné potlačit upozornění na toto pravidlo, je-li oprávnění nevyžaduje změny dat. Je nicméně lepší změnit imperativní požadavek na ekvivalentní deklarativní.
+ Je bezpečné potlačit upozornění tohoto pravidla, je-li oprávnění nevyžaduje se měnícími daty. Je však lepší změnit imperativní požadavek na ekvivalentní deklarativní.
 
-## <a name="see-also"></a>Viz také
- [Pokyny pro zabezpečené kódování](/dotnet/standard/security/secure-coding-guidelines) [Data a modelování](/dotnet/framework/data/index)
+## <a name="see-also"></a>Viz také:
+
+- [Pokyny pro zabezpečené kódování](/dotnet/standard/security/secure-coding-guidelines)
+- [Data a modelování](/dotnet/framework/data/index)

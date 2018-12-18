@@ -1,5 +1,5 @@
 ---
-title: Dotaz datové sady
+title: Datové sady dotazů
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -9,91 +9,93 @@ ms.assetid: 7b1a91cf-8b5a-4fc0-ac36-0dc2d336fa1b
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 03b9e97ab820a65fcd5ec3cb0ea4db2b9cfbde5d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 2276828a67cec2562063d220ef3173d98fdf487b
+ms.sourcegitcommit: f37affbc1b885dfe246d4b2c295a6538b383a0ca
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37174290"
 ---
-# <a name="query-datasets"></a>Dotaz datové sady
-K vyhledání konkrétních záznamů v datové sadě, použijte metodu FindBy na DataTable, zapisovat vlastního příkazu foreach smyčku kolekce řádků v tabulce, nebo použijte [LINQ na DataSet](/dotnet/framework/data/adonet/linq-to-dataset).
+# <a name="query-datasets"></a>Datové sady dotazů
+K vyhledání konkrétních záznamů v datové sadě, použijte `FindBy` metodu na objekt DataTable, psát vlastní příkazu foreach k vytvoření smyčky přes kolekce řádků v tabulce, nebo použijte [LINQ to DataSet](/dotnet/framework/data/adonet/linq-to-dataset).
 
-## <a name="dataset-case-sensitivity"></a>Rozlišování velkých a malých písmen datové sady
-V rámci datové sady, tabulky a sloupce, nerozlišují se ve výchozím nastavení – to znamená, že tabulky v datovou sadu s názvem "Zákazníci" může se označovat taky jako "zákazníci". To odpovídá zásady vytváření názvů v mnoha databázemi, včetně systému SQL Server. V systému SQL Server výchozí chování je, že názvy elementů dat nelze rozlišit pouze případu.
+## <a name="dataset-case-sensitivity"></a>Rozlišování velikosti písmen pro datovou sadu
+V datové sadě, názvy tabulek a sloupců ve výchozím nastavení rozlišují – to znamená, tabulku v datovou sadu s názvem "Zákazníci" lze také odkazovat jako "zákazníci." To stejné zásady vytváření názvů v mnoha databází, včetně SQL serveru. V systému SQL Server výchozím chováním je, že názvy datových prvků nelze odlišit pouze ve velikosti písmen.
 
 > [!NOTE]
->  Na rozdíl od datové sady jsou malá a velká písmena, dokumentů XML, takže datové prvky, které jsou definované v schémata názvů malá a velká písmena. Například protokol schématu umožňuje schéma definovat tabulce s názvem "Zákazníci" a na jinou tabulku s názvem "zákazníci". To může způsobit kolize názvů při schéma, které obsahuje prvky, které se liší pouze v případě se používá ke generování třídu datové sady.
+>  Na rozdíl od datové sady dokumenty XML jsou malá a velká písmena, tak, aby byly názvy datových prvků, které jsou definovány ve schématech malá a velká písmena. Například protokol schéma umožňuje schéma pro definování tabulky nazvané "Zákazníci" a jiné tabulky nazvané "zákazníků." To může způsobit kolize názvů při schéma, které obsahuje prvky, které se liší pouze velikostí písma se používá ke generování třídy datové sady.
 
-Rozlišování velkých a malých písmen, ale může být faktorem jak data interpretována v rámci datové sady. Například pokud jste filtrování dat v tabulce datovou sadu, kritéria hledání může vrátit odlišné výsledky v závislosti na tom, jestli je porovnání malá a velká písmena. Můžete řídit rozlišování filtrování, vyhledávání a řazení podle nastavení datové sadě <xref:System.Data.DataSet.CaseSensitive%2A> vlastnost. Podle výchozího nastavení dědí všechny tabulky v datové sadě hodnota této vlastnosti. (Tato vlastnost pro každé jednotlivé tabulky můžete přepsat pomocí nastavení v tabulce <xref:System.Data.DataTable.CaseSensitive%2A> vlastnost.)
+Rozlišování velikosti písmen, ale může být faktor při tom, jak je interpretován data v datové sadě. Například pokud můžete filtrovat data v tabulce datové sady, kritéria hledání může vrátit různé výsledky v závislosti na tom, jestli je výsledkem porovnávání malá a velká písmena. Rozlišování velikosti písmen filtrování, hledání a řazení podle nastavení datové sady můžete řídit <xref:System.Data.DataSet.CaseSensitive%2A> vlastnost. Podle výchozího nastavení dědí všechny tabulky v datové sadě hodnota této vlastnosti. (Tato vlastnost pro každé jednotlivé tabulky můžete přepsat tak, že nastavíte v tabulce <xref:System.Data.DataTable.CaseSensitive%2A> vlastnosti.)
 
-## <a name="locate-a-specific-row-in-a-data-table"></a>Vyhledejte konkrétní řádek v tabulce dat.
+## <a name="locate-a-specific-row-in-a-data-table"></a>Vyhledejte konkrétní řádek v tabulce dat
 
-#### <a name="to-find-a-row-in-a-typed-dataset-with-a-primary-key-value"></a>K vyhledání řádku v typové datové sady s hodnotou primární klíče
+#### <a name="to-find-a-row-in-a-typed-dataset-with-a-primary-key-value"></a>Najít řádek v typové datové sady s hodnotou primárního klíče
 
--   Chcete-li najít řádek, volejte silného typu `FindBy` metoda, která používá primární klíč tabulky.
+-   Chcete-li vyhledejte řádek, zavolejte silného typu `FindBy` metodu, která používá primární klíč v tabulce.
 
-     V následujícím příkladu `CustomerID` sloupec je primární klíč `Customers` tabulky. To znamená, že vygenerovaného `FindBy` je metoda `FindByCustomerID`. Tento příklad ukazuje, jak přiřadit konkrétní <xref:System.Data.DataRow> proměnné pomocí vygenerovaného `FindBy` metoda.
+     V následujícím příkladu `CustomerID` primární klíč je sloupec `Customers` tabulky. To znamená, že generované `FindBy` je metoda `FindByCustomerID`. Tento příklad ukazuje, jak přiřadit konkrétní <xref:System.Data.DataRow> proměnné s použitím vytvořeného `FindBy` metody.
 
      [!code-csharp[VbRaddataEditing#18](../data-tools/codesnippet/CSharp/query-datasets_1.cs)]
      [!code-vb[VbRaddataEditing#18](../data-tools/codesnippet/VisualBasic/query-datasets_1.vb)]
 
-#### <a name="to-find-a-row-in-an-untyped-dataset-with-a-primary-key-value"></a>K vyhledání řádku v datové sadě služby bez typu s hodnotou primární klíče
+#### <a name="to-find-a-row-in-an-untyped-dataset-with-a-primary-key-value"></a>Najít řádek v netypovou datovou sadu s hodnotu primárního klíče
 
--   Volání <xref:System.Data.DataRowCollection.Find%2A> metodu <xref:System.Data.DataRowCollection> kolekce, předávání primární klíč jako parametr.
+-   Volání <xref:System.Data.DataRowCollection.Find%2A> metodu <xref:System.Data.DataRowCollection> kolekce, které se předá jako parametr primární klíč.
 
-     Následující příklad ukazuje, jak deklarovat nový řádek názvem `foundRow` a přiřaďte ho vrácenou hodnotu <xref:System.Data.DataRowCollection.Find%2A> metoda. Pokud je nalezen primární klíč, obsah sloupec indexu 1 se zobrazí v okně se zprávou.
+     Následující příklad ukazuje, jak deklarovat nový řádek, který volá `foundRow` a přiřaďte ho na návratový typ <xref:System.Data.DataRowCollection.Find%2A> metody. Pokud je nalezen primární klíč, obsah index sloupce 1 jsou zobrazeny v okně se zprávou.
 
      [!code-csharp[VbRaddataEditing#19](../data-tools/codesnippet/CSharp/query-datasets_2.cs)]
      [!code-vb[VbRaddataEditing#19](../data-tools/codesnippet/VisualBasic/query-datasets_2.vb)]
 
-## <a name="find-rows-by-column-values"></a>Vyhledání řádků podle hodnoty ve sloupcích
+## <a name="find-rows-by-column-values"></a>Vyhledání řádků podle hodnoty sloupců
 
-#### <a name="to-find-rows-based-on-the-values-in-any-column"></a>K vyhledání řádků na základě hodnot v žádné sloupce
+#### <a name="to-find-rows-based-on-the-values-in-any-column"></a>K vyhledání řádků na základě hodnot v libovolný sloupec
 
--   Tabulky dat jsou vytvořeny pomocí <xref:System.Data.DataTable.Select%2A> metoda, která vrátí hodnotu pole <xref:System.Data.DataRow>s na základě výrazu předaný <xref:System.Data.DataTable.Select%2A> metoda. Další informace o vytváření platné výrazy, najdete v části "Syntaxe výrazu" stránky <xref:System.Data.DataColumn.Expression%2A> vlastnost.
+-   Tabulky dat jsou vytvořeny pomocí <xref:System.Data.DataTable.Select%2A> metodu, která vrací pole <xref:System.Data.DataRow>předán s založené na výrazu <xref:System.Data.DataTable.Select%2A> metody. Další informace o vytváření platné výrazy, naleznete v části "Syntaxe výrazu" na stránce <xref:System.Data.DataColumn.Expression%2A> vlastnost.
 
-     Následující příklad ukazuje, jak používat <xref:System.Data.DataTable.Select%2A> metodu <xref:System.Data.DataTable> najít konkrétní řádky.
+     Následující příklad ukazuje způsob použití <xref:System.Data.DataTable.Select%2A> metodu <xref:System.Data.DataTable> najít konkrétní řádky.
 
      [!code-csharp[VbRaddataEditing#20](../data-tools/codesnippet/CSharp/query-datasets_3.cs)]
      [!code-vb[VbRaddataEditing#20](../data-tools/codesnippet/VisualBasic/query-datasets_3.vb)]
 
-## <a name="access-related-records"></a>Access související
-Když v datové sadě tabulkami, <xref:System.Data.DataRelation> objekt můžete zpřístupnit související záznamy v jiné tabulce. Například datové sady obsahujícího `Customers` a `Orders` tabulky může být k dispozici.
+## <a name="access-related-records"></a>Přístup k související záznamy
+Když jsou souvisejících tabulkách v datové sadě, <xref:System.Data.DataRelation> objektu můžete zpřístupnit souvisejících záznamů v druhé tabulce. Například datovou sadu obsahující `Customers` a `Orders` tabulky může být k dispozici.
 
-Můžete použít <xref:System.Data.DataRelation> objekt, který chcete najít související záznamy voláním <xref:System.Data.DataRow.GetChildRows%2A> metodu <xref:System.Data.DataRow> v nadřazené tabulce. Tato metoda vrátí pole souvisejících podřízených záznamů. Nebo můžete volat <xref:System.Data.DataRow.GetParentRow%2A> metodu <xref:System.Data.DataRow> v podřízené tabulce. Tato metoda vrátí hodnotu typu single <xref:System.Data.DataRow> z nadřazené tabulce.
+Můžete použít <xref:System.Data.DataRelation> objekt vyhledejte související záznamy voláním <xref:System.Data.DataRow.GetChildRows%2A> metodu <xref:System.Data.DataRow> v nadřazené tabulce. Tato metoda vrátí pole související podřízené záznamy. Nebo můžete volat <xref:System.Data.DataRow.GetParentRow%2A> metodu <xref:System.Data.DataRow> v podřízené tabulce. Tato metoda vrací jedinou <xref:System.Data.DataRow> z nadřazené tabulky.
 
-Tato stránka obsahuje příklady použití typové datové sady. Informace o navigace relací v netypové datové sady najdete v tématu [navigace DataRelations](/dotnet/framework/data/adonet/dataset-datatable-dataview/navigating-datarelations).
+Tato stránka obsahuje příklady použití typové datové sady. Informace o navigace v relacích v netypové datové sady, naleznete v tématu [procházení datových relací](/dotnet/framework/data/adonet/dataset-datatable-dataview/navigating-datarelations).
 
 > [!NOTE]
->  Pokud pracujete v aplikaci Windows Forms a používání funkcí datové vazby k zobrazení dat, generovaném formuláři může poskytnout dostatek funkce pro vaši aplikaci. Další informace najdete v tématu [vytvoření vazby ovládacích prvků k datům v sadě Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md). Konkrétně, najdete v části [vztahy v datových sadách](relationships-in-datasets.md).
+>  Pokud pracujete v aplikaci Windows Forms a používání funkcí datové vazby k zobrazení dat, generovaný návrhářem formuláře může poskytnout dostatek funkcí pro vaši aplikaci. Další informace najdete v tématu [vytvoření vazby ovládacích prvků k datům v sadě Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md). Konkrétně, naleznete v tématu [vztahy v datových sadách](relationships-in-datasets.md).
 
-Následující příklady kódu ukazují, jak se orientovat nahoru a dolů vztahy v typových datových sadách. Příklady použití kódu zadali <xref:System.Data.DataRow>s (`NorthwindDataSet.OrdersRow`) a vygenerovaný FindBy*PrimaryKey* (`FindByCustomerID`) metody pro vyhledání požadovaného řádku a vrátí související záznamy. Příklady zkompilování a spuštění správně pouze v případě, že máte:
+Následující příklady kódu ukazují, jak procházet nahoru a dolů vztahy v typových datových sadách. Příklady použití kód zadali <xref:System.Data.DataRow>s (`NorthwindDataSet.OrdersRow`) a vygenerovaný FindBy*PrimaryKey* (`FindByCustomerID`) metody pro vyhledání požadovaný řádek a vrácení souvisejících záznamů. V příkladech kompilace a spuštění správně pouze v případě, že máte:
 
 -   Instance datovou sadu s názvem `NorthwindDataSet` s `Customers` tabulky.
 
 -   `Orders` Tabulky.
 
--   Relace s názvem `FK_Orders_Customers`týkající se dvě tabulky.
+-   Relace s názvem `FK_Orders_Customers`týkající se dvěma tabulkami.
 
-Kromě toho obě tabulky musí být vyplněny data pro všechny záznamy, který se má vrátit.
+Kromě toho obou tabulek muset být naplněný daty pro záznamy, které se mají vrátit.
 
-#### <a name="to-return-the-child-records-of-a-selected-parent-record"></a>Vrátí podřízené záznamy vybrané nadřazené záznamu
+#### <a name="to-return-the-child-records-of-a-selected-parent-record"></a>Vrátit podřízené záznamy vybraný nadřazený záznam
 
--   Volání <xref:System.Data.DataRow.GetChildRows%2A> metoda konkrétní `Customers` data řádek a vrátí řádky z pole `Orders` tabulky:
+-   Volání <xref:System.Data.DataRow.GetChildRows%2A> metoda konkrétní `Customers` data řádku a vrátí řádky z pole `Orders` tabulky:
 
      [!code-csharp[VbRaddataDatasets#6](../data-tools/codesnippet/CSharp/query-datasets_4.cs)]
      [!code-vb[VbRaddataDatasets#6](../data-tools/codesnippet/VisualBasic/query-datasets_4.vb)]
 
-#### <a name="to-return-the-parent-record-of-a-selected-child-record"></a>Chcete-li se vrátit nadřazený záznam na vybraný podřízený záznam
+#### <a name="to-return-the-parent-record-of-a-selected-child-record"></a>Chcete-li vrátit nadřazený záznam vybraný podřízený záznam
 
 -   Volání <xref:System.Data.DataRow.GetParentRow%2A> metoda konkrétní `Orders` řádek dat a vrátí jeden řádek z `Customers` tabulky:
 
      [!code-csharp[VbRaddataDatasets#7](../data-tools/codesnippet/CSharp/query-datasets_5.cs)]
      [!code-vb[VbRaddataDatasets#7](../data-tools/codesnippet/VisualBasic/query-datasets_5.vb)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Datové sady nástrojů v sadě Visual Studio](../data-tools/dataset-tools-in-visual-studio.md)
+- [Nástroje datové sady v sadě Visual Studio](../data-tools/dataset-tools-in-visual-studio.md)

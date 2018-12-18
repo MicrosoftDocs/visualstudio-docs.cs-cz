@@ -1,10 +1,9 @@
 ---
-title: Seznam zdroj – příkaz | Microsoft Docs
-ms.custom: ''
+title: Listovat zdroj – příkaz
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - Debug.ListSource
 helpviewer_keywords:
@@ -17,47 +16,52 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d21a18a58832918b566e925c7c3898988740a1a7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 03a5d0699fced4d01d439942081b359454bcf476
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31943615"
 ---
 # <a name="list-source-command"></a>Listovat zdroj – příkaz
-Zobrazí zadané řádků zdrojového kódu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-Debug.ListSource [/Count:number] [/Current] [/File:filename]  
-[/Line:number] [/ShowLineNumbers:yes|no]  
-```  
-  
-## <a name="switches"></a>Přepínače  
- / Počet:`number`  
- Volitelné. Určuje počet řádků určených k zobrazení.  
-  
- / Aktuální  
- Volitelné. Zobrazuje aktuálního řádku.  
-  
- Nebo souborů:`filename`  
- Volitelné. Cesta souboru, který se zobrazí. Pokud není zadaný žádný název souboru, příkaz zobrazí zdrojový kód pro řádek aktuální příkaz.  
-  
- / Řádku:`number`  
- Volitelné. Zobrazuje číslo konkrétní řádku.  
-  
- / ShowLineNumbers:`yes|no`  
- Volitelné. Určuje, jestli se mají zobrazovat čísla řádků.  
-  
-## <a name="remarks"></a>Poznámky  
-  
-## <a name="example"></a>Příklad  
- Tento příklad uvádí zdrojového kódu z řádku 4 souboru Form1.vb, s čísla řádků, které jsou viditelné.  
-  
-```  
-Debug.ListSource /File:"C:\Visual Studio Projects\Form1.vb" /Line:4 /ShowLineNumbers:yes  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)   
- [Příkazové okno](../../ide/reference/command-window.md)
+Zobrazí zadané řádků zdrojového kódu.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+Debug.ListSource [/Count:number] [/Current] [/File:filename]
+[/Line:number] [/ShowLineNumbers:yes|no]
+```
+
+## <a name="switches"></a>Přepínače
+ / Počet:`number`
+
+ Volitelné. Určuje počet řádků určených k zobrazení.
+
+ / Aktuální
+
+ Volitelné. Zobrazuje aktuálního řádku.
+
+ Nebo souborů:`filename`
+
+ Volitelné. Cesta souboru, který se zobrazí. Pokud není zadaný žádný název souboru, příkaz zobrazí zdrojový kód pro řádek aktuální příkaz.
+
+ / Řádku:`number`
+
+ Volitelné. Zobrazuje číslo konkrétní řádku.
+
+ / ShowLineNumbers:`yes|no`
+
+ Volitelné. Určuje, jestli se mají zobrazovat čísla řádků.
+
+## <a name="example"></a>Příklad
+ Tento příklad uvádí zdrojového kódu z řádku 4 souboru Form1.vb, s čísla řádků, které jsou viditelné.
+
+```
+Debug.ListSource /File:"C:\Visual Studio Projects\Form1.vb" /Line:4 /ShowLineNumbers:yes
+```
+
+## <a name="see-also"></a>Viz také
+
+- [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
+- [Příkazové okno](../../ide/reference/command-window.md)

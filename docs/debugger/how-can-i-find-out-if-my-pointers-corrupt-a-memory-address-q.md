@@ -1,6 +1,6 @@
 ---
-title: Jak zjistím, že moje ukazatele poškodily adresu paměti? | Microsoft Docs
-ms.custom: ''
+title: Zjistit, jestli Moje ukazatele poškozená adresa paměti | Dokumentace Microsoftu
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -22,28 +22,29 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8965ec268e5d236b9a33e5c3e8acfa35e51dcdb3
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 966a21bfbe5e6813bd4ea1cd6f11c682deea2d0f
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53062964"
 ---
 # <a name="how-can-i-find-out-if-my-pointers-corrupt-a-memory-address"></a>Jak zjistím, že moje ukazatele poškodily adresu paměti?
 ## <a name="problem-description"></a>Popis problému  
- Myslím, že jeden z mých ukazatelů může být poškozování paměti na adrese 0x00408000. Jak můžete najít na co se děje existuje?  
+ Myslím, že jeden z mých ukazatelů může způsobovat poškození paměti na adrese 0x00408000. Jak zjistím, co se děje?  
   
 ## <a name="solution"></a>Řešení  
   
-#### <a name="check-for-heap-corruption"></a>Zkontrolujte poškození haldy  
+#### <a name="check-for-heap-corruption"></a>Vyhledejte poškození haldy  
   
--   Většina poškození paměti je ve skutečnosti kvůli poškození haldy. Zkuste použít globální příznaky nástroj, (gflags.exe) nebo pageheap.exe. V tématu [ http://support.microsoft.com/default.aspx?scid=kb; en-us; 286470](http://support.microsoft.com/default.aspx?scid=kb;en-us;286470).  
+-   Většina poškození paměti je vlastně způsobena poškozením haldy. Zkuste použít Global Flags Utility, (gflags.exe) nebo pageheap.exe. Zobrazit [ http://support.microsoft.com/default.aspx?scid=kb; en-us; 286470](http://support.microsoft.com/default.aspx?scid=kb;en-us;286470).  
   
-#### <a name="to-find-where-the-memory-address-is-modified"></a>Pokud chcete najít, kde je adresa paměti změnit  
+#### <a name="to-find-where-the-memory-address-is-modified"></a>Chcete-li najít, kde byla změněna adresa paměti  
   
-1.  Nastavte zarážky data na 0x00408000. V tématu [zarážku změn dat (pouze nativní C++)](../debugger/using-breakpoints.md#BKMK_set_a_data_breakpoint_native_cplusplus_only).  
+1.  Nastavte zarážku data na 0x00408000. Zobrazit [nastavit zarážku změny dat (pouze nativní C++)](../debugger/using-breakpoints.md#BKMK_set_a_data_breakpoint_native_cplusplus_only).  
   
-2.  Při kliknutí na zarážce, použijte **paměti** okno zobrazení paměti obsah počínaje 0x00408000. Další informace najdete v tématu [paměti Windows](../debugger/memory-windows.md).  
+2.  Až se dostanete k zarážce, použijte **paměti** obsah okna paměti začínající na 0x00408000. Další informace najdete v tématu [paměti Windows](../debugger/memory-windows.md).  
   
 ## <a name="see-also"></a>Viz také  
- [Nativní kód nejčastější dotazy k ladění](../debugger/debugging-native-code-faqs.md)   
+ [Ladění nativního kódu nejčastější dotazy](../debugger/debugging-native-code-faqs.md)   
  [Ladění nativního kódu](../debugger/debugging-native-code.md)

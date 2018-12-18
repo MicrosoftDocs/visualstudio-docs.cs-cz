@@ -1,6 +1,7 @@
 ---
 title: 'CA1025: Nahraďte opakované argumenty polem parametrů'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,13 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a5957b73789f751f5bd704c1a228994ee6187dc
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 027ec9b19bcf8a4a10e8b973b86e57be2dbc6be7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49838319"
 ---
 # <a name="ca1025-replace-repetitive-arguments-with-params-array"></a>CA1025: Nahraďte opakované argumenty polem parametrů
+
 |||
 |-|-|
 |TypeName|ReplaceRepetitiveArgumentsWithParamsArray|
@@ -30,18 +33,18 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
- Metoda veřejných nebo chráněné v veřejného typu má víc než třemi parametry a jeho poslední tři parametry jsou stejného typu.
+ Veřejná nebo chráněná metoda veřejného typu má více než tři parametry a její poslední tři parametry jsou stejného typu.
 
 ## <a name="rule-description"></a>Popis pravidla
- Pole parametrů místo opakované argumenty používejte při přesný počet argumentů neznámý a proměnné argumenty jsou stejného typu, nebo může být předána jako stejného typu. Například <xref:System.Console.WriteLine%2A> metoda poskytuje pro obecné účely přetížení, které používá pole parametrů tak, aby přijímal libovolný počet <xref:System.Object> argumenty.
+ Pole parametrů. použijte namísto opakovaných argumentů, pokud není znám přesný počet argumentů a proměnné argumenty jsou stejného typu, nebo mohou být předány jako stejného typu. Například <xref:System.Console.WriteLine%2A> metoda poskytuje pro obecné účely přetížení, která používá pole parametrů tak, aby přijímal libovolný počet <xref:System.Object> argumenty.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Opravit porušení toto pravidlo, nahraďte opakované argumenty pole parametrů.
+ Chcete-li opravit porušení tohoto pravidla, nahraďte opakované argumenty polem parametrů.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Je bezpečně potlačit upozornění na toto pravidlo; Tento návrh však může způsobit problémy použitelnost.
+ Je vždy bezpečné potlačit upozornění tohoto pravidla; Tento návrh však může způsobit problémy použitelnost.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje typ, který je v rozporu toto pravidlo.
+ Následující příklad ukazuje typ, který porušuje tato pravidla.
 
  [!code-csharp[FxCop.Design.RepeatArgs#1](../code-quality/codesnippet/CSharp/ca1025-replace-repetitive-arguments-with-params-array_1.cs)]

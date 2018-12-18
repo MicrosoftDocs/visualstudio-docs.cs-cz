@@ -7,53 +7,55 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 603f66a6f9966aaab8758771a345a211feebe8ad
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 6839385e64503ce939d5244b116a9f24be786395
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49904437"
 ---
 # <a name="customizing-copy-behavior"></a>Přizpůsobení chování kopírování
-V jazyce specifické pro doménu (DSL) vytvořené pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] vizualizace a modelování SDK, můžete změnit, co se stane, když uživatel zkopíruje a vloží elementy.
+V jazyce specifickém pro doménu (DSL) vytvořené pomocí Visual Studio Visualization and Modeling SDK je možné změnit, co se stane, když uživatel zkopíruje a vloží prvky.
 
 ## <a name="standard-copy-and-paste-behavior"></a>Standardní kopírování a vložení chování
- Chcete-li povolit, kopírování, nastavte **povolit kopírování vkládání** vlastnost **Editor** uzlu v Průzkumníku DSL.
+ Chcete-li povolit, kopírování, nastavte **povolit kopírování vkládání** vlastnost **Editor** uzel v Průzkumník DSL.
 
- Ve výchozím nastavení pokud uživatel zkopíruje elementy do schránky, tyto prvky se také zkopírují:
+ Ve výchozím nastavení když uživatel zkopíruje prvky do schránky, tyto prvky jsou zkopírovány také:
 
--   Vložené následníků vybrané elementy. (To znamená, prvky, které jsou cíle vnoření vztahy, které pocházejí v zkopíruje elementy.)
+- Vloženého následníků vybraných elementů. (To znamená, elementy, které jsou cílem vkládání vztahy, které jsou zdrojem na zkopíruje prvky.)
 
--   Odkazy vztah mezi zkopírovaný elementy.
+- Propojení vztahů mezi zkopírované elementy.
 
- Toto pravidlo vztahuje rekurzivně zkopírovaný elementy a odkazy.
+  Toto pravidlo aplikuje rekurzivně zkopírované elementy a odkazy.
 
- ![Zkopírovat a vložit elementy](../modeling/media/dslcopypastedefault.png "DslCopyPasteDefault")
+  ![Zkopírované a vložené prvky](../modeling/media/dslcopypastedefault.png)
 
- Serializované a uložené v zkopírovaný elementy a odkazy <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> (EGP), která je umístěna do schránky.
+  Serializovat a uložená v zkopírované elementy a odkazy <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> (EGP), která je umístěna do schránky.
 
- Obrázek elementů zkopírovaných je také umístěna do schránky. To umožňuje uživateli vložení do jiných aplikací, jako je aplikace Word.
+  Obrázek zkopírované elementy je také umístěná do schránky. To umožňuje uživateli vkládat do jiných aplikací, jako je Word.
 
- Uživatele můžete vložit zkopírovaný prvků na cíl, který může přijmout elementy podle definice DSL. V DSL, vygenerovaná z této šablony řešení součásti, například uživatele můžete vložit porty na komponenty, ale ne do diagramu; a můžete vložit součásti do diagramu, ale ne na ostatní součásti.
+  Uživatel můžete vložit zkopírované elementy na cíl, který může přijmout prvky podle definici DSL. V DSL generován ze šablony řešení komponenty, například uživatele můžete vložit portů do komponenty, ale ne do diagramu; a můžete vložit součásti do diagramu, ale ne na jiných komponent.
 
-## <a name="customizing-copy-and-paste-behavior"></a>Přizpůsobení kopírování a vložení chování
- Další informace o přizpůsobení modelu pomocí programu kódu najdete v tématu [navigace a aktualizace modelu v programovém kódu](../modeling/navigating-and-updating-a-model-in-program-code.md).
+## <a name="customizing-copy-and-paste-behavior"></a>Úpravy, kopírování a vložení chování
+ Další informace o přizpůsobení modelu pomocí kódu programu najdete v tématu [navigace a aktualizace modelu v programovém kódu](../modeling/navigating-and-updating-a-model-in-program-code.md).
 
- **Povolit nebo zakázat kopírovat, vyjmout a vložit.**
-V Průzkumníku DSL, nastavte **povolit kopírování vkládání** vlastnost **Editor** uzlu.
+ **Povolit nebo zakázat kopírování, vyjmutí a vložení.**
+V Průzkumníku DSL nastavte **povolit kopírování vkládání** vlastnost **Editor** uzlu.
 
- **Zkopírujte odkazy na stejný cíl.** Například tak, aby měl zkopírované komentář pole Propojená stejného elementu subjektu.
-Nastavte **rozšíří kopie** vlastnost roli tak, aby **rozšířit kopie propojit jenom**. Další informace najdete v tématu [přizpůsobení chování Kopírovat odkaz](#customizeLinks).
+ **Zkopírujte odkazy do stejného cíle.** Například máte pole zkopírovaný komentář propojenou stejného elementu předmět.
+Nastavte **šíří kopírování** vlastnost roli, kterou chcete **šířit kopírování propojení pouze**. Další informace najdete v tématu [přizpůsobení chování kopírování odkaz](#customizeLinks).
 
- Zkopírujte propojené elementy. Například při kopírování nového elementu kopie všech polí propojené komentář jsou vytvářeny také.
-Nastavte **rozšíří kopie** vlastnost roli tak, aby **rozšířit Kopírovat odkaz nebo opačnou role player**. Další informace najdete v tématu [přizpůsobení chování Kopírovat odkaz](#customizeLinks).
+ Zkopírujte propojené prvky. Například při kopírování nový prvek kopie zaškrtnutí polí, která propojené komentáře probíhají také.
+Nastavte **šíří kopírování** vlastnost roli, kterou chcete **šířit Kopírovat odkaz a Aktér opačné role**. Další informace najdete v tématu [přizpůsobení chování kopírování odkaz](#customizeLinks).
 
- **Zkopírováním a vložením rychle duplicitní prvky.** Za normálních okolností je stále vybrali položku, kterou jste právě zkopírovali, a nelze vložit stejný typ elementu na něj.
-Sloučení direktivu Element přidejte do třídy domény a nastavte ji na dopředného sloučení k nadřazené třídy. To bude mít stejný účinek na operací přetažení. Další informace najdete v tématu [přizpůsobení Element vytváření a přesun](../modeling/customizing-element-creation-and-movement.md).
+ **Rychle duplicitní prvky zkopírováním a vložením.** Za normálních okolností je stále vybraná položka, kterou jste zkopírovali, a nelze vložit stejný typ prvku problém napravit.
+Přidat direktiva sloučení elementů doménové třídy a nastavte ho na dopředné sloučení do nadřazené třídy. To bude mít stejný vliv na operace přetažení. Další informace najdete v tématu [přizpůsobení vytvoření a přesunutí elementu](../modeling/customizing-element-creation-and-movement.md).
 
  \- nebo –
 
- Před vložením prvků, přepsáním vyberte diagram `ClipboardCommandSet.ProcessOnPasteCommand()`. Přidejte tento kód do vlastního souboru v projektu DslPackage:
+ Vyberte diagramu před vložením prvky, tak, že přepíšete `ClipboardCommandSet.ProcessOnPasteCommand()`. Přidejte tento kód do vlastního souboru v projektu DslPackage:
 
 ```csharp
 namespace Company.MyDsl {
@@ -70,26 +72,25 @@ partial class MyDslClipboardCommandSet
      .SelectObjects(1, new object[] { diagram }, 0);
   }
 } }
-
 ```
 
- **Když uživatel vloží do vybraných cílových, vytvořte další odkazy.** Například pokud je pole komentář vložen do elementu, odkaz se provádí mezi nimi.
-Přidat direktivu Element sloučení k třídě cíle domény a nastavte ji zpracovat sloučení přidáním odkazy. To bude mít stejný účinek na operací přetažení. Další informace najdete v tématu [přizpůsobení Element vytváření a přesun](../modeling/customizing-element-creation-and-movement.md).
+ **Vytvořte další odkazy, když uživatel vloží do vybraného cíle.** Například pole komentář vloženého na element, vytvoří se propojení mezi nimi.
+Přidat direktivě sloučení do cílové doménové třídy a nastavit ji zpracovat tak, že přidáte odkazy sloučení. To bude mít stejný vliv na operace přetažení. Další informace najdete v tématu [přizpůsobení vytvoření a přesunutí elementu](../modeling/customizing-element-creation-and-movement.md).
 
  \- nebo –
 
- Přepsání `ClipboardCommandSet.ProcessOnPasteCommand()` po volání metody základní vytvářet další odkazy.
+ Přepsat `ClipboardCommandSet.ProcessOnPasteCommand()` po volání metody základní vytvářet další odkazy.
 
- **Přizpůsobit formáty, ve kterých je možné zkopírovat elementy** k externím aplikacím – například přidání okraj do formuláře rastrového obrázku.
-Přepsání *MyDsl* `ClipboardCommandSet.ProcessOnMenuCopyCommand()` v DslPackage projektu.
+ **Přizpůsobit formáty, ve kterých je možné zkopírovat prvky** do externí aplikace – například pro přidání ohraničení k formuláři rastrového obrázku.
+Přepsat *MyDsl* `ClipboardCommandSet.ProcessOnMenuCopyCommand()` DslPackage projektu.
 
- **Přizpůsobte, jak jsou elementy zkopírován do schránky příkazem kopírování, ale není v rámci operace přetažení.**
-Přepsání *MyDsl* `ClipboardCommandSet.CopyModelElementsIntoElementGroupPrototype()` v DslPackage projektu.
+ **Přizpůsobte, jak jsou elementy zkopírovány do schránky. pomocí příkazu Kopírovat, ale ne v operaci přetažení.**
+Přepsat *MyDsl* `ClipboardCommandSet.CopyModelElementsIntoElementGroupPrototype()` DslPackage projektu.
 
- **Zachovat tvar rozložení prostřednictvím kopírování a vkládání.**
-Když uživatel kopie více tvarů, když budou vložena lze zachovat jejich relativní umístění. Tento postup je znázorněn příklad v [VMSDK: Ukázka okruhů](http://go.microsoft.com/fwlink/?LinkId=213879).
+ **Zachovat obrazce rozložení prostřednictvím kopírování a vložení.**
+Když uživatel zkopíruje více tvarů, můžete zachovat jejich relativní umístění, když jsou vloženy. Tato technika je znázorněn příklad v [vmsdk následující položky: Ukázka okruhů](http://go.microsoft.com/fwlink/?LinkId=213879).
 
- K dosažení tohoto efektu, přidejte do zkopírovaný ElementGroupPrototype tvarů a konektory. Nejvíce vhodnou metodu pro přepsání je ElementOperations.CreateElementGroupPrototype(). Chcete-li to provést, přidejte následující kód do projektu Dsl:
+ Tohoto efektu dosáhnete tak, přidejte do zkopírovaný ElementGroupPrototype obrazců a konektorů. Nejvíce vhodnou metodu pro přepsání je ElementOperations.CreateElementGroupPrototype(). Chcete-li to provést, přidejte následující kód do projektu Dsl:
 
 ```csharp
 
@@ -140,13 +141,12 @@ partial class MyDslDiagram // EDIT NAME
   }
  private MyElementOperations singleton = null;
 }
-
 ```
 
- **Vkládání obrazců do zvoleného umístění, jako je například aktuálním umístěním kurzoru.**
-Když uživatel kopie více tvarů, když budou vložena lze zachovat jejich relativní umístění. Tento postup je znázorněn příklad v [VMSDK: Ukázka okruhů](http://go.microsoft.com/fwlink/?LinkId=213879).
+ **Vkládání obrazců do zvoleného umístění, jako je aktuální pozice kurzoru.**
+Když uživatel zkopíruje více tvarů, můžete zachovat jejich relativní umístění, když jsou vloženy. Tato technika je znázorněn příklad v [vmsdk následující položky: Ukázka okruhů](http://go.microsoft.com/fwlink/?LinkId=213879).
 
- K dosažení tohoto efektu, přepsání `ClipboardCommandSet.ProcessOnMenuPasteCommand()` používat konkrétní umístění verzi `ElementOperations.Merge()`. Chcete-li to provést, přidejte následující kód v projektu DslPackage:
+ Tohoto efektu dosáhnete tak, přepsat `ClipboardCommandSet.ProcessOnMenuPasteCommand()` použije umístění konkrétní verzi `ElementOperations.Merge()`. Chcete-li to provést, přidejte následující kód v projektu DslPackage:
 
 ```csharp
 
@@ -210,45 +210,45 @@ partial class MyDslClipboardCommandSet // EDIT NAME
   }
 ```
 
- **Umožní uživateli přetažení elementy.**
-V tématu [postupy: přidání obslužné rutiny a přetažení](../modeling/how-to-add-a-drag-and-drop-handler.md).
+ **Umožní uživateli přetáhnout prvky.**
+Zobrazit [postupy: přidání obslužné rutiny operace přetažení myší](../modeling/how-to-add-a-drag-and-drop-handler.md).
 
-##  <a name="customizeLinks"></a> Přizpůsobení chování Kopírovat odkaz
- Když uživatel kopie elementu, standardní chování je, že jsou všechny vložené prvky také zkopírován. Standardní chování kopírování, můžete upravit. V definici DSL vybrat roli na jedné straně relace a v sadě okno Vlastnosti **rozšíří kopie** hodnotu.
+## <a name="customizeLinks"></a> Přizpůsobení chování kopírování propojení
+ Když uživatel zkopíruje element, standardní chování je, že všechny vložené prvky jsou zkopírovány také. Standardní chování kopírování můžete upravit. V definici DSL vybrat roli na jedné straně relace a okno sady vlastností **šíří kopírování** hodnotu.
 
- ![Rozšíří vlastnost kopírování role domény](../modeling/media/dslpropagatescopy.png "DslPropagatesCopy")
+ ![Rozšíří kopírování Vlastnosti rolí domény](../modeling/media/dslpropagatescopy.png)
 
  Existují tři hodnoty:
 
--   Nešířily kopie
+- Nejsou rozšířena kopírování
 
--   Rozšíří kopie propojit jenom - skupině Po vložení, nové kopie tento odkaz bude odkazovat na existující element na druhém konci odkazu.
+- Šíření kopírování propojení pouze - vloženého skupině novou kopii tohoto odkazu se odkazovat na existující prvek na druhém konci odkazu.
 
--   Rozšíří kopie propojení a opačným role player - zkopírovaný skupina obsahuje kopii elementu na druhém konci odkazu.
+- Šíření kopírování propojení a Aktér opačné role - zkopírovaný skupina obsahuje kopii elementu na druhém konci odkazu.
 
- ![Účinek kopírování s PropagateCopyToLinkOnly](../modeling/media/dslpropagatecopy.png "DslPropagateCopy")
+  ![Kopírování s PropagateCopyToLinkOnly efekt](../modeling/media/dslpropagatecopy.png)
 
- Elementy a bitovou kopii, která se zkopírují, bude mít vliv změny, které provedete.
+  Změna, kterou bude mít vliv na elementy a obrázek, který se zkopíruje.
 
 ## <a name="programming-copy-and-paste-behavior"></a>Programování kopírování a vložení chování
- Mnoho aspektů chování DSL s ohledem na kopírování, vkládání, vytvoření nebo odstranění objektů se řídí instanci <xref:Microsoft.VisualStudio.Modeling.ElementOperations> který je připojen diagramu. Můžete upravit chování vaší DSL odvozením vlastní třídy z <xref:Microsoft.VisualStudio.Modeling.ElementOperations> a přepsáním <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.ElementOperations%2A> vlastnost třídě diagram.
+ Mnoho aspektů DSL chování s ohledem na kopírování, vložení, vytváření a odstraňování objektů se řídí instance <xref:Microsoft.VisualStudio.Modeling.ElementOperations> , který je s velkou provázaností do diagramu. Můžete změnit chování vašeho kódu DSL odvozením vlastních tříd z <xref:Microsoft.VisualStudio.Modeling.ElementOperations> a přepsáním <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.ElementOperations%2A> vlastnosti diagramu třídy.
 
 > [!TIP]
->  Další informace o přizpůsobení modelu pomocí programu kódu najdete v tématu [navigace a aktualizace modelu v programovém kódu](../modeling/navigating-and-updating-a-model-in-program-code.md).
+>  Další informace o přizpůsobení modelu pomocí kódu programu najdete v tématu [navigace a aktualizace modelu v programovém kódu](../modeling/navigating-and-updating-a-model-in-program-code.md).
 
- ![Diagram pořadí operace kopírování](../modeling/media/dslcopyseqdiagram.png "dslCopySeqDiagram")
+ ![Sekvenční diagram pro operace kopírování](../modeling/media/dslcopyseqdiagram.png)
 
- ![Diagram pořadí operaci vložení](../modeling/media/dslpasteseqdiagram.png "dslPasteSeqDiagram")
+ ![Sekvenční diagram operaci vložení](../modeling/media/dslpasteseqdiagram.png)
 
 #### <a name="to-define-your-own-elementoperations"></a>Chcete-li definovat vlastní ElementOperations
 
-1.  Do nového souboru ve vašem projektu DSL, vytvořte třídu, která je odvozená od <xref:Microsoft.VisualStudio.Modeling.Diagrams.DesignSurfaceElementOperations>.
+1. V novém souboru ve vašem projektu DSL, vytvořte třídu, která je odvozena od <xref:Microsoft.VisualStudio.Modeling.Diagrams.DesignSurfaceElementOperations>.
 
-2.  Přidejte třídu definice pro třídu diagram. Název této třídy naleznete v **Dsl\GeneratedCode\Diagrams.cs**.
+2. Přidáte definici částečné třídy pro třídu diagramu. Název této třídy lze najít v **Dsl\GeneratedCode\Diagrams.cs**.
 
-     Ve třídě diagram přepsat <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.ElementOperations%2A> vrátit instanci vaše ElementOperations podtřída. By měl vrátit stejnou instanci v každém volání.
+    V diagramu tříd, přepište <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.ElementOperations%2A> vrátit instanci vaší ElementOperations podtřídy. Měli byste vrátit stejnou instanci při každém volání.
 
- Přidejte tento kód v souboru vlastního kódu v projektu DslPackage:
+   Přidejte tento kód v souboru vlastního kódu v projektu DslPackage:
 
 ```csharp
 
@@ -279,22 +279,21 @@ using Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement;
     { }
     // Overridden methods follow
   }
-
 ```
 
-## <a name="receiving-items-dragged-from-other-models"></a>Přijetí položky přetažením z jiných modelů
- ElementOperations lze také definovat chování kopírovat, přesunout, odstranění a přetažení myší. Jako ukázka použití ElementOperations zde příkladě definuje vlastní chování přetažení myší. Však k tomuto účelu můžete zvážit alternativní metody uvedené v [postupy: přidání obslužné rutiny a přetažení](../modeling/how-to-add-a-drag-and-drop-handler.md), což je více extensible.
+## <a name="receiving-items-dragged-from-other-models"></a>Příjem položek přetáhnout z dalších modelů
+ ElementOperations lze také definovat chování kopírování, přesunutí, odstranění a přetáhněte myší. Jako ukázkový používání ElementOperations zde příklad definuje vlastní chování a přetažení. Ale pro tento účel můžete zvážit alternativní postupu popsaného v [postupy: přidání obslužné rutiny operace přetažení myší](../modeling/how-to-add-a-drag-and-drop-handler.md), což je více rozšiřitelné.
 
- Definujte dvě metody ve třídě ElementOperations:
+ Ve své třídě ElementOperations definujte dvě metody:
 
--   `CanMerge(ModelElement targetElement, System.Windows.Forms.IDataObject data)` který určuje, zda může být source element přetáhli cíl tvaru, konektoru nebo diagram.
+-   `CanMerge(ModelElement targetElement, System.Windows.Forms.IDataObject data)` který určuje, zda source element můžete přetahovat do tvar target, konektoru nebo diagramu.
 
--   `MergeElementGroupPrototype(ModelElement targetElement, ElementGroupPrototype sourcePrototype)` source element který spojuje do cílové.
+-   `MergeElementGroupPrototype(ModelElement targetElement, ElementGroupPrototype sourcePrototype)` zahrnující prvek zdroje do cíle.
 
 ### <a name="canmerge"></a>CanMerge()
- `CanMerge()` je volána k určení zpětnou vazbu, která má být poskytnut uživateli při pohybu myší v diagramu. Parametry metody jsou element, za které je ukazatele myši a data o zdroj, ze které byla provedena operace přetažení. Uživatele můžete přetáhnout z kdekoli na obrazovce. Zdrojový objekt proto může být mnoho různých typů a může být serializována v různých formátech. Pokud je zdroj DSL nebo UML modelu, parametr dat je serializaci <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype>. Operace přetažení, kopírování a sady nástrojů pomocí ElementGroupPrototypes znázornit fragmenty modelů.
+ `CanMerge()` je volána k určení zpětnou vazbu, která by se měly provádět uživateli při pohybu myši v diagramu. Parametry metody jsou elementu nad tím, které je najedete myší a údaje o zdroji, odkud byla provedena operace přetažení. Uživatel můžete přetáhnout z libovolné místo na obrazovce. Zdrojový objekt proto může být mnoho různých typů a je možné serializovat v různých formátech. Pokud je zdroj modelu DSL nebo UML, parametr data je serializace <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype>. Operace přetažení, kopírování a sady nástrojů znázornit ElementGroupPrototypes fragmenty modelů.
 
- Prototypu skupiny Element může obsahovat libovolný počet elementů a odkazy. Typy prvků lze identifikovat podle identifikátorů GUID. Identifikátor GUID je obrazec, který byl přetáhli, není základní element modelu. V následujícím příkladu `CanMerge()` vrátí hodnotu true, pokud je třída tvaru z diagramu UML přetáhli tohoto diagramu.
+ Prototyp skupiny Element může obsahovat libovolný počet prvků a odkazy. Typy elementů lze identifikovat pomocí jejich identifikátorů GUID. Identifikátor GUID je obrazce, která byla přetažena není základní prvek modelu. V následujícím příkladu `CanMerge()` vrací true, pokud třída tvaru z diagramu UML je přetáhnout do tohoto diagramu.
 
 ```csharp
 public override bool CanMerge(ModelElement targetShape, System.Windows.Forms.IDataObject data)
@@ -309,11 +308,10 @@ public override bool CanMerge(ModelElement targetShape, System.Windows.Forms.IDa
         return true;
    return base.CanMerge(targetShape, data);
  }
-
 ```
 
 ## <a name="mergeelementgroupprototype"></a>MergeElementGroupPrototype()
- Tato metoda je volána, když uživatel zahodí element na diagram, obrazce nebo konektor. Ho měli sloučit taženou obsah do cílového elementu. V tomto příkladu kód určuje, zda rozpoznala kombinaci typů cíle a prototypu; Pokud ano, metoda převede taženou elementy prototyp elementy, které mají být přidány do modelu. Základní metoda je volána k provedení sloučení, buď elementů převedený nebo nepřevedeném.
+ Tato metoda je volána, když uživatel elementu do diagramu, obrazec nebo spojnici. Ji by měl sloučit Přetahované obsah do cílového elementu. V tomto příkladu kódu určuje, zda rozpozná kombinace cílové a vytváření prototypů typů; Pokud ano, metoda převede přetažené prvky do prototypu prvků, které mají být přidány do modelu. Základní metoda je volána k provedení sloučení elementů převedený nebo nepřevedeném.
 
 ```csharp
 public override void MergeElementGroupPrototype(ModelElement targetShape, ElementGroupPrototype sourcePrototype)
@@ -327,10 +325,9 @@ public override void MergeElementGroupPrototype(ModelElement targetShape, Elemen
   if (prototypeToMerge != null)
     base.MergeElementGroupPrototype(targetShape, prototypeToMerge);
 }
-
 ```
 
- V tomto příkladu se zabývá elementů třída UML přetažením z diagramu tříd UML. DSL není určen k ukládání tříd UML přímo, ale místo toho vytvoříme DSL element pro každou taženou UML třídu. To bude užitečná, například když DSL je diagramu instance. Uživatel může přetažením třídy na diagram pro vytvoření instancí těchto tříd.
+ V tomto příkladu se zabývá elementů tříd UML přetáhnout z diagramu tříd UML. DSL není určené k ukládání tříd UML přímo, ale místo toho vytvoříme DSL element pro každou Přetahované třídu modelu UML. To bude užitečné, například když DSL je diagramu instance. Uživatel může tříd přetáhněte do diagramu pro vytvoření instancí těchto tříd.
 
 ```csharp
 
@@ -365,15 +362,14 @@ private ElementGroupPrototype ConvertDraggedTypeToLocal (MyTargetShape snapshot,
   }
   return null;
 }
-
 ```
 
-## <a name="standard-copy-behavior"></a>Standardní kopie chování
- Kód v této části ukazuje, že ke změně kopírování chování můžete přepsat metody, které si chcete. Můžete zjistit, jak dosáhnout vlastní úpravy, tato část ukazuje kód, který přepíše metody účastnící se kopírování, ale nemění standardní chování.
+## <a name="standard-copy-behavior"></a>Chování standardní kopírování
+ Kód v této části ukazuje, že můžete přepsat metody, které můžete změnit chování kopírování. Můžete zjistit, jak dosáhnout vlastní úpravy, tato část zobrazuje kód, který se přepíše při kopírování metody, ale nezmění standardní chování.
 
- Když uživatel stiskne klávesu CTRL + C nebo používá příkaz nabídky kopie metodu <xref:Microsoft.VisualStudio.Modeling.Shell.ClipboardCommandSet.ProcessOnMenuCopyCommand%2A> je volána. Uvidíte, jak toto nastavení **DslPackage\Generated Code\CommandSet.cs**. Další informace o tom, jak jsou příkazy nastavení najdete v tématu [postupy: přidání příkazu do místní nabídky](../modeling/how-to-add-a-command-to-the-shortcut-menu.md).
+ Když uživatel stiskne klávesu CTRL + C nebo používá příkaz nabídky kopírování metodu <xref:Microsoft.VisualStudio.Modeling.Shell.ClipboardCommandSet.ProcessOnMenuCopyCommand%2A> je volána. Zobrazí se, jak toto nastavení **DslPackage\Generated Code\CommandSet.cs**. Další informace o tom, jak jsou příkazy nastavit, najdete v části [postupy: přidání příkazu do místní nabídky](../modeling/how-to-add-a-command-to-the-shortcut-menu.md).
 
- ProcessOnMenuCopyCommand můžete přepsat tak, že přidáte definice třídu *MyDsl* `ClipboardCommandSet` v DslPackage projektu.
+ ProcessOnMenuCopyCommand můžete přepsat tak, že přidáte definicí částečné třídy *MyDsl* `ClipboardCommandSet` DslPackage projektu.
 
 ```csharp
 using System.Collections.Generic;
@@ -438,7 +434,7 @@ protected override void CopyModelElementsIntoElementGroupPrototype(IDataObject d
 }
 ```
 
- Každý diagram má instanci typu singleton daného ElementOperations. Můžete zadat vlastní odvozených. Tento soubor, který můžete umístit v projektu DSL, se budou chovat stejný jako kód, který přepíše:
+ Každý diagram má instanci typu singleton ElementOperations. Můžete zadat vlastní odvozených děl na základě. Tento soubor, který je možné použít v projektu DSL, by se chovalo stejně jako kód, který přepíše:
 
 ```csharp
 using System;
@@ -556,14 +552,13 @@ namespace Company.MyDsl
     }
   }
 }
-
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Přizpůsobení vytvoření a přesunutí elementu](../modeling/customizing-element-creation-and-movement.md)
 - [Postupy: Přidání obslužné rutiny operace přetažení myší](../modeling/how-to-add-a-drag-and-drop-handler.md)
 - [Přizpůsobení chování odstranění](../modeling/customizing-deletion-behavior.md)
-- [Ukázka: Ukázka VMSDK okruhů](http://go.microsoft.com/fwlink/?LinkId=213879)
+- [Ukázka: Ukázka vmsdk následující položky okruhů](http://go.microsoft.com/fwlink/?LinkId=213879)
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]

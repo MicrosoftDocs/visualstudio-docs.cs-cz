@@ -1,6 +1,6 @@
 ---
-title: Ladění aplikace UWP - sady Visual Studio | Microsoft Docs
-ms.custom: ''
+title: Ladění aplikací pro UWP | Dokumentace Microsoftu
+ms.custom: seodec18
 ms.date: 01/17/2017
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -14,23 +14,24 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 522837b2e5475ea5cb25b638d67aaa4d01438271
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 14761da614ddcd36e8ca9bcec2a686f125ab53bd
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53064018"
 ---
-# <a name="debug-universal-windows-apps-uwp-in-visual-studio"></a>Ladění univerzální aplikace pro Windows (UWP) v sadě Visual Studio
+# <a name="debug-universal-windows-apps-uwp-in-visual-studio"></a>Ladit aplikace pro Universal Windows (UPW) v sadě Visual Studio
 
-Ladicí program Visual Studio poskytuje úplnou podporu pro ladění aplikace UWP. 
-  
-Chcete-li ladit aplikace Windows 8.1, přečtěte si téma [úložiště ladění aplikace v sadě Visual Studio](https://msdn.microsoft.com/en-us/library/hh441472.aspx). Chcete-li ladit aplikace pro Windows Phone 8, přečtěte si téma [ladění aplikace pro Windows Phone 8](https://msdn.microsoft.com/library/windows/apps/ff402572(v=vs.105).aspx).  
-  
-|||  
+Ladicí program sady Visual Studio poskytuje úplnou podporu pro ladění aplikací pro UWP. Naleznete v následujících článcích pro UPW ladění úlohy.
+
+|Ladění úloh|Článek|
 |-|-|  
-|[Spuštění ladicí relace pro aplikaci pro UPW](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md)|Spouštět aplikace pro UPW v místním počítači připojeném zařízení, v emulátoru nebo simulátoru aplikaci nebo na vzdáleném zařízení.|  
-|[Ladění balíčku nainstalované aplikace](../debugger/debug-installed-app-package.md)|Ladění nasazených aplikací, místních i vzdálených.|
-|[Předběžné načtení obsahu pro aplikace UWP](../debugger/prefetch-content-for-windows-store-apps.md)|Analýza neovlivňuje aplikace UWP ContentPrefetcher třídy.|  
+|Ladění aplikací pro Windows 8.1|[Ladění aplikací pro Store v sadě Visual Studio](debug-store-apps-in-visual-studio.md)|
+|Spouštění aplikací pro UWP v místním počítači, vzdálené nebo připojených zařízení nebo simulátor aplikace.|[Spuštění ladicí relace pro aplikaci pro UPW](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md)|
+|Ladění nasazených aplikací, místních i vzdálených.|[Ladění balíčku nainstalované aplikace](../debugger/debug-installed-app-package.md)|
+|Analýza efekt ContentPrefetcher třídy v aplikacích pro UPW.|[Předběžné načtení obsahu pro aplikace pro UPW](../debugger/prefetch-content-for-windows-store-apps.md)|
+
   
 ## <a name="see-also"></a>Viz také  
- [Analýza kvality kódu pomocí Statická analýza kódu](../test/analyze-the-code-quality-of-store-apps-using-visual-studio-static-code-analysis.md)
+ [Analýza kvality kódu pomocí analýzy statického kódu](../test/analyze-the-code-quality-of-store-apps-using-visual-studio-static-code-analysis.md)

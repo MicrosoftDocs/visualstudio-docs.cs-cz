@@ -1,6 +1,6 @@
 ---
-title: 'Postupy: určení verze rozhraní .NET Framework pro ladění | Microsoft Docs'
-ms.custom: ''
+title: Určení verze rozhraní .NET Framework pro ladění | Dokumentace Microsoftu
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -18,48 +18,52 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2cb8da54b53814e7f044c67855e8071c627cf2e1
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 86289c9a93a0bb9e0f7756443d79f4a1a6dd38a6
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056005"
 ---
-# <a name="how-to-specify-a-net-framework-version-for-debugging"></a>Postupy: Určení verze rozhraní .NET Framework pro ladění
-[!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] Ladicí program podporuje ladění starší verze Microsoft [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] i aktuální verze. Pokud spustíte aplikaci v sadě Visual Studio, ladicího programu můžete vždy identifikovat správnou verzi [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] pro aplikaci, kterou ladíte. Pokud již je spuštěna aplikace a použijete **připojit k**, ladicí program nemusí být vždy možné identifikovat starší verzi [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]. Pokud k tomu dojde, zobrazí se chybová zpráva s informacemi o tom,  
+# <a name="how-to-specify-a-net-framework-version-for-debugging-c-visual-basic-f"></a>Postupy: určení verze rozhraní .NET Framework pro ladění (C#, Visual Basic, F#)
+
+Ladicí program sady Visual Studio podporuje ladění starších verzích Microsoft [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] stejně jako aktuální verze. Pokud spouštíte aplikaci ze sady Visual Studio, ladicí program může vždy identifikovat správnou verzi [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] pro aplikaci, kterou ladíte. Nicméně pokud aplikace je již spuštěn a spustit ladění pomocí **připojit k**, ladicí program, nemusí být vždy schopen identifikovat starší verzi [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]. Pokud k tomu dojde, zobrazí se chybová zpráva s upozorněním,  
+
+``` cmd 
+The debugger has made an incorrect assumption about the [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] version your application is going to use.  
+```
+
+Ve výjimečných případech, kde se zobrazí tato chyba můžete nastavit klíče registru k označení k ladicímu programu, které verze se má použít.  
   
- Ladicí program udělal nesprávný předpokládá o [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] verze aplikace bude používat.  
+### <a name="to-specify-a-net-framework-version-for-debugging"></a>Chcete-li určit verzi rozhraní .NET Framework pro ladění  
   
- V těchto výjimečných případech můžete nastavit klíč registru a informuje ladicího programu, která verze se má použít.  
+1. Hledejte v adresáři Windows\Microsoft.NET\Framework vyhledání verzí rozhraní .NET Framework nainstalované v počítači. Čísla verzí vypadat přibližně takto:  
   
-### <a name="to-specify-a-net-framework-version-for-debugging"></a>K určení verze rozhraní .NET Framework pro ladění  
+    `V1.1.4322`  
   
-1.  Podívejte se v adresáři Windows\Microsoft.NET\Framework najít verze rozhraní .NET Framework, který je nainstalovaný na počítači. Čísla verzí vypadat přibližně takto:  
+    Identifikujte na správné číslo verze a poznamenejte si ho.  
   
-     `V1.1.4322`  
+2. Spustit **Editor registru** (regedit).  
   
-     Určete číslo správnou verzi a poznamenejte si ho.  
+3. V **Editor registru**, otevřete složku HKEY_LOCAL_MACHINE.  
   
-2.  Spuštění **Editor registru** (regedit).  
+4. Přejděte do: HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\10.0\AD7Metrics\Engine\\{449EC4CC-30D2-4032-9256-EE18EB41B62B}  
   
-3.  V **Editor registru**, otevřete složku HKEY_LOCAL_MACHINE.  
+    Pokud klíč neexistuje, klikněte pravým tlačítkem na HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\10.0\AD7Metrics\Engine a klikněte na tlačítko **nový klíč**. Pojmenujte nový klíč `{449EC4CC-30D2-4032-9256-EE18EB41B62B}`.  
   
-4.  Přejděte do: HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\10.0\AD7Metrics\Engine\\{449EC4CC-30D2-4032-9256-EE18EB41B62B}  
+5. Po přejití do {449EC4CC-30D2-4032-9256-EE18EB41B62B}, podívejte se **název** sloupce a najít CLRVersionForDebugging klíč.  
   
-     Pokud klíč neexistuje, klikněte pravým tlačítkem na HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\10.0\AD7Metrics\Engine a klikněte na **nový klíč**. Název nového klíče `{449EC4CC-30D2-4032-9256-EE18EB41B62B}`.  
+   1.  Pokud klíč neexistuje, klikněte pravým tlačítkem na {449EC4CC-30D2-4032-9256-EE18EB41B62B} a klikněte na tlačítko **novou řetězcovou hodnotu**. Klikněte pravým tlačítkem na novou řetězcovou hodnotu, klikněte na tlačítko **přejmenovat**a typ `CLRVersionForDebugging`.  
   
-5.  Po přechodu na {449EC4CC-30D2-4032-9256-EE18EB41B62B}, vyhledejte v **název** sloupce a najít klíč CLRVersionForDebugging.  
+6. Dvakrát klikněte na panel **CLRVersionForDebugging**.  
   
-    1.  Pokud klíč neexistuje, klikněte pravým tlačítkem na {449EC4CC-30D2-4032-9256-EE18EB41B62B} a klikněte na **novou řetězcovou hodnotu**. Klikněte pravým tlačítkem novou řetězcovou hodnotu, klikněte na tlačítko **přejmenovat**a typ `CLRVersionForDebugging`.  
+7. V **Upravit řetězec** zadejte číslo verze rozhraní .NET Framework v **hodnotu** pole. Příklad: V1.1.4322  
   
-6.  Klikněte dvakrát na **CLRVersionForDebugging**.  
-  
-7.  V **Upravit řetězec** zadejte číslo verze rozhraní .NET Framework v **hodnotu** pole. Příklad: V1.1.4322  
-  
-8.  Click **OK**.  
+8. Klikněte na tlačítko **OK**.  
   
 9. Zavřít **Editor registru**.  
   
-     Pokud stále zobrazí chybové hlášení při spuštění ladění, ověřte, zda jste zadali číslo verze správně do registru. Ověřte také, že používáte verzi [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] nepodporuje sady Visual Studio. Ladicí program je kompatibilní s aktuální verze rozhraní .NET Framework a předchozí verze, ale nemusí být dopředně kompatibilní s novějšími verzemi.  
+     Pokud se stále zobrazí chybová zpráva při zahájení ladění, ověřte, že zadáte číslo verze správně v registru. Dál ověřte, že používáte verzi [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] podporovaného Visual Studiem. Ladicí program je kompatibilní s aktuální verze rozhraní .NET Framework a předchozími verzemi, ale možná není dopředně kompatibilní s budoucí verze.  
   
 ## <a name="see-also"></a>Viz také  
- [Nastavení ladicího programu a příprava](../debugger/debugger-settings-and-preparation.md)
+ [Nastavení a příprava ladicího programu](../debugger/debugger-settings-and-preparation.md)

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio příkaz tabulky (. Soubory Vsct) | Microsoft Docs
+title: Tabulky příkazů sady Visual Studio (. Soubory Vsct) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,36 +14,37 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3407c21f242cf45337ddad2ff19993d9e0130fbf
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: eb1cf61f1c1120e27ffcb5a93eff35817f1ed0b3
+ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46495866"
 ---
-# <a name="visual-studio-command-table-vsct-files"></a>Visual Studio příkaz tabulky (. Soubory Vsct)
-Příkaz tabulky konfigurační soubor je textový soubor, který popisuje sadu příkazů, které obsahuje VSPackage. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Příkaz tabulky (VSCT) kompilátoru kompilovaný konfiguraci na základě XML (soubory .vsct) do binární příkaz tabulky výstupní (.cto) soubory. Výsledná .cto soubory jsou stejné jako ty, které jsou vytvořené pomocí kompilátoru tabulky (CTC) příkaz zkompilovat .ctc konfigurační soubory. Soubory formátu XML .vsct však má několik výhod, jako je například editoru XML a XML IntelliSense.  
+# <a name="visual-studio-command-table-vsct-files"></a>Soubory tabulek příkazů sady Visual Studio (.Vsct)
+Příkaz tabulky konfigurační soubor je textový soubor, který popisuje sadu příkazů, které obsahuje VSPackage. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Příkaz kompilátoru tabulky (VSCT) kompiluje konfiguraci na základě XML soubory (.vsct) do soubory výstup (.cto) tabulky příkaz binary. Výsledná .cto soubory jsou stejné jako ty, které jsou vytvořeny pomocí kompilátoru tabulky (CTC) příkaz pro kompilaci .ctc konfigurační soubory. Soubory .vsct založený na formátu XML má však několik výhod, jako je například editoru XML a XML IntelliSense.  
   
- Další informace o syntaxi a sémantiku .vsct souborů najdete v tématu [návrh tabulky příkaz XML (. Soubory Vsct)](../../extensibility/internals/designing-xml-command-table-dot-vsct-files.md)  
+ Další informace o syntaxi a sémantiku souborů .vsct najdete v tématu [návrh tabulky příkazů XML (. Soubory Vsct)](../../extensibility/internals/designing-xml-command-table-dot-vsct-files.md)  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Návrh souborů tabulky příkazů XML (.Vsct)](../../extensibility/internals/designing-xml-command-table-dot-vsct-files.md)  
- Popisuje postup návrhu .vsct soubory.  
+ Popisuje postup návrhu soubory .vsct.  
   
  [Postupy: Vytvoření souboru .Vsct](../../extensibility/internals/how-to-create-a-dot-vsct-file.md)  
- Porovná metody pro vytvoření souboru .vsct. Popisuje postup pro ruční vytvoření nového souboru .vsct.  
+ Porovnává metody pro vytvoření souboru .vsct. Popisuje proces pro ruční vytvoření nového souboru .vsct.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [XML schéma VSCT – referenční informace](../../extensibility/vsct-xml-schema-reference.md)  
- Poskytuje podrobnosti o jednotlivých částech konfigurační soubor XML tabulky příkaz.  
+ Obsahuje podrobné informace o každé části příkazu tabulky XML konfigurační soubor.  
   
- [Příkaz konfigurace tabulky (. Soubory CTC)](http://msdn.microsoft.com/en-us/3413dda1-f372-4669-bcf0-c64d3463842c)  
- Obsahuje přehled formátu souboru nepoužívané .ctc.  
+ [Příkaz konfigurace tabulky (. Soubory CTC)](https://msdn.microsoft.com/library/3413dda1-f372-4669-bcf0-c64d3463842c)  
+ Obsahuje přehled nepoužívané .ctc formát souboru.  
   
  [Jak balíčky VSPackages přidávají prvky uživatelského rozhraní](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)  
  Popisuje příkaz specifikace formátu tabulky.  
   
  [Prostředky v balíčcích VSPackage](../../extensibility/internals/resources-in-vspackages.md)  
- Popisuje, jak používat v spravované VSPackages spravovaných a nespravovaných prostředků.  
+ Popisuje způsob použití spravovaných i nespravovaných prostředků do spravovaných rozšíření VSPackages.  
   
  [Příkazy, nabídky a panely nástrojů](../../extensibility/internals/commands-menus-and-toolbars.md)  
- Vysvětluje, jak vytvářet uživatelské rozhraní, které obsahuje nabídky, panely nástrojů a příkaz pole se seznamem.
+ Vysvětluje, jak vytvářet uživatelské rozhraní, která zahrnuje nabídky, panely nástrojů a příkaz pole se seznamem.

@@ -1,7 +1,7 @@
 ---
-title: Zavést místní proměnné v sadě Visual Studio | Microsoft Docs
-ms.custom: ''
+title: Přidání místní proměnné
 ms.date: 01/26/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: reference
 author: gewarren
@@ -9,67 +9,68 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: b7af958e923c6af7929b8e4a9309c210dbf8ced5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 108477845bb79d5ed13cb3ebdf3121e4960455a6
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53068079"
 ---
-# <a name="introduce-a-local-variable-in-visual-studio"></a>Zavést místní proměnné v sadě Visual Studio
+# <a name="introduce-a-local-variable-in-visual-studio"></a>Přidání místní proměnné v sadě Visual Studio
 
-Generování kódu platí pro:
+Tato generace kód platí pro:
 
 - C#
 
 - Visual Basic
 
-**Co:** umožňuje okamžitě Generovat místní proměnné nahradit existující výrazu.
+**Co:** umožňuje okamžitě Generovat lokální proměnná má nahradit stávající výraz.
 
-**Kdy:** máte kód, který by mohl snadno znovu použít později by měla v místní proměnné.
+**Kdy:** budete mít kód, který se dá snadno opakovaně použít později byl v místní proměnné.
 
-**Důvod:** může zkopírujte a vložte kód vícekrát pro použití v různých umístěních, ale je lepší jednou operaci provést, uložit výsledek v místní proměnné a použít místní proměnné throughought.
+**Důvod, proč:** může zkopírujte a vložte kód několikrát jeho použití v různých umístěních, ale bylo by lepší provést operaci jednou, uloží výsledek v místní proměnné a používat místní proměnné v rámci.
 
 ## <a name="how-to"></a>Postupy
 
-1. Zvýrazněte výraz, který chcete přiřadit k nové místní proměnné.
+1. Zvýrazněte výraz, který chcete přiřadit nový místní proměnné.
 
    - C#:
 
-    ![Zvýrazněný kód C#](media/local-highlight-cs.png)
+       ![Zvýrazněný kód jazyka C#](media/local-highlight-cs.png)
 
    - Visual Basic:
 
-    ![Zvýrazněný kód jazyka Visual Basic](media/local-highlight-vb.png)
+       ![Zvýrazněný kód jazyka Visual Basic](media/local-highlight-vb.png)
 
-1. Dále proveďte jednu z následujících akcí:
+2. Dále proveďte jednu z následujících akcí:
 
    - **Klávesnice**
-     - Stiskněte klávesu **Ctrl**+**.** spuštění **rychlé akce a refaktoring** nabídky.
-   - **Myš**
-     - Klikněte pravým tlačítkem a vyberte **rychlé akce a refaktoring** nabídky.
-     - Klikněte na ![Žárovek](media/bulb-cs.png) ikonu, která se zobrazí na levém okraji, pokud je text kurzor již na ose s červenou vlnovkou.
+      - Stisknutím klávesy **Ctrl**+**.** aktivační událost **rychlé akce a Refaktoringy** nabídky.
+   - **Myši**
+      - Klikněte pravým tlačítkem a vyberte **rychlé akce a Refaktoringy** nabídky.
+      - Klikněte na ![Žárovka](media/bulb-cs.png) ikona, která se zobrazí u levého okraje, pokud textový kurzor na řádek s červená vlnovka.
 
    ![Zavést místní náhled](media/local-preview-cs.png)
 
-1. Vyberte **zavést místní (všech výskytů):*výraz*'** z rozevírací nabídky.
+3. Vyberte **zavést místní pro (všechny výskyty) "*výraz*"** z rozevírací nabídky.
 
    > [!TIP]
-   > Použití **zobrazení náhledu změn** odkaz v dolní části okna náhledu [zobrazíte všechny změny](../../ide/preview-changes.md) , budou provedeny před provedením váš výběr.
+   > Použití **náhled změn** odkaz v dolní části okna náhledu [zobrazíte všechny změny](../../ide/preview-changes.md) , který bude proveden před zvolení požadované možnosti.
 
-   Vytvořen, místní proměnné s typem odvodit z jeho použití. Zadejte nový název nové místní proměnné.
+   Místní proměnná se vytvoří s typem odvodit z jeho využití. Zadejte nový název nové místní proměnné.
 
    - C#:
 
-      ![Implementace rozhraní výsledek C#](media/local-result-cs.png)
+       ![Implementovat rozhraní výsledek C#](media/local-result-cs.png)
 
    - Visual Basic:
 
-      ![Implementace rozhraní výsledek jazyka Visual Basic](media/local-result-vb.png)
+       ![Implementovat rozhraní výsledek VB](media/local-result-vb.png)
 
    > [!NOTE]
-   > Můžete použít **.. nástroji výskyty...**  nabídky možnost nahraďte všechny výskyty vybraného výrazu, ne jenom jeden konkrétně zdůraznily.
+   > Můžete použít **.. nástroji výskytů...**  nahraďte každý výskyt vybraného výrazu, ne jenom jeden konkrétně zdůraznily možnost nabídky.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Generování kódu](../code-generation-in-visual-studio.md)
 - [Náhled změn](../../ide/preview-changes.md)

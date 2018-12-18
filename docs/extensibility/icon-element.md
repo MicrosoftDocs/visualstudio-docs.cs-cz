@@ -1,5 +1,5 @@
 ---
-title: Element ikony | Microsoft Docs
+title: Icon – Element | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,18 +14,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f15dcfec5c89c6bf2b2ae68ea29e18890dc9187e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2494e75c312385a1a0c86709eb417d4b124a97de
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39497690"
 ---
-# <a name="icon-element"></a>Icon – Element
-Atribut guid ikonu značky je identifikátor guid definované rastrového obrázku.  Atribut id vybere přihrádky v pruhu rastrového obrázku. Tento element je volitelný.  Pokud je vynechán tento element hodnotu **guidOfficeIcon:msotcidNoIcon** bude implicitní.  
+# <a name="icon-element"></a>Icon – element
+Atribut guid ikonu značky je identifikátor guid definované rastrový obrázek. `id` Atribut vybere slotu v pruhu rastrového obrázku. Tento element je volitelný. Pokud tento prvek není zahrnuta hodnota **guidOfficeIcon:msotcidNoIcon** bude implicitní.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```xml  
 <Icon guid="guidImages" id="bmpPic1" />  
 ```  
   
@@ -36,20 +37,20 @@ Atribut guid ikonu značky je identifikátor guid definované rastrového obráz
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|Identifikátor GUID|Požadováno. Identifikátor guid definované rastrového obrázku.|  
-|id|Požadováno. Vybere přihrádky v pruhu rastrového obrázku.|  
+|identifikátor GUID|Požadováno. Identifikátor guid definované rastrový obrázek.|  
+|id|Požadováno. Vybere slotu v pruhu rastrového obrázku.|  
   
-### <a name="child-elements"></a>Podřízené elementy  
+### <a name="child-elements"></a>Podřízené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
 |Žádné|Žádné|  
   
-### <a name="parent-elements"></a>Nadřazené elementy  
+### <a name="parent-elements"></a>Nadřazené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
 |[Buttons – element](../extensibility/buttons-element.md)||  
   
-## <a name="see-also"></a>Viz také  
- [Soubory tabulek příkazů sady Visual Studio (.Vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+## <a name="see-also"></a>Viz také:  
+ [Soubory tabulky (.vsct) příkaz pro Visual Studio](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

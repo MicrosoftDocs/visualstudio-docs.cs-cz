@@ -1,16 +1,16 @@
 ---
-title: "Iactivescriptauthor – rozhraní | Microsoft Docs"
-ms.custom: 
+title: Iactivescriptauthor – rozhraní | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IActiveScriptAuthor interface
 ms.assetid: df1f454d-01ee-4beb-928b-48513d07365a
-caps.latest.revision: 
+caps.latest.revision: 15
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -19,6 +19,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24793323"
 ---
 # <a name="iactivescriptauthor-interface"></a>IActiveScriptAuthor – rozhraní
 Představuje vytváření služeb, včetně technologie IntelliSense a kolace informací.  

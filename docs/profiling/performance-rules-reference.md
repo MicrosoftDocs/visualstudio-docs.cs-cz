@@ -15,6 +15,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31579846"
 ---
 # <a name="performance-rules-reference"></a>Referenční dokumentace pravidel výkonu
 Pravidel výkonu nástrojů pro profilaci poskytují další upozornění a informace o výkonu vaší aplikace. Pravidla výkonu analyzovat data v profilaci spuštění, které se shromažďují ze zdroje, například Windows a čítače výkonu procesoru. Pravidlo zprávy se zobrazují v okně výstupu chyba [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] integrované vývojové prostředí. Zprávy jsou uvedeny s jedním z následujících úrovní pravidlo:  

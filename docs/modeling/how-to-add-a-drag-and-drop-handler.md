@@ -7,34 +7,26 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 8b8d77f973ef58f7273ff5390828707f1d05c46c
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 260a1fdb78f1a9acf72a9789f12d7024cafe0c93
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47859195"
 ---
 # <a name="how-to-add-a-drag-and-drop-handler"></a>Postupy: Přidání obslužné rutiny operace přetažení myší
-Obslužné rutiny události přetažení myší můžete přidat do vaší DSL tak, aby uživatelé můžete přetáhnout položky na diagramu z jiných diagramů nebo z různých částí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Můžete také přidat obslužné rutiny pro události, jako poklikáním. Společně přetahování myší a dvojitým kliknutím obslužné rutiny se označují jako *gesty obslužné rutiny*.
 
- Toto téma popisuje gesta přetahování myší, které pocházejí v jiných diagramech. Pro přesunutí a zkopírujte události v rámci jedné diagram, zvažte alternativní definice podtřídou třídy `ElementOperations`. Další informace najdete v tématu [přizpůsobení chování kopie](../modeling/customizing-copy-behavior.md). Také je možné upravit definici DSL.
+Přidáte obslužné rutiny pro přetažení myší události do vašeho DSL tak, aby uživatelé můžete přetáhnout položky do diagramu z jiných diagramů nebo z jiných částí sady Visual Studio. Můžete také přidat obslužné rutiny pro události, jako poklikáním. Společně se nazývají přetahování myší a dvakrát klikněte na obslužné rutiny *obslužné rutiny gesta*.
 
-## <a name="in-this-topic"></a>V tomto tématu
+Toto téma popisuje gesta přetažení myší, které pocházejí na jiných diagramů. Pro přesun a kopírování události v rámci jednoho diagramu, vezměte v úvahu alternativní definice podtřída `ElementOperations`. Další informace najdete v tématu [přizpůsobení chování kopírování](../modeling/customizing-copy-behavior.md). Také je možné přizpůsobit definici DSL.
 
--   První dvě části popisují alternativní metody definování obslužné rutiny gest:
+## <a name="defining-gesture-handlers-by-overriding-shapeelement-methods"></a>Definování obslužné rutiny gesta tak, že přepíšete ShapeElement metody
 
-    -   [Definování obslužné rutiny gesto metodami přepsání ShapeElement](#overrideShapeElement). `OnDragDrop`, `OnDoubleClick`, `OnDragOver`, a další metody lze přepsat.
+`OnDragDrop`, `OnDoubleClick`, `OnDragOver`, a další metody můžete přepsat.
 
-    -   [Definování obslužné rutiny gesto pomocí MEF](#MEF). Tuto metodu použijte, pokud chcete, aby třetí strany vývojáři mohli definovat svoje vlastní obslužné rutiny pro vaše DSL. Uživatelé mohou po instalováni vaší DSL instalace rozšíření jiných výrobců.
-
--   [Dekódování Taženou položku](#extracting). Prvky můžete přetáhnout z kteréhokoli okna nebo z plochy, ale také DSL.
-
--   [Jak získat původní přetáhnout položky](#getOriginal). Pokud taženou položku je DSL element, můžete otevřít zdrojový model a přístup k elementu.
-
--   [Pomocí akce myši: Přetáhnete položky prostředí](#mouseActions). Tento příklad znázorňuje nižší úrovně obslužná rutina, která zabrání akce myši na pole obrazce. V příkladu umožňuje uživateli změnit pořadí položek v prostoru přetažením pomocí myši.
-
-##  <a name="overrideShapeElement"></a> Definování obslužné rutiny gesto přepsáním metody ShapeElement
- Přidáte nový soubor kódu do projektu DSL. Pro obslužné rutiny gest, je obvykle musí mít minimálně následující `using` příkazy:
+Přidejte nový soubor kódu do projektu DSL. Pro obslužnou rutinu gesta, je obvykle musí mít minimálně následující `using` příkazy:
 
 ```csharp
 using Microsoft.VisualStudio.Modeling;
@@ -42,9 +34,9 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 using System.Linq;
 ```
 
- V novém souboru definice částečné třídy pro tvar nebo diagram třídu, která má odpovědět na operaci přetažení. Přepište tyto metody:
+V novém souboru definujte částečnou třídu pro obrazec ani diagram třídy, která by měla odpovídat operace přetažení. Přepište následující metody:
 
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragOver%2A>– Tato metoda je volána, když ukazatel myši zadá tvaru během operace přetažení. Metodu by měl zkontrolovat položku, je přetáhnete uživatele a nastavte vlastnost účinek indikující, zda uživatel mohou vyřadit položky na tento tvar. Vlastnost účinek určuje vzhled kurzor, zatímco je přes tento tvar a také určuje, zda `OnDragDrop()` bude volána, když uživatel uvolní tlačítko myši.
+-   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragOver%2A>– Tato metoda je volána, pokud kurzor myši vstoupí na obrazec během operace přetažení. Metodu by měl zkontrolovat, že uživatel přetahuje položku a nastavte vlastnost účinek označující, zda uživatele lze přetáhnout položky v tomto tvaru. Vlastnost účinek určuje vzhled kurzor, zatímco je nad tímto obrazcem a také určuje, zda `OnDragDrop()` bude volána, když uživatel uvolní tlačítko myši.
 
     ```csharp
     partial class MyShape // MyShape generated from DSL Definition.
@@ -58,14 +50,13 @@ using System.Linq;
             e.Effect = System.Windows.Forms.DragDropEffects.Copy;
           }
         }
-
     ```
 
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragDrop%2A> – Tato metoda je volána, pokud uživatel uvolní tlačítko myši při ponecháte ukazatel myši nad tento tvar nebo diagram, pokud `OnDragOver(DiagramDragEventArgs e)` dříve nastavené `e.Effect` hodnotu jinou než `None`.
+-   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragDrop%2A> – Tato metoda je volána, pokud uživatel uvolní tlačítko myši při umístění ukazatele myši stisknuté tento tvar nebo diagram, pokud `OnDragOver(DiagramDragEventArgs e)` předtím nastavili `e.Effect` hodnotu jinou než `None`.
 
     ```csharp
     public override void OnDragDrop(DiagramDragEventArgs e)
-        {
+    {
           if (!IsAcceptableDropItem(e))
           {
             base.OnDragDrop(e);
@@ -74,27 +65,28 @@ using System.Linq;
           { // Process the dragged item, for example merging a copy into the diagram
             ProcessDragDropItem(e); // To be defined
           }
-        }
-
+    }
     ```
 
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDoubleClick%2A> – Tato metoda je volána při poklepání tvar nebo diagram.
+-   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDoubleClick%2A> – Tato metoda je volána, když uživatel pokliká na tvar nebo diagram.
 
-     Další informace najdete v tématu [postupy: zachycení a klikněte na tvar nebo Dekoratéra](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md).
+     Další informace najdete v tématu [postupy: zachycení kliknutí na obrazec či Dekorátor](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md).
 
- Definování `IsAcceptableDropItem(e)` určit, jestli je přijatelné taženou položku a ProcessDragDropItem(e) k aktualizaci modelu, když položka byla vynechána. Tyto metody musí nejprve extrahovat položku z argumenty událostí. Informace o tom, jak to udělat najdete v tématu [jak získat odkaz na taženou položku](#extracting).
+Definování `IsAcceptableDropItem(e)` k určení, zda je přijatelné přetaženou položku a ProcessDragDropItem(e) aktualizovat váš model, když položka byla vynechána. Tyto metody musí nejprve extrahovat položky z argumentů událostí. Informace o tom, jak to udělat, najdete v části [jak získat odkaz na přetaženou položku](#extracting).
 
-##  <a name="MEF"></a> Definování obslužné rutiny gesto pomocí rozhraní MEF
- MEF (spravované rozhraní rozšiřitelnosti) umožňuje definovat součásti, které je možné nainstalovat s minimální konfigurací. Další informace najdete v tématu [Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index).
+## <a name="define-gesture-handlers-by-using-mef"></a>Definování obslužné rutiny gesta pomocí MEF
 
-#### <a name="to-define-a-mef-gesture-handler"></a>Chcete-li definovat obslužné rutiny gest MEF
+Tuto metodu použijte, pokud chcete, aby vývojáři třetích stran, abyste mohli definovat jejich vlastní obslužné rutiny do vašeho DSL. Uživatelé mohou nainstalovat rozšíření třetích stran po instalují vašeho DSL.
 
-1.  Přidat do vaší **Dsl** a **DslPackage** projekty **MefExtension** soubory, které jsou popsané v [rozšíření vaší DSL pomocí MEF](../modeling/extend-your-dsl-by-using-mef.md).
+MEF (Managed Extensibility Framework) umožňuje definovat součásti, které mohou být nainstalovány s minimální konfigurací. Další informace najdete v tématu [Managed Extensibility Framework (MEF)](/dotnet/framework/mef/index).
 
-2.  Nyní je možné definovat obslužné rutiny gest jako součást MEF:
+### <a name="to-define-a-mef-gesture-handler"></a>Chcete-li definovat obslužnou rutinu gesta MEF
 
-    ```
+1.  Přidat do vaší **Dsl** a **DslPackage** projektů **MefExtension** soubory, které jsou popsány v [rozšíření vašeho DSL pomocí MEF](../modeling/extend-your-dsl-by-using-mef.md).
 
+2.  Nyní je možné definovat obslužnou rutinu gesta jako komponentu MEF:
+
+    ```csharp
     // This attribute is defined in the generated file
     // DslPackage\MefExtension\DesignerExtensionMetaDataAttribute.cs:
     [MyDslGestureExtension]
@@ -120,29 +112,31 @@ using System.Linq;
         // Process the dragged item, for example merging a copy into the diagram:
         target.ProcessDragDropItem(diagramDragEventArgs);
      }
-
     ```
 
-     Můžete vytvořit více než jedna součást obslužná rutina gesto, například pokud máte různé typy taženou objektů.
+     Můžete vytvořit více než jedna komponenta obslužné rutiny gesta, například pokud máte různé typy přetažených objektů.
 
-3.  Přidání definic třídu pro cíl tvaru, konektoru nebo diagramu tříd a definovat metody `IsAcceptableDropItem()` a `ProcessDragDropItem()`. Tyto metody musí začínat extrahováním taženou položku z argumenty událostí. Další informace najdete v tématu [jak získat odkaz na taženou položku](#extracting).
+3.  Přidat definicí částečné třídy pro tvar target, konektoru nebo diagramu třídy a definujte metody `IsAcceptableDropItem()` a `ProcessDragDropItem()`. Tyto metody musí začínat extrahováním přetaženou položku z argumentů události. Další informace najdete v tématu [jak získat odkaz na přetaženou položku](#extracting).
 
-##  <a name="extracting"></a> Dekódování taženou položku
- Když uživatel nastavuje tažením položku do diagramu, nebo z jedné části diagramu na jiný, je k dispozici v informace o položce, který je právě přetáhli `DiagramDragEventArgs`. Protože operace tažení může spustili na libovolného objektu na obrazovce, data mohou být k dispozici v některém z mnoha různých formátech. Váš kód uzná formáty, se kterými je schopen práci.
+## <a name="how-to-decode-the-dragged-item"></a>Dekódování přetaženou položku
 
- Chcete-li zjistit formátů, ve kterých vaše informace o zdroji přetáhněte je k dispozici, spusťte kódu v ladění režimu, nastavení boru přerušení na záznam, který má `OnDragOver()` nebo `CanDragDrop()`. Zkontrolujte hodnoty `DiagramDragEventArgs` parametr. Informace jsou poskytovány ve dvou formách:
+Elementy můžete přetáhnout z jakékoli okno nebo z plochy, stejně jako z DSL.
 
--   <xref:System.Windows.Forms.IDataObject>  `Data` – Tato vlastnost představuje serializovaných verzích zdrojové objekty, obvykle ve více než jeden formátu. Své nejužitečnější funkce jsou:
+Když uživatel přetáhne položku do diagramu, nebo z jedné části diagramu do druhého, je k dispozici v informace o položce, který je přetažen `DiagramDragEventArgs`. Vzhledem k tomu, že operace přetažení může začít na libovolný objekt na obrazovce, data mohou být k dispozici v některém z různých formátech. Kódu musí rozpoznat formátů, se kterými je schopen práci.
 
-    -   diagramEventArgs.Data.GetDataFormats() - obsahuje seznam formátů, ve kterých může dekódovat taženou objektu. Například pokud uživatel nastavuje tažením soubor z plochy, k dispozici jsou název souboru ("`FileNameW`").
+Ke zjištění formátů, v nichž je k dispozici vaše informace o zdroji přetažení svůj kód spustit v režimu, nastavení zarážky na položce, aby ladění `OnDragOver()` nebo `CanDragDrop()`. Zkontrolovat hodnoty `DiagramDragEventArgs` parametru. Informace jsou poskytovány ve dvou formách:
 
-    -   `diagramEventArgs.Data.GetData(format)` -Dekóduje taženou objekt v zadaném formátu. Objekt odpovídající typ přetypování. Příklad:
+-   <xref:System.Windows.Forms.IDataObject>  `Data` – Tato vlastnost představuje serializovaná verze zdrojových objektů, obvykle více než jeden formát. Jeho nejužitečnější funkce jsou:
+
+    -   diagramEventArgs.Data.GetDataFormats() - obsahuje seznam formátů, v které umí dekódovat přetahovaného objektu. Například pokud uživatel přetáhne soubor z plochy, dostupné formáty patří název souboru ("`FileNameW`").
+
+    -   `diagramEventArgs.Data.GetData(format)` -Dekóduje přetahovaného objektu v zadaném formátu. Objekt na příslušný typ přetypování. Příklad:
 
          `string fileName = diagramEventArgs.Data.GetData("FileNameW") as string;`
 
-         Objekty, jako jsou odkazy na sběrnici model ze zdroje může taky přenášet ve vlastní formát. Další informace najdete v tématu [postup odesílání modelu sběrnice odkazů v operace přetažení](#mbr).
+         Objekty, jako jsou odkazy na Service bus model ze zdroje může taky přenášet v vlastní formát. Další informace najdete v tématu [jak odeslat odkazy na Model Service Bus v operace přetažení](#mbr).
 
--   <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> `Prototype` – Pokud chcete, aby uživatelé přetahování položek z DSL nebo modelu UML pomocí této vlastnosti. K elementu skupiny prototypu obsahuje jeden nebo více objektů, odkazy a jejich hodnoty vlastností. Používá se také v operace vložení a když přidáváte element z panelu nástrojů. V prototyp objekty a jejich typy jsou označeny identifikátor Guid. Tento kód například umožňuje uživateli přetáhněte prvků třídy z UML diagram nebo Průzkumníka modelu UML:
+-   <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> `Prototype` – Pomocí této vlastnosti, pokud chcete uživatelům přetáhněte položky z DSL nebo modelu UML. Prvku skupiny prototyp obsahuje jeden nebo více objektů, odkazy a jejich hodnot vlastností. Používá se také operace vložení a jsou při přidávání prvku z panelu nástrojů. V prototypu objektů a jejich typy jsou označeny identifikátorem Guid. Tento kód například umožňuje uživateli prvky třídu přetáhnout z Průzkumníku modelů UML nebo diagramu UML:
 
     ```csharp
     private bool IsAcceptableDropItem(DiagramDragEventArgs e)
@@ -152,32 +146,33 @@ using System.Linq;
             == "3866d10c-cc4e-438b-b46f-bb24380e1678"); // Accept UML class shapes.
      // Or, from another DSL: SourceNamespace.SourceShapeClass.DomainClassId
     }
-
     ```
 
-     Přijmout obrazce UML, určete identifikátory GUID tvar tříd UML pomocí experimentu. Mějte na paměti, se obvykle více než jeden typ elementu v jakékoli diagramu. Nezapomeňte také, zda je objekt přetažením z diagramu DSL nebo UML tvaru, není element modelu.
+     Tak, aby přijímal obrazce UML, určuje na základě experiment identifikátory GUID tvar tříd UML. Mějte na paměti, že je obvykle více než jeden typ prvku na jakýkoliv diagram. Nezapomeňte, že je objekt přetažen z diagramu DSL nebo UML obrazec není na prvek modelu.
 
- `DiagramDragEventArgs` také obsahuje vlastnosti, které označují aktuální umístění ukazatele myši a zda je uživatel stisknutím CTRL, ALT nebo SHIFT – klávesy.
+`DiagramDragEventArgs` také obsahuje vlastnosti, které označují aktuální pozici ukazatele myši a určuje, zda uživatel je stisknutím klávesy CTRL, ALT a SHIFT – klávesy.
 
-##  <a name="getOriginal"></a> Jak získat původní taženou elementu
- `Data` a `Prototype` vlastnosti argumenty událostí obsahovat pouze odkaz na taženou tvaru. Obvykle Pokud chcete vytvořit objekt v cílové DSL, který je odvozený z prototypu nějakým způsobem, budete muset získat přístup k původní, například čtení obsah souboru nebo přechod na element modelu reprezentována obrazce.  Visual Studio modelu sběrnice můžete použít usnadní to.
+## <a name="how-to-get-the-original-of-a-dragged-element"></a>Získání původní Přetahované element
 
-### <a name="to-prepare-a-dsl-project-for-model-bus"></a>Příprava projektu DSL pro Model sběrnice
+Pokud přetaženou položku je prvek DSL, můžete otevřít zdrojový model a přístup k elementu.
 
-1.  Zpřístupněte zdroji DSL podle [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] modelu sběrnice:
+`Data` a `Prototype` vlastností argumentů události obsahují pouze odkaz na přetaženou tvaru. Obvykle Pokud chcete vytvořit objekt v cíli DSL, která je odvozena z prototypu nějakým způsobem, musíte získat přístup k původní, například čtení obsah souboru nebo přechod na prvek modelu reprezentovány ve tvaru. Sběrnice modelu Visual Studio můžete použít pro usnadnění.
 
-    1.  Stáhněte a nainstalujte Visual Studio modelu sběrnice rozšíření, pokud již není nainstalována. Další informace najdete v tématu [vizualizace a modelování SDK](http://go.microsoft.com/fwlink/?LinkID=185579).
+### <a name="to-prepare-a-dsl-project-for-model-bus"></a>Příprava sběrnice modelu projektu DSL
 
-    2.  Otevřete soubor definice DSL zdroje DSL v Návrháři DSL. Klikněte pravým tlačítkem na návrhovou plochu a potom klikněte na **povolit Modelbus**. V dialogovém okně, vyberte jednu nebo obě možnosti.  Click **OK**. Nový projekt "ModelBus" je přidán do DSL řešení.
+1.  Zpřístupnění zdroje DSL pomocí sběrnice modelu Visual Studio:
 
-    3.  Klikněte na tlačítko **transformaci všech šablon** a znovu sestavte řešení.
+    1.  Stáhněte a nainstalujte rozšíření sběrnice modelu Visual Studio, pokud ještě není nainstalovaná. Další informace najdete v tématu [Visualization and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=185579).
 
-###  <a name="mbr"></a> Odesílat objekt ze zdroje DSL
+    2.  Otevřete soubor definice DSL zdroje DSL v návrháře DSL. Klikněte pravým tlačítkem na návrhové ploše a potom klikněte na tlačítko **povolit Modelbus**. V dialogovém okně zvolte jednu nebo obě možnosti.  Klikněte na tlačítko **OK**. Nový projekt "ModelBus" je přidán do řešení DSL.
 
-1.  V vaše podtřída ElementOperations přepsat `Copy()` tak, aby ho kóduje sběrnice referenční Model (MBR) do IDataObject. Tato metoda bude volána při spuštění uživatelem přetáhněte z diagram zdroje. Kódovaného MBR bude k dispozici v IDataObject, jakmile uživatel přesune v diagramu cíl.
+    3.  Klikněte na tlačítko **Transformovat všechny šablony** a znovu sestavte řešení.
 
-    ```
+### <a name="to-send-an-object-from-a-source-dsl"></a>Odesílat objekt ze zdroje DSL
 
+1.  Do vaší podtřídy ElementOperations přepsat `Copy()` tak, aby kóduje odkaz modelu Service Bus (MBR) do IDataObject. Tato metoda bude volána, když uživatel spustí přetáhněte ze zdrojového diagramu. Kódovaný MBR budou k dispozici v IDataObject, když uživatel v diagramu cíl.
+
+    ```csharp
     using Microsoft.VisualStudio.Modeling;
     using Microsoft.VisualStudio.Modeling.Shell;
     using Microsoft.VisualStudio.Modeling.Diagrams;
@@ -211,18 +206,17 @@ using System.Linq;
           data.SetData("ModelBusReference", elementReference);
         }
     ...}
-
     ```
 
-### <a name="to-receive-a-model-bus-reference-from-a-dsl-in-a-target-dsl-or-uml-project"></a>Pro příjem odkaz sběrnice modelu z DSL v projektu cíl DSL nebo UML
+### <a name="to-receive-a-model-bus-reference-from-a-dsl-in-a-target-dsl-or-uml-project"></a>Pro příjem z DSL v projektu DSL nebo UML Cílový odkaz modelu Service Bus
 
-1.  V projektu DSL cíl přidejte odkazy na projekt na:
+1.  V projektu DSL target přidejte odkazy na:
 
-    -   Zdroj Dsl projektu.
+    -   Zdrojový projekt Dsl.
 
-    -   Zdroj ModelBus projektu.
+    -   Zdrojový projekt ModelBus.
 
-2.  V souboru kódu gesto obslužná rutina přidejte následující odkazy na obor názvů:
+2.  V souboru kódu obslužné rutiny gesta přidejte následující odkazy na obor názvů:
 
     ```csharp
     using Microsoft.VisualStudio.Modeling;
@@ -232,12 +226,11 @@ using System.Linq;
     using Microsoft.VisualStudio.Modeling.Integration;
     using SourceDslNamespace;
     using SourceDslNamespace.ModelBusAdapters;
-
     ```
 
-3.  Následující příklad ukazuje, jak získat přístup k modelu element source:
+3.  Následující příklad ukazuje, jak získat přístup k prvku modelu zdroje:
 
-    ```
+    ```csharp
     partial class MyTargetShape // or diagram or connector
     {
       internal void ProcessDragDropItem(DiagramDragEventArgs diagramDragEventArgs)
@@ -278,25 +271,23 @@ using System.Linq;
           }
         }
     }
-
     ```
 
 ### <a name="to-accept-an-element-sourced-from-a-uml-model"></a>Tak, aby přijímal element Source z modelu UML
 
--   Následující ukázka kódu přijímá objekt z diagramu UML.
+-   Následující vzorový kód přijímá objekt v diagramu UML.
 
     ```csharp
-
-      using Microsoft.VisualStudio.ArchitectureTools.Extensibility;
-      using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Uml;
-      using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation;
-      using Microsoft.VisualStudio.Modeling;
-      using Microsoft.VisualStudio.Modeling.Diagrams;
-      using Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement;
-      using Microsoft.VisualStudio.Uml.Classes;
-      using System;
-      using System.ComponentModel.Composition;
-      using System.Linq;
+    using Microsoft.VisualStudio.ArchitectureTools.Extensibility;
+    using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Uml;
+    using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation;
+    using Microsoft.VisualStudio.Modeling;
+    using Microsoft.VisualStudio.Modeling.Diagrams;
+    using Microsoft.VisualStudio.Modeling.Diagrams.ExtensionEnablement;
+    using Microsoft.VisualStudio.Uml.Classes;
+    using System;
+    using System.ComponentModel.Composition;
+    using System.Linq;
     ...
     partial class TargetShape
     {
@@ -329,13 +320,13 @@ using System.Linq;
             }
           break; // don't try any more projects
     }  }  }
-
     ```
 
-##  <a name="mouseActions"></a> Pomocí akce myši: Přetáhnete položky prostředí
- Můžete napsat obslužnou rutinu, která zabrání akce myši na pole obrazce. Následující příklad umožňuje uživateli změnit pořadí položek v prostoru přetažením pomocí myši.
+## <a name="using-mouse-actions-dragging-compartment-items"></a>Pomocí akce myši: Přetažení položek oddílu
 
- Pokud chcete vytvořit tento příklad, vytvořte pomocí řešení **diagramů tříd** šablona řešení. Přidání souboru kódu a přidejte následující kód. Upravte obor názvů být stejný jako vlastní.
+Můžete napsat obslužnou rutinu, která zachycuje akce myši na pole obrazce. Následující příklad umožňuje uživateli změnit pořadí položek v prostoru přetažením myší.
+
+Sestavení tohoto příkladu, vytvořte řešení pomocí **diagramů tříd** šablonu řešení. Přidat soubor s kódem a přidejte následující kód. Upravte obor názvů být stejný jako vlastní.
 
 ```csharp
 using Microsoft.VisualStudio.Modeling;
@@ -580,10 +571,9 @@ namespace Company.CompartmentDrag  // EDIT.
   }
  }
 }
-
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Přizpůsobení chování kopírování](../modeling/customizing-copy-behavior.md)
 - [Nasazení řešení jazyka specifického pro doménu](../modeling/deploying-domain-specific-language-solutions.md)

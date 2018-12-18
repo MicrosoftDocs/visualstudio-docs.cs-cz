@@ -1,5 +1,5 @@
 ---
-title: Konfigurace výkonnostních relací | Microsoft Docs
+title: Konfigurace výkonnostních relací | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -15,28 +15,29 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 85155bb357f808b477d9d6041c16cdc2d0f3681b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 1e00c31643a5f894612daa24d4a271856d8e21f1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49853432"
 ---
-# <a name="configuring-performance-sessions"></a>Konfigurace výkonnostních relací
-Pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nástrojích pro profilaci, můžete shromáždit celou řadu údaje o výkonu pro velký počet typů aplikací. V této části se dozvíte, jak pomocí výkonu Wizardand vlastnosti výkonnostní relace a cílový binární soubor konfigurace nástrojů profilace ke shromažďování dat, které vás zajímají. Vlastnosti konfigurace nástroje pro profilaci můžete použít také k řízení množství dat, které se shromažďují v profilaci spustit. Další informace najdete v tématu [řízení shromažďování dat](../profiling/controlling-data-collection.md).  
+# <a name="configure-performance-sessions"></a>Konfigurace výkonnostních relací
+S použitím [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nástroje pro profilaci, můžete shromažďovat celou řadu údaje o výkonu pro mnoho typů aplikací. Tato část ukazuje, jak používat výkonu Wizardand vlastnosti relace výkonu a cílový binární soubor ke konfiguraci nástroje pro profilaci sady ke shromažďování dat, která vás zajímá. Vlastnosti konfigurace nástroje pro profilaci můžete použít také k řízení množství dat shromažďovaných během spuštění profilování. Další informace najdete v tématu [sběr dat řídit](../profiling/controlling-data-collection.md).  
   
 > [!NOTE]
->  V řadě případů použití výchozí vlastnosti Průvodce výkonu je efektivní způsob shromažďování dat o profilování. Další informace najdete v tématu [Průvodce začátečníka profilací výkonu](../profiling/beginners-guide-to-performance-profiling.md) a [Začínáme](../profiling/getting-started-with-performance-tools.md).  
+>  V mnoha případech použití výchozí vlastnosti Průvodce výkonu je efektivní způsob shromažďování dat profilování. Další informace najdete v tématu [začátečníky Průvodce profilací výkonu](../profiling/beginners-guide-to-performance-profiling.md) a [Začínáme](../profiling/getting-started-with-performance-tools.md).  
   
-## <a name="common-tasks"></a>Obecné úlohy  
+## <a name="common-tasks"></a>Běžné úlohy
   
-|Úloha|Související obsah|  
-|----------|---------------------|  
-|**Nastavení možností základní profilování:** byste měli nakonfigurovat [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] použití serveru Microsoft symbol. Tím se přesvědčíte, že máte přístup k symboly, například názvy funkce a parametrů pro aktuální verze systému Windows a jiných aplikací společnosti Microsoft. Můžete také určit další obecné možnosti před zahájením relace profilování, jako jsou oprávnění systému a nástrojů pro profilaci a názvy datových souborů profilace.|-   [Postupy: referenční informace o symbolech Windows](../profiling/how-to-reference-windows-symbol-information.md)<br />-   [Postupy: serializace informací o symbolu](../profiling/how-to-serialize-symbol-information.md)<br />-   [Postupy: nastavení aktuální relace](../profiling/how-to-set-the-current-session.md)<br />-   [Postupy: nastavení oprávnění](../profiling/how-to-set-permissions.md)<br />-   [Postupy: nastavení možností názvu datového souboru výkonu](../profiling/how-to-set-performance-data-file-name-options.md)|  
-|**Určete data, která chcete shromažďovat:** postupy, které můžete použít ke konfiguraci relace profilování závisí na typ cílové aplikace, které chcete profil a typu dat výkonu, který chcete shromáždit.|-   [Postupy: výběr metod kolekcí](../profiling/how-to-choose-collection-methods.md)<br />-   [Shromažďování statistik výkonu pomocí vzorkování](../profiling/collecting-performance-statistics-by-using-sampling.md)<br />-   [Shromažďování dat životnost a přidělení paměti .NET](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)<br />-   [Shromažďování podrobných dat časování pomocí instrumentace](../profiling/collecting-detailed-timing-data-by-using-instrumentation.md)<br />-   [Postupy: profilování kódu JavaScript ve webové stránky](../profiling/how-to-profile-javascript-code-in-web-pages.md)<br />-   [Shromažďování dat souběžnosti proces a přístup z více vláken](../profiling/collecting-thread-and-process-concurrency-data.md)<br />-   [Shromažďování další Data o výkonu](../profiling/collecting-additional-performance-data.md)|  
-|**Nastavit Upřesnit možnosti konfigurace:** při profil aplikace rozhraní .NET Framework, které načítají více verzí běžné language runtime (CLR) můžete určit, která verze profilu. Pokud máte víc souborů .exe v relaci výkonu, můžete nastavit pořadí spuštění binárních souborů.|-   [Postupy: Zadejte modul Runtime rozhraní .NET Framework](../profiling/how-to-specify-the-dotnet-framework-runtime.md)<br />-   [Postupy: určení binárního souboru spuštění](../profiling/how-to-specify-the-binary-to-start.md)|  
+| Úloha | Související obsah |
+| - | - |
+| **Nastavení základní profilování:** byste měli nakonfigurovat [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] používat Microsoft symbol server. Tím zajistíte, že máte přístup k symbolům, jako je například funkce a parametr názvy pro aktuální verzi Windows a jiné aplikace od Microsoftu. Další obecné možnosti můžete také určit před spuštěním relace profilování, jako jsou oprávnění systému a nástrojů pro profilaci a názvy souborů dat profilování. | -   [Postupy: informace o symbolech Windows odkaz](../profiling/how-to-reference-windows-symbol-information.md)<br />-   [Postupy: serializace informací o symbolu](../profiling/how-to-serialize-symbol-information.md)<br />-   [Postupy: nastavení aktuální relace](../profiling/how-to-set-the-current-session.md)<br />-   [Postupy: nastavení oprávnění](../profiling/how-to-set-permissions.md)<br />-   [Postupy: nastavení možností názvu datového souboru výkonu](../profiling/how-to-set-performance-data-file-name-options.md) |
+| **Zadejte data, která chcete shromažďovat:** postupy, které můžete použít ke konfiguraci relace profilování se liší podle typu cílovou aplikaci, kterou chcete do profilu a typ, který chcete shromáždit údaje o výkonu. | -   [Postupy: výběr metod kolekcí](../profiling/how-to-choose-collection-methods.md)<br />-   [Shromažďování statistik výkonu pomocí vzorkování](../profiling/collecting-performance-statistics-by-using-sampling.md)<br />-   [Shromažďování dat o přidělování a životnosti paměti .NET](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)<br />-   [Shromažďování podrobných dat časování pomocí instrumentace](../profiling/collecting-detailed-timing-data-by-using-instrumentation.md)<br />-   [Postupy: profilování kódu JavaScript ve webových stránek](../profiling/how-to-profile-javascript-code-in-web-pages.md)<br />-   [Shromažďování dat o souběžnosti vláken a procesů](../profiling/collecting-thread-and-process-concurrency-data.md)<br />-   [Shromažďování dalších dat o výkonu](../profiling/collecting-additional-performance-data.md) |
+| **Nastavit možnosti pokročilé konfigurace:** při profilování aplikace rozhraní .NET Framework, které načítají více verzí common language runtime (CLR), můžete určit, kterou verzi profilu. Pokud máte víc souborů .exe v relaci výkonu, můžete nastavit pořadí spouštění binárních souborů. | -   [Postupy: určení modulu runtime rozhraní .NET Framework](../profiling/how-to-specify-the-dotnet-framework-runtime.md)<br />-   [Postupy: určení binárního souboru ke spuštění](../profiling/how-to-specify-the-binary-to-start.md) |
   
 ## <a name="related-sections"></a>Související oddíly  
  [Řízení shromažďování dat](../profiling/controlling-data-collection.md)  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Prohlížeč výkonu](../profiling/performance-explorer.md)

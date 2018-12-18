@@ -1,5 +1,5 @@
 ---
-title: Ukázkové implementace lokální proměnné | Microsoft Docs
+title: Ukázková implementace místních hodnot | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,60 +14,61 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 56ac92989abe929884ac029e3b9c9c7dafad5fd9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3faf3e42442db03bbb40bbc3e726b909956d4187
+ms.sourcegitcommit: 3dd15e019cba7d35dbabc1aa3bf55842a59f5278
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46370860"
 ---
-# <a name="sample-implementation-of-locals"></a>Ukázka implementace lokální proměnné
+# <a name="sample-implementation-of-locals"></a>Ukázková implementace místních hodnot
 > [!IMPORTANT]
->  V sadě Visual Studio 2015 se již nepoužívá tímto způsobem implementace vyhodnocovače výrazů. Informace o implementaci vyhodnocovače výrazů CLR, najdete v tématu [vyhodnocovače výrazů CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [spravované ukázka vyhodnocování výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
+>  V sadě Visual Studio 2015 je zastaralý tímto způsobem implementace vyhodnocovače výrazů. Informace o implementace vyhodnocovače výrazů modulu CLR najdete v tématu [vyhodnocovače výrazů modulu CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka Chyba při vyhodnocování výrazu spravované](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
   
- Tady je přehled o tom, jak Visual Studio získává místní hodnoty pro metodu z vyhodnocovací filtr výrazů (EE):  
+ Tady je přehled o tom, jak Visual Studio získá oknech místní hodnoty pro metodu z vyhodnocovací filtr výrazů (EE):  
   
-1.  Visual Studio volá stroje ladění (DE) [GetDebugProperty](../../extensibility/debugger/reference/idebugstackframe2-getdebugproperty.md) získat [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) objekt, který reprezentuje všechny vlastnosti rámce zásobníku, včetně lokální.  
+1.  Visual Studio volá stroje ladění (DE) [GetDebugProperty](../../extensibility/debugger/reference/idebugstackframe2-getdebugproperty.md) zobrazíte [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) objekt, který reprezentuje všechny vlastnosti rámce zásobníku, včetně oknech místní hodnoty.  
   
-2.  `IDebugStackFrame2::GetDebugProperty` volání [GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md) získat objekt, který popisuje metodu v rámci kterého došlo k chybě zarážku. DE poskytuje symbol zprostředkovatele ([IDebugSymbolProvider](../../extensibility/debugger/reference/idebugsymbolprovider.md)), adresu ([IDebugAddress](../../extensibility/debugger/reference/idebugaddress.md)) a vazač ([IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md)).  
+2.  `IDebugStackFrame2::GetDebugProperty` volání [GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md) získat objekt, který popisuje způsob, ve kterém došlo k zarážce. DE dodá poskytovatel symbolů ([IDebugSymbolProvider](../../extensibility/debugger/reference/idebugsymbolprovider.md)), adresu ([IDebugAddress](../../extensibility/debugger/reference/idebugaddress.md)) a vazač ([IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md)).  
   
-3.  `IDebugExpressionEvaluator::GetMethodProperty` volání [GetContainerField](../../extensibility/debugger/reference/idebugsymbolprovider-getcontainerfield.md) s zadaných `IDebugAddress` objekt, který chcete získat [IDebugContainerField](../../extensibility/debugger/reference/idebugcontainerfield.md) představující metodu obsahující zadanou adresu.  
+3.  `IDebugExpressionEvaluator::GetMethodProperty` volání [GetContainerField](../../extensibility/debugger/reference/idebugsymbolprovider-getcontainerfield.md) pomocí zadané `IDebugAddress` můžete získat [IDebugContainerField](../../extensibility/debugger/reference/idebugcontainerfield.md) , která představuje metodu obsahující zadanou adresu.  
   
-4.  `IDebugContainerField` Rozhraní je dotazován na [IDebugMethodField](../../extensibility/debugger/reference/idebugmethodfield.md) rozhraní. Je toto rozhraní, která poskytuje přístup k místní hodnoty – metody.  
+4.  `IDebugContainerField` Rozhraní se dotázali [IDebugMethodField](../../extensibility/debugger/reference/idebugmethodfield.md) rozhraní. Je toto rozhraní, která poskytuje přístup k místní hodnoty metody.  
   
-5.  `IDebugExpressionEvaluator::GetMethodProperty` vytvoří instanci třídy (nazývá `CFieldProperty` v ukázce), která implementuje `IDebugProperty2` rozhraní představují místní hodnoty – metody. `IDebugMethodField` Objekt je umístěn v tomto `CFieldProperty` objektu spolu s `IDebugSymbolProvider`, `IDebugAddress` a `IDebugBinder` objekty.  
+5.  `IDebugExpressionEvaluator::GetMethodProperty` vytvoří instanci třídy (volá `CFieldProperty` v ukázce), který běží `IDebugProperty2` rozhraní pro reprezentaci metody místních hodnot. `IDebugMethodField` Objektu je umístěn v tomto `CFieldProperty` objektů spolu s `IDebugSymbolProvider`, `IDebugAddress`, a `IDebugBinder` objekty.  
   
-6.  Když `CFieldProperty` inicializaci objektu [GetInfo](../../extensibility/debugger/reference/idebugfield-getinfo.md) se volá na `IDebugMethodField` objekt, který chcete získat [FIELD_INFO](../../extensibility/debugger/reference/field-info.md) struktura, která obsahuje všechny zobrazitelné informace o metoda sama .  
+6.  Při `CFieldProperty` objekt je inicializován, [GetInfo](../../extensibility/debugger/reference/idebugfield-getinfo.md) je volán na `IDebugMethodField` můžete získat [FIELD_INFO](../../extensibility/debugger/reference/field-info.md) strukturu, která obsahuje všechny zobrazitelné informace o metodě, samotného.  
   
-7.  `IDebugExpressionEvaluator::GetMethodProperty` Vrátí `CFieldProperty` objekt jako `IDebugProperty2` objektu.  
+7.  `IDebugExpressionEvaluator::GetMethodProperty` Vrátí `CFieldProperty` objektu jako `IDebugProperty2` objektu.  
   
-8.  Visual Studio volání [EnumChildren](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) na vrácený `IDebugProperty2` objekt s filtrem `guidFilterLocalsPlusArgs`. Vrátí [IEnumDebugPropertyInfo2](../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) objekt obsahující místní hodnoty – metody. Tento výčet je vyplněna objektem volání [EnumLocals](../../extensibility/debugger/reference/idebugmethodfield-enumlocals.md) a [EnumArguments](../../extensibility/debugger/reference/idebugmethodfield-enumarguments.md).  
+8.  Visual Studio volání [EnumChildren](../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) na vrácený `IDebugProperty2` objektu s filtrem `guidFilterLocalsPlusArgs`, která vrátí [IEnumDebugPropertyInfo2](../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) objekt, který obsahuje místní hodnoty metody. Tento výčet je vyplněn volání [EnumLocals](../../extensibility/debugger/reference/idebugmethodfield-enumlocals.md) a [EnumArguments](../../extensibility/debugger/reference/idebugmethodfield-enumarguments.md).  
   
-9. Visual Studio volání [Další](../../extensibility/debugger/reference/ienumdebugpropertyinfo2-next.md) získat [DEBUG_PROPERTY_INFO](../../extensibility/debugger/reference/debug-property-info.md) strukturu pro každý místní. Tato struktura obsahuje odkazy `IDebugProperty2` rozhraní pro místní.  
+9. Visual Studio volání [Další](../../extensibility/debugger/reference/ienumdebugpropertyinfo2-next.md) získat [DEBUG_PROPERTY_INFO](../../extensibility/debugger/reference/debug-property-info.md) strukturu pro každý místní. Tato struktura obsahuje ukazatel `IDebugProperty2` rozhraní pro místní.  
   
-10. Visual Studio volání [GetPropertyInfo –](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) pro každý místní získat název, hodnotu a typ místní. Toto je informace, které se zobrazí v **místní hodnoty –** okno.  
+10. Visual Studio volání [GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) pro každý místní získat název, hodnotu a typ na místní. Tyto informace se zobrazují v **lokální** okna.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Implementace GetMethodProperty](../../extensibility/debugger/implementing-getmethodproperty.md)  
- Popisuje implementace [GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md).  
+ Popisuje implementaci [GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md).  
   
- [Vytváření výčtů pro místní hodnoty](../../extensibility/debugger/enumerating-locals.md)  
- Popisuje, jak modul ladění (DE) odešle volání na výčet lokální proměnné nebo argumenty.  
+ [Vytvořit výčet místních hodnot](../../extensibility/debugger/enumerating-locals.md)  
+ Popisuje, jak ladicího stroje (DE) provede volání na výčet lokálních proměnných nebo argumentů.  
   
  [Načtení místních vlastností](../../extensibility/debugger/getting-local-properties.md)  
- Popisuje, jak je DE zavolá se získat název, typ a hodnotu jeden nebo více lokální proměnné.  
+ Popisuje, jak je DE zavolá se získat název, typ a hodnotu jednoho nebo více místních hodnot.  
   
- [Načtení místních hodnot](../../extensibility/debugger/getting-local-values.md)  
- Popisuje, získávání hodnotu místní, který vyžaduje službu objektu vazač poskytují kontext vyhodnocení.  
+ [Získá místní hodnoty](../../extensibility/debugger/getting-local-values.md)  
+ Tento článek popisuje získávání hodnoty místní proměnné, která vyžaduje služby objekt vazače Dal kontext vyhodnocení.  
   
  [Vyhodnocení místních hodnot](../../extensibility/debugger/evaluating-locals.md)  
- Vysvětluje, jak se vyhodnocují místní hodnoty.  
+ Vysvětluje, jak se vyhodnocují místních hodnot.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Kontext vyhodnocení](../../extensibility/debugger/evaluation-context.md)  
- Poskytuje argumenty, které se předá, když je DE volá vyhodnocovací filtr výrazů (EE).  
+ Poskytuje argumenty předávané při volání DE vyhodnocovací filtr výrazů (EE).  
   
- [Ukázka MyCEE](http://msdn.microsoft.com/en-us/624a018b-9179-402f-9d48-3aec87b48f4f)  
- Ukazuje jeden ze způsobů implementace k vytvoření vyhodnocení výrazu pro jazyk MyC.  
+ [Ukázka MyCEE](https://msdn.microsoft.com/library/624a018b-9179-402f-9d48-3aec87b48f4f)  
+ Ukazuje jedním ze způsobů implementace vyhodnocovače výrazů jazyka MyC vytvoření.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Zobrazení místních hodnot](../../extensibility/debugger/displaying-locals.md)

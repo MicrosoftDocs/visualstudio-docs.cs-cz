@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator2::SetCallback | Microsoft Docs
+title: IDebugExpressionEvaluator2::SetCallback | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f4b7c0333ff5328f4bdfd2411356074dc39d567c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 03565e5fb6012a236eb5191aa8c126d923d04739
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49823226"
 ---
 # <a name="idebugexpressionevaluator2setcallback"></a>IDebugExpressionEvaluator2::SetCallback
-Umožňuje vyhodnocovací filtr výrazů (EE) k určení rozhraní zpětné volání, které modul ladicí program (DE) bude používat ke čtení nastavení metriky.  
+Umožňuje vyhodnocovací filtr výrazů (EE) k určení rozhraní zpětného volání, které modul ladicího programu (DE) bude používat ke čtení nastavení metriky.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,13 +40,13 @@ int SetCallback (
   
 #### <a name="parameters"></a>Parametry  
  `pCallback`  
- [v] Rozhraní pro nastavení zpětného volání.  
+ [in] Rozhraní pro nastavení zpětného volání.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda poskytuje rozhraní pro správce relace ladění, můžete použít vyhodnocení výrazu číst nastavení metriky. Je to vhodné pro vzdálené ladění číst metriky na [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] počítače.  
+ Tato metoda poskytuje rozhraní pro správce ladění relace, vyhodnocovače výrazů můžete použít ke čtení nastavení metriky. To je užitečné ve vzdálené ladění číst metriky na [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] počítače.  
   
 ## <a name="example"></a>Příklad  
  Následující příklady ukazují postup implementace této metody pro **CEE** objekt, který zveřejňuje [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md) rozhraní.  

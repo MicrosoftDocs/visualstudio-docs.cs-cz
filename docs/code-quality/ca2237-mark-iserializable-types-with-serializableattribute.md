@@ -1,6 +1,7 @@
 ---
 title: 'CA2237: Označte typy ISerializable pomocí SerializableAttribute'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,36 +14,41 @@ ms.assetid: 9bd6bb24-a527-43dd-9952-043c0c694f46
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 7121211d474369f55cff36a7b7d388b7ddfc1a24
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 8629262da35b9897b789b2fae853bff4eea1aa8f
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45551727"
 ---
 # <a name="ca2237-mark-iserializable-types-with-serializableattribute"></a>CA2237: Označte typy ISerializable pomocí SerializableAttribute
+
 |||
 |-|-|
 |TypeName|MarkISerializableTypesWithSerializable|
 |CheckId|CA2237|
 |Kategorie|Microsoft.Usage|
-|Narušující změna|Bez ukončování řádků|
+|Narušující změna|Pevné|
 
 ## <a name="cause"></a>příčina
- Implementuje externě viditelného typu <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> rozhraní a typ není označen atributem <xref:System.SerializableAttribute?displayProperty=fullName> atribut. Pravidlo ignoruje odvozené typy, jehož základní typ není serializovatelný.
+ Externě viditelný typ implementuje <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> rozhraní a typ není označen atributem <xref:System.SerializableAttribute?displayProperty=fullName> atribut. Pravidlo ignoruje odvozené typy, jehož základní typ není serializovatelný.
 
 ## <a name="rule-description"></a>Popis pravidla
- Rozpoznala modul common language runtime jako serializable, musí být označen typy <xref:System.SerializableAttribute> atribut i v případě, že typ používá vlastní serializace rutiny prostřednictvím implementace <xref:System.Runtime.Serialization.ISerializable> rozhraní.
+ Chcete-li rozpoznán modulem common language runtime jako serializovatelný, musí být označen pomocí <xref:System.SerializableAttribute> atribut i v případě, že typ používá vlastní rutinu serializace prostřednictvím implementace <xref:System.Runtime.Serialization.ISerializable> rozhraní.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení toto pravidlo, použít <xref:System.SerializableAttribute> atributu typu.
+ Chcete-li opravit porušení tohoto pravidla, použijte <xref:System.SerializableAttribute> atribut typu.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Protože musí být serializovatelný ke správnému napříč doménami aplikací není potlačení upozornění od tohoto pravidla pro třídy výjimek.
+ Nepotlačujte upozornění tohoto pravidla pro třídy výjimek, protože musí být serializovatelný fungování napříč doménami aplikace.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje typ, který porušuje pravidlo. Zrušením komentáře u <xref:System.SerializableAttribute> atribut řádku splňovat pravidla.
+ Následující příklad ukazuje typ, který porušuje pravidla. Zrušením komentáře u <xref:System.SerializableAttribute> atribut řádku splňovat pravidla.
 
  [!code-vb[FxCop.Usage.MarkSerializable#1](../code-quality/codesnippet/VisualBasic/ca2237-mark-iserializable-types-with-serializableattribute_1.vb)]
  [!code-csharp[FxCop.Usage.MarkSerializable#1](../code-quality/codesnippet/CSharp/ca2237-mark-iserializable-types-with-serializableattribute_1.cs)]

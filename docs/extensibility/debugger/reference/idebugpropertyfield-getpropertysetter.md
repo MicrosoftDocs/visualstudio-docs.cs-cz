@@ -1,5 +1,5 @@
 ---
-title: IDebugPropertyField::GetPropertySetter | Microsoft Docs
+title: IDebugPropertyField::GetPropertySetter | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 055c057120753d156b19bbb359c4cc1ded3f58b5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e193ae70de88606d68861ccb9eb20d6926d18241
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49905789"
 ---
 # <a name="idebugpropertyfieldgetpropertysetter"></a>IDebugPropertyField::GetPropertySetter
 Získá metody, která nastaví vlastnost.  
@@ -40,13 +41,13 @@ int GetPropertySetter(
   
 #### <a name="parameters"></a>Parametry  
  `ppField`  
- [out] Vrátí [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) objektu, který představuje metodu, která nastaví vlastnost.  
+ [out] Vrátí [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) objekt reprezentující metodu, která nastaví vlastnost.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Chcete-li získat metodu, která se získá vlastnost, volejte [GetPropertyGetter](../../../extensibility/debugger/reference/idebugpropertyfield-getpropertygetter.md) metoda.  
+ Chcete-li získat metodu, která získá vlastnost, zavolejte [GetPropertyGetter](../../../extensibility/debugger/reference/idebugpropertyfield-getpropertygetter.md) metody.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugPropertyField](../../../extensibility/debugger/reference/idebugpropertyfield.md)   

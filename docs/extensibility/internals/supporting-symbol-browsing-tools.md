@@ -26,6 +26,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134581"
 ---
 # <a name="supporting-symbol-browsing-tools"></a>Podpůrné nástroje procházení – Symbol
 **Objekt prohlížeče**, **zobrazení tříd**, **volání prohlížeče** a **Najít výsledky Symbol** nástroje poskytují symbol procházení funkce v sadě Visual Studio. Tyto nástroje zobrazovat hierarchický strom zobrazení symbolů a vztahů mezi symboly ve stromové struktuře. Symboly může představovat obory názvů, třídy, členy třídy, objektů a další jazyk elementů obsažených v různých součástí. Součásti zahrnují projektů sady Visual Studio, externí [!INCLUDE[dnprdnshort](../../code-quality/includes/dnprdnshort_md.md)] součásti a knihovny typů (.tlb). Další informace najdete v tématu [zobrazení struktury kódu](../../ide/viewing-the-structure-of-code.md).  

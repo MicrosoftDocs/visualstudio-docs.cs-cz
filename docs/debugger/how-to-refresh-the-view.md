@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31480082"
 ---
 # <a name="how-to-refresh-the-view"></a>Postupy: Aktualizace zobrazení
 Nástroje Spy ++ trvá "snímek" systémové tabulky a aktualizuje zobrazení na základě těchto informací. Je důležité, pravidelně aktualizovat zobrazení vašeho systému. Pokud máte nástroje Spy ++ zobrazení otevřete a neaktualizovaly, zobrazení, neuvidíte tyto procesy, vláken a systému windows, které jsou následně vytvořené. Navíc se může zobrazit položky, které už existují. **Aktualizovat** příkaz je k dispozici pro všechna zobrazení kromě zobrazení zpráv.  

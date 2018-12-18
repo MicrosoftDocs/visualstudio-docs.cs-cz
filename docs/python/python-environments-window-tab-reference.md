@@ -1,119 +1,142 @@
 ---
-title: Odkaz na okno prostředí Python
-description: Údaje na každé kartě, které se zobrazují v okně prostředí Python v sadě Visual Studio.
-ms.date: 03/05/2018
+title: Odkaz na okno prostředí Pythonu
+description: Informace o jednotlivých karet, které se zobrazí v okně prostředí Pythonu v sadě Visual Studio.
+ms.date: 12/06/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 7017ba7e91acc36b72c229cdf77ee7b604f6a920
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 3bd65efb0cbaf38de88acb87c9078ee98f3869bc
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051426"
 ---
-# <a name="python-environments-window-tabs-reference"></a>Odkaz na prostředí Python okno karty
+# <a name="python-environments-window-tabs-reference"></a>Odkaz na kartách okno prostředí Pythonu
 
-Chcete-li otevřít **prostředí Python** okno:
+Chcete-li otevřít **prostředí Pythonu** okno:
 
-- Vyberte **zobrazení > ostatní okna > prostředí Python** příkazu nabídky.
-- Klikněte pravým tlačítkem myši **prostředí Python** uzel pro projekt v Průzkumníku řešení a vyberte **zobrazení všech prostředí Python**
+- Vyberte **zobrazení** > **ostatní Windows** > **prostředí Pythonu** příkazu nabídky.
+- Klikněte pravým tlačítkem myši **prostředí Pythonu** uzel projektu v **Průzkumníka řešení** a vyberte **zobrazit všechna prostředí Pythonu**.
 
-Pokud rozbalíte **prostředí Python** okno dost široké, tyto možnosti se zobrazují jako karet, které možná pohodlnější pro práci s. Pro přehlednost zobrazí se v rozšířené zobrazení karty v tomto článku.
+Pokud rozbalíte **prostředí Pythonu** okno dost široké, tyto možnosti se zobrazí jako karty, které může být pro vás být vhodnější pro práci s. Pro přehlednost karty v tomto článku jsou uvedeny v rozbalené zobrazení.
 
-![Zobrazení v okně rozšířit prostředí Python](media/environments-expanded-view.png)
+![Okno prostředí Pythonu rozšířené zobrazení](media/environments-expanded-view.png)
 
 ## <a name="overview-tab"></a>Karta Přehled
 
 Poskytuje základní informace a příkazy pro prostředí:
 
-![Karta Přehled prostředí Python](media/environments-overview-tab.png)
+![Karta Přehled prostředí Pythonu](media/environments-overview-tab.png)
 
 | Příkaz | Popis |
 | --- | --- |
-| Nastavit jako výchozí pro nové projekty toto prostředí | Nastaví active prostředí, které může způsobit, že Visual Studio se stručně přestane reagovat při načítání databázi IntelliSense. Prostředí s mnoha balíčky může být po delší dobu reagovat. |
-| Navštívit webovou stránku distributorovi | Otevře prohlížeč na adresu URL od distribuci jazyka Python. Python 3.x, například přejde k python.org. |
-| Otevřete okno interaktivní | Otevře se [interaktivních okna (REPL)](python-interactive-repl-in-visual-studio.md) pro toto prostředí v sadě Visual Studio použití žádné [spouštěcí skripty (viz níže)](#startup-scripts). |
-| Prozkoumat interaktivní skripty | V tématu [spouštěcí skripty](#startup-scripts). |
-| Použití IPython interaktivním režimu | Pokud nastavíte, otevře se okno interaktivní s IPython ve výchozím nastavení. Tato povoleno vložené ukazuje zeměpisný a rozšířené syntaxe IPython například `name?` chcete zobrazit nápovědu a `!command` pro příkazy prostředí. Tato možnost se doporučuje při použití distribuci Anaconda, jako je vyžaduje další balíčky. Další informace najdete v tématu [pomocí IPython v okně interaktivní](interactive-repl-ipython.md). |
-| Otevřete v prostředí PowerShell | Spustí překladač v příkazové okno prostředí PowerShell. |
-| (Odkazy složku a program) | Poskytují rychlý přístup k prostředí nástroje instalační složku, překladač python.exe a pythonw.exe překladač. První otevře v Průzkumníku Windows, dvou otevřete okno konzoly. |
+| **Nastavit toto prostředí jako výchozí pro nové projekty** | Nastaví na aktivní prostředí, což může způsobit, že Visual Studio (2017 verze 15.5 a starší) stručně přestane reagovat při načítání databáze IntelliSense. Prostředí s mnoha balíčky je možné jako nereagující po delší dobu. |
+| **Navštívit web distributora** | Otevře prohlížeč na adresu URL poskytované distribuci jazyka Python. Python 3.x, například přejde na python.org. |
+| **Otevřít interaktivní okno** | Otevře [interaktivního okna (REPL)](python-interactive-repl-in-visual-studio.md) pro toto prostředí v sadě Visual Studio, použití některou [spouštěcí skripty (viz níže)](#startup-scripts). |
+| **Prozkoumat interaktivní skripty** | Zobrazit [spouštěcí skripty](#startup-scripts). |
+| **Použít interaktivní režim IPython** | Pokud nastavíte, otevře **interaktivní** okno s ipythonem vzniká ve výchozím nastavení. To umožňuje například vložených vykreslení, jakož i rozšířené syntaxe IPython `name?` zobrazíte nápovědu a `!command` pro příkazy prostředí. Tato možnost se doporučuje při použití Anaconda distribuce, protože vyžaduje dodatečné balíčky. Další informace najdete v tématu [použití Ipythonu v interaktivním okně](interactive-repl-ipython.md). |
+| **Otevřít v Powershellu** | Spuštění interpretu v příkazovém okně prostředí PowerShell. |
+| (Složka a program odkazů) | Poskytují rychlý přístup k prostředí instalační složku, *python.exe* interpret a *pythonw.exe* překladač. První zobrazí v Průzkumníku Windows, druhé dvě otevřete okno konzoly. |
 
 ### <a name="startup-scripts"></a>Spouštěcí skripty
 
-Interaktivní windows používáte ve svém pracovním postupu každý den, pravděpodobně vyvíjet pomocných funkcí, které používáte pravidelně. Například můžete vytvořit funkci, která otevře DataFrame v aplikaci Excel a pak uložte tento kód jako spouštěcí skript tak, aby byla vždy dostupná v okně interaktivní.
+V pracovním postupu vaší každý den používáte interaktivních oken, pravděpodobně vývoj pomocných funkcí, které používáte pravidelně. Například může vytvořit funkci, která se otevře datový rámec v Excelu a uložte tento kód jako spouštěcí skript tak, aby byla vždy dostupná v **interaktivní** okna.
 
-Spouštěcí skripty obsahovat kód, který interaktivních okna načte a spustí automaticky, včetně importy, definice funkcí a oznámena cokoliv jiného. Takové skripty odkazují dvěma způsoby:
+Spouštěcí skripty obsahovat kód, který **interaktivní** okno načte a spustí automaticky, včetně importy, definice funkcí a prakticky cokoli jiného. Tyto skripty jsou odkazovány dvěma způsoby:
 
-1. Při instalaci prostředí sady Visual Studio vytvoří složku `Documents\Visual Studio 2017\Python Scripts\<environment>` kde &lt;prostředí&gt; odpovídá názvu prostředí. Můžete snadno přejít do složky specifické pro prostředí s **prozkoumat interaktivní skripty** příkaz. Při spuštění interaktivních okna pro prostředí se načítá a spouští ať `.py` se zde nacházejí soubory v abecedním pořadí.
+1. Při instalaci prostředí sady Visual Studio vytvoří složku *Documents\Visual Studio 2017\Python skripty\\\<prostředí >* kde &lt;prostředí&gt; odpovídá Název prostředí. Můžete snadno přejít do složky specifické pro prostředí s **prozkoumat interaktivní skripty** příkazu. Při spuštění **interaktivní** okna pro toto prostředí se načte a spustí cokoli, co *.py* zde nacházejí soubory v abecedním pořadí.
 
-1. **Skripty** řídit ve **nástroje > Možnosti > Python Tools > Interaktivní Windows** karta (najdete v části [možnosti interaktivního windows](python-support-options-and-settings-in-visual-studio.md#interactive-windows-options)) slouží k určení dalších Složka pro spouštěcí skripty, které jsou načteny a spustit ve všech prostředích. Tato funkce se však v současné době nefunguje.
+1. **Skripty** v ovládacím prvku **nástroje** > **možnosti** > **nástroje Python Tools**  >  **Interaktivní Windows** kartu (viz [interaktivních oken možnosti](python-support-options-and-settings-in-visual-studio.md#interactive-windows-options)) slouží k určení další složky pro spouštěcí skripty, které jsou načteny a spustit ve všech prostředích. Tato funkce se však nefunguje v současné době.
 
 ## <a name="configure-tab"></a>Karta Konfigurace
 
-Pokud je k dispozici, obsahuje podrobnosti, jak je popsáno v následující tabulce. Pokud není k dispozici na této kartě, znamená to, že Visual Studio je Správa všech podrobností o automaticky.
+Pokud je k dispozici, obsahuje podrobnosti, jak je popsáno v následující tabulce. Pokud tato karta není k dispozici, znamená to, že Visual Studio automaticky spravuje všechny podrobnosti.
 
-![Karta Konfigurace prostředí Python](media/environments-configure-tab.png)
+![Karta Konfigurace prostředí Pythonu](media/environments-configure-tab.png)
 
 | Pole | Popis |
 | --- | --- |
 | **Popis** | Název prostředí. |
-| **Předpona cesta** | Umístění složky základní překladač. Naplnění tuto hodnotu a kliknutím na **automatické rozpoznání**, Visual Studio se pokusí vyplňte další pole za vás. |
-| **Překladač cesta** | Cesta k překladač spustitelný soubor, běžně cesta předponu následuje `python.exe` |
-| **Oddílové překladač** | Cesta k mimo konzolu spustitelný soubor, často cesta předponou následuje `pythonw.exe`. |
-| **Cesta ke knihovně**<br/>(Pokud je k dispozici) | Určuje kořenu standardní knihovny, ale pokud tato hodnota může být ignorována Visual Studio je schopen přesnější cestu požadavku z překladač. |
-| **Jazyková verze** | Vybrat v rozevírací nabídce. |
-| **Architektura** | Za normálních okolností zjištěna a vyplnit automaticky, v opačném případě určuje 32bitové nebo 64bitové verze. |
-| **Proměnné prostředí Path** | Proměnné prostředí, která překladač používá k nalezení cest hledání. Visual Studio změní hodnotu proměnné při spouštění Python tak, aby obsahoval cesty pro hledání projektu. Obvykle tato vlastnost by měla být nastavená na `PYTHONPATH`, ale některé překladače použít jinou hodnotu. |
+| **Předponová cesta** | Umístění složky základní překladač. Vyplnění tuto hodnotu a kliknutím na **automaticky rozpoznat**, Visual Studio se pokusí vyplnit i ostatní pole za vás. |
+| **Cesta k interpretu** | Cesta k interpretu spustitelný soubor, obvykle předponová cesta za nímž následuje **python.exe** |
+| **Interpret v okně** | Cesta k mimo konzolu spustitelný soubor, často následuje předponová cesta **pythonw.exe**. |
+| **Cestu ke knihovně**<br/>(Pokud je k dispozici) | Určuje kořenový standardní knihovnu, ale tato hodnota může ignorovat, pokud je schopen žádat přesnější cestu interpretu sady Visual Studio. |
+| **Verze jazyka** | Vybrat z rozevírací nabídky. |
+| **Architektura** | Obvykle zjištěno a vyplní automaticky, v opačném případě určuje **32-bit** nebo **64-bit**. |
+| **Proměnné prostředí Path** | Proměnná prostředí, která překladač používá k vyhledání cesty pro hledání. Visual Studio se změní hodnota proměnné při spuštění Pythonu tak, aby obsahoval cesty pro hledání v projektu. Obvykle by tato vlastnost nastavená na **PYTHONPATH**, ale některých interpretů použít jinou hodnotu. |
 
 ## <a name="packages-tab"></a>Karta balíčky
 
-*Také s označením "pip" v dřívějších verzích.*
+*Také s popiskem "pip" v dřívějších verzích.*
 
-Spravuje balíčky nainstalované v prostředí, což umožňuje hledat a instalovat nové (včetně závislostí).
+Spravuje balíčky nainstalované ve prostředí pomocí nástroje pip, díky tomu můžete také vyhledat a nainstalovat nové balíčky (včetně případných závislostí). V sadě Visual Studio 2017 verze 15.7 nebo novější **balíčky (Conda)** využívající Správce balíčků conda místo toho se zobrazí karta. (Pokud se nezobrazí široké možnosti volby, nastavte možnost **nástroje** > **možnosti** > **Python** > **experimentální**   >  **Použití Správce balíčků conda Pokud je k dispozici (místo pip)** a restartujte aplikaci Visual Studio.)
 
-Balíčky, které jsou již nainstalovány, zobrazí se ovládacích prvků pro aktualizaci (šipka nahoru) a odinstalovat (X v kruh) balíček:
+Balíčky, které jsou už nainstalované, se zobrazí s ovládacími prvky pro aktualizaci (šipka nahoru) a odinstalujte (X v kruhu), balíček:
 
-![Karta balíčky prostředí Python](media/environments-pip-tab-controls.png)
+![Karta balíčky prostředí Pythonu](media/environments-pip-tab-controls.png)
 
-Zadávat filtry hledání termín seznam balíčků nainstalovaných a také balíčky, které lze nainstalovat z úložiště PyPI.
+Zadání vyhledávacích filtrů termín seznam nainstalovaných balíčků, jakož i balíčky, které je možné nainstalovat z PyPI.
 
-![Karta balíčky prostředí Python s vyhledávání na "num"](media/environments-pip-tab.png)
+![Karta balíčky prostředí Pythonu pomocí služby search na "počet"](media/environments-pip-tab.png)
 
-Můžete také přímo zadat libovolný `pip install` příkaz do vyhledávacího pole, včetně příznaky, jako například `--user` nebo `--no-deps`.
+Jak je vidět na obrázku výše, výsledky hledání zobrazit počet balíčků, které odpovídají hledanému výrazu; první položka v seznamu, ale příkaz pro spuštění **pip install \<name >** přímo. Pokud ale používáte **balíčky (Conda)** kartě, zobrazí se místo toho **conda nainstalovat \<name >**:
 
-Instalace balíčku vytvoří podsložky v rámci v prostředí `Lib` složku v systému souborů. Například pokud máte Python 3.6, které se instaluje v `c:\Python36`, balíčky jsou nainstalovány v `c:\Python36\Lib`; Pokud máte nainstalovaný v Anaconda3 `c:\Program Files\Anaconda3` pak balíčky jsou nainstalovány v `c:\Program Files\Anaconda3\Lib`.
+![Příkaz instalovat kartu balíčků Conda ukazující conda](media/environments-conda-tab-install.png)
 
-V takovém případě protože prostředí je umístěný v oblasti chráněného systému souborů, `c:\Program Files`, musíte spustit Visual Studio `pip install` zvýšenými tak, aby ji k vytvoření balíčku podsložky. Pokud se vyžaduje zvýšení oprávnění, sada Visual Studio zobrazí řádku "oprávnění správce může být nutné nainstalovat, aktualizovat nebo odebrat balíčky pro toto prostředí":
+V obou případech můžete přizpůsobit instalaci tak, že přidáte argumenty za názvem balíčku do vyhledávacího pole. Pokud zahrnete argumenty, výsledky vyhledávání ukazuje **pip install** nebo **conda nainstalovat** za nímž následuje obsah do vyhledávacího pole:
 
-![Výzva ke zvýšení oprávnění pro instalaci balíčku](media/environments-pip-elevate.png)
+![Pomocí argumentů pip a conda install příkazy pro probuzení](media/environments-pip-tab-arguments.png)
 
-**Zvýšení oprávnění teď** uděluje oprávnění pro nástrojem pip pro jednu operaci, správu subjektu také všechny operační systémy vyzve k zadání oprávnění. Výběr **pokračovat bez oprávnění správce** pokusy o instalaci balíčku, ale pip selže při pokusu o vytvoření složky s výstupem, jako "Chyba: Nepodařilo se vytvořit" C:\Program Files\Anaconda3\Lib\site-packages\ PNG.PY': bylo odepřeno oprávnění. "
+Instalace balíčku vytvoří podsložky v rámci životního prostředí *Lib* složku v systému souborů. Například pokud máte Python 3.6, které se nainstaluje v *c:\Python36*, balíčky se nainstalují v *c:\Python36\Lib*; Pokud máte Anaconda3 nainstalované v *c:\Program Files\Anaconda3*pak balíčky se nainstalují v *c:\Program Files\Anaconda3\Lib*.
 
-Výběr **vždy zvýšení oprávnění při instalaci nebo odebrání balíčků** dialogu zabraňuje zobrazování pro prostředí. Chcete-li se znovu zobrazí dialogové okno, přejděte na **nástroje > Možnosti > Python Tools > Obecné** a kliknutím na tlačítko, **resetovat všechny trvale skrytá dialogová okna**.
+### <a name="grant-administrator-privileges-for-package-install"></a>Udělení oprávnění správce pro balíček nainstalovat
 
-V tom, že stejné možnosti kartě, můžete také vybrat **vždy spustit jako správce pip** o potlačení pro všechna prostředí. V tématu [možnosti - karta Obecné](python-support-options-and-settings-in-visual-studio.md#general-options).
+Při instalaci balíčků do prostředí, ve kterém se nachází v chráněné části systému souborů, jako například *c:\Program Files\Anaconda3\Lib*, musíte spustit aplikaci Visual Studio `pip install` se zvýšenými oprávněními, aby mohla vytvořit podsložky, balíčku. Když se vyžaduje zvýšení úrovně oprávnění, Visual Studio zobrazí příkazový řádek, **může být nutná oprávnění správce k instalaci, aktualizaci nebo odebrání balíčků pro toto prostředí**:
+
+![Výzvy ke zvýšení oprávnění pro instalaci balíčku](media/environments-pip-elevate.png)
+
+**Zvýšit** uděluje oprávnění správce k nástroje pip pro jednu operaci, předmět taky pro libovolný operační systém zobrazí výzvu k zadání oprávnění. Výběr **pokračovat bez oprávnění správce** pokusí nainstalovat, ale pip nezdaří při pokusu o vytvoření složky s výstupem, jako **Chyba: nepovedlo se vytvořit "C:\Program Files\Anaconda3\Lib\ Web-packages\png.py': přístup byl odepřen.**
+
+Výběr **vždy zvýšit při instalaci nebo odebrání balíčků** brání dialogového okna v zobrazení pro prostředí. Chcete-li se znovu zobrazí dialogové okno, přejděte na **nástroje** > **možnosti** > **nástroje Python Tools** > **Obecné** a klikněte na tlačítko **resetovat všechna trvale skrytá dialogová okna**.
+
+V tomto stejného **možnosti** kartu, můžete také vybrat **vždy spustit jako správce pip** k potlačení dialogového okna pro všechna prostředí. Zobrazit [možnosti – karta Obecné](python-support-options-and-settings-in-visual-studio.md#general-options).
+
+### <a name="security-restrictions-with-older-versions-of-python"></a>Omezení zabezpečení se staršími verzemi Pythonu
+
+Při použití Python 2.6, 3.1 a 3.2, Visual Studio zobrazí toto upozornění **z důvodu nového omezení zabezpečení instalace z Internetu nemusí fungovat v této verzi jazyka Python**:
+
+![Zpráva o pip nainstalovat omezení starší verze jazyka Python](media/environments-old-version-restriction.png)
+
+Důvod pro toto upozornění je, že se tyto starší verze jazyka Python, `pip install` neobsahuje podporu pro zabezpečení TLS (Transport Layer) 1.2, která je potřebná pro stahování balíčků ze zdroje balíčku, pypi.org. Vlastní sestavení Python v takovém případě podporu protokolu TLS 1.2 `pip install` mohou fungovat.
+
+Je možné stáhnout si odpovídající *get-pip.py* pro balíček [bootstrap.pypa.io](https://bootstrap.pypa.io/), je nutné ručně stáhněte si balíček z [pypi.org](https://pypi.org/)a pak nainstalujte balíček z místní kopii.
+
+Doporučení, ale stačí upgradovat na Python 2.7 nebo 3.3 +, ve kterém případ upozornění se nezobrazí.
 
 ## <a name="intellisense-tab"></a>Karta IntelliSense
 
-Ukazuje aktuální stav databáze doplňování IntelliSense:
+Zobrazí aktuální stav databáze pro dokončování IntelliSense:
 
-![Karta IntelliSense prostředí Python](media/environments-intellisense-tab.png)
+![Karta IntelliSense prostředí Pythonu](media/environments-intellisense-tab.png)
 
-V **Visual Studio 2017 verze 15,5** a starší, dokončování IntelliSense závisí na databázi, která je kompilovaná pro danou knihovnu. Vytváření databáze se provádí na pozadí při knihovny je nainstalován, ale může nějakou dobu trvat a nemusí být kompletní při spuštění psaní kódu. **Visual Studio 2017 verze 15,6 operací** a později použije rychlejší metoda zajistit dokončování operací, které nezávisí na databázi, pokud zvolíte povolit.
+- V **Visual Studio 2017 verze 15.5** a starší, dokončování IntelliSense závisí na databázi, která je kompilovaná pro danou knihovnu. Vytváření databáze se provádí na pozadí, když knihovně je nainstalovaná, ale může nějakou dobu trvat a nemusí být úplné, když začnete psát kód.
+- **Visual Studio 2017 verze 15.6** a později pomocí metody rychlejší poskytují dokončování, které nezávisí na databázi ve výchozím nastavení. Z tohoto důvodu označené na kartě **IntelliSense [databáze deaktivována]**. Databázi můžete povolit zrušením možnost **nástroje** > **možnosti** > **Python**  >   **Experimentální** > **používaly nový styl IntelliSense pro prostředí**.
 
-Když zjistí nového prostředí sady Visual Studio (nebo je přidat jeden), automaticky se začne při kompilaci databáze analýzou zdrojové soubory knihovny. Tento proces může trvat z minutu na hodinu nebo déle v závislosti na tom, co je nainstalované. (Anacondu, například se dodává s mnoha knihovny a při kompilaci databáze nějakou dobu trvá.) Po dokončení můžete získat podrobné IntelliSense a nemusíte znovu aktualizujte databázi (s **aktualizovat DB** tlačítko) až po instalaci dalších knihoven.
+Po zjišťuje nové prostředí sady Visual Studio (nebo přidejte jedno), automaticky se začne při kompilaci databáze díky analýze zdrojové soubory knihovny. Tento proces může trvat od minutu hodinu nebo déle v závislosti na tom, co je nainstalována. (Anaconda, například se dodává s mnoha knihoven a kompilaci databáze nějakou dobu trvá.) Jakmile budete hotovi, získáte podrobný IntelliSense a není potřeba znovu aktualizujte databázi (s **aktualizace DB** tlačítko) až po instalaci další knihovny.
 
-Knihovny, pro které nebyla kompilována data jsou označené **!**; Pokud prostředí s databáze není kompletní, **!** také se zobrazí vedle sebe v seznamu hlavní prostředí.
+Knihovny, pro které nebyla kompilována data jsou označené **!**; Pokud databázích tohoto prostředí není kompletní, **!** také se vedle něj zobrazí v seznamu hlavních prostředí.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Správa prostředí Python v sadě Visual Studio](managing-python-environments-in-visual-studio.md)
+- [Správa prostředí Pythonu v sadě Visual Studio](managing-python-environments-in-visual-studio.md)
 - [Výběr interpretu pro projekt](selecting-a-python-environment-for-a-project.md)
 - [Používání souboru requirements.txt pro závislosti](managing-required-packages-with-requirements-txt.md)
 - [Cesty pro hledání](search-paths.md)

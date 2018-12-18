@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31106715"
 ---
 # <a name="idebugdocumentchecksum2"></a>IDebugDocumentChecksum2
 Představuje kontrolního součtu pro dokument ladění a umožňuje předávání kontrolního součtu mezi součástmi.  
@@ -29,7 +30,7 @@ IDebugDocumentChecksum2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory  
- Toto rozhraní může být implementováno komponentou, která zveřejňuje [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) rozhraní. Ale ho hlavně implementují moduly ladění tak, aby kontrolního součtu vložených v souboru symbol (uvedených) můžete předán zpět do integrovaného vývojového prostředí a použít při hledání zdroj.  
+ Toto rozhraní může být implementováno komponentou, která zveřejňuje [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) rozhraní. Ale ho hlavně implementují moduly ladění tak, aby kontrolního součtu vložených v souboru symbol (*.pdb) můžete předán zpět do integrovaného vývojového prostředí a použít při hledání zdroj.  
   
 ## <a name="methods"></a>Metody  
  Následující tabulka uvádí metody `IDebugDocumentChecksum2`.  

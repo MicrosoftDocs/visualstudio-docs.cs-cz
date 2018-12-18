@@ -1,5 +1,5 @@
 ---
-title: Přidání přepínače příkazového řádku | Microsoft Docs
+title: Přidání přepínačů příkazového řádku | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,54 +16,49 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: daef07d0b8dd02f6823717b0c0cb5d68d837ccde
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9ebfc937ee5cf6025761bb9da5d5f6589caf77d1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49901044"
 ---
-# <a name="adding-command-line-switches"></a>Přidání přepínače příkazového řádku
-Můžete přidat přepínače příkazového řádku, která se týkají vašeho VSPackage při devenv.exe. Použití <xref:Microsoft.VisualStudio.Shell.ProvideAppCommandLineAttribute> deklarovat název přepínač a jeho vlastnosti. V tomto příkladu se přidá MySwitch přepínač pro podtřídou třídy s názvem VSPackage **AddCommandSwitchPackage** bez argumentů a s VSPackage automaticky načíst.  
+# <a name="add-command-line-switches"></a>Přidání přepínačů příkazového řádku
+Můžete přidat přepínače příkazového řádku, které se vztahují k vaší VSPackage při *devenv.exe* provádí. Použití <xref:Microsoft.VisualStudio.Shell.ProvideAppCommandLineAttribute> deklarovat název přepínače a její vlastnosti. V tomto příkladu se přidá MySwitch přepínač pro podtřídou třídy s názvem balíčku VSPackage **AddCommandSwitchPackage** bez argumentů a s VSPackage načteny automaticky.  
   
 ```csharp  
 [ProvideAppCommandLine("MySwitch", typeof(AddCommandSwitchPackage), Arguments = "0", DemandLoad = 1)]  
 ```  
   
- V následující tabulce jsou uvedeny pojmenované parametry  
+ Pojmenované parametry jsou uvedeny v následujících popisech.
+
+||||
+|-|-|-|-|
+| Parametr | Popis|
+| Arguments | Počet argumentů pro přepínač. Může být "*", nebo seznam argumentů. |
+| DemandLoad | Automaticky načte sady VSPackage, pokud je nastavené na hodnotu 1, v opačném případě nastavte na hodnotu 0. |  
+| HelpString | Řetězec nebo prostředek ID nápovědy řetězce k zobrazení s **devenv /?**. |
+| Název | Přepínač. |
+| Packageguid došlo k chybě | Identifikátor GUID balíčku. |  
   
- Arguments  
- Počet argumentů pro přepínač. Může být "*", nebo seznam argumentů.  
+ První hodnota argumentů je obvykle 0 nebo 1. Zvláštní hodnota "*" lze použít k označení, že celý zbytek příkazového řádku je argumentem. To může být užitečné pro ladění scénářů, kdy uživatel musí předat řetězec příkazu ladicího programu.  
   
- DemandLoad  
- VSPackage načte automaticky, pokud je nastavená na hodnotu 1, jinak hodnota nastavena na hodnotu 0.  
+ Hodnota DemandLoad je buď `true` (1) nebo `false` (0) označuje, že sady VSPackage by měly být načteny automaticky.  
   
- Helpstring –  
- Řetězec nebo prostředků ID nápovědy řetězce pro zobrazení s **devenv /?**.  
+ HelpString hodnotu ID prostředku řetězce, který se zobrazí **devenv /?** Zobrazení nápovědy. Tato hodnota by měla být ve tvaru "#nnn" kde nnn je celé číslo. Hodnota řetězce v souboru prostředků by měly končit znak nového řádku.  
   
- Název  
- Přepínač.  
+ Hodnota Name je název přepínače.  
   
- PackageGuid  
- Identifikátor GUID balíčku.  
+ Hodnota packageguid došlo k chybě je identifikátor GUID balíčku, který implementuje tento přepínač. Integrované vývojové prostředí používá tento identifikátor GUID k nalezení sady VSPackage v registru, ke kterému se vztahuje přepínač příkazového řádku.  
   
- První hodnota argumentů je obvykle 0 nebo 1. Hodnota ' *' slouží k označení, že celý zbytek příkazového řádku je argumentem. To může být užitečné pro ladění scénáře, kde uživatel musí projít v řetězci příkazu ladicího programu.  
+## <a name="retrieve-command-line-switches"></a>Načíst přepínače příkazového řádku  
+ Při načítání vašeho balíčku můžete načíst přepínače příkazového řádku pomocí následujících kroků.  
   
- Hodnota DemandLoad je buď `true` (1) nebo `false` (0) znamená, že VSPackage by měla být načtena automaticky.  
+1. Ve vaší VSPackage <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A> implementace, volání `QueryService` na <xref:Microsoft.VisualStudio.Shell.Interop.SVsAppCommandLine> zobrazíte <xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine> rozhraní.  
   
- Helpstring – hodnota je ID prostředku řetězec, který se zobrazí v devenv /? Zobrazení nápovědy. Tato hodnota by měla být ve tvaru "#nnn" kde nnn je celé číslo. Hodnota řetězce v souboru prostředků musí končit znak nového řádku.  
+2. Volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine.GetOption%2A> načíst přepínače příkazového řádku, které zadal uživatel.  
   
- Hodnota názvu je název přepínače.  
-  
- Hodnota PackageGuid je identifikátor GUID balíčku, který implementuje tento přepínač. Prostředí IDE používá tento identifikátor GUID k nalezení VSPackage v registru, na které se vztahuje na přepínač příkazového řádku.  
-  
-## <a name="retrieving-command-line-switches"></a>Načítání přepínače příkazového řádku  
- Když je načten do balíčku, můžete načíst přepínače příkazového řádku pomocí následujících kroků.  
-  
-1.  Ve vašem VSPackage <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A> implementace, volání `QueryService` na <xref:Microsoft.VisualStudio.Shell.Interop.SVsAppCommandLine> získat <xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine> rozhraní.  
-  
-2.  Volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine.GetOption%2A> načíst přepínače příkazového řádku, které uživatel zadal.  
-  
- Následující kód ukazuje, jak zjistit, zda byl zadán přepínač příkazového řádku MySwitch uživatel:  
+   Následující kód ukazuje, jak zjistit, zda byl zadán přepínač příkazového řádku MySwitch uživatelem:  
   
 ```csharp  
 IVsAppCommandLine cmdline = (IVsAppCommandLine)GetService(typeof(SVsAppCommandLine));  
@@ -74,11 +69,11 @@ string optionValue = "";
 cmdline.GetOption("MySwitch", out isPresent, out optionValue);  
 ```  
   
- Je vaší povinností zkontrolujte vaše přepínače příkazového řádku pokaždé, když je načten do balíčku.  
+ Je vaší odpovědností, abyste pro vaše přepínače příkazového řádku zkontrolujte pokaždé, když je načten do balíčku.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsAppCommandLine>   
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage.SetSite%2A>   
  [Přepínače příkazového řádku nástroje devenv](../ide/reference/devenv-command-line-switches.md)   
  [Nástroj CreatePkgDef](../extensibility/internals/createpkgdef-utility.md)   
- [. Pkgdef soubory](../extensibility/modifying-the-isolated-shell-by-using-the-dot-pkgdef-file.md)
+ [. Soubory Pkgdef](../extensibility/modifying-the-isolated-shell-by-using-the-dot-pkgdef-file.md)

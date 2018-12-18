@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31120033"
 ---
 # <a name="idebugportevents2"></a>IDebugPortEvents2
 Toto rozhraní upozorní naslouchací proces (obvykle relace ladění správce [SDM] nebo modul ladění) proces a program vytváření a odstraňování na konkrétním portu. Tyto informace slouží k dispozici v reálném čase zobrazení procesy a programy spuštěné na portu.  

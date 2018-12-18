@@ -1,5 +1,5 @@
 ---
-title: Idiasectioncontrib::get_informational – | Microsoft Docs
+title: Idiasectioncontrib::get_informational – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b8d991a5444c719696db62ab6f9c3374015ea7e
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 4e077e0d2ac410601698d50c2c6ee0d8ede5cbe9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49875152"
 ---
 # <a name="idiasectioncontribgetinformational"></a>IDiaSectionContrib::get_informational
 Získá příznak označující, zda oddíl obsahuje komentáře nebo podobné informace.  
@@ -36,7 +37,7 @@ HRESULT get_informational(
  [out] Vrátí `TRUE` Pokud oddíl obsahuje komentáře nebo jiné informace; v opačném případě vrátí `FALSE`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. Jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
  V části .directive obvykle obsahuje informace.  

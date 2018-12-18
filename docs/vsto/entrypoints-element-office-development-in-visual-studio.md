@@ -1,5 +1,5 @@
 ---
-title: '&lt;entryPoints&gt; – Element (vývoj pro Office v sadě Visual Studio) | Microsoft Docs'
+title: '&lt;entryPoints&gt; – element (vývoj pro Office v sadě Visual Studio)'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -15,18 +15,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a620dae22e6fd67e3d880cbd87e8883911f28845
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: bec51fd4d9e6a140d274f028a0e0286a161ac147
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34448386"
 ---
-# <a name="ltentrypointsgt-element-office-development-in-visual-studio"></a>&lt;entryPoints&gt; – Element (vývoj pro Office v sadě Visual Studio)
+# <a name="ltentrypointsgt-element-office-development-in-visual-studio"></a>&lt;entryPoints&gt; – element (vývoj pro Office v sadě Visual Studio)
   `entryPoints` Element `vstav3` obor názvů obsahuje všechny `entryPoint` elementy související s řešení Office.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```xml  
 <entryPoints>  
     <entryPoint>  
     </entryPoint>  
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/16/2018
  `entryPoints` obsahuje následující prvky.  
   
 ### <a name="entrypoint"></a>Vstupní bod  
- Požadováno. Role `entryPoint` element v `vstav3` obor názvů je definován v [ &#60;entryPoint&#62; Element &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/entrypoint-element-office-development-in-visual-studio.md).  
+ Požadováno. Role `entryPoint` element v `vstav3` obor názvů je definován v [ &#60;entryPoint&#62; element &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/entrypoint-element-office-development-in-visual-studio.md).  
   
 ## <a name="document-level-customization-example"></a>Příklad přizpůsobení na úrovni dokumentu  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="code"></a>Kód  
   
-```  
+```xml  
 <vstav3:entryPoints>  
   <vstav3:entryPoint   
     class="ContosoExcelWorkbook.ThisWorkbook">  
@@ -102,7 +103,7 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="code"></a>Kód  
   
-```  
+```xml  
 <vstav3:entryPoints>  
   <vstav3:entryPoint   
     class="ContosoOutlookAddIn.ThisAddIn">  
@@ -122,7 +123,7 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="code"></a>Kód  
   
-```  
+```xml  
 <vstav3:entryPoints   
   id="ContosoExcel">  
   <vstav3:entryPoint   
@@ -174,6 +175,6 @@ ms.lasthandoff: 04/16/2018
 ## <a name="see-also"></a>Viz také  
  [Manifesty aplikace pro řešení pro systém Office](../vsto/application-manifests-for-office-solutions.md)   
  [Manifesty nasazení pro řešení Office](../vsto/deployment-manifests-for-office-solutions.md)   
- [ClickOnce – manifest aplikace ](/visualstudio/deployment/clickonce-application-manifest)  
+ [ClickOnce – manifest aplikace](/visualstudio/deployment/clickonce-application-manifest)  
   
   

@@ -1,7 +1,8 @@
 ---
-title: Odebrání Visual Studio 2017 | Microsoft Docs
-description: Zjistěte, jak chcete úplně odebrat z počítače, podrobné Visual Studio.
-ms.custom: ''
+title: Odebrání sady Visual Studio
+titleSuffix: ''
+description: Zjistěte, jak úplně odebrat sady Visual Studio z vašeho počítače, krok za krokem.
+ms.custom: seodec18
 ms.date: 09/12/2017
 ms.technology: vs-acquisition
 ms.prod: visual-studio-dev15
@@ -21,49 +22,41 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a143502c875acabca7b36bdd3070e5a441b842bd
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: fb3f86c59f205137dc3b72c8f0beff69f4d95a99
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53159656"
 ---
-# <a name="remove-visual-studio"></a>Odebrání Visual Studio
+# <a name="remove-visual-studio-2017"></a>Odebrat sady Visual Studio 2017
 
-Pokud dojde k závažné chybě a nelze opravit nebo odinstalovat Visual Studio, můžete spustit `InstallCleanup.exe` nástroj pro odebrání instalační soubory a informace o produktu. Spuštění tohoto nástroje je potřeba udělat jako poslední možnost, pokud opravit nebo odinstalovat služeb při selhání a může odinstalovat funkce z jiné instalace sady Visual Studio nebo jiné produkty, které je třeba opravit.
+Pokud dojde k závažné chybě a nelze opravit nebo odinstalovat Visual Studio, můžete spustit `InstallCleanup.exe` nástroj pro odebrání instalační soubory a informace o produktu pro všechny nainstalované instance sady Visual Studio 2017 a novější. Spuštění tohoto nástroje je třeba udělat jako poslední možnost, pokud opravit nebo odinstalovat navrácení služeb po a odinstalovat funkce z jiné instalace sady Visual Studio nebo jiné produkty, které je potřeba opravit.
 
-V níže uvedených pokynů můžete spustit nástroj s přepínače příkazového řádku s následující chování:
+V níže uvedených pokynů můžete spustit nástroj pomocí přepínače příkazového řádku pomocí následujícího chování:
 
-| přepínače | Chování |
+| Přepínač | Chování |
 | ------ | -------- |
-| `-i`   | Tento přepínač je výchozí, pokud je předán žádný jiný přepínač a odstraní pouze hlavní instalační adresář a produktu informace. Toto chování je vhodnější, pokud chcete přeinstalovat stejnou verzi, po spuštění `InstallCleanup.exe` nástroj. |
-| `-f`   | Zadání tohoto přepínače odebere hlavní instalační adresář, informace o produktu a většina další funkce, které jsou nainstalované mimo instalační adresář, který může být sdíleny s další instalace sady Visual Studio nebo jiné produkty. Toto chování je vhodnější, pokud máte v úmyslu odebrat Visual Studio bez přeinstalace později. |
+| `-i`   | Tento přepínač je výchozí, pokud je předán žádný jiný přepínač a odebere pouze hlavní instalační adresář a informace o produktu. Toto chování je vhodnější, pokud máte v úmyslu znovu nainstalovat stejnou verzi, po spuštění `InstallCleanup.exe` nástroj. |
+| `-f`   | Zadání tohoto přepínače odebere hlavní instalační adresář, informace o produktech a většinu dalších funkcí, které jsou mimo instalační adresář, který může sdílet s další instalace sady Visual Studio nebo jiné produkty nainstalované. Toto chování je vhodnější, pokud máte v úmyslu odebrat sady Visual Studio bez přeinstalace později. |
 
 1. Ukončete instalační program sady Visual Studio.
-2. Otevřete příkazový řádek správce. Chcete-li otevřít příkazový řádek správce, postupujte takto:
-   * Na **spustit** nabídky, klikněte na tlačítko **spustit** (Start + R).
+2. Otevřete příkazový řádek správce. Chcete-li otevřít příkazový řádek správce, postupujte podle těchto kroků:
+   * Klikněte na tlačítko **Start** nabídky
    * Typ **cmd**.
-   * Klikněte pravým tlačítkem na **příkazového řádku**a potom klikněte na **spustit jako správce**.
-3. Zadejte úplnou cestu `InstallCleanup.exe` nástroj a předejte kteroukoli přepínač příkazového řádku požadavky. Ve výchozím nastavení cestu nástroje je následující:
+   * Klikněte pravým tlačítkem na **příkazového řádku**a potom klikněte na tlačítko **spustit jako správce**.
+3. Zadejte úplnou cestu `InstallCleanup.exe` nástroj a předat podle toho, která přepínač příkazového řádku vyžadujete. Ve výchozím nastavení je cesta nástroje:
    ```
    C:\Program Files (x86)\Microsoft Visual Studio\Installer\resources\app\layout\InstallCleanup.exe
    ```
 
-Pokud nenajdete `InstallCleanup.exe` v adresáři instalační program Visual Studio – vždy nachází v `%ProgramFiles(x86)%\Microsoft Visual Studio` – postupujte podle pokynů a [instalaci sady Visual Studio](install-visual-studio.md) a když se zobrazí obrazovka výběru pracovního vytížení, zavřete okno a postupujte podle předchozí kroky opakujte.
+Pokud nenajdete `InstallCleanup.exe` v adresáři instalačního programu sady Visual Studio – vždy umístěny v `%ProgramFiles(x86)%\Microsoft Visual Studio` – postupujte podle pokynů a [instalaci sady Visual Studio](install-visual-studio.md) a až se zobrazí na obrazovce pro výběr pracovního vytížení, zavřete okno a postupujte podle předchozích kroků znovu.
 
-## <a name="get-support"></a>Získat podporu
+[!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-V některých případech může problémů. Pokud se nezdaří instalace Visual Studia, najdete v článku [problémy instalace a upgrade řešení potíží s Visual Studio 2017](troubleshooting-installation-issues.md) stránky. Pokud se žádný z kroků pro řešení potíží, kontaktujte nás pomocí živé konverzace pro pomoc s instalací (pouze v angličtině). Podrobnosti najdete v tématu [stránky podpory sady Visual Studio](https://www.visualstudio.com/vs/support/#talktous).
+## <a name="see-also"></a>Viz také:
 
-Tady je několik další možnosti podpory:
-
-* Můžete hlášení problémů produktu pro nás prostřednictvím [nahlásit problém](../ide/how-to-report-a-problem-with-visual-studio-2017.md) nástroj, který se zobrazí v instalačním programu Visual Studio i v integrovaném vývojovém prostředí sady Visual Studio.
-* Návrh produktu s námi můžete sdílet na [UserVoice](https://visualstudio.uservoice.com/forums/121579).
-* Můžete sledovat problémy produktu a najít v odpovědi [Visual Studio Community vývojáře](https://developercommunity.visualstudio.com/).
-* Můžete také použít s námi a jinými vývojáři Visual Studio prostřednictvím [Visual Studio konverzace v komunitě Gitter](https://gitter.im/Microsoft/VisualStudio). (Tato možnost vyžaduje [Githubu](https://github.com/) účtu.)
-
-## <a name="see-also"></a>Viz také
-
-* [Nainstalovat Visual Studio 2017](install-visual-studio.md)
+* [Instalace sady Visual Studio 2017](install-visual-studio.md)
 * [Update Visual Studio 2017](update-visual-studio.md)
-* [Upravit Visual Studio 2017](modify-visual-studio.md)
-* [Odinstalace Visual Studio 2017](uninstall-visual-studio.md)
+* [Úpravy sady Visual Studio 2017](modify-visual-studio.md)
+* [Odinstalace sady Visual Studio 2017](uninstall-visual-studio.md)

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31144434"
 ---
 # <a name="templategroupid-element-visual-studio-templates"></a>TemplateGroupID – element (šablony sady Visual Studio)
 Určuje, jaký druh projektu šablony položek se zobrazí v. Tento element je důležité, když [ShowByDefault (šablony sady Visual Studio)](../extensibility/showbydefault-visual-studio-templates.md) je nastaven na `false`. Když [ShowByDefault (šablony sady Visual Studio)](../extensibility/showbydefault-visual-studio-templates.md) je nastaven na `true`, bude k dispozici ve všech typech projektů, šablony položky.  
@@ -58,7 +59,7 @@ Určuje, jaký druh projektu šablony položek se zobrazí v. Tento element je d
 ## <a name="remarks"></a>Poznámky  
  `TemplateGroupID` je element.  
   
- Hodnota `TemplateGroupID` element se používá spolu s registrace systému projektu (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\*\<číslo verze >*\Projects\\) Filtr šablon, které se zobrazují v **přidat novou položku** dialogové okno.  
+ Hodnota `TemplateGroupID` element se používá spolu s registrace systému projektu (HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\\*\<číslo verze >* \Projects\\) Filtr šablon, které se zobrazují v **přidat novou položku** dialogové okno.  
   
 |Hodnota Visual C++|Význam|  
 |------------------------|-------------|  

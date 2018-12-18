@@ -1,5 +1,5 @@
 ---
-title: Createnewfolder – Element (šablony sady Visual Studio) | Microsoft Docs
+title: Createnewfolder – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,16 +15,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0897a5fdd160abf42e28ba6f36755822172fa743
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 77a67f69db12f5b651be45380e46e437ecc8bf3c
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39232677"
 ---
-# <a name="createnewfolder-element-visual-studio-templates"></a>CreateNewFolder – element (šablony sady Visual Studio)
-Určuje, jestli se má zkontrolovat, že cílový adresář, kde má být vytvořen projekt neexistuje. Pokud adresář neexistuje, lze vytvořit nový adresář pro projekt. Toto nastavení je obvykle přepsat `NewProjectRequiresNewFolder(VsTemplate)` příznak registru (`HKEY_LOCAL_MACHINE/SOFTWARE(/Wow6432Node)/Microsoft/VisualStudio/<version number>/Projects/<project GUID>`), všechny běžné typy projektů použít k určení, zda se k vytvoření nového projektu do nového adresáře.  
+# <a name="createnewfolder-element-visual-studio-templates"></a>Createnewfolder – element (šablony sady Visual Studio)
+Určuje, jestli se má zkontrolovat, že cílový adresář, ve kterém se má vytvořit projekt neexistuje. Pokud adresář neexistuje, lze vytvořit nový adresář pro projekt. Toto nastavení je obvykle přepsat `NewProjectRequiresNewFolder(VsTemplate)` příznak registru (`HKEY_LOCAL_MACHINE/SOFTWARE(/Wow6432Node)/Microsoft/VisualStudio/<version number>/Projects/<project GUID>`), že všechny běžné typy projektů použít k určení, zda chcete vytvořit nový projekt v novém adresáři.  
   
- \<VSTemplate >  
+ \<Vstemplate – >  
  \<TemplateData >  
  \<Createnewfolder – >  
   
@@ -45,27 +46,27 @@ Určuje, jestli se má zkontrolovat, že cílový adresář, kde má být vytvo�
 ### <a name="attributes"></a>Atributy  
  Žádné  
   
-### <a name="child-elements"></a>Podřízené elementy  
+### <a name="child-elements"></a>Podřízené prvky  
  Žádné  
   
-### <a name="parent-elements"></a>Nadřazené elementy  
+### <a name="parent-elements"></a>Nadřazené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Rozděluje šablonu a definuje, jak se zobrazuje v buď **nový projekt** nebo **přidat novou položku** dialogové okno.|  
+|[TemplateData –](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Rozděluje šablonu a definuje, jak se zobrazuje **nový projekt** nebo **přidat novou položku** dialogové okno.|  
   
 ## <a name="text-value"></a>Textová hodnota  
  Je vyžadována textová hodnota.  
   
- Text musí být buď `true` nebo `false`, která udává, jestli by měl být vytvořena nová složka kontejneru při vytváření projektu ze šablony.  
+ Text musí být buď `true` nebo `false`, která udává, zda je či není by měla být vytvořena nová složka kontejneru při vytvoření projektu ze šablony.  
   
 ## <a name="remarks"></a>Poznámky  
- `CreateNewFolder` je volitelný element. Výchozí hodnota je `true`.  
+ `CreateNewFolder` je volitelný prvek. Výchozí hodnota je `true`.  
   
- Hodnota zadaná v `CreateNewFolder` element je pouze berou v úvahu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] pokud ji podporuje základní systému projektu.  
+ Hodnota zadaná v `CreateNewFolder` element pouze kompilátorem respektovány [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Pokud podkladový systém projektu podporuje.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad kódu určuje nebude při vytváření projektu ze šablony vytvořit novou složku.  
+ Následující příklad kódu určuje nechcete vytvořit novou složku, pokud je projekt vytvořen z šablony.  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  
@@ -92,6 +93,6 @@ Určuje, jestli se má zkontrolovat, že cílový adresář, kde má být vytvo�
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
+## <a name="see-also"></a>Viz také:  
+ [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)   
  [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

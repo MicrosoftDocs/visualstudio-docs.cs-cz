@@ -1,5 +1,5 @@
 ---
-title: PENDING_BP_STATE_INFO | Microsoft Docs
+title: PENDING_BP_STATE_INFO | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a4bf5f77ae24d83a0c0874d2cd03d1f5abbc0e2f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 98c815c5f92930c3877e78ab27934b9abe199cef
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49947820"
 ---
 # <a name="pendingbpstateinfo"></a>PENDING_BP_STATE_INFO
-Obsahuje informace o stavu zarážek, který je připraven vytvořit vazbu na umístění kódu.  
+Obsahuje informace o stavu, který je připravený k připojení k umístění kódu zarážku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,13 +43,13 @@ public struct PENDING_BP_STATE_INFO {
   
 ## <a name="members"></a>Členové  
  state  
- Hodnota z [PENDING_BP_STATE](../../../extensibility/debugger/reference/pending-bp-state.md) výčet, který určuje stav Čeká na zarážek.  
+ Hodnota z [PENDING_BP_STATE](../../../extensibility/debugger/reference/pending-bp-state.md) výčet, který určuje stav čekající zarážka.  
   
  příznaky  
- Kombinace příznaků z [PENDING_BP_STATE_FLAGS](../../../extensibility/debugger/reference/pending-bp-state-flags.md) výčet, který určuje, zda je virtualizované zarážku.  
+ Kombinace příznaků z [PENDING_BP_STATE_FLAGS](../../../extensibility/debugger/reference/pending-bp-state-flags.md) výčet, který určuje, zda je virtualizovaný zarážku.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je předána [GetState](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getstate.md) metoda, kde je vyplněna.  
+ Tato struktura je předán [GetState](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-getstate.md) metody, kde je vyplněna.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

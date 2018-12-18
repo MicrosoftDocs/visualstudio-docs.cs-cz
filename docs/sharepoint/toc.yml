@@ -1,0 +1,382 @@
+items:
+- name: Vytváření řešení pro SharePoint
+  href: create-sharepoint-solutions.md
+  items:
+  - name: Začínáme s vývojem pro SharePoint
+    href: getting-started-sharepoint-development-in-visual-studio.md
+    items:
+    - name: Další informace o chybách služby SharePoint
+      href: additional-information-for-sharepoint-errors.md
+  - name: Vývoj řešení služby SharePoint
+    href: developing-sharepoint-solutions.md
+    items:
+    - name: Šablony projektů a položek projektů služby SharePoint
+      href: sharepoint-project-and-project-item-templates.md
+    - name: Přidání položek do sharepointového projektu
+      href: how-to-add-items-to-a-sharepoint-project.md
+    - name: Vytváření sloupců webu, typů obsahu a seznamů pro službu SharePoint
+      href: creating-site-columns-content-types-and-lists-for-sharepoint.md
+      items:
+      - name: 'Návod: Vytvoření sloupce webu, typu obsahu a seznamu pro službu SharePoint'
+        href: walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md
+    - name: Vytvoření přijímače událostí
+      href: how-to-create-an-event-receiver.md
+    - name: Vytvoření přijímače událostí pro specifickou instanci seznamu
+      href: how-to-create-an-event-receiver-for-a-specific-list-instance.md
+    - name: Vytváření řešení pracovního postupu služby SharePoint
+      href: creating-sharepoint-workflow-solutions.md
+      items:
+      - name: Podpora formulářů v produktu Workflows
+        href: form-support-in-workflows.md
+      - name: 'Návod: Vytváření a ladění řešení pracovního postupu služby SharePoint'
+        href: walkthrough-creating-and-debugging-a-sharepoint-workflow-solution.md
+      - name: 'Návod: Vytvoření pracovního postupu pomocí formulářů přidružení a inicializace'
+        href: walkthrough-creating-a-workflow-with-association-and-initiation-forms.md
+      - name: 'Návod: Přidání stránky aplikace do pracovního postupu'
+        href: walkthrough-add-an-application-page-to-a-workflow.md
+      - name: 'Návod: Vytvoření vlastní aktivity pracovního postupu na webu'
+        href: walkthrough-create-a-custom-site-workflow-activity.md
+      - name: 'Návod: Import opakovaně použitelného pracovního postupu návrháře služby SharePoint do sady Visual Studio'
+        href: walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio.md
+    - name: Vytváření stránek pro službu SharePoint
+      href: creating-pages-for-sharepoint.md
+      items:
+      - name: Vytváření stránek aplikací pro službu SharePoint
+        href: creating-application-pages-for-sharepoint.md
+      - name: Vytvoření stránky aplikace
+        href: how-to-create-an-application-page.md
+      - name: 'Návod: Vytvoření stránky aplikace služby SharePoint'
+        href: walkthrough-creating-a-sharepoint-application-page.md
+    - name: Vytváření webových částí pro službu SharePoint
+      href: creating-web-parts-for-sharepoint.md
+      items:
+      - name: Vytvoření webové části SharePointu
+        href: how-to-create-a-sharepoint-web-part.md
+      - name: Vytvoření webové části SharePointu pomocí návrháře
+        href: how-to-create-a-sharepoint-web-part-by-using-a-designer.md
+      - name: 'Návod: Vytvoření webové části pro službu SharePoint'
+        href: walkthrough-creating-a-web-part-for-sharepoint.md
+      - name: 'Návod: Vytvoření webové části pro službu SharePoint pomocí návrháře'
+        href: walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md
+      - name: 'Postupy: Vytvoření webové části Silverlight, která zobrazuje data OData pro SharePoint'
+        href: walkthrough-creating-a-silverlight-web-part-that-displays-odata-for-sharepoint.md
+    - name: Vytváření opakovaně použitelných ovládacích prvků pro webové části nebo stránky aplikací
+      href: creating-reusable-controls-for-web-parts-or-application-pages.md
+      items:
+      - name: Vytvoření uživatelského ovládacího prvku pro stránku aplikace nebo webovou část SharePointu
+        href: how-to-create-a-user-control-for-a-sharepoint-application-page-or-web-part.md
+    - name: Integrace obchodních dat do služby SharePoint
+      href: integrating-business-data-into-sharepoint.md
+      items:
+      - name: Vytvoření modelu připojení obchodních dat
+        href: creating-a-business-data-connectivity-model.md
+        items:
+        - name: Vytvoření modelu služby BDC
+          href: how-to-create-a-bdc-model.md
+        - name: Přidání stávajícího souboru modelu služby BDC do sharepointového projektu
+          href: how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project.md
+        - name: Určení lokalizovaných názvů, vlastností a oprávnění pomocí souboru prostředků
+          href: how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions.md
+        - name: Zahrnutí vlastního sestavení ve funkci služby BDC
+          href: how-to-include-a-custom-assembly-in-a-bdc-feature.md
+      - name: Navrhování modelu připojení obchodních dat
+        href: designing-a-business-data-connectivity-model.md
+        items:
+        - name: Přehled nástrojů pro navrhování modelů služby BDC
+          href: bdc-model-design-tools-overview.md
+        - name: Přidání entity do modelu
+          href: how-to-add-an-entity-to-a-model.md
+        - name: Přidání vyhledávací metody
+          href: how-to-add-a-finder-method.md
+        - name: Přidání konkrétní vyhledávací metody
+          href: how-to-add-a-specific-finder-method.md
+        - name: Přidání metody vytvoření
+          href: how-to-add-a-creator-method.md
+        - name: Přidání metody odstranění
+          href: how-to-add-a-deleter-method.md
+        - name: Přidání aktualizační metody
+          href: how-to-add-an-updater-method.md
+        - name: Přidání parametru do metody
+          href: how-to-add-a-parameter-to-a-method.md
+        - name: Definování deskriptoru typu pro parametr
+          href: how-to-define-the-type-descriptor-of-a-parameter.md
+        - name: Definování instance metody
+          href: how-to-define-a-method-instance.md
+        - name: Přidání uživatelské vlastnosti
+          href: how-to-add-a-custom-property.md
+        - name: Přidání deskriptoru filtru do vyhledávací metody
+          href: how-to-add-a-filter-descriptor-to-a-finder-method.md
+        - name: Vytváření přidružení mezi entitami
+          href: creating-an-association-between-entities.md
+        - name: Vytvoření přidružení mezi entitami
+          href: how-to-create-an-association-between-entities.md
+        - name: 'Návod: Vytvoření externího seznamu ve službě SharePoint s použitím obchodních dat'
+          href: walkthrough-creating-an-external-list-in-sharepoint-by-using-business-data.md
+    - name: Vytváření definic webu pro službu SharePoint
+      href: creating-site-definitions-for-sharepoint.md
+      items:
+      - name: 'Postupy: Vytvoření základního projektu definice webu'
+        href: walkthrough-create-a-basic-site-definition-project.md
+    - name: Import položek z existující stránky SharePoint
+      href: importing-items-from-an-existing-sharepoint-site.md
+      items:
+      - name: 'Návod: Import položek z existující stránky SharePoint'
+        href: walkthrough-import-items-from-an-existing-sharepoint-site.md
+      - name: Pokyny pro import opakovaně použitelných pracovních postupů
+        href: guidelines-for-importing-reusable-workflows.md
+      - name: Import stránky předlohy nebo motivu
+        href: how-to-import-a-master-page-or-theme.md
+      - name: 'Návod: Import vlastní stránky předlohy a stránky webu s obrázkem'
+        href: walkthrough-import-a-custom-master-page-and-site-page-with-an-image.md
+    - name: Vložení souborů do řešení pomocí modulů
+      href: using-modules-to-include-files-in-the-solution.md
+      items:
+      - name: Zahrnutí souborů pomocí modulu
+        href: how-to-include-files-by-using-a-module.md
+    - name: Procházení připojení služby SharePoint pomocí průzkumníka serveru
+      href: browsing-sharepoint-connections-using-server-explorer.md
+      items:
+      - name: Přidání nebo odebrání připojení SharePointu
+        href: how-to-add-or-remove-sharepoint-connections.md
+    - name: Poskytování informací o balení a nasazení v položkách projektu
+      href: providing-packaging-and-deployment-information-in-project-items.md
+      items:
+      - name: Označení ovládacích prvků jako bezpečných
+        href: how-to-mark-controls-as-safe-controls.md
+      - name: Přidání odkazu na výstup projektu
+        href: how-to-add-a-project-output-reference.md
+    - name: Přidání a odebrání mapovaných složek
+      href: how-to-add-and-remove-mapped-folders.md
+    - name: Aspekty řešení v izolovaném prostoru
+      href: sandboxed-solution-considerations.md
+    - name: Zabezpečení pro řešení služby SharePoint
+      href: security-for-sharepoint-solutions.md
+    - name: Dialogové okno pro výběr adresy URL
+      href: url-picker-dialog-box-sharepoint-development-in-visual-studio.md
+  - name: Lokalizace řešení služby SharePoint
+    href: localizing-sharepoint-solutions.md
+    items:
+    - name: Přidání souboru prostředků
+      href: how-to-add-a-resource-file.md
+    - name: Lokalizace funkce
+      href: how-to-localize-a-feature.md
+    - name: Lokalizace značky ASPX
+      href: how-to-localize-aspx-markup.md
+    - name: Lokalizace kódu
+      href: how-to-localize-code.md
+  - name: Sestavování a ladění řešení služby SharePoint
+    href: building-and-debugging-sharepoint-solutions.md
+    items:
+    - name: Sestavení řešení SharePointu
+      href: how-to-build-sharepoint-solutions.md
+    - name: Ladění řešení služby SharePoint
+      href: debugging-sharepoint-solutions.md
+    - name: Zobrazení a ladění kódu pro SharePoint
+      href: verifying-and-debugging-sharepoint-code.md
+      items:
+      - name: 'Postupy: Ladění aplikace SharePoint s použitím technologie IntelliTrace'
+        href: walkthrough-debugging-a-sharepoint-application-by-using-intellitrace.md
+    - name: Profilace výkonu aplikací služby SharePoint
+      href: profiling-the-performance-of-sharepoint-applications.md
+      items:
+      - name: 'Postupy: Profilace aplikace SharePoint'
+        href: walkthrough-profiling-a-sharepoint-application.md
+    - name: Rozdíly mezi řešeními v izolovaném prostoru a ve farmách
+      href: differences-between-sandboxed-and-farm-solutions.md
+    - name: Vlastnosti nástroje MSBuild podporované službou SharePoint
+      href: msbuild-properties-supported-by-sharepoint.md
+    - name: Řešení potíží s řešeními služby SharePoint
+      href: troubleshooting-sharepoint-solutions.md
+  - name: Balení a nasazení řešení služby SharePoint
+    href: packaging-and-deploying-sharepoint-solutions.md
+    items:
+    - name: Vytváření funkcí služby SharePoint
+      href: creating-sharepoint-features.md
+      items:
+      - name: Přidání funkce do řešení SharePointu
+        href: how-to-add-a-feature-to-sharepoint-solutions.md
+      - name: Přizpůsobení funkce SharePointu
+        href: how-to-customize-a-sharepoint-feature.md
+      - name: Přidání a odebrání položek z funkcí SharePointu
+        href: how-to-add-and-remove-items-to-sharepoint-features.md
+      - name: Přidání a odebrání závislostí funkce
+        href: how-to-add-and-remove-feature-dependencies.md
+      - name: 'Návod: Přidání přijímačů událostí funkce'
+        href: walkthrough-add-feature-event-receivers.md
+    - name: Vytváření balíčků řešení služby SharePoint
+      href: creating-sharepoint-solution-packages.md
+      items:
+      - name: Přizpůsobení balíčku řešení SharePointu
+        href: how-to-customize-a-sharepoint-solution-package.md
+      - name: Přidání nebo odebrání funkcí a položek z balíčku pomocí návrháře balíčků
+        href: how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer.md
+      - name: Přidání nebo odebrání funkcí a položek z balíčku pomocí průzkumníku balíčků
+        href: how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer.md
+      - name: Přidání a odebrání dalších sestavení
+        href: how-to-add-and-remove-additional-assemblies.md
+      - name: Vytvoření balíčku řešení SharePointu pomocí úloh nástroje MSBuild
+        href: how-to-create-a-sharepoint-solution-package-by-using-msbuild-tasks.md
+      - name: Přizpůsobení balíčku řešení SharePointu pomocí cílů nástroje MSBuild
+        href: how-to-customize-a-sharepoint-solution-package-by-using-msbuild-targets.md
+    - name: Nasazení, publikování a upgradování balíčků řešení služby SharePoint
+      href: deploying-publishing-and-upgrading-sharepoint-solution-packages.md
+      items:
+      - name: Nasazení a publikování řešení SharePointu na lokálním sharepointovém webu
+        href: how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site.md
+      - name: Nasazení, publikování a upgrade řešení SharePointu na vzdáleném serveru
+        href: how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server.md
+      - name: Nastavení příkazů nasazení SharePointu
+        href: how-to-set-sharepoint-deployment-commands.md
+      - name: Úprava konfigurace nasazení SharePointu
+        href: how-to-edit-a-sharepoint-deployment-configuration.md
+      - name: 'Postupy: Nasazení definice seznamu úloh projektu'
+        href: walkthrough-deploying-a-project-task-list-definition.md
+    - name: Nahraditelné parametry
+      href: replaceable-parameters.md
+    - name: Řešení potíží s balením a nasazením služby SharePoint
+      href: troubleshooting-sharepoint-packaging-and-deployment.md
+    - name: Sloučení XML do manifestů funkce a balíku
+      href: merging-xml-in-feature-and-package-manifests.md
+  - name: Ukázky a návody vývoje pro SharePoint
+    href: sharepoint-development-samples-and-walkthroughs.md
+    items:
+    - name: Ukázky vývoje pro SharePoint
+      href: sharepoint-development-samples.md
+    - name: Návody na vývoj pro SharePoint
+      href: sharepoint-development-walkthroughs.md
+  - name: Rozšíření nástrojů SharePoint v aplikaci Visual Studio
+    href: extending-the-sharepoint-tools-in-visual-studio.md
+    items:
+    - name: Přehled modelu programování rozšíření nástrojů služby SharePoint
+      href: overview-of-the-programming-model-of-sharepoint-tools-extensions.md
+    - name: Rozšíření systému projektu služby SharePoint
+      href: extending-the-sharepoint-project-system.md
+      items:
+      - name: Definování vlastních typů položek projektu služby SharePoint
+        href: defining-custom-sharepoint-project-item-types.md
+        items:
+        - name: Definování typu položky projektu SharePointu
+          href: how-to-define-a-sharepoint-project-item-type.md
+        - name: Přidání položky místní nabídky do vlastního typu položky projektu SharePointu
+          href: how-to-add-a-shortcut-menu-item-to-a-custom-sharepoint-project-item-type.md
+        - name: Přidání vlastnosti do vlastního typu položky projektu SharePointu
+          href: how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md
+        - name: Vytváření šablon položek a projektů pro položky projektu služby SharePoint
+          href: creating-item-templates-and-project-templates-for-sharepoint-project-items.md
+        - name: Vytvoření vlastní položky projektu akce pomocí šablony položky, část 1
+          href: walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md
+        - name: 'Návod: Vytvoření vlastní položky projektu akce pomocí šablony položky, část 2'
+          href: walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md
+        - name: 'Návod: Vytvoření položky projektu sloupce webu pomocí šablony projektu, část 1'
+          href: walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md
+        - name: Vytvoření položky projektu sloupce webu pomocí šablony projektu, část 2
+          href: walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md
+      - name: Rozšíření položek projektu služby SharePoint
+        href: extending-sharepoint-project-items.md
+        items:
+        - name: Vytváření rozšíření položky projektu SharePointu
+          href: how-to-create-a-sharepoint-project-item-extension.md
+        - name: Přidání položky místní nabídky do rozšíření položky projektu SharePointu
+          href: how-to-add-a-shortcut-menu-item-to-a-sharepoint-project-item-extension.md
+        - name: Přidání vlastnosti do rozšíření položky projektu SharePointu
+          href: how-to-add-a-property-to-a-sharepoint-project-item-extension.md
+        - name: 'Návod: Rozšiřování typu položky projektu SharePoint'
+          href: walkthrough-extending-a-sharepoint-project-item-type.md
+      - name: Rozšíření projektů SharePoint
+        href: extending-sharepoint-projects.md
+        items:
+        - name: Vytváření rozšíření položky projektu SharePointu
+          href: how-to-create-a-sharepoint-project-extension.md
+        - name: Přidání položky místní nabídky do projektů SharePointu
+          href: how-to-add-a-shortcut-menu-item-to-sharepoint-projects.md
+        - name: Přidání vlastnosti do projektů SharePointu
+          href: how-to-add-a-property-to-sharepoint-projects.md
+        - name: 'Návod: Vytváření rozšíření projektu SharePoint'
+          href: walkthrough-creating-a-sharepoint-project-extension.md
+      - name: Rozšíření balení a nasazení SharePoint
+        href: extending-sharepoint-packaging-and-deployment.md
+        items:
+        - name: Spuštění kódu při provádění kroků nasazení
+          href: how-to-run-code-when-deployment-steps-are-executed.md
+        - name: Spuštění kódu, pokud je projekt SharePointu nasazen nebo stažen
+          href: how-to-run-code-when-a-sharepoint-project-is-deployed-or-retracted.md
+        - name: Zpracování konfliktů nasazení
+          href: how-to-handle-deployment-conflicts.md
+        - name: 'Návod: Vytvoření vlastního kroku nasazení pro projekty SharePoint'
+          href: walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md
+        - name: Vytvoření vlastní funkce a pravidel ověřování balíčku pro řešení SharePointu
+          href: how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md
+      - name: Uložení dat do rozšíření systému projektu služby SharePoint
+        href: saving-data-in-extensions-of-the-sharepoint-project-system.md
+      - name: Převod mezi systémovými typy projektů SharePoint a jinými typy projektů Visual Studio
+        href: converting-between-sharepoint-project-system-types-and-other-visual-studio-project-types.md
+    - name: Rozšíření uzlu připojení služby SharePoint v průzkumníku serveru
+      href: extending-the-sharepoint-connections-node-in-server-explorer.md
+      items:
+      - name: Rozšíření uzlu SharePointu v Průzkumníku serveru
+        href: how-to-extend-a-sharepoint-node-in-server-explorer.md
+      - name: Přidání vlastního uzlu SharePointu do Průzkumníka serveru
+        href: how-to-add-a-custom-sharepoint-node-to-server-explorer.md
+      - name: Získání dat pro předdefinovaný uzel SharePointu v Průzkumníku serveru
+        href: how-to-get-data-for-a-built-in-sharepoint-node-in-server-explorer.md
+      - name: 'Návod: Rozšíření průzkumníka serveru pro zobrazení částí webu'
+        href: walkthrough-extending-server-explorer-to-display-web-parts.md
+    - name: Programování konceptů a funkcí pro rozšíření nástrojů SharePoint
+      href: programming-concepts-and-features-for-sharepoint-tools-extensions.md
+      items:
+      - name: Volání do objektových modelů služby SharePoint
+        href: calling-into-the-sharepoint-object-models.md
+        items:
+        - name: Vytvoření příkazu SharePointu
+          href: how-to-create-a-sharepoint-command.md
+        - name: Provedení příkazu SharePointu
+          href: how-to-execute-a-sharepoint-command.md
+        - name: 'Návod: Volání do modelu klientského objektu služby SharePoint v rozšíření průzkumníka serveru'
+          href: walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md
+      - name: Použití služby projektu služby SharePoint
+        href: using-the-sharepoint-project-service.md
+        items:
+        - name: Načtení služby projektu SharePointu
+          href: how-to-retrieve-the-sharepoint-project-service.md
+      - name: Přidružení vlastních dat k rozšíření nástrojů služby SharePoint
+        href: associating-custom-data-with-sharepoint-tools-extensions.md
+    - name: Ladění rozšíření pro nástroje služby SharePoint v aplikaci Visual Studio
+      href: debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md
+    - name: Nasazování rozšíření pro nástroje služby SharePoint v aplikaci Visual Studio
+      href: deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md
+    - name: Odkaz
+      href: reference-sharepoint-tools-extensibility.md
+      items:
+      - name: Referenční dokumentace schématu položek projektu SharePoint
+        href: sharepoint-project-item-schema-reference.md
+        items:
+        - name: ExtensionData – element
+          href: extensiondata-element.md
+        - name: ExtensionDataItem – element
+          href: extensiondataitem-element.md
+        - name: FeatureProperties – element
+          href: featureproperties-element.md
+        - name: FeatureProperty – element
+          href: featureproperty-element.md
+        - name: Element Soubory
+          href: files-element.md
+        - name: ProjectItem – element
+          href: projectitem-element.md
+        - name: ProjectItemFile – element
+          href: projectitemfile-element.md
+        - name: ProjectItemFolder – element
+          href: projectitemfolder-element.md
+        - name: ProjectOutputFile – element
+          href: projectoutputfile-element.md
+        - name: SafeControl – element
+          href: safecontrol-element.md
+        - name: SafeControls – element
+          href: safecontrols-element.md
+      - name: Referenční dokumentace ke knihovně API
+        href: api-reference-sharepoint-tools-extensibility.md
+ms.openlocfilehash: 66550d094a6b411cc3e06c2f9f6b5bfb5b9aa0e4
+ms.sourcegitcommit: 55f7ce2d5d2e458e35c45787f1935b237ee5c9f8
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42635213"

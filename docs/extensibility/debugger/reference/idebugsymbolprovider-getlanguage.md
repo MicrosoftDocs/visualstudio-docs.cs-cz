@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetLanguage | Microsoft Docs
+title: IDebugSymbolProvider::GetLanguage | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d1dfee6c4b05325b170efea314ccbc814b0ebc56
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4987074e63f26a91d890066b3b74240989745197
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49947950"
 ---
 # <a name="idebugsymbolprovidergetlanguage"></a>IDebugSymbolProvider::GetLanguage
-Tato metoda získá jazyk, který byl použit pro kompilaci kódu na adrese ladění.  
+Tato metoda načte jazyk, ve kterém byla použita pro kompilaci kódu na adrese ladění.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,19 +45,19 @@ int GetLanguage(
   
 #### <a name="parameters"></a>Parametry  
  `pAddress`  
- [v] Objekt adresu reprezentována [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) rozhraní.  
+ [in] Adresa objektu reprezentována [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) rozhraní.  
   
  `pguidLanguage`  
- [out] Vrátí `GUID` který určuje jazyk.  
+ [out] Vrátí `GUID` , který určuje jazyk.  
   
  `pguidLanguageVendor`  
  [out] Vrátí `GUID` , který určuje jazyk dodavatele.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Modul ladění volá tuto metodu, pokud chcete získat informace, které potřebuje k výběru vyhodnocovací filtr výrazů správné.  
+ Ladicí stroj volá tuto metodu za účelem získání informací, že je potřeba vybrat vyhodnocovací filtr výrazů správné.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   

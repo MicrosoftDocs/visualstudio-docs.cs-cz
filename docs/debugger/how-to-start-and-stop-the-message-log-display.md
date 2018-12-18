@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31481071"
 ---
 # <a name="how-to-start-and-stop-the-message-log-display"></a>Postupy: Spuštění a zastavení displeje protokolu zpráv
 Když [zobrazení zpráv](../debugger/messages-view.md) okno je aktivní, **spustit protokolování** nebo **zastavení protokolování** možnost se zobrazí na nástroje Spy ++ **zprávy** nabídce a odpovídající **spustit protokolování** nebo **zastavení protokolování** stane aktivní tlačítko panelu nástrojů.  

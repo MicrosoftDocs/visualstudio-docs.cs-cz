@@ -1,5 +1,5 @@
 ---
-title: ASSEMBLYLOCRESOLUTION | Microsoft Docs
+title: ASSEMBLYLOCRESOLUTION | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 331df62dabcdb919f2d8489de02ab7f2f815ef40
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 03d05cf8c224a24d143feb3d22df4357d623d308
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49933206"
 ---
 # <a name="assemblylocresolution"></a>ASSEMBLYLOCRESOLUTION
-Určuje, kde se nachází sestavení.  
+Určuje, kde je umístěné sestavení.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,18 +51,18 @@ public enum enum_ASSEMBLYLOCRESOLUTION {
  Sestavení se nachází v aktuálním oboru názvů.  
   
  ALR_USERDIR  
- Sestavení se nachází v adresáři uživatele.  
+ Sestavení je umístěn v adresáři uživatele.  
   
  ALR_SHAREDDIR  
  Sestavení je umístěn ve sdíleném adresáři.  
   
  ALR_REMOTEDIR  
- Sestavení se nachází v vzdáleného adresáře.  
+ Sestavení je umístěno do vzdáleného adresáře.  
   
 ## <a name="remarks"></a>Poznámky  
  Tyto hodnoty jsou vráceny prostřednictvím [ResolveAssemblyRef](../../../extensibility/debugger/reference/ipropertyproxyeeside-resolveassemblyref.md) a [GetManagedViewerCreationData](../../../extensibility/debugger/reference/ipropertyproxyeeside-getmanagedviewercreationdata.md) metody.  
   
- Tyto hodnoty mohou být kombinovány s `OR` operaci.  
+ Tyto hodnoty je možné kombinovat s `OR` operace.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

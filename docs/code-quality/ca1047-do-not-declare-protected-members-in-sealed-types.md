@@ -1,6 +1,7 @@
 ---
 title: 'CA1047: Nedeklarujte chráněné členy v zapečetěných typech'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,15 +14,20 @@ ms.assetid: 829033b5-a9d8-4f26-a719-45494c9dd035
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: f25af4cf9ddd86bd28b5909242ab55f35a467438
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a19e17c200f36d3edb1cadbab4d573f6a1d3cc0a
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45550057"
 ---
 # <a name="ca1047-do-not-declare-protected-members-in-sealed-types"></a>CA1047: Nedeklarujte chráněné členy v zapečetěných typech
+
 |||
 |-|-|
 |TypeName|DoNotDeclareProtectedMembersInSealedTypes|
@@ -30,21 +36,21 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
- Veřejné typ je `sealed` (`NotInheritable` v jazyce Visual basic) a deklaruje chráněného člena nebo chráněného vnořené typy. Toto pravidlo nevytváří sestavu porušení pro <xref:System.Object.Finalize%2A> metody, které je třeba postupovat podle tohoto vzoru.
+ Je veřejný typ `sealed` (`NotInheritable` v jazyce Visual basic) a deklaruje chráněný člen nebo chráněné vnořeného typu. Toto pravidlo nevytváří sestavu porušení pro <xref:System.Object.Finalize%2A> metody, které musí postupovat podle tohoto vzoru.
 
 ## <a name="rule-description"></a>Popis pravidla
- Typy deklarují chráněné členy, aby k nim odvozené typy mohly přistupovat nebo je přepisovat. Podle definice nemůže Zdědit z zapečetěné typu, což znamená, že chráněný v zapečetěných typech metody nelze volat.
+ Typy deklarují chráněné členy, aby k nim odvozené typy mohly přistupovat nebo je přepisovat. Podle definice nelze dědit ze zapečetěného typu, což znamená, že chráněné metody zapečetěných typů nelze volat.
 
- Kompilátor jazyka C# vydá upozornění pro tuto chybu.
+ Kompilátor jazyka C# vyvolá upozornění pro tuto chybu.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení toto pravidlo, změnit úroveň přístupu tohoto člena do privátního, případně zajistěte typ zděditelné.
+ Chcete-li opravit porušení tohoto pravidla, změnit úroveň přístupu členu na soukromý nebo učiňte typ odvoditelný.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Nepotlačujte upozornění na toto pravidlo. Ponechat typ v jejím aktuálním stavu může způsobit problémy s údržbou a neposkytuje žádné výhody.
+ Nepotlačujte upozornění na toto pravidlo. Opuštění typu v jejím aktuálním stavu může způsobit problémy s údržbou a nepřináší žádné výhody.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje typ, který je v rozporu toto pravidlo.
+ Následující příklad ukazuje typ, který porušuje tato pravidla.
 
  [!code-vb[FxCop.Design.SealedNoProtected#1](../code-quality/codesnippet/VisualBasic/ca1047-do-not-declare-protected-members-in-sealed-types_1.vb)]
  [!code-csharp[FxCop.Design.SealedNoProtected#1](../code-quality/codesnippet/CSharp/ca1047-do-not-declare-protected-members-in-sealed-types_1.cs)]

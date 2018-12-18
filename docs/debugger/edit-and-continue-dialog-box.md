@@ -1,5 +1,5 @@
 ---
-title: Upravit a pokračovat – dialogové | Microsoft Docs
+title: Upravit a pokračovat – dialogové okno | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -19,18 +19,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c2b8e9051a127a7338bc5d1ae6bd82b2e65ba3f4
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: e1556897fe3efb2e8b1a4060ff8de20ca159a68d
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44279138"
 ---
 # <a name="edit-and-continue-dialog-box"></a>Dialogové okno Upravit a pokračovat
-(Jenom native) Toto dialogové okno se zobrazí, když upravíte kód při ladění a **upravit a pokračovat** rozpozná, že ho můžete použít změny kódu. Další informace najdete v tématu [upravit a pokračovat](../debugger/edit-and-continue.md).  
+(Pouze nativní) Toto dialogové okno se zobrazí, když se po úpravě kódu během ladění a **upravit a pokračovat** rozpozná, že můžete použít změny kódu. Další informace najdete v tématu [upravit a pokračovat](../debugger/edit-and-continue.md).  
   
- **Nikdy zprávu nezobrazovat toto dialogové okno**  
- Pokud vyberete toto zaškrtávací políčko, **upravit a pokračovat** se použít změny kódu bez předchozího souhlasu v budoucnu. Můžete zapnout toto upozornění znovu přechodem na **možnosti** dialogové okno, otevření **ladění** složku, klikněte na **upravit a pokračovat** stránky a výběr **Vyvolané příkazy ladění** a **dotaz na první**.  
+ **Nikdy nezobrazovat toto dialogové okno**  
+ Pokud vyberete toto zaškrtávací políčko **upravit a pokračovat** provede určité změny kódu bez předchozího souhlasu v budoucnu. Můžete zapnout toto upozornění znovu tak, že přejdete **možnosti** dialogovém okně Otevřít **ladění** složky, kliknutím **upravit a pokračovat** stránku a výběr **Vyvoláno ladicími příkazy** a **zeptejte se mě, nejprve**.  
   
 ## <a name="see-also"></a>Viz také  
  [Zabezpečení ladicího programu](../debugger/debugger-security.md)   
- [Upravit a pokračovat, ladění, dialogové okno Možnosti](http://msdn.microsoft.com/Library/009d225f-ef65-463f-a146-e4c518f86103)
+ [Upravit a pokračovat, ladění, dialogové okno Možnosti](https://msdn.microsoft.com/library/bcew296c.aspx)

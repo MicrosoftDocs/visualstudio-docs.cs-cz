@@ -1,5 +1,5 @@
 ---
-title: Doporučené postupy nástroje MSBuild | Microsoft Docs
+title: Doporučené postupy nástroje MSBuild | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -13,24 +13,25 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a2572e300c666462c5f514452a40f810a349040f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 8f32626f02e0381ab285d1d6ae1b3127022da438
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39078196"
 ---
 # <a name="msbuild-best-practices"></a>Doporučené postupy nástroje MSBuild
-Doporučujeme následující osvědčené postupy pro psaní skriptů MSBuild:  
+Doporučujeme následující osvědčené postupy pro psaní skriptů nástroje MSBuild:  
   
--   Výchozí hodnoty vlastností jsou nejlépe vyřeší pomocí `Condition` atributů a ne pomocí deklarace vlastnosti, jejíž výchozí hodnota je možné přepsat na příkazovém řádku. Operátor  
+-   Výchozí hodnoty vlastností jsou nejlépe odstraníte pomocí `Condition` atribut a ne pomocí deklarace vlastnost, jejíž výchozí hodnota se dá přepsat v příkazovém řádku. Například použít  
   
-     `<MyProperty Condition="'$(MyProperty)' == ''">`  
+```xml
+<MyProperty Condition="'$(MyProperty)' == ''">
+   MyDefaultValue
+</MyProperty>
+```
   
-     `MyDefaultValue`  
+-   Při výběru položek, vyhněte se zástupné znaky. Místo toho zadejte soubory explicitně. To usnadňuje sledování chyb, které mohou nastat při přidání nebo odstranění souborů.  
   
-     `</MyProperty>`  
-  
--   Při výběru položek, vyhněte se zástupné znaky. Místo toho explicitně zadejte soubory. To usnadňuje sledování chyb, které mohou nastat při přidání nebo odstranění souborů.  
-  
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Rozšířené koncepty](../msbuild/msbuild-advanced-concepts.md)

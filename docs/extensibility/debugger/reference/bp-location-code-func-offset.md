@@ -1,5 +1,5 @@
 ---
-title: BP_LOCATION_CODE_FUNC_OFFSET | Microsoft Docs
+title: BP_LOCATION_CODE_FUNC_OFFSET | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6d312824bb88022cba9b58945cb5f3e78c13b837
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9a1828a7cea62893ecddec6d28f44ca6475352dd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49911392"
 ---
 # <a name="bplocationcodefuncoffset"></a>BP_LOCATION_CODE_FUNC_OFFSET
-Popisuje umístění posunu zarážka ve funkci v kódu.  
+Popisuje umístění posunu zarážky ve funkci v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,15 +36,15 @@ typedef struct _BP_LOCATION_CODE_FUNC_OFFSET {
   
 ## <a name="members"></a>Členové  
  `bstrContext`  
- Kontext zarážce, obvykle název metody nebo funkce jako zaznamenané v zásobníku volání.  
+ Kontext k zarážce, obvykle název metody nebo funkce jako zobrazené v zásobníku volání.  
   
  `pFuncPos`  
- [IDebugFunctionPosition2](../../../extensibility/debugger/reference/idebugfunctionposition2.md) objekt, který popisuje název funkce a relativní pozici od začátku funkce.  
+ [IDebugFunctionPosition2](../../../extensibility/debugger/reference/idebugfunctionposition2.md) objekt, který popisuje název funkce a relativní pozice začátku funkce.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je členem skupiny [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) struktura jako součást spojení.  
+ Tato struktura je členem skupiny [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) struktury v rámci sjednocení.  
   
- `pFuncPos` Člen Určuje, kde se má nastavit bod přerušení funkce.  
+ `pFuncPos` Člen označuje, kde nastavit zarážku funkce.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

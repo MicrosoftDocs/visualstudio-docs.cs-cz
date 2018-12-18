@@ -1,5 +1,5 @@
 ---
-title: Idiasession::findinjectedsource – | Microsoft Docs
+title: Idiasession::findinjectedsource – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f9870d1e2d14a2dcbe9f33191e0559a3e0b34f4
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 472e60c10d95e0a1b79f09f0d069172ce33020b8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49819027"
 ---
 # <a name="idiasessionfindinjectedsource"></a>IDiaSession::findInjectedSource
-Načte seznam zdrojů, který se nachází do úložiště symbolů atribut zprostředkovatelé ani jiné součásti procesu kompilace.  
+Načte seznam zdrojů, který je umístěný do úložiště symbolů podle poskytovatele atributu ani jiné součásti procesu kompilace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,14 +34,14 @@ HRESULT findInjectedSource (
 ```  
   
 #### <a name="parameters"></a>Parametry  
- srcFile  
- [v] Název zdrojového souboru, pro které chcete vyhledat.  
+ %{srcfile/  
+ [in] Název zdrojového souboru, který chcete vyhledat.  
   
  ppResult  
  [out] Vrátí [idiaenuminjectedsources –](../../debugger/debug-interface-access/idiaenuminjectedsources.md) objekt, který obsahuje seznam všech vloženého zdroje.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [Idiaenuminjectedsources –](../../debugger/debug-interface-access/idiaenuminjectedsources.md)   

@@ -1,5 +1,5 @@
 ---
-title: AspNetCompiler – úloha pomocí předkompilovat aplikace ASP.NET | Microsoft Docs
+title: Pomocí AspNetCompiler – úloha pro předkompilaci aplikace ASP.NET | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -20,37 +20,38 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: 2f6554a1c29618d8d3373fc3fb8f46f24816531e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 69971e72569dcae1f02f1e2b7988ef15f881fe85
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37945166"
 ---
 # <a name="aspnetcompiler-task"></a>AspNetCompiler – úloha
-`AspNetCompiler` Úloh zabalí aspnet_compiler.exe, nástroj předkompilovat [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikace.  
+`AspNetCompiler` Úkolů zabalí *aspnet_compiler.exe*, nástroj pro předkompilaci [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikací.  
   
 ## <a name="task-parameters"></a>Parametry úlohy  
  Následující tabulka popisuje parametry `AspNetCompiler` úloh.  
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|`AllowPartiallyTrustedCallers`|Volitelné `Boolean` parametr.<br /><br /> Pokud tento parametr je `true`,, sestavení silným názvem bude povolit částečně důvěryhodné volající.|  
-|`Clean`|Volitelné `Boolean` parametr<br /><br /> Pokud tento parametr je `true`, předkompilované aplikace budou vytvořeny vyčistit. Všechny dříve kompilované komponenty bude zopakovat. Výchozí hodnota je `false`. Tento parametr odpovídá **- c** přepínač na aspnet_compiler.exe.|  
-|`Debug`|Volitelné `Boolean` parametr.<br /><br /> Pokud tento parametr je `true`, informace o ladění (. Soubor PDB) jsou vydávány během kompilace. Výchozí hodnota je `false`. Tento parametr odpovídá **-d** přepínač na aspnet_compiler.exe.|  
-|`DelaySign`|Volitelné `Boolean` parametr.<br /><br /> Pokud tento parametr je `true`, sestavení není plně podepsáno při vytvoření.|  
-|`FixedNames`|Volitelné `Boolean` parametr.<br /><br /> Pokud tento parametr je `true`, kompilované sestavení bude mu udělená pevné názvy...|  
-|`Force`|Volitelné `Boolean` parametr<br /><br /> Pokud tento parametr je `true`, úloha přepíše cílový adresář, pokud již existuje. Dojde ke ztrátě stávajícího obsahu. Výchozí hodnota je `false`. Tento parametr odpovídá **-f** přepínač na aspnet_compiler.exe.|  
-|`KeyContainer`|Volitelné `String` parametr.<br /><br /> Určuje kontejner klíče se silným názvem.|  
-|`KeyFile`|Volitelné `String` parametr.<br /><br /> Určuje fyzickou cestu k souboru klíče silným názvem...|  
-|`MetabasePath`|Volitelné `String` parametr.<br /><br /> Určuje úplnou cestu metabáze služby IIS aplikace. Tento parametr nelze kombinovat s `VirtualPath` nebo `PhysicalPath` parametry. Tento parametr odpovídá **-m** přepínač na aspnet_compiler.exe.|  
-|`PhysicalPath`|Volitelné `String` parametr.<br /><br /> Určuje fyzickou cestu, která mají být zkompilovány, do aplikace. Pokud tento parametr chybí, metabáze služby IIS se používá k aplikaci. Tento parametr odpovídá **-p** přepínač na aspnet_compiler.exe.|  
-|`TargetFrameworkMoniker`|Volitelné `String` parametr.<br /><br /> Určuje TargetFrameworkMoniker, která určuje, která verze rozhraní .NET Framework aspnet_compiler.exe by měl použít. Přijímá pouze monikery rozhraní .NET Framework.|  
-|`TargetPath`|Volitelné `String` parametr.<br /><br /> Určuje fyzickou cestu, do kterého je aplikace zkompilovat. Pokud není zadaný, aplikace je předkompilovaných na místě.|  
-|`Updateable`|Volitelné `Boolean` parametr.<br /><br /> Pokud tento parametr je `true`, předkompilované aplikace bude možné aktualizovat.  Výchozí hodnota je `false`. Tento parametr odpovídá **-u** přepínač na aspnet_compiler.exe.|  
-|`VirtualPath`|Volitelné `String` parametr.<br /><br /> Virtuální cesta aplikace, které mají být zkompilovány, do. Pokud `PhysicalPath` zadán, fyzickou cestu slouží k vyhledání aplikace. Jinak hodnota se používá metabáze služby IIS a aplikace se předpokládá, že ve výchozím nastavení lokality. Tento parametr odpovídá **- v** přepínač na aspnet_compiler.exe.|  
+|`AllowPartiallyTrustedCallers`|Volitelné `Boolean` parametru.<br /><br /> Pokud je tento parametr `true`, bude sestavení se silným názvem povolovat částečně důvěryhodné volající.|  
+|`Clean`|Volitelné `Boolean` parametr<br /><br /> Pokud je tento parametr `true`, bude předkompilovaná aplikace bude vytvořen čištění. Všechny již kompilované součásti budou znovu zkompilovány. Výchozí hodnota je `false`. Tento parametr **- c** zapnout *aspnet_compiler.exe*.|  
+|`Debug`|Volitelné `Boolean` parametru.<br /><br /> Pokud je tento parametr `true`, informace o ladění (. Soubor PDB) je vygenerován v průběhu kompilace. Výchozí hodnota je `false`. Tento parametr **-d** zapnout *aspnet_compiler.exe*.|  
+|`DelaySign`|Volitelné `Boolean` parametru.<br /><br /> Pokud je tento parametr `true`, po vytvoření není plně podepsáno sestavení.|  
+|`FixedNames`|Volitelné `Boolean` parametru.<br /><br /> Pokud je tento parametr `true`, nedostanou zkompilovaným sestavením přiděleny pevně určené názvy...|  
+|`Force`|Volitelné `Boolean` parametr<br /><br /> Pokud je tento parametr `true`, úloha se přepsat cílový adresář, pokud již existuje. Existující obsah bude ztracen. Výchozí hodnota je `false`. Tento parametr **-f** zapnout *aspnet_compiler.exe*.|  
+|`KeyContainer`|Volitelné `String` parametru.<br /><br /> Určuje kontejner klíče se silným názvem.|  
+|`KeyFile`|Volitelné `String` parametru.<br /><br /> Určuje fyzickou cestu k souboru klíče silného názvu...|  
+|`MetabasePath`|Volitelné `String` parametru.<br /><br /> Určuje úplnou cestu metabáze služby IIS aplikace. Tento parametr se nedá kombinovat s `VirtualPath` nebo `PhysicalPath` parametry. Tento parametr **-m** zapnout *aspnet_compiler.exe*.|  
+|`PhysicalPath`|Volitelné `String` parametru.<br /><br /> Určuje fyzickou cestu ke kompilaci aplikace. Pokud tento parametr chybí, metabáze služby IIS se používá k vyhledání aplikace. Tento parametr **-p** zapnout *aspnet_compiler.exe*.|  
+|`TargetFrameworkMoniker`|Volitelné `String` parametru.<br /><br /> Určuje TargetFrameworkMoniker určující, která verze rozhraní .NET Framework *aspnet_compiler.exe* by měla sloužit. Přijímá pouze zástupných názvů rozhraní .NET Framework.|  
+|`TargetPath`|Volitelné `String` parametru.<br /><br /> Určuje fyzickou cestu, do kterého bude uložena zkompilovaná aplikace. Pokud není zadán, aplikace je předkompilována místně.|  
+|`Updateable`|Volitelné `Boolean` parametru.<br /><br /> Pokud je tento parametr `true`, bude předkompilovaná aplikace bude možné aktualizovat.  Výchozí hodnota je `false`. Tento parametr **-u** zapnout *aspnet_compiler.exe*.|  
+|`VirtualPath`|Volitelné `String` parametru.<br /><br /> Virtuální cesta aplikace sestavují. Pokud `PhysicalPath` zadán, fyzickou cestu slouží k vyhledání aplikace. V opačném případě je použita metabáze služby IIS a aplikace se předpokládá se, že na výchozím webu. Tento parametr **- v** zapnout *aspnet_compiler.exe*.|  
   
 ## <a name="remarks"></a>Poznámky  
- Kromě výše uvedených parametrů tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.ToolTaskExtension> třída, které dědí z <xref:Microsoft.Build.Utilities.ToolTask> třídy. Seznam těchto dalších parametrech a jejich popisy najdete v tématu [tooltaskextension – základní třída](../msbuild/tooltaskextension-base-class.md).  
+ Kromě výše uvedených parametrů zdědí tento úkol parametry ze <xref:Microsoft.Build.Tasks.ToolTaskExtension> třída, která sama dědí z <xref:Microsoft.Build.Utilities.ToolTask> třídy. Seznam těchto dalších parametrů a jejich popisy najdete v tématu [tooltaskextension – základní třída](../msbuild/tooltaskextension-base-class.md).  
   
 ## <a name="example"></a>Příklad  
  Následující příklad kódu používá `AspNetCompiler` úloh předkompilovat [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikace.  
@@ -69,6 +70,6 @@ ms.lasthandoff: 04/19/2018
 </Project>  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Úlohy](../msbuild/msbuild-tasks.md)   
  [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)

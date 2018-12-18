@@ -1,5 +1,5 @@
 ---
-title: IDebugMethodField::GetGlobalContainer | Microsoft Docs
+title: IDebugMethodField::GetGlobalContainer | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: cb97f61c7c475f41280b78d43c0842e5546fab2c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dc7ead16cf796d5ecdd98adfd98bc28b6b2d9fbb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49947875"
 ---
 # <a name="idebugmethodfieldgetglobalcontainer"></a>IDebugMethodField::GetGlobalContainer
-Získá globální kontejner metody.  
+Získá kontejner globální metody.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +41,13 @@ int GetGlobalContainer(
   
 #### <a name="parameters"></a>Parametry  
  `ppClass`  
- [out] Vrátí [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) představující modul, ve kterém je definovaný tuto metodu.  
+ [out] Vrátí [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) představující modul, ve kterém je definována této metody.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí S_OK; jinak vrátí kód chyby.  
+ V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Vrácený [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) objekt představuje modul celý a je objekt umělé, to znamená, modul samotné nemá třídu skutečné ale můžete reprezentována `IDebugClassField` objekt, což různých elementy modulu výčet a zjištěny.  
+ Vrácený [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) objekt představuje celý modul a je umělý objekt, to znamená, samotný modul nemá skutečný třídy, ale lze reprezentovat `IDebugClassField` objektu, povoluje různých elementy modulu je možné vytvořit výčet a zjistit.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)   

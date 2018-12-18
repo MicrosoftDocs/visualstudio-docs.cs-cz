@@ -16,13 +16,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 65c6bd02ae2a89f8ea8e66cb6d7b943344450375
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d8ce82bea823307e02b719fbfae43fe0697aca65
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34844635"
 ---
-# <a name="how-to-specify-pre--and-post-instrument-commands"></a>Postupy: Určení příkazů k provedení před instrumentací a po instrumentaci
+# <a name="how-to-specify-pre--and-post-instrument-commands"></a>Postupy: Zadejte příkazy před a po instrumentaci
 
 Můžete zadat příkazy, které před nebo po jsou vybaveny binárních souborů v relaci výkonu. Všemi příkazy, které můžou být vystavené z příkazového řádku lze zadat jako před instrumentací nebo po instrumentaci událost. Můžete například zadat příkazy, které automatizují opětovného podpisu sestavení se silným názvem klíčem v dávkovém souboru, která se spustí po jsou vybaveny binární soubory.
 
@@ -32,7 +33,7 @@ Pracovní adresář, ve kterém jsou prováděny příkazy závisí na operačn�
 
  **32bitové počítače**
 
-Na 32bitové počítače je výchozí adresář profiler nástrojů 10.0\Team disk\Program Files\Microsoft Visual Studio Tools nástroje.
+Na 32bitové počítače, je výchozí adresář profileru nástroje *disk\Program 10.0\Team Files\Microsoft Visual Studio Tools nástroje*.
 
 **64bitové počítače**
 
@@ -40,11 +41,11 @@ Na 64bitových počítačích zadejte cestu podle cílové platformy PROFILOVAN�
 
 - Pro 32bitové aplikace je výchozí adresář profiler nástrojů:
 
-     *Jednotka*\Program soubory (x86) \Microsoft Visual Studio 10.0\Team nástroje nástroje
+     *disk\Program soubory (x86) \Microsoft Visual Studio 10.0\Team nástrojů nástroje*
 
 - Pro 64bitové aplikace je výchozí adresář profiler nástrojů:
 
-     *Jednotka*\Program soubory (x86) \Microsoft Visual Studio 10.0\Team nástroje Tools\x64
+     *disk\Program soubory (x86) \Microsoft Visual Studio 10.0\Team Tools\x64 nástroje*
 
 ## <a name="to-specify-pre-instrument-commands"></a>Chcete-li určit příkazy před instrumentací
 
@@ -84,6 +85,6 @@ Na 64bitových počítačích zadejte cestu podle cílové platformy PROFILOVAN�
 
      Zakázat příkaz spouštění bez nutnosti ho odebrat, vyberte **vyloučit z instrumentace** zaškrtávací políčko. Ke změně kompilátoru nebo linkeru nastavení můžete použijte na stránkách vlastností projektu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Konfigurace výkonnostních relací](../profiling/configuring-performance-sessions.md)

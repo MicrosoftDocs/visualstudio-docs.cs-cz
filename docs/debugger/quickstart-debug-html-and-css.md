@@ -1,5 +1,5 @@
 ---
-title: Ladění kódu HTML a CSS v aplikacích pro UPW | Microsoft Docs
+title: Ladění kódu HTML a CSS v aplikacích pro UWP | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 07/17/2017
 ms.technology: vs-ide-debug
@@ -18,247 +18,248 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: b5673a2ab191f71b9aec14f08c5adfc65883ff24
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 6e812d60daf7e084835c0de9549cd58ff2711fea
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49916683"
 ---
-# <a name="debug-html-and-css-in-uwp-apps-in-visual-studio"></a>Ladění kódu HTML a CSS v aplikacích pro UPW v sadě Visual Studio
+# <a name="debug-html-and-css-in-uwp-apps-in-visual-studio"></a>Ladění kódu HTML a CSS v aplikacích pro UWP v sadě Visual Studio
   
- Pro aplikace, JavaScript Visual Studio poskytuje komplexní ladění prostředí, které obsahuje funkce, které jsou pro vývojáře v aplikaci Internet Explorer a Visual Studio. Tyto funkce jsou podporované pro aplikace UWP a pro aplikace vytvořené pomocí nástroje sady Visual Studio pro Apache Cordova.  
+ Pro aplikace JavaScript Visual Studio poskytuje komplexní možnosti ladění, který obsahuje funkce, které jsou pro vývojáře v aplikaci Internet Explorer a Visual Studio srozumitelná. Tyto funkce jsou podporovány pro aplikace pro UPW a pro aplikace vytvořené pomocí nástrojů Visual Studio pro Apache Cordova.  
   
- Použití interaktivní ladění modelu DOM kontroly nástroje poskytované můžete zobrazit a upravit kód vykreslené značky HTML a CSS. Provedete to vše bez zastavení a spuštění ladicího programu.
+ Interaktivní ladění modelu k dispozici prostřednictvím nástrojů kontroly modelu DOM můžete zobrazit a upravit vykresleným kódem HTML a CSS. Provedete to vše bez zastavení a restartování ladicího programu.
   
- Informace o dalších JavaScript ladění funkcí, například pomocí okna konzoly jazyka JavaScript a nastavení zarážek, najdete v části [rychlý úvod: ladění jazyka JavaScript](../debugger/quickstart-debug-javascript-using-the-console.md) a [ladění aplikací v sadě Visual Studio](../debugger/debug-store-apps-in-visual-studio.md).  
+ Informace o dalších funkcí, jako je například používání okna konzoly jazyka JavaScript a nastavovat zarážky, ladění jazyka JavaScript naleznete v tématu [rychlý start: ladění JavaScriptu](../debugger/quickstart-debug-javascript-using-the-console.md) a [ladění aplikací v sadě Visual Studio](../debugger/debug-store-apps-in-visual-studio.md).  
   
-##  <a name="InspectingDOM"></a> Probíhá kontrola za provozu DOM  
- Průzkumník modelu DOM se dozvíte, zobrazení vykreslené stránky a Průzkumníka modelu DOM můžete změnit hodnoty a okamžitě zobrazit výsledky. To umožňuje testovat změny bez zastavení a spuštění ladicího programu. Pokud při práci s stránku pomocí této metody nezmění zdrojového kódu v projektu, až najdete požadované kód opravy, provedete změny vašeho zdrojového kódu.  
-  
-> [!TIP]
->  Aby se zabránilo zastavením a restartováním ladicí program, když provedete změny vašeho zdrojového kódu, můžete obnovit pomocí aplikace **aplikace pro aktualizaci Windows** tlačítka na panelu nástrojů Debug (nebo stisknutím klávesy F4). Další informace najdete v tématu [aktualizace aplikace (JavaScript)](../debugger/refresh-an-app-javascript.md).  
-  
- Můžete použít Průzkumníka modelu DOM na:  
-  
--   Přejděte podstrom elementu DOM a prozkoumejte vykreslené kód HTML, CSS a JavaScript.  
-  
--   Dynamicky upravit atributy a stylů CSS u elementů vykreslovaných a okamžitě zobrazit výsledky.  
-  
--   Zkontrolujte, jak byly použity styly CSS prvky stránky a trasování pravidla, které byly použity.  
-  
- Při ladění aplikace, musíte často v Průzkumníku modelu DOM. Vyberte elementy. Když vyberete element, hodnoty, které se zobrazují na kartě na pravé straně Průzkumníka modelu DOM automaticky aktualizovat tak, aby odrážela vybraný prvek v Průzkumníku modelu DOM. Jedná se o karty: **styly**, **počítané**, **rozložení**. Aplikace UWP podporovat i **události** a **změny** karty. Další informace o výběru elementy najdete v tématu [výběr elementy](#SelectingElements).  
+##  <a name="InspectingDOM"></a> Kontrola live DOM  
+ Průzkumník modelu DOM se dozvíte, zobrazení vykreslené stránky a Průzkumníka modelu DOM můžete změnit hodnoty a hned vidět výsledky. To umožňuje testovat změny bez zastavení a restartování ladicího programu. Zdrojový kód v projektu nemění, když pracujete s stránce tímto způsobem, takže když najdete odpovídající kód opravy provedete změny zdrojového kódu.  
   
 > [!TIP]
->  Pokud je okno Průzkumníka modelu DOM zavřená, zvolte **ladění**>**Windows** > **Průzkumníka modelu DOM** znovu ho otevřete. Okno se zobrazí pouze během ladicí relace skriptu.  
+>  Aby se zabránilo zastavení a restartování ladicího programu, když provedete změny zdrojového kódu, můžete aktualizovat aplikace pomocí **aktualizovat Windows app** tlačítko na panelu nástrojů ladění (nebo stisknutím klávesy F4). Další informace najdete v tématu [aktualizace aplikace (JavaScript)](../debugger/refresh-an-app-javascript.md).  
   
- V následujícím postupu budeme věnovat procesem interaktivně ladění aplikace pomocí Průzkumníka modelu DOM. Vytvoříme aplikaci, která používá `FlipView` řízení a pak ho ladění. Aplikace obsahuje několik chyb.  
+ Můžete použít Průzkumníka modelu DOM do:  
+  
+- Vyhledejte podstrom prvek modelu DOM a zkontrolujte vykresleným kódem HTML, CSS a JavaScriptu.  
+  
+- Dynamicky upravit atributy a stylů CSS pro elementy vykreslované a hned vidět výsledky.  
+  
+- Zkontrolujte použití stylů CSS pro elementy stránek a trasování, které se použily pravidla.  
+  
+  Při ladění aplikací často potřebujete k výběru elementů v Průzkumníku modelu DOM. Při výběru prvku hodnoty zobrazené na kartách na pravé straně Průzkumníka modelu DOM automaticky aktualizovat tak, aby odrážely vybraný element v Průzkumníku modelu DOM. Jedná se o karty: **styly**, **vypočítané**, **rozložení**. Také podpora aplikací pro UWP **události** a **změny** karty. Další informace o výběru elementů naleznete v tématu [výběru elementů](#SelectingElements).  
+  
+> [!TIP]
+>  Pokud se zavře okno Průzkumníka modelu DOM, zvolte **ladění**>**Windows** > **Průzkumníka modelu DOM** znovu otevřít. V okně se zobrazí jenom při relaci ladění skriptu.  
+  
+ V postupu, který následuje přejdeme procesem interaktivně pomocí Průzkumníka modelu DOM ladění aplikace. Vytvoříme aplikaci, která bude `FlipView` ovládací prvek a pak ho ladit. Aplikace obsahuje několik chyb.  
   
 > [!WARNING]
->  Následující ukázkové aplikace je aplikace pro UPW. Stejné funkce jsou podporované pro Cordova, ale aplikace by být odlišné.  
+>  Následující ukázkové aplikace je aplikace pro UPW. Stejné funkce jsou podporované pro Cordova, ale aplikace bude odlišná.  
   
-#### <a name="to-debug-by-inspecting-the-live-dom"></a>Chcete-li ladit zkontrolováním za provozu DOM  
+#### <a name="to-debug-by-inspecting-the-live-dom"></a>Chcete-li ladit zkontrolováním live DOM  
   
-1.  Vytvořte nové řešení v sadě Visual Studio výběrem **soubor** > **nový projekt**.  
+1. Vytvoření nového řešení v sadě Visual Studio výběrem **souboru** > **nový projekt**.  
   
-2.  Zvolte **JavaScript** > **univerzální pro Windows**a potom zvolte **WinJS aplikace**.  
+2. Zvolte **JavaScript** > **Windows Universal**a klikněte na tlačítko **aplikace WinJS**.  
   
-3.  Zadejte název projektu, například `FlipViewApp`a zvolte **OK** k vytvoření dané aplikace.  
+3. Zadejte název projektu, například `FlipViewApp`a zvolte **OK** vytvořte aplikaci.  
   
-4.  V textu elementu index.html přidejte tento kód:  
+4. V elementu tělo index.html přidejte tento kód:  
   
-    ```html  
-    <div id="flipTemplate" data-win-control="WinJS.Binding.Template"  
-             style="display:none">  
-        <div class="fixedItem" >  
-            <img src="#" data-win-bind="src: flipImg" />  
-        </div>  
-    </div>  
-    <div id="fView" style="width:100px;height:100px"  
-        data-win-control="WinJS.UI.FlipView" data-win-options="{  
-        itemDataSource: Data.items.dataSource, itemTemplate: flipTemplate }">  
-    </div>  
-    ```  
+   ```html  
+   <div id="flipTemplate" data-win-control="WinJS.Binding.Template"  
+            style="display:none">  
+       <div class="fixedItem" >  
+           <img src="#" data-win-bind="src: flipImg" />  
+       </div>  
+   </div>  
+   <div id="fView" style="width:100px;height:100px"  
+       data-win-control="WinJS.UI.FlipView" data-win-options="{  
+       itemDataSource: Data.items.dataSource, itemTemplate: flipTemplate }">  
+   </div>  
+   ```  
   
-5.  Otevřete default.css a přidejte následující CSS:  
+5. Otevřete default.css a přidejte následující šablony stylů CSS:  
   
-    ```css  
-    #fView {  
-        background-color:#0094ff;  
-        height: 100%;  
-        width: 100%;  
-        margin: 25%;  
-    }  
-    ```  
+   ```css  
+   #fView {  
+       background-color:#0094ff;  
+       height: 100%;  
+       width: 100%;  
+       margin: 25%;  
+   }  
+   ```  
   
-6.  Nahraďte kód v souboru default.js s tímto kódem:  
+6. Nahraďte kód v souboru default.js s tímto kódem:  
   
-    ```javascript  
-    (function () {  
-        "use strict";  
+   ```javascript  
+   (function () {  
+       "use strict";  
   
-        var app = WinJS.Application;  
-        var activation = Windows.ApplicationModel.Activation;  
+       var app = WinJS.Application;  
+       var activation = Windows.ApplicationModel.Activation;  
   
-        var myData = [];  
-        for (var x = 0; x < 4; x++) {  
-            myData[x] = { flipImg: "/images/logo.png" }  
-        };  
+       var myData = [];  
+       for (var x = 0; x < 4; x++) {  
+           myData[x] = { flipImg: "/images/logo.png" }  
+       };  
   
-        var pages = new WinJS.Binding.List(myData, { proxy: true });  
+       var pages = new WinJS.Binding.List(myData, { proxy: true });  
   
-        app.onactivated = function (args) {  
-            if (args.detail.kind === activation.ActivationKind.launch) {  
-                if (args.detail.previousExecutionState !==  
-                activation.ApplicationExecutionState.terminated) {  
-                    // TODO: . . .  
-                } else {  
-                    // TODO: . . .  
-                }  
-                args.setPromise(WinJS.UI.processAll());  
+       app.onactivated = function (args) {  
+           if (args.detail.kind === activation.ActivationKind.launch) {  
+               if (args.detail.previousExecutionState !==  
+               activation.ApplicationExecutionState.terminated) {  
+                   // TODO: . . .  
+               } else {  
+                   // TODO: . . .  
+               }  
+               args.setPromise(WinJS.UI.processAll());  
   
-                updateImages();  
-            }  
-        };  
+               updateImages();  
+           }  
+       };  
   
-        function updateImages() {  
+       function updateImages() {  
   
-            pages.setAt(0, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-76.jpg" });  
-            pages.setAt(1, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-77.jpg" });  
-            pages.setAt(2, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-78.jpg" });  
-        };  
+           pages.setAt(0, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-76.jpg" });  
+           pages.setAt(1, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-77.jpg" });  
+           pages.setAt(2, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-78.jpg" });  
+       };  
   
-        app.oncheckpoint = function (args) {  
-        };  
+       app.oncheckpoint = function (args) {  
+       };  
   
-        app.start();  
+       app.start();  
   
-        var publicMembers = {  
-            items: pages  
-        };  
+       var publicMembers = {  
+           items: pages  
+       };  
   
-        WinJS.Namespace.define("Data", publicMembers);  
+       WinJS.Namespace.define("Data", publicMembers);  
   
-    })();  
-    ```  
+   })();  
+   ```  
   
-     Následující obrázek znázorňuje, co chcete zobrazit, pokud jsme spustit tuto aplikaci. Však získat aplikaci do tohoto stavu jsme bude mít první vyřešit počet chyb.  
+    Následující obrázek znázorňuje, co chceme vidět, pokud jsme tuto aplikaci spustit. Ale pokud chcete získat aplikaci do tohoto stavu musíme nejprve odstranit celou řadu chyb.  
   
-     ![Aplikace FlipView zobrazující očekávané výsledky](../debugger/media/js_dom_appfixed.png "JS_DOM_AppFixed")  
+    ![Aplikace FlipView zobrazující očekávané výsledky](../debugger/media/js_dom_appfixed.png "JS_DOM_AppFixed")  
   
-7.  Zvolte **místního počítače** z rozevíracího seznamu vedle položky **spustit ladění** tlačítko **ladění** nástrojů:  
+7. Zvolte **místního počítače** z rozevíracího seznamu vedle položky **spustit ladění** tlačítko **ladění** nástrojů:  
   
-     ![Vyberte možnost ladění cílového seznamu](../debugger/media/js_select_target.png "JS_Select_Target")  
+    ![Seznam cílů ladění vyberte](../debugger/media/js_select_target.png "JS_Select_Target")  
   
-8.  Zvolte **ladění** > **spustit ladění**, nebo stiskněte klávesu F5, ke spouštění vaší aplikace v režimu ladění.  
+8. Zvolte **ladění** > **spustit ladění**, nebo stisknutím klávesy F5 spusťte aplikaci v režimu ladění.  
   
-     Toto spouští aplikaci, ale protože stylu má několik chyb v něm uvidíte většinou prázdnou obrazovku. První `FlipView` bitové kopie se zobrazí v Čtvereček blízko poloviny obrazovky.  
+    Toto řešení běží aplikace, ale uvidíte většinou prázdnou obrazovku, protože stylu v sobě obsahuje několik chyb. První `FlipView` v Čtvereček poblíž středu obrazovky se zobrazí obrázek.  
   
-10. Přepněte do sady Visual Studio a zvolte **Průzkumníka modelu DOM** kartě.  
+9. Přepněte do aplikace Visual Studio a zvolte **Průzkumníka modelu DOM** kartu.  
   
-    > [!TIP]
-    >  Stisknutím klávesy Alt + Tab nebo F12 přepínat mezi Visual Studio a spuštěné aplikaci.  
+   > [!TIP]
+   >  Můžete stisknutím Alt + Tab nebo F12 přepínat mezi Visual Studio a spuštěné aplikaci.  
   
-11. V okně Průzkumníka modelu DOM vyberte element DIV pro oddíl, který má ID `"fView"`. Chcete-li zobrazit a vybrat správný element DIV použijte klávesy se šipkami. (Klávesu šipka doprava vám umožní zobrazit podřízené položky elementu.)  
+10. V okně Průzkumníka modelu DOM, vyberte požadovaný prvek DIV oddílu, který má ID `"fView"`. Chcete-li zobrazit a vybrat správný prvek DIV pomocí kláves se šipkami. (Klávesy se šipkou doprava umožňuje zobrazit podřízené položky elementu.)  
   
      ![Průzkumník modelu DOM](../debugger/media/js_dom_explorer.png "JS_DOM_Explorer")  
   
     > [!TIP]
-    >  Můžete také vybrat DIV element v levém dolním rohu okna konzoly jazyka JavaScript zadáním `select(fView)` na >> vstupní řádku a stisknutím klávesy Enter.  
+    >  Můžete také vybrat DIV element v levém dolním rohu okna konzoly jazyka JavaScript tak, že zadáte `select(fView)` na >> vstupní řádek a pak stiskněte klávesu Enter.  
   
-     Hodnoty, které se zobrazují na kartě na pravé straně okna Průzkumníka modelu DOM automaticky aktualizovat tak, aby odrážela v Průzkumníku modelu DOM aktuálního elementu.  
+     Hodnoty, které se zobrazují na karty na pravé straně okna Průzkumníka modelu DOM automaticky aktualizovat tak, aby odrážely v Průzkumníku modelu DOM aktuálního elementu.  
   
-12. Vyberte **počítané** karty na pravé straně.  
+11. Zvolte **vypočítané** karty na pravé straně.  
   
-     Tato karta zobrazuje hodnotu počítaný nebo konečné, pro každou vlastnost vybraného elementu DOM.  
+     Tato karta zobrazuje vypočtená nebo konečné, hodnotu pro každou vlastnost vybraného prvku modelu DOM.  
   
-13. Otevřete pravidlo CSS výšku. Všimněte si, že je sadu styl vložené do 100px, která se zobrazí konzistentní s hodnota height 100 %, nastavte pro `#fView` selektor šablon stylů CSS. Text přeškrtnutí `#fView` selektor označuje styl vložené je přednost před tento styl.  
+12. Otevřete pravidlo výška šablony stylů CSS. Všimněte si, že je styl sady vložené do 100px, které se zobrazí konzistentní s hodnotou výška 100 %, nastavte pro `#fView` selektor šablon stylů CSS. Jako přeškrtnutý text pro `#fView` selektor označuje přiřazený styl je přednost před tímto stylem.  
   
-     Následující obrázek ukazuje **počítané** kartě.  
+     Je vidět na následujícím obrázku **vypočítané** kartu.  
   
-     ![Karta počítaný Průzkumníka modelu DOM](../debugger/media/js_dom_explorer_computed.png "JS_DOM_Explorer_Computed")  
+     ![Vypočítat Průzkumníka modelu DOM kartu](../debugger/media/js_dom_explorer_computed.png "JS_DOM_Explorer_Computed")  
   
-14. V hlavním okně Průzkumníka modelu DOM dvakrát klikněte na styl vložené výšky a šířky `fView` DIV element. Nyní můžete upravit hodnoty v tomto poli. V tomto scénáři chceme je úplně odebrat.  
+13. V hlavním okně Průzkumníka modelu DOM, dvakrát klikněte na panel přiřazený styl pro výšku a šířku `fView` DIV element. Teď můžete upravit hodnoty tady. V tomto scénáři chcete úplně odeberte.  
   
-15. V hlavním okně klikněte dvakrát na `width: 100px;height: 100px;`, stiskněte **odstranit** klíče a potom stiskněte klávesu **Enter**. Po stisknutí klávesy Enter, nové hodnoty se okamžitě projeví v aplikaci, i když nejsou zastavit relaci ladění.  
+14. V hlavním okně klikněte dvakrát na `width: 100px;height: 100px;`, stiskněte **odstranit** klíče a potom stiskněte klávesu **Enter**. Po stisknutí klávesy Enter, nové hodnoty se okamžitě projeví v aplikaci, i když ještě zastavit ladicí relaci.  
   
     > [!IMPORTANT]
-    >  Jak můžete aktualizovat atributy v okně Průzkumníka modelu DOM, můžete také aktualizovat hodnoty, které se zobrazují na **styly**, **počítané**, a **rozložení** karty. Další informace najdete v tématu [styly ladění šablon stylů CSS pomocí Průzkumníka modelu DOM](../debugger/debug-css-styles-using-dom-explorer.md) a [ladění rozložení pomocí Průzkumníka modelu DOM](../debugger/debug-layout-using-dom-explorer.md).  
+    >  Jak můžete aktualizovat atributy v okně Průzkumníka modelu DOM, můžete také aktualizovat hodnoty, které se zobrazují na **styly**, **vypočítané**, a **rozložení** karty. Další informace najdete v tématu [styly ladění šablon stylů CSS pomocí Průzkumníka modelu DOM](../debugger/debug-css-styles-using-dom-explorer.md) a [ladění rozložení pomocí Průzkumníka modelu DOM](../debugger/debug-layout-using-dom-explorer.md).  
   
-16. Výběrem nebo pomocí Alt + Tab umožňuje přepnout do aplikace.  
+15. Přepněte do aplikace tak, že ji vyberete, nebo pomocí kombinace kláves Alt + Tab.  
   
-     Nyní `FlipView` ovládací prvek se zobrazí větší než velikost obrazovky simulátoru nebo emulátor telefonu. Toto není určený výsledek. K prozkoumání, přepněte zpět na Visual Studio.  
+     Nyní `FlipView` ovládací prvek se zobrazí větší než velikost obrazovky telefonu emulátoru nebo simulátoru. Nejedná se odpovídající výsledek. K prozkoumání, přepněte zpět do sady Visual Studio.  
   
-17. V Průzkumníku modelu DOM., vyberte **počítané** kartě znovu a otevřete pravidlo výšku. FView element stále zobrazuje hodnota 100 %, podle očekávání ze šablon stylů CSS, ale vypočtená hodnota se rovná výška obrazovky aplikace (například 800px 667.67px, nebo s jinou hodnotou), což je, není co chceme pro tuto aplikaci. K prozkoumání v dalších krocích jsme odebrat výšky a šířky pro `fView` DIV element.  
+16. V Průzkumníku modelu DOM, vyberte **vypočítané** kartu znovu a otevřete pravidlo výšky. Prvek fView stále zobrazuje hodnota 100 %, podle očekávání z šablon stylů CSS, ale vypočítaná hodnota je rovna výška obrazovky aplikace (například 800px 667.67px nebo jinou hodnotu), což není co chceme pro tuto aplikaci. Prozkoumat v dalších krocích jsme odebrat výšku a šířku `fView` DIV element.  
   
-18. V **styly** kartě a zrušte zaškrtnutí políčka vlastností výšky a šířky pro `#fView` selektor šablon stylů CSS.  
+17. V **styly** kartu, zrušte zaškrtnutí políčka vlastnosti výšku a šířku `#fView` selektor šablon stylů CSS.  
   
-     **Počítané** kartě se teď zobrazují 400 px výšku. Informace označuje, že tato hodnota pochází z modulu pro výběr .win flipview zadaný v uživatelského rozhraní dark.css, což je soubor CSS platformy.  
+     **Vypočítané** karta nyní zobrazuje výšku 400 px. Informace o označuje, že tato hodnota pochází z modulu pro výběr .win flipview podle uživatelského rozhraní – dark.css, což je soubor CSS platformy.  
   
-19. Přepněte zpátky na aplikaci.  
+18. Přepněte zpět do aplikace.  
   
-     Co se zlepšilo. Je však stále jeden další problém vyřešit: pravého okraje se zobrazuje příliš velká.  
+     Vylepšili věci. Existuje však ještě jeden další problém vyřešit: okraje zobrazí příliš velký.  
   
-20. Chcete-li prozkoumat, přepněte do sady Visual Studio a zvolte **rozložení** a podívejte se na modelu pole elementu.  
+19. K prozkoumání, přepněte do aplikace Visual Studio a zvolte **rozložení** kartu a podívejte se na model pole elementu.  
   
-     V **rozložení** karty, zobrazí se následující:  
+     V **rozložení** kartě, zobrazí se následující:  
   
-    -   255px (posun) a 255px (okraje) nebo podobné hodnoty, v závislosti na rozlišení vašeho zařízení. 
+    - 255px (posun) a 255px (okraje) nebo podobné hodnoty v závislosti na řešení vašeho zařízení. 
   
-     Následující obrázek znázorňuje jak **rozložení** karta vypadá, pokud používáte emulátor s 100px posun a okraje).  
+      Následující ilustrace ukazuje jak **rozložení** karta bude vypadat, pokud používáte emulátor 100px posun a okraj).  
   
-     ![Karta rozložení Průzkumníka modelu DOM](../debugger/media/js_dom_explorer_layout.png "JS_DOM_Explorer_Layout")  
+      ![Karta rozložení Průzkumníka modelu DOM](../debugger/media/js_dom_explorer_layout.png "JS_DOM_Explorer_Layout")  
   
-     To asi není pravé. **Počítané** kartě se zobrazují také stejné hodnoty okraj.  
+      To vypadá, že nepodporuje správné. **Vypočítané** karta také zobrazuje stejné hodnoty vlastnosti okraj.  
   
-21. Vyberte **styly** kartě a najděte `#fView` selektor šablon stylů CSS. Zde se zobrazí hodnota 25 % pro **okraj** vlastnost.  
+20. Zvolte **styly** kartu a vyhledejte `#fView` selektor šablon stylů CSS. Zde se zobrazí hodnotu 25 % **okraj** vlastnost.  
   
-22. Vyberte 25 % a změňte jej na 25px a stiskněte klávesu Enter.  
+21. Vyberte 25 % a změňte ho na 25px a stiskněte klávesu Enter.  
   
-23. Také v **styly** kartě, vyberte pravidlo výšky pro selektor .win flipview a změňte 400 px na 500px a stiskněte klávesu Enter.  
+22. Také v **styly** kartu, vyberte pravidlo výšku pro selektor .win flipview a změňte 400 px na 500 px a stiskněte klávesu Enter.  
   
-24. Přepnout zpět do aplikace a zjistíte, že zobrazuje správné umístění elementů. Ujistěte se, opravy ke zdroji a aktualizujte aplikaci bez zastavení a spuštění ladicího programu, najdete v následujícím postupu.  
+23. Přepněte zpět do aplikace a uvidíte, že umístění prvků se zobrazí správný. Opravit zdroj a aktualizovat aplikace bez zastavení a restartování ladicího programu, viz následující postup.  
   
-#### <a name="to-refresh-your-app-while-debugging"></a>Chcete-li aktualizovat vaši aplikaci při ladění  
+#### <a name="to-refresh-your-app-while-debugging"></a>Chcete-li aktualizovat vaše aplikace během ladění  
   
 1.  Zatímco aplikace stále běží, přepněte do sady Visual Studio.  
   
-2.  Otevřete default.html a změnit změnou výška a šířka zdrojový kód `"fView"` element DIV na 100 %.  
+2.  Otevřete soubor default.html a upravit zdrojový kód tak, že změníte výšku a šířku `"fView"` elementu DIV na 100 %.  
   
-3.  Vyberte **aplikace pro aktualizaci Windows** tlačítka na panelu nástrojů Debug (nebo stisknutím klávesy F4). Tlačítko vypadá takto: ![tlačítko aplikace aktualizovat Windows](../debugger/media/js_refresh.png "JS_Refresh").  
+3.  Zvolte **aktualizovat Windows app** tlačítko na panelu nástrojů ladění (nebo stisknutím klávesy F4). Tlačítko vypadá takto: ![tlačítko Aktualizovat Windows app](../debugger/media/js_refresh.png "JS_Refresh").  
   
-     Umožňuje znovu načíst stránky aplikace a Phone emulátoru nebo simulátoru vrátí do popředí.  
+     Znovu načíst stránky aplikace a simulátor nebo emulátor telefonu vrátí do popředí.  
   
      Další informace o funkci aktualizace najdete v tématu [aktualizace aplikace (JavaScript)](../debugger/refresh-an-app-javascript.md).  
   
-##  <a name="SelectingElements"></a> Výběr elementy  
- Při ladění aplikace, můžete vybrat elementů modelu DOM třemi způsoby:  
+##  <a name="SelectingElements"></a> Výběr elementů  
+ Při ladění aplikace, můžete vybrat prvky modelu DOM třemi způsoby:  
   
--   Kliknutím na elementy přímo v okně Průzkumníka modelu DOM (nebo pomocí klávesy se šipkami).  
+- Po kliknutí na prvky přímo v okně Průzkumníka modelu DOM (nebo pomocí kláves se šipkami).  
   
--   Pomocí **vyberte Element** tlačítko (Ctrl + B).  
+- S použitím **vybrat Element** tlačítko (Ctrl + B).  
   
--   Pomocí `select` příkaz, který je jedním z [příkazy konzoly pro JavaScript](../debugger/javascript-console-commands.md).  
+- S použitím `select` příkaz, který je jedním z [příkazy konzoly jazyka JavaScript](../debugger/javascript-console-commands.md).  
   
- Když použijete okno Průzkumníka modelu DOM vybrat elementy a umístění ukazatele myši na element, zvýrazní se odpovídající element ve spuštěné aplikaci. Musíte kliknout na na element v Průzkumníku modelu DOM. Vyberte, nebo můžete použít klávesy se šipkami zvýrazněte a vybrat prvky. Můžete také vybrat elementy ve Průzkumníka modelu DOM pomocí **vybrat element** tlačítko. Následující obrázek ukazuje **vyberte Element** tlačítko.  
+  Použijete-li vybrat elementy a umístěte ukazatel myši na prvek okna Průzkumníka modelu DOM, odpovídající prvek je zvýrazněn ve spuštěné aplikaci. Musíte kliknout na elementu v Průzkumníku modelu DOM se vybere nebo můžete použít klávesy se šipkami ke zvýraznění a vybrat elementy. Můžete také vybrat elementy v Průzkumníku modelu DOM pomocí **Select element** tlačítko. Je vidět na následujícím obrázku **vybrat Element** tlačítko.  
   
- ![Vyberte tlačítko Element v Průzkumníku modelu DOM.](../debugger/media/js_dom_select_element_button.png "JS_DOM_Select_Element_Button")  
+  ![Vybrat Element v Průzkumníku modelu DOM](../debugger/media/js_dom_select_element_button.png "JS_DOM_Select_Element_Button")  
   
- Když kliknete na tlačítko **vybrat element** (nebo stiskněte klávesu Ctrl + B), tím, ve kterém můžete vybrat položku v Průzkumníku modelu DOM. Kliknutím ve spuštěné aplikaci změní režim výběru. Režim změny zpět do režimu Normální výběru po jedním kliknutím. Když kliknete na tlačítko **vybrat element**, aplikace je teď dostupná popředí a kurzoru změní na odráží nový režim výběru. Po kliknutí na tlačítko popsané elementu, Průzkumníka modelu DOM se vrátí do popředí pomocí zadaného elementu vybraná.  
+  Po kliknutí na **Select element** (nebo stiskněte klávesy Ctrl + B), to změní režim výběru, takže můžete vybrat položku v Průzkumníku modelu DOM kliknutím ve spuštěné aplikaci. Režim změny zpět do režimu výběru normální po kliknutí. Po kliknutí na **Select element**, aplikace bude zase na popředí a kurzor se změní na odrážejí nový režim výběru. Po kliknutí na prvek obrysy Průzkumníka modelu DOM se vrátí do popředí s Zadaný prvek vybraný.  
   
- Než vyberete **vyberte Element**, můžete určit, zda chcete zvýraznit elementy ve spuštěné aplikaci přepnutím **zobrazení webové stránky označuje** tlačítko. Následující obrázek znázorňuje toto tlačítko. Označuje se zobrazí ve výchozím nastavení.  
+  Než se rozhodnete **vybrat Element**, můžete určit, zda zvýrazněte elementů v běžící aplikaci přepnutím **zobrazení webové stránky zvýrazní** tlačítko. Následující obrázek znázorňuje toto tlačítko. Stručný přehled se zobrazí ve výchozím nastavení.  
   
- ![Zobrazení webové stránky označuje tlačítko](../debugger/media/js_dom_display_highlights_button.png "JS_DOM_Display_Highlights_Button")  
+  ![Zobrazení webové stránky zvýrazní tlačítko](../debugger/media/js_dom_display_highlights_button.png "JS_DOM_Display_Highlights_Button")  
   
- Pokud zvolíte možnost označte elementy, jsou vyznačené prvky, které najedete v simulátoru. Barvy pro zvýrazněné elementy shoduje modelu pole, které se zobrazí v **rozložení** kartě Průzkumníka modelu DOM.  
+  Pokud budete chtít zvýraznit elementy, jsou zvýrazněny prvky, které najedete myší v simulátoru. Barvy pro zvýrazněné elementy odpovídat pole modelu, který se zobrazí **rozložení** karty Průzkumníku modelu DOM.  
   
 > [!NOTE]
->  Zvýraznění elementy ukázáním je podporována pouze částečně v emulátoru Windows Phone.  
+>  Zvýrazňování elementů podržením ukazatele nad nich je jenom částečně podporovány v emulátoru Windows Phone.  
   
 ## <a name="see-also"></a>Viz také  
  [Ladění aplikací v sadě Visual Studio](../debugger/debug-store-apps-in-visual-studio.md)   
  [Aktualizace aplikace (JavaScript)](../debugger/refresh-an-app-javascript.md)   
- [Ladění ovládacího prvku webového zobrazení](../debugger/debug-a-webview-control.md)   
+ [Ladění ovládacího prvku WebView](../debugger/debug-a-webview-control.md)   
  [Klávesové zkratky](../debugger/keyboard-shortcuts-html-and-javascript.md)   
- [Příkazy konzoly pro JavaScript](../debugger/javascript-console-commands.md)   
+ [Příkazy konzoly jazyka JavaScript](../debugger/javascript-console-commands.md)   
  [Ladění ukázkový kód HTML, CSS a JavaScript](../debugger/debug-html-css-and-javascript-sample-code.md)   
- [Podpora produktu a usnadnění přístupu](http://msdn.microsoft.com/library/tzbxw1af\(VS.120\).aspx)
+ [Technická podpora a usnadnění přístupu](https://msdn.microsoft.com/library/tzbxw1af(VS.120).aspx)

@@ -1,5 +1,5 @@
 ---
-title: 'Nejčastější dotazy: Převádění doplňků na rozšíření VSPackage | Microsoft Docs'
+title: 'Nejčastější dotazy: Převádění doplňků na rozšíření VSPackage | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,172 +11,173 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: daec495ee71bf27bc40174b74cd95a6df47c247f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 56088e45af5ed45b3a303ffc99679e77b51f56ae
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49826511"
 ---
-# <a name="faq-converting-add-ins-to-vspackage-extensions"></a>Nejčastější dotazy: Převádění doplňků na VSPackage rozšíření
-Doplňky jsou nyní zastaralé. Chcete-li nové rozšíření sady Visual Studio, potřebujete vytvořit VSIX rozšíření. Tady najdete odpovědi na některé nejčastější dotazy o tom, jak převést přidat v sadě Visual Studio na VSIX rozšíření.  
+# <a name="faq-converting-add-ins-to-vspackage-extensions"></a>Nejčastější dotazy: Převádění doplňků na rozšíření VSPackage
+Nyní jsou zastaralé doplňky. Chcete-li nové rozšíření sady Visual Studio, je potřeba vytvořit rozšíření VSIX. Tady najdete odpovědi na některé nejčastější dotazy o tom, jak převést doplněk Visual Studio k rozšíření VSIX.  
   
 > [!WARNING]
->  Spouštění v sadě Visual Studio 2015 pro projekty C# a Visual Basic, můžete použít VSIX projekt a přidat šablony položek pro příkazy nabídky okna nástrojů a VSPackages. Další informace najdete v tématu [co je nového ve Visual Studio 2015 SDK](../extensibility/what-s-new-in-the-visual-studio-2015-sdk.md).  
+>  Spouští se v sadě Visual Studio 2015 pro projekty jazyka C# a Visual Basic, můžete použít projekt VSIX a přidat položku šablony pro příkazy nabídky, panely nástrojů a rozšíření VSPackages. Další informace najdete v tématu [co je nového ve Visual Studio 2015 SDK](../extensibility/what-s-new-in-the-visual-studio-2015-sdk.md).  
   
 > [!IMPORTANT]
->  V mnoha případech můžete jednoduše přenést kódu doplňku na projekt VSIX se položka VSPackage projektu. Můžete získat objekt automatizace DTE voláním <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> v <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> metoda.  
+>  V mnoha případech můžete jednoduše převést kód doplňku do projektu VSIX s položkou projektu VSPackage. Můžete získat automatizační objekt DTE zavoláním <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> v <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> metody.  
 >   
 >  `DTE2 dte = (DTE2)GetService(typeof(DTE));`  
 >   
->  Další informace najdete v tématu [jak v VSPackage spuštěním vlastního kódu doplňku?](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md#BKMK_RunAddin) níže.  
+>  Další informace najdete v tématu [jak mohu spustit kód doplňku v sadě VSPackage?](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md#BKMK_RunAddin) níže.  
   
-## <a name="what-software-do-i-need-to-develop-vsix-extensions"></a>Jaký software je nutné vyvíjet rozšíření VSIX?  
- Od sady Visual Studio 2015 se neinstalovat sadu Visual Studio SDK z webu Stažení softwaru. Je zahrnuta jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+## <a name="what-software-do-i-need-to-develop-vsix-extensions"></a>Jaký software potřebujete pro vývoj rozšíření VSIX?  
+ Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK ze služby Stažení softwaru. Je zahrnut jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
 ## <a name="wheres-the-extension-documentation"></a>Kde je dokumentace rozšíření?  
- Začněte s [od vyvíjet rozšíření Visual Studia](../extensibility/starting-to-develop-visual-studio-extensions.md). Další články o vývoj rozšíření VSSDK na webu MSDN jsou pod než.  
+ Začněte s [začít vyvíjet rozšíření aplikace Visual Studio](../extensibility/starting-to-develop-visual-studio-extensions.md). Další články o vývoji VSSDK rozšíření na webu MSDN jsou uvedené níže, že jedna.  
   
-## <a name="can-i-convert-my-add-in-project-to-a-vsix-project"></a>Můžete převést Moje v projektu doplňku do projektu VSIX?  
- O projekt nelze převést přímo do projektu VSIX, protože mechanismy VSIX projekty nejsou stejná jako v doplňku projekty. Šablona projektu VSIX plus šablony položek projektu správné značnou kód, který je poměrně snadné ke zprovoznění a spuštěná jako rozšíření VSIX.  
+## <a name="can-i-convert-my-add-in-project-to-a-vsix-project"></a>Můžete převést projekt doplňku do projektu VSIX  
+ Projekt doplňku nelze převést přímo do projektu VSIX, protože mechanismus používaný v projektů VSIX není stejné jako ty v projektech doplňků. Šablonou projektu VSIX šablony položek projektu správný a máte velké množství kódu, který usnadňuje relativně ke zprovoznění a spuštěné jako rozšíření VSIX.  
   
-##  <a name="BKMK_StartDeveloping"></a> Jak spustit vývoje rozšíření VSIX?  
- Zde je, jak provedete VSIX, který má příkaz nabídky:  
+##  <a name="BKMK_StartDeveloping"></a> Jak můžu začít vyvíjet rozšíření VSIX?  
+ Zde je, jak vytvořit rozšíření VSIX, který obsahuje příkaz nabídky:  
   
-#### <a name="to-make-a-vsix-extension-that-has-a-menu-command"></a>Chcete-li rozšíření VSIX, který má příkaz nabídky  
+#### <a name="to-make-a-vsix-extension-that-has-a-menu-command"></a>Aby bylo rozšíření VSIX, který obsahuje příkaz nabídky  
   
-1.  Vytvoření projektu VSIX. (**Soubor**, **nový**, **projektu**, nebo typ **projektu** v **Snadné spuštění** okno). V **nový projekt** dialogové okno, rozbalte seznam **Visual C# nebo rozšíření** nebo **jazyka Visual Basic nebo rozšíření** a vyberte **projektu VSIX**.) Název projektu **TestExtension** a zadejte umístění pro ni.  
+1.  Vytvořte projekt VSIX. (**Souboru** > **nový** > **projektu**, nebo typ **projektu** v **snadnéhospuštění** okno). V **nový projekt** dialogového okna rozbalte **Visual C#** > **rozšiřitelnost** nebo **jazyka Visual Basic**  >   **Rozšiřitelnost** a vyberte **projekt VSIX**.) Pojmenujte projekt **TestExtension** a zadejte umístění pro něj.  
   
-2.  Přidat **vlastní příkaz** šablony položek projektu. (Klikněte pravým tlačítkem na uzel projektu v **Průzkumníku řešení** a vyberte **přidat / novou položku**. V **nový projekt** dialogové okno pro buď Visual C# nebo Visual Basic, vyberte **rozšiřitelnost** uzel a vyberte možnost **vlastní příkaz**.)  
+2.  Přidat **vlastního příkazu** šablony položky projektu. (Klikněte pravým tlačítkem na uzel projektu v **Průzkumníka řešení** a vyberte **přidat** > **nová položka**. V **nový projekt** dialogové okno pro Visual C# nebo Visual Basic, vyberte **rozšiřitelnost** uzel a vyberte možnost **vlastního příkazu**.)  
   
-3.  Stisknutím klávesy F5 sestavit a spustit projekt v režimu ladění.  
+3.  Stisknutím klávesy **F5** sestavte a spusťte projekt v režimu ladění.  
   
-     Zobrazí se druhé instance Visual Studio. Této druhé instance se označuje jako experimentální instance a nemusí mít stejné nastavení jako instanci sady Visual Studio, který používáte k zápisu kódu. Při prvním spuštění experimentální instance, zobrazí se výzva k přihlásit k VS Online a zadejte motiv a profil.  
+     Zobrazí se druhé instanci aplikace Visual Studio. Této druhé instance se nazývá experimentální instanci a nemusí mít stejné nastavení jako instanci aplikace Visual Studio, které používáte k psaní kódu. Při prvním spuštění experimentální instance, zobrazí se výzva k přihlášení k VS Online a určit motivu a profilu.  
   
-     Na **nástroje** nabídky (v experimentální instanci) byste měli vidět tlačítko s názvem **název Moje příkazu**. Pokud toto tlačítko, by se zobrazit zpráva: **uvnitř TestVSPackagePackage.MenuItemCallback()**.  
+     Na **nástroje** nabídky (v experimentální instanci) byste měli vidět tlačítko s názvem **název mé příkazu**. Když vyberete toto tlačítko, by měla zobrazit zpráva: **uvnitř TestVSPackagePackage.MenuItemCallback()**.  
   
-##  <a name="BKMK_RunAddin"></a> Jak můžete spustit vlastního kódu doplňku v VSPackage?  
- Kódu doplňku obvykle běží v jednom ze dvou způsobů:  
+##  <a name="BKMK_RunAddin"></a> Jak mohu spustit kód doplňku v sadě VSPackage?  
+ Přidejte kód se obvykle běží v jednom ze dvou způsobů:  
   
--   Aktivuje příkazu nabídky (kód je v `IDTCommandTarget.Exec` metoda)  
+- Aktivované pomocí příkazu nabídky (kód je v `IDTCommandTarget.Exec` metoda.)  
   
--   Automaticky při spuštění (kód je v `OnConnection` obslužné rutiny události.)  
+- Automaticky při spuštění (kód je v `OnConnection` obslužné rutiny události.)  
   
- Lze provádět stejné akce v VSPackage. Chcete-li přidat kód doplňku v metoda zpětného volání:  
+  Můžete provádět stejné akce v sadě VSPackage. Tady je postup pro přidání kódu doplňku v metodě zpětného volání:  
   
-#### <a name="to-implement-a-menu-command-in-a-vspackage"></a>K implementaci příkazu nabídky v VSPackage  
+### <a name="to-implement-a-menu-command-in-a-vspackage"></a>Implementace příkazu nabídky v sadě VSPackage  
   
-1.  Vytvořte VSPackage, který má příkaz nabídky. (Další informace najdete v tématu [vytvoření rozšíření pomocí příkazu v nabídce](../extensibility/creating-an-extension-with-a-menu-command.md).)  
+1. Vytvoření balíčku VSPackage, která obsahuje příkaz nabídky. (Další informace najdete v tématu [vytváření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md).)  
   
-2.  Otevřete soubor, který obsahuje definici VSPackage. (V projektu jazyka C#, má  *\<název projektu >*Package.cs.)  
+2. Otevřete soubor, který obsahuje definici sady VSPackage. (V projektu jazyka C#, má  *\<název projektu > Package.cs*.)  
   
-3.  Přidejte následující `using` příkazů do souboru:  
+3. Přidejte následující `using` příkazy do souboru:  
+  
+   ```csharp  
+   using EnvDTE;  
+   using EnvDTE80;  
+   ```  
+  
+4. Najít `MenuItemCallback` metody. Přidejte volání do <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> zobrazíte <xref:EnvDTE80.DTE2> objektu:  
+  
+   ```csharp  
+   DTE2 dte = (DTE2)GetService(typeof(DTE));  
+   ```  
+  
+5. Přidejte kód, který doplněk došlo v jeho `IDTCommandTarget.Exec` metoda. Například tady je kód, který přidává nové podokno, které má **výstup** okno a vypíše "Některé Text" v novém podokně.  
+  
+   ```csharp  
+   private void MenuItemCallback(object sender, EventArgs e)  
+   {  
+       DTE2 dte = (DTE2) GetService(typeof(DTE));  
+       OutputWindow outputWindow = dte.ToolWindows.OutputWindow;  
+  
+       OutputWindowPane outputWindowPane = outputWindow.OutputWindowPanes.Add("A New Pane");  
+       outputWindowPane.OutputString("Some Text");  
+   }  
+  
+   ```  
+  
+6. Sestavte a spusťte tento projekt. Stisknutím klávesy **F5** nebo vyberte **Start** na **ladění** nástrojů. V experimentální instanci sady Visual Studio **nástroje** nabídka má tlačítko s názvem **název mé příkazu**. Pokud zvolíte toto tlačítko, slova **některé Text** by se měla objevit v **výstup** podokno okna. (Možná budete muset otevřít **výstup** okna.)  
+  
+   Je také možné váš kód spustit při spuštění. Tento postup se obecně nedoporučuje pro rozšíření VSPackage. Pokud příliš mnoho přípon se pokusí načíst při spuštění sady Visual Studio, může být výrazně delší čas spuštění. Je doporučeno automaticky načíst sady VSPackage jenom v případě, že se nesplní nějaká podmínka (např. řešení otevírané).  
+  
+   Tento postup ukazuje, jak spustit kód doplňku v sadě VSPackage, která načte automaticky při otevření řešení:  
+  
+### <a name="to-autoload-a-vspackage"></a>K autoload VSPackage  
+  
+1. Vytvořte projekt VSIX s položkou projektu balíček Visual Studio. (Pokyny k tomu najdete v článku [Jak můžu začít vyvíjet rozšíření VSIX?](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md#BKMK_StartDeveloping). Stačí přidat elementy **balíček Visual Studio** místo položky projektu.) Pojmenujte projekt VSIX **TestAutoload**.  
+  
+2. Otevřít *TestAutoloadPackage.cs*. Vyhledejte řádek, ve kterém je deklarována třída balíčku:  
+  
+   ```csharp  
+   public sealed class <name of your package>Package : Package  
+   ```  
+  
+3. Nad tímto řádkem se sadu atributů. Přidejte tento atribut:  
+  
+   ```csharp  
+   [ProvideAutoLoad(UIContextGuids80.SolutionExists)]  
+   ```  
+  
+4. Nastavit zarážku `Initialize()` metoda a spuštění ladění (**F5**).  
+  
+5. V experimentální instanci aplikace otevřete projekt. By se měly načíst sady VSPackage, a musí být vaše zarážka dosažena.  
+  
+   Můžete zadat jiných kontextech, ve kterých se mají načíst vaše VSPackage pomocí pole <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80>. Další informace najdete v tématu [načtení rozšíření VSPackages](../extensibility/loading-vspackages.md).  
+  
+## <a name="how-can-i-get-the-dte-object"></a>Jak získat objekt DTE  
+ Pokud se váš doplněk nezobrazí uživatelského rozhraní – například příkazy nabídek, tlačítek panelu nástrojů nebo okna nástrojů – je možné využít kód jako-je tak dlouho, jak získat objekt DTE automation z sady VSPackage. Tady je způsob:  
+  
+### <a name="to-get-the-dte-object-from-a-vspackage"></a>Chcete-li získat objekt DTE z VSPackage  
+  
+1. V projektu VSIX pomocí šablony položky balíčku Visual Studio, vyhledejte  *\<název projektu > Package.cs* souboru. Toto je třída, která je odvozena z <xref:Microsoft.VisualStudio.Shell.Package>; může pomoci při práci s aplikací Visual Studio. V takovém případě použijte jeho <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> zobrazíte <xref:EnvDTE80.DTE2> objektu.  
+  
+2. Přidejte tyto `using` příkazy:  
+  
+   ```csharp  
+   using EnvDTE;  
+   using EnvDTE80;  
+   ```  
+  
+3. Najít `Initialize` metody. Tato metoda zpracovává příkaz, který jste zadali v Průvodci balíčkem. Přidejte volání do <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> získat objekt DTE:  
+  
+   ```csharp  
+   DTE dte = (DTE)GetService(typeof(DTE));  
+   ```  
+  
+   Až budete mít <xref:EnvDTE.DTE> objektu automatizace, zbytek kódu doplňku můžete přidat do projektu. Pokud potřebujete <xref:EnvDTE80.DTE2> objektu, můžete provést totéž.  
+  
+## <a name="how-do-i-change-menu-commands-and-toolbar-buttons-in-my-add-in-to-the-vspackage-style"></a>Jak změním příkazů nabídky a tlačítka panelu nástrojů v mé doplňku na VSPackage styl?  
+ Použití rozšíření VSPackage *.vsct* souboru se má vytvořit většinu příkazů nabídky, panely nástrojů, tlačítka na panelu nástrojů a dalších uživatelského rozhraní. **Vlastního příkazu** šablony položky projektu poskytuje možnost vytvořit příkaz na **nástroje** nabídky. Další informace najdete v tématu [vytváření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md).  
+  
+ Další informace o *.vsct* soubory, naleznete v tématu [jak balíčky VSPackages přidávají prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md). Pro návody, které ukazují, jak používat *.vsct* soubor pro přidání položek nabídky, panely nástrojů a tlačítka panelu nástrojů, viz [rozšířit nabídek a příkazů](../extensibility/extending-menus-and-commands.md).  
+  
+## <a name="how-do-i-add-custom-tool-windows-in-the-vspackage-way"></a>Jak přidat vlastní okna nástrojů tak, jak VSPackage  
+ Šablony položky projektu vlastního panelu nástrojů poskytuje možnost vytvořit okno nástroje. Další informace o této šablony položky projektu, naleznete v tématu [vytváření rozšíření pomocí panelu nástrojů](../extensibility/creating-an-extension-with-a-tool-window.md). Informace týkající se oken nástrojů najdete v tématu [rozšířit a přizpůsobit okna nástrojů](../extensibility/extending-and-customizing-tool-windows.md) a články, které je pod ním, zejména [přidat panel nástrojů](../extensibility/adding-a-tool-window.md).  
+  
+## <a name="how-do-i-manage-visual-studio-windows-in-the-vspackage-way"></a>Jak můžu spravovat okna sady Visual Studio tak, jak VSPackage?  
+ Pokud váš doplněk spravuje okna sady Visual Studio, měl by kód doplňku fungovat v sadě VSPackage. Například tento postup ukazuje, jak přidat kód, který spravuje **seznamu úkolů** k `MenuItemCallback` metoda sady VSPackage.  
+  
+#### <a name="to-insert-window-management-code-from-an-add-in-into-a-vspackage"></a>Vložit kód pro správu okna z doplňku na VSPackage  
+  
+1.  Vytvoření balíčku VSPackage, která obsahuje příkaz nabídky, stejně jako [Jak můžu začít vyvíjet rozšíření VSIX?](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md#BKMK_StartDeveloping) části.  
+  
+2.  Otevřete soubor, který obsahuje definici sady VSPackage. (V projektu jazyka C#, má  *\<název projektu > Package.cs*.)  
+  
+3.  Přidejte tyto `using` příkazy:  
   
     ```csharp  
     using EnvDTE;  
     using EnvDTE80;  
     ```  
   
-4.  Najít `MenuItemCallback` metoda. Přidejte volání <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> získat <xref:EnvDTE80.DTE2> objektu:  
+4.  Najít `MenuItemCallback` metody. Přidejte volání do <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> zobrazíte <xref:EnvDTE80.DTE2> objektu:  
   
     ```csharp  
     DTE2 dte = (DTE2)GetService(typeof(DTE));  
     ```  
   
-5.  Přidejte kód, který vaše doplněk byl v jeho `IDTCommandTarget.Exec` metoda. Například zde je kód, který přidává nové podokně **výstup** okno a v podokně nové výtisků "Některá Text".  
-  
-    ```csharp  
-    private void MenuItemCallback(object sender, EventArgs e)  
-    {  
-        DTE2 dte = (DTE2) GetService(typeof(DTE));  
-        OutputWindow outputWindow = dte.ToolWindows.OutputWindow;  
-  
-        OutputWindowPane outputWindowPane = outputWindow.OutputWindowPanes.Add("A New Pane");  
-        outputWindowPane.OutputString("Some Text");  
-    }  
-  
-    ```  
-  
-6.  Sestavte a spusťte tento projekt. Stisknutím klávesy F5 nebo vyberte **spustit** na **ladění** panelu nástrojů. V experimentální instanci sady Visual Studio **nástroje** nabídky by měl mít tlačítko s názvem **název Moje příkazu**. Pokud vyberete toto tlačítko slova **některá Text** by se měla objevit v **výstup** podokna. (Možná budete muset otevřít **výstup** okno.)  
-  
- Můžete taky nechat spustit při spuštění kódu. Tento přístup se obecně nedoporučuje pro VSPackage rozšíření. Pokud příliš mnoho rozšíření se pokusí načíst při spuštění sady Visual Studio, může být výrazně delší čas spuštění. Lepší postupem je automaticky načíst VSPackage jenom v případě, že se nesplní nějaká podmínka (např. řešení otevíráte).  
-  
- Tento postup ukazuje, jak spustit doplňku kód v VSPackage, který načítá automaticky, když je otevřen řešení:  
-  
-#### <a name="to-autoload-a-vspackage"></a>K autoload VSPackage  
-  
-1.  Vytvoření projektu VSIX s položka projektu balíček Visual Studio. (Pokyny k tomu, najdete v části [jak spustit vývoj rozšíření VSIX?](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md#BKMK_StartDeveloping). Stačí přidat **balíček Visual Studio** místo položky projektu.) Název projektu VSIX **TestAutoload**.  
-  
-2.  Otevřete TestAutoloadPackage.cs. Najděte řádek, kde je deklarovaná třída balíčku:  
-  
-    ```csharp  
-    public sealed class <name of your package>Package : Package  
-    ```  
-  
-3.  Nad tímto řádkem je sada atributů. Přidejte tento atribut:  
-  
-    ```csharp  
-    [ProvideAutoLoad(UIContextGuids80.SolutionExists)]  
-    ```  
-  
-4.  Nastavte zarážky v `Initialize()` metoda a spusťte ladění (F5).  
-  
-5.  V experimentální instance otevřete projekt. VSPackage by se měly načíst a vaší zarážce by měl být přístupů.  
-  
- Můžete zadat jiném kontextu, ve kterém se má načíst vaše VSPackage pomocí pole <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80>. Další informace najdete v tématu [načítání VSPackages](../extensibility/loading-vspackages.md).  
-  
-## <a name="how-can-i-get-the-dte-object"></a>Jak získat objekt DTE?  
- Pokud se vaše doplněk nezobrazí uživatelské rozhraní – například příkazy nabídky, tlačítek panelu nástrojů nebo nástroj windows – bude pravděpodobně možné použít kód jako-je, pokud objekt automatizace DTE můžete získat z VSPackage. Tady je jak:  
-  
-#### <a name="to-get-the-dte-object-from-a-vspackage"></a>Chcete-li získat objekt DTE z VSPackage  
-  
-1.  V projektu VSIX pomocí šablony položky balíček Visual Studio, vyhledejte  *\<název projektu >*Package.cs souboru. Toto je třída, která je odvozena z <xref:Microsoft.VisualStudio.Shell.Package>; ho můžete pracovat s Visual Studio. V takovém případě použijte jeho <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> získat <xref:EnvDTE80.DTE2> objektu.  
-  
-2.  Přidat tyto `using` příkazy:  
-  
-    ```csharp  
-    using EnvDTE;  
-    using EnvDTE80;  
-    ```  
-  
-3.  Najít `Initialize` metoda. Tato metoda zpracovává příkaz, který jste zadali v Průvodci vytvořením balíčku. Přidejte volání <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> GET pro objekt DTE:  
-  
-    ```csharp  
-    DTE dte = (DTE)GetService(typeof(DTE));  
-    ```  
-  
- Až budete mít <xref:EnvDTE.DTE> objektu automatizace zbytek kódu doplňku můžete přidat do projektu. Pokud potřebujete <xref:EnvDTE80.DTE2> objektu, může stejnou věc udělat.  
-  
-## <a name="how-do-i-change-menu-commands-and-toolbar-buttons-in-my-add-in-to-the-vspackage-style"></a>Změna tlačítka panelu nástrojů a příkazy nabídky v mé doplňku na styl VSPackage?  
- Rozšíření VSPackage vytvoření většina příkazů nabídky, panely nástrojů, tlačítka panelu nástrojů a dalších uživatelského rozhraní pomocí souboru .vsct. **Vlastní příkaz** šablony položek projektu vám dává možnost vytvořit příkaz na **nástroje** nabídky. Další informace najdete v tématu [vytvoření rozšíření pomocí příkazu v nabídce](../extensibility/creating-an-extension-with-a-menu-command.md).  
-  
- Další informace o souborech .vsct najdete v tématu [jak VSPackages přidat prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md). Návody, které ukazují, jak chcete použít soubor .vsct k přidání položky nabídky, panely nástrojů a tlačítka panelu nástrojů, najdete v části [rozšíření nabídek a příkazů](../extensibility/extending-menus-and-commands.md).  
-  
-## <a name="how-do-i-add-custom-tool-windows-in-the-vspackage-way"></a>Jak přidat vlastní nástroj windows způsobem VSPackage?  
- Šablony položek projektu okno nástroje vlastní vám dává možnost vytvořit okno nástroje. Další informace o této šablony položek projektu najdete v tématu [vytváření rozšíření s okno nástroje](../extensibility/creating-an-extension-with-a-tool-window.md). Informace o nástroji windows najdete v tématu [rozšíření a přizpůsobení nástrojů Windows](../extensibility/extending-and-customizing-tool-windows.md) a články v něm, zejména [přidání okno nástroje](../extensibility/adding-a-tool-window.md).  
-  
-## <a name="how-do-i-manage-visual-studio-windows-in-the-vspackage-way"></a>Jak lze spravovat windows Visual Studio způsobem VSPackage?  
- Pokud vaše doplněk spravuje windows Visual Studio, kód doplněk by měla fungovat v VSPackage. Například tento postup ukazuje, jak přidat kód, který spravuje **seznam úkolů** k `MenuItemCallback` metoda VSPackage.  
-  
-#### <a name="to-insert-window-management-code-from-an-add-in-into-a-vspackage"></a>Vložení kódu okno správy z doplňku do VSPackage  
-  
-1.  Vytvořit VSPackage, který má příkaz nabídky, jako v [jak spustit vývoj rozšíření VSIX?](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md#BKMK_StartDeveloping) části.  
-  
-2.  Otevřete soubor, který obsahuje definici VSPackage. (V projektu jazyka C#, má  *\<název projektu >*Package.cs.)  
-  
-3.  Přidat tyto `using` příkazy:  
-  
-    ```csharp  
-    using EnvDTE;  
-    using EnvDTE80;  
-    ```  
-  
-4.  Najít `MenuItemCallback` metoda. Přidejte volání <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> získat <xref:EnvDTE80.DTE2> objektu:  
-  
-    ```csharp  
-    DTE2 dte = (DTE2)GetService(typeof(DTE));  
-    ```  
-  
-5.  Přidejte kód z tohoto doplňku. Například zde je kód, který přidává nové úkoly **seznam úkolů**, uvádí počet úloh a poté se odstraní jeden úkol.  
+5.  Přidejte kód z tohoto doplňku. Například tady je kód, který přidá nový úkol **seznamu úkolů**uvádí počet úloh a odstraní jeden úkol.  
   
     ```csharp  
     private void MenuItemCallback(object sender, EventArgs e)   
@@ -204,27 +205,27 @@ Doplňky jsou nyní zastaralé. Chcete-li nové rozšíření sady Visual Studio
     }  
     ```  
   
-## <a name="how-do-i-manage-projects-and-solutions-in-a-vspackage"></a>Jak spravovat projekty a řešení v VSPackage?  
- Pokud vaše doplněk spravuje projekty a řešení, kód doplněk by měla fungovat v VSPackage. Například tento postup ukazuje, jak přidat kód, který získá spouštěný projekt.  
+## <a name="how-do-i-manage-projects-and-solutions-in-a-vspackage"></a>Jak můžu spravovat projekty a řešení v sadě VSPackage?  
+ Pokud váš doplněk spravuje projekty a řešení, měl by kód doplňku fungovat v sadě VSPackage. Například tento postup ukazuje, jak přidat kód, který získá spouštěný projekt.  
   
-1.  Vytvořit VSPackage, který má příkaz nabídky, jako v [jak spustit vývoj rozšíření VSIX?](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md#BKMK_StartDeveloping) části.  
+1.  Vytvoření balíčku VSPackage, která obsahuje příkaz nabídky, stejně jako [Jak můžu začít vyvíjet rozšíření VSIX?](../extensibility/faq-converting-add-ins-to-vspackage-extensions.md#BKMK_StartDeveloping) části.  
   
-2.  Otevřete soubor, který obsahuje definici VSPackage. (V projektu jazyka C#, má  *\<název projektu >*Package.cs.)  
+2.  Otevřete soubor, který obsahuje definici sady VSPackage. (V projektu jazyka C#, má  *\<název projektu > Package.cs*.)  
   
-3.  Přidat tyto `using` příkazy:  
+3.  Přidejte tyto `using` příkazy:  
   
     ```csharp  
     using EnvDTE;  
     using EnvDTE80;  
     ```  
   
-4.  Najít `MenuItemCallback` metoda. Přidejte volání <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> získat <xref:EnvDTE80.DTE2> objektu:  
+4.  Najít `MenuItemCallback` metody. Přidejte volání do <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> zobrazíte <xref:EnvDTE80.DTE2> objektu:  
   
     ```csharp  
     DTE2 dte = (DTE2)GetService(typeof(DTE));  
     ```  
   
-5.  Přidejte kód z tohoto doplňku. Například následující kód získá název spouštěný projekt v řešení. (Řešení vícenásobného projektu je třeba otevřít při spuštění tohoto balíčku.)  
+5.  Přidejte kód z tohoto doplňku. Například následující kód získá název projektu při spuštění v řešení. (Řešení vícenásobného projektu musí být otevřený po spuštění tohoto balíčku.)  
   
     ```csharp  
     private void MenuItemCallback(object sender, EventArgs e)  
@@ -245,8 +246,8 @@ Doplňky jsou nyní zastaralé. Chcete-li nové rozšíření sady Visual Studio
     }  
     ```  
   
-## <a name="how-do-i-set-keyboard-shortcuts-in-a-vspackage"></a>Nastavení klávesové zkratky v VSPackage  
- Můžete použít `<KeyBindings>` element .vsct souboru. V následujícím příkladu, klávesové zkratky pro příkaz `idCommand1` Alt + A a klávesová zkratka pro příkaz `idCommand2` je kombinace kláves Ctrl + Alt + A. Všimněte si syntaxe názvy klíčů.  
+## <a name="how-do-i-set-keyboard-shortcuts-in-a-vspackage"></a>Nastavení klávesové zkratky v sadě VSPackage  
+ Můžete použít `<KeyBindings>` elementu *.vsct* souboru. V následujícím příkladu, klávesové zkratky pro příkaz `idCommand1` je **Alt**+**A**a klávesovou zkratku pro příkaz `idCommand2` je **Alt**  + **Ctrl**+**A**. Všimněte si, že syntaxe pro názvy klíčů.  
   
 ```xml  
 <KeyBindings>  
@@ -255,8 +256,8 @@ Doplňky jsou nyní zastaralé. Chcete-li nové rozšíření sady Visual Studio
 </KeyBindings>  
 ```  
   
-## <a name="how-do-i-handle-automation-events-in-a-vspackage"></a>Jak zpracování událostí automatizace v VSPackage?  
- Události automatizace v VSPackage zpracováváte stejným způsobem jako doplněk. Následující kód ukazuje, jak bude zpracováván `OnItemRenamed` událostí. (Tento příklad předpokládá, že jste, že jste již podmínky objekt DTE.)  
+## <a name="how-do-i-handle-automation-events-in-a-vspackage"></a>Jak mám postupovat při události automatizace v sadě VSPackage?  
+ Můžete zpracovávat události automatizace v sadě VSPackage stejným způsobem jako doplněk. Následující kód ukazuje, jak naložit `OnItemRenamed` událostí. (Tento příklad předpokládá, že jste už získali objekt DTE.)  
   
 ```csharp  
 Events2 dteEvents = (Events2)dte.Events;  

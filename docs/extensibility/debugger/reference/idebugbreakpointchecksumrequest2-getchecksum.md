@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointChecksumRequest2::GetChecksum | Microsoft Docs
+title: IDebugBreakpointChecksumRequest2::GetChecksum | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,14 +13,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6ecd6d0ed9c69cad1275a399ffacf402529eebf4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b78c5f44d8f73aa9bb2af5a5b2aa43d5b15bd7db
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49910521"
 ---
 # <a name="idebugbreakpointchecksumrequest2getchecksum"></a>IDebugBreakpointChecksumRequest2::GetChecksum
-Načte kontrolního součtu dokumentu pro žádost zarážek zadaný jedinečný identifikátor algoritmu kontrolního součtu používat.  
+Načte dokument kontrolního součtu pro zarážku požadavek zadaný jedinečný identifikátor algoritmu kontrolního součtu použít.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,16 +41,16 @@ public int GetChecksum(
   
 #### <a name="parameters"></a>Parametry  
  `guidAlgorithm`  
- [v] Jedinečný identifikátor algoritmu kontrolního součtu.  
+ [in] Jedinečný identifikátor algoritmu kontrolního součtu.  
   
  `pChecksumData`  
- [out] Dokument kontrolní součet zarážek žádosti.  
+ [out] Kontrolní součet dokumentu pro požadavek zarážku.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje funkce, která kontroluje, zda kontrolního součtu dokumentu, která má být vázán, odpovídá jedné z uživatelského rozhraní.  
+ Následující příklad ukazuje funkci, která kontroluje, zda kontrolní součet dokumentu, který má být vázán, odpovídá jednomu z uživatelského rozhraní.  
   
 ```cpp  
 bool CDebugProgram::DoChecksumsMatch(CDebugPendingBreakpoint *pPending, CDebugCodeContext *pContext)  

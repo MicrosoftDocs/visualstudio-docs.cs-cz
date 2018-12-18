@@ -1,5 +1,5 @@
 ---
-title: Property – Element (MSBuild) | Microsoft Docs
+title: Property – Element (MSBuild) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 03/13/2017
 ms.technology: msbuild
@@ -18,21 +18,22 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f98e1cc8b3ce016580e477dfa648a493df1c1e8
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d44b88f5d97fb8c70391506dc2daab99482d6a44
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39154977"
 ---
 # <a name="property-element-msbuild"></a>Property – element (MSBuild)
-Obsahuje uživatelské jméno definované vlastnosti a hodnotu. Každou vlastnost v [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projektu musí být zadány jako podřízenou `PropertyGroup` elementu.  
+Obsahuje název definované vlastnosti uživatele a hodnotu. Každé vlastnosti používané [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projektu musí být zadán jako podřízený objekt `PropertyGroup` elementu.  
 
  \<Project>  
- \<PropertyGroup – >  
+ \<PropertyGroup >  
 
 ## <a name="syntax"></a>Syntaxe  
 
-```  
+```xml  
 <Property Condition="'String A' == 'String B'">  
     Property Value  
 </Property>  
@@ -47,22 +48,22 @@ Obsahuje uživatelské jméno definované vlastnosti a hodnotu. Každou vlastnos
 |---------------|-----------------|  
 |`Condition`|Nepovinný atribut.<br /><br /> Podmínku, která má být vyhodnocen. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|  
 
-### <a name="child-elements"></a>Podřízené elementy  
+### <a name="child-elements"></a>Podřízené prvky  
  Žádné  
 
-### <a name="parent-elements"></a>Nadřazené elementy  
+### <a name="parent-elements"></a>Nadřazené prvky  
 
 |Prvek|Popis|  
 |-------------|-----------------|  
-|[PropertyGroup –](../msbuild/propertygroup-element-msbuild.md)|Element seskupení pro vlastnosti.|  
+|[PropertyGroup](../msbuild/propertygroup-element-msbuild.md)|Element Grouping vlastností.|  
 
 ## <a name="text-value"></a>Textová hodnota  
  Textová hodnota je volitelná.  
 
- Tento text určuje hodnotu vlastnosti a pravděpodobně obsahuje kód XML.  
+ Tento text určuje hodnotu vlastnosti a může obsahovat kód XML.  
 
 ## <a name="remarks"></a>Poznámky  
- Názvy vlastností jsou omezeny na pouze znaků ASCII. Hodnoty vlastností se odkazuje v projektu tím, že název vlastnosti mezi "`$(`"a"`)`". Například `$(builddir)\classes` by odkazující na "build\classes", pokud `builddir` vlastnost měl hodnotu `build`. Další informace o vlastnostech najdete v tématu [vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md).  
+ Názvy vlastností jsou omezené na pouze znaky ASCII. Hodnoty vlastností je odkazováno v projektu tak, že název vlastnosti mezi "`$(`"a"`)`". Například `$(builddir)\classes` by přeložit na *build\classes*, pokud `builddir` vlastnost má hodnotu `build`. Další informace o vlastnostech najdete v tématu [vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md).  
 
 ## <a name="example"></a>Příklad  
  Následující kód nastaví `Optimization` vlastnost `false` a `DefaultVersion` vlastnost `1.0` Pokud `Version` vlastnost je prázdná.  
@@ -74,6 +75,6 @@ Obsahuje uživatelské jméno definované vlastnosti a hodnotu. Každou vlastnos
 </PropertyGroup>  
 ```  
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 [Vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md)  
  [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)

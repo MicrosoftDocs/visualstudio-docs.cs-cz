@@ -5,14 +5,16 @@ ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 28633fcc4c744269a2a90cc72c8136afbda6f561
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 14df0183076125e487873bbb9865b2481e277a5b
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34845012"
 ---
 # <a name="add-new-connections"></a>Přidat nové připojení
 
@@ -24,7 +26,7 @@ Zkontrolujte připojení k databázi nebo službu a prozkoumejte obsah databáze
 
 - Průzkumník cloudu
 
-   Nainstalujte tohoto okna ručně tak, že vyberete rozšíření sady Visual Studio **nástroje**, **rozšíření a aktualizace**, **Online**, **Visual Studio Markeplace**. Poskytuje specializované funkce pro zkoumání a připojení ke službám Azure.
+   Nainstalujte tohoto okna ručně tak, že vyberete rozšíření sady Visual Studio **nástroje** > **rozšíření a aktualizace** > **Online**  >  **Markeplace sady visual Studio**. Poskytuje specializované funkce pro zkoumání a připojení ke službám Azure.
 
 - Průzkumník objektů systému SQL Server
 
@@ -34,26 +36,26 @@ Zkontrolujte připojení k databázi nebo službu a prozkoumejte obsah databáze
 
 Chcete-li vytvořit připojení k databázi, klikněte na tlačítko **přidat připojení** ikonu v **Průzkumníka serveru**, nebo klikněte pravým tlačítkem na **Průzkumníka serveru** na **dat Připojení** uzel a vyberte možnost **přidat připojení**. Tady můžete také připojit k databázi na jiný server, SharePoint služby nebo služby Azure.
 
-![Ikona nové připojení Průzkumníka serveru](../data-tools/media/raddata-server-explorer-new-connection-icon.png "ikonu raddata nové připojení Průzkumníka serveru")
+![Ikona nové připojení Průzkumníka serveru](../data-tools/media/raddata-server-explorer-new-connection-icon.png)
 
 Po výběru této možnosti **přidat připojení** dialogové okno. Zde jsme zadali název instance SQL serveru LocalDB.
 
-![Přidat nové připojení](../data-tools/media/raddata-add-new-connection-dialog.png "raddata přidat nové připojení, dialogové okno")
+![Přidat nové připojení](../data-tools/media/raddata-add-new-connection-dialog.png)
 
 ## <a name="change-the-provider"></a>Změňte zprostředkovatele
 
 Pokud je zdroj dat není co chcete použít, klikněte na tlačítko **změnu** vyberte nový zdroj dat nebo nového zprostředkovatele dat ADO.NET. Přihlašovací údaje, v závislosti na tom, jak jste nakonfigurovali požádat nového poskytovatele.
 
-![Změňte zprostředkovatele dat AD0.NET](../data-tools/media/raddata-change-ad0.net-data-provider.png "raddata poskytovatel dat AD0.NET změny")
+![Poskytovatel dat AD0.NET změny](../data-tools/media/raddata-change-ad0.net-data-provider.png)
 
 ## <a name="test-the-connection"></a>Otestujte připojení
 
 Po výběru zdroje dat, klikněte na tlačítko **Test připojení**. Pokud dojde k neúspěchu, musíte se k řešení podle dokumentaci od dodavatele.
 
-![Testovací připojení](../data-tools/media/raddata-test-connection.png "raddata Test připojení")
+![Testovací připojení](../data-tools/media/raddata-test-connection.png)
 
 Pokud úspěšný, jste připraveni vytvořit *zdroj dat*, což je termín sady Visual Studio, který skutečně znamená *datový model* založený na základní databázi nebo službu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Visual Studio Data Tools for .NET](../data-tools/visual-studio-data-tools-for-dotnet.md)

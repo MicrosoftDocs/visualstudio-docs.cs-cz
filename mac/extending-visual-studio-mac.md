@@ -1,43 +1,44 @@
 ---
 title: Rozšíření sady Visual Studio pro Mac
-Description: Visual Studio for Mac's features and functionality can be extended with modules called extension packages. The first part of this guide creates a simple Visual Studio for Mac extension package to insert the date and time into a document. The second part of this guide introduces the fundamentals of the extension package system and some of the core APIs that form the foundation of Visual Studio for Mac.
-author: asb3993
-ms.author: amburns
+description: Visual Studio pro Mac funkce, je možné rozšířit pomocí modulů s názvem balíčky rozšíření. První část tohoto průvodce vytvoří jednoduchý Visual Studio for Mac rozšíření balíčku vložit datum a čas do dokumentu. Druhá část Tento průvodce představuje Principy systému rozšíření balíčku a některé základní rozhraní API, která tvoří základ sady Visual Studio pro Mac.
+author: conceptdev
+ms.author: crdun
 ms.date: 04/14/2017
 ms.technology: vs-ide-sdk
 ms.assetid: D5245AB0-8404-426B-B538-F49125E672B2
-ms.openlocfilehash: 589663fff7caa46899fe8f4213f5d29fe2772611
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 8212039cd4f83cd9ea2b53a1050f32ed5dbad367
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51295134"
 ---
 # <a name="extending-visual-studio-for-mac"></a>Rozšíření sady Visual Studio pro Mac
 
-Visual Studio pro Mac se skládá ze sady modulů s názvem *balíčků rozšíření*. Rozšiřující balíčky můžete zavádět nové funkce pro Visual Studio pro Mac, například podporu pro další jazyk nebo novou šablonu projektu.
+Visual Studio pro Mac se skládá ze sady modulů s názvem *balíčky rozšíření*. Balíčky rozšíření můžete použít pro zavedení nových funkcí do sady Visual Studio pro Mac, jako třeba podporu pro další jazyk nebo nové šablony projektu.
 
-Rozšiřující balíčky sestavit z *rozšíření* body dalších balíčků rozšíření. Rozšíření body jsou zástupné symboly pro oblasti, které lze rozšířit natolik, jako jsou nabídky nebo seznam příkazů IDE. Balíček rozšíření můžete vytvořit z bodu rozšíření tak, že zaregistrujete uzlu strukturovaných dat nazývaný rozšíření, jako je například nové položky nabídky nebo nový příkaz. Každé rozšíření bod přijímá určité typy rozšíření, jako například *příkaz*, *Pad*, nebo *PSTŠablona*. Modul, který obsahuje body rozšíření je volána *doplňku hostitele*, jak ho můžete rozšířit pomocí dalších balíčků rozšíření.
+Balíčky rozšíření sestavení z *rozšíření* body jiné balíčky rozšíření. Rozšiřovací body jsou zástupné symboly pro oblasti, které lze rozšířit natolik, jako je například nabídka nebo seznam příkazů prostředí IDE. Balíček rozšíření můžete vytvořit z rozšiřovacím bodem registrace uzlu strukturovaných dat, kterým se říká rozšíření, jako je například novou položku nabídky nebo nový příkaz. Každý rozšiřovací bod přijímá určité typy rozšíření například *příkaz*, *panel*, nebo *PSTŠablona*. Modul, který obsahuje Rozšiřovací body je volána *hostitele doplňku*, jak je možné rozšířit pomocí jiné balíčky rozšíření.
 
-Přizpůsobení sady Visual Studio pro Mac, můžete vytvořit balíček rozšíření, který sestavuje z bodů rozšíření obsažená v přidání hostitele v rámci existující knihovny v sadě Visual Studio pro Mac, které jsou popsány v následujícím diagramu:
+Přizpůsobení sady Visual Studio pro Mac, můžete vytvořit balíček rozšíření, který vytváří z Rozšiřovací body, které jsou obsaženy v hostiteli doplňku v rámci existující knihovny v sadě Visual Studio pro Mac, jak je znázorněno v následujícím diagramu:
 
 ![Architektura doplňků](media/extending-visual-studio-mac-addin1.png)
 
-Aby mohl balíček rozšíření vytvářet ze sady Visual Studio pro Mac musí mít rozšíření, která sestavení z existující body rozšíření v sadě Visual Studio pro Mac IDE. Pokud balíček rozšíření závisí na bod rozšíření, která je definována v u hostitelů, se říká, že je tak, aby měl _závislostí_ na tento balíček rozšíření.
+Pořadí rozšíření balíčku k sestavení ze sady Visual Studio pro Mac musí mít rozšíření, která sestavení z předem existujících Rozšiřovací body v sadě Visual Studio pro Mac integrovaného vývojového prostředí. Když balíček rozšíření závisí na rozšiřovacím bodem definované v hostiteli, který doplněk, to se říká, že mají _závislost_ na tento balíček rozšíření.
 
-Výhodou tohoto modulární návrhu je, Visual Studio pro Mac je rozšiřitelný – existuje mnoho bodů rozšíření, které mohou být vytvořeny při s balíčky vlastní rozšíření. Příklady aktuální balíčků rozšíření zahrnují podporu pro C# a F #, ladicí nástroje a šablony projektů.
+Výhodou této modulárního návrhu je, že Visual Studio for Mac je možné rozšířit – existuje mnoho Rozšiřovací body, které můžou být postavené na pomocí rozšíření vlastních balíčků. Příklady aktuální balíčky rozšíření zahrnují podporu pro C# a F#ladicího programu nástroje a šablony projektů.
 
 > [!NOTE]
-> **Poznámka:**: Pokud máte projekt Maker doplněk, který byl vytvořen ještě před Add-in Maker 1.2, budete muset migrovat projektu, jak je uvedeno v krocích [zde](https://mhut.ch/addinmaker/1.2).
+> **Poznámka:**: Pokud máte projekt doplňku tvůrce, který byl vytvořen ještě před doplněk Tvůrce 1.2, budete muset migrovat projekt, jak je uvedeno v krocích [tady](https://mhut.ch/addinmaker/1.2).
 
 <!---The [Walkthrough](~/extending-visual-studio-mac-walkthrough.md) topic explains how to build an extension package that uses a *Command* to insert the date and time into an open text document.--->
 
-V této části vypadá na různých soubory generované Maker Add-in a příkaz rozšíření dat vyžaduje.
+Této části se probírají různé soubory generované záznamem pro tvůrce Add-in a vyžaduje data rozšíření příkazu.
 
 ## <a name="attribute-files"></a>Atribut soubory
 
-Rozšiřující balíčky ukládat metadata o jejich název, verzi, závislosti a další informace v jazyce C# atributy. Maker Add-in vytvoří dva soubory, `AddinInfo.cs` a `AssemblyInfo.cs` tyto informace uspořádat a uložit. Rozšiřující balíčky musí mít jedinečné ID. a obor názvů zadaný v jejich *doplněk atribut*:
+Balíčky rozšíření ukládají metadata o jejich název, verzi, závislosti a další informace v jazyce C# atributy. Doplněk tvůrce vytvoří dva soubory `AddinInfo.cs` a `AssemblyInfo.cs` můžete ukládat a uspořádávat tyto informace. Balíčky rozšíření musí mít jedinečné id a obor názvů určený ve svých *doplněk atribut*:
 
-```
+```csharp
 [assembly:Addin (
    "DateInserter",
    Namespace = "DateInserter",
@@ -45,19 +46,19 @@ Rozšiřující balíčky ukládat metadata o jejich název, verzi, závislosti 
 )]
 ```
 
-Rozšiřující balíčky také na rozšiřující balíčky, které vlastní rozšíření body, které se připojte deklarovat závislosti. Automaticky se odkazuje v čase vytvoření buildu.
+Balíčky rozšíření musí deklarovat také závislosti na balíčky rozšíření, které vlastní Rozšiřovací body, které se připojte. Automaticky jsou odkazovány v okamžiku sestavení.
 
-Kromě toho další odkazy jde přidat prostřednictvím uzlu odkazu Add-in v panelu pro řešení pro projekt, jako jsou znázorněny na následujícím obrázku:
+Kromě toho další odkazy jde přidat prostřednictvím doplňku referenční uzel v oblasti řešení pro projekt, jako jsou znázorněny na následujícím obrázku:
 
-![Vložit snímek datum](media/extending-visual-studio-mac-addin13.png)
+![Vložit datum – snímek obrazovky](media/extending-visual-studio-mac-addin13.png)
 
-Mají také jejich odpovídajících `assembly:AddinDependency ` atributy přidané na čas sestavení. Jakmile jsou deklarace metadata a závislosti na místě, můžete se zaměřit na základní stavební kameny pro balíček rozšíření.
+Mají také odpovídající `assembly:AddinDependency` atributy přidané na čas sestavení. Jakmile deklarace metadata a závislosti jsou na místě, můžete se soustředit na základní stavební bloky balíček rozšíření.
 
-## <a name="extensions-and-extension-points"></a>Rozšíření a rozšíření body
+## <a name="extensions-and-extension-points"></a>Rozšíření a Rozšiřovací body
 
-Bod rozšíření je zástupný symbol, který určuje strukturu dat (typ), zatímco rozšíření definuje data, která vyhovuje pro struktury určeného bod konkrétní rozšíření. Rozšíření odkazuje určují, jaký typ rozšíření, se může přijmout v jeho deklaraci. Rozšíření jsou deklarováno s použitím názvy typů nebo rozšíření cesty. Najdete v článku [odkaz na rozšíření bodu](http://monoaddins.codeplex.com/wikipage?title=Extension%20Points&referringTitle=Description%20of%20Add-ins%20and%20Add-in%20Roots) pro podrobnější vysvětlení o tom, jak vytvořit bod rozšíření, které potřebujete.
+Rozšiřovacím bodem je zástupný symbol, který definuje strukturu dat (typ), zatímco rozšíření definuje data, která odpovídá struktuře určené konkrétní rozšiřovací bod. Rozšiřovací body určit, jaký typ rozšíření se může přijmout v jeho deklaraci. Rozšíření jsou deklarovány pomocí názvy typů nebo rozšíření cesty. Najdete v článku [rozšiřovací bod odkaz](https://github.com/mono/mono-addins/wiki/Extension-Points) najdete podrobnější vysvětlení o tom, jak vytvořit rozšiřovací bod, který potřebujete.
 
-Architektura bodu rozšíření nebo rozšíření udržuje vývoj sady Visual Studio pro Mac rychlé a modulární. 
+Architektura rozšíření/rozšíření bodu udržuje vývoje sady Visual Studio pro Mac rychlou modulární.
 
 <!--Since there are a large number of extension types, this article focuses on the ones used in the extension package that was built in the [Walkthrough](~/extending-visual-studio-mac-walkthrough.md).-->
 
@@ -65,11 +66,11 @@ Architektura bodu rozšíření nebo rozšíření udržuje vývoj sady Visual S
 
 <!--[Walkthrough](~/extending-visual-studio-mac-walkthrough.md) uses a Command Extension - an extension that points to methods that are called every time it is executed. -->
 
-Příkaz rozšíření jsou rozšíření, které odkazují na metody, které se nazývají pokaždé, když se spustí.
+Příkaz rozšíření jsou přípony, které odkazují na metody, které jsou volány pokaždé, když je proveden.
 
-Přidávání položek do rozšíření příkaz jsou definovány `/MonoDevelop/Ide/Commands` bodu rozšíření. Jsme definovali naše rozšíření v `Manifest.addin.xml` následujícím kódem:
+Příkaz rozšíření, které jsou definovány pomocí přidání položek `/MonoDevelop/Ide/Commands` rozšiřovací bod. Jsme definovali naše rozšíření v `Manifest.addin.xml` následujícím kódem:
 
- ```
+ ```xml
 <Extension path="/MonoDevelop/Ide/Commands/Edit">
   <command id="DateInserter.DateInserterCommands.InsertDate"
             _label="Insert Date"
@@ -78,39 +79,39 @@ Přidávání položek do rozšíření příkaz jsou definovány `/MonoDevelop/
 </Extension>
 ```
 
-Rozšíření uzlu obsahuje cestu atribut, který určuje rozšíření bod, který ho je zapojení do, v takovém případě `/MonoDevelop/Ide/Commands/Edit`. Kromě toho funguje jako nadřazený uzel k příkazu. Příkaz uzel má následující atributy:
+Uzel výrazu obsahuje atribut cesty, která určuje rozšiřovací bod, který ho se připojit k, v tomto případě `/MonoDevelop/Ide/Commands/Edit`. Kromě toho funguje jako nadřazený uzel k příkazu. Příkaz uzel má následující atributy:
 
-*   **ID** -Určuje identifikátor pro tento příkaz. Identifikátory příkazů musí být deklarována jako členové výčtu a slouží k připojení k CommandItems příkazy.
-*   **_label** – text, který se zobrazí v nabídkách.
-*   **_description** – text, který má být zobrazen jako popisek pro tlačítka panelu nástrojů.
-*   **defaultHandler** – Určuje `CommandHandler` třídu, která pohání příkaz
+*   **ID** -Určuje identifikátor pro tento příkaz. Identifikátory příkazů musí být deklarována jako členy výčtu a slouží k připojení k CommandItems příkazy.
+*   **_jmenovka** -text zobrazovaný v nabídkách.
+*   **_popis** – text, který se zobrazí jako popisek pro tlačítka panelu nástrojů.
+*   **defaultHandler** – Určuje, `CommandHandler` třídy, která je základem příkazu
 
 <!--To invoke the command from the Edit Menu, the walkthrough creates a CommandItem extension that plugs into the `/MonoDevelop/Ide/MainMenu/Edit` extension point:-->
 
-CommandItem rozšíření, která po zapojení do `/MonoDevelop/Ide/MainMenu/Edit` rozšíření bod je znázorněn v následujícím fragmentu kódu:
+CommandItem rozšíření, které zpřístupní `/MonoDevelop/Ide/MainMenu/Edit` rozšiřovací bod je znázorněn v následujícím fragmentu kódu:
 
-```
+```xml
 <Extension path="/MonoDevelop/Ide/MainMenu/Edit">
   <commanditem id="DateInserter.DateInserterCommands.InsertDate" />
 </Extension>
 ```
 
-CommandItem umístí příkaz zadaný v jeho atribut id do nabídky. Tento CommandItem je rozšíření `/MonoDevelop/Ide/MainMenu/Edit` rozšíření bod, který umožňuje popisek příkazu se zobrazí v **nabídce Úpravy**. Všimněte si, že **id** ve CommandItem odpovídá id uzlu příkaz `InsertDate`. Pokud byste chtěli odebrat CommandItem, **vložit datum** možnost zmizí z nabídky upravit.
+CommandItem umístí příkaz do nabídky je uveden v atributu jeho id. Rozšíření této CommandItem `/MonoDevelop/Ide/MainMenu/Edit` rozšiřovacího bodu, což zajišťuje popisek příkazu se zobrazí v **nabídky Úpravy**. Všimněte si, že **id** CommandItem odpovídá id uzlu příkaz `InsertDate`. Pokud byste chtěli odebrat CommandItem, **vložit datum** možnost zmizí z nabídky Úpravy.
 
 ### <a name="command-handlers"></a>Obslužné rutiny příkazů
 
-`InsertDateHandler` Je rozšířením `CommandHandler` třídy. Přepíše dvě metody, `Update` a `Run`. `Update` Je dotazován metoda vždy, když je příkaz zobrazí v nabídce nebo proveden prostřednictvím vazeb klíče. Změnou objekt informace můžete zakázat příkaz nebo jejím, naplnit pole příkazy a další. To `Update` metoda zakáže příkaz, pokud nemůže najít aktivní *dokumentu* s *TextEditor* k vložení textu do:
+`InsertDateHandler` Je rozšířením `CommandHandler` třídy. Dvě metody, přepíše `Update` a `Run`. `Update` Metoda dotazuje se vždy, když je příkaz zobrazí v nabídce nebo provést pomocí klávesové zkratky. Změnou informace o objektu, můžete zakázat příkaz nebo je nastavit jako neviditelné, naplnit pole příkazy a další. To `Update` metoda zakáže příkazu, pokud nemůže najít aktivní *dokumentu* s *TextEditor* vložit text do:
 
-```
+```csharp
 protected override void Update (CommandInfo info)
 {
     info.Enabled = IdeApp.Workbench.ActiveDocument?.Editor != null;
 }
 ```
 
-Potřebujete přepsat `Update` metoda, pokud máte speciální logiku pro povolení nebo skrytí příkaz. `Run` Metoda provede vždy, když uživatel spustí příkaz, který v tomto případě nastane, když uživatel vybere příkazu v nabídce Upravit. Tato metoda vloží datum a čas pomocí kurzoru v textovém editoru:
+Chcete přepsat `Update` metodu, pokud máte zvláštní logiku pro povolení nebo skrytí příkazu. `Run` Metoda spustí vždy, když uživatel spustí příkaz, který v tomto případě nastane, když uživatel vybere příkaz z nabídky Úpravy. Tato metoda vloží data a času blikající kurzor v textovém editoru:
 
-```
+```csharp
 protected override void Run ()
 {
   var editor = IdeApp.Workbench.ActiveDocument.Editor;
@@ -119,46 +120,50 @@ protected override void Run ()
 }
 ```
 
-Typ příkazu deklarovat jako člena výčtu v rámci `DateInserterCommands`:
+Typ příkazu deklarovat jako člen výčtového typu v rámci `DateInserterCommands`:
 
-```
+```csharp
 public enum DateInserterCommands
 {
   InsertDate,
 }
 ```
 
-Sváže společně příkaz i jeho CommandItem – CommandItem tento příkaz volá, když je vybraný CommandItem **nabídce Úpravy**.
+To spojuje příkazu a CommandItem – CommandItem tento příkaz volá, když vyberete CommandItem ze **nabídky Úpravy**.
 
-## <a name="ide-apis"></a>Rozhraní API IDE
+## <a name="ide-apis"></a>Integrované vývojové prostředí rozhraní API
 
 <!--The extension package detailed in the [Walkthrough](~/extending-visual-studio-mac-walkthrough.md) deals with the Text Editor in Visual Studio for Mac, but this is only one of many possible areas for customization. -->
 
-Informace o rozsahu oblasti, které jsou k dispozici pro vývoj najdete v tématu [odkaz na rozšíření stromu](http://monodevelop.com/Developers/Articles/Extension_Tree_Reference) a [přehled rozhraní API](http://monodevelop.com/Developers/Articles/API_Overview). Při vytváření balíčků pokročilé rozšíření, se také podívat na [vývojáře články](http://monodevelop.com/Developers/Articles). Dole je částečný seznam oblastí pro přizpůsobení:
+Informace o rozsahu oblastí, které jsou k dispozici pro vývoj najdete v článku [odkaz na rozšíření stromu](http://monodevelop.com/Developers/Articles/Extension_Tree_Reference) a [přehled rozhraní API](http://monodevelop.com/Developers/Articles/API_Overview). Při vytváření pokročilých rozšíření balíčků, také odkazovat na [článků Vývojář](http://monodevelop.com/Developers/Articles). Následuje částečný seznam oblastí pro přizpůsobení:
 
-*   Dotyková zařízení
+*   Ladicí systém
 *   Schémata vazeb klíče
 *   Zásady
 *   Formátování kódu
 *   Formáty souborů projektu
 *   Předvolby panelů
 *   Možnosti panelů
-*   Protokoly ladicí program
-*   Ladicí program vizualizérech
+*   Protokoly ladicího programu
+*   Vizualizérů ladění
 *   Rozložení pracovního prostoru
-*   Uzly stromu pad řešení
+*   Uzly stromu panel řešení
 *   Okraje editoru zdroje
-*   Moduly testů jednotek
+*   Moduly testu jednotek
 *   Generátory kódu
 *   Fragmenty kódu
-*   Cílové rozhraní
+*   Cílové architektury
 *   Cílový modul runtime
 *   VC back EndY
 *   Refaktoring
 *   Spuštění obslužné rutiny
-*   zvýraznění syntaxe
+*   Zvýrazňování syntaxe
 
 ## <a name="additional-information"></a>Další informace
 
 > [!NOTE]
-Pracujeme na vylepšení scénáře rozšíření pro Visual Studio for Mac. Pokud vytváříte rozšíření a další nápovědu nebo informace nebo chcete poskytnout zpětnou vazbu, vyplňte [Visual Studio pro vytváření obsahu rozšíření Mac](https://aka.ms/vsmac-extensions-survey) formuláře.
+> Aktuálně pracujeme na vylepšení scénáře rozšíření pro Visual Studio pro Mac. Pokud vytváříte rozšíření a potřebujete další pomoc nebo informace nebo chcete poskytnout zpětnou vazbu, vyplňte prosím [sady Visual Studio pro Mac rozšíření vytváření](https://aka.ms/vsmac-extensions-survey) formuláře.
+
+## <a name="see-also"></a>Viz také:
+
+- [Vývoj rozšíření sady Visual Studio (ve Windows)](/visualstudio/extensibility/starting-to-develop-visual-studio-extensions)

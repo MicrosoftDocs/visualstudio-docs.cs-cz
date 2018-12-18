@@ -1,5 +1,5 @@
 ---
-title: Funkce SccPopulateList | Microsoft Docs
+title: Sccpopulatelist – funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 26e7bbb4a99c3cd649eedb7638feb5b6170b3b59
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 73cc3886fe486498f7d0fbe89d0b68cf873c9d0b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49903566"
 ---
 # <a name="sccpopulatelist-function"></a>SccPopulateList – funkce
-Tato funkce aktualizuje seznam souborů pro příkaz konkrétní zdroj ovládacího prvku a poskytuje stav zdroje ovládacího prvku na všechny dané soubory.  
+Tato funkce aktualizuje seznam souborů pro konkrétní zdroj ovládacího příkazu a poskytuje stav správy zdrojového kódu na všechny soubory daného.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,51 +42,51 @@ SCCRTN SccPopulateList (
   
 #### <a name="parameters"></a>Parametry  
  pvContext  
- [v] Struktura modulu plug-in kontextu řízení zdroje.  
+ [in] Struktura kontext modulu plug-in zdroje ovládacího prvku.  
   
  Npříkaz  
- [v] Příkaz řízení zdroje, které se použijí na všechny soubory v `lpFileNames` pole (najdete v části [příkaz kódu](../extensibility/command-code-enumerator.md) pro seznam možných příkazů).  
+ [in] Příkaz Ovládací prvek zdroje, které se použijí na všechny soubory v `lpFileNames` pole (naleznete v tématu [kód příkazu](../extensibility/command-code-enumerator.md) seznam příkazů, je to možné).  
   
- : %{nfiles/  
- [v] Počet souborů v `lpFileNames` pole.  
+ %{nfiles/  
+ [in] Počet souborů v `lpFileNames` pole.  
   
  lpFileNames  
- [v] Pole názvy souborů ví, že rozhraní IDE.  
+ [in] Pole názvy souborů ví, rozhraní IDE.  
   
  pfnPopulate  
- [v] Funkce zpětného volání IDE volání přidávat a odebírat soubory (viz [POPLISTFUNC](../extensibility/poplistfunc.md) podrobnosti).  
+ [in] Funkce zpětného volání integrovaného vývojového prostředí pro volání k přidání a odebrání souborů (viz [POPLISTFUNC](../extensibility/poplistfunc.md) podrobnosti).  
   
  pvCallerData  
- [v] Hodnota, která má být předán beze změny funkce zpětného volání.  
+ [in] Hodnota, která má být předán funkci zpětného volání beze změny.  
   
  lpStatus  
- [ve out] Pole pro modul plug-in vrátit příznaky stavu pro každý soubor zdrojového kódu.  
+ [out v] Pole pro vrátit příznaky stav pro každý soubor modulu plug-in správy zdrojového kódu.  
   
  fOptions  
- [v] Příkaz příznaky (naleznete v části "PopulateList příznak" [bitové příznaky používané určité příkazy](../extensibility/bitflags-used-by-specific-commands.md) podrobnosti).  
+ [in] Příkaz příznaky (naleznete v části "PopulateList příznak" [příznaky Bitflag používané konkrétními příkazy](../extensibility/bitflags-used-by-specific-commands.md) podrobnosti).  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Očekává se, že modul plug-in implementace zdroje řízení této funkce vrátí jednu z následujících hodnot:  
+ Modul plug-in implementaci ovládacího prvku zdroje této funkce má vracet instanci jednoho z následujících hodnot:  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |SCC_OK|Úspěch.|  
-|SCC_E_NONSPECIFICERROR|Došlo k nespecifikované chybě.|  
+|SCC_E_NONSPECIFICERROR|K nespecifikované chybě.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato funkce prověří seznam souborů pro jeho aktuální stav. Použije `pfnPopulate` funkce zpětného volání, které oznámí souboru neodpovídá kritériím pro volající `nCommand`. Například, pokud je příkaz `SCC_COMMAND_CHECKIN` a není rezervována souborů v seznamu, pak zpětné volání slouží k informování volající. Modul plug-in zdrojového kódu v některých případech může najít další soubory, které může být součástí příkazu a přidat je. To umožňuje například uživateli jazyka Visual Basic .bmp soubor, který je používán své projektu, ale nejsou uvedené v souboru projektu jazyka Visual Basic. Uživatel rozhodne **získat** příkazu v prostředí IDE. Prostředí IDE zobrazí seznam všech souborů, které se domnívá, že uživatel můžete získat, ale předtím, než se zobrazí v seznamu, `SccPopulateList` funkce je volána, abyste měli jistotu, který se má zobrazit v seznamu je aktuální.  
+ Tato funkce zkontroluje seznam souborů pro jeho aktuální stav. Používá `pfnPopulate` oznámit volajícímu, soubor neodpovídá kritériím pro funkci zpětného volání `nCommand`. Například, pokud je příkaz `SCC_COMMAND_CHECKIN` a není rezervován souboru v seznamu a pak zpětného volání je sloužící k informování volající. Modul plug-in správy zdrojového kódu v některých případech může najít další soubory, které může být součástí příkazu a přidat je. To umožňuje například Visual Basic uživatelům rezervovat soubor .bmp, který používá jeho projektu, ale nezobrazí v souboru projektu jazyka Visual Basic. Uživatel klikne **získat** příkazu v integrovaném vývojovém prostředí. Rozhraní IDE se zobrazí seznam všech souborů, které se domnívá, že uživatel může získat, ale před zobrazením seznamu, je `SccPopulateList` voláním funkce se ujistěte se, že je aktuální seznam, který se má zobrazit.  
   
 ## <a name="example"></a>Příklad  
- Prostředí IDE sestavuje seznam souborů, které se domnívá, že uživatel může získat. Předtím, než se zobrazí tento seznam, zavolá `SccPopulateList` fungovat, poskytuje modul plug-in Zdroj kontrolu možnost Přidat a odstranit soubory ze seznamu. Modul plug-in upraví voláním funkce zpětného volání daného seznamu (viz [POPLISTFUNC](../extensibility/poplistfunc.md) další podrobnosti).  
+ Rozhraní IDE vytvoří seznam souborů, které se domnívá, že uživatel může dostat. Předtím, než se zobrazí tento seznam, zavolá `SccPopulateList` fungovat, poskytuje modul plug-in správy zdrojového kódu příležitost k přidávání a odstraňování souborů ze seznamu. Modul plug-in upravuje seznam zavoláním funkce zpětného volání dané (viz [POPLISTFUNC](../extensibility/poplistfunc.md) další podrobnosti).  
   
- Modul plug-in nadále volání `pfnPopulate` funkci, která přidá a odstraní soubory, dokud ji po dokončení a vrátí z `SccPopulateList` funkce. Prostředí IDE pak můžete zobrazit jeho seznamu. `lpStatus` Pole představuje všechny soubory v seznamu původní předaná v prostředí IDE. Modul plug-in vyplní stav všechny tyto soubory kromě provádění pomocí funkce zpětného volání.  
+ Modul plug-in stále volat `pfnPopulate` funkce, která přidáte a odstraníte soubory, dokud se dokončí a vrátí `SccPopulateList` funkce. Integrované vývojové prostředí potom můžete zobrazit seznam. `lpStatus` Pole představuje všechny soubory v původním seznamu předaných v integrovaném vývojovém prostředí. Funkce zpětného volání pomocí modulu plug-in vyplní stav všech těchto souborů kromě provádění.  
   
 > [!NOTE]
->  Správa zdrojového kódu modulu plug-in má vždy možnost jednoduše okamžitě vrátit z této funkce a v seznamu, protože se jedná. Pokud modul plug-in implementuje tuto funkci, mohlo to znamenat nastavením `SCC_CAP_POPULATELIST` bitových parametrů funkce v prvním volání [SccInitialize](../extensibility/sccinitialize-function.md). Ve výchozím nastavení modul plug-in musí vždy předpokládají, že všechny položky, které jsou předávány v jsou soubory. Ale pokud je nastaví prostředí IDE `SCC_PL_DIR` příznak v `fOptions` parametr všechny položky, které jsou předávány v jsou považovány adresáře. Modul plug-in seznam by měl přidejte všechny soubory, které patří do adresáře. Prostředí IDE, projdou nikdy v kombinaci souborů a adresářů.  
+>  Modul plug-in správy zdrojového kódu vždy má povolenou možnost jednoduše výsledky okamžitě z této funkce byste museli opustit seznamu, protože se jedná. Pokud modul plug-in implementuje tuto funkci, může to znamenat tak, že nastavíte `SCC_CAP_POPULATELIST` bitových parametrů funkce v prvním volání [sccinitialize –](../extensibility/sccinitialize-function.md). Ve výchozím nastavení, modul plug-in by měl vždy předpokládat, že jsou všechny položky předávaný soubory. Ale pokud je nastaví integrovaného vývojového prostředí `SCC_PL_DIR` příznak v `fOptions` parametr, jsou všechny položky předávaný považovat adresáře. Modul plug-in přidala všechny soubory, které patří v adresářích. Rozhraní IDE se nikdy předat kombinaci soubory a adresáře.  
   
 ## <a name="see-also"></a>Viz také  
- [Funkce modulu Plug-in rozhraní API ovládacího prvku zdroje](../extensibility/source-control-plug-in-api-functions.md)   
- [SccInitialize](../extensibility/sccinitialize-function.md)   
+ [Funkce rozhraní API modulu Plug-in zdroje ovládacího prvku](../extensibility/source-control-plug-in-api-functions.md)   
+ [Sccinitialize –](../extensibility/sccinitialize-function.md)   
  [POPLISTFUNC](../extensibility/poplistfunc.md)   
- [Bitové příznaky, které používá konkrétní příkazy](../extensibility/bitflags-used-by-specific-commands.md)   
- [Příkaz kódu](../extensibility/command-code-enumerator.md)
+ [Příznaky Bitflag používané konkrétními příkazy](../extensibility/bitflags-used-by-specific-commands.md)   
+ [Kód příkazu](../extensibility/command-code-enumerator.md)

@@ -1,107 +1,112 @@
 ---
-title: Visual C++ IntelliSense | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
+title: IntelliSense pro C++
+ms.date: 10/08/2018
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: conceptual
-author: gewarren
-ms.author: gewarren
-manager: douge
+author: mikeblome
+ms.author: mblome
+manager: wpickett
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfebee340a880cdef1b8721bd5f57e3be5db8e47
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ab520f7cdf512ebbfd07770d63d2ed50caee7a55
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48879847"
 ---
-# <a name="visual-c-intellisense"></a>Visual C++ IntelliSense
+# <a name="visual-c-intellisense-features"></a>Funkce Visual C++ IntelliSense
 
-IntelliSense pro jazyk C++ je k dispozici pro samostatné soubory stejně jako u souborů, které jsou součástí projektu jazyka C++. V projektech pro různé platformy některé funkce IntelliSense jsou k dispozici v souborech sada a .c v projektu sdíleného kódu i v případě, že jste v kontextu Android nebo iOS.
+Technologie IntelliSense je název zadaný pro sadu funkcí, které usnadňují psaní kódu pohodlnější. Technologie IntelliSense jazyka C++ je k dispozici pro samostatné soubory stejně jako u souborů, které jsou součástí projektu jazyka C++. V projektech pro různé platformy, některé funkce technologie IntelliSense jsou k dispozici v *.cpp* a *.c* soubory v projektu sdíleného kódu, i když jsou v kontextu Android nebo iOS.
+
+Tento článek obsahuje přehled technologie IntelliSense jazyka C++, funkce. Informace o tom, jak nakonfigurovat projekt tak, aby IntelliSense a řešení potíží, najdete v části [konfigurace projektu C++ IntelliSense](visual-cpp-intellisense-configuration.md).
 
 ## <a name="intellisense-features-in-c"></a>Funkce technologie IntelliSense v jazyce C++
 
-IntelliSense je název zadaný pro sadu funkcí, které kódování pohodlnější. Vzhledem k tomu, že jiné osoby mít různé návrhy o tom, co je vhodné, prakticky všechny funkce technologie IntelliSense můžete povolit nebo zakázat v **možnosti** dialogovém **textového editoru**  >  **C/C++** > **rozšířené**. **Možnosti** dialogové okno je k dispozici **nástroje** nabídky v řádku nabídek.
+Technologie IntelliSense je název zadaný pro sadu funkcí, které usnadňují psaní kódu pohodlnější. Protože různé myšlenky o tom, co je vhodné mají různí lidé, téměř všechny funkce technologie IntelliSense můžete povolit nebo zakázat v **možnosti** dialogovém okně **textový Editor**  >  **C/C++** > **Advanced**. **Možnosti** dialogové okno je k dispozici **nástroje** nabídky na řádku nabídek.
 
-![Možnosti nástrojů – dialogové okno](../ide/media/sintellisensecpptoolsoptions.PNG)
+![Nástroj pro dialogové okno Možnosti](../ide/media/sintellisensecpptoolsoptions.PNG)
 
-Položky nabídky a klávesové zkratky, viz následující obrázek můžete použít pro přístup k technologii IntelliSense.
+Pro přístup k IntelliSense můžete použít položky nabídky a klávesové zkratky je znázorněno na následujícím obrázku.
 
-![Nabídky IntelliSense](../ide/media/vs2015_cpp_intellisense_menu.png)
+![Nabídky technologie IntelliSense](../ide/media/vs2015_cpp_intellisense_menu.png)
 
-### <a name="statement-completion-and-member-list"></a>Seznam dokončení a člen – příkaz
+## <a name="statement-completion-and-member-list"></a>Příkaz dokončení a člena seznamu
 
-Když začnete psát klíčové slovo, typ, funkce, název proměnné nebo jiného programu elementu, který rozpoznává kompilátor, editor nabízí dokončit slovo za vás.
+Když začnete psát klíčové slovo, typ, funkce, název proměnné nebo jiný prvek programu, který kompilátor rozpozná, editor nabízí dokončit slovo za vás.
 
-Seznam ikony a jejich významy, naleznete v části [zobrazení tříd a ikony v prohlížeči objekt](../ide/class-view-and-object-browser-icons.md).
+Seznam ikon a jejich vysvětlení najdete v tématu [ikony zobrazení třídy a prohlížeče objektů](../ide/class-view-and-object-browser-icons.md).
 
-![Visual C&#43; &#43; dokončení Word okno](../ide/media/vs2015_cpp_complete_word.png "vs2015_cpp_complete_word")
+![Visual C&#43; &#43; okno Dokončit slovo](../ide/media/vs2015_cpp_complete_word.png)
 
-Při prvním vyvolání seznam členů pouze zobrazuje členy, které jsou dostupné pro aktuální kontext. Pokud vyberete **Ctrl**+**J** po, který se zobrazí všechny členy, bez ohledu na usnadnění přístupu. Pokud vyvolání ho třetí čas, zobrazí se i širší seznam prvky programu. Můžete vypnout seznam členů v **možnosti** dialogovém **textového editoru** > **C/C++** > **Obecné**  >  **Automatický seznam členů**.
+Při prvním vyvolání seznamu členů, pouze zobrazuje členy, které jsou k dispozici pro aktuální kontext. Pokud stisknete **Ctrl**+**J** , zobrazuje všechny členy, bez ohledu na přístupnost. Pokud jste ho vyvolat třetí čas, zobrazí se ještě širší seznam prvky programu. Můžete ji vypnout seznam členů v **možnosti** dialogovém okně **textový Editor** > **C/C++** > **Obecné**  >  **Automatický seznam členů**.
 
-![Visual C&#43;&#43; Member List](../ide/media/vs2015_cpp_list_members.png "vs2015_cpp_list_members")
+![Visual C&#43; &#43; seznam členů](../ide/media/vs2015_cpp_list_members.png)
 
-### <a name="parameter-help"></a>Parametr nápovědy
+## <a name="parameter-help"></a>Parametr nápovědy
 
-Když zadáte žádná levá složená závorka volání funkce nebo lomená závorka v deklaraci třídy šablony proměnné, představuje editoru malém okně s typy parametrů pro každé přetížení funkce nebo konstruktor. Parametr "aktuální"&mdash;v závislosti na umístění kurzoru&mdash;je tučným písmem. Informace o parametrech v můžete vypnout **možnosti** dialogovém **textového editoru** > **C/C++** > **Obecné**  >  **Informace o parametrech**.
+Když zadáte levá složená závorka volání funkce nebo ostré závorky v deklaraci proměnné šablony třídy, editor hlásí malém okně se typy parametrů pro jednotlivá přetížení funkce nebo konstruktoru. Parametr "aktuální"&mdash;podle umístění kurzoru&mdash;je zvýrazněný tučným písmem. Můžete ji vypnout informace o parametrech v **možnosti** dialogovém okně **textový Editor** > **C/C++** > **Obecné**  >  **Informace o parametrech**.
 
-![Visual C&#43;&#43; Parameter Help](../ide/media/vs_2015_cpp_param_help.png "vs_2015_cpp_param_help")
+![Visual C&#43; &#43; nápovědu](../ide/media/vs_2015_cpp_param_help.png)
 
-### <a name="quick-info"></a>Rychlé informace
+## <a name="quick-info"></a>Rychlé informace
 
-Když najedete myší do proměnné, zobrazí se vložené, která obsahuje informace o typu a záhlaví, ve kterém je definovaný typ malém okně. Podržte ukazatel nad volání funkce zobrazíte podpis funkce. Můžete vypnout v rychlé informace **možnosti** dialogovém **textového editoru** > **C/C++** > **Upřesnit**  >  **Automaticky rychlé informace**.
+Když najedete myší do přes proměnnou, se zobrazí v textu, který zobrazuje informace o typu a záhlaví, ve kterém je typ definován malém okně. Najeďte myší volání funkce pro zjištění signatury funkce. Můžete ji vypnout rychlé informace v **možnosti** dialogovém okně **textový Editor** > **C/C++** > **Upřesnit**  >  **Automatické rychlé informace**.
 
-![Visual C&#43;&#43; QuickInfo](../ide/media/vs2015_cpp_quickinfo.png "vs2015_cpp_quickInfo")
+![Visual C&#43; &#43; rychlé informace](../ide/media/vs2015_cpp_quickinfo.png)
 
-### <a name="error-squiggles"></a>Chyba podtržení vlnovkou
+## <a name="error-squiggles"></a>Podtržení vlnovkou u chyb
 
-Podtržení vlnovkou pod element programu (proměnné, – klíčové slovo, složené závorce, název typu a tak dále) volání pozornost chyba nebo potenciální chyby v kódu. Zelená vlnovku se zobrazí, když napíšete dopředného deklarace, a tak poznáte, že stále nutné zapsat implementace. Fialové vlnovku se zobrazí v sdílený projekt když dojde k chybě v kódu, který není aktuálně aktivní, třeba když pracují v kontextu systému Windows, ale něco zadat, která by byla v kontextu Android chybu. Červenou vlnovkou označuje kompilátoru chyby nebo upozornění v active kód, který je potřeba řešit.
+Podtržení vlnovkou pod prvek programu (proměnné, klíčové slovo, složenou závorku, název typu a tak dále) volat vaši pozornost na chybu nebo potenciální chyby v kódu. Při psaní Dopředná deklarace s připomínkou, že je stále potřeba napsat implementaci, zobrazí se zelená vlnovku. Nachová vlnovku se zobrazí ve sdíleném projektu při chybě v kódu, který není aktuálně aktivní, například při práci v rámci Windows, ale zadejte jinou hodnotu, která by byla chybu v kontextu s Androidem. Červená vlnovka označuje kompilátor chybu nebo upozornění v aktivním kódem, který je potřeba řešit.
 
-![Visual C&#43; &#43; podtržení vlnovkou chyba](../ide/media/vs2015_cpp_error_quiggles.png "vs2015_cpp_error_quiggles")
+![Visual C&#43; &#43; podtržení vlnovkou u chyb](../ide/media/vs2015_cpp_error_quiggles.png)
 
-### <a name="code-colorization-and-fonts"></a>Kód zabarvení a písem
+### <a name="code-colorization-and-fonts"></a>Zabarvení kódu a písem
 
-Výchozí barev a písem lze změnit v **možnosti** dialogovém **prostředí** > **písma a barev**. Můžete změnit písmo pro mnoho uživatelského rozhraní windows tady, ne jenom editoru. Nastavení, které jsou specifické pro C++ začínat řetězcem "C++"; ostatní nastavení jsou pro všechny jazyky.
+Výchozí barev a písem lze změnit v **možnosti** dialogovém okně **prostředí** > **písma a barvy**. Můžete změnit písma pro mnoho uživatelského rozhraní systému windows, nejen editoru. Nastavení, které se týkají C++ začínají řetězcem "C++"; ostatní nastavení se pro všechny jazyky.
 
-### <a name="cross-platform-intellisense"></a>Napříč platformami IntelliSense
+## <a name="cross-platform-intellisense"></a>Multiplatformní IntelliSense
 
-V projektu sdíleného kódu některé funkce IntelliSense, jako je například podtržení vlnovkou jsou k dispozici i v případě, že pracujete v kontextu systému Android. Pokud píšete některé kód, který by mělo za následek chybu v projektu na neaktivní, IntelliSense stále zobrazuje podtržení vlnovkou, ale jsou v barvu než podtržení vlnovkou chyby v aktuálním kontextu.
+V projektu sdíleného kódu jsou k dispozici některé funkce technologie IntelliSense, jako je například podtržení vlnovkou, i v případě, že pracujete v Androidu kontextu. Pokud píšete kód, který by dojít k chybě v projektu aplikace neaktivní, technologie IntelliSense zobrazuje podtržení vlnovkou, ale jsou jinou barvou, než podtržení vlnovkou u chyb v rámci aktuálního kontextu.
 
-Zde je aplikace OpenGLES nakonfigurovaný tak, aby sestavení pro Android a iOS. Na obrázku upravovaný sdíleného kódu. V první bitovou kopii aktivní projekt je Android:
+Vezměte v úvahu aplikace OpenGLES, který je nakonfigurován pro sestavení pro Android a iOS. Na obrázku ukazuje sdílený kód, který právě upravujete. Na tomto obrázku je aktivní projekt **iOS.StaticLibrary**:
 
-![Aktivní projekt je projektu pro Android. ] (../ide/media/intellisensecppcrossplatform.png "IntelliSenseCppCrossPlatform")
+![iOS je vybrán jako aktivní projekt.](../ide/media/intellisensecppcrossplatform2.png)
 
-Všimněte si následujících akcí:
+Všimněte si následujícího:
 
-- #Else větve na řádku 8 je zobrazeno šedě udávajících neaktivní oblast, protože __ANDROID\_ \_ je definována pro projekt pro Android.
+- `#ifdef` Větve na řádku 6 je zobrazena šedě označuje aktivní oblast, protože `__ANDROID__` není definovaný pro projekt pro iOS.
 
-- S pozdravem proměnná na řádku 11 je inicializován s identifikátorem HELLO, který má fialové vlnovku. Je to proto, že žádný identifikátor HELLO je definována v projektu pro iOS teď neaktivní. Když v Android by kompilace projektu řádku 11, nebude v iOS. Vzhledem k tomu, že to je sdílené kód, který je něco byste měli změnit, i když se zkompiluje v konfiguraci aktivní.
+- Pozdrav proměnná na řádku 11 je inicializována s identifikátorem `HELLO`, které je teď má červená vlnovka. Důvodem je, že žádný identifikátor `HELLO` je definován v projektu pro iOS aktuálně aktivní.
 
-- Řádek 12 obsahuje červenou vlnovkou identifikátor BYE; Tento identifikátor není definován v aktuálně vybraném aktivního projektu.
+- Řádek 12 má nachová vlnovku na identifikátor `BYE` vzhledem k tomu, že tento identifikátor není definován v (aktuálně) neaktivní **Android.NativeActivity** projektu. Přestože tento řádek zkompiluje, pokud je aktivní projekt iOS, nebude zkompilován při Android je aktivní projekt. Protože se sdíleným kódem, měli byste opravit kód i v případě, že se zkompiluje v současné době aktivní konfiguraci.
 
-Nyní změňte aktivní projekt iOS.StaticLibrary a Všimněte si, jak podtržení vlnovkou změnit.
+Pokud změníte aktivní projekt pro Android, změňte podtržení vlnovkou:
 
-![iOS je vybrán jako aktivní projekt. ] (../ide/media/intellisensecppcrossplatform2.png "IntelliSenseCppCrossPlatform2")
+- `#else` Větve na řádku 8 je zobrazena šedě označuje aktivní oblast, protože `__ANDROID__` definovaný pro projekt pro Android.
 
-Všimněte si následujících akcí:
+- Pozdrav proměnná na řádku 11 je inicializována s identifikátorem `HELLO`, který má nachová vlnovku. Důvodem je, že žádný identifikátor `HELLO` je definován v projektu pro iOS aktuálně neaktivní.
 
-- #Ifdef větev na řádku 6 je zobrazeno šedě udávajících neaktivní oblast, protože __ANDROID\_ \_ pro iOS projektu není definován.
+- Řádek 12 má červená vlnovka na identifikátor `BYE` vzhledem k tomu, že tento identifikátor není definován aktivního projektu.
 
-- S pozdravem proměnná na řádku 11 je inicializován s identifikátorem HELLO, která má nyní červenou vlnovkou. Je to proto, že žádný identifikátor HELLO je definován v projektu iOS momentálně aktivní.
+## <a name="intellisense-for-stand-alone-files"></a>Technologie IntelliSense pro samostatné soubory
 
-- Řádek 12 obsahuje fialové vlnovku identifikátor BYE; Tento identifikátor není definován v současné době neaktivní Android.NativeActivity projektu.
+Při otevření jednoho souboru mimo jakýkoli projekt stále získání funkce IntelliSense. Můžete povolit nebo zakázat konkrétní funkce technologie IntelliSense v **možnosti** dialogovém okně **textový Editor** > **C/C++**  >  **Advanced**. Chcete-li nakonfigurovat technologie IntelliSense pro jednotlivé soubory, které nejsou součástí projektu, vyhledejte **technologie IntelliSense a procházení pro neprojektové soubory** oddílu.
 
-### <a name="intellisense-for-stand-alone-files"></a>IntelliSense pro samostatné soubory
+![Visual C&#43; &#43; jednoho souboru intellisense](../ide/media/vs2015_cpp_single_file_intellisense.png)
 
-Když otevřete jeden soubor mimo žádného projektu, se stále objevuje IntelliSense. Můžete povolit nebo zakázat konkrétní funkce IntelliSense **možnosti** dialogovém **textového editoru** > **C/C++**  >  **Rozšířené**. Konfigurace technologie IntelliSense pro jednotlivé soubory, které nejsou součástí projektu, vyhledejte **IntelliSense a procházení pro soubory bez projektu** části.
+Ve výchozím nastavení, jednosouborová IntelliSense využívá pouze standardní adresáře souborů k zahrnutí k vyhledání souborů záhlaví. Chcete-li přidat další adresáře, otevřete místní nabídku na **řešení** uzlu a přidejte do adresáře **ladění zdrojový kód** seznam, jak je vidět na následujícím obrázku:
 
-![Visual C&#43; &#43; jeden soubor intellisense](../ide/media/vs2015_cpp_single_file_intellisense.png "vs2015_cpp_single_file_intellisense")
+![Přidání cesty k souboru hlaviček.](../ide/media/intellisensedebugyourcode.jpg)
 
-Ve výchozím nastavení jedním souborem IntelliSense pouze používá standardní zahrnují adresáře, které chcete najít soubory hlaviček. Pokud chcete přidat další adresáře, otevřete místní nabídce na uzlu řešení a přidejte do adresáře **ladění zdrojového kódu** seznamu, jak ukazuje následující obrázek:
+## <a name="enable-or-disable-features"></a>Povolení nebo zakázání funkcí
 
-![Přidání cesty do souboru záhlaví. ] (../ide/media/intellisensedebugyourcode.jpg "IntelliSenseDebugYourCode")
+Protože různé myšlenky o tom, co je vhodné mají různí lidé, téměř všechny funkce technologie IntelliSense můžete povolit nebo zakázat v **možnosti** dialogovém okně **textový Editor**  >  **C/C++** > **Advanced**. **Možnosti** dialogové okno je k dispozici **nástroje** nabídky na řádku nabídek.
 
-## <a name="see-also"></a>Viz také
+![Nástroj pro dialogové okno Možnosti](../ide/media/sintellisensecpptoolsoptions.PNG)
 
-[Používání atributu IntelliSense](../ide/using-intellisense.md)
+## <a name="see-also"></a>Viz také:
+
+- [Používání atributu IntelliSense](../ide/using-intellisense.md)
+- [Konfigurace projektu C++ IntelliSense](visual-cpp-intellisense-configuration.md)

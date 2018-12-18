@@ -1,5 +1,5 @@
 ---
-title: Idiasession::findsymbolbytoken – | Microsoft Docs
+title: Idiasession::findsymbolbytoken – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3f7152a3953475ac2622033101ca739b0b8ee300
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 4758aeb569e0218d219ddca06042f4b32e61e467
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49935975"
 ---
 # <a name="idiasessionfindsymbolbytoken"></a>IDiaSession::findSymbolByToken
 Načte symbol, který obsahuje token Zadaná metadata.  
@@ -35,16 +36,16 @@ HRESULT findSymbolByToken (
   
 #### <a name="parameters"></a>Parametry  
  `token`  
- [v] Určuje token.  
+ [in] Určuje token.  
   
  `symtag`  
- [v] Typ symbolu, která se má najít. Z hodnot, která [SymTagEnum – výčet](../../debugger/debug-interface-access/symtagenum.md) výčtu.  
+ [in] Typ symbolu, která se má najít. Hodnoty pocházejí ze [symtagenum – výčet](../../debugger/debug-interface-access/symtagenum.md) výčtu.  
   
  `ppSymbol`  
- [out] Vrátí [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) načíst objekt, který reprezentuje symbolu.  
+ [out] Vrátí [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) načíst objekt představující symbol.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
   

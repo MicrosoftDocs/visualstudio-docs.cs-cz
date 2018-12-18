@@ -1,5 +1,5 @@
 ---
-title: Fileclassifier – úloha | Microsoft Docs
+title: Fileclassifier – úloha | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -19,33 +19,34 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a754f5aef53eed581deb9ccafa0bf5c453d8086d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: eea3fbb882a2ed2b8036b6fe5bbb280d99c0f270
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39177030"
 ---
-# <a name="fileclassifier-task"></a>FileClassifier – úloha
-<xref:Microsoft.Build.Tasks.Windows.FileClassifier> Úloh klasifikuje sadu zdroje prostředků jako ty, které budou vloženy do sestavení. Pokud prostředek není lokalizovatelný, se vloží do hlavní aplikace sestavení; jinak je integrovaný do satelitní sestavení.  
+# <a name="fileclassifier-task"></a>Fileclassifier – úloha
+<xref:Microsoft.Build.Tasks.Windows.FileClassifier> Úloh klasifikuje sadu prostředků zdroje jako ty, které budou vloženy do sestavení. Pokud prostředek není lokalizovatelné, je vložen do sestavení hlavní aplikace; v opačném případě se vloží do satelitního sestavení.  
   
 ## <a name="task-parameters"></a>Parametry úlohy  
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|`CLREmbeddedResource`|Nepoužívá se.|  
-|`CLRResourceFiles`|Nepoužívá se.|  
-|`CLRSatelliteEmbeddedResource`|Nepoužívá se.|  
-|`Culture`|Volitelné **řetězec** parametr.<br /><br /> Určuje jazykovou verzi pro sestavení. Tato hodnota může být **null** Pokud nepřekládá sestavení. Pokud **null**, výchozí hodnota je malá hodnota, která **CultureInfo.InvariantCulture** vrátí.|  
-|`MainEmbeddedFiles`|Volitelné **[ITaskItem]** výstupní parametr.<br /><br /> Určuje nepřekládá prostředky, které jsou vloženy do hlavní sestavení.|  
-|`OutputType`|Požadované **řetězec** parametr.<br /><br /> Určuje typ souboru pro vložení souborů do zadaného zdroje. Platné hodnoty jsou **exe**, **winexe**, nebo **knihovny**.|  
-|`SatelliteEmbeddedFiles`|Volitelné **[ITaskItem]** výstupní parametr.<br /><br /> Určuje možnosti lokalizace soubory, které jsou vloženy do satelitní sestavení pro jazykovou verzi určeného **jazykovou verzi** parametr.|  
-|`SourceFiles`|Požadované **[ITaskItem]** parametr.<br /><br /> Určuje seznam souborů ke klasifikaci.|  
+|`CLREmbeddedResource`|Nevyužité.|  
+|`CLRResourceFiles`|Nevyužité.|  
+|`CLRSatelliteEmbeddedResource`|Nevyužité.|  
+|`Culture`|Volitelné **řetězec** parametru.<br /><br /> Určuje jazykovou verzi pro sestavení. Tato hodnota může být **null** Pokud je sestavení bez možnosti lokalizace. Pokud **null**, výchozí hodnota je malým hodnota, která **CultureInfo.InvariantCulture** vrátí.|  
+|`MainEmbeddedFiles`|Volitelné **[] ITaskItem** výstupní parametr.<br /><br /> Určuje bez možnosti lokalizace prostředky, které jsou vloženy do hlavního sestavení.|  
+|`OutputType`|Vyžaduje **řetězec** parametru.<br /><br /> Určuje typ souboru se má vložit do zadané zdrojové soubory. Platné hodnoty jsou **exe**, **winexe**, nebo **knihovny**.|  
+|`SatelliteEmbeddedFiles`|Volitelné **[] ITaskItem** výstupní parametr.<br /><br /> Určuje lokalizovatelné soubory, které jsou vloženy do satelitního sestavení pro jazykové verze určený poskytovatelem **jazykovou verzi** parametru.|  
+|`SourceFiles`|Vyžaduje **[] ITaskItem** parametru.<br /><br /> Určuje seznam souborů pro klasifikaci.|  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud **jazykovou verzi** není nastavený parametr, všechny prostředky, které jsou určeny pomocí **SourceFiles** parametr nepřekládá; jinak, jsou lokalizovatelný, pokud jsou přidruženy  **Lokalizovatelný** atribut, který je nastaven na **false**.  
+ Pokud **jazykovou verzi** parametr není nastavená, všechny prostředky, které je určené vlastností **SourceFiles** parametru jsou bez možnosti lokalizace; v opačném případě jsou lokalizovatelné, pokud jsou přidruženy k  **Lokalizovatelné** atribut, který je nastavena na **false**.  
   
 ## <a name="example"></a>Příklad  
- V následujícím příkladu klasifikuje jeden zdrojový soubor jako prostředek a potom se vloží do satelitní sestavení pro jazykovou verzi French-Canadian (fr-CA).  
+ V následujícím příkladu klasifikuje jeden zdrojový soubor jako prostředek a vloží jej do satelitní sestavení pro jazykovou verzi French-Canadian (fr-CA).  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -64,9 +65,9 @@ ms.lasthandoff: 04/19/2018
 </Project>  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [WPF MSBuild – Reference](../msbuild/wpf-msbuild-reference.md)   
+## <a name="see-also"></a>Viz také:  
+ [Referenční dokumentace WPF MSBuild](../msbuild/wpf-msbuild-reference.md)   
  [Referenční dokumentace úlohy](../msbuild/wpf-msbuild-task-reference.md)   
- [MSBuild – Reference](../msbuild/msbuild-reference.md)   
+ [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)   
  [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)   
- [Vytvoření aplikace WPF (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)
+ [Sestavení aplikace WPF (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)

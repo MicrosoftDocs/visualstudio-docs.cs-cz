@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130578"
 ---
 # <a name="project-modeling"></a>Projekt modelování
 Dalším krokem při poskytování automatizace pro váš projekt je implementovat objekty standardní projektu: <xref:EnvDTE.Projects> a `ProjectItems` kolekce; `Project` a <xref:EnvDTE.ProjectItem> objekty; a zbývající objekty, které jsou jedinečné pro implementaci. Tyto standardní objekty jsou definovány v souboru Dteinternal.h. Implementace objektů standard je k dispozici v ukázce BscPrj. Tyto třídy můžete použít jako modely vytvořit vlastní standardní projektu objekty, které stát vedle sebe s objekty projektu od ostatních typů projektu.  

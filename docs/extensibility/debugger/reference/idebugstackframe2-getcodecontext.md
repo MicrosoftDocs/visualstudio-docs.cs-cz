@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame2::GetCodeContext | Microsoft Docs
+title: IDebugStackFrame2::GetCodeContext | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4f5e5d41489b83283723717a262030bb96ca900a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 283946310c44ae2a125d731e10de42ac2b454004
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49876279"
 ---
 # <a name="idebugstackframe2getcodecontext"></a>IDebugStackFrame2::GetCodeContext
-Získá kontext kód pro tento rámce zásobníku.  
+Získá kontext kódu pro tento rámec zásobníku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,10 +41,10 @@ int GetCodeContext (
   
 #### <a name="parameters"></a>Parametry  
  `ppCodeCxt`  
- [out] Vrátí [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) objekt, který představuje aktuální ukazatel instrukce v této rámce zásobníku.  
+ [out] Vrátí [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) objekt, který představuje aktuální ukazatel příkazu v tomto bloku zásobníku.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)   

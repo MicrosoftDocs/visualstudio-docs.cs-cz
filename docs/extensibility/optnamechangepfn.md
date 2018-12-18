@@ -1,5 +1,5 @@
 ---
-title: OPTNAMECHANGEPFN | Microsoft Docs
+title: OPTNAMECHANGEPFN | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,16 +15,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e3ecb80b1ac0b71de935da59d29a3f5c39f85bee
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 12b8f6eb441eb9ca65cbdf2215363af48c65bfa4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49912991"
 ---
 # <a name="optnamechangepfn"></a>OPTNAMECHANGEPFN
-Toto je funkce zpětného volání, zadaný ve volání [SccSetOption](../extensibility/sccsetoption-function.md) (pomocí možnosti `SCC_OPT_NAMECHANGEPFN`) a slouží ke komunikaci název změny provedené zdrojového kódu modulu plug-in zpět k prostředí IDE.  
+Toto je zadána ve volání funkce zpětného volání [sccsetoption –](../extensibility/sccsetoption-function.md) (pomocí možnosti `SCC_OPT_NAMECHANGEPFN`) a slouží ke komunikaci název změny správy zdrojového kódu modulu plug-in zpět do integrovaného vývojového prostředí.  
   
-## <a name="signature"></a>Podpis  
+## <a name="signature"></a>podpis  
   
 ```cpp  
 typedef void (*OPTNAMECHANGEPFN)(  
@@ -36,22 +37,22 @@ typedef void (*OPTNAMECHANGEPFN)(
   
 ## <a name="parameters"></a>Parametry  
  pvCallerData  
- [v] Uživatel hodnota zadaná v předchozí volání [SccSetOption](../extensibility/sccsetoption-function.md) (pomocí možnosti `SCC_OPT_USERDATA`).  
+ [in] Zadanou v předchozím volání hodnotu uživatele [sccsetoption –](../extensibility/sccsetoption-function.md) (pomocí možnosti `SCC_OPT_USERDATA`).  
   
  pszOldName  
- [v] Původní název souboru.  
+ [in] Původní název souboru.  
   
  pszNewName  
- [v] Název souboru byl přejmenován na.  
+ [in] Název souboru se přejmenoval na.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Žádné  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud je soubor přejmenovat během operace řízení zdroje, modul plug-in správy zdroje uvědomí IDE o změnu názvu prostřednictvím této zpětného volání.  
+ Pokud je soubor přejmenován při operaci správy zdrojových kódů, může upozornit modul plug-in správy zdrojového kódu rozhraní IDE o změnu názvu prostřednictvím tohoto zpětného volání.  
   
- Pokud IDE nepodporuje tento zpětného volání, nebude volání [SccSetOption](../extensibility/sccsetoption-function.md) k jeho zadání. Pokud modul plug-in nepodporuje tento zpětného volání, vrátí `SCC_E_OPNOTSUPPORTED` z `SccSetOption` fungovat, pokud rozhraní IDE, pokusí se nastavit zpětné volání.  
+ Pokud prostředí IDE nepodporuje toto zpětné volání, nebude volat [sccsetoption –](../extensibility/sccsetoption-function.md) k jeho zadání. Pokud modul plug-in nepodporuje toto zpětné volání, vrátí `SCC_E_OPNOTSUPPORTED` z `SccSetOption` fungovat v případě, že rozhraní IDE, pokusí se nastavit zpětného volání.  
   
-## <a name="see-also"></a>Viz také  
- [Funkce zpětného volání, které implementují rozhraní IDE](../extensibility/callback-functions-implemented-by-the-ide.md)   
+## <a name="see-also"></a>Viz také:  
+ [Funkce zpětného volání implementované integrovaným vývojovým prostředím](../extensibility/callback-functions-implemented-by-the-ide.md)   
  [SccSetOption](../extensibility/sccsetoption-function.md)

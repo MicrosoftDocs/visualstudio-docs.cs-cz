@@ -1,5 +1,5 @@
 ---
-title: Microsoft Help Viewer SDK | Microsoft Docs
+title: Microsoft Help Viewer SDK | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,824 +11,819 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e3ddc23ab56df017ef0a37c56cd5b0a81ee33a07
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: af324b141815813aec9eaadfcd9982689fdeb467
+ms.sourcegitcommit: e481d0055c0724d20003509000fd5f72fe9d1340
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51000344"
 ---
 # <a name="microsoft-help-viewer-sdk"></a>Microsoft Help Viewer SDK
-Tento článek obsahuje následující úlohy pro Visual Studio Help Viewer integrátorem:  
-  
--   Vytvoření tématu (F1 podpora)  
-  
--   Vytváření balíčku obsahu branding Help Viewer  
-  
--   Nasazení sady článků  
-  
--   Přidání nápovědu k prostředí Visual Studio (integrovaný nebo izolované)  
-  
--   Další prostředky  
-  
-### <a name="creating-a-topic-f1-support"></a>Vytvoření tématu (F1 podpora)  
-Tato část obsahuje přehled komponent vidění téma, téma požadavky, a jejich popis vytvoření téma (včetně požadavky na podporu F1) a nakonec tématu příklad s jeho vykreslené výsledek.  
-  
-**Přehled tématu okna nápovědy**  
-  
-Při téma je pro vykreslování prohlížeče nápovědy získá brandingu balíček prvky, které jsou přidružené k tomuto tématu v době instalace nebo poslední aktualizace, společně s tématu XHTML a kombinuje dva za následek vidění zobrazení obsahu (branding data + téma data).  Značky balíček obsahuje loga, podporu pro obsah chování a vlastní text (autorských práv, atd.).  "Vytváření Branding balíček" níže naleznete další informace o značce elementy balíčku.  V případě, že neexistuje žádná brandingu balíček přidružené k tématu, Prohlížeč nápovědy použije náhradní označující balíček umístěného v kořenovém aplikace Help Viewer (Branding_en-US.mshc).  
-  
-**Požadavky na prohlížeč tématu nápovědy**  
-  
-Mají být zpracovány správně v okně nápovědy, musí být obsah nezpracované tématu W3C základní 1.1 XHTML.  
-  
-Téma obvykle obsahuje dvě části:  
-  
--   Metadata (viz obsahu Metadata odkaz): data o tématu například téma jedinečné ID, hodnota – klíčové slovo, tématu TOC ID nadřazené ID uzlu, atd.  
-  
--   Obsah textu: kompatibilní s W3C základní 1.1 XHTML, což zahrnuje podporované obsahu chování (sbalitelné oblasti, fragment kódu, atd. Úplný seznam jsou uvedené dole).  
-  
-Branding balíček Visual Studio podporují ovládací prvky:  
-  
--   Odkazy  
-  
--   CodeSnippet  
-  
--   CollapsibleArea  
-  
--   Zděděného členu  
-  
--   LanguageSpecificText  
-  
-Řetězce podporovaných jazyků (ne velká a malá písmena):  
-  
--   JavaScript  
-  
--   CSharp nebo c#  
-  
--   cplusplus nebo visualc ++ nebo c ++  
-  
--   JScript  
-  
--   VisualBasic nebo jazyka Visual Basic  
-  
--   f # nebo fsharp nebo služby fs  
-  
--   Další: řetězec, který představuje název jazyka  
-  
-**Vytvoření tématu Help Viewer**  
-  
-Vytvořit nový dokument XHTML s názvem ContosoTopic4.htm a zahrnují název značky (dole).  
-  
-```html  
-<html>  
-<head>  
-<title>Contoso Topic 4</title>  
-</head>  
-  
-<body>  
-  
-</body>  
-</html>  
-  
-```  
-  
-V dalším kroku přidat data jak definovat jak tématu je dodáván (vlastní značky, nebo ne), chcete-li toto téma pro F1, kde existuje v tomto tématu v rámci do obsahu, jeho ID (pro odkaz podle další témata), atd.  Najdete v části "Metadata obsahu" tabulce úplný seznam podporovaných metadat.  
-  
--   V tomto případě použijeme vlastní značky balíček hodnotu typu variant vlastního balíčku Visual Studio Help Viewer.  
-  
--   Přidejte F1 meta název a hodnotu ("Microsoft.Help.F1" obsah = "ContosoTopic4"), bude shodovat s poskytnutá hodnota F1 v kontejneru objektů IDE.  (Viz část F1 podpory pro další informace.)   Toto je hodnota, která odpovídá klávesy F1 volat z prostředí IDE pro zobrazení v tomto tématu při výběru F1 v prostředí IDE.  
-  
--   Přidat ID tématu. Toto je řetězec, který je používán další témata propojit k tomuto tématu.  Je Identifikátor Prohlížeč nápovědy pro toto téma.  
-  
--   Do obsahu přidejte toto téma nadřazeného uzlu můžete definovat, kde se zobrazí uzel obsahu tohoto tématu.  
-  
--   Do obsahu přidejte pořadí uzlů v tomto tématu. Pokud je nadřazený uzel n počet podřízených uzlů, definujte v pořadí podřízené uzly umístění v tomto tématu. For example, toto téma je 4 počet 4 podřízené témat.)  
-  
-Příklad metadata části:  
-  
-```html  
-<html>  
-<head>  
-<title>Contoso Topic 4</title>  
-  
-<meta name="SelfBranded" content="false" />     
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />  
-    <meta name="Microsoft.Help.Id" content="ContosoTopic4" />  
-<meta name="Microsoft.Help.F1" content=" ContosoTopic4" />  
-    <meta name="Language" content="en-us" />  
-<meta name="Microsoft.Help.TocParent" content="ContosoTopic0" />  
-<meta name="Microsoft.Help.TocOrder" content="4" />   
-  
-</head>  
-  
-<body>  
-  
-</body>  
-</html>  
-  
-```  
-  
-**Téma textu**  
-  
-Text (včetně není v záhlaví a zápatí) v tématu bude obsahovat odkazů na stránky, části Poznámka, sbalitelné oblasti, fragment kódu a část textu pro konkrétní jazyk.  Najdete v části značky informace o těchto oblastem vidění tématu.  
-  
-1.  Přidání značky název tématu:  `<div class="title">Contoso Topic 4</div>`  
-  
-2.  Přidáte oddíl Poznámka: `<div class="alert"> add your table tag and text </div>`  
-  
-3.  Přidejte sbalitelné oblasti:  `<CollapsibleArea Expanded="1" Title="Collapsible Area Test Heading"> add text  </CollapsibleArea>`  
-  
-4.  Přidáte fragment kódu:  `<CodeSnippet EnableCopyCode="true" Language="CSharp" ContainsMarkup="false" DisplayLanguage="C#" > a block of code </CodeSnippet>`  
-  
-5.  Přidat kód jazyka konkrétní text: `<LanguageSpecificText devLangcs="CS" devLangvb="VB" devLangcpp="C++" devLangnu="F#" />` Všimněte si, že devLangnu = můžete zadat další jazyky. Například devLangnu = "Fortran" zobrazí Fortran při fragmentu kódu DisplayLanguage = Fortran  
-  
-6.  Přidání odkazů na stránky: `<a href="ms-xhelp://?Id=ContosoTopic1">Main Topic</a>`  
-  
+
+Tento článek obsahuje následující úkoly pro Visual Studio Help Viewer integrátorům:
+
+-   Vytváří se téma (podpora F1)
+
+-   Vytvoření balíčku aplikace Help Viewer obsah značky
+
+-   Nasazení sady článků
+
+-   Přidání Nápověda pro Visual Studio shell (integrované nebo izolované)
+
+-   Další prostředky
+
+### <a name="creating-a-topic-f1-support"></a>Vytváří se téma (podpora F1)
+Tato část obsahuje přehled komponent prezentované tématu, požadavky na téma, krátký popis vytvoření tématu (včetně požadavky na podporu F1) a nakonec tématu příklad s jeho vykreslené výsledek.
+
+**Přehled okna téma nápovědy**
+
+Pokud téma se volá pro vykreslení, Help Viewer získá značky balíčku prvky, které jsou spojeny s tématem v době instalace nebo poslední aktualizace, spolu s tématu XHTML a kombinuje dvě zobrazené zobrazení obsahu (branding dat + téma data).  Přizpůsobení prostředí značce balíček obsahuje loga, podporu obsahu chování a textu značky (o autorských právech, atd.).  Níže jsou uvedeny "Vytváření Branding balíček" Další informace o přizpůsobení prostředí značce prvky balíčku.  V případě, že neexistuje žádný značky balíček přidružené k tématu, bude aplikace Help Viewer pomocí záložní přizpůsobení prostředí značce balíčku umístěný v kořenovém adresáři aplikace Help Viewer (Branding_en US.mshc).
+
+**Požadavky na prohlížeč téma nápovědy**
+
+Vykreslený správně v aplikaci Help Viewer, obsah nezpracované tématu musí být základní XHTML 1.1 W3C.
+
+Téma obvykle obsahuje dvě části:
+
+-   Metadata (viz odkaz na Metadata obsahu): data k tématu, například jedinečné ID tématu, hodnota – klíčové slovo, tématu obsahu ID nadřazené ID uzlu, atd.
+
+-   Obsah textu: splňovat základní XHTML 1.1 W3C, která obsahuje podporované obsahu chování (sbalitelné oblasti, fragment kódu, atd. Úplný seznam najdete níž).
+
+Branding balíček pro Visual Studio nepodporuje ovládací prvky:
+
+-   Odkazy
+
+-   CodeSnippet
+
+-   CollapsibleArea
+
+-   Zděděný člen
+
+-   LanguageSpecificText
+
+Podporovaných řetězců jazyka (nerozlišuje velikost písmen):
+
+-   JavaScript
+
+-   CSharp nebo c#
+
+-   cplusplus nebo visualc ++ nebo c ++
+
+-   jazyk JScript
+
+-   VisualBasic nebo VB.
+
+-   f # nebo fsharp nebo služby fs
+
+-   Další: řetězec, který představuje název jazyka
+
+**Vytváří se téma aplikace Help Viewer**
+
+Vytvořit nový dokument XHTML s názvem ContosoTopic4.htm a obsahovat název značky (níže).
+
+```html
+<html>
+<head>
+<title>Contoso Topic 4</title>
+</head>
+
+<body>
+
+</body>
+</html>
+
+```
+
+V dalším kroku přidejte data k definování, jak v tématu nastat ve třech (vlastní značky, nebo ne), jak odkazovat na toto téma pro F1, kde existuje v tomto tématu v obsahu, jeho ID (pro název odkazu v dalších tématech), atd.  Naleznete v tématu "Metadata obsahu" tabulce pro úplný seznam podporovaných metadat.
+
+-   V tomto případě použijeme vlastní značky balíčku hodnotu typu variant značky balíčku Visual Studio Help Viewer.
+
+-   Přidat F1 meta název a hodnotu ("Microsoft.Help.F1" content = "ContosoTopic4"), která bude odpovídat hodnotě zadané F1 v kontejneru objektů a integrované vývojové prostředí.  (Viz část podporu F1 pro další informace.)   Jedná se o hodnotu, která je nalezena shoda F1 volání z integrovaného vývojového prostředí pro zobrazení v tomto tématu při výběru klávesy F1 v integrovaném vývojovém prostředí.
+
+-   Přidat ID tématu. Jedná se o řetězec, který používá další témata pro propojení k tomuto tématu.  Je Identifikátor Prohlížeč nápovědy pro toto téma.
+
+-   Pro obsah přidejte toto téma nadřazený uzel k definování, kde se zobrazí uzel obsahu tohoto tématu.
+
+-   Pro obsah přidejte uzel pořadí v tomto tématu. Když nadřazený uzel nemá n počet podřízených uzlů, definujte v pořadí podřízené uzly umístění v tomto tématu. For example, toto téma je 4 témat podřízené číslo 4.)
+
+Vzorový oddíl metadat:
+
+```html
+<html>
+<head>
+<title>Contoso Topic 4</title>
+
+<meta name="SelfBranded" content="false" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="Microsoft.Help.Id" content="ContosoTopic4" />
+<meta name="Microsoft.Help.F1" content=" ContosoTopic4" />
+    <meta name="Language" content="en-us" />
+<meta name="Microsoft.Help.TocParent" content="ContosoTopic0" />
+<meta name="Microsoft.Help.TocOrder" content="4" />
+
+</head>
+
+<body>
+
+</body>
+</html>
+
+```
+
+**Text tématu**
+
+Text tématu (nikoli včetně záhlaví a zápatí) bude obsahovat, odkazů na stránky, Všimněte si části, sbalitelné oblasti, fragment kódu a část textu specifické pro jazyk.  V části Přizpůsobení prostředí značce pro informace o těchto oblastí prezentované tématu.
+
+1.  Přidáte značku název tématu:  `<div class="title">Contoso Topic 4</div>`
+
+2.  Přidáte oddíl Poznámka: `<div class="alert"> add your table tag and text </div>`
+
+3.  Přidání sbalitelné oblasti:  `<CollapsibleArea Expanded="1" Title="Collapsible Area Test Heading"> add text  </CollapsibleArea>`
+
+4.  Přidání fragmentu kódu:  `<CodeSnippet EnableCopyCode="true" Language="CSharp" ContainsMarkup="false" DisplayLanguage="C#" > a block of code </CodeSnippet>`
+
+5.  Přidat kód specifický pro jazyk textu: `<LanguageSpecificText devLangcs="CS" devLangvb="VB" devLangcpp="C++" devLangnu="F#" />` Všimněte si, že `devLangnu=` můžete zadat jiné jazyky. Například `devLangnu="Fortran"` zobrazí až po Fortran při fragment kódu DisplayLanguage = až po Fortran
+
+6.  Přidání odkazů na stránky: `<a href="ms-xhelp://?Id=ContosoTopic1">Main Topic</a>`
+
 > [!NOTE]
->  Poznámka: pro nepodporovaný nové "zobrazovaný jazyk" (F #, Cobol, Fortran třeba) zabarvení kódu ve fragmentu kódu bude černobílý tisk.  
-  
-**Příklad tématu Prohlížeč nápovědy** kód ukazuje, jak definovat metadata, fragment kódu, sbalitelné oblast a jazyk zadaný text.  
-  
+>  Poznámka: pro nepodporované nové "Jazyk" (například F#, Cobol, až po Fortran) odlišení kódu ve fragmentu kódu bude Monochromatický.
+
+**Příklad tématu Prohlížeč nápovědy** kód ukazuje, jak definovat metadat, fragment kódu, sbalitelné oblasti a specifické pro jazyk textu.
+
 ```html
-<?xml version="1.0" encoding="utf-8"?>  
-<html>  
-<head>  
-<title>Contoso Topic 4</title>  
-  
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />  
-    <meta name="Microsoft.Help.Id" content="ContosoTopic4" />  
-<meta name="Microsoft.Help.F1" content=" ContosoTopic4" />  
-    <meta name="Language" content="en-us" />  
-<meta name="Microsoft.Help.TocParent" content="ContosoTopic0" />  
-<meta name="Microsoft.Help.TocOrder" content="4" />   
-<meta name="SelfBranded" content="false" />     
-</head>  
-  
-<body>  
-<div class="title">Contoso Topic 4</div>  
-  
-  <div id="header">  
-<table id="bottomTable" cellpadding="0" cellspacing="0"  width="100%">  
-        <tr id="headerTableRow2"><td align="left">  
-            <span id="nsrTitle">Contoso Topic 1</span>  
-          </td>  
-<td align="right">  
-</td></tr>  
-<tr id="headerTableRow1"><td align="left">  
-            <span id="runningHeaderText">Contoso Widgets & Sprockets</span>  
-          </td></tr>  
-      </table>  
-</div>  
-  
-<h2>Table of Contents</h2>  
-  
-<ul class="toc">  
-<li class="tocline1"><a href="#introduction" target="_self">1.0 Introduction</a></li>  
-<li class="tocline1"><a href="#seealso" target="_self">See Also</a></li>  
-</ul>  
-  
-<div class="topic">  
-  
-<div id="mainSection">  
-<div id="mainBody">  
-  
-<a name="introduction"></a>  
-<h2>1.0 Introduction</h2>  
-<p>[This documentation is for sample purposes only.]</p>  
-  
-<p>Contoso Topic 1 contains examples of:  
-<ul>  
-<li>Collapsible Area</li>  
-<li>Bookmark ("See also")</li>  
-<li>Code Snippets from Branding Package</li>  
-</ul>  
- </p>  
-<div class="alert"><table><tr><th>  
-<strong>Note </strong></th></tr>  
-<tr><td>  
-<p>This is an example of a <span class="label">Note </span>section.    
-Call out important items for your reader in this <span class="label">Note </span>box.  
-</p></td></tr>  
-</table>  
-</div>  
-</div>  
-  
-<CollapsibleArea Expanded="1" Title="Collapsible Area Test Heading">  
-  
-            <a id="sectionToggle0"><!----></a>  
-  
-<div>  
-Example of Collapsible Area  
-<br/>  
-Lorem ipsum dolor sit amet...  
-</div>  
-</CollapsibleArea>  
-  
-<div id="snippetGroup" >  
-<CodeSnippet EnableCopyCode="true" Language="VisualBasic" ContainsMarkup="false" DisplayLanguage="Visual Basic" >  
-Private Sub ToolStripRenderer1_RenderGrip(sender as Object, e as ToolStripGripRenderEventArgs) _ Handles ToolStripRenderer1.RenderGrip  
-Dim messageBoxVB as New System.Text.StringBuilder()  
-    messageBoxVB.AppendFormat("{0} = {1}", "GripBounds", e.GripBounds)  
-    messageBoxVB.AppendLine()  
- ...  
-    MessageBox.Show(messageBoxVB.ToString(),"RenderGrip Event")  
-End Sub  
-</CodeSnippet>  
-  
-<CodeSnippet EnableCopyCode="true" Language="CSharp" ContainsMarkup="false" DisplayLanguage="C#" >  
-private void ToolStripRenderer1_RenderGrip(Object sender, ToolStripGripRenderEventArgs e)   
-{   
-System.Text.StringBuilder messageBoxCS = new System.Text.StringBuilder();  
-messageBoxCS.AppendFormat("{0} = {1}", "GripBounds", e.GripBounds );  
-messageBoxCS.AppendLine();  
-...  
-MessageBox.Show(messageBoxCS.ToString(), "RenderGrip Event" );  
-}  
-</CodeSnippet>  
-  
-<CodeSnippet EnableCopyCode="true" Language="fsharp" ContainsMarkup="false" DisplayLanguage="F#" >  
-some F# code  
-</CodeSnippet>  
-</div>  
-  
-<h4 class="subHeading">Example of code specific text</h4>Language = <LanguageSpecificText devLangcs="CS" devLangvb="VB" devLangcpp="C++" devLangnu="F#" />  
-  
-<a name="seealso"></a>  
-<h1 class="heading">See Also</h1>  
-  
-    <div id="seeAlsoSection" class="section">   
-    <div class="seeAlsoStyle">  
-        <a href="ms-xhelp://?Id=ContosoTopic1">Main Topic</a>  
-    </div>  
- </div>  
-</div>  
-</div>  
-</body>  
-</html>  
-  
-```  
-  
-**Podpora F1**  
-  
-V sadě Visual Studio výběr F1 generuje hodnot poskytnutých z umístění kurzoru v prostředí IDE a naplní "kontejner objektů" se zadanými hodnotami (podle umístění kurzoru. Pokud se ukazatel přes x, funkce x je aktivní nebo vybraný a naplní kontejneru objektů a dat s hodnotami.  Pokud je vybrána F1 se naplní kontejneru objektů a Visual Studio F1 kódu vypadá jestli zdroji zákazníkům výchozího nápovědy jsou místní nebo online (online je výchozí nastavení), potom vytvoří příslušným řetězcem založená na uživatelích nastavení (online je výchozí nastavení) - spouštění prostředí (viz pomůže příručce správce pro soubor exe spusťte parametry) s parametry pro prohlížeč místní nápovědy + klíčová slova z kontejneru objektů, pokud je místní Nápověda výchozí nebo MSDN URL pomocí klíčového slova v seznamu parametrů.  
-  
-Pokud pro F1 jsou vráceny tyto tři řetězce, označuje jako řetězec s více hodnotami, proveďte první termín, vyhledejte pro klepnutí, a pokud najde, jsme se provádějí; Pokud ne, přejdete na další řetězec.  Záleží na pořadí. Prezentace klíčových slov s více hodnotami by měl být nejdelší řetězec nejkratší řetězec.  Chcete-li to ověřit v případě klíčových slov s více hodnotami, podívejte se na online řetězce adresy URL F1, která bude obsahovat zvolené – klíčové slovo.  
-  
-V sadě Visual Studio 2012 jsme záměrně provedli silnější dělení mezi online a offline, tak, aby pokud bylo nastavení uživatele pro Online, potom jsme jednoduše F1 žádost předal přímo na naše služba online dotazu na webu MSDN namísto směrování prostřednictvím Agent knihovny nápovědy aby bylo v sadě Visual Studio 2010. Potom spoléháme na stavu "dodavatele obsah nainstalovaný = true" a určí, jestli chcete něco jiného v tomto kontextu. V případě hodnoty true jsme pak provádět tuto logiku analýzy a směrování v závislosti na tom, co chcete podporu pro vaše zákazníky. Není-li pravda, budeme proto přejděte na webu MSDN. Pokud je nastavení uživatele do místní, potom všechna volání jednoduše přejděte k modulu Místní nápověda.  
-  
-F1 vývojový Diagram:  
-  
-![Tok F1](../../extensibility/internals/media/f1flow.png "F1flow")  
-  
-Když zdroj obsahu nápovědy výchozí prohlížeč nápovědy je nastavená na online (spuštění v prohlížeči):  
-  
--   Visual Studio partnera (VSP) funkce emitování hodnota balík vlastností F1 (prefix.keyword vlastnosti kontejneru objektů a dat a adresu URL online pro předponu nalezen v registru): F1 odešle URL VSP + parametry do prohlížeče.  
-  
--   Funkcích nástroje Visual Studio (jazyk editor, položky nabídky konkrétní sadě Visual Studio atd.): F1 odešle Visual Studio URL do prohlížeče.  
-  
-Když zdroj obsahu nápovědy výchozí prohlížeč nápovědy je nastavená na místní nápovědy (spuštění v Help Viewer):  
-  
--   Funkce VSP tam, kde – klíčové slovo shodují mezi F1 kontejneru objektů a dat a index místní úložiště (tedy prefix.keyword kontejneru vlastnost = hodnota nalezená v místním úložišti index): F1 vykreslí téma v okně nápovědy.  
-  
--   Funkcích nástroje Visual Studio (žádná možnost pro VSP přepsat kontejneru objektů a dat a nevydává funkcích nástroje Visual Studio): F1 vykreslí Visual Studio tématu v okně nápovědy.  
-  
-Nastavte následující hodnoty registru pro povolit záložní F1 pro dodavatele obsahu nápovědy. F1 záložního znamená, že prohlížeč nápovědy je nastavena na hledání obsahu nápovědy F1 online a obsah dodavatele se nainstaluje místně na pevný disk uživatele. Prohlížeč nápovědy by měla vypadat v místní Nápověda pro obsah, i když výchozí nastavení je pro online nápovědy.  
-  
-1.  Nastavte **VendorContent** hodnotu v klíči registru 2.3 pomáhají:  
-  
-    -   Pro 32bitové operační systémy:  
-  
-         HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.3\Catalogs\VisualStudio15  
-  
-         "VendorContent" = dword: 00000001  
-  
-    -   Pro 64bitové operační systémy:  
-  
-         HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15  
-  
-         "VendorContent" = dword: 00000001  
-  
-2.  Registrace partnera obor názvů v klíči registru pomůže 2.3:  
-  
-    -   Pro 32bitové operační systémy:  
-  
-         HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.3\Partner*\\< obor názvů\>*  
-  
-         "umístění"="do režimu offline"  
-  
-    -   Pro 64bitové operační systémy:  
-  
-         HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Partner*\\< obor názvů\>*  
-  
-         "umístění"="do režimu offline"  
-  
-**Základní analýza nativní Namespace**  
-  
-Pokud chcete zapnout základního oboru názvů nativní analýza, v registru přidejte novou hodnotu DWORD s názvem: BaseNativeNamespaces a jeho hodnotu nastavte na hodnotu 1 (v rámci katalogu klíč, který se má podporovat).  Například pokud chcete používat katalog Visual Studio, můžete přidat klíč k cestě:  
-  
+<?xml version="1.0" encoding="utf-8"?>
+<html>
+<head>
+<title>Contoso Topic 4</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="Microsoft.Help.Id" content="ContosoTopic4" />
+<meta name="Microsoft.Help.F1" content=" ContosoTopic4" />
+    <meta name="Language" content="en-us" />
+<meta name="Microsoft.Help.TocParent" content="ContosoTopic0" />
+<meta name="Microsoft.Help.TocOrder" content="4" />
+<meta name="SelfBranded" content="false" />
+</head>
+
+<body>
+<div class="title">Contoso Topic 4</div>
+
+  <div id="header">
+<table id="bottomTable" cellpadding="0" cellspacing="0"  width="100%">
+        <tr id="headerTableRow2"><td align="left">
+            <span id="nsrTitle">Contoso Topic 1</span>
+          </td>
+<td align="right">
+</td></tr>
+<tr id="headerTableRow1"><td align="left">
+            <span id="runningHeaderText">Contoso Widgets & Sprockets</span>
+          </td></tr>
+      </table>
+</div>
+
+<h2>Table of Contents</h2>
+
+<ul class="toc">
+<li class="tocline1"><a href="#introduction" target="_self">1.0 Introduction</a></li>
+<li class="tocline1"><a href="#seealso" target="_self">See Also</a></li>
+</ul>
+
+<div class="topic">
+
+<div id="mainSection">
+<div id="mainBody">
+
+<a name="introduction"></a>
+<h2>1.0 Introduction</h2>
+<p>[This documentation is for sample purposes only.]</p>
+
+<p>Contoso Topic 1 contains examples of:
+<ul>
+<li>Collapsible Area</li>
+<li>Bookmark ("See also")</li>
+<li>Code Snippets from Branding Package</li>
+</ul>
+ </p>
+<div class="alert"><table><tr><th>
+<strong>Note </strong></th></tr>
+<tr><td>
+<p>This is an example of a <span class="label">Note </span>section.
+Call out important items for your reader in this <span class="label">Note </span>box.
+</p></td></tr>
+</table>
+</div>
+</div>
+
+<CollapsibleArea Expanded="1" Title="Collapsible Area Test Heading">
+
+            <a id="sectionToggle0"><!----></a>
+
+<div>
+Example of Collapsible Area
+<br/>
+Lorem ipsum dolor sit amet...
+</div>
+</CollapsibleArea>
+
+<div id="snippetGroup" >
+<CodeSnippet EnableCopyCode="true" Language="VisualBasic" ContainsMarkup="false" DisplayLanguage="Visual Basic" >
+Private Sub ToolStripRenderer1_RenderGrip(sender as Object, e as ToolStripGripRenderEventArgs) _ Handles ToolStripRenderer1.RenderGrip
+Dim messageBoxVB as New System.Text.StringBuilder()
+    messageBoxVB.AppendFormat("{0} = {1}", "GripBounds", e.GripBounds)
+    messageBoxVB.AppendLine()
+ ...
+    MessageBox.Show(messageBoxVB.ToString(),"RenderGrip Event")
+End Sub
+</CodeSnippet>
+
+<CodeSnippet EnableCopyCode="true" Language="CSharp" ContainsMarkup="false" DisplayLanguage="C#" >
+private void ToolStripRenderer1_RenderGrip(Object sender, ToolStripGripRenderEventArgs e)
+{
+System.Text.StringBuilder messageBoxCS = new System.Text.StringBuilder();
+messageBoxCS.AppendFormat("{0} = {1}", "GripBounds", e.GripBounds );
+messageBoxCS.AppendLine();
+...
+MessageBox.Show(messageBoxCS.ToString(), "RenderGrip Event" );
+}
+</CodeSnippet>
+
+<CodeSnippet EnableCopyCode="true" Language="fsharp" ContainsMarkup="false" DisplayLanguage="F#" >
+some F# code
+</CodeSnippet>
+</div>
+
+<h4 class="subHeading">Example of code specific text</h4>Language = <LanguageSpecificText devLangcs="CS" devLangvb="VB" devLangcpp="C++" devLangnu="F#" />
+
+<a name="seealso"></a>
+<h1 class="heading">See Also</h1>
+
+    <div id="seeAlsoSection" class="section">
+    <div class="seeAlsoStyle">
+        <a href="ms-xhelp://?Id=ContosoTopic1">Main Topic</a>
+    </div>
+ </div>
+</div>
+</div>
+</body>
+</html>
+```
+
+**Podpora F1**
+
+V sadě Visual Studio vyberete F1 generuje hodnoty poskytnuté z umístění kurzoru v rámci rozhraní IDE a naplní "kontejner objektů" se zadanými hodnotami (založená na umístění kurzoru. Když je ukazatel myši nad funkce x, funkce x je aktivní/ve fokusu a naplní kontejner objektů a dat s hodnotami.  Při výběru F1 vyplní kontejner objektů a Visual Studio F1 kód ověří zjistit, zda je výchozí zdroj nápovědy zákazníci místního nebo online (online je výchozí možnost), pak vytvoří odpovídající řetězec založená na uživatelích nastavení (online je výchozí nastavení) – spouštění prostředí (viz Nápověda Příručka pro správce je pro soubor exe spuštění parametry) s parametry pro místní nápovědy a klíčová slova z kontejneru objektů a pokud místní nápovědy je výchozí hodnota nebo adresu URL webu MSDN pomocí klíčového slova v seznamu parametrů.
+
+Pokud pro F1 jsou vráceny tyto tři řetězce, uvedené jako řetězec s více hodnotami, provést první výraz, hledejte pro klepnutí, a pokud najde, jsme se vším hotovi; Pokud ne, přejít na další řetězec.  Pořadí je důležité. Nejdelší řetězec nejkratší řetězec by měl být prezentace klíčových slov s více hodnotami.  Chcete-li to ověřit v případě klíčových slov s více hodnotami, podívejte se na online řetězce adresy URL F1, která bude obsahovat vybrané – klíčové slovo.
+
+V sadě Visual Studio 2012 záměrně provedli jsme silnější dělení mezi online a offline, aby pokud byla nastavení uživatele pro Online, potom jsme jednoduše se předávají F1 žádost přímo na naše online dotazovací služby MSDN, místo směrování přes agenta knihovnu nápovědy jestli jsme měli v sadě Visual Studio 2010. Potom spoléháme na stavu "obsah dodavatele nainstalován = true" k určení, jestli se má provést něco jiného, v tomto kontextu. Při hodnotě true se můžeme provést tuto logiku analýzy a směrování v závislosti na tom, co si přejete podporovat pro vaše zákazníky. Pokud má hodnotu false, pak nám stačí, když přejdete na web MSDN. Pokud místní nastavení uživatele, všechna volání přejděte do modulu místní nápovědy.
+
+F1 vývojový Diagram:
+
+![Tok F1](../../extensibility/internals/media/f1flow.png "F1flow")
+
+Když zdroj obsahu nápovědy výchozí aplikace Help Viewer je nastaven na online (spustit v prohlížeči):
+
+-   Funkce sady Visual Studio Partner (VSP) generování hodnoty F1 kontejner objektů a dat (prefix.keyword vlastnosti kontejneru objektů a dat a předpona, která v registru byla nalezena online URL): F1 odešle URL VSP + parametry k prohlížeči.
+
+-   Funkce sady Visual Studio (jazyk editor, Visual Studio specifické položky nabídek, atd.): F1 odešle Visual Studio adresu URL do prohlížeče.
+
+Když zdroj obsahu nápovědy výchozí aplikace Help Viewer je nastaven na místní nápovědy (spuštění v aplikaci Help Viewer):
+
+-   VSP funkce, kde – klíčové slovo porovnává F1 kontejner objektů a dat a index místní úložiště (to znamená, že vlastnost prefix.keyword kontejner objektů a dat = hodnotu nalezenou v indexu místní úložiště): F1 vykreslí témat v Help Viewer.
+
+-   Funkce sady Visual Studio (žádná možnost pro VSP přepsání kontejner objektů a dat z funkce aplikace Visual Studio, protože ho): F1 vykreslí sady Visual Studio témat v Help Viewer.
+
+Nastavte následující hodnoty registru pro povolit záložní F1 pro obsah nápovědy dodavatele. Použití náhradní lokality F1 znamená, že aplikace Help Viewer je nastavena na hledání Nápověda F1 obsahu online a dodavatele obsahu je nainstalovaný místně pevném disku. Aplikace Help Viewer by měl vypadat na místní nápovědy pro obsah i v případě, že ve výchozím nastavení je pro online nápovědy.
+
+1. Nastavte **VendorContent** hodnoty v rámci pomoci 2.3 klíč registru:
+
+   -   Pro 32bitové operační systémy:
+
+        HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.3\Catalogs\VisualStudio15
+
+        "VendorContent" = dword: 00000001
+
+   -   Pro 64bitové operační systémy:
+
+        HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15
+
+        "VendorContent" = dword: 00000001
+
+2. Obor názvů partnera v klíči registru pomoct 2.3 registrace:
+
+   - Pro 32bitové operační systémy:
+
+      HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.3\Partner<em>\\< obor názvů\></em>
+
+      "umístění"="do režimu offline"
+
+   - Pro 64bitové operační systémy:
+
+      HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Partner<em>\\< obor názvů\></em>
+
+      "umístění"="do režimu offline"
+
+**Základní analýza nativní Namespace**
+
+Chcete-li při analýze základního nativní oboru názvů, v registru přidejte novou hodnotu DWORD s názvem: BaseNativeNamespaces a nastavte jej na hodnotu 1 (pod klíčem katalogu, které chtějí podporují).  Pokud chcete použít v katalogu sady Visual Studio, můžete například přidat klíč do cesty:
+
 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15
-  
-Když F1 – klíčové slovo ve formátu, který je záhlaví nebo metoda došlo, znak '/' bude možné analyzovat limitu, výsledkem následující konstrukce:  
-  
--   ZÁHLAVÍ: bude obor názvů, který slouží k registraci v registru  
-  
--   Metoda: to se stane – klíčové slovo, který získá předána.  
-  
-Například daného vlastní knihovna názvem CustomLibrary a metodu s názvem MyTestMethod, když F1 žádost o pochází v ní bude řada naformátována jako `CustomLibrary/MyTestMethod`.  
-  
-Uživatele můžete pak zaregistrovat CustomLibrary jako obor názvů v rámci podregistru partnery, zadejte libovolnou umístění klíč chtějí a – klíčové slovo předaný dotaz bude MyTestMethod.  
-  
-**Povolit ladění nástroj v prostředí IDE nápovědy**  
-  
-Přidejte následující klíč registru a hodnotu:  
-  
-Klíč HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\15.0\Dynamic nápovědy: výstup ladění zobrazení v hodnotě prodejní: Ano  
-  
-V prostředí IDE, položce nabídky nápovědy vyberte "Ladění pomůže kontext"  
-  
-**Metadata obsahu**  
-  
-V následující tabulce je libovolný řetězec, který se zobrazí v hranatých závorkách zástupný symbol, který se musí nahradit odpovídajícími rozpoznaný hodnotu. Například v \<meta name="Microsoft.Help.Locale" obsah = "[kód jazyka]" / >, "[kód jazyka]" se musí nahradit hodnotou, jako "en-us".  
-  
-|Vlastnost (HTML reprezentace)|Popis|  
-|--------------------------------------|-----------------|  
-|\< obsah meta name="Microsoft.Help.Locale" = "[– kód jazyka]" / >|Nastaví národní prostředí pro toto téma. Pokud tato značka se používá v tématu, musí být použit pouze jednou a musí být vložený výše jiné značky Microsoft Help. Pokud tato značka se nepoužívá, základní text tohoto tématu je indexovaný pomocí dělení slov, která souvisí s národním prostředí produktu, pokud je zadán; jinak en-us se používá pro dělení slov. Tato značka vyhovuje ISOC RFC 4646. Aby se zajistilo, že Microsoft Help funguje správně, tuto vlastnost použijte místo obecné atributu jazyk.|  
-|\< obsah meta name="Microsoft.Help.TopicLocale" = "[– kód jazyka]" / >|Národní prostředí pro toto téma nastavuje, když se také používají jiným národním prostředím. Pokud tato značka se používá v tématu, musíte ho použít pouze jednou. Použijte tuto značku, pokud katalog obsahuje obsah ve více než jednom jazyku. Několika témat v katalogu může mít stejné ID, ale každý musíte zadat jedinečné TopicLocale. Téma, které určuje TopicLocale, odpovídajícímu národnímu katalogu se téma, které se zobrazí v obsahu. Všechny jazykové verze tohoto tématu se však zobrazí ve výsledcích hledání.|  
-|\< title > [název] \< /title >|Určuje název tohoto tématu. Tato značka je vyžadován a musí být použit pouze jednou v tématu. Pokud text tématu neobsahuje název \<div > části, tento název se zobrazí v tomto tématu a v obsahu.|  
-|\< Meta name = "Microsoft.Help.Keywords" obsah = "[aKeywordPhrase]" / >|Určuje text odkazu, který se zobrazí v podokně indexu nápovědy. Při kliknutí na odkaz, zobrazí se téma. Můžete zadat několik klíčových slov index pro téma nebo tuto značku můžete vynechat, pokud nechcete, aby se odkazy na toto téma se objeví v indexu. Klíčová slova "K" z dřívějších verzí nápovědy lze převést na tuto vlastnost.|  
-|\< obsah meta name="Microsoft.Help.Id" = "[TopicID]" / >|Nastaví identifikátor pro toto téma. Tato značka je vyžadován a musí být použit pouze jednou v tématu. ID musí být jedinečný mezi témata v katalogu, které mají stejné nastavení národního prostředí. V jiné téma můžete vytvořit odkaz na toto téma pomocí číslem ID této.|  
-|\< Meta name="Microsoft.Help.F1" content="[System.Windows.Controls.Primitives.IRecyclingItemContainerGenerator]"/ >|Určuje klíčové slovo F1 pro toto téma. Můžete zadat několik klíčových slov F1 pro téma nebo tuto značku můžete vynechat, pokud nechcete, aby se v tomto tématu, který se má zobrazit při aplikaci stisknutí klávesy F1. Obvykle je zadán pouze jeden F1 – klíčové slovo pro téma. Klíčová slova "F" z dřívějších verzí nápovědy lze převést na tuto vlastnost.|  
-|\< Meta name = "Popis" content = "[tématu Popis]" / >|Poskytuje krátký souhrn obsahu v tomto tématu. Pokud tato značka se používá v tématu, musíte ho použít pouze jednou. Tato vlastnost přistupuje přímo knihovně dotazu; nejsou uložena v souboru indexu.|  
- obsah meta name="Microsoft.Help.TocParent" = "[parent_Id]" / >|Určuje nadřazené téma v tomto tématu v obsahu. Tato značka je vyžadován a musí být použit pouze jednou v tématu. Hodnota je Microsoft.Help.Id nadřazeného objektu. Téma může mít jenom jeden umístění v tabulce obsahu. "-1" je považován za ID tématu pro kořenový obsah. V [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)], že stránka je prohlížeč nápovědy domovské stránky. Toto je ze stejného důvodu, že přidáme konkrétně TocParent =-1 do některá témata zajistit, že se zobrazí v horní úrovni. Prohlížeč nápovědy domovské stránky je stránka systému a proto není výměnná. Pokud VSP se pokusí přidat stránku s ID-1, může se přidají do sady obsahu, ale prohlížeč nápovědy vždycky použijí na stránce systém – Domovská stránka prohlížeč nápovědy|  
-|\< obsah meta name="Microsoft.Help.TocOrder" = "[kladné celé číslo]" / >|Určuje, kde v obsahu Toto téma se zobrazí relativně k jeho rovnocenná témata. Tato značka je vyžadován a musí být použit pouze jednou v tématu. Hodnota je celé číslo. Téma, které určuje nižší hodnota celé číslo se zobrazí nad téma, které určuje celé číslo vyšší hodnotu.|  
-|\< obsah meta name="Microsoft.Help.Product" = "[kód produktu]" / >|Určuje produkt, který toto téma popisuje. Pokud tato značka se používá v tématu, musíte ho použít pouze jednou. Tyto informace můžete také zadat jako parametr, který je předán indexeru pomoci.|  
-|\< obsah meta name="Microsoft.Help.ProductVersion" = "[číslo verze]" / >|Určuje verzi produktu, který toto téma popisuje. Pokud tato značka se používá v tématu, musíte ho použít pouze jednou. Tyto informace můžete také zadat jako parametr, který je předán indexeru pomoci.|  
-|\< obsah meta name="Microsoft.Help.Category" = "[řetězec]" / >|Produkty používá k identifikaci témata obsahu. Můžete určit více témata pro téma nebo tuto značku můžete vynechat, pokud nechcete, aby odkazy k identifikaci žádné témata. Tato značka se používá k ukládání atributy pro TargetOS a TargetFrameworkMoniker při převodu téma ze starší verze nápovědy. Formát obsahu je AttributeName:AttributeValue.|  
-|\< obsah name="Microsoft.Help.TopicVersion meta ="[tématu číslo verze]"/ >|Určuje této verzi tohoto tématu, když existuje více verzí v katalogu. Protože Microsoft.Help.Id není musí být jedinečný, tato značka je požadován při více než jedna verze téma existuje v katalogu, například když katalog obsahuje téma pro rozhraní .NET Framework 3.5 a téma pro rozhraní .NET Framework 4 a mají stejné Micro logicky. Help.Id.|  
-|\< Meta name = "SelfBranded" content = "[hodnotu TRUE nebo FALSE]" / >|Určuje, zda v tomto tématu používá balíček brandingu spuštění Správce knihovny nápovědy nebo brandingu balíček, který je specifická pro téma. Tato značka musí být buď TRUE nebo FALSE. Pokud je hodnota TRUE, pak brandingu balíčku pro přidružené tématu přepsání značce balíček, který je nastaven při spuštění Správce knihovny nápovědy tak, aby tématu je vykreslen tak, jak má i v případě, že se liší od vykreslování jiný obsah. Pokud je FALSE, není v aktuálním tématu vykreslován podle značky balíček, který je nastaven při spuštění Správce knihovny nápovědy. Ve výchozím nastavení předpokládá samoobslužné brandingu měla hodnotu false, pokud proměnnou SelfBranded je deklarován jako TRUE; Správce knihovny nápovědy proto není nutné deklarovat \<meta name = "SelfBranded" content = "FALSE" / >.|  
-  
-### <a name="creating-a-branding-package"></a>Vytváření vlastní balíček  
-Verze Visual Studio zahrnuje několik různých produktů Visual Studio, včetně izolované a integrované prostředí pro partnery, Visual Studio.  Každý z těchto produktů vyžaduje určitý stupeň obsahu na základě téma nápovědy branding podpory, které jsou jedinečné pro produkt.  Témata týkající se sady Visual Studio například musí být konzistentní brand prezentací, zatímco SQL Studio, který zabalí ISO prostředí, vyžaduje svůj vlastní jedinečný nápovědy obsahu branding pro každého tématu.  Partnerem integrované prostředí může být vhodné jejich témata nápovědy, které se v rámci nadřazené obsahu nápovědy produktu Visual Studio při zachování vlastní branding tématu.  
-  
-Značky balíčky jsou nainstalované ve produktu, který obsahuje Prohlížeč nápovědy.  Pro produkty Visual Studio:  
-  
--   Záložní vlastní balíček (Branding_\<národní prostředí > .mshc) je nainstalována v kořenovém adresáři aplikace 2.3 Prohlížeč nápovědy (Příklad: C:\Program Files (x86) \Microsoft Help Viewer\v2.3) podle jazyková sada prohlížeče nápovědy.  Používá se pro případy, kde není nainstalovaná produktu branding balíčku (žádný obsah nejsou nainstalované) nebo kde nainstalované brandingu balíček je poškozený.  Všimněte si, že jsou při záložního kořenové aplikace, branding balíčku se používá ignorovány elementy sady Visual Studio (logo a zpětnou vazbu).  
-  
--   Při instalaci sady Visual Studio obsah ze služby obsahu balíčku (pro první scénář čas instalace obsahu) je také nainstalována vlastní balíček.  Pokud dojde k aktualizaci brandingu balíčku, je aktualizace nainstalována případě další aktualizace obsahu nebo akce instalovat další balíčky.  
-  
-Prohlížeč nápovědy podporuje branding témata na základě metadat tématu.  
-  
--   Kde tématu metadata definuje vlastní značky = true, vykreslení tématu, jako je, nedělat nic (Pokud je to branding).  
-  
--   Kde tématu metadata definuje vlastní značky = false, použít balíček brandingu asociovaná s hodnotou TopicVendor metadat.  
-  
--   Kde tématu metadata definuje name="Microsoft.Help.TopicVendor" obsah =\< brandingu název balíčku v dodavatele MSHA >, používat vlastní balíček definován v hodnotě obsahu.  
-  
--   Všimněte si, že v katalogu sady Visual Studio, s prioritou aplikace Branding balíčků.  První sady Visual Studio výchozí branding je platné a pak, pokud definované v metadatech tématu a podporovaná s přidružené branding balíček (podle definice v msha instalace), dodavatele definované branding je použít jako přepsání.  
-  
-Značky elementů obvykle spadají do tří kategorií:  
-  
--   Prvky záhlaví (příklady zahrnují odkaz pro zasílání názorů, text podmíněného zřeknutí se práv, logo)  
-  
--   Obsahu chování (příklady zahrnují rozbalit nebo sbalit ovládací prvek text elementy a elementy fragmentu kódu)  
-  
--   Elementy zápatí (třeba Copyright)  
-  
-Položky považuje za partnerské prvky patří (popsané v této specifikaci):  
-  
--   Logo katalogu nebo produktu (například Visual Studio)  
-  
--   Elementy odkazu a e-mailu zpětné vazby  
-  
--   Text zřeknutí se práv  
-  
--   Autorským textu  
-  
-Podpůrné soubory v balíčku brandingu Visual Studio Help Viewer patří:  
-  
--   Grafika (loga, ikony, atd.)  
-  
--   Branding.js - skriptu soubory podpůrné obsahu chování  
-  
--   Branding.XML - řetězce, které používají konzistentní napříč obsahu katalogu.  Poznámka: pro Visual Studio lokalizace elementy textu v branding.xml, zahrnout _locID = "\<jedinečnou hodnotu >"  
-  
--   Branding.CSS – styl definice konzistenci prezentace  
-  
--   Printing.CSS – styl definice pro konzistentní tisk prezentace  
-  
-Jak jsme uvedli výše, Branding balíčky jsou přidružené k tomuto tématu:  
-  
--   Když SelfBranded = false je definována v metadatech, tématu dědí katalogu branding balíčku  
-  
--   Nebo pokud SelfBranded = false a že je jedinečný Branding balíček definováno v MSHA a k dispozici při instalaci obsahu  
-  
-Pro VSPs implementace vlastní značky balíčky (VSP obsahu, SelfBranded = True), jeden způsob, jak pokračovat má začínat záložní brandingu balíčku (instalovanou se Help Viewer) a změňte název souboru podle potřeby.  Branding_\<národní prostředí > .mshc soubor je soubor zip s příponou souboru změnit tak, aby .mshc, takže jednoduše změňte rozšíření z .mshc na ZIP a extrahujte obsah.  Níže najdete branding balíček elementy a upravit podle potřeby (například změnit logo VSP logo a odkaz na logo v souboru Branding.xml, aktualizovat Branding.xml za VSP specifika atd.).  
-  
-Po všechny změny, vytvořte soubor zip obsahující požadované prvky pro přizpůsobení a změňte příponu na .mshc.  
-  
-Chcete-li přidružit vlastní značky balíček, vytvořte MSHA, který obsahuje odkaz na soubor brandingu mshc společně s obsahu mshc (obsahující témata).  Najdete níže "MSHA" jak vytvořit základní MSHA.  
-  
-Soubor Branding.xml obsahuje prvky seznamů používané k vykreslování konzistentně konkrétní položky v tématu, pokud obsahuje téma \<meta name="Microsoft.Help.SelfBranded" obsah = "false" / >.  Níže je uveden seznam prvků v souboru Branding.xml Visual Studio.  Všimněte si, že tento seznam je určený má být použit jako šablona pro prvními ISO prostředí, kde se upravit tyto prvky (například logo, zpětnou vazbu a Copyright) ke splnění svých vlastních produktu branding potřebám.  
-  
-Poznámka: proměnné, které jsou označeny "{n}" mají závislostem kódu – odebrání nebo změny těchto hodnot způsobí chyby a případně aplikace havárií. Lokalizace identifikátory (příklad _locID="codesnippet.n") jsou součástí balíčku sady Visual Studio brandingu.  
-  
-**Branding.XML**  
-  
-|||  
-|-|-|  
-|Funkce:|**CollapsibleArea**|  
-|Použití:|Rozbalte text sbalí obsahu ovládacího prvku|  
-|**Element**|**Hodnota**|  
-|ExpandText|Rozbalte položku|  
-|CollapseText|Sbalit|  
-|Funkce:|**CodeSnippet**|  
-|Použití:|Text řízení fragmentu kódu.  Poznámka: Obsah fragmentu kódu s místo "Non-ukončování" bude změněno na místo.|  
-|**Element**|**Hodnota**|  
-|CopyToClipboard|Kopírovat do schránky|  
-|ViewColorizedText|Zobrazení obarvené|  
-|CombinedVBTabDisplayLanguage|Visual Basic (ukázka)|  
-|VBDeclaration|Deklarace|  
-|VBUsage|Použití|  
-|Funkce:|**Zpětná vazba, zápatí a loga**|  
-|Použití:|Poskytnout zpětnou vazbu ovládacího prvku pro zákazníka, které chcete poskytnout zpětnou vazbu na aktuálním tématu prostřednictvím e-mailu.  Autorským text pro obsah.  Logo definice.|  
-|**Element**|**Hodnota (tyto řetězce můžete upravit tak, aby splňovaly potřeby obsahu adopter.)**|  
-|CopyRight|© 2013 Microsoft Corporation. Všechna práva vyhrazena.|  
-|SendFeedback|\<href = "{0}" {1} > odeslat zpětnou vazbu\</a > k tomuto tématu společnosti Microsoft.|  
-|FeedbackLink||  
-|LogoTitle|[!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)]|  
-|LogoFileName|vs_logo_bk.GIF|  
-|LogoFileNameHC|vs_logo_wh.GIF|  
-|Funkce:|**Právní omezení**|  
-|Použití:|Sadu případu konkrétní omezení pro počítač přeložit obsah.|  
-|**Element**|**Hodnota**|  
-|MT_Editable|Tento článek byl přeložen strojově. Pokud máte připojení k Internetu, vyberte "Zobrazit online v tomto tématu" k zobrazení této stránky v režimu umožňujícím úpravy původní anglické obsah ve stejnou dobu.|  
-|MT_NonEditable|Tento článek byl přeložen strojově. Pokud máte připojení k Internetu, vyberte "Zobrazit online v tomto tématu" k zobrazení této stránky v režimu umožňujícím úpravy původní anglické obsah ve stejnou dobu.|  
-|MT_QualityEditable|Tento článek byl přeložen ručně. Pokud máte připojení k Internetu, vyberte "Zobrazit online v tomto tématu" k zobrazení této stránky v režimu umožňujícím úpravy původní anglické obsah ve stejnou dobu.|  
-|MT_QualityNonEditable|Tento článek byl přeložen ručně. Pokud máte připojení k Internetu, vyberte "Zobrazit online v tomto tématu" k zobrazení této stránky v režimu umožňujícím úpravy původní anglické obsah ve stejnou dobu.|  
-|MT_BetaContents|Tento článek byl přeložen pro předběžná verze strojově. Pokud máte připojení k Internetu, vyberte "Zobrazit online v tomto tématu" k zobrazení této stránky v režimu umožňujícím úpravy původní anglické obsah ve stejnou dobu.|  
-|MT_BetaRecycledContents|Tento článek byl přeložen ručně pro předběžné verzi. Pokud máte připojení k Internetu, vyberte "Zobrazit online v tomto tématu" k zobrazení této stránky v režimu umožňujícím úpravy původní anglické obsah ve stejnou dobu.|  
-|Funkce:|**LinkTable**|  
-|Použití:|Podpora pro online téma obsahuje odkazy|  
-|**Element**|**Hodnota**|  
-|LinkTableTitle|Odkaz tabulky|  
-|TopicEnuLinkText|Zobrazit anglickou verzi\</a > v tomto tématu, která je k dispozici ve vašem počítači.|  
-|TopicOnlineLinkText|Zobrazení v tomto tématu \<href = "{0}" {1} > online\</a >|  
-|OnlineText|online|  
-|Funkce:|**Video zvuk ovládací prvek**|  
-|Použití:|Zobrazit elementy a text obsahu videa|  
-|**Element**|**Hodnota**|  
-|MultiMediaNotSupported|Internet Explorer 9 nebo vyšší musí být nainstalována na podporu obsah {0}.|  
-|VideoText|zobrazení video|  
-|AudioText|datový proud zvuku|  
-|OnlineVideoLinkText|\<p > zobrazte video spojené s tímto tématem, klikněte na tlačítko {0}\<href = "\ {1\}" > {2}here\</a >.\< /p >|  
-|OnlineAudioLinkText|\<p > pro naslouchání na zvuk spojené s tímto tématem, klikněte na tlačítko {0}\<href = "\ {1\}" > {2}here\</a >.\< /p >|  
-|Funkce:|**Ovládací prvek obsahu není nainstalován**|  
-|Použití:|Elementy textu (řetězce) používá pro vykreslování contentnotinstalled.htm|  
-|**Element**|**Hodnota**|  
-|ContentNotInstalledTitle|V počítači nenašel se žádný obsah.|  
-|ContentNotInstalledDownloadContentText|\<p > Chcete-li stáhnout obsah do počítače, \<href = "{0}" {1} > klikněte na kartu Správa\</a >.\< /p >|  
-|ContentNotInstalledText|\<p > v počítači je nainstalován žádný obsah. Podrobnosti viz svého správce místní instalace obsahu nápovědy. \</p >|  
-|Funkce:|**Téma nebyl nalezen ovládací prvek**|  
-|Použití:|Elementy textu (řetězce) používá pro vykreslování topicnotfound.htm|  
-|**Element**|**Hodnota**|  
-|TopicNotFoundTitle|Nelze najít požadovaný tématu ve vašem počítači.|  
-|TopicNotFoundViewOnlineText|\<p > tématu požadovaná nebyl nalezen v počítači, ale můžete \<href = "{0}" {1} > zobrazit v online tématu\</a >.\< /p >|  
-|TopicNotFoundDownloadContentText|\<p > naleznete na navigačním panelu odkazů na témata, podobné, nebo \<href = "{0}" {1} > klikněte na kartu Správa\</a > ke stahování obsahu do vašeho počítače.\< /p >|  
-|TopicNotFoundText|\<p > tématu požadovaná nebyl nalezen v počítači. \</p >|  
-|Funkce:|**Téma poškozený ovládací prvek**|  
-|Použití:|Elementy textu (řetězce) používá pro vykreslování topiccorrupted.htm|  
-|**Element**|**Hodnota**|  
-|TopicCorruptedTitle|Nelze zobrazit požadované téma.|  
-|TopicCorruptedViewOnlineText|\<p > Prohlížeč nápovědy nemůže zobrazit požadovaný tématu. Pravděpodobně došlo k chybě v obsahu v tématu nebo základní systémová závislost. \</p >|  
-|Funkce:|**Ovládací prvek domovskou stránku**|  
-|Použití:|Text Podpora zobrazení obsahu Help Viewer uzel nejvyšší úrovně.|  
-|**Element**|**Hodnota**|  
-|HomePageTitle|Domovská stránka prohlížeč nápovědy|  
-|HomePageIntroduction|\<p > Vítá vás Microsoft prohlížeče nápovědy, základní zdroj informací pro všechny uživatele nástroje, produkty, technologie a služby společnosti Microsoft. Help Viewer umožňuje přístup k postupy a referenční informace, ukázky kódu, technické články a další. Hledání obsahu, budete potřebovat, procházet obsah, použít fulltextové vyhledávání nebo procházení obsahu pomocí indexu – klíčové slovo. \</p >|  
-|HomePageContentInstallText|\<p >\<br / > použití \<href = "{0}" {1} > Správa obsahu\</a > provést následující:\<ul >\<li > přidat obsah na váš počítač.\< /li >\<li > zkontrolujte aktualizace lokálního obsahu.\< /li >\<li > odebrat obsah z vašeho počítače.\< /li >\</ul >\</p >|  
-|HomePageInstalledBooks|Nainstalované knihy|  
-|HomePageNoBooksInstalled|V počítači nenašel se žádný obsah.|  
-|HomePageHelpSettings|Nastavení obsahu nápovědy|  
-|HomePageHelpSettingsText|\<p > vaše aktuální nastavení je místní Nápověda. Prohlížeč nápovědy zobrazí obsah, který jste nainstalovali ve vašem počítači. \<br / > Chcete-li změnit váš zdroj obsahu nápovědy na panelu nabídek Visual Studio zvolte \<span style = "{0}" > pomoci, nastavit předvolby pomoci\</span >.\< br / >\</p >|  
-|Megabajtech|MB|  
-  
-**Branding.js**  
-  
-Soubor branding.js obsahuje JavaScript používané prvky přizpůsobení Visual Studio Help Viewer.  Níže je seznam prvky pro přizpůsobení a podpůrné funkce jazyka JavaScript.  Všechny řetězce lokalizovat pro tento soubor jsou definovány v sekci "Lokalizovatelný řetězce" v horní části tohoto souboru.  Všimněte si, že byl vytvořen soubor ICL pro umístění řetězce v rámci tohoto souboru branding.js.  
-  
-||||  
-|-|-|-|  
-|**Branding funkce**|**Funkce jazyka JavaScript**|**Popis**|  
-|Var...||Definování proměnné|  
-|Získat jazyk kódu uživatele|setUserPreferenceLang|mapuje index # pro jazyk kódu|  
-|Nastavování a získávání hodnoty souboru cookie|getCookie setCookie||  
-|Zděděného členu|changeMembersLabel|Rozbalit nebo sbalit zděděného členu|  
-|Když SelfBranded = False|Při načtení|Přečtěte si řetězec dotazu, zkontrolujte, zda se jedná o žádost o tisku.  Nastavte všechny codesnippets a zaměřit se na kartě upřednostňované uživatele.  Pokud je tisku isPrinterFriendly žádost o pak nastavena na hodnotu true. Zkontrolujte, zda režimu vysokého kontrastu.|  
-|Fragment kódu|addSpecificTextLanguageTagSet||  
-||getIndexFromDevLang||  
-||ChangeTab||  
-||setCodesnippetLang||  
-||setCurrentLang||  
-||CopyToClipboard||  
-|CollapsibleArea|addToCollapsibleControlSet|Zapište všechny objekt sbalitelné ovládacího prvku do seznamu.|  
-||CA_Click|na základě stavu sbalitelné oblasti, definuje, které bitové kopie a text, který má k dispozici|  
-|Podpora kontrast Logo|isBlackBackground()|Voláno k určení, zda je černé pozadí.  Pokud jenom přesné v režimu vysokého kontrastu.|  
-||isHighContrast()|používejte k detekci režimu vysokého kontrastu barevnou rozpětí|  
-||onHighContrast(black)|Volá se, když je zjištěna vysoký kontrast|  
-|Funkce Obrázků|||  
-||addToLanSpecTextIdSet(id)||  
-||updateLST(currentLang)||  
-||getDevLangFromCodeSnippet(lang)||  
-|Multimediální funkce|Popisek (začít, end, text, styl)||  
-||findAllMediaControls(normalizedId)||  
-||getActivePlayer(normalizedId)||  
-||captionsOnOff(id)||  
-||toSeconds(t)||  
-||getAllComments(node)||  
-||styleRectify (název stylu, styleValue)||  
-||showCC(id)||  
-||subtitle(ID)||  
-  
-**SOUBORY HTM**  
-  
-Značky balíček obsahuje sadu souborů HTM, které podporují scénáře pro komunikaci klíčové informace obsahu uživatelům nápovědy, například domovskou stránku, která obsahuje oddíl popisující, které sady obsahu jsou nainstalované a stránky, která uživatele vyzve, když nelze témata najít v místní sadu témat. Všimněte si, že tyto soubory HTM lze upravit každý produkt.  Dodavatelé ISO prostředí budou moci přijmout výchozí značky balíček a změnit chování a obsah tyto stránek Suite jejich potřebují.  Tyto soubory odkazovat na jejich odpovídající značky balíčku v pořadí pro brandingu značky k získání odpovídající obsahu ze souboru branding.xml.  
-  
-||||  
-|-|-|-|  
-|**Soubor**|**Použití**|**Zobrazí zdroje obsahu**|  
-|domovskastranka.htm|Toto je stránka, která zobrazuje obsah aktuálně nainstalovaný a jakoukoli jinou zprávu vhodné pro uživatele o jejich obsahu.  Tento soubor má další obsah meta data atribut "Microsoft.Help.Id" = "-1" který nahradí to obsahu v horní části místní obsahu obsah.||  
-||&LT; META_HOME_PAGE_TITLE_ADD / &GT;|Branding.XML, značka \<HomePageTitle >|  
-||&LT; HOME_PAGE_INTRODUCTION_SECTION_ADD / &GT;|Branding.XML, značka \<HomePageIntroduction >|  
-||&LT; HOME_PAGE_CONTENT_INSTALL_SECTION_ADD / &GT;|Branding.XML, značka \<HomePageContentInstallText >|  
-||&LT; HOME_PAGE_BOOKS_INSTALLED_SECTION_ADD / &GT;|Záhlaví části značky Branding.xml\<HomePageInstalledBooks >, data vygenerovaná aplikací, \<HomePageNoBooksInstalled > když jsou nainstalovány žádné knihy.|  
-||&LT; HOME_PAGE_SETTINGS_SECTION_ADD / &GT;|Záhlaví části značky Branding.xml \<HomePageHelpSettings >, část textu \<HomePageHelpSettingsText >.|  
-|topiccorrupted.htm|Pokud téma existuje v sadě místní, ale pro z nějakého důvodu nelze zobrazit (poškozený obsah).||  
-||&LT; META_TOPIC_CORRUPTED_TITLE_ADD / &GT;|Branding.XML, značka \<TopicCorruptedTitle >|  
-||&LT; TOPIC_CORRUPTED_SECTION_ADD / &GT;|Branding.XML, značka \<TopicCorruptedViewOnlineText >|  
-|topicnotfound.htm|Pokud téma nebyl nalezen v místní obsah nastavte, ani není k dispozici online||  
-||&LT; META_TOPIC_NOT_FOUND_TITLE_ADD / &GT;|Branding.XML, značka \<TopicNotFoundTitle >|  
-||&LT; META_TOPIC_NOT_FOUND_ID_ADD / &GT;|Branding.XML, značka \<TopicNotFoundViewOnlineText > + \<TopicNotFoundDownloadContentText >|  
-||&LT; TOPIC_NOT_FOUND_SECTION_ADD / &GT;|Branding.XML, značka \<TopicNotFoundText >|  
-|contentnotinstalled.htm|Pokud neexistuje žádný místní obsah pro produkt nainstalována.||  
-||&LT; META_CONTENT_NOT_INSTALLED_TITLE_ADD / &GT;|Branding.XML, značka \<ContentNotInstalledTitle >|  
-||&LT; META_CONTENT_NOT_INSTALLED_ID_ADD / &GT;|Branding.XML, značka \<ContentNotInstalledDownloadContentText >|  
-||&LT; CONTENT_NOT_INSTALLED_SECTION_ADD / &GT;|Branding.XML, značka \<ContentNotInstalledText >|  
-  
-**Soubory šablon stylů CSS**  
-  
-Balíčku sady Visual Studio pomůže prohlížeč Branding obsahuje dva soubory šablon stylů css pro podporu konzistentní nápovědě k sadě Visual Studio obsahu prezentace:  
-  
--   Branding.CSS – obsahuje prvky šablon stylů css pro vykreslování kde SelfBranded = false  
-  
--   Printer.CSS – obsahuje prvky šablon stylů css pro vykreslování kde SelfBranded = false  
-  
-Soubory Branding.CSS obsahuje definice pro Visual Studio tématu prezentace (přímý přístup paměti je, že branding.css součástí Branding_\<národní prostředí > může změnit .mshc z balíčku služby).  
-  
-**Grafické soubory**  
-  
-Visual Studio obsah zobrazuje logo sady Visual Studio, jakož i jiné grafiky.  Úplný seznam grafické soubory v balíčku Visual Studio Help Viewer značky jsou uvedeny níže.  
-  
-||||  
-|-|-|-|  
-|**Soubor**|**Použití**|**Příklady**|  
-|Clear.GIF|Použít k vykreslení sbalitelné oblasti||  
-|footer_slice.GIF|Prezentace zápatí||  
-|info_icon.GIF|Použít při zobrazení informací o|Právní omezení|  
-|online_icon.GIF|Tato ikona má být přidružen k online odkazy||  
-|tabLeftBD.gif|Použít k vykreslení kontejneru fragmentu kódu||  
-|tabRightBD.gif|Použít k vykreslení kontejneru fragmentu kódu||  
-|vs_logo_bk.GIF|Použít pro odkazy logo normální kontrast definovaným ve značce Branding.xml \<LogoFileName >.  Pro produkty Visual Studio je název logo vs_logo_bk.gif.||  
-|vs_logo_wh.GIF|Použít pro odkazy na normální vysoké logo definovaným ve značce Branding.xml \<LogoFileNameHC >.  Pro produkty Visual Studio je název logo vs_logo_wh.gif.||  
-|ccOff.png|Přidávání titulků obrázek||  
-|ccOn.png|Přidávání titulků obrázek||  
-|ImageSprite.png|Použít k vykreslení sbalitelné oblasti|Rozbalit nebo sbalit obrázek|  
-  
-### <a name="deploying-a-set-of-topics"></a>Nasazení sadu témat  
-Toto je velmi jednoduchý a rychlý kurz pro vytvoření nasazení obsahu Help Viewer nastavit comprised MSHA soubor a sadu souborů CAB nebo MSHC obsahující témata. MSHA je soubor XML, který popisuje sadu souborů CAB nebo MSHC soubory. Prohlížeč nápovědy může číst MSHA k získání seznamu obsahu (je. Soubor CAB nebo. Soubory MSHC) k dispozici pro místní instalaci.  
-  
-Toto je pouze základy popisující velmi základní schématu XML pro prohlížeč MSHA pomoci.  Všimněte si, že je příklad implementace níže Tento stručný přehled a ukázkové HelpContentSetup.msha.  
-  
-Název MSHA, pro účely tento úvod do je HelpContentSetup.msha (název souboru může být jakýkoli, s příponou. MSHA). HelpContentSetup.msha (následující příklad) by měl obsahovat seznam souborů CAB nebo MSHCs k dispozici.  Všimněte si, že typ souboru musí být konzistentní v rámci MSHA (nepodporuje kombinaci typů souborů MSHA a souborů CAB). Pro každý soubor CAB nebo MSHC, měla by existovat \<div třídy = "balíček" >...  \< /div > (viz následující příklad).  
-  
-Poznámka: v následujícím příkladu implementace jsme zahrnuli označující balíček. To je důležité zahrnout při získání potřebných elementy vykreslování obsahu sady Visual Studio a obsahu chování.  
-  
-Ukázkový soubor HelpContentSetup.msha: (nahraďte "obsah nastavit název 1" a "obsahu, název sady 2" atd. s názvy souborů.)  
-  
+
+F1 – klíčové slovo ve formátu, který záhlaví/metodu dochází, když znak '/', bude analyzována, výsledkem je následující konstruktor:
+
+-   ZÁHLAVÍ: bude obor názvů, který slouží k registraci v registru
+
+-   Metoda: to se stane klíčové slovo, podrobné.
+
+Mějme například vlastní knihovnu s názvem CustomLibrary a metodu nazvanou MyTestMethod, když F1 žádost pochází v něm naformátovaný jako `CustomLibrary/MyTestMethod`.
+
+Uživatel pak můžete zaregistrovat CustomLibrary jako obor názvů v části partneři hive a zadat jakékoli umístění klíč přejí a – klíčové slovo předán dotaz bude MyTestMethod.
+
+**Povolit ladění nástroje v integrovaném vývojovém prostředí nápovědy**
+
+Přidejte následující klíč registru a hodnoty:
+
+Klávesa HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\15.0\Dynamic: výstup ladění zobrazovaný v hodnotě maloobchodní: Ano
+
+V prostředí IDE v položce nabídky Nápověda zvolte "Ladit kontext nápovědy"
+
+**Metadata obsahu**
+
+V následující tabulce je jakýkoli řetězec, který se zobrazí mezi hranaté závorky zástupný symbol, který se musí nahradit odpovídajícími rozpoznaná hodnota. Například v \<meta name="Microsoft.Help.Locale" obsah = "[jazyk]" / >, "[jazyk]" se musí nahradit odpovídajícími hodnotu, jako "en-us".
+
+
+| Vlastnosti (znázornění HTML) | Popis |
+| - | - |
+| \< Meta name="Microsoft.Help.Locale" content = "[-kód jazyka]" / > | Nastaví národní prostředí pro toto téma. Pokud se tato značka se používá v tématu, musí být použit pouze jednou a musí být vložen nad všechny ostatní značky Microsoft Help. Pokud tato značka se nepoužívá, základní text tématu, které se indexuje zpětně pomocí pro dělení slov, která souvisí s národní prostředí produktu, pokud je zadán; v opačném případě en-us se používá pro dělení slov. Tato značka odpovídá ISOC RFC 4646. Pokud chcete mít jistotu, že Microsoft Help funguje správně, pomocí této vlastnosti namísto obecného atribut Language. |
+| \< Meta name="Microsoft.Help.TopicLocale" content = "[-kód jazyka]" / > | Nastaví národní prostředí pro toto téma se také používají jiné národní prostředí. Pokud se tato značka se používá v tématu, musí být použit pouze jednou. Tato značka použijte, pokud katalog s obsahem ve více než jednom jazyku. Více témat v katalogu může mít stejné ID, ale každý musí určovat jedinečný TopicLocale. Téma, které určuje TopicLocale, odpovídajícímu národnímu prostředí katalogu je téma, které se zobrazí v obsahu. Všechny jazykové verze tohoto tématu se však zobrazí ve výsledcích hledání. |
+| \< název > [Title] \< /title > | Určuje název tohoto tématu. Tato značka je povinné a musí být použit pouze jednou v tématu. Pokud se text tématu neobsahuje název \<div > části, tento název se zobrazí v tomto tématu a v obsahu. |
+| \< Meta name = "Microsoft.Help.Keywords" content = "[aKeywordPhrase]" / > | Určuje text odkazu, který se zobrazí v podokně index aplikace Help Viewer. Po kliknutí na odkaz, zobrazí se tématu. Můžete zadat více klíčových slov index tématu nebo toto klíčové slovo můžete vynechat, pokud nechcete, aby se odkazy na toto téma se zobrazí v indexu. Klíčová slova "K" z předchozích verzí nápovědy lze převést na tuto vlastnost. |
+| \< Meta name="Microsoft.Help.Id" content = "[TopicID]" / > | Nastaví identifikátor pro toto téma. Tato značka je povinné a musí být použit pouze jednou v tématu. ID musí být jedinečný mezi témata v katalogu, které mají stejné nastavení národního prostředí. V jiném tématu můžete vytvořit odkaz na toto téma pomocí tohoto ID. |
+| \< Meta name="Microsoft.Help.F1" content="[System.Windows.Controls.Primitives.IRecyclingItemContainerGenerator]"/ > | Určuje klíčové slovo F1 pro toto téma. Můžete zadat více klíčových slov F1 pro téma nebo toto klíčové slovo můžete vynechat, pokud nechcete, aby se v tomto tématu a zobrazí, když uživatel aplikace stisknutí klávesy F1. Obvykle je zadán pouze jeden F1 – klíčové slovo tématu. Klíčová slova "F" z předchozích verzí nápovědy lze převést na tuto vlastnost. |
+| \< Meta name = "Popis" content = "[tématu description]" / > | Poskytuje krátký popis obsahu v tomto tématu. Pokud se tato značka se používá v tématu, musí být použit pouze jednou. Tato vlastnost je k němu přistupuje přímo dotazu knihovny; není uložený v souboru indexu. |
+| Meta name="Microsoft.Help.TocParent" content = "[parent_Id]" / > | Určuje nadřazené téma tohoto tématu v obsahu. Tato značka je povinné a musí být použit pouze jednou v tématu. Hodnota je Microsoft.Help.Id nadřazeného prvku. Téma může mít jen jeden umístění v tabulce obsahu. "-1" se považuje za ID tématu pro kořenový obsah. V [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)], tuto stránku je domovská stránka aplikace Help Viewer. Toto je ze stejného důvodu, že konkrétně jsme některá témata k zajištění, že se zobrazí v horní úrovni přidat TocParent =-1. Domovská stránka aplikace Help Viewer je stránka systému a proto není – nahraditelné. Pokud VSP se pokusí přidat stránku s ID -1, může získat přidali do sady obsahu, ale aplikace Help Viewer bude vždy používat systém stránka – Domovská stránka prohlížeč nápovědy |
+| \< Meta name="Microsoft.Help.TocOrder" content = "[kladné celé číslo]" / > | Určuje, kde v obsahu v tomto tématu zobrazí vzhledem k jeho peer témata. Tato značka je povinné a musí být použit pouze jednou v tématu. Hodnota je celé číslo. Téma, které určuje celé číslo nižší hodnota se zobrazí nad téma, které určuje celé číslo vyšší hodnotu. |
+| \< Meta name="Microsoft.Help.Product" content = "[kód produktu]" / > | Určuje produkt, který popisuje Toto téma. Pokud se tato značka se používá v tématu, musí být použit pouze jednou. Tyto informace mohou být rovněž dodán jako parametr, který je předán do indexovacího členu nápovědy. |
+| \< Meta name="Microsoft.Help.ProductVersion" content = "[číslo verze]" / > | Určuje verzi produktu, který popisuje Toto téma. Pokud se tato značka se používá v tématu, musí být použit pouze jednou. Tyto informace mohou být rovněž dodán jako parametr, který je předán do indexovacího členu nápovědy. |
+| \< Meta name="Microsoft.Help.Category" content = "[string]" / > | Produkty se používá k identifikaci dílčí části objektů obsahu. Můžete určit více pododdíly tématu nebo toto klíčové slovo můžete vynechat, pokud nechcete, aby se odkazy k identifikaci všech podsekcí. Tato značka se používá k ukládání atributy pro TargetOS a TargetFrameworkMoniker, když je téma převést ze starší verze nápovědy. Formát obsahu je AttributeName:AttributeValue. |
+| \< Meta name="Microsoft.Help.TopicVersion obsah ="[tématu číslo verze]"/ > | Určuje tuto verzi tématu, pokud existuje více verzí v katalogu. Protože Microsoft.Help.Id nemusí být jedinečný, tato značka se vyžaduje při více než jednu verzi tématu existuje v katalogu, například když katalog obsahuje téma pro rozhraní .NET Framework 3.5 a téma pro rozhraní .NET Framework 4 a obě mají stejné Micro obnovitelně. Help.Id. |
+| \< Meta name = "SelfBranded" content = "[hodnotu TRUE nebo FALSE]" / > | Určuje, zda toto téma používá balíček Správce knihovny nápovědy počáteční značky nebo vlastní balíček, který je specifický pro téma. Tato značka musí být buď TRUE nebo FALSE. Pokud je hodnota TRUE, pak balíček přizpůsobení prostředí značce pro související téma přepíše značky balíčku, který je nastaven při spuštění Správce knihovny nápovědy tak, aby tématu je vykreslen tak, jak má i v případě, že se liší od vykreslování jiný obsah. Pokud je FALSE, v aktuálním tématu je vykreslena podle značky balíčku, který je nastaven při spuštění Správce knihovny nápovědy. Ve výchozím nastavení předpokládá svým značky jako NEPRAVDA, pokud SelfBranded proměnná je deklarovaná jako TRUE; Správce knihovny nápovědy proto není nutné deklarovat \<meta name = "SelfBranded" content = "FALSE" / >. |
+
+### <a name="creating-a-branding-package"></a>Vytváří se balíček pro přizpůsobení prostředí značce
+Verze sady Visual Studio zahrnuje celou řadou různých produktů Visual Studio, včetně izolované a integrované prostředí pro partnerů pro Visual Studio.  Každá z těchto produktů vyžaduje určitý stupeň obsahu založeného na téma nápovědy branding podporu pro produkt jedinečné.  Například témat Visual Studio musí mít konzistentní Image značky prezentace, zatímco SQL Studio, která zabalí ISO prostředí vyžaduje svou vlastní jedinečnou nápovědu obsahu branding pro každého tématu.  Integrovaná partnerská prostředí může být vhodné jejich témata nápovědy, které se v rámci nadřazené obsahu nápovědy produktu Visual Studio při zachování jejich vlastní téma značky.
+
+Přizpůsobení prostředí značce balíčky se nainstalují podle produktu, který obsahuje aplikace Help Viewer.  Pro produkty Visual Studio:
+
+-   Náhradní vlastní balíček (Branding_\<národní prostředí > .mshc) je nainstalována v kořenovém adresáři aplikace pomůže Viewer 2.3 (Příklad: C:\Program Files (x86) \Microsoft Help Viewer\v2.3) pomocí této aplikace Help Viewer jazykové sady.  Používá se pro případy, ve kterém není nainstalován produkt branding balíčku (žádný obsah nejsou nainstalované) nebo kde je nainstalovaný balíček značky poškozený.  Prvky sady Visual Studio (logo a zpětná vazba) jsou ignorovány při použití značky balíčku aplikace kořenové použití náhradní lokality.
+
+-   Při instalaci sady Visual Studio obsah z balíčku obsahu služby (pro první čas instalace obsahu scénář) je také nainstalována značky balíčku.  Pokud dojde k přizpůsobení prostředí značce balíčku aktualizace, je aktualizace nainstalována při další aktualizaci obsahu nebo akce instalace dalších balíčků se stane.
+
+Microsoft Help Viewer podporuje značky na základě metadat tématu témata.
+
+-   Kde tématu metadat definuje vlastní značky = true, tématu, jako je vykreslování, neprovádějte žádnou akci (až na hodnotu značky).
+
+-   Kde tématu metadat definuje vlastní značky = false, použití značky balíčku spojeného s hodnotou TopicVendor metadat.
+
+-   Kde tématu metadat definuje name="Microsoft.Help.TopicVendor" obsah =\< značky název balíčku v dodavatele MSHA >, pomocí značky balíčku definované v hodnotě obsahu.
+
+-   V katalogu sady Visual Studio je priorita aplikace Branding balíčků.  První sady Visual Studio výchozí branding se použije a poté, pokud definované v metadatech tématu a podpora s přidružené branding balíček (jak jsou definovány v msha instalace), dodavatele definované branding se použije jako přepsání.
+
+Přizpůsobení prostředí značce elementy obvykle spadají do tří hlavních kategorií:
+
+-   Prvky hlavičky (například odkazu na zpětnou vazbu, text zřeknutí se práv podmíněné, logo)
+
+-   Obsah chování (příklady zahrnují rozbalení/sbalení ovládacího prvku textové prvky a prvky fragment kódu)
+
+-   Zápatí prvků (např. Copyright)
+
+Položky, které jsou považovány za obsahovat obchodní značku prvky (podrobně popsané v této specifikace):
+
+-   Logo katalogu/produktu (např. Visual Studio)
+
+-   Prvky odkazu a e-mailu zpětné vazby
+
+-   Text zřeknutí se práv
+
+-   Text o autorských právech
+
+Podpůrné soubory v balíčku Visual Studio Help Viewer značky patří:
+
+-   Grafika (loga, ikony, atd.)
+
+-   Soubory skriptu Branding.js - podpůrné obsahu chování
+
+-   Branding.XML - řetězce, které jsou používány konzistentně napříč katalogu obsahu.  Poznámka: pro Visual Studio lokalizace textové prvky v branding.xml, patří _locID = "\<jedinečnou hodnotu >"
+
+-   Branding.CSS – definice stylů pro prezentaci konzistence
+
+-   Printing.CSS – definice stylů pro konzistentní tisk prezentace
+
+Jak bylo uvedeno výše, jsou spojeny s tématu Branding balíčky:
+
+-   Když SelfBranded = false je definované v metadatech, tématu dědí katalogu značky balíčku
+
+-   Nebo pokud SelfBranded = false a že je jedinečný Branding balíček definovány v MSHA a k dispozici při instalaci obsahu
+
+Pro implementaci vlastní značky balíčky VSPs (VSP obsah, SelfBranded = True), je jedním ze způsobů, aby bylo možné pokračovat začít s balíček záložní značky (instalovanou se aplikace Help Viewer) a název souboru podle potřeby změnit.  Branding_\<národní prostředí > .mshc soubor je soubor zip s příponou souboru změněn na .mshc, takže jednoduše změňte příponu na .zip z .mshc a rozbalit obsah.  Níže jsou značky balíčku elementy a upravovat podle potřeby (například změnit logo VSP logo a odkaz na logo v souboru Branding.xml, aktualizujte Branding.xml za VSP specifika atd.).
+
+Po dokončení všech změn, vytvořte soubor zip obsahující požadované prvky značky a změňte jeho příponu na .mshc.
+
+Přidružit vlastní značky balíčku, vytvořte MSHA, který obsahuje odkaz na soubor značky mshc spolu s obsahu mshc (obsahující témata).  Níže jsou uvedeny "MSHA" jak vytvořit základní MSHA.
+
+Branding.xml soubor obsahuje seznam prvků, které slouží pro konzistentně vykreslování konkrétní položky v tématu v případě tématu obsahuje \<meta name="Microsoft.Help.SelfBranded" content = "false" / >.  Visual Studio seznam prvků v souboru Branding.xml je uveden níže.  Tento seznam je určena pro použití jako šablony pro přechod ISO prostředí, kde se upravovat tyto prvky (například logo, zpětnou vazbu a autorská práva) podle své vlastní značky produktu musí.
+
+Poznámka: proměnné, které jsou označeny "{n}" mít závislostí kódu – odebrání nebo změny těchto hodnot způsobí chyby a případně selhání aplikace. Lokalizace identifikátory (například _locID="codesnippet.n") jsou obsažené v balíčku Branding Visual Studio.
+
+**Branding.XML**
+
+
+| | |
+| - | - |
+| Funkce: | **CollapsibleArea** |
+| Použití: | Rozbalte text sbalí obsahu ovládacího prvku |
+| **Element** | **Hodnota** |
+| ExpandText | Rozbalte položku |
+| CollapseText | Sbalit |
+| Funkce: | **CodeSnippet** |
+| Použití: | Text ovládacího prvku fragmentu kódu.  Poznámka: Obsah fragment kódu s prostorem "Non-zásadní" se změní na místo. |
+| **Element** | **Hodnota** |
+| CopyToClipboard | Kopírovat do schránky |
+| ViewColorizedText | Zobrazit Obarvený text |
+| CombinedVBTabDisplayLanguage | Visual Basic (ukázka) |
+| VBDeclaration | Deklarace |
+| VBUsage | Použití |
+| Funkce: | **Zpětná vazba, zápatí a Logo** |
+| Použití: | Poskytnutí zpětné vazby ovládacího prvku pro zákazníka, které chcete poskytnout zpětnou vazbu na aktuální téma e-mailem.  O autorských právech text pro obsah.  Logo definice. |
+| **Element** | **Hodnota (tyto řetězce lze upravit podle potřeby obsahu adopter.)** |
+| CopyRight | © 2013 Microsoft Corporation. Všechna práva vyhrazena. |
+| SendFeedback | \<href = "{0}" {1}> Odeslat názor\</a > k tomuto tématu společnosti Microsoft. |
+| FeedbackLink | |
+| LogoTitle | [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] |
+| LogoFileName | vs_logo_bk.GIF |
+| LogoFileNameHC | vs_logo_wh.GIF |
+| Funkce: | **Právní omezení** |
+| Použití: | Obsah přeložený sadu specifické pro případ právní omezení pro počítač. |
+| **Element** | **Hodnota** |
+| MT_Editable | Tento článek byl strojově přeložen. Pokud máte připojení k Internetu, vyberte možnost "Zobrazit toto téma online" pro zobrazení této stránky v upravitelném režimu spolu s původním anglickým obsahem ve stejnou dobu. |
+| MT_NonEditable | Tento článek byl strojově přeložen. Pokud máte připojení k Internetu, vyberte možnost "Zobrazit toto téma online" pro zobrazení této stránky v upravitelném režimu spolu s původním anglickým obsahem ve stejnou dobu. |
+| MT_QualityEditable | Tento článek byl přeložen ručně. Pokud máte připojení k Internetu, vyberte možnost "Zobrazit toto téma online" pro zobrazení této stránky v upravitelném režimu spolu s původním anglickým obsahem ve stejnou dobu. |
+| MT_QualityNonEditable | Tento článek byl přeložen ručně. Pokud máte připojení k Internetu, vyberte možnost "Zobrazit toto téma online" pro zobrazení této stránky v upravitelném režimu spolu s původním anglickým obsahem ve stejnou dobu. |
+| MT_BetaContents | Tento článek byl strojově přeložen pro předběžné vydání. Pokud máte připojení k Internetu, vyberte možnost "Zobrazit toto téma online" pro zobrazení této stránky v upravitelném režimu spolu s původním anglickým obsahem ve stejnou dobu. |
+| MT_BetaRecycledContents | Tento článek byl přeložen ručně pro předběžné vydání. Pokud máte připojení k Internetu, vyberte možnost "Zobrazit toto téma online" pro zobrazení této stránky v upravitelném režimu spolu s původním anglickým obsahem ve stejnou dobu. |
+| Funkce: | **LinkTable** |
+| Použití: | Podpora pro online téma obsahuje odkazy |
+| **Element** | **Hodnota** |
+| LinkTableTitle | Vazební tabulka |
+| TopicEnuLinkText | Zobrazit anglickou verzi\</a > tohoto tématu, který je dostupný na vašem počítači. |
+| TopicOnlineLinkText | Zobrazit toto téma \<href = "{0}" {1}> online\</a > |
+| OnlineText | Online |
+| Funkce: | **Ovládacího prvku video zvuku** |
+| Použití: | Zobrazit elementy a text v případě video obsahu |
+| **Element** | **Hodnota** |
+| MultiMediaNotSupported | Aplikace Internet Explorer 9 nebo vyšší musí být nainstalována, aby podporovaly {0} obsah. |
+| VideoText | zobrazení videa |
+| AudioText | vysílání datového proudu zvuku |
+| OnlineVideoLinkText | \<p > pro zobrazení videa patřícího k tomuto tématu, klikněte na tlačítko {0} \<href = "{1}" >{2}tady\</a >.\< /p > |
+| OnlineAudioLinkText | \<p > poslech Audio nahrávky patřící k tomuto tématu klikněte na tlačítko {0} \<href = "{1}" >{2}tady\</a >.\< /p > |
+| Funkce: | **Ovládací prvek obsahu není nainstalován** |
+| Použití: | Textové prvky (řetězce) použita pro vykreslení contentnotinstalled.htm |
+| **Element** | **Hodnota** |
+| ContentNotInstalledTitle | V počítači nebyl nalezen žádný obsah. |
+| ContentNotInstalledDownloadContentText | \<p > pro stažení obsahu do vašeho počítače, \<href = "{0}" {1}> klikněte na kartu spravovat\</a >.\< /p > |
+| ContentNotInstalledText | \<p > ve vašem počítači není nainstalován žádný obsah. Kontaktujte správce pro místní instalaci obsahu nápovědy. \</p > |
+| Funkce: | **Téma nebyl nalezen ovládací prvek** |
+| Použití: | Textové prvky (řetězce) použita pro vykreslení topicnotfound.htm |
+| **Element** | **Hodnota** |
+| TopicNotFoundTitle | Nelze najít požadované téma ve vašem počítači. |
+| TopicNotFoundViewOnlineText | \<p > požadované téma nebyl nalezen v počítači, ale můžete \<href = "{0}" {1}> zobrazit téma online\</a >.\< /p > |
+| TopicNotFoundDownloadContentText | \<p > v navigačním podokně se odkazy na podobná témata nebo \<href = "{0}" {1}> klikněte na kartu spravovat\</a > pro stažení obsahu do vašeho počítače.\< /p > |
+| TopicNotFoundText | \<p > požadované téma nebyl nalezen v počítači. \</p > |
+| Funkce: | **Téma poškozený ovládacího prvku** |
+| Použití: | Textové prvky (řetězce) použita pro vykreslení topiccorrupted.htm |
+| **Element** | **Hodnota** |
+| TopicCorruptedTitle | Nelze zobrazit požadované téma. |
+| TopicCorruptedViewOnlineText | \<p > aplikace Help Viewer nemůže zobrazit požadované téma. Pravděpodobně došlo k chybě v obsahu tématu nebo základní závislosti systému. \</p > |
+| Funkce: | **Ovládací prvek domovské stránky** |
+| Použití: | Text podporuje zobrazení obsahu aplikace Help Viewer uzel nejvyšší úrovně. |
+| **Element** | **Hodnota** |
+| HomePageTitle | Domovská stránka prohlížeč nápovědy |
+| HomePageIntroduction | \<p > Vítá vás Microsoft Help Viewer, základní zdroj informací pro každého, kdo používá nástroje, produkty, technologie a služby společnosti Microsoft. Aplikace Help Viewer poskytuje přístup k postupy a referenční informace, ukázky kódu, technické články a další. Hledání obsahu, je nutné, procházet obsah, použít fulltextové vyhledávání nebo procházení obsahu pomocí indexu – klíčové slovo. \</p > |
+| HomePageContentInstallText | \<p >\<br / > použití \<href = "{0}" {1}> Spravovat obsah\</a > karty můžete provádět následující:\<ul >\<li > přidávat obsah do počítače.\< /li >\<li > vyhledat aktualizace místního obsahu.\< /li >\<li > odebrat obsah z vašeho počítače.\< /li >\</ul >\</p > |
+| HomePageInstalledBooks | Nainstalované knihy |
+| HomePageNoBooksInstalled | V počítači nebyl nalezen žádný obsah. |
+| HomePageHelpSettings | Nastavení obsahu nápovědy |
+| HomePageHelpSettingsText | \<p > vaše aktuální nastavení je místní nápovědy. Aplikace Help Viewer zobrazí obsah, který jste nainstalovali ve vašem počítači. \<br / > Chcete-li změnit zdroj obsahu nápovědy na panelu nabídek sady Visual Studio zvolte \<span style = "{0}" > Nápověda, nastavení předvoleb nápovědy\</span >.\< br / >\</p > |
+| MB | MB |
+
+**Branding.js**
+
+Soubor branding.js obsahuje JavaScript používá značky elementů Visual Studio Help Viewer.  Níže je seznam značky elementů a podpůrné funkce jazyka JavaScript.  Všechny řetězce lokalizované pro tento soubor jsou definovány v sekci "Lokalizovatelných řetězců" v horní části tohoto souboru.  Pro umístění řetězců v rámci branding.js soubor byl vytvořen soubor ICL.
+
+||||
+|-|-|-|
+|**Přizpůsobení prostředí značce funkce**|**Funkce jazyka JavaScript**|**Popis**|
+|Var...||Definujte proměnné, které|
+|Získejte jazyk kódu uživatele|setUserPreferenceLang|mapuje indexu # do jazyka kódu|
+|Nastavení a získání hodnoty souboru cookie|getCookie setCookie||
+|Zděděný člen|changeMembersLabel|Rozbalit/sbalit zděděného členu|
+|Když SelfBranded = False|Při načtení|Přečtěte si řetězec dotazu a zkontrolujte, zda se jedná o žádost o tisk.  Nastavte všechny codesnippets zaměřit kartě upřednostňované uživateli.  Pokud se jedná o žádost o tisk, nastavte vlastnost isPrinterFriendly na hodnotu true. Zkontrolujte režim s vysokým kontrastem.|
+|Fragment kódu|addSpecificTextLanguageTagSet||
+||getIndexFromDevLang||
+||ChangeTab||
+||setCodesnippetLang||
+||setCurrentLang||
+||CopyToClipboard||
+|CollapsibleArea|addToCollapsibleControlSet|Zapište všechny objektu sbalitelného ovládacího prvku do seznamu.|
+||CA_Click|na základě stavu sbalitelné oblasti, definuje, které obrázek a text, který má k dispozici|
+|Podpora kontrast – Logo|isBlackBackground()|Voláno k určení, zda je černé pozadí.  Jenom přesné při režim s vysokým kontrastem.|
+||isHighContrast()|barevný rozsah použijte k detekci režim s vysokým kontrastem|
+||onHighContrast(black)|Volá se, když se zjistí vysoký kontrast|
+|Funkce Obrázků|||
+||addToLanSpecTextIdSet(id)||
+||updateLST(currentLang)||
+||getDevLangFromCodeSnippet(lang)||
+|Multimediální funkce|Popisek (zahájení, ukončení, text, styl)||
+||findAllMediaControls(normalizedId)||
+||getActivePlayer(normalizedId)||
+||captionsOnOff(id)||
+||toSeconds(t)||
+||getAllComments(node)||
+||styleRectify (styleName, styleValue)||
+||showCC(id)||
+||subtitle(ID)||
+
+**SOUBORY HTM**
+
+Přizpůsobení prostředí značce balíček obsahuje sadu souborů HTM, které podporují scénáře pro komunikaci klíčové informace, které pomáhají uživatelům obsahu, například domovskou stránku, která obsahuje oddíl popisující, které sady obsahu jsou nainstalovány a stránky, která sděluje uživateli, když nelze témata najít v místní sadě témata. Tyto soubory HTM, lze upravit podle produktu.  Dodavatelé ISO prostředí budou moct přijmout výchozí značky balíček a změnit chování a obsah těchto stránek do sady jejich potřeby.  Tyto soubory naleznete v příslušných značky balíčku v pořadí pro přizpůsobení prostředí značce značky získat příslušný obsah ze souboru branding.xml.
+
+||||
+|-|-|-|
+|**Soubor**|**Použití**|**Zobrazit zdroj obsahu**|
+|domovskastranka.htm|Toto je stránka, která zobrazuje aktuálně nainstalovaný obsah a jakékoli jiné zprávy, které jsou vhodné pro konkrétního uživatele o jejich obsahu.  Tento soubor obsahuje další obsah "Microsoft.Help.Id" data atributu meta = "-1" který nahradí to obsahu v horní části místního obsahu obsahu.||
+||&LT; META_HOME_PAGE_TITLE_ADD / &GT;|Branding.XML, značka \<HomePageTitle >|
+||&LT; HOME_PAGE_INTRODUCTION_SECTION_ADD / &GT;|Branding.XML, značka \<HomePageIntroduction >|
+||&LT; HOME_PAGE_CONTENT_INSTALL_SECTION_ADD / &GT;|Branding.XML, značka \<HomePageContentInstallText >|
+||&LT; HOME_PAGE_BOOKS_INSTALLED_SECTION_ADD / &GT;|Nadpis oddílu Branding.xml značky\<HomePageInstalledBooks >, data generovaná z aplikace, \<HomePageNoBooksInstalled > při instalaci žádná knihy.|
+||&LT; HOME_PAGE_SETTINGS_SECTION_ADD / &GT;|Nadpis oddílu Branding.xml značky \<HomePageHelpSettings >, části textu \<HomePageHelpSettingsText >.|
+|topiccorrupted.htm|Téma v nastavení místní existuje, ale pro z nějakého důvodu nelze zobrazit (poškozený obsah).||
+||&LT; META_TOPIC_CORRUPTED_TITLE_ADD / &GT;|Branding.XML, značka \<TopicCorruptedTitle >|
+||&LT; TOPIC_CORRUPTED_SECTION_ADD / &GT;|Branding.XML, značka \<TopicCorruptedViewOnlineText >|
+|topicnotfound.htm|Když téma nebyl nalezen v místní obsah ani nastavení není k dispozici online||
+||&LT; META_TOPIC_NOT_FOUND_TITLE_ADD / &GT;|Branding.XML, značka \<TopicNotFoundTitle >|
+||&LT; META_TOPIC_NOT_FOUND_ID_ADD / &GT;|Branding.XML, značka \<TopicNotFoundViewOnlineText > + \<TopicNotFoundDownloadContentText >|
+||&LT; TOPIC_NOT_FOUND_SECTION_ADD / &GT;|Branding.XML, značka \<TopicNotFoundText >|
+|contentnotinstalled.htm|Pokud není žádný místní obsah instalaci produktu.||
+||&LT; META_CONTENT_NOT_INSTALLED_TITLE_ADD / &GT;|Branding.XML, značka \<ContentNotInstalledTitle >|
+||&LT; META_CONTENT_NOT_INSTALLED_ID_ADD / &GT;|Branding.XML, značka \<ContentNotInstalledDownloadContentText >|
+||&LT; CONTENT_NOT_INSTALLED_SECTION_ADD / &GT;|Branding.XML, značka \<ContentNotInstalledText >|
+
+**Soubory šablon stylů CSS**
+
+Nápověda prohlížeč Branding balíček pro Visual Studio obsahuje dva soubory šablon stylů css pro podporu obsahu konzistentní prezentace nápovědy aplikace Visual Studio:
+
+-   Branding.CSS – obsahuje prvky šablon stylů css pro vykreslení where SelfBranded = false
+
+-   Printer.CSS – obsahuje prvky šablon stylů css pro vykreslení where SelfBranded = false
+
+Soubory Branding.CSS zahrnují definice pro Visual Studio tématu prezentaci (výstrahou je, že branding.css součástí Branding_\<národní prostředí > .mshc z balíčku služby se může změnit).
+
+**Grafické soubory**
+
+Visual Studio obsahu zobrazuje logo sady Visual Studio, stejně jako jiné grafické.  Úplný seznam grafických souborů v balíčku značky Visual Studio Help Viewer je uveden níže.
+
+||||
+|-|-|-|
+|**Soubor**|**Použití**|**Příklady**|
+|Clear.GIF|Použije k vykreslení sbalitelné oblasti||
+|footer_slice.GIF|Prezentace zápatí||
+|info_icon.GIF|Při zobrazení informací o|Právní omezení|
+|online_icon.GIF|Tato ikona se k online odkazy||
+|tabLeftBD.gif|Použije k vykreslení kontejneru fragmentu kódu||
+|tabRightBD.gif|Použije k vykreslení kontejneru fragmentu kódu||
+|vs_logo_bk.GIF|Používá pro normální kontrast logo odkazy, jak je definováno ve značce Branding.xml \<LogoFileName >.  Pro produkty Visual Studio je název logo vs_logo_bk.gif.||
+|vs_logo_wh.GIF|Používá pro normální vysokou logo odkazy definované ve značce Branding.xml \<LogoFileNameHC >.  Pro produkty Visual Studio je název logo vs_logo_wh.gif.||
+|ccOff.png|Titulky grafiky||
+|ccOn.png|Titulky grafiky||
+|ImageSprite.png|Použije k vykreslení sbalitelné oblasti|Rozbalit nebo sbalit grafiky|
+
+### <a name="deploying-a-set-of-topics"></a>Nasazení sady témata
+Toto je jednoduchý a rychlý kurz pro vytvoření sady obsahu nasazení aplikace Help Viewer MSHA soubor a sadu souborů CAB nebo MSHCs obsahující témata. MSHA je soubor XML, který popisuje sadu souborů CAB nebo MSHC soubory. Aplikace Help Viewer můžete přečíst MSHA získat seznam obsahu (). Soubor CAB nebo. Soubory MSHC) dostupná pro místní instalaci.
+
+Toto je pouze základy popisující velmi základní schéma XML pro MSHA Prohlížeč nápovědy.  Není pod tento stručný přehled a ukázka HelpContentSetup.msha příklad implementace.
+
+Název MSHA, pro účely tento úvod je HelpContentSetup.msha (název souboru může obsahovat cokoli, s příponou. MSHA). HelpContentSetup.msha (následující příklad) by měl obsahovat seznam souborů CAB nebo MSHCs k dispozici.  Typ souboru musí být konzistentní vzhledem k aplikacím v rámci MSHA (nepodporuje kombinace typů souborů MSHA a souboru CAB). Pro každý soubor CAB nebo MSHC, měla by existovat \<div třídy = "balíček" >...  \< /div > (viz následující příklad).
+
+Poznámka: v následujícím příkladu implementace jsme přidali balíček značky. To je důležité zahrnout zajistí potřebný prvky vykreslování obsahu sady Visual Studio a obsahu chování.
+
+Ukázkový soubor HelpContentSetup.msha: (nahradit "obsah nastaven název 1" a "obsahu, název sady 2" atd. s názvy souborů.)
+
 ```html
-<html>  
-<head />  
-<body class="vendor-book">  
-<div class="details">  
-<span class="vendor">Your Company</span>  
-<span class="locale">en-us</span>  
-<span class="product">Your Company Help Content</span>  
-<span class="name">Your Company Help Content</span>  
-</div>  
-<div class="package-list">  
-<div class="package">  
-<span class="name">Your_Company _Content_Set_1</span>  
-<span class="deployed">True</span>  
-<a class="current-link" href="Your_Company _Content_Set_1.mshc">Your_Company _Content_Set_1.mshc </a>  
-</div>  
-<div class="package">  
-<span class="name">Your_Company _Content_Set_2</span>  
-<span class="deployed">True</span>  
-<a class="current-link"href=" Your_Company _Content_Set_2.mshc "> Your_Company _Content_Set_2.mshc </a>  
-</div>.  
-  
-```  
-  
-1.  Vytvořte místní složku, něco jako "C:\SampleContent"  
-  
-2.  V tomto příkladu používáme MSHC soubory tak, aby obsahovala témata.  MSHC je zip s příponou souboru se změnil z .zip na. MSHC.  
-  
-3.  Vytvořte níže HelpContentSetup.msha jako textový soubor (poznámkového bloku byl použit k vytvoření souboru) a uložte ho do výše uvedené složky (viz krok 1).  
-  
-Všimněte si, že třída "Branding" existuje a je jedinečný. Branding mshc je součástí tento úvod do tak, aby nainstalované obsahu budou mít branding a obsahu chování, které jsou součástí MSHCs bude mít odpovídající podpora elementy obsažené v balíčku brandingu. Bez toho budou výsledkem chyby při systému vypadá pro podporu položky, které nejsou součástí zkopírované (nainstalována) obsahu.  
-  
-Pokud chcete získat branding balíčku sady Visual Studio, zkopírujte soubor Branding_en US.mshc v C:\Program Files (x86) \Microsoft Help Viewer\v2.3\ pracovní složky.  
-  
-```html  
-<html>  
-<head />  
-<body class="vendor-book">  
-<div class="details">  
-<span class="vendor">Your Company</span>  
-<span class="locale">en-us</span>  
-<span class="product">Your Company Help Content</span>  
-<span class="name">Your Company Help Content</span>  
-</div>  
-<div class="package-list">  
-<div class="package">  
-<span class="name">Your_Company _Content_Set_1</span>  
-<span class="deployed">True</span>  
-<a class="current-link" href="Your_Company _Content_Set_1.mshc">Your_Company _Content_Set_1.mshc </a>  
-</div>  
-<div class="package">  
-<span class="name">Your_Company _Content_Set_2</span>  
-<span class="deployed">True</span>  
-<a class="current-link"href=" Your_Company _Content_Set_2.mshc "> Your_Company _Content_Set_2.mshc </a>  
-</div>  
-<div class="package">  
-<span class="packageType">branding</span>  
-<span class="name">Branding_en-US</span>  
-<span class="deployed">True</span>  
-<a class="current-link" href="Branding_en-US.mshc">Branding_en-US.mshc</a>  
-</div>  
-</div>  
-</body>  
-</html>  
-  
-```  
-  
-**Shrnutí**  
-  
-VSPs nasadit jejich obsahu sady Visual Studio Help Viewer vám umožní pomocí a rozšíření výše uvedené kroky.  
-  
-### <a name="adding-help-to-the-visual-studio-shell-integrated-and-isolated"></a>Přidání nápovědu k prostředí Visual Studio (integrovaný režim a izolovaná)  
-**Úvod**  
-  
-Tento návod ukazuje, jak začlenit obsahu nápovědy do prostředí sady Visual Studio aplikace a poté ji nasadit.  
-  
-**Požadavky**  
-  
-1.  [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)]  
-  
-2.  [Izolované prostředí Redist Visual Studio 2013](http://www.microsoft.com/visualstudio/11/downloads#vs-shell)  
-  
-**Přehled**  
-  
-[!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] Prostředí je verze [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] IDE, na kterém vytváříte aplikaci. Takové aplikace obsahovat izolované prostředí společně s rozšíření, které vytvoříte. Pomocí šablony projektu izolované prostředí, které jsou součástí [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] SDK k sestavení rozšíření.  
-  
-Základní kroky pro vytvoření aplikace založené na izolované prostředí a jeho nápovědy:  
-  
-1.  Získat [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] ISO prostředí redistributable (Microsoft ke stažení).  
-  
-2.  V sadě Visual Studio vytvořte nápovědy příponu, která je založena na izolovaném prostředí, například, rozšíření nápovědy společnosti Contoso, který je popsán dále v tomto návodu.  
-  
-3.  Zabalení rozšíření a ISO prostředí redistributable do nasazení MSI (instalace aplikací). Tento návod neobsahuje krok instalace.  
-  
-Vytvoření úložiště obsahu sady Visual Studio. Integrované prostředí scénář změňte Visual Studio12 název katalogu produktů následujícím způsobem:  
-  
--   Vytvořte složku C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio15.  
-  
--   Vytvořte soubor s názvem CatalogType.xml a přidat jej do složky. Soubor by měl obsahovat následující řádky kódu:  
-  
+<html>
+<head />
+<body class="vendor-book">
+<div class="details">
+<span class="vendor">Your Company</span>
+<span class="locale">en-us</span>
+<span class="product">Your Company Help Content</span>
+<span class="name">Your Company Help Content</span>
+</div>
+<div class="package-list">
+<div class="package">
+<span class="name">Your_Company _Content_Set_1</span>
+<span class="deployed">True</span>
+<a class="current-link" href="Your_Company _Content_Set_1.mshc">Your_Company _Content_Set_1.mshc </a>
+</div>
+<div class="package">
+<span class="name">Your_Company _Content_Set_2</span>
+<span class="deployed">True</span>
+<a class="current-link"href=" Your_Company _Content_Set_2.mshc "> Your_Company _Content_Set_2.mshc </a>
+</div>.
+```
+
+1.  Vytvořte místní složku, něco jako "C:\SampleContent"
+
+2.  V tomto příkladu používáme MSHC soubory tak, aby obsahovala témata.  MSHC je zip s příponou souboru změnil z .zip na. MSHC.
+
+3.  Vytvořte níže HelpContentSetup.msha jako textový soubor (Poznámkový blok se použila k vytvoření souboru) a uloží ho do výše uvedené složky (viz krok 1).
+
+Třída "Značky" existuje a je jedinečný. Branding mshc je součástí tento úvod tak, aby nainstalovaného obsahu budou mít brandingu a obsahu chování, které jsou součástí MSHCs bude mít vhodnou podporu elementů obsažených v balíčku přizpůsobení prostředí značce. Bez toho způsobí chyby při systému hledá podporu položky, které nejsou součástí zkopírované (nainstalovat) obsahu.
+
+Získat značku balíčku sady Visual Studio, zkopírujte soubor Branding_en US.mshc na C:\Program Files (x86) \Microsoft Help Viewer\v2.3\ pracovní složky.
+
+```html
+<html>
+<head />
+<body class="vendor-book">
+<div class="details">
+<span class="vendor">Your Company</span>
+<span class="locale">en-us</span>
+<span class="product">Your Company Help Content</span>
+<span class="name">Your Company Help Content</span>
+</div>
+<div class="package-list">
+<div class="package">
+<span class="name">Your_Company _Content_Set_1</span>
+<span class="deployed">True</span>
+<a class="current-link" href="Your_Company _Content_Set_1.mshc">Your_Company _Content_Set_1.mshc </a>
+</div>
+<div class="package">
+<span class="name">Your_Company _Content_Set_2</span>
+<span class="deployed">True</span>
+<a class="current-link"href=" Your_Company _Content_Set_2.mshc "> Your_Company _Content_Set_2.mshc </a>
+</div>
+<div class="package">
+<span class="packageType">branding</span>
+<span class="name">Branding_en-US</span>
+<span class="deployed">True</span>
+<a class="current-link" href="Branding_en-US.mshc">Branding_en-US.mshc</a>
+</div>
+</div>
+</body>
+</html>
+
+```
+
+**Shrnutí**
+
+VSPs nasadit jejich obsahu sady Visual Studio Help Viewer vám umožní používání a rozšiřování výše uvedené kroky.
+
+### <a name="adding-help-to-the-visual-studio-shell-integrated-and-isolated"></a>Přidání Nápověda pro Visual Studio Shell (integrovaný režim a izolovaný režim)
+**Úvod**
+
+Tento návod ukazuje, jak zahrnout obsah nápovědy do aplikace Visual Studio Shell a potom ji nasadíte.
+
+**Požadavky**
+
+1.  [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)]
+
+2.  [Izolované aplikace Visual Studio 2013 Shell Redist](http://www.microsoft.com/visualstudio/11/downloads#vs-shell)
+
+**Přehled**
+
+[!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] Prostředí je verze [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] integrovaného vývojového prostředí, ve kterém vytváříte aplikaci. Tyto aplikace obsahují izolovaného prostředí, spolu s rozšíření, které vytvoříte. Použití projektových šablon izolovaného prostředí, které jsou součástí [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] SDK k sestavení rozšíření.
+
+Základní kroky pro vytvoření aplikace založené na izolovaném prostředí a jeho nápovědy:
+
+1. Získat [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] ISO prostředí redistributable (Microsoftu ke stažení).
+
+2. V sadě Visual Studio vytvořte příponu nápovědy, který je založen na izolovaného prostředí, například, rozšíření nápovědy společnosti Contoso, která je popsána dále v tomto názorném postupu.
+
+3. Zabalení rozšíření a ISO prostředí redistributable do nasazení MSI (nastavení aplikace). Tento návod neobsahuje krok instalace.
+
+Vytvořte úložiště obsahu sady Visual Studio. Pro scénář prostředí Integrated Shell změňte Visual Studio12 název katalogu produktu takto:
+
+-   Vytvořte složku C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio15.
+
+-   Vytvořte soubor CatalogType.xml a přidejte ho do složky. Soubor by měl obsahovat následující řádky kódu:
+
     ```xml
-    <?xml version="1.0" encoding="UTF-8"?>  
-    <catalogType>UserManaged</catalogType>  
-    ```  
-  
-Definujte úložiště obsahu v registru. Pro integrované prostředí změňte VisualStudio15 katalogu název produktu:  
-  
--   HKLM\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15  
-  
-     Klíč: LocationPath řetězcovou hodnotu: C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio15\  
-  
--   HKLM\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15\en-us  
-  
-     Klíč: Název_katalogu řetězcovou hodnotu: [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] dokumentace  
-  
-**Vytvoření projektu**  
-  
-Vytváření rozšíření izolované prostředí:  
-  
-1.  V sadě Visual Studio v části **soubor**, zvolte **nový projekt**v části **jiné typy projektů** zvolte **rozšiřitelnost**a potom zvolte  **Izolované prostředí Visual Studio**. Název projektu `ContosoHelpShell`) k vytvoření projektu rozšíření založený na šabloně izolované prostředí sady Visual Studio.  
-  
-2.  V Průzkumníku řešení v projektu ContosoHelpShellUI ve složce soubory prostředků, otevřete ApplicationCommands.vsct. Ujistěte se, že tento řádek je označeno jako komentář (vyhledejte "No_Help"): `<!-- <define name="No_HelpMenuCommands"/> -->`  
-  
-3.  Zvolte klávesy F5 zkompilování a spuštění **ladění**. V experimentální instance izolované prostředí IDE, zvolte **pomoci** nabídky. Ujistěte se, že **zobrazit nápovědu**, **přidat a odebrat pomůže obsahu**, a **nastavit předvolby pomoci** zobrazí příkazy.  
-  
-4.  V Průzkumníku řešení otevřete v projektu ContosHelpShell ve složce vlastního nastavení prostředí ContosoHelpShell.pkgdef. Chcete-li definovat katalogu nápovědy společnosti Contoso, přidejte následující řádky:  
-  
-    ```  
-     [$RootKey$\Help]  
-    "Product"="Contoso"  
-    "Catalog"="Contoso"  
-    "Version"="100"  
-    "BrandingPackage"="ContosoBrandingPackage.mshc"  
-    ```  
-  
-5.  V Průzkumníku řešení otevřete v projektu ContosHelpShell ve složce vlastního nastavení prostředí ContosoHelpShell.Application.pkgdef. Pokud chcete povolit Nápověda F1, přidejte následující řádky:  
-  
-    ```  
-    // F1 Help Provider  
-  
-    [$RootKey$\HelpProviders\{C99BDC23-FF29-46bf-9658-ADD634CCAED8}]  
-    "Name"="13407"  
-    "Package"="{DA9FB551-C724-11d0-AE1F-00A0C90FFFC3}"  
-    @="Help3 Provider"  
-    [$RootKey$\HelpProviders]  
-    @="{C99BDC23-FF29-46bf-9658-ADD634CCAED8}"  
-    [$RootKey$\Services\{C99BDC23-FF29-46bf-9658-ADD634CCAED8}]  
-    "Name"="Help3 Provider"  
-    @="{4A791146-19E4-11D3-B86B-00C04F79F802}"  
-    ```  
-  
-6.  V Průzkumníku řešení, vyberte v místní nabídce řešení ContosoHelpShell **vlastnosti** položku nabídky. V části **vlastnosti konfigurace**, vyberte **nástroje Configuration Manager**. V **konfigurace** sloupce, změňte hodnotu každých "Ladění" na "Verze".  
-  
-7.  Sestavte řešení. Tím se vytvoří sadu souborů ve složce verze, která bude použita v další části.  
-  
-Abyste to mohli otestovat jakoby nasazení:  
-  
-1.  Na počítači nasazujete Contoso do instalace stažené ISO prostředí (výše).  
-  
-2.  Vytvořte složku v \\\Program Files (x86)\\a pojmenujte ji `Contoso`.  
-  
-3.  Zkopírujte obsah ve složce release ContosoHelpShell k \\složku \Program Files (x86) \Contoso\.  
-  
-4.  Spusťte Editor registru tak, že zvolíte **spustit** v **spustit** nabídky a zadáním `Regedit`. V editoru registru zvolte **soubor**a potom **Import**. Přejděte do složky ContosoHelpShell projektu. V dílčí složce ContosoHelpShell zvolte ContosoHelpShell.reg.  
-  
-5.  Vytvoření úložiště obsahu:  
-  
-     Pro prostředí ISO - vytvořte obsahu úložiště Contoso C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\ContosoDev12  
-  
-     Pro [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] integrované prostředí, vytvořte složku C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio15  
-  
-6.  Vytvořte CatalogType.xml a přidejte k ukládání obsahu (předchozí krok) obsahující:  
-  
-    ```  
-    <?xml version="1.0" encoding="UTF-8"?>  
-    <catalogType>UserManaged</catalogType>  
-    ```  
-  
-7.  Přidejte následující klíče registru:  
-  
-     HKLM\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15Key: LocationPath řetězcovou hodnotu:  
-  
-     Pro ISO prostředí:  
-  
-     C:ProgramDataMicrosoftHelpLibrary2CatalogsVisualStudio15  
-  
-     [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] Integrované prostředí:  
-  
-     C:ProgramDataMicrosoftHelpLibrary2CatalogsVisualStudio15en-USA  
-  
-     Klíč: Název_katalogu řetězcovou hodnotu: [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] dokumentaci. U ISO prostředí je to název katalogu.  
-  
-8.  Zkopírujte obsah (soubory CAB nebo MSHC a MSHA) do místní složky.  
-  
-9. Příklad integrované prostředí příkazového řádku pro testování ukládání obsahu. Pro prostředí ISO změňte hodnoty katalogu a launchingApp podle potřeby tak, aby odpovídaly produktu.  
-  
-     Metoda /helpQuery /catalogName VisualStudio15 "C:\Program soubory (x86) \Microsoft Help Viewer\v2.3\HlpViewer.exe" = "Stránka & id = ContosoTopic0" /launchingApp Microsoft Visual Studio, 12.0  
-  
-10. Spuštění aplikace Contoso (z kořenového adresáře aplikace Contoso). V rámci prostředí ISO, vyberte **pomoci** položky nabídky a změňte **nastavit předvolby pomoci** k **použití místní nápovědy**.  
-  
-11. V rámci prostředí, vyberte **pomoci** položky nabídky, pak **zobrazit nápovědu**. Měli spustit místní programu Help viewer. Vyberte **spravovat obsah** kartě. V části **zdroj instalace**, vyberte **disku** tlačítko. Vyberte **...**  tlačítko a přejděte do místní složky obsahující obsah společnosti Contoso (zkopírován do místní složky v předchozím kroku). Vyberte HelpContentSetup.msha. Contoso má nyní zobrazují jako knihy na výběr adresáře. Zvolte **přidat**a potom zvolte **aktualizace** tlačítko (dolního rohu).  
-  
-12. V rámci společnosti Contoso integrovaného vývojového prostředí zvolte klávesy F1 F1 správnou funkci.  
-  
-### <a name="additional-resources"></a>Další prostředky  
-Rozhraní API modulu Runtime najdete v části [rozhraní API systému Windows pomůže](http://msdn.microsoft.com/library/windows/desktop/hh447318\(v=vs.85\).aspx).  
-  
-Další informace o tom, jak využít rozhraní API pomůže najdete v tématu [pomoci příklady kódu pro prohlížeč](http://visualstudiogallery.msdn.microsoft.com/f08f296f-7076-4aec-8da3-8f0fbe04461e)  
-  
-Chcete-li poskytnout zpětnou vazbu o těchto součástí, použijte [Microsoft Connect](http://connect.microsoft.com/).  
-  
-Prosím návrhy funkcí k [Microsoft User Voice](http://visualstudio.uservoice.com/forums/121579-visual-studio)  
-  
-Chcete-li získat další pomoc, zkuste [fórech MSDN dokumentaci pro vývojáře a systému nápovědy](http://social.msdn.microsoft.com/Forums/devdocs/threads)  
-  
-Aktualizace na nejnovější problém, naleznete [Readme Prohlížeč nápovědy](http://go.microsoft.com/fwlink/?LinkID=231397&clcid=0x409)  
-  
-Obraťte se na tým pomoct PM prohlížeč přímo, pošlete e-mail na hlpfdbk@microsoft.com
+    <?xml version="1.0" encoding="UTF-8"?>
+    <catalogType>UserManaged</catalogType>
+    ```
+
+Definování úložiště obsahu v registru. Pro prostředí Integrated Shell změňte název katalogu produktů VisualStudio15:
+
+- HKLM\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15
+
+   Klíč: Hodnota řetězce LocationPath: C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio15\
+
+- HKLM\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15\en-us
+
+   Klíč: Hodnota řetězce CatalogName: [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] dokumentace
+
+**Vytvoření projektu**
+
+Chcete-li vytvořit rozšíření izolovaného prostředí:
+
+1.  V sadě Visual Studio v části **souboru**, zvolte **nový projekt**v části **ostatní typy projektů** zvolte **rozšiřitelnost**a klikněte na tlačítko  **Izolované prostředí sady Visual Studio**. Pojmenujte projekt `ContosoHelpShell`) Chcete-li vytvořit projekt rozšiřitelnosti založený na šabloně izolované prostředí sady Visual Studio.
+
+2.  V Průzkumníku řešení otevřete v projektu ContosoHelpShellUI ve složce zdrojové soubory ApplicationCommands.vsct. Ujistěte se, že tento řádek je označené jako komentář (vyhledejte "No_Help"): `<!-- <define name="No_HelpMenuCommands"/> -->`
+
+3.  Zvolte klávesu F5 ke kompilaci a spuštění **ladění**. V experimentální instanci izolovaného prostředí IDE, zvolte **pomáhají** nabídky. Ujistěte se, že **zobrazit nápovědu**, **přidat nebo odebrat obsah nápovědy**, a **nastavení předvoleb nápovědy** zobrazí příkazy.
+
+4.  V Průzkumníku řešení otevřete v projektu ContosHelpShell ve složce přizpůsobení prostředí ContosoHelpShell.pkgdef. K definování katalogu nápovědy společnosti Contoso, přidejte následující řádky:
+
+    ```
+     [$RootKey$\Help]
+    "Product"="Contoso"
+    "Catalog"="Contoso"
+    "Version"="100"
+    "BrandingPackage"="ContosoBrandingPackage.mshc"
+    ```
+
+5.  V Průzkumníku řešení otevřete v projektu ContosHelpShell ve složce přizpůsobení prostředí ContosoHelpShell.Application.pkgdef. Pokud chcete povolit, Nápověda F1, přidejte následující řádky:
+
+    ```
+    // F1 Help Provider
+
+    [$RootKey$\HelpProviders\{C99BDC23-FF29-46bf-9658-ADD634CCAED8}]
+    "Name"="13407"
+    "Package"="{DA9FB551-C724-11d0-AE1F-00A0C90FFFC3}"
+    @="Help3 Provider"
+    [$RootKey$\HelpProviders]
+    @="{C99BDC23-FF29-46bf-9658-ADD634CCAED8}"
+    [$RootKey$\Services\{C99BDC23-FF29-46bf-9658-ADD634CCAED8}]
+    "Name"="Help3 Provider"
+    @="{4A791146-19E4-11D3-B86B-00C04F79F802}"
+    ```
+
+6.  V Průzkumníku řešení zvolte v místní nabídce řešení ContosoHelpShell **vlastnosti** položky nabídky. V části **vlastnosti konfigurace**vyberte **nástroje Configuration Manager**. V **konfigurace** sloupce, změňte hodnotu každé "Debug" na "Verze".
+
+7.  Sestavte řešení. Tím se vytvoří sadu souborů ve složce verzi, která se použije v další části.
+
+Abyste to mohli otestovat jakoby nasazení:
+
+1. Na počítači nasazujete Contoso k instalaci na stažený ISO prostředí (uvedeného).
+
+2. Vytvořte složku v \\\Program Files (x86)\\a pojmenujte ho `Contoso`.
+
+3. Zkopírujte obsah ze složky vydání ContosoHelpShell \\složku \Program Files (x86) \Contoso\.
+
+4. Spusťte Editor registru výběrem **spustit** v **Start** nabídky a zadáním `Regedit`. V okně editor registru, zvolte **souboru**a potom **Import**. Přejděte do složky projektu ContosoHelpShell. V podsložce ContosoHelpShell zvolte ContosoHelpShell.reg.
+
+5. Vytvoření obsahu úložiště:
+
+    Pro prostředí ISO - vytvoření obsahu úložiště Contoso C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\ContosoDev12
+
+    Pro [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] prostředí Integrated Shell, vytvořte složku C:\ProgramData\Microsoft\HelpLibrary2\Catalogs\VisualStudio15
+
+6. Vytvořte CatalogType.xml a přidejte do obsahujícího obsahu úložiště (v předchozím kroku):
+
+   ```
+   <?xml version="1.0" encoding="UTF-8"?>
+   <catalogType>UserManaged</catalogType>
+   ```
+
+7. Přidejte následující klíče registru:
+
+    HKLM\SOFTWARE\Wow6432Node\Microsoft\Help\v2.3\Catalogs\VisualStudio15Key: Hodnota řetězce LocationPath:
+
+    Pro prostředí ISO:
+
+    C:ProgramDataMicrosoftHelpLibrary2CatalogsVisualStudio15
+
+    [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] Integrované prostředí:
+
+    C:ProgramDataMicrosoftHelpLibrary2CatalogsVisualStudio15en-USA
+
+    Klíč: Hodnota řetězce CatalogName: [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)] dokumentaci. Pro prostředí ISO jde o název katalogu.
+
+8. Zkopírujte obsah (soubory CAB nebo MSHC a MSHA) do místní složky.
+
+9. Příklad integrované prostředí příkazového řádku pro testování úložiště obsahu. ISO prostředí změňte hodnoty katalogu a launchingApp podle potřeby tak, aby odpovídaly produktu.
+
+     Metoda /helpQuery/catalogname VisualStudio15 "C:\Program soubory (x86) \Microsoft Help Viewer\v2.3\HlpViewer.exe" = "Stránka & id = ContosoTopic0" /launchingApp Microsoft VisualStudio, 12.0
+
+10. Spusťte aplikaci Contoso (z kořenového adresáře aplikace Contoso). V rámci prostředí ISO, zvolte **pomáhají** položky nabídky a změnit **nastavení předvoleb nápovědy** k **místní Nápověda**.
+
+11. V rámci prostředí, zvolte **pomáhají** položku nabídky, poté **zobrazit nápovědu**. By měl spustit místní nápovědy. Zvolte **spravovat obsah** kartu. V části **zdrojová data instalace**, zvolte **disku** přepínač. Zvolte **...**  tlačítko a přejděte do místní složky obsahující obsah společnosti Contoso (zkopírovaný do místní složky v předchozím kroku). Zvolte HelpContentSetup.msha. Contoso by měl nyní zobrazí jako knihu výběry knihy. Zvolte **přidat**a klikněte na tlačítko **aktualizace** tlačítko (pravého dolního rohu).
+
+12. Chcete-li otestovat funkci F1 integrovaného vývojového prostředí Contoso, stiskněte klávesu F1.
+
+### <a name="additional-resources"></a>Další zdroje
+
+Rozhraní API modulu Runtime naleznete v tématu [rozhraní API pomáhají Windows](/previous-versions/windows/desktop/helpapi/helpapi-portal).
+
+Další informace o tom, jak využít rozhraní API pomáhají najdete v tématu [příklady kódu pro aplikaci Help Viewer](https://marketplace.visualstudio.com/items?itemName=RobChandlerHelpMVP.HelpViewer20CodeExamples).
+
+Můžete posílat návrhy funkcí na [komunity vývojářů](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).

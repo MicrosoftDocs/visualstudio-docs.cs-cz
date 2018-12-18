@@ -1,45 +1,51 @@
 ---
-title: 'Postupy: Přidat novou položku do projektu Workflow | Microsoft Docs'
-ms.date: 11/04/2016
-ms.topic: reference
+title: 'Návrhář postupu provádění - postupy: Přidání nové položky do projektu pracovního postupu'
+ms.date: 06/25/2018
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 ms.assetid: 5c6180ca-af10-4513-b0cb-7d478fd84eab
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cb3024573a9ca4732066610c2c29c05fa1d73891
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dbed404f2cdd69446d8945fc9ff96703eccd161f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49814224"
 ---
 # <a name="how-to-add-a-new-item-to-a-workflow-project"></a>Postupy: Přidání nové položky do projektu pracovního postupu
-Po vytvoření projektu workflow, můžete přidat aktivit pracovního postupu, návrháře a jiných známým rozhraním [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] položek do projektu.
 
- Následující tabulka uvádí [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] položky, které můžete přidat do projektu pracovního postupu.
+Po vytvoření projektu pracovního postupu, můžete přidat do projektu aktivity pracovního postupu, návrháře a další známé položky sady Visual Studio.
 
-|Název|Popis|
-|----------|-----------------|
-|Aktivita|Aktivity k musí se skládat z jiné aktivity. Výběrem této položky přidá ke stejnému souboru XAML do projektu, jak lze získat při výběru **knihovna aktivit** šablonu pro nový projekt. Další informace o na tomto postupu najdete v tématu [postupy: vytvoření knihovna aktivit](../workflow-designer/how-to-create-an-activity-library.md).|
-|Návrhář aktivity|Návrhář přizpůsobit prostředí návrhu aktivity. Stejné soubory, které výběrem této položky přidáte do projektu, jak lze získat při výběru **knihovny návrháře aktivit** šablonu pro nový projekt. Další informace o na tomto postupu najdete v tématu [postupy: vytvoření knihovny návrháře aktivit](../workflow-designer/how-to-create-an-activity-designer-library.md).|
-|Kód aktivity|Aktivita, jejíž logiky provádění napsané v kódu. Soubor zdrojového kódu se pomocí přepsání <xref:System.Activities.CodeActivity.Execute%2A> metoda byl již vygenerován za vás.|
-|Pracovní postup služby WCF|A [!INCLUDE[indigo2](../workflow-designer/includes/indigo2_md.md)] služby vytvořené pomocí aktivity pracovního postupu. Stejné soubory, které výběrem této položky přidáte do projektu, jak lze získat při výběru **aplikace služby pracovního postupu WCF** šablonu pro nový projekt. Další informace o tomto postupu najdete v tématu [postupy: vytvoření aplikace služby pracovního postupu WCF](../workflow-designer/how-to-create-a-wcf-workflow-service-application.md).|
+V následující tabulce je přehled položek Windows Workflow Foundation (WF), které můžete přidat do projektu pracovního postupu:
 
-### <a name="to-add-a-new-item-to-a-workflow-project"></a>Chcete-li přidat novou položku do projektu pracovního postupu
 
-1.  Na **projektu** nabídky, klikněte na tlačítko **přidat novou položku...** .
+| Název | Popis |
+|-| - |
+| Aktivita | Aktivitu se skládá z jiné aktivity. Výběrem této položky přidá stejný soubor XAML do projektu, jak lze získat při výběru **knihovny aktivit** šablonu pro nový projekt. Další informace v tomto postupu najdete v tématu [postupy: vytvoření knihovny aktivit](../workflow-designer/how-to-create-an-activity-library.md). |
+| Návrhář aktivity | Návrhář pro přizpůsobení prostředí doby návrhu aktivity. Stejné soubory, které vyberete tuto položku přidá do projektu, jak lze získat při výběru **knihovny návrháře aktivit** šablonu pro nový projekt. Další informace v tomto postupu najdete v tématu [postupy: vytvoření knihovny návrháře aktivit](../workflow-designer/how-to-create-an-activity-designer-library.md). |
+| Aktivita s kódem | Aktivita s logikou provádění zapsanou v kódu. Soubor zdrojového kódu pomocí přepsání <xref:System.Activities.CodeActivity.Execute%2A> metoda byl již vygenerován za vás. |
+| Služba pracovního postupu WCF | A [!INCLUDE[indigo2](../workflow-designer/includes/indigo2_md.md)] služby vytvořené pomocí aktivit pracovního postupu. Stejné soubory, které vyberete tuto položku přidá do projektu, jak lze získat při výběru **aplikace služeb pracovního postupu WCF** šablonu pro nový projekt. Další informace o tomto postupu najdete v tématu [postupy: vytvoření aplikace služeb pracovního postupu WCF](../workflow-designer/how-to-create-a-wcf-workflow-service-application.md). |
 
-     **Přidat novou položku** otevře se dialogové okno.
+## <a name="to-add-a-new-item-to-a-workflow-project"></a>Chcete-li přidat novou položku do projektu pracovního postupu
 
-2.  V **nainstalovaných šablonách** podokně, vyberte **pracovního postupu** skupiny.
+1. Na **projektu** nabídce vyberte možnost **přidat novou položku**.
 
-3.  Vyberte jeden ze čtyř položky. V předchozí tabulce jsou uvedeny možnosti, které jsou k dispozici.
+   **Přidat novou položku** zobrazí se dialogové okno.
 
-4.  Zadejte vhodný název pro položku v **název** pole v dolní části dialogových oken.
+1. V levém podokně, vyberte **pracovního postupu** kategorie a pak vyberte šablonu položky pracovního postupu.
 
-5.  Klikněte na tlačítko **přidat** přidat položku do aktuálního projektu pracovního postupu.
+   > [!NOTE]
+   > Pokud se nezobrazí **pracovního postupu** kategorie, nejdřív nainstalovali **Windows Workflow Foundation** komponentu sady Visual Studio 2017. Podrobné pokyny najdete v tématu [nainstalovat Windows Workflow Foundation](developing-applications-with-the-workflow-designer.md#install-windows-workflow-foundation).
 
-## <a name="see-also"></a>Viz také
+1. Zadejte název pro položku v **název** políčko v dolní části dialogového okna.
+
+1. Vyberte **přidat** k přidání položky do projektu.
+
+## <a name="see-also"></a>Viz také:
 
 - [Vytvoření projektu pracovního postupu](../workflow-designer/creating-a-workflow-project.md)

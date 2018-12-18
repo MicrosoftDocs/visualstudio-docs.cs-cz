@@ -1,5 +1,5 @@
 ---
-title: BP_RESOLUTION_LOCATION | Microsoft Docs
+title: BP_RESOLUTION_LOCATION | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 032228596773d4a5a164f904c1caae161b693f64
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0dda42a65824b8fdb93ec8561f3affb59ee5d166
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49926121"
 ---
 # <a name="bpresolutionlocation"></a>BP_RESOLUTION_LOCATION
-Určuje strukturu zarážek umístění řešení.  
+Určuje strukturu řešení umístění zarážky.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,38 +53,38 @@ public struct BP_RESOLUTION_LOCATION {
  Hodnota z [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) výčet, který určuje, jak interpretovat `bpResLocation` sjednocení nebo `unionmemberX` členy.  
   
  `bpResLocation.bpresCode`  
- [Pouze C++] Obsahuje [BP_RESOLUTION_CODE](../../../extensibility/debugger/reference/bp-resolution-code.md) struktury, pokud `bpType`  =  `BPT_CODE`.  
+ [Jenom C++] Obsahuje [BP_RESOLUTION_CODE](../../../extensibility/debugger/reference/bp-resolution-code.md) strukturu Pokud `bpType`  =  `BPT_CODE`.  
   
  `bpResLocation.bpresData`  
- [Pouze C++] Obsahuje [BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md) struktury, pokud `bpType`  =  `BPT_DATA`.  
+ [Jenom C++] Obsahuje [BP_RESOLUTION_DATA](../../../extensibility/debugger/reference/bp-resolution-data.md) strukturu Pokud `bpType`  =  `BPT_DATA`.  
   
  `bpResLocation.unused`  
- [Pouze C++] Zástupný symbol.  
+ [Jenom C++] Zástupný symbol.  
   
  `unionmember1`  
- [C# pouze] V části poznámky o tom, jak interpretovat.  
+ [Jenom v C#] Viz poznámky o tom, jak interpretovat.  
   
  `unionmember2`  
- [C# pouze] V části poznámky o tom, jak interpretovat.  
+ [Jenom v C#] Viz poznámky o tom, jak interpretovat.  
   
  `unionmember3`  
- [C# pouze] V části poznámky o tom, jak interpretovat.  
+ [Jenom v C#] Viz poznámky o tom, jak interpretovat.  
   
  `unionmember4`  
- [C# pouze] V části poznámky o tom, jak interpretovat.  
+ [Jenom v C#] Viz poznámky o tom, jak interpretovat.  
   
 ## <a name="remarks"></a>Poznámky  
  Tato struktura je členem skupiny [BP_ERROR_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-error-resolution-info.md) a [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) struktury.  
   
- [C# pouze] `unionmemberX` Členy se interpretují podle následující tabulky. Podívejte se levém sloupci pro `bpType` hodnotu napříč pak určit, co každý `unionmemberX` představuje člen a zařazování `unionmemberX` odpovídajícím způsobem. Podívejte se na příklad pro způsob, jak interpretovat tato struktura v jazyce C#.  
+ [Jenom v C#] `unionmemberX` Členy se interpretují podle následující tabulky. Podívejte se dolů levém sloupci `bpType` hodnoty napříč pak určit, co každý `unionmemberX` člen představuje a zařazování `unionmemberX` odpovídajícím způsobem. Podívejte se na příklad pro způsob, jak interpretovat tato struktura v jazyce C#.  
   
 |`bpLocationType`|`unionmember1`|`unionmember2`|`unionmember3`|`unionmember4`|  
 |----------------------|--------------------|--------------------|--------------------|--------------------|  
 |`BPT_CODE`|[IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)|-|-|-|  
-|`BPT_DATA`|`string` (výraz data)|`string` (název funkce)|`string` (název bitové kopie)|`enum_BP_RES_DATA_FLAGS`|  
+|`BPT_DATA`|`string` (výraz data)|`string` (název funkce)|`string` (název image)|`enum_BP_RES_DATA_FLAGS`|  
   
 ## <a name="example"></a>Příklad  
- Tento příklad ukazuje, jak interpretovat `BP_RESOLUTION_LOCATION` struktury v jazyku C#.  
+ Tento příklad ukazuje, jak interpretovat `BP_RESOLUTION_LOCATION` struktura v jazyce C#.  
   
 ```csharp  
 using System;  

@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator2::PreloadModules | Microsoft Docs
+title: IDebugExpressionEvaluator2::PreloadModules | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5d7861b19a553860b3973418131c607fb0e9a2de
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 298afc379736befab0365ccdad4cc3cfa857785a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49910023"
 ---
 # <a name="idebugexpressionevaluator2preloadmodules"></a>IDebugExpressionEvaluator2::PreloadModules
-Automaticky načte moduly určen zprostředkovatel zadaný symbol.  
+Automaticky načte moduly určený zprostředkovatel zadaný symbol.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,13 +40,13 @@ int PreloadModules (
   
 #### <a name="parameters"></a>Parametry  
  `pSym`  
- [v] Symbol zprostředkovatele, pro kterou bude předem načtena moduly.  
+ [in] Poskytovatel symbolů, pro kterou budou automaticky načtena moduly.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato volitelná metoda se používá při hostování proces připojit. Dává EE možnost, tedy ' jako součást připojení.  
+ Tato volitelná metoda se používá při hostování procesu připojit. EE dává možnost "zahřívání", jako součást připojení.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak pro tuto metodu implementovat **ExpressionEvaluatorPackage** objekt, který zveřejňuje [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md) rozhraní.  

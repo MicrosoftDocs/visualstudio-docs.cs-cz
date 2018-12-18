@@ -1,5 +1,5 @@
 ---
-title: Implementace GetMethodProperty | Microsoft Docs
+title: Implementace GetMethodProperty | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,25 +14,26 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e3ed7207237a20e4dadc1284aca2d6b41a671353
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5638ab3d65280755de405e19a725336e4102ae2b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49868505"
 ---
-# <a name="implementing-getmethodproperty"></a>Implementace GetMethodProperty
+# <a name="implement-getmethodproperty"></a>Implementace GetMethodProperty
 > [!IMPORTANT]
->  V sadě Visual Studio 2015 se již nepoužívá tímto způsobem implementace vyhodnocovače výrazů. Informace o implementaci vyhodnocovače výrazů CLR, najdete v tématu [vyhodnocovače výrazů CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [spravované ukázka vyhodnocování výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
+>  V sadě Visual Studio 2015 je zastaralý tímto způsobem implementace vyhodnocovače výrazů. Informace o implementace vyhodnocovače výrazů modulu CLR najdete v tématu [vyhodnocovače výrazů modulu CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka Chyba při vyhodnocování výrazu spravované](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
   
- Visual Studio volá stroje ladění (DE) [GetDebugProperty](../../extensibility/debugger/reference/idebugstackframe2-getdebugproperty.md), který volá [GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md) získat informace o metodě aktuální rámec zásobníku.  
+ Visual Studio volá stroje ladění (DE) [GetDebugProperty](../../extensibility/debugger/reference/idebugstackframe2-getdebugproperty.md), která pak volá [GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md) získat informace o aktuální metoda na zásobníku.  
   
- Tato implementace `IDebugExpressionEvaluator::GetMethodProperty` provede následující úlohy:  
+ Tato implementace `IDebugExpressionEvaluator::GetMethodProperty` provádí následující úlohy:  
   
-1.  Volání [GetContainerField](../../extensibility/debugger/reference/idebugsymbolprovider-getcontainerfield.md)a předejte [IDebugAddress](../../extensibility/debugger/reference/idebugaddress.md) objektu. Vrátí symbol zprostředkovatele (SP) [IDebugContainerField](../../extensibility/debugger/reference/idebugcontainerfield.md) představující metodu, která obsahuje zadaná adresa.  
+1.  Volání [GetContainerField](../../extensibility/debugger/reference/idebugsymbolprovider-getcontainerfield.md), předejte [IDebugAddress](../../extensibility/debugger/reference/idebugaddress.md) objektu. Poskytovatel symbolů (SP) vrátí [IDebugContainerField](../../extensibility/debugger/reference/idebugcontainerfield.md) představující metodu, která obsahuje zadané adrese.  
   
-2.  Získá [IDebugMethodField](../../extensibility/debugger/reference/idebugmethodfield.md) z `IDebugContainerField`.  
+2.  Získává [IDebugMethodField](../../extensibility/debugger/reference/idebugmethodfield.md) z `IDebugContainerField`.  
   
-3.  Vytvoří instanci třídy (nazývá `CFieldProperty` v tomto příkladu), která implementuje [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) rozhraní a obsahuje `IDebugMethodField` objekt byl vrácen ze služeb.  
+3.  Vytvoří instanci třídy (volá `CFieldProperty` v tomto příkladu), který implementuje [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) rozhraní a obsahuje `IDebugMethodField` objekt se vrátil ze žádostí  
   
 4.  Vrátí `IDebugProperty2` rozhraní z `CFieldProperty` objektu.  
   
@@ -126,5 +127,5 @@ STDMETHODIMP CExpressionEvaluator::GetMethodProperty(
 }  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Ukázková implementace místních hodnot](../../extensibility/debugger/sample-implementation-of-locals.md)

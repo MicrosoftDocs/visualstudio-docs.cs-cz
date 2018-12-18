@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_unalignedtype – | Microsoft Docs
+title: Idiasymbol::get_unalignedtype – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a603fb7df64ace0b5e0c2f99db8a0aac18281430
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: b005ce077aa8cd94efc06c42673609adacaa4abc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49906764"
 ---
 # <a name="idiasymbolgetunalignedtype"></a>IDiaSymbol::get_unalignedType
-Načte příznak určující, zda je typ uživatelem definované datové nezarovnané.  
+Získá příznak, který určuje, zda je uživatelský datový typ nezarovnaných.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,13 +34,13 @@ HRESULT get_unalignedType (
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí `TRUE` Pokud uživatelský datový typ nezarovnané jinak, vrátí `FALSE`.  
+ [out] Vrátí `TRUE` Pokud uživatelský datový typ nezarovnaných; jinak vrátí hodnotu, vrátí `FALSE`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` nebo chybový kód.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
->  Vrácená hodnota `S_FALSE` znamená vlastnost není k dispozici pro symbol.  
+>  Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

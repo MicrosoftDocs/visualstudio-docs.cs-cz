@@ -1,45 +1,49 @@
 ---
-title: Měření výkonu kód Python
-description: Jak používat Visual Studio profiler zkontrolovat výkon jazyka Python kódu, kdy usnig na základě CPython překladače.
-ms.date: 01/09/2018
+title: Měřit výkon kódu v Pythonu
+description: Zkontrolovat výkon kódu Pythonu při použití na základě CPython interpretů pomocí profileru sady Visual Studio.
+ms.date: 11/12/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 2f0bd25221f975cd8df122af51af20d125a43a65
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 931bbcea67d8595ec171ef7e08756aa5b84cc2e4
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53062936"
 ---
-# <a name="profiling-python-code"></a>Profilace kódu jazyka Python
+# <a name="profile-python-code"></a>Profil kódu Pythonu
 
-Při použití překladače na základě CPython, můžete profil aplikace Python. (Viz [funkce matice – profilace](overview-of-python-tools-for-visual-studio.md#matrix-profiling) dostupnosti této funkce pro různé verze sady Visual Studio.)
+Při použití na základě CPython interpretů můžete provádět profilaci aplikace v Pythonu. (Viz [matice funkcí – profilace](overview-of-python-tools-for-visual-studio.md#matrix-profiling) této funkce pro různé verze sady Visual Studio je k dispozici.)
 
-Spuštění profilování prostřednictvím **analyzovat > spuštění profilace Python** příkazu nabídky, otevře se dialogové okno konfigurace:
+## <a name="profiling-for-cpython-based-interpreters"></a>Profilace pro na základě CPython interpretery
+
+Profilace je spuštěn prostřednictvím **analyzovat** > **spuštění profilování Pythonu** příkaz nabídky, které se otevře dialogové okno konfigurace:
 
 ![Dialogové okno Konfigurace profilace](media/profiling-start.png)
 
-Když vyberete **OK**, profileru spustí a otevře se sestava výkonu, pomocí nichž můžete prozkoumat, jak je čas strávený v aplikaci:
+Když vyberete **OK**, profiler běží a otevře se sestava výkonu, pomocí kterého můžete prozkoumat, jak je čas strávený v aplikaci:
 
 ![Sestava profilace výkonu](media/profiling-results.png)
 
 |   |   |
 |---|---|
-| ![film ikonu fotoaparátu pro video](../install/media/video-icon.png "přehrát video") | [Podívejte se na video (Microsoft Virtual Academy)](https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Profiling-Python-s6FoC6LWE_1005918567) pro předvedení Python profilace (3 m 00s).|
+| ![Ikona filmové kamery pro video](../install/media/video-icon.png "Sledovat video") | [Podívejte se na video (Microsoft Virtual Academy)](https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Profiling-Python-s6FoC6LWE_1005918567) ukázku pythonu profilace (3 m 00s).|
 
 > [!Note]
-> V současné době podporuje pouze tato úroveň profilace aplikací úplné sadě Visual Studio, ale určitě chceme slyšet váš názor na funkce. Použití [ **váš názor produktu** tlačítko](#feedback) v dolní části této stránky.
+> V současné době Visual Studio podporuje pouze tuto úroveň profilace celé aplikace, ale určitě chceme slyšet váš názor na budoucí funkce. Použití [ **názor na produkt** tlačítko](#feedback) v dolní části této stránky.
 
 ## <a name="profiling-for-ironpython"></a>Profilace pro IronPython
 
-Protože IronPython není základě CPython překladač, výše uvedené funkce profilování nefunguje.
+Protože IronPython není překladač na základě CPython, výše uvedené funkce profilování nebude fungovat.
 
-Místo toho použijte sady Visual Studio .NET profileru spuštěním `ipy.exe` přímo jako cílová aplikace pomocí odpovídající argumenty spuštění spouštěcího skriptu. Zahrnout `-X:Debug` na příkazovém řádku, abyste ověřili, že všechny vaše Python můžete ladit kód a profilovaným. Tento argument vytváří sestavu výkonu včetně času stráveného v modulu runtime IronPython i vám kód. Váš kód je identifikovat za použití pozměnění názvy.
+Místo toho použijte profiler sady Visual Studio .NET spuštěním *ipy.exe* přímo jako cílovou aplikaci, pomocí příslušnými argumenty pro spuštění spouštěcího skriptu. Zahrnout `-X:Debug` na příkazový řádek pro zajištění, že všechna vaše Python kód ladit a Profilovat. Tento argument generuje sestavu výkonu včetně času stráveného v modulu runtime IronPython a váš kód. Váš kód je identifikován pomocí pozměnění názvy.
 
-Alternativně IronPython má některé vlastní integrované profilace ale v současné době není žádný funkční vizualizér pro ni. V tématu [profileru IronPython](http://blogs.msdn.com/b/curth/archive/2009/03/29/an-ironpython-profiler.aspx) (Blogy MSDN) pro co je k dispozici.
+Alternativně Ironpythonu má některé vlastní integrované profilování, ale aktuálně nejsou k dispozici žádné vhodné vizualizér pro něj. Zobrazit [Profiler IronPython](https://blogs.msdn.microsoft.com/curth/2009/03/30/an-ironpython-profiler/) (Blogy MSDN) pro co je k dispozici.

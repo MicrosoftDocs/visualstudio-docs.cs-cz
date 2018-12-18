@@ -1,34 +1,52 @@
-# <a name="updating-an-existing-application-for-msbuild-15"></a>Aktualizace stávající aplikace pro 15 nástroje MSBuild
+---
+title: Aktualizuje existující aplikaci na MSBuild 15 | Dokumentace Microsoftu
+ms.custom: ''
+ms.date: 11/04/2016
+ms.technology: msbuild
+ms.topic: conceptual
+author: mikejo5000
+ms.author: mikejo
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 4da159ae0fcb4347052efcea5d0dbd24d5ccd8f1
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
+ms.translationtype: MT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50219234"
+---
+# <a name="update-an-existing-application-for-msbuild-15"></a>Aktualizace existující aplikace pro MSBuild 15
 
-Ve verzích nástroje MSBuild před 15.0 MSBuild byla načtena z globální mezipaměti sestavení (GAC) a rozšíření MSBuild byly nainstalovány v registru. To zajistit, že všechny aplikace použít stejnou verzi nástroje MSBuild a měl přístup ke stejným modulové, ale brání vedle sebe instalace různých verzí sady Visual Studio.
+Ve verzích nástroje MSBuild před 15.0 nástroje MSBuild byl načten z globální mezipaměti sestavení (GAC) a rozšíření nástroje MSBuild byly nainstalovány v registru. To, že jsou splněné všechny aplikace používá stejnou verzi nástroje MSBuild a měl přístup ke stejné sady nástrojů IP adresu, ale vedle sebe instalace různých verzí sady Visual Studio.
 
-Za účelem podpory rychlejší, instalace menší a vedle sebe, Visual Studio 2017 už umístí MSBuild v mezipaměti GAC nebo upraví registru. Bohužel to znamená, že aplikace, které chcete použít rozhraní API nástroje MSBuild vyhodnotit, nebo vytváříte projekty nelze implicitně spoléhají na instalaci sady Visual Studio.
+Kvůli podpoře rychlejší a menší a vedle sebe instalace sady Visual Studio 2017 už umístí MSBuild v mezipaměti GAC nebo upraví registru. Bohužel to znamená, že aplikace, které chcete použít rozhraní API nástroje MSBuild k vyhodnocování nebo sestavení projektů nelze implicitně spoléhat na instalaci sady Visual Studio.
 
-## <a name="using-msbuild-from-visual-studio"></a>Pomocí nástroje MSBuild ze sady Visual Studio
+## <a name="use-msbuild-from-visual-studio"></a>Použití nástroje MSBuild v sadě Visual Studio
 
-Aby se zajistilo, že programový sestavení z vaší aplikace shodují s těmi, provést v rámci sady Visual Studio nebo MSBuild.exe, načtení sestavení nástroje MSBuild ze sady Visual Studio a používat sady SDK, které jsou k dispozici v sadě Visual Studio. Balíček Microsoft.Build.Locator NuGet zjednodušuje to.
+K zajištění, že programový sestavení z aplikace odpovídá sestavení v sadě Visual Studio nebo *MSBuild.exe*načíst sestavení nástroje MSBuild v sadě Visual Studio a používat sady SDK k dispozici v sadě Visual Studio. Balíček Microsoft.Build.Locator NuGet zjednodušuje tento proces.
 
-## <a name="using-microsoftbuildlocator"></a>Pomocí Microsoft.Build.Locator
+## <a name="use-microsoftbuildlocator"></a>Použití Microsoft.Build.Locator
 
-Pokud je znovu distribuovat `Microsoft.Build.Locator.dll` s vaší aplikací, nebudete muset distribuovat ostatních MSBuild sestavení.
+Pokud redistribuujete *Microsoft.Build.Locator.dll* s vaší aplikací, nebudete muset distribuovat jiná sestavení nástroje MSBuild.
 
-Aktualizace projektu pro použití nástroje MSBuild 15 a Lokátor rozhraní API vyžaduje několik změn ve vašem projektu popsané dole. Příklad změny vyžaduje k aktualizaci projektu, najdete v sekci [potvrzení provedené příklad projektu v úložišti MSBuildLocator](https://github.com/Microsoft/MSBuildLocator/commits/example-updating-to-msbuild-15).
+Aktualizuje se projekt pro použití nástroje MSBuild 15 a Lokátor rozhraní API vyžaduje několik změn ve vašem projektu, je popsáno níže. Chcete-li zobrazit příklad změny muset aplikaci aktualizovat projekt, naleznete v tématu [potvrzení změn provedených příklad projektu v úložišti MSBuildLocator](https://github.com/Microsoft/MSBuildLocator/commits/example-updating-to-msbuild-15).
 
-### <a name="change-msbuild-references"></a>Změna MSBuild odkazů
+### <a name="change-msbuild-references"></a>Změnit MSBuild reference
 
-Aby se zajistilo, že MSBuild je načtena z centrálního umístění, nesmí distribuovat jeho sestavení s vaší aplikací.
+Pokud chcete mít jistotu, že nástroj MSBuild načítá z centrálního umístění, nesmí distribuovat jeho sestavení s vaší aplikací.
 
-Tento mechanismus pro změnu projektu předejít přetížení MSBuild z centrálního umístění závisí na tom, jak odkazovat MSBuild.
+Mechanismus pro změnu projektu nástroje MSBuild předejít z centrálního umístění závisí na způsobu odkazujete MSBuild.
 
-#### <a name="using-nuget-packages-preferred"></a>Pomocí balíčků NuGet (doporučeno)
+#### <a name="use-nuget-packages-preferred"></a>Použití balíčků NuGet (upřednostňováno)
 
-Tyto pokyny předpokládají, že používáte [ `PackageReference`– styl odkazů NuGet](https://docs.microsoft.com/en-us/nuget/consume-packages/package-references-in-project-files).
+Tyto pokyny předpokládají, že používáte [odkazy na NuGet PackageReference – vizuální styl](https://docs.microsoft.com/nuget/consume-packages/package-references-in-project-files).
 
-Změňte projekt soubory k odkazování MSBuild sestavení z jejich balíčků NuGet. Zadejte `ExcludeAssets=runtime` s oznámením NuGet, že sestavení jsou potřeba pouze v době sestavení a nemá být zkopírována do výstupního adresáře.
+Změňte soubory projektu MSBuild sestavení odkazovat z balíčků NuGet. Zadejte `ExcludeAssets=runtime` NuGet říct, že sestavení jsou potřeba pouze v době sestavení a by neměl být zkopírován do výstupního adresáře.
 
-Hlavní a vedlejší verzi nástroje MSBuild balíčky musí být menší než nebo rovna minimální verze sady Visual Studio, které chcete podporovat. Pokud chcete podporovat všechny verze aplikace Visual Studio 2017, odkazovat verze balíčku `15.1.548`.
+Hlavní a dílčí verzi nástroje MSBuild balíčků musí být menší než nebo rovna hodnotě minimální verze sady Visual Studio, které chcete podporovat. Pokud chcete podporovat všechny verze sady Visual Studio 2017, verze balíčku odkazují `15.1.548`.
 
-Například můžete použít tento XML:
+Například můžete použít tohoto XML kódu:
 
 ```xml
 <ItemGroup>
@@ -37,9 +55,9 @@ Například můžete použít tento XML:
 </ItemGroup>
 ```
 
-#### <a name="using-extension-assemblies"></a>Použití rozšíření sestavení
+#### <a name="use-extension-assemblies"></a>Použití rozšíření sestavení
 
-Pokud nemůžete použít balíčky NuGet, můžete odkazovat MSBuild sestavení, které jsou distribuovány pomocí sady Visual Studio. Pokud odkazujete MSBuild přímo, ujistěte se, se nebude zkopírovat adresáře výstup nastavením `Copy Local` k `False`. V souboru projektu bude vypadat takto:
+Pokud nemůžete použít balíčky NuGet, můžete odkazovat na sestavení nástroje MSBuild, které jsou distribuovány pomocí sady Visual Studio. Pokud odkazujete MSBuild přímo, ujistěte se, že se nebude zkopírovat do výstupního adresáře tak, že nastavíte `Copy Local` k `False`. V souboru projektu toto nastavení bude vypadat jako v následujícím kódu:
 
 ```xml
     <Reference Include="Microsoft.Build, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -49,15 +67,15 @@ Pokud nemůžete použít balíčky NuGet, můžete odkazovat MSBuild sestavení
 
 #### <a name="binding-redirects"></a>Přesměrování vazby
 
-Odkazování na balíček Microsoft.Build.Locator automaticky zajistí, že vaše aplikace používá přesměrování požadovaná vazba všech verzí nástroje MSBuild sestavení verzi `15.1.0.0`.
+Odkaz na balíček Microsoft.Build.Locator zajistit, že vaše aplikace automaticky používá požadované vazby přesměruje všech verzí sestavení nástroje MSBuild na verzi `15.1.0.0`.
 
-### <a name="ensure-output-clean"></a>Zkontrolujte výstup vyčištění
+### <a name="ensure-output-is-clean"></a>Ujistěte se, že je vyčistit výstup
 
-Sestavení projektu a zkontrolovat výstupního adresáře a ujistěte se, že neobsahuje žádné `Microsoft.Build.*.dll` sestavení (jiné než `Microsoft.Build.Locator.dll`, přidané v dalším kroku).
+Sestavte projekt a zkontrolujte výstupní adresář, abyste měli jistotu, že neobsahuje žádné *Microsoft.Build\*. Knihovna DLL* sestavení jiný než *Microsoft.Build.Locator.dll*přidali v dalším kroku.
 
-### <a name="add-package-reference"></a>Přidat odkaz na balíček
+### <a name="add-package-reference"></a>Přidání odkazu na balíček
 
-Přidat odkaz na balíček NuGet [Microsoft.Build.Locator](https://www.nuget.org/packages/Microsoft.Build.Locator/).
+Přidat odkaz na balíček NuGet do [Microsoft.Build.Locator](https://www.nuget.org/packages/Microsoft.Build.Locator/).
 
 ```xml
     <PackageReference Include="Microsoft.Build.Locator">
@@ -65,16 +83,16 @@ Přidat odkaz na balíček NuGet [Microsoft.Build.Locator](https://www.nuget.org
     </PackageReference>
 ```
 
-### <a name="register-instance-before-calling-msbuild"></a>Registrace instance před voláním funkce MSBuild
+### <a name="register-instance-before-calling-msbuild"></a>Zaregistrovat instanci před voláním funkce MSBuild
 
-Přidejte volání do rozhraní API Lokátor před voláním jakékoli metody, která používá MSBuild.
+Přidejte volání do rozhraní API pro Lokátor před voláním jakékoli metody, která používá nástroj MSBuild.
 
-Nejjednodušší způsob, jak to udělat, je přidání volání
+Nejjednodušší způsob, jak přidat volání rozhraní API pro Lokátor je přidání volání
 
-```c#
+```csharp
 MSBuildLocator.RegisterDefaults();
 ```
 
-v kódu spuštění aplikace.
+v kódu při spuštění aplikace.
 
-Pokud chcete řídit citlivější načítání MSBuild, můžete vybrat výsledek `MSBuildLocator.QueryVisualStudioInstances()` předat `MSBuildLocator.RegisterInstance()` ručně, ale to není obvykle nutné.
+Pokud chcete řídit citlivější načítání MSBuild, můžete vybrat výsledek `MSBuildLocator.QueryVisualStudioInstances()` předat `MSBuildLocator.RegisterInstance()` ručně, ale to není obvykle potřeba.

@@ -1,5 +1,5 @@
 ---
-title: IDebugObject2::GetBackingFieldForProperty | Microsoft Docs
+title: IDebugObject2::GetBackingFieldForProperty | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7729f55c93274796d3c81f280618653b873bc40b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9d788d048fc428825cbc667b18424b32c68ddc5c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49840230"
 ---
 # <a name="idebugobject2getbackingfieldforproperty"></a>IDebugObject2::GetBackingFieldForProperty
-Získá pole nebo proměnná (pokud existuje), může být zálohování vlastnost představuje tento objekt.  
+Získá pole nebo proměnné (pokud existuje), který může být zálohování vlastnost reprezentovaný tímto objektem.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,10 +44,10 @@ int GetBackingFieldForProperty(
  [out] [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md) objekt popisující pole zálohování.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí S_OK; jinak vrátí kód chyby.  
+ V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md) objektů, představuje vlastnost třídy spravovaného kódu, který je metoda s get nebo nastavení přístupového objektu. Tyto vlastnosti obvykle vyžadují proměnnou, která bude obsahovat hodnotu manipulovat vlastnost. Tato proměnná se označuje jako pole zálohování. Pokud není k dispozici žádné pole zálohování pro objekt, zkontrolujte vrátit hodnotu null: některé volající nemusí věnovat pozornost návratovou hodnotu, ale místo toho bude vypadat Pokud chcete zobrazit, pokud byla vrácena hodnota null v `ppObject`.  
+ [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md) objekt představuje vlastnost třídy spravovaného kódu, to znamená, že metoda get a/nebo nastavení přístupového objektu. Tyto vlastnosti se obecně vyžadují proměnná obsahuje hodnotu manipulovat vlastnost. Tato proměnná je označována jako pole zálohování. Pokud tam není žádné pole zálohování pro objekt, ujistěte se, vrátí hodnotu null: některé volající nemusí věnovat pozornost návratovou hodnotu, ale místo toho bude vypadat zobrazíte, pokud byla vrácena hodnota null v `ppObject`.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md)

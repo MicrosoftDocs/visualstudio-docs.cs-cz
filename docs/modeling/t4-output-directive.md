@@ -7,35 +7,37 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 231781ee06088fef73f33fa84e9b53825f5f6a82
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 624afd32a9b0f44e3190fba7e3b126663b96f6f4
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47860196"
 ---
 # <a name="t4-output-directive"></a>T4 – direktiva Output
 
-V [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] textové šablony `output` – direktiva se používá k definování kódování souboru transformovaných a příponu názvu souboru.
+V sadě Visual Studio textových šablonách `output` – direktiva se používá k definování příponu názvu souboru a kódování transformovaný soubor.
 
- Například pokud vaše [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] projekt obsahuje soubor šablony s názvem **MyTemplate.tt** obsahující následující direktivu:
+ Například pokud váš projekt sady Visual Studio obsahuje soubor šablony s názvem **MyTemplate.tt** obsahující následující direktivy:
 
  `<#@output extension=".cs"#>`
 
- potom [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] vygeneruje soubor s názvem **MyTemplate.cs**
+ pak Visual Studio vygeneruje soubor s názvem **MyTemplate.cs**
 
- `output` – Direktiva nevyžaduje v běhu (předběžně zpracované) textové šablony. Místo toho, aplikace získá generované řetězec voláním `TextTransform()`. Další informace najdete v tématu [generování textu běhu pomocí textových šablon T4](../modeling/run-time-text-generation-with-t4-text-templates.md).
+ `output` Nevyžadoval – direktiva šablony textu za běhu (Předzpracované). Místo toho vaše aplikace získá vygenerovaný řetězec voláním `TextTransform()`. Další informace najdete v tématu [generování textu za běhu pomocí textových šablon T4](../modeling/run-time-text-generation-with-t4-text-templates.md).
 
-## <a name="using-the-output-directive"></a>Using – direktiva Output
+## <a name="using-the-output-directive"></a>Pomocí – direktiva Output
 
 ```
 <#@ output extension=".fileNameExtension" [encoding="encoding"] #>
 ```
 
- Měla by existovat více než jeden `output` direktivy v každé šabloně text.
+ Měl by existovat více než jeden `output` direktiv v každé textové šabloně.
 
 ## <a name="extension-attribute"></a>atribut rozšíření
- Určuje příponu názvu souboru výstupního souboru generovaný text.
+ Určuje příponu názvu souboru generovaný text výstupního souboru.
 
  Výchozí hodnota je **.cs**
 
@@ -47,14 +49,14 @@ V [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] textové šablony `o
 
  `<#@ output extension=".vb" #>`
 
- Přípustné hodnoty: Žádné platná přípona názvu souboru.
+ Povolené hodnoty: Žádné platné příponu názvu souboru.
 
-## <a name="encoding-attribute"></a>kódování atributu
- Určuje kódování použité při vygenerování výstupní soubor. Příklad:
+## <a name="encoding-attribute"></a>kódování s atributem
+ Určuje kódování určené k použití při vygenerování výstupního souboru. Příklad:
 
  `<#@ output encoding="utf-8"#>`
 
- Výchozí hodnota je kódování použité k textovému souboru šablony.
+ Výchozí hodnota je kódování používá soubor textové šablony.
 
  Přípustné hodnoty: `us-ascii`
 
@@ -68,6 +70,6 @@ V [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] textové šablony `o
 
  `utf-32`
 
- `0` (Výchozí nastavení systému)
+ `0` (Výchozí systémové nastavení)
 
- Obecně platí, můžete použít název_webového_serveru řetězec nebo číslo CodePage každého kódování vrácený <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=fullName>.
+ Obecně platí, můžete použít název_webového_serveru řetězec nebo číslo znakovou stránku, která u všech kódování vrácený <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=fullName>.

@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::EnumThreads | Microsoft Docs
+title: IDebugProgram2::EnumThreads | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 17cddd86f5815f12c51df919085ccf9986327ef6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d30cf1251f9d064d2cf8efb4bc3f0c6701f96386
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49849111"
 ---
 # <a name="idebugprogram2enumthreads"></a>IDebugProgram2::EnumThreads
 Načte seznam vláken, které jsou spuštěny v programu.  
@@ -43,7 +44,7 @@ int EnumThreads(
  [out] Vrátí [IEnumDebugThreads2](../../../extensibility/debugger/reference/ienumdebugthreads2.md) objekt, který obsahuje seznam vláken.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   

@@ -1,7 +1,7 @@
 ---
-title: IntelliSense C# | Microsoft Docs
-ms.custom: ''
+title: C# IntelliSense
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,21 +12,22 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1a443258d7f3b71c8f14cb967fc37090f80b5ad5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 41a4dfa2a904f3fdc09671fd5e9afa0f29c2e9f3
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53160137"
 ---
 # <a name="c-intellisense"></a>C# IntelliSense
 
-C# IntelliSense je k dispozici, pokud kódování v editoru a při ladění v [přímý režim](../ide/reference/immediate-window.md) příkazové okno.
+C# IntelliSense je k dispozici při psaní kódu v editoru a při ladění v [přímý režim](../ide/reference/immediate-window.md) příkazové okno.
 
 ## <a name="completion-lists"></a>Seznamy dokončení
 
-Seznamy dokončení IntelliSense v jazyce C# obsahovat tokeny od seznamu členů, dokončení Word a další. Poskytuje rychlý přístup k:
+Seznamy dokončení technologie IntelliSense v jazyce C# obsahovat tokeny od seznam členů, Dokončit slovo a další. Poskytuje rychlý přístup k:
 
-- Členy typu nebo obor názvů
+- Členy typu nebo oboru názvů
 
 - Proměnné, příkazy a funkce na názvy
 
@@ -34,130 +35,134 @@ Seznamy dokončení IntelliSense v jazyce C# obsahovat tokeny od seznamu členů
 
 - Klíčová slova jazyka
 
-- Metody rozšíření
+- Rozšiřující metody
 
-Seznamu dokončení v jazyce C# je také důležité tokeny pomocí filtrů a předem vyberte token na základě kontextu. Další informace najdete v tématu [filtrované seznamy dokončení](#filtered-completion-lists).
+Seznamu dokončení v jazyce C# je také dostatečně inteligentní, aby odfiltrovat irelevantní tokeny a předem vyberte token na základě kontextu. Další informace najdete v tématu [filtrované seznamy dokončení](#filtered-completion-lists).
 
-## <a name="code-snippets-in-completion-lists"></a>Fragmenty kódu v seznamy dokončení
+### <a name="code-snippets-in-completion-lists"></a>Fragmenty kódu do seznamů dokončení
 
-Seznam dokončení v jazyce C#, zahrnuje fragmenty kódu můžete snadno vložit předdefinované těla kódu do vaší aplikace. Fragmenty kódu jsou uvedeny v seznamu dokončení jako uvedeném fragmentu [zástupce text](../ide/code-snippets-schema-reference.md#shortcut). Další informace o fragmentech kódu, které jsou k dispozici v jazyce C# ve výchozím nastavení najdete v tématu [fragmenty kódu v C#](../ide/visual-csharp-code-snippets.md).
+V jazyce C# obsahuje seznam pro doplňování fragmenty kódu můžete snadno vložit předdefinované obsahy kódu do vaší aplikace. Fragmenty kódu se zobrazí v seznamu pro doplňování jako fragment [textovou zkratku](../ide/code-snippets-schema-reference.md#shortcut-element). Další informace o fragmenty kódu, které jsou k dispozici v jazyce C# ve výchozím nastavení najdete v tématu [fragmenty kódu v C#](../ide/visual-csharp-code-snippets.md).
 
-## <a name="language-keywords-in-completion-lists"></a>Klíčová slova jazyka v seznamy dokončení
+### <a name="language-keywords-in-completion-lists"></a>Klíčová slova jazyka do seznamů dokončení
 
-Seznam dokončení v jazyce C#, také zahrnuje klíčová slova jazyka. Další informace o klíčová slova jazyka C#, najdete v části [klíčová slova jazyka C#](/dotnet/csharp/language-reference/keywords/index).
+V jazyce C# také seznam pro doplňování klíčová slova jazyka. Další informace o klíčových slovech jazyka C# najdete v tématu [klíčová slova jazyka C#](/dotnet/csharp/language-reference/keywords/index).
 
-## <a name="extension-methods-in-completion-lists"></a>Rozšiřující metody v seznamy dokončení
+### <a name="extension-methods-in-completion-lists"></a>Rozšiřující metody do seznamů dokončení
 
-Seznam dokončení v jazyce C#, obsahuje rozšiřující metody, které jsou v oboru.
+Seznamu dokončení v jazyce C# obsahuje rozšiřující metody, které jsou v oboru.
 
 > [!NOTE]
-> Seznam dokončení nejsou zobrazeny všechny rozšiřující metody pro <xref:System.String> objekty.
+> Seznam pro doplňování se nezobrazí všechny rozšiřující metody pro <xref:System.String> objekty.
 
-Metody rozšíření použití různých ikony než instance metody. Výpis seznamu ikon, najdete v části [zobrazení tříd a ikony v prohlížeči objekt](../ide/class-view-and-object-browser-icons.md). Pokud instanci metody a metoda rozšíření se stejným názvem jsou v oboru, zobrazí se seznam dokončení ikonu – metoda rozšíření.
+Rozšiřující metody použít jinou ikonu než metody instance. Referenční příručka seznamu ikonu, naleznete v tématu [ikony zobrazení třídy a prohlížeče objektů](../ide/class-view-and-object-browser-icons.md). Jsou-li instanci metody a metody rozšíření se stejným názvem v oboru, seznam pro doplňování zobrazí ikona metody rozšíření.
 
-## <a name="filtered-completion-lists"></a>Filtrované seznamy dokončení
+### <a name="filtered-completion-lists"></a>Filtrované seznamy dokončení
 
-IntelliSense odebere nepotřebné členy ze seznamu dokončení pomocí filtrů. C# filtry seznamy dokončení, které se zobrazují pro tyto položky:
+Technologie IntelliSense odstraní nepotřebné členy ze seznamu dokončení pomocí filtrů. C# filtry seznamy dokončení, které se zobrazují pro tyto položky:
 
-- **Základní třídy a rozhraní**: IntelliSense automaticky odebere položky z rozhraní a základní třída dokončení seznamů, v deklaraci třídy základní a rozhraní seznamy a seznamy omezení. Například výčty se nezobrazí v seznamu dokončení pro základní třídy, protože výčty nelze použít pro základní třídy. Seznam dokončení základní třídy obsahuje pouze rozhraní a obory názvů. Pokud jste v seznamu vyberte položku a potom zadejte do čárkami, IntelliSense odebere ze seznamu dokončení základní třídy, protože C# nepodporuje vícenásobná dědičnost. Stejné chování dochází v klauzulích omezení taky.
+- **Základní třídy a rozhraní**: Technologie IntelliSense automaticky odebere položky z rozhraní a základní třídy dokončení seznamů v deklaraci třídy base a interface seznamy a seznamy omezení. Například výčty nejsou uvedena v seznamu dokončení pro základní třídy, protože výčty nelze použít jako základní třídy. Dokončení seznamu základních tříd obsahuje pouze rozhraní a obory názvů. Pokud v seznamu vyberte položku a potom zadejte čárku, technologie IntelliSense odebere ze seznamu dokončení základní třídy, protože C# nepodporuje vícenásobnou dědičnost. Stejné chování dochází k dispozici také pro klauzule omezení.
 
-- **Atributy**: Pokud použijete typ atributu, je seznamu dokončení filtrované tak, že seznam obsahuje pouze ty typy, které sestup z obory názvů, které obsahují tyto typy, jako <xref:System.Attribute>.
+- **Atributy**: Když použijte atribut na typ seznam pro doplňování se vyfiltruje tak, aby seznam obsahuje pouze ty typy, které sestup od obory názvů obsahují typy, jako třeba <xref:System.Attribute>.
 
-- **Catch – klauzule**
+- **Klauzule catch**
 
-- **Inicializátory objektu**: pouze členové, které jde inicializovat se objeví v seznamu dokončení.
+- **Inicializátory objektu**: V seznamu dokončení se zobrazí pouze členy, které mohou být inicializovány.
 
-- **New – klíčové slovo**: Pokud zadáte `new` a pak stiskněte MEZERNÍK, zobrazí se seznam dokončení. Automaticky se vybere položka v seznamu, na základě kontextu ve vašem kódu. Položky se automaticky vybrán v seznamu dokončení pro deklarace a příkazech return v metodách.
+- **New – klíčové slovo**: Po zadání `new` a potom stiskněte klávesu **místo**, zobrazí se seznam pro doplňování. Položka je automaticky vybrán v seznamu na základě kontextu ve vašem kódu. Položky jsou automaticky vybrán v seznamu pro doplňování deklarací a návratovými příkazy v metodách.
 
-- **enum – klíčové slovo**: když stiskněte MEZERNÍK po symbolem rovná pro přiřazení výčtu, zobrazí se seznam dokončení. Automaticky se vybere položka v seznamu, na základě kontextu ve vašem kódu. Například jsou automaticky vybrány položky v seznamu dokončení po zadání – klíčové slovo návratový, a pokud provedete deklaraci.
+- **enum – klíčové slovo**: Po stisknutí klávesy **místo** za symbolem rovná přiřazení výčtového typu, zobrazí se seznam pro doplňování. Položka je automaticky vybrán v seznamu na základě kontextu ve vašem kódu. Například jsou automaticky vybrané položky do seznamu dokončení po zadání – klíčové slovo návratový a při deklaraci.
 
-- **jako a operátory**: seznam filtrované dokončení se zobrazí automaticky, když stiskněte MEZERNÍK po jste zadali `as` nebo `is` – klíčové slovo.
+- **jako a operátoři**: Seznam filtrovaný dokončení se zobrazí automaticky po stisknutí klávesy **místo** po zadání `as` nebo `is` – klíčové slovo.
 
-- **Události**: Pokud zadáte klíčové slovo `event`, seznamu dokončení obsahuje pouze typů delegátů.
+- **Události**: Po zadání klíčového slova `event`, seznam pro doplňování obsahuje pouze typy delegátů.
 
-- **Parametr nápovědy** automaticky seřadí na první přetížení metody, která odpovídá parametry, jako je zadat. Pokud více přetížení metody jsou k dispozici, můžete pomocí nahoru a dolů šipky přejděte na další možné přetížení v seznamu.
+- **Parametr nápovědy** automaticky řadí do první přetížení metody, která odpovídá parametrům, jak je zadáte. Pokud více přetížení metody jsou k dispozici, můžete nahoru a dolů šipkami přejít na další možné přetížení v seznamu.
 
-## <a name="most-recently-used-members"></a>Naposledy použité členy
+### <a name="most-recently-used-members"></a>Naposledy použité členy
 
-IntelliSense pamatuje členů, které jste vybrali v místní nabídce nedávno [vypsat členy](../ide/using-intellisense.md) pole pro dokončení název automatické objektu. Při příštím použití seznam členů, naposledy použité členy se zobrazí v horní části. Historii naposledy použité členy není zaškrtnuté mezi každou relaci v prostředí IDE.
+Technologie IntelliSense si pamatuje členy, které jste zvolili nedávno v místní nabídce [seznam členů](../ide/using-intellisense.md) pole pro název dokončení automatický objekt. Příště použijete **seznam členů**, naposledy použité členy se zobrazí v horní části. Mezi každou relaci sady Visual Studio se vymaže historii naposledy použité členy.
 
-## <a name="override"></a>override
+### <a name="override"></a>override
 
-Pokud zadáte [přepsat](/dotnet/csharp/language-reference/keywords/override) a pak stiskněte MEZERNÍK, IntelliSense zobrazí všechny platnou třídu base členy, kteří v rozbalovací seznam se dá přepsat. Zadáním návratový typ metody za `override` vyzve IntelliSense, aby se zobrazily pouze metody, které vracejí stejného typu. Když IntelliSense nelze najít žádné shody, se zobrazí všechny členy základní třídy.
+Po zadání [přepsat](/dotnet/csharp/language-reference/keywords/override) a potom stiskněte klávesu **místo**, technologie IntelliSense zobrazí všechny členy platný základní třídy, které můžete přepsat v rozevíracím seznamu místní nabídky. Zadáte návratový typ metody za `override` vyzve technologie IntelliSense, aby se zobrazily pouze metody, které vracejí stejného typu. Pokud technologie IntelliSense nemůže najít žádná shoda, zobrazí všechny členy základní třídy.
 
-## <a name="automatic-code-generation"></a>Automatické vytváření kódu
+### <a name="ai-enhanced-intellisense"></a>AI Vylepšená technologie IntelliSense
+
+Můžete nainstalovat experimentální [IntelliCode rozšíření](/visualstudio/intellicode/intellicode-visual-studio) pro Visual Studio, která poskytuje rozšířené umělé inteligence seznamy doplňování technologie IntelliSense. Toto rozšíření předpovídá největší pravděpodobností správné rozhraní API pro použití, ne jenom nabízí ten samý abecední seznam členů. Používá aktuální kontext kódu a vzory pro poskytování dynamického seznamu.
+
+## <a name="automatic-code-generation"></a>Automatické generování kódu
 
 ### <a name="add-using"></a>Přidat direktivu using
 
-**Přidat pomocí** IntelliSense operace automaticky přidá požadované `using` direktivy do souboru kódu. Tato funkce umožňuje udržovat vaše zaměřit se na kód zápis nechcete vyžadující, abyste posun vaší zaměření na jinou část kódu.
+**Přidat direktivu using** operace IntelliSense automaticky přidá požadované `using` směrnici do souboru kódu. Tato funkce umožňuje spravovat vaše zaměřit se na kód zápisu nechcete vyžadující, abyste svou pozornost zaměřili na jiné části kódu.
 
-Chcete-li iniciovat přidat pomocí operace, umístěte kurzor na odkaz na typ, který nelze vyřešit. Například když Vytvořte konzolovou aplikaci a poté přidejte `XmlTextReader` k tělu `Main` metody červenou vlnovkou se zobrazuje na tohoto řádku kódu protože odkaz na typ nelze přeložit. Potom můžete vyvolat přidat pomocí prostřednictvím rychlé akce. Rychlé akce je viditelná, pouze pokud kurzor je nastavený na nevázaný typ.
+K zahájení **přidat direktivu using** operace, pozice kurzoru na typu odkaz, který nelze rozpoznat. Například když Vytvořte konzolovou aplikaci a pak přidejte `XmlTextReader` do těla `Main` metody červená vlnovka se zobrazí na daném řádku kódu, protože nelze rozpoznat odkaz na typ. Potom můžete vyvolat **přidat direktivu using** prostřednictvím **rychlé akce**. **Rychlé akce** je viditelná jen když se kurzor na nevázanému typu.
 
-![Přidat pomocí, rychlá rozšířené obrázek akce](../ide/media/addusing-quickaction.png "AddUsing QuickAction")
+![Přidání pomocí, rychlá akce rozšířené bitové kopie](../ide/media/addusing-quickaction.png)
 
-Klikněte na ikonu žárovky a potom zvolte **pomocí System.Xml;** a automaticky tak přidejte použití – direktiva.
+Klikněte na ikonu žárovky a klikněte na tlačítko **použití System.Xml;** k automatickému přidávání using – direktiva.
 
-### <a name="remove-and-sort-usings"></a>Odebrat a řazení direktiv Using
+### <a name="remove-and-sort-usings"></a>Odebrat a seřadit direktivy using
 
-**Odebrat a řazení direktiv Using** možnost seřadí a odebere `using` a `extern` deklarace bez změny chování zdrojového kódu. Zdrojové soubory v čase, může přestat opakovaném a obtížně se číst z důvodu nepotřebné a neuspořádaný `using` direktivy. **Odebrat a řazení direktiv Using** možnost odebráním nevyužité zkomprimuje zdrojového kódu `using` direktivy a lepší čitelnost seřazením. Na **upravit** nabídce zvolte **IntelliSense**a potom zvolte **uspořádání direktiv Using**.
+**Odebrat a seřadit direktivy using** možnost seřadí a odebere `using` a `extern` deklarace bez změny chování zdrojového kódu. V průběhu času může stát zdrojové soubory opakovaném a mohou ztížit čtení kvůli nepotřebné a neuspořádaná `using` direktivy. **Odebrat a seřadit direktivy using** možnost zkomprimuje zdrojový kód tak, že odeberete nepoužívané `using` direktivy a zlepšuje čitelnost tím, že je řazení. Na **upravit** nabídce zvolte **IntelliSense**a klikněte na tlačítko **uspořádat direktivy using**.
 
-### <a name="implement-interface"></a>Implementovat rozhraní
+### <a name="implement-interface"></a>Implementace rozhraní
 
-IntelliSense nabízí možnost, která vám pomůže implementovat [rozhraní](/dotnet/csharp/language-reference/keywords/interface) při práci v editoru kódu. Za normálních okolností správně implementovat rozhraní, musíte vytvořit deklaraci metody pro každého člena rozhraní v třídě. Používání atributu IntelliSense, zadejte název rozhraní v deklaraci třídy po, zobrazí se žárovky rychlé akce. Žárovky vám dává možnost automaticky, toto rozhraní implementovat pomocí explicitní nebo implicitní názvy. V části explicitní názvy deklarace metoda provádění název rozhraní; v části implicitní pojmenování deklarace metoda neoznačují rozhraní, do které patří. Metodu explicitně rozhraní jsou přístupné pouze prostřednictvím instance rozhraní a ne prostřednictvím instance třídy. Další informace najdete v tématu [explicitní implementace rozhraní](/dotnet/csharp/programming-guide/interfaces/explicit-interface-implementation).
+Technologie IntelliSense poskytuje možnost, aby vám pomohly implementovat [rozhraní](/dotnet/csharp/language-reference/keywords/interface) při práci v editoru kódu. Za normálních okolností pro implementaci rozhraní správně, musíte vytvořit deklaraci metody pro každého člena rozhraní ve své třídě. Díky technologii IntelliSense, jakmile zadáte název rozhraní v deklaraci třídy **rychlé akce** se zobrazí žárovka. Žárovka nabídne možnost implementovat rozhraní automaticky, pomocí explicitní nebo implicitní pojmenování. V části explicitní názvy provádět deklarace metody název rozhraní. V části implicitní pojmenování, nevyžadují deklarace metody rozhraní, ke kterému patří. Metody rozhraní explicitně pojmenované je přístupný pouze prostřednictvím instance rozhraní a ne prostřednictvím instance třídy. Další informace najdete v tématu [explicitní implementaci rozhraní](/dotnet/csharp/programming-guide/interfaces/explicit-interface-implementation).
 
-Implementovat rozhraní vygeneruje minimální počet zástupných procedur metoda, které je potřeba splnit rozhraní. Pokud základní třída implementuje části rozhraní, nejsou tyto zástupných procedur obnovovaly.
+Implementovat rozhraní vygeneruje minimální počet metoda zástupné procedury, které je nutné splnit rozhraní. Pokud základní třída implementuje částí rozhraní, pak tyto zástupné procedury se znova vygeneroval.
 
 ### <a name="implement-abstract-base-class"></a>Implementace třídy base abstraktu
 
-IntelliSense nabízí možnost, která vám pomůže implementovat členy abstraktní základní třídu automaticky při práci v editoru kódu. Za normálních okolností implementace členů abstraktní základní třída vyžaduje vytváření nové definice metoda abstraktní základní třída pro každou metodu v odvozené třídě. Používání atributu IntelliSense, po zadání názvu abstraktní základní třídy v deklaraci třídy, se zobrazí žárovky rychlé akce. Žárovky vám dává možnost automaticky implementovat metody třídy base.
+Technologie IntelliSense poskytuje možnost, aby vám pomohly implementovat členy abstraktní základní třída automaticky při práci v editoru kódu. Za normálních okolností k implementaci abstraktní členy základní třídy vyžaduje vytvoření nové definice metody pro každou metodu abstraktní základní třída v odvozené třídě. Pomocí IntelliSense po zadání názvu abstraktní základní třídy v deklaraci třídy **rychlé akce** se zobrazí žárovka. Žárovka nabídne možnost pro implementaci metody třídy base automaticky.
 
-Metoda zástupných procedur, vytvořených pomocí funkce abstraktní základní třída implementace jsou modelovány pomocí fragmentu kódu, který je definován v souboru MethodStub.snippet. Fragmenty kódu jsou změn. Další informace najdete v tématu [návod: Vytvoření fragmentu kódu](../ide/walkthrough-creating-a-code-snippet.md).
+Metoda zástupné procedury, které se vygenerovaly **implementace abstraktní třídy Base** funkce jsou modelovány pomocí fragmentu kódu, které jsou definovány v souboru *MethodStub.snippet*. Fragmenty kódu lze měnit. Další informace najdete v tématu [názorný postup: Vytvoření fragmentu kódu](../ide/walkthrough-creating-a-code-snippet.md).
 
 ### <a name="generate-from-usage"></a>Generování před využitím
 
-**Generování před využitím** funkce umožňuje používání tříd a členů, než je definovat. Můžete vygenerovat zástupnou proceduru pro všechny třídy, konstruktor, metoda, vlastnost, pole nebo výčet, který chcete použít, ale ještě nebyly definovány. Nové typy a členy můžete vygenerovat aniž byste museli opustit vaše aktuální umístění v kódu. Tím se minimalizují přerušení pracovního postupu.
+**Generovat z využití** funkce vám umožní použít třídy a členy před jejich definování. Můžete vygenerovat zástupnou proceduru pro všechny třídy, konstruktor, metoda, vlastnost, pole nebo výčtu, který chcete použít, ale ještě nebyly definovány. Aniž byste museli opustit váš aktuální umístění v kódu můžete vygenerovat nové typy a členy. Tím se minimalizují přerušení pracovního postupu.
 
-Red vlnovkou se zobrazí pod každý nedefinovaný identifikátor. Při umístění ukazatele myši na identifikátor, zobrazí se chybová zpráva v popisu tlačítka. Pokud chcete zobrazit příslušné možnosti, můžete použít jednu z následujících postupů:
+V rámci každé nedefinovaný identifikátor se zobrazí červené podtržení vlnovkou. Při umístění ukazatele myši na identifikátor v popisku se zobrazí chybová zpráva. K zobrazení příslušné možnosti, můžete použít jednu z následujících postupů:
 
-- Klikněte na tlačítko nedefinovaný identifikátor. Žárovky rychlé akce se zobrazí pod identifikátor. Klikněte na tlačítko žárovky.
+- Klikněte na nedefinovaný identifikátor. A **rychlé akce** pod tento identifikátor se zobrazí žárovka. Klikněte na žárovku.
 
-- Klikněte na nedefinovaný identifikátor a stiskněte klávesu **Ctrl** + **.** (Ctrl + tečka).
+- Klikněte na nedefinovaný identifikátor a potom stiskněte klávesu **Ctrl**+**.** (**Ctrl** + tečka).
 
-- Klikněte pravým tlačítkem na nedefinovaný identifikátor a pak klikněte na **rychlé akce a refaktoring**.
+- Klikněte pravým tlačítkem na nedefinovaný identifikátor a potom klikněte na tlačítko **rychlé akce a Refaktoringy**.
 
-Možnosti, které se zobrazují patří:
+Možnosti, které se zobrazí následující:
 
 - **Generovat vlastnost**
 
-- **Generované pole**
+- **Generovat pole**
 
 - **Generování metody**
 
-- **Generovat – třída**
+- **Generovat třídy**
 
-- **Vytvořit nový typ...**  (pro třída, struktura, rozhraní nebo výčtu)
+- **Generovat nový typ** (pro třídy, struktury, rozhraní nebo výčet)
 
-## <a name="generate-event-handlers"></a>Generovat obslužné rutiny událostí
+## <a name="generate-event-handlers"></a>Generujte obslužné rutiny událostí
 
-V editoru kódu technologie IntelliSense můžete spojit metody (obslužné rutiny událostí) na pole událostí.
+V editoru kódu technologie IntelliSense můžete připojit k pole události metod (obslužné rutiny událostí).
 
-Pokud zadáte `+=` operátor po na pole událostí v souboru .cs IntelliSense zobrazí výzvu s možností stiskněte **kartě** klíč. Vloží novou instanci třídy delegáta, který odkazuje na metodu zpracování události.
+Po zadání `+=` operátor po polem události v *.cs* souboru, technologie IntelliSense zobrazí výzvu s možností stisknutím klávesy **kartu** klíč. To vloží novou instanci třídy delegáta, který odkazuje na metodu zpracování událostí.
 
-![Tlačítko automaticky háku až](../ide/media/vxautohookup.gif "vxAutoHookUp")
+![Zavěšení automatické tlačítko nahoru](../ide/media/vxautohookup.gif)
 
-Pokud vyberete **kartě**, IntelliSense automaticky dokončení příkazu a odkazu na obslužnou rutinu události se zobrazí jako vybraný text v editoru kódu. K dokončení automatického událostí spojení, IntelliSense vyzváni ke stisknutí tlačítka **kartě** klíč znovu a vytvořit prázdný se zakázaným inzerováním obslužné rutiny událostí.
+Pokud stisknete **kartu**, technologie IntelliSense automaticky dokončení příkazu pro vás a odkazu na obslužnou rutinu události zobrazuje jako vybraný text v editoru kódu. Dokončete propojení automatické události IntelliSense výzva ke stisknutí klávesy **kartu** klíč znovu pro vytvoření prázdné zástupné procedury pro obslužnou rutinu události.
 
-![Generovat obslužné rutiny události](../ide/media/vxgenerateeventhandler.gif "vxGenerateEventHandler")
-
-> [!NOTE]
-> Pokud nové delegáta, který je vytvořen pomocí IntelliSense odkazuje stávající obslužné rutiny události, IntelliSense komunikuje tyto informace v popisu tlačítka. Poté můžete upravit tento odkaz; text je již vybrána v editoru kódu. Jinak automatické událostí spojení je dokončena v tomto okamžiku.
-
-Pokud vyberete **kartě**, IntelliSense zástupných procedur se metoda se správným podpisem a vloží kurzor v těle obslužné rutiny události.
+![Generovat obslužné rutiny události](../ide/media/vxgenerateeventhandler.gif)
 
 > [!NOTE]
-> Použití **přejděte zpětné** příkaz na **zobrazení** nabídky (**Ctrl** + **-**) se vrátíte k události příkaz spojení.
+> Pokud nový delegát, který je vytvořen pomocí technologie IntelliSense odkazuje na existující obslužné rutiny události, technologie IntelliSense komunikuje tyto informace v popisu. Poté můžete upravit tento odkaz. text je už vybraná v editoru kódu. V opačném případě propojení automatické událost dokončení v tomto okamžiku.
 
-## <a name="see-also"></a>Viz také
+Pokud stisknete **kartu**, technologie IntelliSense tříd stub si metodu se správným podpisem a umístí kurzor do těla obslužné rutiny události.
 
-[Používání atributu IntelliSense](../ide/using-intellisense.md)  
-[Integrované vývojové prostředí sady Visual Studio](../ide/visual-studio-ide.md)
+> [!NOTE]
+> Použití **přejít zpět** příkaz **zobrazení** nabídky (**Ctrl**+**-**) se vrátíte k události propojení příkazu.
+
+## <a name="see-also"></a>Viz také:
+
+- [Používání technologie IntelliSense](../ide/using-intellisense.md)
+- [Integrované vývojové prostředí sady Visual Studio](../get-started/visual-studio-ide.md)

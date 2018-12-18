@@ -1,5 +1,5 @@
 ---
-title: IDebugFunctionObject::CreatePrimitiveObject | Microsoft Docs
+title: IDebugFunctionObject::CreatePrimitiveObject | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 477bdb12cef6711c6b946b3ddd8d9550e48c01b0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b397bded186623b09bc868d6b4af97cd0d4d5388
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49854556"
 ---
 # <a name="idebugfunctionobjectcreateprimitiveobject"></a>IDebugFunctionObject::CreatePrimitiveObject
-Vytvoří objekt primitivní datové, například jednoduché celé číslo.  
+Vytvoří objekt primitivní datové, například jednoduché celočíselné.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,16 +43,16 @@ int CreatePrimitiveObject(
   
 #### <a name="parameters"></a>Parametry  
  `ot`  
- [v] Hodnota z [OBJECT_TYPE](../../../extensibility/debugger/reference/object-type.md) výčet představující typ primitivní vytvořit.  
+ [in] Hodnota z [OBJECT_TYPE](../../../extensibility/debugger/reference/object-type.md) představující typ primitivní k vytvoření výčtu.  
   
  `ppObject`  
  [out] Vrátí [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) představující nově vytvořený objekt.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí S_OK; jinak vrátí kód chyby.  
+ V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Voláním této metody lze vytvořit objekt, který reprezentuje primitivní objekt, který je parametr pro funkci, která je reprezentována [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) rozhraní. Například zda je řetězec výraz "myString(5)", tato metoda by použít k vytvoření objekt reprezentující na celé číslo. 5.  
+ Volejte tuto metodu za účelem vytvoření objektu, který představuje základní objekt, který je parametr funkce, která je reprezentována [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md) rozhraní. Například pokud je řetězec výraz "myString(5)", tato metoda by použije k vytvoření objekt představující celé číslo 5.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugFunctionObject](../../../extensibility/debugger/reference/idebugfunctionobject.md)

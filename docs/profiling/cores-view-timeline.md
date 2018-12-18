@@ -14,15 +14,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ca61a511d5b65233aa0f7e979374ba5dd48d21ae
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 14bf030ce1adb1dede9ad2a377d8fb435d75e0c6
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34690530"
 ---
 # <a name="cores-view-timeline"></a>Časová osa zobrazení jader
 Každý řádek v časové ose představuje logický procesor základní PROFILOVANÉHO systému. Pro každý řádek vodorovnou osu ukazuje na to, které vlákno byla spuštěna na logická jádra k danému bodu v čase. Můžete podržet přes barva zájem o časové ose vrátit popis, který označuje vlákno. Usnadní identifikaci přístup z více vláken, legendy v dolní části okna zobrazuje, co každá barva představuje. Použijte nástroj Lupa pro přiblížení a oddálení, kliknutím a přetažením nebo stisknutím klávesy CTRL a přesunutí kolečko myši. Přiblížení konzistence se udržuje při přepínání mezi zobrazení jader a zobrazení vláken.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Zobrazení jader](../profiling/cores-view.md)   
- [Ovládací prvek Lupa (Zobrazení vláken)](../profiling/zoom-control-threads-view.md)
+ [Ovládací prvek Lupa (zobrazení vláken)](../profiling/zoom-control-threads-view.md)

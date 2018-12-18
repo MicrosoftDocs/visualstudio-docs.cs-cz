@@ -1,5 +1,5 @@
 ---
-title: V editoru základní | Microsoft Docs
+title: Uvnitř základní Editor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,22 +13,23 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 95745cbef015e9f6ceddb9b84d75b52ec9805dea
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 37c62ebad5b5f119c9acf5b62b14db6743949c19
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39500446"
 ---
-# <a name="inside-the-core-editor"></a>V editoru jádra
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Základní editor je sada několik komponent, které umožňují upravit a dotazovat textové informace. Pokud jste upravili editoru základní pomocí starší verze rozhraní API, může nadále používat toto vlastní nastavení, které budou směrovány přes adaptéry editor. Doporučujeme, ale přizpůsobit se vlastní nastavení do editoru nové rozhraní API.  
+# <a name="inside-the-core-editor"></a>V editoru core
+[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Core editor je sada několik komponent, které vám umožní změnit a dotazování textové informace. Pokud jste upravili základní editor pomocí starší verze rozhraní API, můžou dál používat tyto úpravy, které se budou směrovat přes adaptéry editoru. Doporučujeme však, že můžete přizpůsobit vlastní nastavení do nového editoru rozhraní API.  
   
- Tyto oblasti jsou některé důležité aspekty editoru jádra:  
+ Tyto oblasti jsou některé důležité aspekty základní editor:  
   
--   Textová vyrovnávací paměť  
+-   Vyrovnávací paměť textu  
   
 -   Zobrazení textu  
   
--   Kódu – okno  
+-   Okno kódu  
   
 -   Text značky  
   
@@ -37,45 +38,45 @@ ms.lasthandoff: 04/16/2018
 -   Integrace se službami jazyka  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Vytváření instancí editoru základní pomocí starší verze rozhraní API](../extensibility/instantiating-the-core-editor-by-using-the-legacy-api.md)  
- Poskytuje podrobné pokyny o tom, jak používat <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> k vytvoření instance jádra editor.  
+ [Vytvořit instanci editoru core pomocí starší verze rozhraní API](../extensibility/instantiating-the-core-editor-by-using-the-legacy-api.md)  
+ Obsahuje podrobné pokyny o tom, jak používat <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> k vytvoření instance základní editor.  
   
- [Přístup k textová vyrovnávací paměť s použitím rozhraní API starší verze](../extensibility/accessing-the-text-buffer-by-using-the-legacy-api.md)  
- Popisuje role textovou vyrovnávací paměť v editoru jádra, vysvětluje přidružené systémy, které se používají pro přístup k vyrovnávací paměť a poskytuje seznam rozhraní implementované objekt textové vyrovnávací paměti <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>.  
+ [Přístup k vyrovnávací paměti textu pomocí starší verze rozhraní API](../extensibility/accessing-the-text-buffer-by-using-the-legacy-api.md)  
+ Tento článek popisuje role vyrovnávací paměť textu v editoru core, vysvětluje související systémy, které se používají pro přístup k vyrovnávací paměti a poskytuje seznam rozhraní implementovaných objekt vyrovnávací paměti textu <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>.  
   
- [Textové vyrovnávací paměti události v rozhraní API starší verze](../extensibility/text-buffer-events-in-the-legacy-api.md)  
- Poskytuje seznam rozhraní, které se používají pro oznámení o události textové vyrovnávací paměti.  
+ [Události vyrovnávací paměti textu ve starší verzi rozhraní API](../extensibility/text-buffer-events-in-the-legacy-api.md)  
+ Obsahuje seznam rozhraní, které se používají pro oznámení události vyrovnávací paměti textu.  
   
- [Postupy: registrace pro textové vyrovnávací paměti události s rozhraním API pro starší verze](../extensibility/how-to-register-for-text-buffer-events-with-the-legacy-api.md)  
- Popisuje, jak poradit textové vyrovnávací paměti události.  
+ [Postupy: registrace pro události vyrovnávací paměti textu se starší verze rozhraní API](../extensibility/how-to-register-for-text-buffer-events-with-the-legacy-api.md)  
+ Popisuje, jak dokáží události vyrovnávací paměti textu.  
   
- [Pomocí Správce Text k monitorování globální nastavení](../extensibility/using-the-text-manager-to-monitor-global-settings.md)  
- Popisuje použití textový správce sdílet informace globální předvoleb s editor základní komponenty a přijímat oznámení o události manager text.  
+ [Pomocí Správce text můžete sledovat globální nastavení](../extensibility/using-the-text-manager-to-monitor-global-settings.md)  
+ Tento článek popisuje použití Správce text sdílet informace globální předvoleb se základní součásti editoru a jak přijmout oznámení o události Správce textu.  
   
- [Přístup k zobrazení text s použitím rozhraní API starší verze](../extensibility/accessing-thetext-view-by-using-the-legacy-api.md)  
- Popisuje role zobrazení textu v editoru jádra a uvádí rozhraní implementované <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView> objektu.  
+ [Zobrazit text přístup pomocí starší verze rozhraní API](../extensibility/accessing-thetext-view-by-using-the-legacy-api.md)  
+ Popisuje roli zobrazení textu v editoru core a obsahuje seznam rozhraní implementovaných <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView> objektu.  
   
- [Přizpůsobení Windows kódu pomocí starší verze rozhraní API](../extensibility/customizing-code-windows-by-using-the-legacy-api.md)  
- Poskytuje informace o tom, jak okno kódu se používá k uzavřete textového zobrazení, popisuje, jak správce oken kód slouží k poskytování dekorace do okna kódu a poskytuje oznámení o nové zobrazení.  
+ [Přizpůsobení windows kód pomocí starší verze rozhraní API](../extensibility/customizing-code-windows-by-using-the-legacy-api.md)  
+ Poskytuje informace o způsobu okně kódu slouží k zobrazení textu uzavření, popisuje, jak správce oken kódu slouží k poskytování dekorace do okna kódu a oznámení pro nová zobrazení.  
   
  [Změna nastavení zobrazení pomocí starší verze rozhraní API](../extensibility/changing-view-settings-by-using-the-legacy-api.md)  
- Poskytuje podrobné pokyny, jak vynutit nastavení zobrazení a odebrání nastavení vynucené.  
+ Obsahuje podrobné pokyny o tom, jak vynutit nastavení zobrazení a odebrání nastavení vynucené.  
   
- [Jazyk služeb a editoru jádra](../extensibility/language-services-and-the-core-editor.md)  
- Popisuje vytvoření instance služby jazyk pro dekorace kódu ovládacího prvku.  
+ [Jazykové služby a základní editor](../extensibility/language-services-and-the-core-editor.md)  
+ Popisuje vytvoření instance služby jazyka pro ovládací prvek kódu dekorace.  
   
 ## <a name="related-sections"></a>Související oddíly  
- [Návod: Vytvoření základní editoru a registraci typu souboru editoru](../extensibility/walkthrough-creating-a-core-editor-and-registering-an-editor-file-type.md)  
- Poskytuje podrobné pokyny o tom, jak spusťte editor základní ze spravovaného kódu.  
+ [Návod: Vytvoření základní editor a registraci typu souboru editoru](../extensibility/walkthrough-creating-a-core-editor-and-registering-an-editor-file-type.md)  
+ Obsahuje podrobné pokyny o tom, jak spustit základní editor ze spravovaného kódu.  
   
  [Panel rozevíracího seznamu](../extensibility/drop-down-bar.md)  
- Popisuje, jak se používá v okně Kód panelu rozevíracího seznamu a popisuje rozhraní, které se používají při implementaci panelu rozevíracího seznamu.  
+ Tento článek popisuje, jak na panelu rozevíracího seznamu se používá v okně kódu a popisuje rozhraní, které se používají při implementaci panel rozevíracího seznamu.  
   
  [Text značky pomocí starší verze rozhraní API](../extensibility/using-text-markers-with-the-legacy-api.md)  
- Popisuje koncept text značek a jak se používají v editoru jádra a seznam rozhraní, které se používají pro přístup a správa text značek.  
+ Vysvětluje pojem text značky a jak se používají v základní editor a seznam rozhraní, které se používají k přístupu a správě text značky.  
   
- [Postupy: Přidání značek standardního textu](../extensibility/how-to-add-standard-text-markers.md)  
- Poskytuje podrobné pokyny o tom, jak vytvořit značku text a postup přidání vlastního příkazu do místní nabídky.  
+ [Postupy: Přidání standardní text značky](../extensibility/how-to-add-standard-text-markers.md)  
+ Obsahuje podrobné pokyny o tom, jak vytvořit text značky a jak přidat vlastní příkaz do místní nabídky.  
   
- [Postupy: vytvoření vlastní Text značek](../extensibility/how-to-create-custom-text-markers.md)  
- Poskytuje podrobné pokyny o tom, jak vytvořit značku vlastní text a jak poskytnout typ značky jako služba.
+ [Postupy: vytvoření vlastního textu značky](../extensibility/how-to-create-custom-text-markers.md)  
+ Obsahuje podrobné pokyny o tom, jak vytvořit vlastní text značky a k poskytování typ značky jako služba.

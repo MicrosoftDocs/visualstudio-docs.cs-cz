@@ -1,8 +1,9 @@
 ---
-title: Dialogové okno možností textového editoru pole | Microsoft Docs
+title: Dialogové okno Možnosti textového editoru
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Outlining
 - VS.ToolsOptionsPages.Text_Editor.T-SQL80
@@ -19,16 +20,17 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a47bc3a86ee19f5fe47dce011adb3165e87e3a76
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d746426a5db9a3b71ba3fd3703887f9e4c894ef9
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34448698"
 ---
 # <a name="text-editor-options-dialog-box"></a>Dialogové okno možností textového editoru
 
 Možnosti editoru v **možnosti** dialogové okno poskytují způsoby, jak upravit vzhled a chování editoru.
 
-## <a name="see-also"></a>Viz také
+### <a name="see-also"></a>Viz také
 
-[Psaní kódu](../../ide/writing-code-in-the-code-and-text-editor.md) popisuje různé způsoby použití editoru kódu.
+[Funkce editoru kódu](../../ide/writing-code-in-the-code-and-text-editor.md) popisuje různé způsoby použití editoru kódu.

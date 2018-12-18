@@ -17,11 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ad9c3e469cc17f64d9d2e551a528d7b87f71732b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 968926e89f724f8e8ac647a0bfa09c7c97098adc
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843894"
 ---
 # <a name="how-to-start-and-end-performance-data-collection"></a>Postupy: spuštění a ukončení shromažďování dat výkonu
 Binární cíl, který chcete musíte přidat do profilu relace výkonu, které před zahájením profilace. Chcete-li přidat cíl, klikněte pravým tlačítkem **cíle** v **prohlížeč výkonu**a potom klikněte na **přidat cíl binární**. V **přidat cíl binární** dialogové okno, vyberte název souboru a pak klikněte na tlačítko **otevřete**. Přidá nový binární.  
@@ -38,6 +39,6 @@ Binární cíl, který chcete musíte přidat do profilu relace výkonu, které 
   
 -   Ukončení relace profilování preferovanou metodu je ukončení aplikace. Okamžitě zastavena profilace na **prohlížeč výkonu** nástrojů, klikněte na tlačítko **Zastavit**.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Řízení shromažďování dat](../profiling/controlling-data-collection.md)   
- [Postupy: pozastavení a obnovení shromažďování dat výkonu](../profiling/how-to-pause-and-resume-performance-data-collection.md)
+ [Postupy: Pozastavení a opětovné spuštění shromažďování dat o výkonu](../profiling/how-to-pause-and-resume-performance-data-collection.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetClassTypeByName | Microsoft Docs
+title: IDebugSymbolProvider::GetClassTypeByName | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b972885a8999ac688ade380fbe9601d4274d205e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3b67b959d31989c0a891fc44e1bf8acefb6cc182
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49846951"
 ---
 # <a name="idebugsymbolprovidergetclasstypebyname"></a>IDebugSymbolProvider::GetClassTypeByName
-Tato metoda získá typ pole Třída představující plně kvalifikovaný název třídy.  
+Tato metoda načte pole typu třídy, představující plně kvalifikovaný název třídy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,16 +45,16 @@ int GetClassTypeByName(
   
 #### <a name="parameters"></a>Parametry  
  `pszClassName`  
- [v] Název třídy.  
+ [in] Název třídy.  
   
  `nameMatch`  
- [v] Vybere typ shodu, například malá a velká písmena. Hodnota z [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md) výčtu.  
+ [in] Vybere typ shody, například velká a malá písmena. Hodnota z [NAME_MATCH](../../../extensibility/debugger/reference/name-match.md) výčtu.  
   
  `ppField`  
  [out] Vrátí typ třídy reprezentovaná [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) rozhraní.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   

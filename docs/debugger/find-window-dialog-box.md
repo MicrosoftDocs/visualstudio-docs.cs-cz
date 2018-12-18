@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31472042"
 ---
 # <a name="find-window-dialog-box"></a>Dialogové okno vyhledávacího okna
 Použijte toto dialogové okno Vybrat a zobrazit její vlastnosti nebo zprávy. K zobrazení tohoto dialogového okna, zvolte **najít okno** z **Spy** nabídky.  

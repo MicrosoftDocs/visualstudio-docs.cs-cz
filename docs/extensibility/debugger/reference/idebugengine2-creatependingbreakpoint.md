@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::CreatePendingBreakpoint | Microsoft Docs
+title: IDebugEngine2::CreatePendingBreakpoint | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6a0813e077d8bdc2ba024dc932a6cb571b1b2fed
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d711b119e88e9996df19862f9a6779f285ebe4f8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49907011"
 ---
 # <a name="idebugengine2creatependingbreakpoint"></a>IDebugEngine2::CreatePendingBreakpoint
-Vytvoří čekající zarážek v modulu ladění (DE).  
+Vytvoří čekající zarážka v ladicí stroj (DE).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,23 +43,23 @@ int CreatePendingBreakpoint(
   
 #### <a name="parameters"></a>Parametry  
  `pBPRequest`  
- [v] [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) objekt, který popisuje čekající zarážek vytvořit.  
+ [in] [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md) objekt, který popisuje čekající zarážka k vytvoření.  
   
  `ppPendingBP`  
- [out] Vrátí [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) objekt, který reprezentuje čekající zarážek.  
+ [out] Vrátí [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) objekt, který reprezentuje čekající zarážka.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby. Obvykle vrátí `E_FAIL` Pokud `pBPRequest` parametr neodpovídá žádný jazyk podporuje DE, pokud `pBPRequest` parametru je neplatná nebo nekompletní.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Obvykle vrací `E_FAIL` Pokud `pBPRequest` parametru se neshoduje s libovolný jazyk podporuje DE if `pBPRequest` parametru je neplatná nebo neúplná.  
   
 ## <a name="remarks"></a>Poznámky  
- Čekající zarážek je kolekce všechny informace potřebné k vytvoření vazby zarážku kódu. Čekající zarážek tato metoda vrátí není vázán na kód, dokud [vazby](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md) metoda je volána.  
+ Čekající zarážkou je v podstatě kolekce všechny informace potřebné k vytvoření vazby zarážku do kódu. Čekající zarážka vrácené z této metody není vázán na kód, dokud [svázat](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md) metoda je volána.  
   
- Pro každou čekající na vyřízení zarážek sady uživatele správce ladicí relace (SDM) volá tuto metodu v každé připojené DE. Je DE k ověřte, zda je platný pro aplikace spuštěné v této DE zarážku.  
+ Pro každou čekající zarážka nastaví uživatele, Správce ladění relace (SDM) volá tuto metodu v každé připojené DE. Je až za ověření, že je platný pro programy spuštěné v této DE zarážku.  
   
- Pokud uživatel nastaví zarážku na řádek kódu, DE je zdarma vytvořit vazbu zarážek na nejbližší řádek v dokumentu, který odpovídá tento kód. To umožňuje uživatelům nastavit bod přerušení na první řádek Víceřádkový příkazu, ale vazbu na posledním řádku (kde všechny kód je nastavený atribut v informace o ladění).  
+ Pokud uživatel nastaví zarážku na řádek kódu, DE je bezplatné navázat zarážku na nejbližší řádek v dokumentu, který odpovídá tento kód. To umožňuje uživateli nastavit zarážku na první řádek příkazu více řádků, ale vytvořte jeho vazbu na posledním řádku (kde veškerý kód atributem v ladicích informací).  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchou `CProgram` objektu. Implementace je DE `IDebugEngine2::CreatePendingBreakpoint` pak může předávat všechna volání Tato implementace metody v každém programu.  
+ Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CProgram` objektu. Implementace je DE `IDebugEngine2::CreatePendingBreakpoint` může potom je předejte všechna volání této implementaci metody v každém programu.  
   
 ```  
 HRESULT CProgram::CreatePendingBreakpoint(IDebugBreakpointRequest2* pBPRequest, IDebugPendingBreakpoint2** ppPendingBP)     
@@ -74,6 +75,6 @@ HRESULT CProgram::CreatePendingBreakpoint(IDebugBreakpointRequest2* pBPRequest, 
   
 ## <a name="see-also"></a>Viz také  
  [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md)   
- [Vazby](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)   
+ [Vytvoření vazby](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md)   
  [IDebugBreakpointRequest2](../../../extensibility/debugger/reference/idebugbreakpointrequest2.md)   
  [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)

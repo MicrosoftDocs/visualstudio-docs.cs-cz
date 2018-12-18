@@ -1,9 +1,8 @@
 ---
-title: 'Postupy: Export diagramů tříd jako obrázky (návrhář tříd) | Microsoft Docs'
-ms.custom: ''
+title: 'Postupy: Export diagramů tříd jako obrázky (návrhář tříd)'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
 - vs.classdesigner.exportdialog
@@ -15,27 +14,32 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c69a03c141779eefda805e39cdda6403a502a22
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9c18fa28d52115d2666e2098a56a78658bebdc8f
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/10/2018
+ms.locfileid: "33956842"
 ---
-# <a name="how-to-export-class-diagrams-as-images-class-designer"></a>Postupy: Export diagramů tříd jako obrázky (návrhář tříd)
-Exportovat diagram třídy, kterou jste vytvořili z kódu v projektu, uložte jako obrázek diagramu. Pokud chcete provést export diagramů tříd UML místo, přečtěte si téma [exportovat diagramy jako obrázky](../../modeling/export-diagrams-as-images.md).  
-  
-1.  Otevřete soubor třídy diagram (.cd).  
-  
-2.  Z **diagramu tříd** nabídky nebo diagram prostor místní nabídky, zvolte **exportovat Diagram jako obrázek**.  
-  
-3.  Vyberte diagram.  
-  
-4.  Vyberte formát, který chcete.  
-  
-5.  Zvolte **exportovat** pro dokončení exportu.  
-  
-     Pokud chcete automaticky aktualizovat exportovaný bitové kopie, které jsou odkazované z jiné dokumenty, exportujte diagram znovu v sadě Visual Studio.  
-  
+# <a name="how-to-export-class-diagrams-as-images"></a>Postupy: Export diagramů tříd jako obrázky
+
+Exportovat diagram třídy, kterou jste vytvořili z kódu v projektu, uložte jako obrázek diagramu. Pokud chcete provést export diagramů tříd UML místo, přečtěte si téma [exportovat diagramy jako obrázky](../../modeling/export-diagrams-as-images.md).
+
+## <a name="export-a-diagram"></a>Exportovat diagram
+
+1.  Otevřete diagramu – třída (*.cd*) souboru.
+
+2.  Z **diagramu tříd** nabídky nebo diagram prostor místní nabídky, zvolte **exportovat Diagram jako obrázek**.
+
+3.  Vyberte diagram.
+
+4.  Vyberte formát, který chcete.
+
+5.  Zvolte **exportovat** pro dokončení exportu.
+
+Pokud chcete automaticky aktualizovat exportovaný bitové kopie, které jsou odkazované z jiné dokumenty, exportujte diagram znovu v sadě Visual Studio.
+
 ## <a name="see-also"></a>Viz také
-[Postupy: tisk diagramů tříd](how-to-print-class-diagrams.md)   
-[Práce s diagramy tříd](working-with-class-diagrams.md)
+
+- [Postupy: tisk diagramů tříd](how-to-print-class-diagrams.md)
+- [Práce s diagramy tříd](working-with-class-diagrams.md)

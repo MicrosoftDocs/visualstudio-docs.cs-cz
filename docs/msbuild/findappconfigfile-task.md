@@ -1,5 +1,5 @@
 ---
-title: Findappconfigfile – úloha | Microsoft Docs
+title: Findappconfigfile – úloha | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -18,28 +18,29 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cf30e53f8d62f98b5e18b4e9a64e43d32aa498b0
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 04a8209ca6856ba550a45c7f67480d1e89db49a3
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37946206"
 ---
 # <a name="findappconfigfile-task"></a>FindAppConfigFile – úloha
-Vyhledá soubor app.config, pokud existuje v zadané seznamy.  
+Vyhledá *app.config* soubor, pokud existuje zadaný seznamů.  
   
 ## <a name="parameters"></a>Parametry  
  Následující tabulka popisuje parametry `FindAppConfigFile` úloh.  
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|`AppConfigFile`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Určuje první odpovídající položka nalezena v seznamu, pokud existuje.|  
-|`PrimaryList`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje primární v seznamu prohledávat.|  
+|`AppConfigFile`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Určuje první odpovídající položku v seznamu, pokud existuje.|  
+|`PrimaryList`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje primární seznam prohledávat.|  
 |`SecondaryList`|Požadovaný parametr <xref:Microsoft.Build.Framework.ITaskItem>`[]`.<br /><br /> Určuje seznam sekundární prohledávat.|  
-|`TargetPath`|Požadované `String` parametr.<br /><br /> Určuje hodnotu, která chcete přidat jako metadata.|  
+|`TargetPath`|Vyžaduje `String` parametru.<br /><br /> Určuje hodnotu, chcete-li přidat jako metadata.|  
   
 ## <a name="remarks"></a>Poznámky  
- Kromě s parametry, které jsou uvedené v tabulce, zdědí tento úkol parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třída, které dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrech a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).  
+ Kromě s parametry, které jsou uvedené v tabulce, zdědí tento úkol parametry ze <xref:Microsoft.Build.Tasks.TaskExtension> třída, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Úlohy](../msbuild/msbuild-tasks.md)   
  [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)

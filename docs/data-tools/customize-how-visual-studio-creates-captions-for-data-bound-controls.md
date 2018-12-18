@@ -1,5 +1,5 @@
 ---
-title: Přizpůsobení, jak Visual Studio vytváří titulky pro ovládací prvky vázané na data
+title: Přizpůsobení popisků pro ovládací prvky vázané daty
 ms.date: 11/03/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,100 +11,103 @@ ms.assetid: 6d4d15f8-4d78-42fd-af64-779ae98d62c8
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 35bcc2ed38a8330e7eb4ab38416c91a5c51ec2d4
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 11f7249f30b1866ca7c4aea4bbefa850a5353c0f
+ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52305582"
 ---
-# <a name="customize-how-visual-studio-creates-captions-for-data-bound-controls"></a>Přizpůsobení, jak Visual Studio vytváří titulky pro ovládací prvky vázané na data
-Když přetáhnete položky z [okno zdroje dat](add-new-data-sources.md) do návrháře, obzvláštní pozornost stává play: názvy sloupců v záhlaví popisky jsou naformátována do více čitelných řetězců, pokud dvě nebo více slova se zjistí zřetězen dohromady. Můžete upravit způsob, ve kterém jsou tyto popisky vytvořili, a nastavení **SmartCaptionExpression**, **SmartCaptionReplacement**, a **SmartCaptionSuffix** hodnoty v **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\15.0\Data Designer** klíč registru.
+# <a name="customize-how-visual-studio-creates-captions-for-data-bound-controls"></a>Úprava způsobu, kterým Visual Studio vytváří titulky pro ovládací prvky vázané daty
+
+Při přetažení položky z [okna zdroje dat](add-new-data-sources.md#data-sources-window) do návrháře, zvláštní pozornost vstupu do play: názvy sloupců v popiscích titulek jsou přeformátována na řetězec čitelnější, pokud dvě nebo více slov nedodržují zřetězených dohromady. Můžete změnit způsob, ve kterém jsou tyto popisky vytvořené, tak, že nastavíte **SmartCaptionExpression**, **SmartCaptionReplacement**, a **SmartCaptionSuffix** hodnoty v **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\15.0\Data návrháři** klíč registru.
 
 > [!NOTE]
-> Tento klíč registru neexistuje, dokud jeho vytvoření.
+> Tento klíč registru neexistuje, dokud ho vytvoříte.
 
-Inteligentní přidávání titulků řídí regulární výraz zadaný do hodnoty **SmartCaptionExpression** hodnotu. Přidávání **Data Designer** klíč registru přepíše výchozí regulární výraz, který určuje titulek popisky. Další informace o regulárních výrazech najdete v tématu [pomocí regulárních výrazů v sadě Visual Studio](../ide/using-regular-expressions-in-visual-studio.md).
+Inteligentní titulky řídí regulárních výrazů do hodnoty **SmartCaptionExpression** hodnotu. Přidávání **návrháře dat** klíč registru přepisuje výchozí regulární výraz, který řídí titulků. Další informace o formátování regulárních výrazů, naleznete v tématu [pomocí regulárních výrazů v sadě Visual Studio](../ide/using-regular-expressions-in-visual-studio.md).
 
-Následující tabulka popisuje hodnoty registru, které řídí titulek popisky.
+Následující tabulka popisuje hodnoty registru, které řídí titulků.
 
 |Položky registru|Popis|
 |-------------------|-----------------|
-|**SmartCaptionExpression**|Regulární výraz tak, aby odpovídaly vašim vzorům.|
-|**SmartCaptionReplacement**|Formát, který se zobrazí všechny skupiny obsažena ve **SmartCaptionExpression**.|
-|**SmartCaptionSuffix**|Volitelný řetězec má být připojen na konec titulek.|
+|**SmartCaptionExpression**|Regulární výraz, který používáte tak, aby odpovídaly vaše postupy.|
+|**SmartCaptionReplacement**|Formát, který se zobrazí všechny skupiny se shodou v **SmartCaptionExpression**.|
+|**SmartCaptionSuffix**|Volitelný řetězec pro připojení za účelem titulek.|
 
 Následující tabulka uvádí vnitřní výchozí nastavení pro tyto hodnoty registru.
 
 |Položky registru|Výchozí hodnota|Vysvětlení|
 |-------------------|-------------------|-----------------|
-|**SmartCaptionExpression**|(\\\p{Ll}) (\\\p{Lu})&#124;_ +|Odpovídá malé písmeno a velké písmeno nebo podtržítko.|
-|**SmartCaptionReplacement**|$1 $2|$1 představuje znaky shodná v závorkách první výraz a $2 představuje znaky shodná v druhé závorkách. Pokud chcete nahrazení je na první shodu, mezeru a druhý shody.|
-|**SmartCaptionSuffix**|:|Představuje znak připojenou k vrácený řetězec. Například, pokud je titulek `Company Name`, přípona umožňuje `Company Name:`|
+|**SmartCaptionExpression**|**(\\\p{Ll}) (\\\p{Lu})&#124;_ +**|Odpovídá znak malého písmene, za nímž následuje velkým písmenem nebo podtržítkem.|
+|**SmartCaptionReplacement**|**$1 $2**|**$1** představuje libovolné znaky se shodou v první závorky výrazu a **$2** představuje libovolné znaky shoda v druhé závorky. Nahrazení je první shodu, mezeru a druhý shoda.|
+|**SmartCaptionSuffix**|**:**|Hodnota představuje znak připojenou k vráceného řetězce. Například, pokud je popisek `Company Name`, přípona umožňuje `Company Name:`|
 
 > [!CAUTION]
-> Měli byste být velmi opatrní při provádění nic v editoru registru. Před úpravou ji zálohujte registru. Pokud Editor registru používán správně, můžete způsobit vážné problémy, které mohou vyžadovat přeinstalaci operačního systému. Microsoft nezaručuje, že lze vyřešit problémy, které způsobí nesprávně pomocí Editoru registru. Editor registru používáte na vlastní nebezpečí.
+> Měli byste být opatrní při teď zrovna nic nedělá v editoru registru. Registr zálohovali začnete upravovat. Pokud Editor registru používán správně, můžete způsobit vážné problémy, které mohou vyžadovat přeinstalaci operačního systému. Microsoft nezaručuje, že lze vyřešit problémy způsobující pomocí Editoru registru nesprávně. Pomocí Editoru registru na vlastní nebezpečí.
 >
->  Obsahuje pokyny pro zálohování, úpravy a obnovení registru v následujícím článku Knowledge Base: [Popis registru systému Windows](http://support.microsoft.com/default.aspx?scid=kb;en-us;256986) (http://support.microsoft.com/default.aspx?scid=kb; en-us; 256986)
+> Obsahuje pokyny pro zálohování, úpravy a obnovení registru následujícím článku znalostní báze: [Popis registru Microsoft Windows](http://support.microsoft.com/default.aspx?scid=kb;en-us;256986) (http://support.microsoft.com/default.aspx?scid=kb; en-us; 256986)
 
-### <a name="to-modify-the-smart-captioning-behavior-of-the-data-sources-window"></a>Chcete-li upravit inteligentní titulků chování okna zdroje dat
+## <a name="modify-the-smart-captioning-behavior-of-the-data-sources-window"></a>Upravit inteligentní titulků chování okna zdroje dat
 
-1.  Otevřete příkazové okno kliknutím **spustit** a potom **spustit**.
+1.  Otevřete okno příkazového řádku kliknutím **Start** a potom **spustit**.
 
 2.  Typ `regedit` v **spustit** dialogové okno a klikněte na tlačítko **OK**.
 
-3.  Rozbalte **HKEY_CURRENT_USER**, **softwaru*, **Microsoft**, **Visual Studio** uzlu.
+3.  Rozbalte **HKEY_CURRENT_USER** > **softwaru** > **Microsoft** > **VisualStudio**uzlu.
 
-7.  Klikněte pravým tlačítkem myši **15.0** uzel a vytvořte novou **klíč** s názvem `Data Designers`.
+4.  Klikněte pravým tlačítkem myši **15.0** uzel a vytvořte nový **klíč** s názvem `Data Designers`.
 
-8.  Klikněte pravým tlačítkem myši **Data Designer** uzel a vytvořte tři nové hodnoty řetězce:
+5.  Klikněte pravým tlačítkem myši **návrháře dat** uzel a vytvořte tři nové hodnoty řetězce:
 
     - `SmartCaptionExpression`
     - `SmartCaptionReplacement`
     - `SmartCaptionSuffix`
 
-11. Klikněte pravým tlačítkem myši **SmartCaptionExpression** hodnotu a vyberte **upravit**.
+6. Klikněte pravým tlačítkem myši **SmartCaptionExpression** hodnotu a vyberte **změnit**.
 
-12. Zadejte regulární výraz, který chcete **zdroje dat** okna.
+7. Zadejte regulární výraz, který chcete, aby **zdroje dat** okna.
 
-13. Klikněte pravým tlačítkem myši **SmartCaptionReplacement** hodnotu a vyberte **upravit**.
+8. Klikněte pravým tlačítkem myši **SmartCaptionReplacement** hodnotu a vyberte **změnit**.
 
-14. Zadejte nahrazení řetězec formátu způsob, jakým chcete zobrazit vzory shodná v regulárním výrazu.
+9. Zadejte náhradní řetězec ve formátu tak, jak chcete zobrazit tyto vzory se dají v regulárním výrazu odpovídá.
 
-15. Klikněte pravým tlačítkem myši **SmartCaptionSuffix** hodnotu a vyberte **upravit**.
+10. Klikněte pravým tlačítkem myši **SmartCaptionSuffix** hodnotu a vyberte **změnit**.
 
-16. Zadejte znaky, které se má zobrazit na konci titulek.
+11. Zadejte všechny znaky, které se mají zobrazit na konci titulek.
 
-    Při příštím přetáhnete položky z **zdroje dat** okně titulek popisky jsou vytvořené pomocí nové hodnoty registru zadané.
+    Při příštím přetáhněte položky z **zdroje dat** okně titulek popisky jsou vytvořeny pomocí nové hodnoty registru, které jsou k dispozici.
 
-### <a name="to-turn-off-the-smart-captioning-feature"></a>Chcete-li vypnout funkci inteligentního titulků
+## <a name="turn-off-the-smart-captioning-feature"></a>Vypnout funkci inteligentního titulků
 
-1.  Otevřete příkazové okno kliknutím **spustit** a potom **spustit**.
+1.  Otevřete okno příkazového řádku kliknutím **Start** a potom **spustit**.
 
 2.  Typ `regedit` v **spustit** dialogové okno a klikněte na tlačítko **OK**.
 
-3.  Rozbalte **HKEY_CURRENT_USER**, **softwaru**, **Microsoft**, **Visual Studio** uzlu.
+3.  Rozbalte **HKEY_CURRENT_USER** > **softwaru** > **Microsoft** > **VisualStudio**uzlu.
 
-7.  Klikněte pravým tlačítkem myši **15.0** uzel a vytvořte novou **klíč** s názvem `Data Designers`.
+4.  Klikněte pravým tlačítkem myši **15.0** uzel a vytvořte nový **klíč** s názvem `Data Designers`.
 
-8.  Klikněte pravým tlačítkem myši **Data Designer** uzel a vytvořte tři nové hodnoty řetězce:
+5.  Klikněte pravým tlačítkem myši **návrháře dat** uzel a vytvořte tři nové hodnoty řetězce:
 
     - `SmartCaptionExpression`
     - `SmartCaptionReplacement`
     - `SmartCaptionSuffix`
 
-11. Klikněte pravým tlačítkem myši **SmartCaptionExpression** položky a vyberte **upravit**.
+6. Klikněte pravým tlačítkem myši **SmartCaptionExpression** položky a vyberte **změnit**.
 
-12. Zadejte `(.*)` pro hodnotu. To bude odpovídat celý řetězec.
+7. Zadejte `(.*)` pro hodnotu. To se bude shodovat celý řetězec.
 
-13. Klikněte pravým tlačítkem myši **SmartCaptionReplacement** položky a vyberte **upravit**.
+8. Klikněte pravým tlačítkem myši **SmartCaptionReplacement** položky a vyberte **změnit**.
 
-14. Zadejte `$1` pro hodnotu. Tím je nahrazena řetězec s odpovídající hodnotou, což je celý řetězec tak, aby zůstane beze změny.
+9. Zadejte `$1` pro hodnotu. To nahradí řetězec odpovídající hodnotu, která je celý řetězec tak, aby zůstane beze změny.
 
-    Při příštím přetáhnete položky z **zdroje dat** okně titulek popisky jsou vytvořeny pomocí titulků beze změny.
+    Při příštím přetáhněte položky z **zdroje dat** popisky titulek okna, jsou vytvořeny s verzí bez úprav titulky.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Vytvoření vazby ovládacích prvků k datům v sadě Visual Studio](../data-tools/bind-controls-to-data-in-visual-studio.md)

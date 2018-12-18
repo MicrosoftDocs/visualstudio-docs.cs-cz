@@ -13,16 +13,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 824a67ec2ce71a9b7810ace93001a942dc73e60e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: deafe488fdb44216f0a6750f532c2e0d2363b453
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34262277"
 ---
-# <a name="controlling-data-collection"></a>Řízení kolekce dat
+# <a name="control-data-collection"></a>Řízení shromažďování dat
 Nástroje pro profilaci sady [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] umožňují řídit dobu, kdy dochází během relace výkonu k profilaci dat, a slouží k určení funkcí, které jsou profilovány. Tato část popisuje, jak spustit a zastavit shromažďování dat z **prohlížeč výkonu** a **ovládací prvek kolekce dat** windows a jak omezit objekty, pro které se shromažďují data vytváření profilů.  
   
-## <a name="common-tasks"></a>Obecné úlohy  
+## <a name="common-tasks"></a>Běžné úlohy
   
 |Úloha|Související obsah|  
 |----------|---------------------|  

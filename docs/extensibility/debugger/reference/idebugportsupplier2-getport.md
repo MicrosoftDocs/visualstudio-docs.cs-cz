@@ -1,5 +1,5 @@
 ---
-title: IDebugPortSupplier2::GetPort | Microsoft Docs
+title: IDebugPortSupplier2::GetPort | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e1eab1bc390df15a00d5c00dead366e246c8ecd6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c92c5b1e0440ba654f2169d28546fbd39721df5c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949939"
 ---
 # <a name="idebugportsupplier2getport"></a>IDebugPortSupplier2::GetPort
-Získá port od jiného dodavatele portu.  
+Získá od jiného dodavatele portu port.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,13 +43,13 @@ int GetPort(
   
 #### <a name="parameters"></a>Parametry  
  `guidPort`  
- [v] Globálně jedinečný identifikátor (GUID) portu.  
+ [in] Globálně jedinečný identifikátor (GUID) portu.  
   
  `ppPort`  
  [out] Vrátí [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) objekt, který reprezentuje port.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby. Vrátí `E_PORTSUPPLIER_NO_PORT` Pokud není port existuje s daným identifikátorem.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí `E_PORTSUPPLIER_NO_PORT` Pokud neexistuje žádný port s daným identifikátorem.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)   

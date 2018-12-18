@@ -1,5 +1,5 @@
 ---
-title: IDebugBoundBreakpoint2::GetState | Microsoft Docs
+title: IDebugBoundBreakpoint2::GetState | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1f9309152024d193aec95ca0fbad58085ba59948
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 88a72fadce7022eff8ee5b2fe2b155b32160fbac
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49909874"
 ---
 # <a name="idebugboundbreakpoint2getstate"></a>IDebugBoundBreakpoint2::GetState
-Získá stav této vázané breakpoint.  
+Získá stav vázaná zarážka.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,13 +42,13 @@ int GetState(
   
 #### <a name="parameters"></a>Parametry  
  `pState`  
- [out] Vrátí hodnotu z [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) výčet, který popisuje stav zarážku.  
+ [out] Vrátí hodnotu z [BP_STATE](../../../extensibility/debugger/reference/bp-state.md) výčet popisující stav zarážky.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchou `CBoundBreakpoint` objekt, který zveřejňuje [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) rozhraní.  
+ Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CBoundBreakpoint` objekt, který zveřejňuje [IDebugBoundBreakpoint2](../../../extensibility/debugger/reference/idebugboundbreakpoint2.md) rozhraní.  
   
 ```  
 HRESULT CBoundBreakpoint::GetState(BP_STATE* pState)    

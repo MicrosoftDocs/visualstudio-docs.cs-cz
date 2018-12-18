@@ -12,26 +12,27 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e0f0275e7123db9febaeaf05f231053818665df
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d19671e0f9280f02a012ad02b5421f2d62d30926
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35255207"
 ---
 # <a name="profilecurrentid"></a>PROFILE_CURRENTID
-PROFILE_CURRENTID vrátí pseudo token pro přístup z více vláken id nebo id procesu, ve volání funkce NameProfile, StartProfile, StopProfile, SuspendProfile a ResumeProfile. Použijte ho, aby funkce pracovat na aktuální vlákno nebo proces, nikoli konkrétně uvedené jeden.  
+PROFILE_CURRENTID vrátí pseudo token pro ID procesu, ve volání funkce NameProfile, StartProfile, StopProfile, SuspendProfile a ResumeProfile nebo ID vlákna. Použijte ho, aby funkce pracovat na aktuální vlákno nebo proces, nikoli konkrétně uvedené jeden.  
   
 ## <a name="example"></a>Příklad  
- PROFILE_CURRENTID je definována v VSPerf.h jako:  
+ PROFILE_CURRENTID je definována v *VSPerf.h* jako:  
   
-```  
+```cpp  
 static const unsigned int PROFILE_CURRENTID = (unsigned int)-1;  
 ```  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ilustruje PROFILE_CURRENTID. Tento příklad používá PROFILE_CURRENTID jako parametr identifikace aktuální vlákno ve volání [StartProfile](../profiling/startprofile.md) funkce.  
   
-```  
+```cpp  
 void ExerciseProfileCurrentID()  
 {  
     // Declare ProfileOperationResult enumeration   
@@ -58,8 +59,8 @@ void ExerciseProfileCurrentID()
 }  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace rozhraní API sady Visual Studio Profiler (nativní)](../profiling/visual-studio-profiler-api-reference-native.md)   
+## <a name="see-also"></a>Viz také:  
+ [Visual Studio profiler referenční dokumentace rozhraní API (nativní)](../profiling/visual-studio-profiler-api-reference-native.md)   
  [NameProfile](../profiling/nameprofile.md)   
  [ResumeProfile](../profiling/resumeprofile.md)   
  [StartProfile](../profiling/startprofile.md)   

@@ -1,5 +1,5 @@
 ---
-title: Idiasession::findlinesbyrva – | Microsoft Docs
+title: Idiasession::findlinesbyrva – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e14b41fe3e7595ef56364fa92b0153f4f457fdd6
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 2e2f3713407ad17f468e125a1592ee8d684d27d3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49869740"
 ---
 # <a name="idiasessionfindlinesbyrva"></a>IDiaSession::findLinesByRVA
-Načte řádků v zadané kompilace, které obsahují zadaný relativní virtuální adresy (RVA).  
+Načte řádky v zadané kompilace, které obsahují zadaný relativní virtuální adresu (RVA).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,19 +36,19 @@ HRESULT findLinesByRVA (
   
 #### <a name="parameters"></a>Parametry  
  `rva`  
- [v] Určuje adresu jako RVA.  
+ [in] Určuje adresu jako adresu RVA.  
   
  `length`  
- [v] Určuje počet bajtů rozsah adres tak, aby pokrývalo k tomuto dotazu.  
+ [in] Určuje počet bajtů rozsah adres, aby pokryl s Tento dotaz.  
   
  `ppResult`  
  [out] Vrátí [idiaenumlinenumbers –](../../debugger/debug-interface-access/idiaenumlinenumbers.md) objekt, který obsahuje seznam všech řádku čísla tohoto krytí zadaný rozsah adres.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
- Tento příklad ukazuje funkce, který získá všechna čísla řádků obsažená v zadané funkce pomocí funkce relativní virtuální adresy a délka.  
+ Tento příklad ukazuje funkci, která získá všechna čísla řádků obsažená v zadanou funkci pomocí funkce relativní virtuální adresu a délku.  
   
 ```C++  
 IDiaEnumLineNumbers* GetLineNumbersByRVA(IDiaSymbol *pFunc, IDiaSession *pSession)  

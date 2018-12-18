@@ -14,18 +14,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8072fbee78312a5b44bff076e563c638a35d1d64
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a8d6909ee08984d0bff57f993538957b8958dcf2
+ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35237364"
 ---
 # <a name="markerserieswritealert-method"></a>marker_series::write_alert – metoda
 Zapíše výstrahu vizualizér souběžnosti trasovacího souboru.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void write_alert(  
    _In_ LPCTSTR _Format,  
    ...  
@@ -37,9 +38,9 @@ void write_alert(
  Složený formátovací řetězec, který obsahuje text smíšeného s nula nebo více položek formátu, odpovídajících objektů v seznamu argumentů.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** cvmarkersobj.h  
+ **Záhlaví:** *cvmarkersobj.h*  
   
  **Namespace:** Concurrency::Diagnostic –  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [marker_series – třída](../profiling/marker-series-class.md)

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31471792"
 ---
 # <a name="error-unable-to-initiate-dcom-communication"></a>Chyba: Nelze inicializovat komunikaci modelu DCOM.
 Při pokusu o komunikaci s vzdálený počítač v místním počítači došlo k chybě DCOM. To je způsobeno brány firewall na vzdálený server nebo přerušená ověřování systému Windows ve vzdáleném počítači.  

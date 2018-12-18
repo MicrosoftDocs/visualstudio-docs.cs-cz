@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramPublisher2::UnpublishProgram | Microsoft Docs
+title: IDebugProgramPublisher2::UnpublishProgram | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9bff0c60ea8401896eb5399ed797d90b62bf0d0a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2daec6615f98d6e253e65bdc66cb7f1f545f9857
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49822212"
 ---
 # <a name="idebugprogrampublisher2unpublishprogram"></a>IDebugProgramPublisher2::UnpublishProgram
-Umožňuje programu není k dispozici chcete ladit.  
+Díky programu k ladění není k dispozici.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +41,13 @@ int UnpublishProgram(
   
 #### <a name="parameters"></a>Parametry  
  `pDebuggeeInterface`  
- [v] `IUnknown` Rozhraní programu. Jedná se o stejnou hodnotu zadané [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) metoda a jednoznačně identifikuje program, který je právě odebírán (to znamená, použije se jako soubor cookie).  
+ [in] `IUnknown` Rozhraní do programu. To je stejná jako hodnota předaná [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) metoda a jednoznačně identifikuje program odebírá (to znamená, slouží jako soubor cookie).  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Chcete-li program k dispozici na ladění stroje a správce ladicí relace, použijte [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) metoda.  
+ Chcete-li zpřístupnit program k ladění modulů a správce ladění relace, použijte [PublishProgram](../../../extensibility/debugger/reference/idebugprogrampublisher2-publishprogram.md) metody.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProgramPublisher2](../../../extensibility/debugger/reference/idebugprogrampublisher2.md)   

@@ -1,5 +1,5 @@
 ---
-title: Zarážky (Visual Studio SDK) | Microsoft Docs
+title: Zarážky (Visual Studio SDK) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,42 +13,43 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 42f2efe2785f508bedb104e495309ed40fc6ce39
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 146c8c7e17017a675ad1077d03800328b0d345d3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49932673"
 ---
 # <a name="breakpoints-visual-studio-sdk"></a>Zarážky (Visual Studio SDK)
-Existují tři typy zarážky: čeká na vyřízení, vazby a chyby.  
+Existují tři typy zarážky: čekající mez a chyba.  
   
- **A čeká na zarážek:**  
+ **A až do zarážky:**  
   
--   Je abstrakci, který obsahuje všechny informace potřebné k vytvoření vazby zarážku. jeden nebo více kontexty kódu v jeden nebo více programů. Pokaždé, když program probíhá ladění příčina kód pro načtení, modul ladění kontroluje všechny čekající zarážky chcete zobrazit, pokud mohou být vázány.  
+- Je abstrakcí, který obsahuje všechny informace potřebné k vytvoření vazby zarážky na jeden nebo více kontexty kódu v jedné nebo více programů. Pokaždé, když aplikaci právě laděny PŘÍČINA kód pro načtení, ladicí stroj kontroluje všech čekajících zarážek, pokud chcete zobrazit, pokud může být vázána.  
   
-     Čekající zarážku samotné nikdy váže kód, ale místo shromažďuje a říká, že je tak, aby obsahovala vázané zarážky, které generuje.  
+   Čekající zarážkou, samotný nikdy váže na kód, ale spíše shromažďuje a se říká, že obsahuje všechny vazby zarážek, které generuje.  
   
--   Je reprezentována [IDebugPendingBreakpoint2](../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) rozhraní.  
+- Je reprezentován [IDebugPendingBreakpoint2](../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) rozhraní.  
   
- **Vázané breakpoint:**  
+  **Vázaná zarážka:**  
   
--   Je abstrakci pro zarážku přidružené nebo vázána na kontext jednoho kódu. Každý vázané Breakpoint – je vygenerované v reakci čekající zarážky. Čekající zarážek může, ale generovat více než jeden vázané breakpoint.  
+- Je abstrakcí pro zarážku přidružené nebo svázány s kontextem jeden kód. Každý vázaná zarážka se vygeneruje v reakci na čekající zarážkou. Čekající zarážkou však můžete generovat více než jeden vázaná zarážka.  
   
-     Pokud kód je odpojen, můžete vázané breakpoint nevázaných a zahozeny.  
+   Pokud kód je uvolněna, vázaná zarážka může nevázaných a zahodí.  
   
--   Je reprezentována [IDebugBoundBreakpoint2](../../extensibility/debugger/reference/idebugboundbreakpoint2.md) rozhraní.  
+- Je reprezentován [IDebugBoundBreakpoint2](../../extensibility/debugger/reference/idebugboundbreakpoint2.md) rozhraní.  
   
- **Zarážek k chybě:**  
+  **Zarážka k chybě:**  
   
--   Je abstrakci pro popisující chybu při pokusu vytvořit vazbu čekající zarážek kontext kódu. K chybě zarážek popisuje buď k chybě v umístění nebo ve výrazu zarážek sám sebe. Další informace najdete v tématu [vazby zarážky](../../extensibility/debugger/binding-breakpoints.md).  
+- Je abstrakcí pro popisující chybu při pokusu o čekající zarážkou svázat kontext kódu. K chybě zarážku popisuje buď chybu v umístění nebo samotný výraz zarážky. Další informace najdete v tématu [vytváření vazeb zarážek](../../extensibility/debugger/binding-breakpoints.md).  
   
-     Breakpoint – chyba může být k chybě nebo upozornění.  
+   Chyba zarážky může být chyba nebo upozornění.  
   
--   Je reprezentována [IDebugErrorBreakpoint2](../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) rozhraní.  
+- Je reprezentován [IDebugErrorBreakpoint2](../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) rozhraní.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Programy](../../extensibility/debugger/programs.md)   
- [Koncepty ladicí program](../../extensibility/debugger/debugger-concepts.md)   
+ [Koncepty ladicího programu](../../extensibility/debugger/debugger-concepts.md)   
  [Kontext kódu](../../extensibility/debugger/code-context.md)   
  [IDebugBoundBreakpoint2](../../extensibility/debugger/reference/idebugboundbreakpoint2.md)   
  [IDebugPendingBreakpoint2](../../extensibility/debugger/reference/idebugpendingbreakpoint2.md)   

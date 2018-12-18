@@ -1,5 +1,5 @@
 ---
-title: LPTEXTOUTPROC | Microsoft Docs
+title: LPTEXTOUTPROC | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,19 +19,20 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 235d98ba6a5ca665857b8a18db5ca823ecc0c7c1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2d8439d706dbe8c84d807fb445eda272b96ad589
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49822875"
 ---
 # <a name="lptextoutproc"></a>LPTEXTOUTPROC
-Když uživatel provede operaci zdroj ovládacího prvku z uvnitř integrované vývojové prostředí (IDE), může modul plug-in správy zdroje mají být umístěny chyba nebo stavové zprávy týkající se operace. Modul plug-in seznam můžete zobrazit svůj vlastní okna zpráv pro tento účel. Ale pro další bezproblémovou integraci, modul plug-in můžete předat řetězce integrovaného vývojového prostředí, které zobrazí je v jeho nativní způsob zobrazení informací o stavu. Mechanismus pro toto je `LPTEXTOUTPROC` – ukazatel na funkci. Prostředí IDE implementuje tuto funkci (podrobněji popsané v následující) pro zobrazení stavů a chyb.  
+Když uživatel provede operaci správy zdrojových kódů v rámci integrovaného vývojového prostředí (IDE), modul plug-in správy zdrojového kódu může být vhodné k předání chyba nebo stav zprávy týkající se operace. Modul plug-in zobrazíte jeho vlastní okna se zprávou pro tento účel. Ale pro další bezproblémovou integraci, modul plug-in můžete předat řetězce integrovaného vývojového prostředí, které zobrazí je v jeho nativní způsob zobrazení informací o stavu. Je mechanismus pro to, `LPTEXTOUTPROC` ukazatel na funkci. Rozhraní IDE implementuje tuto funkci (podrobněji popsaný níže) pro zobrazení stavů a chyb.  
   
- Prostředí IDE předá do zdrojového kódu modulu plug-in ukazatel funkce na tuto funkci, jako `lpTextOutProc` parametr při volání metody [SccOpenProject](../extensibility/sccopenproject-function.md). Během operace SCC, třeba uprostřed volání [SccGet](../extensibility/sccget-function.md) zahrnující mnoho souborů, modul plug-in můžete volat `LPTEXTOUTPROC` funkce, pravidelně předávání řetězce k zobrazení. Prostředí IDE může zobrazit tyto řetězce na stavovém řádku, v okně výstupu nebo v samostatném okně, podle potřeby. Volitelně může nebude moci zobrazit některé zprávy s IDE **zrušit** tlačítko. To umožňuje uživateli na tlačítko Storno a poskytuje prostředí IDE možnost předejte tyto informace zpátky do modulu plug-in.  
+ Rozhraní IDE předává do správy zdrojového kódu modulu plug-in ukazatele na funkci na tuto funkci, jako `lpTextOutProc` parametru při volání [sccopenproject –](../extensibility/sccopenproject-function.md). Během operace SCC, třeba uprostřed volání [sccget –](../extensibility/sccget-function.md) zahrnující mnoho souborů, modul plug-in můžete volat `LPTEXTOUTPROC` funkce pravidelně předávání řetězce k zobrazení. Rozhraní IDE se může zobrazit tyto řetězce na stavovém řádku v okně výstupu nebo v samostatném okně, podle potřeby. Volitelně může nebude moci zobrazit některé zprávy s integrovaného vývojového prostředí **zrušit** tlačítko. To umožňuje uživateli zrušit operaci a integrované vývojové prostředí nabízí možnost předávání zpátky do modulu plug-in tyto informace.  
   
-## <a name="signature"></a>Podpis  
- Prostředí IDE výstupu funkce má následující podpis:  
+## <a name="signature"></a>podpis  
+ Rozhraní IDE výstup funkce má následující podpis:  
   
 ```cpp  
 typedef LONG (*LPTEXTOUTPROC) (  
@@ -42,32 +43,32 @@ typedef LONG (*LPTEXTOUTPROC) (
   
 ## <a name="parameters"></a>Parametry  
  display_string  
- Textový řetězec k zobrazení. Tento řetězec nesmí být byla ukončena s znaků CR vrátit, nebo a odřádkování.  
+ Textový řetězec k zobrazení. Tento řetězec by neměl být ukončen direktivou zalomení řádku návratový nebo odřádkování.  
   
  mesg_type  
- Typ zprávy. Následující tabulka uvádí podporované hodnoty tohoto parametru.  
+ Typ zprávy. Následující tabulka uvádí podporované hodnoty pro tento parametr.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
-|`SCC_MSG_INFO, SCC_MSG_WARNING, SCC_MSG_ERROR`|Zpráva považuje za informace, varování nebo chyba.|  
+|`SCC_MSG_INFO, SCC_MSG_WARNING, SCC_MSG_ERROR`|Zpráva se považuje za informace, varování nebo chyba.|  
 |`SCC_MSG_STATUS`|Zpráva se zobrazuje stav a mohou být zobrazeny ve stavovém řádku.|  
-|`SCC_MSG_DOCANCEL`|Odeslané s řetězec žádné zprávy.|  
-|`SCC_MSG_STARTCANCEL`|Zahájí zobrazení **zrušit** tlačítko.|  
+|`SCC_MSG_DOCANCEL`|Odeslat s řetězec žádné zprávy.|  
+|`SCC_MSG_STARTCANCEL`|Začne, zobrazení **zrušit** tlačítko.|  
 |`SCC_MSG_STOPCANCEL`|Zastaví zobrazování **zrušit** tlačítko.|  
-|`SCC_MSG_BACKGROUND_IS_CANCELLED`|Požádá IDE, pokud má být zrušena operace na pozadí: vrátí IDE `SCC_MSG_RTN_CANCEL` Pokud operace byla zrušena; jinak vrátí `SCC_MSG_RTN_OK`. `display_string` Parametr vložena jako [SccMsgDataIsCancelled](#LinkSccMsgDataIsCancelled) strukturu, která poskytuje modul plug-in zdrojového kódu.|  
-|`SCC_MSG_BACKGROUND_ON_BEFORE_GET_FILE`|Poskytuje rozhraní IDE o souboru před načtením z verzí. `display_string` Parametr vložena jako [SccMsgDataOnBeforeGetFile](#LinkSccMsgDataOnBeforeGetFile) strukturu, která poskytuje modul plug-in zdrojového kódu.|  
-|`SCC_MSG_BACKGROUND_ON_AFTER_GET_FILE`|Poskytuje rozhraní IDE o souboru po má byl načteny z verzí. `display_string` Parametr vložena jako [SccMsgDataOnAfterGetFile](#LinkSccMsgDataOnAfterGetFile) strukturu, která poskytuje modul plug-in zdrojového kódu.|  
-|`SCC_MSG_BACKGROUND_ON_MESSAGE`|Sdělíte rozhraní IDE aktuální stav operaci na pozadí. `display_string` Parametr vložena jako [SccMsgDataOnMessage](#LinkSccMsgDataOnMessage) strukturu, která poskytuje modul plug-in zdrojového kódu.|  
+|`SCC_MSG_BACKGROUND_IS_CANCELLED`|Požádá integrovaného vývojového prostředí, pokud je operace na pozadí zruší: IDE vrátí `SCC_MSG_RTN_CANCEL` Pokud byla operace zrušena; v opačném případě vrátí `SCC_MSG_RTN_OK`. `display_string` Parametr je typovaná jako [SccMsgDataIsCancelled](#LinkSccMsgDataIsCancelled) struktury, který je poskytnut pomocí modulu plug-in správy zdrojového kódu.|  
+|`SCC_MSG_BACKGROUND_ON_BEFORE_GET_FILE`|Poskytuje integrované vývojové prostředí o souboru před načtením ze správy verzí. `display_string` Parametr je typovaná jako [SccMsgDataOnBeforeGetFile](#LinkSccMsgDataOnBeforeGetFile) struktury, který je poskytnut pomocí modulu plug-in správy zdrojového kódu.|  
+|`SCC_MSG_BACKGROUND_ON_AFTER_GET_FILE`|Poskytuje integrované vývojové prostředí o souboru po jeho načtení ze správy verzí. `display_string` Parametr je typovaná jako [SccMsgDataOnAfterGetFile](#LinkSccMsgDataOnAfterGetFile) struktury, který je poskytnut pomocí modulu plug-in správy zdrojového kódu.|  
+|`SCC_MSG_BACKGROUND_ON_MESSAGE`|Instruuje integrované vývojové prostředí aktuálního stavu operaci na pozadí. `display_string` Parametr je typovaná jako [SccMsgDataOnMessage](#LinkSccMsgDataOnMessage) struktury, který je poskytnut pomocí modulu plug-in správy zdrojového kódu.|  
   
 ## <a name="return-value"></a>Návratová hodnota  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
-|SCC_MSG_RTN_OK|Řetězec zobrazila nebo operace byla úspěšně dokončena.|  
-|SCC_MSG_RTN_CANCEL|Uživatel chce na tlačítko Storno.|  
+|SCC_MSG_RTN_OK|Řetězec se zobrazí nebo operace byla úspěšně dokončena.|  
+|SCC_MSG_RTN_CANCEL|Uživatel chce, aby na zrušení operace.|  
   
 ## <a name="example"></a>Příklad  
- Předpokládejme, že volání IDE [SccGet](../extensibility/sccget-function.md) s dvacet názvy souborů. Modul plug-in zdrojového kódu se chce zabránit zrušení operace uprostřed get souboru. Po získání každý soubor, zavolá `lpTextOutProc`, předání informace o stavu na každý soubor a odešle `SCC_MSG_DOCANCEL` zpráv, pokud ji nemá stav do sestavy. Pokud kdykoli modul plug-in obdrží návratová hodnota `SCC_MSG_RTN_CANCEL` v prostředí IDE, zruší operaci get okamžitě, takže jsou načteny žádné další soubory.  
+ Předpokládejme, že volání rozhraní IDE [sccget –](../extensibility/sccget-function.md) s dvacet názvy souborů. Modul plug-in správy zdrojového kódu se chce zabránit zrušení operace uprostřed souboru get. Po získání každého souboru, volá `lpTextOutProc`předáním informace o stavu u všech souborů a odešle `SCC_MSG_DOCANCEL` zprávy, pokud nemá stav do sestavy. Pokud v každém okamžiku modul plug-in přijímá návratovou hodnotu `SCC_MSG_RTN_CANCEL` z rozhraní IDE, zruší operaci get okamžitě, tak, že jsou načteny žádné další soubory.  
   
 ## <a name="structures"></a>Struktury  
   
@@ -79,7 +80,7 @@ typedef struct {
 } SccMsgDataIsCancelled;  
 ```  
   
- Tato struktura je odeslána s `SCC_MSG_BACKGROUND_IS_CANCELLED` zprávy. Použije se pro komunikaci ID operace na pozadí, které bylo zrušeno.  
+ Tato struktura se neposílají `SCC_MSG_BACKGROUND_IS_CANCELLED` zprávy. Používá se pro komunikaci ID operace na pozadí, která byla zrušena.  
   
 ###  <a name="LinkSccMsgDataOnBeforeGetFile"></a> SccMsgDataOnBeforeGetFile  
   
@@ -90,7 +91,7 @@ typedef struct {
 } SccMsgDataOnBeforeGetFile;  
 ```  
   
- Tato struktura je odeslána s `SCC_MSG_BACKGROUND_ON_BEFORE_GET_FILE` zprávy. Použije se název souboru o mají být načteny a ID operace na pozadí, který provádí načítání komunikace.  
+ Tato struktura se neposílají `SCC_MSG_BACKGROUND_ON_BEFORE_GET_FILE` zprávy. Používá se pro komunikaci název souboru, o který se má načíst a ID operace na pozadí, který provádí načítání.  
   
 ###  <a name="LinkSccMsgDataOnAfterGetFile"></a> SccMsgDataOnAfterGetFile  
   
@@ -102,12 +103,12 @@ typedef struct {
 } SccMsgDataOnAfterGetFile;  
 ```  
   
- Tato struktura je odeslána s `SCC_MSG_BACKGROUND_ON_AFTER_GET_FILE` zprávy. Použije se pro komunikaci výsledek načítání zadaný soubor, jakož i ID operace na pozadí, která nebyla načítání. Návratové hodnoty pro najdete [SccGet](../extensibility/sccget-function.md) pro co lze zadat v důsledku.  
+ Tato struktura se neposílají `SCC_MSG_BACKGROUND_ON_AFTER_GET_FILE` zprávy. Používá se pro komunikaci výsledek načtení souboru zadané jak ID operace na pozadí, který nebyl načítání. Zobrazit návratové hodnoty pro [sccget –](../extensibility/sccget-function.md) pro co mohou být zadány ve výsledku.  
   
 ###  <a name="LinkSccMsgDataOnMessage"></a> SccMsgDataOnMessage  
  [C++]  
   
-```  
+```cpp  
 typedef struct {  
    DWORD dwBackgroundOperationID;  
    PCSTR szMessage;  
@@ -115,10 +116,10 @@ typedef struct {
 } SccMsgDataOnMessage;  
 ```  
   
- Tato struktura je odeslána s `SCC_MSG_BACKGROUND_ON_MESSAGE` zprávy. Použije se pro komunikaci aktuální stav operaci na pozadí. Stav je vyjádřena jako řetězec, který se má zobrazovat IDE, a `bIsError` označuje závažnost zprávy (`TRUE` pro chybovou zprávu; `FALSE` pro varování nebo informační zpráva). ID operace na pozadí odesílání stav je dán rovněž.  
+ Tato struktura se neposílají `SCC_MSG_BACKGROUND_ON_MESSAGE` zprávy. Používá se pro komunikaci aktuální stav operaci na pozadí. Stav je vyjádřena jako řetězec, který se má zobrazovat integrovaném vývojovém prostředí a `bIsError` označuje závažnost zprávy (`TRUE` pro chybovou zprávu; `FALSE` upozornění nebo informační zpráva). ID operace na pozadí odesílání stav je také zadána.  
   
 ## <a name="code-example"></a>Příklad kódu  
- Zde je stručný příklad volání `LPTEXTOUTPROC` k odeslání `SCC_MSG_BACKGROUND_ON_MESSAGE` zprávu, která zobrazuje postup přetypovat strukturu volání.  
+ Tady je stručný příkladem volání `LPTEXTOUTPROC` k odeslání `SCC_MSG_BACKGROUND_ON_MESSAGE` zprávu, která zobrazuje postup přetypování struktura volání.  
   
 ```cpp  
 LONG SendStatusMessage(  
@@ -139,6 +140,6 @@ LONG SendStatusMessage(
 }  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [Funkce zpětného volání, které implementují rozhraní IDE](../extensibility/callback-functions-implemented-by-the-ide.md)   
- [Moduly plug-in správy zdrojového kódu](../extensibility/source-control-plug-ins.md)
+## <a name="see-also"></a>Viz také:  
+ [Funkce zpětného volání implementované integrovaným vývojovým prostředím](../extensibility/callback-functions-implemented-by-the-ide.md)   
+ [Ovládací prvek moduly plug-in zdrojového kódu](../extensibility/source-control-plug-ins.md)

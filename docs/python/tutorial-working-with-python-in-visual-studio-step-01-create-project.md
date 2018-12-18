@@ -1,83 +1,84 @@
 ---
-title: Práce s Python, krok 1, vytvoření projektu
-description: Krok 1 ze základní kurz pro práci s Python v sadě Visual Studio, osnovy celé kurzu, popisuje požadavky a proces vytvoření nového projektu Python s návodem.
-ms.date: 01/16/2018
+title: Python v sadě Visual Studio kurz – krok 1, vytvoření projektu
+titleSuffix: ''
+description: Přehled a krok 1 Průvodce základní funkce Pythonu v sadě Visual Studio, včetně požadavků a vytvoření nového projektu Pythonu.
+ms.date: 10/29/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 5857f06deea3bc4e7c8af481330e6c66162e2f2a
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 1aaf0c0258d502693b771cad66f9347dd60f80e8
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53049846"
 ---
-# <a name="working-with-python-in-visual-studio"></a>Práce s Python v sadě Visual Studio
+# <a name="tutorial-work-with-python-in-visual-studio"></a>Kurz: Práce s využitím Pythonu v sadě Visual Studio
 
-Python je oblíbených programovací jazyk, který je spolehlivá, flexibilní, usnadňuje další, bez použití na všech operačních systémech a nepodporuje komunity silné vývojářů a mnoho volné knihovny. Jazyk podporuje všechny způsobů vývoje, včetně webových aplikací, webové služby, aplikace klasické pracovní plochy, skriptování a vědecké výpočty a používá mnoho vysoké školy, vědců, běžné vývojáři a profesionální vývojáře agentem.
+Python je oblíbený programovací jazyk, který je spolehlivé, flexibilní, snadno se jej naučíte, bezplatné použití ve všech operačních systémech a podporovaná smlouvou do komunity vývojářů silné a free mnoho knihoven. Jazyk podporuje všechny způsoby vývoje, včetně webových aplikací, webových služeb, aplikací klasické pracovní plochy, skriptování a vědecké výpočty a používá mnoho univerzity, odborníky, příležitostné vývojáři a nabídne profesionální vývojáři.
 
-Visual Studio poskytuje prvotřídní podporu pro jazyk Python. Tento kurz vás provede následující kroky:
+Visual Studio poskytuje prvotřídní podporu pro Python. Tento kurz vás provede následující kroky:
 
 - [Krok 0: instalace](tutorial-working-with-python-in-visual-studio-step-00-installation.md)
-- [Krok 1: Vytvoření projektu jazyka Python (v tomto článku)](#step-1-create-a-new-python-project)
-- [Krok 2: Zápis a spouštění kódu zobrazíte Visual Studio IntelliSense v práci](tutorial-working-with-python-in-visual-studio-step-02-writing-code.md)
-- [Krok 3: Vytvoření další kód v okně interaktivní REPL](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md)
-- [Krok 4: Spuštění programu dokončené v ladicím programu sady Visual Studio](tutorial-working-with-python-in-visual-studio-step-04-debugging.md)
-- [Krok 5: Instalace balíčků a správu prostředí Python](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)
+- [Krok 1: Vytvoření projektu Pythonu (Tento článek)](#step-1-create-a-new-python-project)
+- [Krok 2: Zápis a spouštění kódu zobrazíte IntelliSense ve Visual Studio v práci](tutorial-working-with-python-in-visual-studio-step-02-writing-code.md)
+- [Krok 3: Vytvoření více kódu v okně interaktivní okno REPL](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md)
+- [Krok 4: Dokončení program spustit v ladicím programu sady Visual Studio](tutorial-working-with-python-in-visual-studio-step-04-debugging.md)
+- [Krok 5: Instalace balíčků a spravovat prostředí Pythonu](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)
 - [Krok 6: Práce s Gitem](tutorial-working-with-python-in-visual-studio-step-06-working-with-git.md)
 
-## <a name="prerequisites"></a>Požadavky
+[!INCLUDE[tutorial-prereqs](includes/tutorial-prereqs.md)]
 
-- Visual Studio 2017 se zatížením Python, který je nainstalovaný. V tématu [krok 0](tutorial-working-with-python-in-visual-studio-step-00-installation.md) pokyny.
+## <a name="step-1-create-a-new-python-project"></a>Krok 1: Vytvoření nového projektu Pythonu
 
-## <a name="step-1-create-a-new-python-project"></a>Krok 1: Vytvořte nový projekt Python
+A *projektu* je způsob, jakým Visual Studio spravuje všechny soubory, které společně k vytvoření jedné aplikace, včetně zdrojového kódu, prostředky, konfigurace a tak dále. Projekt aplikaci umožňuje formalizovat a udržuje vztah mezi všechny projektu soubory i externí prostředky, které jsou sdíleny mezi více projekty. V důsledku toho projekty povolit aplikace k bez námahy rozšíření a mnohem jednodušší, než se jednoduše spravují pouze vztahy projektu v ad hoc složek, skripty, textové soubory a dokonce i vlastní paměti.
 
-A *projektu* je, jak Visual Studio spravuje všechny soubory, které jsou poskytovány společně k vytvoření jedné aplikace, včetně zdrojového kódu, prostředků, konfigurace a tak dále. Projekt aplikaci umožňuje formalizovat a udržuje vztah mezi všechny projektu soubory a také externím prostředkům, které jsou sdíleny více projektů. Jako takový projekt povolí aplikaci snadno rozbalte a růst mnohem jednodušší než jednoduše Správa relací projekt v ad hoc složek, skriptů, textové soubory a i svoje vlastní rozhodnutí.
+V tomto kurzu začnete s Jednoduchý projekt obsahující jeden prázdný soubor kódu.
 
-V tomto kurzu začnete s Jednoduchý projekt obsahující soubor jeden, prázdný kód.
+1. V sadě Visual Studio, vyberte **souboru** > **nový** > **projektu** (**Ctrl** + **Shift**+**N**), která se vyvolá **nový projekt** dialogového okna. Tady můžete procházet šablony v různých jazycích, pak vyberte jednu pro váš projekt a zadejte, kam umístí soubory sady Visual Studio.
 
-1. V sadě Visual Studio, vyberte **soubor > Nový > projekt** (Ctrl + Shift + N), který spustí **nový projekt** dialogové okno. Zde můžete procházet šablony napříč různými jazyky, pak vyberte jednu pro svůj projekt a určete, kde umístí soubory v sadě Visual Studio.
+1. Chcete-li zobrazit šablony Pythonu, vyberte **nainstalováno** > **Python** na levé straně nebo vyhledejte "Python". Pomocí vyhledávání je skvělý způsob, jak najít šablonu, pokud si nepamatujete její umístění ve stromu jazyky.
 
-1. Chcete-li zobrazit šablony Python, vyberte **nainstalovaná > Python** na levé straně, nebo hledáním "Python". Pomocí vyhledávání je skvělým způsobem, jak najít šablonu, pokud si nepamatujete jeho umístění ve stromové struktuře jazyky.
+    ![Dialogové okno nového projektu se zobrazí projektů v Pythonu](media/vs-getting-started-python-01-new-project.png)
 
-    ![Dialogové okno Nový projekt se zobrazí projektů v jazyce Python](media/vs-getting-started-python-01-new-project.png)
+    Všimněte si, jak podpora Pythonu v sadě Visual Studio obsahuje několik šablon projektů, včetně webových aplikací s využitím rozhraní Bottle, Flask a Django. Pro účely tohoto návodu ale Začněme prázdný projekt.
 
-    Všimněte si, jak podporu jazyka Python v sadě Visual Studio obsahuje několik šablon projektu, včetně webových aplikací pomocí rozhraní Bottle, Flask a Django. Pro účely tohoto návodu ale Začněme s prázdným projektem.
+1. Vyberte **aplikace v Pythonu** šablony, zadejte název projektu a vyberte **OK**.
 
-1. Vyberte **aplikace Python** šablony, zadejte název projektu a vyberte **OK**.
-
-1. Po chvíli se Visual Studio zobrazí strukturu projektu v **Průzkumníku řešení** okno (1). Výchozí soubor kód je otevřen v editoru (2). Okno vlastností (3) je také zobrazit další informace o libovolnou položku vybraného v Průzkumníkovi řešení, včetně jeho přesné umístění na disku.
+1. Po chvíli se sada Visual Studio zobrazí strukturu projektu v **Průzkumníka řešení** okno (1). Soubor výchozího kódu je otevřen v editoru (2). **Vlastnosti** zobrazíte další informace pro všechny položky vybrané v se také zobrazí okno (3) **Průzkumníka řešení**, včetně jeho přesné umístění na disku.
 
     ![Průzkumník řešení s projektem Python](media/vs-getting-started-python-02-windows.png)
 
-1. Chvíli trvat Seznamte se s Průzkumníku řešení, která je, kde Procházet soubory a složky ve vašem projektu.
+1. Chvíli se seznámit s **Průzkumníka řešení**, což je, kde můžete procházet soubory a složky ve vašem projektu.
 
-    ![Průzkumník řešení rozbalit a zobrazit různé funkce](media/vs-getting-started-python-03-solution-explorer.png)
+    ![Rozbalit a zobrazit různé funkce Průzkumníka řešení](media/vs-getting-started-python-03-solution-explorer.png)
 
-    (1) zvýrazněná tučným písmem je váš projekt pomocí názvu, který jste zadali v dialogovém okně Nový projekt. Na disku, je reprezentována tento projekt `.pyproj` soubor ve složce projektu.
+    (1) je zvýrazněný tučným písmem je váš projekt, pomocí názvu, který jste zadali v **nový projekt** dialogového okna. Na disku, je reprezentována tento projekt *.pyproj* souboru ve složce vašeho projektu.
 
-    (2) na nejvyšší úrovni je *řešení*, který ve výchozím nastavení má stejný název jako projektu. Řešení, reprezentována `.sln` souboru na disku, je kontejner pro jeden nebo více souvisejících projekty. Například pokud napíšete rozšíření C++ pro vaši aplikaci Python, daného projektu C++ může nacházet ve stejném řešení. Řešení může také obsahovat projekt pro webové služby, spolu s projekty pro vyhrazené testovací programy. 
+    (2) na nejvyšší úrovni je *řešení*, která ve výchozím nastavení má stejný název jako projekt. Řešení, reprezentované na disku souborem *.sln*, je kontejner pro jeden nebo více souvisejících projektů. Například pokud píšete rozšíření C++ pro aplikaci v Pythonu, tento projekt C++ může nacházet ve stejném řešení. Řešení může obsahovat také projekt pro webové služby, spolu s projekty pro programy vyhrazené testu. 
 
-    (3) v rámci projektu najdete zdrojových souborů, v tomto případě jediným `.py` souboru. V okně vlastností výběr soubor zobrazí jeho vlastnosti. Dvojitým kliknutím soubor otevře v jakémkoli způsob je vhodný pro tento soubor.
+    (3) v rámci projektu naleznete v tématu zdrojových souborů, v tomto případě jedné *.py* souboru. Výběr souboru zobrazí její vlastnosti v **vlastnosti** okna. Poklepáním na soubor otevře v dle svého je vhodný pro tento soubor.
 
-    (4) v rámci projektu je také **prostředí Python** uzlu. Po rozbalení zobrazí překladače Python, které jsou k dispozici. Rozbalte uzel překladač zobrazíte knihovny, které jsou nainstalovány do prostředí (5).
+    (4) v rámci projektu je také **prostředí Pythonu** uzlu. Po rozbalení zobrazí interpretů Pythonu, které jsou k dispozici. Rozbalte uzel interpretu zobrazíte knihoven, které jsou nainstalovány do daného prostředí (5).
 
-    Klikněte pravým tlačítkem na libovolný uzel nebo položky v Průzkumníku řešení pro přístup k nabídce použít příkazy. Například **přejmenovat** příkaz umožňuje změnit název libovolný uzel nebo položky, včetně projektu a řešení.
+    Klikněte pravým tlačítkem na libovolný uzel nebo položky v **Průzkumníka řešení** pro přístup k nabídce použitelných příkazů. Například **přejmenovat** příkaz umožňuje změnit název uzlu nebo položky, včetně projektu a řešení.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-step"></a>Další krok
 
 > [!div class="nextstepaction"]
-> [Psaní a spuštění kódu](tutorial-working-with-python-in-visual-studio-step-02-writing-code.md)
+> [Psání a spouštění kódu](tutorial-working-with-python-in-visual-studio-step-02-writing-code.md)
 
-## <a name="going-deeper"></a>Budete hlubší
+## <a name="go-deeper"></a>Seznamte se blíž
 
-- [Python projekty v sadě Visual Studio](managing-python-projects-in-visual-studio.md).
-- [Další informace o jazyka Python na python.org](https://www.python.org)
+- [Projekty v Pythonu v sadě Visual Studio](managing-python-projects-in-visual-studio.md).
+- [Další informace o jazyku Python na webu python.org](https://www.python.org)
 - [Python pro začátečníky](https://www.python.org/about/gettingstarted/) (python.org)
-- [Volné kurzy Pythonu na webu Microsoft Virtual Academy](https://mva.microsoft.com/search/SearchResults.aspx#!q=python)
-- [Horní Python dotazy na Microsoft Virtual Academy](https://aka.ms/mva-top-python-questions)
+- [Bezplatné kurzy Pythonu v Microsoft Virtual Academy](https://mva.microsoft.com/search/SearchResults.aspx#!q=python)
+- [Začátek Python dotazy na webu Microsoft Virtual Academy](https://aka.ms/mva-top-python-questions)

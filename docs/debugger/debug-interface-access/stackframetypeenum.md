@@ -1,5 +1,5 @@
 ---
-title: StackFrameTypeEnum | Microsoft Docs
+title: Stackframetypeenum – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 329661e857859a1f6452506ba2984ac962bf4ff2
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: fcf5e120e769b69c064306432c3026194eb0d851
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49853921"
 ---
 # <a name="stackframetypeenum"></a>StackFrameTypeEnum
 Určuje typ rámce zásobníku.  
@@ -38,25 +39,25 @@ enum StackFrameTypeEnum {
   
 ## <a name="elements"></a>Elementy  
  `FrameTypeFPO`  
- Ukazatel na rámec vynechání; Informace o FPO k dispozici.  
+ Tento parametr vynechán, ukazatel na rámec Informace o FPO k dispozici.  
   
  `FrameTypeTrap`  
- Rámce depeše jádra.  
+ Rámec depeše jádra.  
   
  `FrameTypeTSS`  
- Rámce depeše jádra.  
+ Rámec depeše jádra.  
   
  `FrameTypeStandard`  
  Standardní EBP rámce zásobníku.  
   
  `FrameTypeFrameData`  
- Ukazatel na rámec vynechání; Informace rámce data nejsou k dispozici.  
+ Tento parametr vynechán, ukazatel na rámec Rámec informace o datech k dispozici.  
   
  `FrameTypeUnknown`  
- Rámce, který nemá žádné informace o ladění.  
+ Snímek, který nemá dostupné žádné ladicí informace.  
   
 ## <a name="remarks"></a>Poznámky  
- Hodnoty v tento výčet jsou vráceny prostřednictvím volání [idiastackframe::get_type –](../../debugger/debug-interface-access/idiastackframe-get-type.md) metoda.  
+ Hodnoty v tomto výčtu jsou vráceny prostřednictvím volání [idiastackframe::get_type –](../../debugger/debug-interface-access/idiastackframe-get-type.md) metody.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: cvconst.h  

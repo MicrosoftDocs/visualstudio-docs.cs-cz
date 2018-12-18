@@ -1,13 +1,13 @@
 ---
-title: "Očekávaný & č. 39; {& č. 39; | Microsoft Docs"
-ms.custom: 
+title: Byl očekáván ' {' | Dokumentace Microsoftu
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.WebClient.Help.SCRIPT1008
@@ -16,22 +16,23 @@ dev_langs:
 - TypeScript
 - DHTML
 ms.assetid: ffdb55c0-e361-4bcd-b1a6-6158e7d9b557
-caps.latest.revision: 
+caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5c72953f30ff80fcd48110afb74d628319863e99
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 0e0127d551c6bf16c710e47d5f95c975522aca16
+ms.sourcegitcommit: 75e02ed88a1ace6e8265fd4e3a82a1bc78f3adca
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53348370"
 ---
-# <a name="expected-3939"></a>Očekávaný & č. 39; {& č. 39;
-Levé závorky, který označuje začátek tělo funkce nejsou zahrnuty. Kód, který tvoří tělo funkce, i když je jeden řádek, musí být obsažena v levé a pravé závorky. Všimněte si, že použití složené závorky v těla funkce je přísnější než v smyčky.  
+# <a name="expected-"></a>Byl očekáván znak '{'
+Jste nezahrnuli levou složenou závorku, který označuje začátek těla funkce. Kód, který tvoří tělo funkce, i když je jeden řádek, musí být obsažen v levé a pravé složené závorky. Všimněte si, že je přísnější než ve smyčkách použijte složené závorky do těla funkce.  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
--   Přidejte levé závorky, který označuje začátek tělo funkce.  
+-   Přidáte levou složenou závorku, který označuje začátek těla funkce.  
   
 ## <a name="see-also"></a>Viz také  
  [Function – objekt](../../javascript/reference/function-object-javascript.md)

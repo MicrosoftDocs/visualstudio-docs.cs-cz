@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31142750"
 ---
 # <a name="shipping-visual-studio-extensions"></a>Přesouvání rozšíření Visual Studia
 Po dokončení vývoje rozšíření, nainstalujte ji na jiné počítače, sdílet se svými přáteli a spolupracovníky nebo ji zveřejnit na Visual Studio Marketplace. V této části vám vysvětlíme, vše, co musíte udělat, aby bylo možné publikovat a spravovat rozšíření: práce se soubory VSIX, publikování, lokalizace a aktualizace.  

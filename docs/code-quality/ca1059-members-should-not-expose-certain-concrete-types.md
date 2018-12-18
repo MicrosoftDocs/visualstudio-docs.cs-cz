@@ -1,6 +1,7 @@
 ---
 title: 'CA1059: Členové by neměli zveřejňovat určité konkrétní typy'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,13 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ed4ca74da92aebd26d70191121ec8f259fc4011
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9440a00b0b1aceb520b1f23abc8ad92f60213855
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49899653"
 ---
 # <a name="ca1059-members-should-not-expose-certain-concrete-types"></a>CA1059: Členové by neměli zveřejňovat určité konkrétní typy
+
 |||
 |-|-|
 |TypeName|MembersShouldNotExposeCertainConcreteTypes|
@@ -30,24 +33,24 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Externě viditelné člen je určitý konkrétní typ nebo zpřístupní určité konkrétní typy prostřednictvím jednoho z jeho parametry nebo vrátit hodnotu. Toto pravidlo v současné době sestavy ohrožení následující konkrétní typy:
+ Externě viditelného členu je některé konkrétní typ nebo zpřístupňuje určité konkrétní typy prostřednictvím jednoho z jeho parametry nebo návratovou hodnotu. Toto pravidlo v současné době sestavy vystavení následující konkrétní typy:
 
--   Typ odvozený od <xref:System.Xml.XmlNode?displayProperty=fullName>.
+- Typ odvozený od <xref:System.Xml.XmlNode?displayProperty=fullName>.
 
 ## <a name="rule-description"></a>Popis pravidla
- Konkrétní typ je typ, který je zcela implementován, a lze tudíž vytvořit jeho instanci. Povolit podnikové sféře často používají člena, nahraďte konkrétní typ rozhraní navržené. To umožňuje člen přijmout žádný typ, který implementuje rozhraní nebo použije, kde je očekávána typ, který implementuje rozhraní.
+ Konkrétní typ je typ, který je zcela implementován, a lze tudíž vytvořit jeho instanci. Chcete-li umožnit široké využití členu, nahraďte konkrétní typ navrhovaného rozhraní. To umožňuje členu, který chcete přijmout libovolný typ, který implementuje rozhraní, nebo použít, kde se očekává typ, který implementuje rozhraní.
 
  Následující tabulka uvádí cílové konkrétní typy a jejich navrhované nahrazení.
 
 |Konkrétní typ|Nahrazení|
 |-------------------|-----------------|
-|<xref:System.Xml.XPath.XPathDocument>|<xref:System.Xml.XPath.IXPathNavigable?displayProperty=fullName>.<br /><br /> Pomocí rozhraní oddělí člena z konkrétní implementace zdroje dat XML.|
+|<xref:System.Xml.XPath.XPathDocument>|<xref:System.Xml.XPath.IXPathNavigable?displayProperty=fullName>.<br /><br /> Pomocí rozhraní odděluje obě části člena z konkrétní implementaci zdroj dat XML.|
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Opravit porušení toto pravidlo, změňte konkrétní typ rozhraní navržené.
+ Chcete-li opravit porušení tohoto pravidla, změňte konkrétní typ na navrhovaného rozhraní.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Je bezpečné k potlačení zprávy z tohoto pravidla, pokud se vyžaduje konkrétní funkce poskytované službou konkrétní typ.
+ Je bezpečné k potlačení zprávy z tohoto pravidla, pokud konkrétní funkce poskytované službou konkrétní typ je povinný.
 
 ## <a name="related-rules"></a>Související pravidla
  [CA1011: Zvažte předání základních typů jako parametrů](../code-quality/ca1011-consider-passing-base-types-as-parameters.md)

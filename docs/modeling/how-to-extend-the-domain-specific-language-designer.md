@@ -7,42 +7,46 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 3b68345961e2209506b0c759d7197c1115083446
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 6a2388619dea31696fe4416032cc12cd1fe5b372
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47860365"
 ---
 # <a name="how-to-extend-the-domain-specific-language-designer"></a>Postupy: Rozšíření návrháře jazyka specifického pro doménu
-Můžete provést rozšíření návrháře, který slouží k úpravám DSL definice. Typy rozšíření, které můžete provést zahrnují přidání příkazy nabídky, přidání obslužné rutiny pro přetažení a dvakrát klikněte na gesta a pravidel, které jsou aktivované, když konkrétní typy hodnot nebo vztahy změnit. Rozšíření můžete zabalené jako Visual Studio integrace rozšíření (VSIX) a distribuovat do jiných uživatelů.
 
- Ukázkový kód a další informace o této funkci najdete v sadě Visual Studio [vizualizace a modelování SDK (VMSDK) webu](http://go.microsoft.com/fwlink/?LinkID=186128).
+Můžete provést rozšíření návrháře, který použijete k úpravám definic DSL. Typy rozšíření, které můžete provést zahrnují přidání příkazy nabídek, přidání obslužné rutiny pro přetažení a dvakrát klikněte na panel gesta a pravidla, která se spustí při změně konkrétních typů hodnot nebo vztahy. Rozšíření můžete zabalit jako Visual Studio integrace rozšíření (VSIX) a distribuovat ostatním uživatelům.
 
-## <a name="setting-up-the-solution"></a>Nastavit řešení
- Nastavte projekt, který obsahuje kód rozšíření a projekt VSIX, který exportuje projektu. Řešení může obsahovat další projekty, které jsou součástí stejné VSIX.
+Ukázkový kód a další informace o této funkci najdete v tématu Visual Studio [Visualization and Modeling SDK](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db).
 
-#### <a name="to-create-a-dsl-designer-extension-solution"></a>Chcete-li vytvořit řešení rozšíření návrháře DSL
+## <a name="set-up-the-solution"></a>Nastavení řešení
 
-1.  Vytvoření nového projektu pomocí šablony projektu knihovny tříd. V **nový projekt** dialogové okno, klikněte na tlačítko **Visual C#** a potom v okně střední, klikněte na tlačítko **knihovny tříd**.
+Nastavení, která obsahuje kód vaše rozšíření projektu a projekt VSIX, který exportuje projektu. Řešení může obsahovat jiné projekty, které jsou začleněny do stejného VSIX.
 
-     Tento projekt bude obsahovat kód rozšíření.
+### <a name="to-create-a-dsl-designer-extension-solution"></a>K vytvoření řešení rozšíření návrháře DSL
 
-2.  Vytvoření nového projektu pomocí šablony projektu VSIX. V **nový projekt** dialogové okno, rozbalte seznam **Visual C#**, klikněte na tlačítko **rozšiřitelnost**a potom v prostředním okno Vyberte **projektu VSIX**.
+1.  Vytvoření nového projektu pomocí šablony projektu knihovny tříd. V **nový projekt** dialogové okno, klikněte na tlačítko **Visual C#** a v prostřední okna klikněte na **knihovny tříd**.
+
+     Tento projekt bude obsahovat kódu rozšíření.
+
+2.  Vytvoření nového projektu pomocí šablony projektu VSIX. V **nový projekt** dialogového okna rozbalte **Visual C#**, klikněte na tlačítko **rozšiřitelnost**a potom v prostředním okně vyberte **projekt VSIX**.
 
      Vyberte **přidat do řešení**.
 
-     Source.extension.vsixmanifest otevře v editoru manifestu VSIX.
+     Source.extension.vsixmanifest se otevře v editoru manifestu VSIX.
 
-3.  Výše pole obsahu, klikněte na tlačítko **přidat obsahu**.
+3.  Nad pole obsahu, klikněte na tlačítko **přidat obsah**.
 
-4.  V **přidat obsahu** dialogové okno, sada **vyberte typ obsahu** k **Komponenta MEF**a nastavte **projektu** do projektu knihovny tříd.
+4.  V **přidat obsah** dialogové okno, nastavte **vyberte typ obsahu** k **Komponenta MEF**a nastavte **projektu** do projektu knihovny tříd.
 
-5.  Klikněte na tlačítko **vyberte edice** a ujistěte se, že **Visual Studio Enterprise** je zaškrtnuté.
+5.  Klikněte na tlačítko **vybrat vydání** a ujistěte se, že **Visual Studio Enterprise** je zaškrtnuté políčko.
 
-6.  Ujistěte se, že je projekt VSIX projekt po spuštění řešení.
+6.  Ujistěte se, že projekt VSIX je projekt při spuštění řešení.
 
-7.  V projektu knihovny tříd přidejte odkazy na následující:
+7.  V projektu knihovny tříd přidejte odkazy na následující sestavení:
 
      Microsoft.VisualStudio.CoreUtility
 
@@ -62,29 +66,31 @@ Můžete provést rozšíření návrháře, který slouží k úpravám DSL def
 
      System.Windows.Forms
 
-## <a name="testing-and-deployment"></a>Testování a nasazení
- Pokud chcete otestovat všechny rozšíření v tomto tématu, sestavte a spusťte řešení. Experimentální instanci [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] otevře. V tomto případě otevřete DSL řešení. DslDefinition diagram upravte. Rozšíření chování je možné zobrazit.
+## <a name="test-and-deployment"></a>Testování a nasazení
 
- Nasazení rozšíření do hlavní [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]a do jiných počítačů, postupujte takto:
+Chcete-li testovat žádný rozšíření v tomto tématu, sestavte a spusťte řešení. Otevře se experimentální instanci sady Visual Studio. V tomto případě otevřete řešení DSL. DslDefinition diagram upravte. Můžete zobrazit chování rozšíření.
+
+Pokud chcete nasadit rozšíření do hlavní sady Visual Studio a na jiné počítače, postupujte takto:
 
 1.  V projektu VSIX v přihrádce najít instalační soubor VSIX\\*\*\\\*.VSIX
 
-2.  Tento soubor zkopírovat na cílový počítač a pak v Průzkumníku Windows (nebo v Průzkumníku souborů), klikněte dvakrát na jeho.
+2.  Zkopírujte tento soubor do cílového počítače a v Průzkumníku Windows (nebo Průzkumníka souborů), poklepejte na něj.
 
-     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Otevře Správce rozšíření pro potvrzení, že byla nainstalovaná rozšíření.
+     Správce rozšíření sady Visual Studio otevře potvrďte, že je nainstalovaná rozšíření.
 
- Pokud chcete odinstalovat rozšíření, postupujte takto:
+Toto rozšíření odinstalovat, postupujte podle těchto kroků:
 
-1.  v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]na **nástroje** nabídky, klikněte na tlačítko **Správce rozšíření**.
+1.  V sadě Visual Studio na **nástroje** nabídky, klikněte na tlačítko **Správce rozšíření**.
 
-2.  Vyberte požadované rozšíření a odstraňte ji.
+2.  Vyberte požadované rozšíření a odstranit ji.
 
-## <a name="adding-a-shortcut-menu-command"></a>Přidání příkaz z místní nabídky
- Chcete-li příkaz z místní nabídky se zobrazí na plochu návrháře DSL nebo v okně Průzkumníka DSL, napište třídu připomínající následující.
+## <a name="add-a-shortcut-menu-command"></a>Přidat příkaz místní nabídky
 
- Musí implementovat třídu `ICommandExtension` a musí mít atribut `DslDefinitionModelCommandExtension`.
+Chcete-li příkaz místní nabídky, se zobrazí na povrchu návrháře DSL nebo v okně Průzkumník DSL, zápis připomínající následující třídy.
 
-```
+Musí implementovat třídu `ICommandExtension` a musí mít atribut `DslDefinitionModelCommandExtension`.
+
+```csharp
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
 using System.Linq;
@@ -144,10 +150,11 @@ namespace Fabrikam.SimpleDslDesignerExtension
 }
 ```
 
-## <a name="handling-mouse-gestures"></a>Zpracování gesta myši
- Kód je podobný kódu příkaz nabídky.
+## <a name="handle-mouse-gestures"></a>Zpracování gesta myší
 
-```
+Kód je podobný kód příkazu nabídky.
+
+```csharp
 [DslDefinitionModelGestureExtension]
  class MouseGesturesExtensions : IGestureExtension
  {
@@ -205,10 +212,11 @@ namespace Fabrikam.SimpleDslDesignerExtension
  }
 ```
 
-## <a name="responding-to-value-changes"></a>Reagovat na hodnotu změny
- Tuto obslužnou rutinu musí modelu domény fungovala správně. Poskytujeme modelu jednoduché domény.
+## <a name="respond-to-value-changes"></a>Reakce na změny hodnoty
 
-```
+Tato obslužná rutina musí modelu domény mohly fungovat správně. Zajišťuje jednoduché doménový model.
+
+```csharp
 using System.Diagnostics;
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.DslDefinition;
@@ -246,9 +254,9 @@ namespace Fabrikam.SimpleDslDesignerExtension
 } }  }  );
 ```
 
- Následující kód implementuje jednoduchého modelu. Vytvořte nový identifikátor GUID pro nahraďte zástupný symbol.
+Následující kód implementuje jednoduchého modelu. Vytvořte nový identifikátor GUID nahraďte zástupný symbol.
 
-```
+```csharp
 using System;
 using System.ComponentModel.Composition;
 using Microsoft.VisualStudio.Modeling;

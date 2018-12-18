@@ -1,5 +1,5 @@
 ---
-title: IDiaSymbol::get_liveRangeStartAddressSection | Microsoft Docs
+title: IDiaSymbol::get_liveRangeStartAddressSection | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e598a6c6414194da487fe90d39a7f7bb2f0e7a7
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: f41415954439d299c0c69585141ffc678d332dcf
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49864241"
 ---
 # <a name="idiasymbolgetliverangestartaddresssection"></a>IDiaSymbol::get_liveRangeStartAddressSection
-Vrátí část oddílu počáteční adresa rozsahu, ve kterém je platný místní symbolu.  
+Vrátí část oddílu počáteční adresu rozsahu, ve kterém je platná místního symbolu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,15 +37,15 @@ HRESULT get_liveRangeStartAddressSection (
  [out] Vrátí část oddílu počáteční rozsah adres.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 > [!NOTE]
->  Kód chyby: znamená, že symbol nemá informace o rozsahu za provozu.  
+>  Kód chyby znamená, že symbol nemá informace o rozsahu za provozu.  
   
 ## <a name="remarks"></a>Poznámky  
- Adresu v poli části a posun je začátek rozsahu, ve kterém je platný symbolu.  
+ Adresa tvořen oddílu a posun je začátek rozsahu, ve kterém je platná symbolu.  
   
- Posunutí část adresy, použijte [IDiaSymbol::get_liveRangeStartAddressOffset](../../debugger/debug-interface-access/idiasymbol-get-liverangestartaddressoffset.md).  
+ K získání posunu částí adresy, použijte [IDiaSymbol::get_liveRangeStartAddressOffset](../../debugger/debug-interface-access/idiasymbol-get-liverangestartaddressoffset.md).  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: Dia2.h  

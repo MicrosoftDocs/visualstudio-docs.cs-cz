@@ -18,6 +18,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31570382"
 ---
 # <a name="gpu-activity-this-process"></a>Aktivita GPU (tento proces)
 **Aktivita GPU (Tento proces)** segmentů v zobrazení vláken v Concurrency Visualizer představují dobu, kdy GPU zpracovává požadavky jménem aktuální proces. Tyto požadavky jsou odesílány GPU v paměti přímý přístup (DMA) paketů. Délka segment představuje čas, že GPU zpracovává paket DMA jménem aktuálním procesu.  

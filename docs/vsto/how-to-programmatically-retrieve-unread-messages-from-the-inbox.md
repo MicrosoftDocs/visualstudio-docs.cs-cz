@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: načítání nepřečtených zpráv ze složky Doručená pošta prostřednictvím kódu programu | Microsoft Docs'
+title: 'Postupy: načítání nepřečtených zpráv ze složky Doručená pošta prostřednictvím kódu programu'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,14 +18,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ec08c95a0543ab6ec47c0bded8126c6c2030c87e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3442ecd10bc18e0336542ce2b8396b8b7f654b78
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35676448"
 ---
 # <a name="how-to-programmatically-retrieve-unread-messages-from-the-inbox"></a>Postupy: načítání nepřečtených zpráv ze složky Doručená pošta prostřednictvím kódu programu
-  Tento příklad načítá zprávy o nepřečtené e-maily z aplikace Outlook **doručené pošty** a zobrazuje počet položek.  
+  Tento příklad načte nepřečtených e-mailové zprávy z aplikace Outlook **doručené pošty** a zobrazuje počet položek.  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
@@ -33,11 +34,11 @@ ms.lasthandoff: 04/16/2018
  [!code-vb[Trin_Outlook_RL_UnreadItems#1](../vsto/codesnippet/VisualBasic/Trin_Outlook_RL_UnreadItems/thisaddin.vb#1)]
  [!code-csharp[Trin_Outlook_RL_UnreadItems#1](../vsto/codesnippet/CSharp/Trin_Outlook_RL_UnreadItems/thisaddin.cs#1)]  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Práce s položkami pošty](../vsto/working-with-mail-items.md)   
- [Začínáme programováním doplňků VSTO](../vsto/getting-started-programming-vsto-add-ins.md)   
- [Postupy: vytváření položek e-mailu prostřednictvím kódu programu](../vsto/how-to-programmatically-create-an-e-mail-item.md)   
+ [Začínáme s programováním doplňků VSTO](../vsto/getting-started-programming-vsto-add-ins.md)   
+ [Postupy: programové vytváření položek e-mailu](../vsto/how-to-programmatically-create-an-e-mail-item.md)   
  [Postupy: odeslání e-mailu prostřednictvím kódu programu](../vsto/how-to-programmatically-send-e-mail-programmatically.md)   
- [Postupy: prostřednictvím kódu programu provádění akcí po přijetí e-mailové zprávy](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)  
+ [Postupy: programově provádění akcí po přijetí e-mailovou zprávu](../vsto/how-to-programmatically-perform-actions-when-an-e-mail-message-is-received.md)  
   
   

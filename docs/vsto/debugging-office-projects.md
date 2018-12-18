@@ -1,5 +1,5 @@
 ---
-title: Ladění projektů Office | Microsoft Docs
+title: Ladění projektů Office
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -20,89 +20,90 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 8080e1ffacff73592517e5c1b2cb3d06c3654f15
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: cc1774e57fafadafc7087bb498e0b77a90e96d85
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35675865"
 ---
-# <a name="debugging-office-projects"></a>Ladění projektů Office
-  Projekty Office můžete ladit pomocí stejné Microsoft [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] nástrojů, které můžete používat pro jiné [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projekty. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Funkce, jako je například možnost Vložit zarážky a zobrazit proměnné v ladicího programu **místní hodnoty –** okno, jsou také k dispozici při ladění projektů Office. Další informace o [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] nástroje pro ladění, najdete v části [ladění v sadě Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).  
+# <a name="debug-office-projects"></a>Ladění projektů Office
+  Můžete ladit projekty Office s použitím stejného Microsoft [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] nástrojů, které používáte pro jiné [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projekty. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Funkce, jako je možnost Vložit zarážky a proměnné v zobrazení ladicího programu **lokální** okna, jsou také k dispozici při ladění projektů Office. Další informace o [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] nástroje pro ladění, naleznete v tématu [ladit v sadě Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).  
   
 > [!TIP]  
->  Ke zjednodušení, ladění, zavřete všechny otevřené instance aplikace Office, než sestavení a ladění.  
+>  Pro zjednodušení, ladění, zavřete všechny otevřené instance aplikace Office, než sestavení a ladění.  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
 > [!NOTE]  
->  Máte zájem o vývoji řešení, které rozšiřují Office prostředí napříč [více platforem](https://dev.office.com/add-in-availability)? Podívejte se na [Office Add in modelu](https://dev.office.com/docs/add-ins/overview/office-add-ins). Doplňky Office mají malé nároky ve srovnání s doplňků VSTO a řešení a můžete je vytvořit pomocí téměř jakoukoli webové programování technologie, jako je například HTML5, JavaScript, CSS3 a XML.  
+>  Zajímá vás vývoj řešení, které rozšiřují Office prostředí napříč [více platforem](https://dev.office.com/add-in-availability)? Podívejte se na nové [Office Add-ins modelu](https://dev.office.com/docs/add-ins/overview/office-add-ins). Doplňky sady Office mají malé náklady v porovnání s doplňky VSTO a řešení a je můžete vytvořit s využitím téměř jakékoli webové programování technologie, jako je například HTML5, JavaScript, CSS3 a XML.  
   
-## <a name="starting-and-stopping-the-debugger"></a>Spuštění a zastavení ladicího programu  
- Můžete spustit ladění projektu aplikace Office, stejně jako spuštění ladění dalších [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projekty; například můžete stisknutím klávesy F5. Při spuštění ladění projektu doplňku VSTO spuštěn nový proces pro cílové aplikace Office a že je načtený doplňku VSTO.  
+## <a name="start-and-stop-the-debugger"></a>Spuštění a zastavení ladicího programu  
+ Můžete spustit ladění projektu pro Office, stejně jako spuštění ladění jiných [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projekty; třeba, stisknutí klávesy **F5** klíč. Při spuštění ladění projektu doplňku VSTO spuštěn nový proces pro cílové aplikace Office a načtení doplňku VSTO.  
   
- Při spuštění ladění projektu úrovni dokumentu se otevře v nový proces Word či Excel dokumentu nebo sešitu.  
+ Při spuštění ladění projektu úrovni dokumentu, dokumentu nebo sešitu se otevře v nový proces aplikace Word nebo Excel.  
   
- Po zastavení ladicího programu ladicí program ukončit proces aplikace náhle nebo odpojí, pokud máte ladicí program nastavit odpojit. Všechny dokumenty, které jsou otevřeny v procesu ukončenou aplikace Office jsou také uzavřena bez upozornění a veškeré neuložené změny budou ztraceny. To může zahrnovat všechny dokumenty nebo sešity, které jsou otevřené spuštěného ladicího programu.  
+ Při zastavení ladicího programu, ladicí program bezodkladně ukončuje proces aplikace, nebo pokud máte nastavení odpojit ladicí program se odpojí. Všechny dokumenty, které jsou otevřeny v procesu ukončen aplikace Office jsou také uzavřeny bez upozornění a všechny neuložené změny budou ztraceny. To může zahrnovat všechny dokumenty a sešity, které jsou otevřeny, když ladicí program běží.  
   
- Obvykle je lepší odpojení od proces před zastavením ladicího programu, takže můžete ukončit aplikaci Office běžným způsobem. Je možné odebrat z procesu nejprve Pokud chcete pracovat s otevřít dokument nebo listu po zastavení ladicího programu.  
+ Obvykle je lepší odpojit od procesu před při zastavení ladicího programu, aby aplikace sady Office můžete ukončit běžným způsobem. Můžete také odpojit od procesu nejprve Pokud nadále chcete pracovat s otevřeného dokumentu nebo listu po zastavení ladicího programu.  
   
- Pokud ladíte přizpůsobení na úrovni dokumentu ve Wordu, opakovaně zastavení ladicího programu a způsobí ukončení najednou aplikace Word může vést k normální šablony poškození. Pokud k tomu dojde, můžete odstranit poškozená normální šablony a jej bude automaticky znovu vytvořen při příštím otevření aplikace Word. Však nejsou vytvořeny žádné makra, které byly uloženy v šabloně Normální.  
+ Pokud ladíte přizpůsobení úrovni dokumentu pro Word, opakovaně při zastavení ladicího programu a způsobit tak Wordu zavřete náhle může vést k poškození normální šablony. Pokud k tomu dojde, můžete odstranit poškozený normální šablony a to se automaticky znovu vytvoří při příštím otevření aplikace Word. Makra, které byly uloženy v normální šablony se však nejsou znovu vytvořit.  
   
-### <a name="debug-office-2013-vsto-add-ins-by-using-either-office-2013-or-office-2016"></a>Ladění Office 2013 VSTO doplňků pomocí Office 2013 nebo Office 2016  
- Pokud používáte Visual Studio 2015 a budete mít obě verze Office nainstalován-souběžného, spustí se v sadě Visual Studio Office 2016. Pokud používáte Visual Studio 2013, Visual Studio spustí Office 2013.  
+### <a name="debug-office-2013-vsto-add-ins-by-using-either-office-2013-or-office-2016"></a>Office 2013 VSTO doplňků ladit pomocí Office 2013 nebo Office 2016  
+ Pokud používáte Visual Studio 2015, a budete mít obě verze nainstalovaná sada Office vedle sebe, spustí aplikace Visual Studio Office 2016. Pokud používáte Visual Studio 2013, Visual Studio spustí Office 2013.  
   
- Pokud chcete ladit vaše doplňku VSTO v jiné verzi systému Office (2013 nebo 2016), otevřete **Návrhář projektu**a v **ladění** , zvolte **počáteční vnějšímu programu**tlačítko. Pak přejděte do umístění spustitelného souboru příslušné aplikace Office.  
+ Pokud chcete ladit doplňku VSTO pomocí jiná verze systému Office (2013 nebo 2016), otevřete **Návrháře projektu**a **ladění** , vyberte **Start externí program**přepínač. Přejděte do umístění spustitelného souboru příslušné aplikace Office.  
   
-## <a name="f10-and-f11-behavior"></a>F10 a F11 chování  
- Při spuštění ladění projektu Office F10 a F11 nemají stejné chování jako při spuštění ladění další projekty Visual Basic a C#. V projektech Visual Basic a C# zastaví ladicího programu na hlavní funkce; v projektech Office Visual Studio nemá kontrolu nad hlavní funkce aplikace Office. Ale během ladění, F10 a F11 mají stejné funkce jako projekty Visual Basic a C#.  
+## <a name="f10-and-f11-behavior"></a>Chování F10 a F11  
+ Při spuštění ladění projektu Office, **F10** a **F11** nemají stejné chování jako při spuštění ladění jiných projektů jazyka Visual Basic nebo C#. V projektech Visual Basic nebo C# ladicí program se zastaví na hlavní funkci. Visual Studio v projektech pro systém Office nemá kontrolu nad hlavní funkce aplikace Office. Nicméně během ladění, **F10** a **F11** nemají stejné funkce jako v projektech Visual Basic a C#.  
   
-## <a name="displaying-exceptions"></a>Zobrazení výjimky  
- Kvůli způsobu, jakým spravovaný kód a komunikuje s nespravovaným kódem, Visual Studio nezobrazuje chyb, které jsou vyvolány pomocí aplikace Microsoft Office. Například pokud VSTO doplňku vytvořili pomocí nástroje pro vývoj pro Office v sadě Visual Studio vyvolá výjimku, aplikace Microsoft Office bude pokračovat bez zobrazení k chybě. Pokud chcete zobrazit tyto chyby, nastavte ladicí program na přerušení na výjimky modulu CLR. Další informace najdete v tématu [Správa výjimek pomocí ladicího programu](/visualstudio/debugger/managing-exceptions-with-the-debugger).  
+## <a name="display-exceptions"></a>Zobrazit výjimky  
+ Kvůli způsobu, jakým spravovaný kód pracuje s nespravovaným kódem, Visual Studio nezobrazuje chyby, které jsou vyvolány pomocí aplikace Microsoft Office. Například pokud doplňku VSTO vytvořené pomocí nástroje pro vývoj pro Office v sadě Visual Studio vyvolá výjimku, aplikace Microsoft Office bude pokračovat bez zobrazení chybu. Pokud chcete zobrazit tyto chyby, nastavte ladicí program na přerušení na výjimky modulu common language runtime. Další informace najdete v tématu [Správa výjimek pomocí ladicího programu](/visualstudio/debugger/managing-exceptions-with-the-debugger).  
   
- Pokud jste nastavili ladicí program na přerušení na výjimky modulu CLR, všechny výjimky teď rozdělit ladicího programu, včetně šablony, které mají zpracovávat a některé first chance výjimky z modulu runtime sebe, což nemusí být relevantní pro váš projekt. Chyby, která odkazuje na msosec není byl nalezen se zobrazí v každém projektu, ale jsou bezpečně ignorovat. Tyto výjimky msosec nebude mít vliv na vaše řešení.  
+ Pokud nastavíte ladicí program na přerušení na výjimky modulu common language runtime, všechny výjimky se nyní přerušení ladicího programu, včetně těch, které mají zpracovat a některých výjimkách first-chance z modulu runtime, která nemusí být relevantní pro váš projekt. Chyby odkazující na msosec není jsou zjištěny zobrazují v každém projektu, ale jsou bezpečně ignorovat. Tyto výjimky msosec nebude mít vliv na vaše řešení.  
   
- Můžete také použít **zkuste... Catch –** příkazy kolem vaše metody zachycení výjimky.  
+ Můžete také použít **zkuste... Zachytit** příkazy kolem svoje metody pro zachycení výjimky.  
   
- Ve výchozím nastavení Visual Studio také nemá zobrazení pouze v době chyby ladění pro projekty Office; Tuto funkci však můžete povolit, aby se zobrazí chyby, které jsou vyvolány. Další informace najdete v tématu [ladění JIT v sadě Visual Studio](/visualstudio/debugger/just-in-time-debugging-in-visual-studio).  
+ Ve výchozím nastavení Visual Studio také nemá zobrazení Just-In-Time chyby ladění projektů Office; Můžete ale povolit tuto funkci tak, aby se zobrazí chyby, které jsou vyvolány. Další informace najdete v tématu [Just-In-Time ladění v sadě Visual Studio](/visualstudio/debugger/just-in-time-debugging-in-visual-studio).  
   
-## <a name="command-line-arguments"></a>Argumenty příkazového řádku.  
- Pokud **spustit akci** na **ladění** stránka vlastností nastavena na **spustit projekt**, Visual Studio nepoužívá argumenty příkazového řádku při ladění projektu, i když máte Zadaný argumenty příkazového řádku, jako možnosti spuštění. Pokud chcete použít argumenty příkazového řádku při spuštění ladění, je nutné vybrat **spustit akci** jiné než **spustit projekt**.  
+## <a name="command-line-arguments"></a>Argumenty příkazového řádku  
+ Pokud **spustit akci** na **ladění** vlastností stránky je nastavené na **spustit projekt**, Visual Studio nebude používat argumenty příkazového řádku při ladění projektu, i když máte zadat argumenty příkazového řádku jako možnosti spuštění. Pokud chcete používat argumenty příkazového řádku při spuštění ladění, je nutné vybrat **spustit akci** jiné než **spustit projekt**.  
   
-## <a name="source-control"></a>Správa zdrojového kódu  
- Ladění vlastnosti nejsou sdílí několik uživatelů v rámci správy zdrojového kódu. Projekty Visual Basic a C# uložit ladění vlastnosti v souboru konkrétního uživatele (*ProjectName*. vbproj.user nebo *ProjectName*. csproj.user), a tento soubor není ve správě zdrojového kódu. Pokud je ladění víc než jedna osoba, každou osobu, musíte zadat vlastnosti ladění ručně.  
+## <a name="source-control"></a>Správy zdrojového kódu  
+ Ladit vlastnosti nejsou sdílí několik uživatelů pod správou zdrojových kódů. Projekty Visual Basic a C# uložit vlastnosti ladění do souboru konkrétního uživatele (*ProjectName*. vbproj.user nebo *ProjectName*. csproj.user), a tento soubor není pod správou zdrojových kódů. Pokud je ladění více než jednou osobou, každý uživatel, který musíte zadat vlastnosti ladění ručně.  
   
-## <a name="debugging-cached-datasets-in-a-document-level-project"></a>Ladění datové sady v mezipaměti v projektech na úrovni dokumentu  
- Pokaždé, když vytváříte projekt, je datová sada vyprázdnit a znovu vytvoří. Pokud chcete ladit datové sady v mezipaměti, musíte otevřít dokument mimo Visual Studio a pak připojit ladicí program.  
+## <a name="debug-cached-datasets-in-a-document-level-project"></a>Ladit datové sady v mezipaměti v projektu úrovni dokumentu  
+ Pokaždé, když vytvoříte projekt, datová sada vyprázdnění a znovu vytvořit. Pokud chcete ladit datové sady v mezipaměti, musíte otevřít dokument mimo sadu Visual Studio a potom připojit ladicí program.  
   
-## <a name="debugging-word-document-projects-based-on-the-word-97-2003-document-doc-format"></a>Ladění projektů dokument aplikace Word podle dokument aplikace Word 97-2003 (* .doc) formátu  
- K ladění projektu dokument aplikace Word na základě dokumentu Word 97-2003 (* .doc) formátu, je nutné přidat do seznamu důvěryhodných složky složce projektu. Další informace o tom, jak to udělat najdete v tématu [udělení vztah důvěryhodnosti s dokumenty](../vsto/granting-trust-to-documents.md)...  
+## <a name="debug-word-document-projects-based-on-the-word-97-2003-document-doc-format"></a>Ladění aplikace Word dokumentu projekty založené na dokument Wordu 97 – 2003 (* .doc) formát  
+ Chcete-li ladit Wordový dokument projektu založeného na dokument Wordu 97 – 2003 (*/* doc *) formát, složky projektu musíte přidat do seznamu důvěryhodných složek. Další informace o tom, jak to provést, najdete v části [udělit důvěryhodnost dokumenty](../vsto/granting-trust-to-documents.md).  
   
-## <a name="debugging-disabled-add-ins"></a>Ladění zakázané doplňky  
- Aplikace Microsoft Office můžete zakázat doplňků VSTO které neočekávanému chování. Aplikace Microsoft Office zakáže doplňků VSTO zabránit problematické kód načítání při každém spuštění aplikace. Také je však snadno způsobit neočekávané chování během typické ladění. Informace o tom, jak znovu povolit doplňků VSTO najdete v tématu [postupy: opětovné povolení VSTO Add-in, má bylo zakázáno](../vsto/how-to-re-enable-a-vsto-add-in-that-has-been-disabled.md).  
+## <a name="debug-disabled-add-ins"></a>Ladění zakázané doplňky  
+ Aplikace Microsoft Office můžete zakázat doplňků VSTO, které neočekávané chování. Aplikace Microsoft Office zakáže doplňků VSTO zabránit problematického kódu načítání při každém spuštění aplikace. Je však také snadno způsobit neočekávané chování během ladění typické. Informace o tom, jak znovu povolit doplňků VSTO najdete v tématu [postupy: opětovné povolení VSTO doplňku, který byl zakázán](../vsto/how-to-re-enable-a-vsto-add-in-that-has-been-disabled.md).  
   
- Existují dva typy zakázání, že aplikace Microsoft Office používat pro doplňky VSTO: pevné zakázání a logicky zakázání.  
+ Existují dva typy zakazuje, aby aplikace Microsoft Office použijte pro doplňky VSTO: pevné zakázání a obnovitelně zakázání.  
   
-### <a name="hard-disabling"></a>Zakázání pevný  
- Zakázání pevného může dojít, když doplňku VSTO způsobí, že aplikace neočekávaně ukončena. Ho může také dojít k ve svém vývojovém počítači zastavení ladicího programu při <xref:Microsoft.Office.Tools.AddIn.Startup> spouští obslužné rutiny událostí v doplňku VSTO. Pokud doplňku VSTO je pevný zakázáno, zobrazí se v **zakázané položky** seznamu v aplikaci.  
+### <a name="hard-disabling"></a>Intenzivně zakázání  
+ Intenzivně zakázání může dojít, když doplňku VSTO způsobí, že aplikace nečekaně zavře. To může vzniknout také ve svém vývojovém počítači zastavení ladicího programu při <xref:Microsoft.Office.Tools.AddIn.Startup> provádění obslužné rutiny události v doplňku VSTO. Doplněk VSTO je obtížné zakázáno, zobrazí se v **zakázané položky** seznamu v aplikaci.  
   
- Pokud aplikace Office pevný zakáže VSTO doplňku vytvořili pomocí nástroje pro vývoj pro Office v sadě Visual Studio, aplikace zakáže pouze VSTO doplněk způsobující selhání. Jiné doplňků VSTO vytvořili pomocí nástroje pro vývoj pro Office v sadě Visual Studio pro příslušnou aplikaci Office, budou i nadále načíst.  
+ Pokud zakáže pevné aplikace Office doplňku VSTO vytvořené pomocí nástroje pro vývoj pro Office v sadě Visual Studio, aplikace se zakáže pouze doplňku VSTO, která způsobila selhání. Načíst bude pokračovat další doplňků VSTO vytvořené pomocí nástroje pro vývoj pro Office v sadě Visual Studio pro příslušnou aplikaci Office.  
   
-### <a name="soft-disabling"></a>Logicky zakázání  
- Logicky zakázání může dojít, když doplňku VSTO vytvoří chybu, který nevyvolá aplikace neočekávaně zavřete. Například aplikace může soft zakázat doplňků VSTO v případě, že nastane neošetřenou výjimku při <xref:Microsoft.Office.Tools.AddIn.Startup> spouští obslužné rutiny události. Pokud doplňku VSTO je logicky zakázáno, zobrazí se v **neaktivní aplikace doplňky** v aplikaci a aplikace v seznamu změní hodnotu **LoadBehavior –** položky registru pro VSTO Doplněk to znamená, že je odpojen. Další informace o **LoadBehavior** položky registru najdete v části [položky registru pro doplňky VSTO](../vsto/registry-entries-for-vsto-add-ins.md).  
+### <a name="soft-disabling"></a>Obnovitelně zakázání  
+ Zakázání obnovitelně může dojít, když doplňku VSTO dojde k chybě, který nevyvolá aplikace neočekávaně zavřít. Například aplikace může být obnovitelné zakázat doplňku VSTO Pokud vyvolá neošetřenou výjimku při <xref:Microsoft.Office.Tools.AddIn.Startup> provádění obslužné rutiny události. Pokud doplňku VSTO se obnovitelného zakázaná, zobrazí se v **neaktivní aplikace Add-ins** seznamu v aplikaci a aplikace změní hodnotu **LoadBehavior** položky registru doplňku VSTO k označení, že je uvolněna. Další informace o **LoadBehavior** položky registru, najdete v článku [položky registru pro doplňky VSTO](../vsto/registry-entries-for-vsto-add-ins.md).  
   
-## <a name="troubleshooting-installation-errors-by-using-the-event-viewer"></a>Řešení potíží s chybami instalace pomocí prohlížeče událostí  
- [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Zapíše zprávy do prohlížeče událostí v systému Windows pro všechny výjimky, které se vyvolá, když si nainstalujete nebo odinstalujete řešení pro systém Office. Tyto zprávy můžete použít k vyřešení instalace a nasazení problémy.  
+## <a name="troubleshoot-installation-errors-by-using-the-event-viewer"></a>Řešení potíží s chybami instalace s použitím prohlížeče události  
+ [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Zapisuje zprávy do prohlížeče událostí ve Windows pro všechny výjimky, které jsou vyvolány při instalaci nebo odinstalaci řešení Office. Tyto zprávy můžete vyřešit instalací a problémů s nasazením.  
   
-## <a name="troubleshooting-startup-errors-by-using-a-log-file-and-error-messages"></a>Řešení potíží s chybami spuštění pomocí souboru protokolu a chybové zprávy  
- [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Můžete zapsat všechny chyby, ke kterým došlo během spouštění protokolu soubor nebo zobrazit jednotlivé chyby v okně se zprávou. Tyto možnosti jsou ve výchozím nastavení vypnuté. Možnosti můžete zapnout, vytváření proměnných prostředí.  
+## <a name="troubleshoot-startup-errors-by-using-a-log-file-and-error-messages"></a>Řešení chyb při spuštění pomocí protokolu souborů a chybové zprávy  
+ [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Lze zapsat všechny chyby, ke kterým došlo během spouštění protokolového souboru nebo zobrazení jednotlivých chyb v okně se zprávou. Tyto možnosti jsou ve výchozím nastavení vypnuté. Možnosti můžete zapnout tak, že vytvoříte proměnné prostředí.  
   
- Chcete-li zobrazit jednotlivé chyby v okně se zprávou, vytvořit proměnnou prostředí s názvem `VSTO_SUPPRESSDISPLAYALERTS` a nastavte ji na 0 (nula). Zprávy můžete potlačit tím odstraňování proměnné prostředí nebo jeho nastavení na hodnotu 1 (jedna).  
+ Chcete-li zobrazit všechny chyby v okně se zprávou, vytvořte proměnnou prostředí s názvem `VSTO_SUPPRESSDISPLAYALERTS` a nastavte ho na hodnotu 0 (nula). Odstraňuje se proměnná prostředí nebo nastavení na hodnotu 1 (jeden) můžete potlačit zprávy.  
   
- Zapsat chyby do souboru protokolu, vytvořit proměnnou prostředí s názvem `VSTO_LOGALERTS` a nastavte ji na hodnotu 1 (jedna). [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Vytváří protokolový soubor ve složce, která obsahuje manifest nasazení pro doplňku VSTO nebo ve složce, která obsahuje dokument nebo sešitu, která souvisí s úpravami. Pokud to nepomůže, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] vytváří protokolový soubor ve složce místní % TEMP %. Pro aplikační úrovni doplňků VSTO, výchozí název je *název doplňku*. vsto.log. Projekty na úrovni dokumentu, je název souboru protokolu *název dokumentu*. *rozšíření*.log, jako je například ExcelWorkbook1.xlsx.log. K zastavení protokolování chyb, odstraňte proměnnou prostředí nebo ji nastavte na hodnotu 0 (nula).  
+ Zapsat chyby do souboru protokolu, vytvořte proměnnou prostředí s názvem `VSTO_LOGALERTS` a nastavte ho na hodnotu 1 (jedna). [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Vytváří protokolový soubor ve složce, která obsahuje manifest nasazení pro doplňku VSTO nebo ve složce, která obsahuje dokumentem nebo sešitem, který je přidružený k přizpůsobení. Pokud se to nepodaří, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] vytváří protokolový soubor v místním *% TEMP %* složky. Pro aplikace úrovně doplňků VSTO, výchozí název je *název doplňku*. vsto.log. Pro projekty na úrovni dokumentu, je název souboru protokolu *název dokumentu*. *rozšíření*.log, jako je například ExcelWorkbook1.xlsx.log. Zastavit protokolování chyb, odstranění proměnné prostředí nebo ji nastavte na hodnotu 0 (nula).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Vytváření řešení pro systém Office](../vsto/building-office-solutions.md)   
- [Postupy: opětovné povolení doplňku VSTO, který byl zakázán](../vsto/how-to-re-enable-a-vsto-add-in-that-has-been-disabled.md)   
+ [Postupy: opětovné povolení VSTO doplňku, který byl zakázán](../vsto/how-to-re-enable-a-vsto-add-in-that-has-been-disabled.md)   
  [Programování doplňků VSTO](../vsto/programming-vsto-add-ins.md)  
   
   

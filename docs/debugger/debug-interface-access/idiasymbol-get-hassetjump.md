@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_hassetjump – | Microsoft Docs
+title: Idiasymbol::get_hassetjump – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e426cad156c79ac532154a201785fed8ed47884
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 29e31a9d3ef88732c06c9b0efa7cd37fc18cd8d8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49880036"
 ---
 # <a name="idiasymbolgethassetjump"></a>IDiaSymbol::get_hasSetJump
-Načte příznak, který určuje, zda obsahuje funkce použití [setjmp](/cpp/c-runtime-library/reference/setjmp) příkazu (spárované s [longjmp](/cpp/c-runtime-library/reference/longjmp) příkaz, tyto formuláři metodu stylu jazyka C zpracování výjimek).  
+Získá příznak, který určuje, zda obsahuje funkci k využívání [setjmp](/cpp/c-runtime-library/reference/setjmp) příkazu (spárované s [longjmp](/cpp/c-runtime-library/reference/longjmp) příkazu, vytvářejí C-style způsob zpracování výjimek).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,20 +34,20 @@ HRESULT get_hasSetJump(
   
 #### <a name="parameters"></a>Parametry  
  `pFlag`  
- [out] Vrátí `TRUE` pokud obsahuje funkce `setjmp` příkaz; jinak vrátí `FALSE`.  
+ [out] Vrátí `TRUE` pokud obsahuje funkce `setjmp` příkazu; v opačném případě vrátí `FALSE`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` nebo kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
->  Vrácená hodnota `S_FALSE` znamená vlastnost není k dispozici pro symbol.  
+>  Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Požadavek|Popis|  
 |-----------------|-----------------|  
-|Hlavičky:|dia2.h|  
-|Verze:|V8.0 DIA SDK|  
+|Záhlaví:|dia2.h|  
+|Verze:|Ve verzi 8.0 DIA SDK|  
   
 ## <a name="see-also"></a>Viz také  
  [Idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md)   

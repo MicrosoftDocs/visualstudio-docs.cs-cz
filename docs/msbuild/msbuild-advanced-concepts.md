@@ -1,5 +1,5 @@
 ---
-title: Rozšířené koncepty nástroje MSBuild | Microsoft Docs
+title: Rozšířené koncepty nástroje MSBuild | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -12,26 +12,27 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: da69a99e00c84514b51c958215baf6a87e498f17
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d521dbe0f72ccc5622da37495641349a9ec24a8a
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39077452"
 ---
 # <a name="msbuild-advanced-concepts"></a>Rozšířené koncepty nástroje MSBuild
-Dokumenty v této části popisují, jak zlepšit sestavení, které spustíte pomocí nástroje MSBuild využít pokročilé techniky.  
+Dokumenty v této části popisují způsob použití pokročilé techniky ke zlepšení sestavení, které spustíte pomocí nástroje MSBuild.  
   
 ## <a name="related-topics"></a>Související témata  
   
 |Název|Popis|  
 |-----------|-----------------|  
-|[Dávkování](../msbuild/msbuild-batching.md)|Popisuje postup služby batch sestavení cílů a úloh na základě položky metadat.|  
-|[Transformace](../msbuild/msbuild-transforms.md)|Vysvětluje, jak používat transformací pro povolení detekci závislosti.|  
-|[Integrace sady Visual Studio](../msbuild/visual-studio-integration-msbuild.md)|Popisuje postup použití souborů projektu nástroje MSBuild při kompilaci kódu v prostředí Visual Studio IDE.|  
-|[Sestavování více projektů současně](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)|Popisuje, jak vytvořit více projektů rychlejší v počítačích, které mají více procesorů nebo vícejádrovými procesory.|  
-|[Cílení na více verzí](../msbuild/msbuild-multitargeting-overview.md)|Popisuje, jak ke kompilaci aplikace ke spuštění na libovolném několik verzí rozhraní .NET Framework.|  
-|[Osvědčené postupy](../msbuild/msbuild-best-practices.md)|Doporučuje osvědčené postupy pro psaní skriptů MSBuild.|  
+|[Dávkové zpracování](../msbuild/msbuild-batching.md)|Popisuje, jak dávkové sestavení cíle a úlohy na základě metadat položky.|  
+|[Transformace](../msbuild/msbuild-transforms.md)|Vysvětluje způsob používání transformací povolit analýzu závislostí.|  
+|[Integrace se sadou Visual Studio](../msbuild/visual-studio-integration-msbuild.md)|Popisuje, jak používat soubory projektu MSBuild při kompilaci kódu z integrovaného vývojového prostředí sady Visual Studio.|  
+|[Sestavování více projektů současně](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md)|Popisuje, jak rychlejší sestavení více projektů v počítačích s více procesory nebo vícejádrovými procesory.|  
+|[Cílení na více verzí](../msbuild/msbuild-multitargeting-overview.md)|Popisuje, jak sestavit aplikaci pro spuštění v jedné z několika verzí rozhraní .NET Framework.|  
+|[Osvědčené postupy](../msbuild/msbuild-best-practices.md)|Doporučuje osvědčené postupy pro psaní skriptů nástroje MSBuild.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)   
  [Protokolování v nástroji MSBuild](../msbuild/logging-in-msbuild.md)

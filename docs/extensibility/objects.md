@@ -1,5 +1,5 @@
 ---
-title: Objekty | Microsoft Docs
+title: Objekty | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,28 +13,29 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9225b83cb42e39ec4f220c5993c4695ba75b8998
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5b7448ec69af35b1fac864ef0151d37f91d15bd7
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39639946"
 ---
 # <a name="objects"></a>Objekty
-Následující referenční informace vysvětluje objekty, které se používají k vytvoření instance základní textový editor.  
+Následující referenční informace popisuje objekty, které se používají k vytvoření instance core textového editoru.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [VSCodeWindow – objekt](../extensibility/vscodewindow-object.md)  
- Popisuje objekt okno kód okna specializované dokumentu, kterého lze zadat jeden nebo více zobrazení textu.  
+ Popisuje objekt okna kódu, okno specializované dokumentu, kterého lze zadat jedno nebo více zobrazení textu.  
   
- [VSCodeWindowManager – objekt](../extensibility/vscodewindowmanager-object.md)  
- Popisuje objekt manager okno kód, který je implementováno modulem služba jazyka a je zodpovědný za správu vylepšení.  
+ [Vscodewindowmanager – objekt](../extensibility/vscodewindowmanager-object.md)  
+ Popisuje objekt správce okno kódu, která je implementovaná služba jazyka a zodpovídá za správu vylepšení.  
   
- [VSTextBuffer – objekt](../extensibility/vstextbuffer-object.md)  
- Popisuje objekt vyrovnávací paměti text, který představuje proud text v kódu Unicode, data pro soubor.  
+ [Vstextbuffer – objekt](../extensibility/vstextbuffer-object.md)  
+ Popisuje objekt vyrovnávací paměti textu, který představuje datový proud text v kódu Unicode, datového souboru.  
   
- [VSTextView – objekt](../extensibility/vstextview-object.md)  
- Popisuje textového zobrazení, okno, které umožňuje uživatelům zobrazit a upravit text v kódu Unicode textové vyrovnávací paměti.  
+ [Vstextview – objekt](../extensibility/vstextview-object.md)  
+ Popisuje zobrazení textu, okno, které umožňuje uživatelům zobrazit a upravit text v kódu Unicode textové vyrovnávací paměti.  
   
 ## <a name="related-sections"></a>Související oddíly  
- [Referenční dokumentace sady Visual Studio SDK](../extensibility/visual-studio-sdk-reference.md)  
- Zobrazí seznam referenční témata.
+ [Referenční dokumentace jazyka Visual Studio SDK](../extensibility/visual-studio-sdk-reference.md)  
+ Zobrazí seznam referenčních témat.

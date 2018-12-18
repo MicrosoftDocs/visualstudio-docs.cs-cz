@@ -1,5 +1,5 @@
 ---
-title: Idiasectioncontrib::get_comdat – | Microsoft Docs
+title: Idiasectioncontrib::get_comdat – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 578314d0771d156fe66bdfbf661ffca98844207f
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: cabd6b5736bd4f84916159a59bf43dc8442ae3b0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49847749"
 ---
 # <a name="idiasectioncontribgetcomdat"></a>IDiaSectionContrib::get_comdat
-Získá příznak označující, zda je daný oddíl sekvence COMDAT záznam.  
+Získá příznak označující, zda je oddíl COMDAT záznam.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,13 +34,13 @@ HRESULT get_comdat (
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí `TRUE` oddíl je záznam sekvence COMDAT; jinak vrátí `FALSE`.  
+ [out] Vrátí `TRUE` oddíl je záznam sekvencí COMDAT; v opačném případě vrátí `FALSE`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. Jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Záznam sekvence COMDAT je běžné objekt souboru formátu (COFF) záznam, který zviditelní zabalené funkce pro linkeru.  
+ Záznam sekvencí COMDAT je záznam Common Object File Format (COFF), který zviditelní zabalené funkce pro linker.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

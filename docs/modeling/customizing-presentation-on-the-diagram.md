@@ -9,12 +9,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 5e50a5603c7dfd15e9561940dcecfa713c17d030
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 473d0a1e1f9bd215513e7a69f8fc511f6416db7a
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31946829"
 ---
 # <a name="customizing-presentation-on-the-diagram"></a>Přizpůsobení prezentace v diagramu
 Na diagramu je oblast hlavní prezentace nástroje jazyka domény designer. Obvykle budou uživatelé používat diagramu vytvořit jejich modelů. Diagram můžete přizpůsobit, jak je popsáno v následujících tématech.

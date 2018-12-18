@@ -26,14 +26,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9b039b1cf31a04a24819b03114c661a3ab1b108a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b94856d4e00cd15f324040ccd49c90bb1be29a7d
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37120159"
 ---
-# <a name="sharepoint-project-item-schema-reference"></a>Referenční dokumentace schématu položek projektu SharePoint
-  Visual Studio používá k ověření obsahu soubory .spdata schéma položky projektu služby SharePoint. Soubor .spdata určuje obsahu a chování položky projektu služby SharePoint. Další informace o obsahu SharePoint – položky projektu najdete v tématu [vytváření šablon položek a šablony projektů pro položky projektu služby SharePoint](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md).  
+# <a name="sharepoint-project-item-schema-reference"></a>Referenční dokumentace schématu položek projektu služby SharePoint
+  Visual Studio používá schéma položky projektu služby SharePoint k ověření obsahu *.spdata* soubory. *.Spdata* soubor určuje obsahu a chování položky projektu služby SharePoint. Další informace o obsahu SharePoint – položky projektu najdete v tématu [položky vytvářet šablony a šablony projektů pro položky projektu služby SharePoint](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md).  
   
  Schéma položky projektu služby SharePoint je ProjectItemModelSchema.xsd a je nainstalována ve výchozím nastavení v % Program Files (11.0\Xml\Schemas x86)%\Microsoft Visual Studio.  
   
@@ -53,7 +54,6 @@ ms.lasthandoff: 04/16/2018
 |[SafeControl –](../sharepoint/safecontrol-element.md)|Představuje prvek ASPX nebo webovou část, která je označeny jako bezpečné pro všechny uživatele pro přístup na všechny stránky ASPX na webu služby SharePoint.|  
 |[SafeControls –](../sharepoint/safecontrols-element.md)|Představuje kolekci ovládacích prvků ASPX a webových částí, které jsou označeny jako bezpečné pro všechny uživatele pro přístup na všechny stránky ASPX na webu služby SharePoint.|  
   
-## <a name="see-also"></a>Viz také  
- [Vytváření šablon položek a projektů pro položky projektu služby SharePoint](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)  
-  
+## <a name="see-also"></a>Viz také:
+ [Vytváření šablon položek a šablony projektů pro položky projektu SharePoint](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)  
   

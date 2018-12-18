@@ -1,5 +1,5 @@
 ---
-title: 'DA0007: Vyhněte se použití výjimek pro tok řízení | Microsoft Docs'
+title: 'DA0007: Vyhněte se použití výjimek pro tok řízení | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -15,32 +15,34 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c70ddc12b2c790a360f5124e7deeb8e99189742c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 55c101f62ac7c376c9af3be8a2865cb3ebf7a7f9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49834237"
 ---
 # <a name="da0007-avoid-using-exceptions-for-control-flow"></a>DA0007: Vyhněte se použití výjimek pro tok řízení
+
 |||  
 |-|-|  
 |Id pravidla|DA0007|  
 |Kategorie|Použití rozhraní .NET framework|  
 |Metod profilace|Všechny|  
-|Zpráva|Vysoký počet výjimek jsou konzistentně hlášeny. Zvažte snížení použití výjimek v programu logiku.|  
+|Zpráva|Vysoký počet výjimek je vyvoláván. Zvažte snížení použití výjimek v logice programu.|  
 |Typ zprávy|Upozornění|  
-  
- Pokud je profil s použitím vzorkování, využívání paměti rozhraním .NET nebo metody sporu prostředků, musí shromažďovat alespoň 25 vzorků pro aktivaci tohoto pravidla.  
-  
+
+ Při profilování pomocí vzorkování, paměti .NET nebo metodám sporu prostředků, musíte shromáždit alespoň 25 vzorky k aktivaci tohoto pravidla.  
+
 ## <a name="cause"></a>příčina  
- V profilaci data měla volat vysokou míru obslužné rutiny výjimek rozhraní .NET Framework. Zvažte použití jiných logiku toku řízení a snížit počet výjimky, které jsou vydány.  
-  
+ Vysoký počet obslužných rutin výjimek rozhraní .NET Framework byly volány v dat profilování. Zvažte použití další logiku toku řízení k omezení počtu výjimek, které jsou vyvolány.  
+
 ## <a name="rule-description"></a>Popis pravidla  
- Při použití obslužné rutiny výjimek k zachycení chyb a další události, které by narušilo spuštění programu je vhodné, použijte obslužná rutina výjimky jako součást regulární logiky provádění programu může být nákladné a je nutno. Ve většině případů se použije pouze pro okolnosti, které nastanou zřídka a neočekává výjimky... Výjimky není vhodné používat k návratu hodnot v rámci toku typické programu. V mnoha případech se můžete vyhnout vyvolávání výjimek ověřování hodnoty a použitím podmíněnou logiku provádění příkazů, které způsobí potíže.  
-  
- Další informace najdete v článku [správu výjimek](http://go.microsoft.com/fwlink/?LinkID=177825) části **kapitoly 5 – zlepšení výkonu spravovaný kód** v **zvýšení výkonu aplikací .NET a škálovatelnost** svazku **Microsoft Patterns and Practices** library na webu MSDN.  
-  
-## <a name="how-to-investigate-a-warning"></a>Jak prozkoumat upozornění  
- Dvakrát klikněte na zprávy v okně Seznam chyb navigaci na zobrazení značky. Najít sloupec, který obsahuje **výjimky CLR rozhraní .NET (@ProcessInstance)\\počet vyvolaných za sekundu** měření. Zjistěte, jestli konkrétní fáze spuštění programu kde výjimek je častější než jiné. S použitím vzorkování profilu pokuste se identifikovat příkazech throw a try/catch – bloky, které generují časté výjimky. V případě potřeby přidejte logiku pro catch – bloky, které vám pomohou pochopit, výjimek, které jsou nejčastěji ke zpracování. Kde je to možné, nahraďte často provést příkazech throw nebo bloků catch s jednoduché toku řízení logiky nebo ověření kódu.  
-  
- Například pokud byste se stát, že aplikace byla zpracování časté DivideByZeroException výjimek, přidání logiky vašeho programu zkontrolujte jmenovateli s nulové hodnoty budou zlepšit výkon aplikace.
+ Při použití obslužné rutiny výjimek pro zachycení chyb a další události, které narušují provádění programu je dobrým zvykem, použití obslužné rutiny výjimek jako součást pravidelných logika spuštění programu může být nákladné a mělo by se vyhnout. Ve většině případů by měla sloužit pouze pro okolnosti, které dochází zřídka a nepředpokládá výjimky. Výjimky by neměly používá k vrácení hodnoty jako součást toku typické programu. V mnoha případech se můžete vyhnout vyvolávání výjimek ověřování hodnoty a použitím podmíněnou logiku a zastavit provádění příkazů, které způsobují tento problém.  
+
+ Další informace najdete v tématu [Správa výjimek](http://go.microsoft.com/fwlink/?LinkID=177825) část **kapitola 5 – zvýšení výkonu kódu spravované** v **zlepšení výkonu aplikace .NET a škálovatelnost** objem **Microsoft Patterns and Practices** library na webu MSDN.  
+
+## <a name="how-to-investigate-a-warning"></a>Zkoumání upozornění  
+ Dvakrát klikněte na zprávu v okně Seznam chyb pro navigaci na zobrazení značky. Sloupec, který obsahuje najít **výjimky .NET CLR (@ProcessInstance)\\počet vyniká vyvolána za sekundu** měření. Zjistěte, jestli konkrétní fáze spuštění programu se častěji než jiné zpracování výjimek. Pomocí vzorkování profilu, pokuste se identifikovat příkazy throw a try/catch – bloky, které generují se vyskytujících výjimek. V případě potřeby přidejte logiku pro bloky, které vám pomohou pochopit, výjimek, které jsou nejčastěji zpracovávanou catch. Kde je to možné, nahraďte často spouštěné příkazy throw nebo catch bloky s jednoduchý tok řízení logiku nebo ověřovací kód.  
+
+ Například pokud chcete zjistit, že vaše aplikace zpracovával se vyskytujících výjimek dividebyzeroexception – přidání logiky vašemu programu ke kontrole jmenovateli s nulovými hodnotami vylepšuje výkon aplikace.

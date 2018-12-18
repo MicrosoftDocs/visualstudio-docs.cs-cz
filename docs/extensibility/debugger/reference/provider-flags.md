@@ -1,5 +1,5 @@
 ---
-title: PROVIDER_FLAGS | Microsoft Docs
+title: PROVIDER_FLAGS | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 340531f9c943052c1abd51203f3937ccd111e314
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a44fa73a51f1f6da073c63be0873fbefc669b15d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49910495"
 ---
 # <a name="providerflags"></a>PROVIDER_FLAGS
-Určuje požadované vlastnosti ho získat od poskytovatele programu.  
+Určuje požadované vlastnosti ho získat od zprostředkovatele programu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,33 +57,33 @@ public enum enum_PROVIDER_FLAGS {
  Nebyly zadány žádné příznaky.  
   
  PFLAG_REMOTE_PORT  
- Volající chce seznam programů na jiný počítač než [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)].  
+ Volající vyžaduje seznam programů na jiném počítači než [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)].  
   
  PFLAG_DEBUGGEE  
- Proces je právě laděn touto instancí [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)].  
+ Proces je momentálně laděna touto instancí [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)].  
   
  PFLAG_ATTACH_TODEBUGGEE  
- [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] je připojen k programu laděné ale se nespustila.  
+ [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] je připojen k laděnému programu, ale se nespustila.  
   
  PFLAG_REASON_WATCH  
- [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] je sledování událostí.  
+ [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] sleduje události.  
   
  PFLAG_GET_PROGRAM_NODES  
- Volající chce `ProgramNodes` pole z [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) struktury.  
+ Volající vyžaduje `ProgramNodes` pole [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) struktury.  
   
  PFLAG_GET_IS_DEBUGGER_PRESENT  
- Volající chce `fIsTheDebuggerPresent` pole z `PROVIDER_PROCESS_DATA` struktura.  
+ Volající vyžaduje `fIsTheDebuggerPresent` pole `PROVIDER_PROCESS_DATA` struktury.  
   
 ## <a name="remarks"></a>Poznámky  
- Tyto příznaky jsou předány následující metody:  
+ Tyto příznaky jsou předány do následujících metod:  
   
--   [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md)  
+- [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md)  
   
--   [GetProviderProgramNode](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprogramnode.md)  
+- [GetProviderProgramNode](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprogramnode.md)  
   
--   [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)  
+- [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)  
   
- Tyto hodnoty mohou být kombinovány s bitové `OR`.  
+  Tyto hodnoty lze kombinovat pomocí logické bitové `OR`.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

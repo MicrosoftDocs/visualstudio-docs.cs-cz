@@ -1,38 +1,38 @@
 ---
 ms.technology: vs-ai-tools
-ms.openlocfilehash: 053ea5ad7579a040cdefbf7e519c852dc4fb7fe9
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: 7e09023659b1f44af1951e157878d78b641be3f3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49915942"
 ---
-# <a name="create-an-ai-project-from-existing-code"></a>Vytvoření projektu AI z existujícího kódu
+# <a name="create-an-ai-project-from-existing-code"></a>Vytvoření projektu aplikace AI z existujícího kódu
 
-Jakmile jste [nainstalované Visual Studio Tools pro AI](installation.md), je snadné tím existující kód Python, do projektu sady Visual Studio.
+Jakmile [nainstalované Visual Studio Tools pro AI](installation.md), snadno převést existující kód Python do projektu sady Visual Studio.
 
 > [!Important]
->
-> Proces popsaný tady není přesuňte nebo zkopírujte původním zdrojovým souborům. Pokud chcete pracovat s kopií, duplicitní nejprve složce.
+> Proces je zde popsáno, ne přesuňte nebo zkopírujte původním zdrojovým souborům. Pokud chcete pracovat s kopií, duplicitní první složku.
 
 1. Spusťte sadu Visual Studio a vyberte **soubor > Nový > projekt**.
 
-1. V **nový projekt** dialogové okno, vyhledejte "**AI nástroje**", vyberte "**kód z existující Python**" šablony, název a umístění poskytnout projekt a vyberte **OK**.
+2. V **nový projekt** dialogové okno, vyhledejte "**nástroje AI**", vyberte "**z existujícího kódu Pythonu**" šablony, dejte projektu název a umístění a vyberte **OK**.
 
-    ![Nový projekt z existujícího kódu, krok 1](media\create-project-existing\new-ai-project.png)
+   ![Nový projekt z existujícího kódu, krok 1](media/create-project-existing/new-ai-project.png)
 
-1. V průvodci, který se zobrazí, nastavení cesty pro váš stávající kód, nastavte filtr pro typy souborů a zadejte všechny cesty hledání, které projekt vyžaduje, a potom vyberte **OK**. Pokud si nejste jisti, jaké vyhledávání cest, nechte toto pole prázdné.
+3. V průvodci, který se zobrazí nastavení cesty k váš stávající kód, nastavte filtr pro typy souborů a zadejte všechny cesty pro hledání, které vyžaduje váš projekt a pak vyberte **OK**. Pokud si nejste jisti, jaké vyhledávací cesty, ponechte toto pole prázdné.
 
-![Nový projekt z existujícího kódu, krok 2](media\create-project-existing\azurebatch-newproject.png)
+   ![Nový projekt z existujícího kódu, krok 2](media/create-project-existing/azurebatch-newproject.png)
 
-> Pokud váš stávající kód je součástí projektu Azure Machine Learning, podívejte se "**složky je Azure Machine Learning**" k zajištění úspěšné převod důležité podrobnosti konfigurace Azure Machine Learning, třeba které experimentování účet, který pracovního prostoru, výpočetní kontexty používat a další.
+   Pokud váš stávající kód je součástí projektu aplikace Azure Machine Learning, zkontrolujte, **složky je Azure Machine Learning** zajistit úspěšný převod důležité podrobnosti konfigurace Azure Machine Learning jako služby experimentování ve službě účet pracovního prostoru, který použití kontexty služby compute, a další.
 
-1. Pokud chcete nastavit spuštění souboru, vyhledejte soubor v Průzkumníku řešení klikněte pravým tlačítkem a vyberte **nastavit jako spouštěcí soubor**.
+4. Pokud chcete nastavit spouštěcí soubor, vyhledejte soubor v **Průzkumníka řešení**, klikněte pravým tlačítkem a vyberte **nastavit jako spouštěcí soubor**.
 
-1. V případě potřeby spustit program stisknutím Ctrl + F5 nebo výběrem **ladění > Spustit bez ladění**.
+5. Spusťte program stisknutím kombinace kláves **Ctrl**+**F5** nebo jeho výběru **ladit > Spustit bez ladění**.
 
 > [!div class="nextstepaction"]
-> [Kurz: Práce s Python v sadě Visual Studio](../python/tutorial-working-with-python-in-visual-studio-step-00-installation.md)
+> [Kurz: Práce s využitím Pythonu v sadě Visual Studio](../python/tutorial-working-with-python-in-visual-studio-step-00-installation.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Ručně Identifikace stávajícího prostředí Python](../python/managing-python-environments-in-visual-studio.md#manually-identifying-an-existing-environment)
+- [Ručně identifikovat existující prostředí Pythonu](../python/managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)

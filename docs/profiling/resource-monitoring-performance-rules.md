@@ -15,6 +15,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31584578"
 ---
 # <a name="resource-monitoring-performance-rules"></a>Pravidla výkonu sledování prostředků
 Výkon zprávy v kategorii sledování prostředků poskytují další data o výkonu vaší aplikace. Tato data můžete analyzovat problémy s výkonem. Tato pravidla jsou informativní a oznámená pro každý profilace spustit.  

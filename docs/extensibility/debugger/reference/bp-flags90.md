@@ -1,5 +1,5 @@
 ---
-title: BP_FLAGS90 | Microsoft Docs
+title: BP_FLAGS90 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,14 +13,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9f8153f3fb2419e26f7e7d3a741ae4c79c9272a4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 32109a6065811c5f36cf00b0287291ca760eb7c1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49862694"
 ---
 # <a name="bpflags90"></a>BP_FLAGS90
-Vytvoří výčet platné hodnoty pro volitelné příznaky. Volitelné příznaky lze určit další informace, když nastavit zarážky. Tento výčet rozšiřuje [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) výčtu.  
+Vytvoří výčet platných hodnot pro volitelné příznaky. Volitelné příznaky slouží k určení dalších informací při nastavení zarážky. Tento výčet rozšiřuje [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) výčtu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,16 +54,16 @@ public enum enum_BP_FLAGS90
   
 #### <a name="parameters"></a>Parametry  
  BP90_FLAG_NONE  
- Určuje bez zarážek příznak.  
+ Určuje příznak bez zarážek.  
   
  BP90_FLAG_MAP_DOCPOSITION  
- Určuje, že modul ladění (DE) by měla být mapována zarážce pomocí pozice dokumentu. To se vztahuje pouze na body přerušení nastavené v orientované skriptu zdrojové soubory jako je například stránky ASP (Active Server).  
+ Určuje, že ladicí stroj (DE) by měl mapovat zarážky pomocí pozice dokumentu. To se vztahuje pouze na zarážky nastavené v skript orientovaného zdrojových souborech, jako je například stránek ASP (Active Server).  
   
  BP90_FLAG_DONT_STOP  
- Určuje, že zarážce měla by být zpracována modul ladění, ale, modul ladění nakonec nesmí zastavit To znamená [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) objekt události by se neměly posílat. Tento příznak je určen k použití především s body trasování.  
+ Určuje, že zarážka by měla být zpracovány ladicího stroje, ale, že ladicí stroj nakonec by neměl zastavit To znamená [IDebugBreakpointEvent2](../../../extensibility/debugger/reference/idebugbreakpointevent2.md) nesmí být rozesílaná objektu události. Tento příznak slouží k používá hlavně s body trasování.  
   
  BP90_FLAG_TRACEPOINT_CONTINUE  
- Chcete-li zjistit, zda je nutné vymazat stav taktování používá stroj nativní ladění. Liší se od BP90_FLAG_DONT_STOP protože BP90_FLAG_DONT_STOP není nastavená, pokud je trasování bod provede makra.  
+ Použít nativní ladicí modul k určení, zda krokování stavu by měla zůstat nezaškrtnutá. Se liší od BP90_FLAG_DONT_STOP protože BP90_FLAG_DONT_STOP není nastavená, pokud bod trasování provede makro.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: Msdbg90.h  

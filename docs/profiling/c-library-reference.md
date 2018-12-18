@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 077ae868561f58596955ce39a9335f845f00f8b5
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e48a9b5f601994a7a32aae38bdafbfdce6da22e7
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34266369"
 ---
 # <a name="c-library-reference"></a>Referenční dokumentace knihoven jazyka C
 Tato část obsahuje informace o sadě SDK Vizualizéru souběžnosti.  
@@ -24,27 +25,3 @@ Tato část obsahuje informace o sadě SDK Vizualizéru souběžnosti.
 > [!NOTE]
 >  Jazyk C standardní si vyhrazuje použití identifikátorů, které začínají podtržítkem (`_`) znak pro implementace například knihovny. Nepoužívejte názvy počínaje podtržítkem ve vašem kódu. Uvolní chování kódu elementy, jejichž názvy následují touto konvencí se nezaručuje a v budoucnu se mohou změnit. Z těchto důvodů jsou tyto elementy kódu vynechaný této dokumentace.  
   
-## <a name="in-this-section"></a>V tomto oddílu  
- [CvCreateDefaultMarkerSeriesOfDefaultProvider – funkce](../profiling/cvcreatedefaultmarkerseriesofdefaultprovider-function.md)  
-  
- [CvCreateMarkerSeries – funkce](../profiling/cvcreatemarkerseries-function.md)  
-  
- [CvCreateMarkerSeriesWithCodePageA – funkce](../profiling/cvcreatemarkerserieswithcodepagea-function.md)  
-  
- [CvEnterSpan – funkce](../profiling/cventerspan-function.md)  
-  
- [CvInitProvider – funkce](../profiling/cvinitprovider-function.md)  
-  
- [CvIsEnabled – funkce](../profiling/cvisenabled-function.md)  
-  
- [CvLeaveSpan – funkce](../profiling/cvleavespan-function.md)  
-  
- [CvReleaseMarkerSeries – funkce](../profiling/cvreleasemarkerseries-function.md)  
-  
- [CvReleaseProvider – funkce](../profiling/cvreleaseprovider-function.md)  
-  
- [CvWriteAlert – funkce](../profiling/cvwritealert-function.md)  
-  
- [CvWriteFlag – funkce](../profiling/cvwriteflag-function.md)  
-  
- [CvWriteMessage – funkce](../profiling/cvwritemessage-function.md)

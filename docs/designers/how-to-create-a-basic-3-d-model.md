@@ -1,6 +1,7 @@
 ---
-title: 'Postupy: vytvoření základní 3D modelu'
+title: 'Postupy: vytvoření základního 3D modelu'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: a0d97966-2df8-449b-a8cf-5a19684dc773
@@ -9,71 +10,72 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fb448037b5baf8058860df615cd28e8cc4e26829
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 6242b80c1dcefe0e1a3a35561337a75e6098d25d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49913446"
 ---
-# <a name="how-to-create-a-basic-3d-model"></a>Postupy: vytvoření základní 3D modelu
+# <a name="how-to-create-a-basic-3d-model"></a>Postupy: vytvoření základního 3D modelu
 
-Tento článek ukazuje, jak vytvořit základní 3D modelu pomocí editoru modelu. Jsou popsané níže uvedených aktivit:
+Tento článek popisuje způsob použití Editoru modelů pro vytvoření základního 3D modelu. Zahrnuje následující činnosti:
 
 -   Přidání objektů do scény
 
--   Výběr řezy a okraje
+-   Výběrem tváří a okraje
 
--   Výběr překladu
+-   Možnosti překladu
 
--   Pomocí **Rozdělit vzhled** a **tvarování vzhled** nástroje
+-   Použití **rozdělit plochu** a **vyloučit plochu** nástroje
 
--   Pomocí **Triangulate** příkaz
+-   Použití **Triangulovat** příkazu
 
-## <a name="create-a-basic-3d-model"></a>Vytvoření základního modelu 3D
- Editor modelu můžete vytvářet a upravovat 3D modely a scény pro hry nebo aplikace. Následující kroky ukazují, jak vytvořit jednoduchý model 3D domu pomocí editoru modelu. Zjednodušený model slouží jako stand-in pro konečné obrázky prostředky, které jsou stále probíhá vytváření, jako mřížku pro detekce kolizí nebo nízké podrobností model má být použita, pokud objekt, který reprezentuje je příliš daleko abyste mohli využívat výhod vykreslování podrobnější.
+## <a name="create-a-basic-3d-model"></a>Vytvoření základního 3D modelu
+ Editor modelů můžete použít k vytvoření a úprava 3D modely a pozadí pro vaše hry nebo aplikace. Následující kroky ukazují, jak vytvořit jednoduchý model 3D domu pomocí Editoru modelů. Zjednodušený model může sloužit jako stand-in pro konečné prostředků, které jsou stále probíhá vytváření, jako síť pro detekci kolizí, nebo jako model s nízkou podrobností se použije, když je objekt, který představuje příliš daleko těžit z podrobnější vykreslování.
 
- Jakmile budete hotovi, modelu by měl vypadat přibližně takto:
+ Jakmile budete hotovi, model by měl vypadat nějak takto:
 
- ![Dokončené model zjednodušené úklidové](../designers/media/gfx_model_demo_house_final.png "gfx_model_demo_house_final")
+ ![Dokončené modelu zjednodušené house](../designers/media/gfx_model_demo_house_final.png)
 
- Než začnete, ujistěte se, že **vlastnosti** okno a **sada nástrojů** jsou zobrazeny.
+ Než začnete, ujistěte se, že **vlastnosti** okno a **nástrojů** jsou zobrazeny.
 
-### <a name="to-create-a-simplified-3d-model-of-a-house"></a>Pro vytvoření modelu zjednodušené 3D domu
+### <a name="to-create-a-simplified-3d-model-of-a-house"></a>K vytvoření 3D modelu zjednodušené domu
 
-1.  Vytvořte 3D model pro práci s. Informace o tom, jak přidat model do projektu, najdete v části Začínáme v [modelu Editor](../designers/model-editor.md).
+1. Vytvoření 3D modelu, se kterým chcete pracovat. Informace o tom, jak přidat modelu do projektu naleznete v části Začínáme v [editoru modelů](../designers/model-editor.md).
 
-2.  Přidejte do scény datovou krychli. V **sada nástrojů** okno, v části **tvarů**, vyberte **datové krychle** a poté ho přesuňte na plochu návrháře.
+2. Přidáte datové krychle do scény. V **nástrojů** okně v části **tvary**vyberte **datové krychle** a přesuňte jej na návrhovou plochu.
 
-3.  Umožňuje přepnout do vzhled výběru. Na panelu nástrojů editoru modelu zvolte **vyberte vzhled**.
+3. Přepnout výběr pro rozpoznávání tváře. Na panelu nástrojů editoru modelů **tváří vybrat**.
 
-4.  Rozdělit horní části datové krychle. V režimu výběru řez zvolte datové krychle jednou aktivace pro výběr a zvolte horní části datové krychle vyberte nejvyšší písmo. Na panelu nástrojů editoru modelu zvolte **Rozdělit vzhled**. Tento postup přidá novou vrcholy do horní části datové krychle, která rozdělená do čtyř oddílů stejně velké.
+4. Rozdělit horní části datové krychle. V režimu výběru ploch zvolte krychli jednou aktivovat pro výběr a klikněte na tlačítko horní část datové krychle a vyberte hlavní rozpoznávání tváře. Na panelu nástrojů editoru modelů **rozdělit plochu**. Tento postup přidá nové vrcholy k hornímu okraji datové krychle, která ho rozdělit do čtyř oddílů stejně velké.
 
-     ![Horní části datové krychle se dělí](../designers/media/gfx_model_demo_house_subdiv.png "gfx_model_demo_house_subdiv")
+    ![Má dělí horní části datové krychle](../designers/media/gfx_model_demo_house_subdiv.png)
 
-5.  Tvarování sociálními přiléhající datové krychle – například přední a pravé straně datové krychle. V režimu výběru řez zvolte datové krychle jednou aktivovat pro výběr a potom vyberte jedné straně datové krychle. Stiskněte a přidržte klávesu ovládací prvek, zvolte jiné straně sousedícího na straně, které jste vybrali nejprve datové krychle a na panelu nástrojů editoru modelu zvolte **tvarování vzhled**.
+5. Vyloučit sociálními sousední datové krychle – například front-end a pravé straně datové krychle. V režimu výběru ploch zvolte datovou krychli jednou aktivovat pro výběr a klikněte na tlačítko straně datové krychle. Stiskněte a podržte **Ctrl** klíče, zvolte jinou stranu krychle sousedícího se na straně nejprve vyberete a pak zvolte na panelu nástrojů editoru modelů **vyloučit plochu**.
 
-     ![Mít byla vyňaty postranní datové krychle](../designers/media/gfx_model_demo_house_extrude.png "gfx_model_demo_house_extrude")
+    ![Strany krychle mít vyňaty.](../designers/media/gfx_model_demo_house_extrude.png)
 
-6.  Jeden z extrusions rozšiřte. Vyberte jednu z řezy, které jste právě vyňaty a potom na panelu nástrojů editoru modelu zvolte **přeložit** nástroje a přesunout manipulator překlad ve stejném směru jako vysunutí.
+6. Rozšiřte jednu extrusions. Vyberte jednu z plochy, které jste právě vyňaty a zvolte na panelu nástrojů editoru modelů **přeložit** nástroj a ve stejném směru jako vytlačení přesunout manipulátor překladu.
 
-     ![Další má byla vyňaty jedné straně datové krychle. ] (../designers/media/gfx_model_demo_house_extend.png "gfx_model_demo_house_extend")
+    ![Straně krychle má další vyňaty.](../designers/media/gfx_model_demo_house_extend.png)
 
-7.  Triangulovat modelu. Na panelu nástrojů editoru modelu zvolte **Upřesnit**, **nástroje**, **Triangulate**.
+7. Triangulovat modelu. Na panelu nástrojů editoru modelů **Upřesnit** > **nástroje** > **Triangulovat**.
 
-8.  Vytvořte stropu budovy. Přepnout na režim výběru edge tak, že zvolíte **vyberte okraj** na panelu nástrojů editoru modelu a potom vyberte datovou krychli aktivovat. Stiskněte a přidržte klávesu ovládací prvek, při výběru okrajů, které jsou zobrazeny zde:
+8. Vytvoření stříška dům. Přepnout do režimu výběru okrajů výběrem **vyberte Edge** na panelu nástrojů editoru modelů a datové krychle aktivovat, klikněte na tlačítko. Stiskněte a podržte **Ctrl** klíče při výběru hran, která jsou zobrazena zde:
 
-     ![Okraje, které budou formovat ve špičce z stropu](../designers/media/gfx_model_demo_house_edges.png "gfx_model_demo_house_edges")
+    ![Hrany, které budou tvořit ve špičce stropu](../designers/media/gfx_model_demo_house_edges.png)
 
-     Když jsou vybrané okrajů, na panelu nástrojů editoru modelu, vyberte **přeložit** nástroje a poté přesuňte manipulator překlad směrem nahoru k vytvoření stropu budovy.
+    Když vyberete okrajů, na panelu nástrojů editoru modelů, zvolte **přeložit** nástroje a poté přesuňte směrem nahoru k vytvoření stříška dům manipulátor překladu.
 
- Zjednodušená úklidové modelu je dokončena. Tady je poslední model znovu s konstantní stínování použít:
+   Zjednodušené house modelu je dokončeno. Tady je znovu finálního modelu s plochým stínováním použít:
 
- ![Dokončené model zjednodušené úklidové](../designers/media/gfx_model_demo_house_final.png "gfx_model_demo_house_final")
+   ![Dokončené modelu zjednodušené house](../designers/media/gfx_model_demo_house_final.png)
 
- Jako další krok můžete použít shaderu k tomuto 3D modelu. Informace najdete v tématu [postupy: použití shaderu 3D modelu](../designers/how-to-apply-a-shader-to-a-3-d-model.md).
+   V dalším kroku můžete tento 3D model použití shaderu. Informace najdete v tématu [postupy: použití shaderu na 3D model](../designers/how-to-apply-a-shader-to-a-3-d-model.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Postupy: Model 3D geologické struktury](../designers/how-to-model-3-d-terrain.md)
+- [Postupy: Modelování 3D terénu](../designers/how-to-model-3-d-terrain.md)
 - [Editor modelů](../designers/model-editor.md)
 - [Návrhář shaderů](../designers/shader-designer.md)

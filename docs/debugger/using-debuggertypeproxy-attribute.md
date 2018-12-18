@@ -1,5 +1,5 @@
 ---
-title: Používání atributu DebuggerTypeProxy | Microsoft Docs
+title: Používání atributu DebuggerTypeProxy | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -19,49 +19,53 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: af0f2521b2276d28b07a4712009c4c4ae85a4d2d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: ab54c754fdc3b7ae773e71a96936a1c17c6bc5ce
+ms.sourcegitcommit: 9571742f4a808c75b1034aa72fc24b54bc50692e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49411063"
 ---
 # <a name="using-debuggertypeproxy-attribute"></a>Používání atributu DebuggerTypeProxy
-<xref:System.Diagnostics.DebuggerTypeProxyAttribute> Určuje server proxy nebo stand-in, typu a změny, které způsob typ se zobrazí v ladicího programu. Při zobrazení proměnné, která má proxy server proxy serveru znamená původní typu v **zobrazení**. V okně proměnné ladicí program se zobrazí pouze veřejné členy typ proxy. Soukromé členy nejsou zobrazeny.  
-  
- Tento atribut lze použít:  
-  
--   Struktury  
-  
--   Třídy  
-  
--   Sestavení  
-  
- Typ třídy proxy musí mít konstruktor, který používá argument s typem, který nahradí proxy serveru. Ladicí program vytvoří novou instanci třídy proxy pokaždé, když bude potřebovat zobrazit proměnné cílového typu. To může mít vliv na výkon. V důsledku toho neměli dělat žádné další práci v konstruktoru, než je nezbytně nutné.  
-  
- Chcete-li minimalizovat penalizacím výkonu, vyhodnocovací filtr výrazů není zkontrolujte atributy na proxy zobrazení typu Pokud typ je rozšířena uživatel kliknutím + symbol v okně ladicího programu nebo použití <xref:System.Diagnostics.DebuggerBrowsableAttribute>. Proto by nemělo umístit atributy na vlastní typ zobrazení. Atributy lze a je třeba používat v těle typu zobrazení.  
-  
- Je vhodné pro typ proxy být privátní vnořené třídy v rámci třídy, které cíle atributů. To umožňuje snadno přístup vnitřní členy.  
-  
- Pokud <xref:System.Diagnostics.DebuggerTypeProxyAttribute> se používá na úrovni sestavení `Target` parametr určuje typ, který nahradí proxy serveru.  
-  
- Příklad použití tohoto atributu spolu s <xref:System.Diagnostics.DebuggerDisplayAttribute> a <xref:System.Diagnostics.DebuggerTypeProxyAttribute>, najdete v části[používání atributu DebuggerDisplay](../debugger/using-the-debuggerdisplay-attribute.md).  
-  
-## <a name="using-generics-with-debuggertypeproxy"></a>Pomocí debuggertypeproxy – obecné typy  
- Podpora je omezena. Pro jazyk C# `DebuggerTypeProxy` podporuje pouze otevřete typy. Otevřený typ, označované taky jako typ unconstructed je obecný typ, který nebyla inicializována s argumenty jeho parametrů typu. Uzavřené typy, označované taky jako sestavené typy nejsou podporovány.  
-  
- Syntaxe pro otevřený typ. vypadá takto:  
-  
- `Namespace.TypeName<,>`  
-  
- Pokud použijete obecného typu jako cíl v `DebuggerTypeProxy`, je nutné použít tuto syntaxi. `DebuggerTypeProxy` Mechanismus odvodí, že parametry typu za vás.  
-  
- Další informace o typech otevřené a uzavřené v jazyce C# najdete v článku [specifikace jazyka C#](/dotnet/csharp/language-reference/language-specification), otevřete část 20.5.2 a uzavřen typy.  
-  
- Visual Basic nemá otevřený typ syntaxe, nelze to samé v jazyce Visual Basic. Místo toho musíte použít řetězec reprezentující název otevřete typu.  
-  
- `"Namespace.TypeName'2"`  
-  
-## <a name="see-also"></a>Viz také  
- [Používání atributu DebuggerDisplay](../debugger/using-the-debuggerdisplay-attribute.md)   
- [Vytváření vlastních pohledů .managed objektů](../debugger/create-custom-views-of-dot-managed-objects.md)   
- [Rozšíření ladění pomocí atributů zobrazení ladicího programu](/dotnet/framework/debug-trace-profile/enhancing-debugging-with-the-debugger-display-attributes)
+
+<xref:System.Diagnostics.DebuggerTypeProxyAttribute> Určuje proxy server nebo stand-in pro typ a provedené změny tak, jak typ se zobrazí v oknech ladicího programu. Pokud zobrazíte proměnnou, která má proxy server, proxy zastupuje původní typ v **zobrazit**. V okně proměnné ladicího programu se zobrazí pouze veřejné členy typu proxy. Soukromé členy nejsou zobrazeny.
+
+Tento atribut lze použít pro:
+
+- Struktury
+- Třídy
+- Sestavení
+
+Typ třídy proxy server musí mít konstruktor, který přebírá argument typu, který nahradí proxy serveru. Ladicí program vytvoří novou instanci třídy proxy pokaždé, když je potřeba zobrazení proměnné cílového typu. To může mít vliv na výkon. V důsledku toho by neměla provést žádné další práci v konstruktoru, než je nezbytně nutné.
+
+Chcete-li minimalizovat snížení výkonu, vyhodnocovací filtr výrazů nezkoumá atributy u proxy zobrazení typu Pokud typ rozbalen uživatel kliknutím + symbol v okně ladicího programu, nebo pomocí <xref:System.Diagnostics.DebuggerBrowsableAttribute>. Proto by neměl umístit atributy na samotném zobrazení typu. Atributy lze a by měl být použit v těle typu zobrazení.
+
+Je vhodné pro proxy server typů být privátní vnořené třídy v rámci třídy, které cíle atributů. To umožňuje snadno získat přístup vnitřní členy.
+
+<xref:System.Diagnostics.DebuggerTypeProxyAttribute> je možné zdědit, takže pokud není zadán proxy server typů v základní třídě bude platit pro všechny odvozené třídy, pokud tyto odvozené třídy zadat své vlastní proxy server typů.
+
+Pokud <xref:System.Diagnostics.DebuggerTypeProxyAttribute> se používá na úrovni sestavení `Target` parametr určuje typ, který nahradí proxy serveru.
+
+Příklad, jak používat tento atribut spolu s <xref:System.Diagnostics.DebuggerDisplayAttribute> a <xref:System.Diagnostics.DebuggerTypeProxyAttribute>, naleznete v tématu[pomocí atributu DebuggerDisplay](../debugger/using-the-debuggerdisplay-attribute.md).
+
+## <a name="using-generics-with-debuggertypeproxy"></a>Použití obecných typů pomocí DebuggerTypeProxy
+
+Podpora je omezená. Pro jazyk C# `DebuggerTypeProxy` typů podporuje pouze otevřít. Otevřený typ, zkratka typu unconstructed je obecného typu, která nebyla vytvořena instance s argumenty pro svoje parametry typu. Uzavřené typy zkratka sestavené typy nejsou podporované.
+
+Syntaxe pro otevřený typ. vypadá takto:
+
+`Namespace.TypeName<,>`
+
+Pokud jako cíl v použití obecného typu `DebuggerTypeProxy`, je nutné použít tuto syntaxi. `DebuggerTypeProxy` Mechanismus parametry typu odvodí z nich za vás.
+
+Další informace o typech otevřené a uzavřené v jazyce C# najdete v článku [specifikace jazyka C#](/dotnet/csharp/language-reference/language-specification), otevřete část 20.5.2 a uzavření typů.
+
+Visual Basic nemá otevřeného typu syntaxe proto nelze provést totéž v jazyce Visual Basic. Místo toho musíte použít řetězec představující název otevřeného typu.
+
+`"Namespace.TypeName'2"`
+
+## <a name="see-also"></a>Viz také
+
+- [Používání atributu DebuggerDisplay](../debugger/using-the-debuggerdisplay-attribute.md)
+- [Vytváření vlastních zobrazení .managed objektů](../debugger/create-custom-views-of-dot-managed-objects.md)
+- [Rozšíření ladění pomocí atributů zobrazení ladicího programu](/dotnet/framework/debug-trace-profile/enhancing-debugging-with-the-debugger-display-attributes)

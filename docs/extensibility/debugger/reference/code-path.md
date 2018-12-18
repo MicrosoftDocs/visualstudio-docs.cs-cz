@@ -1,5 +1,5 @@
 ---
-title: CODE_PATH | Microsoft Docs
+title: CODE_PATH | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6c88737638b20eafdef0ef84f5c45e494cf39607
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a9618d28aeadaa85d97e9018fdf57ee8952ac3fd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920258"
 ---
 # <a name="codepath"></a>CODE_PATH
 Popisuje volání metody nebo funkce.  
@@ -44,11 +45,11 @@ public struct CODE_PATH {
  bstrName  
  Název cesty kódu.  
   
- pCode  
- [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) objekt, který identifikuje tam, kde v kódu pro krok do funkce.  
+ souboru pCode  
+ [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) objekt, který identifikuje v kódu na funkci.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je použít k implementaci zanoříte se do funkce. [EnumCodePaths](../../../extensibility/debugger/reference/idebugprogram2-enumcodepaths.md) vrátí všechna volání z aktuálního umístění v programu laděné. Tato struktura představuje jedno takové volání.  
+ Tato struktura je použít k implementaci krokování do funkce. [EnumCodePaths](../../../extensibility/debugger/reference/idebugprogram2-enumcodepaths.md) vrátí všechna volání z aktuálního umístění v programu, který se právě ladí. Tato struktura představuje jedno z těchto volání.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

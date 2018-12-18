@@ -1,6 +1,7 @@
 ---
 title: 'CA2221: Finalizační metody by měly být chráněné'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,34 +16,36 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cf4ee1aef9ef31dccad5a9728244aeaf79f9e6a4
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 1ac3f9116366920f833fe8d907181473d6fda106
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45551282"
 ---
 # <a name="ca2221-finalizers-should-be-protected"></a>CA2221: Finalizační metody by měly být chráněné
+
 |||
 |-|-|
 |TypeName|FinalizersShouldBeProtected|
 |CheckId|CA2221|
 |Kategorie|Microsoft.Usage|
-|Narušující změna|Bez ukončování řádků|
+|Narušující změna|Pevné|
 
 ## <a name="cause"></a>příčina
- Veřejného typu implementuje finalizační metodu, která neurčuje rodiny (chráněné) přístup.
+ Veřejný typ implementuje finalizační metodu, která neurčuje přístupu family (chráněné).
 
 ## <a name="rule-description"></a>Popis pravidla
- Finalizační metody musí použít modifikátor přístupu family. Toto pravidlo se vynucuje kompilátory jazyka C#, Visual Basic a Visual C++.
+ Finalizační metody musí použít modifikátor přístupu family. Toto pravidlo je vynuceno kompilátory C#, Visual Basic a Visual C++.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení toto pravidlo, změňte finalizační metodu rodiny přístupné.
+ Chcete-li opravit porušení tohoto pravidla, změňte finalizační metodu dostupná řada.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Nepotlačujte upozornění na toto pravidlo.
 
 ## <a name="example"></a>Příklad
- Toto pravidlo nemůže být došlo k porušení v kterémkoli jazyce platformy .NET vysoké úrovně; může být narušena, pokud píšete Microsoft Intermediate Language.
+ Toto pravidlo nemůže být došlo k porušení v kterémkoli jazyce platformy .NET vysoké úrovně; Pokud píšete jazyk Microsoft Intermediate Language protože porušoval.
 
 ```
 // =============== CLASS MEMBERS DECLARATION ===================
@@ -77,5 +80,6 @@ ms.lasthandoff: 04/19/2018
 } // end of namespace
 ```
 
-## <a name="see-also"></a>Viz také
- [Vzor pro metodu Dispose](/dotnet/standard/design-guidelines/dispose-pattern)
+## <a name="see-also"></a>Viz také:
+
+- [Vzor pro metodu Dispose](/dotnet/standard/design-guidelines/dispose-pattern)

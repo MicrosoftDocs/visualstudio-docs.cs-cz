@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: hledání prostřednictvím kódu programu a nahrazení textu v dokumentech | Microsoft Docs'
+title: 'Postupy: Programová hledání a nahrazování textu v dokumentech'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -19,109 +19,110 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9967fb6bb0b9ecf377763c25037089bf600145c6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6de96133a810898fe847cce71bb2711dd7c31dd9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49822394"
 ---
-# <a name="how-to-programmatically-search-for-and-replace-text--in-documents"></a>Postupy: Hledání a nahrazování textu v dokumentech prostřednictvím kódu programu
-  <xref:Microsoft.Office.Interop.Word.Find> Objektu je členem obou <xref:Microsoft.Office.Interop.Word.Selection> a <xref:Microsoft.Office.Interop.Word.Range> objektů a vy můžete použít některý pro hledání textu v dokumentech aplikace Microsoft Office Word. Příkaz replace je rozšířením příkaz find.  
+# <a name="how-to-programmatically-search-for-and-replace-text-in-documents"></a>Postupy: Programová hledání a nahrazování textu v dokumentech
+  <xref:Microsoft.Office.Interop.Word.Find> Objektu je členem obou <xref:Microsoft.Office.Interop.Word.Selection> a <xref:Microsoft.Office.Interop.Word.Range> objektů a vy můžete použít buď pro hledání textu v dokumentech aplikace Microsoft Office Word. Příkaz replace je rozšířením najít příkaz.  
   
- Použít <xref:Microsoft.Office.Interop.Word.Find> objekt můžete procházet dokument aplikace Microsoft Office Word a vyhledat konkrétní text, formátování a stylu a použít <xref:Microsoft.Office.Interop.Word.Find.Replacement%2A> vlastnost, která má nahradit libovolný nalezených položek.  
+ Použít <xref:Microsoft.Office.Interop.Word.Find> objektu pro cyklický průchod dokument aplikace Microsoft Office Word a vyhledat konkrétní text, formátování a styl a použít <xref:Microsoft.Office.Interop.Word.Find.Replacement%2A> vlastnost pro nahrazení kterékoli z položek nalezen.  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
-## <a name="using-a-selection-object"></a>Pomocí výběr objektu  
- Při použití <xref:Microsoft.Office.Interop.Word.Selection> objekt, který chcete najít text, všechny vyhledávací kritéria zadáte se uplatňuje se pouze na aktuálně vybraný text. Pokud <xref:Microsoft.Office.Interop.Word.Selection> je bod vložení, je prohledána dokumentu. Pokud byla položka nalezena odpovídající kritériím hledání, je automaticky vybrán.  
+## <a name="use-a-selection-object"></a>Použití výběr objektu  
+ Při použití <xref:Microsoft.Office.Interop.Word.Selection> objektu Hledat text, jakékoli hledání zadáte kritéria se použijí jenom pro aktuálně vybraný text. Pokud <xref:Microsoft.Office.Interop.Word.Selection> je kurzor, je prohledána dokumentu. Pokud položka není nalezen, které by odpovídalo kritériím hledání, je automaticky vybrán.  
   
- Je důležité si uvědomit, že <xref:Microsoft.Office.Interop.Word.Find> kritéria jsou kumulativní, což znamená, že kritéria, jsou přidány do předchozí kritéria hledání. Vymazat formátování z předchozích hledání s použitím <xref:Microsoft.Office.Interop.Word.Find.ClearFormatting%2A> metoda před hledání.  
+ Je důležité si uvědomit, že <xref:Microsoft.Office.Interop.Word.Find> kritéria jsou kumulativní, což znamená, že kritéria jsou přidány do předchozího kritériím hledání. Vymazat formátování z předchozích hledání s použitím <xref:Microsoft.Office.Interop.Word.Find.ClearFormatting%2A> metoda před hledání.  
   
-#### <a name="to-find-text-using-a-selection-object"></a>Najít text s použitím výběr objektu  
+### <a name="to-find-text-using-a-selection-object"></a>Hledat pomocí výběru objektu text  
   
-1.  Proměnné přiřadíte hledaný řetězec.  
+1. Přiřaďte proměnné hledaný řetězec.  
   
-     [!code-vb[Trin_VstcoreWordAutomation#68](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#68)]
-     [!code-csharp[Trin_VstcoreWordAutomation#68](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#68)]  
+    [!code-vb[Trin_VstcoreWordAutomation#68](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#68)]
+    [!code-csharp[Trin_VstcoreWordAutomation#68](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#68)]  
   
-2.  Vymažte formátování z předchozích hledání.  
+2. Vymažte formátování z předchozích hledání.  
   
-     [!code-vb[Trin_VstcoreWordAutomation#69](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#69)]
-     [!code-csharp[Trin_VstcoreWordAutomation#69](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#69)]  
+    [!code-vb[Trin_VstcoreWordAutomation#69](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#69)]
+    [!code-csharp[Trin_VstcoreWordAutomation#69](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#69)]  
   
-3.  Provést hledání a zobrazit okno se zprávou s výsledky.  
+3. Spustit hledání a zobrazte okno se zprávou s výsledky.  
   
-     [!code-vb[Trin_VstcoreWordAutomation#70](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#70)]
-     [!code-csharp[Trin_VstcoreWordAutomation#70](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#70)]  
+    [!code-vb[Trin_VstcoreWordAutomation#70](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#70)]
+    [!code-csharp[Trin_VstcoreWordAutomation#70](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#70)]  
   
- Následující příklad ukazuje metodu dokončení.  
+   Následující příklad ukazuje kompletní metodu.  
   
- [!code-vb[Trin_VstcoreWordAutomation#67](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#67)]
- [!code-csharp[Trin_VstcoreWordAutomation#67](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#67)]  
+   [!code-vb[Trin_VstcoreWordAutomation#67](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#67)]
+   [!code-csharp[Trin_VstcoreWordAutomation#67](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#67)]  
   
-## <a name="using-a-range-object"></a>Pomocí objektu rozsahu  
- Použití <xref:Microsoft.Office.Interop.Word.Range> objektu umožňuje hledat text bez zobrazení nic v uživatelském rozhraní. <xref:Microsoft.Office.Interop.Word.Find> Objektu vrátí **True** Pokud je nalezen text, který odpovídá kritéria hledání a **False** Pokud neexistuje. Také přináší <xref:Microsoft.Office.Interop.Word.Range> objektu tak, aby odpovídaly kritériím hledání, pokud je nalezen text.  
+## <a name="use-a-range-object"></a>Použití objektu rozsahu  
+ Použití <xref:Microsoft.Office.Interop.Word.Range> objektu umožňuje hledat text bez zobrazení něco v uživatelském rozhraní. <xref:Microsoft.Office.Interop.Word.Find> Objektu vrátí **True** li nalezen text, který by odpovídal kritériím hledání a **False** Pokud tomu tak není. Také předefinuje <xref:Microsoft.Office.Interop.Word.Range> objektu tak, aby odpovídala kritériím hledání, pokud je nalezen text.  
   
-#### <a name="to-find-text-using-a-range-object"></a>Najít text s použitím objektu rozsahu  
+### <a name="to-find-text-using-a-range-object"></a>K vyhledání textu s použitím objektu rozsahu  
   
-1.  Definování <xref:Microsoft.Office.Interop.Word.Range> objekt, který se skládá z druhé odstavce do dokumentu.  
+1. Definování <xref:Microsoft.Office.Interop.Word.Range> objekt, který se skládá z odstavec v dokumentu.  
   
-     Následující příklad kódu lze použít v přizpůsobení na úrovni dokumentu.  
+    Následující příklad kódu je možné v přizpůsobení na úrovni dokumentu.  
   
-     [!code-vb[Trin_VstcoreWordAutomation#72](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#72)]
-     [!code-csharp[Trin_VstcoreWordAutomation#72](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#72)]  
+    [!code-vb[Trin_VstcoreWordAutomation#72](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#72)]
+    [!code-csharp[Trin_VstcoreWordAutomation#72](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#72)]  
   
-     Následující příklad kódu lze v doplňku VSTO. Tento příklad používá aktivní dokument.  
+    Následující příklad kódu je možné v doplňku VSTO. Tento příklad používá aktivní dokument.  
   
-     [!code-vb[Trin_VstcoreWordAutomationAddIn#72](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#72)]
-     [!code-csharp[Trin_VstcoreWordAutomationAddIn#72](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#72)]  
+    [!code-vb[Trin_VstcoreWordAutomationAddIn#72](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#72)]
+    [!code-csharp[Trin_VstcoreWordAutomationAddIn#72](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#72)]  
   
-2.  Pomocí <xref:Microsoft.Office.Interop.Word.Range.Find%2A> vlastnost <xref:Microsoft.Office.Interop.Word.Range> objektu, nejprve zrušte všechny existující možnosti formátování a vyhledejte řetězec **mi najít**.  
+2. Použití <xref:Microsoft.Office.Interop.Word.Range.Find%2A> vlastnost <xref:Microsoft.Office.Interop.Word.Range> objektu, nejprve zrušte všechny existující možnosti formátování a vyhledejte řetězec **nepracuju,**.  
   
-     [!code-vb[Trin_VstcoreWordAutomation#73](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#73)]
-     [!code-csharp[Trin_VstcoreWordAutomation#73](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#73)]  
+    [!code-vb[Trin_VstcoreWordAutomation#73](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#73)]
+    [!code-csharp[Trin_VstcoreWordAutomation#73](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#73)]  
   
-3.  Zobrazit výsledky hledání v okně se zprávou a vyberte <xref:Microsoft.Office.Interop.Word.Range> vytvořit viditelné.  
+3. Zobrazení výsledků hledání v okně se zprávou a vyberte <xref:Microsoft.Office.Interop.Word.Range> aby byla viditelná.  
   
-     [!code-vb[Trin_VstcoreWordAutomation#74](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#74)]
-     [!code-csharp[Trin_VstcoreWordAutomation#74](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#74)]  
+    [!code-vb[Trin_VstcoreWordAutomation#74](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#74)]
+    [!code-csharp[Trin_VstcoreWordAutomation#74](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#74)]  
   
-     Pokud se hledání nezdaří, je vybrána odstavec; Pokud se aktivace podaří, zobrazí se kritéria hledání.  
+    Pokud se hledání nezdaří, je vybraný odstavec; Pokud je úspěšná, zobrazí se kritériím hledání.  
   
- Následující příklad ukazuje kód dokončení pro přizpůsobení na úrovni dokumentu. Pokud chcete použít v tomto příkladu, spustit kód `ThisDocument` třídy ve vašem projektu.  
+   Následující příklad ukazuje kompletní kód pro přizpůsobení na úrovni dokumentu. Pokud chcete použít tento příklad, spusťte kód z `ThisDocument` třídu ve vašem projektu.  
   
- [!code-vb[Trin_VstcoreWordAutomation#71](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#71)]
- [!code-csharp[Trin_VstcoreWordAutomation#71](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#71)]  
+   [!code-vb[Trin_VstcoreWordAutomation#71](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#71)]
+   [!code-csharp[Trin_VstcoreWordAutomation#71](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#71)]  
   
- Následující příklad ukazuje kód dokončení pro doplňku VSTO. Pokud chcete použít v tomto příkladu, spustit kód `ThisAddIn` třídy ve vašem projektu.  
+   Následující příklad ukazuje kompletní kód doplňku VSTO. Pokud chcete použít tento příklad, spusťte kód z `ThisAddIn` třídu ve vašem projektu.  
   
- [!code-vb[Trin_VstcoreWordAutomationAddIn#71](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#71)]
- [!code-csharp[Trin_VstcoreWordAutomationAddIn#71](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#71)]  
+   [!code-vb[Trin_VstcoreWordAutomationAddIn#71](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#71)]
+   [!code-csharp[Trin_VstcoreWordAutomationAddIn#71](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#71)]  
   
-## <a name="searching-for-and-replacing-text-in-documents"></a>Vyhledávání a nahrazování textu v dokumentech  
- Následující kód prohledá aktuální výběr a nahradí všechny výskyty řetězce **mi najít** řetězcem **nalezené**.  
+## <a name="search-for-and-replace-text-in-documents"></a>Hledání a nahrazování textu v dokumentech  
+ Následující kód vyhledá aktuálního výběru a nahradí všechny výskyty řetězce **nepracuju,** řetězcem **nalezeno**.  
   
-#### <a name="to-search-for-and-replace-text-in-documents"></a>K vyhledání a nahrazení textu v dokumentech  
+### <a name="to-search-for-and-replace-text-in-documents"></a>K hledání a nahrazování textu v dokumentech  
   
-1.  Následující příklad kódu k přidání `ThisDocument` nebo `ThisAddIn` třídy ve vašem projektu.  
+1.  Následující příklad kódu pro přidání `ThisDocument` nebo `ThisAddIn` třídu ve vašem projektu.  
   
      [!code-vb[Trin_VstcoreWordAutomation#75](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#75)]
      [!code-csharp[Trin_VstcoreWordAutomation#75](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#75)]  
   
-     <xref:Microsoft.Office.Interop.Word.Find> Třída má <xref:Microsoft.Office.Interop.Word.Find.ClearFormatting%2A> metody a <xref:Microsoft.Office.Interop.Word.Replacement> třída také obsahuje vlastní <xref:Microsoft.Office.Interop.Word.Replacement.ClearFormatting%2A> metoda. Při provádění operace hledání a nahrazování, musíte použít metodu ClearFormatting obou objektů. Pokud používáte pouze na <xref:Microsoft.Office.Interop.Word.Find> objekt, můžete získat neočekávané výsledky v Nahrazovací text.  
+     <xref:Microsoft.Office.Interop.Word.Find> Třída má <xref:Microsoft.Office.Interop.Word.Find.ClearFormatting%2A> metoda a <xref:Microsoft.Office.Interop.Word.Replacement> třídy také mají svůj vlastní <xref:Microsoft.Office.Interop.Word.Replacement.ClearFormatting%2A> metoda. Při provádění operace hledání a nahrazování, musíte použít metodu ClearFormatting oba objekty. Když ho používáte jenom na <xref:Microsoft.Office.Interop.Word.Find> objektu, může se zobrazit neočekávané výsledky v Nahrazovací text.  
   
-2.  Použití <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> metodu <xref:Microsoft.Office.Interop.Word.Find> objekt, který chcete nahradit každá položka nalezena. Chcete-li určit, které položky nahradit, použijte *nahradit* parametr. Tento parametr může být jeden z následujících <xref:Microsoft.Office.Interop.Word.WdReplace> hodnoty:  
+2.  Použití <xref:Microsoft.Office.Interop.Word.Find.Execute%2A> metodu <xref:Microsoft.Office.Interop.Word.Find> a nahraďte každé nalezené položky. K určení položek k nahrazení, použijte *nahradit* parametru. Tento parametr může být jeden z následujících <xref:Microsoft.Office.Interop.Word.WdReplace> hodnoty:  
   
     -   <xref:Microsoft.Office.Interop.Word.WdReplace.wdReplaceAll> nahradí všechny nalezené položky.  
   
-    -   <xref:Microsoft.Office.Interop.Word.WdReplace.wdReplaceNone> nahradí žádné nalezených položek.  
+    -   <xref:Microsoft.Office.Interop.Word.WdReplace.wdReplaceNone> nahradí žádná z nalezených položek.  
   
-    -   <xref:Microsoft.Office.Interop.Word.WdReplace.wdReplaceOne> nahradí první položka nalezena.  
+    -   <xref:Microsoft.Office.Interop.Word.WdReplace.wdReplaceOne> nahradí první nalezené položky.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Postupy: nastavování možností hledání v aplikaci Word](../vsto/how-to-programmatically-set-search-options-in-word.md)   
- [Postupy: procházení nalezených položek v dokumentech prostřednictvím kódu programu cykly](../vsto/how-to-programmatically-loop-through-found-items-in-documents.md)   
- [Postupy: programové definování a výběr oblastí v dokumentech](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)   
- [Postupy: programové obnovení výběru po hledání](../vsto/how-to-programmatically-restore-selections-after-searches.md)   
- [Volitelné parametry v řešeních pro systém Office](../vsto/optional-parameters-in-office-solutions.md)  
+ [Postupy: procházení nalezených položek v dokumentech prostřednictvím kódu programu smyčky](../vsto/how-to-programmatically-loop-through-found-items-in-documents.md)   
+ [Postupy: Programová definování a výběr oblastí v dokumentech](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)   
+ [Postupy: obnovení výběru po hledání prostřednictvím kódu programu](../vsto/how-to-programmatically-restore-selections-after-searches.md)   
+ [Volitelné parametry v řešeních pro systém Office](../vsto/optional-parameters-in-office-solutions.md)  
   

@@ -1,6 +1,7 @@
 ---
 title: 'CA1720: Identifikátory by neměly obsahovat názvy typů'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,13 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d8a981dc4c8ccd016836ea55b2ecd624e781c5a8
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 32abf9a2c11a8381b5f204a2388a85f7fd5d8230
+ms.sourcegitcommit: 1abb9cf4c3ccb90e3481ea8079272c98aad12875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50143122"
 ---
 # <a name="ca1720-identifiers-should-not-contain-type-names"></a>CA1720: Identifikátory by neměly obsahovat názvy typů
+
 |||
 |-|-|
 |TypeName|IdentifiersShouldNotContainTypeNames|
@@ -30,112 +33,112 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Název parametru v externě viditelné člen obsahuje název datového typu.
+ Název parametru v externě viditelném členu obsahuje název datového typu.
 
  -nebo-
 
- Název člena externě viditelné obsahuje název typu dat pro specifický jazyk.
+ Název externě viditelného členu obsahuje název typu dat pro konkrétní jazyk.
 
 ## <a name="rule-description"></a>Popis pravidla
- Názvy parametrů a členové jsou lépe používá ke komunikaci jejich význam než se popisují jejich typu, který je poskytovaný nástroje pro vývoj. Pro názvy členů Pokud je třeba zadat název typu dat, použijte název nezávislé na jazyku místo jeden konkrétní jazyk. Například místo C# typ název, int', použijte název typu dat nezávislé na jazyku Int32.
+ Názvy parametrů a členů se lépe používají ke komunikaci jejich význam než se popisují jejich typ, který má být poskytuje nástroje pro vývoj. Pro názvy členů Pokud je třeba zadat název datového typu, použijte název nezávislým na jazyku místo jeden konkrétní jazyk. Například místo C# typu název "int", použijte název typu nezávislým na jazyku dat datový typ Int32.
 
- Každý diskrétní token názvu parametru nebo člen je zkontrolován následující názvy typů dat pro specifický jazyk způsobem velká a malá písmena:
+ Každý samostatný token název parametru nebo člen je porovnávána s následující názvy typů dat pro konkrétní jazyk, v podobě velká a malá písmena:
 
--   BOOL
+- BOOL
 
--   WChar
+- WChar
 
--   int8
+- Int8
 
--   UInt8
+- UInt8
 
--   krátký
+- krátké
 
--   Ushort –
+- UShort
 
--   celá čísla
+- int
 
--   UInt
+- UInt
 
--   Integer
+- Integer
 
--   Uinteger –
+- Uinteger –
 
--   dlouhá
+- Long
 
--   Ulong –
+- ULong
 
--   Bez znaménka
+- bez znaménka
 
--   Podepsané
+- podepsané
 
--   Plovoucí desetinná čárka
+- plovoucí desetinnou čárkou
 
--   Float32
+- float32
 
--   Float64
+- float64
 
- Kromě toho názvy parametru jsou také zkontrolován následující názvy typů dat nezávislé na jazyku způsobem velká a malá písmena:
+Kromě toho názvy parametru jsou zkontrolovány také proti následující názvy typů dat nezávislým na jazyku písmen:
 
--   Objekt
+- Objekt
 
--   Obj
+- obj
 
--   Boolean
+- Boolean
 
--   Char
+- Char
 
--   String
+- String
 
--   SByte
+- SByte
 
--   Byte
+- Byte
 
--   UByte
+- UByte
 
--   Int16
+- Int16
 
--   UInt16
+- UInt16
 
--   Int32
+- Int32
 
--   UInt32
+- UInt32
 
--   Int64
+- Int64
 
--   UInt64
+- UInt64
 
--   IntPtr
+- IntPtr
 
--   PTR
+- PTR
 
--   Ukazatele
+- Ukazatel
 
--   UInptr
+- UInptr
 
--   UPtr
+- UPtr
 
--   UPointer
+- UPointer
 
--   Single
+- Single
 
--   Double
+- Double
 
--   Desetinné číslo
+- Desetinné číslo
 
--   Identifikátor GUID
+- identifikátor GUID
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- **Pokud aktivováno proti parametr:**
+ **Pokud je aktivována před parametr:**
 
- Identifikátor typu dat názvu parametru nahraďte termín, který lépe popisuje její význam nebo více obecný pojem, jako je například 'Hodnota'.
+ Nahraďte datového typu identifikátoru názvu parametru termín, který lépe popisuje jeho význam nebo obecnějším pojmem, jako například 'value'.
 
- **Pokud aktivováno proti člen:**
+ **Pokud je aktivována před členem:**
 
- Identifikátor typu dat pro specifický jazyk názvu člen nahraďte termín, který lépe popisuje její význam, nezávislé na jazyku ekvivalentní nebo více obecný pojem, jako je například 'Hodnota'.
+ Nahraďte konkrétní jazyk datového typu identifikátoru název člena termín, který lépe popisuje jeho význam, jazykově nezávislým ekvivalentem nebo obecnějším pojmem, jako například 'value'.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Příležitostné použití názvů založený na typu parametru a člen může být vhodné. Ale pro nový vývoj žádné známé scénáře nastat, kde můžete potlačit upozornění na toto pravidlo. Pro knihovny, které mají předchozí dodaný můžete chtít potlačit upozornění na toto pravidlo.
+ Příležitostné použití založené na typ parametru a člen názvů může být vhodné. Ale pro vývoj, žádné známé scénáře nastat, pokud by měla potlačit upozornění tohoto pravidla. Pro knihovny, které byly dříve součástí budete muset potlačit upozornění tohoto pravidla.
 
 ## <a name="related-rules"></a>Související pravidla
  [CA1709: Malá a velká písmena identifikátorů by měla být použita správně](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)

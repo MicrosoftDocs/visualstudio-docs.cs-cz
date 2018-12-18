@@ -1,5 +1,5 @@
 ---
-title: Vlastnosti nástroje MSBuild podporované službou SharePoint | Microsoft Docs
+title: Vlastnosti nástroje MSBuild podporované službou SharePoint | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -17,45 +17,45 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1e60843119ee72f1164288f50b27116cdda31e9b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1695a23ba9dddc27a37f23c714678fe6b779d328
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35675873"
 ---
-# <a name="msbuild-properties-supported-by-sharepoint"></a>Vlastnosti nástroje MSBuild podporované službou SharePoint
-  Všechny [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)] mohou být používány v souboru, soubor projektu nebo soubor projektu uživatele Microsoft.VisualStudio.SharePoint.targets definovánu vlastnost [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projektů služby SharePoint. Kromě nejběžnější [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)] vlastnosti poskytl projektu služby SharePoint definuje další vlastnosti, které jsou specifické pro projekty SharePoint.  
+# <a name="msbuild-properties-supported-by-sharepoint"></a>Vlastnosti nástroje MsBuild podporované službou SharePoint
+  Žádné [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)] vlastnosti definované v souboru Microsoft.VisualStudio.SharePoint.targets, soubor projektu nebo uživatelský soubor projektu je možné v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projektů služby SharePoint. Kromě společné [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)] vlastnosti zadaný v projektu služby SharePoint definuje další vlastnosti, které jsou specifické pro projekty SharePoint.  
   
- Seznam běžné [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)] najdete v části vlastnosti, [běžné vlastnosti projektu nástroje MSBuild](http://go.microsoft.com/fwlink/?LinkID=168687). Úplný seznam vlastnostech podporovaných zprostředkovatelem programovací jazyk, najdete v souboru .targets, soubor projektu (.csproj nebo .vbproj) nebo soubor projektu uživatele (csproj.user nebo. vbproj.user).  
+ Seznam běžných [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)] vlastnosti, viz [obecné vlastnosti projektu nástroje MSBuild](http://go.microsoft.com/fwlink/?LinkID=168687). Úplný seznam vlastností podporuje svůj oblíbený programovací jazyk, najdete *.targets* souboru, soubor projektu (*.csproj* nebo *.vbproj*), nebo uživatel projektu souboru () *csproj.user* nebo *. vbproj.user*).  
   
-## <a name="msbuild-properties-specific-to-sharepoint"></a>Konkrétní vlastnosti nástroje MSBuild do služby SharePoint  
+## <a name="msbuild-properties-specific-to-sharepoint"></a>Vlastnosti nástroje MsBuild specifické pro službu SharePoint
  Následující tabulka uvádí [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)] vlastnosti, které platí konkrétně do projektů služby SharePoint v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]. Existují další vlastnosti, ale jsou pro interní použití.  
   
 |Název vlastnosti|Popis|  
 |-------------------|-----------------|  
-|SharePointSiteUrl|Řetězec, který představuje [!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)] na stránku služby SharePoint.|  
-|SandboxedSolution|Logická hodnota, která určuje, zda je řešení řešení v izolovaném prostoru.|  
-|ActiveDeploymentConfiguration|Konfigurace aktivní nasazení.|  
+|SharePointSiteUrl|Řetězec, který představuje [!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)] na web služby SharePoint.|  
+|SandboxedSolution|Logická hodnota určující, zda je řešení řešení v izolovaném prostoru.|  
+|ActiveDeploymentConfiguration|Konfigurace aktivního nasazení.|  
 |IncludeAssemblyInPackage|Logická hodnota, která určuje, zda je sestavení součástí souboru balíčku.|  
-|PreDeploymentCommand|Řetězcovou hodnotu, kterou představuje spuštění příkazu v kroku před nasazením příkaz.|  
-|PostDeploymentCommand|Hodnotu řetězce, který představuje spuštění příkazu v kroku příkaz po nasazení.|  
-|CustomBeforeSharePointTargets|Řetězec, který představuje cestu [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)] souboru cíle. Pokud cíle soubor existuje a je definován, je importována před všechny cíle dat služby SharePoint. Tato vlastnost umožňuje přizpůsobit proces balíčku předběžné definování vlastnosti týkající se balení beze změny souboru uvidíte cíle služby SharePoint, ale soubor cíle stále platí pro všechny projekty SharePoint.|  
-|CustomAfterSharePointTargets|Řetězec, který představuje cestu [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)] souboru cíle. Pokud cíle soubor existuje a je definován, je po všech importovaných dat cíle služby SharePoint. Tato vlastnost umožňuje přizpůsobit proces balíčku přepsáním vlastnosti týkající se vytváření balíčků a cíle, aniž by museli měnit uvidíte soubor cíle služby SharePoint, ale soubor cíle stále platí pro všechny projekty SharePoint.|  
-|LayoutPath|Řetězec, který představuje kořenový adresář každý ze souborů k zabalené dočasně umístění předtím, než budou přidány do souboru WSP. Tato cesta může být užitečné při přepsání BeforeLayout a AfterLayout cíle přidat, odebrat nebo upravit soubory a zabalí, protože se používají pro úpravu obsah souboru WSP znát.|  
-|BasePackagePath|Řetězec, který představuje složku, ve kterém je umístěn daný balíček. Tato hodnota používá výstupnímu adresáři projektu, například Bin\Debug.|  
-|PackageExtension|Řetězec, který představuje příponu názvu souboru pro připojení k balíčku. Výchozí hodnota je wsp.|  
-|AssemblyDeploymentTarget|Řetězec, který představuje umístění, kde je sestavení projektu nasazen na serveru SharePoint. Jeho hodnota může být GlobalAssemblyCache (výchozí) nebo webovou aplikaci. Tuto vlastnost lze nastavit i v okně Vlastnosti.|  
-|PackageWithValidation|Logická hodnota, která určuje, zda se před balení provádí ověřování. Tato vlastnost umožňuje ignorování chyb ověření při vytváření balíčků.|  
-|ValidatePackageDependsOn|Řetězec, který definuje další cíle ke spuštění před ValidatePackage cíl.|  
-|TokenReplacementFileExensions|Řetězec, který definuje, které obsahují jejich tokeny nahrazena v průběhu balení.|  
+|PreDeploymentCommand|Řetězcovou hodnotu, která představuje příkazu ke spuštění v kroku příkaz před nasazením.|  
+|PostDeploymentCommand|Řetězcovou hodnotu, která představuje příkazu ke spuštění v kroku příkaz po nasazení.|  
+|CustomBeforeSharePointTargets|Řetězec, který představuje cestu [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)] soubor cílů. Pokud soubor cílů existuje a je definován, je importován před všechny cíle dat služby SharePoint. Tato vlastnost umožňuje přizpůsobit proces balíčku podle předběžné definování balení souvisejících vlastností beze změny souboru dodané cíle služby SharePoint, ale soubor cílů stále platí pro všechny projekty služby SharePoint.|  
+|CustomAfterSharePointTargets|Řetězec, který představuje cestu [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)] soubor cílů. Pokud soubor cílů existuje a je definován, je po všech importovaných dat cíle služby SharePoint. Tato vlastnost umožňuje přizpůsobit proces balíčku tak, že přepíšete balení souvisejících vlastností a cílů, aniž byste museli upravovat uvidíte soubor cílů SharePoint, ale soubor cílů stále platí pro všechny projekty služby SharePoint.|  
+|LayoutPath|Řetězec, který představuje kořenový adresář, kde jednotlivé soubory, které chcete zabalit jsou dočasně umístěny před jejich přidání do *.wsp* souboru. Tato cesta se dá vědět, pokud přepíšete BeforeLayout a AfterLayout cíle přidat, odebrat nebo změnit soubory zabalit, protože ho můžete změnit obsah *.wsp* souboru.|  
+|BasePackagePath|Řetězec, který představuje složku, ve kterém je umístí balíček. Tato hodnota používá výstupního adresáře projektu, například Bin\Debug.|  
+|PackageExtension|Řetězec, který představuje příponu názvu souboru připojit k balíčku. Výchozí hodnota je soubor wsp.|  
+|AssemblyDeploymentTarget|Řetězec, který představuje umístění, které se nasadí sestavení projektu na serveru SharePoint. Jeho hodnota je GlobalAssemblyCache (výchozí) nebo webovou aplikaci. Tuto vlastnost můžete nastavit také v okně Vlastnosti.|  
+|Packagewithvalidation Msbuildu|Logická hodnota určující, zda ověření je provedeno před balení. Tato vlastnost umožňuje ignorovat chyby ověřování při vytváření balíčků.|  
+|ValidatePackageDependsOn|Řetězec, který definuje další cílů ke spuštění před cílem ValidatePackage.|  
+|TokenReplacementFileExensions|Řetězec, který definuje soubory, které mají jejich tokeny nahrazena v průběhu balení.|  
   
-## <a name="using-msbuild-properties-in-the-properties-page"></a>Na stránce vlastností pomocí vlastnosti nástroje MSBuild  
- Flexibilitu, místo použití pevně řetězce v **před nasazením příkazového řádku** a **po nasazení příkazového řádku** polí na stránce Vlastnosti služby SharePoint můžete použít webu služby SharePoint vlastnosti jako argumenty. Například místo zadávání konkrétní [!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)] řetězec pro web služby SharePoint, můžete místo toho použít `$(SharePointSiteUrl)`.  
+## <a name="use-msbuild-properties-in-the-properties-page"></a>Na stránce vlastností použijte vlastnosti nástroje MsBuild
+ Zajišťuje tak flexibilitu, namísto použití pevně zakódované řetězce v **příkazový řádek před nasazením** a **příkazový řádek po nasazení** polí na stránce Vlastnosti služby SharePoint můžete použít služby SharePoint vlastnosti jako argumenty. Například místo určení konkrétní [!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)] řetězec pro Sharepointový web, můžete místo toho použít `$(SharePointSiteUrl)`.  
   
 > [!NOTE]  
->  Můžete použít buď [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)] proměnné syntaxe `$(` *propertyName* `)` nebo syntaxe proměnné prostředí `%` *propertyName* `%` Chcete-li určit vlastnost.  
+>  Můžete použít buď [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)] syntaxi proměnných `$(` *propertyName* `)` nebo syntaxi proměnných prostředí `%` *propertyName* `%` můžete zadat vlastnost.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:
  [Referenční dokumentace nástroje MSBuild](/visualstudio/msbuild/msbuild-reference)  
-  
   

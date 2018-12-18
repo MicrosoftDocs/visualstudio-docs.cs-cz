@@ -1,5 +1,5 @@
 ---
-title: 'DA0014: Velmi vysoké míry stránkování aktivní paměti na disk | Microsoft Docs'
+title: 'DA0014: Velmi vysoké míry stránkování aktivní paměti na disk | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -15,37 +15,39 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a1fe54cec0e42161dceb9879264548d5926a0e7c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 30bb9fea29215eb190ab83ea73394b87e4cd15fd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49914543"
 ---
 # <a name="da0014-extremely-high-rates-of-paging-active-memory-to-disk"></a>DA0014: Velmi vysoké míry stránkování aktivní paměti na disk
+
 |||  
 |-|-|  
 |Id pravidla|DA0014|  
 |Kategorie|Paměti a stránkování|  
 |Metoda profilace|Všechny|  
-|Zpráva|Dochází velmi vysoké míry stránkování aktivní paměti na disk. Aplikace může být vázané na paměť.|  
+|Zpráva|Dochází k velmi vysokým mírám stránkování aktivní paměti na disk. Aplikace může být vázána na paměť.|  
 |Typ pravidla|Upozornění|  
-  
- Pokud je profil s použitím vzorkování, využívání paměti rozhraním .NET nebo metody sporu prostředků, musí shromažďovat alespoň 25 vzorků pro aktivaci tohoto pravidla.  
-  
+
+ Při profilování pomocí vzorkování, paměti .NET nebo metodám sporu prostředků, musíte shromáždit alespoň 25 vzorky k aktivaci tohoto pravidla.  
+
 ## <a name="cause"></a>příčina  
- Data výkonu systému, která nebyla shromážděna v profilaci spustit označuje, že velmi vysoké míry stránkování aktivní paměti na a z disku došlo k chybě v průběhu vytváření profilů spustit. Obvykle stránkování sazby na této úrovni má dopad na výkon aplikace a odezvy. Zvažte snížení přidělení paměti prostřednictvím revize algoritmy. Budete také muset zvažte požadavky na paměť vaší aplikace. spuštění profilace znovu na počítači s více paměti.  
-  
+ Údaje o výkonu systému, která byla shromážděna během profilování označuje, že k velmi vysokým mírám stránkování aktivní paměti na a z disku došlo k chybě během spuštění profilování. Stránkování sazby na této úrovni obvykle má vliv na výkon aplikací a rychlost odezvy. Zvažte snížení přidělení paměti prostřednictvím revize algoritmy. Budete také muset zvážit požadavky na paměť vaší aplikace. spuštěná na počítači s více paměti pro profilaci znovu.  
+
 ## <a name="rule-description"></a>Popis pravidla  
- Nadměrné stránkování na disk může být způsobeno nedostatku fyzické paměti. Pokud stránkovací operace dominujte použití fyzického disku, na které se nachází soubor stránkování, může zpomalit na stejném disku, na dalších operací zaměřené na disku.  
-  
- Stránky jsou často, čtení z disku nebo zapíší na disk v hromadné operace stránkování. Počet výstup stránek/s je často mnohem vyšší než počet zápisů stránek/s, například. Protože výstup stránek/s je také stránky změněná data z mezipaměti systému souborů. Však není vždy snadno zjistit, které proces přímo zodpovídá za stránkování nebo proč.  
-  
+ Nedostatek fyzické paměti může způsobovat nadměrné stránkování na disk. Pokud operace stránkování převládají na poli použití fyzického disku, ve které se nachází stránkovací soubor, může zpomalit další disk orientovaných na aplikace operace ke stejnému disku.  
+
+ Stránky jsou často, čtení z disku nebo zapsaných na disk v hromadné operace stránkování. Počet stránek výstupu za sekundu je často mnohem větší než počet zápisů stránek/s, např. Vzhledem k tomu stránky výstupu za sekundu také zahrnuje změněná data stránek z mezipaměti systému souborů. Však není vždy jednoduché určit, který proces přímo zodpovídá za stránkování a proč.  
+
 > [!NOTE]
->  Toto pravidlo aktivuje se v případě dosažení úrovně stránkování aktivní paměti na velmi vysokou míru. Informační pravidlo, pokud je úroveň stránkování významné, ale není extrémně [DA0017: vysoké míry stránkování aktivní paměti na disk](../profiling/da0017-high-rates-of-paging-active-memory-to-disk.md) aktivuje místo.  
-  
+>  Toto pravidlo je vyvoláno, když dosáhnou velmi vysoká míra úrovně stránkování aktivní paměti. Informační pravidlo, pokud je úroveň stránkování významné, ale ne extreme [DA0017: vysoké míry stránkování aktivní paměti na disk](../profiling/da0017-high-rates-of-paging-active-memory-to-disk.md) aktivuje místo.  
+
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení  
- Klikněte dvakrát na zprávy v okně Seznam chyb navigaci na [značky](../profiling/marks-view.md) zobrazení. Najít **Paměť\Stránky/s** sloupce. Zjistěte, jestli konkrétní fáze spuštění programu kde aktivity vstupně-výstupní operace stránkování je větší než jiné.  
-  
- Pokud se shromažďování dat profilu pro aplikaci ASP.NET do scénáře zátěžového testování, zkuste spustit znovu zátěžový test na počítači nakonfigurována s další fyzické paměti (nebo RAM).  
-  
- Zvažte snížení úprava algoritmy a vyloučení rozhraní API náročné na paměť třeba String.Concat a String.Substring přidělení paměti.
+ Dvakrát klikněte na zprávu v okně Seznam chyb, přejděte [značky](../profiling/marks-view.md) zobrazení. Najít **Paměť\Stránky/s** sloupce. Zjistěte, jestli konkrétní fázích provádění programu kde aktivity vstupně-výstupní operace stránkování je těžší než jiné.  
+
+ Pokud se shromažďování dat profil pro aplikaci ASP.NET ve scénáři zátěžového testování, zkuste spustit zátěžový test znovu na počítače s nakonfigurovanou další fyzické paměti (nebo paměti RAM).  
+
+ Zvažte snížení přidělení paměti tak, že revize algoritmy a jak se vyhnout vysokými nároky na paměť rozhraní API, jako je například String.Concat a String.Substring.

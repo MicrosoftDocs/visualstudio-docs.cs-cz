@@ -1,5 +1,5 @@
 ---
-title: Idiaenumdebugstreamdata::Next – | Microsoft Docs
+title: Idiaenumdebugstreamdata::Next – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 81e816edd5b93ffdfec46d36d9aabba154ab035d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 00ccf7edbe7eb985c83d56aa8b1e851d6ca21374
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49895246"
 ---
 # <a name="idiaenumdebugstreamdatanext"></a>IDiaEnumDebugStreamData::Next
-Načte zadaný počet záznamů v výčtové pořadí.  
+Načte zadaný počet záznamů v pořadí výčtu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,22 +38,22 @@ HRESULT Next (
   
 #### <a name="parameters"></a>Parametry  
  celt  
- [v] Počet záznamů, které mají být načteny.  
+ [in] Počet záznamů, který se má načíst.  
   
  cbData  
- [v] Velikost vyrovnávací paměť dat v bajtech.  
+ [in] Velikost vyrovnávací paměti dat v bajtech.  
   
  pcbData  
  [out] Vrátí počet bajtů vrácených. Pokud `data` má hodnotu NULL, pak `pcbData` obsahuje celkový počet bajtů dat, které jsou k dispozici pro všechny požadované záznamy.  
   
  data]  
- [out] Vyrovnávací paměť, která má být vyplněny data záznam datový proud ladění.  
+ [out] Vyrovnávací paměť, která má být vyplněny data záznamu datový proud ladění.  
   
  pceltFetched  
- [ve out] Vrátí počet záznamů v `data`.  
+ [out v] Vrátí počet záznamů v `data`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE` Pokud neexistují žádné další záznamy. Jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud neexistují žádné další záznamy. V opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [Idiaenumdebugstreamdata –](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md)   

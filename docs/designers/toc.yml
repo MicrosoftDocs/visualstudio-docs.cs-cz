@@ -1,0 +1,177 @@
+- name: Návrh uživatelských rozhraní
+  href: designing-user-interfaces.md
+  items:
+    - name: Návrh XAML v sadě Visual Studio
+      href: designing-xaml-in-visual-studio.md
+      items:
+        - name: Vytvoření uživatelského rozhraní pomocí Návrháře XAML
+          href: creating-a-ui-by-using-xaml-designer-in-visual-studio.md
+          items:
+            - name: Práce s elementy v Návrháři XAML
+              href: working-with-elements-in-xaml-designer.md
+            - name: Uspořádání objektů do kontejnerů rozložení v Návrháři XAML
+              href: organize-objects-into-layout-containers-in-xaml-designer.md
+            - name: Vytvoření a použití prostředku
+              href: how-to-create-and-apply-a-resource.md
+            - name: 'Návod: Vazba s daty v Návrháři XAML'
+              href: walkthrough-binding-to-data-in-xaml-designer.md
+            - name: Klávesové zkratky pro Návrhář XAML
+              href: keyboard-shortcuts-for-xaml-designer.md
+            - name: Ladění nebo zakázání kódu projektu v Návrháři XAML
+              href: debugging-or-disabling-project-code-in-xaml-designer.md
+            - name: Chyby a upozornění XAML
+              href: xaml-errors-warnings.md
+        - name: Vytvoření uživatelského rozhraní pomocí nástroje Blend pro Visual Studio
+          href: creating-a-ui-by-using-blend-for-visual-studio.md
+          items:
+            - name: Vložení ovládacích prvků a změna jejich chování v Návrháři XAML
+              href: insert-controls-and-modify-their-behavior-in-xaml-designer.md
+            - name: 'Vložení obrázků, videí a zvukových klipů v Návrháři XAML'
+              href: insert-images-videos-and-audio-clips-in-xaml-designer.md
+            - name: Kreslení tvarů a cest
+              href: draw-shapes-and-paths.md
+            - name: Úpravy stylu objektů v Blendu
+              href: modify-the-style-of-objects-in-blend.md
+            - name: Animace objektů v Návrháři XAML
+              href: animate-objects-in-xaml-designer.md
+            - name: Zobrazení dat
+              href: display-data-in-blend.md
+            - name: Klávesové zkratky a modifikační klávesy v Blendu
+              href: keyboard-shortcuts-and-modifier-keys-in-blend.md
+              items:
+                - name: Klávesové zkratky
+                  href: keyboard-shortcuts-in-blend.md
+                - name: Modifikační klávesy návrhové plochy
+                  href: artboard-modifier-keys-in-blend.md
+                - name: Modifikační klávesy nástroje Pero
+                  href: pen-tool-modifier-keys-in-blend.md
+                - name: Modifikační klávesy nástroje Přímý výběr
+                  href: direct-selection-tool-modifier-keys-in-blend.md
+            - name: "Produkty a\_služby pro usnadnění pro Blend"
+              href: accessibility-products-and-services-blend.md
+    - name: Windows Presentation Foundation (WPF)
+      href: getting-started-with-wpf.md
+      items:
+        - name: Přehled grafického subsystému WPF (Windows Presentation Foundation)
+          href: introduction-to-wpf.md
+        - name: Datová vazba WPF s LINQ to XML
+          href: wpf-data-binding-with-linq-to-xml-overview.md
+          items:
+            - name: Dynamické vlastnosti LINQ to XML
+              href: linq-to-xml-dynamic-properties.md
+              items:
+                - name: Dynamické vlastnosti třídy XAttribute
+                  href: xattribute-class-dynamic-properties.md
+                  items:
+                    - name: Value (dynamická vlastnost XAttribute)
+                      href: value-xattribute-dynamic-property.md
+                - name: Dynamické vlastnosti třídy XElement
+                  href: xelement-class-dynamic-properties.md
+                  items:
+                    - name: Attribute (dynamická vlastnost XElement)
+                      href: attribute-xelement-dynamic-property.md
+                    - name: Element (dynamická vlastnost XElement)
+                      href: element-xelement-dynamic-property.md
+                    - name: Elements (dynamická vlastnost XElement)
+                      href: elements-xelement-dynamic-property.md
+                    - name: Descendants (dynamická vlastnost XElement)
+                      href: descendants-xelement-dynamic-property.md
+                    - name: Value (dynamická vlastnost XElement)
+                      href: value-xelement-dynamic-property.md
+                    - name: Xml (dynamická vlastnost XElement)
+                      href: xml-xelement-dynamic-property.md
+                - name: Příklad
+                  href: wpf-data-binding-using-linq-to-xml-example.md
+                  items:
+                    - name: 'Postupy: Sestavení a spuštění příkladu LinqToXmlDataBinding'
+                      href: how-to-build-and-run-the-linqtoxmldatabinding-example.md
+                    - name: 'Návod: Datová vazba LINQ to XML'
+                      href: walkthrough-linqtoxmldatabinding-example.md
+                      items:
+                        - name: Zdrojový kód L2DBForm.xaml
+                          href: l2dbform-xaml-source-code.md
+                        - name: Zdrojový kód L2DBForm.xaml.cs
+                          href: l2dbform-xaml-cs-source-code.md
+    - name: Práce s 3D prostředky pro hry a aplikace
+      href: working-with-3-d-assets-for-games-and-apps.md
+      items:
+        - name: Práce s texturami a obrázky
+          href: working-with-textures-and-images.md
+          items:
+            - name: editor obrázků
+              href: image-editor.md
+            - name: Příklady editoru obrázků
+              href: image-editor-examples.md
+              items:
+                - name: Vytvoření základní textury
+                  href: how-to-create-a-basic-texture.md
+                - name: "Vytvoření a\_úprava úrovní MIP"
+                  href: how-to-create-and-modify-mip-levels.md
+        - name: Práce s 3D modely
+          href: working-with-3-d-models.md
+          items:
+            - name: Editor modelů
+              href: model-editor.md
+            - name: Příklady editoru modelů
+              href: model-editor-examples.md
+              items:
+                - name: Vytvoření základního 3D modelu
+                  href: how-to-create-a-basic-3-d-model.md
+                - name: Změna bodu otáčení 3D modelu
+                  href: how-to-modify-the-pivot-point-of-a-3-d-model.md
+                - name: Modelování 3D terénu
+                  href: how-to-model-3-d-terrain.md
+                - name: "Použití shaderu na\_3D model"
+                  href: how-to-apply-a-shader-to-a-3-d-model.md
+        - name: Práce se shadery
+          href: working-with-shaders.md
+          items:
+            - name: Návrhář shaderů
+              href: shader-designer.md
+            - name: Uzly návrháře shaderů
+              href: shader-designer-nodes.md
+              items:
+                - name: Uzly konstanty
+                  href: constant-nodes.md
+                - name: Uzly parametru
+                  href: parameter-nodes.md
+                - name: Uzly textury
+                  href: texture-nodes.md
+                - name: Matematické uzly
+                  href: math-nodes.md
+                - name: Uzly nástroje
+                  href: utility-nodes.md
+                - name: Uzly filtru
+                  href: filter-nodes.md
+            - name: Příklady návrháře shaderů
+              href: shader-designer-examples.md
+              items:
+                - name: Vytvoření shaderu základní barvy
+                  href: how-to-create-a-basic-color-shader.md
+                - name: Vytvoření základního Lambertova shaderu
+                  href: how-to-create-a-basic-lambert-shader.md
+                - name: Vytvoření základního Phongova shaderu
+                  href: how-to-create-a-basic-phong-shader.md
+                - name: Vytvoření shaderu základní textury
+                  href: how-to-create-a-basic-texture-shader.md
+                - name: Vytvoření shaderu textury stupňů šedé
+                  href: how-to-create-a-grayscale-texture-shader.md
+                - name: Vytvoření přechodu shaderu založeného na geometrii
+                  href: how-to-create-a-geometry-based-gradient-shader.md
+                - name: 'Návod: Vytvoření realistické trojrozměrné kulečníkové koule'
+                  href: walkthrough-creating-a-realistic-3-d-billiard-ball.md
+                - name: Export shaderu
+                  href: how-to-export-a-shader.md
+        - name: Používání 3D prostředků ve hře nebo aplikaci
+          href: using-3-d-assets-in-your-game-or-app.md
+          items:
+            - name: Export textury obsahující mipmapy
+              href: how-to-export-a-texture-that-contains-mipmaps.md
+            - name: "Export textury s\_přednásobenou hodnotou alfa"
+              href: how-to-export-a-texture-that-has-premultiplied-alpha.md
+            - name: "Export textury pro použití s\_rozhraním Direct2D nebo aplikacemi JavaScript"
+              href: how-to-export-a-texture-for-use-with-direct2d-or-javascipt-apps.md
+    - name: Knihovna obrázků sady Visual Studio
+      href: the-visual-studio-image-library.md
+- name: Vývoj aplikací pomocí Návrháře postupu provádění
+  href: ../workflow-designer/developing-applications-with-the-workflow-designer.md

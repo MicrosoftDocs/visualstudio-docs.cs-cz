@@ -1,5 +1,5 @@
 ---
-title: Rozšíření vlastností a v okně Vlastnosti | Microsoft Docs
+title: Rozšíření vlastností a okno Vlastnosti | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,20 +17,21 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3d03a9c31afed5a737a2f33e1cece490e7dd91b5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8f599c31e674a93ef44d83763a238575bff459e2
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39639975"
 ---
-# <a name="extending-properties-and-the-property-window"></a>Rozšíření vlastností a v okně Vlastnosti
-**Vlastnosti** okna lze zobrazit a upravit vlastnosti doby návrhu a události vybraných objektů.  
+# <a name="extend-properties-and-the-property-window"></a>Rozšíření vlastností a okno Vlastnosti
+**Vlastnosti** okno umožňuje zobrazit a upravit vlastnosti doby návrhu a událostí vybraných objektů.  
   
- Když vyberete objekt v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], veřejné vlastnosti tohoto objektu se zobrazí v **vlastnosti** okno. Další informace najdete v tématu [okno Přehled vlastností](../extensibility/internals/properties-window-overview.md).  
+ Když vyberete objektu v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], veřejné vlastnosti tohoto objektu se zobrazí v **vlastnosti** okna. Další informace najdete v tématu [přehled okna vlastnosti](../extensibility/internals/properties-window-overview.md).  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Vystavení vlastností v okně Vlastnosti](../extensibility/exposing-properties-to-the-properties-window.md)  
- Vysvětluje, jak může mít vaše vlastní vlastnosti zobrazí v okně Vlastnosti.  
+ Vysvětluje, jak může mít vlastní vlastnosti v okně Vlastnosti.  
   
- [Načtení vlastností projektu](../extensibility/getting-project-properties.md)  
+ [Získání vlastností projektu](../extensibility/getting-project-properties.md)  
  Vysvětluje, jak získat vlastnosti projektu.

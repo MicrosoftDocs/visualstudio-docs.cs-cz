@@ -1,5 +1,5 @@
 ---
-title: Metadata položek v dávkování úloh | Microsoft Docs
+title: Metadata položek v dávkování úloh | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -15,29 +15,30 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c55bd7be84b118f08fbedff1931c4517e963b5a7
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f1804bde2c3da7f83658784ca1520791a930f901
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39177192"
 ---
-# <a name="item-metadata-in-task-batching"></a>Metadata položek v dávkování úloh
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] má schopnost rozdělení seznamech položek do různých kategorií nebo dávek, na základě položky metadat a spuštění úlohy jednou se jednotlivých dávek. Může být matoucí pochopit přesně položky, které jsou předávány s které dávky. Toto téma obsahuje následující běžné scénáře, které zahrnují dávkování.  
+# <a name="item-metadata-in-task-batching"></a>Metadata položek v dávkování úloh
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] má schopnost rozdělení seznamů položek do různých kategorií nebo dávek, na základě položky metadat a spuštění úlohy jednou s jednotlivých dávek. Může být matoucí pochopit přesně položky, které jsou předávány pomocí které služby batch. Toto téma popisuje následující běžné scénáře, které se týkají dávkování.  
   
 -   Dělení seznam položek do dávek  
   
--   Dělení seznamech několik položek do dávek  
+-   Dělení několik seznamů položek do dávek  
   
 -   Dávkování jedna položka v čase  
   
--   Filtrování položek seznamů  
+-   Filtrování seznamů položek  
+
+Další informace o dávkové zpracování s [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], naleznete v tématu [dávkování](../msbuild/msbuild-batching.md).  
   
- Další informace o dávkování s [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], najdete v části [Batching](../msbuild/msbuild-batching.md).  
+## <a name="divide-an-item-list-into-batches"></a>Rozdělit seznam položek do dávek  
+ Dávkování umožňuje rozdělit seznam položek na jiné listy na základě položky metadat a předejte jednotlivých dávek úkol samostatně. To je užitečné pro vytváření satelitních sestavení.  
   
-## <a name="dividing-an-item-list-into-batches"></a>Dělení seznam položek do dávek  
- Dávkování umožňuje rozdělení seznamu položek do různých dávek na základě položky metadat a jednotlivých dávek předat do úlohu samostatně. To je užitečné pro vytváření satelitních sestavení.  
-  
- Následující příklad ukazuje, jak rozdělit seznam položek do dávek na základě položky metadat. `ExampColl` Seznamu položek je rozdělené do tří dávek na základě `Number` metadata položky. Přítomnost `%(ExampColl.Number)`v `Text` atribut informuje [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] , dávkování by se měla provést. `ExampColl` Seznamu položek je rozdělené do tří dávek na základě `Number` metadata a každé dávky je předána samostatně do úlohy.  
+ Následující příklad ukazuje, jak rozdělit seznam položek do dávek na základě metadat položky. `ExampColl` Seznam položek je rozdělen na tři dávek na základě `Number` metadata položky. Přítomnost `%(ExampColl.Number)`v `Text` atribut informuje [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] , že má být provedena dávkování. `ExampColl` Seznam položek je rozdělen na tři dávek na základě `Number` metadata a každá dávka je předán samostatně do úkolu.  
   
 ```xml  
 <Project  
@@ -71,8 +72,8 @@ ms.lasthandoff: 04/19/2018
   
 </Project>  
 ```  
-  
- [Úloha zprávy](../msbuild/message-task.md) úloh zobrazí následující informace:  
+
+[Úloha zprávy](../msbuild/message-task.md) zobrazí následující informace:  
   
  `Number: 1 -- Items in ExampColl: Item1;Item4`  
   
@@ -80,13 +81,13 @@ ms.lasthandoff: 04/19/2018
   
  `Number: 3 -- Items in ExampColl: Item3;Item6`  
   
-## <a name="dividing-several-item-lists-into-batches"></a>Dělení několik položek uvádí do dávek  
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] více položky seznamů lze rozdělit do dávky na základě stejné metadat. To usnadňuje rozdělení seznamech různých položek do dávky k vytvoření více sestavení. Například můžete mít seznam položek souborů .cs rozdělené do batch aplikace a batch sestavení a seznam položek zdrojových souborů, které jsou rozdělené do batch aplikace a batch sestavení. Dávkování může pak použijete k předejte tyto položky seznamů do jednu úlohu a vytvářet aplikace a sestavení.  
+## <a name="divide-several-item-lists-into-batches"></a>Rozdělit několik seznamů položek do dávek  
+ [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] více položek seznamů lze rozdělit do dávek na základě stejné metadat. To umožňuje snadno k rozdělení seznamů různých položek do dávek pro tvorbu více sestavení. Například můžete mít položku seznamu *.cs* soubory rozdělené do batch aplikace a batch sestavení a seznam položek souborů prostředků rozděleny do batch aplikace a batch sestavení. Můžete pak použít dávkové zpracování předat tyto seznamy položek do jednoho úkolu a vytvářejte aplikace a sestavení.  
   
 > [!NOTE]
->  Pokud seznam položek předávány do úloha neobsahuje žádné položky s metadaty odkazované, každá položka v tomto seznamu položek je předán do každou dávku.  
+>  Pokud seznam položek předávaný do úlohy neobsahuje žádné položky odkazované metadaty, každá položka v seznamu položek je předán do každé dávky.  
   
- Následující příklad ukazuje, jak rozdělit více seznamu položek do dávek na základě položky metadat. `ExampColl` a `ExampColl2` položky seznamů každý dělí do tří dávek na základě `Number` metadata položky. Přítomnost `%(Number)`v `Text` atribut informuje [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] , dávkování by se měla provést. `ExampColl` a `ExampColl2` položky seznamů dělí do tří dávek na základě `Number` metadata a každé dávky je předána samostatně do úlohy.  
+Následující příklad ukazuje, jak rozdělit do dávek na základě metadat položky seznamu více položek. `ExampColl` a `ExampColl2` každý seznamy položek jsou rozdělené do tří dávek na základě `Number` metadata položky. Přítomnost `%(Number)`v `Text` atribut informuje [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] , že má být provedena dávkování. `ExampColl` a `ExampColl2` seznamy položek jsou rozdělené do tří dávek na základě `Number` metadata a každá dávka je předán samostatně do úkolu.  
   
 ```xml  
 <Project  
@@ -124,7 +125,7 @@ ms.lasthandoff: 04/19/2018
 </Project>  
 ```  
   
- [Úloha zprávy](../msbuild/message-task.md) úloh zobrazí následující informace:  
+[Úloha zprávy](../msbuild/message-task.md) zobrazí následující informace:  
   
  `Number: 1 -- Items in ExampColl: Item1 ExampColl2: Item4`  
   
@@ -132,10 +133,10 @@ ms.lasthandoff: 04/19/2018
   
  `Number: 3 -- Items in ExampColl: Item3 ExampColl2: Item6`  
   
-## <a name="batching-one-item-at-a-time"></a>Dávkování jedna položka v čase  
- Dávkování lze také provést na známá metadata položky přiřazený každá položka po vytvoření. To zaručuje, že každá položka v kolekci, bude mít některá metadata pro dávkové zpracování. `Identity` Hodnota metadat je jedinečný pro každé položky a jsou užitečné pro dělení každá položka v seznamu položek do samostatné dávky. Úplný seznam známá metadata položky, naleznete v části [Metadata známé položky](../msbuild/msbuild-well-known-item-metadata.md).  
+## <a name="batch-one-item-at-a-time"></a>Batch najednou jednu položku  
+ Dávkování lze provést také u známá metadata položky, která je přiřazená každé položce při vytvoření. To zaručuje, že každá položka v kolekci mají některá metadata pro dávkové zpracování. `Identity` Hodnota metadat je jedinečný pro každé položky a je užitečné pro rozdělení každá položka v seznamu položek do samostatné dávky. Úplný seznam známá metadata položky, naleznete v tématu [známá metadata položky](../msbuild/msbuild-well-known-item-metadata.md).  
   
- Následující příklad ukazuje, jak pro každou položku v seznamu položek jeden batch najednou. Protože `Identity` metadata hodnota každá položka je jedinečný, `ExampColl` seznamu položek je rozdělené do šesti dávek každé dávky, která obsahuje jednu položku ze seznamu položek. Přítomnost `%(Identity)`v `Text` atribut informuje [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] , dávkování by se měla provést.  
+ Následující příklad ukazuje, jak batch každou položku v seznamu položek jeden po druhém. Protože `Identity` hodnota metadat každá položka je jedinečný, `ExampColl` seznam položek je rozdělen do šesti dávek, každá dávka obsahující jednu položku seznamu položek. Přítomnost `%(Identity)`v `Text` atribut informuje [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] , že má být provedena dávkování.  
   
 ```xml  
 <Project  
@@ -160,7 +161,7 @@ ms.lasthandoff: 04/19/2018
 </Project>  
 ```  
   
- [Úloha zprávy](../msbuild/message-task.md) úloh zobrazí následující informace:  
+[Úloha zprávy](../msbuild/message-task.md) zobrazí následující informace:  
   
 ```  
 Identity: "Item1" -- Items in ExampColl: Item1  
@@ -171,10 +172,10 @@ Identity: "Item5" -- Items in ExampColl: Item5
 Identity: "Item6" -- Items in ExampColl: Item6  
 ```  
   
-## <a name="filtering-item-lists"></a>Obsahuje seznam filtrování položek  
- Dávkování lze filtrovat některé položky ze seznamu položek před jeho odesláním úlohu. Například na filtrování `Extension` hodnota metadata známé položky umožňuje spuštění úlohy na pouze soubory s konkrétní příponou.  
+## <a name="filter-item-lists"></a>Filtrovat položky seznamů  
+ Dávkování lze použít k filtrování některých položek ze seznamu položek před předáním k úkolu. Například filtrování `Extension` hodnota metadata známé položky umožňuje spouštět úlohy na pouze soubory s konkrétní příponou.  
   
- Následující příklad ukazuje, jak k rozdělení seznamu položek do dávek na základě položky metadat a pak filtrovat tyto dávky, pokud jsou předávány do úlohy. `ExampColl` Seznamu položek je rozdělené do tří dávek na základě `Number` metadata položky. `Condition` Určuje atribut úlohy, která pouze dávek s `Number` položky metadat hodnotu `2` se předají do úlohy  
+ Následující příklad ukazuje, jak rozdělit seznam položek do dávek na základě položky metadat a vyfiltrujte těchto dávky, pokud jsou předány do úlohy. `ExampColl` Seznam položek je rozdělen na tři dávek na základě `Number` metadata položky. `Condition` Určuje atribut úkolu, který pouze s dávek `Number` položky metadat hodnotu `2` se předají do úlohy  
   
 ```xml  
 <Project  
@@ -212,16 +213,16 @@ Identity: "Item6" -- Items in ExampColl: Item6
 </Project>  
 ```  
   
- [Úloha zprávy](../msbuild/message-task.md) úloh zobrazí následující informace:  
+[Úloha zprávy](../msbuild/message-task.md) zobrazí následující informace:  
   
 ```  
 Items in ExampColl: Item2;Item5  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Metadata známé položky](../msbuild/msbuild-well-known-item-metadata.md)   
- [Item – Element (MSBuild)](../msbuild/item-element-msbuild.md)   
- [Itemmetadata – Element (MSBuild)](../msbuild/itemmetadata-element-msbuild.md)   
- [Dávkování](../msbuild/msbuild-batching.md)   
+ [Item – element (MSBuild)](../msbuild/item-element-msbuild.md)   
+ [Itemmetadata – element (MSBuild)](../msbuild/itemmetadata-element-msbuild.md)   
+ [Dávkové zpracování](../msbuild/msbuild-batching.md)   
  [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)   
  [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)

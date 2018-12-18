@@ -1,11 +1,11 @@
 ---
 title: IActiveScriptParse::AddScriptlet | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - IActiveScriptParse.AddScriptlet
@@ -14,7 +14,7 @@ apilocation:
 helpviewer_keywords:
 - IActiveScriptParse_AddScriptlet
 ms.assetid: 824929f4-4dd3-473a-92d9-0b96acea2f14
-caps.latest.revision: 
+caps.latest.revision: 7
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -23,6 +23,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24793488"
 ---
 # <a name="iactivescriptparseaddscriptlet"></a>IActiveScriptParse::AddScriptlet
 Přidá skriptlet kód skriptu. Tato metoda se používá v prostředích, kde trvalý stav skriptu je vzájemně propojeny s dokumentem hostitele a hostitele je zodpovědná za obnovení skriptu, nikoli pomocí `IPersist*` rozhraní. Primární příkladů skriptovací jazyky HTML, které umožňují skriptlety kód vložený v dokumentu HTML, který má být připojené k vnitřní události (například ONCLICK="button1.text='Exit" ").  

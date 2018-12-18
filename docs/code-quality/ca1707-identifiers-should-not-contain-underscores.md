@@ -1,6 +1,7 @@
 ---
 title: 'CA1707: Identifikátory by neměly obsahovat podtržítka'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,35 +16,41 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4eed69f8c08d6106bf30e9c1884512e384a7a269
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 74746897f8ce27a79f666ae1d691b235035b4626
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45548592"
 ---
 # <a name="ca1707-identifiers-should-not-contain-underscores"></a>CA1707: Identifikátory by neměly obsahovat podtržítka
+
 |||
 |-|-|
 |TypeName|IdentifiersShouldNotContainUnderscores|
 |CheckId|CA1707|
 |Kategorie|Microsoft.Naming|
-|Narušující změna|Ukončování řádků - při sestavení<br /><br /> Bez ukončování - při parametry typu|
+|Narušující změna|Zásadní – při aktivaci pro sestavení<br /><br /> Bez konce – při aktivaci pro parametry typu|
 
 ## <a name="cause"></a>příčina
- Název identifikátoru obsahuje znak podtržítka (_).
+
+Název identifikátoru obsahuje podtržítko (\_) znaků.
 
 ## <a name="rule-description"></a>Popis pravidla
- Názvy identifikátorů podle konvence neobsahují znak podtržítka (_). Toto pravidlo zkontroluje obory názvů, typy, členů a parametry.
 
- Zásady vytváření názvů zadejte obecný vzhled pro knihovny cílené modul common language runtime. Tím se snižuje křivky learning, který je vyžadován pro nové knihovny softwaru a zvyšuje sebejistotu zákazníka, knihovny byla vyvinuta uživatelem s odbornými znalostmi v vývoj spravovaného kódu.
+Názvy identifikátorů podle konvence neobsahují znak podtržítka (\_) znaků. Toto pravidlo kontroluje obory názvů, typy, členy a parametry.
+
+Zásady vytváření názvů poskytují obecný vzhled knihovnám využívajících common language runtime. To snižuje učit se, která vyžaduje nové knihovny softwaru a zvyšuje důvěru zákazníků, že byla vyvinuta knihovny někdo, kdo má odborných znalostí v vývoj spravovaného kódu.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Odeberte všechny podtržítka znaky z názvu.
+
+Odeberte všechny znaky podtržítka z názvu.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Nepotlačujte upozornění na toto pravidlo.
+
+Nepotlačujte upozornění na toto pravidlo.
 
 ## <a name="related-rules"></a>Související pravidla
- [CA1709: Malá a velká písmena identifikátorů by měla být použita správně](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
 
- [CA1708: Identifikátory by se měly lišit více než použitím malých a velkých písmen](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
+- [CA1709: Malá a velká písmena identifikátorů by měla být použita správně](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+- [CA1708: Identifikátory by se měly lišit více než použitím malých a velkých písmen](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)

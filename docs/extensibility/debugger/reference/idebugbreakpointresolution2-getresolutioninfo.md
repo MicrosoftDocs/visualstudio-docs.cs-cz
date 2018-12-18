@@ -1,5 +1,5 @@
 ---
-title: IDebugBreakpointResolution2::GetResolutionInfo | Microsoft Docs
+title: IDebugBreakpointResolution2::GetResolutionInfo | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 17e08e335f2f50967da2b566ef595717e07fc2d1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d6e5ad731d94a7b60d3562683595354871b303d8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49870481"
 ---
 # <a name="idebugbreakpointresolution2getresolutioninfo"></a>IDebugBreakpointResolution2::GetResolutionInfo
-Získá informace o řešení zarážek, která popisuje tuto zarážek.  
+Získá informace o řešení zarážek, popisující tuto zarážku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,16 +43,16 @@ int GetResolutionInfo(
   
 #### <a name="parameters"></a>Parametry  
  `dwFields`  
- [v] Kombinace příznaků z [BPRESI_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md) výčet, který určit, které pole `pBPResolutionInfo` parametr mají doplnit.  
+ [in] Kombinace příznaků z [BPRESI_FIELDS](../../../extensibility/debugger/reference/bpresi-fields.md) výčet určující, které položky `pBPResolutionInfo` parametr mají doplnit.  
   
  `pBPResolutionInfo`  
- [out] [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) struktury pro vyplnění informace o této zarážky.  
+ [out] [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) struktura se vyplní informace o této zarážky.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad implementuje tuto metodu pro jednoduchou `CDebugBreakpointResolution` objekt, který zveřejňuje [IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md) rozhraní.  
+ Následující příklad implementuje tuto metodu pro jednoduchý `CDebugBreakpointResolution` objekt, který zveřejňuje [IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md) rozhraní.  
   
 ```  
 HRESULT CDebugBreakpointResolution::GetResolutionInfo(  

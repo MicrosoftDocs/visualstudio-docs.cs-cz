@@ -1,5 +1,5 @@
 ---
-title: IDiaStackWalker::getEnumFrames | Microsoft Docs
+title: IDiaStackWalker::getEnumFrames | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a86af24d863982a527a5f3bd2fae58b4dbc6d431
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: f4c7d8d30dee1d9c0a058177ad54aab864cee28d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49836153"
 ---
 # <a name="idiastackwalkergetenumframes"></a>IDiaStackWalker::getEnumFrames
-Načte enumerátor rámce zásobníku pro x86 platformy.  
+Načte čítač rámce zásobníku pro x86 platformy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,16 +35,16 @@ HRESULT getEnumFrames(
   
 #### <a name="parameters"></a>Parametry  
  `pHelper`  
- [v] Pomocné rutiny [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md) objektu.  
+ [in] Pomocná rutina [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md) objektu.  
   
  `ppEnum`  
  [out] Vrátí [idiaenumstackframes –](../../debugger/debug-interface-access/idiaenumstackframes.md) objekt, který obsahuje seznam [idiastackframe –](../../debugger/debug-interface-access/idiastackframe.md) objekty.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Chcete-li získat seznam rámce zásobníku na jiné platformě, zavolejte [IDiaStackWalker::getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md) metoda.  
+ Chcete-li získat seznam rámce zásobníku na libovolné platformě, zavolejte [IDiaStackWalker::getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md) metody.  
   
 ## <a name="see-also"></a>Viz také  
  [Idiastackwalker –](../../debugger/debug-interface-access/idiastackwalker.md)   

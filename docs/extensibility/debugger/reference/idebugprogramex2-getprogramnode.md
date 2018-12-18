@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramEx2::GetProgramNode | Microsoft Docs
+title: IDebugProgramEx2::GetProgramNode | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f5e0d0b7068441d9225b1c269ffd47fb4be374c0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f619ff7f893ab760cf75ebd64c2b28cf9f0f249c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49815117"
 ---
 # <a name="idebugprogramex2getprogramnode"></a>IDebugProgramEx2::GetProgramNode
-Získá uzel program přidružených k programu.  
+Získá uzel program přidružený k programu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,7 +44,7 @@ int GetProgramNode(
  [out] Vrátí [IDebugProgramNode2](../../../extensibility/debugger/reference/idebugprogramnode2.md) objekt, který představuje uzel program spojené s tímto programem.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProgramEx2](../../../extensibility/debugger/reference/idebugprogramex2.md)   

@@ -1,5 +1,5 @@
 ---
-title: CONNECTION_PROTOCOL | Microsoft Docs
+title: CONNECTION_PROTOCOL | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e1e1dc8cd22b529eafd6183578be7de6ffe69549
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d70aa31e7574e9fcdb0ed4e8d89847e832f3739b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49832761"
 ---
 # <a name="connectionprotocol"></a>CONNECTION_PROTOCOL
-Určuje protokol, který používá ke komunikaci mezi serverem pro ladění a ladění balíčku (DE).  
+Určuje protokol, který používá ke komunikaci mezi serverem pro ladění a ladit balíček (DE).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,13 +53,13 @@ public enum CONNECTION_PROTOCOL {
   
 #### <a name="parameters"></a>Parametry  
  CONNECTION_NONE  
- Provedl se žádné připojení k serveru.  
+ Žádné připojení k serveru.  
   
  CONNECTION_UNKNOWN  
- Bylo vytvořeno připojení, ale je neznámého typu.  
+ Vytvoří připojení, ale je neznámého typu.  
   
  CONNECTION_LOCAL  
- Připojení je místní server.  
+ Připojení je na místním serveru.  
   
  CONNECTION_PIPE  
  Připojení je přes pojmenovaný kanál.  
@@ -70,10 +71,10 @@ public enum CONNECTION_PROTOCOL {
  Připojení používá protokol HTTP (prostřednictvím webového serveru).  
   
  CONNECTION_OTHER  
- Jiný typ připojení bylo úspěšně navázáno. (Tato hodnota není právě používána.).  
+ Vytvořilo se jiný typ připojení (Tato hodnota není aktuálně používá.).  
   
 ## <a name="remarks"></a>Poznámky  
- Tyto hodnoty jsou vráceny z [GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md) metoda.  
+ Tyto hodnoty jsou vráceny z [GetConnectionProtocol](../../../extensibility/debugger/reference/idebugcoreserver3-getconnectionprotocol.md) metody.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

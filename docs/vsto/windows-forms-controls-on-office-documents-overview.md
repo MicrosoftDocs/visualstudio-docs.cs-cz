@@ -1,5 +1,5 @@
 ---
-title: Windows Forms – ovládací prvky na přehled dokumenty Office | Microsoft Docs
+title: Ovládací prvky Windows Forms na dokumenty Office – přehled
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -30,74 +30,75 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2693c31d06edc621f355749f76caf04e44fb28e1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 51c671a583e4e96b51ae6627de1fce738696fe22
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49892776"
 ---
-# <a name="windows-forms-controls-on-office-documents-overview"></a>Přehled ovládacích prvků Windows Forms v dokumentech Office
-  Windows Forms – ovládací prvky jsou objekty, které mohou uživatelé komunikovat s zadejte nebo pracovat s daty. V projektech na úrovni dokumentu pro aplikaci Microsoft Office Excel a Microsoft Office Word můžete přidat ovládací prvky Windows Forms k dokumentu nebo sešitu ve vašem projektu v době návrhu nebo prostřednictvím kódu programu přidáte tyto ovládací prvky v době běhu. Tyto ovládací prvky můžete prostřednictvím kódu programu přidat na všechny otevřené dokumenty a list za běhu v doplňku VSTO pro Excel nebo Word.  
+# <a name="windows-forms-controls-on-office-documents-overview"></a>Ovládací prvky Windows Forms na dokumenty Office – přehled
+  Ovládací prvky Windows Forms jsou objekty, které mohou uživatelé komunikovat s a zadejte skript nebo manipulaci s daty. V projektech na úrovni dokumentu pro aplikaci Microsoft Office Excel a Microsoft Office Word můžete přidat ovládací prvky Windows Forms k dokumentu nebo sešitu ve vašem projektu v době návrhu nebo prostřednictvím kódu programu přidáte těchto ovládacích prvků za běhu. Tyto ovládací prvky můžete programově přidat otevřeného dokumentu nebo listu za běhu v doplňku VSTO pro Excel nebo Word.  
   
- Další informace najdete v tématu [postupy: Přidání ovládacích prvků Windows Forms do dokumentů Office](../vsto/how-to-add-windows-forms-controls-to-office-documents.md).  
+ Další informace najdete v tématu [postupy: Přidání formuláře Windows ovládacích prvků do dokumentů Office](../vsto/how-to-add-windows-forms-controls-to-office-documents.md).  
   
  [!INCLUDE[appliesto_controls](../vsto/includes/appliesto-controls-md.md)]  
   
-## <a name="using-windows-forms-controls"></a>Pomocí Windows Forms – ovládací prvky  
- Můžete přidat ovládací prvky Windows Forms do dokumentů a prvky přizpůsobitelné uživatelského rozhraní (UI), včetně podokna akcí, vlastních podoken úloh a Windows Forms. Ovládací prvky Windows Forms obvykle mají stejné chování na dokumentech jako na tyto další prvky uživatelského rozhraní, ale existují určité rozdíly. Informace najdete v tématu [omezení z ovládacích prvků Windows Forms v dokumentech Office](../vsto/limitations-of-windows-forms-controls-on-office-documents.md).  
+## <a name="use-windows-forms-controls"></a>Použití ovládacích prvků Windows Forms  
+ Můžete přidat ovládací prvky Windows Forms k dokumentům a prvky přizpůsobitelné uživatelského rozhraní (UI), včetně podokna akcí, vlastní podokna úloh a Windows Forms. Ovládací prvky Windows Forms v dokumentech jako na tyto další prvky uživatelského rozhraní obvykle mají stejné chování, ale existuje několik rozdílů. Informace najdete v tématu [omezení Windows Forms ovládací prvky v dokumentech Office](../vsto/limitations-of-windows-forms-controls-on-office-documents.md).  
   
- Rozhodnutí, jestli se má přidat do dokumentu nebo jiného elementu uživatelského rozhraní Windows Forms – ovládací prvky závisí na několika faktorech. Při navrhování uživatelského rozhraní vašeho řešení, zvažte použití ovládacích prvků Windows Forms, jak je popsáno v následující tabulce.  
+ Rozhodnutí, jestli se má přidat do dokumentu nebo jiný prvek uživatelského rozhraní ovládacích prvků Windows Forms závisí na několika faktorech. Při navrhování uživatelského rozhraní vašeho řešení, zvažte použití ovládacích prvků Windows Forms, jak je popsáno v následující tabulce.  
   
  V dokumentu.  
  -   Pokud chcete zobrazit ovládací prvky 100 % času.  
   
--   Pokud chcete uživatelům zadat data přímo v dokumentu, například v založené na formulářích dokumentech, kde je pevně nastavené prostor pro úpravy.  
+- Pokud chcete, aby uživatelé pro zadávání dat přímo v dokumentu, například v založené na formulářích dokumenty, kde je uzamčen na úpravy plochu.  
   
--   Když chcete ovládacích prvků pro zobrazení souladu data v dokumentu. Například při přidávání tlačítek na každý řádek objekt seznamu, je vhodné je souladu jednotlivé položky seznamu.  
+- Když chcete ovládacích prvků pro zobrazení tato data v dokumentu. Například při přidávání tlačítek do jednotlivých řádků seznamu objektů, je by představám souladu s každou položku seznamu.  
   
- V podokně Akce nebo vlastního podokna úloh.  
- -   Pokud byste chtěli poskytnout kontextové informace pro uživatele.  
+  V podokně Akce nebo vlastního podokna úloh.  
+  -   Pokud chcete poskytovat kontextové informace pro uživatele.  
   
--   Pokud chcete výsledky zobrazí v dokumentu a ne dotazu ovládací prvky a data.  
+- Když chcete pouze výsledky se zobrazí v dokumentu a ne ovládací prvky dotazu a data.  
   
--   Pokud chcete zajistit, aby ovládací prvky nejsou vytiskne dokument.  
+- Pokud chcete zajistit, že nejsou zobrazeny ovládací prvky s dokumentem.  
   
--   Pokud chcete zajistit, že ovládací prvky nezpůsobují konflikt za dokumentu.  
+- Pokud chcete zajistit, že ovládací prvky nejsou v konfliktu za dokumentu.  
   
- Ve formuláři Windows.  
- -   Pokud chcete řídit velikost uživatelského rozhraní.  
+  Ve formuláři Windows.  
+  -   Pokud chcete určit velikost uživatelského rozhraní.  
   
--   Pokud chcete zabránit uživatelům ve skrytí nebo odstranění ovládacích prvků.  
+- Pokud chcete zabránit uživatelům ve skryjete nebo odstranění ovládacích prvků.  
   
--   Pokud chcete získat vstup od uživatele a zabrání žádné v dokumentu činnosti, dokud není přijata vstup uživatele.  
+- Pokud chcete získat vstupy od uživatele a zabrání uživateli v teď zrovna nic nedělá v dokumentu, dokud přijetí vstupu.  
   
-## <a name="adding-windows-forms-controls-programmatically"></a>Přidání ovládacích prvků Windows Forms prostřednictvím kódu programu  
- Ovládací prvky Windows Forms do dokumentů aplikace Word a sešitů aplikace Excel můžete přidat za běhu. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Poskytuje pomocné metody pro přidání většiny běžných ovládacích prvků Windows Forms. Tyto pomocné metody umožňují rychle přidáte k dokumentu systému Office a přístup kombinuje funkce ovládacího prvku Windows Forms – ovládací prvky a funkce Office související těchto ovládacích prvků.  
+## <a name="add-windows-forms-controls-programmatically"></a>Přidání ovládacích prvků Windows Forms prostřednictvím kódu programu  
+ Můžete přidat ovládací prvky Windows Forms do dokumentů aplikace Word a sešitů aplikace Excel v době běhu. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Poskytuje pomocné metody pro přidání většiny běžných ovládacích prvků Windows Forms. Tyto pomocné metody vám umožňují rychle přidat ovládacích prvků do dokumentů Office a přístup funkčnost ovládacího prvku Windows Forms a funkcím souvisejícím s Office těchto ovládacích prvků.  
   
  Další informace najdete v tématu [přidání ovládacích prvků do dokumentů Office za běhu](../vsto/adding-controls-to-office-documents-at-run-time.md).  
   
-## <a name="using-windows-forms-controls-in-document-level-projects"></a>Pomocí Windows Forms – ovládací prvky v projekty na úrovni dokumentu  
- Některé aspekty pomocí ovládacích prvků Windows Forms v dokumentech jsou jedinečné pro projekty na úrovni dokumentu, které vám umožní návrh uživatelského rozhraní dokumentu pomocí návrháře Visual Studio.  
+## <a name="use-windows-forms-controls-in-document-level-projects"></a>Použití ovládacích prvků Windows Forms v projekty na úrovni dokumentu  
+ Některé aspekty pomocí ovládacích prvků Windows Forms v dokumentech jsou jedinečné pro projekty na úrovni dokumentu, které vám umožní navrhnout dokumentu uživatelského rozhraní pomocí návrháře aplikace Visual Studio.  
   
-### <a name="creating-custom-user-controls"></a>Vytváření vlastní uživatelské ovládací prvky  
- Můžete přidat uživatelský ovládací prvek do projektu a přidat jej do **sada nástrojů**. Potom můžete přetáhnout uživatelského ovládacího prvku přímo do vašeho dokumentu stejným způsobem, jako by přidání ovládacího prvku Windows Forms do dokumentu. Existují některé věci, třeba vzít v úvahu při vytváření uživatelských ovládacích prvků:  
+### <a name="create-custom-user-controls"></a>Vytvoření vlastních uživatelských ovládacích prvků  
+ Můžete přidat uživatelský ovládací prvek do projektu a pak ho přidat do **nástrojů**. Potom můžete přetáhnout uživatelského ovládacího prvku přímo do dokumentu stejným způsobem můžete přidat ovládacího prvku Windows Forms do dokumentu. Existují některé co je potřeba vzít v úvahu při vytváření uživatelských ovládacích prvků:  
   
--   Nevytvářejte **zapečetěné** uživatelský ovládací prvek. Při přetažení ovládacího prvku do dokumentu, Visual Studio generuje obálkovou třídu odvozenou z ovládacího prvku uživatel ji rozšířit a podpoře jeho použití na dokumentu. Pokud je uživatelský ovládací prvek **zapečetěné**, Visual Studio nelze generovat obálkovou třídu.  
+-   Nevytvářejte **zapečetěné** uživatelského ovládacího prvku. Při přetažení ovládacího prvku do dokumentu sady Visual Studio generuje obálkovou třídu odvozenou z ovládacího prvku uživatel ji rozšířit a podporovat jejich použití v dokumentu. Pokud uživatelský ovládací prvek **zapečetěné**, Visual Studio nelze generovat obálkovou třídu.  
   
--   Uživatelské ovládací prvky, musí mít <xref:System.Runtime.InteropServices.ComVisibleAttribute> atribut nastaven na **true**. Uživatelské ovládací prvky vytvářet v projektu aplikace Office mají tento atribut nastavit na **true** ve výchozím nastavení, ale uživatelské ovládací prvky, které jsou součástí mimo projekty nemusí mít tento atribut nastavit na **true**.  
+-   Uživatelské ovládací prvky musí mít <xref:System.Runtime.InteropServices.ComVisibleAttribute> atribut nastaven na **true**. Uživatelské ovládací prvky vytvořené v projektu aplikace Office mají tento atribut nastavený na **true** ve výchozím nastavení, ale uživatelské ovládací prvky, které jsou součástí mimo projekty nemusí mít tento atribut nastavený na **true**.  
   
--   Po přidání uživatelského ovládacího prvku v dokumentu, nepřejmenovávejte ani odstranit <xref:System.Windows.Forms.UserControl> třídy z projektu. Pokud potřebujete změnit název uživatelského ovládacího prvku musíte nejprve odstranit z dokumentu a poté ji znovu přidejte po změně názvu.  
+-   Po přidání uživatelského ovládacího prvku dokument nelze přejmenovat nebo odstranit <xref:System.Windows.Forms.UserControl> třídy z projektu. Pokud potřebujete změnit název uživatelského ovládacího prvku musíte nejprve odstranit z dokumentu a pak ho znovu přidat po změně názvu.  
   
-### <a name="arranging-controls-at-design-time"></a>Uspořádání ovládacích prvků v době návrhu  
- Pokud přidáte více ovládacích prvků do dokumentů aplikace Word a Excel v době návrhu, můžete rychle nastavit zarovnání všech vybraných ovládacích prvků pomocí **aplikace Microsoft Office Word** a **aplikace Microsoft Office Excel**panely nástrojů v sadě Visual Studio. Panely nástrojů jsou k dispozici jenom v případě, že je dokument nebo listu je otevřený v návrháři.  
+### <a name="arrange-controls-at-design-time"></a>Uspořádání ovládacích prvků v době návrhu  
+ Pokud přidáte více ovládacích prvků do dokumentů aplikace Word a Excel v době návrhu, můžete rychle nastavit zarovnání všech vybraných ovládacích prvků pomocí **Microsoft Office Word** a **aplikace Microsoft Office Excel**panelů nástrojů v sadě Visual Studio. Panely nástrojů jsou k dispozici pouze v případě, že je otevřen v Návrháři dokumentu nebo sešitu.  
   
- Když vyberete více ovládacích prvků v návrháři, můžete na těchto panelech nástrojů tlačítka následující k uspořádání ovládacích prvků:  
+ Když vyberete více ovládacích prvků v návrháři, vám pomůže následující tlačítka na panely nástrojů uspořádat ovládací prvky:  
   
 -   **Zarovnat doleva**  
   
--   **Zarovnat Center**  
+-   **Zarovnat centra**  
   
--   **Zarovnat práva**  
+-   **Zarovnat doprava**  
   
 -   **Zarovnat nahoru**  
   
@@ -110,51 +111,51 @@ ms.lasthandoff: 04/16/2018
 -   **Stejné svislé mezery**  
   
 > [!NOTE]  
->  Tato tlačítka v projekty aplikace Word, jsou povolena pouze v případě, že vybraný ovládací prvky nejsou v textu. Ovládací prvky, které přidáte do dokumentu v době návrhu jsou ve výchozím nastavení v textu.  
+>  V projektech aplikace Word tato tlačítka jsou povolena pouze v případě, že nejsou vybrané ovládací prvky v textu. Ve výchozím nastavení jsou ovládací prvky, které přidáte do dokumentu v době návrhu v textu.  
   
-### <a name="preventing-old-data-from-appearing-in-excel-workbooks-during-loading"></a>Zobrazování v sešitech aplikace Excel během načítání brání stará Data  
- Když přidáte ovládací prvky Windows Forms do dokumentů nebo listů v době návrhu, zůstanou ovládacích prvků v dokumentu, při zavření v dokumentu. Ovládací prvky přidané v době návrhu se také nazývají *statické ovládací prvky*.  
+### <a name="prevent-old-data-from-appearing-in-excel-workbooks-during-loading"></a>Zabránit zobrazování v sešitech aplikace Excel během načítání stará data  
+ Když přidáte ovládací prvky Windows Forms do dokumentů nebo listů v době návrhu, zůstávají ovládací prvky v dokumentu, při zavření dokumentu. Ovládacích prvků přidaných v době návrhu se také označují jako *statické ovládací prvky*.  
   
- Po otevření sešitu aplikace Excel, která obsahuje statické ovládací prvky sešit zobrazí bitové mapy ovládacího prvku v ovládacím prvku ActiveX, dokud přizpůsobení kód spustí a načte skutečný ovládací prvek. Aplikace Excel vytvoří tento rastrový obrázek a ukládá je v sešitu vždy, když je sešit uložit. Bitmapy ukazuje ovládacího prvku ukázalo se při posledním uložení sešitu, včetně všechna data, která byla zobrazení ovládacího prvku. Další informace o ovládací prvek ActiveX, který obsahuje ovládací prvky Windows Forms a rastrové obrázky, naleznete v části [omezení z ovládacích prvků Windows Forms v dokumentech Office](../vsto/limitations-of-windows-forms-controls-on-office-documents.md).  
+ Po otevření Excelového sešitu, který obsahuje statické ovládací prvky sešitu dokud přizpůsobení kód spustí a načte skutečný ovládací prvek zobrazuje rastrový obrázek ovládacího prvku v ovládacím prvku ActiveX. Excel vytvoří tento rastrový obrázek a uloží jej v sešitu pokaždé, když sešit uložený. Rastrový obrázek ukazuje ovládací prvek, jak se při posledním uložení sešitu, včetně všechna data, která byla zobrazení ovládacího prvku. Další informace o ovládacím prvku ActiveX, který obsahuje ovládací prvky Windows Forms a rastrové obrázky, naleznete v tématu [omezení Windows Forms ovládací prvky v dokumentech Office](../vsto/limitations-of-windows-forms-controls-on-office-documents.md).  
   
- V určitých podmínek kód nenačte a se zobrazí pouze rastrového obrázku, například když uživatel otevře sešit v režimu návrhu. Navíc pokud uživatel otevře sešit v počítači, který nemá [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] nainstalována, přizpůsobení nelze spustit na načíst ovládací prvky, a proto je viditelná pouze bitové mapy ovládacího prvku. Vždy byste měli odebrat osobní informace z ovládacích prvků na sešity před uložením sešit a odesílání do jiného uživatele, ujistěte se, že vaše osobní údaje neodhalí omylem.  
+ Za určitých podmínek zatížení kód a zobrazí pouze rastrový obrázek, například když uživatel otevře sešit v režimu návrhu. Také pokud uživatel otevře sešit v počítači, který nemá [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] nainstalovaná, nelze spustit přizpůsobení načíst ovládací prvky a proto je viditelná pouze rastrový obrázek ovládacího prvku. Vždy byste měli odebrat osobní údaje z ovládacích prvků v sešitech před uložením sešitu a odesílá je do jiného uživatele k zajištění, že se omylem zveřejněn vaše osobní údaje.  
   
-### <a name="matching-control-size-to-cell-size-on-an-excel-worksheet"></a>Odpovídající velikost ovládacího prvku tak, aby buňka velikost na listu aplikace Excel  
- Můžete nastavit na změnu velikosti automaticky při změně velikosti nadřazené buňce ovládacího prvku. Další informace najdete v tématu [postupy: Změna velikosti ovládacích prvků v buňkách listu](../vsto/how-to-resize-controls-within-worksheet-cells.md).  
+### <a name="match-control-size-to-cell-size-on-an-excel-worksheet"></a>Velikost ovládacího prvku na velikost buňky v listu aplikace Excel  
+ Můžete nastavit ovládací prvek změnit velikost automaticky při změně velikosti nadřazené buňky. Další informace najdete v tématu [postupy: Změna velikosti ovládacích prvků v buňkách listu](../vsto/how-to-resize-controls-within-worksheet-cells.md).  
   
-### <a name="adding-components-that-are-shared-by-all-worksheets"></a>Přidávání součástí, které jsou sdíleny všech listů  
- Můžete přidat součásti, které chcete sdílet mezi všechny listy, například <xref:System.Data.DataSet>, k sešitu Designer místo do listů. Součást se zobrazí na panelu součásti.  
+### <a name="add-components-that-are-shared-by-all-worksheets"></a>Přidat součásti, které jsou sdíleny ve všech listů  
+ Můžete přidat komponenty, které chcete sdílet mezi všechny listy, například <xref:System.Data.DataSet>, do návrháře sešitu místo do listů. Součást se zobrazí v panelu komponent.  
   
-### <a name="formula-for-embedding-controls-on-an-excel-worksheet"></a>Vzorec pro vložení ovládacích prvků na listu aplikace Excel  
- Když vyberete ovládacího prvku v aplikaci Excel, uvidíte **=EMBED("WinForms.Control.Host","")** v **řádek vzorců**. Tento text je nezbytné a nesmí být odstraněna.  
+### <a name="formula-for-embedding-controls-on-an-excel-worksheet"></a>Vzorec pro vkládání ovládacích prvků na list aplikace Excel  
+ Když vyberete ovládací prvek v aplikaci Excel, zobrazí se **=EMBED("WinForms.Control.Host","")** v **řádek vzorců**. Tento text je nutné a by neměl být odstraněn.  
   
-### <a name="layout-style-of-controls-on-a-word-document"></a>Stylu rozložení ovládacích prvků na dokument aplikace Word  
- Při přidání ovládacího prvku na dokument aplikace Word v projektech na úrovni dokumentu pomocí sady Visual Studio návrháře ovládací prvek přidán v textu. Změna stylu rozložení ovládacího prvku, klikněte pravým tlačítkem na ovládací prvek a potom klikněte na **formát ovládacího prvku**. Vyberte styl zabalení na **rozložení** stránky **formát objektu** dialogové okno.  
+### <a name="layout-style-of-controls-on-a-word-document"></a>Styl rozložení ovládacích prvků na dokumentu aplikace Word  
+ Při přidání ovládacího prvku do dokumentu aplikace Word v projektu úrovni dokumentu pomocí návrháře aplikace Visual Studio je ovládací prvek přidán v textu. Chcete-li změnit styl rozložení ovládacího prvku, klikněte pravým tlačítkem na ovládací prvek a potom klikněte na **formát ovládacího prvku**. Vyberte styl zabalení na **rozložení** stránku **formát objektu** dialogové okno.  
   
- Při přidání ovládacího prvku na dokument aplikace Word v době běhu, můžete zadat stylu rozložení nového ovládacího prvku s použitím různých `Add` \< *třídu ovládacího prvku*> z přetížení metody <xref:Microsoft.Office.Tools.Word.ControlCollection> třídy:  
+ Při přidání ovládacího prvku do dokumentu aplikace Word v době běhu, můžete zadat požadovaný styl rozložení nového ovládacího prvku s použitím různých `Add` \< *třídu ovládacího prvku*> přetížení metody <xref:Microsoft.Office.Tools.Word.ControlCollection> třídy:  
   
--   Přidání ovládacího prvku v textu, použijte přetížení, které přijímá <xref:Microsoft.Office.Interop.Word.Range> , určuje umístění ovládacího prvku.  
+- Přidání ovládacího prvku v textu, použijte přetížení, která přijímá <xref:Microsoft.Office.Interop.Word.Range> , která určuje umístění ovládacího prvku.  
   
--   Přidání ovládacího prvku jako plovoucí obrazce, použijte přetížení, které přijímá souřadnice levého a horního ovládacího prvku.  
+- Přidání ovládacího prvku jako obrazec s plovoucí desetinnou čárkou, použijte přetížení, která přijímá souřadnice levého a horního ovládacího prvku.  
   
- Další informace najdete v tématu [přidání ovládacích prvků do dokumentů Office za běhu](../vsto/adding-controls-to-office-documents-at-run-time.md).  
+  Další informace najdete v tématu [přidání ovládacích prvků do dokumentů Office za běhu](../vsto/adding-controls-to-office-documents-at-run-time.md).  
   
- Pokud otevřete šablonu aplikace Word v návrháři Visual Studio, ovládací prvky bez vložené v šabloně nemusí být vidět, protože Visual Studio otevře šablonu v **normální** zobrazení. Chcete-li zobrazit ovládací prvky, změnit zobrazení na **rozložením při tisku**.  
+  Pokud otevřete šablonu aplikace Word v návrháři aplikace Visual Studio, protože Visual Studio otevře šablonu v nemusí zobrazovat nevložená ovládací prvky na této šabloně **normální** zobrazení. Chcete-li zobrazit ovládací prvky, změňte zobrazení tak, aby **rozložení při tisku**.  
   
-### <a name="controls-outside-the-main-document-body"></a>Ovládací prvky mimo těla hlavní dokumentu  
- Windows Forms – ovládací prvky nejsou podporovány v záhlaví nebo zápatí stránky, nebo v rámci vnořeného dokumentu.  
+### <a name="controls-outside-the-main-document-body"></a>Ovládací prvky mimo tělo hlavního dokumentu  
+ Ovládací prvky Windows Forms nejsou podporovány v záhlaví nebo zápatí stránky, nebo v rámci vnořeného dokumentu.  
   
-### <a name="adding-components-at-design-time"></a>Přidávání součástí v době návrhu  
- Některé ovládací prvky nebo součásti nejsou viditelné v dokumentu a místo toho se zobrazí na panelu součásti. Visual Studio poskytuje panelu součásti pro každý okna dokumentu. Součást panelu se zobrazí na obrazovce pouze v případě, že součásti existovat v dokumentu.  
+### <a name="add-components-at-design-time"></a>Přidat součásti v době návrhu  
+ Některé ovládací prvky nebo součásti nejsou viditelné v dokumentu a místo toho se zobrazí v podokně komponent. Visual Studio poskytuje hlavní panel komponenty pro každé okno dokumentu. Panelu komponent se zobrazí na obrazovce pouze v případě, že součásti existovat v dokumentu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Ovládací prvky v dokumentech Office](../vsto/controls-on-office-documents.md)   
  [Přidání ovládacích prvků do dokumentů Office za běhu](../vsto/adding-controls-to-office-documents-at-run-time.md)   
  [Přehled ovládacích prvků hostitele a hostitelské položky](../vsto/host-items-and-host-controls-overview.md)   
  [Přehled podokna akcí](../vsto/actions-pane-overview.md)   
  [Ovládací prvky Windows Forms](/dotnet/framework/winforms/controls/index)   
  [Omezení ovládacích prvků Windows Forms v dokumentech Office](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)   
- [Postupy: Přidání ovládacích prvků do dokumentů Office Windows Forms](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)   
+ [Postupy: Přidání ovládacích prvků Windows Forms do dokumentů Office](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)   
  [Postupy: Změna velikosti ovládacích prvků v buňkách listu](../vsto/how-to-resize-controls-within-worksheet-cells.md)   
  [Postupy: skrytí ovládacích prvků na listech při tisku](../vsto/how-to-hide-controls-on-worksheets-when-printing.md)   
  [Návod: Změna formátování listů s použitím ovládacích prvků CheckBox](../vsto/walkthrough-changing-worksheet-formatting-using-checkbox-controls.md)   
@@ -163,6 +164,6 @@ ms.lasthandoff: 04/16/2018
  [Návod: Zobrazení textu v textovém poli v dokumentu s použitím tlačítka](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md)   
  [Omezení ovládacích prvků Windows Forms v dokumentech Office](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)   
  [Návod: Aktualizace grafu v dokumentu s použitím přepínačů](../vsto/walkthrough-updating-a-chart-in-a-document-using-radio-buttons.md)   
- [Návod: Aktualizace grafu na listu s použitím přepínačů](../vsto/walkthrough-updating-a-chart-in-a-worksheet-using-radio-buttons.md)  
+ [Návod: Aktualizace grafu na listu s použitím přepínačů](../vsto/walkthrough-updating-a-chart-in-a-worksheet-using-radio-buttons.md)  
   
   

@@ -1,121 +1,123 @@
 ---
-title: Ve smíšeném režimu ladění pro jazyk Python
-description: Postup ladění současně C++ a Python v sadě Visual Studio, včetně krokování mezi prostředími, zobrazení hodnoty a vyhodnocení výrazů.
-ms.date: 01/16/2018
+title: Ve smíšeném režimu ladění pro Python
+description: Ladění současně C++ a Python v sadě Visual Studio, včetně krokování mezi prostředími, zobrazení hodnot a vyhodnocení výrazů.
+ms.date: 11/12/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 52aca112b802789f45f0a1d667d75b53a7535919
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 42d413ab8d96ccd5533afe99cffb2c05c8ac7d6f
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052232"
 ---
-# <a name="debugging-python-and-c-together"></a>Společně ladění Python a C++
+# <a name="debug-python-and-c-together"></a>Společně ladění Pythonu a C++
 
-Většina regulární ladicí programy Python podporovat ladění pouze Python kódu. V praxi však Python se používá ve spojení s C nebo C++ v scénářům, které vyžadují vysoký výkon nebo možnost přímo volat rozhraní API platformy. (Viz [vytváření rozšíření pro C++ pro jazyk Python](working-with-c-cpp-python-in-visual-studio.md) podrobný.)
+Většině běžných ladicí programy Python podporu ladění pouze kódu v Pythonu. V praxi však Python se používá ve spojení s C nebo C++ v scénářům, které vyžadují vysoký výkon nebo možnost přímo vyvolat rozhraní API platformy. (Viz [vytvoření rozšíření C++ pro Python](working-with-c-cpp-python-in-visual-studio.md) návod.)
 
-Visual Studio poskytuje integrované, souběžných ladění ve smíšeném režimu pro Python a nativní C/C++, za předpokladu, že jste vybrali **Python tools nativní vývoj** možnost pro vývoj Python zatížení v sadě Visual Studio Instalační program.
+Visual Studio poskytuje integrované, současné ladění ve smíšeném režimu pro Python a nativní C/C++, za předpokladu, že jste vybrali **nástroje Pythonu pro nativní vývoj** možnost **vývoj v jazyce Python** úlohy v instalačním programu sady Visual Studio.
 
 > [!Note]
-> Ladění ve smíšeném režimu není k dispozici s nástroji Python Tools pro sadu Visual Studio 1.x v sadě Visual Studio 2015 a starší.
+> Ladění ve smíšeném režimu není k dispozici s nástroji Python Tools for Visual Studio 1.x v sadě Visual Studio 2015 a starší.
 
 Funkce ladění ve smíšeném režimu patří, jak je popsáno v tomto článku:
 
-- Zásobníky volání kombinované
+- Kombinované volání zásobníků
 - Krok mezi Python a nativní kód
 - Zarážky v obou typech kódu
-- V tématu Python reprezentace objektů v nativní rámce a naopak
-- Ladění v kontextu projektu Python nebo projektů C++
+- Zobrazit Python reprezentace objektů v nativní rámce a naopak
+- Ladění v kontextu projektu Pythonu nebo projektu jazyka C++
 
-![Ladění ve smíšeném režimu](media/mixed-mode-debugging.png)
+![Ladění ve smíšeném režimu pro Python v sadě Visual Studio](media/mixed-mode-debugging.png)
 
 |   |   |
 |---|---|
-| ![film ikonu fotoaparátu pro video](../install/media/video-icon.png "přehrát video") | Úvod do vytváření, testování a ladění nativních modulů C sadou Visual Studio, najdete v části [podrobné informace: vytváření nativní moduly](https://youtu.be/D9RlT06a1EI) (webu youtube.com, 9 m 09s). Přehrávání videa se vztahuje na Visual Studio 2015 a 2017. |
+| ![Ikona filmové kamery pro video](../install/media/video-icon.png "Sledovat video") | Úvod do vytváření, testování a ladění nativních modulů jazyka C pomocí sady Visual Studio, naleznete v tématu [podrobně: vytvořit nativní moduly](https://youtu.be/D9RlT06a1EI) (webu youtube.com, 9 min 09s). Video se vztahuje na Visual Studio 2015 a 2017. |
 
-## <a name="enable-mixed-mode-debugging-in-a-python-project"></a>Povolit ladění ve smíšeném režimu v projektu jazyka Python
+## <a name="enable-mixed-mode-debugging-in-a-python-project"></a>Povolit ladění ve smíšeném režimu v projektu Pythonu
 
-1. Klikněte pravým tlačítkem na projekt Python v Průzkumníku řešení, vyberte **vlastnosti**, vyberte **ladění** a pak vyberte **povolit ladění nativního kódu**. Tato možnost umožňuje ve smíšeném režimu pro všechny ladicí relace.
+1. Klikněte pravým tlačítkem na projekt Python v **Průzkumníka řešení**vyberte **vlastnosti**, vyberte **ladění** kartu a potom vyberte **povolit ladění nativního kódu** . Tato možnost povolí ve smíšeném režimu pro všechny ladicí relace.
 
     ![Povolení ladění nativního kódu](media/mixed-mode-debugging-enable-native.png)
 
     > [!Tip]
-    > Když povolíte ladění nativního kódu, ve výstupním okně Python může zmizet okamžitě, když program dokončí bez budete obvykle pozastavení "Stisknutím libovolné klávesy... Pokračujte". K vynucení pozastavení, přidejte `-i` možnost k **spustit > překladač argumenty** na **ladění** kartě při povolení ladění nativního kódu. Tento argument překladač Pythonu umístí do interaktivním režimu po dokončení kód v tomto okamžiku se čeká na stiskněte klávesy Ctrl + Z, zadejte ukončíte.
+    > Když povolíte ladění nativního kódu, v okně výstupu Pythonu může zmizet ihned po dokončení programu bez získáte obvyklého **stisknutím libovolné klávesy pokračovat** pozastavit. K vynucení pozastavení, přidejte `-i` umožňuje **spustit** > **argumenty pro interpret** pole na **ladění** kartě povolit ladění nativního kódu . Tento argument vloží interpret Pythonu v interaktivním režimu po dokončení kódu, kdy čeká na stisknutí klávesy **Ctrl**+**Z** > **Enter**  ukončíte.
 
-1. Při připojování k existující proces ladicího programu ve smíšeném režimu (**ladění > připojit k procesu...** ), použijte **vyberte...**  tlačítko Otevřít **vybrat typ kódu** dialogové okno. Nastavte **ladění tyto typy kódu** možnost a vyberte oba **nativní** a **Python** v seznamu:
+1. Při připojování ladicího programu smíšeného režimu k existujícímu procesu (**ladění** > **připojit k procesu**), použijte **vyberte** tlačítko Otevřít  **Vyberte typ kódu** dialogového okna. Nastavte **ladit tyto typy kódu** možnost a vyberte možnost **nativní** a **Python** v seznamu:
 
     ![Vyberte typy kódu nativní a Python](media/mixed-mode-debugging-code-type.png)
 
-    Nastavení typu kódu jsou trvalé, takže pokud chcete zakázat ladění ve smíšeném režimu při připojování k jiným procesem později, zrušte typ kód Python.
+    Nastavení typu kódu jsou trvalé, takže pokud chcete zakázat ladění v kombinovaném režimu při připojování k jiným procesem později, zrušte **Python** kódu typu.
 
-    Je možné vybrat jiné typy kódu kromě nebo místo **nativní**. Například pokud spravované aplikace hostuje CPython, které v zapnout používá rozšíření nativní moduly, a chcete ladit všechny tři, můžete zkontrolovat **Python**, **nativní**, a **spravované**společně v jednotném ladění rozhraní včetně zásobníky volání kombinované a zanoříte se mezi všechny tři moduly runtime.
+    Je možné vybrat jiné typy kódu kromě nebo namísto něj **nativní**. Například pokud spravované aplikace hostuje CPython, které v důsledku využívá nativní rozšiřující moduly a chcete ladit všechny tři, můžete zkontrolovat **Python**, **nativní**, a **spravované**společně sjednocené prostředí pro ladění včetně kombinované volání zásobníků a krokování mezi všechny tři moduly runtime.
 
-1. Když začnete ladění ve smíšeném režimu poprvé, může se zobrazit **Python symboly požadované** dialogové okno (najdete v části [symboly pro ladění ve smíšeném režimu](debugging-symbols-for-mixed-mode-c-cpp-python.md)). Musíte nainstalovat jenom jednou symboly pro jakékoli dané prostředí Python. Symboly jsou automaticky zahrnuty, pokud instalujete podporu Python prostřednictvím Visual Studio 2017 Instalační služby.
+1. Při zahájení ladění ve smíšeném režimu poprvé, může se zobrazit **vyžaduje symboly Pythonu** dialogového okna (naleznete v tématu [symboly pro ladění ve smíšeném režimu](debugging-symbols-for-mixed-mode-c-cpp-python.md)). Je potřeba nainstalovat symboly pouze jednou pro jakékoli dané prostředí Pythonu. Symboly budou zahrnuty automaticky, pokud instalujete podporu Pythonu pomocí instalačního programu sady Visual Studio 2017.
 
-1. Zkontrolujte zdrojový kód pro standardní Python, sám o sobě dostupný při ladění, navštivte [ https://www.python.org/downloads/source/ ](https://www.python.org/downloads/source/), stáhněte archivu vhodné pro vaši verzi a rozbalte ho do složky. Budete pak bodu aplikace Visual Studio pro konkrétní soubory v této složce v ať bod výzvu.
+1. K dispozici zdrojový kód pro standardní Python samotné ladění, navštivte [ https://www.python.org/downloads/source/ ](https://www.python.org/downloads/source/), stáhněte archiv odpovídá vaší verzi a rozbalte ho do složky. Můžete pak bodu vás vyzve k sadě Visual Studio na konkrétní soubory v této složce na cokoli, co bod.
 
-## <a name="enable-mixed-mode-debugging-in-a-cc-project"></a>Povolit ladění ve smíšeném režimu v projektu C/C++
+## <a name="enable-mixed-mode-debugging-in-a-cc-project"></a>Povolit ladění ve smíšeném režimu v projektu jazyka C/C++
 
-Visual Studio 2017 (verze 15,5 a vyšší) podporuje ve smíšeném režimu ladění z projektu C/C++ (například když při [vložení Python v jiné aplikaci, jak je popsáno na python.org](https://docs.python.org/3/extending/embedding.html)). Pokud chcete povolit ladění ve smíšeném režimu, konfigurace projektu C/C++ pro spuštění "Ladicího programu Python/Native":
+Visual Studio 2017 (verze 15.5 a vyšší) podporuje kombinovaný režim ladění z projektu jazyka C/C++ (například když [vkládání Python v jiné aplikaci, jak je popsáno na webu python.org](https://docs.python.org/3/extending/embedding.html)). Pokud chcete povolit ladění ve smíšeném režimu, konfigurace projektu jazyka C/C++ ke spuštění **Python/nativní ladění**:
 
-1. Klikněte pravým tlačítkem na projekt C/C++ v Průzkumníku řešení a vyberte **vlastnosti**
-1. Vyberte **ladění** vyberte "Python/nativní ladicí program" z **ladicí program ke spuštění**a vyberte **OK**.
+1. Klikněte pravým tlačítkem na projekt C/C++ v **Průzkumníka řešení** a vyberte **vlastnosti**.
+1. Vyberte **ladění** kartu, vyberte možnost **Python/nativní ladění** z **ladicí program ke spuštění**a vyberte **OK**.
 
-    ![Výběr Python/nativní ladicí program v projektu C/C++](media/mixed-mode-debugging-select-cpp-debugger.png)
+    ![Výběr ladicího programu Python/nativní v projektu jazyka C/C++](media/mixed-mode-debugging-select-cpp-debugger.png)
 
-Pomocí této metody, mějte na paměti, že nelze ladění `py.exe` Spouštěč samostatně, protože ji vytvoří podřízenou `python.exe` proces, který nebude připojen ladicí program k. Pokud chcete spustit `python.exe` přímo s argumenty, změnit **příkaz** možnost ve vlastnostech Python/nativní ladění (viz předchozí obrázek) zadat úplnou cestu k `python.exe`, pak zadejte argumenty v **Příkaz argumenty**.
+Pomocí této metody, mějte na paměti, že nelze ladit *py.exe* Spouštěč samostatně, protože vytvoří podřízený *python.exe* proces, který ladicí program nebude připojen k. Pokud chcete spustit *python.exe* přímo s argumenty, změnit **příkaz** možnost **Python/nativní ladění** vlastností (viz předchozí obrázek) Zadejte úplnou cestu k *python.exe*, zadejte argumenty v **argumenty příkazu**.
 
-### <a name="attaching-the-mixed-mode-debugger"></a>Připojení ladicího programu ve smíšeném režimu
+### <a name="attaching-the-mixed-mode-debugger"></a>Připojování ladicího programu ve smíšeném režimu
 
-Pro všechny předchozí verze sady Visual Studio přímé ladění ve smíšeném režimu je povolené jenom v případě, že spuštění Python projektu v sadě Visual Studio, protože projekty C/C++ použít jenom nativní ladicí program. Můžete však připojit ladicí program samostatně:
+Pro všechny předchozí verze sady Visual Studio, s přímým přístupem ve smíšeném režimu je povoleno ladění pouze při spuštění projektu Pythonu v sadě Visual Studio, protože projekty C/C++, použijte jenom nativní ladicí program. Můžete však připojit ladicí program samostatně:
 
-1. Spusťte projekt C++ bez ladění (**ladění > Spustit bez ladění** nebo Ctrl + F5).
-1. Vyberte **ladění > připojit k procesu...** . V dialogovém okně se zobrazí, vyberte odpovídající proces, pak používat **vyberte...**  tlačítko Otevřít **vybrat typ kódu** dialogové okno, ve kterém můžete vybrat Python:
+1. Spustit bez ladění projektu jazyka C++ (**ladění** > **spustit bez ladění** nebo **Ctrl**+**F5**) .
+1. Vyberte **ladění** > **připojit k procesu**. V dialogovém okně, které se zobrazí, vyberte příslušný proces, pak použijte **vyberte** tlačítko Otevřít **vybrat typ kódu** dialogové okno, ve kterém můžete vybrat **Python**:
 
-    ![Výběr Python jako typ ladění při připojení ladicí program](media/mixed-mode-debugging-attach-type.png)
+    ![Výběr Python jako typ ladění, který při připojování ladicího programu](media/mixed-mode-debugging-attach-type.png)
 
-1. Vyberte **OK** tento dialog zavřít pak **Attach** spuštění ladicího programu.
-1. Budete muset zavést vhodný pozastavení nebo zpoždění v aplikaci C++ a ujistěte se, že ji nebude volat kód Python, kterou chcete ladit před máte možnost připojit ladicí program.
+1. Vyberte **OK** pak zavřete tento dialog **připojit** spuštění ladicího programu.
+1. Budete muset představují vhodný pozastavení nebo zpoždění v C++ aplikaci, aby zajistila, že nevolá kód Pythonu, který chcete ladit, než budete mít příležitost dobře se připojit ladicí program.
 
 ## <a name="mixed-mode-specific-features"></a>Konkrétní funkce ve smíšeném režimu
 
-- [Zásobník volání kombinované](#combined-call-stack)
-- [Krokování s mezi Python a nativní kód](#stepping-between-python-and-native-code)
-- [Zobrazení PyObject hodnoty v nativním kódu](#pyobject-values-view-in-native-code)
-- [Zobrazení nativní hodnoty v kódu jazyka Python](#native-values-view-in-python-code)
+- [Kombinované volání zásobníku](#combined-call-stack)
+- [Krok mezi Python a nativní kód](#step-between-python-and-native-code)
+- [PyObject zobrazení hodnoty v nativním kódu](#pyobject-values-view-in-native-code)
+- [Zobrazit nativní hodnoty v kódu Pythonu](#native-values-view-in-python-code)
 
-### <a name="combined-call-stack"></a>Zásobník volání kombinované
+### <a name="combined-call-stack"></a>Kombinované volání zásobníku
 
-Okno zásobník volání ukazuje nativní a rámce zásobníku Python prokládaný s přechody označena mezi těmito dvěma:
+**Zásobník volání** okno zobrazuje nativní i proloženy přechodů mezi těmito dvěma označené rámce zásobníků Pythonu:
 
-![Zásobník volání kombinované](media/mixed-mode-debugging-call-stack.png)
+![Zásobník volání kombinované pomocí ladění ve smíšeném režimu](media/mixed-mode-debugging-call-stack.png)
 
-Přechody zobrazí jako "[externí kód]", bez zadání směr přechodu, pokud **nástroje > Možnosti > ladění > Obecné > povolit volbu pouze vlastní kód** je možnost nastavena.
+Přechody se zobrazí jako **[externí kód]**, bez zadání směr přechodu je, pokud **nástroje** > **možnosti**  >  **Ladění** > **Obecné** > **povolit volbu pouze vlastní kód** je možnost nastavená.
 
-Dvakrát klikněte na libovolný snímek volání stane aktivní a otevře příslušné zdrojový kód, pokud je to možné. Pokud zdrojový kód není k dispozici, rámečku přišla stále aktivní a může být prověřovány lokální proměnné.
+Dvojitým kliknutím jiné rámce volání stane aktivní a otevře příslušného zdrojového kódu, pokud je to možné. Pokud není k dispozici zdrojový kód, rámce stále se stane aktivní a můžete ho zkontrolovat lokální proměnné.
 
-### <a name="stepping-between-python-and-native-code"></a>Krokování s mezi Python a nativní kód
+### <a name="step-between-python-and-native-code"></a>Krok mezi Python a nativní kód
 
-Pokud používáte Krokovat s vnořením (F11) nebo příkazy Krokovat s Vystoupením (Shift + F11), ve smíšeném režimu ladicí program zpracovává správně změny mezi typy kódu. Například když Python volá metodu typu, která je implementována v jazyce C, krokování na volání, metoda zastaví na začátku nativní funkce implementace metody. Podobně když nativní kód volá některé funkce rozhraní API Python, jejímž výsledkem volaná kód Python. Například zanoříte se do `PyObject_CallObject` na hodnotu funkce, která byla původně definována v Pythonu zastaví na začátku funkce Python. Krokování z Pythonu pro nativní je také podporována pro nativní funkce volána z Pythonu prostřednictvím [ctypes](http://docs.python.org/3/library/ctypes.html).
+Při použití **Krokovat s vnořením** (**F11**) nebo **Krokovat s Vystoupením** (**Shift**+**F11**) příkazy, ladění ve smíšeném režimu správně zpracovává změny mezi typy kódu. Například když Python volá metodu typu, která je implementována v jazyce C, krokování volání, že metoda zastaví na začátku nativní funkce implementace metody. Podobně když nativní kód volá některé funkce rozhraní API Python, který výsledky v kódu Pythonu vyvolání. Například krokování s vnořením `PyObject_CallObject` na hodnotu funkce, která byla původně definována v Pythonu zastaví na začátku funkce jazyka Python. Krokování Pythonu do nativní je také podporována pro nativní funkce vyvolána z Pythonu pomocí [ctypes](https://docs.python.org/3/library/ctypes.html).
 
-### <a name="pyobject-values-view-in-native-code"></a>Zobrazení PyObject hodnoty v nativním kódu
+### <a name="pyobject-values-view-in-native-code"></a>PyObject zobrazení hodnoty v nativním kódu
 
-Při aktivním nativní rámce (C nebo C++) jeho místní proměnné zobrazí místní okno ladicí program. V nativních modulů Python rozšíření, mnoho z těchto proměnných jsou typu `PyObject` (což je typedef pro `_object`), nebo několik dalších základních typů Python (viz seznam níže). Při ladění ve smíšeném režimu, k dispozici tyto hodnoty do další podřízené uzlu s označením "Python zobrazení." Po rozbalení tento uzel zobrazuje reprezentace Python proměnné, identické by zobrazené Pokud místní proměnné odkazující na stejný objekt nacházel v rámci Python. Podřízené objekty tohoto uzlu se upravovat.
+Při aktivním je nativní rámec (C nebo C++) své místní proměnné zobrazí v ladicím programu **lokální** okna. V nativní rozšiřující moduly Pythonu, mnoho z těchto proměnných jsou typu `PyObject` (což je definice typu `_object`), nebo několik dalších základních typů Pythonu (viz seznam níže). V kombinovaném režimu ladění, tyto hodnoty k dispozici další podřízený uzel s názvem **[zobrazení Pythonu]**. Po rozbalení tento uzel zobrazuje reprezentace Python proměnné, shodné s co se zobrazí-li místní proměnná odkazuje na stejný objekt nacházel v rámci Python. Podřízené položky tohoto uzlu se upravovat.
 
-![Zobrazení Python](media/mixed-mode-debugging-python-view.png)
+![Zobrazení Pythonu v okně místních hodnot](media/mixed-mode-debugging-python-view.png)
 
-Tuto funkci zakázat, klikněte pravým tlačítkem na libovolné místo v místní hodnoty – okno a přepnutí **Python > zobrazit uzly zobrazení Python** nabídky:
+Tuto funkci zakázat, klikněte pravým tlačítkem kamkoli **lokální** okno a přepnout **Python** > **zobrazit uzly zobrazení Pythonu** nabídky:
 
-![Povolení zobrazení Python](media/mixed-mode-debugging-enable-python-view.png)
+![Povoluje zobrazení Pythonu v okně místních hodnot](media/mixed-mode-debugging-enable-python-view.png)
 
-C typy uzlů tohoto zobrazení "[Python zobrazení]" (Pokud je povoleno):
+C typy, které zobrazují **[zobrazení Pythonu]** uzly (je-li povoleno):
 
 - `PyObject`
 - `PyVarObject`
@@ -132,25 +134,25 @@ C typy uzlů tohoto zobrazení "[Python zobrazení]" (Pokud je povoleno):
 - `PyStringObject`
 - `PyUnicodeObject`
 
-"[Python zobrazení]" pro typy, které vytváříte sami nezobrazí automaticky. Při vytváření rozšíření pro jazyk Python 3.x, tento nedostatek obvykle není problém protože libovolného objektu nakonec má `ob_base` pole jednoho z typů výše, což způsobí, že "[Python zobrazení]" se objeví.
+**[Zobrazení Pythonu]**  nezobrazí automaticky pro typy vytvořte sami. Při vytváření rozšíření pro Python 3.x, tento nedostatek není obvykle problém, protože jakýkoli objekt nakonec má `ob_base` pole jednoho z typů výše, které způsobí, že **[zobrazení Pythonu]** zobrazit.
 
-Pro jazyk Python 2.x, ale jeho záhlaví pro každý typ objektu obvykle deklaruje jako kolekce vloženého pole a neexistuje žádné přidružení mezi typy vlastní vytvořené a `PyObject` na úrovni systému typu v kódu C/C++. Povolit "[Python zobrazení]" uzly pro vlastní typy, upravte `PythonDkm.natvis` v [nástroje Python tools instalační adresář](installing-python-support-in-visual-studio.md#install-locations)a přidejte jiný element v souboru XML pro struktura C nebo C++ třídy.
+Pro jazyk Python 2.x, ale jeho záhlaví pro každý typ objektu obvykle deklaruje jako kolekce vložených polí a neexistuje žádná souvislost mezi vlastní typy vytvořené a `PyObject` na úrovni systému typu v kódu C/C++. Povolit **[zobrazení Pythonu]** Upravit uzly pro vlastní typy, *PythonDkm.natvis* soubor [instalační adresář nástroje Python tools](installing-python-support-in-visual-studio.md#install-locations)a přidat jiný element v XML pro Struktura jazyka C nebo C++ třídy.
 
-Možnost alternativního (a lepší), je splnění [období 3123](http://www.python.org/dev/peps/pep-3123/) a použití explicitního `PyObject ob_base;` pole místo `PyObject_HEAD`, ačkoli, nemusí být vždy možné z důvodů zpětné kompatibility.
+Možnost alternativního (a vyšší), je splnění [období 3123](https://www.python.org/dev/peps/pep-3123/) a použít explicitní `PyObject ob_base;` pole spíše než `PyObject_HEAD`, ale které nemusí být vždy možné z důvodů zpětné kompatibility.
 
-### <a name="native-values-view-in-python-code"></a>Zobrazení nativní hodnoty v kódu jazyka Python
+### <a name="native-values-view-in-python-code"></a>Zobrazit nativní hodnoty v kódu Pythonu
 
-Podobně jako v předchozí části, můžete povolit "[C++]"pro zobrazení nativní hodnoty v místní hodnoty – okno když je aktivní snímek Python. Tato funkce není povolena ve výchozím nastavení, takže můžete zapnout tak, že kliknete pravým tlačítkem do místní hodnoty – okno a přepnutím **Python > zobrazit uzly zobrazení C++** možnost nabídky.
+Podobně jako v předchozí části, můžete povolit **[C++ zobrazení]** nativní hodnoty v **lokální** okno, když je aktivní blok Python. Tato funkce není povolená ve výchozím nastavení, takže zapnete ho kliknutím pravým tlačítkem myši v **lokální** okno a přepnete **Python** > **zobrazit uzly zobrazení C++** nabídky možnost.
 
-![Povolení zobrazení C++](media/mixed-mode-debugging-enable-cpp-view.png)
+![Povolení C++ zobrazení v okně místních hodnot](media/mixed-mode-debugging-enable-cpp-view.png)
 
-"[C++ zobrazení]" uzlu poskytuje reprezentace podkladová struktura C/C++ pro hodnotu identické by zobrazit nativní rámce. Například se zobrazí instance `_longobject` (pro které `PyLongObject` je definice typu) pro Python dlouhé celé číslo ale pokusí odvození typů pro nativní třídy, kterou jste vytvořili sami. Podřízené objekty tohoto uzlu se upravovat.
+**[C++ zobrazení]** uzel poskytuje reprezentaci podkladová struktura jazyka C/C++ pro hodnoty, na co se zobrazí v je nativní rámec stejné. Příklad ukazuje instanci `_longobject` (pro který `PyLongObject` je definice typu) pro Python dlouhé celé číslo který se pokusí odvodit typy pro nativní třídy, které jste vytvořili sami. Podřízené položky tohoto uzlu se upravovat.
 
-![Zobrazení C++](media/mixed-mode-debugging-cpp-view.png)
+![C++ zobrazení v okně místních hodnot](media/mixed-mode-debugging-cpp-view.png)
 
-Pokud je pole podřízený objekt typu `PyObject`, nebo jednu z dalších podporované typy, pak má "[Python zobrazení]" reprezentace uzlu (pokud jsou povolené tyto reprezentace), což umožňuje přejděte objekt grafů, kde nejsou odkazy zveřejněné přímo do Python.
+Pokud je pole podřízeného objektu typu `PyObject`, nebo jednoho z jiných podporované typy, pak má **[zobrazení Pythonu]** reprezentace uzel (pokud jsou povolené tyto reprezentace), což umožňuje přejít objekt grafů where odkazy nejsou přímo zveřejněné Python.
 
-Na rozdíl od "[Python zobrazení]" uzly, které používají k určení typu objektu metadat objektu Python, neexistuje žádný podobně spolehlivé mechanismus pro "[C++ zobrazení]". Obecně řečeno se zadanou hodnotou Python (to znamená, `PyObject` odkaz) není možné spolehlivě určit, které C/C++ struktura je jejich zálohování. Ladicí program ve smíšeném režimu se pokusí odhadnout typu pohledem na různá pole typu objektu (například `PyTypeObject` odkazuje jeho `ob_type` pole) mají typy ukazatel funkce. Pokud jeden z těchto ukazatelů na funkce odkazuje na funkci, která může být vyřešen a že fungují má `self` parametr s typem podrobnější než `PyObject*`, pak tento typ se považuje za základního typu. Například pokud `ob_type->tp_init` bodů daného objektu na následující funkce:
+Na rozdíl od **[zobrazení Pythonu]** uzly, které používají metadata objektu Python k určení typu objektu, není žádný podobně spolehlivé mechanismus pro **[C++ zobrazení]**. Obecně řečeno byla přidělena hodnota Pythonu (to znamená, `PyObject` odkaz) není možné spolehlivě zjistit, které struktura jazyka C/C++ se zálohuje. Ladění ve smíšeném režimu se pokusí odhadnout typu zobrazením různých polí typu objektu (například `PyTypeObject` odkazovaná jeho `ob_type` pole), které mají typy ukazatelů na funkci. Pokud jeden z těchto ukazatelů na funkce odkazuje na funkci, která lze vyřešit a má tuto funkci `self` parametr s typem konkrétnější než `PyObject*`, pak tento typ se považuje za základního typu. Například pokud `ob_type->tp_init` bodů zadaný objekt na následující funkce:
 
 ```c
 static int FobObject_init(FobObject* self, PyObject* args, PyObject* kwds) {
@@ -158,34 +160,34 @@ static int FobObject_init(FobObject* self, PyObject* args, PyObject* kwds) {
 }
 ```
 
-pak ladicího programu správně lze odvodit, že C typ objektu je `FobObject`. Pokud se nepodařilo určit přesnější typu z `tp_init`, přesune jiné pole. Pokud nepodařilo odvodit typ z jakéhokoli z těchto polí, uzel "[C++ zobrazení]" uvede objektu jako `PyObject` instance.
+pak ladicí program správně odvodit, jestli je typ C objektu `FobObject`. Pokud není schopen určit přesnější typ z `tp_init`, přesune jiné pole. Pokud nemůže odvodit typ z některého z těchto polí **[C++ zobrazení]** uzel prezentuje jako objekt `PyObject` instance.
 
-Vždycky získat užitečné znázornění pro vlastní typy vytvořené, je nejvhodnější při registraci typu registrovat aspoň jeden speciální funkce a použít silného typu `self` parametr. Většina typů splnění tohoto požadavku přirozeně; není-li Ano, pak `tp_init` je obvykle nejpohodlnější záznam, který má používat pro tento účel. Fiktivní provádění `tp_init` pro typ, který je k dispozici pouze povolit ladicí program typu odvození právě vrátit nula okamžitě, stejně jako výše uvedený příklad.
+Vždy získat užitečný reprezentaci pro vlastní typy vytvořené, je nejlepší a zaregistrujte se aspoň jeden speciální funkce při registraci typ, použijte silného typu `self` parametru. Většina typů splnění tohoto požadavku přirozeně; Pokud to není případ, pak `tp_init` je obvykle nejpohodlnější záznam, který má k tomuto účelu nepoužívat. Fiktivní implementace `tp_init` pro typ, který je k dispozici pouze pokud chcete povolit typ ladicího programu odvození můžete jenom vrací nulu okamžitě, stejně jako v ukázkovém kódu výše.
 
-## <a name="differences-from-standard-python-debugging"></a>Rozdíl oproti standardní ladění Python
+## <a name="differences-from-standard-python-debugging"></a>Rozdíl oproti standardní ladění Pythonu
 
-Ladicí program ve smíšeném režimu se liší od [standardní ladicí program Python](debugging-python-in-visual-studio.md) v že zavádí některé další funkce, ale chybí některé Python související možnosti:
+Ladění ve smíšeném režimu se liší od [standardní ladicího programu Python](debugging-python-in-visual-studio.md) , zavádí některé další funkce, ale chybí některé funkce související s Pythonu:
 
-- Nepodporované funkce: podmíněné zarážky, ladění interaktivních okna a vzdálené ladění napříč platformami.
-- Příkazové podokno: je k dispozici ale s omezenou podmnožinou jeho funkce, včetně všech omezení tady.
-- Podporované verze Python: CPython 2.7 a 3.3 + jenom.
-- Prostředí sady Visual Studio: Při použití Python s prostředí sady Visual Studio (např. Pokud jste nainstalovali pomocí integrovaného instalační program), Visual Studio se nepodařilo otevřít projekty C++ a možnosti úpravy souborů C++, je pouze základní textový editor. Ladění C/C++ a ladění ve smíšeném režimu jsou však plně podporovány v prostředí se zdrojovým kódem, zanoříte se do nativního kódu a C++ vyhodnocení výrazu v ladicím programu systému windows.
-- Zobrazení a rozšiřování objekty: při zobrazení Python objekty v lokální a sledovat ladicího programu nástroje systému windows, ve smíšeném režimu ladicí program zobrazuje pouze struktura objektů. Je automaticky vyhodnotit vlastnosti, nebo zobrazit počítaný atributy. Pro kolekce, se zobrazí pouze elementy pro typy předdefinovanou kolekci (`tuple`, `list`, `dict`, `set`). Vlastní kolekce typy nejsou vizualizuje jako kolekce, pokud se dědí z nějaký typ předdefinované kolekce.
+- Nepodporované funkce: podmíněné zarážky, **interaktivní ladění** okno a vzdálené ladění napříč platformami.
+- **Okamžité** okna: je k dispozici ale s omezenou podmnožinou jeho funkce, včetně všech omezení uvedené tady.
+- Podporované verze Pythonu: CPython 2.7 a 3.3 + pouze.
+- Prostředí sady Visual Studio: Při použití Pythonu s prostředí sady Visual Studio (například pokud jste nainstalovali pomocí integrovaného instalační program), Visual Studio nedokáže otevřít projekty v jazyce C++ a možnosti úprav souborů C++ je pouze základní textového editoru. Ale ladění jazyka C/C++ a ladění ve smíšeném režimu jsou plně podporované v prostředí se zdrojovým kódem, krokování s vnořením do nativního kódu a C++ vyhodnocení výrazu v oknech ladicího programu.
+- Zobrazení a rozbalení objektů: při zobrazení Pythonu objekty v **lokální** a **Watch** ladicího programu nástroje systému windows, kombinovaný režim ladění zobrazuje pouze strukturu objektů. Automaticky se vyhodnotí vlastnosti nebo Zobrazit počítané atributy. Pro kolekce, zobrazuje pouze prvky pro předdefinovanou kolekci typů (`tuple`, `list`, `dict`, `set`). Typy vlastních kolekcí nejsou vizualizovat jako kolekce, pokud jsou zděděny z některé předdefinované kolekce typu.
 - Vyhodnocení výrazu: viz níže.
 
 ### <a name="expression-evaluation"></a>Vyhodnocení výrazu
 
-Standardní ladicí program Python umožňuje vyhodnocení výrazů libovolný Python ve sledování a okamžitou windows při procesu vyladěnou kurzoru v libovolném bodě v kódu, tak dlouho, dokud není blokován v vstupně-výstupní operace nebo jiné podobné systémového volání. Při ladění ve smíšeném režimu, může být libovolný výrazy vyhodnocen jenom v případě, že byl zastaven v kódu jazyka Python, po zarážku, nebo když zanoříte se do kódu. Výrazy lze vyhodnotit pouze na vlákno, na kterém zarážce nebo taktování operace došlo k chybě.
+Standardní ladicího programu Python umožňuje vyhodnocení libovolné výrazy Pythonu v **Watch** a **okamžité** časová období, pokud se laděný proces je pozastaven v libovolném bodě v kódu, tak dlouho, dokud není blokován vstupně-výstupní operace nebo jiné podobné volání systému. Libovolné výrazy v kombinovaném režimu ladění, může být vyhodnocen pouze v případě, že v kódu Pythonu, zastaví po zarážku, nebo při krokování s vnořením do kódu. Výrazy lze vyhodnotit pouze ve vlákně, na kterém zarážky a krokování operace došlo k chybě.
 
-Při zastavení v nativním kódu nebo v kódu jazyka Python, kde výše uvedených podmínek se nevztahují (například po kroku out operaci, nebo v jiném podprocesu), je omezený přístup místní a globální proměnné v oboru aktuálně vybrané vyhodnocení výrazu rámce, přístup k jejich pole a indexování předdefinovanou kolekci typů s literály. Následující výraz například může být vyhodnocen v jakýkoliv kontext (za předpokladu, že všechny identifikátory odkazovat existujících proměnných a polí odpovídající typy):
+Při zastavení v nativním kódu nebo v kódu Pythonu, kde výše uvedené podmínky se nedá použít (například po operaci vystoupení, nebo v jiném vlákně), je omezený přístup k místní a globální proměnné v oboru aktuálně vybraného vyhodnocení výrazu rámce, přístup k jejich polí a indexování typů předdefinovaných kolekcí s literály. Například následující výraz může být vyhodnocen v jakýkoli kontext (za předpokladu, že všechny identifikátory odkazovat na existující proměnné a pole typů odpovídající):
 
 ```python
 foo.bar[0].baz['key']
 ```
 
-Ladicí program ve smíšeném režimu je takové výrazy také překládány jinak. Všechny operace přístup ke členu vyhledat pouze pole, které jsou přímo součástí objektu (například položku v jeho `__dict__` nebo `__slots__`, nebo pole nativní struktura, který je vystaven Python prostřednictvím `tp_members`) a ignorovat jakékoli `__getattr__`, `__getattribute__`nebo popisovač logiku. Podobně, všechny operace indexování Ignorovat `__getitem__`a získat přímo přístup k vnitřní datové struktury kolekcí.
+Kombinovaný režim ladění také řeší tyto výrazy odlišně. Všechny operace přístupu ke členům vyhledat pouze pole, které jsou přímo součástí objektu (například záznam v jeho `__dict__` nebo `__slots__`, nebo pole nativní struktury, která je vystavena Python prostřednictvím `tp_members`) a ignorovat jakékoli `__getattr__`, `__getattribute__`nebo popisovač logiku. Podobně, všechny operace indexování Ignorovat `__getitem__`a získat přímo přístup k vnitřní datové struktury kolekcí.
 
-Z důvodu konzistence používá se pro všechny výrazy, které odpovídají omezení pro vyhodnocení výrazů omezená, bez ohledu na to, jestli jsou povolené libovolný výrazy k aktuálnímu bodu zastavení toto schéma rozlišení názvu. Chcete-li vynutit správné Python sémantiku při vyhodnocování se plné je k dispozici, uzavřete výrazu v závorkách:
+Pro účely konzistence toto schéma rozlišení názvu se používá pro všechny výrazy, které odpovídají omezení pro vyhodnocení výrazu omezené, bez ohledu na to, zda jsou povoleny libovolné výrazy do aktuálního místa stop. K vynucení správné sémantiku Pythonu při Chyba při vyhodnocování plně funkční je k dispozici, použijte výraz v závorkách:
 
 ```python
 (foo.bar[0].baz['key'])

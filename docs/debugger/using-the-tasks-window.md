@@ -1,5 +1,5 @@
 ---
-title: Používání okna úloh | Microsoft Docs
+title: Using the Tasks Window | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 03/18/2018
 ms.technology: vs-ide-debug
@@ -19,82 +19,86 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 85319575766ca9ff3ace297bf1e4e577d49ee6d9
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 6d22202e50c973c52bf2b47374b9eda583fb3fe8
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44280880"
 ---
 # <a name="using-the-tasks-window"></a>Používání okna úloh
-**Úlohy** okno vypadá takto: **vláken** okno, s výjimkou toho, které se zobrazují informace o <xref:System.Threading.Tasks.Task?displayProperty=fullName>, [task_handle](/cpp/parallel/concrt/reference/task-group-class), nebo [WinJS.Promise ](http://msdn.microsoft.com/library/windows/apps/br211867.aspx) objekty místo každé vlákno. Jako vláken úlohy představují asynchronních operací, které můžou běžet souběžně; Při spuštění ve stejném vlákně, ale může několika úloh. 
-  
- Ve spravovaném kódu, můžete použít **úlohy** okno při práci s <xref:System.Threading.Tasks.Task?displayProperty=fullName> objekty nebo pomocí **await** a **asynchronní** klíčová slova (**Await** a **asynchronní** v VisualBasic). Další informace o úlohách ve spravovaném kódu najdete v tématu [paralelní programování](/dotnet/standard/parallel-programming/index).  
-  
- V nativním kódu, můžete použít **úlohy** okno při práci s [úkolů skupiny](/cpp/parallel/concrt/task-parallelism-concurrency-runtime), [paralelní algoritmy](/cpp/parallel/concrt/parallel-algorithms), [asynchronních agentů](/cpp/parallel/concrt/asynchronous-agents), a [prosté úlohy](/cpp/parallel/concrt/task-scheduler-concurrency-runtime). Další informace o úlohách v nativním kódu najdete v tématu [Concurrency Runtime](/cpp/parallel/concrt/concurrency-runtime).  
-  
- V jazyce JavaScript, můžete použít okno úlohy při práci s promise `.then` kódu. V tématu [asynchronní programování v jazyce JavaScript (aplikace pro UPW)](http://msdn.microsoft.com/library/windows/apps/hh700330.aspx) Další informace.   
-  
- Můžete použít **úlohy** okně vždy, když rozdělit ladicího programu. Je k dispozici na **ladění** nabídky kliknutím **Windows** a pak levým na **úlohy**. Následující obrázek ukazuje **úlohy** okno v jeho výchozí režim.  
-  
- ![Okno úlohy při](../debugger/media/parallel_tasks_window.png "Parallel_Tasks_Window")  
-  
+
+**Úlohy** okno vypadá podobně jako **vlákna** okna, s tím rozdílem, že se zobrazuje informace o <xref:System.Threading.Tasks.Task?displayProperty=fullName>, [task_handle –](/cpp/parallel/concrt/reference/task-group-class), nebo [WinJS.Promise ](/previous-versions/windows/apps/br211867(v=win.10)) objekty namísto každé vlákno. Například vlákna úlohy představuje asynchronní operace, které můžou běžet souběžně; ale více úkolů může spustit ve stejném vlákně.
+
+Ve spravovaném kódu, můžete použít **úlohy** okno při práci s <xref:System.Threading.Tasks.Task?displayProperty=fullName> objekty nebo se **await** a **asynchronní** klíčová slova (**Await** a **asynchronní** v VisualBasic). Další informace o úlohách ve spravovaném kódu najdete v tématu [paralelního programování](/dotnet/standard/parallel-programming/index).
+
+V nativním kódu, můžete použít **úlohy** okno při práci s [skupiny úloh](/cpp/parallel/concrt/task-parallelism-concurrency-runtime), [paralelní algoritmy](/cpp/parallel/concrt/parallel-algorithms), [asynchronních agentů](/cpp/parallel/concrt/asynchronous-agents), a [prostých úloh](/cpp/parallel/concrt/task-scheduler-concurrency-runtime). Další informace o úlohách v nativním kódu, naleznete v tématu [Concurrency Runtime](/cpp/parallel/concrt/concurrency-runtime).
+
+V jazyce JavaScript, můžete použít okno úlohy při práci s promise `.then` kódu. Zobrazit [asynchronní programování v jazyce JavaScript (aplikace pro UPW)](/previous-versions/windows/apps/hh700330(v=win.10)) Další informace.
+
+Můžete použít **úlohy** okna pokaždé, když jste přerušení ladicího programu. Je k dispozici na **ladění** nabídky kliknutím **Windows** a pak levým na **úlohy**. Je vidět na následujícím obrázku **úlohy** okna v její výchozí režim.
+
+![Okno úlohy](../debugger/media/parallel_tasks_window.png "Parallel_Tasks_Window")
+
 > [!NOTE]
->  Ve spravovaném kódu <xref:System.Threading.Tasks.Task> , je ve stavu <xref:System.Threading.Tasks.TaskStatus>, <xref:System.Threading.Tasks.TaskStatus>, nebo <xref:System.Threading.Tasks.TaskStatus> nemusí být zobrazeny v okně úlohy po spravovaných vláknech v režimu spánku nebo připojení stavu.  
-  
-## <a name="tasks-column-information"></a>Informace o sloupci úlohy  
- Sloupce v **úlohy** v okně zobrazí následující informace.  
-  
-|Název sloupce|Popis|  
-|-----------------|-----------------|  
-|**Příznaky**|Zobrazuje úkoly, které jsou označeny a umožňuje příznak nebo odstranění označení úlohu.|  
-|**Ikony**|Žlutá šipka označuje aktuální úlohy. Aktuální úloha je na nejvyšší úrovni na aktuální vlákno.<br /><br /> Bílé šipka označuje ukončování úlohy, který je ten, který byl aktuální v době byla vyvolána ladicího programu.<br /><br /> Ikona pozastavení označuje úlohu, která má byly pozastaveny uživatelem. Můžete ukotvení a uvolnění úlohy kliknutím pravým tlačítkem myši v seznamu.|  
-|**ID**|Poskytované systémem číslo pro úlohu. V nativním kódu jde o adresu úlohy.|  
-|**Status**|Aktuální stav (naplánované, aktivní, blokované, zablokovaných, čeká se na nebo dokončené) úlohy. Naplánované úlohy je ten, který dosud nebyla spuštěna a proto ještě nemá zásobníku volání, přiřazené vlákno nebo související informace.<br /><br /> Aktivní úkol je ten, který byl před porušením v ladicím programu provádění kódu.<br /><br /> Čeká se na nebo blokované úkol je ten, který je zablokovaný, protože se čeká na signál události, zámek k uvolnění nebo na dokončení jiné úlohy.<br /><br /> Zablokovaných úloha je čekání úlohy, jejichž vlákno je zablokována s jiné vlákno.<br /><br /> Najeďte myší **stav** buňky pro úlohu zablokovaných nebo čeká se na další informace o bloku. **Upozornění:** **úlohy** okno sestavy zablokování pouze pro blokované úlohu, která používá primitivní synchronizace, která je podporována počkejte Traversal řetězu (WCT). Například pro zablokovaných <xref:System.Threading.Tasks.Task> objekt, který používá WCT, sestavy ladicího programu **zablokována čeká na**. Pro zablokovaných úkol, který je spravován nástrojem Concurrency Runtime, který nepoužívá WCT, ladicího programu sestavy **čekání**. Další informace o WCT najdete v tématu [počkejte Traversal řetězu](http://msdn.microsoft.com/library/ms681622\(VS.85\).aspx).|  
-|**Čas spuštění**|Čas, kdy jsou aktivní úlohy.|  
-|**Doba trvání**|Počet sekund, po které byl aktivní úlohy.|  
-|**Čas dokončení**|Čas, kdy je úloha dokončena.|  
-|**Poloha**|Aktuální umístění v zásobníku volání úlohy. Podržte ukazatel nad tuto buňku, chcete-li zobrazit celý zásobník volání pro úlohu. Naplánované úlohy nemají hodnotu v tomto sloupci.|  
-|**Úloha**|Počáteční metoda a všechny argumenty, které byly předány úlohy při vytváření.|  
-|**AsyncState**|Pro spravovaný kód, stav úlohy. Ve výchozím nastavení je tento sloupec skrytá. Chcete-li zobrazit tento sloupec, otevřete v místní nabídce pro jednu ze záhlaví sloupců. Zvolte **sloupce**, **AsyncState**.|  
-|**Nadřazené**|ID úkolu, který vytvořil tento úkol. Pokud je toto pole prázdné, úloha nemá žádný nadřazený. Tento krok platí jenom pro spravované programy.|  
-|**Přiřazení přístup z více vláken**|ID a název vláken, na kterém je spuštěn úkol.|  
-|**AppDomain**|Pro spravovaný kód domény aplikace, ve kterém je prováděna úloha.|  
-|**task_group**|Pro nativní kód, adresa [task_group](/cpp/parallel/concrt/reference/task-group-class.mdd) objekt, který naplánované úlohy. Asynchronní agenti a prosté úlohy v tomto sloupci nastavena na hodnotu 0.|  
-|**Proces**|ID procesu, který úloha spuštěná.|  
-  
- Pravým tlačítkem myši na záhlaví sloupce a potom výběrem sloupce, které chcete, můžete přidat sloupce do zobrazení. (Odebrání sloupce tím, že zrušíte výběr.) Můžete také změnit pořadí sloupců tak, že je přetáhnete doleva nebo doprava. Místní nabídky sloupec je vidět na následujícím obrázku.  
-  
- ![Místní nabídky zobrazení v okně úlohy](../debugger/media/parallel_tasks_contextmenu.png "Parallel_Tasks_ContextMenu")  
-  
-## <a name="sorting-tasks"></a>Řazení úkolů  
- Úlohy seřadit podle sloupce kritéria, klikněte na záhlaví sloupce. Například kliknutím **ID** záhlaví sloupce lze seřadit úlohy s ID úlohy: 1,2,3,4,5 a tak dále. Chcete-li pořadí řazení, klikněte na záhlaví sloupce znovu. Aktuální sloupce a řazení řazení je indikován šipka na sloupec.  
-  
-## <a name="grouping-tasks"></a>Seskupení úkolů  
- Můžete seskupit podle libovolného sloupce v zobrazení seznamu úloh. Například, že kliknete pravým tlačítkem **stav** záhlaví sloupce a potom kliknutím na **Seskupit podle** > **[*stav*]**, můžete všechny úlohy, které mají stejný stav skupiny. Například by mohli rychle zobrazit, čeká na úlohy tak, aby může zaměřit na Proč jsou zablokované. Můžete také sbalit skupinu, která není týkající se během ladicí relace. Stejným způsobem můžete seskupit podle jiných sloupců. Skupinu lze (bez znaménka) příznakem jednoduše kliknutím na tlačítko vedle záhlaví skupiny. Následující obrázek ukazuje **úlohy** okno v režimu seskupené.  
-  
- ![Seskupené režim v okně úlohy](../debugger/media/parallel_tasks_groupedmode.png "Parallel_Tasks_GroupedMode")  
-  
-## <a name="parent-child-view"></a>Nadřazeného a podřízeného prvku  
- (Toto zobrazení je k dispozici pro spravovaný kód pouze.) Kliknutím pravým tlačítkem myši **stav** záhlaví sloupce a potom kliknutím na **Seskupit podle** > **nadřazené**, seznam úloh, můžete změnit na hierarchické zobrazení, ve kterém všechny podřízené úlohy je dílčí uzel, který můžete zobrazení nebo skrytí pod jeho nadřazeným prvkem. 
-  
-## <a name="flagging-tasks"></a>Označování úlohy  
- Můžete označit příznakem vlákno seznamu úkolů, na kterém je spuštěna úloha výběrem úlohy položky a pak vyberete **příznak přiřazené vlákno** z kontextové nabídky, nebo klikněte na ikonu vlajky prvního sloupce. Pokud je příznak několik úloh, můžete pak seřadit podle sloupce Příznak přenést všechny úkoly s příznakem dopředu tak, aby se můžete soustředit na ně. Můžete také **paralelní zásobníky** okno zobrazení jenom příznakem úlohy. To vám umožňuje odfiltrovat úlohy, které vás zajímají není pro ladění. Příznaky nejsou mezi ladění relacemi trvalé.  
-  
-## <a name="freezing-and-thawing-tasks"></a>Zmrazení a uvolnění úlohy  
- Lze ukotvit vláken, na kterém je spuštěn úkol pravým tlačítkem myši na položce v seznamu úloh a poté klikněte na **Freeze – přiřazené vlákno**. (Pokud již úloha nereaguje, příkaz je **odblokování přiřazené vláken**.) Po ukotvení vlákno daném vláknu nebude spustit, když krok prostřednictvím kódu po aktuální zarážce. **Freeze všechny vláken, ale tento jeden** příkaz se zablokuje všechna vlákna kromě toho, který provádí položce v seznamu úkolů.
-  
- Následující obrázek znázorňuje další položky nabídky pro každou úlohu.  
-  
- ![Místní nabídky přístup z více vláken v okně úlohy](../debugger/media/parallel_tasks_contextmenu2.png "Parallel_Tasks_ContextMenu2")  
+> Ve spravovaném kódu <xref:System.Threading.Tasks.Task> , který je ve stavu [TaskStatus.Created](<xref:System.Threading.Tasks.TaskStatus.Created>), [TaskStatus.WaitingForActivation](<xref:System.Threading.Tasks.TaskStatus.WaitingForActivation>), nebo [TaskStatus.WaitingToRun](<xref:System.Threading.Tasks.TaskStatus.WaitingToRun>) nemusí být zobrazí v **úlohy** okno při spravovaná vlákna jsou v režimu spánku nebo připojení stavu.
 
-## <a name="switching-the-active-task-or-frame"></a>Přepnutí na aktivní úkol nebo rámec
+## <a name="tasks-column-information"></a>Informace o sloupci úlohy
 
-**Přepnout úloh** příkaz aktivní úkol díky aktuální úlohy. **Přepnout na rámce** příkaz díky vybrané zásobníku rámce zásobníku aktivní. Aktuální úloha nebo rámec zásobníku vybrané přepínačů kontextu ladicího programu.
+Sloupce v **úlohy** v okně zobrazí následující informace.
 
-## <a name="see-also"></a>Viz také  
- [Základy ladicího programu](../debugger/debugger-basics.md)   
- [Ladění spravovaného kódu](../debugger/debugging-managed-code.md)   
- [Paralelní programování](/dotnet/standard/parallel-programming/index)   
- [Concurrency Runtime](/cpp/parallel/concrt/concurrency-runtime)   
- [Použití okna paralelní zásobníky](../debugger/using-the-parallel-stacks-window.md)   
- [Návod: Ladění paralelní aplikace](../debugger/walkthrough-debugging-a-parallel-application.md)
+|Název sloupce|Popis|
+|-----------------|-----------------|
+|**příznaky**|Zobrazuje úlohy, které jsou označeny příznakem a umožňuje označit nebo zrušit označení příznakem úlohu.|
+|**Ikony**|Žlutá šipka označuje aktuální úlohu. Aktuální úkol je úkol úplně nahoře v aktuálním vláknu.<br /><br /> Bílé šipka označuje zásadní úloh, to znamená, ten, který byl aktuální v době byla vyvolána ladicí program.<br /><br /> Ikona pozastavení označuje úlohu, která byla zmrazené uživatelem. Můžete ukotvit a uvolnění úlohy kliknutím pravým tlačítkem myši v seznamu.|
+|**ID**|Číslo poskytnuté systémem pro úlohu. V nativním kódu jde o adresu úkolu.|
+|**Status**|Aktuální stav (naplánované, aktivní, zablokování, jeví jako zablokované, čeká na nebo dokončené) úlohy. Naplánované úlohy je ten, který dosud nebyla spuštěna a proto se ještě nemá zásobník volání, přiřazené vlákno nebo související informace.<br /><br /> Aktivní úlohy je ten, který se spouští kód před přerušení v ladicím programu.<br /><br /> Čeká se na nebo zablokování úlohy je ten, který je zablokovaná, protože se čeká na událost má být signalizován, uvolnění zámku nebo na dokončení jiné úlohy.<br /><br /> Jeví jako zablokované úkol je úkol čekání, jehož vlákna je zablokovaná s jiným vláknem.<br /><br /> Najeďte myší **stav** buňky pro jeví jako zablokované nebo čeká na úlohu zobrazíte další informace o bloku. **Upozornění:** **úlohy** okno hlásí zablokování pouze pro zablokování úkol, který používá synchronizační jednoduchého typu, který je podporovaný počkejte procházení řetězce (WCT). Například pro jeví jako zablokované <xref:System.Threading.Tasks.Task> objektu, který používá WCT, ladicí program hlásí **zablokována čeká na**. Jeví jako zablokované úkolu, který je spravovaný nástrojem modulu Runtime souběžnosti, který nepoužívá WCT, ladicí program hlásí **čekání**. Další informace o WCT najdete v tématu [počkejte procházení řetězu](/windows/desktop/Debug/wait-chain-traversal).|
+|**Čas spuštění**|Doba, jakou úloha začal být aktivní.|
+|**Doba trvání**|Počet sekund, po které byl aktivní úloha.|
+|**Čas dokončení**|Čas, kdy úloha dokončena.|
+|**Poloha**|Aktuální umístění v zásobníku volání úlohy. Najeďte myší tuto buňku, chcete-li zobrazit celý zásobník volání pro úlohu. Naplánované úlohy nemají hodnotu v tomto sloupci.|
+|**Úloha**|Metoda počáteční a všechny argumenty, které byly předány pro úkol při vytvoření rovnou uložil.|
+|**Stav AsyncState**|Pro spravovaný kód, stav úlohy. Ve výchozím nastavení je tento sloupec skrytý. Chcete-li zobrazit tento sloupec, otevřete kontextovou nabídku pro jednu z záhlaví sloupců. Zvolte **sloupce**, **AsyncState**.|
+|**Nadřazené**|ID úkolu, který vytvořil tuto úlohu. Pokud je toto pole prázdné, úloha nemá žádný nadřazený objekt. To platí pouze pro spravované aplikace.|
+|**Přiřazení vlákna**|ID a název vlákna, na kterém je spuštěn úkol.|
+|**AppDomain**|Pro spravovaný kód domény aplikace, ve kterém je spuštěn úkol.|
+|**task_group**|Pro nativní kód, adresa [task_group –](/cpp/parallel/concrt/reference/task-group-class) objekt, který naplánované úlohy. Asynchronní agenti a jednoduché úlohy je tento sloupec nastavena na 0.|
+|**Proces**|ID procesu, který je spuštěn úkol na.|
+
+ Sloupce můžete přidat do zobrazení tak, že pravým tlačítkem myši na záhlaví sloupce a následným výběrem sloupce, které chcete. (Odebrat sloupce tím, že zrušíte výběr). Můžete také změnit uspořádání sloupců jejich přetažením doleva nebo doprava. Místní nabídka sloupce je zobrazena na následujícím obrázku.
+
+ ![Místní nabídka zobrazení v okně úlohy](../debugger/media/parallel_tasks_contextmenu.png "Parallel_Tasks_ContextMenu")
+
+## <a name="sorting-tasks"></a>Řazení úkolů
+ Seřadit podle sloupce kritéria úloh, klikněte na záhlaví sloupce. Například klepnutím **ID** záhlaví sloupce můžete řazení úloh podle ID úlohy: 1,2,3,4,5 a tak dále. Chcete-li změnit směr řazení, znovu klikněte na záhlaví sloupce. Aktuální řazení sloupců a pořadí řazení je indikován šipku ve sloupci.
+
+## <a name="grouping-tasks"></a>Seskupení úkolů
+ Můžete seskupit podle libovolného sloupce v zobrazení seznamu úloh. Například kliknutím pravým tlačítkem myši **stav** záhlaví sloupce a pak levým na **Seskupit podle** > **[*stav*]**, můžete si všechny úlohy, které mají stejný stav skupiny. Například může rychle zjistit, očekáváno úloh tak, aby se mohli soustředit na Proč jsou zablokované. Můžete také sbalit skupiny, které nejsou zajímavé během relace ladění. Stejným způsobem můžete seskupit podle jiných sloupců. Skupinu lze (zrušit) příznakem jednoduše kliknutím na tlačítko vedle záhlaví skupiny. Je vidět na následujícím obrázku **úlohy** okno v seskupených režimu.
+
+ ![Seskupené režim v okně úlohy](../debugger/media/parallel_tasks_groupedmode.png "Parallel_Tasks_GroupedMode")
+
+## <a name="parent-child-view"></a>Nadřazeného a podřízeného prvku
+ (Toto zobrazení je k dispozici pouze pro spravovaný kód). Kliknutím pravým tlačítkem myši **stav** záhlaví sloupce a pak levým na **Seskupit podle** > **nadřazené**, hierarchické zobrazení, ve kterém můžete změnit seznam úkolů Každá podřízená úloha je dílčí uzel, který můžete zobrazení nebo skrytí podle svého nadřazeného objektu.
+
+## <a name="flagging-tasks"></a>Nastavení příznaku úlohy
+ Můžete označit příznakem vlákna seznam úloh, na kterém je úloha spuštěná tak, že vyberete úlohu položky a následným výběrem možnosti **označit přiřazené vlákno** v místní nabídce nebo kliknutím na ikonu příznaku v prvním sloupci. Pokud označíte některé úlohy, můžete pak seřadit sloupec příznaku uveďte všechny úkoly s příznakem do horní části tak, aby se mohli soustředit na nich. Můžete také použít **paralelní zásobníky** okna, chcete-li zobrazit pouze označená příznakem úlohy. To vám umožňuje odfiltrovat úlohy, které vás zajímají není pro ladění. Příznaky nejsou trvalé mezi relacemi ladění.
+
+## <a name="freezing-and-thawing-tasks"></a>Zmrazení a uvolnění úloh
+ Může zablokovat vlákno, na kterém je úloha spuštěná pravým tlačítkem na položku seznamu úkolů a potom klikněte na **zablokovat přiřazené vlákno**. (Pokud je již zmrazen úkol, je příkaz **uvolnit přiřazené vlákno**.) Po ukotvení vlákno nebude spuštěno toto vlákno při krokovat kód po aktuální zarážku. **Zablokovat všechna vlákna, ale tento jeden** příkazu se zablokuje všechna vlákna kromě toho, který provádí položky seznamu úkolů.
+
+ Následující obrázek znázorňuje dalšími položkami nabídky pro každý úkol.
+
+ ![Vlákno nabídku v okně úlohy](../debugger/media/parallel_tasks_contextmenu2.png "Parallel_Tasks_ContextMenu2")
+
+## <a name="switching-the-active-task-or-frame"></a>Přepnout aktivní úlohy nebo rámce
+
+**Přejít k úloze** příkaz zjednodušuje aktuální úlohu na aktivní úlohy. **Přepnout na rámec** příkaz provede vybraného zásobníku rámce aktivní blok zásobníku. Kontext ladicího programu se přepne do aktuální úlohu nebo vybrané zásobníku.
+
+## <a name="see-also"></a>Viz také:
+
+- [Základy ladicího programu](../debugger/getting-started-with-the-debugger.md)
+- [Ladění spravovaného kódu](../debugger/debugging-managed-code.md)
+- [Paralelní programování](/dotnet/standard/parallel-programming/index)
+- [Concurrency Runtime](/cpp/parallel/concrt/concurrency-runtime)
+- [Použití okna Paralelní zásobníky](../debugger/using-the-parallel-stacks-window.md)
+- [Návod: Ladění paralelní aplikace](../debugger/walkthrough-debugging-a-parallel-application.md)

@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_types – | Microsoft Docs
+title: Idiasymbol::get_types – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6521d2a7ffdf5bb285f571e0d3975626f34d84d1
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 773144f81e51167016df3dca1b6ea7beedb3661c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49951311"
 ---
 # <a name="idiasymbolgettypes"></a>IDiaSymbol::get_types
 Načte pole typů kompilátoru specifické pro tento symbol.  
@@ -35,19 +36,19 @@ HRESULT get_types (
   
 #### <a name="parameters"></a>Parametry  
  `cTypes`  
- [v] Velikost vyrovnávací paměti pro všechna data.  
+ [in] Velikost vyrovnávací paměti pro data.  
   
  `pcTypes`  
- [out] Vrátí počet typů zapsána, nebo, pokud `types` parametr `NULL`, pak celkový počet typů jsou k dispozici.  
+ [out] Vrátí počet typů napsaných, nebo pokud `types` parametr je `NULL`, pak celkový počet typů, které jsou k dispozici.  
   
  `types[]`  
- [out] Pole, které se v pomocí [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objekty, které představují všechny typy pro tento symbol.  
+ [out] Pole, které je v tankujeme [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objekty, které představují všechny typy pro tento symbol.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` nebo chybový kód.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
->  Vrácená hodnota `S_FALSE` znamená vlastnost není k dispozici pro symbol.  
+>  Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

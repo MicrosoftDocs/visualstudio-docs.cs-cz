@@ -1,6 +1,7 @@
 ---
 title: 'CA2106: Zabezpečte nepodmíněné výrazy'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,13 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 40d497efd766fa5716b92e16ad513df85a41d2cf
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 5ff16cdce4be04bd076c93763fb6a22d2721675f
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45551779"
 ---
 # <a name="ca2106-secure-asserts"></a>CA2106: Zabezpečte nepodmíněné výrazy
+
 |||
 |-|-|
 |TypeName|SecureAsserts|
@@ -30,16 +33,18 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Metoda uplatňuje oprávnění a na volajícím nejsou vykonány žádné kontroly zabezpečení.
+ Metoda uplatňuje oprávnění a provádí kontroly zabezpečení volajícího.
 
 ## <a name="rule-description"></a>Popis pravidla
- Uplatnění oprávnění zabezpečení bez provedení jakékoliv kontroly zabezpečení může zanechat ve vašem kódu zneužitelné slabé stránky zabezpečení. Procházení zásobníku zabezpečení zastaví, když je uplatněna oprávnění zabezpečení. Pokud uplatňujete oprávnění bez provedení jakýchkoli kontrol na volajícího, může volající nepřímo spouštění kódu pomocí oprávnění. Vyhodnotí bez kontroly zabezpečení jsou přípustné pouze pokud jste si jisti, že assert nelze použít škodlivé způsobem. Assert je neškodné, pokud je kód, který zavoláte neškodné nebo uživatelé nemůžou projít libovolné informace do kódu, které můžete volat.
+ Uplatnění oprávnění zabezpečení bez provedení jakékoliv kontroly zabezpečení může zanechat ve vašem kódu zneužitelné slabé stránky zabezpečení. Procházení zásobníku zabezpečení zastaví, když je uplatněna oprávnění zabezpečení. Pokud uplatňujete oprávnění bez provedení jakékoli kontroly volajícího, volající mohl nepřímo spustit kód pomocí oprávnění. Nepodmíněné výrazy bez kontroly zabezpečení jsou přípustné, pokud si nejste jisti, že že kontrolní výraz nelze použít škodlivých způsobem. Pokud kód, který voláte je neškodný, nebo pokud uživatelé nemůžou projít libovolné informace pro kód, který voláte je neškodný assert.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Opravit porušení toto pravidlo, přidejte metodu nebo jeho deklarující typ požadavek zabezpečení.
+ Chcete-li opravit porušení tohoto pravidla, přidejte do metody nebo její deklarující typ požadavku zabezpečení.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Potlačíte upozornění na toto pravidlo až po kontrolu pečlivě zabezpečení.
+ Potlačit upozornění tohoto pravidla až po přezkoumání pečlivé ověření zabezpečení.
 
-## <a name="see-also"></a>Viz také
- <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName> [Pokyny pro zabezpečené kódování](/dotnet/standard/security/secure-coding-guidelines)
+## <a name="see-also"></a>Viz také:
+
+- <xref:System.Security.CodeAccessPermission.Assert%2A?displayProperty=fullName>
+- [Pokyny pro zabezpečené kódování](/dotnet/standard/security/secure-coding-guidelines)

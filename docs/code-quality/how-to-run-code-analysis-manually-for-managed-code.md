@@ -1,6 +1,7 @@
 ---
 title: 'Postupy: Ruční spuštění analýzy kódu pro spravovaný kód'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,11 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2690ff071b217fb95388dde7c4b2eda28189f5f3
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b2a9fa4af1737b59af67388ba12cf79eca0b7563
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31919425"
 ---
 # <a name="how-to-run-code-analysis-manually-for-managed-code"></a>Postupy: Ruční spuštění analýzy kódu pro spravovaný kód
 Nástroj pro analýzu kódu vám poskytuje informace o možných defekty ve zdrojovém kódu. Analýza kódu můžete spustit automaticky s každou sestavení projektu kódu a analýza kódu můžete také spustit ručně. Pravidla, která se kontroluje při spuštění analýzy kódu nejsou zadány na stránce Analýza kódu stránky vlastností projektu. Další informace najdete v tématu [postupy: Konfigurace analýzy kódu pro spravovaný projekt kódu](../code-quality/how-to-configure-code-analysis-for-a-managed-code-project.md)

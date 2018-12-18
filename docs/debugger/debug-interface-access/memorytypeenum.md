@@ -1,5 +1,5 @@
 ---
-title: MemoryTypeEnum | Microsoft Docs
+title: Memorytypeenum – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 616bae99a4cb3ffafa4cdf773bce63576ed04e7a
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 4a8dcf657933cf62f3f2173bb89dadd1366b0cec
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49822940"
 ---
 # <a name="memorytypeenum"></a>MemoryTypeEnum
-Určuje typ paměti pro přístup.  
+Určuje typ pro přístup k paměti.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,19 +37,19 @@ enum MemoryTypeEnum {
   
 #### <a name="parameters"></a>Parametry  
  `MemTypeCode`  
- Přistupuje jenom kódu paměti.  
+ Přístupy pouze kód paměti.  
   
  `MemTypeData`  
- Data nebo zásobníku paměti přístupů.  
+ Přístupy do paměti data nebo zásobníku.  
   
  `MemTypeStack`  
- Přistupuje jenom zásobníku paměti.  
+ Přístupy pouze zásobníku paměti.  
   
  `MemTypeAny`  
- Přístup k jakýkoli druh paměti.  
+ Přistupuje k jakýkoli druh paměti.  
   
 ## <a name="remarks"></a>Poznámky  
- Hodnoty v tento výčet jsou předávány [IDiaStackWalkHelper::readMemory](../../debugger/debug-interface-access/idiastackwalkhelper-readmemory.md) metoda omezení přístupu pro různé typy paměti.  
+ Hodnoty v tento výčet se předají [IDiaStackWalkHelper::readMemory](../../debugger/debug-interface-access/idiastackwalkhelper-readmemory.md) metody k omezení přístupu k různé druhy paměti.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: cvconst.h  

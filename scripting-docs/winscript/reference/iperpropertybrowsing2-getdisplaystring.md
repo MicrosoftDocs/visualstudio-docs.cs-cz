@@ -1,11 +1,11 @@
 ---
-title: IPerPropertyBrowsing2::GetDisplayString | Microsoft Docs
-ms.custom: 
+title: IPerPropertyBrowsing2::GetDisplayString | Dokumentace Microsoftu
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - IPerPropertyBrowsing2.GetDisplayString
@@ -14,18 +14,19 @@ apilocation:
 helpviewer_keywords:
 - IPerPropertyBrowsing2::GetDisplayString
 ms.assetid: 8f75c6a9-86a9-4e2d-8cb4-74e7b1c0a524
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: be6f665d1f63966b3828868f4fb8fbf1cae002e9
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: be88a76ce22dfd863e680fcc1a6794065ecaf76f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49836876"
 ---
 # <a name="iperpropertybrowsing2getdisplaystring"></a>IPerPropertyBrowsing2::GetDisplayString
-Získá řetězec k zobrazení typů, které nejsou ze své podstaty zobrazitelné vráceném textu budou zobrazeny je název popisující vlastnost a lze zobrazit v uživatelském rozhraní volajícího.  
+Získá řetězec k zobrazení typů, které nejsou ze své podstaty zobrazitelné vráceném textu budou zobrazeny je název popisující vlastnosti a mohou být zobrazeny v uživatelském rozhraní volajícího.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,16 +39,16 @@ HRESULT GetDisplayString(
   
 #### <a name="parameters"></a>Parametry  
  `dispid`  
- [v] Odesílání identifikátor jehož zobrazovaný název je požadovaná vlastnost.  
+ [in] Odeslání identifikátor jejichž zobrazované jméno je požadovaná vlastnost.  
   
  `pBstr`  
- [out] Ukazatel `BSTR` obsahující zobrazovaný název vlastnosti identifikovaný `dispID`.  
+ [out] Ukazatel `BSTR` obsahující zobrazovaný název pro vlastnost identifikovaný `dispID`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrací platnou `HRESULT`, obvykle `S_OK`.  
+ Bude vracet platnou `HRESULT`, obvykle `S_OK`.  
   
 ## <a name="remarks"></a>Poznámky  
- Vrácený řetězec není platnou hodnotou vlastnosti. Je právě zobrazovaný řetězec vlastnosti.  
+ Vrácený řetězec není platná hodnota vlastnosti. Je jenom zobrazovaný řetězec vlastnosti.  
   
 ## <a name="see-also"></a>Viz také  
- [Iperpropertybrowsing2 – rozhraní 1](../../winscript/reference/iperpropertybrowsing2-interface-1.md)
+ [IPerPropertyBrowsing2 – rozhraní 1](../../winscript/reference/iperpropertybrowsing2-interface-1.md)

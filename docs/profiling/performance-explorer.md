@@ -1,5 +1,5 @@
 ---
-title: Prohlížeč výkonu | Microsoft Docs
+title: Prohlížeč výkonu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 06/19/2017
 ms.technology: vs-ide-debug
@@ -14,38 +14,39 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 450681f03bcb9bd24272d7bcdc7da34ed015587a
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 837c8d405245237962888a0a689fbdd17f6a0a92
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35676009"
 ---
 # <a name="performance-explorer"></a>Prohlížeč výkonu
 
-Visual Studio Tools profilace umožňují vývojářům měřit, hodnocení a cíle problémy související s výkonem v svůj kód. Tyto nástroje jsou plně integrované do rozhraní IDE a poskytuje bezproblémové a srozumitelné uživatelské prostředí.
+Profilace nástroje sady Visual Studio umožňují vývojářům měřit, vyhodnotit a řešit problémy související s výkonem v kódu. Tyto nástroje jsou plně integrované do rozhraní IDE zajistit bezproblémové a přístupné uživatelské prostředí.
 
-Profilace aplikace je jednoduchá. Můžete začít tak, že vytvoříte novou relaci výkonu. Průvodce výkonu relace v aplikaci Visual Studio Team System vývoj Edition, slouží k vytvoření nové relace výkonu. Po ukončení relace výkonu, data shromážděná během profilace je uložen v souboru .vsp. Můžete zobrazit soubor .vsp v prostředí IDE. Existuje několik zobrazení sestav, které vám pomůžou vizualizovat a zjistit problémy s výkonem z dat shromážděných.
+Profilace aplikace je jednoduchá. Začnete tím, že vytvoříte novou relaci výkonu. V aplikaci Visual Studio Team System Development Edition můžete použít Průvodce relace výkonu k vytvoření nové relace výkonu. Po ukončení relace výkonu shromážděných během profilace data se ukládají. *vsp* souboru. Můžete zobrazit. *vsp* souboru zevnitř rozhraní IDE. Existuje několik zobrazení sestav, které pomáhají vizualizovat a zjistit problémy s výkonem z dat shromážděných.
 
-Nástroje pro profilaci můžete taky použít z příkazového řádku. To umožňuje uživatelům se flexibilita při spuštění těchto nástrojů z příkazového řádku nebo jejich použití k automatizaci úloh, které používají skriptu.
+Nástroje pro profilaci lze také z příkazového řádku. To umožňuje uživatelům flexibilitu používání těchto nástrojů z příkazového řádku nebo s použitím automatizace úloh, které pomocí skriptu.
 
-Další informace o aktuální a pokročilá témata týkající se výkonu, trasování a profilaci vyhledávání Microsoft Developer Network pro témata a blogy od Microsoftu. Použijte klíčová slova Enterprise výkonu nástroje Team.
+Další informace o aktuální a pokročilých témat souvisejících s výkonem a profilování vyhledejte Microsoft Developer Network pro témata a blogy Microsoftu. Pomocí klíčových slov Enterprise výkonu nástroje týmu.
 
-## <a name="common-tasks"></a>Obecné úlohy
+## <a name="common-tasks"></a>Běžné úlohy
 
 |Úloha|Související obsah|
 |----------|---------------------|
-|**Techniky pro Windows 8 a novější**|[Nástroje pro sledování výkonu v aplikacích pro Windows 8 a Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)|
-|**Profilování základními pojmy:** další konceptů a termínů, které budete používat ke shromažďování, zobrazit a analyzovat výkon kódu pomocí nástrojů pro profilaci.|[Přehledy](../profiling/overviews-performance-tools.md)|
-|**Přejít v a proveďte to:** zjistěte, ale základní postupy, které budete používat při shromažďování, zobrazit a analyzovat výkon kódu pomocí nástrojů pro profilaci. Vyzkoušejte si to s praktických návod.|[Začínáme](../profiling/getting-started-with-performance-tools.md)|
-|**Konfigurace relace profilování:** další rozšířené metody jak zadejte projekty nebo binárních souborů do profilu, vyberte profilování metodu, vyberte údaje o výkonu a nastavte další možnosti profilování relace.|[Konfigurace výkonnostních relací](../profiling/configuring-performance-sessions.md)|
-|**Řízení data, která shromažďuje profileru:** zjistěte, jak pomocí vlastnosti výkonnostní relace a interaktivní postupy spuštění a zastavení profilování a jak pro data výkonu, které shromažďujete na právě informace, které chcete omezit.|[Řízení shromažďování dat](../profiling/controlling-data-collection.md)|
-|**Vyhledejte problémy s výkonem:** zjistěte, jak zobrazit a analyzovat data shromážděná výkonu v okně zobrazení sestavy nástrojů pro profilaci.|[Analýza výkonu nástrojů pro Data](../profiling/analyzing-performance-tools-data.md)|
-|**Analýza výkonu změny:** zjistěte, jak k porovnání dvou datových souborů profileru k analýze výkonu změny.|[Porovnávání souborů dat výkonu](../profiling/comparing-performance-data-files.md)|
-|**Ukládání a sdílení výsledky:** informace o ukládání dat pro archivaci nebo sdílení profilaci.|[Ukládání a export výkonu nástrojů pro Data](../profiling/saving-and-exporting-performance-tools-data.md)|
-|**Automatizovat profilace:** naučit se používat nástroje pro profilaci z příkazového řádku.|[Profilace z příkazového řádku](../profiling/using-the-profiling-tools-from-the-command-line.md)|
-|**Řízení profilace programově:** Naučte se používat spravovaná a nativní profilace nástrojů rozhraní API pro shromažďování dat ovládacího prvku přímo ze zdrojového kódu.|[Rozhraní API nástrojů pro profilaci](../profiling/profiling-tools-apis.md)|
-|**Řešení problémů profilace**|[Řešení potíží s výkonem nástroje problémy](../profiling/troubleshooting-performance-tools-issues.md)|
+|**Techniky pro Windows 8 a novější**|[Nástroje pro výkon v aplikacích pro Windows 8 a Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)|
+|**Koncepce profilování:** další koncepcemi a termíny, které bude využívat ke shromažďování, zobrazit a analyzovat výkon kódu pomocí nástrojů pro profilaci.|[Přehledy](../profiling/overviews-performance-tools.md)|
+|**Přidejte se k nám a proveďte to:** zjistěte, ale základní postupy, které budete používat při shromažďování, zobrazit a analyzovat výkon kódu pomocí nástrojů pro profilaci. Vyzkoušejte si návod, praktické.|[Začínáme](../profiling/getting-started-with-performance-tools.md)|
+|**Konfigurace relace profilování:** další rozšířené metody zadejte projekty nebo binární soubory do profilu, vyberte metodu profilace, zvolte možnost data o výkonu pro shromažďování a nastavit možnosti relace profilování.|[Konfigurace výkonnostních relací](../profiling/configuring-performance-sessions.md)|
+|**Určit data, která shromažďuje profileru:** zjistěte, jak používat vlastnosti relace výkonu a interaktivní postupy pro spuštění a zastavení profilování a omezení, která shromažďujete jen informace, které chcete, aby data o výkonu.|[Řízení shromažďování dat](../profiling/controlling-data-collection.md)|
+|**Najít problémy s výkonem:** zjistěte, jak zobrazit a analyzovat data o výkonu shromážděných v okně zobrazení sestavy nástrojů pro profilaci.|[Analýza dat nástrojů pro měření výkonu](../profiling/analyzing-performance-tools-data.md)|
+|**Analyzovat změny ve výkonu:** zjistěte, jak k porovnání dvou souborů dat profileru analyzovat změny ve výkonu.|[Porovnání datových souborů výkonu](../profiling/comparing-performance-data-files.md)|
+|**Uložit a sdílet výsledky:** zjistěte, jak uložit data profilování pro archivaci nebo sdílení.|[Uložení a export dat nástrojů pro měření výkonu](../profiling/saving-and-exporting-performance-tools-data.md)|
+|**Automatizace vytváření profilů:** zjistěte, jak pomocí nástrojů pro profilaci z příkazového řádku.|[Profil z příkazového řádku](../profiling/using-the-profiling-tools-from-the-command-line.md)|
+|**Řízení profilace programově:** zjistěte, jak pomocí spravovaný a nativní profilace nástroje rozhraní API kolekce dat ovládacích prvků přímo ze zdrojového kódu.|[Rozhraní API nástrojů pro profilaci](../profiling/profiling-tools-apis.md)|
+|**Řešení potíží s profilování**|[Řešení problémů s výkonem nástroje](../profiling/troubleshooting-performance-tools-issues.md)|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Nástroje pro profilaci](../profiling/profiling-tools.md)
+[Nejdřív se podívejte na nástroje pro profilaci](../profiling/profiling-feature-tour.md)

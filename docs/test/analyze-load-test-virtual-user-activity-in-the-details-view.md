@@ -1,5 +1,5 @@
 ---
-title: Analýza aktivity virtuálních uživatelů zatížení testů v sadě Visual Studio | Microsoft Docs
+title: Analýza aktivity virtuálních uživatelů zátěžového testu
 ms.date: 10/03/2016
 ms.topic: conceptual
 f1_keywords:
@@ -11,54 +11,57 @@ ms.assetid: 63f4bd42-3cfb-4eee-af68-e8334976539e
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 5f874b070e726374a20e821508115b5798f40b80
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ff4d71af450fa6d3f907bb1e1b5b963044e959ff
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059905"
 ---
-# <a name="analyzing-load-test-virtual-user-activity-in-the-details-view-of-the-load-test-analyzer"></a>Analýza aktivity virtuálních uživatelů v rámci zátěžového testu v podrobném zobrazení analyzéru zátěžového testu
+# <a name="analyzing-load-test-virtual-user-activity-in-the-details-view-of-the-load-test-analyzer"></a>Analýza aktivity virtuálních uživatelů zátěžového testu v podrobném zobrazení Analyzéru zátěžového testu
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 **Graf aktivity virtuálního uživatele**
 
- ![Graf aktivity virtuálního uživatele](../test/media/virtual_actchart.png "Virtual_ActChart")
+![Graf aktivity virtuálního uživatele](../test/media/virtual_actchart.png)
 
- Zobrazení podrobností se zobrazí virtuální graf aktivity uživatele, který se používá k vizuálně analyzovat, co jednotlivé virtuálních uživatelů při zatížení otestovat. Graf aktivity virtuálního uživatele umožňuje najdete v části vzory aktivity uživatelů, vzory zátěže, korelovat testy selhání nebo pomalé a najdete v části požadavky, které ostatní aktivity virtuálních uživatelů. Grafu aktivity virtuálního uživatele také vám pomohou určit špičky využití procesoru, vyřazuje v požadavků za sekundu a jaké testů nebo stránky běžely během špičky a hodnota neklesne.
+**Podrobnosti** zobrazení zobrazí **graf aktivity virtuálního uživatele**, který se používá k vizuální analýza jednotlivého virtuálního uživatele nebyla během zátěžového testu. **Graf aktivity virtuálního uživatele** vám umožní vidět vzory aktivity uživatelů, vzory zátěže, korelovat Nezdařená nebo pomalá testy a zobrazit žádosti pomocí další aktivity virtuálního uživatele. **Graf aktivity virtuálního uživatele** můžete také vám pomáhají určit, provozní špičky ve využití procesoru, drops požadavků za sekundu, a co testy nebo stránky, které byly spuštěny během špičky a drops.
 
 > [!NOTE]
-> Než spustíte zátěžový test, pro který chcete použít virtuální graf podrobnosti aktivity uživatele, musíte se ověřit, že **úložiště podrobností časování** je nastavena na **AllIndividualDetails** možnost pomocí Editor zátěžového testu výkonu. Další informace najdete v tématu [postupy: Konfigurace shromažďování veškerých podrobností a zpřístupnění grafu aktivity virtuálního uživatele](../test/how-to-configure-load-tests-to-collect-full-details.md).
+> Před spuštěním zátěžového testu, pro kterou chcete použít **graf podrobností aktivity virtuálního uživatele**, musíte ověřit, že **úložiště podrobností časování** je nastavena na  **AllIndividualDetails** možnost pomocí editoru zátěžových testů výkonu.
 
- **Panel podrobnosti legendy**
+ **Panel podrobné legendy**
 
- ![Podrobnosti legendy panely](../test/media/ltest_detailslegend.png "LTest_DetailsLegend")
+ ![Panel podrobné legendy](../test/media/ltest_detailslegend.png)
 
- Panel podrobností legendy je viditelný v grafu aktivity virtuálního uživatele. Podrobnosti o umožňuje podokně legendy, filtrovat testy, stránky a transakce na základě několika různých kritérií. Můžete například odebrat určité testy ze zobrazení, nebo odeberte všechny testy úspěšné nebo odeberte testy, které se nezdařilo s určitým chybám. Rovněž můžete odebrat všechny testy, které nemají protokoly.
+ Je viditelný v panel podrobné legendy **graf aktivity virtuálního uživatele**. Podrobnosti o legendy podokně umožňuje filtrovat testy, stránky a transakce na základě několika různých kritérií. Můžete například odebrat určité testy ze zobrazení, nebo odebrání všech úspěšných testů nebo odebrání testů, které se nezdařilo s některým chybám. Můžete také odebrat všechny testy, které nemají protokoly.
 
- Můžete zvýrazněte testy, které se nezdařilo, který zobrazuje všechny neúspěšných testů označeno červeně. Můžete také zvýraznit testy, které mají protokolů testování. Testy s protokoly bude označeno zeleně.
+ Můžete zvýraznit testů, které se nezdařilo, který se zobrazí všechny neúspěšné testy vybarvenými červeně. Můžete také zvýraznit testy, které mají protokolů testu. Testy s využitím protokolů se zobrazí zeleně.
 
- **Filtrování výsledků panely**
+ **Filtrování výsledků Panel**
 
- ![Filtrovat výsledky panely](../test/media/ltest_filterresults.png "LTest_FilterResults")
+ ![Filtrovat panel výsledků](../test/media/ltest_filterresults.png)
 
- Panel výsledky filtr je viditelný v grafu aktivity virtuálního uživatele. Panel Filtr výsledky můžete filtrovat podle následující:
+ Panel výsledků filtru je zobrazen v **graf aktivity virtuálního uživatele**. Panel výsledků filtru můžete filtrovat podle následujících akcí:
 
--   **Zobrazit pouze výsledky s protokoly** zobrazí pouze zkušební výsledky, které mají protokolů testování s nimi spojených.
+-   **Zobrazit pouze výsledky s protokoly** zobrazí pouze výsledky, které mají protokolů testu k nim má přiřazené testů.
 
--   **Zobrazit výsledky úspěšné** zobrazí výsledky úspěšné.
+-   **Zobrazit úspěšné výsledky** úspěšné výsledky se zobrazí.
 
--   **Zobrazit výsledky s chybami** zobrazí výsledky s chybami, které mohou pomoci při ladění.
+-   **Zobrazit výsledky s chybami** zobrazuje výsledky s chybami, které vám mohou pomoci při ladění.
 
 ## <a name="tasks"></a>Úlohy
 
 |Úlohy|Související témata|
-|-----------|-----------------------|
-|**Nakonfigurovat svůj test zatížení na grafu aktivity virtuálního uživatele:** před spuštěním zátěžový test, který chcete zobrazit data aktivity virtuálních uživatelů v, musíte nejdřív nakonfigurovat nastavení zatížení testy vlastností.|-   [Postupy: nastavení shromažďování veškerých podrobností a zpřístupnění grafu aktivity virtuálního uživatele](../test/how-to-configure-load-tests-to-collect-full-details.md)|
-|**Spuštění zátěžového testu:** po vytvoření zátěžový test a nakonfigurovat jej a povolte sběru dat aktivity virtuálního uživatele, dokud nebude dokončeno, chcete-li zobrazit grafu aktivity virtuálního uživatele musíte spustit test.||
-|**Zobrazení výsledků testu zatížení, které obsahují data aktivity virtuálních uživatelů:** po zátěžový test byly vytvořeny, konfigurovány a dokončení běhu, můžete zobrazit data aktivit virtuálních uživatelů pomocí grafu aktivity virtuálního uživatele.|-   [Analýza výsledků zátěžových testů](../test/analyze-load-test-results-using-the-load-test-analyzer.md)<br />-   [Postupy: analýza, co dělají virtuálních uživatelů během zátěžového testu](../test/how-to-analyze-virtual-user-activity-during-a-load-test.md)|
-|**Izolovat problémy s výkonem v zátěžových testech:** grafu aktivity virtuálního uživatele můžete izolovat problémy s výkonem v zátěžovém testu.|-   [Návod: Izolace problémů pomocí graf aktivity virtuálního uživatele](../test/walkthrough-use-the-virtual-user-activity-chart-to-isolate-issues.md)|
+|-|-|
+|**Spuštění zátěžového testu:** po vytvoření zátěžového testu a jeho nakonfigurování ke shromažďování dat aktivity virtuálních uživatelů, musíte spustit test, dokud se nedokončí v abyste mohli zobrazit **graf aktivity virtuálního uživatele**.||
+|**Prohlédněte si výsledky testu zatížení, které obsahují data aktivity virtuálního uživatele:** po byly vytvořeny, konfigurovány a po dokončení jeho běhu zátěžového testu můžete zobrazit data aktivity virtuálního uživatele pomocí **graf aktivity virtuálního uživatele** .|-   [Analýza výsledků zátěžových testů](../test/analyze-load-test-results-using-the-load-test-analyzer.md)<br />-   [Postupy: analýza, co dělají virtuálních uživatelů během zátěžového testu](../test/how-to-analyze-virtual-user-activity-during-a-load-test.md)|
+|**Izolace potíží s výkonem v zátěžových testech:** můžete použít **graf aktivity virtuálního uživatele** a určit tak problémy s výkonem v zátěžovém testu.|-   [Návod: Izolace potíží s pomocí graf aktivity virtuálního uživatele](../test/walkthrough-use-the-virtual-user-activity-chart-to-isolate-issues.md)|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Analýza výsledků zátěžových testů](../test/analyze-load-test-results-using-the-load-test-analyzer.md)
 - [Analýza výsledků zátěžových testů a chyb v tabulkovém zobrazení](../test/analyze-load-test-results-and-errors-in-the-tables-view.md)

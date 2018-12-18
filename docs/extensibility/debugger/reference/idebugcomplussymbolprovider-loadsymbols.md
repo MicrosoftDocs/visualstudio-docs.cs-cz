@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::LoadSymbols | Microsoft Docs
+title: IDebugComPlusSymbolProvider::LoadSymbols | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 99d3984a6e399828097dc40d4b2aa3ec98221d2c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3b25c673a684e4892f3cd13a4f950fc6cd2565dc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49841465"
 ---
 # <a name="idebugcomplussymbolproviderloadsymbols"></a>IDebugComPlusSymbolProvider::LoadSymbols
-Načte zadaný ladicími symboly v paměti.  
+Načte zadaný ladicí symboly v paměti.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,25 +50,25 @@ int LoadSymbols(
   
 #### <a name="parameters"></a>Parametry  
  `ulAppDomainID`  
- [v] Identifikátor domény aplikace.  
+ [in] Identifikátor domény aplikace.  
   
  `guidModule`  
- [v] Jedinečný identifikátor mondule.  
+ [in] Jedinečný identifikátor mondule.  
   
  `baseAddress`  
- [v] Adresa základní paměti.  
+ [in] Adresa základní paměti.  
   
  `pUnkMetadataImport`  
- [v] Objekt, který obsahuje symbol metadata.  
+ [in] Objekt, který obsahuje metadata pro symbol.  
   
  `bstrModuleName`  
- [v] Název modulu.  
+ [in] Název modulu.  
   
  `bstrSymSearchPath`  
- [v] Cesta k vyhledejte soubor symbolu.  
+ [in] Cesta pro hledání souborů symbolů.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugSymbolProvider** objekt, který zveřejňuje [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) rozhraní.  

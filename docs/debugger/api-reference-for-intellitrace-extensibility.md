@@ -1,7 +1,7 @@
 ---
-title: Referenční dokumentace rozhraní API pro rozšiřitelnost technologie IntelliTrace | Microsoft Docs
+title: Reference k rozhraní API pro rozšiřitelnost technologie IntelliTrace | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 11/07/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,23 +12,27 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 907b47aacf7ad0d63c79f22dcf992ac042dd2e7e
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 04ac7a4947576b8c06741ac2c407c35e3663acd0
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349514"
 ---
-# <a name="api-reference-for-intellitrace-extensibility"></a>Referenční dokumentace k rozhraní API pro rozšiřitelnost technologie IntelliTrace
-Podle informací uvedených v této části můžete rozšiřitelnost technologie IntelliTrace rozhraní API ke čtení a dekódování soubory .itrace ve vaší aplikaci.  
+# <a name="api-reference-for-intellitrace-extensibility"></a>Reference k rozhraní API pro rozšiřitelnost technologie IntelliTrace
+
+Rozšiřitelnost technologie IntelliTrace rozhraní API podle informací uvedených v této části slouží ke čtení a dekódovat soubory .itrace ve vaší aplikaci.  
   
-## <a name="in-this-section"></a>V tomto oddílu  
- Toto rozhraní API pro rozšiřitelnost technologie IntelliTrace jsou obsaženy v jednom oboru názvů  
+## <a name="in-this-section"></a>V tomto oddílu
+
+Tento obor názvů obsahuje rozhraní API pro rozšiřitelnost technologie IntelliTrace:
   
--   <xref:Microsoft.VisualStudio.IntelliTrace>  
+- <xref:Microsoft.VisualStudio.IntelliTrace>  
   
-## <a name="related-sections"></a>Související oddíly  
- [IntelliTrace](../debugger/intellitrace.md)  
- Poskytuje informace o tom, jak ladit se IntelliTrace.  
+## <a name="related-sections"></a>Související oddíly
+
+[IntelliTrace](../debugger/intellitrace.md)  
+Poskytuje informace o tom, jak ladit pomocí nástroje IntelliTrace.  
   
- [Galerie kódů MSDN](http://go.microsoft.com/fwlink/?LinkId=166091)  
- Hostitelem ukázkové aplikace znázorňující způsob použití rozšiřitelnost technologie IntelliTrace.
+[Ukázky kódu vývojáře](https://code.msdn.microsoft.com/)  
+Hostuje ukázkovou aplikaci ukazující způsob použití rozšiřitelnost technologie IntelliTrace.

@@ -1,6 +1,7 @@
 ---
-title: XML (vlastnost XElement dynamické)
+title: XML (dynamická vlastnost XElement)
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 ms.topic: reference
 apiname:
@@ -11,31 +12,32 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 36b2100218267587e2ea5d38ad62f7ed28dbc102
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 8a69245a875d0c1df1942af12afaacc5a9ffc34b
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39080834"
 ---
-# <a name="xml-xelement-dynamic-property"></a>XML (vlastnost XElement dynamické)
+# <a name="xml-xelement-dynamic-property"></a>Xml (dynamická vlastnost XElement)
 
-Získá neformátovaný XML obsahu elementu.
+Získá neformátovaném tvaru XML obsahu elementu.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```xaml
 elem.Xml
 ```
 
-## <a name="property-valuereturn-value"></a>Hodnota vlastnosti / návratová hodnota
+## <a name="property-valuereturn-value"></a>Vlastnost hodnota nebo návratová hodnota
 
-A <xref:System.String> představující neformátovaný obsah XML elementu.
+A <xref:System.String> , která představuje neformátovaný obsah XML daného elementu.
 
 ## <a name="remarks"></a>Poznámky
 
-Tato vlastnost je ekvivalentní <xref:System.Xml.Linq.XNode.ToString(System.Xml.Linq.SaveOptions)> metodu <xref:System.Xml.Linq.XNode?displayProperty=fullName> třídy, se `SaveOptions` parametr nastaven na <xref:System.Xml.Linq.SaveOptions>.
+Tato vlastnost je ekvivalentní k <xref:System.Xml.Linq.XNode.ToString(System.Xml.Linq.SaveOptions)> metodu <xref:System.Xml.Linq.XNode?displayProperty=fullName> třídy, se `SaveOptions` parametr nastaven na <xref:System.Xml.Linq.SaveOptions>.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Dynamické vlastnosti třídy XElement](../designers/xelement-class-dynamic-properties.md)
 - [Hodnota](../designers/value-xelement-dynamic-property.md)

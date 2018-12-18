@@ -1,5 +1,5 @@
 ---
-title: Problémy se zabezpečením | Microsoft Docs
+title: Problémy se zabezpečením | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,20 +14,21 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d45ebd8c4d80b84749838c2034d72159c9e39627
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6cd4d07721f202169ca0689882ac1a41045a4d61
+ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39252320"
 ---
 # <a name="security-issues"></a>Problémy se zabezpečením
-Pouze oprávnění potřebná k ladění program pomocí sady Visual Studio, jsou stejné jako ty, které je třeba spustit program. To zahrnuje vzdáleného ladění pro většině případů (některých situacích zahrnující jiných služeb, jako je například Internetová informační služba může vyžadovat vyšší úroveň oprávnění).  
+Chcete-li ladit aplikaci pomocí sady Visual Studio, jsou pouze potřebná oprávnění stejné vývojář vyžaduje ke spuštění programu. To zahrnuje, vzdálené ladění pro většinu situací. Některé situace, zahrnující jiných služeb, jako je například Internetová informační služba může vyžadovat vyšší úroveň oprávnění.  
   
- Když Visual Studio je spuštěný, Správce ladění procesu (PDM) sleduje ladění procesy v místním počítači. Program s názvem msvsmon.exe vzdáleně, je spuštěna vývojáři zpracování vzdálené ladění a zpřístupněte PDM. (Všimněte si, že msvsmon.exe není služba a musí být spuštěna ručně povolit vzdálené ladění na tomto počítači.) Pokud Visual Studio (nebo msvsmon.exe) není spuštěna, jsou sledovány žádné procesy pro ladění.  
+ Když je spuštěná sada Visual Studio, sleduje správce ladění procesu (PDM) ladění procesů na místním počítači. Vzdáleně, program s názvem *msvsmon.exe* je tím, že pro vývojáře pro zpracování, vzdálené ladění a zpřístupnit PDM. (*msvsmon.exe* není služba a musí být spuštěna ručně povolit vzdálené ladění na tomto počítači.) Když Visual Studio (nebo *msvsmon.exe*) je neběží, žádné procesy jsou sledována pro ladění.  
   
- To znamená, že vývojář může ladění programů, které mu začít s žádná zvláštní oprávnění. Vývojář může i ladění procesy spuštěné někdo jiný, je-li jinou osobou členem stejné skupiny zabezpečení. A chcete-li povolit vzdálené ladění, je nutné pouze zkopírovat nezbytné soubory ke vzdálenému počítači a spuštění msvsmon.exe (viz [vzdálené ladění](../../debugger/remote-debugging.md) podrobnosti).  
+ Vývojář můžete ladit programy, které se spouští s žádná zvláštní oprávnění. Vývojář můžete dokonce ladit procesy spuštěné někým jiným, pokud tato osoba je členem stejné skupiny zabezpečení. A pokud chcete povolit vzdálené ladění, je nutné pouze zkopírovat požadované soubory na vzdálený počítač a spusťte *msvsmon.exe*. Další informace najdete v tématu [vzdálené ladění](../../debugger/remote-debugging.md).  
   
-## <a name="see-also"></a>Viz také  
- [Ladění úlohy](../../extensibility/debugger/debugging-tasks.md)   
- [Správce procesu ladění](../../extensibility/debugger/process-debug-manager.md)   
+## <a name="see-also"></a>Viz také:  
+ [Ladění úloh](../../extensibility/debugger/debugging-tasks.md)   
+ [Správce ladění procesu](../../extensibility/debugger/process-debug-manager.md)   
  [Vzdálené ladění](../../debugger/remote-debugging.md)

@@ -1,6 +1,7 @@
 ---
 title: 'CA2223: Členy by se měly lišit o více než návratový typ'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,13 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4caffc53ff99f20a0dee94990dd6f5b966f2e047
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 93822dd3db325e3463c4a8f175c8ca289cac9e5d
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45549823"
 ---
 # <a name="ca2223-members-should-differ-by-more-than-return-type"></a>CA2223: Členy by se měly lišit o více než návratový typ
+
 |||
 |-|-|
 |TypeName|MembersShouldDifferByMoreThanReturnType|
@@ -30,22 +33,21 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Dvě veřejné nebo chráněných členů mají podpisy, které jsou stejné s výjimkou návratového typu.
+ Dvě veřejné nebo chráněné členy mají podpisy, které jsou stejné s výjimkou návratovým typem.
 
 ## <a name="rule-description"></a>Popis pravidla
- I když modul common language runtime umožňuje použití návratové typy k rozlišení mezi jinak identický členy, tato funkce není v Common Language Specification, ani je běžnou funkcí rozhraní .NET programovacích jazyků. Když členy liší pouze návratový typ, vývojáři a nástroje pro vývoj nemusí správně je rozeznat.
+ I když se modul common language runtime umožňuje používat návratové typy k rozlišení mezi jinak identickými členy, tato funkce není v Common Language Specification ani je to běžná funkce programovacích jazycích rozhraní .NET. Když členové liší pouze návratovým typem, vývojáře a nástroje pro vývoj nemusí správně mezi nimi rozlišovat.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Opravit porušení toto pravidlo, změňte tak, aby byly jedinečné pouze na základě jejich názvy a typy parametrů, nebo členy, neuvádějí návrh členů.
+ Chcete-li opravit porušení tohoto pravidla, změňte návrh členů tak, aby byly jedinečné, pouze na základě jejich názvy a typy parametrů, nebo nezveřejňujte členy.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Nepotlačujte upozornění na toto pravidlo.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje v jazyce Microsoft intermediate language (MSIL), typ, který je v rozporu toto pravidlo. Všimněte si, že toto pravidlo nemůže být došlo k porušení pomocí jazyka C# nebo Visual Basic.
+ Následující příklad ukazuje v jazyk Microsoft intermediate language (MSIL), typ, který porušuje tato pravidla. Všimněte si, že nelze toto pravidlo porušeno pomocí jazyka C# nebo Visual Basic.
 
 ```
-
 .namespace UsageLibrary
 {
   .class public auto ansi beforefieldinit ReturnTypeTest
@@ -92,5 +94,4 @@ ms.lasthandoff: 04/19/2018
   } // end of class ReturnTypeTest
 
 } // end of namespace UsageLibrary
-
 ```

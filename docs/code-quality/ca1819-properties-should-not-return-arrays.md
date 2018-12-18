@@ -1,6 +1,7 @@
 ---
 title: 'CA1819: Vlastnosti by neměly vracet pole'
-ms.date: 11/04/2016
+ms.date: 09/28/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,15 +14,20 @@ ms.assetid: 85fcf312-57f8-438a-8b10-34441fe0bdeb
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f98e92174d7f01c6adf174ef5ff27e68ca406ae
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 99fd9627c06b11dae9348a85f417cf152ac1c8c9
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47859030"
 ---
 # <a name="ca1819-properties-should-not-return-arrays"></a>CA1819: Vlastnosti by neměly vracet pole
+
 |||
 |-|-|
 |TypeName|PropertiesShouldNotReturnArrays|
@@ -30,64 +36,60 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Vlastnost veřejných nebo chráněné v veřejného typu vrátí pole.
+
+Veřejné nebo chráněné vlastnosti veřejného typu vrací pole.
 
 ## <a name="rule-description"></a>Popis pravidla
- Pole vrácené vlastnosti nejsou chráněna proti zápisu, i když vlastnost je jen pro čtení. Abyste pole ochránili před změnou, musí vlastnost vrátit kopii tohoto pole. Uživatelé obvykle nebudou rozumět nepříznivým výkonnostním důsledkům volání těchto vlastností. Konkrétně se může použít vlastnost jako indexované vlastnosti.
+
+Pole vrácená vlastnostmi nejsou chráněna proti zápisu, i v případě, že vlastnost je jen pro čtení. Abyste pole ochránili před změnou, musí vlastnost vrátit kopii tohoto pole. Uživatelé obvykle nebudou rozumět nepříznivým výkonnostním důsledkům volání těchto vlastností. Konkrétně se může použít vlastnost jako indexovaná vlastnost.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení toto pravidlo, byla vlastnost metoda nebo změnit vlastnost, která má vracet kolekci.
+
+Chcete-li opravit porušení tohoto pravidla, metodu nastavení vlastnosti nebo změňte vlastnost na vrácení kolekce.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Atributy mohou obsahovat vlastnosti, které vracejí pole, ale nemůže obsahovat vlastnosti, které vracejí kolekce. Můžete potlačit upozornění, které se vyvolá pro atribut, který je odvozený od vlastnosti <xref:System.Attribute> třídy. Jinak není potlačení upozornění od tohoto pravidla.
+
+Můžete potlačit upozornění, která se vyvolá pro vlastnost, která je odvozena z atributu <xref:System.Attribute> třídy. Atributy mohou obsahovat vlastnosti, které vrací pole, ale nemůže obsahovat vlastnosti, které vracejí kolekce.
+
+Upozornění můžete potlačit, pokud vlastnost je součástí [objekt pro přenos dat (DTO)](/previous-versions/msp-n-p/ff649585(v=pandp.10)) třídy.
+
+V opačném případě nepotlačujte upozornění tohoto pravidla.
 
 ## <a name="example-violation"></a>Příklad porušení
 
-### <a name="description"></a>Popis
- Následující příklad ukazuje vlastnosti, která porušuje toto pravidlo.
+Následující příklad ukazuje vlastnost, která porušuje tato pravidla:
 
-### <a name="code"></a>Kód
- [!code-csharp[FxCop.Performance.PropertyArrayViolation#1](../code-quality/codesnippet/CSharp/ca1819-properties-should-not-return-arrays_1.cs)]
- [!code-vb[FxCop.Performance.PropertyArrayViolation#1](../code-quality/codesnippet/VisualBasic/ca1819-properties-should-not-return-arrays_1.vb)]
+[!code-csharp[FxCop.Performance.PropertyArrayViolation#1](../code-quality/codesnippet/CSharp/ca1819-properties-should-not-return-arrays_1.cs)]
+[!code-vb[FxCop.Performance.PropertyArrayViolation#1](../code-quality/codesnippet/VisualBasic/ca1819-properties-should-not-return-arrays_1.vb)]
 
-### <a name="comments"></a>Komentáře
- Opravit porušení toto pravidlo, zkontrolujte vlastnost metodu nebo změňte vlastnost, která má vracet kolekci místo pole.
+Chcete-li opravit porušení tohoto pravidla, metodu nastavení vlastnosti nebo změňte vlastnost na vrácení kolekce místo pole.
 
-## <a name="change-the-property-to-a-method-example"></a>Nastavte vlastnost na příkladu – metoda
+### <a name="change-the-property-to-a-method"></a>Změňte hodnotu vlastnosti na metodu
 
-### <a name="description"></a>Popis
- Následující příklad opraví porušení změnou vlastnosti na metodu.
+V následujícím příkladu řeší porušení změnou vlastnosti na metodu:
 
-### <a name="code"></a>Kód
- [!code-vb[FxCop.Performance.PropertyArrayFixedMethod#1](../code-quality/codesnippet/VisualBasic/ca1819-properties-should-not-return-arrays_2.vb)]
- [!code-csharp[FxCop.Performance.PropertyArrayFixedMethod#1](../code-quality/codesnippet/CSharp/ca1819-properties-should-not-return-arrays_2.cs)]
+[!code-vb[FxCop.Performance.PropertyArrayFixedMethod#1](../code-quality/codesnippet/VisualBasic/ca1819-properties-should-not-return-arrays_2.vb)]
+[!code-csharp[FxCop.Performance.PropertyArrayFixedMethod#1](../code-quality/codesnippet/CSharp/ca1819-properties-should-not-return-arrays_2.cs)]
 
-## <a name="return-a-collection-example"></a>Vrátí kolekci příklad
+### <a name="change-the-property-to-return-a-collection"></a>Změňte vlastnost na vrácení kolekce
 
-### <a name="description"></a>Popis
- Následující příklad opraví porušení změnou vlastnosti vrátit
+V následujícím příkladu řeší porušení změnou vlastnosti se vraťte <xref:System.Collections.ObjectModel.ReadOnlyCollection%601?displayProperty=fullName>:
 
- <xref:System.Collections.ObjectModel.ReadOnlyCollection%601?displayProperty=fullName>.
+[!code-csharp[FxCop.Performance.PropertyArrayFixedCollection#1](../code-quality/codesnippet/CSharp/ca1819-properties-should-not-return-arrays_3.cs)]
+[!code-vb[FxCop.Performance.PropertyArrayFixedCollection#1](../code-quality/codesnippet/VisualBasic/ca1819-properties-should-not-return-arrays_3.vb)]
 
-### <a name="code"></a>Kód
- [!code-csharp[FxCop.Performance.PropertyArrayFixedCollection#1](../code-quality/codesnippet/CSharp/ca1819-properties-should-not-return-arrays_3.cs)]
- [!code-vb[FxCop.Performance.PropertyArrayFixedCollection#1](../code-quality/codesnippet/VisualBasic/ca1819-properties-should-not-return-arrays_3.vb)]
+## <a name="allow-users-to-modify-a-property"></a>Povolit uživatelům změnit vlastnost
 
-## <a name="allowing-users-to-modify-a-property"></a>Umožňuje uživatelům změnit vlastnost
+Můžete chtít umožnit příjemci třídy k úpravě vlastností. Následující příklad ukazuje vlastnost pro čtení a zápis, který porušuje tato pravidla:
 
-### <a name="description"></a>Popis
- Můžete chtít povolit příjemce třídy, jestliže chcete upravit. Následující příklad ukazuje vlastnosti pro čtení a zápis, která porušuje toto pravidlo.
+[!code-csharp[FxCop.Performance.PropertyModifyViolation#1](../code-quality/codesnippet/CSharp/ca1819-properties-should-not-return-arrays_4.cs)]
+[!code-vb[FxCop.Performance.PropertyModifyViolation#1](../code-quality/codesnippet/VisualBasic/ca1819-properties-should-not-return-arrays_4.vb)]
 
-### <a name="code"></a>Kód
- [!code-csharp[FxCop.Performance.PropertyModifyViolation#1](../code-quality/codesnippet/CSharp/ca1819-properties-should-not-return-arrays_4.cs)]
- [!code-vb[FxCop.Performance.PropertyModifyViolation#1](../code-quality/codesnippet/VisualBasic/ca1819-properties-should-not-return-arrays_4.vb)]
+V následujícím příkladu řeší porušení změnou vlastnosti se vraťte <xref:System.Collections.ObjectModel.Collection%601?displayProperty=fullName>:
 
-### <a name="comments"></a>Komentáře
- Následující příklad opraví porušení změnou vlastnosti vrátit <xref:System.Collections.ObjectModel.Collection%601?displayProperty=fullName>.
-
-### <a name="code"></a>Kód
- [!code-vb[FxCop.Performance.PropertyModifyFixed#1](../code-quality/codesnippet/VisualBasic/ca1819-properties-should-not-return-arrays_5.vb)]
- [!code-csharp[FxCop.Performance.PropertyModifyFixed#1](../code-quality/codesnippet/CSharp/ca1819-properties-should-not-return-arrays_5.cs)]
+[!code-vb[FxCop.Performance.PropertyModifyFixed#1](../code-quality/codesnippet/VisualBasic/ca1819-properties-should-not-return-arrays_5.vb)]
+[!code-csharp[FxCop.Performance.PropertyModifyFixed#1](../code-quality/codesnippet/CSharp/ca1819-properties-should-not-return-arrays_5.cs)]
 
 ## <a name="related-rules"></a>Související pravidla
- [CA1024: Použijte vlastnosti, kde je to vhodné](../code-quality/ca1024-use-properties-where-appropriate.md)
+
+- [CA1024: Použijte vlastnosti, kde je to vhodné](../code-quality/ca1024-use-properties-where-appropriate.md)

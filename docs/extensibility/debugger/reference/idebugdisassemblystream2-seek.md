@@ -1,5 +1,5 @@
 ---
-title: IDebugDisassemblyStream2::Seek | Microsoft Docs
+title: IDebugDisassemblyStream2::Seek | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 55a8c2c205627130e8dd6dd28f288b2d3dee9d2e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 375ff5c08c481061d217fbb0b3a4fac38d1e74c5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49896637"
 ---
 # <a name="idebugdisassemblystream2seek"></a>IDebugDisassemblyStream2::Seek
-Přesune čtení ukazatele v datovém proudu zpětný překlad zadaný počet pokyny relativně k zadané pozici.  
+Přesune ukazatel čtení ve službě stream zpětný překlad daný počet instrukcí vzhledem k zadané pozici.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,22 +47,22 @@ int Seek(
   
 #### <a name="parameters"></a>Parametry  
  `dwSeekStart`  
- [v] Hodnota z [SEEK_START](../../../extensibility/debugger/reference/seek-start.md) výčet, který určuje relativní pozici k zahájení procesu seek.  
+ [in] Hodnota z [SEEK_START](../../../extensibility/debugger/reference/seek-start.md) výčet, který určuje relativní umístění a spusťte proces hledání.  
   
  `pCodeContext`  
- [v] [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) objekt reprezentující kontextu kód, který vyhledávací operaci je vzhledem k. Tento parametr se používá pouze v případě `dwSeekStart`  =  `SEEK_START_CODECONTEXT`, jinak hodnota tohoto parametru je ignorován a může mít hodnotu null.  
+ [in] [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) představující kontext kódu, který je operace seek vzhledem k objektu. Tento parametr se používá jenom v případě `dwSeekStart`  =  `SEEK_START_CODECONTEXT`; v opačném případě tento parametr je ignorován a může mít hodnotu null.  
   
  `uCodeLocationId`  
- [v] Umístění identifikátor kód, který vyhledávací operaci je vzhledem k. Tento parametr je použit, pokud `dwSeekStart`  =  `SEEK_START_CODELOCID`, jinak hodnota tohoto parametru je ignorován a může být nastaven na hodnotu 0. Naleznete v části poznámky [GetCodeLocationId](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodelocationid.md) metoda popis identifikátor umístění kódu.  
+ [in] Identifikátor umístění kódu, který je operace seek vzhledem k. Tento parametr se používá, pokud `dwSeekStart`  =  `SEEK_START_CODELOCID`; v opačném případě tento parametr je ignorován a je možné nastavit na hodnotu 0. V části poznámky [GetCodeLocationId](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcodelocationid.md) metoda popis identifikátor umístění kódu.  
   
  `iInstructions`  
- [v] Počet vzhledem ke pozici v zadané lokalitě `dwSeekStart`. Tato hodnota může být záporné zpětné přesunout.  
+ [in] Počet instrukcí přesunout vzhledem k pozice zadané v `dwSeekStart`. Tato hodnota může být záporná hodnota, při přesunutí zpětně.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE` Pokud pozice hledání byl do bodu v seznamu dostupných pokynů. Jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud hledání pozice na místo mimo seznamu k dispozici pokyny. V opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud hledání do polohy před začátkem v seznamu, čtení pozice je nastavena na první instrukce v seznamu. Pokud najdete byla na místo na konci seznamu, čtení pozice je nastavena na poslední instrukce v seznamu.  
+ Pokud bylo hledání pozice před začátek seznamu, pozici pro čtení je nastaven na první instrukce v seznamu. Pokud se na místo na konci seznamu, pozici pro čtení nastavená na poslední instrukce v seznamu.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md)   

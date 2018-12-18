@@ -1,5 +1,5 @@
 ---
-title: IDebugPort2 | Microsoft Docs
+title: IDebugPort2 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d1811ad7e46865d00eed2066d061daec78d7ab2b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 29b16652cdbed4f6e4ee2ab6b98e52ee3a868c48
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47858233"
 ---
 # <a name="idebugport2"></a>IDebugPort2
-Toto rozhraní představuje port ladění na počítači.  
+Toto rozhraní představuje ladit na počítači.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -31,27 +32,27 @@ IDebugPort2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory  
- Vlastní port dodavatele implementuje toto rozhraní představují port ladění na počítači.  
+ Dodavatel port. Tento vlastní port implementuje toto rozhraní k reprezentaci ladit na počítači.  
   
- Pokud port podporuje odesílání událostí portu, musíte také implementovat <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer> rozhraní pro podporu <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint> rozhraní, které pak poskytuje [IDebugPortEvents2](../../../extensibility/debugger/reference/idebugportevents2.md) rozhraní.  
+ Pokud port, který podporuje odesílání událostí portů, musí také implementovat <xref:System.Runtime.InteropServices.ComTypes.IConnectionPointContainer> rozhraní pro podporu <xref:System.Runtime.InteropServices.ComTypes.IConnectionPoint> rozhraní, které poskytuje zase [IDebugPortEvents2](../../../extensibility/debugger/reference/idebugportevents2.md) rozhraní.  
   
 ## <a name="notes-for-callers"></a>Poznámky pro volající  
  Volání [GetPort](../../../extensibility/debugger/reference/idebugportsupplier2-getport.md) nebo [AddPort](../../../extensibility/debugger/reference/idebugportsupplier2-addport.md) vrátit toto rozhraní představující požadovaném portu.  
   
 ## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
- Následující tabulka uvádí metody `IDebugPort2`.  
+ V následující tabulce jsou uvedeny metody objektu `IDebugPort2`.  
   
 |Metoda|Popis|  
 |------------|-----------------|  
 |[GetPortName](../../../extensibility/debugger/reference/idebugport2-getportname.md)|Vrátí název portu.|  
 |[GetPortId](../../../extensibility/debugger/reference/idebugport2-getportid.md)|Vrátí identifikátor port.|  
-|[GetPortRequest](../../../extensibility/debugger/reference/idebugport2-getportrequest.md)|Vrátí požadavek použít k vytvoření port (Pokud je k dispozici).|  
+|[GetPortRequest](../../../extensibility/debugger/reference/idebugport2-getportrequest.md)|Vrátí požadavku, použitý k vytvoření portu (Pokud je k dispozici).|  
 |[GetPortSupplier](../../../extensibility/debugger/reference/idebugport2-getportsupplier.md)|Vrátí dodavatele portu pro tento port.|  
-|[Getprocess –](../../../extensibility/debugger/reference/idebugport2-getprocess.md)|Vrátí rozhraní pro proces zadaný identifikátor procesu.|  
-|[EnumProcesses](../../../extensibility/debugger/reference/idebugport2-enumprocesses.md)|Vytvoří výčet všech procesů spuštěných na port.|  
+|[GetProcess](../../../extensibility/debugger/reference/idebugport2-getprocess.md)|Vrátí rozhraní pro proces zadaný identifikátor procesu.|  
+|[EnumProcesses](../../../extensibility/debugger/reference/idebugport2-enumprocesses.md)|Zobrazí všechny procesy spuštěné na portu.|  
   
 ## <a name="remarks"></a>Poznámky  
- Místní port poskytuje přístup ke všem procesy a programy spuštěné v místním počítači. Další porty může představovat sériový kabel připojení k zařízení se systémem Windows CE nebo síťové připojení k počítači bez modelu DCOM. `IDebugPort2` Rozhraní se používá k najít název a identifikátor portu, výčet všech procesů spuštěných na port a zadejte svá zařízení pro spuštění a ukončení procesů na portu.  
+ Místní port poskytuje přístup ke všem procesy a programy spuštěné na místním počítači. Další portů může představovat sériový kabel připojení k zařízení se systémem Windows CE nebo síťové připojení k počítači bez modelu DCOM. `IDebugPort2` Rozhraní se používá k hledání názvu a identifikátoru portu a výčet všechny procesy spuštěné na portu. Zařízení pro spuštění a ukončení procesů na portu jsou implementovány v `IDebugPortEx2` rozhraní.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

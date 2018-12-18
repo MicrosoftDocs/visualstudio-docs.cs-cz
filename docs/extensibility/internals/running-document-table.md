@@ -22,6 +22,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134090"
 ---
 # <a name="running-document-table"></a>Spuštěné tabulce dokumentu
 Prostředí IDE udržuje seznam všechny aktuálně otevřené dokumenty v interní strukturu názvem spuštěné tabulce dokumentu (r...). Tento seznam obsahuje všechny otevřené dokumenty v paměti, bez ohledu na to, jestli tyto dokumenty jsou aktuálně Upravovaný. Dokument je libovolnou položku, která je trvalý, včetně souborů v projektu nebo hlavní soubor projektu (například soubor VCXPROJ).  

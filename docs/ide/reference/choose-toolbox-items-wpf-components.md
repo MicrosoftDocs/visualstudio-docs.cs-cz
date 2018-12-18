@@ -1,9 +1,9 @@
 ---
-title: Výběr položek sady nástrojů, součásti WPF | Microsoft Docs
-ms.custom: ''
+title: Výběr položek sady nástrojů, součásti WPF
 ms.date: 06/21/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.chooseitems.wpfcomponents
 helpviewer_keywords:
@@ -14,11 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 955d0ab74d59606e63a4772aee5de96c920544ed
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6d05e69acb414c08e752593fbfdb08246c3d14a2
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31949617"
 ---
 # <a name="choose-toolbox-items-wpf-components"></a>Výběr položek sady nástrojů, součásti WPF
 
@@ -36,16 +37,20 @@ Na této kartě z **výběr položek sady nástrojů** dialogové okno zobrazí 
 
 Sloupce na **součásti WPF** karta obsahovat tyto informace:
 
-Název  
+**Jméno**
+
 Zobrazí názvy ovládacích prvků WPF pro položky, které existují v registru počítače.
 
-Obor názvů  
+**obor názvů**
+
 Zobrazuje hierarchii [rozhraní API třídy rozhraní .NET Framework](/dotnet/api/?view=netframework-4.7) obor názvů, který definuje strukturu součásti. Řazení v tomto sloupci seznam součástí, které jsou v rámci každý obor názvů rozhraní .NET Framework, který je nainstalován ve vašem počítači k dispozici.
 
-Název sestavení  
+**Název sestavení**
+
 Zobrazí název sestavení rozhraní .NET Framework, která zahrnuje obor názvů pro jednotlivé komponenty. Řazení v tomto sloupci seznam obory názvů obsažené v každé sestavení rozhraní .NET Framework v počítači nainstalována.
 
-Adresář  
+**Adresář**
+
 Zobrazí umístění sestavení rozhraní .NET Framework. Je výchozím umístěním pro všechny sestavení do globální mezipaměti sestavení. Další informace o globální mezipaměti sestavení, najdete v části [práce se sestaveními a globální mezipaměť sestavení](/dotnet/framework/app-domains/working-with-assemblies-and-the-gac).
 
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní
@@ -54,15 +59,15 @@ Zobrazí umístění sestavení rozhraní .NET Framework. Je výchozím umístě
 
 Filtruje seznam ovládacích prvků WPF založené na řetězec, který zadáte do textového pole. Jsou uvedeny všechny shody z kteréhokoli čtyři sloupce.
 
-### <a name="clear"></a>Zrušte zaškrtnutí
+**Zrušte zaškrtnutí**
 
 Vymaže řetězec filtru.
 
-### <a name="browse"></a>Procházet
+**Procházet**
 
 Otevře se **otevřete** dialogové okno, které umožňuje přejděte na sestavení, které obsahují ovládacích prvků WPF. Použijte k načtení sestavení, které nejsou umístěné v globální mezipaměti sestavení.
 
-### <a name="language"></a>Jazyk
+**Jazyk**
 
 Zobrazuje lokalizovaného jazyka sestavení, které obsahuje vybraný ovládací prvek WPF.
 
@@ -80,5 +85,5 @@ Vaše ovládací prvky přímo v jazyce XAML zobrazení můžete odkazovat pomoc
 
 ## <a name="see-also"></a>Viz také
 
-[Panel nástrojů](../../ide/reference/toolbox.md)  
-[Začínáme s WPF](../../designers/getting-started-with-wpf.md)
+- [Panel nástrojů](../../ide/reference/toolbox.md)
+- [Začínáme s WPF](../../designers/getting-started-with-wpf.md)

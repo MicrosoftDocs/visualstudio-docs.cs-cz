@@ -1,5 +1,5 @@
 ---
-title: 'DA0003: Vysoký počet ukázek jádra | Microsoft Docs'
+title: 'Da0003: vysoký počet Ukázek jádra | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -15,32 +15,34 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 508ba3cd803aee877e022d447f061e6e3d495e51
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: aec22a1312ec4b3ee404b9f701f1f34264d79dff
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49894739"
 ---
 # <a name="da0003-many-kernel-samples"></a>DA0003: Vysoký počet ukázek jádra
+
 |||  
 |-|-|  
-|Id pravidla|DA0003|  
+|Id pravidla|DA0003 VYSOKÝ POČET|  
 |Kategorie|Použití nástroje pro profilaci|  
 |Metod profilace|Vzorkování|  
-|Zpráva|Máte vysoký podíl ukázky v režimu jádra. To může znamenat k velkému počtu vstupně-výstupní aktivitu nebo Vysoká rychlost přepínání kontextu. Vezměte v úvahu profilace aplikaci znovu s použitím instrumentace režimu.|  
+|Zpráva|Máte vysoký podíl vzorků v režimu jádra. To může znamenat velký objem vstupně-výstupních operací aktivity nebo vysokou míru přepínání kontextu. Zvažte profilaci vaší aplikace znovu pomocí režimu instrumentace.|  
 |Typ pravidla|Informace o|  
-  
+
 ## <a name="cause"></a>příčina  
- Značná část ukázky zásobníku volání, které byly shromážděny aplikace byly spouštění v režimu jádra. Vezměte v úvahu profilace aplikace pomocí různých metod profilování.  
-  
+ Podstatnou část ukázky zásobníku volání, které byly shromážděny pro aplikaci se spouští v režimu jádra. Zvažte profilaci vaší aplikace pomocí různých metod profilace.  
+
 ## <a name="rule-description"></a>Popis pravidla  
- V systému Windows mohou být provedeny kódu v režimu jádra nebo v uživatelském režimu. (V režimu jádra zkratka privilegovaném režimu.) Pouze nízké úrovně systému kód, jako jsou ovladače zařízení, se spustí v režimu jádra. Aplikace v uživatelském režimu, můžete přejít do režimu jádra k provedení vstupně-výstupních operací, počkejte vlákna nebo proces synchronizace primitiv, anebo systémová volání.  
-  
- Vzorkování je co nejúčinnější, když jsou profilace aplikací, které tráví většinu doba pro jejich pracuje v uživatelském režimu. Počet vzorků, které byly získány při provádění aplikace v režimu jádra, které může naznačovat časté vstupně-výstupních operací nebo může naznačit, že kontext, ve kterém dochází k přepínače. Ani jeden z těchto operací můžete prozkoumat pomocí metody vzorkování. Pokud jsou odebrány příliš mnoho vzorky režimu jádra, nesmí obsahovat data vzorkování dostatek ukázky režimu uživatele je statisticky významný.  
-  
+ Ve Windows lze kód spustit v režimu jádra nebo v uživatelském režimu. (V režimu jádra zkratka privilegovaném režimu.) Pouze nižší úrovně systému kódu, jako jsou ovladače zařízení, se spustí v režimu jádra. Aplikace v uživatelském režimu, můžete přejít do režimu jádra k provádění vstupně-výstupních operací, počkejte podproces nebo proces synchronizace primitiv, nebo proveďte volání systému.  
+
+ Vzorkování je nejúčinnější, když se profilování aplikací, které tráví většinu svého času věnovat práci v uživatelském režimu. Počet vzorků, které byly získány při spouštění aplikace v režimu jádra, které můžete určit časté vstupně-výstupních operací nebo mohou signalizovat tohoto kontextu, ve kterém dochází k přepínači. Ani jeden z těchto operací můžete prozkoumat pomocí metody vzorkování. Pokud příliš mnoho vzorky režimu jádra jsou odebrány, vzorkování dat nemusí obsahovat dostatek uživatelského režimu vzorků statisticky významná.  
+
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení  
- Vezměte v úvahu profilace aplikace znovu pomocí jedné z následujících možností:  
-  
+ Zvažte profilaci vaší aplikace znovu pomocí jedné z následujících možností:  
+
 -   Profilu pomocí metody instrumentace.  
-  
--   Zvýšit míru vzorkování pokusí shromažďovat další ukázky v uživatelském režimu.
+
+-   Zvyšte vzorkovací frekvenci se pokouší shromažďovat další ukázky v uživatelském režimu.

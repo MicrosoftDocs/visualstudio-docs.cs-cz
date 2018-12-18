@@ -18,16 +18,17 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 08756ce33d97e156d63fd873c63d4d6fc282285b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c143016aaec81c65c118923ff9513bb4607353dc
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37120192"
 ---
-# <a name="how-to-localize-a-feature"></a>Postupy: Lokalizace funkce
+# <a name="how-to-localize-a-feature"></a>Postupy: lokalizace funkce
   Ve výchozím nastavení použijte funkci názvy a popisy pevně řetězcové hodnoty. Lokalizace funkce nadpis a popis, nahraďte řetězce výrazy, které odkazují na lokalizované prostředky.  
   
-## <a name="localizing-a-feature"></a>Lokalizace funkce  
+## <a name="localize-a-feature"></a>Lokalizace funkce  
   
 #### <a name="to-localize-a-feature"></a>Chcete-li lokalizace funkce  
   
@@ -43,7 +44,7 @@ ms.lasthandoff: 04/16/2018
   
      Například výchozí funkce zdrojový soubor, zadejte řetězec ID **název** s hodnotou **Moje funkce Title**, a druhý řetězec ID **popis** s hodnotou **Můj popis funkce**. Pro každý soubor lokalizovaný prostředek použít stejné ID používaná v prostředku funkce výchozí řetězec, ale zadat lokalizované řetězce pro hodnoty.  
   
-5.  Po zadání všech hodnot prostředků, otevřete místní nabídku pro funkci (například Feature1.feature) a potom zvolte **Návrhář zobrazení** funkce Otevřít v Návrháři funkce.  
+5.  Po zadání všech hodnot prostředků, otevřete místní nabídku pro funkci (například *Feature1.feature*) a potom zvolte **Návrhář zobrazení** funkce Otevřít v Návrháři funkce.  
   
 6.  O lokalizaci **název** a **popis** pole ve funkci, použijte následující formát pro zadání hodnot v jejich polí:  
   
@@ -53,7 +54,7 @@ ms.lasthandoff: 04/16/2018
   
      Řetězec ID se musí shodovat ty, které se používají v souborech prostředků.  
   
-7.  Zvolte klávesy F5 sestavení a spuštění aplikace.  
+7.  Vyberte **F5** klíč sestavení a spuštění aplikace.  
   
 8.  Ve službě SharePoint, otevřete **Akce webu** nabídce zvolte **nastavení lokality**a pak na **Akce webu** vyberte **spravovat funkce webu** odkaz.  
   
@@ -61,10 +62,9 @@ ms.lasthandoff: 04/16/2018
   
      Funkce lokalizovaný název a popis se zobrazí v aplikaci. Pokud chcete zobrazit lokalizované prostředky, musí mít serveru SharePoint jazyková sada nainstalovaná odpovídající jazykové verze souboru prostředků.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:
  [Lokalizace řešení služby SharePoint](../sharepoint/localizing-sharepoint-solutions.md)   
  [Postupy: Přidání zdrojového souboru](../sharepoint/how-to-add-a-resource-file.md)   
  [Postupy: lokalizace značek ASPX](../sharepoint/how-to-localize-aspx-markup.md)   
- [Postupy: Lokalizace kódu](../sharepoint/how-to-localize-code.md)  
-  
+ [Postupy: lokalizace kódu](../sharepoint/how-to-localize-code.md)  
   

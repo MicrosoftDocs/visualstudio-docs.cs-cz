@@ -1,5 +1,5 @@
 ---
-title: BP_RESOLUTION_DATA | Microsoft Docs
+title: BP_RESOLUTION_DATA | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f76cba8fa2b1ea01a2cbd7670a05b449d476127b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0f7ad3c88f0dd804daba2ee52126c7c6321a2a2b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49876084"
 ---
 # <a name="bpresolutiondata"></a>BP_RESOLUTION_DATA
-Popisuje výsledek vazby dat zarážky.  
+Popisuje výsledek vazby datové zarážky.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,19 +47,19 @@ public struct BP_RESOLUTION_DATA {
   
 ## <a name="members"></a>Členové  
  `bstrDataExpr`  
- Výraz dat, který byl vázán.  
+ Výraz data, která byla vázána.  
   
  `bstrFunc`  
- Název funkce zarážek dat má hranice ve (pokud existuje).  
+ Název funkce datová zarážka má vázán v (pokud existuje).  
   
  `bstrImage`  
- Název modulu (například MyModule.dll), který má vázané Breakpoint – data v.  
+ Název modulu (například MyModule.dll), která má datová zarážka vázána v.  
   
  `dwFlags`  
- Hodnota z [BP_RES_DATA_FLAGS](../../../extensibility/debugger/reference/bp-res-data-flags.md) popisující, jak je implementována zarážek data.  
+ Hodnota z [BP_RES_DATA_FLAGS](../../../extensibility/debugger/reference/bp-res-data-flags.md) výčet popisující, jak je implementovaná datová zarážka.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je členem skupiny [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md) strukturu, která je v zapnout členem [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) struktura vrácený [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)metoda.  
+ Tato struktura je členem skupiny [BP_RESOLUTION_LOCATION](../../../extensibility/debugger/reference/bp-resolution-location.md) strukturou, který je v zapnout člen [BP_RESOLUTION_INFO](../../../extensibility/debugger/reference/bp-resolution-info.md) vrácené struktury [GetResolutionInfo](../../../extensibility/debugger/reference/idebugbreakpointresolution2-getresolutioninfo.md)metody.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

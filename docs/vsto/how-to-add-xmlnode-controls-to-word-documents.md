@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Přidání ovládacích prvků XMLNode do dokumentů aplikace Word | Microsoft Docs'
+title: 'Postupy: Přidání ovládacích prvků XMLNode do dokumentů aplikace Word'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,18 +16,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 4dd214262f66bfa21cdb168e948c70437487761e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: eccdeab67840873a9b40fe52986bd0d4d0b31767
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35254972"
 ---
 # <a name="how-to-add-xmlnode-controls-to-word-documents"></a>Postupy: Přidání ovládacích prvků XMLNode do dokumentů aplikace Word
   **Důležité** informace uvedené v tomto tématu týkající se aplikace Microsoft Word je vidění výhradně pro benefit a použití jednotlivce a organizace, kteří se nacházejí mimo Spojené státy a jeho území nebo který používáte, nebo vývoj programy, které běží na, produkty Microsoft Word, které byly před leden 2010, když Microsoft odebrat implementace konkrétní funkce licencí společnosti Microsoft týkající se vlastní kód XML z aplikace Microsoft Word. Tyto informace týkající se aplikace Microsoft Word nemusí přečteny nebo používány jednotlivce nebo organizace v USA nebo v jeho území, které používáte, nebo vývoj programy, které běží na produkty Microsoft Word, které byly licencí společnosti Microsoft po 10 leden 2010 ; tyto produkty nebudou chovají stejně jako produkty licencované před tímto datem nebo zakoupených a licenci na použití mimo Spojené státy.  
   
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]  
   
- Pokud namapujete bez opakování element schématu XML na dokument aplikace Microsoft Office Word, Visual Studio automaticky přidá <xref:Microsoft.Office.Tools.Word.XMLNode> ovládacího prvku do dokumentu. Informace o mapování opakovaných prvků schématu XML najdete v tématu [postupy: Přidání ovládacích prvků XMLNodes do dokumentů aplikace Word](../vsto/how-to-add-xmlnodes-controls-to-word-documents.md).  
+ Pokud namapujete bez opakování element schématu XML na dokument aplikace Microsoft Office Word, Visual Studio automaticky přidá <xref:Microsoft.Office.Tools.Word.XMLNode> ovládacího prvku do dokumentu. Informace o mapování opakovaných prvků schématu XML najdete v tématu [postupy: Přidání XmlNodes – ovládací prvky do dokumentů aplikace Word](../vsto/how-to-add-xmlnodes-controls-to-word-documents.md).  
   
 > [!NOTE]  
 >  <xref:Microsoft.Office.Tools.Word.XMLNode> Ovládací prvek není k dispozici **sada nástrojů** nebo **zdroje dat** okna a nelze vytvořit prostřednictvím kódu programu.  
@@ -67,9 +68,9 @@ ms.lasthandoff: 04/16/2018
   
      <xref:Microsoft.Office.Tools.Word.XMLNode> Ovládací prvek je vytvořen a přidán do projektu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [XmlNode – ovládací prvek](../vsto/xmlnode-control.md)   
- [Automatizace v aplikaci Word s použitím rozšířených objektů](../vsto/automating-word-by-using-extended-objects.md)   
+ [Automatizace aplikace Word s použitím rozšířených objektů](../vsto/automating-word-by-using-extended-objects.md)   
  [Přehled ovládacích prvků hostitele a hostitelské položky](../vsto/host-items-and-host-controls-overview.md)   
  [Programová omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)  
   

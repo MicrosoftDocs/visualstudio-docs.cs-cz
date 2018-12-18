@@ -1,5 +1,5 @@
 ---
-title: Filtrování zobrazení sestav | Microsoft Docs
+title: Filtrování zobrazení sestav | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -12,85 +12,85 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c613e4b200df0153827fb10013416211a2eb2062
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: bf8e172f6693b4efcff1cfff3eb8c79178bb9f90
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49919166"
 ---
-# <a name="filtering-report-views"></a>Filtrování zobrazení sestav
-Profilace datových souborů profilování data, která se zobrazí v zobrazení výkon sestav a exportují do souborů sestav omezit, můžete použít filtry. Můžete omezit sestavy pro data mezi hodnot časového razítka a můžete omezit data, která mají konkrétní procesy a vlákna. Můžete uložit filtrů do souboru a pak vytvořit filtr na jiný soubor dat profilování importováním filtr.  
+# <a name="filter-report-views"></a>Filtrování zobrazení sestav
+Filtry můžete použít profilování datové soubory pro omezení, která se zobrazí v zobrazení sestav výkonu a exportovat soubory sestav modulu dat profilování. Můžete omezit sestavu pro data mezi hodnot časového razítka a můžete omezit data, která mají konkrétní procesy a vlákna. Můžete uložit filtry do souboru a pak vytvořit filtr na jiný soubor dat profilování importováním uložený filtr.  
   
- Sestavy pro segment čas můžete také omezit pomocí grafického rozhraní časová osa zobrazení souhrnu. V tématu [postupy: filtrování zobrazení sestav ze souhrnné časové osy](../profiling/how-to-filter-report-views-from-the-summary-timeline.md).  
+ Sestavy do časového úseku lze také omezit pomocí grafického časové osy na souhrnné zobrazení. Zobrazit [postupy: filtrování zobrazení sestav ze souhrnné časové osy](../profiling/how-to-filter-report-views-from-the-summary-timeline.md).  
   
- Vyloučit ze sestavy systému a kód třetích stran, najdete v části [postup: Filtr profilace nástroje pro zobrazení sestav k zobrazení pouze můj kód](../profiling/how-to-filter-profiling-tools-report-views-to-display-just-my-code.md)  
+ Vyloučení systému a kód třetích stran ze sestavy, naleznete v tématu [postupy: filtrování profilování nástroje zobrazení sestav k zobrazení pouze můj kód](../profiling/how-to-filter-profiling-tools-report-views-to-display-just-my-code.md)  
   
 ## <a name="procedures"></a>Procedury  
   
-#### <a name="to-create-a-profiler-report-filter"></a>K vytvoření filtru sestav profileru  
+#### <a name="to-create-a-profiler-report-filter"></a>Chcete-li vytvořit filtr sestavy profileru  
   
-1.  Pokud se nezobrazí okno Filtr zobrazení sestav výkonu, klikněte na tlačítko **zobrazit filtru** na panelu nástrojů výkonu zobrazení sestavy.  
+1.  Pokud se nezobrazí okno Filtr zobrazení sestav výkonu, klikněte na tlačítko **zobrazit filtr** na panelu nástrojů zobrazení sestav výkonu.  
   
-     Filtr zobrazení sestav výkonu je tabulka. Každý řádek v tabulce představuje klauzuli filtru. Můžete přidat libovolný počet klauzulí jako chcete filtr.  
+     Filtr zobrazení sestav výkonu je tabulka. Každý řádek v tabulce představuje klauzuli filtru. Můžete přidat tolik klauzule filtru.  
   
-2.  Pro každou klauzuli, který chcete přidat do filtru vyberte nebo zadejte hodnoty do následujících polí řádku.  
+2.  Pro každou klauzuli, která chcete přidat filtr vyberte nebo zadejte hodnoty do následujících polí řádku.  
   
     |Pole|Popis|  
     |-----------|-----------------|  
-    |**Nebo**|Zvolte **a** je-li tuto klauzuli i další klauzule musí být hodnota true pro odpovídat výsledku. Zvolte **nebo** je-li tuto klauzuli nebo další klauzule může být hodnota true pro odpovídat výsledku.|  
-    |**Pole**|Vyberte pole sestavy, které chcete použít v klauzuli filtru ze seznamu zobrazených datová pole.|  
-    |**Operátor**|Vyberte operátor, který určuje vztah, který chcete v klauzuli mezi pole a hodnotu.<br /><br /> = Rovno<br /><br /> <> Nerovná se<br /><br /> < Menší než<br /><br /> > Větší než<br /><br /> < = menší než nebo rovno<br /><br /> > = větší než nebo rovno|  
-    |**Hodnota**|Vyberte nebo zadejte hodnotu, která má být vyhledán. Některá pole seznamu dostupné hodnoty pro pole.|  
+    |**A/nebo**|Zvolte **a** Pokud tuto klauzuli i další klauzule musí být hodnota true pro odpovídat výsledek. Zvolte **nebo** Pokud tuto klauzuli nebo další klauzule může být hodnota true pro odpovídat výsledek.|  
+    |**Pole**|Vyberte pole sestavy použít v klauzuli filtru ze zobrazeného seznamu datových polí.|  
+    |**– Operátor**|Vyberte operátor, který určuje vztah, který chcete v klauzuli mezi pole a hodnotu.<br /><br /> = Rovná se<br /><br /> <> Nerovná se<br /><br /> < Menší než<br /><br /> > Větší než<br /><br /> < = menší než nebo rovno<br /><br /> > = je větší než nebo rovno|  
+    |**Hodnota**|Vyberte nebo zadejte hledaná hodnota. Některá pole jsou uvedeny dostupné hodnoty pro pole.|  
   
-3.  
   
-#### <a name="to-create-a-profiler-report-filter-from-the-marks-report-view"></a>K vytvoření filtru sestav profileru z zobrazení sestavy značky  
+#### <a name="to-create-a-profiler-report-filter-from-the-marks-report-view"></a>Chcete-li vytvořit filtr sestavy profileru v zobrazení sestavy značky  
   
-1.  Vyberte **značky** z **aktuální zobrazení** seznamu na panelu nástrojů výkonu zobrazení sestavy.  
+1. Vyberte **značky** z **aktuální zobrazení** seznamu na panelu nástrojů zobrazení sestav výkonu.  
   
-     Zobrazí se sestava profileru značky.  
+    Zobrazí se sestavy profileru značky.  
   
-2.  Vyberte trasování událostí pro Windows nebo vzorkování i, kterou chcete použít jako výchozí bod sestavy.  
+2. Vyberte trasování událostí pro Windows nebo vzorkování, i, kterou chcete použít jako výchozí bod sestavě.  
   
-3.  Stiskněte a podržte klávesu CTRL a klikněte na událost, která chcete použít jako koncový bod sestavy.  
+3. Stiskněte a podržte klávesu CTRL a klikněte na událost, kterou chcete použít jako koncový bod sestavy.  
   
-4.  Klikněte pravým tlačítkem a pak klikněte na jednu z následujících možností:  
+4. Klikněte pravým tlačítkem a pak klikněte na jednu z následujících možností:  
   
-    -   **Přidat filtr na značky** vytvoří klauzulí filtru, které používají sloupec označit jako pole filtru.  
+   - **Přidat filtr na značky** vytvoří klauzulí filtru, které používají sloupec označit jako pole filtru.  
   
-    -   **Přidat filtr na časová razítka** vytvoří klauzulí filtru, které používají sloupec časového razítka v milisekundách jako pole filtru.  
+   - **Přidat filtr na časová razítka** vytvoří klauzulí filtru, které používají sloupec časového razítka v milisekundách jako pole filtru.  
   
-     Dvě možnosti filtrovat aktuální soubor dat na stejnou počáteční a koncový bod. Buď možnost může být lepší, když exportujete filtr pro použití v jiných sestavách.  
+     Tyto dvě možnosti filtrovat aktuální soubor dat na stejný počáteční a koncový bod. Možnost může být lepší, když exportujete filtru pro použití v jiných sestavách.  
   
-#### <a name="to-load-an-existing-filter-from-a-file"></a>Načtení existující filtru ze souboru  
+#### <a name="to-load-an-existing-filter-from-a-file"></a>Načíst existující filtr ze souboru  
   
-1.  Na panelu nástrojů výkonu zobrazení sestavy, klikněte na tlačítko **filtr pro Import**.  
+1.  V zobrazení sestav výkonu nástrojů, klikněte na **filtru importu**.  
   
-     **Zatížení filtru** se zobrazí dialogové okno.  
+     **Načíst filtr** se zobrazí dialogové okno.  
   
-2.  Zadejte umístění a název souboru filtru (.vspf) načíst.  
+2.  Zadejte umístění a název souboru filtru (.vspf) pro načtení.  
   
-#### <a name="to-execute-a-filter"></a>K provedení filtru  
+#### <a name="to-execute-a-filter"></a>Chcete-li spustit filtr  
   
--   Na panelu nástrojů výkonu zobrazení sestavy, klikněte na tlačítko **spustit filtr**.  
+-   V zobrazení sestav výkonu nástrojů, klikněte na **spustit filtr**.  
   
-#### <a name="to-stop-a-filter-that-is-taking-too-long-to-execute"></a>Chcete-li zastavit filtr, který trvá příliš dlouho provést  
+#### <a name="to-stop-a-filter-that-is-taking-too-long-to-execute"></a>Chcete-li zastavit filtr, který trvá příliš dlouho  
   
--   Na panelu nástrojů výkonu zobrazení sestavy, klikněte na tlačítko **zastavit filtru**.  
+-   V zobrazení sestav výkonu nástrojů, klikněte na **zastavit filtr**.  
   
-#### <a name="to-remove-a-filter-on-a-report-view"></a>Chcete-li odebrat filtr zobrazení sestav  
+#### <a name="to-remove-a-filter-on-a-report-view"></a>Chcete-li odebrat filtr na zobrazení sestavy  
   
-1.  Odstranění řádků z klauzule v filtr zobrazení sestav výkonu.  
+1.  Odstraňte řádky ustanovení filtr zobrazení sestav výkonu.  
   
-2.  Na panelu nástrojů výkonu zobrazení sestavy, klikněte na tlačítko **spustit filtr**.  
+2.  V zobrazení sestav výkonu nástrojů, klikněte na **spustit filtr**.  
   
-#### <a name="to-save-a-filter-to-a-file"></a>Uložení filtru do souboru  
+#### <a name="to-save-a-filter-to-a-file"></a>Do souboru uložit filtr  
   
-1.  Na panelu nástrojů výkonu zobrazení sestavy, klikněte na tlačítko **Exportovat filtr**.  
+1.  V zobrazení sestav výkonu nástrojů, klikněte na **Exportovat filtr**.  
   
-     **Uložit filtru** se zobrazí dialogové okno.  
+     **Uložit filtr** se zobrazí dialogové okno.  
   
-2.  Zadejte umístění a název souboru filtru (.vspf) pro uložení.  
+2.  Zadejte umístění a název souboru filtru (.vspf) Chcete-li uložit.  
   
-## <a name="see-also"></a>Viz také  
- [Zobrazení sestav nástrojů pro přizpůsobení výkonu](../profiling/customizing-performance-tools-report-views.md)
+## <a name="see-also"></a>Viz také:  
+ [Přizpůsobení zobrazení sestav nástrojů pro měření výkonu](../profiling/customizing-performance-tools-report-views.md)

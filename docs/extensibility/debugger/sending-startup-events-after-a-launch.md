@@ -1,5 +1,5 @@
 ---
-title: Odesílání událostí spuštění po spuštění | Microsoft Docs
+title: Odesílání událostí spuštění po spuštění | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,38 +13,39 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d6ffd1a47f4d1d82feecb35110151a8b32d7d245
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 64a2423e3e6900d992ba1a2fafe13f72ab329520
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49927070"
 ---
-# <a name="sending-startup-events-after-a-launch"></a>Odesílání událostí spuštění po spuštění
-Jakmile modul ladění (DE) je připojen k programu, odešle řady událostí spuštění zpět na relaci ladění.  
+# <a name="send-startup-events-after-a-launch"></a>Odesílání událostí spuštění po spuštění
+Jakmile ladicího stroje (DE) je připojen k programu, odesílá řadu událostí spuštění zpět do relace ladění.  
   
- Spuštění událostí odeslaných zpět do relace ladění zahrnují následující:  
+ Po spuštění událostí odeslaných zpět do relace ladění patří:  
   
--   Vytvoření události modulu.  
+- Engine vytvoření události.  
   
--   Událost vytvoření programu.  
+- Událost vytvoření programu.  
   
--   Přístup z více vláken vytváření a události modulu zatížení.  
+- Vlákno, vytváření a události načtení modulu.  
   
--   Událost complete zatížení, odeslána, když kód je načíst a připravené ke spuštění, ale před provedením žádný kód  
+- Načíst událost dokončení, odeslali kód je načten a připravené ke spuštění, ale před provedením jakéhokoli kódu. 
   
-    > [!NOTE]
-    >  Při této události je dál, jsou inicializovány globální proměnné a spusťte spuštění rutiny.  
+  > [!NOTE]
+  >  Při této události pokračuje, globální proměnné jsou inicializovány a spusťte po spuštění rutiny.  
   
--   Možné další vlákna vytváření a události modulu zatížení.  
+- Možný další vlákno, vytváření a události načtení modulu.  
   
--   Vstupní bod událost, která signalizuje, že program bylo dosaženo jeho hlavní vstupní bod, jako **hlavní** nebo `WinMain`. Tato událost se neposílají obvykle, pokud je DE připojí k programu, který je již spuštěna.  
+- Vstupní bod událost, která signalizuje, že program bylo dosaženo hlavní vstupní bod, jako například **hlavní** nebo `WinMain`. Tato událost se neposílají obvykle Pokud DE připojí k programu, který je již spuštěna.  
   
- Prostřednictvím kódu programu, DE poprvé odešle správce ladicí relace (SDM) [IDebugEngineCreateEvent2](../../extensibility/debugger/reference/idebugenginecreateevent2.md) rozhraní, což představuje událost vytvoření modulu, za nímž následuje [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) , která představuje událost vytvoření programu.  
+  Prostřednictvím kódu programu, DE poprvé odešle Správce ladění relace (SDM) [IDebugEngineCreateEvent2](../../extensibility/debugger/reference/idebugenginecreateevent2.md) rozhraní, které představuje událost engine vytvoření, za nímž následuje [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) , která představuje událost vytvoření programu.  
   
- To je obvykle následuje jeden nebo více [IDebugThreadCreateEvent2](../../extensibility/debugger/reference/idebugthreadcreateevent2.md) události vytváření vláken a [IDebugModuleLoadEvent2](../../extensibility/debugger/reference/idebugmoduleloadevent2.md) události modulu zatížení.  
+  Tyto události jsou obvykle následovaného jednou nebo více [IDebugThreadCreateEvent2](../../extensibility/debugger/reference/idebugthreadcreateevent2.md) události vytváření vláken a [IDebugModuleLoadEvent2](../../extensibility/debugger/reference/idebugmoduleloadevent2.md) události načtení modulu.  
   
- Pokud kód je načíst a připravené ke spuštění, ale předtím, než je jakýkoli kód spustí, DE odešle SDM [IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md) událost complete zatížení. Nakonec, pokud ještě není spuštěn program, DE odešle [IDebugEntryPointEvent2](../../extensibility/debugger/reference/idebugentrypointevent2.md) vstupní bod událostí, signalizace, že bylo dosaženo jeho hlavní vstupní bod a je připravený pro ladění program.  
+  Pokud kód je načten a připravené ke spuštění, ale před spuštěním jakéhokoli kódu, DE odešle SDM [IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md) událost dokončení zatížení. Nakonec, pokud dosud není spuštěn program, DE odešle [IDebugEntryPointEvent2](../../extensibility/debugger/reference/idebugentrypointevent2.md) vstupní bod události, signalizaci, že program dosáhla jeho hlavní vstupní bod a je připravený k ladění.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Řízení spouštění](../../extensibility/debugger/control-of-execution.md)   
- [Úlohy ladění](../../extensibility/debugger/debugging-tasks.md)
+ [Ladění úloh](../../extensibility/debugger/debugging-tasks.md)

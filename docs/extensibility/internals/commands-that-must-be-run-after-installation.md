@@ -1,5 +1,5 @@
 ---
-title: Příkazy, které se musí spustit po instalaci | Microsoft Docs
+title: Příkazy, které musí spustit po instalaci | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,24 +13,25 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 84f1651f311fbad7aefe40a2744c61dc7d81725c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 08e1bcf064a8e94af306230e705f686d2d8037c1
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39510703"
 ---
-# <a name="commands-that-must-be-run-after-installation"></a>Příkazy, které se musí spustit po instalaci
-Pokud nasazujete rozšíření prostřednictvím soubor MSI, je nutné spustit `devenv /setup` jako součást instalace v pořadí pro sadu Visual Studio pro zjišťování rozšíření.  
+# <a name="commands-that-must-be-run-after-installation"></a>Příkazy, které musí spustit po instalaci
+Pokud nasazení vašeho rozšíření prostřednictvím *MSI* souboru, je nutné spustit **devenv/Setup** jako součást vaší instalaci sady Visual Studio ke zjištění vašich rozšíření.  
   
 > [!NOTE]
->  Informace v tomto tématu se vztahují na hledání DevEnv s Visual Studio 2008 a starší. Informace o tom, jak zjišťovat DevEnv s novější verzí sady Visual Studio najdete v tématu [zjišťování požadavky na systém](../../extensibility/internals/detecting-system-requirements.md).  
+>  Informace v tomto tématu se vztahují na hledání *devenv.exe* za použití Visual Studio 2008 a starší. Informace o tom, jak zjišťovat *devenv.exe* s novější verzí sady Visual Studio, přečtěte si téma [zjistit požadavky na systém](../../extensibility/internals/detecting-system-requirements.md).  
   
-## <a name="finding-devenvexe"></a>Hledání devenv.exe  
- Můžete vyhledat jednotlivých verzí devenv.exe z registru hodnoty, které [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] zápisu instalační programy pomocí RegLocator tabulka a tabulka AppSearch ukládání hodnoty registru jako vlastnosti. Další informace najdete v tématu [zjišťování požadavky na systém](../../extensibility/internals/detecting-system-requirements.md).  
+## <a name="find-devenvexe"></a>Najít devenv.exe  
+ Můžete najít všechny verze *devenv.exe* z registru hodnot, které [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] instalační programy zápisu, pomocí RegLocator tabulky a AppSearch tabulek pro ukládání hodnot registru jako vlastnosti. Další informace najdete v tématu [zjistit požadavky na systém](../../extensibility/internals/detecting-system-requirements.md).  
   
 ### <a name="reglocator-table-rows-to-locate-devenvexe-from-different-versions-of-visual-studio"></a>Řádky tabulky RegLocator najít devenv.exe z různých verzí sady Visual Studio  
   
-|Signature_|kořenové|Key|Název|Typ|  
+|podpis|Kořenové|Key|Název|Typ|  
 |-----------------|----------|---------|----------|----------|  
 |RL_DevenvExe_2002|2|SOFTWARE\Microsoft\VisualStudio\7.0\Setup\VS|EnvironmentPath|2|  
 |RL_DevenvExe_2003|2|SOFTWARE\Microsoft\VisualStudio\7.1\Setup\VS|EnvironmentPath|2|  
@@ -39,41 +40,42 @@ Pokud nasazujete rozšíření prostřednictvím soubor MSI, je nutné spustit `
   
 ### <a name="appsearch-table-rows-for-corresponding-reglocator-table-rows"></a>Řádky tabulky AppSearch odpovídající RegLocator řádků tabulky  
   
-|Vlastnost|Signature_|  
+|Vlastnost|podpis|  
 |--------------|-----------------|  
 |DEVENV_EXE_2002|RL_DevenvExe_2002|  
 |DEVENV_EXE_2003|RL_DevenvExe_2003|  
 |DEVENV_EXE_2005|RL_DevenvExe_2005|  
 |DEVENV_EXE_2008|RL_DevenvExe_2008|  
   
- Například instalační program sady Visual Studio zapíše hodnotu registru **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0\Setup\VS\EnvironmentPath** jako **C:\VS2008\Common7\IDE\devenv.exe**, kompletní cesta ke spustitelnému souboru, musíte spustit instalační program.  
+ Například instalačního programu sady Visual Studio zapíše hodnotu registru **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0\Setup\VS\EnvironmentPath** jako *C:\VS2008\Common7\IDE\devenv.exe*, úplnou cestu ke spustitelnému souboru, musíte spustit instalační program.  
   
- **Poznámka:** ho, protože sloupec typu RegLocator 2, není potřeba zadat další informace o verzi v tabulce podpis.  
+> [!NOTE]
+> Protože typ sloupce tabulky RegLocator je 2, není nutné zadat další informace o verzi v tabulce podpis.  
   
-## <a name="running-devenvexe"></a>Spuštění devenv.exe  
- Každou vlastnost v tabulce AppSearch po AppSearch standardní akce spustí v instalačním programu, má hodnotu odkazující na soubor devenv.exe pro odpovídající verzi sady Visual Studio. Některé z hodnot registru, pokud nejsou zadány – vzhledem k tomu, že tato verze sady Visual Studio není nainstalována – zadanou vlastnost nastavena na hodnotu null.  
+## <a name="run-devenvexe"></a>Spuštěním devenv.exe  
+ Každou vlastnost v tabulce AppSearch i po AppSearch standardních akcí spuštění v instalačním programu, obsahuje hodnotu přejdete *devenv.exe* soubor pro odpovídající verzi sady Visual Studio. Jakoukoliv hodnotu registru, pokud nejsou k dispozici, protože není nainstalována verze sady Visual Studio – zadaná vlastnost je nastavena na hodnotu null.  
   
- Instalační služba systému Windows podporuje spuštění na kterou odkazuje vlastnost spustitelný soubor pomocí vlastní akce zadejte 50. Vlastní akce by měla obsahovat možnosti spuštění ve skriptu, msidbCustomActionTypeInScript (1024) a msidbCustomActionTypeCommit (512) k zajištění, že VSPackage byla úspěšně nainstalována před integrace do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Další informace najdete v tématu CustomAction tabulky a možnosti spuštění vlastní akce ve skriptu.  
+ Spuštění spustitelného souboru, na kterou odkazuje vlastnost prostřednictvím vlastní akci podporuje instalační služby systému Windows zadejte 50. Vlastní akce by měla zahrnovat možnosti spuštění ve skriptu, `msidbCustomActionTypeInScript` (1024) a `msidbCustomActionTypeCommit` (512) k zajištění, že sady VSPackage byla úspěšně nainstalována před integrací do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Další informace najdete v tématu [CustomAction tabulky](https://docs.microsoft.com/windows/desktop/msi/customaction-table) a [možnosti spuštění ve skriptu vlastní akce](https://docs.microsoft.com/windows/desktop/msi/custom-action-in-script-execution-options).  
   
- Vlastní akce typu 50 určovat vlastnost obsahující spustitelného souboru jako hodnotu zdrojový sloupec a argumenty příkazového řádku v cílový sloupec.  
+ Vlastní akce typu 50 určovat vlastnost obsahující spustitelný soubor jako hodnotu zdrojový sloupec a argumenty příkazového řádku v cílový sloupec.  
   
 ### <a name="customaction-table-rows-to-run-devenvexe"></a>Řádky tabulky CustomAction ke spuštění devenv.exe  
   
-|Akce|Typ|Zdroj|cíl|  
+|Akce|Typ|Zdroj|Cíl|  
 |------------|----------|------------|------------|  
 |CA_RunDevenv2002|1586|DEVENV_EXE_2002|/ Setup|  
 |CA_RunDevenv2003|1586|DEVENV_EXE_2003|/ Setup|  
 |CA_RunDevenv2005|1586|DEVENV_EXE_2005|/ Setup|  
 |CA_RunDevenv2008|1586|DEVENV_EXE_2008|/ Setup|  
   
- Vlastní akce musí být vytvořené do tabulky InstallExecuteSequence k jejich plánování pro spuštění během instalace. Použijte k odpovídající vlastnost v každém řádku sloupce podmínky brání provedení vlastní akce se spustit, pokud tuto verzi [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] není nainstalovaná v systému.  
+ Vlastní akce musí být vytvořen do tabulky InstallExecuteSequence naplánovat pro provedení během instalace. Použijte odpovídající vlastnost v jednotlivých řádcích sloupce podmínka zabráníte tak případnému vlastní akci spuštění jestli verzi [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] není nainstalovaná v systému.  
   
 > [!NOTE]
->  `Null` vyhodnocení vlastnosti `False` při použití v podmínkách.  
+>  Vlastnosti s hodnotou Null vyhodnotit `False` při použití v podmínkách.  
   
- Hodnota pořadí sloupce pro každý vlastní akce závisí na jiné hodnoty sekvence na balíček Instalační služby systému Windows. Pořadí hodnoty by měly být tak, aby vlastní akce devenv.exe spustit jako nejblíže bezprostředně před parametr InstallFinalize standardní akce.  
+ Hodnota pořadí sloupce pro všechny vlastní akce závisí na jiné pořadí hodnoty v balíčku Instalační služby systému Windows. Měly by být hodnoty pořadí tak, aby *devenv.exe* vlastní akce Spustit jako nejblíže bezprostředně před parametr InstallFinalize standardních akcí.  
   
-### <a name="installexecutesequence-table-to-schedule-the-devenvexe-custom-actions"></a>Tabulka InstallExecuteSequence při plánování devenv.exe vlastní akce  
+### <a name="installexecutesequence-table-to-schedule-the-devenvexe-custom-actions"></a>Tabulka InstallExecuteSequence naplánování devenv.exe vlastní akce  
   
 |Akce|Podmínka|Pořadí|  
 |------------|---------------|--------------|  
@@ -82,5 +84,5 @@ Pokud nasazujete rozšíření prostřednictvím soubor MSI, je nutné spustit `
 |CA_RunDevenv2005|DEVENV_EXE_2005|6605|  
 |CA_RunDevenv2008|DEVENV_EXE_2008|6608|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Instalace balíčků VSPackage pomocí Instalační služby systému Windows](../../extensibility/internals/installing-vspackages-with-windows-installer.md)

@@ -1,5 +1,5 @@
 ---
-title: GuidSymbol Element | Microsoft Docs
+title: Guidsymbol – Element | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,18 +14,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6d5e3a3f4d33e166d344669dbeb4bc1a877335f0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 16e7a1b84a6baa26b69545b3fa55e4434e5998f3
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39500066"
 ---
-# <a name="guidsymbol-element"></a>GuidSymbol Element
-`GuidSymbol` Element obsahuje identifikátor GUID, které odpovídá páru GUID:ID představující nabídky, skupinu nebo příkaz. ID pochází z `IDSymbol` element v `GuidSymbol` elementu. `GuidSymbol` Element má `name` atribut, který poskytuje popisný název pro identifikátor GUID, který je součástí `value` atribut.  
+# <a name="guidsymbol-element"></a>Guidsymbol – element
+`GuidSymbol` Prvek obsahuje GUID GUID:ID pár, který představuje nabídky, skupiny nebo příkaz. ID pochází z `IDSymbol` prvek `GuidSymbol` elementu. `GuidSymbol` Element má `name` atribut, který poskytuje popisný název pro identifikátor GUID, který je součástí `value` atribut.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```xml  
 <GuidSymbol name="guidMyCommandSet" value="{xxxxxxxxxxxxx-xxxx-xxxx-xxxxxxxxxxxx}">  
   <IDSymbol>... </IDSymbol>  
   <IDSymbol>... </IDSymbol>  
@@ -40,22 +41,22 @@ ms.lasthandoff: 04/16/2018
 |Atribut|Popis|  
 |---------------|-----------------|  
 |name|Požadováno. Název symbolu identifikátor GUID.|  
-|value|Požadováno. Identifikátor GUID GUID symbolu.|  
+|value|Požadováno. Identifikátor GUID symbol identifikátor GUID.|  
   
-### <a name="child-elements"></a>Podřízené elementy  
-  
-|Prvek|Popis|  
-|-------------|-----------------|  
-|[IDSymbol – element](../extensibility/idsymbol-element.md)|Obsahuje ID, které odpovídá páru GUID:ID představující nabídky, skupinu nebo příkaz.|  
-  
-### <a name="parent-elements"></a>Nadřazené elementy  
+### <a name="child-elements"></a>Podřízené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|[Symbols – element](../extensibility/symbols-element.md)|Skupiny `GuidSymbol` elementů v souboru .vsct.|  
+|[Idsymbol – element](../extensibility/idsymbol-element.md)|Obsahuje ID GUID:ID pár, který představuje nabídky, skupiny nebo příkaz.|  
+  
+### <a name="parent-elements"></a>Nadřazené prvky  
+  
+|Prvek|Popis|  
+|-------------|-----------------|  
+|[Symbols – element](../extensibility/symbols-element.md)|Skupiny `GuidSymbol` prvky *.vsct* souboru.|  
   
 ## <a name="remarks"></a>Poznámky  
- Obvykle soubor .vsct obsahuje tři `GuidSymbol` elementů v jeho `Symbols` části, jeden pro balíček sám sebe, jednu pro sadu příkazů (shromažďování nabídek, skupiny a příkazy, které zpřístupní balíčku) a jeden pro rastrové obrázky, které poskytují ikony pro tlačítek a jiných vizuální součásti. Každý `IDSymbol` element v danou `GuidSymbol` element musí mít jedinečnou `value`. Ale `IDSymbol` prvky, které mají stejné hodnoty může existovat v balíčku, dokud mají jiné nadřazené položky.  
+ Obvykle *.vsct* soubor obsahuje tři `GuidSymbol` prvků v jeho `Symbols` části, z nich je pro balíček samotné, jeden pro sadu příkazů (kolekce nabídky, skupiny a příkazy, že balíček je k dispozici) a jeden pro rastrové obrázky, které poskytují ikony pro tlačítka a další vizuální komponenty. Každý `IDSymbol` element v danou `GuidSymbol` element musí mít jedinečný `value`. Ale `IDSymbol` prvky, které mají stejné hodnoty může existovat v balíčku tak dlouho, dokud mají jiné nadřazené položky.  
   
-## <a name="see-also"></a>Viz také  
- [Soubory tabulek příkazů sady Visual Studio (.Vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+## <a name="see-also"></a>Viz také:  
+ [Soubory tabulky (.vsct) příkaz pro Visual Studio](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

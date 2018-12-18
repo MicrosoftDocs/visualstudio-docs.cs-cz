@@ -1,0 +1,47 @@
+---
+title: Upgrade projektů testů jednotek
+ms.date: 11/15/2016
+ms.prod: visual-studio-dev14
+ms.technology: vs-devops-test
+ms.topic: conceptual
+ms.assetid: f1502b51-d6db-4894-9fbf-4a5723e4bb1a
+caps.latest.revision: 8
+ms.author: gewarren
+manager: douge
+ms.openlocfilehash: 29ff603e17ed16cfdff8ef9423746c2c7be50555
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
+ms.translationtype: MT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053341"
+---
+# <a name="upgrade-visual-studio-2010-unit-test-projects"></a>Upgrade projektů testů jednotek sady Visual Studio 2010
+[!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
+
+[!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] obsahuje testovací projekt kompatibilitu s [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] projekty testů s aktualizací SP1. Například testovací projekty, které jste vytvořili pomocí [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] SP1 lze otevřít pomocí [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] bez jakéhokoli upgradu. Proto může váš tým používat obě [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] SP1 a [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] pro práci s stejné testovací projekt. Další informace najdete v tématu [upgradování testů ze sady Visual Studio 2010](http://msdn.microsoft.com/en-us/e9c8b7f6-bd72-448e-8edb-d090dcc5cf52).
+
+ [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] zavádí několik změn pro testování částí. Z důvodů těchto změn je důležité pochopit, problémy s kompatibilitou mezi předchozí verze sady Visual Studio a [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)]. Mezi změny do testování jednotek je významnou změnu, která [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)] obsahuje více než jedna šablona projektu testů, včetně šablona projektu testů jednotek. Nové jednotkové testy jsou přidány do nové šablony projektu testů jednotek. Jednotkové testy mohou být součástí jiné nové šablony projektu testu nazývá šablona projekt programového testu uživatelského rozhraní. Další informace o nové šablony projektu testu, naleznete v tématu [upgradování testů ze starších verzí sady Visual Studio](http://msdn.microsoft.com/en-us/e9c8b7f6-bd72-448e-8edb-d090dcc5cf52). Nové projekty testů jednotek již obsahovat soubor nastavení testu ve výchozím nastavení. Vyloučením soubor nastavení testu zlepšuje výkon testování částí. Z důvodu kompatibility můžete stále použít existující projekty testů, které jste vytvořili pomocí sady Visual Studio 2010. Doporučujeme však, že odeberete soubor nastavení testu, který je spojený s projektem testů z důvodů výkonu, pokud nemáte konkrétní požadavky pro soubor nastavení testu. Můžete například zachovat soubor nastavení testu, je-li spustit testování částí v distribuovaném prostředí, nebo potřebujete shromažďovat konkrétní diagnostická data. Pokud máte podobné Internetu věcí a potřebovali pomocí nové šablony projektu testu jednotky nebo programových testů UI šablony projektu, můžete ručně přidat soubor nastavení testu k nim také.
+
+> [!NOTE]
+>  Testy jednotky existující v vaše [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] SP1 testovací projekty budou fungovat bez problémů mezi [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)] SP1 a [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)]. Nebudou provedeny žádné změny v souborech projektu testu při otevření sady Visual Studio 2010 testovací projekt obsahující testování částí v [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)], nebo naopak.
+
+> [!CAUTION]
+>  Nejde otevřít Visual Studio 2010 a C + +/ CLI projektu tohoto cíle 11.0 nástrojů – to znamená, že projekt vytvořený v sadě Visual Studio 2012. Toto omezení platí pro všechny C + +/ CLI projekty, není právě C + +/ CLI projektů testů jednotek.
+
+> [!NOTE]
+>  Můžete spustit nové jednotkové testy použití vstest.console.exe z příkazového řádku. Další informace o použití vstest.console.exe naleznete v tématu [možnosti příkazového řádku VSTest.Console.exe](http://msdn.microsoft.com/library/52e1689d-b1a8-4589-bd98-99a55acd0a11), nebo spusťte příkaz s použitím přepínače nápovědy: **vstest.console.exe /?**. Můžete nadále spouštět existující testy jednotek pomocí MStest.exe. Další informace najdete v tématu [spuštění automatizovaných testů z příkazového řádku pomocí Mstestu](http://msdn.microsoft.com/library/39b61ad0-0055-44b5-963f-25d8a6b51581) a [možnosti příkazového řádku MSTest.exe](http://msdn.microsoft.com/library/8813ba7f-e790-4e92-9f91-7080508a1c36).
+
+ Další významné změnou je nový Průzkumníka testů. V [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)], některé z testování windows je možné, že znáte z předchozí verze sady Visual Studio jsou zastaralé, jako je například v okně zobrazení testu. Průzkumník testů je navržená pro lepší podporu vývojářů a týmů, které začlenily testování jednotek v svých praktik vývoje. Další informace najdete v tématu [spouštění testů jednotek pomocí Průzkumníka testů](../test/run-unit-tests-with-test-explorer.md).
+
+## <a name="compatibility-issues-between-visual-studio-2010-sp1-and-visual-studio-2012"></a>Problémy s kompatibilitou mezi Visual Studio 2010 SP1 a Visual Studio 2012
+ Tady jsou některé problémy, je potřeba vědět při migraci testování částí mezi Visual Studio 2010 SP1 a [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)]:
+
+|Funkce testování částí|Problém|Řešení|
+|-----------------------------|-----------|--------------|
+|Seznamy testů (.vsmdi soubory) se považují za zastaralé v [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)].|Už budete moct vytvořit nové seznamy testů (.vsmdi soubory) nebo spusťte seznamy testů ze sady Visual Studio. **Tip:** kategorie testů poskytují větší flexibilitu než seznamy testů z předchozích verzí sady Microsoft Visual Studio. Pomocí kategorií testu můžete použít logické operátory, společně spuštění testů z více kategorií nebo omezení spouštěných testů, které náleží do několika kategorií. Kategorie testů jsou také snadné přidat, protože jsou vytvářeny testovací metody a není nutné udržovat seznamy testů poté, co jsou vytvořeny testovací metody. Při použití kategorií testů, není nutné k vrácení se změnami a rezervovat  **\<název_řešení > .vsmdi** soubor, který udržuje seznamy testů. Další informace najdete v tématu [Defining Test Categories to Group Your Tests](http://msdn.microsoft.com/library/2c26a648-f068-4d60-99b6-b9747b7bdbc9).|– Pokud chcete zachovat kompatibilitu s existující projekty testů, které používají seznamy testů, jsou stále moct upravovat soubory .vsmdi pomocí sady Visual Studio.<br />– I když se seznamy testů migrované z nelze spustit pomocí sady Visual Studio, můžete nadále spouštět je pomocí mstest.exe z příkazového řádku. Další informace najdete v tématu [spuštění automatizovaných testů z příkazového řádku pomocí Mstestu](http://msdn.microsoft.com/library/39b61ad0-0055-44b5-963f-25d8a6b51581)<br />– Pokud jste používali seznam testů v definici sestavení, můžete nadále používat ho. Další informace najdete v tématu [postupy: Konfigurace a spuštění naplánované testy po sestavení aplikace](http://msdn.microsoft.com/en-us/32acfeb1-b1aa-4afb-8cfe-cc209e6183fd) a [spuštění testů v procesu sestavení](http://msdn.microsoft.com/library/d05743a1-c5cf-447e-bed9-bed3cb595e38).|
+|Privátní přístupové objekty jsou zastaralé v [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)].<br /><br /> V předchozích verzích sady Visual Studio, můžete použít Publicize zadejte interní aplikace programovací rozhraní (API) a vytvořit protějšek veřejné rozhraní API, které můžete volat v testech, které by naopak, provede volání do interní rozhraní API produktu. K vytvoření zástupné procedury testu a generovat fragment kódu uvnitř této zástupné procedury můžete pak použít generování kódu.|Jste již nebude moci vytvořit privátní přístupové objekty.|<ul><li>Projekty testů Visual Studio 2010 se zkompilovat a pracovat [!INCLUDE[vs_dev11_long](../includes/vs-dev11-long-md.md)]. Sestavení bude obsahovat výstupní upozornění.</li><li>Pokud je stále potřeba testovat interních rozhraních API, máte tyto možnosti:<br /><br /> <ul><li>Použití <xref:Microsoft.VisualStudio.TestTools.UnitTesting.PrivateObject> třídy, které pomáhají při přístupu k interní a privátní rozhraní API ve vašem kódu. Se nachází v Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll sestavení.</li><li>Vytvoření reflexe rozhraní, které by se měl odrážet mimo váš kód pro přístup k rozhraní API pro interní nebo privátní.</li><li>Pokud je kód, který se pokoušíte získat přístup k interní, může být mít přístup k vašemu rozhraní API pomocí <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> tak váš testovací kód může mít přístup k interním rozhraním API.</li></ul></li></ul>|
+|Dopad testu je odebrán.|||
+|Sdílení výsledků spuštění prostřednictvím TRX protokoly z Průzkumníka testů.||Stále můžete směrovat protokoly TRX z příkazového řádku i Team Build.|
+
+## <a name="see-also"></a>Viz také
+ [Přenosy, migrace a upgrade projektů sady Visual Studio](../porting/porting-migrating-and-upgrading-visual-studio-projects.md) [testování částí kódu](../test/unit-test-your-code.md) [upgradování testů ze starších verzí sady Visual Studio](http://msdn.microsoft.com/en-us/e9c8b7f6-bd72-448e-8edb-d090dcc5cf52) [upgrade programových testů UI z Visual Studio 2010](../test/upgrading-coded-ui-tests-from-visual-studio-2010.md)

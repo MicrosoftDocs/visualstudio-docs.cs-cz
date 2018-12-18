@@ -9,14 +9,16 @@ ms.assetid: 61107da9-7fa3-4dba-b101-ae46536f52c4
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6adcdd2d1bead72c1ff615731aa26be664f1f455
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d102bdf20349d6bd4efdecd1c460f1e46646eb37
+ms.sourcegitcommit: e9d1018a01af62c3dc5aeb6b325faba7e20bd496
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37089335"
 ---
 # <a name="how-to-add-validation-to-entity-classes"></a>Postupy: přidávání ověření do tříd entit
 *Ověřování* tříd entit je proces ověření, že hodnot zadaných do datových objektů v souladu s omezeními ve schématu objektu a také pravidel stanovených pro aplikaci. Ověřování dat, ještě před odesláním aktualizací do základní databáze je dobrým zvykem, která snižuje chyby. Také snižuje potenciální počet odezev mezi aplikace a databáze.
@@ -24,18 +26,18 @@ ms.lasthandoff: 04/19/2018
  [Technologie LINQ to SQL nástroje v sadě Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md) poskytuje částečné metody, které uživatelům umožňují rozšířit návrhářem generovaný kód, který spouští při vložení, aktualizace a odstraní dokončení entit a také během a po jednotlivých sloupců změny.
 
 > [!NOTE]
->  Toto téma obsahuje základní kroky pro přidání ověření do tříd entit s použitím [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]. Vzhledem k tomu může být obtížné tyto obecné pokyny, bez ohledu na konkrétní entitu třídu, bylo zadáno návod, který používá skutečná data.
+>  Toto téma obsahuje základní kroky pro přidání ověření do tříd entit s použitím **Návrhář relací objektů**. Vzhledem k tomu může být obtížné tyto obecné pokyny, bez ohledu na konkrétní entitu třídu, je k dispozici návod, který používá skutečná data.
 
-## <a name="adding-validation-for-changes-to-the-value-in-a-specific-column"></a>Přidání ověřování pro změny na hodnotu v určitém sloupci
- Tento postup ukazuje, jak ověřit data při změně hodnoty ve sloupci. Protože ověřování se provádí v definici třídy (místo v uživatelském rozhraní) je vyvolána výjimka, pokud hodnota způsobí selhání ověření. Implementace zpracování chyb pro kód ve vaší aplikaci, která se pokusí změnit hodnoty ve sloupcích.
+## <a name="add-validation-for-changes-to-the-value-in-a-specific-column"></a>Přidat ověřování změny na hodnotu v určitém sloupci
+ Tento postup ukazuje, jak ověřit data při změně hodnoty ve sloupci. Protože ověřování se provádí v definici třídy (místo v uživatelském rozhraní), je vyvolána výjimka, pokud hodnota způsobí selhání ověření. Implementace zpracování chyb pro kód ve vaší aplikaci, která se pokusí změnit hodnoty ve sloupcích.
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-#### <a name="to-validate-data-during-a-columns-value-change"></a>Ověřit data během změna hodnoty sloupci
+### <a name="to-validate-data-during-a-columns-value-change"></a>Ověřit data během změna hodnoty sloupci
 
-1.  Otevřít nebo vytvořit nové technologie LINQ to SQL třídy souboru (**dbml** souboru) v [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]. (Dvakrát klikněte **dbml** souboru v **Průzkumníku řešení**.)
+1.  Otevřít nebo vytvořit nové technologie LINQ to SQL třídy souboru (**dbml** souboru) v **Návrhář relací objektů**. (Dvakrát klikněte **dbml** souboru v **Průzkumníku řešení**.)
 
-2.  V Návrháři relací objektů klikněte pravým tlačítkem na třídu, pro který chcete přidat ověřování a potom klikněte na **kód zobrazení**.
+2.  V **Návrhář relací objektů**, klikněte pravým tlačítkem na třídu, pro který chcete přidat ověřování a potom klikněte na **kód zobrazení**.
 
      Otevře se Editor kódu s konkrétní třídu pro třídu vybrané entity.
 
@@ -71,17 +73,17 @@ ms.lasthandoff: 04/19/2018
         }
     ```
 
-## <a name="adding-validation-for-updates-to-an-entity-class"></a>Přidání ověřování aktualizací pro třídu Entity
+## <a name="add-validation-for-updates-to-an-entity-class"></a>Přidat ověřování aktualizací třídu Entity
  Kromě kontroly hodnoty během změny, můžete také ověřit data, když je proveden pokus o aktualizaci třídu úplnou entitu. Ověření při pokusu o aktualizaci můžete porovnat hodnoty do více sloupců, pokud to vyžadují obchodní pravidla. Následující postup ukazuje, jak ověřit, pokud je proveden pokus o aktualizaci třídu úplnou entitu.
 
 > [!NOTE]
 >  Kód pro ověření aktualizací k dokončení tříd entit, které se spouštějí v tom s částečným <xref:System.Data.Linq.DataContext> – třída (místo v třídu třídy konkrétní entity).
 
-#### <a name="to-validate-data-during-an-update-to-an-entity-class"></a>Ověřit data během aktualizace třídu entity
+### <a name="to-validate-data-during-an-update-to-an-entity-class"></a>Ověřit data během aktualizace třídu entity
 
-1.  Otevřít nebo vytvořit nové technologie LINQ to SQL třídy souboru (**dbml** souboru) v [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]. (Dvakrát klikněte **dbml** souboru v **Průzkumníku řešení**.)
+1.  Otevřít nebo vytvořit nové technologie LINQ to SQL třídy souboru (**dbml** souboru) v **Návrhář relací objektů**. (Dvakrát klikněte **dbml** souboru v **Průzkumníku řešení**.)
 
-2.  Klikněte pravým tlačítkem myši na prázdnou oblast na Návrhář relací objektů a klikněte na tlačítko **kód zobrazení**.
+2.  Klikněte pravým tlačítkem na prázdnou oblast na **Návrhář relací objektů** a klikněte na tlačítko **kód zobrazení**.
 
      Editor kódu otevře pro konkrétní třídu `DataContext`.
 
@@ -106,7 +108,7 @@ ms.lasthandoff: 04/19/2018
 
     Pro projekty C#:
 
-    Protože projektů C# nevydávají automaticky obslužné rutiny událostí, IntelliSense můžete vytvořit s částečným `UpdateCLASSNAME` metoda. Typ `partial` a pak prostor pro přístup k seznamu dostupných částečné metody. Klikněte na tlačítko metodu aktualizace pro třídy, které chcete přidat ověřování. Kód, který se vygeneruje, když vyberete se podobá následující kód `UpdateCLASSNAME` částečné metoda:
+    Protože projektů C# nevydávají automaticky obslužné rutiny událostí, IntelliSense můžete vytvořit s částečným `UpdateCLASSNAME` metoda. Typ `partial` a pak prostor pro přístup k seznamu dostupných částečné metody. Klikněte na tlačítko aktualizační metody pro třídu, na který chcete přidat ověřování. Kód, který se vygeneruje, když vyberete se podobá následující kód `UpdateCLASSNAME` částečné metoda:
 
     ```csharp
     partial void UpdateCLASSNAME(CLASSNAME instance)
@@ -119,7 +121,7 @@ ms.lasthandoff: 04/19/2018
     }
     ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Technologie LINQ to SQL nástroje v sadě Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
 - [Ověřování dat](../data-tools/validate-data-in-datasets.md)

@@ -1,6 +1,7 @@
 ---
-title: Pomocí překrytí izolovat aplikace pro testování v sadě Visual Studio částí | Microsoft Docs
+title: Izolace aplikace pro testování částí pomocí Překryvné ovladače
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: gewarren
@@ -8,27 +9,32 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 22c22328c0c9a34c783dd00f61f4b6c791c3507d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b94852b15891566bdfc38dd3fd8de9e706f38737
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53065607"
 ---
-# <a name="use-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing"></a>Izolace aplikace od ostatních sestavení pro testování částí pomocí překrytí
+# <a name="use-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing"></a>Izolace aplikace od jiných sestavení pomocí testů shim za účelem testování částí
 
-**Kód Shim typy** jsou jedním z dvě technologie, které systém Fakes Microsoft použije k vám umožní snadno izolovat součásti testovaného z prostředí. Překrytí přesměrovat volání konkrétní metody kód, který zapisuje jako součást svůj test. Mnoho způsobů vrátí odlišné výsledky závislé na externí podmínkách, ale doplňkový kód je pod kontrolou svůj test a konzistentní výsledky při každém volání můžete vrátit. Jednodušší testů k zápisu.
+**Typy překrýt** jsou jedním ze dvou technologií, které architektura Fakes Microsoft používá k vám umožní snadno izolovat komponenty v rámci testu z prostředí. Překrytí rozdělení volání konkrétní metody do kódu, který píšete v rámci testu. Mnoho metod vrátit různé výsledky závislé na externích podmínky, ale překrytí je pod kontrolou vašeho testu a může vrátit konzistentní výsledky při každém volání. Jednodušší testy k zápisu.
 
- Izolace kódu ze sestavení, které nejsou součástí vašeho řešení pomocí překrytí. Součástí řešení od sebe navzájem izolovat, doporučujeme použít zástupných procedur.
+Překryvné ovladače použijte k izolování váš kód ze sestavení, které nejsou součástí vašeho řešení. Součástí vašeho řešení od sebe navzájem izolovat, doporučujeme použít zástupné procedury.
 
- Přehled a rychle začít pokyny, najdete v části [izolace kódu v rámci testu s Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md)
+Přehled a rychlý start pokyny, najdete v části [izolace testovaného kódu pomocí Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md)
 
- **Požadavky**
+**Požadavky**
 
 -   Visual Studio Enterprise
+-   Rozhraní .NET Framework projektu
+
+> [!NOTE]
+> Projekty .NET standard teď nejsou podporovány.
 
 ## <a name="example-the-y2k-bug"></a>Příklad: Určená chyb
 
-Pojďme se metoda, která vyvolá výjimku na 1. ledna 2000:
+Pojďme se na metodu, která vyvolá výjimku v 1. ledna 2000:
 
 ```csharp
 // code under test
@@ -40,38 +46,38 @@ public static class Y2KChecker {
 }
 ```
 
- Testování tato metoda je problematické, protože program závisí na `DateTime.Now`, metodu, která závisí na počítači je taktovací, prostředí závislé metoda není deterministický. Kromě toho `DateTime.Now` je pomocí statické vlastnosti, takže se zakázaným inzerováním typu nelze použít v tomto poli. Tento problém je symptomatických problému izolace v testování částí: programy, které se obtížně jednotky přímo volání do rozhraní API, databáze komunikovat s webovými službami a tak dále, testování, protože jejich logiku závisí na prostředí.
+Testování tato metoda je problematický, protože program závisí na `DateTime.Now`, metodu, která závisí na počítači uživatele hodiny, prostředí závislé Nedeterministický metody. Kromě toho `DateTime.Now` je statická vlastnost, typ podložení se tady nedá použít. Tento problém je napraveny izolace problém v testování částí: testování programy, které je těžké jednotky přímo volat rozhraní API, databáze komunikovat s webovými službami a tak dále, protože jejich logiku závisí na prostředí.
 
- To je, kde má být použito shim typy. Typy Shim poskytují mechanismus obcházejí libovolné metody delegáta uživatelské rozhraní .NET. Shim typy jsou kód vygenerovaná generátorem Fakes a delegáti, které typy shim nazýváme, používají k určení nového implementace metody.
+Toto je použití typy překrytí. Typy překrytí poskytují mechanismus pro předání libovolnou metodu .NET do uživatelsky definovaného delegáta. Typy překrytí jsou kódu generovaných generátor falešného a delegáty, které říkáme typy překrytí, používají k určení implementací nových metod.
 
- Následující test ukazuje, jak chcete použít typ shim `ShimDateTime`, aby vlastní implementaci DateTime.Now:
+Následující testovací ukazuje, jak používat překrývající typ `ShimDateTime`, poskytnout vlastní implementaci DateTime.Now:
 
 ```csharp
 //unit test code
 // create a ShimsContext cleans up shims
-using (ShimsContext.Create()
+using (ShimsContext.Create()) {
     // hook delegate to the shim method to redirect DateTime.Now
     // to return January 1st of 2000
     ShimDateTime.NowGet = () => new DateTime(2000, 1, 1);
     Y2KChecker.Check();
 }
-
 ```
 
-##  <a name="BKMK_Fakes_requirements"></a> Jak používat překrytí
+##  <a name="how-to-use-shims"></a>Jak použít překrytí
 
-###  <a name="AddFakes"></a> Přidat Fakes sestavení
+###  <a name="AddFakes"></a> Přidání napodobeniny sestavení
 
-1.  V Průzkumníku řešení rozbalte vašeho projektu testování částí **odkazy**.
+1.  V **Průzkumníka řešení**, rozbalte položku projektu jednotkového testu **odkazy**.
 
-    -   Pokud pracujete v jazyce Visual Basic, je nutné vybrat **zobrazit všechny soubory** v panelu nástrojů Průzkumníka řešení, chcete-li zobrazit seznam odkazů.
+    -   Pokud pracujete v jazyce Visual Basic, vyberte **zobrazit všechny soubory** v **Průzkumníka řešení** nástrojů, chcete-li zobrazit **odkazy** uzlu.
 
-2.  Vyberte sestavení, které obsahuje definice třídy, pro které chcete vytvořit překrytí. Například pokud chcete na kód shim data a času, vyberte System.dll
+2.  Vyberte sestavení, která obsahuje definice třídy, pro které chcete vytvořit Překryvné ovladače. Například, pokud chcete překrýt **data a času**vyberte **System.dll**.
 
-3.  V místní nabídce vyberte **přidat Fakes sestavení**.
+3.  V místní nabídce zvolte **přidat napodobeniny sestavení**.
 
 ###  <a name="ShimsContext"></a> Použití ShimsContext
- Při použití shim typy v částí unit test framework, musíte zabalit testovacího kódu v `ShimsContext` k řízení životnost vaší překrytí. Pokud jsme to nebyla vyžadují, by vaše překrytí poslední dokud vypnout domény aplikace. Nejjednodušší způsob, jak vytvořit `ShimsContext` je pomocí statické `Create()` metoda, jak je znázorněno v následujícím kódu:
+
+Pokud používáte typy překrytí v rozhraní testování částí, musíte zabalit testovací kód ve `ShimsContext` řídit dobu životnosti vašeho překrytí. Pokud nebyla potřeba se to, by vaše překrytí naposledy až do ukončení domény aplikace. Nejjednodušší způsob, jak vytvořit `ShimsContext` je pomocí statické `Create()` způsob, jak je znázorněno v následujícím kódu:
 
 ```csharp
 //unit test code
@@ -81,13 +87,13 @@ public void Y2kCheckerTest() {
     ...
   } // clear all shims
 }
-
 ```
 
- Je důležité k správně uvolnění každý shim kontext. Jak pravidlo, vždy volání `ShimsContext.Create` uvnitř `using` příkaz zajistit správné mažou registrované překrytí. Například může zaregistrovat shim pro metodu test, který nahrazuje `DateTime.Now` metoda s delegáta, který vždy vrátí hodnotu první z ledna 2000. Pokud zapomenete vymazat shimu registrované v metodě test, zbytek testovacím běhu by vždy vrátí hodnotu první z ledna 2000 jako DateTime.Now. To může být překvapivé a matoucí.
+Je velmi důležité správně dispose každý kontext překrytí. Jako říci, vždy volejte `ShimsContext.Create` uvnitř `using` příkaz k zajištění řádné vymazání registrované překrytí. Například může zaregistrovat překrytí pro testovací metodu, která nahrazuje `DateTime.Now` metoda s delegátem, která vždy vrátí 1 z ledna 2000. Pokud zapomenete vymazat shimu registrované v testovací metodě, zbytek testovacího běhu by vždy vrátí hodnotu prvním z ledna 2000 jako DateTime.Now. To může být překvapivé a chaoticky.
 
-###  <a name="WriteShims"></a> Zápis testu s překrytí
- V testovacího kódu, vložte *detour* pro metodu, kterou chcete zfalšovat. Příklad:
+###  <a name="WriteShims"></a> Napsat test s překrytími
+
+V kódu testu, Vložit *odklonit* pro metodu, kterou chcete simulovat. Příklad:
 
 ```csharp
 [TestClass]
@@ -118,7 +124,6 @@ public class TestClass1
             }
         }
 }
-
 ```
 
 ```vb
@@ -147,19 +152,21 @@ Public Class TestClass1
 End Class
 ```
 
- Názvy tříd Shim jsou vytvořeny pomocí prefixu `Fakes.Shim` na původní název typu.
+Názvy tříd překrytí jsou tvořeny vložením prefixu `Fakes.Shim` k původnímu názvu typu.
 
- Překrytí práce vložením *detours* do kódu aplikace v rámci testu. Bez ohledu na dojde k volání metody původní, provede systém Fakes detour, tak, aby namísto volání skutečné metoda, se nazývá kód shim.
+Překrytí pracovní vložením *soubory balíčku detours* do kódu aplikace v rámci testu. Bez ohledu na to dojde k volání na původní metodu, Fakes systém provede náhradní proces, takže místo volání real – metoda je volána kód shim.
 
- Všimněte si, že jsou detours vytvořena a odstranit v době běhu. Vždy je nutné vytvořit detour v rámci dobu životnosti `ShimsContext`. Při uvolnění, budou odebrány všechny překrytí, kterou jste vytvořili, zatímco byla aktivní. Nejlepší způsob, jak to udělat je uvnitř `using` příkaz.
+Všimněte si, že soubory balíčku detours se vytvoří a odstraní v době běhu. Je nutné vytvořit vždy náhradního procesu v rámci životnosti `ShimsContext`. Když je odstraněn, se odeberou všechny překrytí, který jste vytvořili, zatímco byla aktivní. Je nejlepší způsob, jak to provést uvnitř `using` příkazu.
 
- Můžete se setkat sestavení chyba oznamující, že Fakes obor názvů neexistuje. Tato chyba se zobrazí někdy, když existují další chyby kompilace. Odstraňte ostatní chyby a bude zmizí.
+Můžete se setkat sestavení chyba s informacemi o tom, že obor názvů rozhraní Fakes neexistuje. Tato chyba se zobrazí někdy, když existují další chyby při kompilaci. Odstraňte ostatní chyby a bude zmizí.
 
-##  <a name="BKMK_Shim_basics"></a> Překrytí pro různé druhy metody
- Typy Shim umožňují nahraďte jakoukoli metodou .NET, včetně statické metody nebo bez virtuální metody s vlastními delegáti.
+##  <a name="BKMK_Shim_basics"></a> Překrytí pro různé druhy metod
+
+Typy překrytí umožňují nahradit libovolnou metodu .NET, včetně statických metod nebo nevirtuálních metodách, s vlastní delegáty.
 
 ###  <a name="BKMK_Static_methods"></a> Statické metody
- Vlastnosti, které chcete přiřadit statické metody překrytí jsou umístěny v typu shim. Každou vlastnost obsahuje pouze nastavení, která slouží k připojení k cílové metody delegáta. Například zadána třída `MyClass` s statickou metodu `MyMethod`:
+
+Vlastnosti připojení překrytí pro statické metody jsou umístěny v typu překrytí. Každá vlastnost má pouze setter, který slouží k připojení k cílové metody delegáta. Mějme například třídy `MyClass` statickou metodou `MyMethod`:
 
 ```csharp
 //code under test
@@ -170,7 +177,7 @@ public static class MyClass {
 }
 ```
 
- Jsme můžete připojit shim k `MyMethod` které vždy vrátí hodnotu 5:
+Doporučujeme připojit překrytí, aby `MyMethod` , která vždy vrátí hodnotu 5:
 
 ```csharp
 // unit test code
@@ -178,7 +185,8 @@ ShimMyClass.MyMethod = () =>5;
 ```
 
 ###  <a name="BKMK_Instance_methods__for_all_instances_"></a> Instance metody (pro všechny instance)
- Podobně jako na statické metody instance metody můžete shimmed pro všechny instance. Vlastnosti připojení těchto překrytí jsou umístěny v vnořené typ s názvem AllInstances k zamezení nejasnostem. Například zadána třída `MyClass` s metodou instance `MyMethod`:
+
+Podobně pro statické metody, metody instance můžete překrýt pro všemi instancemi. Vlastnosti připojení těchto překrytí jsou umístěny ve vnořených typech AllInstances, aby nedocházelo k záměnám s názvem. Mějme například třídy `MyClass` s metodou instance `MyMethod`:
 
 ```csharp
 // code under test
@@ -189,14 +197,14 @@ public class MyClass {
 }
 ```
 
- Je možné připojit shim k `MyMethod` které vždy vrátí hodnotu 5, bez ohledu na instanci:
+Můžete připojit k překrytí `MyMethod` , která vždy vrátí hodnotu 5, bez ohledu na to, instance:
 
 ```csharp
 // unit test code
 ShimMyClass.AllInstances.MyMethod = () => 5;
 ```
 
- Vygenerovaný typ strukturu ShimMyClass vypadá následující kód:
+Generovaný typ struktury ShimMyClass bude vypadat jako v následujícím kódu:
 
 ```csharp
 // Fakes generated code
@@ -211,12 +219,13 @@ public class ShimMyClass : ShimBase<MyClass> {
 }
 ```
 
- Všimněte si, že Fakes v takovém případě předá runtime instance jako první argument delegáta.
+Všimněte si, že napodobenin v tomto případě předává instancí modulu runtime jako první argument delegáta.
 
 ###  <a name="BKMK_Instance_methods__for_one_instance_"></a> Instance metody (pro jednu instanci modulu runtime)
- Instance metody lze také shimmed podle různých delegáti, podle příjemce volání. To umožňuje stejnou metodu instance do mají různé chování na instanci typu. Vlastnosti, které chcete nastavit tyto překrytí způsoby instance samotného typu shim. Každý typ instancí shim je taky přiřazený k nezpracované instanci shimmed typu.
 
- Například zadána třída `MyClass` s metodou instance `MyMethod`:
+Instance metody lze také překrýt podle různých delegáty, založené na straně příjmu volání. Díky tomu stejné instance metoda může mít jiné chování za instanci typu. Vlastnosti, které chcete nastavit tyto překrytí jsou metody instance samotného typu překrytí. Každá instance překrývající typ je také přidružen nezpracovaná instanci překryté typu.
+
+Mějme například třídy `MyClass` s metodou instance `MyMethod`:
 
 ```csharp
 // code under test
@@ -227,7 +236,7 @@ public class MyClass {
 }
 ```
 
- Dva typy shim MyMethod jsme můžete nastavit tak, aby první z nich vždy vrátí hodnotu 5 a druhý vždy vrátí 10:
+Můžeme nastavit dva typy překrytí MyMethod tak, že první z nich vždy vrátí hodnotu 5 a druhá vždy vrátí 10:
 
 ```csharp
 // unit test code
@@ -238,7 +247,7 @@ var myClass1 = new ShimMyClass()
 var myClass2 = new ShimMyClass { MyMethod = () => 10 };
 ```
 
- Vygenerovaný typ strukturu ShimMyClass vypadá následující kód:
+Generovaný typ struktury ShimMyClass bude vypadat jako v následujícím kódu:
 
 ```csharp
 // Fakes generated code
@@ -256,7 +265,7 @@ public class ShimMyClass : ShimBase<MyClass> {
 }
 ```
 
- Vlastnost Instance se dá dostat instance shimmed skutečný typ:
+Skutečný typ metodám instance je přístupný prostřednictvím vlastnosti Instance:
 
 ```csharp
 // unit test code
@@ -264,7 +273,7 @@ var shim = new ShimMyClass();
 var instance = shim.Instance;
 ```
 
- Typ shim také obsahuje implicitní převod na typ shimmed, takže můžete obvykle stačí použít typ shim, jako je:
+Překrývající typ má také implicitní převod na typ překryté, takže můžete obvykle stačí použít typ překrytí, jako je:
 
 ```csharp
 // unit test code
@@ -274,7 +283,8 @@ MyClass instance = shim; // implicit cast retrieves the runtime
 ```
 
 ###  <a name="BKMK_Constructors"></a> Konstruktory
- Konstruktory můžete také shimmed Chcete-li přiřadit shim typy budoucí objekty. Každý konstruktor je k dispozici jako statickou metodu konstruktor typu shim. Například zadána třída `MyClass` s konstruktor trvá celé číslo:
+
+Aby bylo možné připojit typy překrytí na budoucí objekty můžete také překrýt konstruktory. Každý konstruktor je vystavena jako statickou metodu konstruktor v typu překrytí. Mějme například třída `MyClass` se konstruktor, který přebírá celé číslo:
 
 ```csharp
 // code under test
@@ -286,7 +296,7 @@ public class MyClass {
 }
 ```
 
- Nastaví typ shim konstruktoru tak, že všechny budoucí instance vrátí -5, když je vyvolán získá hodnotu, bez ohledu na hodnotu v konstruktoru:
+Nastavíme typ překrytí konstruktoru tak, že každá další instance vrátí -5, když uživatel vyvolá získá hodnotu, bez ohledu na hodnotu v konstruktoru:
 
 ```csharp
 // unit test code
@@ -297,7 +307,7 @@ ShimMyClass.ConstructorInt32 = (@this, value) => {
 };
 ```
 
- Každý typ shim zpřístupní dva konstruktory. Výchozí konstruktor musí být použit, je potřeba novou instanci, při konstruktor trvá shimmed instance jako argument by měly být použity pouze konstruktor překrytí:
+Každý typ překrytí poskytuje dva konstruktory. Výchozí konstruktor byste měli použít, když je nezbytné nové instanci a konstruktor, který přebírá překryté instanci jako argument by měly být použity v překrytí pro konstruktor:
 
 ```csharp
 // unit test code
@@ -305,7 +315,7 @@ public ShimMyClass() { }
 public ShimMyClass(MyClass instance) : base(instance) { }
 ```
 
- Vygenerovaný typ strukturu ShimMyClass se podobá následující kód:
+Generovaný typ struktury ShimMyClass vypadá podobně jako následující kód:
 
 ```csharp
 // Fakes generated code
@@ -323,10 +333,11 @@ public class ShimMyClass : ShimBase<MyClass>
 }
 ```
 
-###  <a name="BKMK_Base_members"></a> Základní členy
- Vlastnosti shim základní členů přístupná pomocí vytváření shim pro základní typ a předáním instance podřízené jako parametr konstruktoru shim základní třídy.
+###  <a name="BKMK_Base_members"></a> Základní členové
 
- Například zadána třída `MyBase` s metodou instance `MyMethod` a podtypem `MyChild`:
+Překrytí vlastností základních členů je možný vytváření překrytí pro základní typ a předáním instance podřízené jako parametr do konstruktoru třídy základní překrytí.
+
+Mějme například třídy `MyBase` s metodou instance `MyMethod` a podtyp `MyChild`:
 
 ```csharp
 public abstract class MyBase {
@@ -337,10 +348,9 @@ public abstract class MyBase {
 
 public class MyChild : MyBase {
 }
-
 ```
 
- Nemůžeme nastavit shim z `MyBase` tak, že vytvoříte novou `ShimMyBase` shim:
+Můžeme nastavit překrytí `MyBase` vytvořením nového `ShimMyBase` překrytí:
 
 ```csharp
 // unit test code
@@ -348,9 +358,9 @@ var child = new ShimMyChild();
 new ShimMyBase(child) { MyMethod = () => 5 };
 ```
 
- Všimněte si, že je podřízený typ shim implicitně převést na podřízené instance, kdy jako parametr předaný konstruktoru základní shim.
+Všimněte si, že je podřízený typ překrytí implicitně převeden na podřízené instance, kdy jako parametr předán konstruktoru základní překrytí.
 
- Vygenerovaný typ strukturu ShimMyChild a ShimMyBase se podobá následující kód:
+Generovaný typ struktury ShimMyChild a ShimMyBase vypadá podobně jako následující kód:
 
 ```csharp
 // Fakes generated code
@@ -367,18 +377,22 @@ public class ShimMyBase : ShimBase<MyBase> {
 ```
 
 ###  <a name="BKMK_Static_constructors"></a> Statické konstruktory
- Typy Shim vystavit statickou metodu `StaticConstructor` na kód shim statického konstruktoru typu. Vzhledem k tomu, že statické konstruktory provedení po pouze, budete muset Ujistěte se, že je shimu dřív, než kteréhokoli člena typu přistupuje.
+
+Typy překrytí vystavit statickou metodu `StaticConstructor` na kód shim statického konstruktoru typu. Protože statické konstruktory jsou spouštěny, když potřebujete pouze, ujistěte se, že shimu je dřív, než přistupuje kteréhokoli člena typu.
 
 ###  <a name="BKMK_Finalizers"></a> Finalizační metody
- Finalizační metody nejsou podporovány v napodobeniny.
+
+Napodobeniny nepodporují finalizační metody.
 
 ###  <a name="BKMK_Private_methods"></a> Privátní metody
- Vytvoří generátor kódu Fakes shim vlastnosti pro privátní metody, které mít pouze viditelných typů v podpisu, který je, parametry a návratový typ viditelné.
 
-###  <a name="BKMK_Binding_interfaces"></a> Rozhraní vazby
- Když shimmed typ implementuje rozhraní, generátor kódu vysílá metodu, která umožňuje vytvořit vazbu všechny členy z tohoto rozhraní najednou.
+Generátor falešného kódu vytvoří vlastnosti překrytí pro privátní metody, které mají pouze viditelné typy v podpisu, to znamená, typy parametrů a návratový typ viditelný.
 
- Například zadána třída `MyClass` , která implementuje `IEnumerable<int>`:
+###  <a name="BKMK_Binding_interfaces"></a> Vazba rozhraní
+
+Když překryté typ implementuje rozhraní, generátor kódu generuje metodu, která umožňuje vytvořit vazbu všech členů z rozhraní najednou.
+
+Mějme například třídy `MyClass` , který implementuje `IEnumerable<int>`:
 
 ```csharp
 public class MyClass : IEnumerable<int> {
@@ -387,19 +401,17 @@ public class MyClass : IEnumerable<int> {
     }
     ...
 }
-
 ```
 
- Jsme můžete kód shim implementace `IEnumerable<int>` v MyClass voláním metody Bind:
+Jsme překrýt implementace `IEnumerable<int>` v MyClass pomocí volání metody Bind:
 
 ```csharp
 // unit test code
 var shimMyClass = new ShimMyClass();
 shimMyClass.Bind(new List<int> { 1, 2, 3 });
-
 ```
 
- Vygenerovaný typ strukturu ShimMyClass se podobá následující kód:
+Generovaný typ struktury ShimMyClass vypadá podobně jako následující kód:
 
 ```csharp
 // Fakes generated code
@@ -408,25 +420,24 @@ public class ShimMyClass : ShimBase<MyClass> {
         ...
     }
 }
-
 ```
 
-##  <a name="BKMK_Changing_the_default_behavior"></a> Změna výchozího chování
- Každý typ generovaného shim obsahuje instanci `IShimBehavior` rozhraní, prostřednictvím `ShimBase<T>.InstanceBehavior` vlastnost. Chování je použít vždy, když klient volá instanci členu, který nebyl shimmed explicitně.
+##  <a name="change-the-default-behavior"></a>Změnit výchozí chování
 
- Pokud chování není explicitně nastavena, používá instanci vrácený statických `ShimsBehaviors.Current` vlastnost. Ve výchozím nastavení, tato vlastnost vrací chování, které vyvolá `NotImplementedException` výjimka.
+Každý generovaný překrývající typ obsahuje instanci `IShimBehavior` prostřednictvím rozhraní `ShimBase<T>.InstanceBehavior` vlastnost. Chování slouží pokaždé, když klient volá člen instance, která nebyla výslovně překrýt.
 
- Toto chování lze změnit kdykoli nastavením `InstanceBehavior` vlastnost na jakoukoli instanci shim. Například následující fragment kódu změny shimu chování, neprovede se žádná nebo výchozí hodnotu návratový typ vrátí – to znamená, default(T):
+Pokud chování nebylo nastaveno explicitně, použije instance vrácené statickou `ShimsBehaviors.Current` vlastnost. Ve výchozím nastavení, vrátí tato vlastnost chování, které se vyvolá `NotImplementedException` výjimky.
+
+Toto chování můžete kdykoli změnit tak, že nastavíte `InstanceBehavior` vlastnost na jakoukoli instanci překrytí. Například následující fragment kódu změní překrytí pro chování, které nic nedělá nebo vrací výchozí hodnotu návratového typu – to znamená, default(T):
 
 ```csharp
 // unit test code
 var shim = new ShimMyClass();
 //return default(T) or do nothing
 shim.InstanceBehavior = ShimsBehaviors.DefaultValue;
-
 ```
 
- Chování lze také změnit globálně pro všechny instance shimmed pro kterou `InstanceBehavior` vlastnost nebyla nastavena explicitně nastavením statických `ShimsBehaviors.Current` vlastnost:
+Chování lze také změnit globálně pro všechny instance překryté pro kterou `InstanceBehavior` vlastnost nebyla nastavena explicitně nastavením statické `ShimsBehaviors.Current` vlastnost:
 
 ```csharp
 // unit test code
@@ -434,11 +445,11 @@ shim.InstanceBehavior = ShimsBehaviors.DefaultValue;
 // where the behavior has not been set
 ShimsBehaviors.Current =
     ShimsBehaviors.DefaultValue;
-
 ```
 
-##  <a name="BKMK_Detecting_environment_accesses"></a> Přistupuje k zjišťuje prostředí
- Je možné připojit chování pro všechny členy, včetně statické metody třídy konkrétní typ přiřazením `ShimsBehaviors.NotImplemented` chování statickou vlastnost `Behavior` příslušného typu shim:
+##  <a name="detect-environment-accesses"></a>Zjištění přístupy do prostředí
+
+Je možné připojit chování u všech členů, včetně statických metod určitého typu pomocí přiřazení `ShimsBehaviors.NotImplemented` chování statickou vlastnost `Behavior` pro odpovídající typ překrytí:
 
 ```csharp
 // unit test code
@@ -446,16 +457,17 @@ ShimsBehaviors.Current =
 ShimMyClass.Behavior = ShimsBehaviors.NotImplemented;
 // shorthand
 ShimMyClass.BehaveAsNotImplemented();
-
 ```
 
-##  <a name="BKMK_Concurrency"></a> Souběžnosti
- Typy Shim platí pro všechna vlákna do domény aplikace a nemají spřažení vláken. Toto je důležité fakt, pokud budete chtít použít test runner, které podporují souběžnosti: testy zahrnující typy shim nelze spustit souběžně. Tato vlastnost není vynucená modulem Fakes runtime.
+##  <a name="BKMK_Concurrency"></a> souběžnost
 
-##  <a name="BKMK_Calling_the_original_method_from_the_shim_method"></a> Volání metody původní z metody shim
- Představte si, že jsme chtěli po ověření názvu souboru předaný metodě ve skutečnosti zápis textu do systému souborů. V takovém případě by chceme volat metodu původní uprostřed metodu shim.
+Typy překrytí platí pro všechna vlákna v doméně aplikace a nemají spřažení vláken. To je důležité skutečnosti, pokud máte v plánu pomocí nástroje test runner, které podporují souběžnosti: zahrnující typy překrytí testy nelze spustit souběžně. Tato vlastnost není vynucena napodobeninu knihovny runtime.
 
- Prvním přístupem k vyřešení tohoto problému je zabalit volání původní metody delegáta pomocí a `ShimsContext.ExecuteWithoutShims()` jako v následujícím kódu:
+##  <a name="call-the-original-method-from-the-shim-method"></a>Volat metodu původní metodou překrytí
+
+Představte si, že jsme chtěli po ověření názvu souboru předaný metodě skutečně vypsání textu do systému souborů. V takovém případě by chcete volat metodu původní uprostřed metodu překrytí.
+
+První postup pro vyřešení tohoto problému je zabalit volání na původní metodu pomocí delegáta a `ShimsContext.ExecuteWithoutShims()` stejně jako v následujícím kódu:
 
 ```csharp
 // unit test code
@@ -467,10 +479,9 @@ ShimFile.WriteAllTextStringString = (fileName, content) => {
       Console.WriteLine("leave");
   });
 };
-
 ```
 
- Další možností je nastavit shim hodnotu null, zavolejte metodu původní a obnovení shimu.
+Další možností je nastavit překrytí, aby s hodnotou null, zavolejte metodu původní a obnovení překrytí.
 
 ```csharp
 // unit test code
@@ -494,10 +505,11 @@ ShimFile.WriteAllTextStringString = shim;
 ```
 
 ##  <a name="BKMK_Limitations"></a> Omezení
- Překrytí nelze použít na všechny typy v knihovně .NET základní třída **mscorlib** a **systému**.
 
-## <a name="see-also"></a>Viz také
+Překrytí nelze použít na všechny typy z knihovny základních tříd .NET **mscorlib** a **systému**.
 
-- [Izolace testovaného kódu pomocí zástupného rozhraní Microsoft](../test/isolating-code-under-test-with-microsoft-fakes.md)
-- [Blog Petr Provost: Visual Studio 2012 překrytí](http://www.peterprovost.org/blog/2012/04/25/visual-studio-11-fakes-part-2)
-- [Video (1 hod 16): testování Untestable kódu pomocí zástupného rozhraní v sadě Visual Studio 2012](http://go.microsoft.com/fwlink/?LinkId=261837)
+## <a name="see-also"></a>Viz také:
+
+- [Izolace testovaného kódu pomocí Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md)
+- [Peter Provost blog: překrytí Visual Studio 2012](http://www.peterprovost.org/blog/2012/04/25/visual-studio-11-fakes-part-2)
+- [Video (1 hodina 16): testování untestable kódu pomocí zástupného rozhraní v sadě Visual Studio 2012](http://go.microsoft.com/fwlink/?LinkId=261837)

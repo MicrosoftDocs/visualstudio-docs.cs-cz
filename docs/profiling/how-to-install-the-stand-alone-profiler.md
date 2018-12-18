@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Instalace samostatného profileru | Microsoft Docs'
+title: 'Postupy: Instalace samostatného Profiler | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -13,46 +13,47 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 21a285c95e3649cc7aaa53995070091f0abea509
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 55c9e7c6ec4a34d59c45b2a56abedaa6d3fd2974
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942438"
 ---
 # <a name="how-to-install-the-stand-alone-profiler"></a>Postupy: Instalace samostatného profileru
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] poskytuje příkazového řádku na základě samostatného profileru, která se může spustit bez instalace [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE. Tato situace nastane, když počítač není nebo nemůže mít nainstalované prostředí pro vývoj. Například byste neměli instalovat prostředí pro vývoj na webovém serveru produkční.  
+[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] poskytuje příkazový řádek na základě samostatného profileru, který můžete spustit bez nutnosti instalace [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] integrovaného vývojového prostředí. Tato situace nastane, pokud počítač není nebo nemůže mít nainstalované prostředí pro vývoj. Například byste neměli instalovat prostředí pro vývoj na produkčním webovém serveru.  
   
 > [!NOTE]
->  Při použití samostatného profileru ke shromažďování dat výkonu pro ASP.NET Web, [VSPerfASPNetCmd](../profiling/vsperfaspnetcmd.md) nástroj řádku, se doporučuje namísto [VSPerfCmd](../profiling/vsperfcmd.md) nástroj.  
+>  Při použití samostatného profileru pro shromažďování dat pro webový server ASP.NET, [VSPerfASPNetCmd](../profiling/vsperfaspnetcmd.md) čára se doporučuje přes [VSPerfCmd](../profiling/vsperfcmd.md) nástroj.  
   
 ### <a name="to-install-the-stand-alone-profiler"></a>Instalace samostatného profileru  
   
-1.  Vyhledejte instalační program samostatné profilu (vs_profiler.exe) na [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] instalačním médiu v adresáři, který zahrnuje \Standalone profileru cestu a potom ho spusťte.  
+1. Vyhledejte instalační program samostatné profilu (*vs_profiler.exe*) na [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] instalačního média do adresáře, který zahrnuje *\Standalone Profiler* cestu a potom ho spusťte.  
   
-2.  Přidejte cesty pro vsintr.exe a msdis150.dll do systémové cesty.  
+2. Přidání cesty pro *vsintr.exe* a *msdis150.dll* do systémové cesty.  
   
-    > [!NOTE]
-    >  Ve výchozí instalaci [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], vsinstr.exe a msdis150.dll se nacházejí v \Program Files\Visual Studio 10\Team nástroje Tools.  
+   > [!NOTE]
+   >  Ve výchozí instalaci [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], *vsinstr.exe* a *msdis150.dll* jsou umístěny v *\Program Files\Visual nástroje nástroje Studio 10\Team*.  
   
-3.  Na příkazovém řádku zadejte **vsinstr –**.  
+3. Na příkazovém řádku zadejte **VSInstr**.  
   
-    > [!NOTE]
-    >  Pokud se zobrazí informace o využití pro vsinstr.exe, vše, co je správně nastavena. Pokud se zobrazí chyba s oznámením vsinstr.exe nebo jeden z jejich závislých nebyl nalezen, ujistěte se, že máte vaší cesty nastavit správně, jak je popsáno v kroku 2.  
+   > [!NOTE]
+   >  Pokud se zobrazí informace o využití pro vsinstr.exe, všechno je správně nastavené. Pokud se zobrazí chyba s oznámením vsinstr.exe nebo některá z jeho závislostí nebyla nalezena, ujistěte se, že máte vaší cesty nastavena správně, jak je popsáno v kroku 2.  
   
-4.  Nastavení serveru symbol nastavením vašeho **_NT_SYMBOL_PATH** proměnnou **symsrv\*symsrv.dll\*c:\localcache\*http://msdl.microsoft.com/download/symbols**  
+4. Nastavit server symbolů tak, že nastavíte váš **_NT_SYMBOL_PATH** proměnnou **symsrv\*symsrv.dll\*c:\localcache\*http://msdl.microsoft.com/download/symbols**  
   
-5.  Po nastavení serveru symbol pomocí proměnných prostředí systému spuštění příkazového řádku profileru nástrojů v příkazovém řádku nový. To umožňuje nové proměnné prostředí se projeví. V okně příkazového řádku zadejte následující příkaz:  
+5. Po nastavení serveru symbolů pomocí proměnných prostředí systému spuštění příkazového řádku profileru nástroje z nového příkazového řádku. To umožňuje nové proměnné prostředí se projeví. V okně příkazového řádku zadejte následující příkaz:  
   
-     **spuštění % COMSPEC %**  
+    **spuštění COMSPEC %**  
   
-    > [!NOTE]
-    >  Podrobné pokyny o tom, jak nastavit balíček symbol serveru najdete v tématu [postupy: odkaz na informace o symbolech Windows](../profiling/how-to-reference-windows-symbol-information.md).  
+   > [!NOTE]
+   >  Podrobné pokyny o tom, jak nastavit server balíčku symbolů najdete v tématu [jak: informace o symbolech Windows odkaz](../profiling/how-to-reference-windows-symbol-information.md).  
   
-6.  Použití [vsperfreport –](../profiling/vsperfreport.md) nástroj k serializaci vaší symboly do souboru profilování dat (.vsp). Použití **vsperfreport – /summary:all /packsymbols** přepínače. Pokud nemáte symboly vložit v datovém souboru, ujistěte se, že máte nastavení proměnné prostředí _NT_SYMBOL_PATH.  
+6. Použití [VSPerfReport](../profiling/vsperfreport.md) nástroj pro serializaci symbolů do souboru dat profilování (.vsp). Použití **Summary VSPerfReport/packsymbols** přepínače. Pokud nemáte symboly vložen do vašeho datového souboru, ujistěte se, že máte nastavení proměnné prostředí _NT_SYMBOL_PATH.  
   
-## <a name="see-also"></a>Viz také  
- [Profilace z příkazového řádku](../profiling/using-the-profiling-tools-from-the-command-line.md)   
+## <a name="see-also"></a>Viz také:  
+ [Profil z příkazového řádku](../profiling/using-the-profiling-tools-from-the-command-line.md)   
  [Návod: Profilace z příkazového řádku pomocí vzorkování](../profiling/walkthrough-command-line-profiling-using-sampling.md)   
  [Návod: Profilace z příkazového řádku pomocí instrumentace](../profiling/walkthrough-command-line-profiling-using-instrumentation.md)   
- [Postupy: referenční informace o symbolech Windows](../profiling/how-to-reference-windows-symbol-information.md)   
+ [Postupy: informace o symbolech Windows odkaz](../profiling/how-to-reference-windows-symbol-information.md)   
  [VSPerfReport](../profiling/vsperfreport.md)

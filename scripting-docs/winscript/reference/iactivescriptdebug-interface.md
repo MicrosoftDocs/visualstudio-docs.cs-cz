@@ -1,40 +1,41 @@
 ---
-title: "Iactivescriptdebug – rozhraní | Microsoft Docs"
-ms.custom: 
+title: Iactivescriptdebug – rozhraní | Dokumentace Microsoftu
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IActiveScriptDebug interface
 ms.assetid: e3e28cba-ee08-4a52-973a-b74be488c348
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a1e1d0c1cf51c63f1bb3fcd90ae72520da907e50
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 0e21f4c99da886bc4907acf8b0934e1b46d57689
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942085"
 ---
 # <a name="iactivescriptdebug-interface"></a>IActiveScriptDebug – rozhraní
-Implementováno modulem skriptovacích strojů, že podpora ladění. Obvykle objekt, který implementuje `IActiveScriptDebug` rozhraní také implementuje `IActiveScript` rozhraní. Pokud je to tento případ, volání `IActiveScript::QueryInterface` metoda získat `IActiveScriptDebug` rozhraní.  
+Implementované skriptovacích strojů ukládaných tuto podporu ladění. Obvykle, objekt, který implementuje `IActiveScriptDebug` rozhraní také implementuje `IActiveScript` rozhraní. Pokud tomu tak, `IActiveScript::QueryInterface` metodu k získání `IActiveScriptDebug` rozhraní.  
   
- `IActiveScriptDebug` Rozhraní poskytuje možnosti pro:  
+ `IActiveScriptDebug` Rozhraní poskytuje prostředky pro:  
   
--   Inteligentního hostitele s převzetím správy dokumentu.  
+- Inteligentní hostitele s převzetím správy dokumentu.  
   
--   Správce ladění proces synchronizace ladění více skriptovacích strojů.  
+- Správce ladění procesu synchronizace ladění více skriptovací stroje.  
   
- Kromě metod zděděno z `IUnknown`, `IActiveScriptDebug` rozhraní poskytuje následující metody.  
+  Kromě metod zděděných z `IUnknown`, `IActiveScriptDebug` rozhraní poskytuje následující metody.  
   
 ## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[IActiveScriptDebug::GetScriptTextAttributes](../../winscript/reference/iactivescriptdebug-getscripttextattributes.md)|Vrátí text atributy bloku libovolný text skriptu.|  
-|[IActiveScriptDebug::GetScriptletTextAttributes](../../winscript/reference/iactivescriptdebug-getscriptlettextattributes.md)|Vrací atributy textu pro libovolný skriptlet.|  
-|[IActiveScriptDebug::EnumCodeContextsOfPosition](../../winscript/reference/iactivescriptdebug-enumcodecontextsofposition.md)|Deleguje `IDebugDocumentContext::EnumCodeContexts`.|
+|[IActiveScriptDebug::GetScriptTextAttributes](../../winscript/reference/iactivescriptdebug-getscripttextattributes.md)|Vrátí text atributy pro libovolný blok textu skriptu.|  
+|[IActiveScriptDebug::GetScriptletTextAttributes](../../winscript/reference/iactivescriptdebug-getscriptlettextattributes.md)|Vrátí text atributy pro libovolného skriptletu.|  
+|[IActiveScriptDebug::EnumCodeContextsOfPosition](../../winscript/reference/iactivescriptdebug-enumcodecontextsofposition.md)|Deleguje se do `IDebugDocumentContext::EnumCodeContexts`.|

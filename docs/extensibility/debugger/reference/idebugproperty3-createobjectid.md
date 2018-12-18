@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty3::CreateObjectID | Microsoft Docs
+title: IDebugProperty3::CreateObjectID | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: df4e45c442745652b3305fd91146bd31ffe79e4b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1514c21345356bbece6680b9ccd212d15dbfa191
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920973"
 ---
 # <a name="idebugproperty3createobjectid"></a>IDebugProperty3::CreateObjectID
-Vytvoří jedinečné ID pro tuto vlastnost k zajištění, že je jedinečný mezi všechny ostatní vlastnosti.  
+Vytvoří jedinečné ID pro tuto vlastnost k zajištění, že se jedná o jedinečný mimo jiné vlastnosti.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,15 +38,15 @@ int CreateObjectID();
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda je volána, když správce ladicí relace chce zajistit, že tato vlastnost je jedinečně identifikovat mezi všechny ostatní vlastnosti. Modul ladění (DE) podporuje tuto metodu, pokud jsou vlastnosti, které se zabývá již jednoznačně identifikuje. Pokud je DE nepodporuje tuto metodu, vrátí `E_NOTIMPL`.  
+ Tato metoda je volána, když správce ladění relace chce se ujistit, že tato vlastnost je jednoznačně identifikují mimo jiné vlastnosti. Ladicí stroj (DE) podporuje tuto metodu, pokud se už jednoznačně identifikují vlastnosti, které se zabývá. Pokud je DE nepodporuje tuto metodu, vrací `E_NOTIMPL`.  
   
- Všechny jedinečné ID vytvořené pomocí `CreateObjectID` je zničený, když [DestroyObjectID](../../../extensibility/debugger/reference/idebugproperty3-destroyobjectid.md) metoda je volána; to také označuje konec potřebu jednoznačné identifikaci této vlastnosti.  
+ Všechny jedinečné ID vytvořené pomocí `CreateObjectID` je zničen při [DestroyObjectID](../../../extensibility/debugger/reference/idebugproperty3-destroyobjectid.md) metoda je volána, to také signalizuje konec potřebné pro jedinečnou identifikaci této vlastnosti.  
   
 > [!NOTE]
->  Neexistuje žádná metoda načte tento jedinečný Identifikátor, takže je DE provést, ať chce pro jedinečné ID. při `CreateObjectID` metoda je volána.  
+>  Neexistuje žádná metoda se tak DE můžete dělat všechno, co chce jedinečné ID načíst tento jedinečný Identifikátor, když `CreateObjectID` metoda je volána.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md)   

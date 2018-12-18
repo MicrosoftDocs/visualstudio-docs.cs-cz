@@ -1,5 +1,5 @@
 ---
-title: Idiasegment::get_virtualaddress – | Microsoft Docs
+title: Idiasegment::get_virtualaddress – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ba87bc485a9c15316630a93cef747671fe3ddb27
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 99f2390e5afedfe2db6abb38c014ce58eeb72778
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49918230"
 ---
 # <a name="idiasegmentgetvirtualaddress"></a>IDiaSegment::get_virtualAddress
 Načte virtuální adresy (VA) začátku části.  
@@ -33,10 +34,10 @@ HRESULT get_virtualAddress (
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí VA počáteční části.  
+ [out] Vrátí VA začátku části.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. Jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md)

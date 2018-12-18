@@ -1,5 +1,6 @@
 ---
 title: Přístup k prostředí Visual Studio nebo k jiným hostitelům z textové šablony
+titleSuffix: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: gewarren
@@ -7,27 +8,29 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 171b3d3060ea00cc5adc9ca1220cb86148f8d883
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 9bb7bce5cb047018540599c9488fa4471dad2d1c
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059295"
 ---
-# <a name="access-visual-studio-or-other-hosts-from-a-text-template"></a>Přístup k sadě Visual Studio nebo k jiným hostitelům z textové šablony
+# <a name="access-visual-studio-or-other-hosts-from-a-text-template"></a>Přístup k sadě Visual Studio nebo k jiným hostitelům z textové šablony
 
-V textové šablony můžete použít metody a vlastnosti, které jsou vystavené hostitele, který provede šablony. Visual Studio je příklad hostitele.
+V textové šabloně můžete použít metody a vlastnosti, které jsou vystavené na hostitele, který provede šablony. Visual Studio je příkladem hostitele.
 
 > [!NOTE]
-> V šablonách běžný text, ale není v můžete použít hostitele metody a vlastnosti *zpracované* textové šablony.
+> V pravidelných textových šablon, ale ne v můžete použít hostitele metody a vlastnosti *předzpracovaná* textových šablon.
 
 ## <a name="obtain-access-to-the-host"></a>Získat přístup k hostiteli
 
-Chcete-li získat přístup k hostiteli, nastavte `hostspecific="true"` v `template` – direktiva. Nyní můžete pomocí `this.Host`, která má typ <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>. <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost> Typ má členy, které můžete použít, například vyřešit názvy souborů a protokolu chyb.
+Chcete-li získat přístup k hostiteli, nastavte `hostspecific="true"` v `template` směrnice. Nyní můžete pomocí `this.Host`, která má typ <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost>. <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost> Typ obsahuje členy, které používáte, třeba k překladu názvů souborů a protokoly chyb.
 
-### <a name="resolve-file-names"></a>Překlad názvů souborů
+### <a name="resolve-file-names"></a>Přeložit názvy souborů
 
-Pokud chcete vyhledat úplnou cestu souboru relativně vzhledem k textové šablony, pomocí `this.Host.ResolvePath()`.
+Chcete-li najít úplnou cestu k souboru relativně vzhledem k textu šablony, použijte `this.Host.ResolvePath()`.
 
 ```csharp
 <#@ template hostspecific="true" language="C#" #>
@@ -43,7 +46,7 @@ Content of myFile is:
 
 ### <a name="display-error-messages"></a>Zobrazení chybových zpráv
 
-V tomto příkladu se zaprotokoluje při transformace šablony. Pokud je hostitel Visual Studio, chyby jsou přidány do **seznam chyb**.
+V tomto příkladu se zaprotokoluje při transformaci šablony. Pokud je hostitel Visual Studio, chyby se přidají do **seznam chyb**.
 
 ```csharp
 <#@ template hostspecific="true" language="C#" #>
@@ -61,11 +64,11 @@ V tomto příkladu se zaprotokoluje při transformace šablony. Pokud je hostite
 
 ## <a name="use-the-visual-studio-api"></a>Pomocí sady Visual Studio rozhraní API
 
-Pokud spouštění textové šablony v sadě Visual Studio můžete použít `this.Host` pro přístup ke službě poskytované sadě Visual Studio a všechny balíčky nebo rozšíření, které jsou načteny.
+Pokud se spuštění textové šablony v sadě Visual Studio, můžete použít `this.Host` pro přístup ke službám poskytuje Visual Studio a všechny balíčky a rozšíření, která jsou načtena.
 
 Nastavit hostspecific = "true" a přetypovat `this.Host` k <xref:System.IServiceProvider>.
 
-Tento příklad načte Visual Studio API, <xref:EnvDTE.DTE>, jako služba:
+V tomto příkladu získává rozhraní API sady Visual Studio, <xref:EnvDTE.DTE>, jako služba:
 
 ```csharp
 <#@ template hostspecific="true" language="C#" #>
@@ -79,6 +82,6 @@ Tento příklad načte Visual Studio API, <xref:EnvDTE.DTE>, jako služba:
 Number of projects in this solution: <#=  dte.Solution.Projects.Count #>
 ```
 
-## <a name="use-hostspecific-with-template-inheritance"></a>HostSpecific pomocí šablony dědičnosti
+## <a name="use-hostspecific-with-template-inheritance"></a>Pomocí šablony dědičnosti hostSpecific
 
-Zadejte `hostspecific="trueFromBase"` Pokud používáte také `inherits` atributů, a pokud dědí ze šablony, která určuje `hostspecific="true"`. Pokud to neuděláte, může získáte kompilátor upozornění, která vlastnost `Host` bylo deklarováno dvakrát.
+Zadejte `hostspecific="trueFromBase"` Pokud používáte také `inherits` atribut, a pokud je zděděn ze šablony, která určuje `hostspecific="true"`. Pokud to neuděláte, může se zobrazit upozornění, které kompilátor vlastnost `Host` byla deklarována dvakrát.

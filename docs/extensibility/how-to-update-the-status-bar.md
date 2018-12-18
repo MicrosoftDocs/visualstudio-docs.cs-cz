@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: aktualizace stavového řádku | Microsoft Docs'
+title: 'Postupy: aktualizace stavového řádku | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,40 +13,41 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1b5f7e6849736f0fc226c51f69a1526aca8e971a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b7f7d52ad8dc75f8e8bd313794b44c231522cde7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49829934"
 ---
 # <a name="how-to-update-the-status-bar"></a>Postupy: aktualizace stavového řádku
-**Stavový řádek** je umístěný ovládací prvek panelu v dolní části mnoho aplikací systému windows, který obsahuje jeden nebo více řádků textu stavu nebo indikátory.  
+**Stavový řádek** se ovládací panel nachází v dolní části mnoho aplikace pro windows, který obsahuje jeden nebo více řádků textu stavu nebo ukazatele.  
   
-### <a name="to-update-the-status-bar"></a>Aktualizace stavového řádku  
+## <a name="to-update-the-status-bar"></a>Aktualizace stavového řádku  
   
-1.  Implementace <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser> na každém objektu jednotlivých zobrazení (DocView), poskytující svém editoru, například zobrazení formuláře a zobrazení kódu.  
+1.  Implementace <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser> na každém objektu jednotlivých zobrazení (DocView), která poskytuje editoru, jako je například zobrazení formuláře a zobrazení kódu.  
   
-2.  Při volání rozhraní IDE <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser.SetInfo%2A>, aktualizovat informace v **stavový řádek** voláním metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser>.  
+2.  Když se volá rozhraní IDE <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser.SetInfo%2A>, aktualizovat informace v **stavový řádek** voláním metody <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser>.  
   
     > [!NOTE]
-    >  Volání IDE <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser.SetInfo%2A> pouze když okně dokumentu prvotní aktivaci. Pro zbývající doba, kterou vaše okna dokumentu je aktivní, musíte aktualizovat **stavového řádku** informace o stavu změny editor.  
+    >  Volání rozhraní IDE <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser.SetInfo%2A> pouze když vaše okno dokumentu prvotní aktivaci. Pro zbývající čas, který je aktivní okno dokumentu, je nutné aktualizovat **stavový řádek** informací jako stav editoru změny.  
   
 ## <a name="robust-programming"></a>Robustní programování  
  A **stavový řádek** obsahuje čtyři samostatné pole:  
   
--   Stav textu  
+- Stavový text  
   
--   Indikátor průběhu  
+- Indikátor průběhu  
   
--   Animovaný ikonu  
+- Animovaný ikonu  
   
--   Editor informací  
+- Editor informací  
   
- Další informace najdete v tématu [stavové řádky](/cpp/mfc/status-bars).  
+  Další informace najdete v tématu [stavové řádky](/cpp/mfc/status-bars).  
   
- Prostředí IDE automaticky zavolá <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser.SetInfo%2A> metodu vaší <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser> implementace, když je aktivován vaší okna dokumentu.  
+  Rozhraní IDE automaticky volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser.SetInfo%2A> metodu vaše <xref:Microsoft.VisualStudio.Shell.Interop.IVsStatusbarUser> implementace při aktivaci okno dokumentu.  
   
- Implementátor VSPackage zodpovídá za aktualizace stavu textu ve stavovém řádku. Prostředí IDE resetuje tento řetězec "Připravené", pokud stav textové pole je nastaven na prázdný text ("") v době nečinnosti.  
+  Implementátor VSPackage je zodpovědný za automatickou aktualizaci stavový text ve stavovém řádku. Rozhraní IDE obnoví tento řetězec na hodnotu "PŘIPRAVENO" Pokud textové pole Stav je nastaven na prázdný text ("") v době nečinnosti.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Stavové řádky](/cpp/mfc/status-bars)

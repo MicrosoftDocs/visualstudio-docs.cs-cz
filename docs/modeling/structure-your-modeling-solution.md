@@ -7,104 +7,108 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 3de677d23f11f56bde101e1e0e7748824e0d30c9
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 2c279da9aed4a11799004a38004f8b82dca65174
+ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50966710"
 ---
 # <a name="structure-your-modeling-solution"></a>Strukturujte svá řešení modelování
-Efektivně používat modely v projektu vývoj, musí být členy týmu mohou pracovat na modely z různých částí projektu ve stejnou dobu. Toto téma navrhuje schéma pro dělení aplikace do různých částí, které odpovídají vrstvy v celkovou rozvrstvení diagram.
 
- Ke spuštění na projektu nebo dílčí projekt rychle, je užitečné používat šablony projektu, který následuje strukturu projektu, které jste vybrali. Toto téma popisuje postup vytvoření a použití takových šablony.
+V projektu vývoje modelů efektivně používat, musí být členy týmu moct pracovat s modely z různých částí projektu ve stejnou dobu. Toto téma navrhne schéma dělení aplikaci do různých částí, které odpovídají vrstvy tak celkovou diagram vrstev.
 
- Toto téma předpokládá, že pracujete na projekt, který je dostatečně velké na to, aby několik členové týmu a pravděpodobně má několik týmů. Kód a modely projektu jsou uloženy v systému správy zdrojů, jako [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)]. Alespoň některé členy týmu použijte sadu Visual Studio pro vývoj modely a ostatní členové týmu můžete zobrazit modely pomocí jiné verze sady Visual Studio.
+Ke spuštění v projektu nebo dílčí projekt rychle, je užitečné mít šablony projektu, která odpovídá struktuře projektu, který jste zvolili. Toto téma popisuje, jak vytvořit a použít tyto šablony.
 
- Informace, které verze sady Visual Studio podporují jednotlivé funkce nástroje a modelování, najdete v tématu [verze podpora architektura a modelování nástroje](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
+Toto téma předpokládá, že pracujete na projektu, který je dostatečně velký, aby vyžadovat několik členů týmu a pravděpodobně má několik týmů. Kód a modely projektu jsou uloženy v systému správy zdrojového kódu, jako [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)]. Alespoň někteří členové týmu vývoje modelů pomocí sady Visual Studio a ostatní členové týmu mohou zobrazit modely pomocí jiných verzí sady Visual Studio.
 
-## <a name="solution-structure"></a>Struktura řešení
- V projektu střední a velké strukturu týmu vychází strukturu aplikace. Každý používá řešení sady Visual Studio.
+Které verze sady Visual Studio podporují jednotlivé funkce nástroje a modelování najdete v tématu [podporované verze pro nástroje architektury a modelování](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport).
 
-#### <a name="to-divide-an-application-into-layers"></a>K rozdělení aplikace do vrstvy
+## <a name="solution-structure"></a>Struktury řešení
 
-1.  Základní struktura řešení ve struktuře vaší aplikace, jako jsou webové aplikace, aplikace služby nebo aplikace pracovní plochy. Celou řadu běžných architektury popsané v [Archetypes aplikace v příručce k Microsoft aplikace architektura](http://go.microsoft.com/fwlink/?LinkId=196681).
+V projektu střední a velké struktura tým se na základě struktury aplikace. Každý tým používá řešení sady Visual Studio.
 
-2.  Vytvoření [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] řešení, který nazýváme Architektura řešení. Toto řešení se použije k vytvoření celkového návrhu systému. Bude obsahovat modely, ale žádný kód.
+### <a name="to-divide-an-application-into-layers"></a>K rozdělení aplikace do vrstvy
 
-     Přidáte závislost diagram toto řešení. Diagram závislostí zakreslit architekturu, kterou jste zvolili pro vaši aplikaci. Například může tyto vrstvy a jejich vzájemné závislosti zobrazit diagram: prezentace; Obchodní logika; a Data.
+1. Základní struktura svoje řešení na struktuře aplikace, například webové aplikace, aplikace služby nebo aplikace klasické pracovní plochy. Celou řadu běžných architektur je podrobněji popsána [Archetypes aplikaci do Průvodce architekturou aplikací Microsoft](http://go.microsoft.com/fwlink/?LinkId=196681).
 
-4.  Vytvoření samostatné řešení Visual Studio pro každou vrstvu v diagramu závislost architektury.
+2. Vytvoření řešení sady Visual Studio, který nazveme architekturu řešení. Toto řešení se použije k vytvoření celkového návrhu systému. Bude obsahovat modely, ale žádný kód.
 
-     Tato řešení se použije k vývoji kód vrstvy.
+   Přidejte do závislostí diagram tohoto řešení. Na diagram závislostí nakreslete architektura, kterou jste zvolili pro vaši aplikaci. Například může zobrazit diagram těchto vrstev a závislostí mezi nimi: prezentaci. Obchodní logika; a Data.
 
-5.  Vytváření modelů, které budou představovat návrhů vrstvy a koncepty, které jsou společné pro všechny vrstvy. Modely uspořádejte tak, aby všechny modely si můžete prohlédnout z architektury řešení a relevantní modely si můžete prohlédnout z každé vrstvě.
+4. Vytvoření samostatné řešení Visual Studio pro každou vrstvu Diagram závislostí architektury.
 
-     Můžete dosáhnout pomocí některé z následujících postupů. V prvním případě vytvoří samostatné modelování projekt pro každou vrstvu a druhý vytvoří jeden modelování projektu, jež jsou sdílena mezi vrstvy.
+   Tato řešení se použije k vývoji kódu vrstvy.
 
-    ###### <a name="to-use-a-separate-modeling-project-for-each-layer"></a>Použít samostatné modelování projekt pro jednotlivé úrovně
+5. Vytvářejte modely, které představují návrhy vrstvy a koncepty, které jsou společné pro všechny vrstvy. Uspořádejte modely tak, aby všechny modely můžete zobrazit z architektury řešení a relevantní modely můžete zobrazit z každé vrstvy.
 
-    1.  Vytvořte projekt modelování v každé vrstvě řešení.
+   Můžete dosáhnout pomocí některé z následujících postupů. V prvním případě vytvoří samostatné modelování projektu pro každou vrstvu a objekt IErrorInfo vytvoří jeden modelování projektu, jež jsou sdílena mezi vrstvami.
 
-         Tento model bude obsahovat diagramy, které popisují požadavků a návrhu této vrstvy. Může také obsahovat diagramy závislosti, které ukazují vnořené vrstvy.
+#### <a name="use-a-separate-modeling-project-for-each-layer"></a>Použití samostatné modelování projektu pro každou vrstvu
 
-         Nyní máte model pro jednotlivé úrovně plus model pro Architektura aplikace. Každý model je obsažený v jeho vlastní řešení. To umožňuje členové týmu pro práci na vrstvy ve stejnou dobu.
+1. Vytvoření projektu modelování v každé vrstvě řešení.
 
-    2.  Architektura řešení přidáte projekt modelování jednotlivých řešení vrstvy. K tomuto účelu otevřete Architektura řešení. V Průzkumníku řešení klikněte pravým tlačítkem na uzel řešení, přejděte na Přidat a pak klikněte na tlačítko **existující projekt**. Přejděte do jedné vrstvy řešení modelování projektu (.modelproj).
+   Tento model bude obsahovat diagramy, které najdete popis požadavků a návrh vrstvy. Může také obsahovat diagramů závislostí, které ukazují vnořených vrstev.
 
-         Každý model se nyní zobrazí na dvě řešení: jeho "home" řešení a architektura.
+   Teď máte model pro každou vrstvu, a navíc modelu pro architekturu aplikace. Každý model je součástí vlastní řešení. To umožňuje členům týmu. budou fungovat na vrstvách ve stejnou dobu.
 
-    3.  Do projektu modelování každé vrstvě přidejte závislosti diagram. Začněte kopii diagram architektury závislostí. Odstraněním částí, které nejsou závislosti diagramu závislostí.
+2. Architektura řešení přidejte projekt modelování z každé vrstvy řešení. Provedete to tak, otevřete řešení architektury. V **Průzkumníka řešení**, klikněte pravým tlačítkem na uzel řešení, přejděte na Přidat a potom klikněte na tlačítko **existující projekt**. Přejděte do projektu modelování (.modelproj) v jedné vrstvě řešení.
 
-         Můžete také přidat závislost diagramy, které představují podrobné strukturu této vrstvy.
+   Každý model se teď zobrazují dvě řešení: jeho "domovskou" řešení a jeho architektura.
 
-         Tyto diagramy se používají k ověření kód, který je vyvinuta v této vrstvě.
+3. Do projektu modelování každou vrstvu přidejte diagram závislostí. Začněte s kopii diagram závislostí architektury. Můžete odstranit části, které nejsou závislosti diagram závislostí.
 
-    4.  V architektuře řešení upravte požadavků a návrhu modely všechny vrstvy, které pomocí sady Visual Studio.
+   Můžete také přidat diagramy závislostí, které představují podrobnou strukturu této vrstvy.
 
-         V každé vrstvě řešení vyvíjet kód pro tuto vrstvu, která odkazuje na modelu. Pokud jste obsahu udělat vývoj bez použití k aktualizaci modelu stejném počítači, můžete číst modelu a vývoj kódu s použitím verze sady Visual Studio, který nelze vytvořit modely. Také mohou generovat kód z modelu v těchto verzích.
+   Tyto diagramy se používají k ověření kódu, který byl vyvinut v této vrstvě.
 
-     Tato metoda zaručuje, že bude bez narušení způsobené vývojáře, kteří upravit modely vrstev ve stejnou dobu.
+4. V architektuře řešení upravte požadavků a návrhu modelů vrstvy pomocí sady Visual Studio.
 
-     Ale protože modely jsou oddělené, je obtížné najdete běžné koncepty. Každý model musí mít svůj vlastní kopii elementy, na kterých je závislá z jiných vrstev a architektura. Diagram závislostí v každé vrstvě musí být udržovány synchronizována s diagram architektury závislostí. Je obtížné spravovat synchronizaci, pokud tyto prvky změnit, i když může vyvíjet nástroje k tomu.
+   V každé vrstvě řešení vyvíjejte kód pro tuto vrstvu, odkazuje na model. Pokud se obsah a provádět vývoj bez použití do stejného počítače k aktualizaci modelu, můžete načíst model a vývoj kódu pomocí verze sady Visual Studio, nelze vytvářet modely. Kód můžete vygenerovat také z modelu v těchto verzích.
 
-    ###### <a name="to-use-a-separate-package-for-each-layer"></a>Používat samostatný balíček pro jednotlivé úrovně
+   Tato metoda zaručuje, že bude bez rušení způsobuje vývojáři, kteří úpravy modelů vrstvy ve stejnou dobu.
 
-    1.  V řešení pro každou vrstvu přidejte projekt modelování architektury. V Průzkumníku řešení klikněte pravým tlačítkem na uzel řešení, přejděte na **přidat**a potom klikněte na **existující projekt**. Jeden modelování projektu je nyní přístupná z každé řešení: architektura projekt a projekt vývoj pro jednotlivé úrovně.
+   Vzhledem k tomu, že tyto modely jsou oddělené, je však obtížné najdete běžné koncepty. Každý model musí mít vlastní kopii prvky, na kterých je závislá z jiných vrstev a architektury. Diagram závislostí v každé vrstvě musí udržovat synchronizované s diagram závislostí architektury. Je obtížné kvůli zachování synchronizace při změně těchto prvků, i když může vývoj nástrojů k provedení této.
 
-    2.  Ve sdíleném modelu, vytvořit balíček pro jednotlivé úrovně: V Průzkumníku řešení, vyberte projekt modelování. V Průzkumníku modelu UML, klikněte pravým tlačítkem na kořenový uzel modelu, přejděte na **přidat**a potom klikněte na **balíček**.
+#### <a name="use-a-separate-package-for-each-layer"></a>Používat samostatné balíčky pro každou vrstvu
 
-         Každý balíček bude obsahovat diagramy, které popisují požadavků a návrhu odpovídající vrstvy.
+1. V řešení pro každou vrstvu přidejte projekt modelování architektury. V **Průzkumníka řešení**, klikněte pravým tlačítkem na uzel řešení, přejděte na **přidat**a potom klikněte na tlačítko **existující projekt**. Jeden modelování projektu je teď přístupná z každé řešení určené pro: architektura projektu a projekt vývoje pro každou vrstvu.
 
-    3.  V případě potřeby přidejte místní závislostí diagramy pro interní jednotlivé úrovně.
+2. Ve sdíleném modelu, vytvořit balíček pro každou vrstvu: V **Průzkumníka řešení**, vyberte projekt modelování. V **Průzkumníku modelů UML**, klikněte pravým tlačítkem na kořenový uzel modelu, přejděte na **přidat**a potom klikněte na tlačítko **balíčku**.
 
-     Tato metoda umožňuje prvky návrhu každé vrstvě odkazovat na těch, které vrstvy a společné architektury, na němž závisí.
+   Každý balíček bude obsahovat diagramy, které popisují požadavky a návrhu odpovídající vrstvy.
 
-     I když některé konflikty může způsobit souběžné úlohy na různých balíčcích, jsou poměrně snadno spravovat, protože balíčky jsou uložené v samostatné soubory.
+3. V případě potřeby přidejte diagramů místní závislostí pro interní strukturu každou vrstvu.
 
-## <a name="creating-architecture-templates"></a>Vytváření šablon architektura
- V praxi nevytvoří všech svých řešení sady Visual Studio ve stejnou dobu ale je přidat průběhu projektu. Pravděpodobně budete také použít stejnou strukturu řešení v budoucnosti projekty.  Můžete rychle vytvořit nové řešení, můžete vytvořit šablonu řešení nebo produktu project. Můžete zaznamenat šablony ve Visual Studio integrace rozšíření (VSIX), aby bylo snadné, distribuce a nainstalovat na jiných počítačích.
+   Tato metoda umožňuje prvky návrhu každé vrstvě odkazovat přímo na ty vrstvy a běžné architektury, na kterém závisí.
 
- Například pokud používáte často řešení, které mají prezentační, obchodní a datové vrstvy, můžete nakonfigurovat šablonu, která se vytvoří nová řešení, které mají této struktury.
+   I když souběžnou prací na různých balíčků může způsobit nějaké konflikty, jsou poměrně snadno spravovat, protože balíčky jsou uloženy do samostatných souborů.
 
-#### <a name="to-create-a-solution-template"></a>Chcete-li vytvořit šablonu řešení
+## <a name="create-architecture-templates"></a>Vytvoření šablon architektury
 
-1.  [Stáhněte a nainstalujte v Průvodci Export šablony](http://go.microsoft.com/fwlink/?LinkId=196686), pokud jste to ještě neudělali.
+V praxi nevytvářejte všech svých řešení sady Visual Studio v době, ale přidat průběhu projektu. Pravděpodobně je budete také použít stejnou strukturu řešení v budoucnu projekty. Můžete rychle vytvořit nová řešení, můžete vytvořit šablonu řešení nebo projektu. Šablony v Visual Studio integrace rozšíření (VSIX) můžete zachytit tak, aby se snadno distribuovat a instalovat na jiné počítače.
 
-2.  Vytvořte strukturu řešení, která chcete použít jako východisko pro budoucí projekty.
+Například pokud používáte často řešení, která mají prezentační, obchodní a datové vrstvy, můžete nakonfigurovat šablonu, která se vytvoří nová řešení, které mají danou strukturu.
 
-3.  Na **souboru** nabídky, klikněte na **exportovat šablonu jako VSIX**. **Exportovat šablonu jako průvodce VSIX** otevře.
+### <a name="to-create-a-solution-template"></a>Vytvoření šablony řešení
 
-4.  Postupujte podle pokynů v průvodci vyberte projektů, které chcete do šablony zahrnout, zadejte název a popis pro šablonu a zadejte umístění výstupu.
+1. [Stáhněte a nainstalujte průvodce exportem šablony](http://go.microsoft.com/fwlink/?LinkId=196686).
 
-> [!NOTE]
->  Materiály v tomto tématu je abstrahované a parafrázována z Visual Studio Tooling doporučení ohledně architektury, zapsána pomocí Visual Studio ALM Rangers, což je spolupráce mezi nejvíce cenná Odborníci v oblasti (MVP), Microsoft Services a sady Visual Studio produktový tým a zapisovače. [Chcete-li stáhnout balíček kompletní pokyny, klikněte sem.](http://go.microsoft.com/fwlink/?LinkID=191984)
+2. Vytvoření struktury řešení, které chcete použít jako výchozí bod pro všechny budoucí projekty.
 
-## <a name="related-materials"></a>Související materiály
- [Uspořádání a správu modely](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-9-Organizing-and-Managing-Your-Models/) – video od Clint Edmondson.
+3. Na **souboru** nabídky, klikněte na tlačítko **exportovat šablonu jako VSIX**.
 
- [Visual Studio Tooling doporučení ohledně architektury](../modeling/visual-studio-architecture-tooling-guidance.md) -Další informace o správě modely v týmu
+   **Exportovat šablonu jako průvodce VSIX** otevře.
+
+4. Postupujte podle pokynů v průvodci vyberte projekty, které chcete do šablony zahrnout, zadejte název a popis pro šablonu a zadejte umístění výstupu.
+
+## <a name="watch-a-video"></a>Podívejte se na video
+
+[Uspořádání a správě vašich modelů](https://channel9.msdn.com/blogs/clinted/uml-with-vs-2010-part-9-organizing-and-managing-your-models)
 
 ## <a name="see-also"></a>Viz také
 
 - [Použití modelů ve vývojových procesech](../modeling/use-models-in-your-development-process.md)
+- [Pokyny k nástrojům architektury sady Visual Studio](../modeling/visual-studio-architecture-tooling-guidance.md)

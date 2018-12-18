@@ -1,5 +1,5 @@
 ---
-title: Idialoadcallback::notifyopendbg – | Microsoft Docs
+title: Idialoadcallback::notifyopendbg – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 717c9395805b3fe12640164261d3ec916bd8067c
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 2a51692b7ff554e656690898993d9dfb4a0eda57
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49883247"
 ---
 # <a name="idialoadcallbacknotifyopendbg"></a>IDiaLoadCallback::NotifyOpenDBG
-Volá se při otevřel soubor dbg candidate.  
+Volá se, když se otevřel soubor dbg Release candidate.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,13 +35,13 @@ HRESULT NotifyOpenDBG (
   
 #### <a name="parameters"></a>Parametry  
  `dbgPath`  
- [v] Úplná cesta souboru dbg.  
+ [in] Úplná cesta soubor dbg.  
   
  `resultCode`  
- [v] Kód, který označuje úspěch (`S_OK`) nebo selhání zatížení jako použít pro tento soubor.  
+ [in] Kód, který označuje úspěch (`S_OK`) nebo selhání zatížení, jak použít pro tento soubor.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby. Návratový kód se obvykle ignoruje.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Návratový kód se obvykle ignoruje.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaLoadCallback2](../../debugger/debug-interface-access/idialoadcallback2.md)

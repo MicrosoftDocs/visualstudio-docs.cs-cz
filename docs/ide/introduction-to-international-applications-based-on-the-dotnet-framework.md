@@ -1,9 +1,8 @@
 ---
-title: Představení mezinárodních aplikací založené na rozhraní .NET Framework | Microsoft Docs
-ms.custom: ''
+title: Představení mezinárodních aplikací založených na prostředí .NET Framework
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
 - strings [Visual Studio], localizing
@@ -28,27 +27,30 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: f2bbf16622e0f4bf1ca1478521881c42c34af56d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: cd2a749bc96271e4ed16872f1d5c4a485c55900e
+ms.sourcegitcommit: b6dfa1bdf4c23c2e341754454bbd4758db2218e0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863948"
 ---
 # <a name="introduction-to-international-applications-based-on-the-net-framework"></a>Představení mezinárodních aplikací založených na prostředí .NET Framework
-V [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], k vytvoření aplikace připravených skládá ze dvou částí: globalizace, proces návrhu aplikace, které můžete přizpůsobit pro jiné kultury a lokalizace, proces překladu prostředky pro konkrétní jazykové verze. Obecné informace o navrhování aplikací pro mezinárodní cílovou skupinu najdete v tématu [osvědčené postupy pro vývoj aplikací připravených](http://msdn.microsoft.com/Library/f08169c7-aad8-4ec3-9a21-9ebd3b89986c).  
-  
- [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] – Model lokalizace se skládá z hlavní sestavení, který obsahuje kódu aplikace a nouzové prostředky – řetězce, obrázky a další objekty pro jazyk, ve kterém se aplikace původně vytvořen. Jednotlivé lokalizované aplikace bude mít satelitní sestavení nebo sestavení, které obsahují pouze lokalizované prostředky. Protože hlavní sestavení vždy obsahuje nouzové prostředky, pokud prostředek nebyl nalezen v sestavení lokalizovaná satelitní <xref:System.Resources.ResourceManager> se pokusí načíst hierarchické uspořádání, nakonec návratem zpět k prostředku v hlavní sestavení. Záložní systém prostředků je vysvětlené podrobněji na [hierarchická organizace zdrojů pro lokalizaci](../ide/hierarchical-organization-of-resources-for-localization.md).  
-  
- Jeden prostředek lokalizace, měli byste zvážit použití je Glosář pro všechny Microsoft lokalizované produkty. Tento soubor CSV obsahuje více než 12 000 anglické podmínky plus překlady podmínkami až 59 různé jazyky. Je k dispozici ke stažení na glosáři [Microsoft terminologie překlady](http://go.microsoft.com/fwlink/?LinkId=128146) webové stránky.  
-  
- Systém projektu pro Windows Forms aplikace můžete vygenerovat zdrojové soubory nouzové situaci a všechny potřeby další jazyková verze uživatelského rozhraní. Soubor prostředků záložní je integrovaná do hlavní sestavení a soubory prostředků specifické pro jazykovou verzi jsou pak součástí satelitní sestavení, jeden pro každou jazykovou verzi uživatelského rozhraní. Při sestavování projektu, soubory prostředků kompilovány z formátu Visual Studio XML (RESX) do zprostředkující binárního formátu (.resources), které se pak vloží do satelitní sestavení.  
-  
- Systém projektu pro Windows Forms a webových formulářů umožňuje vytvářet soubory prostředků pomocí šablony souboru prostředku sestavení, přístup k prostředkům a sestavení projektu. Satelitní sestavení bude vytvořen společně s hlavní sestavení.  
-  
- Když provede lokalizovanou aplikaci, její vzhled je určen podle dvě hodnoty jazykové verze. (A *jazykovou verzi* je sada uživatelské předvolby informace související s jazyk uživatele, prostředí a kulturního konvence.) Nastavení jazykové verze uživatelského rozhraní určuje prostředky, ke kterým budou načteny. Jazyková verze uživatelského rozhraní je nastaven jako `UICulture` v souborech Web.config a direktivy stránky a <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> v kódu Visual Basic a C#. Nastavení jazykové verze Určuje formátování hodnot například data, čísla, měny a tak dále. Jazyková verze je nastaven jako `Culture` v souborech Web.config a direktivy stránky <xref:System.Globalization.CultureInfo.CurrentCulture%2A> v kódu Visual Basic a C#.  
-  
-## <a name="see-also"></a>Viz také  
- <xref:System.Globalization>   
- <xref:System.Resources>   
- [Globalizace a lokalizace aplikací](../ide/globalizing-and-localizing-applications.md)   
- [Zabezpečení a lokalizovaná satelitní sestavení](../ide/security-and-localized-satellite-assemblies.md)
+
+V [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], existují dvě části vytváření globalizované aplikace: globalizace, proces návrhu aplikací, které se přizpůsobí různé jazykové verze a lokalizace, proces převodu prostředky pro konkrétní jazykovou verzi. Obecné informace o navrhování aplikací pro mezinárodní cílové skupiny, najdete v části [osvědčené postupy pro vývoj globalizovaných aplikací](/dotnet/standard/globalization-localization/best-practices-for-developing-world-ready-apps).
+
+ [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] – Model lokalizace se skládá z hlavní sestavení, která obsahuje kód aplikace a materiály záložního – řetězců, obrázků a dalších objektů pro jazyk, ve kterém je aplikace byl původně vyvinutý. Satelitní sestavení nebo sestavení, které obsahují lokalizované prostředky, bude mít každý lokalizované aplikace. Protože vždy hlavní sestavení obsahuje náhradní zdrojů, pokud se prostředek nenajde v lokalizovaná satelitní sestavení, <xref:System.Resources.ResourceManager> se pokusí načíst hierarchické způsobem, nakonec návrat k prostředku v hlavním sestavení. Záložní systém prostředků je vysvětleno podrobněji v [hierarchická organizace zdrojů pro lokalizaci](../ide/hierarchical-organization-of-resources-for-localization.md).
+
+ Jeden prostředek lokalizace, měli byste zvážit použití je Glosář pro všechny Microsoft lokalizované produktů. Tento soubor CSV obsahuje více než 12 000 anglické podmínky a překlady podmínkami až 59 různých jazycích. Glosáře je k dispozici ke stažení [překlady terminologie Microsoftu](http://go.microsoft.com/fwlink/?LinkId=128146) webové stránky.
+
+ Systém projektu pro aplikace Windows Forms může generovat soubory prostředků nouzové situaci a každý požadovaného další jazykové verze uživatelského rozhraní. Soubor prostředků pro použití náhradní lokality je integrovaná do hlavního sestavení a soubory prostředků specifické pro jazykovou verzi jsou pak integrované do satelitních sestavení, jeden pro jednotlivé jazykové verze uživatelského rozhraní. Při sestavování projektu se soubory prostředků jsou kompilovány z formátu XML pro Visual Studio (RESX) do zprostředkující binární formát (.resources), které jsou pak vložený do satelitních sestavení.
+
+ Systém projektu pro Windows Forms a webové formuláře můžete pomocí šablony sestavení soubor prostředků soubory prostředků, přístup k prostředkům, ale taky popustit svůj projekt sestavit. Vytvoří se satelitní sestavení spolu s hlavním sestavením.
+
+ Jakmile lokalizované aplikace spustí, její vzhled určené dvě hodnoty jazykovou verzi. (A *jazykovou verzi* je sada informací o uživatelských předvolbách týkající se jazyka uživatele, prostředí a kulturní konvence.) Nastavení jazykové verze uživatelského rozhraní určuje, které prostředky se načtou. Jazyková verze uživatelského rozhraní je nastaven jako `UICulture` v souborech Web.config a direktivy stránky, a <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> v kódu jazyka Visual Basic nebo C#. Nastavení jazykové verze Určuje formátování hodnot například kalendářní data, čísla, měny a tak dále. Jazyková verze nastavena jako `Culture` v souborech Web.config a direktivy stránky <xref:System.Globalization.CultureInfo.CurrentCulture%2A> v kódu jazyka Visual Basic nebo C#.
+
+## <a name="see-also"></a>Viz také:
+
+- <xref:System.Globalization>
+- <xref:System.Resources>
+- [Globalizace a lokalizace aplikací](../ide/globalizing-and-localizing-applications.md)
+- [Zabezpečení a lokalizovaná satelitní sestavení](../ide/security-and-localized-satellite-assemblies.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: ukládání dokumentů aplikace Visio prostřednictvím kódu programu | Microsoft Docs'
+title: 'Postupy: ukládání dokumentů aplikace Visio prostřednictvím kódu programu'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,72 +16,73 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7a98ff5a7b7df6e2e609ac2d3bf89d7fd4b23648
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a9f065a32fc26d372b97a31eb70836451b31fa00
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50670725"
 ---
-# <a name="how-to-programmatically-save-visio-documents"></a>Postupy: Ukládání dokumentů aplikace Visio prostřednictvím kódu programu
+# <a name="how-to-programmatically-save-visio-documents"></a>Postupy: ukládání dokumentů aplikace Visio prostřednictvím kódu programu
   Ukládání dokumentů aplikace Microsoft Office Visio několika způsoby:  
   
--   Uložení změn v stávající dokument.  
+- Uložení změn v existující dokument.  
   
--   Uložit nový dokument nebo uložte dokument pod novým názvem.  
+- Nový dokument uložit nebo uložit dokument s novým názvem.  
   
--   Uložte dokument se zadanými argumenty.  
+- Uložení dokumentu se zadanými argumenty.  
   
- Další informace najdete v tématu referenční dokumentaci VBA pro [Microsoft.Office.Interop.Visio.Document.Save](https://msdn.microsoft.com/library/office/ff766478.aspx) metody [Microsoft.Office.Interop.Visio.Document.SaveAs](https://msdn.microsoft.com/library/office/ff765824.aspx) metoda a [ Microsoft.Office.Interop.Visio.Document.SaveAsEx](https://msdn.microsoft.com/library/office/ff768149.aspx) metoda.  
+  Další informace najdete v tématu referenční dokumentaci jazyka VBA pro [Microsoft.Office.Interop.Visio.Document.Save](/office/vba/api/Visio.Document.Save) metody [Microsoft.Office.Interop.Visio.Document.SaveAs](/office/vba/api/Visio.Document.SaveAs) metoda a [ Microsoft.Office.Interop.Visio.Document.SaveAsEx](/office/vba/api/Visio.Document.SaveAsEx) metody.  
   
-## <a name="saving-an-existing-document"></a>Ukládání stávající dokument  
+## <a name="save-an-existing-document"></a>Uložit stávající dokument  
   
-#### <a name="to-save-a-document"></a>Uložte dokument  
+### <a name="to-save-a-document"></a>Chcete-li uložit dokument  
   
--   Volejte metodu Microsoft.Office.Interop.Visio.Document.Save třídy Microsoft.Office.Tools.Visio.Document dokumentu, který byl dříve uložili.  
+-   Volání `Microsoft.Office.Interop.Visio.Document.Save` metodu `Microsoft.Office.Tools.Visio.Document` třídy dokumentu, který dřív uložená.  
   
-     Chcete-li použít tento příklad kódu, spusťte jej z `ThisAddIn` třídy ve vašem projektu.  
+     Pokud chcete použít tento příklad kódu, spusťte jej z `ThisAddIn` třídu ve vašem projektu.  
   
     > [!NOTE]  
-    >  Metoda Microsoft.Office.Interop.Visio.Document.Save vyvolá výjimku, pokud se nový dokument Visia dosud nebyl uložen.  
+    >  `Microsoft.Office.Interop.Visio.Document.Save` Metoda vyvolá výjimku, pokud ještě nebyla uložena nový dokument Visia.  
   
      [!code-csharp[Trin_VstcoreVisioAutomationAddIn#11](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#11)]
      [!code-vb[Trin_VstcoreVisioAutomationAddIn#11](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#11)]  
   
-## <a name="saving-a-document-with-a-new-name"></a>Ukládání dokument pod novým názvem.  
- Pomocí této metody Microsoft.Office.Interop.Visio.Document.SaveAs uložit nový dokument nebo dokument, který má nový název. Tato metoda je potřeba zadat nový název souboru.  
+## <a name="save-a-document-with-a-new-name"></a>Uložit dokument s novým názvem.  
+ Použití `Microsoft.Office.Interop.Visio.Document.SaveAs` metody uložte nový dokument nebo dokument, který se má nový název. Tato metoda vyžaduje, že zadáváte nový název souboru.  
   
-#### <a name="to-save-the-active-visio-document-with-a-new-name"></a>Uložte s novým názvem active dokumentů aplikace Visio  
+### <a name="to-save-the-active-visio-document-with-a-new-name"></a>Uložit aktivní dokument Visia s novým názvem.  
   
--   Volání metody Microsoft.Office.Interop.Visio.Document.SaveAs Microsoft.Office.Tools.Visio.Document, který chcete uložit, a to pomocí plně kvalifikovanou cestu, včetně názvu souboru. Pokud soubor s tímto názvem již existuje v této složce, je bezobslužně přepsána.  
+-   Volání `Microsoft.Office.Interop.Visio.Document.SaveAs` metodu `Microsoft.Office.Tools.Visio.Document` , že chcete uložit pomocí plně kvalifikovanou cestu včetně názvu souboru. Pokud soubor s tímto názvem již existuje v této složce, je tiše přepsána.  
   
-     Chcete-li použít tento příklad kódu, spusťte jej z `ThisAddIn` třídy ve vašem projektu.  
+     Pokud chcete použít tento příklad kódu, spusťte jej z `ThisAddIn` třídu ve vašem projektu.  
   
      [!code-csharp[Trin_VstcoreVisioAutomationAddIn#10](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#10)]
      [!code-vb[Trin_VstcoreVisioAutomationAddIn#10](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#10)]  
   
-## <a name="saving-a-document-with-a-new-name-and-specified-arguments"></a>Uložení dokumentu s novým názvem a zadané argumenty  
- Pomocí této metody Microsoft.Office.Interop.Visio.Document.SaveAsEx uložte dokument pod novým názvem a zadejte všechny příslušné argumenty použít k dokumentu.  
+## <a name="save-a-document-with-a-new-name-and-specified-arguments"></a>Uložit dokument s novým názvem a zadaných argumentů  
+ Použití `Microsoft.Office.Interop.Visio.Document.SaveAsEx` má metoda uložit dokument s novým názvem a zadejte všechny příslušné argumenty použít k dokumentu.  
   
-#### <a name="to-save-document-with-a-new-name-and-specified-arguments"></a>Uložte dokument s novým názvem a zadané argumenty  
+### <a name="to-save-document-with-a-new-name-and-specified-arguments"></a>Uložit dokument s novým názvem a zadaných argumentů  
   
--   Volání metody Microsoft.Office.Interop.Visio.Document.SaveAsEx Microsoft.Office.Tools.Visio.Document, který chcete uložit, a to pomocí plně kvalifikovanou cestu, včetně názvu souboru. Pokud soubor s tímto názvem již existuje v této složce, je vyvolána výjimka.  
+-   Volání `Microsoft.Office.Interop.Visio.Document.SaveAsEx` metodu `Microsoft.Office.Tools.Visio.Document` , že chcete uložit pomocí plně kvalifikovanou cestu včetně názvu souboru. Pokud soubor s tímto názvem již existuje v této složce, je vyvolána výjimka.  
   
-     Následující příklad kódu uloží aktivní dokument pod novým názvem, označí dokumentu jako jen pro čtení a zobrazí dokument v seznamu naposledy použité dokumenty. Chcete-li použít tento příklad kódu, spusťte jej z `ThisAddIn` třídy ve vašem projektu.  
+     Následující příklad kódu uloží aktivní dokument s novým názvem, označí jako jen pro čtení dokumentu a zobrazí dokument v seznamu naposledy použitých dokumentů. Pokud chcete použít tento příklad kódu, spusťte jej z `ThisAddIn` třídu ve vašem projektu.  
   
      [!code-csharp[Trin_VstcoreVisioAutomationAddIn#12](../vsto/codesnippet/CSharp/trin_vstcorevisioautomationaddin/ThisAddIn.cs#12)]
      [!code-vb[Trin_VstcoreVisioAutomationAddIn#12](../vsto/codesnippet/VisualBasic/trin_vstcorevisioautomationaddin/ThisAddIn.vb#12)]  
   
-## <a name="compiling-the-code"></a>Probíhá kompilace kódu  
+## <a name="compile-the-code"></a>Kompilace kódu  
  Tento příklad kódu vyžaduje následující:  
   
--   Uložte dokument, který má nový název, adresář s názvem `Test` musí být umístěný ve složce Dokumenty (pro Windows XP a starší) nebo ve složce Dokumenty (pro systém Windows Vista).  
+-   Uložit dokument s novým názvem, adresář s názvem `Test` se musí nacházet v *dokumenty* složky (pro Windows XP a starší) nebo *dokumenty* složku (pro Windows Vista).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Řešení pro aplikaci Visio](../vsto/visio-solutions.md)   
  [Přehled modelu objektů aplikace Visio](../vsto/visio-object-model-overview.md)   
  [Postupy: vytváření nových dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-create-new-visio-documents.md)   
  [Postupy: otevírání dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-open-visio-documents.md)   
  [Postupy: zavírání dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-close-visio-documents.md)   
- [Postupy: Tisk dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-print-visio-documents.md)  
+ [Postupy: tisk dokumentů aplikace Visio prostřednictvím kódu programu](../vsto/how-to-programmatically-print-visio-documents.md)  
   
   

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31113341"
 ---
 # <a name="idebugerrorbreakpoint2"></a>IDebugErrorBreakpoint2
 Toto rozhraní představuje chybě nebo upozornění zarážek, jako jsou neplatné umístění, neplatný výraz nebo z důvodů, proč čekající zarážek nebyl vázán (kód není načtená. ještě, a tak dále).  

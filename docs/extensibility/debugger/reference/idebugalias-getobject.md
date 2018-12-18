@@ -1,5 +1,5 @@
 ---
-title: IDebugAlias::GetObject | Microsoft Docs
+title: IDebugAlias::GetObject | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: dbcd41c44392ee342bfa26def5fbb60cd030d48b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3210d152001b7c2bf65103d3f846749676786f3e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49814828"
 ---
 # <a name="idebugaliasgetobject"></a>IDebugAlias::GetObject
-Získá objekt, který je tento alias pro.  
+Získá objekt, který je tento alias.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,7 +44,7 @@ int GetObject(
  [out] [IDebugObject2](../../../extensibility/debugger/reference/idebugobject2.md) představuje tento alias.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí S_OK; jinak vrátí kód chyby.  
+ V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugAlias](../../../extensibility/debugger/reference/idebugalias.md)   

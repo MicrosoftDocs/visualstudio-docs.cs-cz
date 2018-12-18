@@ -1,6 +1,7 @@
 ---
 title: 'CA1810: Inicializujte odkazový typ statického pole vloženě'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,15 +14,20 @@ ms.assetid: e9693118-a914-4efb-9550-ec659d8d97d2
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: d0751a4f8f4402d6ba9a3128601ad6e735ac0d3e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 2a6fdfebe506fb2edb1814e18d3d090025c665fa
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45549440"
 ---
 # <a name="ca1810-initialize-reference-type-static-fields-inline"></a>CA1810: Inicializujte odkazový typ statického pole vloženě
+
 |||
 |-|-|
 |TypeName|InitializeReferenceTypeStaticFieldsInline|
@@ -30,38 +36,46 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
- Typ odkazu deklaruje explicitní statického konstruktoru.
+ Odkaz na typ deklaruje explicitní statický konstruktor.
 
 ## <a name="rule-description"></a>Popis pravidla
- Pokud typ deklaruje explicitní statický konstruktor, kompilátor just-in-time (JIT) ke každé statické metodě a konstruktoru instance tohoto typu přidá kontrolu, zda již byl dříve statický konstruktor zavolán. Statické inicializace se aktivuje při přístupu k jakékoli statický člen, nebo když je vytvořena instance typu. Statické inicializace však není aktivuje, pokud deklarovat proměnnou typu, ale nepoužívá, může být důležité, pokud se inicializace změní globální stav.
+ Pokud typ deklaruje explicitní statický konstruktor, kompilátor just-in-time (JIT) ke každé statické metodě a konstruktoru instance tohoto typu přidá kontrolu, zda již byl dříve statický konstruktor zavolán. Statická inicializace se aktivuje při přístupu k jakékoli statického člena, nebo když je vytvořena instance typu. Statická inicializace ale neaktivuje, pokud deklarujete proměnnou typu, ale nepoužívejte ho, což může být důležité v případě, že inicializace mění globální stav.
 
- Všechny statických dat je inicializovaného vložené a není deklarovaný explicitní statického konstruktoru, kompilátory (MSIL intermediate language) Microsoft přidá `beforefieldinit` příznak a implicitní statický konstruktor, který inicializuje statických dat na typ MSIL definice. Když kompilátor JIT narazí `beforefieldinit` příznak, ve většině případů nejsou přidány kontroly statického konstruktoru. Statické inicializace záruku, že každý v jiné době před všechny statické pole ke kterým se přistupuje, ale není, před vyvoláním konstruktoru statickou metodu nebo instanci. Všimněte si, že statické inicializace situaci může dojít, kdykoli po proměnné typu je deklarován.
+ Všechna statická data je inicializována vložené a explicitní statický konstruktor není deklarován, kompilátory Microsoft intermediate language (MSIL) přidá `beforefieldinit` příznak a implicitní statický konstruktor, který inicializuje statických dat na typ jazyka MSIL definice. Když kompilátor JIT narazí `beforefieldinit` příznak, ve většině případů se nepřidají kontroly statického konstruktoru. Statická inicializace je zaručeno, ke kterým dochází za nějakou dobu předtím, než jsou přístupné žádná statická pole, ale ne předtím, než se vyvolá statickou metodu nebo instanci konstruktoru. Všimněte si, že se, že statická inicializace může probíhat kdykoli po deklarovat proměnnou typu.
 
- Kontroly statického konstruktoru mohou snížit výkon. Statický konstruktor se často používají pouze pro inicializaci statická pole, ve kterých pouze ujistěte se, že statické inicializace v tomto případě před prvním přístupu statické pole. `beforefieldinit` Chování je vhodné pro tyto a většina ostatních typů. Je pouze nevhodných při statické inicializace ovlivňuje globální stav a je splněna jedna z následujících akcí:
+ Kontroly statického konstruktoru mohou snížit výkon. Statický konstruktor se často slouží jenom k inicializaci statická pole, ve kterých je jenom nutné, že statická inicializace v tomto případě před první přístup statické pole. `beforefieldinit` Chování je vhodné pro tyto a většinu ostatních typů. Je jenom nevhodný při Statická inicializace má vliv na globální stav a je splněna jedna z následujících akcí:
 
--   Vliv na globální stav je nákladná a pokud se nepoužívá typ není potřeba.
+- Vliv na globální stav je nákladné a není potřeba, pokud typ není použit.
 
--   Globální stav důsledky dalo přistupovat bez přístupu k jakékoli statická pole typu.
+- Globální stav účinky lze přistupovat bez přístupu k jakékoli statická pole typu.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
  Chcete-li opravit porušení tohoto pravidla, inicializujte všechna statická data při deklaraci a statický konstruktor odeberte.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Je bezpečné potlačit upozornění na toto pravidlo, pokud výkon není důležité; nebo pokud globální stav změny, které jsou způsobeny statické inicializace je nákladná, nebo musí být zaručeno udělat předtím, než se nazývá statickou metodu typu nebo vytvoření instance typu.
+ Je bezpečné potlačit upozornění tohoto pravidla, pokud výkon není žádný problém; nebo pokud globální stav změny, které jsou způsobeny Statická inicializace je vždycky musí zaručit udělat předtím, než je volána statická metoda typu nebo je vytvořena instance typu.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje typu, `StaticConstructor`, která porušuje pravidlo a typu, `NoStaticConstructor`, který nahradí statického konstruktoru vložené inicializace splňovat pravidla.
 
- [!code-csharp[FxCop.Performance.RefTypeStaticCtor#1](../code-quality/codesnippet/CSharp/ca1810-initialize-reference-type-static-fields-inline_1.cs)]
- [!code-vb[FxCop.Performance.RefTypeStaticCtor#1](../code-quality/codesnippet/VisualBasic/ca1810-initialize-reference-type-static-fields-inline_1.vb)]
+Následující příklad ukazuje typ, `StaticConstructor`, který porušuje pravidla a typ, `NoStaticConstructor`, vložené inicializace splňovat pravidla, která nahradí statický konstruktor.
 
- Poznámka: přidání `beforefieldinit` příznak na definici MSIL `NoStaticConstructor` třídy.
+[!code-csharp[FxCop.Performance.RefTypeStaticCtor#1](../code-quality/codesnippet/CSharp/ca1810-initialize-reference-type-static-fields-inline_1.cs)]
+[!code-vb[FxCop.Performance.RefTypeStaticCtor#1](../code-quality/codesnippet/VisualBasic/ca1810-initialize-reference-type-static-fields-inline_1.vb)]
 
- **.class veřejné automaticky ansi StaticConstructor** **rozšiřuje [mscorlib]System.Object**
- **{**
- **} / / konec třídy StaticConstructor** 
- **.class veřejné automaticky ansi beforefieldinit NoStaticConstructor** **rozšiřuje [mscorlib]System.Object**
- **{** 
- **} / / konec třídy NoStaticConstructor**
+Poznámka: přidání `beforefieldinit` příznak na definici jazyka MSIL `NoStaticConstructor` třídy.
+
+```
+.class public auto ansi StaticConstructor
+extends [mscorlib]System.Object
+{
+} // end of class StaticConstructor
+
+.class public auto ansi beforefieldinit NoStaticConstructor
+extends [mscorlib]System.Object
+{
+} // end of class NoStaticConstructor
+```
+
 ## <a name="related-rules"></a>Související pravidla
- [CA2207: Inicializujte vloženou hodnotu statických polí](../code-quality/ca2207-initialize-value-type-static-fields-inline.md)
+
+- [CA2207: Inicializujte vloženou hodnotu statických polí](../code-quality/ca2207-initialize-value-type-static-fields-inline.md)

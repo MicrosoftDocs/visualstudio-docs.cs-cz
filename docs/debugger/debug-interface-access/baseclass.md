@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31465418"
 ---
 # <a name="baseclass"></a>BaseClass
 Každý základní třída pro symbol uživatelem definovaný typ (UDT) je identifikována podřízenou s `SymTagBaseClass` značky. [Idiasymbol::get_type –](../../debugger/debug-interface-access/idiasymbol-get-type.md) vlastnost obsahuje symbol pro základní UDT a všechny vlastnosti základní UDT jsou k dispozici jako součást této baseclass – symbol.  

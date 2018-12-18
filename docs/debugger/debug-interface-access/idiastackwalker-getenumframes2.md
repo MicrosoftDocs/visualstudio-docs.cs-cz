@@ -1,5 +1,5 @@
 ---
-title: IDiaStackWalker::getEnumFrames2 | Microsoft Docs
+title: IDiaStackWalker::getEnumFrames2 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 834b202d406ce7ae2e2a5b2ec80b8f7c46f0f576
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: ca384e594a9e8a295f291739589bed1eb92dd044
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49854036"
 ---
 # <a name="idiastackwalkergetenumframes2"></a>IDiaStackWalker::getEnumFrames2
-Načte enumerátor rámce zásobníku pro konkrétní platformu typu.  
+Načte čítač rámce zásobníku pro typ konkrétní platformy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,23 +37,23 @@ Načte enumerátor rámce zásobníku pro konkrétní platformu typu.
   
 #### <a name="parameters"></a>Parametry  
  `cpuid`  
- [v] Hodnota z [CV_CPU_TYPE_e – výčet](../../debugger/debug-interface-access/cv-cpu-type-e.md) výčtu zadání typu platformy.  
+ [in] Hodnota z [cv_cpu_type_e – výčet](../../debugger/debug-interface-access/cv-cpu-type-e.md) výčet určující typ platformy.  
   
  `pHelper`  
- [v] Pomocné rutiny [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md) objektu.  
+ [in] Pomocná rutina [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md) objektu.  
   
  `ppEnum`  
- [out] Vrátí [idiaenumstackframes –](../../debugger/debug-interface-access/idiaenumstackframes.md) objekt obsahující seznam [idiastackframe –](../../debugger/debug-interface-access/idiastackframe.md) objekty.  
+ [out] Vrátí [idiaenumstackframes –](../../debugger/debug-interface-access/idiaenumstackframes.md) objekt, který obsahuje seznam [idiastackframe –](../../debugger/debug-interface-access/idiastackframe.md) objekty.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- K získání seznamu rámce zásobníku pro právě x86 platformy, volání [IDiaStackWalker::getEnumFrames](../../debugger/debug-interface-access/idiastackwalker-getenumframes.md) metoda.  
+ K získání seznamu rámce zásobníku pro právě x86 platformy, volání [IDiaStackWalker::getEnumFrames](../../debugger/debug-interface-access/idiastackwalker-getenumframes.md) metody.  
   
 ## <a name="see-also"></a>Viz také  
  [Idiastackwalker –](../../debugger/debug-interface-access/idiastackwalker.md)   
- [CV_CPU_TYPE_e – výčet](../../debugger/debug-interface-access/cv-cpu-type-e.md)   
+ [Cv_cpu_type_e – výčet](../../debugger/debug-interface-access/cv-cpu-type-e.md)   
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)   
  [Idiastackframe –](../../debugger/debug-interface-access/idiastackframe.md)   
  [IDiaStackWalker::getEnumFrames](../../debugger/debug-interface-access/idiastackwalker-getenumframes.md)

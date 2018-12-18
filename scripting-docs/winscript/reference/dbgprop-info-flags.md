@@ -1,11 +1,11 @@
 ---
-title: DBGPROP_INFO_FLAGS | Microsoft Docs
-ms.custom: 
+title: DBGPROP_INFO_FLAGS | Dokumentace Microsoftu
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - DBGPROP_INFO_FLAGS
@@ -16,18 +16,19 @@ f1_keywords:
 helpviewer_keywords:
 - DBGPROP_INFO_FLAGS
 ms.assetid: e9450a21-a802-4c3e-8b3d-8e202f555de1
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9821cde6c159712ff44438b74eea0f8e01247155
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 377815adc7751841e2a2a3bb2f4dc8b51beecdea
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49941279"
 ---
 # <a name="dbgpropinfoflags"></a>DBGPROP_INFO_FLAGS
-Slouží k zadání `DebugPropertyInfo` pole  
+Používá se k určení `DebugPropertyInfo` pole  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -60,11 +61,11 @@ enum {
  Inicializuje `dwAttrib` pole.  
   
  DBGPROP_INFO_DEBUGPROP  
- Inicializuje `pDebugProp` pole, která obsahuje `IDebugProperty` rozhraní.  
+ Inicializuje `pDebugProp` pole s údajem `IDebugProperty` rozhraní.  
   
  DBGPROP_INFO_AUTOEXPAND  
- Určuje, že pole hodnoty musí obsahovat hodnotu rozšířit automaticky, pokud je k dispozici pro tento typ objektu.  
+ Určuje, že hodnota pole by měl obsahovat hodnotu automaticky rozbaleny, pokud je k dispozici pro tento typ objektu.  
   
 ## <a name="see-also"></a>Viz také  
  [Debugpropertyinfo – struktura](../../winscript/reference/debugpropertyinfo-structure.md)   
- [Idebugproperty – rozhraní](../../winscript/reference/idebugproperty-interface.md)
+ [IDebugProperty – rozhraní](../../winscript/reference/idebugproperty-interface.md)

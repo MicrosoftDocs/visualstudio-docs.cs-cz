@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsymbols::Next – | Microsoft Docs
+title: Idiaenumsymbols::Next – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f419716901d35ea667f5e99a0c452d6e1b4d186c
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: eaa9f5f1a822660d38f954f4f6bd2ee383cd9a2a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49867478"
 ---
 # <a name="idiaenumsymbolsnext"></a>IDiaEnumSymbols::Next
-Načte zadaný počet symboly v pořadí výčtu.  
+Načte zadaný počet symbolů v pořadí výčtu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,16 +36,16 @@ HRESULT Next (
   
 #### <a name="parameters"></a>Parametry  
  celt  
- [v] Počet symboly v enumerátor mají být načteny.  
+ [in] Počet symbolů v enumerátor, který se má načíst.  
   
  rgelt  
- [out] Pole, které se v pomocí [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objekty, které představují požadované symboly.  
+ [out] Pole, které je v tankujeme [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objekty, které představují požadované symboly.  
   
  pceltFetched  
- [out] Vrátí číslo symbolů v načtených enumerátor.  
+ [out] Vrátí počet symbolů v načtených enumerátor.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE` Pokud neexistují žádné další symboly. Jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud neexistují žádné další symboly. V opačném případě vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
   

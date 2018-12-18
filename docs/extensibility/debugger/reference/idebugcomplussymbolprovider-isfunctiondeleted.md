@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::IsFunctionDeleted | Microsoft Docs
+title: IDebugComPlusSymbolProvider::IsFunctionDeleted | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,14 +13,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8e52c074b7243162aa80bae67923b0d61daae564
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 504fa6855ad8b1fb38428e6e7ec7b3ac9721f644
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49864254"
 ---
 # <a name="idebugcomplussymbolproviderisfunctiondeleted"></a>IDebugComPlusSymbolProvider::IsFunctionDeleted
-Určuje, zda je odstraněn funkci na adresu zadanou ladění.  
+Určuje, že funkce na adrese zadaný ladění se odstranila.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,10 +39,10 @@ int IsFunctionDeleted(
   
 #### <a name="parameters"></a>Parametry  
  `pAddress`  
- [v] Představuje adresu ladění [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) rozhraní. Tato adresa musí být METHOD_ADDRESS.  
+ [in] Adresa pro ladění reprezentována [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) rozhraní. Tato adresa musí být METHOD_ADDRESS.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Je-li funkce odstraněna, vrátí `S_OK`. Pokud je funkce existuje, vrátí `S_FALSE`.  
+ Pokud funkce je odstraněn, vrátí `S_OK`. Pokud je funkce existuje, vrátí `S_FALSE`.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugSymbolProvider** objekt, který zveřejňuje [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) rozhraní.  

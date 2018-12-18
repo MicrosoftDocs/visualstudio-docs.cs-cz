@@ -14,13 +14,14 @@ translation.priority.ht:
 - zh-cn
 - zh-tw
 ms.openlocfilehash: 95d76781f651b681b81e4dd18848b404d8a85664
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38809255"
 ---
- Nyní byste měli mít ladit kód se symboly, který generovat v sadě Visual Studio počítači. Výkon vzdáleného ladicího programu je mnohem lepší při použití lokální symboly.  Pokud musíte použít vzdálené symboly, budete muset říct sledování vzdáleného ladění hledání symbolů ve vzdáleném počítači.  
+ Je třeba mít na ladění vašeho kódu se symboly, které vytvoříte na počítači aplikace Visual Studio. Výkon vzdáleného ladícího programu je mnohem lépe při použití místní symboly.  Pokud je nutné použít vzdálené symboly, budete muset říct sledování vzdáleného ladění hledat symboly ve vzdáleném počítači.  
   
- Od verze Visual Studio 2013 Update 2, můžete provádět následující přepínače příkazového řádku msvsmon používat vzdálené symboly pro spravovaný kód:`Msvsmon /FallbackLoadRemoteManagedPdbs`  
+ Od verze Visual Studio 2013 Update 2, vám pomůže následující msvsmon přepínač příkazového řádku pomocí vzdáleného symbolů pro spravovaný kód: `Msvsmon /FallbackLoadRemoteManagedPdbs`  
   
- Další informace najdete v tématu vzdáleného ladění nápovědy (stiskněte **F1** v okně vzdáleného ladicího programu, nebo klikněte na tlačítko **pomoci > využití**). Další informace najdete [.NET vzdálené Symbol načítání změny v sadě Visual Studio 2012 a 2013](http://blogs.msdn.com/b/visualstudioalm/archive/2013/10/16/net-remote-symbol-loading-changes-in-visual-studio-2012-and-2013.aspx)
+ Další informace najdete v tématu nápovědy vzdáleného ladění (stisknutím klávesy **F1** v okně vzdáleného ladicího programu, nebo klikněte na tlačítko **Nápověda > využití**). Další informace najdete [.NET změny vzdálené načítání symbolů v sadě Visual Studio 2012 a 2013](http://blogs.msdn.com/b/visualstudioalm/archive/2013/10/16/net-remote-symbol-loading-changes-in-visual-studio-2012-and-2013.aspx)

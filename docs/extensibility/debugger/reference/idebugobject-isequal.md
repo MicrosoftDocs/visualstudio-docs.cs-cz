@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::IsEqual | Microsoft Docs
+title: IDebugObject::IsEqual | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: cccce3a530aa1871e093ce5a4ab9187f1ce9d4b1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 91e84d47f7fc60e60c3c7fb58ba66bc0a00daf30
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49839996"
 ---
 # <a name="idebugobjectisequal"></a>IDebugObject::IsEqual
-Porovná objekt se tento objekt.  
+Porovná objekt s tímto objektem.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,16 +43,16 @@ int IsEqual(
   
 #### <a name="parameters"></a>Parametry  
  `pObject`  
- [v] [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objektu, který představuje objekt k porovnání s.  
+ [in] [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objekt představující objekt k porovnání s.  
   
  `pfIsEqual`  
- [out] Vrátí nenulový (`TRUE`) hodnoty objekty jsou stejné jinak, vrátí hodnotu 0 (`FALSE`).  
+ [out] Vrátí nenulovou (`TRUE`) Pokud jsou hodnoty objekty stejné; jinak, vrátí hodnotu 0 (`FALSE`).  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí S_OK; jinak vrátí kód chyby.  
+ V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Obvykle tuto metodu můžete porovnat adresy hodnoty reprezentované `pObject` parametr a to [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objekt; Pokud adresy jsou stejné, objekty mohou být považovány za shodné.  
+ Obvykle tuto metodu můžete porovnat adresy hodnoty reprezentované `pObject` parametr a to [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objekt; Pokud adresy jsou si rovny, pak objekty lze považovat za stejné.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

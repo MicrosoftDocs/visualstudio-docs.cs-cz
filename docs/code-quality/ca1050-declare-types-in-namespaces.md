@@ -1,6 +1,7 @@
 ---
 title: 'CA1050: Deklarujte typy v oborech názvů'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,15 +14,20 @@ ms.assetid: 1002748d-ac8d-404f-85dd-7a12d1ad3e05
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 174f30b8f4e58d7289b93cd9f5a8a8253c7a4fba
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 5bff984d9ea11ba8fd7f2e42deb5898f04da7d44
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45548478"
 ---
 # <a name="ca1050-declare-types-in-namespaces"></a>CA1050: Deklarujte typy v oborech názvů
+
 |||
 |-|-|
 |TypeName|DeclareTypesInNamespaces|
@@ -30,25 +36,25 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Typ veřejné nebo chráněného je definována mimo obor s názvem oboru názvů.
+ Veřejný nebo chráněný typ definovaný vně rozsahu pojmenovaného oboru názvů.
 
 ## <a name="rule-description"></a>Popis pravidla
- Typy jsou deklarované v oborech názvů, aby se zabránilo kolize názvů a jako způsob, jak uspořádat související typy v hierarchii objektu. Typy, které jsou mimo pojmenovaný obor názvů jsou v globálním oboru názvů, který nelze odkazovat v kódu.
+ Typy jsou deklarovány v oborech názvů, aby se zabránilo kolize názvů a zároveň jako způsob organizace souvisejících typů v hierarchii objektů. Typy, které jsou mimo všechny pojmenovaného oboru názvů jsou v globálním oboru názvů, který se nedá odkazovat v kódu.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení toto pravidlo, zaškrtněte typ v oboru názvů.
+ Chcete-li opravit porušení tohoto pravidla, umístěte typ v oboru názvů.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- I když máte nikdy potlačit upozornění na toto pravidlo, je bezpečné k tomu, když sestavení nebude nikdy používat společně s ostatních sestavení.
+ I když si už nikdy nemusíte potlačit upozornění tohoto pravidla, je bezpečné k tomu, když sestavení nebude nikdy používat společně s ostatními sestaveními.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje knihovnu, která má typ nesprávně deklarovaný mimo obor názvů a typ, který má stejný název deklarované v oboru názvů.
+ Následující příklad ukazuje knihovnu, která má typ nesprávně deklarované mimo obor názvů a typ, který má stejný název deklarovaný v oboru názvů.
 
  [!code-csharp[FxCop.Design.TypesLiveInNamespaces#1](../code-quality/codesnippet/CSharp/ca1050-declare-types-in-namespaces_1.cs)]
  [!code-vb[FxCop.Design.TypesLiveInNamespaces#1](../code-quality/codesnippet/VisualBasic/ca1050-declare-types-in-namespaces_1.vb)]
 
 ## <a name="example"></a>Příklad
- Následující aplikace používá knihovnu, která byla definována dříve. Všimněte si, že typ, který je deklarován mimo obor názvů se vytvoří při název `Test` není kvalifikovaná pomocí oboru názvů. Všimněte si také, že pro přístup `Test` zadejte `Goodspace`, je nutné zadat název oboru názvů.
+ Následující aplikace používá knihovnu, která byla definována dříve. Všimněte si, že je vytvořen typ, který je deklarovaná mimo obor názvů, když název `Test` není kvalifikován pomocí oboru názvů. Všimněte si také, že pro přístup k `Test` zadejte `Goodspace`, vyžaduje se název oboru názvů.
 
  [!code-csharp[FxCop.Design.TestTypesLive#1](../code-quality/codesnippet/CSharp/ca1050-declare-types-in-namespaces_2.cs)]
  [!code-vb[FxCop.Design.TestTypesLive#1](../code-quality/codesnippet/VisualBasic/ca1050-declare-types-in-namespaces_2.vb)]

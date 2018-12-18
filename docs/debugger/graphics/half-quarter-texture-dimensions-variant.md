@@ -1,5 +1,5 @@
 ---
-title: Texture půl čtvrtletí Dimensions Variant | Microsoft Docs
+title: Dimenze varianta polovičních textury | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -10,40 +10,41 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b19a7c8444264300bdb819152769f1760d4a4d3e
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 94820b2930bbe689c37b90443ac007b137f162d6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49870195"
 ---
-# <a name="halfquarter-texture-dimensions-variant"></a>Texture půl/čtvrtletí dimenze typu Variant
-Snižuje dimenze texture na textury, které nejsou vykreslení cíle.  
+# <a name="halfquarter-texture-dimensions-variant"></a>Varianta dimenze polovině/textury
+Snižuje rozměrů textury na textury, které nejsou cíle vykreslování.  
   
-## <a name="interpretation"></a>Interpretace  
- Menší textury zabírají méně paměti a proto využívat menší šířku pásma paměti a snížení nároků na na grafický procesor texture mezipaměti. Jejich nižší úrovně podrobností však může způsobit snížené bitové kopie kvality, zejména v případě, že už zobrazit úzce v 3D scény nebo zobrazit v části zvětšení.  
+## <a name="interpretation"></a>interpretace  
+ Menší textury zabírají méně paměti a proto využívat menší šířku pásma paměti a snížení tlak na GPU mezipaměti textur. Jejich nižší úrovně podrobností však může způsobit snížení kvalitu, zejména v případě, že se jedná o zobrazení úzce ve 3D scéně nebo zobrazit v části zvětšení.  
   
- Pokud tato varianta zobrazuje velké výkonnější, mohlo znamenat, že vaše aplikace využívá příliš velkou šířku pásma, paměti, používá textury mezipaměti neefektivnímu nebo obojí. Můžete také určit, že vaše textury zabírají další grafické paměti, než je k dispozici, což způsobí, že textury k stránkování paměti systému.  
+ Pokud se tato varianta zobrazí zisk náročné na výkon, můžete určit, že vaše aplikace využívá příliš velkou šířku pásma, paměti, používá texturu mezipaměti neefektivně nebo obojí. Lze také určit, že vaše textury zabírat větší paměť GPU, než je k dispozici, což způsobí, že textury stránkování na systémové paměti.  
   
- Pokud vaše aplikace využívá příliš mnoho paměti šířky pásma nebo používá mezipaměť texture neefektivnímu, zvažte zmenšení velikosti vašeho textury, ale až poté, co byste zvážit povolení mapy mip textury vhodné. Jako menší textury mapované mip textury využívat menší šířku pásma paměti – i když jejich zabírají více paměti grafického procesoru – a zvýšení využití mezipaměti, ale nemáte snížit texture podrobností. Mapy mip doporučujeme vždy, když je využití paměti vyšší nezpůsobí textury k stránkování paměti systému.  
+ Pokud vaše aplikace spotřebovává příliš mnoho paměti šířky pásma nebo používá mezipaměť textury neefektivně, zvažte snížení velikosti vašeho textury, ale až poté, co můžete zvážit povolení mapy mip odpovídající textury. Stejně jako menší textury textury pro mapovanou mip využívat menší šířku pásma paměti – i když jsou zabírat více paměti GPU – a zvýšení využití mezipaměti, ale není snížit úroveň podrobnosti textury. Doporučujeme, abyste mapy mip pokaždé, když je využití paměti pro zvýšení nezpůsobí textury stránkování na systémové paměti.  
   
- Pokud vaše textury zabírají další grafické paměti, než je k dispozici, zvažte zmenšení velikosti textury, ale až poté, co byste zvážit kompresi textury vhodné. Podobně jako menší textury komprimované textury zabírají méně paměti a snížení nároků na stránku pro systémové paměti, ale jejich věrnosti barva se snižuje. Komprese není vhodné pro všechny textury, v závislosti na jejich obsah – například ty, které jsou důležité barvu variace v malých oblasti – ale pro mnoho textury komprese můžete zachovat lepší celkovou kvalitu obrazu než snižuje jejich velikost.  
+ Pokud vaše textury zabírat více paměti GPU, než je k dispozici, zvažte snížení velikost textury, ale až po zvažte komprese odpovídající textury. Podobně jako menší textury komprimované textury zabírají méně paměti a snížení nároků na stránku a systémové paměti, ale jejich barva věrnost je omezeno. Komprese není vhodná pro všechny textury, v závislosti na jejich obsah, například ty, které mají významný barev ve malou oblast –, ale pro mnoho textury, můžete zachovat komprese lepší celkovou kvalitu obrazu než jejich velikost.  
   
 ## <a name="remarks"></a>Poznámky  
- Texture dimenze jsou omezeny na každé volání `ID3D11Device::CreateTexture2D` vytvářející texture zdroje. Konkrétně jsou omezeny texture dimenzí, když objekt D3D11_TEXTURE2D_DESC předaná `pDesc` popisuje texture, který se používá v vykreslování; který je:  
+ Rozměry textury jsou zmenšeny na všechna volání `ID3D11Device::CreateTexture2D` , který vytváří zdrojovou texturu. Konkrétně je snížení rozměrů textury při D3D11_TEXTURE2D_DESC objekt předaný v `pDesc` popisuje textury, který se používá vykreslování; který je:  
   
--   Člen BindFlags má pouze D3D11_BIND_SHADER_RESOURCE příznak nastavený.  
+- Člen BindFlags má pouze D3D11_BIND_SHADER_RESOURCE příznak nastaven.  
   
--   Člen MiscFlags nemá příznak D3D11_RESOURCE_MISC_TILE_POOL nebo nastaven příznak D3D11_RESOURCE_MISC_TILED (vedle sebe prostředky nejsou po změně velikosti).  
+- Člen MiscFlags nemá příznak D3D11_RESOURCE_MISC_TILE_POOL nebo nastaví příznak D3D11_RESOURCE_MISC_TILED (vedle sebe prostředky nelze změnit velikost).  
   
--   Formát texture je podporovaný jako cíl vykreslení – určeného D3D11_FORMAT_SUPPORT_RENDER_TARGET – což je vyžadováno pro zmenšení velikosti texture. Formáty BC1, BC2 a BC3 jsou také podporovány, i když některé funkce nejsou podporovány jako vykreslení cíle.  
+- Formát textura je podporovaný jako cíl vykreslování – podle D3D11_FORMAT_SUPPORT_RENDER_TARGET – což je vyžadováno pro omezení velikosti textury. Podporují se také formátů BC1, BC2 a BC3, a i když nejsou podporovány jako cíle vykreslování.  
   
- Pokud je zadaný počáteční data aplikací, škáluje Tato varianta předtím, než se vytvoří textury texture data, která mají správnou velikost. Pokud je zadaný počáteční data ve formátu-komprimovaného bloku například BC1, BC2 nebo BC3, je dekódovat, škálovat a znovu kódovaný předtím, než se používá k vytvoření menších texture. (Povaha Blokový komprese znamená, že proces velmi dekódovat škálování kódování téměř vždy způsobí nižší kvality obrázku, než když texturou-komprimovaného bloku se generují z škálovat verzi texture, který nebyl dříve zakódován.)  
+  Pokud je počáteční údaje poskytnuté aplikací, škáluje Tato varianta data textury, která mají odpovídající velikost, předtím, než vytvoří textury. Pokud počáteční data je zadaný ve formátu komprimovanými například BC1, BC2 nebo BC3, je dekódovat, škálovat a znovu kódován předtím, než se používá k vytvoření menších textury. (Povaze založené na blocích komprese znamená, že proces velmi dekódování škálování – kódování téměř vždy způsobí nižší kvality obrázku, než když textury komprimovanými nevygeneruje škálovaná verze textury, který nebyl dříve zakódován.)  
   
- Pokud mapy mip jsou povolené pro textury, varianta snižuje počet úrovní mip odpovídajícím způsobem – jeden méně při škálování poloviční velikost nebo dvě méně při škálování velikost čtvrtletí.  
+  Pokud mapy mip jsou povolené pro textury, varianty snižuje počet úrovní mip odpovídajícím způsobem – jeden méně při horizontálním škálování poloviční velikost nebo dvě méně při škálování na velikost čtvrtletí.  
   
 ## <a name="example"></a>Příklad  
- Tento typ variant změní textury za běhu před voláním `CreateTexture2D`. Nedoporučujeme tento přístup pro kód produkční, protože plné velikosti textury využívat více místa na disku, a protože další krok může prodloužit dobu načítání ve vaší aplikaci – hlavně pro komprimovaný textury vyžadující významné výpočetní prostředky ke kódování. Místo toho doporučujeme změnit velikost vašeho textury do offline režimu, a to pomocí editoru bitové kopie nebo bitové kopie procesoru, který je součástí vašeho kanálu sestavení. Tyto přístupy snížit požadavky na místo na disku a eliminovat režii runtime v aplikaci a dovolit více času na zpracování, aby při zmenšení nebo kompresi vaší textury můžete zachovat nejlepší kvalitu obrazu.  
+ Tato varianta změní velikost textury v době běhu před voláním `CreateTexture2D`. Nedoporučujeme tento přístup pro produkční kód, protože reklamy textury využívat více místa na disku a další krok může zvýšit dobu načítání v aplikaci – zejména pro komprimované textury, které vyžadují významné výpočetní prostředky ke kódování. Namísto toho doporučujeme změnit velikost vašeho textury v režimu offline, a to pomocí editoru obrázků nebo obrázků procesor, který je součástí vašeho kanálu sestavení. Tyto přístupy snížit požadavky na místo na disku a eliminuje režijní náklady na modul runtime ve vaší aplikaci a poskytují více času na zpracování, aby uchováváte nejlepší kvality obrázku během zmenšení nebo komprese vaše textury.  
   
 ## <a name="see-also"></a>Viz také  
- [Mapy MIP generování Variant](mip-map-generation-variant.md)   
+ [Varianta generování Mipmap](mip-map-generation-variant.md)   
  [Varianta komprese textur BC](bc-texture-compression-variant.md)

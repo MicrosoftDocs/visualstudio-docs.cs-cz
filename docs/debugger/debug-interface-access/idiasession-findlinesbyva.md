@@ -1,5 +1,5 @@
 ---
-title: Idiasession::findlinesbyva – | Microsoft Docs
+title: Idiasession::findlinesbyva – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d88a93e5bd22befb661505bb09cdce6f5d3b544
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: c199411504db6d4465b6e02f4ffaad988c48b46c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49870650"
 ---
 # <a name="idiasessionfindlinesbyva"></a>IDiaSession::findLinesByVA
-Načte informace číslo řádku pro řádky, které jsou obsaženy v rozsahu zadané virtuální adresy (VA).  
+Načte informace o čísle řádku pro řádky, které jsou obsaženy v rozsahu, zadanou virtuální adresu (VA).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,16 +36,16 @@ HRESULT findLinesByVA (
   
 #### <a name="parameters"></a>Parametry  
  `va`  
- [v] Určuje adresu jako VA.  
+ [in] Určuje adresu jako VA.  
   
  `length`  
- [v] Určuje počet bajtů rozsah adres tak, aby pokrývalo k tomuto dotazu.  
+ [in] Určuje počet bajtů rozsah adres, aby pokryl s Tento dotaz.  
   
  `ppResult`  
  [out] Vrátí [idiaenumlinenumbers –](../../debugger/debug-interface-access/idiaenumlinenumbers.md) objekt, který obsahuje seznam všech řádku čísla tohoto krytí zadaný rozsah adres.  
   
 ## <a name="example"></a>Příklad  
- Tento příklad ukazuje funkce, který získá všechna čísla řádků obsažené ve funkci pomocí funkce virtuální adresy a délka.  
+ Tento příklad ukazuje funkci, která získá všechna čísla řádků, které jsou obsažené ve funkci pomocí funkce virtuální adresu a délku.  
   
 ```C++  
 IDiaEnumLineNumbers *GetLineNumbersByVA(IDiaSymbol *pFunc, IDiaSession *pSession)  

@@ -1,5 +1,5 @@
 ---
-title: Manifesty nasazení pro řešení Office | Microsoft Docs
+title: Manifesty nasazení pro řešení Office
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,27 +18,28 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e1276650d38f16f8ccc36720f7e273472e609367
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 41f0e6b484ae61d53913c51e3d51b123a5d054a2
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34263487"
 ---
 # <a name="deployment-manifests-for-office-solutions"></a>Manifesty nasazení pro řešení Office
   Manifest nasazení je soubor XML, který popisuje nastavení nasazení řešení Office a identifikuje aktuální verze aplikace.  
   
- Vývoj pro Office v sadě Visual Studio použije [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] nasazení manifestu schéma definované v [Manifest aplikace ClickOnce](/visualstudio/deployment/clickonce-deployment-manifest) odkaz.  
+ Vývoj pro Office v sadě Visual Studio použije [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] nasazení manifestu schéma definované v [ClickOnce – manifest nasazení](/visualstudio/deployment/clickonce-deployment-manifest) odkaz.  
   
 ## <a name="remarks"></a>Poznámky  
- Soubor manifestu nasazení pro řešení Office identifikuje aktuální verze a dalších nastavení nasazení. Odkazuje na manifest aplikace, která popisuje aktuální verzi řešení a všechny soubory, které jsou obsaženy v řešení.  
+ Soubor manifestu nasazení pro řešení Office identifikuje aktuální verze a dalších nastavení nasazení. Odkazuje na manifest aplikace a popisuje aktuální verzi řešení a všechny soubory v rámci v řešení.  
   
 ## <a name="file-name-syntax"></a>Syntaxe názvu souboru  
- Název souboru manifestu nasazení musí končit příponou .vsto. I když je standardní [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] – manifest nasazení, se liší povolit Visual Studio Tools for Office runtime pro zpracování souboru rozšíření.  
+ Název souboru manifestu nasazení musí končit *.vsto* rozšíření. I když je standardní [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] – manifest nasazení, se liší povolit Visual Studio Tools for Office runtime pro zpracování souboru rozšíření.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad kódu ukazuje manifest nasazení pro Visual Studio Tools for Office řešení.  
   
-```  
+```xml
 <?xml version="1.0" encoding="utf-8"?>  
 <asmv1:assembly   
   xsi:schemaLocation=  
@@ -186,6 +187,6 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md)  
+ [Manifesty aplikace pro řešení pro systém Office](../vsto/application-manifests-for-office-solutions.md)  
   
   

@@ -10,13 +10,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7949f19198aebe37b4a846cc37f274940415fb8e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ec1acb6763d408f9f13ec3044e2cd8137d34e634
+ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35237650"
 ---
-# <a name="memory-and-paging-performance-rules"></a>Pravidla výkonu paměti a stránkování
+# <a name="memory-and-paging-performance-rules"></a>Paměti a stránkování pravidla výkonu
 Pravidla výkonu v paměti a stránkování kategorii identifikovat stránkování aktivity v profilaci spuštění, které může mít vliv na výkon aplikace a odezvy.  
   
 |||  

@@ -9,20 +9,22 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: ae0910863db207e8200a2fea33be1f4e97bff5fc
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 0a8af35d9edbb28c6b357149586fe7015858f4f0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49876526"
 ---
 # <a name="how-to-intercept-a-click-on-a-shape-or-decorator"></a>Postupy: Zachycení kliknutí na obrazec či dekorátor
-Následující postupy ukazují, jak zachytit a klikněte na obrazce nebo na ikonu dekoratéra. Možné zachytit kliknutí, poklikáním, nastavuje tažením, a dalších gesta a vytvoření elementu reagovat.
+Následující postupy ukazují, jak zachycení kliknutí na obrazec nebo ikonu dekoratér. Můžete zachytit klikne na tlačítko, dvakrát klikne, přetáhne, a dalších gesta a aby prvek reagovat.
 
-## <a name="to-intercept-clicks-on-shapes"></a>Zachytávat kliknutí na tvary
- V projektu Dsl v souboru kódu, která je oddělená od soubory generovaného kódu zápisu třídu definice pro třídu tvaru. Přepsání `OnDoubleClick()` nebo jednu z metod, které má název začíná `On...`. Příklad:
+## <a name="to-intercept-clicks-on-shapes"></a>Aby se zachytily kliknutí obrazců
+ V projektu Dsl v souboru kódu, která je oddělená od soubory generovaný kód napište částečné třídy definice pro třídu tvaru. Přepsat `OnDoubleClick()` nebo jednu z metod, které má název začíná `On...`. Příklad:
 
-```
+```csharp
 public partial class MyShape // change
   {
     public override void OnDoubleClick(DiagramPointEventArgs e)
@@ -34,22 +36,22 @@ public partial class MyShape // change
 ```
 
 > [!NOTE]
->  Nastavit `e.Handled` k `true`, pokud chcete události, které mají být předány obsahující tvar nebo diagram.
+>  Nastavte `e.Handled` k `true`, pokud chcete události mají být předány obsahující tvar nebo diagram.
 
-## <a name="to-intercept-clicks-on-decorators"></a>Zachytávat kliknutí na Dekoratéry
- Obrázek dekoratéry, se přenášejí v instanci třídy ImageField, který má metodu OnDoubleClick. Pokud píšete podtřídy ImageField je možné zachytit kliknutí. Pole se nastavují v metodě InitializeShapeFields. Proto je nutné změnit dané metody pro vytvoření instance vaše podtřída místo regulární ImageField. Metoda InitializeShapeFields je generovaný kód třídy tvaru. Třída shape můžete přepsat, pokud jste nastavili jeho `Generates Double Derived` vlastnost, jak je popsáno v následujícím postupu.
+## <a name="to-intercept-clicks-on-decorators"></a>Aby se zachytily kliknutí na Dekorátorů
+ Obrázek dekoratéry se přenášejí na instanci třídy ImageField, který má metodu OnDoubleClick. Pokud píšete podtřídy třídy ImageField je možné zachytit kliknutí. Pole se nastavují v metodě InitializeShapeFields. Proto je nutné změnit metody pro vytvoření instance vaší podtřídy místo regulární ImageField. Metoda InitializeShapeFields je vygenerovaný kód ve třídě tvaru. Třída obrazce můžete přepsat, pokud nastavíte jeho `Generates Double Derived` vlastnost, jak je popsáno v následujícím postupu.
 
- I když InitializeShapeFields je metoda instance, nazývá se jenom jednou pro každou třídu. Proto existuje pouze jedna instance ClickableImageField pro každé pole v každé třídě není jedna instance pro každý obrazec v diagramu. Při poklepání instanci, musíte určit, narazil kterou instanci jako kód v příkladu ukazuje.
+ I když InitializeShapeFields je metoda instance, nazývá pouze jednou pro každou třídu. Proto pouze jedna instance ClickableImageField existuje pro každé pole v každé třídě není jednu instanci pro všechny obrazce v diagramu. Při poklepání instance, musíte určit, která instance se dosáhlo, jak kódem v příkladu ukazuje.
 
-#### <a name="to-intercept-a-click-on-an-icon-decorator"></a>Zachytávat kliknutí na dekoratéra na ikonu
+#### <a name="to-intercept-a-click-on-an-icon-decorator"></a>K zachycení kliknutí na dekoratér ikony
 
-1.  Otevřete nebo vytvořte DSL řešení.
+1.  Otevřete nebo vytvořte řešení DSL.
 
-2.  Vyberte nebo vytvořte tvar, který má na ikonu dekoratéra a namapovat je na třídu domény.
+2.  Vyberte nebo vytvořte obrazec, který má dekoratér ikony a mapování na doménovou třídu.
 
-3.  V souboru kódu, která je oddělená od soubory v `GeneratedCode` složky, vytvořte nový podtřídou třídy ImageField:
+3.  V souboru kódu, která je oddělená od souborů v `GeneratedCode` složku, vytvořte novou podtřídu třídy ImageField:
 
-    ```
+    ```csharp
     using Microsoft.VisualStudio.Modeling;
     using Microsoft.VisualStudio.Modeling.Design;
     using Microsoft.VisualStudio.Modeling.Diagrams;
@@ -83,11 +85,11 @@ public partial class MyShape // change
     }
     ```
 
-     Měli byste nastavit Handled na hodnotu true, pokud nechcete, aby událostí, které mají být předány obsahující tvaru.
+     Měli byste nastavit Handled na hodnotu true, pokud nechcete, aby se události mají být předány nadřazeného obrazce.
 
-4.  Potlačí metodu InitializeShapeFields ve vaší classs tvar přidáním následující definici částečné třídy.
+4.  Přepište metodu InitializeShapeFields v vaše classs obrazce tak, že přidáte následující definice částečné třídy.
 
-    ```
+    ```csharp
     public partial class MyShape // change
     {
      protected override void InitializeShapeFields
@@ -112,38 +114,38 @@ public partial class MyShape // change
     }
     ```
 
-1.  Sestavení a spuštění řešení.
+1.  Sestavte a spusťte řešení.
 
-2.  Dvakrát klikněte na ikonu na instanci tvaru. Testovací zpráva by se zobrazit.
+2.  Poklepejte na ikonu na instanci daného tvaru. Testovací zpráva by se zobrazit.
 
-## <a name="intercepting-clicks-and-drags-on-compartmentshape-lists"></a>Zachycení klikne a nastavuje tažením na CompartmentShape seznamy
- Následující ukázka umožňuje uživatelům změnit pořadí položek v prostředí obrazce přetažením. Chcete-li spustit tento kód:
+## <a name="intercepting-clicks-and-drags-on-compartmentshape-lists"></a>Zachycení kliknutí a přetáhne v CompartmentShape seznamech
+ Následující příklad umožňuje uživatelům změnit pořadí položek v obrazce oddílu jejich přetažením. Pokud chcete spustit tento kód:
 
-1.  Vytvořte nové řešení DSL pomocí **diagramů tříd** šablona řešení.
+1. Vytvořit nové řešení DSL pomocí **diagramů tříd** šablonu řešení.
 
-     Také můžete pracovat s vlastní řešení, které obsahuje obrazce prostředí. Tento kód předpokládá, že je vnoření vztah mezi reprezentována tvaru prvků modelu a elementy v prostoru pro položky seznamu.
+    Můžete také pracovat s vlastní řešení, které obsahuje obrazce oddílu. Tento kód předpokládá, že je vztah obsažení mezi prvky modelu, který je reprezentovaný tvar a prvky v seznamu položek oddílu.
 
-2.  Nastavte **generuje dvojité odvozené** vlastnost tvaru prostředí.
+2. Nastavte **Generates Double Derived** vlastnost obrazce oddílu.
 
-3.  Přidejte tento kód v souboru ve **Dsl** projektu.
+3. Tento kód vložte do souboru v **Dsl** projektu.
 
-4.  Upravte názvy domén třídy a tvar v tento kód tak, aby odpovídaly vlastní DSL.
+4. Upravte názvy domén třídu a obrazec v tomto kódu tak, aby odpovídaly vlastní DSL.
 
- V souhrnu funguje kód. V tomto příkladu `ClassShape` je název tvaru prostředí.
+   Stručně řečeno kód pracuje následujícím způsobem. V tomto příkladu `ClassShape` je název obrazce oddílu.
 
--   Sada obslužných rutin událostí myši je připojený k každá instance prostředí při jeho vytvoření.
+-   Sada obslužných rutin událostí myši je připojen ke každé instanci oddílu při jeho vytváření.
 
--   `ClassShape.MouseDown` Událostí ukládá s aktuální položkou.
+-   `ClassShape.MouseDown` Události uloží aktuální položky.
 
--   Když myši přesune mimo aktuální položky, je vytvořena instance AkceMysi, který nastaví kurzor a zachytí myši, dokud jeho vydání.
+-   Když ukazatel myši přesune z aktuální položka je vytvořena instance AkceMysi, který nastaví kurzor a zachytí myš, dokud se neuvolní.
 
-     Abyste zabránili kolizím s další akce myši, jako je výběr textu položky, AkceMysi vytvořen až myši opustil původní položce.
+     Aby se předešlo kolizi s další akce myši, jako je například výběr textu položky, není vytvořen AkceMysi, dokud myši opustí původní položka.
 
-     Alternativu k vytvoření AkceMysi jednoduše bude naslouchat MouseUp. Ale to nebude pracovat správně, pokud uživatel uvolní myši po přetahování mimo oddíl. AkceMysi je mohli provádět příslušné akce bez ohledu na to, kde uvolnění myši.
+     Alternativa k vytváření AkceMysi by jednoduše MouseUp naslouchat. Nicméně to nebude fungovat správně v případě, že uživatel uvolní tlačítko myši po přetažení mimo oddílu. AkceMysi je schopen provést příslušnou akci bez ohledu na to, kde se uvolní tlačítko myši.
 
--   Při uvolnění myši MouseAction.MouseUp Přeuspořádá pořadí propojení mezi prvky modelu.
+-   Když se uvolní tlačítko myši, uspořádá MouseAction.MouseUp pořadí odkazů mezi prvky modelu.
 
--   Změna pořadí role aktivuje pravidla, která aktualizuje zobrazení. Toto chování je již definován a není třeba žádné další kód.
+-   Změna pořadí role aktivuje pravidlo, které aktualizuje zobrazení. Toto chování je již definován a není vyžadován žádný další kód.
 
 ```csharp
 using Microsoft.VisualStudio.Modeling;
@@ -391,7 +393,6 @@ namespace Company.CompartmentDrag
   }
  }
 }
-
 ```
 
 ## <a name="see-also"></a>Viz také

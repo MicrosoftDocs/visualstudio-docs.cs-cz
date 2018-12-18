@@ -1,5 +1,5 @@
 ---
-title: IDebugPendingBreakpoint2::EnumErrorBreakpoints | Microsoft Docs
+title: IDebugPendingBreakpoint2::EnumErrorBreakpoints | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9bf419ccf3b0935dccf1fa4e56ec156bc4338da6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4c43c3bd314ae9db7025448b2632562e9ae947c4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942267"
 ---
 # <a name="idebugpendingbreakpoint2enumerrorbreakpoints"></a>IDebugPendingBreakpoint2::EnumErrorBreakpoints
-Získá seznam všechny zarážky chyba, která byla vygenerována z této čekající zarážky.  
+Získá seznam všechny zarážky chyb, které je výsledkem této čekající zarážka.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,16 +44,16 @@ int EnumErrorBreakpoints(
   
 #### <a name="parameters"></a>Parametry  
  `bpErrorType`  
- [v] Kombinace hodnot z [BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md) výčet, který vybere typ chyby výčet.  
+ [in] Kombinací hodnot z [BP_ERROR_TYPE](../../../extensibility/debugger/reference/bp-error-type.md) výčet, který vybere typ chyby výčet.  
   
  `ppEnum`  
  [out] Vrátí [IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md) objekt, který obsahuje seznam [IDebugErrorBreakpoint2](../../../extensibility/debugger/reference/idebugerrorbreakpoint2.md) objekty.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby. Vrátí `E_BP_DELETED` Pokud zarážce byl odstraněn.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí `E_BP_DELETED` Pokud zarážka byla odstraněna.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchou `CPendingBreakpoint` objekt, který zveřejňuje [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) rozhraní.  
+ Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CPendingBreakpoint` objekt, který zveřejňuje [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) rozhraní.  
   
 ```cpp  
 HRESULT CPendingBreakpoint::EnumErrorBreakpoints(  

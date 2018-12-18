@@ -1,5 +1,5 @@
 ---
-title: Omezení délky řetězce | Microsoft Docs
+title: Omezení délky řetězců | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,16 +13,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 56a76e84c27684d422b6554b22c75d945df4e928
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5b3552a88f5a78b627e72e877758cf6b7d12de95
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39638531"
 ---
-# <a name="restrictions-on-string-lengths"></a>Omezení délky řetězce
-Rozhraní API ovládacího prvku Plug-in Zdroj omezení délky řetězce použité v různých funkcí.  
+# <a name="restrictions-on-string-lengths"></a>Omezení délky řetězců
+Rozhraní API modulu Plug-in zdroje ovládacího prvku omezení délky řetězce použité v různých funkcí.  
   
-## <a name="string-length-values"></a>Délka hodnoty řetězce  
+## <a name="string-length-values"></a>Hodnoty pro délku řetězce  
   
 |Konstanta|Hodnota|  
 |--------------|-----------|  
@@ -32,7 +33,7 @@ Rozhraní API ovládacího prvku Plug-in Zdroj omezení délky řetězce použit
 |`SCC_PRJPATH_LEN`|300|  
   
 > [!NOTE]
->  Délka nezahrnuje ukončení `null`. Ostatní konstanty s příponou "_SIZE" místo "_LEN" zahrnují místa pro ukončení `null`.  
+>  Délka nezahrnuje ukončení `null`. Další konstantám s příponou "_velikost" místo "_LEN" zahrnout místa pro ukončení `null`.  
   
 |Konstanta|Hodnota|  
 |--------------|-----------|  
@@ -41,5 +42,5 @@ Rozhraní API ovládacího prvku Plug-in Zdroj omezení délky řetězce použit
 |SCC_USER_SIZE|32|  
 |SCC_PRJPATH_SIZE|301|  
   
-## <a name="see-also"></a>Viz také  
- [Moduly plug-in správy zdrojového kódu](../extensibility/source-control-plug-ins.md)
+## <a name="see-also"></a>Viz také:  
+ [Ovládací prvek moduly plug-in zdrojového kódu](../extensibility/source-control-plug-ins.md)

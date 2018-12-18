@@ -1,13 +1,11 @@
 ---
-title: Dialogové okno Možnosti, projekty a řešení, sestavit a spustit | Microsoft Docs
-ms.custom: ''
+title: Dialogové okno Možnosti, Projekty a řešení, Sestavit a spustit
 ms.date: 07/14/2017
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Projects.Build_and_Run
-- VS.ToolsOptionsPag.Projects.Build_and_Run
 helpviewer_keywords:
 - builds [Visual Studio], setting up
 - run actions
@@ -18,44 +16,53 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 00e7b0e56f536ce4dc6d62df933be044ab1ed7d5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1b2d047201214e3a7cd4c14c61baa041840decd8
+ms.sourcegitcommit: 1abb9cf4c3ccb90e3481ea8079272c98aad12875
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50143317"
 ---
-# <a name="options-dialog-box--projects-and-solutions-build-and-run"></a>Dialogové okno Možnosti, projekty a řešení, sestavit a spustit
+# <a name="options-dialog-box-projects-and-solutions-build-and-run"></a>Dialogové okno Možnosti, Projekty a řešení, Sestavit a spustit
 
-V tomto dialogovém můžete zadat maximální počet projekty Visual C++ nebo C#, které můžete vytvořit ve stejnou dobu, sestavení určité výchozí chování a některé sestavení nastavení protokolu. Chcete-li získat přístup k tyto možnosti, vyberte **nástroje > Možnosti** rozbalte **projekty a řešení**a vyberte **sestavit a spustit**.
-  
-**Maximální počet paralelní projektu sestavení**  
-Určuje maximální počet projekty Visual C++ a C#, které můžete vytvořit ve stejnou dobu. K optimalizaci procesu sestavení, se automaticky nastaví maximální počet paralelní projektu sestavení na počet procesorů v počítači. Maximální počet je 32.  
+V tomto dialogovém okně můžete zadat maximální počet Visual C++ nebo C# projekty, které můžete vytvářet ve stejnou dobu, určité výchozí chování, ale taky popustit některé nastavení protokolu sestavení. Zpřístupníte tyto možnosti, vyberte **nástroje > Možnosti** rozbalte **projekty a řešení**a vyberte **sestavíte a spustíte**.
 
-**Pouze při spuštění sestavení projektů po spuštění a závislosti**  
-Při použití klíče, vyberte F5 sestavení spouštěný projekt a jeho závislé součásti **ladění > Spustit** příkaz nabídky, nebo použít příkazy na **sestavení** nabídky. Pokud je prázdné, jsou všechny projekty a závislosti sestavení. 
+**maximální počet paralelních projektu sestavení**
 
-**Při spuštění, když jsou zastaralé projekty**  
-*Platí pro [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] pouze projekty.*
+Určuje maximální počet Visual C++ a C# projekty, které můžete vytvářet ve stejnou dobu. K optimalizaci procesu sestavení, je maximální číslo sestavení paralelního projektu automaticky nastaví počet procesorů počítače. Maximální počet je 32.
 
-Při spuštění projektu pomocí F5 nebo **ladění > Spustit** příkaz, ve výchozím nastavení **výzva k vytvoření** zobrazí zprávu, pokud není aktuální konfigurací projektu. Vyberte **vždy sestavení** a tím projekt sestavit pokaždé, když je spuštěná. Vyberte **nikdy sestavení** při spuštění projektu potlačit všechny automatické sestavení.
+**Pouze při spuštění sestavit projekty a závislosti**
 
-**Při spuštění, když sestavení nebo dojít k chybám nasazení**  
-*Platí pro [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] pouze projekty.*
+Sestavení projektu po spuštění a jeho závislosti, při použití klíče, vyberte F5 **ladit > Spustit** příkaz nabídky nebo použít příkazy na **sestavení** nabídky. Pokud je prázdné, jsou všechny projekty a závislosti sestavení.
 
-Při spuštění projektu pomocí F5 nebo **ladění > Spustit** příkaz, ve výchozím nastavení **výzva ke spuštění** zobrazí zprávu, pokud projekt by měl být spuštěn i v případě, že sestavení se nezdařilo. Vyberte **stará verze spuštění** a automaticky spustit poslední dobrý sestavení, což by mohlo vést neshody mezi spuštěním kódu a zdrojový kód. Vyberte **nespouštějí** k potlačení zprávy.
+**Spustit, pokud projekty jsou zastaralé**
 
-**Pro nové řešení použít aktuálně vybraný projekt jako spouštěný projekt**  
-Pokud je tato možnost nastavená, použijte nové řešení aktuálně vybrané projekt jako spouštěný projekt.  
+*Platí pro [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] pouze pro projekty.*
 
-**Podrobnosti výstup sestavení projektu MSBuild**  
-Určuje, kolik informací se zobrazí v **výstup** okna pro sestavení.  
+Při spuštění projektu pomocí F5 nebo **ladit > Spustit** příkazu, ve výchozím nastavení **zobrazit výzvu k vytvoření** zobrazí zprávu, pokud konfigurace projektu je zastaralý. Vyberte **vždy sestavení** a sestavte projekt pokaždé, když je spuštěn. Vyberte **nikdy nesestavovat** potlačit všechny automatické sestavení při spuštění projektu.
 
-**Podrobnosti souboru MSBuild projektu sestavení protokolu**  
-*Platí pro [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] pouze projekty.*
+**Při spuštění, při sestavení nebo dojde k chybě nasazení**
 
-Určuje, kolik informací je zapsán do souboru protokolu sestavení, která se nachází v \\... \\ *ProjectName*\Debug\\*ProjectName*. log.  
+*Platí pro [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] pouze pro projekty.*
 
-## <a name="see-also"></a>Viz také  
-[Kompilace a sestavení](../../ide/compiling-and-building-in-visual-studio.md)  
-[Dialogové okno Možnosti, projekty a řešení](projects-and-solutions-options-dialog-box.md)  
-[Dialogové okno Možnosti, projekty a řešení, webové projekty](options-dialog-box-projects-and-solutions-web-projects.md)
+Při spuštění projektu pomocí F5 nebo **ladit > Spustit** příkazu, ve výchozím nastavení **výzva ke spuštění** zobrazí zprávu, pokud projekt by měl spustit i v případě, že sestavení selhalo. Vyberte **spuštění starší verze** automaticky spustit poslední úspěšný build, což může způsobit neshody mezi spuštěním kódu a zdrojový kód. Vyberte **nespouštět** k potlačení zprávy.
+
+**Nové řešení použít aktuálně zvolený projekt jako spouštěný projekt**
+
+Když nastavíte tuto možnost, nová řešení použít aktuálně zvolený projekt jako spouštěný projekt.
+
+**Podrobnost výstupu sestavení projektu nástroje MSBuild**
+
+Určuje, kolik informací se zobrazí v **výstup** okna pro sestavení.
+
+**Úroveň podrobností MSBuild projektu sestavení protokolu souborů**
+
+*Platí pro [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] pouze pro projekty.*
+
+Určuje, kolik informací je zapsána do souboru protokolu sestavení, které se nacházejí v \\... \\ *ProjectName*\Debug\\*ProjectName*. log.
+
+## <a name="see-also"></a>Viz také:
+
+- [Kompilace a sestavení](../../ide/compiling-and-building-in-visual-studio.md)
+- [Dialogové okno Možnosti, projekty a řešení](projects-and-solutions-options-dialog-box.md)
+- [Dialogové okno Možnosti, Projekty a řešení, Webové projekty](options-dialog-box-projects-and-solutions-web-projects.md)

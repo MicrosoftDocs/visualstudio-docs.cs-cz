@@ -1,6 +1,6 @@
 ---
-title: Analýza využití sítě v aplikacích pro UPW v sadě Visual Studio | Microsoft Docs
-ms.custom: H1Hack27Feb2017
+title: Analýza využití sítě v aplikacích pro UWP
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -10,70 +10,71 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a41e41b4448bcec34a24464f4f62e85d0765436d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 06546e3d36e0568c27e4160342ad271a026b7b9e
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53062241"
 ---
-# <a name="analyze-network-usage-in-uwp-apps"></a>Analýza využití sítě v aplikacích pro UPW
-Visual Studio **sítě** nástroj diagnostiky shromažďuje informace o síťových operací provést pomocí [Windows.Web.Http API](/uwp/api/windows.web.http). Analyzuje data vám může pomoct vyřešit problémy, jako je přístup a ověřování problémy, nesprávné použití mezipaměti a nízký zobrazení a stažení výkonu.  
+# <a name="analyze-network-usage-in-uwp-apps"></a>Analýza využití sítě v aplikacích pro UWP
+Visual Studio **sítě** diagnostický nástroj, který shromažďuje data o síťových operacích pomocí provádí [Windows.Web.Http API](/uwp/api/windows.web.http). Analýza dat vám může pomoct vyřešit problémy, jako jsou problémy přístupu a ověřování, nesprávné použití mezipaměti a špatné zobrazení a stáhnout výkonu.  
   
- Nástroj sítě podporuje pouze aplikace UWP. V tuto chvíli nepodporuje jiné platformy.  
+ Nástroj pro sítě podporuje pouze aplikace UWP. Jiné platformy nejsou v tuto chvíli nepodporuje.  
   
 > [!NOTE]
->  Podrobnější popis nástroje sítě najdete v tématu [nástroj síťových představení sady Visual Studio](http://blogs.msdn.com/b/visualstudio/archive/2015/05/04/introducing-visual-studios-network-tool.aspx).  
+>  Úplný popis nástroj sítě, naleznete v tématu [Představujeme nástroje Visual Studio vaší sítě](https://blogs.msdn.microsoft.com/visualstudio/2015/05/04/introducing-visual-studios-network-tool/).  
   
-## <a name="collecting-network-tool-data"></a>Shromažďování dat nástroj sítě  
- Byste měli spustit **sítě** nástroj s projektu sady Visual Studio otevřete v sadě Visual Studio počítači.  
+## <a name="collect-network-tool-data"></a>Shromažďovat data nástroj sítě.  
+ Měli byste spustit **sítě** nástroj s otevřít projekt aplikace Visual Studio na počítači aplikace Visual Studio.  
   
-1.  Otevřete projekt v sadě Visual Studio.  
+1. Otevřete projekt v sadě Visual Studio.  
   
-2.  V nabídce klikněte na tlačítko **ladění nebo profileru výkonu...** . Zvolte **sítě**a potom zvolte **spustit**.  
+2. V nabídce klikněte na tlačítko **ladění / Profiler výkonu**. Zvolte **sítě**a klikněte na tlačítko **Start**.  
   
-3.  Nástroj sítě začne shromažďovat informace o přenosech HTTP vaší aplikace.  
+3. Nástroj pro sítě začne shromažďování provoz protokolu HTTP vaší aplikace.  
   
-     Souhrnné zobrazení v levém podokně spustíte aplikaci, automaticky zobrazuje seznam zaznamenané operací protokolu HTTP. Vyberte položku na souhrnné zobrazení zobrazíte další informace v panelu podrobností v pravém podokně.  
+    Při spouštění vaší aplikace, souhrnné zobrazení v levém podokně automaticky zobrazí seznam zachycených operace HTTP. Vyberte položku na souhrnné zobrazení zobrazíte další informace najdete v podokně podrobností v pravém podokně.  
   
-4.  Zvolte **Zastavit** aplikace se zavře.  
+4. Zvolte **Zastavit** zavřít aplikaci.  
   
- Okno sestavy by měl vypadat přibližně takto:  
+   V okně sestavy by měl vypadat přibližně takto:  
   
- ![Okno sítě](../profiling/media/network_fullwindow.png "NETWORK_FullWindow")  
+   ![V okně sítě](../profiling/media/network_fullwindow.png "NETWORK_FullWindow")  
   
-## <a name="analyzing-data"></a>Analýza dat  
- Zachycená data protokolu HTTP můžete analyzovat, když aplikace běží, nebo i po zavření aplikace, vyberte některým ze sítě zobrazit na souhrnné zobrazení.  
+## <a name="analyze-data"></a>Analýza dat  
+ Když vaše aplikace spuštěna, nebo i po zavření aplikace výběrem některé síťové operace zobrazí v souhrnném zobrazení můžete analyzovat zachycená data protokolu HTTP.  
   
- **Sítě** souhrnné zobrazení zobrazuje data pro každou operaci sítě při spuštění aplikace. Zvolte záhlaví sloupce seřadíte seznam, nebo zvolte typy obsahu k zobrazení v **typ obsahu** filtrovat zobrazení.  
+ **Sítě** souhrnné zobrazení zobrazuje data pro každé ze síťových operací v běhu aplikace. Vyberte záhlaví sloupce seřadíte seznam a vyberte typy obsahu pro zobrazení v **Content Type** filtrovat zobrazení.  
   
- Vyberte **uložit jako HAR** vytvořte soubor JSON, který mohou být spotřebovávána nástroje třetích stran, například aplikaci Fiddler.  
+ Zvolte **uložit jako HAR** vytvořte soubor JSON, které mohou být spotřebovány nástrojů třetích stran, jako je Fiddleru.  
   
- **Sítě** zobrazení podrobností se zobrazí další informace o síťové operace v souhrnné zobrazení.  
+ **Sítě** zobrazení podrobností se zobrazí další informace o síťové operace v souhrnném zobrazení.  
   
- ![Podokno podrobností nástroj sítě](../profiling/media/network_detailsviewpane.png "NETWORK_DetailsViewPane")  
+ ![Podokno podrobností nástroj Network](../profiling/media/network_detailsviewpane.png "NETWORK_DetailsViewPane")  
   
 |||  
 |-|-|  
-|**Záhlaví**|Informace o hlavičkách žádostí události.|  
-|**Text**|Data datová část požadavku a odpovědi.|  
+|**Záhlaví**|Informace o hlavičkách žádosti o události.|  
+|**Text**|Data datové části požadavku a odpovědi.|  
 |**Parametry**|Názvy parametrů řetězce dotazu a hodnoty.|  
-|**Soubory cookie**|Data cookie odpovědi a požadavku.|  
-|**Časování**|Graf fázích při získávání vybrané prostředky.|  
+|**Soubory cookie**|Data souborů cookie odpovědí a požadavků.|  
+|**Časování**|Graf fází v získávání vybrané prostředky.|  
   
- Síť **souhrnné** panel zobrazuje počet síťových operací, které se zobrazují v libovolném časovém okamžiku, kolik dat se přenesl, jak dlouho trvalo a stahovat je a kolik chyby (požadavků s odpovědí 4xx nebo 5xx) jsou viditelné.  
+ Síť **souhrnu** panel ukazuje počet síťových operací, které jsou zobrazeny v libovolném časovém okamžiku, kolik dat se přenesl, jak dlouho trvalo ke stažení je a kolik chyby (počet požadavků s odpověďmi 4xx nebo 5xx) viditelné.  
   
-### <a name="analysis-tips"></a>Tipy pro analýzu  
- Tento nástroj označuje, které určité oblasti, které mohou být užitečné, pokud používáte sítě související s analýzy:  
+### <a name="analysis-tips"></a>Tipy pro analýzy  
+ Tento nástroj najdete některé oblasti, které mohou být užitečné při spouštění analýzy související se sítí:  
   
-1.  Požadavky, které jsou plně obsluhovat z mezipaměti se zobrazují jako **(z mezipaměti)** v **přijaté** sloupce. Můžete určit, jestli používáte mezipaměti efektivně uložit uživatelskou šířku pásma, nebo zda omylem ukládání odpovědí do mezipaměti a poskytuje koncového uživatele vaší aplikace pomocí zastaralá data.  
+1.  Požadavky, které jsou plně obsluhovat z mezipaměti se zobrazují jako **(z mezipaměti)** v **přijaté** sloupce. To může pomoct určit, jestli používáte mezipaměti efektivně ušetříte šířku pásma uživatele, nebo zda omylem ukládání do mezipaměti odpovědi a poskytuje koncových uživatelů vaší aplikace pomocí zastaralá data.  
   
-2.  Chybové odpovědi (4xx nebo 5xx) se zobrazí v v **výsledky** sloupec červený stav kódu a taky jsou vyznačené na panelu souhrnu. Díky tomu je snadné sledovat chyby mezi mnoho potenciální požadavků ve vaší aplikaci.  
+2.  Chybové odpovědi (4xx nebo 5xx) se zobrazí v **výsledky** sloupec v červeném stavu kódu a jsou také zvýrazněna v panelu souhrnu. Díky tomu je snadné sledovat chyby mezi mnoha potenciální požadavky na vaši aplikaci.  
   
-3.  Tlačítko odpovědi poměrně tisk (uvnitř kartě textu) můžete analyzovat prostřednictvím formátu JSON, XML, HTML, CSS, JavaScript a TypeScript datové části odpovědi zvýšením čitelnost obsahu.  
+3.  Tlačítko Tisk pretty odpovědi (uvnitř těla kartu) můžete analyzovat prostřednictvím datové části odpovědi JSON, XML, HTML, CSS, JavaScript a TypeScript zvýšením čitelnost obsahu.  
   
-## <a name="see-also"></a>Viz také  
- [Spuštění nástroje pro profilaci s nebo bez ladicí program](../profiling/running-profiling-tools-with-or-without-the-debugger.md)  
- [Visual Studio blog: inspector sítě představení sady Visual Studio](http://go.microsoft.com/fwlink/?LinkId=535022)   
- [Video Channel 9: VS diagnostické nástroje – nové sítě profileru](http://channel9.msdn.com/Series/ConnectOn-Demand/206)  
+## <a name="see-also"></a>Viz také:  
+ [Spouštění nástrojů pro profilaci s ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md)  
+ [Visual Studio blog: Představení sady Visual Studio sítě inspektoru](http://go.microsoft.com/fwlink/?LinkId=535022)   
+ [Video pro kanál 9: VS diagnostické nástroje - Profiler nové sítě](https://channel9.msdn.com/Series/ConnectOn-Demand/206)  
  [Profilace v sadě Visual Studio](../profiling/index.md)  
- [Prohlídka funkce profilace](../profiling/profiling-feature-tour.md)
+ [Nejdřív se podívejte na nástroje pro profilaci](../profiling/profiling-feature-tour.md)

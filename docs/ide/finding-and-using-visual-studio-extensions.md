@@ -1,9 +1,8 @@
 ---
-title: Vyhledávání a používání rozšíření Visual Studia | Microsoft Docs
-ms.custom: ''
+title: Vyhledání a používání rozšíření
 ms.date: 06/07/2017
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
 - vs.ExtensionManager
@@ -17,84 +16,85 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 682c5d889fa39b5e808e68da6d57bf54504db8b2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: cc67602db2d830283bb47fe7c3a9728d0d9fd799
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53067904"
 ---
-# <a name="find-and-use-visual-studio-extensions"></a>Vyhledávání a používání rozšíření Visual Studia
+# <a name="find-and-use-visual-studio-extensions"></a>Vyhledání a používání rozšíření sady Visual Studio
 
-Rozšíření pro Visual Studio jsou kód balíčky, které běží v prostředí Visual Studio a poskytují nových nebo vylepšených funkcích nástroje Visual Studio. Můžete najít další informace o rozšíření Visual Studia zde: [Visual Studio SDK](../extensibility/visual-studio-sdk.md).
+Rozšíření sady Visual Studio jsou balíčky kódu, které v prostředí Visual Studio a které poskytují nové nebo vylepšené funkce aplikace Visual Studio. Můžete najít další informace o rozšíření sady Visual Studio tady: [Visual Studio SDK](../extensibility/visual-studio-sdk.md).
 
-Můžete použít **rozšíření a aktualizace** dialogové okno instalace rozšíření sady Visual Studio a ukázky z webů a jiných umístění a potom povolit, zakázat, aktualizovat, nebo je odinstalovat. (**Nástroje > rozšíření a aktualizace**, nebo typ **rozšíření** v **Snadné spuštění** okno). Dialogové okno také ukazuje aktualizace nainstalované ukázky a rozšíření. Můžete také stáhnout rozšíření z webů nebo je můžete získat z jiných vývojáři.
+Můžete použít **rozšíření a aktualizace** dialogové okno instalace rozšíření sady Visual Studio a ukázky z webů a dalších míst a pak povolit, zakázat, aktualizovat nebo je odinstalovat. (**Nástroje > rozšíření a aktualizace**, nebo typ **rozšíření** v **Snadné spuštění** okno). Dialogové okno zobrazuje také aktualizace nainstalovaných ukázek a rozšíření. Můžete také stáhnout rozšíření z webů nebo získat od jiných vývojářů.
 
 > [!NOTE]
-> Spouštění v sadě Visual Studio 2015, rozšíření hostované na Visual Studio Marketplace se automaticky aktualizují. Pomocí tohoto nastavení můžete změnit **rozšíření a aktualizace** dialogové okno.  Projděte část o **automatické aktualizace rozšíření** níže podrobnosti.
+> Spouští se v sadě Visual Studio 2015, rozšíření hostován aplikací Visual Studio Marketplace se automaticky aktualizují. Toto nastavení můžete změnit **rozšíření a aktualizace** dialogového okna.  Naleznete v části **automatické aktualizace rozšíření** níže podrobnosti.
 
-## <a name="finding-visual-studio-extensions"></a>Hledání rozšíření Visual Studia
+## <a name="finding-visual-studio-extensions"></a>Vyhledání rozšíření sady Visual Studio
 
-Můžete nainstalovat rozšíření z [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs). Rozšíření mohou být ovládací prvky, ukázky, šablony, nástroje nebo jiné součásti, které přidávají funkcionalitu do aplikace Visual Studio. Visual Studio podporuje rozšíření ve formátu balíčku VSIX – tyto zahrnují šablony projektů, šablon, položek **sada nástrojů** položek, součásti spravované rozšíření Framework (MEF) a VSPackages. Můžete také stáhnout a nainstalovat na základě MSI rozšíření, ale **rozšíření a aktualizace** nemůže povolit ani zakázat je dialogové okno. Visual Studio Marketplace obsahuje rozšíření VSIX a souboru MSI.
+Můžete nainstalovat rozšíření z [Visual Studio Marketplace](https://marketplace.visualstudio.com/vs). Rozšíření mohou být ovládací prvky, ukázky, šablony, nástroje nebo jiné součásti, které přidávají funkcionalitu do aplikace Visual Studio. Visual Studio podporuje rozšíření ve formátu balíčku VSIX – to zahrnuje šablony projektu, šablony položek, položky **nástrojů** položky, komponenty spravovaných rozšíření Framework (MEF) a rozšíření VSPackages. Můžete také stáhnout a nainstalovat rozšíření založená na Instalační služby MSI, ale **rozšíření a aktualizace** dialogové okno nelze povolit ani zakázat. Visual Studio Marketplace obsahuje rozšíření VSIX a instalační služby MSI.
 
-## <a name="installing-or-uninstalling-visual-studio-extensions"></a>Instalace nebo odinstalace rozšíření Visual Studia
+## <a name="installing-or-uninstalling-visual-studio-extensions"></a>Instalace nebo odinstalace rozšíření sady Visual Studio
 
-V **rozšíření a aktualizace**, najít rozšíření, kterou chcete nainstalovat. (Pokud znáte název nebo část názvu rozšíření, můžete hledat v **vyhledávání** okno.) Klikněte na tlačítko **Stáhnout**.  Rozšíření se naplánuje pro instalaci. Rozšíření se nainstaluje, když jsou uzavřeny všechny instance sady Visual Studio.
+V **rozšíření a aktualizace**, najít rozšíření, které chcete nainstalovat. (Pokud znáte název nebo část názvu rozšíření, je možné hledat **hledání** okna.) Klikněte na tlačítko **Stáhnout**.  Rozšíření se naplánovaná instalace. Rozšíření se nainstaluje, když jsou uzavřeny všechny instance sady Visual Studio.
 
-Pokud se pokusíte nainstalovat rozšíření, která obsahuje závislosti, instalační služba zkontroluje, zda jsou již tyto závislosti nainstalovány. Pokud nejsou nainstalovány, **rozšíření a aktualizace** dialogové okno uvádí závislosti, které je třeba nainstalovat před instalací rozšíření.
+Pokud se pokusíte nainstalovat rozšíření, která obsahuje závislosti, instalační služba zkontroluje, zda jsou již tyto závislosti nainstalovány. Pokud tyto produkty nejsou nainstalovány, **rozšíření a aktualizace** dialogové okno obsahuje závislosti, které je třeba nainstalovat před instalací rozšíření.
 
-Pokud chcete přestat používat rozšíření, lze jej zakázat nebo odinstalovat. Zakázáním rozšíření zůstane rozšíření nainstalováno, ale nedojde k jeho načtení. Můžete zakázat pouze VSIX rozšíření; rozšíření, které jsou nainstalované s použitím souboru MSI lze pouze odinstalovat. Najít rozšíření a klikněte na tlačítko **odinstalace** nebo **zakázat**. Chcete-li uvolnit zakázané rozšíření, musíte restartovat Visual Studio.
+Pokud chcete přestat používat rozšíření, lze jej zakázat nebo odinstalovat. Zakázáním rozšíření zůstane rozšíření nainstalováno, ale nedojde k jeho načtení. Můžete zakázat pouze rozšíření VSIX; rozšíření, které jsou nainstalované s použitím Instalační služba MSI lze pouze odinstalovat. Najít rozšíření a klikněte na tlačítko **odinstalovat** nebo **zakázat**. Aby bylo možné uvolnění zakázaného rozšíření je nutné restartovat Visual Studio.
 
-## <a name="per-user-and-administrative-extensions"></a>Na uživatele a správu rozšíření
+## <a name="per-user-and-administrative-extensions"></a>Za uživatele a administrativní rozšíření
 
-Většina rozšíření jsou rozšíření na uživatele a jsou nainstalovány ve *%LocalAppData%\Microsoft\VisualStudio\\< verze sady Visual Studio\>\Extensions\\*  složky. Několik rozšíření jsou pro správu rozšíření a jsou nainstalovány ve *\<instalační složka nástroje Visual Studio > \Common7\IDE\Extensions\\* složky.
+Většina rozšíření jsou rozšíření vázaná na uživatele a jsou nainstalovaná v *%LocalAppData%\Microsoft\VisualStudio\\< verze sady Visual Studio\>\Extensions\\*  složky. Několik rozšíření jsou administrativní rozšíření a jsou nainstalovaná v *\<instalační složky sady Visual Studio > \Common7\IDE\Extensions\\* složky.
 
-Abychom mohli chránit váš systém proti rozšíření, která může obsahovat chyby nebo škodlivý kód, můžete omezit uživatelská rozšíření načíst jenom v případě, že spuštění sady Visual Studio s normální uživatelské oprávnění. To znamená, že uživatelská rozšíření zakázáno při spuštění sady Visual Studio s oprávněními správce. Chcete-li to provést, přejděte na **rozšíření a aktualizace** stránka Možnosti (**nástroje > Možnosti** > **prostředí** > **rozšíření a aktualizace**, nebo stačí zadat **rozšíření** v **Snadné spuštění** okno). Vymazat **zatížení na rozšíření uživatele při spuštění jako správce** zaškrtněte políčko a potom restartujte Visual Studio.
+Pro ochranu systému proti rozšíření, které mohou obsahovat chyby nebo škodlivý kód, můžete omezit rozšíření vázaná na uživatele pro načtení pouze při spuštění sady Visual Studio s oprávněními běžných uživatelů. To znamená, že je zakázáno rozšíření vázaná na uživatele, při spuštění sady Visual Studio s oprávněními správce. Chcete-li to provést, přejděte na **rozšíření a aktualizace** stránka možností (**nástroje > Možnosti** > **prostředí** > **rozšíření a aktualizace**, nebo zadejte **rozšíření** v **Snadné spuštění** okno). Zrušte **načítání rozšíření pro jednotlivé uživatele při spuštění jako správce** zaškrtněte políčko a potom restartujte Visual Studio.
 
 ## <a name="automatic-extension-updates"></a>Aktualizace automatické rozšíření
 
-Rozšíření na uživatele se automaticky aktualizují, pokud je k dispozici pro Visual Studio Marketplace nové verze.  Rozpoznán a nainstalován na pozadí a v dalším restartování sady Visual Studio novou verzi rozšíření, budou používat novou verzi rozšíření.
+Rozšíření vázaná na uživatele se automaticky aktualizují, když je nová verze pro Visual Studio Marketplace.  Nová verze rozšíření rozpoznán a nainstalován na pozadí a při příštím restartování sady Visual Studio, používat novou verzi rozšíření.
 
-Pouze na uživatele rozšíření lze aktualizovat automaticky.  Správce rozšíření, které jsou nainstalovány pro všechny uživatele se nebude aktualizovat a ručně nainstalujte nové verze prostřednictvím **rozšíření a aktualizace** dialogovém okně **aktualizace** uzlu. Uvidíte, které přípony bude automaticky aktualizován v podokně Podrobnosti rozšíření **rozšíření a aktualizace** dialogové okno.
+Jen rozšíření vázaná na uživatele je možné automaticky aktualizovat.  Administrativní rozšíření, která jsou nainstalována pro všechny uživatele, neaktualizuje se a ručně nainstalujte nové verze prostřednictvím **rozšíření a aktualizace** dialogového okna **aktualizace** uzlu. Uvidíte, jaká rozšíření se automaticky aktualizují v podokně podrobností rozšíření **rozšíření a aktualizace** dialogového okna.
 
-Pokud chcete vypnout automatické aktualizace, můžete zakázat funkci pro všechna rozšíření a pouze konkrétní rozšíření.
+Pokud chcete zakázat automatické aktualizace, můžete zakázat funkci pro všechny přípony nebo pouze konkrétní rozšíření.
 
-- Chcete-li zakázat automatické aktualizace pro všechna rozšíření, zvolte **rozšíření a aktualizace nastavení změnit** odkaz v **rozšíření a aktualizace** dialogové okno a zrušte zaškrtnutí políčka **automaticky aktualizovat rozšíření**.
+- Chcete-li zakázat automatické aktualizace pro všechna rozšíření, zvolte **změnit nastavení rozšíření a aktualizace** odkaz v **rozšíření a aktualizace** dialogové okno a zrušte zaškrtnutí políčka **automaticky aktualizovat. rozšíření**.
 
-- Zakázat automatické aktualizace pro konkrétní příponu, zrušte zaškrtnutí políčka **automaticky aktualizovat toto rozšíření** možnosti v podokně podrobností rozšíření na pravé straně **rozšíření a aktualizace** dialogové okno.
+- Chcete-li zakázat automatické aktualizace pro konkrétní příponu, zrušte zaškrtnutí políčka **automaticky aktualizovat toto rozšíření** možnost v podokně podrobností rozšíření na pravé straně **rozšíření a aktualizace** dialogového okna.
 
 > [!NOTE]
-> Od verze Visual Studio 2015 Update 2, můžete zadat (v **nástroje > Možnosti > prostředí > rozšíření a aktualizace**) tom, zda má funkce Automatické aktualizace pro rozšíření na uživatele, všechna rozšíření uživatele nebo oba (výchozí nastavení nastavení).
+> Od verze Visual Studio 2015 Update 2, můžete zadat (v **nástroje > Možnosti > prostředí > rozšíření a aktualizace**) určuje, zda chcete automatické aktualizace pro rozšíření vázaná na uživatele, všechna rozšíření uživatele nebo obě (výchozí nastavení nastavení).
 
-## <a name="extension-crashunresponsiveness-notifications"></a>Rozšíření havárie nebo absence reagování oznámení
+## <a name="extension-crashunresponsiveness-notifications"></a>Oznámení rozšíření zhroucení nebo zablokování
 
-Novinka v **Visual Studio 2017 verze 15.3**, Visual Studio vás upozorní, pokud má podezření, že rozšíření byl součástí havárie v předchozí relaci. Když Visual Studio dojde k chybě, ukládá zásobník výjimek. Při příštím spuštění Visual Studio zkontroluje zásobníku, počínaje listu a směřování ve znalostní bázi. Pokud Visual Studio zjistí, že rámeček patří do modul, který je součástí nainstalované a povolené rozšíření, zobrazí oznámení.
+Novinka v **Visual Studio 2017 verze 15.3**, Visual Studio vás upozorní, pokud má podezření, že rozšíření byl zahrnut v chybě během předchozí relace. Pokud dojde k chybě sady Visual Studio, ukládá zásobník výjimek. Při příštím spuštění Visual Studio zjistí zásobníku, počínaje listu a funguje směrem k základní třídě. Pokud Visual Studio zjistí, že blok patří do modulu, který je součástí rozšíření nainstalované a povolené, zobrazuje oznámení o.
 
-Novinka v **Visual Studio 2017 verze 15,6 operací**, Visual Studio také vás upozorní, pokud se má podezření, že rozšíření způsobuje Uživatelském rozhraní přestal reagovat.
+Novinka v **Visual Studio 2017 verze 15.6**, Visual Studio také vás upozorní, pokud způsobuje, že rozšíření uživatelského rozhraní za nereagujícího.
 
-Když tato oznámení se zobrazují, můžete ignorovat oznámení nebo provést jednu z následujících akcí:
+Když tato oznámení jsou zobrazeny, můžete ignorovat oznámení nebo Absolvujte některou z následujících akcí:
 
-- Zvolte **zakáže toto rozšíření**. Visual Studio zakáže rozšíření a umožňuje vědět, jestli je potřeba restartovat systém pro zakázání vstoupily v platnost. Můžete je znovu povolit rozšíření v **rozšíření a aktualizace** dialogové, pokud chcete.
+- Zvolte **zakázat toto rozšíření**. Visual Studio zakáže rozšíření a poznáte, jestli je potřeba restartovat systém pro zakázání se projeví. Můžete znovu povolit doplněk **rozšíření a aktualizace** dialogovému oknu, chcete-li.
 
 - Zvolte **tuto zprávu již nezobrazovat**.
-  - Pokud oznámení týká havárie v předchozí relace, Visual Studio nebude zobrazovat, že probíhá oznámení, když se havárie spojené s touto příponou. Visual Studio, bude mít oznámení po absence reagování můžou být spojené s touto příponou, nebo dojde k chybě nebo absence reagování, který může být přidružen další rozšíření.
-  - Pokud oznámení týká absence reagování, rozhraní IDE už zobrazit oznámení, když toto rozšíření je přidružen absence reagování. Visual Studio, bude mít související s havárií oznámení pro tuto příponu a související s havárií a absence reagování oznámení pro ostatní rozšíření.
+  - Pokud oznámení týká chybovému ukončení v předchozí relaci, Visual Studio nebude zobrazovat, že dojde k oznámení, když se chyby spojené s touto příponou. Visual Studio bude stále zobrazovat upozornění při zablokování můžou být spojené s touto příponou nebo zhroucení nebo zablokování, která můžou být spojené s další rozšíření.
+  - Pokud oznámení se týká sekundový výpadek reakce, integrovaném vývojovém prostředí už zobrazit oznámení, když toto rozšíření je přidružen sekundový výpadek reakce. Visual Studio se stále zobrazí oznámení týkající se chyb pro tuto příponu a při selhání a zablokování související upozornění pro další rozšíření.
 
 - Zvolte **Další** na této stránce.
 
-- Vyberte **X** tlačítko na konci oznámení zavření oznámení. Nové oznámení se zobrazí pro budoucí instance rozšíření bylo možné přidružit havárie nebo absence reagování uživatelského rozhraní.
+- Zvolte **X** tlačítko na konci oznámení zavřete oznámení. Zobrazí se nové oznámení pro budoucí instance rozšíření jsou spojeny s zhroucení nebo zablokování uživatelského rozhraní.
 
 > [!NOTE]
-> Uživatelské rozhraní absence reagování nebo havárie oznámení znamená pouze jeden z modulů rozšíření v zásobníku se při reagovat uživatelského rozhraní, nebo pokud došlo k havárii. Je však nemusí znamenat, že rozšíření samotné bylo který. Je možné, že rozšíření volat kód, který je součástí sady Visual Studio, který naopak výsledkem reagovat uživatelského rozhraní nebo havárie. Však oznámení může být stále užitečné, pokud rozšíření, která vedla k absence reagování uživatelského rozhraní nebo havárie není pro vás důležité. V takovém případě zakázání rozšíření zabraňuje absence reagování uživatelského rozhraní nebo havárii v budoucnu, bez dopadu na produktivitu.
+> Uživatelské rozhraní sekundový výpadek reakce nebo selhání oznámení znamená, že pouze jeden z tohoto rozšíření modulů v zásobníku byl při reagovat uživatelské rozhraní, nebo když došlo k selhání. To neznamená, že rozšíření samotné bylo nadměrné spotřeby. Je možné, že rozšíření volat kód, který je součástí sady Visual Studio, které zase přestal reagovat uživatelské rozhraní nebo selhání. Však oznámení může být stále užitečná, pokud rozšíření, která vedla k zablokování uživatelského rozhraní nebo při selhání není pro vás důležité. V takovém případě při zakázání rozšíření zabráněno zablokování uživatelského rozhraní nebo selhání v budoucnu, bez dopadu na vaši produktivitu.
 
 ## <a name="sample-master-copies-and-working-copies"></a>Ukázka hlavní kopie a pracovní kopie
 
 Při instalaci online ukázky je řešení uloženo na dvou místech:
 
-- Pracovní kopie je uložen v umístění, které jste zadali v **nový projekt** dialogové okno.
+- Pracovní kopie je uložena v umístění, které jste zadali v **nový projekt** dialogové okno.
 
 - Samostatná hlavní kopie je uložena v počítači.
 
-Můžete použít **rozšíření a aktualizace** dialogové okno k provedení těchto úloh souvisejících s ukázky:
+Můžete použít **rozšíření a aktualizace** dialogové okno k provedení těchto úloh týkajících se ukázek:
 
 - Zobrazit seznam hlavních kopií ukázek, které jste nainstalovali.
 
@@ -102,19 +102,19 @@ Můžete použít **rozšíření a aktualizace** dialogové okno k provedení t
 
 - Instalovat balíky ukázek, což jsou kolekce ukázek, které se týkají technologie nebo funkce.
 
-- Nainstalujte jednotlivé online ukázky. (Můžete to provést taky **nový projekt** dialogové okno.)
+- Nainstalujte jednotlivé online ukázky. (Můžete to provést také v **nový projekt** dialogové okno.)
 
 - Zobrazit upozornění na aktualizace při zveřejnění změny zdrojového kódu nainstalovaných ukázek.
 
-- Aktualizujte hlavní kopii nainstalované ukázka po oznámení o aktualizaci.
+- Aktualizujte hlavní kopii nainstalované ukázky, když je oznámení o aktualizaci.
 
-## <a name="installing-without-using-the-extensions-and-updates-dialog-box"></a>Instalace bez použití dialogové okno rozšíření a aktualizace
+## <a name="installing-without-using-the-extensions-and-updates-dialog-box"></a>Instalace bez použití dialogovém okně rozšíření a aktualizace
 
-Rozšíření, která byla součástí *VSIX* soubory mohou být k dispozici v umístění než Visual Studio Marketplace. **Rozšíření a aktualizace** dialogové okno se nepodařilo zjistit tyto soubory však můžete nainstalovat *VSIX* souboru dvojitým kliknutím na soubor nebo soubor výběrem a stisknutím klávesy **Enter**klíč. Potom postupujte podle pokynů. Pokud je nainstalovaná rozšíření, můžete použít **rozšíření a aktualizace** dialogové okno povolit, zakázat nebo ho odinstalovat.
+Rozšíření, která byla zabalena v souboru *VSIX* soubory mohou být k dispozici v jiném umístění než Visual Studio Marketplace. **Rozšíření a aktualizace** dialogové okno nelze rozpoznat tyto soubory, ale můžete nainstalovat *VSIX* soubor poklikáte soubor nebo výběr souboru a stisknutím klávesy **Enter**klíč. Potom postupujte podle pokynů. Pokud je rozšíření nainstalované, můžete použít **rozšíření a aktualizace** dialogové okno povolit, zakázat nebo ho odinstalujte.
 
-## <a name="extension-types-not-supported-by-the-extensions-and-updates-dialog-box"></a>Typy rozšíření nepodporuje dialogové okno rozšíření a aktualizace
+## <a name="extension-types-not-supported-by-the-extensions-and-updates-dialog-box"></a>Rozšíření typy nejsou podporovány v dialogovém okně rozšíření a aktualizace
 
-Visual Studio bude dál podporovat rozšíření, které jsou nainstalované ve Microsoft Installer (MSI) ale není pomocí **rozšíření a aktualizace** dialogové okno bez úprav.
+Visual Studio i nadále podporuje rozšíření, které instaluje Microsoft Installer (MSI) ale není až **rozšíření a aktualizace** dialogové okno bez úprav.
 
 > [!TIP]
-> Pokud obsahuje rozšíření na základě MSI *extension.vsixmanifest* soubor rozšíření se objeví v **rozšíření a aktualizace** dialogové okno.
+> Pokud obsahuje rozšíření na základě Instalační služby MSI *extension.vsixmanifest* soubor rozšíření se zobrazí v **rozšíření a aktualizace** dialogové okno.

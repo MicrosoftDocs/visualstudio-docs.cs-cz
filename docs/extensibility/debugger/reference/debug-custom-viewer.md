@@ -1,5 +1,5 @@
 ---
-title: DEBUG_CUSTOM_VIEWER | Microsoft Docs
+title: DEBUG_CUSTOM_VIEWER | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 84d8bdc7a4ea9ac59ee0956226618402b397844b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e86cae45298b3f137e2ebca65fa8c531c6d86457
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49908441"
 ---
 # <a name="debugcustomviewer"></a>DEBUG_CUSTOM_VIEWER
 Struktura, která identifikuje vlastní prohlížeč nebo zadejte vizualizér.  
@@ -50,25 +51,25 @@ public struct DEBUG_CUSTOM_VIEWER {
   
 ## <a name="members"></a>Členové  
  dwID  
- ID k odlišení více prohlížečů nebo vizualizérech implementované jeden `GUID`.  
+ ID k rozlišení více prohlížečů nebo vizualizéry implementované jeden `GUID`.  
   
  bstrMenuName  
  Text, který se zobrazí v rozevírací nabídce.  
   
  bstrDescription  
- Popis vlastní prohlížeč nebo typ vizualizér (musí mít hodnotu null Pokud nepoužívá se).  
+ Popis vlastní prohlížeč nebo vizualizér typů (musí mít hodnotu null Pokud není využito).  
   
  guidLang  
- Jazyk poskytnete vyhodnocovací filtr výrazů.  
+ Jazyk poskytující vyhodnocovací filtr výrazů.  
   
  guidVendor  
- Dodavatel poskytnete vyhodnocovací filtr výrazů.  
+ Dodavatel poskytování vyhodnocovací filtr výrazů.  
   
  bstrMetric  
- Metriky, pod kterým vlastní prohlížeč nebo typ vizualizér `CLSID` je uložen.  
+ Metriky, pod kterým vlastní prohlížeč nebo vizualizér typů `CLSID` uložená.  
   
 ## <a name="remarks"></a>Poznámky  
- Vrátí seznam tato struktura volání [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) – metoda (a při rozšíření [GetCustomViewerList](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md) metoda).  
+ Seznam tato struktura je vrácený voláním [GetCustomViewerList](../../../extensibility/debugger/reference/idebugproperty3-getcustomviewerlist.md) – metoda (a při rozšíření i [GetCustomViewerList](../../../extensibility/debugger/reference/ieevisualizerservice-getcustomviewerlist.md) metoda).  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

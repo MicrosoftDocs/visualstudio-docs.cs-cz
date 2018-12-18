@@ -16,19 +16,20 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 60ea2bcf1770e8c20db61c93a2b4ed6516b0daff
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a306276e015d06fe3becf297d0bb5834f640a1a7
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34571643"
 ---
 # <a name="vsinstr-warnings"></a>Upozornění VSInstr
-Následující tabulka uvádí vystavený nástroj VSInstr.exe upozornění. NOWARN možnost společně s čísla upozornění můžete potlačit zobrazení této výstrahy.  
+Následující tabulka uvádí upozornění vydaný *VSInstr.exe* nástroj. NOWARN možnost společně s čísla upozornění můžete potlačit zobrazení této výstrahy.  
   
 |Počet upozornění|Popis|  
 |--------------------|-----------------|  
 |**VSP2000**|Vnitřní chyba Nelze získat název souboru modulu pro tento spustitelný soubor.|  
-|**VSP2001**|\<název sestavení > je silně pojmenované sestavení. Musí být znovu podepisovat, aby bylo možné spustit.<br /><br /> Toto upozornění se zobrazí, když je instrumentovány podepsané sestavení. Můžete nástroj sn.exe vzdát binárního souboru nebo zrušte zaškrtnutí políčka požadavek na silné jméno. Další informace najdete v tématu [Sn.exe (nástroj silným názvem)](/dotnet/framework/tools/sn-exe-strong-name-tool).|  
+|**VSP2001**|\<název sestavení > je silně pojmenované sestavení. Musí být znovu podepisovat, aby bylo možné spustit.<br /><br /> Toto upozornění se zobrazí, když je instrumentovány podepsané sestavení. Můžete použít *sn.exe* nástroj vzdát binárního souboru nebo zrušte zaškrtnutí políčka požadavek na silné jméno. Další informace najdete v tématu [Sn.exe (nástroj pro silný název)](/dotnet/framework/tools/sn-exe-strong-name-tool).|  
 |**VSP2002**|Nepovedlo se najít funkci \<%{FuncName/ > v souboru \<název souboru ><br /><br /> Toto upozornění se zobrazí, pokud funkci nelze umístit do zadaného souboru.|  
 |**VSP2003**|Nelze najít žádné křížové přeskočí funkce \<%{FuncName/ > v souboru \<název souboru >.<br /><br /> Toto upozornění se zobrazí pokud vsinstr – nelze nezruší se tím přejde mezi. Optimalizace kódu se používají křížové přeskočí.|  
 |**VSP2004**|Funkce \<%{FuncName/ > vyloučil pomocí přepínače příkazového řádku vyloučení, ale nebyla nutná, protože v něm křížové přechod.<br /><br /> Toto upozornění se zobrazí, pokud funkce se vyloučila pomocí možnosti vyloučení, ale je potřeba během procesu instrumentace. Profileru automaticky zahrne požadované funkce.|  
@@ -43,5 +44,5 @@ Následující tabulka uvádí vystavený nástroj VSInstr.exe upozornění. NOW
 |**VSP2013**|Instrumentace tuto bitovou kopii vyžaduje, aby spustit jako 32bitový proces. Příznaky hlavičky CLR byly aktualizovány tak, aby odrážela to.<br /><br /> Profileru upravuje binárního souboru tak, aby 64bitové operační systémy v emulátoru WOW64 můžete otevřít 32bitový proces. Pro knihovny (DLL) to může selhat, pokud jsou načteny v existující 64bitového procesu. Toto upozornění upozorní uživatele závislosti.|  
 |**VSP2014**|Výsledný instrumentovaného bitové kopie pravděpodobně není platný a nemusí být možné spustit.<br /><br /> Tato zpráva se zobrazí při posledním instrumentovaného sestavení má neplatnou hlavičku PE.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [VSInstr](../profiling/vsinstr.md)

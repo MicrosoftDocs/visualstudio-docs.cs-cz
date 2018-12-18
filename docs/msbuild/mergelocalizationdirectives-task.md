@@ -1,5 +1,5 @@
 ---
-title: Mergelocalizationdirectives – úloha | Microsoft Docs
+title: Mergelocalizationdirectives – úloha | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -20,27 +20,28 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9cb696aae19675a12aeb9aa6f2b76c8e6b710ea1
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 2d0245765c1b6aa01d6762848463997ad2f13ba3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49936666"
 ---
-# <a name="mergelocalizationdirectives-task"></a>MergeLocalizationDirectives – úloha
-<xref:Microsoft.Build.Tasks.Windows.MergeLocalizationDirectives> Úloh sloučí atributů lokalizace a komentáře jednoho nebo více [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] binární formát souborů do jediného souboru pro celou sestavení.  
+# <a name="mergelocalizationdirectives-task"></a>Mergelocalizationdirectives – úloha
+<xref:Microsoft.Build.Tasks.Windows.MergeLocalizationDirectives> Úloh sloučí atributy a komentáře lokalizace jednoho nebo víc [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] binárních souborů do jediného souboru pro celé sestavení.  
   
 ## <a name="task-parameters"></a>Parametry úlohy  
   
-|Parametr|Popis|  
-|---------------|-----------------|  
-|`GeneratedLocalizationFiles`|Požadované **[ITaskItem]** parametr.<br /><br /> Určuje seznam souborů direktivy lokalizace u jednotlivých souborů v [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] binární formát.|  
-|`OutputFile`|Požadované **řetězec** výstupní parametr.<br /><br /> Určuje cestu výstupního sestavení kompilované lokalizace – direktivy.|  
+| Parametr | Popis |
+|------------------------------| - |
+| `GeneratedLocalizationFiles` | Vyžaduje **[] ITaskItem** parametru.<br /><br /> Určuje seznam souborů direktivy lokalizace pro jednotlivé soubory v [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] binárním formátu. |
+| `OutputFile` | Vyžaduje **řetězec** výstupní parametr.<br /><br /> Určuje výstupní cestu sestavení zkompilované lokalizace direktivy. |
   
 ## <a name="remarks"></a>Poznámky  
- Můžete přidat atributů lokalizace a komentáře [!INCLUDE[TLA#tla_xaml](../msbuild/includes/tlasharptla_xaml_md.md)] obsah. S [!INCLUDE[TLA#tla_wpf](../msbuild/includes/tlasharptla_wpf_md.md)] lokalizace podporu, můžete odstranit atributů lokalizace a komentáře a je uložit .loc souboru, která je oddělená od vygenerované sestavení. Můžete to provést pomocí **LocalizationPropertyStorage** atribut. Další informace o lokalizaci atributy a komentáře a **LocalizationPropertyStorage**, najdete v části [atributů lokalizace a komentáře](/dotnet/framework/wpf/advanced/localization-attributes-and-comments).  
+ Můžete přidat atributy a komentáře k lokalizace [!INCLUDE[TLA#tla_xaml](../msbuild/includes/tlasharptla_xaml_md.md)] obsah. S [!INCLUDE[TLA#tla_wpf](../msbuild/includes/tlasharptla_wpf_md.md)] podporu lokalizace, můžete odstranit atributy a komentáře lokalizace a umístit je do *.loc* soubor, který je oddělený od vygenerované sestavení. Můžete to provést pomocí **LocalizationPropertyStorage** atribut. Další informace o atributy a komentáře, lokalizace a **LocalizationPropertyStorage**, naleznete v tématu [atributy a komentáře lokalizace](/dotnet/framework/wpf/advanced/localization-attributes-and-comments).  
   
 ## <a name="example"></a>Příklad  
- Následující příklad sloučí lokalizace připomínky několik [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] binární formát souborů do jednoho .loc souboru.  
+ Následující příklad sloučí komentáře lokalizace několik [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] binárních souborů do jediného *.loc* souboru.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -55,9 +56,9 @@ ms.lasthandoff: 04/19/2018
 </Project>  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [WPF MSBuild – Reference](../msbuild/wpf-msbuild-reference.md)   
- [Referenční dokumentace úlohy](../msbuild/wpf-msbuild-task-reference.md)   
- [MSBuild – Reference](../msbuild/msbuild-reference.md)   
- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)   
- [Vytvoření aplikace WPF (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)
+## <a name="see-also"></a>Viz také:  
+[Referenční dokumentace WPF MSBuild](../msbuild/wpf-msbuild-reference.md)  
+[WPF MSBuild – referenční dokumentace úlohy](../msbuild/wpf-msbuild-task-reference.md)  
+[Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)  
+[Referenční dokumentace úlohy nástroje MSBuild](../msbuild/msbuild-task-reference.md)  
+[Sestavení aplikace WPF (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)  

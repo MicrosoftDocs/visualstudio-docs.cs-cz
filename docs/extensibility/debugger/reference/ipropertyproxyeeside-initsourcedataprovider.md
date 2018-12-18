@@ -1,5 +1,5 @@
 ---
-title: IPropertyProxyEESide::InitSourceDataProvider | Microsoft Docs
+title: IPropertyProxyEESide::InitSourceDataProvider | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c6ae2716fc76d77d1c670bb206168826c66c48ed
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 41add9a334dd6e78a476134845db7d31664755c9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49871079"
 ---
 # <a name="ipropertyproxyeesideinitsourcedataprovider"></a>IPropertyProxyEESide::InitSourceDataProvider
-Inicializuje zdrojová data pro tento objekt a vrátí objekt obsahující počáteční data.  
+Inicializuje zdrojová data pro tento objekt a vrátí objekt, který obsahuje původní data.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,10 +44,10 @@ int InitSourceDataProvider(
  [out] Vrátí [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) objektu  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda nepodporuje nezbytnou k chybě při inicializaci objektu, se může vrátit [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) rozhraní na data objektu. To umožňuje objektu data k zobrazení a, pokud je povoleno, změnit typ vizualizéru.  
+ Tato metoda provádí všechno, co je potřeba inicializovat objekt, abyste ji mohli vrátit [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) rozhraní pro data objektu. To umožňuje objektu data k zobrazení a, pokud je povoleno, změnil(a) vizualizér typů.  
   
 ## <a name="see-also"></a>Viz také  
  [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)   

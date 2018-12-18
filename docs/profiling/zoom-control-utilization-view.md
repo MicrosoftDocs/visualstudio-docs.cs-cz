@@ -14,13 +14,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 07519bc95f696d395177056960ea5f42027739a6
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 1d5b999136eb1d1d268e8fc0a71147a1996940ed
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34447840"
 ---
-# <a name="zoom-control-utilization-view"></a>Ovládací prvek Lupa (Zobrazení využití)
+# <a name="zoom-control-utilization-view"></a>Ovládací prvek Lupa (zobrazení využití)
 Ovládací prvek Lupa umožňuje přiblížit na graf využití procesoru Chcete-li se zaměřit na oblasti zvláštní zájem. Tento ovládací prvek zvětší středu zobrazení. Předtím, než se můžete přiblížit, proto by měl center oblast zájmu.  
   
  Můžete přetáhnout ukazatele myši v graf využití procesoru nebo graf aktivity GPU vytvořit zvýrazněné oblasti. Při uvolnění tlačítka myši, zobrazení zvětší vybraný rozsah.  

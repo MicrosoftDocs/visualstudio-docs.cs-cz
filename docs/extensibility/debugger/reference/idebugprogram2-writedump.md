@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::WriteDump | Microsoft Docs
+title: IDebugProgram2::WriteDump | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0b17d75ace19ac53cbcd229d7c15de573c1ecb8b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3d2953b3f30a0d485b58afc04e8ce42158a7537e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49905258"
 ---
 # <a name="idebugprogram2writedump"></a>IDebugProgram2::WriteDump
-Výpis zapisuje do souboru.  
+Výpis zapíše do souboru.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,16 +43,16 @@ int WriteDump(
   
 #### <a name="parameters"></a>Parametry  
  `DumpType`  
- [v] Hodnota z [DUMPTYPE](../../../extensibility/debugger/reference/dumptype.md) výčet, který určuje typ výpisu, například, prostě nebo long.  
+ [in] Hodnota z [DUMPTYPE](../../../extensibility/debugger/reference/dumptype.md) výčet, který určuje typ s výpisem paměti, například řečeno nebo long.  
   
  `pszDumpUrl`  
- [v] Adresa URL k výpisu k zápisu. Obvykle je to ve formě `file://c:\path\filename.ext`, ale může být libovolná platná adresa URL.  
+ [in] Adresa URL s výpisem paměti pro zápis. Obvykle je to ve formě `file://c:\path\filename.ext`, ale mohou být jakákoliv platná adresa URL.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Výpis program by měl obvykle zahrnovat aktuální rámec zásobníku, zásobník samotný, seznam vláken v programu a které by mohly mít žádné paměti, která vlastní program.  
+ Výpis program obvykle zahrnuje aktuální rámec zásobníku, zásobník samotný seznam vlákna spuštěná v programu a pravděpodobně paměti, která vlastní program.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

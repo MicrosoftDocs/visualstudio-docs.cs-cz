@@ -1,5 +1,5 @@
 ---
-title: BP_LOCATION_CODE_CONTEXT | Microsoft Docs
+title: BP_LOCATION_CODE_CONTEXT | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 03ae1050b0324fcf2732bbeb0eb9d091878bef0e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8a953ae4ff100196ca6fc6174f3d81fcca139de1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49913420"
 ---
 # <a name="bplocationcodecontext"></a>BP_LOCATION_CODE_CONTEXT
-Popisuje umístění zarážek, který je vázaný přímo na adresu v programu laděné.  
+Popisuje umístění zarážky, který je vázán přímo na adresu v programu, který se právě ladí.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,10 +35,10 @@ typedef struct _BP_LOCATION_CODE_CONTEXT {
   
 ## <a name="members"></a>Členové  
  pCodeContext  
- [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) objekt, který identifikuje pozici zarážce v kódu.  
+ [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) objekt, který identifikuje pozici zarážku v kódu.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je členem skupiny [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) struktura jako součást spojení.  
+ Tato struktura je členem skupiny [BP_LOCATION](../../../extensibility/debugger/reference/bp-location.md) struktury v rámci sjednocení.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

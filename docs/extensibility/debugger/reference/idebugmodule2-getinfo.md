@@ -1,5 +1,5 @@
 ---
-title: IDebugModule2::GetInfo | Microsoft Docs
+title: IDebugModule2::GetInfo | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,11 +16,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8eb4f06899b7b3bc30453282463c9402e45c2aee
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 859a85b51e83d438ea4051e2506c2dc0696768b8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49820678"
 ---
 # <a name="idebugmodule2getinfo"></a>IDebugModule2::GetInfo
 Získá informace o tomto modulu.  
@@ -43,16 +44,16 @@ int GetInfo(
   
 #### <a name="parameters"></a>Parametry  
  `dwFields`  
- [v] Kombinace příznaků z [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md) výčet, který určit pole z `pInfo` mají doplnit.  
+ [in] Kombinace příznaků z [MODULE_INFO_FIELDS](../../../extensibility/debugger/reference/module-info-fields.md) výčtu, která pole zadáte `pInfo` mají doplnit.  
   
  `pInfo`  
- [ve out] A [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) struktura, která obsahuje popis modulu.  
+ [out v] A [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) struktura, která se vyplní popis modulu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) struktura obsahuje název modul, který se zobrazí v **moduly** okno.  
+ [MODULE_INFO](../../../extensibility/debugger/reference/module-info.md) struktura obsahuje název modulu, který se zobrazí **moduly** okna.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md)   

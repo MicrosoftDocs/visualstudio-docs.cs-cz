@@ -1,5 +1,5 @@
 ---
-title: '&lt;soubor&gt; – Element (aplikace ClickOnce) | Microsoft Docs'
+title: '&lt;soubor&gt; – Element (aplikace ClickOnce) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -24,18 +24,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8fccbd816d578a95e3e43e15c83d615756dcddcb
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 7b516a8e63d29f91b3404e8e62d910ca18ca69c1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49933531"
 ---
-# <a name="ltfilegt-element-clickonce-application"></a>&lt;soubor&gt; – Element (ClickOnce aplikace)
-Identifikuje všechny nesestavené soubory stáhli a používá je aplikace.  
-  
+# <a name="ltfilegt-element-clickonce-application"></a>&lt;soubor&gt; – element (aplikace ClickOnce)
+Identifikuje všechny soubory nonassembly stáhli a použili aplikací.  
+
 ## <a name="syntax"></a>Syntaxe  
-  
-```  
+
+```xml  
 <file  
     name  
     size  
@@ -83,111 +84,113 @@ Identifikuje všechny nesestavené soubory stáhli a používá je aplikace.
     />  
 </file>  
 ```  
-  
+
 ## <a name="elements-and-attributes"></a>Elementy a atributy  
- `file` Prvek je volitelný. Element má následující atributy.  
-  
+ `file` Element je volitelné. Element má následující atributy.  
+
 |Atribut|Popis|  
 |---------------|-----------------|  
 |`name`|Požadováno. Určuje název souboru.|  
 |`size`|Požadováno. Určuje velikost v bajtech souboru.|  
-|`group`|Volitelné, pokud `optional` atribut není zadaný, nebo nastavte `false`; požadováno pokud `optional` je `true`. Název skupiny, do které tento soubor patří. Název může být libovolná hodnota řetězce Unicode zvolený vývojářem a slouží pro stahování souborů na vyžádání pomocí <xref:System.Deployment.Application.ApplicationDeployment> třídy.|  
-|`optional`|Volitelné. Určuje, zda tento soubor musí spustit stahování, když je aplikace první, nebo zda soubor by měl být umístěn pouze na serveru dokud aplikace požaduje na vyžádání. Pokud `false` nebo undefined, soubor se stáhne, při prvním spuštění nebo instalaci aplikace. Pokud `true`, `group` pro manifest aplikace platná musí být zadána. `optional` nemůže být true, pokud `writeableType` je zadán s hodnotou `applicationData`.|  
-|`writeableType`|Volitelné. Určuje, zda je tento soubor datový soubor. Aktuálně je jedinou platnou hodnotou `applicationData`.|  
-  
+|`group`|Volitelné, pokud `optional` atribut není zadán, nebo nastavte `false`; požadováno pokud `optional` je `true`. Název skupiny, do které tento soubor patří. Název může být libovolná hodnota řetězce Unicode zvolený vývojářem a slouží pro stahování souborů na vyžádání s využitím <xref:System.Deployment.Application.ApplicationDeployment> třídy.|  
+|`optional`|Volitelné. Určuje, zda musí tento soubor ke stažení aplikace při prvním spuštění nebo zda soubor by měl být uložen pouze na serveru dokud aplikace nevyžaduje na vyžádání. Pokud `false` nebo nedefinovaný, soubor se stáhne, při prvním spuštění nebo nainstalované aplikace. Pokud `true`, `group` platný manifest aplikace se musí zadat. `optional` nemůže být true, pokud `writeableType` určena s hodnotou `applicationData`.|  
+|`writeableType`|Volitelné. Určuje, že tento soubor je soubor datovým souborem. Momentálně je jediná platná hodnota `applicationData`.|  
+
 ## <a name="typelib"></a>knihovny typů  
- `typelib` Element je volitelným podřízeným prvku souboru. Element popisuje knihovny typů, který patří do komponenty modelu COM. Element má následující atributy.  
-  
+ `typelib` Element je volitelný podřízený prvek souboru. Element popisuje knihovnu typů, který patří do komponenty modelu COM. Element má následující atributy.  
+
 |Atribut|Popis|  
 |---------------|-----------------|  
-|`tlbid`|Požadováno. Identifikátor GUID přiřazený knihovny typů.|  
+|`tlbid`|Požadováno. Identifikátor GUID přiřazený do knihovny typů.|  
 |`version`|Požadováno. Číslo verze knihovny typů.|  
-|`helpdir`|Požadováno. Adresář, který obsahuje soubory nápovědy pro komponentu. Může být nulová délka.|  
-|`resourceid`|Volitelné. Reprezentace šestnáctkového řetězce identifikátor národního prostředí (LCID). Je jedna do čtyř šestnáctkových číslic bez předpony 0 x a bez úvodní nuly. Identifikátor LCID může mít identifikátor neutrální dílčího jazyka.|  
-|`flags`|Volitelné. Řetězcová reprezentace příznaků knihovny typů pro tuto knihovnu typů. Konkrétně je třeba použít jeden z "S omezeným PŘÍSTUPEM", "Řízení", "HIDDEN" a "HASDISKIMAGE".|  
-  
+|`helpdir`|Požadováno. Adresář, který obsahuje soubory nápovědy pro komponentu. Může být nulové délky.|  
+|`resourceid`|Volitelné. Šestnáctkový řetězec reprezentuje identifikátor národního prostředí (LCID). Je jednou až čtyřmi šestnáctkovými číslicemi bez předpony 0 x a bez počátečních nul. Identifikátor LCID může mít identifikátor dílčího neutrální.|  
+|`flags`|Volitelné. Řetězcová reprezentace příznaků knihovny typů pro tuto knihovnu typů. Konkrétně je třeba použít jeden "OMEZENO", "CONTROL", "HIDDEN" a "HASDISKIMAGE".|  
+
 ## <a name="comclass"></a>comClass  
- `comClass` Element je volitelným podřízeným `file` elementu, ale je nutný, pokud [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace obsahuje komponenty modelu COM má v úmyslu nasadit pomocí bez registrace modelu COM. Element má následující atributy.  
-  
+ `comClass` Je volitelný podřízený element `file` elementu, ale je vyžadováno, pokud [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace obsahuje komponentu modelu COM, který chce nasadit pomocí modelu COM bez registrace Element má následující atributy.  
+
 |Atribut|Popis|  
 |---------------|-----------------|  
 |`clsid`|Požadováno. ID třídy komponenty modelu COM, vyjádřený jako identifikátor GUID.|  
 |`description`|Volitelné. Název třídy.|  
-|`threadingModel`|Volitelné. Model vláken používaný třídami COM v procesu. Pokud tato vlastnost má hodnotu null, použije se žádný model vláken. Součást je vytvořen na hlavní vlákno klienta a volání z jiné vláken přeuspořádány na tento přístup z více vláken. V následujícím seznamu jsou platné hodnoty:<br /><br /> `Apartment`, `Free`, `Both`, a `Neutral`.|  
+|`threadingModel`|Volitelné. Model vláken používané třídy modelu COM v procesu. Pokud tato vlastnost hodnotu null, použije se bez modelu vláken. Komponenta je vytvořena na hlavním vlákně klienta a volání z jiných vláken, které jsou zařazeny do tohoto vlákna. Následující seznam uvádí platné hodnoty:<br /><br /> `Apartment`, `Free`, `Both`, a `Neutral`.|  
 |`tlbid`|Volitelné. Identifikátor GUID pro knihovnu typů pro tuto součást COM.|  
-|`progid`|Volitelné. Závislý na verzi programový identifikátor přidružený komponenty modelu COM. Formát `ProgID` je `<vendor>.<component>.<version>`.|  
-|`miscStatus`|Volitelné. Duplicitní položky v sestavení manifest informace poskytované `MiscStatus` klíč registru. Pokud hodnoty `miscStatusIcon`, `miscStatusContent`, `miscStatusDocprint`, nebo `miscStatusThumbnail` nejsou nalezeny atributy, odpovídající výchozí hodnota uvedená v `miscStatus` se používá pro chybějící atributy. Hodnota může být čárkami oddělený seznam hodnot atributů v následující tabulce. Pokud třídy COM je OCX třída, která vyžaduje, můžete použít tento atribut `MiscStatus` hodnoty klíčů registru.|  
-|`miscStatusIcon`|Volitelné. Informace poskytované DVASPECT_ICON manifestu duplikuje v sestavení. Může poskytnout ikonu objektu. Hodnota může být čárkami oddělený seznam hodnot atributů v následující tabulce. Pokud třídy COM je OCX třída, která vyžaduje, můžete použít tento atribut `Miscstatus` hodnoty klíčů registru.|  
-|`miscStatusContent`|Volitelné. Duplicitní položky v sestavení manifest informací uvedených DVASPECT_CONTENT. Na obrazovce nebo tiskárny můžete získat zobrazitelné složeného dokumentu. Hodnota může být čárkami oddělený seznam hodnot atributů v následující tabulce. Pokud třídy COM je OCX třída, která vyžaduje, můžete použít tento atribut `MiscStatus` hodnoty klíčů registru.|  
-|`miscStatusDocPrint`|Volitelné. Duplicitní položky v sestavení manifest informací uvedených DVASPECT_DOCPRINT. Na obrazovce může poskytnout reprezentaci objektu zobrazitelnou jakoby tisku na tiskárně. Hodnota může být čárkami oddělený seznam hodnot atributů v následující tabulce. Pokud třídy COM je OCX třída, která vyžaduje, můžete použít tento atribut `MiscStatus` hodnoty klíčů registru.|  
-|`miscStatusThumbnail`|Volitelné. V sestavení manifestu duplikuje informací uvedených DVASPECT_THUMBNAIL. Můžete získat na miniaturu zobrazitelné v procházení nástroji objektu. Hodnota může být čárkami oddělený seznam hodnot atributů v následující tabulce. Pokud třídy COM je OCX třída, která vyžaduje, můžete použít tento atribut `MiscStatus` hodnoty klíčů registru.|  
-  
+|`progid`|Volitelné. Programový identifikátor závislé na verzi přidružené komponenty modelu COM Formát `ProgID` je `<vendor>.<component>.<version>`.|  
+|`miscStatus`|Volitelné. Na základě informací poskytnutých manifestu duplikuje v sestavení `MiscStatus` klíč registru. Pokud hodnoty `miscStatusIcon`, `miscStatusContent`, `miscStatusDocprint`, nebo `miscStatusThumbnail` nebyly nalezeny atributy, odpovídající výchozí hodnota uvedená ve `miscStatus` se používá pro chybějící atributy. Hodnota může být čárkami oddělený seznam hodnot atributů v následující tabulce. Tento atribut lze použít, pokud třída modelu COM je OCX třída, která vyžaduje `MiscStatus` hodnoty klíčů registru.|  
+|`miscStatusIcon`|Volitelné. Základě informací poskytnutých DVASPECT_ICON manifestu duplikuje v sestavení. Ikona objektu může poskytnout. Hodnota může být čárkami oddělený seznam hodnot atributů v následující tabulce. Tento atribut lze použít, pokud třída modelu COM je OCX třída, která vyžaduje `Miscstatus` hodnoty klíčů registru.|  
+|`miscStatusContent`|Volitelné. Informace uvedené DVASPECT_CONTENT manifestu duplikuje v sestavení. Složený dokument zobrazitelný může poskytovat pro obrazovku nebo tiskárny. Hodnota může být čárkami oddělený seznam hodnot atributů v následující tabulce. Tento atribut lze použít, pokud třída modelu COM je OCX třída, která vyžaduje `MiscStatus` hodnoty klíčů registru.|  
+|`miscStatusDocPrint`|Volitelné. Informace uvedené DVASPECT_DOCPRINT manifestu duplikuje v sestavení. Na obrazovce může poskytovat reprezentaci objektu annotable jakoby tisku na tiskárnu. Hodnota může být čárkami oddělený seznam hodnot atributů v následující tabulce. Tento atribut lze použít, pokud třída modelu COM je OCX třída, která vyžaduje `MiscStatus` hodnoty klíčů registru.|  
+|`miscStatusThumbnail`|Volitelné. Informace uvedené DVASPECT_THUMBNAIL manifestu duplikuje v sestavení. Může poskytovat miniatury objektu annotable v nástroji pro procházení. Hodnota může být čárkami oddělený seznam hodnot atributů v následující tabulce. Tento atribut lze použít, pokud třída modelu COM je OCX třída, která vyžaduje `MiscStatus` hodnoty klíčů registru.|  
+
 ## <a name="cominterfaceexternalproxystub"></a>comInterfaceExternalProxyStub  
- `comInterfaceExternalProxyStub` Element je volitelným podřízeným `file` elementu, ale může být vyžadováno, pokud [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace obsahuje komponenty modelu COM má v úmyslu nasadit pomocí bez registrace modelu COM. Element obsahuje následující atributy.  
-  
+ `comInterfaceExternalProxyStub` Je volitelný podřízený element `file` elementu, ale může být povinný, pokud [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace obsahuje komponentu modelu COM, který chce nasadit pomocí modelu COM bez registrace Element obsahuje následující atributy.  
+
 |Atribut|Popis|  
 |---------------|-----------------|  
-|`iid`|Požadováno. Rozhraní ID (IID), který poskytuje tento proxy server. Identifikátory IID musí mít okolní složené závorky.|  
-|`baseInterface`|Volitelné. Identifikátory IID rozhraní, ze kterého rozhraní odkazuje `iid` je odvozený.|  
-|`numMethods`|Volitelné. Počet metody implementované rozhraní.|  
+|`iid`|Požadováno. Rozhraní ID (IID), které obsluhují tento proxy server. Identifikátor IID musí mít složené závorky okolní infrastrukturou.|  
+|`baseInterface`|Volitelné. Identifikátor IID rozhraní, ze kterého rozhraní odkazuje `iid` pochází.|  
+|`numMethods`|Volitelné. Počet metod implementovaných rozhraní.|  
 |`name`|Volitelné. Název rozhraní tak, jak se zobrazí v kódu.|  
-|`tlbid`|Volitelné. Knihovny typů, který obsahuje popis rozhraní zadané `iid` atribut.|  
-|`proxyStubClass32`|Volitelné. Mapuje IID na CLSID v 32bitových proxy knihovny DLL.|  
-  
+|`tlbid`|Volitelné. Knihovna typů, která obsahuje popis rozhraní určené typem `iid` atribut.|  
+|`proxyStubClass32`|Volitelné. Mapuje IID na identifikátor CLSID proxy serveru 32bitové knihovny DLL.|  
+
 ## <a name="cominterfaceproxystub"></a>comInterfaceProxyStub  
- `comInterfaceProxyStub` Element je volitelným podřízeným `file` elementu, ale může být vyžadováno, pokud [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace obsahuje komponenty modelu COM má v úmyslu nasadit pomocí bez registrace modelu COM. Element obsahuje následující atributy.  
-  
+ `comInterfaceProxyStub` Je volitelný podřízený element `file` elementu, ale může být povinný, pokud [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace obsahuje komponentu modelu COM, který chce nasadit pomocí modelu COM bez registrace Element obsahuje následující atributy.  
+
 |Atribut|Popis|  
 |---------------|-----------------|  
-|`iid`|Požadováno. Rozhraní ID (IID), který poskytuje tento proxy server. Identifikátory IID musí mít okolní složené závorky.|  
-|`baseInterface`|Volitelné. Identifikátory IID rozhraní, ze kterého rozhraní odkazuje `iid` je odvozený.|  
-|`numMethods`|Volitelné. Počet metody implementované rozhraní.|  
+|`iid`|Požadováno. Rozhraní ID (IID), které obsluhují tento proxy server. Identifikátor IID musí mít složené závorky okolní infrastrukturou.|  
+|`baseInterface`|Volitelné. Identifikátor IID rozhraní, ze kterého rozhraní odkazuje `iid` pochází.|  
+|`numMethods`|Volitelné. Počet metod implementovaných rozhraní.|  
 |`Name`|Volitelné. Název rozhraní tak, jak se zobrazí v kódu.|  
-|`Tlbid`|Volitelné. Knihovny typů, který obsahuje popis rozhraní zadané `iid` atribut.|  
-|`proxyStubClass32`|Volitelné. Mapuje IID na CLSID v 32bitových proxy knihovny DLL.|  
-|`threadingModel`|Volitelné. Volitelné. Model vláken používaný třídami COM v procesu. Pokud tato vlastnost má hodnotu null, použije se žádný model vláken. Součást je vytvořen na hlavní vlákno klienta a volání z jiné vláken přeuspořádány na tento přístup z více vláken. V následujícím seznamu jsou platné hodnoty:<br /><br /> `Apartment`, `Free`, `Both`, a `Neutral`.|  
-  
+|`Tlbid`|Volitelné. Knihovna typů, která obsahuje popis rozhraní určené typem `iid` atribut.|  
+|`proxyStubClass32`|Volitelné. Mapuje IID na identifikátor CLSID proxy serveru 32bitové knihovny DLL.|  
+|`threadingModel`|Volitelné. Volitelné. Model vláken používané třídy modelu COM v procesu. Pokud tato vlastnost hodnotu null, použije se bez modelu vláken. Komponenta je vytvořena na hlavním vlákně klienta a volání z jiných vláken, které jsou zařazeny do tohoto vlákna. Následující seznam uvádí platné hodnoty:<br /><br /> `Apartment`, `Free`, `Both`, a `Neutral`.|  
+
 ## <a name="windowclass"></a>windowClass  
- `windowClass` Element je volitelným podřízeným `file` elementu, ale může být vyžadováno, pokud [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace obsahuje komponenty modelu COM má v úmyslu nasadit pomocí bez registrace modelu COM. Element odkazuje na třídu okno definované komponenty modelu COM, kterou musí mít verzi na něho použít. Element obsahuje následující atributy.  
-  
+ `windowClass` Je volitelný podřízený element `file` elementu, ale může být povinný, pokud [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace obsahuje komponentu modelu COM, který chce nasadit pomocí modelu COM bez registrace Element odkazuje na třídu okna určené komponenty modelu COM, musí mít verzi použít. Element obsahuje následující atributy.  
+
 |Atribut|Popis|  
 |---------------|-----------------|  
-|`versioned`|Volitelné. Určuje, zda okno interní třídy název používaný v registraci obsahuje verzi nástroje sestavení, které obsahuje třídu oken. Hodnota tohoto atributu může být `yes` nebo `no`. Výchozí hodnota je `yes`. Hodnota `no` musí být použit pouze pokud je definována stejnou třídu oken souběžně sdílená komponenta a komponentu ekvivalentní jiný--souběžného a chcete je považovat za stejnou třídu oken. Všimněte si, že platí obvyklé pravidla o registrace tříd oken – pouze první součást, která registruje třídu oken budete moct zaregistrovat, protože nemá na verzi, použije na ni.|  
-  
+|`versioned`|Volitelné. Určuje, zda okno interní název použitý v registraci třídy obsahuje verzi sestavení, které obsahuje třídu okna ovládacích prvků. Hodnota tohoto atributu může být `yes` nebo `no`. Výchozí hodnota je `yes`. Hodnota `no` měli použít pouze v případě stejné třídy okna je definována součást vedle sebe a ekvivalentní komponenty bez –--vedle sebe a chcete je považovat za stejné třídy okna. Všimněte si, že použít obvyklé pravidla týkající se registrace tříd oken – pouze první součást, která se zaregistruje třídu okna budete moct zaregistrovat, protože nemá verzi použít.|  
+
 ## <a name="hash"></a>hash  
- `hash` Element je volitelným podřízeným `file` elementu. `hash` Element nemá žádné atributy.  
-  
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] používá algoritmické hodnotu hash všech souborů v aplikaci jako kontrolu zabezpečení, ujistěte se, že žádné soubory byly změněny po nasazení. Pokud `hash` element neuvedete, nebude provedena kontrola. Proto vynechání `hash` element se nedoporučuje.  
-  
- Pokud manifestu obsahuje soubor, který není s použitím algoritmu hash, že manifest nemůže být digitálně podepsané, protože uživatelé nemůže ověřit obsah souboru bez otisku.  
-  
+ `hash` Je volitelný podřízený element `file` elementu. `hash` Prvek nemá žádné atributy.  
+
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] používá vylepšením hodnota hash všech souborů v aplikaci pro kontrolu zabezpečení, k zajištění, že žádné soubory byly změněny po nasazení. Pokud `hash` element není zahrnut, tato kontrola neproběhne. Proto vynechání `hash` element se nedoporučuje.  
+
+ Pokud manifest obsahuje soubor, který se mají hodnotu hash, že manifestu nemůže být digitálně podepsané, protože uživatelé nemohou ověřit obsah souboru bez otisku.  
+
 ## <a name="dsigtransforms"></a>dsig:TRANSFORMS  
- `dsig:Transforms` Je požadovaný podřízený element `hash` elementu. `dsig:Transforms` Element nemá žádné atributy.  
-  
+ `dsig:Transforms` Je požadovaný podřízený element `hash` elementu. `dsig:Transforms` Prvek nemá žádné atributy.  
+
 ## <a name="dsigtransform"></a>dsig:Transform  
  `dsig:Transform` Je požadovaný podřízený element `dsig:Transforms` elementu. `dsig:Transform` Element má následující atributy.  
-  
-|Atribut|Popis|  
-|---------------|-----------------|  
-|`Algorithm`|Algoritmus použitý k vypočítat hodnotu hash pro tento soubor. Aktuálně pouze hodnota používaná metodou [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] je `urn:schemas-microsoft-com:HashTransforms.Identity`.|  
-  
+
+
+| Atribut | Popis |
+|-------------| - |
+| `Algorithm` | Algoritmus používaný k výpočtu algoritmu digest pro tento soubor. Aktuálně pouze hodnota používaná metodou [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] je `urn:schemas-microsoft-com:HashTransforms.Identity`. |
+
 ## <a name="dsigdigestmethod"></a>dsig: DigestMethod  
  `dsig:DigestMethod` Je požadovaný podřízený element `hash` elementu. `dsig:DigestMethod` Element má následující atributy.  
-  
-|Atribut|Popis|  
-|---------------|-----------------|  
-|`Algorithm`|Algoritmus použitý k vypočítat hodnotu hash pro tento soubor. Aktuálně pouze hodnota používaná metodou [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] je `http://www.w3.org/2000/09/xmldsig#sha1`.|  
-  
+
+
+| Atribut | Popis |
+|-------------| - |
+| `Algorithm` | Algoritmus používaný k výpočtu algoritmu digest pro tento soubor. Aktuálně pouze hodnota používaná metodou [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] je `http://www.w3.org/2000/09/xmldsig#sha1`. |
+
 ## <a name="dsigdigestvalue"></a>dsig: DigestValue  
- `dsig:DigestValue` Je požadovaný podřízený element `hash` elementu. `dsig:DigestValue` Element nemá žádné atributy. Jeho textová hodnota je vypočtená hodnota hash pro zadaný soubor.  
-  
+ `dsig:DigestValue` Je požadovaný podřízený element `hash` elementu. `dsig:DigestValue` Prvek nemá žádné atributy. Jeho textová hodnota je vypočítaný algoritmus hash pro zadaný soubor.  
+
 ## <a name="remarks"></a>Poznámky  
- Tento element identifikuje všechny nesestavené soubory, které tvoří aplikaci a na konkrétní hodnoty hash pro ověření souboru. Tento element může obsahovat také data izolace modelu COM (Component Object) přidružené k souboru. Pokud se změní soubor, soubor manifestu aplikace také musí aktualizovat, aby odrážely změny.  
-  
+ Tento prvek určuje všechny nonassembly soubory, které aplikaci tvoří a konkrétně ověření hodnoty hash souboru. Tento element může také zahrnovat data izolace modelu COM (Component Object) přidružené k souboru. Pokud se změní soubor, soubor manifestu aplikace musí být rovněž aktualizován tak, aby odrážely změny.  
+
 ## <a name="example"></a>Příklad  
- Následující příklad kódu ukazuje `file` prvky v aplikaci manifest aplikace nasazené pomocí [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)].  
-  
-```  
+ Následující příklad kódu ukazuje `file` prvky v aplikaci manifest pro aplikace nasazené pomocí [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)].  
+
+```xml  
 <file name="Icon.ico" size="9216">  
   <hash>  
     <dsig:Transforms>  
@@ -198,6 +201,6 @@ Identifikuje všechny nesestavené soubory stáhli a používá je aplikace.
   </hash>  
 </file>  
 ```  
-  
-## <a name="see-also"></a>Viz také  
- [ClickOnce – manifest aplikace ](../deployment/clickonce-application-manifest.md)
+
+## <a name="see-also"></a>Viz také:  
+ [ClickOnce – manifest aplikace](../deployment/clickonce-application-manifest.md)

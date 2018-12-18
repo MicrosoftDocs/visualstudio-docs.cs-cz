@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsectioncontribs::Next – | Microsoft Docs
+title: Idiaenumsectioncontribs::Next – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f700ef7160cff643c2a60007d7b1f83ecbe4eeb
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 630914434defea47254597ca0e392379b70a3283
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49818949"
 ---
 # <a name="idiaenumsectioncontribsnext"></a>IDiaEnumSectionContribs::Next
-Načte zadaný počet příspěvky oddíl v pořadí výčtu.  
+Načte zadaný počet příspěvků oddíl v pořadí výčtu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,16 +36,16 @@ HRESULT Next(
   
 #### <a name="parameters"></a>Parametry  
  celt  
- [v] Číslo oddílu příspěvky v enumerátor mají být načteny.  
+ [in] Číslo části příspěvků v enumerátor, který se má načíst.  
   
  rgelt  
- [out] Pole, které má být vyplněny [idiasectioncontrib –](../../debugger/debug-interface-access/idiasectioncontrib.md) objekty, které představují požadované části příspěvky.  
+ [out] Pole, které má být vyplněny [idiasectioncontrib –](../../debugger/debug-interface-access/idiasectioncontrib.md) objekty, které představují požadované části příspěvků.  
   
  pceltFetched  
- [out] Vrátí číslo oddílu příspěvků v načtených enumerátor.  
+ [out] Vrátí číslo části příspěvků v načtení enumerátoru.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE` Pokud neexistují žádné další části příspěvky. Jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud neexistují žádné příspěvky v další části. V opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [Idiaenumsectioncontribs –](../../debugger/debug-interface-access/idiaenumsectioncontribs.md)   

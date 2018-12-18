@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130664"
 ---
 # <a name="supporting-source-control"></a>Podpora správy zdrojového kódu
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] podporuje souboru rezervace, vrácení se změnami a jiných operací se zdrojovým ovládací prvek pro váš projekt nebo editor. Jako zdroj ovládacího prvku klienta [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] je navržen pro interakci s balíčkem řízení zdroje, jako například [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)], který poskytuje archivace, Správa verzí a řízení zařízení pro dynamicky definovanou sadu souborů.  

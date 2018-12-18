@@ -1,5 +1,5 @@
 ---
-title: m_stateFlags pole | Microsoft Docs
+title: m_stateflags – pole | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,29 +13,30 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8842b4e7a3b6c0cb13b0c0d446e0e03b525ae903
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ee0cdebe00acce67fc9032a4ba9e7e566ecd9786
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39232075"
 ---
-# <a name="mstateflags-field"></a>m_stateFlags pole
-Ukládá informace o aktuální stav <xref:System.Threading.Tasks.Task> objektu.  
+# <a name="mstateflags-field"></a>m_stateflags – pole
+Ukládá informace o aktuálním stavu <xref:System.Threading.Tasks.Task> objektu.  
   
  **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **Sestavení:** mscorlib (v mscorlib.dll)  
+ **Sestavení:** mscorlib (v *mscorlib.dll*)  
   
- Protože tento vnitřní člen nemůže získat přístup z rozhraní .NET Framework, je k dispozici společné Intermediate Language (soubor CIL) syntaxi.  
+ Protože tento člen interní nemůže získat přístup z rozhraní .NET Framework, je k dispozici v Common Intermediate Language (CIL) následující syntaxi.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```csharp  
 .field assembly int32 modreq(System.Runtime.CompilerServices.IsVolatile) m_stateFlags  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Obvykle se používá <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=fullName> vlastnost, která tuto hodnotu.  
+ Obvykle se používá <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=fullName> vlastnosti pro přístup k této hodnotě.  
   
  Tento člen může být libovolnou kombinací těchto hodnot:  
   
@@ -49,5 +50,5 @@ Ukládá informace o aktuální stav <xref:System.Threading.Tasks.Task> objektu.
   
 -   [TASK_STATE_RAN_TO_COMPLETION](../../extensibility/debugger/task-state-ran-to-completion-field.md)  
   
-## <a name="see-also"></a>Viz také  
- [Task – třída](../../extensibility/debugger/task-class-internal-members.md)
+## <a name="see-also"></a>Viz také:  
+ [Třída úlohy](../../extensibility/debugger/task-class-internal-members.md)

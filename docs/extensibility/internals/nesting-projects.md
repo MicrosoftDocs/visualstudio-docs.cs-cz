@@ -21,6 +21,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131157"
 ---
 # <a name="nesting-projects"></a>Vnoření projekty
 Podnikové aplikace vývojáře, kteří používají vašeho balíčku VS můžete pohodlně Seskupit podobné typy projektů společně v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] pomocí *projektu vnoření*. Projekt šablony organizace například používá vnořené projektů pro projekty skupiny do kategorií. Obchodní průčelí za projekty, projekty webového uživatelského rozhraní a tak dále jsou seskupeny dohromady v jedné kategorii.  

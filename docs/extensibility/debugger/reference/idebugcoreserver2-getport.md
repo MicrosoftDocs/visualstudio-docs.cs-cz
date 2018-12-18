@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer2::GetPort | Microsoft Docs
+title: IDebugCoreServer2::GetPort | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c1f889e44895faf9b5afdc2186adc5baadd5a578
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 14172972c77218663da59d36e3e94ffd3c07c2d8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49887336"
 ---
 # <a name="idebugcoreserver2getport"></a>IDebugCoreServer2::GetPort
-Načte specifického portu.  
+Načte konkrétní port.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,13 +43,13 @@ int GetPort(
   
 #### <a name="parameters"></a>Parametry  
  `guidPort`  
- [v] Identifikátor GUID portu mají být načteny.  
+ [in] Identifikátor GUID portu, který se má načíst.  
   
  `ppPort`  
- [out] Vrátí [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) objekt reprezentující požadovaný port.  
+ [out] Vrátí [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) objekt představující požadovaný port.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby. Vrátí `E_PORTSUPPLIER_NO_PORT` Pokud není žádný port s daným identifikátorem.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí `E_PORTSUPPLIER_NO_PORT` Pokud neexistuje žádný port s daným identifikátorem.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)   

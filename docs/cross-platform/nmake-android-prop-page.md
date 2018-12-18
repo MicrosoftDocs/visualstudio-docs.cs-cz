@@ -1,5 +1,5 @@
 ---
-title: NMake vlastnosti (Android C++) | Microsoft Docs
+title: Vlastnosti NMake (Android C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 10/23/2017
 ms.technology: vs-ide-mobile
@@ -18,21 +18,22 @@ f1_keywords:
 - VC.Project.VCNMakeTool.ForcedIncludes
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 9f38994aa67722e96709f604164818f0bc15ebd6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: cace2ed08c82c274649c7554bfe8127ef9c6d152
+ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39252171"
 ---
 # <a name="nmake-properties-android-c"></a>Vlastnosti NMake (Android C++)
 
 Vlastnost | Popis
 --- | ---
-Sestavení příkazového řádku | Určuje příkazový řádek spustit pro příkaz 'Sestavení'.
-Znovu vytvořit všechny příkazového řádku | Určuje příkazový řádek spustit pro příkaz 'Znovu vytvořit všechny'.
-Vyčištění příkazového řádku | Určuje příkazový řádek spustit pro příkaz 'Vyčistit'.
-Výstup | Určuje výstupní soubor pro generování.
-Definice preprocesoru | Určuje, že preprocesor definuje používané ve zdrojové soubory.
-Zahrnout cesty pro hledání | Určuje cestu zahrnutí vyhledávání pro vyřešení zahrnuté soubory.
-Vynutit zahrnuje | Určuje soubory, které jsou vynucené zahrnuty.
-Další možnosti | Určuje dalších přepínačů, který se má použít technologii IntelliSense, při analýze souborů C++
+Sestavení příkazového řádku | Určuje příkazový řádek pro spuštění příkazu "Sestavení".
+Opětovné sestavení všech příkazového řádku | Určuje příkazový řádek pro spuštění příkazu "Sestavit vše znovu".
+Příkazový řádek příkazu vyčistit | Určuje příkazový řádek pro spuštění příkazu "Clean".
+Výstup | Určuje výstupní soubor pro vygenerování.
+Definice preprocesoru | Určuje direktivy preprocesoru define použité zdrojovými soubory.
+Zahrnout cestu vyhledávání | Určuje cestu hledání pro zahrnuté soubory řešení.
+Vynucené zahrnuje | Určuje soubory, které jsou Vynuceně zahrnuté.
+Další možnosti | Určuje další přepínače kompilátoru pro použití technologií IntelliSense při analýze souborů C++

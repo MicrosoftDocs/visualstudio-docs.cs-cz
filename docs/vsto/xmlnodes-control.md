@@ -1,5 +1,5 @@
 ---
-title: XmlNodes – ovládací prvek | Microsoft Docs
+title: XMLNodes – ovládací prvek
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,11 +16,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0bb3451f491e4a663a99488f4b2099d58f0018eb
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 18b1a9cf6028b02d16b15b17950b9918b7b79d89
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35258535"
 ---
 # <a name="xmlnodes-control"></a>XMLNodes – ovládací prvek
   **Důležité** informace uvedené v tomto tématu týkající se aplikace Microsoft Word je vidění výhradně pro benefit a použití jednotlivce a organizace, kteří se nacházejí mimo Spojené státy a jeho území nebo který používáte, nebo vývoj programy, které běží na, produkty Microsoft Word, které byly před leden 2010, když Microsoft odebrat implementace konkrétní funkce licencí společnosti Microsoft týkající se vlastní kód XML z aplikace Microsoft Word. Tyto informace týkající se aplikace Microsoft Word nemusí přečteny nebo používány jednotlivce nebo organizace v USA nebo v jeho území, které používáte, nebo vývoj programy, které běží na produkty Microsoft Word, které byly licencí společnosti Microsoft po 10 leden 2010 ; tyto produkty nebudou chovají stejně jako produkty licencované před tímto datem nebo zakoupených a licenci na použití mimo Spojené státy.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 04/16/2018
 > [!NOTE]  
 >  Pokud máte přístup k podřízeného prvku <xref:Microsoft.Office.Tools.Word.XMLNodes> ovládat prostřednictvím <xref:Microsoft.Office.Tools.Word.XMLNodes.Item%2A> vlastnost, vrátí <xref:Microsoft.Office.Interop.Word.XMLNode> objekt ne <xref:Microsoft.Office.Tools.Word.XMLNode> ovládacího prvku. Další informace najdete v tématu [programová omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md).  
   
-## <a name="binding-data-to-the-control"></a>Vazba dat k ovládacímu prvku  
+## <a name="bind-data-to-the-control"></a>Vázání dat k ovládacímu prvku  
  <xref:Microsoft.Office.Tools.Word.XMLNodes> Ovládací prvek nepodporuje datová vazba. Důvodem je, že <xref:Microsoft.Office.Tools.Word.XMLNodes> ovládací prvek nemá rozšířené datové vazby funkcí a jednoduché datové vazby nelze představují opakující se data.  
   
 ## <a name="formatting"></a>Formátování  
@@ -59,10 +60,10 @@ ms.lasthandoff: 04/16/2018
   
 -   <xref:Microsoft.Office.Tools.Word.XMLNodes.ValidationError>  
   
-## <a name="comparing-events"></a>Porovnání události  
+## <a name="compare-events"></a>Porovnání události  
  Můžete zaznamenat událost v případě, že uživatel přesune své kurzor v rámci konkrétní <xref:Microsoft.Office.Tools.Word.XMLNodes> ovládacího prvku. Například můžete mít <xref:Microsoft.Office.Tools.Word.XMLNodes> ovládací prvek s názvem `Customer` má podřízenou <xref:Microsoft.Office.Tools.Word.XMLNodes> ovládací prvek s názvem `Company`, a `Company` má dva podřízené <xref:Microsoft.Office.Tools.Word.XMLNodes> ovládací prvky s názvem `CompanyName` a `CompanyRegion` následujícím způsobem:  
   
-```  
+```xml  
 <Customer>  
     <Company>  
         <CompanyName>  
@@ -81,9 +82,9 @@ ms.lasthandoff: 04/16/2018
   
  Existují stejné rozdíly mezi <xref:Microsoft.Office.Tools.Word.XMLNodes.ContextLeave> událostí a <xref:Microsoft.Office.Tools.Word.XMLNodes.Deselect> událostí.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Přehled ovládacích prvků hostitele a hostitelské položky](../vsto/host-items-and-host-controls-overview.md)   
- [Automatizace v aplikaci Word s použitím rozšířených objektů](../vsto/automating-word-by-using-extended-objects.md)   
+ [Automatizace aplikace Word s použitím rozšířených objektů](../vsto/automating-word-by-using-extended-objects.md)   
  [XmlNode – ovládací prvek](../vsto/xmlnode-control.md)   
  [Postupy: Přidání ovládacích prvků XMLNodes do dokumentů aplikace Word](../vsto/how-to-add-xmlnodes-controls-to-word-documents.md)   
  [Postupy: mapování schémat na dokumenty aplikace Word v sadě Visual Studio](../vsto/how-to-map-schemas-to-word-documents-inside-visual-studio.md)   

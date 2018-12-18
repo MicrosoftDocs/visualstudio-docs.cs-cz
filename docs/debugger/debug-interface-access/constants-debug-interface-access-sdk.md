@@ -1,5 +1,5 @@
 ---
-title: Konstanty (přístup k rozhraní SDK ladění) | Microsoft Docs
+title: Konstanty (přístup k rozhraní SDK ladění) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -15,17 +15,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c77febb7ad9f41880fef604849af75aa065ff593
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: dd6908a8a0b49f5078e4c0d448ba2dedbe8f720a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872041"
 ---
 # <a name="constants-debug-interface-access-sdk"></a>Konstanty (Přístup k rozhraní ladění SDK)
-Tyto řetězcové konstanty slouží k identifikaci různých oddílů sady souboru databáze (PDB) ladicí program prostřednictvím DIA SDK.  
+Tyto řetězcové konstanty lze použít k identifikaci různých oddílů sady soubor databáze (PDB) programu ladění prostřednictvím sady DIA SDK.  
   
 ## <a name="constants"></a>Konstanty  
- Toto jsou deklarovány jako makra jazyka C/C++.  
+ Následující jsou deklarovány jako makra jazyka C/C++.  
   
 |– Makro|Hodnota|  
 |-----------|-----------|  
@@ -59,5 +60,5 @@ HRESULT GetSymbolTable(IDiaEnumTables *pEnumTables, IDiaTable **pTable)
 ## <a name="see-also"></a>Viz také  
  [Referenční dokumentace](../../debugger/debug-interface-access/debug-interface-access-sdk-reference.md)   
  [Výčty a struktury](../../debugger/debug-interface-access/enumerations-and-structures.md)   
- [Rozhraní (přístup k rozhraní SDK ladění)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
+ [Rozhraní (Debug Interface Access SDK)](../../debugger/debug-interface-access/interfaces-debug-interface-access-sdk.md)   
  [IDiaEnumTables::Item](../../debugger/debug-interface-access/idiaenumtables-item.md)

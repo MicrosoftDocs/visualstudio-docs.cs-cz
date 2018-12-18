@@ -15,19 +15,20 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 247a152cd04a262115cbde78a7a06ad2e95f250c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ace6b0eaf71b4bfb992d0ff0ccdb09351eac2c19
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34844167"
 ---
-# <a name="how-to-reference-windows-symbol-information"></a>Postupy: Referenční informace o symbolech Windows
-Visual Studio Tools profilace soubory symbolu (.pdb) použít k vyřešení symbolický názvy, například názvy funkcí v binárních souborech programu. Můžete provést tyto kroky automaticky stáhnout a aktualizovat soubory PDB správné pro verzi systému Windows v místním počítači.  
+# <a name="how-to-reference-windows-symbol-information"></a>Postupy: odkaz na Windows symbolů informace
+Visual Studio Tools profilace použít znak (. *pdb*) soubory přeložil symbolické názvy, jako funkce názvy v binárních souborů programu. Můžete provést tyto kroky automaticky stáhnout a aktualizovat správný. *pdb* soubory pro verzi systému Windows v místním počítači.  
   
 > [!NOTE]
 >  Toto nastavení nemá vliv na existující sestavy. Pouze sestavy vytvořené po zadání serveru symbol bude mít informací o symbolu.  
   
- Další informace najdete v tématu [zadejte symbolu (.pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).  
+ Další informace najdete v tématu [zadání symbolu (. *pdb*) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).  
   
 ### <a name="to-use-the-microsoft-symbol-server"></a>Použití serveru Microsoft – symbol  
   
@@ -47,6 +48,6 @@ Visual Studio Tools profilace soubory symbolu (.pdb) použít k vyřešení symb
   
      Můžete také kliknutím tlačítko se třemi tečkami (**...** ) a poté vyberte adresář z **vyhledat složku** dialogové okno.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Konfigurace výkonnostních relací](../profiling/configuring-performance-sessions.md)   
- [Postupy: serializace informací o symbolu](../profiling/how-to-serialize-symbol-information.md)
+ [Postupy: Serializace informací o symbolu](../profiling/how-to-serialize-symbol-information.md)

@@ -1,0 +1,7 @@
+# [Python](getting-started-with-python.md)
+## [Začínáme s PTVS: Nastavení sady Visual Studio](getting-started-with-ptvs-setting-up-visual-studio.md)
+## [Začínáme s PTVS: Začínáme kódovat (projekty)](getting-started-with-ptvs-start-coding-projects.md)
+## [Začínáme s PTVS: Úpravy kódu](getting-started-with-ptvs-editing-code.md)
+## [Začínáme s PTVS: Ladění](getting-started-with-ptvs-debugging.md)
+## [Začínáme s PTVS: Interaktivní Python](getting-started-with-ptvs-interactive-python.md)
+## [Začínáme s PTVS: Vytvoření webu v Azure](getting-started-with-ptvs-building-a-website-in-azure.md)

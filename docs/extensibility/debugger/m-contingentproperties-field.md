@@ -1,5 +1,5 @@
 ---
-title: m_contingentProperties pole | Microsoft Docs
+title: m_contingentproperties – pole | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,28 +13,29 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1c7635bab0e627a0f1b51000d37f60f861440934
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 50676f799367c8a2aece7daacb270d8bb31738e9
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39232812"
 ---
-# <a name="mcontingentproperties-field"></a>m_contingentProperties pole
+# <a name="mcontingentproperties-field"></a>m_contingentproperties – pole
 Ukládá další vlastnosti <xref:System.Threading.Tasks.Task> objektu.  
   
  **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **Sestavení:** mscorlib (v mscorlib.dll)  
+ **Sestavení:** mscorlib (v *mscorlib.dll*)  
   
- Protože tento vnitřní člen nemůže získat přístup z rozhraní .NET Framework, je k dispozici společné Intermediate Language (soubor CIL) syntaxi.  
+ Protože tento člen interní nemůže získat přístup z rozhraní .NET Framework, je k dispozici v Common Intermediate Language (CIL) následující syntaxi.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```csharp  
 .field assembly class System.Threading.Tasks.Task/ContingentProperties modreq(System.Runtime.CompilerServices.IsVolatile) m_contingentProperties  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
   
-## <a name="see-also"></a>Viz také  
- [Task – třída](../../extensibility/debugger/task-class-internal-members.md)
+## <a name="see-also"></a>Viz také:  
+ [Třída úlohy](../../extensibility/debugger/task-class-internal-members.md)

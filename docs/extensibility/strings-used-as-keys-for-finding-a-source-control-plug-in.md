@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31137671"
 ---
 # <a name="strings-used-as-keys-for-finding-a-source-control-plug-in"></a>Řetězce, které jsou použity jako klíče pro vyhledání modulu Plug-in zdrojového kódu
 Následující řetězce jsou klíče pro přístup k registru k nalezení informací o ovládacím prvku modulu plug-in.  

@@ -1,5 +1,5 @@
 ---
-title: Vytváření opakovaně použitelných skupin tlačítek | Microsoft Docs
+title: Vytváření znovu použitelných skupin tlačítek | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,26 +15,27 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 97ee7cc2ec63a94036472ccce07b1dc9fa736504
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4447ab5e5c0ced7852d0cb7dae3a4c0c7e3b3e68
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49928175"
 ---
-# <a name="creating-reusable-groups-of-buttons"></a>Vytváření opakovaně použitelných skupin tlačítek
-Skupina příkazu je kolekce příkazy, které se vždy zobrazují společně v nabídce nebo na panelu nástrojů. Všechny skupiny pro příkaz znovu lze přiřazením do jiné nadřazené nabídek v části CommandPlacements .vsct souboru.  
+# <a name="create-reusable-groups-of-buttons"></a>Vytváření znovu použitelných skupin tlačítek
+Skupina příkazu je kolekce příkazů, které se vždy zobrazují společně na nabídku nebo panel nástrojů. Všechny skupiny příkazů, lze ji znovu použít přiřazením do jiné nadřazené nabídky v části commandplacements – *.vsct* souboru.  
   
- Příkaz skupiny obvykle obsahují tlačítka, ale může také obsahovat další nabídky nebo pole se seznamem.  
+ Příkaz skupiny obvykle obsahují tlačítka, ale může taky obsahovat další nabídky nebo pole se seznamem.  
   
-### <a name="to-create-a-reusable-group-of-buttons"></a>Chcete-li vytvořit opakovaně použitelný skupina tlačítek  
+## <a name="to-create-a-reusable-group-of-buttons"></a>Chcete-li vytvořit opakovaně použitelných skupin tlačítek  
   
-1.  Vytvoření projektu VSIX s názvem `ReusableButtons`. Další informace najdete v tématu [vytvoření rozšíření pomocí příkazu v nabídce](../extensibility/creating-an-extension-with-a-menu-command.md).  
+1.  Vytvořte projekt VSIX s názvem `ReusableButtons`. Další informace najdete v tématu [vytváření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md).  
   
-2.  Když na projekt se otevře, přidejte šablonu a vlastní příkaz položka s názvem **ReusableCommand**. V **Průzkumníku řešení**, klikněte pravým tlačítkem na uzel projektu a vyberte **přidat / novou položku**. V **přidat novou položku** dialogové okno, přejděte na **Visual C# nebo rozšíření** a vyberte **vlastní příkaz**. V **název** pole v dolní části okna, změňte název souboru příkaz **ReusableCommand.cs**.  
+2.  Po otevření projektu přidat vlastní příkaz šablonu položky s názvem **ReusableCommand**. V **Průzkumníka řešení**, klikněte pravým tlačítkem na uzel projektu a vyberte **přidat** > **nová položka**. V **přidat novou položku** dialogové okno, přejděte na **Visual C#** > **rozšiřitelnost** a vyberte **vlastního příkazu**. V **název** pole v dolní části okna, změňte název souboru příkazu *ReusableCommand.cs*.  
   
-3.  V souboru .vsct přejděte k části symboly a najít GuidSymbol elementu, který obsahuje skupiny a příkazy pro projekt. Musí mít název guidReusableCommandPackageCmdSet.  
+3.  V *.vsct* souboru, přejděte do části symboly a najděte guidsymbol – element, který obsahuje skupiny a příkazy pro projekt. By měl být pojmenován guidReusableCommandPackageCmdSet.  
   
-4.  Přidáte IDSymbol pro každé tlačítko, které přidáte do skupiny, jako v následujícím příkladu.  
+4.  Přidáte idsymbol – pro každé tlačítko, které přidáte do skupiny, jako v následujícím příkladu.  
   
     ```xml  
     <GuidSymbol name="guidReusableCommandPackageCmdSet" value="{7f383b2a-c6b9-4c1d-b4b8-a26dc5b60ca1}">  
@@ -44,9 +45,9 @@ Skupina příkazu je kolekce příkazy, které se vždy zobrazují společně v 
     </GuidSymbol>  
     ```  
   
-     Ve výchozím nastavení, šablony položky příkaz vytvoří skupinu s názvem **MyMenuGroup** a tlačítko, které má název, který jste zadali, spolu s IDSymbol záznam pro každý.  
+     Ve výchozím nastavení, šablona položky příkaz vytvoří skupinu **MyMenuGroup** tlačítka a tlačítka, který má název, který jste zadali, společně s idsymbol – záznam pro každý.  
   
-5.  V části skupiny vytvořte skupinového elementu, který má stejný identifikátor GUID a ID atributy jako ty, které jsou uvedeny v části symboly. Můžete také použít stávající skupinu nebo použít položku, která zajišťuje šabloně příkaz jako v následujícím příkladu. Této skupiny se zobrazí na **nástroje** nabídky  
+5.  V části skupiny vytvořte prvek skupiny, který má stejný identifikátor GUID a ID atributy jako ty uvedené v části symboly. Můžete také použít existující skupinu nebo použít položku, která je k dispozici pomocí příkazu šablony, jako v následujícím příkladu. Tato skupina se zobrazí na **nástroje** nabídky  
   
     ```xml  
     <Groups>  
@@ -56,11 +57,11 @@ Skupina příkazu je kolekce příkazy, které se vždy zobrazují společně v 
     </Groups>  
     ```  
   
-### <a name="to-create-a-group-of-buttons-for-reuse"></a>Vytvoření skupiny tlačítek pro opakované použití  
+## <a name="to-create-a-group-of-buttons-for-reuse"></a>Chcete-li vytvořit skupinu tlačítek pro opakované použití  
   
-1.  Příkaz nebo nabídky můžete uvést ve skupině pomocí skupiny jako nadřazený objekt v definici příkazu nebo nabídky nebo vložením příkazu nebo nabídky ve skupině pomocí části CommandPlacements.  
+1.  Příkaz nebo nabídky můžete umístit do skupiny pomocí skupiny jako rodič v definici příkazu nebo nabídky nebo vložením příkazu nebo nabídky ve skupině pomocí commandplacements – část.  
   
-     V části tlačítka definovat tlačítko, které má vaše skupinu jako svůj nadřazený uzel, nebo použijte tlačítko poskytovaná šablonou balíček, jak je znázorněno v následujícím příkladu.  
+     V části tlačítka definovat tlačítko, které má vaše skupiny jako jeho nadřazeným prvkem, nebo pomocí tlačítka, která je poskytována balíček šablony, jak je znázorněno v následujícím příkladu.  
   
     ```xml  
     <Button guid="guidReusableCommandPackageCmdSet" id="ReusableCommandId" priority="0x0100" type="Button">  
@@ -72,7 +73,7 @@ Skupina příkazu je kolekce příkazy, které se vždy zobrazují společně v 
     </Button>  
     ```  
   
-2.  Pokud tlačítko objevit ve více než jedné skupiny, vytvořte záznam pro něj v části CommandPlacements musí být umístěny po části příkazy. Nastavit atributy GUID a ID elementu CommandPlacement shodují s těmi, které chcete umístit tlačítka a potom nastavte GUID a ID objektů svého nadřízeného elementu na ty, cílové skupiny, jak je znázorněno v následujícím příkladu.  
+2.  Pokud tlačítko musí být uvedena ve více než jedné skupině, vytvořte záznam pro něj v části commandplacements – musí být umístěné za část příkazy. Nastavení atributů commandplacement – element tak, aby odpovídaly u tlačítka, které chcete umístit GUID a ID a potom nastavte GUID a ID objektů svého nadřízeného elementu na hodnoty cílové skupiny, jak je znázorněno v následujícím příkladu.  
   
     ```xml  
     <CommandPlacements>  
@@ -83,41 +84,41 @@ Skupina příkazu je kolekce příkazy, které se vždy zobrazují společně v 
     ```  
   
     > [!NOTE]
-    >  Hodnota pole Priorita určuje pozici příkazu v nové skupině příkaz. V CommandPlacement element přepíšou nastavení v definici položky nastavit priority. Příkazy, které mají nižší hodnoty priority se zobrazují před příkazy, které mají vyšší hodnoty priority. Priorita duplicitní hodnoty jsou povolené, ale relativní pozici příkazy, které mají stejnou prioritu nemůže zaručit, protože pořadí, v jakém **devenv/Setup** příkaz vytvoří konečnou rozhraní z registru mohou být nekonzistentní.  
+    >  Hodnota pole Priorita určuje pozici příkazu v nové skupině příkazu. Nastavení priority v commandplacement – element mají přednost před akcemi nastavené v definici položky. Příkazy, které mají nižší hodnoty priority se zobrazují před příkazy, které mají vyšší hodnoty priority. Priorita duplicitní hodnoty jsou povolené, ale relativní pozice příkazy, které mají stejnou hodnotu priority nemůže být zaručena, protože pořadí, ve kterém **devenv/Setup** příkaz vytvoří konečné rozhraní z registru mohou být nekonzistentní.  
   
-### <a name="to-put-a-reusable-group-of-buttons-on-a-menu"></a>V nabídce uvést opakovaně použitelné skupina tlačítek  
+## <a name="to-put-a-reusable-group-of-buttons-on-a-menu"></a>Vložit opakovaně použitelných skupin tlačítek v nabídce  
   
-1.  Vytvořit položku ve `CommandPlacements` oddílu. Nastavte GUID a ID `CommandPlacement` element na ty, skupiny a nastavte nadřazený identifikátor GUID a ID na těch, které v cílovém umístění.  
+1. Vytvořit položku v `CommandPlacements` oddílu. Nastavte identifikátor GUID a ID `CommandPlacement` element u těch, které vaší skupiny a nastavit nadřazený identifikátor GUID a ID u těch, které v cílovém umístění.  
   
-     V části CommandPlacements musí být umístěny bezprostředně za části příkazy:  
+    Commandplacements – oddíl by měl umístit bezprostředně po části příkazy:  
   
-    ```xml  
-    <CommandTable>  
-    ...  
-      <Commands>... </Commands>  
-      <CommandPlacements>... </CommandPlacements>  
-    ...   
-    </CommandTable>  
-    ```  
+   ```xml  
+   <CommandTable>  
+   ...  
+     <Commands>... </Commands>  
+     <CommandPlacements>... </CommandPlacements>  
+   ...   
+   </CommandTable>  
+   ```  
   
-     Skupina příkazu lze vložit více než jeden nabídky. V nabídce nadřazené může být ten, který jste vytvořili, ten, který poskytl [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] (jako popsaný v tématu ShellCmdDef.vsct nebo SharedCmdDef.vsct), nebo jednu, která je definována v jiné VSPackage. Počet vrstev vztahy k nadřazeným položkám neomezená tak dlouho, dokud nabídce nadřazený server připojený k [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nebo místní nabídky, který se zobrazí při VSPackage.  
+    Příkaz skupiny můžou být zahrnuté ve více než jednu nabídku. Nadřazené nabídky může být ten, který jste vytvořili, ten, který je poskytnut pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] (jak je popsáno v *ShellCmdDef.vsct* nebo *SharedCmdDef.vsct*), nebo disk, který je definován v jiné VSPackage. Počet vrstev vztahy k nadřazeným položkám je neomezený počet tak dlouho, dokud nabídce nadřazený server připojený k [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nebo do místní nabídky, který se zobrazí při VSPackage.  
   
-     Následující příklad vloží skupině **Průzkumníku řešení** napravo od ostatních tlačítek panelu nástrojů.  
+    Následující příklad umístí na skupině **Průzkumníka řešení** napravo od ostatních tlačítek panelu nástrojů.  
   
-    ```xml  
-    <CommandPlacements>  
-        <CommandPlacement guid="guidReusableCommandPackageCmdSet" id="MyMenuGroup" priority="0xF00">  
-          <Parent guid="guidSHLMainMenu" id="IDM_VS_TOOL_PROJWIN"/>  
-        </CommandPlacement>  
-    </CommandPlacements>  
-    ```  
+   ```xml  
+   <CommandPlacements>  
+       <CommandPlacement guid="guidReusableCommandPackageCmdSet" id="MyMenuGroup" priority="0xF00">  
+         <Parent guid="guidSHLMainMenu" id="IDM_VS_TOOL_PROJWIN"/>  
+       </CommandPlacement>  
+   </CommandPlacements>  
+   ```  
   
-    ```xml  
-    <CommandPlacements>  
-      <CommandPlacement guid="guidButtonGroupCmdSet" id="MyMenuGroup"   
-          priority="0x605">  
-        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS" />  
-      </CommandPlacement>  
-    </CommandPlacements>  
+   ```xml  
+   <CommandPlacements>  
+     <CommandPlacement guid="guidButtonGroupCmdSet" id="MyMenuGroup"   
+         priority="0x605">  
+       <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_TOOLS" />  
+     </CommandPlacement>  
+   </CommandPlacements>  
   
-    ```
+   ```

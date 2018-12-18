@@ -1,5 +1,5 @@
 ---
-title: Definování elementu | Microsoft Docs
+title: Definování elementu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 336c0b52e50731ff63fb790a1a1b201b0646caea
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2596023628086ce5e921eeb8499956828d4c8a5c
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39497158"
 ---
-# <a name="define-element"></a>Definování elementu
-Určuje dvojice název a hodnotu symbol. Podmíněné atributy mohou být vyhodnocena tento symbol. Další informace najdete v tématu [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md). Viz také [symboly Element](../extensibility/symbols-element.md).  
+# <a name="define-element"></a>Define – element
+Definuje symbol dvojice název a hodnotu. Tento symbol lze vyhodnotit podmíněné atributy. Další informace najdete v tématu [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md). Viz také [Symbols – element](../extensibility/symbols-element.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,14 +41,14 @@ Určuje dvojice název a hodnotu symbol. Podmíněné atributy mohou být vyhodn
 |value|Požadováno. Hodnota symbolu:<br /><br /> Hodnota = "Standard"|  
 |Podmínka|Volitelné. Další informace najdete v tématu [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
   
-### <a name="child-elements"></a>Podřízené elementy  
+### <a name="child-elements"></a>Podřízené prvky  
  Žádné  
   
-### <a name="parent-elements"></a>Nadřazené elementy  
+### <a name="parent-elements"></a>Nadřazené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|[CommandTable – element](../extensibility/commandtable-element.md)|Definuje všechny elementy, které představují příkazy, které poskytuje VSPackage integrované vývojové prostředí (IDE). Například položky nabídky, nabídek, panely nástrojů a pole se seznamem.|  
+|[Commandtable – element](../extensibility/commandtable-element.md)|Definuje všechny prvky, které představují příkazy, které poskytuje VSPackage integrovaného vývojového prostředí (IDE). Například položky nabídky, nabídky, panely nástrojů a pole se seznamem.|  
   
 ## <a name="example"></a>Příklad  
   
@@ -56,5 +57,5 @@ Určuje dvojice název a hodnotu symbol. Podmíněné atributy mohou být vyhodn
 <Define name="MODE" value="Standard"/>  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [Soubory tabulek příkazů sady Visual Studio (.Vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+## <a name="see-also"></a>Viz také:  
+ [Soubory tabulky (.vsct) příkaz pro Visual Studio](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

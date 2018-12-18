@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_basetype – | Microsoft Docs
+title: Idiasymbol::get_basetype – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 080c8872682f9c255eda77449cb24dd703cd9583
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: f7cb7b8a003f3aea5d821d5ffb9f312d069edb99
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49901785"
 ---
 # <a name="idiasymbolgetbasetype"></a>IDiaSymbol::get_baseType
-Získá základní typ pro tento symbol*.*  
+Získá základní typ pro tento symbol<em>.</em>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,16 +34,16 @@ HRESULT get_baseType (
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí hodnotu z [BasicType – výčet](../../debugger/debug-interface-access/basictype.md) výčtu určení základní typ symbolu.  
+ [out] Vrátí hodnotu z [basictype – výčet](../../debugger/debug-interface-access/basictype.md) výčet určující základní typ symbolu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` nebo chybový kód.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
 >  Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="remarks"></a>Poznámky  
- Základní typ pro symbol se dá určit tak nejprve získáte typ symbolu a pak dotazem, který vrátil typ pro základního typu. Všimněte si, že některé symboly nemusí mít základní typ. – například název struktury.  
+ Prvním načtení typ symbolu a pak dotazem, který vrátil typ pro základní typ stanovit základní typ pro symbol. Všimněte si, že některé symboly nemusí mít základní typ. – například název struktury.  
   
 ## <a name="example"></a>Příklad  
   
@@ -63,10 +64,10 @@ if (pType->get_type( &pBaseType ) == S_OK)
   
 |Požadavek|Popis|  
 |-----------------|-----------------|  
-|Hlavičky:|dia2.h|  
+|Záhlaví:|dia2.h|  
 |Verze:|V7.0 DIA SDK|  
   
 ## <a name="see-also"></a>Viz také  
  [Idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md)   
- [BasicType – výčet](../../debugger/debug-interface-access/basictype.md)   
+ [Basictype – výčet](../../debugger/debug-interface-access/basictype.md)   
  [IDiaSymbol::get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md)

@@ -1,5 +1,5 @@
 ---
-title: Kontrolní výrazy ve spravovaném kódu | Microsoft Docs
+title: Kontrolní výrazy ve spravovaném kódu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -24,23 +24,24 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: e5b4c66beba2a4c3953a0720a3f770f7f651db79
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 07f422348a10bbe6d5c02a50073c9486a679cfaf
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49892061"
 ---
 # <a name="assertions-in-managed-code"></a>Kontrolní výrazy ve spravovaném kódu
-Na kontrolní výraz systému nebo `Assert` testuje podmínku, kterou zadáte jako argument pro příkaz, `Assert` příkaz. Pokud je podmínka vyhodnocena jako true, nedojde k žádné akci. Pokud je podmínka vyhodnocena jako false, kontrolní výraz se nezdaří. Pokud používáte s sestavení ladicí verze, váš program vstupuje do režimu pozastavení.  
+Příslušný kontrolní výraz nebo `Assert` prohlášení, testuje podmínku, který zadáte jako argument `Assert` příkazu. Pokud je podmínka vyhodnocena jako true, nedojde k žádné akci. Pokud je podmínka vyhodnocena jako NEPRAVDA, výraz se nezdaří. Používáte-li sestavení pro ladění, váš program přejde do režimu přerušení.  
   
 ##  <a name="BKMK_In_this_topic"></a> V tomto tématu  
- [Vyhodnotí v Namespace System.Diagnostics](#BKMK_Asserts_in_the_System_Diagnostics_Namespace)  
+ [Nepodmíněné výrazy v System.Diagnostics Namespace](#BKMK_Asserts_in_the_System_Diagnostics_Namespace)  
   
  [Debug.Assert – metoda](#BKMK_The_Debug_Assert_method)  
   
- [Vedlejší efekty Debug.Assert –](#BKMK_Side_effects_of_Debug_Assert)  
+ [Vedlejší účinky Debug.Assert –](#BKMK_Side_effects_of_Debug_Assert)  
   
- [Trasování a ladění požadavky](#BKMK_Trace_and_Debug_Requirements)  
+ [Požadavky na ladění a trasování](#BKMK_Trace_and_Debug_Requirements)  
   
  [Assert – argumenty](#BKMK_Assert_arguments)  
   
@@ -48,15 +49,15 @@ Na kontrolní výraz systému nebo `Assert` testuje podmínku, kterou zadáte ja
   
  [Kontrolní výrazy nastavení v konfiguračních souborech](#BKMK_Setting_assertions_in_configuration_files)  
   
-##  <a name="BKMK_Asserts_in_the_System_Diagnostics_Namespace"></a> Vyhodnotí v Namespace System.Diagnostics  
- V jazyce Visual Basic a Visual C#, můžete použít `Assert` metoda buď z <xref:System.Diagnostics.Debug> nebo <xref:System.Diagnostics.Trace>, které jsou v <xref:System.Diagnostics> oboru názvů. <xref:System.Diagnostics.Debug> metody třídy nejsou součástí verzi vašeho programu, zvětšit velikost nebo snížení rychlosti verze kódu.  
+##  <a name="BKMK_Asserts_in_the_System_Diagnostics_Namespace"></a> Nepodmíněné výrazy v System.Diagnostics Namespace  
+ V jazyce Visual Basic a Visual C#, můžete použít `Assert` metoda buď z <xref:System.Diagnostics.Debug> nebo <xref:System.Diagnostics.Trace>, které jsou v <xref:System.Diagnostics> oboru názvů. <xref:System.Diagnostics.Debug> metody třídy nejsou součástí verze aplikace, tak dojít ke zvětšení nebo snížit rychlost verze kódu.  
   
- C++ nepodporuje <xref:System.Diagnostics.Debug> metody třídy. Stejného efektu můžete dosáhnout pomocí <xref:System.Diagnostics.Trace> třídy s Podmíněná kompilace, jako například `#ifdef DEBUG`... `#endif`.  
+ Jazyk C++ nepodporuje <xref:System.Diagnostics.Debug> metody třídy. Můžete stejného výsledku dosáhnout pomocí <xref:System.Diagnostics.Trace> třídy s podmíněné kompilace, jako například `#ifdef DEBUG`... `#endif`.  
   
  [V tomto tématu](#BKMK_In_this_topic)  
   
 ##  <a name="BKMK_The_Debug_Assert_method"></a> Debug.Assert – metoda  
- Použití <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> metoda volně k testování podmínky, které by měl obsahovat hodnotu true, pokud jste kód napsali správně. Předpokládejme například, že jste napsali dělení funkce celé číslo. Pravidly Matematika dělitel nikdy nemůže mít hodnotu nula. Může toto vyzkoušíte pomocí kontrolní výrazy:  
+ Použití <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> metoda volně k testování podmínek, které by měly mít hodnotu true, pokud váš kód je správný. Například předpokládejme, že jste napsali celé rozdělit funkce. Podle pravidel matematiky dělitel nikdy neměly být nula. Vám může otestovat pomocí kontrolní výraz:  
   
 ```VB  
 Function IntegerDivide(ByVal dividend As Integer, ByVal divisor As Integer) As Integer  
@@ -71,9 +72,9 @@ int IntegerDivide ( int dividend , int divisor )
         return ( dividend / divisor ); }  
 ```  
   
- Pokud spustíte tento kód v ladicím programu, kontrolní výraz vyhodnotí, ale ve verzi, není srovnání provedeno, je proto bez dalších zásahů.  
+ Při spuštění tohoto kódu v ladicím programu, příkazu kontrolní výraz je vyhodnocen, ale ve vydané verzi není provedeno porovnání, takže není spojena žádná další režie.  
   
- Zde je další příklad. Máte třídu, která implementuje účet kontroluje následujícím způsobem:  
+ Tady je další příklad. Máte třídu, která implementuje běžný účet následujícím způsobem:  
   
 ```VB  
 Dim amount, balance As Double  
@@ -88,7 +89,7 @@ Debug.Assert ( amount <= balance );
 savingsAccount.Withdraw ( amount );  
 ```  
   
- Předtím, než jste odstoupení peníze z účtu, budete chtít Ujistěte se, že je zůstatek účtu nepokrývají částku, kterou se připravujete na odstoupení. Kontrolní výrazy zkontrolovat zůstatek může zapsat:  
+ Před odvolat peníze z účtu, budete chtít zajistěte, aby nepokrývají hodnota, kterou se chystáte odvolat svůj zůstatek na účtu. Můžete například napsat kontrolní výraz ke kontrole zůstatek na účtu:  
   
 ```VB  
 Dim amount, balance As Double  
@@ -103,14 +104,14 @@ Trace.Assert ( amount <= balance );
 savingsAccount.Withdraw ( amount );  
 ```  
   
- Všimněte si, že volá, aby se <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> metoda zmizí při vytváření verzi vašeho kódu. To znamená, že volání, která kontroluje rovnováhu mezi zmizí ve vydané verzi. Chcete-li tento problém vyřešit, měli byste nahradit <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> s <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName>, který nezmizí ve verzi:  
+ Všimněte si, že se volá, aby <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> metoda zmizí při vytváření verze kódu. To znamená, že volání, která kontroluje zůstatek na účtu zmizí ve vydané verzi. Chcete-li tento problém vyřešit, byste měli vyměnit <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> s <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName>, který nezmizí ve vydané verzi:  
   
- Volání <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName> přidat nároky na prodejní verzi, na rozdíl od volání <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>.  
+ Volání <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName> navýšilo režii vydané verze, na rozdíl od volání <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>.  
   
  [V tomto tématu](#BKMK_In_this_topic)  
   
-##  <a name="BKMK_Side_effects_of_Debug_Assert"></a> Vedlejší efekty Debug.Assert –  
- Při použití <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>, zajistěte, aby žádný kód uvnitř `Assert` nezmění výsledky program, pokud `Assert` se odebere. Jinak hodnota může nechtěně způsobit chyby, který se zobrazí pouze ve verzi vašeho programu. Buďte opatrní hlavně o vyhodnotí, které obsahují funkce nebo procedury volání, jako například v následujícím příkladu:  
+##  <a name="BKMK_Side_effects_of_Debug_Assert"></a> Vedlejší účinky Debug.Assert –  
+ Při použití <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>, ujistěte se, že některý kód uvnitř `Assert` nezmění výsledky program, pokud `Assert` se odebere. V opačném případě může nechtěně způsobit chybu, která se zobrazí jen ve vydané verzi programu. Buďte opatrní hlavně o nepodmíněné výrazy, které obsahují funkce nebo procedury volání, jako v následujícím příkladu:  
   
 ```VB  
 ' unsafe code  
@@ -122,7 +123,7 @@ Debug.Assert (meas(i) <> 0 )
 Debug.Assert (meas(i) != 0 );  
 ```  
   
- Toto použití <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> se může objevit bezpečné na první pohled, ale Předpokládejme, že funkce meas aktualizace čítače pokaždé, když je volána. Při sestavování prodejní verze volání meas je odstraněny, takže čítač neaktualizuje. Jedná se o příklad funkce s vedlejším účinkem. Volání funkce, která má vedlejší účinky odstranění může mít za následek chybu, která se zobrazí pouze ve verzi. Chcete-li se těmto problémům, neumísťujte volání funkce v <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> příkaz. Místo toho použijte dočasnou proměnnou:  
+ Toto použití <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> může se zobrazit bezpečné na první pohled, ale Předpokládejme, že funkce meas aktualizuje čítač pokaždé, když je volána. Při sestavení prodejní verze toto volání meas je Odstraněná, takže čítače neaktualizuje. Toto je příklad funkce s vedlejším účinkem. Odstranění volání funkce, která má vedlejší účinky, může způsobit chybu, která se zobrazí jenom ve vydané verzi. Chcete-li se těmto problémům, neumísťujte volání funkcí v <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> příkazu. Místo toho použijte dočasnou proměnnou:  
   
 ```VB  
 temp = meas( i )  
@@ -134,31 +135,31 @@ temp = meas( i );
 Debug.Assert ( temp != 0 );  
 ```  
   
- I když použijete <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName>, můžete chtít stále předejde volání funkcí uvnitř `Assert` příkaz. Takové volání by měla být bezpečné, protože <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName> nejsou eliminovat příkazy v sestavení pro vydání. Je-li se vyhnout takové konstrukce jako řádu která podporují, je však méně pravděpodobné, ujistěte se, že při použití <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>.  
+ I při použití <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName>, můžete chtít stále předejde volání funkce uvnitř `Assert` příkazu. Taková volání by měl být bezpečné, protože <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName> nejsou odstraněny příkazů v sestavení pro vydání. Pokud byste se vyhnout tyto konstrukce jak aktualitách, je však méně pravděpodobné, že udělali při použití <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>.  
   
  [V tomto tématu](#BKMK_In_this_topic)  
   
-##  <a name="BKMK_Trace_and_Debug_Requirements"></a> Trasování a ladění požadavky  
- Pokud vytvoříte projekt pomocí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] průvodců symbol trasování je definována ve výchozím nastavení v konfiguracích verze a ladění. Symboly pro ladění je definována ve výchozím nastavení pouze v sestavení ladicí verze.  
+##  <a name="BKMK_Trace_and_Debug_Requirements"></a> Požadavky na ladění a trasování  
+ Pokud vytvoříte projekt používá [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] průvodců, symbol trasování je definované ve výchozím nastavení konfigurace vydání a ladění. Ve výchozím nastavení pouze v Laděném sestavení je definován symbol ladění.  
   
- Jinak pro <xref:System.Diagnostics.Trace> metod pro práci, váš program musí mít jednu z následujících v horní části zdrojového souboru:  
+ Jinak pro <xref:System.Diagnostics.Trace> metody pro práci, váš program musí mít jeden z následujících akcí v horní části zdrojového souboru:  
   
--   `#Const TRACE = True` V jazyce Visual Basic  
+- `#Const TRACE = True` V jazyce Visual Basic  
   
--   `#define TRACE` v jazyce Visual C# a C++  
+- `#define TRACE` v jazyce Visual C# a C++  
   
- Nebo váš program musí být vytvořená s možností trasování:  
+  Nebo program, musí být sestaveny s možností trasování:  
   
--   `/d:TRACE=True` V jazyce Visual Basic  
+- `/d:TRACE=True` V jazyce Visual Basic  
   
--   `/d:TRACE` v jazyce Visual C# a C++  
+- `/d:TRACE` v jazyce Visual C# a C++  
   
- Pokud potřebujete použít metody ladění sestavení C# nebo Visual Basic verze, je nutné zadat symbol ladění ve vaší verzi konfiguraci.  
+  Pokud je potřeba použít metody ladění v jazyce C# nebo Visual Basic verze sestavení, můžete ve vaší konfiguraci vydané verze, definujte symbol ladění.  
   
- C++ nepodporuje <xref:System.Diagnostics.Debug> metody třídy. Stejného efektu můžete dosáhnout pomocí <xref:System.Diagnostics.Trace> třídy s Podmíněná kompilace, jako například `#ifdef DEBUG`... `#endif`. Můžete definovat tyto symboly v  **\<Projekt > stránky vlastností** dialogové okno. Další informace najdete v tématu [Změna nastavení projektu pro konfiguraci ladění jazyka Visual Basic](../debugger/project-settings-for-a-visual-basic-debug-configuration.md) nebo [Změna nastavení projektu pro C nebo C++ ladění konfigurace](../debugger/project-settings-for-a-cpp-debug-configuration.md).  
+  Jazyk C++ nepodporuje <xref:System.Diagnostics.Debug> metody třídy. Můžete stejného výsledku dosáhnout pomocí <xref:System.Diagnostics.Trace> třídy s podmíněné kompilace, jako například `#ifdef DEBUG`... `#endif`. Můžete definovat tyto symboly v  **\<Projekt > stránky vlastností** dialogové okno. Další informace najdete v tématu [Změna nastavení projektu pro konfiguraci ladění jazyka Visual Basic](../debugger/project-settings-for-a-visual-basic-debug-configuration.md) nebo [Změna nastavení projektu pro konfiguraci ladění jazyka C++ nebo C](../debugger/project-settings-for-a-cpp-debug-configuration.md).  
   
 ##  <a name="BKMK_Assert_arguments"></a> Assert – argumenty  
- <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName> a <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> trvat až tři argumenty. První argument, který je povinný, je podmínku, kterou chcete zkontrolovat. Když zavoláte <xref:System.Diagnostics.Trace.Assert(System.Boolean)?displayProperty=fullName> nebo <xref:System.Diagnostics.Debug.Assert(System.Boolean)?displayProperty=fullName> s pouze jedním argumentem `Assert` metoda kontroluje podmínku a pokud je výsledek hodnotu false, výstupy obsah bude zásobník volání **výstup** okno. Následující příklad ukazuje <xref:System.Diagnostics.Trace.Assert(System.Boolean)?displayProperty=fullName> a <xref:System.Diagnostics.Debug.Assert(System.Boolean)?displayProperty=fullName>:  
+ <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName> a <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> trvat až tři argumenty. První argument, který je povinný, je podmínky, do kterého chcete zkontrolovat. Při volání <xref:System.Diagnostics.Trace.Assert(System.Boolean)?displayProperty=fullName> nebo <xref:System.Diagnostics.Debug.Assert(System.Boolean)?displayProperty=fullName> s pouze jedním argumentem `Assert` metoda zkontroluje podmínku a pokud je výsledek false, vypíše obsah zásobník volání a **výstup** okna. Následující příklad ukazuje <xref:System.Diagnostics.Trace.Assert(System.Boolean)?displayProperty=fullName> a <xref:System.Diagnostics.Debug.Assert(System.Boolean)?displayProperty=fullName>:  
   
 ```VB  
 Debug.Assert(stacksize > 0)  
@@ -170,7 +171,7 @@ Debug.Assert ( stacksize > 0 );
 Trace.Assert ( stacksize > 0 );   
 ```  
   
- Druhý a třetí argument, pokud existuje, musí být řetězce. Když zavoláte <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName> nebo <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> se dva nebo tři argumenty s prvním argumentem je podmínku. Metoda kontroluje podmínku a pokud je výsledek hodnotu false, výstupy řetězec druhý a třetí řetězce. Následující příklad ukazuje <xref:System.Diagnostics.Debug.Assert(System.Boolean,System.String)?displayProperty=fullName> a <xref:System.Diagnostics.Trace.Assert(System.Boolean,System.String)?displayProperty=fullName> použít s dva argumenty:  
+ Druhý a třetí argument, pokud jsou k dispozici, musí být řetězce. Při volání <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName> nebo <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> dvou nebo tří argumentů je první argument podmínku. Metoda zkontroluje podmínku a pokud je výsledek false, vypíše řetězec druhého a třetího řetězce. Následující příklad ukazuje <xref:System.Diagnostics.Debug.Assert(System.Boolean,System.String)?displayProperty=fullName> a <xref:System.Diagnostics.Trace.Assert(System.Boolean,System.String)?displayProperty=fullName> použita se dvěma argumenty:  
   
 ```VB  
 Debug.Assert(stacksize > 0, "Out of stack space")  
@@ -198,20 +199,20 @@ Trace.Assert ( stacksize > 0, "Out of stack space", "Failed in inctemp" );
  [V tomto tématu](#BKMK_In_this_topic)  
   
 ##  <a name="BKMK_Customizing_Assert_behavior"></a> Přizpůsobení chování Assert  
- Pokud spustíte aplikaci v režimu uživatelského rozhraní `Assert` metoda zobrazí **kontrolní výraz** dialogové okno když podmínky selhání. Akce, které dojít, když selže kontrolní výrazy jsou řízeny <xref:System.Diagnostics.Debug.Listeners%2A> nebo <xref:System.Diagnostics.Trace.Listeners%2A> vlastnost.  
+ Pokud spustíte svou aplikaci v režimu uživatelského rozhraní `Assert` metoda zobrazí **chyba kontrolního výrazu** dialogové okno když podmínky selhání. Akce, které dojde k selhání kontrolní výraz se řídí <xref:System.Diagnostics.Debug.Listeners%2A> nebo <xref:System.Diagnostics.Trace.Listeners%2A> vlastnost.  
   
- Výstup chování můžete přizpůsobit přidáním <xref:System.Diagnostics.TraceListener> do objektu `Listeners` kolekce odebráním <xref:System.Diagnostics.TraceListener> z `Listeners` kolekce, nebo přepsáním <xref:System.Diagnostics.TraceListener.Fail%2A?displayProperty=fullName> metoda existujícího `TraceListener` Chcete-li chovat jinak.  
+ Můžete přizpůsobit chování výstup tak, že přidáte <xref:System.Diagnostics.TraceListener> objektu `Listeners` kolekce tak, že odeberete <xref:System.Diagnostics.TraceListener> z `Listeners` kolekce, nebo tak, že přepíšete <xref:System.Diagnostics.TraceListener.Fail%2A?displayProperty=fullName> metoda existujícího `TraceListener` k němu chovat jinak.  
   
- Například může přepsat <xref:System.Diagnostics.TraceListener.Fail%2A?displayProperty=fullName> metoda k zápisu do protokolu událostí místo **kontrolní výraz** dialogové okno.  
+ Je třeba přepsat <xref:System.Diagnostics.TraceListener.Fail%2A?displayProperty=fullName> metody zapsat do protokolu událostí místo **chyba kontrolního výrazu** dialogové okno.  
   
- Chcete-li přizpůsobit výstup tímto způsobem, váš program musí obsahovat naslouchací proces a musí dědit z <xref:System.Diagnostics.TraceListener> a přepsat její <xref:System.Diagnostics.TraceListener.Fail%2A?displayProperty=fullName> metoda.  
+ Přizpůsobení výstup tímto způsobem, váš program musí obsahovat naslouchací proces a musí dědit z <xref:System.Diagnostics.TraceListener> a přepsat její <xref:System.Diagnostics.TraceListener.Fail%2A?displayProperty=fullName> metody.  
   
- Další informace najdete v tématu [trasování – moduly naslouchání](/dotnet/framework/debug-trace-profile/trace-listeners).  
+ Další informace najdete v tématu [naslouchacích procesů trasování](/dotnet/framework/debug-trace-profile/trace-listeners).  
   
  [V tomto tématu](#BKMK_In_this_topic)  
   
 ##  <a name="BKMK_Setting_assertions_in_configuration_files"></a> Kontrolní výrazy nastavení v konfiguračních souborech  
- Kontrolní výrazy v konfiguračním souboru aplikace také můžete nastavit jako váš kód. Další informace naleznete v tématech <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName> a <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>.  
+ Kontrolní výrazy můžete nastavit v konfiguračním souboru aplikace stejně jako v kódu. Další informace naleznete v tématech <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName> a <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>.  
   
 ## <a name="see-also"></a>Viz také  
  <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>   

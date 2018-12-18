@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Přizpůsobení předdefinované karty | Microsoft Docs'
+title: 'Postupy: Přizpůsobení předdefinované karty'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,11 +16,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1343ee966d63b0ddc74bf1e18cbbe8bd6d476a0b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 30b4af116df218f3f778b9efa1e295fbadbad86a
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35257264"
 ---
 # <a name="how-to-customize-a-built-in-tab"></a>Postupy: Přizpůsobení předdefinované karty
   Můžete přidat skupiny a ovládací prvky pro předdefinované karty. Předdefinované karta je karta, která je již na pásu karet z aplikace Microsoft Office. Například **Data** karta je předdefinované karty v aplikaci Excel. Při vytváření vlastních skupin, zobrazí se poslední na kartě, ale skupině můžete přesunout kdekoli na kartě.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 04/16/2018
   
      ID ovládacího prvku je název, který jednoznačně identifikuje karty, skupiny a ovládací prvky, které jsou součástí aplikace Microsoft Office.  
   
-     Seznam ID ovládacích prvků, naleznete v části [soubory nápovědy Office 2010: Office Fluent uživatelské rozhraní ovládacího prvku identifikátory](http://go.microsoft.com/fwlink/?LinkID=181052).  
+     Seznam ID ovládacích prvků, naleznete v části [soubory nápovědy Office 2010: Office fluent uživatelské rozhraní ovládacího prvku identifikátory](http://go.microsoft.com/fwlink/?LinkID=181052).  
   
 5.  Z **ovládacích prvků pásu karet Office** kartě **sada nástrojů**, přetáhněte skupiny na kartě.  
   
@@ -66,9 +67,9 @@ ms.lasthandoff: 04/16/2018
   
 4.  Nastavte **OfficeId** na ID ovládacího prvku předdefinované skupiny.  
   
-     Seznam ID ovládacích prvků, naleznete v části [soubory nápovědy Office 2010: Office Fluent uživatelské rozhraní ovládacího prvku identifikátory](http://go.microsoft.com/fwlink/?LinkID=181052).  
+     Seznam ID ovládacích prvků, naleznete v části [soubory nápovědy Office 2010: Office fluent uživatelské rozhraní ovládacího prvku identifikátory](http://go.microsoft.com/fwlink/?LinkID=181052).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Přehled pásu karet](../vsto/ribbon-overview.md)   
  [Návrhář pásu karet](../vsto/ribbon-designer.md)   
  [Kódu XML pásu karet](../vsto/ribbon-xml.md)   
@@ -77,6 +78,6 @@ ms.lasthandoff: 04/16/2018
  [Postupy: Začínáme s přizpůsobením pásu karet](../vsto/how-to-get-started-customizing-the-ribbon.md)   
  [Postupy: Změna polohy karty na pásu karet](../vsto/how-to-change-the-position-of-a-tab-on-the-ribbon.md)   
  [Postupy: Přidání ovládacích prvků do zobrazení Backstage](../vsto/how-to-add-controls-to-the-backstage-view.md)   
- [Postupy: Zobrazení chyb uživatelského rozhraní doplňku](../vsto/how-to-show-add-in-user-interface-errors.md)  
+ [Postupy: zobrazení Add-in chyby uživatelského rozhraní](../vsto/how-to-show-add-in-user-interface-errors.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Funkce SccGetEvents | Microsoft Docs
+title: Sccgetevents – funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 79e517d87acd61eafcd2eb0a12f5a8978912db81
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 981b3c9b0a03abfa13fedc7c62e77f02a425b248
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49896988"
 ---
-# <a name="sccgetevents-function"></a>SccGetEvents – funkce
-Tato funkce načte událostí ve frontě stavu.  
+# <a name="sccgetevents-function"></a>Sccgetevents – funkce
+Tato funkce načítá události ve frontě stav.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,33 +36,33 @@ SCCRTN SccGetEvents (
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  pvContext  
- [v] Struktura modulu plug-in kontextu řízení zdroje.  
+ [in] Struktura kontext modulu plug-in zdroje ovládacího prvku.  
   
  lpFileName  
- [ve out] Vyrovnávací paměť, kde modul plug-in zdrojového kódu vloží název vráceného souboru (maximálně _max_path – znaků).  
+ [out v] Vyrovnávací paměti, kde modul plug-in správy zdrojového kódu vloží název vrácený souboru (maximálně _MAX_PATH znaků).  
   
  lpStatus  
- [ve out] Vrátí stavový kód (viz [souboru stavový kód](../extensibility/file-status-code-enumerator.md) pro možné hodnoty).  
+ [out v] Vrátí stavový kód (viz [souboru stavový kód](../extensibility/file-status-code-enumerator.md) možných hodnot).  
   
  pnEventsRemaining  
- [ve out] Vrátí počet položek ponecháno ve frontě po toto volání. Pokud toto číslo velká, volající rozhodnout pro volání [SccQueryInfo](../extensibility/sccqueryinfo-function.md) získání všech informací o najednou.  
+ [out v] Vrátí počet položek vlevo ve frontě po tomto volání. Pokud toto číslo je velká, volající může rozhodnout pro volání [sccqueryinfo –](../extensibility/sccqueryinfo-function.md) získat všechny informace o najednou.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Očekává se, že modul plug-in implementace zdroje řízení této funkce vrátí jednu z následujících hodnot:  
+ Modul plug-in implementaci ovládacího prvku zdroje této funkce má vracet instanci jednoho z následujících hodnot:  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
-|SCC_OK|Získání událostí bylo úspěšné.|  
+|SCC_OK|Získáte události bylo úspěšné.|  
 |SCC_E_OPNOTSUPPORTED|Tato funkce není podporována.|  
-|SCC_E_NONSPECIFICERROR|Došlo k nespecifikované chybě.|  
+|SCC_E_NONSPECIFICERROR|K nespecifikované chybě.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato funkce je volána při nečinnosti zpracování zobrazíte, zda nedošlo k žádné aktualizací stavu pro soubory ve správě zdrojového kódu. Modul plug-in správy zdroje udržuje stav všechny soubory, které bude vědět o a při každé změně stavu je uvedeno pomocí modulu plug-in, stav a přidružený soubor jsou uložené ve frontě. Když `SccGetEvents` nazývá horní prvek fronty je načíst a vrácena. Tato funkce je omezená na vrací pouze informace uložené v mezipaměti a musí mít velmi rychlost (tedy bez čtení disku nebo žádostí o stav správy zdrojového kódu); v opačném případě může snižovat spustit výkon rozhraní IDE.  
+ Tato funkce je volána při nečinnosti zpracování zobrazíte, pokud byly všechny aktualizace stavu souborů pod správou zdrojových kódů. Modul plug-in správy zdrojového kódu udržuje všechny soubory, které ví o stavu a pokaždé, když změny stavu je třeba poznamenat, pomocí modulu plug-in, stav a přidružený soubor jsou uložené ve frontě. Když `SccGetEvents` nazývá horní prvek fronty se načte a vrátí. Tato funkce je omezen na vrací pouze informace uložené v mezipaměti a musí mít velmi rychlé vyřízení (to znamená bez čtení disku nebo systém správy zdrojového kódu s žádostí o stav); jinak výkonu rozhraní IDE může začít snížit.  
   
- Pokud není žádná aktualizace stavu do sestavy, modul plug-in správy zdroje ukládá do vyrovnávací paměti, na kterou odkazuje prázdný řetězec `lpFileName`. Modul plug-in, jinak hodnota ukládá úplnou cestu souboru pro které informace o stavu došlo ke změně a vrátí odpovídající stavový kód (jedna z hodnot podrobně [souboru stavový kód](../extensibility/file-status-code-enumerator.md)).  
+ Pokud není žádná aktualizace stavu do sestavy, modul plug-in správy zdrojového kódu ukládá prázdný řetězec ve vyrovnávací paměti, na které odkazuje `lpFileName`. V opačném případě modul plug-in ukládá úplnou cestu název souboru pro které informace o stavu se změní a vrátí odpovídající stavový kód (jedna z hodnot, které jsou podrobně popsané v [souboru stavový kód](../extensibility/file-status-code-enumerator.md)).  
   
-## <a name="see-also"></a>Viz také  
- [Funkce modulu Plug-in rozhraní API ovládacího prvku zdroje](../extensibility/source-control-plug-in-api-functions.md)   
- [Soubor stavový kód](../extensibility/file-status-code-enumerator.md)
+## <a name="see-also"></a>Viz také:  
+ [Funkce modulu plug-in API zdrojového ovládacího prvku](../extensibility/source-control-plug-in-api-functions.md)   
+ [Kód stavu souboru](../extensibility/file-status-code-enumerator.md)

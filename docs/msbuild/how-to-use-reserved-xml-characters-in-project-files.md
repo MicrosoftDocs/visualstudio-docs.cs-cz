@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: použití vyhrazených znaků XML v souborech projektu | Microsoft Docs'
+title: 'Postupy: použití vyhrazených znaků XML v souborech projektu | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -13,36 +13,37 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8538ffdb1093accc8446d072ecc980586b73ee7b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 647dba94840383410d06f6e5bf96ec3b0146c394
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39077656"
 ---
-# <a name="how-to-use-reserved-xml-characters-in-project-files"></a>Postupy: Použití vyhrazených znaků XML v souborech projektu
-Při vytváření soubory projektu, musíte může používat vyhrazené znaky jazyka XML, například v hodnotách vlastnosti nebo ve hodnoty parametrů úloh. Ale některé vyhrazené znaky musí nahradit odpovídajícími pojmenované entit, tak, aby soubor projektu lze analyzovat.  
+# <a name="how-to-use-reserved-xml-characters-in-project-files"></a>Postupy: použití vyhrazených znaků XML v souborech projektu
+Při vytváření souborů projektu, můžete potřebovat použít vyhrazené znaky jazyka XML, třeba v hodnotách vlastnosti nebo hodnoty parametrů úloh. Nicméně některé znaky vyhrazené musí nahradit odpovídajícími pojmenovaná entita, tak, aby soubor projektu může být analyzován.  
   
-## <a name="using-reserved-characters"></a>Pomocí vyhrazené znaky  
- Následující tabulka popisuje vyhrazené znaky jazyka XML, které se musí nahradit odpovídajícími odpovídající entita s názvem, aby soubor projektu lze analyzovat.  
+## <a name="use-reserved-characters"></a>Použití vyhrazených znaků  
+ Následující tabulka popisuje vyhrazených znaků jazyka XML, které se musí nahradit odpovídajícími odpovídající pojmenovaná entita tak, aby soubor projektu může být analyzován.  
   
-|Vyhrazený znak|Pojmenované entity|  
+|Vyhrazené znaky|Pojmenovaná entita|  
 |------------------------|------------------|  
 |\<|&amp;lt;|  
 |>|&amp;gt;|  
 |&|&amp;amp;|  
-|"|&amp;Automatické formátování výše.|  
-|'|&amp;APOS;|  
+|"|&amp;quot;|  
+|'|&amp;Očekávaný|  
   
-#### <a name="to-use-double-quotes-in-a-project-file"></a>Použití dvojité uvozovky v souboru projektu  
+#### <a name="to-use-double-quotes-in-a-project-file"></a>Použití dvojitých uvozovek v souboru projektu  
   
--   Nahraďte odpovídající s názvem entity, dvojité uvozovky &amp;potřebná;. Například umístit dvojité uvozovky kolem `EXEFile` seznamu položek, zadejte:  
+-   Nahraďte odpovídající entity s názvem dvojité uvozovky &amp;quot;. Například umístit dvojitých uvozovek `EXEFile` seznam položek, zadejte:  
   
     ```xml  
     <Message Text="The output file is &quot;@(EXEFile)&quot;."/>  
     ```  
   
 ## <a name="example"></a>Příklad  
- V následujícím příkladu kódu používají dvojité uvozovky zvýrazněte název souboru ve zprávě, která je výstupní soubor projektu.  
+ V následujícím příkladu kódu dvojité uvozovky jsou používány zvýrazněte název souboru ve zprávě, která je výstupní soubor projektu.  
   
 ```xml  
 <Project DefaultTargets="Compile"  
@@ -71,6 +72,6 @@ Při vytváření soubory projektu, musíte může používat vyhrazené znaky j
 </Project>  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [MSBuild – Reference](../msbuild/msbuild-reference.md)    
+## <a name="see-also"></a>Viz také:  
+ [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)    
  [MSBuild](../msbuild/msbuild.md)    

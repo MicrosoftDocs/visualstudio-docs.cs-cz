@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsymbolsbyaddr::symbolbyaddr – | Microsoft Docs
+title: Idiaenumsymbolsbyaddr::symbolbyaddr – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 159c6fcc65734255f5303ee267a1368078f7af10
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: d15901ac321a1a5d60db6e989b24c314bcd211b5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49844819"
 ---
 # <a name="idiaenumsymbolsbyaddrsymbolbyaddr"></a>IDiaEnumSymbolsByAddr::symbolByAddr
-Umisťuje enumerátor provedením vyhledávání číslo oddílu bitové kopie a posun.  
+Pozice výčtu pomocí provádí vyhledávání podle obrázku číslo oddílu a posun.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,16 +36,16 @@ HRESULT symbolByAddr (
   
 #### <a name="parameters"></a>Parametry  
  isect  
- [v] Číslo oddílu bitové kopie.  
+ [in] Číslo části obrázku.  
   
  offsect  
- [v] Posun v oddílu.  
+ [in] Posun v oddílu.  
   
  ppsymbol  
- [out] Vrátí [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objektu, který představuje symbol nalezen.  
+ [out] Vrátí [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objekt představující symbol nalezen.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE` Pokud je symbol nebyl nalezen. Jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud symbol se nenašel. V opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [Idiaenumsymbolsbyaddr –](../../debugger/debug-interface-access/idiaenumsymbolsbyaddr.md)   

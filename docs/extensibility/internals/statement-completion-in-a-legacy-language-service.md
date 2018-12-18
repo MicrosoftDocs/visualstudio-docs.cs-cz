@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131324"
 ---
 # <a name="statement-completion-in-a-legacy-language-service"></a>Dokončování příkazů ve službě jazyk starší verze
 Dokončování příkazů je proces, pomocí kterého služba jazyka pomáhá uživatelům dokončit klíčové slovo jazyka nebo element, který zahájil zadáním v editoru jádra. Toto téma popisuje, jak dokončování funguje a jak implementovat ve službě jazyk.  

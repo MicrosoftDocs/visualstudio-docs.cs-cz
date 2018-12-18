@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: baf4edeb67d9c1c66ce6e6542b9684b29a8c358b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 6005bfcd4c69220c26929a8ad57f0e37923f388c
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34265498"
 ---
-# <a name="callercallee-view---net-memory-instrumentation-data"></a>Zobrazení volající/volaný – Data instrumentace paměti NET
+# <a name="callercallee-view---net-memory-instrumentation-data"></a>Zobrazení volající/volaný – instrumentace paměti .NET Data
 Zobrazení volající/volaný paměti .NET profilace data, která nebyla shromážděna pomocí metody instrumentace zobrazí přidělení a dat časování pro vybrané funkce a funkce nadřazených a podřízených jeho vybrané funkce. Zobrazení volající/volaný obsahuje tři mřížky.  
   
  **Funkci Current** se zobrazí v mřížce střední a zobrazuje informace o vybrané funkce profilace sledováním využívání paměti. Hodnoty zahrnují u všech vybraných volání funkce.  
@@ -106,6 +107,6 @@ Zobrazení volající/volaný paměti .NET profilace data, která nebyla shromá
   
 ## <a name="see-also"></a>Viz také  
  [Postupy: přizpůsobení sloupců zobrazení sestavy](../profiling/how-to-customize-report-view-columns.md)   
- [Zobrazení volající/volaný – Data vzorkování paměti .NET](../profiling/caller-callee-view-dotnet-memory-sampling-data.md)   
- [Zobrazení volající/volaný – Data instrumentace](../profiling/caller-callee-view-instrumentation-data.md)   
- [Volající / volaný – zobrazení – Data vzorkování](../profiling/caller-callee-view-sampling-data.md)
+ [Zobrazení volající/volaný – data vzorkování paměti .NET](../profiling/caller-callee-view-dotnet-memory-sampling-data.md)   
+ [Zobrazení volající/volaný – data instrumentace](../profiling/caller-callee-view-instrumentation-data.md)   
+ [Zobrazení volající/volaný – vzorkování dat](../profiling/caller-callee-view-sampling-data.md)

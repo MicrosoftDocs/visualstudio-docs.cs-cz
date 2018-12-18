@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31133242"
 ---
 # <a name="test-area-2-get-from-source-control"></a>Oblasti test 2: Získání od správy zdrojového kódu
 Tato oblast testovací zahrnuje testovacích případů pro načítání položky z úložiště verzí pomocí příkazu Get. Tyto testovacích případů lze použít pro obě místní a webové projekty.  

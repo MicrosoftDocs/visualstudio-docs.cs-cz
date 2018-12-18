@@ -1,9 +1,8 @@
 ---
-title: 'Postupy: vytvoření a úprava konfigurací | Microsoft Docs'
-ms.custom: ''
+title: 'Postupy: vytvoření a úprava konfigurací'
 ms.date: 06/21/2017
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-compile
 ms.topic: conceptual
 helpviewer_keywords:
 - solution build configurations, editing
@@ -21,108 +20,112 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 97d30f421f7c893410e563b89fd7a33fe539f141
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 2d3f6b271eb6b9b663e30953fa597fb7d8cec6ac
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51348523"
 ---
 # <a name="how-to-create-and-edit-configurations"></a>Postupy: vytvoření a úprava konfigurací
-Můžete vytvořit několik konfigurace sestavení řešení. Například můžete nakonfigurovat sestavení ladicí verze, která vaše testery vám pomůže najít a opravit problémy, a můžete nakonfigurovat různé druhy sestavení, které můžete distribuovat do různých zákazníků.  
 
- [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
-
-## <a name="create-build-configurations"></a>Vytvoření konfigurace sestavení  
-
-Můžete použít **nástroje Configuration Manager** dialogové okno Vybrat nebo upravit existující konfigurace sestavení nebo vytvořit nové.  
-
-Otevřete **nástroje Configuration Manager** dialogu **Průzkumníku řešení**, otevřete místní nabídku pro řešení a zvolte **nástroje Configuration Manager**.  
+Můžete vytvořit několik konfigurací sestavení řešení. Například můžete nakonfigurovat sestavení pro ladění, testerům můžete najít a opravit problémy, a můžete nakonfigurovat různé druhy sestavení, které můžete distribuovat do různých zákazníků.
 
 > [!NOTE]
-> Pokud **nástroje Configuration Manager** příkaz se nezobrazí v místní nabídce, vyhledejte v části **sestavení** nabídky v řádku nabídek. Pokud se nezobrazí existuje buď v řádku nabídek zvolte **nástroje** > **možnosti**a potom v levém podokně **možnosti** dialogové okno, rozbalte seznam **Projekty a řešení** > **Obecné**a v pravém podokně, vyberte **zobrazit Rozšířená konfigurace sestavení** zaškrtávací políčko.  
+> Toto téma se vztahuje k sadě Visual Studio ve Windows. Visual Studio pro Mac, najdete v části [vytvoření a úprava konfigurací v sadě Visual Studio pro Mac](/visualstudio/mac/create-and-edit-configurations).
 
-V **nástroje Configuration Manager** dialogové okno, můžete použít **aktivní konfigurace řešení** rozevíracího seznamu vyberte položku konfigurace sestavení řešení celou, upravit existující nebo vytvořit nový konfigurace. Můžete použít **platforma Active řešení** rozevíracího seznamu vyberte platformu, konfigurace cílí upravit existující, nebo přidat nové platformě. **Projektu kontexty** podokně zobrazí projekty v řešení. Pro každý projekt můžete vyberte platformu a konfigurace specifické pro projekt, upravit existující, nebo vytvořit novou konfiguraci nebo přidat nové platformě. Můžete také vybrat políček, která označuje, zda každý projekt zahrnuty při použití konfigurace celé řešení k sestavení nebo nasazení řešení.  
+## <a name="create-build-configurations"></a>Vytvoření konfigurace sestavení
 
- Po nastavení konfigurace, které chcete, můžete nastavit vlastnosti projektu, které jsou vhodné pro tyto konfigurace.  
+Můžete použít **nástroje Configuration Manager** dialogové okno Vybrat nebo změnit existující konfiguraci sestavení nebo vytvářet nové kategorie.
 
-### <a name="to-set-properties-based-on-configurations"></a>Nastavení vlastností na základě konfigurací  
+Otevřete **nástroje Configuration Manager** v dialogu **Průzkumníka řešení**, otevřete místní nabídku řešení a klikněte na tlačítko **nástroje Configuration Manager**.
 
--   V **Průzkumníku řešení**, otevřete místní nabídky pro projekt a zvolte **vlastnosti**.  
+> [!NOTE]
+> Pokud **nástroje Configuration Manager** příkaz nezobrazí v místní nabídce vyhledejte v části **sestavení** nabídky na řádku nabídek. Pokud tam není, na panelu nabídek zvolte **nástroje** > **možnosti**a potom v levém podokně **možnosti** dialogového okna rozbalte **Projekty a řešení** > **Obecné**a v pravém podokně, vyberte **zobrazit pokročilé konfigurace sestavení** zaškrtávací políčko.
 
-     **Stránky vlastností** otevře se okno.  
+V **nástroje Configuration Manager** dialogové okno, můžete použít **konfigurace aktivního řešení** rozevíracího seznamu vyberte konfiguraci sestavení celého řešení, upravit existující nebo vytvořte nový konfigurace. Můžete použít **platformou aktivního řešení** rozevírací seznam a vyberte platformu, že konfigurace cíle, upravte nějaký existující, nebo přidat novou platformu. **Projektu kontexty** podokně je seznam projektů v řešení. Pro každý projekt můžete vybrat konfigurace specifické pro projekt a platformy, upravte stávající, nebo vytvořit novou konfiguraci nebo přidat novou platformu. Můžete také vybrat zaškrtávací políčka, která udává, jestli je každý projekt zahrnuty při konfiguraci celé řešení použijete k vytvoření buildu nebo nasazení řešení.
 
-     Nastavení vlastností pro vaše konfigurace. Například pro konfiguraci vydání, můžete zadat, když je integrované řešení, a pro konfiguraci ladění, můžete určit, že je optimalizovaný kód `DEBUG` symbol Podmíněná kompilace je součástí. Další informace o nastavení vlastnosti stránky najdete v tématu [spravovat vlastnosti projektu a řešení](../ide/managing-project-and-solution-properties.md).  
+ Po nastavení konfigurace, které chcete, můžete nastavit vlastnosti projektu, které jsou vhodné pro tuto konfiguraci.
 
-## <a name="create-and-modify-project-configurations"></a>Vytvoření a změna konfigurace projektu  
+### <a name="to-set-properties-based-on-configurations"></a>Chcete-li nastavit vlastnosti konfigurace
 
-### <a name="to-create-a-project-configuration"></a>Pro vytvoření konfigurace projektu  
+-   V **Průzkumníka řešení**, otevřete místní nabídku pro projekt a klikněte na tlačítko **vlastnosti**.
 
-1.  Otevřete **nástroje Configuration Manager** dialogové okno.  
+     **Stránky vlastností** otevře se okno.
 
-2.  Vyberte projekt v **projektu** sloupce.  
+     Můžete nastavit vlastnosti pro konkrétní konfiguraci. Například pro konfiguraci vydané verze, můžete zadat, že je kód zoptimalizovaný při řešení je sestaveno a pro konfiguraci ladění, můžete určit, že `DEBUG` symbol podmíněné kompilace je součástí. Další informace o nastavení stránky vlastností naleznete v tématu [spravovat vlastnosti projektu a řešení](../ide/managing-project-and-solution-properties.md).
 
-3.  V **konfigurace** rozevíracího seznamu pro tento projekt, vyberte **nový**.  
+## <a name="create-and-modify-project-configurations"></a>Vytvoření a změny konfigurace projektu
 
-     **Novou konfiguraci projektu** otevře se dialogové okno.  
+### <a name="to-create-a-project-configuration"></a>Pro vytvoření konfigurace projektu
 
-4.  V **název** pole, zadejte název pro novou konfiguraci.  
+1.  Otevřít **nástroje Configuration Manager** dialogové okno.
 
-5.  Pro použití s nastavením vlastnosti z existující konfigurace projektu, v **Kopírovat nastavení z** rozevíracího seznamu, vyberte takovou konfiguraci.  
+2.  Vyberte projekt v **projektu** sloupce.
 
-6.  Chcete-li vytvořit řešení celou konfiguraci ve stejnou dobu, vyberte **vytvořit novou konfiguraci řešení** zaškrtávací políčko.  
+3.  V **konfigurace** rozevíracího seznamu pro daný projekt, zvolte **nový**.
 
-### <a name="to-rename-a-project-configuration"></a>Chcete-li přejmenovat konfigurace projektu  
+     **Nové konfigurace projektu** zobrazí se dialogové okno.
 
-1.  Otevřete **nástroje Configuration Manager** dialogové okno.  
+4.  V **název** pole, zadejte název pro novou konfiguraci.
 
-2.  V **projektu** sloupce, vyberte projekt, který má projektu konfiguraci, kterou chcete přejmenovat.  
+5.  Používané k nastavení vlastností z existující konfigurace projektu, **Kopírovat nastavení z:** rozevíracím seznamu klikněte na položku konfigurace.
 
-3.  V **konfigurace** rozevíracího seznamu pro tento projekt, vyberte **upravit**.  
+6.  Chcete-li vytvořit konfiguraci celé řešení ve stejnou dobu, vyberte **vytvořit nová konfigurace řešení** zaškrtávací políčko.
 
-     **Upravit konfigurace projektu** otevře se dialogové okno.  
+### <a name="to-rename-a-project-configuration"></a>Chcete-li přejmenovat konfigurace projektu
 
-4.  Vyberte název konfigurace projektu, který chcete změnit.  
+1.  Otevřít **nástroje Configuration Manager** dialogové okno.
 
-5.  Vyberte **přejmenovat**a pak zadejte nový název.  
+2.  V **projektu** sloupce, vyberte projekt, který obsahuje konfiguraci projektu, kterou chcete přejmenovat.
 
-## <a name="create-and-modify-solution-wide-build-configurations"></a>Vytvoření a změna konfigurace sestavení řešení celou  
+3.  V **konfigurace** rozevíracího seznamu pro daný projekt, zvolte **upravit**.
 
-### <a name="to-create-a-solution-wide-build-configuration"></a>Pro vytvoření konfigurace sestavení řešení celou  
+     **Upravit konfigurace projektu** zobrazí se dialogové okno.
 
-1.  Otevřete **nástroje Configuration Manager** dialogové okno.  
+4.  Vyberte název konfigurace projektu, který chcete změnit.
 
-2.  V **aktivní konfigurace řešení** rozevíracího seznamu vyberte **nový**.  
+5.  Vyberte **přejmenovat**a pak zadejte nový název.
 
-     **Novou konfiguraci řešení** otevře se dialogové okno.  
+## <a name="create-and-modify-solution-wide-build-configurations"></a>Vytvoření a úprava konfigurací sestavení celé řešení
 
-3.  V **název** textové pole, zadejte název pro novou konfiguraci.  
+### <a name="to-create-a-solution-wide-build-configuration"></a>Chcete-li vytvořit řešení celou konfiguraci sestavení
 
-4.  Chcete použít nastavení z existující konfigurace řešení, v **Kopírovat nastavení z** rozevíracího seznamu, vyberte takovou konfiguraci.  
+1.  Otevřít **nástroje Configuration Manager** dialogové okno.
 
-5.  Pokud chcete vytvořit konfigurace projektu ve stejnou dobu, vyberte **vytvořit nové konfigurace projektu** zaškrtávací políčko.  
+2.  V **konfigurace aktivního řešení** rozevíracím seznamu klikněte na položku **nový**.
 
-### <a name="to-rename-a-solution-wide-build-configuration"></a>Chcete-li přejmenovat řešení celé konfigurace sestavení  
+     **Nová konfigurace řešení** zobrazí se dialogové okno.
 
-1.  Otevřete **nástroje Configuration Manager** dialogové okno.  
+3.  V **název** textové pole, zadejte název pro novou konfiguraci.
 
-2.  V **aktivní konfigurace řešení** rozevíracího seznamu vyberte **upravit**.  
+4.  Chcete-li použít nastavení z existující konfigurace řešení, v **Kopírovat nastavení z:** rozevíracím seznamu klikněte na položku konfigurace.
 
-     **Upravit konfigurace řešení** otevře se dialogové okno.  
+5.  Pokud chcete vytvořit konfigurace projektu ve stejnou dobu, vyberte **vytvořit nové konfigurace projektu** zaškrtávací políčko.
 
-3.  Vyberte název konfigurace řešení, které chcete změnit.  
+### <a name="to-rename-a-solution-wide-build-configuration"></a>Přejmenování řešení celou konfiguraci sestavení
 
-4.  Vyberte **přejmenovat**a pak zadejte nový název.  
+1.  Otevřít **nástroje Configuration Manager** dialogové okno.
 
-### <a name="to-modify-a-solution-wide-build-configuration"></a>Ke změně konfigurace sestavení řešení celou  
+2.  V **konfigurace aktivního řešení** rozevíracím seznamu klikněte na položku **upravit**.
 
-1.  Otevřete **nástroje Configuration Manager** dialogové okno.  
+     **Upravit konfiguraci řešení** zobrazí se dialogové okno.
 
-2.  V **aktivní konfigurace řešení** rozevíracího seznamu vyberte konfigurace, kterou chcete.  
+3.  Vyberte název konfigurace řešení, které chcete změnit.
 
-3.  V **projektu kontexty** podokně, pro každý projekt, vyberte **konfigurace** a **platformy** a vyberte ohledně **sestavení**ho a zda má být **nasadit** ho.
+4.  Vyberte **přejmenovat**a pak zadejte nový název.
 
-## <a name="see-also"></a>Viz také  
- [Pochopení konfigurace sestavení](../ide/understanding-build-configurations.md)   
- [Sestavení a čištění projektů a řešení v sadě Visual Studio](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)   
- [Správa vlastností projektů a řešení](managing-project-and-solution-properties.md)
+### <a name="to-modify-a-solution-wide-build-configuration"></a>Chcete-li změnit konfiguraci sestavení celé řešení
 
+1.  Otevřít **nástroje Configuration Manager** dialogové okno.
+
+2.  V **konfigurace aktivního řešení** rozevíracího seznamu vyberte konfigurace, kterou chcete.
+
+3.  V **projektu kontexty** podokno pro každý projekt, vyberte **konfigurace** a **platformy** a vyberte, jestli se má **sestavení**ho a zda má být **nasadit** ho.
+
+## <a name="see-also"></a>Viz také:
+
+- [Principy konfigurací sestavení](../ide/understanding-build-configurations.md)
+- [Sestavení a vyčištění projektů a řešení v sadě Visual Studio](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)
+- [Správa vlastností projektu a řešení](managing-project-and-solution-properties.md)
+- [Vytvoření a úprava konfigurací (Visual Studio for Mac)](/visualstudio/mac/create-and-edit-configurations)

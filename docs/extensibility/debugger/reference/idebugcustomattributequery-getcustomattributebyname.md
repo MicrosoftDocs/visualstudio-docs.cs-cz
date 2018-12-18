@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttributeQuery::GetCustomAttributeByName | Microsoft Docs
+title: IDebugCustomAttributeQuery::GetCustomAttributeByName | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5e452b0e1ab6de862723cfdc36f7b7226a01d676
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4e7872b7d697d0989f0efb9985a8b1b253a27322
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49854608"
 ---
 # <a name="idebugcustomattributequerygetcustomattributebyname"></a>IDebugCustomAttributeQuery::GetCustomAttributeByName
-Načte vlastní atribut její název.  
+Načte vlastní atribut jeho název.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,16 +44,16 @@ int GetCustomAttributeByName(
   
 #### <a name="parameters"></a>Parametry  
  `pszCustomAttributeName`  
- [v] Název vlastního atributu.  
+ [in] Název vlastního atributu.  
   
  `ppBlob`  
- [ve out] Pole bajtů, které obsahují data, vlastních atributů.  
+ [out v] Pole bajtů, které obsahují data vlastního atributu.  
   
  `pdwLen`  
- [out] Délka v bajtech `ppBlob` parametr.  
+ [out] Délka v bajtech `ppBlob` parametru.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`. Pokud vlastní atribut neexistuje, vrátí `S_FALSE`. Jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`. Pokud vlastní atribut neexistuje, vrátí `S_FALSE`. V opačném případě vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugClassFieldSymbol** objekt, který zveřejňuje [IDebugCustomAttributeQuery](../../../extensibility/debugger/reference/idebugcustomattributequery.md) rozhraní.  

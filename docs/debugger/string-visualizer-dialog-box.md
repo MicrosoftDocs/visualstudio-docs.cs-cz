@@ -1,7 +1,7 @@
 ---
-title: Zobrazit řetězce v vizualizéru řetězce | Microsoft Docs
+title: Zobrazit řetězců ve vizualizéru řetězce | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 07/11/2017
+ms.date: 10/10/2018
 ms.technology: vs-ide-debug
 ms.topic: reference
 f1_keywords:
@@ -22,48 +22,52 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a3a0575b02422bf83dd560d3eae5724b0a50d3f3
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: eb447a29ea669dbea3a68312884760f8984cc2de
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52388553"
 ---
-# <a name="view-strings-in-a-string-visualizer-in-visual-studio"></a>Zobrazení řetězců v vizualizéru řetězce v sadě Visual Studio
-Při ladění, můžete otevřít vizualizéru řetězce na řetězce zobrazení, které jsou příliš dlouhé zobrazíte v okně data tip nebo ladicí program. V mnoha případech vizualizér můžete identifikovat poškozený řetězce.
+# <a name="view-strings-in-a-string-visualizer-in-visual-studio"></a>Zobrazení řetězců ve vizualizéru řetězce v sadě Visual Studio
 
-Standardní předdefinovaný řetězec vizualizérech obsahovat prostý text, XML, HTML a JSON. Pro několik typů například WPF objekty, které se zobrazují v ladicím programu windows, jako **automobily** okno, můžete také otevřít vizualizérech.
+Při ladění v sadě Visual Studio, můžete zobrazit řetězce pomocí vizualizéru integrované řetězec. Vizualizér řetězce zobrazí řetězce, které jsou příliš dlouhé pro okno datový tip nebo ladicí program. Může také pomoct identifikovat poškozený řetězce.
+
+Vizualizér integrované řetězec obsahuje prostý text, XML, HTML a JSON možnosti. Vizualizéry pro několik jiných typů, jako je například WPF objektů lze také otevřít z **automatické hodnoty** nebo dalších oknech ladicího programu.
 
 ## <a name="open-a-string-visualizer"></a>Otevřete vizualizéru řetězce
 
-Chcete-li zobrazit prostý text, XML, HTML nebo JSON řetězec, klikněte na ikonu lupy ![VisualizerIcon](../debugger/media/dbg-tips-visualizer-icon.png "vizualizér ikonu") při ukazatele myši na proměnné obsahující hodnotu řetězce. Je nutné v ladicím programu zobrazíte ikonu lupy pozastavena.
+Otevřete vizualizéru řetězce, musí být pozastaveno během ladění. Podržte ukazatel myši nad proměnnou, která obsahuje prostý text, XML, HTML nebo JSON řetězcová hodnota a vyberte ikonu lupy ![VisualizerIcon](../debugger/media/dbg-tips-visualizer-icon.png "Vizualizéru ikonu").
 
-![Otevřete Vizualizéru řetězce](../debugger/media/dbg-tips-string-visualizers.png "OpenStringVisualizer")
+![Otevřete vizualizéru řetězce](../debugger/media/dbg-tips-string-visualizers.png "řetězec pro otevření vizualizéru")
 
-## <a name="view-string-data"></a>Zobrazení dat řetězců
+## <a name="view-string-visualizer-data"></a>Zobrazení data vizualizéru řetězce
 
-**Výraz** pole v vizualizér řetězce zobrazuje aktuální proměnná nebo při přechodu myší nad výrazu v ladicím programu.
+V okně vizualizéru řetězce **výraz** poli se zobrazí proměnné nebo výrazu najedete, a **hodnotu** pole zobrazí hodnotu řetězce.
 
-**Hodnotu** poli se zobrazí hodnotu řetězce. Vizualizér Text zobrazuje prostý text.
+Prázdnou hodnotu **hodnotu** znamená, že nemůže rozpoznat zvolené vizualizéru řetězce. Například **XML vizualizér** zobrazí prázdnou hodnotu **hodnotu** pro textový řetězec s žádné značky XML nebo řetězec formátu JSON.
 
-Prázdné **hodnota** označuje, že konkrétní vizualizér nemůže rozpoznat typ řetězec. Vizualizér XML příkladu prázdné **hodnotu** pro řetězec ve formátu jednoduchého textového řetězce (s žádné značky XML) nebo JSON. Pokud potřebujete zobrazit řetězec nelze rozpoznat v vizualizéru, použijte vizualizér text.
+K zobrazení řetězce, které nemůže rozpoznat zvolené vizualizéru, zvolte **Vizualizátor textu**. **Vizualizátor textu** zobrazuje prostý text.
 
-### <a name="view-json-string-data"></a>Zobrazení dat řetězce formátu JSON
+### <a name="view-json-string-data"></a>Data řetězce JSON zobrazení
 
-Zobrazí podobně jako na následujícím obrázku v vizualizér JSON ve správném formátu řetězce formátu JSON. Nesprávný formát JSON se může zobrazovat ikona chyby (nebo při nerozpoznaný prázdný).
+Podobně jako na následujícím obrázku v JSON visualizér se zobrazí řetězec JSON ve správném formátu. Nesprávný formát JSON se může zobrazit ikona chyby (nebo prázdné, pokud nebyl rozpoznán). K identifikaci chyby JSON, zkopírujte a vložte řetězec do nástroje linting JSON, jako [JSLint](https://www.jslint.com/).
 
-![Vizualizér řetězce JSON](../debugger/media/dbg-tips-string-visualizer-json.png "vizualizér řetězce formátu JSON")
+![Vizualizér řetězce JSON](../debugger/media/dbg-tips-string-visualizer-json.png "vizualizéru řetězce JSON")
 
-### <a name="view-xml-string-data"></a>Zobrazení dat řetězců XML
+### <a name="view-xml-string-data"></a>Zobrazení dat řetězec XML
 
-Řetězec XML ve správném formátu se zobrazí podobná na následujícím obrázku v vizualizér XML. Poškozený obsah XML může zobrazit bez značky XML (nebo při nerozpoznaný prázdný).
+Podobně jako na následujícím obrázku ve vizualizátoru XML se zobrazí řetězec XML ve správném formátu. Pokud nebyl rozpoznán se může zobrazit nesprávně vytvořeným kódem XML bez značek XML nebo prázdný.
 
-![Vizualizér řetězce XML](../debugger/media/dbg-string-visualizers-xml.png "vizualizér řetězce XML")
+![XML vizualizér řetězce](../debugger/media/dbg-string-visualizers-xml.png "XML vizualizér řetězce")
 
-### <a name="view-html-string-data"></a>Zobrazení HTML řetězcových dat.
+### <a name="view-html-string-data"></a>Data řetězce zobrazení HTML
 
-Podobně jako zobrazení, že zobrazí se pokud řetězec je vykreslen v prohlížeči, jak je znázorněno na následujícím obrázku se zobrazí ve správném formátu řetězec HTML. Chybná HTML může zobrazit jako prostý text.
+Zobrazí se ve správném formátu řetězec ve formátu HTML jakoby vykreslení v prohlížeči, jak je znázorněno na následujícím obrázku. Poškozená HTML se může zobrazit jako prostý text.
 
-![Řetězec HTML vizualizér](../debugger/media/dbg-string-visualizers-html.png "vizualizér řetězec HTML")
+![HTML vizualizér řetězce](../debugger/media/dbg-string-visualizers-html.png "HTML vizualizér řetězce")
 
-## <a name="see-also"></a>Viz také  
- [Vytvořit vlastní Vizualizérech (C#, Visual Basic)](../debugger/create-custom-visualizers-of-data.md)
+## <a name="see-also"></a>Viz také:
+
+- [Vytváření vlastních vizualizérů (C#, Visual Basic)](../debugger/create-custom-visualizers-of-data.md)
+- [Vizualizace dat v sadě Visual Studio pro Mac](/visualstudio/mac/data-visualizations)

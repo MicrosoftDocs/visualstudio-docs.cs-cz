@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131121"
 ---
 # <a name="project-persistence"></a>Trvalost projektu
 Trvalost je potřeba zvážit důležité pro váš projekt. Většina projektů pomocí položky projektu, které představují soubory; [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] také podporuje projekty, jejichž data jsou nezaložené souboru. Oba soubory vlastněné projekt a soubor projektu musí nastavit jako trvalý. Prostředí IDE dá pokyn projekt uložit sám sebe nebo položka projektu.  

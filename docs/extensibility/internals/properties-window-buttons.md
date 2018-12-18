@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130700"
 ---
 # <a name="properties-window-buttons"></a>Tlačítka Vlastnosti – okno
 V závislosti na vývoj jazyk a typ produktu, zobrazí se určité tlačítka na panelu nástrojů pro ve výchozím nastavení **vlastnosti** okno. Ve všech případech **Categorized**, **Alphabetized**, **vlastnosti**, a **stránky vlastností** tlačítka se zobrazí. V jazyce Visual C# a Visual Basic **události** tlačítko se zobrazí také. V některých projektech Visual C++ **VC ++ zprávy** a **přepsání VC** tlačítka se zobrazí. Může se zobrazit další tlačítka pro jiné typy projektů. Další informace o tlačítka v **vlastnosti** okně najdete v části [vlastnosti – okno](../../ide/reference/properties-window.md).  

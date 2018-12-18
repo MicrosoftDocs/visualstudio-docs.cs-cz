@@ -1,6 +1,7 @@
 ---
-title: Jak používat testovací Google jazyka C++ v sadě Visual Studio | Microsoft Docs
+title: Jak používat Google Test pro C++
 ms.date: 11/04/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: mblome
@@ -8,51 +9,42 @@ manager: douge
 ms.workload:
 - cplusplus
 author: mikeblome
-ms.openlocfilehash: d525a9aae0f376ada2cbb48b2ac07acbb21f436c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 704d842aaf3ea5e3075939e4d52b042a4128b810
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53060388"
 ---
-# <a name="how-to-use-google-test-for-c-in-visual-studio"></a>Jak používat testovací Google jazyka C++ v sadě Visual Studio
-V **Visual Studio 2017 verze 15,5** a novější, je Google Test integrována do prostředí Visual Studio IDE jako součást výchozí **Develoment plochy s jazykem C++** zatížení. Pokud chcete ověřit, že je nainstalovaný na počítači, spusťte instalační program Visual Studio a najděte Google Test v seznamu součástí úlohy:
+# <a name="how-to-use-google-test-for-c-in-visual-studio"></a>Jak používat Google Test pro C++ v sadě Visual Studio
+V **Visual Studio 2017 verze 15.5** a později, Google Test je integrována do integrovaného vývojového prostředí sady Visual Studio jako součást výchozí **Desktop Development with C++** pracovního vytížení. Pokud chcete ověřit, jestli je nainstalovaný na počítači, otevřete instalační program sady Visual Studio a vyhledejte Google Test v seznamu součástí úlohy:
 
-![Nainstalujte Google Test](media/cpp-google-component.png "nainstalovat Google Test pro C++")
+![Instalovat Google Test](media/cpp-google-component.png)
 
-## <a name="add-a-google-test-project-to-the-solution"></a>Do řešení přidat testovacího projektu Google
-1. V **Průzkumníku řešení**, klikněte pravým tlačítkem na uzel řešení a zvolte **přidat | Nový projekt**.
-2. V levém podokně vyberte **Visual C++ | Test** a potom zvolte **testovacího projektu Google** v prostředním podokně.
-3. Zadejte název testovacího projektu a klikněte na tlačítko **OK**.
+## <a name="add-a-google-test-project-to-the-solution"></a>Přidat do řešení projektu Google Test
+1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na uzel řešení a zvolte **přidat** > **nový projekt**.
+2. V levém podokně vyberte **Visual C++** > **testovací** a klikněte na tlačítko **projektu Google Test** v prostředním podokně.
+3. Pojmenujte testovací projekt a klikněte na tlačítko **OK**.
 
-![Nový projekt Test Google](media/cpp-gtest-new-project.png "přidat nový projekt Test Google")
+![Nového projektu Google Test](media/cpp-gtest-new-project.png)
 
 ## <a name="configure-the-test-project"></a>Konfigurace testovacího projektu
-V **testovací konfigurace projektu** dialog, který se zobrazí, můžete zvolit projektu, kterou chcete otestovat. Když zvolíte projektu, Visual Studio přidá odkaz na vybranou projekt. Pokud si zvolíte žádný projekt, budete muset ručně přidáte odkazy na projekty, které chcete otestovat. Při výběru mezi statickým a dynamickým propojení s testovací Google binární soubory, jaké jsou požadavky jsou stejné jako pro žádné program C++. Další informace najdete v tématu [knihovny DLL v jazyce Visual C++](/cpp/build/dlls-in-visual-cpp).
+V **testovací konfigurace projektu** zobrazeném dialogovém okně můžete nastavit projekt, kterou potřebujete otestovat. Když vyberete projekt, Visual Studio přidá odkaz na vybraný projekt. Pokud se rozhodnete žádný projekt, je třeba ručně přidat odkazy na projekty, které chcete testovat. Při volbě mezi statickým a dynamickým propojení binárních souborů Google testu, jaké jsou požadavky jsou stejné jako u každého programu C++. Další informace najdete v tématu [knihovny DLL v jazyce Visual C++](/cpp/build/dlls-in-visual-cpp).
 
- ![Konfigurace projektu Google Test](media/cpp-gtest-config.png "konfigurace projektu Google testu")
+ ![Konfigurace projektu Google Test](media/cpp-gtest-config.png)
 
-## <a name="set-additional-options"></a>Další možnosti pro sadu
-Z hlavní nabídky zvolte **nástroje | Možnosti | Testování adaptéru pro Google Test** můžete nastavit další možnosti. Najdete v dokumentaci Google testovací Další informace o těchto nastavení.
+## <a name="set-additional-options"></a>Nastavit další možnosti
+V hlavní nabídce zvolte **nástroje** > **možnosti** > **testovací adaptér pro Google Test** můžete nastavit další možnosti. Viz dokumentace ke službě Google Test pro další informace o těchto nastaveních.
 
- ![Nastavení projektu Google Test](media/cpp-gtest-settings.png "nastavení testovacího projektu Google")
+ ![Nastavení projektu Google Test](media/cpp-gtest-settings.png)
 
-## <a name="add-include-directives"></a>Přidání direktivy začlenění
-Testovací soubor, přidejte všechny potřeby `#include` direktivy chcete zviditelnit vašeho programu typy a funkce pro testovací kód. Tento program je obvykle jednu úroveň v hierarchii složek. Pokud zadáte `#include "../"` okno technologie IntelliSense se zobrazí a umožňuje vybrat úplnou cestu k souboru záhlaví.
+## <a name="add-include-directives"></a>Přidání direktiv
+V testu *.cpp* přidejte všechny potřebné `#include` direktivy zviditelnit typy a funkce vaší aplikace k testovacímu kódu. Program je obvykle nahoru o jednu úroveň v hierarchii složek. Pokud zadáte `#include "../"` okno technologie IntelliSense se zobrazí a vám umožní vybrat úplná cesta k souboru hlaviček.
 
-![Přidat # direktivy include](media/cpp-gtest-includes.png "přidat zahrnují direktivy pro test souboru")
+![Přidejte #include](media/cpp-gtest-includes.png)
 
-## <a name="write-and-run-tests"></a>Zápis a spouštění testů
-Nyní jste připraveni k zápisu a testy Google. Najdete v článku [Úvod do testovací Google](https://github.com/google/googletest/blob/master/googletest/docs/Primer.md) informace o testovací makra. V tématu [spouštění testů jednotek pomocí Průzkumníka testů](run-unit-tests-with-test-explorer.md) informace o zjišťování, spuštění a seskupení testů pomocí **Průzkumníka testů**.
+## <a name="write-and-run-tests"></a>Psání a spouštění testů
+Nyní jste připraveni pro zápis a spouštění testů Google. Najdete v článku [Úvod do Google Test](https://github.com/google/googletest/blob/master/googletest/docs/primer.md) informace o makra testu. Zobrazit [spouštění testů jednotek pomocí Průzkumníka testů](run-unit-tests-with-test-explorer.md) informace o zjišťování, spouštění a seskupení testů s použitím **Průzkumník testů**.
 
-## <a name="see-also"></a>Viz také
-[Zápis testů částí pro C/C++](writing-unit-tests-for-c-cpp.md)
-
-
-
-
-
-
-
-
-
-
+## <a name="see-also"></a>Viz také:
+[Zápis testů jednotek pro C/C++](writing-unit-tests-for-c-cpp.md)

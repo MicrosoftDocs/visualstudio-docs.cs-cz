@@ -1,5 +1,5 @@
 ---
-title: Rozšíření projektů | Microsoft Docs
+title: Rozšíření projektů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,42 +14,41 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bdfa33417002b58e1c1c9718637438cb1210b5af
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a914afada4422364db043582be43658cf494b9c0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49864670"
 ---
-# <a name="extending-projects"></a>Rozšíření projektů
-Projekty a řešení způsoby sadě Visual Studio uspořádává soubory kódu a prostředků do jednotky kompilace a nasazení. Můžete najít další informace o projekty v [projekty (Visual Studio SDK)](../extensibility/extending-projects.md).  
+# <a name="extend-projects"></a>Rozšíření projektů
+Projekty a řešení se způsoby, kterými Visual Studio slouží k uspořádání kódu a zdrojové soubory do jednotek pro kompilaci a nasazení. Můžete najít další informace o projektech v [projekty (Visual Studio SDK)](../extensibility/extending-projects.md).  
   
- Můžete vytvořit vlastní typy projektů Visual Studio SDK a spravované rozhraní balíčku pro projekty, které si můžete stáhnout na [spravované rozhraní balíčku pro projekty](http://mpfproj12.codeplex.com/). Porozumět způsobu provádění vlastní projektů, najdete v [nové generace projektu: pod pokličkou, jednu část](../extensibility/internals/new-project-generation-under-the-hood-part-one.md) a [nové generace projektu: pod pokličkou, část dvě](../extensibility/internals/new-project-generation-under-the-hood-part-two.md).  
+ Můžete vytvořit vlastní typy projektů pomocí Visual Studio SDK a rozhraní Managed Package Framework pro projekty, které si můžete stáhnout na [Managed Package Framework pro projekty](https://github.com/tunnelvisionlabs/MPFProj10). Chcete-li pochopit způsob, jakým jsou implementovány vlastní projekty, naleznete v tématu [nová generace projektů: pod pokličkou, část 1](../extensibility/internals/new-project-generation-under-the-hood-part-one.md) a [nová generace projektů: pod pokličkou, část 2](../extensibility/internals/new-project-generation-under-the-hood-part-two.md).  
   
- Témata v této části popisují, jak k vytváření vlastních projektů a jak spravovat různé typy řešení sady Visual Studio.  
+ Témata v této části popisují, jak vytvořit vlastní projekty a ke správě různých typů řešení sady Visual Studio.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Vytvoření systému základního projektu, část 1](../extensibility/creating-a-basic-project-system-part-1.md)  
- Popisuje, jak vytvořit vlastní projekt systému.  
+ Popisuje, jak vytvořit vlastní projektový systém.  
   
  [Vytvoření systému základního projektu, část 2](../extensibility/creating-a-basic-project-system-part-2.md)  
- Popisuje, jak vytvořit vlastní projekt systému.  
+ Popisuje, jak vytvořit vlastní projektový systém.  
   
  [Ukládání dat v souborech projektu](../extensibility/saving-data-in-project-files.md)  
- Vysvětluje, jak přidat do projektu (. * proj) soubory.  
+ Vysvětluje, jak přidat do projektu (<em>.</em> Proj *) soubory.  
   
  [Ověření podtypů projektu za běhu](../extensibility/verifying-subtypes-of-a-project-at-run-time.md)  
- Vysvětluje, jak ověřit dílčí projektu v době běhu.  
+ Vysvětluje, jak ověřit podtyp projektu za běhu.  
   
- [Přidávání a odebírání stránek vlastností](../extensibility/adding-and-removing-property-pages.md)  
- Vysvětluje, jak přizpůsobit stránky vlastností projektu vlastní.  
+ [Přidávat a odebírat stránky vlastností](../extensibility/adding-and-removing-property-pages.md)  
+ Vysvětluje, jak přizpůsobit stránky vlastností pro svůj vlastní projekt.  
   
  [Přidání atributu do položky projektu](../extensibility/adding-an-attribute-to-a-project-item.md)  
- Vysvětluje, jak přidat atribut položku vlastních projektů.  
+ Popisuje postup přidání atributu do položky projektu vlastní.  
   
- [Trvalé uložení vlastnosti položky projektu](../extensibility/persisting-the-property-of-a-project-item.md)  
- Vysvětluje, jak se zachovat vlastnosti položky vlastních projektů.  
+ [Zachovat vlastnosti položky projektu](../extensibility/persisting-the-property-of-a-project-item.md)  
+ Vysvětluje, jak zachovat vlastnosti položky projektu vlastní.  
   
- [Správa projektů univerzálních aplikací pro Windows](../extensibility/managing-universal-windows-projects.md)  
+ [Spravovat projekty pro universal Windows](../extensibility/managing-universal-windows-projects.md)  
  Vysvětluje, jak spravovat projekty universal.  
-  
-## <a name="related-sections"></a>Související oddíly

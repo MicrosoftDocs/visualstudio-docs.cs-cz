@@ -18,11 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 86e8a11f55edd2f7a04498b81ec6b8713876f718
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 4924f38bf893bc17a599802d9962d664da01c26d
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35254521"
 ---
 # <a name="process-view"></a>Zobrazení procesů
 Zobrazení procesů zobrazí data profilování pro procesy a vláken, které byly provedeny během spuštění profilování.  
@@ -41,7 +42,7 @@ Zobrazení procesů zobrazí data profilování pro procesy a vláken, které by
 |**Počáteční čas**|Počet milisekund nebo cyklů procesoru od začátku profilace na začátek procesu nebo přístup z více vláken.|  
 |**Koncový čas**|Počet milisekund nebo cyklů procesoru od začátku profilace na konci procesu nebo přístup z více vláken.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Zobrazení dat metody vzorkování](../profiling/profiler-sampling-method-data-views.md)   
  [Zobrazení dat metody instrumentace](../profiling/instrumentation-method-data-views.md)   
  [Zobrazení dat paměti .NET](../profiling/dotnet-memory-data-views.md)

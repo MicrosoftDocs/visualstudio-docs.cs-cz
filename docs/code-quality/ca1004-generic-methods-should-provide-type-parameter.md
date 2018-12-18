@@ -1,6 +1,7 @@
 ---
 title: 'CA1004: Obecné metody by měly poskytnout parametr typu'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,15 +14,20 @@ ms.assetid: 38755f6a-fb45-4bf2-932e-0354ad826499
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: f867b31dc743ee82e7d5e176bc2bb4a6590a60cc
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b282545d04c82efb44ed87d21ddf66ee73ab77af
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45550931"
 ---
 # <a name="ca1004-generic-methods-should-provide-type-parameter"></a>CA1004: Obecné metody by měly poskytnout parametr typu
+
 |||
 |-|-|
 |TypeName|GenericMethodsShouldProvideTypeParameter|
@@ -30,19 +36,19 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Parametr podpis externě viditelné obecná metoda neobsahuje typy, které odpovídají k parametrům typ metody.
+ Předpis parametrů Obecné externě viditelná metoda obsahuje typy, které odpovídají všechny parametry typu metody.
 
 ## <a name="rule-description"></a>Popis pravidla
- Argument typu obecné metody je z argumentu typu předávaného metodě odvozen namísto explicitního určení argumentu typu. Má-li být odvozování povoleno, musí předpis parametrů obecné metody zahrnovat parametr stejného typu jako parametr typu metody. V tomto případě nemusí být argument typu zadán. Pokud používáte odvození pro všechny parametry typu, je stejný jako syntaxi pro volání metod obecné a neobecné instance. Tato funkce zjednodušuje použitelnost obecné metody.
+ Argument typu obecné metody je z argumentu typu předávaného metodě odvozen namísto explicitního určení argumentu typu. Má-li být odvozování povoleno, musí předpis parametrů obecné metody zahrnovat parametr stejného typu jako parametr typu metody. V tomto případě nemusí být argument typu zadán. Při použití odvození pro všechny parametry typu, je syntaxe volání obecných a neobecných metod je stejný jako. To zjednodušuje použití obecných metod.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Opravit porušení toto pravidlo, změňte návrh tak, aby parametr podpis obsahuje stejného typu pro každý typ parametru metody.
+ Chcete-li opravit porušení tohoto pravidla, změňte návrh tak, aby předpis parametrů obsahuje stejný typ pro každý parametr typu metody.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Nepotlačujte upozornění na toto pravidlo. Poskytuje obecné typy v syntaxi, který se snadno pochopit a používat zkracuje čas, který je potřeba další a zvyšuje počet přijetí nové knihovny.
+ Nepotlačujte upozornění na toto pravidlo. Poskytuje obecné typy v syntaxi, která je snadno pochopitelný a snižuje čas, který je potřeba další informace a zvýší frekvence přijetí nové knihovny.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje syntaxi pro volání dvě obecné metody. Argument typu pro `InferredTypeArgument` je odvodit a typ argumentu pro `NotInferredTypeArgument` musí být explicitně určena.
+ Následující příklad ukazuje syntaxi pro volání dvě obecné metody. Argument typu pro `InferredTypeArgument` odvozuje a argument typu pro `NotInferredTypeArgument` musí být explicitně určena.
 
  [!code-vb[FxCop.Design.Inference#1](../code-quality/codesnippet/VisualBasic/ca1004-generic-methods-should-provide-type-parameter_1.vb)]
  [!code-csharp[FxCop.Design.Inference#1](../code-quality/codesnippet/CSharp/ca1004-generic-methods-should-provide-type-parameter_1.cs)]
@@ -62,5 +68,5 @@ ms.lasthandoff: 04/19/2018
 
  [CA1007: Použijte obecné typy, kde je to vhodné](../code-quality/ca1007-use-generics-where-appropriate.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
  [Obecné typy](/dotnet/csharp/programming-guide/generics/index)

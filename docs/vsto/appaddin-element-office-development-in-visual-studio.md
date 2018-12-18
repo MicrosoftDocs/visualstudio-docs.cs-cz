@@ -1,32 +1,34 @@
 ---
-title: '&lt;appAddin&gt; – Element (vývoj pro Office v sadě Visual Studio) | Microsoft Docs'
+title: '&lt;appAddin&gt; – element (vývoj pro Office v sadě Visual Studio)'
+titleSuffix: ''
 ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
+ms.technology: office-development
+ms.prod: visual-studio-dev15
 ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
 helpviewer_keywords:
 - application manifests [Office development in Visual Studio], <appAddin> element
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9def97d044af74f02a2064703691333ec9f176aa
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3160f153bb6775cf5b2541abf4f75069c818f82b
+ms.sourcegitcommit: 20c0991d737c540750c613c380cd4cf5bb07de51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53248069"
 ---
-# <a name="ltappaddingt-element-office-development-in-visual-studio"></a>&lt;appAddin&gt; – Element (vývoj pro Office v sadě Visual Studio)
-  `appAddin` Element `vstov4` obor názvů ukládá informace specifické pro vlastní nastavení pro doplňky VSTO.  
+# <a name="ltappaddingt-element-office-development-in-visual-studio"></a>&lt;appAddin&gt; – element (vývoj pro Office v sadě Visual Studio)
+  **AppAddin** elementu `vstov4` obor názvů ukládá informace specifické pro přizpůsobení pro doplňky VSTO.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```xml 
 <appAddin  
   application  
   loadBehavior  
@@ -38,35 +40,35 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ## <a name="elements-and-attributes"></a>Elementy a atributy  
- `appAddin` Element je povinná a je v `vstov4` oboru názvů. Existuje pouze jeden `appAddin` element definovaný v manifestu aplikace.  
+ **AppAddin** element je povinný a je v `vstov4` oboru názvů. Existuje pouze jeden **appAddin** element definovaný v manifestu aplikace.  
   
- `appAddin` Element má následující atributy.  
+ **AppAddin** element má následující atributy.  
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|`application`|Požadováno. Identifikuje aplikaci Microsoft Office. Hodnota může být jeden z následujících: Excel, InfoPath, Outlook, PowerPoint, Project, Visio nebo Word.|  
-|`loadBehavior`|Volitelné. Ve výchozím nastavení `loadBehavior` zapnutá nastavením této hodnoty na. Pro ladění, doplňku VSTO lze zakázat pomocí nastavení hodnoty na dva. Další informace najdete v tabulce s názvem LoadBehavior – hodnoty v [položky registru pro doplňky VSTO](../vsto/registry-entries-for-vsto-add-ins.md).|  
-|`keyName`|Požadováno. Tato hodnota je název klíče registru, který se použije k načtení doplňku VSTO v aplikaci. Další informace najdete v tématu [položky registru pro doplňky VSTO](../vsto/registry-entries-for-vsto-add-ins.md).|  
+|**Aplikace**|Povinný parametr. Identifikuje aplikaci Microsoft Office. Hodnota může být jeden z následujících akcí: Aplikace Excel, InfoPath, Outlook, PowerPoint, projekt, Visia nebo Word.|  
+|**LoadBehavior**|Volitelné. Ve výchozím nastavení **loadBehavior** se povoluje nastavením této hodnoty. Pro ladění doplňku VSTO lze zakázat nastavením této hodnoty na dva. Další informace najdete v tabulce s názvem hodnotách LoadBehavior v [položky registru pro doplňky VSTO](../vsto/registry-entries-for-vsto-add-ins.md).|  
+|**Název klíče**|Povinný parametr. Tato hodnota je název klíče registru, který se použije k načtení doplňku VSTO aplikací. Další informace najdete v tématu [položky registru pro doplňky VSTO](../vsto/registry-entries-for-vsto-add-ins.md).|  
   
- `appAddin` Element má následující podřízené prvky.  
+ **AppAddin** element má následující podřízené prvky.  
   
 ### <a name="friendlyname"></a>FriendlyName  
- Volitelné. `friendlyName` Element je vysvětleno v [ &#60;friendlyName&#62; Element &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/friendlyname-element-office-development-in-visual-studio.md).  
+ Volitelné. **FriendlyName** element je podrobně [ &#60;friendlyName&#62; element &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/friendlyname-element-office-development-in-visual-studio.md).  
   
 ### <a name="description"></a>description  
- Volitelné. `description` Element je vysvětleno v [ &#60;popis&#62; Element &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/description-element-office-development-in-visual-studio.md).  
+ Volitelné. **Popis** element je podrobně [ &#60;popis&#62; element &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/description-element-office-development-in-visual-studio.md).  
   
 ### <a name="formregions"></a>formregions –  
- Vyžaduje se jenom pro aplikaci Outlook doplňků VSTO obsahující oblasti formulářů. `formRegions` Element je vysvětleno v [ &#60;formregions –&#62; Element &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/formregions-element-office-development-in-visual-studio.md).  
+ Vyžaduje se jenom pro aplikaci Outlook doplňků VSTO, které zahrnují oblasti formuláře. **FormRegions** element je podrobně [ &#60;formRegions&#62; element &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/formregions-element-office-development-in-visual-studio.md).  
   
 ## <a name="vsto-add-in-example"></a>Příklad doplňku VSTO  
   
 ### <a name="description"></a>Popis  
- Následující příklad kódu ukazuje `appAddin` prvky v aplikaci Outlook řešení nasadit pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]. Tento příklad kódu je součástí většího příkladu vztahujícího se v [manifesty aplikací pro řešení Office](../vsto/application-manifests-for-office-solutions.md).  
+ Následující příklad kódu ukazuje **appAddin** prvky v aplikaci Outlook řešení nasazeným v rámci [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]. Tento příklad kódu je součástí většího příkladu určeného v [manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).  
   
 ### <a name="code"></a>Kód  
   
-```  
+```xml  
 <vstov4:appAddIn   
   application="Outlook"   
   loadBehavior="3"   
@@ -89,9 +91,9 @@ ms.lasthandoff: 04/16/2018
 </vstov4:appAddIn>  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Manifesty aplikace pro řešení pro systém Office](../vsto/application-manifests-for-office-solutions.md)   
- [Manifesty nasazení pro řešení Office](../vsto/deployment-manifests-for-office-solutions.md)   
- [ClickOnce – manifest aplikace ](/visualstudio/deployment/clickonce-application-manifest)  
+ [Manifesty nasazení pro řešení pro systém Office](../vsto/deployment-manifests-for-office-solutions.md)   
+ [ClickOnce – manifest aplikace](/visualstudio/deployment/clickonce-application-manifest)  
   
   

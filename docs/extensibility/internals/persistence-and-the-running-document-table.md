@@ -21,6 +21,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31129732"
 ---
 # <a name="persistence-and-the-running-document-table"></a>Trvalosti a tabulce dokument spuštěná
 V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE, projekty jsou zcela zodpovědní za správu trvalost jejich položky projektu, které se toho dosáhnout pomocí služby, <xref:Microsoft.VisualStudio.Shell.Interop.SVsRunningDocumentTable>. Dokumenty jsou základní jednotkou trvalost v prostředí Visual Studio. Projekty koordinovat otevření, uložení a přejmenování dokumentů s spuštěné tabulce dokumentu r. (..), na prostředek, který sleduje stav všechny otevřené dokumenty.  

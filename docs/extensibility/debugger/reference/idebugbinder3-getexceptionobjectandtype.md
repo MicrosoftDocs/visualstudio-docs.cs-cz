@@ -1,5 +1,5 @@
 ---
-title: IDebugBinder3::GetExceptionObjectAndType | Microsoft Docs
+title: IDebugBinder3::GetExceptionObjectAndType | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 519281487e85ec7dffc0e7bb470d044dc2bae885
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 61f82cdeda76cd8660fff47e30edf37c81d154f5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49867790"
 ---
 # <a name="idebugbinder3getexceptionobjectandtype"></a>IDebugBinder3::GetExceptionObjectAndType
-Tato metoda načte výjimka přidružená k objektu, pokud existuje.  
+Tato metoda načte výjimky přidružené k objektu, pokud existuje.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,13 +46,13 @@ int GetExceptionObjectAndType(
  [out] Vrátí objekt představující výjimku.  
   
  `ppField`  
- [out] Vrátí objekt představující konkrétní pole, které může způsobit výjimku (to může mít hodnotu null).  
+ [out] Vrátí objekt představující konkrétní pole, které mohou způsobit výjimku (to může mít hodnotu null).  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 > [!NOTE]
->  Chcete-li ověřit, zda dojde k výjimce, zkontrolujte hodnoty vrácené `ppException`: Pokud je hodnota null, pak tento objekt přidružen žádná výjimka.  
+>  Pokud chcete ověřit, zda dojde k výjimce, zkontrolujte hodnoty vrácené `ppException`: Pokud je hodnota null, pak tento objekt přidružen žádná výjimka.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md)

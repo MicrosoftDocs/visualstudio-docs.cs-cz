@@ -1,5 +1,5 @@
 ---
-title: Tlačítka Element | Microsoft Docs
+title: Tlačítka prvku | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a89d40d1f9c9a994269045dd674a533a0bcd32c7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f6ce3deedd14707943a93387dcec0a73b8471339
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49904892"
 ---
-# <a name="buttons-element"></a>Element tlačítka
-Skupiny [tlačítko](../extensibility/button-element.md) elementy, které představují jednotlivé příkazy.  
+# <a name="buttons-element"></a>Buttons – element
+Skupiny [tlačítko](../extensibility/button-element.md) prvky, které představují jednotlivé příkazy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,16 +40,16 @@ Skupiny [tlačítko](../extensibility/button-element.md) elementy, které předs
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|Podmínka|Volitelné. V tématu [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
+|Podmínka|Volitelné. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
   
-### <a name="child-elements"></a>Podřízené elementy  
+### <a name="child-elements"></a>Podřízené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|[Buttons – element](../extensibility/buttons-element.md)|Tlačítko prvky skupiny.|  
-|[Button – element](../extensibility/button-element.md)|Definuje příkaz, který může uživatel zasahovat.|  
+|[Buttons – element](../extensibility/buttons-element.md)|Seskupí elementy tlačítko.|  
+|[Element přepínače](../extensibility/button-element.md)|Definuje příkaz, který může uživatel zasahovat.|  
   
-### <a name="parent-elements"></a>Nadřazené elementy  
+### <a name="parent-elements"></a>Nadřazené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
@@ -68,6 +69,6 @@ Skupiny [tlačítko](../extensibility/button-element.md) elementy, které předs
 </Buttons>  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [Jak přidat VSPackages prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
+## <a name="see-also"></a>Viz také:  
+ [Jak balíčky VSPackages přidávají prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
  [Příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md)

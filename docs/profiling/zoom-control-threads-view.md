@@ -14,23 +14,24 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d9a0392e13c74f36b3a9d30610cc101d3c078f9
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 85297c32274eb3b6573f536be15d621a60b95921
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34447879"
 ---
-# <a name="zoom-control-threads-view"></a>Ovládací prvek Lupa (Zobrazení vláken)
+# <a name="zoom-control-threads-view"></a>Ovládací prvek Lupa (zobrazení vláken)
 Ovládací prvek Lupa je jezdce, který vám umožní přiblížení a oddálení na časové ose tak, aby se můžete soustředit na oblasti zvláštní zájem. Vzhledem k tomu, že tento ovládací prvek zvětší středu zobrazení časové osy, center před zvětšení oblasti, které vás zajímají.  
   
-## <a name="zooming-in-by-dragging-in-the-timeline-view"></a>Přiblížení a oddálení tak, že přetáhnete v zobrazení časové osy  
+## <a name="zoom-in-by-dragging-in-the-timeline-view"></a>Přiblížit přetažením v zobrazení časové osy  
  Přiblížení a oddálení tak, že přetáhnete v zobrazení časové osy vytvoří oblast, který je označený žlutě. Po uvolnění tlačítka myši se zobrazení časové osy zvětší vybraný rozsah.  
   
-## <a name="zooming-in-and-out-by-using-the-mouse-wheel"></a>Přibližování a odhlašování pomocí kolečka myši  
- Klikněte na libovolného bodu na časové ose (k zajištění, že je zaměřen myš) a stiskněte klávesu CTRL a přesunout kolečka myši (dopředného přiblíží; zpětné částí fotografií out).  
+## <a name="zoom-in-and-out-by-using-the-mouse-wheel"></a>Přiblížení a oddálení použít kolečko myši  
+ Klikněte na libovolného bodu na časové ose (k zajištění fokusem myš) a potom stiskněte klávesu **Ctrl** a přesuňte kolečka myši (dopředného přiblíží; zpětné částí fotografií out).  
   
 ## <a name="see-also"></a>Viz také  
  [Správa kanálů](../profiling/manage-channels.md)   
- [Zapnutí nebo vypnutí režimu míry](../profiling/measure-mode-on-off.md)   
+ [Režimu míry zapnout nebo vypnout](../profiling/measure-mode-on-off.md)   
  [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)   
  [Navigátor využití](../profiling/utilization-navigator.md)

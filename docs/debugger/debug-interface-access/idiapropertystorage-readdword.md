@@ -1,5 +1,5 @@
 ---
-title: IDiaPropertyStorage::ReadDWORD | Microsoft Docs
+title: IDiaPropertyStorage::ReadDWORD | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7353ef9f1aca7348adf681bfe627441e409906e6
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 109d5c7c63674ac0b1b72f0b2e538e2993552e7c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49842687"
 ---
 # <a name="idiapropertystoragereaddword"></a>IDiaPropertyStorage::ReadDWORD
 Přečte `DWORD` hodnoty v sadu vlastností.  
@@ -34,16 +35,16 @@ HRESULT ReadDWORD (
   
 #### <a name="parameters"></a>Parametry  
  `id`  
- [v] Identifikátor vlastnosti čtení (`PROPID` je definována v WTypes.h jako `ULONG`).  
+ [in] Identifikátor vlastnosti pro čtení (`PROPID` je definována v WTypes.h jako `ULONG`).  
   
  `pValue`  
  [out] Vrátí hodnotu vlastnosti.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí `E_INVALIDARG` Pokud vlastnost není typu `DWORD`.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí `E_INVALIDARG` Pokud vlastnost není typu `DWORD`.  
   
 ## <a name="remarks"></a>Poznámky  
- A `DWORD` je definována v systému Windows jako 32bitové celé číslo bez znaménka.  
+ A `DWORD` je definován Windows jako 32bitové celé číslo bez znaménka.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md)

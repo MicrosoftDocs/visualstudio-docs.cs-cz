@@ -1,5 +1,5 @@
 ---
-title: Vytváření stránek možnosti | Microsoft Docs
+title: Vytvoření stránek možnosti | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,76 +14,77 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 51e05c5f2660adfe8d7a35c816e5f94706631c8f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 236d9a0be82885bdf8040c97601429279e74dd15
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949640"
 ---
-# <a name="creating-options-pages"></a>Vytváření stránek možnosti
-V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] spravované balíček framework třídy odvozené od <xref:Microsoft.VisualStudio.Shell.DialogPage> rozšířit [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE přidáním **možnosti** stránky v části **nástroje** nabídky.  
+# <a name="create-options-pages"></a>Vytvoření stránky Možnosti
+V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] spravovaného balíčku rozhraní .NET framework, třídy odvozené z <xref:Microsoft.VisualStudio.Shell.DialogPage> rozšířit [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrovaného vývojového prostředí tak, že přidáte **možnosti** stránky v části **nástroje** nabídky.  
   
- Implementaci objektu danou **– možnost Nástroje** stránky je přidružen konkrétní VSPackages podle <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> objektu.  
+ Implementaci objektu dané **– možnost Nástroje** stránky je přidružený k konkrétní rozšíření VSPackages podle <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> objektu.  
   
- Protože prostředí vytvoří objekt implementující konkrétní **možnosti nástrojů** v případě, že danou stránku se zobrazí při integrovaného vývojového prostředí:  
+ Protože prostředí vytvoří instanci objektu implementace konkrétní **možnosti nástrojů** stránce při této konkrétní stránce se zobrazí v integrovaném vývojovém prostředí:  
   
--   A **– možnost Nástroje** stránka by měla být implementována na svůj vlastní objekt a ne na objekt implementující VSPackage.  
+-   A **– možnost Nástroje** stránka by měla být implementována na vlastní objekt a ne na objekt implementující VSPackage.  
   
--   Objekt nelze implementovat, více **možnosti nástrojů** stránky.  
+-   Objekt nelze implementovat více **možnosti nástrojů** stránky.  
   
-## <a name="registering-as-a-tools-options-page-provider"></a>Registrace jako poskytovatel nástroje Možnosti stránky  
- Konfiguraci VSPackage podpůrné uživatele prostřednictvím **možnosti nástrojů** stránky označuje objekty poskytuje tyto **možnosti nástrojů** stránky použitím instancí <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> použít <xref:Microsoft.VisualStudio.Shell.Package>implementace.  
+## <a name="register-as-a-tools-options-page-provider"></a>Zaregistrujte se jako zprostředkovatel stránky Možnosti nástrojů  
+ Konfigurace balíčku VSPackage podpůrné uživatele prostřednictvím **možnosti nástrojů** stránky určuje objekty, které poskytuje **možnosti nástrojů** stránky s použitím instance <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> u <xref:Microsoft.VisualStudio.Shell.Package>implementace.  
   
  Musí být jedna instance <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> pro každý <xref:Microsoft.VisualStudio.Shell.DialogPage>-odvozený typ, který implementuje **možnosti nástrojů** stránky.  
   
- Každá instance <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> používá typ, který implementuje **možnosti nástrojů** stránky, řetězce, které obsahují kategorii a podkategorii použít k identifikaci **možnosti nástrojů** stránky a prostředků informace o registraci typu jako poskytování **možnosti nástrojů** stránky.  
+ Každá instance <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> používá typ, který implementuje **možnosti nástrojů** stránce, řetězce, které obsahují kategorie a podkategorie slouží k identifikaci **možnosti nástrojů** stránky a prostředků informace o registraci typu jako poskytuje **možnosti nástrojů** stránky.  
   
-## <a name="persisting-tools-options-page-state"></a>Zachování stavu stránky Možnosti nástroje  
- Pokud **možnosti nástrojů** stránky implementace je zaregistrován s povolenou podporou automatizaci, prostředí IDE přetrvává stav stránky stejně tak všechny další **možnosti nástrojů** stránky.  
+## <a name="persist-tools-options-page-state"></a>Zachovat stav stránky Možnosti nástrojů  
+ Pokud **možnosti nástrojů** stránka provádění je registrován s povolenou podporou mezipaměti o automatizaci, rozhraní IDE zachová stav stránky spolu s ostatními všechny **možnosti nástrojů** stránky.  
   
- VSPackage můžete spravovat svůj vlastní trvalost pomocí <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>. Třeba použít pouze jeden nebo jinou metodu trvalost.  
+ VSPackage můžete spravovat své vlastní trvalosti pomocí <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute>. By měla sloužit pouze jednu nebo jiná metoda typu stálosti.  
   
-## <a name="implementing-dialogpage-class"></a>Implementace DialogPage – třída  
- Objekt poskytuje VSPackage na implementaci <xref:Microsoft.VisualStudio.Shell.DialogPage>-odvozený typ můžete využít výhod zděděné následující funkce:  
+## <a name="implement-dialogpage-class"></a>Implementace třídy DialogPage třídy  
+ Objekt, který poskytuje na VSPackage provádění <xref:Microsoft.VisualStudio.Shell.DialogPage>-odvozený typ může využívat následující zděděné funkce:  
   
--   Okno výchozí uživatelské rozhraní.  
+- Výchozí uživatelské rozhraní okna.  
   
--   A výchozí mechanismus trvalosti dostupné buď pokud <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> se použije k třídě, nebo pokud <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute.SupportsProfiles%2A> je nastavena na `true` pro <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> který se použije k třídě.  
+- A výchozí mechanismus trvalosti, které jsou k dispozici buď pokud <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> aplikován na třídu, nebo pokud <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute.SupportsProfiles%2A> je nastavena na `true` pro <xref:Microsoft.VisualStudio.Shell.ProvideOptionPageAttribute> , která je použita na třídu.  
   
--   Podpora automatizace.  
+- Podpora automatizace.  
   
- Minimální požadavky pro implementaci k objektu **možnosti nástrojů** stránky pomocí <xref:Microsoft.VisualStudio.Shell.DialogPage> je přidání veřejné vlastnosti.  
+  Minimální požadavky pro implementaci objekt **možnosti nástrojů** stránky <xref:Microsoft.VisualStudio.Shell.DialogPage> , je přidání veřejné vlastnosti.  
   
- Pokud třída řádně zaregistrován jako **možnosti nástrojů** stránky poskytovatele, pak jsou k dispozici na jeho veřejné vlastnosti **možnosti** části **nástroje** nabídky ve formě Vlastnost mřížky.  
+  Pokud třída správně zaregistrovaný jako **možnosti nástrojů** stránce poskytovatele, pak jeho veřejné vlastnosti jsou k dispozici na **možnosti** část **nástroje** nabídce ve formuláři mřížku vlastností.  
   
- Všechny tyto funkce výchozí lze přepsat. Například vytvořte sofistikovanější uživatele rozhraní vyžaduje pouze přepsání výchozí implementaci <xref:Microsoft.VisualStudio.Shell.DialogPage.Window%2A>.  
+  Všechny tyto funkce výchozí lze přepsat. Například k vytváření sofistikovanějších uživatelského rozhraní vyžaduje pouze výchozí implementaci přepsání <xref:Microsoft.VisualStudio.Shell.DialogPage.Window%2A>.  
   
 ## <a name="example"></a>Příklad  
- Co následuje je jednoduchý "text hello world" implementace stránku možnosti. Přidání následující kód do výchozího projektu vytvořený balíček šabloně Visual Studio se **příkaz nabídky** vybraná možnost bude demonstrovat adekvátní možnost stránky funkce.  
+ Dále je jednoduchý "Hello world" implementace stránky možnosti. Přidáním následujícího kódu do projektu výchozí vytvořených šablonou sady Visual Studio balíček s **příkazu nabídky** zaškrtnutou možnost adekvátní vám ukáže funkci stránky možnost.  
   
 ### <a name="description"></a>Popis  
- Následující třídy definuje minimální stránka Možnosti "hello world". Po otevření může uživatel nastavit veřejnosti `HelloWorld` vlastnost v tabulce vlastností.  
+ Následující třídy definuje stránky Možnosti minimální "Hello world". Při otevření, může uživatel nastavit veřejnosti `HelloWorld` vlastnost v mřížce vlastností.  
   
 ### <a name="code"></a>Kód  
  [!code-csharp[UI_UserSettings_ToolsOptionPages#11](../../extensibility/internals/codesnippet/CSharp/creating-options-pages_1.cs)]
  [!code-vb[UI_UserSettings_ToolsOptionPages#11](../../extensibility/internals/codesnippet/VisualBasic/creating-options-pages_1.vb)]  
   
 ### <a name="description"></a>Popis  
- Použití následující atribut k třídě balíček zpřístupní možnosti stránky při načtení balíčku. Čísla, která jsou libovolné ID prostředku pro kategorii a stránky a logickou hodnotu na konci Určuje, zda stránka podporuje automatizace.  
+ Použití třídy balíčku následující atribut zpřístupní možnosti stránky při načtení balíčku. Čísla jsou libovolného prostředku ID kategorie a na stránce a logickou hodnotu na konci Určuje, zda stránky podporuje služby automation.  
   
 ### <a name="code"></a>Kód  
  [!code-csharp[UI_UserSettings_ToolsOptionPages#07](../../extensibility/internals/codesnippet/CSharp/creating-options-pages_2.cs)]
  [!code-vb[UI_UserSettings_ToolsOptionPages#07](../../extensibility/internals/codesnippet/VisualBasic/creating-options-pages_2.vb)]  
   
 ### <a name="description"></a>Popis  
- Následující obslužné rutiny události zobrazí výsledku v závislosti na hodnotě vlastnost nastavená na stránce Možnosti. Použije <xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A> metoda s výsledkem explicitně přetypovat na typ stránky vlastní možnost pro přístup k vlastnostem vystavené stránky.  
+ Následující obslužná rutina události zobrazí výsledky v závislosti na hodnotě vlastnosti nastavit na stránce Možnosti. Používá <xref:Microsoft.VisualStudio.Shell.Package.GetDialogPage%2A> metoda s výsledkem explicitně přetypován na typ stránky vlastní možnost získat přístup k vlastnostem vystavené na stránce.  
   
- V případě projektu vygenerované šablony balíčku, volání této funkce z `MenuItemCallback` funkce připojit k příkazu výchozí přidán do **nástroje** nabídky.  
+ V případě projektů vygenerovaný balíček šablony, voláním této funkce z `MenuItemCallback` přidána funkce, aby se připojil do výchozí příkaz **nástroje** nabídky.  
   
 ### <a name="code"></a>Kód  
  [!code-csharp[UI_UserSettings_ToolsOptionPages#08](../../extensibility/internals/codesnippet/CSharp/creating-options-pages_3.cs)]
  [!code-vb[UI_UserSettings_ToolsOptionPages#08](../../extensibility/internals/codesnippet/VisualBasic/creating-options-pages_3.vb)]  
   
-## <a name="see-also"></a>Viz také  
- [Rozšíření uživatelská nastavení a možnosti](../../extensibility/extending-user-settings-and-options.md)   
+## <a name="see-also"></a>Viz také:  
+ [Rozšířit možnosti a nastavení uživatele](../../extensibility/extending-user-settings-and-options.md)   
  [Podpora automatizace pro stránky Možnosti](../../extensibility/internals/automation-support-for-options-pages.md)

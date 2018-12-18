@@ -1,0 +1,1 @@
+.NET Framework verze 3.5

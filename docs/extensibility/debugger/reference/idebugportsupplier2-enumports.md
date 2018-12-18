@@ -1,5 +1,5 @@
 ---
-title: IDebugPortSupplier2::EnumPorts | Microsoft Docs
+title: IDebugPortSupplier2::EnumPorts | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7eef32c93ad63849f2ab40f0c444fd74e30d85a0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 43eb1171b11dd3afadee45b222f49e7a6b30f4a8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49901759"
 ---
 # <a name="idebugportsupplier2enumports"></a>IDebugPortSupplier2::EnumPorts
-Načte seznam všechny porty dodává dodavatel portu.  
+Načte seznam všechny porty, získáte ho od dodavatele portu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,10 +41,10 @@ int EnumPorts(
   
 #### <a name="parameters"></a>Parametry  
  `ppEnum`  
- [out] Vrátí [IEnumDebugPorts2](../../../extensibility/debugger/reference/ienumdebugports2.md) obsahující seznam portů zadaný objekt.  
+ [out] Vrátí [IEnumDebugPorts2](../../../extensibility/debugger/reference/ienumdebugports2.md) objekt, který obsahuje seznam portů zadaný.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugPortSupplier2](../../../extensibility/debugger/reference/idebugportsupplier2.md)   

@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_offsetinudt – | Microsoft Docs
+title: Idiasymbol::get_offsetinudt – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 22e0574f8892c2e73a12ebf241af604b85a5ed30
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 48b13de8a9d1680ae4e2a6a94a4fda120a74a18e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49911418"
 ---
 # <a name="idiasymbolgetoffsetinudt"></a>IDiaSymbol::get_offsetInUdt
-Načte posun na začátek uživatelem definovaný typ (UDT) člena v UDT.  
+Načte posun k začátku uživatelem definovaný typ (UDT) člena v UDT.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,16 +34,16 @@ HRESULT get_offsetInUdt(
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí posunutí v bajtech umístění symbolu.  
+ [out] Vrací posun v bajtech umístění symbolu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` nebo chybový kód.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
->  Vrácená hodnota `S_FALSE` znamená vlastnost není k dispozici pro symbol.  
+>  Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato funkce se používá pouze v místním záznamy v optimalizovaného sestavení.  
+ Tato funkce se používá jenom v místních záznamů v optimalizovaných sestavení.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: Dia2.h  

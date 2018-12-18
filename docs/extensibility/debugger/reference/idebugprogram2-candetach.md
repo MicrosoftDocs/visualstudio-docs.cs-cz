@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::CanDetach | Microsoft Docs
+title: IDebugProgram2::CanDetach | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 08387df82b20ef38380fe6302a5ca1f5d0bcbc9c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5285dce44c7aacad12fad60f255140a14d53a8d7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49857533"
 ---
 # <a name="idebugprogram2candetach"></a>IDebugProgram2::CanDetach
-Určuje, pokud modul ladění (DE), můžete odpojení od programu.  
+Určuje, pokud ladicí stroj (DE) můžete odpojit od programu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,7 +38,7 @@ int CanDetach();
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud můžete odpojit, vrátí `S_OK`, jinak vrátí kód chyby. Vrátí `S_FALSE` Pokud DE nelze odpojit programu.  
+ Pokud můžete odpojit, vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí `S_FALSE` Pokud DE nelze odpojit od programu.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

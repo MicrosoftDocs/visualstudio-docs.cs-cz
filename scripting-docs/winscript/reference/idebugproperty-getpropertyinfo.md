@@ -1,11 +1,11 @@
 ---
-title: IDebugProperty::GetPropertyInfo | Microsoft Docs
-ms.custom: 
+title: IDebugProperty::GetPropertyInfo | Dokumentace Microsoftu
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - IDebugProperty.GetPropertyInfo
@@ -14,18 +14,19 @@ apilocation:
 helpviewer_keywords:
 - IDebugProperty::GetPropertyInfo
 ms.assetid: b201c0c4-bff6-4285-880f-67be90584c5f
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: edd878419c6f2b4fd0f882a070d80c98a96eba56
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: c0cdfc48b8e7d5804136e01920b5e8b178628d0a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49847367"
 ---
 # <a name="idebugpropertygetpropertyinfo"></a>IDebugProperty::GetPropertyInfo
-Získá hodnotu `IDebugProperty` metodu nebo indexované vlastnosti, který popisuje.  
+Získá hodnotu `IDebugProperty` , který popisuje metody nebo indexovanou vlastnost.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,18 +40,18 @@ HRESULT GetPropertyInfo (
   
 #### <a name="parameters"></a>Parametry  
  `dwFields`  
- [v] Určuje, `DBGPROP_INFO_FLAGS` konstanty, které určují pole vyplnění `DebugPropertyInfo` struktura.  
+ [in] Určuje `DBGPROP_INFO_FLAGS` konstanty, které určují pole pro vyplnění navýšení kapacity `DebugPropertyInfo` struktury.  
   
  `nRadix`  
- [v] Základ – který se má použít při formátování všechny číselné informace.  
+ [in] Základ, který se má použít v jakékoli číselné informace o formátování.  
   
  `pPropertyInfo`  
  [out] Vrátí `DebugPropertyInfo` struktura, která popisuje vlastnosti.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrací platnou `HRESULT`, obvykle `S_OK`.  
+ Bude vracet platnou `HRESULT`, obvykle `S_OK`.  
   
 ## <a name="see-also"></a>Viz také  
  [Idebugproperty – rozhraní](../../winscript/reference/idebugproperty-interface.md)   
  [DBGPROP_INFO_FLAGS](../../winscript/reference/dbgprop-info-flags.md)   
- [Debugpropertyinfo – struktura](../../winscript/reference/debugpropertyinfo-structure.md)
+ [DebugPropertyInfo – struktura](../../winscript/reference/debugpropertyinfo-structure.md)

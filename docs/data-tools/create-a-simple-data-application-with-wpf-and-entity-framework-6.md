@@ -1,5 +1,5 @@
 ---
-title: Vytvoření jednoduché datové aplikace pomocí grafického subsystému WPF a Entity Framework 6
+title: Vytvoření jednoduché datové aplikace s použitím WPF a Entity Framework 6
 ms.date: 08/22/2017
 ms.topic: conceptual
 dev_langs:
@@ -7,104 +7,106 @@ dev_langs:
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 180b4bc58c3c915eede55b6b30e0e3e9693b6ab6
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 5993256b41a07c4861ef2def58dc14d7fd849313
+ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52305608"
 ---
-# <a name="create-a-simple-data-application-with-wpf-and-entity-framework-6"></a>Vytvoření jednoduché datové aplikace pomocí grafického subsystému WPF a Entity Framework 6
+# <a name="create-a-simple-data-application-with-wpf-and-entity-framework-6"></a>Vytvoření jednoduché datové aplikace s použitím WPF a Entity Framework 6
 
-Tento návod ukazuje, jak vytvořit základní "forms over data" aplikaci v sadě Visual Studio. Aplikace používá SQL Server LocalDB, Northwind databáze, Entity Framework 6 a Windows Presentation Foundation. Ukazuje, jak provést základní vazby dat s hlavní podrobné zobrazení, která je také vlastní "vazby Navigátor" pomocí tlačítka pro "Přesunout další", "Přesunout na předchozí," "Přesunout na začátek," "přesunout na konec," "Aktualizovat" a "Delete".
+Tento návod ukazuje, jak vytvořit základní "formy nad daty" aplikace v sadě Visual Studio. Aplikace používá SQL Server LocalDB, Northwind databáze, Entity Framework 6 a Windows Presentation Foundation. Ukazuje, jak provést základní datové vazby seznam podrobnosti zobrazení a také obsahuje vlastní Navigátor vazby pomocí tlačítka pro **přesunout na další**, **přesunout na předchozí**, **přejděte od**, **Přesunout na konec**, **aktualizace** a **odstranit**.
 
-Tento článek se zaměřuje na pomocí nástrojů data v sadě Visual Studio a nebude pokoušet o vysvětlují základní technologie žádné podrobněji. Přitom se předpokládá, že máte základní znalost jazyka XAML, rozhraní Entity Framework a SQL. Tento příklad také nepředvádí architektury Model-View-View Model (modelem MVVM), což je standard pro aplikace WPF. Tento kód však můžete zkopírovat do rozhraní MVVM aplikace s několika úpravy.
+Tento článek se zaměřuje na pomocí nástrojů data v sadě Visual Studio a nebude pokoušet o vysvětlují základní technologie v libovolnou hloubku. Předpokládá, že máte základní znalosti s XAML, Entity Framework a SQL. Tento příklad také neukazuje architektury Model-View-ViewModel (MVVM), což je standard pro aplikace WPF. Tento kód však můžete zkopírovat do MVVM aplikace s několik změn.
 
 ## <a name="install-and-connect-to-northwind"></a>Nainstalujte a připojte se k Northwind
 
-Tento příklad používá SQL Server Express LocalDB a ukázková databáze Northwind. Pokud je zprostředkovatel ADO.NET data provider pro tento produkt podporuje rozhraní Entity Framework, ho by se s jinými produkty databáze SQL stejně dobře fungovat.
+Tento příklad používá SQL Server Express LocalDB a ukázkové databáze Northwind. Pokud zprostředkovatele dat ADO.NET pro tento produkt podporuje rozhraní Entity Framework, že by měl bude fungovat s produkty SQL database stejně.
 
-1.  Pokud nemáte SQL serveru Express LocalDB, nainstalovat buď z [SQL Server Express stránky pro stažení](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo pomocí **instalační program Visual Studio**. V instalačním programu Visual Studio se může nainstalovat SQL Server Express LocalDB jako součást **vývoj aplikací .NET** zatížení, nebo jako jednotlivých součástí.
+1.  Pokud nemáte SQL Server Express LocalDB, nainstalujte ji z [SQL Server Express stránku pro stažení](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo prostřednictvím **instalační program sady Visual Studio**. V **instalační program sady Visual Studio**, jako součást můžete nainstalovat SQL Server Express LocalDB **vývoj desktopových aplikací .NET** úloh nebo jako jednotlivých komponent.
 
-2.  Ukázková databáze Northwind nainstalujte pomocí následujících kroků:
+2.  Instalace ukázkové databáze Northwind pomocí následujících kroků:
 
-    1. V sadě Visual Studio, otevřete **Průzkumník objektů systému SQL Server** okno. (Průzkumník objektů systému SQL Server je nainstalován jako součást **úložiště dat a zpracování** zatížení v instalačním programu Visual Studio.) Rozbalte **systému SQL Server** uzlu. Klikněte pravým tlačítkem na vaší instanci LocalDB a vyberte **nový dotaz...** .
+    1. V sadě Visual Studio, otevřete **Průzkumník objektů systému SQL Server** okna. (**Průzkumník objektů systému SQL Server** je nainstalován jako součást **ukládání a zpracování dat** zatížení **instalační program sady Visual Studio**.) Rozbalte **systému SQL Server** uzlu. Klikněte pravým tlačítkem na instanci LocalDB a vyberte **nový dotaz**.
 
-       Otevře se okno editoru dotazů.
+       Otevře se okno editor dotazů.
 
-    2. Kopírování [Northwind Transact-SQL skriptu](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) do schránky. Tento skript T-SQL vytvoří databázi Northwind od začátku a naplní s daty.
+    2. Kopírovat [Northwind příkazů jazyka Transact-SQL skriptů](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) do schránky. Tento skript T-SQL vytvoří databázi Northwind úplně od začátku a naplní daty.
 
-    3. Vložit do editoru dotazů skriptu T-SQL a potom vyberte **Execute** tlačítko.
+    3. Vložte skript T-SQL do editoru dotazů a klikněte na tlačítko **Execute** tlačítko.
 
-       Po krátkou dobu dotaz dokončí provádění a vytvoření databáze Northwind.
+       Po chvilce dotaz doběhnutí a vytvořit databázi Northwind.
 
-3.  [Přidat nové připojení](../data-tools/add-new-connections.md) pro Northwind.
+3.  [Přidat nové připojení](../data-tools/add-new-connections.md) pro databáze Northwind.
 
 ## <a name="configure-the-project"></a>Konfigurace projektu
 
-1.  V sadě Visual Studio, vyberte **soubor**, **nový**, **projektu...**  a poté vytvořit novou aplikaci WPF C#.
+1.  V sadě Visual Studio, zvolte **souboru** > **nový** > **projektu** a vytvořte nové C# aplikaci WPF.
 
-2.  Další přidáme balíček NuGet pro Entity Framework 6. V Průzkumníku řešení vyberte uzel projektu. V hlavní nabídce zvolte **projektu**, **spravovat balíčky NuGet...**
+2.  V dalším kroku přidejte balíček NuGet pro Entity Framework 6. V **Průzkumníka řešení**, vyberte uzel projektu. V hlavní nabídce zvolte **projektu** > **spravovat balíčky NuGet**.
 
      ![Spravovat balíčky NuGet položky nabídky](../data-tools/media/raddata_vs2015_manage_nuget_packages.png)
 
-3.  V Správce balíčků NuGet, klikněte na **Procházet** odkaz. Horní balíčku v seznamu je pravděpodobně rozhraní Entity Framework. Klikněte na tlačítko **nainstalovat** v pravém podokně a postupujte podle pokynů. Ve výstupním okně zjistíte, kdy je dokončena instalace.
+3.  V **Správce balíčků NuGet**, klikněte na **Procházet** odkaz. Entity Framework je pravděpodobně hlavní balíček v seznamu. Klikněte na tlačítko **nainstalovat** v pravém podokně a postupujte podle zobrazených výzev. V okně výstupu zjistíte, po dokončení instalace.
 
      ![Balíček NuGet Entity Framework](../data-tools/media/raddata_vs2015_nuget_ef.png)
 
-4.  Visual Studio jsme teď můžete použít k vytvoření modelu založenému na databázi Northwind.
+4.  Teď můžete použít Visual Studio k vytvoření model založený na databázi Northwind.
 
 ## <a name="create-the-model"></a>Vytvoření modelu
 
-1.  Klikněte pravým tlačítkem na uzel projektu v Průzkumníku řešení a zvolte **přidat**, **novou položku...** . V levém podokně pod uzlem C# vyberte **Data** a v prostředním podokně vyberte **ADO.NET Entity Data Model**.
+1. Klikněte pravým tlačítkem na uzel projektu v **Průzkumníka řešení** a zvolte **přidat** > **nová položka**. V levém podokně v části C# uzlu, vyberte **Data** a v prostředním podokně vyberte **datový Model Entity ADO.NET**.
 
-     ![Entity Framework modelu nové položky projektu](../data-tools/media/raddata-ef-new-project-item.png)
+   ![Entity Framework Model novou položku projektu](../data-tools/media/raddata-ef-new-project-item.png)
 
-  2.  Volání modelu `Northwind_model` a na tlačítko OK. **Entity Data Model Wizard** otevře. Zvolte **EF Designer z databáze** a pak klikněte na **Další**.
+2. Volání modelu `Northwind_model` a zvolte **OK**. **Průvodce datovým modelem Entity** otevře. Zvolte **EF designeru z databáze** a potom klikněte na tlačítko **Další**.
 
-     ![Model EF z databáze](../data-tools/media/raddata-ef-model-from-database.png)
+   ![EF Model z databáze](../data-tools/media/raddata-ef-model-from-database.png)
 
-3.  Na další obrazovce, zvolte vaší instanci LocalDB Northwind připojení a klikněte na tlačítko **Další**.
+3. Na další obrazovce vyberte váš LocalDB Northwind připojení a na **Další**.
 
-4.  Na další stránce průvodce vybereme možnost které tabulky, uložené procedury a ostatní databázové objekty chcete zahrnout do modelu Entity Framework. Rozbalte uzel dbo ve stromovém zobrazení a zvolte zákazníky, objednávky a podrobnosti o objednávce. Nechte zaškrtnuté výchozí hodnoty a klikněte na **Dokončit**.
+4. Na další stránce průvodce zvolte, které tabulky, uložené procedury a ostatních databázových objektů chcete zahrnout do modelu Entity Framework. Dbo uzlu ve stromovém zobrazení rozbalte a vyberte možnost **zákazníkům**, **objednávky**, a **OrderDetails**. Ponechte výchozí nastavení zaškrtnuté políčko a klikněte na tlačítko **Dokončit**.
 
-     ![Vyberte objekty databáze pro model](../data-tools/media/raddata-choose-ef-objects.png)
+    ![Zvolit databázové objekty pro model](../data-tools/media/raddata-choose-ef-objects.png)
 
-5.  Průvodce vytvoří třídy C#, které představují model Entity Framework. Třídy jsou prostý staré třídy jazyka C# a jsou co jsme databind do uživatelského rozhraní grafického subsystému WPF. Soubor EDMX popisuje vztahy a další metadata, která přidruží třídy objektů v databázi. Soubory .tt T4 šablony, které generují kód, který funguje na modelu a uložte změny do databáze. Zobrazí se všechny tyto soubory v Průzkumníku řešení v uzlu Northwind_model:
+5. Průvodce vygeneruje třídy C#, které představují model Entity Framework. Třídy jsou plain old C# třídy a jsou co jsme do uživatelského rozhraní WPF databind. *Edmx* soubor popisuje vztahy a další metadata, která přidružuje třídy objektů v databázi. *.Tt* soubory jsou šablony T4, které generují kód, který funguje na modelu a uložte změny do databáze. Zobrazí se všechny tyto soubory v **Průzkumníka řešení** pod uzlem Northwind_model:
 
-       ![Soubory model EF Průzkumník řešení](../data-tools/media/raddata-solution-explorer-ef-model-files.png)
+      ![Soubory modelu EF Průzkumníka řešení](../data-tools/media/raddata-solution-explorer-ef-model-files.png)
 
-     Plochu návrháře pro soubor EDMX můžete upravit některé vlastnosti a vztahy v modelu. Nebudete jsme použít Návrháře v tomto průvodci.
+    Na plochu návrháře pro *edmx* soubor můžete upravit některé vlastnosti a vztahy v modelu. Nebudeme použití návrháře v tomto názorném postupu.
 
-6.  Soubory .tt jsou obecné účely a je potřeba upravit jeden z nich pro práci s datové vazby WPF, který vyžaduje ObservableCollections. V Průzkumníku řešení rozbalte uzel Northwind_model vyhledejte Northwind_model.tt. (Zajistěte, aby se *není* v *. Kontext .tt soubor, který je přímo pod soubor EDMX.)
+6. *.Tt* soubory jsou obecné účely a je potřeba jeden z nich pro práci s datovou vazbou WPF, která vyžaduje ObservableCollections upravit. V **Průzkumníka řešení**, rozbalte uzel Northwind_model, dokud nenajdete *Northwind_model.tt*. (Ujistěte se, že nejste v *. Context.tt* souboru, který je přímo pod *edmx* souboru.)
 
-    -   Nahraďte dva výskyty <xref:System.Collections.ICollection> s <xref:System.Collections.ObjectModel.ObservableCollection%601>.
+   -   Nahraďte dva výskyty <xref:System.Collections.ICollection> s <xref:System.Collections.ObjectModel.ObservableCollection%601>.
 
-    -   Nahraďte první výskyt <xref:System.Collections.Generic.HashSet%601> s <xref:System.Collections.ObjectModel.ObservableCollection%601> kolem řádku 51. Nepřepisovat existující druhého výskytu HashSet
+   -   Nahraďte první výskyt <xref:System.Collections.Generic.HashSet%601> s <xref:System.Collections.ObjectModel.ObservableCollection%601> kolem řádku 51. Druhým výskytem HashSet nenahrazují.
 
-    -   Nahradit pouze výskyt <xref:System.Collections.Generic> (kolem řádku 431) s <xref:System.Collections.ObjectModel>.
+   -   Nahradit jenom výskyt <xref:System.Collections.Generic> (kolem řádku 431) s <xref:System.Collections.ObjectModel>.
 
-7.  Stiskněte klávesu **Ctrl + Shift + B** a tím projekt sestavit. Po dokončení sestavení se zobrazí Průvodce zdrojů dat třídy modelu.
+7. Stisknutím klávesy **Ctrl**+**Shift**+**B** k sestavení projektu. Po dokončení sestavení jsou viditelné v Průvodci zdroje dat třídy modelu.
 
-Nyní jsme připraveni spojit tento model na stránku XAML, takže jsme zobrazení, přejděte a upravit data.
+Nyní jste připraveni k připojení tento model na stránku XAML tak, že můžete zobrazit, přejděte a upravit data.
 
-## <a name="databind-the-model-to-the-xaml-page"></a>DataBind modelu na stránku XAML
+## <a name="databind-the-model-to-the-xaml-page"></a>DataBind modelu, který má stránky XAML
 
-Je možné napsat vlastní kód datové vazby, ale je mnohem snazší nechte nástroj Visual Studio to pro vás udělal.
+Je možné psát vlastní kód vázání dat, ale je mnohem jednodušší nechte Visual Studio to pro vás udělal.
 
-1.  Z hlavní nabídky zvolte **Projekt > Přidat nový zdroj dat** se zprovoznit **Průvodce konfigurací zdroje dat**. Zvolte **objekt** vzhledem k tomu, že jsme vazbu k tříd modelu, není pro databázi:
+1.  V hlavní nabídce zvolte **projektu** > **přidat nový zdroj dat** zobrazíte **Průvodce konfigurací zdroje dat**. Zvolte **objekt** vzhledem k tomu, že jsou vazby modelu třídám, ne k databázi:
 
      ![Průvodce konfigurací zdroje dat se zdrojem objektu](../data-tools/media/raddata-data-source-configuration-wizard-with-object-source.png)
 
-2.  Vyberte zákazníka. (Zdrojů pro objednávky jsou automaticky generovány z objednávky navigační vlastnost u zákazníka.)
+2.  Vyberte **zákazníka**. (Zdrojů pro objednávky jsou automaticky generovány z navigační vlastnost objednávky v zákazníka.)
 
-     ![Přidání třídy entity jako zdroje dat](../data-tools/media/raddata-add-entity-classes-as-data-sources.png)
+     ![Přidání tříd entit jako zdroje dat](../data-tools/media/raddata-add-entity-classes-as-data-sources.png)
 
-3.  Klikněte na tlačítko **dokončit**
+3.  Klikněte na tlačítko **Dokončit**.
 
-4.  Přejděte do MainWindow.xaml v zobrazení kódu. Přidáme zjednodušení XAML pro účely tohoto příkladu. Změňte název MainWindow na více popisný text a zvýšit jeho výška a šířka na 600 x 800 teď. Můžete ho kdykoliv změnit později. Nyní přidejte tyto tři řádek definice do hlavní mřížky, jeden řádek pro navigační tlačítka, jeden pro zákazníka podrobnosti, jeden pro mřížky, která zobrazí jejich objednávky:
+4.  Přejděte do *souboru MainWindow.xaml* v zobrazení kódu. XAML uchováváme na jednoduché pro účely tohoto příkladu. Změna názvu hlavního okna MainWindow výstižněji a zvýšit jeho výšku a šířku na 600 × 800 teď. Můžete vždycky změnit ji později. Nyní přidejte definice těchto tří řádků do hlavní mřížky, jeden řádek pro navigačních tlačítek, jeden pro podrobnosti zákazníka a jeden pro tabulku, která zobrazuje jejich objednávky:
 
     ```xaml
     <Grid.RowDefinitions>
@@ -114,41 +116,41 @@ Je možné napsat vlastní kód datové vazby, ale je mnohem snazší nechte ná
         </Grid.RowDefinitions>
     ```
 
-5.  Nyní otevřete MainWindow.xaml tak, aby si prohlížíte v návrháři. To způsobí, že okna zdroje dat, než se objeví jako možnost v sadě Visual Studio okno okraji vedle panel nástrojů. Klikněte na kartu a otevřete okno nebo jinak stiskněte **Shift**+**Alt**+**D** nebo zvolte **zobrazení**  >  **Jinými** > **zdroje dat**. Nyní klikněte na Zobrazit každou vlastnost v třídě zákazníkům vlastní jednotlivých textového pole. Nejprve klikněte na šipku v poli se seznamem zákazníků a zvolte **podrobnosti**. Pak přetáhněte uzel na střední část návrhovou plochu, tak, aby návrháře ví, že se má přejít v prostředním řádku. Pokud někam nezaložili ho, můžete zadat řádek ručně později v XAML. Ve výchozím nastavení ovládací prvky jsou umístěny ve svislém směru v prvku mřížky, ale v tuto chvíli můžete uspořádat je ale chcete ve formuláři. Například může mít smysl pro umístění textového pole název v horní části výše adresu. Ukázkové aplikace pro tohoto článku změní pole a jejich Přeuspořádá do dvou sloupců.
+5.  Nyní otevřete *souboru MainWindow.xaml* tak, aby prohlížíte v návrháři. To způsobí, že **zdroje dat** okna vedle nezobrazí jako možnost na okraji okna sady Visual Studio **nástrojů**. Klikněte na kartu pro otevření okna nebo jinak stisknutím klávesy **Shift**+**Alt**+**D** nebo zvolte **zobrazení**  >  **Jiných Windows** > **zdroje dat**. Budeme zobrazit každou vlastnost v třídě zákazníci vlastní jednotlivé textové pole. Nejprve, klikněte na šipku v **zákazníkům** – pole se seznamem a vyberte **podrobnosti**. Potom přetáhněte uzel na prostřední část návrhové ploše tak, aby návrháři ví, že chcete, aby přejděte v prostředním. Pokud někam ho nezaložili můžete později ručně v XAML řádku. Ve výchozím nastavení ovládací prvky jsou umístěny ve svislém směru v elementu mřížky, ale v tomto okamžiku je možné uspořádat je však chcete ve formuláři. Například může mít smysl umístit **název** textového pole v horní části výše adresu. Ukázková aplikace pro účely tohoto článku změní pořadí polí a uspořádá do dvou sloupců.
 
-     ![Zákazníci data zdrojová vazba na jednotlivé ovládací prvky](../data-tools/media/raddata-customers-data-source-binding-to-individual-controls.png)
+     ![Vazba zdroje dat zákazníků na jednotlivých ovládacích prvků](../data-tools/media/raddata-customers-data-source-binding-to-individual-controls.png)
 
-     V zobrazení kódu, se nyní zobrazí nový `Grid` element v řádku 1 (střední řádek) nadřazeného prvku mřížky. Nadřazené má mřížky `DataContext` atribut, který odkazuje na CollectionViewSource, který je přidán do `Windows.Resources` elementu. Zadána tohoto kontextu dat při první textové pole váže k "Address", tento název je namapována na `Address` vlastnost v aktuální `Customer` objekt v CollectionViewSource.
+     V zobrazení kódu nyní uvidíte novou `Grid` element na řádku 1 (střední řádek) nadřazené mřížky. Nadřazené mřížka obsahuje `DataContext` atribut, který odkazuje na kolekce CollectionViewSource, který je přidán do `Windows.Resources` elementu. Zadaný tento kontext dat při prvního textového pole váže k **adresu**, tento název se mapuje na `Address` vlastnost v aktuální `Customer` objektu do kolekce CollectionViewSource.
 
     ```xaml
     <Grid DataContext="{StaticResource customerViewSource}">
     ```
 
-6.  Pokud zákazník je zobrazen v horní polovině okna, chceme půl prohlédnout jejich příkazy v dolní části. Ukážeme objednávky v ovládacím prvku mřížky jednoho zobrazení. Pro datové vazby seznam podrobnosti k fungovat podle očekávání je důležité, jsme vazby pro vlastnost objednávky ve třídě zákazníkům, aby samostatný uzel objednávky. Přetáhněte objednávky vlastnosti třídy zákazníkům spodní polovině formuláře, tak, aby návrháře převádí ho na řádku 2:
+6.  Když zákazník není viditelná. v horní části okna, chcete zobrazit jeho objednávky v dolní části částečně. Zobrazit objednávky v ovládacím prvku zobrazení jedné mřížce. Pro datové vazby seznam podrobnosti fungovat podle očekávání je důležité vytvořit vazbu na vlastnost objednávky ve třídě zákazníkům, aby samostatný uzel objednávky. Přetáhněte vlastnost objednávek zákazníků třídy na dolní polovinu formuláře, tak, aby, návrhář vloží řádek 2:
 
-     ![Přetáhněte objednávky třídy jako mřížky](../data-tools/media/raddata-drag-orders-classes-as-grid.png)
+     ![Přetáhněte třídy objednávky jako mřížku](../data-tools/media/raddata-drag-orders-classes-as-grid.png)
 
-7.  Visual Studio vygenerovala všechny vazby kód, který připojí ovládacích prvků uživatelského rozhraní na události v modelu. Všechny, které je potřeba provést, chcete-li zobrazit některá data je napsat kód, který naplnit modelu. První umožňuje přejděte do MainWindow.xaml.cs a přidejte do třídy MainWindow pro kontext dat člena. Tento objekt, který byl vygenerován pro nás, funguje něco podobného jako ovládací prvek, který sleduje změny a události v modelu. Také přidáme inicializace logiku konstruktoru. Horní části Naše třída by měla vypadat takto:
+7.  Visual Studio vygenerovala všechny vazební kód, který se připojuje ovládacích prvků uživatelského rozhraní na události v modelu. Všechno, co musíte udělat, aby bylo možné zobrazit nějaká data, je napsat kód k vyplnění modelu. Nejprve přejděte do *MainWindow.xaml.cs* a přidejte datové členy třídy hlavního okna MainWindow pro datový kontext. Tento objekt, který byl vygenerován pro vás, funguje něco jako ovládací prvek, který sleduje změny a události v modelu. Budete také přidat logiku inicializace konstruktoru. Horní části třídy by měl vypadat nějak takto:
 
      [!code-csharp[MainWindow#1](../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs#1)]
 
-     Přidat `using` direktivy pro System.Data.Entity tím metodu načtení rozšíření do rozsahu:
+     Přidat `using` směrnice pro System.Data.Entity metodu načtení rozšíření převeďte do rozsahu:
 
      ```csharp
      using System.Data.Entity;
      ```
 
-     Nyní přejděte dolů a najděte Window_Loaded obslužné rutiny události. Všimněte si, že sada Visual Studio přidala objekt CollectionViewSource pro nás. Reprezentuje objekt NorthwindEntities, který jsme vybrali při jsme vytvořili modelu. Umožňuje přidat kód do Window_Loaded tak, aby celý metoda nyní vypadat třeba takto:
+     Nyní, posuňte se dolů a najděte `Window_Loaded` obslužné rutiny události. Všimněte si, že sada Visual Studio přidala objekt kolekce CollectionViewSource. To představuje NorthwindEntities objekt, který jste vybrali při vytváření modelu. Teď přidejte kód, který `Window_Loaded` tak, aby celou metodu nyní vypadá takto:
 
      [!code-csharp[Window_Loaded#2](../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs#2)]
 
-8.  Stiskněte klávesu **F5**. Měli byste vidět podrobnosti pro první zákazníka, která byla načtena do CollectionViewSource. Měli byste taky vidět jejich objednávky v datové mřížce. Formátování, které není skvělé, takže umožňuje oprava. Také vytvoříme způsob, jak zobrazit další záznamy a provést základní operace CRUD.
+8.  Stisknutím klávesy **F5**. Měli byste vidět podrobnosti prvního zákazníka, která byla načtena do kolekce CollectionViewSource. Také byste měli vidět jejich objednávky v datové mřížce. Formátování není skvělé, proto Pojďme to opravit. Můžete také vytvořit způsob, jak zobrazit další záznamy a provádět základní operace CRUD.
 
-## <a name="adjust-the-page-design-and-add-grids-for-new-customers-and-orders"></a>Upravte návrh stránek a přidat nové zákazníky a objednávky mřížky
+## <a name="adjust-the-page-design-and-add-grids-for-new-customers-and-orders"></a>Upravte návrh stránek a přidání mřížky pro noví zákazníci a objednávky
 
-Výchozí uspořádání vytvářených Visual Studio není ideální pro naši aplikaci, takže jsme budete provádět některé změny ručně v XAML. Také je potřeba některé "forms" (které jsou ve skutečnosti mřížky) zajistit, aby uživatel k přidání nového zákazníka nebo pořadí. Aby bylo možné přidat nové zákazníka a pořadí, potřebujeme samostatnou sadu textová pole, které nejsou vázané na data na `CollectionViewSource`. Jsme budete řídit mřížky, které uživateli se zobrazí v každém okamžiku nastavením vlastnosti viditelné v metodách obslužné rutiny. Nakonec přidáme tlačítko Odstranit pro každý řádek v mřížce objednávky umožňující uživateli odstranit jednotlivé pořadí.
+Výchozí uspořádání vytvořené pomocí sady Visual Studio není ideální pro vaše aplikace, takže budete provést nějaké změny ručně v XAML. Budete potřebovat některé "typy" (které jsou ve skutečnosti mřížky) a povolit uživateli přidání nového zákazníka nebo pořadí. Aby bylo možné přidat nové odběratele a objednávky, potřebujete samostatnou sadu textová pole, které nejsou vázán na data `CollectionViewSource`. Bude ovládací prvek mřížky, které uživateli se zobrazí v daném okamžiku tak, že nastavíte vlastnost Visible v metody obslužné rutiny. Nakonec přidejte tlačítko pro odstranění na každý řádek v tabulce objednávky a povolit uživateli odstranit jednotlivé objednávky.
 
-Nejprve přidejte tyto styly prvku Windows.Resources v MainWindow.xaml:
+Nejprve přidejte tyto styly `Windows.Resources` prvek *souboru MainWindow.xaml*:
 
 ```xaml
 <Style x:Key="Label" TargetType="{x:Type Label}" BasedOn="{x:Null}">
@@ -166,7 +168,7 @@ Nejprve přidejte tyto styly prvku Windows.Resources v MainWindow.xaml:
 </Style>
 ```
 
-Celý vnější mřížky vedle, nahraďte tento kód:
+Vnější mřížky v dalším kroku nahraďte tento kód:
 
 ```xaml
 <Grid>
@@ -349,15 +351,15 @@ Celý vnější mřížky vedle, nahraďte tento kód:
  </Grid>
 ```
 
-## <a name="add-buttons-to-navigate-add-update-and-delete"></a>Přidání tlačítek přejděte, přidat, aktualizovat a odstranit
+## <a name="add-buttons-to-navigate-add-update-and-delete"></a>Přidat tlačítka Procházet, přidávat, aktualizovat a odstraňovat
 
-V aplikacích Windows Forms načíst objekt BindingNavigator s tlačítka pro procházení řádků v databázi a provádění základních operací CRUD. WPF neposkytuje BindingNavigator, ale je dostatečně snadné ji vytvořit. Provedeme to pomocí tlačítka uvnitř vodorovné StackPanel a jsme budete tlačítka přidružit příkazy, které jsou vázány na metody v kódu.
+V aplikacích Windows Forms získejte objekt BindingNavigator pomocí tlačítek pro procházení řádků v databázi a provádění základních operací CRUD. WPF neposkytuje objektu BindingNavigator, ale je docela jednoduché, k jejímu vytvoření. Můžete to udělat pomocí tlačítek v objektu StackPanel vodorovné a přidružit tlačítek s příkazy, které jsou vázány na metody v kódu.
 
-Příkaz logiku se skládá fours částí: (1) příkazy, (2) vazby, (3) tlačítka a (4) obslužné rutiny příkazů v modelu code-behind.
+Existují fours části příkazu logiku: (1) příkazy, (2) vazby, (3) tlačítka a (4) obslužné rutiny příkazů v kódu.
 
-### <a name="add-commands-bindings-and-buttons-in-xaml"></a>Přidání tlačítka, vazby a příkazy v jazyce XAML
+### <a name="add-commands-bindings-and-buttons-in-xaml"></a>Přidání příkazů, vazby a tlačítka v XAML
 
-1.  Nejprve v našem MainWindow.xaml souboru uvnitř elementu Windows.Resources přidejme příkazy:
+1.  Nejprve přidejte příkazy v *souboru MainWindow.xaml* uvnitř souboru `Windows.Resources` element:
 
     ```xaml
     <RoutedUICommand x:Key="FirstCommand" Text="First"/>
@@ -371,7 +373,7 @@ Příkaz logiku se skládá fours částí: (1) příkazy, (2) vazby, (3) tlač�
     <RoutedUICommand x:Key="CancelCommand" Text="Cancel"/>
     ```
 
-2.  CommandBinding mapuje RoutedUICommand událostí na metodu v kódu. Přidejte tento element CommandBindings po Windows.Resources ukončovací značka:
+2.  Vazbou CommandBinding mapuje `RoutedUICommand` událostí na metodu v kódu. Přidejte tuto `CommandBindings` elementu po `Windows.Resources` uzavírací značku:
 
     ```xaml
     <Window.CommandBindings>
@@ -387,7 +389,7 @@ Příkaz logiku se skládá fours částí: (1) příkazy, (2) vazby, (3) tlač�
     </Window.CommandBindings>
     ```
 
-3.  Nyní Pojďme přidat StackPanel s navigaci, přidat, odstranit a aktualizaci tlačítka. Nejprve přidejte tento styl Windows.Resources:
+3.  Teď přidejte `StackPanel` s navigací, přidání, odstranění a aktualizace tlačítka. Nejprve přidejte tento styl `Windows.Resources`:
 
     ```xaml
     <Style x:Key="NavButton" TargetType="{x:Type Button}" BasedOn="{x:Null}">
@@ -399,7 +401,7 @@ Příkaz logiku se skládá fours částí: (1) příkazy, (2) vazby, (3) tlač�
     </Style>
     ```
 
-     Druhý vložte tento kód bezprostředně za RowDefinitions pro vnější elementů v mřížce, k horní části stránky XAML:
+     Za druhé, vložte tento kód hned za `RowDefinitions` pro vnější `Grid` prvek směrem k horní části stránky XAML:
 
     ```xaml
     <StackPanel Orientation="Horizontal" Margin="2,2,2,0" Height="36" VerticalAlignment="Top" Background="Gainsboro" DataContext="{StaticResource customerViewSource}" d:LayoutOverrides="LeftMargin, RightMargin, TopMargin, BottomMargin">
@@ -415,19 +417,19 @@ Příkaz logiku se skládá fours částí: (1) příkazy, (2) vazby, (3) tlač�
     </StackPanel>
     ```
 
-### <a name="add-command-handlers-to-the-mainwindow-class"></a>Přidejte obslužné rutiny příkazů do třídy MainWindow
+### <a name="add-command-handlers-to-the-mainwindow-class"></a>Přidání obslužné rutiny příkazů do třídy hlavního okna MainWindow
 
-Kódu je minimální s výjimkou metody přidat a odstranit. Navigace provádí volání metod na vlastnost zobrazení CollectionViewSource. DeleteOrderCommandHandler ukazuje, jak provádět kaskádové odstranění na pořadí. Musíme nejprve odstranit Order_Details, které jsou k ní přidružena. UpdateCommandHandler přidá nový zákazník nebo pořadí do kolekce, jinak pouze změny provedené v textových polích uživatel aktualizuje existujícího zákazníka nebo pořadí.
+Použití modelu code-behind je minimální s výjimkou metody přidat a odstranit. Navigace se provádí pomocí volání metody na vlastnost zobrazení kolekce CollectionViewSource. `DeleteOrderCommandHandler` Ukazuje, jak provádět kaskádové odstranění objednávku. Musíme nejprve odstranit Order_Details, které jsou k ní přidružena. `UpdateCommandHandler` Přidá nového zákazníka nebo pořadí do kolekce, jinak pouze změny provedené uživatelem v textových polích aktualizuje existujícího zákazníka nebo pořadí.
 
-Přidejte do třídy MainWindow v MainWindow.xaml.cs tyto metody obslužné rutiny. Pokud vaše CollectionViewSource pro tabulku zákazníků má jiný název, budete muset upravit název v každé z těchto metod:
+Přidejte tyto metody obslužné rutiny třídy hlavního okna MainWindow v *MainWindow.xaml.cs*. Pokud vaše kolekce CollectionViewSource pro tabulku zákazníků má jiný název, je potřeba upravit název v každém z těchto metod:
 
 [!code-csharp[CommandHandlers#3](../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs#3)]
 
 ## <a name="run-the-application"></a>Spuštění aplikace
 
-Chcete-li začít, ladění, stiskněte **F5**. Měli byste vidět zákazníka a pořadí data vložené do mřížky a navigačních tlačítek by měla fungovat podle očekávání. Klikněte na "Potvrzení" Přidat nového zákazníka nebo pořadí modelu po zadání data. Klikněte na "Zrušit" zpět bez uložení dat z nového zákazníka nebo nového formuláře pořadí. Můžete provést úpravy existující zákazníci a objednávky přímo do textových polí a tyto změny se zapisují do modelu automaticky.
+Chcete-li spustit ladění, stiskněte **F5**. Měli byste vidět zákazníka a data o objednávkách v mřížce a navigačních tlačítek by měl fungovat podle očekávání. Klikněte na **potvrzení** po zadání data přidání nového zákazníka nebo pořadí modelu. Klikněte na **zrušit** pro zálohování bez uložení dat z nového zákazníka nebo nový formulář objednávky. Můžete provádět úpravy stávající zákazníci a objednávky přímo v textových polích a tyto změny se zapisují do modelu automaticky.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Visual Studio Data Tools for .NET](../data-tools/visual-studio-data-tools-for-dotnet.md)
-- [Dokumentaci Entity Framework](/ef/)
+- [Dokumentace Entity Framework](/ef/)

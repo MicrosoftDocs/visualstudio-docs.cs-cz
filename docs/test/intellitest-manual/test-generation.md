@@ -1,6 +1,7 @@
 ---
-title: Testování generování | Nástroj pro testování Microsoft IntelliTest Developer | Microsoft Docs
+title: Generování testů | Nástroj pro testování Microsoft IntelliTest Developer
 ms.date: 05/02/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,17 +11,24 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 259ff0818cebde6d7c603428c6cdb88cd51ca293
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 20bacca2343cb2689ed52096c1a9b0d9c3d74703
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51295862"
 ---
 # <a name="test-generation"></a>Generování testů
 
-V tradiční testování částí vyžaduje několik přísady dávat dohromady testu:
+V tradičních testování částí test se skládá z několik věcí:
 
-```
+* A [posloupnost volání metod](test-generation.md#test-generators)
+* Argumenty, se kterými volání těchto metod; argumenty jsou [testovací vstupy](input-generation.md)
+* Ověření zamýšlené chování testované aplikace uvedením sadu [kontrolní výrazy](#assumptions-and-assertions)
+
+Toto je test struktury příklad:
+
+```csharp
 [Test]
 void MyTest() {
     // data
@@ -35,31 +43,25 @@ void MyTest() {
 }
 ```
 
-Test se skládá z různých aspektech:
-
-* Ho opravy [pořadí volání metod](test-generation.md#test-generators)
-* Opravuje argumenty, se kterými se nazývají metody; argumenty, které jsou [testování vstupy](input-generation.md)
-* Ověřuje zamýšlené chování otestované aplikace uvádí sadu [kontrolní výrazy](#assumptions-and-assertions)
-
-IntelliTest můžete často automaticky určit relevantní argument hodnoty pro další Obecné [parametrizovaných testů částí](#parameterized-unit-testing), které poskytují pořadí volání metod a kontrolní výrazy.
+IntelliTest často automaticky rozpozná hodnoty argumentů relevantní pro obecnější [parametrizovaných testů jednotek](#parameterized-unit-testing), které poskytují posloupnost volání metody a kontrolní výrazy.
 
 <a name="test-generators"></a>
-## <a name="test-generators"></a>Test generátory
+## <a name="test-generators"></a>Generátory testu
 
-IntelliTest vygeneruje testovacích případů vyberete sekvenci metod implementace testovaného provést a pak generování vstupy pro metody při kontrole kontrolní výrazy přes odvozené data.
+IntelliTest generuje testovací případy výběrem posloupnost metody provádění v rámci spuštění testu, a potom generování vstupů pro metody při kontrole nad daty odvozené kontrolní výrazy.
 
-A [testování částí parametrizované](#parameterized-unit-testing) přímo stavy posloupnost metoda volá v jeho obsahu.
+A [parametrizovaný test části](#parameterized-unit-testing) přímo státy pořadí metody volá v těle.
 
-Když IntelliTest potřebuje vytvořit objekty, budou volání konstruktorů a metod vytváření automaticky přidat do pořadí podle potřeby.
+Když IntelliTest potřebuje k vytvoření objektů, volání konstruktorů a metod objekt pro vytváření se přidají automaticky pořadí podle potřeby.
 
 <a name="parameterized-unit-testing"></a>
 ## <a name="parameterized-unit-testing"></a>Parametrizované testování částí
 
-*Parametrizovaných testů částí* (PUT) jsou testy, které trvat parametry. Na rozdíl od tradiční jednotky testy, které jsou obvykle uzavřeny metody, PUT trvat libovolnou sadu parametrů. Je to jednoduché? Ano – odtud IntelliTest se pokusí [generovat (minimální) sadu vstupy](input-generation.md) , [plně zahrnují](input-generation.md#dynamic-code-coverage) kód dosažitelný z testu.
+*Parametrizované testy částí* (vloží) jsou testy, které přijímají parametry. Na rozdíl od tradičních jednotkové testy, které jsou obvykle zavřené metody, vloží trvat libovolnou sadu parametrů. Je to jednoduché? Ano – odtud IntelliTest se pokusí [generovat (minimální) sadu vstupů](input-generation.md) , který [plně zahrnují](input-generation.md#dynamic-code-coverage) dosažitelný z testovacího kódu.
 
-PUT jsou definovány pomocí [PexMethod](attribute-glossary.md#pexmethod) vlastní atribut podobným způsobem Mstestu (nebo NUnit, xUnit). PUT jsou logicky seskupeny do třídy, které jsou označené metody instance [PexClass](attribute-glossary.md#pexclass). Následující příklad ukazuje jednoduchý PUT uložené v **MyPexTest** třídy:
+Vloží jsou definovány pomocí [PexMethod](attribute-glossary.md#pexmethod) vlastního atributu podobným způsobem MSTest (nebo NUnit, xUnit). Vloží jsou logicky seskupeny do třídy označené metody instance [PexClass](attribute-glossary.md#pexclass). Následující příklad ukazuje jednoduchý PUT uložené v **MyPexTest** třídy:
 
-```
+```csharp
 [PexMethod]
 void ReplaceFirstChar(string target, char c) {
 
@@ -69,9 +71,9 @@ void ReplaceFirstChar(string target, char c) {
 }
 ```
 
-kde **ReplaceFirstChar** je metoda, která nahrazuje první znak řetězce:
+kde **ReplaceFirstChar** je metoda, která nahradí první znak řetězce:
 
-```
+```csharp
 class StringHelper {
     static string ReplaceFirstChar(string target, char c) {
         if (target == null) throw new ArgumentNullException();
@@ -81,9 +83,9 @@ class StringHelper {
 }
 ```
 
-Z tento test můžete automaticky IntelliTest [generovat vstupy](input-generation.md) pro PUT, který popisuje mnoho cesty provádění otestované kódu. Každé zadané, která se vztahuje provádění různých cesta získá "serializovány" jako testování částí:
+Tento test posuzujeme IntelliTest může automaticky [generovat vstupy](input-generation.md) pro PUT, která zahrnuje mnoho cesty spuštění testovaného kódu. Každá vstupní, že jako testování částí, která se vztahuje různých pracovních cestu získá "serializovat":
 
-```
+```csharp
 [TestMethod, ExpectedException(typeof(ArgumentNullException))]
 void ReplaceFirstChar0() {
     this.ReplaceFirstChar(null, 0);
@@ -96,11 +98,11 @@ void ReplaceFirstChar10() {
 ```
 
 <a name="generic-parameterized"></a>
-## <a name="generic-parameterized-unit-testing"></a>Obecné parametrizované testování částí
+## <a name="generic-parameterized-unit-testing"></a>Obecné parametry testování částí
 
-Testování částí parametrizované může být obecné metody. V takovém případě musí uživatel zadat typy používaný k vytváření instancí metodu pomocí [PexGenericArguments](attribute-glossary.md#pexgenericarguments).
+Parametrizované testy částí, může být obecné metody. V takovém případě musí uživatel zadat typy použité k vytvoření instance metodu pomocí [PexGenericArguments](attribute-glossary.md#pexgenericarguments).
 
-```
+```csharp
 [PexClass]
 public partial class ListTest {
     [PexMethod]
@@ -114,11 +116,11 @@ public partial class ListTest {
 <a name="allowing-exceptions"></a>
 ## <a name="allowing-exceptions"></a>Povolení výjimek
 
-IntelliTest poskytuje mnoho atributů ověření ke třídění výjimky do očekávané výjimky a neočekávané výjimky.
+IntelliTest poskytuje mnoho atributů ověření třídění výjimky na očekávané výjimky a neočekávané výjimky.
 
-Očekávané výjimky generovat záporné testovacích případů s příslušnou poznámkou jako **ExpectedException (typeof (*xxx*))**, zatímco neočekávané výjimky generovat selhání testovací případy.
+Očekávané výjimky generovat negativní testovací případy s odpovídající poznámkou jako **ExpectedException (typeof (*xxx*))**, generovat neočekávané výjimky selhání testovací případy.
 
-```
+```csharp
 [PexMethod, PexAllowedException(typeof(ArgumentNullException))]
 void SomeTest() {...}
 ```
@@ -131,22 +133,22 @@ Validátory jsou:
 * [PexAllowedExceptionFromTypeUnderTest](attribute-glossary.md#pexallowedexceptionfromtypeundertest): umožňuje typ konkrétní výjimky z typu v rámci testu
 
 <a name="internal-types"></a>
-## <a name="testing-internal-types"></a>Testování interní typy
+## <a name="testing-internal-types"></a>Testování vnitřní typy
 
-IntelliTest můžete "test" interní typy tak dlouho, dokud je uvidí. Pro IntelliTest a zjistit typy následující atribut přidána do produktu nebo testování projektu Visual Studio IntelliTest průvodci:
+IntelliTest můžete "test" vnitřní typy, tak dlouho, dokud jej můžete zobrazit. Pro Intellitestu a zjistit typy následující atribut přidali do svého produktu nebo testovacího projektu pomocí průvodců Visual Studio IntelliTest:
 
-```
+```csharp
 [assembly: InternalsVisibleTo("Microsoft.Pex, PublicKey=002400000480000094000000060200000024000052534131000400000100010007d1fa57c4aed9f0a32e84aa0faefd0de9e8fd6aec8f87fb03766c834c99921eb23be79ad9d5dcc1dd9ad236132102900b723cf980957fc4e177108fc607774f29e8320e92ea05ece4e821c0a5efe8f1645c4c0c93c1ab99285d622caa652c1dfad63d745d6f2de5f17e5eaf0fc4963d261c8a12436518206dc093344d5ad293
 ```
 
 <a name="assumptions-and-assertions"></a>
 ## <a name="assumptions-and-assertions"></a>Předpoklady a kontrolní výrazy
 
-Uživatelé mohou používat předpoklady a kontrolní výrazy pro express [předběžné podmínky](#precondition) (předpoklady) a [vstupních](#postcondition) (kontrolní výrazy) o jejich testy. Když IntelliTest generuje sadu hodnot parametrů a "jsou zde popsány" kód, může porušení předpokládá testu. Pokud k tomu dojde, nebude vygenerování testu pro tuto cestu, ale bude bez upozornění ignorovat.
+Uživatelé můžou pomocí předpoklady a kontrolní výrazy express [předběžné podmínky](#precondition) (předpoklady) a [vstupních](#postcondition) (kontrolní výrazy) o jejich testy. Když IntelliTest generuje sadu hodnot parametrů a "zkoumá" kód, může porušovat předpokládá testu. Pokud k tomu dojde, nebude generovat testu pro tuto cestu, ale bude tiše ignorovat.
 
-Kontrolní výrazy jsou dobře známé koncept v systémů testů jednotek regulární, takže IntelliTest již "rozumí" integrované **Assert** třídy poskytované každé podporované test framework. Ale většina architektury neposkytují **Assume** třídy. V takovém případě IntelliTest poskytuje [PexAssume](static-helper-classes.md#pexassume) třídy. Pokud nechcete použít existující architekturu test, IntelliTest má také [PexAssert](static-helper-classes.md#pexassert) třídy.
+Kontrolní výrazy jsou dobře známé koncept v rozhraní pro testování částí pravidelně, tak IntelliTest již "rozumí" integrovaného **Assert** tříd poskytovaných v jednotlivých podporovaných testovacího rozhraní. Však neposkytují většina architektur **předpokládat** třídy. V takovém případě IntelliTest poskytuje [PexAssume](static-helper-classes.md#pexassume) třídy. Pokud nechcete použít existující testovací rozhraní, Intellitestu má také [PexAssert](static-helper-classes.md#pexassert) třídy.
 
-```
+```csharp
 [PexMethod]
 public void Test1(object o) {
     // precondition: o should not be null
@@ -156,9 +158,9 @@ public void Test1(object o) {
 }
 ```
 
-Konkrétně bez nullness předpokládá můžete být zakódován jako vlastní atribut:
+Zejména předpokladů hodnotu Null, může být zakódován jako vlastní atribut:
 
-```
+```csharp
 [PexMethod]
 public void Test2([PexAssumeNotNull] object o)
 // precondition: o should not be null
@@ -168,43 +170,43 @@ public void Test2([PexAssumeNotNull] object o)
 ```
 
 <a name="precondition"></a>
-## <a name="precondition"></a>Předběžnou podmínku.
+## <a name="precondition"></a>Předběžné podmínky
 
-Předběžné podmínky metody vyjadřoval podmínky, za kterých bude úspěšné metodu.
+Předběžná podmínka metody vyjadřuje podmínky, za kterých bude úspěšné metodu.
 
-Obvykle je předpoklad vynucené kontroly parametry a stav objektu a vyvolávání **ArgumentException –** nebo **InvalidOperationException** Pokud je porušeno.
+Obvykle je předpoklad vynuceny kontroly parametrů a stav objektu a vyvolání **ArgumentException** nebo **InvalidOperationException** Pokud je porušena.
 
-V IntelliTest předpokladem [testování částí parametrizované](#parameterized-unit-testing) vyjádřený [PexAssume](static-helper-classes.md#pexassume).
+V IntelliTest předpokladem [parametrizovaný test části](#parameterized-unit-testing) je vyjádřené pomocí [PexAssume](static-helper-classes.md#pexassume).
 
 <a name="postcondition"></a>
-## <a name="postcondition"></a>Koncová podmínka
+## <a name="postcondition"></a>Neplatná následná
 
-Koncová podmínka metody vyjadřoval podmínky, které by měl obsahovat během a po spuštění metody, za předpokladu, že jeho předpoklady byly původně platný.
+Neplatná následná metody vyjadřuje podmínky, které by měly mít během a po spuštění metody, za předpokladu, že jeho předpoklady byly původně platný.
 
-Obvykle je koncová podmínka vynucené volání **Assert** metody.
+Obvykle se vynucuje neplatná následná volání **Assert** metody.
 
-S IntelliTest, koncová podmínka z [testování částí parametrizované](#parameterized-unit-testing) vyjádřený [PexAssert](static-helper-classes.md#pexassert).
+Pomocí funkce IntelliTest neplatná následná z [parametrizovaný test části](#parameterized-unit-testing) je vyjádřené pomocí [PexAssert](static-helper-classes.md#pexassert).
 
 <a name="test-failures"></a>
-## <a name="test-failures"></a>Selhání při testu
-Když generovaného testovacího případu nepovede?
+## <a name="test-failures"></a>Neúspěšné testy
+Když vygenerované testovací případ selhání?
 
-1. Jestliže neskončí v rámci [nakonfigurovat cestu hranice](exploration-bounds.md), je považován za neúspěšný, pokud [TestExcludePathBoundsExceeded](exploration-bounds.md#testexcludepathboundsexceeded) je možnost nastavena
+1. Jestliže neskončí v rámci [nakonfigurovaná cesta hranice](exploration-bounds.md), se považují za selhání, pokud [TestExcludePathBoundsExceeded](exploration-bounds.md#testexcludepathboundsexceeded) nastavená možnost
 
-1. V případě, test nastane **PexAssumeFailedException**, neproběhne úspěšně. Ale ho je obvykle odfiltrovat Pokud [TestEmissionFilter](exploration-bounds.md#testemissionfilter) je nastaven na **všechny**
+1. Pokud vyvolá testu **PexAssumeFailedException**, neproběhne úspěšně. Ale to je obvykle odfiltrována Pokud [TestEmissionFilter](exploration-bounds.md#testemissionfilter) je nastavena na **všechny**
 
-1. Pokud je v rozporu test [assertion](#assumptions-and-assertions), například podle došlo k výjimce porušení assertion jednotky testování framework, se nezdaří
+1. Pokud test je v rozporu [kontrolní výraz](#assumptions-and-assertions); například vyvoláním výjimku kontrolního výrazu porušení jednotkových testů se nezdaří
 
-Pokud žádná z výše uvedeného produkují rozhodnutí, testovací úspěšné pouze v případě nevyvolá výjimku. Kontrolní výraz porušení jsou zpracovány stejným způsobem jako výjimky.
+Pokud žádná z výše uvedené vytvoří rozhodnutí, test bude úspěšné pouze v případě nevyvolá výjimku. Kontrolní výraz porušení zachází stejně jako výjimky.
 
 <a name="setup-teardown"></a>
-## <a name="setup-and-tear-down"></a>Instalační program a přerušit
+## <a name="setup-and-tear-down"></a>Nastavení a dovolí
 
-V rámci integrace s systémů testování IntelliTest podporuje zjišťování a spuštění instalace a přerušit metody.
+IntelliTest podporuje zjišťování a spuštění v rámci integrace s rozhraní pro testování, nastavení a dovolí metody.
 
 **Příklad**
 
-```
+```csharp
 using Microsoft.Pex.Framework;
 using NUnit.Framework;
 
@@ -232,15 +234,14 @@ namespace MyTests
         }
     }
 }
-
 ```
 
 <a name="further-reading"></a>
 ## <a name="further-reading"></a>Další čtení
 
-* [Testování, aby vazba kódu](https://blogs.msdn.microsoft.com/visualstudioalm/2015/04/18/smart-unit-tests-test-to-code-binding-test-case-management/)
-* [Jeden test pro všechna pravidla](https://blogs.msdn.microsoft.com/visualstudioalm/2015/07/05/intellitest-one-test-to-rule-them-all/)
+* [Testování vazby kódu](https://blogs.msdn.microsoft.com/devops/2015/04/18/smart-unit-tests-test-to-code-binding-test-case-management/)
+* [Jeden test pro vládne všem.](https://blogs.msdn.microsoft.com/devops/2015/07/05/intellitest-one-test-to-rule-them-all/)
 
-## <a name="got-feedback"></a>Zpětné vazby máte?
+## <a name="got-feedback"></a>Máte nějakou zpětnou vazbu?
 
-Vystavení vašich nápadů a funkce požadavky na  **[UserVoice](https://visualstudio.uservoice.com/forums/121579-visual-studio-2015/category/157869-test-tools?query=IntelliTest)**.
+Publikovat své nápady a funkce na požadavky [komunity vývojářů](https://developercommunity.visualstudio.com/content/idea/post.html?space=8).

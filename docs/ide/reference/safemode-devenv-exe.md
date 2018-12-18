@@ -1,10 +1,9 @@
 ---
-title: -SafeMode (devenv.exe) | Microsoft Docs
-ms.custom: ''
+title: -SafeMode (devenv.exe)
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: reference
 helpviewer_keywords:
 - /SafeMode Devenv switch
 - Devenv, /SafeMode switch
@@ -15,32 +14,34 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c8748a6dadaee41a5e615742715a92240b74ab8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6df78ec4be1fc94951634b84a98e80dc1403a41b
+ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51948735"
 ---
 # <a name="safemode-devenvexe"></a>/SafeMode (devenv.exe)
-Spustí [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] v nouzovém režimu, načítání výchozí prostředí a služeb.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-devenv /SafeMode   
-```  
-  
-## <a name="remarks"></a>Poznámky  
- Tento přepínač zabrání všechny VSPackages třetích stran při načítání [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] spustí, čímž zajišťuje stabilní provádění.  
-  
-## <a name="description"></a>Popis  
- Následující příklad spustí [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] v nouzovém režimu.  
-  
-## <a name="code"></a>Kód  
-  
-```  
-Devenv.exe /SafeMode  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Devenv – přepínače příkazového řádku](../../ide/reference/devenv-command-line-switches.md)
+Spustí [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] v nouzovém režimu, načítání výchozí prostředí a služeb.
+
+## <a name="syntax"></a>Syntaxe
+
+```cmd
+devenv /SafeMode
+```
+
+## <a name="remarks"></a>Poznámky
+ Při načítání rozšíření VSPackages všechny třetích stran zabraňuje tento přepínač [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] se spustí, čímž zajišťuje stabilní spuštění.
+
+## <a name="description"></a>Popis
+ Následující příklad spustí [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] v nouzovém režimu.
+
+## <a name="code"></a>Kód
+
+```cmd
+Devenv.exe /SafeMode
+```
+
+## <a name="see-also"></a>Viz také
+
+- [Přepínače příkazového řádku nástroje devenv](../../ide/reference/devenv-command-line-switches.md)

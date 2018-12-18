@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Úprava výchozí webové stránky pro aplikaci ClickOnce | Microsoft Docs'
+title: 'Postupy: Úprava výchozí webové stránky pro aplikaci ClickOnce | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -19,37 +19,38 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 743d7f259da4129eda578808d1ce04619104a3f1
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d64e6432c1bfe696bf3b116aa35b5f4a5c597507
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39153134"
 ---
 # <a name="how-to-customize-the-default-web-page-for-a-clickonce-application"></a>Postupy: Úprava výchozí webové stránky pro aplikaci ClickOnce
-Při publikování aplikací ClickOnce k webu, je automaticky generována a publikována spolu s aplikací na webové stránce. Výchozí stránka obsahuje název aplikace a odkazy na instalaci aplikace, instalace požadovaných součástí nebo získat přístup k nápovědě na webu MSDN.  
+Při publikování aplikace ClickOnce k webu, je automaticky generována a spolu s aplikace publikována na webové stránce. Výchozí stránka obsahuje název aplikace a odkazy na instalaci aplikace, instalace požadovaných součástí nebo nápovědu na webu MSDN.  
   
 > [!NOTE]
->  Skutečné odkazy, které se zobrazí na stránce závisí na počítači, kde prohlížení stránky a co chcete zahrnout požadované součásti.  
+>  Skutečné odkazy, které se zobrazí na stránce jsou závislé na počítači, kde je zobrazení stránky a co požadavky jsou včetně.  
   
- Název výchozí webové stránky je Publish.htm; můžete změnit název v **Návrhář projektu**. Další informace najdete v tématu [postupy: určení stránky publikování pro aplikaci ClickOnce](../deployment/how-to-specify-a-publish-page-for-a-clickonce-application.md).  
+ Název výchozí webové stránky je *Publish.htm*; můžete změnit název v **Návrháře projektu**. Další informace najdete v tématu [postupy: určení stránky publikování pro aplikaci ClickOnce](../deployment/how-to-specify-a-publish-page-for-a-clickonce-application.md).  
   
- Publish.htm – webová stránka je publikován pouze v případě, že je zjištěna novější verze.  
+ *Publish.htm* webová stránka je publikován pouze v případě, že byla zjištěna novější verze.  
   
 > [!NOTE]
->  Změny, které provedete vaše **publikovat** nastavení nebude mít vliv na stránce Publish.htm s jednou výjimkou: Pokud přidáte nebo odeberete požadavky po počátečním publikování, seznam požadovaných součástí už nebude přesná. Je potřeba upravit text pro odkaz požadovaných tak, aby odrážely změny.  
+>  Změny provedené na vaše **publikovat** nastavení nebude mít vliv *Publish.htm* stránky s jednou výjimkou: Pokud přidáte nebo odeberete požadavky po počátečním publikování, bude seznam požadovaných součástí nadále již nebudou přesné. Je potřeba upravit text pro požadovaný odkaz tak, aby odrážely změny.  
   
-### <a name="to-customize-the-publish-web-page"></a>Chcete-li přizpůsobit publikování webové stránky  
+### <a name="to-customize-the-publish-web-page"></a>Chcete-li přizpůsobit publikované webové stránky  
   
-1.  Publikování aplikace ClickOnce webových umístění. Další informace najdete v tématu [postupy: publikování aplikace ClickOnce pomocí Průvodce publikováním](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md).  
+1.  Publikování aplikace ClickOnce k umístění webu. Další informace najdete v tématu [postupy: publikování aplikace ClickOnce pomocí Průvodce publikováním](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md).  
   
-2.  Na webovém serveru otevřete soubor Publish.htm v vizuálního návrháře webové nebo jiný editor HTML.  
+2.  Na webovém serveru, otevřete *Publish.htm* souboru v Visual Web Designer nebo jiného editoru HTML.  
   
-3.  Přizpůsobení stránce podle potřeby a uložte ho.  
+3.  Přizpůsobení stránky podle potřeby a uložte ho.  
   
-4.  Volitelné. Abyste zabránili přepsání přizpůsobené publikování webové stránky Visual Studio, zrušte zaškrtnutí políčka **automaticky generovat webovou stránku nasazení po každé publikování** v dialogovém okně Možnosti publikování.  
+4.  Volitelné. Chcete-li zabránit přepsání publikovat vlastní webovou stránku sady Visual Studio, zrušte zaškrtnutí políčka **automaticky generovat webovou stránku nasazení po každé publikovat** v **možnosti publikování** dialogové okno.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [ClickOnce – zabezpečení a nasazení](../deployment/clickonce-security-and-deployment.md)   
  [Publikování aplikací ClickOnce](../deployment/publishing-clickonce-applications.md)   
  [Postupy: instalace předpokladů s aplikací ClickOnce](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)   
- [Postupy: Určení stránky publikování pro aplikaci ClickOnce](../deployment/how-to-specify-a-publish-page-for-a-clickonce-application.md)
+ [Postupy: určení stránky publikování pro aplikaci ClickOnce](../deployment/how-to-specify-a-publish-page-for-a-clickonce-application.md)

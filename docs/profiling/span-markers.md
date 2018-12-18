@@ -1,5 +1,5 @@
 ---
-title: Značky rozpětí | Microsoft Docs
+title: Značky rozpětí | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -12,30 +12,31 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f6952408611bfdd59a3d488db2a7f34524588edf
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 37f2dd735b7deb2d4fed1232c2ba690b26a9fde0
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35676456"
 ---
 # <a name="span-markers"></a>Značky rozpětí
-Značku span představuje smysluplný fázi aplikace. Například můžete rozpětí představují interval čas, během kterého probíhá zpracování konkrétní pracovní položky. Jeho délka představuje dobu trvání odpovídající fázi aplikace. Tento obrázek ukazuje rozpětí v Concurrency Visualizer:  
+Značka span představuje smysluplné fáze aplikace. Například můžete použít rozpětí k reprezentaci interval doby, během kterého se zpracovává konkrétní pracovní položce. Jeho délka představuje dobu trvání odpovídající fáze aplikace. Tento obrázek ukazuje rozpětí ve Vizualizátor souběžnosti:  
   
  ![Značku span v Concurrency Visualizer](../profiling/media/cvmarkerspan.png "CVMarkerSpan")  
-Značku span v vizualizér souběžnosti  
+Značka span ve vizualizátoru souběžnosti  
   
-## <a name="span-category"></a>Kategorie rozpětí  
- Značku span se zobrazí v jedné z pěti různých barev, v závislosti na jeho kategorii. Barvy se opakuje, pokud existuje více než pět kategorií. Kategorie může být jakékoli celé číslo. Tento obrázek ukazuje pět možných barev:  
+## <a name="span-category"></a>Kategorie značky span  
+ V jednom z pěti různých barev, v závislosti na jeho kategorie se zobrazí značku span. Barvy se opakují, pokud existuje více než pět kategorií. Kategorie může být libovolné celé číslo. Tento obrázek ukazuje pět možných barev:  
   
- ![Pět rozpětí v různých kategorií](../profiling/media/cvmarkerspancategory.png "CVMarkerSpanCategory")  
-Barvy nejprve pěti kategorií rozpětí  
+ ![Pět rozsahy v různých kategoriích](../profiling/media/cvmarkerspancategory.png "CVMarkerSpanCategory")  
+Barvy prvních pět kategorií rozpětí  
   
 ## <a name="span-aggregation-markers"></a>Agregace značky rozpětí  
- Někdy rozpětí značek tak dojít blízko sebe navzájem v Concurrency Visualizer, že se nemůže být vykreslován jednotlivě. Pokud k tomu dojde, šedá *značky span agregace* , se zobrazí představuje základní rozpětí. Pokud se ukazatel myši na jednu z těchto ikon, zobrazí popisek počet základní rozsahy, které představuje. Pokud chcete zobrazit rozsahy, přiblížení. Pokud přiblížit úplně a stále získat značku span agregace, můžete zobrazit základní značky span v [sestava značek](../profiling/markers-report.md). Na tomto obrázku značky span agregace:  
+ Někdy span značky tak dojít blízko sebe ve vizualizátoru souběžnosti, že se nedá vykreslit jednotlivě. Pokud k tomu dojde, šedé *značky span agregace* , že se zobrazí představuje základní rozpětí. Když ukazatel myši na jednu z těchto ikon, zobrazí popisek počet základní rozsahy, které jsou reprezentovány. Chcete-li zobrazit rozsahy, Přiblížit. Pokud přiblížíte úplně a zachovat si značka span agregace, můžete zobrazit základní značky span v [sestava značek](../profiling/markers-report.md). Tento obrázek ukazuje značku span agregace:  
   
  ![Agregace span značky v Concurrency Visualizer](../profiling/media/cvmarkerspanaggregate.png "CVMarkerSpanAggregate")  
 Značka span agregace  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Značky Vizualizéru souběžnosti](../profiling/concurrency-visualizer-markers.md)   
  [SDK Vizualizéru souběžnosti](../profiling/concurrency-visualizer-sdk.md)

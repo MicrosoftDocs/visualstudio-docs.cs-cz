@@ -1,5 +1,5 @@
 ---
-title: Buildprojectonload – Element (šablony sady Visual Studio) | Microsoft Docs
+title: Buildprojectonload – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,16 +11,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 689d2510a8513b880f3c2cddca584449c03217b4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3e5cbcc06fcc7a936918de8b1a9d4c44d9938d94
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39154155"
 ---
-# <a name="buildprojectonload-element-visual-studio-templates"></a>BuildProjectOnLoad – element (šablony sady Visual Studio)
-Jak vytvořit a přidat je do řešení je založena pouze nové projekty. Není sestaven celé řešení.  
+# <a name="buildprojectonload-element-visual-studio-templates"></a>Buildprojectonload – element (šablony sady Visual Studio)
+Jak vytvořit a přidat je do řešení, sestavení pouze nové projekty. Celé řešení není vytvořená.  
   
- \<VSTemplate >  
+ \<Vstemplate – >  
  \<TemplateData >  
  \<BuildProjectOnLoad>  
   
@@ -36,25 +37,25 @@ Jak vytvořit a přidat je do řešení je založena pouze nové projekty. Není
 ### <a name="attributes"></a>Atributy  
  Žádné  
   
-### <a name="child-elements"></a>Podřízené elementy  
+### <a name="child-elements"></a>Podřízené prvky  
  Žádné  
   
-### <a name="parent-elements"></a>Nadřazené elementy  
+### <a name="parent-elements"></a>Nadřazené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|TemplateData|Rozděluje šablonu a definuje, jak se zobrazuje v obou **nový projekt** a **přidat novou položku** dialogová okna.|  
+|`TemplateData`|Rozděluje šablonu a definuje, jak se zobrazuje v obou **nový projekt** a **přidat novou položku** dialogových oknech.|  
   
 ## <a name="text-value"></a>Textová hodnota  
  Je vyžadována textová hodnota.  
   
- Text musí být buď `true` nebo `false` který označuje, jestli k vytvoření nového projektu při vytvoření ze šablony.  
+ Text musí být buď `true` nebo `false` označující, jestli se má sestavení pouze nový projekt, když je vytvořen z šablony.  
   
 ## <a name="remarks"></a>Poznámky  
- `BuildProjectOnLoad` je volitelný element. Výchozí hodnota je `false`.  
+ `BuildProjectOnLoad` je volitelný prvek. Výchozí hodnota je `false`.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ilustruje metadata pro šablonu Visual C#.  
+ Následující příklad ukazuje metadata pro šablony Visual C#.  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  
@@ -81,6 +82,6 @@ Jak vytvořit a přidat je do řešení je založena pouze nové projekty. Není
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)   
- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)
+ [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)

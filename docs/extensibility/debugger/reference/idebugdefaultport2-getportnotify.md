@@ -1,5 +1,5 @@
 ---
-title: IDebugDefaultPort2::GetPortNotify | Microsoft Docs
+title: IDebugDefaultPort2::GetPortNotify | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: eca2893f388c4dabb244d042d652d3ab604d88bf
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: feb21f020f6a470b9fded56939987f0a03333206
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872732"
 ---
 # <a name="idebugdefaultport2getportnotify"></a>IDebugDefaultPort2::GetPortNotify
-Tato metoda získá [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md) rozhraní pro tento port.  
+Tato metoda načte [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md) rozhraní pro tento port.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,10 +44,10 @@ int GetPortNotify(
  [out] [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md) objektu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Za normálních okolností `QueryInterface` metoda je volána k implementaci objektu [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) rozhraní získat [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md) rozhraní. Existují však případech, ve kterých požadované rozhraní je implementováno na jiný objekt. Tato metoda skryje těchto okolností a vrátí `IDebugPortNotify2` rozhraní z objektu nejvhodnější.  
+ Za normálních okolností `QueryInterface` metoda je volána při implementaci objektu [IDebugPort2](../../../extensibility/debugger/reference/idebugport2.md) rozhraní získat [IDebugPortNotify2](../../../extensibility/debugger/reference/idebugportnotify2.md) rozhraní. Nicméně existují okolnosti, ve kterých požadované rozhraní je implementováno na jiný objekt. Tato metoda skrývá situace a vrátí `IDebugPortNotify2` rozhraní z objektu nejvhodnější.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugDefaultPort2](../../../extensibility/debugger/reference/idebugdefaultport2.md)   

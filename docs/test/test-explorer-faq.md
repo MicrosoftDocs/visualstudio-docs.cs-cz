@@ -1,6 +1,7 @@
 ---
-title: Visual Studio Průzkumníka testů – nejčastější dotazy | Microsoft Docs
-ms.date: 1/15/2018
+title: Průzkumník testů – nejčastější dotazy
+ms.date: 11/07/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,86 +16,148 @@ ms.workload:
 - multiple
 author: kendrahavens
 manager: douge
-ms.openlocfilehash: 7612f13f71bed42b5ea416a74c50674ac028f42f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 59c4cd06ee6c698ceb62803fb43b611daa298512
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055261"
 ---
-# <a name="visual-studio-test-explorer-faq"></a>Visual Studio Průzkumníka testů – nejčastější dotazy
+# <a name="visual-studio-test-explorer-faq"></a>Průzkumník testů sady Visual Studio – nejčastější dotazy
 
-## <a name="test-discovery"></a>Test zjišťování
+## <a name="dynamic-test-discovery"></a>Zjišťování dynamických testů
 
-### <a name="1-the-test-explorer-is-not-discovering-my-tests-that-are-dynamically-defined-for-example-theories-custom-adapters-custom-traits-ifdefs-etc-how-can-i-discover-these-tests"></a>1. Průzkumníka testů není zjišťování Moje testů, které jsou definovány dynamicky. (Například teorií vlastní adaptéry, vlastní vlastnosti, #ifdefs, atd.) Jak mohou zjistit tyto testy?
+**Průzkumník testů není zjišťování mých testů, které jsou definována dynamicky. (Například teorie, vlastní adaptéry, vlastní vlastnosti, #ifdefs atd.) Jak lze zjistit tyto testy?**
 
-  Sestavení projektu a zajistěte, aby na základě sestavení zjišťování zapnutý **nástroje > Možnosti > Test**.
+  Sestavení projektu a ujistěte se, že je zapnuté zjišťování na základě sestavení **nástroje** > **možnosti** > **Test**.
 
-  [Test zjišťování reálném čase](https://go.microsoft.com/fwlink/?linkid=862824) je zjišťování testů založené na zdroje. Ho nemůže najít testy, které používají teorií, vlastní adaptéry, vlastní vlastnosti `#ifdef` příkazy, protože jsou definovány v době běhu apod. Sestavení je vyžadována pro tyto testy mají být zjišťované přesně. V 15.6 verze Preview sestavení na základě zjišťování (tradiční discoverer) se spustí až po sestavení. Toto nastavení znamená zjištění testovací reálném čase zjistí tolik testy, jak můžete při úpravách a zjišťování na základě sestavení umožňuje dynamicky definované testy se objeví po sestavení. Test zjišťování reálném čase zlepšuje odezvu, ale nepřesahuje umožňují získat úplné a přesné výsledky po sestavení.
+  [Zjišťování testů v reálném čase](https://go.microsoft.com/fwlink/?linkid=862824) je založen zdroj testu zjišťování. Ho nelze zjistit testy, které používají teorie, vlastní adaptéry, vlastní vlastnosti `#ifdef` příkazy a další, protože máte definovaný v době běhu. Sestavení je vyžadován pro tyto testy na přesně najít. V sadě Visual Studio 2017 verze 15.6 a novější se spustí zjišťování na základě sestavení (tradiční prozkoumání) až po sestavení. Toto nastavení znamená, že v reálném čase testu zjišťování najde libovolný počet testů, jak jde při úpravách a zjišťování na základě sestavení umožňuje dynamicky definované testů se zobrazí po sestavení. Zjišťování testů v reálném čase zlepšuje odezvu, ale nepřesahuje umožňují získat úplné a přesné výsledky po sestavení.
 
-### <a name="2-what-does-the--plus-symbol-that-appears-in-the-top-line-of-test-explorer-mean"></a>2. Jaké '+' (symbol, který se zobrazí v horní řádek Průzkumníka testů střední plus)?
+## <a name="test-explorer--plus-symbol"></a>Průzkumník testů "+" (plus) symbol
 
-  '+' (A) symbol označuje další testy mohou být zjištěny po sestavení tak dlouho, dokud zjišťování na základě sestavení je zapnutý. Zobrazí se Pokud dynamicky definované, že testy jsou zjištěna v projektu.
+**Co dělá "+" (plus) symbol, který se zobrazí v horní zobrazený řádek znamená Průzkumník testů?**
 
-  ![Souhrn řádku symbol plus](media/testex-plussymbol.png)
+  "+" (Plus) symbol označuje, že další testy mohou být zjištěny po sestavení, tak dlouho, dokud je zapnuté zjišťování na základě sestavení. Tento symbol se zobrazí dynamicky definované v případě, že testy se zjistí ve vašem projektu.
 
-### <a name="3-assembly-based-discovery-is-no-longer-working-for-my-project-how-do-i-turn-it-back-on"></a>3. Zjišťování na základě sestavení již nefunguje pro moje projekt. Jak lze zapnout ji zpět na?
+  ![Souhrn řádku znaménko plus](media/testex-plussymbol.png)
 
-  Přejděte na **nástroje > Možnosti > Test** a zaškrtněte políčko pro **kromě zjistit testů z předdefinovaných sestavení po sestavení.**
+## <a name="assembly-based-discovery"></a>Zjišťování na základě sestavení
+
+**Zjišťování na základě sestavení je už nefunguje pro svůj projekt. Jak můžu ho znova zapnout?**
+
+  Přejděte na **nástroje** > **možnosti** > **testovací** a zaškrtněte políčko u **můžete zjistit také ze zkompilovaných sestavení po testy sestavení.**
 
   ![Možnosti založené na sestavení](media/testex-toolsoptions.png)
 
-### <a name="4-tests-now-appear-in-test-explorer-while-i-type-without-having-to-build-my-project-what-changed"></a>4. Testy se teď zobrazují v Průzkumníka testů při psaní, aniž by museli sestavení projektu. Co se změnilo?
+## <a name="real-time-test-discovery"></a>Zjišťování testů v reálném čase
 
-  Tato funkce je volána [reálném čase testu zjišťování](https://go.microsoft.com/fwlink/?linkid=862824). Analyzátor Roslyn používá ke zjištění testy a naplnit Průzkumníka testů v reálném čase, aniž by bylo potřeba sestavení projektu. Další informace o chování testu zjišťování pro dynamicky definované testy například teorií nebo vlastní vlastnosti najdete v části Nejčastější dotazy k č. 1.
+**Testy se teď zobrazují v Průzkumníku testů při psaní, aniž byste museli svůj projekt sestavovat. Co se změnilo?**
 
-### <a name="5-what-languages-and-test-frameworks-can-use-real-time-test-discovery"></a>5. Jaké jazyků a rozhraní test můžete použít zjišťování testování reálném čase?
+  Tato funkce se nazývá [zjišťování testů v reálném čase](https://go.microsoft.com/fwlink/?linkid=862824). Roslyn analyzátor používá k vyhledání testů a naplnit Průzkumníka testů v reálném čase, aniž by bylo potřeba svůj projekt sestavit. Další informace o chování zjišťování testů pro dynamicky definované testy, jako je například teorie nebo vlastní vlastnosti naleznete v tématu Nejčastější dotazy k č. 1.
 
-  [Test zjišťování reálném čase](https://go.microsoft.com/fwlink/?linkid=862824) funguje pouze pro spravované jazyky (C# a Visual Basic), protože je sestaven pomocí Roslyn kompilátoru. Prozatím se reálném čase testu zjišťování funguje výhradně u xUnit, NUnit a Mstestu architektury.
+## <a name="real-time-test-discovery-compatibility"></a>Kompatibilita zjišťování testů v reálném čase
 
-### <a name="6-how-can-i-turn-on-logs-for-the-test-explorer"></a>6. Jak se můžete zapnout na protokoly pro Průzkumníka testů?
+**Jaké jazyky a rozhraní pro testování můžete použít zjišťováním testů v reálném čase?**
 
-  Přejděte na **nástroje > Možnosti > Test** a najdete v části protokolování existuje.
+  [Zjišťování testů v reálném čase](https://go.microsoft.com/fwlink/?linkid=862824) funguje jenom pro spravované jazyky (C# a Visual Basic), protože je vytvořen pomocí kompilátoru Roslyn. Prozatím se zjišťování testů v reálném čase funguje jenom pro xUnit, NUnit a MSTest architektur.
 
-### <a name="7-why-are-my-tests-in-uwp-projects-not-discovered-until-i-deploy-my-app"></a>7. Proč se Moje testů v projekty UWP nezjištěné dokud nasadit mé aplikace?
+## <a name="test-explorer-logs"></a>Protokoly Průzkumníka testů
 
-  Testy UWP cíle jiný modul runtime při nasazení aplikace. To znamená, že ke zjišťování testů přesně pro projekty UWP nejen potřebujete sestavení projektu, ale také nasadit.
+**Jak můžu zapnout protokolování pro Průzkumník testů?**
 
-### <a name="8-how-does-sorting-test-results-work-in-the-hierarchy-view"></a>8. Jak funguje řazení výsledků testů v zobrazení hierarchie?
+  Přejděte do **nástroje** > **možnosti** > **Test** a najdete v části protokolování existuje.
 
-  Zobrazení hierarchie seřadí testy abecedně jako naproti tomu mají podle výsledek. Jiné skupiny nastavením normálně seřadit výsledky testů výsledek a pak podle abecedy. Pomocí možností na následujícím obrázku pro porovnání najdete v jiné skupině. Můžete poskytnout zpětnou vazbu návrh [v potíže Githubu](https://github.com/Microsoft/vstest/issues/1425).
+## <a name="uwp-test-discovery"></a>Zjišťování testů UPW
+
+**Proč jsou mé testy v projektech UPW nezjištěné dokud nasadit aplikaci?**
+
+  Testů UPW cílení různých běhových při nasazení aplikace. To znamená, že se nenašly testy přesně pro projekty UWP vám nejen na svůj projekt sestavit, ale také nasadit.
+
+## <a name="test-explorer-sorting"></a>Test Explorer řazení
+
+**Jak funguje řazení výsledků testů v zobrazení hierarchie?**
+
+  Hierarchické zobrazení seřadí testy podle abecedy jako a podle výsledku. Podle nastavení skupiny obvykle řazení výsledků testů podle výsledku a pak podle abecedy. Možnosti na následujícím obrázku pro porovnání najdete v jiné skupině. Můžete poskytnout zpětnou vazbu o návrhu [v tento problém Githubu](https://github.com/Microsoft/vstest/issues/1425).
 
   ![SortingExamples](media/testex-sortingex.png)
 
-### <a name="9-in-the-hierarchy-view-there-are-passed-failed-skipped-and-not-run-icons-next-to-the-project-namespace-and-class-groupings-what-do-these-icons-mean"></a>9. V zobrazení hierarchie existuje jsou předány, selhalo, bylo vynecháno a není spuštění ikonami vedle projektu, Namespace a třída seskupení. Co znamenají tyto ikony?
+## <a name="test-explorer-hierarchy-view"></a>Zobrazení hierarchie Průzkumníka testů
 
-  Ikony vedle seskupení projektu, Namespace a třída odrážející stav testů v rámci tohoto seskupení. Najdete v následující tabulce.
+**V okně hierarchie existuje jsou předány, se nezdařilo, přeskočené a nelze spustit ikonami vedle jejich seskupení projektu, Namespace a třídy. Co znamenají tyto ikony?**
+
+  Ikony vedle seskupení projektu, Namespace a třída zobrazení stavu testů v rámci tohoto seskupení. V následující tabulce.
 
   ![Ikony hierarchie Průzkumníka testů](media/testex-hierarchyicons.png)
-  
-### <a name="10-there-is-no-longer-a-file-path-filter-in-the-test-explorer-search-box"></a>10. Do vyhledávacího pole Průzkumníka testů již není filtr "Cesta k souboru".
 
-Filtr cesta k souboru v **Průzkumníka testů** vyhledávacího pole odebral ve verzi Visual Studio 2017 15.7 verzi preview 3. Tato funkce měla nízkou využití a Průzkumníka testů můžete načíst testovací metody rychlejší tak, že s výjimkou této funkce. Pokud tuto změnu přerušení vaší vývoj toku, dejte nám vědět, odesláním zpětnou vazbu na [komunity vývojářů](https://developercommunity.visualstudio.com/).
+## <a name="search-by-file-path"></a>Hledat podle cesta k souboru
 
-## <a name="features"></a>Funkce
+**Do vyhledávacího pole Průzkumníka testů již není filtr "Cesta k souboru".**
 
-### <a name="how-can-i-turn-on-feature-flags-to-try-out-new-testing-features"></a>Jak lze zapnout funkci příznaky vyzkoušet nové funkce testování?
+Filtr cesty souboru v **Průzkumník testů** vyhledávacího pole byla odebrána v sadě Visual Studio 2017 verze 15.7 preview 3. Tato funkce má málo využívaných a Průzkumník testů může načíst testovací metody rychlejší vynecháním tuto funkci. Pokud se tato změna přerušení tok vývoj, dejte nám vědět, zasláním svého názoru na [komunity vývojářů](https://developercommunity.visualstudio.com/).
 
-Funkce příznaky se používají pro odeslání experimentální nebo nedokončených součástí produktu avid uživatelům, kteří chtěli váš názor dříve, než funkce dodáte oficiálně. Může se destabilizovat prostředí IDE. Je používejte jenom v bezpečném vývojových prostředí, jako jsou virtuální počítače. Funkce příznaky jsou vždy použijte vaše vlastníte rizikového nastavení. Můžete zapnout s povolenými experimentálními funkcemi [rozšíření funkce příznaky](https://marketplace.visualstudio.com/items?itemName=PaulHarrington.FeatureFlagsExtension), nebo prostřednictvím příkazového řádku vývojáře.
+## <a name="remove-undocumented-interfaces"></a>Odebrání nedokumentované rozhraní
 
-![Příznak rozšíření funkce](media/testex-featureflag.png)
+**Některá rozhraní API související s už nejsou k dispozici v aplikaci Visual Studio 2019. Co se změnilo?**
 
-Chcete-li zapnout funkci příznak prostřednictvím příkazového řádku vývojáře Visual Studia, použijte následující příkaz. Změňte cestu k nainstalovaným Visual Studio v počítači a změňte klíč registru pro příznak požadované funkce.
+V aplikaci Visual Studio 2019 se odeberou některé testovacího okna rozhraní API, které byly dříve označeny veřejné, ale nebyly nikdy oficiálně popsané. Označí se jako "zastaralé" v sadě Visual Studio 2017 poskytnout programu rozšíření včasného varování. Naši znalostní bázi měl velmi málo rozšíření nalezena tato rozhraní API a s nimi provádějí závislost. Patří mezi ně `IGroupByProvider`, `IGroupByProvider<T>`, `KeyComparer`, `ISearchFilter`, `ISearchFilterToken`, `ISearchToken`, a `SearchFilterTokenType`. Pokud se tato změna ovlivní vaše rozšíření, dejte nám vědět, vyplňte chybu na [komunity vývojářů](https://developercommunity.visualstudio.com).
+
+## <a name="test-adapter-nuget-reference"></a>Testovací adaptér referenční dokumentace pro NuGet
+
+**V sadě Visual Studio 2017 verze 15.8 mé testy se zjistí, ale nemusíte spouštět.**
+
+Všechny projekty testů musí obsahovat testovací adaptér jejich .NET NuGet odkaz v jejich souboru csproj. Pokud ne, zobrazí se následující výstup testu na projekt Pokud zjišťování adaptéru rozšířením test spustí se po sestavení, nebo pokud uživatel pokusí spustit vybrané testy:
+
+**Projekt testů {} neodkazuje na žádný adaptér NuGet pro rozhraní .NET. Pro tento projekt možná nebude fungovat zjišťování a spouštění testů. Doporučujeme odkaz NuGet adaptéry testu v každém projektu .NET testů v řešení.**
+
+Namísto použití rozšíření adaptérů testů, jsou nutné k použití balíčků adaptéru NuGet testovací projekty. Tento požadavek výrazně zvyšuje výkon a způsobí, že snižuje počet možných problémů s využitím průběžné integrace. Další informace o vyřazení rozšíření adaptér testu .NET v [poznámky k verzi](/visualstudio/releasenotes/vs2017-preview-relnotes#testadapterextension).
+
+> [!NOTE]
+> Pokud používáte NUnit 2 Test Adapter a jsou nelze provést migraci k NUnit 3 test adapter, můžete ji vypnout toto nové chování zjišťování v sadě Visual Studio verzi 15.8 v **nástroje** > **možnosti**  >  **Test**.
+
+  ![Test Explorer adaptér chování v možnostech nástrojů](media/testex-adapterbehavior.png)
+
+## <a name="uwp-testcontainer-was-not-found"></a>UPW TestContainer nebyl nalezen
+
+**Mých testů UPW se už spouštějí v sadě Visual Studio 2017 verze 15.7 nebo novější.**
+
+Poslední projekty testů UPW zadejte vlastnosti sestavení testovací platformy, která umožňuje lepší výkon pro identifikaci testovací aplikace. Pokud máte projektu testů UPW, který byl inicializován před Visual Studio verze 15.7, může se zobrazit tato chyba v **výstup** > **testy**:
+
+**System.AggregateException: Došlo k jedné nebo více chybám. ---> System.InvalidOperationException: následující TestContainer nebyl nalezen {} na Microsoft.VisualStudio.TestWindow.Controller.TestContainerProvider <GetTestContainerAsync>d__61.MoveNext()**
+
+Chcete-li vyřešit tuto chybu:
+
+- Aktualizujte vlastnost sestavení projektu testů pomocí následujícího kódu:
+
+```XML
+<UnitTestPlatformVersion Condition="'$(UnitTestPlatformVersion)' == ''">$(VisualStudioVersion)</UnitTestPlatformVersion>
+```
+
+- Aktualizace verze sady SDK TestPlatform pomocí následujícího kódu:
+
+```XML
+<SDKReference Include="TestPlatform.Universal, Version=$(UnitTestPlatformVersion)" />
+```
+
+## <a name="using-feature-flags"></a>Používání příznaků funkcí
+
+**Jak můžu zapnout příznaky funkcí pro vyzkoušení nové funkce pro testování?**
+
+Příznaky funkcí se používají k odeslání experimentální nebo nedokončené částech tohoto produktu avid uživatelům, kteří by chtěli poskytnout zpětnou vazbu před oficiálním dodávání funkcí. Se může omezit správnou funkci prostředí IDE. Je používejte pouze v nouzovém vývojových prostředích, jako jsou virtuální počítače. Příznaky funkcí jsou vždy použijte your vlastní rizikového nastavení. Můžete zapnout seznámit s experimentálními funkcemi, které se [příznaky funkcí rozšíření](https://marketplace.visualstudio.com/items?itemName=PaulHarrington.FeatureFlagsExtension), nebo prostřednictvím příkazového řádku pro vývojáře.
+
+![Rozšíření příznak funkce](media/testex-featureflag.png)
+
+Chcete-li zapnout příznak funkce prostřednictvím příkazového řádku pro vývojáře Visual Studio, použijte následující příkaz. Změňte cestu k instalaci sady Visual Studio na svém počítači a změňte klíč registru, který chcete, aby příznak funkce.
 
 ```shell
-vsregedit set “C:\Program Files (x86)\Microsoft Visual Studio\Preview\Enterprise” HKLM FeatureFlags\TestingTools\UnitTesting\HierarchyView Value dword 1
+vsregedit set “C:\Program Files (x86)\Microsoft Visual Studio\Preview\Enterprise" HKLM FeatureFlags\TestingTools\UnitTesting\HierarchyView Value dword 1
 ```
 
 > [!NOTE]
-> Příznak pomocí stejného příkazu můžete vypnout pomocí hodnoty 0 namísto 1 po dword.
+> Příznak s stejný příkaz, můžete vypnout pomocí hodnoty 0 namísto 1 po dword.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=fullName>
-- [Vytváření a spouštění testování částí pro existujícího kódu](http://msdn.microsoft.com/e8370b93-085b-41c9-8dec-655bd886f173)
+- [Vytváření a spouštění testů jednotek pro existující kód](https://msdn.microsoft.com/e8370b93-085b-41c9-8dec-655bd886f173)
 - [Testování částí kódu](unit-test-your-code.md)
-- [Nejčastější dotazy k funkci Live Unit Testing](live-unit-testing-faq.md)
+- [Nejčastější dotazy týkající se testování jednotek za provozu](live-unit-testing-faq.md)

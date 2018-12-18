@@ -13,13 +13,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a091ce71312778353a7f09869d6de45bc394c665
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 8b9b85d5bf1bab61fbc59c0f90411c3e70545745
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34265041"
 ---
-# <a name="profiler-sampling-method-data-views"></a>Zobrazení dat metod vzorkování profileru
+# <a name="profiler-sampling-method-data-views"></a>Zobrazení dat metody vzorkování profileru
 Tato část obsahuje referenční informace pro zobrazení a sestav profileru datových souborů, které byly vygenerovány pomocí metody vzorkování.  
   
 > [!NOTE]
@@ -32,26 +33,26 @@ Tato část obsahuje referenční informace pro zobrazení a sestav profileru da
  [Zobrazení stromu volání](../profiling/call-tree-view-sampling-data.md)  
  Zobrazí cesty provádění funkcí v hierarchickém stromu.  
   
- [Zobrazení modulů](../profiling/modules-view-sampling-data.md)  
+ [Moduly – zobrazení](../profiling/modules-view-sampling-data.md)  
  Uspořádá data profilování modulem a obsahuje funkce, řádků zdrojového kódu a pokyny, které byly prováděny, kdy byly shromážděny ukázky.  
   
  [Volající / volaný – zobrazení – Data vzorkování](../profiling/caller-callee-view-sampling-data.md)  
  Zobrazí profilace data pro vybrané funkce a funkce, které označuje a byly volány vybrané funkce.  
   
- [Zobrazení funkcí](../profiling/functions-view-sampling-data.md)  
+ [Funkce – zobrazení](../profiling/functions-view-sampling-data.md)  
  Slouží k uspořádání profilace funkcí a seznam funkcí, které byly prováděny, kdy byly shromážděny ukázky.  
   
- [Zobrazení řádků](../profiling/lines-view-sampling-data.md)  
+ [Řádky – zobrazení](../profiling/lines-view-sampling-data.md)  
  Uvádí řádky kódu zdroje, které byly prováděny, kdy byly shromážděny ukázky.  
   
- [Zobrazení ukazatelů na instrukce](../profiling/instruction-pointers-ips-view-sampling-data.md)  
+ [Zobrazení ukazatele na instrukce (IP)](../profiling/instruction-pointers-ips-view-sampling-data.md)  
  Uvádí řádky kódu zdroje, které byly prováděny, kdy byly shromážděny ukázky.  
   
 ## <a name="reference"></a>Odkaz  
  [Zobrazení procesů](../profiling/process-view.md)  
  Proces seznamy a vlákno spuštění a ukončení.  
   
- [Zobrazení značek](../profiling/marks-view.md)  
+ [Značky – zobrazení](../profiling/marks-view.md)  
  Seznam trasování událostí pro Windows a vzorkování události, které byly vloženy do datového souboru profilování.  
   
  [Zobrazení podrobností funkce](../profiling/function-details-view.md)  
@@ -65,4 +66,4 @@ Tato část obsahuje referenční informace pro zobrazení a sestav profileru da
  Referenční informace pro zobrazení a sestav profileru datových souborů, které zahrnují data paměti .NET.  
   
 ## <a name="see-also"></a>Viz také  
- [Porozumění hodnotám dat vzorkování](../profiling/understanding-sampling-data-values.md)
+ [Pochopení hodnotám dat vzorkování](../profiling/understanding-sampling-data-values.md)

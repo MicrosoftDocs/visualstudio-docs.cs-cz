@@ -1,5 +1,5 @@
 ---
-title: IDiaStackFrame::get_functionStart | Microsoft Docs
+title: IDiaStackFrame::get_functionStart | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b24bae809e234eb3e915c1d46f46041e18bd931
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: c8d6502a99827d6835fb1f6d9368615fd6045203
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49917203"
 ---
 # <a name="idiastackframegetfunctionstart"></a>IDiaStackFrame::get_functionStart
-Načte příznak, který určuje, zda blok obsahuje vstupní bod funkce.  
+Získá příznak, který určuje, zda blok obsahuje vstupního bodu funkce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,10 +34,10 @@ HRESULT get_functionStart (
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí `TRUE` Pokud rámce zásobníku obsahuje vstupní bod funkce; jinak vrátí `FALSE`.  
+ [out] Vrátí `TRUE` Pokud rámce zásobníku obsahuje vstupní bod funkce; v opačném případě vrátí `FALSE`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE` Pokud vlastnost není podporována. Jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

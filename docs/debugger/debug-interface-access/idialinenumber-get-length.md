@@ -1,5 +1,5 @@
 ---
-title: Idialinenumber::get_length – | Microsoft Docs
+title: Idialinenumber::get_length – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 21323095ffd427f860f750521605832377f9a22b
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 08462f0ffb70663583398352cd980c744cd7648e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49849863"
 ---
 # <a name="idialinenumbergetlength"></a>IDiaLineNumber::get_length
 Získá počet bajtů v bloku.  
@@ -36,10 +37,10 @@ HRESULT get_length (
  [out] Vrátí počet bajtů v bloku.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. Jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Blok je délka zdrojového kódu na řádku reprezentovaná [idialinenumber –](../../debugger/debug-interface-access/idialinenumber.md) objektu.  
+ Blok je délka zdrojový kód na řádku reprezentovaná [idialinenumber –](../../debugger/debug-interface-access/idialinenumber.md) objektu.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md)

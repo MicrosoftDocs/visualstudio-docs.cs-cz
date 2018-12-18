@@ -1,7 +1,9 @@
 ---
-title: Procházet a vyberte typ dialogové okno .NET | Microsoft Docs
+title: Návrhář postupu provádění - Procházet a vybrat typ dialogovému oknu rozhraní .NET
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - TypeBrowser.UI
 - ActivityTypeResolver.UI
@@ -11,64 +13,68 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 04aba24d3dffc96fb8e5288d74322258fa77ce19
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 686969c233f50dd1df743590206966183be48da9
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39513195"
 ---
-# <a name="browse-and-select-a-net-type-dialog-box"></a>Procházet a vyberte dialogové okno typ rozhraní .NET
+# <a name="browse-and-select-a-net-type-dialog-box"></a>Dialogové okno Procházet a vybrat typ .NET
 
-V **vlastnosti** oken, dialogových oken nebo návrháře například návrháře proměnné, když vyberete **Procházet pro typy...**  ze seznamu datových typů, je **Procházet a vyberte typ formátu .NET** dialogové okno (uvedené ve zkrácené formě jako "typ prohlížeče"). V tomto dialogovém můžete typu ze sestavení a projektů zobrazení stromu.
+V **vlastnosti** oken, dialogových oknech nebo návrháře, jako je například Návrhář proměnných, když vyberete **vyhledat typy** ze seznamu datových typů, je **Procházet a vybrat typ .NET** dialogové okno (uvedené ve zkrácené formě jako "typ prohlížeče"). V tomto dialogovém okně lze vybrat typ ze zobrazení stromové struktury projektů a sestavení.
 
- Toto dialogové okno je vzhledem k počtu uživatelských scénářů, včetně následujících:
+Toto dialogové okno se použijí různými uživatelské scénáře, včetně následujících:
 
--   Při nastavování typ proměnné nebo argumentu.
+-   Při nastavování typu proměnné nebo argumentu.
 
--   Při výběru typu Obecné aktivity.
+-   Při výběru typu pro obecný aktivitu.
 
--   Při přidávání catch na <xref:System.Activities.Statements.TryCatch> aktivity.
+-   Při přidávání v bloku catch <xref:System.Activities.Statements.TryCatch> aktivity.
 
 > [!NOTE]
-> Typ prohlížeče můžete zobrazit typy jazyka Visual Basic Vícenásobná pole, ale není multidimenzionálního pole typů. V tématu [Vícenásobná pole](http://go.microsoft.com/fwlink/?LinkId=195226) a [vícerozměrná pole](http://go.microsoft.com/fwlink/?LinkId=195227) podrobnosti.
+> Typ prohlížeče můžete zobrazit typy jazyka Visual Basic Vícenásobná pole, ale není vícerozměrné pole typů. Zobrazit [Vícenásobná pole](http://go.microsoft.com/fwlink/?LinkId=195226) a [vícerozměrná pole](http://go.microsoft.com/fwlink/?LinkId=195227) podrobnosti.
 
-## <a name="selecting-a-value-or-reference-type-from-the-type-browser"></a>Výběr hodnotu nebo odkaz na typ z typu prohlížeče
+## <a name="selecting-a-value-or-reference-type-from-the-type-browser"></a>Výběrem hodnoty nebo typ odkazu z typu prohlížeče
 
-#### <a name="to-select-a-value-or-reference-type-from-the-type-browser"></a>Vyberte hodnotu nebo odkaz na typ z typu prohlížeče
+### <a name="to-select-a-value-or-reference-type-from-the-type-browser"></a>Vyberte typ hodnoty nebo odkazu z typu prohlížeče
 
-1.  V **název typu** zadejte název tohoto typu, který chcete použít.
+1.  V **název typu** zadejte název typu, který chcete použít.
 
 2.  Proveďte jednu z těchto akcí:
 
-    -   Jakmile se zobrazí název typu, který chcete používat ve stromu v **název typu** pole, dvakrát klikněte na typ ji vyberte.
+    -   Jakmile se zobrazí název typu, který chcete použít ve stromu **název typu** pole, poklepejte na typ, vyberte ho.
 
-    -   Zadejte dostatečný počet znaků **název typu** políčko k jednoznačné identifikaci typ, který chcete použít, a stiskněte klávesu enter a vyberte typ
+    -   Zadejte dost znaků **název typu** pole k jednoznačné identifikaci typ, který chcete použít, a stiskněte klávesu enter vyberte typ
 
-#### <a name="to-select-a-generic-type-from-the-type-browser"></a>Vyberte z prohlížeče typ obecného typu
+### <a name="to-select-a-generic-type-from-the-type-browser"></a>Chcete-li vybrat obecného typu z typu prohlížeče
 
 1.  V **název typu** pole, zadejte název typu, který chcete použít.
 
-2.  Jakmile se zobrazí název typu, který chcete používat ve stromu v **název typu** pole, klikněte na typ ji způsobí rozevíracích seznamech vyberte zobrazí.
+2.  Jakmile se zobrazí název typu, který chcete použít ve stromu **název typu** pole, klikněte na typ, který má vyberte ji a způsobit, že rozevírací seznamy se zobrazí.
 
-     Vyberte typ, který chcete použít zavřete obecná z rozevíracího seznamu polí, a pak klikněte na **OK**.
+     Vyberte typ, který chcete použít zavřete obecné z rozevíracího seznamu polí a potom klikněte na tlačítko **OK**.
 
 ## <a name="types-displayed-in-the-type-browser"></a>Typy zobrazení v prohlížeči typu
- Typy zobrazení v prohlížeči typu se může lišit v závislosti na tom, jak byla spuštěná typu prohlížeče. Pokud typ prohlížeče byl spuštěn z projektu workflow uvnitř **vs2010**, ve výchozím nastavení všechny typy v odkazovaných sestaveních a odkazované projekty jsou zobrazeny. Pokud typ prohlížeče byl spuštěn z mimo **vs2010** projektu systému (například jako aplikace opětovné hostování nástroje pracovního postupu nebo v samostatné souboru pracovního postupu), pak ve výchozím nastavení jsou uvedeny typy ze všech sestavení načíst do domény aplikace .
 
- Typy v prohlížeči typ lze filtrovat pomocí návrháře vývojáři aktivity. Pro danou aktivitu může se zobrazit pouze podmnožinu typy. Například v <xref:System.Activities.Statements.TryCatch> aktivity, pouze typy odvozené od <xref:System.Exception> se zobrazují v prohlížeči typu.
+Typy zobrazení v prohlížeči typu se může lišit v závislosti na tom, jak byl spuštěn prohlížeč typů. Pokud byl spuštěn prohlížeč typů z projektu pracovního postupu uvnitř **vs2010**, ve výchozím nastavení všechny typy v odkazovaných sestaveních a odkazované projekty se zobrazují. Pokud prohlížeč typů byl spuštěn ze mimo **vs2010** projektu systému (například jako v pracovním postupu provádění se změněným hostováním aplikací nebo samostatný soubor pracovního postupu), pak ve výchozím nastavení jsou uvedeny typy ze sestavení načtená v doméně aplikace .
+
+Typy v prohlížeči typ by šlo filtrovat podle vývojáře návrháře aktivit. Pro danou aktivitu může se zobrazit pouze podmnožinu těchto typů. Například v <xref:System.Activities.Statements.TryCatch> aktivity, pouze typy odvozené z <xref:System.Exception> jsou zobrazená v prohlížeči typu.
 
 ## <a name="filtering-search-results-in-the-type-browser"></a>Filtrování výsledků hledání v prohlížeči typu
- Seznam typů v **název typu** pole získá kratší jako typ více znaků, aby byla nalezena shoda. V seznamu Filtrované se zobrazí pouze typy jejichž plně kvalifikovaný název začíná řetězec, který jste zadali, nebo jejichž krátký název začíná řetězec, který jste zadali.
 
- Příklad:
+Seznam typů v **název typu** pole získá kratší při psaní více znaků pro vyhledání shody. Ve filtrovaném seznamu se zobrazí pouze typy, jejichž fullyqualified název začíná řetězcem, který jste zadali nebo jejichž krátký název začíná řetězcem, který jste zadali.
 
-1.  Zadáním **operace** odpovídá <xref:System.OperationCanceledException> ale ne <xref:System.InvalidOperationException>. Tak, aby odpovídaly <xref:System.InvalidOperationException>, začněte psát System.I nebo neplatná.
+Příklad:
 
-2.  Zadáním **Obecné** odpovídá <xref:System.GenericUriParser> , ale není typy v <xref:System.Collections.Generic> oboru názvů. K vyhledání typů v <xref:System.Collections.Generic> obor názvů, typ plně kvalifikovaný název oboru názvů.
+1.  Zadáním **operace** odpovídá <xref:System.OperationCanceledException> , ale ne <xref:System.InvalidOperationException>. Tak, aby odpovídaly <xref:System.InvalidOperationException>, začněte psát System.I nebo je neplatný.
 
-## <a name="selecting-a-service-contract-using-the-type-browser-dialog"></a>Výběr kontraktu služby pomocí dialogového okna prohlížeče typu
- Při výběru typu kontraktu služby, typ prohlížeče se zobrazí pouze typy, které mají <xref:System.ServiceModel.ServiceContractAttribute> atribut.
+2.  Zadáním **obecný** odpovídá <xref:System.GenericUriParser> , ale ne typy, které do <xref:System.Collections.Generic> oboru názvů. K vyhledání typů v <xref:System.Collections.Generic> obor názvů, zadejte plně kvalifikovaný název oboru názvů.
 
-## <a name="see-also"></a>Viz také
+## <a name="selecting-a-service-contract-using-the-type-browser-dialog"></a>Výběr pomocí dialogového okna prohlížeče typ kontraktu služby
+
+Když vyberete typ kontraktu služby, typu prohlížeče zobrazuje pouze typy, které mají <xref:System.ServiceModel.ServiceContractAttribute> atribut.
+
+## <a name="see-also"></a>Viz také:
 
 - [Používání návrhářů aktivit](../workflow-designer/using-the-activity-designers.md)

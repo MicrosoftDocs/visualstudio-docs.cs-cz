@@ -1,5 +1,5 @@
 ---
-title: Odinstalace VSPackage pomocí Instalační služby systému Windows | Microsoft Docs
+title: Odinstalace balíčku VSPackage pomocí Instalační služby systému Windows | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,31 +15,32 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d8a62692003b26afcd5b7814bdc03320fa1c453a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c619cdeffccb6e5da37eaaf15e5542fe78c44f79
+ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46495307"
 ---
-# <a name="uninstalling-a-vspackage-with-windows-installer"></a>Odinstalace VSPackage pomocí Instalační služby systému Windows
-Ve většině případů instalační služby systému Windows můžete odinstalovat vaší VSPackage právě pomocí "vrácení zpět" co se k instalaci vaší VSPackage. Vlastní akce popsané v [příkazy, musí být spustit po instalaci](../../extensibility/internals/commands-that-must-be-run-after-installation.md) po odinstalaci také musí být spuštěn. Protože těsně před parametr InstallFinalize standardní akci pro instalaci a odinstalaci dojde k volání devenv.exe, položek tabulky CustomAction a InstallExecuteSequence sloužit obou případech.  
+# <a name="uninstalling-a-vspackage-with-windows-installer"></a>Odinstalace balíčku VSPackage pomocí Instalační služby systému Windows
+Ve většině případů instalační služby systému Windows můžete odinstalovat vašeho balíčku VSPackage pouze za "vrácení zpět" udělal pro instalaci vaší VSPackage. Vlastní akce popsané v [příkazy, musí být spustit po instalaci](../../extensibility/internals/commands-that-must-be-run-after-installation.md) po odinstalaci dojde také musí být spuštěn. Protože těsně před parametr InstallFinalize standardní akci pro instalaci a odinstalaci dojde k volání devenv.exe, položek tabulky CustomAction a InstallExecuteSequence sloužit obou případech.  
   
 > [!NOTE]
->  Spustit `devenv /setup` po odinstalování balíčku MSI.  
+>  Spustit `devenv /setup` po odinstalaci balíčku MSI.  
   
- Obecně platí Pokud přidáte vlastní akce do balíčku Instalační služby systému Windows, je nutné zpracovat tyto akce během odinstalace a vrácení zpět. Pokud přidáte vlastní akce registruje vaší VSPackage, například musíte přidat vlastní akce se zrušit registraci, příliš.  
-  
-> [!NOTE]
->  Je možné pro uživatele k instalaci vaší VSPackage a pak odinstalaci verze [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] s taky jsou integrované. Vám může pomoci zajistit, že vaše VSPackage odinstalace funguje v tomto scénáři odstraněním vlastní akce, které spustit kód s závislosti na [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].  
-  
-## <a name="handling-launch-conditions-at-uninstall-time"></a>Podmínky spuštění zpracování na odinstalovat čas  
- Standardní akcí LaunchConditions čte řádky z tabulky LaunchCondition zobrazit chyba zpráv, pokud nejsou splněné podmínky. Podmínky spuštění se obecně používají pro jistotu, že jsou splněny požadavky na systém, obvykle můžete přeskočit podmínky spuštění během odinstalace přidáním podmínku `NOT Installed`, řádek LaunchConditions LaunchCondition tabulky.  
-  
- Alternativou je přidat `OR Installed` spustíte podmínky, které nejsou důležité během odinstalace. Který zajišťuje, že podmínka bude vždy hodnotu true při odinstalaci a proto nebude zobrazí chybová zpráva podmínka spuštění.  
+ Obecně platí Pokud chcete přidat vlastní akce do balíčku Instalační služby systému Windows, je nutné zpracovat tyto akce během odinstalace a vrácení zpět. Pokud chcete přidat vlastní akce samoobslužné registrace vašeho balíčku VSPackage, například musíte přidat vlastní akce, příliš zrušit registraci.  
   
 > [!NOTE]
->  `Installed` je vlastnost, kterou instalační služby systému Windows se nastavuje, když zjistí, zda vaše VSPackage již je nainstalovaná v systému.  
+>  Je možné pro uživatele k instalaci vaší VSPackage a potom odinstalujte verze [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] se taky jsou integrované. Můžete zajistit, že vaše VSPackage odinstalace funguje v tomto scénáři odstraněním vlastní akce, které běží kód se závislostmi na [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].  
+  
+## <a name="handling-launch-conditions-at-uninstall-time"></a>Zpracování podmínek pro spuštění v odinstalaci  
+ Akce standard LaunchConditions načte řádky tabulky LaunchCondition zobrazit chyba zprávy, pokud nejsou splněny podmínky. Podle podmínek pro spuštění se obecně používají k zajištění, že jsou splněny požadavky na systém, obvykle můžete přeskočit podmínek pro spuštění během odinstalace přidáním podmínky, `NOT Installed`, řádek LaunchConditions LaunchCondition tabulky.  
+  
+ Další možností je přidat `OR Installed` spustit podmínky, které nejsou důležité při odinstalaci. Což zajišťuje, že podmínka bude vždy hodnotu true při odinstalaci a proto nebudou zobrazovat chybová zpráva stavu spuštění.  
+  
+> [!NOTE]
+>  `Installed` je vlastnost, kterou instalační služby systému Windows se nastaví, když zjistí, že vaše VSPackage je už nainstalovaná v systému.  
   
 ## <a name="see-also"></a>Viz také  
- [Instalační služba systému Windows](http://msdn.microsoft.com/en-us/187d8965-c79d-4ecb-8689-10930fa8b3b5)   
+ [Instalační služby systému Windows](https://msdn.microsoft.com/library/187d8965-c79d-4ecb-8689-10930fa8b3b5)   
  [Zjištění požadavků na systém](../../extensibility/internals/detecting-system-requirements.md)

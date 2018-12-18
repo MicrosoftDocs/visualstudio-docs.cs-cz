@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::GetDerivedMostReference | Microsoft Docs
+title: IDebugReference2::GetDerivedMostReference | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: cfa0e6b6755ea884b6dd9b6ba0409a614e80e290
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f6e8998ca881bbeb4a90405ab01577bf6be18f33
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49858352"
 ---
 # <a name="idebugreference2getderivedmostreference"></a>IDebugReference2::GetDerivedMostReference
-Získá odkaz na odvozené většinu odkaz. Vyhrazeno pro budoucí použití.  
+Získá odkaz na nejvíce odvozené odkaz. Vyhrazeno pro budoucí použití.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +41,13 @@ int GetDerivedMostReference(
   
 #### <a name="parameters"></a>Parametry  
  `ppDerivedMost`  
- [out] Vrátí [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objekt, který reprezentuje vlastnost odvozené nejvíc.  
+ [out] Vrátí [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objekt, který reprezentuje vlastnost nejvíce odvozené.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vždy vrátí hodnotu `E_NOTIMPL`.  
+ Vždy vrátí `E_NOTIMPL`.  
   
 ## <a name="remarks"></a>Poznámky  
- Například, pokud je tato vlastnost popisuje objekt, který implementuje `ClassRoot` , ale který je ve skutečnosti vytváření instancí z `ClassDerived` je odvozena z `ClassRoot`, pak tato metoda vrátí [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objektu představující odkaz na `ClassDerived` objektu.  
+ Například, pokud je tato vlastnost popisuje objekt, který implementuje `ClassRoot` , ale která je ve skutečnosti instance `ClassDerived` , která je odvozena od `ClassRoot`, pak tato metoda vrátí [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objektu představuje odkaz na `ClassDerived` objektu.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31142929"
 ---
 # <a name="simplified-embedding"></a>Zjednodušená vložení
 Zjednodušená vložení je povolena v editoru při jeho objekt zobrazení dokumentu je nadřazena má (který je provedeno podřízenou) [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]a <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> rozhraní je implementováno pro zpracování jeho příkazy okna. Zjednodušená vnoření editory nemůže být hostitelem aktivní ovládací prvky. Na následujícím obrázku se zobrazí objekty použít k vytvoření editoru s zjednodušené vložení.  

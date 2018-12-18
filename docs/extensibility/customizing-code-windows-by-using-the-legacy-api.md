@@ -1,5 +1,5 @@
 ---
-title: Přizpůsobení Windows kódu pomocí starší verze rozhraní API | Microsoft Docs
+title: Přizpůsobení Windows kód pomocí starší verze rozhraní API | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,38 +13,39 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8284985003415ef3e723fe735e64481c3666180a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 454d58a48abafe9b23f8a812e5d40b9fc6477b50
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39499351"
 ---
-# <a name="customizing-code-windows-by-using-the-legacy-api"></a>Přizpůsobení Windows kódu pomocí starší verze rozhraní API
-Okno kódu je objekt okna dokumentu, který podporuje jeden nebo více zobrazení textu. Přesný funkce okno kódu závisejí na službě přiřazená jazyková. V režimu rozhraní více dokumentů (MDI) je v okně Kód rámečku podřízeného MDI.  
+# <a name="customize-code-windows-by-using-the-legacy-api"></a>Přizpůsobení windows kód pomocí starší verze rozhraní API
+Okno kódu je objekt okna dokumentu, který podporuje jedno nebo více zobrazení textu. Přesné funkce okno kódu závisí na službě přiřazená jazyková. V režimu rozhraní více dokumentů (MDI) okno kódu je podřízený rámec MDI.  
   
- Kód windows jsou řízeny jazykové služby a každá služba jazyka může poskytnout správce oken vlastní kód. To umožňuje služba jazyka lze přidat vlastní vylepšení do okna kódu, například podtržení vlnovkou, zabarvení a další. Další informace o tom, jak vytvořit základní okno najdete v tématu [vytváření instancí základní pomocí editoru pomocí starší verze rozhraní API](../extensibility/instantiating-the-core-editor-by-using-the-legacy-api.md).  
+ Kód windows jsou řízeny pomocí služby jazyka a každá služba jazyka může zajistit Správce oken svůj vlastní kód. To umožňuje službě jazyka a přidat své vlastní vylepšení do okna kódu, jako je například podtržení vlnovkou, zabarvení a další. Další informace o tom, jak vytvořit základní okno, naleznete v tématu [vytvořit instanci editoru core pomocí starší verze rozhraní API](../extensibility/instantiating-the-core-editor-by-using-the-legacy-api.md).  
   
- Okno kód je <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame> objekt, který má textového zobrazení a všechny vylepšení umístěný v objektu. Při vytváření okna kódu během vytváření vaší instance jádra editor, jazykové služby můžete připojit <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager> do okna kódu, jako je vidět na následujícím obrázku.  
+ Okno kódu je <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame> objekt, který se má zobrazit text a libovolný vylepšení umístěný v objektu. Při vytváření okna kódu během vaší instance základní editor, vaše služba jazyka můžete připojit <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager> do okna kódu, jako je zobrazena na následujícím obrázku.  
   
- ![CodeWindow – grafika](../extensibility/media/vscodewindow.gif "vscodewindow")  
-Kódu – okno  
+ ![Obrázek CodeWindow](../extensibility/media/vscodewindow.gif "vscodewindow –")  
+Okno kódu  
   
- Služba jazyka implementuje Správce oken kódu a je zodpovědný za správu vylepšení, například panelu rozevíracího seznamu. Okno volání kódu <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager.AddAdornments%2A> metoda během inicializace okno kódu. Když toto volání se provádí, služba jazyka můžete přidat panelu rozevíracího seznamu nebo tlačítko panelu (<xref:Microsoft.VisualStudio.TextManager.Interop.IVsButtonBarClient>) do okna kódu.  
+ Služba jazyka implementuje Správce oken kódu a zodpovídá za správu vylepšení, jako je například panel rozevíracího seznamu. Kód volá okno <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager.AddAdornments%2A> metoda během inicializace okna kódu. Když je toto volání, služba jazyka můžete přidat panel rozevíracího seznamu nebo tlačítko panelu (<xref:Microsoft.VisualStudio.TextManager.Interop.IVsButtonBarClient>) do okna kódu.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  `Customizing Code Windows by Using the Legacy API`  
- Vysvětluje způsob přizpůsobení pomocí rozhraní API pro starší verze windows kódu.  
+ Vysvětluje způsob přizpůsobení pomocí starší verze rozhraní API windows kódu.  
   
- [Postupy: hostování editoru jiného editoru](../extensibility/how-to-host-an-editor-in-another-editor.md)  
- Vysvětluje, jak k hostování druhý editor uvnitř okno s editor.  
+ [Postupy: hostování editoru v jiném editoru](../extensibility/how-to-host-an-editor-in-another-editor.md)  
+ Vysvětluje, jak hostovat druhý editor uvnitř okno editoru.  
   
- [Postupy: vyvolání události při editoru ztratí fokus](../extensibility/how-to-fire-events-when-the-editor-loses-focus.md)  
- Vysvětluje, jak připojit zobrazení dokumentů na datový objekt dokumentu.  
+ [Postupy: vyvolání události při editoru ztratí fokus.](../extensibility/how-to-fire-events-when-the-editor-loses-focus.md)  
+ Vysvětluje, jak připojit zobrazení dokumentu na datový objekt dokumentu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  <xref:Microsoft.VisualStudio.TextManager.Interop.VsCodeWindow>   
  <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>   
  <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>   
  <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView>   
- [Vytváření instancí editoru základní pomocí starší verze rozhraní API](../extensibility/instantiating-the-core-editor-by-using-the-legacy-api.md)   
- [Přístup k zobrazení text s použitím rozhraní API starší verze](../extensibility/accessing-thetext-view-by-using-the-legacy-api.md)
+ [Vytvořit instanci editoru core pomocí starší verze rozhraní API](../extensibility/instantiating-the-core-editor-by-using-the-legacy-api.md)   
+ [Zobrazit text přístup pomocí starší verze rozhraní API](../extensibility/accessing-thetext-view-by-using-the-legacy-api.md)

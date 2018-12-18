@@ -1,5 +1,5 @@
 ---
-title: Koncepty nástroje MSBuild | Microsoft Docs
+title: Koncepty nástroje MSBuild | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -12,26 +12,28 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fd43d79950a39702108383f7408e1a37960e7c06
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 961f7df72476293c101ceeacbafbb31c1084fb20
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49892879"
 ---
 # <a name="msbuild-concepts"></a>Koncepty nástroje MSBuild
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] poskytuje základní schéma XML, které můžete použít k řízení, jak platformy sestavení sestavení softwaru. Pokud chcete zadat komponenty v sestavení a jak se má být sestaven, použijte tyto čtyři části MSBuild: vlastnosti, položky, úlohy a cíle.  
-  
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] poskytuje základní schéma XML, které vám umožní řídit, jak sestavení platformy sestavení softwaru. Chcete-li v sestavení a jak mají být sestaveny určete součásti, použijte tyto čtyři části nástroje MSBuild: vlastnosti, položky, úlohy a cíle.  
+
 ## <a name="related-topics"></a>Související témata  
-  
-|Název|Popis|  
-|-----------|-----------------|  
-|[Vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md)|Představuje vlastnosti a vlastnosti kolekce. Vlastnosti jsou páry klíč/hodnota, které můžete použít ke konfiguraci sestavení.|  
-|[Položky nástroje MSBuild](../msbuild/msbuild-items.md)|Představuje položky a kolekcí položek. Položky jsou vstupy do systému sestavení a obvykle představují soubory.|  
-|[Cíle nástroje MSBuild](../msbuild/msbuild-targets.md)|Vysvětluje, jak povolit části procesu sestavení, která se má volat na příkazovém řádku a skupiny úlohy společně v určitém pořadí.|  
-|[Úlohy nástroje MSBuild](../msbuild/msbuild-tasks.md)|Ukazuje, jak vytvořit jednotku spustitelného kódu, který mohou využívat [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] k provádění operací atomic sestavení.|  
-|[Porovnávání vlastností a položek](../msbuild/comparing-properties-and-items.md)|Porovná vlastnosti nástroje MSBuild a položky. Oba se používají k předávání informací do úlohy, vyhodnoťte podmínky a uložit hodnoty, které může být odkazováno v souboru projektu.|  
-|[Speciální znaky nástroje MSBuild](../msbuild/msbuild-special-characters.md)|Vysvětluje, jak, abyste se vyhnuli některé znaků, který [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] rezervuje pro speciální použití v konkrétní kontexty.|  
-|[Návod: Vytvoření souboru projektu MSBuild od začátku](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md)|Ukazuje, jak vytvořit základní projekt soubor postupně, pomocí pouze textový editor.|  
-|[Návod: Použití nástroje MSBuild](../msbuild/walkthrough-using-msbuild.md)|Nabízí jako stavební bloky pro MSBuild a ukazuje, jak k zápisu, manipulaci a ladění projektů MSBuild bez zavření sadě Visual Studio integrované vývojové prostředí (IDE).|  
-|[Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)|Odkazy na dokumenty, které obsahují referenční informace.|  
-|[MSBuild](../msbuild/msbuild.md)|Obsahuje přehled schéma XML pro soubor projektu a ukazuje, jak se řídí procesy, které sestaví softwaru.|
+
+| Název | Popis |
+| - | - |
+| [Vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md) | Představuje vlastnosti a kolekce vlastností. Vlastnosti jsou páry klíč/hodnota, které můžete použít ke konfiguraci sestavení. |
+| [Položky nástroje MSBuild](../msbuild/msbuild-items.md) | Představuje položek a položku kolekce. Položky jsou vstupy do systému sestavení a obvykle představují soubory. |
+| [Cíle nástroje MSBuild](../msbuild/msbuild-targets.md) | Vysvětluje, jak seskupit úkoly společně v určitém pořadí a povolit oddíly procesu sestavení, která se má volat na příkazovém řádku. |
+| [Úlohy nástroje MSBuild](../msbuild/msbuild-tasks.md) | Ukazuje, jak vytvořit jednotku spustitelného kódu, které mohou být využívána [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] k operacím atomického sestavení. |
+| [Porovnávání vlastností a položek](../msbuild/comparing-properties-and-items.md) | Porovná nástroj MSBuild vlastností a položek. Jak se používají k předávání informací do úlohy, vyhodnocení podmínky a ukládat hodnoty, které může být odkazováno v celém souboru projektu. |
+| [Speciální znaky nástroje MSBuild](../msbuild/msbuild-special-characters.md) | Vysvětluje, jak některé řídicí znaky, které [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] rezervuje pro speciální použití v určitém kontextu. |
+| [Návod: Vytvoření souboru projektu MSBuild od začátku](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md) | Ukazuje, jak vytvořit soubor základního projektu postupně pouze text pomocí editoru. |
+| [Návod: Použití nástroje MSBuild](../msbuild/walkthrough-using-msbuild.md) | Představuje stavebními bloky nástroje MSBuild a ukazuje, jak psát, manipulaci a ladit projekty MSBuild bez zavření sady Visual Studio integrované vývojové prostředí (IDE). |
+| [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md) | Obsahuje odkazy na dokumenty, které obsahují referenční informace. |
+| [MSBuild](../msbuild/msbuild.md) | Obsahuje přehled schématu XML pro soubor projektu a ukazuje, jak určuje procesy, které vytvoří software. |
+

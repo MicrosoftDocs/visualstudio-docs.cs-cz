@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: generovat informace o registru pro instalační program | Microsoft Docs'
+title: 'Postupy: vygenerování informací registru pro instalační program | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,33 +15,34 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c125ce9b7b8feb27bd8568e52cd363e3d451bd40
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b52d0c894aadd829806e7cc41ac9e78e95df32ba
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39513255"
 ---
-# <a name="how-to-generate-registry-information-for-an-installer"></a>Postupy: generovat informace o registru pro instalační program
-Nástroj RegPkg.exe slouží ke generování manifestu registrace pro spravované VSPackage. Manifest můžete začlenit do instalační balíček Instalační služby systému Windows. RegPkg také můžete generovat soubor, který může být součástí zdrojového souboru instalace na základě [sada nástrojů XML pro instalační program systému Windows](http://go.microsoft.com/fwlink/?LinkId=62238).  
+# <a name="how-to-generate-registry-information-for-an-installer"></a>Postupy: vygenerování informací registru pro instalační službu
+*RegPkg.exe* nástroj můžete použít ke generování manifestu registrace pro spravovaná VSPackage. Manifest může být zahrnut do instalačního balíčku Instalační služby systému Windows. RegPkg můžete také vygenerovat soubor, který může být zahrnut ve zdrojovém souboru instalace na základě [sada nástrojů XML Instalační služby systému Windows](http://go.microsoft.com/fwlink/?LinkId=62238).  
   
 > [!IMPORTANT]
->  Názvy cest, které jsou specifické pro váš vývojový systém vygeneruje RegPkg, tak pokaždé, když používáte RegPkg, je nutné upravit výstup použít příslušný instalační služby systému Windows formátu vlastnosti. Například hodnota InprocServer32 by měla být **[SystemFolder]mscoree.dll** a cesty by měl používat **[#filekey]** a **[$componentkey]**. Úprava výstup tímto způsobem podporuje počítače s Windows, které jsou nainstalované na jinou jednotku nebo v jiném adresáři, lokalizovaném adresáři názvy a cesty, které uživatelé mohou. Další informace najdete v tématu [formátu](http://go.microsoft.com/fwlink/?LinkId=71120) v sadě SDK Instalační služby systému Windows. Pokud jste dodržují konvence prostředí RegPkg pro vaše vývoj systému cesty – například soubor ID ve formátu název_*filename*– třeba provést méně změn.  
+>  RegPkg vygeneruje názvy cest, které jsou specifické pro váš vývojový systém, tak pokaždé, když používáte RegPkg, je nutné upravit výstupní použít příslušný instalační služby systému Windows ve formátu vlastnosti. Například `InprocServer32` hodnota by měla být  *\<SystemFolder\>mscoree.dll* a cesty používejte *\<#filekey\>* a  *\<$componentkey\>*. Úprava výstupu tímto způsobem podporuje počítače s Windows nainstalovat na jinou jednotku nebo v jiném adresáři, názvy lokalizovaném adresáři a cesty, které uživatelé si můžou vybrat. Další informace najdete v tématu [formátu](http://go.microsoft.com/fwlink/?LinkId=71120) v sadě SDK Instalační služby systému Windows. Pokud je pro vaše vývojové systémové cesty dodržují konvence RegPkg – například ID ve formátu souborů *název_\<filename\>*– potřebujete provést méně změn.  
   
 ### <a name="to-create-a-registration-manifest"></a>K vytvoření manifestu registrace  
   
--   Spustit RegPkg s **/regfile** přepínače. Zadejte jakékoli jiné přepínače, název souboru výstupního souboru a cesta VSPackage.  
+-   Spustit RegPkg s **/RegFile** přepnout. Zadejte další přepínače, název výstupního souboru a cestu sady VSPackage.  
   
      Například na příkazovém řádku zadejte přibližně takto:  
   
     ```  
-    [Visual Studio SDK installation path]\VisualStudioIntegration\Tools\Bin\RegPkg /regfile:MyRegFile.reg MyPackage.dll  
+    <Visual Studio SDK installation path>\VisualStudioIntegration\Tools\Bin\RegPkg /regfile:MyRegFile.reg MyPackage.dll  
     ```  
   
 ### <a name="to-view-a-registration-manifest"></a>Chcete-li zobrazit registrace manifestu  
   
--   V každém textovém editoru otevřete manifest registrace.  
+-   Otevření manifestu registrace v libovolném textovém editoru.  
   
-     V následujícím příkladu je registrace manifestu, který vytvoří RegPkg pro službu IronPython jazyka:  
+     V následujícím příkladu se registrace manifestu a vytvoří RegPkg pro IronPython jazyková služba:  
   
     ```  
     REGEDIT4  
@@ -98,21 +99,21 @@ Nástroj RegPkg.exe slouží ke generování manifestu registrace pro spravovan�
   
     ```  
   
-### <a name="to-create-a-windows-installer-xml-toolset-include-file"></a>K vytvoření souboru začlenění sada nástrojů XML Instalační služby systému Windows  
+### <a name="to-create-a-windows-installer-xml-toolset-include-file"></a>Vytvoření XML Instalační služby systému Windows sady nástrojů zahrnout soubor  
   
--   Spustit RegPkg s **/wixfile** přepínače. Zadejte jakékoli jiné přepínače, název souboru výstupního souboru a cesta VSPackage.  
+-   Spustit RegPkg s **/wixfile** přepnout. Zadejte další přepínače, název výstupního souboru a cestu sady VSPackage.  
   
      Například na příkazovém řádku zadejte přibližně takto:  
   
     ```  
-    [Visual Studio SDK installation path]\VisualStudioIntegration\Tools\Bin\RegPkg /codebase /wixfile:IronPython.LanguageService.wxi ..\bin\Release\IronPython.LanguageService.dll  
+    <Visual Studio SDK installation path>\VisualStudioIntegration\Tools\Bin\RegPkg /codebase /wixfile:IronPython.LanguageService.wxi ..\bin\Release\IronPython.LanguageService.dll  
     ```  
   
-### <a name="to-view-a-windows-installer-xml-toolset-include-file"></a>Chcete-li zobrazit sada nástrojů XML Instalační služby systému Windows včetně souboru  
+### <a name="to-view-a-windows-installer-xml-toolset-include-file"></a>Chcete-li zobrazit XML Instalační služby systému Windows sady nástrojů zahrnout soubor  
   
--   Otevřete sada nástrojů XML pro instalační program systému Windows soubor zahrnout libovolného textového editoru.  
+-   Otevřít sada nástrojů XML Instalační služby systému Windows zahrnout soubor do libovolného textového editoru.  
   
-     V následujícím příkladu je zahrnout soubor, který vytvoří RegPkg pro službu IronPython jazyka:  
+     V následujícím příkladu je zahrnout soubor, který vytvoří RegPkg pro IronPython jazyková služba:  
   
     ```  
     <Include>  
@@ -182,6 +183,6 @@ Nástroj RegPkg.exe slouží ke generování manifestu registrace pro spravovan�
     </Include>  
     ```  
   
-## <a name="see-also"></a>Viz také  
- [Registrace VSPackages](http://msdn.microsoft.com/en-us/31e6050f-1457-4849-944a-a3c36b76f3dd)   
+## <a name="see-also"></a>Viz také:  
+ [Registrace rozšíření VSPackages](http://msdn.microsoft.com/en-us/31e6050f-1457-4849-944a-a3c36b76f3dd)   
  [Balíčky VSPackage](../../extensibility/internals/vspackages.md)

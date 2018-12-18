@@ -1,5 +1,5 @@
 ---
-title: DEBUG_REFERENCE_INFO | Microsoft Docs
+title: DEBUG_REFERENCE_INFO | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a528f73f0a13ab2702e35212a3ba00f8c8c13378
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b9c25c06f4fa92030bec5bd3b6f2566111dadad4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49829622"
 ---
 # <a name="debugreferenceinfo"></a>DEBUG_REFERENCE_INFO
 Popisuje odkaz.  
@@ -52,13 +53,13 @@ public struct DEBUG_REFERENCE_INFO {
   
 ## <a name="members"></a>Členové  
  dwFields  
- Kombinace příznaků z [DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md) výčet, který určuje pole, která jsou vyplněna.  
+ Kombinace příznaků z [DEBUGREF_INFO_FLAGS](../../../extensibility/debugger/reference/debugref-info-flags.md) výčet, který určuje, která pole jsou vyplněna.  
   
  bstrName  
- Název zadaného uživatelem [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objektu.  
+ Uživatelem zadaný název [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objektu.  
   
  bstrType  
- Typ odkazu jako řetězec formátovaný.  
+ Typ odkazu jako formátovaný řetězec.  
   
  bstrValue  
  Hodnota odkazu jako formátovaný řetězec  
@@ -67,13 +68,13 @@ public struct DEBUG_REFERENCE_INFO {
  Kombinace příznaků z [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) výčet, který určuje příznaky pro atributy vlastnosti ladění.  
   
  dwRefType  
- Hodnota z [REFERENCE_TYPE](../../../extensibility/debugger/reference/reference-type.md) výčet, který určuje, jestli typ odkazu je velký nebo malý.  
+ Hodnota z [REFERENCE_TYPE](../../../extensibility/debugger/reference/reference-type.md) výčet, který určuje, zda je typ odkazu velký nebo malý.  
   
  m_pReference  
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objekt, který určuje referenční informace.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je předána volání [GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md) metoda k vyplnění. Tato struktura je také vrácena jako součást Seznam z [IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md) rozhraní, které je zase, vrácena z volání [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md) metoda.  
+ Tato struktura je předána volání [GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md) metoda být vyplněna. Tato struktura je také vrácen jako část seznamu z [IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md) rozhraní, které je pak vrácen z volání [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md) metody.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

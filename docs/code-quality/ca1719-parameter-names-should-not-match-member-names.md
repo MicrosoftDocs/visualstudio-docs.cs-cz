@@ -1,6 +1,7 @@
 ---
 title: 'CA1719: Názvy parametrů by neměly odpovídat názvům členů'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,13 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f91f32057b4adbe7747ea2b596c3654b93041692
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 64a10bd39ef34d207d910c3bc428ba862019369e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49924015"
 ---
 # <a name="ca1719-parameter-names-should-not-match-member-names"></a>CA1719: Názvy parametrů by neměly odpovídat názvům členů
+
 |||
 |-|-|
 |TypeName|ParameterNamesShouldNotMatchMemberNames|
@@ -30,16 +33,16 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Název člena externě viditelné odpovídá v porovnávání, název jednoho z jeho parametrů.
+ Název externě viditelného členu odpovídá v porovnávání, název jednoho ze svých parametrů.
 
 ## <a name="rule-description"></a>Popis pravidla
  Název parametru by měl sdělit význam parametru a název členu by měl sdělit význam členu. Byl by to vzácný návrh, pokud by byly stejné. Stejné pojmenování parametru i jeho členu je neintuitivní a činí knihovnu obtížně použitelnou.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Vyberte název parametru, která neodpovídá název člena.
+ Vyberte název parametru se neshoduje s názvem člena.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Pro nový vývoj žádné známé scénáře nastat, kde je třeba potlačit upozornění na toto pravidlo. Pro přesouvání knihovny, můžete chtít potlačit upozornění na toto pravidlo.
+ Pro vývoj nových projektů, žádné známé scénáře nastat, pokud je třeba potlačit upozornění tohoto pravidla. Pro přesouvání knihovny, budete muset potlačit upozornění tohoto pravidla.
 
 ## <a name="related-rules"></a>Související pravidla
  [CA1709: Malá a velká písmena identifikátorů by měla být použita správně](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)

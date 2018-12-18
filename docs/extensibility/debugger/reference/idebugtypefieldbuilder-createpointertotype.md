@@ -1,5 +1,5 @@
 ---
-title: IDebugTypeFieldBuilder::CreatePointerToType | Microsoft Docs
+title: IDebugTypeFieldBuilder::CreatePointerToType | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 292a6ba67ca6508d19d6dc56abb012ec13197244
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 611534843fd02cfd35fe3707917c6399c893db60
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49910028"
 ---
 # <a name="idebugtypefieldbuildercreatepointertotype"></a>IDebugTypeFieldBuilder::CreatePointerToType
-Vytvoří ukazatel na zadaný typ.  
+Vytvoří ukazatel na zadaného typu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,13 +42,13 @@ int CreatePointerToType(
   
 #### <a name="parameters"></a>Parametry  
  `pTypeField`  
- [v] Typ tak, aby odkazoval na. Je zobrazena [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) rozhraní.  
+ [in] Přejděte na typ. Je reprezentován [IDebugField](../../../extensibility/debugger/reference/idebugfield.md) rozhraní.  
   
  `pPtrToTypeField`  
- [out] Vrátí ukazatel reprezentována novou **IDebugField** objektu.  
+ [out] Vrací ukazatele reprezentovaného tímto nový **IDebugField** objektu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugTypeFieldBuilder](../../../extensibility/debugger/reference/idebugtypefieldbuilder.md)

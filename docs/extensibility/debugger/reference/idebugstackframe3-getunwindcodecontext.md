@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame3::GetUnwindCodeContext | Microsoft Docs
+title: IDebugStackFrame3::GetUnwindCodeContext | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bb29d4245529e53a9313ae18638066979caab7a3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ad47eb92af6c9ad37bafe293e6c7392613718c30
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49846444"
 ---
 # <a name="idebugstackframe3getunwindcodecontext"></a>IDebugStackFrame3::GetUnwindCodeContext
-Vrátí kontext kód představující umístění, pokud zásobníku unwind operace došlo k chybě.  
+Vrátí kontext kódu představující umístění, pokud operace unwind zásobníku došlo k chybě.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +41,13 @@ int GetUnwindCodeContext(
   
 #### <a name="parameters"></a>Parametry  
  `ppCodeContext`  
- [out] Vrátí [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) objekt, který reprezentuje umístění kontextu kódu, pokud došlo k chybě unwind zásobníku.  
+ [out] Vrátí [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) objekt, který představuje místní umístění kódu, pokud došlo k odvíjení zásobníku.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- I když tato metoda může vrátit kontext kódu pro umístění po unwind zásobníku, je však nemusí znamenat, že unwind zásobníku se ve skutečnosti může objevit v aktuální rámec zásobníku.  
+ I když tato metoda může vrátit kontext kódu pro umístění po odvíjení zásobníku, neznamená nutně, že odvíjení zásobníku ve skutečnosti může dojít v aktuální rámec zásobníku.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugStackFrame3](../../../extensibility/debugger/reference/idebugstackframe3.md)   

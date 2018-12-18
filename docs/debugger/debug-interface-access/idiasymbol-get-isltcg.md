@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_isltcg – | Microsoft Docs
+title: Idiasymbol::get_isltcg – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a799cf16dbf603f75cd810f9c249f4c0e8ba49ec
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 7eb1d7308eb03d396ca8a08f915a294ec1debd82
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49877735"
 ---
 # <a name="idiasymbolgetisltcg"></a>IDiaSymbol::get_isLTCG
-Načte příznak určující, zda [kompilace](../../debugger/debug-interface-access/compiland.md) souvisel s přepínačem linkeru [/ltgc (vytváření kódu v době propojování)](/cpp/build/reference/ltcg-link-time-code-generation), který pomáhá při optimalizace celého programu. Tento přepínač platí pouze pro spravovaný kód.  
+Získá příznak, který určuje, zda [Kompilantu](../../debugger/debug-interface-access/compiland.md) bylo propojeno pomocí přepínače linkeru [parametru/LTCG (generování kódu při propojování odkaz)](/cpp/build/reference/ltcg-link-time-code-generation), což pomáhá při optimalizaci celého programu. Tento přepínač platí pouze pro spravovaný kód.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,10 +34,10 @@ HRESULT get_iSLTCG(
   
 #### <a name="parameters"></a>Parametry  
  pFlag  
- [out] Vrátí `TRUE` Pokud `compiland` bylo propojeno s přepínačem linkeru/ltgc; jinak vrátí `FALSE`.  
+ [out] Vrátí `TRUE` Pokud `compiland` bylo propojeno pomocí přepínače linkeru parametru/LTCG; v opačném případě vrátí `FALSE`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` nebo chybový kód.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
 >  Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
@@ -45,8 +46,8 @@ HRESULT get_iSLTCG(
   
 |Požadavek|Popis|  
 |-----------------|-----------------|  
-|Hlavičky:|dia2.h|  
-|Verze:|V8.0 DIA SDK|  
+|Záhlaví:|dia2.h|  
+|Verze:|Ve verzi 8.0 DIA SDK|  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

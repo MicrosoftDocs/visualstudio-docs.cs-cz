@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: shromažďování dat čítačů procesoru | Microsoft Docs'
+title: 'Postupy: shromažďování dat čítačů procesoru | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,54 +14,55 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 994a50e66164dcd7a2a3768c8284825019e281e1
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 8d5bb2d554ee67a4a2c83decba017e9a1f0fe1e9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49813906"
 ---
-# <a name="how-to-collect-cpu-counter-data"></a>Postupy: Shromažďování dat čítačů procesoru
+# <a name="how-to-collect-cpu-counter-data"></a>Postupy: shromažďování dat čítačů procesoru
 
-Čítač Procesor událostí se používá ke shromažďování dat výkonu hardwaru. Toto téma ukazuje, jak shromažďování dat čítačů událostí při použití metoda profilování instrumentace.
+Čítače procesoru událostí se používá ke shromažďování dat výkonu hardwaru. Tento článek ukazuje, jak shromažďovat data událostí, použijete-li metoda profilace instrumentace.
 
-Provedou se dva typy událostí čítače procesoru:
+Dva typy událostí čítače CPU dojít:
 
-- Přenosné události - procesoru události, které se můžou shromažďovat, bez ohledu na určitém procesoru.
+- Události přenositelnosti - procesoru událostí, které se můžou shromažďovat, bez ohledu na konkrétním procesoru.
 
-- Platforma události - procesoru události, které jsou doplněná na určitém procesoru.
+- Události platformy – procesoru událostí, které jsou spojeny s konkrétním procesoru.
 
- Přenosné události zahrnují obecné události, jako je vyřazeno pokyny a bez cykly zastavit, procesoru vyrovnávací paměti události, větvení události a události L2 mezipaměti. Čítače událostí k dispozici platforma jsou určeny výrobce procesoru.
+  Události přenositelnosti zahrnují obecné události, jako je vyřazeno pokyny a bez zastavení cykly, události vyrovnávací paměť procesoru, větvení události a události mezipaměti L2. Čítače událostí dostupné platformy jsou určeny výrobce procesoru.
 
- Kategorie události lze sdílet mezi přenositelností a platforma čítače. Například následující kategorie dat jsou často společné pro oba typy:
+  Kategorie událostí, které mohou být sdíleny platformu a přenosné čítače. Například následující kategorie dat jsou často společné pro oba typy:
 
 - Události paměti.
 
-- Front-endu události.
+- Přední události.
 
-- Větev událostí.
+- Události větvě.
 
- Můžete shromáždit data čítače výkonu v profileru dvěma způsoby:
+  Můžete shromažďovat data čítačů výkonu v profileru dvěma způsoby:
 
-- Shromažďování dat z jedné nebo více čítačů, když profilu pomocí instrumentace.
+- Shromažďování dat z jednoho nebo více čítačů při profilování instrumentace.
 
-- Zadejte čítač událostí jako interval vzorkování při profilu pomocí vzorkování. Další informace najdete v tématu [postupy: výběr událostí vzorkování](../profiling/how-to-choose-sampling-events.md).
+- Při profilování pomocí vzorkování, zadáte jako interval vzorkování čítače událostí. Další informace najdete v tématu [postupy: výběr událostí vzorkování](../profiling/how-to-choose-sampling-events.md).
 
-## <a name="to-collect-cpu-performance-counter-data-when-you-profile-by-instrumentation"></a>Shromažďování dat čítačů výkonu procesoru, je-li profil pomocí instrumentace
+## <a name="to-collect-cpu-performance-counter-data-when-you-profile-by-instrumentation"></a>Ke shromažďování dat čítače výkonu procesoru při profilování instrumentace
 
 1. V relaci výkonu **stránky vlastností**, klikněte na tlačítko **čítače CPU.**
 
-2. Vyberte **shromažďování čítače CPU** zaškrtávací políčko.
+2. Vyberte **shromáždit čítače CPU** zaškrtávací políčko.
 
-3. Rozbalte **čítače výkonu k dispozici** stromu vyhledejte ukázkové události, které chcete shromažďovat.
+3. Rozbalte **dostupných čítačů výkonu** stromové struktury, dokud nenajdete ukázkové události, které chcete shromažďovat.
 
-4. Pro každou jednotlivou událost, který chcete shromáždit, vyberte událost a potom klikněte na tlačítko se šipkou doprava přidejte události **vybrané čítače** seznamu.
+4. Pro každou událost, která chcete shromažďovat, vyberte události a pak klikněte na tlačítko se šipkou doprava přidejte událost, abyste **vybrané čítače** seznamu.
 
     > [!NOTE]
-    > **K dispozici čítače** je povoleno pouze v případě, že jste vybrali **čítače CPU shromažďovat** zaškrtávací políčko.
+    > **Dostupné čítače výkonu** je povolená jenom v případě, že jste vybrali **čítače CPU shromažďovat** zaškrtávací políčko.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Konfigurace výkonnostních relací](../profiling/configuring-performance-sessions.md)  
 [Vlastnosti výkonnostní relace](../profiling/performance-session-properties.md)  
-[Využití procesoru a čítačů systému Windows](../profiling/cpu-and-windows-counters.md)  
-[Postupy: výběr událostí vzorkování](../profiling/how-to-choose-sampling-events.md)
+[Čítače procesoru a systému Windows](../profiling/cpu-and-windows-counters.md)  
+[Postupy: Výběr událostí vzorkování](../profiling/how-to-choose-sampling-events.md)

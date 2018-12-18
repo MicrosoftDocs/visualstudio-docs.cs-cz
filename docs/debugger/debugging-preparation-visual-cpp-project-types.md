@@ -1,6 +1,6 @@
 ---
-title: 'Příprava na ladění: Typy projektů Visual C++ | Microsoft Docs'
-ms.custom: ''
+title: Příprava na ladění projektů C++ | Dokumentace Microsoftu
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -20,98 +20,99 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64d49d799c0ec0b3845a262c248d2438572ecd5d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: c39acdef217d2b858645073cb96da4952c91df5a
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53066311"
 ---
 # <a name="debugging-preparation-visual-c-project-types"></a>Příprava ladění: typy projektů jazyka Visual C++
-Tato část popisuje postup ladění typy základní projektů vytvořených [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] šablony projektu.  
+Tato část popisuje, jak ladit základního projektu typy vytvořené [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] šablony projektu.  
   
- Všimněte si, že tyto typy projektů, které jako jejich výstup vytvořit knihovny DLL, byly seskupeny do [ladění projektů knihovny DLL](../debugger/debugging-dll-projects.md) z důvodu běžné funkce sdílejí.  
+ Všimněte si, že tyto typy projektů, které vytvářejí knihovny DLL jako jejich výstup, byly seskupeny do [ladění projektů knihovny DLL](../debugger/debugging-dll-projects.md) z důvodu běžné funkce sdílejí.  
   
 ##  <a name="BKMK_In_this_topic"></a> V tomto tématu  
  [Doporučené nastavení vlastností](#BKMK_Recommended_Property_Settings)  
   
  [Projekty Win32](#BKMK_Win32_Projects)  
   
--   [Chcete-li ladit aplikace C nebo C++ Win32](#BKMK_To_debug_a_C_or_C___Win32_application)  
+- [Chcete-li ladit aplikace jazyka C nebo C++ Win32](#BKMK_To_debug_a_C_or_C___Win32_application)  
   
--   [Chcete-li ručně nastavit konfiguraci ladění](#BKMK_To_manually_set_a_Debug_configuration)  
+- [K ručnímu nastavení konfigurace ladění](#BKMK_To_manually_set_a_Debug_configuration)  
   
- [Aplikace Windows Forms (.NET)](#BKMK_Windows_Forms_Applications___NET_)  
+  [Aplikace Windows Forms (.NET)](#BKMK_Windows_Forms_Applications___NET_)  
   
 ##  <a name="BKMK_Recommended_Property_Settings"></a> Doporučené nastavení vlastností  
- Některé vlastnosti musí být nastaven stejným způsobem jako pro všechny nespravované ladění scénáře. Následující tabulky obsahují doporučené nastavení vlastností. Mezi typy jiný nespravované projekt se mohou lišit nastavení, které zde nejsou uvedeny. Další informace najdete v tématu [nastavení projektu pro konfiguraci ladění jazyka C++](../debugger/project-settings-for-a-cpp-debug-configuration.md)  
+ Určité vlastnosti měly být nastaveny stejným způsobem jako pro všechny nespravované ladění scénářů. Následující tabulky obsahují doporučené nastavení vlastností. Nastavení, které tu nejsou uvedené, mohou lišit mezi typy nespravovaného jiného projektu. Další informace najdete v tématu [nastavení projektu pro konfiguraci ladění jazyka C++](../debugger/project-settings-for-a-cpp-debug-configuration.md)  
   
 ### <a name="configuration-properties-124-cc-124-optimization-node"></a>Vlastnosti konfigurace &#124; C/C++ &#124; optimalizace uzlu  
   
 |Název vlastnosti|Nastavení|  
 |-------------------|-------------|  
-|**Optimalizace**|Nastavte na **zakázané (nebo 0 d).** Optimalizovaný kód je těžší ladit, protože vygenerovaný pokyny neodpovídají přímo ke zdrojovému kódu. Pokud zjistíte chybu, která se zobrazí pouze v optimalizovaný kód má program, můžete zapnout toto nastavení, ale mějte na paměti, tento kód ukazuje **zpětný překlad** okno se generují z optimalizované zdroj, který nemusí odpovídat co vidíte ve zdroji Windows. Další funkce, jako je například krokování, nemusí chovat podle očekávání.|  
+|**Optimalizace**|Nastavte na **zakázáno (/ 0 d).** Optimalizovaný kód je těžší ladit, protože generované pokyny neodpovídají přímo ke zdrojovému kódu. Pokud zjistíte, váš program obsahuje chybu, která se zobrazí pouze v optimalizovaném kódu, můžete zapnout toto nastavení, ale mějte na paměti, že kód zobrazený v **zpětný překlad** okna je generován z optimalizovaného zdrojového, který se nemusí shodovat, co vidíte ve zdroji systém Windows. Další funkce, jako je například krokování, nemusí chovat dle očekávání.|  
   
 ### <a name="configuration-properties-124-linker-124-debugging-node"></a>Vlastnosti konfigurace &#124; Linkeru &#124; uzlu ladění  
   
 |Název vlastnosti|Nastavení|  
 |-------------------|-------------|  
-|**Generovat ladicí informace**|Tato možnost by měla vždy nastavená na **Ano (/ DEBUG)** vytvořit ladění symboly a soubory potřebné pro ladění. Pokud aplikace přejde do produkčního prostředí, můžete nastavit ho vypnout.|  
+|**Generovat ladicí informace**|Vždy byste měli nastavit tuto možnost na **Ano (/ DEBUG)** vytvořit ladicí symboly a soubory potřebné pro ladění. Když aplikace přejde do produkčního prostředí, můžete nastavit na vypnuto.|  
   
  [V tomto tématu](../debugger/debugging-preparation-visual-cpp-project-types.md#BKMK_In_this_topic)  
   
 ##  <a name="BKMK_Win32_Projects"></a> Projekty Win32  
- Win32 – aplikace jsou napsané v C nebo C++ tradiční programy systému Windows. Ladění tento typ aplikace v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] je jednoduché.  
+ Win32 – aplikace se tradiční Windows programy napsané v jazyce C nebo C++. Ladění tohoto typu aplikace v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] je jednoduché.  
   
- Aplikace Win32 zahrnují aplikace MFC a projekty knihovny ATL. Kdy použít rozhraní API systému Windows a může pomocí knihovny MFC nebo ATL, ale nepoužívají common language runtime (CLR). Můžou však volat spravovaného kódu, který používá modulu CLR.  
+ Win32 – aplikace patří aplikace knihovny MFC a ATL projekty. Pomocí rozhraní Windows API a mohou používat knihovny MFC nebo ATL, ale nepoužívají common language runtime (CLR). Může, ale volání spravovaného kódu, který používá modul CLR.  
   
- Následující postup vysvětluje, jak k ladění projektu Win32 v rámci [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Dalším způsobem ladění aplikace Win32, je-li spustit aplikaci mimo [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a k němu připojí. Další informace najdete v tématu [přiřadit běžící procesy](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).  
+ Následující postup vysvětluje, jak ladit projekt Win32 v rámci [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Dalším způsobem, jak ladit aplikaci Win32 je a spusťte tak aplikaci mimo [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a připojit se k němu. Další informace najdete v tématu [připojení k běžící procesy](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).  
   
-###  <a name="BKMK_To_debug_a_C_or_C___Win32_application"></a> Chcete-li ladit aplikace C nebo C++ Win32  
+###  <a name="BKMK_To_debug_a_C_or_C___Win32_application"></a> Chcete-li ladit aplikace jazyka C nebo C++ Win32  
   
 1.  Otevřete projekt v sadě Visual Studio.  
   
-2.  Na **ladění** nabídce zvolte **spustit**.  
+2.  Na **ladění** nabídce zvolte **Start**.  
   
-3.  Ladění pomocí technik popsaných v [základy ladicího programu](../debugger/debugger-basics.md).  
+3.  Ladění pomocí technik popsaných v [základy ladicího programu](../debugger/getting-started-with-the-debugger.md).  
   
-###  <a name="BKMK_To_manually_set_a_Debug_configuration"></a> Chcete-li ručně nastavit konfiguraci ladění  
+###  <a name="BKMK_To_manually_set_a_Debug_configuration"></a> K ručnímu nastavení konfigurace ladění  
   
-1.  Na **zobrazení** nabídky, klikněte na tlačítko **stránky vlastností**.  
+1. Na **zobrazení** nabídky, klikněte na tlačítko **stránky vlastností**.  
   
-2.  Klikněte **vlastnosti konfigurace** uzlu a otevře se, pokud ještě není  
+2. Klikněte na tlačítko **vlastnosti konfigurace** uzlu otevřete ho, pokud ještě není  
   
-3.  Vyberte **Obecné**a nastavte hodnotu **výstup** řádek na **ladění**.  
+3. Vyberte **Obecné**a nastavte hodnotu **výstup** řádku do **ladění**.  
   
-4.  Otevřete **C/C++** uzel a vyberte možnost **Obecné**.  
+4. Otevřít **C/C++** uzel a vyberte možnost **Obecné**.  
   
-     V **ladění** řádek zadejte typ ladění informace, které lze generovat kompilátoru. Možné hodnoty patří **databázi programu (/Zi)** nebo **databázi programu pro upravit a pokračovat (/ZI)**.  
+    V **ladění** řádek zadejte typ ladění informace generované kompilátorem. Je možné hodnoty zahrnují **databázi programu (/Zi)** nebo **databáze programu pro upravit a pokračovat (/ZI)**.  
   
-5.  Vyberte **optimalizace**a v **optimalizace** řádek, vyberte **zakázané (nebo 0d)** z rozevíracího seznamu.  
+5. Vyberte **optimalizace**a **optimalizace** řádek, vyberte **zakázáno (/ 0d)** z rozevíracího seznamu.  
   
-     Optimalizovaný kód je těžší ladit, protože vygenerovaný pokyny neodpovídají přímo ke zdrojovému kódu. Pokud zjistíte, že má program chybu, která se zobrazí pouze v optimalizovaný kód, můžete zapnout toto nastavení, ale mějte na paměti, že kód zobrazený v okně zpětný překlad se generují z optimalizované zdroj, který nemusí odpovídat najdete v v systému windows. zdroj. Funkce, jako je zanoříte se pravděpodobně zobrazit zarážky a provádění bod nesprávně.  
+    Optimalizovaný kód je těžší ladit, protože generované pokyny neodpovídají přímo ke zdrojovému kódu. Pokud zjistíte, že váš program obsahuje chybu, která se zobrazí pouze v optimalizovaném kódu, můžete zapnout toto nastavení, ale mějte na paměti, že kód zobrazený v okně zpětného překladu je generován z optimalizovaného zdrojového, který se nemusí shodovat se zobrazí ve zdrojových oknech. Funkce, jako je například krokování mohou zobrazit zarážky a provádění bodů nesprávně.  
   
-6.  Otevřete **Linkeru** uzel a vyberte možnost **ladění**. V prvním **generování** řádek, vyberte **Ano (/ DEBUG)** z rozevíracího seznamu. Vždy nastaven to při ladění.  
+6. Otevřít **Linkeru** uzel a vyberte možnost **ladění**. V prvním **generovat** řádek, vyberte **Ano (/ DEBUG)** z rozevíracího seznamu. Vždy nastavte při ladění.  
   
- Další informace najdete v tématu[nastavení projektu pro konfiguraci ladění C++](../debugger/project-settings-for-a-cpp-debug-configuration.md).  
+   Další informace najdete v tématu[nastavení projektu pro konfiguraci ladění jazyka C++](../debugger/project-settings-for-a-cpp-debug-configuration.md).  
   
- [V tomto tématu](../debugger/debugging-preparation-visual-cpp-project-types.md#BKMK_In_this_topic)  
+   [V tomto tématu](../debugger/debugging-preparation-visual-cpp-project-types.md#BKMK_In_this_topic)  
   
 ##  <a name="BKMK_Windows_Forms_Applications___NET_"></a> Aplikace Windows Forms (.NET)  
- **Windows Forms aplikace (.NET)** šablona vytváří [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] aplikace Windows Forms. Další informace najdete v tématu [postupy: vytvoření projektu aplikace Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+ **Windows Forms aplikace (.NET)** šablona vytvoří [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] aplikace Windows Forms. Další informace najdete v tématu [postupy: vytvoření projektu aplikace Windows](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/42wc9kk5(v=vs.100)).  
   
- Ladění tento typ aplikace v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] je podobná ve spravovaných aplikacích Windows Forms.  
+ Ladění tohoto typu aplikace v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] je podobná ve spravovaných aplikacích Windows Forms.  
   
- Při vytváření projektu Windows Forms pomocí šablony projektu, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] automaticky vytvoří požadované nastavení pro konfiguraci ladění a vydání. Pokud potřeby můžete změnit tato nastavení v  **\<název projektu > stránky vlastností** dialogové okno. Další informace najdete v tématu [konfigurace ladění a verzí](../debugger/how-to-set-debug-and-release-configurations.md).  
+ Při vytváření projektu Windows Forms pomocí šablony projektu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] automaticky vytvoří požadované nastavení konfigurace Debug a Release. Pokud třeba, můžete změnit tato nastavení v  **\<název projektu > stránky vlastností** dialogové okno. Další informace najdete v tématu [konfigurace ladění a verzí](../debugger/how-to-set-debug-and-release-configurations.md).  
   
- Další informace najdete v tématu [nastavení projektu pro konfiguraci ladění C++](../debugger/project-settings-for-a-cpp-debug-configuration.md).  
+ Další informace najdete v tématu [nastavení projektu pro konfiguraci ladění jazyka C++](../debugger/project-settings-for-a-cpp-debug-configuration.md).  
   
- Jiný způsob, jak ladit aplikaci Windows Forms, je-li spustit aplikaci mimo [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a k němu připojí. Další informace najdete v tématu [připojení ke spuštění programu nebo více programů](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).  
+ Je další způsob, jak ladit aplikaci Windows Forms a spusťte tak aplikaci mimo [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a připojit se k němu. Další informace najdete v tématu [připojení ke spuštění programu nebo více programů](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).  
   
  [V tomto tématu](../debugger/debugging-preparation-visual-cpp-project-types.md#BKMK_In_this_topic)  
   
 ## <a name="see-also"></a>Viz také  
- [Základy ladicího programu](../debugger/debugger-basics.md)   
+ [Základy ladicího programu](../debugger/getting-started-with-the-debugger.md)   
  [Nastavení projektu pro konfiguraci ladění jazyka C++](../debugger/project-settings-for-a-cpp-debug-configuration.md)   
- [Připojení ke spuštění programu nebo více programů](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
+ [Připojení více programů nebo spuštění programu](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
  [Konfigurace ladění a verzí](../debugger/how-to-set-debug-and-release-configurations.md)   
- [Postupy: vytvoření projektu aplikace Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa)
+ [Postupy: vytvoření projektu aplikace Windows](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/42wc9kk5(v=vs.100))

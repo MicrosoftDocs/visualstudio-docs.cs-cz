@@ -1,5 +1,5 @@
 ---
-title: Idiaenumlinenumbers::Item – | Microsoft Docs
+title: Idiaenumlinenumbers::Item – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a00929311c1e8ccaa50d03543f072696bd2bf7f
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 851abd08093be885a49103a96a866b6700337d27
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49931789"
 ---
 # <a name="idiaenumlinenumbersitem"></a>IDiaEnumLineNumbers::Item
-Načte číslo řádku prostřednictvím indexu.  
+Získá číslo řádku pomocí indexu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,13 +35,13 @@ HRESULT Item (
   
 #### <a name="parameters"></a>Parametry  
  index  
- [v] Z indexu [idialinenumber –](../../debugger/debug-interface-access/idialinenumber.md) objekt, který má být načtena. Index je v rozsahu od 0 do `count`-1, kde `count` je vrácený [idiaenumlinenumbers::get_count –](../../debugger/debug-interface-access/idiaenumlinenumbers-get-count.md) metoda.  
+ [in] Index o [idialinenumber –](../../debugger/debug-interface-access/idialinenumber.md) objekt, který se má načíst. Index je v rozsahu 0 až `count`-1, kde `count` je vrácený [idiaenumlinenumbers::get_count –](../../debugger/debug-interface-access/idiaenumlinenumbers-get-count.md) metody.  
   
- lineNumber  
- [out] Vrátí [idialinenumber –](../../debugger/debug-interface-access/idialinenumber.md) objektu, který představuje číslo požadovaného řádku.  
+ Číslo řádku  
+ [out] Vrátí [idialinenumber –](../../debugger/debug-interface-access/idialinenumber.md) objekt reprezentující počet požadovaných řádků.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [Idiaenumlinenumbers –](../../debugger/debug-interface-access/idiaenumlinenumbers.md)   

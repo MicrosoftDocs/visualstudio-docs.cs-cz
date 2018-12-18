@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentContext2::GetLanguageInfo | Microsoft Docs
+title: IDebugDocumentContext2::GetLanguageInfo | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d86a31893a62391c0da1041402e3806c7a1e997e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8d8b9c31f5d681c80c1fe961fac039f8f9a6b5b5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920635"
 ---
 # <a name="idebugdocumentcontext2getlanguageinfo"></a>IDebugDocumentContext2::GetLanguageInfo
 Získá jazyk spojený s tímto kontextem dokumentu.  
@@ -42,16 +43,16 @@ int GetLanguageInfo(
   
 #### <a name="parameters"></a>Parametry  
  `pbstrLanguage`  
- [out] Vrátí název jazyka, který implementuje kód v tomto kontextu dokumentu.  
+ [out] Vrátí název jazyka, který implementuje kód v kontextu tohoto dokumentu.  
   
  `pguidLanguage`  
- [out] Vrátí identifikátor GUID jazyka, který implementuje kód v tomto kontextu dokumentu. Například `guidVBScriptLang` nebo `guidCPPLang`. Tento identifikátor GUID není omezeno na jazyky poskytl [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)].  
+ [out] Vrátí identifikátor GUID jazyka, který implementuje kód v kontextu tohoto dokumentu. Například `guidVBScriptLang` nebo `guidCPPLang`. Tento identifikátor GUID není omezena pouze na jazyky poskytnutých [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)].  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchou `CDebugContext` objekt, který zveřejňuje [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) rozhraní.  
+ Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CDebugContext` objekt, který zveřejňuje [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) rozhraní.  
   
 ```cpp  
 HRESULT CDebugContext::GetLanguageInfo(BSTR* pbstrLanguage, GUID* pguidLanguage)    

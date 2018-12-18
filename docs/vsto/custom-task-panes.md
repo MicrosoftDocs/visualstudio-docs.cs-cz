@@ -1,5 +1,5 @@
 ---
-title: Vlastní podokna úloh | Microsoft Docs
+title: Vlastní podokna úloh
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -28,163 +28,159 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: acbe91b0a7150ac3a04f9a0b33c8b95d371caf53
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e4e8384bc86bf59216c353b0f4610d3863445781
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49889760"
 ---
 # <a name="custom-task-panes"></a>Vlastní podokna úloh
-  Podokna úloh jsou panely uživatelského rozhraní, které jsou obvykle ukotven na jedné straně okna v aplikaci Microsoft Office. Vlastní podokna úloh poskytují způsob, jak vytvořit vlastní podokna úloh a uživatelům poskytnout známé rozhraní pro přístup k funkcím vaše řešení. Rozhraní může například obsahovat ovládacích prvků, které kód upravovat dokumenty nebo zobrazovat data ze zdroje dat spustit.  
+  Panely uživatelského rozhraní, které jsou obvykle ukotven k okraji okna v aplikaci Microsoft Office jsou podokna úloh. Vlastní podokna úloh poskytují způsob, jak vytvořit vlastní podokna úloh a poskytuje uživatelům známou rozhraní pro přístup k funkcím vašeho řešení. Rozhraní může například obsahovat ovládací prvky, na kterých běží kód pro úpravy dokumentů a zobrazení dat ze zdroje dat.  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
 > [!NOTE]  
->  V podokně Akce se liší vlastního podokna úloh. V podokně Akce je součástí úpravy na úrovni dokumentů pro Microsoft Office Word a Microsoft Office Excel. Další informace najdete v tématu [přehled podokna akcí](../vsto/actions-pane-overview.md).  
+>  V podokně Akce se liší vlastního podokna úloh. V podokně Akce je součástí přizpůsobení na úrovni dokumentu pro aplikaci Microsoft Office Word a Microsoft Office Excel. Další informace najdete v tématu [přehled podokna akcí](../vsto/actions-pane-overview.md).  
   
-## <a name="benefits-of-custom-task-panes"></a>Výhody vlastní podokna úloh  
- Vlastní podokna úloh umožňují integrovat váš funkce do známé uživatelské rozhraní. Vlastního podokna úloh můžete rychle vytvořit pomocí nástrojů Visual Studio.  
+## <a name="benefits-of-custom-task-panes"></a>Výhody vlastních podoken úloh  
+ Vlastní podokna úloh umožňuje integrovat do známé uživatelské rozhraní vaší funkce. Pomocí nástrojů sady Visual Studio můžete rychle vytvořit vlastního podokna úloh.  
   
 ### <a name="familiar-user-interface"></a>Známé uživatelské rozhraní  
- Uživatelé aplikací v systému Microsoft Office obeznámeni s pomocí podokna úloh, jako **styly a formátování** podokna úloh v aplikaci Word. Vlastní podokna úloh chovat jako další podokna úloh v systému Microsoft Office. Uživatele můžete ukotvit vlastních podoken úloh různých stranách okna aplikace, nebo se můžete přetáhnout vlastní podokna úloh do libovolného umístění, v okně. Můžete vytvořit Add-in VSTO, která zobrazuje více vlastních podoken úloh ve stejnou dobu, a uživatelé můžou řídit jednotlivě každý podokna úloh.  
+ Uživatelé aplikací v systému Microsoft Office jsou už mají zkušenosti s pomocí podokna úloh, jako **styly a formátování** podokna úloh v aplikaci Word. Vlastní podokna úloh se chovají jako jiná podokna úloh v systému Microsoft Office. Uživatelům můžete ukotvit vlastní podokna úloh do jiné straně okna aplikace nebo vlastní podokna úloh, můžete přetáhnout do libovolného umístění v okně. Můžete vytvořit doplňku VSTO zobrazující více vlastních podoken úloh ve stejnou dobu, a uživatelé můžou řídit jednotlivě každý podokna úloh.  
   
-### <a name="windows-forms-support"></a>Podpora prostředí Windows Forms  
- Uživatelské rozhraní z vlastního podokna úloh, které vytvoříte pomocí nástrojů pro vývoj pro Office v sadě Visual Studio je založena na systému Windows Forms – ovládací prvky. Známé Návrhář formulářů Windows můžete použít k návrhu uživatelského rozhraní pro vlastního podokna úloh. Můžete taky podporu vazby dat v systému Windows Forms svázat zdroj dat s ovládacími prvky v podokně úloh.  
+### <a name="windows-forms-support"></a>Podpora Windows forms  
+ Uživatelské rozhraní z vlastního podokna úloh, kterou vytvoříte pomocí nástroje pro vývoj pro Office v sadě Visual Studio je založená na ovládacích prvcích Windows Forms. Známé Návrhář formulářů Windows můžete použít k návrhu uživatelského rozhraní pro vlastního podokna úloh. Podpora vazeb dat můžete použít také v modelu Windows Forms k vytvoření vazby zdroje dat s ovládacími prvky v podokně úloh.  
   
-## <a name="creating-a-custom-task-pane"></a>Vytvoření vlastního podokna úloh  
+## <a name="create-a-custom-task-pane"></a>Vytvoření vlastního podokna úloh  
  Můžete vytvořit základní vlastního podokna úloh ve dvou krocích:  
   
-1.  Přidání ovládacích prvků Windows Forms k vytvořit uživatelské rozhraní pro vlastního podokna úloh <xref:System.Windows.Forms.UserControl> objektu.  
+1. Přidáním ovládacích prvků Windows Forms k vytvoření uživatelského rozhraní pro vlastního podokna úloh <xref:System.Windows.Forms.UserControl> objektu.  
   
-2.  Vytvořte instanci vlastního podokna úloh předáním uživatelského ovládacího prvku <xref:Microsoft.Office.Tools.CustomTaskPaneCollection> objekt v doplňku VSTO. Tato kolekce vrátí novou <xref:Microsoft.Office.Tools.CustomTaskPane> objekt, který můžete použít k úpravě vzhled do podokna úloh a reakce na události uživatele.  
+2. Vytvoření instance vlastního podokna úloh předáním uživatelský ovládací prvek <xref:Microsoft.Office.Tools.CustomTaskPaneCollection> objektu v doplňku VSTO. Tato kolekce vrátí nový <xref:Microsoft.Office.Tools.CustomTaskPane> objekt, který můžete použít k úpravě vzhledu podokna úloh a reagovat na události uživatele.  
   
- Další informace najdete v tématu [postupy: Přidání vlastního podokna úloh do aplikace](../vsto/how-to-add-a-custom-task-pane-to-an-application.md).  
+   Další informace najdete v tématu [postupy: Přidání vlastního podokna úloh do aplikace](../vsto/how-to-add-a-custom-task-pane-to-an-application.md).  
   
-### <a name="creating-the-user-interface"></a>Vytvoření uživatelského rozhraní  
- Obsahuje všechny vlastní podokna úloh vytvořených pomocí nástroje pro vývoj pro Office v sadě Visual Studio <xref:System.Windows.Forms.UserControl> objektu. Tento uživatelský ovládací prvek poskytuje uživatelské rozhraní z vlastního podokna úloh. Můžete vytvořit uživatelského ovládacího prvku v době návrhu nebo za běhu. Pokud vytvoříte uživatelského ovládacího prvku v době návrhu, můžete vytvořit uživatelské rozhraní podokna úloh Návrhář formulářů Windows.  
+### <a name="create-the-user-interface"></a>Vytvoření uživatelského rozhraní  
+ Všechny vlastní podokna úloh, které jsou vytvořeny pomocí nástroje pro vývoj pro Office v sadě Visual Studio obsahují <xref:System.Windows.Forms.UserControl> objektu. Tento uživatelský ovládací prvek poskytuje uživatelské rozhraní z vlastního podokna úloh. Můžete vytvořit uživatelský ovládací prvek v době návrhu nebo za běhu. Pokud vytvoříte uživatelský ovládací prvek v době návrhu, můžete použít Návrháře Windows Forms k vytvoření uživatelského rozhraní podokna úloh.  
   
-### <a name="instantiating-the-custom-task-pane"></a>Vytváření instancí vlastního podokna úloh  
- Po vytvoření uživatelského ovládacího prvku, který obsahuje uživatelské rozhraní z vlastního podokna úloh, budete muset vytvořit instanci <xref:Microsoft.Office.Tools.CustomTaskPane>. K tomuto účelu předat uživatelského ovládacího prvku <xref:Microsoft.Office.Tools.CustomTaskPaneCollection> v doplňku VSTO ve volání jedné z <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> metody. Tato kolekce je zpřístupněná jako `CustomTaskPanes` pole z `ThisAddIn` třídy. Následující příklad kódu je určený pro spouštění z `ThisAddIn` třídy.  
+### <a name="instantiate-the-custom-task-pane"></a>Vytvoření instance vlastního podokna úloh  
+ Po vytvoření uživatelského ovládacího prvku, který obsahuje uživatelské rozhraní z vlastního podokna úloh, budete muset vytvořit instanci <xref:Microsoft.Office.Tools.CustomTaskPane>. K tomuto účelu předat uživatelského ovládacího prvku <xref:Microsoft.Office.Tools.CustomTaskPaneCollection> v doplňku VSTO voláním jedné z <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> metody. Tato kolekce je vystavena jako `CustomTaskPanes` pole `ThisAddIn` třídy. Následující příklad kódu je určený ke spuštění z `ThisAddIn` třídy.  
   
  [!code-vb[Trin_TaskPaneBasic#2](../vsto/codesnippet/VisualBasic/Trin_TaskPaneBasic/ThisAddIn.vb#2)]
  [!code-csharp[Trin_TaskPaneBasic#2](../vsto/codesnippet/CSharp/Trin_TaskPaneBasic/ThisAddIn.cs#2)]  
   
- <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> Metody vracet novou <xref:Microsoft.Office.Tools.CustomTaskPane> objektu. Tento objekt můžete použít k úpravě vzhled do podokna úloh a reakce na události uživatele.  
+ <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> Metody vracet novou <xref:Microsoft.Office.Tools.CustomTaskPane> objektu. Tento objekt slouží k úpravě vzhledu podokna úloh a reagovat na události uživatele.  
   
-### <a name="controlling-the-task-pane-in-multiple-windows"></a>Řízení v podokně úloh ve více oken  
- Vlastní podokna úloh jsou přidruženy k rámce okna dokumentu, který se uživateli zobrazí zobrazení dokumentu nebo položce. V podokně úloh je viditelná jenom v případě, že okno přidružené je viditelné.  
+### <a name="control-the-task-pane-in-multiple-windows"></a>Ovládací prvek podokna úloh ve více oken  
+ Vlastní podokna úloh jsou spojeny s oknem rámce dokumentu, který se uživateli zobrazí zobrazení dokumentu nebo položky. V podokně úloh je viditelná pouze v případě, že je přidružené okno viditelné.  
   
- Pokud chcete zjistit, které zobrazují vlastního podokna úloh, použijte odpovídající <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> přetížení metody vytvoříte-li do podokna úloh:  
+ Chcete-li zjistit, které v okně se zobrazí v podokně úloh, použijte odpovídající <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> přetížení metody, když vytvoříte v podokně úloh:  
   
--   Chcete-li do podokna úloh přidružit k aktivní okno, použijte <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> metoda.  
+- Chcete-li přidružit aktivní okno podokna úloh, použijte <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> metody.  
   
--   Chcete-li do podokna úloh přidružit dokument, který je hostován vybrané okno, použijte <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> metoda.  
+- Chcete-li přidružit dokument, který je hostitelem určené okno podokna úloh, použijte <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> metody.  
   
- Některé aplikace Office vyžadují explicitní pokyny, kdy se mají vytvořit nebo zobrazit vaše podokna úloh, pokud je otevřené okno více než jeden. Díky tomu je potřeba zvážit, kde se vytvořit instanci vlastního podokna úloh ve vašem kódu, chcete-li zajistit, aby se do podokna úloh s příslušnou dokumenty či položky v aplikaci. Další informace najdete v tématu [Správa podokna vlastní úloh v aplikaci Windows](#Managing).  
+  Některé aplikace Office vyžadují explicitní pokyny, kdy se má vytvořit nebo zobrazit vašeho podokna úloh, když je otevřeno více než jedno okno. Díky tomu je potřeba zvážit, kde k vytvoření instance vlastního podokna úloh ve vašem kódu k zajištění, že se zobrazí v podokně úloh s odpovídající dokumenty či položky v aplikaci. Další informace najdete v tématu [Správa vlastních podoken úloh v aplikaci windows](#Managing).  
   
-## <a name="accessing-the-application-from-the-task-pane"></a>Přístup k aplikaci v podokně úloh  
- Pokud chcete automatizovat aplikace z uživatelského ovládacího prvku, můžete přímo přístup k objektu modelu s použitím `Globals.ThisAddIn.Application` ve vašem kódu. Statické `Globals` třída poskytuje přístup k `ThisAddIn` objektu. `Application` Pole tohoto objektu je vstupní bod do modelu objektu aplikace.  
+## <a name="access-the-application-from-the-task-pane"></a>Přístup k aplikaci z podokna úloh  
+ Pokud chcete automatizovat aplikace z uživatelského ovládacího prvku, můžete přístup přímo objektový model s použitím `Globals.ThisAddIn.Application` ve vašem kódu. Statické `Globals` třídě poskytuje přístup k `ThisAddIn` objektu. `Application` Pole tohoto objektu je vstupním bodem do objektového modelu aplikace.  
   
- Další informace o `Application` pole z `ThisAddIn` objektu, najdete v části [programování doplňků VSTO](../vsto/programming-vsto-add-ins.md). Návod, jak to automatizace aplikace z vlastního podokna úloh najdete v tématu [návod: automatizace aplikace z vlastního podokna úloh](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md). Další informace o `Globals` třídy najdete v tématu [globální přístup k objektům v projektech Office](../vsto/global-access-to-objects-in-office-projects.md).  
+ Další informace o `Application` pole `ThisAddIn` objektu, najdete v článku [doplňků Program VSTO](../vsto/programming-vsto-add-ins.md). Názorný postup ukazuje, jak automatizovat aplikace z vlastního podokna úloh, naleznete v tématu [návod: Automatické aplikace z vlastního podokna úloh](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md). Další informace o `Globals` najdete v tématu [globální přístup k objektům v projektech Office](../vsto/global-access-to-objects-in-office-projects.md).  
   
-## <a name="managing-the-user-interface-of-the-task-pane"></a>Správa uživatelského rozhraní do podokna úloh  
- Po vytvoření do podokna úloh, můžete použít vlastnosti a události <xref:Microsoft.Office.Tools.CustomTaskPane> objekt k ovládání uživatelského rozhraní v podokně úloh a reagovat, když uživatel změní v podokně úloh.  
+## <a name="manage-the-user-interface-of-the-task-pane"></a>Správa uživatelského rozhraní aplikace podokna úloh  
+ Po vytvoření podokna úloh, můžete použít vlastnosti a události <xref:Microsoft.Office.Tools.CustomTaskPane> objekt ovládací prvek uživatelského rozhraní aplikace podokna úloh a reagovat, když uživatel změní podokna úloh.  
   
-### <a name="making-the-custom-task-pane-visible"></a>Viditelnosti vlastního podokna úloh  
- Ve výchozím nastavení v podokně úloh není viditelný. Chcete-li do podokna úloh zobrazené, musíte nastavit <xref:Microsoft.Office.Tools.CustomTaskPane.Visible%2A> vlastnost **true**.  
+### <a name="make-the-custom-task-pane-visible"></a>Zviditelnit vlastní podokna úloh  
+ Ve výchozím nastavení není viditelný v podokně úloh. Ke zviditelnění podokna úloh, je nutné nastavit <xref:Microsoft.Office.Tools.CustomTaskPane.Visible%2A> vlastnost **true**.  
   
- Uživatele můžete kdykoli zavřít podokna úloh, kliknutím **zavřete** tlačítko (X) v dolním podokně úloh. Je však žádné výchozí uživatelům způsob, jak otevřít vlastního podokna úloh znovu. Pokud uživatel zavře vlastního podokna úloh, tohoto uživatele nelze zobrazit vlastního podokna úloh znovu Pokud poskytnout způsob, můžete ho zobrazit.  
+ Uživatele můžete kdykoli zavřít podokno úloh, kliknutím **zavřete** tlačítko (X) v horním rohu podokna úloh. Neexistuje však žádný způsob výchozí pro uživatele a znovu otevřete podokno úloh. Pokud uživatel zavře vlastního podokna úloh, tento uživatel nemůže zobrazit vlastního podokna úloh znovu pokud poskytují způsob, jak ji zobrazit.  
   
- Pokud vytvoříte vlastního podokna úloh v doplňku VSTO, měli byste také vytvořit element uživatelského rozhraní, jako je tlačítko, které mohou uživatelé kliknout a zobrazit nebo skrýt vlastního podokna úloh. Pokud vytvoříte vlastního podokna úloh v aplikaci Microsoft Office, který podporuje přizpůsobení pásu karet, můžete přidat skupinu ovládacích prvků na pásu karet pomocí tlačítka, který zobrazí nebo skryje vlastního podokna úloh. Návod, jak to udělat najdete v tématu [návod: synchronizace vlastního podokna úloh s tlačítkem pásu karet](../vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md).  
+ Pokud vytvoříte vlastního podokna úloh v doplňku VSTO, měli byste také vytvořit prvek uživatelského rozhraní, jako je například tlačítko, které mohou uživatelé kliknout a zobrazit nebo skrýt vlastního podokna úloh. Pokud vytvoříte vlastního podokna úloh v aplikaci Microsoft Office, který podporuje přizpůsobení pásu karet, můžete přidat skupiny ovládacích prvků na pásu karet s tlačítkem, zobrazí nebo skryje vlastního podokna úloh. Názorný postup ukazuje, jak to provést, najdete v části [návod: synchronizace vlastního podokna úloh s tlačítkem pásu karet](../vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md).  
   
- Pokud vytvoříte vlastního podokna úloh v aplikaci Microsoft Office, která nepodporuje přizpůsobení pásu karet, můžete přidat <xref:Microsoft.Office.Core.CommandBarButton> , zobrazí nebo skryje vlastního podokna úloh.  
+ Pokud vytvoříte vlastního podokna úloh v aplikaci Microsoft Office, která nepodporuje přizpůsobení pásu karet, můžete přidat <xref:Microsoft.Office.Core.CommandBarButton> , který zobrazí nebo skryje vlastního podokna úloh.  
   
-### <a name="modifying-the-appearance-of-the-task-pane"></a>Změna vzhledu ovládacího do podokna úloh  
- Velikost a umístění vlastního podokna úloh můžete řídit pomocí vlastnosti <xref:Microsoft.Office.Tools.CustomTaskPane> objektu. Můžete provádět mnoho dalších změn vzhled vlastního podokna úloh pomocí vlastnosti <xref:System.Windows.Forms.UserControl> objekt, který je součástí vlastního podokna úloh. Například můžete zadat obrázek pozadí pro vlastního podokna úloh s použitím <xref:System.Windows.Forms.Control.BackgroundImage%2A> vlastnost uživatelského ovládacího prvku.  
+### <a name="modify-the-appearance-of-the-task-pane"></a>Upravení vzhledu podokna úloh  
+ Můžete řídit velikost a umístění z vlastního podokna úloh pomocí vlastnosti <xref:Microsoft.Office.Tools.CustomTaskPane> objektu. Můžete provádět mnoho dalších změn vzhledu vlastního podokna úloh s použitím vlastnosti <xref:System.Windows.Forms.UserControl> objekt, který je součástí vlastního podokna úloh. Například můžete zadat obrázek pozadí pro vlastního podokna úloh s použitím <xref:System.Windows.Forms.Control.BackgroundImage%2A> vlastnosti uživatelského ovládacího prvku.  
   
- Následující tabulka obsahuje seznam změn, můžete provést pomocí vlastního podokna úloh <xref:Microsoft.Office.Tools.CustomTaskPane> vlastnosti.  
+ Následující tabulka uvádí změny, můžete provádět pomocí vlastního podokna úloh <xref:Microsoft.Office.Tools.CustomTaskPane> vlastnosti.  
   
 |Úloha|Vlastnost|  
 |----------|--------------|  
 |Chcete-li změnit velikost podokna úloh|<xref:Microsoft.Office.Tools.CustomTaskPane.Height%2A><br /><br /> <xref:Microsoft.Office.Tools.CustomTaskPane.Width%2A>|  
-|Chcete-li změnit umístění do podokna úloh|<xref:Microsoft.Office.Tools.CustomTaskPane.DockPosition%2A>|  
-|Skrytí podokna úloh nebo zviditelnit|<xref:Microsoft.Office.Tools.CustomTaskPane.Visible%2A>|  
-|Chcete-li uživateli zabránit ve změně umístění do podokna úloh|<xref:Microsoft.Office.Tools.CustomTaskPane.DockPositionRestrict%2A>|  
+|Chcete-li změnit umístění v podokně úloh|<xref:Microsoft.Office.Tools.CustomTaskPane.DockPosition%2A>|  
+|Skrýt podokno úloh nebo zprůhlední je|<xref:Microsoft.Office.Tools.CustomTaskPane.Visible%2A>|  
+|Chcete-li uživateli zabránit ve změně umístění v podokně úloh|<xref:Microsoft.Office.Tools.CustomTaskPane.DockPositionRestrict%2A>|  
   
-### <a name="programming-custom-task-pane-events"></a>Programování událostí podokně vlastní úlohy  
- Můžete chtít doplňku VSTO reagovat, když uživatel změní vlastního podokna úloh. Například pokud uživatel změní na vodorovné orientaci v podokně ze svislé, můžete chtít změnit umístění ovládacích prvků.  
+### <a name="program-custom-task-pane-events"></a>Program vlastní úloha podokně události  
+ Můžete chtít vaše doplňku VSTO reagovat, když uživatel změní vlastního podokna úloh. Pokud uživatel změní orientace v podokně ze svislé na vodorovnou, můžete chtít změnit umístění ovládacích prvků.  
   
- Následující tabulka uvádí události, které může zpracovat reagovat na změny, které uživatel provede vlastního podokna úloh.  
+ Následující tabulka uvádí události, které dokáže zpracovat reakce na změny, které uživatel provede vlastního podokna úloh.  
   
 |Úloha|Událost|  
 |----------|-----------|  
-|Reagovat, když uživatel změní umístění do podokna úloh.|<xref:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged>|  
-|Reagovat, když uživatel do podokna úloh skryje nebo zobrazí ho.|<xref:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged>|  
+|Chcete-li reagovat, když uživatel změní umístění v podokně úloh.|<xref:Microsoft.Office.Tools.CustomTaskPane.DockPositionChanged>|  
+|Chcete-li reagovat, když uživatel skryje panel úkolů nebo stane viditelným.|<xref:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged>|  
   
-## <a name="cleaning-up-resources-used-by-the-task-pane"></a>Vymazání prostředků používané do podokna úloh  
- Po vytvoření vlastního podokna úloh, <xref:Microsoft.Office.Tools.CustomTaskPane> objekt zůstávají v paměti, dokud je spuštěna vaše doplňku VSTO. Objekt zůstane v paměti i poté, co uživatel klikne **Zavřít** tlačítko (X) v dolním podokně úloh.  
+## <a name="clean-up-resources-used-by-the-task-pane"></a>Vyčistěte prostředky využívané třídou podokna úloh  
+ Po vytvoření vlastního podokna úloh, <xref:Microsoft.Office.Tools.CustomTaskPane> objekt zůstane zachován v paměti, tak dlouho, dokud je spuštěna vaše doplňku VSTO. Objekt zůstane zachován v paměti, i když uživatel klikne **Zavřít** tlačítko (X) v horním rohu podokna úloh.  
   
- Chcete-li vyčistit prostředky používané v podokně úloh doplňku VSTO stále běží, použijte <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Remove%2A> nebo <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.RemoveAt%2A> metody. Tyto metody odeberte zadaný <xref:Microsoft.Office.Tools.CustomTaskPane> objektu z `CustomTaskPanes` kolekce a volání <xref:Microsoft.Office.Tools.CustomTaskPane.Dispose%2A> metodu objektu.  
+ Pokud chcete vyčistit prostředky využívané třídou podokna úloh, zatímco doplňku VSTO stále běží, použijte <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Remove%2A> nebo <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.RemoveAt%2A> metody. Tyto metody Odstraní zadaný <xref:Microsoft.Office.Tools.CustomTaskPane> objektu z `CustomTaskPanes` kolekce a jejich volání <xref:Microsoft.Office.Tools.CustomTaskPane.Dispose%2A> metodu objektu.  
   
- [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Automaticky vyčistí prostředky využívané třídou vlastního podokna úloh po doplňku VSTO odpojen. Nevolejte <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Remove%2A> nebo <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.RemoveAt%2A> metody v `ThisAddIn_Shutdown` obslužné rutiny události ve vašem projektu. Tyto metody vyvolá výjimku <xref:System.ObjectDisposedException>, protože [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] vyčistí prostředky používané <xref:Microsoft.Office.Tools.CustomTaskPane> objekt před `ThisAddIn_Shutdown` je volána. Další informace o `ThisAddIn_Shutdown`, najdete v části [události v projektech pro systém Office](../vsto/events-in-office-projects.md)  
+ [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Automaticky vyčistí prostředky využívané třídou vlastního podokna úloh, když doplňku VSTO je uvolněna. Nevolejte <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Remove%2A> nebo <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.RemoveAt%2A> metody v `ThisAddIn_Shutdown` obslužná rutina události ve vašem projektu. Tyto metody vyvolá výjimku <xref:System.ObjectDisposedException>, protože [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] vyčistí prostředky využívané třídou <xref:Microsoft.Office.Tools.CustomTaskPane> objektu před `ThisAddIn_Shutdown` je volána. Další informace o `ThisAddIn_Shutdown`, naleznete v tématu [události v projektech pro systém Office](../vsto/events-in-office-projects.md)  
   
-##  <a name="Managing"></a> Správa vlastních podoken úloh v více oken aplikace  
- Když vytvoříte vlastního podokna úloh v aplikaci, která používá více oken pro zobrazení dokumentů a dalších položkách, budete muset provést další kroky k zajištění, že v podokně úloh je zobrazena, pokud uživatel očekává, že se.  
+##  <a name="Managing"></a> Správa vlastních podoken úloh ve více oken aplikace  
+ Při vytváření vlastního podokna úloh v aplikaci, která používá více oken pro zobrazení dokumenty a další položky, budete muset udělat dodatečné kroky k zajištění, že v podokně úloh je viditelné, pokud uživatel očekává, že bude.  
   
- Vlastní podokna úloh ve všech aplikací jsou přidruženy k rámce okna dokumentu, který se uživateli zobrazí zobrazení dokumentu nebo položce. V podokně úloh je viditelná jenom v případě, že okno přidružené je viditelné. Ale ne všechny aplikace pomocí okna s rámečkem v dokumentu stejným způsobem.  
+ Vlastní podokna úloh ve všech aplikacích jsou spojeny s oknem rámce dokumentu, který se uživateli zobrazí zobrazení dokumentu nebo položky. V podokně úloh je viditelná pouze v případě, že je přidružené okno viditelné. Ale u některých aplikací není použití oken s rámečkem v dokumentu stejným způsobem.  
   
- Tyto skupiny aplikací mít vývoj pro různé požadavky:  
+ Tyto skupiny aplikací mají vývoj pro různé požadavky:  
   
--   [Aplikace Outlook](#Outlook)  
+- [Aplikace Outlook](#Outlook)  
   
--   [Word, PowerPoint a InfoPath](#WordAndInfoPath)  
+- [Word, aplikace InfoPath a PowerPoint](#WordAndInfoPath)  
   
- ![odkaz na video](../vsto/media/playvideo.gif "odkaz na video") související Videoukázka, najdete v části [jak provést I: Spravovat podokna úloh v doplňků VSTO pro Word?](http://go.microsoft.com/fwlink/?LinkId=136781).  
+  ![odkaz na video](../vsto/media/playvideo.gif "odkaz na video") související video ukázku naleznete v tématu [jak spravovat i podokna úloh v doplňcích VSTO pro Word?](http://go.microsoft.com/fwlink/?LinkId=136781).  
   
 ##  <a name="Outlook"></a> Aplikace Outlook  
- Když vytvoříte vlastního podokna úloh pro aplikaci Outlook, je přidružen konkrétní okno Průzkumníka nebo Inspector vlastního podokna úloh. Průzkumníci jsou windows, které zobrazovat obsah složky a kontroly systému windows, které zobrazí položky jako e-mailové zprávě nebo úlohu.  
+ Při vytváření vlastního podokna úloh pro aplikaci Outlook souvisí s konkrétní okno Průzkumníka nebo inspektoru vlastního podokna úloh. Průzkumníci jsou windows, které zobrazují obsah složky a kontroly jsou windows, které zobrazí položky jako je například e-mailovou zprávu nebo úkol.  
   
- Pokud chcete zobrazit vlastního podokna úloh s více nástroj Inspector nebo Průzkumníka windows, budete muset vytvořit novou instanci vlastního podokna úloh, když se otevře okno s Průzkumníka nebo Inspector. K tomu zpracovat událost, která se vyvolá, když se vytvoří okno s Průzkumníka nebo Inspector a vytvořte v podokně úloh v obslužné rutině. Můžete také zpracovat události Průzkumníka a Inspector ke skrytí nebo zobrazení podokna úloh v závislosti na tom, které okno se zobrazí.  
+ Pokud chcete zobrazit vlastního podokna úloh s více Průzkumníka nebo kontrola systému windows, musíte vytvořit novou instanci třídy vlastního podokna úloh po otevření Průzkumníka nebo inspektoru okno. K tomuto účelu zpracovat událost, která se vyvolá, když se vytvoří oknem Průzkumníka nebo Inspector a pak vytvořte v podokně úloh v obslužné rutině události. Můžete také zpracovávat Explorer a kontrola události ke skrytí nebo zobrazení podokna úloh v závislosti na tom, které okno je viditelný.  
   
- Chcete-li do podokna úloh přidružit určité Explorer nebo Inspector, použijte <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> metodu pro vytvoření do podokna úloh a předat <xref:Microsoft.Office.Interop.Outlook.Explorer> nebo <xref:Microsoft.Office.Interop.Outlook.Inspector> do objektu *okno* parametr. Další informace o vytváření vlastních podoken úloh najdete v tématu [vlastní přehled podokna úloh](../vsto/custom-task-panes.md).  
+ Chcete-li přidružit konkrétní Průzkumníka nebo inspektoru podokna úloh, použijte <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> metodu pro vytvoření podokna úloh a předat <xref:Microsoft.Office.Interop.Outlook.Explorer> nebo <xref:Microsoft.Office.Interop.Outlook.Inspector> objektu *okno* parametr. Další informace o vytváření vlastních podoken úloh najdete v tématu [přehled podokna úloh Vlastní](../vsto/custom-task-panes.md).  
   
- Návod, který ukazuje, jak vytvořit podokna úloh pro každou e-mailová zpráva, která je otevřená, najdete v části [návod: zobrazení vlastních podoken s e-mailových zpráv v aplikaci Outlook](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md).  
+- <xref:Microsoft.Office.Interop.Outlook.ExplorersEvents_Event.NewExplorer>  
   
-### <a name="outlook-events"></a>Události aplikace Outlook  
- Chcete-li monitorovat stav Průzkumníka windows, může zpracovávat následující události související s Explorer:  
+- <xref:Microsoft.Office.Interop.Outlook.ExplorerEvents_10_Event.Activate>  
   
--   <xref:Microsoft.Office.Interop.Outlook.ExplorersEvents_Event.NewExplorer>  
+- <xref:Microsoft.Office.Interop.Outlook.ExplorerEvents_10_Event.Close>  
   
--   <xref:Microsoft.Office.Interop.Outlook.ExplorerEvents_10_Event.Activate>  
+- <xref:Microsoft.Office.Interop.Outlook.ExplorerEvents_10_Event.Deactivate>  
   
--   <xref:Microsoft.Office.Interop.Outlook.ExplorerEvents_10_Event.Close>  
+  Pokud chcete monitorovat stav inspektoru windows, mohou zpracovávat následující události související s inspektor:  
   
--   <xref:Microsoft.Office.Interop.Outlook.ExplorerEvents_10_Event.Deactivate>  
+- <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector>  
   
- Chcete-li monitorovat stav Inspector windows, může zpracovávat následující události související s Inspector:  
+- <xref:Microsoft.Office.Interop.Outlook.InspectorEvents_10_Event.Activate>  
   
--   <xref:Microsoft.Office.Interop.Outlook.InspectorsEvents_Event.NewInspector>  
+- <xref:Microsoft.Office.Interop.Outlook.InspectorEvents_10_Event.Close>  
   
--   <xref:Microsoft.Office.Interop.Outlook.InspectorEvents_10_Event.Activate>  
+- <xref:Microsoft.Office.Interop.Outlook.InspectorEvents_10_Event.Deactivate>  
   
--   <xref:Microsoft.Office.Interop.Outlook.InspectorEvents_10_Event.Close>  
+### <a name="prevent-multiple-instances-of-a-custom-task-pane-in-outlook"></a>Zabránit více instancí vlastního podokna úloh v aplikaci Outlook  
+ Abyste zabránili zobrazování více instancí vlastního podokna úloh Outlook windows, explicitně odebrat vlastního podokna úloh z `CustomTaskPanes` kolekce `ThisAddIn` třídy při zavření časového intervalu pro každý. Volání <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Remove%2A> metoda ve událost, která je vyvolána při zavření okna, jako například <xref:Microsoft.Office.Interop.Outlook.ExplorerEvents_10_Event.Close> nebo <xref:Microsoft.Office.Interop.Outlook.InspectorEvents_10_Event.Close>.  
   
--   <xref:Microsoft.Office.Interop.Outlook.InspectorEvents_10_Event.Deactivate>  
+ Pokud je explicitně neodebírejte vlastního podokna úloh, okna aplikace Outlook se může zobrazit více instancí vlastního podokna úloh. Outlook někdy recykluje windows a windows recyklován uchovávat odkazy na všechny vlastní podokna úloh, které byly připojeny k nim.  
   
-### <a name="preventing-multiple-instances-of-a-custom-task-pane-in-outlook"></a>Brání více instancí vlastního podokna úloh v aplikaci Outlook  
- Chcete-li zabránit zobrazování více instancí vlastního podokna úloh Outlook windows, explicitně odeberte vlastního podokna úloh z `CustomTaskPanes` kolekce `ThisAddIn` třídy při zavření každý okna. Volání <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Remove%2A> metoda v událost, která se vyvolá při zavření okna, jako například <xref:Microsoft.Office.Interop.Outlook.ExplorerEvents_10_Event.Close> nebo <xref:Microsoft.Office.Interop.Outlook.InspectorEvents_10_Event.Close>.  
+##  <a name="WordAndInfoPath"></a> Word, aplikace InfoPath a PowerPoint  
+ Word, aplikace InfoPath a PowerPoint zobrazit jednotlivé dokumenty v okně s rámečkem jiného dokumentu. Při vytváření vlastního podokna úloh pro tyto aplikace vlastního podokna úloh souvisí pouze s určitým dokumentem. Pokud uživatel otevře jiný dokument, vlastního podokna úloh je skrytý, dokud starší dokumentu opět viditelný.  
   
- Pokud vlastního podokna úloh není explicitně odebrat, Outlook windows se může zobrazit více instancí vlastního podokna úloh. Outlook někdy recykluje windows a windows recykluje zachovat odkazy na všechny vlastní podokna úloh, která byla připojena k nim.  
+ Pokud chcete zobrazit vlastního podokna úloh s více dokumenty, vytvořte novou instanci třídy vlastního podokna úloh, když uživatel vytvoří nový dokument nebo otevře existující dokument. K tomuto účelu zpracování událostí, které jsou vyvolány při vytvoření nebo otevření dokumentu a pak vytvořte v podokně úloh v obslužných rutinách událostí. Můžete také zpracovávat události dokumentu ke skrytí nebo zobrazení podokna úloh podle toho, který dokument je zobrazen.  
   
-##  <a name="WordAndInfoPath"></a> Word, PowerPoint a InfoPath  
- Word, PowerPoint a InfoPath zobrazí v okně s rámečkem jiného dokumentu každého dokumentu. Když vytvoříte vlastního podokna úloh pro tyto aplikace, je přidruženo pouze konkrétní dokumentu vlastního podokna úloh. Pokud uživatel otevře do jiného dokumentu, vlastního podokna úloh je skryté, dokud starší dokumentu se znovu nezobrazí.  
-  
- Pokud chcete zobrazit vlastního podokna úloh s více dokumenty, vytvořte novou instanci třídy vlastního podokna úloh, když uživatel vytvoří nový dokument nebo otevře existující dokument. K tomuto účelu zpracování událostí, které se vyvolá, když je vytvořit nebo otevřít dokument a pak ve obslužné rutiny událostí vytvořit v podokně úloh. Můžete také zpracovat události dokumentu ke skrytí nebo zobrazení podokna úloh v závislosti na tom, který dokument je viditelná.  
-  
- Chcete-li do podokna úloh přidružit okna konkrétní dokumentu, použijte <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> metodu pro vytvoření do podokna úloh a předat <xref:Microsoft.Office.Interop.Word.Window> (pro Word), <xref:Microsoft.Office.Interop.InfoPath.WindowObject> (pro aplikaci InfoPath), nebo <xref:Microsoft.Office.Interop.PowerPoint.DocumentWindow> (pro PowerPoint) k *okno*parametr.  
+ Chcete-li přidružit podokna úloh s určitým dokumentem okna, použijte <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> metodu pro vytvoření podokna úloh a předat <xref:Microsoft.Office.Interop.Word.Window> (pro aplikaci Word), <xref:Microsoft.Office.Interop.InfoPath.WindowObject> (pro aplikaci InfoPath), nebo <xref:Microsoft.Office.Interop.PowerPoint.DocumentWindow> (pro PowerPoint) k *okno*parametru.  
   
 ### <a name="word-events"></a>Události aplikace Word  
- Chcete-li sledovat stav windows dokumentu ve Wordu, může zpracovávat následující události:  
+ Pokud chcete monitorovat stav okna dokumentu ve Wordu, mohou zpracovávat následující události:  
   
 -   <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeClose>  
   
@@ -196,8 +192,8 @@ ms.lasthandoff: 04/16/2018
   
 -   <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.WindowDeactivate>  
   
-### <a name="infopath-events"></a>InfoPath události  
- Chcete-li sledovat stav okna dokumentu v aplikaci InfoPath, může zpracovávat následující události:  
+### <a name="infopath-events"></a>Události aplikace InfoPath  
+ Pokud chcete monitorovat stav okna dokumentu v aplikaci InfoPath, mohou zpracovávat následující události:  
   
 -   <xref:Microsoft.Office.Interop.InfoPath._ApplicationEvents_Event.NewXDocument>  
   
@@ -209,23 +205,23 @@ ms.lasthandoff: 04/16/2018
   
 -   <xref:Microsoft.Office.Interop.InfoPath._ApplicationEvents_Event.XDocumentOpen>  
   
-### <a name="powerpoint-events"></a>PowerPoint události  
- Chcete-li sledovat stav okna dokumentu v PowerPointu, může zpracovávat následující události:  
+### <a name="powerpoint-events"></a>Události aplikace PowerPoint  
+ Pokud chcete monitorovat stav okna dokumentu v aplikaci PowerPoint, mohou zpracovávat následující události:  
   
--   <xref:Microsoft.Office.Interop.PowerPoint.EApplication_Event.AfterNewPresentation>  
+-   [Microsoft.Office.Interop.PowerPoint.EApplication_Event.AfterNewPresentation](/previous-versions/office/developer/office-2010/ff761105(v%3doffice.14))
   
--   <xref:Microsoft.Office.Interop.PowerPoint.EApplication_Event.AfterPresentationOpen>  
+-   [Microsoft.Office.Interop.PowerPoint.EApplication_Event.AfterPresentationOpen](/previous-versions/office/developer/office-2010/ff762843(v%3doffice.14))
   
--   <xref:Microsoft.Office.Interop.PowerPoint.EApplication_Event.NewPresentation>  
+-   [Microsoft.Office.Interop.PowerPoint.EApplication_Event.NewPresentation](/previous-versions/office/developer/office-2010/ff761498(v%3doffice.14))
   
--   <xref:Microsoft.Office.Interop.PowerPoint.EApplication_Event.PresentationOpen>  
+-   [Microsoft.Office.Interop.PowerPoint.EApplication_Event.PresentationOpen](/previous-versions/office/developer/office-2010/ff760423(v=office.14))
   
--   <xref:Microsoft.Office.Interop.PowerPoint.EApplication_Event.WindowActivate>  
+-   [Microsoft.Office.Interop.PowerPoint.EApplication_Event.WindowActivate](/previous-versions/office/developer/office-2010/ff761153(v=office.14)) 
   
--   <xref:Microsoft.Office.Interop.PowerPoint.EApplication_Event.WindowDeactivate>  
+-   [Microsoft.Office.Interop.PowerPoint.EApplication_Event.WindowDeactivate](/previous-versions/office/developer/office-2010/ff763093(v=office.14))
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Postupy: Přidání vlastního podokna úloh do aplikace](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)   
  [Návod: Automatizace aplikace z vlastního podokna úloh](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)   
  [Návod: Synchronizace vlastního podokna úloh s tlačítkem pásu karet](../vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md)   
- [Návod: Zobrazení vlastních podoken úloh s e-mailovými zprávami v aplikaci Outlook](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md)  
+ [Návod: Zobrazení vlastních podoken úloh s e-mailové zprávy v aplikaci Outlook](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md)  

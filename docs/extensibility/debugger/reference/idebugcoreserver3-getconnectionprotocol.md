@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer3::GetConnectionProtocol | Microsoft Docs
+title: IDebugCoreServer3::GetConnectionProtocol | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 127d4c5695c870c570080c79c5f447b6173b1fb8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c9f0e06a99c14c65ff04d1ea273776aca725a0af
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49839866"
 ---
 # <a name="idebugcoreserver3getconnectionprotocol"></a>IDebugCoreServer3::GetConnectionProtocol
-Vrátí hodnotu, která určuje protokol, který se používá ke komunikaci mezi serverem a ladění balíčku.  
+Vrátí hodnotu, která na protokol, který se používá ke komunikaci mezi serverem a ladit balíček.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,10 +41,10 @@ int GetConnectionProtocol(
   
 #### <a name="parameters"></a>Parametry  
  `pProtocol`  
- [out] Vrátí jednu z hodnot z [CONNECTION_PROTOCOL](../../../extensibility/debugger/reference/connection-protocol.md) výčtu.  
+ [out] Vrátí jednu z hodnot [CONNECTION_PROTOCOL](../../../extensibility/debugger/reference/connection-protocol.md) výčtu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)   

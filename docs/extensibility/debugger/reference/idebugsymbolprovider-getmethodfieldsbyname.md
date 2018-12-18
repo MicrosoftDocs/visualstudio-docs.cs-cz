@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProvider::GetMethodFieldsByName | Microsoft Docs
+title: IDebugSymbolProvider::GetMethodFieldsByName | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 628cddc126e9617c918bf0d6f47c8fae46c09c0c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: fa59d97cb95309f6a291d3c17ffee431cd596be3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49822277"
 ---
 # <a name="idebugsymbolprovidergetmethodfieldsbyname"></a>IDebugSymbolProvider::GetMethodFieldsByName
-Tato metoda získá pole představující metoda plně kvalifikovaný název.  
+Tato metoda načte pole představující metodu plně kvalifikovaný název.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,19 +45,19 @@ int GetMethodFieldsByName(
   
 #### <a name="parameters"></a>Parametry  
  `pszFullName`  
- [v] Název metody.  
+ [in] Název metody.  
   
  `nameMatch`  
- [v] Vybere typ shodu, například malá a velká písmena.  
+ [in] Vybere typ shody, například velká a malá písmena.  
   
  `ppEnum`  
- [out] Vrátí [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) enumerátor pro pole přidružený k této metodě.  
+ [out] Vrátí [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) enumerátor pro pole související s touto metodou.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Metoda může být přidružen více polí, pokud ji je přetížena, například.  
+ Metodu lze přidružit více polí, pokud ji je přetížena, např.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugSymbolProvider](../../../extensibility/debugger/reference/idebugsymbolprovider.md)   

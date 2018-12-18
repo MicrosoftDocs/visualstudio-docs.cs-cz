@@ -1,6 +1,7 @@
 ---
 title: 'CA1056: Vlastnosti identifikátoru URI by neměly být řetězce'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,15 +14,21 @@ ms.assetid: fdc99d29-0904-4a65-baa8-4f76833c953e
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CPP
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e1f28bf1dc0829b80c53aface1c11de2b44cdbb
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 71c4428596281abf0ad606624bd67c40a490ee49
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45549375"
 ---
 # <a name="ca1056-uri-properties-should-not-be-strings"></a>CA1056: Vlastnosti identifikátoru URI by neměly být řetězce
+
 |||
 |-|-|
 |TypeName|UriPropertiesShouldNotBeStrings|
@@ -30,19 +37,19 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Typ deklaruje ve vlastnosti string, jejichž název obsahuje "uri", "Uri", "urn", "Urn", "url" nebo "Url".
+ Typ deklaruje vlastnosti typu string, jejichž název obsahuje "uri", "Uri", "urn", "Urn", "url" nebo "Url".
 
 ## <a name="rule-description"></a>Popis pravidla
- Toto pravidlo rozdělí název vlastnosti do tokenů podle konvence Pascal velká a malá písmena a zkontroluje, zda každý token rovná "uri", "Uri", "urn", "Urn", "url" nebo "Url". Pokud je nalezena shoda, pravidlo předpokládá, že vlastnost představuje identifikátor URI (URI). Řetězcová reprezentace identifikátoru URI je náchylná k chybám analýzy a kódování a může vést k ohrožení bezpečnosti. <xref:System.Uri?displayProperty=fullName> Třída poskytuje tyto služby v bezpečném režimu.
+ Toto pravidlo rozdělí na tokeny, které jsou podle úmluvy malých a velkých písmen Pascal název vlastnosti a zkontroluje, zda každý token se rovná "uri", "Uri", "urn", "Urn", "url" nebo "Url". Pokud se zjistí shoda, toto pravidlo předpokládá, že vlastnost reprezentuje identifikátor URI (URI). Řetězcová reprezentace identifikátoru URI je náchylná k chybám analýzy a kódování a může vést k ohrožení bezpečnosti. <xref:System.Uri?displayProperty=fullName> Třída poskytuje tyto služby bezpečným a zabezpečeným způsobem.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení toto pravidlo, změňte vlastnost, která má <xref:System.Uri> typu.
+ Chcete-li opravit porušení tohoto pravidla, změňte vlastnost, která má <xref:System.Uri> typu.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Je bezpečné potlačit upozornění na toto pravidlo, je-li vlastnost nepředstavuje identifikátoru URI.
+ Je bezpečné potlačit upozornění tohoto pravidla, je-li vlastnost nepředstavuje identifikátor URI.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje typu, `ErrorProne`, která porušuje toto pravidlo a typu, `SaferWay`, která by splnila pravidlo.
+ Následující příklad ukazuje typ, `ErrorProne`, který porušuje tato pravidla a typ, `SaferWay`, který splňuje pravidlo.
 
  [!code-csharp[FxCop.Design.UriNotString#1](../code-quality/codesnippet/CSharp/ca1056-uri-properties-should-not-be-strings_1.cs)]
  [!code-vb[FxCop.Design.UriNotString#1](../code-quality/codesnippet/VisualBasic/ca1056-uri-properties-should-not-be-strings_1.vb)]

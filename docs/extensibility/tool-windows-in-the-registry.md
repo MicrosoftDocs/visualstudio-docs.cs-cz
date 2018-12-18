@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31138444"
 ---
 # <a name="tool-windows-in-the-registry"></a>Nástroje systému Windows v registru
 VSPackages, které poskytují nástroje systému windows musíte zaregistrovat u [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] jako nástroj okno zprostředkovatele. Nástroje systému windows vytvořených pomocí šablony balíček Visual Studio k tomu ve výchozím nastavení. Okno poskytovatelů nástrojů mít klíče registru systému, které určit viditelnost atributy, jako je například výchozí velikost okna nástroje a umístění, identifikátor GUID okně, které slouží jako nástroj podokna a styl ukotvení.  

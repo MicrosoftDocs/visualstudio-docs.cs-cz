@@ -1,5 +1,5 @@
 ---
-title: BP_UNBOUND_REASON | Microsoft Docs
+title: BP_UNBOUND_REASON | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 65398ac0c4bde18dc772d75ceea203bdbfe3b189
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1e1e344ff5adb51d118370f81de10ba01c8950e1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49904216"
 ---
 # <a name="bpunboundreason"></a>BP_UNBOUND_REASON
-Poskytuje důvod, proč nevázaný zarážky.  
+Poskytuje z důvodů, proč nevázaná zarážku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,16 +51,16 @@ public enum enum_BP_UNBOUND_REASON {
  Důvodem neznámý.  
   
  BPUR_CODE_UNLOADED  
- Kód, který obsahuje zarážce byl odpojen.  
+ Kód, který obsahuje zarážku byl uvolněn.  
   
  BPUR_BREAKPOINT_REBIND  
- Zarážce má byla odrážejí do jiného umístění. To se může vyskytnout po upravit a pokračovat v operacích přesun zarážkou, nebo když zarážce je vázána na soubor s cestu, která již není platný.  
+ Zarážku bylo znovu připojeno, do jiného umístění. To může dojít po úpravě a pokračovat v operacích přesun zarážku nebo zarážku je vázán na soubor s cestou, která již není platný.  
   
  BPUR_ BREAKPOINT_ERROR  
- Je zjištěna zarážce je vázán, co se v chybě. To se stane spravované zarážky, jejichž podmínky již není platný.  
+ Zarážka je určena jako chybu po je vázán. K tomu dochází na spravovaných zarážky, jejíž podmínky už nejsou platné.  
   
 ## <a name="remarks"></a>Poznámky  
- Vrácený [getreason –](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md) metoda.  
+ Vrácené [getreason –](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md) metody.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  
@@ -70,4 +71,4 @@ public enum enum_BP_UNBOUND_REASON {
   
 ## <a name="see-also"></a>Viz také  
  [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [Getreason –](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md)
+ [GetReason](../../../extensibility/debugger/reference/idebugbreakpointunboundevent2-getreason.md)

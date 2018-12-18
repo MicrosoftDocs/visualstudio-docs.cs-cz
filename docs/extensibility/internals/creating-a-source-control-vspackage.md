@@ -1,5 +1,5 @@
 ---
-title: Vytvoření ovládacího prvku VSPackage zdroje | Microsoft Docs
+title: Vytvoření ovládacího prvku VSPackage zdroje | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,33 +14,34 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8eb34efef22510d1d8f83590a6bdb7960d70ce49
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0d9513410aa3bb4773629846abbd70159ec6aa77
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39499735"
 ---
-# <a name="creating-a-source-control-vspackage"></a>Vytvoření ovládacího prvku VSPackage zdroje
-Tato dokumentace obsahuje odkazy na přehled architektury správy zdroje balíčku integrovat [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], rozhraní API, která je definována rozhraní k implementaci a služby, který se má používat a vzorku, který znázorňuje jednoduché zdroj řízení implementace balíčku.  
+# <a name="create-a-source-control-vspackage"></a>Vytvoření balíčku VSPackage správy zdrojového kódu
+Tato dokumentace obsahuje odkazy na přehled architektury zdrojového balíčku integrovaná [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], rozhraní API, který je definován tak, že rozhraní k implementaci a služby, který se má používat a příklad, který znázorňuje jednoduchý zdroje balíček implementaci ovládacích prvků.  
   
- Pomocí zdrojového kódu VSPackage můžete vytvářet těsná integrace cestu pro správy zdrojového kódu pro integraci s [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Umožňuje, aby balíček, který chcete vynechat výchozí zdrojového kódu uživatelského rozhraní, které jsou hostované [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], reagovat na požadavky řízení zdroje ze systému projektu a interakci s [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] součásti, jako **Průzkumníku řešení**. [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] Umožňuje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] partnerům mechanismus pro vytvoření VSPackage, můžete integrovat se [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] použití modelu služby.  
+ Pomocí správy zdrojového kódu VSPackage, můžete vytvořit cestu hluboká integrace správy zdrojového kódu pro integraci s [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Povoluje balíčku vynechat výchozí zdrojový ovládací prvek uživatelského rozhraní, které jsou hostovány [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], reagovat na požadavky ovládací prvek zdroje ze systému projektů a interakci s [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] komponenty, jako **Průzkumníka řešení**. [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] Umožňuje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] spolupracuje s mechanismus pro vytvoření VSPackage, která lze integrovat s [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] pomocí modelu služby.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Začínáme](../../extensibility/internals/getting-started-with-source-control-vspackages.md)  
- Popisuje zdrojový balíček pro ovládací prvek, který pokročilejší alternativu k řízení zdrojů, modul plug-in pro implementaci funkcí správy zdrojového kódu v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].  
+ Tento článek popisuje balíček zdrojového ovládacího prvku, který pokročilejší alternativu, která umožňuje pro implementaci funkce správy zdrojového kódu v modulu plug-in správy zdrojového kódu [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].  
   
  [Architektura](../../extensibility/internals/source-control-vspackage-architecture.md)  
- Uvede diagram a vysvětluje součásti balíčku zdroj ovládacího prvku.  
+ Uvede diagramu a vysvětluje součásti zdrojový balíček ovládacího prvku.  
   
  [Funkce](../../extensibility/internals/source-control-vspackage-features.md)  
- Popisuje různé funkce řízení zdroje balíčku.  
+ Popisuje různé funkce zdrojový balíček ovládacího prvku.  
   
  [Prvky návrhu](../../extensibility/internals/source-control-vspackage-design-elements.md)  
- Popisuje strukturu VSPackage, které se musí implementovat řízení balíček zdroje pro těsná integrace.  
+ Popisuje strukturu sady VSPackage, která zdrojový balíček ovládací prvek musí implementovat pro hluboká integrace.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Vytvoření modulu plug-in správy zdrojového kódu](../../extensibility/internals/creating-a-source-control-plug-in.md)  
- Popisuje postup vytvoření Správa zdrojového kódu modulu plug-in poskytující funkce správy zdrojového v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] zdroj ovládacího prvku uživatelského rozhraní (UI).  
+ Tento článek popisuje postup vytvoření správy zdrojového kódu modulu plug-in, který poskytuje funkce správy zdrojového kódu v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] zdrojového ovládacího prvku uživatelského rozhraní (UI).  
   
- [Správa zdrojového kódu](../../extensibility/internals/source-control.md)  
- Popisuje možnosti pro implementaci správy zdrojového kódu jako integrovaná funkce [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].
+ [Správy zdrojového kódu](../../extensibility/internals/source-control.md)  
+ Tento článek popisuje možnosti pro implementaci správy zdrojového kódu jako integrovaná funkce [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].

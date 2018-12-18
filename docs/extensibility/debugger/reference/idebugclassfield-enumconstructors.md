@@ -1,5 +1,5 @@
 ---
-title: IDebugClassField::EnumConstructors | Microsoft Docs
+title: IDebugClassField::EnumConstructors | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: aa525f50a0ffd18f136cfa23ae05a8e2ba193d0d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0a2824eff43103ee2f8c82fba6131325def0c8ea
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49912719"
 ---
 # <a name="idebugclassfieldenumconstructors"></a>IDebugClassField::EnumConstructors
-Vytvoří enumerátor pro konstruktory pro tuto třídu.  
+Vytvoří čítač pro konstruktory pro tuto třídu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,18 +43,18 @@ int EnumConstructors(
   
 #### <a name="parameters"></a>Parametry  
  `cMatch`  
- [v] Hodnota z [CONSTRUCTOR_ENUM](../../../extensibility/debugger/reference/constructor-enum.md) výčet, který určuje typ konstruktory výčtu.  
+ [in] Hodnota z [CONSTRUCTOR_ENUM](../../../extensibility/debugger/reference/constructor-enum.md) výčet, který určuje typ pro výčet konstruktory.  
   
  `ppEnum`  
- [out] Vrátí [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) objektu, který představuje seznam konstruktory. Vrátí hodnotu null, pokud nejsou žádné konstruktory.  
+ [out] Vrátí [IEnumDebugFields](../../../extensibility/debugger/reference/ienumdebugfields.md) objekt představující seznam konstruktory. Vrátí hodnotu null, pokud neexistují žádné konstruktory.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí S_OK nebo vrátí S_FALSE, pokud nejsou žádné konstruktory. Jinak vrátí kód chyby.  
+ V případě úspěchu vrátí hodnotu S_OK nebo vrátí S_FALSE v případě, že neexistují žádné konstruktory. V opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Každý prvek výčtu je [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) objekt popisující metody konstruktoru.  
+ Každý prvek výčtu je [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md) objekt popisující metodu konstruktoru.  
   
- Seznam konstruktory obvykle nezahrnuje poskytl kompilátor výchozí konstruktory.  
+ Seznam konstruktory obvykle neobsahuje výchozí konstruktory poskytnutých kompilátoru.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md)   

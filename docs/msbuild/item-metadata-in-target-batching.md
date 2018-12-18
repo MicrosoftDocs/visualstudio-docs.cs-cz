@@ -1,5 +1,5 @@
 ---
-title: Metadata položek v dávkování cíle | Microsoft Docs
+title: Metadata položek v dávkování cíle | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -14,19 +14,20 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e512ad9f932e34a6ddd95e165b116465aa359a09
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 486169788ad4533f5d45bf48c979ce3d0f5f7920
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39081056"
 ---
-# <a name="item-metadata-in-target-batching"></a>Metadata položek v dávkování cíle
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] má schopnost provádět analýzy závislost na vstupy a výstupy cíl sestavení. Pokud je zjištěno, že vstupní nebo výstupní cíle jsou aktuální, cíl budou přeskočeny, a sestavení bude pokračovat. `Target` použít prvky `Inputs` a `Outputs` atributy a určete položky, chcete-li prověřit během analýzy závislostí.  
+# <a name="item-metadata-in-target-batching"></a>Metadata položek v dávkování cíle
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] má schopnost provádět analýzu závislostí na vstupy a výstupy cíle sestavení. Pokud je zjištěno, že vstupy nebo výstupy cíle jsou aktuální, cíl se přeskočí a bude pokračovat sestavení. `Target` použití elementů `Inputs` a `Outputs` atributů zadejte položky, které chcete zkontrolovat během analýzu závislostí.  
   
- Pokud obsahuje úlohu, která používá dávkové položky jako vstupní nebo výstupní, cíl `Target` element cíle by měl používat dávkování v jeho `Inputs` nebo `Outputs` atributy povolit [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] tak, aby přeskočil dávky položky, které jsou již aktuální.  
+ Pokud cíl obsahuje úlohu, která využívá jako vstupy nebo výstupy, dávková položka `Target` element cíle by měl použití dávkování v jeho `Inputs` nebo `Outputs` atributy se mají povolit [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] přeskočit dávky položek, které jsou již aktuální.  
   
-## <a name="batching-targets"></a>Dávkování cíle  
- Následující příklad obsahuje seznam položek s názvem `Res` , je rozdělené do dvou dávek na základě `Culture` metadata položky. Každý z těchto dávky je předána do `AL` úkolu, který vytvoří výstupní sestavení pro každou dávku. Pomocí dávkování na `Outputs` atribut `Target` elementu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] můžete zjistit, jestli všechny jednotlivé dávky aktuální před spuštěním cíl. Bez použití dávkování cíle, oba dávky položky by spustit úlohy pokaždé, když cíl byla spuštěna.  
+## <a name="batch-targets"></a>Cíle služby batch  
+ Následující příklad obsahuje seznam položek s názvem `Res` , který je rozdělen do dvou dávek na základě `Culture` metadata položky. Každá z těchto dávky je předán `AL` úkol, který vytvoří výstup sestavení u každé dávky. S použitím dávkování na `Outputs` atribut `Target` elementu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] můžete zjistit, jestli každý jednotlivých dávek aktuální před spuštěním cílové. Bez použití dávkování cíle, obě dávky položek by spustit úlohy pokaždé, když byl cíl spuštěn.  
   
 ```xml  
 <Project  
@@ -66,8 +67,8 @@ ms.lasthandoff: 04/19/2018
 </Project>  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Postupy: přírůstkové sestavování](../msbuild/how-to-build-incrementally.md)   
- [Dávkování](../msbuild/msbuild-batching.md)   
- [Target – Element (MSBuild)](../msbuild/target-element-msbuild.md)   
- [Metadata položek v dávkování úloh](../msbuild/item-metadata-in-task-batching.md)
+ [Dávkové zpracování](../msbuild/msbuild-batching.md)   
+ [Target – element (MSBuild)](../msbuild/target-element-msbuild.md)   
+ [Metadata položek v dávkování úloh](../msbuild/item-metadata-in-task-batching.md)

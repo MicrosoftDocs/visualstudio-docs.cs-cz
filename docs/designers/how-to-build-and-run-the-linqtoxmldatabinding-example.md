@@ -1,6 +1,7 @@
 ---
-title: 'Postupy: sestavení a spuštění ukázkového LinqToXmlDataBinding'
+title: 'Postupy: Sestavení a spuštění příkladu Linqtoxmldatabinding'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 author: gewarren
@@ -8,25 +9,26 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: de5515d96d5aa0dff30082207e7f20fd7981fc89
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 67d8bc9ece20867e96f0ae0ee6d6ceb9ad2e3952
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53159773"
 ---
-# <a name="how-to-build-and-run-the-linqtoxmldatabinding-example"></a>Postupy: sestavení a spuštění ukázkového LinqToXmlDataBinding
+# <a name="how-to-build-and-run-the-linqtoxmldatabinding-example"></a>Postupy: Postupy: Sestavení a spuštění příkladu LinqToXmlDataBinding
 
-Toto téma ukazuje, jak vytvořte a sestavte projekt LinqToXmlDataBinding Visual Studio a jak se spustit program výsledné příklad LinqToXmlDataBinding Windows Presentation Foundation (WPF).
+Toto téma ukazuje, jak vytvořit a sestavit projekt sady Visual Studio LinqToXmlDataBinding a spuštění výsledné program příklad LinqToXmlDataBinding Windows Presentation Foundation (WPF).
 
-Další informace o sadě Visual Studio najdete v tématu [Visual Studio IDE přehled](../ide/visual-studio-ide.md).
+Další informace o sadě Visual Studio najdete v tématu [přehled Visual Studio IDE](../get-started/visual-studio-ide.md).
 
-## <a name="creating-and-populating-the-project"></a>Vytvoření a naplnění projektu
+## <a name="create-and-populate-the-project"></a>Vytvořit a naplnit projektu
 
-### <a name="to-create-the-starting-project"></a>K vytvoření počáteční projektu
+### <a name="to-create-the-starting-project"></a>Chcete-li vytvořit počáteční projekt
 
-1. Spuštění sady Visual Studio a vytvoření aplikace C# WPF s názvem LinqToXmlDataBinding. Projekt musí používat rozhraní .NET Framework 3.5 (nebo novější).
+1. Spusťte sadu Visual Studio a vytvořte aplikaci WPF C# s názvem LinqToXmlDataBinding. Projekt musí používat rozhraní .NET Framework 3.5 (nebo novější).
 
-1. Pokud není přítomna, přidejte odkazy na projekt pro následující sestavení .NET:
+1. Pokud není již k dispozici, přidejte odkazy na projekt pro následující sestavení .NET:
 
     - System.Data
 
@@ -36,48 +38,48 @@ Další informace o sadě Visual Studio najdete v tématu [Visual Studio IDE př
 
     - System.Xml.Linq
 
-1. Sestavte řešení stisknutím **Ctrl + Shift + B**, spusťte ho stisknutím **F5**. Projekt by měl kompilovat bez chyby a spusťte jako obecná aplikace WPF.
+1. Sestavte řešení stisknutím kombinace kláves **Ctrl**+**Shift**+**B**, spusťte ji stisknutím klávesy **F5**. Projekt by měl kompilovat bez chyb a spustit jako obecná aplikace WPF.
 
-### <a name="to-add-custom-code-to-the-project"></a>Chcete-li přidat vlastní kód do projektu
+### <a name="to-add-custom-code-to-the-project"></a>Přidání vlastního kódu do projektu
 
-1. V Průzkumníku řešení přejmenujte zdrojový soubor Window1.xaml L2XDBForm.xaml. Závislé zdrojový soubor Window1.xaml.cs by měl být automaticky přejmenován na L2XDBForm.xaml.cs.
+1. V Průzkumníku řešení, přejmenujte zdrojový soubor **Window1.xaml** k **L2XDBForm.xaml**. Závislé zdrojový soubor **Window1.xaml.cs** by měl automaticky přejmenovat na **L2XDBForm.xaml.cs**.
 
-1. Nahraďte nachází zdrojový kód v souboru L2XDBForm.xaml s části kódu v tématu [L2DBForm.xaml zdrojový kód](../designers/l2dbform-xaml-source-code.md). Pomocí zobrazení zdroje XAML pro práci s tohoto souboru.
+1. Nahradit v souboru zdrojového kódu najít **L2XDBForm.xaml** s oddílem kód z tématu [zdrojový kód L2DBForm.xaml](../designers/l2dbform-xaml-source-code.md). Použijte zobrazení zdroje XAML pro práci s tímto souborem.
 
-1. Podobně, nahraďte kód nacházející se ve zdroji v L2XDBForm.xaml.cs [L2DBForm.xaml.cs zdrojový kód](../designers/l2dbform-xaml-cs-source-code.md).
+1. Podobně, nahraďte zdrojem **L2XDBForm.xaml.cs** s kódem v [zdrojový kód L2DBForm.xaml.cs](../designers/l2dbform-xaml-cs-source-code.md).
 
-1. V souboru App.xaml nahraďte všechny výskyty řetězce "Window1.xaml" s "L2XDBForm.xaml".
+1. V souboru **App.xaml**, nahraďte všechny výskyty řetězce `Window1.xaml` s `L2XDBForm.xaml`.
 
-1. Sestavení řešení stiskněte **Ctrl + Shift + B**.
+1. Sestavte řešení stisknutím **CTRL**+**SHIFT**+**B**.
 
-## <a name="running-the-program"></a>Spuštění programu
+## <a name="run-the-program"></a>Spuštění programu
 
-LinqToXmlDataBinding program umožňuje uživatelům zobrazit a upravit seznam seznamů, která je uložena jako vložený element XML.
+LinqToXmlDataBinding program umožňuje uživateli zobrazit a pracovat s seznam knihy, které se ukládá jako vložený element XML.
 
-### <a name="to-run-the-program-and-view-the-book-list"></a>Ke spuštění programu a zobrazení seznamu adresáře
+### <a name="to-run-the-program-and-view-the-book-list"></a>Ke spuštění programu a zobrazení seznamu knihy
 
-- Spustit LinqToXmlDataBinding stisknutím **F5** (**spustit ladění**) nebo **Ctrl + F5** (**spustit bez ladění**).
+- Spustit LinqToXmlDataBinding stisknutím klávesy **F5** (**spustit ladění**) nebo **Ctrl**+**F5** (**Start Bez ladění**).
 
-   Okno program s názvem **WPF datové vazby pomocí technologie LINQ to XML** se zobrazí.
+   Okno aplikace s názvem **WPF datové vazby pomocí LINQ to XML** se zobrazí.
 
-- Všimněte si v horní části uživatelského rozhraní, která zobrazuje nezpracovaná **XML** představující seznamu adresáře. Zobrazí se pomocí WPF <xref:System.Windows.Controls.TextBlock> řízení, které neumožňuje interakce pomocí myši a klávesnice.
+- Všimněte si, že v horní části uživatelského rozhraní, které zobrazí nezpracovaný **XML** , která představuje seznam knihy. Zobrazí se pomocí WPF <xref:System.Windows.Controls.TextBlock> ovládací prvek, který neumožňuje interakce prostřednictvím klávesnice nebo myši.
 
-- Druhá svislý část s názvem bez přípony **seznamu adresáře**, zobrazí knihy jako prostý text seřazený seznam. Použije <xref:System.Windows.Controls.ListBox> ovládací prvek, který umožňuje výběr ale myši a klávesnice.
+- Druhá svislý část s názvem **Book List**, zobrazuje – knihy jako prostý text seřazený seznam. Použije <xref:System.Windows.Controls.ListBox> ovládací prvek, který umožňuje výběr ale myš či klávesnice.
 
-### <a name="to-add-and-delete-books-from-the-list"></a>Přidat a odstranit knihy ze seznamu
+### <a name="to-add-and-delete-books-from-the-list"></a>Můžete přidávat a odstraňovat knihy ze seznamu
 
-- Chcete-li odstranit existující knihu ze seznamu, vyberte ho v **seznamu adresáře** části a pak klikněte na **odebrat vybrané kniha** tlačítko. Všimněte si, že položku v seznamu byla odebrána z knihy a raw výpisech zdroj XML.
+- Nová kniha přidat do seznamu, zadejte hodnoty do **ID** a **hodnotu** <xref:System.Windows.Controls.TextBox> ovládacích prvků v poslední části **přidat nová kniha**, klikněte **přidat Kniha** tlačítko. Všimněte si, že knihy se připojí k seznamu v knihy a výpisy XML. Tento program nelze ověřit vstupní hodnoty.
 
-- K přidání nového seznamu do seznamu, zadejte hodnoty do **ID** a **hodnotu** <xref:System.Windows.Controls.TextBox> ovládací prvky v poslední části **přidat nové knihy**, klikněte **přidat Kniha** tlačítko. Všimněte si, že seznamu se připojí k seznamu v seznamu a seznamy XML. Tento program neověřuje vstupní hodnoty.
+- Pokud chcete odstranit existující knihu ze seznamu, vyberte ho v **Book List** části a pak klikněte na tlačítko **odebrat vybrané knihy** tlačítko. Všimněte si, že položku v seznamu se odebral z knihy a raw výpisy zdroj XML.
 
-### <a name="to-edit-an-existing-book-entry"></a>Chcete-li upravit existující položku seznamu
+### <a name="to-edit-an-existing-book-entry"></a>Chcete-li upravit existující položka adresáře
 
-1. Vyberte položku v seznamu za sekundu **seznamu adresáře** části. Jeho aktuální hodnoty má být zobrazena v části třetí **upravit knihu vybrané**.
+1. Vyberte položku v seznamu ve druhém **Book List** oddílu. Jeho aktuální hodnoty má být zobrazen v třetí části **upravit vybrané knihy**.
 
-1. Upravte hodnoty pomocí klávesnice. Co nejdříve buď <xref:System.Windows.Controls.TextBox> ovládací prvek ztratí fokus, změny se automaticky rozšíří seznamy XML zdroje a adresáře.
+1. Upravte hodnoty pomocí klávesnice. Hned <xref:System.Windows.Controls.TextBox> ovládací prvek ztratí fokus, změny se automaticky rozšíří na zdroj a knihy uvedené XML.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Příklad datové vazby WPF pomocí LINQ to XML](../designers/wpf-data-binding-using-linq-to-xml-example.md)
+- [Datové vazby WPF pomocí LINQ na ukázkový kód XML](../designers/wpf-data-binding-using-linq-to-xml-example.md)
 - [Návod: Příklad LinqToXmlDataBinding](../designers/walkthrough-linqtoxmldatabinding-example.md)
-- [Integrované vývojové prostředí sady Visual Studio – přehled](../ide/visual-studio-ide.md)
+- [Visual Studio IDE – přehled](../get-started/visual-studio-ide.md)

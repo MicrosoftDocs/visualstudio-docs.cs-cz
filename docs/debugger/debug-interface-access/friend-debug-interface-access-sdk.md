@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31460004"
 ---
 # <a name="friend-debug-interface-access-sdk"></a>Přítel (Přístup k rozhraní ladění SDK)
 Friend – třídy a funkce, přítele jsou identifikovány `SymTagFriend` symboly. Jsou podřízené objekty nadřazené uživatelem definované typy (UDT) a mít [idiasymbol::get_classparent –](../../debugger/debug-interface-access/idiasymbol-get-classparent.md) vlastnost.  

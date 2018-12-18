@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_age – | Microsoft Docs
+title: Idiasymbol::get_age – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a81c41902b5e6a8421f15b69ebc77fe5ae6eebf
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 0ba915762a5eacffc32122a1dac4b7b046691e63
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49868466"
 ---
 # <a name="idiasymbolgetage"></a>IDiaSymbol::get_age
 Načte hodnotu stáří souboru pdb.  
@@ -36,19 +37,19 @@ HRESULT get_age (
  [out] Vrátí hodnotu stáří souboru pdb.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` nebo kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
->  Vrácená hodnota `S_FALSE` znamená vlastnost není k dispozici pro symbol.  
+>  Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="remarks"></a>Poznámky  
- Stáří neodpovídá nutně na jakoukoli hodnotu známý časový; se obvykle používá k určení, zda soubor .pdb je mimo rozsah synchronizace s odpovídající soubor .exe.  
+ Stáří neodpovídá nutně na libovolnou hodnotu známý času; To se obvykle používá k určení, zda soubor PDB není synchronizován s odpovídající soubor .exe.  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Požadavek|Popis|  
 |-----------------|-----------------|  
-|Hlavičky:|dia2.h|  
+|Záhlaví:|dia2.h|  
 |Verze:|V7.0 DIA SDK|  
   
 ## <a name="see-also"></a>Viz také  

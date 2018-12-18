@@ -1,5 +1,5 @@
 ---
-title: Getframeworkpath – úloha | Microsoft Docs
+title: Getframeworkpath – úloha | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -20,11 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 03747e9271b9eea71236a4ec3fea373b992f9068
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 25fb85642b7eb6a92c11d3d04d2c44eb6c683cff
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37946313"
 ---
 # <a name="getframeworkpath-task"></a>GetFrameworkPath – úloha
 Načte cestu k [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] sestavení.  
@@ -34,20 +35,20 @@ Načte cestu k [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|`FrameworkVersion11Path`|Volitelné `String` výstupní parametr.<br /><br /> Obsahuje cestu k sestavení framework verze 1.1, pokud je k dispozici. V opačném případě vrátí `null`.|  
-|`FrameworkVersion20Path`|Volitelné `String` výstupní parametr.<br /><br /> Obsahuje cestu k sestavení framework verze 2.0, pokud je k dispozici. V opačném případě vrátí `null`.|  
-|`FrameworkVersion30Path`|Volitelné `String` výstupní parametr.<br /><br /> Obsahuje cestu k sestavení framework verze 3.0, pokud je k dispozici. V opačném případě vrátí `null`.|  
-|`FrameworkVersion35Path`|Volitelné `String` výstupní parametr.<br /><br /> Obsahuje cestu k sestavení framework verze 3.5, pokud je k dispozici. V opačném případě vrátí `null`.|  
-|`FrameworkVersion40Path`|Volitelné `String` výstupní parametr.<br /><br /> Obsahuje cestu k sestavení framework verze 4.0, pokud je k dispozici. V opačném případě vrátí `null`.|  
-|`Path`|Volitelné `String` výstupní parametr.<br /><br /> Obsahuje cestu k nejnovější sestavení architektury, pokud budou k dispozici. V opačném případě vrátí `null`.|  
+|`FrameworkVersion11Path`|Volitelné `String` výstupní parametr.<br /><br /> Obsahuje cestu k sestavení rozhraní framework verze 1.1, pokud jsou k dispozici. V opačném případě vrátí `null`.|  
+|`FrameworkVersion20Path`|Volitelné `String` výstupní parametr.<br /><br /> Obsahuje cestu k sestavení rozhraní framework verze 2.0, pokud jsou k dispozici. V opačném případě vrátí `null`.|  
+|`FrameworkVersion30Path`|Volitelné `String` výstupní parametr.<br /><br /> Obsahuje cestu k sestavení rozhraní framework verze 3.0, pokud jsou k dispozici. V opačném případě vrátí `null`.|  
+|`FrameworkVersion35Path`|Volitelné `String` výstupní parametr.<br /><br /> Obsahuje cestu k sestavení rozhraní framework verze 3.5, pokud jsou k dispozici. V opačném případě vrátí `null`.|  
+|`FrameworkVersion40Path`|Volitelné `String` výstupní parametr.<br /><br /> Obsahuje cestu k sestavení rozhraní framework verze 4.0, pokud jsou k dispozici. V opačném případě vrátí `null`.|  
+|`Path`|Volitelné `String` výstupní parametr.<br /><br /> Obsahuje cestu k nejnovější sestavení rozhraní, pokud jsou nějaké k dispozici. V opačném případě vrátí `null`.|  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud několika verzích [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] jsou nainstalovaná, tato úloha vrátí verze, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] je určená ke spuštění.  
+ Pokud se několik verzí [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] jsou nainstalované, tato úloha vrátí verzi, která [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] je navržen pro spouštění na.  
   
- Kromě výše uvedených parametrů tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třída, které dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrech a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).  
+ Kromě výše uvedených parametrů zdědí tento úkol parametry ze <xref:Microsoft.Build.Tasks.TaskExtension> třída, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).  
   
 ## <a name="example"></a>Příklad  
- Následující příklad používá `GetFrameworkPath` úloh pro cestu k uložení [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] v `FrameworkPath` vlastnost.  
+ V následujícím příkladu `GetFrameworkPath` úloh pro uložení této cesty do [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] v `FrameworkPath` vlastnost.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -61,6 +62,6 @@ Načte cestu k [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md
 </Project>  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Úlohy](../msbuild/msbuild-tasks.md)   
  [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)

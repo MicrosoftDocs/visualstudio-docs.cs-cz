@@ -1,9 +1,8 @@
 ---
-title: 'Postupy: Správa oken editoru | Microsoft Docs'
-ms.custom: ''
+title: 'Postupy: Správa oken editoru'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
 - editor windows
@@ -16,46 +15,49 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2bd9d2d458c671fc590326989026aa776795243a
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b3b90db0173275b984c63aa22018ba4ae37328ee
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34446956"
 ---
 # <a name="how-to-manage-editor-windows"></a>Postupy: Správa oken editoru
-Můžete pracovat na kód v několika umístění najednou. K tomu rozdělením okno s editor nebo otevřením několik instancí oken editoru.  
-  
+
+Můžete pracovat na kód v několika umístění najednou. K tomu rozdělením okno s editor nebo otevřením několik instancí oken editoru.
+
 > [!NOTE]
->  Ne všechny editor windows podporuje víc instancí.  
-  
-## <a name="split-an-editor-window"></a>Rozdělení okna editoru  
- Instance editoru okna je možné rozdělit na dvě samostatné zobrazení pro jednodušší úpravy.  
-  
-#### <a name="to-split-a-pane"></a>Rozdělení podokno  
-  
-1.  Klikněte v okně editoru aktivovat.  
-  
-2.  Z **okno** nabídce vyberte možnost **rozdělení**.  
-  
-     Oblasti úprav rozdělí na dvě podokna oddělených rozdělovač. Posuňte se na tyto podokna nezávisle tak, aby zobrazení a úpravy různé části aktivní dokument ve stejnou dobu. Veškeré změny provedené v jednom podokně se projeví v druhém.  
-  
+> Ne všechny editor windows podporuje víc instancí.
+
+## <a name="split-an-editor-window"></a>Rozdělení okna editoru
+
+Instance editoru okna je možné rozdělit na dvě samostatné zobrazení pro jednodušší úpravy.
+
+### <a name="to-split-a-pane"></a>Rozdělení podokno
+
+1.  Klikněte v okně editoru aktivovat.
+
+2.  Z **okno** nabídce vyberte možnost **rozdělení**.
+
+     Oblasti úprav rozdělí na dvě podokna oddělených rozdělovač. Posuňte se na tyto podokna nezávisle tak, aby zobrazení a úpravy různé části aktivní dokument ve stejnou dobu. Veškeré změny provedené v jednom podokně se projeví v druhém.
+
     > [!TIP]
-    >  Chcete-li jeden podokně větší než druhý, přetáhněte oddělovač zvýšení nebo snížení.  
-  
-#### <a name="to-return-to-single-pane-view"></a>Se vrátit do jednoduché zobrazení  
-  
--   Z **okno** nabídce vyberte možnost **odebrat rozdělení**.  
-  
-## <a name="create-new-windows"></a>Vytváření nových oken  
- Můžete také vytvořit více instancí okna editoru. Tato funkce umožňuje, aby mohli zobrazit a upravit různých oddílů současně ve windows samostatný, Plnohodnotná editor zdlouhavé dokument otevřít v více než jednu instanci v editoru.  
-  
-#### <a name="to-create-a-new-window"></a>Chcete-li vytvořit nové okno  
-  
--   Na **okno** nabídky, klikněte na tlačítko **nové okno**.  
-  
-     Přidání nové záložkách instance editoru.  
-  
-## <a name="see-also"></a>Viz také  
- [Přizpůsobení editoru](../ide/customizing-the-editor.md)   
- [Psaní kódu](../ide/writing-code-in-the-code-and-text-editor.md)   
- [Přizpůsobení rozložení oken](../ide/customizing-window-layouts-in-visual-studio.md)
+    > Chcete-li jeden podokně větší než druhý, přetáhněte oddělovač zvýšení nebo snížení.
+
+### <a name="to-return-to-single-pane-view"></a>Se vrátit do jednoduché zobrazení
+
+-   Z **okno** nabídce vyberte možnost **odebrat rozdělení**.
+
+## <a name="create-new-windows"></a>Vytváření nových oken
+
+Můžete také vytvořit více instancí okna editoru. Tato funkce umožňuje, aby mohli zobrazit a upravit různých oddílů současně ve windows samostatný, Plnohodnotná editor zdlouhavé dokument otevřít v více než jednu instanci v editoru.
+
+- Na **okno** nabídky, klikněte na tlačítko **nové okno**.
+
+   Přidání nové záložkách instance editoru.
+
+## <a name="see-also"></a>Viz také
+
+- [Přizpůsobení editoru](../ide/customizing-the-editor.md)
+- [Funkce editoru kódu](../ide/writing-code-in-the-code-and-text-editor.md)
+- [Přizpůsobení rozložení oken](../ide/customizing-window-layouts-in-visual-studio.md)

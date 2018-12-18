@@ -1,58 +1,60 @@
 ---
-title: Výhody Azure poradní Chat v sadě Visual Studio předplatných | Microsoft Docs
+title: Azure Advisory Chat výhoda v předplatných sady Visual Studio | Dokumentace Microsoftu
 author: evanwindom
 ms.author: jaunger
 manager: evelynp
 ms.date: 01/02/2018
 ms.topic: Get-Started-Article
-description: Zjistěte, jak využívat výhody Azure poradní Chat zahrnuté v sadě Visual Studio předplatných.
+description: Naučte se, abyste mohli využívat výhody Azure Advisory Chat součástí předplatných sady Visual Studio.
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: f33c4fdfd026fc7517fb32b16fc90ea4bedeec7d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 84eb6c7021a4e64b65c6e5390ef43833dd6c7fea
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49896000"
 ---
-# <a name="azure-advisory-chat"></a>Azure poradní chatu
+# <a name="azure-advisory-chat"></a>Azure Advisory Chat
 
-Získáte pomoc od Azure v reálném čase! Zahrnuje informační zpravodaj pro služby Azure PaaS.  Výhodou poradní Chat Azure je k dispozici v aplikaci Visual Studio Enterprise standardní a roční předplatná cloudu.  
+Získejte pomoc při zahájení práce s Azure v reálném čase! Zahrnuje Poradce pro služby Azure PaaS.  Výhoda Azure Advisory Chat je k dispozici v aplikaci Visual Studio Enterprise na úrovni Standard a roční Cloudová předplatná.
 
 ## <a name="activation-steps"></a>Postup aktivace
 
-Pomocí poradní Azure Chat je snadné.
+Použití poradce Azure konverzace je jednoduché.
 1. Přihlaste se k [ https://my.visualstudio.com/benefits ](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs).
-2. Najděte dlaždici poradní Chat Azure v části Podpora a klikněte na **zahájit konverzaci**.
+2. Vyhledejte dlaždici Azure Advisory Chat v části Podpora a klikněte na tlačítko **zahájit konverzaci**.
+    > [!div class="mx-imgBorder"]
+    > ![Azure Advisory Chat dlaždice](_img/vs-azure-advisory/vs-azure-advisory-tile.png)
 
-    ![Dlaždice Azure poradní chatu](_img/vs-azure-advisory/vs-azure-advisory-tile.png)
+3. Zobrazí se vám oznámení, že služba je v současné době nabízena v angličtině pouze s výjimkou podpora pro potíže se účet, fakturaci a předplatné.  Klikněte na tlačítko **pokračovat**.
+    > [!div class="mx-imgBorder"]
+    > ![Azure Advisory Chat ustanovení o právním omezení](_img/vs-azure-advisory/vs-azure-advisory-disclaimer.png)
 
-3. Uvidíte oznámení, že služba je aktuálně nabízí v angličtině pouze s výjimkou podporu pro problémy se účet, fakturace a předplatného.  Klikněte na tlačítko **pokračovat**.
+4. To je všechno je to.  Otevře se okno konverzace a zobrazí se stav oznamující, ve kterém jsou ve frontě.  Zodpovíme vaše konverzace odborníkem další k dispozici.
+    > [!div class="mx-imgBorder"]
+    > ![Chat s poradcem pro Azure](_img/vs-azure-advisory/vs-azure-advisory-chat.png)
 
-    ![Právní omezení Azure poradní chatu](_img/vs-azure-advisory/vs-azure-advisory-disclaimer.png)
+## <a name="eligibility"></a>Způsobilost
 
-4. To je všechno je k němu.  Otevře se okno konverzace a zobrazí se stav umožňují vědět, kde jsou ve frontě.  Další dostupný expert odpoví konverzace. 
+|                                                      Úroveň předplatného                                                      |     Kanály      |    Výhody    | Obnovitelné? |
+|------------------------------------------------------------------------------------------------------------------------------|-------------------|---------------|------------|
+|                                      Visual Studio Enterprise (standardní a roční cloudové)                                       | VL, Azure, maloobchodního prodeje |   Jeden rok    |    Ano     |
+| Visual Studio Professional (standardní a roční cloudové, měsíčních cloudových) sady Visual Studio Enterprise (měsíční cloudu, NFR<sup>1</sup>) |        Všechny        | Není k dispozici |     Ne     |
+|                                          Visual Studio Test Professional (Standard)                                          |        Všechny        | Není k dispozici |     Ne     |
+|                                                  Předplatné MSDN Platforms (Standard)                                                   |        Všechny        | Není k dispozici |     Ne     |
+|                                                 Visual Studio Dev Essentials                                                 |        Není k dispozici        | Není k dispozici |     Ne     |
 
-    ![Azure poradní chatu](_img/vs-azure-advisory/vs-azure-advisory-chat.png)
+<sup>1</sup>*zahrnuje: není pro prodej (NFR), Microsoft Vážíme si toho Professional (MVP), ředitel pro oblast (RD), Visual Studio Industry Partner (VSIP), BizSpark, Imagine, MCT* 
 
-## <a name="eligibility"></a>Podmínky
-
-| Úrovni předplatného                                                 |     Kanály                                            | Výhody                                                          | Obnovitelných?    |
-|--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (standardní, roční cloud)   | VL, Azure, maloobchodní   | Jeden rok      |  Ano          |
-| Visual Studio Professional (standardní, roční cloud, měsíční cloudu) Visual Studio Enterprise (měsíční cloudu, NFR<sup>1</sup>) | Všechny                                      | Není k dispozici                                                            |  Ne          |
-| Visual Studio Test Professional (standardní)                         | Všechny                                              | Není k dispozici                                             |  Ne          |
-| MSDN platformy (standardní)                                          | Všechny                                              |Není k dispozici                                              |  Ne          |
-| Visual Studio Dev Essentials                                          | Není k dispozici                                              |Není k dispozici                                              |  Ne          |
-<sup>1</sup>*zahrnuje: není pro prodej (NFR), cenná Partner společnosti Microsoft (MVP), oblast ředitel (RD), Visual Studio Industry Partner (VSIP), BizSpark, představte si, MCT* 
-
-Nejste si jistí jaké předplatné používáte?  Připojení k [ https://my.visualstudio.com/subscriptions ](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) zobrazíte všechny odběry, které jsou přiřazeny k e-mailovou adresu. Pokud nevidíte všechny odběry, můžete mít jeden nebo více přiřadit jinou e-mailovou adresu.  Musíte se přihlásit pomocí tohoto e-mailovou adresu zobrazíte těchto předplatných. 
+Nejste si jistí které předplatné používáte?  Připojte se k [ https://my.visualstudio.com/subscriptions ](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) zobrazíte všechna předplatná, která jsou přiřazená e-mailovou adresu. Pokud se nezobrazí všechna předplatná, může mít jeden nebo více přiřazené na jinou e-mailovou adresu.  Bude potřeba přihlásit se přes tento e-mailovou adresu najdete v těchto předplatných.
 
 ## <a name="frequently-asked-questions"></a>Nejčastější dotazy
 
-### <a name="q--what-is-the-difference-between-azure-advisory-chat-and-azure-advisor"></a>Otázka: Jaký je rozdíl mezi poradní Chat Azure a Azure Advisor?
--  Odpověď: Azure poradní Chat je služba v reálném čase chat jako pomoc s dotazy týkající se Azure. [Azure Advisor](/azure/advisor/advisor-overview) je konzultantem přizpůsobené cloudu, který vám pomůže dodržujte doporučené postupy, chcete-li optimalizovat nasazení Azure. Ho analyzuje konfigurace prostředků a telemetrii využití a pak doporučuje řešení, které vám pomůžou líp finanční efektivita, výkon, vysokou dostupnost a zabezpečení vašich prostředků Azure.
+### <a name="q--what-is-the-difference-between-azure-advisory-chat-and-azure-advisor"></a>D: Jaký je rozdíl mezi Azure Advisory Chat a Azure Advisor?
+-  Odpověď: Chat Azure Advisory je v reálném čase chatovací služba, která vám pomůže s dotazy týkající se Azure. [Azure Advisor](/azure/advisor/advisor-overview) je individuální cloudový konzultant, který pomáhá dodržovat osvědčené postupy a optimalizovat nasazení Azure. Analyzuje konfiguraci prostředků a telemetrii využití a následně doporučí řešení, které vám může pomoct vylepšit nákladové efektivity, výkonu, vysoké dostupnosti a zabezpečení vašich prostředků Azure.
 
-## <a name="support-resources"></a>Podpora prostředky
--  Požádejte o pomoc s prodej, odběry, účtech a cenách pro Visual Studio předplatné sady Visual Studio [odběry podporu](https://www.visualstudio.com/subscriptions/support/).
--  Máte dotaz týkající se Visual Studio IDE, Visual Studio Team Services nebo jiné produkty Visual Studio nebo službám?  Navštivte [Visual Studio – podpora](https://www.visualstudio.com/support/). 
+## <a name="support-resources"></a>Informační zdroje podpory
+-  Potřebujete pomoc se prodeje, předplatnými, účty a fakturací pro předplatná sady Visual Studio, obraťte se na Visual Studio [podpora předplatných](https://visualstudio.microsoft.com/subscriptions/support/).
+-  Máte dotaz k Visual Studio IDE, DevOps služby Azure nebo jiných produktů Visual Studio nebo služeb?  Navštivte [Visual Studio – podpora](https://visualstudio.microsoft.com/support/).

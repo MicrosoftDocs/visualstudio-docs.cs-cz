@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 619e2a38c794a6823f7efcfb5606bd9fbe9f461c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 6f9ad65a81820e37c01d55a0ddba441dd30977b4
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35256055"
 ---
-# <a name="modules-view---contention-data"></a>Zobrazení modulů – Data kolizí
+# <a name="modules-view---contention-data"></a>Zobrazení modulů – data kolizí
 Moduly zobrazení dat kolizí zobrazí seskupené podle moduly, které byly v data profilování vzorků dat souběžnosti. Každý modul je kořenem hierarchickou stromovou strukturu. Funkce modulu došlo k kolizní události jsou uvedené pod uzlem modulu.  
   
  Pokud funkce byla spuštěna vlastní kód, při kolizní událostí došlo k chybě, to znamená, funkce se v horní části zásobníku volání, původní řádky a instrukce, adresy, které byly provádění jsou uvedeny pod uzlem funkce. Protože je prováděna řádek nebo instrukce je řádku zdroje nebo ukazatele instrukce shromažďovat data, včetně a výhradní hodnoty jsou vždy stejné pro řádek data a instrukce data.  
@@ -43,7 +44,7 @@ Moduly zobrazení dat kolizí zobrazí seskupené podle moduly, které byly v da
 |**Název procesu**|Název procesu.|  
 |**Zdrojový soubor**|Zdrojový soubor, který obsahuje definici pro tuto funkci.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Postupy: přizpůsobení sloupců zobrazení sestavy](../profiling/how-to-customize-report-view-columns.md)   
  [Zobrazení modulů](../profiling/modules-view.md)   
  [Zobrazení modulů – instrumentace](../profiling/modules-view-dotnet-memory-instrumentation-data.md)   

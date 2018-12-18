@@ -1,6 +1,7 @@
 ---
 title: Návod analýza spravovaného kódu na výskyt závad v kódu | Microsoft Docs
 ms.date: 01/29/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,11 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 98d1bbd347870bd704a0d17d7ae559da00e9adb5
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 49c122e5cf22e9290f6dab1d45539887c68c01bd
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37117716"
 ---
 # <a name="walkthrough-analyzing-managed-code-for-code-defects"></a>Návod: Analýza spravovaného kódu pro kód vady
 
@@ -27,9 +29,9 @@ Tento názorný postup vás provede procesem použití analýzy kódu pro analý
 
 ### <a name="to-create-a-class-library"></a>K vytvoření knihovny tříd
 
-1. Na **soubor** nabídce zvolte **nový** > **projektu...** .
+1. Na **soubor** nabídce zvolte **nový** > **projektu**.
 
-1. V **nový projekt** dialogové okno, rozbalte seznam **nainstalovaná** > **Visual C#** a potom zvolte **Windows Classic Desktop**.
+1. V **nový projekt** dialogové okno, rozbalte seznam **nainstalovaná** > **Visual C#** a potom zvolte **Windows Desktop**.
 
 1. Vyberte **knihovny tříd (rozhraní .NET Framework)** šablony.
 
@@ -194,6 +196,6 @@ Tento názorný postup vás provede procesem použití analýzy kódu pro analý
 
      Sestavení projektu bez žádná upozornění ani chyby.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Analýza kódu pro spravovaný kód](../code-quality/code-analysis-for-managed-code-overview.md)

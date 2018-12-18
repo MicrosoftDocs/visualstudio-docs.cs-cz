@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31135847"
 ---
 # <a name="migrating-a-legacy-language-service"></a>Migrace služby jazyk starší verze
 Služba starší verze jazyka na novější verzi sady Visual Studio můžete migrovat aktualizace projektu a přidáním soubor source.extension.vsixmanifest do projektu. Samotnou službu jazyk nadále fungovat jako předtím, protože editoru Visual Studio přizpůsobuje ho.  

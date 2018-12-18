@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::GetManagedDebugObject | Microsoft Docs
+title: IDebugObject::GetManagedDebugObject | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6c7b416ca9af4279e11cabbbf880a73891059df6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e1c0b636c88c2c2e23efcc01b01eec1e421317e0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49831092"
 ---
 # <a name="idebugobjectgetmanageddebugobject"></a>IDebugObject::GetManagedDebugObject
-Vytvoří kopii spravovaného objektu v adresním prostoru modul ladění.  
+Vytvoří kopii spravovaný objekt v adresním prostoru ladicího stroje.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +41,13 @@ int GetManagedDebugObject(
   
 #### <a name="parameters"></a>Parametry  
  `ppObject`  
- [out] Vrátí [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md) objekt reprezentující nově vytvořený spravovaného objektu.  
+ [out] Vrátí [IDebugManagedObject](../../../extensibility/debugger/reference/idebugmanagedobject.md) představující nově vytvořený objekt spravovaný objekt.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí S_OK; jinak vrátí kód chyby. Vrátí E_FAIL Pokud [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) nepředstavuje instance třídy spravované hodnotu.  
+ V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby. Vrátí E_FAIL tato [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) nepředstavuje instanci třídy spravované hodnotě.  
   
 ## <a name="remarks"></a>Poznámky  
- To [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objekt musí představovat instanci třídy spravované hodnotu, jako například `System.Decimal` instance. Tak, že místní kopii režii volání [Evaluate](../../../extensibility/debugger/reference/idebugfunctionobject-evaluate.md) je eliminovat.  
+ To [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md) objektu musí představovat instanci třídy spravované hodnotu, například `System.Decimal` instance. Tím, že místní kopie režií volací [vyhodnotit](../../../extensibility/debugger/reference/idebugfunctionobject-evaluate.md) se odstraní.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)   

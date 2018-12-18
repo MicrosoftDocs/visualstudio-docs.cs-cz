@@ -18,22 +18,23 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 708a1b1a0b64dbed5c02e6fcaf7da9e8892f5664
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6437620b4215726ba48ea3234e37c76e77d21ebe
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37120277"
 ---
-# <a name="how-to-create-a-sharepoint-web-part"></a>Postupy: Vytvoření webové části služby SharePoint
+# <a name="how-to-create-a-sharepoint-web-part"></a>Postupy: vytvoření webové části služby SharePoint
   Můžete vytvořit a upravit webovou část přidáním **webovou část** položky pro všechny projektu služby SharePoint a poté úpravy souboru kódu pro webovou část nebo pomocí návrháře. Další informace najdete v tématu [postupy: vytvoření webové části služby SharePoint pomocí návrháře](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md).  
   
-### <a name="to-create-a-sharepoint-web-part"></a>Vytvoření webové části služby SharePoint  
+### <a name="to-create-a-sharepoint-web-part"></a>K vytvoření webové části služby SharePoint
   
 1.  Vytvořte nebo otevřete projekt služby SharePoint.  
   
-     Další informace najdete v tématu [projektu služby SharePoint a šablony položek projektu](../sharepoint/sharepoint-project-and-project-item-templates.md).  
+     Další informace najdete v tématu [SharePoint projekt a projekt šablon položek](../sharepoint/sharepoint-project-and-project-item-templates.md).  
   
-2.  Vyberte uzel projektu služby SharePoint v **Průzkumníku řešení** a potom zvolte **projektu**, **přidat novou položku**.  
+2.  Vyberte uzel projektu služby SharePoint v **Průzkumníku řešení** a potom zvolte **projektu** > **přidat novou položku**.  
   
 3.  V **přidat novou položku** dialogové okno, rozbalte seznam **SharePoint** uzel a potom zvolte **2010** uzlu.  
   
@@ -45,13 +46,13 @@ ms.lasthandoff: 04/16/2018
   
 6.  V **Průzkumníku**, otevřete soubor kódu pro webovou část, kterou jste právě vytvořili.  
   
-     Pokud je například název webové části WebPart1, otevřete soubor WebPart1.vb (pro Visual Basic) nebo WebPart1.cs (pro C#).  
+     Například, pokud je název vaší webové části *WebPart1*, otevřete *WebPart1.vb* (v jazyce Visual Basic) nebo *WebPart1.cs* (v jazyku C#).  
   
 7.  V souboru kódu přidejte ovládací prvky do metody <xref:System.Web.UI.Control.CreateChildControls%2A>.  
   
      Příklad, naleznete v části [návod: vytvoření webové části pro službu SharePoint](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:
  [Vytvoření webové části pro službu SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md)   
  [Postupy: vytvoření webové části služby SharePoint pomocí návrháře](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md)   
  [Návod: Vytvoření webové části pro službu SharePoint](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint.md)   

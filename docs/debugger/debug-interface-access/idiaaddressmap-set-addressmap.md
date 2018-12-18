@@ -1,5 +1,5 @@
 ---
-title: Idiaaddressmap::set_addressmap – | Microsoft Docs
+title: Idiaaddressmap::set_addressmap – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a1c934dc998818973b5de4106c3df952ad24f22f
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 1d097ccbe5c893c603aaa2a018f8fcd422f15ac2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49834516"
 ---
 # <a name="idiaaddressmapsetaddressmap"></a>IDiaAddressMap::set_addressMap
-Poskytuje mapování adres pro podporu rozložení překlady bitovou kopii.  
+Poskytuje mapování adres pro podporu překlady rozvržení obrázku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,19 +36,19 @@ HRESULT set_addressMap (
   
 #### <a name="parameters"></a>Parametry  
  `cbData`  
- [v] Počet elementů ve `data` parametr.  
+ [in] Počet prvků v `data` parametru.  
   
  `data[]`  
- [v] Pole [diaaddressmapentry – struktura](../../debugger/debug-interface-access/diaaddressmapentry.md) struktury, které definují překlad mapy.  
+ [in] Pole [diaaddressmapentry – struktura](../../debugger/debug-interface-access/diaaddressmapentry.md) struktury, které definují mapování překladu.  
   
  `imagetoSymbols`  
- [v] `TRUE` Pokud `data` parametr definuje mapování z nové rozložení obrázku na původní rozložení (jak je popsáno ve symboly ladění). `FALSE` Pokud `data` je mapu, která novou bitovou kopii rozložení prováděné z původní rozložení.  
+ [in] `TRUE` Pokud `data` parametr definuje mapování z nové rozložení obrázku do původního rozložení (jak je popsáno ve symboly ladění). `FALSE` Pokud `data` je mapu, která bude nové rozložení obrázku z původního rozložení.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Obvykle DIA načte mapy překlad adres ze souboru databáze (.pdb) programu. Pokud chybí, jsou tyto hodnoty [idiaaddressmap::set_imageheaders –](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md) metoda je volána dvakrát, jednou pro `imagetoSymbols` parametr nastaven na `TRUE` a jednou pro `imagetoSymbols` parametr nastaven na `FALSE`. Překlady adres mapy nelze povolit pomocí [idiaaddressmap::put_addressmapenabled –](../../debugger/debug-interface-access/idiaaddressmap-put-addressmapenabled.md) metoda Pokud jsou k dispozici obě překlad mapy.  
+ Obvykle DIA načte mapování překladu adres ze souboru databáze (PDB) programu. Pokud chybí, jsou tyto hodnoty [idiaaddressmap::set_imageheaders –](../../debugger/debug-interface-access/idiaaddressmap-set-imageheaders.md) metoda je volána dvakrát, jednou s `imagetoSymbols` parametr nastaven na `TRUE` a jednou pro `imagetoSymbols` parametr nastaven na `FALSE`. Překlady adres mapy nelze povolit pomocí [idiaaddressmap::put_addressmapenabled –](../../debugger/debug-interface-access/idiaaddressmap-put-addressmapenabled.md) metoda Pokud jsou k dispozici obou mapách překladu.  
   
 ## <a name="see-also"></a>Viz také  
  [Diaaddressmapentry – struktura](../../debugger/debug-interface-access/diaaddressmapentry.md)   

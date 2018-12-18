@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_constructor – | Microsoft Docs
+title: Idiasymbol::get_constructor – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 53bcabdc6817aedcc8749e11b1e53030d5fa75ea
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 8d54e0dce9d792efa93beb35d5e2a215db672031
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49908914"
 ---
 # <a name="idiasymbolgetconstructor"></a>IDiaSymbol::get_constructor
-Načte příznak, který určuje, zda je uživatelský datový typ konstruktor nebo destruktor.  
+Získá příznak, který určuje, zda uživatelský datový typ má konstruktor nebo destruktor.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,10 +34,10 @@ HRESULT get_constructor (
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí `TRUE` Pokud má uživatelský datový typ konstruktor nebo destruktor; jinak vrátí `FALSE`.  
+ [out] Vrátí `TRUE` Pokud uživatelský datový typ má konstruktor nebo destruktor; v opačném případě vrátí `FALSE`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` nebo chybový kód.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
 >  Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
@@ -45,7 +46,7 @@ HRESULT get_constructor (
   
 |Požadavek|Popis|  
 |-----------------|-----------------|  
-|Hlavičky:|dia2.h|  
+|Záhlaví:|dia2.h|  
 |Verze:|V7.0 DIA SDK|  
   
 ## <a name="see-also"></a>Viz také  

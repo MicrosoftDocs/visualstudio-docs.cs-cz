@@ -1,6 +1,7 @@
 ---
 title: 'CA2205: Použijte spravované ekvivalenty rozhraní Win32 API'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,47 +14,54 @@ ms.assetid: 1c65ab59-3e50-4488-a727-3969c7f6cbe4
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8e38a985db524b3d95c4f33a4eb4f31c909fd08c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 8c88feb35a4699770b7a05a266168e0c3ad347e4
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47860111"
 ---
 # <a name="ca2205-use-managed-equivalents-of-win32-api"></a>CA2205: Použijte spravované ekvivalenty rozhraní Win32 API
+
 |||
 |-|-|
 |TypeName|UseManagedEquivalentsOfWin32Api|
 |CheckId|CA2205|
 |Kategorie|Microsoft.Usage|
-|Narušující změna|Bez ukončování řádků|
+|Narušující změna|Pevné|
 
 ## <a name="cause"></a>příčina
- Vyvolání platformy metoda je definovaný a metodu s ekvivalentní funkce existuje v [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] knihovny tříd.
+
+Vyvolání platformy je definována metoda a metodu s ekvivalentní funkce v knihovně tříd rozhraní .NET Framework existuje.
 
 ## <a name="rule-description"></a>Popis pravidla
- Platformu vyvolání metody se používá k volání nespravované funkce DLL a je definován pomocí <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> atribut, nebo `Declare` – klíčové slovo v jazyce Visual Basic. Nesprávně definované platformy vyvolání metody může vést k výjimky za běhu kvůli problémům, jako je například misnamed funkce vadný mapování parametru a návratové hodnoty datových typů a specifikace nesprávné pole, jako je znak a konvence volání Sada. Pokud je k dispozici, je obvykle jednodušší a méně náchylný volat metodu ekvivalentní spravované než chcete definovat a volejte metodu nespravované přímo. Volání metody platformu vyvolání metody může vést k další bezpečnostní problémy, které je třeba vzít v úvahu.
+
+Vyvolání platformy metodu lze volat nespravovanou funkci knihovny DLL a je definován pomocí <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> atribut, nebo `Declare` – klíčové slovo v jazyce Visual Basic. Nesprávně definovaná platformu vyvolání metody může vést k výjimky modulu CLR z důvodu problémy, jako je misnamed funkce vadným mapování parametrů a návratové hodnoty datových typů a specifikace nesprávná pole, jako je konvence volání a znak Nastavte. Pokud je k dispozici, je jednodušší a méně náchylný k volání metody ekvivalentní spravované než definovat a volat metodu nespravované přímo. Volání na platformě volání metody může také vést k další bezpečnostní problémy, které musí vzít.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Opravit porušení toto pravidlo, nahraďte volání nespravovaného funkce volání na ekvivalentní spravované.
+
+Chcete-li opravit porušení tohoto pravidla, nahraďte volání nespravovanou funkci voláním ekvivalentní spravované.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Potlačíte upozornění na toto pravidlo, je-li metoda navrhované nahrazení neposkytuje potřebné funkce.
+
+Potlačit upozornění tohoto pravidla, pokud metoda navrhované nahrazení neposkytuje potřebné funkce.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje a platformy vyvolání definici metody, která porušuje pravidlo. Kromě toho volání pro platformu vyvolání metody a metodu ekvivalentní spravované jsou zobrazeny.
 
- [!code-csharp[FxCop.Usage.ManagedEquivalents#1](../code-quality/codesnippet/CSharp/ca2205-use-managed-equivalents-of-win32-api_1.cs)]
- [!code-vb[FxCop.Usage.ManagedEquivalents#1](../code-quality/codesnippet/VisualBasic/ca2205-use-managed-equivalents-of-win32-api_1.vb)]
+Následující příklad ukazuje a platformu vyvolání definici metody, která porušuje pravidla. Kromě toho vyvolat metodu volání na platformu a ekvivalentní spravované metody jsou zobrazeny.
+
+[!code-csharp[FxCop.Usage.ManagedEquivalents#1](../code-quality/codesnippet/CSharp/ca2205-use-managed-equivalents-of-win32-api_1.cs)]
+[!code-vb[FxCop.Usage.ManagedEquivalents#1](../code-quality/codesnippet/VisualBasic/ca2205-use-managed-equivalents-of-win32-api_1.vb)]
 
 ## <a name="related-rules"></a>Související pravidla
- [CA1404: Volejte GetLastError ihned po volání P/Invoke](../code-quality/ca1404-call-getlasterror-immediately-after-p-invoke.md)
 
- [CA1060: Přesuňte P/vyvolá do třídy NativeMethods](../code-quality/ca1060-move-p-invokes-to-nativemethods-class.md)
-
- [CA1400: Vstupní body P/Invoke by měla existovat.](../code-quality/ca1400-p-invoke-entry-points-should-exist.md)
-
- [CA1401: P/by neměla být viditelné](../code-quality/ca1401-p-invokes-should-not-be-visible.md)
-
- [CA2101: Určete zařazování pro argumenty řetězce P/Invoke](../code-quality/ca2101-specify-marshaling-for-p-invoke-string-arguments.md)
+- [CA1404: Volejte GetLastError ihned po volání nespravovaného kódu](../code-quality/ca1404-call-getlasterror-immediately-after-p-invoke.md)
+- [CA1060: Přesuňte volání nespravovaných kódů do třídy NativeMethods](../code-quality/ca1060-move-p-invokes-to-nativemethods-class.md)
+- [CA1400: Vstupní body volání nespravovaného kódu by měly existovat](../code-quality/ca1400-p-invoke-entry-points-should-exist.md)
+- [CA1401: Volání nespravovaných kódů by neměla být viditelná](../code-quality/ca1401-p-invokes-should-not-be-visible.md)
+- [CA2101: Určete zařazování pro argumenty řetězce volání nespravovaného kódu](../code-quality/ca2101-specify-marshaling-for-p-invoke-string-arguments.md)

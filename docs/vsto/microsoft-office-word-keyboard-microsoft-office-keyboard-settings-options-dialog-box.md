@@ -1,5 +1,5 @@
 ---
-title: Aplikace Microsoft Office Word klávesnice, nastavení klávesnice sady Microsoft Office, dialogové okno Možnosti | Microsoft Docs
+title: Microsoft Office Word klávesnice, nastavení klávesnice sady Microsoft Office, dialogové okno Možnosti
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -19,27 +19,28 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d8747485ced6309bf9e63ecf864c67a111ce6c47
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2f0785ec339da51f4f6b52e2093c1bb2ba273285
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35675658"
 ---
-# <a name="microsoft-office-word-keyboard-microsoft-office-keyboard-settings-options-dialog-box"></a>Klávesnice aplikace Word sady Microsoft Office, nastavení klávesnice sady Microsoft Office, dialogové okno Možnosti
-  Aplikace Microsoft Office Word a Visual Studio i zpracovávat klávesové zkratky. Pro jiné příkazy v aplikaci Word a v sadě Visual Studio může být mít stejné klávesová zkratka. V případě, že je slovo otevřete v projektu úrovni dokumentu v sadě Visual Studio, obdrží pouze jednu aplikaci najednou klíče příkazy místní. Ve výchozím nastavení, Visual Studio přijme všechny příkazy klíče zástupce, ale můžete také nastavit přijímat při dokument má právě fokus, výběrem **schéma dynamické klávesnice**.  
+# <a name="microsoft-office-word-keyboard-microsoft-office-keyboard-settings-options-dialog-box"></a>Microsoft Office Word klávesnice, nastavení klávesnice sady Microsoft Office, dialogové okno Možnosti
+  Aplikace Microsoft Office Word a sady Visual Studio i zpracování klávesových zkratek. Stejnou klávesovou zkratku srozumitelný pro různé příkazy v aplikaci Word a v sadě Visual Studio. Při otevření v úrovni dokumentu projektu v sadě Visual Studio slovo obdrží jenom jednu aplikaci v čase klíče příkazy místní. Ve výchozím nastavení, Visual Studio obdrží všechny klíče příkazy místní, ale může být slovo přijímat, když je dokument fokus tak, že vyberete **chéma dynamické klávesnice**.  
   
- Pokud používáte klávesovou zkratku, která není přiřazen k příkazu v aplikaci, která je aktuálně zpracovává klávesové zkratky, klávesová zkratka je předán jinou aplikaci.  
+ Pokud používáte klávesovou zkratku, která není přiřazena k příkazu v aplikaci, která je aktuálně zpracovává klávesové zkratky, klávesová zkratka je předána jiné aplikace.  
   
- Možnost, která jste vybrali bude zůstávají platná pro projekty aplikace Word, dokud ho změnit. Výběr neovlivňuje projektů Microsoft Office Excel; je nutné provést změnu pro aplikaci Excel pomocí možnosti Microsoft Office Excel klávesnice.  
+ Možnost, kterou jste vybrali zůstávají v platnosti pro Wordové projekty dokud ho změnit. Výběr neovlivňuje projektů Microsoft Office Excel; musí provádět změny pro aplikaci Excel pomocí možnosti Microsoft Office Excel klávesnice.  
   
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní  
  **Schéma klávesnice Visual Studio**  
- Visual Studio obdrží všechny klíče příkazy místní i v případě, že má právě fokus, dokument aplikace Word. Například pokud jste stisknutím funkční klávesy F5 při dokument má právě fokus, Visual Studio spustí ladění řešení.  
+ Visual Studio obdrží všechny klíče příkazy místní i v případě, že dokument aplikace Word má fokus. Například, pokud stisknutím funkční klávesy **F5** při dokumentu má fokus, Visual Studio spustí ladění vašeho řešení.  
   
- **Schéma dynamické klávesnice**  
- Visual Studio přijímá příkazy místní klíče jenom v případě, že je zaměřen. V případě, že dokument aplikace Word má právě fokus, Word obdrží všechny příkazy klíče zástupce. Například pokud jste při má právě fokus, dokument aplikace Word stisknutím funkční klávesy F5, Word otevře **najít a nahradit** dialogové okno s **přejít na** vybrána karta. Pokud jste stiskněte klávesu F5 má právě fokus, Visual Studio, Visual Studio spustí ladění řešení.  
+ **Chéma dynamické klávesnice**  
+ Visual Studio přijímá místní klíče příkazy pouze v případě, že má fokus. Jakmile se Wordový dokument má fokus, Word přijímat všechny klíče příkazy místní. Například, pokud stisknutím funkční klávesy **F5** při Wordový dokument má fokus, otevře se aplikace Word **najít a nahradit** dialogové okno s **přejít na** vybraná karta. Pokud stisknete **F5** při fokusu sady Visual Studio, Visual Studio spustí ladění vašeho řešení.  
   
-## <a name="see-also"></a>Viz také  
- [Klávesnice aplikace Office Excel systému Microsoft Office, nastavení klávesnice systému Microsoft Office, dialogové okno Možnosti](../vsto/microsoft-office-excel-keyboard-microsoft-office-keyboard-settings-options-dialog-box.md)  
+## <a name="see-also"></a>Viz také:  
+ [Microsoft Office Excel klávesnice, nastavení klávesnice sady Microsoft Office, dialogové okno Možnosti](../vsto/microsoft-office-excel-keyboard-microsoft-office-keyboard-settings-options-dialog-box.md)  
   
   

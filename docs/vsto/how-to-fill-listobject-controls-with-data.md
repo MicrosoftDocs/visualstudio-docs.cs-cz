@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: vyplnění ovládacích prvků ListObject daty | Microsoft Docs'
+title: 'Postupy: vyplnění ListObject ovládací prvky s daty'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -20,13 +20,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 433928cd817e3ef796d9f6e2f4b4aab27cda2346
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e9e255d4099a90173b9dbc7ff6fd7b2225d0622d
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35255701"
 ---
-# <a name="how-to-fill-listobject-controls-with-data"></a>Postupy: Vyplnění ovládacích prvků ListObject daty
+# <a name="how-to-fill-listobject-controls-with-data"></a>Postupy: vyplnění ListObject ovládací prvky s daty
   Datová vazba můžete použít jako způsob, jak rychle přidat data do dokumentu. Po vazbě dat na objekt seznamu, můžete odpojit seznam objektů, zobrazí data, ale se už neváže ke zdroji dat.  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
@@ -57,18 +58,18 @@ ms.lasthandoff: 04/16/2018
      [!code-csharp[Trin_VstcoreHostControlsExcel#23](../vsto/codesnippet/CSharp/Trin_VstcoreHostControlsExcelCS/Sheet4.cs#23)]
      [!code-vb[Trin_VstcoreHostControlsExcel#23](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet4.vb#23)]  
   
-## <a name="compiling-the-code"></a>Probíhá kompilace kódu  
+## <a name="compile-the-code"></a>Kompilace kódu  
  Tento příklad kódu předpokládá, že už máte existující <xref:Microsoft.Office.Tools.Excel.ListObject> s názvem `list1` na listu, ve kterém se zobrazí tento kód.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Rozšíření dokumentů aplikace Word a sešitů aplikace Excel v doplňcích VSTO za běhu](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)   
  [Ovládací prvky v dokumentech Office](../vsto/controls-on-office-documents.md)   
  [Přidání ovládacích prvků do dokumentů Office za běhu](../vsto/adding-controls-to-office-documents-at-run-time.md)   
- [Postupy: mapování sloupců objektu ListObject na Data](../vsto/how-to-map-listobject-columns-to-data.md)   
+ [Postupy: sloupců objektu ListObject mapy k datům](../vsto/how-to-map-listobject-columns-to-data.md)   
  [Automatizace aplikace Excel s použitím rozšířených objektů](../vsto/automating-excel-by-using-extended-objects.md)   
  [ListObject – ovládací prvek](../vsto/listobject-control.md)   
- [Vazba dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)   
+ [Vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)   
  [Postupy: naplnění listů daty z databáze](../vsto/how-to-populate-worksheets-with-data-from-a-database.md)   
- [Postupy: Naplnění dokumentů daty ze služeb](../vsto/how-to-populate-documents-with-data-from-services.md)  
+ [Postupy: naplnění dokumentů daty ze služeb](../vsto/how-to-populate-documents-with-data-from-services.md)  
   
   

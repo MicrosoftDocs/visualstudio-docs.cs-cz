@@ -1,5 +1,5 @@
 ---
-title: Idiainjectedsource::get_source – | Microsoft Docs
+title: Idiainjectedsource::get_source – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8331086fff33f247ab030e3736e1e598c3af477d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 2966405dfe3bb7e6134f5ef35e55b30ef6c66c6e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49909901"
 ---
 # <a name="idiainjectedsourcegetsource"></a>IDiaInjectedSource::get_source
-Načte bajtů zdrojového kódu.  
+Získá počet bajtů zdrojového kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,16 +36,16 @@ HRESULT get_source (
   
 #### <a name="parameters"></a>Parametry  
  `cbData`  
- [v] Počet bajtů, který představuje velikost vyrovnávací paměti pro data.  
+ [in] Počet bajtů, který představuje velikost vyrovnávací paměti pro data.  
   
  `pcbData`  
- [out] Vrátí počet bajtů, který představuje bajtů vrátí. Pokud `data` je `NULL`, pak `pcbData` je celkový počet bajtů dat k dispozici.  
+ [out] Vrátí počet bajtů, který představuje počet bajtů vrácených. Pokud `data` je `NULL`, pak `pcbData` celkový počet bajtů dat je k dispozici.  
   
  `data[]`  
- [out] Vyrovnávací paměť, která je pro vyplnění bajtů zdroje.  
+ [out] Vyrovnávací paměť, která se vyplní bajtů zdroje.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. Jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md)

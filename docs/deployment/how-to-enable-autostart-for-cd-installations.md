@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: povolení funkce AutoStart pro instalace z disku CD | Microsoft Docs'
+title: 'Postupy: povolení funkce AutoStart pro instalace z disku CD | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -18,33 +18,34 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 230f0491993b3804c3147e727900de2647ff7bda
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 97642a499e0415dd6fcd245e379c9f01520b5c53
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39151243"
 ---
-# <a name="how-to-enable-autostart-for-cd-installations"></a>Postupy: Povolení funkce AutoStart pro instalace z média CD
-Při nasazování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikaci prostřednictvím vyměnitelných médií jako jsou jednotky CD-ROM nebo DVD-ROM, můžete povolit `AutoStart` tak, aby [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace se automaticky spustí, když vložení média.  
+# <a name="how-to-enable-autostart-for-cd-installations"></a>Postupy: povolení funkce AutoStart pro instalace z disku CD
+Při nasazování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace pomocí vyměnitelného média jako je například disk CD-ROM nebo DVD-ROM, můžete povolit `AutoStart` tak, aby [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace se automaticky spustí, když je médium je vloženo.  
   
- `AutoStart` můžete povolit pro **publikovat** stránky **Návrhář projektu**.  
+ `AutoStart` lze povolit **publikovat** stránku **Návrháře projektu**.  
   
-### <a name="to-enable-autostart"></a>Chcete-li povolit automatické spuštění  
+### <a name="to-enable-autostart"></a>Povolit automatické spuštění  
   
-1.  S projekt vybraný v **Průzkumníku řešení**na **projektu** nabídce klikněte na tlačítko **vlastnosti**.  
+1.  S projekt vybraný v **Průzkumníka řešení**na **projektu** klikněte na nabídku **vlastnosti**.  
   
-2.  Klikněte **publikovat** kartě.  
+2.  Klikněte na tlačítko **publikovat** kartu.  
   
-3.  Klikněte **možnosti** tlačítko.  
+3.  Klikněte na tlačítko **možnosti** tlačítko.  
   
      **Možnosti publikování** zobrazí se dialogové okno.  
   
 4.  Klikněte na tlačítko **nasazení**.  
   
-5.  Vyberte **instalace z disku CD pro automaticky spustit instalační program, pokud je disk CD-ROM** zaškrtávací políčko.  
+5.  Vyberte **pro instalace z CD automaticky spustit instalační program po vložení disku CD** zaškrtávací políčko.  
   
-     Soubor Autorun.inf budou zkopírovány do umístění pro publikování, když je aplikace publikována.  
+     *Autorun.inf* soubor bude zkopírován do umístění pro publikování, když je aplikace publikována.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Publikování aplikací ClickOnce](../deployment/publishing-clickonce-applications.md)   
- [Postupy: Publikování aplikace ClickOnce pomocí průvodce publikováním](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
+ [Postupy: publikování aplikace ClickOnce pomocí Průvodce publikováním](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

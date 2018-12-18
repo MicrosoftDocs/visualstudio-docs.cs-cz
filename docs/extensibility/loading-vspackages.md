@@ -1,5 +1,5 @@
 ---
-title: Načítání VSPackages | Microsoft Docs
+title: Načítání rozšíření VSPackages | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,21 +14,22 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 008cd31bc3d9f909477089e608393f596bfb0682
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 26bd199a688b1b47728aac561720224a71f1583b
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39638144"
 ---
-# <a name="loading-vspackages"></a>Načítání VSPackages
-VSPackages jsou načteny do sady Visual Studio jenom v případě, že se požaduje jejich funkce. Například VSPackage je načtena, když Visual Studio použije objekt pro vytváření projektu nebo služba, která implementuje VSPackage. Tato funkce je volána zpožděné načítání, který se používá, pokud je to možné ke zlepšení výkonu.  
+# <a name="load-vspackages"></a>Načtení rozšíření VSPackages
+Rozšíření VSPackages se načtou do sady Visual Studio pouze v případě jejich funkce je povinný. Například VSPackage se načte, když Visual Studio používá objekt pro vytváření projektu nebo služba, která implementuje sady VSPackage. Tato funkce je volána opožděné načtení, který se používá vždy, když je možné zvýšit výkon.  
   
 > [!NOTE]
->  Visual Studio můžete určit určité VSPackage informace, například příkazy, které nabízí VSPackage, bez načítání VSPackage.  
+>  Visual Studio můžete určit určité VSPackage informace, jako jsou příkazy, které nabízí VSPackage bez načtení sady VSPackage.  
   
- VSPackages může být nastavena na autoload v kontextu určitého uživatelského rozhraní (UI), například když je řešení otevřené. <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> Atribut nastaví tento kontext.  
+ Rozšíření VSPackages lze nastavit na automaticky načíst v kontextu konkrétní uživatelské rozhraní (UI), například při otevření řešení. <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> Atribut nastaví tento kontext.  
   
-### <a name="autoloading-a-vspackage-in-a-specific-context"></a>Autoloading VSPackage v konkrétní kontextu  
+### <a name="autoload-a-vspackage-in-a-specific-context"></a>AutoLoad VSPackage v určitém kontextu  
   
 -   Přidat `ProvideAutoLoad` atribut VSPackage atributy:  
   
@@ -41,22 +42,22 @@ VSPackages jsou načteny do sady Visual Studio jenom v případě, že se požad
     {. . .}  
     ```  
   
-     V tématu Výčtové pole <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80> seznam kontexty uživatelského rozhraní a jejich hodnoty identifikátor GUID.  
+     Zobrazit výčet pole <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80> seznam kontexty uživatelského rozhraní a jejich hodnoty identifikátor GUID.  
   
--   Nastavte zarážky v <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> metoda.  
+-   Nastavit zarážku <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> metody.  
   
--   Sestavení VSPackage a spusťte ladění.  
+-   Sestavení sady VSPackage a spusťte ladění.  
   
--   Spouštění řešení nebo ji vytvořte.  
+-   Načítání řešení nebo vytvořit novou.  
   
-     VSPackage načte a zastaví u zarážky.  
+     Sady VSPackage načte a zastaví na zarážce.  
   
-## <a name="forcing-a-vspackage-to-load"></a>Vynucení VSPackage načíst  
- Za určitých okolností může mít VSPackage vynutit jiný VSPackage má být načten. Například lightweight VSPackage může načíst větší VSPackage v kontextu, který není k dispozici jako CMDUIContext.  
+## <a name="force-a-vspackage-to-load"></a>Vynutit načtení VSPackage  
+ Za určitých okolností může mít VSPackage vynutit jiný VSPackage, který se má načíst. Zjednodušené VSPackage může například načíst větší VSPackage v kontextu, který není k dispozici jako CMDUIContext.  
   
- Můžete použít <xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackage%2A> metoda vynutit VSPackage načíst.  
+ Můžete použít <xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackage%2A> metoda přinutit VSPackage načíst.  
   
--   Vložte tento kód do <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> metoda VSPackage, který vynutí jiné VSPackage načíst:  
+-   Vložte tento kód do <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> metoda sady VSPackage, která vynutí jiného VSPackage načíst:  
   
     ```csharp  
     IVsShell shell = GetService(typeof(SVsShell)) as IVsShell;  
@@ -69,9 +70,9 @@ VSPackages jsou načteny do sady Visual Studio jenom v případě, že se požad
   
     ```  
   
-     Při inicializaci VSPackage vynutí `PackageToBeLoaded` načíst.  
+     Při inicializaci sady VSPackage, vynutí `PackageToBeLoaded` načíst.  
   
-     Platnost načítání není vhodné používat pro komunikaci VSPackage. Použití [pomocí a poskytování služeb](../extensibility/using-and-providing-services.md) místo.
+     Platnost načítání by neměl použít pro komunikaci VSPackage. Použití [používání a poskytování služeb](../extensibility/using-and-providing-services.md) místo.
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Balíčky VSPackage](../extensibility/internals/vspackages.md)

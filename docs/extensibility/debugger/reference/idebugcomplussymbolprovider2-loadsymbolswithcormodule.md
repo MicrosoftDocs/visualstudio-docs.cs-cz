@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider2::LoadSymbolsWithCorModule | Microsoft Docs
+title: IDebugComPlusSymbolProvider2::LoadSymbolsWithCorModule | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1529f1645adcd1aaa18b5f17448068de3da6efe4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6bde1c3aa8ced1b82d20af6d9e777a030d201a01
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49874602"
 ---
 # <a name="idebugcomplussymbolprovider2loadsymbolswithcormodule"></a>IDebugComPlusSymbolProvider2::LoadSymbolsWithCorModule
-Načítání ladění symboly uvedené **ICorDebugModule** objektu.  
+Načtení ladění symboly uvedené **ICorDebugModule** objektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,28 +52,28 @@ int LoadSymbolsWithCorModule(
   
 #### <a name="parameters"></a>Parametry  
  `ulAppDomainID`  
- [v] Identifikátor domény aplikace.  
+ [in] Identifikátor domény aplikace.  
   
  `guidModule`  
- [v] Jedinečný identifikátor modulu.  
+ [in] Jedinečný identifikátor modulu.  
   
  `baseAddress`  
- [v] Adresa základní paměti.  
+ [in] Adresa základní paměti.  
   
  `pUnkMetadataImport`  
- [v] Objekt, který obsahuje metadata symbol ladění.  
+ [in] Objekt, který obsahuje metadata symbolů ladění.  
   
  `pUnkCorDebugModule`  
- [v] Objekt, který implementuje [ICorDebugModule rozhraní](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface).  
+ [in] Objekt, který implementuje [icordebugmodule – rozhraní](/dotnet/framework/unmanaged-api/debugging/icordebugmodule-interface).  
   
  `bstrModuleName`  
- [v] Název modulu.  
+ [in] Název modulu.  
   
  `bstrSymSearchPath`  
- [v] Cesta k vyhledejte soubor symbolu.  
+ [in] Cesta pro hledání souborů symbolů.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugSymbolProvider** objekt, který zveřejňuje [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) rozhraní.  

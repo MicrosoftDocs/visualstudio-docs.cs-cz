@@ -1,5 +1,5 @@
 ---
-title: Synchronizovat změny mezi XCode a Visual Studio | Microsoft Docs
+title: Synchronizace změn mezi XCode a sadou Visual Studio | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -10,42 +10,43 @@ ms.author: corob
 manager: douge
 ms.workload:
 - xamarin
-ms.openlocfilehash: 09067c881e717f5e3e2ed6295e0f550adf29f511
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a32d72869a14e22ba8707036cd4b549ef5228d3b
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39379299"
 ---
-# <a name="sync-changes-between-xcode-and-visual-studio"></a>Synchronizace změn mezi XCode a Visual Studio
-Microsoft Visual C++ pro vývoj mobilních řešení pro součást obsahuje vzdálené funkce pro synchronizaci práci mezi vaším Počítačem a vaše Mac. Pokud vaše prostředí Visual Studio a Mac počítače jsou spárovat, jsou k dispozici pro iOS aplikace projekty v sadě Visual Studio, který vám pomůže, otevřete projekt v XCode, nové možnosti přesunutí kódu mezi XCode a Visual Studio a vyčistit dočasný adresář projektu XCode.  
-  
- Použití možností vzdáleného počítače, musí být projektu projekt aplikace iOS, a Visual Studio musí být spárována s vaší Mac. Požadavky a pokyny, jak pár Mac najdete v tématu [instalaci a konfiguraci nástroje pro sestavení pomocí iOS](../cross-platform/install-and-configure-tools-to-build-using-ios.md).  
-  
-## <a name="the-remote-machine-menu"></a>V nabídce vzdáleného počítače  
- V **Průzkumníku**, klikněte pravým tlačítkem na projekt aplikace iOS k zobrazení v místní nabídce. Vyberte **vzdáleného počítače** položka vzdálené možnosti, které jsou k dispozici.  
-  
- ![Položky nabídky vzdáleného počítače v Průzkumníku řešení](../cross-platform/media/cppmdd_u2_remotemachine_menu.jpg "CPPMDD_U2_RemoteMachine_Menu")  
-  
- Tyto příkazy umožňují otevřete projekt v XCode, přesuňte místní změny nebo celý projekt mezi sadou Visual Studio a XCode a vyčistit dočasné soubory na vzdáleném počítači.  
-  
-### <a name="open-in-xcode"></a>Otevřít v XCode  
- Otevřete projekt v XCode ze sady Visual Studio na **vzdáleného počítače** podnabídky, zvolte **otevřít v XCode** otevřít vybraný projekt na spárované vzdáleného počítače. Vcremote server slouží k otevření XCode na počítači Mac a přejděte do dočasného adresáře na počítači Mac, který obsahuje kopii projektu vytvořit. Visual Studio se zobrazí dialogové okno, které ukazuje název dočasného adresáře pro projekt. Akce prováděné na vzdáleném počítači jsou také uvedené v **výstup** oken v sadě Visual Studio. K jejich zobrazení, možná budete muset vybrat možnost **Visual C++ vzdáleného počítače** v **zobrazit výstup z** rozevírací seznam v horní části **výstup** okno.  
-  
- ![Ve výstupním okně zobrazí akce vzdáleného počítače. ] (../cross-platform/media/cppmdd_u2_remotemachine_output.png "CPPMDD_U2_RemoteMachine_Output")  
-  
- Na počítači Mac můžete pomocí všech nástrojů XCode upravit kód a prostředky, scénářů a akce. V sadě Visual Studio je váš projekt aplikace iOS označena "Otevřít v XCode" k označení, že ve vzdáleném počítači mohou být provedeny změny. Po dokončení úprav se můžete vyžádání ze vzdáleného nebo přírůstkové načítat z vzdálené příkazy ke zkopírování změny zpět do projektu sady Visual Studio.  
-  
-### <a name="push-to-remote-and-incremental-push-to-remote"></a>Nabízená vzdálené a přírůstkové nabízené vzdálené  
- Pokud provedete změny do projektu iOS aplikace v sadě Visual Studio, nabízená instalace vzdáleného a přírůstkové nabízená vzdálené příkazy slouží k přesunutí souborů změněné projektu spárované vzdáleného počítače. Nabízeného oznámení do vzdáleného příkazu zkopíruje všechny soubory projektu do vzdáleného počítače. Přírůstkové Push na vzdálený příkaz zkopíruje pouze změněné soubory do vzdáleného počítače. U velkých projektů s menší změny můžete uložit příkaz přírůstkové čas a šířku pásma.  
-  
- Kopírování souborů projektu do počítače Mac v sadě Visual Studio v **Průzkumníku řešení** okna, klikněte pravým tlačítkem na projekt aplikace iOS otevřít v místní nabídce. Vyberte **vzdáleného počítače** a zvolit buď **Push vzdálené** nebo **přírůstkové Push vzdálené** pro kopírování souborů projektu ze sady Visual Studio do vaší Mac.  
-  
-### <a name="pull-from-remote-and-incremental-pull-from-remote"></a>Ze vzdáleného a přírůstkové vyžádaných ze vzdáleného pro vyžádání obsahu  
- Když provedete změny do projektu v XCode, přesunete změny zpět do Visual Studio pro synchronizaci projektů.  
-  
- Kopírování souborů projektu z počítače Mac v sadě Visual Studio v **Průzkumníku řešení** okna, klikněte pravým tlačítkem na projekt aplikace iOS otevřít v místní nabídce. Vyberte **vzdáleného počítače** a zvolit buď **načítat z vzdálené** nebo **přírůstkové načítat z vzdálené** pro kopírování souborů projektu z počítače Mac do sady Visual Studio.  
-  
-### <a name="clean-remote"></a>Vyčištění vzdálené  
- Vyčištění dálkového příkazu můžete odstranit soubory v adresáři projektu dočasné ve vzdáleném počítači. Obsah adresáře, včetně žádné zdrojové soubory nebo sestavení produkty, jsou odebrány vaše Mac. Ujistěte se, že proběhla všechny změny, které chcete zachovat zpět k sadě Visual Studio pomocí přijetí změn ze vzdáleného nebo přírůstkové načítat z vzdálené dříve, než použijete příkaz vyčištění vzdálené.  
-  
- Pro čištění adresáři dočasné projektu ve vzdáleném počítači, v sadě Visual Studio v **Průzkumníku řešení** okna, klikněte pravým tlačítkem na projekt aplikace iOS otevřít v místní nabídce. Vyberte **vzdáleného počítače** a zvolte **čisté vzdálené** odebrat soubory adresáře projektu z vaší Mac.
+# <a name="sync-changes-between-xcode-and-visual-studio"></a>Synchronizace změn mezi XCode a sadou Visual Studio
+Microsoft Visual C++ pro vývoj mobilních řešení pro komponentu zahrnuje vzdálené možnosti pro synchronizaci vaší práce mezi vaším Počítačem a vašeho macu. V kombinaci se počítače s Visual Studio nebo Mac, nové možnosti jsou k dispozici pro iOS projekty aplikací v sadě Visual Studio, můžete použít k otevření projektu v XCode, přesuňte váš kód mezi XCode a sadou Visual Studio a vyčistit dočasný adresář projektu XCode.
+
+ Použití možností vzdálený počítač, váš projekt musí být projekt aplikace pro iOS a sady Visual Studio musí být párována s vašeho macu. Požadavky a pokyny o tom, jak pár Mac najdete v tématu [instalace a konfigurace nástroje potřebné k vytváření pomocí iOS](../cross-platform/install-and-configure-tools-to-build-using-ios.md).
+
+## <a name="the-remote-machine-menu"></a>V nabídce vzdáleného počítače
+ V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt aplikace pro iOS k zobrazení v místní nabídce. Vyberte **vzdálený počítač** položku, kterou chcete zobrazit dostupné možnosti vzdáleného.
+
+ ![Vzdálený počítač položky nabídky v Průzkumníku řešení](../cross-platform/media/cppmdd_u2_remotemachine_menu.jpg "CPPMDD_U2_RemoteMachine_Menu")
+
+ Tyto příkazy umožňují otevřete projekt v XCode, přesouvat místní změny nebo celý projekt mezi Visual Studio a XCode a vyčistit dočasné soubory na vzdáleném počítači.
+
+### <a name="open-in-xcode"></a>Otevřít v Xcodu
+ Otevřete projekt v XCode ze sady Visual Studio na **vzdálený počítač** podnabídky, zvolte **otevřít v Xcodu** otevřít zvolený projekt na spárovaném vzdáleném počítači. Vcremote server slouží k XCode na počítači Mac otevřete a přejděte do dočasného adresáře na počítači Mac, který obsahuje kopii projektu vytvoří. Visual Studio se zobrazí dialogové okno zobrazující dočasný adresář pro projekt používá. Akce prováděné na vzdáleném počítači jsou také uvedeny v **výstup** okna v sadě Visual Studio. Neuvidíte, budete muset vybrat **vzdálený počítač Visual C++** v **zobrazit výstup z:** rozevírací seznam v horní části **výstup** okna.
+
+ ![V okně výstupu se zobrazí akce vzdáleného počítače. ](../cross-platform/media/cppmdd_u2_remotemachine_output.png "CPPMDD_U2_RemoteMachine_Output")
+
+ Všechny nástroje XCode na počítači Mac, slouží k úpravě kódu a prostředků, scénářů a akce. V sadě Visual Studio je váš projekt aplikace pro iOS opatřen poznámkou "Otevřít v XCode" k označení, že mohou být provedeny změny ve vzdáleném počítači. Po dokončení úprav můžete stahování ze vzdáleného počítače nebo přírůstkové načítat vzdálené příkazy pro kopírování změn zpět do projektu sady Visual Studio.
+
+### <a name="push-to-remote-and-incremental-push-to-remote"></a>Vložit do vzdálené a přírůstkové nabízení na vzdálený počítač
+ Pokud jste provedli změny pro váš projekt aplikace pro iOS v sadě Visual Studio, přírůstkové vložení do vzdálených příkazů a metodou Push do vzdáleného umožňuje přesunout soubory změněné projektu na spárovaném vzdálený počítač. Nasdílení změn do vzdáleného příkazu zkopíruje všechny soubory projektu do vzdáleného počítače. Přírůstkové vložit do vzdáleného příkazu zkopíruje jen změněné soubory na vzdálený počítač. Pro velké projekty s malým změnám přírůstkové příkaz šetří čas a šířky pásma.
+
+ Kopírování souborů projektu do počítače Mac v sadě Visual Studio **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt aplikace pro iOS otevřete místní nabídku. Vyberte **vzdálený počítač** a zvolte buď **nabízet na vzdálený počítač** nebo **přírůstkové nabízet na vzdálený počítač** kopírování souborů projektu v sadě Visual Studio do vašeho macu.
+
+### <a name="pull-from-remote-and-incremental-pull-from-remote"></a>Vyžádání ze vzdáleného a přírůstkové stahování ze vzdáleného počítače
+ Po provedení změny do projektu v prostředí XCode přejděte změny zpět do sady Visual Studio pro synchronizaci projektů.
+
+ Zkopírujte soubory projektu z Macu, v sadě Visual Studio **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt aplikace pro iOS otevřete místní nabídku. Vyberte **vzdálený počítač** a zvolte buď **stahovat ze vzdáleného počítače** nebo **přírůstkové stahovat ze vzdáleného počítače** kopírování souborů projektu z počítače Mac se sadou Visual Studio.
+
+### <a name="clean-remote"></a>Vyčistit vzdálený počítač
+ Vyčistit vzdálený příkaz slouží k odstranění souborů v adresáři dočasné projektu ve vzdáleném počítači. Obsah adresáře, včetně žádné zdrojové soubory nebo sestavení produkty, odeberou se na vašem počítači Mac. Ujistěte se, že všechny změny, které chcete zachovat zpět do sady Visual Studio s použitím o přijetí změn ze vzdáleného ani přírůstkové přijmout jejich změny ze vzdáleného před použitím příkazu vyčistit vzdálený nebyly synchronizovány.
+
+ Pro čištění adresáře dočasných projektu ve vzdáleném počítači, v sadě Visual Studio **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt aplikace pro iOS otevřete místní nabídku. Vyberte **vzdálený počítač** a zvolte **vyčistit vzdálený** odebrání soubory v adresáři projektu vašeho macu.

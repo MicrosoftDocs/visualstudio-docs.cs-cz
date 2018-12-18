@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Aktualizace grafu v dokumentu s použitím přepínačů | Microsoft Docs'
+title: 'Návod: Aktualizace grafu v dokumentu s použitím přepínačů'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,28 +16,29 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 60daf98d02c358e3a288a7dbb6a8a02df3a1258f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5e82c50c83a8824b4570779034b0480aa0615a30
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49904671"
 ---
-# <a name="walkthrough-updating-a-chart-in-a-document-using-radio-buttons"></a>Návod: Aktualizace grafu v dokumentu s použitím přepínačů
-  Tento návod ukazuje, jak používat přepínací tlačítka v přizpůsobení na úrovni dokumentu pro aplikaci Microsoft Office Word uživatelům možnost zvolit styly grafu v dokumentu.  
+# <a name="walkthrough-update-a-chart-in-a-document-using-radio-buttons"></a>Návod: Aktualizace grafu v dokumentu s použitím přepínačů
+  Tento návod ukazuje, jak pomocí přepínačů v přizpůsobení úrovni dokumentu pro aplikaci Microsoft Office Word a poskytuje tak uživatelům možnost vybrat styly grafu v dokumentu.  
   
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]  
   
  Tento návod znázorňuje následující úlohy:  
   
--   Přidáním grafu do dokumentu v projektech na úrovni dokumentu v době návrhu.  
+- Přidání grafu do dokumentu v projektu úrovni dokumentu v době návrhu.  
   
--   Seskupování přepínačů jejich přidáním do uživatelského ovládacího prvku.  
+- Seskupování přepínačů jejich přidáním do uživatelského ovládacího prvku.  
   
--   Změna stylu grafu, pokud je vybrána možnost.  
+- Změna stylu grafu, pokud je vybrána možnost.  
   
- Výsledek jako hotová ukázka najdete v sekci Ukázka ovládací prvky aplikace Word v [Office Ukázky a návody vývoje](../vsto/office-development-samples-and-walkthroughs.md).  
+  Výsledek jako úplnou vzorovou najdete v ukázce ovládací prvky aplikace Word v [Office Ukázky a návody vývoje](../vsto/office-development-samples-and-walkthroughs.md).  
   
- [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
 ## <a name="prerequisites"></a>Požadavky  
  K dokončení tohoto návodu budete potřebovat následující komponenty:  
@@ -46,177 +47,177 @@ ms.lasthandoff: 04/16/2018
   
 -   [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] nebo [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)].  
   
-## <a name="creating-the-project"></a>Vytvoření projektu  
- Prvním krokem je vytvoření projektu dokument aplikace Word.  
+## <a name="create-the-project"></a>Vytvoření projektu  
+ Prvním krokem je vytvoření projektu dokumentu aplikace Word.  
   
-#### <a name="to-create-a-new-project"></a>Chcete-li vytvořit nový projekt  
+### <a name="to-create-a-new-project"></a>Chcete-li vytvořit nový projekt  
   
-1.  Vytvoření projektu dokument aplikace Word s názvem **Moje možnosti grafu**. V průvodci vyberte **vytvoříte nový textový dokument**. Další informace najdete v tématu [postupy: vytváření projektů Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
+1.  Vytvoření projektu Wordového dokumentu s názvem **Moje možnosti grafu**. V průvodci vyberte **vytvoříte nový textový dokument**. Další informace najdete v tématu [postupy: vytvoření Office projekty v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
   
-     Visual Studio otevře nový dokument aplikace Word v návrháři a přidá **Moje možnosti grafu** projektu do **Průzkumníku řešení**.  
+     Visual Studio otevře nový Wordový dokument v návrháři a přidá **Moje možnosti grafu** projektu **Průzkumníka řešení**.  
   
-## <a name="adding-a-chart-to-the-document"></a>Přidáním grafu do dokumentu  
+## <a name="add-a-chart-to-the-document"></a>Přidání grafu do dokumentu  
   
-#### <a name="to-add-a-chart"></a>Chcete-li přidat graf  
+### <a name="to-add-a-chart"></a>Chcete-li přidat graf  
   
-1.  Do Wordového dokumentu, který je hostován v návrháři Visual Studio na pásu karet, klikněte **vložit** kartě.  
+1.  V dokumentu aplikace Word, který je hostován v návrháři aplikace Visual Studio na pásu karet, klepněte **vložit** kartu.  
   
-2.  V **Text** klikněte na možnost **vložit objekt** tlačítko rozevíracího seznamu a klikněte na tlačítko **objekt**.  
+2.  V **Text** klikněte na položku **vložit objekt** tlačítko rozevíracího seznamu a klikněte na tlačítko **objekt**.  
   
-     **Objekt** otevře se dialogové okno.  
+     **Objekt** zobrazí se dialogové okno.  
   
-3.  V **typ objektu** seznam na **vytvořit nový** vyberte **graf aplikace Microsoft Graph** a pak klikněte na **OK**.  
+3.  V **typ objektu** seznamu **vytvořit nový** kartu, vyberte možnost **Microsoft graf** a potom klikněte na tlačítko **OK**.  
   
-     Graf se přidá do dokumentu na pozici kurzoru a **zobrazení datového** se zobrazí okno s některé výchozí data.  
+     Graf je přidán do dokumentu na pozici kurzoru a **datový list** zobrazí se okno s daty výchozí.  
   
-4.  Zavřít **zobrazení datového** okno přijměte výchozí hodnoty v grafu a klikněte na tlačítko uvnitř dokumentu, který má přesunout fokus od grafu.  
+4.  Zavřít **datový list** okna přijměte výchozí hodnoty v grafu a klikněte do dokumentu můžete fokus přesunout mimo grafu.  
   
-5.  Klikněte pravým tlačítkem na graf a pak klikněte na **formát objektu**.  
+5.  Klikněte pravým tlačítkem na graf a potom klikněte na tlačítko **formát objektu**.  
   
-6.  Na **rozložení** kartě **formát objektu** dialogové okno, vyberte **hranaté** a klikněte na tlačítko **OK**.  
+6.  Na **rozložení** karty **formát objektu** dialogu **čtverec** a klikněte na tlačítko **OK**.  
   
-## <a name="adding-a-user-control-to-the-project"></a>Přidání uživatelského ovládacího prvku do projektu  
- Přepínací tlačítka v dokumentu nejsou vzájemně se vylučuje ve výchozím nastavení. Je fungovat správně je pomocí přidání do ovládacího prvku uživatele a pak psaní kódu pro řízení výběr můžete provést.  
+## <a name="add-a-user-control-to-the-project"></a>Přidat uživatelský ovládací prvek do projektu  
+ Přepínací tlačítka v dokumentu se vzájemně nevylučují ve výchozím nastavení. Můžete nastavit, je správně je tím přidáte do uživatelského ovládacího prvku a pak zápis kódu pro ovládací prvek výběru funkce.  
   
-#### <a name="to-add-a-user-control"></a>Chcete-li přidat uživatelský ovládací prvek  
+### <a name="to-add-a-user-control"></a>Chcete-li přidat uživatelský ovládací prvek  
   
-1.  Vyberte **Moje možnosti grafu** projektu v **Průzkumníku řešení**.  
+1.  Vyberte **Moje možnosti grafu** projekt **Průzkumníka řešení**.  
   
 2.  Na **projektu** nabídky, klikněte na tlačítko **přidat novou položku**.  
   
-3.  V **přidat novou položku** dialogové okno, klikněte na tlačítko **uživatelský ovládací prvek**, název ovládacího prvku **ChartOptions,** a klikněte na tlačítko **přidat**.  
+3.  V **přidat novou položku** dialogové okno, klikněte na tlačítko **uživatelský ovládací prvek**, ovládací prvek pojmenujte **ChartOptions,** a klikněte na tlačítko **přidat**.  
   
-#### <a name="to-add-windows-form-controls-to-the-user-control"></a>Přidání ovládacích prvků ve formuláři Windows do uživatelského ovládacího prvku  
+### <a name="to-add-windows-form-controls-to-the-user-control"></a>Chcete-li přidat ovládací prvky formuláře Windows do uživatelského ovládacího prvku  
   
-1.  Pokud není zobrazená v Návrháři uživatelského ovládacího prvku, klikněte dvakrát na **ChartOptions** v **Průzkumníku řešení**.  
+1.  Pokud uživatelský ovládací prvek není viditelný v návrháři, klikněte dvakrát na **ChartOptions** v **Průzkumníka řešení**.  
   
-2.  Z **běžné ovládací prvky** kartě **sada nástrojů**, přetáhněte první **přepínač** řízení do uživatelského ovládacího prvku a změnit následující vlastnosti.  
+2.  Z **běžné ovládací prvky** karty **nástrojů**, přetáhněte první **přepínač** řídit uživatelského ovládacího prvku a změňte následující vlastnosti.  
   
     |Vlastnost|Hodnota|  
     |--------------|-----------|  
     |**Jméno**|**columnChart**|  
     |**Text**|**Sloupcový graf**|  
   
-3.  Přidejte druhý **přepínač** uživateli řídit a změnit následující vlastnosti.  
+3.  Přidejte druhý **přepínač** uživateli určit a změnit následující vlastnosti.  
   
     |Vlastnost|Hodnota|  
     |--------------|-----------|  
     |**Jméno**|**barChart**|  
     |**Text**|**Pruhový graf**|  
   
-4.  Přidat třetí **přepínač** uživateli řídit a změnit následující vlastnosti.  
+4.  Přidat třetí **přepínač** uživateli určit a změnit následující vlastnosti.  
   
     |Vlastnost|Hodnota|  
     |--------------|-----------|  
     |**Jméno**|**lineChart**|  
     |**Text**|**Spojnicový graf**|  
   
-5.  Přidat čtvrtý **přepínač** uživateli řídit a změnit následující vlastnosti.  
+5.  Přidat čtvrtý **přepínač** uživateli určit a změnit následující vlastnosti.  
   
     |Vlastnost|Hodnota|  
     |--------------|-----------|  
     |**Jméno**|**areaBlockChart**|  
     |**Text**|**Plošný graf bloku**|  
   
-## <a name="adding-references"></a>Přidávání odkazů  
- K grafu z uživatelského ovládacího prvku v dokumentu musíte mít odkaz na sestavení Microsoft.Office.Interop.Graph ve vašem projektu.  
+## <a name="add-references"></a>Přidání odkazů  
+ Pro přístup k grafu z uživatelského ovládacího prvku na dokument, musí mít odkaz na `Microsoft.Office.Interop.Graph` sestavení ve vašem projektu.  
   
-#### <a name="to-add-a-reference-to-the-microsoftofficeinteropgraph-assembly"></a>Chcete-li přidat odkaz na sestavení Microsoft.Office.Interop.Graph  
+### <a name="to-add-a-reference-to-the-microsoftofficeinteropgraph-assembly"></a>Chcete-li přidat odkaz na sestavení Microsoft.Office.Interop.Graph  
   
-1.  Na **projektu** nabídky, klikněte na tlačítko **přidat odkaz na**.  
+1.  Na **projektu** nabídky, klikněte na tlačítko **přidat odkaz**.  
   
-     **Přidat odkaz na** zobrazí se dialogové okno.  
+     **Přidat odkaz** zobrazí se dialogové okno.  
   
-2.  Na **rozhraní .NET** vyberte **Microsoft.Office.Interop.Graph** a klikněte na tlačítko **OK**. Vyberte 14.0.0.0 verzi sestavení.  
+2.  Na **.NET** kartu, vyberte možnost **Microsoft.Office.Interop.Graph** a klikněte na tlačítko **OK**. Vyberte 14.0.0.0 verzi sestavení.  
   
-## <a name="changing-the-chart-style-when-a-radio-button-is-selected"></a>Změna stylu grafu, pokud je vybrána přepínače  
- Chcete-li tlačítka fungovat správně, vytvořte veřejnou událost na uživatelského ovládacího prvku, přidání vlastnosti do nastavení výběru typu a vytvořit proceduru k `CheckedChanged` události jednotlivých přepínačů.  
+## <a name="change-the-chart-style-when-a-radio-button-is-selected"></a>Změna stylu grafu vyberete přepínací tlačítko  
+ Chcete-li správně funguje, vytvořte veřejná událost na uživatelský ovládací prvek tlačítka, přidejte vlastnost nastavit typ výběru a postup pro vytvoření `CheckedChanged` událostí všech přepínačů.  
   
-#### <a name="to-create-an-event-and-property-on-a-user-control"></a>Vytvoření událostí a vlastnost na uživatelský ovládací prvek  
+### <a name="to-create-an-event-and-property-on-a-user-control"></a>Vytvoření události a vlastnost na uživatelský ovládací prvek  
   
-1.  V **Průzkumníku řešení**, klikněte pravým tlačítkem na uživatelský ovládací prvek a potom klikněte na **kód zobrazení**.  
+1.  V **Průzkumníka řešení**, klikněte pravým tlačítkem na uživatelský ovládací prvek a potom klikněte na tlačítko **zobrazit kód**.  
   
-2.  Přidejte kód k vytvoření `SelectionChanged` událostí a `Selection` vlastnost, která má `ChartOptions` třídy.  
+2.  Přidejte kód k vytvoření `SelectionChanged` událostí a `Selection` vlastnost `ChartOptions` třídy.  
   
      [!code-csharp[Trin_VstcoreProgrammingControlsWord#9](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs#9)]
      [!code-vb[Trin_VstcoreProgrammingControlsWord#9](../vsto/codesnippet/VisualBasic/my chart options/ChartOptions.vb#9)]  
   
-#### <a name="to-handle-the-checkedchange-event-of-the-radio-buttons"></a>Zpracování události CheckedChange přepínacích tlačítek  
+### <a name="to-handle-the-checkedchange-event-of-the-radio-buttons"></a>Zpracování události CheckedChange přepínačů  
   
-1.  Nastavte typ grafu v `CheckedChanged` obslužnou rutinu události `areaBlockChart` přepínač a poté vyvolat událost.  
+1.  Nastavit typ grafu `CheckedChanged` obslužná rutina události `areaBlockChart` přepínač a následně vyvolání události.  
   
      [!code-csharp[Trin_VstcoreProgrammingControlsWord#10](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs#10)]
      [!code-vb[Trin_VstcoreProgrammingControlsWord#10](../vsto/codesnippet/VisualBasic/my chart options/ChartOptions.vb#10)]  
   
-2.  Nastavte typ grafu v `CheckedChanged` obslužnou rutinu události `barChart` přepínač.  
+2.  Nastavit typ grafu `CheckedChanged` obslužná rutina události `barChart` přepínač.  
   
      [!code-csharp[Trin_VstcoreProgrammingControlsWord#11](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs#11)]
      [!code-vb[Trin_VstcoreProgrammingControlsWord#11](../vsto/codesnippet/VisualBasic/my chart options/ChartOptions.vb#11)]  
   
-3.  Nastavte typ grafu v `CheckedChanged` obslužnou rutinu události `columnChart` přepínač.  
+3.  Nastavit typ grafu `CheckedChanged` obslužná rutina události `columnChart` přepínač.  
   
      [!code-csharp[Trin_VstcoreProgrammingControlsWord#12](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs#12)]
      [!code-vb[Trin_VstcoreProgrammingControlsWord#12](../vsto/codesnippet/VisualBasic/my chart options/ChartOptions.vb#12)]  
   
-4.  Nastavte typ grafu v `CheckedChanged` obslužnou rutinu události `lineChart` přepínač.  
+4.  Nastavit typ grafu `CheckedChanged` obslužná rutina události `lineChart` přepínač.  
   
      [!code-csharp[Trin_VstcoreProgrammingControlsWord#13](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs#13)]
      [!code-vb[Trin_VstcoreProgrammingControlsWord#13](../vsto/codesnippet/VisualBasic/my chart options/ChartOptions.vb#13)]  
   
-5.  V jazyce C# je nutné přidat obslužných rutin událostí pro přepínací tlačítka. Můžete přidat kód, který `ChartOptions` konstruktor pod volání `InitializeComponent`. Informace o vytváření obslužných rutin událostí najdete v tématu [postupy: vytvoření obslužné rutiny událostí v projektech Office](../vsto/how-to-create-event-handlers-in-office-projects.md).  
+5.  V jazyce C# je nutné přidat obslužné rutiny událostí pro přepínací tlačítka. Můžete přidat kód, který `ChartOptions` konstruktor pod volání `InitializeComponent`. Informace o vytváření obslužných rutin událostí, naleznete v tématu [postupy: vytváření obslužných rutin událostí v projektech pro systém Office](../vsto/how-to-create-event-handlers-in-office-projects.md).  
   
      [!code-csharp[Trin_VstcoreProgrammingControlsWord#14](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ChartOptions.cs#14)]  
   
-## <a name="adding-the-user-control-to-the-document"></a>Přidání uživatelského ovládacího prvku do dokumentu  
- Při sestavování řešení, se automaticky přidá do nového uživatelského ovládacího prvku **sada nástrojů**. Potom můžete přetáhnout z ovládacího prvku **sada nástrojů** do dokumentu.  
+## <a name="add-the-user-control-to-the-document"></a>Přidat uživatelský ovládací prvek v dokumentu  
+ Při sestavování řešení se automaticky přidá do nového uživatelského ovládacího prvku **nástrojů**. Potom můžete přetáhnout ovládací prvek z **nástrojů** do dokumentu.  
   
-#### <a name="to-add-the-user-control-your-document"></a>Chcete-li přidat uživatelského ovládacího prvku dokument  
+### <a name="to-add-the-user-control-your-document"></a>Chcete-li přidat uživatelský ovládací prvek dokumentu  
   
 1.  Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.  
   
-     **ChartOptions** uživatelský ovládací prvek je přidán do **sada nástrojů**.  
+     **ChartOptions** uživatelský ovládací prvek je přidán do **nástrojů**.  
   
-2.  V **Průzkumníku řešení**, klikněte pravým tlačítkem na **ThisDocument.vb** nebo **ThisDocument.cs**a potom klikněte na **Návrhář zobrazení**.  
+2.  V **Průzkumníka řešení**, klikněte pravým tlačítkem na **ThisDocument.vb** nebo **ThisDocument.cs**a potom klikněte na tlačítko **Návrhář zobrazení**.  
   
-3.  Přetáhněte `ChartOptions` řídit z **sada nástrojů** k dokumentu.  
+3.  Přetáhněte `ChartOptions` ovládacího prvku **nástrojů** v dokumentu.  
   
-     V **vlastnosti** období, název ovládací prvek, který jste právě přidali v dokumentu `ChartOptions1`.  
+     V **vlastnosti** okna, název ovládacího prvku, který jste právě přidán do dokumentu `ChartOptions1`.  
   
-## <a name="changing-the-chart-type"></a>Změnit typ grafu.  
- Vytvoření obslužné rutiny události chcete-li změnit typ grafu podle možnosti vybrané v uživatelského ovládacího prvku.  
+## <a name="change-the-chart-type"></a>Změnit typ grafu  
+ Vytvořte obslužnou rutinu události, chcete-li změnit typ grafu podle možnosti vybrané v uživatelského ovládacího prvku.  
   
-#### <a name="to-change-the-type-of-chart-that-is-displayed-in-the-document"></a>Chcete-li změnit typ grafu, který se zobrazí v dokumentu  
+### <a name="to-change-the-type-of-chart-that-is-displayed-in-the-document"></a>Chcete-li změnit typ grafu, který se zobrazí v dokumentu  
   
-1.  Přidejte následující obslužné rutiny události pro `ThisDocument` třídy.  
+1.  Přidejte následující obslužnou rutinu události pro `ThisDocument` třídy.  
   
      [!code-vb[Trin_VstcoreProgrammingControlsWord#15](../vsto/codesnippet/VisualBasic/my chart options/ThisDocument.vb#15)]
      [!code-csharp[Trin_VstcoreProgrammingControlsWord#15](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#15)]  
   
-2.  V jazyce C#, je nutné přidat obslužné rutiny události pro ovládací prvek na <xref:Microsoft.Office.Tools.Word.Document.Startup> událostí.  
+2.  V C#, je nutné přidat obslužnou rutinu události pro uživatelský ovládací prvek <xref:Microsoft.Office.Tools.Word.Document.Startup> událostí.  
   
      [!code-csharp[Trin_VstcoreProgrammingControlsWord#16](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#16)]  
   
-## <a name="testing-the-application"></a>Testování aplikace  
- Nyní můžete otestovat dokument a ujistěte se, že styl grafu je správně aktualizován, když vyberete přepínače.  
+## <a name="test-the-application"></a>Testování aplikace  
+ Teď můžete otestovat váš dokument, abyste měli jistotu, že je vyberete tlačítko přepínače správně aktualizován styl grafu.  
   
-#### <a name="to-test-your-document"></a>K testování dokumentu  
+### <a name="to-test-your-document"></a>K otestování vašeho dokumentu  
   
-1.  Stisknutím klávesy F5 spusťte projekt.  
+1.  Stisknutím klávesy **F5** ke spuštění projektu.  
   
 2.  Vyberte různé přepínače.  
   
 3.  Potvrďte, že styl grafu se změní tak, aby odpovídaly výběr.  
   
 ## <a name="next-steps"></a>Další kroky  
- Zde jsou některé úlohy, které by mohl pocházet Další:  
+ Tady jsou některé úlohy, které by mohl pocházet Další:  
   
--   Pomocí tlačítka k naplnění textové pole. Další informace najdete v tématu [návod: zobrazení textu v textovém poli v dokumentu pomocí tlačítka](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md).  
+-   Pomocí tlačítka k naplnění textové pole. Další informace najdete v tématu [návod: zobrazení textu v textovém poli v dokumentu s použitím tlačítka](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md).  
   
--   Změna formátování výběrem styl z pole se seznamem. Další informace najdete v tématu [návod: Změna dokumentu formátování pomocí ovládacích prvků CheckBox](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md).  
+-   Změna formátování tak, že vyberete styl pole se seznamem. Další informace najdete v tématu [návod: Změna formátování dokumentů s použitím ovládacích prvků CheckBox](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md).  
   
-## <a name="see-also"></a>Viz také  
- [Návody pro práci s aplikací Word](../vsto/walkthroughs-using-word.md)   
- [Office Ukázky a návody vývoje](../vsto/office-development-samples-and-walkthroughs.md)   
- [Omezení ovládacích prvků modelu Windows Forms v dokumentech Office](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)  
+## <a name="see-also"></a>Viz také:  
+ [Návody pro aplikaci Word](../vsto/walkthroughs-using-word.md)   
+ [Ukázky vývoje pro Office a názorné postupy](../vsto/office-development-samples-and-walkthroughs.md)   
+ [Omezení ovládacích prvků Windows Forms v dokumentech Office](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)  
   
   

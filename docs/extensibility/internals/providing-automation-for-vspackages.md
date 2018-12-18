@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131569"
 ---
 # <a name="providing-automation-for-vspackages"></a>Poskytnutí automatizace pro VSPackages
 Existují dva hlavní způsoby zajistit automatizace pro vaše VSPackages: implementací VSPackage konkrétní objekty a implementací objekty standardní automatizace. Obecně platí ty se používají společně rozšířit model automatizace prostředí.  

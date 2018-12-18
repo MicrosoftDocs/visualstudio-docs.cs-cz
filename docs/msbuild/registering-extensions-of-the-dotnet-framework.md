@@ -1,5 +1,5 @@
 ---
-title: Registrace rozšíření rozhraní .NET Framework | Microsoft Docs
+title: Registrace rozšíření rozhraní .NET Framework | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -14,23 +14,24 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: cad3d2d02ed27ab46410be6edc024b137bbca7bd
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 0017255b67042a7e42b54325b24512a295ebeaf5
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39180149"
 ---
-# <a name="registering-extensions-of-the-net-framework"></a>Registrace rozšíření rozhraní .NET Framework
-Můžete vyvíjet sestavení, které rozšiřuje na konkrétní verzi rozhraní .NET Framework. Chcete-li povolit sestavení se objeví v sadě Visual Studio **přidat odkazy** dialogové okno, je nutné přidat složku, která obsahuje do registru systému.  
+# <a name="register-extensions-of-the-net-framework"></a>Registrace rozšíření rozhraní .NET Framework
+Můžete vyvíjet sestavení, která rozšiřuje konkrétní verzi rozhraní .NET Framework. Povolit sestavení se zobrazí v sadě Visual Studio **Add References** dialogové okno, je nutné přidat složku obsahující do systémového registru.  
   
- Předpokládejme například, že společnost Trey Research vyvinula knihovnu, která rozšiřuje rozhraní .NET Framework 4 a chce sestavení knihovny se objeví v **přidat odkazy** dialogové okno když na projekt cílí na rozhraní .NET Framework 4. Také předpokládají, že sestavení jsou 32bitová verze sestavení spuštěná v počítači 32bitová nebo 64bitová verze sestavení spuštěná na 64bitovém počítači a že bude nainstalována ve složce C:\TreyResearch\Extensions4\.  
+ Předpokládejme například, že společnost Trey Research má vyvinuté knihovnu, která rozšiřuje rozhraní .NET Framework 4 a chce, aby se sestavení knihovny se zobrazí v **Add References** dialogové okno když projekt cílí na rozhraní .NET Framework 4. Taky se předpokládá, že sestavení jsou 32bitová sestavení instalujte spuštěná na počítači 32bitové nebo 64bitové sestavení běží na 64bitovém počítači, a že se nainstalují v *C:\TreyResearch\Extensions4\\*  složky.  
   
- Pomocí tohoto klíče zaregistrujte tuto složku: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework\v4.0.21006\AssemblyFoldersEx\TreyResearch\\. Zadejte klíč tato výchozí hodnota: C:\TreyResearch\Extensions4.  
+ Pomocí tohoto klíče zaregistrujte tuto složku: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework\v4.0.21006\AssemblyFoldersEx\TreyResearch\\**. Byla tato výchozí hodnota klíče: **C:\TreyResearch\Extensions4**.  
   
 > [!NOTE]
->  Číslo sestavení verzi rozhraní .NET Framework se může lišit.  
+>  Číslo sestavení rozhraní .NET Framework verze se může lišit.  
   
- Pro registraci sestavení 32-bit na 64bitovém počítači, použijte Wow6432 uzlu, například: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\. NETFramework\v4.0.21006\AssemblyFoldersEx\TreyResearch\\.  
+ K registraci sestavení 32-bit na 64bitovém počítači, použijte Wow6432 uzlu, například: **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\. NETFramework\v4.0.21006\AssemblyFoldersEx\TreyResearch\\**.  
   
-## <a name="see-also"></a>Viz také  
- [Integrace sady Visual Studio](../msbuild/visual-studio-integration-msbuild.md)
+### <a name="see-also"></a>Viz také:  
+ [Integrace se sadou Visual Studio](../msbuild/visual-studio-integration-msbuild.md)

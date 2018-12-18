@@ -1,5 +1,5 @@
 ---
-title: Návrh tabulky příkaz XML (. Soubory Vsct) | Microsoft Docs
+title: Návrh tabulky příkazů XML (. Soubory Vsct) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,115 +13,116 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 865baa3f7b4b0fe4cbbaf2cdf34e9e8041d5c121
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4e94d93d407f7499afbd43c8af2b7532ca1b4d8e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49934558"
 ---
-# <a name="designing-xml-command-table-vsct-files"></a>Návrh tabulky příkaz XML (. Soubory Vsct)
-Soubor XML příkaz tabulky (.vsct) popisuje rozložení a vzhled příkaz položky pro VSPackage. Příkaz položky zahrnují tlačítka, pole se seznamem, nabídek, panely nástrojů a skupiny příkaz položek. Toto téma popisuje XML příkaz tabulky souborů, jejich vlivu příkaz položek a nabídek a postup jejich vytvoření.
+# <a name="design-xml-command-table-vsct-files"></a>Návrh souborů tabulky (.vsct) příkaz XML
+Tabulky příkazů XML (*.vsct*) soubor popisuje rozložení a vzhled příkaz položek pro balíček VSPackage. Příkaz položky zahrnují tlačítka, pole se seznamem, nabídky, panely nástrojů a skupiny položek příkazu. Tento článek popisuje XML souborů tabulky příkazů, jak ovlivňují příkaz položky a v nabídkách a postupy jejich vytvoření.
 
-## <a name="commands-menus-groups-and-the-vsct-file"></a>Příkazy, nabídek, skupiny a soubor .vsct
- .vsct soubory jsou uspořádány podle příkazy nabídek a příkaz skupiny. Značky XML v souboru .vsct představují těchto položek spolu s další přidružené položky například příkazová tlačítka, příkaz umístění a rastrové obrázky.
+## <a name="commands-menus-groups-and-the-vsct-file"></a>Příkazy, nabídky, skupin a souboru .vsct
+ *.Vsct* soubory jsou uspořádány podle příkazy, nabídky a skupiny příkazů. XML – značky v *.vsct* souboru představují každý z těchto položek, společně s další související položky jako příkazová tlačítka, příkaz umístění a rastrové obrázky.
 
- Při vytváření nové VSPackage spuštěním [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] balíček šablony, Šablona generuje soubor .vsct nezbytné elementy pro příkaz nabídky, okno nástroje nebo vlastní editor, v závislosti na vybrané položky. Tento soubor .vsct můžete pak upravit tak, aby vyhověli požadavkům konkrétní VSPackage. Příklady, jak upravit soubor .vsct najdete v tématu příklady v [rozšíření nabídek a příkazů](../../extensibility/extending-menus-and-commands.md).
+ Při vytváření nového balíčku VSPackage spuštěním [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] balíček šablony, tato šablona vygeneruje *.vsct* soubor s prvky nezbytné pro příkaz nabídky, okna nástroje nebo vlastní editor, v závislosti na zvolené položky. To *.vsct* soubor pak lze upravit podle požadavků konkrétního balíčku VSPackage. Příklady toho, jak upravit *.vsct* souborů naleznete v tématu [rozšířit nabídek a příkazů](../../extensibility/extending-menus-and-commands.md).
 
- Pokud chcete vytvořit nový, prázdný .vsct soubor, najdete v části [postupy: vytvoření. Soubor Vsct](../../extensibility/internals/how-to-create-a-dot-vsct-file.md). Po vytvoření přidáte prvky, atributy a hodnoty XML do souboru k popisu rozložení položky příkaz. Podrobné schématu XML, najdete v článku [referenční dokumentace schématu XML VSCT](../../extensibility/vsct-xml-schema-reference.md).
+ Vytvořit nový, prázdný *.vsct* souborů naleznete v tématu [postupy: vytvoření *.vsct* souboru](../../extensibility/internals/how-to-create-a-dot-vsct-file.md). Po vytvoření přidat prvky, atributy a hodnoty XML do souboru k popisu rozložení položky příkazu. Podrobné schématu XML, najdete v článku [– referenční dokumentace schématu VSCT XML](../../extensibility/vsct-xml-schema-reference.md).
 
 ## <a name="differences-between-ctc-and-vsct-files"></a>Rozdíly mezi soubory .ctc a .vsct
- Význam za značky XML v souboru .vsct jsou stejné jako ty, teď zastaralé .ctc formát souboru, i když je trochu liší jejich provádění.
+ Zatímco význam za XML – značky v *.vsct* souboru jsou stejné jako značky v nyní zastaralé *.ctc* formát souboru, jejich implementace se trochu liší:
 
--   Nové  **\<extern >** značka je, kde odkazujete jiných souborů .h sestavují, například [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] panelu nástrojů.
+- Nové  **\<extern >** značka je, kde můžete odkazovat na jiné *.h* soubory ke kompilaci, jako je například pro tyto soubory [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nástrojů.
 
--   Při .vsct soubory podpory **/ include** prohlášení, stejně jako soubory .ctc, zahrnuje také novou \< **import >** element. Rozdíl je, **/ include** přináší **všechny** informací, ale \< **import >** přináší v pouze názvy.
+- Zatímco *.vsct* soubory podpory **/ include** příkazu, jako *.ctc* do souborů, je také nabízí novou  **\<import >** element. Rozdíl je, **/ include** přináší *všechny* informací, zatímco  **\<import >** přináší pouze názvy.
 
--   Zatímco soubory .ctc vyžadují soubor hlaviček, ve kterém můžete definovat preprocesor – direktivy, jedna není požadované pro .vsct soubory. Místo toho umístěte do tabulky symbolů, umístěný ve vaší direktivy  **\<Symbol >** prvky, které jsou umístěné v dolní části souboru .vsct.
+- Zatímco *.ctc* soubory vyžadují soubor hlaviček, ve kterém definujete preprocesor – direktivy, jeden není vyžadováno pro *.vsct* soubory. Místo toho umístit vaše direktivy do tabulky symbolů umístěny v  **\<Symbol >** prvky, které jsou umístěné v dolní části *.vsct* souboru.
 
--   Funkce souborů .vsct  **\<Poznámky >** značku, která umožňuje vložit jakékoli informace, jako například poznámky nebo i obrázky.
+- *.vsct* funkce soubory  **\<Poznámka >** značky, které umožňuje vložit jakékoli informace o rádi používáte, jako jsou poznámky nebo dokonce i obrázky.
 
--   Hodnoty se uloží jako atributy položky.
+- Hodnoty jsou uloženy jako atributy v položce.
 
--   Příkaz příznaky můžete uložené jednotlivě nebo skládaný.  IntelliSense, ale na skládaný příkaz příznaky nefunguje. Další informace o příkazu příznaky najdete v tématu [Element Command příznak](../../extensibility/command-flag-element.md).
+- Příkaz příznaky lze uložit jednotlivě nebo nad sebou.  Technologie IntelliSense, však nelze použít u skládaných příkaz příznaky. Další informace o příznaků příkazů najdete v článku [CommandFlag element](../../extensibility/command-flag-element.md).
 
--   Můžete určit více typy, jako je například rozdělení rozevíracích seznamů, kláves atd.
+- Můžete zadat více typů, jako je například rozdělení rozevírací seznamy, combos – atd.
 
--   Identifikátory GUID nemáte ověřit.
+- Ověření není GUID.
 
--   Každý prvek uživatelského rozhraní obsahuje řetězec, který reprezentuje text, který se zobrazí s ním.
+- Každý prvek uživatelského rozhraní obsahuje řetězec, který představuje text, který se zobrazí s ním.
 
--   Nadřazené je volitelný. Pokud tento parametr vynechán, se používá hodnota "Skupina neznámý".
+- Nadřazené je volitelný. Pokud tento parametr vynechán, hodnota *skupiny neznámý* se používá.
 
--   Ikona argument je volitelný.
+- *Ikonu* argument je nepovinný.
 
--   V části rastrový obrázek – stejně jako .ctc souboru, s tím rozdílem, že nyní můžete určit název souboru prostřednictvím href, který bude mít vyžádat kompilátoru vsct.exe v době kompilace.
+- Bitmap – část: v této části jsou stejné jako v *.ctc* souboru, s tím rozdílem, že teď můžete zadat název souboru prostřednictvím Href, který bude i v *vsct.exe* kompilátor v době kompilace.
 
--   ResID – původní ID prostředku bitové mapy lze použít a přesto funguje stejně jako soubory .ctc.
+- ResID: ID může být použité a stále funguje stejně jako v prostředku rastrového obrázku starého *.ctc* soubory.
 
--   HRef – nové metodu, která vám umožní určit název souboru pro daný prostředek rastrového obrázku. Předpokládá všechny používají, tak používané části, můžete vynechat. Kompilátor vyhledá první místní prostředky pro soubor, pak na net sdílených složkách a všechny prostředky definované přepínač /I.
+- HRef: Novou metodu, která vám umožní zadat název souboru prostředku rastrového obrázku. Předpokládá, že se používají všechny, tak můžete vynechat využité části. Kompilátor nejprve vyhledat místní prostředky pro soubor a pak na žádné čisté sdílených složek a všechny prostředky definované **/I** přepnout.
 
--   Keybinding – Už musíte zadat emulátor. Pokud určíte jednu, kompilátor bude předpokládat, že editoru a emulátoru jsou stejné.
+- Klávesové zkratky: Už máte k určení emulátoru. Pokud zadáte jednu, kompilátor bude předpokládat, že v editoru a emulátor jsou stejné.
 
--   Keychord – byla vyřazena. Nový formát je Key1, Mod1, Key2, Mod2.  Můžete zadat znak, šestnáctkové nebo VK konstanta.
+- Keychord: Keychord byla vyřazena. Nový formát je *klíč1, Mod1, klic2, Mod2*.  Můžete zadat znak, šestnáctkové číslo nebo konstantu VK.
+       
+Nový kompilátor *vsct.exe*, zkompiluje obě *.ctc* a *.vsct* soubory. Starý *ctc.exe* kompilátoru, ale nebude rozpoznat nebo kompilací *.vsct* soubory.
 
- Nové kompilátoru, vsct.exe, zkompiluje .ctc i .vsct soubory. Původní ctc.exe kompilátoru, ale bude rozpoznat ani kompilaci .vsct souborů.
+Můžete použít *vsct.exe* kompilátor pro převod z existujícího *.cto* do souboru *.vsct* souboru. Další informace najdete v tématu [postupy: vytvoření souboru .vsct z existujícího souboru .cto](../../extensibility/internals/how-to-create-a-dot-vsct-file.md#how-to-create-a-dot-vsct-file-from-an-existing-dot-cto-file).
 
- Kompilátor vsct.exe můžete převést existující soubor .cto do souboru .vsct. Další informace o tom najdete v tématu [postupy: vytvoření. Soubor Vsct z existující. Soubor technického ředitele](../../extensibility/internals/how-to-create-a-dot-vsct-file.md#how-to-create-a-dot-vsct-file-from-an-existing-dot-cto-file).
-
-## <a name="the-vsct-file-elements"></a>Elementy .vsct souboru
+## <a name="the-vsct-file-elements"></a>Prvky souborů .vsct
  Příkaz Tabulka obsahuje následující hierarchie a prvky:
 
- [CommandTable Element](../../extensibility/commandtable-element.md) – reprezentuje všechny příkazy, skupiny nabídek a přidružené VSPackage nabídky.
+ [Commandtable – element](../../extensibility/commandtable-element.md): představuje všechny příkazy, nabídky skupin a nabídky přidružené sady VSPackage.
 
- [Extern Element](../../extensibility/extern-element.md) – odkazuje na externí .h soubory můžete sloučit s .vsct souboru.
+ [Extern – element](../../extensibility/extern-element.md): odkazuje na všechny externí .h soubory, které chcete sloučit s *.vsct* souboru.
 
- [Zahrňte prvek](../../extensibility/include-element.md) – odkazuje na všechny soubory další hlavičky (), které chcete zkompilovat společně s your.vsct souboru. Soubor .vsct může zahrnovat souborů .h obsahující konstanty, které definují příkazy, skupiny nabídek a nabídek, které poskytuje rozhraní IDE nebo jiné VSPackage.
+ [Prvek direktivy include](../../extensibility/include-element.md): odkazuje na další záhlaví (.h) soubory chcete kompilovat spolu s vaší *.vsct* souboru. A *.vsct* soubor může obsahovat *.h* soubory, které obsahují konstanty, které určují příkazy skupiny nabídek a nabídek, které poskytuje integrované vývojové prostředí nebo jiné VSPackage.
 
- [Příkazy Element](../../extensibility/commands-element.md) – reprezentuje všechny jednotlivé příkazy, které mohou být provedeny. Každý příkaz obsahuje následující čtyři podřízené prvky:
+ [Commands – element](../../extensibility/commands-element.md): představuje všechny jednotlivé příkazy, které mohou být provedeny. Každý příkaz má následující čtyři podřízených elementů:
 
- [Element nabídky](../../extensibility/menus-element.md) – reprezentuje všechny nabídek a panelů nástrojů v VSPackage. Nabídky jsou kontejnery pro skupiny příkazů.
+ [Menus – element](../../extensibility/menus-element.md): představuje všechny nabídky a panely nástrojů v sady VSPackage. Nabídky jsou kontejnery pro skupiny příkazů.
 
- [Groups – Element](../../extensibility/groups-element.md) – reprezentuje všechny skupiny v VSPackage. Skupiny jsou kolekce položek jednotlivé příkazy.
+ [Groups – element](../../extensibility/groups-element.md): představuje všechny skupiny v sady VSPackage. Skupiny jsou kolekce jednotlivé příkazy.
 
- [Tlačítka Element](../../extensibility/buttons-element.md) – reprezentuje všechny příkazová tlačítka a položek nabídky v VSPackage. Tlačítka jsou visual ovládací prvky, které může být spojeno s příkazy.
+ [Buttons – element](../../extensibility/buttons-element.md): představuje všechny příkazy a položek nabídky v sady VSPackage. Tlačítka jsou vizuální ovládací prvky, které můžou být spojené s příkazy.
 
- [Rastrové obrázky Element](../../extensibility/bitmaps-element.md) – reprezentuje všechny bitmap pro všechny tlačítek v VSPackage. Rastrové obrázky jsou obrázky, které zobrazují vedle nebo na příkazových tlačítkách, v závislosti na kontextu.
+ [Bitmaps – element](../../extensibility/bitmaps-element.md): představuje všechny rastrové obrázky pro všechna tlačítka ve sady VSPackage. Rastrové obrázky mají obrázky, které zobrazují vedle nebo na příkazových tlačítkách, v závislosti na kontextu.
 
- [CommandPlacements Element](../../extensibility/commandplacements-element.md) – označuje dalších místech, kde jednotlivé příkazy by měl být umístěný v nabídkách vaší VSPackage.
+ [Commandplacements – element](../../extensibility/commandplacements-element.md): Určuje další umístění, kde jednotlivé příkazy by měl být umístěn v nabídkách vašeho balíčku VSPackage.
 
- [VisibilityConstraints Element](../../extensibility/visibilityconstraints-element.md) – Určuje, zda příkaz zobrazí na všech dobu, nebo pouze v určitých kontextech, například když se zobrazí dialogové okno konkrétní nebo okna. Nabídek a příkazů, které mají hodnotu pro tento element se zobrazí jenom v případě, že zadaný kontext je aktivní. Výchozí chování je zobrazit příkaz za všech okolností.
+ [Visibilityconstraints – element](../../extensibility/visibilityconstraints-element.md): Určuje, zda příkaz zobrazí vůbec časy, nebo pouze v určitých kontextech, například když se objeví dialogové okno zvláštní nebo okno. Nabídek a příkazů, které mají hodnotu u tohoto elementu se zobrazí pouze v případě, že zadaný kontext je aktivní. Výchozím chováním je zobrazení příkazu za všech okolností.
 
- [Element klíčových vazeb](../../extensibility/keybindings-element.md) – určuje žádné vazeb klíče pro příkazy. To znamená, jeden nebo více klíčů kombinace, které musí být stisknutí ke spuštění příkazu, jako například **CTRL + S**.
+ [Keybindings – element](../../extensibility/keybindings-element.md): Určuje všechny klávesové zkratky pro příkazy. To znamená, že nejmíň jeden kombinace kláves, které musí být stisknutí k provedení příkazu, jako například **Ctrl**+**S**.
 
- [UsedCommands Element](../../extensibility/usedcommands-element.md) – Informs [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] prostředí, i když zadaný příkaz je implementována jiným kódem, pokud je aktuální VSPackage aktivní, poskytuje implementaci příkazu.
+ [Usedcommands – element](../../extensibility/usedcommands-element.md): informuje o tom, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] prostředí, i když zadaný příkaz je implementována jiným kódem, pokud aktuální VSPackage je aktivní, poskytuje implementace příkazu.
 
- `Symbols Element` – Obsahuje názvy symbolů a identifikátory GUID pro všechny vaše příkazy v balíčku.
+ [Symbols – element](../../extensibility/symbols-element.md): obsahuje názvy symbolů a identifikátory GUID všech příkazů v balíčku.
 
-## <a name="vsct-file-design-guidelines"></a>. Pokyny pro návrh Vsct souboru
- Úspěšně navrhovat soubor .vsct, postupujte podle následujících pokynů.
+## <a name="vsct-file-design-guidelines"></a>Pokyny k návrhu souboru .vsct
+ Úspěšně návrhu *.vsct* souborů, postupujte podle následujících pokynů.
 
--   Příkazy lze umístit pouze do skupin, skupiny lze umístit pouze do nabídky a nabídky lze umístit pouze do skupin. V prostředí IDE, skupiny nejsou zobrazena pouze nabídek a příkazů nejsou.
+-   Příkazy lze umístit pouze do skupin, skupin je možné použít pouze v nabídkách a nabídky je možné použít pouze ve skupinách. Pouze nabídek zobrazených ve skutečnosti v rozhraní IDE, skupiny a příkazy nejsou.
 
--   Dílčích nelze přiřadit přímo k nabídce, ale musí být přiřazen ke skupině, která je zase přiřazená k nabídce.
+-   Podnabídek se nedají přímo přiřadit k nabídce, ale musí být přiřazen do skupiny, které je následně přiřazeno do nabídky.
 
--   Příkazy, dílčích a skupiny lze přiřadit k jedné skupině vztahy k nadřazeným položkám nebo nabídky pomocí pole nadřazené jejich definující – direktiva.
+-   Příkazy, podnabídek a skupiny lze přiřadit k jedné skupině vztahy k nadřazeným položkám nebo nabídky pomocí nadřazeného pole jejich definování směrnice.
 
--   Uspořádání tabulku příkaz výhradně prostřednictvím nadřazené polí v direktivy má důležité omezení. Direktivy jazyka, které definují objektů může trvat argument jen jednu nadřazenou položku.
+-   Uspořádání příkaz tabulky výhradně prostřednictvím nadřazené pole ve směrnicích má významné omezení. Direktivy, které definují objekty může trvat argumentu pouze jeden nadřazený prvek.
 
--   Opětovné použití příkazů, skupiny nebo dílčích vyžaduje použití nové direktiva k vytvoření nové instance objektu s vlastní `GUID:ID` pár.
+-   Opětovné použití příkazů, skupin nebo podnabídek vyžaduje použití nové direktivy pro vytvoření nové instance objektu vlastní `GUID:ID` pár.
 
--   Každý `GUID:ID` pár musí být jedinečný. Opětovné použití příkaz, který má, například byly umístěny v nabídce, panel nástrojů, nebo v místní nabídce jsou zpracována <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní.
+-   Každý `GUID:ID` dvojice musejí být jedinečné. Opětovné použití příkaz, který, například se nachází v nabídce, panel nástrojů, nebo v místní nabídce se zpracovává souborem <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> rozhraní.
 
--   Příkazy a dílčích můžete také zařadit do několika skupin a skupin lze přiřadit k více nabídek pomocí [příkazy Element](../../extensibility/commands-element.md).
+-   Příkazy a podnabídek můžete také přiřadit k několika skupinám a skupin je možné přiřadit k více pomocí nabídky [Commands – element](../../extensibility/commands-element.md).
 
-## <a name="vsct-file-notes"></a>. Poznámky k Vsct souboru
- Pokud provedete změny do souboru .vsct po jak jej zkompilovat a jeho následné uložení do nativní satelitní knihovny DLL, byste měli spustit **devenv.exe/Setup /nosetupvstemplates**. Díky tomuto vynutí VSPackage prostředky zadané v experimentální registru, aby se znovu načíst a interní databáze, která popisuje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] znovu sestavit.
+## <a name="vsct-file-notes"></a>Poznámky k souboru .vsct
+ Pokud provedete změny *.vsct* soubor po jak zkompilovat jej a umístěte ho do nativní satelitní knihovny DLL, měli byste spustit **devenv.exe/Setup /nosetupvstemplates**. To tedy vynutí VSPackage prostředky zadané v experimentální registru, aby se znovu načíst a vnitřní databázi, která popisuje [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ji znovu sestavit.
 
- Během vývoje je možné pro více projektů VSPackage vytvořen a zaregistrován v experimentální podregistru, který může vést k matoucí zbytečné soubory v prostředí IDE. Chcete-li odstranit tento problém, můžete obnovit podregistr experimentální výchozí nastavení k odebrání všech registrovaných VSPackages a veškeré změny, které může provedli k prostředí IDE. Pokud chcete resetovat experimentální hive, použijte nástroj CreateExpInstance.exe, která se dodává s Visual Studio SDK. Najdete ho v
+ Během vývoje je možné pro více projektů VSPackage vytvořené a registrované v experimentální podregistru, který může mít za následek matoucí nepořádku v integrovaném vývojovém prostředí. To pokud chcete napravit, můžete resetovat experimentální hive do výchozího nastavení pro odebrání všech registrovaných rozšíření VSPackages a všechny změny, které mohou mít provedené integrovaného vývojového prostředí. Resetovat experimentální hive, použijte nástroj CreateExpInstance.exe, který je součástí sady Visual Studio SDK. Najdete ho na:
 
- **%PROGRAMFILES(x86)%\Visual Studio \<version> SDK\VisualStudioIntegration\Tools\Bin\CreateExpInstance.exe**
+ *% PROGRAMFILES (x 86) %\Visual Studio\\\<verze > SDK\VisualStudioIntegration\Tools\Bin\CreateExpInstance.exe*
 
- Spusťte nástroj pomocí příkazového řádku **/reset CreateExpInstance**. Mějte na paměti, že tento nástroj odebere z podregistru experimentální všechny registrované VSPackages nejsou obvykle nainstalovány s [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].
+ Spusťte nástroj pomocí příkazu **/reset CreateExpInstance**. Mějte na paměti, že tento nástroj odebere z podregistru experimentální všechny registrované nejsou obvykle nainstalovány s rozšířením VSPackages [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].
 
-## <a name="see-also"></a>Viz také
- [Rozšiřování nabídek a příkazů](../../extensibility/extending-menus-and-commands.md)
+## <a name="see-also"></a>Viz také:
+ [Rozšíření nabídek a příkazů](../../extensibility/extending-menus-and-commands.md)

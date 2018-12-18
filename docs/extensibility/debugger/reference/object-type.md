@@ -1,5 +1,5 @@
 ---
-title: OBJECT_TYPE | Microsoft Docs
+title: OBJECT_TYPE | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bc5c7367a8b134324073d40452ec9b7ec20c1ffc
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: eff83198e337a3f89c88663722bf34046d3d4f62
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49905737"
 ---
 # <a name="objecttype"></a>OBJECT_TYPE
 Určuje typ objektu z vyhodnocovací filtr výrazů.  
@@ -75,34 +76,34 @@ public enum enum_OBJECT_TYPE {
  Označuje, že objekt je znak.  
   
  OBJECT_TYPE_I1  
- Označuje, že objekt je jeden bajt celé číslo se znaménkem.  
+ Označuje, že objekt je celé číslo se znaménkem jeden bajtové.  
   
  OBJECT_TYPE_U1  
- Označuje, že objekt je celé číslo bez znaménka jeden bajtů.  
+ Označuje, že objekt je jeden bajtové číslo bez znaménka.  
   
  OBJECT_TYPE_I2  
- Označuje, že objekt je dva bajtů celé číslo se znaménkem.  
+ Označuje, že objekt je dva bajty celé číslo se znaménkem.  
   
  OBJECT_TYPE_U2  
- Označuje, že objekt je celé číslo bez znaménka dva bajtů.  
+ Označuje, že objekt je celé číslo bez znaménka dva bajtu.  
   
  OBJECT_TYPE_I4  
- Označuje, že objekt je čtyř bajtů celé číslo se znaménkem.  
+ Označuje, že objekt je celé číslo se znaménkem čtyř bajtů.  
   
  OBJECT_TYPE_U4  
  Označuje, že objekt je celé číslo bez znaménka čtyř bajtů.  
   
  OBJECT_TYPE_I8  
- Označuje, že objekt je osm bajtů znaménkem.  
+ Označuje, že objekt je podepsané celé číslo osm bajtů.  
   
  OBJECT_TYPE_U8  
- Označuje, že objekt je celé číslo bez znaménka osm bajtů.  
+ Označuje, že objekt je celé číslo bez znaménka osm bajtu.  
   
  OBJECT_TYPE_R4  
  Označuje, že objekt je číslo s plovoucí desetinnou čárkou čtyř bajtů.  
   
  OBJECT_TYPE_R8  
- Označuje, že objekt je číslo s plovoucí desetinnou čárkou osm bajtů.  
+ Označuje, že objekt je číslo s plovoucí desetinnou čárkou osm bajtu.  
   
  OBJECT_TYPE_OBJECT  
  Označuje, že objekt je objekt.  
@@ -111,10 +112,10 @@ public enum enum_OBJECT_TYPE {
  Označuje, že objekt je NULL.  
   
  OBJECT_TYPE_CLASS  
- Označuje, že objekt je třídu.  
+ Označuje, že objekt je třída.  
   
 ## <a name="remarks"></a>Poznámky  
- Předat jako argument k [CreatePrimitiveObject](../../../extensibility/debugger/reference/idebugfunctionobject-createprimitiveobject.md) a [CreateArrayObject](../../../extensibility/debugger/reference/idebugfunctionobject-createarrayobject.md) metody.  
+ Předán jako argument [CreatePrimitiveObject](../../../extensibility/debugger/reference/idebugfunctionobject-createprimitiveobject.md) a [CreateArrayObject](../../../extensibility/debugger/reference/idebugfunctionobject-createarrayobject.md) metody.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: ee.h  

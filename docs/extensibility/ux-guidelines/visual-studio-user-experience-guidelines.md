@@ -1,7 +1,7 @@
 ---
-title: Prostředí pro práci uživatelů sady Visual Studio | Microsoft Docs
+title: Pokyny pro práci uživatelů sady Visual Studio | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/05/2018
 ms.technology:
 - vs-ide-sdk
 ms.topic: conceptual
@@ -11,21 +11,22 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: aa7e90e04cc81443a38cb1c6cbc06644e2426499
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ed7488702bd19e8a0e8576d2cdc21e4350e8443b
+ms.sourcegitcommit: b6dfa1bdf4c23c2e341754454bbd4758db2218e0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863982"
 ---
-# <a name="visual-studio-user-experience-guidelines"></a>Prostředí pro práci uživatelů sady Visual Studio
-Visual Studio prostředí pro práci uživatelů jsou určené pro ty, kteří návrhu nové funkce pro sadu Visual Studio. Tyto pokyny obsahují informace o běžných modely uživatele a interakce vzory tak, aby návrháři nové uživatelské rozhraní (UI) můžete vytvořit uživatelského prostředí, které jsou snadné a konzistentní v rámci vývojového prostředí.  
+# <a name="visual-studio-user-experience-guidelines"></a>Pravidla pro práci s uživatelským prostředím sady Visual Studio
+Při navrhování nových funkcí pro Visual Studio, postupujte podle pokynů prostředí pro uživatele Visual Studio. Tyto pokyny obsahují informace o běžných uživatelů modely a vzory interakcí tak, aby návrháři nové uživatelské rozhraní (UI) můžete vytvořit uživatelským prostředím, které jsou snadné a konzistentní v rámci vývojového prostředí.  
   
- Vývoj softwaru pro prostředky produkty Microsoft pochopení pokynů uvedených v systému Windows. Existují tři důležité prostředky zajímat:  
+Pokud vyvíjíte software pro produkty společnosti Microsoft, zjistěte, jak pomocí těchto prostředků:
   
--   [Pokyny interakce zkušeností uživatelů Windows](https://msdn.microsoft.com/en-us/library/aa511258.aspx). Tyto pokyny jsou Základy Windows desktop chování a vzhledu.  
+-   [Pokyny interakce zkušeností uživatelů Windows](https://developer.microsoft.com/windows/desktop) jsou základní informace pro Windows desktop chování a vzhledu.  
   
--   Tyto sady Visual Studio pokyny, které jsou specifické pro platformu pokyny, které nahrazují obecné pokyny pro Windows, pokud je to vhodné pro naše prostředí.  
+-   Tyto sady Visual Studio pokyny, které jsou specifické pro platformu pokyny, které mají přednost před obecné pokyny pro Windows, ať jsou vhodné pro naše prostředí.  
   
--   [Vzory a příručky pro aplikace Windows Store](https://dev.windows.com/en-us/design/interaction-ux) jsou referenční vznikajícími vzorů, které mohou být použity v některých případech v sadě Visual Studio.  
+-   [Modely a pokyny pro Windows Store apps](https://dev.windows.com/en-us/design/interaction-ux) jsou referenční informace pro nově vznikající vzory, které mohou být použity v některých případech v rámci sady Visual Studio.  
   
- Tyto pokyny získáte informace o postupu při návrhu pro sadu Visual Studio a v některých případech informace o tom, jak provést je rovněž obsažena. Podrobnější informace o implementaci a další informace o konkrétní aplikaci programovací rozhraní (API), které vám umožní psaní kódu pro řešení, které se integrují do integrované vývojové prostředí (IDE) sady Visual Studio, použijte [Sady visual Studio Software Development Kit (SDK)](https://msdn.microsoft.com/en-us/library/bb166441.aspx).
+Tyto pokyny vám poskytnou informace o tom, co udělat při návrhu pro sadu Visual Studio a v některých případech ohledně toho, jak to udělat jsou také zahrnuty informace. Podrobnější informace o implementaci a další informace o konkrétní aplikačního programovacího rozhraní (API), které umožňují napsat kód pro řešení, které se integrují do integrovaného vývojového prostředí (IDE) sady Visual Studio, použijte [Sady visual Studio Software Development Kit (SDK)](../visual-studio-sdk.md).

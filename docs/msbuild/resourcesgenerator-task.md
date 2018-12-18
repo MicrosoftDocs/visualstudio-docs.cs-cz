@@ -1,5 +1,5 @@
 ---
-title: ResourcesGenerator – úloha | Microsoft Docs
+title: Resourcesgenerator – úloha | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -19,25 +19,26 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ea13b4d097792baf2da46745be2f64a565fdf2e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 7b72ce231b514250a40e9f3a4bf5ceb5aa2c69f8
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39178888"
 ---
-# <a name="resourcesgenerator-task"></a>ResourcesGenerator – úloha
-<xref:Microsoft.Build.Tasks.Windows.ResourcesGenerator> Úloh vloží jeden nebo více prostředků (.ico, který JPG, BMP, [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] v binárním formátu a jinými typy rozšíření) do souboru .resources.  
+# <a name="resourcesgenerator-task"></a>Resourcesgenerator – úloha
+<xref:Microsoft.Build.Tasks.Windows.ResourcesGenerator> Úloh vloží jeden nebo více prostředků (*.jpg*, *.ico*, *.bmp*, [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] v binárním formátu a ostatními typy rozšíření) do *.resources* souboru.  
   
 ## <a name="task-parameters"></a>Parametry úlohy  
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|`OutputPath`|Požadované **řetězec** parametr.<br /><br /> Určuje cestu k výstupnímu adresáři. Pokud cesta není absolutní cesta, bude považován za cestu, která je relativní vzhledem ke kořenovém adresáři projektu.|  
-|`OutputResourcesFile`|Požadované **[ITaskItem]** výstupní parametr.<br /><br /> Určuje cestu a název generovaného zdrojového souboru. Pokud cesta není absolutní cesta, vygeneruje se souboru .resources relativně k kořenovém adresáři projektu.|  
-|`ResourcesFiles`|Požadované **[ITaskItem]** parametr.<br /><br /> Určuje jeden nebo více zdrojů pro vložení do generovaného zdrojového souboru.|  
+|`OutputPath`|Vyžaduje **řetězec** parametru.<br /><br /> Určuje cestu k výstupnímu adresáři. Pokud cesta není absolutní cestu, je považován za cestu, která je relativní vzhledem k kořenovém adresáři projektu.|  
+|`OutputResourcesFile`|Vyžaduje **[] ITaskItem** výstupní parametr.<br /><br /> Určuje cestu a název generované *.resources* souboru. Pokud cesta není absolutní cesta, *.resources* vygenerován soubor relativní vzhledem k kořenovém adresáři projektu.|  
+|`ResourcesFiles`|Vyžaduje **[] ITaskItem** parametru.<br /><br /> Určuje jeden nebo více prostředků k vložení do vytvořeného *.resources* souboru.|  
   
 ## <a name="example"></a>Příklad  
- Následující příklad generuje soubor .resources s .bmp jeden prostředek. Generuje se .bmp prostředků do adresáře, který je relativní vzhledem ke kořenový adresář projektu.  
+ Následující příklad vygeneruje *.resources* soubor pomocí jediného *.bmp* prostředků. *.Bmp* prostředků se generuje na adresář, který je relativní vzhledem k kořenový adresář projektu.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -53,9 +54,9 @@ ms.lasthandoff: 04/19/2018
 </Project>  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [WPF MSBuild – Reference](../msbuild/wpf-msbuild-reference.md)   
+## <a name="see-also"></a>Viz také:  
+ [Referenční dokumentace WPF MSBuild](../msbuild/wpf-msbuild-reference.md)   
  [Referenční dokumentace úlohy](../msbuild/wpf-msbuild-task-reference.md)   
- [MSBuild – Reference](../msbuild/msbuild-reference.md)   
+ [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)   
  [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)   
- [Vytvoření aplikace WPF (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)
+ [Sestavení aplikace WPF (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)

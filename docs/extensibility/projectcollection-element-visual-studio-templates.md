@@ -1,5 +1,5 @@
 ---
-title: Projectcollection – Element (šablony sady Visual Studio) | Microsoft Docs
+title: Projectcollection – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,22 +16,23 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0336859833762d80cc702e844600ded84dbc5d8b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c91c470a9478c7015972be66afe5f41174073047
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39636997"
 ---
-# <a name="projectcollection-element-visual-studio-templates"></a>ProjectCollection – element (šablony sady Visual Studio)
+# <a name="projectcollection-element-visual-studio-templates"></a>Projectcollection – element (šablony sady Visual Studio)
 Určuje uspořádání a obsah víceprojektových šablon.  
   
- \<VSTemplate >  
- \<TemplateContent >  
+ \<Vstemplate – >  
+ \<TemplateContent – >  
  \<Projectcollection – >  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```xml  
 <ProjectCollection>  
     <ProjectTemplateLink> ... </ProjectTemplateLink>  
     <SolutionFolder> ... </SolutionFolder>  
@@ -44,24 +45,24 @@ Určuje uspořádání a obsah víceprojektových šablon.
 ### <a name="attributes"></a>Atributy  
  Žádné  
   
-### <a name="child-elements"></a>Podřízené elementy  
+### <a name="child-elements"></a>Podřízené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|[ProjectTemplateLink](../extensibility/projecttemplatelink-element-visual-studio-templates.md)|Volitelný element.<br /><br /> Určuje projekt v šabloně vícenásobného projektu.|  
-|[SolutionFolder](../extensibility/solutionfolder-element-visual-studio-templates.md)|Volitelný element.<br /><br /> Seskupuje projekty do víceprojektových šablon.|  
+|[ProjectTemplateLink –](../extensibility/projecttemplatelink-element-visual-studio-templates.md)|Volitelný element.<br /><br /> Určuje projekt ve víceprojektové šabloně.|  
+|[SolutionFolder –](../extensibility/solutionfolder-element-visual-studio-templates.md)|Volitelný element.<br /><br /> Seskupuje projekty do víceprojektových šablon.|  
   
-### <a name="parent-elements"></a>Nadřazené elementy  
+### <a name="parent-elements"></a>Nadřazené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|[TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Určuje obsah šablony.|  
+|[TemplateContent –](../extensibility/templatecontent-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Určuje obsah značek šablony.|  
   
 ## <a name="remarks"></a>Poznámky  
- Šablony vícenásobných projektů slouží jako kontejnery pro dva nebo více projektů. `ProjectCollection` Element se používá k určení projekty tak, aby obsahovala v šabloně. Další informace o víceprojektových šablon najdete v tématu [postupy: vytváření šablon vícenásobného projektu](../ide/how-to-create-multi-project-templates.md).  
+ Šablony vícenásobných projektů slouží jako kontejnery pro dva nebo více projektů. `ProjectCollection` Element slouží k určení projekty tak, aby obsahovala v šabloně. Další informace o víceprojektových šablonách naleznete v tématu [postupy: vytváření šablon vícenásobného projektu](../ide/how-to-create-multi-project-templates.md).  
   
 ## <a name="example"></a>Příklad  
- Tento příklad ukazuje jednoduchý kořenový soubor .vstemplate víceprojektové šablony, V tomto příkladu šablona obsahuje dva projekty `My Windows Application` a `My Class Library`. `ProjectName` Atributu u `ProjectTemplateLink` element nastaví název pro [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] k přiřazení tohoto projektu. Pokud `ProjectName` atribut neexistuje, název souboru .vstemplate slouží jako název projektu.  
+ Tento příklad ukazuje jednoduchý kořenový víceprojektové *.vstemplate* souboru. V tomto příkladu obsahuje šablona dva projekty `My Windows Application` a `My Class Library`. `ProjectName` Atribut na `ProjectTemplateLink` nastaví název elementu [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] tomuto projektu přiřadí. Pokud `ProjectName` atribut neexistuje, název *.vstemplate* soubor se používá jako název projektu.  
   
 ```  
 <VSTemplate Version="3.0.0" Type="ProjectGroup"  
@@ -85,7 +86,7 @@ Určuje uspořádání a obsah víceprojektových šablon.
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
- [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)   
- [Postupy: Vytváření šablon vícenásobného projektu](../ide/how-to-create-multi-project-templates.md)
+## <a name="see-also"></a>Viz také:  
+ [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)   
+ [Vytvoření šablon projektů a položek](../ide/creating-project-and-item-templates.md)   
+ [Postupy: vytváření šablon vícenásobného projektu](../ide/how-to-create-multi-project-templates.md)

@@ -1,32 +1,34 @@
 ---
-title: '&lt;aplikace&gt; – Element (vývoj pro Office v sadě Visual Studio) | Microsoft Docs'
+title: '&lt;aplikace&gt; – element (vývoj pro Office v sadě Visual Studio)'
+titleSuffix: ''
 ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
+ms.technology: office-development
+ms.prod: visual-studio-dev15
 ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
 helpviewer_keywords:
 - application manifests [Office development in Visual Studio], <application> element
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 8550b5374bde5d18d3f645c08f89902250ae5f2d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7b02a3bb762efd9136da79d3128caa0cf8a19f95
+ms.sourcegitcommit: 20c0991d737c540750c613c380cd4cf5bb07de51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53247768"
 ---
-# <a name="ltapplicationgt-element-office-development-in-visual-studio"></a>&lt;aplikace&gt; – Element (vývoj pro Office v sadě Visual Studio)
-  `application` Element `vstav3` obor názvů zabalí popis řešení pro systém Office. Podřízené elementy se liší pro přizpůsobení na úrovni dokumentu a doplňků VSTO.  
+# <a name="ltapplicationgt-element-office-development-in-visual-studio"></a>&lt;aplikace&gt; – element (vývoj pro Office v sadě Visual Studio)
+  `application` Elementu `vstav3` obor názvů zabalí popis řešení pro systém Office. Podřízené prvky se liší pro přizpůsobení na úrovni dokumentu a doplňky VSTO.  
   
-## <a name="syntax-for-document-level-customizations"></a>Syntaxe pro úpravy na úrovni dokumentů  
+## <a name="syntax-for-document-level-customizations"></a>Syntaxe pro přizpůsobení na úrovni dokumentu  
   
-```  
+```xml 
 <application>  
   <customization  
     id  
@@ -37,9 +39,9 @@ ms.lasthandoff: 04/16/2018
 </application>  
 ```  
   
-## <a name="syntax-for-application-level-add-ins"></a>Syntaxe pro doplňky na úrovni aplikace  
+## <a name="syntax-for-application-level-add-ins"></a>Syntaxe pro doplňky úrovni aplikace  
   
-```  
+```xml
 <application>  
   <customization  
     id  
@@ -55,23 +57,23 @@ ms.lasthandoff: 04/16/2018
 ```  
   
 ## <a name="elements-and-attributes"></a>Elementy a atributy  
- `application` Element `vstav3` obor názvů je uzlu, který zabalí všechny informace specifické pro přizpůsobení, které je součástí `vstov4` oboru názvů.  
+ `application` Elementu `vstav3` obor názvů je uzel, který zabalí všechny informace specifické pro přizpůsobení, která je součástí `vstov4` oboru názvů.  
   
- `application` Element nemá žádné atributy.  
+ `application` Prvek nemá žádné atributy.  
   
  `application` Element má následující element.  
   
-### <a name="customization"></a>přizpůsobení  
- Role `customization` element v `vstov3` obor názvů je definován v [ &#60;přizpůsobení&#62; Element &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/customization-element-office-development-in-visual-studio.md).  
+### <a name="customization"></a>Přizpůsobení  
+ Role `customization` element v `vstov3` obor názvů je definovaný v [ &#60;přizpůsobení&#62; Element &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/customization-element-office-development-in-visual-studio.md).  
   
 ## <a name="document-level-customization-example"></a>Příklad přizpůsobení na úrovni dokumentu  
   
 ### <a name="description"></a>Popis  
- Následující příklad kódu ukazuje `application` element v řešení úrovni dokumentu Office nasadit pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]. Tento příklad kódu je součástí většího příkladu vztahujícího se v [manifesty aplikací pro řešení Office](../vsto/application-manifests-for-office-solutions.md).  
+ Následující příklad kódu ukazuje `application` prvek v řešení pro Office úrovni dokumentu nasazeným v rámci [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]. Tento příklad kódu je součástí většího příkladu určeného v [manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).  
   
 ### <a name="code"></a>Kód  
   
-```  
+```xml  
 <vstav3:application>  
   <vstov4:customizations   
     xmlns:vstov4="urn:schemas-microsoft-com:vsto.v4">  
@@ -86,11 +88,11 @@ ms.lasthandoff: 04/16/2018
 ## <a name="vsto-add-in-example"></a>Příklad doplňku VSTO  
   
 ### <a name="description"></a>Popis  
- Následující příklad kódu ukazuje `application` element v řešení Office úrovni aplikace nasazené pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]. Tento příklad kódu je součástí většího příkladu vztahujícího se v [manifesty aplikací pro řešení Office](../vsto/application-manifests-for-office-solutions.md).  
+ Následující příklad kódu ukazuje `application` prvek v řešení pro Office úrovni aplikace nasazené pomocí [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]. Tento příklad kódu je součástí většího příkladu určeného v [manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md).  
   
 ### <a name="code"></a>Kód  
   
-```  
+```xml  
 <vstav3:application>  
   <vstov4:customizations   
     xmlns:vstov4="urn:schemas-microsoft-com:vsto.v4">  
@@ -120,9 +122,9 @@ ms.lasthandoff: 04/16/2018
 </vstav3:application>  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Manifesty aplikace pro řešení pro systém Office](../vsto/application-manifests-for-office-solutions.md)   
- [Manifesty nasazení pro řešení Office](../vsto/deployment-manifests-for-office-solutions.md)   
- [ClickOnce – manifest aplikace ](/visualstudio/deployment/clickonce-application-manifest)  
+ [Manifesty nasazení pro řešení pro systém Office](../vsto/deployment-manifests-for-office-solutions.md)   
+ [ClickOnce – manifest aplikace](/visualstudio/deployment/clickonce-application-manifest)  
   
   

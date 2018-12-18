@@ -10,20 +10,21 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 502fe56f04fe933e51e9afa5376a35a53445c099
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d6b076023f725ac037ae5863bc8955e6952285ac
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34764904"
 ---
-# <a name="creating-basic-profiling-reports-from-the-command-line"></a>Vytváření základních sestav profilace z příkazového řádku
-Toto téma popisuje základní vsperfreport – příkazy, které generování sestav hodnot oddělených čárkami (.csv) z .vsp nebo .vsps profilace datový soubor. Popis všech možností sestav najdete v tématu [vsperfreport –](../profiling/vsperfreport.md).  
+# <a name="create-basic-profiling-reports-from-the-command-line"></a>Vytváření základních sestav profilace z příkazového řádku
+Tento článek popisuje základní vsperfreport – příkazy, které generování hodnot oddělených čárkami (. *CSV*) sestav z. *vsp* nebo. *vsps* profilace datový soubor. Popis všech možností sestav najdete v tématu [vsperfreport –](../profiling/vsperfreport.md).  
   
 ## <a name="report-commands"></a>Sestava příkazy  
  Použijte jednu z následujících příkazů pro vytvoření sestavy pro zadanou profilování datový soubor.  
   
  **Vsperfreport –** `VSPFile` **/Summary:All**  
- Generuje všechny sestavy, které jsou k dispozici pro soubor .vsp nebo .vsps.  
+ Generuje k dispozici pro všechny sestavy. *vsp* nebo. *vsps* souboru.  
   
  **Vsperfreport –** `VSPFile` **nebo souhrnných:**`ReportType`[,`ReportType`...]  
  Generuje typy zadané sestavy.  

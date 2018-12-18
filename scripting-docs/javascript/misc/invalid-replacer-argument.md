@@ -1,13 +1,13 @@
 ---
-title: "Neplatný argument nahrazení | Microsoft Docs"
-ms.custom: 
+title: Neplatný argument nahrazení | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.WebClient.Help.SCRIPT5035
@@ -16,7 +16,7 @@ dev_langs:
 - TypeScript
 - DHTML
 ms.assetid: 4727186f-facd-4aa6-9447-bbefbae83f07
-caps.latest.revision: 
+caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -25,6 +25,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24788682"
 ---
 # <a name="invalid-replacer-argument"></a>Neplatný argument nahrazení
 Byl proveden pokus o vyvolání `JSON.stringify` s argumentem, který není platný. `replacer` Argument musí být funkce nebo pole.  

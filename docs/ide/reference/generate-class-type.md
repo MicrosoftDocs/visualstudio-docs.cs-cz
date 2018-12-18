@@ -1,9 +1,9 @@
 ---
-title: Generovat třídy nebo typu v sadě Visual Studio | Microsoft Docs
-ms.custom: ''
+title: Generovat třídy nebo typu
 ms.date: 01/26/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: reference
 author: gewarren
 ms.author: gewarren
 manager: douge
@@ -14,15 +14,16 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 030c4736eea942432175d0320d020a6b45888517
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4f7d722669ddf51715b21ddaf1f253fb0668dfaa
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53065471"
 ---
 # <a name="generate-a-class-or-type-in-visual-studio"></a>Generovat třídy nebo typu v sadě Visual Studio
 
-Generování kódu platí pro:
+Tato generace kód platí pro:
 
 - C#
 
@@ -30,66 +31,66 @@ Generování kódu platí pro:
 
 **Co:** umožňuje okamžitě generování kódu pro třídu nebo typu.
 
-**Kdy:** zavést nové třídy nebo typu a chcete správně, automaticky deklarovat.
+**Kdy:** představují nové třídy nebo typu a chcete správně, automaticky deklarovat.
 
-**Důvod:** může deklarovat třídu nebo typ před použitím, ale tato funkce bude generovat třídy nebo zadejte automaticky.
+**Důvod, proč:** můžete deklarovat třídy nebo typu než ho začnete využívat, ale tato funkce bude generovat třídy nebo typu automaticky.
 
 ## <a name="how-to"></a>Postupy
 
-1. Umístěte kurzor na řádek níž se nachází červenou vlnovkou. Červenou vlnovkou Určuje třídu, která ještě neexistuje.
+1. Umístěte kurzor na řádek níž se nachází červená vlnovka. Červená vlnovka Určuje třídu, která ještě neexistuje.
 
    - C#:
 
-    ![Zvýrazněný kód C#](media/class-highlight-cs.png)
+       ![Zvýrazněný kód jazyka C#](media/class-highlight-cs.png)
 
    - Visual Basic:
 
-    ![Zvýrazněný kód jazyka Visual Basic](media/class-highlight-vb.png)
+       ![Zvýrazněný kód jazyka Visual Basic](media/class-highlight-vb.png)
 
-1. Dále proveďte jednu z následujících akcí:
+2. Dále proveďte jednu z následujících akcí:
 
    - **Klávesnice**
-     - Stiskněte klávesu **Ctrl**+**.** spuštění **rychlé akce a refaktoring** nabídky.
-   - **Myš**
-     - Klikněte pravým tlačítkem a vyberte **rychlé akce a refaktoring** nabídky.
-     - Pozastavte ukazatel myši nad červenou vlnovkou a klikněte na ![Žárovek](media/bulb-cs.png) ikona, která se zobrazí.
-     - Klikněte na ![Žárovek](media/bulb-cs.png) ikonu, která se zobrazí na levém okraji, pokud je text kurzor již na ose s červenou vlnovkou.
+      - Stisknutím klávesy **Ctrl**+**.** aktivační událost **rychlé akce a Refaktoringy** nabídky.
+   - **Myši**
+      - Klikněte pravým tlačítkem a vyberte **rychlé akce a Refaktoringy** nabídky.
+      - Červená vlnovka ukazatel myši a klikněte ![Žárovka](media/bulb-cs.png) ikona, která se zobrazí.
+      - Klikněte na ![Žárovka](media/bulb-cs.png) ikona, která se zobrazí u levého okraje, pokud textový kurzor na řádek s červená vlnovka.
 
-    ![Vytvoření náhledu – třída](media/class-preview-cs.png)
+      ![Generovat třídy ve verzi preview](media/class-preview-cs.png)
 
-1. Z rozevírací nabídky vyberte jednu z možností:
+3. Vyberte jednu z možností z rozevírací nabídky:
 
-   - Generovat třída*TypeName*' v nový soubor&mdash;vytvoří třídu s názvem *TypeName* do souboru s názvem *TypeName*.cs/VB
-   - Generovat třída*TypeName*'&mdash;vytvoří třídu s názvem *TypeName* v aktuální soubor.
-   - Generovat vnořené třídy*TypeName*'&mdash;vytvoří třídu s názvem *TypeName* vnořit do aktuální třídy.
-   - Vytvořit nový typ... &mdash;Vytvoří nové třídě nebo struktuře se všechny vlastnosti, které zadáte.
+   - Generovat třídy*TypeName*"v novém souboru&mdash;vytvoří třídu s názvem *TypeName* do souboru s názvem *TypeName*.cs nebo .vb
+   - Generovat třídy*TypeName*"&mdash;vytvoří třídu s názvem *TypeName* v aktuálním souboru.
+   - Generovat vnořené třídy*TypeName*"&mdash;vytvoří třídu s názvem *TypeName* vnořit do aktuální třídy.
+   - Generovat nový typ... &mdash;Vytvoří nové třídy nebo struktury se všemi vlastnosti, které zadáte.
 
    > [!TIP]
-   > Použití **zobrazení náhledu změn** odkaz v dolní části okna náhledu [zobrazíte všechny změny](../../ide/preview-changes.md) , budou provedeny před provedením váš výběr.
+   > Použití **náhled změn** odkaz v dolní části okna náhledu [zobrazíte všechny změny](../../ide/preview-changes.md) , který bude proveden před zvolení požadované možnosti.
 
-1. Pokud jste vybrali **vygenerovat nový typ...**  položku **generovat typ** otevře se dialogové okno. Konfigurovat usnadnění, typ a umístění nového typu.
+4. Pokud jste vybrali **generovat nový typ** položky, **generovat typ** zobrazí se dialogové okno. Nakonfigurujte usnadnění přístupu, typ a umístění nového typu.
 
-   ![Vygenerovat typ](media/class-newtype-cs.png)
+   ![Generovat typ](media/class-newtype-cs.png)
 
    Výběr | Popis
    --- | ---
-   Access | Nastavte typ tak, aby měl *výchozí*, *interní* nebo *veřejné* přístup.
-   Typ | To je možné nastavit jako *třída* nebo *struktura*.
-   Název | To nelze změnit a bude mít název, který jste již zadali.
-   Projekt | Pokud jsou v řešení pro více projektů, můžete místo třída nebo struktura TTL.
-   Název souboru | Můžete vytvořit nový soubor nebo typu můžete přidat do existujícího souboru.
+   Access | Nastavit typ, který má být *výchozí*, *interní* nebo *veřejné* přístup.
+   Typ | To je možné nastavit jako *třídy* nebo *struktura*.
+   Název | To se nedá změnit a bude název, který jste už zadali.
+   Projekt | Pokud existuje více projektů v řešení, můžete místo, kam chcete třídě/struktuře TTL.
+   Název souboru | Můžete vytvořit nový soubor nebo můžete přidat typ do existujícího souboru.
 
-Třídě nebo struktuře se vytvoří. Pro jazyk C# se také vytvoří konstruktor.
+Vytvoření třídy nebo struktury. Pro C#, se vytvoří také konstruktor.
 
 - C#
 
-   ![Generování výsledků třída C#](media/class-result-cs.png)
+   ![Generovat třídy výsledekC#](media/class-result-cs.png)
 
 - Visual Basic
 
-   ![Generování výsledků třídy jazyka Visual Basic](media/class-result-vb.png)
+   ![Generovat třídy výsledek VB](media/class-result-vb.png)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Generování kódu](../code-generation-in-visual-studio.md)
 - [Náhled změn](../../ide/preview-changes.md)

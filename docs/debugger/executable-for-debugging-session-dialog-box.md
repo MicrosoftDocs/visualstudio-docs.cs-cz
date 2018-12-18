@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31473456"
 ---
 # <a name="executable-for-debugging-session-dialog-box"></a>Dialogové okno Spustitelný soubor pro relaci ladění
 Toto dialogové okno se zobrazí při pokusu o ladění knihovny DLL pro které žádný spustitelný soubor je zadán. Visual Studio nelze spustit knihovnu DLL přímo. Místo toho spustíte zadaný spustitelný soubor. Knihovny DLL můžete ladit, když je volána metodou spustitelný soubor.  

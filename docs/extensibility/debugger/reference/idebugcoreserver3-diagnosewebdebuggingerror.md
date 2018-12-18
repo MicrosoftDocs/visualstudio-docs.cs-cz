@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer3::DiagnoseWebDebuggingError | Microsoft Docs
+title: IDebugCoreServer3::DiagnoseWebDebuggingError | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d0facdbd5da7d17061039e0a9e7faed2be3bbe4b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b450af1437f9522509913d34976e648da31b91fb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49843337"
 ---
 # <a name="idebugcoreserver3diagnosewebdebuggingerror"></a>IDebugCoreServer3::DiagnoseWebDebuggingError
-Pokusí se zjistit, proč auto-attach se nezdařilo.  
+Nepovedlo se pokusí zjistit, proč auto-attach.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,16 +41,16 @@ int DiagnoseWebDebuggingError(
   
 #### <a name="parameters"></a>Parametry  
  `pszUrl`  
- [v] Není právě používána; musí být vždy nastavená na hodnotu null.  
+ [in] Není v současné době nepoužívá; musí být vždy nastavená na hodnotu null.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby. Tady jsou ostatní typické návratové kódy:  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Tady jsou další typické návratové kódy:  
   
 |Kód|Popis|  
 |----------|-----------------|  
-|`S_WEBDBG_UNABLE_TO_DIAGNOSE`|Nelze určit, proč se nepodařilo spustit ladění vzdáleného serveru.|  
-|`S_WEBDBG_DEBUG_VERB_BLOCKED`|Nelze ladění na vzdáleném serveru, pravděpodobně z důvodu nedostatečných oprávnění nebo protože není povolen příkaz DEBUG.|  
-|`E_WEBDBG_DEBUG_VERB_BLOCKED`|Webový server byl uzamčen a blokuje příkaz DEBUG, který je nutný pro povolení ladění.|  
+|`S_WEBDBG_UNABLE_TO_DIAGNOSE`|Nelze určit, proč se nepodařilo spustit ladění vzdáleném serveru.|  
+|`S_WEBDBG_DEBUG_VERB_BLOCKED`|Nelze ladit na vzdáleném serveru, pravděpodobně z důvodu nedostatečných oprávnění nebo proto, že není povolen příkaz DEBUG.|  
+|`E_WEBDBG_DEBUG_VERB_BLOCKED`|Webový server byl uzamčen a blokuje slovo DEBUG, která jsou nutná pro povolení ladění.|  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)

@@ -1,6 +1,6 @@
 ---
-title: Jak mohu ladit funkce rozhraní API systému Windows? | Microsoft Docs
-ms.custom: ''
+title: Ladit funkce rozhraní Windows API | Dokumentace Microsoftu
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -23,25 +23,26 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 28d9aa387861de41b7d3f782fec85d8d26c7d3ae
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 2959e5580cc227f18dbd84f88f83fbd5690aa7f4
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53065070"
 ---
 # <a name="how-can-i-debug-windows-api-functions"></a>Jak mohu ladit funkce rozhraní API systému Windows?
-Pokud chcete ladit funkce rozhraní API systému Windows, která má symboly NT načíst, postupujte takto.  
+Pokud chcete ladit funkce rozhraní Windows API, která má načteny symboly NT, postupujte takto.  
   
-### <a name="to-set-a-breakpoint-on-a-windows-api-function-with-nt-symbols-loaded"></a>Chcete-li nastavit zarážky funkce rozhraní API systému Windows se symboly NT načíst  
+### <a name="to-set-a-breakpoint-on-a-windows-api-function-with-nt-symbols-loaded"></a>Nastavení zarážky na funkci rozhraní API Windows NT symboly načteny  
   
--   Zadejte název funkce společně s názvem knihovny DLL, kde se funkce nachází. V kódu 32-bit formulář dekorovaný název funkce. Chcete-li nastavit zarážky **MessageBeep**, například musíte zadat následující.  
+-   Zadejte název funkce společně s názvem knihovny DLL, ve kterém se funkce nachází. V kódu, 32-bit použijte upravené podobě název funkce. Chcete-li nastavit zarážku na **MessageBeep**, musíte například zadat následující.  
   
-    ```  
+    ```cpp
     {,,USER32.DLL}_MessageBeep@4  
     ```  
   
-     Chcete-li získat upravený název, přečtěte si téma [zobrazení dekorované názvy](http://msdn.microsoft.com/en-us/f79e2717-a4db-4d12-a689-69830cce2be0).  
+     Chcete-li získat upravený název, přečtěte si téma [zobrazení dekorovaných názvů](https://msdn.microsoft.com/library/f79e2717-a4db-4d12-a689-69830cce2be0).  
   
 ## <a name="see-also"></a>Viz také  
- [Nativní kód nejčastější dotazy k ladění](../debugger/debugging-native-code-faqs.md)   
+ [Ladění nativního kódu nejčastější dotazy](../debugger/debugging-native-code-faqs.md)   
  [Ladění nativního kódu](../debugger/debugging-native-code.md)

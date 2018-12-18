@@ -1,5 +1,5 @@
 ---
-title: Konstanty COM ve spravovaném kódu | Microsoft Docs
+title: Konstanty modelu COM ve spravovaném kódu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,14 +13,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 42a8c6cbe2b3a2b5fa559a74dd165b7a729b814d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d8a273c5e53f9f7086e8dc96bcb4c36e0b0223d0
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39231532"
 ---
-# <a name="com-constants-in-managed-code"></a>Konstanty COM ve spravovaném kódu
-Spravované balíček Framework (MPF) zpřístupní některé standardní konstanty COM do spravovaného kódu. Níže jsou uvedeny tyto konstanty pro vaši informaci.  
+# <a name="com-constants-in-managed-code"></a>Konstanty modelu COM ve spravovaném kódu
+Managed Package Framework (MPF) zpřístupňuje některé standardní konstanty modelu COM pro spravovaný kód. Tyto konstanty jsou uvedeny níže pro vaši informaci.  
   
 ## <a name="boolean-hresult-values"></a>Hodnoty Boolean HRESULT  
  <xref:Microsoft.VisualStudio.VSConstants.S_FALSE>  
@@ -52,7 +53,7 @@ Spravované balíček Framework (MPF) zpřístupní některé standardní konsta
   
  <xref:Microsoft.VisualStudio.VSConstants.UNDO_E_CLIENTABORT>  
   
-## <a name="ole-errors"></a>Chyby OLE  
+## <a name="ole-errors"></a>OLE – chyby  
  <xref:Microsoft.VisualStudio.VSConstants.OLE_E_ADVF>  
   
  <xref:Microsoft.VisualStudio.VSConstants.OLE_E_ADVISENOTSUPPORTED>  
@@ -91,7 +92,7 @@ Spravované balíček Framework (MPF) zpřístupní některé standardní konsta
   
  <xref:Microsoft.VisualStudio.VSConstants.OLE_E_WRONGCOMPOBJ>  
   
-## <a name="ole-dispatch-errors"></a>Chyby odesílání OLE  
+## <a name="ole-dispatch-errors"></a>Chyby odbavení OLE  
  <xref:Microsoft.VisualStudio.VSConstants.DISP_E_ARRAYISLOCKED>  
   
  <xref:Microsoft.VisualStudio.VSConstants.DISP_E_BADCALLEE>  
@@ -128,5 +129,5 @@ Spravované balíček Framework (MPF) zpřístupní některé standardní konsta
   
  <xref:Microsoft.VisualStudio.VSConstants.DISP_E_UNKNOWNNAME>  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Zpracování chyb a návratových hodnot](../extensibility/error-handling-and-return-values.md)

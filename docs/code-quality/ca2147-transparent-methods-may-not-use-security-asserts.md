@@ -1,6 +1,7 @@
 ---
 title: 'CA2147: Transparentní metody nemusejí podporovat použití nepodmíněných výrazů zabezpečení'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -16,13 +17,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a095bb50c23600aa04959db670a4038bd18cbaf1
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 3f701a0e39124327c897043590b318cb6e645c1f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49923794"
 ---
 # <a name="ca2147-transparent-methods-may-not-use-security-asserts"></a>CA2147: Transparentní metody nemusejí podporovat použití nepodmíněných výrazů zabezpečení
+
 |||
 |-|-|
 |TypeName|SecurityTransparentCodeShouldNotAssert|
@@ -31,34 +34,34 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Kód, který je označen jako <xref:System.Security.SecurityTransparentAttribute> není dostatečná oprávnění k vyhodnocení.
+ Kód, který je označen jako <xref:System.Security.SecurityTransparentAttribute> není uděleno dostatečné oprávnění k vyhodnocení.
 
 ## <a name="rule-description"></a>Popis pravidla
- Toto pravidlo analyzuje všechny metody a typy v sestavení, která je buď 100 % transparentní nebo smíšeném transparentní a důležitých a flags žádné deklarativní nebo imperativní využití <xref:System.Security.CodeAccessPermission.Assert%2A>.
+ Toto pravidlo analyzuje všechny metody a typy v sestavení, který je buď 100 % transparentní, nebo smíšené transparentní/kritické a označí všechny deklarativní nebo imperativní použití <xref:System.Security.CodeAccessPermission.Assert%2A>.
 
- V době, volání spuštění <xref:System.Security.CodeAccessPermission.Assert%2A> z transparentní kód způsobí <xref:System.InvalidOperationException> vyvolání. Tato situace může nastat v obou 100 % transparentní sestavení a taky v smíšená transparentní a důležitých sestavení, kde je deklarovaná transparentní metody nebo typu, ale zahrnuje deklarativní nebo imperativní Assert.
+ Během spuštění, všechna volání do <xref:System.Security.CodeAccessPermission.Assert%2A> z transparentního kódu způsobí, že <xref:System.InvalidOperationException> vyvolání. Tato situace může nastat, obě 100 % transparentní sestavení a taky na smíšené transparentní/kritické sestavení, ve kterém je deklarována jako transparentní metody nebo typu, ale zahrnuje deklarativní nebo imperativní Assert.
 
- [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 2.0 zavedená funkci s názvem *průhlednost*. Jednotlivé metody, pole, rozhraní, třídy a typů může být průhledná nebo kritické.
+ Rozhraní .NET Framework 2.0 zavedené funkci s názvem *transparentnosti*. Jednotlivé metody, pole, rozhraní, tříd a typů může být transparentní nebo kritické.
 
- Transparentní kód nesmí zvýšení oprávnění zabezpečení. Proto všechna oprávnění udělená nebo který je od něj jsou automaticky předána kód do domény aplikace volající nebo hostitele. Příklady – zvýšení úrovní oprávnění jsou nepodmíněné výrazy, LinkDemands, SuppressUnmanagedCode, a `unsafe` kódu.
+ Transparentní kód nesmí zvýšení oprávnění zabezpečení. Proto žádná oprávnění udělit nebo požadováno ho automaticky předávána prostřednictvím kódu volající nebo host domény aplikace. Bezpečnostně příklady nepodmíněné výrazy, pravidla LinkDemand, SuppressUnmanagedCode, a `unsafe` kódu.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li problém vyřešit, buď označit kód, který volá Assert s <xref:System.Security.SecurityCriticalAttribute>, nebo odeberte Assert.
+ Chcete-li problém vyřešit, buď označit kód, který volá kontrolní výraz s <xref:System.Security.SecurityCriticalAttribute>, nebo odeberte Assert.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Není potlačit zprávu od tohoto pravidla.
+ Nepotlačujte zprávy z tohoto pravidla.
 
 ## <a name="example"></a>Příklad
- Tento kód se nezdaří, pokud `SecurityTestClass` je transparentní, když `Assert` metoda vrátí <xref:System.InvalidOperationException>.
+ Tento kód se nezdaří, pokud `SecurityTestClass` je transparentní, když `Assert` vyvolá metoda výjimku <xref:System.InvalidOperationException>.
 
  [!code-csharp[FxCop.Security.CA2147.TransparentMethodsMustNotUseSecurityAsserts#1](../code-quality/codesnippet/CSharp/ca2147-transparent-methods-may-not-use-security-asserts_1.cs)]
 
 ## <a name="example"></a>Příklad
- Jednou z možností je revize kódu metodu SecurityTransparentMethod v následujícím příkladu a pokud metoda považuje za bezpečné pro zvýšení oprávnění, označit SecurityTransparentMethod s zabezpečit důležité to vyžaduje, aby podrobné, úplné a bez chyb zabezpečení auditování je potřeba provést na metodu společně s všech značek, ke kterým došlo v rámci metody pod Assert:
+ Jednou z možností je k revizi kódu SecurityTransparentMethod metodu v následujícím příkladu a pokud metoda je považován za bezpečný pro zvýšení oprávnění, označit SecurityTransparentMethod zabezpečení – kritické. To vyžaduje, že auditu zabezpečení podrobné, nejúplnější a bez chyb se musí provádět v metodě spolu s všech značek, ke kterým dochází v rámci metody Assert:
 
  [!code-csharp[FxCop.Security.SecurityTransparentCode2#1](../code-quality/codesnippet/CSharp/ca2147-transparent-methods-may-not-use-security-asserts_2.cs)]
 
- Další možností je odebrat Assert z kódu a nechat všechny následné soubory vstupně-výstupních operací toku oprávnění požadavky nad rámec SecurityTransparentMethod volajícímu. To umožňuje kontroly zabezpečení. V takovém případě žádné auditu zabezpečení je obecně potřeba, protože požadavky oprávnění bude procházet volající nebo doménu aplikace. Požadavky na oprávnění jsou úzce ovládaná zásadami zabezpečení, hostování prostředí a udělení oprávnění zdrojového kódu.
+ Další možností je odebrat Assert z kódu a nechat všechny následné soubory tok na požadavky na oprávnění vstupně-výstupní operace nad rámec SecurityTransparentMethod volajícímu. To umožňuje kontroly zabezpečení. V takovém případě je potřeba žádné auditu zabezpečení, protože oprávnění požadavky se budou přenášet do volajícího a/nebo doménu aplikace. Požadavky na oprávnění jsou úzce ovládaná zásadami zabezpečení, hostování prostředí a udělení oprávnění zdrojového kódu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
  [Upozornění zabezpečení](../code-quality/security-warnings.md)

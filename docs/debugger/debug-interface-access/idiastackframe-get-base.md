@@ -1,5 +1,5 @@
 ---
-title: Idiastackframe::get_base – | Microsoft Docs
+title: Idiastackframe::get_base – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e59059380ab2ad4010fcce524d2323c02ab47ed7
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 728c9af4470cfaa96d333cd41d119a342bc680ed
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49931048"
 ---
 # <a name="idiastackframegetbase"></a>IDiaStackFrame::get_base
-Získá základní adresu rámečku.  
+Získá základní adresu rámce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,10 +34,10 @@ HRESULT get_base (
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí základní adresu.  
+ [out] Vrátí základní adresa.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE` Pokud vlastnost není podporována. Jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

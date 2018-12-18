@@ -1,5 +1,5 @@
 ---
-title: Pokyny k nástrojům architektury Visual Studio
+title: Pokyny k nástrojům architektury
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: gewarren
@@ -7,16 +7,17 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: b70b229d128143a4c61dc9789e3a4797a0317643
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 558d0143343d04bdfadf530aca10466991b3f2f1
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057506"
 ---
 # <a name="visual-studio-architecture-tooling-guidance"></a>Pokyny k nástrojům architektury Visual Studio
-Architektura nástrojů zásady se ke stažení balíčku praktické informace o použití nástrojů pro modelování v sadě Visual Studio 2010. Uvede široký přehled o tom, jak používat všechny nástroje pro modelování integrovanou a popisuje nejběžnějších scénářů, ve kterých se používají nástroje.
 
- Obsah byl vytvořen [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ALM Rangers, speciální skupinu, která obsahuje členy z [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] produktový tým, Microsoft Services, Microsoft nejvíce cenná Odborníci v oblasti (MVP) a [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] vede komunity.
+Tato nástrojů doprovodné materiály k architektuře je ke stažení balíčku, který obsahuje praktické rady týkající se používání nástrojů pro modelování v sadě Visual Studio 2010. Uvede široký přehled o tom, jak používat všechny nástroje modelování integrovaným způsobem a popisuje nejběžnější scénáře, ve kterých se tyto nástroje používají.
 
- [Kliknutím sem stáhnete doporučení ohledně Tooling architektury. ](http://go.microsoft.com/fwlink/?LinkID=191984).
+Obsah byl vytvořen Visual Studio ALM Rangers, speciální skupinu, která obsahuje členy z týmu produktu Visual Studio, Microsoft Services, Microsoft nejvíce Vážíme si toho odborníky (MVP) a vede k sadě Visual Studio Community.

@@ -1,5 +1,5 @@
 ---
-title: IEEVisualizerDataProvider::SetObjectForVisualizer | Microsoft Docs
+title: IEEVisualizerDataProvider::SetObjectForVisualizer | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0d1a6272f8a04316c8695f301d5c45512b05f2d3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f02f90ce8325a0ba75c31904a689e84705a5273a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49866165"
 ---
 # <a name="ieevisualizerdataprovidersetobjectforvisualizer"></a>IEEVisualizerDataProvider::SetObjectForVisualizer
-Tato metoda mění objekt, který reprezentuje vizualizér.  
+Tato metoda se změní objekt, který představuje vizualizér.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,7 +45,7 @@ int SetObjectForVisualizer(
   
 #### <a name="parameters"></a>Parametry  
  `pNewObject`  
- [v] Objekt nastavení.  
+ [in] Objekt, který chcete nastavit.  
   
  `error`  
  [out] Pokud došlo k chybě nastavení objektu, tento řetězec obsahuje chybovou zprávu.  
@@ -53,10 +54,10 @@ int SetObjectForVisualizer(
  [out] Pokud došlo k chybě, tento objekt obsahuje informace o výjimce.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Je implementátor k určení, jak se vrátí informace o chybě. Je však možné, že některé volající může použít jenom vzhled chcete zobrazit, pokud potřebujete vědět, že se vrátí objekt výjimky došlo k chybě, takže tato metoda by měla vždycky vrátí objekt výjimky, když došlo k chybě. Řetězec chyby by měl být uveden také v případě, že volající chce, aby jeho používání.  
+ Záleží implementátora k určení, jak se vrátí informace o chybě. Je však možné, že některé volající může použít jenom vzhled zobrazíte, pokud byl vrácen objekt výjimky vědět, že došlo k chybě, takže tato metoda by měla vždycky vrátí objekt výjimky, když došlo k chybě. Chybový řetězec by měl být rovněž dodán v případě, že volající vyžaduje, aby využívání.  
   
 ## <a name="see-also"></a>Viz také  
  [IEEVisualizerDataProvider](../../../extensibility/debugger/reference/ieevisualizerdataprovider.md)   

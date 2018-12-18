@@ -14,18 +14,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bea8f3bfa5f37aa88c50a831e26713f78d2a9d4a
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 70e413267623d4e9bb4b8d4c1f46fd9c6ecf7808
+ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35237949"
 ---
 # <a name="markerserieswritemessage-method"></a>marker_series::write_message – metoda
 Zapíše zprávu do Concurrency Visualizer trasovacího souboru.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 void write_message(  
    _In_ LPCTSTR _Format,  
    ...  
@@ -59,9 +60,9 @@ void write_message(
  Category.Importance úroveň.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** cvmarkersobj.h  
+ **Záhlaví:** *cvmarkersobj.h*  
   
  **Namespace:** Concurrency::Diagnostic –  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [marker_series – třída](../profiling/marker-series-class.md)

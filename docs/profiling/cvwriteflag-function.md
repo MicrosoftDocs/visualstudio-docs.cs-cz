@@ -1,5 +1,5 @@
 ---
-title: Cvwriteflag – funkce | Microsoft Docs
+title: Cvwriteflag – funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -20,18 +20,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 654f2db738648409f015e84015996b9e9696800f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 371be943dc062c5c3b5aac7f59493aa5f4f53002
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49897145"
 ---
-# <a name="cvwriteflag-function"></a>CvWriteFlag – funkce
-Zapíše příznak vizualizér souběžnosti trasovacího souboru.  
+# <a name="cvwriteflag-function"></a>Cvwriteflag – funkce
+Příznak, který zapisuje do souboru trasování vizualizátoru souběžnosti.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```C  
 HRESULT CvWriteFlagExW(  
     _In_reads_bytes_(16) PCV_MARKERSERIES pMarkerSeries,  
     _In_ CV_IMPORTANCE level,  
@@ -71,23 +72,23 @@ HRESULT CvWriteFlagExVA(
  Kategorie.  
   
  `level`  
- Úroveň význam.  
+ Úroveň důležitosti.  
   
  `pMarkerSeries`  
- Kontext řady platný značky. Nemůže mít hodnotu NULL.  
+ Platné značky řady kontextu. Nemůže mít hodnotu NULL.  
   
  `pMessage`  
- Řetězec formátu zpráv. Nemůže mít hodnotu NULL.  
+ Řetězec formátu zprávy. Nemůže mít hodnotu NULL.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- S_OK, pokud zpráva je úspěšně zapsána. Kód chyby v případě, že byly všechny chyby. Makra úspěšné nebo NEÚSPĚŠNÉ použijte ke kontrole chybový stav.  
+ S_OK při úspěšném zápisu zprávy. Kód chyby v případě, že došlo k chybám. Použití makra SUCCEEDED nebo FAILED zkontrolujte chybovou podmínku.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** cvmarkers.h  
+ **Záhlaví:** *cvmarkers.h*  
   
  **Unicode:** cvwriteflagexw –, cvwriteflagexvw –  
   
- **ANSI:** cvwriteflagexa –, cvwriteflagexva –  
+ <strong>ANSI:</strong>cvwriteflagexa –, cvwriteflagexva –  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Referenční dokumentace knihoven jazyka C++](../profiling/cpp-library-reference.md)

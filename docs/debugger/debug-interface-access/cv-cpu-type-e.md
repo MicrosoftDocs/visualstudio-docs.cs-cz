@@ -1,5 +1,5 @@
 ---
-title: CV_CPU_TYPE_e | Microsoft Docs
+title: Cv_cpu_type_e – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,17 +14,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6a52c65823bb5e4f6ee93522648b235feba691d0
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: f5dc2c5f053d14a42bac59f56f58d4aa6227980c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49925719"
 ---
 # <a name="cvcputypee"></a>CV_CPU_TYPE_e
 Určuje cílový procesor.  
   
 > [!NOTE]
->  Procesor je definovaný v prvku výčtu po `CV_CFL_*` předponu.  
+>  Procesor je uvedena v elementu výčtu po `CV_CFL_*` předponu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -96,7 +97,7 @@ typedef enum CV_CPU_TYPE_e {
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Hodnoty v tento výčet jsou vráceny prostřednictvím volání [idiasymbol::get_platform –](../../debugger/debug-interface-access/idiasymbol-get-platform.md) metoda.  
+ Hodnoty v tomto výčtu jsou vráceny prostřednictvím volání [idiasymbol::get_platform –](../../debugger/debug-interface-access/idiasymbol-get-platform.md) metody.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: cvconst.h  

@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_classparent – | Microsoft Docs
+title: Idiasymbol::get_classparent – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 745342547d7c8264ebd9f2fa06bfababcc3aebcb
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: f948e4ffdcd64c4c2c811aff7897f3245c100077
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49816713"
 ---
 # <a name="idiasymbolgetclassparent"></a>IDiaSymbol::get_classParent
-Získá odkaz na nadřazený Třída symbolu.  
+Získá odkaz na nadřazené třídu symbolu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,10 +34,10 @@ HRESULT get_classParent (
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objekt, který reprezentuje nadřazená třída symbolu.  
+ [out] Vrátí [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objekt, který reprezentuje nadřazené třídu symbolu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` nebo chybový kód.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
 >  Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
@@ -45,11 +46,11 @@ HRESULT get_classParent (
   
 |Požadavek|Popis|  
 |-----------------|-----------------|  
-|Hlavičky:|dia2.h|  
+|Záhlaví:|dia2.h|  
 |Verze:|V7.0 DIA SDK|  
   
 ## <a name="remarks"></a>Poznámky  
- Typy symboly, které můžou být třída nadřazené položky jsou dokumentovány v článku [Symbol typy tříd hierarchie](../../debugger/debug-interface-access/class-hierarchy-of-symbol-types.md).  
+ Druhy symbolů, které mohou být nadřazené třídu jsou dokumentovány v článku [hierarchie typů symbolů tříd](../../debugger/debug-interface-access/class-hierarchy-of-symbol-types.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md)   

@@ -1,5 +1,5 @@
 ---
-title: Hostování IntelliSense | Microsoft Docs
+title: Hostování IntelliSense | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,41 +13,42 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b101460b3867c89862068d99412cd06edb884ef7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 28fc8ca212574c054add28e69a409fde4f58308a
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39638831"
 ---
-# <a name="intellisense-hosting"></a>Hostování IntelliSense
-Visual Studio umožňuje hostování IntelliSense. IntellSense hostování umožňuje poskytovat technologii IntelliSense pro kód, který není hostitelem textového editoru Visual Studio.  
+# <a name="intellisense-hosting"></a>Hostování technologie IntelliSense
+Visual Studio umožňuje hostování technologie IntelliSense. IntellSense hostování umožňuje poskytovat technologii IntelliSense pro kód, který není hostitelem textový editor sady Visual Studio.  
   
-## <a name="intellisense-hosting-usage"></a>Využití hostování IntelliSense  
- Kód, který má přístup k sadě dokončení a textovou vyrovnávací paměť v sadě Visual Studio, můžete získat IntelliSense windows z libovolného místa v uživatelském rozhraní (UI). Ukázkové scénáře to jsou dokončení v **sledovat** okno nebo v poli podmínku zarážku – vlastnosti – okno.  
+## <a name="intellisense-hosting-usage"></a>Hostování využití technologie IntelliSense  
+ Veškerý kód, který má přístup k dokončení sady a textové vyrovnávací paměti v sadě Visual Studio, můžete získat IntelliSense windows z libovolného místa v uživatelském rozhraní (UI). Ukázkové scénáře to jsou k dokončování příkazů ve **Watch** okna nebo v poli podmínku zarážky okna Vlastnosti.  
   
 ### <a name="implementation-interfaces"></a>Implementace rozhraní  
   
 #### <a name="ivsintellisensehost"></a>IVsIntellisenseHost  
- Musí podporovat libovolné součásti uživatelského rozhraní, který je hostitelem IntelliSense automaticky otevíraná okna <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost> rozhraní. Výchozí základní editor textového zobrazení zahrnuje populace <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost> implementace, které chcete zachovat aktuální funkci IntelliSense rozhraní. Ve většině případů metody <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost> rozhraní představují podmnožinu co se implementuje na <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> rozhraní. Podmnožinu zahrnuje zpracování uživatelského rozhraní IntelliSense, pomocí kurzoru a výběr manipulaci a jednoduchý text nahrazení funkce. Kromě toho <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost> rozhraní umožňuje samostatné IntelliSense "předmět" a "context", takže lze zadat IntelliSense pro témata, která nejsou k dispozici přímo ve vyrovnávací paměti text, který se používá pro kontext.  
+ Musí podporovat všechny součásti uživatelského rozhraní, který je hostitelem technologie IntelliSense automaticky otevíraná okna <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost> rozhraní. Výchozí zobrazení textového editoru core zahrnuje stejných akcií <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost> zachovat aktuální funkce IntelliSense implementace rozhraní. Ve většině případů metody <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost> rozhraní představují podmnožinu co se implementuje na <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> rozhraní. Dílčí zahrnuje zpracování uživatelského rozhraní technologie IntelliSense, blikajícího kurzoru a výběru manipulaci a funkce náhradní jednoduchý text. Kromě toho <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost> rozhraní umožňuje samostatné technologie IntelliSense "předmět" a "kontext" tak, aby IntelliSense lze zadat pro témata, která přímo neexistují ve vyrovnávací paměti textu, který se používá pro kontext.  
   
 #### <a name="ivsintellisensehostgethostflags"></a>IVsIntellisenseHost.GetHostFlags  
- <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost> Rozhraní poskytovatel musí implementovat <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost.GetHostFlags%2A> metoda povolení klienta určit, jaký typ IntelliSense funkce hostitel podporuje.  
+ <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost> Musí implementovat rozhraní poskytovatele <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost.GetHostFlags%2A> metoda umožňují klientovi k určení, jaký typ IntelliSense funkce hostitel podporuje.  
   
- Příznaky hostitele, který je definovaný v [IntelliSenseHostFlags](../extensibility/intellisensehostflags.md), jsou shrnuté níž.  
+ Příznaky hostitele, definované v [IntelliSenseHostFlags](../extensibility/intellisensehostflags.md), jsou shrnuté níž.  
   
-|Příznak hostitele IntelliSense|Popis|  
+|Příznak hostitele technologie IntelliSense|Popis|  
 |----------------------------|-----------------|  
-|IHF_READONLYCONTEXT|Tento příznak znamená, že vyrovnávací paměti kontextu nastavení jen pro čtení a úpravy dojde pouze v rámci textu subjektu.|  
-|IHF_NOSEPERATESUBJECT|Nastavíte tento příznak znamená, že existuje je žádné samostatné subjektu IntelliSense. Předmět existuje ve vyrovnávací paměti kontextu, například v tradiční <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> IntelliSense systému.|  
-|IHF_SINGLELINESUBJECT|Nastavení tento příznak znamená, že předmět není Víceřádkový podporující, například jeden řádek upravit v **sledovat** okno.|  
-|IHF_FORCECOMMITTOCONTEXT|Pokud je nastavený tento příznak a musí být aktualizované vyrovnávací paměti kontextu, umožňuje hostiteli příznak jen pro čtení na vyrovnávací paměti kontextu, který se má ignorovat a úpravy, aby bylo možné pokračovat.|  
-|IHF_OVERTYPE|Úpravy (v předmětu nebo kontextu) by mělo být provedeno v režimu přepisování.|  
+|IHF_READONLYCONTEXT|Nastavení tohoto příznaku znamená, že vyrovnávací paměti kontextu je jen pro čtení a úpravy dojde pouze v textu, předmětu.|  
+|IHF_NOSEPERATESUBJECT|Nastavení to znamená, že příznak, který existuje se žádný samostatný předmět technologie IntelliSense. Předmět existuje ve vyrovnávací paměti kontextu, například v tradiční <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> technologie IntelliSense.|  
+|IHF_SINGLELINESUBJECT|Nastavení tohoto příznaku znamená, že není předmětem Víceřádkový podporuje, například v Jednořádková **Watch** okna.|  
+|IHF_FORCECOMMITTOCONTEXT|Pokud je nastavený tento příznak a musí se aktualizovat vyrovnávací paměti kontextu, umožňuje hostiteli příznak vyrovnávací paměti kontextu mají ignorovat jen pro čtení a úpravy, abyste mohli pokračovat.|  
+|IHF_OVERTYPE|Úpravy (v předmětu nebo kontext) by mělo být provedeno režim přepisování.|  
   
 #### <a name="ivsintellisensehostbeforecompletorcommit-and-ivsintellisensehostaftercompletorcommit"></a>IVsIntellisenseHost.BeforeCompletorCommit a IVsIntellisenseHost.AfterCompletorCommit  
- Tyto metody zpětného volání jsou volány okno dokončení před a po potvrzené, chcete-li povolit zpracování před a po zpracování textu.  
+ Tyto metody zpětného volání jsou volány v okně dokončení před a za text je zpracovat, aby úkony předběžného zpracování a následné zpracování.  
   
 #### <a name="ivsintellisensecompletor"></a>IVsIntellisenseCompletor  
- <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseCompletor> Rozhraní je společně vytvořitelné verze okna standardní dokončení, který je používán integrované vývojové prostředí (IDE). Všechny <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost> rozhraní můžete rychle implementovat IntelliSense pomocí tohoto rozhraní completor.  
+ <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseCompletor> Rozhraní je společně vytvořitelný verze standard dokončení okna, která používá integrované vývojové prostředí (IDE). Žádné <xref:Microsoft.VisualStudio.TextManager.Interop.IVsIntellisenseHost> rozhraní můžete rychle implementovat technologie IntelliSense pomocí tohoto rozhraní completor.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  <xref:Microsoft.VisualStudio.TextManager.Interop>

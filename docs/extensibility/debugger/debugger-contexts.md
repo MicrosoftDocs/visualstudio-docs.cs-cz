@@ -1,5 +1,5 @@
 ---
-title: Ladicího programu kontexty | Microsoft Docs
+title: Kontexty ladicího programu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,40 +13,41 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8a9310512417ac0e24046a1b7bcc1fd92099fe98
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 49af504b27afc6171a914d9559a5ff83f3d595eb
+ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39204099"
 ---
-# <a name="debugger-contexts"></a>Kontexty ladicí program
-V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ladění, modul ladění (DE) funguje současně v několika různých kontextů, následujícím způsobem:  
+# <a name="debugger-contexts"></a>Kontexty ladicího programu
+V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ladění, ladicí stroj (DE) pracuje současně v rámci několika různých kontextech, následujícím způsobem:  
   
--   Kontext kód, který popisuje aktuální umístění v datovém proudu spuštění programu.  
+-   Kontext kódu, která popisuje aktuální umístění v datovém proudu provádění programu.  
   
--   Kontext dokumentaci nebo pozice, která popisuje aktuální pozici ve zdrojovém dokumentu.  
+-   Dokumentace ke službě kontext nebo umístění, která popisuje aktuální pozici ve zdrojovém dokumentu.  
   
--   Kontext vyhodnocení výrazu, který popisuje kontext ve výrazu, který bude vyhodnocení probíhat.  
+-   Kontext vyhodnocení výrazu, popisující kontext, ve výrazu, který bude vyhodnocení proběhnout.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Kontext kódu](../../extensibility/debugger/code-context.md)  
- Popisuje kontext kódu jako adresu v datovém proudu instrukce programu v dnešních běhu architektury versus netradičních jazyky, kde nemusí být reprezentován kód podle pokynů, ale jiným způsobem.  
+ Tento článek popisuje kontext kódu jako adresa ve službě stream instrukce programu v dnešní za běhu architektury oproti netradičních jazyky, ve kterém kód nemusí reprezentovat pokyny, ale jiným způsobem.  
   
  [Pozice dokumentu](../../extensibility/debugger/document-position.md)  
- Definuje pozice dokumentu v sadě Visual Studio ladění prostřednictvím abstrakci pozici ve zdrojovém souboru, protože znám rozhraní IDE.  
+ Definuje pozice dokumentu v ladění prostřednictvím abstrakce pozice ve zdrojovém souboru, protože ví, integrovaném vývojovém prostředí sady Visual Studio.  
   
  [Kontext dokumentu](../../extensibility/debugger/document-context.md)  
- Popisuje, jaké kontextu dokumentu představuje v sadě Visual Studio ladění ve vztahu k zdrojového souboru. Také popisuje, jak obslužná rutina symbol mapuje kontext kódu na dokumentaci kontextu.  
+ Popisuje, jaké kontext dokumentu představuje v ladění sady Visual Studio ve vztahu k zdrojový soubor. Popisuje také způsob mapování obslužné rutiny symbolů kontext kódu do kontextu dokumentace ke službě.  
   
  [Kontext vyhodnocení výrazu](../../extensibility/debugger/expression-evaluation-context.md)  
- Obsahuje informace o kontextu vyhodnocení výrazu v sadě Visual Studio. Například kontextu vyhodnocení výrazu přidružené rámce zásobníku poskytuje kontext pro vyhodnocení lokální proměnné, parametry metody a členy třídy.  
+ Obsahuje informace kontextu vyhodnocení výrazu v sadě Visual Studio. Třeba kontextu vyhodnocení výrazu přidružený blok zásobníku poskytuje kontext za vaše rozhodnutí vyzkoušet lokální proměnné, parametry metody a členy třídy.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Ladění koncepty](../../extensibility/debugger/debugger-concepts.md)  
  Popisuje hlavní koncepty ladění architektury.  
   
- [Ladění komponent](../../extensibility/debugger/debugger-components.md)  
- Poskytuje přehled ladění součásti sady Visual Studio, mezi které patří ladění modulu (DE), vyhodnocovací filtr výrazů (EE) a symbol obslužné rutiny (SH).  
+ [Ladění komponenty](../../extensibility/debugger/debugger-components.md)  
+ Obsahuje přehled komponent ladění sady Visual Studio, mezi které patří ladicího stroje (DE), Chyba při vyhodnocování výrazu (EE) a obslužné rutiny symbolů (SH).  
   
- [Úlohy ladění](../../extensibility/debugger/debugging-tasks.md)  
- Obsahuje odkazy na různé ladění úlohy, jako je například spuštěním programu a vyhodnocení výrazů.
+ [Ladění úloh](../../extensibility/debugger/debugging-tasks.md)  
+ Obsahuje odkazy na různé úlohy ladění, jako je například spuštění programu a vyhodnocení výrazů.

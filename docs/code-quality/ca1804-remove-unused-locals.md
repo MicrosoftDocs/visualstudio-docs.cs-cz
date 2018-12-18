@@ -1,6 +1,7 @@
 ---
 title: 'CA1804: Odeberte nepoužívané místní hodnoty'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,15 +14,20 @@ ms.assetid: cc332e67-6543-4813-bd8a-6f6fc75bf22a
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 1bdff91761dc9d4c958ee50dcf07d5a592370c5b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b1846c1b8d9173db6d1f4b5acd0544fd601da67a
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45545460"
 ---
 # <a name="ca1804-remove-unused-locals"></a>CA1804: Odeberte nepoužívané místní hodnoty
+
 |||
 |-|-|
 |TypeName|RemoveUnusedLocals|
@@ -30,16 +36,16 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
- Metoda deklaruje, místní proměnné, ale nepoužívá proměnnou s výjimkou pravděpodobně jako příjemce příkazu přiřazení. Pro analýzu tímto pravidlem otestované sestavení musí být vytvořená s ladicími informacemi a přidružené programového souboru databáze (.pdb) musí být k dispozici.
+ Metoda deklaruje místní proměnnou, ale nepoužívá proměnnou s výjimkou pravděpodobně jako příjemce příkazu přiřazení. Pro analýzu tímto pravidlem testované sestavení musí být sestaveny s ladicími informacemi a přidružené programového souboru databáze (PDB) musí být k dispozici.
 
 ## <a name="rule-description"></a>Popis pravidla
  Nepoužívané místní proměnné a zbytečná přiřazení zvětšují velikost sestavení a snižují výkon.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení toto pravidlo, odeberte, nebo použijte místní proměnné. Všimněte si, že kompilátor jazyka C#, který je součástí s [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)] odebere nepoužívané místní proměnné při `optimize` je povolena možnost.
+ Chcete-li opravit porušení tohoto pravidla, odeberte nebo použijte místní proměnnou. Všimněte si, že kompilátor jazyka C#, která je součástí [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)] odebere nepoužívané místní proměnné při `optimize` je povolená možnost.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Potlačíte upozornění na toto pravidlo, je-li proměnná byla kompilátoru vygenerované. Je také bezpečné upozornění toto pravidlo potlačit nebo zakážete pravidlo, pokud výkon a údržba kódu nejsou primární otázky.
+ Potlačit upozornění tohoto pravidla, je-li proměnná byla kompilátoru, protože ho. Je také bezpečné upozornění tohoto pravidla můžete potlačit nebo zakážete pravidlo, pokud výkon a údržba kódu nejsou primární obavy.
 
 ## <a name="example"></a>Příklad
  Následující příklad ukazuje několik nepoužívané místní proměnné.

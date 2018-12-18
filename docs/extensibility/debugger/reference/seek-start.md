@@ -1,5 +1,5 @@
 ---
-title: SEEK_START | Microsoft Docs
+title: SEEK_START | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 55be60c35ea3af97cb9129670ef422d1a649fead
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a10d749022757860c6f7cc620091c2ac10623976
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49905210"
 ---
 # <a name="seekstart"></a>SEEK_START
-Určuje umístění, ze kterého má začít vyhledávání v datovém proudu zpětný překlad.  
+Určuje umístění, ze kterého se má spustit vyhledávání ve službě stream zpětný překlad.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,22 +50,22 @@ public enum enum_SEEK_START {
   
 ## <a name="members"></a>Členové  
  SEEK_START_BEGIN  
- Spustí vyhledávání od začátku aktuálního dokumentu.  
+ Spustí hledání na začátek aktuálního dokumentu.  
   
  SEEK_START_END  
- Spustí vyhledávání na konci aktuálním dokumentu.  
+ Spustí hledání na konci aktuálního dokumentu.  
   
  SEEK_START_CURRENT  
- Spustí vyhledávání na aktuální pozici aktuálního dokumentu.  
+ Spustí hledání na aktuální pozici aktuálního dokumentu.  
   
  SEEK_START_CODECONTEXT  
- Spustí vyhledávání v kontextu daného kódu aktuálního dokumentu.  
+ Spustí hledání na daný kód kontextu aktuálního dokumentu.  
   
  SEEK_START_CODELOCID  
- Spustí vyhledávání v umístění identifikátor daného kódu. Identifikátory umístění kódu se získá voláním [GetCurrentLocation](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcurrentlocation.md).  
+ Spustí hledání na daný kód identifikátor umístění. Identifikátory umístění kódu je získán voláním [GetCurrentLocation](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcurrentlocation.md).  
   
 ## <a name="remarks"></a>Poznámky  
- Předat jako argument k [Seek](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md) metoda.  
+ Předán jako argument [Seek](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md) metody.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  
@@ -75,5 +76,5 @@ public enum enum_SEEK_START {
   
 ## <a name="see-also"></a>Viz také  
  [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [Hledat](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md)   
+ [Hledání](../../../extensibility/debugger/reference/idebugdisassemblystream2-seek.md)   
  [GetCurrentLocation](../../../extensibility/debugger/reference/idebugdisassemblystream2-getcurrentlocation.md)

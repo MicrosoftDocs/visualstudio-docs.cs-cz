@@ -1,5 +1,5 @@
 ---
-title: AD_PROCESS_ID | Microsoft Docs
+title: AD_PROCESS_ID | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 32d4174c5b190278367f0147806fe007beaa72c0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9634d16a89670b92e616e4bd6b878f41166aea2b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49833873"
 ---
 # <a name="adprocessid"></a>AD_PROCESS_ID
-Určuje Identifikátor procesu, který může být buď ID systému, nebo identifikátor GUID.  
+Určuje ID procesu, který může být ID systému nebo identifikátor GUID.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,7 +49,7 @@ public struct AD_PROCESS_ID {
   
 ## <a name="members"></a>Členové  
  `ProcessIdType`  
- Hodnota z [AD_PROCESS_ID_TYPE](../../../extensibility/debugger/reference/ad-process-id-type.md) výčtu určíte, jak interpretovat `ProcessId` union (nebo pro spravovaný kód, který členem strukturu pro přístup k).  
+ Hodnota z [AD_PROCESS_ID_TYPE](../../../extensibility/debugger/reference/ad-process-id-type.md) výčet určující, jak interpretovat `ProcessId` sjednocení (nebo pro spravovaný kód, který člen struktury pro přístup k).  
   
  dwProcessId  
  ID procesu jako hodnotu ze systému.  
@@ -60,21 +61,21 @@ public struct AD_PROCESS_ID {
  Odsazení.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je předán následujících metod:  
+ Tato struktura je předán do následujících metod:  
   
--   [GetProviderProgramNode](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprogramnode.md)  
+- [GetProviderProgramNode](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprogramnode.md)  
   
--   [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md)  
+- [WatchForProviderEvents](../../../extensibility/debugger/reference/idebugprogramprovider2-watchforproviderevents.md)  
   
--   [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)  
+- [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md)  
   
--   [Getprocess –](../../../extensibility/debugger/reference/idebugport2-getprocess.md)  
+- [GetProcess](../../../extensibility/debugger/reference/idebugport2-getprocess.md)  
   
- A je vrácena z následujících metod:  
+  A je vrácena z následujících metod:  
   
--   [GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md)  
+- [GetPhysicalProcessId](../../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md)  
   
--   [GetHostId](../../../extensibility/debugger/reference/idebugprogramhost2-gethostid.md)  
+- [GetHostId](../../../extensibility/debugger/reference/idebugprogramhost2-gethostid.md)  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

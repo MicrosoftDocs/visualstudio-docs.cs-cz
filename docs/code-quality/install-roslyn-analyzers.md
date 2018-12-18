@@ -1,6 +1,7 @@
 ---
-title: Nainstalujte Roslyn analyzátorů v sadě Visual Studio
-ms.date: 03/26/2018
+title: Instalace analyzátorů Roslyn
+ms.date: 08/03/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,68 +13,67 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8a3b40b3b471e6bb57da561ac51f23086a0f01bd
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: aa0805b3cffe5a44ae2c6198c6ca2682ceca9f95
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49865400"
 ---
-# <a name="install-net-compiler-platform-analyzers"></a>Nainstalujte analyzátorů kompilátoru platformy .NET
+# <a name="install-net-compiler-platform-analyzers"></a>Instalace analyzátorů .NET Compiler Platform
 
-Visual Studio 2017 obsahuje sadu základní kompilátoru platformu .NET (*Roslyn*) analyzátorů. Tyto analyzátorů jsou vždy zapnuty. Můžete nainstalovat další analyzátorů jako balíčky NuGet, nebo jako rozšíření sady Visual Studio v *VSIX* soubory.
+Visual Studio 2017 obsahuje základní sadu .NET Compiler Platform (*Roslyn*) analyzátory. Tyto analyzátory jsou vždy zapnuty. Můžete nainstalovat další analyzátory jako balíčky NuGet, nebo jako rozšíření sady Visual Studio v *VSIX* soubory.
 
-## <a name="to-install-nuget-package-analyzers"></a>Chcete-li nainstalovat analyzátorů balíček NuGet
+## <a name="to-install-nuget-analyzer-packages"></a>Instalace balíčků NuGet analyzátoru
 
-1. [Určit, která verze balíčku analyzátor](https://github.com/dotnet/roslyn-analyzers#recommended-version-of-analyzer-packages) k instalaci, podle vaší verze sady Visual Studio.
+1. Najdete analyzátor balíček, který chcete nainstalovat na www.nuget.org. Například můžete chtít [nainstalovat analyzátory Microsoft FxCop](install-fxcop-analyzers.md#to-install-fxcop-analyzers-as-a-nuget-package) ke kontrole v kódu, problémy zabezpečení a výkonu, mimo jiné.
 
-1. Nainstalujte balíček v sadě Visual Studio, buď pomocí [Konzola správce balíčků](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console) nebo [uživatelského rozhraní Správce balíčků](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console).
+2. Nainstalujte balíček v sadě Visual Studio, buď pomocí [Konzola správce balíčků](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console) nebo [uživatelské rozhraní Správce balíčků](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console).
 
    > [!NOTE]
-   > Na stránce nuget.org pro každý balíček Analyzátor se zobrazují příkaz pro vložení do **Konzola správce balíčků**. Je i užitečný tlačítko chcete zkopírovat text do schránky.
-   >
-   > ![NuGet.org stránky zobrazující příkaz konzoly Správce balíčků](media/nuget-package-manager-command.png)
+   > Na stránce www.nuget.org pro každý balíček Analyzátor se dozvíte, příkaz a vložte do **Konzola správce balíčků**. Je i užitečný tlačítko ke zkopírování textu do schránky.
+   > 
+   > ![NuGet.org stránky zobrazující příkaz konzoly Správce balíčků](media/nuget-install-command.png)
 
-   Analyzátor sestavení jsou nainstalované a zobrazují v **Průzkumníku řešení** pod **odkazy** > **analyzátorů**.
+   Sestavení analyzátoru jsou nainstalovány a zobrazují v **Průzkumníka řešení** pod **odkazy** > **analyzátory**.
 
-   ![Uzel analyzátorů v Průzkumníku řešení](media/solution-explorer-analyzers-node.png)
-
-## <a name="to-install-vsix-analyzers"></a>Chcete-li nainstalovat analyzátorů VSIX
+## <a name="to-install-vsix-analyzers"></a>Chcete-li nainstalovat VSIX analyzátory
 
 1. V sadě Visual Studio, vyberte **nástroje** > **rozšíření a aktualizace**.
 
-   **Rozšíření a aktualizace** otevře se dialogové okno.
+   **Rozšíření a aktualizace** zobrazí se dialogové okno.
 
    > [!NOTE]
-   > Případně, stáhněte si rozšíření přímo z [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.MicrosoftCodeAnalysis2017).
+   > Alternativně lze vyhledat a stáhnout přímo z rozšíření analyzátoru [Visual Studio Marketplace](https://marketplace.visualstudio.com).
 
-1. Rozbalte položku **Online** v levém podokně a potom vyberte **Visual Studio Marketplace**.
+2. Rozbalte **Online** v levém podokně a pak vyberte **Visual Studio Marketplace**.
 
-1. Do vyhledávacího pole zadejte "code analysis" a podívejte se **Microsoft Code Analysis 2017** rozšíření.
+3. Do vyhledávacího pole zadejte název, který chcete nainstalovat rozšíření analyzátoru. Například můžete chtít [nainstalovat analyzátory Microsoft FxCop](install-fxcop-analyzers.md#to-install-fxcop-analyzers-as-a-vsix) ke kontrole v kódu, problémy zabezpečení a výkonu, mimo jiné.
 
-   ![Rozšíření Microsoft analýza kódu](media/extensions-and-updates-code-analysis.png)
+4. Vyberte **Stáhnout**.
 
-1. Vyberte **Stáhnout**.
+   Rozšíření je stažen.
 
-   Rozšíření se stáhne.
+5. Vyberte **OK** dialogové okno zavřete a pak zavřete všechny instance sady Visual Studio ke spuštění **instalátor VSIX**.
 
-1. Vyberte **OK** dialogové okno zavřete a pak zavřete všechny instance sady Visual Studio spustíte **instalační program VSIX**.
+   **Instalátor VSIX** zobrazí se dialogové okno.
 
-   **Instalační program VSIX** otevře se dialogové okno.
+   ![Instalátor VSIX pro analýzu kódu Microsoft](media/vsix-installer-code-analysis.png)
 
-   ![Instalační program VSIX pro analýzu kódu Microsoft](media/vsix-installer-code-analysis.png)
+6. Vyberte **změnit** spusťte instalaci.
 
-1. Vyberte **upravit** spusťte instalaci.
+7. Po jedné až dvou minutách dokončení instalace. Vyberte **Zavřít**.
 
-1. Po minutu nebo dvě po dokončení instalace. Vyberte **Zavřít**.
+8. Znovu otevřete Visual Studio.
 
-1. Znovu otevřete Visual Studio.
-
-Pokud chcete zkontrolovat, zda je rozšíření nainstalované, vyberte **nástroje** > **rozšíření a aktualizace**. V **rozšíření a aktualizace** dialogové okno, vyberte **nainstalovaná** kategorie na levé straně a poté vyhledejte rozšíření podle názvu.
+Pokud chcete zkontrolovat, zda je rozšíření nainstalované, vyberte **nástroje** > **rozšíření a aktualizace**. V **rozšíření a aktualizace** dialogové okno, vyberte **nainstalováno** kategorie na levé straně a poté vyhledejte rozšíření podle názvu.
 
 ## <a name="next-steps"></a>Další kroky
 
-- [Použití Roslyn analyzátorů v sadě Visual Studio](../code-quality/use-roslyn-analyzers.md)
+> [!div class="nextstepaction"]
+> [Používání analyzátorů Roslyn v sadě Visual Studio](../code-quality/use-roslyn-analyzers.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Přehled Roslyn analyzátorů v sadě Visual Studio](../code-quality/roslyn-analyzers-overview.md)
+- [Přehled analyzátory Roslyn v sadě Visual Studio](../code-quality/roslyn-analyzers-overview.md)
+- [Nainstalujte analyzátory FxCop](../code-quality/install-fxcop-analyzers.md)

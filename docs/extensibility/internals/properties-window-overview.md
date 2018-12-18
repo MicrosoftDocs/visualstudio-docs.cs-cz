@@ -1,5 +1,5 @@
 ---
-title: Vlastnosti – okno Přehled | Microsoft Docs
+title: Přehled okna Vlastnosti | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,43 +13,44 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e255795a52064723477eda4e1aca532adedb6be1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 42048c22498915cfc2d73e691ed49d5790193854
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39510780"
 ---
-# <a name="properties-window-overview"></a>Přehled vlastností okna
-**Vlastnosti** okno se používá k zobrazení vlastností objektů vybraných v dva hlavní typy k dispozici v systému windows [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrované vývojové prostředí (IDE). Jsou tyto dva typy systému windows:  
+# <a name="properties-window-overview"></a>Přehled okna Vlastnosti
+**Vlastnosti** okno se používá k zobrazení vlastností objektů vybraných v dva hlavní typy dostupné v systému windows [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrované vývojové prostředí (IDE). Jsou tyto dva typy systému windows:  
   
--   Nástroje systému windows, jako je například Průzkumník řešení, zobrazení tříd a objektů prohlížeče  
+-   Okna nástrojů, jako je například Průzkumník řešení, zobrazení tříd a objektů prohlížeče  
   
--   Windows dokument obsahující tyto editory a návrháři jako Návrhář formulářů, editoru XML a HTML editor  
+-   Okna dokumentu obsahující takové editory a návrháře jako Návrháře formulářů, editoru XML a editoru HTML  
   
 ## <a name="using-the-properties-window"></a>Pomocí okna Vlastnosti  
- **Vlastnosti** okno zobrazuje vlastnosti jeden nebo více vybraných položek. Pokud je vybraných více položek, zobrazí se průnik všechny vlastnosti pro všechny vybrané objekty.  
+ **Vlastnosti** okně zobrazí vlastnosti jednoho nebo více vybraných položek. Pokud je vybráno více položek, zobrazí se průnik všechny vlastnosti pro všechny vybrané objekty.  
   
- Události související s vybraný objekt v okně návrhu formuláře nebo editor HTML pomocí metadat modelu COM + se zobrazují v **vlastnosti** okno. Například můžete vybrat tlačítko a zobrazit související události, jako například `OnClick` událostí, které může být na toto tlačítko.  
+ Události související s vybraným objektem v okně návrhu formuláře nebo editoru HTML pomocí metadat modelu COM + se zobrazují v **vlastnosti** okna. Například můžete vybrat tlačítko a zobrazit související události, jako například `OnClick` události, které lze propojit na toto tlačítko.  
   
- Události zobrazené v **vlastnosti** okno se primárně používají s objekty, které jsou vázány na kódu. Pokud upravujete formát souboru, který nemá nic dělat s kód, ale nebudete mít žádné události. Události se zobrazí pouze v **vlastnosti** okno při vytvoření vazby mezi systémem kódu a určité události související s konkrétní objekty. Příkladem může být kódu na pozadí vybraný objekt, který spouští při aktivaci tento objekt.  
+ Události zobrazené v **vlastnosti** okno se primárně používají s objekty, které jsou vázány na kód. Pokud upravujete soubor formátu, který není nutné nic dělat s kódem, nebudete mít žádné události. Události se zobrazí pouze v **vlastnosti** okno po vytvoření vazby mezi spouštěním kódu určitých událostí spojených s konkrétní objekty. Příklad tohoto by kódu na pozadí vybraného objektu, který se spustí při aktivaci tohoto objektu.  
   
- Následující tabulka uvádí primární rozhraní používaných **vlastnosti** okno.  
+ V následující tabulce jsou uvedeny primární rozhraní používaných **vlastnosti** okna.  
   
 |Název rozhraní|Popis|  
 |--------------------|-----------------|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties>|Obsahuje seznam kategorií, které **vlastnosti** okno a každé vlastnosti se mapuje na kategorie.|  
-|[IDispatch – rozhraní](https://msdn.microsoft.com/library/windows/desktop/ms221608.aspx)|Poskytuje metody a vlastnosti, které chcete programování nástroje a další aplikace, které podporují automatizace objektu.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IProvidePropertyBuilder>|Obsahuje znak výpustky (...) tlačítka názvem *počítačů* , otevřete modálních dialogových oken implementované samotného objektu. Použít, když hodnota není snadno zadaný uživatelem v textovém poli. Například se může použít k otevření volby barev, které určuje hodnoty RGB pro vás.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer>|Poskytuje přístup k objektům použít k aktualizaci informací zobrazených v **vlastnosti** okno. <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> je implementováno modulem VSPackages pro každé okno, který obsahuje vybrat objekty s souvisejících vlastností, který se má zobrazit.|  
-|<xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo>|Poskytuje informace o typu objektu, například metody rozhraní a pole do struktury.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection>|Umožňuje VSPackages přijímat oznámení o události výběr a načíst informace o aktuální projekt hierarchii, položky, hodnota elementu a kontext uživatelského rozhraní příkazů.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsMultiItemSelect>|Poskytuje prostředí s přístupem k více výběrů.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing>|Použitý k poskytnutí lokalizovaných názvů na některé vlastnosti zobrazené na **vlastnosti** okno.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsSelectionEvents>|Upozorní registrované VSPackages změn pro aktuální výběr, hodnota elementu nebo kontext uživatelského rozhraní příkazů.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackSelectionEx>|Upozorní prostředí změny v aktuálním výběru a poskytuje přístup k hierarchii a položku informace týkající se nového výběru.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties>|Obsahuje seznam kategorií, které mají **vlastnosti** okno a jednotlivých vlastností se mapuje na kategorie.|  
+|[Rozhraní IDispatch](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)|Poskytuje metody a vlastnosti programovací nástroje a další aplikace, které podporují automatizaci objektu.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IProvidePropertyBuilder>|Obsahuje tlačítko se třemi tečkami (...) tlačítka volá *tvůrci* , který otevře modální dialogové okno windows implementované samotného objektu. Použít, pokud hodnota není snadno zadaný uživatelem v textovém poli. Například se může použít k otevření barvu ovládacího prvku pro výběr, který určuje hodnotu RGB za vás.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer>|Poskytuje přístup k objektům, které používá k aktualizaci informací zobrazených v **vlastnosti** okna. <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> je implementováno rozšíření VSPackages pro každé okno, které obsahuje volitelný objekty s souvisejících vlastností, který se má zobrazit.|  
+|<xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo>|Poskytuje informace o typu objektu, jako jsou metody rozhraní a pole struktury.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection>|Umožňuje rozšíření VSPackages, na které přijde upozornění výběr události a k načtení informací o aktuálním hierarchie projektu, položky, hodnota elementu a kontextu uživatelského rozhraní příkazového.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsMultiItemSelect>|Poskytuje prostředí, které nabízí přístup k více výběrů.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsPerPropertyBrowsing>|Používá k poskytování lokalizované názvy na některé vlastnosti zobrazené **vlastnosti** okna.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsSelectionEvents>|Upozorní registrovaných rozšíření VSPackages na změny aktuálního výběru, hodnota elementu nebo příkaz kontextu uživatelského rozhraní.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackSelectionEx>|Upozorní prostředí, které ke změně aktuálního výběru a poskytuje přístup k informacím o hierarchii a položky týkající se nový výběr.|  
   
- Další informace o `IDispatch`, najdete v knihovně MSDN.  
+ Další informace o `IDispatch`, naleznete v knihovně MSDN.  
   
 ## <a name="see-also"></a>Viz také  
- [Rozšíření vlastnosti](../../extensibility/internals/extending-properties.md)   
+ [Rozšíření vlastností](../../extensibility/internals/extending-properties.md)   
  [Pole a rozhraní okna Vlastnosti](../../extensibility/internals/properties-window-fields-and-interfaces.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProviderDirect::GetCurrentModulesInfo | Microsoft Docs
+title: IDebugSymbolProviderDirect::GetCurrentModulesInfo | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,11 +14,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 37e6922a81889c4350ec92ded3ad4497ccff789d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: af5954fb8cd527af526702d8e290c879caa04f46
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49875850"
 ---
 # <a name="idebugsymbolproviderdirectgetcurrentmodulesinfo"></a>IDebugSymbolProviderDirect::GetCurrentModulesInfo
 Načte informace o modulech ve skupině symbol.  
@@ -47,22 +48,22 @@ int GetCurrentModulesInfo(
   
 #### <a name="parameters"></a>Parametry  
  `pCount`  
- [v] Počet modulů v `ppGuids` pole.  
+ [in] Počet modulů v `ppGuids` pole.  
   
  `ppGuids`  
- [v] Pole, které obsahuje jedinečné identifikátory pro moduly.  
+ [in] Pole, které obsahuje jedinečné identifikátory pro moduly.  
   
  `pADIds`  
- [v] Identifikátory pro domény aplikace.  
+ [in] Identifikátory pro domény aplikace.  
   
  `pCurrentState`  
- [v] Aktuální stav skupiny symbol.  
+ [in] Aktuální stav skupiny symbol.  
   
  `ppCDModItfs`  
  [out] Vrátí objekt, který obsahuje moduly ve skupině symbol.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)

@@ -1,6 +1,7 @@
 ---
-title: Práce s 3D modely
+title: Práce se 3D modely
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: fa035091-1354-4d1c-be44-4fb83860466f
@@ -9,27 +10,28 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 539bcb9e0f5e1d2c439b372989e0e245737b478f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d38eb26e40d78ccdca57110d5a7b7966393e7859
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39077825"
 ---
 # <a name="work-with-3d-models"></a>Práce s 3D modely
 
-Model editoru v sadě Visual Studio slouží k vytváření 3D modelů. Můžete vytvořit modely v založené na rozhraní DirectX hry nebo aplikace.
+Editor modelů v sadě Visual Studio můžete použít k vytvoření 3D modelů. Můžete použít modelů v založené na rozhraní DirectX hře nebo aplikaci.
 
 ## <a name="3d-models"></a>3D modely
 
-3D modely definovat tvaru objektů, které jsou v 3D scény. Modely mohou být základní solitary objekty, komplexní objekty, které jsou vybrat z hierarchie nástroje základních objektů, nebo dokonce celé 3D scény. 3D objektu se skládá z bodů v 3D prostoru (označované jako *vrcholy*), indexy, které definují trojúhelníčky, čáry nebo jiných primitivních elementů, které se skládají z těchto bodů a atributy, které se mohou vztahovat na vrchol nebo na primitivní – pro v příkladu normály. Kromě toho některé informace mohou vztahovat na základě jednotlivé objekty, například které shaderu a textury získáte objekt její vzhled jedinečný.
+3D modely definovat tvar objektů, protože existují ve 3D scéně. Modely mohou být základní solitary objekty, složité objekty, které jsou vytvořené z hierarchie základních objektů, nebo dokonce celé 3D scény. 3D objektu je tvořen body v 3D prostoru (označované jako *vrcholy*), indexy, které definují trojúhelníky řádky a dalších primitivních elementů, které se skládají z těchto bodů a atributy, které se mohou vztahovat na vrchol nebo na primitivní – pro Příklad, normály. Kromě toho některé informace mohou vztahovat na jednotlivých objektů, například jaké shaderu a textury vám poskytne objekt jedinečný vzhled.
 
-Editor modelu je jediný nástroj je nutné vytvořit základní 3D modely – s vlastnosti materiálu, textury a pixelů shadery –, můžete použít v hry nebo aplikace. Nebo můžete vytvořit zástupný symbol modely, které budou používat při vytváření prototypu a testování před zaujmout umělci finalizace modely.
+Editor modelů je pouze nástroj budete potřebovat k vytvoření základních 3D modelů – s vlastností materiálu, textury a pixel shaderů –, který vám pomůže ve hře nebo aplikaci. Nebo můžete vytvořit zástupce modely pro vytváření prototypů a testování před zapojení animátorům finalize modely.
 
-Můžete taky editoru modelu chcete zobrazit stávající 3D modely, které byly vytvořeny pomocí nástrojů pro plně funkční a o jejich úpravu, pokud zjistíte problémy s obrázky prostředky.
+Editor modelů můžete použít také k zobrazení existujících 3D modelů, které byly vytvořeny pomocí nástrojů pro plně funkční a jejich změny, pokud zjistíte problémy v prostředků.
 
 ## <a name="related-topics"></a>Související témata
 
 |Název|Popis|
 |-----------|-----------------|
-|[Editor modelů](../designers/model-editor.md)|Popisuje, jak použití editoru modelu pro práci s 3D modelů.|
-|[Příklady editoru modelů](../designers/model-editor-examples.md)|Obsahuje odkazy na témata, která ukazují, jak provádět běžné 3D modelování úlohy pomocí editoru modelu.|
+|[Editor modelů](../designers/model-editor.md)|Popisuje způsob použití Editoru modelů pro práci s 3D modely.|
+|[Příklady editoru modelů](../designers/model-editor-examples.md)|Obsahuje odkazy na témata, která ukazují, jak provádět běžné 3D modelování úlohy pomocí Editoru modelů.|

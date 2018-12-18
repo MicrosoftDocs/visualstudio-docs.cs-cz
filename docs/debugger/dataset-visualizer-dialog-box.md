@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31457264"
 ---
 # <a name="dataset-visualizer-dialog-box"></a>Dialogové okno Vizualizér DataSetu
 Vizualizér datasetu umožňuje zobrazit obsah datovou sadu, DataTable, DataView nebo DataViewManager objektu. Kliknutím na ikonu lupy, který se zobrazí vedle hodnotu pro jeden z těchto objektů v okně proměnné ladicí program nebo v datového tipu dostanete tento vizualizér.  

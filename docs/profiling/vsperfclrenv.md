@@ -15,17 +15,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d0e459fe1bd9960c46a1816add1f79e4d5507d5
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 5623cfc9d6f72805e4ced489ef7a786aaad155e6
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34446228"
 ---
 # <a name="vsperfclrenv"></a>VSPerfCLREnv
 
 Vsperfclrenv – nástroj slouží k nastavení proměnných prostředí, které jsou nutné k profilu aplikace rozhraní .NET Framework. Používá následující syntaxi:
 
-```
+```cmd
 VsPerfCLREnv [/option]
 ```
 
@@ -45,7 +46,7 @@ Profilace interakce vrstvy poskytuje další informace o dotazech ADO.NET ve ví
 
 Následující příklad obsahuje dat interakce vrstev v profilaci spuštění, které používá metody vzorkování:
 
-```
+```cmd
 VSPerfCLREnv /SampleOn
 VSPerfCLREnv /InteractionOn
 VSPerfCmd /Start:Sample /Output:MyApp.exe.vsp /Launch:MyApp.exe
@@ -53,7 +54,7 @@ VSPerfCmd /Start:Sample /Output:MyApp.exe.vsp /Launch:MyApp.exe
 
 Následující příklad obsahuje dat interakce vrstev při vytváření profilů spuštění pro službu systému Windows:
 
-```
+```cmd
 VSPerfCLREnv /GlobalSampleOn
 VSPerfCLREnv /GlobalInteractionOn
 REM Restart the computer and start the service
@@ -112,4 +113,4 @@ Pokud během profilace nebyl nastaven správný prostředí, upozornění je zaz
 
 ## <a name="see-also"></a>Viz také
 
-[Profilace z příkazového řádku](../profiling/using-the-profiling-tools-from-the-command-line.md)
+[Profil z příkazového řádku](../profiling/using-the-profiling-tools-from-the-command-line.md)

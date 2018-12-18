@@ -1,5 +1,5 @@
 ---
-title: DEBUGREF_INFO_FLAGS | Microsoft Docs
+title: DEBUGREF_INFO_FLAGS | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f5864b3503b19e8a473f45e4167aad835181da50
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9957b0aaf81048c5040e3f7ff54f3fa9be742dc1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49858560"
 ---
 # <a name="debugrefinfoflags"></a>DEBUGREF_INFO_FLAGS
-Určuje, jaké informace načíst o ladění referenční objekt.  
+Určuje, jaké informace se mají načíst informace o ladění referenční objekt.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -57,38 +58,38 @@ public enum enum_DEBUGREF_INFO_FLAGS {
   
 ## <a name="members"></a>Členové  
  DEBUGREF_INFO_NAME  
- Inicializace nebo pomocí `bstrName` pole ve struktuře.  
+ Inicializace/použít `bstrName` pole ve struktuře.  
   
  DEBUGREF_INFO_TYPE  
- Inicializace nebo pomocí `bstrType` pole ve struktuře.  
+ Inicializace/použít `bstrType` pole ve struktuře.  
   
  DEBUGREF_INFO_VALUE  
- Inicializace nebo pomocí `bstrValue` pole ve struktuře.  
+ Inicializace/použít `bstrValue` pole ve struktuře.  
   
  DEBUGREF_INFO_ATTRIB  
- Inicializace nebo pomocí `dwAttrib` pole ve struktuře.  
+ Inicializace/použít `dwAttrib` pole ve struktuře.  
   
  DEBUGREF_INFO_REFTYPE  
- Inicializace nebo pomocí `dwRefType` pole ve struktuře.  
+ Inicializace/použít `dwRefType` pole ve struktuře.  
   
  DEBUGREF_INFO_REF  
- Inicializace nebo pomocí `pReference` pole ve struktuře.  
+ Inicializace/použít `pReference` pole ve struktuře.  
   
  DEBUGREF_INFO_VALUE_AUTOEXPAND  
- Pole hodnoty musí obsahovat hodnotu rozšířit automaticky, pokud je k dispozici pro tento typ objektu.  
+ V poli hodnota by měla obsahovat hodnotu rozšířit automaticky, pokud je k dispozici pro tento typ objektu.  
   
  DEBUGREF_INFO_NONE  
  Určuje, jestli jsou nastavené žádné příznaky.  
   
  DEBUGREF_INFO_ALL  
- Určuje masku příznaků.  
+ Označuje masku příznaky.  
   
 ## <a name="remarks"></a>Poznámky  
- Tyto příznaky jsou předávány [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md) a [GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md) metody označíte, které pole [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) struktura mají být inicializován.  
+ Tyto příznaky jsou předány [EnumChildren](../../../extensibility/debugger/reference/idebugreference2-enumchildren.md) a [GetReferenceInfo](../../../extensibility/debugger/reference/idebugreference2-getreferenceinfo.md) metody označíte, která pole [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) struktury mají být inicializovány.  
   
- Použít pro `dwFields` členem `DEBUG_REFERENCE_INFO` struktura označuje pole, která je platná a použitá při vrácení strukturu.  
+ Používá pro `dwFields` člena `DEBUG_REFERENCE_INFO` struktury k označení pole, která se používá a je platný vrátila strukturu.  
   
- Tyto hodnoty mohou být kombinovány s bitové `OR`.  
+ Tyto hodnoty lze kombinovat pomocí logické bitové `OR`.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

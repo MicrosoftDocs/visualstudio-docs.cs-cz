@@ -1,5 +1,5 @@
 ---
-title: Vytvoření základní editoru a registrace typ souboru Editor | Microsoft Docs
+title: Základní Editor vytváří a registruje typem souboru Editor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,122 +13,123 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6bb9b9443a60e54d875d6e3992a18ac1f0691244
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3e00b96d1f5361d3d5260296532be47636f430d6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49921454"
 ---
-# <a name="walkthrough-creating-a-core-editor-and-registering-an-editor-file-type"></a>Návod: Vytvoření základní editoru a registraci typu souboru editoru
-Tento návod ukazuje, jak vytvořit VSPackage začínající [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] základní editor, pokud soubor, který má příponu názvu souboru .myext je načíst.  
+# <a name="walkthrough-create-a-core-editor-and-registering-an-editor-file-type"></a>Návod: Vytvoření základní editor a registraci typu souboru editoru
+Tento návod ukazuje, jak vytvořit VSPackage, která se spustí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] základním editoru při otevření souboru se *.myext* příponu názvu souboru je načtena.  
   
 ## <a name="prerequisites"></a>Požadavky  
- Chcete-li provést tento postup, je nutné nainstalovat sadu Visual Studio SDK. Další informace najdete v tématu [Visual Studio SDK](../extensibility/visual-studio-sdk.md).  
+ Chcete-li postupovat podle tohoto návodu, je nutné nainstalovat sadu Visual Studio SDK. Další informace najdete v tématu [Visual Studio SDK](../extensibility/visual-studio-sdk.md).  
   
-## <a name="locations-for-the-visual-studio-package-project-template"></a>Umístění pro šablony projektu balíček Visual Studio  
+## <a name="locations-for-the-visual-studio-package-project-template"></a>Umístění pro Visual Studio balíček šablony projektu  
  Šablona projektu balíček Visual Studio najdete ve třech různých umístěních v **nový projekt** dialogové okno:  
   
-1.  V části rozšiřitelnosti jazyka Visual Basic. Je výchozí jazyk projektu jazyka Visual Basic.  
+1.  V části **rozšiřitelnosti Visual Basic**. Je výchozí jazyk projektu jazyka Visual Basic.  
   
-2.  V části C# – rozšiřitelnost. Je výchozí jazyk projektu C#.  
+2.  V části **rozšíření jazyka C#**. Je výchozí jazyk projektu C#.  
   
-3.  V části Další typy rozšiřitelnost projektů. Výchozí jazyk projektu je C++.  
+3.  V části **jiný projekt typy rozšíření**. Výchozí jazyk projektu je C++.  
   
-### <a name="to-create-the-vspackage"></a>Chcete-li vytvořit VSPackage  
+### <a name="to-create-the-vspackage"></a>Vytvoření sady VSPackage  
   
--   Spustit [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a vytvořte [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] VSPackage s názvem `MyPackage`, jak je uvedeno v [návod: vytváření VSPackage příkaz nabídky](http://msdn.microsoft.com/en-us/d699c149-5d1e-47ff-94c7-e1222af02c32).  
+- Spustit [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a vytvořit [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] VSPackage s názvem `MyPackage`, jak je uvedeno v [návod: vytvoření příkazu nabídky VSPackage](https://msdn.microsoft.com/library/d699c149-5d1e-47ff-94c7-e1222af02c32).  
   
 ### <a name="to-add-the-editor-factory"></a>Chcete-li přidat objekt factory editoru  
   
-1.  Klikněte pravým tlačítkem myši **MyPackage** projektu, přejděte na **přidat** a pak klikněte na **třída**.  
+1. Klikněte pravým tlačítkem myši **MyPackage** projektu, přejděte na **přidat**a potom klikněte na tlačítko **třídy**.  
   
-2.  V **přidat novou položku** dialogové okno zkontrolujte, zda **– třída** je vybraná šablona, typ `EditorFactory.cs` pro název a pak klikněte na tlačítko **přidat** přidat třídu do projektu.  
+2. V **přidat novou položku** dialogové okno pole, ujistěte se, že **třídy** šablonu vyberou, typ `EditorFactory.cs` pro název a pak klikněte na tlačítko **přidat** přidání třídy do projektu.  
   
-     Soubor EditorFactory.cs musí být automaticky otevřen.  
+    *EditorFactory.cs* soubor by měl zobrazit automaticky.  
   
-3.  Následující sestavení odkazovat z vašeho kódu.  
+3. Odkazujte na následující sestavení z vašeho kódu.  
   
-    ```vb  
-    Imports System.Runtime.InteropServices  
-    Imports Microsoft.VisualStudio  
-    Imports Microsoft.VisualStudio.Shell  
-    Imports Microsoft.VisualStudio.Shell.Interop  
-    Imports Microsoft.VisualStudio.OLE.Interop  
-    Imports Microsoft.VisualStudio.TextManager.Interop  
-    Imports IOleServiceProvider = Microsoft.VisualStudio.OLE.Interop.IServiceProvider  
-    ```  
+   ```vb  
+   Imports System.Runtime.InteropServices  
+   Imports Microsoft.VisualStudio  
+   Imports Microsoft.VisualStudio.Shell  
+   Imports Microsoft.VisualStudio.Shell.Interop  
+   Imports Microsoft.VisualStudio.OLE.Interop  
+   Imports Microsoft.VisualStudio.TextManager.Interop  
+   Imports IOleServiceProvider = Microsoft.VisualStudio.OLE.Interop.IServiceProvider  
+   ```  
   
-    ```csharp  
-    using System.Runtime.InteropServices;  
-    using Microsoft.VisualStudio;  
-    using Microsoft.VisualStudio.Shell;  
-    using Microsoft.VisualStudio.Shell.Interop;  
-    using Microsoft.VisualStudio.OLE.Interop;  
-    using Microsoft.VisualStudio.TextManager.Interop;  
-    using IOleServiceProvider = Microsoft.VisualStudio.OLE.Interop.IServiceProvider;  
+   ```csharp  
+   using System.Runtime.InteropServices;  
+   using Microsoft.VisualStudio;  
+   using Microsoft.VisualStudio.Shell;  
+   using Microsoft.VisualStudio.Shell.Interop;  
+   using Microsoft.VisualStudio.OLE.Interop;  
+   using Microsoft.VisualStudio.TextManager.Interop;  
+   using IOleServiceProvider = Microsoft.VisualStudio.OLE.Interop.IServiceProvider;  
   
-    ```  
+   ```  
   
-4.  Přidejte identifikátor GUID `EditorFactory` třída přidáním `Guid` atribut bezprostředně před deklaraci třídy.  
+4. Přidejte identifikátor GUID `EditorFactory` třídy tak, že přidáte `Guid` atribut bezprostředně před deklaraci třídy.  
   
-     Nový identifikátor GUID můžete vygenerovat pomocí programu guidgen.exe [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] příkazového řádku, nebo kliknutím na **vytvořit GUID** na **nástroje** nabídky. Identifikátor GUID použít zde je pouze příklad; Nepoužívejte ho ve vašem projektu.  
+    Nový identifikátor GUID můžete vygenerovat pomocí *guidgen.exe* programování na [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] příkazového řádku, nebo kliknutím na **Create GUID** na **nástroje** nabídky. Identifikátor GUID se tady použít. je pouze příklad; Nepoužívejte ho ve vašem projektu.  
   
-    ```vb  
-    <Guid("0eea3187-c5fa-48d4-aa72-b5eecd3b17b1")> _  
-    ```  
+   ```vb  
+   <Guid("0eea3187-c5fa-48d4-aa72-b5eecd3b17b1")> _  
+   ```  
   
-    ```csharp  
-    [Guid("0eea3187-c5fa-48d4-aa72-b5eecd3b17b1")]   
-    ```  
+   ```csharp  
+   [Guid("0eea3187-c5fa-48d4-aa72-b5eecd3b17b1")]   
+   ```  
   
-5.  V definici třídy přidejte dva privátní proměnné tak, aby obsahovala balíček nadřazené a poskytovatele služeb.  
+5. V definici třídy přidejte dvě soukromé proměnné tak, aby obsahovala nadřazeného balíčku a poskytovatele služeb.  
   
-    ```vb  
-    Class EditorFactory  
-        Private parentPackage As Package  
-        Private serviceProvider As IOleServiceProvider  
-    ```  
+   ```vb  
+   Class EditorFactory  
+       Private parentPackage As Package  
+       Private serviceProvider As IOleServiceProvider  
+   ```  
   
-    ```csharp  
-    class EditorFactory  
-    {  
-        private Package parentPackage;  
-        private IOleServiceProvider serviceProvider;  
-    }  
+   ```csharp  
+   class EditorFactory  
+   {  
+       private Package parentPackage;  
+       private IOleServiceProvider serviceProvider;  
+   }  
   
-    ```  
+   ```  
   
-6.  Přidejte veřejnou třídu konstruktor, který přijímá jeden parametr typu <xref:Microsoft.VisualStudio.Shell.Package>:  
+6. Přidejte konstruktor veřejnou třídu, která přijímá jeden parametr typu <xref:Microsoft.VisualStudio.Shell.Package>:  
   
-    ```vb  
-    Public Sub New(ByVal parentPackage As Package)  
-        Me.parentPackage = parentPackage  
-    End Sub  
-    ```  
+   ```vb  
+   Public Sub New(ByVal parentPackage As Package)  
+       Me.parentPackage = parentPackage  
+   End Sub  
+   ```  
   
-    ```csharp  
-    public EditorFactory(Package parentPackage)  
-    {  
-        this.parentPackage = parentPackage;  
-    }  
-    ```  
+   ```csharp  
+   public EditorFactory(Package parentPackage)  
+   {  
+       this.parentPackage = parentPackage;  
+   }  
+   ```  
   
-7.  Změnit `EditorFactory` deklarace k odvozování z třídy <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> rozhraní.  
+7. Upravit `EditorFactory` deklarace jsou odvozeny z třídy <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> rozhraní.  
   
-    ```vb  
-    Class EditorFactory Implements IVsEditorFacto  
-    ```  
+   ```vb  
+   Class EditorFactory Implements IVsEditorFacto  
+   ```  
   
-    ```csharp  
-    class EditorFactory : IVsEditorFactory  
+   ```csharp  
+   class EditorFactory : IVsEditorFactory  
   
-    ```  
+   ```  
   
-8.  Klikněte pravým tlačítkem na <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>, klikněte na tlačítko **implementovat rozhraní**a potom klikněte na **implementace rozhraní explicitně**.  
+8. Klikněte pravým tlačítkem na <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory>, klikněte na tlačítko **implementovat rozhraní**a potom klikněte na tlačítko **implementovat rozhraní explicitně**.  
   
-     Tento postup přidá čtyři metody, které musí být implementován v <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> rozhraní.  
+    Tento krok přidává čtyři metody, které je třeba implementovat v <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> rozhraní.  
   
-9. Nahraďte obsah `IVsEditorFactory.Close` metoda následujícím kódem.  
+9. Nahraďte obsah `IVsEditorFactory.Close` metodu s následujícím kódem.  
   
     ```vb  
     Return VSConstants.S_OK  
@@ -150,7 +151,7 @@ Tento návod ukazuje, jak vytvořit VSPackage začínající [!INCLUDE[vsprvs](.
     return VSConstants.S_OK;  
     ```  
   
-11. Nahraďte obsah `IVsEditorFactory.MapLogicalView` metoda následujícím kódem.  
+11. Nahraďte obsah `IVsEditorFactory.MapLogicalView` metodu s následujícím kódem.  
   
     ```vb  
     Dim retval As Integer = VSConstants.E_NOTIMPL  
@@ -173,7 +174,7 @@ Tento návod ukazuje, jak vytvořit VSPackage začínající [!INCLUDE[vsprvs](.
     return retval;  
     ```  
   
-12. Nahraďte obsah `IVsEditorFactory.CreateEditorInstance` metoda následujícím kódem.  
+12. Nahraďte obsah `IVsEditorFactory.CreateEditorInstance` metodu s následujícím kódem.  
   
     ```vb  
     Dim retval As Integer = VSConstants.E_FAIL          
@@ -316,85 +317,85 @@ Tento návod ukazuje, jak vytvořit VSPackage začínající [!INCLUDE[vsprvs](.
     return retval;   
     ```  
   
-13. Kompilace projektu a ujistěte se, že nejsou žádné chyby.  
+13. Kompilace projektu a ujistěte se, že zde nejsou žádné chyby.  
   
 ### <a name="to-register-the-editor-factory"></a>K registraci objekt factory editoru  
   
-1.  V **Průzkumníku řešení**, poklikejte na soubor Resources.resx a otevře se v tabulce řetězec, ve kterém položka **řetězec1 je** vybrané.  
+1. V **Průzkumníka řešení**, dvakrát klikněte **Resources.resx** soubor a otevře se do tabulky řetězců, ve kterém položka **řetězec1 je** vybrané.  
   
-2.  Změna názvu identifikátor, který `IDS_EDITORNAME` a text, který se **MyPackage Editor.** Jako název vašeho editoru, zobrazí se tento řetězec.  
+2. Změna názvu identifikátor, který `IDS_EDITORNAME` a text, který má **MyPackage editoru.** Tento řetězec se zobrazí jako název editoru.  
   
-3.  Otevřete soubor VSPackage.resx a přidejte nový řetězce, nastavte na název **101** a hodnota, která má `IDS_EDITORNAME`. To poskytuje balíček s ID prostředku pro přístup k řetězec, který jste právě vytvořili.  
+3. Otevřít **VSPackage.resx** souboru, přidejte nový řetězec, nastavte název na **101**a nastavte hodnotu na `IDS_EDITORNAME`. Tento krok obsahuje balíček s ID prostředku pro přístup k řetězci, který jste vytvořili.  
   
-    > [!NOTE]
-    >  Pokud soubor VSPackage.resx obsahuje jiný řetězec, který `name` atribut nastaven na **101**, nahraďte jinou jedinečný, číselnou hodnotu, sem a v následujících krocích.  
+   > [!NOTE]
+   >  Pokud **VSPackage.resx** soubor obsahuje jiný řetězec, který `name` atribut nastaven na **101**, jiný jedinečný, číselná hodnota, nahraďte tady a v následujících krocích.  
   
-4.  V **Průzkumníku**, otevřete soubor MyPackagePackage.cs.  
+4. V **Průzkumníka řešení**, otevřete **MyPackagePackage.cs** souboru.  
   
-     Toto je soubor hlavní balíčku.  
+    Tento soubor je soubor hlavního balíčku.  
   
-5.  Přidejte následující atributy uživatele těsně před `Guid` atribut.  
+5. Přidejte následující atributy uživatele těsně před `Guid` atribut.  
   
-    ```vb  
-    <ProvideEditorFactoryAttribute(GetType(EditorFactory), 101)> _  
-    <ProvideEditorExtensionAttribute(GetType(EditorFactory), _  
-          ".myext", 32, NameResourceID:=101 )> _  
-    ```  
+   ```vb  
+   <ProvideEditorFactoryAttribute(GetType(EditorFactory), 101)> _  
+   <ProvideEditorExtensionAttribute(GetType(EditorFactory), _  
+         ".myext", 32, NameResourceID:=101 )> _  
+   ```  
   
-    ```csharp  
-    [ProvideEditorFactory(typeof(EditorFactory), 101)]  
-    [ProvideEditorExtension(typeof(EditorFactory),   
-          ".myext", 32, NameResourceID = 101)]   
-    ```  
+   ```csharp  
+   [ProvideEditorFactory(typeof(EditorFactory), 101)]  
+   [ProvideEditorExtension(typeof(EditorFactory),   
+         ".myext", 32, NameResourceID = 101)]   
+   ```  
   
-     <xref:Microsoft.VisualStudio.Shell.ProvideEditorExtensionAttribute> Atribut přidruží přípona souboru .myext vaše objekt factory editoru tak, aby vždycky, když soubor, který má, rozšíření je načtena, je vyvolána vaší objekt factory editoru.  
+    <xref:Microsoft.VisualStudio.Shell.ProvideEditorExtensionAttribute> Atribut přidruží *.myext* příponu s vaší továrna editoru souboru tak, aby pokaždé, když soubor, který je, že se načte rozšíření, je vyvolán objekt pro vytváření editoru.  
   
-6.  Přidat privátní proměnnou, která `MyPackage` třídy těsně před konstruktoru a dejte mu typ `EditorFactory`.  
+6. Přidejte privátní proměnnou, která `MyPackage` třídu před konstruktor a přiřaďte mu typ `EditorFactory`.  
   
-    ```vb  
-    Private editorFactory As EditorFactory  
-    ```  
+   ```vb  
+   Private editorFactory As EditorFactory  
+   ```  
   
-    ```csharp  
-    private EditorFactory editorFactory;  
-    ```  
+   ```csharp  
+   private EditorFactory editorFactory;  
+   ```  
   
-7.  Najít `Initialize` – metoda (možná budete muset otevřít `Package Members` Skrytá oblast) a přidejte následující kód po volání `base.Initialize()`.  
+7. Najít `Initialize` – metoda (možná budete muset otevřít `Package Members` počet skrytých oblastí:) a přidejte následující kód po volání `base.Initialize()`.  
   
-    ```vb  
-    'Create our editor factory and register it.   
-    Me.editorFactory = New EditorFactory(Me)  
-    MyBase.RegisterEditorFactory(Me.editorFactory)  
-    ```  
+   ```vb  
+   'Create our editor factory and register it.   
+   Me.editorFactory = New EditorFactory(Me)  
+   MyBase.RegisterEditorFactory(Me.editorFactory)  
+   ```  
   
-    ```csharp  
-    // Create our editor factory and register it.  
-    this.editorFactory = new EditorFactory(this);  
-    base.RegisterEditorFactory(this.editorFactory);  
+   ```csharp  
+   // Create our editor factory and register it.  
+   this.editorFactory = new EditorFactory(this);  
+   base.RegisterEditorFactory(this.editorFactory);  
   
-    ```  
+   ```  
   
-8.  Kompilace programu a ujistěte se, že nejsou žádné chyby.  
+8. Kompilace programu a ujistěte se, že zde nejsou žádné chyby.  
   
-     Tento krok zaregistruje objekt factory editoru experimentální podregistru pro [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Pokud se zobrazí výzva k přepsání souboru resource.h, klikněte na tlačítko **OK**.  
+    Tento krok zaregistruje objekt factory editoru v experimentální podregistru pro [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Pokud se zobrazí výzva k přepsání *resource.h* souboru, klikněte na tlačítko **OK**.  
   
-9. Vytvoření ukázkového souboru s názvem TextFile1.myext.  
+9. Vytvoření ukázkového souboru s názvem *TextFile1.myext*.  
   
-10. Stiskněte klávesu **F5** otevřete instanci experimentální [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
+10. Stisknutím klávesy **F5** otevřete instancí experimentální instanci [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
   
-11. V experimentální [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]na **soubor** nabídky, přejděte na příkaz **otevřete** a pak klikněte na **soubor**.  
+11. V experimentální instanci [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]na **souboru** nabídky, přejděte k **otevřít** a potom klikněte na tlačítko **souboru**.  
   
-12. Najít TextFile1.myext a pak klikněte na tlačítko **otevřete**.  
+12. Najít **TextFile1.myext** a potom klikněte na tlačítko **otevřít**.  
   
-     Soubor by měl nyní načíst.  
+     Nyní by se měly načíst soubor.  
   
 ## <a name="robust-programming"></a>Robustní programování  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Základní editor zpracovává širokou škálu typy textový soubor a spolupracuje úzce s jazyk služeb nabízejí bohatou sadu funkcí, jako je například zvýraznění syntaxe závorky a seznamy dokončení slova a člen dokončení IntelliSense. Pokud pracujete s textové soubory, můžete použít editor základní spolu s vlastní jazyk služba, která podporuje vaše konkrétní typy souborů.  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Základní editor zpracovává širokou škálu typů textového souboru a funguje úzce u jazykové služby poskytují bohatou sadu funkcí, jako jsou zvýraznění syntaxe, párování složených závorek a slova doplňování technologie IntelliSense, a seznam dokončování členů. Pokud pracujete s textové soubory, můžete použít základní editor společně se službou vlastního jazyka, který podporuje vaši určité typy souborů.  
   
- Vyvolat VSPackage [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] základní editor zadáním objekt factory editoru. Tento objekt factory editoru se používá, když je načten soubor, který je k ní přidružena. Pokud soubor je součástí projektu, pak editoru základní se automaticky vyvolá, pokud vaše VSPackage přepsat. Ale pokud je soubor načten mimo projekt, pak editoru základní musí explicitně vyvolat vaší VSPackage.  
+ Můžete vyvolat VSPackage [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] základní editor zadáním objektu pro vytváření editoru. Tento objekt pro vytváření editoru se používá pokaždé, když je načten soubor, který k němu má přidružené. Pokud je soubor součástí projektu, základní editor je automaticky vyvolána, pokud není přepsán vašeho balíčku VSPackage. Nicméně pokud je soubor načten mimo projekt, základní editor musí explicitně vyvolat vašeho balíčku VSPackage.  
   
- Další informace o editoru jádra najdete v tématu [v editoru v základní](../extensibility/inside-the-core-editor.md).  
+ Další informace o základní editor najdete v tématu [uvnitř základní editor](../extensibility/inside-the-core-editor.md).  
   
-## <a name="see-also"></a>Viz také  
- [V editoru jádra](../extensibility/inside-the-core-editor.md)   
- [Vytváření instancí editoru základní pomocí starší verze rozhraní API](../extensibility/instantiating-the-core-editor-by-using-the-legacy-api.md)
+## <a name="see-also"></a>Viz také:  
+ [V editoru core](../extensibility/inside-the-core-editor.md)   
+ [Vytvořit instanci editoru core pomocí starší verze rozhraní API](../extensibility/instantiating-the-core-editor-by-using-the-legacy-api.md)

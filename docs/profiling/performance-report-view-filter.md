@@ -13,14 +13,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6bd2b335635f4fc83eb4b0857f9b5d785eb9dccc
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 17fc42eab94d98ceb636e53e3ed6efd39a08f920
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35254267"
 ---
 # <a name="performance-report-view-filter"></a>Filtr zobrazení sestav výkonu
-Filtr zobrazení sestav profileru okna se nachází v horní části okna sestavy výkon. Pokud ho nevidíte, klikněte **zobrazit filtru** tlačítko.  
+**Filtr zobrazení sestav profileru** se nachází v horní části okna **Sestava výkonu** okno. Pokud ho nevidíte, klikněte **zobrazit filtru** tlačítko.  
   
  Můžete upravit každou klauzuli filtru upřesňující výsledky. Následující sloupce jsou k dispozici v Tvůrce filtru.  
   
@@ -35,8 +36,8 @@ Filtr zobrazení sestav profileru okna se nachází v horní části okna sestav
   
  Z **značky** zobrazení sestavy můžete vygenerovat klauzulí filtru k omezení dat v zobrazení sestav k datům, která se shromažďují mezi dvě značky. Vyberte značky, které chcete začínat a končit sestav dat, klikněte pravým tlačítkem a vyberte buď **přidat filtr na značky** nebo **přidat filtr na časová razítka**. Oba filtry omezení dat v aktuálním datového souboru stejné značky span; **Přidat filtr na značky** lze použít pro další soubory .vsp.  
   
- Uložení se filtr, klikněte na tlačítko **exportovat filtru** na panelu nástrojů Sestava výkonu a pak zadejte umístění a název souboru .vspf. Chcete-li načíst dříve uložený filtr, klikněte na tlačítko **filtr pro Import** a vyhledejte soubor uložený filtr. Filtr souborů mohou také použity k filtrování datových souborů na počítačích, které mají samostatné profilace nástroje nainstalované. Další informace najdete v tématu [vsperfreport –](../profiling/vsperfreport.md).  
+ Uložení se filtr, klikněte na tlačítko **exportovat filtru** na **Sestava výkonu** panelu nástrojů a pak zadejte umístění a název pro. *vspf* souboru. Chcete-li načíst dříve uložený filtr, klikněte na tlačítko **filtr pro Import** a vyhledejte soubor uložený filtr. Filtr souborů mohou také použity k filtrování datových souborů na počítačích, které mají samostatné profilace nástroje nainstalované. Další informace najdete v tématu [vsperfreport –](../profiling/vsperfreport.md).  
   
-## <a name="see-also"></a>Viz také  
- [Analýza výkonu nástrojů pro Data](../profiling/analyzing-performance-tools-data.md)   
+## <a name="see-also"></a>Viz také:  
+ [Analýza dat nástrojů výkonu](../profiling/analyzing-performance-tools-data.md)   
  [VSPerfReport](../profiling/vsperfreport.md)

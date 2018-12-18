@@ -1,5 +1,5 @@
 ---
-title: THUNK_ORDINAL | Microsoft Docs
+title: THUNK_ORDINAL – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b0701706deee68cf2dde522d48f9aa62b9a00142
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: a92e0fa81bdfc7c33e790c5022c2fbe341d632be
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49847705"
 ---
 # <a name="thunkordinal"></a>THUNK_ORDINAL
-Označí převodu typů.  
+Určuje typy převodní rutina.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,28 +42,28 @@ typedef enum THUNK_ORDINAL {
   
 ## <a name="elements"></a>Elementy  
  THUNK_ORDINAL_NOTYPE  
- Standardní převodu.  
+ Standardní převodní rutina.  
   
  THUNK_ORDINAL_ADJUSTOR  
- A `this` likvidátor převodu.  
+ A `this` likvidátor převodní rutina.  
   
  THUNK_ORDINAL_VCALL  
- Virtuální volání převodu.  
+ Virtuální volání převodní rutina.  
   
  THUNK_ORDINAL_PCODE  
- P-kód převodu.  
+ Převodní rutina P-code.  
   
  THUNK_ORDINAL_LOAD  
- Zpoždění zatížení převodu.  
+ Převodní rutina zatížení zpoždění.  
   
  THUNK_ORDINAL_TRAMP_INCREMENTAL  
- Přírůstkové trampoline převodu (trampoline převodu se používá k kolísají volání z jednoho paměťový prostor na jiný).  
+ Převodní rutina přírůstkové trampoline (trampoline převodní rutina se používá k odraz volání z jednoho paměťového prostoru do jiného).  
   
  THUNK_ORDINAL_TRAMP_BRANCHISLAND  
- Převodu trampoline bod větve.  
+ Převodní rutina trampoline bod větve.  
   
 ## <a name="remarks"></a>Poznámky  
- Volání se vrátí hodnoty v tento výčet [idiasymbol::get_thunkordinal –](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md) metoda.  
+ Během volání se vrátí hodnoty v tento výčet [idiasymbol::get_thunkordinal –](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md) metody.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: cvconst.h  

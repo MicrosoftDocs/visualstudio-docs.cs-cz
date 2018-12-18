@@ -1,5 +1,5 @@
 ---
-title: METADATA_ADDRESS_METHOD | Microsoft Docs
+title: METADATA_ADDRESS_METHOD | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0da11c3f3f517f15d8ce4430f9437d476679f5b2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 481e4c76869e4a352607835800d232c3d2075569
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49917768"
 ---
 # <a name="metadataaddressmethod"></a>METADATA_ADDRESS_METHOD
 Tato struktura představuje adresu metody třídy.  
@@ -49,13 +50,13 @@ public struct METADATA_ADDRESS_METHOD {
  [C++] `_mdToken` je `typedef` pro 32bitovou verzi `int`.  
   
  dwOffset  
- Posun od začátku třídy k této metodě (může představovat posun do tabulce vtable).  
+ Posun od začátku třídy k této metodě (může představovat posun v tabulce vtable).  
   
  verze datového skladu  
- Verze metodu (Tato hodnota je jedinečné pro zprostředkovatele symbol).  
+ Verze – metoda (Tato hodnota je jedinečné pro poskytovatele symbolů).  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je součástí sjednocení v [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) struktury, kdy `dwKind` pole z `DEBUG_ADDRESS_UNION` struktura je nastaven na `ADDRESS_KIND_METHOD` (hodnotu z [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) výčet).  
+ Tato struktura je součástí sjednocení v [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) strukturu, kdy `dwKind` pole `DEBUG_ADDRESS_UNION` struktura je nastavena na `ADDRESS_KIND_METHOD` (hodnotu z [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) výčet).  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: sh.h  

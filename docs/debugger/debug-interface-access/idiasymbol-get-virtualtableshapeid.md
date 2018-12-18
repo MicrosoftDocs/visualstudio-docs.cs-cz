@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_virtualtableshapeid – | Microsoft Docs
+title: Idiasymbol::get_virtualtableshapeid – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 694dddcbfed79a66c27e2069b3fc7aab7ce7c5f0
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 95e911bce6e09cdc8fc474ffbe42446eb4f1ae5b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49850903"
 ---
 # <a name="idiasymbolgetvirtualtableshapeid"></a>IDiaSymbol::get_virtualTableShapeId
-Načte identifikátor virtuální tabulku tvar symbol symbolu.  
+Načte identifikátor virtuální tabulky tvar symbol symbolu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,16 +34,16 @@ HRESULT get_virtualTableShapeId (
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí ID symbol tvar virtuální tabulku symbolu.  
+ [out] Vrátí ID virtuální tabulky tvar symbol symbolu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` nebo chybový kód.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
 >  Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="remarks"></a>Poznámky  
- Identifikátor je jedinečný hodnota vytvořené DIA SDK k označení všechny symboly jako jedinečný.  
+ Identifikátor je jedinečná hodnota vytvořené DIA SDK označit všechny symboly jako jedinečný.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

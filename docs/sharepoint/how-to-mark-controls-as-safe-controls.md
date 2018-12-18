@@ -19,13 +19,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d703beb24821663b08ed69238fcf27e2a752d64b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 04470034f1fa1531a1677b4acd6b36f0b99c8a62
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37120272"
 ---
-# <a name="how-to-mark-controls-as-safe-controls"></a>Postupy: Označení ovládacích prvků jako bezpečných
+# <a name="how-to-mark-controls-as-safe-controls"></a>Postupy: označení ovládacích prvků jako bezpečných ovládacích prvků
   Pro zabezpečení SharePoint rozlišuje webových ovládacích prvků, které jsou chráněny před vložení skriptu a webové ovládací prvky, které nejsou. Chráněné ovládací prvky, nebo *bezpečné ovládací prvky*, dostanete nedůvěryhodným uživatelům. Ovládací prvky jako bezpečné ve bezpečné položky řízení vlastnosti položky projektu služby SharePoint nebo v můžete označit **návrháře balíčků** při přidávání sestavení do balíčku. Další informace naleznete v tématu  
   
  [soubor Web.config Změna nastavení](http://go.microsoft.com/fwlink/?LinkId=178965) a [registrace sestavení webové části jako bezpečné ovládací prvek](http://go.microsoft.com/fwlink/?LinkId=171013).  
@@ -35,7 +36,7 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="marking-safe-controls-in-the-safe-control-entries-property"></a>Označení bezpečné ovládací prvky ve vlastnosti položky bezpečné ovládací prvek  
   
-#### <a name="to-mark-controls-as-safe-or-unsafe-in-the-safe-control-entries-property"></a>K označení ovládacích prvků jako bezpečných nebo unsafe ve vlastnosti položky bezpečné řízení  
+#### <a name="to-mark-controls-as-safe-or-unsafe-in-the-safe-control-entries-property"></a>K označení ovládacích prvků jako bezpečných nebo unsafe ve vlastnosti položky bezpečné ovládací prvek
   
 1.  Vytvořte řešení služby SharePoint s projektem Visual webové části.  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="marking-safe-controls-in-the-package-designer"></a>Označení bezpečné ovládací prvky v návrháře balíčků  
   
-#### <a name="to-mark-controls-as-safe-or-unsafe-in-the-package-designer"></a>K označení ovládací prvky jako bezpečných nebo unsafe v návrháře balíčků  
+#### <a name="to-mark-controls-as-safe-or-unsafe-in-the-package-designer"></a>K označení ovládací prvky jako bezpečných nebo unsafe v návrháře balíčků
   
 1.  Vytvořte řešení služby SharePoint s projektem Visual webové části.  
   
@@ -67,11 +68,11 @@ ms.lasthandoff: 04/16/2018
   
      Si poznamenejte obor názvů ovládacího prvku, protože je používán později.  
   
-3.  Na řádku nabídek zvolte **sestavení**, **sestavit řešení** a tím projekt sestavit.  
+3.  Na řádku nabídek zvolte **sestavení** > **sestavit řešení** a tím projekt sestavit.  
   
 4.  Vytvořte další řešení služby SharePoint.  
   
-5.  V **Průzkumníku řešení**, otevřete místní nabídku pro soubor Package.Package a potom zvolte **otevřete** otevřete **návrháře balíčků**.  
+5.  V **Průzkumníku řešení**, otevřete místní nabídku pro *Package.Package* souboru a potom vyberte **otevřete** otevřete **návrháře balíčků**.  
   
 6.  V **návrháře balíčků**, vyberte **Upřesnit** kartě.  
   
@@ -100,7 +101,7 @@ ms.lasthandoff: 04/16/2018
     > [!NOTE]  
     >  **Název sestavení** hodnotu pro sestavení přidány prostřednictvím **Upřesnit** kartě **návrháře balíčků** nemůže být token, musí být sestavení se silným názvem. Další informace najdete v tématu [vytvoření a použití sestavení](http://go.microsoft.com/fwlink/?LinkId=177513).  
   
-13. Zvolte klávesy Tab můžete vytvořit další položka bezpečné řízení.  
+13. Vyberte **kartě** klíč k vytvoření další položka bezpečné řízení.  
   
 14. Vyberte **kliknutím sem přidejte novou položku** tlačítko znovu.  
   
@@ -114,10 +115,9 @@ ms.lasthandoff: 04/16/2018
     |Bezpečné|Vyberte **bezpečné** zaškrtávací políčko.|  
     |Bezpečné proti skriptu|Vyberte **skriptu bezpečné proti** zaškrtávací políčko.|  
   
-16. Zvolte klávesy Tab a pak **OK** tlačítko dialogové okno zavřete.  
+16. Vyberte **kartě** klíče a potom vyberte **OK** tlačítko dialogové okno zavřete.  
   
-## <a name="see-also"></a>Viz také  
- [Poskytnutí balení a informace o nasazení v položkách projektu](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)   
- [Balení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
-  
+## <a name="see-also"></a>Viz také:
+ [Zadejte informace o balení a nasazení v položkách projektu](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)   
+ [Balíček a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
   

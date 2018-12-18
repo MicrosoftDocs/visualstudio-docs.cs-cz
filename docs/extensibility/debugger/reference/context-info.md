@@ -1,5 +1,5 @@
 ---
-title: CONTEXT_INFO | Microsoft Docs
+title: CONTEXT_INFO | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fb634f59a3a7eb3b37e70dd87f48b22a07251d0e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b9ed1b803905f403e68053c157b40ec30dc03fbd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49840061"
 ---
 # <a name="contextinfo"></a>CONTEXT_INFO
-Tato struktura popisuje kontextu paměti nebo kontext kódu.  
+Tato struktura popisuje místní paměti nebo kontext kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,30 +53,30 @@ public struct CONTEXT_INFO {
   
 ## <a name="members"></a>Členové  
  dwFields  
- Kombinace příznaků z mu [CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md) výčet, který určuje pole, která jsou doplnit**.**  
+ Kombinace příznaků z mu [CONTEXT_INFO_FIELDS](../../../extensibility/debugger/reference/context-info-fields.md) výčet, který určuje, která pole jsou vyplněna<strong>.</strong>  
   
  bstrModuleUrl  
- Název modulu, kde se nachází kontextu.  
+ Název modulu, ve kterém se nachází kontextu.  
   
  bstrFunction  
- Název funkce, kde je umístěn daný kontext.  
+ Název funkce, kde se nachází kontextu.  
   
  posFunctionOffset  
- A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) struktura, která identifikuje posun řádku a ve sloupci funkce spojený s kontextem kódu.  
+ A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) strukturu, která identifikuje posun řádku a sloupci funkce přidružený kód kontextu.  
   
  bstrAddress  
  Adresa v kódu, kde se nachází daném kontextu.  
   
  bstrAddressOffset  
- Posun adresu v kódu, kde se nachází daném kontextu.  
+ Posun adresy v kódu, kde se nachází daném kontextu.  
   
  bstrAddressAbsolute  
  Absolutní adresa v paměti, kde se nachází daném kontextu.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je vrácená z volání [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md) metoda.  
+ Tato struktura je vrácená z volání [GetInfo](../../../extensibility/debugger/reference/idebugmemorycontext2-getinfo.md) metody.  
   
- Typické použití tato struktura je v podporu **paměti** okno ladění.  
+ Typickým použitím tato struktura je v podporu **paměti** okno ladění.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

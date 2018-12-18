@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::findchildren – | Microsoft Docs
+title: Idiasymbol::findchildren – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 042b02bda59bf064897b0badb24394fc10fb9197
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 107770d880a6ceae9cf58b3c56821c8077dfd272
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49941344"
 ---
 # <a name="idiasymbolfindchildren"></a>IDiaSymbol::findChildren
 Načte podřízené objekty daného symbolu.  
@@ -36,26 +37,26 @@ HRESULT findChildren (
   
 #### <a name="parameters"></a>Parametry  
  `symtag`  
- [v] Určuje symbol značky podřízených prvků mají být načteny, jak jsou definovány v [SymTagEnum – výčet](../../debugger/debug-interface-access/symtagenum.md). Nastavte na `SymTagNull` pro všechny podřízené objekty mají být načteny.  
+ [in] Určuje symbol značky podřízené položky, které se mají načíst, jak jsou definovány v [symtagenum – výčet](../../debugger/debug-interface-access/symtagenum.md). Nastavte na `SymTagNull` pro všechny podřízené objekty, které se mají načíst.  
   
  `name`  
- [v] Určuje název podřízených prvků mají být načteny. Nastavte na `NULL` pro všechny podřízené objekty mají být načteny.  
+ [in] Určuje název podřízenou položku, která se má načíst. Nastavte na `NULL` pro všechny podřízené objekty, které se mají načíst.  
   
  `compareFlags`  
- [v] Určuje možnosti porovnání použita na odpovídajícím názvem. Hodnoty z [NameSearchOptions – výčet](../../debugger/debug-interface-access/namesearchoptions.md) výčet může být použito samostatně nebo v kombinaci.  
+ [in] Určení možností porovnání využije na odpovídající název. Hodnoty z [namesearchoptions – výčet](../../debugger/debug-interface-access/namesearchoptions.md) výčtu lze použít samostatně nebo v kombinaci.  
   
  `ppResult`  
  [out] Vrátí [idiaenumsymbols –](../../debugger/debug-interface-access/idiaenumsymbols.md) načíst objekt, který obsahuje seznam podřízenými symboly.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrátí `S_OK` pokud alespoň jednu podřízenou symbolu nalezena, nebo vrátí `S_FALSE` Pokud nebyly nalezeny žádné podřízené objekty; v opačném případě vrátí kód chyby.  
+ Vrátí `S_OK` Pokud byl nalezen nejméně jeden podřízený prvek symbolu nebo vrátí `S_FALSE` Pokud nebyly nalezeny žádné podřízené položky; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda je stejná jako volání [idiasession::findchildren –](../../debugger/debug-interface-access/idiasession-findchildren.md) metoda s Tento symbol jako první parametr.  
+ Tato metoda je stejný jako volání [idiasession::findchildren –](../../debugger/debug-interface-access/idiasession-findchildren.md) tento symbol jako první parametr metody.  
   
 ## <a name="see-also"></a>Viz také  
  [Idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md)   
- [SymTagEnum – výčet](../../debugger/debug-interface-access/symtagenum.md)   
+ [Symtagenum – výčet](../../debugger/debug-interface-access/symtagenum.md)   
  [Idiaenumsymbols –](../../debugger/debug-interface-access/idiaenumsymbols.md)   
  [Idiasession::findchildren –](../../debugger/debug-interface-access/idiasession-findchildren.md)   
  [NameSearchOptions – výčet](../../debugger/debug-interface-access/namesearchoptions.md)

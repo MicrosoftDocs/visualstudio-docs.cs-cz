@@ -1,0 +1,1 @@
+Globální mezipaměť sestavení (GAC)

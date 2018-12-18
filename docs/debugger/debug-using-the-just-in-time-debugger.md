@@ -1,7 +1,7 @@
 ---
-title: Ladění pomocí ladicího programu JIT | Microsoft Docs
+title: Ladění pomocí ladicího programu za běhu | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 07/06/17
+ms.date: 09/24/18
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,169 +13,189 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e6abdd96f740d36b4f6806b16e6cdd9ba946cb95
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: f66d3fdcd400be9356776647b0ead118e83d7108
+ms.sourcegitcommit: c5e72875206b8c5737c29d5b1ec7b86eec747303
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49382741"
 ---
-# <a name="debug-using-the-just-in-time-debugger-in-visual-studio"></a>Ladění pomocí ladicího programu JIT v sadě Visual Studio
-Ladění za běhu spustí Visual Studio automaticky při výjimku nebo havárie v aplikaci, která běží mimo aplikaci Visual Studio. To umožňuje aplikaci otestovat, pokud neběží v sadě Visual Studio a zahájit ladění pomocí sady Visual Studio, když dojde k potížím.
+# <a name="debug-using-the-just-in-time-debugger-in-visual-studio"></a>Ladění pomocí ladicího programu za běhu v sadě Visual Studio
 
-Ladění za běhu funguje aplikací klasické pracovní plochy Windows. Pro univerzální aplikace pro Windows nefunguje a pro spravovaný kód, který je hostován v nativní aplikaci, například Vizualizérech nefunguje.
+Ladění Just-In-Time může spusťte sadu Visual Studio automaticky při aplikaci běžící mimo aplikaci Visual Studio chyby nebo selhání. Just-In-Time ladění můžete testovat aplikace mimo sadu Visual Studio a otevřete sadu Visual Studio pro zahájení ladění, když dojde k potížím.
 
-> [!TIP] 
-> Pokud chcete vědět, jak reagovat na těsně v čase ladicího programu dialogové okno, najdete v části [v tomto tématu](../debugger/just-in-time-debugging-in-visual-studio.md).
+Ladění Just-In-Time funguje pro aplikace klasické pracovní plochy Windows. To nebude fungovat pro univerzální aplikace pro Windows, nebo pro spravovaný kód, který je hostován v nativní aplikaci, například pro Vizualizátory.
 
-##  <a name="BKMK_Enabling"></a> Povolit nebo zakázat pouze za běhu ladění  
-Můžete povolit nebo zakázat pouze za běhu ladění ze sady Visual Studio **nástroje > Možnosti** dialogové okno.
-  
-#### <a name="to-enable-or-disable-just-in-time-debugging"></a>Chcete-li povolit nebo zakázat pouze za běhu ladění  
-  
-1.  Otevřete Visual Studio s oprávněními správce (klikněte pravým tlačítkem a zvolte **spustit jako správce**).
+> [!TIP]
+> Pokud chcete zastavit ladicí program za běhu dialogových oken povolí, ale není nainstalované Visual Studio, naleznete v tématu [zakázat ladění za běhu](../debugger/just-in-time-debugging-in-visual-studio.md). Pokud jste měli jednou nainstalovanou sadu Visual Studio, budete muset [zakázání Just-In-Time ladění z registru Windows](#disable-just-in-time-debugging-from-the-windows-registry). 
 
-    Povolení nebo zakázání těsně za běhu, ladění, nastaví klíč registru a oprávnění správce, může být nutné změnit klíči.
+##  <a name="BKMK_Enabling"></a> Povolení nebo zakázání Just-In-Time ladění v sadě Visual Studio
+
+>[!NOTE]
+>K povolení nebo zakázání Just-In-Time ladění, musíte používat Visual Studio jako správce. Povolení nebo zakázání Just-In-Time ladění nastaví klíč registru, a chcete-li změnit tento klíč může být nutná oprávnění správce. Otevřít Visual Studio jako správce, klikněte pravým tlačítkem na aplikaci Visual Studio a zvolte **spustit jako správce**. 
+
+Můžete nakonfigurovat Just-In-Time ladění ze sady Visual Studio **nástroje** > **možnosti** (nebo **ladění** > **možnosti**) Dialogové okno. 
+
+**Povolení nebo zakázání Just-In-Time ladění:**
+
+1. Na **nástroje** nebo **ladění** nabídce vyberte možnost **možnosti** > **ladění**  >   **Just-In-Time**.
+
+   ![Povolení nebo zakázání ladění JIT](../debugger/media/dbg-jit-enable-or-disable.png "povolení nebo zakázání ladění za běhu")
+
+1. V **povolit ladění za běhu pro tyto typy kódu** vyberte typy kódu, které chcete, aby Just-In-Time ladění pro ladění: **spravované**, **nativní**, a/nebo  **Skript**.
+   
+1. Vyberte **OK**.
+
+Pokud povolíte Just-In-Time neotevře ladicího programu, ale když aplikaci dojde k chybě nebo chybám, naleznete v tématu [ladění za běhu řešení potíží s](#jit_errors).
+
+## <a name="disable-just-in-time-debugging-from-the-windows-registry"></a>Zakázat Just-In-Time ladění z registru Windows
+
+Ladění Just-In-Time může být stále povoleno i v případě, že ve vašem počítači je již nainstalované sady Visual Studio. Pokud už je nainstalované sady Visual Studio, můžete zakázat Just-In-Time ladění pomocí úpravy registru Windows.
+
+**Chcete-li zakázat Just-In-Time ladění pomocí úpravy registru:**
+
+1.  Z Windows **Start** nabídky, spusťte **Editor registru** (*regedit.exe*).
+
+2.  V **Editor registru** okna, vyhledejte a odstraňte následující položky registru:
+
+    -   **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework\DbgManagedDebugger**
+
+    -   **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AeDebug\Debugger**
+
+    ![Klíč registru JIT](../debugger/media/dbg-jit-registry.png "klíč registru JIT")
+
+3.  Pokud počítač používá 64bitový operační systém, odstraňte také následující položky registru:
+
+    -   **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\. NETFramework\DbgManagedDebugger**
+
+    -   **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows NT\CurrentVersion\AeDebug\Debugger**
+
+    Zajistěte, aby odstranění nebo změně jiných klíčů registru.
+
+5.  Zavřít **Editor registru** okna.
+
+## <a name="enable-just-in-time-debugging-of-a-windows-form"></a>Povolit Just-In-Time ladění formuláře Windows
+
+Ve výchozím nastavení mají aplikace formuláře Windows obslužnou rutinu výjimky nejvyšší úrovně, ve kterém aplikace spouštět opakovaně, pokud jej lze obnovit. Pokud aplikace Windows Forms vyvolá neošetřenou výjimku, zobrazí následující dialogové okno:
+
+![Formuláře Windows neošetřená výjimka](../debugger/media/windowsformsunhandledexception.png "formuláře Windows neošetřená výjimka")
+
+Pokud chcete povolit Just-In-Time ladění místo standard pro zpracování chyb formuláře Windows, přidejte tato nastavení:
+
+-  V `system.windows.forms` část *machine.config* nebo  *\<název aplikace >. exe.config* souboru `jitDebugging` hodnota, která se `true`:
     
-2. Na **nástroje** nabídky, klikněte na tlačítko **možnosti**.
-  
-2.  V **možnosti** dialogové okno, rozbalte seznam **ladění** uzlu.  
-  
-3.  V **ladění** uzlu, vyberte **pouze za běhu**.
+    ```xml
+    <configuration>
+        <system.windows.forms jitDebugging="true" />
+    </configuration>
+    ```
+    
+-  V aplikaci C++ formuláře Windows, také nastavit `DebuggableAttribute` k `true` v *.config* souboru nebo ve vašem kódu. Pokud kompilujete s [/zi](/cpp/build/reference/z7-zi-zi-debug-information-format) a bez [/og](/cpp/build/reference/og-global-optimizations), kompilátor nastaví tento atribut za vás. Pokud chcete ladit neoptimalizované verzi sestavení, ale je nutné nastavit `DebuggableAttribute` přidáním následujícího řádku ve vaší aplikaci *AssemblyInfo.cpp* souboru:
 
-    ![Povolení nebo zakázání ladění JIT](../debugger/media/dbg-jit-enable-or-disable.png "povolení nebo zakázání ladění JIT") 
-  
-4.  V **ladění JIT povolit z těchto typů kódu** pole, zaškrtněte nebo zrušte typy relevantní program: **spravované**, **nativní**, nebo **skriptu**.    
-  
-5.  Click **OK**.  
-  
-Ladění za běhu může nadále povolené i v případě, že v počítači je již nainstalované sady Visual Studio. Když Visual Studio není nainstalována, nelze zakázat pouze za běhu ladění ze sady Visual Studio **možnosti** dialogové okno. V takovém případě můžete zakázat pouze za běhu ladění úpravou registru systému Windows.  
-  
-#### <a name="to-disable-just-in-time-debugging-by-editing-the-registry"></a>Chcete-li zakázat pouze za běhu ladění úpravou registru  
-  
-1.  Na **spustit** nabídky, Hledat a spustit `regedit.exe`  
-  
-2.  V **Editor registru** okno, vyhledejte a odstraňte následující položky registru:  
-  
-    -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AeDebug\Debugger  
-  
-    -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\DbgManagedDebugger  
+   ```cpp
+   [assembly:System::Diagnostics::DebuggableAttribute(true, true)];
+   ```
+   
+   Další informace naleznete v tématu <xref:System.Diagnostics.DebuggableAttribute>.
 
-    ![Klíč registru JIT](../debugger/media/dbg-jit-registry.png "klíč registru JIT") 
-  
-3.  Pokud počítač používá 64bitový operační systém, odstraňte také následující položky registru:  
-  
-    -   HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows NT\CurrentVersion\AeDebug\Debugger  
-  
-    -   HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\. NETFramework\DbgManagedDebugger  
-  
-4.  Je třeba dbát na skrývá jiných klíčů registru.  
-  
-5.  Zavřít **Editor registru** okno.   
-  
-#### <a name="to-enable-just-in-time-debugging-of-a-windows-form"></a>Chcete-li povolit pouze za běhu ladění formuláře systému Windows  
-  
-1.  Ve výchozím nastavení mají formulářových aplikací Windows obslužnou rutinu výjimky nejvyšší úrovně, která umožňuje programu pokračovat ke spouštění, pokud lze obnovit. Například pokud aplikace Windows Forms neošetřenou výjimku, zobrazí se dialogové okno takto:  
-  
-     ![WindowsFormsUnhandledException](../debugger/media/windowsformsunhandledexception.png "WindowsFormsUnhandledException")  
-  
-     Chcete-li povolit pouze za běhu, ladění aplikace Windows Forms, musíte provést následující kroky:  
-  
-2.  Nastavte `jitDebugging` hodnotu `true` v `system.windows.form` části souboru machine.config nebo  *\<název aplikace >*. exe.config souboru:  
-  
-    ```  
-    <configuration>  
-        <system.windows.forms jitDebugging="true" />  
-    </configuration>  
-    ```  
-  
-3.  V aplikaci C++ Windows Form, je nutné také nastavit `DebuggableAttribute` do souboru .config nebo v kódu. Pokud je kompilovat s [/Zi](/cpp/build/reference/z7-zi-zi-debug-information-format) a bez [/Og](/cpp/build/reference/og-global-optimizations), kompilátor tento atribut nastaví za vás. Pokud chcete k ladění sestavení pro vydání není optimalizovaná, ale musíte nastavit sobě. Můžete provést přidáním následujícího řádku vám jste soubor AssemblyInfo.cpp vaší aplikace:  
-  
-    ```  
-    [assembly:System::Diagnostics::DebuggableAttribute(true, true)];   
-    ```  
-  
-     Další informace naleznete v tématu <xref:System.Diagnostics.DebuggableAttribute>.  
-  
-## <a name="a-namebkmkusingjituse-just-in-time-debugging"></a><a name="BKMK_Using_JIT">Použít ladění za běhu  
- Tato část uvádí, co se stane, když spustitelný soubor vyvolá výjimku.  
-  
- Musíte mít nainstalovanou následující postup použijte sadu Visual Studio. Pokud nemáte Visual Studio, si můžete stáhnout bezplatnou [Visual Studio Community Edition](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15).  
-  
- Ujistěte se, že pouze za běhu ladění je [povoleno](#BKMK_Enabling).
-  
- Pro účely tohoto oddílu vytočit konzolovou aplikaci C# v sadě Visual Studio, který vyvolá [NullReferenceException](http://msdn.microsoft.com/Library/658af786-d893-4114-a3c5-31c7d586056a).  
-  
- Ve Visual Studiu Vytvořte konzolovou aplikaci C# (**soubor > Nový > Projekt > Visual C# > Konzolová aplikace**) s názvem **ThrowsNullException**. Další informace o vytváření projektů v sadě Visual Studio najdete v tématu [návod: vytvoření jednoduché aplikace](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md).  
-  
- Když na projekt se otevře v sadě Visual Studio, otevřete soubor Program.cs. Následující kód, který vytiskne řádek do konzoly a poté vyvolá NullReferenceException nahraďte metodu Main():  
-  
-```csharp  
-static void Main(string[] args)  
-{  
-    Console.WriteLine("we will now throw a NullReferenceException");  
-    throw new NullReferenceException("this is the exception thrown by the console app");  
-}  
-```  
-  
-> [!IMPORTANT]
->  Aby tento postup pro práci v [konfigurace verze](../debugger/how-to-set-debug-and-release-configurations.md), je potřeba vypnout [pouze můj kód](../debugger/just-my-code.md). V sadě Visual Studio, klikněte na tlačítko **nástroje > Možnosti**. V **možnosti** dialogovém okně, vyberte **ladění**. Odebrat kontrolu z **povolit volbu pouze vlastní kód**.  
-  
- Sestavte řešení (v sadě Visual Studio, vyberte **sestavení > znovu sestavit řešení**). Můžete vybrat ladění nebo verze konfigurace (zvolte **ladění** pro úplné ladění prostředí). Další informace o konfiguracích sestavení najdete v tématu [Principy konfigurací sestavení](../ide/understanding-build-configurations.md).  
-  
- Proces sestavení vytvoří spustitelný soubor ThrowsNullException.exe. Najdete ho ve složce, kde jste vytvořili projekt C#: **...\ThrowsNullException\ThrowsNullException\bin\Debug** nebo **...\ThrowsNullException\ThrowsNullException\bin\Release**.  
-  
- Dvakrát klikněte ThrowsNullException.exe. Měli byste vidět okno příkazového řádku takto:  
-  
- ![ThrowsNullExceptionConsole](../debugger/media/throwsnullexceptionconsole.png "ThrowsNullExceptionConsole")  
-  
- Za několik sekund zobrazí se okno s chyba:  
-  
- ![ThrowsNullExceptionError](../debugger/media/throwsnullexceptionerror.png "ThrowsNullExceptionError")  
-  
- Neklikejte na **zrušit**! Za několik sekund, měli byste vidět dvě tlačítka **ladění** a **ukončení programu**. Klikněte na tlačítko **ladění**.  
-  
+## <a name="BKMK_Using_JIT"></a>Použití Just-In-Time ladění
+ Tento příklad vás provede Just-In-Time ladění, když aplikace vyvolá chybu.
+
+ - Musíte mít Visual Studio nainstalovali postupovat podle následujících kroků. Pokud nemáte Visual Studio, si můžete stáhnout bezplatnou [Visual Studio Community Edition](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=15).
+   
+ - Ujistěte se, že Just-In-Time je ladění [povolené](#BKMK_Enabling) v **nástroje** > **možnosti** > **ladění**  >  **Just-In-Time**.
+
+V tomto příkladu provede konzolovou aplikaci C# v sadě Visual Studio, který vyvolá [NullReferenceException](/dotnet/api/system.nullreferenceexception).
+
+1. Ve Visual Studiu Vytvořte konzolovou aplikaci C# (**souboru** > **nový** > **projektu** > **Visual C#**  >  **Konzolovou aplikaci**) s názvem *ThrowsNullException*. Další informace o vytváření projektů v sadě Visual Studio najdete v tématu [návod: vytvoření jednoduché aplikace](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md).
+   
+1. Po otevření projektu v sadě Visual Studio, otevřete *Program.cs* souboru. Nahraďte následující kód, který vytiskne řádek ke konzole a potom vyvolá NullReferenceException metodu Main():
+   
+   ```csharp
+   static void Main(string[] args)
+   {
+       Console.WriteLine("we will now throw a NullReferenceException");
+       throw new NullReferenceException("this is the exception thrown by the console app");
+   }
+   ```
+   
+1. Abyste mohli sestavit řešení, zvolte buď **ladění** (výchozí) nebo **vydání** konfigurace a pak vyberte **sestavení** > **znovu sestavit řešení** . 
+   
+   >[!NOTE]
+   >- Zvolte **ladění** Konfigurace úplného ladicího prostředí. 
+   >- Pokud vyberete [vydání](../debugger/how-to-set-debug-and-release-configurations.md) konfigurace, je nutné vypnout [pouze můj kód](../debugger/just-my-code.md) Dal tento postup fungovat. V části **nástroje** > **možnosti** > **ladění**, zrušte zaškrtnutí možnosti **povolit volbu pouze vlastní kód**.
+   Další informace o konfiguracích sestavení naleznete v tématu [Principy konfigurace sestavení](../ide/understanding-build-configurations.md).
+   
+1. Otevřete sestavené aplikace *ThrowsNullException.exe* ve složce projektu C# (*...\ThrowsNullException\ThrowsNullException\bin\Debug* nebo *...\ThrowsNullException\ ThrowsNullException\bin\Release*). 
+   
+   Měli byste vidět následující příkazové okno:
+   
+   ![ThrowsNullExceptionConsole](../debugger/media/throwsnullexceptionconsole.png "ThrowsNullExceptionConsole")
+   
+1. **Zvolte ladicí program za běhu** otevře se dialogové okno.
+   
+   ![JustInTimeDialog](../debugger/media/justintimedialog.png "JustInTimeDialog")
+   
+   V části **dostupné ladicí programy**vyberte **novou instanci třídy \<vaše upřednostňovanou verzi nebo edici sady Visual Studio >**, pokud ještě není vybraná. 
+   
+1. Vyberte **OK**.
+   
+   ThrowsNullException projektu se otevře v nové instanci sady Visual Studio, s provádění zastaveno na řádku, který vyvolal výjimku:
+   
+   ![NullReferenceSecondInstance](../debugger/media/nullreferencesecondinstance.png "NullReferenceSecondInstance")
+
+V tomto okamžiku ladění lze spustit. Kdybyste ladili skutečné aplikace, je třeba zjistit, proč kód způsobující výjimku.
+
 > [!CAUTION]
->  Pokud vaše aplikace obsahuje nedůvěryhodnými, zobrazí se dialogové okno s upozorněním zabezpečení. Toto dialogové okno můžete rozhodnout, zda chcete pokračovat v ladění. Než budete pokračovat s laděním, rozhodněte, zda důvěřujete kód. Napíšete kód sami? Důvěřujete tvůrci? Pokud aplikace běží na vzdáleném počítači, můžete k rozpoznání názvu procesu? I když aplikace běží místně, který nemusí nezbytně znamenat, že může být důvěryhodný. Zvažte možnost běžícího na vašem počítači škodlivý kód. Pokud se rozhodnete, že kód Chystáte se ladění je důvěryhodný, klikněte na tlačítko **ladění**. Jinak, klikněte na tlačítko **nemáte ladění**.  
+> Pokud vaše aplikace obsahuje nedůvěryhodný kód, zobrazí se dialogové okno upozornění zabezpečení, které umožňuje rozhodnout, jestli chcete pokračovat v ladění. Než budete pokračovat, ladění, rozhodněte, zda kódu důvěřujete. Napsali jste kód sami? Pokud aplikace běží na vzdáleném počítači, poznáváte název procesu? Pokud je aplikace spuštěná místně, zvažte možnost škodlivý kód spuštěný ve vašem počítači. Pokud se rozhodnete je důvěryhodný kód, vyberte **OK**. V opačném případě vyberte **zrušit**.
+
+## <a name="jit_errors"></a> Řešení potíží s Just-In-Time ladění 
+
+Pokud Just-In-Time ladění nelze spustit Pokud dojde k chybě aplikace, i když je povolena v sadě Visual Studio:
+
+- Zasílání zpráv o chybách Windows může být trvá déle než zpracování ve vašem počítači chyb. 
   
- **Visual Studio Debugger JIT** zobrazí se okno:  
+  Chcete-li vyřešit tento problém, pomocí Editoru registru pro přidání **hodnotu DWORD** z **zakázané**, s **údaj hodnoty** z **1**, do následujícího klíče registru:
   
- ![JustInTimeDialog](../debugger/media/justintimedialog.png "JustInTimeDialog")  
   
- V části **možné ladicí programy**, měli byste vidět, který **novou instanci třídy sady Microsoft Visual Studio <available version>**  je vybraný řádek. Pokud již není vybrána, vyberte ho.  
+
+  - **HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\Windows zasílání zpráv o chybách**
+    
+  - (Pro 64bitové počítače): **HKEY_LOCAL_MACHINE\Software\WOW6432Node\Microsoft\Windows\Windows zasílání zpráv o chybách**
   
- V dolní části okna v části **chcete ladění pomocí vybrané ladicí program?**, klikněte na tlačítko **Ano**.  
+  Další informace najdete v tématu [. Nastavení zasílání](https://docs.microsoft.com/windows/desktop/wer/wer-settings).
   
- ThrowsNullException projekt se otevře v nové instanci sady Visual Studio, s byl zastaven na řádku, která vyvolala výjimku:  
+- Může být příčinou známý problém Windows Just-In-Time debugger k selhání. 
   
- ![NullReferenceSecondInstance](../debugger/media/nullreferencesecondinstance.png "NullReferenceSecondInstance")  
+  Vyřešit, je přidat **hodnotu DWORD** z **automaticky**, s **údaj hodnoty** z **1**, do následujícího klíče registru:
   
- Můžete spustit v tomto okamžiku ladění. Pokud to byly reálné aplikaci, musíte zjistit, proč kód způsobující výjimku.  
   
-## <a name="just-in-time-debugging-errors"></a>Chyby ladění za běhu  
- Pokud nevidíte dialogové okno, pokud dojde k chybě programu, může to z důvodu nastavení zasílání zpráv o chybách systému Windows ve vašem počítači. Další informace najdete v tématu [. Nastavení WER](/windows-hardware/drivers/dashboard/windows-error-reporting-getting-started).  
-  
- Může se zobrazit následující chybové zprávy, které jsou přidruženy pouze za běhu ladění.  
-  
--   **Nelze připojit k procesu selhávání. Zadaný program není program Windows nebo MS-DOS.**  
-  
-     K této chybě dojde při pokusu o připojení k proces, který běží jako jiný uživatel.  
-  
-     Chcete-li vyřešit tento problém, spuštění Visual Studio, otevřete **připojit k procesu** dialogové okno z **ladění** nabídce a najít procesu, kterou chcete ladit v **dostupné procesy**seznamu. Pokud neznáte název procesu, podívejte se na **Visual Studio Debugger JIT** dialogové okno a poznamenejte si ID procesu. Vyberte proces v **dostupné procesy** seznamu a klikněte na tlačítko **Attach**. V **Visual Studio Debugger JIT** dialogové okno, klikněte na tlačítko **ne** zavřete dialogové okno.  
-  
--   **Ladicí program nelze spustit, protože není přihlášen žádný uživatel.**  
-  
-     K této chybě dojde, když těsně za běhu ladění pokusí o spuštění sady Visual Studio na počítači, kde není uživatele přihlášený ke konzole. Vzhledem k tomu, že je přihlášen žádný uživatel, není žádná relace uživatele k zobrazení pouze v době ladění dialogové okno.  
-  
-     Chcete-li tento problém vyřešit, přihlaste se na počítač.  
-  
--   **Třída není zaregistrovaný.**  
-  
-     Tato chyba znamená, že ladicí program pokusil vytvořit třídu COM, která není registrované, pravděpodobně z důvodu potíží instalace.  
-  
-     Chcete-li tento problém vyřešit, použijte instalační disk přeinstalujte nebo opravte instalaci aplikace Visual Studio.  
-  
-## <a name="see-also"></a>Viz také  
- [Zabezpečení ladicího programu](../debugger/debugger-security.md)   
- [Základy ladicího programu](../debugger/debugger-basics.md)   
- [V běhu, ladění, dialogové okno Možnosti](../debugger/just-in-time-debugging-options-dialog-box.md)   
- [Upozornění zabezpečení: Připojení k procesu, jehož vlastníkem je nedůvěryhodný uživatel, může být nebezpečné. Pokud následující údaje vypadají podezřele nebo si nejste jistí, k tomuto procesu se nepřipojujte.](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user-can-be-dangerous-if-the-following-information-looks-suspicious-or-you-are-unsure-do-not-attach-to-this-process.md)
+  - **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AeDebug**
+    
+  - (Pro 64bitové počítače): **HKEY_LOCAL_MACHINE\Software\WOW6432Node\Microsoft\Windows NT\CurrentVersion\AeDebug**
+
+Může se zobrazit následující chybové zprávy během Just-In-Time ladění:
+
+- **Nelze se připojit k havarujícímu procesu. Uvedený program není program Windows nebo MS-DOS.**
+
+    Ladicí program se pokusil připojit k procesu spuštěnému pod jiným uživatelem.
+
+    Chcete-li vyřešit tento problém v sadě Visual Studio, otevřete **ladění** > **připojit k procesu**a najít proces, který chcete ladit v **procesy k dispozici** seznam. Pokud neznáte název procesu, vyhledejte ID procesu v **ladicí program za běhu sady Visual Studio** dialogového okna. Vyberte proces v **procesy k dispozici** seznam a vyberte **připojit**. Vyberte **ne** Just-In-Time zavřete dialogové okno ladicího programu.
+
+- **Ladicí program nelze spustit, protože není přihlášen žádný uživatel.**
+
+    Neexistuje žádný uživatel přihlášený ke konzole, takže není žádná uživatelská relace k zobrazení Just-In-Time ladění dialogového okna.
+
+    Chcete-li tento problém vyřešit, přihlaste se do počítače.
+
+- **Třída není zaregistrována.**
+
+    Ladicí program se pokusil vytvořit třídu COM, která není registrována, pravděpodobně z důvodu potíží při instalaci.
+
+    Pokud chcete tento problém vyřešit, použijte instalační program sady Visual Studio a přeinstalujte nebo opravte instalaci sady Visual Studio.
+
+## <a name="see-also"></a>Viz také:
+- [Zabezpečení ladicího programu](../debugger/debugger-security.md)
+- [Základy ladicího programu](../debugger/getting-started-with-the-debugger.md)
+- [Možnosti, ladění Just-In-Time dialogové okno](../debugger/just-in-time-debugging-options-dialog-box.md)
+- [Upozornění zabezpečení: Připojení k procesu, jehož vlastníkem je nedůvěryhodný uživatel, může být nebezpečné. Pokud následující údaje vypadají podezřele nebo si nejste jistí, k tomuto procesu se nepřipojujte.](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)

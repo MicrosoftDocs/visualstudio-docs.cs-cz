@@ -1,6 +1,7 @@
 ---
-title: 'Chyba: Visual Studio Debugger vzdálené služby v cílovém počítači nemůže připojit zpět k tomuto počítači | Microsoft Docs'
-ms.custom: ''
+title: 'Chyba: Služba vzdáleného ladicího programu sady Visual Studio na cílovém počítači se nemůže připojit zpět k tomuto počítači.'
+titleSuffix: ''
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: troubleshooting
@@ -16,62 +17,63 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3cfd2db1e4bf5b87d12eb5d5ffcf94d06e142516
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 37caaea1f70771145f318d892025d566a99f4ea6
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53062619"
 ---
 # <a name="error-the-visual-studio-remote-debugger-service-on-the-target-computer-cannot-connect-back-to-this-computer"></a>Chyba: Služba vzdáleného ladicího programu sady Visual Studio na cílovém počítači se nemůže připojit zpět k tomuto počítači.
-Tato chyba znamená, že služba Visual Studio Debugger vzdálené běží pod účtem uživatele, který nemůže ověřit při pokusu o připojení k počítači, který se ladění z.  
+Tato chyba znamená, že se službou Visual Studio Remote Debugger uživatelského účtu, který nelze ověřit při pokusu o připojení k počítači, který ladíte z.  
   
- Následující tabulka uvádí, co účty, můžete přístup k počítači:  
+ V následující tabulce jsou uvedeny účty, které je přístupné počítači:  
   
 |||||  
 |-|-|-|-|  
 ||Účet LocalSystem|Účet domény|Místní účty, které mají stejné uživatelské jméno a heslo na obou počítačích|  
-|Oba počítače ve stejné doméně|Ano|Ano|Ano|  
-|Oba počítače v doménách, které mají obousměrný vztah důvěryhodnosti|Ne|Ne|Ano|  
+|Oba počítače ve stejné doméně.|Ano|Ano|Ano|  
+|Oba počítače v doménách s obousměrným vztahem důvěryhodnosti|Ne|Ne|Ano|  
 |Jeden nebo oba počítače v pracovní skupině|Ne|Ne|Ano|  
 |Počítače v různých doménách|Ne|Ne|Ano|  
   
  Navíc:  
   
--   Účet, který spustíte Visual Studio Debugger vzdálené služby v rámci by měl být správce na vzdáleném počítači tak, aby ho můžete ladit jakýkoli proces.  
+-   Účet, který spustíte v rámci služby Visual Studio Remote Debugger by měl být správce na vzdáleném počítači tak, aby ho můžete ladit nějaký proces.  
   
--   Účet má také oprávnění `Log on as a service` oprávnění ve vzdáleném počítači, který používá **místní zásady zabezpečení** nástroj pro správu.  
+-   Účet také musí být udělena `Log on as a service` oprávnění ve vzdáleném počítači, který se používá **místní zásady zabezpečení** nástroje pro správu.  
   
--   Pokud používáte pro přístup k účtu místního počítače, je nutné spustit službu Visual Studio Debugger vzdálené pod místním účtem.  
+-   Pokud používáte místní účet přístupu k počítači, je nutné spustit pod účtem místní služby Visual Studio Remote Debugger.  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
-1.  Ujistěte se, že Visual Studio Debugger vzdálené služby je správně nastavena na vzdáleném počítači. Další informace najdete v tématu [vzdálené ladění](../debugger/remote-debugging.md).  
+1.  Ujistěte se, že služba Visual Studio Remote Debugger je správně nastavený na vzdáleném počítači. Další informace najdete v tématu [vzdálené ladění](../debugger/remote-debugging.md).  
   
-2.  Spusťte službu vzdáleného ladicího programu pod účtem, který má přístup k počítači hostitele ladicí program, jak je uvedeno v předchozí tabulce.  
+2.  Spusťte službu vzdálený ladicí program pomocí účtu, který má přístup k počítači hostitele ladicího programu, jak je znázorněno v předchozí tabulce.  
   
 ### <a name="to-add-log-on-as-a-service-privilege"></a>Chcete-li přidat oprávnění "Přihlásit jako službu"  
   
-1.  Na **spustit** nabídce zvolte **ovládací panely**.  
+1.  Na **Start** nabídce zvolte **ovládací panely**.  
   
-2.  V Ovládacích panelech vyberte **klasickém zobrazení**, v případě potřeby.  
+2.  V Ovládacích panelech zvolte **klasické zobrazení**, v případě potřeby.  
   
-3.  Klikněte dvakrát na **nástroje pro správu**.  
+3.  Dvakrát klikněte na panel **nástroje pro správu**.  
   
-4.  V okně nástroje pro správu klikněte dvakrát na **místní zásady zabezpečení**.  
+4.  V okně nástroje pro správu, klikněte dvakrát na **místní zásady zabezpečení**.  
   
-5.  V **místní nastavení zabezpečení** okno, rozbalte **místní zásady** složky.  
+5.  V **místní nastavení zabezpečení** okna, rozbalte **místní zásady** složky.  
   
 6.  Klikněte na tlačítko **přiřazení uživatelských práv**.  
   
-7.  V **zásad** sloupce, klikněte dvakrát na **přihlásit jako službu** Chcete-li zobrazit aktuální přiřazení místních zásad skupiny v **přihlásit jako službu** dialogové okno.  
+7.  V **zásady** sloupce, klikněte dvakrát na **přihlásit jako službu** zobrazíte aktuální místní zásady skupiny přiřazení v **přihlásit jako službu** dialogové okno.  
   
-8.  Chcete-li přidat nové uživatele, klikněte na tlačítko **přidat uživatele nebo skupinu** tlačítko.  
+8.  Pokud chcete přidat nové uživatele, klikněte na tlačítko **přidat uživatele nebo skupinu** tlačítko.  
   
-9. Až dokončíte přidávání uživatelů, klikněte na tlačítko **OK**.  
+9. Po dokončení přidávání uživatelů, klikněte na tlačítko **OK**.  
   
 ### <a name="to-work-around-this-error"></a>Chcete-li vyřešit tuto chybu  
   
--   Spusťte sledování vzdáleného ladění jako aplikace místo služby.  
+-   Spuštění sledování vzdáleného ladění jako aplikace místo jako služba.  
   
 ## <a name="see-also"></a>Viz také  
  [Vzdálené ladění chyby a řešení potíží](../debugger/remote-debugging-errors-and-troubleshooting.md)   

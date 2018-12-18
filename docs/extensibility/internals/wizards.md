@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31138711"
 ---
 # <a name="wizards"></a>Průvodci
 Po vytvoření průvodce, obvykle je vhodné ho přidat do [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrované vývojové prostředí (IDE), aby ostatní ho používat. Přidání průvodce se potom zobrazí v **přidat nový projekt** nebo **přidat novou položku** dialogová okna. Chcete-li zobrazit **přidat nový projekt** nebo **přidat novou položku** dialogové okno polí, klikněte pravým tlačítkem na otevřete řešení v **Průzkumníku řešení**, přejděte na **přidat**, a pak klikněte na tlačítko **nový projekt** nebo **novou položku**.  

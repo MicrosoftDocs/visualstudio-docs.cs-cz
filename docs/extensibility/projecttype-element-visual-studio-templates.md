@@ -1,5 +1,5 @@
 ---
-title: ProjectType – Element (šablony sady Visual Studio) | Microsoft Docs
+title: ProjectType – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,25 +15,26 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bb16116994648ec70c770af7ca4932cd1443bd30
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 14726d5338830eb4044d22778d886241cfd0cd83
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49921129"
 ---
 # <a name="projecttype-element-visual-studio-templates"></a>ProjectType – element (šablony sady Visual Studio)
-Rozděluje šablonu projektu tak, aby se v zadané skupině v **nový projekt** nebo **přidat novou položku** dialogové okno.  
+Rozděluje šablonu projektu tak, aby se objevila pod zadané skupiny v rámci **nový projekt** nebo **přidat novou položku** dialogové okno.  
   
 > [!WARNING]
->  Šablony projektů jsou podporovány pro jazyk C++ spouštění v sadě Visual Studio 2012. Některé funkce nejsou podporovány pro jazyk C++ v sadě Visual Studio 2010 a starší verze.  
+>  Šablony projektů jsou podporovány pro C++ v sadě Visual Studio 2012. Nejsou podporovány pro C++ v sadě Visual Studio 2010 a starší verze.  
   
- \<VSTemplate >  
+ \<Vstemplate – >  
  \<TemplateData >  
- \<ProjectType – >  
+ \<ProjectType >  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```xml  
 <ProjectType> CSharp/VisualBasic/VC/Web </ProjectType>  
 ```  
   
@@ -43,32 +44,32 @@ Rozděluje šablonu projektu tak, aby se v zadané skupině v **nový projekt** 
 ### <a name="attributes"></a>Atributy  
  Žádné  
   
-### <a name="child-elements"></a>Podřízené elementy  
+### <a name="child-elements"></a>Podřízené prvky  
  Žádné  
   
-### <a name="parent-elements"></a>Nadřazené elementy  
+### <a name="parent-elements"></a>Nadřazené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Rozděluje šablonu a definuje, jak se zobrazuje v buď **nový projekt** nebo **přidat novou položku** dialogové okno.|  
+|[TemplateData –](../extensibility/templatedata-element-visual-studio-templates.md)|Rozděluje šablonu a definuje, jak se zobrazuje **nový projekt** nebo **přidat novou položku** dialogové okno.|  
   
 ## <a name="text-value"></a>Textová hodnota  
  Je vyžadována textová hodnota.  
   
- Tato hodnota určuje typ projektu šablony vytvoří a musí obsahovat jeden z následujících hodnot:  
+ Tato hodnota určuje typ projektu šablony vytvoří a musí obsahovat jednu z následujících hodnot:  
   
--   `CSharp`: Určuje, že šablona vytvoří [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] projektu nebo položky.  
+- `CSharp`: Určuje, že šablona vytváří [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] projekt nebo položku.  
   
--   `VisualBasic`: Určuje, že šablona vytvoří [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] projektu nebo položky.  
+- `VisualBasic`: Určuje, že šablona vytváří [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] projekt nebo položku.  
   
--   `Web`: Určuje, že šablona vytvoří webový projekt nebo položky. Pokud `ProjectType` element obsahuje tuto hodnotu, jazyk projektu nebo položky je definována v [ProjectSubType – Element (šablony sady Visual Studio)](../extensibility/projectsubtype-element-visual-studio-templates.md).  
+- `Web`: Určuje, že šablona vytvoří webový projekt nebo položku. Pokud `ProjectType` prvek obsahuje tuto hodnotu, není definovaný jazyk projektu nebo položky v [ProjectSubType – Element (šablony sady Visual Studio)](../extensibility/projectsubtype-element-visual-studio-templates.md).  
   
 ## <a name="remarks"></a>Poznámky  
- `ProjectType` je požadovaný podřízený element `TemplateData`.  
+ `ProjectType` je vyžadovaný podřízený prvek `TemplateData`.  
   
- Hodnota `ProjectType` element určuje umístění šablony v **nový projekt** nebo **přidat novou položku** dialogové okno. Například šablonu s `ProjectType` hodnotu `CSharp` se zobrazí v části **Visual C#** uzlu **nový projekt** dialogové okno.  
+ Hodnota `ProjectType` element určuje, kde se tato šablona je umístěná v **nový projekt** nebo **přidat novou položku** dialogové okno. Například šablonu s `ProjectType` hodnotu `CSharp` se zobrazí v části **Visual C#** uzlu **nový projekt** dialogové okno.  
   
- Podtyp šablony lze zadat pomocí [ProjectSubType](../extensibility/projectsubtype-element-visual-studio-templates.md) elementu.  
+ Podtyp šablony se dá nastavit pomocí [ProjectSubType](../extensibility/projectsubtype-element-visual-studio-templates.md) elementu.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje metadata pro šablona projektu pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aplikace.  
@@ -97,7 +98,7 @@ Rozděluje šablonu projektu tak, aby se v zadané skupině v **nový projekt** 
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
- [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)   
+## <a name="see-also"></a>Viz také:  
+ [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)   
+ [Vytvoření šablon projektů a položek](../ide/creating-project-and-item-templates.md)   
  [ProjectSubType – element (šablony sady Visual Studio)](../extensibility/projectsubtype-element-visual-studio-templates.md)

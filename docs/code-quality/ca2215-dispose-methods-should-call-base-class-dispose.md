@@ -1,6 +1,7 @@
 ---
 title: 'CA2215: Metody Dispose by měly volat uvolnění třídy Base'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -16,41 +17,45 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 61cb33b8fb717914e109ca7ed43e01dd1c18edb6
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 11359e021d5c297c0782bf95fe35997b0a1b5be5
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45548410"
 ---
 # <a name="ca2215-dispose-methods-should-call-base-class-dispose"></a>CA2215: Metody Dispose by měly volat uvolnění třídy Base
+
 |||
 |-|-|
 |TypeName|DisposeMethodsShouldCallBaseClassDispose|
 |CheckId|CA2215|
 |Kategorie|Microsoft.Usage|
-|Narušující změna|Bez ukončování řádků|
+|Narušující změna|Pevné|
 
 ## <a name="cause"></a>příčina
- Typ, který implementuje <xref:System.IDisposable?displayProperty=fullName> dědí od typu, který také implementuje <xref:System.IDisposable>. <xref:System.IDisposable.Dispose%2A> Metoda dědičných typu nevyvolá <xref:System.IDisposable.Dispose%2A> metoda nadřazeného typu.
+ Typ, který implementuje <xref:System.IDisposable?displayProperty=fullName> je odvozen z typu, který také implementuje <xref:System.IDisposable>. <xref:System.IDisposable.Dispose%2A> Nevolá metodu ze dědičné typu <xref:System.IDisposable.Dispose%2A> metoda nadřazeného typu.
 
 ## <a name="rule-description"></a>Popis pravidla
- Pokud typ dědí od typu na jedno použití, musí volat <xref:System.IDisposable.Dispose%2A> metoda základní typu v rámci vlastní <xref:System.IDisposable.Dispose%2A> metoda. Volání metody základní typ uvolnění zajišťuje, vydání všechny prostředky vytvořené základního typu.
+ Pokud typ dědí z uvolnitelného typu, musí volat <xref:System.IDisposable.Dispose%2A> metodu základního typu v rámci své vlastní <xref:System.IDisposable.Dispose%2A> metody. Volání metody základní typ Dispose zajistí, že se vydávají všechny prostředky vytvořené v rámci základního typu.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení toto pravidlo, volejte `base`.<xref:System.IDisposable.Dispose%2A> ve vašem <xref:System.IDisposable.Dispose%2A> metoda.
+ Chcete-li opravit porušení tohoto pravidla, zavolejte `base`.<xref:System.IDisposable.Dispose%2A> ve vaší <xref:System.IDisposable.Dispose%2A> metody.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Je bezpečné potlačit upozornění na toto pravidlo, pokud volání `base`.<xref:System.IDisposable.Dispose%2A> dojde k na podrobnější úrovni volání než pravidla kontroly.
+ Je bezpečné potlačit upozornění tohoto pravidla, pokud volání `base`.<xref:System.IDisposable.Dispose%2A> nastane na hlubší úrovni volání než pravidla kontroly.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje typ `TypeA` , která implementuje <xref:System.IDisposable>.
+ Následující příklad ukazuje typ `TypeA` , který implementuje <xref:System.IDisposable>.
 
  [!code-csharp[FxCop.Usage.IDisposablePattern#1](../code-quality/codesnippet/CSharp/ca2215-dispose-methods-should-call-base-class-dispose_1.cs)]
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje typ `TypeB` který dědí z typu `TypeA` a správně volá jeho <xref:System.IDisposable.Dispose%2A> metoda.
+ Následující příklad ukazuje typ `TypeB` , která dědí z typu `TypeA` a správně volá jeho <xref:System.IDisposable.Dispose%2A> metoda.
 
  [!code-vb[FxCop.Usage.IDisposableBaseCalled#1](../code-quality/codesnippet/VisualBasic/ca2215-dispose-methods-should-call-base-class-dispose_2.vb)]
 
-## <a name="see-also"></a>Viz také
- <xref:System.IDisposable?displayProperty=fullName> [Dispose – vzor](/dotnet/standard/design-guidelines/dispose-pattern)
+## <a name="see-also"></a>Viz také:
+
+- <xref:System.IDisposable?displayProperty=fullName>
+- [Vzor pro metodu Dispose](/dotnet/standard/design-guidelines/dispose-pattern)

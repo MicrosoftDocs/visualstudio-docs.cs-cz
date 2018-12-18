@@ -1,6 +1,7 @@
 ---
 title: 'CA1713: Události by neměly mít předponu před nebo po'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,13 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f575cf00756c730133d91ed56f73bf923cd5ab76
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 4c868b1d061fb65f20a43119ca7a2d50416d425a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49850942"
 ---
 # <a name="ca1713-events-should-not-have-before-or-after-prefix"></a>CA1713: Události by neměly mít předponu před nebo po
+
 |||
 |-|-|
 |TypeName|EventsShouldNotHaveBeforeOrAfterPrefix|
@@ -30,15 +33,15 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Název události začíná 'Before' nebo 'After'.
+ Název události začíná 'Before' a 'After'.
 
 ## <a name="rule-description"></a>Popis pravidla
- Názvy událostí by měl popisují akce, která vyvolává událost. Pro pojmenování souvisejících událostí vyvolaných v určitém pořadí je vhodné používat přítomný a minulý čas, který naznačí relativní pozici v pořadí akcí. Například když pojmenování pár událostí, která je vyvolána při zavření prostředek, můžete pojmenovat ho "Zavření" a "Uzavřeno" místo 'BeforeClose' a 'AfterClose'.
+ Názvy událostí, měl by popisovat akce, která vyvolává událost. Pro pojmenování souvisejících událostí vyvolaných v určitém pořadí je vhodné používat přítomný a minulý čas, který naznačí relativní pozici v pořadí akcí. Například při pojmenování dvojice událostí, který je vyvolána při zavření prostředek, můžete pojmenovat ho "Zavřít" a "Uzavřeno" místo "BeforeClose" a "AfterClose".
 
- Zásady vytváření názvů zadejte obecný vzhled pro knihovny cílené modul common language runtime. Tím se snižuje křivky learning, který je vyžadován pro nové knihovny softwaru a zvyšuje sebejistotu zákazníka, knihovny byla vyvinuta uživatelem s odbornými znalostmi v vývoj spravovaného kódu.
+ Zásady vytváření názvů poskytují obecný vzhled knihovnám využívajících common language runtime. To snižuje učit se, která vyžaduje nové knihovny softwaru a zvyšuje důvěru zákazníků, že byla vyvinuta knihovny někdo, kdo má odborných znalostí v vývoj spravovaného kódu.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Odeberte předponu z názvu události a zvažte změnu názvu, používat přítomen nebo minulost slovesa.
+ Odebrání předpony názvu události a zvažte možnost změnit název, který má používat přítomný a minulý čas slovesa.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Nepotlačujte upozornění na toto pravidlo.

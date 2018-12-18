@@ -1,7 +1,7 @@
 ---
-title: Pole najít příkaz | Microsoft Docs
-ms.custom: ''
+title: Pole najít – příkaz
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
@@ -13,11 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 215ab2501f3221a9235c75d5a9b28f631692b1de
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c5e11d83ea0c87bae058f5421c424922fa389a9c
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34752408"
 ---
 # <a name="findcommand-box"></a>pole Najít/příkaz
 
@@ -27,7 +28,7 @@ Ke spuštění [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] příka
 
 **Najít/příkaz** pole uchovává poslední 20 položek zadaných a zobrazí je v rozevíracím seznamu. Můžete přejít pomocí seznamu tak, že zvolíte **klávesy se šipkami**.
 
-![Najít&#47;příkaz pole](../ide/media/findcommandbox.png "FindCommandBox")
+![Najít&#47;příkaz pole](../ide/media/findcommandbox.png)
 
 ## <a name="searching-for-text"></a>Hledání textu
 
@@ -53,7 +54,7 @@ Alternativně můžete také použít **příkaz** okno k zadání a spustit jed
 
 Šipka nahoru funguje stejně, jestli je uvnitř nebo mimo uvozovky. Pokud šipka nahoru poslední znak v řádku, je ignorován.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Příkazové okno](../ide/reference/command-window.md)  
-[Hledání a nahrazení textu](../ide/finding-and-replacing-text.md)
+- [Příkazové okno](../ide/reference/command-window.md)
+- [Hledání a nahrazení textu](../ide/finding-and-replacing-text.md)

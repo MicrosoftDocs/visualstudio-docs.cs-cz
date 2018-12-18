@@ -1,10 +1,9 @@
 ---
-title: Prostředky pro řešení potíží obsahovaly chyby vývojového prostředí | Microsoft Docs
-ms.custom: ''
+title: Prostředky pro řešení potíží s chybami
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: troubleshooting
 f1_keywords:
 - VS.Message.0x00005A89
 - VS.Message.0x00005A8E
@@ -96,30 +95,35 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 48516bd598719112a3a94216b3510b628579f032
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5dcdcffbcf947efa7da8471a970d07a23fe90ba4
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349281"
 ---
-# <a name="resources-for-troubleshooting-integrated-development-environment-errors"></a>Zdroje pro řešení potíží obsahovaly chyby vývojového prostředí.
+# <a name="resources-for-troubleshooting-integrated-development-environment-errors"></a>Prostředky pro odstraňování chyb integrovaného vývojového prostředí
 
-Ne všechny chybové zprávy mít konkrétní přidružené tématu nápovědy. Informace v chybové zprávě není vám pomůžou vyřešit problém, naleznete další prostředky, například články znalostní báze Knowledge Base, komunity vývojářů nebo technické podpory.
+Ne všechny chybové zprávy mají konkrétní související téma nápovědy. Informace v chybové zprávě není vám pomůžou vyřešit problém, naleznete další prostředky, například články znalostní báze, fóra nebo odbornou pomoc.
+
+> [!NOTE]
+> Toto téma se vztahuje k sadě Visual Studio ve Windows. Visual Studio pro Mac, najdete v části [řešení potíží s Visual Studio for Mac](/visualstudio/mac/troubleshooting).
 
 ## <a name="knowledge-base-articles"></a>Články znalostní báze
 
 Ve znalostní bázi (KB) je možné hledat online články týkající se problémů s produktem. Ne všechny problémy mají odpovídající článek ve znalostní bázi, ale chyby, se kterými se setkal velký počet zákazníků, jsou obvykle uvedeny. Články znalostní BÁZE je k dispozici na [Microsoft Support](https://support.microsoft.com) webu.
 
-## <a name="the-developer-community"></a>Komunity vývojářů
+## <a name="developer-forums"></a>Fóra pro vývojáře
 
 Fóra umožňují interakci s dalšími vývojáři a také zaměstnanci společnosti Microsoft. Pokud narazíte na chybu, pro kterou nelze nalézt řešení, je možné poslat otázky týkající se problému na fórum. Také je možné prohledat diskusní skupiny a zjistit, zda někdo z ostatních psal o stejném problému.
 
-Je k dispozici na fóra, blogy, konverzace a dalším prostředkům [technických komunit společnosti Microsoft](https://techcommunity.microsoft.com/t5/Communities/ct-p/communities) webu.
+Fóra, blogy, chaty a ostatní prostředky je k dispozici na [technické komunity společnosti Microsoft](https://techcommunity.microsoft.com/t5/Communities/ct-p/communities) webu.
 
 ## <a name="product-support"></a>Podpora produktu
 
-Pokud stále máte otázky po zkuste jiné prostředky, můžete obrátit podpory společnosti Microsoft navštivte stránky [Microsoft Support](http://go.microsoft.com/fwlink/?linkid=1782) webu. Informace o podpoře produktu ve vaší oblasti najdete v tématu [kontaktujte nás](../../ide/talk-to-us.md).
+Pokud jste ještě další dotazy po vyzkoušení jiných zdrojů, můžete kontaktujte služby podpory společnosti Microsoft najdete [Microsoft Support](http://go.microsoft.com/fwlink/?linkid=1782) webu. Informace o podpoře produktu ve vaší oblasti najdete v tématu [kontaktujte nás](../../ide/talk-to-us.md).
 
- ## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-* [Řešení potíží s chybami proxy](/visualstudio/install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server#troubleshooting-proxy-errors)
+* [Řešení potíží s související se sítí nebo chyby proxy](../../install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md#troubleshoot-network-related-errors)
+* [Řešení potíží (Visual Studio for Mac)](/visualstudio/mac/troubleshooting)

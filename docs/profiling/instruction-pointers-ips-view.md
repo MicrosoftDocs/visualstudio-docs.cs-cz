@@ -19,11 +19,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f34df089219fda6a27e68c59a1b67f1e48a0839
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 3c72d0d1cca803996461ccfba9d7f04811b9048e
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34844196"
 ---
 # <a name="instruction-pointers-ips-view"></a>Zobrazení Ukazatele na instrukce (IP)
 Zobrazení ukazatele na instrukce umožní vám prohlédnout konkrétní pokyny, které jsou spouštěny během profilace se vzorkováním.  
@@ -34,7 +35,7 @@ Zobrazení ukazatele na instrukce umožní vám prohlédnout konkrétní pokyny,
   
  Zobrazení řádků pro data paměti .NET, identifikuje pokynů, které se přidělit paměť.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Zobrazení ukazatele (IP) instrukcí](../profiling/instruction-pointers-ips-view-sampling-data.md)   
  [Ukazatele na instrukce (IP) zobrazení – vzorkování](../profiling/instruction-pointers-ips-view-dotnet-memory-sampling-data.md)   
  [Zobrazení ukazatelů na instrukce](../profiling/instruction-pointers-ips-view-contention-data.md)

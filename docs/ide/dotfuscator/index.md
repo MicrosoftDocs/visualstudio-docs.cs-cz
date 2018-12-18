@@ -1,11 +1,11 @@
 ---
-title: Dotfuscatoru Community Edition (CE) | Microsoft Docs
-ms.date: 2017-10-10
+title: Dotfuscator Community Edition (CE)
+ms.date: 10/10/2017
 ms.devlang: dotnet
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: conceptual
-keywords: Dotfuscatoru, Dotfuscatoru CE, preemptivní, preemptivní řešení preemptivní ochrana, ochrana, edice community, maskováním, .NET, volná, Visual Studio 2017
+keywords: Nástroj Dotfuscator, řešení Dotfuscator CE, PreEmptive, společnosti PreEmptive Solutions PreEmptive ochrany, ochranu, community edition, obfuskace, .NET, bezplatný, Visual Studio 2017
 helpviewer_keywords:
 - PreEmptive Protection Dotfuscator
 - Dotfuscator Community Edition
@@ -13,99 +13,97 @@ helpviewer_keywords:
 - Dotfuscator
 - obfuscation
 - protection
-description: Zjistěte, jak lze chránit aplikací .NET bezplatná edice Community Dotfuscatoru součástí Visual Studio 2017.
+description: Zjistěte, jak můžete ochránit aplikace technologie .NET bezplatný nástroj Dotfuscator Community Edition zahrnuty v sadě Visual Studio 2017.
 ms.assetid: d9550502-0a82-49a6-b005-2caa791fbe02
 author: Joe-Sewell-PreEmptive
+ms.author: gewarren
 manager: douge
-ms.openlocfilehash: e8e7fb56580e3b0b5a9db8e46d9b98b7c157f9f2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d6cac51aaa73053dc0e1f306288d8198fdacccfd
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50219054"
 ---
-# <a name="dotfuscator-community-edition-ce"></a>Dotfuscatoru Community Edition (CE)
+# <a name="dotfuscator-community-edition-ce"></a>Dotfuscator Community Edition (CE)
 
-*Preemptivní ochrana – Dotfuscatoru* poskytuje komplexní ochranu aplikace .NET to snadné pro rozlišení do vaší zabezpečené softwaru životního cyklu.
-Použijte ho k posílení zabezpečení, ochraně a vyřadit plochy, mobilní, server a vložená aplikací do zabezpečené obchodního tajemství a jiné duševní vlastnictví (IP), snížit pirátství a padělání a chránit proti manipulaci a neoprávněným ladění.
-Dotfuscatoru funguje na kompilované sestavení bez nutnosti dalšího programování nebo i přístup ke zdrojovému kódu.
+*PreEmptive ochranu – řešení Dotfuscator* poskytuje komplexní ochranu aplikací .NET snadno přizpůsobí do vývojového cyklu zabezpečeného softwaru.
+Použijte ho k posílení zabezpečení, ochraně a vyřadit plochy, mobilních, server a vložené aplikace zabezpečené obchodní tajemství a jinému duševnímu (IP), snížit pirátství a padělání a Chraňte se proti manipulaci a neoprávněným ladění.
+Nástroj Dotfuscator funguje v kompilovaných sestavení bez potřeby dalšího programování nebo dokonce i přístup ke zdrojovému kódu.
 
-![](media/header.svg)
+![PreEmptive ochranu – řešení Dotfuscator](media/header.svg)
 
 ## <a name="why-protection-matters"></a>Proč na záleží ochrany
 
 Je důležité **chránit duševní vlastnictví** (IP).
-Kód aplikace obsahuje informace o návrhu a implementace, které lze považovat za IP.
-Však aplikací postavené na rozhraní .NET Framework [zahrnují významné metadata a nejdůležitější zprostředkující kód][assemblies], což je velmi snadné provést zpětnou analýzu, právě pomocí jedné z mnoha volná, automatizované nástroje.
-Přerušení a zastavení zpětnou vám může zabránit neoprávněným sdílením IP, stejně jako ukazují, že kód obsahuje obchodních tajemství.
-Můžete Dotfuscatoru [obfuskováním] [ obfuscation] vaše sestavení .NET bránit zpětnou, při zachování původní chování aplikace.
+Kód vaší aplikace obsahuje návrhu a podrobnosti implementace, které lze považovat za IP.
+Ale aplikace založená na rozhraní .NET Framework [významné metadat a základní mezikódu obsahovat][assemblies], provedení je snadné provést zpětnou analýzu, stačí použít jeden z mnoha zdarma, automatizovat nástroje.
+Přerušení a zastavení zpětné analýzy vám může zabránit neautorizovaným zveřejněním IP, jakož i prokázat, že váš kód obsahuje tajemství.
+Nástroje Dotfuscator můžete [obfuskaci] [ obfuscation] sestavení .NET bránit zpětné analýzy, při zachování původního chování aplikace.
 
-Je také důležité **chránit integritu aplikace**.
-Kromě zpětnou nesprávnými účastníky můžou snažit pirate vaší aplikace, změnit chování aplikace za běhu nebo pracovat s daty.
-Dotfuscatoru může vložit vaše aplikace se schopností [zjišťovat, sestavy a reagovat na neoprávněným použitím][checks], včetně manipulaci s obsahem a ladění třetích stran.
+Je také důležité **chrání integritu aplikace**.
+Kromě zpětné analýzy můžou snažit nesprávnými účastníky pirate vaší aplikace, měnit chování aplikace za běhu ani manipulaci s daty.
+Nástroje Dotfuscator můžete vkládat aplikace možnost [rozpoznání hrozeb a reakce na neoprávněné použití][checks], včetně úmyslné poškozování, ladění třetích stran a zařízením s rootem.
 
-Další informace o jak Dotfuscatoru zapadá do životního cyklu zabezpečené softwaru najdete v tématu preemptivní řešení [SDL aplikaci ochrany stránky][sdl-protection].
+Další informace o jak řešení Dotfuscator zapadá do životního cyklu vývoje zabezpečeného softwaru, najdete v článku společnosti PreEmptive Solutions [SDL App Protection stránky][sdl-protection].
 
-## <a name="about-dotfuscator-ce"></a>O Dotfuscatoru CE
+## <a name="about-dotfuscator-ce"></a>Informace o řešení Dotfuscator CE
 
-Vaší kopie aplikace Microsoft Visual Studio 2017 obsahuje kopii  ***preemptivní ochrana – Dotfuscatoru* Community Edition**, označované také jako Dotfuscatoru CE zdarma pro osobní použití.
-Pokyny o tom, jak nainstalovat verzi Dotfuscatoru CE součástí Visual Studio 2017 najdete v tématu [instalační stránka][install].
+Vaše kopie sady Microsoft Visual Studio 2017 obsahuje kopii  **_PreEmptive ochranu – řešení Dotfuscator_ Community Edition**, označovaný také jako řešení Dotfuscator CE, která je zdarma pro osobní použití.
+Pokyny k instalaci verze řešení Dotfuscator CE je součástí sady Visual Studio 2017 najdete v tématu [stránky instalace][install].
 
-Dotfuscatoru CE nabízí řadu [ochrany před softwarem a posílení zabezpečení] [ software-protection] služby pro vývojáře, architekty a testerům, sada.
-Příklady [.NET maskováním] [ obfuscation] a dalších [Ochrana aplikace] [ app-protection] jsou funkce obsažené v Dotfuscatoru CE:
+Řešení Dotfuscator CE nabízí celou řadu [ochrany před softwarem a posílení zabezpečení] [ software-protection] služby pro vývojáře, architekty a testery.
+Příklady [.NET obfuskace] [ obfuscation] a dalších [Ochrana aplikace] [ app-protection] jsou funkce obsažené v nástroji Dotfuscator CE:
 
-* *[Přejmenování] [ renaming]*  identifikátorů ztížit zpětnou kompilované sestavení.
-* *[Proti zfalšování] [ tamper]*  k detekci spuštění zmanipulovanou aplikací, přenášet incidentu výstrahy a ukončete zmanipulovanou relací.
-* *[Proti ladění] [ debug]*  ke zjištění připojení ladicí program k spuštěné aplikace, přenášet incidentu výstrahy a ukončete vyladěnou relací.
-* *[Chování vypršení platnosti aplikací] [ shelflife]*  , kódovat datum "end životnosti", přenášet výstrahy, když se aplikace spustí po vypršení jejich platnosti a ukončení relace vypršela platnost aplikace.
-* *[Sledování výjimek] [ exceptions]*  ke sledování neošetřených výjimek, které se vyskytují v rámci aplikace.
-* *[Relace] [ sessions] a [funkce] [ features] sledování využití* Chcete-li zjistit, co aplikace byly spustit, jaké verze těchto aplikací a jaké funkce se používají v těchto aplikacích.
+* *[Přejmenování] [ renaming]*  identifikátorů, které mají ztížit zpětnou zkompilovaného sestavení.
+* *[Boj proti] [ tamper]*  k detekci spuštění zmanipulovanou aplikací a ukončit nebo v reakci na manipulováno relace.
+* *[Ladění proti] [ debug]*  -li zjistit přílohy ladicího programu k běžící aplikaci a ukončit nebo reakce na ladit relace.
+* *[Zařízení s rootem proti] [ root]*  -li zjistit, pokud aplikace běží na rootovaném zařízení s Androidem a ukončit nebo reakce na relace na těchto zařízeních.
+* *[Chování vypršení platnosti aplikací] [ shelflife]*  , který kódování datem "ukončení životnosti technologie" a ukončí aplikaci vypršela platnost relace.
 
-Podrobné informace týkající se těchto funkcí, včetně toho, jak je začlenit do strategie ochrany aplikací najdete [možnosti stránky][capabilities].
+Podrobnosti o těchto funkcích, včetně toho, jak se vešly do strategie ochrany aplikací najdete v tématu [stránka schopnosti][capabilities].
 
-Dotfuscatoru CE nabízí základní ochrany out-of-the-box.
-I další ochranná opatření aplikace jsou dostupné na registrovaní uživatelé Dotfuscatoru CE a uživatelům *preemptivní ochrana – Dotfuscatoru* Professional Edition, je na světě úvodní [.NET Obfuscator] [net-obfuscator].
-Informace o rozšíření Dotfuscatoru najdete v tématu [upgrady stránky][upgrades].
+Řešení Dotfuscator CE nabízí základní ochranu out-of-the-box.
+Ještě více opatření na ochranu aplikací jsou k dispozici pro registrovaného uživatele řešení Dotfuscator CE a uživatelům *PreEmptive ochranu – řešení Dotfuscator* Professional Edition na světě je vedoucí [.NET Obfuskátor] [net-obfuscator].
+Informace o rozšíření Dotfuscator, najdete v článku [stránce upgrady][upgrades].
 
 ## <a name="getting-started"></a>Začínáme
 
-Chcete-li začít používat Dotfuscatoru CE ze sady Visual Studio, zadejte `dotfuscator` do **Snadné spuštění** panelu Hledat (Ctrl + Q).
+Chcete-li začít používat řešení Dotfuscator CE ze sady Visual Studio, zadejte `dotfuscator` do **Snadné spuštění** panelu hledání (Ctrl + Q).
 
-* Pokud Dotfuscatoru CE je již nainstalován, tím se otevře *nabídky* možnost spustit uživatelské rozhraní Dotfuscatoru CE. Podrobnosti najdete v tématu [stránce Začínáme v úplné uživatelské příručce CE Dotfuscatoru][get-started].
-* Pokud ještě není nainstalovaná Dotfuscatoru CE, tím se otevře odpovídajícího *nainstalovat* možnost. Najdete v článku [instalační stránka] [ install] podrobnosti.
+* Pokud řešení Dotfuscator CE je už nainstalovaný, **Snadné spuštění** vyvolá *nabídky* možnosti spuštění uživatelského rozhraní nástroje Dotfuscator CE. Podrobnosti najdete v tématu [stránku Začínáme úplné řešení Dotfuscator CE uživatelské příručce nástroje][get-started].
+* Pokud ještě není nainstalovaná řešení Dotfuscator CE, **Snadné spuštění** zobrazí příslušné *nainstalovat* možnost. Zobrazit [stránky instalace] [ install] podrobnosti.
 
-Můžete získat také **nejnovější verzi** z Dotfuscatoru CE z [Dotfuscatoru stáhne stránky na preemptive.com][download].
+Můžete získat také **nejnovější verzi** z řešení Dotfuscator CE z [stránce soubory ke stažení nástroje Dotfuscator preemptive.com][download].
 
 ## <a name="full-documentation"></a>Úplnou dokumentaci
 
-Tato stránka a jeho podstránky poskytují přehled funkcí Dotfuscatoru CE, a také [pokyny k instalaci nástroje][install].
+Na této stránce a její podstránky poskytují přehled funkce řešení Dotfuscator CE, stejně jako [pokyny k instalaci nástroje][install].
 
-Najdete v tématu [v úplné Dotfuscatoru CE uživatelské příručce na preemptive.com] [ full] podrobné pokyny k použití, včetně [spuštění pomocí uživatelského rozhraní Dotfuscatoru CE] [get-started].
+V tématu [úplného Průvodce uživatele řešení Dotfuscator CE na preemptive.com] [ full] podrobné pokyny k použití, včetně [spuštění pomocí uživatelského rozhraní nástroje Dotfuscator CE] [ get-started].
 
 <!-- Copyright © 2017 PreEmptive Solutions, LLC -->
 
-[assemblies]: https://docs.microsoft.com/en-us/dotnet/standard/assembly-format
-[software-protection]: https://www.preemptive.com/software-protection
-[obfuscation]: https://www.preemptive.com/obfuscation
-[app-protection]: https://www.preemptive.com/application-protection
-[sdl-protection]: https://www.preemptive.com/solutions/SDL-App-Protection
-[net-obfuscator]: https://www.preemptive.com/products/dotfuscator/overview
-[download]: https://www.preemptive.com/products/dotfuscator/downloads
+[assemblies]:  https://docs.microsoft.com/dotnet/standard/assembly-format
+[software-protection]:  https://www.preemptive.com/software-protection
+[obfuscation]:  https://www.preemptive.com/obfuscation
+[app-protection]:  https://www.preemptive.com/application-protection
+[sdl-protection]:  https://www.preemptive.com/solutions/SDL-App-Protection
+[net-obfuscator]:  https://www.preemptive.com/products/dotfuscator/overview
+[download]:  https://www.preemptive.com/products/dotfuscator/downloads
 
-[install]: install.md
-[capabilities]: capabilities.md
-[upgrades]: upgrades.md
+[install]:  install.md
+[capabilities]:  capabilities.md
+[upgrades]:  upgrades.md
 
-[get-started]: https://www.preemptive.com/dotfuscator/ce/docs/help/gui_getstarted.html
+[get-started]:  https://www.preemptive.com/dotfuscator/ce/docs/help/gui_getstarted.html
 
-[renaming]: https://www.preemptive.com/dotfuscator/ce/docs/help/obfuscation_renaming.html
+[renaming]:  https://www.preemptive.com/dotfuscator/ce/docs/help/obfuscation_renaming.html
 
-[checks]: https://www.preemptive.com/dotfuscator/ce/docs/help/checks_overview.html
-[tamper]: https://www.preemptive.com/dotfuscator/ce/docs/help/checks_tamper.html
-[debug]: https://www.preemptive.com/dotfuscator/ce/docs/help/checks_debug.html
-[shelflife]: https://www.preemptive.com/dotfuscator/ce/docs/help/checks_shelflife.html
+[checks]:  https://www.preemptive.com/dotfuscator/ce/docs/help/checks_overview.html
+[tamper]:  https://www.preemptive.com/dotfuscator/ce/docs/help/checks_tamper.html
+[debug]:  https://www.preemptive.com/dotfuscator/ce/docs/help/checks_debug.html
+[root]: https://www.preemptive.com/dotfuscator/ce/docs/help/checks_root.html
+[shelflife]:  https://www.preemptive.com/dotfuscator/ce/docs/help/checks_shelflife.html
 
-[exceptions]: https://www.preemptive.com/dotfuscator/ce/docs/help/instrumentation_exceptions.html
-[sessions]: https://www.preemptive.com/dotfuscator/ce/docs/help/instrumentation_sessions.html
-[features]: https://www.preemptive.com/dotfuscator/ce/docs/help/instrumentation_features.html
-
-[full]: https://www.preemptive.com/dotfuscator/ce/docs/help/index.html
+[full]:  https://www.preemptive.com/dotfuscator/ce/docs/help/index.html

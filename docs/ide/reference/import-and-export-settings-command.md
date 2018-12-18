@@ -1,10 +1,9 @@
 ---
-title: Import a Export nastavení příkaz | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+title: nastavení importu a exportu – příkaz
+ms.date: 11/21/2018
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - Tools.ImportandExportSettings
 helpviewer_keywords:
@@ -16,44 +15,52 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ad7da7f8d83cd45e7cc7801d430dbf70887747b3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8f212e5c5becb8cf2ae575510825a9c7c9034222
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52388699"
 ---
-# <a name="import-and-export-settings-command"></a>Nastavení importu a exportu – příkaz
-Importuje, exportuje nebo obnoví [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nastavení.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-Tools.ImportandExportSettings [/export:filename | /import:filename | /reset]  
-```  
-  
-## <a name="switches"></a>Přepínače  
- / export:`filename`  
- Volitelné. Exportuje aktuální nastavení do zadaného souboru.  
-  
- / import:`filename`  
- Volitelné. Naimportuje ho do zadaného souboru.  
-  
- / Reset  
- Volitelné. Obnoví aktuální nastavení.  
-  
+# <a name="import-and-export-settings-command"></a>nastavení importu a exportu – příkaz
+
+Importuje, exportuje nebo obnoví nastavení sady Visual Studio.
+
+## <a name="syntax"></a>Syntaxe
+
+```cmd
+Tools.ImportandExportSettings [/export:filename | /import:filename | /reset]
+```
+
+## <a name="switches"></a>Přepínače
+
+/ Export je přebytečný:`filename`
+
+Volitelné. Exportuje aktuální nastavení do zadaného souboru.
+
+/ import:`filename`
+
+Volitelné. Naimportuje ho do zadaného souboru.
+
+/ Reset
+
+Volitelné. Obnoví aktuální nastavení.
+
 ## <a name="remarks"></a>Poznámky
 
-Spuštění tohoto příkazu bez přepne otevře **nastavení importu a exportu** průvodce. Další informace najdete v tématu [synchronizovat nastavení](../../ide/synchronized-settings-in-visual-studio.md).
+Spuštění tohoto příkazu bez přepínače otevře **nastavení importu a exportu** průvodce. Další informace najdete v tématu [synchronizovat nastavení](../synchronized-settings-in-visual-studio.md) a [nastavení prostředí](../environment-settings.md).
 
 ## <a name="example"></a>Příklad
 
-Tento příkaz vyexportuje nastavení asi do souboru `MyFile.vssettings`.
+Následující příkaz exportuje aktuální nastavení do souboru `MyFile.vssettings`:
 
-```shell
+```cmd
 Tools.ImportandExportSettings /export:"c:\Files\MyFile.vssettings"
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Přizpůsobení sady Visual Studio IDE](../../ide/personalizing-the-visual-studio-ide.md)  
-[Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
+- [Nastavení prostředí](../../ide/environment-settings.md)
+- [Synchronizovat nastavení](../../ide/synchronized-settings-in-visual-studio.md)
+- [Přizpůsobení prostředí IDE sady Visual Studio](../../ide/personalizing-the-visual-studio-ide.md)
+- [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)

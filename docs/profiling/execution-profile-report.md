@@ -1,5 +1,5 @@
 ---
-title: Sestava profilu spuštění | Microsoft Docs
+title: Sestava profilu spuštění | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,31 +14,32 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 93a6d699845d8cce3eb1a410720d4e5fbbfd69d0
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: fa0800bcf6a4fedfbcd8c787b3cca89638e9bcb9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49935286"
 ---
 # <a name="execution-profile-report"></a>Sestava profilu spuštění
-Sestava profilu spuštění je profil tradiční vzorkování. Vzorků přibližně každých milisekundu během období při vlákno je spuštěn na logická jádra a vizualizér souběžnosti vytvoří strom typické volání pomocí kompletování Akumulovaná sadu zásobníky ukázka. Aktuální časové rozmezí a skrytá vláken a tyto filtry, které mohou být použity, může mít vliv dat v této tabulce:  
+Sestava profilu spuštění je profil pro tradiční vzorkování. Vzorky jsou přibližně každých milisekund během období, kdy vlákno běží na logické jádro a Vizualizátor souběžnosti sestavení typické volání stromu po nahromaděné sadu zásobníky ukázka kolační. Data v této tabulce mohou mít vliv aktuální časový rozsah a skryté vlákna a tyto filtry, které mohou být použity:  
   
--   Pokud je vybrána pouze můj kód, jsou zobrazeny pouze rámce zásobníku, které mají uživatelského kódu, plus o jednu úroveň pod uživatelského kódu.  
+- Pokud je vybrána pouze můj kód, jsou uvedeny pouze bloky zásobníku, které mají kód uživatele a jednu úroveň pod uživatelského kódu.  
   
--   Pokud je nastavena hodnota snížení šumu, kompletován zásobníky, které mají menší než zadaná četnost jsou filtrovány mimo sestavy  
+- Pokud je nastavena hodnota snížení šumu, porovnávány zásobníky, kterých je nižší než zadané frekvence jsou filtrovány ze sestavy  
   
- V následující tabulce jsou uvedeny sloupce v sestavě.  
+  V následující tabulce jsou uvedeny sloupců v sestavě.  
   
 |Sloupec|Popis|  
 |------------|-----------------|  
 |Název|Název funkce pro každou úroveň zásobníku volání.|  
-|Ukázky (včetně).|Celkový počet vzorků, které se shromažďují pro všechny balíčky, které zahrnuta do této úrovni stromu zásobníku volání. Číslo (včetně) je součet hodnot výhradní ukázky pro tuto funkci a včetně čítačů pro všechny jeho podřízené uzly.|  
-|Výhradní ukázky|Celkový počet shromažďovaných vzorků, pro které tato funkce je nejnižší úroveň zásobníku volání.|  
-|% Vnitřní|Procento celkového počtu vzorků, které se zobrazí ve sloupci včetně ukázky. Procentuální hodnoty jsou zaokrouhleny na dvě desetinná místa.|  
-|% Exkluzivní|Procento celkového počtu vzorků, které se zobrazí ve sloupci výhradní ukázky. Procentuální hodnoty jsou zaokrouhleny na dvě desetinná místa.|  
-|Podrobnosti|Plně kvalifikovaný název funkce. To zahrnuje počet řádků, pokud je k dispozici.|  
+|Celkových vzorků|Celkový počet vzorků, které byly shromážděny pro všechny balíčky, které jsou zahrnuty do této úrovně stromu zásobníku volání. Celkový počet je součtem výhradních vzorků pro tuto funkci a včetně čítačů pro všechny jeho podřízené uzly.|  
+|Výhradní vzorky|Celkový počet shromážděných vzorků, pro které tato funkce je nejnižší úroveň zásobníku volání.|  
+|% Celkový čas|Procento celkového počtu vzorků, které se zobrazí ve sloupci celkových vzorků. Procenta jsou zaokrouhleny na dvě desetinná místa.|  
+|% Výhradních|Procento celkového počtu vzorků, které se zobrazí ve sloupci výhradních vzorků. Procenta jsou zaokrouhleny na dvě desetinná místa.|  
+|Podrobnosti|Plně kvalifikovaný název funkce. To zahrnuje počet řádků, až bude k dispozici.|  
   
  Tato tabulka sestavy si můžete prohlédnout ve [doba spuštění (zobrazení vláken)](../profiling/execution-time-threads-view.md) zobrazení.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

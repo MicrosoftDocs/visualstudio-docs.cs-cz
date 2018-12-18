@@ -1,5 +1,5 @@
 ---
-title: Locationfield – Element (šablony projektů Visual Studio) | Microsoft Docs
+title: Locationfield – Element (šablony projektů Visual Studio) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,16 +15,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0877d374317e3a7142996b012ff6abefc6b94724
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 76ed39186796b692dd6bc93ab0eaea50f217b7af
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39636282"
 ---
-# <a name="locationfield-element-visual-studio-project-templates"></a>LocationField – element (šablony projektů Visual Studio)
-Určuje, jestli **umístění** textového pole **nový projekt** dialogové okno je povoleno, zakázán nebo skryto šablona projektu.  
+# <a name="locationfield-element-visual-studio-project-templates"></a>Locationfield – element (šablony projektů Visual Studio)
+Určuje, zda je či není **umístění** textové pole **nový projekt** dialogové okno je povolena, zakázané nebo skrytý pro šablonu projektu.  
   
- \<VSTemplate >  
+ \<Vstemplate – >  
  \<TemplateData >  
  \<Locationfield – >  
   
@@ -40,35 +41,35 @@ Určuje, jestli **umístění** textového pole **nový projekt** dialogové okn
 ### <a name="attributes"></a>Atributy  
  Žádné  
   
-### <a name="child-elements"></a>Podřízené elementy  
+### <a name="child-elements"></a>Podřízené prvky  
  Žádné  
   
-### <a name="parent-elements"></a>Nadřazené elementy  
+### <a name="parent-elements"></a>Nadřazené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Rozděluje šablonu a definuje, jak se zobrazuje v buď **nový projekt**.|  
+|[TemplateData –](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Rozděluje šablonu a definuje, jak se zobrazuje **nový projekt**.|  
   
 ## <a name="text-value"></a>Textová hodnota  
  Je vyžadována textová hodnota.  
   
  Text platné hodnoty jsou:  
   
--   `Enabled`, která určuje, že **umístění** pole **nový projekt** dialogové okno je povoleno.  
+-   `Enabled`, který určuje, že **umístění** pomocí boxingu **nový projekt** dialogové okno je povolená.  
   
--   `Disabled`, která určuje, že **umístění** pole **nový projekt** dialogové okno je zakázána.  
+-   `Disabled`, který určuje, že **umístění** pomocí boxingu **nový projekt** dialogové okno je zakázaná.  
   
--   `Hidden`, která určuje, že **umístění** pole **nový projekt** dialogové okno je skrytá.  
+-   `Hidden`, který určuje, že **umístění** pomocí boxingu **nový projekt** dialogové okno je skrytá.  
   
 ## <a name="remarks"></a>Poznámky  
  Výchozí hodnota je `Enabled`.  
   
- **Umístění** textového pole **nový projekt** dialogové okno umožňuje uživatelům změnit výchozí adresář, ve kterém jsou uloženy nové projekty.  
+ **Umístění** textové pole **nový projekt** dialogové okno umožňuje uživatelům změnit výchozí adresář, ve kterém se uloží nové projekty.  
   
- Hodnota zadaná v `Location` element je pouze berou v úvahu dialogové okno pokud ji podporuje základní systému projektu.  
+ Hodnota zadaná v `Location` elementu je jenom respektovat dialogových oken Pokud podkladový systém projektu podporuje.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ilustruje metadata pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] šablony.  
+ Následující příklad ukazuje metadata [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] šablony.  
   
 ```  
 <VSTemplate Type="Project" Version="3.0.0"  
@@ -95,6 +96,6 @@ Určuje, jestli **umístění** textového pole **nový projekt** dialogové okn
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
+## <a name="see-also"></a>Viz také:  
+ [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)   
  [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

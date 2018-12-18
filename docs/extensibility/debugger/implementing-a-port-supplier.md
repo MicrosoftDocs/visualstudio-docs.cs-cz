@@ -1,5 +1,5 @@
 ---
-title: Implementace dodavatele Port | Microsoft Docs
+title: Implementace dodavatele portu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,27 +14,28 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b0743f307dc579f6197880b0b89acaf2db0dda08
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: cdde98a85175692ed4717c8a9af0b26799c35214
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39233032"
 ---
-# <a name="implementing-a-port-supplier"></a>Implementace Port dodavatele
-Port dodavatele poskytuje porty na žádost o správce ladicí relace (SDM). Port dodavatele musí implementovat při ladění do počítače bez modelu DCOM, nebo když nové zařízení musí být podporována. Zajistit ladění na mobilní telefon, například mohly implementovat dodavatele port, který poskytuje porty, které se připojují na mobilní telefon (možná prostřednictvím Reakcí nebo buňky připojení) a vytvoří výčet procesy a programy spuštěné na telefonu.  
+# <a name="implement-a-port-supplier"></a>Implementace dodavatele portu
+Dodavatele portu poskytuje porty na požadavek na správce ladění relace (SDM). Při ladění k počítači bez modelu DCOM nebo když nová zařízení vyžaduje podporu, musí být implementované dodavatele portu. Například k poskytování ladění na mobilní telefon, může být nastavíte dodavatele portu, který poskytuje porty, které slouží k připojení k mobilní telefon (například prostřednictvím prostředí IR nebo buňky připojení) a vytváří výčet procesů a programy spuštěné na telefonu.  
   
- Ladění programů na počítačích se systémem Windows (včetně vzdálené ladění) Visual Studio poskytuje dodavatelé portu pro nativní a procesy Common Language Runtime (CLR), takže není nutné implementovat vlastní port dodavatele v těchto případech.  
+ Ladění programů na počítače se systémem Windows (včetně vzdáleného ladění) Visual Studio poskytuje dodavatelé portů pro nativní a procesy Common Language Runtime (CLR), takže není nutné nastavit vlastní dodavatele portu v těchto případech.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Implementace a registrace dodavatele portu](../../extensibility/debugger/implementing-and-registering-a-port-supplier.md)  
- Popisuje, jak SDM komunikuje s dodavatelem port a jeho porty.  
+ Tento článek popisuje, jak SDM komunikuje s dodavatele portu a jeho porty.  
   
  [Požadovaná rozhraní dodavatele portu](../../extensibility/debugger/required-port-supplier-interfaces.md)  
- Dokumenty rozhraní, která musí být implementována získat port dodavatele.  
+ Dokumenty rozhraní, které je nutné implementovat zobrazíte dodavatele portu.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Koncepty ladicího programu](../../extensibility/debugger/debugger-concepts.md)  
  Popisuje hlavní koncepty ladění architektury.  
   
-## <a name="see-also"></a>Viz také  
- [Rozšiřitelnost programu Visual Studio Debugger](../../extensibility/debugger/visual-studio-debugger-extensibility.md)
+## <a name="see-also"></a>Viz také:  
+ [Rozšiřitelnost ladicího programu Visual Studio](../../extensibility/debugger/visual-studio-debugger-extensibility.md)

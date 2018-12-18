@@ -17,18 +17,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 8779ba4ee4cf9803982d9849b3af7c83930d8a5b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 060acd0164ff7819d2abfb8d92f2394b4bcc0672
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37120373"
 ---
-# <a name="how-to-set-sharepoint-deployment-commands"></a>Postupy: Nastavení příkazů nasazení služby SharePoint
+# <a name="how-to-set-sharepoint-deployment-commands"></a>Postupy: nasazení sady SharePoint – příkazy
   Proces nasazení můžete přizpůsobit nastavení příkazy před nasazením a po nasazení. Tyto příkazy spustit před a po dalších akcí nasazení při ladění řešení služby SharePoint v sadě Visual Studio.  
   
 ### <a name="to-add-a-pre-deployment-command"></a>Chcete-li přidat příkaz před nasazením  
   
-1.  Na řádku nabídek zvolte **projektu**, * ProjectName ***vlastnosti**.  
+1.  Na řádku nabídek zvolte **projektu** > **\<*ProjectName*> vlastnosti**.  
   
 2.  Vyberte **SharePoint** kartě.  
   
@@ -38,7 +39,7 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="to-add-a-post-deployment-command"></a>Chcete-li přidat příkaz po nasazení  
   
-1.  Na řádku nabídek zvolte **projektu**, * ProjectName ***vlastnosti**.  
+1.  Na řádku nabídek zvolte **projektu** > **\<*ProjectName*> vlastnosti**.  
   
 2.  Vyberte **SharePoint** kartě.  
   
@@ -46,7 +47,6 @@ ms.lasthandoff: 04/16/2018
   
      Po dokončení nasazení, zobrazit obsah adresáře, zadejte **dir**. Chcete-li proměnnou MSBuild zkopírujte sestavení z adresáře sestavení, zadejte **zkopírujte $(TargetPath) c:\DeploymentDirectory**.  
   
-## <a name="see-also"></a>Viz také  
- [Balení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
-  
+## <a name="see-also"></a>Viz také:
+ [Zabalení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
   

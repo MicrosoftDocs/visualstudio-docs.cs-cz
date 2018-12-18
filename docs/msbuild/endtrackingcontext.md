@@ -1,5 +1,5 @@
 ---
-title: EndTrackingContext | Microsoft Docs
+title: EndTrackingContext | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -17,26 +17,27 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 935df371b912d51ef6a5d88fdae4e9e11c449049
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f3506e87c1468ff66143b672dca95cd70b0b3dff
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39177406"
 ---
 # <a name="endtrackingcontext"></a>EndTrackingContext
-Ukončete aktuální kontext sledování.  
+Ukončit aktuální kontext sledování.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 HRESULT WINAPI EndTrackingContext();  
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- **HRESULT** s **úspěšné** nastaven bit, pokud kontext sledování bylo ukončeno.  
+ **HRESULT** s **SUCCEEDED** sadu bitů, pokud kontext sledování bylo ukončeno.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** FileTracker.h  
+ **Záhlaví:** *FileTracker.h*  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [StartTrackingContext](../msbuild/starttrackingcontext.md)

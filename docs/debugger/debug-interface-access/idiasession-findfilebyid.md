@@ -1,5 +1,5 @@
 ---
-title: Idiasession::findfilebyid – | Microsoft Docs
+title: Idiasession::findfilebyid – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ed79b65823c3a777c13a90331468074347425ef5
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 7c56d66a78b52e99aecb8cb744cc3d8465d0d243
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49941409"
 ---
 # <a name="idiasessionfindfilebyid"></a>IDiaSession::findFileById
-Načte zdrojového souboru pomocí identifikátoru zdrojového souboru.  
+Zkopíruje zdrojový soubor pomocí identifikátoru zdrojového souboru.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,16 +35,16 @@ HRESULT findFileById (
   
 #### <a name="parameters"></a>Parametry  
  `uniqueId`  
- [v] Určuje identifikátor zdrojového souboru.  
+ [in] Určuje identifikátor zdrojového souboru.  
   
  `ppResult`  
  [out] Vrátí [idiasourcefile –](../../debugger/debug-interface-access/idiasourcefile.md) načíst objekt, který reprezentuje zdrojový soubor.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Identifikátor zdrojového souboru je jedinečná hodnota interně používá k sadě DIA SDK, aby všechny zdrojové soubory jedinečný. Tato metoda se obvykle používá interně ke DIA SDK.  
+ Identifikátor zdrojového souboru je jedinečná hodnota používá interně ke DIA SDK, aby všechny zdrojové soubory jedinečný. Tato metoda se obvykle používá interně ke DIA SDK.  
   
 ## <a name="see-also"></a>Viz také  
  [Idiasession –](../../debugger/debug-interface-access/idiasession.md)   

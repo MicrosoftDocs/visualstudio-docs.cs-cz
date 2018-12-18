@@ -1,6 +1,7 @@
 ---
-title: Element (vlastnost XElement dynamické)
+title: – Element (dynamická vlastnost XElement)
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 ms.topic: reference
 apiname:
@@ -12,31 +13,32 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0bdcb6f4524f4f2db7f119319cbb38a09f83f201
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: bf8d964a41193d1db845a608749b0ca671dd9349
+ms.sourcegitcommit: db680e8fa8066f905e7f9240342ece7ab9259308
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/09/2018
+ms.locfileid: "37924050"
 ---
-# <a name="element-xelement-dynamic-property"></a>Element (vlastnost XElement dynamické)
+# <a name="element-xelement-dynamic-property"></a>– Element (dynamická vlastnost XElement)
 
-Získá indexeru. používá se k načtení podřízený element instanci, která odpovídá názvu zadaný rozšířené.
+Získá indexeru se používá k načtení podřízený element instanci, která odpovídá zadaným rozbalený název.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```xaml
 elem.Element[{namespaceName}localName]
 ```
 
 ## <a name="property-valuereturn-value"></a>Hodnota vlastnosti / návratová hodnota
 
-Indexer typu `XElement Item(String expandedName)`. Indexer vezme rozšířené název parametru a vrátí odpovídající <xref:System.Xml.Linq.XElement>, nebo `null` Pokud neexistuje žádný element se zadaným názvem.
+Indexer typu `XElement Item(String expandedName)`. Indexer přijímá parametr rozbalený název a vrátí odpovídající <xref:System.Xml.Linq.XElement>, nebo `null` Pokud neexistuje žádný element se zadaným názvem.
 
 ## <a name="remarks"></a>Poznámky
 
-Tato vlastnost je ekvivalentní <xref:System.Xml.Linq.XContainer.Element%2A> metodu <xref:System.Xml.Linq.XContainer?displayProperty=fullName> třídy.
+Tato vlastnost je ekvivalentní k <xref:System.Xml.Linq.XContainer.Element%2A> metodu <xref:System.Xml.Linq.XContainer?displayProperty=fullName> třídy.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - <xref:System.Xml.Linq.XContainer.Element%2A?displayProperty=fullName>
 - [Dynamické vlastnosti třídy XElement](../designers/xelement-class-dynamic-properties.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugPortEx2::GetPortProcessId | Microsoft Docs
+title: IDebugPortEx2::GetPortProcessId | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d41f01727ed5ee6a1db348da1c253120b1b13c2a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 40135e1b6f9eee192dfa35ac7cae6a80a693f840
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49818962"
 ---
 # <a name="idebugportex2getportprocessid"></a>IDebugPortEx2::GetPortProcessId
-Získá Identifikátor procesu portu sám sebe.  
+Získá ID procesu portu samotný.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +41,13 @@ int GetPortProcessId (
   
 #### <a name="parameters"></a>Parametry  
  `pdwProcessId`  
- [out] Vrátí Identifikátor procesu fyzického portu sám sebe.  
+ [out] Vrátí ID procesu fyzického portu samotný.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- V modulu runtime Win32 například tuto metodu obvykle volá funkci Win32 `GetCurrentProcessId` získat ID fyzického procesu.  
+ V modulu runtime Win32 například tato metoda obvykle volá funkci Win32 `GetCurrentProcessId` získat ID procesu fyzické.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugPortEx2](../../../extensibility/debugger/reference/idebugportex2.md)

@@ -1,5 +1,5 @@
 ---
-title: Shromažďování dat souběžnosti proces a vlákno | Microsoft Docs
+title: Shromažďování dat souběžnosti procesu a vlákně | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -12,34 +12,35 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d5314977b527358ebb3417423a20271c15a51130
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b8ce2c1d7a28eff441cbf3a95e8f9df644789e70
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43775546"
 ---
-# <a name="collecting-thread-and-process-concurrency-data"></a>Shromažďování dat o souběžnosti vláken a procesů
+# <a name="collect-thread-and-process-concurrency-data"></a>Shromažďování dat o souběžnosti vláken a procesů
 
-Metoda profilace souběžného zpracování profilace nástroje sady Visual Studio umožňuje shromažďování dat kolizí prostředku, který obsahuje informace o každé synchronizace událost, která způsobí, že funkci v aplikaci PROFILOVANÉHO čekání na přístup k prostředku.
+Metoda profilace souběžného zpracování profilování nástroje sady Visual Studio umožňuje shromažďovat data kolize prostředků, který obsahuje informace o každé synchronizaci událost, která způsobí, že funkce v profilované aplikace čekání na přístup k prostředku.
 
-Můžete určit souběžnosti metoda profilace pomocí jedné z následujících postupů:
+Můžete zadat souběžnosti metoda profilace pomocí jedné z následujících postupů:
 
-- Na první stránce průvodce profilace, klikněte na tlačítko **souběžnosti**
-- Na **Obecné** stránky dialogovém okně Vlastnosti výkonnostní relace klikněte na tlačítko **souběžnosti**.
-- Na **prohlížeč výkonu** panelu nástrojů v **metoda** seznamu, klikněte na tlačítko **souběžnosti**.
+- Klikněte na první stránce průvodce Profilováním, **souběžnosti**
+- Na **Obecné** stránky dialogovém okně Vlastnosti relace výkonu můžete kliknout na tlačítko **souběžnosti**.
+- Na **prohlížeč výkonu** nástrojů v **metoda** klikněte na možnost **souběžnosti**.
 
-## <a name="common-tasks"></a>Obecné úlohy
+## <a name="common-tasks"></a>Běžné úlohy
 
-Můžete zadat další možnosti v *výkonnostní relace *** stránky vlastností** dialogové okno relace výkonu. Chcete-li otevřít toto dialogové okno:
+Můžete zadat další možnosti v _relace výkonu_**stránky vlastností** dialogovému oknu relace výkonu. Chcete-li otevřít toto dialogové okno:
 
-- V **prohlížeč výkonu**, klikněte pravým tlačítkem na název relace výkonu a pak klikněte na tlačítko **vlastnosti**.
+- V **prohlížeč výkonu**, klikněte pravým tlačítkem na název relace výkonu a potom klikněte na tlačítko **vlastnosti**.
 
-Úkoly v následující tabulce popisují možnosti, které můžete zadat v *výkonnostní relace *** stránky vlastností** dialogové okno když profilu pomocí metody souběžnosti.
+Úkoly v následující tabulce popisují možnosti, které můžete určit _relace výkonu_**stránky vlastností** dialogové okno při profilování pomocí za použití metody souběžnosti.
 
 |Úloha|Související obsah|
 |----------|---------------------|
-|Na **Obecné** zadejte pojmenování podrobnosti vygenerovaný soubor profilování dat (.vsp).|- [Postupy: nastavení možností názvu datového souboru výkonu](../profiling/how-to-set-performance-data-file-name-options.md)|
-|Na **spustit** stránky, zadejte aplikaci spustit, pokud máte více .exe projekty v řešení pro kód.|- [Postupy: určení binárního souboru spuštění](../profiling/how-to-specify-the-binary-to-start.md)|
-|Na **sledováním interakce vrstev** přidejte ADO.NET data volání do profilace spustit.|- [Shromažďování dat interakce vrstev](../profiling/collecting-tier-interaction-data.md)|
-|Na **čítačů systému Windows** stránky, zadejte jeden nebo více čítačů výkonu operačního systému pro přidání do data profilování jako značky.|- [Postupy: shromažďování dat čítačů Windows](../profiling/how-to-collect-windows-counter-data.md)|
-|Na **Upřesnit** určete verzi běhové rozhraní .NET Framework profil, pokud vaše aplikace moduly pomocí více verzí. Ve výchozím nastavení je první verze načíst profilovaným.|- [Postupy: Zadejte modul Runtime rozhraní .NET Framework](../profiling/how-to-specify-the-dotnet-framework-runtime.md)|
+|Na **Obecné** stránce, pojmenování detailů generovaného souboru dat profilování (.vsp).|- [Postupy: nastavení možností názvu datového souboru výkonu](../profiling/how-to-set-performance-data-file-name-options.md)|
+|Na **spuštění** stránky, zadejte aplikaci spustit, pokud máte několik projektů .exe ve vašem kódu řešení.|- [Postupy: určení binárního souboru ke spuštění](../profiling/how-to-specify-the-binary-to-start.md)|
+|Na **interakce vrstev** stránce, přidejte data pro volání ADO.NET pro spuštění profilování.|- [Shromažďování dat interakce vrstev](../profiling/collecting-tier-interaction-data.md)|
+|Na **čítače Windows** stránky, zadejte jeden nebo více čítačů výkonu operačního systému pro přidání do profilových dat. jako značky.|- [Postupy: shromažďování dat čítačů Windows](../profiling/how-to-collect-windows-counter-data.md)|
+|Na **Upřesnit** stránky, zadejte verzi rozhraní .NET Framework doba běhu do profilu, pokud moduly vaše aplikace používat více verzí. Standardně je první verze načíst profilována.|- [Postupy: určení modulu runtime rozhraní .NET Framework](../profiling/how-to-specify-the-dotnet-framework-runtime.md)|

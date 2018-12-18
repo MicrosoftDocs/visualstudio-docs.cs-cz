@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31119673"
 ---
 # <a name="idebugexceptionevent2"></a>IDebugExceptionEvent2
 V programu právě prováděné je vyvolána výjimka, modul ladění (DE) odešle toto rozhraní do správce ladicí relace (SDM).  

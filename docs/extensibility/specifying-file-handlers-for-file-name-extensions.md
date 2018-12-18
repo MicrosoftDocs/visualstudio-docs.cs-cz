@@ -1,5 +1,5 @@
 ---
-title: Určení souboru obslužné rutiny pro přípony názvu souboru | Microsoft Docs
+title: Určení popisovačů souborů pro přípony názvů souborů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,19 +13,20 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0d0086f8badb32431c85f16e1f74fe8f186c9b2e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 885e4647d00ac0e1a1d1c60e9f58b4dbcd7971b0
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43776045"
 ---
-# <a name="specifying-file-handlers-for-file-name-extensions"></a>Určení souboru obslužné rutiny pro přípony názvu souboru
-Existuje několik způsobů, jak zjistit, která zpracovává soubor, který má příponu souboru konkrétní aplikace. Příkazy OpenWithList a OpenWithProgids jsou dva způsoby, jak zadat soubor obslužných rutin pod položkou registru pro příponu souboru.  
+# <a name="specifying-file-handlers-for-file-name-extensions"></a>Určení popisovačů souborů pro přípony názvů souborů
+Existuje mnoho způsobů, jak zjistit, která zpracovává soubor, který má příponu souboru aplikace. Příkazy OpenWithList a OpenWithProgids jsou dva způsoby určení popisovačů souborů pod položkou registru pro příponu souboru.  
   
 ## <a name="openwithlist-verb"></a>Příkaz OpenWithList  
- Když kliknete pravým tlačítkem na soubor v Průzkumníku Windows, uvidíte **otevřete** příkaz. Pokud je více než jeden produkt související s příponou, uvidíte **otevřít v** podnabídky.  
+ Když kliknete pravým tlačítkem soubor v Průzkumníku Windows, zobrazí **otevřít** příkazu. Pokud více než jeden produkt je spojen s příponou, zobrazí se **otevřít v** podnabídka.  
   
- Chcete-li spustit rozšíření nastavením OpenWithList klíč pro tuto příponu v HKEY_CLASSES_ROOT různé aplikace můžete zaregistrovat. Uvedené pod tímto klíčem pro příponu souboru aplikace se zobrazí pod **doporučená programy** nadpis v **otevřít v** dialogové okno. Následující příklad ukazuje aplikace zaregistrované otevřete .vcproj příponu souboru.  
+ Různé aplikace, chcete-li spustit rozšíření pomocí klíče OpenWithList pro příponu souboru v registru HKEY_CLASSES_ROOT můžete zaregistrovat. Uvedené pod tímto klíčem pro příponu souboru aplikace se zobrazí v rámci **programy** nadpis v **otevřít v** dialogové okno. Následující příklad ukazuje zaregistrované otevřete .vcproj přípona souboru aplikace.  
   
 ```  
 HKEY_CLASSES_ROOT\  
@@ -36,25 +37,25 @@ HKEY_CLASSES_ROOT\
 ```  
   
 > [!NOTE]
->  U klíčů zadání aplikace se ze seznamu v části HKEY_CLASSES_ROOT\Applications.  
+>  Ze seznamu pod HKEY_CLASSES_ROOT\Applications se klíče zadávání aplikace.  
   
- Přidáním klíčem OpenWithList deklarovat, že vaše aplikace podporuje příponu souboru i v případě, že vlastnictví rozšíření převezme jiná aplikace. To může být v budoucích verzích vaší aplikace nebo jiná aplikace.  
+ Přidáním klíčem OpenWithList deklarovat, že vaše aplikace podporuje příponu souboru i v případě, že jiná aplikace převezme vlastnictví rozšíření. To může být v budoucích verzích aplikace nebo v jiné aplikaci.  
   
 ## <a name="openwithprogids"></a>OpenWithProgIDs  
- Programové identifikátory (ProgID) jsou popisný verzích ID třídy, která identifikovat verzi aplikace nebo objektu COM. Každý společně vytvořitelné objekt by měl mít svůj vlastní ProgID. Například VisualStudio.DTE.7.1 spuštění Visual Studio .NET 2003 při spuštění VisualStudio.DTE.10.0 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Jako vlastník projektu typu nebo typu položky projektu musíte vytvořit ProgID specifické pro verzi pro vaše příponu souboru. Tyto identifikátory ProgID může být redundantní v tom, že více než jeden ProgID může spustit stejné aplikaci. Další informace najdete v tématu [registrace příkazy pro přípony názvu souboru](../extensibility/registering-verbs-for-file-name-extensions.md).  
+ Programové identifikátory (ProgID) jsou popisný verze ID třídy, které identifikují verzi aplikace nebo objekt modelu COM. Každý společně vytvořitelný objekt by měl mít svůj vlastní identifikátor ProgID. Například VisualStudio.DTE.7.1 spustí Visual Studio .NET 2003 při spouštění VisualStudio.DTE.10.0 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Jako vlastník projektu typu nebo typu položky projektu musíte vytvořit ProgID specifické pro verzi pro vaše příponu souboru. Tyto ProgID může být redundantní, v tom, že více než jeden identifikátor ProgID může spustit stejné aplikace. Další informace najdete v tématu [registrace operací pro přípony názvů souborů](../extensibility/registering-verbs-for-file-name-extensions.md).  
   
- Použijte následující konvence pro verzí souboru ProgID předejdete duplikace s registrací od jiných dodavatelů:  
+ Aby se zabránilo duplicitě s registrací od jiných dodavatelů, použijte následujícími zásadami vytváření názvů pro souboru označeného verzí ProgID:  
   
-|Přípona souboru|Verzí ProgID|  
+|Přípona souboru|Verze ProgID|  
 |--------------------|----------------------|  
 |.Extension|ProductName. extension.versionMajor.versionMinor|  
   
- Můžete zaregistrovat jiné aplikace, které jsou možné otevřít konkrétní příponu přidáním verzí ProgID jako hodnoty HKEY_CLASSES_ROOT\\*\<rozšíření >*\OpenWithProgids klíč. Tento klíč registru, obsahuje seznam alternativní ProgID přidružené k příponě souboru. Aplikace přidružené k uvedené ProgID zobrazeny **otevřít v *** název produktu* podnabídky. Pokud stejná aplikace je zadána v obou `OpenWithList` a `OpenWithProgids` slučuje duplicitní hodnoty klíče, operační systém.  
+ Zaregistrujete různé aplikace, které jsou možné otevřít specifickou příponu souboru tak, že přidáte systémovou správou verzí ProgID jako hodnoty klíč HKEY_CLASSES_ROOT\\*\<rozšíření >* \OpenWithProgids klíč. Tento klíč registru obsahuje seznam alternativních ProgID spojené s příponou souboru. Aplikace přidružené k uvedené ProgID zobrazeny **otevřít v**_název produktu_ podnabídka. Pokud stejná aplikace je zadán v obou `OpenWithList` a `OpenWithProgids` duplicity slučuje klíče, operační systém.  
   
 > [!NOTE]
->  `OpenWithProgids` Klíčů je podporovaná jen v systému Windows XP. Protože jinými operačními systémy Ignorovat tento klíč, nepoužívejte ho jako pouze registrace pro obslužné rutiny souborů. Tento klíč použijte zajistit lepší uživatelské prostředí v systému Windows XP.  
+>  `OpenWithProgids` Klíč se podporuje jenom ve Windows XP. Protože jinými operačními systémy Ignorovat tento klíč, nepoužívejte ho jako pouze registrace pro obslužné rutiny souborů. Pomocí tohoto klíče poskytují lepší uživatelské prostředí ve Windows XP.  
   
- Přidejte požadované ProgID jako hodnoty typu REG_NONE. Následující kód představuje příklad, registrace ProgID pro přípony souborů (. *ext*).  
+ Přidejte požadované ProgID jako hodnoty typu REG_NONE. Následující kód obsahuje příklad registrace ProgID pro příponu souboru (. *ext*).  
   
 ```  
 HKEY_CLASSES_ROOT\  
@@ -65,7 +66,7 @@ HKEY_CLASSES_ROOT\
          otherprogid   REG_NONE (zero-length binary value)  
 ```  
   
- ProgID zadaný jako výchozí hodnota pro příponu souboru je výchozí popisovač souboru. Pokud změníte ProgID pro příponu souboru, která odeslaná z předchozí verze [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nebo které mohou být převzaty ostatní aplikace a pak je nutné zaregistrovat `OpenWithProgids` klíč pro vaše přípona souboru a zadejte nové ProgID v seznamu spolu s původní ProgID, které podporujete. Příklad:  
+ ProgID, zadaný jako výchozí popisovač souboru je výchozí hodnota pro příponu souboru. Pokud upravíte ProgID pro příponu souboru, dodávané spolu se předchozí verze [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nebo, které můžete provést od jiných aplikací, a potom je nutné zaregistrovat `OpenWithProgids` klíč pro vaše přípona souboru a zadejte novou ProgID v seznamu spolu s staré ProgID, kterou podporujete. Příklad:  
   
 ```  
 HKEY_CLASSES_ROOT\  
@@ -77,7 +78,7 @@ HKEY_CLASSES_ROOT\
          VisualStudio.vcproj.14.0 //new progid  
 ```  
   
- Pokud starý ProgID má příkazy, které jsou s ním spojená, pak tyto příkazy se také zobrazí v části **otevřít v** *název produktu* v místní nabídce.  
+ Pokud původní ProgID má příkazy, které s ním spojená, pak tyto příkazy se také zobrazí v části **otevřít v** *název produktu* v místní nabídce.  
   
 ## <a name="see-also"></a>Viz také  
  [O přípony názvů souborů](../extensibility/about-file-name-extensions.md)   

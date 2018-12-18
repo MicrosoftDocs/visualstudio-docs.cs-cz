@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::GetNameFromToken | Microsoft Docs
+title: IDebugComPlusSymbolProvider::GetNameFromToken | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bbd4fc3abcee9cc7cdea9c078abfaba0b6df5ba7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8c9fae6967cc9b37938b83f61a10f8a6a85804a1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920427"
 ---
 # <a name="idebugcomplussymbolprovidergetnamefromtoken"></a>IDebugComPlusSymbolProvider::GetNameFromToken
-Vrátí název spojený s zadaný token zadaný objekt jeho metadata.  
+Vrátí název přidružený k zadaný token zadaný objekt jeho metadat.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,16 +44,16 @@ int GetNameFromToken (
   
 #### <a name="parameters"></a>Parametry  
  `pMetadataImport`  
- [v] Objekt, který obsahuje informace o metadatech.  
+ [in] Objekt, který obsahuje informace o metadatech.  
   
  `dwToken`  
- [v] Token, který má být s názvem.  
+ [in] Token s názvem.  
   
  `pbstrName`  
  [out] Název, který odpovídá token.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugSymbolProvider** objekt, který zveřejňuje [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) rozhraní.  

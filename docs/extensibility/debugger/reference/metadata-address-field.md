@@ -1,5 +1,5 @@
 ---
-title: METADATA_ADDRESS_FIELD | Microsoft Docs
+title: METADATA_ADDRESS_FIELD | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 384966b842db1ed685f365b2bead228e5dadd23f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2896cff4133db49ca02aa3b0a08f227f389ab713
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49834107"
 ---
 # <a name="metadataaddressfield"></a>METADATA_ADDRESS_FIELD
-Tato struktura představuje adresu pole třídu nebo strukturu.  
+Tato struktura reprezentuje adresy pole třídy nebo struktury.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,12 +41,12 @@ public struct METADATA_ADDRESS_FIELD {
   
 ## <a name="terms"></a>Podmínky  
  tokField  
- ID pole tokenu.  
+ ID tokenu pole.  
   
  [C++] `_mdToken` je `typedef` pro 32bitovou verzi `int`.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je součástí sjednocení v [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) struktury, kdy `dwKind` pole z `DEBUG_ADDRESS_UNION` struktura je nastaven na `ADDRESS_KIND_FIELD` (hodnotu z [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) výčet).  
+ Tato struktura je součástí sjednocení v [DEBUG_ADDRESS_UNION](../../../extensibility/debugger/reference/debug-address-union.md) strukturu, kdy `dwKind` pole `DEBUG_ADDRESS_UNION` struktura je nastavena na `ADDRESS_KIND_FIELD` (hodnotu z [ADDRESS_KIND](../../../extensibility/debugger/reference/address-kind.md) výčet).  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: sh.h  

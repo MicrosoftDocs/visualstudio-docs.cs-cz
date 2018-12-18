@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_targetrelativevirtualaddress – | Microsoft Docs
+title: Idiasymbol::get_targetrelativevirtualaddress – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c43d496565518df7e24b57cd9d191b1a64a800f
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: c3426fdf356e61239da2751bd068a38a4172382c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49861316"
 ---
 # <a name="idiasymbolgettargetrelativevirtualaddress"></a>IDiaSymbol::get_targetRelativeVirtualAddress
-Načte relativní virtuální adresy (RVA) převodu cíl.  
+Načte relativní virtuální adresu (RVA) cíle.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,18 +34,18 @@ HRESULT get_targetRelativeVirtualAddress (
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí RVA převodu cíle.  
+ [out] Vrátí adresu RVA převodní rutina cíle.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` nebo chybový kód.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
->  Vrácená hodnota `S_FALSE` znamená vlastnost není k dispozici pro symbol.  
+>  Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato vlastnost je platná pouze tehdy, pokud symbol jako [SymTagEnum – výčet](../../debugger/debug-interface-access/symtagenum.md) hodnotu `SymTagThunk`.  
+ Tato vlastnost je platná pouze tehdy, pokud symbol jako [symtagenum – výčet](../../debugger/debug-interface-access/symtagenum.md) hodnotu `SymTagThunk`.  
   
- "Převodu" je úsek kódu, který převádí mezi adresní prostor 32-bit paměti (také označované jako plochý adresní prostor) a 16bitové adresní prostor (označované jako segmentovaný adresní prostor).  
+ "Převodní rutina" je část kódu, který převede mezi 32-bit paměti adresní prostor (označované také jako plochý adresní prostor) a 16bitových adresní prostor, (označované jako segmentovaným adresní prostor).  
   
 ## <a name="see-also"></a>Viz také  
  [Idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md)   

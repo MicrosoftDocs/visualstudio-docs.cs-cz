@@ -1,5 +1,5 @@
 ---
-title: Funkce SccAddFilesFromSCC | Microsoft Docs
+title: Sccaddfilesfromscc – funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: dc42a7be878ce52f4d951171c6b5cb08e195d564
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b827e1f7e26fb98e9d49de4e9fe2388e46ee07cb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49831169"
 ---
-# <a name="sccaddfilesfromscc-function"></a>SccAddFilesFromSCC – funkce
-Tato funkce přidá seznam souborů, od správy zdrojového kódu aktuálně otevřenou projektu.  
+# <a name="sccaddfilesfromscc-function"></a>Sccaddfilesfromscc – funkce
+Tato funkce přidá seznam souborů ze správy zdrojových kódů aktuálně otevřeném projektu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,44 +41,44 @@ SCCRTN SccAddFilesFromSCC(
 );  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
  pContext  
- [v] Ukazatel modulu plug-in kontextu zdroj ovládacího prvku.  
+ [in] Ukazatel kontext modulu plug-in zdroje ovládacího prvku.  
   
  hWnd  
- [v] Obslužná rutina do okna IDE, modul plug-in správy zdroje můžete použít jako nadřazený objekt pro všechna dialogová okna poskytuje.  
+ [in] Popisovač okna integrovaného vývojového prostředí, které modul plug-in správy zdrojového kódu můžete použít jako nadřazený pro všechna dialogová okna, které poskytuje.  
   
  lpUser  
- [ve out] Uživatelské jméno (až SCC_USER_SIZE, včetně null ukončovací znak).  
+ [out v] Uživatelské jméno (až SCC_USER_SIZE, včetně ukončovacího znaku null).  
   
  lpAuxProjPath  
- [ve out] Pomocná řetězec identifikující projektu (až `SCC_PRJPATH_`velikost, včetně null ukončovací znak).  
+ [out v] Pomocné řetězec, který identifikuje projektu (až `SCC_PRJPATH_`velikost, včetně ukončovacího znaku null).  
   
  cFiles  
- [v] Počet souborů, které poskytují `lpFilePaths`.  
+ [in] Počet souborů, které jsou uvedena v každém `lpFilePaths`.  
   
  lpFilePaths  
- [ve out] Pole názvy souborů pro přidání do aktuálního projektu.  
+ [out v] Pole názvy souborů přidejte do aktuálního projektu.  
   
  lpDestination  
- [v] Cílovou cestu, kde jsou soubory k zapsání.  
+ [in] Cílová cesta kde soubory jsou k zapsání.  
   
  lpComment  
- [v] Komentář, který má být použita pro každý ze souborů, který chcete přidat.  
+ [in] Komentář, který se má použít pro všechny přidávané soubory.  
   
  pbResults  
- [ve out] Pole příznaky, které jsou sady, čímž indikuje úspěšné provedení (nenulové hodnoty nebo TRUE) nebo selhání (nula nebo FALSE) pro každý soubor (velikost pole musí být alespoň `cFiles` dlouho).  
+ [out v] Pole příznaky, které jsou sady, čímž indikuje úspěšné provedení (nenulovou hodnotu nebo hodnotu TRUE) nebo selhání (nula nebo hodnotu NEPRAVDA) pro každý soubor (velikost pole musí být dlouhý aspoň `cFiles` dlouhý).  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Očekává se, že modul plug-in implementace zdroje řízení této funkce vrátí jednu z následujících hodnot:  
+ Modul plug-in implementaci ovládacího prvku zdroje této funkce má vracet instanci jednoho z následujících hodnot:  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
-|SCC_E_PROJNOTOPEN|Projekt není otevřené.|  
-|SCC_E_OPNOTPERFORMED|Připojení není do stejné projektu podle specifikace `lpAuxProjPath.`|  
+|SCC_E_PROJNOTOPEN|Projekt není otevřen.|  
+|SCC_E_OPNOTPERFORMED|Připojení není na stejný projekt podle specifikace `lpAuxProjPath.`|  
 |SCC_E_NOTAUTHORIZED|Uživatel nemá oprávnění k aktualizaci databáze.|  
 |SCC_E_NONSPECIFICERROR|Došlo k neznámé chybě.|  
-|SCC_I_RELOADFILE|Musí být znovu načíst soubor nebo projektu.|  
+|SCC_I_RELOADFILE|Soubor nebo projekt je potřeba znovu načíst.|  
   
-## <a name="see-also"></a>Viz také  
- [Funkce modulu plug-in správy zdrojového kódu v rozhraní API](../extensibility/source-control-plug-in-api-functions.md)
+## <a name="see-also"></a>Viz také:  
+ [Funkce modulu plug-in API zdrojového ovládacího prvku](../extensibility/source-control-plug-in-api-functions.md)

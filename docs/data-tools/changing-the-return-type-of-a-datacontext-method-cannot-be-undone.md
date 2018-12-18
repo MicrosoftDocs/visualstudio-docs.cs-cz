@@ -1,23 +1,25 @@
 ---
-title: Změna návratový typ metody DataContext nelze vrátit zpět
+title: Změnu návratového typu metody DataContext nelze vrátit zpět.
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 76b161fc-5075-4192-8d94-f15b02e199e9
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: d7b07b1568fac6d97ef078a326a2f769aaa21f76
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: abec4dd6d5cded79e1f25a6dbb5ec2e55c2d444f
+ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36282752"
 ---
-# <a name="changing-the-return-type-of-a-datacontext-method-cannot-be-undone"></a>Změna návratový typ metody DataContext nelze vrátit zpět
+# <a name="changing-the-return-type-of-a-datacontext-method-cannot-be-undone"></a>Změnu návratového typu metody DataContext nelze vrátit zpět.
 
-Změna návratový typ metody DataContext nelze vrátit zpět. Pokud chcete vrátit zpět na automaticky generovaný typ, je nutné přetáhnout položky z Průzkumníka serveru Průzkumníka a databáze do Návrhář relací objektů znovu. Opravdu že chcete změnit návratový typ?
+Změna návratový typ metody DataContext nelze vrátit zpět. Chcete-li vrátit zpět na automaticky generovaný typ, musí přetáhněte ji z **Průzkumníka serveru** nebo **Průzkumník databáze** na Návrhář relací objektů znovu. Opravdu že chcete změnit návratový typ?
 
 Návratový typ <xref:System.Data.Linq.DataContext> metoda se liší v závislosti na tom, kde je vyřadit položky [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]. Pokud je vyřadit položku přímo do existující třídy entity, <xref:System.Data.Linq.DataContext> metodu, která má návratový typ třídy entita se vytvoří. Pokud je položka vyřadit na prázdnou oblast [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)], <xref:System.Data.Linq.DataContext> metoda, která vrátí typ automaticky generované se vytvoří. Můžete změnit návratový typ <xref:System.Data.Linq.DataContext> metoda po přidání do podokna metody. Zkontrolovat nebo změnit návratový typ <xref:System.Data.Linq.DataContext> metoda, vyberte ho a klikněte na tlačítko **návratového typu** vlastnost **vlastnosti** okno.
 
@@ -37,7 +39,7 @@ Návratový typ <xref:System.Data.Linq.DataContext> metoda se liší v závislos
 
     A <xref:System.Data.Linq.DataContext> metoda je vytvořena s původní výchozí návratovým typem.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Zprávy Návrháře relací objektů](../data-tools/o-r-designer-messages.md)
 - [Technologie LINQ to SQL nástroje v sadě Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

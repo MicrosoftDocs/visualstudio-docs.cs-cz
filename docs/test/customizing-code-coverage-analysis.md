@@ -1,6 +1,7 @@
 ---
-title: Přizpůsobení analýzy pokrytí kódu v sadě Visual Studio | Microsoft Docs
+title: Přizpůsobení analýzy pokrytí kódu
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: gewarren
@@ -8,53 +9,45 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 54536e5e59f52a4051c715e5dc385672dc22721e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 09af57ca64524dafa506d57d486e9385a4c35a93
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054934"
 ---
 # <a name="customize-code-coverage-analysis"></a>Přizpůsobení analýzy pokrytí kódu
 
-Ve výchozím nastavení nástroj Visual Studio pokrytí kódu analyzuje všechny sestavení řešení, které jsou načteny během testování částí. Doporučujeme zachovat toto výchozí nastavení, protože ve většině případů funguje dobře. Další informace najdete v tématu [pomocí pokrytí kódu k určení jak mnohem kódu se testuje](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md).
+Ve výchozím nastavení pokrytí kódu analyzuje všechna sestavení řešení, která jsou načtena během testování částí. Vzhledem k tomu, že to funguje dobře ve většině případů doporučujeme použít toto výchozí chování. Další informace najdete v tématu [použití pokrytí kódu k určení, kolik kódu je testována](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md).
 
-Před přizpůsobením chování pokrytí kódu je třeba zvážit některé alternativy:
+Chcete-li vyloučit testovací kód z výsledků pokrytí kódu a obsahovat jenom kód aplikace, přidejte <xref:System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute> atribut do vaší testovací třídy.
 
-- *Chcete vyloučit testovacího kódu z pokrytí výsledky kódu a obsahovat pouze kódu aplikace.*
+Chcete-li zahrnout sestavení, které nejsou součástí vašeho řešení, získat *PDB* soubory pro tato sestavení a zkopírujte je do stejné složky jako sestavení *.dll* soubory.
 
-     Přidat `ExcludeFromCodeCoverage Attribute` ke třídě testu.
+## <a name="run-settings-file"></a>Soubor parametrů běhu
 
-- *Chcete zahrnout sestavení, které nejsou součástí mém řešení.*
+[Soubor parametrů běhu](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md) je konfigurační soubor používaný nástroji pro testování jednotky. Upřesňující nastavení pokrytí kódu jsou určené v *s příponou .runsettings* souboru.
 
-     Získejte soubory s příponou .pdb pro tato sestavení a zkopírujte je do stejné složky jako soubory sestavení s příponou .dll.
+Chcete-li přizpůsobit pokrytí kódu, postupujte podle těchto kroků:
 
-Chcete-li přizpůsobit chování pokrytí kódu, zkopírujte [ukázku na konci tohoto tématu](#sample) a přidejte ji do řešení, použijte příponu souboru *.runsettings*. Upravit vlastní potřebám a potom na **Test** nabídce zvolte **nastavení testu**, **vyberte nastavení testu** souboru. Zbývající část tohoto článku popisuje tento postup podrobněji.
+1. Přidejte soubor parametrů běhu do vašeho řešení. V **Průzkumníka řešení**, v místní nabídce řešení zvolte **přidat** > **nová položka**a vyberte **soubor XML**. Uložte soubor s názvem, jako *CodeCoverage.runsettings*.
 
-## <a name="the-run-settings-file"></a>Soubor parametrů běhu
+1. Přidejte obsah ze souboru příkladu na konci tohoto článku a jak je popsáno v následující části jeho úprava podle vašich potřeb.
 
-Nastavení pokrytí pokročilé kódu jsou určené v *.runsettings* souboru. Soubor parametrů běhu je konfigurační soubor nástrojích pro testování jednotky. Doporučujeme vám, že zkopírujete [ukázku na konci tohoto tématu](#sample) a upravit ho podle vlastních potřeb.
+1. Vyberte soubor parametrů běhu na **testovací** nabídky, zvolte **nastavení testu** > **vybrat soubor nastavení testu**. Zadejte soubor parametrů běhu pro spouštění testů z příkazového řádku nebo v pracovním postupu sestavení, najdete v článku [konfigurace testů jednotek s použitím *s příponou .runsettings* souboru](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#specify-a-run-settings-file).
 
-Chcete-li přizpůsobit pokrytí kódu, přidáte soubor parametrů běhu k řešení:
+   Když vyberete **analyzovat pokrytí kódu**, informace o konfiguraci je pro čtení ze souboru parametrů běhu.
 
-1. Přidání souboru .xml jako položka řešení s příponou *.runsettings*:
+   > [!TIP]
+   > Předchozí výsledky pokrytí kódu a barevné zvýraznění kódu nejsou zakryty automaticky při spuštění testů nebo aktualizujte svůj kód.
 
-     V Průzkumníku řešení, vyberte v místní nabídce vašeho řešení **přidat** > **nová položka**a vyberte **souboru XML**. Uložte soubor s názvem, jako ukončení *CodeCoverage.runsettings*.
+Vlastní nastavení vypnutí a zapnutí, zrušte výběr nebo vyberte soubor v **testovací** > **nastavení testu** nabídky.
 
-2. Přidejte obsah z příkladu na konci tohoto článku a jak je popsáno v následujících částech jej přizpůsobit svým potřebám.
+![Nabídka nastavení testu se soubor s vlastním nastavením](../test/media/codecoverage-settingsfile.png)
 
-3. Na **Test** nabídce zvolte **nastavení testu** > **vyberte soubor s nastavením testu** a vyberte soubor.
+### <a name="specify-symbol-search-paths"></a>Určení cest pro hledání symbolů
 
-4. Nyní když spustíte **analýza pokrytí kódu**, soubor parametrů běhu bude kontrolovat své chování. Nezapomeňte, že je nutné znovu spustit pokrytí kódu. Předchozí výsledky pokrytí a barevné zvýrazňování kódu nejsou skryté automaticky při spuštění testů nebo aktualizaci vašeho kódu.
-
-5. Vlastní nastavení vypnutí a zapnutí, zrušte výběr nebo vyberte soubor v **Test** > **nastavení testu** nabídky.
-
- ![Testování nabídky nastavení se soubor s vlastním nastavením](../test/media/codecoverage-settingsfile.png)
-
-Další aspekty testování částí lze nakonfigurovat ve stejném souboru parametrů běhu. Další informace najdete v tématu [si kód Test jednotky](../test/unit-test-your-code.md).
-
-### <a name="specifying-symbol-search-paths"></a>Určení cest pro hledání symbolů
-
-Pokrytí kódu vyžaduje, aby byly pro sestavení k dispozici symboly (soubory s příponou .pdb). Pro sestavení vytvořené řešení jsou obvykle koexistuje binární soubory soubory symbolů a pokrytí kódu funguje automaticky. Ale v některých případech můžete chtít zahrnout odkazovaná sestavení do analýzy pokrytí kódu. V takových případech se nemusí soubory s příponou .pdb nacházet u binárních souborů, ale můžete zadat cestu pro hledání symbolů v souboru s příponou .runsettings.
+Pokrytí kódu vyžaduje soubory symbolů (*PDB* soubory) pro sestavení. Pro sestavení vytvořených vaším řešením jsou soubory symbolů obvykle k dispozici spolu s binární soubory a pokrytí kódu pracuje automaticky. Ale v některých případech můžete chtít zahrnout odkazovaná sestavení do analýzy pokrytí kódu. V takovém případě *PDB* soubory nemusí být vedle binární soubory, ale můžete zadat cestu pro hledání symbolů v *s příponou .runsettings* souboru.
 
 ```xml
 <SymbolSearchPaths>
@@ -63,10 +56,10 @@ Pokrytí kódu vyžaduje, aby byly pro sestavení k dispozici symboly (soubory s
 </SymbolSearchPaths>
 ```
 
-> [!WARNING]
-> Symbol řešení může trvat čas, zejména v případě, že mnoho sestavení pomocí umístění vzdáleného souboru. Zvažte proto možnost zkopírování vzdálených souborů s příponou .pdb do stejného umístění jako binární soubory (.dll a .exe).
+> [!NOTE]
+> Vyhodnocování symbolů může trvat dobu, zvláště při použití vzdáleného umístění souborů s mnoha sestavení. Zvažte proto možnost zkopírování *PDB* soubory do stejného umístění jako binární soubor (*.dll* a *.exe*) soubory.
 
-### <a name="excluding-and-including"></a>Vyloučení a zahrnutí
+### <a name="exclude-and-include"></a>Vyloučení a zahrnutí
 
 Vybraná sestavení lze vyloučit z analýzy pokrytí kódu. Příklad:
 
@@ -90,21 +83,21 @@ Nebo naopak můžete vybrat sestavení, která chcete do analýzy zahrnout. Tent
 </ModulePaths>
 ```
 
-Pokud `<Include>` je prázdný, pak zpracování pokrytí kódu zahrnuje všechny sestavení, které jsou načteny, a u kterého lze nalézt soubory PDB. Pokrytí kódu neobsahuje položky, které odpovídají klauzuli v `<Exclude>` seznamu.
+Pokud **zahrnout** je prázdný, pak zpracování pokrytí kódu zahrne všechna sestavení, která jsou načtena a pro kterou *PDB* soubory lze nalézt. Pokrytí kódu neobsahuje položky, které odpovídají klauzuli v **vyloučit** seznamu.
 
-`Include` se zpracují dříve, než `Exclude`.
+**Zahrnout** je zpracován před atributem **vyloučit**.
 
 ### <a name="regular-expressions"></a>Regulární výrazy
 
-Pomocí regulárních výrazů můžete zahrnout a vyloučit uzly. Další informace najdete v tématu [pomocí regulárních výrazů v sadě Visual Studio](../ide/using-regular-expressions-in-visual-studio.md). Regulární výrazy nejsou stejné jako zástupné znaky. Zejména:
+Pomocí regulárních výrazů můžete zahrnout a vyloučit uzly. Další informace najdete v tématu [použití regulárních výrazů v sadě Visual Studio](../ide/using-regular-expressions-in-visual-studio.md). Regulární výrazy nejsou stejné jako zástupné znaky. Zejména:
 
-- **. \***  odpovídá řetězci všech znaků
+- **. \\** * odpovídá řetězci libovolných znaků
 
-- **\\.** odpovídá tečku ".")
+- **\\.** odpovídá tečce ".")
 
-- **\\( \\)** odpovídá závorkách "(")
+- **\\( \\)** odpovídá závorkám ""
 
-- **\\\\** odpovídá oddělovač cestu souboru "\\"
+- **\\\\** odpovídá oddělovači cesty k souboru "\\"
 
 - **^** odpovídá začátku řetězce
 
@@ -130,87 +123,48 @@ Příklad:
 ```
 
 > [!WARNING]
-> Pokud je v regulárním výrazu chyba, jako například neřídící a nesprávně umístěné závorky, analýza pokrytí kódu se nespustí.
+> Pokud dojde k chybě v regulárním výrazu, jako je například znakem nebo nespárované závorky, analýza pokrytí kódu se nespustí.
 
 ### <a name="other-ways-to-include-or-exclude-elements"></a>Další způsoby zahrnutí nebo vyloučení prvků
 
-Najdete v článku [ukázku na konci tohoto tématu](#sample) příklady.
+- **ModulePath** – porovná sestavení určená cestou k souboru sestavení.
 
-- `ModulePath` -Sestavení určeného cesta k souboru sestavení.
+- **CompanyName** – porovná sestavení podle **společnosti** atribut.
 
-- `CompanyName` -odpovídá sestavení s atributem společnosti.
+- **PublicKeyToken** – porovná podepsaná sestavení podle tokenu veřejného klíče.
 
-- `PublicKeyToken` -odpovídá podepsaný token veřejného klíče sestavení. Například tak, aby odpovídaly všechny součásti sady Visual Studio a rozšíření, použijte `<PublicKeyToken>^B03F5F7F11D50A3A$</PublicKeyToken>`.
+- **Zdroj** – porovná prvky podle názvu cesty zdrojového souboru, ve kterém jsou definovány.
 
-- `Source` -název cesty zdrojového souboru, ve kterém jsou definovány odpovídá elementy.
+- **Atribut** – porovná prvky, ke kterým je připojen určitý atribut. Zadejte úplný název atributu a zahrnují "Atribut" na konci názvu.
 
-- `Attribute` -odpovídá elementy, na které je připojen konkrétní atribut. Zadejte úplný název atributu včetně výrazu „Atribut“ na konci názvu.
+- **Funkce** – porovná procedury, funkce nebo metody podle plně kvalifikovaného názvu. Tak, aby odpovídaly názvu funkce, musí odpovídat regulárnímu výrazu plně kvalifikovaný název funkce včetně oboru názvů, název třídy, názvu metody a seznamu parametrů. Příklad:
 
-- `Function` -odpovídá procedury, funkce nebo metody ve plně kvalifikovaný název.
+   ```csharp
+   Fabrikam.Math.LocalMath.SquareRoot(double);
+   ```
 
-**Odpovídající název funkce**
+   ```cpp
+   Fabrikam::Math::LocalMath::SquareRoot(double)
+   ```
 
-Regulární výraz musí odpovídat plně kvalifikovaný název funkce, včetně oboru názvů, název třídy, název metody a seznam parametrů. Například
+   ```xml
+   <Functions>
+     <Include>
+       <!-- Include methods in the Fabrikam namespace: -->
+       <Function>^Fabrikam\..*</Function>
+       <!-- Include all methods named EqualTo: -->
+       <Function>.*\.EqualTo\(.*</Function>
+     </Include>
+     <Exclude>
+       <!-- Exclude methods in a class or namespace named UnitTest: -->
+       <Function>.*\.UnitTest\..*</Function>
+     </Exclude>
+   </Functions>
+   ```
 
-- C# nebo Visual Basic: `Fabrikam.Math.LocalMath.SquareRoot(double)`
+## <a name="sample-runsettings-file"></a>Ukázkový soubor s příponou .runsettings
 
-- C++:  `Fabrikam::Math::LocalMath::SquareRoot(double)`
-
-```xml
-<Functions>
-  <Include>
-    <!-- Include methods in the Fabrikam namespace: -->
-    <Function>^Fabrikam\..*</Function>
-    <!-- Include all methods named EqualTo: -->
-    <Function>.*\.EqualTo\(.*</Function>
-  </Include>
-  <Exclude>
-    <!-- Exclude methods in a class or namespace named UnitTest: -->
-    <Function>.*\.UnitTest\..*</Function>
-  </Exclude>
-</Functions>
-```
-
-## <a name="how-to-specify-run-settings-files-while-running-tests"></a>Určení parametrů běhu souborů při spouštění testů
-
-### <a name="to-customize-run-settings-in-visual-studio-tests"></a>Chcete-li přizpůsobit parametrů běhu v sadě Visual Studio testů
-
-Zvolte **Test** > **nastavení testu** > **vyberte soubor s nastavením testu** a vyberte *.runsettings* soubor. Soubor se zobrazí v nabídce Nastavení testu a můžete jej vybrat nebo zrušit. Po výběru souboru parametrů běhu platí vždy, když používáte **analýza pokrytí kódu**.
-
-### <a name="to-customize-run-settings-in-a-command-line-test"></a>Chcete-li přizpůsobit parametrů běhu v testů z příkazového řádku
-
-Ke spuštění testů z příkazového řádku, použijte *vstest.console.exe*. Soubor nastavení je parametr tohoto nástroje.
-
-1. Spusťte příkazový řádek pro vývojáře v sadě Visual Studio:
-
-    V systému Windows **spustit** nabídce zvolte **Visual Studio 2017** > **příkazový řádek vývojáře pro VS 2017**.
-
-2. Spusťte následující příkaz:
-
-    `vstest.console.exe MyTestAssembly.dll /EnableCodeCoverage /Settings:CodeCoverage.runsettings`
-
-### <a name="to-customize-run-settings-in-a-build-definition"></a>Přizpůsobení parametrů spuštění v definici sestavení
-
-Data pokrytí kódu můžete získat ze sestavení týmu.
-
-![Určení runsettings v definici sestavení](../test/media/codecoverage-buildrunsettings.png)
-
-1. Ujistěte se, že vaše nastavení spuštění souboru se změnami.
-
-2. V nástroji Team Explorer otevřete **sestavení**a potom přidat nebo upravit definici buildu.
-
-3. Na **proces** rozbalte **automatizovaných testů** > **Test zdroje** > **spustit nastavení**. Vyberte *.runsettings* souboru.
-
-   > [!TIP]
-   > Pokud **testovací sestavení** se zobrazí místo **Test zdroje**, a můžete vybrat pouze *.testsettings* soubory, nastavte **Test Runner** vlastnost následujícím způsobem. V části **automatizovaných testů**, vyberte **testovací sestavení**a potom zvolte **[...]**  na konci řádku. V **spuštění testu, přidat či upravit** dialogové okno, sada **Test Runner** k **Visual Studio Test Runner**.
-
-Výsledky jsou zobrazeny v souhrnné části zprávy o sestavení.
-
-##  <a name="sample"></a> Ukázka souboru .runsettings
-
-Zkopírujte tento kód a upravte jej podle svých potřeb.
-
-(Pro jiné účely souboru parametrů běhu, najdete v části [konfigurace testů jednotek pomocí souboru parametrů běhu](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md).)
+Zkopírujte tento kód a upravte jej tak, aby odpovídala vašim potřebám.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -236,7 +190,7 @@ Note that searching for symbols increases code coverage runtime. So keep this sm
 <!--
 About include/exclude lists:
 Empty "Include" clauses imply all; empty "Exclude" clauses imply none.
-Each element in the list is a regular expression (ECMAScript syntax). See http://msdn.microsoft.com/library/2k3te2cs.aspx.
+Each element in the list is a regular expression (ECMAScript syntax). See https://docs.microsoft.com/visualstudio/ide/using-regular-expressions-in-visual-studio.
 An item must first match at least one entry in the include list to be included.
 Included items must then not match any entries in the exclude list to remain included.
 -->
@@ -323,7 +277,8 @@ Included items must then not match any entries in the exclude list to remain inc
 </RunSettings>
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Použití pokrytí kódu k určení rozsahu testovaného kódu](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)
+- [Konfigurace testů jednotek s použitím souboru parametrů běhu](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)
+- [Použití pokrytí kódu k určení, kolik kódu je testována.](../test/using-code-coverage-to-determine-how-much-code-is-being-tested.md)
 - [Testování částí kódu](../test/unit-test-your-code.md)

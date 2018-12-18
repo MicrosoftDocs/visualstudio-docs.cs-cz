@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: formátování textu v dokumentech prostřednictvím kódu programu | Microsoft Docs'
+title: 'Postupy: formátování textu v dokumentech prostřednictvím kódu programu'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -17,13 +17,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a4f356da47a91e0f86f36594ff4254ca0d6ea3e5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: baf6f49b0347aa4a770b4f7a47c7fa8195d5ede5
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35257407"
 ---
-# <a name="how-to-programmatically-format-text-in-documents"></a>Postupy: Formátování textu v dokumentech prostřednictvím kódu programu
+# <a name="how-to-programmatically-format-text-in-documents"></a>Postupy: formátování textu v dokumentech prostřednictvím kódu programu
   Můžete použít <xref:Microsoft.Office.Interop.Word.Range> objekt do formátu textu v dokumentu aplikace Microsoft Office Word.  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
@@ -32,7 +33,7 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="document-level-customization-example"></a>Příklad přizpůsobení na úrovni dokumentu  
   
-#### <a name="to-format-text-using-a-document-level-customization"></a>K formátování textu s použitím přizpůsobení na úrovni dokumentu  
+### <a name="to-format-text-using-a-document-level-customization"></a>K formátování textu s použitím přizpůsobení na úrovni dokumentu  
   
 1.  V následujícím příkladu lze použít v přizpůsobení na úrovni dokumentu. Chcete-li použít tento kód, spusťte jej z `ThisDocument` třídy ve vašem projektu.  
   
@@ -41,16 +42,16 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="vsto-add-in-example"></a>Příklad doplňku VSTO  
   
-#### <a name="to-format-text-using-a-vsto-add-in"></a>K formátování textu s použitím doplňku VSTO  
+### <a name="to-format-text-using-a-vsto-add-in"></a>K formátování textu s použitím doplňku VSTO  
   
 1.  V následujícím příkladu lze v doplňku VSTO. Tento příklad používá aktivní dokument. Chcete-li použít tento kód, spusťte jej z `ThisAddIn` třídy ve vašem projektu.  
   
      [!code-vb[Trin_VstcoreWordAutomationAddIn#62](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationAddIn/ThisAddIn.vb#62)]
      [!code-csharp[Trin_VstcoreWordAutomationAddIn#62](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationAddIn/ThisAddIn.cs#62)]  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Postupy: programové definování a výběr oblastí v dokumentech](../vsto/how-to-programmatically-define-and-select-ranges-in-documents.md)   
  [Postupy: programové vkládání textu do dokumentů aplikace Word](../vsto/how-to-programmatically-insert-text-into-word-documents.md)   
- [Postupy: Hledání a nahrazování textu v dokumentech prostřednictvím kódu programu](../vsto/how-to-programmatically-search-for-and-replace-text-in-documents.md)  
+ [Postupy: programové hledání a nahrazení textu v dokumentech](../vsto/how-to-programmatically-search-for-and-replace-text-in-documents.md)  
   
   

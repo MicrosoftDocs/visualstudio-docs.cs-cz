@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::GetArrayTypeFromAddress | Microsoft Docs
+title: IDebugComPlusSymbolProvider::GetArrayTypeFromAddress | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8c9bb5fab8386046f9b409e0d3ef801b4020e88c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 189bae80873e100be3371813add133982926edab
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49915227"
 ---
 # <a name="idebugcomplussymbolprovidergetarraytypefromaddress"></a>IDebugComPlusSymbolProvider::GetArrayTypeFromAddress
-Načte zadejte informace o zadané pole zadané adresy ladění.  
+Načte zadejte informace o zadané pole na základě daných jeho adresa pro ladění.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,19 +48,19 @@ int GetArrayTypeFromAddress(
   
 #### <a name="parameters"></a>Parametry  
  `pAddress`  
- [v] Představuje adresu ladění [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) rozhraní.  
+ [in] Adresa pro ladění reprezentována [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) rozhraní.  
   
  `pSig`  
- [v] Pole prozkoumat.  
+ [in] Pole, které chcete prozkoumat.  
   
  `dwSigLength`  
- [v] Délka v bajtech `pSig` pole.  
+ [in] Délka v bajtech `pSig` pole.  
   
  `ppField`  
  [out] Vrátí typ pole reprezentovaná [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) rozhraní.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugSymbolProvider** objekt, který zveřejňuje [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) rozhraní.  

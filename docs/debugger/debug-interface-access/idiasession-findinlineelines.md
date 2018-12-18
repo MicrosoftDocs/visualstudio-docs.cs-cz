@@ -1,5 +1,5 @@
 ---
-title: IDiaSession::findInlineeLines | Microsoft Docs
+title: IDiaSession::findInlineeLines | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -12,14 +12,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b4db2b47963f6fe44cb5b8f974beb104e5398dc
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 36af09b28f2206fea092151aab763c807bceab6c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49856735"
 ---
 # <a name="idiasessionfindinlineelines"></a>IDiaSession::findInlineeLines
-Načte výčet, který umožňuje klientům k iteraci v rámci informace číslo řádku všech funkcí, které jsou vložená, přímo nebo nepřímo, podle zadaný nadřazený symbolu.  
+Načte výčet, který umožňuje klientovi k iteraci v rámci o počtu řádků všech funkcí, které jsou vloženy, přímo nebo nepřímo, symbolem zadaný nadřazený prvek.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,16 +33,16 @@ HRESULT findInlineeLines (
   
 #### <a name="parameters"></a>Parametry  
  `parent`  
- [v] `IDiaSymbol` Představující nadřazený objekt.  
+ [in] `IDiaSymbol` Představující nadřazeného objektu.  
   
  `ppResult`  
- [out] Obsahuje `IDiaEnumLineNumbers` objekt, který obsahuje seznam čísla řádků, která jsou načtena.  
+ [out] Obsahuje `IDiaEnumLineNumbers` objekt, který obsahuje seznam čísel řádků, které jsou načteny.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [Idiasession –](../../debugger/debug-interface-access/idiasession.md)   
  [Idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md)   
- [SymTagEnum – výčet](../../debugger/debug-interface-access/symtagenum.md)   
+ [Symtagenum – výčet](../../debugger/debug-interface-access/symtagenum.md)   
  [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md)

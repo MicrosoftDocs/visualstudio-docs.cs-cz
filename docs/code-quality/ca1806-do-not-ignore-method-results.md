@@ -1,6 +1,7 @@
 ---
 title: 'CA1806: Neignorujte výsledky metody'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -12,57 +13,64 @@ helpviewer_keywords:
 ms.assetid: fd805687-0817-481e-804e-b62cfb3b1076
 author: gewarren
 ms.author: gewarren
+dev_langs:
+- CPP
+- CSharp
+- VB
 manager: douge
-ms.openlocfilehash: 605222de258598e1022288b50f0a30ba87777fdc
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ebbad9eb48a448aa756f580ade794ba70eb25611
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45546834"
 ---
 # <a name="ca1806-do-not-ignore-method-results"></a>CA1806: Neignorujte výsledky metody
+
 |||
 |-|-|
 |TypeName|DoNotIgnoreMethodResults|
 |CheckId|CA1806|
 |Kategorie|Microsoft.Usage|
-|Narušující změna|Bez ukončování řádků|
+|Narušující změna|Pevné|
 
 ## <a name="cause"></a>příčina
- Existuje několik možných důvodů pro toto upozornění:
 
--   Nový objekt, který vytvoří, ale nikdy použity.
+Existuje několik možných důvodů pro toto upozornění:
 
--   Je volána metoda, která vytvoří a vrátí nového řetězce a nový řetězec se nikdy nepoužívá.
+- Nový objekt je vytvořen, ale nepoužilo.
 
--   COM nebo P/Invoke metodu, která vrátí kód HRESULT nebo chyba, který se nikdy nepoužívá. Popis pravidla
+- Volá metodu, která vytvoří a vrátí nový řetězec a nový řetězec se nikdy nepoužívá.
 
- Vytvoření objektu nepotřebné a přidružené uvolňování nepoužívané objektu snížit výkon.
+- COM nebo P/Invoke metoda, která vrátí HRESULT nebo kód chyby, který se nikdy nepoužívá. Popis pravidla
 
- Řetězce jsou neměnné a metod, jako je String.ToUpper – vrátí novou instanci třídy řetězec místo úpravy instanci řetězec v volání metody.
+Vytváření zbytečné objektů a související uvolňování nepoužívané objektu dojít ke snížení výkonu.
 
- Ignoruje kód HRESULT nebo chyba, může dojít k neočekávanému chování v chybové stavy nebo podmínky nedostatku prostředků.
+Řetězce jsou neměnné a metod, jako je například String.ToUpper vrací novou instanci řetězce místo úpravy instanci řetězce ve volání metody.
+
+Ignorování HRESULT nebo kód chyby může vést k neočekávanému chování chybových podmínek a ujednání nedostatku prostředků.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Pokud metoda A vytvoří novou instanci objektu B, který se nikdy nepoužívá, instance předat jako argument na jinou metodu nebo instanci přiřadit proměnné. Pokud vytvoření objektu je zbytečné, odeberte ní- nebo -
+ Pokud metoda A vytvoří novou instanci objektu B, který se nikdy nepoužívá, předejte instanci jako argument jiné metodě, nebo přiřaďte instanci proměnné. Pokud vytvoření objektu je zbytečné, odeberte něm- nebo -
 
- Pokud metoda A volá metodu B, ale nepoužívá novou instanci řetězec, který vrátí metoda B. Instance předat jako argument na jinou metodu, přiřadit instanci proměnné. Nebo odeberte volání, pokud je zbytečné.
+ Pokud metoda A volá metodu B, ale nepoužívá novou instanci řetězce, který vrací metoda B. Předejte instanci jako argument jiné metodě, přiřaďte instanci proměnné. Nebo odebrat volání, pokud je zbytečné.
 
  -nebo-
 
- Pokud metoda A volá metodu B, ale ne pomocí HRESULT nebo kód chyby, který vrátí metoda. Výsledek použít v příkazu podmíněného, přiřadit výsledek proměnné nebo předat jako argument na jinou metodu.
+ Pokud metoda A volá metodu B, ale nepoužívá HRESULT nebo kód chyby, který metoda vrátí. Použijte výsledek v podmíněném příkazu, výsledek přiřaďte proměnné nebo předejte jako argument jiné metodě.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Pokud v rámci vytváření objektu slouží některé účelu není potlačení upozornění od tohoto pravidla.
+ Nepotlačujte upozornění tohoto pravidla, pokud při vytvoření objektu slouží některé účelu.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje třídu, která je výsledkem volání String.Trim ignoruje.
+ Následující příklad ukazuje třídu, která se bude ignorovat, výsledek volání String.Trim.
 
  [!code-csharp[FxCop.Usage.DoNotIgnoreMethodResults3#1](../code-quality/codesnippet/CSharp/ca1806-do-not-ignore-method-results_1.cs)]
  [!code-vb[FxCop.Usage.DoNotIgnoreMethodResults3#1](../code-quality/codesnippet/VisualBasic/ca1806-do-not-ignore-method-results_1.vb)]
  [!code-cpp[FxCop.Usage.DoNotIgnoreMethodResults3#1](../code-quality/codesnippet/CPP/ca1806-do-not-ignore-method-results_1.cpp)]
 
 ## <a name="example"></a>Příklad
- Následující příklad opravy předchozí porušení přiřazením výsledek String.Trim zpět na proměnnou, kterou byla volána na.
+ Následující příklad opravuje předchozí porušení přiřazením výsledek String.Trim zpět do proměnné, které byla volána pro.
 
  [!code-csharp[FxCop.Usage.DoNotIgnoreMethodResults4#1](../code-quality/codesnippet/CSharp/ca1806-do-not-ignore-method-results_2.cs)]
  [!code-vb[FxCop.Usage.DoNotIgnoreMethodResults4#1](../code-quality/codesnippet/VisualBasic/ca1806-do-not-ignore-method-results_2.vb)]
@@ -72,13 +80,13 @@ ms.lasthandoff: 04/19/2018
  Následující příklad ukazuje metodu, která nepoužívá objekt, který vytvoří.
 
 > [!NOTE]
->  Tato porušení nelze reprodukovat v jazyce Visual Basic.
+> Toto porušení nelze reprodukovat v jazyce Visual Basic.
 
  [!code-cpp[FxCop.Usage.DoNotIgnoreMethodResults5#1](../code-quality/codesnippet/CPP/ca1806-do-not-ignore-method-results_3.cpp)]
  [!code-csharp[FxCop.Usage.DoNotIgnoreMethodResults5#1](../code-quality/codesnippet/CSharp/ca1806-do-not-ignore-method-results_3.cs)]
 
 ## <a name="example"></a>Příklad
- Následující příklad opravy předchozí porušení odebráním nepotřebných vytvoření objektu.
+ Následující příklad opravuje předchozí porušení odebráním nepotřebných vytvoření objektu.
 
  [!code-csharp[FxCop.Usage.DoNotIgnoreMethodResults6#1](../code-quality/codesnippet/CSharp/ca1806-do-not-ignore-method-results_4.cs)]
  [!code-cpp[FxCop.Usage.DoNotIgnoreMethodResults6#1](../code-quality/codesnippet/CPP/ca1806-do-not-ignore-method-results_4.cpp)]

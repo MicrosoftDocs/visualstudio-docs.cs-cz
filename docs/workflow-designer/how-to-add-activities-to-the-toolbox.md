@@ -1,18 +1,21 @@
 ---
-title: 'Postupy: přidání aktivit do sady nástrojů | Microsoft Docs'
+title: 'Návrhář postupu provádění - postupy: přidání aktivit do sady nástrojů'
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 ms.assetid: b3a8a785-5928-457a-8a50-30267e29503d
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: acb101f5dff84f7e8d586ce33c63adbe30fa0dbf
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a009f36152163e3ac23b85deac4ea99f26092be9
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37118210"
 ---
 # <a name="how-to-add-activities-to-the-toolbox"></a>Postupy: přidání aktivit do sady nástrojů
 
@@ -27,7 +30,7 @@ Aktivity mohou být přidány do **sada nástrojů** ve vašem řešení v něko
 3.  Sestavte projekt. Pokud bylo úspěšné, sestavení novou kategorii v **sada nástrojů** s názvem "\<*název projektu*>" se zobrazí s vlastní aktivity, které jsou součástí této kategorie spadají.
 
     > [!NOTE]
-    > Pokud se resetuje sady nástrojů, vlastní aktivity se odebere, i v případě, že je řešení znovu sestaven. Znovu naplnit nástrojů vlastní aktivity po byla obnovena, restartujte [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)].
+    > Pokud se resetuje sady nástrojů, vlastní aktivity se odebere, i v případě, že je řešení znovu sestaven. Znovu naplnit nástrojů vlastní aktivity po byla obnovena, restartujte Visual Studio.
 
     > [!NOTE]
     > V panelu nástrojů můžete zobrazit pouze jednu aktivitu daného názvu. Pokud dvě aktivity z různých sestavení mají stejný název třídy, se zobrazí pouze jeden.
@@ -45,9 +48,9 @@ Aktivity mohou být přidány do **sada nástrojů** ve vašem řešení v něko
 
 1.  Otevřete řešení pracovního postupu.
 
-2.  Z **nástroje** nabídce vyberte možnost **výběr položek sady nástrojů...** .
+2.  Z **nástroje** nabídce vyberte možnost **výběr položek sady nástrojů**.
 
-3.  V **výběr položek sady nástrojů** dialogové okno, vyberte **systém. součásti** kartě a pak klikněte na **Procházet...**  přejděte na sestavení, které obsahuje vlastní aktivity chcete přidat.
+3.  V **výběr položek sady nástrojů** dialogové okno, vyberte **systém. součásti** kartě a pak klikněte na **Procházet** přejděte na sestavení, které obsahuje vlastní aktivity, které chcete přidat.
 
 4.  Vyberte sestavení a klikněte na **OK**. Součást vlastní aktivity se přidá do seznamu součástí a je automaticky vybrán.
 
@@ -57,6 +60,6 @@ Aktivity mohou být přidány do **sada nástrojů** ve vašem řešení v něko
 
 6.  Vlastní aktivity se zobrazí v **sada nástrojů** v kategorii, která byla aktivní před přidáním položky. Například pokud **Obecné** kategorie byla vybrána v **sada nástrojů** před přidáním položky panelu nástrojů, tato aktivita se zobrazí v části **Obecné** kategorie.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Používání návrháře postupu provádění](../workflow-designer/using-the-workflow-designer.md)

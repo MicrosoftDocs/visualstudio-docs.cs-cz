@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Vytvoření webové části pro službu SharePoint | Microsoft Docs'
+title: 'Návod: Vytvoření webové části pro SharePoint | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -19,119 +19,120 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e0659c354980eb302beb903d0107024882c6b160
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 09b9299c6428ef63ccf71220fc3cb599e9e3b5a9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872405"
 ---
-# <a name="walkthrough-creating-a-web-part-for-sharepoint"></a>Návod: Vytvoření webové části pro službu SharePoint
+# <a name="walkthrough-create-a-web-part-for-sharepoint"></a>Návod: Vytvoření webové části pro SharePoint
 
-Webové části umožňují uživatelům přímo upravit obsah, vzhled a chování stránek webu služby SharePoint pomocí prohlížeče. Tento postup vám ukáže postup vytvoření webové části pomocí **webovou část** šablony položky v sadě Visual Studio 2010.
+Webové části umožní uživatelům přímo upravit obsah, vzhled a chování stránky webu služby SharePoint pomocí prohlížeče. Tento návod ukazuje, jak vytvořit webovou část pomocí **webové části** šablony položky v sadě Visual Studio 2010.
 
-Webová část zobrazuje zaměstnanci v datové mřížce. Uživatel Určuje umístění souboru, který obsahuje data zaměstnance. Uživatele můžete také filtrovat mřížky dat tak, aby zaměstnanci, kteří jsou správci zobrazí v seznamu jenom.
+Webová část zobrazuje zaměstnancům v datové mřížce. Uživatel Určuje umístění souboru, který obsahuje data zaměstnanců. Uživatele můžete také filtrovat datovou mřížku tak, aby zaměstnanci, kteří jsou správci se zobrazí v seznamu pouze.
 
 Tento návod znázorňuje následující úlohy:
 
-- Vytvoření webové části pomocí sady Visual Studio **webovou část** šablony položky.
+- Vytvoření webové části pomocí sady Visual Studio **webové části** šablony položky.
 
-- Vytvoření vlastnosti, které lze nastavit uživatelem webové části. Tato vlastnost určuje umístění datového souboru zaměstnanců.
+- Vytvoření vlastnosti můžete nastavit uživatele webové části. Tato vlastnost určuje umístění souboru dat zaměstnance.
 
-- Vykreslování obsahu ve webové části přidáním ovládacích prvků do webové části ovládací prvky kolekce.
+- Určuje kolekci, vykreslování obsahu ve webové části přidáním ovládacích prvků do webové části.
 
-- Vytvoření nové položky nabídky, označuje jako *operace,* které se zobrazí v nabídce operací vykreslené webové části. Příkazy Povolit uživateli měnit data, která se zobrazí ve webové části.
+- Vytvoření nové položky nabídky, označuje jako *sloveso,* , který se zobrazí v nabídce příkazů vykreslené webové části. Příkazy Povolit uživateli měnit data, která se zobrazí ve webové části.
 
 - Testování webové části služby SharePoint.
 
     > [!NOTE]
-    > Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [přizpůsobení prostředí Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).
+    > Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [přizpůsobení integrovaného vývojového prostředí sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
 
 ## <a name="prerequisites"></a>Požadavky
 
-- Podporované edice systému Microsoft Windows a služby SharePoint. Další informace najdete v tématu [požadavky pro vývoj řešení služby SharePoint](../sharepoint/requirements-for-developing-sharepoint-solutions.md).
+- Podporované vydání systému Microsoft Windows a SharePoint.
 
-- Visual Studio 2017 nebo edici nástroje Visual Studio Application Lifecycle Management (ALM).
+- Visual Studio 2017 nebo služby Azure DevOps.
 
-## <a name="creating-an-empty-sharepoint-project"></a>Vytváření prázdného projektu služby SharePoint
+## <a name="create-an-empty-sharepoint-project"></a>Vytvořit prázdný projekt SharePoint
 
-Nejprve vytvořte projektu služby SharePoint prázdný. Později, bude přidat webovou část na projekt pomocí **webovou část** šablony položky.
+Nejprve vytvořte prázdný Sharepointového projektu. Později přidáte webovou část do projektu s použitím **webové části** šablony položky.
 
 1. Spustit [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] pomocí **spustit jako správce** možnost.
 
-2. Na panelu muže zvolte **soubor**, **nový**, **projektu**.
+2. Na panelu muže zvolte **souboru** > **nový** > **projektu**.
 
-3. V **nový projekt** dialogové okno, rozbalte seznam **SharePoint** uzel v jazyce, který chcete použít a potom vyberte **2010** uzlu.
+3. V **nový projekt** dialogového okna rozbalte **SharePoint** uzel v jazyce, který chcete použít a klikněte na tlačítko **2010** uzlu.
 
-4. V **šablony** podokně vyberte **projektu služby SharePoint 2010**a potom zvolte **OK** tlačítko.
+4. V **šablony** podokně zvolte **projektu služby SharePoint 2010**a klikněte na tlačítko **OK** tlačítko.
 
-     **Průvodce vlastním nastavením SharePoint** se zobrazí. Tento průvodce umožňuje vyberte lokalitu, která budete používat k ladění projektu a úroveň důvěryhodnosti řešení.
+     **Průvodce přizpůsobením SharePoint** se zobrazí. Tento průvodce vám umožní vybrat web, který budete používat k ladění projektu a úroveň důvěryhodnosti řešení.
 
-5. Vyberte **nasadit jako řešení farmy** možnost tlačítko a potom vyberte **Dokončit** tlačítko přijmout výchozí místní web služby SharePoint.
+5. Zvolte **nasadit jako řešení farmy** přepínač a klikněte na tlačítko **Dokončit** tlačítko k přijetí výchozího místního webu služby SharePoint.
 
-## <a name="adding-a-web-part-to-the-project"></a>Přidání webové části do projektu
+## <a name="add-a-web-part-to-the-project"></a>Přidejte do projektu webové části
 
-Přidat **webovou část** položku do projektu. **Webovou část** položky přidá k souboru kódu webové části. Později přidáte kód do souboru kódu webové části vykreslení obsahu webové části.
+Přidat **webové části** položky do projektu. **Webové části** přidá soubor kódu webové části. Později přidáte kód do souboru kódu webové části pro vykreslení obsahu webové části.
 
-1. Na řádku nabídek zvolte **projektu**, **přidat novou položku**.
+1. V panelu nabídky zvolte **projektu** > **přidat novou položku**.
 
-2. V **přidat novou položku** v dialogovém **nainstalovaných šablonách** podokně rozbalte **SharePoint** uzel a potom zvolte **2010** uzlu.
+2. V **přidat novou položku** v dialogu **nainstalované šablony** podokně rozbalte **SharePoint** uzel a klikněte na tlačítko **2010** uzlu.
 
-3. V seznamu šablon služby SharePoint, vyberte **webovou část** šablony a potom zvolte **přidat** tlačítko.
+3. V seznamu šablon služby SharePoint, zvolte **webové části** šablony a klikněte na tlačítko **přidat** tlačítko.
 
-     **Webovou část** položka se zobrazí v **Průzkumníku řešení**.
+     **Webové části** položka je zobrazena v **Průzkumníka řešení**.
 
 ## <a name="rendering-content-in-the-web-part"></a>Vykreslování obsahu ve webové části
 
-Můžete zadat ovládacích prvků, které se má zobrazit ve webové části jejich přidáním do kolekce ovládacích prvků třídy webové části.
+Můžete určit, jaké ovládací prvky, které se mají zobrazit ve webové části jejich přidáním do kolekce ovládacích prvků webové části třídy.
 
-1. V **Průzkumníku**, otevřete WebPart1.vb (v jazyce Visual Basic) nebo WebPart1.cs (v jazyku C#).
+1. V **Průzkumníka řešení**, otevřete *WebPart1.vb* (v jazyce Visual Basic) nebo *WebPart1.cs* (v jazyce C#).
 
-     Webová část kódu soubor se otevře v editoru kódu.
+     Soubor webové části kódu se otevře v editoru kódu.
 
-2. Přidejte následující příkazy na začátek souboru kódu webové části.
+2. Přidejte následující příkazy do horní části souboru kódu webové části.
 
      [!code-csharp[SP_WebPart#1](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#1)]
      [!code-vb[SP_WebPart#1](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#1)]
 
 3. Přidejte následující kód, který `WebPart1` třídy. Tento kód deklaruje následující pole:
 
-    - Datová mřížka zobrazíte zaměstnanci ve webové části.
+   - Datová mřížka zobrazíte zaměstnance ve webové části.
 
-    - Text, který se zobrazí na ovládací prvek, který se používá k filtrování dat mřížky.
+   - Text, který se zobrazí v ovládacím prvku, který se používá k filtrování datové mřížce.
 
-    - Popisek, který zobrazí chybu, pokud nemůže zobrazit data dat mřížky.
+   - Popisek, který se zobrazí chyba, pokud je datové mřížce nemůže zobrazit data.
 
-    - Řetězec, který obsahuje cestu k souboru dat zaměstnanců.
+   - Řetězec, který obsahuje cestu k souboru data zaměstnanců.
 
      [!code-csharp[SP_WebPart#2](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#2)]
      [!code-vb[SP_WebPart#2](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#2)]
 
-4. Přidejte následující kód, který `WebPart1` třídy. Tento kód přidá vlastní vlastnost s názvem `DataFilePath` do webové části. Vlastní vlastnost je vlastnost, která lze nastavit ve službě SharePoint uživatelem. Tato vlastnost získá a nastaví umístění datového souboru XML, který se používá k naplnění dat mřížky.
+4. Přidejte následující kód, který `WebPart1` třídy. Tento kód přidá vlastní vlastnost s názvem `DataFilePath` do webové části. Vlastní vlastnost je vlastnost, která můžete nastavit v Sharepointu uživatelem. Tato vlastnost získá a nastaví umístění datového souboru XML, který se používá k naplnění datové mřížce.
 
      [!code-csharp[SP_WebPart#3](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#3)]
      [!code-vb[SP_WebPart#3](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#3)]
 
-5. Nahraďte `CreateChildControls` metoda následujícím kódem. Tento kód provede následující:
+5. Nahradit `CreateChildControls` metodu s následujícím kódem. Tento kód provede následující:
 
-    - Přidá datové mřížce a štítek, který je deklarován v předchozím kroku.
+   - Přidá datovou mřížku a popisek, který je deklarován v předchozím kroku.
 
-    - Datová mřížka váže k souboru XML, který obsahuje data zaměstnance.
+   - Vytvoří vazbu mřížky dat do souboru XML, který obsahuje data zaměstnanců.
 
      [!code-csharp[SP_WebPart#4](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#4)]
      [!code-vb[SP_WebPart#4](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#4)]
 
 6. Přidejte následující metodu do `WebPart1` třídy. Tento kód provede následující:
 
-    - Vytvoří akci, která se zobrazí v nabídce webové části operací vykreslené webové části.
+   - Vytvoří příkaz, který se zobrazí v nabídce příkazů webové části vykresleného webové části.
 
-    - Zpracovává událost, která se vyvolá, když uživatel vybere příkaz v nabídce Akce. Tento kód vyfiltruje seznam zaměstnanci, který se zobrazí v datové mřížce.
+   - Zpracovává událost, která se vyvolá, když uživatel vybere příkaz v nabídce příkazů. Tento kód filtruje seznam zaměstnanců, která se zobrazí v datové mřížce.
 
      [!code-csharp[SP_WebPart#5](../sharepoint/codesnippet/CSharp/spext_webpart/webpart1/webpart1.cs#5)]
      [!code-vb[SP_WebPart#5](../sharepoint/codesnippet/VisualBasic/spext_webpart/webpart1/webpart1.vb#5)]
 
-## <a name="testing-the-web-part"></a>Testování webové části
+## <a name="test-the-web-part"></a>Testování webové části
 
-Když spouštíte projekt, otevře se web služby SharePoint. Webová část je automaticky přidá do Galerie webových částí služby SharePoint. Můžete přidat webovou část na stránku všechny webové části.
+Při spuštění projektu se otevře web služby SharePoint. Webová část je automaticky přidán do Galerie webových částí služby SharePoint. Webové části můžete přidat na libovolnou stránku webové části.
 
 1. Vložte následující kód XML do souboru poznámkového bloku. Tento soubor XML obsahuje ukázková data, která se zobrazí ve webové části.
 
@@ -166,61 +167,61 @@ Když spouštíte projekt, otevře se web služby SharePoint. Webová část je 
         </employees>
     ```
 
-2. V poznámkovém bloku na řádku nabídek zvolte **soubor**, **uložit jako**.
+2. V poznámkovém bloku, v řádku nabídek zvolte **souboru** > **uložit jako**.
 
-3. V **uložit jako** dialogu **uložit jako typ** vyberte **všechny soubory**.
+3. V **uložit jako** v dialogu **uložit jako typ** klikněte na položku **všechny soubory**.
 
-4. V **název souboru** zadejte **data.xml**.
+4. V **název_souboru** zadejte **data.xml**.
 
-5. Zvolte libovolné složky pomocí **procházet složky** tlačítko a potom vyberte **Uložit** tlačítko.
+5. Vyberte libovolnou složku pomocí **procházet složky** tlačítko a klikněte na tlačítko **Uložit** tlačítko.
 
-6. Ve Visual Studiu zvolte **F5** klíč.
+6. V sadě Visual Studio, zvolte **F5** klíč.
 
-     Otevře se stránka serveru SharePoint.
+     Otevře se web služby SharePoint.
 
 7. Na **Akce webu** nabídce zvolte **další možnosti**.
 
-8. V **vytvořit** vyberte **webová část** typ, a potom vyberte **vytvořit** tlačítko.
+8. V **vytvořit** zvolte **stránku webových částí** zadejte a pak zvolte **vytvořit** tlačítko.
 
-9. V **nová stránka webových částí** stránky, zadejte název stránky **SampleWebPartPage.aspx**a potom zvolte **vytvořit** tlačítko.
+9. V **nová stránka webových částí** stránky, zadejte název stránky **SampleWebPartPage.aspx**a klikněte na tlačítko **vytvořit** tlačítko.
 
      Zobrazí se stránka webové části.
 
-10. Vyberte všechny zóny na stránku webové části.
+10. Vyberte všechny zóny na stránku webových částí.
 
-11. V horní části stránky, vyberte **vložit** a pak klikněte na příkaz **webovou část** tlačítko.
+11. V horní části stránky zvolte **vložit** kartu a klikněte na tlačítko **webové části** tlačítko.
 
-12. V **kategorie** podokně, vyberte **vlastní** složky, vyberte **WebPart1** webovou část a potom vyberte **přidat** tlačítko.
+12. V **kategorie** podokně, vyberte **vlastní** složky, zvolte **WebPart1** webové části a klikněte na tlačítko **přidat** tlačítko.
 
-     Na stránce se zobrazí webová část.
+     Webová část se zobrazí na stránce.
 
-## <a name="testing-the-custom-property"></a>Testování vlastní vlastnosti
+## <a name="test-the-custom-property"></a>Testování vlastní vlastnost
 
-K naplnění dat mřížky, který se zobrazí ve webové části, zadejte cestu souboru XML, který obsahuje data o zaměstnanci.
+K naplnění mřížky dat, který se zobrazí ve webové části, zadejte cestu k souboru XML, který obsahuje data o jednotliví zaměstnanci.
 
-1. Vyberte šipku, která se zobrazí na pravé straně webové části a potom vyberte **upravit webovou část** v nabídce, která se zobrazí.
+1. Klikněte na šipku, která se zobrazí na pravé straně webové části a klikněte na tlačítko **upravit webovou část** ze zobrazené nabídky.
 
-     Na pravé straně stránky se zobrazí panel, který obsahuje vlastnosti pro webové části.
+     Podokno, které obsahuje vlastnosti pro webovou část se zobrazí na pravé straně stránky.
 
-2. V podokně rozbalte **různé** uzlu, zadejte cestu k souboru XML, který jste vytvořili dříve, vyberte **použít** tlačítko a potom vyberte **OK** tlačítko.
+2. V podokně rozbalte **různé** uzlu, zadejte cestu k souboru XML, který jste vytvořili dříve, zvolte **použít** tlačítko a klikněte na tlačítko **OK** tlačítko.
 
-     Ověřte, že zaměstnanci objeví ve webové části.
+     Ověřte, že se zobrazí seznam zaměstnanců ve webové části.
 
-## <a name="testing-the-web-part-verb"></a>Testování příkaz webové části
+## <a name="test-the-web-part-verb"></a>Otestovat operaci webové části
 
-Zobrazení a skrytí zaměstnanci, kteří nejsou správci kliknutím na položku, která se zobrazí v nabídce operací webové části.
+Zobrazení a skrytí zaměstnance, kteří nejsou správci kliknutím na položku, která se zobrazí v nabídce příkazů webových částí.
 
-1. Vyberte šipku, která se zobrazí na pravé straně webové části a potom vyberte **zobrazit pouze správci** v nabídce, která se zobrazí.
+1. Klikněte na šipku, která se zobrazí na pravé straně webové části a klikněte na tlačítko **zobrazit pouze správci** ze zobrazené nabídky.
 
-     Pouze zaměstnanci, kteří jsou správci zobrazí ve webové části.
+     Ve webové části se zobrazí pouze zaměstnanci, kteří jsou správci.
 
-2. Vyberte šipku znovu a potom vyberte **zobrazit všechny zaměstnance** v nabídce, která se zobrazí.
+2. Znovu klikněte na šipku a klikněte na tlačítko **zobrazit všichni zaměstnanci** ze zobrazené nabídky.
 
-     Všechny zaměstnance se zobrazí ve webové části.
+     Všichni zaměstnanci se zobrazí ve webové části.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Vytváření webových částí pro službu SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md)  
-[Postupy: Vytvoření webové části služby SharePoint](../sharepoint/how-to-create-a-sharepoint-web-part.md)  
-[Postupy: Vytvoření webové části služby SharePoint pomocí návrháře](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md)  
+[Vytvoření webové části pro SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md)  
+[Postupy: vytvoření webové části služby SharePoint](../sharepoint/how-to-create-a-sharepoint-web-part.md)  
+[Postupy: vytvoření webové části služby SharePoint pomocí návrháře](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md)  
 [Návod: Vytvoření webové části pro službu SharePoint pomocí návrháře](../sharepoint/walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer.md)

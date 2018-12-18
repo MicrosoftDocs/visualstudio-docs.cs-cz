@@ -1,6 +1,7 @@
 ---
 title: 'CA2208: Vytvořte správně instance výjimky argumentu'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,65 +14,73 @@ ms.assetid: e2a48939-d9fa-478c-b2f9-3bdbce07dff7
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CPP
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: ab379305eae593a1c2f14f5c2ec860d398af2eaf
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f7a10d126d5432a80b146fe2086c01064d83006e
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45547432"
 ---
 # <a name="ca2208-instantiate-argument-exceptions-correctly"></a>CA2208: Vytvořte správně instance výjimky argumentu
+
 |||
 |-|-|
 |TypeName|InstantiateArgumentExceptionsCorrectly|
 |CheckId|CA2208|
 |Kategorie|Microsoft.Usage|
-|Narušující změna|Bez ukončování řádků|
+|Narušující změna|Pevné|
 
 ## <a name="cause"></a>příčina
- Možné příčiny následujících situacích:
 
--   Přišla žádost o výchozího konstruktoru (bez parametrů), nebo je odvozen od typu výjimka <xref:System.ArgumentException>.
+Možné příčiny následujících situacích:
 
--   Argument řetězce není správný předaný konstruktoru parametrizované nebo je odvozen od typu výjimka <xref:System.ArgumentException>.
+- Je provedeno volání výchozího konstruktoru (bez parametrů) typu výjimky, které jsou, nebo je odvozena z <xref:System.ArgumentException>.
+
+- Je předán nesprávný řetězcový argument do konstruktoru s parametry typu výjimky, které jsou, nebo je odvozena z <xref:System.ArgumentException>.
 
 ## <a name="rule-description"></a>Popis pravidla
- Namísto volání výchozí konstruktor, volání jednoho z přetížení konstruktoru, která umožňuje smysluplnější zpráva o výjimce, musíte zadat. Zpráva o výjimce by měl cíli vývojář a jasně popisují chybový stav a jak opravit nebo vyloučit výjimku.
 
- Signatur jeden a dva konstruktory řetězec z <xref:System.ArgumentException> a nejsou konzistentní s ohledem na jeho odvozených typů `message` a `paramName` parametry. Ujistěte se, že tyto konstruktory se nazývají s argumenty správný řetězec. Podpisy jsou následující:
+Namísto volání výchozího konstruktoru, volání jednoho z přetížení konstruktoru, které umožňuje lépe vystihuje zpráva o výjimce poskytované. Zpráva o výjimce musí cílit na vývojáře a jasně vysvětlit chybovou podmínku a tom, jak opravit nebo vyhnout výjimku.
 
- <xref:System.ArgumentException>(řetězec `message`)
+Podpisy jeden a dva řetězce konstruktory <xref:System.ArgumentException> a jeho odvozených typů nejsou konzistentní s ohledem na `message` a `paramName` parametry. Zajistěte, aby že tyto konstruktory jsou volány pomocí správné řetězcové argumenty. Podpisy jsou následující:
+
+ <xref:System.ArgumentException>(řetězce `message`)
 
  <xref:System.ArgumentException>(řetězec `message`, řetězec `paramName`)
 
- <xref:System.ArgumentNullException>(řetězec `paramName`)
+ <xref:System.ArgumentNullException>(řetězce `paramName`)
 
  <xref:System.ArgumentNullException>(řetězec `paramName`, řetězec `message`)
 
- <xref:System.ArgumentOutOfRangeException>(řetězec `paramName`)
+ <xref:System.ArgumentOutOfRangeException>(řetězce `paramName`)
 
  <xref:System.ArgumentOutOfRangeException>(řetězec `paramName`, řetězec `message`)
 
- <xref:System.DuplicateWaitObjectException>(řetězec `parameterName`)
+ <xref:System.DuplicateWaitObjectException>(řetězce `parameterName`)
 
  <xref:System.DuplicateWaitObjectException>(řetězec `parameterName`, řetězec `message`)
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Opravit porušení toto pravidlo, volání konstruktor, který přijímá zprávy, název parametru nebo obojí a zkontrolujte, zda jsou argumenty jsou správné pro typ <xref:System.ArgumentException> volána.
+ Chcete-li opravit porušení tohoto pravidla, volat konstruktor, který přijímá zprávy, název parametru nebo obojí a ujistěte se, že jsou správné typu pro argumenty <xref:System.ArgumentException> volána.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Je bezpečné potlačit upozornění na toto pravidlo pouze v případě, že parametrizované konstruktor je volán s správné řetězcové argumenty.
+ Je bezpečné potlačit upozornění tohoto pravidla pouze v případě konstruktorem je volána s argumenty správný řetězec.
 
-## <a name="example"></a>Příklad
+## <a name="example-1"></a>Příklad 1
  Následující příklad ukazuje konstruktor, který se nesprávně vytvoří instanci typu ArgumentNullException.
 
  [!code-cpp[FxCop.Usage.InstantiateArgumentExceptionsCorrectly#1](../code-quality/codesnippet/CPP/ca2208-instantiate-argument-exceptions-correctly_1.cpp)]
  [!code-csharp[FxCop.Usage.InstantiateArgumentExceptionsCorrectly#1](../code-quality/codesnippet/CSharp/ca2208-instantiate-argument-exceptions-correctly_1.cs)]
  [!code-vb[FxCop.Usage.InstantiateArgumentExceptionsCorrectly#1](../code-quality/codesnippet/VisualBasic/ca2208-instantiate-argument-exceptions-correctly_1.vb)]
 
-## <a name="example"></a>Příklad
- Následující příklad opravy výše porušení přepnutím argumenty konstruktoru.
+## <a name="example-2"></a>Příklad 2
+ V následujícím příkladu řeší výše porušení přepnutím argumenty konstruktoru.
 
  [!code-cpp[FxCop.Usage.InstantiateArgumentExceptionsCorrectly#2](../code-quality/codesnippet/CPP/ca2208-instantiate-argument-exceptions-correctly_2.cpp)]
  [!code-csharp[FxCop.Usage.InstantiateArgumentExceptionsCorrectly#2](../code-quality/codesnippet/CSharp/ca2208-instantiate-argument-exceptions-correctly_2.cs)]

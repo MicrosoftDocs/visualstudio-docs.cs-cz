@@ -1,5 +1,5 @@
 ---
-title: IDebugProgramNodeAttach2::OnAttach | Microsoft Docs
+title: IDebugProgramNodeAttach2::OnAttach | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3c7c7e6f7ef640b192b7ed8c57ac87375a5ad189
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c30ad0216944ec7c5c707b17df585a689a42b396
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49936133"
 ---
 # <a name="idebugprogramnodeattach2onattach"></a>IDebugProgramNodeAttach2::OnAttach
-Připojí k přidružený program nebo odkládat údaje proces připojit [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) metoda.  
+Připojí se k programu přidružené nebo odloží procesu připojování k [připojit](../../../extensibility/debugger/reference/idebugengine2-attach.md) metody.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +41,13 @@ int OnAttach(
   
 #### <a name="parameters"></a>Parametry  
  `guidProgramId`  
- [v] `GUID` přiřadit přidružený program.  
+ [in] `GUID` přiřazení k přidružené aplikaci.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE` Pokud [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) neměla být volána metoda. Jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud [připojit](../../../extensibility/debugger/reference/idebugengine2-attach.md) by neměla být volána metoda. V opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda je volána v průběhu procesu připojování před [Attach](../../../extensibility/debugger/reference/idebugengine2-attach.md) metoda je volána. `OnAttach` Metoda můžete provést samotný proces připojení (v takovém případě tato metoda vrátí hodnotu `S_FALSE`) nebo odložení proces připojit `IDebugEngine2::Attach` – metoda ( `OnAttach` metoda vrátí `S_OK`). V obou případech `OnAttach` metoda můžete nastavit `GUID` laděné do programu danou `GUID`.  
+ Tato metoda je volána před během procesu připojování [připojit](../../../extensibility/debugger/reference/idebugengine2-attach.md) metoda je volána. `OnAttach` Metoda můžete provést samotný proces připojení (v takovém případě tato metoda vrátí `S_FALSE`) nebo odložit procesu připojování k `IDebugEngine2::Attach` – metoda ( `OnAttach` vrátí metoda `S_OK`). V obou případech `OnAttach` metoda můžete nastavit `GUID` k laděnému programu daný `GUID`.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProgramNodeAttach2](../../../extensibility/debugger/reference/idebugprogramnodeattach2.md)   

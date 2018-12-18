@@ -12,18 +12,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f71b91b606eb10947f6b794d6311efe6627bd12e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 1e03abc331d59504b1b08136c8c81fe12c8ba2af
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34264192"
 ---
 # <a name="stopprofile"></a>StopProfile
 `StopProfile` Funkce nastaví na hodnotu 0 (vypnuto) pro zadané úrovně profilování čítač.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 PROFILE_COMMAND_STATUS PROFILERAPI StopProfile(  
                        PROFILE_CONTROL_LEVEL Level,   
                        unsigned int dwId);  
@@ -44,7 +45,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI StopProfile(
   
  Identifikátor procesu nebo vlákno generované systémem.  
   
-## <a name="property-valuereturn-value"></a>Hodnota vlastnosti / návratová hodnota  
+## <a name="property-valuereturn-value"></a>Vlastnost Hodnota/Návratová hodnota  
  Funkce označuje úspěch či neúspěch pomocí **PROFILE_COMMAND_STATUS** výčtu. Vrácená hodnota může být jeden z následujících akcí:  
   
 |Enumerátor|Popis|  
@@ -62,7 +63,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI StopProfile(
   
  Po spuštění a zastavení stav a stav pozastavení nebo obnovení se i na profilování stav pro úroveň je ON. Vlákna na profilovaným, proces globální, a úrovně stavy vláken pro vlákno musí být ON.  
   
-## <a name="net-framework-equivalent"></a>Ekvivalent v rozhraní .NET Framework  
+## <a name="net-framework-equivalent"></a>Ekvivalent v rozhraní .NET framework  
  Microsoft.VisualStudio.Profiler.dll  
   
 ## <a name="function-information"></a>Informace o funkci  
@@ -73,7 +74,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI StopProfile(
 ## <a name="example"></a>Příklad  
  Následující příklad znázorňuje metodu StopProfile. Příklad předpokládá, že volání metody StartProfile nebyly provedeny stejným vlákno nebo proces identifikovaný [PROFILE_CURRENTID](../profiling/profile-currentid.md).  
   
-```  
+```cpp  
 void ExerciseStopProfile()  
 {  
     // StartProfile and StopProfile control the   
@@ -108,4 +109,4 @@ void ExerciseStopProfile()
 ```  
   
 ## <a name="see-also"></a>Viz také  
- [Referenční dokumentace rozhraní API sady Visual Studio Profiler (nativní)](../profiling/visual-studio-profiler-api-reference-native.md)
+ [Visual Studio profiler referenční dokumentace rozhraní API (nativní)](../profiling/visual-studio-profiler-api-reference-native.md)

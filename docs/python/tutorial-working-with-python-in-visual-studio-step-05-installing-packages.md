@@ -1,53 +1,56 @@
 ---
-title: Práce s Python, krok 5, instalace balíčků
-description: Krok 5 základní kurz pro práci s Pythonem v sadě Visual Studio, ukázka funkcích nástroje Visual Studio pro správu balíčků v prostředí Python.
-ms.date: 03/05/2018
+title: Python v sadě Visual Studio kurz – krok 5 instalace balíčků
+titleSuffix: ''
+description: Krok 5 průvodce základní funkce Pythonu v sadě Visual Studio, ukázka funkce aplikace Visual Studio pro správu balíčků v prostředí Pythonu.
+ms.date: 10/29/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 73de2a4c58a24a603f1d5d54138d5762e3ae9971
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 81dccdb276596e96e1a7064f796afa43de79f032
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53067285"
 ---
-# <a name="step-5-installing-packages-in-your-python-environment"></a>Krok 5: Instalace balíčků ve vašem prostředí Python
+# <a name="step-5-install-packages-in-your-python-environment"></a>Krok 5: Instalace balíčků ve vašem prostředí Pythonu
 
 **Předchozí krok: [spuštění kódu v ladicím programu](tutorial-working-with-python-in-visual-studio-step-04-debugging.md)**
 
-Komunity vývojářů Python má vytvořeného tisíce užitečné balíčky, které můžete začlenit do vašich projektů. Visual Studio poskytuje uživatelské rozhraní ke správě balíčků ve vašich prostředích Python.
+Komunita vývojářů Python vytvořil tisíce užitečné balíčky, které můžete začlenit do vašich projektů. Visual Studio poskytuje uživatelské rozhraní pro správu balíčků ve vašem prostředí Pythonu.
 
-1. Vyberte **zobrazení > ostatní okna > prostředí Python** příkazu nabídky. **Prostředí Python** okno otevře jako sdílené do Průzkumníka řešení a ukazuje různých prostředích, která je k dispozici pro vás. Seznam obsahuje obou prostředích, které jste nainstalovali pomocí instalačního programu sady Visual Studio a ty, které můžete nainstalovat samostatně. Prostředí tučným písmem je výchozí prostředí, ve kterém se používá pro nové projekty.
+1. Vyberte **zobrazení** > **ostatní Windows** > **prostředí Pythonu** příkazu nabídky. **Prostředí Pythonu** jako partnera, který se otevře okno **Průzkumníka řešení** a zobrazí se vám různá prostředí, které jsou k dispozici. Seznam obsahuje i prostředí, které jste si nainstalovali pomocí instalačního programu sady Visual Studio a ty, které můžete nainstalovat samostatně. Prostředí tučným písmem je výchozí prostředí, který se používá pro nové projekty.
 
-  ![Okno prostředí Python](media/environments-default-view-blue.png)
+   ![Okno prostředí Pythonu](media/environments-default-view-blue.png)
 
-1. V prostředí **přehled** karta poskytuje rychlý přístup k interaktivních okna pro prostředí spolu s instalační složku a překladače v prostředí. Vyberte například **otevřete okno interaktivní** a v sadě Visual Studio se zobrazí okno aplikace interaktivní pro konkrétní prostředí.
+2. Prostředí **přehled** karta poskytuje rychlý přístup k **interaktivní** okna pro toto prostředí spolu s instalační složku a interpretů životní prostředí. Vyberte například **otevřít interaktivní okno** a **interaktivní** v sadě Visual Studio se zobrazí okno pro konkrétní prostředí.
 
-1. Vyberte **balíčky** kartě a zobrazit seznam balíčků, které jsou aktuálně nainstalovány v prostředí.
+3. Vyberte **balíčky** kartě a můžete zobrazit seznam balíčků, které jsou aktuálně nainstalované ve prostředí.
 
-  ![Balíčky nainstalované v prostředí](media/environments-installed-packages-blue.png)
+   ![Balíčky nainstalované ve prostředí](media/environments-installed-packages-blue.png)
 
-1. Nainstalujte `matplotlib` zadáním názvu do pole hledání vyberte `pip install`
+4. Nainstalujte `matplotlib` tak, že do vyhledávacího pole zadáte její název, vyberte **instalace pip**
 
-  ![Instalace matplotlib v prostředí](media/environments-add-matplotlib1.png)
+   ![Instalace matplotlib v prostředí](media/environments-add-matplotlib1.png)
 
-1. Pokud se zobrazí výzva k tomu svůj souhlas pro zvýšení oprávnění.
+5. Pokud se zobrazí výzva k tomu vyjádřit souhlas ke zvýšení úrovně oprávnění.
 
-1. Po instalaci balíčku se zobrazí v okně prostředí Python. **X** napravo od balíček odinstaluje ho.
+6. Po dokončení instalace balíčku se zobrazí v **prostředí Pythonu** okna. **X** napravo od balíček odinstaluje se.
 
-  ![Dokončení instalace matplotlib v prostředí](media/environments-add-matplotlib2.png)
+   ![Dokončení instalace matplotlib v prostředí](media/environments-add-matplotlib2.png)
 
-  Malé indikátor průběhu pod prostředí označuje, že Visual Studio vytváří svou databázi IntelliSense pro nově nainstalovaný balíček. **IntelliSense** kartě také ukazuje podrobnější informace. Všimněte si, že až do dokončení této databáze, IntelliSense funkce, jako jsou automatické doplňování a kontrolu syntaxe nebudou v editoru pro tento balíček aktivní.
+   Indikátor průběhu malé se můžou objevit pod prostředí k označení, že Visual Studio sestavuje své databáze IntelliSense pro nově nainstalovaný balíček. **IntelliSense** karta zobrazuje také podrobnější informace. Všimněte si, že než tuto databázi se dokončí, funkce technologie IntelliSense, jako je automatické dokončování a kontroly syntaxe nebudou aktivní v okně editor pro tento balíček.
 
-  Všimněte si, že **Visual Studio 2017 verze 15,6 operací** a později používá jiné a rychlejší metody pro práci s IntelliSense a zobrazí zprávu za tímto účelem on **IntelliSense** kartě.
+   Všimněte si, že **Visual Studio 2017 verze 15.6** později používá jiný a rychlejší způsob pro práci s podporou technologie IntelliSense a zobrazí zprávu o tom on **IntelliSense** kartu.
 
-1. Vytvoření nového projektu s **soubor > Nový > projekt**, výběrem šablony "Aplikace Python". Do souboru kódu, který se zobrazí vložte následující kód, který vytvoří kosinus wave jako v předchozích krocích kurz pouze v tomto případě vykreslí graficky:
+7. Vytvoření nového projektu s **souboru** > **nový** > **projektu**, vyberete **aplikace v Pythonu** Šablona. V souboru kódu, který se zobrazí vložte následující kód, který vytvoří pouze v tomto případě promítají graficky kosinus wave jako předchozí kurz kroky:
 
     ```python
     from math import radians
@@ -62,15 +65,15 @@ Komunity vývojářů Python má vytvořeného tisíce užitečné balíčky, kt
     main()
     ```
 
-1. Spusťte program s (F5) nebo bez něj (Ctrl + F5), chcete-li zobrazit výstup:
+8. Spusťte program s (**F5**) nebo bez ladicího programu (**Ctrl**+**F5**) k zobrazení výstupu:
 
-  ![Výstup matplotlib příklad](media/environments-add-matplotlib3.png)
+   ![Výstup příkladu matplotlib](media/environments-add-matplotlib3.png)
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-step"></a>Další krok
 
 > [!div class="nextstepaction"]
-> [Práce s úložištěm Git](tutorial-working-with-python-in-visual-studio-step-06-working-with-git.md)
+> [Práce s Gitem](tutorial-working-with-python-in-visual-studio-step-06-working-with-git.md)
 
-### <a name="going-deeper"></a>Budete hlubší
+## <a name="go-deeper"></a>Seznamte se blíž
 
 - [Prostředí Pythonu](managing-python-environments-in-visual-studio.md)

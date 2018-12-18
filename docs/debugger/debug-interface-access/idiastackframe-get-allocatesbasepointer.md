@@ -1,5 +1,5 @@
 ---
-title: IDiaStackFrame::get_allocatesBasePointer | Microsoft Docs
+title: IDiaStackFrame::get_allocatesBasePointer | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e3a58ee8093087f99ac6f002faa7fb32d053be4
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: a746cc5ceeba8df4a023e10c09ecfe511be557b6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49848771"
 ---
 # <a name="idiastackframegetallocatesbasepointer"></a>IDiaStackFrame::get_allocatesBasePointer
-Získá příznak označující, zda je základní ukazatele přidělené kód v tomto rozsahu adres.  
+Získá příznak, který označuje, zda je základní ukazatel přidělen pro kód v tomto rozsahu adres.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,10 +34,10 @@ HRESULT get_allocatesBasePointer (
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí `TRUE` Pokud základní ukazatel je přidělen pro kód ve tento snímek; jinak vrátí `FALSE`.  
+ [out] Vrátí `TRUE` Pokud je základní ukazatel přidělen pro kód v tomto snímku; v opačném případě vrátí `FALSE`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE` Pokud vlastnost není podporována. Jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

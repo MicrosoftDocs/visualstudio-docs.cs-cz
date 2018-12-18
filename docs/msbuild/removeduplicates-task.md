@@ -1,5 +1,5 @@
 ---
-title: Removeduplicates – úloha | Microsoft Docs
+title: Removeduplicates – úloha | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 03/01/2018
 ms.technology: msbuild
@@ -20,30 +20,31 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 596c066018a5f6f731c4ca0cefbefae458646ec1
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b121090196b5b9222799cdcce4e4f9af096e483f
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39153069"
 ---
 # <a name="removeduplicates-task"></a>RemoveDuplicates – úloha
-Odebere duplicitní položky z kolekce zadanou položku.  
+Odebere duplicitní položky z kolekce zadané položky.  
   
 ## <a name="parameters"></a>Parametry  
  Následující tabulka popisuje parametry `RemoveDuplicates` úloh.  
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|`Filtered`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje kolekci položky s všechny duplicitní položky odebrat. Pořadí vstupních položek je zachovaná, udržování první instance každé duplicitní položky.|  
-|`Inputs`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametr.<br /><br /> Odeberte duplicitní položky z kolekce položek.|  
+|`Filtered`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje kolekci položek se odebrat všechny duplicitní položky. Zachování pořadí vstupních položek udržování první instance každé duplicitní položky.|  
+|`Inputs`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametru.<br /><br /> Odebrat duplicitní položky z kolekce položek.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato úloha je malá a velká písmena a nelze použít k porovnání metadata položky při určování duplicitní položky.  
+ Tato úloha velká a malá písmena a není výsledkem porovnání metadata položky při určování duplicitní položky.  
   
- Kromě výše uvedených parametrů tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třída, které dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrech a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).  
+ Kromě výše uvedených parametrů zdědí tento úkol parametry ze <xref:Microsoft.Build.Tasks.TaskExtension> třída, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).  
   
 ## <a name="example"></a>Příklad  
- Následující příklad používá `RemoveDuplicates` úloh odeberte duplicitní položky ze `MyItems` kolekce položek. Po dokončení úlohy `FilteredItems` položky kolekce obsahuje jednu položku.  
+ V následujícím příkladu `RemoveDuplicates` úloh odebrat duplicitní položky ze `MyItems` kolekci položek. Po dokončení úlohy `FilteredItems` kolekce položek obsahuje jednu položku.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -67,7 +68,7 @@ Odebere duplicitní položky z kolekce zadanou položku.
 </Project>  
 ```  
 
- Následující příklad ukazuje, že `RemoveDuplicates` zachovává jeho vstupní pořadí úkolů. Po dokončení úlohy `FilteredItems` kolekce položek obsahuje položky "MyFile2.cs", "MyFile1.cs" a "MyFile3.cs" v tomto pořadí.  
+ Následující příklad ukazuje, že `RemoveDuplicates` úlohy zachová jeho vstupní pořadí. Po dokončení úlohy `FilteredItems` kolekce položek obsahuje položky *MyFile2.cs*, *MyFile1.cs*, a *MyFile3.cs* v uvedeném pořadí.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -90,7 +91,7 @@ Odebere duplicitní položky z kolekce zadanou položku.
 </Project>  
 ```  
 
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)   
  [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)   
  [Úlohy](../msbuild/msbuild-tasks.md)

@@ -1,5 +1,5 @@
 ---
-title: Rozšíření nabídek a příkazů | Microsoft Docs
+title: Rozšiřování nabídek a příkazů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,50 +15,49 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 830748be6f2cedf57b94a9824bc0912820067718
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e6f5cd78709c9a4843588188494b4a70f7268742
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39639747"
 ---
-# <a name="extending-menus-and-commands"></a>Rozšíření nabídek a příkazů
-Příkazy jsou způsob přidání akce a procesů pro Visual Studio. Ve většině případů se zobrazí příkazy na nabídek a panelů nástrojů. Šablona projektu VSPackage ukazuje, jak implementovat velmi základní příkaz. Trochu déle, ale stále základní implementaci, najdete v části [vytvoření rozšíření pomocí příkazu v nabídce](../extensibility/creating-an-extension-with-a-menu-command.md).  
+# <a name="extend-menus-and-commands"></a>Rozšíření nabídek a příkazů
+Příkazy představují způsob, jak přidat akce a procesů pro Visual Studio. Ve většině případů se zobrazí příkazy nabídky nebo panely nástrojů. Šablona projektu VSPackage ukazuje, jak implementovat velmi základní příkaz. O něco déle, ale stále základní implementaci, najdete v části [vytváření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md).  
   
- Další informace o sadě Visual Studio příkazy, nabídek a panelů nástrojů najdete v tématu [příkazy, nabídek a panelů nástrojů](../extensibility/internals/commands-menus-and-toolbars.md).  
+ Další informace o sadě Visual Studio příkazy, nabídky a panely nástrojů, naleznete v tématu [příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md).  
   
- Příkazy, nabídek a panelů nástrojů jsou definovány v souboru .vsct, který je součástí VSPackage projekty. Může najít informace o prostředí Visual Studio IDE a soubor .vsct v [jak VSPackages přidat prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md).  
+ Příkazy, nabídky a panely nástrojů, které jsou definovány v *.vsct* souboru, který je součástí balíčku VSPackage projekty. Může najít informace o integrovaném vývojovém prostředí sady Visual Studio a *.vsct* ve [jak balíčky VSPackages přidávají prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md).  
   
- Následující témata popisují, jak přidat různé druhy příkazy, nabídek a panelů nástrojů.  
+ Následující témata popisují, jak přidat různé druhy příkazy, nabídky a panely nástrojů.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Přidání nabídky do řádku nabídek v sadě Visual Studio](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md)  
- Vysvětluje, jak přidat nabídku na začátek řádku nabídek v sadě Visual Studio.  
+ [Přidání nabídky na řádku nabídek sady Visual Studio](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md)  
+ Vysvětluje, jak přidat nabídku na začátek řádku nabídek sady Visual Studio.  
   
- [Vytváření vazeb mezi klávesovými zkratkami a položkami nabídky](../extensibility/binding-keyboard-shortcuts-to-menu-items.md)  
- Vysvětluje, jak přidat klávesové zkratky (například CTRL + 3) na položku nabídky.  
+ [Vytvoření vazby klávesové zkratky a položkami nabídky](../extensibility/binding-keyboard-shortcuts-to-menu-items.md)  
+ Vysvětluje, jak přidat klávesovou zkratku (například CTRL + 3) pro položku nabídky.  
   
  [Přidání podnabídky do nabídky](../extensibility/adding-a-submenu-to-a-menu.md)  
- Popisuje postup přidání podnabídky do hlavní nabídky.  
+ Vysvětluje postup přidání podnabídky do hlavní nabídky.  
   
- [Přidání seznamu Naposledy použité do podnabídky](../extensibility/adding-a-most-recently-used-list-to-a-submenu.md)  
- Vysvětluje, jak přidat seznam naposledy použitých.  
+ [Přidat že naposledy použitou seznamu do podnabídky](../extensibility/adding-a-most-recently-used-list-to-a-submenu.md)  
+ Vysvětluje, jak přidat seznamu naposledy použitých.  
   
  [Vytváření znovu použitelných skupin tlačítek](../extensibility/creating-reusable-groups-of-buttons.md)  
- Popisuje, jak seskupit položky příkaz tak, aby jejich zahrnutí do více nabídek.  
+ Popisuje, jak seskupit položky příkazu, takže je jde zahrnout do více nabídek.  
   
- [Přidávání ikon k příkazům nabídky](../extensibility/adding-icons-to-menu-commands.md)  
- Popisuje postup přidání ikonu k příkazu na panelu nástrojů a nabídky.  
+ [Přidání ikon k příkazům nabídky](../extensibility/adding-icons-to-menu-commands.md)  
+ Popisuje, jak přidat ikonu příkaz na panelu nástrojů a nabídky.  
   
  [Změna textu příkazu nabídky](../extensibility/changing-the-text-of-a-menu-command.md)  
- Popisuje použití `TextChanges` příznaku pro povolení položku nabídky se musí změnit dynamicky.  
+ Popisuje použití `TextChanges` příznaku pro povolení položku nabídky dynamicky změnit.  
   
  [Změna vzhledu příkazu](../extensibility/changing-the-appearance-of-a-command.md)  
  Popisuje, jak dynamicky povolit nebo zakázat příkaz.  
   
  [Aktualizace uživatelského rozhraní](../extensibility/updating-the-user-interface.md)  
- Popisuje, jak chcete vynutit aktualizaci uživatelského rozhraní tak, aby odrážela nedávné změny.  
+ Popisuje, jak vynutit aktualizaci uživatelského rozhraní tak, aby odrážely nejnovější změny.  
   
  [Lokalizace příkazů nabídky](../extensibility/localizing-menu-commands.md)  
- Vysvětluje, jak k lokalizaci příkazy nabídky.  
-  
-## <a name="related-sections"></a>Související oddíly
+ Vysvětluje, jak lokalizace příkazů nabídky.  

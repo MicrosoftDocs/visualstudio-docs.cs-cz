@@ -1,5 +1,5 @@
 ---
-title: Zdokumentujte kontextu | Microsoft Docs
+title: Kontext dokumentu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,23 +13,24 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8f97df9bc3c0a40a44379ba37f1b36d79cffb74e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ef82c6533eddf32dd8315193531a57e2e7328ad9
+ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203557"
 ---
 # <a name="document-context"></a>Kontext dokumentu
-V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ladění, **kontextu dokumentu**:  
+V [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] ladění, *kontext dokumentu*:  
   
--   Představuje pozici ve zdrojovém souboru. Pro jazyky, kde nemusí být zdrojový soubor existuje identifikuje kontextu dokumentu pozici v dokumentu obvykle generované běhové prostředí. Například skriptovací stroj může vygenerovat dokumentu ze skriptu. Další informace najdete v tématu [dokumentu pozice](../../extensibility/debugger/document-position.md).  
+-   Představuje pozici ve zdrojovém souboru. Kontext dokumentu pro jazyky, kde nemusí být zdrojový soubor existuje, identifikuje pozici v dokumentu obvykle generovaných běhového prostředí. Například skriptovací stroj může generovat dokument ze skriptu. Další informace najdete v tématu [pozice dokumentu](../../extensibility/debugger/document-position.md).  
   
--   Popisuje pozici ve zdrojovém dokumentu, která odpovídá kódu kontextu. Obslužná rutina symbol mapuje kontext kódu na dokumentaci kontextu, pomocí informací o generovaných kompilátoru nebo překladač.  
+-   Popisuje umístění ve zdrojovém dokumentu, který odpovídá kontext kódu. Obslužné rutiny symbolů mapuje na dokumentaci kontextu, pomocí informací generovaných kompilátor nebo překladač kontext kódu.  
   
--   Je implementováno modulem [IDebugDocumentContext2](../../extensibility/debugger/reference/idebugdocumentcontext2.md) rozhraní.  
+-   Je implementováno [IDebugDocumentContext2](../../extensibility/debugger/reference/idebugdocumentcontext2.md) rozhraní.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Kontext kódu](../../extensibility/debugger/code-context.md)   
- [Symbol zprostředkovatele](../../extensibility/debugger/symbol-provider.md)   
- [Zprostředkovatel rozhraní symbol](../../extensibility/debugger/reference/symbol-provider-interfaces.md)   
+ [Poskytovatel symbolů](../../extensibility/debugger/symbol-provider.md)   
+ [Rozhraní poskytovatele symbolů](../../extensibility/debugger/reference/symbol-provider-interfaces.md)   
  [Kontexty ladicího programu](../../extensibility/debugger/debugger-contexts.md)

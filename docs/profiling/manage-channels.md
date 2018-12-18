@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 045059c1ab0c33026369b065649c4d4b82a480df
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 89c5727b8bc294ae28f48a6e1fc3194b258b9555
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34844423"
 ---
 # <a name="manage-channels"></a>Správa kanálů
 V **zobrazení vláken** v vizualizér souběžnosti můžete uspořádat kanály pro proces, takže můžete zkontrolovat určité vzory. Můžete řadit kanály, je přesunout nahoru a dolů a skrytí nebo zobrazení je.  
@@ -59,7 +60,7 @@ V **zobrazení vláken** v vizualizér souběžnosti můžete uspořádat kanál
 ## <a name="group-markers-by-thread"></a>Skupiny značek vlákno  
  Obsahuje-li trasování událostí značky, můžete tento příkaz kanály značky skupiny v rámci podproces, který vygeneruje události značky.  Kanály disku přesunou do horní části seznamu kanálů a kanály GPU přesunou do dolní.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Ovládací prvek Lupa (zobrazení vláken)](../profiling/zoom-control-threads-view.md)   
- [Zapnutí nebo vypnutí režimu míry](../profiling/measure-mode-on-off.md)   
+ [Režimu míry zapnout nebo vypnout](../profiling/measure-mode-on-off.md)   
  [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

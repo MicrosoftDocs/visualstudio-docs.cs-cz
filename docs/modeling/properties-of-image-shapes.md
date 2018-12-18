@@ -12,64 +12,67 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 474dd6e1ec655b27c9b447bcb3197c07dba56ecf
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 20da1fc95160be69c1388f9d2986c7dc254eefa2
+ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50967126"
 ---
 # <a name="properties-of-image-shapes"></a>Vlastnosti obrazových obrazců
-Tvary bitové kopie můžete použít k určení, jak třídy domény se zobrazí v generované návrháře. Definování obrazce image nastavením `Image` vlastnost třídy do souboru předdefinované bitové kopie. Jsou podporovány následující formáty:
 
--   .GIF
+Obrazce obrázku můžete použít k určení, jak se zobrazí ve vygenerovaném návrháři doménovými třídami. Definování obrazce obrázku tak, že nastavíte `Image` vlastnost třídy do souboru předdefinované. Podporují se následující formáty:
 
--   .jpg
+- GIF
 
--   .jpeg
+- .jpg
 
--   .bmp
+- .jpeg
 
--   .wmf
+- BMP
 
--   .EMF
+- .wmf
 
--   soubor ve formátu PNG
+- .EMF
 
- Ve výchozím nastavení jsou soubory Návrháře prostředků, jako jsou soubory obrázků, nachází v **prostředky**složku **Dsl** projektu.
+- ve formátu PNG
 
- Další informace najdete v tématu [jak definovat jazyka domény](../modeling/how-to-define-a-domain-specific-language.md). Další informace o tom, jak používat tyto vlastnosti najdete v tématu [přizpůsobení a rozšíření jazyka domény](../modeling/customizing-and-extending-a-domain-specific-language.md).
+Ve výchozím nastavení, soubory Návrháře prostředků, jako jsou obrázky, jsou umístěny v **prostředky** složky **Dsl** projektu.
 
- Obrázek obrazce mají vlastnosti, které jsou uvedeny v následující tabulce.
+Další informace najdete v tématu [jak se definuje jazyk specifický pro doménu](../modeling/how-to-define-a-domain-specific-language.md). Další informace o tom, jak pomocí těchto vlastností najdete v tématu [přizpůsobení a rozšíření jazyka specifického pro doménu](../modeling/customizing-and-extending-a-domain-specific-language.md).
+
+Obrazce obrázku mají vlastnosti, které jsou uvedeny v následující tabulce.
 
 |Vlastnost|Popis|Výchozí|
-|--------------|-----------------|-------------|
-|Barva výplně|Barva výplně tento tvar.|prázdné|
-|Zadejte režim přechodu|Režim vyplnění přechodu tohoto tvaru.|vodorovné|
-|Má výchozí body připojení|Pokud `True`tvar, který bude používat nahoru, dolů, doleva a správný připojovací body v Návrháři vygenerovaný.|False|
-|Barva obrysu|Obrysovou barvu tohoto tvaru.|černé|
-|Styl obrysu čárka|Styl obrysu dash tento tvar (ucelený, čárku, tečku, DashDot, DashDotDot nebo vlastní).|Plnou|
-|Tloušťka obrysu|Tloušťka obrysu tento tvar.|0.03125|
-|Barva textu|Barva, který se používá pro dekoratéry textu, které jsou přidruženy tento tvar.|černé|
-|Modifikátor přístupu|Modifikátor přístupu geometrické obrazce (veřejné nebo interní).|Public|
-|Vlastní atributy|Použít k přidání atributů do zdrojového kódu třídu, která se generují z tento tvar.|\<žádné >|
-|Generuje dvojitou odvozené|Pokud `True`, budou generovány základní třídu a částečné třídy (pro podporu přizpůsobení prostřednictvím přepsání). Další informace najdete v tématu [přepsání a rozšíření třídy generované](../modeling/overriding-and-extending-the-generated-classes.md).|False|
-|Má vlastní – konstruktor|Pokud `True`, bude k dispozici vlastní konstruktor v zdrojového kódu. Další informace najdete v tématu [přepsání a rozšíření třídy generované](../modeling/overriding-and-extending-the-generated-classes.md).|False|
-|Modifikátor dědičnosti|Popisuje typ dědičnosti zdrojovou třídu kódu, která se generují z bitové kopie tvaru (`none`, `abstract` nebo `sealed`).|žádná|
-|Základní Image obrazce|Základní třída tento tvar.|(žádný)|
-|Název|Název tohoto tvaru.|Aktuální název|
-|Obor názvů|Obor názvů, který je přidružený tento tvar.|Aktuální obor názvů|
-|ToolTip – typ|Místo, na kterých byla definována popisek (pevná, proměnné nebo žádný). Pokud odstraněna, pak hodnota `Fixed Tooltip Text` vlastnost se používá jako popisek; Pokud proměnné, pak popisek je definována v vlastní kód.|žádná|
-|Poznámky|Neformální poznámky, které jsou přidruženy tento tvar.|\<žádné >|
-|Počáteční výšku.|Úvodní výšce tohoto tvaru, v palcích.|1|
-|Počáteční šířka|Počáteční šířka tohoto tvaru, v palcích.|1.5|
-|Barva výplně zveřejněné jako vlastnost<br /><br /> Režim zveřejněné vyplnění přechodu<br /><br /> Zveřejněné obrysovou barvu jako vlastnost<br /><br /> Styl obrysu Dash zveřejněné jako vlastnost<br /><br /> Vystavený Tloušťka obrysu jako vlastnost<br /><br /> Barva textu zpřístupňuje|Pokud `True`, může uživatel nastavit vlastnost stanovené obrazce. Chcete-li tuto možnost nastavíte, klikněte pravým tlačítkem na definici tvar a klikněte na **přidat zveřejněné**.|False|
-|Popis|Používá k dokumentu generovaný návrháře.|\<žádné >|
-|Zobrazovaný název|Název, který se zobrazí v Návrháři vygenerovaný pro tento tvar.|\<žádné >|
-|Opravené Text popisku|Text, který se používá pro pevnou popisek.|\<žádné >|
-|Nápověda – klíčové slovo|Klíčové slovo, které se používá k indexu F1 – Nápověda pro tento element.|\<žádné >|
-|Image|Cesta k souboru bitové kopie, který se používá pro tento tvar.|\<žádné >|
+|-|-|-|
+|Barva výplně|Barva výplně tohoto obrazce.|Prázdné|
+|Režim přechodu výplně|Režim přechodu výplně tohoto obrazce.|Vodorovná|
+|Má výchozí body připojení|Pokud `True`obrazce použije nahoře, dole, vlevo a správný připojovací body ve vygenerovaném návrháři.|False|
+|Barva obrysu|Barva obrysu tohoto obrazce.|Černá|
+|Styl přerušování obrysu|Styl přerušování obrysu tohoto obrazce (plný, Dash, tečka, DashDot, DashDotDot nebo vlastní).|Plná|
+|Tloušťka obrysu|Tloušťka obrysu tohoto obrazce.|0.03125|
+|Barva textu|Barva, která je použitá pro dekoratéry textu, které jsou spojeny s tímto obrazcem.|Černá|
+|Modifikátor přístupu|Modifikátor přístupu tohoto obrazce Geometrie (veřejné nebo interní).|Public|
+|Vlastní atributy|Použít k přidání atributů do třídy zdrojový kód, který je generován z tohoto obrazce.|\<žádné >|
+|Generuje Double odvozené|Pokud `True`, se vygeneruje základní třídu a částečné třídy (pro podporu přizpůsobení pomocí přepisů). Další informace najdete v tématu [přepisování a rozšiřování třídy generované v](../modeling/overriding-and-extending-the-generated-classes.md).|False|
+|Má vlastní konstruktor|Pokud `True`, poskytneme vám vlastního konstruktoru ve zdrojovém kódu. Další informace najdete v tématu [přepisování a rozšiřování třídy generované v](../modeling/overriding-and-extending-the-generated-classes.md).|False|
+|Modifikátor dědičnosti|Popisuje druh dědičnosti třídy zdrojový kód, který je generován z obrazce obrázku (`none`, `abstract` nebo `sealed`).|žádná|
+|Základní obrazec obrázku|Základní třída tohoto obrazce.|(žádné)|
+|Název|Název tohoto obrazce.|Aktuální název|
+|Obor názvů|Obor názvů, který je přidružen s tímto obrazcem.|Aktuální obor názvů|
+|Popis typu|Místo, kde je definován popisek (fixní, proměnná nebo žádný). Pokud pevně daná, a potom hodnoty `Fixed Tooltip Text` vlastnost se používá jako popis tlačítka; Pokud je proměnná, pak popisek je definován ve vlastním kódu.|žádná|
+|Poznámky|Neformální poznámky, které jsou spojeny s tímto obrazcem.|\<žádné >|
+|Počáteční výška|Počáteční výška tohoto obrazce v palcích.|1|
+|Počáteční šířka|Počáteční šířka tohoto obrazce v palcích.|1.5|
+|Barva výplně vystavené jako vlastnost<br /><br /> Režim přechodu výplně vystavené<br /><br /> Barva obrysu vystavena jako vlastnost<br /><br /> Styl přerušování obrysu vystavena jako vlastnost<br /><br /> Vystavené jako vlastnost zpřístupní tloušťku obrysu<br /><br /> Zpřístupní barvu textu|Pokud `True`, může uživatel nastavit vlastnost stanovených tvaru. Nastavit, klikněte pravým tlačítkem na definici obrazce a klikněte na tlačítko **přidat vystavený**.|False|
+|Popis|Používá se k dokumentu vygenerovaného návrháře.|\<žádné >|
+|Zobrazovaný název|Název, který se zobrazí ve vygenerovaném návrháři u tohoto obrazce.|\<žádné >|
+|Pevný Text popisu tlačítka|Text, který se používá pro pevný popis.|\<žádné >|
+|Klíčové slovo nápovědy|Klíčové slovo, je použít k indexování nápovědy klávesy F1 pro tento element.|\<žádné >|
+|Image|Cesta k souboru obrázku, který se používá pro tento obrazec.|\<žádné >|
 
 ## <a name="see-also"></a>Viz také
 
-- [Glosář nástroje jazyka domény](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Glosář nástrojů jazyka specifického pro doménu](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

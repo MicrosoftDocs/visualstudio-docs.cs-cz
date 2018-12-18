@@ -1,9 +1,8 @@
 ---
-title: Hierarchická organizace zdrojů pro lokalizaci | Microsoft Docs
-ms.custom: ''
+title: Hierarchická organizace zdrojů pro lokalizaci
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
 - resource files, localized
@@ -21,36 +20,38 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 704282bc169971e0ecd62285c748af75bed41c41
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f21b4c6d53a70cb3d695c05e412b0e2f52a607bb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49874563"
 ---
 # <a name="hierarchical-organization-of-resources-for-localization"></a>Hierarchická organizace zdrojů pro lokalizaci
-V sadě Visual Studio jsou uložené v samostatné soubory lokalizované prostředky (například řetězce a bitové kopie, které jsou vhodné pro každou jazykovou verzi data) a načíst podle nastavení jazykové verze uživatelského rozhraní. Zjistit, jak jsou načíst lokalizované prostředky, je vhodné považovat je jako hierarchické uspořádání.  
-  
-## <a name="kinds-of-resources-in-the-hierarchy"></a>Typy prostředků v hierarchii  
-  
--   Nouzové prostředky pro váš výchozí jazykovou verzi, třeba Angličtina ("en"), se nacházejí na nejvyšší úrovni hierarchie. Tyto nouzové prostředky jsou pouze ty, které nemají své vlastní soubor; jsou uložené v hlavní sestavení.  
-  
--   V následující tabulce nouzové prostředky jsou prostředky pro všechny neutrální jazykové verze. Neutrální jazykovou verzi je spojeno s jazykem, ale ne na zemi nebo oblast. Francouzština ("fr") je třeba neutrální jazykovou verzi. (Nouzové prostředky jsou také pro neutrální jazykovou verzi, ale speciální jeden).  
-  
--   Prostředky pod neutrální jazykovou verzi jsou prostředky pro všechny konkrétní jazykové verze. Konkrétní jazykové verze je přidružen jazyk a na zemi nebo oblast. Francouzština (Kanada) ("fr-CA") je třeba konkrétní jazykové verze.  
-  
- Pokud se aplikace pokusí načíst všechny lokalizovaný prostředek, například řetězec a nebyl nalezen, bude cestují u nahoru v hierarchii, dokud nenajde soubor prostředků obsahující požadovaný prostředek.  
-  
- Nejlepší způsob, jak ukládat vaše prostředky je generalize je co nejvíce. To znamená, že k uložení lokalizované řetězce, Image, a tak dále v soubory prostředků pro neutrální jazykové verze, nikoli konkrétní jazykové verze, kdykoli je to možné. Například pokud máte prostředky pro belgické francouzština ("fr-být") jazykovou verzi a okamžitě výše uvedené prostředky jsou nouzové prostředky v angličtině, k problému může dojít, když někdo používá aplikace v systému nakonfigurovaný pro francouzštině Kanadští jazykovou verzi. Systém hledá satelitní sestavení pro "fr-CA", ale nelze najít, tak načte hlavní sestavení obsahující záložní prostředků angličtinu, namísto načítání francouzské prostředky. Následující obrázek znázorňuje tuto nežádoucího scénář.  
-  
- ![Pouze konkrétní prostředky](../ide/media/vbspecificresourcesonly.gif "vbSpecificResourcesOnly")  
-  
- Pokud dodržíte doporučený postup uvedení množství prostředků nejdříve do souboru neutrální prostředků pro jazykovou verzi "fr", francouzštině Kanadští uživatel nebude vidět prostředky označené pro "fr-být" jazykovou verzi, ale by zobrazit řetězce ve francouzštině. Následující situaci znázorňuje tento upřednostňované scénář.  
-  
- ![NeutralSpecificResources – grafika](../ide/media/vbneutralspecificresources.gif "vbNeutralSpecificResources")  
-  
-## <a name="see-also"></a>Viz také
 
-[Neutrální jazyky zdrojů pro lokalizaci](../ide/neutral-resources-languages-for-localization.md)  
-[Zabezpečení a lokalizovaná satelitní sestavení](../ide/security-and-localized-satellite-assemblies.md)  
-[Lokalizace aplikací](../ide/localizing-applications.md)  
-[Globalizace a lokalizace aplikací](../ide/globalizing-and-localizing-applications.md)
+V sadě Visual Studio jsou lokalizované prostředky (data, jako jsou řetězce a Image pro jednotlivé jazykové verze) uložená v samostatných souborech a načíst podle nastavení jazykové verze uživatelského rozhraní. Pochopit, jak jsou načteny lokalizované prostředky, je vhodné popřemýšlet z nich jako uspořádané hierarchické způsobem.
+
+## <a name="kinds-of-resources-in-the-hierarchy"></a>Typy prostředků v hierarchii
+
+- Záložní prostředky pro vaše výchozí jazykovou verzi, třeba Angličtina ("en"), se nacházejí na nejvyšší úrovni hierarchie. Tyto materiály záložního jsou pouze ty, které nemají vlastní soubor. ukládají se v hlavní sestavení.
+
+- Následující materiály záložního prostředků pro všechny neutrální jazykové verze. Neutrální jazykovou verzi je přidružený jazyk, ale ne určitá země nebo oblast. Francouzština ("fr") je například neutrální jazykovou verzi. (Náhradní zdrojů jsou také pro neutrální jazykovou verzi, ale speciální jeden).
+
+- Prostředky jsou pod neutrální jazykové verze prostředků pro jakékoli konkrétní jazykové verze. Konkrétní jazykovou verzi je přidružený jazyk a zemi/oblast. Kanadská francouzština ("fr-CA") je třeba konkrétní jazykovou verzi.
+
+Pokud aplikace se pokouší načíst všechny lokalizovaný prostředek, jako je řetězec a nebyly nalezeny, bude místo hierarchie dokud nenajde soubor prostředků obsahující požadovaný prostředek.
+
+Nejlepší způsob, jak ukládat vaše prostředky se k zobecnění je co největší míře. To znamená, že k ukládání lokalizovaných řetězců, obrázků a tak dále v souborech prostředků neutrální jazykové verze, nikoli konkrétní jazykovou verzi, kdykoli je to možné. Například pokud máte prostředky pro Belgii francouzština ("fr-být") jazykovou verzi a okamžitě výše uvedené materiály záložního prostředků v angličtině, problém může dojít, když někdo v systému nakonfigurovaný pro jazykovou verzi francouzština Kanadské používá vaše aplikace. Systém vyhledá satelitní sestavení pro "fr-CA", ale nedokáže najít, proto načte hlavní sestavení obsahující záložní prostředky, angličtina, namísto načítání francouzské prostředky. Následující obrázek znázorňuje tento scénář nežádoucí.
+
+![Jenom konkrétní prostředky](../ide/media/vbspecificresourcesonly.gif)
+
+Pokud budete postupovat podle doporučený postup uvedení množství prostředků je možné soubor prostředků neutrální pro jazykové verze "fr", Kanadské francouzský uživatel neuvidí prostředky označené pro "fr-být" jazyková verze, ale by řetězců zobrazen ve francouzštině. Následující situace ukazuje tento scénář upřednostňované.
+
+![NeutralSpecificResources – obrázek](../ide/media/vbneutralspecificresources.gif)
+
+## <a name="see-also"></a>Viz také:
+
+- [Neutrální jazyky zdrojů pro lokalizaci](../ide/neutral-resources-languages-for-localization.md)
+- [Zabezpečení a lokalizovaná satelitní sestavení](../ide/security-and-localized-satellite-assemblies.md)
+- [Lokalizace aplikací](../ide/localizing-applications.md)
+- [Globalizace a lokalizace aplikací](../ide/globalizing-and-localizing-applications.md)

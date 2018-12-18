@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: definování deskriptoru typu pro parametr | Microsoft Docs'
+title: 'Postupy: definování deskriptoru typu pro parametr | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -20,112 +20,112 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6ebdd8e968d631cf1d53515449c7e705c2978087
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ec2b0173838446c770f3323aacefebabc195c48b
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51294978"
 ---
-# <a name="how-to-define-the-type-descriptor-of-a-parameter"></a>Postupy: Definování deskriptoru typu pro parametr
-  Popisovač typu obsahuje vlastnosti, které popisují datový typ parametru. Popisovač typu můžete definovat pole, entity nebo kolekci entit. Další informace najdete v tématu [TypeDescriptor](http://msdn.microsoft.com/library/ms543392%28v=office.12%29.aspx).  
+# <a name="how-to-define-the-type-descriptor-of-a-parameter"></a>Postupy: definování deskriptoru typu pro parametr
+  Popisovač typu obsahuje vlastnosti, které popisují datový typ parametru. Popisovač typu může definovat pole, entitu nebo kolekci entit. Další informace najdete v tématu [TypeDescriptor](/previous-versions/office/developer/sharepoint-2007/ms543392\(v\=office.12\)).  
   
 ### <a name="to-define-the-type-descriptor-of-a-parameter"></a>K definování deskriptoru typu pro parametr  
   
-1.  V **podrobnosti o metodě BDC** okně zvolte popisovač typu parametru.  
+1.  V **podrobnosti metody služby BDC** okna, vyberte typ popisovače parametru.  
   
-2.  Na řádku nabídek zvolte **zobrazení**, **vlastnosti – okno**.  
+2.  V panelu nabídky zvolte **zobrazení**, **okno vlastností**.  
   
-3.  V **vlastnosti** nastavte vlastnosti popisovač typu.  
+3.  V **vlastnosti** okno, nastavte vlastnosti popisovače typu.  
   
-     Následující postupy popisují, jak definovat popisovač typu jako kolekce pole, entity nebo entity.  
+     Následující postupy popisují, jak definovat popisovač typu jako pole, entitu nebo kolekci entit.  
   
-### <a name="to-define-a-field"></a>Chcete-li definovat pole  
+### <a name="to-define-a-field"></a>Definování pole  
   
-1.  V **vlastnosti** nastavte **název** vlastnost na název pole v typu, který představuje entitu popisovač typu (například: **FirstName**).  
+1.  V **vlastnosti** okno, nastaveno **název** vlastnosti popisovače typu na název pole v typu, který představuje entitu (například: **FirstName**).  
   
-2.  V seznamu vedle položky **TypeName** vlastnosti, vyberte příslušný datový typ (například **Int32**).  
+2.  V seznamu vedle **TypeName** vlastnosti, vyberte odpovídající typ dat (například **Int32**).  
   
-     Informace o další volitelné parametry najdete v tématu [TypeDescriptor](http://msdn.microsoft.com/library/ms543392%28v=office.12%29.aspx).  
+     Informace o dalších volitelných parametrech naleznete v tématu [TypeDescriptor](/previous-versions/office/developer/sharepoint-2007/ms543392\(v\=office.12\)).  
   
-### <a name="to-define-an-entity"></a>Chcete-li definovat entity  
+### <a name="to-define-an-entity"></a>Definování entity  
   
-1.  V **vlastnosti** nastavte **název** vlastnost, která má název, který popisuje entity (například: **kontaktujte**).  
+1.  V **vlastnosti** okno, nastaveno **název** nastavte na název, který popisuje entitu (například: **kontakt**).  
   
-2.  Nastavte **TypeName** na plně kvalifikovaný název typu, který představuje entitu. Tento typ může být třídu v projektu, typu definované v sestavení, na kterou odkazujete v řešení nebo typem definovaným v modelu služby BDC objektu.  
+2.  Nastavte **TypeName** vlastnost na plně kvalifikovaný název typu, který entitu představuje. Tento typ může být třída v projektu, typ definovaný v sestavení, na které odkazujete ve svém řešení nebo typ definovaný v objektovém modelu služby BDC.  
   
-    -   Pro třídu do projektu, vyberte na šipku dolů vedle **TypeName** vlastnosti, vyberte **aktuálního projektu** v dialogovém okně, které se zobrazí a potom vyberte třídu do projektu.  
+    -   Pro třídu ve vašem projektu, zvolte šipku dolů vedle možnosti **TypeName** vlastnost, zvolte **aktuální projekt** kartu v dialogovém okně, které se zobrazí a pak zvolte třídu v projektu.  
   
-         Plně kvalifikovaný název obsahuje obor názvů a název třídy, za nímž následuje název systému LOB. Nastaví hodnotu v následujícím příkladu **TypeName** vlastnost třídy ve vašem projektu.  
+         Plně kvalifikovaný název obsahuje obor názvů a název třídy následovaný názvem systému LOB. Následující příklad nastaví hodnotu vlastnosti **TypeName** na třídu ve vašem projektu.  
   
          `MyBDCNamespace.BdcModel1.Contact, BdcModel1`  
   
-    -   Pro typ umístěn v sestavení ve vašem řešení plně kvalifikovaný název obsahuje název typu, název sestavení, číslo verze, jazykové verze a token veřejného klíče.  
+    -   Pro typ umístěný v sestavení ve vašem řešení plně kvalifikovaný název obsahuje název typu, název sestavení, číslo verze, jazykovou verzi a token veřejného klíče.  
   
-         Nastaví hodnotu v následujícím příkladu **TypeName** vlastnost typu definované v sestavení, na kterou odkazujete v řešení.  
+         Následující příklad nastaví hodnotu vlastnosti **TypeName** na typ definovaný v sestavení, na které odkazujete ve svém řešení.  
   
          `MyNamespace.Contact, myAssemblyName, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089`  
   
-    -   Pro typ definované v objektu modelu služby BDC obsahuje plně kvalifikovaný název oboru názvů a název typu.  
+    -   Pro typ definovaný v objektovém modelu služby BDC plně kvalifikovaný název obsahuje obor názvů a název typu.  
   
-         Nastaví hodnotu v následujícím příkladu **TypeName** vlastnosti na typ v modelu služby BDC objektu.  
+         Následující příklad nastaví hodnotu vlastnosti **TypeName** na typ v objektovém modelu služby BDC.  
   
          `Microsoft.BusinessData.Runtime.DynamicType`  
   
-3.  V **podrobnosti o metodě BDC** oken, otevřete seznam, který se zobrazí pro popisovač typu a potom zvolte **upravit**.  
+3.  V **podrobnosti metody služby BDC** okno, otevřete seznam, který se zobrazí pro typ popisovače a klikněte na tlačítko **upravit**.  
   
-     **Průzkumník modelu BDC** otevře se okno.  
+     **Služby BDC Explorer** otevře se okno.  
   
-4.  V **Průzkumník modelu BDC**, otevřete v místní nabídce popisovač typu a potom zvolte **přidat popisovač typu**.  
+4.  V **služby BDC Explorer**, otevřete místní nabídku popisovače typu a klikněte na tlačítko **přidat popisovač typu**.  
   
-     Nový popisovač typu je přidán jako podřízený do popisovače typu entity. Tento popisovač typu nakonfigurujte jako pole.  
+     Nový typ popisovače je přidán jako podřízený do popisovače typu entity. Nakonfigurujte tento typ popisovače jako pole.  
   
-5.  Opakujte krok 4 pro přidání podřízené popisovač typu pro každé pole entity.  
+5.  Opakujte krok 4 pro přidání podřízeného popisovače typu pro každé pole entity.  
   
-### <a name="to-define-a-collection-of-entities"></a>Chcete-li definovat kolekci entit  
+### <a name="to-define-a-collection-of-entities"></a>Definovaní kolekce entit  
   
-1.  V **podrobnosti o metodě BDC** okně zvolte deskriptoru typu pro parametr, který chcete.  
+1. V **podrobnosti metody služby BDC** okna, vyberte typ popisovače parametru, který chcete.  
   
-2.  Na řádku nabídek zvolte **zobrazení**, **vlastnosti – okno**.  
+2. V panelu nabídky zvolte **zobrazení**, **okno vlastností**.  
   
-3.  V **vlastnosti** nastavte **název** vlastnost, která má název, který popisuje entity (například: **kontakty**).  
+3. V **vlastnosti** okno, nastaveno **název** nastavte na název, který popisuje entitu (například: **kontakty**).  
   
-4.  Nastavte **IsCollection** vlastnost **True**. To znamená, že je tento popisovač typu kolekce entit.  
+4. Nastavte **IsCollection** vlastnost **True**. To znamená, že tento typ popisovače je kolekce entit.  
   
-5.  Nastavte **TypeName** na řetězec, který obsahuje odkaz na vlastnost <xref:System.Collections.Generic.IEnumerable%601> rozhraní a plně kvalifikovaný název typu, který představuje entitu. Tento typ může být třídu v projektu, typu definované v sestavení, na kterou odkazujete v řešení nebo typem definovaným v modelu služby BDC objektu.  
+5. Nastavte **TypeName** nastavte na řetězec, který obsahuje odkaz na <xref:System.Collections.Generic.IEnumerable%601> rozhraní a plně kvalifikovaný název typu, který entitu představuje. Tento typ může být třída v projektu, typ definovaný v sestavení, na které odkazujete ve svém řešení nebo typ definovaný v objektovém modelu služby BDC.  
   
-    -   Pro třídu do projektu, vyberte na šipku dolů vedle **TypeName** vlastnosti, vyberte **aktuálního projektu** v dialogovém okně, které se zobrazí a potom vyberte třídu do projektu.  
+   - Pro třídu ve vašem projektu, zvolte šipku dolů vedle možnosti **TypeName** vlastnost, zvolte **aktuální projekt** kartu v dialogovém okně, které se zobrazí a pak zvolte třídu v projektu.  
   
-         Plně kvalifikovaný název obsahuje obor názvů a název třídy, za nímž následuje název systému LOB.  
+      Plně kvalifikovaný název obsahuje obor názvů a název třídy následovaný názvem systému LOB.  
   
-         Nastaví hodnotu v následujícím příkladu **TypeName** vlastnost kolekce tříd ve vašem projektu.  
+      Následující příklad nastaví hodnotu vlastnosti **TypeName** na kolekci tříd ve vašem projektu.  
   
-         `System.Collections.Generic.IEnumerable`1 [MyBDCNamespace.` ` BdcModel1.Contact, BdcModel1].  
+      `System.Collections.Generic.IEnumerable`1 [MyBDCNamespace.` ` BdcModel1.Contact, BdcModel1] "  
   
-    -   Pro typ umístěn v sestavení ve vašem řešení plně kvalifikovaný název obsahuje název typu, název sestavení, číslo verze, jazykové verze a token veřejného klíče.  
+   - Pro typ umístěný v sestavení ve vašem řešení plně kvalifikovaný název obsahuje název typu, název sestavení, číslo verze, jazykovou verzi a token veřejného klíče.  
   
-         Nastaví hodnotu v následujícím příkladu **TypeName** vlastnost, která má kolekci typů v sestavení, na kterou odkazujete v řešení.  
+      Následující příklad nastaví hodnotu vlastnosti **TypeName** na kolekci typů v sestavení, na které odkazujete ve svém řešení.  
   
-         `System.Collections.Generic.IEnumerable`1 [MyNamespace.Contact, myAssemblyName, verze = 4.0.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089].  
+      `System.Collections.Generic.IEnumerable`1 [MyNamespace.Contact, myAssemblyName, verze = 4.0.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089] "  
   
-    -   Pro typ definované v objektu modelu služby BDC plně kvalifikovaný název obsahuje jenom obor názvů a název typu.  
+   - Pro typ definovaný v objektovém modelu služby BDC plně kvalifikovaný název obsahuje pouze obor názvů a název typu.  
   
-         Nastaví hodnotu v následujícím příkladu **TypeName** vlastnost typy definované v objektu modelu služby BDC do kolekce.  
+      Následující příklad nastaví hodnotu vlastnosti **TypeName** na kolekci typů definovaných v objektovém modelu služby BDC.  
   
-         `System.Collections.Generic.IEnumerable`1 [Microsoft.BusinessData.Runtime.DynamicType].  
+      `System.Collections.Generic.IEnumerable`1 [Microsoft.BusinessData.Runtime.DynamicType] "  
   
-6.  V **podrobnosti o metodě BDC** oken, otevřete seznam, který se zobrazí pro popisovač typu a potom zvolte **upravit**.  
+6. V **podrobnosti metody služby BDC** okno, otevřete seznam, který se zobrazí pro typ popisovače a klikněte na tlačítko **upravit**.  
   
-     **Průzkumník modelu BDC** otevře se okno.  
+    **Služby BDC Explorer** otevře se okno.  
   
-7.  V **Průzkumník modelu BDC**, otevřete v místní nabídce popisovač typu a potom zvolte **přidat popisovač typu**.  
+7. V **služby BDC Explorer**, otevřete místní nabídku popisovače typu a klikněte na tlačítko **přidat popisovač typu**.  
   
-     Nový popisovač typu je přidán jako podřízený do popisovače typu kolekce. Tento popisovač typu nakonfigurujte jako entity.  
+    Nový typ popisovače je přidán jako podřízený do popisovače typu kolekce. Nakonfigurujte tento typ popisovače jako entitu.  
   
-## <a name="see-also"></a>Viz také  
- [Přehled nástrojů pro navrhování modelu služby BDC](../sharepoint/bdc-model-design-tools-overview.md)   
- [Postupy: Přidání Entity do modelu](../sharepoint/how-to-add-an-entity-to-a-model.md)   
+## <a name="see-also"></a>Viz také:
+ [Přehled nástroje pro navrhování modelů služby BDC](../sharepoint/bdc-model-design-tools-overview.md)   
+ [Postupy: Přidání entity do modelu](../sharepoint/how-to-add-an-entity-to-a-model.md)   
  [Postupy: Přidání parametru k metodě](../sharepoint/how-to-add-a-parameter-to-a-method.md)   
- [Postupy: definování Instance metody](../sharepoint/how-to-define-a-method-instance.md)   
+ [Postupy: definování instance metody](../sharepoint/how-to-define-a-method-instance.md)   
  [Navrhování modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md)  
-  
   

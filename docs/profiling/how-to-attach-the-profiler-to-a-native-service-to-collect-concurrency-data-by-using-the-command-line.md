@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: připojení profileru k nativní službě ke shromažďování dat souběžnosti pomocí příkazového řádku | Microsoft Docs'
+title: 'Postupy: připojení Profiler k nativní službě ke shromažďování dat souběžnosti pomocí příkazového řádku | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -10,77 +10,79 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95e67307cd12ff1670e5837bd2d2e5830fc64a19
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9e9810eb445abfb64f6674278687f0d8ef1ec3db
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49876110"
 ---
-# <a name="how-to-attach-the-profiler-to-a-native-service-to-collect-concurrency-data-by-using-the-command-line"></a>Postupy: Připojení profileru k nativní službě ke shromažďování dat souběžnosti pomocí příkazového řádku
-Toto téma popisuje postup použití [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] profilace nástroje příkazového řádku nástroje pro připojení profileru k nativní (C/C++) služby a shromažďování dat souběžnosti proces a vlákno pomocí metody vzorkování.  
-  
+# <a name="how-to-attach-the-profiler-to-a-native-service-to-collect-concurrency-data-by-using-the-command-line"></a>Postupy: připojení profileru k nativní službě ke shromažďování dat souběžnosti pomocí příkazového řádku
+Tento článek popisuje způsob použití [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] příkazového řádku nástrojů pro profilaci k připojení profileru k nativní (C/C++), služby a shromažďování dat souběžnosti procesů a vláken pomocí metody vzorkování.  
+
 > [!NOTE]
->  Funkce Rozšířené zabezpečení v systému Windows 8 a Windows Server 2012 vyžaduje významné změny ve způsobu, jakým Visual Studio profiler shromažďuje data na těchto platformách. Aplikace UWP také vyžadují nové techniky kolekce. V tématu [nástroje pro sledování výkonu v aplikacích pro Windows 8 a Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).  
-  
+>  Rozšířené funkce zabezpečení v systému Windows 8 a Windows Server 2012 vyžadují významné změny ve způsobu, jakým profiler systému Visual Studio na těchto platformách shromažďuje data. U aplikací pro UPW také vyžadují nové techniky kolekce. Zobrazit [nástroje pro výkon v aplikacích Windows 8 a Windows Server 2012](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md).  
+
 > [!NOTE]
->  Nástroje příkazového řádku balíku nástrojů pro profilaci jsou umístěny v podadresáři \Team Tools\Performance Tools instalačního adresáře sady Visual Studio. Na 64bitových počítačích 64bitové a 32bitové verze nástroje jsou k dispozici. Použití profileru na příkazovém řádku, je nutné přidat cestu nástroje do proměnné prostředí PATH z **příkazového řádku** okno nebo do příkazu sám sebe. Další informace najdete v tématu [určení cesty k nástrojům příkazového řádku](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).  
-  
- Při profileru je připojen ke službě, můžete pozastavit a obnovit data kolekce. K ukončení relace profilování, musí být už připojené profileru ke službě a profileru musí být explicitně vypnuté.  
-  
-## <a name="attaching-the-profiler"></a>Připojení profileru  
- K připojení profileru k nativní službě, můžete použít **VSPerfCmd od počátku** a **/ připojit** možnosti inicializovat profileru a jeho připojení k cílové aplikaci. Můžete zadat **/start** a **/ připojit** a jejich odpovídající možnosti na jednoho příkazového řádku. Můžete také přidat **/globaloff** možnost pozastavit shromažďování dat na začátku cílová aplikace. Pak použijete **/globalon** zahájíte shromažďovat data.  
-  
-#### <a name="to-attach-the-profiler-to-a-native-service"></a>Chcete-li připojení profileru k nativní službě  
-  
-1.  Pokud služba není spuštěná, spusťte službu.  
-  
-2.  Zadáním následujícího příkazu na příkazovém řádku spusťte profileru:  
-  
-     [VSPerfCmd](../profiling/vsperfcmd.md) **/start:concurrency output:** `OutputFile` [`Options`]  
-  
-    -   [/Výstup](../profiling/output.md)**:** `OutputFile` možnost je povinná s **/start**. `OutputFile` Určuje název a umístění souboru profilování dat (.vsp).  
-  
-     Jakákoliv možnost, můžete použít v následující tabulce se **/start** možnost.  
-  
-    > [!NOTE]
-    >  Většina služeb vyžadují **User** a **/crosssession** možnost.  
-  
-    |Možnost|Popis|  
-    |------------|-----------------|  
-    |[Parametr/User](../profiling/user-vsperfcmd.md) **:**[`Domain\`]`UserName`|Určuje nepovinné domény a uživatelské jméno účtu, který chcete povolit přístup k profileru.|  
-    |[/crosssession](../profiling/crosssession.md)|Umožňuje profilace procesů v jiných relacích přihlášení.|  
-    |[/wincounter](../profiling/wincounter.md) **:** `WinCounterPath`|Určuje čítačů výkonu systému Windows, které se mají shromažďovat při vytváření profilu.|  
-    |[/automark](../profiling/automark.md) **:** `Interval`|Použití s **/wincounter** pouze. Určuje počet milisekund, po mezi události kolekce čítače výkonu systému Windows. Výchozí hodnota je 500.|  
-    |[/Events](../profiling/events-vsperfcmd.md) **:** `Config`|Určuje událost trasování událostí pro Windows (ETW), které se mají shromažďovat při vytváření profilu. Události trasování událostí se shromažďují v souboru samostatné (ETL).|  
-  
-3.  Připojení profileru ke službě zadáním následujícího příkazu na příkazovém řádku:  
-  
-     **VSPerfCmd / připojení:** `PID`  
-  
-     `PID` Určuje ID procesu nebo název procesu cílové aplikace. Proces ID všechny spuštěné procesy můžete zobrazit ve Správci úloh systému Windows.  
-  
-## <a name="controlling-data-collection"></a>Řízení kolekce dat  
- Když cílová aplikace běží, lze řídit shromažďování dat spuštění a zastavení zápisu dat do souboru s možností VSPerfCmd.exe. Pomocí řízení shromažďování dat můžete shromažďování dat pro konkrétní součást spuštění programu, jako je například počáteční nebo vypnutí aplikace.  
-  
+>  Nástroje příkazového řádku nástrojů pro profilaci jsou umístěny v *\Team Tools\Performance nástroje* jedná o podadresář adresáře instalace sady Visual Studio. Na 64bitových počítačích jsou k dispozici 64bitové i 32bitové verze nástrojů. Chcete-li využívat profiler na příkazového řádku, musíte přidat cestu k nástrojům do proměnné prostředí PATH **příkazového řádku** okno nebo do příkazu samého. Další informace najdete v tématu [zadejte cestu k nástrojům příkazového řádku](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).  
+
+ Zatímco je profiler připojen ke službě, lze pozastavit a obnovit sběr dat. Chcete-li ukončit relaci profilování, musí profiler již připojen ke službě, a Profiler musí být explicitně vypnut.  
+
+## <a name="attach-the-profiler"></a>Připojení profileru  
+ Připojení profileru k nativní službě, můžete použít **VSPerfCmd/start** a **/ attach** možnosti pro inicializaci profileru a pro připojení k cílové aplikaci. Můžete zadat **/start** a **/ attach** a jejich příslušné volby v jednom příkazovém řádku. Můžete také přidat **/globaloff** možnost pozastavit shromažďování dat na začátku cílové aplikace. Pak použijete **globalon** Chcete-li začít shromažďovat data.  
+
+#### <a name="to-attach-the-profiler-to-a-native-service"></a>Připojení profileru k nativní službě  
+
+1. Pokud služba není spuštěná, spusťte službu.  
+
+2. Spusťte profiler zadáním následujícího příkazového řádku:  
+
+    [Nástroj VSPerfCmd](../profiling/vsperfcmd.md) **/start:concurrency/output:** `OutputFile` [`Options`]  
+
+   - [/Output](../profiling/output.md)**:** `OutputFile` možnost je vyžadována s **/start**. `OutputFile` Určuje název a umístění souboru dat profilování (.vsp).  
+
+     V následující tabulce můžete použít jakoukoli možnost **/start** možnost.  
+
+   > [!NOTE]
+   >  Většina služeb vyžaduje **/User** a **/crosssession** možnost.  
+
+   | Možnost | Popis |
+   | - | - |
+   | [/ User](../profiling/user-vsperfcmd.md) **:**[`Domain\`]`UserName` | Určuje volitelnou doménu a uživatelské jméno účtu, který má být udělen přístup k profileru. |
+   | [/ crosssession](../profiling/crosssession.md) | Umožňuje profilování procesů v jiných přihlašovacích relacích. |
+   | [/wincounter](../profiling/wincounter.md) **:** `WinCounterPath` | Určuje čítač výkonu Windows má být shromážděn během profilování. |
+   | [/automark](../profiling/automark.md) **:** `Interval` | Použití s **/wincounter** pouze. Určuje počet milisekund mezi událostmi sběru čítače výkonu Windows. Výchozí hodnota je 500. |
+   | [/Events](../profiling/events-vsperfcmd.md) **:** `Config` | Určuje událost trasování událostí pro Windows (ETW) má být shromážděn během profilování. Události trasování událostí pro Windows jsou shromážděny v samostatném (ETL) soubor. |
+
+
+3. Připojení profileru ke službě zadáním následujícího příkazu na příkazovém řádku:  
+
+    **Nástroj VSPerfCmd / připojit:** `PID`  
+
+    `PID` Určuje ID procesu nebo název procesu cílové aplikace. ID všech spuštěných procesů lze zobrazit ve Správci úloh Windows.  
+
+## <a name="control-data-collection"></a>Řízení shromažďování dat  
+ Dokud je cílová aplikace spuštěna, lze sběr dat řídit spouštěním či pozastavováním zápisu dat do souboru s *VSPerfCmd.exe* možnosti. Řízením sběru dat může shromažďovat data pro určitou část provádění programu, například spouštění či ukončování aplikace.  
+
 #### <a name="to-start-and-stop-data-collection"></a>Spuštění a zastavení shromažďování dat  
-  
--   Dvojice možnosti uvedené v následující tabulce spustit a zastavit shromažďování dat. Zadejte jednotlivé možnosti na samostatném řádku příkaz. Shromažďování dat můžete zapnout a vypnout vícekrát.  
-  
+
+-   Následující páry možností v následující tabulce spouští a zastavují sběr dat. Každou možnost zadejte na samostatný příkazový řádek. Sběr dat lze zapnout a vypnout několikrát.  
+
     |Možnost|Popis|  
     |------------|-----------------|  
-    |[/globalon /globaloff](../profiling/globalon-and-globaloff.md)|Spustí (**/globalon**) nebo zastaví (**/globaloff**) shromažďování dat pro všechny procesy.|  
-    |[/processon](../profiling/processon-and-processoff.md) **:** `PID` [/processoff](../profiling/processon-and-processoff.md) **:** `PID`|Spustí (**/processon**) nebo zastaví (**/processoff**) shromažďování dat pro proces, ID procesu (`PID`) určuje.|  
-    |[/ připojit](../profiling/attach.md) **:**{`PID`&#124;`ProcName`} [/ detach](../profiling/detach.md)[**:**{`PID`&#124;`ProcName`}]|**/ připojit** spustí ke shromažďování dat pro proces, ID procesu (`PID`) nebo název procesu (*Nazev_procedury*) určuje. **/ detach** zastaví shromažďování dat pro zadaný procesu nebo pro všechny procesy, pokud není zadán žádný proces.|  
-  
-## <a name="ending-the-profiling-session"></a>Ukončení relace profilování  
- K ukončení relace profilování, nesmí být profileru shromažďování dat. Můžete zastavit shromažďování dat z nativní služby, která je profilovaným s metoda souběžného zpracování Probíhá zastavování služby nebo vyvoláním **VSPerfCmd / detach** možnost. Potom vyvolat **/VSPerfCmd Shutdown** možnost vypnout profileru a zavřete profilování datového souboru.  
-  
-#### <a name="to-end-a-profiling-session"></a>K ukončení relace profilování  
-  
-1.  Odpojte profileru z cílová aplikace Probíhá zastavování služby nebo zadáním následujícího příkazu na příkazovém řádku:  
-  
-     Typ **VSPerfCmd / odpojit**  
-  
-2.  Vypněte profileru zadáním následujícího příkazu na příkazovém řádku:  
-  
-     **VSPerfCmd** [ /Shutdown](../profiling/shutdown.md)
+    |[globalon /globaloff](../profiling/globalon-and-globaloff.md)|Spustí (**globalon**) nebo zastaví (**/globaloff**) sběr dat pro všechny procesy.|  
+    |[/processon](../profiling/processon-and-processoff.md) **:** `PID` [/processoff](../profiling/processon-and-processoff.md) **:** `PID`|Spustí (**/processon**) nebo zastaví (**/processoff**) sběr dat pro proces, který ID procesu (`PID`) určuje.|  
+    |[/ attach](../profiling/attach.md) **:**{`PID`&#124;`ProcName`} [/ detach](../profiling/detach.md)[**:**{`PID`&#124;`ProcName`}]|**/ attach** spustí sběr dat pro proces, který ID procesu (`PID`) nebo názvem procesu (*ProcName*) určuje. **/ detach** zastaví sběr dat pro zadaný proces nebo pro všechny procesy, pokud není zadán žádný proces.|  
+
+## <a name="end-the-profiling-session"></a>Ukončit relaci profilování  
+ Chcete-li ukončit relaci profilování, profiler nesmí pokračovat ve shromažďování dat. Zastavit shromažďování dat z nativní služby, která je právě profilována metodou souběžnosti zastavením služby nebo vyvoláním **VSPerfCmd / detach** možnost. Poté je zapotřebí vyvolat **VSPerfCmd/Shutdown** možnost se profiler vypne a uzavře soubor dat profilování.  
+
+#### <a name="to-end-a-profiling-session"></a>Chcete-li ukončit relaci profilování  
+
+1.  Odpojte profiler od cílové aplikace zastavením služby nebo zadáním následujícího příkazu na příkazovém řádku:  
+
+     Typ **VSPerfCmd / odpojení**  
+
+2.  Vypněte profiler zadáním následujícího příkazu na příkazovém řádku:  
+
+     **Nástroj VSPerfCmd** [ /Shutdown](../profiling/shutdown.md)

@@ -13,11 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e2daf2b92073db6b2c9eca9b1ea482142eb3ba4
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 2ce4fb6b9a57db78e3dbb7f3082a87df9ffb7360
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35254690"
 ---
 # <a name="performance-session-properties"></a>Vlastnosti výkonnostní relace
 
@@ -35,17 +36,17 @@ Toto nastavení umožňuje vybrat metoda, můžete přidat kolekci objektů .NET
 
 Další informace naleznete v tématu:
 
-[Postupy: výběr metod kolekcí](../profiling/how-to-choose-collection-methods.md)
+[Postupy: Výběr metod shromažďování](../profiling/how-to-choose-collection-methods.md)
 
-[Shromažďování dat životnost a přidělení paměti .NET](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)
+[Shromažďování dat o alokaci paměti a době platnosti objektů .NET](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)
 
- [Postupy: nastavení možností názvu datového souboru výkonu](../profiling/how-to-set-performance-data-file-name-options.md)
+ [Postupy: Nastavení možností názvu datového souboru výkonu](../profiling/how-to-set-performance-data-file-name-options.md)
 
 ## <a name="launch"></a>Spuštění
 
 Tato nastavení umožňují vybrat ze seznamu binárních souborů a určit pořadí spuštění binárních souborů.
 
-Další informace najdete v tématu [postupy: určení binárního souboru spuštění](../profiling/how-to-specify-the-binary-to-start.md)
+Další informace najdete v tématu [postupy: určení binárního souboru ke spuštění](../profiling/how-to-specify-the-binary-to-start.md)
 
 ## <a name="sampling"></a>Vzorkování
 
@@ -60,9 +61,9 @@ Toto nastavení umožňuje vybrat intervalu vzorkování událostí a vzorkován
 Další informace najdete v tématu [postupy: výběr událostí vzorkování](../profiling/how-to-choose-sampling-events.md)
 
 ## <a name="binary"></a>binární
-Tato nastavení umožňují určit, zda má být instrumentované binární přemístit na jiné umístění. Například pokud jsou profilace My.DLL a zvolit nepoužívání přemístit instrumentované binární, je vytvořit si záložní kopii My.DLL s názvem My.Orig.DLL. Následně je upravit My.DLL vložením sondy shromažďovat data. Pokud se rozhodnete přemístit instrumentované binární, původní binárního souboru se nepřejmenuje a instrumentované binární soubor zkopírován do zadaného umístění pro použití během instrumentace.
+Tato nastavení umožňují určit, zda má být instrumentované binární přemístit na jiné umístění. Například, pokud jsou profilace *My.DLL* a zvolte nechcete přemístit instrumentované binární záložní kopie *My.DLL* s názvem *My.Orig.DLL* je vytvořena. Následně *My.DLL* vložením sondy ke shromažďování dat je upravit. Pokud se rozhodnete přemístit instrumentované binární, původní binárního souboru se nepřejmenuje a instrumentované binární soubor zkopírován do zadaného umístění pro použití během instrumentace.
 
-Další informace najdete v tématu [postupy: určení binárního souboru spuštění](../profiling/how-to-specify-the-binary-to-start.md)
+Další informace najdete v tématu [postupy: určení binárního souboru ke spuštění](../profiling/how-to-specify-the-binary-to-start.md)
 
 ## <a name="tier-interactions"></a>Interakcí vrstev
 
@@ -74,23 +75,23 @@ Tato nastavení umožňují shromažďovat data o výkonu pro JScript kód v [!I
 
 Další informace naleznete v tématu:
 
-[Postupy: profilování kódu JavaScript ve webové stránky](../profiling/how-to-profile-javascript-code-in-web-pages.md)
+[Postupy: kódu JavaScript profil ve webových stránkách](../profiling/how-to-profile-javascript-code-in-web-pages.md)
 
-[Postupy: Zadejte příkazy před a po instrumentaci](../profiling/how-to-specify-pre-and-post-instrument-commands.md)
+[Postupy: Určení příkazů k provedení před instrumentací a po instrumentaci](../profiling/how-to-specify-pre-and-post-instrument-commands.md)
 
 ## <a name="cpu-counters"></a>Čítače CPU
 
 Tato nastavení umožňují shromažďovat data o čítačích výkonu procesoru při použití metoda profilování instrumentace. Přenosné čítače výkonu jsou k dispozici bez ohledu na návrh procesoru nebo výrobce. Platforma události jsou specifické pro procesor návrhu a výrobce. Další informace o čítačích výkonu na čipu naleznete v dokumentaci k specifické procesory.
 
-Další informace najdete v tématu [postupy: shromažďování dat čítačů procesoru](../profiling/how-to-collect-cpu-counter-data.md)
+Další informace najdete v tématu [postup: procesoru shromažďovat data čítače](../profiling/how-to-collect-cpu-counter-data.md)
 
 ## <a name="windows-events"></a>Události systému Windows
 
-Při vytváření profilu, můžete shromažďovat údaje ze zprostředkovatelů trasování událostí. Data můžete zobrazit pomocí nástroje příkazového řádku VSPerfReport.exe `/calltrace` možnost. Další informace o trasování událostí pro Windows (ETW) najdete v tématu [o trasování událostí](http://go.microsoft.com/fwlink/?linkid=90752).
+Při vytváření profilu, můžete shromažďovat údaje ze zprostředkovatelů trasování událostí. Data můžete zobrazit pomocí *VSPerfReport.exe* nástroj pro příkazový řádek `/calltrace` možnost. Další informace o trasování událostí pro Windows (ETW) najdete v tématu [o trasování událostí](http://go.microsoft.com/fwlink/?linkid=90752).
 
 Další informace naleznete v tématu:
 
-[Postupy: shromažďování trasování událostí pro Windows (ETW) dat](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)
+[Postupy: Shromažďování dat trasování událostí pro Windows](../profiling/how-to-collect-event-tracing-for-windows-etw-data.md)
 
 [Vsperfreport –](../profiling/vsperfreport.md).
 
@@ -98,7 +99,7 @@ Další informace naleznete v tématu:
 
 Tato možnost umožňuje shromažďovat data z čítače sledování výkonu systému Windows. Shromažďování těchto dat, zaškrtněte políčko s názvem bez přípony **shromažďování čítačů výkonu systému Windows**. Interval sběru lze nastavit v **Interval sběru** pole. **Čítač kategorie** a **Instance** může být také dostupný. Některé výchozí čítače sledování výkonu systému Windows jsou k dispozici.
 
- Další informace najdete v tématu [postupy: shromažďování dat čítačů Windows](../profiling/how-to-collect-windows-counter-data.md).
+ Další informace najdete v tématu [postup: Windows shromažďování dat čítače](../profiling/how-to-collect-windows-counter-data.md).
 
 ## <a name="advanced"></a>Upřesnit
 
@@ -106,11 +107,11 @@ Tato nastavení umožňují přidat možnosti proces instrumentace zadáním jed
 
 Další informace naleznete v tématu:
 
-[Postupy: Zadejte modul Runtime rozhraní .NET Framework](../profiling/how-to-specify-the-dotnet-framework-runtime.md)
+[Postupy: Určení modulu runtime .NET Framework](../profiling/how-to-specify-the-dotnet-framework-runtime.md)
 
-[Postupy: určení dalších možností instrumentace](../profiling/how-to-specify-additional-instrumentation-options.md)
+[Postupy: Určení dalších možností instrumentace](../profiling/how-to-specify-additional-instrumentation-options.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Přehledy](../profiling/overviews-performance-tools.md)  
 [Konfigurace výkonnostních relací](../profiling/configuring-performance-sessions.md)  

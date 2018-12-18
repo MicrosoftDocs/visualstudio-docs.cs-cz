@@ -1,5 +1,5 @@
 ---
-title: Nástroj CreateExpInstance | Microsoft Docs
+title: Nástroj CreateExpInstance | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,14 +17,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bdcb37374c63b96e2169de28c6fe21742024ca98
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a0f7f52f45023106d3e504258a538823c1c8fbb4
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39500654"
 ---
 # <a name="createexpinstance-utility"></a>Nástroj CreateExpInstance
-Použít nástroj CreateExpInstance k vytvoření, resetovat, nebo odstranit experimentální instanci sady Visual Studio. Experimentální instanci slouží k ladění a testování rozšíření Visual Studia beze změny základního produktu.  
+Použití **CreateExpInstance** nástroj k vytvoření, obnovit nebo odstranit experimentální instanci sady Visual Studio. Experimentální instanci slouží k ladění a testování rozšíření sady Visual Studio beze změny základní produkt.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,34 +33,33 @@ Použít nástroj CreateExpInstance k vytvoření, resetovat, nebo odstranit exp
 CreateExpInstance.exe [/Create | /Reset | /Clean] /VSInstance=VsInstance /RootSuffix=Suffix  
 ```  
   
-#### <a name="parameters"></a>Parametry  
- Nebo vytvořit  
- Vytvoří instanci experimentální.  
+## <a name="parameters"></a>Parametry  
+ **/ Vytvoření** vytvoří experimentální instanci aplikace.  
   
- / Reset  
- Odstraní experimentální instance a poté vytvoří nový.  
+ **/ Reset**  
+ Odstraní experimentální instanci a pak vytvoří nový.  
   
- /Clean  
- Odstraní experimentální instanci.  
+ **/ Clean**  
+ Odstraní experimentální instanci aplikace.  
   
- / VSInstance  
- Název adresáře, který obsahuje základní instanci sady Visual Studio pro kopírování.  
+ **/ VSInstance**  
+ Název adresáře, který obsahuje základní instance sady Visual Studio ke kopírování.  
   
- / RootSuffix  
- Přípona pro připojení k názvu experimentální instanci adresáře.  
+ **/ RootSuffix**  
+ Přípona pro připojení k názvu adresáře experimentální instanci aplikace.  
   
 ## <a name="remarks"></a>Poznámky  
- Když pracujete v rozšíření sady Visual Studio, můžete stisknutím klávesy F5 otevřete výchozí instance experimentální a nainstalovat aktuální rozšíření. Pokud je k dispozici není žádná instance experimentální, Visual Studio vytvoří jeden, který má výchozí nastavení.  
+ Při práci na rozšíření sady Visual Studio, můžete stisknutím klávesy F5 spusťte výchozí experimentální instanci a nainstalujte aktuální rozšíření. Pokud je k dispozici žádná experimentální instance, vytvoří Visual Studio, pokud má výchozí nastavení.  
   
- Výchozí umístění experimentální instanci závisí na číslo verze sady Visual Studio. Například pro Visual Studio 2015, je umístění %localappdata%\Microsoft\VisualStudio\14.0Exp\ všechny soubory v umístění adresáře jsou považovány za součást této instance. Žádné další instance experimentální nebude načtena Visual Studio, pokud název adresáře se změní na výchozí umístění.  
+ Výchozí umístění experimentální instanci aplikace závisí na číslo verze sady Visual Studio. Například pro sadu Visual Studio 2015 je umístění *%localappdata%\Microsoft\VisualStudio\14.0Exp\\*. Všechny soubory v umístění adresáře jsou považovány za součást této instance. Všechny další experimentální instance nebude načten pomocí sady Visual Studio, pokud název adresáře se změní na výchozí umístění.  
   
- Visual Studio není přístup do registru systému, po jejím otevření experimentální instanci. To se liší od starších verzí sady Visual Studio, který používá experimentální verzi podregistru.  
+ Visual Studio nepřistupuje k systémovým registrem při otevření experimentální instanci aplikace. Tím se liší od předchozí verze sady Visual Studio, který používá experimentální verzi podregistr registru.  
   
- Nástroj CreateExpInstance nahrazuje nástroj VsRegEx.  
+ **CreateExpInstance** nahrazuje nástroj **VsRegEx** nástroj.  
   
- Následující příklad Resetuje výchozí instance experimentální sady Visual Studio.  
+ Následující příklad Resetuje výchozí experimentální instanci sady Visual Studio:  
   
  **/ Reset CreateExpInstance.exe /VSInstance = 14.0 /RootSuffix = Exp**  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Balíčky VSPackage](../../extensibility/internals/vspackages.md)

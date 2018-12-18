@@ -1,5 +1,5 @@
 ---
-title: m_children pole | Microsoft Docs
+title: m_children – pole | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,31 +13,32 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e71bc592e77daac877b571b14acd2d62a8657b9f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e27704484e5cfb320c8b65432fb3efb283054019
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39231145"
 ---
-# <a name="mchildren-field"></a>m_children pole
-Seznam podřízené úlohy, které jsou registrované s touto úlohou.  
+# <a name="mchildren-field"></a>m_children – pole
+Seznam podřízených úloh, které jsou registrované s touto úlohou.  
   
  **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **Sestavení:** mscorlib (v mscorlib.dll)  
+ **Sestavení:** mscorlib (v *mscorlib.dll*)  
   
- Protože tento vnitřní člen nemůže získat přístup z rozhraní .NET Framework, je k dispozici společné Intermediate Language (soubor CIL) syntaxi.  
+ Protože tento člen interní nemůže získat přístup z rozhraní .NET Framework, je k dispozici v Common Intermediate Language (CIL) následující syntaxi.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```csharp 
 .field public class System.Collections.Generic.List`1<class System.Threading.Tasks.Task> m_children  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Když úloha běží, by měl k tomuto poli přístup pouze podproces, který provede úlohu.  
+ Když úloha běží, by měl přístup pouze vlákno, které provádí úlohy Toto pole.  
   
- Pokud je úloha dokončena, můžete jiná vlákna tak dlouho, dokud nic do ní přidejte nebo odeberte nic z něj přístup v tomto poli.  
+ Pokud je úkol dokončen, ostatní vlákna tak dlouho, dokud není nic k němu přidat nebo odebrat cokoli z něj přístupná toto pole.  
   
-## <a name="see-also"></a>Viz také  
- [ContingentProperties – třída](../../extensibility/debugger/contingentproperties-class-internal-members.md)
+## <a name="see-also"></a>Viz také:  
+ [Třída ContingentProperties](../../extensibility/debugger/contingentproperties-class-internal-members.md)

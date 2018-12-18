@@ -1,5 +1,5 @@
 ---
-title: BP_LOCATION | Microsoft Docs
+title: BP_LOCATION | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b73a625e21da8e8ba026df140e437e96bdeb1ff5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5ceb6c85c510269877dfe34e091d50095dc7a50c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49821679"
 ---
 # <a name="bplocation"></a>BP_LOCATION
-Určuje typ struktury používají k popisu umístění zarážku.  
+Určuje typ struktury, na které se používají k popisu umístění zarážky.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,58 +55,58 @@ public struct BP_LOCATION {
   
 ## <a name="members"></a>Členové  
  `bpLocationType`  
- Hodnota z [BP_LOCATION_TYPE](../../../extensibility/debugger/reference/bp-location-type.md) výčtu použité k interpretaci `bpLocation` – typ union nebo `unionmemberX` členy.  
+ Hodnota z [BP_LOCATION_TYPE](../../../extensibility/debugger/reference/bp-location-type.md) výčet použité k interpretaci `bpLocation` sjednocení nebo `unionmemberX` členy.  
   
  `bpLocation`.`bplocCodeFileLine`  
- [Pouze C++] Obsahuje [BP_LOCATION_CODE_FILE_LINE](../../../extensibility/debugger/reference/bp-location-code-file-line.md) struktury, pokud `bpLocationType`  =  `BPLT_CODE_FILE_LINE`.  
+ [Jenom C++] Obsahuje [BP_LOCATION_CODE_FILE_LINE](../../../extensibility/debugger/reference/bp-location-code-file-line.md) strukturu Pokud `bpLocationType`  =  `BPLT_CODE_FILE_LINE`.  
   
  `bpLocation.bplocCodeFuncOffset`  
- [Pouze C++] Obsahuje [BP_LOCATION_CODE_FUNC_OFFSET](../../../extensibility/debugger/reference/bp-location-code-func-offset.md) struktury, pokud `bpLocationType`  =  `BPLT_CODE_FUNC_OFFSET`.  
+ [Jenom C++] Obsahuje [BP_LOCATION_CODE_FUNC_OFFSET](../../../extensibility/debugger/reference/bp-location-code-func-offset.md) strukturu Pokud `bpLocationType`  =  `BPLT_CODE_FUNC_OFFSET`.  
   
  `bpLocation.bplocCodeContext`  
- [Pouze C++] Obsahuje [BP_LOCATION_CODE_CONTEXT](../../../extensibility/debugger/reference/bp-location-code-context.md) struktury, pokud `bpLocationType`  =  `BPLT_CODE_CONTEXT`.  
+ [Jenom C++] Obsahuje [BP_LOCATION_CODE_CONTEXT](../../../extensibility/debugger/reference/bp-location-code-context.md) strukturu Pokud `bpLocationType`  =  `BPLT_CODE_CONTEXT`.  
   
  `bpLocation.bplocCodeString`  
- [Pouze C++] Obsahuje [BP_LOCATION_CODE_STRING](../../../extensibility/debugger/reference/bp-location-code-string.md) struktury, pokud `bpLocationType`  =  `BPLT_CODE_STRING`.  
+ [Jenom C++] Obsahuje [BP_LOCATION_CODE_STRING](../../../extensibility/debugger/reference/bp-location-code-string.md) strukturu Pokud `bpLocationType`  =  `BPLT_CODE_STRING`.  
   
  `bpLocation.bplocCodeAddress`  
- [Pouze C++] Obsahuje [BP_LOCATION_CODE_ADDRESS](../../../extensibility/debugger/reference/bp-location-code-address.md) struktury, pokud `bpLocationType`  =  `BPLT_CODE_ADDRESS`.  
+ [Jenom C++] Obsahuje [BP_LOCATION_CODE_ADDRESS](../../../extensibility/debugger/reference/bp-location-code-address.md) strukturu Pokud `bpLocationType`  =  `BPLT_CODE_ADDRESS`.  
   
  `bpLocation.bplocDataString`  
- [Pouze C++] Obsahuje [BP_LOCATION_DATA_STRING](../../../extensibility/debugger/reference/bp-location-data-string.md) struktury, pokud `bpLocationType`  =  `BPLT_DATA_STRING`.  
+ [Jenom C++] Obsahuje [BP_LOCATION_DATA_STRING](../../../extensibility/debugger/reference/bp-location-data-string.md) strukturu Pokud `bpLocationType`  =  `BPLT_DATA_STRING`.  
   
  `bpLocation.bplocResolution`  
- [Pouze C++] Obsahuje [BP_LOCATION_RESOLUTION](../../../extensibility/debugger/reference/bp-location-resolution.md) struktury, pokud `bpLocationType`  =  `BPLT_RESOLUTION`.  
+ [Jenom C++] Obsahuje [BP_LOCATION_RESOLUTION](../../../extensibility/debugger/reference/bp-location-resolution.md) strukturu Pokud `bpLocationType`  =  `BPLT_RESOLUTION`.  
   
  `unionmember1`  
- [C# pouze] V části poznámky o tom, jak interpretovat.  
+ [Jenom v C#] Viz poznámky o tom, jak interpretovat.  
   
  `unionmember2`  
- [C# pouze] V části poznámky o tom, jak interpretovat.  
+ [Jenom v C#] Viz poznámky o tom, jak interpretovat.  
   
  `unionmember3`  
- [C# pouze] V části poznámky o tom, jak interpretovat.  
+ [Jenom v C#] Viz poznámky o tom, jak interpretovat.  
   
  `unionmember4`  
- [C# pouze] V části poznámky o tom, jak interpretovat.  
+ [Jenom v C#] Viz poznámky o tom, jak interpretovat.  
   
 ## <a name="remarks"></a>Poznámky  
  Tato struktura je členem skupiny [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) a [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) struktury.  
   
- [C# pouze] `unionmemberX` Členy se interpretují podle následující tabulky. Podívejte se levém sloupci pro `bpLocationType` hodnotu pak vypadat napříč další sloupce, které chcete zjistit, co každý `unionmemberX` představuje člen a zařazování `unionmemberX` odpovídajícím způsobem. Podívejte se na příklad pro způsob, jak interpretovat součástí této struktury v jazyku C#.  
+ [Jenom v C#] `unionmemberX` Členy se interpretují podle následující tabulky. Podívejte se dolů levém sloupci `bpLocationType` hodnotu pak nahlédnout další sloupce, které chcete zjistit, co jednotlivé `unionmemberX` člen představuje a zařazování `unionmemberX` odpovídajícím způsobem. Podívejte se na příklad pro způsob, jak interpretovat součástí tato struktura v jazyce C#.  
   
 |`bpLocationType`|`unionmember1`|`unionmember2`|`unionmember3`|`unionmember4`|  
 |----------------------|--------------------|--------------------|--------------------|--------------------|  
-|`BPLT_CODE_FILE_LINE`|`string` (kontextu)|[IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md)|-|-|  
-|`BPLT_CODE_FUNC_OFFSET`|`string` (kontextu)|[IDebugFunctionPosition2](../../../extensibility/debugger/reference/idebugfunctionposition2.md)|-|-|  
+|`BPLT_CODE_FILE_LINE`|`string` (místní)|[IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md)|-|-|  
+|`BPLT_CODE_FUNC_OFFSET`|`string` (místní)|[IDebugFunctionPosition2](../../../extensibility/debugger/reference/idebugfunctionposition2.md)|-|-|  
 |`BPLT_CODE_CONTEXT`|[IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)|-|-|-|  
-|`BPLT_CODE_STRING`|`string` (kontextu)|`string` (podmíněného výrazu)|-|-|  
-|`BPLT_CODE_ADDRESS`|`string` (kontextu)|`string` (adresa URL modulu)|`string` (název funkce)|`string` (adresa)|  
-|`BPLT_DATA_STRING`|[IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)|`string` (kontextu)|`string` (výraz data)|`uint` (počet elementů)|  
+|`BPLT_CODE_STRING`|`string` (místní)|`string` (podmíněný výraz)|-|-|  
+|`BPLT_CODE_ADDRESS`|`string` (místní)|`string` (adresa URL modulu)|`string` (název funkce)|`string` (adresa)|  
+|`BPLT_DATA_STRING`|[IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)|`string` (místní)|`string` (výraz data)|`uint` (počet prvků)|  
 |`BPLT_RESOLUTION`|[IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md)|-|-|-|  
   
 ## <a name="example"></a>Příklad  
- Tento příklad ukazuje, jak interpretovat `BP_LOCATION` struktury v jazyku C# pro `BPLT_DATA_STRING` typu. Tento konkrétní typ ukazuje, jak interpretovat všechny čtyři `unionmemberX` členy v všechny možné formáty (objekt, string a číslo).  
+ Tento příklad ukazuje, jak interpretovat `BP_LOCATION` struktura v jazyce C# pro `BPLT_DATA_STRING` typu. Tento konkrétní typ ukazuje, jak interpretovat všechny čtyři `unionmemberX` členy ve všech možných formátů (objektu, řetězce a číslo).  
   
 ```csharp  
 using System;  

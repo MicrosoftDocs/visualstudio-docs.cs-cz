@@ -1,39 +1,41 @@
 ---
 title: Visual Studio pro Mac úlohy
-author: asb3993
-ms.author: amburns
-ms.date: 08/03/2017
+description: Tento článek popisuje různé úlohy, které lze použít v sadě Visual Studio pro Mac
+author: conceptdev
+ms.author: crdun
+ms.date: 05/06/2018
 ms.assetid: DDC39599-8C5D-4CB9-8DA5-229E085384CA
-ms.openlocfilehash: a3132e5719c2b916648456889508095f81e0c165
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 2d3134d4016c6eb86f37832ba9998010bddd3f13
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51295404"
 ---
 # <a name="visual-studio-for-mac-workloads"></a>Visual Studio pro Mac úlohy
 
-Visual Studio pro Mac dodává předinstalované úlohy pro následující:
+Visual Studio for Mac je dodávána s úlohy pro vývoj následující typy aplikací:
 
-* Napříč platformami mobilních aplikací pomocí .NET: Android, iOS, tvOS, watchOS
-* Aplikací systému Mac
+* Cross-Platform Mobile apps s .NET: Android, iOS, tvOS, watchOS
+* Desktopové aplikace Mac
 * Aplikace .NET core
-* Základní webové aplikace ASP.NET
-* Napříč platformami Unity hry
+* Webové aplikace ASP.NET Core
+* Hry Unity pro různé platformy
 
 ## <a name="xamarin"></a>Xamarin
 
-Xamarin umožňuje vytvořit mobilních aplikací pro různé platformy s .NET pro Android, iOS, tvOS, watchOS a Mac aplikace klasické pracovní plochy.
+Xamarin umožňuje vytvářet mobilní aplikace pro různé platformy s .NET pro Android, iOS, tvOS, watchOS a Mac aplikací klasické pracovní plochy.
 
-Informace o používání Xamarin v sadě Visual Studio pro Mac, najdete v části [středisku pro vývojáře Xamarin](https://developer.xamarin.com/) a podívejte se na mobilní aplikace [praktické cvičení](https://github.com/Microsoft/vs4mac-labs/tree/master/Mobile/Getting-Started).
+Informace o použití Xamarinu v sadě Visual Studio pro Mac, najdete [středisko pro vývojáře Xamarinu](https://developer.xamarin.com/) a podívejte se na mobilní aplikace [praktických cvičení](https://github.com/Microsoft/vs4mac-labs/tree/master/Mobile/Getting-Started).
 
 ## <a name="net-core-applications"></a>Aplikace .NET core
 
-Další informace o použití .NET Core, najdete v části [dokumentaci](https://docs.microsoft.com/dotnet/core/).
+Další informace o používání .NET Core najdete [dokumentaci](/dotnet/core/).
 
 ## <a name="aspnet-core-web-applications"></a>Webové aplikace ASP.NET Core
 
-Spuštění pomocí ASP.NET Core v sadě Visual Studio pro Mac, naleznete informace o získávání [Začínáme s ASP.NET Core](~/asp-net-core.md) průvodce nebo podívejte se na webové aplikace ASP.NET Core [praktické cvičení](https://github.com/Microsoft/vs4mac-labs/tree/master/Web/Getting-Started).
+Začít používat ASP.NET Core v sadě Visual Studio pro Mac, najdete informace o získání [Začínáme s ASP.NET Core](asp-net-core.md) průvodce nebo si prohlédněte webové aplikace ASP.NET Core [praktických cvičení](https://github.com/Microsoft/vs4mac-labs/tree/master/Web/Getting-Started).
 
 ## <a name="cross-platform-unity-game-development"></a>Vývoj her pro různé platformy Unity
 
-Na počátku vytváření hry s Unity, najdete v článku [stránce instalace](~/setup-vsmac-tools-unity.md) a [průvodce pomocí nástrojů Unity](~/using-vsmac-tools-unity.md), nebo se podívejte se Unity [praktické cvičení](https://github.com/Microsoft/vs4mac-labs/tree/master/Unity/Getting-Started).
+Abyste mohli začít vytvářet hry s Unity, najdete v článku [stránku nastavení](setup-vsmac-tools-unity.md) a [návod k použití nástrojů Unity](using-vsmac-tools-unity.md), nebo se podívejte Unity [praktických cvičení](https://github.com/Microsoft/vs4mac-labs/tree/master/Unity/Getting-Started).

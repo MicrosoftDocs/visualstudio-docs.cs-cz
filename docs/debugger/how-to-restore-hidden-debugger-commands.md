@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: obnovení skrytých příkazů ladicího programu | Microsoft Docs'
+title: 'Postupy: obnovení skrytých příkazů ladicího programu | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -20,59 +20,60 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f47f8cbb342f480e6124f765b3b427a615ec6a38
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: b9ee37e72a52f866f5b67afaeacfd248628a3484
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39176840"
 ---
 # <a name="how-to-restore-hidden-debugger-commands"></a>Postupy: Obnovení skrytých příkazů ladicího programu
-Při instalaci sady Visual Studio, jste vyzváni k vyberte sadu výchozích nastavení IDE pro primární programovacího jazyka. Výchozí nastavení IDE pro některé jazyky mohou skrývat určité příkazů ladicího programu.  
+Při nastavování aplikace Visual Studio, zobrazí se výzva k výběru sada výchozích nastavení IDE pro primární programovací jazyk. Výchozí nastavení rozhraní IDE pro některé jazyky mohou skrývat určité příkazy ladicího programu.  
   
- Pokud chcete používat funkce ladicího programu, která je skrytý na základě nastavení IDE výchozí, můžete přidat příkaz zpět do nabídky pomocí následujícího postupu.  
+ Pokud chcete použít funkci ladicí program, který je skryt výchozího nastavení IDE, můžete přidat příkaz zpět do nabídky pomocí následujícího postupu.  
   
 ### <a name="to-restore-hidden-debugger-commands"></a>K obnovení skrytých příkazů ladicího programu  
   
-1.  S projektem na otevřené **nástroje** nabídky, klikněte na tlačítko **přizpůsobit**.  
+1.  S projektem otevřeným v **nástroje** nabídky, klikněte na tlačítko **vlastní**.  
   
-2.  V **přizpůsobit** dialogové okno, klikněte **příkazy** kartě.  
+2.  V **vlastní** dialogové okno, klikněte na tlačítko **příkazy** kartu.  
   
-3.  V **řádku nabídek:** rozevíracího seznamu, vyberte **ladění** nabídky, která má obsahovat příkaz obnovený.  
+3.  V **nabídek:** rozevíracího seznamu, vyberte **ladění** nabídky, která má obsahovat příkaz obnovený.  
   
-4.  Klikněte **příkaz Přidat...**  tlačítko.  
+4.  Klikněte na tlačítko **přidat příkaz...**  tlačítko.  
   
-5.  V **přidejte příkaz** , vyberte příkaz, který chcete přidat a klikněte na tlačítko **OK**.  
+5.  V **přidat příkaz** , vyberte příkaz, který chcete přidat a klikněte na tlačítko **OK**.  
   
-6.  Opakujte předchozí krok pro přidání jiného příkazu.  
+6.  Opakujte předchozí krok a přidejte další příkaz.  
   
-7.  Klikněte na tlačítko **Zavřít** po dokončení přidávání příkazů do nabídky.  
+7.  Klikněte na tlačítko **Zavřít** po dokončení přidání komentářů k nabídce.  
   
     > [!WARNING]
-    >  Některé položky nabídky se zobrazí, pouze když ladicího programu v konkrétní režimy, jako je například spuštění režimu nebo v režimu pozastavení. Položky, které jste přidali proto nemusí být okamžitě viditelné, po dokončení těchto kroků.  
+    >  Některé položky nabídky se zobrazí, pouze když ladicí program v konkrétní režimy, jako je například režimu běhu nebo režimu pozastavení. Položka, kterou jste přidali proto nemusí být ihned po dokončení těchto kroků.  
   
-## <a name="restoring-commands-not-available-from-the-customize-dialog-box"></a>Obnovení příkazů není k dispozici v dialogovém okně Upravit  
- Některé příkazy, především těch, které jsou součástí hierarchické nabídky, nelze obnovit z **přizpůsobit** dialogové okno. Chcete-li obnovit tyto příkazy, je nutné naimportovat novou kolekci nastavení IDE.  
+## <a name="restoring-commands-not-available-from-the-customize-dialog-box"></a>Obnovení příkazů není k dispozici z dialogového okna Přizpůsobit  
+ Některé příkazy, zejména těch, které jsou součástí hierarchické nabídky, nelze obnovit z **vlastní** dialogové okno. Chcete-li obnovit tyto příkazy, je nutné naimportovat nové kolekce nastavení prostředí IDE.  
   
-#### <a name="to-import-new-ide-settings"></a>Chcete-li importovat nové nastavení IDE  
+#### <a name="to-import-new-ide-settings"></a>Chcete-li importovat nové nastavení prostředí IDE  
   
 1.  Na **nástroje** nabídky, klikněte na tlačítko **nastavení importu a exportu**.  
   
-2.  Na **Vítejte Průvodci importem a exportem nastavení** klikněte na tlačítko **importovat vybrané nastavení prostředí**a potom klikněte na **Další**.  
+2.  Na **Vítejte Průvodci importem a exportem nastavení** klikněte na **importovat vybrané nastavení prostředí**a potom klikněte na tlačítko **Další**.  
   
-3.  Na **uložit aktuální nastavení** rozhodněte, zda se má uložit stávající nastavení a pak klikněte na **Další**.  
+3.  Na **uložit aktuální nastavení** stránce, rozhodněte, jestli se mají uložit stávající nastavení a klikněte na **Další**.  
   
-4.  Na **vyberte kolekce nastavení pro import** v části **výchozí nastavení** složky, vyberte kolekce nastavení pro vývoj, která má příkazy, které chcete použít. Pokud si nejste jisti kterou kolekci zvolte, zkuste **obecné nastavení vývoj** nebo **nastavení vývoje Visual C++**, které poskytují nejvíce příkazů ladicího programu.  
+4.  Na **zvolte kolekce nastavení chcete importovat** stránce v části **výchozí nastavení** složky, zvolte kolekci nastavení pro vývoj, který obsahuje příkazy, které chcete použít. Pokud si nejste jisti kterou kolekci zvolte, zkuste **obecným vývojovým nastavením** nebo **Visual C++ – vývojové nastavení**, které poskytují největší příkazy ladicího programu.  
   
 5.  Klikněte na tlačítko **Další**.  
   
-6.  Na **zvolit nastavení pro import** v části **možnosti**, zajistěte, aby **ladění** je vybrána. Ostatní zaškrtávací políčka zrušte, pokud chcete importovat a tato nastavení.  
+6.  Na **zvolte nastavení pro import** stránce v části **možnosti**, ujistěte se, že **ladění** zaškrtnuto. Zrušte zaškrtnutí ostatních políček, pokud chcete importovat tato nastavení také.  
   
 7.  Klikněte na tlačítko **Dokončit**.  
   
-8.  Na **úplný Import** zkontrolujte chyby související s obnovením nastavení v části **podrobnosti**.  
+8.  Na **úplný Import** stránky, zkontrolujte všechny chyby spojené s obnovením vašeho nastavení v části **podrobnosti**.  
   
 9. Klikněte na tlačítko **Zavřít**.  
   
 ## <a name="see-also"></a>Viz také  
  [Zabezpečení ladicího programu](../debugger/debugger-security.md)   
- [Základy ladicího programu](../debugger/debugger-basics.md)
+ [Základy ladicího programu](../debugger/getting-started-with-the-debugger.md)

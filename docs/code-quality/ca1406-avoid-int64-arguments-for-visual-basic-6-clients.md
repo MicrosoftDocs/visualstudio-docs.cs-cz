@@ -1,6 +1,7 @@
 ---
 title: 'CA1406: Vyhněte se argumentům Int64 pro klienty jazyka Visual Basic 6'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,15 +14,20 @@ ms.assetid: d5d0d3fc-f105-43da-be5b-923ab023309c
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 36c8ceb93f4784fa3ff50343b8b9cd7770e69533
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f6eeda13b8dc7a05622613f719a6b2a85b61835a
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45546873"
 ---
 # <a name="ca1406-avoid-int64-arguments-for-visual-basic-6-clients"></a>CA1406: Vyhněte se argumentům Int64 pro klienty jazyka Visual Basic 6
+
 |||
 |-|-|
 |TypeName|AvoidInt64ArgumentsForVB6Clients|
@@ -30,21 +36,21 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Typ, který je specificky označen jako viditelný na modelu COM (Component Object) člena deklaruje, že trvá <xref:System.Int64?displayProperty=fullName> argument.
+ Typ, který je označen jako viditelný pro Model COM (Component Object) deklaruje člen, že přejdete <xref:System.Int64?displayProperty=fullName> argument.
 
 ## <a name="rule-description"></a>Popis pravidla
- Visual Basic 6 COM klienti nemají přístup k 64bitových celých čísel.
+ Klienty modulu COM jazyka Visual Basic 6 nemohou přistupovat k 64bitová celá čísla.
 
- Ve výchozím nastavení, jsou viditelné pro COM následující: sestavení, veřejné typy, členy veřejné instance ve veřejné typy a všichni členové typů veřejné hodnot. Však snížil počet falešných poplachů, toto pravidlo vyžaduje COM viditelnost typ, který má být explicitně uvedena; musí být označen obsahující sestavení <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> nastavena na `false` a typ musí být označené jako <xref:System.Runtime.InteropServices.ComVisibleAttribute> nastavena na `true`.
+ Ve výchozím nastavení, jsou následující viditelné modelu COM: sestavení, veřejné typy, členy veřejné instance ve veřejných typů a členů veřejných hodnotových typech. Ale snížil počet falešných poplachů, toto pravidlo vyžaduje typ, který má být explicitně uvedena; viditelnost modelu COM musí být označené obsahující sestavení <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> nastavena na `false` a typ musí být označeny pomocí <xref:System.Runtime.InteropServices.ComVisibleAttribute> nastavena na `true`.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Opravit porušení tohoto pravidla pro parametr, jehož hodnota může být vždy vyjádřený jako integrální 32-bit, změnit typ parametru na <xref:System.Int32?displayProperty=fullName>. Pokud hodnota parametru může být větší, než může být vyjádřený jako integrální 32-bit, změňte typ parametru pro <xref:System.Decimal?displayProperty=fullName>. Všimněte si, že oba <xref:System.Single?displayProperty=fullName> a <xref:System.Double?displayProperty=fullName> ztratit přesnost v horní Rozsahy <xref:System.Int64> datového typu. Pokud člen by neměl být viditelné modelu COM, označte jej pomocí <xref:System.Runtime.InteropServices.ComVisibleAttribute> nastavena na `false`.
+ Chcete-li opravit porušení tohoto pravidla pro parametr, jehož hodnota může být vždy vyjádřený jako 32-bit integral, změňte typ parametru na <xref:System.Int32?displayProperty=fullName>. Pokud hodnota parametru může být větší, než může být vyjádřený jako 32-bit integral, změňte typ parametru na <xref:System.Decimal?displayProperty=fullName>. Všimněte si, že oba <xref:System.Single?displayProperty=fullName> a <xref:System.Double?displayProperty=fullName> ztratit přesnost na horní Rozsahy <xref:System.Int64> datového typu. Pokud se člen neměl být viditelné modelu COM, označte ji pomocí <xref:System.Runtime.InteropServices.ComVisibleAttribute> nastavena na `false`.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Je bezpečné potlačit upozornění na toto pravidlo, jestliže je zajištěno, že klienti COM Visual Basic 6 nebude přístup k typu.
+ Je bezpečné potlačit upozornění tohoto pravidla, pokud je určitá klienty modulu COM jazyka Visual Basic 6 nebude mít přístup k typu.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje typ, který porušuje pravidlo.
+ Následující příklad ukazuje typ, který porušuje pravidla.
 
  [!code-csharp[FxCop.Interoperability.LongArgument#1](../code-quality/codesnippet/CSharp/ca1406-avoid-int64-arguments-for-visual-basic-6-clients_1.cs)]
  [!code-vb[FxCop.Interoperability.LongArgument#1](../code-quality/codesnippet/VisualBasic/ca1406-avoid-int64-arguments-for-visual-basic-6-clients_1.vb)]
@@ -56,5 +62,7 @@ ms.lasthandoff: 04/19/2018
 
  [CA1017: Označte sestavení pomocí atributu ComVisibleAttribute](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)
 
-## <a name="see-also"></a>Viz také
- [Spolupráce pomocí nespravovaného kódu](/dotnet/framework/interop/index) [Long – datový typ](/dotnet/visual-basic/language-reference/data-types/long-data-type)
+## <a name="see-also"></a>Viz také:
+
+- [Spolupráce s nespravovaným kódem](/dotnet/framework/interop/index)
+- [Datový typ Long](/dotnet/visual-basic/language-reference/data-types/long-data-type)

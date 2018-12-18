@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomAttribute::GetName | Microsoft Docs
+title: IDebugCustomAttribute::GetName | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1a33b4507cb54095a38671eaf310d87dae180be6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 11a4b986799cf03221b4af077fc3e1e5809c4137
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49866477"
 ---
 # <a name="idebugcustomattributegetname"></a>IDebugCustomAttribute::GetName
 Získá název vlastního atributu.  
@@ -40,13 +41,13 @@ int GetName(
   
 #### <a name="parameters"></a>Parametry  
  `bstrName`  
- [out] Vrací řetězec obsahující název vlastního atributu.  
+ [out] Vrátí řetězec obsahující název vlastního atributu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí S_OK; jinak vrátí kód chyby.  
+ V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Pojmenované vrácená touto metodou odpovídá názvu třídy používá k deklaraci atribut. To může přesně odpovídá názvu vlastní třídy vlastních atributů jazyka C# umožňuje příponou "Atribut" vyřadit z vlastních atributů názvu, pokud se používá v deklaraci.  
+ Pojmenované vrácený touto metodou odpovídá názvu třídy, který deklaruje atribut. To může přesně odpovídat názvu vlastní třídy vlastní atribut jako C# umožňuje příponu "Atribut" chcete vyřadit z názvu vlastního atributu při použití v deklaraci.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugCustomAttribute](../../../extensibility/debugger/reference/idebugcustomattribute.md)

@@ -1,7 +1,7 @@
 ---
-title: Nasazení do místní složky - Visual Studio | Microsoft Docs
+title: Nasazení do místní složky
 ms.custom: ''
-ms.date: 11/22/2017
+ms.date: 06/22/2018
 ms.technology: vs-ide-deployment
 ms.topic: quickstart
 helpviewer_keywords:
@@ -12,58 +12,49 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 024d191628e413f07cd510595eac5c7d9fca085b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 517698aa2e042d74138579dae3633930b338cd61
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38781910"
 ---
-# <a name="deploy-a-web-app-or-net-core-app-to-a-local-folder-using-the-visual-studio-publish-tool"></a>Nasazení do místní složky pomocí nástroje Visual Studio publikovat webovou aplikaci nebo aplikaci .NET Core
+# <a name="deploy-an-app-to-a-local-folder-using-visual-studio"></a>Nasazení aplikace do místní složky pomocí sady Visual Studio
 
-Můžete použít **publikovat** nástroj pro publikování aplikace do místní složky. 
+Můžete použít **publikovat** nástroj pro publikování aplikace ASP.NET, ASP.NET Core, .NET Core a Pythonu do místní složky ze sady Visual Studio. Pro Node.js kroky jsou podporované, ale uživatelské rozhraní se liší.
 
-Tento postup platí pro technologii ASP.NET, ASP.NET Core, .NET Core a Python aplikace v sadě Visual Studio. Pro platformu Node.js kroky jsou podporované, ale uživatelské rozhraní se liší.
-
-## <a name="create-a-new-project"></a>Vytvoření nového projektu 
-
-1. V sadě Visual Studio, vyberte **soubor > Nový projekt**.
-
-1. V části **Visual C#** nebo **jazyka Visual Basic**, zvolte **.NET Core**a potom v prostředním podokně vyberte **konzolové aplikace (.NET Core)**.
-
-1. Zadejte název jako **MyLocalApp** a klikněte na tlačítko **OK**.
-
-    Visual Studio vytvoří projekt.
+[!INCLUDE [quickstart-prereqs](includes/quickstart-prereqs.md)]
 
 ## <a name="deploy-to-a-local-folder"></a>Nasazení do místní složky
 
-1. V Průzkumníku řešení klikněte pravým tlačítkem na projekt a zvolte **publikovat**.
+1. V Průzkumníku řešení klikněte pravým tlačítkem na projekt a zvolte **publikovat** (nebo použijte **sestavení** > **publikovat** položky nabídky).
 
-    ![Zvolte publikování](../deployment/media/quickstart-publish.png "zvolte publikování")
+    ![Příkaz Publikovat v místní nabídce projektu v Průzkumníku řešení](../deployment/media/quickstart-publish.png "tlačítko Publikovat")
 
-1. V **publikovat** podokně vyberte **složky**.
+1. Pokud jste dříve nakonfigurovali všech profilů publikování **publikovat** otevře se podokno. Vyberte **vytvořit nový profil**.
 
-    ![Vyberte složku,](../deployment/media/quickstart-publish-folder.png "vyberte složku,")
+1. V **vyberte cíl publikování** dialogového okna zvolte **složky**.
 
-1. Zadejte cestu nebo klikněte na tlačítko **Procházet** a přejděte do místní složky.
+    ![Zvolte místní složku jako publikovat nějaký](../deployment/media/quickstart-publish-folder.png "vybrat složku")
 
-1. Klikněte na tlačítko **publikování**.
+1. Zadejte cestu nebo vyberte **Procházet** určit místní složku.
 
-    Visual Studio vytvoří projekt a publikuje do zadané složky.
+1. Vyberte **publikovat**. Visual Studio vytvoří projekt a publikuje ji do zadané složky. Vlastnosti projektu **publikovat** otevře se podokno, zobrazuje profil souhrnu.
 
-    V podokně publikovat zobrazuje souhrn profil.
+    ![Podokno vlastností zobrazuje souhrn profil publikování](../deployment/media/quickstart-publish-folder-summary.png)
 
-1. Chcete-li konfigurovat nastavení nasazení, klikněte na tlačítko **nastavení** v souhrnu profilu.
+1. Chcete-li konfigurovat nastavení nasazení, vyberte **konfigurovat** v profilu summary a vyberte **nastavení** kartu.
 
-    ![Nastavení profilu](../deployment/media/quickstart-profile-settings.png "nastavení profilu") 
+    ![Nastavení profilu](../deployment/media/quickstart-profile-settings.png "nastavení profilu")
 
-1. Konfigurovat možnosti, například zda ladění nebo verze konfigurace nasazení a pak klikněte na tlačítko **Uložit**.
+1. Konfigurovat možnosti, jako například, jestli se má nasadit konfigurace ladění nebo uvolnění a pak vyberte **Uložit**.
 
-1. Chcete-li znovu publikovat, klikněte na tlačítko **publikovat**.
+1. Chcete-li znovu publikovat, vyberte **publikovat**.
 
-Publikované soubory žádným způsobem, který chcete nasaďte. Můžete například zabalit v souboru Zip, použijte příkaz jednoduché kopírování nebo nasadit všechny instalačním balíčkem podle svého výběru.
+Nasaďte publikované soubory žádným způsobem, který vám vyhovuje. Například je do balíčku *ZIP* souboru, použijte příkaz jednoduché kopírování nebo nasazení v balíčcích instalace podle vašeho výběru.
 
 ## <a name="next-steps"></a>Další kroky
 
-- [Nasazení aplikace .NET Core pomocí nástroje Publish](/dotnet/core/deploying/deploy-with-vs)
-- [Balíček desktopové aplikace pro Microsoft Store (přemostění na desktop)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)
+- [Nasazení aplikace .NET Core pomocí nástroje Publish](/dotnet/core/deploying/deploy-with-vs?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
+- [Balíček desktopové aplikace pro Microsoft Store (přemostění na desktop)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
 - (.NET) [Nasazení rozhraní .NET Framework a aplikace](/dotnet/framework/deployment/)

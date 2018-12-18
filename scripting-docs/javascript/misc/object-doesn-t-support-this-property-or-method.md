@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/10/2018
+ms.locfileid: "24788868"
 ---
 # <a name="object-doesn39t-support-this-property-or-method"></a>Objekt nemá&#39;t podporu této vlastnosti nebo metody
 Můžete zadat vlastnosti nebo metody, která neexistuje pro tento objekt. Ne všechny objekty podporují všechny vlastnosti a metody.  

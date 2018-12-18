@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31457761"
 ---
 # <a name="copyright-notice-for-spy-help"></a>Poznámka o autorských právech pro nápovědu nástroje Spy++
 Informace v tomto dokumentu se mohou změnit bez předchozího upozornění. Společnosti, názvy a údaje použité v ukázkách jsou smyšlené, pokud není uvedeno jinak. Tento dokument může reprodukovat či přenášených v žádný formulář nebo prostředky, ať už elektronicky nebo mechanických, pro jakýkoli účel, bez předchozího písemného svolení společnosti Microsoft Corporation.  

@@ -1,5 +1,5 @@
 ---
-title: IDebugStackFrame2::GetDocumentContext | Microsoft Docs
+title: IDebugStackFrame2::GetDocumentContext | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 14e7374fbea697b86d9ee838a6b8a76a57f920ff
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 908aef9ab784300ef4a9d30b8d16df14ff78b91d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942189"
 ---
 # <a name="idebugstackframe2getdocumentcontext"></a>IDebugStackFrame2::GetDocumentContext
-Získá kontext dokumentu pro tento rámce zásobníku.  
+Získá kontext dokumentu pro tento rámec zásobníku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,10 +44,10 @@ int GetDocumentContext (
  [out] Vrátí [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) objekt, který představuje aktuální pozici ve zdrojovém dokumentu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda je rychlejší než při volání [GetCodeContext](../../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md) metoda a pak volání [GetDocumentContext](../../../extensibility/debugger/reference/idebugcodecontext2-getdocumentcontext.md) metoda v kontextu kódu. Však není zaručeno, že bude tuto metodu implementovat každý motor ladění (DE).  
+ Tato metoda je rychlejší než volání [GetCodeContext](../../../extensibility/debugger/reference/idebugstackframe2-getcodecontext.md) metoda a následným voláním [GetDocumentContext](../../../extensibility/debugger/reference/idebugcodecontext2-getdocumentcontext.md) metodu na kontext kódu. Však není zaručeno, že každý ladicí stroj (DE) implementuje tuto metodu.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md)   

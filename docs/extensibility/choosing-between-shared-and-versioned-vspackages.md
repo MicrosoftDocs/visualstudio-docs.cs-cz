@@ -1,5 +1,5 @@
 ---
-title: Volba mezi sdílené a verzí VSPackages | Microsoft Docs
+title: Volba mezi sdíleným a Verzovaným rozšířením VSPackages | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,54 +15,55 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ce7f58d664c6a186146272af16324be2fee90983
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3bb3cebb9cdc00f6e4ef486ef6330cf2b18c6dc1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49817299"
 ---
-# <a name="choosing-between-shared-and-versioned-vspackages"></a>Volba mezi VSPackages sdílené a verzí
-Různé verze sady Visual Studio mohou existovat vedle sebe na stejném počítači. VSPackages může podporovat všechny směs [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] verze.  
+# <a name="choose-between-shared-and-versioned-vspackages"></a>Výběr mezi sdíleným a verzovaným rozšířením VSPackages
+Různé verze sady Visual Studio můžou existovat společně na stejném počítači. Rozšíření VSPackages může podporovat všechny kombinace [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] verze.  
   
- Můžete povolit souběžně sdílená instalace VSPackages prostřednictvím buď dva strategie, sdílené strategie nebo verzí strategie. Obě zohlednit přítomnost více verzí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a přidružené verze [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)].  
+ Povolíte-souběžnými instalacemi balíčků VSPackage pomocí kteréhokoliv z dvou strategií, sdílené strategii nebo systémovou správou verzí strategie. Obě podle přítomnosti více verzí [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a související verze [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)].  
   
- Ve sdílené strategii jeden VSPackage je zaregistrovaný pro použití v různých verzích [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. V verzí strategie, jsou nainstalované knihovny DLL více VSPackage, jeden pro každou verzi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , které podporujete.  
+ Ve sdílené strategie je zaregistrovaný jednoho balíčku VSPackage pro použití ve více verzích [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Při použití strategie označené verzí jsou nainstalovány více knihoven dll balíčku VSPackage, jeden pro každou verzi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , kterou podporujete.  
   
-## <a name="shared-vspackages"></a>Sdílené VSPackages  
- Použití sdílené VSPackage je vhodné, když používají stejné VSPackage v různých verzích [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. K implementaci sdílené VSPackage, musíte provést následující kroky:  
+## <a name="shared-vspackages"></a>Sdílené rozšíření VSPackages  
+ Použití sdílené VSPackage je vhodné při použití stejného balíčku VSPackage ve více verzích [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Pro implementaci sdíleného VSPackage, je nutné provést následující kroky:  
   
--   Aby vaše VSPackage kompatibilní s více verzemi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Dva způsoby provádění takže jsou k dispozici:  
+- Ujistěte se, vaši VSPackage kompatibilní s více verzemi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Dva způsoby, jak udělat proto jsou k dispozici:  
   
-    -   Omezit vaše VSPackage pomocí pouze funkce nejdřívější verze [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , které podporujete.  
+  - Omezit vašeho balíčku VSPackage pomocí pouze funkce nejstarší verzi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , kterou podporujete.  
   
-    -   Program vaše VSPackage přizpůsobit na verzi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ve kterém je spuštěná. Poté, v případě dotazů pro novější služby selžou, vaše VSPackage nabízejí jiných služeb, které jsou podporovány ve starších verzích [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
+  - Program vašeho balíčku VSPackage umožní reagovat na verzi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ve kterém je spuštěná. Pak v případě dotazů pro novější služby selžou, vašeho balíčku VSPackage můžou nabízet další služby, které jsou podporovány ve starších verzích [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
   
--   Zaregistrujte vaše VSPackage správně. Další informace najdete v tématu [VSPackage registrace](../extensibility/internals/vspackage-registration.md) a [spravované registrace VSPackage](http://msdn.microsoft.com/en-us/f69e0ea3-6a92-4639-8ca9-4c9c210e58a1).  
+- Zaregistrujte vašeho balíčku VSPackage odpovídajícím způsobem. Další informace najdete v tématu [registrace balíčku VSPackage](../extensibility/internals/vspackage-registration.md) a [registrace balíčku VSPackage spravované](https://msdn.microsoft.com/library/f69e0ea3-6a92-4639-8ca9-4c9c210e58a1).  
   
--   Přípony souborů zaregistrujte správně. Další informace najdete v tématu [registrace přípony názvů souborů pro nasazení vedle sebe](../extensibility/registering-file-name-extensions-for-side-by-side-deployments.md).  
+- Registrace přípon souborů odpovídajícím způsobem. Další informace najdete v tématu [registrace přípony názvů souborů pro nasazení vedle sebe](../extensibility/registering-file-name-extensions-for-side-by-side-deployments.md).  
   
--   Vytvořit instalační program, který nasadí vaši VSPackage pro příslušné verze [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Další informace najdete v tématu [instalaci VSPackages pomocí Instalační služby systému Windows](../extensibility/internals/installing-vspackages-with-windows-installer.md) a [správu součástí](../extensibility/internals/component-management.md).  
+- Vytvořit instalační službu, která nasadí vašeho balíčku VSPackage pro příslušnou verzi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Další informace najdete v tématu [instalace balíčků VSPackage pomocí Instalační služby systému Windows](../extensibility/internals/installing-vspackages-with-windows-installer.md) a [Správa komponent](../extensibility/internals/component-management.md).  
   
--   Vyřešte problém kolizí registrace. Další informace najdete v tématu [VSPackage registrace](../extensibility/internals/vspackage-registration.md).  
+- Vyřešení problému registrace kolizí. Další informace najdete v tématu [registrace balíčku VSPackage](../extensibility/internals/vspackage-registration.md).  
   
--   Ujistěte se, že sdílené a verzí souborů respektují umožňuje bezpečné instalaci a odebrání více verzí při počítání referencí. Další informace najdete v tématu [správu součástí](../extensibility/internals/component-management.md).  
+- Ujistěte se, že soubory sdíleným a verzovaným respektovat počítání odkazů ke umožňují bezpečnou instalaci a odebrání více verzí. Další informace najdete v tématu [Správa komponent](../extensibility/internals/component-management.md).  
   
-## <a name="versioned-vspackages"></a>Verzí VSPackages  
- V rámci verzí VSPackage strategie, vytvoříte jeden VSPackage pro každou verzi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , které podporujete. To je vhodné, pokud chcete využít výhod služeb poskytovaných novější verze [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], protože každý VSPackage můžete rozvíjet bez vlivu jiné. Nicméně verzí strategie vytváření více binární soubory z jednotného kódu nebo z několika základů kódu nezávislé, může za následek další počáteční vývoj než sdílené strategie. Další nastavení pracovní můžou také požadovat, protože musíte vytvořit buď samostatný instalační program pro každou verzi nebo jednoho instalačního programu, která zjistí verze [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , které se nainstalují, a že vaše VSPackage podporuje.  
+## <a name="versioned-vspackages"></a>Verze rozšíření VSPackages  
+ V rámci verze balíčku VSPackage strategie, vytvoříte jednu VSPackage pro každou verzi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , kterou podporujete. To je vhodné, pokud očekáváte, že chcete využít výhod služeb poskytovaných novějších verzích [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], protože každý VSPackage můžete rozvíjet aniž by to ovlivnilo ostatní. Označené verzí strategie vytváření více binárních souborů, z jediného základu kódu nebo z více základních tříd nezávislý kód, však může za následek další počáteční vývoj než sdílený strategie. Navíc další nastavení může být vyžadován, protože musíte vytvořit buď samostatný instalační program pro každou verzi nebo jeden instalační program, který zjistí verze [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] , které jsou nainstalovány a, která podporuje vaše VSPackage.  
   
-## <a name="binary-compatibility"></a>Binární kompatibilitu  
- Obecně platí binární kompatibilitu umožňuje nativního kódu VSPackages vytvořených v dřívějších verzích sady Visual Studio spustit v novějších verzích sady Visual Studio. Existují však tři důležité výjimky:  
+## <a name="binary-compatibility"></a>Binární kompatibilita  
+ Obecně platí binární kompatibilitu umožňuje rozšíření VSPackages nativního kódu byly vyvinuty v sadě starších verzích sady Visual Studio ke spuštění v pozdějších verzích sady Visual Studio. Nicméně existují tři důležité výjimky:  
   
--   Pokud vaše VSPackage spoléhá na konkrétní verzi modulu CLR, pak musí určit v různých verzích [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] je spuštěná.  
+- Pokud vaše VSPackage závisí na konkrétní verzi modulu common language runtime a pak ho musíte určit, kterou verzi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] běží.  
   
--   VSPackage může mít závislost na konkrétní funkci jiné VSPackage nebo jiného produktu. V důsledku toho VSPackage můžete spustit pouze kde uspokojit závislost.  
+- VSPackage může mít závislost na konkrétní funkce jiné VSPackage nebo jiného produktu. V důsledku toho můžete spustit sady VSPackage, pouze pokud je splněna závislost.  
   
--   VSPackage může být ovlivněn opravu zabezpečení v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] aktualizace service pack nebo novější verzi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. V takových případech VSPackage vytvořených v dřívější verzi [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] nemusí být možné spustit ve verzích [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] po opravu zabezpečení. Můžete však sestavte svůj balíček pomocí novější verze znovu a mít ji taky spustit ve starších verzích.  
+- VSPackage by mohly mít dopad opravu zabezpečení v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] aktualizace service pack nebo novější verzi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. V takových případech VSPackage vyvinuté pomocí starší verze [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] nemusí spouštět ve verzích [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] po opravu zabezpečení. Můžete však sestavte svůj balíček pomocí novější verze znovu a ho také spustit v dřívějších verzích.  
   
- Spravované VSPackages musí být vytvořená s využitím verzi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] odpovídající cílovou verzi sady [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
+  Spravovaná rozšíření VSPackages musí být sestaveny pomocí verze [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] , které odpovídají cílovou verzi [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
   
- Kromě plánování binární kompatibilitu pro vaše VSPackage binární soubory, můžete také měli zvažte řešení a projektu formáty souborů. Pokud vaše VSPackage vytvoří nový typ projektu, je nutné rozhodnout, jestli může spustit v právě jednu verzi nebo v různých verzích [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Další informace najdete v tématu [upgrade projektů vlastní](../extensibility/internals/upgrading-projects.md#upgrading-custom-projects).  
+  Kromě plánování binární kompatibilitu pro vaše binární soubory balíčku VSPackage, můžete také by měl zvažte řešení a projektu formátů souborů. Pokud vaše VSPackage vytvoří nový typ projektu, musíte se rozhodnout, zda lze spustit v pouze jednu verzi nebo ve více verzích [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Další informace najdete v tématu [upgrade vlastních projektů](../extensibility/internals/upgrading-projects.md#upgrading-custom-projects).  
   
-## <a name="see-also"></a>Viz také  
- [Instalace VSPackages pomocí Instalační služby systému Windows](../extensibility/internals/installing-vspackages-with-windows-installer.md)   
+## <a name="see-also"></a>Viz také:  
+ [Instalace balíčků VSPackage pomocí Instalační služby systému Windows](../extensibility/internals/installing-vspackages-with-windows-installer.md)   
  [Správa komponent](../extensibility/internals/component-management.md)

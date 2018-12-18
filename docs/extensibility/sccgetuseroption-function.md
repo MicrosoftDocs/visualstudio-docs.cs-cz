@@ -1,5 +1,5 @@
 ---
-title: Funkce SccGetUserOption | Microsoft Docs
+title: Sccgetuseroption – funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b735b8ae53ef484417ae007c6ec74ec03fe4b849
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b906dc9585ed51640ca36f366fe6a1b0d3a03aa2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49928201"
 ---
 # <a name="sccgetuseroption-function"></a>SccGetUserOption – funkce
-Tato funkce načte různé možnosti specifické pro uživatele.  
+Tato funkce načítá širokou škálu možností specifické pro uživatele.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,30 +37,30 @@ SCCRTN SccGetUserOption(
   
 #### <a name="parameters"></a>Parametry  
  pContext  
- [v] Ukazatel modulu plug-in kontextu zdroj ovládacího prvku.  
+ [in] Ukazatel kontext modulu plug-in zdroje ovládacího prvku.  
   
  nOption  
- [v] Možnost načíst (viz poznámky pro způsobů).  
+ [in] Možnost načíst (viz poznámky pro možnosti).  
   
  lpVal  
- [out] Hodnota přidružená možnost.  
+ [out] Hodnota přidružená k možnost.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Očekává se, že modul plug-in implementace zdroje řízení této funkce vrátí jednu z následujících hodnot:  
+ Modul plug-in implementaci ovládacího prvku zdroje této funkce má vracet instanci jednoho z následujících hodnot:  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
-|SCC_OK|Možnost byl načteny.|  
-|SCC_E_OPNOTSUPPORTED|Možnost není podporována.|  
-|SCC_E_NONSPECIFICERROR|Došlo k neurčené chybě.|  
+|SCC_OK|Možnost se načetla úspěšně.|  
+|SCC_E_OPNOTSUPPORTED|možnost není podporována.|  
+|SCC_E_NONSPECIFICERROR|Došlo k nespecifikované chybě.|  
   
 ## <a name="remarks"></a>Poznámky  
- Pomocí tohoto příkazu jsou podporovány následující možnosti:  
+ Tento příkaz podporuje následující možnosti:  
   
-|Možnost uživatelů|Popis|  
+|Možnosti uživatele|Popis|  
 |-----------------|-----------------|  
-|`SCC_USEROPT_CHECKOUT_LOCALVER`|Určuje, jestli uživatel chce podívejte se na místní verzi souborů. `lpVal` je přiřazen `SCC_USEROPT_COLV_YES` (chce uživatel podívejte se na místní soubory) nebo `SCC_USEROPT_COLV_NO`.|  
+|`SCC_USEROPT_CHECKOUT_LOCALVER`|Určuje, zda chce uživatel podívejte se na místní verzi souborů. `lpVal` je přiřazen `SCC_USEROPT_COLV_YES` (chce uživatel podívejte se na místní soubory) nebo `SCC_USEROPT_COLV_NO`.|  
   
 ## <a name="see-also"></a>Viz také  
- [Funkce modulu Plug-in rozhraní API ovládacího prvku zdroje](../extensibility/source-control-plug-in-api-functions.md)   
+ [Funkce rozhraní API modulu Plug-in zdroje ovládacího prvku](../extensibility/source-control-plug-in-api-functions.md)   
  [Chybové kódy](../extensibility/error-codes.md)

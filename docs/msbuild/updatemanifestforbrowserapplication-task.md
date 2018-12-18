@@ -1,5 +1,5 @@
 ---
-title: Updatemanifestforbrowserapplication – úloha | Microsoft Docs
+title: Updatemanifestforbrowserapplication – úloha | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -20,26 +20,27 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f944d8546fd9124bc881f8421943d34a86698c5
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f7e86f07d0806f6ce5873cd91b68b4b32d58f4e6
+ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51220694"
 ---
-# <a name="updatemanifestforbrowserapplication-task"></a>UpdateManifestForBrowserApplication – úloha
-<xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> Spuštění úlohy Přidat  **\<hostinbrowser – / >** element manifest aplikace (*projectname*. exe.manifest) při [!INCLUDE[TLA#tla_xbap](../msbuild/includes/tlasharptla_xbap_md.md)] sestavení projektu.  
+# <a name="updatemanifestforbrowserapplication-task"></a>Updatemanifestforbrowserapplication – úloha
+<xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> Spuštění úlohy Přidat  **\<hostInBrowser / >** element do manifestu aplikace (*\<projectname >. exe.manifest*) při [!INCLUDE[TLA#tla_xbap](../msbuild/includes/tlasharptla_xbap_md.md)] Projekt se vytvořil.  
   
 ## <a name="task-parameters"></a>Parametry úlohy  
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|`ApplicationManifest`|Požadované **[ITaskItem]** parametr.<br /><br /> Určuje cestu a název souboru manifestu aplikace, který chcete přidat `<hostInBrowser />` element.|  
-|`HostInBrowser`|Požadované **Boolean** parametr.<br /><br /> Určuje, zda chcete upravit manifest aplikace zahrnout  **\<hostinbrowser – / >** element. Pokud **true**, nový `<` **hostinbrowser – / >** element je součástí  **\<entryPoint / >** element. Všimněte si, že element zahrnutí je kumulativní: Pokud  **\<hostinbrowser – / >** element již existuje, není odebrat nebo přepsat. Místo toho další  **\<hostinbrowser – / >** element je vytvořen. Pokud **false**, manifest aplikace se nemění.|  
+|`ApplicationManifest`|Vyžaduje **[] ITaskItem** parametru.<br /><br /> Určuje cestu a název souboru manifestu aplikace, které chcete přidat `<hostInBrowser />` elementu.|  
+|`HostInBrowser`|Vyžaduje **logická** parametru.<br /><br /> Určuje, jestli se má upravit manifest aplikace, které chcete zahrnout  **\<hostInBrowser / >** elementu. Pokud **true**, nový  **\<hostInBrowser / >** element je součástí  **\<vstupního bodu / >** elementu. Zahrnutí elementu je kumulativní: Pokud  **\<hostInBrowser / >** element už existuje, není odebrat nebo přepsat. Místo toho další  **\<hostInBrowser / >** vytvořit prvek. Pokud **false**, manifest aplikace se nezmění.|  
   
 ## <a name="remarks"></a>Poznámky  
- [!INCLUDE[TLA2#tla_xbap#plural](../msbuild/includes/tla2sharptla_xbapsharpplural_md.md)] spustit pomocí [!INCLUDE[TLA#tla_clickonce](../msbuild/includes/tlasharptla_clickonce_md.md)] nasazení a proto musí pomocí publikování s podpora manifesty nasazení a aplikací. [!INCLUDE[TLA#tla_msbuild](../msbuild/includes/tlasharptla_msbuild_md.md)] používá [GenerateApplicationManifest](http://msdn2.microsoft.com/library/6wc2ccdc.aspx) úloh vygenerovat manifest aplikace.  
+ [!INCLUDE[TLA2#tla_xbap#plural](../msbuild/includes/tla2sharptla_xbapsharpplural_md.md)] spuštění pomocí [!INCLUDE[TLA#tla_clickonce](../msbuild/includes/tlasharptla_clickonce_md.md)] nasazení, takže musí být publikovány s podpůrnými manifesty nasazení a aplikace. [!INCLUDE[TLA#tla_msbuild](../msbuild/includes/tlasharptla_msbuild_md.md)] používá [generateapplicationmanifest –](generateapplicationmanifest-task.md) úkolů ke generování manifestu aplikace.  
   
- Potom pro konfiguraci aplikace pro hostování v prohlížeči na další prvek  **\<hostinbrowser – / >** musí být přidaný do manifestu aplikace, jak je vidět v následujícím příkladu:  
+ Pak nakonfigurujte aplikaci zajistit také jejich hostování v prohlížeči, zobrazí se další  **\<hostInBrowser / >** elementu musí být přidán do manifestu aplikace, jak je znázorněno v následujícím příkladu:  
   
 ```xml  
 <!--MyXBAPApplication.exe.manifest-->  
@@ -55,10 +56,10 @@ ms.lasthandoff: 04/19/2018
 />  
 ```  
   
- <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> Při spuštění úlohy [!INCLUDE[TLA2#tla_xbap](../msbuild/includes/tla2sharptla_xbap_md.md)] sestavení projektu chcete-li přidat `<hostInBrowser />` elementu.  
+ <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> Při spuštění úlohy [!INCLUDE[TLA2#tla_xbap](../msbuild/includes/tla2sharptla_xbap_md.md)] sestavení projektu, aby bylo možné přidat `<hostInBrowser />` elementu.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak zajistit, aby `<hostInBrowser />` element je zahrnutá v souboru manifestu aplikace.  
+ Následující příklad ukazuje, jak Ujistěte se, že `<hostInBrowser />` element je součástí souboru manifestu aplikace.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -73,10 +74,10 @@ ms.lasthandoff: 04/19/2018
 </Project>  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [WPF MSBuild – Reference](../msbuild/wpf-msbuild-reference.md)   
+## <a name="see-also"></a>Viz také:  
+ [Referenční dokumentace WPF MSBuild](../msbuild/wpf-msbuild-reference.md)   
  [Referenční dokumentace úlohy](../msbuild/wpf-msbuild-task-reference.md)   
- [MSBuild – Reference](../msbuild/msbuild-reference.md)   
+ [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)   
  [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)   
- [Vytvoření aplikace WPF (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)   
- [Přehled aplikací Prohlížeče WPF XAML](/dotnet/framework/wpf/app-development/wpf-xaml-browser-applications-overview)
+ [Sestavení aplikace WPF (WPF)](/dotnet/framework/wpf/app-development/building-a-wpf-application-wpf)   
+ [Přehled aplikací prohlížeče WPF XAML](/dotnet/framework/wpf/app-development/wpf-xaml-browser-applications-overview)

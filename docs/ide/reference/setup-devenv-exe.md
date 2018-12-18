@@ -1,9 +1,9 @@
 ---
-title: devenv.exe instalační přepínač | Microsoft Docs
+title: přepínač instalací devenv.exe
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: reference
 helpviewer_keywords:
 - setup Devenv switch
 - /setup Devenv switch
@@ -11,15 +11,16 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: eee6e30a7489f5097cb17a19513c2a423187c827
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: eca577c0e4646821262c953cf48256937eed386c
+ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51948371"
 ---
 # <a name="setup-devenvexe"></a>/Setup (devenv.exe)
 
-/ Setup přepínače příčiny sloučení prostředků metadata, která popisuje nabídek, panely nástrojů a příkaz skupin, ze všech dostupných VSPackages sady Visual Studio.
+Přepnout / Setup způsobí, že Visual Studio ke sloučení resource metadata, která popisuje nabídky, panely nástrojů a příkaz skupin, ze všech dostupných rozšíření VSPackages.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,19 +30,19 @@ devenv /setup
 
 ## <a name="remarks"></a>Poznámky
 
-Tento přepínač nezadávaly žádné argumenty. `devenv /setup` Příkaz je obvykle zadána jako poslední krok procesu instalace. Použití `/setup` přepínač nespustí Visual Studio.
+Tento přepínač nepřijímá žádné argumenty. `devenv /setup` Příkaz je obvykle poskytnuta jako poslední krok z procesu instalace. Použití `/setup` přepínače sady Visual Studio nespustí.
 
 > [!NOTE]
-> Je nutné spustit `devenv` jako správce, aby bylo možné používat `/setup` přepínače.
+> Je nutné spustit `devenv` jako správce, aby bylo možné používat `/setup` přepnout.
 
 ## <a name="example"></a>Příklad
 
-Tento příklad ukazuje poslední krok v instalaci verze sady Visual Studio, která zahrnuje VSPackages.
+Tento příklad ukazuje poslední krok při instalaci verze sady Visual Studio, která zahrnuje balíčky VSPackages.
 
 ```shell
 devenv /setup
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Devenv – přepínače příkazového řádku](../../ide/reference/devenv-command-line-switches.md)
+- [Přepínače příkazového řádku nástroje devenv](../../ide/reference/devenv-command-line-switches.md)

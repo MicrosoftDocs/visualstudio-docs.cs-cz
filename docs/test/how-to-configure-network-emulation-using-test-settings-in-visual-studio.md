@@ -1,5 +1,5 @@
 ---
-title: Konfigurace emulace sítě s využitím testovacích nastavení v sadě Visual Studio | Microsoft Docs
+title: Konfigurace emulace sítě s využitím testovacích nastavení
 ms.date: 10/03/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,79 +8,84 @@ ms.assetid: ff275cfb-5df9-4710-9a91-9caabaaad34f
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 137f1980c53d457ef166008a438fca0effacbf44
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 032eff41f0e6b6366e5eb56dad591a02ebde4984
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53065892"
 ---
 # <a name="how-to-configure-network-emulation-using-test-settings-in-visual-studio"></a>Postupy: Konfigurace emulace sítě s využitím testovacích nastavení v sadě Visual Studio
 
-Můžete nakonfigurovat adaptér diagnostických dat, který má testovat aplikaci v různých prostředích sítě ze sady Visual Studio. Lze ji také konfigurace na testování zatížení umělé sítě, nebo problémové místo, při spuštění testů.
+Můžete nakonfigurovat adaptér diagnostických dat a otestujte aplikaci v různých síťových prostředích ze sady Visual Studio. Můžete také možné nakonfigurovat, aby testovací umělé zatížení sítě nebo problémového místa při spuštění testů.
 
 > [!WARNING]
-> Pokud spouštíte testy na skutečné síti, která je typu pomalejší než síť, kterou jsou emulace, bude i nadále spustit test nižší rychlostí sítě. Emulaci můžete pouze zpomalit síťové prostředí, není urychlit.
+> Pokud spustíte testy na skutečné síti, která je pomalejšího typu než síť, kterou emulujete, test bude stále spuštěn pomocí pomalejší rychlosti sítě. Emulace můžete pouze zpomalit síťové prostředí, ne zrychlit.
 
- Následující postup popisuje postup konfigurace emulace sítě s z editoru konfigurace. Tento postup platí pro editor konfigurací v nástroji Microsoft Test Manager a sady Visual Studio.
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
-> [!NOTE]
-> Adaptér diagnostických dat emulace sítě platí pouze pro nastavení testů v sadě Visual Studio. Pro nastavení testů v nástroji Microsoft Test Manager se nepoužívá.
-
-Účet, který má oprávnění správce musí použít pro emulace sítě. Pokud jste vybrali emulace sítě pro roli místní, který spouští manuálních testů, je nutné spustit nástroje Microsoft Test Manager pomocí oprávnění správce. Pokud jste vybrali emulace sítě pro jiné role, je nutné ověřit, že testovacího agenta na počítači pro tuto roli používá uživatelský účet, který je členem skupiny administrators. Další informace o tom, jak nastavení účtu pro agenta test agent najdete v tématu [instalace a konfigurace testovacích agentů](../test/lab-management/install-configure-test-agents.md).
+Následující postup popisuje konfiguraci emulace sítě z editoru konfigurace. Tento postup platí pro editor konfigurace v nástroji Microsoft Test Manager a sady Visual Studio.
 
 > [!NOTE]
-> Účet Network Service, což je výchozí účet pro test agenta, není členem skupiny administrators.
+> Adaptér diagnostických dat síťové emulace platí pouze pro nastavení testu Visual Studio. Pro nastavení testu v nástroji Microsoft Test Manager se nepoužívá.
 
- **Skutečné emulace sítě s**
+Pro emulaci sítě musíte použít účet, který má oprávnění správce. Pokud jste vybrali emulaci sítě pro roli místního spuštění ručních testů, je nutné spustit Microsoft Test Manager pomocí oprávnění správce. Pokud jste vybrali emulaci sítě pro jiné role, je nutné ověřit, že testovací agent na počítači pro tuto roli používá uživatelský účet, který je členem skupiny administrators. Další informace o tom, jak nastavit účet pro testovacího agenta, najdete v části [instalace a konfigurace testovacích agentů](../test/lab-management/install-configure-test-agents.md).
 
- Visual Studio použije softwarový skutečné emulace sítě s u všech typů testu. To zahrnuje zátěžové testy. Skutečné emulace sítě s simuluje síťové podmínky přímé manipulace s síťových paketů. Emulátor true sítě můžete emulují chování drátové a bezdrátové sítě pomocí spolehlivé fyzického propojení, jako je například na Ethernetu. Následující atributy sítě jsou součástí skutečné emulace sítě s:
+> [!NOTE]
+> Účet Network Service, což je výchozí účet pro testovacího agenta, není členem skupiny administrators.
 
--   Doba odezvy v síti (latence)
+**Skutečná emulace sítě**
 
--   Množství dostupné šířky pásma
+Visual Studio používá pro všechny typy testu skutečnou síťovou softwarovou emulaci. Patří sem zátěžové testy. Skutečná emulace sítě simuluje stavy sítě prostřednictvím přímé manipulace se síťovými pakety. Emulátor skutečné sítě může emulovat chování drátové i bezdrátové sítě pomocí spolehlivého fyzického propojení, jako je Ethernet. Následující atributy sítě jsou začleněny do emulace sítě:
 
--   Chování služby Řízení front
+- Časem přenosu v síti (čekací doba)
 
--   Ztráta paketů
+- Množství dostupné šířky pásma
 
--   Změna pořadí paketů
+- Chování řízení front
 
--   Chyba šíření.
+- Ztráta paketů
 
- Skutečné emulace sítě s taky poskytuje flexibilitu při filtrování síťových paketů na základě IP adresy nebo protokoly, například TCP, UDP a protokolu ICMP.
+- Změna pořadí paketů
 
- Skutečné emulace sítě s lze založené na síti vývojáři a testerům, sada emulovat požadované testovacím prostředí, vyhodnocení výkonu, odhadnout účinky změny nebo rozhodnutí o technologii optimalizace. V porovnání s výskytu test hardwaru, skutečné emulace sítě s je výrazně levnější a flexibilnější řešení.
+- Šíření chyb.
 
-## <a name="configure-network-emulation-for-your-test-settings"></a>Konfigurace emulace sítě s pro nastavení testu
- Před provedením kroků v tomto postupu, otevřete nastavení testů ze sady Visual Studio a pak vyberte **datové a diagnostické** stránky.
+Skutečná emulace sítě také poskytuje flexibilitu při filtrování síťových paketů na základě IP adresy nebo protokoly, například TCP, UDP a ICMP.
+
+Skutečná emulace sítě umožňuje založené na síti vývojářům a testerům emulovat požadované zkušební prostředí, hodnotit výkon, odhadnout účinky změn nebo rozhodovat o optimalizaci technologie. Srovnání s vrstvami testovacího hardwaru je skutečná emulace sítě mnohem levnější a pružnější řešení.
+
+## <a name="configure-network-emulation-for-your-test-settings"></a>Konfigurace emulace sítě pro nastavení testu
+
+Před provedením kroků v tomto postupu je nutné otevřít nastavení testů ze sady Visual Studio a vyberte **dat a diagnostiky** stránky.
 
 ### <a name="to-configure-network-emulation-for-your-test-settings"></a>Konfigurace emulace sítě pro nastavení testu
 
-1.  Vyberte role, kterou chcete použít k emulaci konkrétní síť.
+1.  Vyberte roli, které chcete použít k emulaci určité sítě.
 
     > [!NOTE]
-    > Budete muset nakonfigurovat adaptér emulace sítě s pouze na role klienta nebo role serveru. Není nutné používat adaptér na obě role. Adaptér emuluje šumu sítě, která má vliv na komunikaci mezi obě role, takže není nutné ji použít v obou. Pokud to není nezbytné, měli byste vybrat roli klienta pro adaptér emulace sítě s, aby se zabránilo další režii v roli serveru.
+    > Budete muset nakonfigurovat adaptér emulace sítě pouze v roli klienta nebo role serveru. Není nutné použít adaptér pro obě role. Adaptér emuluje rušení v síti, která má vliv na komunikaci mezi oběma rolemi, takže není nutné jej používat u obou. Pokud to není nezbytné, měli byste vybrat roli klienta adaptéru emulace sítě, aby se zabránilo další režii v roli serveru.
 
-2.  Vyberte **emulace sítě s** a potom zvolte **konfigurace**.
+2.  Vyberte **emulace sítě** a klikněte na tlačítko **konfigurovat**.
 
-     Zobrazí se dialogové okno Konfigurace emulace sítě.
+     Zobrazí se dialogové okno pro konfiguraci emulace sítě.
 
-3.  Vyberte šipku vedle **vyberte profil sítě používat**a vyberte typ sítě, který chcete emulovat při spuštění testu (například **kabel DSL 768Kps**).
+3.  Klikněte na šipku vedle položky **vyberte profil sítě na používání**a vyberte typ sítě, kterou chcete emulovat při spuštění testu (například **kabel-DSL, 768 kb /**).
 
     > [!WARNING]
-    > Pokud spouštíte testy na skutečné síti, která je typu pomalejší než síť, která jsou emulace, bude i nadále spustit test nižší rychlostí sítě. Emulaci můžete pouze zpomalit síťové prostředí, není urychlit.
+    > Pokud spustíte testy na skutečné síti, která je pomalejšího typu než síť, kterou emulujete, test bude stále spuštěn pomocí pomalejší rychlosti sítě. Emulace můžete pouze zpomalit síťové prostředí, ne zrychlit.
 
-4.  Pokud jste zahrnuli adaptér diagnostických dat emulace sítě v nastavení testu a máte v úmyslu použít na místním počítači, pak je třeba také svázat ovladač emulace sítě jeden ze síťových adaptérů váš počítač. Ovladač emulace sítě je vyžadována pro adaptér diagnostických dat emulace sítě funkce. Ovladač emulace sítě je nainstalován a vázána na váš adaptér dvěma způsoby:
+4.  Pokud zahrnete emulaci adaptéru diagnostických dat sítě v nastavení testu a máte v úmyslu použít na místním počítači, pak musíte také svázat ovladač emulace sítě do jednoho ze síťových adaptérů v počítači. Ovladač emulace sítě je vyžadován pro adaptér diagnostických dat síťové emulace na funkci. Ovladač emulace sítě je nainstalován a svázán k adaptéru dvěma způsoby:
 
-    -   **Ovladač emulace sítě s Microsoft Visual Studio Test Agent nainstalovat:** Microsoft Visual Studio Test Agent lze použít na vzdálených počítačích a v místním počítači. Když instalujete Visual Studio agentem Test Agent, proces instalace zahrnuje krok konfigurace, která se váže k síťové kartě ovladač emulace sítě. Další informace najdete v tématu [instalace a konfigurace testovacích agentů](../test/lab-management/install-configure-test-agents.md).
+    -   **Ovladač pro emulaci sítě nainstalovaný s Microsoft Visual Studio Test Agent:** The Microsoft Visual Studio Test Agent lze použít na vzdálených počítačích a v místním počítači. Když instalujete Visual Studio Test Agent, instalační proces zahrnuje krok konfigurace, spojující ovladač emulace sítě se síťovou kartou. Další informace najdete v tématu [instalace a konfigurace testovacích agentů](../test/lab-management/install-configure-test-agents.md).
 
-    -   **Ovladač emulace sítě s Microsoft Visual Studio Test Professional nainstalovat:** při použití emulace sítě poprvé, budete vyzváni k vytvoření vazby ovladač emulace sítě síťové karty.
+    -   **Ovladač pro emulaci sítě nainstalovaný s Microsoft Visual Studio Test Professional:** při prvním použití emulace sítě, budete vyzváni k vytvoření vazby ovladač emulace sítě se síťovou kartou.
 
     > [!TIP]
-    > Můžete také nainstalovat ovladač emulace sítě z příkazového řádku na místním počítači bez instalace agenta pro testovací sady Visual Studio pomocí následujícího příkazu:   **/VSTestConfig NETWORKEMULATION Install**
+    > Můžete také nainstalovat ovladač emulace sítě z příkazového řádku na místním počítači bez instalace testovacího agenta sady Visual Studio pomocí následujícího příkazu: **VSTestConfig NETWORKEMULATION/Install**
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Shromažďování diagnostických informací s použitím nastavení testu](../test/collect-diagnostic-information-using-test-settings.md)
-- [Spouštění manuálních testů (VSTS)](/vsts/manual-test/getting-started/run-manual-tests)
+- [Shromažďování diagnostických údajů pomocí nastavení testů](../test/collect-diagnostic-information-using-test-settings.md)
+- [Spouštění ručních testů (Azure testovací plány)](/azure/devops/test/run-manual-tests?view=vsts)

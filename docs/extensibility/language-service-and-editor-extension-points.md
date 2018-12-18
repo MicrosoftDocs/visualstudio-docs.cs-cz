@@ -1,5 +1,5 @@
 ---
-title: Služba jazyka a body rozšíření editoru | Microsoft Docs
+title: Služba jazyka a editoru Rozšiřovací body | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,18 +13,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d3c253ba52da1fd6bb9133e44ba6858e8f1a4151
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2df3de4bfba0510cf3c8a5474a363a5ec579a79f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49927746"
 ---
-# <a name="language-service-and-editor-extension-points"></a>Služba jazyka a body rozšíření editoru
-Editor poskytuje rozšíření body, které můžete rozšířit jako součásti Managed Extensibility Framework (MEF), včetně většinu funkcí služby jazyk. Toto jsou hlavní rozšíření bodu kategorií:  
+# <a name="language-service-and-editor-extension-points"></a>Jazykové služby a editor Rozšiřovací body
+Editor poskytuje Rozšiřovací body, které můžete rozšířit jako součásti Managed Extensibility Framework (MEF), včetně většina funkcí služby jazyka. Toto jsou hlavní rozšíření kategorií bodu:  
   
 -   Typy obsahu  
   
--   Klasifikace typy a formáty klasifikace  
+-   Typy klasifikace a klasifikace formáty  
   
 -   Okraje a posuvníky  
   
@@ -32,24 +33,24 @@ Editor poskytuje rozšíření body, které můžete rozšířit jako součásti
   
 -   Vylepšení  
   
--   Myš procesorů  
+-   Procesory myši  
   
--   Vyřaďte obslužné rutiny  
+-   Vyřadit obslužné rutiny  
   
 -   Možnosti  
   
 -   IntelliSense  
   
-## <a name="extending-content-types"></a>Rozšíření typů obsahu  
- Typy obsahu jsou definice druhy textového editoru, například zpracovávaných, "text", "kód" nebo "CSharp". Zadejte nový typ obsahu pomocí deklarace proměnné typu <xref:Microsoft.VisualStudio.Utilities.ContentTypeDefinition> a poskytnete jedinečný název nového typu obsahu. Chcete-li zaregistrovat typ obsahu pomocí editoru, ho exportujte společně s následujícími atributy:  
+## <a name="extend-content-types"></a>Rozšíření typů obsahu  
+ Typy obsahu jsou definice typů zpracovat editoru, například text, "text", "kód" nebo "CSharp". Nový typ obsahu definujete deklarováním proměnné typu <xref:Microsoft.VisualStudio.Utilities.ContentTypeDefinition> a poskytuje jedinečný název nového typu obsahu. K registraci typu obsahu v editoru, exportujte ho spolu s následujícími atributy:  
   
--   <xref:Microsoft.VisualStudio.Utilities.NameAttribute> je název typu obsahu.  
+- <xref:Microsoft.VisualStudio.Utilities.NameAttribute> je název typu obsahu.  
   
--   <xref:Microsoft.VisualStudio.Utilities.BaseDefinitionAttribute> je název typu obsahu, ze kterého je odvozen tento typ obsahu. Typ obsahu. může dědit z více jiné typy obsahu.  
+- <xref:Microsoft.VisualStudio.Utilities.BaseDefinitionAttribute> je název typu obsahu, ze kterého je odvozen tohoto typu obsahu. Typ obsahu může dědit z více jiné typy obsahu.  
   
- Protože <xref:Microsoft.VisualStudio.Utilities.ContentTypeDefinition> třída je zapečetěná, můžete ho exportovat s žádný parametr typu.  
+  Vzhledem k tomu, <xref:Microsoft.VisualStudio.Utilities.ContentTypeDefinition> zapečetěné třídy, můžete ho exportovat s parametr typu.  
   
- Následující příklad ukazuje export atributy v definici typu obsahu.  
+  Následující příklad ukazuje atributů exportu v definici typu obsahu.  
   
 ```  
 [Export]  
@@ -59,73 +60,73 @@ Editor poskytuje rozšíření body, které můžete rozšířit jako součásti
 internal static ContentTypeDefinition TestContentTypeDefinition;  
 ```  
   
- Typy obsahu, může být založen na počtu nula či více typy existující obsahu. Toto jsou předdefinované typy:  
+ Typy obsahu, může být založen na nula nebo více stávajícím obsahu typy. Toto jsou předdefinované typy:  
   
--   Žádné: základní typ obsahu. Nadřazené všechny ostatní typy obsahu.  
+- Žádné: základní typ obsahu. Nadřazený všechny ostatní typy obsahu.  
   
--   Text: základní typ pro jiných projekci obsahu. Dědit z "žádný".  
+- Text: základní typ pro jiné projekci obsahu. Dědí z "žádný".  
   
--   Ve formátu prostého textu: pro text jiný kód. Dědit z "text".  
+- Ve formátu prostého textu: pro text bez kódu. Dědí z "text".  
   
--   Kód: pro kód všechny typy. Dědit z "text".  
+- Kód: pro kód všeho druhu. Dědí z "text".  
   
--   Inertním: vyloučí text z jakéhokoli druhu zpracování. Text tento typ obsahu bude mít nikdy všechna rozšíření, použije na ni.  
+- Inertním: vyloučí z jakéhokoli druhu zpracování textu. Text tohoto typu obsahu nebude mít nikdy žádná všechna rozšíření použit.  
   
--   Projekce: pro obsah projekce vyrovnávací paměti. Dědit z "žádný".  
+- Projekce: za obsah vyrovnávací paměti projekce. Dědí z "žádný".  
   
--   IntelliSense: pro obsah IntelliSense. Dědit z "text".  
+- IntelliSense: pro obsah technologie IntelliSense. Dědí z "text".  
   
--   Sighelp: Nápověda podpis. Dědit z "intellisense".  
+- Sighelp: nápovědu k signatuře. Dědí z "intellisense".  
   
--   Sighelp-doc: podpis nápovědě. Dědit z "intellisense".  
+- Sighelp-doc: dokumentace nápovědy podpis. Dědí z "intellisense".  
   
- Toto jsou některé typy obsahu, které jsou definované v sadě Visual Studio a některých jazyků, které jsou hostované v sadě Visual Studio:  
+  Toto jsou některé typy obsahu, které jsou definovány pomocí sady Visual Studio a některých jazyků, které jsou hostovány v sadě Visual Studio:  
   
--   Základní  
+- Základní  
   
--   C/C++  
+- C/C++  
   
--   ConsoleOutput  
+- ConsoleOutput  
   
--   CSharp  
+- CSharp  
   
--   CSS  
+- CSS  
   
--   ŠIF  
+- KODÉRU  
   
--   FindResults  
+- FindResults  
   
--   F#  
+- F#  
   
--   HTML  
+- HTML  
   
--   JScript  
+- JScript  
   
--   XAML  
+- XAML  
   
--   XML  
+- XML  
   
- Chcete-li zjistit seznam dostupných typů obsahu, importujte <xref:Microsoft.VisualStudio.Utilities.IContentTypeRegistryService>, která udržuje kolekci typů obsahu pro editor. Následující kód importuje této služby jako vlastnost.  
+  Chcete-li vyhledat seznam dostupných typů obsahu, importovat <xref:Microsoft.VisualStudio.Utilities.IContentTypeRegistryService>, která udržuje kolekci typů obsahu editoru. Následující kód importuje tuto službu jako vlastnost.  
   
 ```  
 [Import]  
 internal IContentTypeRegistryService ContentTypeRegistryService { get; set; }  
 ```  
   
- Chcete-li přidružit příponu názvu souboru, typu obsahu, použijte <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition>.  
+ Chcete-li přidružit typu obsahu s příponou názvu souboru, použijte <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition>.  
   
 > [!NOTE]
->  V sadě Visual Studio jsou registrované přípony názvů souborů pomocí <xref:Microsoft.VisualStudio.Shell.ProvideLanguageExtensionAttribute> na balíček služby jazyk. <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition> Přidruží typ obsahu MEF příponu názvu souboru, který byl zaregistrován tímto způsobem.  
+>  V sadě Visual Studio, jsou registrované přípony názvů souborů pomocí <xref:Microsoft.VisualStudio.Shell.ProvideLanguageExtensionAttribute> v balíčku služby jazyka. <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition> Přidruží MEF typu obsahu s příponou názvu souboru, který byl zaregistrován tímto způsobem.  
   
- Pokud chcete exportovat příponu názvu souboru do definice typu obsahu, musí zahrnovat následující atributy:  
+ Pokud chcete exportovat příponu názvu souboru do definice typu obsahu, musí obsahovat následující atributy:  
   
--   <xref:Microsoft.VisualStudio.Utilities.FileExtensionAttribute>: Určuje příponu názvu souboru.  
+- <xref:Microsoft.VisualStudio.Utilities.FileExtensionAttribute>: Určuje příponu názvu souboru.  
   
--   <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>: Určuje typ obsahu.  
+- <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>: Určuje typ obsahu.  
   
- Protože <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition> třída je zapečetěná, můžete ho exportovat s žádný parametr typu.  
+  Vzhledem k tomu, <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition> zapečetěné třídy, můžete ho exportovat s parametr typu.  
   
- Následující příklad ukazuje atributy export na příponu názvu souboru do definice typu obsahu.  
+  Následující příklad ukazuje export atributy na příponu názvu souboru s definicí typu obsahu.  
   
 ```  
 [Export]  
@@ -134,20 +135,20 @@ internal IContentTypeRegistryService ContentTypeRegistryService { get; set; }
 internal static FileExtensionToContentTypeDefinition TestFileExtensionDefinition;  
 ```  
   
- <xref:Microsoft.VisualStudio.Utilities.IFileExtensionRegistryService> Spravuje přidružení mezi přípony názvů souborů a typy obsahu.  
+ <xref:Microsoft.VisualStudio.Utilities.IFileExtensionRegistryService> Spravuje přidružení přípony názvů souborů a typy obsahu.  
   
-## <a name="extending-classification-types-and-classification-formats"></a>Rozšíření typů klasifikaci a klasifikaci formáty  
- Typy klasifikaci můžete definovat typy text, pro který chcete zadat jinou zpracování (například zvýrazňování modrý text "– klíčové slovo" a "komentář" text zelená). Definujte nový typ klasifikace deklarace proměnné typu <xref:Microsoft.VisualStudio.Text.Classification.ClassificationTypeDefinition> a předá jedinečný název.  
+## <a name="extend-classification-types-and-classification-formats"></a>Rozšíření klasifikace typy a formáty klasifikace  
+ Typy klasifikace můžete použít k definování typů text, pro které chcete poskytnout různé zpracování (například obarvení modrý text "– klíčové slovo" a "komentář" zelená). Definujte nový typ klasifikace deklarováním proměnné typu <xref:Microsoft.VisualStudio.Text.Classification.ClassificationTypeDefinition> a poskytuje tak jedinečný název.  
   
- Chcete-li zaregistrovat typ klasifikace pomocí editoru, ho exportujte společně s následujícími atributy:  
+ Pokud chcete zaregistrovat typ klasifikace editor, ho exportujte společně s následujícími atributy:  
   
--   <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: název typu klasifikace.  
+- <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: název typu klasifikace.  
   
--   <xref:Microsoft.VisualStudio.Utilities.BaseDefinitionAttribute>: název typu klasifikace, ze kterého tento typ klasifikace dědí. Všechny typy klasifikace dědit z "text" a typu klasifikace mohou dědit z několika dalších typů klasifikace.  
+- <xref:Microsoft.VisualStudio.Utilities.BaseDefinitionAttribute>: název typu klasifikace, ze kterého dědí tento typ klasifikace. Všechny typy klasifikace dědí "text" a typ klasifikace může dědit z více jiných typů klasifikace.  
   
- Protože <xref:Microsoft.VisualStudio.Text.Classification.ClassificationTypeDefinition> třída je zapečetěná, můžete ho exportovat s žádný parametr typu.  
+  Vzhledem k tomu, <xref:Microsoft.VisualStudio.Text.Classification.ClassificationTypeDefinition> zapečetěné třídy, můžete ho exportovat s parametr typu.  
   
- Následující příklad ukazuje export atributy v definici typu klasifikace.  
+  Následující příklad ukazuje atributů exportu v definici typu klasifikace.  
   
 ```  
 [Export]  
@@ -156,50 +157,50 @@ internal static FileExtensionToContentTypeDefinition TestFileExtensionDefinition
 internal static ClassificationTypeDefinition CSharpTestDefinition;  
 ```  
   
- <xref:Microsoft.VisualStudio.Language.StandardClassification.IStandardClassificationService> Poskytuje přístup k standardní klasifikace. Mezi tyto typy předdefinované klasifikace patří:  
+ <xref:Microsoft.VisualStudio.Language.StandardClassification.IStandardClassificationService> Poskytuje přístup ke standardní klasifikace. Typy integrovaných klasifikace patří tyto:  
   
--   "text"  
+- "text"  
   
--   "přirozený jazyk" (odvozená z "text")  
+- "přirozeného jazyka" (je odvozen od "text")  
   
--   "formální jazyk" (odvozená z "text")  
+- "formální jazyk" (je odvozen od "text")  
   
--   "řetězec" (odvozená z "literál")  
+- "string" (je odvozen od "literál")  
   
--   "znak" (odvozená z "literál")  
+- "znak" (je odvozen od "literál")  
   
--   "číselné" (odvozená z "literál")  
+- "Číselná" (je odvozen od "literál")  
   
- Sadu typů různých chyb dědí <xref:Microsoft.VisualStudio.Text.Adornments.ErrorTypeDefinition>. Tato nastavení zahrnují následující typy chyb:  
+  Sadu typů různých chyb dědí <xref:Microsoft.VisualStudio.Text.Adornments.ErrorTypeDefinition>. Patří mezi ně následující typy chyb:  
   
--   "Chyba syntaxe"  
+- "Chyba syntaxe"  
   
--   "Chyba kompilátoru"  
+- "Chyba kompilátoru"  
   
--   "jiné error.  
+- "Další chyba"  
   
--   "upozornění"  
+- "upozornění"  
   
- Chcete-li zjistit, seznamu dostupných typů klasifikace, importujte <xref:Microsoft.VisualStudio.Text.Classification.IClassificationTypeRegistryService>, která udržuje kolekci typů klasifikace pro editor. Následující kód importuje této služby jako vlastnost.  
+  Chcete-li zjistit, v seznamu typů k dispozici klasifikace, importovat <xref:Microsoft.VisualStudio.Text.Classification.IClassificationTypeRegistryService>, která udržuje kolekci typů klasifikace pro editor. Následující kód importuje tuto službu jako vlastnost.  
   
 ```  
 [Import]  
 internal IClassificationTypeRegistryService ClassificationTypeRegistryService { get; set; }  
 ```  
   
- Definice formátu klasifikaci můžete definovat nového typu klasifikace. Odvození třídy z <xref:Microsoft.VisualStudio.Text.Classification.ClassificationFormatDefinition> a exportovat je s typem <xref:Microsoft.VisualStudio.Text.Classification.EditorFormatDefinition>, společně s následujícími atributy:  
+ Definici formátu klasifikace můžete definovat pro nový typ klasifikace. Odvodit třídu z <xref:Microsoft.VisualStudio.Text.Classification.ClassificationFormatDefinition> a exportujte ho s typem <xref:Microsoft.VisualStudio.Text.Classification.EditorFormatDefinition>společně s následujícími atributy:  
   
--   <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: název formátu.  
+- <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: název formátu.  
   
--   <xref:Microsoft.VisualStudio.Utilities.DisplayNameAttribute>: Zobrazovaný název formátu.  
+- <xref:Microsoft.VisualStudio.Utilities.DisplayNameAttribute>: Zobrazovaný název formátu.  
   
--   <xref:Microsoft.VisualStudio.Text.Classification.UserVisibleAttribute>: Určuje, zda se zobrazí ve formátu na **písma a barev** stránky **možnosti** dialogové okno.  
+- <xref:Microsoft.VisualStudio.Text.Classification.UserVisibleAttribute>: Určuje, zda se zobrazí ve formátu na **písma a barvy** stránku **možnosti** dialogové okno.  
   
--   <xref:Microsoft.VisualStudio.Utilities.OrderAttribute>: prioritu formátu. Platné hodnoty jsou z <xref:Microsoft.VisualStudio.Text.Classification.Priority>.  
+- <xref:Microsoft.VisualStudio.Utilities.OrderAttribute>: Priorita formátu. Platné hodnoty jsou od <xref:Microsoft.VisualStudio.Text.Classification.Priority>.  
   
--   <xref:Microsoft.VisualStudio.Text.Classification.ClassificationTypeAttribute>: název klasifikace typ, který má tento formát je namapovaný.  
+- <xref:Microsoft.VisualStudio.Text.Classification.ClassificationTypeAttribute>: Tento formát je namapovaný zadejte název klasifikace.  
   
- Následující příklad ukazuje atributy export na definici formátu klasifikace.  
+  Následující příklad ukazuje atributů exportu v definici formátu klasifikace.  
   
 ```  
 [Export(typeof(EditorFormatDefinition))]  
@@ -211,39 +212,39 @@ internal IClassificationTypeRegistryService ClassificationTypeRegistryService { 
 internal sealed class TestFormat : ClassificationFormatDefinition  
 ```  
   
- Chcete-li zjistit seznam dostupných formátů, importujte <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMapService>, která udržuje kolekci formátů pro editor. Následující kód importuje této služby jako vlastnost.  
+ Chcete-li zjistit, ze seznamu dostupných formátů, importovat <xref:Microsoft.VisualStudio.Text.Classification.IEditorFormatMapService>, která udržuje kolekci formáty pro editor. Následující kód importuje tuto službu jako vlastnost.  
   
 ```  
 [Import]  
 internal IEditorFormatMapService FormatMapService { get; set; }  
 ```  
   
-## <a name="extending-margins-and-scrollbars"></a>Rozšíření okraje a posuvníky  
- Okraje a posuvníky jsou hlavní zobrazení prvků editoru kromě samotném zobrazení textu. Můžete zadat libovolný počet okraje kromě standardní okraje, které jsou kolem textového zobrazení.  
+## <a name="extend-margins-and-scrollbars"></a>Rozšíření okraje a posuvníky  
+ Okraje a posuvníky jsou prvky hlavního zobrazení editoru kromě samotného zobrazení textu. Můžete zadat libovolný počet okraje kromě standardních okraje, které se zobrazí po zobrazení textu.  
   
- Implementace <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewMargin> rozhraní k definování okraj. Musíte také implementovat <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewMarginProvider> rozhraní pro vytváření okraj.  
+ Implementace <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewMargin> rozhraní k definování okraj. Musíte také implementovat <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewMarginProvider> rozhraní pro vytváření na okraj.  
   
- K registraci poskytovatele okraj pomocí editoru, musíte exportovat zprostředkovatele společně s následujícími atributy:  
+ Zaregistrujte poskytovatele okraj v editoru, musíte exportovat poskytovatele společně s následujícími atributy:  
   
--   <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: název rozpětí.  
+- <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: název na okraj.  
   
--   <xref:Microsoft.VisualStudio.Utilities.OrderAttribute>: pořadí, ve kterém se zobrazí okraj, vzhledem k jiné stránky.  
+- <xref:Microsoft.VisualStudio.Utilities.OrderAttribute>: pořadí, ve kterém se zobrazí na okraji, vzhledem k jinými okraji.  
   
-     Toto jsou předdefinované okraje:  
+   Toto jsou integrované okraje:  
   
-    -   "Wpf vodorovných Scrollbar"  
+  - "Wpf vodorovný posuvník"  
   
-    -   "Wpf Vertical Scrollbar"  
+  - "Wpf svislý posuvník"  
   
-    -   "Číslo okraj řádku Wpf"  
+  - "Číslo řádku Wpf okraj"  
   
-     Vodorovné okraje, které mají atribut pořadí `After="Wpf Horizontal Scrollbar"` níže předdefinované okraj a vodorovné okraje, které mají atribut pořadí se zobrazují `Before ="Wpf Horizontal Scrollbar"` jsou zobrazeny výše předdefinované okraj. Pravým svislé okraje, které mají atribut pořadí `After="Wpf Vertical Scrollbar"` se zobrazí vpravo od posuvník. Levé svislé okraje, které mají atribut pořadí `After="Wpf Line Number Margin"` (Pokud je zobrazen) se zobrazí vlevo číslo okraj řádku.  
+    Vodorovné okraje, které mají atribut pořadí `After="Wpf Horizontal Scrollbar"` se zobrazí pod integrované okraj a horizontální okraje, které mají atribut pořadí `Before ="Wpf Horizontal Scrollbar"` se zobrazují nad integrované okraj. Klikněte pravým tlačítkem myši svislé okraje, které mají atribut pořadí `After="Wpf Vertical Scrollbar"` se zobrazí napravo od posuvník. Left svislé okraje, které mají atribut pořadí `After="Wpf Line Number Margin"` (Pokud je zobrazen) se zobrazí na levém okraji čísla řádku.  
   
--   <xref:Microsoft.VisualStudio.Text.Editor.MarginContainerAttribute>: druh okraj (levé, pravé, top a bottom).  
+- <xref:Microsoft.VisualStudio.Text.Editor.MarginContainerAttribute>: typ rozpětí (vlevo, vpravo, nahoře nebo dole).  
   
--   <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>: druh obsah (například "text" nebo "kódu"), pro který je platný vaší okraj.  
+- <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>: druh obsah (například "text" nebo "code"), pro který je platný vaše okraj.  
   
- Následující příklad ukazuje atributy export na okraj poskytovatele pro okraj, který se zobrazí vpravo od číslo okraj řádku.  
+  Následující příklad ukazuje export atributy na zprostředkovateli okraj okraje, která se zobrazí napravo od na okraji čísla řádku.  
   
 ```  
 [Export(typeof(IWpfTextViewMarginProvider))]  
@@ -253,34 +254,34 @@ internal IEditorFormatMapService FormatMapService { get; set; }
 [ContentType("text")]   
 ```  
   
-## <a name="extending-tags"></a>Rozšíření značek  
- Značky jsou způsob přiřazení dat s různými druhy textu. V mnoha případech související data se zobrazí jako vizuální efekt, ale ne všechny značky mít vizuální prezentaci. Můžete definovat vlastní typ značky implementací <xref:Microsoft.VisualStudio.Text.Tagging.ITag>. Musíte také implementovat <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601> zajistit značek pro danou sadu rozpětí textu a <xref:Microsoft.VisualStudio.Text.Tagging.ITaggerProvider> zajistit tagger. Je nutné exportovat zprostředkovatele tagger společně s následujícími atributy:  
+## <a name="extend-tags"></a>Rozšíření značek  
+ Značky jsou způsob, jak data přidružení různé druhy textu. V mnoha případech související data se zobrazí jako vizuální efekt, ale ne všechny značky obsahovat vizuální prezentace. Můžete definovat vlastní typ značky implementací <xref:Microsoft.VisualStudio.Text.Tagging.ITag>. Musíte také implementovat <xref:Microsoft.VisualStudio.Text.Tagging.ITagger%601> zajištění značky pro danou sadu rozpětí textu a <xref:Microsoft.VisualStudio.Text.Tagging.ITaggerProvider> poskytnout označovatel. Je nutné exportovat poskytovateli označovatel společně s následujícími atributy:  
   
--   <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>: druh obsah (například "text" nebo "kódu"), pro který je vaše značky platný.  
+- <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>: typ obsah (například "text" nebo "code"), pro který je platný vaší značky.  
   
--   <xref:Microsoft.VisualStudio.Text.Tagging.TagTypeAttribute>: typ značky.  
+- <xref:Microsoft.VisualStudio.Text.Tagging.TagTypeAttribute>: typ značky.  
   
- Následující příklad ukazuje na zprostředkovateli tagger export atributy.  
+  Následující příklad ukazuje na zprostředkovateli označovatel atributů exportu.  
   
 <CodeContentPlaceHolder>8</CodeContentPlaceHolder>  
  Následující typy značky jsou předdefinované:  
   
--   <xref:Microsoft.VisualStudio.Text.Tagging.ClassificationTag>: přidružené <xref:Microsoft.VisualStudio.Text.Classification.IClassificationType>.  
+- <xref:Microsoft.VisualStudio.Text.Tagging.ClassificationTag>: přidružené <xref:Microsoft.VisualStudio.Text.Classification.IClassificationType>.  
   
--   <xref:Microsoft.VisualStudio.Text.Tagging.ErrorTag>: přidružené typy chyb.  
+- <xref:Microsoft.VisualStudio.Text.Tagging.ErrorTag>: přidružené typy chyb.  
   
--   <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag>: přidružené dalších úprav.  
+- <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag>: přidružené dalších úprav.  
   
-    > [!NOTE]
-    >  Příklad <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag>, viz definice HighlightWordTag v [návod: zvýraznění textu](../extensibility/walkthrough-highlighting-text.md).  
+  > [!NOTE]
+  >  Příklad <xref:Microsoft.VisualStudio.Text.Tagging.TextMarkerTag>, viz HighlightWordTag definice v [návod: zvýraznění textu](../extensibility/walkthrough-highlighting-text.md).  
   
--   <xref:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag>: přidružené k oblasti, které můžete rozbalit nebo sbalit v osnovy.  
+- <xref:Microsoft.VisualStudio.Text.Tagging.OutliningRegionTag>: přidružené k oblasti, které můžete rozbalit nebo sbalit v osnovy.  
   
--   <xref:Microsoft.VisualStudio.Text.Tagging.SpaceNegotiatingAdornmentTag>: definuje prostor zabírá dalších úprav v zobrazení textu. Další informace o vylepšení vyjednávání místa najdete v následující části.  
+- <xref:Microsoft.VisualStudio.Text.Tagging.SpaceNegotiatingAdornmentTag>: definuje prostor zabírá dalších úprav v náhledu textu. Další informace o vylepšení vyjednávání místa najdete v následující části.  
   
--   <xref:Microsoft.VisualStudio.Text.Editor.IntraTextAdornmentTag>: poskytuje automatické mezery a velikosti dalších úprav.  
+- <xref:Microsoft.VisualStudio.Text.Editor.IntraTextAdornmentTag>: poskytuje automatické mezery a velikosti dalších úprav.  
   
- Chcete-li najít a používat značky pro vyrovnávací paměti a zobrazení, importujte <xref:Microsoft.VisualStudio.Text.Tagging.IViewTagAggregatorFactoryService> nebo <xref:Microsoft.VisualStudio.Text.Tagging.IBufferTagAggregatorFactoryService>, které získáte <xref:Microsoft.VisualStudio.Text.Tagging.ITagAggregator%601> požadovaného typu. Následující kód importuje této služby jako vlastnost.  
+  Vyhledání a používání značek pro vyrovnávací paměť a zobrazení, naimportujte <xref:Microsoft.VisualStudio.Text.Tagging.IViewTagAggregatorFactoryService> nebo <xref:Microsoft.VisualStudio.Text.Tagging.IBufferTagAggregatorFactoryService>, která získáte <xref:Microsoft.VisualStudio.Text.Tagging.ITagAggregator%601> požadovaného typu. Následující kód importuje tuto službu jako vlastnost.  
   
 ```  
 [Import]  
@@ -288,15 +289,15 @@ internal IViewTagAggregatorFactoryService ViewTagAggregatorFactoryService { get;
 ```  
   
 #### <a name="tags-and-markerformatdefinitions"></a>Značky a MarkerFormatDefinitions  
- Můžete rozšířit <xref:Microsoft.VisualStudio.Text.Classification.MarkerFormatDefinition> třída definujte vzhled značku. Je nutné exportovat vlastní třídy (jako <xref:Microsoft.VisualStudio.Text.Classification.EditorFormatDefinition>) s následujícími atributy:  
+ Můžete rozšířit <xref:Microsoft.VisualStudio.Text.Classification.MarkerFormatDefinition> tříd k definování vzhledu značky. Je nutné exportovat vaší třídy (jako <xref:Microsoft.VisualStudio.Text.Classification.EditorFormatDefinition>) s následujícími atributy:  
   
--   <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: název slouží k odkazování tento formát  
+- <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: název, který odkazuje tento formát  
   
--   <xref:Microsoft.VisualStudio.Text.Classification.UserVisibleAttribute>: To způsobí, že formát, který se zobrazí v uživatelském rozhraní  
+- <xref:Microsoft.VisualStudio.Text.Classification.UserVisibleAttribute>: To způsobí, že formát, který se zobrazí v uživatelském rozhraní  
   
- V konstruktoru zadejte zobrazovaný název a vzhled značky. <xref:Microsoft.VisualStudio.Text.Classification.EditorFormatDefinition.BackgroundColor%2A> Určuje barvu výplně a <xref:Microsoft.VisualStudio.Text.Classification.EditorFormatDefinition.ForegroundColor%2A> definuje barvu ohraničení. <xref:Microsoft.VisualStudio.Text.Classification.EditorFormatDefinition.DisplayName%2A> Je lokalizovatelný název definice formátu.  
+  V konstruktoru definujete zobrazovaný název a vzhled značky. <xref:Microsoft.VisualStudio.Text.Classification.EditorFormatDefinition.BackgroundColor%2A> Určuje barvu výplně a <xref:Microsoft.VisualStudio.Text.Classification.EditorFormatDefinition.ForegroundColor%2A> definuje barvu ohraničení. <xref:Microsoft.VisualStudio.Text.Classification.EditorFormatDefinition.DisplayName%2A> Je lokalizovatelný název definice formátu.  
   
- Následuje příklad definicí formátu:  
+  Následuje příklad formátu definice:  
   
 ```  
 [Export(typeof(EditorFormatDefinition))]  
@@ -315,21 +316,21 @@ internal class HighlightWordFormatDefinition : MarkerFormatDefinition
   
 ```  
   
- Pokud chcete použít tuto definici formátu značku, odkazovat na název, který nastavíte v atributu název třídy (ne zobrazovaný název).  
+ Použít tento formát definice pro značku, odkazovat na název, který jste nastavili v atribut názvu třídy (ne zobrazovaným názvem).  
   
 > [!NOTE]
->  Příklad <xref:Microsoft.VisualStudio.Text.Classification.MarkerFormatDefinition>, viz třídu HighlightWordFormatDefinition v [návod: zvýraznění textu](../extensibility/walkthrough-highlighting-text.md).  
+>  Příklad <xref:Microsoft.VisualStudio.Text.Classification.MarkerFormatDefinition>, naleznete v tématu třídy HighlightWordFormatDefinition v [návod: zvýraznění textu](../extensibility/walkthrough-highlighting-text.md).  
   
-## <a name="extending-adornments"></a>Rozšíření vylepšení  
- Vylepšení definovat vizuálních efektů, které můžete přidat buď na text, který se zobrazí v zobrazení textu nebo na text zobrazit sám sebe. Můžete definovat vlastní dalších úprav jako jakýkoli typ <xref:System.Windows.UIElement>.  
+## <a name="extend-adornments"></a>Rozšíření grafických doplňků  
+ Vylepšení definování vizuální efekty, které je možné přidat buď na text, který se zobrazí v náhledu textu nebo textu zobrazení samotný. Můžete definovat vlastní dalších úprav jako libovolný typ <xref:System.Windows.UIElement>.  
   
- Ve třídě dalších úprav musíte deklarovat <xref:Microsoft.VisualStudio.Text.Editor.AdornmentLayerDefinition>. Chcete-li zaregistrovat vrstvě dalších úprav, ho exportujte společně s následujícími atributy:  
+ Ve třídě dalších úprav, je třeba deklarovat <xref:Microsoft.VisualStudio.Text.Editor.AdornmentLayerDefinition>. K registraci dalších úprav vrstvě, exportujte ho spolu s následujícími atributy:  
   
--   <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: název dalších úprav.  
+- <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: název dalších úprav.  
   
--   <xref:Microsoft.VisualStudio.Utilities.OrderAttribute>: řazení dalších úprav s ohledem na ostatní vrstvy dalších úprav. Třída <xref:Microsoft.VisualStudio.Text.Editor.PredefinedAdornmentLayers> definuje čtyři vrstvy výchozí: výběr, osnova, pomocí kurzoru a Text.  
+- <xref:Microsoft.VisualStudio.Utilities.OrderAttribute>: řazení dalších úprav s ohledem na ostatních vrstvách dalších úprav. Třída <xref:Microsoft.VisualStudio.Text.Editor.PredefinedAdornmentLayers> definuje čtyři vrstvy výchozí: výběr, osnova, blikajícího kurzoru a Text.  
   
- Následující příklad ukazuje atributy export na definici vrstvy dalších úprav.  
+  Následující příklad ukazuje export atributy na definici vrstvy dalších úprav.  
   
 ```  
 [Export]  
@@ -338,13 +339,13 @@ internal class HighlightWordFormatDefinition : MarkerFormatDefinition
 internal AdornmentLayerDefinition testLayerDefinition;  
 ```  
   
- Je nutné vytvořit druhou třídu, která implementuje <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener> a zpracovává jeho <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener.TextViewCreated%2A> událostí po vytvoření instance dalších úprav. Je nutné exportovat tato třída společně s následujícími atributy:  
+ Je nutné vytvořit druhá třída, která implementuje <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener> a zpracovává jeho <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener.TextViewCreated%2A> událostí po vytvoření instance dalších úprav. Je nutné exportovat této třídy společně s následujícími atributy:  
   
--   <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>: typ obsahu (například "text" nebo "kódu"), pro který je platný dalších úprav.  
+- <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>: typ obsahu (například "text" nebo "code"), pro který je platný dalších úprav.  
   
--   <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute>: druh textového zobrazení, pro který je platný tento dalších úprav. Třída <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles> obsahuje sadu předdefinovaných text zobrazit role. Například <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Document> slouží především pro zobrazení textových souborů. <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive> slouží k zobrazení textu, uživatel může upravit nebo přejít pomocí myši a klávesnice. Příklady <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive> zobrazení jsou zobrazení textového editoru a **výstup** okno.  
+- <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute>: typ textové zobrazení, pro kterou platí tato dalších úprav. Třída <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles> obsahuje sadu rolí předdefinovaný text zobrazení. Například <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Document> primárně slouží k zobrazení textu souborů. <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive> slouží k zobrazení textu, že uživatel může upravovat nebo Navigovat pomocí myši a klávesnice. Příklady <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive> zobrazení jsou zobrazení textového editoru a **výstup** okna.  
   
- Následující příklad ukazuje atributy export na poskytovateli dalších úprav.  
+  Následující příklad ukazuje atributů exportu v poskytovateli dalších úprav.  
   
 ```  
 [Export(typeof(IWpfTextViewCreationListener))]  
@@ -353,9 +354,9 @@ internal AdornmentLayerDefinition testLayerDefinition;
 internal sealed class TestAdornmentProvider : IWpfTextViewCreationListener  
 ```  
   
- Dalších úprav vyjednávání místa je ten, který bude zabírat místo na stejné úrovni jako text. Chcete-li vytvořit tento druh dalších úprav, je třeba definovat značky třídu, která dědí z <xref:Microsoft.VisualStudio.Text.Tagging.SpaceNegotiatingAdornmentTag>, která definuje množství místa sídlí dalších úprav.  
+ Dalších úprav vyjednávání místa je ten, který zabírá místo na stejné úrovni jako text. Chcete-li vytvořit tento druh dalších úprav, je nutné definovat, která dědí z třídy značka <xref:Microsoft.VisualStudio.Text.Tagging.SpaceNegotiatingAdornmentTag>, která definuje velikost místa zabírá dalších úprav.  
   
- Stejně jako u všech vylepšení, je nutné exportovat definici vrstvy dalších úprav.  
+ Stejně jako u všech grafických doplňků, musíte exportovat definice vrstvy dalších úprav.  
   
 ```  
 [Export]  
@@ -364,17 +365,17 @@ internal sealed class TestAdornmentProvider : IWpfTextViewCreationListener
 internal AdornmentLayerDefinition testAdornmentLayer;  
 ```  
   
- K vytvoření instance dalších úprav vyjednávání místo, je nutné vytvořit třídu, která implementuje <xref:Microsoft.VisualStudio.Text.Tagging.ITaggerProvider>, kromě třídu, která implementuje <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener> (stejně jako u jiných typů vylepšení).  
+ K vytvoření instance dalších úprav vyjednávání místa, je nutné vytvořit třídu, která implementuje <xref:Microsoft.VisualStudio.Text.Tagging.ITaggerProvider>, kromě třídu, která implementuje <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextViewCreationListener> (stejně jako u jiných typů vylepšení).  
   
- K registraci poskytovatele tagger, je nutné jej exportovat společně s následujícími atributy:  
+ Zaregistrujte poskytovatele označovatel, je nutné jej exportovat společně s následujícími atributy:  
   
--   <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>: typ obsahu (například "text" nebo "kódu"), pro který je platný vaší dalších úprav.  
+- <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>: typ obsahu (například "text" nebo "code"), pro který je platný vašich dalších úprav.  
   
--   <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute>: druh textového zobrazení, pro které bude tato značka nebo dalších úprav je platný. Třída <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles> obsahuje sadu předdefinovaných text zobrazit role. Například <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Document> slouží především pro zobrazení textových souborů. <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive> slouží k zobrazení textu, uživatel může upravit nebo přejít pomocí myši a klávesnice. Příklady <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive> zobrazení jsou zobrazení textového editoru a **výstup** okno.  
+- <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute>: typ textové zobrazení, pro které bude tato značka nebo dalších úprav je platný. Třída <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles> obsahuje sadu rolí předdefinovaný text zobrazení. Například <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Document> primárně slouží k zobrazení textu souborů. <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive> slouží k zobrazení textu, že uživatel může upravovat nebo Navigovat pomocí myši a klávesnice. Příklady <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive> zobrazení jsou zobrazení textového editoru a **výstup** okna.  
   
--   <xref:Microsoft.VisualStudio.Text.Tagging.TagTypeAttribute>: typ značky nebo dalších úprav, který jste definovali. Je nutné přidat druhý <xref:Microsoft.VisualStudio.Text.Tagging.TagTypeAttribute> pro <xref:Microsoft.VisualStudio.Text.Tagging.SpaceNegotiatingAdornmentTag>.  
+- <xref:Microsoft.VisualStudio.Text.Tagging.TagTypeAttribute>: typ značky nebo dalších úprav, které jste definovali. Je nutné přidat sekundy <xref:Microsoft.VisualStudio.Text.Tagging.TagTypeAttribute> pro <xref:Microsoft.VisualStudio.Text.Tagging.SpaceNegotiatingAdornmentTag>.  
   
- Následující příklad ukazuje atributy export na poskytovateli tagger pro značku vyjednávání místo dalších úprav.  
+  Následující příklad ukazuje atributů exportu v poskytovateli označovatel pro značku vyjednávání místo dalších úprav.  
   
 ```  
 [Export(typeof(ITaggerProvider))]  
@@ -386,9 +387,9 @@ internal sealed class TestTaggerProvider : ITaggerProvider
 ```  
   
 ## <a name="extending-mouse-processors"></a>Rozšíření myši procesorů  
- Můžete přidat zvláštní zpracování pro vstup z myši. Vytvořte třídu, která dědí z <xref:Microsoft.VisualStudio.Text.Editor.MouseProcessorBase> a přepsat události myši pro vstup chcete zpracovat. Musíte také implementovat <xref:Microsoft.VisualStudio.Text.Editor.IMouseProcessorProvider> v třídě sekundu a exportovat je společně s <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> , který určuje typ obsahu (například "text" nebo "kódu"), pro který je platný vaší obslužné rutiny myši.  
+ Můžete přidat zvláštní zacházení vstup z myši. Vytvořte třídu, která dědí z <xref:Microsoft.VisualStudio.Text.Editor.MouseProcessorBase> a přepsat události myši pro zpracování vstupu. Musíte také implementovat <xref:Microsoft.VisualStudio.Text.Editor.IMouseProcessorProvider> v druhé třídu a exportujte ho spolu s <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> určující druh obsah (například "text" nebo "code"), pro který je platný obslužnou rutinu myši.  
   
- Následující příklad ukazuje atributy export na zprostředkovatele procesoru myši.  
+ Následující příklad ukazuje atributů exportu ve zprostředkovateli procesoru myši.  
   
 ```  
 [Export(typeof(IMouseProcessorProvider))]  
@@ -398,62 +399,62 @@ internal sealed class TestTaggerProvider : ITaggerProvider
 internal sealed class TestMouseProcessorProvider : IMouseProcessorProvider  
 ```  
   
-## <a name="extending-drop-handlers"></a>Rozšíření obslužné rutiny rozevírací  
- Chování rozevírací obslužné rutiny pro specifické druhy text můžete přizpůsobit tak, že vytvoříte třídu, která implementuje <xref:Microsoft.VisualStudio.Text.Editor.DragDrop.IDropHandler> a druhou třídu, která implementuje <xref:Microsoft.VisualStudio.Text.Editor.DragDrop.IDropHandlerProvider> k vytvoření obslužné rutiny vyřaďte. Je nutné exportovat obslužná rutina rozevírací společně s následujícími atributy:  
+## <a name="extend-drop-handlers"></a>Rozšíření obslužné rutiny přetažení  
+ Můžete přizpůsobit chování rozevírací obslužných rutin pro konkrétní druhy text tak, že vytvoříte třídu, která implementuje <xref:Microsoft.VisualStudio.Text.Editor.DragDrop.IDropHandler> a druhá třída, která implementuje <xref:Microsoft.VisualStudio.Text.Editor.DragDrop.IDropHandlerProvider> vytvořit obslužnou rutinu přetažení. Je nutné exportovat obslužnou rutinu přetažení společně s následujícími atributy:  
   
--   <xref:Microsoft.VisualStudio.Text.Editor.DragDrop.DropFormatAttribute>: v textovém formátu, pro který je tato obslužná rutina rozevírací platný. Následující formáty jsou zpracovávány v pořadí podle priority od nejvyšší po nejnižší:  
+- <xref:Microsoft.VisualStudio.Text.Editor.DragDrop.DropFormatAttribute>: v textovém formátu, pro kterou platí tato obslužná rutina přetažení. Následující formáty jsou zpracovány v pořadí podle priority od nejvyšší po nejnižší:  
   
-    1.  Všechny vlastní formát  
+  1.  Všechny vlastní formát  
   
-    2.  FileDrop  
+  2.  FileDrop  
   
-    3.  EnhancedMetafile  
+  3.  EnhancedMetafile  
   
-    4.  WaveAudio  
+  4.  WaveAudio  
   
-    5.  RIFF  
+  5.  RIFF  
   
-    6.  DIF  
+  6.  DIF  
   
-    7.  Národní prostředí  
+  7.  Národní prostředí  
   
-    8.  Palety  
+  8.  Paleta  
   
-    9. PenData  
+  9. PenData  
   
-    10. Serializovatelné  
+  10. Serializovatelné  
   
-    11. SymbolicLink  
+  11. SymbolicLink  
   
-    12. XAML  
+  12. XAML  
   
-    13. XamlPackage  
+  13. XamlPackage  
   
-    14. TIFF  
+  14. TIFF  
   
-    15. Rastrový obrázek  
+  15. Rastrový obrázek  
   
-    16. DIB  
+  16. DIB  
   
-    17. MetafilePicture  
+  17. MetafilePicture  
   
-    18. SDÍLENÝ SVAZEK CLUSTERU  
+  18. SDÍLENÝ SVAZEK CLUSTERU  
   
-    19. System.String  
+  19. System.String  
   
-    20. Formát HTML  
+  20. Formát HTML  
   
-    21. UnicodeText  
+  21. UnicodeText  
   
-    22. OEMText  
+  22. OEMText  
   
-    23. Text  
+  23. Text  
   
--   <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: název rozevíracího obslužné rutiny.  
+- <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: název obslužnou rutinu přetažení.  
   
--   <xref:Microsoft.VisualStudio.Utilities.OrderAttribute>: řazení obslužná rutina rozevírací před nebo po vyřazení výchozí obslužnou rutinu. Vyřaďte výchozí obslužnou rutinu pro sadu Visual Studio je s názvem "DefaultFileDropHandler".  
+- <xref:Microsoft.VisualStudio.Utilities.OrderAttribute>: řazení obslužnou rutinu přetažení před nebo po ní výchozí obslužnou rutinu přetažení. Výchozí obslužnou rutinu přetažení pro sadu Visual Studio je s názvem "DefaultFileDropHandler".  
   
- Následující příklad ukazuje atributy export na zprostředkovatele rozevírací obslužné rutiny.  
+  Následující příklad ukazuje atributů exportu ve zprostředkovateli obslužná rutina přetažení.  
   
 ```  
 [Export(typeof(IDropHandlerProvider))]  
@@ -464,42 +465,42 @@ internal class TestDropHandlerProvider : IDropHandlerProvider
 ```  
   
 ## <a name="extending-editor-options"></a>Rozšíření možností editoru  
- Můžete definovat možnosti platná pouze v určitých oboru, například v textovém zobrazení. Tato sada předdefinované možnosti nabízí editor: Možnosti editoru, možnosti zobrazení a možnosti zobrazení Windows Presentation Foundation (WPF). Tyto možnosti lze nalézt v <xref:Microsoft.VisualStudio.Text.Editor.DefaultOptions>, <xref:Microsoft.VisualStudio.Text.Editor.DefaultTextViewOptions>, a <xref:Microsoft.VisualStudio.Text.Editor.DefaultWpfViewOptions>.  
+ Můžete definovat možnosti platný pouze v určitém rozsahu, například v náhledu textu. Tato sada předdefinovaných možností nabízí editor: Možnosti editoru, možnosti zobrazení a zobrazení možností Windows Presentation Foundation (WPF). Tyto možnosti lze nalézt v <xref:Microsoft.VisualStudio.Text.Editor.DefaultOptions>, <xref:Microsoft.VisualStudio.Text.Editor.DefaultTextViewOptions>, a <xref:Microsoft.VisualStudio.Text.Editor.DefaultWpfViewOptions>.  
   
- Pokud chcete přidat novou možnost, odvození třídy z jedné z těchto možností definice tříd:  
+ Pokud chcete přidat novou možnost, odvodíte třídu z jedné z těchto možností definice tříd:  
   
--   <xref:Microsoft.VisualStudio.Text.Editor.EditorOptionDefinition%601>  
+- <xref:Microsoft.VisualStudio.Text.Editor.EditorOptionDefinition%601>  
   
--   <xref:Microsoft.VisualStudio.Text.Editor.ViewOptionDefinition%601>  
+- <xref:Microsoft.VisualStudio.Text.Editor.ViewOptionDefinition%601>  
   
--   <xref:Microsoft.VisualStudio.Text.Editor.WpfViewOptionDefinition%601>  
+- <xref:Microsoft.VisualStudio.Text.Editor.WpfViewOptionDefinition%601>  
   
- Následující příklad ukazuje, jak exportovat definice možnosti, která má jako logická hodnota.  
+  Následující příklad ukazuje, jak exportovat definice možnosti, která má hodnotu typu Boolean.  
   
 ```  
 [Export(typeof(EditorOptionDefinition))]  
 internal sealed class TestOption : EditorOptionDefinition<bool>  
 ```  
   
-## <a name="extending-intellisense"></a>Rozšíření IntelliSense  
- IntelliSense je obecný termín pro skupinu součástí, které obsahují informace o strukturovaných textových a dokončování pro ni. Tyto funkce patří dokončování příkazů, podpis Nápověda, rychlé informace a žárovek. Dokončování pomáhá uživatelům, zadejte název jazyka – klíčové slovo nebo člen správně. Podpis help Zobrazí podpis nebo podpisy pro metodu, která má uživatel právě zadali. Rychlé informace zobrazí úplný podpis pro typ nebo člen název při přesunutí myši na ho. Žárovky poskytuje další akce pro určité identifikátory v některých kontextech, například přejmenování všechny výskyty proměnné po jeden výskyt byl přejmenován.  
+## <a name="extend-intellisense"></a>Rozšíření technologie IntelliSense  
+ Technologie IntelliSense je obecný termín pro skupinu funkcí, které poskytují informace o strukturovaných textových a dokončování pro něj. Tyto funkce patří dokončování příkazů, podpisu a rychlé informace a návrhy. Dokončování příkazů pomáhá uživatelům správně zadat název jazyka – klíčové slovo nebo člen. Nápovědu k signatuře zobrazí podpis nebo podpisy pro metodu, která má uživatel právě zadali. Rychlé informace zobrazí úplný podpis pro název typu nebo člena, když myší postavená na něm. Žárovka poskytovat další akce pro určité identifikátory v některých kontextech, například přejmenování všech výskytů dané proměnné po jeden výskyt je přejmenovaná.  
   
- Návrh o funkci IntelliSense je podobný ve všech případech:  
+ Návrh funkci IntelliSense je skoro stejné ve všech případech:  
   
--   IntelliSense *zprostředkovatele* je zodpovědný za celý proces.  
+- IntelliSense *zprostředkovatele* je zodpovědný za celý proces.  
   
--   IntelliSense *relace* představuje posloupnost událostí mezi na aktivaci komponentě přednášejícího a committal nebo zrušení výběru. Relace je obvykle aktivovány některé gesto uživatele.  
+- IntelliSense *relace* představuje posloupnost událostí mezi aktivace komponentě přednášejícího a committal nebo zrušení výběru. Relace se obvykle aktivuje nějaké gesto uživatele.  
   
--   IntelliSense *řadič* zodpovídá za rozhodování, kdy relaci by měl začínat a končit. Také rozhodne, pokud by měl být informace potvrdí a když by měla být zrušena relace.  
+- IntelliSense *řadič* zodpovídá za rozhodování o tom, kdy by měla relace zahájení a ukončení. Také určuje, kdy informace by se měly potvrdit a kdy by se měly zrušit relace.  
   
--   IntelliSense *zdroj* poskytuje obsah a rozhodne nejlepší shodu.  
+- IntelliSense *zdroj* poskytuje obsah a rozhodne, která je nejlepší shodou.  
   
--   IntelliSense *přednášejícího* zodpovídá za zobrazení obsahu.  
+- IntelliSense *skládání* zodpovídá za zobrazení obsahu.  
   
- Ve většině případů doporučujeme zadat aspoň zdrojem a řadiči. Pokud chcete přizpůsobit zobrazení, můžete zadat taky přednášejícího.  
+  Ve většině případů doporučujeme poskytnout alespoň zdroji a kontroler. Můžete také zadat skládání, pokud chcete přizpůsobit zobrazení.  
   
-### <a name="implementing-an-intellisense-source"></a>Implementace zdroje IntelliSense  
- Chcete-li přizpůsobit zdroj, musí implementovat jednu (nebo více) rozhraní následující zdroje:  
+### <a name="implement-an-intellisense-source"></a>Implementace zdroj technologie IntelliSense  
+ Přizpůsobení zdroji, musí implementovat jednu (nebo více) rozhraní následující zdroje:  
   
 -   <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSource>  
   
@@ -510,9 +511,9 @@ internal sealed class TestOption : EditorOptionDefinition<bool>
 -   <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource>  
   
 > [!IMPORTANT]
->  <xref:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSource> se už nepoužívá pro <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource>.  
+>  <xref:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSource> se už nepoužívá nahrazený <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource>.  
   
- Kromě toho musí implementovat zprostředkovatele stejného druhu:  
+ Kromě toho je nutné implementovat zprostředkovatele stejného druhu:  
   
 -   <xref:Microsoft.VisualStudio.Language.Intellisense.ICompletionSourceProvider>  
   
@@ -523,17 +524,17 @@ internal sealed class TestOption : EditorOptionDefinition<bool>
 -   <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider>  
   
 > [!IMPORTANT]
->  <xref:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSourceProvider> se už nepoužívá pro <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider>.  
+>  <xref:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSourceProvider> se už nepoužívá nahrazený <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider>.  
   
- Je nutné exportovat zprostředkovatele společně s následujícími atributy:  
+ Je nutné exportovat poskytovatele společně s následujícími atributy:  
   
 -   <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: název zdroje.  
   
--   <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>: druh obsah (například "text" nebo "kódu"), na které se vztahuje zdroji.  
+-   <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>: typ obsah (například "text" nebo "code"), ke kterému se vztahuje na zdroj.  
   
--   <xref:Microsoft.VisualStudio.Utilities.OrderAttribute>: pořadí, ve kterém by se měla objevit zdroji (s ohledem na jiných zdrojů).  
+-   <xref:Microsoft.VisualStudio.Utilities.OrderAttribute>: pořadí, ve kterém by se měla objevit zdroj (s ohledem na další zdroje).  
   
--   Následující příklad ukazuje atributy export na dokončení zdroj zprostředkovatele.  
+-   Následující příklad ukazuje export atributy u poskytovatele zdroj dokončení.  
   
 ```  
 Export(typeof(ICompletionSourceProvider))]  
@@ -543,24 +544,24 @@ Export(typeof(ICompletionSourceProvider))]
 internal class TestCompletionSourceProvider : ICompletionSourceProvider  
 ```  
   
- Další informace o implementaci zdroje IntelliSense viz následující kurzy:  
+ Další informace o implementaci zdroje technologie IntelliSense najdete v následujících návodech:  
   
- [Návod: Zobrazení popisů tlačítek s rychlými informacemi](../extensibility/walkthrough-displaying-quickinfo-tooltips.md)  
+ [Návod: Zobrazení QuickInfo popisky](../extensibility/walkthrough-displaying-quickinfo-tooltips.md)  
   
  [Návod: Zobrazení vyhrazené nápovědy](../extensibility/walkthrough-displaying-signature-help.md)  
   
  [Návod: Zobrazení dokončování příkazů](../extensibility/walkthrough-displaying-statement-completion.md)  
   
-### <a name="implementing-an-intellisense-controller"></a>Implementace řadič IntelliSense  
- Chcete-li přizpůsobit řadič, je nutné implementovat <xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseController> rozhraní. Kromě toho musí implementovat zprostředkovatele kontroleru společně s následujícími atributy:  
+### <a name="implement-an-intellisense-controller"></a>Implementace řadič služby technologie IntelliSense  
+ Přizpůsobení kontroleru, je nutné implementovat <xref:Microsoft.VisualStudio.Language.Intellisense.IIntellisenseController> rozhraní. Kromě toho je nutné implementovat zprostředkovatele kontroleru společně s následujícími atributy:  
   
--   <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: název kontroleru.  
+- <xref:Microsoft.VisualStudio.Utilities.NameAttribute>: název kontroleru.  
   
--   <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>: typ obsahu (například "text" nebo "kódu"), na které se vztahuje na řadič.  
+- <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>: typ obsahu (například "text" nebo "code"), ke kterému se vztahuje na řadič.  
   
--   <xref:Microsoft.VisualStudio.Utilities.OrderAttribute>: pořadí, ve kterém by se měla objevit řadičem (s ohledem na ostatní řadiče).  
+- <xref:Microsoft.VisualStudio.Utilities.OrderAttribute>: pořadí, ve kterém by se měla objevit kontroler (s ohledem na ostatní řadiče).  
   
- Následující příklad ukazuje atributy export na dokončení řadiče zprostředkovatele.  
+  Následující příklad ukazuje na zprostředkovatele kontroleru dokončení atributů exportu.  
   
 ```  
 Export(typeof(IIntellisenseControllerProvider))]  
@@ -570,6 +571,6 @@ Export(typeof(IIntellisenseControllerProvider))]
 internal class TestIntellisenseControllerProvider : IIntellisenseControllerProvider  
 ```  
   
- Další informace o používání řadiče IntelliSense najdete v následující kurzy:  
+ Další informace o používání řadiče technologie IntelliSense najdete v následujících návodech:  
   
- [Návod: Zobrazení popisů tlačítek s rychlými informacemi](../extensibility/walkthrough-displaying-quickinfo-tooltips.md)
+ [Návod: Zobrazení QuickInfo popisky](../extensibility/walkthrough-displaying-quickinfo-tooltips.md)

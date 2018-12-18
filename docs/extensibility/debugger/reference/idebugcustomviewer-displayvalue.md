@@ -1,5 +1,5 @@
 ---
-title: IDebugCustomViewer::DisplayValue | Microsoft Docs
+title: IDebugCustomViewer::DisplayValue | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 017e1e7a27839dae91559468c62be353bbd43b4e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 44295cb6cc3635d099a93ef62c7d4ae4e2bdd4cd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49833836"
 ---
 # <a name="idebugcustomviewerdisplayvalue"></a>IDebugCustomViewer::DisplayValue
-Tato metoda je volána k zobrazení se zadanou hodnotou.  
+Tato metoda je volána k zobrazení zadané hodnoty.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,24 +47,24 @@ int DisplayValue(
   
 #### <a name="parameters"></a>Parametry  
  `hwnd`  
- [v] Nadřazené okno  
+ [in] Nadřazené okno  
   
  `dwID`  
- [v] ID pro vlastní prohlížečů, které podporují víc než jeden typ.  
+ [in] ID pro vlastních prohlížečů, které podporují více než jeden typ.  
   
  `pHostServices`  
- [v] Vyhrazena. Vždy nastaven na hodnotu null.  
+ [in] Vyhrazená. Vždy nastavena na hodnotu null.  
   
  `pDebugProperty`  
- [v] Rozhraní, které lze použít k načtení hodnoty, který se má zobrazit.  
+ [in] Rozhraní, které slouží k načtení hodnoty, který se má zobrazit.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Zobrazení se "modální", že tato metoda se vytvořit okno nezbytné, zobrazit hodnotu, čekání na vstup a zavřete okno všechny před vrácením volající. To znamená, že metoda musí zpracovat všechny aspekty zobrazení hodnotu vlastnosti ve vytváření okna pro výstup se čekání na vstup uživatele, likvidace okna.  
+ Zobrazení je "modal", tato metoda bude vytvoření okna nezbytné, zobrazit hodnotu, počkat na vstup a zavřete okno všechny před vrácením řízení volajícímu. To znamená, že metoda musí zpracovat všechny aspekty zobrazení hodnoty vlastnosti z vytvoření okna pro výstup na čekání na vstup uživatele, chcete-li zničit okno.  
   
- Pro podporu změnit hodnotu na danou [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) objekt, můžete použít [SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md) metoda – Pokud hodnota může být vyjádřený jako řetězec. Jinak, je třeba vytvořit vlastní rozhraní – výhradně pro vyhodnocovací filtr výrazů implementace to `DisplayValue` metoda – na stejný objekt, který implementuje `IDebugProperty3` rozhraní. Toto vlastní rozhraní by zadat metody pro změnu data libovolné velikosti nebo složitost.  
+ Pro podporu změna hodnoty na daný [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) objektu, můžete použít [SetValueAsStringWithError](../../../extensibility/debugger/reference/idebugproperty3-setvalueasstringwitherror.md) metoda – Pokud hodnota může být vyjádřený jako řetězec. V opačném případě je potřeba vytvořit vlastní rozhraní – výhradně pro vyhodnocovací filtr výrazů implementace to `DisplayValue` metoda – pro stejný objekt, který implementuje `IDebugProperty3` rozhraní. Toto vlastní rozhraní by poskytla metody pro změnu dat libovolné velikosti nebo složitosti.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugCustomViewer](../../../extensibility/debugger/reference/idebugcustomviewer.md)   

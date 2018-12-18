@@ -1,5 +1,5 @@
 ---
-title: Přidání okno nástroje | Microsoft Docs
+title: Přidání panelu nástrojů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,54 +14,55 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: db06bebd700fa229685d6b79ffcfb014ef301994
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 550e483ec2a8cd4b4126e4c0838dc8d2870af59c
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39151928"
 ---
-# <a name="adding-a-tool-window"></a>Přidání okno nástroje
-V tomto návodu jste Naučte se vytvořit okno nástroje a integrovat do sady Visual Studio následujícími způsoby:  
+# <a name="add-a-tool-window"></a>Přidání panelu nástrojů
+V tomto podrobném návodu se dozvíte, jak vytvořit okno nástroje a integrovat do sady Visual Studio následujícími způsoby:  
   
--   Přidání ovládacího prvku na panel nástrojů.  
+-   Přidání ovládacího prvku pro panel nástrojů.  
   
--   Přidání panelu nástrojů na okno nástroje.  
+-   Přidání panelu nástrojů do panelu nástrojů.  
   
--   Přidáte příkaz na panelu nástrojů.  
+-   Přidání příkazu do panelu nástrojů.  
   
--   Implementujte příkazy.  
+-   Implementace příkazu.  
   
 -   Nastavte výchozí umístění pro panel nástrojů.  
   
 ## <a name="prerequisites"></a>Požadavky  
- Od sady Visual Studio 2015 se neinstalovat sadu Visual Studio SDK z webu Stažení softwaru. Je zahrnuta jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+ Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK ze služby Stažení softwaru. Je zahrnut jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## <a name="creating-a-tool-window"></a>Vytváření okno nástroje  
+## <a name="create-a-tool-window"></a>Vytvoření panelu nástrojů  
   
-1.  Vytvoření projektu s názvem **FirstToolWin** pomocí VSIX šablony a přidat vlastní nástroj šablonu položky okno s názvem **FirstToolWindow**.  
+1.  Vytvoření projektu s názvem **FirstToolWin** VSIX šablony a přidat šablonu vlastního nástroje okna položku s názvem **FirstToolWindow**.  
   
     > [!NOTE]
-    >  Další informace o vytváření rozšíření s okno nástroje najdete v tématu [vytváření rozšíření s okno nástroje](../extensibility/creating-an-extension-with-a-tool-window.md).  
+    >  Další informace o vytváření rozšíření pomocí panelu nástrojů najdete v tématu [vytváření rozšíření pomocí panelu nástrojů](../extensibility/creating-an-extension-with-a-tool-window.md).  
   
-## <a name="add-a-control-to-the-tool-window"></a>Přidání ovládacího prvku na panel nástrojů  
+## <a name="add-a-control-to-the-tool-window"></a>Přidání ovládacího prvku panel nástrojů  
   
-1.  Odebrání ovládacího prvku výchozí. Otevřete FirstToolWindowControl.xaml a odstraňte **klikněte na tlačítko mi!** tlačítko.  
+1.  Odeberte výchozí ovládací prvek. Otevřít *FirstToolWindowControl.xaml* a odstranit **klikněte na mě!** tlačítko.  
   
-2.  V **sada nástrojů**, rozbalte **všech ovládacích prvků WPF** části a přetáhněte ji **média Element** řídit k **FirstToolWindowControl** formuláře. Vyberte ovládací prvek a v **vlastnosti** období, název tohoto elementu **mediaElement1**.  
+2.  V **nástrojů**, rozbalte **všechny ovládací prvky WPF** části a přetáhněte ji **mediálního prvku** ovládací prvek **FirstToolWindowControl** formuláře. Vyberte ovládací prvek a **vlastnosti** okna, název tohoto elementu **mediaElement1**.  
   
-## <a name="add-a-toolbar-to-the-tool-window"></a>Přidat panel nástrojů panel nástrojů  
- Přidáním panelu nástrojů následujícím způsobem zaručit, že jsou konzistentní se zbytkem prostředí IDE jeho přechody a barvy.  
+## <a name="add-a-toolbar-to-the-tool-window"></a>Přidání panelu nástrojů okno nástrojů  
+ Přidáním panel nástrojů následujícím způsobem zaručit, že jsou konzistentní se zbytkem prostředí IDE jeho přechody a barvy.  
   
-1.  V **Průzkumníku**, otevřete FirstToolWindowPackage.vsct. Soubor .vsct definuje elementy grafické uživatelské rozhraní (GUI) v okně nástroje pomocí XML.  
+1.  V **Průzkumníka řešení**, otevřete *FirstToolWindowPackage.vsct*. *.Vsct* soubor definuje prvky grafického uživatelského rozhraní (GUI) v okně nástroje s využitím XML.  
   
-2.  V `<Symbols>` část, vyhledejte `<GuidSymbol>` uzlu jejichž `name` atribut je `guidFirstToolWindowPackageCmdSet`. Přidejte následující dva `<IDSymbol>` elementy do seznamu `<IDSymbol>` elementy v tomto uzlu můžete definovat panelu nástrojů a nástrojů skupinu.  
+2.  V `<Symbols>` části, vyhledejte `<GuidSymbol>` uzel jehož `name` atribut je `guidFirstToolWindowPackageCmdSet`. Přidejte následující dva `<IDSymbol>` prvků do seznamu `<IDSymbol>` prvky v tomto uzlu k definování panelu nástrojů a panelu nástrojů skupiny.  
   
     ```xml  
     <IDSymbol name="ToolbarID" value="0x1000" />  
     <IDSymbol name="ToolbarGroupID" value="0x1001" />  
     ```  
   
-3.  Právě vyšší `<Buttons>` , vytvořte `<Menus>` oddíl, který vypadá takto:  
+3.  Přímo nad `<Buttons>` části, vytvořte `<Menus>` oddíl, který vypadá takto:  
   
     ```xml  
     <Menus>  
@@ -75,11 +76,11 @@ V tomto návodu jste Naučte se vytvořit okno nástroje a integrovat do sady Vi
     </Menus>  
     ```  
   
-     Existují různé druhy nabídky. Tato nabídka je panelu nástrojů v okně nástroje definované jeho `type` atribut. `guid` a `id` nastavení tvoří plně kvalifikovaný ID panelu nástrojů. Obvykle `<Parent>` nabídky je obsahující skupiny. Panel nástrojů je však definován jako vlastní nadřazený. Proto se používá stejný identifikátor pro `<Menu>` a `<Parent>` elementy. `priority` Atribut je právě ' 0'.  
+     Existují různé druhy nabídky. Tato nabídka je panel nástrojů v okně nástroje určené jeho `type` atribut. `guid` a `id` nastavení tvoří plně kvalifikované ID panelu nástrojů. Obvykle `<Parent>` nabídky je skupině obsahující. Panel nástrojů je však definován jako svůj vlastní nadřazený. Proto se používá stejný identifikátor pro `<Menu>` a `<Parent>` elementy. `priority` Atribut je právě "0".  
   
-4.  Panely nástrojů podobat nabídky mnoha způsoby. Například stejně jako nabídky může mít skupiny příkazů, panely nástrojů může také mít skupiny. (V nabídkách, příkaz skupiny jsou odděleny vodorovné čáry. Na panely nástrojů skupiny nejsou oddělených visual rozdělení.)  
+4.  Panely nástrojů se podobají nabídky mnoha způsoby. Například stejně jako nabídka může mít skupiny příkazů, panely nástrojů mohou také můžete mít skupiny. (V nabídkách, příkaz skupiny jsou odděleny vodorovné čáry. Na panely nástrojů skupiny nejsou odděleny visual oddělovače.)  
   
-     Přidat `<Groups>` oddíl, který obsahuje `<Group>` elementu. To definuje skupinu, jejíž ID deklarované v `<Symbols>` oddílu. Přidat `<Groups>` části právě po `<Menus>` oddílu.  
+     Přidat `<Groups>` oddíl, který obsahuje `<Group>` elementu. To definuje skupinu, do jehož Identifikátor deklarovaný v `<Symbols>` oddílu. Přidat `<Groups>` části hned za `<Menus>` oddílu.  
   
     ```xml  
     <Groups>  
@@ -89,19 +90,19 @@ V tomto návodu jste Naučte se vytvořit okno nástroje a integrovat do sady Vi
     </Groups>  
     ```  
   
-     Nastavením nadřazený identifikátor GUID a ID na identifikátor GUID a ID panelu nástrojů, přidejte skupinu na panelu nástrojů.  
+     Nastavením nadřazený identifikátor GUID a ID identifikátoru GUID a ID panelu nástrojů, přidejte skupinu do panelu nástrojů.  
   
-## <a name="add-a-command-to-the-toolbar"></a>Přidání příkazu na panelu nástrojů  
- Na panelu nástrojů, který se zobrazí jako tlačítko přidáte příkaz.  
+## <a name="add-a-command-to-the-toolbar"></a>Přidání příkazu do panelu nástrojů  
+ Přidání příkazu do panelu nástrojů, který je zobrazen jako tlačítko.  
   
-1.  V `<Symbols>` část, deklarovat následující prvky IDSymbol bezprostředně za panelu nástrojů a nástrojů deklarace skupiny.  
+1.  V `<Symbols>` části, deklarujte následující prvky idsymbol – stačí po panelu nástrojů a nástrojů deklarace skupiny.  
   
     ```xml  
     <IDSymbol name="cmdidWindowsMedia" value="0x0100" />  
     <IDSymbol name="cmdidWindowsMediaOpen" value="0x132" />  
     ```  
   
-2.  Přidá prvek tlačítko uvnitř `<Buttons>` oddílu. Tento prvek se zobrazí na panelu nástrojů v okně nástroje s ikonou vyhledávání (s ikonou lupy).  
+2.  Přidejte tlačítko prvek uvnitř `<Buttons>` oddílu. Tento prvek se zobrazí na panelu nástrojů v okně nástroje s **hledání** ikonu (s ikonou lupy).  
   
     ```xml  
     <Button guid="guidFirstToolWindowPackageCmdSet" id="cmdidWindowsMediaOpen" priority="0x0101" type="Button">  
@@ -114,7 +115,7 @@ V tomto návodu jste Naučte se vytvořit okno nástroje a integrovat do sady Vi
     </Button>  
     ```  
   
-3.  Otevřete FirstToolWindowCommand.cs a přidejte následující řádky v třídě bezprostředně za existující pole.  
+3.  Otevřít *FirstToolWindowCommand.cs* a přidejte následující řádky ve třídě bezprostředně po existujících polí.  
   
     ```csharp  
     public const string guidFirstToolWindowPackageCmdSet = "00000000-0000-0000-0000-0000";  // get the GUID from the .vsct file  
@@ -123,12 +124,12 @@ V tomto návodu jste Naučte se vytvořit okno nástroje a integrovat do sady Vi
     public const int ToolbarID = 0x1000;  
     ```  
   
-     Tato funkce zpřístupňuje příkazech v kódu.  
+     To zpřístupňuje příkazům v kódu.  
   
-## <a name="add-a-mediaplayer-property-to-firsttoolwindowcontrol"></a>Přidání vlastnosti Media Player FirstToolWindowControl  
- Z obslužné rutiny události pro ovládací prvky panelu nástrojů musí být schopen řízení přehrávač médií, která je podřízená třídy FirstToolWindowControl přístupu vašeho kódu.  
+## <a name="add-a-mediaplayer-property-to-firsttoolwindowcontrol"></a>Přidání vlastnosti MediaPlayer FirstToolWindowControl  
+ Z obslužné rutiny událostí pro ovládací prvky panelu nástrojů musí být váš kód přístup k ovládací prvek Media Player, který je podřízeným prvkem FirstToolWindowControl třídy.  
   
- V **Průzkumníku řešení**, klikněte pravým tlačítkem na FirstToolWindowControl.xaml, klikněte na **kód zobrazení**a přidejte následující kód do třídy FirstToolWindowControl.  
+ V **Průzkumníka řešení**, klikněte pravým tlačítkem na *FirstToolWindowControl.xaml*, klikněte na tlačítko **zobrazit kód**a přidejte následující kód do třídy FirstToolWindowControl.  
   
 ```csharp  
 public System.Windows.Controls.MediaElement MediaPlayer  
@@ -137,10 +138,10 @@ public System.Windows.Controls.MediaElement MediaPlayer
 }  
 ```  
   
-## <a name="instantiate-the-tool-window-and-toolbar"></a>Vytvořit okno nástroje a panelu nástrojů  
- Přidání panelu nástrojů a příkaz nabídky, která volá **otevření souboru** dialogové okno a přehraje vybraného mediálního souboru.  
+## <a name="instantiate-the-tool-window-and-toolbar"></a>Vytvoření instance panelu nástrojů a panelu nástrojů  
+ Přidání panelu nástrojů a příkaz nabídky, která volá **otevřít soubor** dialogové okno a přehraje mediální soubor.  
   
-1.  Otevřete FirstToolWindow.cs a přidejte následující `using` příkazy.  
+1.  Otevřít *FirstToolWindow.cs* a přidejte následující `using` příkazy.  
   
     ```csharp  
     using System.ComponentModel.Design;  
@@ -148,20 +149,20 @@ public System.Windows.Controls.MediaElement MediaPlayer
     using Microsoft.VisualStudio.Shell.Interop;   
     ```  
   
-2.  Ve třídě FirstToolWindow přidejte veřejný odkaz do ovládacího prvku FirstToolWindowControl.  
+2.  Uvnitř třídy FirstToolWindow přidejte veřejný odkaz na ovládací prvek FirstToolWindowControl.  
   
     ```csharp  
     public FirstToolWindowControl control;  
     ```  
   
-3.  Na konci tohoto konstruktoru nastavte tuto proměnnou ovládacího prvku do ovládacího prvku nově vytvořený.  
+3.  Na konci konstruktoru nastavte tuto proměnnou ovládacího prvku na nově vytvořený ovládací prvek.  
   
     ```csharp  
     control = new FirstToolWindowControl();   
     base.Content = control;  
     ```  
   
-4.  Vytvoří instanci panelu nástrojů v konstruktoru.  
+4.  Vytvoření panelu nástrojů uvnitř konstruktoru instance.  
   
     ```csharp  
     this.ToolBar = new CommandID(new Guid(FirstToolWindowCommand.guidFirstToolWindowPackageCmdSet),   
@@ -169,7 +170,7 @@ public System.Windows.Controls.MediaElement MediaPlayer
     this.ToolBarLocation = (int)VSTWT_LOCATION.VSTWT_TOP;  
     ```  
   
-5.  V tomto okamžiku konstruktor FirstToolWindow by měl vypadat takto:  
+5.  V tomto okamžiku FirstToolWindow konstruktor by měl vypadat takto:  
   
     ```csharp  
     public FirstToolWindow() : base(null)  
@@ -185,13 +186,13 @@ public System.Windows.Controls.MediaElement MediaPlayer
     }  
     ```  
   
-6.  Přidejte příkaz nabídky panelu nástrojů. Ve třídě FirstToolWindowCommand.cs přidejte následující příkaz using  
+6.  Přidání příkazu nabídky do panelu nástrojů. Ve třídě FirstToolWindowCommand.cs přidejte následující příkaz using  
   
     ```csharp  
     using System.Windows.Forms;  
     ```  
   
-7.  Ve třídě FirstToolWindowCommand přidejte následující kód na konci metodu ShowToolWindow(). Příkaz ButtonHandler budou prováděny v další části.  
+7.  Ve třídě FirstToolWindowCommand přidejte následující kód na konci metody ShowToolWindow(). Příkaz ButtonHandler budou implementovány v další části.  
   
     ```csharp  
     // Create the handles for the toolbar command.   
@@ -203,17 +204,17 @@ public System.Windows.Controls.MediaElement MediaPlayer
     mcs.AddCommand(menuItem);  
     ```  
   
-#### <a name="to-implement-a-menu-command-in-the-tool-window"></a>K implementaci příkazu nabídky v okně nástroje  
+### <a name="to-implement-a-menu-command-in-the-tool-window"></a>Implementace příkazu nabídky v panelu nástrojů  
   
-1.  Ve třídě FirstToolWindowCommand přidat ButtonHandler metoda, která volá **otevření souboru** dialogové okno. Pokud soubor nebyl vybraný, hraje souboru média.  
+1.  Ve třídě FirstToolWindowCommand přidejte ButtonHandler metodu, která volá **otevřít soubor** dialogového okna. Pokud byl vybrán soubor, hraje mediální soubor.  
   
-2.  Ve třídě FirstToolWindowCommand přidejte privátní odkaz na okno FirstToolWindow, která je vytvořena v metodě FindToolWindow().  
+2.  Ve třídě FirstToolWindowCommand přidejte privátní odkaz do okna FirstToolWindow, která se vytvoří v metodě FindToolWindow().  
   
     ```csharp  
     private FirstToolWindow window;  
     ```  
   
-3.  Změnit metodu ShowToolWindow() nastavit na okno, které jste definovali výše, (, aby obslužná rutina ButtonHandler přístup ovládacího prvku okno. Zde je kompletní metoda ShowToolWindow().  
+3.  Změnit metodu ShowToolWindow() nastavujete časové období, které jste definovali výše (tak, aby obslužná rutina příkazu ButtonHandler můžete přístup k ovládacímu prvku okna. Tady je úplná metoda ShowToolWindow().  
   
     ```csharp  
     private void ShowToolWindow(object sender, EventArgs e)  
@@ -236,7 +237,7 @@ public System.Windows.Controls.MediaElement MediaPlayer
     }  
     ```  
   
-4.  Přidejte metodu ButtonHandler. Vytvoří OpenFileDialog pro uživatele k určení souboru média k přehrání, a pak hraje vybraného souboru.  
+4.  Přidejte metodu ButtonHandler. Vytvoří OpenFileDialog pro uživatele, aby zadal do souboru média přehrajete, a potom hraje vybraný soubor.  
   
     ```csharp  
     private void ButtonHandler(object sender, EventArgs arguments)  
@@ -250,10 +251,10 @@ public System.Windows.Controls.MediaElement MediaPlayer
     }  
     ```  
   
-## <a name="set-the-default-position-for-the-tool-window"></a>Nastaví výchozí pozici pro panel nástrojů  
- Potom zadejte výchozí umístění v integrovaném vývojovém prostředí pro panel nástrojů. Informace o konfiguraci pro panel nástrojů je v souboru FirstToolWindowPackage.cs.  
+## <a name="set-the-default-position-for-the-tool-window"></a>Nastavte výchozí umístění pro panel nástrojů  
+ Dále určete výchozí umístění v integrovaném vývojovém prostředí pro panel nástrojů. Informace o konfiguraci pro panel nástrojů se *FirstToolWindowPackage.cs* souboru.  
   
-1.  V FirstToolWindowPackage.cs, najdete <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> atributu u `FirstToolWindowPackage` třídy, která předá typ FirstToolWindow konstruktoru. Chcete-li určit výchozí umístění, je nutné přidat další parametry konstruktoru následující ukázka.  
+1.  V *FirstToolWindowPackage.cs*, vyhledejte <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> atribut na `FirstToolWindowPackage` třídu, která předá FirstToolWindow typ konstruktoru. Chcete-li určit výchozí pozici, je nutné přidat další parametry konstruktoru následující ukázka.  
   
     ```csharp  
     [ProvideToolWindow(typeof(FirstToolWindow),  
@@ -261,22 +262,22 @@ public System.Windows.Controls.MediaElement MediaPlayer
         Window = "3ae79031-e1bc-11d0-8f78-00a0c9110057")]  
     ```  
   
-     První parametr s názvem je `Style` a jeho hodnota může být `Tabbed`, což znamená, že okno bude na kartě v existujícím okně. Je zadána pozici ukotvení `Window` parametr, v tomto případě n identifikátor GUID **Průzkumníku řešení**.  
+     První parametr s názvem `Style` a jeho hodnota může být `Tabbed`, což znamená, že v okně budou karty ve stávajícím okně. Je určené pozici ukotvení `Window` parametr, n takovém případě identifikátor GUID **Průzkumníka řešení**.  
   
     > [!NOTE]
-    >  Další informace o typech windows v prostředí IDE najdete v tématu <xref:EnvDTE.vsWindowType>.  
+    >  Další informace o typech oken v integrovaném vývojovém prostředí najdete v tématu <xref:EnvDTE.vsWindowType>.  
   
-## <a name="testing-the-tool-window"></a>Testování panel nástrojů  
+## <a name="test-the-tool-window"></a>Testovací okno nástroje  
   
-1.  Stisknutím klávesy F5 otevřete novou instanci třídy sadě Visual Studio experimentální sestavení.  
+1.  Stisknutím klávesy **F5** otevřít novou instanci třídy experimentální sestavení sady Visual Studio.  
   
-2.  Na **zobrazení** nabídky, přejděte na příkaz **ostatní okna** a pak klikněte na **první okno nástroje**.  
+2.  Na **zobrazení** nabídky, přejděte k **ostatní Windows** a potom klikněte na tlačítko **první okno nástroje**.  
   
-     Ve stejné pozici, jako by měla otevřít okno nástroje přehrávač médií **Průzkumníku řešení**. Pokud stále zobrazuje v stejně jako při před, obnovit rozložení okna (**okno nebo resetovat rozložení okna**).  
+     Panel nástrojů media player měla otevřít na stejné pozici jako **Průzkumníka řešení**. Pokud se stále zobrazí na stejné pozici jako předtím, resetovat rozložení okna (**okno / resetovat rozložení okna**).  
   
-3.  Klikněte na tlačítko (má ikonu hledání) v okně nástroje. Vyberte podporované zvuk nebo video souboru, například C:\windows\media\chimes.wav, stiskněte **otevřete**.  
+3.  Klikněte na tlačítko (má **hledání** ikonu) v panelu nástrojů. Vyberte podporovanou zvuk nebo video soubor, například *C:\windows\media\chimes.wav*, stiskněte klávesu **otevřít**.  
   
      Měli byste slyšet zvuk gongu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md)

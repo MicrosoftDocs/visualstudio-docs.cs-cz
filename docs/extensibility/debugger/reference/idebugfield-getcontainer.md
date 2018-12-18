@@ -1,5 +1,5 @@
 ---
-title: IDebugField::GetContainer | Microsoft Docs
+title: IDebugField::GetContainer | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 826274b42aad8e695772abab75d4a2d5f2611336
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7b9078fdc7849912436c0b8dc3d72338f746b36c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942033"
 ---
 # <a name="idebugfieldgetcontainer"></a>IDebugField::GetContainer
 Tato metoda získá kontejner pole.  
@@ -43,10 +44,10 @@ int GetContainer(
  [out] Vrátí kontejner reprezentovaná [IDebugContainerField](../../../extensibility/debugger/reference/idebugcontainerfield.md) rozhraní.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud toto pole neobsahuje kontejner vrácený `ppContainerField` bude mít hodnotu null.  
+ Pokud toto pole nemá kontejner, vrácený `ppContainerField` bude mít hodnotu null.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)   

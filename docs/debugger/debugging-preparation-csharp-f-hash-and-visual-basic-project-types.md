@@ -1,6 +1,6 @@
 ---
-title: 'Příprava na ladění: C#, F # a Visual Basic typy projektů | Microsoft Docs'
-ms.custom: ''
+title: Příprava na ladění C#, F#a projekty v jazyce VB | Dokumentace Microsoftu
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -22,36 +22,37 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4d590a186f5198feea6a89320897d9d4fa5c4481
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 67833f3b4387c0606c3ce1f0b99cac50f0c0b501
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53063445"
 ---
 # <a name="debugging-preparation-c-f-and-visual-basic-project-types"></a>Příprava ladění: typy projektů jazyka C#, F# a Visual Basic
-Témata v této části popisují postup ladění jazyka C#, F # a [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] projektu typy vytvořené [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] šablony projektu.  
+Témata v této části popisují, jak ladit C#, F#, a [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] vytvořil typů projektů [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] šablony projektu.  
   
- Všimněte si, že tyto typy projektů, které jako jejich výstup vytvořit knihovny DLL, byly seskupeny do [ladění projektů knihovny DLL](../debugger/debugging-dll-projects.md) z důvodu běžné funkce sdílejí.  
+ Všimněte si, že tyto typy projektů, které vytvářejí knihovny DLL jako jejich výstup, byly seskupeny do [ladění projektů knihovny DLL](../debugger/debugging-dll-projects.md) z důvodu běžné funkce sdílejí.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Doporučené nastavení vlastností](../debugger/managed-debugging-recommended-property-settings.md)  
- Tato část popisuje doporučené vlastnost ladění související nastavení pro projekty C#, F # a Visual Basic.  
+ Tato část popisuje nastavení doporučených vlastností spojené s laděním C#, F#, projekty a Visual Basic.  
   
- [Aplikace Windows Forms](../debugger/debugging-preparation-windows-forms-applications.md)  
- Popisuje projekt aplikace Windows a poskytuje pokyny pro ladění, změna výchozí konfiguraci ladění a spouštění aplikace mimo [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a připojení k němu.  
+ [Formulářové aplikace Windows](../debugger/debugging-preparation-windows-forms-applications.md)  
+ Popisuje projekt aplikace Windows a poskytuje pokyny pro ladění, změnu výchozí konfigurace ladění a spouštění aplikací mimo [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] a připojení k němu.  
   
  [Projekty konzoly](../debugger/debugging-preparation-console-projects.md)  
- Poskytuje další informace pro ladění C# nebo [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] Konzolová aplikace. To zahrnuje určení argumenty příkazového řádku, od vaší aplikace z příkazového řádku, do okna výstupu zápisu a odstraňování potíží v okně konzoly.  
+ Poskytuje další informace pro ladění jazyka C# nebo [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] konzolové aplikace. Jedná se o zadání argumentů příkazového řádku, spouští se aplikace z příkazového řádku se zápis do okna výstup a řešení potíží v okně konzoly.  
   
  [Služby systému Windows](../debugger/debugging-preparation-windows-services.md)  
- Popisuje služby systému Windows a obsahuje odkaz na ladění aplikace služby systému Windows.  
+ Popisuje službu Windows a poskytuje odkaz na ladění aplikace služby Windows.  
   
 ## <a name="related-sections"></a>Související oddíly  
- [Nastavení ladicího programu a příprava](../debugger/debugger-settings-and-preparation.md)  
- Popisuje nastavení a příprava, který je třeba provést při ladění programu s [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ladicí program.  
+ [Nastavení a příprava ladicího programu](../debugger/debugger-settings-and-preparation.md)  
+ Zahrnuje nastavení a přípravu, kterou je třeba provést pro ladění svých programů s [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ladicího programu.  
   
  [Ladění spravovaného kódu](../debugger/debugging-managed-code.md)  
- Popisuje běžné problémy ladění a techniky pro aplikace, které jsou zapsané ve spravovaném kódu.  
+ Popisuje běžné problémy ladění a techniky pro aplikace napsané ve spravovaném kódu.  
   
 ## <a name="see-also"></a>Viz také  
  [Zabezpečení ladicího programu](../debugger/debugger-security.md)

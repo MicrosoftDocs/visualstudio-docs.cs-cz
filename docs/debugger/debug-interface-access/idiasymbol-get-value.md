@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_value – | Microsoft Docs
+title: Idiasymbol::get_value – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d9a6249506356f586a2e00d2b2c2bf73eb0283c0
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 23fb08303840c8d90644a292cac8832e29641246
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49863734"
 ---
 # <a name="idiasymbolgetvalue"></a>IDiaSymbol::get_value
 Načte hodnotu konstanty.  
@@ -33,16 +34,16 @@ HRESULT get_value (
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [ve out] A `VARIANT` objekt, který obsahuje hodnotu konstanty.  
+ [out v] A `VARIANT` objekt, který se vyplní hodnotou konstanty.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` nebo chybový kód.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
->  Vrácená hodnota `S_FALSE` znamená vlastnost není k dispozici pro symbol.  
+>  Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="remarks"></a>Poznámky  
- Zadaný typ VARIANT se musí inicializovat před předaná této metodě. Další informace podívejte se na příklad.  
+ Zadaný typ VARIANT musí být inicializován před jeho předáním této metody. Další informace podívejte se na příklad.  
   
 ## <a name="example"></a>Příklad  
   

@@ -1,5 +1,5 @@
 ---
-title: Idiasession::findlinesbyaddr – | Microsoft Docs
+title: Idiasession::findlinesbyaddr – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ff28045b9a845ac873e7d9325b52d336ff8dc519
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 29718d355e1b6afb1f85fbb27b5d7b5dc7cfd610
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49819872"
 ---
 # <a name="idiasessionfindlinesbyaddr"></a>IDiaSession::findLinesByAddr
-Načte řádků v zadané kompilace, které obsahují zadaná adresa.  
+Načte řádky v zadané kompilace, které obsahují zadané adrese.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,22 +37,22 @@ HRESULT findLinesByAddr (
   
 #### <a name="parameters"></a>Parametry  
  `seg`  
- [v] Určuje komponentu části konkrétní adresy.  
+ [in] Určuje komponentu části z konkrétní adresy.  
   
  `offset`  
- [v] Určuje posunutí součást konkrétní adresu.  
+ [in] Určuje posunutí komponentu konkrétní adresu.  
   
  `length`  
- [v] Určuje počet bajtů rozsah adres tak, aby pokrývalo k tomuto dotazu.  
+ [in] Určuje počet bajtů rozsah adres, aby pokryl s Tento dotaz.  
   
  `ppResult`  
  [out] Vrátí [idiaenumlinenumbers –](../../debugger/debug-interface-access/idiaenumlinenumbers.md) objekt, který obsahuje seznam všech řádku čísla tohoto krytí zadaný rozsah adres.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
- Tento příklad ukazuje funkce, který získá všechna čísla řádků obsažené ve funkci pomocí funkce na adresu a délka.  
+ Tento příklad ukazuje funkci, která získá všechna čísla řádků, které jsou obsažené ve funkci pomocí funkce adresu a délku.  
   
 ```C++  
 IDiaEnumLineNumbers* GetLineNumbersByAddr(IDiaSymbol *pFunc,  

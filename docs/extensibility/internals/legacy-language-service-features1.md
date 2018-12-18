@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131729"
 ---
 # <a name="legacy-language-service-features"></a>Funkce služby starší verze jazyka
 Spravované balíček služby jazyk framework (MPF) může podporovat jeden nebo více [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] funkce, jako je zvýraznění syntaxe, IntelliSense a ověřování zarážek. Jednotlivé funkce se dají implementovat navzájem nezávislé, ale všechny vyžadují analyzátor a skener s výjimkou zvýraznění syntaxe, které vyžaduje pouze skener.  

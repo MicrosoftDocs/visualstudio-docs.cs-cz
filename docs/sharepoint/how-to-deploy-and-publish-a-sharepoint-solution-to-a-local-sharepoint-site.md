@@ -18,14 +18,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 5c4f7e347f9cea3a73ab5326b42720a1b2c33529
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e288b5a284ca4155cf70f4458b5b490ca4289cbe
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37120271"
 ---
-# <a name="how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site"></a>Postupy: Nasazení a publikování řešení služby SharePoint na lokální stránce SharePoint
-  Můžete nasadit nebo publikování řešení služby SharePoint na místním serveru SharePoint na vývojovém počítači. Proces nasazení zkopíruje soubor WSP server služby SharePoint, nainstaluje řešení a potom aktivuje funkce. Proces publikování pouze zkopíruje soubor WSP server služby SharePoint a ho nainstaluje. Je nutné ručně aktivovat jej a povolte ve službě SharePoint.  
+# <a name="how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site"></a>Postupy: nasazení a publikování řešení služby SharePoint na místní web služby SharePoint
+  Můžete nasadit nebo publikování řešení služby SharePoint na místním serveru SharePoint na vývojovém počítači. Kopie procesu nasazení *WSP* soubor na server služby SharePoint, nainstaluje řešení a potom aktivuje funkce. Publikování zpracovat pouze kopie *WSP* soubor na server služby SharePoint a ho nainstaluje. Je nutné ručně aktivovat jej a povolte ve službě SharePoint.  
   
 ## <a name="to-deploy-a-sharepoint-solution-to-the-local-sharepoint-server"></a>K nasazení řešení služby SharePoint na místním serveru SharePoint  
   
@@ -33,7 +34,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  Na řádku nabídek zvolte **sestavení**, **nasadit řešení**.  
   
-     Soubor WSP a nainstalované na místním serveru SharePoint. Kromě toho jsou aktivované funkce.  
+     *WSP* soubor je vytvořen a nainstalované na místním serveru SharePoint. Kromě toho jsou aktivované funkce.  
   
 ## <a name="to-publish-a-sharepoint-solution-to-a-local-sharepoint-server"></a>K publikování řešení služby SharePoint na místním serveru SharePoint  
   
@@ -43,12 +44,11 @@ ms.lasthandoff: 04/16/2018
   
 3.  V **cílové umístění** textového pole zadejte místní cestu a potom zvolte **publikovat** tlačítko.  
   
-     V sadě Visual Studio se zobrazí průběh publikování **výstup** okno. Po dokončení tohoto procesu je soubor řešení (WSP) je nainstalována na místním serveru SharePoint. Nicméně je nutné stále ho aktivovat pro použití ve službě SharePoint. Pokud již existuje soubor řešení, chybě dojde a zobrazí dotaz, zda chcete přepsat existující soubor. Informace o upgrade balíčku, najdete v části týkající se upgradu vzdálené balíčky v [postupy: nasazení, publikování a upgradovat řešení služby SharePoint na vzdáleném serveru](../sharepoint/how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server.md).  
+     V sadě Visual Studio se zobrazí průběh publikování **výstup** okno. Po dokončení tohoto procesu je řešení (*WSP*) soubor se nainstaluje na místní server SharePoint. Nicméně je nutné stále ho aktivovat pro použití ve službě SharePoint. Pokud již existuje soubor řešení, chybě dojde a zobrazí dotaz, zda chcete přepsat existující soubor. Informace o upgrade balíčku, najdete v části týkající se upgradu vzdálené balíčky v [postupy: nasazení, publikování a upgradování řešení služby SharePoint na vzdáleném serveru](../sharepoint/how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server.md).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:
  [Postupy: nasazení, publikování a upgradování řešení služby SharePoint na vzdáleném serveru](../sharepoint/how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server.md)   
  [Vytváření balíčků řešení služby SharePoint](../sharepoint/creating-sharepoint-solution-packages.md)   
  [Postupy: přizpůsobení balíčku řešení služby SharePoint](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)   
- [Postupy: Přidání nebo odebrání funkcí a položek z balíčku pomocí návrháře balíčků](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer.md)  
-  
+ [Postupy: Přidání nebo odebrání funkcí a položek z balíčku pomocí návrháře balíčků](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer.md)  
   

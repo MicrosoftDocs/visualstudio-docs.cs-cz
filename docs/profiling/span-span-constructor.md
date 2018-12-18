@@ -1,5 +1,5 @@
 ---
-title: span::span – konstruktor | Microsoft Docs
+title: span::span – konstruktor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,18 +14,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 927d65b8b936200a1e174a7225591690183f1821
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9fe89b289601775fad8c102e696e799edce1c50c
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35676600"
 ---
 # <a name="spanspan-constructor"></a>span::span – konstruktor
 Inicializuje novou instanci třídy `span` třídy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 span(  
    const marker_series& _Series,  
    _In_ LPCTSTR _Format,  
@@ -54,21 +55,21 @@ span(
   
 #### <a name="parameters"></a>Parametry  
  `_Series`  
- Kontext řady platný značky.  
+ Platné značky řady kontextu.  
   
  `_Format`  
- Složený formátovací řetězec, který obsahuje text smíšeného s nula nebo více položek formátu, odpovídajících objektů v seznamu argumentů.  
+ Složený řetězec formátu, který obsahuje textu smíšeného s nula nebo více položek formátu, který odpovídá objektům v seznamu argumentů.  
   
  `_Importance`  
- Úroveň význam.  
+ Úroveň důležitosti.  
   
  `_Category`  
  Kategorie.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** cvmarkersobj.h  
+ **Záhlaví:** *cvmarkersobj.h*  
   
  **Namespace:** Concurrency::Diagnostic –
  
- ## <a name="see-also"></a>Viz také
- [span – třída](../profiling/span-class.md)
+ ## <a name="see-also"></a>Viz také:
+ [span třídy](../profiling/span-class.md)

@@ -1,5 +1,5 @@
 ---
-title: PROVIDER_PROCESS_DATA | Microsoft Docs
+title: PROVIDER_PROCESS_DATA | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 61b1b5d67faea0ce5c1c2a56b3f411cd4f947067
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 789385ae229214beeb6c2ab9be90a964127e5e13
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49819729"
 ---
 # <a name="providerprocessdata"></a>PROVIDER_PROCESS_DATA
 Tato struktura poskytuje informace o procesech spuštěných na počítači.  
@@ -44,16 +45,16 @@ public struct PROVIDER_PROCESS_DATA {
   
 ## <a name="members"></a>Členové  
  Pole  
- Kombinace příznaků z [PROVIDER_FIELDS](../../../extensibility/debugger/reference/provider-fields.md) výčtu, která určuje, které jsou vyplněna.  
+ Kombinace příznaků z [PROVIDER_FIELDS](../../../extensibility/debugger/reference/provider-fields.md) výčet určující, která pole jsou vyplněna.  
   
  ProgramNodes  
- A [PROGRAM_NODE_ARRAY](../../../extensibility/debugger/reference/program-node-array.md) struktura, která obsahuje pole program uzlů.  
+ A [PROGRAM_NODE_ARRAY](../../../extensibility/debugger/reference/program-node-array.md) strukturu, která obsahuje celou řadu uzly programů.  
   
  fIsDebuggerPresent  
- Nenulové hodnoty (`TRUE`) Pokud [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] ladicí program běží, nula (`FALSE`) Pokud není.  
+ Nenulová (`TRUE`) Pokud [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] ladicí program je spuštěn, nula (`FALSE`) Pokud není.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je předána [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) metoda, kde je vyplněna.  
+ Tato struktura je předán [GetProviderProcessData](../../../extensibility/debugger/reference/idebugprogramprovider2-getproviderprocessdata.md) metody, kde je vyplněna.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

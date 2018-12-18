@@ -1,5 +1,5 @@
 ---
-title: DEBUG_PROPERTY_INFO | Microsoft Docs
+title: DEBUG_PROPERTY_INFO | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4466d74d0e19b898b3c377c67a14f7c39922d915
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 612865d08142a56b2908707839ad66b60ea2de9f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49847094"
 ---
 # <a name="debugpropertyinfo"></a>DEBUG_PROPERTY_INFO
 Obsahuje informace o vlastnosti ladění.  
@@ -52,30 +53,30 @@ public struct DEBUG_PROPERTY_INFO {
   
 ## <a name="members"></a>Členové  
  dwValidFields  
- Kombinace příznaků z [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) výčet, který určuje, které jsou vyplněna.  
+ Kombinace příznaků z [DEBUGPROP_INFO_FLAGS](../../../extensibility/debugger/reference/debugprop-info-flags.md) výčet, který určuje, která pole jsou vyplněna.  
   
  bstrFullName  
- Úplný název vlastnosti.  
+ Celý název vlastnosti.  
   
  bstrName  
- Název vlastnosti v kontextu.  
+ Název vlastnosti v rámci kontextu.  
   
  bstrType  
- Typ vlastnosti jako řetězec formátovaný.  
+ Typ vlastnosti jako formátovaný řetězec.  
   
  bstrValue  
- Hodnota vlastnosti jako řetězec formátovaný.  
+ Hodnota vlastnosti jako formátovaný řetězec.  
   
  pProperty  
- [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) objekt popsaná tuto strukturu.  
+ [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md) objektem popsaným touto strukturou.  
   
  dwAttrib  
- Kombinace příznaků z [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) výčet popisující atributy této vlastnosti.  
+ Kombinace příznaků z [DBG_ATTRIB_FLAGS](../../../extensibility/debugger/reference/dbg-attrib-flags.md) výčet popisující vlastnosti této vlastnosti.  
   
 ## <a name="remarks"></a>Poznámky  
- Vlastnost je objekt hierarchické povahy, který má název, typ a hodnotu. Například vlastnost popíše lokální proměnné, parametry, sledovat proměnné a výrazy a zaregistruje.  
+ Vlastnost je objekt hierarchickou povahu, který má název, typ a hodnotu. Například vlastnost popsat lokální proměnné, parametry, sledovat proměnné a výrazy a registry.  
   
- Tato struktura je předána [GetPropertyInfo –](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) metoda, kde je vyplněna. Tato struktura je také vrácena jako součást Seznam tato struktura z [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) rozhraní, které je zase, vrácena z volání [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) a [ Enumproperties –](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md) metody.  
+ Tato struktura je předán [GetPropertyInfo](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) metody, kde je vyplněna. Tato struktura je také vrácen jako část seznamu z této struktury [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md) rozhraní, které je pak vrácen z volání [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md) a [ Enumproperties –](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md) metody.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  
@@ -92,4 +93,4 @@ public struct DEBUG_PROPERTY_INFO {
  [GetPropertyInfo –](../../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md)   
  [IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md)   
  [EnumChildren](../../../extensibility/debugger/reference/idebugproperty2-enumchildren.md)   
- [Enumproperties –](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md)
+ [EnumProperties](../../../extensibility/debugger/reference/idebugstackframe2-enumproperties.md)

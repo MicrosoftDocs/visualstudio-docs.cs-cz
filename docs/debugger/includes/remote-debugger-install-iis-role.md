@@ -13,18 +13,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: dbc9d727dc412e3d354d806a45c352eef810cd99
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.openlocfilehash: 103000c2ded944236762ffd55603877ece7b7968
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38809444"
 ---
-Tyto kroky ukazují pouze základní konfiguraci služby IIS. Podrobnější informace, nebo nainstalovat do počítače s Windows Desktop, najdete v části [publikování do služby IIS](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration) nebo [IIS 8.0 pomocí technologie ASP.NET 3.5 a technologii ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45).
+Tyto kroky ukazují jenom základní konfiguraci služby IIS. Podrobnější informace nebo informace o instalaci na počítač s Windows Desktop, najdete v článku [publikování do služby IIS](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration) nebo [IIS 8.0 pomocí technologie ASP.NET 3.5 a technologii ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45).
 
-Pro operační systémy Windows Server, použijte **přidat role a funkce** Průvodce prostřednictvím **spravovat** odkaz nebo **řídicí panel** na odkaz v **správce serveru**. Na **role serveru** kroku, zaškrtněte políčko pro **webového serveru (IIS)**.
+Pro operační systémy Windows Server, použijte **přidat role a funkce** prostřednictvím průvodce **spravovat** odkaz nebo **řídicí panel** odkaz v **správce serveru**. Na **role serveru** krok, zaškrtněte políčko u **webového serveru (IIS)**.
 
-![Role webového serveru IIS je vybrali v kroku rolí vyberte server.](../media/remotedbg-server-roles-ws2012.png)
+![V kroku výběr serveru role je vybrána role webového serveru IIS.](../media/remotedbg-server-roles-ws2012.png)
 
-Na **služby rolí** kroku, vyberte služby rolí služby IIS požadavky nebo přijměte výchozí nastavení role služeb zadaný.
+Na **služeb rolí** kroku, vyberte roli služby IIS potřeby nebo přijměte výchozí nastavení role služby poskytované. Pokud budete chtít povolit nasazení s použitím nastavení a nasazení webu publikování, ujistěte se, že **IIS skripty a nástroje správy** zaškrtnuto.
 
-Pokračujte potvrzení postup instalace role Webový server a služby. Po instalaci role webového serveru (IIS) není nutné restartovat server nebo služby IIS.
+Pokračujte kroky potvrzení instalace role webového serveru a služby. Po instalaci role webového serveru (IIS) není potřeba restartovat server/IIS.

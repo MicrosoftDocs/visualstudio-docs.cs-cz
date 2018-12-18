@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer3::EnableAutoAttach | Microsoft Docs
+title: IDebugCoreServer3::EnableAutoAttach | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bf32eb5d8771f95ec155a93d1fe1e770e0cc2d52
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e5fc3ab0767a7077860c82acefc9554ba1228cee
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49831117"
 ---
 # <a name="idebugcoreserver3enableautoattach"></a>IDebugCoreServer3::EnableAutoAttach
-Umožňuje automatické připojení pro zadaný ladění moduly.  
+Umožňuje automatické připojení pro zadanou ladicí stroj.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,22 +47,22 @@ int EnableAutoAttach(
   
 #### <a name="parameters"></a>Parametry  
  `rgguidSpecificEngines`  
- [v] Pole identifikátory GUID pro každý motor ladění označit jako automatické připojení.  
+ [in] Pole identifikátorů GUID pro každý ladicí stroj označit jako automatické připojení.  
   
  `celtSpecificEngines`  
- [v] Počet modulů, zadaný v `rgguidSpecificEngines`.  
+ [in] Počet modulů, zadaný v `rgguidSpecificEngines`.  
   
  `pszStartPageUrl`  
- [v] Počáteční adresa URL pro použití při připojení automaticky.  
+ [in] Počáteční adresa URL má použít při připojení automaticky.  
   
  `pbstrSessionID`  
- [out] ID relace, který byl automaticky připojit.  
+ [out] ID relace, která byla automaticky připojen.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby. Jeden kód chyby je `E_AUTO_ATTACH_NOT_REGISTERED`, což naznačuje, že není zaregistrován objekt pro vytváření tříd auto-attach.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Jeden kód chyby: `E_AUTO_ATTACH_NOT_REGISTERED`, což znamená, že objekt pro vytváření tříd auto-attach nebyl registrován.  
   
 ## <a name="remarks"></a>Poznámky  
- Při spuštění programu přidružený k zadané adrese URL zadané ladění motory automaticky zahájení a připojené.  
+ Když se spustí program přidružený k zadané adrese URL, zadaný ladicími stroji automaticky zahájení a připojené.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)

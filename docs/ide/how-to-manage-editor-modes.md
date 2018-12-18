@@ -1,9 +1,8 @@
 ---
-title: Visual Studio celoobrazovkový režim a režim virtuálního prostoru | Microsoft Docs
-ms.custom: ''
+title: Zobrazení na celé obrazovce a režim virtuálního prostoru
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
 - word wrap
@@ -27,44 +26,45 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e95940eaad599d149e504db9c1d48c5c011409e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e5250176bee4993f9d01bffcaed71579c17e55c9
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056305"
 ---
 # <a name="how-to-manage-editor-modes"></a>Postupy: Správa režimů editoru
-Editor kódu aplikace Visual Studio můžete zobrazit v různých režimech zobrazení.  
-  
+
+Editor kódu sady Visual Studio můžete zobrazit v různých režimech zobrazení.
+
 > [!NOTE]
-> Dialogová okna a příkazy nabídky, které vidíte mohou lišit od těch popsaných v tomto článku v závislosti na aktivním nastavení nebo edici. Chcete-li změnit nastavení, například k **Obecné** nebo **Visual C++** nastavení, vyberte **nástroje** > **nastavení importu a exportu**a potom zvolte **obnovit nastavení**.
-  
-## <a name="enable-full-screen-mode"></a>Povolit režim celé obrazovky  
-Můžete skrýt všechny okna nástrojů a zobrazit pouze dokumentu windows povolením **celé obrazovky** režimu.  
-  
-#### <a name="to-enable-full-screen-mode"></a>Pokud chcete povolit režim celé obrazovky  
-  
--   Stiskněte klávesu **Alt**+**Shift**+**Enter** zadejte nebo ukončete **celé obrazovky** režimu.  
-  
-     --nebo--  
-  
--   Vydejte příkaz `View.Fullscreen` v **příkaz** okno.  
-  
-## <a name="enable-virtual-space-mode"></a>Povolit režim virtuálního prostoru  
-V **virtuální adresní prostor** režim, jsou vloženy mezery na konci každého řádku kódu. Vyberte tuto možnost na pozici komentáře ve stejném místě vedle vašeho kódu.  
-  
-#### <a name="to-enable-virtual-space-mode"></a>Pokud chcete povolit režim virtuálního prostoru  
-  
+> Dialogová okna a příkazy nabídek, které se zobrazí mohou lišit od těch popsaných v tomto článku v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, například k **Obecné** nebo **Visual C++** nastavení, zvolte **nástroje** > **nastavení importu a exportu**a klikněte na tlačítko **obnovit všechna nastavení**.
+
+## <a name="enable-full-screen-mode"></a>Povolit režim zobrazení na celé obrazovce
+
+Je možné skrýt všechna okna nástrojů a zobrazit pouze okna dokumentu tím, že **zobrazení na celé obrazovce** režimu.
+
+-   Stisknutím klávesy **Alt**+**Shift**+**Enter** a zadejte skript nebo ukončit **zobrazení na celé obrazovce** režimu.
+
+     --nebo--
+
+-   Příkaz `View.Fullscreen` v **příkaz** okna.
+
+## <a name="enable-virtual-space-mode"></a>Povolit režim virtuálního prostoru
+
+V **virtuální prostor** režimu, budou vkládány mezery na konci každého řádku kódu. Vyberte tuto možnost na pozici poznámky na bod konzistentní vzhledem k vedle vašeho kódu.
+
 1.  Vyberte **možnosti** z **nástroje** nabídky.
 
-2.  Rozbalte **textového editoru** složku a zvolte **všechny jazyky** globálně nastavit tuto možnost, nebo vyberte složku, konkrétní jazyk. Například zapnout čísla řádků pouze v jazyce Visual Basic, vyberte **základní** > **textového editoru** uzlu.
-  
-3.  Vyberte **Obecné** možnosti a v části **nastavení**, vyberte **povolit virtuální prostor**.  
-  
+2.  Rozbalte **textový Editor** složky a zvolte **všechny jazyky** a tuto možnost nastavte, globálně nebo zvolte konkrétní jazykovou složku. Například, chcete-li zapnout čísla řádků pouze v jazyce Visual Basic, zvolte **základní** > **textový Editor** uzlu.
+
+3.  Vyberte **Obecné** možnosti a v části **nastavení**vyberte **povolit virtuální prostor**.
+
     > [!NOTE]
-    >  **Virtuální prostor** je povolena v **sloupců výběru** režimu. Když **virtuální adresní prostor** není povolen režim, přesune jako kurzor od konce jeden řádek přímo na první znak na další.  
-  
-## <a name="see-also"></a>Viz také
-[Přizpůsobení editoru](../ide/customizing-the-editor.md)   
-[Přizpůsobení rozložení oken v sadě Visual Studio](../ide/customizing-window-layouts-in-visual-studio.md)   
-[Písma a barvy, prostředí, dialogové okno Možnosti](../ide/reference/fonts-and-colors-environment-options-dialog-box.md)
+    > **Virtuální prostor** je povolený v **výběr sloupce** režimu. Když **virtuální prostor** není povolen režim, kurzor se přesune z konce jeden řádek přímo na první znak na další.
+
+## <a name="see-also"></a>Viz také:
+
+- [Přizpůsobení editoru](../ide/customizing-the-editor.md)
+- [Přizpůsobení rozložení oken v sadě Visual Studio](../ide/customizing-window-layouts-in-visual-studio.md)
+- [Písma a barvy, prostředí, dialogové okno Možnosti](../ide/reference/fonts-and-colors-environment-options-dialog-box.md)

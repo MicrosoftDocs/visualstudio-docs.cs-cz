@@ -1,5 +1,5 @@
 ---
-title: IDebugProcessEx2 | Microsoft Docs
+title: IDebugProcessEx2 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 479206b75325c1b7e6bba0e4cc4e9b53944d73d3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7fa10fb5ebe2f9a78d44997c29ae51bc02e2c842
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49934935"
 ---
 # <a name="idebugprocessex2"></a>IDebugProcessEx2
-Toto rozhraní umožňuje relace ladění manager (SDM) oznámit proces, který se připojuje k nebo probíhá odpojování od proces.  
+Toto rozhraní umožňuje relace ladění správci upozornění procesu, který je k připojení nebo odpojení od procesu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -31,29 +32,29 @@ IDebugProcessEx2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>Poznámky pro implementátory  
- Toto rozhraní implementuje dodavatele vlastní port pro stejný objekt, jako [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) rozhraní za účelem:  
+ Dodavatel port. Tento vlastní port implementuje toto rozhraní na stejný objekt jako [IDebugProcess2](../../../extensibility/debugger/reference/idebugprocess2.md) rozhraní za účelem:  
   
--   Podpora sledování relací, které jsou připojené k procesu  
+- Podpora sledování relací, které jsou připojené k procesu  
   
--   Podpora automatického – připojené napříč více modulů ladění  
+- Podpora automatické připojení napříč více ladicími stroji  
   
- Vlastní port dodavatele může toto rozhraní implementovat, pokud se vybere.  
+  Pokud zvolí dodavatele port. Tento vlastní port toto rozhraní implementovat.  
   
 ## <a name="notes-for-callers"></a>Poznámky pro volající  
   
 -   Volání SDM [QueryInterface](/cpp/atl/queryinterface) na `IDebugProcess2` rozhraní k získání tohoto rozhraní.  
   
 ## <a name="methods-in-vtable-order"></a>Metody v tabulce Vtable pořadí  
- Následující tabulka uvádí metody `IDebugProcessEx2`.  
+ V následující tabulce jsou uvedeny metody objektu `IDebugProcessEx2`.  
   
 |Metoda|Popis|  
 |------------|-----------------|  
-|[Attach](../../../extensibility/debugger/reference/idebugprocessex2-attach.md)|Informuje o proces relace je nyní ladění proces.|  
-|[Detach](../../../extensibility/debugger/reference/idebugprocessex2-detach.md)|Informuje o proces relace je již ladění proces.|  
-|[AddImplicitProgramNodes](../../../extensibility/debugger/reference/idebugprocessex2-addimplicitprogramnodes.md)|Přidá program uzlů pro seznam modulů ladění.|  
+|[Attach](../../../extensibility/debugger/reference/idebugprocessex2-attach.md)|Informuje o procesu relace je nyní ladění procesu.|  
+|[Detach](../../../extensibility/debugger/reference/idebugprocessex2-detach.md)|Informuje o procesu relace je již ladění procesu.|  
+|[AddImplicitProgramNodes](../../../extensibility/debugger/reference/idebugprocessex2-addimplicitprogramnodes.md)|Přidá uzly programů seznam ladicí stroj.|  
   
 ## <a name="remarks"></a>Poznámky  
- Toto rozhraní je privátní mezi SDM a proces.  
+ Toto rozhraní je privátní mezi SDM a procesu.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: Portpriv.h  

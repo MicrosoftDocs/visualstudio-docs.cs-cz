@@ -1,5 +1,5 @@
 ---
-title: Program uzly | Microsoft Docs
+title: Program uzly | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,29 +16,30 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 50ab93c31a340bf8a2f4e2deb5f202707d7826b8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ecc87a24b35993f200c709ee033fffe6a4ecb120
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49903618"
 ---
-# <a name="program-nodes"></a>Program uzly
-Z hlediska architektuře ladicího programu **program uzlu**:  
+# <a name="program-nodes"></a>Uzly programů
+V architektuře ladicího programu *program uzel*:  
   
--   Je lightweight popis programu.  
+- Představuje jednoduchý popis programu.  
   
--   Můžete určit samostatně a proces běží v a lze k se odpojit od a popisují modul ladění (DE), který byl vytvořen, pokud existuje.  
+- Můžete identifikovat samostatně a běží v procesu. Uzel program lze připojit k, být odpojen od a popisují ladicího stroje (DE), který byl vytvořen, pokud existuje.  
   
--   Je reprezentována [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) rozhraní, obvykle vytvoří DE nebo portu. Program uzly jsou přidána na port voláním [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md). Když program uzlu se přidá k portu, se přidá do procesu obsahující program, který představuje tento uzel program.  
+- Je reprezentován [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) rozhraní, obvykle vytváří DE nebo portu. Uzly programů jsou přidána na port voláním [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md). Když program uzel se přidá k portu, přidá se do procesu obsahující program, který představuje tento uzel programu.  
   
- Zopakovat po spuštění relace ladění, v závislosti na implementaci ladění balíčku, program uzly slouží k vytvoření odpovídající programy. Při procesu je dotazován na jeho programy, jsou uvedené programy, jednu pro každý uzel program.  
+  Nějakou dobu, po spuštění relace ladění, v závislosti na implementaci balíček ladicí program uzly slouží k vytvoření odpovídající programy. Když je proces pro jeho programy, jsou uvedené programy, jeden pro každý uzel programu.  
   
- Před program je připojen k, musí prostředí IDE lightweight popis programu. Tyto informace můžete získat z uzlu programu. Jakmile program je připojen k, rozhraní IDE musí zobrazit podrobnější informace, jako je například seznam všechna vlákna spuštění programu. Tyto informace se získávají z této aplikace.  
+  Než programu přiřazen, rozhraní IDE potřebuje jednoduchý popis programu. Tyto informace můžete získat z uzlu programu. Jakmile program je připojen k, rozhraní IDE zobrazí podrobnější informace, jako je například seznam všechna vlákna spuštěná v programu. Tyto informace se získávají z této aplikace.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Programy](../../extensibility/debugger/programs.md)   
  [Procesy](../../extensibility/debugger/processes.md)   
- [Ladění modulu](../../extensibility/debugger/debug-engine.md)   
- [Koncepty ladicí program](../../extensibility/debugger/debugger-concepts.md)   
+ [Ladicí stroj](../../extensibility/debugger/debug-engine.md)   
+ [Koncepty ladicího programu](../../extensibility/debugger/debugger-concepts.md)   
  [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md)   
  [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md)

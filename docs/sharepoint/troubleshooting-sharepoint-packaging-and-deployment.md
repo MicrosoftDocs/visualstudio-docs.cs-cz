@@ -1,5 +1,5 @@
 ---
-title: Řešení potíží s balení a nasazení SharePoint | Microsoft Docs
+title: Řešení potíží s balení a nasazení SharePoint | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 02/22/2017
 ms.technology:
@@ -26,93 +26,93 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 95dfd93433fc70895baa9056ce1b1522845bf497
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ba6f0a1aff0c263534c17256b7f5cf49ff9c9533
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49898054"
 ---
-# <a name="troubleshooting-sharepoint-packaging-and-deployment"></a>Řešení potíží s balením a nasazením služby SharePoint
-  Toto téma popisuje různé problémy, které se můžete setkat při zabalení a nasazení řešení služby SharePoint.
+# <a name="troubleshoot-sharepoint-packaging-and-deployment"></a>Řešení potíží s balení a nasazení SharePoint
+  Toto téma popisuje různé problémy, které se mohou vyskytnout po zabalení a nasazení řešení služby SharePoint.
 
-## <a name="enabling-enhanced-debugging"></a>Povolení rozšířeného ladění
- Při diagnostice mezi další vrstvy, SharePoint a Visual Studio, můžete pomocí klíče registru EnableDiagnostics zobrazíte trasování zásobníku. Další informace najdete v tématu [ladění řešení služby SharePoint](../sharepoint/debugging-sharepoint-solutions.md).
+## <a name="enable-enhanced-debugging"></a>Povolení rozšířeného ladění
+ K diagnostice mezi Visual Studio, SharePoint a jinými vrstvami, můžete klíč registru EnableDiagnostics pro zobrazení trasování zásobníku. Další informace najdete v tématu [řešení ladění služby SharePoint](../sharepoint/debugging-sharepoint-solutions.md).
 
-## <a name="adding-project-output-to-the-solution-package"></a>Přidání výstupu projektu do balíčku řešení
- Výstup projektu můžete přidat do balíčku pomocí návrháře balíčků. Při přidání výstupu projektu @, ale ujistěte, že platformy projektu odpovídá platforma řešení služby SharePoint. Doporučujeme vám, že používáte **libovolný procesor** Cílová platforma pro sestavení, které chcete nasadit na server služby SharePoint. Další informace najdete v tématu [stránka kompilovat, Návrhář projektu &#40;jazyka Visual Basic&#41; ](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) a [Advanced kompilátoru dialogové okno nastavení &#40;jazyka Visual Basic&#41;](/visualstudio/ide/reference/advanced-compiler-settings-dialog-box-visual-basic).
+## <a name="add-project-output-to-the-solution-package"></a>Přidat výstup projektu do balíčku řešení
+ Můžete přidat výstup projektu do balíčku prostřednictvím návrháře balíčku. Ale při přidání výstupu projektu, ujistěte se, zda odpovídá platforma projektu platformě řešení služby SharePoint. Doporučujeme použít **jakýkoli procesor** cílovou platformu pro sestavení, které chcete nasadit na SharePoint server. Další informace najdete v tématu [stránka kompilovat, Návrhář projektu &#40;jazyka Visual Basic&#41; ](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) a [Advanced kompilátoru dialogové okno nastavení &#40;jazyka Visual Basic&#41;](/visualstudio/ide/reference/advanced-compiler-settings-dialog-box-visual-basic).
 
-## <a name="validation-warnings-and-errors"></a>Upozornění a chyby při ověřování
- Nástroje pro vývoj pro SharePoint v sadě Visual Studio kroků ověření ověřte, zda je správně vytvořen balíčku řešení. Můžete také vytvořit vlastní ověření kroky pro funkce a balíčky. Další informace najdete v tématu [postupy: vytvoření vlastní funkce a pravidel ověřování balíčku pro řešení služby SharePoint](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md).
+## <a name="validation-warnings-and-errors"></a>Ověření upozornění a chyby
+ Nástroje pro vývoj služby SharePoint v sadě Visual Studio provedou kroky ověření, že je správně vytvořen balíček řešení. Můžete také vytvořit vlastní ověřovací postup pro součásti a balíčky. Další informace najdete v tématu [postupy: vytvoření vlastní funkce a balíku ověřovacích pravidel pro řešení služby SharePoint](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md).
 
 ## <a name="deployment-conflict-resolution"></a>Řešení konfliktů při nasazení
- Když nasadíte řešení služby SharePoint, můžete zjistit kolize, když položky na serveru má stejný název, URL nebo ID jako položka v balíčku vaše řešení. Můžete změnit **řešení konfliktů při nasazení** vlastnost řešení, sestavy, nebo můžete ignorovat kolizí pro moduly, webové části, seznam instancí a typy obsahu.
+ Když nasadíte řešení služby SharePoint, můžete najít kolize, když položka na serveru má stejný název, URL nebo ID jako položka v balíčku řešení. Můžete změnit **řešení konfliktů při nasazení** vlastnosti řešení, sestavu nebo ignorování kolizí pro moduly, webové části, seznam instancí a typy obsahu.
 
  Následující tabulka ukazuje nastavení **řešení konfliktů při nasazení** vlastnost.
 
 |Hodnota|Popis|
 |-----------|-----------------|
-|Automatické|Zjistí kolize a řeší konflikty automaticky.|
-|řádku|Zjistí kolize a ohlásí je vývojář před řešení konfliktů.|
-|Žádné|Nezjistí kolizí.|
+|Automatické|Detekuje kolize a řeší konflikty automaticky.|
+|řádek|Detekuje kolize a ohlásí je vývojáři před řešením konfliktů.|
+|Žádné|Nemůže zjistit kolize.|
 
 ## <a name="differences-between-f5-deployment"></a>Rozdíly mezi nasazením pomocí klávesy F5
- Při použití [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] pro nasazení projektu služby SharePoint k místnímu serveru SharePoint pro testování a ladění, jsou některé další kroky, které provádí [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
+ Při použití [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] k nasazení projektu služby SharePoint na místní server SharePoint pro testování a ladění, existují některé další kroky, které provádí [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].
 
-1.  Během kroku nasazení resetujte Internetové informační služby (IIS).
+1. Resetujte Internetové informační služby (IIS) při kroku nasazení.
 
-2.  Automaticky přidružte pracovní postupy.
+2. Automaticky přidruží pracovní postupy.
 
-3.  Nastavení funkce aktivace pořadí podle hierarchie v Návrháři balíčku.
+3. Nastavte pořadí aktivace funkce podle hierarchie v Návrháři balíčku.
 
- Můžete přidat vlastní nasazení postup další změny chování F5. Další informace najdete v tématu [návod: vytvoření vlastní krok nasazení pro projekty SharePoint](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md).
+   Můžete přidat vlastní kroky nasazení pro další změny **F5** chování. Další informace najdete v tématu [návod: vytvoření vlastního kroku nasazení pro projekty SharePoint](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md).
 
-## <a name="delay-displaying-sharepoint-page-when-deploying-visual-web-part"></a>Prodleva zobrazení stránky služby SharePoint při nasazení vizuální webové části
- Trvá moc dlouho se objeví při nasazování do složky Bin Visual webovou část na stránku služby SharePoint [!INCLUDE[wiprlhext](../sharepoint/includes/wiprlhext-md.md)], [!INCLUDE[win7](../sharepoint/includes/win7-md.md)], nebo [!INCLUDE[winsvr08](../sharepoint/includes/winsvr08-md.md)]. Pokud se změní soubory ve nejvyšší úrovni [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] znovu zkompiluje celý webové aplikace directory, jako je například adresáře Bin. To může způsobit zpoždění až 25 sekund pro stránku služby SharePoint k vykreslení.
+## <a name="delay-displaying-sharepoint-page-when-deploy-visual-web-part"></a>Prodleva zobrazení stránky služby SharePoint při nasazení vizuální webové části
+ Stránku služby SharePoint trvá zobrazení velmi při nasazení vizuální webové části do složky Bin na [!INCLUDE[wiprlhext](../sharepoint/includes/wiprlhext-md.md)], [!INCLUDE[win7](../sharepoint/includes/win7-md.md)], nebo [!INCLUDE[winsvr08](../sharepoint/includes/winsvr08-md.md)]. Pokud změníte některé soubory v nejvyšší úrovni [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] znovu zkompiluje adresář, jako je například adresář Bin, celá webová aplikace. To může způsobit zpoždění až 25 sekund pro stránku služby SharePoint k vykreslení.
 
 ### <a name="error-message"></a>Chybová zpráva
  Žádné
 
 ### <a name="resolution"></a>Rozlišení
- Chcete-li tento problém obejít, postupujte takto:
+ Chcete-li tento problém vyřešit, proveďte následující kroky:
 
-1.  Nainstalujte aktualizaci KB967535, jak je uvedeno v článek Microsoft Support [OPRAVTE: opravu hotfix je k dispozici k řešení problémů s dvě technologie ASP.NET ve službě IIS 7.0 pro systém Windows Vista a Windows Server 2008](http://go.microsoft.com/fwlink/?LinkId=179055).
+1.  Nainstalujte aktualizaci KB967535, jak je uvedeno v článek Microsoft Support [oprava: oprava hotfix je k dispozici pro opravu dvou problémů v technologii ASP.NET ve službě IIS 7.0 pro Windows Vista a Windows Server 2008](http://go.microsoft.com/fwlink/?LinkId=179055).
 
-2.  Přidejte následující řádek v souboru Web.config:
+2.  Přidejte následující řádek do souboru Web.config:
 
-    ```
+    ```xml
     <compilation batch="false" optimizeCompilations="true">
     ```
 
-## <a name="sharepoint-project-deployment-fails-with-error-failed-to-extract-the-cab-file-in-the-solution"></a>Nasazení projektu SharePoint se nezdaří s chybou „Nepodařilo se vyextrahovat soubor CAB v rámci řešení“
- Pokud název všechny položky projektu služby SharePoint obsahuje závorky, jeho řešení selže v nasazení s chybou.
+## <a name="sharepoint-project-deployment-fails-with-error-failed-to-extract-the-cab-file-in-the-solution"></a>Nasazení projektu služby SharePoint se nezdaří s chybou "Nepodařilo se extrahovat soubor cab v rámci řešení"
+ Pokud název žádné položky projektu služby SharePoint obsahuje závorky, jeho řešení se nezdaří v nasazení s chybou.
 
 ### <a name="error-message"></a>Chybová zpráva
- V kroku nasazení přidat řešení došlo k chybě: Nepodařilo se extrahovat soubor cab v řešení.
+ V kroku nasazení "Přidání řešení" došlo k chybě: nepovedlo se extrahovat soubor cab v řešení.
 
 ### <a name="resolution"></a>Rozlišení
- Chcete-li tento problém obejít, odstraňte všechny závorky v názvech položek projektu služby SharePoint.
+ Chcete-li tento problém vyřešit, odeberte všechny závorky v názvech položek projektu služby SharePoint.
 
 ## <a name="error-appears-when-deploying-a-visual-web-part-to-a-site-on-a-different-web-application"></a>Při nasazení vizuální webové části na web jiné webové aplikace se zobrazí chyba
- Při prvním nasazení visual webové části na web na webovou aplikaci, než ten, na kterém je aktuálně nasazená (změnou vlastnost SiteUrl visual webovou část), dojde k chybě.
+ Při prvním nasazení vizuální webové části na web na webové aplikace jiné než té, na které je právě nasazena (změnou vlastnosti SiteUrl vizuální webové části), dojde k chybě.
 
 ### <a name="error-message"></a>Chybová zpráva
- V kroku nasazení přidat řešení došlo k chybě: v této farmě již byla nainstalována funkce s ID [#]. Použijte atribut vynucené explicitně znovu nainstalovat funkci.
+ V kroku nasazení "Přidání řešení" došlo k chybě: funkci s ID [#] již byla v této farmě nainstalována. Znovu explicitně nainstalujte funkci pomocí atributu force.
 
 ### <a name="resolution"></a>Rozlišení
- K této chybě dojde v důsledku způsob, jakým visual funkce webových částí jsou odvolán ve službě SharePoint. Pro úspěšné nasazení webové části visual, znovu nasaďte řešení tak, že zvolíte klávesy F5.
+ K této chybě dochází kvůli způsobu, jakým jsou odvolány vizuální funkce webových částí služby SharePoint. K úspěšnému zavedení vizuální webové části, nasaďte řešení znovu kliknutím **F5** klíč.
 
 ## <a name="warning-appears-when-deploying-nested-user-controls"></a>Při nasazení vnořených uživatelských ovládacích prvků se zobrazí upozornění
- Toto upozornění se zobrazí, když nasadíte řešení služby SharePoint, který má vnořené uživatelské ovládací prvky, jako je například visual webovou část, který obsahuje uživatelský ovládací prvek nebo uživatelský ovládací prvek, který obsahuje vizuální webové části nebo jiný uživatelský ovládací prvek. Toto upozornění se zobrazí, jestli je přidání ovládacího prvku do návrháře přetažením z panelu nástrojů nebo pomocí @Register direktivy v zobrazení zdroje.
+ K tomuto upozornění dochází, když nasadíte řešení služby SharePoint, která obsahuje vnořené uživatelské ovládací prvky, jako je například vizuální webovou část, obsahující uživatelský ovládací prvek nebo uživatelský ovládací prvek, který obsahuje vizuální webovou část nebo jiný uživatelský ovládací prvek. Toto upozornění se zobrazí, zda je ovládací prvek přidat do návrháře přetažením z panelu nástrojů nebo pomocí @Register direktiv v zobrazení zdroje.
 
 ### <a name="error-message"></a>Chybová zpráva
- Upozornění 1 elementu ' [*název ovládacího prvku*] "není známá element. Tato situace může nastat, pokud dochází k chybě kompilace na webu nebo v souboru web.config není k dispozici.
+ Upozornění 1 prvek "[*název ovládacího prvku*]" není známý prvek. Tato situace může nastat, pokud dochází k chybě kompilace na webovém serveru nebo v souboru web.config chybí.
 
 ### <a name="resolution"></a>Rozlišení
- Pokud [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] systému projektu nemá žádné informace o vnořené uživatelského ovládacího prvku, nemůže poskytnout IntelliSense a jeho vydá upozornění. Systém projektu ne vnořené uživatelského ovládacího prvku Pokud projekt není sestaven a návrháře není zavřete a znovu otevřete, nebo pokud automaticky odvolat možnost povolena, což způsobí, že uživatelského ovládacího prvku na odvolat z podregistru služby SharePoint po ladění.
+ Pokud [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projektový systém nebude vědět o vnořeném uživatelském ovládacím prvku, nemůže poskytnout technologii IntelliSense a vydá varování. Projektový systém nebude vědět o vnořeném uživatelském ovládacím prvku. Pokud projekt není sestaven a Návrhář není uzavřen a znovu otevřen nebo pokud automatické odvolání možnost povolená, což způsobí, že uživatelský ovládací prvek na být stažen z podregistru služby SharePoint po ladění.
 
- Pokud chcete odebrat toto upozornění, buď sestavte projekt a pak zavřete a znovu návrháře nebo zakázat automaticky odvolat možnost pro projekt. Chcete-li to provést, zrušte **automaticky odvolat po ladění** políčko **SharePoint** kartě dialogové okno Vlastnosti projektu.
+ Pokud chcete toto upozornění odebrat, sestavte projekt a pak zavřete a znovu otevřete návrháře nebo zakázat pro projekt možnost automatického odvolání. Chcete-li to provést, zrušte **automatické odvolání po ladění** zaškrtávací políčko na **SharePoint** kartu dialogové okno Vlastnosti projektu.
 
-## <a name="see-also"></a>Viz také
- [Balení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
-
+## <a name="see-also"></a>Viz také:
+ [Zabalení a nasazení řešení služby SharePoint](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Cppclean – úloha | Microsoft Docs
+title: Cppclean – úloha | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -21,27 +21,26 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a871effd2b7560cc34ae8e2a91c0b55f63bcfe44
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 749d60c764f522d188b45b4ecf7302d69b6cd64b
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39179076"
 ---
 # <a name="cppclean-task"></a>CPPClean – úloha
-Odstraní dočasné soubory, které MSBuild vytvoří při sestavení projektu Visual C++. Proces odstraňování souborů sestavení se označuje jako *čištění*.  
+Odstraní dočasné soubory, které MSBuild vytvoří při vytváření projektu Visual C++. Proces odstraňování souborů sestavení se označuje jako *čištění*.  
   
 ## <a name="parameters"></a>Parametry  
  Následující tabulka popisuje parametry **cppclean –** úloh.  
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|**DeletedFiles**|Volitelné `ITaskItem[]` výstupní parametr.<br /><br /> Definuje pole MSBuild výstupní soubor položek, které je možné využívat a vygenerované úlohami.|  
-|**DoDelete**|Volitelné **Boolean** parametr.<br /><br /> Pokud `true`, Vyčistit dočasné soubory sestavení.|  
-|**FilePatternsToDeleteOnClean**|Požadované `String` parametr.<br /><br /> Určuje seznam přípon souborů pro čištění oddělených středníky.|  
-|**FilesExcludedFromClean**|Volitelné `String` parametr.<br /><br /> Určuje seznam souborů nechcete vyčistit oddělených středníky.|  
-|**FoldersToClean**|Požadované `String` parametr.<br /><br /> Určuje seznam oddělený středníkem adresářů pro čištění. Můžete zadat úplnou nebo relativní cestu a cesta může obsahovat zástupný znak (**\*\***).|  
+|**DeletedFiles**|Volitelné `ITaskItem[]` výstupní parametr.<br /><br /> Definuje pole objektů MSBuild výstupní soubor položky, které lze používat a, protože ho vygeneroval úlohy.|  
+|**DoDelete**|Volitelné **logická** parametru.<br /><br /> Pokud `true`, čištění dočasné soubory sestavení.|  
+|**FilePatternsToDeleteOnClean**|Vyžaduje `String` parametru.<br /><br /> Určuje středníky oddělený seznam přípon souborů souborů k vyčištění.|  
+|**FilesExcludedFromClean**|Volitelné `String` parametru.<br /><br /> Určuje středníky oddělený seznam souborů nechcete vyčistit.|  
+|**FoldersToClean**|Vyžaduje `String` parametru.<br /><br /> Určuje středníky oddělený seznam adresářů pro vyčištění. Můžete zadat úplnou nebo relativní cestu a cestu může obsahovat zástupný znak (*).|  
   
-## <a name="remarks"></a>Poznámky  
-  
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)

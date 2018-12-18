@@ -1,5 +1,5 @@
 ---
-title: m_parent pole | Microsoft Docs
+title: m_parent – pole | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,28 +13,29 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4c50bb06a7aa87e06768e55849ca1e7c2bd4d1c8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f2246a846324710cee0cb49913c1debd3bad0436
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39231126"
 ---
-# <a name="mparent-field"></a>m_parent pole
-Základní pole pro <xref:System.Threading.Tasks.Task?displayProperty=fullName> `Parent` vlastnost.  
+# <a name="mparent-field"></a>m_parent – pole
+Pomocné pole <xref:System.Threading.Tasks.Task?displayProperty=fullName> `Parent` vlastnost.  
   
  **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
- **Sestavení:** mscorlib (v mscorlib.dll)  
+ **Sestavení:** mscorlib (v *mscorlib.dll*)  
   
- Protože tento vnitřní člen nemůže získat přístup z rozhraní .NET Framework, je k dispozici společné Intermediate Language (soubor CIL) syntaxi.  
+ Protože tento člen interní nemůže získat přístup z rozhraní .NET Framework, je k dispozici v Common Intermediate Language (CIL) následující syntaxi.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```csharp  
 .field private initonly class System.Threading.Tasks.Task m_parent  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
   
-## <a name="see-also"></a>Viz také  
- [Task – třída](../../extensibility/debugger/task-class-internal-members.md)
+## <a name="see-also"></a>Viz také:  
+ [Třída úlohy](../../extensibility/debugger/task-class-internal-members.md)

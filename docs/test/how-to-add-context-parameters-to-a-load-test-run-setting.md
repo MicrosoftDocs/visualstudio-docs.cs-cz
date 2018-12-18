@@ -1,5 +1,5 @@
 ---
-title: Přidání kontextových parametrů k Zátěžovému testu spusťte nastavení v sadě Visual Studio | Microsoft Docs
+title: Přidání kontextových parametrů k parametrům spuštění zátěžového testu
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,65 +9,69 @@ ms.assetid: a8a0b97e-8040-4711-85ab-36548b130ed2
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 0d563adc5e6b43aa5371fe08f410880a6aba0a09
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: cefa93a6f65b4b84b4ece5a4eb428d909dd0596d
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53048486"
 ---
-# <a name="how-to-add-context-parameters-to-a-load-test-run-setting"></a>Postupy: Přidání kontextových parametrů k parametrům spuštění zátěžového testu
+# <a name="how-to-add-context-parameters-to-a-load-test-run-setting"></a>Postupy: Přidání kontextových parametrů spuštění zátěžového testu
 
-Jakmile vytvoříte zátěžový test pomocí **načíst testování Průvodce novým**, můžete použít **načíst Editor testů** ke změně vlastností scénáře pro splnění vašich potřeb testování a cíle.
+Po vytvoření zátěžového testu s použitím **nového Průvodce zátěžovým testem**, můžete použít **editoru zátěžového testu** Chcete-li změnit vlastnosti scénářů pro splnění potřebám a cílům testování.
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 > [!NOTE]
-> Úplný seznam vlastností parametrů běhu a jejich popisy najdete v tématu [vlastnosti nastavení spustit Test zatížení](../test/load-test-run-settings-properties.md).
+> Úplný seznam vlastností parametrů spuštění a jejich popis najdete v tématu [zátěžového testu spusťte nastavení](../test/load-test-run-settings-properties.md).
 
-Kontextové parametry používat v zátěžovém testu spusťte nastavení pomocí editoru načíst testování můžete vytvořit. Kontextové parametry umožňují Parametrizace řetězec.
+Můžete vytvořit kontext parametry se mají použít v rámci zátěžového testu pomocí editoru zátěžových testů parametry běhu. Parametry kontextu umožňují parametrizovat řetězec.
 
-Předpokládejme, že zátěžového testu obsahuje testu výkonnosti webu, který už používá parametrizované adresy URL webového serveru pomocí kontext parametru. Kontext parametru můžete přidat k zátěžovému testu spusťte nastavení, která používá stejnou hodnotu pro název jako ten, který se používá v testu výkonnosti webu. Při spuštění zátěžového testu to bude mapovat testu výkonnosti webu na jiný server. Například pokud zatížení testování zahrnuje testu výkonnosti webu, který používá kontext parametru, který je pojmenován Webový_server1 pro název webového serveru v adrese URL. Pokud zadáte v testu zatížení spusťte nastavení, která se také nazývá Webový_server1 pak kontext parametru zátěžový test použije parametr kontext, který jste přiřadili v parametrech běhu zátěžového testu. O vysvětlení, pokud testu výkonnosti webu v zátěžovém testu používá stejný název parametru kontextu jako parametr kontextu v zátěžovém testu, přepíše kontext parametru v zátěžovém testu kontext parametru, který se používá v testu výkonnosti webu.
+Předpokládejme, že váš zátěžový test obsahuje test výkonnosti webu, která již používá adresy URL parametry webového serveru pomocí parametru kontextu. Můžete přidat kontextový parametr pro spuštění, který používá stejnou hodnotu pro název jako ten, který se používá v testu výkonnosti webu zátěžového testu. Při spuštění zátěžového testu to bude mapovat testu výkonnosti webu na jiný server. Například pokud váš zátěžový test obsahuje test výkonnosti webu, který používá parametru kontextu s názvem Webový_server1 názvu v adrese URL webového serveru. Pokud potom zadáte parametr kontextu v zátěžovém testu, který je také název Webový_server1 parametry běhu, zátěžový test použije kontextového parametru, který jste přiřadili v spuštění zátěžového testu. Aby se vyjasnilo, pokud test výkonnosti webu v zátěžovém testu používá stejný název parametru kontextu jako kontextový parametr v zátěžovém testu, přepíše kontextový parametr v zátěžovém testu kontextového parametru, který se používá v testu výkonnosti webu.
 
 > [!WARNING]
-> Dejte pozor, abyste neúmyslně přepsat kontext parametru testu výkonnosti webu, při použití kontextových parametrů v parametrech běhu. Nepoužívejte stejné názvy parametrů kontextu, pokud to uděláte záměrně.
+> Dejte pozor, abyste přepsat neúmyslně kontextového parametru testu výkonnosti webu, při použití kontextových parametrů v nastavení spuštění. Nepoužívejte stejné názvy parametrů kontextu, pokud je to záměrně.
 
-Pokud přiřadíte hodnotu parametru kontextu webový_server1 `http://CorporateStagingWebServer`, pak můžete použít `WebServer1` v celé zatížení testování a tím snadno kdykoli změnit hodnotu na jiný webový server.
+Pokud přiřadíte hodnotu kontextového parametru webový_server1 `http://CorporateStagingWebServer`, pak můžete použít `WebServer1` v průběhu zátěžového testu a snadno a změňte hodnotu na jiný webový server kdykoli.
 
-Kromě toho přiřazením různé hodnoty na parametr kontextu za použití stejného názvu v nastavení testu různé zatížení můžete spustit zátěžový test pomocí různých prostředích:
+Kromě toho přiřazením různých hodnot do parametru kontextu za použití stejného názvu v různých spuštění zátěžového testu můžete spustit zátěžový test s použitím různých prostředích:
 
--   Podnikový Web Server pracovní spustit nastavení: kontext parametru, který je pojmenován Webový_server1 =http://CorporateStagingWebServer
+- Nastavení spuštění podnikové pracovní Webový Server: kontextový parametr s názvem `WebServer1=http://CorporateStagingWebServer`
 
--   Nastavení spuštění podnikové produkční webový Server: Parametr kontextu, který je s názvem Webový_server1 =http://CorporateProductionWebServer
+- Nastavení spuštění podnikové produkční webový Server: The kontextového parametru, který má název `WebServer1=http://CorporateProductionWebServer`
 
- **Změna nastavení spuštění z příkazového řádku**
+  **Změna nastavení spuštění z příkazového řádku**
 
- Pokud chcete využít výhod strategie parametr kontextu pomocí různých nastavení spuštění z příkazového řádku, použijte následující příkazy:
+  Pokud chcete použít různé parametry spuštění z příkazového řádku využít tak strategii kontextových parametrů, použijte následující příkazy:
 
- **Set Test.UseRunSetting= CorporateStagingWebServer**
+  **Set Test.UseRunSetting= CorporateStagingWebServer**
 
- - a -
+  - a -
 
- **/testcontainer:loadtest1.loadtest mstestu**
+  **mstest /testcontainer:loadtest1.loadtest**
 
-## <a name="to-add-a-context-parameter-to-a-run-setting"></a>Chcete-li přidat parametr kontextu k parametrům spuštění
+## <a name="to-add-a-context-parameter-to-a-run-setting"></a>Chcete-li přidat kontextový parametr k parametrům spuštění
 
 1.  Otevřete zátěžový test.
 
-2.  Rozbalte **spustit nastavení** složku ve stromu testu zatížení v editoru načíst otestovat.
+2.  Rozbalte **parametrů běhu** složku ve stromu zátěžového testu v editoru zátěžového testu.
 
-3.  Klikněte pravým tlačítkem na konkrétním spustit nastavení na který chcete přidat parametr kontextu a potom zvolte **přidat parametr kontextu**.
+3.  Klikněte pravým tlačítkem na konkrétní parametry běhu pro který chcete přidat kontextový parametr a klikněte na tlačítko **přidat kontextový parametr**.
 
-     Přidán nový parametr kontextu **kontextové parametry** složky v **spustit nastavení** složky ve stromu testu zatížení.
+     Nový parametr kontextu se přidá do **kontextových parametrů** složky v **parametrů běhu** složku ve stromu zátěžového testu.
 
      -nebo-
 
-     Pokud spustit nastavení již obsahuje **kontextové parametry** složky, můžete ho klikněte pravým tlačítkem a pak zvolte **přidat parametr kontextu**.
+     Pokud běh nastavení už obsahuje **kontextových parametrů** složky, můžete pravým tlačítkem myši a klikněte na tlačítko **přidat kontextový parametr**.
 
-4.  V okně vlastností změňte hodnotu **název** podle potřeby (například Webový_server1). V okně vlastností změňte **hodnotu** na parametr, který chcete použít (například http://CorporateStagingWebServer).
+4.  V **vlastnosti** okna, změňte hodnotu **název** podle potřeby (například Webový_server1). V **vlastnosti** okno Změnit **hodnotu** pro parametr, který chcete použít (například `http://CorporateStagingWebServer`).
 
-5.  (Volitelné) Zopakujte kroky 3 až 5 a použít jiný řetězec pro **hodnotu** vlastnosti (například http://CorporateProductionWebServer).
+5.  (Volitelné) Opakujte kroky 3 až 5 a použijte jiný řetězec pro **hodnotu** vlastnosti (například `http://CorporateProductionWebServer`).
 
-6.  Zvolte, které spustit nastavení, které chcete být aktivní. Otevřete místní nabídky na spuštění nastavení a vyberte **nastavená jako aktivní**.
+6.  Zvolte, které spustit nastavení, které mají být aktivní. Otevřete místní nabídku běhu a zvolte **nastavit jako aktivní**.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Konfigurace běhu zátěžových testů](../test/configure-load-test-run-settings.md)
+- [Konfigurace parametrů spuštění zátěžového testu](../test/configure-load-test-run-settings.md)

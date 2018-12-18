@@ -19,11 +19,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f6679e781e564a58d6a98b7d0190f2f2b4e9fa74
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 9c85f990d08a41bd4b4ee25190d0c5b6bd99d340
+ms.sourcegitcommit: 0bf2aff6abe485e3fe940f5344a62a885ad7f44e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37058019"
 ---
 # <a name="limitations-on-script-debugging"></a>Omezení ladění skriptů
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] podporuje ladění skriptů na straně klienta, vztahují omezení v tomto tématu.  
@@ -44,7 +45,7 @@ ms.lasthandoff: 04/18/2018
 ## <a name="breakpoint-mapping-and-duplicate-lines"></a>Mapování zarážek a duplicitní řádky  
  Algoritmus mapování zarážek a vyhledejte odpovídající umístění ve skriptu na straně serveru a na straně klienta, prověří kód na každém řádku. Algoritmus předpokládá, že každý řádek je jedinečný. Pokud dva nebo více řádků obsahovat stejný kód, a nastavte zarážky v jednom z těchto duplicitní řádky, může algoritmus mapování zarážek vyberte nesprávný duplicitní v souboru na straně klienta. Chcete-li tomu zabránit, přidejte komentář k řádku, kde jste nastavili zarážku. Příklad:  
   
-```  
+```csharp
 i++ ;  
 i ++; // I added a comment, so this line is now unique  
 i ++;  

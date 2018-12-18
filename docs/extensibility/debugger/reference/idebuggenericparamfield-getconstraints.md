@@ -1,5 +1,5 @@
 ---
-title: IDebugGenericParamField::GetConstraints | Microsoft Docs
+title: IDebugGenericParamField::GetConstraints | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5101aceb0c187996d601d9a3c3adbd746df9ad09
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ab8d543a54c9174795f3b20f32894123030b35c4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49947930"
 ---
 # <a name="idebuggenericparamfieldgetconstraints"></a>IDebugGenericParamField::GetConstraints
-Načte omezení, která jsou přidružená tato obecný parametr.  
+Získá omezení, které jsou přidruženy tento obecný parametr.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,16 +44,16 @@ int GetConstraints(
   
 #### <a name="parameters"></a>Parametry  
  `cConstraints`  
- [v] Počet omezení.  
+ [in] Počet omezení.  
   
  `ppConstraints`  
- [out] Vrátí pole obsahující omezení spojená s tímto polem.  
+ [out] Vrátí pole obsahující omezení spojené s tímto polem.  
   
  `pcConstraints`  
- [ve out] Počet omezení `ppConstraints` pole.  
+ [out v] Počet omezení `ppConstraints` pole.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugGenericParamFieldType** objekt, který zveřejňuje [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) rozhraní.  

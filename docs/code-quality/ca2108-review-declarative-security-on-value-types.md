@@ -1,6 +1,7 @@
 ---
 title: 'CA2108: Revize deklarativních zabezpečení na hodnotách'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,46 +16,59 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d07245724d70b5bc6ba69deae4311dcb2a10056
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e2d76a0ecf6a2eeac677475eb25efe495129c213
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45548514"
 ---
 # <a name="ca2108-review-declarative-security-on-value-types"></a>CA2108: Revize deklarativních zabezpečení na hodnotách
+
 |||
 |-|-|
 |TypeName|ReviewDeclarativeSecurityOnValueTypes|
 |CheckId|CA2108|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Bez ukončování řádků|
+|Narušující změna|Pevné|
 
 ## <a name="cause"></a>příčina
- Typ hodnoty veřejných nebo chráněného zabezpečené [Data a modelování](/dotnet/framework/data/index) nebo [požadavky propojení](/dotnet/framework/misc/link-demands).
+
+Veřejný nebo chráněný hodnotový typ je zabezpečen pomocí [Data a modelování](/dotnet/framework/data/index) nebo [požadavky propojení](/dotnet/framework/misc/link-demands).
 
 ## <a name="rule-description"></a>Popis pravidla
- Typy hodnot přidělovány a před provést další konstruktory inicializovat podle jejich výchozí konstruktory. Pokud typ hodnoty je zabezpečená službou na vyžádání nebo LinkDemand a volající nemá oprávnění, které odpovídají kontrola zabezpečení, všechny konstruktor jiné než výchozí se nezdaří a bude vyvolána výjimka zabezpečení. Typ hodnoty není navrácena; je ponechán ve stavu, která nastavuje jeho výchozí konstruktor. Nepředpokládejte, že volající, který předá instance typu hodnota má oprávnění vytvořit nebo získat přístup k instanci.
+
+Typy hodnot jsou přiděleny a inicializován pomocí jejich výchozí konstruktory před další konstruktory. Pokud hodnota typ je zabezpečen pomocí s požadavkem nebo LinkDemand a volající nemá oprávnění, které splňují kontrola zabezpečení, některý konstruktor jiné než výchozí hodnota se nezdaří a bude vyvolána výjimka zabezpečení. Typ hodnoty není uvolněný; je ponechána ve stavu, nastavte jeho výchozí konstruktor. Nepředpokládejte, že volající, který předá instance typu hodnoty má oprávnění k vytváření a přístup k instanci.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Narušení toto pravidlo nelze opravit, pokud kontrola zabezpečení odeberete z typu a použití zabezpečení na úrovni metoda zkontroluje na příslušné místo. Všimněte si, že opravit porušení tímto způsobem nezabrání volající s nedostatečná oprávnění získat instancí typ hodnoty. Můžete musí zkontrolujte, zda instance typu hodnotu ve svém výchozím stavu nevystavuje citlivé informace a nelze použít škodlivé způsobem.
+
+Pokud odeberete z typu kontroly zabezpečení a použití zabezpečení na úrovni metoda zkontroluje místo něj nelze opravit porušení tohoto pravidla. Oprava porušení tímto způsobem nezabrání volajícím s nedostatečná oprávnění od získání instance typu hodnoty. Ujistěte se, že instance typu hodnoty ve svém výchozím stavu není zveřejnit citlivé informace a nelze použít škodlivých způsobem.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Upozornění od tohoto pravidla můžete potlačit, pokud žádné volající můžete získat instance typu hodnotu ve svém výchozím stavu aniž představují ohrožení zabezpečení.
 
-## <a name="example"></a>Příklad
- Následující příklad ukazuje knihovny obsahující typ hodnoty, která porušuje toto pravidlo. Všimněte si, že `StructureManager` typ předpokládá, že volající, který předá instance typu hodnota má oprávnění vytvořit nebo získat přístup k instanci.
+Upozornění tohoto pravidla můžete potlačit, pokud jakýkoli volající můžete získat instance typu hodnoty ve svém výchozím stavu bez představující ohrožení zabezpečení.
 
- [!code-csharp[FxCop.Security.DemandOnValueType#1](../code-quality/codesnippet/CSharp/ca2108-review-declarative-security-on-value-types_1.cs)]
+## <a name="example-1"></a>Příklad 1
 
-## <a name="example"></a>Příklad
- Následující aplikace ukazuje slabé místo na knihovně.
+Následující příklad ukazuje knihovnu obsahující hodnotový typ, který porušuje tato pravidla. `StructureManager` Typ předpokládá, že volající, který předá instance typu hodnoty má oprávnění k vytváření a přístup k instanci.
 
- [!code-csharp[FxCop.Security.TestDemandOnValueType#1](../code-quality/codesnippet/CSharp/ca2108-review-declarative-security-on-value-types_2.cs)]
+[!code-csharp[FxCop.Security.DemandOnValueType#1](../code-quality/codesnippet/CSharp/ca2108-review-declarative-security-on-value-types_1.cs)]
 
- Tento příklad vytvoří následující výstup.
+## <a name="example-2"></a>Příklad 2
 
- **Struktura vlastní konstruktor: žádost se nezdařila. ** 
- **Nové hodnoty SecuredTypeStructure 100 100**
-**nové hodnoty SecuredTypeStructure 200 200**
-## <a name="see-also"></a>Viz také
- [Požadavky na propojení](/dotnet/framework/misc/link-demands) [Data a modelování](/dotnet/framework/data/index)
+Následující aplikace ukazuje slabé stránky knihovny.
+
+[!code-csharp[FxCop.Security.TestDemandOnValueType#1](../code-quality/codesnippet/CSharp/ca2108-review-declarative-security-on-value-types_2.cs)]
+
+Tento příklad vytvoří následující výstup:
+
+```txt
+Structure custom constructor: Request failed.
+New values SecuredTypeStructure 100 100
+New values SecuredTypeStructure 200 200
+```
+
+## <a name="see-also"></a>Viz také:
+
+- [Požadavky propojení](/dotnet/framework/misc/link-demands)
+- [Data a modelování](/dotnet/framework/data/index)

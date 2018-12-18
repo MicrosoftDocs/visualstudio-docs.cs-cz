@@ -1,5 +1,5 @@
 ---
-title: Vytvoření sady Visual Studio výkonu sestav pro zátěžový Test pomocí aplikace Microsoft Excel | Microsoft Docs
+title: Vytváření sestav výkonnosti pro zátěžový Test pomocí aplikace Microsoft Excel
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,141 +9,147 @@ ms.assetid: b87fb196-9973-4512-a924-088788def4ea
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 95be1cd0e6e5ab4d5fd3b487465ba09711f97714
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5f276702aef4bf062d7da3e921965e674d5ec738
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53064993"
 ---
-# <a name="how-to-create-load-test-performance-reports-using-microsoft-excel"></a>Postupy: Vytváření sestav výkonnosti pro zátěžový test pomocí aplikace Microsoft Excel
+# <a name="how-to-create-load-test-performance-reports-using-microsoft-excel"></a>Postupy: vytvoření sestavy zátěžových testů výkonu pomocí aplikace Microsoft Excel
 
-Můžete vygenerovat sestav Microsoft Excel zátěžový test, které jsou založeny na dva nebo více výsledků testů. K dispozici jsou dva typy sestav pro zátěžový test:
+Můžete generovat sestavy zátěžového testu aplikace Microsoft Excel, které jsou založeny na dvou nebo více výsledcích testu.
 
--   **Spustit porovnání** tím se vytvoří sada sestavy, které porovnávají data ze dvou výsledků zátěžového testu pomocí tabulky a pruhové grafy.
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
--   **Trend** můžete vygenerovat analýzy trendů na dva nebo více výsledků zátěžového testu. Výsledky jsou zobrazeny pomocí spojnicových grafů, ale data jsou k dispozici v kontingenční tabulky.
+K dispozici jsou dva typy sestav zátěžových testů:
+
+-   **Spustit porovnání** tím se vytvoří sadu sestav, které porovnávají data ze dvou výsledků zkoušek zatížení pomocí tabulek a sloupcových grafů.
+
+-   **Trend** lze generovat analýzu trendů na dvou nebo více výsledcích zátěžového testu. Výsledky se zobrazí spojnicových grafech, ale data jsou k dispozici v kontingenčních tabulkách.
 
 > [!TIP]
-> Zkopírováním a vložením dat ze zobrazení se souhrnnými informacemi, zobrazení grafů a tabulek zobrazení můžete také ručně vytvořit sestavy Microsoft Word. V tématu [postupy: ruční vytvoření sestavy výkon testu zatížení pomocí aplikace Microsoft Word](../test/how-to-manually-create-a-load-test-performance-report-using-microsoft-word.md).
+> Sestavy aplikace Microsoft Word můžete vytvořit také ručně zkopírováním a vložením dat ze souhrnného zobrazení, zobrazení grafů a zobrazení tabulek. Zobrazit [postupy: ruční vytvoření sestavy výkonu zátěžového testu pomocí aplikace Microsoft Word](../test/how-to-manually-create-a-load-test-performance-report-using-microsoft-word.md).
 
- Buď sestava umožňuje sdílet data výkonu s zúčastněným stranám a sdělit, zda celkový výkon a stav systému je zlepšuje nebo programy.
+Některá sestava umožňuje sdílení dat o výkonu se zúčastněnými stranami a sdělení, zda celkový výkon a stav systému se zlepšuje nebo zhoršuje.
 
- Definice sestavy jsou uloženy v databázi testu zatížení. Při uložení sestavy definici sestavy je uloženo v databázi a lze znovu použít později.
+Definice sestav jsou uloženy v databázi zátěžového testu. Při uložení sestavy definice sestavy je uloženo v databázi a lze ji znovu použít později.
 
- Navíc sešitu aplikace Excel je možné sdílet s zúčastněným stranám tak, aby zúčastněným stranám není potřeba připojení k databázi chcete zobrazit sestavu.
-
-> [!NOTE]
-> Můžete sdílet sešitu aplikace Excel; jenom uživatelé, kteří mají nainstalovanou na jejich počítači sadu Visual Studio však bude možné upravovat tabulek. Ostatní uživatelé neuvidí **sestava testu zatížení** možnost na pásu karet Office, ale bude moci zobrazit sešit.
-
- Na následujícím obrázku je příkladem sestavu, která obsahuje korelace mezi odmítnout v transakci (aktualizace košíku) rychlost a degenerace čítače (% procesoru). To ukazuje na potenciální problém v kódu aplikace, místo databáze nebo síti a je vhodný pro diagnostiku pomocí ASP.NET Profiler.
-
- ![Potenciální problém v kódu aplikace](../test/media/lt_excel.png "LT_Excel")
-
- Sestavy aplikace Excel můžete buď vytvořit v Analyzéru zátěžového testu pomocí **vytvořit sestavu aplikace Excel** tlačítka na panelu nástrojů nebo z Excelu pomocí **sestava testu zatížení** možnost **zátěžového testu**  karty na pásu karet Office.
+Excelový sešit můžete také sdílet se zúčastněnými stranami tak, aby zúčastněné strany není potřeba připojení k databázi pro zobrazení sestavy.
 
 > [!NOTE]
-> Pokud přidáte komentáře zátěžový test, zobrazí se v sestavě aplikace Excel. Další informace najdete v tématu [postupy: Přidání komentářů během analýzy byla dokončena zátěžového testu](../test/how-to-add-comments-on-a-completed-load-test.md).
+> Můžete sdílet sešit aplikace Excel; jenom uživatelé, kteří mají na svém počítači nainstalovanou sadu Visual Studio však budou moci upravit některou z tabulek. Ostatní uživatelé neuvidí **sestava zátěžového testu** možnost **Office** pásu karet, ale budete moct zobrazit v sešitě.
 
-## <a name="to-generate-load-test-comparison-reports-using-excel"></a>Ke generování sestav porovnání zátěžový test pomocí aplikace Excel
+Na následujícím obrázku je příklad sestavy, která zobrazuje korelaci mezi poklesem rychlosti transakce (Aktualizovat košík) a degenerací čítače (% procesoru). To ukazuje na možný problém v aplikačním kódu místo v databázové síti a je vhodným kandidátem pro diagnostiku pomocí služby Profiler technologie ASP.NET.
 
-1.  Před generováním sestavy, je potřeba nejdřív spustit zátěžový test.
+![Možný problém v kódu aplikace](../test/media/lt_excel.png)
 
-2.  Sestavy aplikace Excel zatížení test můžete vytvořit dvěma způsoby:
+Sestavy aplikace Excel mohou být generovány v **Analyzéru zátěžového testu**, s použitím **vytvořit sestavu aplikace Excel** tlačítko na panelu nástrojů nebo z aplikace Excel s použitím **sestava zátěžového testu** možnost **zátěžový Test** karty **Office** pásu karet.
 
-    1.  Po dokončení testu zatížení v **načíst výsledky testu** vyberte **vytvořit sestavu aplikace Excel** tlačítka na panelu nástrojů.
+> [!NOTE]
+> Pokud chcete přidat komentáře k zátěžovému testu, se zobrazí v sestavě aplikace Excel.
 
-        > [!NOTE]
-        > Pokud **vytvořit sestavu aplikace Excel** tlačítko k dispozici na panelu nástrojů Prohlížeč výsledků testu výkonnosti webu, bude pravděpodobně nutné ke spuštění aplikace Microsoft Excel jeden čas, než je povolený. Když Visual Studio Enterprise je nainstalovaná, Visual Studio Enterprise zatížení testu v aplikaci se zkopírují na váš počítač pro aplikaci Microsoft Excel. k dokončení procesu instalace pro doplněk musí však spustit aplikaci Microsoft Excel.
+## <a name="to-generate-load-test-comparison-reports-using-excel"></a>Ke generování sestav porovnání zátěžových testů pomocí aplikace Excel
 
-     Aplikace Microsoft Excel otevře s **vygenerování sestavy testu zatížení** průvodce.
+1. Před generováním sestavy, musíte nejprve spustit zátěžový test.
 
-     -nebo-
+2. Sestavy zátěžového testu aplikace Excel můžete vytvořit dvěma způsoby:
 
-    1.  Otevřete Microsoft Excel, vyberte **zátěžový Test** kartu na pásu karet Office a potom zvolte **sestava testu zatížení**.
+   - Po dokončení zátěžového testu v **výsledky zátěžového testu** zvolte **vytvořit sestavu aplikace Excel** tlačítko na panelu nástrojů.
 
-         **Vygenerování sestavy testu zatížení** zobrazí se průvodce.
+      > [!NOTE]
+      > Pokud **vytvořit sestavu aplikace Excel** je tlačítko neaktivní v **prohlížeče výsledků testu výkonnosti webu** nástrojů, budete muset spustit aplikaci Microsoft Excel jeden čas, než je povolené. Při instalaci sady Visual Studio Enterprise, Visual Studio Enterprise zátěžového testu doplněk je zkopírován do počítače pro aplikaci Microsoft Excel. aplikace Microsoft Excel však musí být spuštěn na dokončení procesu instalace pro doplněk.
 
-    2.  V **vyberte databázi, která obsahuje zátěžové testy** v části **název serveru**, zadejte název serveru, jehož výsledků zátěžového testu.
+      Aplikace Microsoft Excel otevře s **generovat Průvodce vytvořením sestavy zátěžového testu**.
 
-    3.  V **Databasename** rozevíracího seznamu vyberte databázi obsahující výsledků zátěžového testu.
+   **OR**
 
-3.  V **jak chcete generovat sestavy** ověřte, zda **vytvoření sestavy** je vybraná a zvolte **Další**.
+   1. Otevřete aplikaci Microsoft Excel, vyberte **zátěžový Test** kartu **Office** pásu karet a klikněte na tlačítko **sestava zátěžového testu**.
 
-4.  V **typu hlášení chcete generovat** ověřte, zda **spustit porovnání** je vybraná a zvolte **Další**.
+       **Generovat Průvodce vytvořením sestavy zátěžového testu** se zobrazí.
 
-5.  V **Enter zatížení testovací sestava obsahuje podrobnosti o** stránky, zadejte název pro sestavu na **název sestavy**.
+   2. V **vyberte databázi, která obsahuje testy zatížení** stránce v části **název serveru**, zadejte název serveru obsahující výsledky zátěžového testu.
 
-6.  Vyberte zátěžový test, kterou chcete vygenerovat sestavu pro a zvolte **Další**.
+   3. V **Databasename** rozevíracího seznamu vyberte databázi obsahující výsledky zátěžového testu.
 
-7.  V **vyberte spuštění pro sestavy** v části **vyberte jeden nebo více používá pro přidání do sestavy**, vyberte dvě načíst výsledky testů, které chcete porovnat v sestavě a zvolte **Další**.
+3. V **jak chcete generovat sestavy** stránce ověřte, jestli **vytvoření sestavy** je vybranou a stiskněte tlačítko **Další**.
 
-    > [!NOTE]
-    > Pouze můžete vygenerovat porovnání sestavy o výsledcích testů dvě zatížení. Pokud vyberete buď výsledků testů zatížení jeden nebo více než dva výsledky zátěžového testu, zobrazí se zpráva s upozorněním.
+4. V **jaký typ sestavy chcete generovat** stránce ověřte, jestli **spustit porovnání** je vybranou a stiskněte tlačítko **Další**.
 
-8.  V **vyberte čítače, sestavy** v části **, vyberte na nebo další čítače při přidání do sestavy** rozevírací seznam čítačů je k dispozici pro sestavu upravit. Vyberte čítače, které chcete porovnat ze dvou vybrané testovací spouští v sestavě a zvolte **Dokončit**.
+5. V **podrobnosti sestavy zátěžového testu Enter** stránky, zadejte název pro sestavu v **název sestavy**.
 
-9. Sestavu sešitu aplikace Excel je vytvořen s následujícími kartami tabulky:
+6. Vyberte test zatížení, kterou chcete generovat sestavu a zvolte **Další**.
 
-    -   **Obsah** – zobrazí název sestavy testu zatížení a poskytuje obsah s odkazy na různé karty v sestavě.
+7. V **zvolte běhy sestavy** stránce v části **vyberte jeden nebo více spuštění pro přidání do sestavy**vyberte dva výsledky zátěžových testů, které chcete v sestavě porovnat a zvolte **Další**.
 
-    -   **Spustí -** poskytuje informace, na kterých jsou dvě spustí porovnávané v sestavě.
+   > [!NOTE]
+   > Generovat můžete pouze sestavu porovnání na dvou výsledcích zátěžového testu. Pokud vyberete buď jeden výsledek zátěžového testu nebo více než dva výsledky zátěžových testů, zobrazí se zpráva s upozorněním.
 
-    -   **Testování porovnání -** poskytuje pruhový graf podrobné informace o výkonu regresí a vylepšení mezi dvěma spustí porovnávané.
+8. V **vyberte čítače sestavy** stránce v části **vyberte jeden nebo více čítačů pro přidání do sestavy** rozevírací seznam čítačů je k dispozici pro přizpůsobení vaší sestavy. Vyberte čítače, které chcete porovnat ze dvou vybraných testových běhů v sestavě a zvolte **Dokončit**.
 
-    -   **Stránka porovnání -** poskytuje pruhový graf a výkonu procento porovnání data mezi dvěma běží na různých stránkách v testovací spouští.
+9. Sestava v sešitu Excel je vytvořen s následujícími kartami tabulky:
 
-    -   **Počítač porovnání -** poskytuje porovnání data mezi dvěma běží na základě počítačů, které byly používány.
+   - **Obsah** – zobrazí název sestavy zátěžového testu a poskytuje obsah s odkazy na různé karty v sestavě.
 
-    -   **Chyba porovnání -** porovná typů chyb došlo mezi dvěma spustí a počet výskytů.
+   - **Běží -** poskytuje podrobnosti o, na kterých se porovnávají dvě spuštění v sestavě.
 
-    > [!TIP]
-    > Pro lepší sestavy několik vlastností, které jsou k dispozici v zátěžových testů a testy výkonnosti webu, které umožňují bohatší sestavy. Požadavek na stránku má dvě vlastnosti, které jsou uvedené v sestavách: generování sestav název a cíl. Časy odezvy stránky se ohlásí vůči cíli a vytváření sestav název se použije místo adresy URL v sestavách. V zátěžovém testu spusťte nastavení v části Správa sad čítačů vlastnost značek počítače jsou poskytovány názvy počítačů sestavy. To je velmi užitečné k popisu roli konkrétní počítač v sestavě.
+   - **Porovnání testu -** obsahuje podrobnosti o pruhovém grafu regrese výkonu a zlepšení mezi dvěma porovnávanými běhy.
 
-## <a name="to-generate-load-test-trend-reports-using-excel"></a>Ke generování sestav trend zátěžový test pomocí aplikace Excel
+   - **Porovnání stránek -** poskytuje pruhový graf a procento výkonu porovnání dat mezi dvěma běhy na různých stránkách ve zkušebním běhu.
 
-1.  Před generováním sestavy, je nutné spustit zátěžový test.
+   - **Porovnání počítače -** obsahuje data z porovnání mezi dvěma spuštěními podle na počítačích, které byly použity.
 
-2.  Sestavy aplikace Excel zatížení test můžete vytvořit dvěma způsoby:
+   - **Chyba při porovnání -** porovnává typy chyb zaznamenaných mezi dvěma spuštěními a počet výskytů.
 
-    1.  Po dokončení testu zatížení v **načíst výsledky testu** vyberte **vytvořit sestavu aplikace Excel** tlačítka na panelu nástrojů.
+     > [!TIP]
+     > Pro lepší sestavy jsou k dispozici v zátěžových testech a testech výkonnosti webu, které umožňují lepší sestavy několik vlastností. Požadavek na stránku má dvě vlastnosti, které jsou uvedeny v sestavách: cíl a název sestavy. Doba odezvy stránky se bude vykazovány vůči cíli a namísto adresy URL v sestavách se použije název výkazu. V nastavení běhu, pod spravovat sady čítačů zátěžového testu je vlastnost značky počítače zobrazí v sestavě názvů počítače. To je velmi užitečné pro popis role konkrétního stroje v sestavě.
 
-        > [!NOTE]
-        > Pokud **vytvořit sestavu aplikace Excel** tlačítko k dispozici na panelu nástrojů Prohlížeč výsledků testu výkonnosti webu, bude pravděpodobně nutné ke spuštění aplikace Microsoft Excel jeden čas, než je povolený. Když Visual Studio Enterprise je nainstalovaná, Visual Studio Enterprise zatížení testu v aplikaci se zkopírují na váš počítač pro aplikaci Microsoft Excel. k dokončení procesu instalace pro doplněk musí však spustit aplikaci Microsoft Excel.
+## <a name="to-generate-load-test-trend-reports-using-excel"></a>Ke generování sestav trendů zátěžových testů pomocí aplikace Excel
 
-     Aplikace Microsoft Excel otevře s **vygenerování sestavy testu zatížení** průvodce.
+1. Před generováním sestavy je třeba spustit test zatížení.
 
-     -nebo-
+2. Sestavy zátěžového testu aplikace Excel můžete vytvořit dvěma způsoby:
 
-    1.  Otevřete Microsoft Excel, vyberte **zátěžový Test** kartu na pásu karet Office a potom zvolte **sestava testu zatížení**.
+   - Po dokončení zátěžového testu v **výsledky zátěžového testu** zvolte **vytvořit sestavu aplikace Excel** tlačítko na panelu nástrojů.
 
-         **Vygenerování sestavy testu zatížení** zobrazí se průvodce.
+      > [!NOTE]
+      > Pokud **vytvořit sestavu aplikace Excel** je tlačítko neaktivní v **prohlížeče výsledků testu výkonnosti webu** nástrojů, budete muset spustit aplikaci Microsoft Excel jeden čas, než je povolené. Při instalaci sady Visual Studio Enterprise, Visual Studio Enterprise zátěžového testu doplněk je zkopírován do počítače pro aplikaci Microsoft Excel. aplikace Microsoft Excel však musí být spuštěn na dokončení procesu instalace pro doplněk.
 
-    2.  V **vyberte databázi, která obsahuje zátěžové testy** v části **název serveru**, zadejte název serveru, jehož výsledků zátěžového testu.
+      Aplikace Microsoft Excel otevře s **generovat Průvodce vytvořením sestavy zátěžového testu**.
 
-    3.  V **Databasename** rozevíracího seznamu vyberte databázi obsahující výsledků zátěžového testu.
+   **OR**
 
-3.  V **jak chcete generovat sestavy** ověřte, zda **vytvoření sestavy** je vybraná a zvolte **Další**.
+   1. Otevřete aplikaci Microsoft Excel, vyberte **zátěžový Test** kartu **Office** pásu karet a klikněte na tlačítko **sestava zátěžového testu**.
 
-4.  V **typu hlášení chcete generovat** ověřte, zda **Trend** je vybraná a zvolte **Další**.
+       **Generovat Průvodce vytvořením sestavy zátěžového testu** se zobrazí.
 
-5.  V **Enter zatížení testovací sestava obsahuje podrobnosti o** stránky, zadejte název pro sestavu na **název sestavy**.
+   2. V **vyberte databázi, která obsahuje testy zatížení** stránce v části **název serveru**, zadejte název serveru obsahující výsledky zátěžového testu.
 
-6.  Vyberte zátěžový test, kterou chcete vygenerovat sestavu pro a zvolte **Další**.
+   3. V **Databasename** rozevíracího seznamu vyberte databázi obsahující výsledky zátěžového testu.
 
-7.  V **vyberte spuštění pro sestavy** v části **vyberte jeden nebo více používá pro přidání do sestavy**, vyberte výsledků zátěžových testů, které chcete porovnat v sestavě a zvolte **Další**.
+3. V **jak chcete generovat sestavy** stránce ověřte, jestli **vytvoření sestavy** je vybranou a stiskněte tlačítko **Další**.
 
-8.  V **vyberte čítače, sestavy** v části **, vyberte na nebo další čítače při přidání do sestavy**, rozevírací seznam čítačů je k dispozici pro sestavu upravit. Vyberte čítače, které chcete porovnat pro analýzu trendů a zvolte **Dokončit**.
+4. V **jaký typ sestavy chcete generovat** stránce ověřte, jestli **Trend** je vybranou a stiskněte tlačítko **Další**.
 
-10. Sestava je generována s tabulkou obsah, který obsahuje odkazy na různé karty sešitu aplikace Excel vygenerované v sestavě. Odkazy jsou založené na vybrané sestavy trendu čítače. Například pokud jste nechali výchozí počítadla vybrali v kroku 7, pak sestavu vygeneruje data, která se zobrazí na samostatných záložkách v aplikaci Excel pro jednotlivé čítače uvedené v kroku 7. Data, která se generuje pro jednotlivé čítače jsou poskytovány trend stylu grafy.
+5. V **podrobnosti sestavy zátěžového testu Enter** stránky, zadejte název pro sestavu v **název sestavy**.
 
-    > [!TIP]
-    > Pro lepší sestavy několik vlastností, které jsou k dispozici v zátěžových testů a testy výkonnosti webu, které umožňují bohatší sestavy. Požadavek na stránku má dvě vlastnosti, které jsou uvedené v sestavách: generování sestav název a cíl. Časy odezvy stránky se ohlásí vůči cíli a vytváření sestav název se použije místo adresy URL v sestavách. V zátěžovém testu spusťte nastavení v části Správa sad čítačů vlastnost značek počítače jsou poskytovány názvy počítačů sestavy. To je velmi užitečné k popisu roli konkrétní počítač v sestavě.
+6. Vyberte test zatížení, kterou chcete generovat sestavu a zvolte **Další**.
 
-## <a name="net-framework-security"></a>Zabezpečení rozhraní .NET Framework
+7. V **zvolte běhy sestavy** stránce v části **vyberte jeden nebo více spuštění pro přidání do sestavy**, vyberte výsledky zátěžového testu, které chcete v sestavě porovnat a zvolte **Další**.
 
-Výsledků zátěžových testů a sestavy obsahovat potenciálně citlivé informace, které lze použít k vytvoření útoku proti počítači nebo síti. Výsledků zátěžových testů a sestavy obsahují názvy počítačů a připojovací řetězce. Je třeba věnovat pozornost tohoto při sdílení sestav pro zátěžový test s jinými uživateli.
+8. V **vyberte čítače sestavy** stránce v části **vyberte jeden nebo více čítačů pro přidání do sestavy**, rozevírací seznam čítačů je k dispozici pro přizpůsobení vaší sestavy. Vyberte čítače, které chcete porovnat pro analýzu trendů a zvolte **Dokončit**.
 
-## <a name="see-also"></a>Viz také
+9. Sestava se vygeneruje s tabulkou obsah, který obsahuje odkazy na různé karty sešitu aplikace Excel generované v sestavě. Odkazy jsou založeny na čítačích vybraných pro sestavu trendů. Například pokud jste ponechali výchozí čítače vybrané v kroku 7, pak sestava vygeneruje údaje, které jsou uvedeny v samostatných kartách v aplikaci Excel pro každý čítač uvedený v kroku 7. Data, který je generován pro každý čítač jsou zobrazena v grafu ve stylu trendů.
 
-- [Vytváření sestav zatížení výsledků testů pro porovnávání testů a analýzu trendů](../test/compare-load-test-results.md)
+   > [!TIP]
+   > Pro lepší sestavy jsou k dispozici v zátěžových testech a testech výkonnosti webu, které umožňují lepší sestavy několik vlastností. Požadavek na stránku má dvě vlastnosti, které jsou uvedeny v sestavách: cíl a název sestavy. Doba odezvy stránky se bude vykazovány vůči cíli a namísto adresy URL v sestavách se použije název výkazu. V nastavení běhu, pod spravovat sady čítačů zátěžového testu je vlastnost značky počítače zobrazí v sestavě názvů počítače. To je velmi užitečné pro popis role konkrétního stroje v sestavě.
+
+## <a name="net-framework-security"></a>zabezpečení v rozhraní .NET Framework
+
+Výsledky zátěžového testu a sestavy obsahují potenciálně citlivé informace, které se dají zneužít k útoku proti vašemu počítači nebo síti. Výsledky zátěžového testu a sestavy obsahují názvy počítačů a připojovací řetězce. Je třeba tomu věnovat pozornost při sdílení sestav zátěžových testů s ostatními.
+
+## <a name="see-also"></a>Viz také:
+
+- [Sestava zátěžové testy s výsledky pro porovnávání testů a analýzu trendů](../test/compare-load-test-results.md)

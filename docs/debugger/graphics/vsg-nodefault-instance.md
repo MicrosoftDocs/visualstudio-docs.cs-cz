@@ -1,5 +1,5 @@
 ---
-title: VSG_NODEFAULT_INSTANCE | Microsoft Docs
+title: VSG_NODEFAULT_INSTANCE | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -10,14 +10,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d064f4a5b983058d9f1ad4428e2b37cf2e82dcf
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 4655b6105a940b7f2c742ba8bcd0812d0be5ab95
+ms.sourcegitcommit: 80f9daba96ff76ad7e228eb8716df3abfd115bc3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37433180"
 ---
 # <a name="vsgnodefaultinstance"></a>VSG_NODEFAULT_INSTANCE
-Definuje podle jeho přítomnosti zda výchozí instanci [VsgDbg – třída](vsgdbg-class.md) – třída – které poskytuje rozhraní zachytávání prostřednictvím kódu programu – pochází.  
+Definuje jeho přítomnost, zda výchozí instanci [třída VsgDbg](vsgdbg-class.md) třídy – poskytující rozhraní zachytávání prostřednictvím kódu programu – pochází.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -26,25 +27,25 @@ Definuje podle jeho přítomnosti zda výchozí instanci [VsgDbg – třída](vs
 ```  
   
 ## <a name="value"></a>Hodnota  
- Preprocesor symbolů, která podle jeho přítomnosti nebo absenci Určuje, zda výchozí instanci `VsgDbg` třída je k dispozici. Pokud je definována tento symbol, pak žádný výchozí instanci systému `VsgDbg` je k dispozici – třída; výchozí instanci, jinak hodnota dodána a inicializovat před spuštěním programu.  
+ Preprocesoru symbol, který podle jeho přítomnost nebo absence Určuje, zda výchozí instanci `VsgDbg` třídy je k dispozici. Pokud tento symbol není definován, pak žádný výchozí instanci `VsgDbg` třídy je k dispozici; jinak je výchozí instance k dispozici a inicializován před spuštěním programu.  
   
- Rozhraní zachytávání prostřednictvím kódu programu je zadaný prostřednictvím ukazatele, má globální obor, `g_pVsgDbg`.  
+ Programové zachytávání rozhraní je k dispozici prostřednictvím ukazatele, který má globální obor, `g_pVsgDbg`.  
   
-```  
+```cpp
 VsgDbg *g_pVsgDbg;  
 ```  
   
 ## <a name="remarks"></a>Poznámky  
- Výchozí instance stačí často, ale rozhraní zachytávání prostřednictvím kódu programu uvnitř knihovny DLL použít, když zařízení D3D byla vytvořena mimo tuto knihovnu DLL, musíte vytvořit a spravovat vlastní instanci systému `VsgDbg` třídy. Pokud spravujete vlastní rozhraní pro zachytávání prostřednictvím kódu programu rozhraní API tímto způsobem, zakázat výchozí instanci definováním `VSG_NODEFAULT_INSTANCE` předejdete režijní náklady.  
+ Výchozí instance je často dostatečné, ale pokud chcete použít rozhraní zachytávání prostřednictvím kódu programu uvnitř knihovny DLL, po vytvoření zařízení D3D mimo tuto knihovnu DLL, musíte vytvořit a spravovat vlastní instance `VsgDbg` třídy. Pokud spravujete vlastní rozhraní pro zachytávání prostřednictvím kódu programu API tímto způsobem, zakázat výchozí instanci definováním `VSG_NODEFAULT_INSTANCE` , aby režijní náklady.  
   
- Pokud není zakázán výchozí instanci, je automaticky inicializován před program spustí a zničen automaticky při ukončení aplikace. Nemáte k inicializaci nebo explicitně Uninitialize – této instance.  
+ Pokud není výchozí instancí zakázán, je automaticky inicializován před spuštěním vaší aplikace a automaticky je zničen při ukončení programu. Není nutné inicializovat nebo explicitně uninitialize této instance.  
   
- Chcete-li zakázat výchozí instanci, je třeba definovat `VSG_NODEFAULT_INSTANCE` předtím, než zahrnete `vsgcapture.h` v programu.  
+ Chcete-li zakázat výchozí instanci, je nutné definovat `VSG_NODEFAULT_INSTANCE` teprve potom zahrňte `vsgcapture.h` ve svém programu.  
   
 ## <a name="example"></a>Příklad  
  Tento příklad ukazuje, jak zakázat výchozí instanci:  
   
-```  
+```cpp
 // Define VSG_NODEFAULT_INSTANCE before including vsgcapture.h  
 #define VSG_NODEFAULT_INSTANCE  
   

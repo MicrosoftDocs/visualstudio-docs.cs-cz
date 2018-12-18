@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Přidání vlastního podokna úloh do aplikace | Microsoft Docs'
+title: 'Postupy: Přidání vlastního podokna úloh do aplikace'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,11 +16,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 818b8e2937692ff0ec445d2a94193beaa1b480bd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b8608fcc263be4750c38b6fe3f84967f40dd34ab
+ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/25/2018
+ms.locfileid: "34548811"
 ---
 # <a name="how-to-add-a-custom-task-pane-to-an-application"></a>Postupy: Přidání vlastního podokna úloh do aplikace
   Můžete přidat vlastního podokna úloh do aplikace uvedené výše pomocí doplňku VSTO. Další informace najdete v tématu [vlastní podokna úloh](../vsto/custom-task-panes.md).  
@@ -30,11 +31,11 @@ ms.lasthandoff: 04/16/2018
 > [!NOTE]  
 >  Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [přizpůsobení prostředí Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
   
-## <a name="adding-a-custom-task-pane-to-an-application"></a>Přidání vlastního podokna úloh do aplikace  
+## <a name="add-a-custom-task-pane-to-an-application"></a>Přidání vlastního podokna úloh do aplikace  
   
-#### <a name="to-add-a-custom-task-pane-to-an-application"></a>Přidání vlastního podokna úloh do aplikace  
+### <a name="to-add-a-custom-task-pane-to-an-application"></a>Přidání vlastního podokna úloh do aplikace  
   
-1.  Otevřete nebo vytvoření projektu doplňku VSTO pro jednu z aplikací uvedených výše. Další informace najdete v tématu [postupy: vytváření projektů Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
+1.  Otevřete nebo vytvoření projektu doplňku VSTO pro jednu z aplikací uvedených výše. Další informace najdete v tématu [postupy: vytvoření Office projekty v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
   
 2.  Na **projektu** nabídky, klikněte na tlačítko **přidat uživatelský ovládací prvek**.  
   
@@ -62,6 +63,6 @@ ms.lasthandoff: 04/16/2018
 ## <a name="see-also"></a>Viz také  
  [Přizpůsobení uživatelského rozhraní sady Office](../vsto/office-ui-customization.md)   
  [Vlastní podokna úloh](../vsto/custom-task-panes.md)   
- [Návod: Automatizace aplikace z vlastního podokna úloh](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)  
+ [Návod: Automatizace aplikace z vlastního podokna úloh](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)  
   
   

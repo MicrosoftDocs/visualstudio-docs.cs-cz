@@ -1,5 +1,5 @@
 ---
-title: IntelliSenseHostFlags | Microsoft Docs
+title: IntelliSenseHostFlags | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a096e79a64168f74150103a5f3ba3a8683fe184e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2ad7f97ad7c66fadcfe918176b84e9b54d44814d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49825631"
 ---
 # <a name="intellisensehostflags"></a>IntelliSenseHostFlags
-Určuje příznaky IntelliSense hostitele.  
+Určuje příznaky hostitele technologie IntelliSense.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,18 +39,18 @@ enum IntellisenseHostFlags
 };  
 ```  
   
-#### <a name="parameters"></a>Parametry  
+### <a name="parameters"></a>Parametry  
   
 |Členové|Popis|  
 |-------------|-----------------|  
 |`IHF_READONLYCONTEXT`|Vyrovnávací paměti kontextu je jen pro čtení.|  
-|`IHF_NOSEPARATESUBJECT`|Žádný text subjektu. Vyrovnávací paměti kontextu obsahuje cílový IntelliSense (znamená `!IHF_READONLYCONTEXT`).|  
+|`IHF_NOSEPARATESUBJECT`|Žádný text předmětu. Vyrovnávací paměti kontextu obsahuje cílový IntelliSense (implikuje `!IHF_READONLYCONTEXT`).|  
 |`IHF_SINGLELINESUBJECT`|Text předmětu není více-řádku podporující.|  
 |`IHF_FORCECOMMITTOCONTEXT`|Stejné jako `CanCommitIntoReadOnlyBuffer`.|  
-|`IHF_OVERTYPE`|Úpravy (v předmětu nebo kontextu) by mělo být provedeno v režimu přepisování.|  
+|`IHF_OVERTYPE`|Úpravy (v předmětu nebo kontext) by mělo být provedeno režim přepisování.|  
   
 ## <a name="requirements"></a>Požadavky  
  SingleFileeditor.idl  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  <xref:Microsoft.VisualStudio.TextManager.Interop>

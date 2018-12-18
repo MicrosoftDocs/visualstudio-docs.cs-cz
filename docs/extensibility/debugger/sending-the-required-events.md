@@ -1,5 +1,5 @@
 ---
-title: Odesílání událostí požadované | Microsoft Docs
+title: Odesílání požadovaných událostí | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,30 +13,31 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: deeffb814dacc58b1fb3a3f993203139d9b1a081
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2512dc35d77263c5237dff12b7a5f07060458e1c
+ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39251420"
 ---
-# <a name="sending-the-required-events"></a>Odesílání požadované událostí
-Pomocí tohoto postupu pro odesílání požadované události.  
+# <a name="send-the-required-events"></a>Odesílání požadovaných událostí
+Pomocí tohoto postupu pro odesílání požadovaných událostí.  
   
-## <a name="process-for-sending-required-events"></a>Proces odesílání požadované událostí  
- Tyto události jsou povinné, v tomto pořadí, při vytváření ladění modul (DE) a připojíte ho k programu:  
+## <a name="process-for-sending-required-events"></a>Proces odesílání požadovaných událostí  
+ Tyto události jsou povinné, v tomto pořadí, při vytváření ladicího stroje (DE) a připojení k programu:  
   
-1.  Odeslat [IDebugEngineCreateEvent2](../../extensibility/debugger/reference/idebugenginecreateevent2.md) objekt události pro relaci ladění správce (SDM) při inicializaci DE pro ladění jeden nebo více programů v procesu.  
+1.  Odeslání [IDebugEngineCreateEvent2](../../extensibility/debugger/reference/idebugenginecreateevent2.md) objektu události do Správce ladění relace (SDM), když je DE je inicializován pro ladění jednoho nebo více programů v procesu.  
   
-2.  Po připojení k programu chcete ladit, odeslání [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) událostí objekt, který chcete SDM. Tato událost může být zastavení událostí, v závislosti na návrh vašeho modulu.  
+2.  Při ladění programu přiřazen, odeslat [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) objekt SDM události. Tato událost může být událostí ukončení, v závislosti na návrhu modulu.  
   
-3.  Pokud program je připojen k při spuštění procesu, pošlete [IDebugThreadCreateEvent2](../../extensibility/debugger/reference/idebugthreadcreateevent2.md) událostí objekt, který chcete SDM oznámit rozhraní IDE nové vlákno. Tato událost může být zastavení událostí, v závislosti na návrh vašeho modulu.  
+3.  Pokud program je připojen k při spuštění procesu, pošlete [IDebugThreadCreateEvent2](../../extensibility/debugger/reference/idebugthreadcreateevent2.md) události objektu SDM oznámit integrovaného vývojového prostředí nového vlákna. Tato událost může být událostí ukončení, v závislosti na návrhu modulu.  
   
-4.  Odeslat [IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md) událostí objekt, který chcete SDM, pokud je program laděné dokončení načítání nebo po dokončení připojení k programu. Tato událost je třeba zastavit událostí.  
+4.  Odeslání [IDebugLoadCompleteEvent2](../../extensibility/debugger/reference/idebugloadcompleteevent2.md) události objektu SDM po dokončení načítání nebo dokončení připojení k programu program, který se právě ladí. Tato událost musí být událostí ukončení.  
   
-5.  Pokud chcete ladit je aplikace spuštěna, pošlete [IDebugEntryPointEvent2](../../extensibility/debugger/reference/idebugentrypointevent2.md) událostí objekt, který chcete SDM při první pokyn kódu v architektuře běhu je provést. Tato událost je vždy zastavení událostí. Když zanoříte se do relace ladění, rozhraní IDE zastaví na tuto událost.  
+5.  Pokud je aplikace k ladění, odesílat [IDebugEntryPointEvent2](../../extensibility/debugger/reference/idebugentrypointevent2.md) události objektu SDM po první instrukce kódu za běhu architektury se pokračovalo. Tato událost je vždy událostí ukončení. Při krokování s vnořením do relace ladění, rozhraní IDE přestane na této události.  
   
 > [!NOTE]
->  Mnoho jazyky použít globální inicializátory nebo externí, předkompilovaných funkce (z knihovny CRT nebo _Main) na začátku svůj kód. Pokud jazyku aplikace, kterou ladíte obsahuje některý z těchto typů elementů před počáteční vstupní bod, je-li spustit tento kód a vstupního bodu událost je odeslána při vstup uživatele bod, jako například **hlavní** nebo `WinMain`, je dosaženo.  
+>  Řadu jiných jazyků použití globálních inicializátorů nebo externí, předkompilované funkcí (z knihovny CRT nebo _Main) na začátku svůj kód. Pokud jazyk ladíte program obsahuje některý z těchto typů prvků před počáteční vstupní bod, je tento kód spuštěný a vstupního bodu událost je odeslána při vstupu uživatele bodu, jako například **hlavní** nebo `WinMain`, je byl dosažen.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Povolení ladění programu](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)

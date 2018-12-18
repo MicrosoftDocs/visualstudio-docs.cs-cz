@@ -1,5 +1,5 @@
 ---
-title: Cíle MSBuild | Microsoft Docs
+title: Cíle nástroje MSBuild | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -12,17 +12,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f5b35c04d34143731ccf9fe5e8fe02f5389a2e5
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 3700074a1d087c0626a86559ff1342698d8a4628
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39176110"
 ---
 # <a name="msbuild-targets"></a>Cíle nástroje MSBuild
-Cíle seskupíte úlohy v určitém pořadí a umožněte proces sestavení se promítnou do menších jednotek. Jeden cíl může například odstranit všechny soubory v adresáři výstup přípravy na sestavení, zatímco jiné zkompiluje vstupy pro projekt a umístí je do prázdného adresáře. Další informace o úlohách najdete v tématu [úlohy](../msbuild/msbuild-tasks.md).  
+Cíle seskupují úkoly v určitém pořadí a povolit procesu sestavení, abychom promítnout do menších jednotek. Například jeden cíl může odstranit všechny soubory ve výstupním adresáři připravit pro sestavení, zatímco jiné zkompiluje vstupy pro projekt a umístí je do prázdného adresáře. Další informace o úlohách najdete v části [úlohy](../msbuild/msbuild-tasks.md).  
   
-## <a name="declaring-targets-in-the-project-file"></a>Deklarování cíle v souboru projektu  
- Cíle jsou deklarované v souboru projektu s [cíl](../msbuild/target-element-msbuild.md) elementu. Například následující kód XML vytvoří cíl s názvem konstrukce, které pak zavolá Csc úloh s typem položky kompilace.  
+## <a name="declare-targets-in-the-project-file"></a>Deklarovat cíle v souboru projektu  
+ Cíle jsou deklarovány v souboru projektu se [cílové](../msbuild/target-element-msbuild.md) elementu. Například následující XML kód vytvoří cíl s názvem konstrukce, která potom volá CSC – úloha s typem položky kompilace.  
   
 ```xml  
 <Target Name="Construct">  
@@ -30,7 +31,7 @@ Cíle seskupíte úlohy v určitém pořadí a umožněte proces sestavení se p
 </Target>  
 ```  
   
- Jako vlastnosti nástroje MSBuild můžete jej předefinovat cíle. Například  
+ Stejně jako vlastnosti nástroje MSBuild lze redefinovat cíle. Například  
   
 ```xml  
 <Target Name="AfterBuild" >  
@@ -41,10 +42,10 @@ Cíle seskupíte úlohy v určitém pořadí a umožněte proces sestavení se p
 </Target>  
 ```  
   
- Pokud se provede AfterBuild, zobrazí pouze "druhého výskytu textu".  
+ Pokud AfterBuild spustí, zobrazí se pouze "druhého výskytu".  
   
 ## <a name="target-build-order"></a>Pořadí sestavení cílů  
- Pokud vstup jeden cíl závisí na výstup jiný cíl, musejí být seřazeny cíle. Existuje několik způsobů, jak určit pořadí, ve které cíle spustit.  
+ Pokud vstup pro jeden cíl závisí na výstupu jiný cíl, musejí být seřazeny cíle. Existuje několik způsobů, jak určit pořadí, ve které cíle spuštění.  
   
 -   Počáteční cíle  
   
@@ -52,16 +53,16 @@ Cíle seskupíte úlohy v určitém pořadí a umožněte proces sestavení se p
   
 -   První cíl  
   
--   Cílové závislosti  
+-   Závislosti cílů  
   
 -   `BeforeTargets` a `AfterTargets` (MSBuild 4.0)  
-  
- Cíl se nikdy spouští dvakrát během jednoho sestavení, i když na něm závisí následující cíl v sestavení. Jakmile se spustí na cíl, jeho příspěvkem k sestavení je dokončena.  
-  
- Pořadí sestavení, podrobnosti a další informace o cíli, najdete v části [cíl sestavení pořadí](../msbuild/target-build-order.md).  
-  
+
+Cíl se nikdy nespustí dvakrát během jednoho sestavení, i v případě, že na něm závisí následující cíl v sestavení. Jakmile se spustí cíl, jeho příspěvku k sestavení je dokončena.  
+
+Pořadí sestavení, podrobnosti a další informace o cíli, najdete v části [pořadí sestavení cílové](../msbuild/target-build-order.md).  
+
 ## <a name="target-batching"></a>Dávkování cíle  
- Může mít na cílový element `Outputs` atribut, který určuje metadata v podobě % (Metadata). Pokud ano, spustí MSBuild cíl jednou pro každou hodnotu jedinečný metadata seskupení nebo "dávkování" položky, které mají tuto hodnotu metadat. Například  
+Cílový prvek může mít `Outputs` atribut, který určuje metadat ve formě %(\<metadat >). Pokud ano, MSBuild spustí cíl jednou pro každou hodnotu jedinečná metadata seskupení nebo "dávkování" s touto hodnotou metadat položky. Například  
   
 ```xml  
 <ItemGroup>  
@@ -82,20 +83,20 @@ Cíle seskupíte úlohy v určitém pořadí a umožněte proces sestavení se p
 </Target>  
 ```  
   
- dávky odkaz položky podle jejich RequiredTargetFramework metadat. Výstup cíle vypadá takto:  
+ Odkaz na položky podle jejich metadat RequiredTargetFramework dávky. Výstup cíle by měl vypadat takto:  
   
 ```  
 Reference: 3.5;3.5  
 Reference: 4.0  
 ```  
   
- Dávkování cíle se používá zřídka v skutečné sestavení. Dávkování úloh je dnes běžné. Další informace najdete v tématu [Batching](../msbuild/msbuild-batching.md).  
+ Dávkování cíle je zřídka používané skutečných sestavení. Dávkování úloh je běžné. Další informace najdete v tématu [dávkování](../msbuild/msbuild-batching.md).  
   
 ## <a name="incremental-builds"></a>Přírůstková sestavení  
- Přírůstková sestavení jsou sestavení, která jsou optimalizována tak, aby cílů se výstupní soubory, které jsou aktualizované s ohledem na jejich odpovídající vstupní soubory nebudou provedeny. Cílový element může mít oba `Inputs` a `Outputs` označující, co položky cíl jako vstup očekává atributů, a co položky, se vytváří jako výstup.  
+ Přírůstková sestavení jsou sestavení, které jsou optimalizované tak, že nejsou provedeny cílů se výstupní soubory, které jsou aktuální s ohledem na jejich odpovídající vstupní soubory. Cílový prvek může mít obě `Inputs` a `Outputs` označující položky cíl jako vstup očekává atributy, a co položky, se vytvoří jako výstup.  
   
- Pokud jsou všechny položky výstup aktuální, přeskočí MSBuild cíl, což významně zvyšuje rychlost sestavení. Jedná se přírůstkové sestavení cíle. Pokud jenom některé soubory jsou aktuální, provede MSBuild cíl bez aktuální položky. Tomu se říká částečné přírůstkové sestavení cíle. Další informace najdete v tématu [přírůstková sestavení](../msbuild/incremental-builds.md).  
+ Pokud jsou všechny výstupní položky aktuální, MSBuild vynechává cíl, který výrazně zvyšuje rychlost sestavení. Tomu se říká cíle pro přírůstkové sestavení. Pokud jen některé soubory jsou aktuální, MSBuild spustí cíl bez aktuální položky. Tomu se říká částečné přírůstkové sestavení cíle. Další informace najdete v tématu [přírůstková sestavení](../msbuild/incremental-builds.md).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)   
- [Postupy: Použití stejného cíle ve více souborech projektu](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)
+ [Postupy: použití stejného cíle ve více souborech projektu](../msbuild/how-to-use-the-same-target-in-multiple-project-files.md)

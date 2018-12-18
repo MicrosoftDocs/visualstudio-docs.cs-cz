@@ -1,8 +1,9 @@
 ---
-title: Zakažte nebo přesunout do mezipaměti balíček | Microsoft Docs
-description: Zjistěte, jak zakázat, povolit nebo přesunout do mezipaměti balíček pro nasazení v sadě Visual Studio.
+title: Zakázání nebo přesunutí mezipaměti balíčku
+description: Zjistěte, jak zakázat, povolit nebo přesunutí mezipaměti balíčku pro nasazení sady Visual Studio.
 ms.date: 04/14/2017
 ms.technology: vs-acquisition
+ms.custom: seodec18
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
 f1_keywords:
@@ -17,54 +18,46 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b5b6c605577bede4e6820216397a12d5980a04d
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 006e7112a2b6c7b990fb412c6a9a2c458bc9e8b2
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53159539"
 ---
-# <a name="disable-or-move-the-package-cache"></a>Zakažte nebo přesunout do mezipaměti balíčku
+# <a name="disable-or-move-the-package-cache"></a>Zakázání nebo přesunutí mezipaměti balíčku
 
-Balíček mezipaměti poskytuje zdroj balíčků nainstalovaných v případě, že potřebujete opravit Visual Studio nebo jiné související produkty v případech, kdy máte bez připojení k Internetu. Některé jednotky nebo systému nastavit ups, ale nemusí chcete zachovat tyto balíčky kolem.
-Instalační program stáhne je podle potřeby, takže pokud chcete uložit nebo obnovit místa na disku můžete zakázat nebo přesunout do mezipaměti balíčku.
+Mezipaměť balíčků poskytuje zdroj balíčků nainstalovaných v případě, že potřebujete opravit Visual Studio nebo další související produkty v případech, kdy mají bez připojení k Internetu. Některé disky nebo systém nastavit ups, ale možná chcete zachovat tyto balíčky kolem.
+Instalační program stáhne je podle potřeby, takže pokud chcete uložit nebo obnovení místo na disku můžete zakázat nebo přesunutí mezipaměti balíčku.
 
-## <a name="disable-the-package-cache"></a>Zakázání ukládání do mezipaměti balíčku
+## <a name="disable-the-package-cache"></a>Zakázat mezipaměť balíčku
 
-Před instalací, upravit nebo opravte Visual Studio nebo jiné produkty s novým instalačním programem, můžete spustit instalační program se `--nocache` přepnout na Instalační služby.
+Před instalací, upravit nebo opravte Visual Studio nebo jiné produkty s novým instalačním programem, můžete spustit instalační program s `--nocache` přepnout do instalačního programu.
 
 ```cmd
 "%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vs_installer.exe" --nocache
 ```
 
-Všechny operace, které můžete provést na některý z produktů odeberete všechny existující balíčky pro tento produkt a vyhnout se ukládají všechny balíčky po jejich instalaci. Pokud změníte nebo opravte Visual Studio a balíčky jsou požadované, bude ji automaticky stáhnout nebo odebrat po jejich instalaci.
+Všechny operace, které vám v žádném produktu odebere všechny existující balíčky pro tento produkt a vyhnete se ukládají všechny balíčky, které se po instalaci. Pokud upravíte nebo opravte Visual Studio a balíčky jsou požadovány, bude se automaticky se stáhne a odebrána po instalaci.
 
-Pokud chcete znovu povolit mezipaměť, předat `--cache` místo. Pouze balíčky, které jsou požadovány bude do mezipaměti, takže pokud je nutné obnovit všechny balíčky opravte Visual Studio před odpojením z vaší sítě.
+Pokud chcete znovu povolit mezipaměť, předejte `--cache` místo. Pouze balíčky, které jsou požadovány se uloží do mezipaměti, takže pokud potřebujete obnovit všechny balíčky, měli byste opravit Visual Studio před odpojením z vaší sítě.
 
 ```cmd
 "%ProgramFiles(x86)%\Microsoft Visual Studio\Installer\vs_installer.exe" repair --passive --norestart --cache
 ```
 
-Můžete také nastavit `KeepDownloadedPayloads` [zásad registru](set-defaults-for-enterprise-deployments.md) zakázání ukládání do mezipaměti před nainstalovat, upravit nebo opravte Visual Studio.
+Můžete také nastavit `KeepDownloadedPayloads` [zásad registru](set-defaults-for-enterprise-deployments.md) zakázání ukládání do mezipaměti, před instalací, upravit nebo opravte Visual Studio.
 
-## <a name="move-the-package-cache"></a>Přesuňte balíček mezipaměti
+## <a name="move-the-package-cache"></a>Přesunutí mezipaměti balíčku
 
-Obvyklé konfigurace systému je tak, aby měl Windows nainstalovanou na SSD s větší pevný disk (nebo více) pro vývoj potřebuje, jako je například zdrojového kódu, binární soubory programu a další. Pokud chcete pracovat offline místo přesunutím mezipaměti balíčku.
+Běžnou konfigurací systému je mít pro vývoj pro Windows nainstalované na SSD s větší pevného disku (nebo více) potřebuje, jako je zdrojový kód, binární soubory aplikace a další. Pokud chcete pracovat v režimu offline můžete místo toho přesunutí mezipaměti balíčku.
 
-V současné době můžete provést jen pokud jste nastavili `CachePath` [zásad registru](set-defaults-for-enterprise-deployments.md) před nainstalovat, upravit nebo opravte Visual Studio.
+V současné době můžete provést jen pokud jste nastavili `CachePath` [zásad registru](set-defaults-for-enterprise-deployments.md) před instalací, upravit nebo opravte Visual Studio.
 
-## <a name="get-support"></a>Získat podporu
+[!INCLUDE[install_get_support_md](includes/install_get_support_md.md)]
 
-V některých případech může problémů. Pokud se nezdaří instalace Visual Studia, najdete v článku [problémy instalace a upgrade řešení potíží s Visual Studio 2017](troubleshooting-installation-issues.md) stránky. Pokud se žádný z kroků pro řešení potíží, kontaktujte nás pomocí živé konverzace pro pomoc s instalací (pouze v angličtině). Podrobnosti najdete v tématu [stránky podpory sady Visual Studio](https://www.visualstudio.com/vs/support/#talktous).
-
-Tady je několik další možnosti podpory:
-
-* Můžete hlášení problémů produktu pro nás prostřednictvím [nahlásit problém](../ide/how-to-report-a-problem-with-visual-studio-2017.md) nástroj, který se zobrazí v instalačním programu Visual Studio i v integrovaném vývojovém prostředí sady Visual Studio.
-* Návrh produktu s námi můžete sdílet na [UserVoice](https://visualstudio.uservoice.com/forums/121579).
-* Můžete sledovat problémy produktu a najít v odpovědi [Visual Studio Community vývojáře](https://developercommunity.visualstudio.com/).
-* Můžete také použít s námi a jinými vývojáři Visual Studio prostřednictvím [Visual Studio konverzace v komunitě Gitter](https://gitter.im/Microsoft/VisualStudio). (Tato možnost vyžaduje [Githubu](https://github.com/) účtu.)
-
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 * [Instalace sady Visual Studio](install-visual-studio.md)
-* [Výchozí nastavení pro nasazení v podnicích](set-defaults-for-enterprise-deployments.md)
+* [Výchozí nastavení v případě podnikového nasazení](set-defaults-for-enterprise-deployments.md)
 * [Instalace sady Visual Studio s použitím parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)

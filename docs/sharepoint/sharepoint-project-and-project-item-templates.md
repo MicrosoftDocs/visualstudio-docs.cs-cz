@@ -1,5 +1,5 @@
 ---
-title: Šablony položek projektu služby SharePoint a projekt | Microsoft Docs
+title: Šablony položek projektu služby SharePoint a Project | Dokumentace společnosti Microsoft
 ms.custom: ''
 ms.date: 02/22/2017
 ms.technology:
@@ -25,126 +25,127 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d671c397f139cfaa51bd664e5324a32cce671361
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6e38a3e709a8d49d29d598e7eabd55e7be154836
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49896442"
 ---
-# <a name="sharepoint-project-and-project-item-templates"></a>Šablony projektů a položek projektů služby SharePoint
-  Následující části popisují dostupné projektu služby SharePoint a položek projektu šablony a způsobu jejich použití. 
+# <a name="sharepoint-project-and-project-item-templates"></a>A šablony položek projektu služby SharePoint
+  Následující části popisují dostupné projektu služby SharePoint a položky projektu, šablony a způsobu jejich použití. 
   
-##  <a name="project-and-project-item-templates-overview"></a>Projekt a Přehled šablon položek projektu  
- Při vytváření nového projektu služby SharePoint v sadě Visual Studio, projektu služby SharePoint se přidá k řešení společně s všechny položky projektu vyžadují tento typ projektu. Například pokud vytvoříte projekt webové části Silverlight, Visual Studio vytvoří řešení, které obsahuje položka projektu Visual webové části a položka projektu aplikace Silverlight spolu se všechny soubory, které vyžadují tyto položky projektu. Šablony položek projektu slouží k přidání položky projektu do existujícího projektu služby SharePoint, jako je například přidávání příjemce událostí, sloupec webu nebo v seznamu.  
+## <a name="project-and-project-item-templates-overview"></a>Projekt a Přehled šablon položek projektu
+ Když vytvoříte nový projekt služby SharePoint v sadě Visual Studio, SharePoint projekt je přidán do řešení společně se všechny položky projektu vyžaduje tento typ projektů. Například pokud vytvoříte projekt webové části Silverlight, Visual Studio vytvoří řešení, které obsahuje položky projektu vizuální webové části a položky projektu Silverlight aplikace spolu se všechny soubory, které vyžadují tyto položky projektu. Šablony položek projektu se používají k přidání položky projektu do existujícího projektu služby SharePoint, jako je například přidání příjemce událostí, sloupec nebo seznamu.  
   
- Informace o SharePoint základy najdete v tématu [SharePoint Foundation stavební bloky](http://go.microsoft.com/fwlink/?LinkId=179404). Pokročilí uživatelé mohou vytvářet vlastních projektů a šablon položek projektu. Další informace najdete v tématu [rozšíření systému projektu služby SharePoint](../sharepoint/extending-the-sharepoint-project-system.md).  
+ Informace o základech služby SharePoint, naleznete v tématu [SharePoint Foundation stavební bloky](http://go.microsoft.com/fwlink/?LinkId=179404). Pokročilí uživatelé mohou vytvářet vlastních projektů a šablon položek projektu. Další informace najdete v tématu [rozšíření systému projektu služby SharePoint](../sharepoint/extending-the-sharepoint-project-system.md).  
   
-##  <a name="project-templates"></a>Šablony projektů  
- Následuje seznam šablon projektu služby SharePoint. K zobrazení šablon projektu služby SharePoint v sadě Visual Studio v **nový projekt** dialogové okno, rozbalte seznam **SharePoint** uzel v rámci buď **Visual C#** nebo  **Visual Basic**a potom zvolte **2010**.  
+## <a name="project-templates"></a>Šablony projektů
+ Tady je seznam šablon projektu služby SharePoint. K zobrazení šablon projektu služby SharePoint v sadě Visual Studio, v **nový projekt** dialogového okna rozbalte **SharePoint** uzlu buď **Visual C#**  nebo  **Visual Basic**a klikněte na tlačítko **2010**.  
   
-### <a name="sharepoint-2010-project"></a>Projekt služby SharePoint 2010  
- Obsah *projektu služby SharePoint 2010* jsou zahrnuty v každé šabloně projektu služby SharePoint. Projektu služby SharePoint 2010 obsahuje:  
+### <a name="sharepoint-2010-project"></a>Projekt SharePoint 2010
+ Obsah *projektu služby SharePoint 2010* jsou zahrnuty v každé šabloně projektu služby SharePoint. Projekt služby SharePoint 2010 obsahuje:  
   
 -   Soubor projektu.  
   
 -   Stránce vlastností projektu.  
   
--   A **odkazy** složku obsahující všechny odkazy na sestavení v projektu.  
+-   A **odkazy** složky obsahující všechny odkazy na sestavení v projektu.  
   
--   A **funkce** složku, která obsahuje .feature konfigurační soubor, použít k nasazení funkcí na server služby SharePoint.  
+-   A **funkce** složku, která obsahuje *.feature* konfigurační soubor, použít k nasazení funkcí na SharePoint server.  
   
--   A **balíček** složku, která obsahuje soubor Package.package použít k nasazení řešení do služby SharePoint.  
+-   A **balíčku** složku, která obsahuje *Package.package* soubor používá k nasazení řešení služby SharePoint.  
   
--   Soubor key.snk (silný název klíč), který se používá k podepsání sestavení silným názvem, pro rozšířené zabezpečení.  
+-   Soubor klíč.snk (klíč se silným názvem), který se používá k podepsání sestavení silným názvem pro zvýšené zabezpečení.  
   
-### <a name="sharepoint-2010-silverlight-web-part"></a>SharePoint 2010 – webová část Silverlight  
- *Webové části služby SharePoint 2010 Silverlight* projekty umožňují vytvářet webové části pro službu SharePoint, který zobrazí aplikace Silverlight. Pokud vytvoříte tento projekt, můžete určit, zda přidat do něj novou aplikaci Silverlight, nebo odkaz některého ze stávajících. Další informace najdete v tématu [vytvoření webové části pro službu SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md) a [návod: vytvoření webové části Silverlight této zobrazí OData pro službu SharePoint](../sharepoint/walkthrough-creating-a-silverlight-web-part-that-displays-odata-for-sharepoint.md).  
+### <a name="sharepoint-2010-silverlight-web-part"></a>Webové části technologie Silverlight v Sharepointu 2010
+ *Webové části služby SharePoint 2010 Silverlight* projektů vám umožní vytvořit webové části pro SharePoint, která se zobrazí aplikace Silverlight. Když vytvoříte tento projekt, můžete určit, zda chcete přidat novou aplikaci Silverlight k němu nebo odkazovat na existující. Další informace najdete v tématu [vytvořit webové části pro SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md) a [návod: vytvoření webové části Silverlight, která zobrazuje data OData pro službu SharePoint](../sharepoint/walkthrough-creating-a-silverlight-web-part-that-displays-odata-for-sharepoint.md).  
   
-### <a name="sharepoint-2010-visual-web-part"></a>Vizuální webová část služby SharePoint 2010  
- A *webové části služby SharePoint 2010 Visual* projekt obsahuje soubor definice Elements.xml **webovou část** položku a **uživatelský ovládací prvek** položky. Vzhled visual webové části můžete navrhnout přetažením nebo kopírování ovládacích prvků z panelu nástrojů Visual Studio na povrch uživatelského ovládacího prvku. Další informace najdete v tématu [postupy: vytvoření webové části služby SharePoint pomocí návrháře](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md) a [stavebním blokem: webové části](http://go.microsoft.com/fwlink/?LinkId=179438).  
+### <a name="sharepoint-2010-visual-web-part"></a>Vizuální webové části služby SharePoint 2010
+ A *Sharepointu 2010 vizuální webová část* projekt obsahuje *Elements.xml* soubor definice **webové části** položky a **uživatelský ovládací prvek** položky . Přetažením nebo zkopírováním ovládacích prvků na plochu uživatelského ovládacího prvku z panelu nástrojů sady Visual Studio můžete navrhnout vzhled vizuální webové části. Další informace najdete v tématu [postupy: vytvoření webové části služby SharePoint pomocí návrháře](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md) a [stavebním blokem: webové části](http://go.microsoft.com/fwlink/?LinkId=179438).  
   
-### <a name="import-sharepoint-2010-solution-package"></a>SharePoint 2010 – Importovat balíček řešení  
- *Import balíčku řešení služby SharePoint 2010* projekty umožňují importovat nebo jeho část existující web služby SharePoint 2010, exportovat do souboru (WSP) řešení služby SharePoint, do sady Visual Studio. Po importu do sady Visual Studio, můžete přizpůsobit jeho položky a znovu je. Další informace najdete v tématu [import položek z existující stránky SharePoint](../sharepoint/importing-items-from-an-existing-sharepoint-site.md).  
+### <a name="import-sharepoint-2010-solution-package"></a>Importovat balíček řešení služby SharePoint 2010
+ *Importovat balíček řešení služby SharePoint 2010* projekty umožňují importovat nebo její část existujícího webu SharePoint 2010, exportovat do řešení služby SharePoint (*.wsp*) soubor do sady Visual Studio. Po naimportování do sady Visual Studio, můžete přizpůsobit jeho položky a znovu nasadit. Další informace najdete v tématu [Import položek z existující stránky SharePoint](../sharepoint/importing-items-from-an-existing-sharepoint-site.md).  
   
-### <a name="import-reusable-sharepoint-2010-workflow"></a>SharePoint 2010 – Importovat znovu použitelný pracovní postup  
- *Import opakovaně použitelného pracovního postupu služby SharePoint 2010* projekty umožňují import opakovaně použitelný, deklarativní pracovní postup vytvořený v SharePoint Designer 2010 do sady Visual Studio. Pracovní postup se exportují z webu služby SharePoint jako soubor WSP. Po importu do sady Visual Studio, můžete přizpůsobit, přidejte do ní kód a pak je nasadit na web služby SharePoint. Další informace najdete v tématu [návod: Import opakovaně použitelného pracovního postupu služby SharePoint Designer do sady Visual Studio](../sharepoint/walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio.md).  
+### <a name="import-reusable-sharepoint-2010-workflow"></a>Import opakovaně použitelného pracovního postupu služby SharePoint 2010
+ *Import opakovaně použitelného pracovního postupu služby SharePoint 2010* projekty umožňují importovat deklarativní, opakovaně použitelný pracovní postup vytvořený v Návrháři SharePoint 2010 do sady Visual Studio. Pracovní postup se exportuje z webu služby SharePoint jako *.wsp* souboru. Po naimportování do sady Visual Studio, můžete ji přizpůsobit, přidejte do ní kód a nasadit ho na Sharepointový Web. Další informace najdete v tématu [návod: Import opakovaně použitelného pracovního postupu návrháře služby SharePoint do sady Visual Studio](../sharepoint/walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio.md).  
   
-##  <a name="project-item-templates"></a>Šablony položek projektu  
- Následuje seznam šablony položek projektu služby SharePoint. Šablony položek projektu přidejte soubory do řešení služby SharePoint pro podporu funkcí služby SharePoint, jako je například sloupce webu, seznamy a typy obsahu. Přidání sloupce webu do vašeho řešení například přidá sloupec projekt lokality, který obsahuje soubor definice Elements.xml. Přidání visual webovou část přidá projekt visual část řešení, který obsahuje soubor Elements.xml, položky ovládacího prvku uživatele a položku visual webovou část.  
+## <a name="project-item-templates"></a>Šablony položek projektu
+ Tady je seznam šablon položek projektu služby SharePoint. Šablony položek projektu přidejte soubory do řešení služby SharePoint pro podporu funkcí služby SharePoint, jako je například sloupců webu, seznamy a typy obsahu. Například přidání sloupce webu do řešení přidá projektu sloupce webu, který obsahuje *Elements.xml* definičního souboru. Přidání vizuální webové části přidá do vašeho řešení, která obsahuje projektu vizuální webové části *Elements.xml* souboru, položku ovládacího prvku uživatel a položka vizuální webové části.  
   
- Chcete-li zobrazit šablony položek projektu služby SharePoint, v **Průzkumníku řešení**, otevřete místní nabídky projektu služby SharePoint a potom zvolte **přidat**, **novou položku**. Rozbalte **SharePoint** uzel v rámci buď **Visual C#** nebo **jazyka Visual Basic**a potom zvolte **2010**.  
+ Chcete-li zobrazit šablony položek projektu služby SharePoint, v **Průzkumníka řešení**, otevřete místní nabídku pro projekt služby SharePoint a klikněte na tlačítko **přidat**, **nová položka**. Rozbalte **SharePoint** uzlu buď **Visual C#**  nebo **jazyka Visual Basic**a klikněte na tlačítko **2010**.  
   
-### <a name="application-page-farm-solution-only"></a>Stránka aplikace (jenom řešení farmy)  
- **Stránky aplikace (jenom řešení farmy)** položka umožňuje návrh [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] webové stránky pro web služby SharePoint. Stránky aplikací můžete použít pouze v řešení ve farmách. Tato položka projektu můžete přidat pouze pro řešení ve farmách. Další informace najdete v tématu [postupy: vytvoření stránky aplikace](../sharepoint/how-to-create-an-application-page.md) a [aplikace _layouts typ stránky](http://go.microsoft.com/fwlink/?LinkId=179434).  
+### <a name="application-page-farm-solution-only"></a>Stránka aplikace (pouze řešení farmy)
+ **Stránka aplikace (pouze řešení farmy)** položky umožňuje návrh [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] webovou stránku webu služby SharePoint. Stránky aplikací můžete použít jenom v řešení farmy. Tuto položku projektu můžete přidat pouze řešení farmy. Další informace najdete v tématu [postupy: vytvoření stránky aplikace](../sharepoint/how-to-create-an-application-page.md) a [_layouts aplikace typ stránky](http://go.microsoft.com/fwlink/?LinkId=179434).  
   
-### <a name="business-data-connectivity-model-farm-solution-only"></a>Modelu připojení obchodních dat (pouze řešení farmy)  
- A **modelu připojení obchodních dat (pouze řešení farmy)** položka umožňuje integraci obchodních dat do služby SharePoint. Obchodní data mohou pocházet z back-end serverů aplikace, jako například [!INCLUDE[ssNoVersion](../sharepoint/includes/ssnoversion-md.md)], Siebel a inzerování protokolu SAP (Service). Modelů připojení obchodních dat lze použít pouze v řešení ve farmách. Tato položka projektu můžete přidat pouze pro řešení ve farmách. Další informace najdete v tématu [postupy: vytvoření modelu služby BDC](../sharepoint/how-to-create-a-bdc-model.md), [postupy: použití souboru prostředků k zadat lokalizované názvy, vlastnosti a oprávnění](../sharepoint/how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions.md), a [co je nového: Připojení obchodních Služby](http://go.microsoft.com/fwlink/?LinkId=179411).  
+### <a name="business-data-connectivity-model-farm-solution-only"></a>Model připojení obchodních dat (pouze řešení farmy)
+ A **Model Připojení obchodních dat (pouze řešení farmy)** položky umožňuje integrace obchodních dat do služby SharePoint. Obchodní data můžou pocházet z back endové serverové aplikace, jako například [!INCLUDE[ssNoVersion](../sharepoint/includes/ssnoversion-md.md)], Siebel a reklamní SAP Service Protocol (). Modelů připojení obchodních dat lze použít pouze v řešení farmy. Tuto položku projektu můžete přidat pouze řešení farmy. Další informace najdete v tématu [postupy: vytvoření modelu služby BDC](../sharepoint/how-to-create-a-bdc-model.md), [postupy: použití souboru prostředků k určení lokalizovaných názvů, vlastností a oprávnění](../sharepoint/how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions.md), a [co je nového: Připojení obchodních Služby](http://go.microsoft.com/fwlink/?LinkId=179411).  
   
-### <a name="content-type"></a>Typ obsahu  
- *Typ obsahu* položky umožňují vytvářet vlastní typy obsahu na základě existující (základní) obsahu typu například dokument, oznámení nebo úlohu. Vlastní typ obsahu poskytuje stejné atributy a pole jako základní typ obsahu společně s žádné lokality sloupce (pole), můžete definovat. Například můžete vytvořit vlastní typ kontaktujte obsahu, který je založený na základní obsahu typu kontaktu, který jste dostali se ve službě SharePoint. Typ obsahu, který můžete přizpůsobit existující sloupce webu změna nebo přidání více sloupců lokality k těm, které jsou již zahrnuty v základním typu obsahu.  
+### <a name="content-type"></a>Typ obsahu
+ *Typ obsahu* položek vám umožní vytvořit vlastní typy obsahu, které jsou založené na stávající typ (základní) obsahu například dokument, oznámení nebo úkolu. Vlastní typ obsahu poskytuje stejné atributy a pole jako základní typ obsahu spolu s všechny sloupce webu (pole) můžete definovat. Například můžete vytvořit vlastní kontakt typu obsahu, který je založen na základní kontakt typ obsahu, která se dodává v Sharepointu. Typ obsahu můžete přizpůsobit změnou existující sloupce webu nebo přidat další sloupce webu k těm, které jsou již zahrnuty v základním typu obsahu.  
   
 > [!NOTE]  
->  Z důvodu omezení služby SharePoint nelze vytvořit typ obsahu řešení farmy založený na typu obsahu řešení v izolovaném prostoru.  
+>  Kvůli omezením služby SharePoint nelze vytvořit typ obsahu řešení farmy podle typu obsahu řešení v izolovaném prostoru.  
   
  Další informace najdete v tématu [návod: vytvoření sloupce webu, typu obsahu a seznamu pro službu SharePoint](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md) a [stavebním blokem: typ obsahu](http://go.microsoft.com/fwlink/?LinkId=179413).  
   
-### <a name="empty-element"></a>Prázdný Element  
- *Prázdné prvky* se nejčastěji používají k definování položek projektu služby SharePoint, která nemají projektu nebo šablony položek projektu v sadě Visual Studio. Když přidáte prázdný element do projektu, uzel s názvem EmptyElement [x](where [x] is a unique number\) is created. EmptyElement [x] obsahuje jeden soubor s názvem Elements.xml. Použití [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] příkazy k definování požadované prvky v Elements.xml.  
+### <a name="empty-element"></a>Prázdný element
+ *Prázdný element* se nejčastěji používají k definování položek projektu služby SharePoint, které nemají projekt nebo šablonu položky projektu v sadě Visual Studio. Když přidáte do svého projektu prázdný element, uzel s názvem EmptyElement [x](where [x] is a unique number\) is created. EmptyElement [x] obsahuje jediný soubor, který je pojmenovaná *Elements.xml.* Použití [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] příkazy k definování požadované prvky v *Elements.xml*.  
   
-### <a name="event-receiver"></a>Příjemce událostí  
- *Přijímače událostí* zpracování událostí pro položky na webu služby SharePoint, například když je položka přidána do seznamu, když je odstraněn položky webové nebo při spuštění pracovního postupu. Šablony položek projektu příjemce události umožňuje zpracovat  
+### <a name="event-receiver"></a>Příjemce událostí
+ *Přijímače událostí* zpracovávat události pro položky na Sharepointovém webu, například při přidání položky do seznamu, když se odstraní položka webové nebo při spuštění pracovního postupu. Šablony položky projektu příjemce událostí umožňuje zpracovat  
   
--   Seznam událostí  
+- Události seznamu  
   
--   Položka seznamu události  
+- Události položek seznamu  
   
--   Seznam e-mailu události  
+- E-mailové události seznamu  
   
--   Webové události  
+- Události webu  
   
--   Seznam událostí pracovního postupu  
+- Události pracovního postupu seznamu  
   
- Položky projektu přijímač událostí vytvoří **příjemce událostí** složku s jedné třídy soubor, který obsahuje obslužných rutin událostí pro všechny události, které jste zadali, když jste vytvořili projekt ve **přizpůsobení služby SharePoint Průvodce**. Event – třída příjemce může zpracovávat události na web služby SharePoint položek, jako jsou soubory, pole, položky, seznamy, přílohy, webové části a pracovní postupy jsou přidány, aktualizovat, odstranit, nebo odebrat. Další informace najdete v tématu [postupy: vytvoření přijímače událostí](../sharepoint/how-to-create-an-event-receiver.md) a [stavebním blokem: zpracování událostí](http://go.microsoft.com/fwlink/?LinkId=179416).  
+  Vytvoří projekt položka přijímače události **příjemce událostí** složky souborem jednu třídu, která obsahuje obslužné rutiny událostí pro všechny události, které jste zadali při vytváření projektu v **přizpůsobení Sharepointu Průvodce**. Přijímače událostí můžete zpracovávat události, ke kterým dochází na webu služby SharePoint, když položky, jako jsou soubory, pole, položky, seznamy, přílohy, webové části a pracovních postupů se přidá, aktualizovat, odstranit nebo odebrat. Další informace najdete v tématu [postupy: vytvoření přijímače událostí](../sharepoint/how-to-create-an-event-receiver.md) a [stavebním blokem: zpracování událostí](http://go.microsoft.com/fwlink/?LinkId=179416).  
   
 ### <a name="list"></a>Seznam  
- Seznam představuje instanci opakovaně použitelné základní SharePoint seznamu definici, jako je například kalendář nebo seznamu úloh. Po přidání seznamu do vašeho řešení, návrháře seznamu můžete přidat do seznamu sloupců webu a vytvořit vlastní seznam sloupců. To zahrnuje sloupce webu z typy obsahu. Můžete zadat *zobrazení* pro seznam, který určuje sloupce, které se zobrazí v seznamu. Další informace najdete v tématu [návod: vytvoření sloupce webu, typu obsahu a seznamu pro službu SharePoint](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md) a [stavebním blokem: seznamy a knihovny dokumentů](http://go.microsoft.com/fwlink/?LinkId=179421).  
+ Seznam je instance opakovaně použitelné základní definici seznamu SharePoint, jako je kalendář nebo seznamu úloh. Po přidání seznamu do vašeho řešení, Návrhář seznamu můžete přidat do seznamu sloupců webu a vytvořte vlastní seznam sloupců. To zahrnuje sloupce webu z typy obsahu. Můžete zadat *zobrazení* pro seznam, který určuje, které se zobrazí v seznamu sloupců. Další informace najdete v tématu [návod: vytvoření sloupce webu, typu obsahu a seznamu pro službu SharePoint](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md) a [stavebním blokem: seznamy a knihovny dokumentů](http://go.microsoft.com/fwlink/?LinkId=179421).  
   
 ### <a name="module"></a>Modul  
- *Moduly* (Nezaměňovat s [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] moduly) obsahují všechny soubory, které chcete nasadit server služby SharePoint, například obrázky nebo poznámky. Položka projektu modulu obsahuje **modulu** uzlu. Uzel modul obsahuje dvě šablony položek projektu: soubor definice XML, který funguje jako manifestu modulu, a soubor ukázka.txt soubor zástupný symbol. Další informace najdete v tématu [pomocí modulů souborů v řešení](../sharepoint/using-modules-to-include-files-in-the-solution.md) a [moduly](http://go.microsoft.com/fwlink/?LinkId=179425).  
+ *Moduly* (Nezaměňovat s [!include[vbprvb](../sharepoint/includes/vbprvb-md.md)] moduly) obsahují všechny soubory, které chcete nasadit na server SharePoint, jako jsou obrázky nebo poznámky. Položka modulu projektu obsahuje **modulu** uzlu. Uzel modulu obsahuje dvě šablony položek projektu: soubor definice XML, který se chová jako manifest pro modul, a *ukázka.txt* zástupného symbolu, soubor. Další informace najdete v tématu [modulů použití vložených souborů v řešení](../sharepoint/using-modules-to-include-files-in-the-solution.md) a [moduly](http://go.microsoft.com/fwlink/?LinkId=179425).  
   
-### <a name="sequential-workflow-farm-solution-only"></a>Sekvenční pracovní postup (pouze řešení farmy)  
- A *sekvenční pracovní postup* je posloupnost kroků obchodní logiky, provést v pořadí, až do dokončení poslední krok. Sekvenční pracovní postupy se používají ke správě procesů, které zahrnují SharePoint – položky například seznamy a dokumenty. Můžete vytvořit pracovní postupy (globální) úrovni webu nebo (místní) pracovních postupů na úrovni seznamu a můžete určit, zda spuštění pracovního postupu automaticky nebo ručně. Tato položka projektu lze použít pouze v řešení ve farmách. Tato položka projektu můžete přidat pouze pro řešení ve farmách. Další informace najdete v tématu [vytváření řešení pracovního postupu služby SharePoint](../sharepoint/creating-sharepoint-workflow-solutions.md), [pracovních postupů v produktu SharePoint Server 2010](http://go.microsoft.com/fwlink/?LinkId=260555), a [co je nového: pracovní postup vylepšení](http://go.microsoft.com/fwlink/?LinkId=179418).  
+### <a name="sequential-workflow-farm-solution-only"></a>Sekvenčního pracovního postupu (pouze řešení farmy)
+ A *sekvenčního pracovního postupu* je posloupnost kroků obchodní logiky, provádějí v pořadí, dokud není dokončena poslední krok. Sekvenční pracovní postupy se používají ke správě procesy, které se týkají položek služby SharePoint, jako jsou seznamy a dokumenty. Můžete vytvořit pracovní postupy (globální) úrovni webu nebo seznamu úroveň (místní) pracovních postupů a můžete vybrat, jestli spuštění pracovního postupu automaticky nebo ručně. Tuto položku projektu lze použít pouze v řešení farmy. Tuto položku projektu můžete přidat pouze řešení farmy. Další informace najdete v tématu [řešení pracovního postupu Sharepointu vytvořit](../sharepoint/creating-sharepoint-workflow-solutions.md), [pracovních postupů v produktu SharePoint Server 2010](http://go.microsoft.com/fwlink/?LinkId=260555), a [What's New: Vylepšení pracovního postupu](http://go.microsoft.com/fwlink/?LinkId=179418).  
   
-### <a name="silverlight-web-part"></a>Webové části Silverlight  
- *Webové části Silverlight* položky projektu umožňují vytvářet webové části pro službu SharePoint, který zobrazí aplikace Silverlight. Když přidáte tuto položku projekt pro vaše řešení, mohli vybrat, jestli přidejte novou aplikaci Silverlight, nebo odkaz stávající později. Další informace najdete v tématu [vytvoření webové části pro službu SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md) a [návod: vytvoření webové části Silverlight této zobrazí OData pro službu SharePoint](../sharepoint/walkthrough-creating-a-silverlight-web-part-that-displays-odata-for-sharepoint.md).  
+### <a name="silverlight-web-part"></a>Webová část Silverlight
+ *Webová část Silverlight* položky projektu vám umožní vytvořit webové části pro SharePoint, která se zobrazí aplikace Silverlight. Když přidáte tuto položku projektu do řešení, můžete nastavit, jestli se má přidat novou aplikaci Silverlight nebo některý z existujících později odkazovat. Další informace najdete v tématu [vytvořit webové části pro SharePoint](../sharepoint/creating-web-parts-for-sharepoint.md) a [návod: vytvoření webové části Silverlight, která zobrazuje data OData pro službu SharePoint](../sharepoint/walkthrough-creating-a-silverlight-web-part-that-displays-odata-for-sharepoint.md).  
   
-### <a name="site-column"></a>Sloupec webu  
- A *sloupec lokality*, také známé jako *pole*, je jedním z nejzákladnější prvků přidáte do projektu služby SharePoint. Sloupec lokality představuje typ dat, například telefonní číslo, text komentáře nebo název města kontaktu, seznamu kontaktů. Další informace najdete v tématu [vytváření sloupců webu, typů obsahu a seznamů pro službu SharePoint](../sharepoint/creating-site-columns-content-types-and-lists-for-sharepoint.md) a [sloupce](http://go.microsoft.com/fwlink/?LinkId=226840).  
+### <a name="site-column"></a>Sloupec webu
+ A *sloupce webu*, označované také jako *pole*, je jedním z nejzákladnějších prvků můžete přidat do projektu služby SharePoint. Sloupec webu představuje typ dat, jako je například telefonní číslo, text komentáře nebo název města kontaktu v seznamu kontaktů. Další informace najdete v tématu [vytváření sloupců webu, typů obsahu a seznamů pro službu SharePoint](../sharepoint/creating-site-columns-content-types-and-lists-for-sharepoint.md) a [sloupce](http://go.microsoft.com/fwlink/?LinkId=226840).  
   
-### <a name="site-definition-farm-solution-only"></a>Definice webu (pouze řešení farmy)  
- *Lokalita definice* položky projektu obsahovat složky definice lokality, která zahrnuje následující soubory:  
+### <a name="site-definition-farm-solution-only"></a>Definice webu (pouze řešení farmy)
+ *Definice webu* položky projektu obsahovat definice složky webu, který obsahuje následující soubory:  
   
--   Výchozí .aspx stránku, použít jako výchozí webové stránky pro tuto lokalitu.  
+- Výchozí stránky .aspx, použít jako výchozí webové stránky pro lokalitu.  
   
--   Soubor onet.xml, který definuje součásti lokality.  
+- *Onet.xml* soubor, který definuje součásti lokality.  
   
--   Soubor xml webtemp, který určuje definici konfigurace lokality, které se zobrazují v **výběr šablony** části **nový web služby SharePoint** stránky.  
+- Souboru webtemp xml, který určuje definice konfigurace serveru, které se zobrazují v **výběr šablony** část **novému Sharepointovému webu** stránky.  
   
- Po přidání definici lokality přidáte kód a soubory funkci zavedou. Tato položka projektu lze použít pouze v řešení ve farmách. Tato položka projektu můžete přidat pouze pro řešení ve farmách. Další informace najdete v tématu [vytváření definic webu pro SharePoint](../sharepoint/creating-site-definitions-for-sharepoint.md) a [lokality definice a konfigurace](http://go.microsoft.com/fwlink/?LinkId=260554).  
+  Po přidání definice webu, přidat kód a soubory funkci zavedou. Tuto položku projektu lze použít pouze v řešení farmy. Tuto položku projektu můžete přidat pouze řešení farmy. Další informace najdete v tématu [vytvořit definice webu pro službu SharePoint](../sharepoint/creating-site-definitions-for-sharepoint.md) a [definic webu a konfigurace](http://go.microsoft.com/fwlink/?LinkId=260554).  
   
-### <a name="state-machine-workflow-farm-solution-only"></a>Pracovní postup stavového stroje (pouze řešení farmy)  
- A *pracovní postup stavového stroje* je sada stavů obchodní logiky, přechody a akce. Kroky v pracovním postupu stavu počítače nejsou prováděny postupně; Místo toho se spouštějí akcemi a stavy. Sekvenční pracovní postup, jako je stav počítače pracovních jsou přidruženy k SharePoint – položky například seznamy a dokumenty. Znovu můžete vytvořit pracovní postupy (globální) úrovni webu nebo (místní) pracovních postupů na úrovni seznamu. Můžete také vybrat, jestli spuštění pracovního postupu automaticky nebo ručně. Tato položka projektu lze použít pouze v řešení ve farmách. Tato položka projektu můžete přidat pouze pro řešení ve farmách. Další informace najdete v tématu [vytváření řešení pracovního postupu služby SharePoint](../sharepoint/creating-sharepoint-workflow-solutions.md), [pracovních postupů v produktu SharePoint Server 2010](http://go.microsoft.com/fwlink/?LinkId=260555), a [co je nového: pracovní postup vylepšení](http://go.microsoft.com/fwlink/?LinkId=179418).  
+### <a name="state-machine-workflow-farm-solution-only"></a>Pracovní postup stavového stroje (pouze řešení farmy)
+ A *pracovní postup stavového stroje* je sada obchodní logiky stavů, přechodů a akce. Kroky v pracovní postup stavového stroje nejsou provedeny v pořadí; Místo toho se aktivují podle akcí a stavy. Podobně jako sekvenčního pracovního postupu jsou spojeny s položkami SharePoint, jako jsou seznamy a dokumenty pracovní postupy stavu počítače. Znovu můžete vytvořit pracovní postupy (globální) úrovni webu nebo seznamu úroveň (místní) pracovních postupů. Můžete také vybrat, zda pracovní postup spustí automaticky nebo ručně. Tuto položku projektu lze použít pouze v řešení farmy. Tuto položku projektu můžete přidat pouze řešení farmy. Další informace najdete v tématu [řešení pracovního postupu Sharepointu vytvořit](../sharepoint/creating-sharepoint-workflow-solutions.md), [pracovních postupů v produktu SharePoint Server 2010](http://go.microsoft.com/fwlink/?LinkId=260555), a [What's New: Vylepšení pracovního postupu](http://go.microsoft.com/fwlink/?LinkId=179418).  
   
-### <a name="user-control-farm-solution-only"></a>Uživatelský ovládací prvek (pouze řešení farmy)  
- A *uživatelský ovládací prvek* je vlastní, opakovaně použitelné ovládací prvek, do kterého můžete přidat další ovládací prvky ASP.NET a ovládací prvky služby SharePoint. Stránky aplikací a webových částí, které běží v SharePoint lze přidat uživatelský ovládací prvek. Tato položka projektu lze použít pouze v řešení ve farmách. Tato položka projektu můžete přidat pouze pro řešení ve farmách. Další informace najdete v tématu [vytváření opakovaně použitelného ovládacích prvků pro webové části nebo stránky aplikací](http://go.microsoft.com/fwlink/?LinkId=226841).  
+### <a name="user-control-farm-solution-only"></a>Uživatelský ovládací prvek (pouze řešení farmy)
+ A *uživatelský ovládací prvek* je vlastní, opakovaně použitelné ovládací prvek, do kterého můžete přidat další ovládací prvky technologie ASP.NET a ovládací prvky služby SharePoint. Uživatelský ovládací prvek lze přidat do stránky aplikace a webové části, které běží ve službě SharePoint. Tuto položku projektu lze použít pouze v řešení farmy. Tuto položku projektu můžete přidat pouze řešení farmy. Další informace najdete v tématu [vytvoření opakovaně použitelného ovládacích prvků webové části nebo stránky aplikace](http://go.microsoft.com/fwlink/?LinkId=226841).  
   
-### <a name="visual-web-part"></a>Visual webové části  
- A *visual webovou část* položka projektu zahrnuje soubor definice Elements.xml **webovou část** položku a **uživatelský ovládací prvek** položky. Vzhled visual webové části můžete navrhnout přetažením nebo kopírování ovládacích prvků z panelu nástrojů Visual Studio na povrch uživatelského ovládacího prvku. Další informace najdete v tématu [postupy: vytvoření webové části služby SharePoint pomocí návrháře](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md) a [stavebním blokem: webové části](http://go.microsoft.com/fwlink/?LinkId=179438).  
+### <a name="visual-web-part"></a>Vizuální webové části
+ A *vizuální webová část* položka projektu obsahuje *Elements.xml* soubor definice **webové části** položky a **uživatelský ovládací prvek** položky. Přetažením nebo zkopírováním ovládacích prvků na plochu uživatelského ovládacího prvku z panelu nástrojů sady Visual Studio můžete navrhnout vzhled vizuální webové části. Další informace najdete v tématu [postupy: vytvoření webové části služby SharePoint pomocí návrháře](../sharepoint/how-to-create-a-sharepoint-web-part-by-using-a-designer.md) a [stavebním blokem: webové části](http://go.microsoft.com/fwlink/?LinkId=179438).  
   
-### <a name="web-part"></a>Webová část  
- A *webovou část* serverové ovládací prvek, který běží v rámci zvláštním typem stránku s názvem stránku webové části. Jsou stavební bloky stránek, které se zobrazují na web služby SharePoint. Webová část položka obsahuje soubory, které vám umožní navrhnout webové části pro web služby SharePoint. Další informace najdete v tématu [postupy: vytvoření webové části služby SharePoint](../sharepoint/how-to-create-a-sharepoint-web-part.md) a [stavebním blokem: webové části](http://go.microsoft.com/fwlink/?LinkId=179438).  
+### <a name="web-part"></a>Webová část
+ A *webovou část* je ovládací prvek na straně serveru, který běží v rámci speciální typ stránky s názvem stránku webových částí. Jsou stavební kameny stránek, které se zobrazí na webu služby SharePoint. Položka webové části obsahuje soubory, které vám umožní navrhnout webové části webu služby SharePoint. Další informace najdete v tématu [postupy: vytvoření webové části služby SharePoint](../sharepoint/how-to-create-a-sharepoint-web-part.md) a [stavebním blokem: webové části](http://go.microsoft.com/fwlink/?LinkId=179438).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:
  [Vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md)   
  [Produkty a technologie SharePoint](http://go.microsoft.com/fwlink/?LinkId=178818)  
   

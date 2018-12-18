@@ -1,13 +1,13 @@
 ---
-title: "Očekávaný & č. 39; = & č. 39; (JavaScript) | Microsoft Docs"
-ms.custom: 
+title: Byl očekáván &#39;=&#39; (JavaScript) | Dokumentace společnosti Microsoft
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.WebClient.Help.SCRIPT1011
@@ -16,22 +16,23 @@ dev_langs:
 - TypeScript
 - DHTML
 ms.assetid: a8ce6fbf-8663-4770-8fba-677d04c84825
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 8cae54b60ae94be5929ae5c5cfb8f8f0c1a2ea92
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49909994"
 ---
-# <a name="expected-3939-javascript"></a>Očekávaný & č. 39; = & č. 39; (JavaScript)
-Pokus o vytvoření proměnné, který se má použít s příkazy Podmíněná kompilace, ale vystaveny symbolem rovná mezi proměnnou a hodnotu, kterou chcete přiřadit k němu.  
+# <a name="expected-3939-javascript"></a>Byl očekáván &#39;=&#39; (JavaScript)
+Došlo k pokusu o vytvoření proměnné pro použití s příkazy podmíněné kompilace, ale není umístit znaménko rovná se mezi proměnné a hodnotu, kterou chcete přiřadit k ní.  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
--   Přidejte symbolem rovná. Příklad:  
+-   Přidejte znaménko rovná se. Příklad:  
   
     ```JavaScript  
     @set @myvar1 = 1  

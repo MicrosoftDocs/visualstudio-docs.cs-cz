@@ -1,5 +1,5 @@
 ---
-title: IDebugSettingsCallback2::GetMetricString | Microsoft Docs
+title: IDebugSettingsCallback2::GetMetricString | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bbb7de4157d991355f7ae3b0d5b6dcd27e374a1e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: cbe7bb633ce7674718e94a90ea56712ad83f1e9f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49899107"
 ---
 # <a name="idebugsettingscallback2getmetricstring"></a>IDebugSettingsCallback2::GetMetricString
-Načte hodnotu řetězce metriky její název.  
+Načte řetězec hodnoty metriky jeho název.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,19 +46,19 @@ private int GetMetricString(
   
 #### <a name="parameters"></a>Parametry  
  `pszType`  
- [v] Typ metriky.  
+ [in] Typ metriky.  
   
  `guidSection`  
- [v] Jedinečný identifikátor oddílu.  
+ [in] Jedinečný identifikátor oddílu.  
   
  `pszMetric`  
- [v] Název metriky.  
+ [in] Název metriky.  
   
  `pbstrValue`  
- [out] Vrátí řetězec hodnotu metriky.  
+ [out] Vrátí řetězec hodnoty metriky.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md)

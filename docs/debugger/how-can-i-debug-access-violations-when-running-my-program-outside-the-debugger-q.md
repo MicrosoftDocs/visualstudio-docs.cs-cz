@@ -1,6 +1,6 @@
 ---
-title: Jak mohu ladit porušení přístupu, když program spouštím mimo ladicí program? | Microsoft Docs
-ms.custom: ''
+title: Ladění narušení přístupu při spuštění aplikace mimo ladicí program | Dokumentace Microsoftu
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -20,19 +20,21 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 47941b2d98029c6466451fb947e31e71d14e6c57
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 42284de1195afb3b0926b15335c8e37bdcd5ec30
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53048473"
 ---
 # <a name="how-can-i-debug-access-violations-when-running-my-program-outside-the-debugger"></a>Jak mohu ladit porušení přístupu, když program spouštím mimo ladicí program?
+
 ## <a name="problem-description"></a>Popis problému  
- Program lze spustit v prostředí Visual Studio dobře, ale při opakovaném spuštění samostatné s operačním systémem Windows, vyvolá porušení přístupu. Jak mohu ladit tento problém?  
+ Program lze spustit v prostředí sady Visual Studio bez problémů, ale při spuštění je samostatný s operačním systémem Windows, vytváří narušení přístupu. Jak mohu ladit tento problém?  
   
 ## <a name="solution"></a>Řešení  
- Nastavte [pouze za běhu ladění](../debugger/just-in-time-debugging-in-visual-studio.md) možnost a spusťte svůj program samostatné, dokud dojde k porušení přístupu. Potom v **narušení přístupu** dialogové okno, můžete kliknout na **zrušit** spuštění ladicího programu.  
+ Nastavte [Just-in-time ladění](../debugger/just-in-time-debugging-in-visual-studio.md) možnost a spusťte svůj program samostatné, dokud dojde k narušení přístupu. Potom v **narušení přístupu** dialogové okno, můžete kliknout na **zrušit** spuštění ladicího programu.  
   
 ## <a name="see-also"></a>Viz také  
- [Nativní kód nejčastější dotazy k ladění](../debugger/debugging-native-code-faqs.md)   
+ [Ladění nativního kódu nejčastější dotazy](../debugger/debugging-native-code-faqs.md)   
  [Ladění nativního kódu](../debugger/debugging-native-code.md)

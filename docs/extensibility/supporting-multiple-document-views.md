@@ -1,5 +1,5 @@
 ---
-title: Podpora více zobrazení dokumentu | Microsoft Docs
+title: Podpora více zobrazení dokumentů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,32 +13,33 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 78ddc7ed811086622454e31d12ca5f1324d00da5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5a2fafdaaa2d54cd445017ebd9120d8648bf7067
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942345"
 ---
-# <a name="supporting-multiple-document-views"></a>Podpora více zobrazení dokumentu
-Můžete zadat více než jedno zobrazení dokumentu tak, že vytvoříte samostatné dokumentu data a objekty zobrazení dokumentu pro vaše editor. Jsou některé případy, ve kterých by být užitečné zobrazení dalších dokumentu:  
+# <a name="supporting-multiple-document-views"></a>Podpora více zobrazení dokumentů
+Můžete zadat více než jedno zobrazení dokumentu tak, že vytvoříte samostatný dokument dat a objektů zobrazení dokumentu pro editor. Jsou některé případy, ve kterých by bylo užitečné další dokument zobrazení:  
   
--   Nová podpora okno: vaše editor, který poskytuje dvě nebo více zobrazení stejného typu, chcete, aby uživatel, který již má okno otevře v editoru můžete výběrem otevřete nové okno **nové okno** příkaz **okno** nabídky.  
+- Nové okno podpory: Chcete váš editor, který poskytuje dvě nebo více zobrazení stejného typu, tak, aby uživatel, který už má okno otevře v editoru můžete otevřít nové okno tak, že vyberete **nové okno** příkaz **okno** nabídky.  
   
--   Formuláře a kódu zobrazit podporu: Chcete, aby vaše editor, který poskytuje různé typy zobrazení. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], například poskytuje zobrazení formuláře a zobrazení kódu.  
+- Formuláře a kódu zobrazit podpory: Chcete, aby váš editor, který poskytuje různé typy zobrazení. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], například poskytuje zobrazení formuláře a zobrazení kódu.  
   
- Další informace o tom najdete v postupu CreateEditorInstance v souboru EditorFactory.cs v projektu vlastního editoru vytvořených šablonou balíček Visual Studio. Další informace o tomto projektu najdete v tématu [návod: vytvoření vlastního editoru](../extensibility/walkthrough-creating-a-custom-editor.md).  
+  Další informace o tom naleznete v postupu CreateEditorInstance v souboru EditorFactory.cs ve vlastním editoru projekt vytvořený v rámci Visual Studio balíček šablony. Další informace o tomto projektu naleznete v tématu [návod: vytvoření vlastního editoru](../extensibility/walkthrough-creating-a-custom-editor.md).  
   
-## <a name="synchronizing-views"></a>Probíhá synchronizace zobrazení.  
- Pokud implementujete více zobrazení, je datový objekt dokumentu odpovídá za pořízení všechna zobrazení synchronizována s daty. Můžete použít zpracování rozhraní na událostí <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> synchronizovat více zobrazení s daty.  
+## <a name="synchronizing-views"></a>Synchronizace zobrazení  
+ Při implementaci více zobrazení je datový objekt dokumentu odpovídá za pořízení všechna zobrazení, které jsou synchronizovány s daty. Můžete použít zpracování rozhraní na událostí <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> pro synchronizaci více zobrazení s daty.  
   
- Pokud použijete <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> objekt, který chcete synchronizovat více zobrazení, pak musí implementovat vlastní událostí systému a zpracovat změny provedené v dokumentu datový objekt. Chcete-li zachovat aktuální více zobrazení můžete různou úrovní členitosti. S nastavením maximální členitosti, jako typ v jednom zobrazení ostatní zobrazení se aktualizují okamžitě. S minimální rozlišením nejsou aktualizovány ostatních zobrazení, dokud se aktivují.  
+ Pokud použijete <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> objektu pro synchronizaci více zobrazení, pak musíte implementovat vlastní systém událostí ke zpracování změny provedené na datový objekt dokumentu. Různé úrovně členitosti můžete použít k zajištění aktuálnosti několik zobrazení. Nastavení maximální členitosti, při psaní v jednom zobrazení se aktualizují ostatní zobrazení okamžitě. S minimální členitost nebudou aktualizovány jiných zobrazení, dokud se aktivují.  
   
-## <a name="determining-whether-document-data-is-already-open"></a>Určení, zda dokument dat je již otevřený  
- Integrované vývojové prostředí (IDE) spuštěné dokumentu tabulce (r...) pomáhá sleduje, zda data pro dokument je již otevřeno, jak je znázorněno v následujícím diagramu.  
+## <a name="determining-whether-document-data-is-already-open"></a>Určení, zda Data dokumentu je již otevřen  
+ Spuštěnou tabulku dokumentů (r...) v integrovaném vývojovém prostředí (IDE) pomáhá sledovat, jestli dat pro dokument je už otevřený, jak je znázorněno v následujícím diagramu.  
   
  ![DocDataView – grafika](../extensibility/media/docdataview.gif "DocDataView –")  
 Více zobrazení  
   
- Ve výchozím nastavení, jednotlivých zobrazení (objekt zobrazení dokumentu) je součástí vlastního rámce okna (<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame>). Jak je již uvedeno ale data dokumentu lze zobrazit více zobrazení. Chcete-li povolit, Visual Studio kontroluje r... k určení, zda v dokumentu je již otevřen v editoru. Při volání rozhraní IDE <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> vytvořit editoru, vrátí hodnotu než NULL v `punkDocDataExisting` parametr označuje, že dokument je již otevřen v jiném editoru. Další informace o tom, najdete v části funkce r... [systémem dokumentu tabulky](../extensibility/internals/running-document-table.md).  
+ Ve výchozím nastavení, každé zobrazení (objekt zobrazení dokumentu) je součástí vlastní okna rámce (<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame>). Jak už jsme zmínili ale data dokumentu lze zobrazit více zobrazení. Visual Studio povolit, rozlišuje rámcový zjistit, jestli dokument dotyčný je již otevřen v editoru. Když se volá rozhraní IDE <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> vytvoření editoru, vrátí NENULOVOU hodnotu v `punkDocDataExisting` parametr označuje, že dokument je již otevřen v jiném editoru. Další informace o tom, naleznete v tématu funkce rámcový [spuštěná tabulka dokumentů](../extensibility/internals/running-document-table.md).  
   
- Ve vaší <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> implementace, zkontrolujte dokumentu datový objekt vrácený v `punkDocDataExisting` k určení, zda je vhodné pro vaše editor data dokumentu. (Například pouze data HTML mají být zobrazeny HTML editor.) Pokud je vhodné, pak vaše objekt factory editoru by měl poskytovat druhý zobrazení pro data. Pokud `punkDocDataExisting` parametr není `NULL`, je možné buď že datový objekt dokumentu je otevřený v jiném editoru, nebo, pravděpodobnější, data dokumentu je již otevřen v jiné zobrazení se stejnou editoru. Pokud jsou data dokument otevřít v jiný editor, který nepodporuje vaše objekt factory editoru, Visual Studio selže otevřete váš objekt factory editoru. Další informace najdete v tématu [postupy: zobrazení připojit k datům dokumentu](../extensibility/how-to-attach-views-to-document-data.md).
+ Ve vaší <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory> implementace, zkontrolujte dokumentu datový objekt vrácený v `punkDocDataExisting` k určení, zda je vhodné pro editor dat dokumentu. (Například pouze data ve formátu HTML mají být zobrazeny editoru HTML.) Pokud je vhodné, pak objekt pro vytváření editoru by měl zviditelňují druhý pro data. Pokud `punkDocDataExisting` parametr není `NULL`, je možné buď, že datový objekt dokument je otevřen v jiném editoru, nebo, pravděpodobnější, data dokumentu je již otevřen v jiné zobrazení se stejným editoru. Pokud data dokument je otevřen v jiný editor, který nepodporuje objekt pro vytváření editoru, Visual Studio nelze ji otevřít objekt pro vytváření editoru. Další informace najdete v tématu [postupy: připojení zobrazení k datům dokumentu](../extensibility/how-to-attach-views-to-document-data.md).

@@ -1,14 +1,14 @@
 ---
-title: "Idebugsessionproviderex – rozhraní | Microsoft Docs"
-ms.custom: 
+title: Idebugsessionproviderex – rozhraní | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 26c5da2d-8c93-4d2b-94d2-97aaa377dcfe
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -17,6 +17,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24794232"
 ---
 # <a name="idebugsessionproviderex-interface"></a>IDebugSessionProviderEx – rozhraní
 Primární rozhraní služby IDE, pokud chcete povolit ladění spustil hostitele a jazyk ladicí program. Navazuje na relaci ladění pro běžící aplikaci. Toto rozhraní je implementováno modulem Machine Manager ladění.  

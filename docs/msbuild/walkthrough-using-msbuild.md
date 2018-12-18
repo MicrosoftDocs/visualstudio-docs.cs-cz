@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Použití nástroje MSBuild | Microsoft Docs'
+title: 'Návod: Použití nástroje MSBuild | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -12,44 +12,45 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ed4e6599fc55143789e35aad5fd4848904ae0c37
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 94fdbb5f143d1c087d97490961d230ace239f348
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48880146"
 ---
-# <a name="walkthrough-using-msbuild"></a>Návod: Použití nástroje MSBuild
-MSBuild je platforma sestavení pro Microsoft a Visual Studio. Tento návod vás seznámí s stavební bloky nástroje MSBuild a ukazuje, jak k zápisu, manipulaci a ladění projektů MSBuild. Co se dozvíte o:
+# <a name="walkthrough-use-msbuild"></a>Návod: Použití nástroje MSBuild
+Nástroj MSBuild je platforma sestavení pro společnost Microsoft a sady Visual Studio. Tento návod vás seznámí s stavební kameny nástroje MSBuild a ukazuje, jak psát, manipulaci a ladit projekty MSBuild. Kurzu se naučíte:
 
--   Vytváření a manipulace s nimi souboru projektu.
+-   Vytváření a manipulaci se soubor projektu.
 
--   Použití vlastností sestavení
+-   Postup při využívání vlastností sestavení
 
 -   Jak používat sestavení položky.
 
- Spuštěním nástroje MSBuild ze sady Visual Studio nebo pomocí příkazového okna. V tomto návodu vytvoříte soubor projektu nástroje MSBuild pomocí sady Visual Studio. Upravte soubor projektu v sadě Visual Studio a použít okno příkazového řádku pro sestavení projektu a podívejte se na výsledky.
+Můžete spustit nástroj MSBuild ze sady Visual Studio nebo z **příkazové okno**. V tomto návodu vytvoříte soubor projektu MSBuild pomocí sady Visual Studio. Úprava souboru projektu v sadě Visual Studio a použít **příkazové okno** se projekt sestavil a podívejte se na výsledky.
 
-## <a name="creating-an-msbuild-project"></a>Vytvoření projektu nástroje MSBuild
- Systém projektu sady Visual Studio je založen na MSBuild. To usnadňuje vytvoření nového souboru projektu pomocí sady Visual Studio. V této části vytvoříte soubor projektu Visual C#. Můžete místo toho vytvořte soubor projektu jazyka Visual Basic. V kontextu tohoto průvodce je rozdílem mezi těmito dvěma projektu soubory menší.
+## <a name="create-an-msbuild-project"></a>Vytvoření projektu nástroje MSBuild
+ Systém projektu sady Visual Studio je založen na MSBuild. To usnadňuje vytvoření nového souboru projektu pomocí sady Visual Studio. V této části vytvoříte soubor projektu Visual C#. Můžete místo toho vytvořte soubor projektu jazyka Visual Basic. V rámci tohoto návodu rozdíl mezi dvěma projektu soubory je menší.
 
-#### <a name="to-create-a-project-file"></a>Vytvoření souboru projektu
+#### <a name="to-create-a-project-file"></a>K vytvoření souboru projektu
 
-1.  Otevřete Visual Studio.
+1.  Otevřít Visual Studio.
 
-2.  Na **soubor** nabídky, přejděte na příkaz **nový**a potom klikněte na **projektu**.
+2.  Na **souboru** nabídky, přejděte k **nový**a potom klikněte na tlačítko **projektu**.
 
-3.  V **nový projekt** dialogové okno, vyberte Visual C# typ projektu a pak vyberte **formulářové aplikace Windows** šablony. V **název** zadejte `BuildApp`. Zadejte **umístění** pro řešení, například `D:\`. Přijměte výchozí hodnoty pro **vytvořit adresář pro řešení** (zaškrtnuto), **přidat do správy zdrojového kódu** (není vybrána), a **název řešení** (`BuildApp`).
+3.  V **nový projekt** dialogové okno, vyberte **Visual C#** typ projektu a pak vyberte **formulářová aplikace Windows** šablony. V **název** zadejte `BuildApp`. Zadejte **umístění** pro řešení, například *D:\\*. Přijměte výchozí hodnoty pro **vytvořit adresář pro řešení** (vybrané), **přidat do správy zdrojových kódů** (nevybráno), a **název řešení** (**BuildApp**).
 
-     Klikněte na tlačítko **OK** k vytvoření souboru projektu.
+4.    Klikněte na tlačítko **OK** k vytvoření souboru projektu.
 
-## <a name="examining-the-project-file"></a>V souboru projektu
- V předchozí části, Visual Studio jste použili k vytvoření souboru projektu Visual C#. Soubor projektu je reprezentována v **Průzkumníku řešení** uzel projektu s názvem BuildApp. Editor kódu aplikace Visual Studio můžete zkontrolovat soubor projektu.
+## <a name="examine-the-project-file"></a>Zkontrolujte v souboru projektu
+ V předchozí části jste použili Visual Studio k vytvoření souboru projektu Visual C#. Soubor projektu je vyjádřena v **Průzkumníka řešení** uzel projektu s názvem BuildApp. Editor kódu sady Visual Studio můžete použít k prozkoumání souboru projektu.
 
-#### <a name="to-examine-the-project-file"></a>Chcete-li zkontrolujte v souboru projektu
+#### <a name="to-examine-the-project-file"></a>K prozkoumání souboru projektu
 
-1.  V **Průzkumníku**, klikněte na uzel projektu BuildApp.
+1.  V **Průzkumníka řešení**, klikněte na uzel projektu **BuildApp**.
 
-2.  V **vlastnosti** prohlížeče, Všimněte si, že **soubor projektu** vlastnost je BuildApp.csproj. Všechny soubory projektu jsou pojmenované s příponou "proj". Pokud jste vytvořili projektu jazyka Visual Basic, název souboru projektu by BuildApp.vbproj.
+2.  V **vlastnosti** prohlížeče, Všimněte si, že **soubor projektu** vlastnost *BuildApp.csproj*. Všechny soubory projektu jsou pojmenované s příponou *proj*. Pokud jste vytvořili projekt jazyka Visual Basic, název souboru projektu by *BuildApp.vbproj*.
 
 3.  Klikněte pravým tlačítkem na uzel projektu a pak klikněte na **uvolnit projekt**.
 
@@ -57,50 +58,50 @@ MSBuild je platforma sestavení pro Microsoft a Visual Studio. Tento návod vás
 
      Soubor projektu se zobrazí v editoru kódu.
 
-## <a name="targets-and-tasks"></a>Cílů a úloh
-Soubory projektu jsou soubory formátu XML s kořenového uzlu [projektu](../msbuild/project-element-msbuild.md).
+## <a name="targets-and-tasks"></a>Cíle a úlohy
+Soubory projektu jsou soubory ve formátu XML s kořenový uzel [projektu](../msbuild/project-element-msbuild.md).
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0"  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 ```
 
-V elementu projektu musíte zadat obor názvů xmlns. Pokud `ToolsVersion` je k dispozici v nový projekt, musí být "15.0".
+V elementu projektu je nutné zadat obor názvů xmlns. Pokud `ToolsVersion` je k dispozici v novém projektu, musí být "15.0".
 
-Vytváření aplikace práci s [cíl](../msbuild/target-element-msbuild.md) a [úloh](../msbuild/task-element-msbuild.md) elementy.
+Sestavování aplikace práci s [cílové](../msbuild/target-element-msbuild.md) a [úloh](../msbuild/task-element-msbuild.md) elementy.
 
--   Úloha je nejmenší jednotku práce, jinými slovy, "atom" sestavení. Úlohy jsou nezávislé spustitelné součásti, které mohou mít vstupy a výstupy. Neexistují žádné úlohy aktuálně odkazuje nebo definované v souboru projektu. Přidání úkolů do souboru projektu v následujících částech. Další informace najdete v tématu [úlohy](../msbuild/msbuild-tasks.md) tématu.
+-   Úloha je nejmenší jednotka práce, jinými slovy, "atom" sestavení. Úlohy jsou nezávislé spustitelný komponenty, které mohou mít vstupy a výstupy. Nejsou žádné úkoly právě odkazované nebo definované v souboru projektu. Přidání úkolů do souboru projektu v následujících částech. Další informace najdete v tématu [úlohy](../msbuild/msbuild-tasks.md) tématu.
 
--   Cíl je pojmenované pořadí úloh. Další informace najdete v tématu [cíle](../msbuild/msbuild-targets.md) tématu.
+-   Cíl je pojmenovaný pořadí úloh. Další informace najdete v tématu [cíle](../msbuild/msbuild-targets.md) tématu.
 
-Výchozí cíl není definován v souboru projektu. Místo toho se vyskytuje v importovaných projekty. [Import](../msbuild/import-element-msbuild.md) element určuje importované projekty. Například v projektu jazyka C#, je výchozí cíl importovány ze souboru Microsoft.CSharp.targets.
+Výchozí cíl není definován v souboru projektu. Místo toho se zadává v importované projekty. [Import](../msbuild/import-element-msbuild.md) prvek určuje importované projekty. Například výchozí cíl v projektu jazyka C#, importována ze souboru *Microsoft.CSharp.targets*.
 
 ```xml
 <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 ```
 
-Importované soubory jsou efektivně vložena do souboru projektu, bez ohledu na jejich odkazují.
+Importované soubory efektivně vloženy do souboru projektu bez ohledu na to se na ně odkazuje.
 
 > [!NOTE]
-> Některé typy projektů, jako je například .NET Core pomocí zjednodušené schéma s `Sdk` atribut místo `ToolsVersion`. Tyto projekty mají implicitní importy a různé výchozí hodnoty atributu.
+> Některé typy projektů, jako je .NET Core použijte zjednodušené schéma s `Sdk` atribut namísto `ToolsVersion`. Tyto projekty mají implicitní importy a různé výchozí hodnoty atributů.
 
-MSBuild sleduje cíle sestavení a zaručuje, že každém cíli vychází více než jednou.
+Nástroj MSBuild sleduje cíle sestavení a zaručuje, že každý cíl je vytvořeno více než jednou.
 
-## <a name="adding-a-target-and-a-task"></a>Přidání cíle a úlohy
- Přidání cíle do souboru projektu. Přidáte úloha cíl, který vytiskne zprávu.
+## <a name="add-a-target-and-a-task"></a>Přidání cíle a úlohy
+ Přidání cíle do souboru projektu. Přidejte úkol do cíle, který vytiskne zprávu.
 
-#### <a name="to-add-a-target-and-a-task"></a>Chcete-li přidat cíl a úlohy
+#### <a name="to-add-a-target-and-a-task"></a>Chcete-li přidat cíl a úkol
 
-1.  Přidejte tyto řádky k souboru projektu bezprostředně za příkaz importu:
+1.  Přidejte tyto řádky do souboru projektu, hned za příkaz importu:
 
     ```xml
     <Target Name="HelloWorld">
     </Target>
     ```
 
-     Tím se vytvoří cíl s názvem Hello World. Všimněte si, že máte podporu technologie IntelliSense při úpravách souboru projektu.
+     To vytvoří cíl s názvem Hello World. Všimněte si, že máte podporu technologie IntelliSense při úpravách souboru projektu.
 
-2.  Přidejte řádky HelloWorld cíl, aby výsledná část vypadá takto:
+2.  Přidáte řádky do cíle HelloWorld, tak, aby výsledný oddíl vypadá takto:
 
     ```xml
     <Target Name="HelloWorld">
@@ -110,29 +111,29 @@ MSBuild sleduje cíle sestavení a zaručuje, že každém cíli vychází více
 
 3.  Uložte soubor projektu.
 
- Úloha zprávy je jedním z mnoha úloh, které se dodává s verzí nástroje MSBuild. Úplný seznam dostupných úloh a informace o použití najdete v části [– Reference úlohy](../msbuild/msbuild-task-reference.md).
+Úloha zprávy je jedním z celé řadě úloh, která se dodává s nástrojem MSBuild. Úplný seznam dostupných úkolů a informace o použití najdete v části [úkolů odkaz](../msbuild/msbuild-task-reference.md).
 
- Úloha zprávy trvá řetězcovou hodnotu atributu Text jako vstup a zobrazí v zařízení výstup. Cíl HelloWorld provede úlohu zpráva dvakrát: nejdříve zobrazíte text "Hello" a potom zobrazíte "World".
+Úloha zprávy přijímá řetězcovou hodnotu atributu Text jako vstup a zobrazí ho na výstupním zařízení. Cíl HelloWorld provede úkol zpráv dvakrát: nejprve k zobrazení "Hello" a potom zobrazíte "World".
 
-## <a name="building-the-target"></a>Vytváření cíl
- Spuštění nástroje MSBuild z **Visual Studio – příkazový řádek** vytvořit cíl HelloWorld definované výše. Použijte přepínač příkazového řádku/Target nebo /t a vyberte cíl.
+## <a name="build-the-target"></a>Cíl sestavení
+ Spustit nástroj MSBuild z **příkazový řádek sady Visual Studio** sestavit cíl HelloWorld výše. Použití - cíl nebo -t přepínač příkazového řádku a vyberte cíl.
 
 > [!NOTE]
->  Nemůžeme se budou vztahovat **Visual Studio – příkazový řádek** jako **příkazové okno** v následujících částech.
+>  Budeme **příkazový řádek sady Visual Studio** jako **příkazové okno** v následujících částech.
 
-#### <a name="to-build-the-target"></a>K vytvoření cíle
+#### <a name="to-build-the-target"></a>K sestavení cíle
 
-1.  Klikněte na tlačítko **spustit**, pak klikněte na tlačítko **všechny programy**. Vyhledejte a vyberte možnost **Visual Studio – příkazový řádek** v **nástroje sady Visual Studio** složky.
+1.  Klikněte na tlačítko **Start**, pak klikněte na tlačítko **všechny programy**. Vyhledejte a klikněte **příkazový řádek sady Visual Studio** v **Visual Studio Tools** složky.
 
-2.  Z příkazového řádku přejděte do složky obsahující soubor projektu v takovém případě D:\BuildApp\BuildApp.
+2.  V příkazovém řádku přejděte do složky obsahující soubor projektu, v tomto případě *D:\BuildApp\BuildApp*.
 
-3.  Spusťte nástroje msbuild s /t:HelloWorld přepínač příkazu. To vybere a vytvoří HelloWorld cíle:
+3.  Spuštění nástroje msbuild pomocí příkazu Přepnout - t: HelloWorld. To vybere a sestavuje cílový HelloWorld:
 
+    ```cmd
+    msbuild buildapp.csproj -t:HelloWorld
     ```
-    msbuild buildapp.csproj /t:HelloWorld
-    ```
 
-4.  Zkontrolujte výstup v **příkazové okno**. Měli byste vidět dva řádky "Hello" a "World":
+4.  Prohlédněte si výstup v **příkazové okno**. Měli byste vidět dva řádky "Hello" a "World":
 
     ```
     Hello
@@ -140,12 +141,12 @@ MSBuild sleduje cíle sestavení a zaručuje, že každém cíli vychází více
     ```
 
 > [!NOTE]
->  Pokud místo toho uvidíte `The target "HelloWorld" does not exist in the project` pak jste zapomněli pravděpodobně k uložení souboru projektu v editoru kódu. Uložte soubor a zkuste to znovu.
+>  Pokud místo toho uvidíte `The target "HelloWorld" does not exist in the project` pak pravděpodobně jste zapomněli uložte soubor projektu v editoru kódu. Uložte soubor a zkuste to znovu.
 
- Podle střídavě editoru kódu a příkazové okno, můžete změnit soubor projektu a rychle zobrazit výsledky.
+ Podle střídavých mezi editorem kódu a příkazového okna, můžete změnit soubor projektu a rychle zobrazit výsledky.
 
 ## <a name="build-properties"></a>Vlastnosti sestavení
- Vlastnosti sestavení jsou páry název hodnota, které průvodce sestavení. Několik vlastností sestavení, které jsou již definováni v horní části souboru projektu:
+ Vlastnosti sestavení jsou páry název hodnota, která provede sestavení. Několik vlastností sestavení jsou již definovány v horní části souboru projektu:
 
 ```xml
 <PropertyGroup>
@@ -158,34 +159,34 @@ MSBuild sleduje cíle sestavení a zaručuje, že každém cíli vychází více
 </PropertyGroup>
 ```
 
- Všechny vlastnosti jsou podřízené elementy PropertyGroup elementů. Název vlastnosti je název podřízený element a hodnota vlastnosti je text elementu podřízený element. Například
+ Všechny vlastnosti jsou podřízené elementy PropertyGroup prvků. Název vlastnosti je název podřízeného prvku a hodnota vlastnosti je textový prvek podřízeného prvku. Například
 
 ```xml
 <TargetFrameworkVersion>v15.0</TargetFrameworkVersion>
 ```
 
- definuje vlastnost s názvem TargetFrameworkVersion, předá hodnotu řetězce "v15.0".
+ definuje vlastnost s názvem TargetFrameworkVersion, že mu poskytneme řetězcovou hodnotu "v15.0".
 
- Vytvoření vlastnosti může jej předefinovat kdykoli. If
+ Vytvoření vlastnosti může kdykoli znovu definovat. If
 
 ```xml
 <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
 ```
 
- Zobrazí se později v souboru projektu, nebo v souboru importu později v souboru projektu, pak TargetFrameworkVersion trvá nová hodnota "v3.5".
+ Zobrazí se později v souboru projektu nebo v souboru importu později v souboru projektu, pak TargetFrameworkVersion přijímá nová hodnota "v3.5".
 
-## <a name="examining-a-property-value"></a>Zkoumání hodnotu vlastnosti
- K získání hodnoty vlastnosti, použijte následující syntaxi, kde PropertyName je název vlastnosti:
+## <a name="examine-a-property-value"></a>Zkontrolujte hodnotu vlastnosti
+ Pokud chcete získat hodnotu vlastnosti, použijte následující syntaxi, kde hodnota PropertyName je název vlastnosti:
 
-```
+```xml
 $(PropertyName)
 ```
 
- Tuto syntaxi používají k prozkoumání některých vlastností v souboru projektu.
+ Použijte následující syntaxi k prozkoumání některých vlastností v souboru projektu.
 
 #### <a name="to-examine-a-property-value"></a>Chcete-li zkontrolovat hodnotu vlastnosti
 
-1.  Z editoru kódu nahraďte cíl HelloWorld s tímto kódem:
+1.  Z editoru kódu nahraďte HelloWorld cíl s tímto kódem:
 
     ```xml
     <Target Name="HelloWorld">
@@ -196,13 +197,13 @@ $(PropertyName)
 
 2.  Uložte soubor projektu.
 
-3.  Z **příkazové okno**, zadejte a spouštět tento řádek:
+3.  Z **příkazové okno**, zadejte a spusťte tento řádek:
 
-    ```
-    msbuild buildapp.csproj /t:HelloWorld
+    ```cmd
+    msbuild buildapp.csproj -t:HelloWorld
     ```
 
-4.  Zkontrolujte výstup příkazu. Měli byste vidět tyto dva řádky (rozhraní .NET Framework verze se můžou lišit):
+4.  Zkontrolujte výstup příkazu. Zobrazí se tyto dva řádky (.NET Framework verze se může lišit):
 
     ```
     Configuration is Debug
@@ -210,52 +211,52 @@ $(PropertyName)
     ```
 
 > [!NOTE]
->  Pokud nevidíte tyto řádky pak jste pravděpodobně zapomněli k uložení souboru projektu v editoru kódu. Uložte soubor a zkuste to znovu.
+>  Pokud se tyto řádky pak jste pravděpodobně zapomněli uložte soubor projektu v editoru kódu. Uložte soubor a zkuste to znovu.
 
 ### <a name="conditional-properties"></a>Podmíněné vlastnosti
- Mnoho vlastností, jako je konfigurace jsou definovány podmíněně, tedy atribut stav se zobrazí v prvku vlastnost. Podmíněné vlastnosti jsou definované nebo předefinovat pouze v případě, že je podmínka vyhodnocena jako "true". Všimněte si, že nedefinované vlastnosti mají výchozí hodnotu prázdný řetězec. Například
+ Mnoho vlastností, jako je konfigurace jsou definovány podmíněně, to znamená, se zobrazí v prvku vlastnost atributu podmínky. Podmíněné vlastnosti jsou definované nebo znovu definovat pouze v případě, že bude podmínka vyhodnocena jako "true". Všimněte si, že nedefinovanými vlastnostmi jsou uvedeny výchozí hodnotu prázdný řetězec. Například
 
 ```xml
 <Configuration   Condition=" '$(Configuration)' == '' ">Debug</Configuration>
 ```
 
- znamená "Pokud je vlastnost konfigurace ještě nebyl definován, je definovat a jako hodnotu"Ladění"".
+ znamená "Pokud ještě nebyl definován konfigurační vlastnosti, definujte ho a přiřaďte jí hodnotu"Ladění"".
 
- Téměř všechny elementy MSBuild může mít atribut podmínku. Další informace o používání atribut podmínku, najdete v článku [podmínky](../msbuild/msbuild-conditions.md).
+ Téměř všechny elementy MSBuild může mít atribut podmínku. Další informace o použití atributu podmínky najdete v článku [podmínky](../msbuild/msbuild-conditions.md).
 
 ### <a name="reserved-properties"></a>Rezervované vlastnosti
- MSBuild si vyhrazuje některé názvy vlastností k uložení informací o souboru projektu a binární soubory nástroje MSBuild. MSBuildToolsPath je příklad rezervované vlastnosti. Rezervované vlastnosti jsou odkazovány pomocí notace $ jako libovolné jiné vlastnosti. Další informace najdete v tématu [postupy: odkazování na název nebo umístění souboru projektu](../msbuild/how-to-reference-the-name-or-location-of-the-project-file.md) a [MSBuild vyhrazené a známé vlastnosti](../msbuild/msbuild-reserved-and-well-known-properties.md).
+ Nástroj MSBuild rezervuje některé názvy vlastností k ukládání informací o souboru projektu a binární soubory nástroje MSBuild. MSBuildToolsPath je příkladem rezervované vlastnosti. Rezervované vlastnosti je odkazováno pomocí zápisu $ jakékoli jiné vlastnosti. Další informace najdete v tématu [postupy: odkazování na název nebo umístění souboru projektu](../msbuild/how-to-reference-the-name-or-location-of-the-project-file.md) a [MSBuild vyhrazené a dobře známé vlastnosti](../msbuild/msbuild-reserved-and-well-known-properties.md).
 
 ### <a name="environment-variables"></a>Proměnné prostředí
- Proměnné prostředí v souborech projektu můžete odkazovat stejným způsobem, jak vytvořit vlastnosti. Například pokud chcete použít proměnné prostředí PATH v souboru projektu, použijte $(cesta). Pokud projekt obsahuje definici vlastnosti, který má stejný název jako proměnné prostředí, vlastnost v projektu přepíše hodnotu proměnné prostředí. Další informace najdete v tématu [postupy: použití proměnných prostředí v sestavení](../msbuild/how-to-use-environment-variables-in-a-build.md).
+ Proměnné prostředí v souborech projektu může odkazovat stejným způsobem, jak vlastnosti sestavení. Například použít proměnné prostředí PATH v souboru projektu, použijte příkaz $(Path). Obsahuje-li projekt definici vlastnosti, který má stejný název jako proměnné prostředí, přepíše vlastnost v projektu hodnotu proměnné prostředí. Další informace najdete v tématu [postupy: použití proměnných prostředí v sestavení](../msbuild/how-to-use-environment-variables-in-a-build.md).
 
-## <a name="setting-properties-from-the-command-line"></a>Nastavení vlastností z příkazového řádku
- Vlastnosti mohou být definovány na příkazovém řádku pomocí /property nebo /p přepínač příkazového řádku. Hodnoty vlastností přijaté z příkazového řádku přepsat vlastnost hodnotami nastavenými v proměnné prostředí a soubor projektu.
+## <a name="set-properties-from-the-command-line"></a>Nastavit vlastnosti z příkazového řádku
+ Vlastnosti mohou být definovány pomocí příkazového řádku / vlastnost nebo -p přepínač příkazového řádku. Vlastnost hodnoty přijatých z příkazového řádku přepisují hodnoty vlastností nastavené v proměnné prostředí a souboru projektu.
 
 #### <a name="to-set-a-property-value-from-the-command-line"></a>Chcete-li nastavit hodnotu vlastnosti z příkazového řádku
 
-1.  Z **příkazové okno**, zadejte a spouštět tento řádek:
+1.  Z **příkazové okno**, zadejte a spusťte tento řádek:
 
-    ```
-    msbuild buildapp.csproj /t:HelloWorld /p:Configuration=Release
+    ```cmd
+    msbuild buildapp.csproj -t:HelloWorld -p:Configuration=Release
     ```
 
-2.  Zkontrolujte výstup příkazu. Měli byste vidět tento řádek:
+2.  Zkontrolujte výstup příkazu. Zobrazí se tento řádek:
 
     ```
     Configuration is Release.
     ```
 
- MSBuild vytvoří je vlastnost konfigurace a nastaví hodnotu "Verze".
+Nástroj MSBuild vytvoří vlastnost konfigurace a dá jí hodnotu "Verze".
 
 ## <a name="special-characters"></a>Speciální znaky
- Některé znaky mají zvláštní význam v souborech projektu nástroje MSBuild. Příklady tyto znaky: středníkem (;) a hvězdičky (*). Chcete-li použít tyto speciální znaky jako literály v souboru projektu, musí být zadán pomocí xx % syntaxe, kde xx představují šestnáctkové hodnoty ASCII znaku.
+ Některé znaky mají speciální význam v souborech projektu MSBuild. Příklady těchto znaků: středníkem (;) a hvězdičky (*). Chcete-li použít tyto speciální znaky jako literály v souboru projektu, se musí zadat pomocí syntaxe %\<xx >, kde \<xx > představuje znak šestnáctkové hodnoty ASCII.
 
- Změňte úlohu zprávu zobrazíte hodnota vlastnosti konfigurace s speciální znaky, aby byl čitelnější.
+ Změna zpráva úlohy aby se zobrazila hodnota konfigurační vlastnosti se speciálními znaky, aby byl lépe čitelný.
 
-#### <a name="to-use-special-characters-in-the-message-task"></a>Použít speciální znaky v úloha zprávy
+#### <a name="to-use-special-characters-in-the-message-task"></a>Použití speciálních znaků v úloha zprávy
 
-1.  Z editoru kódu nahraďte obě úlohy zpráva tento řádek:
+1.  Z editoru kódu nahraďte oba úkoly zpráva tento řádek:
 
     ```xml
     <Message Text="%24(Configuration) is %22$(Configuration)%22" />
@@ -263,24 +264,24 @@ $(PropertyName)
 
 2.  Uložte soubor projektu.
 
-3.  Z **příkazové okno**, zadejte a spouštět tento řádek:
+3.  Z **příkazové okno**, zadejte a spusťte tento řádek:
 
-    ```
-    msbuild buildapp.csproj /t:HelloWorld
+    ```cmd
+    msbuild buildapp.csproj -t:HelloWorld
     ```
 
-4.  Zkontrolujte výstup příkazu. Měli byste vidět tento řádek:
+4.  Zkontrolujte výstup příkazu. Zobrazí se tento řádek:
 
     ```
     $(Configuration) is "Debug"
     ```
 
- Další informace najdete v tématu [speciální znaky nástroje MSBuild](../msbuild/msbuild-special-characters.md).
+Další informace najdete v tématu [speciální znaky nástroje MSBuild](../msbuild/msbuild-special-characters.md).
 
 ## <a name="build-items"></a>Vytvoření položky
- Položka je část informace, obvykle název souboru, který se používá jako vstup systému sestavení. Kolekce položek představující zdrojové soubory například mohla být předána úkolů s názvem kompilace jejich kompilace do sestavení.
+ Položka je určitý údaj, obvykle zadat název souboru, který se používá jako vstup do systému sestavení. Například mohla být předána kolekci položek představující zdrojové soubory pro úlohu s názvem kompilace pro jejich zkompilování do sestavení.
 
- Všechny položky jsou podřízené elementy ItemGroup elementů. Název položky je název podřízený element a hodnota položky je hodnota atributu zahrnout podřízeného elementu. Hodnoty položek se stejným názvem se shromažďují do typů položek s tímto názvem.  Například
+ Všechny položky jsou podřízené prvky ItemGroup prvků. Název položky je název podřízeného prvku, a hodnotu položky se hodnota atributu Include podřízeného prvku. Hodnoty položek se stejným názvem se shromáždí do typů položek s tímto názvem.  Například
 
 ```xml
 <ItemGroup>
@@ -289,9 +290,9 @@ $(PropertyName)
 </ItemGroup>
 ```
 
- Definuje skupinu položek obsahující dvě položky. Typ položky kompilace má dvě hodnoty: "Program.cs" a "Properties\AssemblyInfo.cs".
+ Definuje skupinu položky obsahující dvě položky. Typ položky kompilace má dvě hodnoty: *Program.cs* a *Properties\AssemblyInfo.cs*.
 
- Následující kód vytvoří stejný typ položky deklarace oba soubory v jeden atribut zahrnutí oddělené středníkem.
+ Následující kód vytvoří stejný typ položky deklarováním oba soubory v jednom atributu Include, oddělené středníky.
 
 ```xml
 <ItemGroup>
@@ -299,23 +300,23 @@ $(PropertyName)
 </ItemGroup>
 ```
 
- Další informace najdete v tématu [položky](../msbuild/msbuild-items.md).
+Další informace najdete v tématu [položky](../msbuild/msbuild-items.md).
 
 > [!NOTE]
->  Cesty k souborům jsou relativní vzhledem ke složce obsahující soubor projektu nástroje MSBuild.
+>  Cesty k souboru jsou relativní vzhledem ke složce obsahující soubor projektu MSBuild.
 
-## <a name="examining-item-type-values"></a>Zkoumání hodnoty typu položky
- Chcete-li získat hodnoty typ položky, použijte následující syntaxi, kde typ položky je název typu položky:
+## <a name="examine-item-type-values"></a>Zkontrolujte položky typu hodnoty
+ K získání hodnot typu položky, použijte následující syntaxi, kde je ItemType název typu položky:
 
-```
+```xml
 @(ItemType)
 ```
 
- Pomocí této syntaxe zkontrolujte typ položky kompilace v souboru projektu.
+ Použijte následující syntaxi pro zjištění kompilace typ položky v souboru projektu.
 
-#### <a name="to-examine-item-type-values"></a>K prozkoumání položka – Typ hodnoty
+#### <a name="to-examine-item-type-values"></a>Prozkoumat položky typu hodnoty
 
-1.  Z editoru kódu nahraďte úlohu cíl HelloWorld s tímto kódem:
+1.  Z editoru kódu nahraďte úloh HelloWorld cíl s tímto kódem:
 
     ```xml
     <Target Name="HelloWorld">
@@ -325,10 +326,10 @@ $(PropertyName)
 
 2.  Uložte soubor projektu.
 
-3.  Z **příkazové okno**, zadejte a spouštět tento řádek:
+3.  Z **příkazové okno**, zadejte a spusťte tento řádek:
 
-    ```
-    msbuild buildapp.csproj /t:HelloWorld
+    ```cmd
+    msbuild buildapp.csproj -t:HelloWorld
     ```
 
 4.  Zkontrolujte výstup příkazu. Měli byste vidět tento dlouhý řádek:
@@ -337,19 +338,19 @@ $(PropertyName)
     Compile item type contains Form1.cs;Form1.Designer.cs;Program.cs;Properties\AssemblyInfo.cs;Properties\Resources.Designer.cs;Properties\Settings.Designer.cs
     ```
 
- Hodnoty typu položky jsou odděleny středníky ve výchozím nastavení.
+Hodnoty typu položky jsou oddělené středníkem, ve výchozím nastavení.
 
- Chcete-li změnit oddělovač typ položky, použijte následující syntaxi, kde typ položky je typ položky a oddělovače je řetězec znaků dělicí jeden nebo více:
+Chcete-li změnit oddělovač typ položky, použijte následující syntaxi, kde ItemType je typ položky a oddělovač je řetězec jeden nebo více oddělovacích znaků:
 
-```
+```xml
 @(ItemType, Separator)
 ```
 
- Změnit úloha zprávy a použít znak návratu na řádek informační kanály (% 0A %0 D) zobrazíte kompilace položky jeden na každý řádek.
+Úloha zprávy konce řádků a řádek informačních kanálů změnit (% 0A %0 D) zobrazíte kompilace položek na jeden řádek.
 
-#### <a name="to-display-item-type-values-one-per-line"></a>Chcete-li zobrazit typ položky hodnoty jeden na každý řádek
+#### <a name="to-display-item-type-values-one-per-line"></a>Chcete-li zobrazit položky typu hodnoty na jeden řádek
 
-1.  Z editoru kódu nahraďte úloha zprávy tento řádek:
+1.  Z editoru kódu nahraďte tento řádek úloha zprávy:
 
     ```xml
     <Message Text="Compile item type contains @(Compile, '%0A%0D')" />
@@ -357,9 +358,11 @@ $(PropertyName)
 
 2.  Uložte soubor projektu.
 
-3.  Z **příkazové okno**, zadejte a spouštět tento řádek:
+3.  Z **příkazové okno**, zadejte a spusťte tento řádek:
 
-     `msbuild buildapp.csproj /t:HelloWorld`
+    ```cmd
+    msbuild buildapp.csproj -t:HelloWorld
+    ```
 
 4.  Zkontrolujte výstup příkazu. Měli byste vidět tyto řádky:
 
@@ -373,59 +376,59 @@ $(PropertyName)
     ```
 
 ### <a name="include-exclude-and-wildcards"></a>Zahrnout, vyloučit a zástupné znaky
- Můžete použít zástupné znaky "*","\*\*", a "?" s atributem zahrnout k přidávání položek do typ položky. Například
+ Můžete použít zástupné znaky "*","\*\*", a "?" s atributem zahrnout přidání položek do typ položky. Například
 
 ```xml
 <Photos Include="images\*.jpeg" />
 ```
 
- Přidá všechny soubory s příponou "JPEG" do složky bitových kopií typu položky fotografie, zatímco
+ Přidá všechny soubory s příponou souboru *.jpeg* v *imagí* složku pro typ položky fotografie, zatímco
 
 ```xml
 <Photos Include="images\**.jpeg" />
 ```
 
- Typ položky fotografie přidá všechny soubory s příponou "JPEG" ve složce bitové kopie a všechny její podsložky. Další příklady najdete v tématu [postup: Vyberte soubory k sestavení](../msbuild/how-to-select-the-files-to-build.md).
+ Přidá všechny soubory s příponou souboru *.jpeg* v *imagí* složka a všechny její podsložky, typu položky fotografie. Další příklady najdete v tématu [postupy: výběr souborů pro sestavení](../msbuild/how-to-select-the-files-to-build.md).
 
- Všimněte si, že jsou deklarovaných položky budou přidány do typu položky. Například
+ Všimněte si, jak jsou deklarovány položky se přidají do typu položky. Například
 
 ```xml
 <Photos Include="images\*.jpeg" />
 <Photos Include="images\*.gif" />
 ```
 
- Vytvoří typ položky s názvem fotografií obsahující všechny soubory ve složce bitové kopie s příponou souboru "JPEG" nebo ".gif". Jde o ekvivalent následující řádek:
+ Vytvoří typ položky s názvem fotografií, který obsahuje všechny soubory v *image* složku s příponou souboru buď *.jpeg* nebo *.gif*. Toto je shodné s následující řádek:
 
 ```xml
 <Photos Include="images\*.jpeg;images\*.gif" />
 ```
 
- Můžete vyloučit položku z typ položky s atributem vyloučit. Například
+ Položky můžete vyloučit z typu položky s atributem vyloučení. Například
 
 ```xml
 <Compile Include="*.cs" Exclude="*Designer*">
 ```
 
- Přidá všechny soubory s příponou".cs" k položce kompilace typ, s výjimkou souborů, jejichž názvy obsahují řetězec "Designer". Další příklady najdete v tématu [postupy: vyloučení souborů ze sestavení](../msbuild/how-to-exclude-files-from-the-build.md).
+ Přidá všechny soubory s příponou souboru *.cs* typu položky kompilace, s výjimkou souborů jejichž názvy obsahují řetězec *návrháře*. Další příklady najdete v tématu [postupy: vyloučení souborů ze sestavení](../msbuild/how-to-exclude-files-from-the-build.md).
 
- Atribut vyloučení ovlivňuje pouze položky přidal atribut zahrnutí v elementu položku, která obsahuje oba. Například
+Atribut vyloučení ovlivňuje pouze položky přidané v atributu Include v prvku položky, která obsahuje oba. Například
 
 ```xml
 <Compile Include="*.cs" />
 <Compile Include="*.res" Exclude="Form1.cs">
 ```
 
- nebude vyloučení souboru Form1.cs, která byla přidána v předchozí položce elementu.
+nebude vyjměte soubor *Form1.cs*, která byla přidána do předchozí prvek položky.
 
-##### <a name="to-include-and-exclude-items"></a>Pro zahrnutí nebo vyloučení položek
+##### <a name="to-include-and-exclude-items"></a>Chcete zahrnout a vyloučit položky
 
-1.  Z editoru kódu nahraďte úloha zprávy tento řádek:
+1.  Z editoru kódu nahraďte tento řádek úloha zprávy:
 
     ```xml
     <Message Text="XFiles item type contains @(XFiles)" />
     ```
 
-2.  Přidejte tuto skupinu položek jenom za elementem importu:
+2.  Tato skupina položek přidejte hned za importovaný prvek:
 
     ```xml
     <ItemGroup>
@@ -435,22 +438,22 @@ $(PropertyName)
 
 3.  Uložte soubor projektu.
 
-4.  Z **příkazové okno**, zadejte a spouštět tento řádek:
+4.  Z **příkazové okno**, zadejte a spusťte tento řádek:
 
-    ```
-    msbuild buildapp.csproj /t:HelloWorld
+    ```cmd
+    msbuild buildapp.csproj -t:HelloWorld
     ```
 
-5.  Zkontrolujte výstup příkazu. Měli byste vidět tento řádek:
+5.  Zkontrolujte výstup příkazu. Zobrazí se tento řádek:
 
     ```
     XFiles item type contains Form1.cs;Program.cs;Properties/Resources.resx
     ```
 
 ## <a name="item-metadata"></a>Metadata položky
- Položky mohou obsahovat metadata kromě informace získané z atributy zahrnutí a vyloučení. Tato metadata lze úlohy, které vyžadují další informace o položkách než jenom hodnotu položky.
+ Položky mohou obsahovat metadata kromě informace získané z atributy zahrnutí a vyloučení. Tato metadata je možné podle úlohy, které vyžadují další informace o položkách než hodnotu položky.
 
- Metadata položek je deklarován v souboru projektu vytvořením element s názvem metadat jako podřízený element položky. Položka může mít nula nebo více hodnot metadat. Například následující položku CSFile má metadata jazykové verze s hodnotou "Fr":
+ Metadata položek je deklarována v souboru projektu vytvořením prvku s názvem metadat jako podřízený prvek položky. Položka může mít nula nebo více hodnot metadat. Například následující položka CSFile neobsahuje jazykové verze metadata s hodnotou "Fr":
 
 ```xml
 <ItemGroup>
@@ -460,15 +463,15 @@ $(PropertyName)
 </ItemGroup>
 ```
 
- Získat metadata hodnotu typ položky, použijte následující syntaxi, kde typ položky je název typu položky a MetaDataName je název metadat:
+ K získání hodnoty metadat typu položky, použijte následující syntaxi, kde je ItemType název typu položky a MetaDataName je název metadat:
 
-```
+```xml
 %(ItemType.MetaDataName)
 ```
 
 #### <a name="to-examine-item-metadata"></a>Prozkoumat metadata položky
 
-1.  Z editoru kódu nahraďte úloha zprávy tento řádek:
+1.  Z editoru kódu nahraďte tento řádek úloha zprávy:
 
     ```xml
     <Message Text="Compile.DependentUpon: %(Compile.DependentUpon)" />
@@ -476,10 +479,10 @@ $(PropertyName)
 
 2.  Uložte soubor projektu.
 
-3.  Z **příkazové okno**, zadejte a spouštět tento řádek:
+3.  Z **příkazové okno**, zadejte a spusťte tento řádek:
 
-    ```
-    msbuild buildapp.csproj /t:HelloWorld
+    ```cmd
+    msbuild buildapp.csproj -t:HelloWorld
     ```
 
 4.  Zkontrolujte výstup příkazu. Měli byste vidět tyto řádky:
@@ -491,14 +494,14 @@ $(PropertyName)
     Compile.DependentUpon: Settings.settings
     ```
 
- Všimněte si, jak frázi "Compile.DependentUpon" zobrazuje několikrát. Používání metadat pomocí této syntaxe v rámci cíl způsobí, že "dávkování". Dávkování znamená po provedení úlohy v rámci cíle pro každou hodnotu jedinečný metadat. To je ekvivalentní skriptu MSBuild nejběžnější "smyčka" for programovací konstrukce. Další informace najdete v tématu [Batching](../msbuild/msbuild-batching.md).
+Všimněte si, jak frázi "Compile.DependentUpon" zobrazuje několikrát. Používání metadat pomocí této syntaxe v rámci cíle způsobí, že "dávkování". Dávkování znamená, že po spuštění úlohy v rámci cíl pro každou hodnotu jedinečný metadat. To je ekvivalentní skript MSBuild nejběžnější "smyčka" for programovací konstrukce. Další informace najdete v tématu [dávkování](../msbuild/msbuild-batching.md).
 
-### <a name="well-known-metadata"></a>Metadata známé
- Vždy, když je přidat položku do seznamu položek, že položka není přiřazen některé známé metadat. Například %(Filename) vrátí název souboru žádné položky. Úplný seznam známých metadata, najdete v části [Metadata známé položky](../msbuild/msbuild-well-known-item-metadata.md).
+### <a name="well-known-metadata"></a>známá metadata
+ Při každém přidání položky do seznamu položek této položky je přiřazen některé známé metadat. Například %(Filename) vrátí název souboru žádné položky. Úplný seznam známých metadata, najdete v části [známá metadata položky](../msbuild/msbuild-well-known-item-metadata.md).
 
-##### <a name="to-examine-well-known-metadata"></a>K prozkoumání dobře známé metadat
+##### <a name="to-examine-well-known-metadata"></a>Prozkoumat dobře známé metadat
 
-1.  Z editoru kódu nahraďte úloha zprávy tento řádek:
+1.  Z editoru kódu nahraďte tento řádek úloha zprávy:
 
     ```xml
     <Message Text="Compile Filename: %(Compile.Filename)" />
@@ -506,10 +509,10 @@ $(PropertyName)
 
 2.  Uložte soubor projektu.
 
-3.  Z **příkazové okno**, zadejte a spouštět tento řádek:
+3.  Z **příkazové okno**, zadejte a spusťte tento řádek:
 
-    ```
-    msbuild buildapp.csproj /t:HelloWorld
+    ```cmd
+    msbuild buildapp.csproj -t:HelloWorld
     ```
 
 4.  Zkontrolujte výstup příkazu. Měli byste vidět tyto řádky:
@@ -523,20 +526,20 @@ $(PropertyName)
     Compile Filename: Settings.Designer
     ```
 
- Srovnáním výše uvedených dvou příkladech se zobrazí, ne každá položka v typ položky kompilace se DependentUpon metadata, všechny položky mít dobře známé Filename metadata.
+Porovnáním obou výše uvedených příkladech vidíte, že když ne každá položka v kompilaci typu položky nemá DependentUpon metadat, všechny položky mít dobře známý název souboru metadat.
 
 ### <a name="metadata-transformations"></a>Metadata transformace
- Položky seznamů lze je transformovat do nové položky seznamů. K transformaci seznam položek, použijte následující syntaxi, kde typ položky je název typu položky a MetadataName je název metadat:
+ Seznamy se dají transformovat položky do nové položky seznamů. Transformace seznam položek, použijte následující syntaxi, kde \<ItemType > je název typu položky a \<MetadataName > je název metadat:
 
-```
+```xml
 @(ItemType -> '%(MetadataName)')
 ```
 
- Například seznam položek zdrojových souborů je možné převést na kolekci objektů souborů pomocí výrazu jako `@(SourceFiles -> '%(Filename).obj')`. Další informace najdete v tématu [transformuje](../msbuild/msbuild-transforms.md).
+Například je možné transformovat seznam položek zdrojových souborů do kolekce souborů objektů vlastnosti autorefresh pomocí výrazu jako `@(SourceFiles -> '%(Filename).obj')`. Další informace najdete v tématu [transformuje](../msbuild/msbuild-transforms.md).
 
-##### <a name="to-transform-items-using-metadata"></a>K transformaci položek pomocí metadat
+##### <a name="to-transform-items-using-metadata"></a>Chcete-li transformovat pomocí metadat položky
 
-1.  Z editoru kódu nahraďte úloha zprávy tento řádek:
+1.  Z editoru kódu nahraďte tento řádek úloha zprávy:
 
     ```xml
     <Message Text="Backup files: @(Compile->'%(filename).bak')" />
@@ -544,24 +547,24 @@ $(PropertyName)
 
 2.  Uložte soubor projektu.
 
-3.  Z **příkazové okno**, zadejte a spouštět tento řádek:
+3.  Z **příkazové okno**, zadejte a spusťte tento řádek:
 
-    ```
-    msbuild buildapp.csproj /t:HelloWorld
+    ```cmd
+    msbuild buildapp.csproj -t:HelloWorld
     ```
 
-4.  Zkontrolujte výstup příkazu. Měli byste vidět tento řádek:
+4.  Zkontrolujte výstup příkazu. Zobrazí se tento řádek:
 
     ```
     Backup files: Form1.bak;Form1.Designer.bak;Program.bak;AssemblyInfo.bak;Resources.Designer.bak;Settings.Designer.bak
     ```
 
- Všimněte si, že metadata vyjádřené v této syntaxe nezpůsobí dávkování.
+Všimněte si, že se tato metadata v této syntaxe nezpůsobí dávkování.
 
-## <a name="whats-next"></a>Co je další?
- Zjistěte, jak vytvořit jednoduché projektu krok jeden soubor současně, vyzkoušejte [návod: vytvoření souboru projektu MSBuild od začátku](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md).
+## <a name="whats-next"></a>Co se chystá?
+ Zjistěte, jak vytvořit jednoduchý projekt jeden krok souborů najednou, vyzkoušejte si [návod: vytvoření souboru projektu MSBuild od začátku](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Přehled nástroje MSBuild](../msbuild/msbuild.md)
 - [Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)

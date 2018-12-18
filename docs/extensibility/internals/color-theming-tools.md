@@ -1,5 +1,5 @@
 ---
-title: Barva motivů nástroje | Microsoft Docs
+title: Barevné motivy nástroje | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -9,15 +9,16 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f346006cdfce5daa7cd3d572dc376024a78051f2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8802a1a5d41d8ba36893d5abf1f19e901ee7b1e3
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39511118"
 ---
-# <a name="color-theming-tools"></a>Nástrojů barev motivů
-VS SDK poskytuje několik nástrojů, které vám pomůžou vytvořit a spravovat barevné motivy.  
+# <a name="color-theme-tools"></a>Barva motivu nástroje
+Visual Studio SDK poskytuje několik nástrojů, které vám pomůžou vytvářet a spravovat barevné motivy.  
   
--   [VSIX barva Editor](../../extensibility/internals/vsix-color-editor.md) nástroj může vytvářet a upravovat vlastní barvy pro sadu Visual Studio.  
+-   [Editor barev VSIX](../../extensibility/internals/vsix-color-editor.md) nástroje můžete vytvářet a upravovat vlastní barvy pro sadu Visual Studio.  
   
--   [VSIX barva kompilátoru](../../extensibility/internals/vsix-color-compiler.md) nástroj převede existující soubory XML motivu sady Visual Studio .pkgdef pro rozšíření.
+-   [Kompilátor barev VSIX](../../extensibility/internals/vsix-color-compiler.md) nástroj převede existujícího motivu sady Visual Studio *.xml* soubory do *.pkgdef* soubory pro rozšíření.

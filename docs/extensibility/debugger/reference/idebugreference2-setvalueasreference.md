@@ -1,5 +1,5 @@
 ---
-title: IDebugReference2::SetValueAsReference | Microsoft Docs
+title: IDebugReference2::SetValueAsReference | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0ce62358df758b7f4cf3ef0883cf0ac457aaf1f5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 96245b7089ddef7d465d01203ca8b540c618b05f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49820249"
 ---
 # <a name="idebugreference2setvalueasreference"></a>IDebugReference2::SetValueAsReference
-Nastaví hodnotu odkaz z jiného odkazu. Vyhrazeno pro budoucí použití.  
+Nastaví hodnotu odkazu z jiného odkazu. Vyhrazeno pro budoucí použití.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,19 +47,19 @@ int SetValueAsReference (
   
 #### <a name="parameters"></a>Parametry  
  `rgpArgs`  
- [v] Pole [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objekty, které umožňuje určit, jak nastavit hodnota odkazu.  
+ [in] Pole [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objekty sloužící k určení, jak nastavit hodnotu odkazu.  
   
  `dwArgCount`  
- [v] Počet odkazů v poli.  
+ [in] Počet odkazů v poli.  
   
  `pValue`  
- [v] [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objekt, ze kterého chcete-li nastavit hodnotu vlastnosti.  
+ [in] [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md) objekt, ze kterého chcete nastavit hodnotu vlastnosti.  
   
  `dwTimeout`  
- [v] Maximální doba v milisekundách pro čekání před návratem od této metody. Použití `INFINITE` čekání po neomezenou dobu.  
+ [in] Maximální doba v milisekundách pro čekání před návratem z této metody. Použití `INFINITE` čekat po neomezenou dobu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vždy vrátí hodnotu `E_NOTIMPL`.  
+ Vždy vrátí `E_NOTIMPL`.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugReference2](../../../extensibility/debugger/reference/idebugreference2.md)

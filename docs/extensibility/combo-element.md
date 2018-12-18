@@ -1,5 +1,5 @@
 ---
-title: Element pole se seznamem | Microsoft Docs
+title: Prvek pole se seznamem | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,18 +14,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ca91102467755610144e4d24405e89ace5a013b7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 00ecabcf90e63b18961a828c12ae300be359b5a1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49839983"
 ---
-# <a name="combo-element"></a>Element pole se seznamem
-Definuje příkazy, které se zobrazují v pole se seznamem. Existují čtyři typy pole se seznamem, následujícím způsobem: DropDownCombo, DynamicCombo, IndexCombo a MRUCombo.  
+# <a name="combo-element"></a>Combo – element
+Definuje příkazy, které se zobrazí v poli se seznamem. Existují čtyři typy polí se seznamem, následujícím způsobem: DropDownCombo, DynamicCombo, IndexCombo a MRUCombo.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```xml 
 <combo guid="guidMyCommandSet" id="MyCommand" defaultWidth="20" idCommandList="MyCommandListID" priority="0x102" type="DropDownCombo">  
   <Parent>... </Parent  
   <CommandFlag>... </CommandFlag>  
@@ -40,24 +41,24 @@ Definuje příkazy, které se zobrazují v pole se seznamem. Existují čtyři t
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|Identifikátor GUID|Požadováno. Identifikátor GUID identifikátor GUID nebo ID příkazu.|  
-|id|Požadováno. ID identifikátor GUID nebo ID příkazu.|  
-|defaultWidth|Požadováno. Celé číslo, které určuje šířku pixelů pro pole se seznamem.|  
-|idCommandList|Požadováno. ID, které se odešle cíli active příkaz načíst seznam položek, který se má zobrazit v seznamu. ID bude ve stejném oboru GUID jako ovládací prvek.|  
-|Priorita|Volitelné. Číselnou hodnotu, která určuje prioritu.|  
-|– typ|Volitelné. Výčtová hodnota, která určuje typ tlačítka.<br /><br /> Pokud není zadaný, použije tlačítko.<br /><br /> DropDownCombo<br /> VSPackage zodpovídá za vyplnění obsah pro toto pole se seznamem. Uživatele nelze nic zadejte do textového pole tomto rozevíracího seznamu.<br /><br /> DynamicCombo<br /> VSPackage zodpovídá za vyplnění obsah toto pole se seznamem. Uživatel můžete upravit toto pole se seznamem a také vyberte položky v něm.<br /><br /> IndexCombo<br /> Stejné jako DynamicCombo s výjimkou, že vyvolá index položky, nikoli jeho textu.<br /><br /> MRUCombo<br /> Integrované vývojové prostředí (IDE) jménem VSPackage sestavil.  Uživatele můžete upravit v tomto poli se seznamem. Prostředí IDE pamatuje až 16 poslední položky na pole se seznamem.<br /><br /> Pokud uživatel vybere něco v poli se seznamem nebo zadá něco nové, upozorní IDE odpovídající VSPackage.|  
-|Podmínka|Volitelné. V tématu [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
+|identifikátor GUID|Požadováno. Identifikátor GUID identifikátoru GUID a ID příkazu.|  
+|id|Požadováno. ID identifikátoru GUID a ID příkazu.|  
+|defaultWidth|Požadováno. Celé číslo, které určuje šířka v pixelech pro pole se seznamem.|  
+|idCommandList|Požadováno. ID, které se odešle cíli aktivní příkaz pro načtení seznamu položek, který se má zobrazit v poli se seznamem. ID bude ve stejném oboru jako ovládací prvek identifikátor GUID.|  
+|Priorita|Volitelné. Číselná hodnota, která určuje prioritu.|  
+|– typ|Volitelné. Výčtová hodnota, která určuje typ tlačítka.<br /><br /> Pokud není zadaný, použije tlačítko.<br /><br /> DropDownCombo<br /> Sady VSPackage zodpovídá za vyplnění obsah pro toto pole se seznamem. Uživatel nic nelze zadat do textového pole tomto rozevíracím seznamu.<br /><br /> DynamicCombo<br /> Sady VSPackage zodpovídá za vyplnění obsah tohoto pole se seznamem. Uživatel může upravit toto pole se seznamem a také v něm vyberte položky.<br /><br /> IndexCombo<br /> Stejné jako DynamicCombo s výjimkou, že vyvolá index položky spíše než jeho textu.<br /><br /> MRUCombo<br /> Vyplnění podle integrované vývojové prostředí (IDE) jménem sady VSPackage.  Uživatel může upravovat v tomto poli se seznamem. Prostředí IDE pamatuje až po poslední 16 položek za pole se seznamem.<br /><br /> Když uživatel vybere něco v poli se seznamem nebo zadá něco nového, rozhraní IDE upozorní odpovídající VSPackage.|  
+|Podmínka|Volitelné. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
   
-### <a name="child-elements"></a>Podřízené elementy  
+### <a name="child-elements"></a>Podřízené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|Nadřazené|Volitelné. Nadřazený element tlačítko.|  
-|CommandFlag|Požadováno. V tématu [příkaz příznak Element](../extensibility/command-flag-element.md). Platné hodnoty CommandFlag pro tlačítko jsou následujícím způsobem.<br /><br /> -CaseSensitive<br /><br /> -CommandWellOnly<br /><br /> -DefaultDisabled<br /><br /> -DefaultInvisible<br /><br /> -DynamicVisibility<br /><br /> -Filtrování kláves<br /><br /> -IconAndText<br /><br /> -NoAutoComplete<br /><br /> -NoButtonCustomize<br /><br /> -NoCustomize<br /><br /> -NoKeyCustomize<br /><br /> -StretchHorizontally|  
-|Řetězce|Požadováno. V tématu [řetězce Element](../extensibility/strings-element.md). Podřízený element ButtonText musí být definovaný.|  
+|Nadřazené|Volitelné. Nadřazený prvek tlačítko.|  
+|CommandFlag|Požadováno. Zobrazit [Command flag – element](../extensibility/command-flag-element.md). Platné hodnoty CommandFlag pro tlačítka jsou následujícím způsobem.<br /><br /> -CaseSensitive<br /><br /> -CommandWellOnly<br /><br /> -DefaultDisabled<br /><br /> -DefaultInvisible<br /><br /> -DynamicVisibility<br /><br /> -Kláves<br /><br /> -IconAndText<br /><br /> -NoAutoComplete<br /><br /> -NoButtonCustomize<br /><br /> -NoCustomize<br /><br /> -NoKeyCustomize<br /><br /> -StretchHorizontally|  
+|Řetězce|Požadováno. Zobrazit [Strings – element](../extensibility/strings-element.md). ButtonText – element podřízený, musí být definovaný.|  
 |Poznámka|Volitelný komentář.|  
   
-### <a name="parent-elements"></a>Nadřazené elementy  
+### <a name="parent-elements"></a>Nadřazené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
@@ -65,7 +66,7 @@ Definuje příkazy, které se zobrazují v pole se seznamem. Existují čtyři t
   
 ## <a name="example"></a>Příklad  
   
-```  
+```xml  
 <Combo guid="guidWidgetPackage" id="cmdidInsertOptions"  
   defaultWidth="100" idCommandList="cmdidGetInsertOptionsList">  
   <CommandFlag>DynamicVisibility</CommandFlag>  
@@ -85,5 +86,5 @@ Definuje příkazy, které se zobrazují v pole se seznamem. Existují čtyři t
 </Combo>  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [Soubory tabulek příkazů sady Visual Studio (.Vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+## <a name="see-also"></a>Viz také:  
+ [Soubory tabulky (.vsct) příkaz pro Visual Studio](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

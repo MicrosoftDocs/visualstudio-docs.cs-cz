@@ -17,23 +17,24 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0eabca43f604d92ecab78dccae281a450f7c0400
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f7211d31b8e57a88d3f6a5a585e912dd267cf943
+ms.sourcegitcommit: e6b13898cfbd89449f786c2e8f3e3e7377afcf25
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36325583"
 ---
-# <a name="extending-the-sharepoint-connections-node-in-server-explorer"></a>Rozšíření uzlu připojení služby SharePoint v průzkumníku serveru
-  V sadě Visual Studio, můžete připojení na místní weby služby SharePoint na vývojovém počítači pomocí **připojení služby SharePoint** uzel v**Průzkumníka serveru** okno. Tento uzel zobrazuje mnoho součásti místních webů služby SharePoint v hierarchickém stromovém zobrazení. Můžete například zobrazit seznamy, knihovny dokumentů a typy obsahu na místních serverech. Další informace o používání **Průzkumníka serveru** Pokud chcete připojit k místní weby služby SharePoint, najdete v části [procházení SharePoint připojení pomocí Průzkumníka serveru](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md).  
+# <a name="extend-the-sharepoint-connections-node-in-server-explorer"></a>Rozšíření uzlu připojení služby SharePoint v Průzkumníku serveru
+  V sadě Visual Studio, můžete připojení na místní weby služby SharePoint na vývojovém počítači pomocí **připojení služby SharePoint** uzel v **Průzkumníka serveru** okno. Tento uzel zobrazuje mnoho součásti místních webů služby SharePoint v hierarchickém stromovém zobrazení. Můžete například zobrazit seznamy, knihovny dokumentů a typy obsahu na místních serverech. Další informace o používání **Průzkumníka serveru** Pokud chcete připojit k místní weby služby SharePoint, najdete v části [připojení Procházet služby SharePoint pomocí Průzkumníka serveru](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md).  
   
  Můžete rozšířit **připojení služby SharePoint** uzlu vytváření rozšíření pro existující uzly, nebo vytvořením vlastního typu uzlu a její přidání do hierarchie uzlů.  
   
-## <a name="tasks-for-extending-the-sharepoint-connections-node"></a>Úlohy pro rozšíření uzlu připojení služby SharePoint  
+## <a name="tasks-for-extending-the-sharepoint-connections-node"></a>Úlohy pro rozšíření uzlu připojení služby SharePoint
  Chcete-li rozšířit stávající uzel, vytvořte rozšíření sady Visual Studio, který implementuje <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeExtension> rozhraní. Když rozšíříte uzlem, můžete přidat funkce na uzlu jako vlastní položky místní nabídky nebo vlastní vlastnosti. Další informace najdete v tématu [postupy: rozšíření uzlu služby SharePoint v Průzkumníku serveru](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md).  
   
  Chcete-li vytvořit vlastní typ uzlu, vytvořte rozšíření sady Visual Studio, který implementuje <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeProvider> rozhraní. Vytvořit vlastní uzel, pokud chcete zobrazit součásti webů služby SharePoint, které nejsou zobrazeny v **Průzkumníka serveru** ve výchozím nastavení. Například **Průzkumníka serveru** nemá zobrazení galerii webových částí webu služby SharePoint ve výchozím nastavení, ale můžete přidat vlastní uzel, který to. Další informace najdete v tématu [postupy: Přidání vlastního uzlu služby SharePoint do Průzkumníka serveru](../sharepoint/how-to-add-a-custom-sharepoint-node-to-server-explorer.md) a [návod: rozšíření Průzkumníka serveru pro zobrazení webové části](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md).  
   
-## <a name="adding-custom-properties-to-nodes"></a>Přidání vlastních vlastností do uzlů  
+## <a name="add-custom-properties-to-nodes"></a>Přidání vlastních vlastností do uzlů
  Když rozšíření uzlu nebo vytvořit vlastní typ uzlu, můžete do uzlu přidat vlastní vlastnosti. Vlastnosti se zobrazí v **vlastnosti** okno, pokud je vybrán uzel.  
   
  Existují dva typy vlastní vlastnosti, které můžete přidat do uzlu:  
@@ -42,7 +43,7 @@ ms.lasthandoff: 04/16/2018
   
 -   Vlastnosti, které zobrazují data vlastní pro čtení a zápis. Příklad kódu, který ukazuje, jak to udělat, najdete v části [postupy: rozšíření uzlu služby SharePoint v Průzkumníku serveru](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md).  
   
-## <a name="getting-data-for-built-in-nodes"></a>Získávání dat pro předdefinovaný uzly  
+## <a name="get-data-for-built-in-nodes"></a>Získání dat pro předdefinovaný uzly
  Všechny předdefinované uzly poskytované sadě Visual Studio obsahují některá data o součást služby SharePoint, které představují. Například uzel, který představuje seznam na webu služby SharePoint poskytuje některá data o seznamu, jako je název a adresu URL výchozí zobrazení seznamu.  
   
  Pro přístup k těmto datům, načíst objekt dat z <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> vlastnost <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNode> objekt, který představuje uzel vás zajímá. Typ objektu dat závisí na typu uzlu.  
@@ -66,15 +67,15 @@ ms.lasthandoff: 04/16/2018
 |Přidružení pracovního postupu|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IWorkflowAssociationNodeInfo>|  
 |Pracovní postup šablony|<xref:Microsoft.VisualStudio.SharePoint.Explorer.Extensions.IWorkflowTemplateNodeInfo>|  
   
- Další informace o používání <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> vlastnost, najdete v části [přidružení vlastních dat k rozšíření nástrojů SharePoint](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md).  
+ Další informace o používání <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> vlastnost, najdete v části [rozšíření nástrojů přidružení vlastních dat se službou SharePoint](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:
  [Návod: Rozšíření Průzkumníka serveru pro zobrazení webové části](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)   
  [Postupy: rozšíření uzlu služby SharePoint v Průzkumníku serveru](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md)   
- [Postupy: Přidání uzlu vlastní služby SharePoint do Průzkumníka serveru](../sharepoint/how-to-add-a-custom-sharepoint-node-to-server-explorer.md)   
+ [Postupy: Přidání vlastního uzlu služby SharePoint do Průzkumníka serveru](../sharepoint/how-to-add-a-custom-sharepoint-node-to-server-explorer.md)   
  [Postupy: získání dat pro předdefinovaný uzel služby SharePoint v Průzkumníku serveru](../sharepoint/how-to-get-data-for-a-built-in-sharepoint-node-in-server-explorer.md)   
  [Přidružení vlastních dat k rozšíření nástrojů SharePoint](../sharepoint/associating-custom-data-with-sharepoint-tools-extensions.md)   
  [Procházení připojení služby SharePoint pomocí Průzkumníka serveru](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)   
- [Rozšíření nástrojů SharePoint v aplikaci Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)  
+ [Rozšíření nástrojů SharePoint v sadě Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)  
   
   

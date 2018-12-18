@@ -1,5 +1,5 @@
 ---
-title: BP_CONDITION | Microsoft Docs
+title: BP_CONDITION | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ee951c5bc18fbf92f94f557c5ade4cd7f39159f2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f638fe36131969c50e7572ac36ef54b3ad0d10e0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49873393"
 ---
 # <a name="bpcondition"></a>BP_CONDITION
-Popisuje podmínky, za kterých se aktivuje zarážky.  
+Popisuje podmínky, za kterých mají být zarážky aktivní.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,24 +49,24 @@ public struct BP_CONDITION {
   
 ## <a name="members"></a>Členové  
  `pThread`  
- [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) objekt, který reprezentuje aktivních vláken pro aplikaci, která obsahuje bod přerušení.  
+ [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) objekt představující aktivní vlákno aplikace, který obsahuje zarážku.  
   
  `styleCondition`  
- Hodnota z [BP_COND_STYLE](../../../extensibility/debugger/reference/bp-cond-style.md) výčet popisující styl tuto podmínku zarážek.  
+ Hodnota z [BP_COND_STYLE](../../../extensibility/debugger/reference/bp-cond-style.md) výčet popisující, styl tuto podmínku zarážky.  
   
  `bstrContext`  
- Umístění zarážku.  
+ Umístění zarážky.  
   
  `bstrCondition`  
- Podmínka pálení zarážku.  
+ Stav jeho spuštění k zarážce.  
   
  `nRadix`  
- Základ – který se má použít při vyhodnocování všechny číselné informace.  
+ Základ, který se má použít při hodnocení jakékoli číselné informace.  
   
 ## <a name="remarks"></a>Poznámky  
  Tato struktura je členem skupiny [BP_REQUEST_INFO](../../../extensibility/debugger/reference/bp-request-info.md) a [BP_REQUEST_INFO2](../../../extensibility/debugger/reference/bp-request-info2.md) struktury.  
   
- Tato struktura je také předat jako parametr, který se [SetCondition](../../../extensibility/debugger/reference/idebugboundbreakpoint2-setcondition.md) a [SetCondition](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setcondition.md) metody.  
+ Tato struktura je také předat jako parametr [SetCondition](../../../extensibility/debugger/reference/idebugboundbreakpoint2-setcondition.md) a [SetCondition](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-setcondition.md) metody.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31584136"
 ---
 # <a name="resource-contentions-view---contention-data"></a>Zobrazení kolizí prostředku – Data kolizí
 Zobrazení kolizí prostředku uvádí data kolizí pro prostředky, které byly zdroj kolizní události. Kolizní události nastane, když je funkce ve vlákně vynutit čekání na přístup k prostředku, protože funkce v jiné vlákno má získat výhradní přístup k prostředku. Každý prostředek je kořenový uzel stromu volání, která zobrazuje funkce cesty provádění, jejichž výsledkem kolizní události.  

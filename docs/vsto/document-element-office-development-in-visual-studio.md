@@ -1,5 +1,5 @@
 ---
-title: '&lt;dokument&gt; – Element (vývoj pro Office v sadě Visual Studio) | Microsoft Docs'
+title: '&lt;dokument&gt; – element (vývoj pro Office v sadě Visual Studio)'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -17,18 +17,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0e33e638937a02589a08e3ba2bebf9d3e9aeb1a4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 07d8172ec4e56352c2244aef02d947ac48833ab7
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34447332"
 ---
-# <a name="ltdocumentgt-element-office-development-in-visual-studio"></a>&lt;dokument&gt; – Element (vývoj pro Office v sadě Visual Studio)
+# <a name="ltdocumentgt-element-office-development-in-visual-studio"></a>&lt;dokument&gt; – element (vývoj pro Office v sadě Visual Studio)
   `document` Element `vstov4` obor názvů ukládá informace specifické pro vlastní nastavení pro úpravy na úrovni dokumentů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```xml  
 <document solutionId />  
 ```  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="code"></a>Kód  
   
-```  
+```xml
 <vstov4:document   
   solutionId="73e" />  
 ```  
@@ -56,6 +57,6 @@ ms.lasthandoff: 04/16/2018
 ## <a name="see-also"></a>Viz také  
  [Manifesty aplikace pro řešení pro systém Office](../vsto/application-manifests-for-office-solutions.md)   
  [Manifesty nasazení pro řešení Office](../vsto/deployment-manifests-for-office-solutions.md)   
- [ClickOnce – manifest aplikace ](/visualstudio/deployment/clickonce-application-manifest)  
+ [ClickOnce – manifest aplikace](/visualstudio/deployment/clickonce-application-manifest)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Ladění LINQ | Microsoft Docs
+title: Ladění LINQ | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -21,38 +21,39 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 52b4c9eb74207e966c17a212b9a9181293581297
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 8511c3ac9efd79b712680bfe3f9d5611f3c5aa9c
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349423"
 ---
 # <a name="debugging-linq"></a>Ladění LINQ
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] podporuje ladění jazyka integrované dotazu (LINQ) kód, s omezeními. Funkce nejvíce ladění pracovat s příkazy LINQ, včetně krokování, nastavení zarážek a zobrazení výsledků v ladicím programu windows. Toto téma popisuje hlavní omezení ladění LINQ.  
+[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] podporuje ladění jazyka integrované dotazu kód (LINQ), s určitými omezeními. Většina funkcí ladění pracuje s příkazy LINQ, včetně krokování, nastavení zarážek a zobrazení výsledků v oknech ladicího programu. Toto téma popisuje hlavní omezení ladění LINQ.  
   
 ##  <a name="BKMK_ViewingLINQResults"></a> Zobrazení výsledků LINQ  
- Výsledek příkazu LINQ můžete zobrazit pomocí datatips – okno kukátka a dialogové okno QuickWatch. Použijete-li okno zdroj, je možné pozastavit ukazatele na dotazu v okně zdroje a zobrazí datového tipu. Můžete zkopírovat proměnnou LINQ a vložte jej do kukátko – okno nebo QuickWatch – dialogové okno.  
+ Můžete zobrazit výsledek příkazu LINQ pomocí datových tipů, okna kukátka a dialogového okna rychlého kukátka. Při použití okna zdroje můžete pozastavíte ukazatel myši na dotazu v okně zdroje a zobrazí se datatip. Můžete zkopírovat proměnnou LINQ a vložte ho do okna kukátka nebo dialogového okna rychlého kukátka.  
   
- V technologii LINQ nebude hodnocen dotazu, pokud je vytvořen nebo deklarovat, ale jenom v případě, že se používá dotaz. Dotaz proto nemá hodnotu, dokud je vyhodnocena. Úplný popis vytvoření dotazu a zkušební, najdete v části [Úvod do dotazů LINQ (C#)](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries) nebo [zápis vaše první dotaz LINQ](/dotnet/visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query).  
+ V LINQ dotaz není vyhodnocen při vytváření nebo deklaraci, ale pouze v případě, že tento dotaz se použije. Proto dotaz nemá hodnotu, dokud není vyhodnocen. Úplný popis vytváření a vyhodnocování dotazu naleznete v tématu [Úvod do dotazů LINQ (C#)](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries) nebo [zápis svůj první dotaz LINQ](/dotnet/visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query).  
   
- Pokud chcete zobrazit výsledek dotazu, se musí vyhodnotit ladicího programu ho. Tato implicitní hodnocení, které dojde při zobrazení výsledku dotazu LINQ ladicí program, má některé účinky, které byste měli zvážit:  
+ Pokud chcete zobrazit výsledky dotazu, ladicí program ho musí vyhodnotit. Toto implicitní hodnocení, ke kterému dochází při zobrazení výsledku dotazu LINQ v ladicím programu, má některé efekty, které byste měli zvážit:  
   
--   Každého vyhodnocení dotazu trvá určitou dobu. Rozšíření uzlu výsledky trvá určitou dobu. Pro některé dotazy může způsobit snížení výkonu znatelné opakované vyhodnocení.  
+-   Každé vyhodnocení dotazu trvá určitou dobu. Rozbalení uzlu výsledků trvá určitou dobu. U některých dotazů opakované hodnocení může způsobit znatelné penalizace.  
   
--   Vyhodnocení dotazu může mít za následek vedlejší účinky, které se změní na hodnotu data a stav vašeho programu. Ne všechny dotazy mají vedlejší účinky. Pokud chcete zjistit, zda dotaz může bezpečně vyhodnotit bez vedlejší účinky, musíte pochopit kód, který implementuje dotazu.  
+-   Vyhodnocení dotazu může mít za následek vedlejší účinky, které znamenají změnu hodnoty dat nebo stavu programu. Ne všechny dotazy mají vedlejší účinky. Pokud chcete zjistit, zda dotaz může být bezpečně zhodnocen bez vedlejších účinků, je třeba pochopit kód, který implementuje dotaz.  
   
 ##  <a name="BKMK_SteppingAndLinq"></a> Krokování a LINQ  
- Při ladění kódu LINQ krokování má několik rozdílů chování, které byste měli vědět o.  
+ Když ladíte kód LINQ, krokování má některé behaviorální rozdíly, které byste měli vědět.  
   
 ### <a name="linq-to-sql"></a>Technologie LINQ to SQL  
- V technologii LINQ to SQL dotazy kód predikátem je nad rámec řízení ladicího programu. Proto nelze krok do predikátu kódu. Jakýkoli dotaz kompilovaný na strom výrazu vytvoří kód, který je mimo kontrolu ladicího programu.  
+ V dotazech LINQ to SQL je kód predikátu mimo kontrolu ladicího programu. Proto je nelze krokovat s vnořením přistoupit predikovanému kódu. Jakýkoli dotaz, který kompiluje na strom výrazu vytvoří kód, který je mimo kontrolu ladicího programu.  
   
-### <a name="stepping-in-visual-basic"></a>Krokování s v jazyce Visual Basic  
- Pokud jsou krokování programu Visual Basic a ladicí program zaznamená deklaraci dotazu, není krok do deklaraci, ale označuje celý deklaraci jako jediný příkaz. K tomuto chování dochází, protože dotaz není vyhodnocen, dokud se označuje jako. Další informace najdete v tématu [Úvod do LINQ v jazyku Visual Basic](/dotnet/visual-basic/programming-guide/language-features/linq/introduction-to-linq).  
+### <a name="stepping-in-visual-basic"></a>Krokování v jazyce Visual Basic  
+ Když provádíte krokování pomocí programu Visual Basic a ladicí program zaznamená deklaraci dotazu, nepřikročí deklaraci, ale označí celou deklaraci jako jeden příkaz. K tomuto chování dochází, protože dotaz není vyhodnocen, dokud není volán. Další informace najdete v tématu [Úvod do LINQ v JAZYKU Visual Basic](/dotnet/visual-basic/programming-guide/language-features/linq/introduction-to-linq).  
   
- Pokud projděte následující příklad kódu, jsou vysvětlené deklarace dotazu nebo vytvoření dotazu jako jediný příkaz ladicího programu.  
+ Pokud projdete následující ukázkový kód, ladicí program zvýrazní deklaraci dotazu nebo vytvoření dotazu jako jeden příkaz.  
   
-```  
+```vb
 Function MyFunction(ByVal x As Char)  
     Return True  
 End Function  
@@ -70,12 +71,12 @@ Sub Main()
 End Sub  
 ```  
   
- Když krok znovu ladicího programu označuje `For Each cur In x`. V dalším kroku kroky do funkce `MyFunction`. Po procházení `MyFunction`, ho přejde zpět na `Console.WriteLine(cur.ToSting())`. Na žádný bod ho krok prostřednictvím predikátem kódu v deklaraci dotazu, i když ladicího programu vyhodnotit tento kód.  
+ Při následném kroku ladicí program zvýrazní `For Each cur In x`. V dalším kroku se přejde k funkci `MyFunction`. Po průchodu `MyFunction`, bude proveden návrat na `Console.WriteLine(cur.ToSting())`. V žádném bodě ho krokovat kód predikátu v deklaraci dotazu, i když ladicí program daný kód hodnotí.  
   
-### <a name="replacing-a-predicate-with-a-function-to-enable-stepping-visual-basic"></a>Nahraďte predikát funkce umožňující taktování (Visual Basic)  
- Pokud máte na krok prostřednictvím predikátem kódu pro účely ladění, můžete nahradit predikát volání funkce, která obsahuje původní kód predikátem. Předpokládejme například, že máte tento kód:  
+### <a name="replacing-a-predicate-with-a-function-to-enable-stepping-visual-basic"></a>Nahrazení predikátu za funkci umožňující taktování (Visual Basic)  
+ Pokud máte krokovat kód predikátu pro účely ladění, můžete nahradit predikát voláním funkce, která obsahuje původní kód predikátu. Předpokládejme například, že máte tento kód:  
   
-```  
+```vb
 Dim items() as integer ={1, 2, 3, 4, 5, 6, 7, 8, 9, 10}  
   
 ' Get the even numbers  
@@ -86,9 +87,9 @@ For each item in query
 Next  
 ```  
   
- Nové funkce, volá se můžete přesunout kód predikátem `IsEven`:  
+ Predikátu kódu můžete přesunout na novou funkci nazvanou `IsEven`:  
   
-```  
+```vb
 Dim items () as integer ={1, 2, 3, 4, 5, 6, 7, 8, 9, 10}  
   
 ' Get the even numbers  
@@ -103,13 +104,14 @@ Function IsEven(item As =Integer) as Boolean
 End Function  
 ```  
   
- Revidované dotaz volá funkci `IsEven` při každém průchodu přes `items`. Ladicí program windows můžete použít zda každá položka splňuje zadanou podmínku, a můžete krokovat kód v `IsEven`. Predikát v tomto příkladu je docela jednoduché. Ale pokud budete mít predikát obtížnější, které máte k ladění, tato technika může být velmi užitečné.  
+ Upravený dotaz volá funkci `IsEven` na každém průchodu přes `items`. Můžete použít okna ladicího programu zda každá položka splňuje zadanou podmínku a krokovat kód v `IsEven`. Predikát v tomto příkladu je poměrně jednoduché. Nicméně pokud máte složitější predikát, který je třeba ladit, tato technika může být velmi užitečné.  
   
 ##  <a name="BKMK_EditandContinueNotSupportedforLINQ"></a> Upravit a pokračovat není podporována pro LINQ  
- Upravit a pokračovat, podporuje změny dotazů LINQ s omezeními. Podrobnosti najdete v tématu [Šif podporované změny](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits))
+ Upravit a pokračovat podporuje změny dotazů LINQ s omezeními. Podrobnosti najdete v tématu [EnC nepodporuje změny](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits))
   
-## <a name="see-also"></a>Viz také  
- [Ladění SQL](http://msdn.microsoft.com/en-us/f27c17e6-1d90-49f2-9fc0-d02e6a27f109)    
- [Správa výjimek pomocí ladicího programu](../debugger/managing-exceptions-with-the-debugger.md)   
- [Úvod do dotazů LINQ (C#)](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries)   
- [Úvod do LINQ v jazyku Visual Basic](/dotnet/visual-basic/programming-guide/language-features/linq/introduction-to-linq)
+## <a name="see-also"></a>Viz také
+
+- [Ladění SQL](/previous-versions/visualstudio/visual-studio-2010/zefbf0t6\(v\=vs.100\))
+- [Správa výjimek pomocí ladicího programu](../debugger/managing-exceptions-with-the-debugger.md)
+- [Úvod do dotazů LINQ (C#)](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries)
+- [Úvod do LINQ v JAZYKU Visual Basic](/dotnet/visual-basic/programming-guide/language-features/linq/introduction-to-linq)

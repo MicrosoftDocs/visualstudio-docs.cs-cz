@@ -1,5 +1,5 @@
 ---
-title: Přidání příkazů sady Visual Studio na úvodní stránku | Microsoft Docs
+title: Přidání příkazů sady Visual Studio na úvodní stránku | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,32 +14,33 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 87a5e6d29877efb857b846a7b3fac5f19f790d7c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 22ae9ebb5e9acb3fa1787f2af3b0fbb159c1485d
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39153628"
 ---
-# <a name="adding-visual-studio-commands-to-a-start-page"></a>Přidání příkazů sady Visual Studio na úvodní stránky
-Když vytvoříte vlastní úvodní stránky, můžete do něj může přidat příkazy sady Visual Studio. Tento dokument popisuje různé způsoby, jak vytvořit vazbu příkazy sady Visual Studio na objekty XAML na úvodní stránce.  
+# <a name="add-visual-studio-commands-to-a-start-page"></a>Přidání příkazů sady Visual Studio pro úvodní stránku
+Když vytvoříte vlastní úvodní stránky, můžete přidat příkazy sady Visual Studio k němu. Tento dokument popisuje různé způsoby, jak svázat objekty XAML na úvodní stránce příkazy sady Visual Studio.  
   
- Další informace o příkazech v jazyce XAML najdete v tématu [tvorba příkazů – přehled](/dotnet/framework/wpf/advanced/commanding-overview)  
+ Další informace o příkazech v XAML najdete v tématu [Commanding přehled](/dotnet/framework/wpf/advanced/commanding-overview)  
   
-## <a name="adding-commands-from-the-command-well"></a>Přidání příkazů z příkazu dobře  
- Úvodní stránky vytvořené v [vytváření vlastní – úvodní stránka](../extensibility/creating-a-custom-start-page.md) přidat <xref:Microsoft.VisualStudio.PlatformUI?displayProperty=fullName> a <xref:Microsoft.VisualStudio.Shell?displayProperty=fullName> obory názvů, následujícím způsobem.  
+## <a name="add-commands-from-the-command-well"></a>Přidání příkazů z příkazu dobře  
+ Úvodní stránka vytvořené v [vytvořit vlastní úvodní stránky](../extensibility/creating-a-custom-start-page.md) přidán <xref:Microsoft.VisualStudio.PlatformUI?displayProperty=fullName> a <xref:Microsoft.VisualStudio.Shell?displayProperty=fullName> obory názvů, následujícím způsobem.  
   
 ```  
 xmlns:vs="clr-namespace:Microsoft.VisualStudio.PlatformUI;assembly=Microsoft.VisualStudio.Shell.14.0"  
 xmlns:vsfx="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.14.0"  
 ```  
   
- Přidejte jiný obor názvů pro Microsoft.VisualStudio.Shell ze sestavení Microsoft.VisualStudio.Shell.Immutable.11.0.dll. (Možná bude muset přidat odkaz na toto sestavení v projektu.)  
+ Přidat jiný obor názvů pro Microsoft.VisualStudio.Shell ze sestavení *Microsoft.VisualStudio.Shell.Immutable.11.0.dll*. (Budete muset přidat odkaz na toto sestavení v projektu.)  
   
 ```xml  
 xmlns:vscom="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.VisualStudio.Shell.Immutable.11.0"  
 ```  
   
- Můžete použít `vscom:` alias pro vazbu příkazy sady Visual Studio XAML ovládací prvky na stránce nastavením <xref:System.Windows.Controls.Primitives.ButtonBase.Command%2A> vlastnost ovládacího prvku na `vscom:VSCommands.ExecuteCommand`. Pak můžete nastavit <xref:System.Windows.Controls.Primitives.ButtonBase.CommandParameter%2A> vlastnost na název provedení příkazu, jak je znázorněno v následujícím příkladu.  
+ Můžete použít `vscom:` alias vytvoření vazby mezi příkazy sady Visual Studio XAML ovládací prvky na stránce nastavení <xref:System.Windows.Controls.Primitives.ButtonBase.Command%2A> vlastnost ovládacího prvku na `vscom:VSCommands.ExecuteCommand`. Pak můžete nastavit <xref:System.Windows.Controls.Primitives.ButtonBase.CommandParameter%2A> nastavte název příkazu ke spuštění, jak je znázorněno v následujícím příkladu.  
   
 ```xml  
 <Button Name="btnNewProj" Content="New Project"   
@@ -49,11 +50,11 @@ xmlns:vscom="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.Visua
 ```  
   
 > [!NOTE]
->  `x:` Alias, který odkazuje schématu XAML, není třeba na začátku všechny příkazy.  
+>  `x:` Alias, který odkazuje na schématu XAML, se vyžaduje na začátku všechny příkazy.  
   
- Můžete nastavit hodnotu `Command` vlastnost na libovolný příkaz, který je přístupný z **příkaz** okno. Seznam dostupných příkazů najdete v tématu [aliasy příkazů Visual Studio](../ide/reference/visual-studio-command-aliases.md).  
+ Můžete nastavit hodnotu `Command` vlastnost jakýkoli příkaz, který je přístupný z **příkaz** okna. Seznam dostupných příkazů najdete v tématu [aliasy příkazů sady Visual Studio](../ide/reference/visual-studio-command-aliases.md).  
   
- Pokud příkaz pro přidání vyžaduje další parametr, můžete ho přidat na hodnotu `CommandParameter` vlastnost. Samostatné parametry z příkazů pomocí mezer, jak je znázorněno v následujícím příkladu.  
+ Pokud příkaz pro přidání vyžaduje další parametr, můžete ho přidat do hodnoty vlastnosti `CommandParameter` vlastnost. Oddělené parametry z příkazů pomocí mezer, jak je znázorněno v následujícím příkladu.  
   
 ```xml  
 <Button Content="Web Search"   
@@ -61,26 +62,26 @@ xmlns:vscom="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.Visua
         CommandParameter="View.WebBrowser www.bing.com" />  
 ```  
   
-### <a name="calling-extensions-from-the-command-well"></a>Volání metody rozšíření z příkazu dobře  
- Příkazy můžete volat z registrovaných VSPackages pomocí stejné syntaxi, která se používá k volání další příkazy sady Visual Studio. Například, pokud přidá nainstalované VSPackage **domovskou stránku** příkaz **zobrazení** nabídky, tento příkaz můžete volat nastavením `CommandParameter` k `View.HomePage`.  
+### <a name="call-extensions-from-the-command-well"></a>Dobře volání rozšíření z příkazu  
+ Příkazy můžete volat z registrovaných rozšíření VSPackages pomocí stejné syntaxe, která slouží k volání jiné příkazy sady Visual Studio. Například, pokud nainstalovaný balíček VSPackage správy kódu přidá **domovskou stránku** příkaz **zobrazení** nabídku, můžete volat příkaz tak, že nastavíte `CommandParameter` k `View.HomePage`.  
   
 > [!NOTE]
->  Když zavoláte příkaz, který je přidružen VSPackage, musí balíček načíst při vyvolání příkazu.  
+>  Pokud zavoláte příkaz, který je přidružený k VSPackage, musí být balíček načíst při vyvolání příkazu.  
   
-## <a name="adding-commands-from-assemblies"></a>Přidání příkazů ze sestavení  
- Příkaz volat z sestavení nebo na přístupový kód ve VSPackage, který není spojen s příkazu nabídky, musíte vytvořit alias pro sestavení a pak zavolají alias.  
+## <a name="add-commands-from-assemblies"></a>Přidání příkazů ze sestavení  
+ Volání příkazu ze sestavení nebo na přístupový kód v sadě VSPackage, která nejsou spojena s příkaz nabídky, musíte vytvořit alias pro sestavení a poté zavolejte alias.  
   
-#### <a name="to-call-a-command-from-an-assembly"></a>Volání příkazu ze sestavení  
+### <a name="to-call-a-command-from-an-assembly"></a>Volání příkazu ze sestavení  
   
-1.  Ve vašem řešení přidáte odkaz na sestavení.  
+1.  Ve vašem řešení přidejte odkaz na sestavení.  
   
-2.  V horní části souboru StartPage.xaml přidáte direktivu obor názvů pro sestavení, jak je znázorněno v následujícím příkladu.  
+2.  V horní části *StartPage.xaml* souboru přidejte direktivu oboru názvů pro sestavení, jak je znázorněno v následujícím příkladu.  
   
     ```xml  
     xmlns:vsc="clr-namespace:WebUserControl;assembly=WebUserControl"  
     ```  
   
-3.  Vyvolat příkaz nastavením `Command` vlastnost objektu XAML, jak je znázorněno v následujícím příkladu.  
+3.  Vyvolat příkaz tak, že nastavíte `Command` vlastnosti objektu XAML, jak je znázorněno v následujícím příkladu.  
   
      XAML  
   
@@ -89,12 +90,12 @@ xmlns:vscom="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.Visua
     ```  
   
 > [!NOTE]
->  Vaše sestavení zkopírujte a vložte jej do... \\ *Instalační složka nástroje visual Studio*\Common7\IDE\PrivateAssemblies\ a ujistěte se, je načtena, než je volána.  
+>  Musíte zkopírovat sestavení a vložte jej do *.. \\{Instalační složky sady visual Studio} \Common7\IDE\PrivateAssemblies\* k Ujistěte se, že je načteno předtím, než je volána.  
   
-## <a name="adding-commands-with-the-dte-object"></a>Přidání příkazů s objektem DTE  
- Objekt DTE můžete přistupovat z spuštění stránky, jak v značek a kódu.  
+## <a name="add-commands-with-the-dte-object"></a>Přidání příkazů s objekt DTE  
+ Objekt DTE můžete přistupovat z úvodní stránku značek a kódu.  
   
- V kódu, můžete k němu přístup pomocí [vazby – rozšíření značek](/dotnet/framework/wpf/advanced/binding-markup-extension) syntaxi pro volání <xref:EnvDTE.DTE> objektu. Tento postup můžete použít k vytvoření vazby jednoduché vlastnosti, jako jsou ty, které vrací kolekce, ale nemůže vytvořit vazbu k metody nebo služby. Následující příklad ukazuje <xref:System.Windows.Controls.TextBlock> řízení, která se sváže s <xref:EnvDTE._DTE.Name%2A> vlastnost a <xref:System.Windows.Controls.ListBox> ovládací prvek, který se zobrazí <xref:EnvDTE.Window.Caption%2A> vlastnosti kolekce, který je vrácen <xref:EnvDTE._DTE.Windows%2A> vlastnost.  
+ V kódu, můžete k němu přístup s použitím [vazby – rozšíření značek](/dotnet/framework/wpf/advanced/binding-markup-extension) syntaxi pro volání <xref:EnvDTE.DTE> objektu. Tento přístup můžete použít k vytvoření vazby na jednoduché vlastnosti, jako jsou ty, které vracejí kolekce, ale nelze vytvořit vazbu s metod nebo služeb. Následující příklad ukazuje <xref:System.Windows.Controls.TextBlock> ovládací prvek, který se váže k <xref:EnvDTE._DTE.Name%2A> vlastnost a <xref:System.Windows.Controls.ListBox> ovládací prvek, který vytvoří výčet <xref:EnvDTE.Window.Caption%2A> vlastnosti kolekce, který je vrácen <xref:EnvDTE._DTE.Windows%2A> vlastnost.  
   
 ```xml  
 <TextBlock Text="{Binding Path=DTE.Name}" FontSize="12" HorizontalAlignment="Center"/>  
@@ -107,7 +108,7 @@ xmlns:vscom="clr-namespace:Microsoft.VisualStudio.Shell;assembly=Microsoft.Visua
 </ListBox  
 ```  
   
- Příklad, naleznete v části [návod: ukládání nastavení uživatele na stránce Start](../extensibility/walkthrough-saving-user-settings-on-a-start-page.md).  
+ Příklad najdete v tématu [návod: ukládání uživatelských nastavení na úvodní stránce](../extensibility/walkthrough-saving-user-settings-on-a-start-page.md).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Přidání uživatelského ovládacího prvku na úvodní stránku](../extensibility/adding-user-control-to-the-start-page.md)

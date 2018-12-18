@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: odkazování na oblasti listů v kódu programu | Microsoft Docs'
+title: 'Postupy: odkazování na oblasti listů v kódu programu'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,46 +18,47 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 68845904a349a94df6ee09c05ca262434b847bbc
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 608ce006ccc34330631da8d4c947405b027f1a1f
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35676040"
 ---
-# <a name="how-to-programmatically-refer-to-worksheet-ranges-in-code"></a>Postupy: Odkazování na oblasti listů v kódu programu
-  Použít podobným způsobem jako odkazy na obsah <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek nebo objekt rozsahu nativní aplikace Excel.  
+# <a name="how-to-programmatically-refer-to-worksheet-ranges-in-code"></a>Postupy: odkazování na oblasti listů v kódu programu
+  Použijte podobný proces k odkazování na obsah <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek nebo rozsah objekt nativní aplikace Excel.  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
-## <a name="using-a-namedrange-control"></a>Použití ovládacího prvku NamedRange  
+## <a name="use-a-namedrange-control"></a>Použití ovládacího prvku NamedRange  
  Následující příklad přidá <xref:Microsoft.Office.Tools.Excel.NamedRange> do listu a potom přidá text do buňky v rozsahu.  
   
-#### <a name="to-refer-to-a-namedrange-control"></a>K odkazování na ovládacího prvku NamedRange  
+### <a name="to-refer-to-a-namedrange-control"></a>O ovládacím prvkem namedrange  
   
-1.  Přiřadit řetězec tak, aby <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> vlastnost <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacího prvku. Tento kód musí být umístěny v listu třída, není v `ThisWorkbook` třídy.  
+1.  Přiřadit řetězec <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> vlastnost <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacího prvku. Tento kód musí být umístěn ve třídě list, není v `ThisWorkbook` třídy.  
   
      [!code-csharp[Trin_VstcoreExcelAutomation#46](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#46)]
      [!code-vb[Trin_VstcoreExcelAutomation#46](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#46)]  
   
-## <a name="using-native-excel-ranges"></a>Pomocí nativní oblastí aplikace Excel  
- Následující příklad přidá rozsah nativní aplikace Excel do listu, pak přidá text do buňky v rozsahu.  
+## <a name="use-native-excel-ranges"></a>Použít nativní oblastí aplikace Excel  
+ Následující příklad přidá nativní Excelového rozsahu do listu a potom přidá text do buňky v rozsahu.  
   
-#### <a name="to-refer-to-a-native-range-object"></a>Odkazovat na objekt nativní rozsahu  
+### <a name="to-refer-to-a-native-range-object"></a>Pro odkazování na objekt nativní rozsahu  
   
-1.  Přiřadit řetězec tak, aby <xref:Microsoft.Office.Interop.Excel.Range.Value2%2A> vlastnost rozsahu.  
+1.  Přiřadit řetězec <xref:Microsoft.Office.Interop.Excel.Range.Value2%2A> vlastnost rozsahu.  
   
      [!code-csharp[Trin_VstcoreExcelAutomation#47](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#47)]
      [!code-vb[Trin_VstcoreExcelAutomation#47](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#47)]  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Práce s oblastmi](../vsto/working-with-ranges.md)   
  [Postupy: Kontrola pravopisu v listech prostřednictvím kódu programu](../vsto/how-to-programmatically-check-spelling-in-worksheets.md)   
- [Postupy: programové používání stylů pro oblasti sešitů](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)   
- [Postupy: programové automatické naplňování oblastí s přírůstkově se měnícími daty](../vsto/how-to-programmatically-automatically-fill-ranges-with-incrementally-changing-data.md)   
+ [Postupy: používání stylů pro oblasti sešitů prostřednictvím kódu programu](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)   
+ [Postupy: programové automatické vyplnění oblastí s přírůstkově se měnícími daty](../vsto/how-to-programmatically-automatically-fill-ranges-with-incrementally-changing-data.md)   
  [Postupy: hledání textu v oblastech listů prostřednictvím kódu programu](../vsto/how-to-programmatically-search-for-text-in-worksheet-ranges.md)   
- [NamedRange – ovládací prvek](../vsto/namedrange-control.md)   
+ [Namedrange – ovládací prvek](../vsto/namedrange-control.md)   
  [Přehled ovládacích prvků hostitele a hostitelské položky](../vsto/host-items-and-host-controls-overview.md)   
  [Programová omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
- [Volitelné parametry v řešeních pro systém Office](../vsto/optional-parameters-in-office-solutions.md)  
+ [Volitelné parametry v řešeních pro systém Office](../vsto/optional-parameters-in-office-solutions.md)  
   
   

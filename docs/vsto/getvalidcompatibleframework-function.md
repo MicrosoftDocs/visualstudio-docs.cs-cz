@@ -1,5 +1,5 @@
 ---
-title: Getvalidcompatibleframework – funkce | Microsoft Docs
+title: Getvalidcompatibleframework – funkce
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -13,32 +13,32 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b28587b44dd98630538bc8d6d04c5bc6049e3ca9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8cc16544df224e09724cae8a1f09f72039cb61e5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49894492"
 ---
-# <a name="getvalidcompatibleframework-function"></a>GetValidCompatibleFramework – funkce
-  Toto rozhraní API podporuje infrastrukturu rozhraní Office a není určena pro použití přímo z vašeho kódu.  
-  
+# <a name="getvalidcompatibleframework-function"></a>Getvalidcompatibleframework – funkce
+  Toto rozhraní API podporuje infrastrukturu sady Office a není určena pro použití přímo v kódu.  
+
 ## <a name="syntax"></a>Syntaxe  
-  
-```  
+
+```csharp 
 HRESULT WINAPI GetValidCompatibleFramework(  
     LPCWSTR lpwszCompatibleFrameworksXML,  
     BSTR* pbstrValidFrameworkTag  
 );  
 ```  
-  
-#### <a name="parameters"></a>Parametry  
-  
+
+### <a name="parameters"></a>Parametry  
+
 |Parametr|Popis|  
 |---------------|-----------------|  
 |*lpwszCompatibleFrameworksXML*|Nepoužívejte.|  
 |*pbstrValidFrameworkTag*|Nepoužívejte.|  
-  
+
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud funkci úspěšné, vrátí **S_OK**. Pokud se funkce nezdaří, vrátí kód chyby.  
-  
-  
+ Pokud funkce uspěje, vrátí **S_OK**. Pokud funkce selže, vrátí kód chyby.  
+

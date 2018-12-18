@@ -1,5 +1,5 @@
 ---
-title: Přidávání adresářů do dialogového okna Nový projekt | Microsoft Docs
+title: Přidávání adresářů do dialogového okna Nový projekt | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,20 +13,21 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c4ad992785fdf8ab5ffdd3faa7043e2a0ee5411b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5c8686a34f52c7dc2e6c96b602811d7e12a6a7e6
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39500784"
 ---
-# <a name="adding-directories-to-the-new-project-dialog-box"></a>Přidávání adresářů do dialogového okna Nový projekt
-Když vytvoříte nové typy projektů, také můžete zaregistrovat nový adresář v **nový projekt** dialogové okno pro zobrazení je pro použití jako šablony. Následující příklad kódu vysvětluje, jak zaregistrovat nový adresář, také známé jako uzel. V příkladu je zaregistrovaný vystavené VSPackage CLSID_Package šablony. V důsledku toho, na levé straně **nový projekt** dialogové okno nabízí přidané uzel s názvem dáno Folder_Label_ResID prostředků. Tento prostředek je načten z VSPackage satelitní knihovny DLL.  
+# <a name="add-directories-to-the-new-project-dialog-box"></a>Přidat adresářů do dialogového okna Nový projekt
+Při vytváření nových typů projektů také můžete zaregistrovat nový adresář v **nový projekt** dialogové okno se zobrazí pro použití jako šablony. Následující příklad vysvětluje, jak zaregistrovat nový adresář, označované také jako uzel. V tomto příkladu šablony vystavené sady VSPackage *CLSID_Package*, jsou registrované. V důsledku toho na levé straně **nový projekt** dialogové okno nabízí přidání uzel s názvem určené *Folder_Label_ResID* prostředků. Tento prostředek je načtena z balíčku VSPackage satelitní knihovny DLL.  
   
- **Složky** hodnota představuje identifikátor GUID do složky, ve kterém se zobrazí Folder_Label_ResID uzlu. V příkladu představuje identifikátor GUID **ostatní projekty** složku **typy projektů** podokně **nový projekt** dialogové okno. Pokud **ostatní projekty** chybí hodnota, je štítek nastavený na nejvyšší úrovni.  
+ **Složky** hodnota představuje GUID složky pod kterým *Folder_Label_ResID* uzel se zobrazí. V tomto příkladu představuje identifikátor GUID **ostatní projekty** složky **typy projektů** podokně **nový projekt** dialogové okno. Pokud **ostatní projekty** chybí hodnota, popisek je umístěn na nejvyšší úrovni.  
   
- Hodnota TemplatesDir Určuje úplnou cestu k adresáři, obsahuje šablony projektu. Tyto soubory mohou být soubory .vsz nebo soubory typické šablony se dají klonovat.  
+ `TemplatesDir` Hodnota určuje úplnou cestu adresáře, který obsahuje šablony projektů. Tyto soubory mohou být buď *.vsz* soubory nebo soubory šablon typické ke klonování.  
   
- Pokud zadáte TemplatesLocalizedSubDir, musí být řetězec, který názvy podadresáři TemplatesDir, který obsahuje lokalizované šablony ID prostředku. Protože [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] načte řetězec prostředku z satelitní knihovny DLL Pokud ji máte, každý satelitní knihovny DLL může obsahovat podadresáři jiný název. Hodnota SortPriority určuje řazení prioritu.  
+ Pokud zadáte `TemplatesLocalizedSubDir`, musí být ID prostředku řetězce, který pojmenovává podadresáři `TemplatesDir` , který obsahuje lokalizované šablony. Protože [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] načte prostředek řetězce ze satelitní knihovny DLL, máte-li každý satelitní knihovny DLL může obsahovat název jiné podadresáře. `SortPriority` Hodnota určuje prioritu třídění.  
   
 ```  
 NoRemove NewProjectTemplates  
@@ -47,7 +48,7 @@ NoRemove NewProjectTemplates
 }  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Registrace šablon projektů a položek](../../extensibility/internals/registering-project-and-item-templates.md)   
- [Přidávání položek do pro přidání nové položky dialogových oken](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)   
- [Přidávání adresářů do dialogového okna Přidat novou položku](../../extensibility/internals/adding-directories-to-the-add-new-item-dialog-box.md)
+ [Přidání položek do dialogových oken přidat novou položku](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)   
+ [Přidat adresářů do dialogového okna Přidat novou položku](../../extensibility/internals/adding-directories-to-the-add-new-item-dialog-box.md)

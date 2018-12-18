@@ -1,5 +1,5 @@
 ---
-title: JMC_CODE_SPEC | Microsoft Docs
+title: JMC_CODE_SPEC | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d3abf59cb55bd64004750be7b24e00e42eb79d9e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b24c052bc3345443e8bcbe474f881906f420a74c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49821705"
 ---
 # <a name="jmccodespec"></a>JMC_CODE_SPEC
-Tato struktura slouží k nastavení informací o JustMyCode pro modul.  
+Tato struktura se používá k nastavení JustMyCode informace pro modul.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,13 +43,13 @@ public struct JMC_CODE_SPEC {
   
 ## <a name="members"></a>Členové  
  fIsUserCode  
- Nenulová (`TRUE`), pokud modul se za uživatelského kódu; jinak hodnotu (`FALSE`) Pokud je modul jsou považovány za externí kódu a není chcete ladit.  
+ Nenulová (`TRUE`), pokud modul považovat uživatelského kódu; v opačném případě hodnotu (`FALSE`) Pokud modul je považován za externí kód a není k ladění.  
   
  bstrModuleName  
- Název modulu v.  
+ Název modulu nejistá.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura je předán jako seznam těchto struktur [SetJustMyCodeState](../../../extensibility/debugger/reference/idebugengine3-setjustmycodestate.md) metoda.  
+ Tato struktura je předán jako seznam struktur pro [SetJustMyCodeState](../../../extensibility/debugger/reference/idebugengine3-setjustmycodestate.md) metody.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_oemsymbolid – | Microsoft Docs
+title: Idiasymbol::get_oemsymbolid – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bc15bd3a20d37fa8624593820215df1583498a03
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: d3b15cbfc289a88059960603159db3a7d57fd011
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49917164"
 ---
 # <a name="idiasymbolgetoemsymbolid"></a>IDiaSymbol::get_oemSymbolId
-Načte hodnotu ID symbol výrobce (OEM).  
+Načte hodnotu ID symbol výrobce OEM (OEM).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,18 +34,18 @@ HRESULT get_oemSymbolId (
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí výrobce OEM interně přiřazené symbolů ID.  
+ [out] Vrátí interně přiřazené výrobce OEM symbol ID.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` nebo chybový kód.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
->  Vrácená hodnota `S_FALSE` znamená vlastnost není k dispozici pro symbol.  
+>  Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="remarks"></a>Poznámky  
- Identifikátor je jedinečný hodnota vytvořené DIA SDK k označení všechny symboly jako jedinečný.  
+ Identifikátor je jedinečná hodnota vytvořené DIA SDK označit všechny symboly jako jedinečný.  
   
- Tato vlastnost se vztahuje pouze na symboly s [SymTagEnum – výčet](../../debugger/debug-interface-access/symtagenum.md) typ `SymTagCustomType`.  
+ Tato vlastnost se týká jenom pro symboly s [symtagenum – výčet](../../debugger/debug-interface-access/symtagenum.md) typ `SymTagCustomType`.  
   
 ## <a name="see-also"></a>Viz také  
  [Idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md)   

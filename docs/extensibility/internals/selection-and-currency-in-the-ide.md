@@ -1,5 +1,5 @@
 ---
-title: Výběr a měny v prostředí IDE | Microsoft Docs
+title: Výběr a Měna v prostředí IDE | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,54 +16,55 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bf8c58cb08f82b10970424600843b0fedcf477fc
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f71a176d469a5cd71aa377c800516e743eb1cc15
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49840568"
 ---
-# <a name="selection-and-currency-in-the-ide"></a>Výběr a měny v prostředí IDE
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Integrované vývojové prostředí (IDE) udržuje informace o uživatelů aktuálně vybrané objekty pomocí výběr *kontextu*. S kontextem výběr VSPackages lze použít při měna sledování dvěma způsoby:  
+# <a name="selection-and-currency-in-the-ide"></a>Výběr a měna v prostředí IDE
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Integrované vývojové prostředí (IDE) uchovává informace o uživatelích aktuálně vybrané objekty s použitím výběru *kontextu*. Výběr kontextu rozšíření VSPackages dá využít v místní měně sledování dvěma způsoby:  
   
--   Pomocí šíření měna informace o VSPackages k prostředí IDE.  
+-   Pomocí šíření měny informace o rozšíření VSPackages rozhraní IDE.  
   
--   Sledováním aktuálně aktivní výběr uživatelů v rámci rozhraní IDE.  
+-   Díky monitorování výběry aktuálně aktivních uživatelů v rámci rozhraní IDE.  
   
-## <a name="selection-context"></a>Výběr kontextu  
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE globálně uchovává informace o IDE měny v jeho vlastní globální výběr kontextu objektu. Následující tabulka uvádí prvky, které tvoří kontext výběr.  
+## <a name="selection-context"></a>Kontext výběru  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE globálně uchovává informace o měně integrovaného vývojového prostředí ve své vlastní objekt kontextu globálního výběru. Následující tabulka uvádí prvky, které tvoří kontext výběru.  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|Aktuální hierarchie|Obvykle aktuálním projektu. hierarchie aktuální hodnota NULL znamená, že je aktuální řešení jako celek.|  
-|Aktuální ItemID|Vybrané položky v rámci aktuální hierarchii; Pokud existuje více výběrů, v okně projektu, může být více aktuální položky.|  
-|Aktuální `SelectionContainer`|Obsahuje jeden nebo více objektů, pro které by měl v okně Vlastnosti zobrazí vlastnosti.|  
+|Aktuální hierarchií|Obvykle aktuálním projektu. aktuální hierarchií NULL znamená, že je aktuální řešení jako celek.|  
+|ID aktuální položky|Vybranou položku v rámci aktuální hierarchii. Pokud existuje více výběrů, v okně projektu, může být více aktuální položky.|  
+|aktuální `SelectionContainer`|Obsahuje jeden nebo více objektů, u kterých by měl zobrazit v okně Vlastnosti vlastnosti.|  
   
- Kromě toho prostředí udržuje dva globálních seznamů:  
+ Kromě toho prostředí udržuje dvě globální seznamy:  
   
--   Seznam identifikátorů příkaz active uživatelského rozhraní  
+-   Seznam identifikátorů aktivní příkaz uživatelského rozhraní  
   
--   Seznam typů element momentálně aktivní.  
+-   Seznam typů aktuálně aktivním prvkem.  
   
 ### <a name="window-types-and-selection"></a>Typy oken a výběr  
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE organizuje windows na dvě obecné typy:  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Integrovaném vývojovém prostředí slouží k uspořádání windows na dvě obecné typy:  
   
--   Typ hierarchie windows  
+- Typ hierarchie windows  
   
--   Okna s rámečkem, jako je například nástroje a okna dokumentu  
+- Oken s rámečkem, jako je například oken nástrojů a dokumentu  
   
- Prostředí IDE sleduje měna odlišně pro každou z těchto typů okno.  
+  Rozhraní IDE sleduje měny odlišně pro každý z těchto typů okna.  
   
- Okno nejběžnější typu projektu je Průzkumníku řešení, který řídí rozhraní IDE. Okno typu projektu sleduje globální hierarchie a ItemID globální výběr kontextu a okna spoléhá na výběr uživatele k určení aktuální hierarchii. Pro typ projektu windows prostředí poskytuje globální služby <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection>, přes které VSPackages můžete sledovat aktuální hodnoty otevřete elementy. Vlastnost procházení v prostředí vycházejí z této globální služby.  
+  Okno nejběžnější typ projektu je Průzkumníku řešení, které řídí integrovaného vývojového prostředí. Okno typu projektu sleduje globální hierarchie a ItemID globální výběr kontextu a v okně spoléhá na výběru uživatele k určení aktuální hierarchií. Pro typ projektu windows prostředí poskytuje globální službu <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection>, pomocí které rozšíření VSPackages můžete monitorovat aktuální hodnoty pro otevřené elementy. V prostředí pro procházení vlastností doprovází této globální služby.  
   
- Okna s rámečkem na druhé straně, použijte DocObject v okně s rámečkem tak, aby nabízel SelectionContext hodnoty (hierarchie nebo ItemID nebo SelectionContainer trojici komponent). . Okna s rámečkem používat službu <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> pro tento účel. DocObject můžete posouvat pouze hodnoty pro výběr kontejner, a místní hodnoty pro hierarchii a ItemID beze změny, jako je typický pro dokumenty podřízeného MDI.  
+  Oken s rámečkem na druhé straně vytisknout tak, aby nabízel SelectionContext hodnoty (hierarchie/ItemID/SelectionContainer trojici komponent) použít v rámci okna rámce. . Použití oken s rámečkem služby <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> pro tento účel. Vytisknout lze vkládat pouze hodnoty pro zásobník pro výběr, byste museli opustit místní hodnoty pro hierarchii a ItemID beze změny, jako je typický pro dokumenty podřízeného MDI.  
   
 ### <a name="events-and-currency"></a>Události a měny  
- Může dojít dva typy událostí, které mají vliv prostředí představu o měna:  
+ Může dojít k dva typy událostí, které mají vliv prostředí pojem měny:  
   
--   Události, které se rozšíří na globální úrovni a změna kontextu výběr rámce okna. Tento druh událostí příklady okno s podřízeného MDI se otevřít okno globální nástroj otevíráte nebo okno nástroje typu projektu otevíráte.  
+-   Události, které se rozšíří na globální úrovni a změňte výběr kontextu okna rámce. Tento druh událostí příklady podřízené okno MDI otevře, otevíraný panel globální nástrojů nebo panelu nástrojů typ projektu se otevře.  
   
--   Události, které změnu prvků trasovat v kontextu výběr rámce okna. Mezi příklady patří změna výběru v rámci DocObject nebo změna výběru v okně typu projektu.  
+-   Události, které prvky trasovány v rámci okna rámce výběru změnit. Mezi příklady patří změna výběru v rámci DocObject nebo změna výběru v okně Typ projektu.  
   
 ## <a name="see-also"></a>Viz také  
- [Výběr objektů kontextu](../../extensibility/internals/selection-context-objects.md)   
+ [Kontextové objekty výběru](../../extensibility/internals/selection-context-objects.md)   
  [Zpětná vazba pro uživatele](../../extensibility/internals/feedback-to-the-user.md)

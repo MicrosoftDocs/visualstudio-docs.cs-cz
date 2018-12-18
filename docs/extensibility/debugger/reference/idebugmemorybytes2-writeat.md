@@ -1,5 +1,5 @@
 ---
-title: IDebugMemoryBytes2::WriteAt | Microsoft Docs
+title: IDebugMemoryBytes2::WriteAt | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4d1d79d88baf9688fe68ff44d59dcd4d19baf9f8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a2d164f0ef816285e2df4a9e49b09d55feb90d25
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49864267"
 ---
 # <a name="idebugmemorybytes2writeat"></a>IDebugMemoryBytes2::WriteAt
-Zapíše zadaný počet bajtů paměti, počínaje zadaná adresa.  
+Zapíše zadaný počet bajtů paměti, spouští se na zadané adrese.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,19 +46,19 @@ int WriteAt(
   
 #### <a name="parameters"></a>Parametry  
  `pStartContext`  
- [v] [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) objekt, který určuje, kde Zahájit zápis bajtů.  
+ [in] [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) objekt, který určuje, kde začít psát bajtů.  
   
  `dwCount`  
- [v] Počet bajtů k zápisu.  
+ [in] Počet bajtů k zápisu.  
   
  `rgbMemory`  
- [v] Bajty k zápisu. Toto pole se předpokládá, že nejméně `dwCount` velikost bajtů.  
+ [in] Bajty k zápisu. Toto pole je považován za nejméně `dwCount` bajty.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` Pokud nejsou všechny bajty může být zapsána nebo vrátí kód chyby (obvykle `E_FAIL`).  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` Pokud ne všechny bajty může být napsaná nebo vrátí kód chyby (obvykle `E_FAIL`).  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud počáteční adresa není v rámci okna paměti reprezentována to [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) objektu, dojde k žádné zápis a chybový kód `E_FAIL` je vrácen – i v případě, že se překrývá velikost k zápisu do prostoru v paměti.  
+ Pokud počáteční adresa není v rámci okna paměť představovaného tímto rozhraním [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) objektů, dojde k žádné psaní a chybovým kódem `E_FAIL` je vrácena – i v případě, že do paměťový prostor se překrývá velikost pro zápis.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md)   

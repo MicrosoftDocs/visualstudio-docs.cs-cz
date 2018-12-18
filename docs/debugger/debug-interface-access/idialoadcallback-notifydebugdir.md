@@ -1,5 +1,5 @@
 ---
-title: Idialoadcallback::notifydebugdir – | Microsoft Docs
+title: Idialoadcallback::notifydebugdir – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 46621c667967f0b87d197839012e830207cc306a
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: cdceb0f1f07a3ef9d22dbd30a02b2558c4d81603
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49950872"
 ---
 # <a name="idialoadcallbacknotifydebugdir"></a>IDiaLoadCallback::NotifyDebugDir
-Volá se při ladění adresář byl nalezen v souboru .exe.  
+Volá se, když adresář ladění byla nalezena v souboru .exe.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,23 +36,23 @@ HRESULT NotifyDebugDir (
   
 #### <a name="parameters"></a>Parametry  
  `fExecutable`  
- [v] `TRUE` adresáři ladění je přečtení z spustitelný soubor (nikoli soubor dbg).  
+ [in] `TRUE` Pokud adresář ladění je číst ze spustitelného souboru (spíše než soubor dbg).  
   
  `cbData`  
- [v] Počet bajtů dat v adresáři ladění.  
+ [in] Počet bajtů dat v adresáři ladění.  
   
  `data[]`  
- [v] Pole, které obsahuje adresáři ladění.  
+ [in] Pole, která obsahuje adresář ladění.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby. Návratový kód se obvykle ignoruje.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Návratový kód se obvykle ignoruje.  
   
 ## <a name="remarks"></a>Poznámky  
- [Idiadatasource::loaddataforexe –](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) metoda vyvolá tento zpětného volání, pokud najde adresář ladění během zpracování na spustitelný soubor.  
+ [Idiadatasource::loaddataforexe –](../../debugger/debug-interface-access/idiadatasource-loaddataforexe.md) metoda vyvolá tuto zpětného volání při nalezení adresář ladění při zpracování spustitelný soubor.  
   
- Tato metoda eliminuje nutnost pro klienta pro zpětnou soubor spustitelný soubor nebo ladění pro podporu informace o ladění než tu, která v souboru PDB nalezen. S těmito daty klienta rozpoznat typ ladicí informace, které jsou k dispozici a zda se nachází v spustitelný soubor nebo soubor dbg.  
+ Tato metoda odstraní potřebu klienta pro zpětnou soubor spustitelný soubor a/nebo ladění pro podporu ladicí informace než nalezeným v souboru .pdb. S těmito daty klient dokáže rozpoznat typ ladicích informací, které jsou k dispozici a zda se nachází v spustitelný soubor nebo soubor dbg.  
   
- Většina klientů nebude nutné tento zpětného volání, protože `IDiaDataSource::loadDataForExe` metoda transparentně otevře soubory PDB i dbg, pokud je to nezbytné k obsluze symboly.  
+ Většina klientů nebude nutné toto zpětné volání, vzhledem k tomu, `IDiaDataSource::loadDataForExe` metoda transparentně otevírá soubory .pdb a dbg v případě potřeby poskytovat symboly.  
   
 ## <a name="see-also"></a>Viz také  
  [Idialoadcallback2 –](../../debugger/debug-interface-access/idialoadcallback2.md)   

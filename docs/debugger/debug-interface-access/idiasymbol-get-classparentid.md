@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_classparentid – | Microsoft Docs
+title: Idiasymbol::get_classparentid – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4956d47912a17d528085b0431bf529cdeeb8beb7
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 4b335748c40d78cc2539e2c0700c1e7753935970
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49863058"
 ---
 # <a name="idiasymbolgetclassparentid"></a>IDiaSymbol::get_classParentId
-Načte identifikátor nadřazené třídy symbolu.  
+Načte identifikátor nadřazené třídu symbolu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,22 +34,22 @@ HRESULT get_classParentId (
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí ID nadřazené třídy symbolu.  
+ [out] Vrátí ID nadřazené třídu symbolu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` nebo kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
->  Vrácená hodnota `S_FALSE` znamená vlastnost není k dispozici pro symbol.  
+>  Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="remarks"></a>Poznámky  
- Identifikátor je jedinečný hodnota vytvořené DIA SDK k označení všechny symboly jako jedinečný.  
+ Identifikátor je jedinečná hodnota vytvořené DIA SDK označit všechny symboly jako jedinečný.  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Požadavek|Popis|  
 |-----------------|-----------------|  
-|Hlavičky:|dia2.h|  
+|Záhlaví:|dia2.h|  
 |Verze:|V7.0 DIA SDK|  
   
 ## <a name="see-also"></a>Viz také  

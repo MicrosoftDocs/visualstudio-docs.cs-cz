@@ -1,13 +1,13 @@
 ---
-title: "Nelze přiřadit do výsledku funkce | Microsoft Docs"
-ms.custom: 
+title: Nelze přiřadit do výsledku funkce | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.WebClient.Help.SCRIPT5003
@@ -16,7 +16,7 @@ dev_langs:
 - TypeScript
 - DHTML
 ms.assetid: ee8ffb3a-1451-4cb3-99bf-5e9cf8b77d79
-caps.latest.revision: 
+caps.latest.revision: 9
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -25,6 +25,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24788721"
 ---
 # <a name="cannot-assign-to-a-function-result"></a>Nelze přiřazovat hodnoty do výsledku funkce
 Jste se pokusili o přiřazení hodnoty do výsledku funkce. Výsledek funkce lze přiřadit k proměnné, ale nelze zadat jako proměnnou. Pokud chcete přiřadit novou hodnotu na samotnou funkci, vynechejte závorky (operátor volání funkce). Následující příklad ukazuje situace, ve kterém se tato chyba je generována.  

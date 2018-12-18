@@ -1,5 +1,5 @@
 ---
-title: Publikování průvodce (vývoj pro Office v sadě Visual Studio) | Microsoft Docs
+title: Průvodce publikováním (vývoj pro Office v sadě Visual Studio)
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -21,55 +21,56 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 67e3222c6f1deeca58b84aca4ba73d2826483b26
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0d1b72745b3bd8a24dc69a5bc4e1508c8b2f7571
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50672746"
 ---
-# <a name="publish-wizard-office-development-in-visual-studio"></a>Průvodce publikováním (vývoj pro Office v sadě Visual Studio)
-  Použití **Průvodci publikováním** Pokud chcete kopírovat soubory řešení do zadaného umístění, vytvořte manifestu soubory a vytvořte instalační program.  
+# <a name="publish-wizard-office-development-in-visual-studio"></a>Průvodce publikováním (vývoj pro Office v sadě Visual Studio)
+  Použití **Průvodce publikováním** Pokud chcete zkopírovat soubory řešení do zadaného umístění, vytvořte soubory manifestu a vytvoření instalačního programu.  
   
- K přístupu ke tohoto průvodce na **sestavení** nabídce zvolte **publikovat** *název řešení SolutionName*. Můžete taky Přejít **Průvodci publikováním** z **Průzkumníku řešení**. Otevřete místní nabídku pro uzel projektu a zvolte **publikovat**.  
+ Pro přístup k tohoto průvodce na **sestavení** nabídce zvolte **publikovat** *SolutionName*. Se dá dostat taky **Průvodce publikováním** z **Průzkumníka řešení**. Otevřete místní nabídku pro uzel projektu a klikněte na tlačítko **publikovat**.  
   
- Každá část níže obsahuje na stránce průvodce.  
+ Každá část níže popisuje stránce průvodce.  
   
 ## <a name="where-do-you-want-to-publish-the-application"></a>Pokud chcete publikovat aplikaci?  
  **Zadejte umístění pro publikování této aplikace**  
- Požadováno. Umístění pro publikování je adresář, kde **Průvodci publikováním** zkopíruje soubory řešení například manifesty, sestavení, dočasný certifikátu a další soubory ze sestavení. Musíte mít oprávnění k zápisu do tohoto adresáře.  
+ Požadováno. Umístění pro publikování je adresář, ve kterém **Průvodce publikováním** zkopíruje soubory řešení, jako je například manifesty, sestavení, dočasný certifikát a dalších souborů ze sestavení. Musíte mít přístup pro zápis do tohoto adresáře.  
   
- Zadejte umístění jako cesta k disku, sdílené složky, server FTP nebo adresa URL webu, nebo klikněte **Procházet** tlačítko procházení pro umístění. Cesta může být v těchto formátech:  
+ Zadejte umístění jako cesta k disku, sdílené složky, FTP nebo adresa URL webu, nebo klikněte na tlačítko **Procházet** tlačítko Procházet pro umístění. Cesta může být v těchto formátů:  
   
--   Relativní nebo absolutní cesta ve formátu standard systému Windows, jako je například C:\Deploy\MyApplication nebo \MyApplication.  
+- Relativní nebo absolutní cesta ve standardním Windows, například formátování *C:\Deploy\MyApplication* nebo *\MyApplication*.  
   
--   Cestu Universal Naming Convention (UNC), jako například \\\ServerName\MyApplication\\.  
+- Cestu (Universal Naming Convention), jako například  *\\\ServerName\MyApplication\\*.  
   
--   Adresu URL webu lokality, jako například http://www.microsoft.com/MyApplication.  
+- Adresa URL webového serveru, jako http://www.microsoft.com/MyApplication.  
   
- Ve výchozím umístění pro publikování je *http://localhost/projectname/* Pokud máte nainstalovanou službu IIS, nebo adresáři publish\ v takovém případě ještě nainstalována služba IIS.  
+  Ve výchozím nastavení, je umístění pro publikování *http://localhost/projectname/* Pokud máte nainstalovanou službu IIS, nebo adresáři publish\ Pokud tak učiníte nebyla nainstalována služba IIS.  
   
 > [!NOTE]  
->  Existují další důležité informace, pokud má cílový počítač se systémem Windows Vista. Musíte být správce v počítači Windows Vista použít možnost místní publikovat. Kromě toho výchozí umístění je vždy *publikování\\*  adresář, bez ohledu na to, jestli máte nainstalovanou službu IIS.  
+>  Pokud cílový počítač se systémem Windows Vista některé další aspekty. Musíte být správcem počítači se systémem Windows Vista možnost místního publikování. Kromě toho výchozí umístění je vždy *publikovat\\*  adresáře, bez ohledu na to, zda máte nainstalovanou službu IIS.  
   
-## <a name="what-is-the-default-installation-path-on-end-user-computers"></a>Co je výchozí cesty instalace na počítačích koncových uživatelů?  
- Cesta instalace je volitelný. Cesta instalace můžete nastavit později, pokud dáváte přednost. Podrobnosti najdete v tématu [postup: Změňte cestu instalace řešení Office](http://msdn.microsoft.com/en-us/d0eaa07b-2d72-4902-899f-2f9fb165b8fd).  
+## <a name="what-is-the-default-installation-path-on-end-user-computers"></a>Co je výchozí instalační cesta na počítačích koncových uživatelů?  
+ Cesta instalace je volitelné. Instalační cesta můžete nastavit později, pokud dáváte přednost. Podrobnosti najdete v tématu [jak: změnit cestu instalace řešení pro Office](https://msdn.microsoft.com/d0eaa07b-2d72-4902-899f-2f9fb165b8fd).  
   
- Instalační cesta je adresář, ze kterého koncový uživatel nainstaluje přizpůsobení. Je také cestu, která řešení bude používat ke kontrole aktualizací. **Průvodci publikováním** Nenasazuje řešení do tohoto umístění, pokud cesta není stejný jako ten, který jste zadali v **zadejte umístění pro publikování této aplikace** pole na předchozí stránce.  
+ Cesta instalace je adresář, ze kterého koncový uživatel nainstaluje vlastního nastavení. Je také cestu pro toto řešení bude používat ke kontrole aktualizací. **Průvodce publikováním** Nenasazuje řešení do tohoto umístění, pokud cesta není stejný jako ten, který jste zadali v **zadejte umístění pro publikování této aplikace** pole na předchozí stránce.  
   
- **Z webu.**  
- Zadejte adresu URL, který koncoví uživatelé budou při instalaci řešení.  
+ **Z webového serveru**  
+ Zadejte adresu URL, kterou budou koncoví uživatelé provést instalaci řešení.  
   
- **Ze sdílené složky nebo cesty UNC**  
- Zadejte cestu UNC, které koncoví uživatelé budou při instalaci řešení.  
+ **Z sdílenou jednotku UNC cestu nebo soubor**  
+ Zadejte cestu UNC, která budou koncoví uživatelé provést instalaci řešení.  
   
  **Z disku CD-ROM nebo DVD-ROM**  
  Tato možnost nevyžaduje, aby instalační cestu.  
   
- Visual Studio není zápis, disk CD nebo DVD. Výstup disku CD nebo DVD musíte zkopírovat ručně.  
+ Visual Studio není pracovní tempo CD nebo DVD. Výstup na disk CD nebo DVD musíte zkopírovat ručně.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Nasazení řešení Office s použitím technologie ClickOnce](../vsto/deploying-an-office-solution-by-using-clickonce.md)   
- [Publikovat stránku, Návrhář projektu &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/publish-page-project-designer-office-development-in-visual-studio.md)   
+ [Publikovat stranu, Návrhář projektu &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/publish-page-project-designer-office-development-in-visual-studio.md)   
  [Nasazení řešení Office](../vsto/deploying-an-office-solution.md)  
   
   

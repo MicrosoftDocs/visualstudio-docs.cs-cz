@@ -1,0 +1,378 @@
+items:
+- name: Testovací nástroje sady Visual Studio
+  href: improve-code-quality.md
+- name: Scénáře testování
+  href: developer-testing-scenarios.md
+- name: Testování jednotek
+  href: unit-test-your-code.md
+  items:
+  - name: Začínáme
+    href: getting-started-with-unit-testing.md
+  - name: Základní informace o testování částí
+    href: unit-test-basics.md
+  - name: Vytvoření projektu testů jednotek
+    href: create-a-unit-test-project.md
+  - name: Vytvoření příkazu pro testování částí
+    href: create-unit-tests-menu.md
+  - name: IntelliTest
+    href: generate-unit-tests-for-your-code-with-intellitest.md
+    items:
+    - name: Přehled
+      href: intellitest-manual/introduction.md
+    - name: Začínáme
+      href: intellitest-manual/getting-started.md
+    - name: Indexování oddílů
+      href: intellitest-manual/index.md
+    - name: Generování testů
+      href: intellitest-manual/test-generation.md
+    - name: Dynamické symbolické spuštění
+      href: intellitest-manual/input-generation.md
+    - name: Hranice průzkumu
+      href: intellitest-manual/exploration-bounds.md
+    - name: Glosář atributů
+      href: intellitest-manual/attribute-glossary.md
+    - name: Vodopádové nastavení
+      href: intellitest-manual/settings-waterfall.md
+    - name: Třídy statických pomocných rutin
+      href: intellitest-manual/static-helper-classes.md
+    - name: Upozornění a chyby
+      href: intellitest-manual/warnings-and-errors.md
+  - name: Instalace systémů testů jednotek od třetích stran
+    href: install-third-party-unit-test-frameworks.md
+  - name: Spouštění testů jednotek pomocí Průzkumníka testů
+    href: run-unit-tests-with-test-explorer.md
+    items:
+    - name: Průzkumník testů – nejčastější dotazy
+      href: test-explorer-faq.md
+  - name: Spuštění testů z příkazového řádku
+    href: vstest-console-options.md
+  - name: Spuštění testů jednotek v podobě 64bitového procesu
+    href: run-a-unit-test-as-a-64-bit-process.md
+  - name: Konfigurace testů jednotek s použitím souboru .runsettings
+    href: configure-unit-tests-by-using-a-dot-runsettings-file.md
+  - name: Zápis testů jednotek pro spravovaný kód
+    items:
+    - name: 'Návod: Vytváření a spouštění testů jednotek pro spravovaný kód'
+      href: walkthrough-creating-and-running-unit-tests-for-managed-code.md
+    - name: 'Rychlý start: Vývoj řízený testy s použitím Průzkumníka testů'
+      href: quick-start-test-driven-development-with-test-explorer.md
+    - name: Používání členů oboru názvů Microsoft.VisualStudio.TestTools.UnitTesting při testech jednotek
+      href: using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests.md
+    - name: Používání tříd Assert
+      href: using-the-assert-classes.md
+    - name: Izolace testovaného kódu pomocí Napodobenin Microsoft
+      href: isolating-code-under-test-with-microsoft-fakes.md
+      items:
+      - name: Vzájemná izolace částí aplikace pomocí zástupných procedur za účelem testování částí
+        href: using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md
+      - name: Izolace aplikace od jiných sestavení pomocí testů shim za účelem testování částí
+        href: using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md
+      - name: Vytváření, kompilace a konvence pojmenování kódu v Napodobeniny Microsoft
+        href: code-generation-compilation-and-naming-conventions-in-microsoft-fakes.md
+    - name: Vytvoření testu jednotek řízeného daty
+      href: how-to-create-a-data-driven-unit-test.md
+      items:
+      - name: 'Návod: Použití konfiguračního souboru k definování zdroje dat'
+        href: walkthrough-using-a-configuration-file-to-define-a-data-source.md
+    - name: Testy jednotek pro obecné metody
+      href: unit-tests-for-generic-methods.md
+    - name: Konfigurace testů jednotek pro cílení na dřívější verzi rozhraní .NET Framework
+      href: how-to-configure-unit-tests-to-target-an-earlier-version-of-the-dotnet-framework.md
+    - name: Ukázkový projekt pro vytvoření testů jednotek
+      href: sample-project-for-creating-unit-tests.md
+  - name: Zápis testů jednotek pro kód C/C++
+    href: writing-unit-tests-for-c-cpp.md
+    items:
+    - name: Použití architektury Microsoft pro testování jednotek pro jazyk C++
+      href: how-to-use-microsoft-test-framework-for-cpp.md
+    - name: Použití testovací architektury Google pro jazyk C++
+      href: how-to-use-google-test-for-cpp.md
+    - name: Použití testu Boost.Test
+      href: how-to-use-boost-test-for-cpp.md
+    - name: Použití testu CTest
+      href: how-to-use-ctest-for-cpp.md
+    - name: Zápis testů jednotek pro knihovny DLL jazyka C/C++
+      href: how-to-write-unit-tests-for-cpp-dlls.md
+    - name: 'Návod: Zápis testů jednotek pro knihovny DLL v jazyce C++'
+      href: walkthrough-writing-unit-tests-for-cpp-dlls.md
+    - name: Architektura Microsoft pro testování jednotek rozhraní API v jazyce C++ – referenční informace
+      href: microsoft-visualstudio-testtools-cppunittestframework-api-reference.md
+  - name: Vytváření a spouštění testů jednotek pro aplikace pro UPW
+    items:
+    - name: Test jednotek knihovny DLL pro UPW v jazyce C++
+      href: unit-testing-a-visual-cpp-dll-for-store-apps.md
+    - name: Test jednotek kódu v jazyce Visual C# v aplikacích pro UPW
+      href: unit-testing-visual-csharp-code-in-a-store-app.md
+    - name: 'Návod: Vytváření a spouštění testů jednotek pro aplikace pro UPW'
+      href: walkthrough-creating-and-running-unit-tests-for-windows-store-apps.md
+  - name: Určení rozsahu testovaného kódu pomocí pokrytí kódu
+    href: using-code-coverage-to-determine-how-much-code-is-being-tested.md
+    items:
+    - name: Přizpůsobení analýzy pokrytí kódu
+      href: customizing-code-coverage-analysis.md
+    - name: Řešení problémů s pokrytím kódu
+      href: troubleshooting-code-coverage.md
+  - name: Izolace testů částí aplikací pro SharePoint 2010 pomocí emulátorů
+    href: using-emulators-to-isolate-unit-tests-for-sharepoint-2010-applications.md
+- name: Live Unit Testing
+  href: live-unit-testing-intro.md
+  items:
+  - name: Novinky funkce Live Unit Testing
+    href: live-unit-testing-whats-new.md
+  - name: Začínáme s funkcí Live Unit Testing
+    href: live-unit-testing-start.md
+  - name: Použití funkce Live Unit Testing v sadě Visual Studio 2017 Enterprise
+    href: live-unit-testing.md
+  - name: Nejčastější dotazy k funkci Live Unit Testing
+    href: live-unit-testing-faq.md
+- name: Testování výkonu webů a zátěžové testování
+  items:
+  - name: 'Rychlý start: Vytvoření projektu zátěžového testu'
+    href: quickstart-create-a-load-test-project.md
+  - name: Konfigurace zátěžových testů
+    href: edit-load-tests.md
+    items:
+    - name: Scénáře úprav
+      href: edit-load-test-scenarios.md
+      items:
+      - name: Vlastnosti scénářů
+        href: load-test-scenario-properties.md
+      - name: Poměr testů
+        href: edit-the-test-mix-in-a-load-test-scenario.md
+      - name: Model poměru testů
+        href: emulate-real-world-usage-of-a-web-site-in-a-load-test-using-test-mix-models.md
+        items:
+        - name: Úprava modelů poměru testů
+          href: edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test.md
+      - name: Poměr prohlížečů
+        href: edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario.md
+      - name: Poměr sítí
+        href: specify-virtual-network-types-in-a-load-test-scenario.md
+      - name: Profil uvažování
+        href: edit-think-times-in-load-test-scenarios.md
+      - name: Vzory zátěže
+        href: edit-load-patterns-to-model-virtual-user-activities.md
+        items:
+        - name: Vlastnost Doba běhu kroku
+          href: how-to-specify-the-step-ramp-time-property-for-a-step-load-pattern.md
+      - name: Opoždění spuštění
+        href: configure-scenario-start-delays.md
+      - name: Iterace testů
+        href: configure-test-iterations-in-a-load-test-scenario.md
+      - name: Procentuální podíl nových uživatelů
+        href: how-to-specify-the-percentage-of-virtual-users-that-use-web-cache-data.md
+      - name: Rozdělení zpoždění stimulace
+        href: how-to-apply-distribution-to-pacing-delay-when-using-a-user-pace-test-mix-model.md
+    - name: Úprava sad čítačů
+      href: specify-counter-sets-and-threshold-rules-for-load-testing.md
+      items:
+      - name: Přidání čítačů
+        href: how-to-add-counters-to-counter-sets-using-the-load-test-editor.md
+      - name: Vlastní sady čítačů
+        href: how-to-add-custom-counter-sets-using-the-load-test-editor.md
+      - name: Správa sad čítačů
+        href: how-to-manage-counter-sets-using-the-load-test-editor.md
+      - name: Přidání pravidla prahové hodnoty
+        href: how-to-add-a-threshold-rule-using-the-load-test-editor.md
+    - name: Úprava parametrů spouštění
+      href: configure-load-test-run-settings.md
+      items:
+      - name: Vlastnosti parametrů spouštění
+        href: load-test-run-settings-properties.md
+      - name: Přidání dalších parametrů spouštění
+        href: how-to-add-additional-run-settings-to-a-load-test.md
+      - name: Kontextové parametry
+        href: how-to-add-context-parameters-to-a-load-test-run-setting.md
+      - name: Nastavení protokolování
+        href: modify-load-test-logging-settings.md
+        items:
+        - name: Maximální velikost protokolu
+          href: how-to-specify-the-maximum-size-for-the-log-file.md
+        - name: Neúspěšné testy
+          href: how-to-specify-if-test-failures-are-saved-to-test-logs.md
+      - name: Úložiště podrobností časování
+        href: how-to-specify-the-timing-details-storage-property-for-a-load-test.md
+      - name: Iterace testů
+        href: how-to-specify-the-number-of-test-iterations-in-a-load-test.md
+      - name: Vzorkovací frekvence
+        href: how-to-specify-the-sample-rate-for-a-load-test.md
+      - name: Výběr parametru spuštění
+        href: how-to-select-the-active-run-setting-for-a-load-test.md
+        items:
+        - name: Příkazový řádek
+          href: how-to-select-a-load-test-run-setting-from-the-command-line.md
+  - name: 'Návod: Vytvoření a spuštění zátěžového testu'
+    href: walkthrough-create-and-run-a-load-test.md
+  - name: testy výkonnosti webu
+    items:
+    - name: Vytvoření testu webové služby
+      href: how-to-create-a-web-service-test.md
+    - name: Vygenerování programového testu výkonnosti webu
+      href: generate-and-run-a-coded-web-performance-test.md
+    - name: Přidání zdroje dat do testu výkonnosti webu
+      href: add-a-data-source-to-a-web-performance-test.md
+    - name: Dynamické parametry
+      href: fix-non-detectable-dynamic-parameters-in-a-web-performance-test.md
+  - name: Kontrolery testů a testovací agenti
+    href: configure-test-agents-and-controllers-for-load-tests.md
+    items:
+    - name: Požadavky
+      href: test-controller-and-test-agent-requirements-for-load-testing.md
+    - name: Správa kontrolerů testů a testovacích agentů
+      href: manage-test-controllers-and-test-agents.md
+    - name: Postup určení testovacích agentů
+      href: how-to-specify-test-agents-to-use-in-load-test-scenarios.md
+    - name: Přiřazení rolí
+      href: assign-roles-to-a-test-controller-and-test-agent.md
+    - name: Konfigurace portů
+      href: configure-ports-for-test-controllers-and-test-agents.md
+    - name: Vytvoření vazby na síťový adaptér
+      href: how-to-bind-a-test-controller-or-test-agent-to-a-network-adapter.md
+    - name: Spuštění testů, které komunikují s desktopovými klienty
+      href: how-to-set-up-your-test-agent-to-run-tests-that-interact-with-the-desktop.md
+    - name: Doba časového limitu
+      href: how-to-specify-timeout-periods-for-test-controllers-and-test-agents.md
+    - name: Řešení potíží
+      href: troubleshoot-test-controllers-and-test-agents.md
+  - name: Přizpůsobení zátěžových testů
+    items:
+    - name: Rozhraní API zátěžového testu
+      href: how-to-use-the-load-test-api.md
+    - name: Rozhraní API testu výkonnosti webu
+      href: how-to-use-the-web-performance-test-api.md
+    - name: Vytvoření vlastního pravidla pro extrakci
+      href: code-a-custom-extraction-rule-for-a-web-performance-test.md
+    - name: Vytvoření vlastního ověřovacího pravidla
+      href: code-a-custom-validation-rule-for-a-web-performance-test.md
+    - name: Vytvoření vlastního kódu a modulů plug-in
+      href: create-custom-code-and-plug-ins-for-load-tests.md
+      items:
+      - name: Vytvoření modulu plug-in pro test výkonnosti webu
+        href: how-to-create-a-web-performance-test-plug-in.md
+      - name: Vytvoření modulu plug-in na úrovni požadavků
+        href: how-to-create-a-request-level-plug-in.md
+      - name: Vytvoření modulu plug-in pro zátěžový test
+        href: how-to-create-a-load-test-plug-in.md
+      - name: Vytvoření modulu plug-in rekordéru
+        href: how-to-create-a-recorder-plug-in.md
+      - name: Vytvoření vlastního editoru těla HTTP
+        href: how-to-create-a-custom-http-body-editor-for-the-web-performance-test-editor.md
+  - name: Diagnostika zátěžových testů
+    items:
+    - name: Vytvoření adaptéru diagnostických dat
+      href: create-a-diagnostic-data-adapter-to-collect-custom-data-or-affect-a-test-machine.md
+      items:
+      - name: Postup vytvoření
+        href: how-to-create-a-diagnostic-data-adapter.md
+    - name: Shromažďování diagnostických údajů pomocí nastavení testů
+      href: collect-diagnostic-information-using-test-settings.md
+      items:
+      - name: Vytvoření nastavení testů
+        href: how-to-create-a-test-setting-for-a-distributed-load-test.md
+      - name: Konfigurace profileru ASP.NET
+        href: how-to-configure-aspnet-profiler-for-load-tests-using-test-settings.md
+      - name: Konfigurace emulace sítě
+        href: how-to-configure-network-emulation-using-test-settings-in-visual-studio.md
+    - name: Shromažďování dat IntelliTrace
+      href: how-to-collect-intellitrace-data-to-help-debug-difficult-issues.md
+    - name: Záznamy obrazovky a hlasu
+      href: how-to-include-recordings-of-the-screen-and-voice-during-tests.md
+  - name: Analýza výsledků
+    href: analyze-load-test-results-using-the-load-test-analyzer.md
+    items:
+    - name: Přístup k výsledkům
+      href: how-to-access-load-test-results-for-analysis.md
+    - name: Přehled souhrnu
+      href: load-test-results-summary-overview.md
+    - name: Zobrazení tabulek
+      href: analyze-load-test-results-and-errors-in-the-tables-view.md
+      items:
+      - name: Doba odezvy webové stránky
+        href: how-to-view-web-page-response-time-in-a-load-test.md
+    - name: Zobrazení grafů
+      href: analyze-load-test-results-in-the-graphs-view.md
+      items:
+      - name: Přidání a odstranění čítačů
+        href: how-to-add-and-delete-counters-on-graphs-in-load-test-results.md
+      - name: Vytváření vlastních grafů
+        href: how-to-create-custom-graphs-in-load-test-results.md
+      - name: Použití legendy
+        href: use-the-graphs-view-legend-to-analyze-load-tests.md
+      - name: Postup přiblížení
+        href: how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results.md
+    - name: zobrazení podrobností
+      href: analyze-load-test-virtual-user-activity-in-the-details-view.md
+      items:
+      - name: Analýza aktivity virtuálního uživatele
+        href: how-to-analyze-virtual-user-activity-during-a-load-test.md
+      - name: 'Návod: Použití grafu aktivit'
+        href: walkthrough-use-the-virtual-user-activity-chart-to-isolate-issues.md
+    - name: Porušení pravidel mezních hodnot
+      href: analyze-threshold-rule-violations-in-load-tests.md
+    - name: Porovnání výsledků a analýza trendů
+      href: compare-load-test-results.md
+    - name: Vytvoření sestavy v Excelu
+      href: how-to-create-load-test-performance-reports-using-microsoft-excel.md
+    - name: Vytvoření sestavy ve Wordu
+      href: how-to-manually-create-a-load-test-performance-report-using-microsoft-word.md
+    - name: Úložiště výsledků
+      href: manage-load-test-results-in-the-load-test-results-repository.md
+      items:
+      - name: Výběr úložiště
+        href: how-to-select-a-load-test-results-repository.md
+      - name: Import výsledků
+        href: how-to-import-load-test-results-into-a-repository.md
+      - name: Export výsledků
+        href: how-to-export-load-test-results-from-a-repository.md
+      - name: Odstranění výsledků
+        href: how-to-delete-load-test-results-from-a-repository.md
+    - name: Vytvoření doplňku pro prohlížeč výsledků
+      href: how-to-create-an-add-in-for-the-web-performance-test-results-viewer.md
+- name: Automatizace testů uživatelského rozhraní
+  href: use-ui-automation-to-test-your-code.md
+  items:
+  - name: 'Návod: Vytvoření, úprava a správa programového testu uživatelského rozhraní'
+    href: walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md
+  - name: Testování aplikací pro UPW pomocí programových testů uživatelského rozhraní
+    href: test-uwp-app-with-coded-ui-test.md
+  - name: Nastavení jedinečné vlastnosti automatizace pro ovládací prvky UPW
+    href: set-a-unique-automation-property-for-windows-store-controls-for-testing.md
+  - name: Použití ovládacích prvků HTML5 v programových testech uživatelského rozhraní
+    href: using-html5-controls-in-coded-ui-tests.md
+  - name: Testování aplikací pro SharePoint 2010 pomocí programových testů uživatelského rozhraní
+    href: testing-sharepoint-2010-applications-with-coded-ui-tests.md
+  - name: Vytvoření datově řízeného programového testu uživatelského rozhraní
+    href: creating-a-data-driven-coded-ui-test.md
+  - name: Čekání na konkrétní události při přehrávání
+    href: making-coded-ui-tests-wait-for-specific-events-during-playback.md
+  - name: Používání jiných webových prohlížečů v programových testech uživatelského rozhraní
+    href: using-different-web-browsers-with-coded-ui-tests.md
+  - name: Úpravy programových testů uživatelského rozhraní pomocí Editoru programových testů uživatelského rozhraní
+    href: editing-coded-ui-tests-using-the-coded-ui-test-editor.md
+  - name: Analýza programových testů uživatelského rozhraní pomocí protokolů z těchto testů
+    href: analyzing-coded-ui-tests-using-coded-ui-test-logs.md
+  - name: Anatomie programového testu UI
+    href: anatomy-of-a-coded-ui-test.md
+  - name: Doporučené postupy pro programové testy UI
+    href: best-practices-for-coded-ui-tests.md
+  - name: Testování rozsáhlé aplikace s více mapami uživatelského rozhraní
+    href: testing-a-large-application-with-multiple-ui-maps.md
+  - name: Povolení programového testování uživatelského rozhraní pro vaše ovládací prvky
+    href: enable-coded-ui-testing-of-your-controls.md
+  - name: Podporované konfigurace a platformy
+    href: supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md
+  - name: Rozšíření rozhraní programových testů uživatelského rozhraní
+    href: extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md
+- name: Správa testovacích prostředí
+  href: lab-management/using-a-lab-environment-for-your-application-lifecycle.md
+  items:
+  - name: Použití správy sestavení nebo vydaných verzí pro automatizované testování
+    href: lab-management/use-build-or-rm-instead-of-lab-management.md
+  - name: Instalace testovacích agentů a kontrolerů testů
+    href: lab-management/install-configure-test-agents.md
+ms.openlocfilehash: 3035030458d8d0a3914952d606ca775ad33a62fc
+ms.sourcegitcommit: a811f6a194ccd40d844e74e618d847df87c85c16
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52621510"

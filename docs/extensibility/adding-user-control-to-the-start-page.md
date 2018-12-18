@@ -1,5 +1,5 @@
 ---
-title: Přidání ovládacího prvku uživatele na úvodní stránce | Microsoft Docs
+title: Přidání uživatelského ovládacího prvku na úvodní stránku | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,34 +15,35 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2bec2b4ab834eb55bd34a80f9e6a30931e3cd325
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 96b280221ba7efdefd3023f015bd4075b8c03aaa
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49910485"
 ---
-# <a name="adding-user-control-to-the-start-page"></a>Přidání uživatelského ovládacího prvku do úvodní stránky
-Tento návod ukazuje, jak přidat odkaz na stránku vlastní spuštění knihovny DLL. V příkladu přidáme sestavení uživatelského ovládacího prvku uživatelského ovládacího prvku k řešení a pak odkazuje na sestavení vytvořené ze souboru XAML – úvodní stránka. Novou kartu hostitelem uživatelského ovládacího prvku, který funguje jako základní webový prohlížeč.  
+# <a name="add-user-control-to-the-start-page"></a>Přidat uživatelský ovládací prvek na úvodní stránku
+Tento návod ukazuje, jak přidat knihovnu DLL odkaz na vlastní úvodní stránky. V příkladu přidá uživatelský ovládací prvek do řešení, vytvoří uživatelský ovládací prvek a potom odkazuje na sestavení z úvodní stránky *.xaml* souboru. Na nové kartě hostuje uživatelský ovládací prvek, který funguje jako základní webový prohlížeč.  
   
- Můžete použít stejný postup pro přidání jakékoli sestavení, kterou lze volat ze souboru XAML.  
+ Stejný postup můžete přidat libovolné sestavení, kterou lze volat z *.xaml* souboru.  
   
-## <a name="adding-a-wpf-user-control-to-the-solution"></a>Přidávání do řešení uživatelský ovládací prvek WPF  
- Nejprve přidejte uživatelský ovládací prvek Windows Presentation Foundation (WPF) – úvodní stránka řešení.  
+## <a name="add-a-wpf-user-control-to-the-solution"></a>Do řešení přidat uživatelský ovládací prvek WPF  
+ Nejprve přidejte uživatelský ovládací prvek Windows Presentation Foundation (WPF) úvodní stránka řešení.  
   
-1.  Vytvoření – úvodní stránka pomocí jsme vytvořili [vytváření vlastní – úvodní stránka](../extensibility/creating-a-custom-start-page.md).  
+1.  Vytvořit úvodní stránka s použitím, který jsme vytvořili v [vytvořit vlastní úvodní stránky](../extensibility/creating-a-custom-start-page.md).  
   
-2.  V **Průzkumníku řešení**, klikněte pravým tlačítkem na řešení, klikněte na **přidat**a potom klikněte na **nový projekt**.  
+2.  V **Průzkumníka řešení**, klikněte pravým tlačítkem na řešení, klikněte na tlačítko **přidat**a potom klikněte na tlačítko **nový projekt**.  
   
-3.  V levém podokně **nový projekt** dialogové okno, rozbalte seznam buď **jazyka Visual Basic** nebo **Visual C#** uzel a klikněte na tlačítko **Windows**. V prostředním podokně vyberte **knihovny ovládací prvek WPF uživatelského**.  
+3.  V levém podokně **nový projekt** dialogového okna rozbalte buď **jazyka Visual Basic** nebo **Visual C#** uzel a klikněte na tlačítko **Windows**. V prostředním podokně vyberte **Knihovna uživatelských ovládacích prvků WPF**.  
   
-4.  Název ovládacího prvku `WebUserControl` a pak klikněte na **OK**.  
+4.  Pojmenujte ovládací prvek `WebUserControl` a potom klikněte na tlačítko **OK**.  
   
-## <a name="implementing-the-user-control"></a>Implementace uživatelského ovládacího prvku  
- K implementaci uživatelský ovládací prvek WPF, uživatelské rozhraní (UI) v jazyce XAML a pak zapsat události kódu v C# nebo jiném jazyce .NET.  
+## <a name="implement-the-user-control"></a>Implementace uživatelského ovládacího prvku  
+ K implementaci uživatelského ovládacího prvku WPF, vytvářet uživatelské rozhraní (UI) v XAML a pak napište použití modelu code-behind události v jazyce C# nebo jiný jazyk .NET.  
   
-#### <a name="to-write-the-xaml-for-the-user-control"></a>Zápis XAML uživatelského ovládacího prvku  
+### <a name="to-write-the-xaml-for-the-user-control"></a>Zápis XAML pro uživatelský ovládací prvek  
   
-1.  Otevřete soubor XAML uživatelského ovládacího prvku. V \<mřížky > elementu, přidejte následující definice řádku do ovládacího prvku.  
+1.  Otevřete soubor XAML pro uživatelský ovládací prvek. V `<Grid>` prvku, přidejte následující definice řádku do ovládacího prvku.  
   
     ```vb  
     <Grid.RowDefinitions>  
@@ -52,7 +53,7 @@ Tento návod ukazuje, jak přidat odkaz na stránku vlastní spuštění knihovn
   
     ```  
   
-2.  V hlavní `Grid` elementu, přidejte následující nové `Grid` element, který obsahuje textové pole pro zadání webové adresy a tlačítko pro nastavení novou adresu.  
+2.  V hlavním `<Grid>` prvku, přidejte tento nový `<Grid>` element, který obsahuje textové pole pro zadání webové adresy a tlačítko pro nastavení novou adresu.  
   
     ```xml  
     <Grid Grid.Row="0">  
@@ -65,13 +66,13 @@ Tento návod ukazuje, jak přidat odkaz na stránku vlastní spuštění knihovn
     </Grid>  
     ```  
   
-3.  Přidejte následující rámečku do nejvyšší úrovně `Grid` element právě po `Grid` element, který obsahuje tlačítko a textové pole.  
+3.  Přidejte následující rámce na nejvyšší úrovni `<Grid>` element hned za `<Grid>` element, který obsahuje tlačítko a textové pole.  
   
     ```vb  
     <Frame Grid.Row="1" x:Name="WebFrame" Source="http://www.bing.com" Navigated="WebFrame_Navigated" />  
     ```  
   
-4.  Následující příklad ukazuje dokončené XAML uživatelského ovládacího prvku.  
+4.  Následující příklad ukazuje dokončené XAML pro uživatelský ovládací prvek.  
   
     ```xml  
     <UserControl x:Class="WebUserControl.UserControl1"  
@@ -100,13 +101,13 @@ Tento návod ukazuje, jak přidat odkaz na stránku vlastní spuštění knihovn
   
     ```  
   
-#### <a name="to-write-the-code-behind-events-for-the-user-control"></a>Zapsat události kódu pro uživatelský ovládací prvek  
+### <a name="to-write-the-code-behind-events-for-the-user-control"></a>Zapsat události použití modelu code-behind uživatelského ovládacího prvku  
   
-1.  V Návrháři XAML, dvakrát klikněte **nastavit adresu** tlačítko, které jste přidali do ovládacího prvku.  
+1.  V Návrháři XAML, dvakrát klikněte **nastavit adresu** přidání do ovládacího prvku tlačítka.  
   
-     UserControl1.cs soubor se otevře v editoru kódu.  
+     *UserControl1.cs* soubor se otevře v editoru kódu.  
   
-2.  Obslužné rutiny události SetButton_Click vyplňte takto.  
+2.  Obslužná rutina události SetButton_Click vyplňte následujícím způsobem.  
   
     ```csharp  
     private void SetButton_Click(object sender, RoutedEventArgs e)  
@@ -122,9 +123,9 @@ Tento návod ukazuje, jak přidat odkaz na stránku vlastní spuštění knihovn
     }  
     ```  
   
-     Tento kód nastaví webovou adresu, kterou je zadán v textovém poli jako cíl pro webový prohlížeč. Pokud adresa není platná, kód vrátí chybu.  
+     Tento kód nastaví webovou adresu, který je zadán v textovém poli jako cíl pro webový prohlížeč. Pokud adresa není platná, kód vyvolá chybu.  
   
-3.  Musíte také zpracovat událost WebFrame_Navigated:  
+3.  Musíte také zpracovávat události WebFrame_Navigated:  
   
     ```csharp  
     private void WebFrame_Navigated(object sender, EventArgs e)  
@@ -133,59 +134,59 @@ Tento návod ukazuje, jak přidat odkaz na stránku vlastní spuštění knihovn
   
 4.  Sestavte řešení.  
   
-## <a name="adding-the-user-control-to-the-start-page"></a>Přidání uživatelského ovládacího prvku do úvodní stránky  
- Chcete-li k dispozici pro projekt – úvodní stránka tohoto ovládacího prvku v souboru projektu – úvodní stránka, přidejte odkaz na nové knihovny ovládacího prvku. Potom můžete přidat ovládací prvek pro spuštění stránky XAML značek.  
+## <a name="add-the-user-control-to-the-start-page"></a>Přidat uživatelský ovládací prvek na úvodní stránku  
+ Do tohoto ovládacího prvku zpřístupnit na úvodní stránce projektu v souboru projektu úvodní stránku, přidejte odkaz na nové knihovny ovládacích prvků. Potom můžete přidat ovládací prvek kód spuštění stránky XAML.  
   
-1.  V **Průzkumníku řešení**, v projektu – úvodní stránka, klikněte pravým tlačítkem na **odkazy** a pak klikněte na **přidat odkaz na**.  
+1. V **Průzkumníka řešení**, v úvodní stránce projektu klikněte pravým tlačítkem na **odkazy** a potom klikněte na tlačítko **přidat odkaz**.  
   
-2.  Na **projekty** vyberte **WebUserControl** a pak klikněte na **OK**.  
+2. Na **projekty** kartu, vyberte možnost **WebUserControl** a potom klikněte na tlačítko **OK**.  
   
-3.  Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.  
+3. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.  
   
-     Sestavování řešení zpřístupňuje uživatelského ovládacího prvku IntelliSense pro další soubory v řešení.  
+    Sestavování řešení zpřístupní uživatelského ovládacího prvku IntelliSense pro další soubory v řešení.  
   
- Přidání ovládacího prvku do kódu stránky XAML spuštění, přidejte obor názvů odkaz na sestavení a pak umístit ovládací prvek na stránce.  
+   Přidání ovládacího prvku kód spuštění stránky XAML, přidejte obor názvů odkaz na sestavení a pak umístit ovládací prvek na stránce.  
   
-#### <a name="to-add-the-control-to-the-markup"></a>Přidání ovládacího prvku do kód  
+### <a name="to-add-the-control-to-the-markup"></a>Chcete-li přidat ovládací prvek značky  
   
-1.  V **Průzkumníku**, otevřete soubor XAML – úvodní stránka.  
+1. V **Průzkumníka řešení**, otevřete úvodní stránka *.xaml* souboru.  
   
-2.  V **XAML** podokně, přidejte následující deklarace oboru názvů do nejvyšší úrovně <xref:System.Windows.Controls.Grid> elementu.  
+2. V **XAML** podokno, přidejte následující deklarace oboru názvů na nejvyšší úrovni <xref:System.Windows.Controls.Grid> elementu.  
   
-    ```xml  
-    xmlns:vsc="clr-namespace:WebUserControl;assembly=WebUserControl"  
-    ```  
+   ```xml  
+   xmlns:vsc="clr-namespace:WebUserControl;assembly=WebUserControl"  
+   ```  
   
-3.  V **XAML** podokně, posuňte se \<mřížky > části.  
+3. V **XAML** podokno, posuňte se \<mřížky > oddílu.  
   
-     Oddíl obsahuje <xref:System.Windows.Controls.TabControl> element v <xref:System.Windows.Controls.Grid> elementu.  
+    Oddíl obsahuje <xref:System.Windows.Controls.TabControl> prvek <xref:System.Windows.Controls.Grid> elementu.  
   
-4.  Přidat \<TabControl > element obsahující \<TabItem > obsahující odkaz na váš uživatelský ovládací prvek.  
+4. Přidat \<TabControl > element obsahující \<TabItem >, která obsahuje odkaz na uživatelský ovládací prvek.  
   
-    ```xml  
+   ```xml  
   
-    <TabItem Header="Web" Height="Auto">  
-        <vsc:UserControl1 />  
-    </TabItem>  
+   <TabItem Header="Web" Height="Auto">  
+       <vsc:UserControl1 />  
+   </TabItem>  
   
-    ```  
+   ```  
   
- Nyní můžete otestovat ovládacího prvku.  
+   Nyní můžete otestovat ovládacího prvku.  
   
-## <a name="testing-a-manually-created-custom-start-page"></a>Testování ručně vytvořené vlastní stránky Start  
+## <a name="test-a-manually-created-custom-start-page"></a>Testování ručně vytvořené vlastní úvodní stránky  
   
-1.  Kopírování souboru XAML a všechny podpůrné textových souborů nebo značek souborů do **%USERPROFILE%\My Documents\Visual Studio 2015\StartPages\\**  složky.  
+1.  Zkopírujte soubor XAML a všechny podpůrné textové soubory nebo značky soubory do *%USERPROFILE%\My Documents\Visual Studio 2015\StartPages\\*  složky.  
   
-2.  Pokud všechny ovládací prvky nebo typy v sestavení, které nejsou nainstalované Visual Studio, odkazuje na úvodní stránky, zkopírujte sestavení a vložte je do * sady Visual Studio instalační složky ***\Common7\IDE\PrivateAssemblies\\** .  
+2.  Pokud úvodní stránky odkazuje na všechny ovládací prvky nebo typy v sestavení, které nejsou nainstalované Visual Studio, zkopírujte sestavení a vložte je do _instalační složky sady Visual Studio_**\Common7\IDE\ PrivateAssemblies\\**.  
   
-3.  Na příkazovém řádku Visual Studio, zadejte **devenv /rootsuffix Exp** otevřete experimentální instanci sady Visual Studio.  
+3.  Na příkazovém řádku aplikace Visual Studio, zadejte **devenv /rootsuffix Exp** otevřete experimentální instanci sady Visual Studio.  
   
-4.  V experimentální instance, přejděte do **Nástroje / možnosti / prostředí nebo spuštění** a vyberte souboru XAML z **přizpůsobení úvodní stránka** rozevíracího seznamu.  
+4.  V experimentální instanci aplikace, přejděte **nástroje** > **možnosti** > **prostředí** > **spuštění** stránky a vyberte soubor XAML z **přizpůsobit úvodní stránku** rozevíracího seznamu.  
   
-5.  Na **zobrazení** nabídky, klikněte na tlačítko **– úvodní stránka**.  
+5.  Na **zobrazení** nabídky, klikněte na tlačítko **úvodní stránka**.  
   
-     Má být zobrazena vlastní úvodní stránky. Pokud chcete změnit všechny soubory, musíte Ukončete experimentální instanci, proveďte požadované změny, zkopírovat a vložit změněné soubory a pak znovu otevřete experimentální instanci Chcete-li zobrazit změny.  
+     Vlastní úvodní stránku má být zobrazena. Pokud chcete změnit všechny soubory, můžete musí Ukončete experimentální instanci, proveďte požadované změny, zkopírujte a vložte změněných souborů a znovu otevřete experimentální instanci a zobrazte změny.  
   
-## <a name="see-also"></a>Viz také  
- [Ovládací prvky kontejneru WPF](http://msdn.microsoft.com/en-us/a0177167-d7db-4205-9607-8ae316952566)   
- [Návody: Přidání vlastního souboru XAML na úvodní stránku](../extensibility/walkthrough-adding-custom-xaml-to-the-start-page.md)
+## <a name="see-also"></a>Viz také:  
+ [Kontejner ovládacích prvků WPF](https://msdn.microsoft.com/library/a0177167-d7db-4205-9607-8ae316952566)   
+ [Návod: Přidání vlastních XAML na úvodní stránku](../extensibility/walkthrough-adding-custom-xaml-to-the-start-page.md)

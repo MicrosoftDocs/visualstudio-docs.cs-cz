@@ -1,5 +1,5 @@
 ---
-title: Vytvoření uživatelského ovládacího prvku Windows Forms pomocí datová vazba
+title: Vytvoření uživatelského ovládacího prvku Windows Forms pomocí vytváření datových vazeb
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -12,108 +12,100 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 0b7431ca6f0d4ac73a07a51893fd0c17c4fada57
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 7de5cbfe7de8919143cd30517c18f9e5ad6ba598
+ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52305244"
 ---
-# <a name="create-a-windows-forms-user-control-that-supports-complex-data-binding"></a>Vytvoření uživatelského ovládacího prvku Windows Forms, který podporuje rozšířené datové vazby
+# <a name="create-a-windows-forms-user-control-that-supports-complex-data-binding"></a>Vytvoření uživatelského ovládacího prvku Windows Forms, který podporuje komplexní datovou vazbu
 
-Při zobrazení dat ve formulářích v aplikacích Windows, můžete zvolit existující ovládacích prvků z **sada nástrojů**, nebo můžete vytvořit vlastní ovládací prvky, pokud vaše aplikace vyžaduje funkce, která není k dispozici v standardní ovládací prvky. Tento návod ukazuje postup vytvoření ovládacího prvku, který implementuje <xref:System.ComponentModel.ComplexBindingPropertiesAttribute>. Určuje, které implementují <xref:System.ComponentModel.ComplexBindingPropertiesAttribute> obsahovat `DataSource` a `DataMember` vlastnost, která mohou být vázány na data. Tyto prvky jsou podobné <xref:System.Windows.Forms.DataGridView> nebo <xref:System.Windows.Forms.ListBox>.
+Při zobrazení dat ve formulářích v aplikacích Windows, můžete vybrat z existujících ovládacích prvků **nástrojů**, nebo můžete vytvořit vlastní ovládací prvky, pokud vaše aplikace vyžaduje funkce, které nejsou k dispozici ve standardní ovládací prvky. Tento návod ukazuje, jak vytvořit ovládací prvek, který implementuje <xref:System.ComponentModel.ComplexBindingPropertiesAttribute>. Ovládací prvky, které implementují <xref:System.ComponentModel.ComplexBindingPropertiesAttribute> obsahovat `DataSource` a `DataMember` vlastnost, která může být vázaný na data. Tyto ovládací prvky jsou podobné <xref:System.Windows.Forms.DataGridView> nebo <xref:System.Windows.Forms.ListBox>.
 
-Další informace o vytváření řízení najdete v tématu [vývoj ovládacích prvků Windows Forms v době návrhu](/dotnet/framework/winforms/controls/developing-windows-forms-controls-at-design-time).
+Další informace o vytváření ovládacího prvku, naleznete v tématu [řídí vývoj Windows Forms v době návrhu](/dotnet/framework/winforms/controls/developing-windows-forms-controls-at-design-time).
 
-Při vytváření ovládacích prvků pro použití v scénáře datových vazeb potřebujete implementovat jednu z následujících atributů datové vazby:
+Při vytváření ovládacích prvků pro použití ve scénářích datové vazby, budete muset implementovat jedno z následujících atributů datové vazby:
 
-|Používání atributu datová vazba|
-|-----------------------------------|
-|Implementace <xref:System.ComponentModel.DefaultBindingPropertyAttribute> na jednoduché ovládací prvky, jako <xref:System.Windows.Forms.TextBox>, který jeden sloupec (nebo vlastnost) dat zobrazit. Další informace najdete v tématu [vytvoření uživatelského ovládacího prvku Windows Forms, který podporuje jednoduchou datovou vazbu](../data-tools/create-a-windows-forms-user-control-that-supports-simple-data-binding.md).|
-|Implementace <xref:System.ComponentModel.ComplexBindingPropertiesAttribute> na ovládací prvky, jako <xref:System.Windows.Forms.DataGridView>, který zobrazí seznamy (nebo tabulky) data. (Tento proces je popsaný v této stránce návod.)|
-|Implementace <xref:System.ComponentModel.LookupBindingPropertiesAttribute> na ovládací prvky, jako je <xref:System.Windows.Forms.ComboBox>, které zobrazí seznamy (nebo tabulky) data, ale také muset jeden sloupec nebo vlastnost k dispozici. Další informace najdete v tématu [vytvoření uživatelského ovládacího prvku Windows Forms, který podporuje datovou vazbu vyhledání](../data-tools/create-a-windows-forms-user-control-that-supports-lookup-data-binding.md).|
+|Použití atributu vázání dat|
+| - |
+|Implementace <xref:System.ComponentModel.DefaultBindingPropertyAttribute> na jednoduché ovládací prvky, jako je <xref:System.Windows.Forms.TextBox>, který zobrazí jeden sloupec (nebo vlastnost) dat. Další informace najdete v tématu [vytvoření uživatelského ovládacího prvku Windows Forms, který podporuje jednoduchou datovou vazbu](../data-tools/create-a-windows-forms-user-control-that-supports-simple-data-binding.md).|
+|Implementace <xref:System.ComponentModel.ComplexBindingPropertiesAttribute> na ovládací prvky, jako je <xref:System.Windows.Forms.DataGridView>, který zobrazí seznamy (nebo tabulky) data. (Tento proces je popsán v této stránce průvodce.)|
+|Implementace <xref:System.ComponentModel.LookupBindingPropertiesAttribute> na ovládací prvky, jako je <xref:System.Windows.Forms.ComboBox>, který zobrazí seznamy (nebo tabulky) data, ale také budete muset k dispozici do jednoho sloupce nebo vlastnosti. Další informace najdete v tématu [vytvoření uživatelského ovládacího prvku Windows Forms, který podporuje vazbu vyhledávacích dat](../data-tools/create-a-windows-forms-user-control-that-supports-lookup-data-binding.md).|
 
- Tento návod vytvoří komplexní ovládací prvek, který zobrazuje řádky dat z tabulky. Tento příklad používá `Customers` tabulku z ukázková databáze Northwind. Komplexní uživatelského ovládacího prvku se zobrazí tabulku zákazníků v <xref:System.Windows.Forms.DataGridView> v vlastního ovládacího prvku.
+Tento návod vytvoří komplexní ovládací prvek, který zobrazuje řádky dat z tabulky. V tomto příkladu `Customers` tabulky z ukázkové databáze Northwind. Komplexní uživatelský ovládací prvek zobrazí tabulku customers v <xref:System.Windows.Forms.DataGridView> v vlastního ovládacího prvku.
 
-Během tohoto návodu se dozvíte, jak:
+V tomto návodu se dozvíte, jak:
 
-- Vytvořte novou **formulářové aplikace Windows**.
+- Vytvořte nový **formulářová aplikace Windows**.
 
-- Přidejte nový **uživatelský ovládací prvek** do projektu.
+- Přidat nový **uživatelský ovládací prvek** do projektu.
 
 - Vizuální návrh uživatelského ovládacího prvku.
 
 - Implementace `ComplexBindingProperty` atribut.
 
-- Vytvořit datovou sadu s [Průvodce konfigurací zdroje dat](../data-tools/media/data-source-configuration-wizard.png).
+- Vytvoření datové sady [Průvodce konfigurací zdroje dat](../data-tools/media/data-source-configuration-wizard.png).
 
-- Nastavte **zákazníci** tabulky v [okno zdroje dat](add-new-data-sources.md) používat nový komplexní řízení.
+- Nastavte **zákazníkům** tabulku v [okna zdroje dat](add-new-data-sources.md#data-sources-window) používat nový komplexní ovládací prvek.
 
-- Přidat nový ovládací prvek přetažením z **okno zdroje dat** na **Form1**.
+- Přidat nový ovládací prvek z jeho přetažením **zdroje dat** okna do **Form1**.
 
 ## <a name="prerequisites"></a>Požadavky
 
-Tento návod používá SQL Server Express LocalDB a ukázková databáze Northwind.
+Tento návod používá SQL Server Express LocalDB a ukázkové databáze Northwind.
 
-1. Pokud nemáte SQL serveru Express LocalDB, nainstalovat buď z [SQL Server Express stránky pro stažení](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo pomocí **instalační program Visual Studio**. V instalačním programu Visual Studio se může nainstalovat SQL Server Express LocalDB jako součást **úložiště dat a zpracování** zatížení, nebo jako jednotlivých součástí.
+1. Pokud nemáte SQL Server Express LocalDB, nainstalujte ji z [SQL Server Express stránku pro stažení](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo prostřednictvím **instalační program sady Visual Studio**. V **instalační program sady Visual Studio**, jako součást můžete nainstalovat SQL Server Express LocalDB **ukládání a zpracování dat** úlohy, nebo jako jednotlivých komponent.
 
-1. Ukázková databáze Northwind nainstalujte pomocí následujících kroků:
+1. Instalace ukázkové databáze Northwind pomocí následujících kroků:
 
-    1. V sadě Visual Studio, otevřete **Průzkumník objektů systému SQL Server** okno. (Průzkumník objektů systému SQL Server je nainstalován jako součást **úložiště dat a zpracování** zatížení v instalačním programu Visual Studio.) Rozbalte **systému SQL Server** uzlu. Klikněte pravým tlačítkem na vaší instanci LocalDB a vyberte **nový dotaz...** .
+    1. V sadě Visual Studio, otevřete **Průzkumník objektů systému SQL Server** okna. (Průzkumník objektů systému SQL Server je nainstalován jako součást **ukládání a zpracování dat** úlohy v instalačním programu sady Visual Studio.) Rozbalte **systému SQL Server** uzlu. Klikněte pravým tlačítkem na instanci LocalDB a vyberte **nový dotaz**.
 
-       Otevře se okno editoru dotazů.
+       Otevře se okno editor dotazů.
 
-    1. Kopírování [Northwind Transact-SQL skriptu](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) do schránky. Tento skript T-SQL vytvoří databázi Northwind od začátku a naplní s daty.
+    1. Kopírovat [Northwind příkazů jazyka Transact-SQL skriptů](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) do schránky. Tento skript T-SQL vytvoří databázi Northwind úplně od začátku a naplní daty.
 
-    1. Vložit do editoru dotazů skriptu T-SQL a potom vyberte **Execute** tlačítko.
+    1. Vložte skript T-SQL do editoru dotazů a klikněte na tlačítko **Execute** tlačítko.
 
-       Po krátkou dobu dotaz dokončí provádění a vytvoření databáze Northwind.
+       Po chvilce dotaz doběhnutí a vytvořit databázi Northwind.
 
 ## <a name="create-a-windows-forms-application"></a>Vytvoření aplikace Windows Forms
 
- Prvním krokem je vytvoření **formulářové aplikace Windows**.
+Prvním krokem je vytvoření **formulářová aplikace Windows**:
 
-### <a name="to-create-the-new-windows-project"></a>Vytvoření nového projektu Windows
+1. V sadě Visual Studio na **souboru** nabídce vyberte možnost **nový** > **projektu**.
 
-1. V sadě Visual Studio na **soubor** nabídce vyberte možnost **nový**, **projektu...** .
+1. Rozbalte buď **Visual C#** nebo **jazyka Visual Basic** v levém podokně vyberte **Windows Desktop**.
 
-1. Rozbalte **Visual C#** nebo **jazyka Visual Basic** klikněte v levém podokně, pak vyberte **Windows Classic Desktop**.
+1. V prostředním podokně, vyberte **aplikace Windows Forms** typ projektu.
 
-1. V prostředním podokně, vyberte **aplikace pro Windows Forms** typ projektu.
+1. Pojmenujte projekt **ComplexControlWalkthrough**a klikněte na tlačítko **OK**.
 
-1. Název projektu **ComplexControlWalkthrough**a potom zvolte **OK**.
+    **ComplexControlWalkthrough** projekt je vytvořen a přidán do **Průzkumníka řešení**.
 
-    **ComplexControlWalkthrough** projekt je vytvořen a přidán do **Průzkumníku řešení**.
+## <a name="add-a-user-control-to-the-project"></a>Přidat uživatelský ovládací prvek do projektu
 
-## <a name="add-a-user-control-to-the-project"></a>Do projektu přidejte uživatelský ovládací prvek
-
-Protože tento návod vytvoří komplexní data neumožňující vazbu ovládacího prvku z **uživatelský ovládací prvek**, je nutné přidat **uživatelský ovládací prvek** položku do projektu.
-
-### <a name="to-add-a-user-control-to-the-project"></a>Chcete-li přidat uživatelský ovládací prvek do projektu
+Protože tento návod vytvoří komplexní data neumožňující vazbu ovládacího prvku z **uživatelský ovládací prvek**, přidejte **uživatelský ovládací prvek** položky do projektu:
 
 1. Z **projektu** nabídce zvolte **přidat uživatelský ovládací prvek**.
 
 1. Typ **ComplexDataGridView** v **název** oblasti a pak klikněte na tlačítko **přidat**.
 
-    **ComplexDataGridView** ovládací prvek je přidán do **Průzkumníku**a otevře v návrháři.
+    **ComplexDataGridView** ovládací prvek je přidán do **Průzkumníka řešení**a otevře v návrháři.
 
-## <a name="design-the-complexdatagridview-control"></a>Návrh ComplexDataGridView ovládací prvek
+## <a name="design-the-complexdatagridview-control"></a>Návrh ComplexDataGridView ovládacího prvku
 
-Tento krok přidává <xref:System.Windows.Forms.DataGridView> do uživatelského ovládacího prvku.
+Chcete-li přidat <xref:System.Windows.Forms.DataGridView> uživatelského ovládacího prvku, přetáhněte <xref:System.Windows.Forms.DataGridView> z **nástrojů** na návrhové ploše uživatelský ovládací prvek.
 
-### <a name="to-design-the-complexdatagridview-control"></a>Při návrhu ComplexDataGridView ovládací prvek
+## <a name="add-the-required-data-binding-attribute"></a>Přidat požadovaný atribut vázání dat
 
-- Přetáhněte <xref:System.Windows.Forms.DataGridView> z **sada nástrojů** na návrhovou plochu uživatelského ovládacího prvku.
+Pro komplexní ovládací prvky, že vazba dat podpory, můžete implementovat <xref:System.ComponentModel.ComplexBindingPropertiesAttribute>:
 
-## <a name="add-the-required-data-binding-attribute"></a>Přidejte požadovaný atribut datová vazba
-
-Pro komplexní ovládací prvky vazbou podpora dat, můžete implementovat <xref:System.ComponentModel.ComplexBindingPropertiesAttribute>.
-
-### <a name="to-implement-the-complexbindingproperties-attribute"></a>K implementaci atribut ComplexBindingProperties
-
-1. Přepínač **ComplexDataGridView** řízení zobrazení kódu. (Na **zobrazení** nabídce vyberte možnost **kód**.)
+1. Přepnout **ComplexDataGridView** ovládacího prvku na zobrazení kódu. (Na **zobrazení** nabídce vyberte možnost **kód**.)
 
 1. Nahraďte kód v `ComplexDataGridView` následujícím kódem:
 
@@ -122,74 +114,64 @@ Pro komplexní ovládací prvky vazbou podpora dat, můžete implementovat <xref
 
 1. Z **sestavení** nabídce zvolte **sestavit řešení**.
 
-## <a name="creating-a-data-source-from-your-database"></a>Vytváření zdroje dat z databáze
+## <a name="create-a-data-source-from-your-database"></a>Vytvoření zdroje dat z databáze
 
-Tento krok používá **konfigurace zdroje dat** průvodce vytvořte zdroj dat na základě `Customers` tabulky v ukázkové databázi Northwind.
+Použití **konfigurace zdroje dat** průvodce k vytvoření zdroje dat na základě `Customers` tabulky v ukázkové databázi Northwind:
 
-### <a name="to-create-the-data-source"></a>Vytvoření zdroje dat
+1.  Chcete-li otevřít **zdroje dat** okno na **Data** nabídky, klikněte na tlačítko **zobrazit zdroje dat**.
 
-1.  Na **Data** nabídky, klikněte na tlačítko **zobrazit zdroje dat**.
+2.  V **zdroje dat** okně **přidat nový zdroj dat** spustit **konfigurace zdroje dat** průvodce.
 
-2.  V **zdroje dat** vyberte **přidat nový zdroj dat** spustit **konfigurace zdroje dat** průvodce.
+3.  Vyberte **databáze** na **zvolte typ zdroje dat** stránce a potom klikněte na tlačítko **Další**.
 
-3.  Vyberte **databáze** na **zvolte typ zdroje dat** a pak klikněte na tlačítko **Další**.
-
-4.  Na **zvolit datové připojení** proveďte jednu z následujících akcí:
+4.  Na **vyberte datové připojení** stránka provádění, jednu z následujících akcí:
 
     - Pokud je připojení dat k ukázkové databázi Northwind k dispozici v rozevíracím seznamu, vyberte je.
 
-    - Vyberte **nové připojení** ke spuštění **přidat či upravit připojení** dialogové okno.
+    - Vyberte **nové připojení** ke spuštění **přidat/změnit připojení** dialogové okno.
 
-5.  Pokud vaše databáze vyžaduje heslo, vyberte možnost obsahují citlivá data, a pak klikněte na **Další**.
+5.  Pokud vaše databáze vyžaduje heslo, vyberte možnost zahrnutí důvěrných osobních údajů a pak klikněte na tlačítko **Další**.
 
-6.  Na **uložit připojovací řetězec do konfiguračního souboru aplikace** klikněte na tlačítko **Další**.
+6.  Na **uložit připojovací řetězec do konfiguračního souboru aplikace** klikněte na **Další**.
 
-7.  Na **zvolte databázové objekty** rozbalte **tabulky** uzlu.
+7.  Na **zvolte vaše databázové objekty** stránce, rozbalte **tabulky** uzlu.
 
-8.  Vyberte `Customers` tabulky a potom klikněte na **Dokončit**.
+8.  Vyberte `Customers` tabulku a pak klikněte na tlačítko **Dokončit**.
 
-    **NorthwindDataSet** se přidá do projektu a `Customers` se zobrazí v tabulce **zdroje dat** okno.
+    **NorthwindDataSet** se přidá do vašeho projektu a `Customers` se zobrazí v tabulce **zdroje dat** okna.
 
-## <a name="set-the-customers-table-to-use-the-complexdatagridview-control"></a>Nastavit tabulku zákazníků použití ovládacího prvku ComplexDataGridView
+## <a name="set-the-customers-table-to-use-the-complexdatagridview-control"></a>Nastavit pomocí ovládacího prvku ComplexDataGridView tabulky Zákazníci
 
-V rámci **zdroje dat** okně můžete nastavit ovládací prvek, který má být vytvořen před přetáhnete položky do formuláře.
+V rámci **zdroje dat** okně můžete nastavit ovládacího prvku má být vytvořen před přetažení položek do formuláře:
 
-### <a name="to-set-the-customers-table-to-bind-to-the-complexdatagridview-control"></a>Chcete-li nastavit tabulku zákazníků k vytvoření vazby na ovládací prvek ComplexDataGridView
+1. Otevřít **Form1** v návrháři.
 
-1. Otevřete **Form1** v návrháři.
+1. Rozbalte **zákazníkům** uzlu **zdroje dat** okno.
 
-1. Rozbalte **zákazníci** uzel v **zdroje dat** okno.
+1. Klikněte na šipku rozevíracího seznamu **zákazníkům** uzel a zvolte **vlastní**.
 
-1. Klikněte na šipku rozevíracího seznamu **zákazníci** uzel a zvolte **přizpůsobit**.
+1. Vyberte **ComplexDataGridView** ze seznamu **přidružené ovládací prvky** v **možnosti přizpůsobení uživatelského rozhraní dat** dialogové okno.
 
-1. Vyberte **ComplexDataGridView** ze seznamu **související ovládací prvky** v **možnosti přizpůsobení uživatelského rozhraní dat** dialogové okno.
+1. Klikněte na šipku rozevíracího seznamu `Customers` tabulce a zvolte **ComplexDataGridView** ze seznamu ovládacích prvků.
 
-1. Klikněte na šipku rozevíracího seznamu `Customers` tabulky a vyberte **ComplexDataGridView** ze seznamu ovládacího prvku.
+## <a name="add-controls-to-the-form"></a>Přidání ovládacích prvků do formuláře
 
-## <a name="add-controls-to-the-form"></a>Přidání ovládacích prvků formuláře
+Můžete vytvořit ovládací prvky vázané na data přetažením položek z **zdroje dat** okna do formuláře. Přetáhněte hlavní **zákazníkům** uzlu z **zdroje dat** okna do formuláře. Ověřte, že **ComplexDataGridView** ovládacího prvku se používá k zobrazení dat v tabulce.
 
-Ovládací prvky vázané na data můžete vytvořit tak, že přetáhnete položky z **zdroje dat** okna do svého formuláře.
+## <a name="run-the-application"></a>Spuštění aplikace
 
-### <a name="to-create-data-bound-controls-on-the-form"></a>Vytvoření ovládacích prvků vázaných na data ve formuláři
-
-Přetáhněte hlavní **zákazníci** uzlu z **zdroje dat** window do formuláře. Ověřte, zda **ComplexDataGridView** řízení se používá k zobrazení dat v tabulce.
-
-## <a name="running-the-application"></a>Spuštění aplikace
-
-### <a name="to-run-the-application"></a>Ke spuštění aplikace
-
-Stisknutím klávesy F5 spusťte aplikaci.
+Stisknutím klávesy **F5** ke spuštění aplikace.
 
 ## <a name="next-steps"></a>Další kroky
 
-V závislosti na požadavcích vaší aplikace existuje několik kroků, které můžete chtít provést po vytvoření ovládacího prvku, který podporuje datovou vazbu. Některé typické další kroky patří:
+V závislosti na požadavcích aplikace existuje několik kroků, které můžete provést po vytvoření ovládacího prvku, který podporuje datové vazby. Některé typické další postup je následující:
 
-- Umístění vaše vlastní ovládací prvky v knihovně ovládacího prvku, tak můžete opakovaně použít je v ostatních aplikacích.
+- Umístění vlastních ovládacích prvků do knihovny ovládacích prvků, lze je použít v jiných aplikacích.
 
-- Vytváření ovládacích prvků, které podporují scénáře vyhledávání. Další informace najdete v tématu [vytvoření uživatelského ovládacího prvku Windows Forms, který podporuje datovou vazbu vyhledání](../data-tools/create-a-windows-forms-user-control-that-supports-lookup-data-binding.md).
+- Vytváření ovládacích prvků, které podporují scénáře vyhledávání. Další informace najdete v tématu [vytvoření uživatelského ovládacího prvku Windows Forms, který podporuje vazbu vyhledávacích dat](../data-tools/create-a-windows-forms-user-control-that-supports-lookup-data-binding.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Vytvoření vazby ovládacích prvků Windows Forms k datům v sadě Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
+- [Vytvoření vazby ovládacích prvků modelu Windows Forms k datům v sadě Visual Studio](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
 - [Nastavení ovládacího prvku, který má být vytvořen při přetažení z okna zdrojů dat](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)
 - [Windows Forms – ovládací prvky](/dotnet/framework/winforms/controls/index)

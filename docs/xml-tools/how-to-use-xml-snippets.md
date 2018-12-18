@@ -1,7 +1,8 @@
 ---
-title: Jak používat fragmenty kódu XML v sadě Microsoft Visual Studio | Microsoft Docs
+title: Jak používat fragmenty kódu XML
 ms.date: 11/04/2016
-ms.technology: vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-xml-tools
 ms.topic: conceptual
 ms.assetid: 3a27375b-81cc-48f6-a884-e1cb8c4f78f5
 author: gewarren
@@ -9,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5751293124edab5c8415cd60d79aba9947fb94bf
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b4758fbebea12b014f92bed59e851210509cdbb9
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34573125"
 ---
 # <a name="how-to-use-xml-snippets"></a>Postupy: použití XML fragmenty kódu
 
@@ -48,7 +50,7 @@ Následující postupy popisují, jak získat přístup **Vložit fragment** př
 
 3. Vyberte fragment ze seznamu pomocí myši nebo zadáním názvu fragment kódu a stiskněte **kartě** nebo **Enter**.
 
-### <a name="to-insert-snippets-through-the-intellisense-complete-word-list"></a>Chcete-li vložit fragmenty kódu pomocí seznamu dokončení Word IntelliSense
+### <a name="to-insert-snippets-through-the-intellisense-complete-word-list"></a>Chcete-li vložit fragmenty kódu pomocí seznamu dokončení word IntelliSense
 
 1. Umístěte kurzor na místo, kam chcete vložit fragment kódu XML.
 
@@ -98,7 +100,7 @@ Následující postupy popisují, jak získat přístup **příkazu Obklopit s**
 
 3. Vyberte fragment ze seznamu pomocí myši nebo zadáním názvu fragment kódu a stiskněte **kartě** nebo **Enter**.
 
-## <a name="using-xml-snippets"></a>Použití fragmentů kódu XML
+## <a name="use-xml-snippets"></a>Použití fragmenty kódu XML
 
 Jakmile vyberete fragmentu kódu XML, se automaticky vloží text fragmentu kódu na pozici kurzoru. Jsou vyznačené všechna upravitelné pole v tomto fragmentu kódu a je automaticky vybrána první upravitelné pole. Aktuálně vybrané pole je zabalená.
 
@@ -108,10 +110,10 @@ Pouze první instance dané pole lze upravit. Když toto pole je zvýrazní, jso
 
 Stisknutím **Enter** nebo **Esc** zruší úpravy pole a vrátí editoru normální.
 
-Výchozí barvy pro upravovat kód fragment kódu pole lze změnit úpravou nastavení pole fragmentu kódu **písma a barev** podokně **možnosti** dialogové okno. Další informace najdete v tématu [postupy: Změna písma a barev v editoru](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md).
+Výchozí barvy pro upravovat kód fragment kódu pole lze změnit úpravou **pole fragmentu kódu** nastavení v **písma a barev** podokně **možnosti** dialogové okno. Další informace najdete v tématu [postupy: Změna písma a barev v editoru](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Fragmenty XML](../xml-tools/xml-snippets.md)
-- [Postupy: Generování fragmentu XML ze schématu XML](../xml-tools/how-to-generate-an-xml-snippet-from-an-xml-schema.md)
-- [Postupy: Vytváření fragmentů XML](../xml-tools/how-to-create-xml-snippets.md)
+- [Fragmenty kódu XML](../xml-tools/xml-snippets.md)
+- [Postupy: generování fragmentu kódu XML z schématu XML](../xml-tools/how-to-generate-an-xml-snippet-from-an-xml-schema.md)
+- [Postupy: vytvoření fragmenty kódu XML](../xml-tools/how-to-create-xml-snippets.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugExpressionEvaluator2::SetIDebugIDECallback | Microsoft Docs
+title: IDebugExpressionEvaluator2::SetIDebugIDECallback | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b272a7db4bfc5c7405493759d5e9c1864eaaa07d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 148d18f86ee88190aa1cf2a5a89807eb343c5d94
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49903477"
 ---
 # <a name="idebugexpressionevaluator2setidebugidecallback"></a>IDebugExpressionEvaluator2::SetIDebugIDECallback
-Umožňuje předat zpětné volání vyhodnocovací filtr výrazů během inicializace stroj ladění.  
+Umožňuje ladicího stroje lze předat zpětné volání pro vyhodnocovací filtr výrazů během inicializace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,10 +40,10 @@ int SetIDebugIDECallback (
   
 #### <a name="parameters"></a>Parametry  
  `pCallback`  
- [v] Rozhraní pro zpětné volání.  
+ [in] Rozhraní zpětného volání.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md)

@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_haseh – | Microsoft Docs
+title: Idiasymbol::get_haseh – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0104afd4a84f8d6c50effee0b1cd552b952289c4
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: de561482d0d6d98006fa8cda2299125be666f073
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49917229"
 ---
 # <a name="idiasymbolgethaseh"></a>IDiaSymbol::get_hasEH
-Načte příznak, který určuje, zda funkce obsahuje všechny nespravované C++-style zpracování výjimek (například v bloku try/catch).  
+Získá příznak, který určuje, zda funkce obsahuje všechny stylu C++ zpracování nespravované výjimky (například v bloku try/catch).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,20 +34,20 @@ HRESULT get_hasEH(
   
 #### <a name="parameters"></a>Parametry  
  `pFlag`  
- [out] Vrátí `TRUE` Pokud funkce má výjimek žádné C++-style; jinak vrátí `FALSE`.  
+ [out] Vrátí `TRUE` Pokud funkce nemá žádné zpracování výjimek jazyka C++ – vizuální styl; v opačném případě vrátí `FALSE`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` nebo kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
->  Vrácená hodnota `S_FALSE` znamená vlastnost není k dispozici pro symbol.  
+>  Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Požadavek|Popis|  
 |-----------------|-----------------|  
-|Hlavičky:|dia2.h|  
-|Verze:|V8.0 DIA SDK|  
+|Záhlaví:|dia2.h|  
+|Verze:|Ve verzi 8.0 DIA SDK|  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

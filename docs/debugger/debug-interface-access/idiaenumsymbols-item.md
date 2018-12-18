@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsymbols::Item – | Microsoft Docs
+title: Idiaenumsymbols::Item – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e90fb2d4ce258560c3588a6dd9b4379c76441773
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: c8786d53e1ba3001bc882580c03005377d476a47
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49918971"
 ---
 # <a name="idiaenumsymbolsitem"></a>IDiaEnumSymbols::Item
-Načte symbol prostřednictvím indexu.  
+Načte symbolu pomocí indexu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,13 +35,13 @@ HRESULT Item (
   
 #### <a name="parameters"></a>Parametry  
  index  
- [v] Z indexu [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objekt, který má být načtena. Index je v rozsahu od 0 do `count`-1, kde `count` je vrácený [idiaenumsymbols::get_count –](../../debugger/debug-interface-access/idiaenumsymbols-get-count.md) metoda.  
+ [in] Index o [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objekt, který se má načíst. Index je v rozsahu 0 až `count`-1, kde `count` je vrácený [idiaenumsymbols::get_count –](../../debugger/debug-interface-access/idiaenumsymbols-get-count.md) metody.  
   
  – symbol  
- [out] Vrátí [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objekt reprezentující požadované symbolu.  
+ [out] Vrátí [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objekt představující symbol požadované.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [Idiaenumsymbols –](../../debugger/debug-interface-access/idiaenumsymbols.md)   

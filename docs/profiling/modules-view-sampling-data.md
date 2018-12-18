@@ -13,13 +13,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8bc3fcbced64b7bcd460b1a25e0dc442b6970795
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 97b3289119ec77c191d540285b235bab443ab6f3
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35256865"
 ---
-# <a name="modules-view---sampling-data"></a>Zobrazení modulů – Data vzorkování
+# <a name="modules-view---sampling-data"></a>Zobrazení modulů – data vzorkování
 Zobrazení modulů vzorkování dat výkonu zobrazí data, která se seskupují po moduly, které byly vzorkovat v profilaci data. Každý modul je kořenem hierarchickou stromovou strukturu. Jen Vzorkovaná funkce modulu jsou uvedené pod tímto uzlem modulu.  
   
 > [!NOTE]
@@ -41,7 +42,7 @@ Zobrazení modulů vzorkování dat výkonu zobrazí data, která se seskupují 
 |**Výhradní ukázky**|-Pro funkci Počet volání zásobníku ukázky, ve kterých tuto funkci přímo provádění; To znamená, počet vzorků, ve kterých byla tato funkce v horní části zásobníku volání.<br />-Pro modul, součet výhradní ukázky funkce v modulu.<br />-Pro řádek nebo instrukce, počet vzorků, ve které tento řádek nebo instrukce provádění.|  
 |**% Výhradní ukázky**|-Pro funkci nebo modul procento všechny ukázky v profilaci spuštění, které byly výhradní ukázky této funkce nebo modul.<br />-Pro řádek nebo instrukce procento všechny ukázky v profilaci spustit ve které tento řádek nebo instrukce provádění.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Moduly zobrazení – vzorkování](../profiling/modules-view-dotnet-memory-sampling-data.md)   
  [Zobrazení modulů – instrumentace](../profiling/modules-view-dotnet-memory-instrumentation-data.md)   
  [Zobrazení modulů](../profiling/modules-view-instrumentation-data.md)

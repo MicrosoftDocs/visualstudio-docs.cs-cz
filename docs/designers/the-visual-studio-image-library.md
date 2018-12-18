@@ -1,6 +1,7 @@
 ---
-title: Knihovna obrázků sady Visual Studio
+title: knihovna obrázků
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 ms.topic: sample
 helpviewer_keywords:
@@ -17,21 +18,22 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dac2699afa005709599965aec1b32117af414093
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 2d4a75c8ded0db82070d04745bcc10c4083c2073
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53062844"
 ---
 # <a name="the-visual-studio-image-library"></a>Knihovna obrázků sady Visual Studio
 
-Knihovna obrázků služby Visual Studio obsahuje Image aplikací, které se zobrazují v sadě Microsoft Visual Studio, Microsoft Windows, systém Office a dalšího softwaru společnosti Microsoft. Tato sada více než 1 000 bitové kopie slouží k vytvoření aplikací, které vypadají vizuálně konzistentní s software společnosti Microsoft.
+Knihovna obrázků Visual Studio obsahuje obrázky aplikace, které se zobrazí v aplikaci Microsoft Visual Studio, Microsoft Windows, systému Office a další software od Microsoftu. Tato sada více než 1 000 obrázků je možné vytvářet aplikace, které vypadají vizuálně konzistentně se softwarem společnosti Microsoft.
 
-[Stáhnout knihovna obrázků Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=275090)
+[Stáhnout knihovna obrázků sady Visual Studio](http://go.microsoft.com/fwlink/p/?LinkId=275090)
 
-Knihovna obrázků jsou rozdělené do pěti kategorií: společné prvky, akce, poznámky, ikony a objekty. Soubory Readme jsou zahrnuty ve formátu PDF pro společné prvky a typy ikon. Obsahují informace o tom, jak pomocí těchto bitových kopií správně ve svých aplikacích.
+Knihovna obrázků je rozdělena do pěti kategorií: společné prvky, akce, poznámky, ikony a objekty. Soubory Readme jsou u společných elementů a typů ikon zahrnuté ve formátu PDF. Obsahují informace o tom, jak pomocí těchto bitových kopií odpovídajícím způsobem ve svých aplikacích.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Instalace sady Visual Studio](../install/install-visual-studio.md)
 - [Obrázky, rastrové obrázky a metasoubory](/dotnet/framework/winforms/advanced/images-bitmaps-and-metafiles)

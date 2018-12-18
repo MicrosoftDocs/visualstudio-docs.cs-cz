@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Vytvoření externího seznamu ve službě SharePoint s použitím obchodních dat | Microsoft Docs'
+title: 'Návod: Vytvoření externího seznamu ve službě SharePoint s použitím obchodních dat | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -24,171 +24,172 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 09606f3ca61abd747451f92d4ecf8ee43010e669
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 18848f0ebd6ffa289ea09553de82f5b9eb893181
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51295836"
 ---
-# <a name="walkthrough-creating-an-external-list-in-sharepoint-by-using-business-data"></a>Návod: Vytvoření externího seznamu ve službě SharePoint s použitím obchodních dat
+# <a name="walkthrough-create-an-external-list-in-sharepoint-by-using-business-data"></a>Návod: Vytvoření externího seznamu ve službě SharePoint s použitím obchodních dat
 
-Business Data Connectivity (BDC) služba umožňuje služby SharePoint k zobrazení obchodních dat ze serveru back-end aplikace, webové služby a databáze.
+Služba obchodní Data připojení (BDC) umožňuje SharePoint k zobrazení obchodní data z back endové serverové aplikace, webové služby a databáze.
 
-Tento návod ukazuje, jak pro vytvoření modelu služby BDC, který vrací informace o kontaktů v ukázkové databázi. Pak vytvoříte externího seznamu ve službě SharePoint pomocí tohoto modelu.
+Tento návod ukazuje, jak vytvořit model služby BDC, který vrací informace o kontaktech ve vzorové databázi. Pak vytvoříte externí seznam na Sharepointu pomocí tohoto modelu.
 
 Tento návod znázorňuje následující úlohy:
 
 - Vytvoření projektu.
 - Přidání entity do modelu.
 - Přidání vyhledávací metody.
-- Přidání specifické vyhledávací metody.
+- Přidání konkrétní vyhledávací metody.
 - Testování projektu.
 
 ## <a name="prerequisites"></a>Požadavky
 
 K dokončení tohoto návodu budete potřebovat následující komponenty:
 
-- Podporované edice systému Windows a služby SharePoint. Další informace najdete v tématu [požadavky pro vývoj řešení služby SharePoint](../sharepoint/requirements-for-developing-sharepoint-solutions.md).
+- Podporované edice systému Windows a SharePoint.
 
-- Přístup k ukázkové databázi AdventureWorks. Další informace o tom, jak nainstalovat databázi AdventureWorks najdete v tématu [ukázkové databáze systému SQL Server](http://go.microsoft.com/fwlink/?LinkID=117483).
+- Přístup k ukázkové databázi AdventureWorks. Další informace o tom, jak nainstalovat databázi AdventureWorks, naleznete v tématu [ukázkové databáze systému SQL Server](http://go.microsoft.com/fwlink/?LinkID=117483).
 
-## <a name="creating-a-project-that-contains-a-bdc-model"></a>Vytvoření projektu, který obsahuje model služby BDC
+## <a name="create-a-project-that-contains-a-bdc-model"></a>Vytvořit projekt, který obsahuje model služby BDC
 
-1. V řádku nabídek v sadě Visual Studio, vyberte **soubor**, **nový**, **projektu**.
+1. V panelu nabídek v sadě Visual Studio zvolte **souboru** > **nový** > **projektu**.
 
-     **Nový projekt** otevře se dialogové okno.
+     **Nový projekt** zobrazí se dialogové okno.
 
-2. V části buď **Visual C#** nebo **jazyka Visual Basic**, rozbalte **SharePoint** uzel a potom vyberte **2010** položky.
+2. V části **Visual C#** nebo **jazyka Visual Basic**, rozbalte **SharePoint** uzel a klikněte na tlačítko **2010** položky.
 
-3. V **šablony** podokně vyberte **projektu služby SharePoint 2010**, název projektu **AdventureWorksTest**a potom zvolte **OK** tlačítko .
+3. V **šablony** podokně zvolte **projektu služby SharePoint 2010**, pojmenujte projekt **AdventureWorksTest**a klikněte na tlačítko **OK** tlačítko .
 
-     **Průvodce vlastním nastavením SharePoint** se zobrazí. V tomto průvodci můžete zadat web, který budete používat k ladění projektu a nastavení úrovně důvěryhodnosti řešení.
+     **Průvodce přizpůsobením SharePoint** se zobrazí. V tomto průvodci můžete zadat web, který budete používat k ladění projektu a nastavte úroveň důvěryhodnosti řešení.
 
-4. Vyberte **nasadit jako řešení farmy** tlačítko Možnosti můžete nastavit úroveň důvěryhodnosti.
+4. Zvolte **nasadit jako řešení farmy** přepínač nastavit úroveň důvěryhodnosti.
 
-5. Vyberte **Dokončit** tlačítko přijmout výchozí místní web služby SharePoint.
+5. Zvolte **Dokončit** tlačítko k přijetí výchozího místního webu služby SharePoint.
 
-6. V **Průzkumníku**, vyberte uzel projektu služby SharePoint.
+6. V **Průzkumníka řešení**, zvolte uzel projektu služby SharePoint.
 
-7. Na řádku nabídek zvolte **projektu**, **přidat novou položku**.
+7. V panelu nabídky zvolte **projektu** > **přidat novou položku**.
 
-     **Přidat novou položku** otevře se dialogové okno.
+     **Přidat novou položku** zobrazí se dialogové okno.
 
-8. V **šablony** podokně vyberte **modelu připojení obchodních dat (pouze řešení farmy)**, název projektu **AdventureWorksContacts**a potom zvolte **Přidat** tlačítko.
+8. V **šablony** podokně zvolte **Model Připojení obchodních dat (pouze řešení farmy)**, pojmenujte projekt **AdventureWorksContacts**a klikněte na tlačítko **Přidat** tlačítko.
 
-## <a name="adding-data-access-classes-to-the-project"></a>Přidání tříd pro přístup k datům do projektu
+## <a name="add-data-access-classes-to-the-project"></a>Přidání tříd pro přístup k data do projektu
 
-1. Na řádku nabídek zvolte **nástroje**, **připojit k databázi**.
+1. V panelu nabídky zvolte **nástroje** > **připojit k databázi**.
 
-     **Přidat připojení** otevře se dialogové okno.
+     **Přidat připojení** zobrazí se dialogové okno.
 
-2. Přidáte připojení k ukázkovou databázi AdventureWorks serveru SQL.
+2. Přidání připojení k ukázkové databázi AdventureWorks SQL serveru.
 
-     Další informace najdete v tématu [přidat či upravit připojení (Microsoft SQL Server)](http://msdn.microsoft.com/fa400910-26c3-4df7-b9d1-115e688b4ea3).
+     Další informace najdete v tématu [přidat/změnit připojení (Microsoft SQL Server)](https://msdn.microsoft.com/fa400910-26c3-4df7-b9d1-115e688b4ea3).
 
-3. V **Průzkumníku**, vyberte uzel projektu.
+3. V **Průzkumníka řešení**, zvolte uzel projektu.
 
-4. Na řádku nabídek zvolte **projektu**, **přidat novou položku**.
+4. V panelu nabídky zvolte **projektu** > **přidat novou položku**.
 
-5. V **nainstalovaných šablonách** podokně, vyberte **Data** uzlu.
+5. V **nainstalované šablony** podokně, vyberte **Data** uzlu.
 
-6. V **šablony** podokně vyberte **třídy LINQ to SQL**.
+6. V **šablony** podokně zvolte **třídy LINQ to SQL**.
 
-7. V **název** zadejte **AdventureWorks**a potom zvolte **přidat** tlačítko.
+7. V **název** zadejte **AdventureWorks**a klikněte na tlačítko **přidat** tlačítko.
 
-     Soubor DBML je přidán do projektu a otevře se Návrhář relací objektů (Návrhář relací objektů).
+     Souboru .dbml je přidán do projektu a otevře se Návrhář relací objektů (O/R Designer).
 
-8. Na řádku nabídek zvolte **zobrazení**, **Průzkumníka serveru**.
+8. V panelu nabídky zvolte **zobrazení** > **Průzkumníka serveru**.
 
-9. V **Průzkumníka serveru**, rozbalte uzel, který představuje ukázkovou databázi AdventureWorks a potom rozbalte **tabulky** uzlu.
+9. V **Průzkumníka serveru**, rozbalte uzel, který představuje ukázkovou databází AdventureWorks a potom rozbalte **tabulky** uzlu.
 
-10. Přidat **kontakt (osoba)** tabulky do Návrhář relací objektů.
+10. Přidat **kontakt (osoba)** tabulky do Návrháře relací objektů.
 
-     Třídu entity se vytvoří a zobrazí se na návrhovou plochu. Třída entity má vlastnosti, které mapují na sloupce v tabulce Kontakt (uživatel).
+     Třídu entity se vytvoří a zobrazí na návrhové ploše. Třída entity má vlastnosti, které se mapují na sloupce v tabulce Kontakt (osoba).
 
-## <a name="removing-the-default-entity-from-the-bdc-model"></a>Odebrání výchozí entity z modelu služby BDC
+## <a name="remove-the-default-entity-from-the-bdc-model"></a>Odebrání výchozí entity z modelu služby BDC
 
-**Modelu připojení obchodních dat** projektu přidá výchozí entitu s názvem Entity1 do modelu. Odeberte tuto entitu. Později přidejte novou entitu. Počínaje prázdný model snižuje počet kroků potřebných k dokončení průvodce.
+**Model Připojení obchodních dat** projektu přidá výchozí entity do modelu s názvem Entity1. Odeberte tuto entitu. Později přidejte novou entitu. Počínaje prázdný model snižuje počet kroků potřebných k dokončení návodu.
 
-1. V **Průzkumníku řešení**, rozbalte **BdcModel1** uzel a pak otevřete soubor BdcModel1.bdcm.
+1. V **Průzkumníka řešení**, rozbalte **BdcModel1** uzlu a pak otevřete *BdcModel1.bdcm* souboru.
 
-2. Soubor modelu připojení obchodních dat se otevře v Návrháři BDC.
+2. Soubor modelu připojení obchodních dat se otevře v Návrháři služby BDC.
 
-3. V návrháři, otevřete místní nabídku pro **Entity1**a potom zvolte **odstranit**.
+3. V Návrháři otevřete místní nabídku pro **Entity1**a klikněte na tlačítko **odstranit**.
 
-4. V **Průzkumníku řešení**, otevřete místní nabídku pro Entity1.vb (v jazyce Visual Basic) nebo Entity1.cs (v jazyku C#) a potom zvolte **odstranit**.
+4. V **Průzkumníka řešení**, otevřete místní nabídku pro *Entity1.vb* (v jazyce Visual Basic) nebo *Entity1.cs* (v jazyce C#) a klikněte na tlačítko **odstranit** .
 
-5. Otevřete místní nabídku pro Entity1Service.vb (v jazyce Visual Basic) nebo Entity1Service.cs (v jazyku C#) a potom zvolte **odstranit**.
+5. Otevřete místní nabídku pro *Entity1Service.vb* (v jazyce Visual Basic) nebo *Entity1Service.cs* (v jazyce C#) a klikněte na tlačítko **odstranit**.
 
-## <a name="adding-an-entity-to-the-model"></a>Přidání entity do modelu
+## <a name="add-an-entity-to-the-model"></a>Přidání entity do modelu
 
-Přidání entity do modelu. Můžete přidat entit ze sady Visual Studio **sada nástrojů** do BDC návrháře.
+Přidání entity do modelu. Můžete přidat entit ze sady Visual Studio **nástrojů** na návrháři služby BDC.
 
-1. Na řádku nabídek zvolte **zobrazení**, **sada nástrojů**.
+1. V panelu nabídky zvolte **zobrazení** > **nástrojů**.
 
-2. Na **BusinessDataConnectivity** kartě **sada nástrojů**, přidejte **Entity** do BDC návrháře.
+2. Na **služby Připojení obchodních dat** karty **nástrojů**, přidejte **Entity** na návrháři služby BDC.
 
-     Nová entita, zobrazí se v designeru. Visual Studio přidá soubor, který je do projektu s názvem EntityService.vb (v jazyce Visual Basic) nebo EntityService.cs (v jazyku C#).
+     Nová entita se zobrazí v návrháři. Visual Studio přidá soubor s názvem *EntityService.vb* (v jazyce Visual Basic) nebo *EntityService.cs* (v jazyce C#) do projektu.
 
-3. Na řádku nabídek zvolte **zobrazení**, **vlastnosti**, **okno**.
+3. V panelu nabídky zvolte **zobrazení** > **vlastnosti** > **okno**.
 
-4. V **vlastnosti** nastavte **název** hodnotu vlastnosti na **kontaktujte**.
+4. V **vlastnosti** okno, nastaveno **název** hodnoty vlastnosti **kontakt**.
 
-5. V designeru, otevřete místní nabídky pro entitu, zvolte **přidat**a potom zvolte **identifikátor**.
+5. V Návrháři otevřete místní nabídku pro entitu, zvolte **přidat**a klikněte na tlačítko **identifikátor**.
 
-     Nový identifikátor se zobrazí u entity.
+     Nový identifikátor se zobrazí v entitě.
 
-6. V **vlastnosti** okně změnit název identifikátor, který **KódKontaktu**.
+6. V **vlastnosti** okna, změňte název identifikátor, který **KódKontaktu**.
 
-7. V **název typu** vyberte **System.Int32**.
+7. V **název typu** klikněte na položku **System.Int32**.
 
-## <a name="adding-a-specific-finder-method"></a>Přidání konkrétní vyhledávací metody
+## <a name="add-a-specific-finder-method"></a>Přidání konkrétní vyhledávací metody
 
-Povolení služby BDC zobrazíte konkrétního kontaktu, je nutné přidat specifické vyhledávací metody. Služby BDC volá metodu specifická metoda Finder, když uživatel vybere položku v seznamu a potom vybere **položky zobrazení** na pásu karet.
+Chcete-li služba BDC pro zobrazení konkrétního kontaktu, je nutné přidat metody Specific Finder. Služba BDC volá metody Specific Finder, když uživatel vybere položku v seznamu a následně klikne **položka zobrazení** tlačítko na pásu karet.
 
-Přidání specifické vyhledávací metody do entity Kontakt s použitím **podrobnosti o metodě BDC** okno. Pokud chcete vrátit konkrétní entitu, přidáte kód do metody.
+Přidání konkrétní vyhledávací metody k entitě kontakt s použitím **podrobnosti metody služby BDC** okna. Pokud chcete vrátit na konkrétní entitu, přidejte kód do metody.
 
-1. V Návrháři BDC zvolte **kontaktujte** entity.
+1. V Návrháři služby BDC, zvolte **kontakt** entity.
 
-2. Na řádku nabídek zvolte **zobrazení**, **ostatní okna**, **podrobnosti o metodě BDC**.
+2. V panelu nabídky zvolte **zobrazení** > **ostatní Windows** > **podrobnosti metody služby BDC**.
 
-     Otevře se okno Podrobnosti o metodě BDC.
+     Otevře se okno Podrobnosti metody služby BDC.
 
-3. V **přidejte metodu** vyberte **vytvořit specifické vyhledávací metody**.
+3. V **přidejte metodu** klikněte na položku **vytvořit konkrétní metodu Finder**.
 
-     Visual Studio přidá následující prvky modelu. Tyto prvky se zobrazovat **podrobnosti o metodě BDC** okno.
+     Visual Studio přidá následující prvky modelu. Tyto prvky se zobrazí v **podrobnosti metody služby BDC** okna.
 
-    - Metoda s názvem ReadItem.
+    - Metodu s názvem ReadItem.
 
-    - Vstupního parametru pro metodu.
+    - Vstupní parametr metody.
 
     - Návratový parametr metody.
 
-    - Popisovač typu pro jednotlivé parametry.
+    - Popisovač typu pro každý parametr.
 
-    - Instance metody pro metodu.
+    - Instance metody k metodě.
 
-4. V **podrobnosti o metodě BDC** okně otevřete seznam, který se zobrazí pro **kontaktujte** deskriptor typů a potom vyberte **upravit**.
+4. V **podrobnosti metody služby BDC** okno, otevřete seznam, který se zobrazí pro **kontakt** popisovač typu a klikněte na tlačítko **upravit**.
 
-     **Průzkumník modelu BDC** otevře a poskytuje hierarchické zobrazení modelu.
+     **Služby BDC Explorer** otevře a obsahuje hierarchické zobrazení modelu.
 
-5. V **vlastnosti** okně otevřete seznam vedle **TypeName** vlastnost, vyberte **aktuálního projektu** a pak klikněte na příkaz **kontaktujte**vlastnost.
+5. V **vlastnosti** okno, otevřete seznam vedle položky **TypeName** vlastnost, zvolte **aktuální projekt** kartu a klikněte na tlačítko **kontakt**vlastnost.
 
-6. V **Průzkumník modelu BDC**, otevřete v místní nabídce **kontaktujte**a potom zvolte **přidat popisovač typu**.
+6. V **služby BDC Explorer**, otevřete místní nabídku **kontakt**a klikněte na tlačítko **přidat popisovač typu**.
 
-     Nový popisovač typu, který je pojmenován **TypeDescriptor1** se zobrazí v **Průzkumník modelu BDC**.
+     Nový typ popisovače, který je pojmenován **TypeDescriptor1** se zobrazí v **služby BDC Explorer**.
 
-7. V **vlastnosti** nastavte **název** hodnotu vlastnosti na **KódKontaktu**.
+7. V **vlastnosti** okno, nastaveno **název** hodnoty vlastnosti **KódKontaktu**.
 
-8. Otevřete seznam vedle **TypeName** vlastnost a potom zvolte **Int32**.
+8. Otevřete seznam vedle položky **TypeName** vlastnost a klikněte na tlačítko **Int32**.
 
-9. Otevřete seznam vedle **identifikátor** vlastnost a potom zvolte **KódKontaktu**.
+9. Otevřete seznam vedle položky **identifikátor** vlastnost a klikněte na tlačítko **KódKontaktu**.
 
-10. Zopakujte krok 6 k vytvoření popisovač typu pro každou z těchto polí.
+10. Zopakujte krok 6 k vytvoření popisovače typu pro každý z těchto polí.
 
     |Název|Název typu|
     |----------|---------------|
-    |FirstName|System.String|
+    |Jméno|System.String|
     |Příjmení|System.String|
     |Telefon|System.String|
     |EmailAddress|System.String|
@@ -197,90 +198,90 @@ Přidání specifické vyhledávací metody do entity Kontakt s použitím **pod
     |PasswordHash|System.String|
     |PasswordSalt|System.String|
 
-11. V Návrháři BDC na **kontaktujte** entity, otevřete **ReadItem** metoda.
+11. V Návrháři služby BDC na **kontakt** entity, otevřete **ReadItem** metody.
 
-     Obraťte se na službu kód soubor se otevře v editoru kódu.
+     Soubor kódu služby kontakt se otevře v editoru kódu.
 
-12. V `ContactService` třídy, nahraďte `ReadItem` metoda následujícím kódem. Tento kód provede následující:
+12. V `ContactService` třídy, nahraďte `ReadItem` metodu s následujícím kódem. Tento kód provede následující:
 
-    - Načte záznam z tabulky. Obraťte se na databáze AdventureWorks.
+    - Načte záznam z tabulky. Obraťte se databáze AdventureWorks.
 
-    - Vrátí entity kontakt do služby BDC.
+    - Vrátí entitu kontakt služby BDC.
 
     > [!NOTE]
-    > Nahraďte hodnotu `ServerName` pole s názvem serveru.
+    > Nahraďte hodnotu `ServerName` pole s názvem vašeho serveru.
 
      [!code-csharp[SP_BDC#3](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#3)]
      [!code-vb[SP_BDC#3](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#3)]
 
-## <a name="adding-a-finder-method"></a>Přidání vyhledávací metody
+## <a name="add-a-finder-method"></a>Přidání vyhledávací metody
 
-Pokud chcete povolit službu BDC, kterou chcete zobrazit v seznamu kontaktů, je nutné přidat vyhledávací metody. Přidání vyhledávací metody do entity Kontakt s použitím **podrobnosti o metodě BDC** okno. Pokud chcete vrátit do služby BDC kolekci entit, přidáte kód do metody.
+Chcete-li služba BDC v seznamu zobrazíte kontakty, je nutné přidat vyhledávací metody. Přidání vyhledávací metody k entitě kontakt s použitím **podrobnosti metody služby BDC** okna. Vrátit kolekci entit do služby BDC, přidejte kód do metody.
 
-1. V Návrháři BDC zvolte **kontaktujte** entity.
+1. V Návrháři služby BDC **kontakt** entity.
 
-2. V **podrobnosti o metodě BDC** okně sbalit **ReadItem** uzlu.
+2. V **podrobnosti metody služby BDC** okně sbalit **ReadItem** uzlu.
 
-3. V **přidejte metodu** v rámci **ReadList** metoda, zvolte **vytvořit vyhledávací metody**.
+3. V **přidejte metodu** seznamu v části **ReadList** metody, zvolte **vytvořit metodu Finder**.
 
-     Visual Studio přidá metody, návratový parametr a popisovačem typu.
+     Visual Studio přidá metodu, návratový parametr a typ popisovače.
 
-4. V Návrháři BDC na **kontaktujte** entity, otevřete **ReadList** metoda.
+4. V Návrháři služby BDC na **kontakt** entity, otevřete **ReadList** metody.
 
-     Soubor kód pro službu kontakt se otevře v editoru kódu.
+     Soubor kódu služby kontaktů se otevře v editoru kódu.
 
-5. V `ContactService` třídy, nahraďte `ReadList` metoda následujícím kódem. Tento kód provede následující:
+5. V `ContactService` třídy, nahraďte `ReadList` metodu s následujícím kódem. Tento kód provede následující:
 
-    - Načte data z tabulky kontaktů databázi AdventureWorks.
+   - Načte data z tabulky kontaktů databáze AdventureWorks.
 
-    - Vrátí seznam entit, obraťte se na služby BDC.
+   - Vrátí seznam entit, kontaktujte služby BDC.
 
-    > [!NOTE]
-    > Nahraďte hodnotu `ServerName` pole s názvem serveru.
+     > [!NOTE]
+     > Nahraďte hodnotu `ServerName` pole s názvem vašeho serveru.
 
      [!code-csharp[SP_BDC#2](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#2)]
      [!code-vb[SP_BDC#2](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#2)]
 
-## <a name="testing-the-project"></a>Testování projektu
+## <a name="test-the-project"></a>Testování projektu
 
-Při spuštění projektu otevře web služby SharePoint a Visual Studio přidá modelu připojení obchodních dat služby. Vytvoření externího seznamu ve službě SharePoint, který odkazuje na entity Kontakt. V seznamu se zobrazí data pro kontakty v databázi AdventureWorks.
+Při spuštění projektu se otevře web služby SharePoint a Visual Studio přidá do služby Připojení obchodních dat modelu. Vytvořte externí seznam na Sharepointu, který odkazuje na entitu kontakt. V seznamu se zobrazí data pro kontakty v databázi AdventureWorks.
 
 > [!NOTE]
-> Možná budete muset změnit nastavení zabezpečení ve službě SharePoint, než můžete ladit, vaše řešení. Další informace najdete v tématu [navrhování modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md).
+> Budete muset změnit nastavení zabezpečení ve službě SharePoint než můžete ladit vaše řešení. Další informace najdete v tématu [navrhování modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md).
 
-1. Vyberte **F5** klíč.
+1. Zvolte **F5** klíč.
 
-     Otevře se stránka serveru SharePoint.
+     Otevře se web služby SharePoint.
 
-2. Na **Akce webu** nabídce zvolte **další možnosti** příkaz.
+2. Na **Akce webu** nabídek, zvolte **další možnosti** příkazu.
 
-3. Na **vytvořit** vyberte **externí seznam** šablony a potom zvolte **vytvořit** tlačítko.
+3. Na **vytvořit** zvolte **externí seznam** šablony a klikněte na tlačítko **vytvořit** tlačítko.
 
-4. Název seznamu vlastní **kontakty**.
+4. Název vlastního seznamu **kontakty**.
 
-5. Klikněte na tlačítko Procházet vedle **externí obsah** pole.
+5. Klikněte na tlačítko Procházet vedle **externího typu obsahu** pole.
 
-6. V **výběr externích typů obsahu** dialogovém okně vyberte **AdventureWorksContacts.BdcModel1.Contact** položku a potom vyberte **vytvořit** tlačítko.
+6. V **výběr externích typů obsahu** dialogového okna zvolte **AdventureWorksContacts.BdcModel1.Contact** položku a klikněte na tlačítko **vytvořit** tlačítko.
 
-     SharePoint vytvoří externího seznamu, která obsahuje kontakty z ukázkovou databázi AdventureWorks.
+     SharePoint vytvoří externí seznam, který obsahuje kontakty z ukázkové databáze AdventureWorks.
 
-7. Chcete-li otestovat specifické vyhledávací metody, zvolte v seznamu a obraťte se na.
+7. Do metody Specific Finder, zvolte v seznamu kontakt.
 
-8. Na pásu karet, vyberte **položky** a pak klikněte na příkaz **položky zobrazení** příkaz.
+8. Na pásu karet, zvolte **položky** kartu a klikněte na tlačítko **položka zobrazení** příkazu.
 
-     Ve formuláři se zobrazují podrobnosti kontaktu, který jste si zvolili.
+     Podrobnosti kontaktu, který jste zvolili, který se zobrazí ve formuláři.
 
 ## <a name="next-steps"></a>Další kroky
 
-Další informace o navrhování modelů služby BDC ve službě SharePoint z těchto témat:
+Další informace o navrhování modelů služby BDC v Sharepointu v těchto tématech:
 
 - [Postupy: přidání metody vytvoření](../sharepoint/how-to-add-a-creator-method.md).
 - [Postupy: Přidání aktualizační metody](../sharepoint/how-to-add-an-updater-method.md).
 - [Postupy: přidání metody odstranění](../sharepoint/how-to-add-a-deleter-method.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 [Navrhování modelu připojení obchodních dat](../sharepoint/designing-a-business-data-connectivity-model.md)  
 [Vytvoření modelu připojení obchodních dat](../sharepoint/creating-a-business-data-connectivity-model.md)  
-[Přehled nástrojů pro navrhování modelů služby BDC](../sharepoint/bdc-model-design-tools-overview.md)  
+[Přehled nástroje pro navrhování modelů služby BDC](../sharepoint/bdc-model-design-tools-overview.md)  
 [Integrace obchodních dat do služby SharePoint](../sharepoint/integrating-business-data-into-sharepoint.md)

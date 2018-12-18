@@ -1,16 +1,16 @@
 ---
-title: Možnosti, textový Editor, Basic (Visual Basic) | Microsoft Docs
-ms.custom: ''
+title: Rozšířené možnosti, textový Editor, Basic (VB)
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Visual_Basic.Editor
 - VS.ToolsOptionsPages.Text_Editor.Basic.Editor
 - VS.ToolsOptionsPages.Visual_Basic_Editor.Editor
 - VS.ToolsOptionsPages.Text_Editor.Basic.SimplifiedEditorPage
 - VS.ToolsOptionsPages.Text_Editor.Basic
+- VS.ToolsOptionsPages.Text_Editor.Basic.Advanced
 - VS.ToolsOptionsPages.Text_Editor.Basic.VB_Specific
 helpviewer_keywords:
 - Basic Text Editor Options dialog box
@@ -20,56 +20,63 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 89b73138617583b621b33b31525e3b2f9c89e9e5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b15617dce090a3aacde71ad48bf4984f5efbcac4
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50218922"
 ---
-# <a name="options-text-editor-basic-visual-basic"></a>Možnosti, textový editor, Basic (Visual Basic)
-**VB konkrétní** stránka Vlastnosti, **základní** složky **textového editoru** složky **možnosti** (**nástroje** nabídky) dialogové okno obsahuje následující vlastnosti:  
-  
- **Automatické vkládání end konstrukce**  
- Pokud zadáte – například první řádek deklaraci postup `Sub Main—`a stiskněte klávesu ENTER, textový editor přidá odpovídající `End Sub` řádku. Podobně pokud přidáte [pro](/dotnet/visual-basic/language-reference/statements/for-next-statement) ve smyčce, textový editor přidá odpovídající `Next` příkaz. Pokud je vybraná tato možnost, editoru kódu automaticky přidá konstrukce end.  
-  
- **Velmi výpis (přeformátování) kódu**  
- Textový editor přeformátuje kódu podle potřeby. Pokud je vybraná tato možnost, bude editoru kódu:  
-  
--   Zarovnat kódu do polohy správný karta  
-  
--   Recase klíčová slova, proměnné a objekty, které se správnou velikost  
-  
--   Přidejte chybějící `Then` k `If...Then` – příkaz  
-  
--   Přidat závorky k volání funkcí  
-  
--   Přidejte chybějící koncové uvozovky na řetězce  
-  
--   Přeformátujte exponenciální zápis  
-  
--   Přeformátujte kalendářních dat  
-  
-**Povolit režim osnovy**  
-Při otevření souboru v editoru kódu, můžete zobrazit dokumentu v osnovy režimu. V tématu [Osnova](../../ide/outlining.md) Další informace. Pokud je vybraná tato možnost, popisující funkce je aktivovaná, při otevření souboru.  
-  
-**Automatické vkládání rozhraní a MustOverride členů**  
-Když potvrdíte `Implements` příkaz nebo `Inherits` příkaz pro třídu, textový editor vloží prototypy pro členy, které musí být implementován nebo jeho přepsána, v uvedeném pořadí.  
-  
-**Zobrazit postup čáry oddělovače**  
-Textový editor označuje visual rozsah procedury. Řádek se vykresluje v VB zdrojové soubory vašeho projektu v umístěních uvedených v následující tabulce:  
-  
-|Umístění v VB zdrojový soubor|Příklad umístění řádku|  
-|---------------------------------|------------------------------|  
-|Po ukončení konstrukce deklarace bloku|-Na konci třídy, struktury, modulu, rozhraní nebo výčtu<br />– Po vlastnost, function nebo sub<br />-Není mezi get a set klauzule ve vlastnosti|  
-|Po sadu jeden řádek konstrukce|– Po importu příkazy, než v souboru – třída definice typu<br />– Po proměnné deklarovaná ve třídě, než všechny postupy|  
-|Po jeden řádek deklarace (bez bloku úrovně deklarace)|-Následující příkazy pro import, dědí příkazy, proměnné deklarace, deklarace událostí, delegát deklarace a knihovny DLL deklarovat příkazy|  
-  
-**Povolit návrhy korekce chyb**  
-Textového editoru můžete navrhnout řešení běžných chyb a pro výběr na požadovanou opravu, které se pak použije k vašeho kódu.  
-  
-**Povolit zvýraznění odkazy a klíčová slova**  
-Textového editoru můžete zvýrazněte všechny instance symbol nebo všech klíčových slov v klauzuli například `If..Then`, `While...End While`, nebo `Try...Catch...Finally`. Stisknutím kombinace kláves CTRL + SHIFT + šipka dolů nebo CTRL + SHIFT + šipka nahoru mohou procházet mezi zvýrazněné odkazy nebo klíčová slova.  
-  
-## <a name="see-also"></a>Viz také  
-[Obecné, prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md)   
-[Možnosti, textový Editor, všechny jazyky, karty](../../ide/reference/options-text-editor-all-languages-tabs.md)
+# <a name="options-text-editor-basic-visual-basic-advanced"></a>Rozšířené možnosti, textový Editor, Basic (Visual Basic)
+**VB konkrétní** stránce vlastností **základní** složky **textový Editor** složky **možnosti** (**nástroje** nabídky) dialogové okno obsahuje následující vlastnosti:
+
+ **Povolit zvýrazňování odkazů a klíčových slov**
+
+Do textového editoru můžete zvýraznit všechny výskyty symbolu nebo všechna klíčová slova v klauzuli například `If..Then`, `While...End While`, nebo `Try...Catch...Finally`. Mezi zvýrazněných odkazů nebo klíčová slova můžete přejít stisknutím klávesy **Ctrl** + **Shift** + **šipka dolů** nebo **Ctrl**   +  **Shift** + **šipka nahoru**.
+
+**Povolení režimu sbalení**
+
+Při otevření souboru v editoru kódu se zobrazí dokument v režimu sbalování. Zobrazit [Osnova](../../ide/outlining.md) Další informace. Pokud je vybraná tato možnost, funkci sbalování se aktivuje při otevření souboru.
+
+**Zobrazit oddělovače řádků procedury**
+
+Textový editor označuje visual oboru postupy. Řádek je vykreslen v *.vb* zdrojové soubory vašeho projektu v umístěních uvedených v následující tabulce:
+
+|Umístění ve zdrojovém souboru .vb|Příklad umístění řádku|
+|---------------------------------|------------------------------|
+|Po uzavření bloku deklarace konstruktoru|– Na konci třída, struktura, modul, rozhraní nebo výčet<br />-After vlastnost, funkce nebo procedury sub<br />-Není mezi get a set klauzule ve vlastnosti|
+|Po sadu konstrukce jeden řádek|-After příkazy pro import, před definici typu v souboru třídy<br />-After proměnné deklarované ve třídě, před všechny postupy|
+|Po jeden řádek deklarací (deklarace mimo blok úrovně)|-Následující příkazy pro import, dědí příkazy deklarace proměnných, deklarace události, delegát deklarace a příkazy deklarovat knihovny DLL|
+
+ **Hezký výpis (přeformátování) kódu** přeformátuje textový editor kódu podle potřeby. Pokud je vybraná tato možnost, bude se editor kódu:
+
+-   Zarovnat kód do umístění správné tabulátoru
+
+-   Recase klíčová slova, proměnných a objektů na správnou velikost.
+
+-   Přidat chybějící `Then` do `If...Then` – příkaz
+
+-   Přidat závorky k volání funkce
+
+-   Přidat chybí koncové uvozovky na řetězce
+
+-   U vydavatelských exponenciální zápis
+
+-   U vydavatelských kalendářních dat
+
+**Automatické vkládání koncových konstruktorů**
+
+ Po zadání – například první řádek deklaraci procedury `Sub Main—`a stiskněte klávesu **Enter**, textový editor přidá odpovídající `End Sub` řádku. Podobně pokud chcete přidat [pro](/dotnet/visual-basic/language-reference/statements/for-next-statement) smyčky, textový editor přidá odpovídající `Next` příkazu. Pokud je vybraná tato možnost, editor kódu automaticky přidá koncová konstrukce.
+
+**Automatické vložení členů rozhraní a MustOverride**
+
+Pokud jste se zavázali `Implements` příkaz nebo `Inherits` příkaz pro třídu, textový editor vloží prototypy pro členy, které musí být implementován nebo jeho přepsána, v uvedeném pořadí.
+
+**Povolit návrhy oprav**
+
+Do textového editoru můžete navrhnout řešení pro běžné chyby a umožní vám vybrat příslušnou opravu se následně použije na váš kód.
+
+## <a name="see-also"></a>Viz také
+
+- [Obecné, Prostředí, dialogové okno Možnosti](../../ide/reference/general-environment-options-dialog-box.md)
+- [Možnosti, Textový editor, Všechny jazyky, Tabulátory](../../ide/reference/options-text-editor-all-languages-tabs.md)

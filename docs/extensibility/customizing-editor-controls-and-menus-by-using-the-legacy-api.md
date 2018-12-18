@@ -1,5 +1,5 @@
 ---
-title: Přizpůsobení ovládací prvky editoru a nabídky pomocí starší verze rozhraní API | Microsoft Docs
+title: Přizpůsobení nabídky a ovládací prvky editoru pomocí starší verze rozhraní API | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,28 +13,29 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a7e6b90319d6c0e84649f52da97b2678553254b6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0fb11419e6fccf4ec3ca510e91bf79702a5a4348
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39498526"
 ---
-# <a name="customizing-editor-controls-and-menus-by-using-the-legacy-api"></a>Přizpůsobení ovládací prvky editoru a nabídky pomocí starší verze rozhraní API
-Služba jazyka nebo textového zobrazení můžete ovládat kontextové nabídky a ovládací prvky v editoru. Na stránkách v této části jsou upřesněny postupy pro práci s těmito funkcemi.  
+# <a name="customize-editor-controls-and-mmenus-by-using-the-legacy-api"></a>Vlastní ovládací prvky editoru a Mmenus pomocí starší verze rozhraní API
+Služba jazyka nebo v náhledu textu můžete řídit kontextové nabídky a ovládací prvky v editoru. Na stránkách v této části podrobně popisují, jak pracovat s těmito funkcemi.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
  [Panel rozevíracího seznamu](../extensibility/drop-down-bar.md)  
- Popisuje panelu rozevíracího seznamu a poskytuje pokyny pro implementaci ho.  
+ Popisuje na panelu rozevíracího seznamu a poskytuje pokyny pro jeho implementaci.  
   
  [Zpracování příkazů](../extensibility/command-handling.md)  
- Zpracování v editory příkaz details.  
+ Příkaz details v editoru.  
   
  [Kontextové nabídky](../extensibility/context-menus.md)  
- Popisuje editor kontextové nabídky.  
+ Popisuje kontextové nabídky editoru.  
   
  [Postupy: aktualizace stavového řádku](../extensibility/how-to-update-the-status-bar.md)  
- Poskytuje pokyny pro aktualizaci **stavového řádku**.  
+ Poskytuje pokyny pro aktualizaci **stavový řádek**.  
   
 ## <a name="related-sections"></a>Související oddíly  
- [Editor a rozšíření služeb jazyka](../extensibility/editor-and-language-service-extensions.md)  
- Představuje různé typy editory, které můžete použít v sadě Visual Studio.
+ [Jazyk a Editor rozšíření služeb](../extensibility/editor-and-language-service-extensions.md)  
+ Zavádí různé typy editorů, které můžete použít v sadě Visual Studio.

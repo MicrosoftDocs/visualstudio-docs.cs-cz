@@ -1,5 +1,5 @@
 ---
-title: Doba spánku | Microsoft Docs
+title: Doba spánku | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b9a3894097c553d8505fd61f15fbdec8c188e79
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b94b1695eb36aa8f55847c21a14d72357d51a405
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35676433"
 ---
 # <a name="sleep-time"></a>Doba spánku
-Tyto segmenty v časové ose jsou přidruženy k blokování čas, který je zařazen do režimu spánku. Kategorie režimu spánku znamená, že vlákno odpojit udělil si jeho logické jádra a je žádné pracuje. Během této doby je zablokovaný vlákna v rozhraní API, které je vizualizér souběžnosti počítání jako režimu spánku. Rozhraní API jako třeba `Sleep()` a `SwitchToThread()` do této skupiny patří.  
+Tyto segmenty na časové ose jsou přidruženy k blokování čas, který je zařazený do kategorie jako přejít do režimu spánku. Kategorie z režimu spánku znamená, že vlákno dobrovolně udělil si jeho logické jádro a je to žádná práce. Během této doby je zablokovaný vlákno v rozhraní API, které Vizualizátor souběžnosti se počítá jako přejít do režimu spánku. Rozhraní API, jako `Sleep()` a `SwitchToThread()` spadají do této skupiny.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)

@@ -1,5 +1,5 @@
 ---
-title: Správa projektu načítání v řešení | Microsoft Docs
+title: Správa načítání projektů v řešení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,24 +13,25 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d0e479a96252710d1f7e6285ffaaa2baf383c061
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2ead4834f1d29baff099eedbf464c1ba6344ca6c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49950196"
 ---
-# <a name="managing-project-loading-in-a-solution"></a>Správa načítání projektu v řešení
-Řešení sady Visual Studio může obsahovat velké množství projekty. Výchozí chování sady Visual Studio je načíst všechny projekty v řešení v době, kdy je řešení otevřené a nechcete povolit uživateli přístup k žádným z projektů všechny z nich nedokončili načítání. Při procesu načítání projektu bude poslední více než dvě minuty, se zobrazí indikátor průběhu zobrazující počet projekty načíst a celkový počet projekty. Uživatel může mít za následek uvolnění projekty při práci s řešení s více projekty, ale tento postup má některé nevýhody: odpojen projekty nejsou vytvořené jako součást příkazu znovu sestavit řešení a popisy IntelliSense typů a členů uzavřený projekty nejsou zobrazeny.  
+# <a name="manage-project-loading-in-a-solution"></a>Správa načítání projektů v řešení
+Řešení sady Visual Studio může obsahovat velký počet projektů. Výchozí chování sady Visual Studio je načíst všechny projekty v řešení v době, kdy je otevřené řešení a nikoli do povolí uživateli přístup žádným z projektů, dokud všechny z nich dokončení načítání. Při procesu načítání projektu bude trvat více než dvě minuty, se zobrazí indikátor průběhu zobrazující počet projekty a celkovém počtu projektů. Uživatel může při práci v řešení s více projekty uvolnění projektů, ale tento postup má i určité nevýhody: jako součást příkazu znovu sestavit řešení nejsou sestaveny uvolněné projekty a popisy technologie IntelliSense typů a členů uzavřený projekty se nezobrazí.  
   
- Vývojáři můžou snížit zatížení doby řešení a spravovat projektu načítání chování vytvořením řešení zatížení správce. Správce zatížení řešení můžete Ujistěte se, zda jsou načteny projekty před zahájením pozadí sestavení, zpoždění pozadí načítání, dokud nebudou dokončeny jiné úlohy na pozadí a provádět další úlohy správy zatížení projektu.  
+ Vývojářům můžete snížit dobu načítání řešení a spravovat chování načítání tím, že vytvoříte načtení řešení správce projektu. Správci řešení zatížení můžete Ujistěte se, že projekty načetly před spuštěním sestavení na pozadí, zpoždění načítání na pozadí, dokud nebudou dokončeny ostatní úlohy na pozadí a provádět další úkoly při správě zatížení projektu.  
   
-## <a name="creating-a-solution-load-manager"></a>Vytváření řešení zatížení manager  
- Vývojáři můžou vytvářet řešení zatížení manager implementací <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadManager> a poradenství Visual Studio, že správce zatížení řešení je aktivní.  
+## <a name="create-a-solution-load-manager"></a>Vytvoření správce načtení řešení  
+ Vývojáři mohou vytvářet načtení řešení Správce implementací <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadManager> a sady Visual Studio, že správce zatížení řešení je aktivní.  
   
-#### <a name="activating-a-solution-load-manager"></a>Aktivace správce zatížení řešení  
- Visual Studio umožňuje pouze jeden správce zatížení řešení v daném okamžiku, musíte poradit Visual Studio, pokud chcete aktivovat zatížení řešení správce. Pokud později na aktivaci druhý správce zatížení řešení bude odpojen správce zatížení vašeho řešení.  
+### <a name="activate-a-solution-load-manager"></a>Aktivovat správce zatížení řešení  
+ Visual Studio umožňuje pouze jeden správce zatížení řešení v daném okamžiku, proto musíte poradit sady Visual Studio, pokud chcete aktivovat vaše načtení řešení správce. Pokud později při aktivaci druhý správce zatížení řešení správce zatížení řešení bude odpojen.  
   
- Musíte získat <xref:Microsoft.VisualStudio.Shell.Interop.SVsSolution> služby a nastavte <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4> vlastnost:  
+ Musíte získat <xref:Microsoft.VisualStudio.Shell.Interop.SVsSolution> služby a nastavení <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4> vlastnost:  
   
 ```csharp  
 IVsSolution pSolution = GetService(typeof(SVsSolution)) as IVsSolution;  
@@ -38,58 +39,58 @@ object objLoadMgr = this;   //the class that implements IVsSolutionManager
 pSolution.SetProperty((int)__VSPROPID4.VSPROPID_ActiveSolutionLoadManager, objLoadMgr);  
 ```  
   
- <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadManager.OnDisconnect%2A> Metoda je volána, když Visual Studio se právě vypíná nebo když se jiný balíček trvá jako správce zatížení aktivním řešení voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.SetProperty%2A> s <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4> vlastnost.  
+ <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadManager.OnDisconnect%2A> Metoda je volána, když probíhá vypínání aplikace Visual Studio nebo když se jiný balíček má převzetí jako správce zatížení aktivního řešení voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.SetProperty%2A> s <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4> vlastnost.  
   
-#### <a name="strategies-for-different-kinds-of-solution-load-manager"></a>Strategie pro různé druhy správce zatížení řešení  
- Správci zatížení řešení můžete implementovat různými způsoby v závislosti na typech řešení, která jsou určená ke správě.  
+#### <a name="strategies-for-different-kinds-of-solution-load-manager"></a>Strategie pro různé druhy řešení načíst správce  
+ Správci zatížení řešení můžete implementovat různými způsoby v závislosti na typech řešení, které jsou určené pro správu.  
   
- Pokud správce zatížení řešení slouží ke správě řešení načítání obecně, se dá implementovat jako součást VSPackage. Balíček musí být nastavena na autoload přidáním <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> na VSPackage s hodnotou <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionOpening_guid>. Správce zatížení řešení můžete za aktivuje <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> metoda.  
+ Pokud se správce zatížení řešení pro správu obecně načítání řešení, se dá implementovat jako součást sady VSPackage. Balíček musí být nastavená na autoload tak, že přidáte <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> na VSPackage s hodnotou <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionOpening_guid>. Správci řešení zatížení můžete v aktivovat <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A> metody.  
   
 > [!NOTE]
->  Další informace o balíčcích autoloading najdete v tématu [načítání VSPackages](../extensibility/loading-vspackages.md).  
+>  Další informace o balíčcích autoloading najdete v tématu [načítání rozšíření VSPackages](../extensibility/loading-vspackages.md).  
   
- Vzhledem k tomu, že Visual Studio rozpozná pouze poslední řešení zatížení správce chcete aktivovat, musí správce zatížení obecné řešení vždy zjistí, zda je před aktivací sami existující správce zatížení. Pokud ve službě řešení pro volání metody GetProperty() <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4> vrátí `null`, neexistuje žádný správce zatížení aktivním řešení. Pokud není vrátit hodnotu null, zkontrolujte, zda je objekt stejný jako správce zatížení vašeho řešení.  
+ Vzhledem k tomu, že Visual Studio rozpozná pouze poslední řešení zatížení správce aktivaci, by měl obecné řešení zatížení správci vždy zjistit, zda je před aktivací sami stávající správce zatížení. Pokud volání `GetProperty()` řešení služby pro <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4> vrátí `null`, neexistuje žádný správce zatížení aktivního řešení. Pokud nevrací hodnotu null, zkontrolujte, zda je objekt stejný jako správce zatížení vašeho řešení.  
   
- Pokud správce zatížení řešení slouží ke správě pouze několik typů řešení, VSPackage mohou přihlásit k odběru událostí načítání řešení (voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.AdviseSolutionEvents%2A>) a použijte obslužnou rutinu události pro <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnBeforeOpenSolution%2A> aktivovat správce zatížení řešení.  
+ Pokud se správce zatížení řešení pro správu pouze několik typů řešení, sady VSPackage mohou přihlásit k odběru událostí načítání řešení (voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.AdviseSolutionEvents%2A>) a použijte obslužnou rutinu události pro <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnBeforeOpenSolution%2A> aktivovat správce zatížení řešení.  
   
- Pokud správce zatížení řešení slouží ke správě pouze konkrétní řešení, informace o aktivaci lze zachovat jako část souboru, řešení voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.WriteSolutionProps%2A> pro oddíl předběžné řešení.  
+ Pokud se správce zatížení řešení pro správu pouze konkrétní řešení, informace o aktivaci můžete nastavit jako trvalý soubor řešení v rámci voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.WriteSolutionProps%2A> pro části před řešení.  
   
- Správci zatížení specifického řešení by měl deaktivovat sami v <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents.OnAfterCloseSolution%2A> obslužné rutiny události, aby se v konfliktu s jiným správcům zatížení řešení.  
+ Konkrétní řešení zatížení Správce by měl deaktivovat sebe sama v <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents.OnAfterCloseSolution%2A> obslužná rutina události, aby nebyla v konfliktu s ostatními správci načtení řešení.  
   
- Pokud potřebujete řešení zatížení správce pouze pro udržení zatížení vlastnosti globální projektu (například vlastnosti nastavit na stránce Možnosti), můžete si aktivovat správce zatížení řešení v <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenProject%2A> obslužné rutiny události, zachovat nastavení pak ve vlastnostech řešení Deaktivujte správce zatížení řešení.  
+ Pokud potřebujete správce zatížení řešení pouze k uchování globálních projektu zatížení vlastnosti (například vlastnosti nastavené u stránky Možnosti), můžete si aktivovat správce zatížení řešení v <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenProject%2A> obslužná rutina události, zachovat nastavení klikněte v okně vlastností řešení Deaktivujte správce zatížení řešení.  
   
-## <a name="handling-solution-load-events"></a>Zpracování událostí zatížení řešení  
- K odběru událostí načítání řešení, volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.AdviseSolutionEvents%2A> Když aktivujete správce zatížení vašeho řešení. Pokud implementujete <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents>, můžete reakce na události, které se vztahují k načtení vlastnosti jiný projekt.  
+## <a name="handle-solution-load-events"></a>Zpracování událostí načtení řešení  
+ Chcete-li přihlásit k odběru řešení zatížení události, zavolejte <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.AdviseSolutionEvents%2A> při aktivaci správce zatížení vašeho řešení. Pokud se rozhodnete implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents>, můžete reagovat na události, které se vztahují k jinému projektu načítání vlastností.  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnBeforeOpenSolution%2A>: Tato událost je aktivována, před otevřením řešení.
+-   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnBeforeOpenSolution%2A>: Tato událost je aktivována před otevřením řešení.
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnBeforeBackgroundSolutionLoadBegins%2A>: Tato událost je aktivována po řešení, které je zcela načten, ale před pozadí projektu načítání začne počítat od začátku.
+-   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnBeforeBackgroundSolutionLoadBegins%2A>: Tato událost je aktivována po řešení, je zcela načten, ale před pozadí začne znovu načíst projekt.
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnAfterBackgroundSolutionLoadComplete%2A>: Tato událost je aktivována po začátku plně načtení řešení, zda je manažera zatížení řešení. Také je aktivována, po načtení pozadí nebo vyžádání načíst vždy, když se stane úplným načtením řešení. Ve stejnou dobu <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionExistsAndFullyLoaded_guid> opětovné aktivaci.  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnAfterBackgroundSolutionLoadComplete%2A>: Tato událost je aktivována po načtení řešení je zpočátku plně, jestli správce zatížení řešení. Také aktivuje po načtení na pozadí nebo vyžádání načíst pokaždé, když se stane řešení plně načteno. Ve stejnou dobu <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionExistsAndFullyLoaded_guid> se znovu aktivuje.  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnQueryBackgroundLoadProjectBatch%2A>: Tato událost je aktivována před načtením projektu (nebo projekty). Chcete-li zajistit, že jiné procesy na pozadí jsou dokončeny před projektů jsou načteny, nastavte `pfShouldDelayLoadToNextIdle` k **true**.  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnQueryBackgroundLoadProjectBatch%2A>: Tato událost je aktivována před načtením projektu (nebo projektů). Ujistěte se, že ostatní procesy na pozadí se dokončila předtím, než se načtou projekty, nastavte `pfShouldDelayLoadToNextIdle` k **true**.  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnBeforeLoadProjectBatch%2A>: Tato událost je aktivována, jestliže dávky projekty je možné načíst. Pokud `fIsBackgroundIdleBatch` má hodnotu true, projektů se mají načíst na pozadí; Pokud `fIsBackgroundIdleBatch` je nastavena hodnota false, projekty, které mají být načteny synchronně jako výsledek požadavku na uživatele, například pokud uživatel rozšíří čeká na projekt v Průzkumníku řešení. Dokáže zpracovat Tato událost při práci se náročná, v opačném případě by bylo potřeba provést <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenProject%2A>.  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnBeforeLoadProjectBatch%2A>: Tato událost je aktivována, když je batch projektů bude načten. Pokud `fIsBackgroundIdleBatch` má hodnotu true, projekty, které se mají být načteny na pozadí; Pokud `fIsBackgroundIdleBatch` má hodnotu false, projekty, které mají být načteny synchronně jako výsledek požadavku na uživatele, například pokud je uživatel rozbalí čekajícího projektu v Průzkumníku řešení. Dokáže zpracovat tuto událost nákladné práci, v opačném případě by bylo potřeba udělat v <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterOpenProject%2A>.  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnAfterLoadProjectBatch%2A>: Tato událost je aktivována po dávky projekty se načetl.  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionLoadEvents.OnAfterLoadProjectBatch%2A>: Tato událost je aktivována po načtení služby batch projektů.  
   
-## <a name="detecting-and-managing-solution-and-project-loading"></a>Zjišťování a Správa řešení a načítání projektu  
- Aby bylo možné zjistit stav zatížení projekty a řešení, volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.GetProperty%2A> s následujícími hodnotami:  
+## <a name="detect-and-manage-solution-and-project-loading"></a>Zjišťovat a spravovat řešení a načítání projektů  
+ Aby bylo možné zjistit stav načtení projekty a řešení, volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.GetProperty%2A> s použitím následujících hodnot:  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4>: `var` vrátí `true` Pokud všechny své projekty a řešení se načtou, jinak `false`.  
+- <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4>: `var` vrátí `true` Pokud řešení a všechny jeho projekty jsou načteny, jinak `false`.  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4>: `var` vrátí `true` Pokud dávky projekty aktuálně načítání na pozadí, jinak `false`.  
+- <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4>: `var` vrátí `true` Pokud dávku projekty aktuálně načítání na pozadí, v opačném případě `false`.  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4>: `var` vrátí `true` Pokud dávky projekty se právě načítá synchronně v důsledku příkaz uživatele nebo jiných explicitní zatížení, jinak `false`.  
+- <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID4>: `var` vrátí `true` Pokud dávku projekty se aktuálně načítá synchronně jako výsledek příkazu uživatele nebo jiné explicitní zatížení, jinak `false`.  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID2>: `var` vrátí `true` Pokud řešení aktuálně dochází k uzavření, jinak `false`.  
+- <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID2>: `var` vrátí `true` Pokud řešení aktuálně dochází k uzavření, jinak `false`.  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID>: `var` vrátí `true` Jestliže řešení je aktuálně otevíráte, jinak `false`.  
+- <xref:Microsoft.VisualStudio.Shell.Interop.__VSPROPID>: `var` vrátí `true` Pokud řešení je právě otevřen, v opačném případě `false`.  
   
- Můžete také zajistit, že jsou načtená projekty a řešení při volání jedné z následujících metod:  
+  Můžete také zajistit, že projekty a řešení jsou načteny voláním jedné z následujících metod:  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution4.EnsureSolutionIsLoaded%2A>: voláním této metody vynutí projekty v řešení pro načtení předtím, než se vrátí tato metoda hodnotu.  
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution4.EnsureSolutionIsLoaded%2A>: volání této metody vynutí projekty v řešení se načíst dříve, než metoda vrátí.  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution4.EnsureProjectIsLoaded%2A>: voláním této metody vynutí projekty v `guidProject` načíst než metoda vrátí.  
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution4.EnsureProjectIsLoaded%2A>: volání této metody vynutí projekty v `guidProject` načíst dříve, než metoda vrátí.  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution4.EnsureProjectsAreLoaded%2A>: voláním této metody vynutí na projekt v `guidProjectID` načíst než metoda vrátí.  
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution4.EnsureProjectsAreLoaded%2A>: volání této metody vynutí projekt v `guidProjectID` načíst dříve, než metoda vrátí.  

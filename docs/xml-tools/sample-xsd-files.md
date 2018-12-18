@@ -1,32 +1,25 @@
 ---
-title: Ukázkové soubory XSD | Microsoft Docs
-ms.custom: ''
+title: Ukázkové soubory XSD
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-xml-tools
+ms.topic: sample
 ms.assetid: 6a3d0ab6-825e-42fa-8df0-37fbc5da9e73
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ae8689d1896920add4adb043057c575e3ad4d80d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 832038449cefffd6cd10349f66be0a1d20f683d2
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34571930"
 ---
 # <a name="sample-xsd-files"></a>Ukázkové soubory XSD
-Následující příklad soubory se používají v dokumentaci k Návrhář schématu XSD.  
-  
+
+Příklad soubory v této části se používají v dokumentaci k Návrhář schématu XSD.
+
 > [!NOTE]
->  Příklady společností, organizací, produktů, názvů domén, e-mailové adresy, loga, osoby, místa a události použité v ukázkách jsou smyšlené. Žádné spojení se skutečnou společností, organizace, produktu, název domény, e-mailovou adresu, logem, osoba, místech nebo události je určený nebo událostmi.  
-  
-## <a name="in-this-section"></a>V tomto oddílu  
-  
-|Téma|Popis|  
-|-----------|-----------------|  
-|[Ukázkový soubor XSD: Schéma nákupní objednávky](../xml-tools/sample-xsd-file-purchase-order-schema.md)|XSD dokument, který bude obsahovat schéma pořadí typické nákupu.|  
-|[Ukázkový soubor XSD: Jednoduché schéma](../xml-tools/sample-xsd-file-simple-schema.md)|XSD dokument, který bude obsahovat jednoduché schématu.|  
-|[Ukázkový soubor XSD: Relace](../xml-tools/sample-xsd-file-relationships.md)|XSD dokument, který bude obsahovat schématu s relací.|
+> Vzorové společnosti, organizace, produkty, názvy domén, e-mailové adresy, loga, osoby, místa a události použité v ukázkách jsou smyšlené. Žádné jejich spojení se skutečnou společností, organizaci, produktu, název domény, e-mailovou adresu, loga, osoby, místa nebo události je určena ji vyvozovat.

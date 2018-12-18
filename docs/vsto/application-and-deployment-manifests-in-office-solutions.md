@@ -1,9 +1,9 @@
 ---
-title: Aplikace a nasazení manifesty v řešeních pro systém Office | Microsoft Docs
+title: Manifesty aplikace a nasazení v řešeních pro systém Office
 ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
+ms.technology: office-development
+ms.prod: visual-studio-dev15
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -13,41 +13,42 @@ helpviewer_keywords:
 - deployment manifests [Office development in Visual Studio]
 - application manifests [Office development in Visual Studio]
 - assemblies [Office development in Visual Studio], updating
-author: TerryGLee
-ms.author: tglee
+author: John-Hart
+ms.author: johnhart
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7c828a4ff5b4b54836f67b208dd0188db765fd71
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: bb4386469e02934045d9f1da45fe515dc9af5da2
+ms.sourcegitcommit: 20c0991d737c540750c613c380cd4cf5bb07de51
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53247956"
 ---
-# <a name="application-and-deployment-manifests-in-office-solutions"></a>Manifesty aplikací a nasazení v řešeních pro systém Office
-  Manifest aplikace je soubor XML, který poskytuje informace, který je používán řešení Office pro vyhledání a aktualizujte jeho sestavení. Manifest aplikace můžete použít s manifestu nasazení, který je soubor XML, který je uložený na serveru, který poskytuje informace potřebné k vyhledání nejaktuálnější verzi manifest aplikace a sestavení.  
+# <a name="application-and-deployment-manifests-in-office-solutions"></a>Manifesty aplikace a nasazení v řešeních pro systém Office
+  Manifest aplikace je soubor XML, který poskytuje informace, které používá řešení pro Office najít a aktualizovat jeho sestavení. Manifest aplikace je možné s manifestem nasazení, což je soubor XML, který je uložený na serveru, který poskytuje informace potřebné k vyhledání aktuální verze manifestu aplikace a sestavení.  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
-## <a name="manifest-structure-for-office-solutions"></a>Manifestu strukturu pro řešení pro systém Office  
- Pro aplikace Microsoft Office řešení vytvořená pomocí nástrojů pro vývoj pro Office v sadě Visual Studio jsou všechny manifesty založené na standardní ClickOnce schématu. Při nasazení řešení Office manifesty aplikace pro úrovni dokumentu a projekty doplňku VSTO se nachází v mezipaměti ClickOnce. Manifesty nasazení nebudou zkopírovány do klientského počítače.  
+## <a name="manifest-structure-for-office-solutions"></a>Manifest strukturu pro řešení pro systém Office  
+ Řešení Microsoft Office vytvořená pomocí nástroje pro vývoj pro Office v sadě Visual Studio vychází všechny manifesty na standardní schéma ClickOnce. Při nasazení řešení Office jsou umístěny manifesty aplikace pro úrovni dokumentu a projekty doplňku VSTO v mezipaměti ClickOnce. Manifesty nasazení nejsou zkopírovány do klientského počítače.  
   
- Informace o obsahu manifestů aplikace a nasazení pro projekty Office, najdete v části [manifesty aplikací pro řešení Office](../vsto/application-manifests-for-office-solutions.md) a [manifesty nasazení pro řešení Office](../vsto/deployment-manifests-for-office-solutions.md).  
+ Informace o obsahu, aplikace a manifesty nasazení pro projekty Office najdete v tématu [manifesty aplikace pro řešení Office](../vsto/application-manifests-for-office-solutions.md) a [manifesty nasazení pro řešení Office](../vsto/deployment-manifests-for-office-solutions.md).  
   
-## <a name="creating-application-and-deployment-manifests"></a>Vytváření aplikací a nasazení manifesty  
- Manifesty aplikace se vytvoří automaticky v rámci procesu sestavení. Pokaždé, když vytvoříte projekt na úrovni dokumentu a, umístění manifestu nasazení je vložen do dokumentu jako vlastnost vlastní dokumentu. Umístění manifestu nasazení je pro doplňky VSTO uložené v registru.  
+## <a name="create-application-and-deployment-manifests"></a>Vytvoření aplikace a manifestů nasazení  
+ Manifesty aplikací jsou vytvořeny automaticky jako součást procesu sestavení. Pokaždé, když vytváříte projekt úrovni dokumentu, umístění manifestu nasazení se vloží do dokumentu jako vlastní vlastnost dokumentu. Pro doplňky VSTO umístění manifestu nasazení je uložen v registru.  
   
- Další informace o **Průvodci publikováním**, najdete v části [nasazení řešení Office aplikací ClickOnce pomocí](../vsto/deploying-an-office-solution-by-using-clickonce.md).  
+ Další informace o **Průvodce publikováním**, naleznete v tématu [nasazení řešení Office s použitím technologie ClickOnce](../vsto/deploying-an-office-solution-by-using-clickonce.md).  
   
- Další informace o manifesty pracují s řešení pro systém Office, najdete v části [nasazení řešení Office](../vsto/deploying-an-office-solution.md).  
+ Další informace o tom manifesty práce s řešeními sady Office, najdete v části [nasazení řešení Office](../vsto/deploying-an-office-solution.md).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Architektura přizpůsobení na úrovni dokumentu](../vsto/architecture-of-document-level-customizations.md)   
  [Architektura doplňků VSTO](../vsto/architecture-of-vsto-add-ins.md)   
- [Návrh a vytváření řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)   
+ [Návrh a vytvoření řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)   
  [Manifesty aplikace pro řešení pro systém Office](../vsto/application-manifests-for-office-solutions.md)   
- [Manifesty nasazení pro řešení Office](../vsto/deployment-manifests-for-office-solutions.md)   
- [ClickOnce – Manifest aplikace](/visualstudio/deployment/clickonce-application-manifest)   
+ [Manifesty nasazení pro řešení pro systém Office](../vsto/deployment-manifests-for-office-solutions.md)   
+ [ClickOnce – manifest aplikace](/visualstudio/deployment/clickonce-application-manifest)   
  [ClickOnce – manifest nasazení](/visualstudio/deployment/clickonce-deployment-manifest)  
   
   

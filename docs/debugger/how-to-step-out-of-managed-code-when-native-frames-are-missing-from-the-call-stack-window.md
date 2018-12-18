@@ -1,6 +1,6 @@
 ---
-title: 'Postupy: vystoupení ze spravovaného kódu, pokud v okně zásobník volání chybějí nativní rámce | Microsoft Docs'
-ms.custom: ''
+title: Krok z C# kódu při zásobník volání chybějí nativní rámce | Dokumentace Microsoftu
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -24,25 +24,28 @@ manager: douge
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: e21d45cd65fc6bc6a66f2f7c698952f0cdd788b9
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 741afb6befdbc29cafab39c3c9b0d7bb2761d7b1
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057649"
 ---
 # <a name="how-to-step-out-of-managed-code-when-native-frames-are-missing-from-the-call-stack-window"></a>Postupy: Vystoupení ze spravovaného kódu, pokud v okně Zásobník volání chybějí nativní rámce.
-Pokud má váš kód nativní rámce, které jsou v neviditelná **zásobníkem volání** okně krokování s mimo spravovaný kód může vést k neočekávaným výsledkům. Jako alternativní řešení, můžete použít zarážku místo **Krokovat s Vystoupením**.  
-  
+
+Pokud má váš kód nativní rámce, které jsou viditelné ve **zásobník volání** okno krokování mimo spravovaný kód může vést k neočekávaným výsledkům. Jako alternativní řešení můžete použít zarážku místo **Krokovat s Vystoupením**.
+
 > [!NOTE]
->  Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [přizpůsobení prostředí Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
-  
-### <a name="to-step-out-of-managed-code-when-native-frames-are-missing-from-the-call-stack-display"></a>Chcete-li vystoupení ze spravovaného kódu, pokud zobrazení zásobník volání chybějí nativní rámce  
-  
-1.  V nativním kódu zarážku umístění po volání do spravovaného kódu.  
-  
-2.  Na **ladění** nabídce zvolte **pokračovat**.  
-  
-     Po dokončení volání spravované provádění zastaví u zarážky v nativním kódu.  
-  
-## <a name="see-also"></a>Viz také  
- [Postupy: použití okna zásobník volání](../debugger/how-to-use-the-call-stack-window.md)
+> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [Resetovat nastavení](../ide/environment-settings.md#reset-settings).
+
+## <a name="step-out-of-managed-code-when-native-frames-are-missing-from-the-call-stack-display"></a>Vystoupení ze spravovaného kódu, pokud zobrazení zásobníku volání chybějí nativní rámce
+
+1.  V nativním kódu nastavte zarážku umístění po volání spravovaného kódu.
+
+2.  Na **ladění** nabídce zvolte **pokračovat**.
+
+     Po dokončení spravovaných volání provádění zastaví na zarážce v nativním kódu.
+
+## <a name="see-also"></a>Viz také:
+
+- [Postupy: Použití okna Zásobník volání](../debugger/how-to-use-the-call-stack-window.md)

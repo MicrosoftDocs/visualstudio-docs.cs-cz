@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: mapování schémat na dokumenty aplikace Word v sadě Visual Studio | Microsoft Docs'
+title: 'Postupy: mapování schémat na dokumenty aplikace Word v sadě Visual Studio'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -17,20 +17,21 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 629149eab19dbd717cdc663a58a53659ae18a4af
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e3bec0437fb9bcd55821e27b22b118430024f751
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35255428"
 ---
-# <a name="how-to-map-schemas-to-word-documents-inside-visual-studio"></a>Postupy: Mapování schémat na dokumenty aplikace Word v prostředí Visual Studio
+# <a name="how-to-map-schemas-to-word-documents-inside-visual-studio"></a>Postupy: mapování schémat na dokumenty aplikace Word v sadě Visual Studio
   **Důležité** informace uvedené v tomto tématu týkající se aplikace Microsoft Word je vidění výhradně pro benefit a použití jednotlivce a organizace, kteří se nacházejí mimo Spojené státy a jeho území nebo který používáte, nebo vývoj programy, které běží na, produkty Microsoft Word, které byly před leden 2010, když Microsoft odebrat implementace konkrétní funkce licencí společnosti Microsoft týkající se vlastní kód XML z aplikace Microsoft Word. Tyto informace týkající se aplikace Microsoft Word nemusí přečteny nebo používány jednotlivce nebo organizace v USA nebo v jeho území, které používáte, nebo vývoj programy, které běží na produkty Microsoft Word, které byly licencí společnosti Microsoft po 10 leden 2010 ; tyto produkty nebudou chovají stejně jako produkty licencované před tímto datem nebo zakoupených a licenci na použití mimo Spojené státy.  
   
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]  
   
  Dokument je otevřen v sadě Visual Studio, můžete namapovat schéma XML do dokumentu. Můžete použít stejné nástroje Microsoft Office Word, které použijete v otevřeném dokumentu mimo Visual Studio. Microsoft Office project vytvoří stejné objekty, zda mapování schématu v dokumentu před nebo po vytvoření řešení aplikace Word.  
   
-### <a name="to-map-an-xml-schema-to-a-word-document-in-visual-studio"></a>Pro mapování schématu XML na dokument aplikace Word v sadě Visual Studio  
+## <a name="to-map-an-xml-schema-to-a-word-document-in-visual-studio"></a>Pro mapování schématu XML na dokument aplikace Word v sadě Visual Studio  
   
 1.  Otevřete projekt dokumentu nebo šablony aplikace Word v sadě Visual Studio.  
   
@@ -63,8 +64,8 @@ ms.lasthandoff: 04/16/2018
   
 10. Přetáhněte elementy z **struktuře XML** okno na místa v dokumentu, kde chcete vytvořit odpovídající ovládací prvky.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Postupy: mapování schémat na listy v sadě Visual Studio](../vsto/how-to-map-schemas-to-worksheets-inside-visual-studio.md)   
- [Schémata XML a data v přizpůsobeních na úrovni dokumentu](../vsto/xml-schemas-and-data-in-document-level-customizations.md)  
+ [Schémata XML a data v přizpůsobeních na úrovni dokumentu](../vsto/xml-schemas-and-data-in-document-level-customizations.md)  
   
   

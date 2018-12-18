@@ -26,18 +26,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e069b13f3ceda00383bda8d0c33d74059e785f0
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 4084ce78d1acaf5a34f95ea88046bf0860efc9ca
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750113"
 ---
-# <a name="cventerspan-function"></a>CvEnterSpan – funkce
+# <a name="cventerspan-function"></a>Cventerspan – funkce
 Označuje začátek nové rozpětí.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```C  
 HRESULT CvEnterSpanW(  
     _In_reads_bytes_(16) PCV_MARKERSERIES pMarkerSeries,   
     _Out_ PCV_SPAN* ppSpan,   
@@ -116,20 +117,20 @@ HRESULT CvEnterSpanExVA(
  Kontext řady platný značky. Nemůže mít hodnotu NULL.  
   
  `pMessage`  
- Řetězec formátu zpráv. Nemůže mít hodnotu NULL.  
+ Formát zprávy řetězec. Nemůže mít hodnotu NULL.  
   
  `ppSpan`  
- Adresa proměnnou, která bude obsahovat výsledný objekt rozpětí. Adresa nesmí být NULL, proměnná může mít žádnou hodnotu.  
+ Adresa proměnné, která bude obsahovat výsledný objekt rozpětí. Adresa nesmí být NULL, proměnná může mít žádnou hodnotu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
  S_OK, pokud zpráva je úspěšně zapsána. Kód chyby v případě, že byly všechny chyby. Makra úspěšné nebo NEÚSPĚŠNÉ použijte ke kontrole chybový stav.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** cvmarkers.h  
+ **Záhlaví:** *cvmarkers.h*  
   
  **Unicode:** cventerspanw –, cventerspanvw –, cventerspanexw –, cventerspanexvw –  
   
  **ANSI:** cventerspana –, cventerspanva –, cventerspanexa –, cventerspanexvw –  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Referenční dokumentace knihoven jazyka C++](../profiling/cpp-library-reference.md)

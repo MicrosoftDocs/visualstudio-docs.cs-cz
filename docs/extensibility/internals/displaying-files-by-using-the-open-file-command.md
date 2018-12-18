@@ -1,5 +1,5 @@
 ---
-title: Zobrazení souborů pomocí příkaz pro otevření souboru | Microsoft Docs
+title: Zobrazení souborů pomocí příkazu Otevřít soubor | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,46 +15,47 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6b84992dc1803f1eee4fc36d477db1708eb90904
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 425433c3d67e654398fde1609b3f9c4d54e63648
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39498722"
 ---
-# <a name="displaying-files-by-using-the-open-file-command"></a>Zobrazení souborů pomocí příkaz pro otevření souboru
-Následující kroky popisují, jak rozhraní IDE zpracovává **otevření souboru** příkaz, který je k dispozici na **soubor** nabídky v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Kroky také popisují, jak mají projekty reagovat na volání, které pocházejí z tohoto příkazu.  
+# <a name="display-files-by-using-the-open-file-command"></a>Zobrazení souborů pomocí příkazu Otevřít soubor
+Následující kroky popisují, jak zachází s integrovaného vývojového prostředí **otevřít soubor** příkaz, který je k dispozici na **souboru** v nabídce [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Kroky také popisují, jak by měl projekty reakce na volání, které pocházejí z tohoto příkazu.  
   
- Když uživatel klikne **otevření souboru** příkaz na **soubor** nabídce a vybere soubor z **otevření souboru** dialogové okno, se spustí následující proces.  
+ Když uživatel klikne **otevřít soubor** příkaz **souboru** nabídky a vybere soubor z **otevřít soubor** dialogové okno, se spustí následující proces:  
   
-1.  Pomocí spuštěné tabulce dokumentu, rozhraní IDE zjistí, zda soubor je již otevřen v projektu.  
+1.  Pomocí spuštěnou tabulku dokumentů, rozhraní IDE zjistí, zda soubor je již otevřen v projektu.  
   
-    -   Pokud je soubor otevřít, rozhraní IDE resurfaces okna.  
+    -   Pokud je soubor otevřen, rozhraní IDE resurfaces okna.  
   
-    -   Pokud soubor není otevřený, zavolá rozhraní IDE <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.IsDocumentInProject%2A> dotazovat každý projekt k určení, které projektu můžete otevřít soubor.  
+    -   Pokud soubor není otevřen, zavolá rozhraní IDE <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.IsDocumentInProject%2A> k dotazování každý projekt k určení, které projekty můžou otevřít soubor.  
   
         > [!NOTE]
-        >  V implementaci projektu <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.IsDocumentInProject%2A>, zadejte hodnotu priority, která informuje o úrovni, na které projektu otevře soubor. Hodnoty priority jsou součástí <xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY> výčtu.  
+        >  Ve vaší implementaci projektu <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.IsDocumentInProject%2A>, zadejte hodnotu priority, která určuje úroveň, na které váš projekt otevře soubor. Hodnoty priority jsou součástí <xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY> výčtu.  
   
-2.  Každý projekt, odpoví úroveň priority, který označuje význam se umístí na právě projekt k otevření souboru.  
+2.  Každý projekt jako odpověď vrátí úroveň priority, která určuje význam umístí na se projekt k otevření souboru.  
   
-3.  Prostředí IDE používá následující kritéria k určení, které projektu otevře soubor:  
+3.  Integrované vývojové prostředí používá k určení, který projekt otevře soubor následující kritéria:  
   
-    -   Projekt, který odpovídá s nejvyšší prioritou (DP_Intrinsic) otevře soubor. Pokud více než jeden projekt odpoví této priority, otevře se soubor první projekt reagovat.  
+    -   Projekt, který odpovídá nejvyšší prioritu (`DP_Intrinsic`) otevře soubor. Pokud více než jeden projekt odpoví tuto prioritu, první projekt reagovat otevře soubor.  
   
-    -   Pokud žádné odpoví projektu s nejvyšší prioritou (DP_Intrinsic), ale všechny projekty odpověď s stejné, nižší prioritu, aktivní projekt se otevře soubor. Pokud je aktivní žádný projekt, první projekt reagovat otevře soubor.  
+    -   Pokud žádný projekt odpoví s nejvyšší prioritou (`DP_Intrinsic`), ale všechny projekty odpoví stejným, nižší prioritu, aktivní projekt otevře soubor. Pokud není aktivní žádný projekt, první projekt reagovat otevře soubor.  
   
-    -   Pokud žádný projekt deklarací vlastnictví souboru (DP_Unsupported), otevře se soubor různé soubory projektu.  
+    -   Pokud žádný projekt deklarací vlastnictví souboru (`DP_Unsupported`), otevře soubor projektu s různorodými soubory.  
   
-         Pokud je vytvořena instance různé soubory projektu, se s hodnotou DP_CanAddAsExternal vždy odpovídá projektu. Tato hodnota označuje, že projekt můžete otevřít soubor. Tento projekt se používá k levné otevřených souborů, které nejsou v jiných projektů. Seznam položek v tomto projektu není trvalý; Tento projekt je zobrazen v **Průzkumníku řešení** pouze pokud slouží k otevření souboru.  
+         Pokud je vytvořena instance ostatních souborech projektu, projektu vždy s hodnotou odpovídá `DP_CanAddAsExternal`. Tato hodnota označuje, že projekt můžete otevřít soubor. Tento projekt se používá k umístění otevřených souborů, které nejsou v každém projektu. Seznam položek v tomto projektu není trvalý; Tento projekt je viditelný v **Průzkumníka řešení** pouze pokud je použit k otevření souboru.  
   
-         Pokud různé soubory projektu nevyplývá, aby mohli soubor otevřít, nebyla vytvořena instance projektu. V takovém případě rozhraní IDE vytvoří instanci různé soubory projektu a informuje projekt k otevření souboru.  
+         Pokud projekt ostatní soubory neznamená, že ho můžete otevřít soubor, instance projektu nebyl vytvořen. V tomto případě rozhraní IDE vytvoří instanci projektu různých souborů a dává pokyn k otevření souboru projektu.  
   
-4.  Jakmile IDE určuje projekt, který otevře soubor, zavolá <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.OpenItem%2A> metodu daného projektu.  
+4.  Jakmile rozhraní IDE zjistí, který projekt otevře soubor, volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.OpenItem%2A> metoda u tohoto projektu.  
   
-5.  Projekt pak nemá možnost otevření souboru pomocí editoru specifické pro projekt nebo standardního editoru. Další informace najdete v tématu [postup: Otevřete projekt konkrétní editory](../../extensibility/how-to-open-project-specific-editors.md) a [postup: otevřete standardní editory](../../extensibility/how-to-open-standard-editors.md), v uvedeném pořadí.  
+5.  Projekt nemá možnost otevření souboru pomocí editoru specifické pro projekt nebo standardní editor. Další informace najdete v tématu [postupy: otevření editoru pro konkrétní projekt](../../extensibility/how-to-open-project-specific-editors.md) a [postupy: otevření standardních editorů](../../extensibility/how-to-open-standard-editors.md)v uvedeném pořadí.  
   
-## <a name="see-also"></a>Viz také  
- [Zobrazení souborů pomocí příkazu Open](../../extensibility/internals/displaying-files-by-using-the-open-with-command.md)   
- [Otevření a uložení položky projektu](../../extensibility/internals/opening-and-saving-project-items.md)   
- [Postupy: otevření projektu konkrétní editory](../../extensibility/how-to-open-project-specific-editors.md)   
- [Postupy: Otevření standardních editorů](../../extensibility/how-to-open-standard-editors.md)
+## <a name="see-also"></a>Viz také:  
+ [Pomocí příkazu Otevřít v zobrazení souborů](../../extensibility/internals/displaying-files-by-using-the-open-with-command.md)   
+ [Otevření a uložení položek projektu](../../extensibility/internals/opening-and-saving-project-items.md)   
+ [Postupy: otevření editoru pro konkrétní projekt](../../extensibility/how-to-open-project-specific-editors.md)   
+ [Postupy: otevření standardních editorů](../../extensibility/how-to-open-standard-editors.md)

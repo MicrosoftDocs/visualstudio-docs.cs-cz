@@ -1,5 +1,5 @@
 ---
-title: Volání metody události ladicí program | Microsoft Docs
+title: Volání událostí ladicího programu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,17 +13,18 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3960d464b1a6d44fb77eba23cd518fea1f2e5a39
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3ae37a6f6ed180d13623a04afd357efcc109039f
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39153030"
 ---
-# <a name="calling-debugger-events"></a>Události volání ladicí program
-Při ladění relace k událostem v určitém pořadí.  
+# <a name="call-debugger-events"></a>Volání událostí ladicího programu
+Dojde k událostem v ladicími relacemi v určitém pořadí.  
   
-## <a name="discussion"></a>Diskusní  
- Zjistit vzor volání mezi modul ladění (DE) a správce ladicí relace (SDM) představuje následující pořadí volání události, které nastaly v typické ladicí relace:  
+## <a name="discussion"></a>Diskuse  
+ Pro pochopení způsobu volání mezi ladicího stroje (DE) a správce ladění relace (SDM), představuje následující pořadí volání události, ke kterým dochází v typické ladicí relace:  
   
 1.  [Připojení a odpojení programu](../../extensibility/debugger/attaching-and-detaching-to-a-program.md)  
   
@@ -31,23 +32,23 @@ Při ladění relace k událostem v určitém pořadí.
   
 3.  [Ukončení programu](../../extensibility/debugger/terminating-a-program.md)  
   
-4.  [Vytváření zarážky](../../extensibility/debugger/creating-a-breakpoint.md)  
+4.  [Vytvořením zarážky](../../extensibility/debugger/creating-a-breakpoint.md)  
   
-5.  [Když zarážku váže nebo stal nevázaných](../../extensibility/debugger/when-a-breakpoint-binds-or-becomes-unbound.md)  
+5.  [Když vytvoří vazbu zarážky nebo stát nevázaných](../../extensibility/debugger/when-a-breakpoint-binds-or-becomes-unbound.md)  
   
-6.  [Breakpoint – chyby](../../extensibility/debugger/breakpoint-errors.md)  
+6.  [Chyby zarážky](../../extensibility/debugger/breakpoint-errors.md)  
   
-7.  [Stiskne zarážky](../../extensibility/debugger/hitting-a-breakpoint.md)  
+7.  [Dosažení zarážky](../../extensibility/debugger/hitting-a-breakpoint.md)  
   
 8.  [Odstranění zarážky](../../extensibility/debugger/deleting-a-breakpoint.md)  
   
-9. [Přejít do režimu pozastavení](../../extensibility/debugger/entering-break-mode.md)  
+9. [Přechod do režimu přerušení](../../extensibility/debugger/entering-break-mode.md)  
   
-10. [Krokování s v režimu pozastavení](../../extensibility/debugger/stepping-in-break-mode.md)  
+10. [Krokování v režimu pozastavení](../../extensibility/debugger/stepping-in-break-mode.md)  
   
 11. [Vyhodnocení výrazu v režimu pozastavení](../../extensibility/debugger/expression-evaluation-in-break-mode.md)  
   
 12. [Zpracování výjimek](../../extensibility/debugger/exception-handling-visual-studio-sdk.md)  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Vytvoření vlastního ladicího stroje](../../extensibility/debugger/creating-a-custom-debug-engine.md)

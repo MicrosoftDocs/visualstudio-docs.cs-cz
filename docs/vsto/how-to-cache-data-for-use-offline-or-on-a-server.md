@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: ukládat Data do mezipaměti pro použití v režimu Offline nebo na serveru | Microsoft Docs'
+title: 'Postupy: použití dat do mezipaměti v režimu offline nebo na serveru'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -20,18 +20,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 91b50684e18aaf4b7b6d95d24c81ecb56bdefc4c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a53b3539d71383d4fad95838250380c5849e8c5b
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35254209"
 ---
-# <a name="how-to-cache-data-for-use-offline-or-on-a-server"></a>Postupy: Ukládání dat do mezipaměti pro použití v režimu offline nebo na serveru
+# <a name="how-to-cache-data-for-use-offline-or-on-a-server"></a>Postupy: použití dat do mezipaměti v režimu offline nebo na serveru
   Můžete označit položku dat do mezipaměti v dokumentu, aby byla dostupná offline. To také umožňuje pro data v dokumentu, který má být manipulovat jiný kód, když je dokument uložen na serveru.  
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
- Můžete označit položku dat do mezipaměti, pokud položka dat je deklarovaný ve vašem kódu, nebo, pokud používáte <xref:System.Data.DataSet>, a to nastavením vlastnosti **vlastnosti** okno. Pokud jsou ukládání do mezipaměti položku dat, který není <xref:System.Data.DataSet> nebo <xref:System.Data.DataTable>, ujistěte se, zda splňuje kritéria pro ukládat do mezipaměti v dokumentu. Další informace najdete v tématu [ukládání dat do mezipaměti](../vsto/caching-data.md).  
+ Můžete označit položku dat do mezipaměti, pokud položka dat je deklarovaný ve vašem kódu, nebo, pokud používáte <xref:System.Data.DataSet>, a to nastavením vlastnosti **vlastnosti** okno. Pokud jsou ukládání do mezipaměti položku dat, který není <xref:System.Data.DataSet> nebo <xref:System.Data.DataTable>, ujistěte se, zda splňuje kritéria pro ukládat do mezipaměti v dokumentu. Další informace najdete v tématu [ukládat data do mezipaměti](../vsto/caching-data.md).  
   
 > [!NOTE]  
 >  Datové sady vytvořené pomocí jazyka Visual Basic, které jsou označeny jako **mezipaměť** a **WithEvents** (včetně datové sady, které jsou přetažením z **zdroje dat** okno nebo **Sada nástrojů** mají **CacheInDocument** vlastnost nastavena na hodnotu **True**) mají podtržítkem předponu na jejich názvy v mezipaměti. Například pokud vytvoříte datové sady a pojmenujte ji **zákazníci**, <xref:Microsoft.VisualStudio.Tools.Applications.CachedDataItem> bude název **_Customers** v mezipaměti. Při použití <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> pro přístup k této položky v mezipaměti, musíte zadat **_Customers** místo **zákazníci**.  
@@ -61,10 +62,10 @@ ms.lasthandoff: 04/16/2018
   
 4.  V **vlastnosti** nastavte **modifikátory** vlastnost **veřejné** (ve výchozím nastavení je **interní**).  
   
-## <a name="see-also"></a>Viz také  
- [Ukládání dat do mezipaměti](../vsto/caching-data.md)   
+## <a name="see-also"></a>Viz také:  
+ [Data do mezipaměti](../vsto/caching-data.md)   
  [Postupy: zdroji dat v dokumentu systému Office mezipaměti prostřednictvím kódu programu](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)   
- [Postupy: mezipaměti Data v dokumentu chráněném heslem](../vsto/how-to-cache-data-in-a-password-protected-document.md)   
+ [Postupy: mezipaměti data v dokumentu chráněném heslem](../vsto/how-to-cache-data-in-a-password-protected-document.md)   
  [Přístup k datům v dokumentech na serveru](../vsto/accessing-data-in-documents-on-the-server.md)   
  [Ukládání dat](/visualstudio/data-tools/saving-data)  
   

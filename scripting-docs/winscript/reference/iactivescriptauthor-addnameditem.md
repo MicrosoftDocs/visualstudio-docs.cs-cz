@@ -1,11 +1,11 @@
 ---
 title: IActiveScriptAuthor::AddNamedItem | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - IActiveScriptAuthor.AddNamedItem
@@ -14,7 +14,7 @@ apilocation:
 helpviewer_keywords:
 - IActiveScriptAuthor::AddNamedItem
 ms.assetid: 951003b6-1c4a-4086-b7ce-2f128e007280
-caps.latest.revision: 
+caps.latest.revision: 19
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -23,6 +23,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24793275"
 ---
 # <a name="iactivescriptauthoraddnameditem"></a>IActiveScriptAuthor::AddNamedItem
 Přidá název položky kořenové úrovně do skriptu pro tvorbu názvů stroje. A *kořenovou položku* je objekt obsahující vlastnosti a metody a může obsahovat také zdroje událostí.  

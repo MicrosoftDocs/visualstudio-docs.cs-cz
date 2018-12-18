@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31481538"
 ---
 # <a name="message-properties-dialog-box"></a>Dialogové okno vlastností zpráv
 Další informace o konkrétní zprávou pomocí tohoto dialogového okna. K zobrazení tohoto dialogového okna, přesunout fokus [zobrazení zpráv](../debugger/messages-view.md) okno. Vyberte libovolný uzel zprávy ve stromové struktuře, a potom vyberte **vlastnosti** z **zobrazení** nabídky.  

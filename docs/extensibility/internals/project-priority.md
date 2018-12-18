@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130877"
 ---
 # <a name="project-priority"></a>Priorita projektu
 Položka projektu obvykle je členem jenom jedné projekt v řešení. Proto IDE může snadno zjistit projektu, který se používá k otevření položky. Ale pokud je určitá položka členem více než jeden projekt, rozhraní IDE používá schéma s prioritou určit nejlepší projekt pro otevření položky.  

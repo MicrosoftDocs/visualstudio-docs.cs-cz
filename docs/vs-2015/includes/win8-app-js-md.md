@@ -1,0 +1,1 @@
+Aplikace pro web Windows Store vytvořená pro systém Windows s použitím jazyka JavaScript

@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31458242"
 ---
 # <a name="choose-breakpoints-dialog-box"></a>Dialogové okno Vybrat zarážky
 **Vybrat zarážky** otevře se dialogové okno při pokusu o nastavení boru přerušení z nejednoznačný vstup ve **nové zarážek** dialogové okno. Běžným příkladem nejednoznačný vstupu je název přetížené funkce.  

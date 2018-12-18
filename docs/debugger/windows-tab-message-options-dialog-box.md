@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31476855"
 ---
 # <a name="windows-tab-message-options-dialog-box"></a>Karta Okna, dialogové okno možností zpráv
 Použití **Windows** a nastavte rozsah zprávy uvedené v [zobrazení zpráv](../debugger/messages-view.md). Chcete-li zobrazit [dialogové okno možností zpráv](../debugger/message-options-dialog-box.md), zvolte **zprávy protokolu** z **nástroje Spy** nabídky.  

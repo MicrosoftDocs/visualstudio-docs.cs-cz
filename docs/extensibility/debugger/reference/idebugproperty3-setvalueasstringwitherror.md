@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty3::SetValueAsStringWithError | Microsoft Docs
+title: IDebugProperty3::SetValueAsStringWithError | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9379d474f135c5d6bbe82fd3391e7e4d8241f1b9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5f747185dd696f6d70cc4c514f54eaddef5bfa7a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49864436"
 ---
 # <a name="idebugproperty3setvalueasstringwitherror"></a>IDebugProperty3::SetValueAsStringWithError
-Nastaví hodnotu této vlastnosti a vrátí chybovou zprávu, v případě potřeby.  
+Nastaví hodnotu této vlastnosti a vrátí chybovou zprávu, pokud je to nutné.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,22 +47,22 @@ int SetValueAsStringWithError(
   
 #### <a name="parameters"></a>Parametry  
  `pszValue`  
- [v] Hodnota k nastavení.  
+ [in] Hodnota k nastavení.  
   
  `dwRadix`  
- [v] Radix nastaví se hodnota.  
+ [in] Základ číselné soustavy nastaví se hodnota.  
   
  `dwTimeout`  
- [v] Doba čekání nastavit hodnotu (`INFINITE` znamená počkejte navždy).  
+ [in] Doba čekání nastavit hodnotu (`INFINITE` znamená, že stále čekat).  
   
  `errorString`  
- [out] Pokud došlo k chybě, nastavte tuto hodnotu, tato obsahuje příčinu selhání.  
+ [out] Pokud došlo k chybě, nastavením této hodnoty, to obsahuje příčinu selhání.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Příchozí hodnotou může být výraz, který se vyhodnotí.  
+ Příchozí hodnotou může být výraz, který se má vyhodnotit.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak pro tuto metodu implementovat **CProperty** objekt, který zveřejňuje [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) rozhraní.  

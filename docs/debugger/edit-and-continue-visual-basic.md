@@ -1,5 +1,5 @@
 ---
-title: Upravit a pokračovat (Visual Basic) | Microsoft Docs
+title: Upravit a pokračovat (Visual Basic) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 10/11/2017
 ms.technology: vs-ide-debug
@@ -21,37 +21,38 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: aa3b8c287129c164d8c6984ac52375d6012fbd68
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 290216d9baa2692b1cb05741f3b1afc22c74988c
+ms.sourcegitcommit: 8cdc6e2ad2341f34bd6b02859a7c975daa0c9320
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53307658"
 ---
 # <a name="edit-and-continue-visual-basic"></a>Upravit a pokračovat (Visual Basic)
-Upravit a pokračovat, je funkce pro [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] ladění, který umožňuje změnit kódu, když je prováděna v režimu pozastavení. Po použití úprav kódu, můžete pokračovat v provádění kódu s novou úprav v místě a projevily.  
+Upravit a pokračovat je funkce pro [!INCLUDE [vbprvb](../code-quality/includes/vbprvb_md.md)] ladění, která umožňuje změnit kód, zatímco je spuštěn v režimu pozastavení. Po použití úprav kódu, můžete pokračovat v provádění kódu pomocí nové úpravy na místě a vidět její účinek.  
   
- Můžete použít upravit a pokračovat funkce vždy, když zadáte režim pozastavení. V režimu pozastavení, ukazatelem na instrukce, žlutý šipku v okně zdroj odkazuje na řádek obsahující příkazu spustitelný soubor do těla metody nebo vlastnosti, které se bude provést další.
+ Můžete použít upravit a pokračovat funkci pokaždé, když zadáte režim přerušení. V režimu přerušení, ukazatele na instrukci, žlutá šipka v okně zdroje odkazuje na řádek obsahující spustitelný příkaz v těle metody nebo vlastnosti, které se bude proveden další.
 
- Upravit a pokračovat, podporuje většinu změn, které můžete chtít provést během ladicí relace, ale existují některé výjimky. Další informace najdete v tématu [podporované (C# a Visual Basic) změn kódu](../debugger/supported-code-changes-csharp.md).   
+ Upravit a pokračovat podporuje většina změn, které můžete chtít provést během relace ladění, ale existují některé výjimky. Další informace najdete v tématu [podporované změny kódu (C# a Visual Basic)](../debugger/supported-code-changes-csharp.md).   
   
- Pokud provedete neoprávněným úpravy, změna je označené jako fialové vlnovkou a úlohy se zobrazí v seznamu úloh. Pokud chcete pokračovat v používání upravit a pokračovat, musíte vrátit neoprávněným upravit. Některé úpravy, neoprávněným může být povoleno, pokud se to udělá mimo upravit a pokračovat. Pokud chcete zachovat výsledky neoprávněným upravit, musíte ukončit ladění a restartujte aplikaci.  
+ Pokud provedete úpravy neoprávněným, tato změna je označené fialovou vlnovkou a úlohy se zobrazí v seznamu úkolů. Pokud chcete pokračovat v používání funkce upravit a pokračovat, musíte vrátit neoprávněné úpravy. Některé úpravy, neoprávněným může být povoleno v případě aktivace mimo funkce upravit a pokračovat. Pokud chcete zachovat výsledky neoprávněné upravit, musíte Zastavit ladění a restartujte aplikaci.  
   
- Upravit a pokračovat se podporuje v UWP aplikací pro Windows 10 a x86 a x64 aplikací, které se zaměřují rozhraní .NET Framework 4.6 desktop nebo novější verze (pouze plochy verze rozhraní .NET Framework je).
+ Upravit a pokračovat je podporováno v aplikacích pro UPW pro Windows 10 a x86 a x64 aplikací určených pro rozhraní .NET Framework 4.6 klasické pracovní plochy nebo novější verze (jenom desktopové verze rozhraní .NET Framework je).
 
  > [!NOTE]
- > Nepodporované aplikace a platformy zahrnout ASP.NET 5, Silverlight 5 a Windows 8.1.
+ > Nepodporované aplikace a platformy obsahují ASP.NET 5, Silverlight 5 a Windows 8.1.
   
- Upravit a pokračovat není podporován při spuštění ladění pomocí **připojit k procesu**. Upravit a pokračovat není podporována pro optimalizovaného kódu nebo ve smíšeném spravovaná a nativní kód. Další informace najdete v tématu [podporované změny kódu (C# a Visual Basic](../debugger/supported-code-changes-csharp.md).
+ Upravit a pokračovat není podporována při spuštění ladění pomocí **připojit k procesu**. Upravit a pokračovat není podporována pro optimalizovaný kód nebo smíšené spravovaného a nativního kódu. Další informace najdete v tématu [podporované změny kódu (C# a Visual Basic)](../debugger/supported-code-changes-csharp.md).
   
- Témata v této části obsahují další podrobnosti o tom, jak použít tuto funkci a jaké druhy změny nejsou povoleny.  
+ Témata v této části poskytují další podrobnosti o tom, jak používat tuto funkci a jaké druhy změny nejsou povoleny.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Postupy: použití úprav v režimu pozastavení pomocí operace upravit a pokračovat](../debugger/how-to-apply-edits-in-break-mode-with-edit-and-continue.md)  
- Vysvětluje, jak se má použít kód úprav v režimu pozastavení.  
+ [Postupy: Použití úprav v režimu pozastavení pomocí operace upravit a pokračovat](../debugger/how-to-apply-edits-in-break-mode-with-edit-and-continue.md)  
+ Vysvětluje, jak použít kód úprav v režimu pozastavení.  
   
- [Podporované změny kódu (C# a Visual Basic](../debugger/supported-code-changes-csharp.md)   
- Popisuje, jaké typy úprav nelze provést v [!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)] upravit a pokračovat.  
+ [Podporované změny kódu (C# a Visual Basic)](../debugger/supported-code-changes-csharp.md)   
+ Popisuje, jaké typy úprav nelze provádět v [!INCLUDE [vb_current_short](../debugger/includes/vb_current_short_md.md)] upravit a pokračovat.  
   
 ## <a name="related-sections"></a>Související oddíly  
- [Upravit a pokračovat](../debugger/edit-and-continue.md)  
+ [Operace Upravit a pokračovat](../debugger/edit-and-continue.md)  
  Obsahuje seznam témat, upravit a pokračovat.

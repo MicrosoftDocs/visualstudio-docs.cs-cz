@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31474476"
 ---
 # <a name="mixed-mode-debugging-for-ia64-processes-is-unsupported"></a>Ladění ve smíšeném režimu není pro procesy IA64 podporováno.
 Visual Studio nepodporuje ladění ve smíšeném režimu spravovaná a nativní kód v procesy IA64. To znamená, že při ladění nelze krok ze spravovaného kódu do nativního kódu nebo z nativního kódu pro spravovaný kód.  

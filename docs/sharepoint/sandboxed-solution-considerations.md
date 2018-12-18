@@ -1,5 +1,5 @@
 ---
-title: Aspekty řešení v izolovaném prostoru | Microsoft Docs
+title: Aspekty řešení v izolovaném prostoru | Dokumentace společnosti Microsoft
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -23,37 +23,38 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ff85f3407fb24d6d49856bb11ff1852c544cad35
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2f9a5d0c439d619864cc6e9559608e3c3891fc7e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49890033"
 ---
-# <a name="sandboxed-solution-considerations"></a>Aspekty řešení v izolovaném prostoru
-  *Řešení v izolovaném prostoru* jsou funkcí v produktu Microsoft SharePoint 2010, která umožní uživatelům kolekce lokality nahrát vlastní řešení vlastní kód. Běžné řešení v izolovaném prostoru je uživatelé nahrání vlastní webové části.  
+# <a name="sandboxed-solution-considerations"></a>Aspekty řešení v izolovaném prostoru
+  *Řešení v izolovaném prostoru* jsou funkce v aplikaci Microsoft SharePoint 2010, která umožňuje lokality kolekce uživatelům odesílat své vlastní řešení vlastního kódu. Běžné řešení v izolovaném prostoru se uživatelé nahrání vlastní webové části.  
   
- V izolovaném prostoru aplikace SharePoint běží v zabezpečené, monitorovaného procesu, který má přístup k omezené součástí webové farmy. Microsoft SharePoint 2010 používá kombinaci funkcí, galerie řešení, řešení pro monitorování a ověření rozhraní povolit řešení v izolovaném prostoru.  
+ Aplikace v izolovaném prostoru SharePoint běží v zabezpečeném, monitorovaném procesu, který má přístup k omezené součástí webové farmy. Microsoft SharePoint 2010 používá kombinaci funkcí, galerie řešení, řešení monitorování a ověření rozhraní umožňující řešení v izolovaném prostoru.  
   
-## <a name="specifying-project-trust-level"></a>Určení úrovně důvěryhodnosti projektu  
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] podporuje řešení v izolovaném prostoru prostřednictvím vlastnosti projektu logická hodnota volána *řešení v izolovaném prostoru*. Tuto vlastnost lze nastavit na libovolný čas v projektu, nebo můžete zadat, když vytvoříte projekt v **Průvodce vlastním nastavením SharePoint**.  
+## <a name="specify-project-trust-level"></a>Zadejte úroveň důvěryhodnosti projektu
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] podporuje řešení v izolovaném prostoru pomocí vlastnosti Boolean projektu volá *řešení v izolovaném prostoru*. Tuto vlastnost lze nastavit v každém okamžiku v projektu, nebo můžete zadat, když vytvoříte projekt v **Průvodce přizpůsobením SharePoint**.  
   
 > [!NOTE]  
->  Změna *řešení v izolovaném prostoru* vlastnosti projektu po vytvoření může dojít k chybám ověření.  
+>  Změna *řešení v izolovaném prostoru* vlastnosti projektu po jeho vytvoření může dojít k chybám ověření.  
   
- Řešení je považován za řešení farmy obor, pokud *řešení v izolovaném prostoru* je nastavena na **false** nebo zvolíte **nasadit jako řešení farmy** možnost. Však řešení je zpracovávat odděleně od řešení farmy Pokud *řešení v izolovaném prostoru* je nastavena na **true** nebo zvolíte **nasadit jako řešení v izolovaném prostoru** možnost v průvodci.  
+ Řešení se považuje za rozsahem farmy řešení, pokud *řešení v izolovaném prostoru* je nastavena na **false** nebo vyberete **nasadit jako řešení farmy** možnost. Ale toto řešení je zpracovávat odděleně od řešení farmy Pokud *řešení v izolovaném prostoru* je nastavena na **true** nebo vyberete **nasadit jako řešení v izolovaném prostoru** možnost v průvodci.  
   
-## <a name="sharepoint-site-hierarchy"></a>Hierarchie webu služby SharePoint  
- Zjistit, jak v izolovaném prostoru řešení práce, pomáhá vědět, jestli jsou weby služby SharePoint hierarchické v oboru. Element nejvyšší se označuje jako webové farmy a další elementy jsou k němu podřízené:  
+## <a name="sharepoint-site-hierarchy"></a>Hierarchie webu služby SharePoint
+ Chcete-li pochopit, jak v izolovaném prostoru řešení práce, pomáhá zjistit, že jsou Sharepointové weby hierarchické v oboru. K prvku na vrcholu se označuje jako webové farmy a další prvky jsou podřízené k ní:  
   
- Webové farmy  
+ Webová farma  
   
- Webové aplikace A  
+ Webová aplikace A  
   
- A1 kolekce lokality  
+ Server kolekce A1  
   
  A1a lokality  
   
- Webovou aplikaci B  
+ Webová aplikace B  
   
  Kolekce B1 lokality  
   
@@ -65,84 +66,83 @@ ms.lasthandoff: 04/16/2018
   
  B2a lokality  
   
- Jak vidíte, webové farmy může obsahovat jeden nebo více webových aplikací, které pak mohou obsahovat jeden nebo více kolekcích webů, které může mít podřízené lokality a tak dále. Změny provedené jednu kolekci vliv lokality, pouze to, že kolekce webů a žádné jiné. Změny provedené na úrovni webové farmy však vliv na všechny kolekce webů na farmě.  
+ Jak je vidět, webové serverové farmy může obsahovat jeden nebo více webových aplikací, které pak může obsahovat jeden nebo více kolekcí webů, které mají podřízené lokality a tak dále. Změny provedené v jedné lokalitě kolekce vlivu pouze, který kolekce webů a žádné jiné. Změny provedené na úrovni webové farmy však vliv na všechny kolekce webů v serverové farmě.  
   
- Windows SharePoint Services (WSS) 3.0 umožňuje nasadit řešení jenom na úrovni farmy, ale [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] umožňuje nasadit na úrovni farmy (řešení farmy) nebo úrovni kolekce webů (řešení v izolovaném prostoru).  
+ Windows SharePoint Services (WSS) 3.0 umožňuje nasadit řešení pouze na úrovni farmy, ale [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] umožňuje nasazení na úrovni farmy (pro řešení farmy) nebo na úrovni kolekce webů (řešení v izolovaném prostoru).  
   
-## <a name="why-sandboxed-solutions"></a>Proč řešení v izolovaném prostoru?  
- V WSS 3.0 řešení může být nasazený jenom na úrovni farmy. Vynutila si, že potenciálně škodlivého nebo destabilizing řešení může být nasazený ovlivňující celou webové farmy a všechny ostatní kolekce webů a aplikací, které běží v něm. Pomocí řešení v izolovaném prostoru však můžete nasadit řešení na podoblasti farmy, určité kolekci webů. Zajistit další ochranu na řešení sestavení není načtena do hlavní [!INCLUDE[TLA2#tla_iis5](../sharepoint/includes/tla2sharptla-iis5-md.md)] proces (w3wp.exe). Místo toho je načten do samostatného procesu (SPUCWorkerProcess.exe). Tento proces je monitorována a implementuje kvóty a omezení pro ochranu farmy z řešení v izolovaném prostoru, které provádějí škodlivých aktivit, jako je například spuštění úzkou cykly, které využívají cyklů procesoru.  
+## <a name="why-sandboxed-solutions"></a>Proč řešení v izolovaném prostoru?
+ WSS 3.0 řešení může být nasazeny pouze na úrovni farmy. To znamená, že potenciálně škodlivého nebo destabilizující řešení může být nasazený, která měla vliv na celý webové farmy a všechny další kolekce webů a aplikací, které běží pod ním. Pomocí řešení v izolovaném prostoru, ale můžete nasadit řešení na podoblasti farmy určité kolekci webů. K zajištění další ochrany, toto řešení se nenačetlo sestavení do hlavní [!INCLUDE[TLA2#tla_iis5](../sharepoint/includes/tla2sharptla-iis5-md.md)] procesu (*w3wp.exe*). Místo toho je načtena jako samostatný proces (*SPUCWorkerProcess.exe*). Tento proces se monitoruje a implementuje kvóty a omezení pro ochranu farmy z řešení v izolovaném prostoru, které provádějí škodlivé aktivity, například spuštěním úzkou smyček, které spotřebovávají cykly procesoru.  
   
-## <a name="site-collection-solution-gallery"></a>Galerie řešení kolekce webů  
- [!INCLUDE[sharepointShort](../sharepoint/includes/sharepointshort-md.md)] 2010 obsahuje funkce, která se označuje jako "galerii kolekce webů řešení." Tuto funkci můžete přistupovat na stránce Centrální správa SharePoint 2010 nebo otevřením **Akce webu** nabídce Výběr **nastavení lokality**a pak vyberete **řešení** v části **galerií** na webu služby SharePoint. Galerie řešení jsou úložiště řešení, které umožňují správci kolekce webů ke správě řešení v jejich kolekce webů.  
+## <a name="site-collection-solution-gallery"></a>Galerie řešení kolekce webů
+ [!INCLUDE[sharepointShort](../sharepoint/includes/sharepointshort-md.md)] 2010 obsahuje funkce, která se označuje jako "galerii kolekce webů řešení." Tuto funkci můžete přistupovat ze stránky Centrální správy služby SharePoint 2010 nebo tak, že otevřete **Akce webu** nabídky, zvolíte **nastavení webu**a potom kliknete **řešení** odkaz pod **Galerie** na Sharepointovém webu. Galerie řešení se úložiště řešení, která umožňují správci kolekce webů pro správu řešení v jejich kolekcím webů.  
   
- Galerie řešení je knihovna dokumentů uložená v kořenovém webovou stránku služby SharePoint. Galerie řešení nahrazuje šablony webů a podporuje balíčků řešení. Při odeslání souboru balíčku (WSP) řešení služby SharePoint, je zpracován jako řešení v izolovaném prostoru.  
+ Galerie řešení je do knihovny dokumentů, které jsou uložené v kořenovém adresáři webové stránky SharePoint. Galerie řešení nahradí šablony webu a podporuje balíčků řešení. Když balíčku řešení služby SharePoint (*.wsp*) nahraje soubor, se zpracovávají jako řešení v izolovaném prostoru.  
   
-## <a name="sandboxed-solution-limitations"></a>Omezení řešení v izolovaném prostoru  
- Po nasazení řešení v izolovaném prostoru pole funkce služby SharePoint je k dispozici k němu je omezený na snížit žádné chyby zabezpečení, které může mít. Některé z těchto omezení zahrnují následující:  
+## <a name="sandboxed-solution-limitations"></a>Omezení řešení v izolovaném prostoru
+ Po nasazení řešení v izolovaném prostoru, je omezený na pomoct snížit jakékoli ohrožení zabezpečení, které je možné, že pole funkce služby SharePoint, které jsou k dispozici. Některé z těchto omezení patří:  
   
--   Řešení v izolovaném prostoru mít omezená podmnožina elementů nasadit řešení, která je jim dostupná. Potenciálně citlivé šablon projektu služby SharePoint, například lokality definice a pracovní postupy, nejsou k dispozici.  
+- Řešení v izolovaném prostoru máte omezená podmnožina nasaditelné řešení prvky jsou pro ně dostupné. Potenciálně ohrožená šablon projektu služby SharePoint, jako jsou definice webů a pracovních postupů, nejsou k dispozici.  
   
--   SharePoint běží řešení v izolovaném prostoru kódu v procesu (SPUCWorkerProcess.exe) oddělený od hlavní [!INCLUDE[TLA2#tla_iis5](../sharepoint/includes/tla2sharptla-iis5-md.md)] proces fondu (w3wp.exe) aplikace.  
+- SharePoint běží v procesu kódu řešení v izolovaném prostoru (*SPUCWorkerProcess.exe*) oddělená od hlavní [!INCLUDE[TLA2#tla_iis5](../sharepoint/includes/tla2sharptla-iis5-md.md)] fond aplikací (*w3wp.exe*) procesu.  
   
--   Mapované složky nelze přidat do projektu.  
+- Mapované složky nelze přidat do projektu.  
   
--   Typy, které do [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] sestavení Microsoft.Office.Server nelze použít v řešení v izolovaném prostoru. Navíc pouze typy, které do [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] sestavení Microsoft.SharePoint lze použít v řešení v izolovaném prostoru.  
+- Typy, které do [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] sestavení Microsoft.Office.Server nelze použít v řešení v izolovaném prostoru. Navíc pouze typy, které do [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] sestavení Microsoft.SharePoint lze použít v řešení v izolovaném prostoru.  
   
- Je důležité si uvědomit, že zadání řešení služby SharePoint jako řešení v izolovaném prostoru nemá žádný vliv na server služby SharePoint. pouze určuje, jak nasazení projektu služby SharePoint do služby SharePoint z [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] a jaké sestavení, která se váže k. Soubor generovaný WSP nemá vliv, a WSP soubor neobsahuje žádná data, která přímo koreluje s *řešení v izolovaném prostoru* vlastnost.  
+  Je důležité si uvědomit, zadání řešení služby SharePoint jako řešení v izolovaném prostoru nemá žádný vliv na server SharePoint. pouze určuje, jak nasazení projektu služby SharePoint k Sharepointu z [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] a jaké sestavení, který se váže k. Neovlivňuje generované *.wsp* souboru a *.wsp* soubor neobsahuje žádná data, které přímo souvisí s *řešení v izolovaném prostoru* vlastnost.  
   
-## <a name="capabilities-and-elements-in-sandboxed-solutions"></a>Možnosti a elementů v řešení v izolovaném prostoru  
- Řešení v izolovaném prostoru podporují následující možnosti a prvky:  
+## <a name="capabilities-and-elements-in-sandboxed-solutions"></a>Funkce a prvky v řešení v izolovaném prostoru
+ Řešení v izolovaném prostoru se podporují následující funkce a prvky:  
   
--   Typy nebo pole obsahu  
+- Typy a pole obsahu  
   
--   Vlastní akce  
+- Vlastní akce  
   
--   Deklarativní pracovní postupy  
+- Deklarativní pracovních postupů  
   
--   Přijímače událostí  
+- Přijímače událostí  
   
--   Funkce popisky  
+- Funkce popisky  
   
--   Definice seznamů  
+- Seznam definic  
   
--   Instance seznamů  
+- Instance seznamu  
   
--   Soubory modulu nebo  
+- Soubory/modulu  
   
--   Navigace  
+- Navigace  
   
--   Onet.XML  
+- *Onet.XML*  
   
--   SPItemEventReceiver  
+- SPItemEventReceiver  
   
--   SPListEventReceiver  
+- SPListEventReceiver  
   
--   SPWebEventReceiver  
+- SPWebEventReceiver  
   
--   Podpora pro všechny webové části, které jsou odvozeny od `System.Web.UI.WebControls.WebParts.WebPart`  
+- Podpora pro všechny webové části, které jsou odvozeny z `System.Web.UI.WebControls.WebParts.WebPart`  
   
--   Webové části  
+- Webové části  
   
--   Prvky funkce WebTemplate (namísto Webtemp.xml)  
+- Elementy funkce WebTemplate (místo *Webtemp.xml*)  
   
--   Visual webové části  
+- Vizuální webové části  
   
- Řešení v izolovaném prostoru nepodporují následující možnosti a prvky:  
+  Řešení v izolovaném prostoru nepodporuje následující funkce a prvky:  
   
--   Stránky aplikací  
+- Stránky aplikací  
   
--   Vlastní akce skupiny  
+- Vlastní skupiny akcí  
   
--   Součásti pro celou farmu  
+- Funkce s oborem farmy  
   
--   `HideCustomAction` – element  
+- `HideCustomAction` – element  
   
--   Web s rozsahem aplikace – funkce  
+- Web s rozsahem aplikace funkcí  
   
--   Pracovní postupy pomocí kódu  
+- Pracovní postupy s kódem  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:
  [Rozdíly mezi řešeními v izolovaném prostoru a ve farmách](../sharepoint/differences-between-sandboxed-and-farm-solutions.md)   
  [Vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md)  
-  
   

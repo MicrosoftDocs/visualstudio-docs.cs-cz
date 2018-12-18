@@ -15,14 +15,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ee8404deaeeadd65a4e032266422520721a50a51
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: eeb9f26091deaf995ef1221d39aa7264553f5c70
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815376"
 ---
 # <a name="how-to-compare-performance-data-files"></a>Postupy: porovnání výkonu datových souborů
-Vytvořením sestavy porovnání ("rozdílové") nebo zobrazení, můžete porovnat výsledky dva různé profileru datových souborů (.vsp nebo .vsps). Porovnání se zobrazuje rozdíly, výkon regresí a vylepšení, které došlo k jedné relace profilování na druhý.  
+Můžete porovnat výsledky dva různé profileru datových souborů (. *Vsp* nebo. *vsps*) tak, že vytvoříte porovnání ("rozdílové") sestavy nebo zobrazení. Porovnání se zobrazuje rozdíly, výkon regresí a vylepšení, které došlo k jedné relace profilování na druhý.  
   
  Sestava rozdílové uvede zobrazení tabulky dat. V tabulce uvede rozdílů, nebo změňte ze směrného plánu. Tato hodnota je vypočtena určením rozdílu mezi původní hodnoty, hodnota směrného plánu a výslednou hodnotu z nové analýzy.  
   
@@ -32,9 +33,9 @@ Vytvořením sestavy porovnání ("rozdílové") nebo zobrazení, můžete porov
   
 ### <a name="to-create-comparison-file-view-for-a-project-in-performance-explorer"></a>Vytvoření zobrazení porovnání souborů pro projekt v Průzkumníku výkonu  
   
-1.  V **prohlížeč výkonu**v části **sestavy**, vyberte .vsp nebo .vsps soubor sestavy, kterou chcete použít jako hodnoty standardních hodnot pro porovnání.  
+1.  V **prohlížeč výkonu**v části **sestavy**, vyberte. *Vsp* nebo. *vsps* soubor sestavy, který chcete použít jako hodnoty standardních hodnot pro porovnání.  
   
-2.  Vyberte .vsp nebo .vsps sestavy soubory, které chcete porovnat.  
+2.  Vyberte. *vsp* nebo. *vsps* sestavy soubory, které chcete porovnat.  
   
 3.  Klikněte pravým tlačítkem na vybrané soubory a potom klikněte na **porovnat sestavy**.  
   
@@ -54,6 +55,6 @@ Vytvořením sestavy porovnání ("rozdílové") nebo zobrazení, můžete porov
   
 1.  Na **analyzovat** nabídce vyberte možnost **porovnat sestavy pro zvýšení výkonu**.  
   
-2.  V **vyberte analysis soubory pro porovnání** oken, procházet a vyberte **směrného plánu souboru** analýzy souboru (.vsp nebo .vsps) a **porovnání souborů** (.vsp nebo .vsps).  
+2.  V **vyberte analysis soubory pro porovnání** , procházet a vyberte **směrného plánu souboru** soubor analýzy (. *Vsp* nebo. *vsps*) a **porovnání souborů** (. *Vsp* nebo. *vsps*).  
   
 3.  Click **OK**.

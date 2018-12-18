@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess3::Step | Microsoft Docs
+title: IDebugProcess3::Step | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,18 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: cbc19c339e5d53bc9dde13ebd4a1bbddd214810c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8b48fd74c3edc3f200ef05d143464b3e5ce79bd8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872249"
 ---
 # <a name="idebugprocess3step"></a>IDebugProcess3::Step
-Způsobí, že proces krok jeden pokyn nebo příkaz.  
+Způsobí, že proces kroku jedna instrukce nebo příkaz.  
   
 > [!NOTE]
->  Tato metoda by měla použít místo [krok](../../../extensibility/debugger/reference/idebugprogram2-step.md).  
+>  Tato metoda by měla být použita místo [krok](../../../extensibility/debugger/reference/idebugprogram2-step.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,25 +48,25 @@ int Step(
   
 #### <a name="parameters"></a>Parametry  
  `pThread`  
- [v] [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) objekt reprezentující vlákno se stupeň.  
+ [in] [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) objekt představující vlákna se stupňovitým.  
   
  `sk`  
- [v] Jeden z [STEPKIND](../../../extensibility/debugger/reference/stepkind.md) hodnoty.  
+ [in] Jeden z [STEPKIND](../../../extensibility/debugger/reference/stepkind.md) hodnoty.  
   
  `step`  
- [v] Jeden z [STEPUNIT](../../../extensibility/debugger/reference/stepunit.md) hodnoty.  
+ [in] Jeden z [STEPUNIT](../../../extensibility/debugger/reference/stepunit.md) hodnoty.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí S_OK; v opačném případě vrátí kód chyby.  
+ V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- V případě, že je všechny synchronizace vláken nebo komunikace mezi vlákny, jiná vlákna v procesu by měla spustit, když je krokování s konkrétní vlákno.  
+ V případě, že je komunikace mezi vlákny ani synchronizaci vláken, ostatní vlákna v procesu měli spustit při krokování konkrétní vlákno.  
   
- **Upozornění** Neodesílat zastavení události nebo okamžitou (synchronní) události [událostí](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) při zpracování volání; v opačném případě ladicí program může přestat reagovat.  
+ **Upozornění** Neodesílat událostí ukončení nebo okamžité (synchronní) události, která [události](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) při zpracování tohoto volání; v opačném případě ladicí program může přestat reagovat.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)   
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
  [STEPKIND](../../../extensibility/debugger/reference/stepkind.md)   
  [STEPUNIT](../../../extensibility/debugger/reference/stepunit.md)   
- [Události](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)
+ [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)

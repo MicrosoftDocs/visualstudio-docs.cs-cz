@@ -1,5 +1,5 @@
 ---
-title: Generateapplicationmanifest – úloha | Microsoft Docs
+title: Generateapplicationmanifest – úloha | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -21,147 +21,149 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e40e74dd8e7b2b83f6d4239e6b66c9852c6de604
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9526c2c62d9ace81127c61ef313cf55971fc1692
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49888876"
 ---
 # <a name="generateapplicationmanifest-task"></a>GenerateApplicationManifest – úloha
-Generuje [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifest aplikace nebo nativní manifestu. Nativní manifestu popisuje součást definováním jedinečnou identitu pro součást a určíte všechny sestavení a soubory, které tvoří součásti. A [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifest aplikace rozšiřuje nativní manifestu definovaných vstupní bod aplikace a zadání úroveň zabezpečení aplikace.  
-  
+Generuje [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifest aplikace nebo nativní manifest. Nativní manifest popisuje komponentu definováním jedinečné identity pro komponentu a identifikaci všech sestavení a souborů, které tvoří součást. A [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifest aplikace rozšiřuje nativní manifest označením vstupního bodu aplikace a určením úrovně zabezpečení aplikace.  
+
 ## <a name="parameters"></a>Parametry  
  Následující tabulka popisuje parametry `GenerateApplicationManifest` úloh.  
-  
-|Parametr|Popis|  
-|---------------|-----------------|  
-|`AssemblyName`|Volitelné `String` parametr.<br /><br /> Určuje, `Name` pole identity sestavení pro vygenerovaný manifest. Pokud není tento parametr zadán, je název odvodit z `EntryPoint` nebo `InputManifest` parametry. Pokud žádný název mohou být vytvořeny, úloha vrátí chybu.|  
-|`AssemblyVersion`|Volitelné `String` parametr.<br /><br /> Určuje, `Version` pole identity sestavení pro vygenerovaný manifest. Pokud není tento parametr zadán, se používá výchozí hodnota je "1.0.0.0".|  
-|`ClrVersion`|Volitelné `String` parametr.<br /><br /> Určuje minimální verzi nástroje CLR Common Language Runtime () požadované aplikací. Výchozí hodnota je verze CLR používá systém sestavení. Úloha vytváří nativní manifestu,-li tento parametr je ignorován.|  
-|`ConfigFile`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametr.<br /><br /> Určuje, která položka obsahuje konfigurační soubor aplikace. Úloha vytváří nativní manifestu,-li tento parametr je ignorován.|  
-|`Dependencies`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametr.<br /><br /> Určuje seznam položek, který definuje sadu závislé sestavení pro vygenerovaný manifest. Každá položka může být dále označena metadata položky k označení stavu další nasazení a typ závislost. Další informace najdete v části "Metadata položky" níže.|  
-|`Description`|Volitelné `String` parametr.<br /><br /> Určuje popis aplikací nebo součástí.|  
-|`EntryPoint`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametr.<br /><br /> Určuje jednu položku, která určuje vstupní bod pro vygenerovaný manifest sestavení.<br /><br /> Pro [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifest aplikace, tento parametr určuje sestavení, který se spustí při spuštění aplikace.|  
-|`ErrorReportUrl`|Volitelné <xref:System.String?displayProperty=fullName> parametr.<br /><br /> Určuje adresu URL webové stránky, která se zobrazí v dialogových oknech při chybách v instalacích ClickOnce.|  
-|`FileAssociations`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametr.<br /><br /> Určuje seznam jeden nebo více typ souboru, které jsou přidruženy ClickOnce – manifest nasazení.<br /><br /> Přidružení souboru pouze platný, jenom když se rozhraní .NET Framework 3.5 nebo novější.|  
-|`Files`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametr.<br /><br /> Soubory, které mají být zahrnuty do manifestu. Zadejte úplnou cestu pro každý soubor.|  
-|`HostInBrowser`|Volitelné <xref:System.Boolean> parametr.<br /><br /> Pokud `true`, aplikace je hostovaná v prohlížeči (jako jsou aplikace WPF webového prohlížeče).|  
-|`IconFile`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametr.<br /><br /> Určuje soubor ikony aplikace. Ikona aplikace je vyjádřeno v manifestu generovaného aplikace a slouží pro dialogové okno nabídce Start a přidat nebo odebrat programy. Pokud tento vstup není zadán, použije se výchozí ikona. Úloha vytváří nativní manifestu,-li tento parametr je ignorován.|  
-|`InputManifest`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> parametr.<br /><br /> Určuje vstupní dokument XML sloužit jako základ pro generátor manifestu. To umožňuje strukturovaných dat, například zabezpečení aplikací nebo vlastní manifestu definice projeví v manifestu výstup. Kořenový element v dokumentu XML musí být do uzlu sestavení v oboru názvů asmv1.|  
-|`IsolatedComReferences`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametr.<br /><br /> Určuje komponenty COM a izolovat v vygenerovaný manifest. Tento parametr podporuje možnost izolovat COM – součásti pro nasazení "Registrace bezplatné COM". Funguje díky automatické generování manifestu s standardní definice registrace COM. Komponenty modelu COM, ale musí být registrovaný na počítači sestavení toto fungovat správně.|  
-|`ManifestType`|Volitelné `String` parametr.<br /><br /> Určuje typ ke generování manifestu. Tento parametr může mít následující hodnoty:<br /><br /> -   `Native`<br />-   `ClickOnce`<br /><br /> Pokud není tento parametr zadán, úloha výchozí `ClickOnce`.|  
-|`MaxTargetPath`|Volitelné `String` parametr.<br /><br /> Určuje maximální povolenou délku cesty k souboru v [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení aplikace. Pokud je tato hodnota zadána, je tento limit kontrolovat délka cesty každý soubor v aplikaci. Všechny položky, které překračují limit vyvolá v sestavení upozornění. Pokud tento vstup není zadána nebo rovná nule, je provedena žádná kontrola. Úloha vytváří nativní manifestu,-li tento parametr je ignorován.|  
-|`OSVersion`|Volitelné `String` parametr.<br /><br /> Určuje minimální požadovaný operační systém (OS) verzi požadované aplikací. Například hodnota "5.1.2600.0" označuje, že operační systém je Windows XP. Pokud není tento parametr zadán, je použita hodnota "4.10.0.0", což naznačuje Windows 98 Druhé vydání, minimální podporované OS rozhraní .NET Framework. Pokud úloha je generování manifestu nativní, tento vstup je ignorována.|  
-|`OutputManifest`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> výstupní parametr.<br /><br /> Určuje název souboru manifestu generovaný výstup. Pokud není tento parametr zadán, je název souboru výstupního souboru odvodit z identity vygenerovaný manifest.|  
-|`Platform`|Volitelné `String` parametr.<br /><br /> Určuje cílovou platformu aplikace. Tento parametr může mít následující hodnoty:<br /><br /> -   `AnyCPU`<br />-   `x86`<br />-   `x64`<br />-   `Itanium`<br /><br /> Pokud není tento parametr zadán, úloha výchozí `AnyCPU`.|  
-|`Product`|Volitelné `String` parametr.<br /><br /> Určuje název aplikace. Pokud není tento parametr zadán, je název odvodit z identity vygenerovaný manifest. Tento název se používá pro název místní nabídky Start a je součástí názvu, který se zobrazí v dialogovém okně Přidat nebo odebrat programy.|  
-|`Publisher`|Volitelné `String` parametr.<br /><br /> Určuje vydavatele aplikace. Pokud není tento parametr zadán, je název odvodit z registrovaní uživatelé, nebo identitu vygenerovaný manifest. Tento název se používá pro název složky v nabídce Start a je součástí názvu, který se zobrazí v dialogovém okně Přidat nebo odebrat programy.|  
-|`RequiresMinimumFramework35SP1`|Volitelné `Boolean` parametr.<br /><br /> V případě hodnoty true aplikace vyžaduje rozhraní .NET Framework 3.5 SP1 nebo novější verzi.|  
-|`TargetCulture`|Volitelné `String` parametr.<br /><br /> Jazyková verze aplikace identifikuje a určí `Language` pole identity sestavení pro vygenerovaný manifest. Pokud není tento parametr zadán, předpokládá se, že aplikace je neutrální jazykovou verzi.|  
-|`TargetFrameworkMoniker`|Volitelné `String` parametr.<br /><br /> Určuje cílový framework přezdívka.|  
-|`TargetFrameworkProfile`|Volitelné `String` parametr.<br /><br /> Určuje cílový framework profil.|  
-|`TargetFrameworkSubset`|Volitelné `String` parametr.<br /><br /> Určuje název podmnožinu rozhraní .NET Framework k cíli.|  
-|`TargetFrameworkVersion`|Volitelné `String` parametr.<br /><br /> Určuje cílový rozhraní .NET Framework projektu.|  
-|`TrustInfoFile`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> parametr.<br /><br /> Určuje dokument XML, který určuje zabezpečení aplikace. Kořenový element v dokumentu XML, musí být uzel trustInfo v oboru názvů asmv2. Úloha vytváří nativní manifestu,-li tento parametr je ignorován.|  
-|`UseApplicationTrust`|Volitelné `Boolean` parametr.<br /><br /> V případě hodnoty true `Product`, `Publisher`, a `SupportUrl` vlastnosti se zapisují do manifestu aplikace.|  
-  
+
+
+| Parametr | Popis |
+|---------------------------------| - |
+| `AssemblyName` | Volitelné `String` parametru.<br /><br /> Určuje, `Name` pole identity sestavení pro generovaný manifest. Pokud tento parametr nezadáte, název je odvozen z `EntryPoint` nebo `InputManifest` parametry. Pokud nelze vytvořit žádný název, úkol vyvolá chybu. |
+| `AssemblyVersion` | Volitelné `String` parametru.<br /><br /> Určuje, `Version` pole identity sestavení pro generovaný manifest. Pokud není tento parametr zadán, je použita výchozí hodnota ikona "1.0.0.0". |
+| `ClrVersion` | Volitelné `String` parametru.<br /><br /> Určuje minimální verzi aplikace CLR Common Language Runtime () vyžadovaného aplikací. Výchozí hodnota je verze CLR používaná systémem sestavení. Pokud úloha generuje nativní manifest, tento parametr je ignorován. |
+| `ConfigFile` | Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametru.<br /><br /> Určuje, která položka obsahuje konfigurační soubor aplikace. Pokud úloha generuje nativní manifest, tento parametr je ignorován. |
+| `Dependencies` | Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametru.<br /><br /> Určuje seznam položek, který definuje sadu závislých sestavení pro generovaný manifest. Každá položka může být dále popsána metadaty položky pro označují další stav nasazení a typ závislosti. Další informace najdete v tématu [metadata položky](#item-metadata). |
+| `Description` | Volitelné `String` parametru.<br /><br /> Určuje popis aplikace nebo komponenty. |
+| `EntryPoint` | Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametru.<br /><br /> Určuje jednu položku, která označuje vstupní bod pro generované sestavení manifestu.<br /><br /> Pro [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifestu aplikace tento parametr určuje sestavení, který se spustí při spuštění aplikace. |
+| `ErrorReportUrl` | Volitelné <xref:System.String?displayProperty=fullName> parametru.<br /><br /> Určuje adresu URL webové stránky, který se zobrazí v dialogových oknech během chybových sestav v instalacích ClickOnce. |
+| `FileAssociations` | Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametru.<br /><br /> Určuje seznam jednoho nebo více typů souboru, které jsou propojeny s manifestem nasazení ClickOnce.<br /><br /> Přidružení souborů platné, pouze v případě, že je cílem rozhraní .NET Framework 3.5 nebo novější. |
+| `Files` | Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametru.<br /><br /> Soubory k zahrnutí do manifestu. Zadejte úplnou cestu pro každý soubor. |
+| `HostInBrowser` | Volitelné <xref:System.Boolean> parametru.<br /><br /> Pokud `true`, je aplikace hostovaná v prohlížeči (jako jsou aplikace WPF webového prohlížeče). |
+| `IconFile` | Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametru.<br /><br /> Určuje soubor ikony aplikace. Ikona aplikace je vyjádřena v manifestu generované aplikace a používá se pro **nabídky Start** a **přidat nebo odebrat programy** dialogového okna. Pokud tento vstup není zadán, je použita výchozí ikona. Pokud úloha generuje nativní manifest, tento parametr je ignorován. |
+| `InputManifest` | Volitelné <xref:Microsoft.Build.Framework.ITaskItem> parametru.<br /><br /> Označuje vstupní dokument XML, který bude sloužit jako základ pro generátor manifestu. To umožňuje strukturovaným datům, například zabezpečení aplikace nebo definicím vlastního manifestu, se projevovat ve výstupním manifestu. Kořenový element v dokumentu XML musí být uzel sestavení v oboru názvů asmv1. |
+| `IsolatedComReferences` | Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametru.<br /><br /> Určuje model COM izolovat v generovaném manifestu. Tento parametr podporuje schopnost izolovat komponenty modelu COM pro nasazení "Model COM bez registrace". Funguje díky automaticky vygeneruje manifest se standardními definicemi registrace COM. Nicméně komponenty modelu COM musí být zaregistrovaný v počítači sestavení, aby toto fungovalo správně. |
+| `ManifestType` | Volitelné `String` parametru.<br /><br /> Určuje, který typ manifestu se má vygenerovat. Tento parametr může mít následující hodnoty:<br /><br /> -   `Native`<br />-   `ClickOnce`<br /><br /> Je-li tento parametr není zadán, výchozí úlohy `ClickOnce`. |
+| `MaxTargetPath` | Volitelné `String` parametru.<br /><br /> Určuje maximální povolenou délku cesty souboru v [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení aplikace. Pokud je tato hodnota zadána, délka každé cesty souboru v aplikaci je porovnávána s toto omezení. Všechny položky, které překračují limit, vyvolají upozornění sestavení. Pokud tento vstup není zadán nebo je nula, pak žádná kontrola se neprovádí. Pokud úloha generuje nativní manifest, tento parametr je ignorován. |
+| `OSVersion` | Volitelné `String` parametru.<br /><br /> Určuje verzi minimální požadovaný operační systém (OS) vyžadovaného aplikací. Například hodnota "5.1.2600.0" znamená, že operační systém je Windows XP. Pokud není tento parametr zadán, je použita hodnota "4.10.0.0", což znamená Windows 98 Druhé vydání, minimální podporovaný OS rozhraní .NET Framework. Pokud úloha generuje nativní manifest, tento vstup je ignorován. |
+| `OutputManifest` | Volitelné <xref:Microsoft.Build.Framework.ITaskItem> výstupní parametr.<br /><br /> Určuje název generovaného výstupního souboru manifestu. Pokud tento parametr nezadáte, název výstupního souboru je odvozen z identity generovaného manifestu. |
+| `Platform` | Volitelné `String` parametru.<br /><br /> Určuje cílovou platformu aplikace. Tento parametr může mít následující hodnoty:<br /><br /> -   `AnyCPU`<br />-   `x86`<br />-   `x64`<br />-   `Itanium`<br /><br /> Je-li tento parametr není zadán, výchozí úlohy `AnyCPU`. |
+| `Product` | Volitelné `String` parametru.<br /><br /> Určuje název aplikace. Pokud tento parametr nezadáte, název je odvozen z identity generovaného manifestu. Tento název se používá pro název zástupce na **Start** nabídce a je součástí názvu, který se zobrazí **přidat nebo odebrat programy** dialogové okno. |
+| `Publisher` | Volitelné `String` parametru.<br /><br /> Určuje název vydavatele aplikace. Pokud tento parametr nezadáte, název je odvozen z registrovaného uživatele, nebo z identity generovaného manifestu. Tento název se používá pro název složky na **Start** nabídce a je součástí názvu, který se zobrazí **přidat nebo odebrat programy** dialogové okno. |
+| `RequiresMinimumFramework35SP1` | Volitelné `Boolean` parametru.<br /><br /> Pokud je hodnota true, aplikace požaduje instalaci rozhraní .NET Framework 3.5 SP1 nebo novější verze. |
+| `TargetCulture` | Volitelné `String` parametru.<br /><br /> Určuje jazykovou verzi aplikace a určuje, `Language` pole identity sestavení pro generovaný manifest. Pokud není tento parametr zadán, předpokládá se, že aplikace je invariantní jazyková verze. |
+| `TargetFrameworkMoniker` | Volitelné `String` parametru.<br /><br /> Určuje moniker cílového rozhraní. |
+| `TargetFrameworkProfile` | Volitelné `String` parametru.<br /><br /> Určuje profil cílového rozhraní framework. |
+| `TargetFrameworkSubset` | Volitelné `String` parametru.<br /><br /> Určuje název podsady rozhraní .NET Framework na cíl. |
+| `TargetFrameworkVersion` | Volitelné `String` parametru.<br /><br /> Určuje cílovou platformu .NET Framework projektu. |
+| `TrustInfoFile` | Volitelné <xref:Microsoft.Build.Framework.ITaskItem> parametru.<br /><br /> Označuje dokument XML, který určuje zabezpečení aplikace. Kořenový element v dokumentu XML musí být uzel trustInfo v oboru názvů asmv2. Pokud úloha generuje nativní manifest, tento parametr je ignorován. |
+| `UseApplicationTrust` | Volitelné `Boolean` parametru.<br /><br /> Hodnota TRUE znamená, `Product`, `Publisher`, a `SupportUrl` vlastnosti jsou zapisovány do manifestu aplikace. |
+
 ## <a name="remarks"></a>Poznámky  
- Kromě výše uvedených parametrů tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.GenerateManifestBase> třída, které dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam parametrů třída úlohy najdete v tématu [Třída Base úlohy](../msbuild/task-base-class.md).  
-  
- Informace o tom, jak používat `GenerateDeploymentManifest` úloh najdete v tématu [generateapplicationmanifest – úloha](../msbuild/generateapplicationmanifest-task.md).  
-  
- Vstupy pro závislosti a soubory může být dál doplněny pomocí metadata položky k určení stavu další nasazení pro každou položku.  
-  
+ Kromě výše uvedených parametrů zdědí tento úkol parametry ze <xref:Microsoft.Build.Tasks.GenerateManifestBase> třída, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam parametrů třídy úkoly naleznete v tématu [Task – základní třída](../msbuild/task-base-class.md).  
+
+ Informace o tom, jak používat `GenerateDeploymentManifest` úloh naleznete v tématu [generateapplicationmanifest – úloha](../msbuild/generateapplicationmanifest-task.md).  
+
+ Vstupy pro závislosti a soubory mohou dále obohaceny metadaty položky pro určení dalšího stavu nasazení pro každou položku.  
+
 ## <a name="item-metadata"></a>Metadata položky  
-  
+
 |Název metadat|Popis|  
 |-------------------|-----------------|  
-|`DependencyType`|Určuje, jestli závislost je publikována a nainstalovaný s předpokladem nebo aplikace. Tato metadata jsou platné pro všechny závislosti, ale nepoužívá pro soubory. Dostupné hodnoty pro tato metadata jsou:<br /><br /> -   `Install`<br />-   `Prerequisite`<br /><br /> Instalace je výchozí hodnota.|  
-|`AssemblyType`|Určuje, jestli závislost je spravované nebo nativní sestavení. Tato metadata jsou platné pro všechny závislosti, ale nepoužívá pro soubory. Dostupné hodnoty pro tato metadata jsou:<br /><br /> -   `Managed`<br />-   `Native`<br />-   `Unspecified`<br /><br /> `Unspecified` je výchozí hodnotu, která určuje, zda generátor manifestu automaticky určí typ sestavení.|  
-|`Group`|Označuje skupinu pro stahování další soubory na vyžádání. Název skupiny je definován aplikací a může být libovolný řetězec. Prázdný řetězec znamená, že soubor není součástí skupiny stahování, což je výchozí hodnota. Soubory nejsou ve skupině jsou součástí stažení počáteční aplikace. Soubory ve skupině jsou staženy pouze v případě explicitně požadavku aplikace pomocí <xref:System.Deployment.Application>.<br /><br /> Tato metadata jsou platné pro všechny soubory kde `IsDataFile` je `false` a všechny závislosti kde `DependencyType` je `Install`.|  
-|`TargetPath`|Určuje, jak je nutné definovat cestu v vygenerovaný manifest. Tento atribut je platný pro všechny soubory. Pokud tento atribut nezadá, použije se specifikace položky. Tento atribut je platný pro všechny soubory a závislosti s `DependencyType` hodnotu `Install`.|  
-|`IsDataFile`|A `Boolean` metadata hodnotu, která určuje, zda je soubor datový soubor. Datový soubor je speciální v tom, že nedojde k migraci mezi aktualizacemi aplikací. Tato metadata jsou platná pouze pro soubory. `False` je výchozí hodnota.|  
-  
+|`DependencyType`|Určuje, zda závislost je publikována a nainstalovaná pomocí aplikace nebo jako předpoklad. Tato metadata je platná pro všechny závislosti, ale nejsou použita pro soubory. Dostupné hodnoty pro tato metadata jsou:<br /><br /> -   `Install`<br />-   `Prerequisite`<br /><br /> Výchozí hodnota je Install.|  
+|`AssemblyType`|Určuje, zda je závislost spravované nebo nativní sestavení. Tato metadata je platná pro všechny závislosti, ale nejsou použita pro soubory. Dostupné hodnoty pro tato metadata jsou:<br /><br /> -   `Managed`<br />-   `Native`<br />-   `Unspecified`<br /><br /> `Unspecified` je výchozí hodnota, která označuje, že generátor manifestu automaticky určí typ sestavení.|  
+|`Group`|Označuje skupinu pro stahování dalších souborů na vyžádání. Název skupiny je definován aplikací a může být libovolný řetězec. Prázdný řetězec znamená, že soubor není součástí skupiny stažení, což je výchozí hodnota. Souborů mimo skupiny jsou součástí původní žádosti o stažení. Soubory ve skupině jsou staženy pouze při explicitním požadavku aplikace pomocí <xref:System.Deployment.Application>.<br /><br /> Tato metadata jsou platná pro všechny soubory kde `IsDataFile` je `false` a všechny závislosti kde `DependencyType` je `Install`.|  
+|`TargetPath`|Určuje, jak cesta musí být definován v vygenerovaný manifest. Tento atribut je platný pro všechny soubory. Pokud tento atribut není zadán, použije se specifikace položky. Tento atribut je platný pro všechny soubory a závislosti s `DependencyType` hodnotu `Install`.|  
+|`IsDataFile`|A `Boolean` hodnota metadat, která určuje, zda je soubor datového souboru. Datový soubor je zvláštní v tom, že je migrován mezi aktualizacemi aplikace. Tato metadata jsou platná pouze pro soubory. `False` je výchozí hodnota.|  
+
 ## <a name="example"></a>Příklad  
- Tento příklad používá `GenerateApplicationManifest` úloh k vygenerování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifest aplikace a `GenerateDeploymentManifest` úkolů ke generování manifestu nasazení pro aplikace pomocí jednoho sestavení. Poté použije `SignFile` úloh pro podepsání manifestů.  
-  
- To ukazuje nejjednodušší scénář možné generování manifestu kde [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifesty jsou generovány pro jeden program. Výchozí název a identity jsou odvozené ze sestavení pro manifest.  
-  
+ V tomto příkladu `GenerateApplicationManifest` úkolů ke generování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifest aplikace a `GenerateDeploymentManifest` úkolů ke generování manifestu nasazení pro aplikaci s jedním sestavením. Poté použije `SignFile` úloh k podepsání manifestů.  
+
+ To ukazuje nejjednodušší možný scénář generování manifestu kde [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manifestů jsou generovány pro jeden program. Výchozí název a identita jsou odvozeny z manifestu sestavení.  
+
 > [!NOTE]
->  V následujícím příkladu jsou předem připravené, aby bylo možné zaměřit na aspekty generování manifestu všechny binární soubory aplikace. Tento příklad vytvoří plně práce [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení.  
-  
+>  V následujícím příkladu jsou všechny binární soubory aplikace předem připravené, abychom se mohli zaměřit na aspekty generování manifestu. Tento příklad vytvoří plně funkční [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení.  
+> 
 > [!NOTE]
->  Další informace o `Thumbprint` vlastnost použitá v `SignFile` úloh v tomto příkladu najdete v tématu [signfile – úloha](../msbuild/signfile-task.md).  
-  
+>  Další informace o `Thumbprint` vlastnosti používané `SignFile` úlohy v tomto příkladu najdete v tématu [signfile – úloha](../msbuild/signfile-task.md).  
+
 ```xml  
 <Project DefaultTargets="Build"  
     xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
-  
+
     <ItemGroup>  
         <EntryPoint Include="SimpleWinApp.exe" />  
     </ItemGroup>  
-  
+
     <PropertyGroup>  
         <Thumbprint>  
              <!-- Insert generated thumbprint here -->  
         </Thumbprint>  
     </PropertyGroup>  
-  
+
     <Target Name="Build">  
-  
+
         <GenerateApplicationManifest  
             EntryPoint="@(EntryPoint)">  
             <Output  
                 ItemName="ApplicationManifest"  
                 TaskParameter="OutputManifest"/>  
         </GenerateApplicationManifest>  
-  
+
         <GenerateDeploymentManifest  
             EntryPoint="@(ApplicationManifest)">  
             <Output  
                 ItemName="DeployManifest"  
                 TaskParameter="OutputManifest"/>  
         </GenerateDeploymentManifest>  
-  
+
         <SignFile  
             CertificateThumbprint="$(Thumbprint)"  
             SigningTarget="@(ApplicationManifest)"/>  
-  
+
         <SignFile  
             CertificateThumbprint="$(Thumbprint)"  
             SigningTarget="@(DeployManifest)"/>  
-  
+
     </Target>  
 </Project>  
 ```  
-  
+
 ## <a name="example"></a>Příklad  
- Tento příklad používá `GenerateApplicationManifest` a `GenerateDeploymentManifest` úlohy ke generování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace a nasazení manifesty pro aplikace pomocí jednoho sestavení, zadáte název a identity manifesty.  
-  
- V tomto příkladu je podobná předchozí příklad, s výjimkou explicitně zadat název a identity manifestů. V tomto příkladu je navíc nakonfigurovaný jako online aplikace namísto aplikace nainstalované.  
-  
+ V tomto příkladu `GenerateApplicationManifest` a `GenerateDeploymentManifest` úkoly ke generování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace a manifestů nasazení pro aplikaci s jedním sestavením, přičemž název a identitu manifestů.  
+
+ Tento příklad je podobný jako předchozí příklad s výjimkou název a identita manifestů jsou explicitně zadány. Navíc tento příklad je nakonfigurován jako online aplikace namísto aplikace nainstalované.  
+
 > [!NOTE]
->  V následujícím příkladu jsou předem připravené, aby bylo možné zaměřit na aspekty generování manifestu všechny binární soubory aplikace. Tento příklad vytvoří plně práce [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení.  
-  
+>  V následujícím příkladu jsou všechny binární soubory aplikace předem připravené, abychom se mohli zaměřit na aspekty generování manifestu. Tento příklad vytvoří plně funkční [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení.  
+> 
 > [!NOTE]
->  Další informace o `Thumbprint` vlastnost použitá v `SignFile` úloh v tomto příkladu najdete v tématu [signfile – úloha](../msbuild/signfile-task.md).  
-  
+>  Další informace o `Thumbprint` vlastnosti používané `SignFile` úlohy v tomto příkladu najdete v tématu [signfile – úloha](../msbuild/signfile-task.md).  
+
 ```xml  
 <Project DefaultTargets="Build"  
     xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
-  
+
     <ItemGroup>  
         <EntryPoint Include="SimpleWinApp.exe" />  
     </ItemGroup>  
-  
+
     <PropertyGroup>  
         <Thumbprint>  
              <!-- Insert generated thumbprint here -->  
         </Thumbprint>  
     </PropertyGroup>  
-  
+
     <Target Name="Build">  
-  
+
         <GenerateApplicationManifest  
             AssemblyName="SimpleWinApp.exe"  
             AssemblyVersion="1.0.0.0"  
@@ -171,7 +173,7 @@ Generuje [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manif
                 ItemName="ApplicationManifest"  
                 TaskParameter="OutputManifest"/>  
         </GenerateApplicationManifest>  
-  
+
         <GenerateDeploymentManifest  
                 AssemblyName="SimpleWinApp.application"  
                 AssemblyVersion="1.0.0.0"  
@@ -182,36 +184,36 @@ Generuje [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manif
                     ItemName="DeployManifest"  
                     TaskParameter="OutputManifest"/>  
         </GenerateDeploymentManifest>  
-  
+
         <SignFile  
             CertificateThumbprint="$(Thumbprint)"  
             SigningTarget="@(ApplicationManifest)"/>  
-  
+
         <SignFile  
             CertificateThumbprint="$(Thumbprint)"  
             SigningTarget="@(DeployManifest)"/>  
-  
+
     </Target>  
 </Project>  
 ```  
-  
+
 ## <a name="example"></a>Příklad  
- Tento příklad používá `GenerateApplicationManifest` a `GenerateDeploymentManifest` úlohy ke generování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace a nasazení manifesty pro aplikace s více soubory a sestavení.  
-  
+ V tomto příkladu `GenerateApplicationManifest` a `GenerateDeploymentManifest` úkoly ke generování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace a manifestů nasazení pro aplikaci s více soubory a sestaveními.  
+
 > [!NOTE]
->  V následujícím příkladu jsou předem připravené, aby bylo možné zaměřit na aspekty generování manifestu všechny binární soubory aplikace. Tento příklad vytvoří plně práce [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení.  
-  
+>  V následujícím příkladu jsou všechny binární soubory aplikace předem připravené, abychom se mohli zaměřit na aspekty generování manifestu. Tento příklad vytvoří plně funkční [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení.  
+> 
 > [!NOTE]
->  Další informace o `Thumbprint` vlastnost použitá v `SignFile` úloh v tomto příkladu najdete v tématu [signfile – úloha](../msbuild/signfile-task.md).  
-  
+>  Další informace o `Thumbprint` vlastnosti používané `SignFile` úlohy v tomto příkladu najdete v tématu [signfile – úloha](../msbuild/signfile-task.md).  
+
 ```xml  
 <Project DefaultTargets="Build"  
     xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
-  
+
     <ItemGroup>  
         <EntryPoint Include="SimpleWinApp.exe" />  
     </ItemGroup>  
-  
+
     <PropertyGroup>  
         <Thumbprint>  
              <!-- Insert generated thumbprint here -->  
@@ -223,9 +225,9 @@ Generuje [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manif
             <!-- Insert the support URL here -->  
         </SupportUrl>  
     </PropertyGroup>  
-  
+
     <Target Name="Build">  
-  
+
     <ItemGroup>  
         <EntryPoint Include="SimpleWinApp.exe"/>  
         <Dependency Include="ClassLibrary1.dll">  
@@ -246,7 +248,7 @@ Generuje [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manif
             <AssemblyType>Managed</AssemblyType>  
             <DependencyType>Prerequisite</DependencyType>  
         </Dependency>  
-  
+
         <File Include="Text1.txt">  
             <TargetPath>Text\Text1.txt</TargetPath>  
             <Group>Text</Group>  
@@ -255,16 +257,16 @@ Generuje [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manif
             <TargetPath>Data\DataFile1.xml</TargetPath>  
             <IsDataFile>true</IsDataFile>  
         </File>  
-  
+
         <IconFile Include="Heart.ico"/>  
         <ConfigFile Include="app.config">  
             <TargetPath>SimpleWinApp.exe.config</TargetPath>  
         </ConfigFile>  
         <BaseManifest Include="app.manifest"/>  
     </ItemGroup>  
-  
+
     <Target Name="Build">  
-  
+
         <GenerateApplicationManifest  
             AssemblyName="SimpleWinApp.exe"  
             AssemblyVersion="1.0.0.0"  
@@ -280,7 +282,7 @@ Generuje [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manif
                 ItemName="ApplicationManifest"  
                 TaskParameter="OutputManifest"/>  
         </GenerateApplicationManifest>  
-  
+
         <GenerateDeploymentManifest  
             AssemblyName="SimpleWinApp.application"  
             AssemblyVersion="1.0.0.0"  
@@ -300,30 +302,30 @@ Generuje [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manif
                 ItemName="DeployManifest"  
                 TaskParameter="OutputManifest"/>  
         </GenerateDeploymentManifest>  
-  
+
         <SignFile  
             CertificateThumbprint="$(Thumbprint)"  
             SigningTarget="@(ApplicationManifest)"/>  
-  
+
         <SignFile  
             CertificateThumbprint="$(Thumbprint)"  
             SigningTarget="@(DeployManifest)"/>  
-  
+
     </Target>  
 </Project>  
 ```  
-  
+
 ## <a name="example"></a>Příklad  
- Tento příklad používá `GenerateApplicationManifest` úkolů ke generování manifestu pro aplikaci Test.exe, odkazy na nativní součást Alpha.dll a izolované komponenty modelu COM Bravo.dll nativní.  
-  
- Tento příklad vytvoří Test.exe.manifest, vytváření aplikace XCOPY nasadit pořízení výhodou registrace bezplatné COM.  
-  
+ V tomto příkladu `GenerateApplicationManifest` úkolů ke generování nativního manifestu pro aplikaci *Test.exe*, odkazující na nativní součást *Alpha.dll* a součást izolovaného modelu COM  *Bravo.dll*.  
+
+ Tento příklad vytvoří *Test.exe.manifest*, čímž aplikaci XCOPY nasaditelný a přijímá výhod modelu Registration Free com.  
+
 > [!NOTE]
->  V následujícím příkladu jsou předem připravené, aby bylo možné zaměřit na aspekty generování manifestu všechny binární soubory aplikace. Tento příklad vytvoří plně práce [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení.  
-  
+>  V následujícím příkladu jsou všechny binární soubory aplikace předem připravené, abychom se mohli zaměřit na aspekty generování manifestu. Tento příklad vytvoří plně funkční [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] nasazení.  
+
 ```xml  
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
-  
+
     <ItemGroup>  
         <File Include="Test.exe" />  
         <Dependency Include="Alpha.dll">  
@@ -332,7 +334,7 @@ Generuje [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manif
         </Dependency>  
         <ComComponent Include="Bravo.dll" />  
     </ItemGroup>  
-  
+
     <Target Name="Build">  
         <GenerateApplicationManifest  
             AssemblyName="Test.exe"  
@@ -345,12 +347,12 @@ Generuje [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] manif
                 ItemName="ApplicationManifest"  
                 TaskParameter="OutputManifest"/>  
         </GenerateApplicationManifest>  
-  
+
     </Target>  
 </Project>  
 ```  
-  
-## <a name="see-also"></a>Viz také  
+
+## <a name="see-also"></a>Viz také:  
  [Úlohy](../msbuild/msbuild-tasks.md)   
  [Generatedeploymentmanifest – úloha](../msbuild/generatedeploymentmanifest-task.md)   
  [Signfile – úloha](../msbuild/signfile-task.md)   

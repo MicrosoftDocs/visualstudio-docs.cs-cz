@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31134949"
 ---
 # <a name="source-control-vspackage-features"></a>VSPackage funkcí správy zdrojového kódu
 Tato část popisuje různé funkce VSPackage Správa zdrojového kódu. Ho popisuje registrace a výběr podrobnosti o těchto VSPackage a popisuje tři hlavní zdroj ovládací prvek související s funkcí: zpracování událostí dotazu upravit dotaz uložit (QEQS), glyfy nahrazení a vlastní uživatelské rozhraní (UI) pro zdrojového kódu funkce.  

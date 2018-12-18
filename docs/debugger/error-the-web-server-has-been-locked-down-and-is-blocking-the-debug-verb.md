@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31473995"
 ---
 # <a name="error-the-web-server-has-been-locked-down-and-is-blocking-the-debug-verb"></a>Chyba: Webový server byl uzamčen a blokuje příkaz DEBUG.
 Zanoříte se do webové aplikace nebo webové služby XML se nezdařila, protože spuštění nástroje lockdown služby IIS a URLScan byla nainstalovaná a aktivovaná. Tento stav služby IIS blokuje příjem příkaz DEBUG.  

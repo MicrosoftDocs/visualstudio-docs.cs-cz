@@ -1,5 +1,5 @@
 ---
-title: Ladění webových aplikací | Microsoft Docs
+title: Ladění webových aplikací | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -20,26 +20,27 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d8638bccca59bdcf497feeeef2b311cc22e5d79c
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 0e649e5d795df537e48afe3dad738c73ee5b7b51
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39178914"
 ---
 # <a name="debugging-web-applications"></a>Ladění webových aplikací
-Tato část vysvětluje postup ladění několik typů webových aplikací.  
+Tato část vysvětluje, jak ladit několika typy webových aplikací.  
   
 ## <a name="in-this-section"></a>V tomto oddílu   
- [Ladění skriptu](../debugger/client-side-script-debugging.md)  
- Popisuje testování skriptů a skripty na straně klienta v [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] stránky.  
+ [Ladění skriptů na straně klienta](../debugger/client-side-script-debugging.md)  
+ Tento článek popisuje testování skriptů a skripty na straně klienta v [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] stránky.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Ladění aplikací ASP.NET](../debugger/how-to-enable-debugging-for-aspnet-applications.md)  
- Popisuje kroky, které jsou požadovány pro povolení ladění [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikace.  
+ Popisuje kroky, které jsou požadovány pro povolení ladění [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikací.  
   
 ## <a name="see-also"></a>Viz také  
  [Ladění webových aplikací a skriptu](../debugger/debugging-web-applications-and-script.md)   
  [Nastavení ladicího programu a příprava](../debugger/debugger-settings-and-preparation.md)   
- [Základy ladicího programu](../debugger/debugger-basics.md)   
+ [Základy ladicího programu](../debugger/getting-started-with-the-debugger.md)   
  [Ladění v sadě Visual Studio](../debugger/index.md)  
- [Prohlídka funkce ladicí program](../debugger/debugger-feature-tour.md)
+ [Prohlídka funkcí ladicího programu](../debugger/debugger-feature-tour.md)

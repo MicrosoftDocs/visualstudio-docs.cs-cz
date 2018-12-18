@@ -9,12 +9,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: ef3cb58c9352e81fc959dfdd2ddebd354e834fbf
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: b8e92a4bbd149d96b6db710daf32dc72024d57da
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
+ms.locfileid: "31950384"
 ---
 # <a name="using-escape-sequences-in-text-templates"></a>Použití řídicích sekvencí v textových šablonách
 Můžete použít řídicích sekvencí v textových šablonách mají vygenerovat značky text šablony a (v C# pouze kód) řídicí řídicí znaky a znaky uvozovek.

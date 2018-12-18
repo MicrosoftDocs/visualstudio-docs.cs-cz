@@ -1,5 +1,5 @@
 ---
-title: Rozšíření a přizpůsobení nástroje systému Windows | Microsoft Docs
+title: Rozšíření a přizpůsobení nástrojů Windows | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,39 +14,40 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2ef4f656ed7b7ab7facbcfb470fca98327276cce
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c11485e830d1b7bcef851a50225e15f351e64f3e
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39637481"
 ---
-# <a name="extending-and-customizing-tool-windows"></a>Rozšíření a přizpůsobení okna nástrojů
-Visual Studio poskytuje několik různých typů systému windows, například nástroj windows, windows dokumentu a dialogové okno windows. Další windows například vlastnosti okna, ve výstupním okně a okno seznam úloh jsou typy nástroje systému windows.  
+# <a name="extend-and-customize-tool-windows"></a>Rozšířit a přizpůsobit panely nástrojů
+Visual Studio poskytuje několik různých typů systému windows, například okna nástrojů, okna dokumentu a dialogové okno windows. Ostatní okna, jako **vlastnosti** okně **výstup** okno a **seznamu úkolů** okna, jsou druhy oken nástrojů.  
   
-## <a name="tool-windows"></a>Nástroje systému Windows  
- Okna nástrojů Visual Studio jsou obvykle jen pro čtení systému windows, které nejsou založené na souborech. V tomto se liší od okna dokumentu, které budou zobrazovat soubory v režimu pro čtení a zápis. **Sada nástrojů**, **Průzkumníku řešení**, **vlastnosti** okně a **webový prohlížeč** jsou příklady nástroje systému windows.  
+## <a name="tool-windows"></a>Nástroje systému windows  
+ Okna nástrojů Visual Studio jsou obvykle jen pro čtení systému windows, které nejsou založené na souborech. To se liší od okna dokumentu, které zobrazí soubory v režimu čtení i zápis. **Nástrojů**, **Průzkumníka řešení**, **vlastnosti** okně a **webový prohlížeč** jsou příklady oken nástrojů.  
   
- Postup vytvoření jednoduchého nástroje okna naleznete v tématu [přidání okno nástroje](../extensibility/adding-a-tool-window.md).  
+ Zjistěte, jak vytvořit okno jednoduchý nástroj, najdete v článku [přidat panel nástrojů](../extensibility/adding-a-tool-window.md).  
   
- Okno nástroje zaregistrovat pomocí sady Visual Studio, najdete v tématu [registrace okno nástroje](../extensibility/registering-a-tool-window.md).  
+ Registrace panelu nástrojů pomocí sady Visual Studio, naleznete v tématu [registrace panelu nástrojů](../extensibility/registering-a-tool-window.md).  
   
- Nástroje systému windows jsou jednou instancí ve výchozím nastavení, což znamená, že pouze jedna instance panel nástrojů je možné otevřít v čase. Po otevření okna Nástroj jedné instance zůstane otevřené, dokud je uzavřený rozhraní IDE. Pokud zavřete okno jednou instancí nástroje, změní jenom jeho viditelnost. Můžete také vytvořit více instancemi nástroj windows tak, aby více instancí okna je možné otevřít současně. V tématu [vytváření okno nástroj s více instancemi](../extensibility/creating-a-multi-instance-tool-window.md) Další informace.  
+ Okna nástrojů jsou jednou instancí ve výchozím nastavení, což znamená, že pouze jedna instance panelu nástrojů je možné otevřít v čase. Po otevření okna nástroje jednou instancí, zůstane otevřený, dokud není zavřena integrovaného vývojového prostředí. Při zavření okna nástroje jednou instancí se změní pouze jejich viditelnost. Můžete také vytvořit více instancí okna nástrojů tak, aby více instancí okno může být otevřeno současně. Zobrazit [vytvořit panel nástrojů s více instancemi](../extensibility/creating-a-multi-instance-tool-window.md) Další informace.  
   
- Nástroje systému windows může být *dynamické*, což znamená, že jsou viditelné vždy, když platí jejich související kontextu uživatelského rozhraní. Použití automatického viditelnost může snížit zbytečné soubory systému windows v prostředí IDE. Další informace najdete v tématu [otevírání dynamické okno nástroje](../extensibility/opening-a-dynamic-tool-window.md).  
+ Nástroje systému windows může být *dynamické*, což znamená, že jsou viditelné pokaždé, když se použije jejich související kontextu uživatelského rozhraní. Použití automatického viditelnost můžete přehlednost oken v integrovaném vývojovém prostředí. Další informace najdete v tématu [otevření dynamického panelu nástrojů](../extensibility/opening-a-dynamic-tool-window.md).  
   
- Nástroje systému windows může být ukotveného, plovoucí nebo v rámci dokumentů s kartami. Rámce okna nástrojů poskytuje prostředí IDE a slouží k řízení velikosti, umístění, ukotvení stavu a další vlastnosti, trvalé. V podokně okna Nástroj zobrazí obsah. Výchozí velikost a umístění použít, pouze když je nástroj prvním otevření okna; po který je uložen stav okno nástroje.  
+ Nástroje systému windows může být ukotvených, s plovoucí desetinnou čárkou nebo v rámci dokument s kartami. Rámec okna nástrojů poskytuje rozhraní IDE a slouží k řízení velikosti, umístění, dokovací stavu a další trvalé vlastnosti. V podokně okna nástroje se zobrazí obsah. Výchozí velikost a umístění použít, pouze pokud panel nástrojů nejprve otevřen; potom se ukládají stav okna nástrojů.  
   
- Podokna nástroje můžete hostovat uživatelských ovládacích prvků grafického subsystému WPF a podporoval panely nástrojů. Je možné přepsat <xref:Microsoft.VisualStudio.Shell.WindowPane.Window%2A> vlastnost vrátit popisovač hostované ovládacího prvku.  
+ Nástroj podokna můžete hostovat uživatelské ovládací prvky WPF a podporovat panely nástrojů. Je možné přepsat <xref:Microsoft.VisualStudio.Shell.WindowPane.Window%2A> vlastnost vrátí popisovač hostovaného ovládacího prvku.  
   
- Nástroje systému Windows můžete přidat spoustu různých funkcí. Například můžete přidat na panel nástrojů: [přidání panelu nástrojů na okno nástroje](../extensibility/adding-a-toolbar-to-a-tool-window.md) nebo z místní nabídky: [Přidání místní nabídky v okně nástroje](../extensibility/adding-a-shortcut-menu-in-a-tool-window.md). Můžete přidat ovládací prvek vyhledávání, která umožňuje vyhledat položky v rámci vaší okno nástroje: [přidání vyhledávání okno nástroje](../extensibility/adding-search-to-a-tool-window.md).  
+ Do okna nástrojů můžete přidat řadu různých funkcí. Například můžete přidat panel nástrojů: [přidat panel nástrojů do panelu nástrojů](../extensibility/adding-a-toolbar-to-a-tool-window.md) nebo z místní nabídky: [přidat místní nabídku v panelu nástrojů](../extensibility/adding-a-shortcut-menu-in-a-tool-window.md). Můžete přidat ovládací prvek pro hledání, který umožňuje vyhledávat položky uvnitř okna nástroje: [vyhledávání přidat do panelu nástrojů](../extensibility/adding-search-to-a-tool-window.md).  
   
- Přihlásíte k odběru události okno nástroj: [odběr pro událost](../extensibility/subscribing-to-an-event.md).  
+ Můžete odebírat události okna nástroje: [přihlásit odběr události](../extensibility/subscribing-to-an-event.md).  
   
-## <a name="extending-existing-tool-windows"></a>Rozšíření stávající nástroj Windows  
- Budete moct přidat informace o vaší okno nástroje na nový **možnosti** stránky a nové nastavení na **vlastnosti** stránky, zapisovat **seznam úkolů** a **výstup**  systému windows. Další informace najdete v tématu [rozšíření vlastností, seznam úkolů, výstupní a možnosti Windows](../extensibility/extending-the-properties-task-list-output-and-options-windows.md) a [rozšíření vlastností, seznam úkolů, výstupní a možnosti Windows](../extensibility/extending-the-properties-task-list-output-and-options-windows.md).  
+## <a name="extend-existing-tool-windows"></a>Rozšířit stávající nástroje systému windows  
+ Můžete přidat informace o okno nástroje na novou **možnosti** stránky a nové nastavení na **vlastnosti** stránky, zapisovat **seznamu úkolů** a **výstup**  systému windows. Další informace najdete v tématu [rozšířit vlastnosti, seznam úkolů, výstupu a možnosti windows](../extensibility/extending-the-properties-task-list-output-and-options-windows.md) a [rozšířit vlastnosti, seznam úkolů, výstupu a možnosti windows](../extensibility/extending-the-properties-task-list-output-and-options-windows.md).  
   
-## <a name="modal-dialog-boxes"></a>Modální dialogová okna  
- V rozšíření sady Visual Studio by měl vytvořit modální dialogová okna odvozením z <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow?displayProperty=fullName>, která umožňuje řídit je a zbytek z uživatelského rozhraní. Další informace najdete v tématu. [Vytváření a správa modální dialogová okna](../extensibility/creating-and-managing-modal-dialog-boxes.md).  
+## <a name="modal-dialog-boxes"></a>Modálních dialogových oken  
+ V rozšíření sady Visual Studio by měl vytváření modálních dialogových oken odvozením z <xref:Microsoft.VisualStudio.PlatformUI.DialogWindow?displayProperty=fullName>, což vám umožňuje řídit jejich a zbývající části uživatelského rozhraní. Další informace najdete v tématu [vytvoření a správa modálních dialogových oken](../extensibility/creating-and-managing-modal-dialog-boxes.md).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Vytváření rozšíření pomocí panelu nástrojů](../extensibility/creating-an-extension-with-a-tool-window.md)

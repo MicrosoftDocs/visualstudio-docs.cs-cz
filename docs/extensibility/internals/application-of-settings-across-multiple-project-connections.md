@@ -1,5 +1,5 @@
 ---
-title: Aplikace nastavení mezi více připojení projekt | Microsoft Docs
+title: Aplikace nastavení napříč různými připojeními projektů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,28 +13,30 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0dff30ea80fb2de9bf4d90ffa48cd2f9b3d40756
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6d8b8d7d6dc1e596686a2fad7b53363b2387a47b
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39500040"
 ---
-# <a name="application-of-settings-across-multiple-project-connections"></a>Aplikace nastavení mezi více připojení projektu
-Správa zdrojového kódu modulu plug-in sestaven pomocí rozhraní API 1.2 zdroj ovládacího prvku Plug-in můžete použít dávkové operace k provedení operace stejný zdroj ovládacího prvku napříč více projektů nebo kontextů více připojení. Dávky lze eliminovat redundantní, dialogová okna z činnost koncového uživatele na projekt.  
+# <a name="application-of-settings-across-multiple-project-connections"></a>Aplikace nastavení napříč různými připojeními projektů
+Modul plug-in správy zdrojového kódu vytvořených pomocí verze 1.2 zdrojový ovládací prvek modulu Plug-in API můžete použít dávkové operace ke spuštění stejnou operaci správy zdrojových kódů napříč více projekty nebo více kontexty připojení. Dávky je možné vyloučit redundantní, dialogová okna uživatelským prostředím jednotlivých projektů.  
   
- Pokud uživatel vybere více položek, které patří do více než jedno připojení ve správě zdrojového kódu modulu plug-in vyvíjené Plug-in API zdroj ovládacího prvku 1.1, (například dva webové projekty na jinou sdílenou počítače) a ověří je, uživateli se zobrazí dialogové okno stejné opakovaně. K tomu dojde i v případě, že uživatel klikne **použít u všech** zaškrtněte políčko v dialogovém okně, protože rozhraní IDE obnoví stav pro každý kontext připojení.  
+ Pokud uživatel vybere více položek, které patří do více než jedno připojení v modulu plug-in správy zdrojového kódu, vytvořené pomocí zdrojového ovládacího prvku modulu Plug-in API verze 1.1 (například dvě webové projekty na počítačích jinou sdílenou složku) a ověří je, uživateli se zobrazí stejné Dialogové okno opakovaně. Této situaci dojde i v případě, že uživatel klikne **použít u všech** zaškrtněte políčko v dialogovém okně, protože rozhraní IDE obnoví svůj stav pro každý kontext připojení.  
   
-## <a name="new-capability-flag"></a>Nový příznak schopností  
- `SccBeginBatch` Funkce sady `SCC_CAP_BATCH` příznak indikující, že dávkové operace probíhá  
+## <a name="new-capability-flag"></a>Nový příznak funkce  
+ `SccBeginBatch` Funkce nastaví `SCC_CAP_BATCH` příznak označující, že dávkové operace probíhá.  
   
 ## <a name="new-functions"></a>Nové funkce  
- Následující nové funkce podporují dávkové operace:  
+Následující nové funkce podporují dávkové operace:  
   
--   [SccBeginBatch](../../extensibility/sccbeginbatch-function.md)  
+-   [Sccbeginbatch –](../../extensibility/sccbeginbatch-function.md)  
   
--   [SccEndBatch](../../extensibility/sccendbatch-function.md)  
+-   [Sccendbatch –](../../extensibility/sccendbatch-function.md)  
+
   
- `SCCBeginBatch` Funkce spustí skupinu operace zdroj ovládacího prvku. `SccEndBatch` Zavře skupině. Nemusí být vnořené skupiny.  
+`SCCBeginBatch` Funkce spustí skupinu operací správy zdrojů. `SccEndBatch` Funkce uzavře skupině. Skupiny nemůže být vnořený.  
   
-## <a name="see-also"></a>Viz také  
- [Co je nového v rozhraní API modulu plug-in správy zdrojového kódu ve verzi 1.2](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)
+## <a name="see-also"></a>Viz také:  
+ [Co je nového v zdrojový ovládací prvek modulu Plug-in API verze 1.2](../../extensibility/internals/what-s-new-in-the-source-control-plug-in-api-version-1-2.md)

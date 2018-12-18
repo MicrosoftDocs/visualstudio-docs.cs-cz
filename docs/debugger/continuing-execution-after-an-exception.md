@@ -32,6 +32,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31466176"
 ---
 # <a name="continuing-execution-after-an-exception"></a>Pokračování v provádění po výjimce
 Pokud ladicí program dělí provádění z důvodu výjimku, zobrazí se **pomocníka výjimka**, ve výchozím nastavení. Pokud je zakázána **pomocníka výjimka** v **možnosti** dialogové okno, zobrazí se **Pomocníka pro výjimky** (C# nebo Visual Basic) nebo **výjimky**  dialogové okno (C++).  

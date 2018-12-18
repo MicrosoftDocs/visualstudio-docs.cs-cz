@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130594"
 ---
 # <a name="opening-and-saving-project-items"></a>Otevření a uložení položky projektu
 Když přidáte nový typ projektu, musí spravovat otevírání a ukládání souborů projekty v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrované vývojové prostředí (IDE). Následující témata popisují různé přístupy k otevření a uložení souborů.  

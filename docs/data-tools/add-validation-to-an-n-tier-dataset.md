@@ -1,5 +1,5 @@
 ---
-title: Přidání ověřování do vícevrstvé datové sady
+title: Přidávání ověřování do vícevrstvé datové sady
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -13,30 +13,32 @@ ms.assetid: 34ce4db6-09bb-4b46-b435-b2514aac52d3
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: ed9bcb4521b5e9bdad839563aae1c566d20a5681
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 81d929aaffb6f08e5e1cda1cf3329de81fe13bc8
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38778058"
 ---
-# <a name="add-validation-to-an-n-tier-dataset"></a>Přidání ověřování do vícevrstvé datové sady
-Přidání ověřování do datové sady, který je rozdělené do řešení s n vrstvá je v podstatě stejný jako přidávání ověření do datové sady jedním souborem (datové sady v jednom projektu). Navrhované umístění k provedení ověření na data je během <xref:System.Data.DataTable.ColumnChanging> nebo <xref:System.Data.DataTable.RowChanging> události dat tabulky.
+# <a name="add-validation-to-an-n-tier-dataset"></a>Přidávání ověřování do vícevrstvé datové sady
+Přidání ověřování do datové sady, která je rozdělena na n vrstvého řešení je v podstatě stejné jako přidání ověřování pro jednosouborovou datovou sadu (datová sada v jednom projektu). Navrhované umístění pro ověřování dat je během <xref:System.Data.DataTable.ColumnChanging> a/nebo <xref:System.Data.DataTable.RowChanging> událostí datové tabulky.
 
- Datová sada obsahuje funkci pro vytvoření částečné třídy, na které můžete přidat uživatelský kód Změna sloupce a řádku události tabulek dat v datové sadě. Další informace o přidání kódu do datové sady v n vrstvá řešení najdete v tématu [přidávání kódu do datových sad ve víceúrovňových aplikacích](../data-tools/add-code-to-datasets-in-n-tier-applications.md), a [přidávání kódu do prvků TableAdapters ve víceúrovňových aplikacích](../data-tools/add-code-to-tableadapters-in-n-tier-applications.md). Další informace o částečné třídy najdete v tématu [postupy: rozdělení třídy na částečné třídy (návrhář tříd)](../ide/how-to-split-a-class-into-partial-classes-class-designer.md) nebo [částečné třídy a metody](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods).
-
-> [!NOTE]
->  Když oddělíte datové sady z TableAdapters (nastavením **DataSet projekt** vlastnost), nebude automaticky přesunout existující datovou sadu částečné třídy v projektu. Existující datovou sadu částečné třídy je třeba přesunout ručně dataset projekt.
+ Datová sada poskytuje funkce pro vytvořit dílčí třídy, na které můžete přidat uživatelský kód do událostí měnících sloupce a řádku tabulek dat v datové sadě. Další informace o přidání kódu k datové sadě v Nvrstvých řešeních viz [přidání kódu do datových sad v n vrstvé aplikace](../data-tools/add-code-to-datasets-in-n-tier-applications.md), a [přidejte kód do prvků TableAdapters ve víceúrovňových aplikacích](../data-tools/add-code-to-tableadapters-in-n-tier-applications.md). Další informace o dílčích třídách naleznete v tématu [postupy: rozdělení třídy na částečné třídy (návrhář tříd)](../ide/how-to-split-a-class-into-partial-classes-class-designer.md) nebo [částečné třídy a metody](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods).
 
 > [!NOTE]
->  Datová sada Návrhář neprovádí automatické vytváření obslužných rutin událostí v jazyce C# pro <xref:System.Data.DataTable.ColumnChanging> a <xref:System.Data.DataTable.RowChanging> události. Budete muset ručně vytvořit obslužnou rutinu události a propojte obslužné rutiny události pro základní událost. Následující postupy popisují postup vytvoření obslužné rutiny požadované událostí v jazyce Visual Basic a C#.
+>  Když oddělíte datové sady od adaptérů tabulky (nastavením **projektu DataSet** vlastnost), existující částečné třídy v projektu nebudou automaticky přesunuty. Existující částečné třídy je nutné ručně přesunout do projektu datové sady.
 
-## <a name="validate-changes-to-individual-columns"></a>Ověřit změny jednotlivých sloupců
- Ověřte hodnoty v jednotlivých sloupcích tak, že zpracování <xref:System.Data.DataTable.ColumnChanging> událostí. <xref:System.Data.DataTable.ColumnChanging> Událost se vyvolá, když dojde k úpravě hodnotu ve sloupci. Vytvoření obslužné rutiny události pro <xref:System.Data.DataTable.ColumnChanging> událostí poklikáním na požadovaném sloupci **návrháře Dataset**.
+> [!NOTE]
+>  Návrhář dataset nevytváří automaticky obslužné rutiny událostí v jazyce C# pro <xref:System.Data.DataTable.ColumnChanging> a <xref:System.Data.DataTable.RowChanging> události. Budete muset ručně vytvořit obslužnou rutinu události a připojí obslužnou rutinu události do základní události. Následující postupy popisují postup vytvoření obslužné rutiny události požadované v jazyce Visual Basic i C#.
 
- Při prvním dvakrát kliknete na sloupci, návrháře generuje obslužné rutiny události pro <xref:System.Data.DataTable.ColumnChanging> událostí. `If...Then` Příkaz se vytvoří také který testů pro konkrétní sloupec. Například následující kód se vygeneruje, když dvakrát kliknete na požadované datum sloupec v tabulce Northwind objednávky:
+## <a name="validate-changes-to-individual-columns"></a>Ověření změn jednotlivých sloupců
+ Ověřte hodnoty v jednotlivých sloupcích pomocí manipulace <xref:System.Data.DataTable.ColumnChanging> událostí. <xref:System.Data.DataTable.ColumnChanging> Událost se vyvolá, když se změní hodnota ve sloupci. Vytvořte obslužnou rutinu události pro <xref:System.Data.DataTable.ColumnChanging> události poklepáním na požadovaný sloupec na **Návrhář Dataset**.
+
+ Poprvé, když poklepete na sloupec, Návrhář vytvoří obslužnou rutinu události pro <xref:System.Data.DataTable.ColumnChanging> událostí. `If...Then` Příkaz je také vytvořen a testuje určitý sloupec. Například následující kód je generován při dvojitém kliknutí na **RequiredDate** sloupce v tabulce objednávky Northwind:
 
 ```vb
 Private Sub OrdersDataTable_ColumnChanging(ByVal sender As System.Object, ByVal e As System.Data.DataColumnChangeEventArgs) Handles Me.ColumnChanging
@@ -47,22 +49,22 @@ End Sub
 ```
 
 > [!NOTE]
->  V projektů C# návrháře Dataset pouze vytvoří částečné třídy pro datovou sadu a jednotlivé tabulky v datové sadě. Návrháři Dataset nevytvoří automaticky obslužné rutiny události pro <xref:System.Data.DataTable.ColumnChanging> a <xref:System.Data.DataTable.RowChanging> událostí v jazyce C# jako je tomu v jazyce Visual Basic. V jazyce C# projekty budete muset ručně vytvořit metodu pro zpracování události a propojte metody pro základní událost. Následující postup popisuje kroky k vytvoření obslužné rutiny požadované událostí v jazyce Visual Basic a C#.
+>  V projektech C# vytvoří Návrhář datových sad pouze částečné třídy pro datovou sadu a jednotlivé tabulky v datové sadě. Návrhář Dataset nevytváří automaticky obslužné rutiny událostí pro <xref:System.Data.DataTable.ColumnChanging> a <xref:System.Data.DataTable.RowChanging> události v jazyce C# jako je tomu v jazyce Visual Basic. V projektech C# budete muset ručně vytvořit metodu ke zpracování události a metody do základní události připojení. Následující postup obsahuje kroky k vytvoření obslužné rutiny události požadované v jazyce Visual Basic i C#.
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-#### <a name="to-add-validation-during-changes-to-individual-column-values"></a>Přidat ověřování během změny hodnoty jednotlivých sloupců
+#### <a name="to-add-validation-during-changes-to-individual-column-values"></a>Přidání ověřování při změnách hodnot jednotlivých sloupců
 
-1.  Dvojitým kliknutím otevřete datovou sadu **XSD** souboru v **Průzkumníku řešení**. Další informace najdete v tématu [návod: vytvoření datové sady v Návrháři Dataset](walkthrough-creating-a-dataset-with-the-dataset-designer.md).
+1.  Dvojitým kliknutím otevřete datovou sadu *XSD* ve **Průzkumníka řešení**. Další informace najdete v tématu [návod: vytvoření datové sady v návrháři datových sad](walkthrough-creating-a-dataset-with-the-dataset-designer.md).
 
-2.  Dvakrát klikněte na sloupec, který chcete ověřit. Tato akce vytvoří <xref:System.Data.DataTable.ColumnChanging> obslužné rutiny události.
+2.  Poklepejte na sloupec, který chcete ověřit. Tato akce vytvoří <xref:System.Data.DataTable.ColumnChanging> obslužné rutiny události.
 
     > [!NOTE]
-    >  Návrháři Dataset nevytvoří automaticky obslužné rutiny události pro událost jazyka C#. Kód, který je nutné ke zpracování událostí v jazyce C# je zahrnuta v další části. `SampleColumnChangingEvent` je vytvořen a pak byl zapojen až <xref:System.Data.DataTable.ColumnChanging> událost v <xref:System.Data.DataTable.EndInit%2A> metoda.
+    >  Návrhář Dataset nevytváří automaticky obslužnou rutinu události pro událost C#. Kód, který je potřeba ke zpracování událostí v jazyce C# je zahrnuta v další části. `SampleColumnChangingEvent` je vytvořen a pak připojeno <xref:System.Data.DataTable.ColumnChanging> událost v <xref:System.Data.DataTable.EndInit%2A> metody.
 
-3.  Přidejte kód, který ověřte, že `e.ProposedValue` obsahuje data, která splňuje požadavky vaší aplikace. Pokud je navrhované hodnota nemůže být přijata, nastavte sloupce k určení, že obsahuje chybu.
+3.  Přidejte kód pro ověření, že `e.ProposedValue` obsahuje data, která splňují požadavky aplikace. Pokud navrhovaná hodnota není přijatelná, nastavte sloupec, aby označoval, že obsahuje chybu.
 
-     Následující příklad kódu ověří, jestli **množství** sloupec obsahuje hodnotu větší než 0. Pokud **množství** je menší než nebo rovna 0, sloupec je nastavený na chybu. `Else` Klauzule vymaže chybu, pokud **množství** je větší než 0. Kód obslužné rutiny události Změna sloupec by měl vypadat takto:
+     Následující příklad kódu ověřuje, **množství** sloupec obsahuje hodnotu větší než 0. Pokud **množství** je menší než nebo rovna 0, sloupec je nastaven na chybu. `Else` Klauzule vymaže chybu, pokud **množství** je větší než 0. Kód v obslužné rutině události měnící sloupec by měl vypadat takto:
 
     ```vb
     If (e.Column.ColumnName = Me.QuantityColumn.ColumnName) Then
@@ -100,27 +102,27 @@ End Sub
     }
     ```
 
-## <a name="validate-changes-to-whole-rows"></a>Ověřit změny celé řádky
- Ověřte hodnoty v celé řádky tak, že zpracování <xref:System.Data.DataTable.RowChanging> událostí. <xref:System.Data.DataTable.RowChanging> Událost se vyvolá, když se potvrdí hodnoty v všechny sloupce. Je nutné k ověření ve <xref:System.Data.DataTable.RowChanging> událost v případě, že hodnota v jeden sloupec závisí na hodnotě v jiný sloupec. Zvažte například OrderDate a požadované datum v tabulce objednávky v Northwind.
+## <a name="validate-changes-to-whole-rows"></a>Ověření změn v celých řádcích
+ Ověřte hodnoty v celých řádcích pomocí manipulace <xref:System.Data.DataTable.RowChanging> událostí. <xref:System.Data.DataTable.RowChanging> Událost se vyvolá, když jsou potvrzeny hodnoty ve všech sloupcích. Je nutné ověřit v <xref:System.Data.DataTable.RowChanging> událost, když hodnota v jednom sloupci závisí na hodnotě v jiném sloupci. Zvažte například OrderDate a RequiredDate v tabulce objednávky Northwind.
 
- Při zadání objednávek ověření zajišťuje, že pořadí není zadaný s požadované datum, který je před OrderDate. V tomto příkladu hodnoty pro požadované datum i OrderDate sloupce musí být porovnáno více, tak ověření o změnu jednotlivé sloupce nemá smysl.
+ Při zadání objednávek ověřování zajišťuje, že objednávka není zadána s hodnotu RequiredDate, která je v nebo před OrderDate. V tomto příkladu hodnoty sloupců RequiredDate a OrderDate nutné srovnat, takže ověření změn jednotlivých sloupců nemá smysl.
 
- Vytvoření obslužné rutiny události pro <xref:System.Data.DataTable.RowChanging> událostí poklikáním na název tabulky v záhlaví tabulky **návrháře Dataset**.
+ Vytvořte obslužnou rutinu události pro <xref:System.Data.DataTable.RowChanging> události poklikáním na název tabulky v záhlaví tabulky na **Návrhář Dataset**.
 
-#### <a name="to-add-validation-during-changes-to-whole-rows"></a>Přidání ověřování během změny na celé řádky
+#### <a name="to-add-validation-during-changes-to-whole-rows"></a>Přidání ověřování při změnách celých řádků
 
-1.  Dvojitým kliknutím otevřete datovou sadu **XSD** souboru v **Průzkumníku řešení**. Další informace najdete v tématu [návod: vytvoření datové sady v Návrháři Dataset](walkthrough-creating-a-dataset-with-the-dataset-designer.md).
+1.  Dvojitým kliknutím otevřete datovou sadu *XSD* ve **Průzkumníka řešení**. Další informace najdete v tématu [návod: vytvoření datové sady v návrháři datových sad](walkthrough-creating-a-dataset-with-the-dataset-designer.md).
 
-2.  Dvakrát klikněte na záhlaví tabulky dat v designeru.
+2.  Poklepejte na záhlaví tabulky dat v návrháři.
 
-     Částečné třídy je vytvořena s `RowChanging` obslužné rutiny události a otevře v editoru kódu.
+     Je vytvořena dílčí třída s `RowChanging` obslužná rutina události a otevře v editoru kódu.
 
     > [!NOTE]
-    >  Návrháři Dataset nevytvoří automaticky obslužné rutiny události pro <xref:System.Data.DataTable.RowChanging> událost v projektů C#. Je nutné vytvořit metodu ke zpracování <xref:System.Data.DataTable.RowChanging> událostí a spuštění kód pak propojte událost v inicializační metoda v tabulce.
+    >  Návrhář Dataset nevytváří automaticky obslužnou rutinu události pro <xref:System.Data.DataTable.RowChanging> události v projektech C#. Je nutné vytvořit metodu ke zpracování <xref:System.Data.DataTable.RowChanging> události a spouštění kódu pak připojení události do metody inicializace tabulky.
 
-3.  Přidejte uživatelský kód uvnitř deklarace částečné třídy.
+3.  Přidejte uživatelský kód do částečné deklarace třídy.
 
-4.  Následující kód ukazuje, kde má být přidejte kód uživatele k ověřování během <xref:System.Data.DataTable.RowChanging> událostí. Příklad C# také obsahuje kód napojit obslužná rutina události až `OrdersRowChanging` událostí.
+4.  Následující kód ukazuje, kam přidat uživatelský kód pro ověření během <xref:System.Data.DataTable.RowChanging> událostí. Příklad jazyka C# obsahuje také kódu k metodě obslužné rutiny události připojení až `OrdersRowChanging` událostí.
 
     ```vb
     Partial Class OrdersDataTable
@@ -164,8 +166,8 @@ End Sub
     }
     ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Přehled vícevrstvých datových aplikací](../data-tools/n-tier-data-applications-overview.md)
-- [Návod: Vytvoření víceúrovňové datové aplikace](../data-tools/walkthrough-creating-an-n-tier-data-application.md)
+- [Návod: Vytvoření N-vrstvá datové aplikace](../data-tools/walkthrough-creating-an-n-tier-data-application.md)
 - [Ověřování dat v datových sadách](../data-tools/validate-data-in-datasets.md)

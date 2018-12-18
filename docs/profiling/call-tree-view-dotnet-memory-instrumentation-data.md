@@ -12,21 +12,22 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4b33cffb8fba135043f316e6857f7da0ff138afe
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e05286c10758c19f1e3f5a5692f814a096763544
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34263595"
 ---
-# <a name="call-tree-view---net-memory-instrumentation-data"></a>Zobrazení stromu volání – Data instrumentace paměti .NET
+# <a name="call-tree-view---net-memory-instrumentation-data"></a>Zobrazení stromu volání – data instrumentace paměti .NET
 Zobrazení stromu volání .NET paměti přidělení profilování dat, která nebyla shromážděna pomocí metody instrumentace zobrazuje cesty provádění funkce, které byly provázán v PROFILOVANÉHO aplikaci. Kořen stromu je vstupním bodem do aplikací nebo součástí. Každý uzel funkce uvádí všechny funkce, které ji volat a využívání paměti rozhraním .NET a dat časování pro funkci.  
   
  Hodnoty v zobrazení stromu volání jsou pro funkce instancí, které byly volá funkci nadřazené ve stromové struktuře volání. Procentní hodnoty se počítá srovnáním hodnotu instance funkce pro celkový počet nebo velikost přidělení v profilaci spustit.  
   
-## <a name="highlighting-the-execution-hot-path"></a>Zvýraznění aktivní trase provádění  
+## <a name="highlight-the-execution-hot-path"></a>Zvýraznit cestu aktivní provádění  
  Zobrazení stromu volání můžete rozbalit a zvýraznit cestu spouštění procesu nebo funkce, která vytvořila na největší nebo většinu objektů paměti. Zobrazení Nejaktivnější cesty, klikněte pravým tlačítkem na proces nebo funkce a pak klikněte na tlačítko **rozbalte aktivní trase**.  
   
-## <a name="setting-the-call-tree-root-node"></a>Nastavení kořenový uzel stromu volání  
+## <a name="set-the-call-tree-root-node"></a>Nastavit kořenový uzel stromu volání  
  Každý proces v profilaci spuštění se zobrazí jako kořenový uzel. Počáteční uzel zobrazení stromu volání můžete nastavit tak, že kliknete pravým tlačítkem na uzel, který chcete nastavit jako počáteční uzel a potom vyberete **nastavit kořenové**.  
   
  Pokud nastavíte kořenového uzlu, můžete eliminovat všechny položky ze zobrazení s výjimkou podstrom vybraného uzlu. Můžete resetovat kořenový uzel zpět do uzlu prohlížené; v okně zobrazení stromu volání klikněte pravým tlačítkem a vyberte **resetovat kořenové**.  

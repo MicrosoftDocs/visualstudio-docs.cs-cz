@@ -1,5 +1,5 @@
 ---
-title: Vyhodnocení místní hodnoty – | Microsoft Docs
+title: Vyhodnocení místních hodnot | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,27 +14,28 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 82910e5ab128ced43131445d237925ccb85bee55
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 32ce714dcafbf93dd683bb223d1c993016a0a387
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920648"
 ---
-# <a name="evaluating-locals"></a>Místní hodnoty – vyhodnocení
+# <a name="evaluate-locals"></a>Vyhodnocení místních hodnot
 > [!IMPORTANT]
->  V sadě Visual Studio 2015 se již nepoužívá tímto způsobem implementace vyhodnocovače výrazů. Informace o implementaci vyhodnocovače výrazů CLR, najdete v tématu [vyhodnocovače výrazů CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [spravované ukázka vyhodnocování výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
+>  V sadě Visual Studio 2015 je zastaralý tímto způsobem implementace vyhodnocovače výrazů. Informace o implementace vyhodnocovače výrazů modulu CLR najdete v tématu [vyhodnocovače výrazů modulu CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka Chyba při vyhodnocování výrazu spravované](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
   
- [GetPropertyInfo –](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) je volána k získání hodnoty místní, a také místní názvu a typu. Vzhledem k tomu, že místní hodnotu závisí na aktuální stav programu, musí být hodnota místní získány z paměti. [IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md) objekt se používá k vytvoření vazby [IDebugField](../../extensibility/debugger/reference/idebugfield.md) objektu, který představuje místní na požadované místo v paměti, který obsahuje hodnotu. Toto umístění v paměti je reprezentována [IDebugObject](../../extensibility/debugger/reference/idebugobject.md) objektu.  
+ [GetPropertyInfo –](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) je volána k získání místní, stejně jako na místní název a typ hodnoty. Vzhledem k tomu, že místní hodnotu závisí na aktuální stav programu na místní hodnota se musí získat od paměti. [IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md) objekt se používá k vytvoření vazby [IDebugField](../../extensibility/debugger/reference/idebugfield.md) objekt představující místní na příslušné umístění v paměti, který obsahuje hodnotu. Toto umístění v paměti je reprezentována [IDebugObject](../../extensibility/debugger/reference/idebugobject.md) objektu.  
   
- Tato funkce načítání hodnotu místní je zapouzdřené v podpůrné funkci, který provádí následující úlohy:  
+ Tato funkce načítání hodnoty místní, je zapouzdřena v pomocná funkce, která provede následující úlohy:  
   
-1.  Váže `IDebugField` objekt, který chcete paměti získat `IDebugObject` objektu.  
+1.  Vytvoří vazbu `IDebugField` objektu do paměti k získání `IDebugObject` objektu.  
   
-2.  Získá hodnotu z paměti. Tato hodnota je reprezentován jako řadu bajtů.  
+2.  Získá hodnotu z paměti. Tato hodnota je vyjádřena jako řadu bajtů.  
   
-3.  Naformátuje hodnotu na základě typu místní.  
+3.  Naformátuje hodnotu na základě typu na místní.  
   
-4.  Vrátí objekt Obecné, který obsahuje hodnotu místní. V jazyce C#, jedná se `object`, a v jazyce C++ je to `VARIANT`.  
+4.  Vrátí obecný objekt, který obsahuje hodnotu na místní. V jazyce C#, je to `object`, a v jazyce C++ je to `VARIANT`.  
   
 ## <a name="managed-code"></a>Spravovaný kód  
  Toto je implementace funkce, která načte hodnotu místní ve spravovaném kódu.  
@@ -79,7 +80,7 @@ namespace EEMC
 ```  
   
 ## <a name="unmanaged-code"></a>Nespravovaný kód  
- Toto je implementace funkce, která načte hodnotu místní v nespravovaném kódu. `FieldGetType` se zobrazí v [získávání místní hodnoty](../../extensibility/debugger/getting-local-values.md).  
+ Toto je implementace funkce, která načte hodnotu místní v nespravovaném kódu. `FieldGetType` je zobrazena ve [načítání lokální hodnoty](../../extensibility/debugger/getting-local-values.md).  
   
 ```cpp  
 HRESULT FieldGetPrimitiveValue(  
@@ -191,7 +192,7 @@ HRESULT FieldGetPrimitiveValue(
 }  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [Ukázka implementace lokální proměnné](../../extensibility/debugger/sample-implementation-of-locals.md)   
- [Získávání místní hodnoty](../../extensibility/debugger/getting-local-values.md)   
+## <a name="see-also"></a>Viz také:  
+ [Ukázková implementace místních hodnot](../../extensibility/debugger/sample-implementation-of-locals.md)   
+ [Získá místní hodnoty](../../extensibility/debugger/getting-local-values.md)   
  [Kontext vyhodnocení](../../extensibility/debugger/evaluation-context.md)

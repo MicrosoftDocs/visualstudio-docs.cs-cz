@@ -1,5 +1,5 @@
 ---
-title: IDebugField::GetSize | Microsoft Docs
+title: IDebugField::GetSize | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6e7343f6d496587c3fbf69adf3ec56a9f516a9be
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4bd47ac87eb61876302215f6a1e7e8aeed53c287
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49867543"
 ---
 # <a name="idebugfieldgetsize"></a>IDebugField::GetSize
-Tato metoda získá velikost pole, v bajtech.  
+Tato metoda načte velikost pole, v bajtech.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,10 +44,10 @@ int GetSize(
  [out] Vrátí velikost.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Všechna pole mít typ, a všechny typy mají velikost. Například pole s typem bajtů má velikost 1 bajtů.  
+ Všechna pole mít typ a všechny typy mají velikost. Pole typu byte má například velikost 1 bajt.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::IsNullReference | Microsoft Docs
+title: IDebugObject::IsNullReference | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1a886bf56cfafc615099aa489f9d329229ea8727
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d6b5108d9fd830c047c020d4b3adab2526854e6c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49939693"
 ---
 # <a name="idebugobjectisnullreference"></a>IDebugObject::IsNullReference
 Ověřuje, zda tento objekt je odkaz s hodnotou null.  
@@ -40,13 +41,13 @@ int IsNullReference(
   
 #### <a name="parameters"></a>Parametry  
  `pfIsNull`  
- [out] Vrátí nenulový (`TRUE`) Pokud tento objekt je odkaz s hodnotou null; jinak vrátí hodnotu 0 (`FALSE`).  
+ [out] Vrátí nenulovou (`TRUE`) Pokud tento objekt je odkaz s hodnotou null; v opačném případě vrátí hodnotu 0 (`FALSE`).  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí S_OK; jinak vrátí kód chyby.  
+ V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Odkaz s hodnotou null znamená prázdný objekt nebo objekt, který nebyl přiřazen.  
+ Odkaz s hodnotou null znamená, že prázdný objekt nebo objekt, který nebyl přiřazen.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

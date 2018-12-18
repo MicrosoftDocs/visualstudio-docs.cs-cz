@@ -14,6 +14,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31132904"
 ---
 # <a name="manifest-to-code"></a>Manifestu ke kódu
 Manifest pro nástroj kódu je konzolovou aplikaci, která přebírá soubor .imagemanifest bitové kopie služby Visual Studio a vygeneruje soubor souhrnného nebo soubory pro odkazování na hodnoty manifest bitové kopie v C++, C#, VB nebo .vsct soubory pro rozšíření Visual Studia. Tento nástroj generuje obálku soubory, které lze použít pro vyžádání bitové kopie z Visual Studio bitové kopie služby přímo, nebo pro předávání manifestu hodnot prostřednictvím rozhraní API, pokud kód nezpracovává žádné vlastní uživatelské rozhraní a vykreslování.  

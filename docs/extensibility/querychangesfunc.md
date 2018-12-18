@@ -1,5 +1,5 @@
 ---
-title: QUERYCHANGESFUNC | Microsoft Docs
+title: QUERYCHANGESFUNC | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d1df5f21ffed27c45ebee6315fcc29ee1dcc8fa4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 74b5241a14ebaecb05db36a9ab4e1b808917afa5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49879178"
 ---
 # <a name="querychangesfunc"></a>QUERYCHANGESFUNC
-Toto je funkce zpětného volání používané [SccQueryChanges](../extensibility/sccquerychanges-function.md) operaci vytvoření výčtu kolekce názvů souborů a určit stav každého souboru.  
+Toto je funkce zpětného volání používané [sccquerychanges –](../extensibility/sccquerychanges-function.md) operace vytvoření výčtu kolekce názvů souborů a určit stav každého souboru.  
   
- `SccQueryChanges` Funkce je uveden seznam souborů a odkazy `QUERYCHANGESFUNC` zpětného volání. Modul plug-in správy zdroje přes daného seznamu zobrazí a poskytuje stav (prostřednictvím této zpětného volání) pro každý soubor v seznamu.  
+ `SccQueryChanges` Funkce je uveden seznam souborů a ukazatel `QUERYCHANGESFUNC` zpětného volání. Modul plug-in správy zdrojového kódu zobrazí v seznamu a obsahuje informace o stavu (prostřednictvím tohoto zpětného volání) pro každý soubor v seznamu.  
   
-## <a name="signature"></a>Podpis  
+## <a name="signature"></a>podpis  
   
 ```cpp  
 typedef BOOL (*QUERYCHANGESFUNC)(  
@@ -38,22 +39,22 @@ typedef BOOL (*QUERYCHANGESFUNC)(
   
 ## <a name="parameters"></a>Parametry  
  pvCallerData  
- [v] `pvCallerData` Parametr předaný volající (IDE) [SccQueryChanges](../extensibility/sccquerychanges-function.md). Modul plug-in správy zdroje měli žádné předpoklady o obsahu této hodnoty.  
+ [in] `pvCallerData` Byl předán parametr volající (IDE) [sccquerychanges –](../extensibility/sccquerychanges-function.md). Modul plug-in správy zdrojového kódu by měl vytvořit žádné předpoklady o obsahu této hodnoty.  
   
  pChangesData  
- [v] Ukazatel na [QUERYCHANGESDATA struktura](#LinkQUERYCHANGESDATA) struktura popisující změny do souboru.  
+ [in] Ukazatel [QUERYCHANGESDATA struktura](#LinkQUERYCHANGESDATA) struktura popisující změny do souboru.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Prostředí IDE vrátí odpovídající chybový kód:  
+ Rozhraní IDE vrátí odpovídající chybový kód:  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |SCC_OK|Pokračujte ve zpracování.|  
 |SCC_I_OPERATIONCANCELED|Zastavte zpracování.|  
-|SCC_E_xxx|Všechny příslušné SCC chyby by se měla zastavit zpracování.|  
+|SCC_E_xxx|Všechny příslušné chyby SCC by se měla zastavit zpracování.|  
   
 ##  <a name="LinkQUERYCHANGESDATA"></a> Struktura QUERYCHANGESDATA  
- Struktura předaná pro každý soubor vypadá takto:  
+ Struktura předaná pro každý soubor bude vypadat nějak takto:  
   
 ```cpp  
 struct QUERYCHANGESDATA_A  
@@ -76,7 +77,7 @@ struct QUERYCHANGESDATA_W
 ```  
   
  dwSize  
- Velikost tuto strukturu (v bajtech).  
+ Velikost struktury (v bajtech).  
   
  lpFileName  
  Původní název souboru pro tuto položku.  
@@ -86,21 +87,21 @@ struct QUERYCHANGESDATA_W
   
 |Kód|Popis|  
 |----------|-----------------|  
-|`SCC_CHANGE_UNKNOWN`|Nepodařilo se zjistit, co se změnilo.|  
-|`SCC_CHANGE_UNCHANGED`|Žádné změny název pro tento soubor.|  
-|`SCC_CHANGE_DIFFERENT`|Soubor s jinou identitu, ale v databázi existují se stejným názvem.|  
+|`SCC_CHANGE_UNKNOWN`|Nelze zjistit, co se změnilo.|  
+|`SCC_CHANGE_UNCHANGED`|Pro tento soubor beze změn názvů.|  
+|`SCC_CHANGE_DIFFERENT`|Soubor s jinou identitou, ale se stejným názvem existuje v databázi.|  
 |`SCC_CHANGE_NONEXISTENT`|Soubor neexistuje v databázi nebo místně.|  
 |`SCC_CHANGE_DATABASE_DELETED`|Soubor byl odstraněn v databázi.|  
-|`SCC_CHANGE_LOCAL_DELETED`|Soubor byl odstraněn místně, ale soubor stále existuje v databázi. Pokud to nelze určit, vrátí `SCC_CHANGE_DATABASE_ADDED`.|  
-|`SCC_CHANGE_DATABASE_ADDED`|Soubor přidáno do databáze, ale neexistuje místně.|  
-|`SCC_CHANGE_LOCAL_ADDED`|Soubor neexistuje v databázi a je novou místní soubor.|  
-|`SCC_CHANGE_RENAMED_TO`|Soubor přejmenovat nebo přesunout v databázi jako `lpLatestName`.|  
-|`SCC_CHANGE_RENAMED_FROM`|Soubor přejmenovat nebo přesunout v databázi z `lpLatestName`; Pokud je to příliš nákladné chcete sledovat, vrátí různé příznak, jako například `SCC_CHANGE_DATABASE_ADDED`.|  
+|`SCC_CHANGE_LOCAL_DELETED`|Soubor byl odstraněn místně, ale soubor stále existuje v databázi. Pokud to nejde určit, vrátí `SCC_CHANGE_DATABASE_ADDED`.|  
+|`SCC_CHANGE_DATABASE_ADDED`|Soubor přidán do databáze, ale neexistuje lokálně.|  
+|`SCC_CHANGE_LOCAL_ADDED`|Soubor neexistuje v databázi a je nový místní soubor.|  
+|`SCC_CHANGE_RENAMED_TO`|Soubor přejmenován nebo přesunut v databázi jako `lpLatestName`.|  
+|`SCC_CHANGE_RENAMED_FROM`|Soubor přejmenován nebo přesunut v databázi z `lpLatestName`; Pokud je to moc drahé, pokud chcete sledovat, vrátí různé příznak, jako například `SCC_CHANGE_DATABASE_ADDED`.|  
   
  lpLatestName  
  Aktuální název souboru pro tuto položku.  
   
-## <a name="see-also"></a>Viz také  
- [Funkce zpětného volání, které implementují rozhraní IDE](../extensibility/callback-functions-implemented-by-the-ide.md)   
- [SccQueryChanges](../extensibility/sccquerychanges-function.md)   
- [Chybové kódy](../extensibility/error-codes.md)
+## <a name="see-also"></a>Viz také:  
+ [Funkce zpětného volání implementované integrovaným vývojovým prostředím](../extensibility/callback-functions-implemented-by-the-ide.md)   
+ [Sccquerychanges –](../extensibility/sccquerychanges-function.md)   
+ [Kódy chyb](../extensibility/error-codes.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine3::SetJustMyCodeState | Microsoft Docs
+title: IDebugEngine3::SetJustMyCodeState | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fda672cc9d6861520b9da3a894b94d51f4100683
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ffad3e6be4d81e19bd6f707bd30c744904217ba5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49928968"
 ---
 # <a name="idebugengine3setjustmycodestate"></a>IDebugEngine3::SetJustMyCodeState
-Tato metoda informuje o informace o stavu JustMyCode modul ladění.  
+Tato metoda informuje o informace o stavu JustMyCode ladicího stroje.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,19 +45,19 @@ int SetJustMyCodeState(
   
 #### <a name="parameters"></a>Parametry  
  `fUpdate`  
- [v] Nenulové hodnoty (`TRUE`) Pokud chcete aktualizovat informace o aktuálním, nula (`FALSE`) Chcete-li obnovit všechny informace (ignorována nic dříve nastavené).  
+ [in] Nenulový (`TRUE`) aktualizovat informace o aktuálním nula (`FALSE`) Chcete-li obnovit všechny informace (ignorování nic předtím nastavili).  
   
  `dwModules`  
- [v] Počet struktury informace v `rgJMCSpec.`  
+ [in] Počet struktur informace `rgJMCSpec.`  
   
  `rgJMCSpec`  
- [v] Pole [JMC_CODE_SPEC](../../../extensibility/debugger/reference/jmc-code-spec.md) struktury používat.  
+ [in] Pole [JMC_CODE_SPEC](../../../extensibility/debugger/reference/jmc-code-spec.md) strukturách.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- JustMyCode je základní informace o ladění pouze kód, který patří uživateli a ignoruje všechny zprostředkující kódu, například kód systému – přestože zdrojový kód je k dispozici pro tento kód systému.  
+ JustMyCode je Princip ladění pouze kód, který patří uživateli a ignoruje všechny mezikódu, jako je například kód systému – i v případě, že zdrojový kód je k dispozici pro tento kód systému.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugEngine3](../../../extensibility/debugger/reference/idebugengine3.md)   

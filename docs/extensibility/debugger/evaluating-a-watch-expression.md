@@ -1,5 +1,5 @@
 ---
-title: Vyhodnocení výrazu | Microsoft Docs
+title: Vyhodnocení výrazu kukátka | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,28 +14,29 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5d86b94a457934547037f2428e6284f20de1660d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4f83e7b124745d089f1632060c552b5424e5ccde
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949965"
 ---
-# <a name="evaluating-a-watch-expression"></a>Vyhodnocení výrazu
+# <a name="evaluate-a-watch-expression"></a>Vyhodnocení výrazu kukátka
 > [!IMPORTANT]
->  V sadě Visual Studio 2015 se již nepoužívá tímto způsobem implementace vyhodnocovače výrazů. Informace o implementaci vyhodnocovače výrazů CLR, najdete v tématu [vyhodnocovače výrazů CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [spravované ukázka vyhodnocování výrazu](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
+>  V sadě Visual Studio 2015 je zastaralý tímto způsobem implementace vyhodnocovače výrazů. Informace o implementace vyhodnocovače výrazů modulu CLR najdete v tématu [vyhodnocovače výrazů modulu CLR](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) a [ukázka Chyba při vyhodnocování výrazu spravované](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample).  
   
- Visual Studio je připraven k zobrazit hodnotu výrazu, zavolá [EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) který volá [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md). To vytváří [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) objekt, který obsahuje hodnoty a typ výrazu.  
+ Visual Studio je připravený k zobrazení hodnoty výrazu, zavolá [EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md), která pak volá [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md). Tento proces vytvoří [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) objekt, který obsahuje hodnotu a typ výrazu.  
   
- V této implementaci `IDebugParsedExpression::EvaluateSync`, je výraz analyzovat a posoudit ve stejnou dobu. Tato implementace provede následující úlohy:  
+ V této implementaci `IDebugParsedExpression::EvaluateSync`, výraz je analyzovat a vyhodnocovat ve stejnou dobu. Tato implementace provede následující úlohy:  
   
-1.  Analyzuje a vyhodnotí výraz k vytvoření obecné objekt, který uchovává hodnotu a jeho typu. V jazyce C#, to je reprezentována jako `object` při v jazyce C++ je reprezentováno jako `VARIANT`.  
+1.  Analyzuje a vyhodnotí výraz, který má obecný objekt, který obsahuje hodnotu a její typ vytvoření. V jazyce C#, je reprezentováno jako `object` v jazyce C++ je reprezentováno jako `VARIANT`.  
   
-2.  Vytvoří instanci třídy (nazývá `CValueProperty` v tomto příkladu), která implementuje `IDebugProperty2` rozhraní a ukládá ve třídě, hodnota, která má být vrácen.  
+2.  Vytvoří instanci třídy (volá `CValueProperty` v tomto příkladu), který implementuje `IDebugProperty2` rozhraní a uloží ve třídě hodnota, která má být vrácen.  
   
 3.  Vrátí `IDebugProperty2` rozhraní z `CValueProperty` objektu.  
   
 ## <a name="managed-code"></a>Spravovaný kód  
- Toto je implementace `IDebugParsedExpression::EvaluateSync` ve spravovaném kódu. Pomocná metoda `Tokenize` analyzuje výraz do strom analýzy. Pomocné funkce `EvalToken` převádí na hodnotu tokenu. Pomocné funkce `FindTerm` rekurzivně prochází strom analýzy volání `EvalToken` pro každý uzel představující hodnotu a použije všechny operace (desetin) ve výrazu.  
+ Toto je implementace `IDebugParsedExpression::EvaluateSync` ve spravovaném kódu. Pomocná metoda `Tokenize` analyzuje výraz do strom analýzy. Pomocná funkce `EvalToken` token, který převede na hodnotu. Pomocná funkce `FindTerm` rekurzivně prochází přes strom analýzy volání `EvalToken` pro každý uzel představující hodnotu a použití jakékoli operace (sčítání a odčítání) ve výrazu.  
   
 ```csharp  
 namespace EEMC  
@@ -82,9 +83,9 @@ namespace EEMC
 ```  
   
 ## <a name="unmanaged-code"></a>Nespravovaný kód  
- Toto je implementace `IDebugParsedExpression::EvaluateSync` v nespravovaném kódu. Pomocné funkce `Evaluate` analyzuje a vyhodnotí výraz, vrácení `VARIANT` podržíte výslednou hodnotu. Pomocné funkce `VariantValueToProperty` sad `VARIANT` do `CValueProperty` objektu.  
+ Toto je implementace `IDebugParsedExpression::EvaluateSync` v nespravovaném kódu. Pomocná funkce `Evaluate` analyzuje a vyhodnotí výraz vrací `VARIANT` uchovávající výslednou hodnotu. Pomocná funkce `VariantValueToProperty` svazky `VARIANT` do `CValueProperty` objektu.  
   
-```  
+```cpp  
 [C++]  
 STDMETHODIMP CParsedExpression::EvaluateSync(   
     in  DWORD                 evalFlags,  
@@ -174,6 +175,6 @@ STDMETHODIMP CParsedExpression::EvaluateSync(
 }  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [Vyhodnocení výrazu okno kukátka](../../extensibility/debugger/evaluating-a-watch-window-expression.md)   
+## <a name="see-also"></a>Viz také:  
+ [Vyhodnocení výrazu okna kukátka](../../extensibility/debugger/evaluating-a-watch-window-expression.md)   
  [Ukázková implementace vyhodnocení výrazu](../../extensibility/debugger/sample-implementation-of-expression-evaluation.md)

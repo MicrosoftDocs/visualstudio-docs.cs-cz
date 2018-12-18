@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsourcefiles::Skip – | Microsoft Docs
+title: Idiaenumsourcefiles::Skip – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3dedc9e3218d56c4e58f35c70b3bce8bf4dd8ae7
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: e2e517f03a13debfd13dacfe92b4bb08bfddc727
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49849057"
 ---
 # <a name="idiaenumsourcefilesskip"></a>IDiaEnumSourceFiles::Skip
-Přeskočí zadaný počet zdrojové soubory v posloupnosti výčtu.  
+Vynechá zadaný počet zdrojových souborů v sekvenci výčtu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,10 +34,10 @@ HRESULT Skip (
   
 #### <a name="parameters"></a>Parametry  
  celt  
- [v] Počet zdrojové soubory v pořadí výčtu tak, aby přeskočil.  
+ [in] Počet zdrojových souborů v pořadí výčtu pro přeskočení.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` Pokud nejsou žádné další zdrojové soubory tak, aby přeskočil.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` Pokud nejsou žádné další zdrojové soubory pro přeskočení.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaEnumSourceFiles](../../debugger/debug-interface-access/idiaenumsourcefiles.md)

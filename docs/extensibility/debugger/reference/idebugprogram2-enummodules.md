@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::EnumModules | Microsoft Docs
+title: IDebugProgram2::EnumModules | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9d95deffb687b0d09367e2944bbaff08f3c9b57c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2eb92fc8657a69fe6b66762f9052af1294d92a7b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49905997"
 ---
 # <a name="idebugprogram2enummodules"></a>IDebugProgram2::EnumModules
-Načte seznam modulů, které tento program načetl a je prováděna.  
+Načte seznam modulů, které tento program načetl a provádí.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,10 +44,10 @@ int EnumModules(
  [out] Vrátí [IEnumDebugModules2](../../../extensibility/debugger/reference/ienumdebugmodules2.md) objekt, který obsahuje seznam modulů.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Modul je knihovna DLL nebo sestavení a je obvykle uvedené v **moduly** okno ladění.  
+ Modul je knihovna DLL nebo sestavení a je obvykle uvedená v **moduly** okno ladění.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   

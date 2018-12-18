@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::GetTypeFromAddress | Microsoft Docs
+title: IDebugComPlusSymbolProvider::GetTypeFromAddress | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a6285a70db61da6d5bc6489f8ce92e911a0ae1ab
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1d851030a76338d462d2f34de30d7e96b6ed22e7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49832766"
 ---
 # <a name="idebugcomplussymbolprovidergettypefromaddress"></a>IDebugComPlusSymbolProvider::GetTypeFromAddress
-Načte typ symbolu, zadané adresy ladění.  
+Načte do typ symbolu zadané adresy ladění.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,13 +42,13 @@ int GetTypeFromAddress(
   
 #### <a name="parameters"></a>Parametry  
  `pAddress`  
- [v] Ladění adresu, která je reprezentována [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) rozhraní.  
+ [in] Adresa pro ladění, která je reprezentována [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) rozhraní.  
   
  `ppField`  
- [out] Vrátí typ pole, jako je reprezentována [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) rozhraní.  
+ [out] Vrátí typ pole, jak je reprezentován [IDebugClassField](../../../extensibility/debugger/reference/idebugclassfield.md) rozhraní.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugSymbolProvider** objekt, který zveřejňuje [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) rozhraní.  

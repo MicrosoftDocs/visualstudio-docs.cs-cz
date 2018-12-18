@@ -1,5 +1,5 @@
 ---
-title: IDebugMemoryContext2::Add | Microsoft Docs
+title: IDebugMemoryContext2::Add | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ad55b81c1c4126efd69779e929521cfb94235ccc
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 56a0b65b7bfb541c476f26785d484ed7935880f1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49904502"
 ---
 # <a name="idebugmemorycontext2add"></a>IDebugMemoryContext2::Add
-Přidá zadanou hodnotu do aktuální kontext a vrátí nový kontext.  
+Přidá zadanou hodnotu k aktuálnímu kontextu a vrátí nový kontext.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,18 +44,18 @@ int Add(
   
 #### <a name="parameters"></a>Parametry  
  `dwCount`  
- [v] Hodnota k přidání do aktuálního kontextu.  
+ [in] Hodnota k přidání do aktuálního kontextu.  
   
  `ppMemCxt`  
- [out] Vrátí novou [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) objektu.  
+ [out] Vrátí nový [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) objektu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Kontextu paměti je adresu, takže přidání hodnotu na adresu vytvoří novou adresu, která vyžaduje nové rozhraní kontextu.  
+ Místní paměť je adresa, tak přínos pro adresu vytvoří novou adresu, která vyžaduje nové rozhraní kontextu.  
   
- Tato metoda musí vždy vytvořit nový kontext, i když Výsledná adresa je mimo paměťový prostor spojený s tímto kontextem. Jedinou výjimkou je, pokud může být přidělen není dostatek paměti pro nový kontext nebo pokud `ppMemCxt` je hodnota null (což je chybu).  
+ Tato metoda musí vždy vytvořila nový kontext, i když Výsledná adresa je mimo paměť spojený s tímto kontextem. Jedinou výjimkou je, pokud je možné přidělit paměti pro nový kontext nebo pokud `ppMemCxt` je hodnota null (což je chybu).  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md)

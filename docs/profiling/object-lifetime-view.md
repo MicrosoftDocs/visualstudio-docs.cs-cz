@@ -18,14 +18,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a160e3298d14d406b756493a97b31f0f12cdad1d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 247c81d46ee8f5ae916a2a024620e4f4eb864194
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35255616"
 ---
 # <a name="object-lifetime-view"></a>Zobrazení doby života objektu
-Doba života objektu zobrazení je k dispozici, když **taky shromažďovat životnosti objektů .NET** se kontroluje na stránkách vlastností výkonnostní relace.  
+Doba života objektu zobrazení je k dispozici, když **taky shromažďovat životnosti objektů .NET** se kontroluje na **výkonnostní relace** stránky vlastností.  
   
  Uvolňování paměti z [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] spravuje přidělování a uvolňování paměti pro vaši aplikaci. Za účelem optimalizace výkonu systému uvolňování spravovaná halda je rozdělené do tří generací: 0, 1 a 2. Uvolňování paměti modulu runtime ukládá nové objekty v 0. generace. Objekty, které zůstanou platné i po kolekce jsou povýší a uložené v generace 1 a 2.  
   
@@ -41,7 +42,7 @@ Doba života objektu zobrazení je k dispozici, když **taky shromažďovat živ
 |**Název modulu**|Název modulu, který obsahuje funkci.|  
 |**Cesta modulu**|Cesta modul, který obsahuje funkce.|  
   
-## <a name="instance-data"></a>Instance Data  
+## <a name="instance-data"></a>Instance data  
  Instance data označuje počet objektů typu, které byly vytvořeny v profilaci spustit a generování, ve kterém byly objekty navrácena modulem garbage collector.  
   
 |Sloupec|Popis|  
@@ -72,5 +73,5 @@ Doba života objektu zobrazení je k dispozici, když **taky shromažďovat živ
 |**Velkého objektu haldy instancí shromážděných**|Počet instancí tohoto typu, které se nacházely v haldě velkého objektu a které byly shromážděny v profilaci spustit.|  
 |**Velkého objektu haldy bajtů shromážděných**|Velikost v bajtech instance tohoto typu, který se nacházely v haldě velkého objektu a které byly shromážděny v profilaci spustit.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Zobrazení dat paměti .NET](../profiling/dotnet-memory-data-views.md)

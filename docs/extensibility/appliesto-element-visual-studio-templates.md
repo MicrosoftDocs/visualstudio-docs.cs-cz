@@ -1,5 +1,5 @@
 ---
-title: AppliesTo – Element (šablony sady Visual Studio) | Microsoft Docs
+title: AppliesTo – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,20 +11,21 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2e27ee1ab0ba42a82d61e2adbe9fb4c6c81cbb48
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6f399e0b054b5f9b112733399d644e1357837049
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44280719"
 ---
 # <a name="appliesto-element-visual-studio-templates"></a>AppliesTo – element (šablony sady Visual Studio)
-Určuje volitelný výraz, který musí odpovídat jedné nebo více možnostem (viz <xref:Microsoft.VisualStudio.Shell.Interop.VsProjectCapabilityExpressionMatcher>). Možnosti jsou vystavené typy projektů prostřednictvím hierarchie jako vlastnost <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID5>. Tímto způsobem může šablony sdílet více typů projektů, které mají společné příslušné schopnosti.  
+Určuje volitelný výraz, který musí odpovídat jedné nebo více možnostem (viz <xref:Microsoft.VisualStudio.Shell.Interop.VsProjectCapabilityExpressionMatcher>). Možnosti jsou vystavené typy projektů hierarchie jako vlastnost <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID5>. Tímto způsobem může šablony sdílet více typů projektů, které mají společné příslušné schopnosti.  
   
- Tento element je volitelný. Soubor šablony může obsahovat maximálně jednu jeho instanci. Tento element pouze umožňuje určit, kterou šablonu položky lze případně použít, na základě schopností aktuálně vybraného aktivního projektu. Neumožňuje určit, že šablonu položky nelze použít. Pokud `AppliesTo` chybí nebo je výraz výslovný souhlas se službou úspěšně, pak `TemplateID` nebo `TemplateGroupID` se používá k zajištění šablonu použít jako u starších verzí produktu.  
+ Tento element je volitelný. Soubor šablony může obsahovat maximálně jednu jeho instanci. Tento element pouze umožňuje určit, kterou šablonu položky lze případně použít, na základě schopností aktuálně vybraného aktivního projektu. Neumožňuje určit, že šablonu položky nelze použít. Pokud `AppliesTo` chybí nebo výraz nevyjadřovat výslovný úspěšně, potom `TemplateID` nebo `TemplateGroupID` umožňuje zajistit, že šablona použitelný, jako v předchozích verzích produktu.  
   
- Dostupné ve verzi Visual Studio 2013 Update 2. Chcete-li správnou verzi, najdete v části [odkazování na sestavení poskytnuté ve Visual Studio 2013 SDK Update 2](http://msdn.microsoft.com/en-us/42b65c3e-e42b-4c39-98c8-bea285f25ffb).  
+ Zavedena v aplikaci Visual Studio 2013 Update 2. Tak, aby odkazovaly na správné verzi, najdete v článku [odkazování na sestavení doručit v aktualizaci 2 pro Visual Studio 2013 SDK](https://msdn.microsoft.com/library/42b65c3e-e42b-4c39-98c8-bea285f25ffb).  
   
- \<VSTemplate >  
+ \<Vstemplate – >  
  \<TemplateData >  
  \<AppliesTo – >  
   
@@ -40,25 +41,25 @@ Určuje volitelný výraz, který musí odpovídat jedné nebo více možnostem 
 ### <a name="attributes"></a>Atributy  
  Žádné  
   
-### <a name="child-elements"></a>Podřízené elementy  
+### <a name="child-elements"></a>Podřízené prvky  
  Žádné  
   
-### <a name="parent-elements"></a>Nadřazené elementy  
+### <a name="parent-elements"></a>Nadřazené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Určuje kategorii šablony.|  
+|[TemplateData –](../extensibility/templatedata-element-visual-studio-templates.md)|Určuje kategorii šablony.|  
   
 ## <a name="text-value"></a>Textová hodnota  
  Je vyžadována textová hodnota. Tento text určuje schopnosti projektu.  
   
  Platná syntaxe výrazu je definována takto:  
   
--   Výraz funkce, jako například "(VisualC &#124; CSharp) + (Mstestu &#124; NUnit)".  
+-   Výraz schopnosti, například "(VisualC &#124; CSharp) + (MSTest &#124; NUnit)".  
   
 -   "&#124;" Je operátor OR.  
   
--   "A" a "+" znaky jsou obě a operátory.  
+-   "&" A "+" znaky jsou oba operátory.  
   
 -   Znak "!" je operátor NOT.  
   
@@ -66,10 +67,10 @@ Určuje volitelný výraz, který musí odpovídat jedné nebo více možnostem 
   
 -   Hodnota null nebo prázdný výraz jsou vyhodnoceny jako shoda.  
   
--   Možnosti projektu může být jakémukoli znaku kromě těchto vyhrazené znaky: "" :;,+-*/\\! ~&#124;& %$@^()={} <> []? \t\b\n\r  
+-   Schopnosti projektu mohou používat libovolné znaky kromě těchto vyhrazených znaků: "'' :;,+-*/\\! ~&#124;& %$@^() ={}<> []? \t\b\n\r  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje tři různé šablony. `Template1` buď pro všechny typy projektů jazyka C# nebo jakýkoli jiný typ projektu, který podporuje se vztahuje `WindowsAppContainer` schopností. `Template2` platí pro všechny projekty c jakéhokoli druhu. `Template3` platí pro projekty C#, které nejsou `WindowsAppContainer` projekty.  
+ Následující příklad ukazuje tři různé šablony. `Template1` vztahuje na všechny typy projektů jazyka C# nebo jakýkoli jiný typ projektu, který podporuje `WindowsAppContainer` funkce. `Template2` platí pro všechny projekty jazyka C# jakéhokoli druhu. `Template3` platí pro projekty jazyka C#, které nejsou `WindowsAppContainer` projekty.  
   
 ```xml  
 <!--  Template 1 -->  
@@ -98,6 +99,6 @@ Určuje volitelný výraz, který musí odpovídat jedné nebo více možnostem 
   
 ```  
   
-## <a name="see-also"></a>Viz také  
- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
+## <a name="see-also"></a>Viz také:  
+ [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)   
  [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

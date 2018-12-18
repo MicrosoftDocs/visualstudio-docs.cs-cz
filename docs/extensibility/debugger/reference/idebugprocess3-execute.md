@@ -1,5 +1,5 @@
 ---
-title: IDebugProcess3::Execute | Microsoft Docs
+title: IDebugProcess3::Execute | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,17 +15,18 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 349f792826bcfaa6ec3af1e10069e9c7182868bb
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a890390e6b3f4e1286a1c2a38fad54058c15696c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49864176"
 ---
 # <a name="idebugprocess3execute"></a>IDebugProcess3::Execute
-Pokračuje v spuštění tohoto procesu z zastaveném stavu. Všechny předchozí stav spuštění (například krok) je vymazán a proces se spustí provádění znovu.  
+Se bude spouštět dál tento proces v zastaveném stavu. Vymazat všechny předchozí stav provádění (například krok) a proces začne provádět znovu.  
   
 > [!NOTE]
->  Tato metoda by měla použít místo [Execute](../../../extensibility/debugger/reference/idebugprogram2-execute.md).  
+>  Tato metoda by měla být použita místo [Execute](../../../extensibility/debugger/reference/idebugprogram2-execute.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,19 +44,19 @@ int Execute(
   
 #### <a name="parameters"></a>Parametry  
  `pThread`  
- [v] [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) objekt reprezentující vlákno k provedení.  
+ [in] [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) objekt představující spuštění vlákna.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Když uživatel spustí provádění z zastaveném stavu v jiný proces na vlákno, tato metoda je volána tohoto postupu. Tato metoda je volána, i když uživatel vybere **spustit** příkaz **ladění** nabídky v prostředí IDE. Implementace této metody může být stejně jednoduché jako volání [obnovit](../../../extensibility/debugger/reference/idebugthread2-resume.md) metoda na aktuální vlákno v procesu.  
+ Když uživatel spustí provádění z zastaven nějaký jiný proces na vlákno, tato metoda je volána k tomuto procesu. Tato metoda je volána, i když uživatel vybere **Start** příkaz **ladění** nabídky v integrovaném vývojovém prostředí. Implementace této metody může být stejně jednoduché jako volání funkce [Resume](../../../extensibility/debugger/reference/idebugthread2-resume.md) metodu na aktuální vlákno v procesu.  
   
 > [!WARNING]
->  Neodesílat zastavení události nebo okamžitou (synchronní) události [událostí](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) při zpracování volání; v opačném případě ladicí program může přestat reagovat.  
+>  Neodesílat událostí ukončení nebo okamžité (synchronní) události, která [události](../../../extensibility/debugger/reference/idebugeventcallback2-event.md) při zpracování tohoto volání; v opačném případě ladicí program může přestat reagovat.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProcess3](../../../extensibility/debugger/reference/idebugprocess3.md)   
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   
  [Obnovení](../../../extensibility/debugger/reference/idebugthread2-resume.md)   
- [Události](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)
+ [Event](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)

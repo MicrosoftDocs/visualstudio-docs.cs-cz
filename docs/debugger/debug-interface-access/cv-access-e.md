@@ -1,5 +1,5 @@
 ---
-title: CV_access_e | Microsoft Docs
+title: Cv_access_e – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 35b10f8a98284fdec9e94043a4b827fab226d3aa
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: b6de95d74b8d7edc3bde08437c3d018270758112
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49878983"
 ---
 # <a name="cvaccesse"></a>CV_access_e
-Určuje rozsah viditelnost (úroveň přístupu) členské funkce a proměnné.  
+Určuje obor viditelnost (úroveň přístupu) členské funkce a proměnné.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,13 +39,13 @@ typedef enum CV_access_e {
  Člen má soukromý přístup.  
   
  CV_protected  
- Člen je chráněný přístup.  
+ Člen chrání přístup.  
   
  CV_public  
  Člen má veřejný přístup.  
   
 ## <a name="remarks"></a>Poznámky  
- `friend` Specifikátor přístupu se sem nezahrnuje vzhledem k tomu, že je obvykle používán třetí funkce, které mají přístup k privátní a chráněné elementy třídy. Použití [idiasymbol::get_symtag –](../../debugger/debug-interface-access/idiasymbol-get-symtag.md) metody k vyhledání symboly s `SymTagFriend` přístup.  
+ `friend` Specifikátor přístupu zde není obsažena vzhledem k tomu, že se obvykle používá funkce bez členů, které mají přístup k soukromým a chráněným elementy třídy. Použití [idiasymbol::get_symtag –](../../debugger/debug-interface-access/idiasymbol-get-symtag.md) metodu pro hledání symbolů se `SymTagFriend` přístup.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: cvconst.h  

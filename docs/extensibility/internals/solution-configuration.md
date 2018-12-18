@@ -1,5 +1,5 @@
 ---
-title: Konfigurace řešení | Microsoft Docs
+title: Konfigurace řešení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,51 +13,52 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f7b2a453d4ea4e8b92b40ee126f9441e6f353606
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: caf55b341cc34bb4101f27d2468f0da8e5cf6c96
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49875317"
 ---
 # <a name="solution-configuration"></a>Konfigurace řešení
-Konfigurace řešení úložiště vlastnosti na úrovni řešení. Jejich přímé chování **spustit** klíč (F5) a **sestavení** příkazy. Ve výchozím nastavení tyto příkazy sestavit a spustit konfiguraci ladění. Oba příkazy spustí v kontextu konfigurace řešení. To znamená, že uživatel očekávat F5 start a sestavení bez ohledu aktivním řešení se konfigurují prostřednictvím nastavení. Prostředí je určena k optimalizaci pro řešení, nikoli projekty, pokud jde o vytváření a spouštění.  
+Konfigurace řešení ukládání vlastností na úrovni řešení. Chování odkazují **Start** klíč (F5) a **sestavení** příkazy. Tyto příkazy ve výchozím nastavení, sestavit a spustit konfiguraci ladění. Oba příkazy se spustí v kontextu konfigurace řešení. To znamená, že uživatel můžete očekávat F5 pro spuštění a sestavení bez ohledu aktivním řešení se konfigurují prostřednictvím nastavení. Prostředí je určená k optimalizaci pro řešení než projektů při rozhodování o vytváření a spouštění.  
   
- Standardním panelu nástrojů Visual Studio obsahuje tlačítko Start a konfigurace řešení rozevíracího seznamu vedle tlačítka Start. Tento seznam umožňuje uživatelům zvolit konfiguraci spustit při stisknutí klávesy F5, vytvořit své vlastní konfigurace řešení nebo upravit stávající konfigurace.  
+ Standardní panel nástrojů sady Visual Studio obsahuje tlačítko Start a konfigurace řešení rozevírací seznam napravo od tlačítko Start. Tento seznam umožňuje uživatelům zvolit konfiguraci tak, aby se má spustit při stisknutí klávesy F5, vytvářet své vlastní konfigurace řešení nebo upravit existující konfiguraci.  
   
 > [!NOTE]
->  Neexistují žádné rozhraní rozšíření k vytvoření nebo úpravě konfigurace řešení. Je nutné použít `DTE.SolutionBuilder`. Existují však rozšiřitelnost rozhraní API pro správu sestavení řešení. Další informace naleznete v tématu <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionBuildManager2>.  
+>  Nejsou žádná rozšíření rozhraní vytvořit nebo upravit konfiguraci řešení. Je nutné použít `DTE.SolutionBuilder`. Existují však rozšiřitelnost rozhraní API pro správu sestavení řešení. Další informace naleznete v tématu <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionBuildManager2>.  
   
- Zde je, jak můžete implementovat konfigurace řešení nepodporuje typ vašeho projektu:  
+ Tady je implementace konfigurace řešení podporována typem projektu:  
   
--   Projekt  
+- Projekt  
   
-     Zobrazuje názvy projektů v aktuálním řešení nalezen.  
+   Zobrazuje názvy projektů v aktuálním řešení se nenašly.  
   
--   Konfigurace  
+- Konfigurace  
   
-     Zadejte seznam konfigurace nepodporuje typ vašeho projektu a zobrazit na stránkách vlastností implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2>.  
+   Zadejte seznam konfigurací podporována typem projektu a zobrazí na stránkách vlastností implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2>.  
   
-     Sloupec konfigurace zobrazí název konfigurace projektu k sestavení v této konfiguraci řešení a zobrazí seznam všech konfigurace projektu klepnutím na tlačítko se šipkou. Volání prostředí <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgNames%2A> metoda k vyplnění tohoto seznamu. Pokud <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgProviderProperty%2A> metoda znamená, že projekt podporuje úpravu konfigurace nové nebo upravit možnosti se také zobrazí v části konfigurace. Všechny tyto možnosti spuštění dialogových oken, které volají metody `IVsCfgProvider2` rozhraní pro úpravy konfigurace projektu.  
+   Konfigurace sloupec zobrazuje název konfigurace projektu k sestavení v této konfiguraci řešení a jsou uvedeny všechny konfigurace projektu po kliknutí na tlačítko se šipkou. Prostředí volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgNames%2A> metoda k vyplnění tohoto seznamu. Pokud <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgProviderProperty%2A> metoda znamená, že projekt podporuje úpravu konfigurace nové nebo upravit výběry se zobrazují v položce konfigurace. Každá z těchto možností spuštění dialogová okna, které volají metody `IVsCfgProvider2` rozhraní upravit konfigurace projektu.  
   
-     Pokud projekt nepodporuje konfigurace, sloupci konfigurace žádný zobrazí a je zakázaná.  
+   Pokud projekt nepodporuje konfigurace, sloupci konfigurace žádný zobrazí a je zakázaná.  
   
--   Platforma  
+- Platforma  
   
-     Zobrazí platformy sestavení pro konfigurace vybrané projektu a uvádí všechny dostupné platformy pro projekt klepnutím na tlačítko se šipkou. Volání prostředí <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetPlatformNames%2A> metoda k vyplnění tohoto seznamu. Pokud <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgProviderProperty%2A> metoda označuje, že projekt podporuje platformy úpravy, nové nebo upravit možnosti jsou také zobrazeným pod záhlavím platformy. Všechny tyto možnosti spuštění dialogových oken, které volají `IVsCfgProvider2` metody upravit dostupné platformy projektu.  
+   Zobrazí platformu konfiguraci zvoleného projektu pro sestavení a obsahuje seznam všech dostupných platforem pro projekt po kliknutí na tlačítko se šipkou. Prostředí volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetPlatformNames%2A> metoda k vyplnění tohoto seznamu. Pokud <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgProvider2.GetCfgProviderProperty%2A> metoda znamená, že projekt podporuje úprav platformy, nové nebo upravit výběry jsou také zobrazeným pod záhlavím platformy. Každá z těchto možností spuštění dialogová okna, které volají `IVsCfgProvider2` metody upravit platformy projektu k dispozici.  
   
-     Pokud projekt nepodporuje platformy, sloupci platformy pro tento projekt žádný zobrazí a je zakázaná.  
+   Pokud projekt nepodporuje platformy, sloupci platformy pro daný projekt žádný zobrazí a je zakázaná.  
   
--   Sestavení  
+- Sestavení  
   
-     Určuje, zda aktuální řešení konfigurace sestavení projektu. Nezaškrtnuté projekty nejsou vytvořené při sestavení řešení úrovni příkazy jsou vyvolány i přes všechny závislosti projektu, která obsahují. Není vybrán má být sestaven projekty jsou stále součástí ladění, spouštění, balení a nasazení řešení.  
+   Určuje, zda aktuální konfigurace řešení sestavení projektu. Nevybrané projekty nevzniknou při sestavení na úrovni řešení příkazy, které jsou vyvolány bez ohledu na všechny závislosti projektu, které obsahují. Není vybrána k sestavení projektů jsou zahrnuty i v ladění, spouštění, balení a nasazení řešení.  
   
--   Nasazení  
+- Nasazení  
   
-     Určuje, zda bude projekt nasazen při počáteční nebo nasadit příkazy jsou použitá s konfigurací sestavení vybraného řešení. Zaškrtněte políčko u tohoto pole bude k dispozici, pokud projekt podporuje nasazení implementací <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> rozhraní na jeho <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2> objektu.  
+   Určuje, zda bude projekt nasazen zadáním příkazů Start nebo nasazení s konfigurací sestavení vybrané řešení. Zaškrtněte políčko pro toto pole bude k dispozici, pokud projekt podporuje nasazení implementací <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> rozhraní na jeho <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2> objektu.  
   
- Jakmile se přidá novou konfiguraci řešení, kterého uživatel může vybrat z rozevíracího seznamu pole konfigurace řešení na standardním panelu nástrojů na sestavení nebo spusťte pro tuto konfiguraci.  
+  Jakmile se přidá nová konfigurace řešení, uživatel může vybrat z rozevíracího seznamu konfigurace řešení na standardním panelu nástrojů k sestavení a/nebo spustit tuto konfiguraci.  
   
 ## <a name="see-also"></a>Viz také  
- [Správa možnosti konfigurace](../../extensibility/internals/managing-configuration-options.md)   
- [Konfigurace projektu pro vytváření](../../extensibility/internals/project-configuration-for-building.md)   
+ [Správa možností konfigurace](../../extensibility/internals/managing-configuration-options.md)   
+ [Konfigurace projektu pro sestavení](../../extensibility/internals/project-configuration-for-building.md)   
  [Objekt konfigurace projektu](../../extensibility/internals/project-configuration-object.md)

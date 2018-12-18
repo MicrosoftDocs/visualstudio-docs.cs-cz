@@ -21,6 +21,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31138743"
 ---
 # <a name="templateid-element-visual-studio-templates"></a>TemplateID – element (šablony sady Visual Studio)
 Určuje identifikátor pro který je zařazený do kategorie do skupiny šablon položek pomocí šablony položky [templategroupid –](../extensibility/templategroupid-element-visual-studio-templates.md) elementu.  

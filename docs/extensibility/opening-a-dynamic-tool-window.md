@@ -1,5 +1,5 @@
 ---
-title: Otevřete okno dynamické nástroj | Microsoft Docs
+title: Otevření dynamického panelu nástrojů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,30 +13,31 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bdd3a4a8d85ed7d0f5884e7f11b8778eb3b420a2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9d37a72629dfb7c10eeb51bcd2317151447e9edd
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39636643"
 ---
-# <a name="opening-a-dynamic-tool-window"></a>Otevřete okno dynamické nástroj
-Nástroje systému windows jsou obvykle otevřít pomocí příkazu v nabídce, nebo ekvivalentní klávesové zkratky. V některých případech však může být zapotřebí okno nástroje, které se otevře vždy, když platí konkrétní kontext uživatelského rozhraní a zavře případě kontext uživatelského rozhraní se již nepoužívá. Tyto typy nástroje systému windows se nazývají *dynamické* nebo *automaticky viditelná*.  
+# <a name="open-a-dynamic-tool-window"></a>Otevření dynamického panelu nástrojů
+Okna nástrojů jsou obvykle otevřené z příkazu nabídky nebo ekvivalentní klávesové zkratky. V některých případech však může být zapotřebí panelu nástrojů, které se otevře vždy, když konkrétní kontextu uživatelského rozhraní použije a zavře, když už neplatí kontextu uživatelského rozhraní. Tyto druhy oken nástrojů se nazývají *dynamické* nebo *automaticky viditelná*.  
   
 > [!NOTE]
->  Seznam předdefinovaných kontexty uživatelského rozhraní, naleznete v části <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT>. Pro  
+>  Seznam předdefinovaných kontexty uživatelského rozhraní najdete v tématu <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT>.  
   
- Pokud chcete otevřít okno dynamické nástroje při spuštění a je možné pro vytvoření selhání, musí implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackageDynamicToolOwnerEx> rozhraní a testování podmínky selhání v <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackageDynamicToolOwnerEx.QueryShowTool%2A> metoda. Aby prostředí vědět, že máte okno dynamické nástroje, které musí být otevřen při spuštění, je nutné přidat `SupportsDynamicToolOwner` (nastavená na hodnotu 1) registrace balíčku. Tato hodnota není součástí standardní <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute>, takže musíte vytvořit vlastní atribut ho přidejte. Další informace o vlastních atributů najdete v tématu [pomocí vlastní atribut registrace k registraci rozšíření](../extensibility/registering-and-unregistering-vspackages.md#using-a-custom-registration-attribute-to-register-an-extension).  
+ Pokud chcete otevřít dynamického panelu nástrojů při spuštění a je možné k vytvoření selhání, je nutné implementovat <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackageDynamicToolOwnerEx> rozhraní a podmínky selhání v testu <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackageDynamicToolOwnerEx.QueryShowTool%2A> metody. Aby prostředí vědět, že máte dynamického panelu nástrojů, který by měl být otevřen při spuštění, je nutné přidat `SupportsDynamicToolOwner` (nastaveno na hodnotu 1) k registraci balíčku. Tato hodnota není součástí standardu <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute>, proto je nutné vytvořit vlastní atribut a přidejte ji. Další informace o uživatelských atributů, které najdete v tématu [použijte atribut vlastní registrace k registraci rozšíření](../extensibility/registering-and-unregistering-vspackages.md#using-a-custom-registration-attribute-to-register-an-extension).  
   
- Použití <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> otevřete okno nástroje. Panel nástrojů se vytvoří podle potřeby.  
+ Použití <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> otevřete panel nástrojů. Panel nástrojů se vytvoří podle potřeby.  
   
 > [!NOTE]
->  Okno dynamické nástroje je možné uzavřít uživatelem. Pokud chcete vytvořit příkaz nabídky, takže uživatel může znovu otevřít okno nástroje, příkaz nabídky by měly být povoleny v rámci stejné uživatelské rozhraní, které se otevře okno nástroje a zakázána, jinak hodnota.  
+>  Dynamického panelu nástrojů můžete zavřít uživatel. Pokud chcete vytvořit příkaz nabídky, takže uživatel může znovu otevřít okno nástroje, musí být ve stejném kontextu uživatelského rozhraní, které se otevře okno nástroje a zakázána, jinak aktivována příkazu nabídky.  
   
-### <a name="to-open-a-dynamic-tool-window"></a>Chcete-li otevřít okno dynamické nástroje  
+## <a name="to-open-a-dynamic-tool-window"></a>K otevření dynamického panelu nástrojů  
   
-1.  Vytvoření projektu VSIX s názvem **DynamicToolWindow** a přidat šablonu nástroj okno Položka s názvem **DynamicWindowPane.cs**. Další informace najdete v tématu [vytváření rozšíření s okno nástroje](../extensibility/creating-an-extension-with-a-tool-window.md).  
+1.  Vytvořte projekt VSIX s názvem **DynamicToolWindow** a přidat šablonu položky okna nástroje s názvem *DynamicWindowPane.cs*. Další informace najdete v tématu [vytváření rozšíření pomocí panelu nástrojů](../extensibility/creating-an-extension-with-a-tool-window.md).  
   
-2.  V souboru DynamicWindowPanePackage.cs najdete DynamicWindowPanePackage deklaraci. Přidat <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> a <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute> atributy registrace okno nástroje.  
+2.  V *DynamicWindowPanePackage.cs* souboru, najít DynamicWindowPanePackage deklarace. Přidat <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> a <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute> atributy registrace panel nástrojů.  
   
     ```vb  
     [ProvideToolWindow(typeof(DynamicWindowPane)]  
@@ -50,8 +51,8 @@ Nástroje systému windows jsou obvykle otevřít pomocí příkazu v nabídce, 
     {. . .}  
     ```  
   
-     Výše uvedené atributy zaregistrovat panel nástrojů s názvem DynamicWindowPane jako přechodný okno, které není trvalý, když je Visual Studio zavřít a znovu otevřít. Otevření DynamicWindowPane vždy, když <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionExists_string> platí a ukončeno jinak.  
+     Výše uvedené atributy registrace s názvem DynamicWindowPane jako přechodné okna, která není zachována, když je aplikace Visual Studio zavřít a znovu otevřít okno nástroje. Otevřít DynamicWindowPane pokaždé, když <xref:Microsoft.VisualStudio.VSConstants.UICONTEXT.SolutionExists_string> platí a uzavřených jinak.  
   
-3.  Sestavte projekt a spusťte ladění. Experimentální instanci by se zobrazit. Panel nástrojů byste neměli vidět.  
+3.  Sestavte projekt a spusťte ladění. Experimentální instanci aplikace by se zobrazit. Panel nástrojů byste neměli vidět.  
   
-4.  Otevřete projekt v experimentální instanci. By se zobrazit okno nástroje.
+4.  Otevřete projekt v experimentální instanci aplikace. By se zobrazit panel nástrojů.

@@ -1,5 +1,5 @@
 ---
-title: IDebugProperty2::GetMemoryBytes | Microsoft Docs
+title: IDebugProperty2::GetMemoryBytes | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b116937183b1cf558ee7d916bdcd094ead955b55
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1b6b8b82067405e91f4d1d7fac4aeccd5e29ffa0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948015"
 ---
 # <a name="idebugproperty2getmemorybytes"></a>IDebugProperty2::GetMemoryBytes
-Získá bajtů paměti, které tvoří hodnotu vlastnosti.  
+Získá počet bajtů paměti, které tvoří hodnotu vlastnosti.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,10 +41,10 @@ int GetMemoryBytes (
   
 #### <a name="parameters"></a>Parametry  
  `ppMemoryBytes`  
- [out] Vrátí [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) objekt, který slouží k načtení paměti, která obsahuje hodnotu vlastnosti.  
+ [out] Vrátí [IDebugMemoryBytes2](../../../extensibility/debugger/reference/idebugmemorybytes2.md) objekt, který můžete použít k načtení paměť, která obsahuje hodnotu vlastnosti.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí `S_GETMEMORYBYTES_NO_MEMORY_BYTES` Pokud neexistují žádné bajtů paměti pro načtení.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí `S_GETMEMORYBYTES_NO_MEMORY_BYTES` Pokud nejsou žádné bajty paměti k načtení.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProperty2](../../../extensibility/debugger/reference/idebugproperty2.md)   

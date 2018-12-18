@@ -1,5 +1,5 @@
 ---
-title: IPropertyProxyEESide::CreateReplacementObject | Microsoft Docs
+title: IPropertyProxyEESide::CreateReplacementObject | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 56e5001d7abd498982361a51d0386db4b2624cf7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9aab08d85f91cb56677ddaf354d8f7c316e4b4a6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49870429"
 ---
 # <a name="ipropertyproxyeesidecreatereplacementobject"></a>IPropertyProxyEESide::CreateReplacementObject
-Vytvoří kopii datový objekt specifické pro vyhodnocení výrazu (EE).  
+Vytvoří kopii datového objektu specifické pro vyhodnocovací filtr výrazů (EE).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,18 +43,18 @@ int CreateReplacementObject(
   
 #### <a name="parameters"></a>Parametry  
  `dataIn`  
- [v] [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) objekt, který obsahuje data, které se mají zkopírovat.  
+ [in] [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) objekt obsahující data, které se mají zkopírovat.  
   
  `dataOut`  
- [out] Vrátí novou `IEEDataStorage` objektu.  
+ [out] Vrátí nový `IEEDataStorage` objektu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda je uvedena [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) objektu, který představuje pole bajtů. Tato příchozí datový objekt není obvykle implementované EE. Však tato metoda vrátí objekt vždy implementované EE, která umožní implementace EE `IEEDataStorage` rozhraní na jakémkoli třídy se požaduje.  
+ Tato metoda je uvedena [IEEDataStorage](../../../extensibility/debugger/reference/ieedatastorage.md) objekt představující pole bajtů. Tento objekt příchozích dat se většinou implementují moduly EE. Ale objekt vrácený touto metodou je vždy implementované EE, který umožňuje implementovat EE `IEEDataStorage` rozhraní na libovolné třídy je žádoucí.  
   
- Všimněte si, že data zadaná příchozí `IEEDataStorage` objekt musí být stejná data v odchozích `IEEDataStorage` objektu.  
+ Všimněte si, že data poskytnutých příchozí `IEEDataStorage` objekt musí být stejná data v odchozích dat `IEEDataStorage` objektu.  
   
 ## <a name="see-also"></a>Viz také  
  [IPropertyProxyEESide](../../../extensibility/debugger/reference/ipropertyproxyeeside.md)   

@@ -1,5 +1,5 @@
 ---
-title: IDebugCodeContext3::GetProcess | Microsoft Docs
+title: IDebugCodeContext3::GetProcess | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,14 +13,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0557c8024d1b5b2cafefbd5254816ffd4ddfd67a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6f94214904e0efe25cc6c5b4070ae3367e91b8af
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49891424"
 ---
 # <a name="idebugcodecontext3getprocess"></a>IDebugCodeContext3::GetProcess
-Získá odkaz na rozhraní procesu ladění.  
+Získá referenci k rozhraní ladění procesu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,10 +39,10 @@ public int GetProcess(
   
 #### <a name="parameters"></a>Parametry  
  `ppProcess`  
- [out] Referenční informace k rozhraní ladění procesu.  
+ [out] Reference k rozhraní ladění procesu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugCodeContext** objekt, který zveřejňuje [IDebugBeforeSymbolSearchEvent2](../../../extensibility/debugger/reference/idebugbeforesymbolsearchevent2.md) rozhraní.  

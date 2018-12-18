@@ -1,5 +1,5 @@
 ---
-title: Analýza odezvy uživatelského rozhraní HTML v aplikacích pro UPW | Microsoft Docs
+title: Analýza odezvy uživatelského rozhraní HTML v aplikacích pro UWP | Dokumentace Microsoftu
 ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -17,125 +17,126 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 7dd31d94552895d42c803df81e1e66cd9a3947f0
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ec3f3be069e92d52071a6b40857f7fac46e8d3e5
+ms.sourcegitcommit: bccb05b5b4e435f3c1f7c36ba342e7d4031eb398
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 11/06/2018
+ms.locfileid: "51221045"
 ---
 # <a name="analyze-html-ui-responsiveness-in-universal-windows-apps"></a>Analýza odezvy uživatelského rozhraní HTML v univerzálních aplikací pro Windows
-Toto téma popisuje, jak izolovat problémy s výkonem ve svých aplikacích pomocí Profiler odezvy uživatelského rozhraní, nástroj výkonu k dispozici pro univerzální aplikace pro Windows.  
+Toto téma popisuje, jak izolovat problémy s výkonem ve svých aplikacích pomocí Profiler odezvy uživatelského rozhraní, nástroj výkon, který je k dispozici pro univerzální aplikace pro Windows.  
   
- Profiler odezvy uživatelského rozhraní vám může pomoci identifikovat problémy, třeba problémy odezvy uživatelského rozhraní nebo vedlejší účinky platformy, které obvykle ke kterým dochází u tyto příznaky:  
+ Profiler odezvy uživatelského rozhraní, pomůže vám izolovat problémy, například problémy rychlosti odezvy uživatelského rozhraní nebo platformu vedlejší účinky, které obvykle mohou u těchto příznaků:  
   
--   Chybí odezvy v uživatelském rozhraní. Aplikace může být pomalé reagovat, pokud je blokován vlákna uživatelského rozhraní. Některé věci, které by mohly blokovat vlákna uživatelského rozhraní zahrnovat nadměrné synchronní kódu jazyka JavaScript, nadměrné rozložení šablon stylů CSS nebo pracovní výpočtu šablon stylů CSS, synchronní XHR požadavky, uvolňování paměti, nadměrné Malování časy nebo kód jazyka JavaScript náročná na výkon procesoru.  
+-   Nedostatek odezvy v uživatelském rozhraní. Aplikace může být pomalá reakce, pokud vlákno uživatelského rozhraní je blokovaný. Pár věcí, které může zablokovat vlákno uživatelského rozhraní zahrnovat nadměrné synchronního kódu jazyka JavaScript, nadměrné rozložení šablon stylů CSS nebo pracovní výpočtu šablon stylů CSS, synchronní žádosti XHR, uvolňování paměti, nadměrné malířského časy nebo náročné na procesor kódu jazyka JavaScript.  
   
--   Pomalé načítání čas pro aplikace nebo stránky. To je obvykle způsobena nadměrné čas strávený načítání prostředků.  
+-   Snížit dobu načítání pro aplikaci nebo pro stránku. To je obvykle způsobeno nadměrný čas strávený načítání prostředků.  
   
--   Visual aktualizace, které jsou méně časté, než se očekávalo. K tomu dojde, pokud je příliš zaneprázdněn udržovat smooth obnovovací frekvence vlákna uživatelského rozhraní. Například pokud je zaneprázdněné vlákna uživatelského rozhraní, může vyřadit rámce. Některé non-UI vlákno pracovat, jako jsou síťové požadavky, dekódování, bitové kopie a barvy můžete také omezit četnosti aktualizací visual. (Ne všechny Malování se provádí ve vlákně UI.)  
+-   Vizuální aktualizace, které jsou méně časté, než se očekávalo. K tomu dochází, pokud vlákno uživatelského rozhraní je příliš zaneprázdněn a nemůže spravovat smooth snímkovou frekvenci. Například pokud vlákno uživatelského rozhraní je zaneprázdněný, snímků může dojít ke ztrátě. Některá vlákna bez uživatelského rozhraní pracovat, jako jsou síťové požadavky. dekódování obrázku, a barvy může také omezit četnost aktualizace sady visual. (Ne všechny Malování se provádí na vlákně UI).  
   
-##  <a name="RunningProfiler"></a> Spusťte nástroj odezvy uživatelského rozhraní HTML  
- Pokud máte aplikace pro UPW pracovní otevřete v sadě Visual Studio, můžete použít nástroj odezvy uživatelského rozhraní HTML.  
+## <a name="run-the-html-ui-responsiveness-tool"></a>Spusťte nástroj rychlost odezvy UI HTML  
+ Nástroj rychlost odezvy UI HTML můžete použít, když máte funkční aplikaci UPW otevřete v sadě Visual Studio.  
   
-1.  Pokud spouštíte aplikaci ze sady Visual Studio na **standardní** panelu nástrojů v **spustit ladění** vyberte cíl nasazení, jako **místního počítače** nebo **Zařízení**.  
+1.  Pokud používáte aplikaci z aplikace Visual Studio na **standardní** nástrojů v **spustit ladění** , zvolte cíl nasazení, jako **místního počítače** nebo **Zařízení**.  
   
-2.  Na **ladění** nabídce zvolte **profileru výkonu...** .  
+2.  Na **ladění** nabídce zvolte **Profiler výkonu**.  
   
-     Pokud chcete změnit cíl analýzy pro profileru, zvolte**změnit cíl**.  
+     Pokud chcete změnit cíl analýzy profileru, zvolte **změnit cíl**.  
   
-     ![Změna cílové analysis](../profiling/media/js_tools_target.png "JS_Tools_Target")  
+     ![Změnit cíl analýzy](../profiling/media/js_tools_target.png "JS_Tools_Target")  
   
-     Jsou k dispozici pro cíl analysis následující možnosti:  
+     Tyto možnosti jsou k dispozici pro cíl analýzy:  
   
-    -   **Spouštěný projekt**. Vyberte tuto možnost k analýze aktuální projekt po spuštění. Pokud spouštíte aplikaci na vzdáleném počítači nebo zařízení, musíte použít tato nastavení, což je výchozí hodnota.  
+    -   **Projekt po spuštění**. Tato možnost slouží k analýze aktuální spouštěcí projekt. Pokud aplikaci spouštíte ve vzdáleném počítači nebo zařízení, musíte použít toto nastavení, což je výchozí hodnota.  
   
-    -   **Spuštění aplikace**. Tuto volbu vyberte aplikaci UWP ze seznamu spuštěných aplikací. Tuto možnost nelze použít, když používáte aplikaci na zařízení nebo vzdáleném počítači.  
+    -   **Spuštění aplikace**. Tato možnost slouží k výběru aplikace pro UPW ze seznamu spuštěných aplikací. Tuto možnost nelze použít, když aplikaci spouštíte na vzdáleném počítači či zařízení.  
   
-         Tuto možnost můžete použít k analýze výkonu aplikací, které jsou spuštěné v počítači, pokud nemáte přístup ke zdrojovému kódu.  
+         Tuto možnost můžete použít k analýze výkonu aplikace, které jsou spuštěny v počítači, pokud nemáte přístup ke zdrojovému kódu.  
   
-    -   **Nainstalované aplikace**. Vyberte tuto možnost vyberte nainstalovanou aplikaci, která chcete analyzovat. Tuto možnost nelze použít, když používáte aplikaci na zařízení nebo vzdáleném počítači.  
+    -   **Nainstalované aplikace**. Tato možnost slouží k výběru nainstalované aplikace, kterou chcete analyzovat. Tuto možnost nelze použít, když aplikaci spouštíte na vzdáleném počítači či zařízení.  
   
-         Tuto možnost můžete analyzovat výkon aplikací, které jste nainstalovali v počítači, pokud nemáte přístup ke zdrojovému kódu. Tato možnost může být také užitečné, když chcete analyzovat výkon všech aplikací mimo váš vlastní vývoj aplikací.  
+         Tuto možnost můžete použít k analýze výkonu aplikace, které jste nainstalovali v počítači, pokud nemáte přístup ke zdrojovému kódu. Tato možnost může být také užitečné, chcete-li pouze k analýze výkonu všech aplikací mimo váš vlastní vývoj aplikací.  
   
-3.  Z **nástroje**, vyberte **odezvy uživatelského rozhraní HTML**a potom zvolte **spustit**.  
+3.  Z **dostupných nástrojů**vyberte **rychlosti odezvy uživatelského rozhraní HTML**a klikněte na tlačítko **Start**.  
   
-4.  Když spustíte Profiler odezvy uživatelského rozhraní, okno Řízení uživatelských účtů si mohou vyžádat vaše oprávnění ke spuštění Collector.exe trasování událostí pro Windows Visual Studio. Zvolte **Ano**.  
+4.  Když spustíte Profiler odezvy uživatelského rozhraní, může vyžádat okno Řízení uživatelských účtů ke spuštění Collector.exe trasování událostí pro Windows Visual Studio. Zvolte **Ano**.  
   
-     Komunikovat s aplikaci pro otestování tohoto scénáře relevantní výkonu. Podrobný postup najdete v části [izolovat problém odezvy uživatelského rozhraní](#Workflow) a [izolovat problém visual propustnost](#IsolateVisualThroughput).  
+     Interakci s aplikací k otestování tohoto scénáře relevantní výkonu. Podrobný postup najdete v části [izolovat problém rychlosti odezvy uživatelského rozhraní](#Workflow) a [izolovat problém vizuální propustnost](#IsolateVisualThroughput).  
   
-5.  Přepněte do sady Visual Studio stisknutím Alt + Tab.  
+5.  Přepnout do sady Visual Studio stisknutím klávesy Alt + Tab.  
   
-6.  Chcete-li zastavit profilace aplikace a zobrazení data, která profileru shromáždit, zvolte **zastavit shromažďování**.  
+6.  Chcete-li zastavit profilování aplikace a zobrazení data, která shromažďují profiler, zvolte **zastavit shromažďování**.  
   
-##  <a name="IsolateAnIssue"></a> Izolovat problém  
- V následujícím oddílu najdete návrhy můžete izolovat problémy s výkonem. Podrobné vysvětlení, jak identifikovat a opravit problémy s výkonem pomocí výkonu ukázka testování aplikace najdete v tématu [návod: odezvy zlepšení uživatelského rozhraní (HTML)](../profiling/walkthrough-improving-ui-responsiveness-html.md).  
+## <a name="isolate-an-issue"></a>Izolovat problém  
+ V následujících částech najdete návrhy můžete izolovat problémy s výkonem. Podrobné vysvětlení toho, jak identifikovat a opravit problémy s výkonem pomocí ukázkové aplikace pro testování výkonu najdete v tématu [názorný postup: odezvy zlepšení uživatelského rozhraní (HTML)](../profiling/walkthrough-improving-ui-responsiveness-html.md).  
   
-###  <a name="Workflow"></a> Izolovat problém odezvy uživatelského rozhraní  
- Tyto kroky obsahují návrhy pracovního postupu, které můžou pomoct efektivněji využívat Profiler odezvy uživatelského rozhraní:  
+###  <a name="Workflow"></a> Izolovat problém rychlosti odezvy uživatelského rozhraní  
+ Tyto kroky obsahují navrhované pracovního postupu, které můžou pomoct efektivněji využívat Profiler odezvy uživatelského rozhraní:  
   
-1.  Otevřete aplikaci v sadě Visual Studio.  
+1.  Otevření aplikace v sadě Visual Studio.  
   
-2.  Testování aplikace problémů odezvy uživatelského rozhraní. (Stisknutím Ctrl + F5 a spusťte aplikaci bez ladění.)  
+2.  Testování aplikací pro problémy rychlosti odezvy uživatelského rozhraní. (Stiskněte **Ctrl**+**F5** spuštění vaší aplikace bez ladění.)  
   
-     Pokud narazíte na problém, pokračujte, testování a pokuste se zúžit časový rámec, ve kterém k danému problému dojde, nebo zkuste k identifikaci aktivační události, které způsobují chování.  
+     Pokud narazíte na problém, pokračujte v testování a zkuste zúžit časový rámec, ve kterém se tomuto problému dochází, nebo zkuste k určení aktivačních událostí, které způsobí, že chování.  
   
-3.  Přepněte do sady Visual Studio (stiskněte klávesy Alt + Tab) a zastavit aplikace (Shift + F5).  
+3.  Přepněte do aplikace Visual Studio (stiskněte **Alt**+**kartu**) a ukončení vaší aplikace (**Shift**+**F5**).  
   
-4.  Můžete přidat uživatele značky kódu pomocí [označit kód pro analýzu](#ProfileMark).  
+4.  Volitelně můžete přidat uživatelské značky pro kódu pomocí [označit kód pro analýzu](#ProfileMark).  
   
     > [!TIP]
-    >  Značky uživatele můžete identifikovat problém odezvy při zobrazení dat profileru. Například můžete přidat uživatele označit na začátku a konci části kódu, který je příčinou problém odezvy.  
+    >  Uživatelské značky pomáhají identifikovat problém rychlost odezvy při zobrazení dat profileru. Můžete například přidat uživatelskou značku na začátku a konci části kódu, který je příčinou problém s rychlostí odezvy.  
   
-5.  Spusťte Profiler odezvy uživatelského rozhraní podle pokynů v předchozí části.  
+5.  Spusťte Profiler odezvy uživatelského rozhraní podle pokynů uvedených v předchozí části.  
   
-6.  Uvést aplikaci do stavu, který má za následek chybu odezvy uživatelského rozhraní.  
+6.  Přidejte aplikaci do stavu, která vede problém s rychlostí odezvy uživatelského rozhraní.  
   
-7.  Přepněte do sady Visual Studio (stiskněte klávesy Alt + Tab) a zvolte **zastavit shromažďování** na kartě profileru Profiler odezvy uživatelského rozhraní.  
+7.  Přepněte do aplikace Visual Studio (stisknutím klávesy Alt + Tab) a zvolte **zastavit shromažďování** profiler kartě Profiler odezvy uživatelského rozhraní.  
   
-8.  Pokud jste přidali uživatele značky, se objeví v [zobrazení časové osy relace diagnostiky](#Ruler) z profileru. Následující obrázek znázorňuje značka jednoho uživatele umožňuje zadat konkrétní operace v kódu.  
+8.  Pokud jste přidali uživatelské značky, se zobrazí v [zobrazit časovou osu relace diagnostiky](#Ruler) profileru. Následující obrázek znázorňuje jeden uživatel označit lze určit konkrétní operace ve vašem kódu.  
   
-     ![Diagnostika pravítka zobrazující označit uživatele](../profiling/media/js_htmlvizprofiler_usermark.png "JS_HTMLVizProfiler_UserMark")  
+     ![Zobrazuje uživatelská značka pravítka diagnostiky](../profiling/media/js_htmlvizprofiler_usermark.png "JS_HTMLVizProfiler_UserMark")  
   
-9. Oblast zájmu o časové ose a grafy profileru identifikujte pomocí značky uživatele, události životního cyklu aplikace nebo data zobrazená v v grafech. Zde jsou některé pokyny, které vám usnadní analýzu a používat data při v grafech:  
+9. Identifikujte oblasti zájmu v časové ose a grafy profileru pomocí uživatelské značky, události životního cyklu aplikace nebo data zobrazená v grafu. Tady jsou některé pokyny, které vám usnadní analýzu a použití dat v grafu:  
   
-    -   Použití [zobrazení časové osy relace diagnostiky](#Ruler) zobrazíte [označit kód pro analýzu](#ProfileMark), události životního cyklu aplikace a související časovou osu pro tyto události a časovou osu pro data v jiných grafy.  
+    -   Použití [zobrazit časovou osu relace diagnostiky](#Ruler) zobrazíte [označit kód pro analýzu](#ProfileMark), události životního cyklu aplikací a přidružených časovou osu pro tyto události a časová osa pro data v jiných grafech.  
   
-    -   Použití [graf využití procesoru](#CPUutilization) Chcete-li zobrazit obecné informace o procesoru aktivitu a typu práce je zpracování během určitého časového období. Období aktivity nadměrnému využití procesoru pravděpodobně mít za následek odezvy problémy a vyřadit rámce.  
+    -   Použití [graf využití procesoru](#CPUUtilization) Chcete-li zobrazit obecné informace o aktivity procesoru a na typu práce je zpracování během konkrétního časového období. Období aktivity nadměrnému využití procesoru je větší pravděpodobnost dojít k problémům s rychlost odezvy a vyřadit snímků.  
   
-    -   Pokud vyvíjíte herní nebo bohatý mediální aplikace, použijte [zobrazení visual propustnost (FPS)](#VisualThroughput) k určení období času, ve kterém vyřadit snímků za sekundu.  
+    -   Pokud vytváříte hru nebo bohatý mediální aplikace, použijte [zobrazení vizuální propustnost (FPS)](#VisualThroughput) k identifikaci období čas, ve kterém Snímková frekvence vyřadit.  
   
-10. Vyberte oblast zájmu v jednom z v grafech součástí grafu kliknutím a přetažením má ukazatel na příslušnou položku (nebo pomocí klávesy Tab a klávesy se šipkami). Když vyberete časové období pomocí voleb, časová osa grafu podrobnosti v dolním podokně okna profilování změny zobrazit pouze vybrané časové období.  
+10. Vyberte oblast zájmu v jednom grafy, kliknutím na část grafu a tažením provést výběr (nebo pomocí klávesy Tab a klávesy se šipkami). Když vyberete časové období tím, že výběr, časová osa grafu podrobnosti v dolním podokně okna profilování se změní na zobrazit jenom vybrané časové období.  
   
-     Následující obrázek znázorňuje graf využití procesoru s určitou oblast zájmu zvýrazněná.  
+     Graf využití procesoru k oblasti zájmu zvýrazněný na následujícím obrázku.  
   
      ![Graf využití procesoru](../profiling/media/js_htmlvizprof_cpu_util.png "JS_HTMLVizProf_CPU_Util")  
   
-11. Použití [zobrazit podrobnosti časová osa](#TimelineDetails) získat podrobné informace o událostech, které se spouští příliš často nebo trvá příliš dlouho dokončení. Například vyhledejte následující:  
+11. Použití [zobrazit podrobnosti časové osy](#TimelineDetails) a získat podrobné informace o událostech, které se spouští příliš často nebo trvá příliš dlouho pro dokončení. Například vyhledejte následující:  
   
-    -   Naslouchacích procesů událostí, časovačů a zpětná volání rámce animace. V závislosti na konkrétní události může zahrnovat data poskytnutá ID upravené elementů modelu DOM, název změněné vlastnosti CSS, odkaz na zdrojové umístění a název přidružené události nebo zpětného volání funkce.  
+    -   Naslouchacích procesů událostí, časovače a zpětná volání snímků animace. V závislosti na konkrétní události může zahrnovat data poskytnutá ID změněné prvky modelu DOM, název změněné vlastnosti šablon stylů CSS, odkaz na zdrojové umístění a název přidružené události nebo zpětného volání funkce.  
   
-    -   Rozložení nebo skriptování události, jejichž výsledkem vykreslování elementů, například volání `window.getComputedStyles`. Je k dispozici přidružená elementu DOM pro událost.  
+    -   Rozložení nebo skriptování události, jejichž výsledkem vykreslování prvků, jako například volání `window.getComputedStyles`. Je k dispozici přidruženého prvku modelu DOM pro událost.  
   
-    -   Stránky nebo adresa URL zdroje, které jsou načteny aplikací, jako je například skript hodnocení pro analýzu událostí HTML. Je zadaný název souboru nebo prostředků.  
+    -   Stránky nebo adresa URL zdroje, které jsou načteny aplikací, jako jsou hodnocení skriptu HTML analýzu událostí. Název souboru nebo prostředku je k dispozici.  
   
-    -   Další události, zadaný v [profileru událostí odkaz](#ProfilerEvents).  
+    -   Další události podle [události odkaz na Profiler](#profiler-event-reference).  
   
     > [!TIP]
     >  Většina využitelné informace v profileru se zobrazí v grafu podrobnosti časové osy.  
   
-12. K oblasti pro využití procesoru nebo diagram visual propustnosti (FPS), zvolte **přiblížit** (tlačítko nebo kontextu nabídky) Chcete-li získat podrobnější informace. Časová osa grafu změny se zobrazí pouze vybrané časové období.  
+12. K oblasti vybraných v využití procesoru nebo grafu vizuální propustnost (FPS), zvolte **přiblížit** (tlačítko nebo místní nabídka) Chcete-li získat podrobnější informace. Časová osa grafu se změny zobrazit jenom vybrané časové období.  
   
-13. Při přiblížení, vyberte část využití procesoru nebo visual propustnost grafu. Pokud provedete výběr, časová osa grafu podrobnosti v okna profilování dolním podokně změny zobrazit pouze vybrané časové období.  
+13. Při přiblížení, vyberte část využití procesoru nebo vizuální propustnost grafu. Pokud provedete výběr, časová osa grafu podrobnosti v profileru dolní podokno se změní a objeví pouze vybrané časové období.  
   
-###  <a name="IsolateVisualThroughput"></a> Izolovat problém visual propustnost  
- Období nadměrné využití výkonu procesoru může způsobit nízkou nebo k nekonzistentnímu rámce sazby. Pokud vyvíjíte bohatý mediální aplikace a hry, mohou poskytnout grafu visual propustnost dat důležitější než graf využití procesoru.  
+###  <a name="IsolateVisualThroughput"></a> Izolovat problém vizuální propustnost  
+ Období nadměrné využití výkonu procesoru může vést k frekvenci snímků střední nebo nekonzistentní. Pokud vyvíjíte bohatý mediální aplikace a hry, graf vizuální propustnost mohou poskytnout další důležitá data než graf využití procesoru.  
   
- Pokud chcete izolovat visual propustnost problém, postupujte podle kroků popsaných v předchozí části, ale použít visual propustnost grafu jako jeden z klíčů datových bodů.  
+ Chcete izolovat problém vizuální propustnost, postupujte podle kroků popsaných v předchozí části, ale použít graf vizuální propustnost jako jeden z klíčových datových bodů.  
   
-###  <a name="ProfileMark"></a> Označit pro analýzu kódu  
- Snažte se určit oddíl kód aplikace, který je spojen s daty, která se zobrazí v grafech, přidáte volání funkce ve vaší aplikaci obsahující pokyn profileru pole uživatele – Inverzní trojúhelník – časovou osu v tuto chvíli získá funkci spustit. Označte všechny uživatele, které přidáte, se zobrazí v časovou osu pro graf využití procesoru a graf podrobnosti časové osy grafu visual propustnost.  
+###  <a name="ProfileMark"></a> Označit kód pro analýzu  
+ Snažte se určit části kódu aplikace, který je spojen s daty, která se zobrazí v grafech, můžete přidat volání funkce ve vaší aplikaci, která informuje profiler vložit uživatelská značka – obrácenou trojúhelník – na časové ose v tuto chvíli se provede funkci. Uživatelská značka, které přidáte, zobrazí se na časové ose pro graf využití procesoru a podrobnosti o grafu časová osa grafu vizuální propustnost.  
   
- Přidání značka uživatele, přidejte následující kód do vaší aplikace. Tento příklad používá "získávání dat" jako popis události.  
+ Chcete-li přidat uživatelskou značku, přidejte následující kód do vaší aplikace. Tento příklad používá "získávání dat" jako popis události.  
   
 ```javascript  
 if (performance && performance.mark) {  
@@ -144,16 +145,16 @@ if (performance && performance.mark) {
   
 ```  
   
- Popis události se zobrazí jako popisek, když ukazatel myši nad označit uživatele. Můžete přidat libovolný počet značek uživatele podle potřeby.  
+ Popis události se zobrazí jako popisek při umístění ukazatele myši nad uživatelskou značku. Můžete přidat tolik uživatelské značky, podle potřeby.  
   
 > [!NOTE]
->  `console.timeStamp`, příkaz Chrome, se rovněž zobrazuje jako značku uživatele.  
+>  `console.timeStamp`, příkaz Chrome se rovněž zobrazuje jako značku uživatele.  
   
  Následující obrázek znázorňuje pravítka diagnostiky značkou jednoho uživatele a jeho popis.  
   
- ![Diagnostika pravítka zobrazující označit uživatele](../profiling/media/js_htmlvizprofiler_usermark.png "JS_HTMLVizProfiler_UserMark")  
+ ![Zobrazuje uživatelská značka pravítka diagnostiky](../profiling/media/js_htmlvizprofiler_usermark.png "JS_HTMLVizProfiler_UserMark")  
   
- Můžete také vytvořit událostí generovaných nástroj v zobrazení Podrobnosti o časová osa zobrazíte trvání čas, který uplyne mezi dvěma značky uživatele. Následující kód přidá druhý uživatel označit a měření jejich čas, který uplyne mezi provádění značky ve dvou uživatele (předchozí kód ukazuje označit první uživatel).  
+ Události vygenerované nástroje můžete také vytvořit v podrobném zobrazení časové osy a zobrazit doba, po který uplyne mezi dvěma značkami uživatele. Následující kód přidává druhý uživatelskou značku a měření času, který uplyne mezi provádění dva uživatelské značky (předchozí kód ukazuje značku první uživatel).  
   
 ```javascript  
 if (performance.mark && performance.measure) {  
@@ -162,199 +163,199 @@ if (performance.mark && performance.measure) {
 }  
 ```  
   
- Pokud není zadán druhý uživatel označit, `performance.measure` používá časového razítka jako druhý uživatel značky. První označit uživatele je povinný.  
+ Pokud není zadán druhý uživatelskou značku, `performance.measure` používá časové razítko jako druhý uživatelskou značku. První uživatelská značka je povinný.  
   
- Doba trvání měření se zobrazí jako **uživatele měr** událostí v časové ose zobrazení podrobností a jsou uvedeny podrobné informace při výběru.  
+ Měření doby trvání se zobrazí jako **uživatelské míry** zobrazení podrobností události na časové ose a jsou uvedeny podrobné informace při výběru.  
   
- ![Zobrazení podrobností události měr uživatele v časové ose](../profiling/media/js_htmlvizprofiler_user_measure.png "JS_HTMLVizProfiler_User_Measure")  
+ ![Zobrazení podrobností události míru uživatele na časové ose](../profiling/media/js_htmlvizprofiler_user_measure.png "JS_HTMLVizProfiler_User_Measure")  
   
-##  <a name="AnalyzeData"></a> Analýza dat  
- Následující části obsahují informace, které pomohou interpretovat data, která se zobrazí v profileru.  
+## <a name="analyze-data"></a>Analýza dat  
+ Následující části obsahují informace, které pomáhají interpretovat data, která se zobrazí v profileru.  
   
-###  <a name="Ruler"></a> Zobrazení časové osy relace diagnostiky  
- Pravítka v horní části profileru ukazuje osy PROFILOVANÉHO informace. Tuto časovou osu se vztahuje na graf využití procesoru a propustnost visual grafu.  
+###  <a name="Ruler"></a> Zobrazit časovou osu relace diagnostiky  
+ Pravítko v horní části okna profilování ukazuje časovou osu profilovaných informací. Tato časová osa platí pro graf využití procesoru a vizuální propustnost grafu.  
   
- Zde je, jak časovou osu relace diagnostiky vypadá s popisek zobrazí několik události životního cyklu aplikace:  
+ Tady je vypadá časová osa diagnostiky se popisek zobrazí několik události životního cyklu aplikace:  
   
  ![Relace diagnostiky pravítka](../profiling/media/js_htmlvizprof_ruler.png "JS_HTMLVizProf_Ruler")  
   
- Časová osa zobrazí, když dojde k událostem lifecyle aplikace, jako jsou aktivační události, a zobrazuje značky uživatel (uživatel značky trojúhelníčky), můžete přidat do vašeho kódu. Můžete vybrat události, které chcete zobrazit tipy s dalšími informacemi. Další informace o značky uživatele najdete v tématu [označit kód pro analýzu](#ProfileMark) v tomto tématu.  
+ Ukazuje časové osy, pokud dojde k události lifecyle aplikace, jako je aktivační událost, a zobrazí značky uživatelů (uživatele označit trojúhelníky), který můžete přidat do vašeho kódu. Můžete vybrat události, které chcete zobrazit popisy tlačítek s dalšími informacemi. Další informace o uživatelské značky, naleznete v tématu [označit kód pro analýzu](#ProfileMark) v tomto tématu.  
   
- Události životního cyklu aplikace se zobrazí jako kosočtverec symboly. Toto jsou DOM – události, které zahrnují následující:  
+ Události životního cyklu aplikace se zobrazí jako kosočtverce symboly. Toto jsou události modelu DOM, které zahrnují následující:  
   
--   `DOMContentLoaded` a `Load` události, které většinou dochází v obslužné rutině aktivované události do vašeho kódu. Popisek pro událost ukazuje konkrétní události a adresy URL.  
+-   `DOMContentLoaded` a `Load` události, ke kterým obvykle dochází v obslužné rutině aktivované události ve vašem kódu. Popis pro událost zobrazuje určité události a adresu URL.  
   
--   Událost navigace, která nastane, když přejdete na jinou stránku. Cílová adresa URL stránky zobrazuje popis tlačítka pro událost.  
+-   Událost navigace, která nastane, pokud přejdete na jinou stránku. Popisek pro událost ukazuje na cílovou adresu URL stránky.  
   
 ###  <a name="CPUUtilization"></a> Zobrazení procesoru využití  
- Graf využití procesoru umožňuje určit dobu, ve kterém je aktivita nadměrnému využití procesoru. Poskytuje informace o aplikace průměrné spotřeby procesoru nad v časovém intervalu. Informace, které jsou rozlišené barevně představují následující specifických kategorií: **načítání**, **skriptování**, uvolňování paměti (**GC**), **stylů**, **Vykreslování**, a **Image dekódování**. Další informace o těchto kategorií najdete v tématu [profileru událostí odkaz](#ProfilerEvents) dál v tomto tématu.  
+ Graf využití procesoru umožňuje určit dobu, ve kterém se aktivity nadměrnému využití procesoru. Poskytuje informace o průměr spotřeby procesoru aplikaci po určitou dobu. Informace, které jsou rozlišené představují následující konkrétní kategorie: **načítání**, **skriptování**, uvolňování paměti (**GC**), **stylu**, **Vykreslování**, a **dekódování obrázku**. Další informace o těchto kategorií naleznete v tématu [události odkaz na Profiler](#profiler-event-reference) dále v tomto tématu.  
   
- Graf využití procesoru ukazuje množství času strávené na všechny aplikace vláken, kombinace hodnoty využití procesoru pro jeden nebo více procesorů do jednoho procentuální hodnotu. Hodnota využití procesoru může překročit 100 procent, když se používá více než jeden procesor.  
+ Graf využití procesoru ukazuje množství čas strávený na všech vláknech aplikace kombinování hodnoty využití procesoru pro jeden nebo více procesorů do jednoho procentuální hodnotu. Hodnota využití procesoru může překročit 100 % jeho obsahu, když se používá více než jeden procesor.  
   
 > [!NOTE]
->  Využití GPU nezobrazí v grafu.  
+>  Využití GPU se nezobrazují v grafu.  
   
  Tento příklad ukazuje, jak vypadá graf využití procesoru:  
   
  ![Graf využití procesoru](../profiling/media/js_htmlvizprof_cpu_util.png "JS_HTMLVizProf_CPU_Util")  
   
- Použijte tento graf tak, aby:  
+ Pomocí tohoto grafu pro:  
   
--   Identifikujte obecné oblastí zájmu.  
+- Určete obecné oblastí zájmu.  
   
--   Zvolte konkrétní časové období pro zobrazení v grafu podrobnosti časové osy. Časové období, vyberte součástí grafu a výběr na přetažením proveďte výběr.  
+- Zvolte konkrétní časové období pro zobrazení v grafu podrobnosti časové osy. Vyberte časové období, vyberte část grafu a přetažením ukazatele chcete provést výběr.  
   
--   Získat podrobnější zobrazení vybrané časové období výběrem **přiblížit** tlačítko.  
+- Získejte podrobnější přehled o vybrané časové období výběrem **přiblížit** tlačítko.  
   
- Další informace o používání grafu najdete v tématu [izolovat problém odezvy uživatelského rozhraní](#Workflow) v tomto tématu.  
+  Další informace o používání grafu najdete v tématu [izolovat problém rychlosti odezvy uživatelského rozhraní](#Workflow) v tomto tématu.  
   
-###  <a name="VisualThroughput"></a> Zobrazení visual propustnost (FPS)  
- Diagram visual propustnosti umožňuje určit dobu, ve kterém obnovovací frekvence vyřadit. Zobrazuje počet snímků za sekundu (FPS) pro aplikaci. Tento graf je velmi užitečné pro vývoj her a bohatý mediální aplikace.  
+###  <a name="VisualThroughput"></a> Zobrazení vizuální propustnost (FPS)  
+ Vizuální propustnost graf umožňuje určit dobu, ve kterém Snímková frekvence vyřadit. Zobrazuje počet snímků za sekundu (FPS) pro aplikaci. Tento graf je nejužitečnější pro vývoj her a bohatý mediální aplikace.  
   
- Zobrazená hodnota FPS může lišit od skutečné snímků za sekundu. Tyto informace při mějte prověřují se data v tomto grafu:  
+ Zobrazená hodnota snímků za Sekundu může lišit od skutečné Snímková frekvence. Mějte tyto informace při zkoumání dat v tomto grafu:  
   
--   Graf zobrazuje FPS, že je schopné dosáhnout kdykoli konkrétní aplikace. Při nečinnosti aplikace FPS je stejný jako obnovovací frekvence monitoru.  
+- Graf ukazuje snímků za Sekundu, že aplikace bude schopné dosáhnout v konkrétním okamžiku. Při nečinnosti aplikaci, snímků za Sekundu je stejný jako obnovovací frekvence monitorování.  
   
--   Graf zobrazuje skutečné FPS, pokud aplikace provádí práci, kterou vyžaduje visual aktualizace.  
+- Graf zobrazuje skutečné snímků za Sekundu, pokud aplikace pracuje, který vyžaduje aktualizace sady visual.  
   
--   Graf zobrazuje hodnota nula, pokud jsou vyřazována rámce.  
+- Graf zobrazuje hodnota nula, pokud rámce jsou vyřazována.  
   
- Tento příklad ukazuje, jak vypadá visual propustnost grafu:  
+  Tento příklad ukazuje, jak vypadá graf vizuální propustnost:  
   
- ![Diagram Visual propustnosti](../profiling/media/js_htmlvizprof_vizthru.png "JS_HTMLVizProf_VizThru")  
+  ![Vizuální propustnost grafu](../profiling/media/js_htmlvizprof_vizthru.png "JS_HTMLVizProf_VizThru")  
   
- Pomocí visual propustnost graf tak, aby:  
+  Použití rozhraní graph vizuální propustnost na:  
   
--   Identifikujte obecné oblastí zájmu.  
+- Určete obecné oblastí zájmu.  
   
--   Zvolte konkrétní časové období pro zobrazení v grafu podrobnosti časové osy. Časové období, vyberte součástí grafu a výběr na přetažením proveďte výběr.  
+- Zvolte konkrétní časové období pro zobrazení v grafu podrobnosti časové osy. Vyberte časové období, vyberte část grafu a přetažením ukazatele chcete provést výběr.  
   
--   Získat podrobnější zobrazení vybrané časové období výběrem **přiblížit** tlačítko.  
+- Získejte podrobnější přehled o vybrané časové období výběrem **přiblížit** tlačítko.  
   
-###  <a name="TimelineDetails"></a> Zobrazit podrobnosti časové osy  
- Podrobnosti o časová osa grafu se zobrazí v dolním podokně Profiler odezvy uživatelského rozhraní. Poskytuje postupného a hierarchické informace o událostech, které spotřebovávají nejvíce času procesoru během vybrané časové období. Tento graf vám pomohou určit, co aktivuje určitá událost a pro některé události, jak událost mapuje zpět ke zdrojovému kódu. Tento graf také vám pomůže určit čas potřebný k vyplnění visual aktualizace na obrazovce.  
+###  <a name="TimelineDetails"></a> Podrobnosti zobrazení časové osy  
+ Časová osa grafu podrobností se zobrazí v dolním podokně Profiler odezvy uživatelského rozhraní. Poskytuje sekvenční a hierarchické informace o událostech, které spotřebovávají nejvíce času procesoru během vybraných časových období. Tento graf vám pomohou určit, co vyvolalo určité události a pro některé události, jak mapy událostí zpět ke zdrojovému kódu. Tento graf také vám pomůže určit čas potřebný k vykreslení vizuální aktualizace na obrazovce.  
   
- Graf zobrazuje pracovního vlákna uživatelského rozhraní a pracovních na vlákna na pozadí, které může přispívat k zpomalit visual aktualizace. Graf přestane zobrazovat pracovní JavaScript JIT, asynchronní GPU pracovní, práce mimo proces hostitele (například RuntimeBroker.exe a dwm.exe pracovní) nebo práci pro prostředí Windows Runtime oblasti, které ještě nebyly byla instrumentována pro službu profilace (například v/v disku).  
+ Graf zobrazuje pracovní vlákno uživatelského rozhraní a práce na pozadí podprocesů, které může přispět ke zpomalení aktualizace sady visual. Grafu nezobrazí JavaScript JIT práce, asynchronní práce GPU, prováděné mimo hostitelského procesu (jako je například RuntimeBroker.exe a dwm.exe pracovní) nebo práce pro oblasti modulu Windows Runtime, které ještě nebyly byla instrumentována pro profilaci (například vstupně-výstupních operací disku).  
   
 > [!TIP]
->  Pokud se vyskytne událost vlákna na pozadí, zobrazí se v závorkách vedle názvu události ID vlákna.  
+>  Při výskytu události na vlákně na pozadí, zobrazí se v závorkách vedle názvu události ID vlákna.  
   
- Tento příklad ukazuje, jaké časovou osu grafu podrobnosti vypadá po kliknutí na naslouchací proces událostí pro DOM je vybrána událostí:  
+ Tento příklad ukazuje, jaké na časové ose grafu podrobností vypadá po kliknutí na naslouchací proces událostí pro modelu DOM událost vybrat:  
   
  ![Časová osa grafu podrobnosti](../profiling/media/js_htmlvizprof_timelinedet.png "JS_HTMLVizProf_TimelineDet")  
   
- V tomto obrázku **spinAction** obslužné rutiny událostí v **název události** sloupec je odkaz, pokud vybraná, přejdete k obslužné rutině událostí ve zdrojovém kódu. V pravém podokně klikněte **funkce zpětného volání** vlastnost poskytuje stejné připojení ke zdrojovému kódu. Informace o události, jako je například přidružené elementu DOM přinést také další vlastnosti.  
+ Na tomto obrázku **spinAction** obslužné rutině událostí ve **název události** sloupec je odkaz, pokud je vybráno, přejdete k obslužné rutině událostí ve zdrojovém kódu. V pravém podokně klikněte **funkce zpětného volání** vlastnost poskytuje stejným propojením ke zdrojovému kódu. Další vlastnosti, také poskytují informace o události, jako je například přidruženého prvku modelu DOM.  
   
- Pokud vyberete část časovou osu pro využití procesoru a graf visual propustnost (FPS), časové osy grafu podrobnosti jsou uvedeny podrobné informace pro vybrané časové období.  
+ Pokud vyberete část časové osy pro využití výkonu procesoru a vizuální propustnost (FPS) grafu, podrobnosti o grafu časová osa zobrazuje detailní informace pro vybrané časové období.  
   
- Události v časová osa grafu podrobnosti jsou rozlišené barevně představují stejnou kategorií práce, které se zobrazují v graf využití procesoru. Další informace o události kategorie a určitých událostí najdete v tématu [profileru událostí odkaz](#ProfilerEvents) v tomto tématu.  
+ Události v časové osy grafu podrobnosti jsou rozlišené představují stejné kategorie práce, které jsou uvedeny v graf využití procesoru. Další informace o určité události a kategorie událostí, naleznete v tématu [události odkaz na Profiler](#profiler-event-reference) v tomto tématu.  
   
- Použijte časová osa podrobnosti graf tak, aby:  
+ Pomocí časové osy grafu podrobnosti:  
   
--   Zobrazit časy zahájení Přibližná doba trvání a koncový čas pro událost v zobrazení časové osy a mřížky. Časová osa grafu podrobnosti můžete zobrazit období od 30 MS až 30 sekund v zobrazení mřížky, v závislosti na stavu přiblížení. Pro hodnoty typu duration:  
+-   Zobrazit v zobrazení časové osy a mřížky přibližné spuštění, dobu trvání a koncový čas pro událost. Podrobnosti o grafu časová osa můžete zobrazit období od 30 milisekund do 30 sekund v mřížkovém zobrazení, v závislosti na stavu přiblížení. Pro hodnoty typu duration:  
   
-    -   Představují včetně doby trvání události, včetně podřízených objektů událostí. V zobrazení mřížky zobrazí se tato hodnota první.  
+    -   Inkluzivní časy představují dobu trvání události, včetně podřízených prvků události. V zobrazení mřížky tato hodnota se zobrazí první.  
   
-    -   Výhradní časy představují doby trvání události, není včetně podřízených objektů událostí. Tato hodnota se zobrazí v závorkách v zobrazení mřížky.  
+    -   Výhradní čas představují dobu trvání události bez zahrnutí podřízené položky události. V zobrazení mřížky tato hodnota se zobrazí v závorkách.  
   
--   Rozbalte událost v hierarchii k zobrazení podřízených prvků události. Podřízené objekty události jsou ostatní události, které jsou vydané události nadřazené. Například událostí DOM může mít naslouchacích procesů událostí, které se zobrazují jako podřízené objekty. Naslouchací proces událost může mít další události, které jsou výsledkem, jako je událost rozložení.  
+-   Rozbalte události v hierarchii k zobrazení podřízených prvků události. Podřízené objekty událostí jsou ostatní události, které jsou generovány události nadřazené. Události modelu DOM může mít například naslouchacích procesů událostí, které se zobrazují jako podřízené objekty. Naslouchací proces událostí může mít jiné události, které vznikají, jako je rozložení události.  
   
--   Události řazení podle počáteční čas (výchozí) nebo doba trvání. Použití **seřadit** seznamu vyberte způsob řazení.  
+-   Řazení událostí ve start time (výchozí) nebo dobu trvání. Použití **řadit** seznam a vyberte metodu řazení.  
   
--   Zobrazit podrobnosti pro každou jednotlivou událost v podokně podrobností (pravé podokno). Vlastnosti lišit v závislosti na konkrétní události, jak ukazují tyto příklady:  
+-   Zobrazit podrobnosti pro každou jednotlivou událost v podokně podrobností (pravé podokno). Vlastnosti se liší v závislosti na konkrétní události, jak ukazují tyto příklady:  
   
-    -   Časovače, naslouchacích procesů událostí (DOM událostí) a zpětná volání rámce animace **funkce zpětného volání** vlastnost obsahuje odkaz na zdrojové umístění kód společně s názvem událostí obslužná rutina nebo zpětného volání funkce.  
+    -   Časovače, naslouchacích procesů událostí (události modelu DOM) a zpětná volání snímků animace **funkce zpětného volání** vlastnost obsahuje odkaz na umístění zdrojového kódu spolu s názvem události obslužné rutiny nebo zpětného volání funkce.  
   
-    -   Časovače, naslouchacích procesů událostí (událostí DOM), rozložení událostí a zpětná volání animace rámečku, barevně souhrn vybrané události a všechny její podřízené položky v zobrazí **včetně čas shrnutí** část (barevně okruh). Každý řez barevně obrázku představuje typ události. Popisy tlačítek zadejte název typu události.  
+    -   Pro časovače, naslouchacích procesů událostí (události modelu DOM), rozložení události a zpětná volání snímků animace, joinkind barevně souhrn vybrané události a všechny její podřízené **souhrn celkové doby** oddílu (barevně okruhu). Každou barevně řezu obrázku představuje typ události. Popisy tlačítek zadejte název typu události.  
   
     > [!TIP]
-    >  Časová osa grafu podrobnosti a **včetně čas shrnutí** můžete identifikovat oblasti pro optimalizaci. Pokud některý z těchto zobrazení ukazuje velké množství malých úlohy, může být událost kandidátem pro optimalizaci. Například aplikace může být aktualizace elementů modelu DOM často, což vede k velkým počtem rozložení a analýzu událostí HTML. Bude pravděpodobně možné za účelem optimalizace výkonu pomocí dávkování činnost.  
+    >  Podrobnosti o grafu časové osy a **souhrn celkové doby** může pomoct najít pro optimalizaci. Pokud některý z těchto zobrazení zobrazuje velký počet malých úlohy, události může být Release candidate pro optimalizaci. Například aplikace může být aktualizace elementů modelu DOM často, což vede k velkým počtem rozložení a analýza událostí HTML. Je možné optimalizovat výkon tím, že tuto práci do dávek.  
   
-###  <a name="FilterTimelineDetails"></a> Podrobnosti o filtru časové osy  
- Můžete filtrovat zobrazení v podrobnostech časovou osu pro konkrétní událost výběrem **filtr událostí** z kontextové nabídky pro konkrétní události. Pokud vyberete tuto možnost, časového harmonogramu a mřížky zobrazení jsou vymezeny pro zvolenou událost. Výběr v graf využití procesoru rozsahy taky na konkrétní události.  
+###  <a name="FilterTimelineDetails"></a> Filtrovat podrobnosti časové osy  
+ Zobrazení podrobnosti časové osy na určitou událost můžete filtrovat výběrem **filtru na události** z místní nabídky pro určité události. Když vyberete tuto možnost, mají rozsah zobrazení časové osy a mřížky pro zvolenou událost. Výběr v graf využití procesoru, také obory na konkrétní události.  
   
- ![Filtrování časovou osu pro událost](../profiling/media/js_htmlvizprofiler_filtertoevent.png "JS_HTMLVizProfiler_FilterToEvent")  
+ ![Filtrování časové osy s událostí](../profiling/media/js_htmlvizprofiler_filtertoevent.png "JS_HTMLVizProfiler_FilterToEvent")  
   
-###  <a name="FilterEvents"></a> Filtrování událostí  
- Můžete filtrovat na některé události z časová osa grafu podrobnosti ke snížení šumu v datech, nebo omezit data, která není zajímavé pro váš scénář výkonu. Můžete filtrovat podle názvu události nebo trvání události nebo podle konkrétní filtry, které jsou zde popsané.  
+###  <a name="FilterEvents"></a> Umožňuje filtrovat události  
+ Můžete filtrovat některé události z časové osy grafu podrobnosti ke snížení šumu v datech, nebo chcete-li odstranit data, která nejsou zajímavé pro váš scénář výkonu. Můžete filtrovat podle názvu události nebo trvání události, nebo konkrétní filtry, které jsou zde popsané.  
   
- Chcete-li filtrovat dekódování bitové kopie, spekulativní stahování a GC – události, zrušte **aktivita na pozadí** možnost na ikonu filtru v dolním podokně. Protože tyto události nejsou velmi níž lze provést akci, jsou skrytá ve výchozím nastavení.  
+ Pokud chcete vyfiltrovat dekódování obrázku, spekulativní stahování a události uvolňování paměti, zrušte **aktivitu na pozadí** možnost na ikonu filtru v dolním podokně. Vzhledem k tomu, že tyto události nejsou velmi užitečné, že jsou ve výchozím nastavení skryje.  
   
- ![Filtrování událostí v časové ose](../profiling/media/js_htmlvizprofiler_event_filter.png "JS_HTMLVizProfiler_Event_Filter")  
+ ![Filtrování událostí na časové ose](../profiling/media/js_htmlvizprofiler_event_filter.png "JS_HTMLVizProfiler_Event_Filter")  
   
- Chcete-li filtrovat události žádostí protokolu HTTP, zrušte **přenos v síti** možnost na ikonu filtru v dolním podokně. Ve výchozím nastavení jsou tyto události uvedené v časová osa grafu podrobnosti.  
+ Pokud chcete vyfiltrovat události požadavku protokolu HTTP, zrušte **přenos v síti** možnost na ikonu filtru v dolním podokně. Ve výchozím nastavení tyto události jsou uvedeny v grafu podrobnosti časové osy.  
   
- Chcete-li filtrovat aktivity vlákna uživatelského rozhraní, zrušte **činnosti uživatelského rozhraní** možnost.  
+ Chcete-li filtrovat aktivity vlákno uživatelského rozhraní, zrušte **aktivita uživatelského rozhraní** možnost.  
   
 > [!TIP]
->  Zrušte zaškrtnutí tohoto políčka a vyberte možnost provoz sítě můžete prozkoumat problémy související s latencí sítě.  
+>  Zrušte zaškrtnutí tohoto políčka a vyberte možnost provoz sítě k prozkoumání problémů souvisejících s latencí sítě.  
   
- Chcete-li filtrovat uživatele míry, zrušte **uživatele míry** možnost. Uživatel míry jsou nejvyšší úrovně události se žádné podřízené objekty.  
+ Pokud chcete vyfiltrovat uživatelské míry, zrušte **uživatelské míry** možnost. Uživatelské míry jsou události nejvyšší úrovně s žádné podřízené položky.  
   
-###  <a name="GroupFrames"></a> Skupina události podle rámečku  
- Můžete seskupit události, které se zobrazují v zobrazení Podrobnosti o časová osa pro jednotlivé snímky. Tyto události rámce jsou události, nástroj vygeneruje a představovat nejvyšší úrovně událostí kontejnery pro všechny pracovní vlákna uživatelského rozhraní, která probíhá mezi Malování události. Chcete-li toto zobrazení, vyberte **nejvyšší úrovně události seskupit rámce**.  
+###  <a name="GroupFrames"></a> Skupiny událostí podle rámce  
+ Můžete seskupit události, které se zobrazují v podrobném zobrazení časové osy pro jednotlivé snímky. Tyto události snímků jsou události vygenerované nástroj a představují kontejnery události nejvyšší úrovně pro všechny pracovní vlákno uživatelského rozhraní, nacházející se mezi událostmi Malování. Chcete-li povolit toto zobrazení, vyberte **Seskupit události nejvyšší úrovně podle rámců**.  
   
- ![Seskupit podle rámce nejvyšší úrovně události](../profiling/media/js_htmlvizprofiler_frame_grouping_button.png "JS_HTMLVizProfiler_Frame_Grouping_Button")  
+ ![Seskupit události nejvyšší úrovně podle rámce](../profiling/media/js_htmlvizprofiler_frame_grouping_button.png "JS_HTMLVizProfiler_Frame_Grouping_Button")  
   
- Při seskupování událostí podle rámečku, nejvyšší úrovně události v podrobnostech časová osa zobrazení jednotlivých představují rámce.  
+ Při seskupování událostí podle rámce události nejvyšší úrovně v podrobnostech časová osa zobrazení jednotlivých představují rámce.  
   
- ![Časová osa události seskupené podle rámce](../profiling/media/js_htmlvizprofiler_frame_grouping.png "JS_HTMLVizProfiler_Frame_Grouping")  
+ ![Časová osa událostí seskupených podle rámce](../profiling/media/js_htmlvizprofiler_frame_grouping.png "JS_HTMLVizProfiler_Frame_Grouping")  
   
-##  <a name="SaveSession"></a> Uložení relace diagnostiky  
- V sadě Visual Studio můžete uložit relaci diagnostiky, když zavřete kartu, která je přidružená k relaci. Později můžete znovu otevřít uložených relací.  
+## <a name="save-a-diagnostic-session"></a>Uložit diagnostické relace  
+ V sadě Visual Studio můžete uložit diagnostické relace při uzavření kartu, která je přidružená k relaci. Později můžete znovu otevřít uložených relací.  
   
-##  <a name="ProfilerEvents"></a> Odkaz na události profileru  
- Profileru události jsou zařazené do kategorie a barevné kódování v Profiler odezvy uživatelského rozhraní. Toto jsou kategorie události:  
+## <a name="profiler-event-reference"></a>Profiler události – přehled  
+ Profiler události jsou zařazené do kategorií a barevné označení v Profiler odezvy uživatelského rozhraní. Toto jsou kategorie události:  
   
--   **Načítání.** Označuje, že čas strávený načítání prostředků aplikace a analýzy HTML a CSS poprvé načte aplikaci. To může zahrnovat síťové požadavky.  
+- **Načítání.** Označuje dobu strávenou načítání prostředků aplikací a parsování HTML a CSS, při prvním načtení aplikace. To může být zahrnuté síťové žádosti.  
   
--   **Skriptování.** Označuje čas strávený analýzy a spouštění JavaScript. To zahrnuje událostí DOM, časovače, vyhodnocení skriptu a pracovní rámce animace. Obsahuje uživatelský kód a kód knihovny.  
+- **Skriptování.** Označuje čas strávený parsování a spuštění JavaScriptu. To zahrnuje události modelu DOM, časovače, vyhodnocení skriptů a pracovní snímků animace. Obsahuje uživatelský kód a kód knihovny.  
   
--   **GC.** Označuje čas strávený uvolňování paměti.  
+- **GC.** Zobrazuje čas strávený při uvolňování paměti.  
   
--   **Stylů.** Označuje, že čas strávený analýzy šablon stylů CSS a výpočet element prezentace a rozložení.  
+- **Práce se styly.** Označuje čas strávený analýzou šablon stylů CSS a výpočtu prezentace a rozložení elementů.  
   
--   **Vykreslování.** Označuje čas strávený vykreslování na obrazovce.  
+- **Vykreslování.** Označuje čas strávený vykreslováním obrazovky.  
   
--   **Dekódování bitové kopie.** Označuje, že čas strávený dekompresi a dekódování bitové kopie.  
+- **Dekódování obrázku.** Označuje dobu strávenou dekomprimací a dekódováním obrázků.  
   
- Skriptů a stylů kategorií Profiler odezvy uživatelského rozhraní můžete získat data, která může fungovat na v grafu podrobnosti časové osy. Pokud jako problém identifikovat problémy skriptování, můžete spustit procesoru vzorkování profileru s Profiler odezvy uživatelského rozhraní. Alternativně můžete použít profileru funkce sady Visual Studio můžete získat podrobnější data. Další informace najdete v tématu [paměť jazyka JavaScript](../profiling/javascript-memory.md).  
+  Profiler odezvy uživatelského rozhraní pro používání stylů pro kategorie a skript zadat data, která se dají dále rozvíjet v grafu podrobnosti časové osy. Pokud jako problém identifikovat problémy skriptování, můžete spustit profiler vzorkování procesoru s Profiler odezvy uživatelského rozhraní. Alternativně můžete použít funkci profileru sady Visual Studio získat podrobnější údaje. Další informace najdete v tématu [paměti jazyka JavaScript](../profiling/javascript-memory.md).  
   
- V jiných kategoriích událostí je možné identifikovat vedlejší účinky platformy, které jsou výsledkem přidání funkcí do vaší aplikace, ale v těchto případech nemusí být schopni vyřešit konkrétní výkonem pomocí Profiler odezvy uživatelského rozhraní.  
+  Pro další kategorie událostí je možné identifikovat platformy vedlejší účinky, které jsou výsledkem přidání funkce do vaší aplikace, ale v těchto případech nemusí být schopni vyřešit problémy s konkrétní výkonem s použitím Profiler odezvy uživatelského rozhraní.  
   
- Tato tabulka obsahuje události a jejich popisy:  
+  Tato tabulka zobrazuje události a jejich popis:  
   
-|Událost|Kategorie události|Nastane při|  
+|Událost|Kategorie události|Nastane, když|  
 |-----------|--------------------|-----------------|  
-|Analýza šablon stylů CSS|Načítání|Byl nalezen nový obsah šablon stylů CSS a došlo pokusu o analyzovat obsah šablon stylů CSS.|  
-|Analýza HTML|Načítání|Byl nalezen nový obsah HTML a analyzovat obsah do uzlů a vložit obsah do stromu modelu DOM byl učiněn pokus.|  
-|Požadavek HTTP|Načítání|V modelu DOM byl nalezen vzdálený prostředek, nebo XMLHttpRequest byl vytvořen, jejichž výsledkem požadavku HTTP.|  
-|Spekulativní stahování|Načítání|Obsah HTML stránky se hledali požadované prostředky tak, aby následné žádosti HTTP pro prostředky, které mohou být naplánovány rychle.|  
-|Funkce zpětného volání rámce animace|Skriptování|Vykreslení jiného snímku, bude v prohlížeči, a tento stav aktivován funkce zpětného volání zadané aplikace.|  
-|Události modelu DOM|Skriptování|Události modelu DOM došlo k chybě a byla spuštěna.<br /><br /> `context` Vlastnost DOM události, jako například `DOMContentLoaded` nebo `click`, se zobrazí v závorkách.|  
+|Analýza CSS|Načítání|Nový obsah CSS byl nalezen a byl učiněn pokus analyzovat obsah šablony stylů CSS.|  
+|Analýza HTML|Načítání|Byl nalezen nový obsah HTML a analyzovat obsah do uzlů a vložit obsah do stromové struktuře modelu DOM byl proveden pokus o.|  
+|Požadavek HTTP|Načítání|V modelu DOM byl nalezen vzdálený prostředek nebo se vytvořil objekt XMLHttpRequest, jejímž výsledkem požadavku HTTP.|  
+|Spekulativní stahování|Načítání|Obsah HTML stránky se hledá požadované prostředky tak, aby následné žádosti HTTP pro prostředky, které mohou být naplánovány rychle.|  
+|Funkce zpětného volání snímku animace|Skriptování|Můru prohlížeče k vykreslení jiný rámec a to aktivuje funkce poskytované aplikací zpětného volání.|  
+|Události modelu DOM|Skriptování|Události modelu DOM došlo k chybě a byl spuštěn.<br /><br /> `context` Vlastnost pro události modelu DOM, jako například `DOMContentLoaded` nebo `click`, je uveden v závorkách.|  
 |Naslouchací proces událostí|Skriptování|Naslouchací proces událostí byl vyvolávány a spuštěny.|  
-|Naslouchací proces dotazu média|Skriptování|Registrovaný media dotaz byla zrušena, čímž vznikl provádění jeho přidružené listener(s).|  
-|Mutace pozorovatel|Skriptování|Jeden nebo více zaznamenali, že DOM elementy byly upraveny, což vedlo ke spuštění MutationObserver přidružené zpětného volání.|  
-|Vyhodnocení skriptu|Skriptování|Nový element SCRIPT byla nalezena v modelu DOM a byl proveden pokus o analyzovat a spustit skript.|  
-|Časovač|Skriptování|Uplynulý čas naplánované časovač, a to bylo způsobeno v provádění jeho přidružené zpětného volání funkce.|  
-|Funkce zpětného volání asynchronních prostředí Windows Runtime|Skriptování|Asynchronní operace, který aktivoval `Promise` funkce zpětného volání byla dokončena objekt prostředí Windows Runtime.|  
-|Prostředí Windows Runtime událostí|Skriptování|Událost, která v prostředí Windows Runtime objektu došlo k aktivaci registrované naslouchací proces.|  
-|Uvolnění paměti|Uvolňování paměti|Byl stráven čas shromažďování paměti pro objekty, které se už používá.|  
-|Výpočet šablon stylů CSS|Práce se styly|Byly provedeny změny DOM, který požadované vlastnosti stylu všechny dotčené elementů být přepočítána.|  
-|Rozložení|Práce se styly|Byly provedeny změny DOM, který vyžaduje velikost nebo pozice všech elementů ovlivněných být přepočítána.|  
-|Malování|Vykreslování|Byly provedeny změny Visual modelu DOM a došlo pokusu o znovu zpracovat části stránky.|  
-|Vykreslení vrstvy|Vykreslování|Visual fragment nezávisle vykreslené modelu DOM (označovaný jako vrstva) byly provedeny změny a změny potřebné část stránky k vykreslení.|  
-|Dekódování bitové kopie|Dekódování bitové kopie|Obrázek je zahrnutý v modelu DOM a byl proveden pokus o dekomprimovat a dekódovat bitovou kopii z původním formátu do bitmapy.|  
-|Rámec|Není k dispozici|Byly provedeny změny Visual DOM, který vyžaduje všechny příslušné části stránky překreslit. Toto je nástroj vygeneruje událost používat k vytváření skupin.|  
-|Míra uživatele|Není k dispozici|Scénářem specifické pro aplikace se měří pomocí `performance.measure` metoda. Toto je nástroj vygeneruje událost použít pro analýzu kódu.|  
+|Naslouchací proces dotazů na média|Skriptování|Registrovaný dotaz na média byla zrušena, což vedlo k provedení jeho přidružených naslouchacích procesů.|  
+|Objekt mutation observer|Skriptování|Jeden nebo více zjištěno, že DOM se změnil, což vedlo ke spuštění přidružené zpětné volání MutationObserver.|  
+|Vyhodnocení skriptu|Skriptování|Nový element SCRIPT byl nalezen v modelu DOM a byl proveden pokus o analýzu a spusťte tento skript.|  
+|Časovač|Skriptování|Naplánované časovače vypršel, a to vedlo k provedení jeho přidružené zpětné volání funkce.|  
+|Funkce zpětného volání pro asynchronní modulu Windows Runtime|Skriptování|Asynchronní operace, která aktivuje `Promise` objekt prostředí Windows Runtime dokončil funkce zpětného volání.|  
+|Událost prostředí Windows Runtime|Skriptování|Událost, která na objekt prostředí Windows Runtime došlo k aktivaci zaregistrovaný naslouchací proces.|  
+|Uvolnění paměti|Uvolňování paměti|Byl stráven čas shromažďování paměti pro objekty, které již byly použity.|  
+|Výpočet šablon stylů CSS|Práce se styly|Byly provedeny změny v modelu DOM, který vyžaduje všech ovlivněných elementů proto bylo nutné přepočítat vlastnosti stylu.|  
+|Rozložení|Práce se styly|Byly provedeny změny v modelu DOM, které vyžadovaly velikost nebo pozice všech ovlivněných elementů proto bylo nutné přepočítat.|  
+|Malování|vykreslování|V modelu DOM byly provedeny vizuální změny a byl proveden pokus o opětovné vykreslování části stránky.|  
+|Vykreslit vrstvu|vykreslování|Byly provedeny vizuální změny nezávisle vykreslovaného fragmentu modelu DOM (označovaného jako vrstva) a změny potřebné část stránky k vykreslení.|  
+|Dekódování obrázku|Dekódování obrázku|Image byla zahrnuta v modelu DOM a byl proveden pokus o pro dekompresi a dekódování obrázku z původního formátu na rastrový obrázek.|  
+|Rámec|Není k dispozici|Byly provedeny vizuální změny v modelu DOM, který stránky, které vyžadovaly překreslení všech ovlivněných částí. Toto je nástroj vygeneruje událost pro seskupení.|  
+|Uživatelské míry|Není k dispozici|Scénáři specifické pro aplikaci byl měřen pomocí metody `performance.measure` metody. Toto je událost vygenerována nástroj použít pro analýzu kódu.|  
   
-##  <a name="Tips"></a> Další informace  
+## <a name="additional-information"></a>Další informace  
   
--   Kukátko [toto video](http://channel9.msdn.com/Events/Build/2013/3-316) z konference Build 2013 o Profiler odezvy uživatelského rozhraní.  
+-   Sledování [toto video](https://channel9.msdn.com/Events/Build/2013/3-316) z konference Build 2013 o Profiler odezvy uživatelského rozhraní.  
   
--   Přečtěte si tipy pro zvýšení výkonu pro aplikace UWP vytvořená pro systém Windows pomocí jazyka JavaScript. Další informace najdete v tématu [osvědčené postupy z hlediska výkonu pro aplikace UWP pomocí jazyka JavaScript](http://msdn.microsoft.com/library/windows/apps/hh465194.aspx).  
+-   Přečtěte si tipy ke zvýšení výkonu pro aplikace UPW vytvořené pro Windows pomocí jazyka JavaScript. Další informace najdete v tématu [osvědčené postupy z hlediska výkonu pro aplikace pro UPW pomocí jazyka JavaScript](/previous-versions/windows/apps/hh465194\(v\=win.10\)).  
   
--   Informace o model spouštění jednovláknové kódu a výkonu najdete v tématu [provádění kódu](http://msdn.microsoft.com/library/windows/apps/hh781217.aspx).  
+-   Informace o modelu provádění kódu s jedním vláknem a výkonu najdete v tématu [provádění kódu](/previous-versions/windows/apps/hh781217\(v\=win.10\)).  
   
-## <a name="see-also"></a>Viz také  
- [Nástroje pro profilaci](../profiling/profiling-tools.md)
+## <a name="see-also"></a>Viz také:  
+ [Nejdřív se podívejte na nástroje pro profilaci](../profiling/profiling-feature-tour.md)

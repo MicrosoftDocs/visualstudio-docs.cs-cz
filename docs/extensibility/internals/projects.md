@@ -22,6 +22,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131002"
 ---
 # <a name="projects"></a>Projekty
 V sadě Visual Studio, projekty jsou kontejnery, které vývojáři použít k uspořádání soubory zdrojového kódu a další prostředky, které se zobrazují v **Průzkumníku řešení**. Projekty jsou obvykle soubory (například souboru .csproj projektů C#), které obsahují odkazy na soubory zdrojového kódu a prostředkům, jako jsou soubory rastrového obrázku. Projekty umožňují uspořádat, sestavení, ladění a nasazení zdrojového kódu, odkazuje na webové služby a databáze a dalším prostředkům. VSPackages systém projektu sady Visual Studio můžete rozšířit třemi hlavními způsoby: *typy projektů*, *projektu podtypů*, a *vlastních nástrojů*.  

@@ -1,5 +1,5 @@
 ---
-title: Idiastackframe::get_lengthlocals – | Microsoft Docs
+title: Idiastackframe::get_lengthlocals – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bfe821ea0cc0e2258377218046464441c5b9cd7b
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: c14046edc62c91b47ab02ec5e78905fd07c5c55b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49903007"
 ---
 # <a name="idiastackframegetlengthlocals"></a>IDiaStackFrame::get_lengthLocals
-Získá počet bajtů lokální proměnné nabídnutých v zásobníku.  
+Získá počet bajtů lokálních proměnných posunuto v zásobníku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,10 +34,10 @@ HRESULT get_lengthLocals (
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí počet bajtů lokální proměnné.  
+ [out] Vrátí počet bajtů místních proměnných.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE` Pokud vlastnost není podporována. Jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

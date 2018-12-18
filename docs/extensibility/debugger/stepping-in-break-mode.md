@@ -1,5 +1,5 @@
 ---
-title: Krokování s v režimu pozastavení | Microsoft Docs
+title: Krokování v režimu pozastavení | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,20 +15,21 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1cf10254ec4642bd6dd671124d4a0600794de6fb
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4fff7edc494c763407c65785fe1de0b3fd77d7b2
+ms.sourcegitcommit: 8d38d5d2f2b75fc1563952c0d6de0fe43af12766
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39276504"
 ---
-# <a name="stepping-in-break-mode"></a>Krokování s v režimu pozastavení
-Následující text popisuje proces, který nastane, když je v režimu pozastavení ladicího programu a musí krok prostřednictvím kódu:  
+# <a name="stepping-in-break-mode"></a>Krokování v režimu pozastavení
+Následující část popisuje proces, který nastane, pokud je v režimu přerušení ladicího programu a musí krokovat kód:  
   
-## <a name="stepping-process"></a>Krokování s procesu  
+## <a name="stepping-process"></a>Krokování procesu  
   
-1.  Volání [IDebugProgram2::Step](../../extensibility/debugger/reference/idebugprogram2-step.md) s [STEPKIND](../../extensibility/debugger/reference/stepkind.md) a [STEPUNIT](../../extensibility/debugger/reference/stepunit.md) argumenty provést krok.  
+1.  Volání [IDebugProgram2::Step](../../extensibility/debugger/reference/idebugprogram2-step.md) s [STEPKIND](../../extensibility/debugger/reference/stepkind.md) a [STEPUNIT](../../extensibility/debugger/reference/stepunit.md) argumenty k provedení kroku.  
   
-2.  Po dokončení kroku odeslat [IDebugStepCompleteEvent2](../../extensibility/debugger/reference/idebugstepcompleteevent2.md) jako událost zastavit.  
+2.  Po dokončení kroku odeslat [IDebugStepCompleteEvent2](../../extensibility/debugger/reference/idebugstepcompleteevent2.md) jako událostí ukončení.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Volání událostí ladicího programu](../../extensibility/debugger/calling-debugger-events.md)

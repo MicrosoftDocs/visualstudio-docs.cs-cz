@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::GetThreadId | Microsoft Docs
+title: IDebugThread2::GetThreadId | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ac1701b3f52975e962860d558bc70b1847eef8e5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4968bdd26607f68c8a1e8e4467904939ee0f528d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49873445"
 ---
 # <a name="idebugthread2getthreadid"></a>IDebugThread2::GetThreadId
-Získá identifikátor systému přístup z více vláken.  
+Získá identifikátor systému.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,16 +41,16 @@ int GetThreadId (
   
 #### <a name="parameters"></a>Parametry  
  `pdwThreadId`  
- [out] Vrátí identifikátor systému přístup z více vláken.  
+ [out] Vrátí identifikátor systému.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- ID vlákna slouží k identifikaci vlákno mezi všechny vláken v procesu.  
+ ID vlákna slouží k identifikaci vlákno mezi ostatní vlákna v procesu.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchou `CProgram` objekt, který implementuje [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) rozhraní.  
+ Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CProgram` objekt, který implementuje [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md) rozhraní.  
   
 ```cpp  
 HRESULT CProgram::GetThreadId(DWORD* pdwThreadId) {     

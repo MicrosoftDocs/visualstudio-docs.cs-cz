@@ -1,5 +1,5 @@
 ---
-title: Sestava značek | Microsoft Docs
+title: Sestava značek | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -12,34 +12,35 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b46cb18e1972d22010ce356f1d9208f391f6d79
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 2ccb9c11d39d0500eab0698dc2907ab983964753
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49881622"
 ---
 # <a name="markers-report"></a>Sestava značek
-Sestava značek obsahuje seznam značek v zobrazených časovém intervalu.  Posouvání přiblížení a oddálení nebo skrytí pruhů, může způsobit značek zobrazí nebo zmizí. Sestava obsahuje tyto informace o každé značky:  
+Značky sestava obsahuje seznam značek v zobrazený časový rámec.  Posouvání nebo změna měřítka zobrazení nebo skrytí procesu, může způsobit, že značky se zobrazí nebo zmizí. Sestava obsahuje informace o jednotlivých značky:  
   
--   Čas ho zahájení, relativně k začátku trasování.  
+- Čas, kdy je relativní vzhledem k začátku trasování začal.  
   
--   Jeho trvání. Doba trvání je nulová pro příznaky a zprávy, protože představují pro rychlé.  
+- Vlastnost duration. Doba trvání je nula, příznaky a zprávy, protože představují okamžiku.  
   
--   ID vlákna, která ji vygenerovala.  
+- ID podprocesu, který provedl vygenerování.  
   
--   Zprostředkovatel událostí sledování pro Windows (ETW), který ji vygenerovala.  
+- Zprostředkovatel událostí sledování pro Windows (ETW), který provedl vygenerování.  
   
--   Řada značky, ze kterého byla zapsána.  
+- Řada značky, odkud byla zapsána.  
   
--   Kategorie události, které patří do.  
+- Kategorie události, které patří.  
   
--   Úroveň jeho význam.  
+- Jeho úroveň důležitosti.  
   
--   Typ (rozpětí, příznak nebo zprávy).  
+- Jeho typ (značka span, příznak nebo zprávy).  
   
--   Podrobný popis co reprezentuje  
+- Podrobný popis co představuje  
   
- Vyberte **exportovat** tlačítko pro uložení sestavy značek jako soubor CSV. Data můžete použít v souboru CSV s jinými aplikace nebo nástroje.  
+  Zvolte **exportovat** tlačítko pro uložení sestavy značky jako soubor CSV. Data můžete použít v souboru CSV s jinými aplikacemi nebo nástroje.  
   
 > [!NOTE]
->  Sestava značek můžete zobrazit 1000 značek. Úplné sestavu zobrazíte všechny značky, můžete exportujte do souboru CSV.
+>  Sestava značek můžete zobrazit značky 1 000. Pokud chcete zobrazit všechny značky, exportujte do souboru CSV úplnou sestavu.

@@ -13,16 +13,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: 81b58a2162d7240e32e1fb2d45e462ec551155e7
-ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
+ms.openlocfilehash: c22ba73b464f91bf3036541304cdf94e8660970d
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38811914"
 ---
-1. Pokud máte v úmyslu nasadit aplikace pomocí nástroje nasazení webu v sadě Visual Studio, nainstalujte nejnovější verzi nástroje nasazení webu na serveru.
+1. Pokud máte v úmyslu nasadit vaše aplikace s nasazením webu v sadě Visual Studio, nainstalujte nejnovější verzi nástroje nasazení webu na serveru.
 
-    Instalovat nasazení webu, použijte [instalačního programu webové platformy (WebPI)](https://www.microsoft.com/web/downloads/platform.aspx). Na kartě aplikace najít nasazení webu. Můžete také získat instalační program přímo z [Microsoft Download Center](https://www.microsoft.com/search/result.aspx?q=webdeploy&form=dlc). 
+    Chcete-li nainstalujte nástroj nasazení webu, použijte [instalačního programu webové platformy (WebPI)](https://www.microsoft.com/web/downloads/platform.aspx). (Chcete-li najít odkaz na Web Platform Installer ze služby IIS, vyberte **IIS** v levém podokně Správce serveru. Klikněte pravým tlačítkem na server a vyberte **Správce Internetové informační služby (IIS)**.)
 
-2. Ověřte, zda Web Deploy je spuštěna správně otevřením **ovládací panely > systém a zabezpečení > Nástroje pro správu > služby** a ujistěte se, že **Služba agenta pro nasazení webu** běží (na název služby se liší v starší verze).
+    Instalace webové platformy najdete v kartě aplikace Webdeploy. Můžete také získat instalační program přímo z [Microsoft Download Center](https://www.microsoft.com/search/result.aspx?q=webdeploy&form=dlc). 
 
-    Pokud není spuštěna Služba agenta, spusťte ji. Pokud není přítomen vůbec, přejděte na **ovládací panely > programy > odinstalovat program**, Najít **Microsoft Web Deploy <version>** . Zvolit **změnu** instalaci a ujistěte se, že zvolíte **bude nainstalována na místní pevný disk** pro součásti nástroje nasazení webu. Proveďte kroky instalace změnu.
+2. Ověřte, že nasazení webu běží správně tak, že otevřete **ovládací panely > systém a zabezpečení > Nástroje pro správu > služby** a ujistěte se, že **webová služba agenta nasazení** běží () název služby se liší ve starších verzích).
+
+    Pokud služba agent není spuštěna, spusťte ji. Pokud není k dispozici na všech, přejděte na **ovládací panely > programy > odinstalovat program**, Najít **Microsoft Web Deploy <version>** . Zvolit **změnu** instalace a ujistěte se, že jste zvolili **se nainstaluje na místní pevný disk** pro součásti nasazení webu. Dokončete instalaci změnit.

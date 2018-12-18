@@ -1,5 +1,5 @@
 ---
-title: Vytváření obsahu. Soubory Vsct | Microsoft Docs
+title: Vytváření obsahu. Soubory Vsct | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,28 +13,29 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 65fc62d5685ca7c81b3ebb7f524db3cdbebe72c7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 26a5353531d997ad40b913b5ee223614d6517c55
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49917807"
 ---
-# <a name="authoring-vsct-files"></a>Vytváření obsahu. Vsct soubory
-Tento dokument ukazuje, jak vytvořit soubor .vsct k přidání položky nabídky, panely nástrojů a další prvky uživatelského rozhraní (UI) v sadě Visual Studio integrované vývojové prostředí (IDE). Tyto kroky použijte, když přidáte prvky uživatelského rozhraní pro Visual Studio balíček (VSPackage), který ještě nemá soubor .vsct.  
+# <a name="author-vsct-files"></a>Vytváření souborů .vsct
+Tento dokument ukazuje, jak vytvářet *.vsct* soubor k přidání položek nabídky, panely nástrojů a jiných prvcích uživatelského rozhraní (UI) do integrovaného vývojového prostředí (IDE) sady Visual Studio. Pomocí těchto kroků při přidávání prvků uživatelského rozhraní do balíčku sady Visual Studio (balíček VSPackage správy kódu), který ještě není *.vsct* souboru.  
   
- Pro nové projekty doporučujeme použít šablonu balíček Visual Studio, protože vygeneruje soubor .vsct, který v závislosti na požadované možnosti již požadované prvky pro příkaz nabídky, okno nástroje nebo vlastní editor. Můžete upravit soubor .vsct pro splnění požadavků vaší VSPackage. Další informace o tom, jak upravit soubor .vsct, podívejte se na příklady v [rozšíření nabídek a příkazů](../../extensibility/extending-menus-and-commands.md).  
+ Pro nové projekty, doporučujeme použít balíček šablony sady Visual Studio, protože ji vygeneruje *.vsct* soubor, který v závislosti na výběrech, už má požadované elementy pro příkaz nabídky, okna nástroje nebo vlastní editor . Tuto hodnotu můžete změnit *.vsct* souboru podle požadavků vašeho balíčku VSPackage. Další informace o tom, jak upravit *.vsct* souboru, podívejte se na příklady v [rozšířit nabídek a příkazů](../../extensibility/extending-menus-and-commands.md).  
   
-## <a name="authoring-the-file"></a>Vytváření souboru  
- Vytvořit soubor .vsct v těchto fází: vytvořte strukturu pro soubory a prostředky, deklarovat prvky uživatelského rozhraní, put prvky uživatelského rozhraní v prostředí IDE a přidejte jakékoli speciální chování.  
+## <a name="author-the-file"></a>Vytvořte soubor  
+ Autor *.vsct* souboru v těchto fází: vytvořte strukturu souborů a prostředků, deklarace prvků uživatelského rozhraní, vložit prvky uživatelského rozhraní v rozhraní IDE a přidejte specializované neovlivní žádné chování.  
   
 ### <a name="file-structure"></a>Struktura souborů  
- Základní struktura .vsct souboru je [CommandTable](../../extensibility/commandtable-element.md) kořenový element, který obsahuje [příkazy](../../extensibility/commands-element.md) elementu a [symboly](../../extensibility/symbols-element.md) elementu.  
+ Základní struktura *.vsct* soubor je [commandtable –](../../extensibility/commandtable-element.md) kořenový element, který obsahuje [příkazy](../../extensibility/commands-element.md) elementu a [symboly](../../extensibility/symbols-element.md) elementu.  
   
-##### <a name="to-create-the-file-structure"></a>Chcete-li vytvořit strukturu souborů  
+#### <a name="to-create-the-file-structure"></a>Chcete-li vytvořit strukturu souborů  
   
-1.  Přidejte do projektu soubor .vsct podle kroků v [postupy: vytvoření. Soubor Vsct](../../extensibility/internals/how-to-create-a-dot-vsct-file.md).  
+1.  Přidat *.vsct* soubor do projektu pomocí následujících kroků v [postupy: vytvoření souboru .vsct](../../extensibility/internals/how-to-create-a-dot-vsct-file.md).  
   
-2.  Přidejte požadované obory názvů `CommandTable` elementu, jak je znázorněno v následujícím příkladu.  
+2. Přidejte požadované obory názvů `CommandTable` elementu, jak je znázorněno v následujícím příkladu:  
   
     ```xml  
     <CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable"   
@@ -42,200 +43,202 @@ Tento dokument ukazuje, jak vytvořit soubor .vsct k přidání položky nabídk
   
     ```  
   
-3.  V `CommandTable` elementu, přidejte `Commands` element pro hostování všech vlastní nabídky, panely nástrojů, příkaz skupiny a příkazy. Aby mohl načíst vaše vlastní elementy uživatelského rozhraní, `Commands` element musí mít jeho `Package` atributu nastavena na název balíčku.  
+3.  V `CommandTable` elementu, přidejte `Commands` – element pro hostování všech vlastních nabídkami, panely nástrojů, skupin a příkazy. Tak, aby vaše vlastní elementy uživatelského rozhraní můžete načíst, `Commands` element musí mít jeho `Package` atribut nastaven na hodnotu názvu balíčku.  
   
-     Po `Commands` elementu, přidejte `Symbols` elementu, který chcete definovat identifikátory GUID pro balíček a názvy a identifikátory příkazů pro prvky vaši uživatelského rozhraní.  
+     Po `Commands` elementu, přidejte `Symbols` element definovat identifikátory GUID pro balíček a názvy a identifikátory příkazů prvků uživatelského rozhraní.  
   
-### <a name="including-visual-studio-resources"></a>Zahrnování prostředků sady Visual Studio  
- Použití [Extern](../../extensibility/extern-element.md) element přístup k souborům, které definují příkazy sady Visual Studio a nabídky, které jsou nutné uvést vaše prvky uživatelského rozhraní v prostředí IDE. Pokud budete používat příkazy definované mimo váš balíček, použijte [UsedCommands](../../extensibility/usedcommands-element.md) element k informování Visual Studio.  
+### <a name="include-visual-studio-resources"></a>Zahrnout prostředky sady Visual Studio  
+ Použití [Extern](../../extensibility/extern-element.md) – element pro přístup k souborům, které definují příkazy sady Visual Studio a nabídky, které je potřeba vložit vaše prvky uživatelského rozhraní v rozhraní IDE. Pokud budete používat příkazy definované mimo váš balíček, použijte [usedcommands –](../../extensibility/usedcommands-element.md) element informovat sady Visual Studio.  
   
-##### <a name="to-include-visual-studio-resources"></a>Chcete-li zahrnout zdroje sady Visual Studio  
+#### <a name="to-include-visual-studio-resources"></a>Chcete zahrnout prostředky sady Visual Studio  
   
-1.  V horní části `CommandTable` elementu přidat `Extern` element pro každý externí soubor odkazuje, a nastavte `href` atribut název souboru. Následující soubory hlaviček pro přístup k prostředkům v sadě Visual Studio, můžete odkazovat:  
+1. V horní části `CommandTable` prvku, přidejte jej `Extern` – element pro každé externích souborů se odkazuje, a nastavit `href` atribut pro název souboru. Následující soubory hlaviček pro přístup k prostředkům v sadě Visual Studio může odkazovat:  
   
-    -   Stdidcmd.h, definuje ID pro všechny příkazy, které jsou vystavené Visual Studio.  
+   -   *Stdidcmd.h*: definuje ID pro všechny příkazy, které jsou vystavené sady Visual Studio.  
   
-    -   Vsshlids.h, obsahuje ID příkazu pro Visual Studio nabídky.  
+   -   *Vsshlids.h*: obsahuje ID příkazu pro nabídky sady Visual Studio.  
   
-2.  Pokud váš balíček volá všechny příkazy, které jsou definovány v sadě Visual Studio nebo jiné balíčky, přidejte `UsedCommands` element po `Commands` elementu. Naplnění tento element s [UsedCommand](../../extensibility/usedcommand-element.md) element u každého příkazu, který zavoláte není součástí vašeho balíčku. Nastavte `guid` a `id` atributy `UsedCommand` elementy na identifikátor GUID a ID hodnoty z příkazů pro volání. Další informace o tom, jak najít příkazy, identifikátory GUID a ID Visual Studio najdete v tématu [identifikátory GUID a ID z příkazy sady Visual Studio](../../extensibility/internals/guids-and-ids-of-visual-studio-commands.md). Volat příkazy z dalších balíčků, použijte identifikátor GUID a ID příkazu, jak jsou definovány v souboru .vsct pro tyto balíčky.  
+2. Pokud váš balíček volá všechny příkazy, které jsou definovány pomocí sady Visual Studio nebo další balíčky, přidejte `UsedCommands` elementu po `Commands` elementu. Vyplnit tento element s [usedcommand –](../../extensibility/usedcommand-element.md) – element pro každý příkaz, který je volání není součástí vašeho balíčku. Nastavte `guid` a `id` atributy `UsedCommand` prvků, které mají hodnoty GUID a ID příkazů pro volání. 
+
+   Další informace o tom, jak najít identifikátory GUID a ID sady Visual Studio příkazy najdete v tématu [identifikátory GUID a ID sady Visual Studio příkazy](../../extensibility/internals/guids-and-ids-of-visual-studio-commands.md). Pokud chcete volat příkazy z jiných balíčků, použijte identifikátor GUID a ID příkazu, jak jsou definovány v *.vsct* soubor pro tyto balíčky.
   
-### <a name="declaring-ui-elements"></a>Deklarování prvky uživatelského rozhraní  
- Deklarovat všechny nové prvky uživatelského rozhraní v `Symbols` oddílu .vsct souboru.  
+### <a name="declare-ui-elements"></a>Deklarovat prvky uživatelského rozhraní  
+ Všechny nové prvky uživatelského rozhraní v deklaraci `Symbols` část *.vsct* souboru.  
   
-##### <a name="to-declare-ui-elements"></a>Chcete-li deklarovat prvky uživatelského rozhraní  
+#### <a name="to-declare-ui-elements"></a>Chcete-li deklarovat prvky uživatelského rozhraní  
   
-1.  V `Symbols` elementu, přidejte tři [GuidSymbol](../../extensibility/guidsymbol-element.md) elementy. Každý `GuidSymbol` element má `name` atribut a `value` atribut. Nastavte `name` atribut, aby odrážel účel elementu. `value` Atribut trvá identifikátor GUID. (Generovat identifikátor GUID na **nástroje** nabídky, klikněte na tlačítko **vytvořit GUID**a potom vyberte **registru formátu**.)  
+1.  V `Symbols` prvku, přidejte tři [guidsymbol –](../../extensibility/guidsymbol-element.md) elementy. Každý `GuidSymbol` obsahuje element `name` atribut a `value` atribut. Nastavte `name` atribut, aby odrážely účel elementu. `value` Atribut má identifikátor GUID. (Generovat identifikátor GUID na **nástroje** nabídce vyberte možnost **Create GUID**a pak vyberte **formát registru**.)  
   
-     První `GuidSymbol` element představuje váš balíček a obvykle nemá žádné podřízené objekty. Druhý `GuidSymbol` element představuje příkaz Nastavení a bude obsahovat všechny symboly, které definují nabídky, skupin a příkazy. Třetí `GuidSymbol` element představuje vaše úložiště image store a obsahuje symboly pro všechny ikony pro příkazy. Pokud máte žádné příkazy, které používají ikony, můžete vynechat třetí `GuidSymbol` elementu.  
+     První `GuidSymbol` element představuje váš balíček a obvykle nemá žádné podřízené položky. Druhá `GuidSymbol` element představuje příkaz nastavit a bude obsahovat všechny symboly, které definují nabídek, skupiny a příkazy. Třetí `GuidSymbol` element představuje vaše úložiště imagí a obsahuje symboly pro všechny ikony pro příkazy. Pokud máte k dispozici žádné příkazy, které používají ikony, můžete vynechat třetí `GuidSymbol` elementu.  
   
-2.  V `GuidSymbol` elementu, který představuje vaše sadu příkazů přidat jeden nebo víc [IDSymbol](../../extensibility/idsymbol-element.md) elementy. Každá z těchto představují nabídky, panel nástrojů, skupiny nebo příkazu, který chcete přidat do rozhraní.  
+2.  V `GuidSymbol` elementu, který představuje vaši sadu příkazů, přidejte jeden nebo více [idsymbol –](../../extensibility/idsymbol-element.md) elementy. Každá z těchto představují nabídky, nástrojů, skupiny nebo příkaz, který chcete přidat do uživatelského rozhraní.  
   
-     Pro každou `IDSymbol` , nastavena `name` atribut název budete odkazovat na odpovídající nabídky, skupinu nebo příkazu a poté nastavte `value` element hexadecimální číslo, které budou představovat jeho id příkazu. Žádné dva `IDSymbol` prvky, které mají stejnou nadřazenou položkou může mít stejnou hodnotu.  
+     Pro každou `IDSymbol` element, nastaven `name` atribut název bude odkazovat na odpovídající nabídky, skupiny nebo příkaz a pak nastavte `value` element šestnáctkového čísla, která bude představovat jeho ID příkazu. Žádné dva `IDSymbol` prvky, které mají stejnou nadřazenou položku může mít stejnou hodnotu.  
   
-3.  Pokud některé z vašich prvků uživatelského rozhraní vyžadují ikony, přidejte `IDSymbol` element pro každou ikonu `GuidSymbol` elementu, který představuje vaše úložiště bitových kopií.  
+3.  Pokud některý z vašich prvky uživatelského rozhraní vyžadují ikony, přidejte `IDSymbol` – element pro každé ikony `GuidSymbol` elementu, který představuje vaše úložiště imagí.  
   
-### <a name="putting-ui-elements-in-the-ide"></a>Uvedení prvky uživatelského rozhraní v prostředí IDE  
- [Nabídky](../../extensibility/menus-element.md) elementu [skupiny](../../extensibility/groups-element.md) elementu a [tlačítka](../../extensibility/buttons-element.md) element obsahovat definice pro všechny nabídky, skupiny a příkazy, které jsou definovány v vašeho balíčku. Uveďte těchto nabídek, skupiny a příkazy v prostředí IDE buď pomocí [nadřazené](../../extensibility/parent-element.md) element, který je součástí definice element uživatelského rozhraní nebo pomocí [CommandPlacement](../../extensibility/commandplacement-element.md) element, který je definován jinde.  
+### <a name="put-ui-elements-in-the-ide"></a>Vložit prvky uživatelského rozhraní v rozhraní IDE  
+ [Nabídky](../../extensibility/menus-element.md), [skupiny](../../extensibility/groups-element.md), a [tlačítka](../../extensibility/buttons-element.md) elementy obsahovat definice pro všechny nabídky, skupiny a příkazy, které jsou definovány v balíčku. Do integrovaného vývojového prostředí pomocí těchto nabídek, skupiny a příkazy [nadřazené](../../extensibility/parent-element.md) element, který je součástí definice prvku uživatelského rozhraní nebo pomocí [commandplacement –](../../extensibility/commandplacement-element.md) element, který je definovaný jinde.  
   
- Každý `Menu`, `Group`, a `Button` element má `guid` atribut a `id` atribut. Vždy nastaven `guid` odpovídat názvu atributu `GuidSymbol` elementu, který představuje příkazu nastavit a `id` atribut název `IDSymbol` elementu, který představuje vaší nabídky, skupinu nebo příkaz `Symbols`části.  
+ Každý `Menu`, `Group`, a `Button` obsahuje element `guid` atribut a `id` atribut. Vždycky nastavený `guid` atribut shodovat s názvem `GuidSymbol` elementu, který představuje váš příkaz nastavit a nastavit `id` atribut název `IDSymbol` elementu, který představuje vaše nabídky, skupinu nebo příkaz `Symbols`oddílu.  
   
-##### <a name="to-define-ui-elements"></a>Chcete-li definovat prvky uživatelského rozhraní  
+#### <a name="to-define-ui-elements"></a>Chcete-li definovat prvky uživatelského rozhraní  
   
-1.  Pokud definujete žádné nové nabídky, dílčích, místní nabídky nebo panely nástrojů, přidejte `Menus` elementu, který chcete `Commands` elementu. Potom pro jednotlivé nabídky, který se má vytvořit, přidat [nabídky](../../extensibility/menu-element.md) elementu, který chcete `Menus` elementu.  
+1. Pokud definujete nové nabídky, podnabídky, místní nabídky nebo panely nástrojů, přidejte `Menus` elementu `Commands` element. Pak pro jednotlivé nabídky, který se má vytvořit, přidejte [nabídky](../../extensibility/menu-element.md) element `Menus` element.  
   
-     Nastavte `guid` a `id` atributy `Menu` element a pak nastavte `type` atributů pro druh nabídky, které chcete. Můžete také nastavit `priority` atribut k navázání relativní pozici v nabídce v nadřazené skupině.  
+    Nastavte `guid` a `id` atributy `Menu` element a pak nastavte `type` atribut na typ, který chcete nabídky. Můžete také nastavit `priority` atribut vytvořit relativní umístění v nabídce v nadřazené skupině.  
   
-    > [!NOTE]
-    >  `priority` Atribut se nevztahuje na panely nástrojů a kontextové nabídky.  
+   > [!NOTE]
+   >  `priority` Atribut se nedá použít u kontextové nabídky a panely nástrojů.  
   
-2.  Všechny příkazy v prostředí Visual Studio IDE musí být hostované příkaz skupin, které jsou přímo podřízené nabídek a panelů nástrojů. Pokud přidáváte nové nabídek a panelů nástrojů k prostředí IDE, tyto musí obsahovat nové skupiny příkaz. Příkaz skupiny může také přidat do existující nabídek a panelů nástrojů tak, aby vizuálně můžete seskupit příkazech.  
+2. Všechny příkazy v integrovaném vývojovém prostředí sady Visual Studio musí být hostovány příkaz skupin, které jsou přímo podřízené nabídek a panelů nástrojů. Pokud přidáváte nové nabídky nebo panely nástrojů rozhraní IDE, tyto musí obsahovat novou skupinu příkazů. Můžete také přidat skupinu příkazů do existující nabídky a panely nástrojů tak, aby vaše příkazy můžete vizuálně seskupit.  
   
-     Když přidáte nové skupiny příkaz, musíte nejdřív vytvořit `Groups` elementu a pak přidejte do ní [skupiny](../../extensibility/group-element.md) element pro každou skupinu příkaz.  
+    Když přidáte novou skupinu příkazů, musíte nejdřív vytvořit `Groups` prvek a potom přidejte do ní [skupiny](../../extensibility/group-element.md) – element pro každou skupinu příkazů.  
   
-     Nastavte `guid` a `id` atributy jednotlivých `Group` element a pak nastavte `priority` atribut k navázání relativní pozici v nabídce nadřazené skupiny. Další informace najdete v tématu [vytváření skupin opakovaně použitelného z tlačítka](../../extensibility/creating-reusable-groups-of-buttons.md).  
+    Nastavte `guid` a `id` atributy každého `Group` element a pak nastavte `priority` atribut vytvořit relativní pozici v nabídce nadřazené skupiny. Další informace najdete v tématu [vytváření znovu použitelných skupin tlačítek](../../extensibility/creating-reusable-groups-of-buttons.md).  
   
-3.  Pokud přidáváte nové příkazy k prostředí IDE, přidejte `Buttons` elementu, který chcete `Commands` elementu. Potom u každého příkazu Přidat [tlačítko](../../extensibility/button-element.md) elementu, který chcete `Buttons` elementu.  
+3. Pokud přidáváte nové příkazy rozhraní IDE, přidejte `Buttons` elementu `Commands` elementu. Pak pro každý příkaz, přidejte [tlačítko](../../extensibility/button-element.md) elementu `Buttons` element.  
   
-    1.  Nastavte `guid` a `id` atributy jednotlivých `Button` element a pak nastavte `type` atributů pro druh tlačítko chcete. Můžete také nastavit `priority` atribut k navázání relativní pozici příkazu v nadřazené skupině.  
+   1.  Nastavte `guid` a `id` atributy každého `Button` element a pak nastavte `type` atribut na typ, který chcete tlačítko. Můžete také nastavit `priority` atribut vytvořit relativní pozici příkazu v nadřazené skupině.  
   
-        > [!NOTE]
-        >  Použití `type="button"` pro standardní příkazy a tlačítka na panely nástrojů.  
+       > [!NOTE]
+       >  Použití `type="button"` pro standardní příkazy a tlačítka na panely nástrojů.  
   
-    2.  V `Button` elementu, přidejte [řetězce](../../extensibility/strings-element.md) elementu, který obsahuje [ButtonText](../../extensibility/buttontext-element.md) element a [CommandName](../../extensibility/commandname-element.md) elementu. `ButtonText` Element poskytuje textový popisek pro položku nabídky nebo popisek pro tlačítka panelu nástrojů. `CommandName` Element poskytuje název příkazu taky používat v příkazu.  
+   2.  V `Button` elementu, přidat [řetězce](../../extensibility/strings-element.md) element, který obsahuje [ButtonText](../../extensibility/buttontext-element.md) elementu a [CommandName](../../extensibility/commandname-element.md) elementu. `ButtonText` Element poskytuje textový popisek pro položku nabídky nebo popisu tlačítka pro tlačítko toolbar. `CommandName` Element poskytuje název příkazu, pro použití v příkazu dobře.  
   
-    3.  Pokud váš příkaz ikonu, vytvořte [ikonu](../../extensibility/icon-element.md) element v `Button` elementu a nastavte jeho `guid` a `id` atributy pro `Bitmap` element ikony.  
+   3.  Pokud váš příkaz ikonu, vytvořte [ikonu](../../extensibility/icon-element.md) element v `Button` elementu a nastavte jeho `guid` a `id` atributů `Bitmap` – element pro ikonu.  
   
-        > [!NOTE]
-        >  Tlačítka panelu nástrojů musí mít ikony.  
+       > [!NOTE]
+       >  Tlačítka panelu nástrojů musí mít ikony.  
   
-     Další informace najdete v tématu [MenuCommands Vs. OleMenuCommands](../../extensibility/menucommands-vs-olemenucommands.md).  
+   Další informace najdete v tématu [MenuCommands vs. OleMenuCommands](../../extensibility/menucommands-vs-olemenucommands.md).  
   
-4.  Pokud některé z příkazech vyžadují ikony, přidejte [bitmap](../../extensibility/bitmaps-element.md) elementu, který chcete `Commands` elementu. Potom pro každou ikonu Přidat [rastrový obrázek](../../extensibility/bitmap-element.md) elementu, který chcete `Bitmaps` elementu. Toto je, kde zadáte umístění prostředku rastrového obrázku. Další informace najdete v tématu [přidání ikony příkazů nabídky](../../extensibility/adding-icons-to-menu-commands.md).  
+4. Pokud některý z vašich příkazů vyžadují ikony, přidejte [rastrové obrázky](../../extensibility/bitmaps-element.md) elementu `Commands` elementu. Obnovte pro jednotlivé ikony [rastrový obrázek](../../extensibility/bitmap-element.md) elementu `Bitmaps` elementu. To je, kde zadáte umístění prostředku rastrového obrázku. Další informace najdete v tématu [přidání ikon k příkazům nabídky](../../extensibility/adding-icons-to-menu-commands.md).  
   
- Můžete spolehnout na vztahy k nadřazeným položkám struktura správně umístit většinu nabídek, skupiny a příkazy. Pro velké příkaz sad nebo když nabídky, skupinu nebo příkaz objevit na více místech, doporučujeme, že zadáte příkaz umístění.  
+   Můžete se spolehnout na struktuře vztahy k nadřazeným položkám správně umístit Většina nabídek, skupiny a příkazy. Pro příkaz velmi velké sady nebo když nabídky, skupiny nebo příkazu musí být uvedena na více místech, doporučujeme, že zadáte příkaz umístění.  
   
-##### <a name="to-rely-on-parenting-to-place-ui-elements-in-the-ide"></a>Moct spolehnout na vztahy k nadřazeným položkám umístit prvky uživatelského rozhraní v prostředí IDE  
+#### <a name="to-rely-on-parenting-to-place-ui-elements-in-the-ide"></a>Chcete-li využívají vztahy k nadřazeným položkám umístí prvky uživatelského rozhraní v rozhraní IDE  
   
-1.  Pro typické vztahy k nadřazeným položkám, vytvořte `Parent` element v každé `Menu`, `Group`, a `Command` element, který je definován v vašeho balíčku.  
+1. Pro typické vztahy k nadřazeným položkám, vytvořte `Parent` element v každé `Menu`, `Group`, a `Command` element, který je definován v balíčku.  
   
-     Cílem `Parent` element je nabídky nebo skupiny, která bude obsahovat v nabídce, skupinu nebo příkaz.  
+    Cílem `Parent` je prvek nabídky nebo skupinu, která bude obsahovat nabídky, skupiny nebo příkaz.  
   
-    1.  Nastavte `guid` atribut název `GuidSymbol` element, který definuje sadu příkazů. Pokud cílový element není součástí vašeho balíčku, použijte identifikátor guid pro tuto sadu příkazů, jak jsou definovány v odpovídající soubor .vsct.  
+   1.  Nastavte `guid` atribut název `GuidSymbol` element, který definuje sadu příkazů. Pokud cílový element není součástí vašeho balíčku, použijte identifikátor guid tuto sadu příkazů, jak jsou definovány v odpovídající *.vsct* souboru.  
   
-    2.  Nastavte `id` atribut tak, aby odpovídala `id` atribut target nabídky nebo skupiny. Pro seznam nabídky a skupiny, které jsou zveřejněné Visual Studio, najdete v části [identifikátory GUID a ID nástroje Visual Studio nabídek](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md) nebo [identifikátory GUID a ID nástroje Visual Studio panelů nástrojů](../../extensibility/internals/guids-and-ids-of-visual-studio-toolbars.md).  
+   2.  Nastavte `id` atribut tak, aby odpovídaly `id` atribut target nabídky nebo skupiny. Seznam nabídek a skupiny, které jsou přístupné pomocí sady Visual Studio, naleznete v tématu [identifikátory GUID a ID sady Visual Studio nabídky](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md) nebo [identifikátory GUID a ID sady Visual Studio panely nástrojů](../../extensibility/internals/guids-and-ids-of-visual-studio-toolbars.md).  
   
- Pokud máte velký počet prvků uživatelského rozhraní pro umístění v prostředí IDE, nebo pokud máte prvků, které se mají zobrazit na více místech, definovat jejich umísťováním v [CommandPlacements](../../extensibility/commandplacements-element.md) elementu, jak je znázorněno v následujícím postupu.  
+   Pokud máte velký počet prvků uživatelského rozhraní, umístíte do integrovaného vývojového prostředí, nebo pokud máte prvky, které by se měla objevit na více místech, definovat jejich umístění v [commandplacements –](../../extensibility/commandplacements-element.md) elementu, jak je znázorněno v následujícím postupu.  
   
-##### <a name="to-use-command-placement-to-place-ui-elements-in-the-ide"></a>Použít příkaz umístění umístit prvky uživatelského rozhraní v prostředí IDE  
+#### <a name="to-use-command-placement-to-place-ui-elements-in-the-ide"></a>Použití příkazu umístění umístí prvky uživatelského rozhraní v rozhraní IDE  
   
-1.  Po `Commands` elementu, přidejte `CommandPlacements` elementu.  
+1. Po `Commands` elementu, přidejte `CommandPlacements` elementu.  
   
-2.  V `CommandPlacements` elementu, přidejte `CommandPlacement` element pro každou nabídky, skupiny nebo příkaz umístit.  
+2. V `CommandPlacements` elementu, přidejte `CommandPlacement` – element pro každou nabídku, skupinu nebo příkaz umístit.  
   
-     Každý `CommandPlacement` element nebo `Parent` element umístí jeden nabídky, skupinu nebo příkaz na jednom místě IDE. Element uživatelského rozhraní může mít pouze jednu nadřazenou položku, ale může mít několik umísťováním příkaz. Umístit prvku uživatelského rozhraní na více místech, přidejte `CommandPlacement` element pro každé umístění.  
+    Každý `CommandPlacement` element nebo `Parent` element umístí jednu nabídku, skupinu nebo příkaz na jednom místě integrovaného vývojového prostředí. Prvek uživatelského rozhraní může mít pouze jednu nadřazenou položku, ale může mít více umístění příkazu. Umístit do víc umístění prvku uživatelského rozhraní, přidejte `CommandPlacement` – element pro každé umístění.  
   
-3.  Nastavte `guid` a `id` atributy jednotlivých `CommandPlacement` element pro hostování nabídky nebo skupiny, stejně, jako by pro `Parent` elementu. Můžete také nastavit `priority` atribut k navázání relativní umístění prvku uživatelského rozhraní.  
+3. Nastavte `guid` a `id` atributy každého `CommandPlacement` element hostování nabídky nebo skupině, stejně jako by pro `Parent` elementu. Můžete také nastavit `priority` atribut vytvořit relativní pozice prvku uživatelského rozhraní.  
   
- Je možné kombinovat umístění pomocí vztahy k nadřazeným položkám a příkaz umístění. Pro velké příkaz sady, ale doporučujeme používat pouze příkaz umístění.  
+   Můžete kombinovat umístění podle vztahy k nadřazeným položkám a příkaz umístění. Pro příkaz velmi velké sady, ale doporučujeme použít pouze příkaz umístění.  
   
-### <a name="adding-specialized-behaviors"></a>Přidání specializované chování  
- Můžete použít [CommandFlag](../../extensibility/command-flag-element.md) elementy chcete změnit chování nabídek a příkazů, například, chcete-li změnit jejich vzhled a viditelnost. Může ovlivnit také když příkaz je viditelná pomocí [VisibilityConstraints](../../extensibility/visibilityconstraints-element.md), nebo přidejte klávesové zkratky pomocí [klíčových vazeb](../../extensibility/keybindings-element.md). Určité typy nabídek a příkazů již specializovaný chování součástí.  
+### <a name="add-specialized-behaviors"></a>Přidejte specializované chování  
+ Můžete použít [CommandFlag](../../extensibility/command-flag-element.md) elementu, jestliže chcete upravit chování nabídek a příkazů, například, chcete-li změnit jejich vzhled a viditelnost. Může také ovlivnit, pokud je příkaz viditelný pomocí [visibilityconstraints –](../../extensibility/visibilityconstraints-element.md) element, nebo přidat pomocí klávesové zkratky [klávesové zkratky](../../extensibility/keybindings-element.md) elementu. Určité typy nabídek a příkazů již vestavěné chování specializovaný.  
   
-##### <a name="to-add-specialized-behaviors"></a>Chcete-li přidat specializované chování  
+#### <a name="to-add-specialized-behaviors"></a>Chcete-li přidat specializované chování  
   
-1.  Chcete-li prvku uživatelského rozhraní viditelná pouze v určitých uživatelského rozhraní kontextů, například při načtení řešení, použijte omezení viditelnosti.  
+1. Chcete-li prvek uživatelského rozhraní viditelná pouze v určitých uživatelského rozhraní kontextech, například při načtení řešení, použijte omezení viditelnosti.  
   
-    1.  Po `Commands` elementu, přidejte `VisibilityConstraints` elementu.  
+   1.  Po `Commands` elementu, přidejte `VisibilityConstraints` elementu.  
   
-    2.  Pro každou položku uživatelského rozhraní k omezení přidat [VisibilityItem](../../extensibility/visibilityitem-element.md) element.  
+   2.  Pro každou položku uživatelského rozhraní pro omezení, přidejte [visibilityitem –](../../extensibility/visibilityitem-element.md) elementu.  
   
-    3.  Pro každou `VisibilityItem` , nastavena `guid` a `id` atributy nabídky, skupiny, nebo příkaz a potom nastavte `context` atribut kontext uživatelského rozhraní, který chcete, jak jsou definovány v <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80> – třída. Další informace najdete v tématu [VisibilityItem Element](../../extensibility/visibilityitem-element.md).  
+   3.  Pro každou `VisibilityItem` element, nastaven `guid` a `id` atributů, které mají v nabídce, skupiny, nebo příkaz a pak nastavte `context` atribut kontextu uživatelského rozhraní, který chcete, jak jsou definovány v <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80> třídy.   
   
-2.  Pokud chcete nastavit viditelnost nebo dostupnosti položky uživatelského rozhraní v kódu, použijte jeden nebo více následující příznaky příkazu:  
+2. Pokud chcete nastavit viditelnost nebo dostupnost položky uživatelského rozhraní v kódu, použijte nejméně jeden z následujících příznaků příkazů:  
   
-    -   DefaultDisabled  
+   -   `DefaultDisabled`
   
-    -   DefaultInvisible  
+   -   `DefaultInvisible`
   
-    -   DynamicItemStart  
+   -   `DynamicItemStart` 
   
-    -   DynamicVisibility  
+   -   `DynamicVisibility`
   
-    -   NoShowOnMenuController  
+   -   `NoShowOnMenuController`
   
-    -   NotInTBList  
+   -   `NotInTBList`
   
-     Další informace najdete v tématu [Element Command příznak](../../extensibility/command-flag-element.md).  
+   Další informace najdete v tématu [CommandFlag](../../extensibility/command-flag-element.md) elementu.  
   
-3.  Ke změně jak element se zobrazí, nebo se dynamicky mění její vzhled, použijte jednu nebo více následující příznaky příkazu:  
+3. Chcete-li změnit způsob, jakým se zobrazí element nebo dynamicky měnit její vzhled, použijte jednu nebo více z následujících příznaků příkazů:  
   
-    -   AlwaysCreate  
+   -   `AlwaysCreate`  
   
-    -   CommandWellOnly  
+   -   `CommandWellOnly`  
   
-    -   DefaultDocked  
+   -   `DefaultDocked`  
   
-    -   DontCache  
+   -   `DontCache`  
   
-    -   DynamicItemStart  
+   -   `DynamicItemStart`  
   
-    -   FixMenuController  
+   -   `FixMenuController`  
   
-    -   IconAndText  
+   -   `IconAndText`  
   
-    -   PICT  
+   -   `Pict`  
   
-    -   StretchHorizontally  
+   -   `StretchHorizontally`  
   
-    -   TextMenuUseButton  
+   -   `TextMenuUseButton`  
   
-    -   TextChanges  
+   -   `TextChanges`  
   
-    -   Typu TextOnly  
+   -   `TextOnly`  
   
-     Další informace najdete v tématu [Element Command příznak](../../extensibility/command-flag-element.md).  
+   Další informace najdete v tématu [CommandFlag](../../extensibility/command-flag-element.md) elementu.  
   
-4.  Ke změně, jak element odpovědí, pokud obdrží příkazy, použijte jednu nebo více následující příznaky příkazu:  
+4. Chcete-li změnit, jak prvek reaguje při přijetí příkazů, použijte nejméně jeden z následujících příznaků příkazů:  
   
-    -   AllowParams  
+   -   `AllowParams`  
   
-    -   CaseSensitive  
+   -   `CaseSensitive`  
   
-    -   CommandWellOnly  
+   -   `CommandWellOnly`  
   
-    -   Funkce Filtrování kláves  
+   -   `FilterKeys`  
   
-    -   NoAutoComplete  
+   -   `NoAutoComplete`  
   
-    -   NoButtonCustomize  
+   -   `NoButtonCustomize`  
   
-    -   NoKeyCustomize  
+   -   `NoKeyCustomize`  
   
-    -   NoToolbarClose  
+   -   `NoToolbarClose`  
   
-    -   PostExec  
+   -   `PostExec`  
   
-    -   RouteToDocs  
+   -   `RouteToDocs`  
   
-    -   TextIsAnchorCommand  
+   -   `TextIsAnchorCommand`  
   
-     Další informace najdete v tématu [Element Command příznak](../../extensibility/command-flag-element.md).  
+   Další informace najdete v tématu [CommandFlag](../../extensibility/command-flag-element.md) elementu.  
   
-5.  Závislé nabídky klávesové zkratky připojit k nabídce nebo položku v nabídce, přidejte znak ampersand ('a ') v `ButtonText` nabídka nebo položka nabídky elementu. Znak, který následuje ampersand je active klávesovou zkratku, když je otevřený v nabídce nadřazené.  
+5. Závislé nabídky klávesové zkratky připojit k nabídky nebo položky v nabídce, přidat znak ampersand (&) v `ButtonText` – element pro nabídky nebo položky nabídky. Znak, který následuje ampersand je aktivní klávesové zkratky při otevření nadřazené nabídky.  
   
-6.  Chcete-li připojení k příkazu nabídky nezávislé klávesové zkratky, použijte [klíčových vazeb](../../extensibility/keybindings-element.md). Další informace najdete v tématu [KeyBinding Element](../../extensibility/keybinding-element.md).  
+6. Chcete-li připojit nezávislé na nabídku klávesovou zkratku k příkazu, použijte [klávesové zkratky](../../extensibility/keybindings-element.md) elementu. Další informace najdete v tématu [klávesové zkratky](../../extensibility/keybinding-element.md) elementu.  
   
-7.  O lokalizaci text nabídky, použijte `LocCanonicalName` elementu. Další informace najdete v tématu [řetězce Element](../../extensibility/strings-element.md).  
+7. Chcete-li lokalizovat text nabídky, použijte `LocCanonicalName` elementu. Další informace najdete v tématu [řetězce](../../extensibility/strings-element.md) elementu.  
   
- Některé typy nabídky a tlačítko zahrnovat specializovaná chování. Následující tabulka popisuje některé speciální nabídky a typy tlačítko. Pro ostatní typy podívejte `types` atribut popisy v [Menu Element](../../extensibility/menu-element.md), [Button Element](../../extensibility/button-element.md), a [Element pole se seznamem](../../extensibility/combo-element.md).  
+   Některé typy nabídek a tlačítko zahrnovat specializovaná chování. Následující seznam popisuje některé speciální nabídky a typy tlačítek. U jiných typů, najdete v článku `types` popisy v atributu [nabídky](../../extensibility/menu-element.md), [tlačítko](../../extensibility/button-element.md), a [– pole se seznamem](../../extensibility/combo-element.md) elementy.  
   
- Pole se seznamem  
- Pole se seznamem je rozevíracího seznamu, který lze použít na panelu nástrojů. Chcete-li přidat pole se seznamem do uživatelského rozhraní, vytvořte [kláves](../../extensibility/combos-element.md) element v `Commands` elementu. Pak přidejte do `Combos` elementu `Combo` element pro každé pole se seznamem přidat. `Combo` elementy mají stejné atributy a podřízené položky jako `Button` elementy a také mít `DefaultWidth` a `idCommandList` atributy. `DefaultWidth` Atribut Nastaví šířku v pixelech a `idCommandList` atribut body ID příkazu, který se používá k vyplnění pole se seznamem. Další informace najdete v tématu `Combo` element dokumentaci.  
+   - Pole se seznamem:  
+   Pole se seznamem je rozevírací seznam, který jde použít na panelu nástrojů. Pokud chcete přidat pole se seznamem v uživatelském rozhraní, vytvořte [combos –](../../extensibility/combos-element.md) prvek `Commands` elementu. Obnovte `Combos` element `Combo` – element pro každé pole se seznamem pro přidání. `Combo` elementy mají stejné atributy a podřízené objekty jako `Button` elementy a můžou taky `DefaultWidth` a `idCommandList` atributy. `DefaultWidth` Atribut nastavuje šířku v pixelech a `idCommandList` atribut body pro ID příkazu, který se používá k naplnění pole se seznamem. 
   
- MenuController  
- Řadič nabídky je tlačítko, které má šipka vedle sebe. Klikněte na šipku otevřete seznam. Chcete-li přidat řadič nabídky do uživatelského rozhraní, vytvořte `Menu` elementu a sadu jeho `type` atribut **MenuController** nebo **MenuControllerLatched**, v závislosti na chování, které chcete. K naplnění řadič nabídky, nastavte ji jako nadřazený prvek `Group` elementu. Řadičem nabídky se zobrazí všechny podřízené objekty dané skupiny v rozevíracím seznamu.  
+   - Kontroleru nabídky:  
+   Kontroleru nabídky je tlačítko, které má šipku vedle sebe. Kliknutím na šipku otevřete seznam. Přidání kontroleru nabídky do uživatelského rozhraní, vytvořit `Menu` elementu a nastavte jeho `type` atribut `MenuController` nebo `MenuControllerLatched`, v závislosti na chování, které chcete. K naplnění kontroleru nabídky, nastavte ji jako nadřazený `Group` elementu. Kontroleru nabídky se zobrazí všechny podřízené dané skupiny v rozevíracím seznamu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Rozšíření nabídek a příkazů](../../extensibility/extending-menus-and-commands.md)   
- [Visual Studio příkaz tabulky (. Soubory Vsct)](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)   
- [XML schéma VSCT – referenční informace](../../extensibility/vsct-xml-schema-reference.md)
+ [Soubory tabulky (.vsct) příkaz pro Visual Studio](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)   
+ [Referenční dokumentace schématu VSCT XML](../../extensibility/vsct-xml-schema-reference.md)

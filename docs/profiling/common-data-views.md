@@ -13,11 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 32039843f3aef60f6e7087b0d26f8b5e1efd1df8
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 21ccf237bec0b3ab7bf3ad96f6f4d24df240db0e
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34263926"
 ---
 # <a name="common-data-views"></a>Obecná zobrazení dat
 Tato část obsahuje referenční informace o zobrazení a sestav profileru datových souborů, které jsou společné pro všechny metody profilování.  
@@ -32,22 +33,22 @@ Tato část obsahuje referenční informace o zobrazení a sestav profileru dato
  [Zobrazení stromu volání](../profiling/call-tree-view.md)  
  Popisuje zobrazení stromu volání a sestavy. Datové sloupce závisí na metodě profilování.  
   
- [Zobrazení modulů](../profiling/modules-view.md)  
+ [Moduly – zobrazení](../profiling/modules-view.md)  
  Popisuje moduly zobrazení a sestavy. Datové sloupce závisí na metodě profilování.  
   
- [Zobrazení funkcí](../profiling/functions-view.md)  
+ [Funkce – zobrazení](../profiling/functions-view.md)  
  Popisuje zobrazení funkcí a sestav. Datové sloupce závisí na metodě profilování.  
   
- [Zobrazení řádků](../profiling/lines-view.md)  
+ [Řádky – zobrazení](../profiling/lines-view.md)  
  Popisuje zobrazení řádků a sestavy. Datové sloupce závisí na metodě profilování.  
   
- [Zobrazení ukazatelů na instrukce](../profiling/instruction-pointers-ips-view.md)  
+ [Zobrazení ukazatele na instrukce (IP)](../profiling/instruction-pointers-ips-view.md)  
  Popisuje ukazatel instrukce (IP) – zobrazení a sestavy. Datové sloupce závisí na metodě profilování.  
   
  [Zobrazení procesů](../profiling/process-view.md)  
  Proces seznamy a vlákno spuštění a ukončení.  
   
- [Zobrazení značek](../profiling/marks-view.md)  
+ [Značky – zobrazení](../profiling/marks-view.md)  
  Seznam trasování událostí pro Windows a vzorkování události, které byly vloženy do datového souboru profilování.  
   
 ## <a name="related-sections"></a>Související oddíly  

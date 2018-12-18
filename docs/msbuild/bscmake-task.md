@@ -1,5 +1,5 @@
 ---
-title: BscMake – úloha | Microsoft Docs
+title: BscMake – úloha | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -22,31 +22,30 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f10d43fec6ad02cd83debac100add989f65d2df
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b93247fcce7502ce96a075dc5d297cd9c87fe640
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39153186"
 ---
 # <a name="bscmake-task"></a>BscMake – úloha
 > [!IMPORTANT]
->  BscMake je již používán Visual Studio IDE. Od verze Visual Studio 2008 je procházet informace uloženy v soubor SDF ve složce řešení automaticky.  
+>  BscMake – se již nepoužívá v integrovaném vývojovém prostředí sady Visual Studio. Od verze Visual Studio 2008, je automaticky v uložené informace o procházení *SDF* ve *řešení* složky.  
   
- Zabalí nástroj Microsoft procházet údržby nástroje pro konfiguraci (bscmake.exe).  Nástroj bscmake.exe vytvoří soubor informace o procházení (.bsc) ze zdrojových prohlížeč souborů (.sbr), které jsou vytvořené během kompilace. Použití **Prohlížeč objektů** k zobrazení souboru BSC programem. Další informace najdete v tématu [BscMake – odkaz](/cpp/build/reference/bscmake-reference).  
+ Zabalí nástroj Microsoft procházet informace nástroje pro správu (*bscmake.exe*).  *Bscmake.exe* vytvoří nástroj informačního souboru procházení (*.bsc*) ze zdrojové soubory prohlížeče (*.sbr*), které jsou vytvořeny během kompilace. Použití **prohlížeče objektů** zobrazíte *.bsc* souboru. Další informace najdete v tématu [BscMake – referenční dokumentace](/cpp/build/reference/bscmake-reference).  
   
 ## <a name="parameters"></a>Parametry  
- Následující tabulka popisuje parametry **BscMake** úloh. Většina úloh parametry odpovídají možnosti příkazového řádku.  
+ Následující tabulka popisuje parametry **BscMake** úloh. Většina úkolů parametry odpovídají možnost příkazového řádku.  
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|**AdditionalOptions**|Volitelné **řetězec** parametr.<br /><br /> Seznam možností jako zadaného na příkazovém řádku. Například "/*možnost 1* /*option2* /*možnost #*". Tento parametr použijte k určení možnosti, které nejsou reprezentovány jakékoliv **BscMake** parametr úloh.<br /><br /> Další informace najdete v tématu Možnosti v [možnosti BSCMAKE](/cpp/build/reference/bscmake-options).|  
-|**Výstupní soubor**|Volitelné **řetězec** parametr.<br /><br /> Určuje název souboru, který přepíše výchozí název výstupního souboru.<br /><br /> Další informace najdete v tématu **/o** možnost [možnosti BSCMAKE](/cpp/build/reference/bscmake-options).|  
-|**PreserveSBR**|Volitelné **Boolean** parametr.<br /><br /> Pokud `true`, vynutí nonincremental sestavení. Bez ohledu na to, jestli souboru BSC existuje a zabrání ke zkrácení soubory .sbr dojde k úplné, nonincremental sestavení.<br /><br /> Další informace najdete v tématu **/n** možnost [možnosti BSCMAKE](/cpp/build/reference/bscmake-options).|  
-|**Zdroje**|Volitelné **[ITaskItem]** parametr.<br /><br /> Definuje pole MSBuild zdrojového souboru položek, které je možné využívat a vygenerované úlohami.|  
-|**SuppressStartupBanner**|Volitelné **Boolean** parametr.<br /><br /> Pokud `true`, zabraňuje zobrazení číslo zprávy o autorských právech a verzi, po spuštění úlohy.<br /><br /> Další informace najdete v tématu **/nologo** možnost [možnosti BSCMAKE](/cpp/build/reference/bscmake-options).|  
-|**TrackerLogDirectory**|Volitelné **řetězec** parametr.<br /><br /> Určuje adresář pro protokol sledovací modul.|  
+|**AdditionalOptions**|Volitelné **řetězec** parametru.<br /><br /> Seznam možností, jak je uvedeno na příkazovém řádku. Třeba /\<možnost1 > /\<možnost2 > /\<možnost #>. Tento parametr použijte k určení možností, které nejsou reprezentovány jakýkoli jiný **BscMake** parametr úlohy.<br /><br /> Další informace najdete v tématu Možnosti v [bscmakee – možnosti](/cpp/build/reference/bscmake-options).|  
+|**Výstupní soubor**|Volitelné **řetězec** parametru.<br /><br /> Určuje název souboru, který přepíše výchozí název výstupního souboru.<br /><br /> Další informace najdete v tématu **/o** možnost [bscmakee – možnosti](/cpp/build/reference/bscmake-options).|  
+|**PreserveSBR**|Volitelné **logická** parametru.<br /><br /> Pokud `true`, vynutí nepřírůstková sestavení. Bez ohledu na to, zda dojde k úplné, nepřírůstková sestavení *.bsc* soubor existuje a zabraňuje *.sbr* soubory z vedlo ke zkrácení.<br /><br /> Další informace najdete v tématu **/n** možnost [bscmakee – možnosti](/cpp/build/reference/bscmake-options).|  
+|**Zdroje**|Volitelné **[] ITaskItem** parametru.<br /><br /> Definuje pole objektů položky nástroje MSBuild zdrojových souborů, které lze používat a, protože ho vygeneroval úlohy.|  
+|**SuppressStartupBanner**|Volitelné **logická** parametru.<br /><br /> Pokud `true`, zabraňuje zobrazování čísel zprávu o autorských právech a verze při spuštění úlohy.<br /><br /> Další informace najdete v tématu **/nologo** možnost [bscmakee – možnosti](/cpp/build/reference/bscmake-options).|  
+|**TrackerLogDirectory**|Volitelné **řetězec** parametru.<br /><br /> Určuje adresář protokolu sledovacího modulu.|  
   
-## <a name="remarks"></a>Poznámky  
-  
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)

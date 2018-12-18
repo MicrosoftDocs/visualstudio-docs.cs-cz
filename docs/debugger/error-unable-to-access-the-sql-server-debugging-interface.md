@@ -1,5 +1,5 @@
 ---
-title: 'Chyba: Nelze získat přístup k rozhraní ladění SQL serveru | Microsoft Docs'
+title: 'Chyba: Nelze přistoupit k ladicímu prostředí SQL serveru | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -17,18 +17,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 338c2e0ab90fe6f518ad853dd6d4a0106c4af8b3
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: beee84e6a7b7aacd25d4bc6001eacec86d910a6c
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44281517"
 ---
 # <a name="error-unable-to-access-the-sql-server-debugging-interface"></a>Chyba: Nelze přistoupit k ladicímu prostředí serveru SQL Server.
-Tato zpráva nastane, když se pokusíte ladění SQL na počítači, kde není povoleno ladění SQL.  
+Tuto zprávu nastane při pokusu o ladění SQL na počítači, kde není povolené ladění SQL.  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
--   V tématu [nastavení ladění SQL](http://msdn.microsoft.com/en-us/3db09e68-edcc-42de-9c22-4e97cfd55ab3).  
+-   Zobrazit [nastavení ladění SQL](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/s4sszxst(v=vs.100)).  
   
 ## <a name="see-also"></a>Viz také  
- [Ladění SQL](http://msdn.microsoft.com/en-us/f27c17e6-1d90-49f2-9fc0-d02e6a27f109)
+ [Ladění SQL](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zefbf0t6(v=vs.100))

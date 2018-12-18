@@ -1,5 +1,5 @@
 ---
-title: Funkce SccRunScc | Microsoft Docs
+title: Sccrunscc – funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 322ebe148144260106fb895273b66e1b9f5696f8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 40c9ced01c16315840194e770a05ba34df4a9321
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920791"
 ---
 # <a name="sccrunscc-function"></a>SccRunScc – funkce
-Tato funkce vyvolá nástroj pro správu zdroj ovládacího prvku.  
+Tato funkce vyvolá nástroj pro správu zdrojového ovládacího prvku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,39 +38,39 @@ SCCRTN SccRunScc(
   
 #### <a name="parameters"></a>Parametry  
  pvContext  
- [v] Struktura modulu plug-in kontextu řízení zdroje.  
+ [in] Struktura kontext modulu plug-in zdroje ovládacího prvku.  
   
  hWnd  
- [v] Obslužná rutina do okna IDE, modul plug-in správy zdroje můžete použít jako nadřazený objekt pro všechna dialogová okna poskytuje.  
+ [in] Popisovač okna integrovaného vývojového prostředí, které modul plug-in správy zdrojového kódu můžete použít jako nadřazený pro všechna dialogová okna, které poskytuje.  
   
- : %{nfiles/  
- [v] Počet souborů zadaný v `lpFileNames` pole.  
+ %{nfiles/  
+ [in] Počet souborů podle `lpFileNames` pole.  
   
  lpFileNames  
- [v] Pole názvy vybraného souboru.  
+ [in] Pole názvy vybraných souborů.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Očekává se, že modul plug-in implementace zdroje řízení této funkce vrátí jednu z následujících hodnot:  
+ Modul plug-in implementaci ovládacího prvku zdroje této funkce má vracet instanci jednoho z následujících hodnot:  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
-|SCC_OK|Nástroje pro správu řízení zdroj byl úspěšně vyvolán.|  
+|SCC_OK|Úspěšně byl vyvolán nástroj pro správu zdrojového ovládacího prvku.|  
 |SCC_I_OPERATIONCANCELED|Operace byla zrušena.|  
-|SCC_E_INITIALIZEFAILED|Nepodařilo se inicializovat správy zdrojového kódu.|  
-|SCC_E_ACCESSFAILURE|Došlo k chybě při přístupu správy zdrojového kódu, pravděpodobně kvůli problémům s sítě nebo kolizí.|  
-|SCC_E_CONNECTIONFAILURE|Nepodařilo se připojit k systému správy zdrojů.|  
-|SCC_E_FILENOTCONTROLLED|Vybraný soubor není ve správě zdrojového kódu.|  
-|SCC_E_NONSPECIFICERROR|Došlo k nespecifikované chybě.|  
+|SCC_E_INITIALIZEFAILED|Nepovedlo se inicializovat systém správy zdrojového kódu.|  
+|SCC_E_ACCESSFAILURE|Došlo k problému, přístup k systému správy zdrojového kódu, pravděpodobně kvůli problémům se síti nebo kolize.|  
+|SCC_E_CONNECTIONFAILURE|Nepovedlo se připojit k systému správy zdrojového kódu.|  
+|SCC_E_FILENOTCONTROLLED|Vybraný soubor není pod správou zdrojových kódů.|  
+|SCC_E_NONSPECIFICERROR|K nespecifikované chybě.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato funkce umožňuje volajícímu přístup prostřednictvím nástroje pro správu externí plný rozsah funkcí správy zdrojového kódu. Pokud správy zdrojového kódu nemá žádné uživatelské rozhraní, modul plug-in zdrojového kódu můžete implementovat rozhraní k provádění funkcí správy nezbytné.  
+ Tato funkce umožňuje volajícímu přístup plný rozsah funkcí systému správy zdrojového kódu pomocí nástroje pro externí správu. Pokud systém správy zdrojového kódu nemá žádné uživatelské rozhraní, modul plug-in správy zdrojového kódu můžete implementovat rozhraní k provádění funkcí správy potřeby.  
   
- Tato funkce je volána s počet a pole názvy souborů pro aktuálně vybrané soubory. Pokud ji podporuje nástroj pro správu, seznam souborů, které slouží k předem vybrat soubory v rozhraní správy; v seznamu, jinak můžete ignorovat.  
+ Tato funkce je volána s počet a pole názvů souborů pro aktuálně vybrané soubory. Pokud nástroj pro správu podporuje, seznam souborů, které slouží k předem vybere souborů v rozhraní pro správu; v opačném případě se dá ignorovat seznamu.  
   
- Tato funkce je volána obvykle, když uživatel vybere **spusťte \<zdrojového ovládacího prvku serveru >** z **soubor** -> **správy zdrojového kódu** nabídky. To **spusťte** nabídky můžete vždy zakázáno nebo i skryté nastavením položky registru. V tématu [postupy: Instalace modulu Plugin zdroj ovládacího prvku](../extensibility/internals/how-to-install-a-source-control-plug-in.md) podrobnosti. Tato funkce je volána, pouze pokud [SccInitialize](../extensibility/sccinitialize-function.md) vrátí `SCC_CAP_RUNSCC` bit možnosti (v tématu [schopností příznaky](../extensibility/capability-flags.md) podrobnosti o tomto a dalších schopností bits).  
+ Tato funkce je obvykle vyvolány, když uživatel vybere **spuštění \<Server správy zdrojového kódu >** z **souboru** -> **správy zdrojových kódů** nabídka. To **spuštění** nabídky můžete vždy zakázané nebo dokonce skryté nastavením položky registru. V tématu [postupy: Instalace modulu Plug-in zdrojového ovládacího prvku](../extensibility/internals/how-to-install-a-source-control-plug-in.md) podrobnosti. Tato funkce je volána, pouze pokud [sccinitialize –](../extensibility/sccinitialize-function.md) vrátí `SCC_CAP_RUNSCC` bit možnosti (naleznete v tématu [příznaky funkcí](../extensibility/capability-flags.md) podrobnosti o tomto a ostatní bity funkce).  
   
 ## <a name="see-also"></a>Viz také  
- [Funkce modulu Plug-in rozhraní API ovládacího prvku zdroje](../extensibility/source-control-plug-in-api-functions.md)   
- [Postupy: Instalace modulu Plug-in Správa zdrojového kódu](../extensibility/internals/how-to-install-a-source-control-plug-in.md)   
- [Příznaky schopností](../extensibility/capability-flags.md)   
+ [Funkce rozhraní API modulu Plug-in zdroje ovládacího prvku](../extensibility/source-control-plug-in-api-functions.md)   
+ [Postupy: Instalace modulu Plug-in správy zdrojového kódu](../extensibility/internals/how-to-install-a-source-control-plug-in.md)   
+ [Příznaky funkcí](../extensibility/capability-flags.md)   
  [SccInitialize](../extensibility/sccinitialize-function.md)

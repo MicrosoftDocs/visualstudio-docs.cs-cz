@@ -1,5 +1,5 @@
 ---
-title: PropertyGroup – Element (MSBuild) | Microsoft Docs
+title: PropertyGroup – Element (MSBuild) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 03/13/2017
 ms.technology: msbuild
@@ -20,21 +20,22 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8df7de09fe90b0825d1b990b18b3a7d2309e4a08
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: dc849f0b3f66c7e2bdd85ff20023c9755ce5c985
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49853347"
 ---
 # <a name="propertygroup-element-msbuild"></a>PropertyGroup – element (MSBuild)
-Obsahuje sadu uživatelem definované [vlastnost](../msbuild/property-element-msbuild.md) elementy. Každý `Property` element používány [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projektu musí být podřízenou `PropertyGroup` element.  
+Obsahuje sadu uživatelem definované [vlastnost](../msbuild/property-element-msbuild.md) elementy. Každý `Property` prvku použitého při [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projekt musí být podřízeným `PropertyGroup` elementu.  
 
  \<Project>  
- \<PropertyGroup – >  
+ \<PropertyGroup >  
 
 ## <a name="syntax"></a>Syntaxe  
 
-```  
+```xml  
 <PropertyGroup Condition="'String A' == 'String B'">  
     <Property1>...</Property1>  
     <Property2>...</Property2>  
@@ -50,17 +51,17 @@ Obsahuje sadu uživatelem definované [vlastnost](../msbuild/property-element-ms
 |---------------|-----------------|  
 |Podmínka|Nepovinný atribut.<br /><br /> Podmínku, která má být vyhodnocen. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|  
 
-### <a name="child-elements"></a>Podřízené elementy  
+### <a name="child-elements"></a>Podřízené prvky  
 
 |Prvek|Popis|  
 |-------------|-----------------|  
-|[Vlastnost](../msbuild/property-element-msbuild.md)|Volitelný element.<br /><br /> Definované vlastnosti jméno uživatele, který obsahuje hodnoty vlastnosti. Může být nula nebo více *vlastnost* elementů v `PropertyGroup` elementu.|  
+|[Vlastnost](../msbuild/property-element-msbuild.md)|Volitelný element.<br /><br /> Název definované vlastnosti uživatele, který obsahuje hodnotu vlastnosti. Může být nula nebo více *vlastnost* prvky `PropertyGroup` elementu.|  
 
-### <a name="parent-elements"></a>Nadřazené elementy  
+### <a name="parent-elements"></a>Nadřazené prvky  
 
-|Prvek|Popis|  
-|-------------|-----------------|  
-|[Projekt](../msbuild/project-element-msbuild.md)|Požadovaný kořenový element [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] souboru projektu.|  
+| Prvek | Popis |
+| - | - |
+| [Projekt](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] souboru projektu. |
 
 ## <a name="example"></a>Příklad  
  Následující příklad kódu ukazuje, jak nastavit vlastnosti na základě podmínky. V tomto příkladu Pokud hodnota `CompileConfig` vlastnost je `DEBUG`, `Optimization`, `Obfuscate`, a `OutputPath` vlastnosti uvnitř `PropertyGroup` element jsou nastavené.  
@@ -73,6 +74,6 @@ Obsahuje sadu uživatelem definované [vlastnost](../msbuild/property-element-ms
 </PropertyGroup>  
 ```  
 
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)  
  [Vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md)

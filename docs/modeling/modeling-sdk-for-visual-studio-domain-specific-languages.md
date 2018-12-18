@@ -1,6 +1,8 @@
 ---
 title: Sada Modeling SDK pro sadu Visual Studio – jazyky domény
+titleSuffix: ''
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,36 +13,38 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 922419a1c0b973f704fdd16273b780e6136aebc2
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 6de309ca6ff9c1813a2a2a6ebc54ea6baa3a795f
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53060475"
 ---
 # <a name="modeling-sdk-for-visual-studio---domain-specific-languages"></a>Sada Modeling SDK pro sadu Visual Studio – jazyky domény
-Pomocí sady SDK modelování pro [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], můžete vytvořit výkonné založené na modelu vývojové nástroje, které můžete integrovat do [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Stejným způsobem můžete vytvořit jednu nebo několik definic modelu a integrovat je do sady nástrojů.
 
- V centru MSDK je definice modelu, který je vytvořen, aby představoval pojmy v oblasti vašeho podnikání. Model s celou řadu nástrojů, jako je například graficky zobrazení, můžete obklopit možnost pro generování kódu a další artefakty příkazy pro transformaci v modelu a umožňuje interakci s kódem a jiných objektů nástroje [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Při vývoji lze model kombinovat s dalšími modely a nástroji, jež tvoří výkonnou sadu nástrojů, které jsou zaměřeny na vývoj.
+Pomocí sady SDK modelování pro sadu Visual Studio můžete vytvořit výkonné založené na modelu vývojářské nástroje, které můžete integrovat do sady Visual Studio. Stejným způsobem můžete vytvořit jednu nebo několik definic modelu a integrovat je do sady nástrojů.
 
- MSDK umožňuje rychlý vývoj modelu ve formě jazyka specifického pro doménu (DSL). Začínáte se speciálním editorem, kterým definujete schéma nebo abstraktní syntaxi a grafickou notaci. Z této definice vygeneruje VMSDK následující položky:
+V centru MSDK je definice modelu, který je vytvořen, aby představoval pojmy v oblasti vašeho podnikání. Je možné ohraničit model s celou řadu nástrojů, jako je diagramatické zobrazení, možnost generování kódu a další artefakty, příkazů pro transformaci modelu a možnost interakce s kódem a dalšími objekty v sadě Visual Studio. Při vývoji lze model kombinovat s dalšími modely a nástroji, jež tvoří výkonnou sadu nástrojů, které jsou zaměřeny na vývoj.
 
--   Model implementace s rozhraním API silného typu, který je spuštěn v obchodě založeném na transakcích.
+MSDK umožňuje rychlý vývoj modelu ve formě jazyka specifického pro doménu (DSL). Začínáte se speciálním editorem, kterým definujete schéma nebo abstraktní syntaxi a grafickou notaci. Z této definice vygeneruje VMSDK následující položky:
 
--   Průzkumník založený na stromové architektuře.
+- Model implementace s rozhraním API silného typu, který je spuštěn v obchodě založeném na transakcích.
 
--   Grafický editor, ve kterém uživatelé mohou zobrazit model nebo jeho části, které definujete.
+- Průzkumník založený na stromové architektuře.
 
--   Metody serializace, které uloží modely ve formátu XML pro čtení.
+- Grafický editor, ve kterém uživatelé mohou zobrazit model nebo jeho části, které definujete.
 
--   Zařízení pro generování programového kódu a jiných artefaktů pomocí šablonování textu.
+- Metody serializace, které uloží modely ve formátu XML pro čtení.
 
- Můžete přizpůsobit a rozšířit všechny tyto funkce. Vaše rozšíření jsou integrována tak, že můžete i nadále aktualizovat definici DSL a znovu generovat funkce bez ztráty rozšíření.
+- Zařízení pro generování programového kódu a jiných artefaktů pomocí šablonování textu.
+
+Můžete přizpůsobit a rozšířit všechny tyto funkce. Vaše rozšíření jsou integrována tak, že můžete i nadále aktualizovat definici DSL a znovu generovat funkce bez ztráty rozšíření.
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
- [Příspěvky blogu související](https://blogs.msdn.microsoft.com/visualstudioalm/tag/code-index/)
+[Související blogové příspěvky](https://blogs.msdn.microsoft.com/visualstudioalm/tag/code-index/)
 
- Pokyny k rozšířené postupy a řešení potíží, najdete v článku [Visual Studio DSL & modelování rozšíření nástrojů fórum](http://go.microsoft.com/fwlink/?LinkID=186074).
+Návod s pokročilými technikami a řešení potíží najdete na webu [fórum Visual Studio DSL & modelování rozšiřitelnosti nástrojů](http://go.microsoft.com/fwlink/?LinkID=186074).
 
 ## <a name="in-this-section"></a>V tomto oddílu
  [Začínáme s jazyky specifickými pro doménu](../modeling/getting-started-with-domain-specific-languages.md)

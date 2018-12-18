@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Vytvoření vašeho prvního doplňku VSTO pro Word | Microsoft Docs'
+title: 'Návod: Vytvoření vašeho prvního doplňku VSTO pro Word'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,28 +18,29 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d7bddcf43d275dc30b0f3825fbb2dbe665e46025
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: cf20b3f742bfc5ff6de6af080f3651f9d9027234
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49940967"
 ---
-# <a name="walkthrough-creating-your-first-vsto-add-in-for-word"></a>Návody: Vytvoření prvního doplňku VSTO pro Word
-  Tento úvodní návod ukazuje, jak vytvořit doplňku VSTO pro aplikaci Microsoft Office Word. Funkce, které vytvoříte v tento druh řešení jsou k dispozici pro aplikace, samostatně, bez ohledu na to, které jsou otevřené dokumenty.  
+# <a name="walkthrough-create-your-first-vsto-add-in-for-word"></a>Návod: Vytvoření vašeho prvního doplňku VSTO pro Word
+  Tento úvodní názorný postup ukazuje, jak k vytvoření doplňku VSTO pro Microsoft Office Word. Funkce, které vytvoříte v tento druh řešení jsou k dispozici aplikace samostatně, bez ohledu na to, které jsou otevřené dokumenty.  
   
  [!INCLUDE[appliesto_wdallapp](../vsto/includes/appliesto-wdallapp-md.md)]  
   
  Tento návod znázorňuje následující úlohy:  
   
--   Vytvoření projektu doplňku VSTO pro Word.  
+- Vytvoření projektu doplňku VSTO pro Word.  
   
--   Psaní kódu, který používá model objektů aplikace Word k přidání textu do dokumentu při jeho uložení.  
+- Psaní kódu, který používá objektový model aplikace Word se při uložení přidat text do dokumentu.  
   
--   Sestavení a spuštění projektu to vyzkoušíte.  
+- Vytváření a spouštění projektů a otestovat ho.  
   
--   Čistí dokončený projekt tak, aby doplňku VSTO již nebude automaticky spustí na svém vývojovém počítači.  
+- Čištění dokončený projekt tak, aby doplňku VSTO už nespouští automaticky na vašem vývojovém počítači.  
   
- [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
 ## <a name="prerequisites"></a>Požadavky  
  K dokončení tohoto návodu budete potřebovat následující komponenty:  
@@ -48,101 +49,101 @@ ms.lasthandoff: 04/16/2018
   
 -   Microsoft Word  
   
-## <a name="creating-the-project"></a>Vytvoření projektu  
+## <a name="create-the-project"></a>Vytvoření projektu  
   
-#### <a name="to-create-a-new-word-vsto-add-in-project-in-visual-studio"></a>K vytvoření nového projektu doplňku VSTO pro Word v sadě Visual Studio  
+### <a name="to-create-a-new-word-vsto-add-in-project-in-visual-studio"></a>Chcete-li vytvořit nový projekt doplňku VSTO pro Word v sadě Visual Studio  
   
 1.  Spustit [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
   
-2.  Na **soubor** nabídky, přejděte na příkaz **nový**a potom klikněte na **projektu**.  
+2.  Na **souboru** nabídky, přejděte k **nový**a potom klikněte na tlačítko **projektu**.  
   
-3.  Rozbalte v podokně šablon **Visual C#** nebo **jazyka Visual Basic**a potom rozbalte **Office/SharePoint**.  
+3.  V podokně šablony rozbalte **Visual C#** nebo **jazyka Visual Basic**a potom rozbalte **Office/SharePoint**.  
   
-4.  V části sada rozšířeného **Office/SharePoint** uzlu, vyberte **Office Add in** uzlu.  
+4.  V rozbalených **Office/SharePoint** uzlu, vyberte **Office Add-ins** uzlu.  
   
-5.  V seznamu šablon projektu vyberte projektu doplňku VSTO pro Word.  
+5.  V seznamu šablon projektu vyberte projekt doplňku VSTO pro Word.  
   
 6.  V **název** zadejte **FirstWordAddIn**.  
   
-7.  Click **OK**.  
+7.  Klikněte na tlačítko **OK**.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] vytvoří **FirstWordAddIn** projektu a otevře soubor ThisAddIn kódu v editoru.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] vytvoří **FirstWordAddIn** projekt a otevře soubor kódu ThisAddIn v editoru.  
   
-## <a name="writing-code-to-add-text-to-the-saved-document"></a>Psaní kódu přidat Text do uložený dokument  
- Dál přidejte kód do souboru kódu ThisAddIn. Nový kód používá k přidání často používaný text do každého dokumentu uloženého v objektovém modelu aplikace Word. Ve výchozím nastavení soubor ThisAddIn kód obsahuje následující generovaný kód:  
+## <a name="write-code-to-add-text-to-the-saved-document"></a>Napsání kódu pro přidání textu k uložené dokumenty  
+ V dalším kroku přidejte kód do soubor kódu ThisAddIn. Nový kód používá k přidání často používaný text do každého dokumentu uloženého objektový model aplikace Word. Ve výchozím nastavení obsahuje soubor kódu ThisAddIn následující generovaného kódu:  
   
--   Částečné definice `ThisAddIn` třídy. Tato třída představuje vstupní bod pro kód a poskytuje přístup k modelu objektů aplikace Word. Další informace najdete v tématu [programování doplňků VSTO](../vsto/programming-vsto-add-ins.md). Zbývající část `ThisAddIn` třída definovaná v souboru skrytá kódu, který byste neměli upravovat.  
+-   Částečnou definici `ThisAddIn` třídy. Tato třída představuje vstupní bod pro kód a poskytuje přístup k objektovému modelu Wordu. Další informace najdete v tématu [doplňků Program VSTO](../vsto/programming-vsto-add-ins.md). Zbývající část `ThisAddIn` třída je definována v souboru skryté kódu, který byste neměli měnit.  
   
--   `ThisAddIn_Startup` a `ThisAddIn_Shutdown` obslužné rutiny událostí. Tyto obslužné rutiny událostí jsou volány při Word načte a uvolní vaší doplňku VSTO. Pomocí těchto obslužných rutin událostí k chybě při inicializaci doplňku VSTO, když je načten a vyčistit prostředky využívané třídou vaší doplňku VSTO v případě, že je odpojen. Další informace najdete v tématu [události v projektech Office](../vsto/events-in-office-projects.md).  
+-   `ThisAddIn_Startup` a `ThisAddIn_Shutdown` obslužných rutin událostí. Tyto obslužné rutiny událostí jsou volány při slovo načte a uvolní doplňku VSTO. Pomocí těchto obslužných rutin událostí k inicializaci doplňku VSTO, když je načten a chcete vyčistit prostředky využívané třídou doplňku VSTO, když je uvolněn. Další informace najdete v tématu [události v projektech pro systém Office](../vsto/events-in-office-projects.md).  
   
-#### <a name="to-add-a-paragraph-of-text-to-the-saved-document"></a>Chcete-li přidat odstavec textu v uloženém dokumentu  
+### <a name="to-add-a-paragraph-of-text-to-the-saved-document"></a>Přidání textu odstavce do uložené dokumenty  
   
-1.  V souboru kódu ThisAddIn, přidejte následující kód, který `ThisAddIn` třídy. Nový kód definuje obslužnou rutinu události pro <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> událost, která se vyvolá, když se dokument uloží.  
+1. V soubor kódu ThisAddIn, přidejte následující kód, který `ThisAddIn` třídy. Definuje obslužnou rutinu události pro nový kód <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> událost, která se vyvolá, když je dokument uložen.  
   
-     Pokud uživatel ukládá dokument, obslužné rutiny události přidá nový text na začátku dokumentu.  
+    Když uživatel uloží dokument, obslužná rutina události přidá nový text na začátku dokumentu.  
   
-     [!code-vb[Trin_WordAddInTutorial#1](../vsto/codesnippet/VisualBasic/FirstWordAddIn/ThisAddIn.vb#1)]
-     [!code-csharp[Trin_WordAddInTutorial#1](../vsto/codesnippet/CSharp/FirstWordAddIn/ThisAddIn.cs#1)]  
+    [!code-vb[Trin_WordAddInTutorial#1](../vsto/codesnippet/VisualBasic/FirstWordAddIn/ThisAddIn.vb#1)]
+    [!code-csharp[Trin_WordAddInTutorial#1](../vsto/codesnippet/CSharp/FirstWordAddIn/ThisAddIn.cs#1)]  
   
-    > [!NOTE]  
-    >  Tento kód používá pro přístup k v prvním odstavci hodnotou indexu 1 <xref:Microsoft.Office.Interop.Word._Document.Paragraphs%2A> kolekce. Visual Basic a Visual C# použít pole založené na 0, dolní meze pole většina kolekcí ve model objektů aplikace Word je 1. Další informace najdete v tématu [psaní kódu v řešeních pro systém Office](../vsto/writing-code-in-office-solutions.md).  
+   > [!NOTE]  
+   >  Tento kód používá hodnotu indexu 1 pro přístup k prvního odstavce <xref:Microsoft.Office.Interop.Word._Document.Paragraphs%2A> kolekce. Přestože Visual Basic a Visual C# použít pole založené na 0, spodní hranice pole většina kolekcí v objektovém modelu aplikace Word je 1. Další informace najdete v tématu [psaní kódu v řešeních pro systém Office](../vsto/writing-code-in-office-solutions.md).  
   
-2.  Pokud používáte C#, přidat následující požadované kód, který `ThisAddIn_Startup` obslužné rutiny události. Tento kód se používá k připojení `Application_DocumentBeforeSave` obslužné rutiny události s <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> událostí.  
+2. Pokud používáte C#, přidejte následující kód vyžaduje k `ThisAddIn_Startup` obslužné rutiny události. Tento kód slouží k připojení `Application_DocumentBeforeSave` obslužné rutině události <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> událostí.  
   
-     [!code-csharp[Trin_WordAddInTutorial#2](../vsto/codesnippet/CSharp/FirstWordAddIn/ThisAddIn.cs#2)]  
+    [!code-csharp[Trin_WordAddInTutorial#2](../vsto/codesnippet/CSharp/FirstWordAddIn/ThisAddIn.cs#2)]  
   
- Předchozí příklady kódu k úpravě dokumentu při jeho uložení, použijte následující objekty:  
+   V předchozích příkladech kódu změnit dokument při uložení, použijte následující objekty:  
   
--   `Application` Pole z `ThisAddIn` třídy. `Application` Pole vrátí <xref:Microsoft.Office.Interop.Word.Application> objekt, který představuje aktuální instanci aplikace Word.  
+-   `Application` Pole `ThisAddIn` třídy. `Application` Pole vrátí <xref:Microsoft.Office.Interop.Word.Application> objektu, který představuje aktuální instanci aplikace Word.  
   
--   `Doc` Parametr obslužné rutiny události pro <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> událostí. `Doc` Parametr <xref:Microsoft.Office.Interop.Word.Document> objekt, který reprezentuje uložený dokument. Další informace najdete v tématu [přehled modelu objektů aplikace Word](../vsto/word-object-model-overview.md).  
+-   `Doc` Parametr obslužné rutiny události pro <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentBeforeSave> událostí. `Doc` Parametr je <xref:Microsoft.Office.Interop.Word.Document> objektu, který představuje uložený dokument. Další informace najdete v tématu [přehled modelu objektů aplikace Word](../vsto/word-object-model-overview.md).  
   
-## <a name="testing-the-project"></a>Testování projektu  
+## <a name="test-the-project"></a>Testování projektu  
   
-#### <a name="to-test-the-project"></a>Otestování projektu  
+### <a name="to-test-the-project"></a>Otestování projektu  
   
-1.  Stiskněte klávesu **F5** sestavení a spuštění projektu.  
+1.  Stisknutím klávesy **F5** sestavení a spuštění projektu.  
   
-     Při sestavování projektu se zkompilovat kód do sestavení, které je součástí složku výstupu sestavení pro projekt. Visual Studio také vytvoří sadu položky registru, které umožňují Word zjišťovat a načíst doplňku VSTO a nakonfiguruje nastavení zabezpečení na vývojovém počítači povolit doplňku VSTO ke spuštění. Další informace najdete v tématu [vytváření řešení pro systém Office](../vsto/building-office-solutions.md).  
+     Při sestavování projektu kód je zkompilován do sestavení, která je zahrnutá ve výstupní složce sestavení pro projekt. Visual Studio také vytvoří sadu položky registru, kterými může zjišťovat a načíst doplňku VSTO ve Wordu a nakonfiguruje nastavení zabezpečení na vývojovém počítači povolit doplňku VSTO pro spuštění. Další informace najdete v tématu [řešení pro systém Office sestavení](../vsto/building-office-solutions.md).  
   
-2.  V aplikaci Word uloží aktivní dokument.  
+2.  V aplikaci Word uložte aktivní dokument.  
   
-3.  Ověřte, zda je přidána následující text k dokumentu.  
+3.  Ověřte, že následující text je přidán do dokumentu.  
   
-     **Tento text byl přidán pomocí kódu.**  
+     **Tento text byl přidán s použitím kódu.**  
   
-4.  Zavřete aplikace Word.  
+4.  Zavřete aplikaci Word.  
   
-## <a name="cleaning-up-the-project"></a>Čištění projektu  
- Po dokončení vývoj projektu, odeberte z vývojovém počítači doplňku VSTO sestavení, položky registru a nastavení zabezpečení. V opačném doplňku VSTO bude nadále spouštět při každém otevření aplikace Word ve svém vývojovém počítači.  
+## <a name="clean-up-the-project"></a>Vyčistěte projekt  
+ Po dokončení vývoje projektu doplňku VSTO sestavení, položky registru a nastavení zabezpečení odeberte z vývojového počítače. V opačném případě doplňku VSTO nadále spustí při každém otevření aplikace Word ve svém vývojovém počítači.  
   
-#### <a name="to-clean-up-the-completed-project-on-your-development-computer"></a>Vyčistěte dokončený projekt na vývojovém počítači  
+### <a name="to-clean-up-the-completed-project-on-your-development-computer"></a>Chcete-li vyčistit dokončený projekt na vašem vývojovém počítači  
   
 1.  V sadě Visual Studio na **sestavení** nabídky, klikněte na tlačítko **Vyčistit řešení**.  
   
 ## <a name="next-steps"></a>Další kroky  
- Teď, když jste vytvořili základní Add-in VSTO pro Word, další informace o tom, jak vyvíjet doplňků VSTO z těchto témat:  
+ Teď, když jste vytvořili základní doplňku VSTO pro Word, můžete další informace o tom, jak vývoj doplňků VSTO z těchto témat:  
   
--   Obecné programování úlohy, které můžete provádět v doplňcích VSTO: [programování doplňků VSTO](../vsto/programming-vsto-add-ins.md).  
+-   Obecné programování úkolů, které můžete provádět v doplňcích VSTO: [doplňků Program VSTO](../vsto/programming-vsto-add-ins.md).  
   
--   Úlohy programování, které jsou specifické pro doplňků VSTO pro Word: [řešení pro aplikaci Word](../vsto/word-solutions.md).  
+-   Úkoly programování, které jsou specifické pro doplňky VSTO pro Word: [řešení aplikace Word](../vsto/word-solutions.md).  
   
--   Pomocí modelu objektů aplikace Word: [přehled modelu objektů aplikace Word](../vsto/word-object-model-overview.md).  
+-   Použití objektového modelu aplikace Word: [přehled modelu objektů aplikace Word](../vsto/word-object-model-overview.md).  
   
--   Přizpůsobení uživatelského rozhraní aplikace Word, například pomocí vytvoření vlastní karty na pásu karet nebo vytváření vlastních vlastního podokna úloh: [přizpůsobení uživatelského rozhraní Office](../vsto/office-ui-customization.md).  
+-   Přizpůsobení uživatelského rozhraní aplikace Word, například podle přidat vlastní kartu na pás karet nebo vytváření vlastních vlastního podokna úloh: [přizpůsobení uživatelského rozhraní Office](../vsto/office-ui-customization.md).  
   
--   Sestavování a ladění doplňků VSTO pro Word: [vytváření řešení pro systém Office](../vsto/building-office-solutions.md).  
+-   Sestavování a ladění doplňků VSTO pro Word: [řešení pro systém Office sestavení](../vsto/building-office-solutions.md).  
   
 -   Nasazení doplňků VSTO pro Word: [nasazení řešení Office](../vsto/deploying-an-office-solution.md).  
   
-## <a name="see-also"></a>Viz také  
- [Přehled vývoje řešení pro systém Office &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)   
+## <a name="see-also"></a>Viz také:  
+ [Přehled vývoje řešení pro Office &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)   
  [Řešení aplikace Word](../vsto/word-solutions.md)   
  [Programování doplňků VSTO](../vsto/programming-vsto-add-ins.md)   
  [Přehled modelu objektů aplikace Word](../vsto/word-object-model-overview.md)   
- [Přizpůsobení uživatelského rozhraní sady Office](../vsto/office-ui-customization.md)   
+ [Přizpůsobení uživatelského rozhraní systému Office](../vsto/office-ui-customization.md)   
  [Vytváření řešení pro systém Office](../vsto/building-office-solutions.md)   
  [Nasazení řešení Office](../vsto/deploying-an-office-solution.md)   
- [Přehled šablon projektů Microsoft Office Project](../vsto/office-project-templates-overview.md)  
+ [Přehled šablon projektů Office](../vsto/office-project-templates-overview.md)  
   
   

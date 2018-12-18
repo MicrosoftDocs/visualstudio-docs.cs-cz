@@ -1,5 +1,5 @@
 ---
-title: DEBUG_REASON | Microsoft Docs
+title: DEBUG_REASON | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 47cfd171d23420396c6d7ab5416db32cc05511f0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3f3fccdd43b7d26a5bb2dcc5799d77afff6614d1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49868362"
 ---
 # <a name="debugreason"></a>DEBUG_REASON
 Určuje, proč byl spuštěn proces pro ladění.  
@@ -49,22 +50,22 @@ public enum enum_DEBUG_REASON {
   
 #### <a name="parameters"></a>Parametry  
  DEBUG_REASON_ERROR  
- Došlo k chybě nespecifickou (používá se jako výchozí podmínku Pokud žádná z dalších důvodů, proč přizpůsobit).  
+ Došlo k chybě nespecifickou (používá se jako výchozí podmínku Pokud žádná z nich důvodů, proč přizpůsobit).  
   
  DEBUG_REASON_USER_LAUNCHED  
  Proces byl spuštěn na žádost uživatele.  
   
  DEBUG_REASON_USER_ATTACHED  
- Proces spuštění již byl připojený k uživatelem.  
+ Již spuštěnému procesu byl připojen k uživatelem.  
   
  DEBUG_REASON_AUTO_ATTACHED  
- Proces byl připojený k automaticky, pokud byl spuštěn.  
+ Proces byl automaticky připojen k při jejím spuštění.  
   
  DEBUG_REASON_CAUSALITY  
- Proces byl spuštěn z důvodu *pouze za běhu* ladění událostí (JIT).  
+ Proces byl spuštěn z důvodu *Just-In-Time* ladění události (JIT).  
   
 ## <a name="remarks"></a>Poznámky  
- Vrácená z [GetDebugReason](../../../extensibility/debugger/reference/idebugprocess3-getdebugreason.md) metoda.  
+ Vrátilo [GetDebugReason](../../../extensibility/debugger/reference/idebugprocess3-getdebugreason.md) metody.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

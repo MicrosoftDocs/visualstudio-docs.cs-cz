@@ -1,5 +1,5 @@
 ---
-title: IDebugExceptionEvent2::GetExceptionDescription | Microsoft Docs
+title: IDebugExceptionEvent2::GetExceptionDescription | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 35baacc0eca2919e12a9056b902ab551e7f824bd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 61dcc2d961281b620d6670c7355f026b6207554b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49891602"
 ---
 # <a name="idebugexceptionevent2getexceptiondescription"></a>IDebugExceptionEvent2::GetExceptionDescription
-Získá popis zobrazitelné výjimky.  
+Získá zobrazitelný popis výjimky.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +41,13 @@ int GetExceptionDescription(
   
 #### <a name="parameters"></a>Parametry  
  `pbstrDescription`  
- [out] Vrátí zobrazitelné popis výjimky.  
+ [out] Vrátí zobrazitelný popis výjimky.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda vrátí řetězec je obvykle název výjimky a je zobrazen v nabídce **výstup** okno při výskytu výjimky.  
+ Řetězec vrácený z této metody je obvykle název výjimky a je zobrazena ve **výstup** okno, když dojde k výjimce.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)

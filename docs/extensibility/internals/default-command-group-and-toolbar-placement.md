@@ -1,5 +1,5 @@
 ---
-title: Výchozí příkaz, skupiny a umístění panelu nástrojů | Microsoft Docs
+title: Výchozí příkaz, skupiny a umístění nástrojů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,30 +18,31 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0753a29e323f18ad40bcc62a70cf8e9b1123b728
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: da5716460c428098b2b6cc3bb78a51c3831201b2
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39498227"
 ---
-# <a name="default-command-group-and-toolbar-placement"></a>Příkaz výchozí skupiny a umístění panelu nástrojů
-Pro produkt jednotnost a stabilitu, uživatelské rozhraní zobrazí určitých skupin příkaz ve výchozím nastavení, a [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] obsahuje definice pro příkazy a příkaz skupiny. VSPackages můžete také použít standardní příkazy a příkaz skupiny.  
+# <a name="default-command-group-and-toolbar-placement"></a>Výchozí umístění příkazu, skupiny a nástrojů
+Sjednocení produktu a stability, uživatelské rozhraní zobrazí určité skupiny příkazů ve výchozím nastavení, a [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] obsahuje definice pro příkazy a skupin. Rozšíření VSPackages můžete taky použít standardní příkazy a skupin.  
   
- Výchozí skupiny příkaz spadají do tří kategorií: IDE příkazy, příkazy produktu a příkazů editoru.  
+ Příkaz výchozích spadají do tří kategorií: integrované vývojové prostředí příkazy, příkazy produktu a příkazů editoru.  
   
-## <a name="default-ide-commands"></a>Výchozí IDE příkazy  
- Panel nástrojů IDE výchozí obsahuje příkazy, které jsou sdíleny všechny produkty, které jsou obsažené v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Patří mezi ně příkazy týkající se operací obecné projektu, například **Uložit** příkaz a **přidat položku** příkaz. VSPackages neměli přidat do ani odečtena z tohoto panelu nástrojů, s jednou výjimkou: Pokud produkt nebo VSPackage přidá nové okno nástroje, pak okna musí být přidaní do seznamu k dispozici nástroj windows na **zobrazení** nabídky. Nové produkty nebo VSPackages můžete přidat vlastní panel nástrojů.  
+## <a name="default-ide-commands"></a>Výchozí prostředí IDE příkazy  
+ Integrované vývojové prostředí nástrojů výchozí obsahuje příkazy, které sdílí všechny produkty, které jsou obsaženy v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Patří mezi ně příkazy týkající se operací obecného projektu, například **Uložit** příkazu a **přidat položku** příkazu. Rozšíření VSPackages by neměl přidat k nebo odečíst od tento panel nástrojů s jednou výjimkou: Pokud produktu nebo VSPackage přidá nového okna nástroje, pak v okně přidaly do seznamu k dispozici nástroj windows na **zobrazení** nabídky. Vlastní panel nástrojů můžete přidat nové produkty nebo rozšíření VSPackages.  
   
 ## <a name="default-product-commands"></a>Výchozí produktu příkazy  
- Každý produkt může poskytovat IDE s vlastní výchozí panel nástrojů, která obsahuje důležité a často používané příkazy. Je však nejvhodnější, používat stávající nabídek a panelů nástrojů, kdykoli je to možné a doplní podle potřeby s panelů nástrojů konkrétním úlohám.  
+ Integrované vývojové prostředí s vlastní výchozí panel nástrojů, která obsahuje důležité a často používané příkazy můžete zadat jednotlivé produkty. Doporučujeme, ale používat stávající nabídky a panely nástrojů, kdykoli je to možné a doplnit je panelů specifické úkoly podle potřeby.  
   
- Pole s prioritou pro panel nástrojů Určuje umístění jeho řádek. Nulové priority umístí panelu nástrojů na třetí řádek (řádek 3), pod panelu nabídek (řádek 1) a **standardní** panelu nástrojů (řádek 2). Proto se zobrazí na řádku panelů nástrojů (s prioritou + 3). Následné panely nástrojů jsou umístěny na stejném řádku, pokud je prostor; jinak se automaticky přesunou na další řádek.  
+ Pole Priorita pro panel nástrojů určuje jeho umístění řádku. Nulové priority umístí panelu nástrojů na třetím řádku (řádek 3), pod nabídek (řádek 1) a **standardní** nástrojů (řádek 2). Proto se zobrazí na řádku panelů nástrojů (Priorita + 3). Následné panely nástrojů jsou umístěny na stejném řádku, pokud je volného místa; v opačném případě se se automaticky přesouvají na dalším řádku.  
   
-## <a name="default-editor-commands"></a>Výchozí příkazů editoru  
- VSPackage poskytující vlastního editoru by měl poskytovat výchozí panel nástrojů, který obsahuje nejdůležitější a často používané příkazy v této editoru. Panel nástrojů editoru by se zobrazit při editoru aktivní a skryt, pokud editor není aktivní. Tento přehled je řízena v `VisibilityConstraints Element` .vsct souboru.  
+## <a name="default-editor-commands"></a>Výchozí editor příkazy  
+ VSPackage, která poskytuje vlastní editor by měla poskytnout výchozí nástrojů, který obsahuje nejdůležitější a často používané příkazy v tomto editoru. Zobrazit panel nástrojů editoru při editoru aktivní a skryt, pokud editor není aktivní. Tento přehled slouží v `VisibilityConstraints` elementu *.vsct* souboru.  
   
- Panely nástrojů editoru musí být umístěny pod panely nástrojů rozhraní IDE a produkt.  
+ Panely nástrojů editoru by měl být umístěn pod integrované vývojové prostředí a produktu panely nástrojů.  
   
-## <a name="see-also"></a>Viz také  
- [Příkazy definované IDE, nabídky a skupin](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)   
+## <a name="see-also"></a>Viz také:  
+ [Příkazy definované prostředím IDE, nabídky a skupiny](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)   
  [Jak balíčky VSPackages přidávají prvky uživatelského rozhraní](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)

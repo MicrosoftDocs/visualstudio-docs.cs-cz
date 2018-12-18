@@ -1,5 +1,5 @@
 ---
-title: IDebugModuleLoadEvent2::GetModule | Microsoft Docs
+title: IDebugModuleLoadEvent2::GetModule | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b6188ba6842a922fa0758a21c0f496f50889f8b3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f0a043b3842805357de685484fcc4daf935aefcc
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49906829"
 ---
 # <a name="idebugmoduleloadevent2getmodule"></a>IDebugModuleLoadEvent2::GetModule
-Získá modul, který je načten nebo odpojeno.  
+Získá modul, který je načten nebo byla uvolněna.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,13 +48,13 @@ int GetModule(
  [out] Vrátí [IDebugModule2](../../../extensibility/debugger/reference/idebugmodule2.md) objekt, který představuje modul, který je načítání nebo uvolnění.  
   
  `pbstrDebugMessage`  
- [ve out] Vrátí se volitelná zpráva popisující této události. Pokud tento parametr hodnotu null, je požadována žádná zpráva.  
+ [out v] Vrátí volitelnou zprávu s popisem této události. Pokud je tento parametr hodnotu null, je požadována žádná zpráva.  
   
  `pbLoad`  
- [ve out] Nenulové hodnoty (`TRUE`) Pokud je modul načítání a nula (`FALSE`) Pokud je uvolnění modulu. Pokud tento parametr hodnotu null, je požadována bez stavu.  
+ [out v] Nenulová (`TRUE`) Pokud modul je nula a načítání (`FALSE`) Pokud uvolnění modulu. Pokud je tento parametr hodnotu null, je požadována bez stavu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugModuleLoadEvent2](../../../extensibility/debugger/reference/idebugmoduleloadevent2.md)   

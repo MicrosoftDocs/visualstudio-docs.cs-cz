@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31476628"
 ---
 # <a name="window-search-dialog-box"></a>Dialogové okno hledání oken
 Pomocí tohoto dialogového okna můžete najít a vyberte uzel pro konkrétní okno v [zobrazení oken](../debugger/windows-view.md). K zobrazení tohoto dialogového okna, Přesun zaměření pro zobrazení období systému Windows. Zvolte **najít okno** z **vyhledávání** nabídky.  

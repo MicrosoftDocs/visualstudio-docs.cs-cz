@@ -1,5 +1,5 @@
 ---
-title: Přidání nabídky na panelu nabídek Visual Studio | Microsoft Docs
+title: Přidání nabídky do řádku nabídek sady Visual Studio | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,86 +14,85 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3a391da85c38176d79a1c77ce8836ce510e8d27e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 42c1a9cd2d1c9d1349b07e06d65a8da6a41b4245
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49938216"
 ---
-# <a name="adding-a-menu-to-the-visual-studio-menu-bar"></a>Přidání nabídky na panelu nabídek Visual Studio
-Tento návod ukazuje, jak přidat nabídku na panelu nabídek integrované vývojové prostředí (IDE) sady Visual Studio. Panel nabídek IDE obsahuje nabídky kategorie, jako **soubor**, **upravit**, **zobrazení**, **okno**, a **pomoci** .  
+# <a name="add-a-menu-to-the-visual-studio-menu-bar"></a>Přidání nabídky na řádku nabídek sady Visual Studio
+Tento návod ukazuje, jak přidat do nabídky na řádku nabídek sady Visual Studio integrované vývojové prostředí (IDE). Panel nabídek integrovaného vývojového prostředí obsahuje kategorií nabídek, jako **souboru**, **upravit**, **zobrazení**, **okno**, a **pomáhají** .  
   
- Před přidáním nové nabídky do nabídek v sadě Visual Studio, zvažte, zda má být umístěn příkazech v rámci existující nabídky. Další informace o příkazu umístění najdete v tématu [nabídek a příkazů pro sadu Visual Studio](../extensibility/ux-guidelines/menus-and-commands-for-visual-studio.md).  
+ Před přidáním nové nabídky na řádku nabídek sady Visual Studio, zvažte, jestli vaše příkazy by měl být umístěn v rámci existující nabídky. Další informace o umístění příkazu najdete v tématu [nabídek a příkazů pro sadu Visual Studio](../extensibility/ux-guidelines/menus-and-commands-for-visual-studio.md).  
   
- Nabídky jsou deklarované v souboru .vsct projektu. Další informace o nabídky a .vsct souborů najdete v tématu [příkazy, nabídek a panelů nástrojů](../extensibility/internals/commands-menus-and-toolbars.md).  
+ Nabídky jsou deklarovány v *.vsct* souboru projektu. Další informace o nabídkách a *.vsct* soubory, naleznete v tématu [příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md).  
   
- Provedením tohoto návodu, můžete vytvořit nabídky s názvem **TestMenu** obsahující jeden příkaz.  
+ V tomto návodu, můžete vytvořit nabídky s názvem **TestMenu** , která obsahuje jeden příkaz.  
   
 ## <a name="prerequisites"></a>Požadavky  
- Od sady Visual Studio 2015 se neinstalovat sadu Visual Studio SDK z webu Stažení softwaru. Je zahrnuta jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+ Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK ze služby Stažení softwaru. Je zahrnut jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## <a name="creating-a-vsix-project-that-has-a-custom-command-item-template"></a>Vytvoření projektu VSIX, který má příkaz vlastní šablony položek  
+## <a name="create-a-vsix-project-that-has-a-custom-command-item-template"></a>Vytvořte projekt VSIX, který obsahuje šablonu položky vlastní příkaz.  
   
-1.  Vytvoření projektu VSIX s názvem `TopLevelMenu`. Můžete najít v šabloně projektů VSIX **nový projekt** dialogové okno pod **Visual C#** / **rozšiřitelnost**.  Další informace najdete v tématu [vytvoření rozšíření pomocí příkazu v nabídce](../extensibility/creating-an-extension-with-a-menu-command.md).  
+1.  Vytvořte projekt VSIX s názvem `TopLevelMenu`. Můžete najít šablonu projektu VSIX v **nový projekt** dialogového okna v části **Visual C#** / **rozšiřitelnost**.  Další informace najdete v tématu [vytváření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md).  
   
-2.  Když na projekt se otevře, přidejte šablonu a vlastní příkaz položka s názvem **TestCommand**. V **Průzkumníku řešení**, klikněte pravým tlačítkem na uzel projektu a vyberte **přidat / novou položku**. V **přidat novou položku** dialogové okno, přejděte na **Visual C# nebo rozšíření** a vyberte **vlastní příkaz**. V **název** pole v dolní části okna, změňte název souboru příkaz **TestCommand.cs**.  
+2.  Po otevření projektu přidat vlastní příkaz šablonu položky s názvem **TestCommand**. V **Průzkumníka řešení**, klikněte pravým tlačítkem na uzel projektu a vyberte **Add / nová položka**. V **přidat novou položku** dialogové okno, přejděte na **Visual C# / rozšíření** a vyberte **vlastního příkazu**. V **název** pole v dolní části okna, změňte název souboru příkazu *TestCommand.cs*.  
   
-## <a name="creating-a-menu-on-the-ide-menu-bar"></a>Vytvoření nabídky v řádku nabídek IDE  
+## <a name="create-a-menu-on-the-ide-menu-bar"></a>Vytvořit nabídku v panelu nabídek integrovaného vývojového prostředí  
   
-#### <a name="to-create-a-menu"></a>Vytvoření nabídky  
+1. V **Průzkumníka řešení**, otevřete *TestCommandPackage.vsct*.  
   
-1.  V **Průzkumníku**, otevřete TestCommandPackage.vsct.  
+    Na konci souboru, je \<symboly > uzel, který obsahuje několik \<guidsymbol – > uzlů. V uzlech s názvem guidTestCommandPackageCmdSet přidejte nový symbol následujícím způsobem:  
   
-     Na konci souboru, je \<symboly > uzlu, který obsahuje několik \<GuidSymbol > uzly. V uzlu s názvem guidTestCommandPackageCmdSet přidejte nový symbol následujícím způsobem:  
+   ```xml  
+   <IDSymbol name="TopLevelMenu" value="0x1021"/>  
+   ```  
   
-    ```xml  
-    <IDSymbol name="TopLevelMenu" value="0x1021"/>  
-    ```  
+2. Vytvořte prázdnou \<nabídky > uzlu \<příkazy > uzlu, těsně před \<skupiny >. V \<nabídky > uzel, přidejte \<nabídky > uzlu, následujícím způsobem:  
   
-2.  Vytvořte prázdnou \<nabídky > uzlu \<příkazy > uzlu, těsně před \<skupiny >. V \<nabídky > uzlu, přidejte \<nabídky > uzlu, následujícím způsobem:  
+   ```xml  
+   <Menus>  
+         <Menu guid="guidTestCommandPackageCmdSet" id="TopLevelMenu" priority="0x700" type="Menu">  
+           <Parent guid="guidSHLMainMenu"  
+                   id="IDG_VS_MM_TOOLSADDINS" />  
+           <Strings>  
+             <ButtonText>TestMenu</ButtonText>  
+             <CommandName>TestMenu</CommandName>  
+           </Strings>  
+       </Menu>  
+   </Menus>  
+   ```  
   
-    ```xml  
-    <Menus>  
-          <Menu guid="guidTestCommandPackageCmdSet" id="TopLevelMenu" priority="0x700" type="Menu">  
-            <Parent guid="guidSHLMainMenu"  
-                    id="IDG_VS_MM_TOOLSADDINS" />  
-            <Strings>  
-              <ButtonText>TestMenu</ButtonText>  
-              <CommandName>TestMenu</CommandName>  
-            </Strings>  
-        </Menu>  
-    </Menus>  
-    ```  
+    `guid` a `id` hodnoty nabídky určují sadu příkazů a konkrétní nabídky v sadu příkazů.  
   
-     `guid` a `id` hodnoty v nabídce určují sadu příkazů nástroje a konkrétní nabídky v sadu příkazů.  
+    `guid` a `id` nadřazených hodnot umístění v nabídce v části řádku nabídek sady Visual Studio, který obsahuje nástroje a Add-ins nabídky.  
   
-     `guid` a `id` hodnoty nadřazeného prvku pozice v nabídce v části panelu nabídek Visual Studio, který obsahuje nástroje a doplňky nabídky.  
+    Hodnota `CommandName` řetězec Určuje, že by se zobrazit text v položce nabídky.  
   
-     Hodnota `CommandName` řetězec Určuje, že by se zobrazit text v položku nabídky.  
+3. V \<skupiny > vyhledejte \<skupiny > a změnit \<nadřazené > element tak, aby odkazoval do nabídky jsme právě přidali:  
   
-3.  V \<skupiny > vyhledejte \<skupiny > a změňte \<nadřazené > element tak, aby odkazovaly do nabídky, kterou jsme právě přidali:  
+   ```csharp  
+   <Groups>  
+         <Group guid="guidTestCommandPackageCmdSet" id="MyMenuGroup" priority="0x0600">  
+           <Parent guid="guidTestCommandPackageCmdSet" id="TopLevelMenu"/>  
+         </Group>  
+       </Groups>  
+   ```  
   
-    ```csharp  
-    <Groups>  
-          <Group guid="guidTestCommandPackageCmdSet" id="MyMenuGroup" priority="0x0600">  
-            <Parent guid="guidTestCommandPackageCmdSet" id="TopLevelMenu"/>  
-          </Group>  
-        </Groups>  
-    ```  
+    Díky tomu je součástí skupiny v nové nabídce.  
   
-     Díky tomu skupiny součástí nové nabídky.  
+4. Najít `Buttons` oddílu. Všimněte si, že [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] generoval balíček šablony `Button` element, který má nadřazený nastavena na `MyMenuGroup`. Tento příkaz v důsledku toho se zobrazí v nabídce.  
   
-4.  Najít `Buttons` části. Všimněte si, že [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] vygenerovala balíčku šablony `Button` element, který má nadřazený nastavena na `MyMenuGroup`. V důsledku toho se tento příkaz zobrazí na vaší nabídky.  
+## <a name="build-and-test-the-extension"></a>Vytváření a testování rozšíření  
   
-## <a name="building-and-testing-the-extension"></a>Vytváření a testování rozšíření  
+1.  Sestavte projekt a spusťte ladění. Instancí experimentální instanci aplikace by se zobrazit.  
   
-1.  Sestavte projekt a spusťte ladění. Instance experimentální instance by se zobrazit.  
+2.  By měl obsahovat nabídek v experimentální instanci **TestMenu** nabídky.  
   
-2.  Panel nabídek v experimentální instanci by měl obsahovat **TestMenu** nabídky.  
+3.  Na **TestMenu** nabídky, klikněte na tlačítko **vyvolat příkaz Test**.  
   
-3.  Na **TestMenu** nabídky, klikněte na tlačítko **vyvolání příkazu testovací**.  
+     Okno se zprávou by měla objevit a zobrazit zprávu "TestCommand balíček uvnitř TopLevelMenu.TestCommand.MenuItemCallback()". To znamená, že nový příkaz funguje.  
   
-     Okno se zprávou by měl zobrazit a zobrazí se zpráva "TestCommand balíček uvnitř TopLevelMenu.TestCommand.MenuItemCallback()". To znamená, že nový příkaz funguje.  
-  
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md)

@@ -1,5 +1,5 @@
 ---
-title: Přidání ověřování vlastní architektury do diagramů závislostí
+title: Přidání vlastního ověřování architektury do diagramů závislostí
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,209 +9,220 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 3fbc4762e1bf5f08b81b884d2a8acea2f16283ed
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: e9343ed8fdb1f3993fcd5c2f70595fd4bdd92dcd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49875447"
 ---
-# <a name="add-custom-architecture-validation-to-dependency-diagrams"></a>Přidání ověřování vlastní architektury do diagramů závislostí
-V sadě Visual Studio můžete uživatele ověřit zdrojového kódu v projektu proti model vrstvy, aby můžete ověřit, že zdrojový kód odpovídá závislosti v diagramu závislostí. Je algoritmus standardní ověřování, ale můžete definovat vlastní rozšíření ověření.
+# <a name="add-custom-architecture-validation-to-dependency-diagrams"></a>Přidání vlastního ověřování architektury do diagramů závislostí
 
- Když uživatel vybere **ověření architektura** příkazů v diagramu závislostí, je volána metoda standardní ověřování, za nímž následuje žádné ověření rozšíření, které byly nainstalovány.
+V sadě Visual Studio uživatelé mohou ověřit zdrojový kód v projektu proti vrstvě modelu, tak, aby mohli ověřit, že zdrojový kód odpovídá závislostem na diagramu závislostí. Existuje standardní ověřovací algoritmus, ale můžete definovat vlastní rozšíření ověřování.
+
+Když uživatel vybere **ověřit architekturu** příkaz na diagram závislostí, je vyvolána metoda standardního ověření, následovaný všemi rozšířeními ověření, které byly nainstalovány.
 
 > [!NOTE]
->  V diagramu závislostí je hlavním účelem ověření Porovnejte diagram s kód programu v dalších částech tohoto řešení.
+> V diagramu závislostí je hlavním účelem ověření porovnat diagram pomocí programového kódu v dalších částech tohoto řešení.
 
- Rozšíření vrstvy ověření můžete balíček do Visual Studio integrace rozšíření (VSIX), který distribuujete do jiných uživatelů v sadě Visual Studio. Vaše ověření VSIX můžete umístit buď samostatně nebo v kombinaci se ve stejné VSIX jako ostatní rozšíření. Kód validátoru musí zápisu v jeho vlastní projektu sady Visual Studio, není ve stejném projektu jako ostatní rozšíření.
+Rozšíření ověření vrstvy můžete zabalit do Visual Studio integrace rozšíření (VSIX), které můžete distribuovat ostatním uživatelům aplikace Visual Studio. V rozšíření VSIX můžete umístit svůj validátor buď samostatně, nebo ho můžete zkombinovat ve stejném souboru VSIX jako další rozšíření. Měli byste psát kód validátoru ve svém vlastním projektu sady Visual Studio, není ve stejném projektu jako další rozšíření.
 
 > [!WARNING]
->  Po vytvoření projektu ověření, zkopírujte [ukázkový kód](#example) na konci tohoto tématu a potom upravením, že na své vlastní potřebuje.
+> Po vytvoření projektu ověření zkopírujte [ukázkový kód](#example) na konci tohoto tématu a upravte, vlastních potřeb.
 
 ## <a name="requirements"></a>Požadavky
- V tématu [požadavky](../modeling/extend-layer-diagrams.md#prereqs).
 
-## <a name="defining-a-layer-validator-in-a-new-vsix"></a>Definování validátor vrstvy v nové VSIX
- Nejrychlejší způsob vytváření validátor se má používat v šabloně projektů. Tento kód a VSIX manifest umístí do stejného projektu.
+Zobrazit [požadavky](../modeling/extend-layer-diagrams.md#prereqs).
 
-#### <a name="to-define-an-extension-by-using-a-project-template"></a>Můžete definovat rozšíření pomocí šablony projektu
+## <a name="defining-a-layer-validator-in-a-new-vsix"></a>Definování ověřování vrstvy v novém souboru VSIX
 
-1.  Vytvoření projektu v nové řešení pomocí **nový projekt** příkaz na **souboru** nabídky.
+Nejrychlejší způsob vytváření validátoru je použití šablony projektu. To umístí kód a VSIX manifest do stejného projektu.
 
-2.  V **nový projekt** dialogovém **projekty modelování**, vyberte **vrstvy Návrhář ověření rozšíření**.
+### <a name="to-define-an-extension-by-using-a-project-template"></a>Definování rozšíření pomocí šablony projektu
 
-     Vytvoří šablona dílčí projekt, který obsahuje malé příklad.
+1. Vytvoření projektu v novém řešení pomocí **nový projekt** příkaz **souboru** nabídky.
 
-    > [!WARNING]
-    >  Do šablony makethe fungovat správně:
-    >
-    >  -   Upravit volání `LogValidationError` odebrat volitelné argumenty `errorSourceNodes` a `errorTargetNodes`.
-    > -   Pokud používáte vlastní vlastnosti, použijte aktualizace uvedený v [přidání vlastních vlastností do diagramů závislostí](../modeling/add-custom-properties-to-layer-diagrams.md).
+2. V **nový projekt** dialogovém okně **projekty modelování**vyberte **rozšíření ověřování návrháře vrstev**.
 
-3.  Upravte kód, který definuje váš ověření. Další informace najdete v tématu [programování ověření](#programming).
+    Šablona vytvoří projekt, který obsahuje malý příklad.
 
-4.  K testování rozšíření, najdete v části [ladění ověření vrstev](#debugging).
+   > [!WARNING]
+   > Chcete-li správnou funkčnost šablony:
+   >
+   > - Upravte volání `LogValidationError` odebrat volitelné argumenty `errorSourceNodes` a `errorTargetNodes`.
+   > - Pokud používáte vlastní vlastnosti, použijte aktualizace uvedené v [přidání vlastních vlastností do diagramů závislostí](../modeling/add-custom-properties-to-layer-diagrams.md).
 
-    > [!NOTE]
-    >  Metodu bude volán jen v konkrétních případech a zarážky nebude fungovat automaticky. Další informace najdete v tématu [ladění ověření vrstev](#debugging).
+3. Upravte kód, aby definoval vaše ověření. Další informace najdete v tématu [programování ověření](#programming).
 
-5.  Chcete-li nainstalovat rozšíření v hlavní instanci sady Visual Studio, nebo v jiném počítači, vyhledejte **VSIX** souboru v **bin\\\***. Zkopírujte jej do počítače, ve které chcete nainstalovat a pak na ni dvakrát kliknete. Chcete-li ho odinstalovat, použijte **rozšíření a aktualizace** na **nástroje** nabídky.
+4. Chcete-li otestovat rozšíření, naleznete v tématu [ladění ověřování vrstev](#debugging).
 
-## <a name="adding-a-layer-validator-to-a-separate-vsix"></a>Přidání validátor vrstvy do samostatné VSIX
- Pokud chcete vytvořit jednu VSIX, který obsahuje validátory vrstvy, příkazy a další rozšíření, doporučujeme vytvořit jeden projekt k definování VSIX a samostatné projekty pro obslužné rutiny.
+   > [!NOTE]
+   > Vaše metoda bude volána pouze za zvláštních okolností a zarážky nebudou fungovat automaticky. Další informace najdete v tématu [ladění ověřování vrstev](#debugging).
 
-#### <a name="to-add-layer-validation-to-a-separate-vsix"></a>Přidání ověření vrstev do samostatných VSIX
+5. Chcete-li nainstalovat rozšíření v instanci hlavní aplikace Visual Studio nebo na jiném počítači, vyhledejte *VSIX* ve *bin* adresáře. Zkopírujte ho do počítače, ve které chcete nainstalovat a poklepejte na něj. Chcete-li ho odinstalovat, zvolte **rozšíření a aktualizace** na **nástroje** nabídky.
 
-1.  Vytvoření projektu knihovny tříd do nového nebo existujícího řešení sady Visual Studio. V **nový projekt** dialogové okno, klikněte na tlačítko **Visual C#** a pak klikněte na **knihovny tříd**. Tento projekt bude obsahovat třídu ověření vrstvy.
+## <a name="adding-a-layer-validator-to-a-separate-vsix"></a>Přidání validátoru vrstvy do samostatného souboru VSIX
 
-2.  Identifikovat nebo vytvoření projektu VSIX ve vašem řešení. VSIX projekt obsahuje soubor s názvem **source.extension.vsixmanifest**. Pokud je nutné přidat projekt VSIX, postupujte takto:
+Pokud chcete vytvořit jeden VSIX, který obsahuje validátory vrstvy, příkazy a další rozšíření, doporučujeme vytvořit jeden projekt k definování VSIX a samostatné projekty pro obslužné rutiny.
 
-    1.  V **nový projekt** dialogovém okně vyberte **Visual C#**, **rozšiřitelnost**, **projektu VSIX**.
+### <a name="to-add-layer-validation-to-a-separate-vsix"></a>Přidání ověření vrstvy do samostatného souboru VSIX
 
-    2.  V **Průzkumníku řešení**, v místní nabídce projektu VSIX **nastavit jako spouštěný projekt**.
+1.  Vytvořte projekt knihovny tříd v nové nebo existující řešení sady Visual Studio. V **nový projekt** dialogové okno, klikněte na tlačítko **Visual C#** a potom klikněte na tlačítko **knihovny tříd**. Tento projekt bude obsahovat třídu ověřování vrstvy.
 
-3.  V **source.extension.vsixmanifest**v části **prostředky**, přidejte projekt ověření vrstvy jako součást MEF:
+2.  Určete nebo vytvořte VSIX projekt ve vašem řešení. Projekt VSIX obsahuje soubor s názvem **source.extension.vsixmanifest**. Pokud budete muset přidat projekt VSIX, postupujte podle těchto kroků:
+
+    1.  V **nový projekt** dialogového okna zvolte **Visual C#**, **rozšiřitelnost**, **projekt VSIX**.
+
+    2.  V **Průzkumníka řešení**, v místní nabídce projektu VSIX **nastavit jako spouštěný projekt**.
+
+3.  V **source.extension.vsixmanifest**v části **prostředky**, přidejte vrstvu ověřování projektu jako komponentu MEF:
 
     1.  Zvolte **nové**.
 
-    2.  V **přidat nový prostředek** dialogové okno, sada:
+    2.  V **přidat nové aktivum** dialogovém okně nastavení:
 
          **Type** = **Microsoft.VisualStudio.MefComponent**
 
-         **Zdroj** = **na projekt v aktuálním řešení**
+         **Zdroj** = **projekt v aktuálním řešení**
 
-         **Projekt** = *validátoru projektu*
+         **Projekt** = *projektu program pro ověření*
 
-4.  Musíte taky přidat ji jako ověření vrstev:
+4.  Musíte taky přidat ji jako vrstvu ověřování:
 
     1.  Zvolte **nové**.
 
-    2.  V **přidat nový prostředek** dialogové okno, sada:
+    2.  V **přidat nové aktivum** dialogovém okně nastavení:
 
-         **Type** = **Microsoft.VisualStudio.ArchitectureTools.Layer.Validator**. To však není jednu z možností v rozevíracím seznamu. Je nutné zadat z klávesnice.
+         **Type** = **Microsoft.VisualStudio.ArchitectureTools.Layer.Validator**. To však není jednou z možností v rozevíracím seznamu. Je nutné zadat z klávesnice.
 
-         **Zdroj** = **na projekt v aktuálním řešení**
+         **Zdroj** = **projekt v aktuálním řešení**
 
-         **Projekt** = *validátoru projektu*
+         **Projekt** = *projektu program pro ověření*
 
-5.  Vraťte se do projektu ověření vrstvy a přidejte následující odkazy na projekt:
+5.  Vraťte se do projektu ověření vrstvy a přidejte následující odkazy projektu:
 
-    |**Referenční informace**|**Co můžete udělat**|
-    |-------------------|------------------------------------|
-    |Microsoft.VisualStudio.GraphModel.dll|Přečtěte si architektura grafu|
-    |Microsoft.VisualStudio.ArchitectureTools.Extensibility.CodeSchema.dll|Přečtěte si, že DOM kódu související s vrstvami|
-    |Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.dll|Čtení modelu vrstvy|
-    |Microsoft.VisualStudio.ArchitectureTools.Extensibility|Číst a aktualizovat tvarů a diagramů.|
-    |System.ComponentModel.Composition|Zadejte komponentu ověření pomocí Managed Extensibility Framework (MEF)|
-    |Microsoft.VisualStudio.Modeling.Sdk.[version]|Definujte rozšíření modelování|
+    |**Referenční informace**|**To umožňuje provést**|
+    |-|-|
+    |Microsoft.VisualStudio.GraphModel.dll|Přečtěte si graf architektury|
+    |Microsoft.VisualStudio.ArchitectureTools.Extensibility.CodeSchema.dll|Přečtěte si, že v modelu DOM kódu spojený s vrstvami|
+    |Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.dll|Přečtěte si model vrstva|
+    |Microsoft.VisualStudio.ArchitectureTools.Extensibility|Číst a aktualizovat tvary a diagramy.|
+    |System.ComponentModel.Composition|Definovat součást ověřování pomocí Managed Extensibility Framework (MEF)|
+    |Microsoft.VisualStudio.Modeling.Sdk.[version]|Definovat rozšíření modelování|
 
-6.  Ukázkový kód na konci tohoto tématu zkopírujte do souboru třídy v projektu knihovny validátoru obsahuje kód pro vaše ověření. Další informace najdete v tématu [programování ověření](#programming).
+6.  Zkopírujte ukázkový kód na konci tohoto tématu do souboru třídy v projektu knihovny ověřování tak, aby obsahovala kód pro ověření. Další informace najdete v tématu [programování ověření](#programming).
 
-7.  K testování rozšíření, najdete v části [ladění ověření vrstev](#debugging).
+7.  Chcete-li otestovat rozšíření, naleznete v tématu [ladění ověřování vrstev](#debugging).
 
     > [!NOTE]
-    >  Metodu bude volán jen v konkrétních případech a zarážky nebude fungovat automaticky. Další informace najdete v tématu [ladění ověření vrstev](#debugging).
+    > Vaše metoda bude volána pouze za zvláštních okolností a zarážky nebudou fungovat automaticky. Další informace najdete v tématu [ladění ověřování vrstev](#debugging).
 
-8.  Chcete-li nainstalovat VSIX hlavní instanci sady Visual Studio, nebo na jiném počítači, vyhledejte **VSIX** souboru v **bin** adresář projektu VSIX. Zkopírujte jej do počítače, ve které chcete nainstalovat VSIX. Poklikejte na soubor VSIX v Průzkumníku Windows.
+8.  Chcete-li nainstalovat VSIX v instanci hlavní aplikace Visual Studio nebo na jiném počítači, vyhledejte **VSIX** soubor **bin** adresáře projektu VSIX. Zkopírujte ho do počítače, ve které chcete nainstalovat VSIX. Poklikejte na soubor VSIX v Průzkumníku Windows.
 
      Chcete-li ho odinstalovat, použijte **rozšíření a aktualizace** na **nástroje** nabídky.
 
 ##  <a name="programming"></a> Ověření programování
- Můžete definovat rozšíření pro ověření vrstev, můžete definovat třídu, která má následující vlastnosti:
 
--   Celkové formu deklaraci vypadá takto:
+K definování ověření přípony vrstvy definujete třídu, která má následující vlastnosti:
 
-    ```
+- Celková forma deklarace je následující:
 
-    using System.ComponentModel.Composition;
-    using Microsoft.VisualStudio.ArchitectureTools.Extensibility.CodeSchema;
-    using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer;
-    using Microsoft.VisualStudio.GraphModel;
-    ...
-     [Export(typeof(IValidateArchitectureExtension))]
-      public partial class Validator1Extension :
-                      IValidateArchitectureExtension
+  ```csharp
+  using System.ComponentModel.Composition;
+  using Microsoft.VisualStudio.ArchitectureTools.Extensibility.CodeSchema;
+  using Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer;
+  using Microsoft.VisualStudio.GraphModel;
+  ...
+   [Export(typeof(IValidateArchitectureExtension))]
+    public partial class Validator1Extension :
+                    IValidateArchitectureExtension
+    {
+      public void ValidateArchitecture(Graph graph)
       {
-        public void ValidateArchitecture(Graph graph)
-        {
-           GraphSchema schema = graph.DocumentSchema;
-          ...
-      } }
-    ```
+         GraphSchema schema = graph.DocumentSchema;
+        ...
+    } }
+  ```
 
--   Po zjištění k chybě, můžete ho sestavy pomocí `LogValidationError()`.
+- Pokud zjistíte chybu, můžete ji ohlásit pomocí `LogValidationError()`.
 
-    > [!WARNING]
-    >  Nepoužívejte volitelné parametry `LogValidationError`.
+  > [!WARNING]
+  > Nepoužívejte volitelné parametry `LogValidationError`.
 
- Když uživatel vyvolá **ověření architektura** příkaz nabídky systému runtime vrstvy analýz vrstvy a jejich artefaktů k vytvoření grafu. Graf má čtyři části:
+Pokud uživatel vyvolá **ověřit architekturu** příkaz nabídky, systém modulu runtime vrstvy zanalyzuje vrstvy a jejich artefakty k vytvoření grafu. Graf má čtyři části:
 
--   Vrstvě modely řešení sady Visual Studio, které jsou reprezentovány jako uzly a odkazy v grafu.
+- Modely vrstvy řešení aplikace Visual Studio, které jsou reprezentovány jako uzly a odkazy v grafu.
 
--   Kód, položky projektu a artefaktů, které jsou definovány v řešení a reprezentován jako uzly a odkazy, které představují závislosti zjištěné procesem analýzy.
+- Kód, položky projektu a další artefakty, které jsou definovány v řešení a reprezentovány jako uzly a odkazy, které představují závislosti zjištěné v procesu analýzy.
 
--   Odkazy z uzlů vrstvy na uzly artefaktů kódu.
+- Propojení z uzlů vrstvy do uzlů kódových artefaktů.
 
--   Uzly, které představují chyb zjištěných validátor.
+- Uzly, které představují chyby zjištěné validátorem.
 
- -Li grafu byla vytvořená, se nazývá metoda standardní ověření. Po jejím dokončení, se nazývají žádné metody ověřování nainstalovaný rozšíření v neurčené pořadí. Grafu je předána na každý `ValidateArchitecture` metodu, která může kontrola grafu a zprávy o chybách, které nalezne.
+Pokud byl vytvořen graf, je volána metoda standardního ověření. Po jejím dokončení, všechny metody nainstalovaných rozšíření ověřování jsou zavolány v nespecifikovaném pořadí. Graf je předán pro každou `ValidateArchitecture` metodu, která může prohledávat graf a podávat zprávy o chybách, které nalezne.
 
 > [!NOTE]
->  To však není stejný jako proces ověření, které je možné v jazycích specifické pro doménu.
+> To však není stejný jako proces ověření, který lze použít v jazycích specifické pro doménu.
 
- Metody ověřování nesmí změnit model vrstvy nebo kód, který je ověřován.
+Metody ověřování by neměly měnit model vrstvy nebo kód, který se ověřuje.
 
- Graf modelu je definována v <xref:Microsoft.VisualStudio.GraphModel>. Jsou jeho hlavní třídy <xref:Microsoft.VisualStudio.GraphModel.GraphNode> a <xref:Microsoft.VisualStudio.GraphModel.GraphLink>.
+Model grafu je definován v <xref:Microsoft.VisualStudio.GraphModel>. Jeho hlavní třídy jsou <xref:Microsoft.VisualStudio.GraphModel.GraphNode> a <xref:Microsoft.VisualStudio.GraphModel.GraphLink>.
 
- Každý uzel a každý odkaz obsahuje jednu nebo více kategorií, které určují typ elementu nebo vztah, který reprezentuje. Uzly typické grafu mají následujících kategorií:
+Každý uzel a každý odkaz má jednu nebo více kategorií, které určují typ prvku nebo vztahu, který představuje. Uzly typického grafu jsou následující kategorie:
 
--   Dsl.LayerModel
+- Dsl.LayerModel
 
--   Dsl.Layer
+- Dsl.Layer
 
--   Dsl.Reference
+- Dsl.Reference
 
--   CodeSchema_Type
+- CodeSchema_Type
 
--   CodeSchema_Namespace
+- CodeSchema_Namespace
 
--   CodeSchema_Type
+- CodeSchema_Type
 
--   CodeSchema_Method
+- CodeSchema_Method
 
--   CodeSchema_Field
+- CodeSchema_Field
 
--   CodeSchema_Property
+- CodeSchema_Property
 
- Odkazy z vrstvy na elementy v kódu mají kategorii "Představuje".
+Propojení z vrstev do prvků v kódu mají kategorii "Představuje".
 
-##  <a name="debugging"></a> Ladění ověření
- Chcete-li ladit ověření rozšíření vrstvy, stiskněte CTRL + F5. Otevře se experimentální instanci sady Visual Studio. V tomto případě otevřít nebo vytvořit model vrstvy. Tento model musí být přidružený kód a musí mít alespoň jeden závislostí.
+##  <a name="debugging"></a> Ladění ověřování
 
-### <a name="test-with-a-solution-that-contains-dependencies"></a>Testování pomocí řešení, které obsahuje závislosti
- Ověření není proveden, pokud jsou k dispozici následující vlastnosti:
+Chcete-li ladit rozšíření ověřování vrstvy, stiskněte CTRL + F5. Otevře se experimentální instanci sady Visual Studio. V tomto případě otevřete nebo vytvořte model vrstev. Tento model musí být přidružen ke kódu a musí mít alespoň jednu závislost.
 
--   Na diagramu závislostí je alespoň jeden odkaz závislostí.
+### <a name="test-with-a-solution-that-contains-dependencies"></a>Otestujte řešení, která obsahuje závislosti
 
--   Existují vrstvy v modelu, které jsou přidružené elementy kódu.
+Ověření není provedena, pokud jsou k dispozici následující vlastnosti:
 
- Při prvním spuštění experimentální instanci sady Visual Studio k testování ověření rozšíření, otevřete nebo vytvářet řešení, která má tyto vlastnosti.
+- Na diagram závislostí je alespoň jeden odkaz závislosti.
 
-### <a name="run-clean-solution-before-validate-architecture"></a>Spuštění Vyčistit řešení před ověření architektura
- Při každé aktualizaci ověřovacího kódu pomocí **Vyčistit řešení** příkaz na **sestavení** nabídky v experimentální řešení, před testovacího příkaz ověřením. To je nezbytné, protože v mezipaměti výsledky ověření. Pokud jste neprovedli aktualizaci diagramu testovací závislostí nebo jeho kód, nebude provedeno metody ověřování.
+- Existují vrstvy v modelu, které jsou spojeny s prvky kódu.
 
-### <a name="launch-the-debugger-explicitly"></a>Explicitně spuštění ladicího programu
- Ověření se spustí jako samostatný proces. Proto nebude aktivována zarážky v metodu ověření. Ladicí program musí explicitně připojit k procesu, když ověření bylo zahájeno.
+Při prvním spuštění experimentální instanci sady Visual Studio k testování rozšíření ověřování otevřete nebo vytvořte řešení, které má tyto vlastnosti.
 
- Připojit ladicí program k procesu ověřování, Vložit volání `System.Diagnostics.Debugger.Launch()` na začátku metodu ověření. Když se zobrazí dialogové okno ladění, vyberte hlavní instanci sady Visual Studio.
+### <a name="run-clean-solution-before-validate-architecture"></a>Spusťte čisté řešení před ověřením architektury
 
- Alternativně můžete vložit volání `System.Windows.Forms.MessageBox.Show()`. Jakmile se zobrazí okno se zprávou, přejděte k hlavní instanci sady Visual Studio a na **ladění** nabídce klikněte na tlačítko **připojit k procesu**. Vyberte proces, který je pojmenován **Graphcmd.exe**.
+Pokaždé, když aktualizujete kód pro ověření, použijte **Vyčistit řešení** příkaz **sestavení** nabídky v experimentálním řešení před otestováním příkazu ověřit. To je nezbytné, protože výsledky ověření jsou ukládány do mezipaměti. Pokud jste neaktualizovali diagram testovací závislostí nebo jeho kód, nebude provedeno metody ověřování.
 
- Vždy spustit experimentální instanci stisknutím CTRL + F5 (**spustit bez ladění**).
+### <a name="launch-the-debugger-explicitly"></a>Spustit ladicí program explicitně
 
-### <a name="deploying-a-validation-extension"></a>Nasazení rozšíření ověření
- K instalaci rozšíření ověření v počítači, na kterém je nainstalován vhodný verze sady Visual Studio, otevřete soubor VSIX na cílovém počítači. K instalaci na počítači, na který [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] je nainstalován, je nutné ručně extrahovat VSIX obsah do složky rozšíření. Další informace najdete v tématu [nasazení rozšíření pro modelování vrstev](../modeling/deploy-a-layer-model-extension.md).
+Ověřování je spuštěno v samostatném procesu. Zarážky ve vaší metodě ověřování tedy nebudou aktivovány. Je nutné připojit ladicí program k procesu explicitně po spuštění ověření.
+
+Chcete-li připojit ladicí program k procesu ověřování, vložte volání `System.Diagnostics.Debugger.Launch()` na začátku své metody ověřování. Jakmile se zobrazí dialogové okno ladění, vyberte hlavní instanci aplikace Visual Studio.
+
+Alternativně můžete vložit volání do `System.Windows.Forms.MessageBox.Show()`. Když se objeví okno zpráv, přejděte na hlavní instanci aplikace Visual Studio a na **ladění** klikněte na nabídku **připojit k procesu**. Vyberte proces, který je pojmenován **Graphcmd.exe**.
+
+Experimentální instanci vždy spusťte stisknutím kombinace kláves CTRL + F5 (**spustit bez ladění**).
+
+### <a name="deploying-a-validation-extension"></a>Nasazení rozšíření ověřování
+
+Chcete-li nainstalovat rozšíření ověřování v počítači, na kterém je nainstalován vhodnou verzi sady Visual Studio, otevřete soubor VSIX v cílovém počítači.
 
 ##  <a name="example"></a> Příklad kódu
 

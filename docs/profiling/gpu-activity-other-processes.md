@@ -18,6 +18,7 @@ ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31573073"
 ---
 # <a name="gpu-activity-other-processes"></a>Aktivita GPU (jiné procesy)
 **Aktivita GPU (jiné procesy)** segmentů v zobrazení vláken vizualizér souběžnosti představují dobu, kdy GPU zpracovává požadavky jménem jiné procesy v systému. Tyto požadavky jsou odesílány GPU v paměti přímý přístup (DMA) paketů.  Délka segment představuje dobu trvání čas, který byl zpracován paketu GPU.  

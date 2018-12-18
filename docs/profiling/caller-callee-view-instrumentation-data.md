@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c8048d7dfd54627394705b2ca9e2ba9949f2bca1
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b8a24d19fabc3cb82dbb4004ec71b6fa00bc470c
+ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34336110"
 ---
-# <a name="callercallee-view---instrumentation-data"></a>Zobrazení volající/volaný – Data instrumentace
+# <a name="callercallee-view---instrumentation-data"></a>Zobrazení volající/volaný – data instrumentace
 Zobrazení volající/volaný zobrazí profilování informace o vybrané funkce a její nadřazené a podřízené funkce ve stromové struktuře volání. Zobrazení volající/volaný obsahuje tři mřížky.  
   
  **Funkci Current** se zobrazí v prostředním mřížky a ukazuje profilace informace o vybrané funkce. Hodnoty zahrnují všechna volání funkce.  
@@ -92,6 +93,6 @@ Zobrazení volající/volaný zobrazí profilování informace o vybrané funkce
   
 ## <a name="see-also"></a>Viz také  
  [Postupy: přizpůsobení sloupců zobrazení sestavy](../profiling/how-to-customize-report-view-columns.md)   
- [Volající / volaný – zobrazení – Data vzorkování](../profiling/caller-callee-view-sampling-data.md)   
- [Zobrazení volající/volaný – Data vzorkování paměti .NET](../profiling/caller-callee-view-dotnet-memory-sampling-data.md)   
- [Zobrazení volající/volaný – Data instrumentace paměti NET](../profiling/caller-callee-view-net-memory-instrumentation-data.md)
+ [Zobrazení volající/volaný – vzorkování dat](../profiling/caller-callee-view-sampling-data.md)   
+ [Zobrazení volající/volaný – data vzorkování paměti .NET](../profiling/caller-callee-view-dotnet-memory-sampling-data.md)   
+ [Zobrazení volající/volaný – data instrumentace paměti .NET](../profiling/caller-callee-view-net-memory-instrumentation-data.md)

@@ -1,7 +1,7 @@
 ---
-title: Vytváření šablon projektu pro Visual Studio | Microsoft Docs
-ms.custom: ''
+title: Vytváření šablon projektu
 ms.date: 01/02/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
@@ -11,46 +11,47 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: a18b756b38a810915ea49e9f3208e9349afda7ef
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 5cb90ea6f1e404d65ac3c375f49e77dd02c6711c
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53066912"
 ---
 # <a name="how-to-create-project-templates"></a>Postupy: vytváření šablon projektu
 
-Toto téma ukazuje, jak vytvořit šablonu pomocí **Průvodce exportem šablony**, které balíčky vaše šablony v *.zip* souboru.
+V tomto tématu se dozvíte, jak vytvořit šablonu pomocí **Průvodce exportem šablony**, která zabalí vaše šablony v *ZIP* souboru.
 
-## <a name="to-create-a-user-project-template-by-using-the-export-template-wizard"></a>Vytvoření šablony projektu uživatele pomocí průvodce Exportovat šablonu
+## <a name="to-create-a-user-project-template-by-using-the-export-template-wizard"></a>Chcete-li vytvořit šablonu projektu uživatele s použitím Průvodce exportem šablony
 
-1. Vytvořte projekt.
+1. Vytvoření projektu.
 
     > [!NOTE]
-    > Používejte pouze platný identifikátor – znaky pojmenování projektu, který bude sloužit jako zdroj pro šablonu. Chyby při kompilaci může dojít v projektech, které jsou vytvořené ze šablony. Další informace o platný identifikátor – znaky najdete v tématu [deklarované názvy elementu (Visual Basic)](/dotnet/visual-basic/programming-guide/language-features/declared-elements/declared-element-names) nebo [identifikátory (C++)](/cpp/cpp/identifiers-cpp). Alternativně můžete použít [parametry šablony](../ide/template-parameters.md) použít "bezpečnou" názvy tříd a obory názvů.
+    > Při pojmenování projektu, který bude sloužit jako zdroj šablony, používejte pouze znaky platný identifikátor. V opačném případě kompilace může dojít k chybám v projektech, které jsou vytvořeny ze šablony. Další informace o platný identifikátor znacích naleznete v tématu [deklarované názvy elementu (Visual Basic)](/dotnet/visual-basic/programming-guide/language-features/declared-elements/declared-element-names) nebo [identifikátory (C++)](/cpp/cpp/identifiers-cpp). Alternativně můžete použít [parametry šablony](../ide/template-parameters.md) používat "bezpečné" názvy tříd a obory názvů.
 
-1. Upravte projekt, dokud je připraven k exportu jako šablona. Například můžete chtít upravit soubory kódu k označení, kde by měl proběhnout nahrazení parametru. V tématu [postupy: nahrazení parametrů v šabloně](../ide/how-to-substitute-parameters-in-a-template.md).
+2. Upravte projekt, dokud nebude připravený exportovat jako šablonu. Například můžete chtít upravit soubory kódu k označení, kde by měla probíhat náhrada parametru. Zobrazit [postupy: nahrazení parametrů v šabloně](../ide/how-to-substitute-parameters-in-a-template.md).
 
-1. Na **projektu** nabídce zvolte **exportovat šablonu**.
+3. Na **projektu** nabídce zvolte **exportovat šablonu**.
 
    **Průvodce exportem šablony** otevře.
 
-1. Na **výběr typu šablony** vyberte **šablona projektu**. Vyberte projekt, který chcete exportovat do šablony a potom vyberte **Další**.
+4. Na **zvolte typ šablony** stránce **šablonu projektu**. Vyberte projekt, který chcete exportovat do šablony a klikněte na tlačítko **Další**.
 
-1. Na **vyberte možnosti šablony** stránky, zadejte název a volitelný popis ikonu a zobrazení náhledu obrázku pro šablonu. Tyto položky se zobrazí v **nový projekt** dialogové okno. Zvolte **Dokončit**.
+5. Na **vyberte možnosti šablony** stránky, zadejte název a volitelný popis, ikona a zobrazit jejich náhled obrázku pro šablonu. Tyto položky se zobrazí v **nový projekt** dialogové okno. Zvolte **Dokončit**.
 
-  Projekt je exportován do *.zip* souboru umístit do zadané výstupní umístění a, importu do sady Visual Studio.
+   Projekt se exportuje do *ZIP* soubor a umístí do zadané výstupní umístění a, k importu do sady Visual Studio.
 
 >[!NOTE]
-> Najít vaše šablony v **nový projekt** dialogové okno, rozbalte seznam **nainstalovaná** a potom rozbalte kategorii, která odpovídá `ProjectType` element v *.vstemplate*souboru. Například *.vstemplate* soubor, který obsahuje `<ProjectType>CSharp</ProjectType>` se zobrazí pod **nainstalovaná** > **Visual C#**, ve výchozím nastavení. Šablony můžete uspořádat do podadresáři typ projektu pouze po vytvoření složky v tomto adresáři a umístění vaší šablony *.zip* souboru v ní. Další informace najdete v tématu [postupy: hledání a organizace šablon](../ide/how-to-locate-and-organize-project-and-item-templates.md).
+> Najít šablonu v **nový projekt** dialogového okna rozbalte **nainstalováno** a potom rozbalte kategorii, která odpovídá `ProjectType` element v *.vstemplate*souboru. Například *.vstemplate* soubor, který obsahuje `<ProjectType>CSharp</ProjectType>` se zobrazí v části **nainstalováno** > **Visual C#** , ve výchozím nastavení. Šablony můžete uspořádat do podadresáře typu projektu, stačí jim k vytvoření složky v tomto adresáři a uvedení do šablony *ZIP* soubor v ní. Další informace najdete v tématu [postupy: hledání a organizace šablon](../ide/how-to-locate-and-organize-project-and-item-templates.md).
 
 ## <a name="other-ways-to-create-project-templates"></a>Další způsoby vytváření šablon projektu
 
-Šablony projektů můžete vytvořit ručně pomocí shromažďování souborů, které tvoří projektu do složky a pak vytvořit *.vstemplate* soubor XML s metadaty vhodné. Další informace najdete v tématu [postupy: ruční vytvoření webových šablon](../ide/how-to-manually-create-web-templates.md).
+Šablony projektů můžete vytvořit ručně tak, že shromažďování souborů, které tvoří projektu do složky a pak vytvořit *.vstemplate* soubor XML s příslušná metadata. Další informace najdete v tématu [postupy: ruční vytvoření webových šablon](../ide/how-to-manually-create-web-templates.md).
 
-Pokud máte sadu Visual Studio SDK nainstalovat, můžete zabalit dokončenou šablonu do souboru VSIX pro nasazení pomocí **projektu VSIX** šablony. Další informace najdete v tématu [Začínáme s šablona projektu VSIX](../extensibility/getting-started-with-the-vsix-project-template.md).
+Pokud máte nainstalované Visual Studio SDK, můžete zabalit dokončená šablona v souboru VSIX pro nasazení pomocí **projekt VSIX** šablony. Další informace najdete v tématu [Začínáme s šablonou projektu VSIX](../extensibility/getting-started-with-the-vsix-project-template.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)  
-[Postupy: vytváření šablon položek](../ide/how-to-create-item-templates.md)  
-[Začínáme s šablona projektu VSIX](../extensibility/getting-started-with-the-vsix-project-template.md)
+- [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
+- [Postupy: Tvorba šablon položek](../ide/how-to-create-item-templates.md)
+- [Začínáme s šablonou projektu VSIX](../extensibility/getting-started-with-the-vsix-project-template.md)

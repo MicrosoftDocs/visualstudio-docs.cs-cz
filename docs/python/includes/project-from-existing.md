@@ -1,27 +1,28 @@
 ---
 ms.topic: include
-ms.openlocfilehash: 37079cfaa1204cd8ce7a77e1e2f5aa91ea844ea5
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 47c390fbc7a6f84c25d4bde0317985bd149cae2f
+ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39252489"
 ---
-1. Spusťte sadu Visual Studio a vyberte **soubor > Nový > projekt**.
+1. Spusťte sadu Visual Studio a vyberte **souboru** > **nový** > **projektu**.
 
-1. V **nový projekt** dialogové okno, vyhledejte "Python", vyberte šablonu, "Z kódu existující Python", název a umístění poskytnout projektu a vyberte **OK**.
+1. V **nový projekt** dialogové okno, vyhledejte "Python", vyberte **z existujícího kódu Pythonu** šablony, dejte projektu název a umístění a vyberte **OK**.
 
-1. V průvodci, který se zobrazí, nastavení cesty pro váš stávající kód, nastavte filtr pro typy souborů a zadejte všechny cesty hledání, které projekt vyžaduje, a potom vyberte **Další**. Pokud si nejste jisti, jaké vyhledávání cest, nechte toto pole prázdné.
+1. V průvodci, který se zobrazí nastavení cesty k váš stávající kód, nastavte filtr pro typy souborů a zadejte všechny cesty pro hledání, které vyžaduje váš projekt a pak vyberte **Další**. Pokud si nejste jisti, jaké vyhledávací cesty, ponechte toto pole prázdné.
 
     ![Nový projekt z existujícího kódu, krok 1](../media/projects-from-existing-1.png)
 
-1. V dialogovém okně Další vyberte soubor spuštění pro váš projekt a vyberte **Další**. (V případě potřeby vyberte prostředí; v opačném případě přijměte výchozí hodnoty.) Všimněte si, že dialogovém okně zobrazí pouze soubory v kořenové složce; Pokud je požadovaný soubor v podsložce, soubor spuštění nechat prázdné a nastavte ji později v Průzkumníku řešení (popsaný níže).
+1. V dalším dialogovém okně vyberte spouštěcí soubor projektu a vyberte **Další**. (V případě potřeby vyberte některé prostředí; v opačném případě přijměte výchozí hodnoty.) Všimněte si, že dialogové okno zobrazuje pouze soubory v kořenové složce; Pokud je soubor, který má v podsložce, nechte prázdné spouštěcí soubor a nastavte ho později v **Průzkumníka řešení** (popsaných níže).
 
     ![Nový projekt z existujícího kódu, krok 2](../media/projects-from-existing-2.png)
 
-1. Vyberte umístění, do které chcete uložit soubor projektu (což je `.pyproj` soubor na disku). Pokud je k dispozici, můžete také zahrnovat automatickou detekci. hodnoty virtuální prostředí a přizpůsobit projekt pro jiné webové platformy. Pokud si nejste jisti z těchto možností, nechte je nastavena na výchozí hodnoty.
+1. Vyberte umístění, do kterého chcete uložit soubor projektu (což je *.pyproj* souboru na disku). Pokud je k dispozici, můžete také zahrnout automatické zjišťování virtuálních prostředí a přizpůsobit projekt pro jiné webové rozhraní. Pokud si nejste jisti z těchto možností, nechte je nastavena na výchozí hodnoty.
 
     ![Nový projekt z existujícího kódu, krok 3](../media/projects-from-existing-3.png)
 
-1. Vyberte **Dokončit** a Visual Studio vytvoří projekt a otevře ji v Průzkumníku řešení. Pokud chcete přesunout `.pyproj` souboru jinde, vyberte ho v Průzkumníku řešení a zvolte **soubor > Uložit jako**. Tato akce aktualizuje odkazy na soubory v projektu, ale nepřesouvá všechny soubory s kódem.
+1. Vyberte **Dokončit** a sady Visual Studio vytvoří projekt a otevře jej v **Průzkumníka řešení**. Pokud chcete přesunout *.pyproj* soubor jinde, vyberte ho v **Průzkumníka řešení** a zvolte **souboru** > **uložit jako**. Tato akce aktualizuje odkazy na soubory v projektu, ale nepřesouvá soubory kódu.
 
-1. Pokud chcete nastavit jinou spuštění souboru, vyhledejte soubor v Průzkumníku řešení klikněte pravým tlačítkem a vyberte **nastavit jako spouštěcí soubor**.
+1. Pokud chcete nastavit různé spouštěcí soubor, vyhledejte soubor v **Průzkumníka řešení**, klikněte pravým tlačítkem a vyberte **nastavit jako spouštěcí soubor**.

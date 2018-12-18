@@ -1,5 +1,5 @@
 ---
-title: IDebugModule3::GetSymbolInfo | Microsoft Docs
+title: IDebugModule3::GetSymbolInfo | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 53d84b9ef6cdabc12c88e30fc65d506cad673a26
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2e121434f5db1edc1e4c13df3e832cba5be7d471
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49876123"
 ---
 # <a name="idebugmodule3getsymbolinfo"></a>IDebugModule3::GetSymbolInfo
-Načte seznam cest, které budou prohledávány pro symboly, jakož i výsledky hledání každá cesta.  
+Načte seznam cest, které budou vyhledány pro symboly, stejně jako výsledky hledání jednotlivé cesty.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,29 +45,29 @@ int GetSymbolInfo(
   
 #### <a name="parameters"></a>Parametry  
  `dwFields`  
- [v] Kombinace příznaků z [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) výčtu zadání polí s `pInfo` mají být vyplněna.  
+ [in] Kombinace příznaků z [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md) výčet určující, které pole `pInfo` mají být vyplněna.  
   
  `pInfo`  
- [out] A [MODULE_SYMBOL_SEARCH_INFO](../../../extensibility/debugger/reference/module-symbol-search-info.md) struktura, jejíž členové jsou pro vyplnění zadané informace. Pokud je to hodnota null, vrátí tato metoda `E_INVALIDARG`.  
+ [out] A [MODULE_SYMBOL_SEARCH_INFO](../../../extensibility/debugger/reference/module-symbol-search-info.md) strukturu, jejíž členové jsou pro vyplnění pomocí zadaných informací. Pokud je tato hodnota null, vrátí tato metoda `E_INVALIDARG`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud metoda bude úspěšná, vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud metoda uspěje, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 > [!NOTE]
->  Vrácený řetězec (v `MODULE_SYMBOL_SEARCH_INFO` struktura) může být prázdný i v případě `S_OK` je vrácen. V takovém případě se žádné informace o hledání vrátit.  
+>  Vrácený řetězec (v `MODULE_SYMBOL_SEARCH_INFO` struktura) může být prázdný i v případě `S_OK` je vrácena. V takovém případě se žádné informace o hledání vrátit.  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud `bstrVerboseSearchInfo` pole z `MODULE_SYMBOL_SEARCH_INFO` struktura není prázdný a obsahuje seznam cest vyhledávat a výsledky vyhledávání. V seznamu je naformátován s cestou, za nímž následuje třemi tečkami ("..."), za nímž následuje výsledek. Pokud existuje více než jednu dvojici výsledek cestu, každý pár jsou oddělené oddělovačem pár "\r\n" (znaků CR vrátit/konce řádku). Vzor vypadá takto:  
+ Pokud `bstrVerboseSearchInfo` pole `MODULE_SYMBOL_SEARCH_INFO` struktura není prázdný a obsahuje seznam cest prohledávat a výsledky hledání. V seznamu je formátováno s cestou, následované třemi tečkami ("..."), za nímž následuje výsledek. Pokud existuje více než jednu dvojici výsledek cestu, každý pár oddělený pár "\r\n" (návrat na začátek řádku return nebo odřádkování). Vzor vypadá takto:  
   
- \<cesta >... \<výsledek > \r\n\<cesta >... \<výsledek > \r\n\<cesta >... \<výsledek >  
+ \<cesta >... \<výsledku > \r\n\<cesta >... \<výsledku > \r\n\<cesta >... \<výsledku >  
   
  Všimněte si, že poslední položka nemá \r\n pořadí.  
   
 ## <a name="example"></a>Příklad  
- V tomto příkladu tato metoda vrátí tři cesty s tři různé výsledky hledání. Každý řádek je byla ukončena s pár znaků CR vrátit/konce řádku. Příklad výstupu právě vytiskne výsledky hledání jako jeden řetězec.  
+ V tomto příkladu vrátí tato metoda tři cesty s tři různé výsledky hledání. Každý řádek je přerušen skrze pár návrat na začátek řádku return nebo odřádkování. Příklad výstupu právě zobrazí výsledky hledání jako jeden řetězec.  
   
 > [!NOTE]
->  Stav výsledek je všechno hned za "..." až do konce řádku.  
+>  Stav výsledek je všechno, co hned za "..." až do konce řádku.  
   
 ```cpp  
 void ShowSymbolSearchResults(IDebugModule3 *pIDebugModule3)  
@@ -86,7 +87,7 @@ void ShowSymbolSearchResults(IDebugModule3 *pIDebugModule3)
   
  **c:\symbols\user32.pdb... Soubor nebyl nalezen.**  
 **c:\winnt\symbols\user32.pdb... Verze neodpovídá.**  
-**\\\symbols\symbols\user32.dll\0a8sd0ad8ad\user32.pdb... Symboly načíst.**   
+**\\\symbols\symbols\user32.dll\0a8sd0ad8ad\user32.pdb... Načíst symboly.**   
 ## <a name="see-also"></a>Viz také  
  [SYMBOL_SEARCH_INFO_FIELDS](../../../extensibility/debugger/reference/symbol-search-info-fields.md)   
  [MODULE_SYMBOL_SEARCH_INFO](../../../extensibility/debugger/reference/module-symbol-search-info.md)   

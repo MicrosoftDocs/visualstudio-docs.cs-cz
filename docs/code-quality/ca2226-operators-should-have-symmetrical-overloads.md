@@ -1,6 +1,7 @@
 ---
 title: 'CA2226: Operátory by měly mít symetrické přetížení'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,33 +16,35 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 98f5653d326c257e46becd2d7f8ad1091dfcf0c7
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 8c872df976379a9bd20f28ceb9f4bf3eb376c8e8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49900459"
 ---
 # <a name="ca2226-operators-should-have-symmetrical-overloads"></a>CA2226: Operátory by měly mít symetrické přetížení
+
 |||
 |-|-|
 |TypeName|OperatorsShouldHaveSymmetricalOverloads|
 |CheckId|CA2226|
 |Kategorie|Microsoft.Usage|
-|Narušující změna|Bez ukončování řádků|
+|Narušující změna|Pevné|
 
 ## <a name="cause"></a>příčina
  Typ implementuje operátor rovnosti nebo nerovnosti a neimplementuje opačný operátor.
 
 ## <a name="rule-description"></a>Popis pravidla
- Neexistují žádné okolností, kde rovnosti nebo nerovnosti se vztahuje k instancím typu a opačně orientované operátor není definován. Operátor nerovnosti typy obvykle implementovat vrácením posunut hodnotu operátor rovnosti.
+ Neexistují žádné okolností, kde se vztahuje na instance typu rovnosti nebo nerovnosti a opačný operátor není definován. Operátor nerovnosti typy obvykle implementují tak, že vrací hodnotu negovaným čítačem operátor rovnosti.
 
- Kompilátor jazyka C# vydává chybu pro porušení toto pravidlo.
+ Kompilátor jazyka C# vygeneruje chybu pro porušení tohoto pravidla.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Opravit porušení toto pravidlo, implementují rovnosti a operátory nerovnosti nebo odebrat ten, který je k dispozici.
+ Chcete-li opravit porušení tohoto pravidla, implementují rovnosti a nerovnosti operátory nebo odebrat ten, který je k dispozici.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Nepotlačujte upozornění na toto pravidlo. Typ vašeho nebude fungovat způsobem, který je v souladu s [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)].
+ Nepotlačujte upozornění na toto pravidlo. Váš typ nebude fungovat způsobem, který je konzistentní s rozhraním .NET Framework.
 
 ## <a name="related-rules"></a>Související pravidla
  [CA1046: Nepřetěžujte operátory rovnosti na odkazových typech](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)

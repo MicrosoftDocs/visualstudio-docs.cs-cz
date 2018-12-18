@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::ContinueFromSynchronousEvent | Microsoft Docs
+title: IDebugEngine2::ContinueFromSynchronousEvent | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 305179184df1241b6d944ea78e164c09af37923f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 43589e4fd5a75c5c1cd7681dde4a3957f3fe4243
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49837513"
 ---
 # <a name="idebugengine2continuefromsynchronousevent"></a>IDebugEngine2::ContinueFromSynchronousEvent
-Voláno rozhraním správce ladicí relace (SDM) k označení, že synchronní ladění událostí, dříve posílá SDM, modul ladění (DE) přijala a zpracovala.  
+Je voláno správce ladění relace (SDM) k označení, že synchronní ladění události, které jste odeslali dřív pomocí ladicího stroje (DE) k SDM, přijala a zpracovala.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,16 +41,16 @@ HRESULT ContinueFromSynchronousEvent(
   
 #### <a name="parameters"></a>Parametry  
  `pEvent`  
- [v] [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) objekt, který reprezentuje dříve odeslaný synchronní události, ze kterého by měl ladicí program nyní pokračovat.  
+ [in] [IDebugEvent2](../../../extensibility/debugger/reference/idebugevent2.md) objekt, který reprezentuje dříve odeslaných synchronní událostí, ze kterého by měl ladicí program nyní pokračovat.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- DE musí ověřit, že se zdroj události, které `pEvent` parametr.  
+ DE musíte ověřit, že se zdroj události reprezentována `pEvent` parametru.  
   
 ## <a name="example"></a>Příklad  
- Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchou `CEngine` objekt, který implementuje [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) rozhraní.  
+ Následující příklad ukazuje, jak implementovat tuto metodu pro jednoduchý `CEngine` objekt, který implementuje [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) rozhraní.  
   
 ```cpp  
 HRESULT CEngine::ContinueFromSynchronousEvent(IDebugEvent2* pEvent)  

@@ -14,18 +14,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 76c7217b9b4159a368575d5acef92b03775478b4
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e9de75488c297eef426fb5a93c71f0ff3bad148d
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35255603"
 ---
 # <a name="report-based-on-visible-time-range"></a>Sestava pro viditelný časový rozsah
 Zobrazení profil zobrazí sestavy, které jsou založeny na aktuálně viditelný časový rozsah a kanály. Chcete-li zobrazit podrobnosti pro různé podmnožiny dat, klikněte na položky v legendě.  
   
  Další informace o datech najdete v tabulkách v tomto poli.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Žádná aktivita vláken k zobrazení](../profiling/no-thread-activity-to-show-threads-view.md)   
  [Sestava profilu spuštění](../profiling/execution-profile-report.md)   
  [Čas synchronizace](../profiling/synchronization-time.md)   

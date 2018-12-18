@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: určení umístění, kde budou koncoví uživatelé instalovat z | Microsoft Docs'
+title: 'Postupy: určení umístění, kde budou koncoví uživatelé instalovat z | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -19,30 +19,31 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0152cf6b03f2e089ee8633ef4abae9043e41bc24
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 6b0731a5e218b6fcd6a13ac00fe19daad86f6b3d
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39078082"
 ---
-# <a name="how-to-specify-the-location-where-end-users-will-install-from"></a>Postupy: Určení umístění, z něhož mohou instalovat koncoví uživatelé
-Při publikování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace, umístění, kde uživatelé ke stažení a instalaci aplikace není nutně umístění, kde jste původně publikovali aplikace. Například v některých organizacích může vývojář publikovat aplikaci na pracovní server a poté by správce přesuňte aplikace na webový server.  
+# <a name="how-to-specify-the-location-where-end-users-will-install-from"></a>Postupy: určení umístění, kde budou koncoví uživatelé instalovat z
+Při publikování [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] aplikace, umístění, kde uživatelé ke stažení a instalaci aplikace není nutně umístění, kde nejprve publikovat aplikace. Například v některých organizacích může vývojář publikování aplikace na testovacím serveru a pak by správce přesunout aplikaci na webový server.  
   
- V takovém případě můžete použít `Installation URL` vlastnosti a určit tak webový server, kde budou uživatelé stáhnout aplikaci. To je nezbytné, aby manifest aplikace věděla, kde má být k dispozici aktualizace.  
+ V takovém případě můžete použít `Installation URL` vlastnosti a určit tak webový server, kde budou moct uživatelé aplikaci stáhnout. To je nezbytné, aby manifest aplikace věděla, kam chcete vyhledat aktualizace.  
   
- `Installation URL` Vlastnost lze nastavit u **publikovat** stránky **Návrhář projektu**.  
+ `Installation URL` Vlastnost lze nastavit na **publikovat** stránku **Návrháře projektu**.  
   
- **Poznámka:** `Installation URL` vlastnost lze nastavit také pomocí **PublishWizard**. Další informace najdete v tématu [postupy: publikování aplikace ClickOnce pomocí Průvodce publikováním](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md).  
+ **Poznámka:** `Installation URL` vlastnost můžete nastavit také pomocí **PublishWizard**. Další informace najdete v tématu [postupy: publikování aplikace ClickOnce pomocí Průvodce publikováním](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md).  
   
 ### <a name="to-specify-an-installation-url"></a>Chcete zadat adresu URL instalace  
   
-1.  S projekt vybraný v **Průzkumníku řešení**na **projektu** nabídky, klikněte na tlačítko **vlastnosti**.  
+1.  S projekt vybraný v **Průzkumníka řešení**na **projektu** nabídky, klikněte na tlačítko **vlastnosti**.  
   
-2.  Klikněte **publikovat** kartě.  
+2.  Klikněte na tlačítko **publikovat** kartu.  
   
-3.  Do pole adresy URL instalace zadejte umístění instalace pomocí plně kvalifikovanou adresu URL ve formátu http://www.microsoft.com/ApplicationName, nebo cestu UNC pomocí formátu \\\Server\ApplicationName.  
+3.  Do pole Adresa URL instalace, zadejte umístění instalace pomocí plně kvalifikovanou adresu URL pomocí formátu *http://www.microsoft.com/ApplicationName*, nebo cestu UNC ve formátu  *\\\Server\ApplicationName*.  
   
-## <a name="see-also"></a>Viz také  
- [Postupy: Zadejte, kde zkopíruje soubory v sadě Visual Studio](../deployment/how-to-specify-where-visual-studio-copies-the-files.md)   
+## <a name="see-also"></a>Viz také:  
+ [Postupy: určení, kde sada Visual Studio zkopíruje soubory](../deployment/how-to-specify-where-visual-studio-copies-the-files.md)   
  [Publikování aplikací ClickOnce](../deployment/publishing-clickonce-applications.md)   
- [Postupy: Publikování aplikace ClickOnce pomocí průvodce publikováním](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
+ [Postupy: publikování aplikace ClickOnce pomocí Průvodce publikováním](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

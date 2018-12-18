@@ -1,5 +1,5 @@
 ---
-title: Servery (Visual Studio SDK) | Microsoft Docs
+title: Servery (Visual Studio SDK) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,23 +14,24 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2904641e8188abc6ef2382b2da272a9f96fd0f81
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 871eeb59832c640ede32e0fcd188941605c4afcb
+ms.sourcegitcommit: 8d38d5d2f2b75fc1563952c0d6de0fe43af12766
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39276650"
 ---
 # <a name="servers-visual-studio-sdk"></a>Servery (Visual Studio SDK)
-Z hlediska architektuře ladicího programu **server**:  
+V architektuře ladicího programu *server*:  
   
--   Je kontejnerem porty a všichni dodavatelé port a slouží ke komunikaci porty a všichni dodavatelé port pro relaci ladění správce (SDM) a ladění moduly.  
+-   Je kontejner, portů a dodavatelé portů a komunikuje porty a dodavatelé portů Správce ladění relace (SDM) a ladicí stroj.  
   
--   Můžete identifikovat podle názvu a výčet jeho porty a všichni dodavatelé portu.  
+-   Můžete identifikovat podle názvu a vypsat jeho porty a dodavatelé portů.  
   
--   Je reprezentována [IDebugCoreServer2](../../extensibility/debugger/reference/idebugcoreserver2.md) rozhraní, což je pouze realizován pomocí sady Visual Studio (jedna instance serveru pro každou instanci sady Visual Studio spuštěná).  
+-   Je reprezentován [IDebugCoreServer2](../../extensibility/debugger/reference/idebugcoreserver2.md) rozhraní, které je implementováno pouze Visual Studio (jednu instanci serveru pro každou instanci sady Visual Studio spuštěná).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Porty](../../extensibility/debugger/ports.md)   
- [Port dodavatelů](../../extensibility/debugger/port-suppliers.md)   
- [Koncepty ladicí program](../../extensibility/debugger/debugger-concepts.md)   
+ [Dodavatelé portů](../../extensibility/debugger/port-suppliers.md)   
+ [Koncepty ladicího programu](../../extensibility/debugger/debugger-concepts.md)   
  [IDebugCoreServer2](../../extensibility/debugger/reference/idebugcoreserver2.md)

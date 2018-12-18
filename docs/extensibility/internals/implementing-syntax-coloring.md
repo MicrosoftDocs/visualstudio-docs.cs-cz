@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131852"
 ---
 # <a name="implementing-syntax-coloring"></a>Implementace barevné zvýrazňování syntaxe
 Když služba jazyka poskytuje zabarvení syntaxe, analyzátor převede na řádku textu do pole colorable položek a vrátí odpovídající tyto colorable položky pro typy tokenů. Analyzátor by měl vrátit typy tokenů, které patří do colorable položek seznamu. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Zobrazuje každou colorable položku v okně kód podle atributy přiřazené objektem colorizer odpovídající typ tokenu.  

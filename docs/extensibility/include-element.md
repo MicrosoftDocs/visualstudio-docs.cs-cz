@@ -1,5 +1,5 @@
 ---
-title: Zahrňte prvek | Microsoft Docs
+title: Prvek direktivy include | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 189bac6ed410177a615c85abb5be02302030d19b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7ed632610f0d6bcbf8da6e7788add001740ea446
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39498925"
 ---
-# <a name="include-element"></a>Zahrňte prvek
-Zahrnutí elementu Určuje soubor, který může být umístěn na zadaných obsahovat cestu pro vložení do aktuálního souboru.  Všechny symboly a definované typy se stane součástí kompilované výsledek.  
+# <a name="include-element"></a>Prvek direktivy include
+Zahrnutý element určuje soubor, který může být umístěn na zadané cesty vložených souborů pro vložení do aktuálního souboru.  Všechny symboly a typy definované se stanou součástí zkompilovaného výsledku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,20 +39,20 @@ Zahrnutí elementu Určuje soubor, který může být umístěn na zadaných obs
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|href|Požadováno. Cesta k souboru hlavičky:<br /><br /> href="stdidcmd.h"|  
-|Podmínka|Volitelné. V tématu [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
+|href|Požadováno. Cesta k souboru hlaviček:<br /><br /> href="stdidcmd.h"|  
+|Podmínka|Volitelné. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
   
-### <a name="child-elements"></a>Podřízené elementy  
+### <a name="child-elements"></a>Podřízené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
 |Žádné|Žádné|  
   
-### <a name="parent-elements"></a>Nadřazené elementy  
+### <a name="parent-elements"></a>Nadřazené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|[CommandTable – element](../extensibility/commandtable-element.md)|Definuje všechny elementy, které představují příkazy – to znamená, položky nabídky, nabídek, panely nástrojů a pole se seznamem – poskytující VSPackage k prostředí IDE.|  
+|[Commandtable – element](../extensibility/commandtable-element.md)|Definuje všechny prvky, které představují příkazy – to znamená, položek nabídky, nabídky, panely nástrojů a pole se seznamem – poskytující VSPackage rozhraní IDE.|  
   
 ## <a name="example"></a>Příklad  
   
@@ -59,5 +60,5 @@ Zahrnutí elementu Určuje soubor, který může být umístěn na zadaných obs
 <Include href="PackagePlacements.vsct"/>  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [Soubory tabulek příkazů sady Visual Studio (.Vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+## <a name="see-also"></a>Viz také:  
+ [Soubory tabulky (.vsct) příkaz pro Visual Studio](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

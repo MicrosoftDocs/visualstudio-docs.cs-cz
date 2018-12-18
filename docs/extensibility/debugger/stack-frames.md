@@ -1,5 +1,5 @@
 ---
-title: Rámce zásobníku | Microsoft Docs
+title: Rámců zásobníku | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,25 +15,26 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: feb2bc9d87486b6f83cf4b19ecec24c8c03edee5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 21ef19e1eaf9e98da3e774f1d0038f03c131ec45
+ms.sourcegitcommit: 8d38d5d2f2b75fc1563952c0d6de0fe43af12766
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39276712"
 ---
 # <a name="stack-frames"></a>Rámce zásobníku
-Z hlediska architektuře ladicího programu **rámce zásobníku**:  
+V architektuře ladicího programu *rámec zásobníku*:  
   
--   Je abstrakcí zásobníku, která poskytuje kontext provádění vlákna. Vlákno vždy spouští v rámci funkce. Rámec zásobníku obsahuje místní proměnné funkce a argumenty do ní. Pokud chcete ladit pomocí sady Visual Studio, musí podporovat jazyk nebo prostředí laděné rámce zásobníku.  
+-   Je abstrakcí zásobníku, která poskytuje kontext spuštění vlákna. Vlákno vždy provede v rámci funkce. Rámec zásobníku obsahuje místní proměnné, funkce a argumenty do něj. Pokud chcete ladit pomocí sady Visual Studio, musí podporovat rámce zásobníku jazyka nebo prostředí, které jsou právě laděny.  
   
--   Může i identifikovat a popisují sám a může vrátit související vlákno. Rámec zásobníku také vrátit kontext kód, který představuje aktuální ukazatel instrukce, a také související dokumentaci a kontexty vyhodnocení výrazu.  
+-   Můžete identifikovat a popsat sám sebe i může vrátit přidružené vlákno. Rámec zásobníku může také vrátit kontext kódu, který představuje aktuální ukazatel příkazu a související dokumentaci a kontext vyhodnocení výrazu.  
   
--   Obsahuje vlastnosti, které popisují název, typ a hodnotu místní proměnné a argumenty, a které jsou uvedeny v různých windows ladění IDE.  
+-   Obsahuje vlastnosti, které popisují název, typ a hodnotu místní proměnné a argumenty a které jsou uvedeny v různých ladicích oknech integrovaného vývojového prostředí.  
   
--   Je reprezentována [IDebugStackFrame2](../../extensibility/debugger/reference/idebugstackframe2.md) rozhraní, obvykle vytvoří virtuální počítač v důsledku podproces nebo ladění modulu (DE).  
+-   Je reprezentován [IDebugStackFrame2](../../extensibility/debugger/reference/idebugstackframe2.md) rozhraní, obvykle vytvoří pomocí ladicího stroje (DE) nebo virtuální počítač následkem podproces.  
   
-## <a name="see-also"></a>Viz také  
- [Kontexty ladicí program](../../extensibility/debugger/debugger-contexts.md)   
- [Koncepty ladicí program](../../extensibility/debugger/debugger-concepts.md)   
- [Ladění modulu](../../extensibility/debugger/debug-engine.md)   
+## <a name="see-also"></a>Viz také:  
+ [Kontexty ladicího programu](../../extensibility/debugger/debugger-contexts.md)   
+ [Koncepty ladicího programu](../../extensibility/debugger/debugger-concepts.md)   
+ [Ladicí stroj](../../extensibility/debugger/debug-engine.md)   
  [IDebugStackFrame2](../../extensibility/debugger/reference/idebugstackframe2.md)

@@ -1,5 +1,5 @@
 ---
-title: Podrobnosti prostředku o zobrazení – Data kolizí | Microsoft Docs
+title: Zobrazení – Data kolizí podrobností prostředků | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,51 +14,52 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ac06fa18ee9459d8dc43bd0c536b68f9d027c97d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 024241870bb4a0a2ef696130cbe5ddc94319493a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49837201"
 ---
-# <a name="resource-details-view---contention-data"></a>Zobrazení podrobností o prostředku – Data kolizí
-Zobrazení podrobností prostředků uvede časová osa grafu blokování událostí, která byla způsobena kolizí nad vybraného prostředku. Blokování události dojde při vlákno je nucen se pozastavit provádění, protože jiné vlákno zablokuje přístup k prostředku.  
+# <a name="resource-details-view---contention-data"></a>Zobrazení podrobností o prostředku – data kolizí
+Zobrazení podrobností prostředků zobrazí graf časové osy blokujících událostí, které byly způsobeny kolizí nad vybraný prostředek. Blokování události dojde, když vlákno je nucen k pozastavení provádění, protože jiné vlákno má uzamčený přístup k prostředku.  
   
- Toto zobrazení představuje časové ose provádění každé vlákno jako vodorovný pruh a představuje všechny blokující události jako svislá čára na časové ose přístup z více vláken. Pokud je to nezbytné, může zvětšit části časové osy a zobrazte jednotlivé události. K zobrazení cesty provádění (zásobník volání) funkcí, které vedly k události, klikněte na panelu událostí. Funkce se zobrazí v **zásobníkem volání** okno. Pokud zdrojový kód pro funkce je k dispozici, můžete kliknout na název funkce upravit zdrojový soubor v rozhraní pro [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
+ Toto zobrazení představuje na časové ose spuštění každého vlákna jako vodorovný pruh a představuje všechny blokující události jako svislá čára na ose vlákna. V případě potřeby můžete zvětšit části časové osy a zobrazte jednotlivé události. Chcete-li zobrazit cesta provedení (zásobník volání) funkcí, které vedly k události, klikněte na panel události. Funkce se zobrazí v **zásobník volání** okna. Pokud zdrojový kód funkce je k dispozici, můžete kliknout na upravit zdrojový soubor v rozhraní pro název funkce [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].  
   
 ## <a name="procedures"></a>Procedury  
   
 #### <a name="to-magnify-a-timeline-segment"></a>Zvětšit segment časové osy  
   
--   Přetáhněte ukazatel myši nad oblast časovou osu.  
+-   Přetažením ukazatele myši přes oblast na časové ose.  
   
-     Po uvolnění tlačítka myši se zvětší zobrazení na vybrané časové segmentu. Proces další magnify segmentu, můžete opakovat. Posouvací políčko posuvníku čas představuje relativní velikost segmentu čas, který se zobrazí v zobrazení.  
+     Po uvolnění tlačítka myši přiblížení zobrazení vybraného časového úseku. Proces další zvětšit segmentu, můžete opakovat. Posuvníku na posuvníku čas představuje relativní velikost časového úseku, který se zobrazí v zobrazení.  
   
-#### <a name="to-zoom-out-on-a-timeline"></a>Zvětšit na časové ose  
+#### <a name="to-zoom-out-on-a-timeline"></a>Chcete-li oddálení časové osy  
   
 -   Proveďte jeden z následujících kroků:  
   
-    -   Klikněte na tlačítko **Oddálit** se vrátíte do předchozího úroveň přiblížení.  
+    -   Klikněte na tlačítko **Oddálit** se vraťte na předchozí úroveň přiblížení.  
   
-    -   Klikněte na tlačítko **zvětšení resetovat** a zobrazit všechny časové osy v zobrazení.  
+    -   Klikněte na tlačítko **přiblížení resetování** a zobrazit všechny časové osy v zobrazení.  
   
-#### <a name="to-view-the-call-stack-of-an-event"></a>Chcete-li zobrazit zásobníku volání na událost  
+#### <a name="to-view-the-call-stack-of-an-event"></a>Chcete-li zobrazit zásobník volání události  
   
--   V tomto časová osa grafu klikněte na panelu událostí.  
+-   Časová osa grafu klikněte na panel události.  
   
 #### <a name="to-view-or-edit-the-source-code-of-a-function-in-the-call-stack"></a>Chcete-li zobrazit nebo upravit zdrojový kód funkce v zásobníku volání  
   
--   V **zásobníkem volání** okně klikněte na název funkce.  
+- V **zásobník volání** okna, klikněte na název funkce.  
   
- Zdrojový kód funkce musí být součástí aktuálního projektu.  
+  Zdrojový kód funkce musí být součástí aktuálního projektu.  
   
 #### <a name="to-view-the-call-tree-of-contention-events-for-the-resource"></a>Zobrazení stromu volání kolizní události pro prostředek  
   
--   V tomto časová osa grafu, klikněte na tlačítko **celkový**.  
+-   Časová osa grafu, klikněte na tlačítko **celkový**.  
   
-     Zobrazí se zobrazení kolizí prostředku. Další informace najdete v tématu [zobrazení kolizí prostředku](../profiling/resource-contentions-view-contention-data.md)  
+     Zobrazení kolizí se zobrazí pro prostředek. Další informace najdete v tématu [zobrazení kolizí prostředku](../profiling/resource-contentions-view-contention-data.md)  
   
-#### <a name="to-view-all-the-contention-events-of-a-thread"></a>Chcete-li zobrazit všechny události kolizí vlákna  
+#### <a name="to-view-all-the-contention-events-of-a-thread"></a>Chcete-li zobrazit všechny události sporu vlákna  
   
--   V tomto časová osa grafu klikněte na název nebo ID vlákna.  
+-   Časová osa grafu klikněte na název nebo ID vlákna.  
   
-     Zobrazení podrobností vlákno se zobrazí pro vybrané vlákno. Další informace najdete v tématu [vláken zobrazení podrobností](../profiling/thread-details-view-contention-data.md).
+     Zobrazení podrobností vláken se zobrazí pro vybrané vlákno. Další informace najdete v tématu [zobrazení podrobností vláken](../profiling/thread-details-view-contention-data.md).

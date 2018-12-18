@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 40ec14a6d8909276d479f1e43b1bc20acd4452ef
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 6527825d23e0c09d156f61f2645276e61d72e165
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843634"
 ---
 # <a name="how-to-pause-and-resume-performance-data-collection"></a>Postupy: pozastavení a obnovení shromažďování dat výkonu
 Z okna stránky relace profilování můžete interaktivně ovládat shromažďování dat profilování.  
@@ -38,6 +39,6 @@ Z okna stránky relace profilování můžete interaktivně ovládat shromažď
   
     -   Zvolte **zastavíte profilování** k ukončení relace profilování a generování sestav.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Řízení shromažďování dat](../profiling/controlling-data-collection.md)   
- [Postupy: spuštění a ukončení shromažďování dat výkonu](../profiling/how-to-start-and-end-performance-data-collection.md)
+ [Postupy: Zahájení a ukončení shromažďování dat o výkonu](../profiling/how-to-start-and-end-performance-data-collection.md)

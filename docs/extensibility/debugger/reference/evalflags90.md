@@ -1,5 +1,5 @@
 ---
-title: EVALFLAGS90 | Microsoft Docs
+title: EVALFLAGS90 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,11 +13,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 120bf38afbf05f367757de3a5e453cab8b4311b1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 43c8c7dcba7ea1125c031f0cc64a902d88f67017
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49849422"
 ---
 # <a name="evalflags90"></a>EVALFLAGS90
 Vytvoří výčet platné hodnoty pro příznaky, které řídí vyhodnocení výrazu. Tento výčet rozšiřuje [EVALFLAGS](../../../extensibility/debugger/reference/evalflags.md) výčtu.  
@@ -65,34 +66,34 @@ public enum enum_EVALFLAGS90
   
 #### <a name="parameters"></a>Parametry  
  EVAL90_RETURNVALUE  
- Určuje, že návratovou hodnotu, pokud existuje, vyhodnotí.  
+ Určuje, že návratová hodnota, pokud existuje, vyhodnocen.  
   
  EVAL90_NOSIDEEFFECTS  
- Určuje, že nebyla povolen vedlejší účinky.  
+ Určuje, že nebudou povoleny vedlejší účinky.  
   
  EVAL90_ALLOWBPS  
  Určuje zastavení zarážky.  
   
  EVAL90_ALLOWERRORREPORT  
- Určuje, že chybách k hostiteli mají být povolena. Používá se především pro vyhodnocení výrazu ve skriptu v aplikaci Internet Explorer.  
+ Určuje tuto chybu generování sestav k hostiteli mají být povolena. Používá se především pro vyhodnocení výrazu ve skriptu v aplikaci Internet Explorer.  
   
  EVAL90_FUNCTION_AS_ADDRESS  
- Vynutí funkce, který se má vyhodnotit jako adresy místo vyvolání funkce.  
+ Funkce sil má být vyhodnocen jako adresy, namísto volání funkce.  
   
  EVAL90_NOFUNCEVAL  
- Zabrání vyhodnocovaný funkce. Představte si třeba `int` tokenu ve výrazu `myExpression(int) + 10`. Tuto funkci lze správně vyhodnotit jako adresu, ale ne jako hodnotu.  
+ Zabraňuje vyhodnocení funkce. Představme si třeba, `int` token ve výrazu `myExpression(int) + 10`. Tato funkce může být správně vyhodnocen jako adresa, ale ne jako hodnotu.  
   
  EVAL90_NOEVENTS  
- Příznak, který označuje, že by se neměly posílat události, které nastaly během vyhodnocování výrazu, správce ladicí relace (SDM) nebo rozhraní IDE.  
+ Příznak označující, že správce ladění relace (SDM) nebo integrovaném vývojovém prostředí by se neměly posílat události, ke kterým dochází při vyhodnocení výrazu.  
   
  EVAL90_DESIGN_TIME_EXPR_EVAL  
- Umožňuje vyhodnocení výrazu při návrhu.  
+ Umožňuje vyhodnocování výrazu v době návrhu.  
   
  EVAL90_ALLOW_IMPLICIT_VARS  
- Umožňuje implicitní vytvoření proměnné.  
+ Umožňuje implicitní vytváření proměnných.  
   
  EVAL90_FORCE_EVALUATION_NOW  
- Vynutí vyhodnocení proběhnout okamžitě. To je užitečné, když obsluhy požadavku, například na žádost uživatele.  
+ Vyhodnocení vynutí okamžité. To je užitečné při obsluze žádosti, jako je například požadavek uživatele.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: Msdbg90.h  

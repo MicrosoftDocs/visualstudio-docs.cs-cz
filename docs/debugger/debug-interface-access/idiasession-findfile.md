@@ -1,5 +1,5 @@
 ---
-title: Idiasession::FindFile – | Microsoft Docs
+title: Idiasession::FindFile – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b91d23cdd92943a40dfa649e82964b101f68739d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 32c8fa5c6f3cd8ec3cf1cead397eadadb99e050d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49909938"
 ---
 # <a name="idiasessionfindfile"></a>IDiaSession::findFile
-Načte zdrojové soubory podle kompilace a názvu.  
+Načte zdrojové soubory kompilace a název.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,19 +37,19 @@ HRESULT findFile (
   
 #### <a name="parameters"></a>Parametry  
  `pCompiland`  
- [v] [Idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objekt reprezentující kompilace má být použit jako kontextu pro hledání. Tento parametr nastavte na `NULL` najít v souborech určených ke kompilaci všechny zdrojové soubory.  
+ [in] [Idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objekt představující kompilantu se použije jako kontext pro hledání. Nastavte tento parametr na `NULL` k vyhledání zdrojových souborů ve všech souborech určených ke kompilaci.  
   
  `name`  
- [v] Určuje název zdrojového souboru má být načtena. Tento parametr nastavte na `NULL` pro všechny zdrojové soubory, které mají být načteny.  
+ [in] Určuje název zdrojového souboru, který se má načíst. Nastavte tento parametr na `NULL` pro všechny zdrojové soubory, které se mají načíst.  
   
  `option`  
- [v] Určuje možnosti porovnání použita k hledání názvu. Hodnoty z [NameSearchOptions – výčet](../../debugger/debug-interface-access/namesearchoptions.md) výčet může být použito samostatně nebo v kombinaci.  
+ [in] Určení možností porovnání použitý k hledání názvu. Hodnoty z [namesearchoptions – výčet](../../debugger/debug-interface-access/namesearchoptions.md) výčtu lze použít samostatně nebo v kombinaci.  
   
  `ppResult`  
- [out] Vrátí [idiaenumsourcefiles –](../../debugger/debug-interface-access/idiaenumsourcefiles.md) načíst objekt, který obsahuje seznam zdrojové soubory.  
+ [out] Vrátí [idiaenumsourcefiles –](../../debugger/debug-interface-access/idiaenumsourcefiles.md) načíst objekt, který obsahuje seznam zdrojových souborů.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
   

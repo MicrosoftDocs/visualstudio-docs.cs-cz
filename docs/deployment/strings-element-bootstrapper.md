@@ -1,5 +1,5 @@
 ---
-title: '&lt;Řetězce&gt; prvek (zavaděče) | Microsoft Docs'
+title: '&lt;Řetězce&gt; – Element (zaváděcí nástroj) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -20,18 +20,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: df186776e9f1fe431343c8643e5186ff522dfff6
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: fc1cab2fdb0a175fc9365b2a8b4b17dca46a30a2
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39077669"
 ---
-# <a name="ltstringsgt-element-bootstrapper"></a>&lt;Řetězce&gt; – Element (zaváděcího nástroje)
+# <a name="ltstringsgt-element-bootstrapper"></a>&lt;Řetězce&gt; – element (zaváděcí nástroj)
 Definuje lokalizované řetězce pro názvy produktů, názvů balíčků a chybové zprávy instalace.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```xml  
 <Strings>  
     <String  
         Name  
@@ -41,10 +42,10 @@ Definuje lokalizované řetězce pro názvy produktů, názvů balíčků a chyb
 ```  
   
 ## <a name="elements-and-attributes"></a>Elementy a atributy  
- `Strings` Element je podřízená `Package` elementu. Nemá žádné atributy.  
+ `Strings` Element je podřízeným prvkem `Package` elementu. Nemá žádné atributy.  
   
 ## <a name="string"></a>String  
- `String` Element je podřízená `Strings` elementu. A `Strings` element může mít jeden nebo více `String` elementy.  
+ `String` Element je podřízeným prvkem `Strings` elementu. A `Strings` element může obsahovat jeden nebo více `String` elementy.  
   
  `String` má následující atribut.  
   
@@ -55,7 +56,7 @@ Definuje lokalizované řetězce pro názvy produktů, názvů balíčků a chyb
 ## <a name="example"></a>Příklad  
  Následující příklad kódu určuje všechny anglické řetězce pro [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] Instalační služby.  
   
-```  
+```xml  
 <Strings>  
     <String Name="DisplayName">.NET Framework 2.0</String>  
     <String Name="Culture">en</String>  
@@ -74,5 +75,5 @@ Definuje lokalizované řetězce pro názvy produktů, názvů balíčků a chyb
 </Strings>  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [\<Balíček > elementu](../deployment/package-element-bootstrapper.md)
+## <a name="see-also"></a>Viz také:  
+ [\<Balíček > – element](../deployment/package-element-bootstrapper.md)

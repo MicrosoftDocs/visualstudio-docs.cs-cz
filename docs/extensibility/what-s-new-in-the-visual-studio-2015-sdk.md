@@ -1,5 +1,5 @@
 ---
-title: Co&#39;s ve Visual Studio 2015 SDK | Microsoft Docs
+title: Co&#39;nového ve Visual Studio 2015 SDK | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,62 +11,63 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6488f28f2963e17c716c2e9d395ddf77f270e7b1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4926ed9fafb64664d3ac0426466d90611cae4450
+ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39566690"
 ---
-# <a name="what39s-new-in-the-visual-studio-2015-sdk"></a>Co&#39;s ve Visual Studio 2015 SDK
+# <a name="what39s-new-in-the-visual-studio-2015-sdk"></a>Co&#39;s nového ve Visual Studio 2015 SDK
 Visual Studio SDK obsahuje následující nové a aktualizované funkce pro Visual Studio 2015, Visual Studio 2015, aktualizovat a Visual Studio 2017.  
   
 ## <a name="vs-2015-sdk-update-1"></a>VS 2015 SDK Update 1  
- Aktualizace 1 zahrnuje nástrojů, které pomůžou toto rozšíření funkce fungují dobře u barevné motivy a služba bitovou kopii sady Visual Studio.  
+ Aktualizace Update 1 zahrnuje nástroje, které pomáhají vaše rozšíření fungovat dobře s barevné motivy a image služby Visual Studio.  
   
- Tato témata jsou v části [VSSDK nástroje](../extensibility/internals/vssdk-utilities.md) části:  
+ Tato témata jsou v rámci [nástroje VSSDK](../extensibility/internals/vssdk-utilities.md) části:  
   
--   [Nástrojů barev motivů](../extensibility/internals/color-theming-tools.md) vám pomůžou vytvořit a upravit vlastních barev pro sadu Visual Studio.  
+-   [Barevné motivy nástroje](../extensibility/internals/color-theming-tools.md) vám pomůžou vytvářet a upravovat vlastní barvy pro sadu Visual Studio.  
   
--   [Nástroje bitových kopií služby](../extensibility/internals/image-service-tools.md) umožňují při práci se soubory manifestu bitovou kopii sady Visual Studio.  
+-   [Nástroje služby Image](../extensibility/internals/image-service-tools.md) umožňují pracovat se soubory manifestu obrázků sady Visual Studio.  
   
-## <a name="new-way-to-add-the-visual-studio-sdk-to-visual-studio"></a>Nový způsob přidání sady Visual Studio SDK pro Visual Studio  
- Spouštění v sadě Visual Studio 2015, nepotřebujete samostatně stáhnout sadu Visual Studio SDK. Místo toho můžete jej nainstalovat jako součást procesu instalace normální nebo můžete k její instalaci později. Při otevírání nebo vytvořte VSIX řešení, Visual Studio zobrazí výzvu k instalaci sady Visual Studio Extensibility Tools. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+## <a name="new-way-to-add-the-visual-studio-sdk-to-visual-studio"></a>Nový způsob, jak přidat Visual Studio SDK do sady Visual Studio  
+ Spouští se v sadě Visual Studio 2015, není nutné samostatně stáhnout Visual Studio SDK. Místo toho ho můžete nainstalovat jako součást procesu instalace normální, nebo můžete nainstalovat později. Když otevřete nebo vytvořte VSIX řešení sady Visual Studio vás vyzve k instalaci Visual Studio Extensibility Tools. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
 ## <a name="new-ways-of-creating-extensions"></a>Nové způsoby vytváření rozšíření  
- Od verze Visual Studio 2015 SDK, máte různé možnosti pro vytvoření rozšíření, v závislosti na programovací jazyk, který používáte.  
+ Od verze Visual Studio 2015 SDK, budete mít různé možnosti pro vytvoření rozšíření, v závislosti na programovacím jazyku, který používáte.  
   
 ### <a name="visual-c-and-visual-basic"></a>Visual C# a Visual Basic  
- Pro C# a Visual Basic je plný rozsah šablony položek projektu, které vám umožní vytvořit VSPackages, příkazy nabídky, nástroj windows, editor třídění, editor vylepšení a rozšíření okraj editoru. Můžete přidat některé nebo všechny tyto standardní projekt VSIX. Další informace naleznete v tématu:  
+ Pro C# a Visual Basic je plný rozsah šablony položek projektu, které vám umožňují vytvářet rozšíření VSPackages, příkazy nabídky, okna nástrojů, editor třídění, vylepšení editoru a rozšíření okraj editoru. Některé nebo všechny z těchto šablon můžete přidat do standardních projektu VSIX. Další informace naleznete v tématu:  
   
--   [Vytváření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md)  
+-   [Vytvoření rozšíření pomocí příkazu nabídky](../extensibility/creating-an-extension-with-a-menu-command.md)  
   
 -   [Vytváření rozšíření pomocí panelu nástrojů](../extensibility/creating-an-extension-with-a-tool-window.md)  
   
 -   [Vytváření rozšíření pomocí šablony položky editoru](../extensibility/creating-an-extension-with-an-editor-item-template.md)  
   
--   [Vytváření rozšíření pomocí VSPackage](../extensibility/creating-an-extension-with-a-vspackage.md)  
+-   [Vytvoření rozšíření pomocí VSPackage](../extensibility/creating-an-extension-with-a-vspackage.md)  
   
-     Průvodce VSPackage už vytvoří rozšíření v C# nebo Visual Basic.  
+     Průvodce vytvořením balíčku VSPackage už vytvoří rozšíření v jazyce C# nebo Visual Basic.  
   
 ### <a name="c"></a>C++  
- Pro jazyk C++ průvodce VSPackage podporovat příkazy nabídky okna nástrojů a vlastní editory. Podívejte se v **nový projekt** dialogové okno ve **Visual C++ / rozšiřitelnost**.  
+ Průvodce vytvořením balíčku VSPackage jazyka C++, podporují příkazy nabídky, panely nástrojů a vlastních editorech. Podívejte se v **nový projekt** dialogového okna v **Visual C++ / rozšíření**.  
   
-## <a name="vs-sdk-reference-assemblies-via-nuget"></a>Sestavení referenční VS SDK prostřednictvím balíčku NuGet  
- Pro vyšší přenositelnost a sdílení rozšiřitelnost projektů můžete použít referenční sestavení VS SDK verze NuGet.  Jsou dostupné v [nuget.org](http://www.nuget.org) publikováno [VisualStudioExtensibility](http://www.nuget.org/profiles/VisualStudioExtensibility) a lze je snadno přidat na projekt nebo řešení pomocí sady Visual Studio **odkazuje / spravovat NuGet Balíčky** dialogové okno. Můžete přidat jednotlivé odkazy na konkrétní rozšíření sestavení nebo přidat VS SDK odkazuje na sestavení najednou pomocí sady SDK VS [Meta balíček](http://www.nuget.org/packages/VSSDK_Reference_Assemblies). Další informace o systému NuGet najdete v tématu [NuGet dokumentace](/NuGet) a [uživatelského rozhraní Správce balíčků](/NuGet/Tools/Package-Manager-UI) témata.  
+## <a name="vs-sdk-reference-assemblies-via-nuget"></a>Referenční sestavení sady SDK pro VS prostřednictvím balíčku NuGet  
+ Kvůli vyšší přenositelnosti a sdílení projektů rozšiřitelnosti můžete použít verze NuGet referenčních sestavení sady SDK pro VS. Tato sestavení jsou k dispozici na [nuget.org](http://www.nuget.org) publikovaným [VisualStudioExtensibility](http://www.nuget.org/profiles/VisualStudioExtensibility) a můžete snadno přidat do projektu nebo řešení pomocí nástroje Visual Studio **odkazuje a Správa Balíčky NuGet** dialogového okna. Můžete přidat jednotlivé odkazy na rozšíření specifické pro sestavení nebo přidat VS SDK odkazuje na sestavení najednou pomocí sady SDK pro VS [Meta balíčku](http://www.nuget.org/packages/VSSDK_Reference_Assemblies). Další informace o systému NuGet, najdete v článku [dokumentace pro NuGet](/NuGet) a [uživatelské rozhraní Správce balíčků](/NuGet/Tools/Package-Manager-UI) témata.  
   
- Použijete-li verze NuGet referenční sestavení VS SDK, jiný uživatel nebude muset nainstalovat VS SDK k otevření a sestavení projektu.  NuGet referenční sestavení a nástroje pro sestavení VS SDK se automaticky nainstalují na svém počítači pro tento projekt.  
+ Při použití verze NuGet referenčních sestavení sady SDK pro VS jiný uživatel nemusí nainstalovat sadu SDK pro VS a otevřete svůj projekt sestavit.  NuGet referenčních sestavení a nástroje sestavení sady SDK pro VS automaticky se nainstaluje v jejich počítači pro daný projekt.  
   
- Šablony položek VS SDK použijte NuGet pro jejich odkazy a nástroje pro vytváření, získáte výhody NuGet ve výchozím nastavení.  
+ Šablony položek VS SDK použít NuGet pro jejich odkazů a vytváření buildů, takže získáte výhody NuGet ve výchozím nastavení.  
   
 > [!NOTE]
->  Můžete nadále používat referenční sestavení VS SDK, které jsou nainstalované s projekty (umístěné v \<umístění instalovat Visual Studio > \ VSSDK\VisualStudioIntegration\Common\Assemblies) a existující projekty rozšíření nemusíte být upgradovat na balíčky NuGet.  Projekt **odkazuje / přidat odkaz** dialogu budou nadále používat referenční sestavení VS SDK nainstalována.  
+>  Můžete nadále používat referenční sestavení nainstalovaná sada SDK pro VS s vašimi projekty (umístěný ve skupinovém rámečku \<umístění instalace aplikace Visual Studio > \ VSSDK\VisualStudioIntegration\Common\Assemblies) a není potřeba mít existující projekty rozšiřitelnosti upgradovat na používaly balíčky NuGet.  Projekt **odkazuje / přidat odkaz na** dialogového okna i nadále používat referenční sestavení nainstalovaná sada SDK pro VS.  
 >   
->  Pokud chcete upravit existující projekty použít NuGet, najdete v článku [postup: migrace VSPackages Visual Studio 2015](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2015.md) jehož oddíl na aktualizace rozšiřitelnost projektů na balíčky NuGet.  
+>  Pokud chcete upravit existující projekty použít NuGet, přečtěte si téma [postupy: migrace rozšíření VSPackages do sady Visual Studio 2015](../extensibility/how-to-migrate-extensibility-projects-to-visual-studio-2015.md) která má část o aktualizaci rozšíření projekty do balíčků NuGet.  
   
-## <a name="light-bulbs"></a>Žárovek  
- Většina zajímavé nové způsoby zápisu rozšíření kódu jsou poskytovány Roslyn projektu. Další informace najdete v tématu [Roslyn](https://github.com/dotnet/Roslyn).  
+## <a name="light-bulbs"></a>Ikony žárovky  
+ Poskytuje jednu z nejzajímavějších nové způsoby psaní kódu rozšíření projektu Roslyn. Další informace najdete v tématu [Roslyn](https://github.com/dotnet/Roslyn).  
   
- Žárovek jsou nové funkce, která se dodává s verzí VSSDK. Jsou ikony používané v editoru Visual Studio, které rozbalte zobrazíte sadu kódu refaktoringu akce nebo opravy problémů se identifikovanou pomocí analyzátorů předdefinované kódu. Další informace najdete v tématu [návod: zobrazení návrhy žárovky](../extensibility/walkthrough-displaying-light-bulb-suggestions.md).  
+ Ikony žárovky jsou novou funkci, která se dodává s VSSDK. Jsou ikony používané v editoru sady Visual Studio, které se rozbalí a zobrazí sadu akcí refaktoringu kódu nebo opravy problémů, které jsou identifikované analyzátorů integrované kódu. Další informace najdete v tématu [návod: zobrazení návrhů](../extensibility/walkthrough-displaying-light-bulb-suggestions.md).  
   
-## <a name="updated-user-experience-guidelines"></a>Aktualizované prostředí pro práci uživatelů  
- Navrhování nová rozšíření nebo funkce pro sadu Visual Studio? Podívejte se na aktualizovanou a rozšířená [Visual Studio prostředí pro práci uživatelů](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md).  Zjistíte [barvu tokeny](../extensibility/ux-guidelines/shared-colors-for-visual-studio.md), [velikosti písem](../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md), [dialogové okno rozložení specifikace](../extensibility/ux-guidelines/layout-for-visual-studio.md)a další pokyny, budete muset bezproblémově integrovat nové uživatelské rozhraní pomocí sady Visual Studio.
+## <a name="updated-user-experience-guidelines"></a>Pokyny k aktualizované uživatelské prostředí  
+ Navrhování nového rozšíření nebo funkcí pro Visual Studio? Podívejte se na aktualizovaná a rozšířená [zkušenosti uživatelů sady Visual Studio](../extensibility/ux-guidelines/visual-studio-user-experience-guidelines.md).  Najdete tu [barva tokeny](../extensibility/ux-guidelines/shared-colors-for-visual-studio.md), [velikosti písma](../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md), [specifikace rozložení dialogového okna](../extensibility/ux-guidelines/layout-for-visual-studio.md)a další doprovodné materiály, budete muset bez problémů integrovat nové uživatelské rozhraní sady Visual Studio.

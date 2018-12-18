@@ -1,6 +1,7 @@
 ---
 title: 'Postupy: Vytvoření a úprava úrovní MIP'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: f64d4369-2307-4175-a39a-2e45506f7fa1
@@ -9,38 +10,39 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4b1a12810d64e4e61230d1832e0394f0bad91cf3
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 4bdda75e5c8796ccd6e0b1d86b717dbd9bc48926
+ms.sourcegitcommit: db680e8fa8066f905e7f9240342ece7ab9259308
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/09/2018
+ms.locfileid: "37924444"
 ---
-# <a name="how-to-create-and-modify-mip-levels"></a>Postupy: Vytvoření a úprava úrovní MIP
-Tento dokument ukazuje, jak používat **Editor obrázků** ke generování a úpravě *MIP úrovně* texture místo úroveň z – podrobnosti (mez stanovitelnosti).
+# <a name="how-to-create-and-modify-mip-levels"></a>Postupy: vytvoření a úprava úrovní MIP
+Tento dokument popisuje způsob použití **Editor obrázků** k tvorbě a úpravám *úrovní MIP* pro textury místa úrovně of-Detail (lod Level).
 
-## <a name="generating-mip-levels"></a>Generování MIP úrovně
- *Mipmapping* je technika, který slouží ke zvýšení rychlosti vykreslování a snížit aliasy artefakty na texturou objekty podle předem výpočet a ukládání několik kopií texturou v různých velikostech. Každá kopie, což se označuje jako MIP úroveň, je poloviční šířky a výšky předchozí kopie. Po vykreslení texturou na povrchu objektu MIP úroveň, která nejvíce odpovídá oblasti místo na obrazovce texturou prostor, je automaticky vybrán. To znamená, že hardware grafiky nemá vyfiltrujete příliš velký textury pro zachování konzistentní visual kvality. O 33 procent více než původní texture samostatně sice paměti náklady na ukládání MIP úrovně výkonu a zvýšení kvality obrázku justify ho.
+## <a name="generating-mip-levels"></a>Generování úrovní MIP
+ *Mipmapping* je technika, která umožňuje zvýšit rychlost vykreslování a snížit třepící artefakty texturovaných objektů a ukládání několik kopií textury v různých velikostech. Každá kopie, která se nazývá úroveň MIP, je poloviční šířku a výšku předchozí kopie. Po vykreslení textury na povrchu objektu je automaticky vybrána úroveň MIP, která nejlépe odpovídá do oblasti místo na obrazovce textury povrchu. To znamená, že grafický hardware nemusí filtrovat textury nadměrné velikosti za k zachování konzistentní vizuální kvality. Přestože paměťové náklady na uložení úrovní MIP je přibližně o 33 procent větší než největší původní textura samostatně, výkon a kvalita obrazu zarovnat ho.
 
-#### <a name="to-generate-mip-levels"></a>Ke generování MIP úrovně
+#### <a name="to-generate-mip-levels"></a>Generování úrovní MIP
 
-1.  Začínat základní texture, jak je popsáno v [postupy: vytvoření základní Texture](../designers/how-to-create-a-basic-texture.md). Nejlepších výsledků dosáhnete, zadejte texture, který má šířka a výška, které jsou power dva velikosti, například 256, 512, 1024, a tak dále.
+1.  Začněte základní texturou, jak je popsáno v [postupy: vytvoření základní textury](../designers/how-to-create-a-basic-texture.md). Pro dosažení nejlepších výsledků určete texturu, která má šířku a výšku, které jsou násobky 2, například 256, 512, 1024, a tak dále.
 
-2.  Generovat MIP úrovně. Na **režimu Editor obrázků** nástrojů vyberte **Upřesnit**, **nástroje**, **generovat Mips**.
+2.  Generování úrovní MIP. Na **režim editoru obrázků** nástrojů, zvolte **Upřesnit** > **nástroje** > **generovat Mips**.
 
-     Všimněte si, že **přejít na další úroveň Mip** a **přejít na předchozí úrovně Mip** tlačítka se zobrazují na **režimu Editor obrázků** panelu nástrojů. Pokud **vlastnosti** zobrazí se okno, Všimněte si také, že vlastnosti jen pro čtení **Mip úroveň** a **Mip úroveň počet** se nyní zobrazí v vlastnosti bitové kopie.
+     Všimněte si, že **přejít na další úroveň Mip** a **přejít na předchozí úroveň Mip** tlačítek se zobrazí na **režim editoru obrázků** nástrojů. Pokud **vlastnosti** se zobrazí okno, Všimněte si také, že vlastnosti jen pro čtení **úroveň Mip** a **počet úrovní Mip** teď budou zobrazovat v dialogovém okně Vlastnosti obrázku.
 
-## <a name="modifying-mip-levels"></a>Úprava MIP úrovně
- K dosažení speciální efekty nebo zvýšení kvality obrázku konkrétní úrovně podrobností, můžete upravit jednotlivé úrovně MIP jednotlivě. Například můžete udělit objekt texturou jiný vzhled ve vzdálenosti (větší vzdálenosti odpovídá menší MIP úrovně), nebo můžete zajistit, že textury, které obsahují text nebo symboly zůstat čitelné i na menší MIP úrovních.
+## <a name="modifying-mip-levels"></a>Změna úrovní MIP
+ Dosáhli zvláštních efektů nebo zvýšili kvalitu obrazu na určité úrovni podrobností, můžete upravit jednotlivé úrovně MIP samostatně. Například texturovaným objektem můžete přidělit jiný vzhled ve vzdálenosti (větší vzdálenost odpovídá NIŽŠÍM úrovním MIP) nebo můžete zajistit, že textury, které obsahují text nebo symboly, zůstanou čitelné i na menší MIP úrovních.
 
-#### <a name="to-modify-an-individual-mip-level"></a>Chcete-li změnit úroveň jednotlivých MIP
+#### <a name="to-modify-an-individual-mip-level"></a>Úprava jednotlivých úrovní MIP
 
-1.  Vyberte úroveň MIP, kterou chcete upravit. Na **režimu Editor obrázků** nástrojů, použijte **přejít na další úroveň MIP** a **přejít na předchozí úrovně MIP** tlačítka pro přesun mezi úrovněmi MIP.
+1.  Vyberte úroveň MIP, kterou chcete upravit. Na **režim editoru obrázků** nástrojů, použijte **přejít na další úroveň MIP** a **přejít na předchozí úroveň MIP** tlačítka mezi úrovněmi MIP pohybovat.
 
-2.  Po výběru MIP úroveň, kterou chcete upravit, můžete to změnit, aniž byste museli měnit obsah jiných úrovních MIP nástrojů pro kreslení. Kreslení nástroje jsou k dispozici na **Editor obrázků** panelu nástrojů. Jakmile vyberete nástroj, můžete změnit jeho vlastnosti v **vlastnosti** okno. Informace o nástrojů pro kreslení a jejich vlastnostech najdete v tématu [Editor obrázků](../designers/image-editor.md).
+2.  Po výběru úrovně MIP, kterou chcete upravit, můžete použít nástroje pro kreslení k její změně bez změny obsahu jiných úrovních MIP. Kreslicí nástroje jsou k dispozici na **Editor obrázků** nástrojů. Po vybrání nástroje můžete změnit jeho vlastnosti v **vlastnosti** okna. Informace o nástroje pro kreslení a jejich vlastnostech naleznete v tématu [Editor obrázků](../designers/image-editor.md).
 
 > [!NOTE]
->  Pokud není potřeba upravovat obsah jednotlivých úrovní MIP – jako mohou k dosažení určité účinky – doporučujeme generování mipmaps z texture zdroje v čase vytvoření buildu. To pomáhá zajistit, že MIP úrovně zůstat synchronizované s texture zdroje, protože úpravy na úrovni MIP nejsou automaticky rozšíří na jiných úrovních. Další informace o tom, jak vygenerovat mipmaps v čase vytvoření buildu najdete v tématu [postupy: Export texturou této obsahuje Mipmaps](../designers/how-to-export-a-texture-that-contains-mipmaps.md).
+>  Pokud není potřeba upravovat obsah jednotlivých úrovní MIP, což lze provést k dosažení určitých efektů, doporučujeme generovat mipmapy ze zdrojových textur v okamžiku sestavení. To pomáhá zajistit, že úrovně MIP zůstanou synchronizovány se zdrojovou texturou vzhledem k tomu, že změny na úrovni MIP nejsou automaticky propagovány na další úrovně. Další informace o způsobu generování Mipmap v okamžiku sestavení naleznete v tématu [postupy: Export textury obsahující mipmapy](../designers/how-to-export-a-texture-that-contains-mipmaps.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Postupy: Vytvoření základní textury](../designers/how-to-create-a-basic-texture.md)

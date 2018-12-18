@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 71ea82ea9588315748a9c79eb9abd7b06eace680
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d48393a2d160e3691069a4b5f86dd814b63d935d
+ms.sourcegitcommit: 269b55b413d2c82e6aa56c6ab8e53da7926fb2e8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35237679"
 ---
-# <a name="functions-view---net-memory-instrumentation-data"></a>Zobrazení funkcí – Data instrumentace paměti .NET
+# <a name="functions-view---net-memory-instrumentation-data"></a>Zobrazení funkcí – data instrumentace paměti .NET
 Zobrazení funkcí rozhraní .NET paměti přidělení profilování dat, která nebyla shromážděna pomocí metody instrumentace obsahuje seznam funkcí, které přidělené paměti při spuštění profilování. Řádek funkce sestav, velikost a počet přidělování a dat časování pro funkci.  
   
 ## <a name="general"></a>Obecné  
@@ -97,7 +98,7 @@ Zobrazení funkcí rozhraní .NET paměti přidělení profilování dat, která
 |**Maximální doba výhradní aplikace**|Čas výhradní maximální aplikace volání této funkce.|  
 |**Doba výhradní aplikace min.**|Čas výhradní minimální aplikace volání této funkce.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Postupy: přizpůsobení sloupců zobrazení sestavy](../profiling/how-to-customize-report-view-columns.md)   
  [Zobrazení funkcí – vzorkování](../profiling/functions-view-dotnet-memory-sampling-data.md)   
  [Zobrazení funkcí](../profiling/functions-view-instrumentation-data.md)   

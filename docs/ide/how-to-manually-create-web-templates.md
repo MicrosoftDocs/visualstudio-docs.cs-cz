@@ -1,9 +1,8 @@
 ---
-title: Vytvoření webových šablon pro Visual Studio | Microsoft Docs
-ms.custom: ''
+title: Vytváření webových šablon
 ms.date: 01/02/2018
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio templates, Web
@@ -13,61 +12,62 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 0f7dcc6f14bc631d4d5880d0d7f1ee123bde0306
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: cff4fda5113cdbacba2d9389e360707f49ba595b
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53063665"
 ---
 # <a name="how-to-manually-create-web-templates"></a>Postupy: ruční vytvoření webových šablon
 
-Vytvoření šablony se liší od vytvoření jiných druhů šablony. Protože šablony webových projektů zobrazují v **přidat nový web** dialogové okno a webového projektu položky, které jsou klasifikovány podle programovacího jazyka *.vstemplate* soubor musí určit šablonu jako šablonu a identifikovat programovací jazyk.
+Vytvoření šablony webu se liší od vytvoření jiných typů šablon. Vzhledem k tomu, že šablony webových projektů se zobrazí v **přidat nový web** dialogové okno a webového projektu položky jsou zařazené do kategorií pomocí programovacího jazyka, *vstemplate* souboru musíte určit, která šablona jako šablonu a identifikovat programovací jazyk.
 
 > [!NOTE]
-> Webové šablony musí obsahovat prázdnou *.webproj* soubor a musí být odkazováno v *.vstemplate* v soubor `File` atribut `Project` element. I když webové projekty nevyžadují *.proj* soubor projektu, je nutné k vytvoření tohoto souboru se zakázaným inzerováním pro šablonu webových fungovat správně.
+> Webové šablony musí obsahovat prázdnou *.webproj* souboru a musí se odkazovat v *vstemplate* soubor `File` atribut `Project` element. I když se nevyžadují žádné webové projekty *souborů .proj* souboru projektu, je potřeba vytvořit tento soubor zástupné procedury pro šablony webové zajištění správného fungování.
 
-### <a name="to-manually-create-a-web-template"></a>Chcete-li ručně vytvořit šablonu
+## <a name="to-manually-create-a-web-template"></a>Ruční vytvoření webových šablon
 
-1. Vytváření webového projektu.
+1. Vytvoření webového projektu.
 
-1. Upravit nebo odstranit soubory v projektu nebo přidejte nové soubory do projektu.
+2. Upravit nebo odstranit soubory v projektu nebo přidejte nové soubory do projektu.
 
-1. Vytvořte soubor XML a uložte ho s *.vstemplate* příponu názvu souboru ve stejném adresáři jako projektu. Nepřidávejte jej do projektu v sadě Visual Studio.
+3. Vytvořte soubor XML a uložit ji *vstemplate* příponu názvu souboru ve stejném adresáři jako váš projekt. Nepřidávejte jej do projektu v sadě Visual Studio.
 
-1. Upravit *.vstemplate* soubor XML k poskytnutí metadat šablony projektu. Další informace najdete v tématu [příklad, který následuje](#example).
+4. Upravit *vstemplate* soubor XML k poskytování metadat šablony projektu. Další informace najdete v tématu [příkladu, který následuje](#example).
 
-1. Vyhledejte `ProjectType` element v *.vstemplate* souborů a nastavte ji na hodnotu text `Web`.
+5. Vyhledejte `ProjectType` prvek *vstemplate* souboru a nastavit textové hodnoty `Web`.
 
-1. Následující `ProjectType` elementu, přidejte `ProjectSubType` elementu a nastavte textovou hodnotu na programovací jazyk šablony. Programovací jazyk může být jedna z následujících hodnot:
+6. Následující `ProjectType` elementu, přidejte `ProjectSubType` elementu a nastaví hodnotu text pro programovací jazyk šablony. Programovací jazyk může být jeden z následujících hodnot:
 
-    - CSharp
-    - VisualBasic
+   - CSharp
+   - VisualBasic
 
-    Příklad:
+     Příklad:
 
-    ```xml
-    <TemplateData>
-        ...
-        <ProjectType>Web</ProjectType>
-        <ProjectSubType>CSharp</ProjectSubType>
-        ...
-    </TemplateData>
-    ```
+     ```xml
+     <TemplateData>
+       ...
+       <ProjectType>Web</ProjectType>
+       <ProjectSubType>CSharp</ProjectSubType>
+       ...
+     </TemplateData>
+     ```
 
-1. Vyberte soubory, které ve vaší šabloně (to zahrnuje *.vstemplate* soubor), klikněte pravým tlačítkem na výběr a zvolte **poslat** > **komprimované složky (ZIP)**. Soubory jsou komprimované do *.zip* souboru.
+7. Vyberte soubory v šabloně (jedná se o *vstemplate* souboru), klikněte pravým tlačítkem na výběr a zvolte **odeslat** > **komprimovanou složku (ZIP)**. Soubory jsou komprimované do *ZIP* souboru.
 
-1. Umístit *.zip* soubor šablony v adresáři projektu šablony sady Visual Studio. Ve výchozím nastavení je tento adresář *%USERPROFILE%\Documents\Visual Studio \<verze\>\ProjectTemplates*.
+8. Vložit *ZIP* soubor šablony v adresáři projektu šablony sady Visual Studio. Ve výchozím nastavení, je tento adresář *%USERPROFILE%\Documents\Visual Studio \<verze\>\ProjectTemplates*.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje základní *.vstemplate* Šablona webového projektu v souboru:
+Následující příklad ukazuje základní *vstemplate* Šablona webového projektu v souboru:
 
 ```xml
 <VSTemplate Version="2.0.0" Type="Project"
-    xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">>
+    xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
     <TemplateData>
         <Name>MyWebProjecStarterKit</Name>
-        <Description>A simple Web template</Description>
+        <Description>A simple web template</Description>
         <Icon>icon.ico</Icon>
         <ProjectType>Web</ProjectType>
         <ProjectSubType>CSharp</ProjectSubType>
@@ -83,7 +83,7 @@ Následující příklad ukazuje základní *.vstemplate* Šablona webového pro
 </VSTemplate>
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)  
-[Visual Studio odkaz na schéma šablon (rozšíření)](../extensibility/visual-studio-template-schema-reference.md)
+- [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)
+- [Visual Studio odkaz na schéma šablon (rozšiřitelnost)](../extensibility/visual-studio-template-schema-reference.md)

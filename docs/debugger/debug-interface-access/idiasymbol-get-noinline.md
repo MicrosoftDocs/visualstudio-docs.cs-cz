@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_noinline – | Microsoft Docs
+title: Idiasymbol::get_noinline – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c3089477e49ad1793bbe5b6aa403bf7a8fef149
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 24864562d11267cfc96bd3b3622864275eaecea2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49950105"
 ---
 # <a name="idiasymbolgetnoinline"></a>IDiaSymbol::get_noInline
-Načte příznak, který určuje, zda funkce byl označen jako není vložené (pomocí [noinline](/cpp/cpp/noinline) atributu).  
+Získá příznak, který určuje, zda funkce byl označen jako není vložená (pomocí [noinline](/cpp/cpp/noinline) atributu).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,20 +34,20 @@ HRESULT get_noInline(
   
 #### <a name="parameters"></a>Parametry  
  `pFlag`  
- [out] Vrátí `TRUE` Pokud má funkce `noinline` atributů; jinak vrátí `FALSE`.  
+ [out] Vrátí `TRUE` Pokud má funkce `noinline` atribut; v opačném případě vrátí `FALSE`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` nebo chybový kód.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
->  Vrácená hodnota `S_FALSE` znamená vlastnost není k dispozici pro symbol.  
+>  Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Požadavek|Popis|  
 |-----------------|-----------------|  
-|Hlavičky:|dia2.h|  
-|Verze:|V8.0 DIA SDK|  
+|Záhlaví:|dia2.h|  
+|Verze:|Ve verzi 8.0 DIA SDK|  
   
 ## <a name="see-also"></a>Viz také  
  [Idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md)   

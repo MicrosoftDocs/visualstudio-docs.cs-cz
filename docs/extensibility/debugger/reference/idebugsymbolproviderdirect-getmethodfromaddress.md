@@ -1,5 +1,5 @@
 ---
-title: IDebugSymbolProviderDirect::GetMethodFromAddress | Microsoft Docs
+title: IDebugSymbolProviderDirect::GetMethodFromAddress | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2b164e7e317da54f6ea22131e923c55901acec49
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b8a4f9e99dc1eb0c1cedc6d82690330eb6420098
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49880140"
 ---
 # <a name="idebugsymbolproviderdirectgetmethodfromaddress"></a>IDebugSymbolProviderDirect::GetMethodFromAddress
-Načte informace o metodě na adrese zadané ladění.  
+Načte informace o metodě na adrese zadaný ladění.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,7 +52,7 @@ int GetMethodFromAddress(
   
 #### <a name="parameters"></a>Parametry  
  `pAddress`  
- [v] Ladění adresu, která je reprezentována [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) rozhraní.  
+ [in] Ladění adresu, která je reprezentována [IDebugAddress](../../../extensibility/debugger/reference/idebugaddress.md) rozhraní.  
   
  `pGuid`  
  [out] Jedinečný identifikátor modulu.  
@@ -60,19 +61,19 @@ int GetMethodFromAddress(
  [out] Identifikátor domény aplikace.  
   
  `pTokenClass`  
- [out] Token, který představuje obsahující třídu.  
+ [out] Token, který představuje třídu obsahující.  
   
  `pTokenMethod`  
  [out] Token, který představuje modul.  
   
  `pdwOffset`  
- [out] Posun v bajtech od začátku `pAddress` parametr.  
+ [out] Posun v bajtech od začátku `pAddress` parametru.  
   
  `pdwVersion`  
  [out] Číslo verze metody.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugSymbolProviderDirect](../../../extensibility/debugger/reference/idebugsymbolproviderdirect.md)

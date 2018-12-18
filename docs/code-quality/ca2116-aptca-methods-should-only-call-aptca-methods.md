@@ -1,6 +1,7 @@
 ---
 title: 'CA2116: Metody APTCA by měly volat pouze metody APTCA'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,13 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 300b08d6fd00a9bf2a38e738a3b4d433111cb8c7
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 7decf94644bdb055f38c267c945dc0dcc813550a
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45547916"
 ---
 # <a name="ca2116-aptca-methods-should-only-call-aptca-methods"></a>CA2116: Metody APTCA by měly volat pouze metody APTCA
+
 |||
 |-|-|
 |TypeName|AptcaMethodsShouldOnlyCallAptcaMethods|
@@ -30,48 +33,58 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Metoda v sestavení s <xref:System.Security.AllowPartiallyTrustedCallersAttribute?displayProperty=fullName> atribut volá metodu v sestavení, které nemá atribut.
+
+Metodu v sestavení <xref:System.Security.AllowPartiallyTrustedCallersAttribute?displayProperty=fullName> atribut volá metodu v sestavení, který nemá atribut.
 
 ## <a name="rule-description"></a>Popis pravidla
- Ve výchozím nastavení, jsou veřejných nebo chráněné metody v sestavení se silnými názvy implicitně chráněny [požadavky propojení](/dotnet/framework/misc/link-demands) pro úplný vztah důvěryhodnosti; pouze plně důvěryhodné volající přístup sestavení se silným názvem. Sestavení se silným názvem označené jako <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atribut (APTCA) nemají tato ochrana. Atribut zakáže požadavek propojení zpřístupnění sestavení pro volající, které nemají úplný vztah důvěryhodnosti, například kód provádění z intranetu nebo Internetu.
 
- Když je atribut APTCA na plně důvěryhodný pro sestavení a sestavení spustí kód v jiném sestavení, který neumožňuje částečně důvěryhodné volající, je možné zneužití zabezpečení. Pokud dvě metody `M1` a `M2` splňovat následující podmínky, škodlivými úmysly můžete použít metodu `M1` obejít požadavek propojení implicitní úplný vztah důvěryhodnosti, který chrání `M2`:
+Ve výchozím nastavení, veřejné nebo chráněné metody v podepisují sestavení silnými názvy jsou implicitně chráněné [požadavky propojení](/dotnet/framework/misc/link-demands) pro úplný vztah důvěryhodnosti; pouze plně důvěryhodní volající může přistupovat k sestavení se silným názvem. Sestavení se silným názvem označené <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atribut (APTCA) nemají tuto ochranu. Atribut zakáže požadavku propojení, zpřístupnění sestavení volajícím, které nemají úplný vztah důvěryhodnosti, jako je například kód provádění z intranetu nebo Internetu.
 
--   `M1` je veřejná metoda deklarována ve plně důvěryhodný pro sestavení, který má atribut APTCA.
+Když je atribut APTCA uveden pro plně důvěryhodná sestavení a sestavení spustí kód v jiném sestavení, který neumožňuje volání částečně důvěryhodným volajícím, je možné zneužití zabezpečení. Pokud dvě metody `M1` a `M2` splňovat následující podmínky, škodlivý volající použít metodu `M1` obejít požadavek propojení implicitní úplný vztah důvěryhodnosti, který chrání `M2`:
 
--   `M1` volá metodu `M2` mimo `M1`na sestavení.
+- `M1` je v plně důvěryhodná sestavení, který má atribut APTCA deklarována veřejnou metodu.
 
--   `M2`pro sestavení nemá atribut APTCA a proto by neměl být spouštěn nebo jeho jménem volající, které jsou částečně důvěryhodné.
+- `M1` volá metodu `M2` mimo `M1`pro sestavení.
 
- Částečně důvěryhodné volající `X` můžete volat metodu `M1`, což způsobilo `M1` volat `M2`. Protože `M2` nemá atribut APTCA jeho bezprostředního volajícího (`M1`) musí splňovat požadavek propojení pro úplný vztah důvěryhodnosti; `M1` má úplný vztah důvěryhodnosti a proto splňuje této kontroly. Je bezpečnostní riziko, protože `X` neúčastní neodpovídajících vyžádání odkaz, který chrání `M2` z nedůvěryhodné volající. Metody s atributem APTCA proto nesmějí volat metody, které nemají atribut.
+- `M2`od sestavení nemá atribut APTCA a proto by neměl být spouštěn podle nebo jejich jménem volajícím, které jsou částečně důvěryhodné.
+
+Částečně důvěryhodné volající `X` lze zavolat metodu `M1`, způsobující `M1` volat `M2`. Protože `M2` nemá atribut APTCA, jeho bezprostředního volajícího (`M1`) musí uspokojit požadavky propojení pro úplnou důvěryhodnost; `M1` má úplný vztah důvěryhodnosti a proto splňuje tato kontrola. Je bezpečnostní riziko, protože `X` není součástí uspokojit poptávku odkaz, který chrání `M2` z nedůvěryhodných volajících. Metody s atributem APTCA proto nesmějí volat metody, které nemají atribut.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Pokud atribut APTCA je zapotřebí, použijte k ochraně metodu, která volá do úplný vztah důvěryhodnosti sestavení vyžádání. Přesný oprávnění závisí na vyžádání je funkce vystavené metodu. Pokud je možné, chrání metodu o úplný vztah důvěryhodnosti k zajištění, že základní funkce není vystavený částečně důvěryhodné volající. Pokud to není možné, vyberte sadu oprávnění, která efektivně chrání zveřejněné funkce.
+ Pokud je vyžadován atribut APTCA, použijte k ochraně metodu, která volá do sestavení úplné důvěryhodnosti vyžádání. Vyžádání vás bude záviset na konkrétní oprávnění funkce vystavené metodu. Pokud je to možné, Chraňte metody s požadavky pro úplný vztah důvěryhodnosti k zajištění toho, že základní funkce není vystaven částečně důvěryhodné volající. Pokud to není možné, vyberte sadu oprávnění, která efektivně chrání vystavené funkce.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Chcete-li bezpečně potlačit upozornění na toto pravidlo, je nutné zajistit, že funkce vystavené metoda přímo nebo nepřímo neumožňuje volajícím přístup k citlivým informacím, provoz nebo prostředky, které můžete použít destruktivní způsobem.
+ Můžete bezpečně potlačit upozornění tohoto pravidla, ujistěte se, že funkce vystavené metodu přímo nebo nepřímo nepovoluje volající pro přístup k citlivé informace, operace nebo prostředky použité destruktivním způsobem.
 
-## <a name="example"></a>Příklad
- Následující příklad používá dvě sestavení a testovací aplikaci pro ilustraci ohrožení zabezpečení zjistil tímto pravidlem. První sestavení nemá atribut APTCA a nesmí být dostupný pro částečně důvěryhodné volající (reprezentována `M2` v předchozí diskuse).
+## <a name="example-1"></a>Příklad 1
+ Následující příklad používá dva sestavení a testovací aplikaci pro ilustraci ohrožení zabezpečení, zjistí toto pravidlo. První sestavení nemá atribut APTCA a by neměl být přístupný pro částečně důvěryhodných volajících (představované `M2` v předchozím diskusí).
 
  [!code-csharp[FxCop.Security.NoAptca#1](../code-quality/codesnippet/CSharp/ca2116-aptca-methods-should-only-call-aptca-methods_1.cs)]
 
-## <a name="example"></a>Příklad
- Druhý sestavení není plně důvěryhodná a umožňuje částečně důvěryhodné volající (reprezentována `M1` v předchozí diskuse).
+## <a name="example-2"></a>Příklad 2
+ Druhý sestavení je plně důvěryhodný a povoluje částečně důvěryhodné volající (představované `M1` v předchozím diskusí).
 
  [!code-csharp[FxCop.Security.YesAptca#1](../code-quality/codesnippet/CSharp/ca2116-aptca-methods-should-only-call-aptca-methods_2.cs)]
 
-## <a name="example"></a>Příklad
- Testovací aplikace (reprezentována `X` v předchozí diskuse) je částečně důvěryhodné.
+## <a name="example-3"></a>Příklad 3
+ Testovací aplikace (představované `X` v předchozím diskusí) je částečně důvěryhodné.
 
  [!code-csharp[FxCop.Security.TestAptcaMethods#1](../code-quality/codesnippet/CSharp/ca2116-aptca-methods-should-only-call-aptca-methods_3.cs)]
 
- Tento příklad vytvoří následující výstup.
+Tento příklad vytvoří následující výstup:
 
- **Vyžádání pro úplné důvěryhodnosti: požadavek se nezdařilo. ** 
- **ClassRequiringFullTrust.DoWork byla volána.**
+```txt
+Demand for full trust:Request failed.
+ClassRequiringFullTrust.DoWork was called.
+```
+
 ## <a name="related-rules"></a>Související pravidla
- [CA2117: Typy APTCA by měly rozšířit pouze základní typy APTCA](../code-quality/ca2117-aptca-types-should-only-extend-aptca-base-types.md)
 
-## <a name="see-also"></a>Viz také
- [Pokyny pro zabezpečené kódování](/dotnet/standard/security/secure-coding-guidelines) [používání knihoven z částečně důvěryhodného kódu](/dotnet/framework/misc/using-libraries-from-partially-trusted-code) [požadavky na propojení](/dotnet/framework/misc/link-demands) [Data a modelování](/dotnet/framework/data/index)
+- [CA2117: Typy APTCA by měly rozšířit pouze základní typy APTCA](../code-quality/ca2117-aptca-types-should-only-extend-aptca-base-types.md)
+
+## <a name="see-also"></a>Viz také:
+
+- [Pokyny pro zabezpečené kódování](/dotnet/standard/security/secure-coding-guidelines)
+- [Používání knihoven z částečně důvěryhodného kódu](/dotnet/framework/misc/using-libraries-from-partially-trusted-code)
+- [Požadavky propojení](/dotnet/framework/misc/link-demands)
+- [Data a modelování](/dotnet/framework/data/index)

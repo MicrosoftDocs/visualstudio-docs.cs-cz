@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::GetDisassemblyStream | Microsoft Docs
+title: IDebugProgram2::GetDisassemblyStream | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f5b991a877f91b9324b6535fb3b79b082cd901c2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e8d2220d928128b02ea02d26f8273714a89171ea
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49896455"
 ---
 # <a name="idebugprogram2getdisassemblystream"></a>IDebugProgram2::GetDisassemblyStream
-Získá datový proud zpětný překlad pro tento program nebo jeho část tohoto programu.  
+Získá datový proud zpětný překlad pro tento program nebo součástí tohoto programu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,19 +45,19 @@ int GetDisassemblyStream(
   
 #### <a name="parameters"></a>Parametry  
  `dwScope`  
- [v] Určuje hodnotu z [DISASSEMBLY_STREAM_SCOPE](../../../extensibility/debugger/reference/disassembly-stream-scope.md) výčet, který definuje rozsah datového proudu zpětný překlad.  
+ [in] Určuje hodnotu z [DISASSEMBLY_STREAM_SCOPE](../../../extensibility/debugger/reference/disassembly-stream-scope.md) výčet, který definuje rozsah datového proudu zpětný překlad.  
   
  `pCodeContext`  
- [v] [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) objekt, který představuje pozici s začínají datový proud zpětný překlad.  
+ [in] [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) objekt, který reprezentuje pozice kde začít streamu zpětný překlad.  
   
  `ppDisassemblyStream`  
  [out] Vrátí [IDebugDisassemblyStream2](../../../extensibility/debugger/reference/idebugdisassemblystream2.md) objekt, který představuje datový proud zpětný překlad.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby. Vrátí `E_DISASM_NOTSUPPORTED` pokud zpětný překlad není podporovaná pro tento konkrétní architekturu.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. Vrátí `E_DISASM_NOTSUPPORTED` Pokud pro tuto konkrétní architekturu není podporován převod do strojového jazyka.  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud `dwScopes` parametr má `DSS_HUGE` příznak [DISASSEMBLY_STREAM_SCOPE](../../../extensibility/debugger/reference/disassembly-stream-scope.md) nastavte výčet a pak se očekává, že zpětný překlad vrátí velký počet zpětný překlad pokyny, například pro celý soubor nebo modul. Pokud `DSS_HUGE` není nastaven příznak a pak se očekává, že zpětný překlad omezit na malé oblasti, obvykle u jedné funkce.  
+ Pokud `dwScopes` parametr má `DSS_HUGE` příznak [DISASSEMBLY_STREAM_SCOPE](../../../extensibility/debugger/reference/disassembly-stream-scope.md) nastavte výčet a pak zpětného překladu se očekává navrácení velkého počtu pokynů zpětný překlad, například pro celý soubor nebo modulu. Pokud `DSS_HUGE` není nastaven příznak a zpětný má být omezeny na malé oblast obvykle u jedné funkce.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)   

@@ -1,10 +1,9 @@
 ---
-title: Stránka kompilovat, Návrhář (Visual Basic) projektu | Microsoft Docs
-ms.custom: ''
+title: Stránka Kompilovat, návrhář projektu (Visual Basic)
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - vb.ProjectPropertiesCompile
 helpviewer_keywords:
@@ -21,154 +20,162 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 56efec5b538e2e84862549f6b5c7b7f30d9de75d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6d1b5c55c3bc1732d0b394473f25c0b103c917f4
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38808371"
 ---
 # <a name="compile-page-project-designer-visual-basic"></a>Stránka Kompilovat, návrhář projektu (Visual Basic)
-Použití **zkompilovat** stránky v Návrháři projektu k určení kompilace pokyny. Na této stránce můžete také zadat kompilátoru pokročilé možnosti a před sestavením nebo po sestavení událostí.  
-  
-Pro přístup k **zkompilovat** vyberte uzel projektu (ne **řešení** uzel) v **Průzkumníku řešení**. Zvolte **projektu**, **vlastnosti** v řádku nabídek. Jakmile se zobrazí v Návrháři projektu, klikněte na tlačítko **zkompilovat** kartě.  
-  
-[!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]  
-  
-## <a name="configuration-and-platform"></a>Konfigurace a platformy  
- Následující nastavení umožňuje vybrat konfigurace a platformy můžete zobrazit nebo upravit.  
-  
+
+Použití **kompilaci** stránky Návrháře projektu uvést pokyny kompilace. Na této stránce můžete také zadat kompilátoru pokročilé možnosti a před sestavením nebo po sestavení událostí.
+
+Pro přístup k **kompilaci** zvolte uzel projektu (ne **řešení** uzlu) v **Průzkumníku řešení**. Klikněte na tlačítko **projektu**, **vlastnosti** na řádku nabídek. Jakmile se zobrazí Návrhář projektu, klikněte na tlačítko **kompilaci** kartu.
+
+[!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]
+
+## <a name="configuration-and-platform"></a>Konfigurace a platforma
+
+Tato nastavení umožňují vybrat konfigurace a platformy k zobrazení a úpravě.
+
 > [!NOTE]
-> S konfigurací zjednodušené sestavení projektu systému určuje, zda sestavování ladění a vydání verze. Proto **konfigurace** a **platformy** seznamy nejsou zobrazeny.
+> Pomocí zjednodušených konfigurací sestavení systém projektu určuje, jestli se má sestavení ladění nebo vydání verze. Proto **konfigurace** a **platformy** seznamy se nezobrazují.
+
+ **Konfigurace**
+
+ Určuje které nastavení konfigurace má být zobrazeno nebo upraveno. Nastavení musí být **ladění** (výchozí), **vydání**, nebo **všechny konfigurace**. Další informace najdete v tématu [Principy konfigurací sestavení](../../ide/understanding-build-configurations.md) a [postupy: vytvoření a úprava konfigurací](../../ide/how-to-create-and-edit-configurations.md).
+
+ **Platforma**
+
+ Určuje které nastavení platformy má být zobrazeno nebo upraveno. Můžete zadat **jakýkoli procesor** (výchozí), **x64**, nebo **x86**.
+
+## <a name="compiler-configuration-options"></a>Konfigurace možností kompilátoru
+
+Tato nastavení umožňují nastavit kompilátor možnosti konfigurace.
+
+ **Výstupní cesta sestavení**
+
+ Určuje umístění výstupních souborů pro tuto konfiguraci projektu. Zadejte cestu k výstupu sestavení v tomto poli, nebo klikněte na tlačítko **Procházet** tlačítko a vyberte cestu. Všimněte si, že cesta je relativní; Pokud zadáte absolutní cestu, bude uložena jako relativní. Výchozí cesta je bin\Debug\ nebo bin\Release\\.
+
+ Pomocí zjednodušených konfigurací sestavení systém projektu určuje, jestli se má sestavení ladění nebo vydání verze. **Sestavení** příkaz **ladění** nabídky (F5) vloží sestavení do místa ladění bez ohledu na to **výstupní cesta** zadáte. Ale **sestavení** příkaz **sestavení** nabídky se vloží do umístění, které zadáte.
   
- **Konfigurace**  
- Určuje nastavení konfigurace, které chcete zobrazit nebo změnit. Nastavení jsou **ladění** (výchozí), **verze**, nebo **všechny konfigurace**. Další informace najdete v tématu [Principy konfigurací sestavení](../../ide/understanding-build-configurations.md) a [postupy: vytvoření a úprava konfigurací](../../ide/how-to-create-and-edit-configurations.md).
-  
- **Platforma**  
- Určuje nastavení platformy, které chcete zobrazit nebo změnit. Můžete zadat **libovolný procesor** (výchozí), **x64**, nebo **x86**.
-  
-## <a name="compiler-configuration-options"></a>Možnosti konfigurace kompilátoru  
- Tato nastavení umožňují nastavit kompilátor možnosti konfigurace.  
-  
- **Vytvoření výstupní cesta**  
- Určuje umístění výstupních souborů pro tento projekt konfiguraci. Zadejte cestu k výstupu sestavení v tomto poli, nebo klikněte **Procházet** tlačítko vyberte cestu. Všimněte si, že cesta je relativní; Pokud chcete zadat absolutní cestu, bude uložen jako relativní. Výchozí cesta je bin\Debug\ nebo bin\Release\\.
-  
- S konfigurací zjednodušené sestavení projektu systému určuje, zda sestavování ladění a vydání verze. **Sestavení** příkaz **ladění** nabídky (F5) bude umístěte sestavení do umístění ladění, bez ohledu na to **výstupní cesta** zadáte. Ale **sestavení** příkaz **sestavení** nabídky vloží ho do umístění, které zadáte.
-  
- **Možnost explicitní**  
- Určuje, jestli se má povolit implicitní deklarace proměnných. Vyberte **na** tak, aby vyžadovala explicitní deklarace proměnné. To způsobí, že kompilátoru zprávy o chybách Pokud proměnné nejsou deklarovat, než se používají. Vyberte **vypnout** umožňuje implicitní deklarace proměnných.  
+ **Možnost explicit**  
+ Určuje, jestli se má povolit implicitní deklaraci proměnných. Vyberte **na** tak, aby vyžadovala explicitní deklaraci proměnných. To způsobí, že kompilátor pro hlášení chyb Pokud proměnné nejsou deklarovány před jejich použití. Vyberte **vypnout** povolit implicitní deklaraci proměnných.  
   
  Toto nastavení odpovídá [/optionexplicit](/dotnet/visual-basic/reference/command-line-compiler/optionexplicit) – možnost kompilátoru.  
   
- Pokud obsahuje souboru zdrojového kódu [Option Explicit – příkaz](/dotnet/visual-basic/language-reference/statements/option-explicit-statement), `On` nebo `Off` hodnota v příkazu přepíše **Option Explicit** nastavení na **kompilace stránka**.  
+ Pokud soubor zdrojového kódu obsahuje [Option Explicit – příkaz](/dotnet/visual-basic/language-reference/statements/option-explicit-statement), `On` nebo `Off` hodnota v příkazu přepíše **Option Explicit** nastavení **kompilace stránka**.  
   
- Když vytvoříte nový projekt, **Option Explicit** nastavení na **kompilace stránky** je nastaven na hodnotu **Option Explicit** nastavení v **možnosti**  dialogové okno. Zobrazení nebo změna nastavení v tomto dialogovém na **nástroje** nabídky, klikněte na tlačítko **možnosti**. V **možnosti** dialogové okno, rozbalte seznam **projekty a řešení**a potom klikněte na **VB výchozí**. Počáteční výchozí nastavení **Option Explicit** v **VB výchozí** je **na**.  
+ Když vytvoříte nový projekt **Option Explicit** nastavení **kompilace stránky** je nastavena na hodnotu **Option Explicit** nastavení **možnosti**  dialogové okno. Chcete-li zobrazit nebo změnit nastavení v tomto dialogovém okně na **nástroje** nabídky, klikněte na tlačítko **možnosti**. V **možnosti** dialogového okna rozbalte **projekty a řešení**a potom klikněte na tlačítko **VB výchozí**. Počáteční výchozí nastavení **Option Explicit** v **výchozí hodnoty pro VB** je **na**.  
   
- Nastavení **Option Explicit** k `Off` je obecně není vhodné. Může chybně název proměnné v jedné nebo více umístění, což by způsobilo neočekávané výsledky při spuštění programu.  
+ Nastavení **Option Explicit** k `Off` není obvykle vhodné. Název proměnné v jedné nebo více umístění, což způsobilo neočekávané výsledky při spuštění programu může mít překlep.  
   
- **Možnost striktní**  
-Určuje, jestli se k vynucení sémantika striktní typu. Když **možnost striktní** je **na**, způsobit chybu kompilace následující podmínky:  
+ **Možnost strict**  
+Určuje, jestli se má vynutí sémantiku přísného typu. Když **Option Strict** je **na**, následujících podmínek způsobit chybu kompilace:  
   
 -   Implicitní zužující převody  
   
 -   Pozdní vazba  
   
--   Implicitní zadáte, která způsobí, že `Object` typu  
+-   Implicitního zápisu, která vede `Object` typu  
   
-Implicitní zužující převod chyby nastane, když je převod typu implicitní data, která je zužující převod. Další informace najdete v tématu [Option Strict – příkaz](/dotnet/visual-basic/language-reference/statements/option-strict-statement), [implicitní a explicitní převody](/dotnet/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions), a [Widening a zužující převody](/dotnet/visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions).  
+Implicitní zužující převod chybám dochází při konverzi typu implicitní data, která je zužující převod. Další informace najdete v tématu [Option Strict – příkaz](/dotnet/visual-basic/language-reference/statements/option-strict-statement), [implicitní a explicitní převody](/dotnet/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions), a [Widening a zúžení převodů](/dotnet/visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions).  
   
-Objekt je pozdní vazba, když je přiřazen k vlastnosti nebo metody proměnné, která je deklarován jako typ `Object`. Další informace najdete v tématu [Option Strict – příkaz](/dotnet/visual-basic/language-reference/statements/option-strict-statement) a [Early a pozdní vazby](/dotnet/visual-basic/programming-guide/language-features/early-late-binding/early-and-late-binding).  
+Objekt je přiřazeno k vlastnosti nebo metody, která je deklarována se typ proměnné pozdní vazby `Object`. Další informace najdete v tématu [Option Strict – příkaz](/dotnet/visual-basic/language-reference/statements/option-strict-statement) a [včasného a pozdní vazby](/dotnet/visual-basic/programming-guide/language-features/early-late-binding).
   
-Dochází k chybám typu implicitní objekt když příslušného typu nelze odvodit deklarované proměnné, takže typ `Object` je odvodit. Především proběhne, když používáte `Dim` příkaz deklarovat proměnnou bez použití `As` klauzuli a `Option Infer` je vypnutý. Další informace najdete v tématu [Option Strict – příkaz](/dotnet/visual-basic/language-reference/statements/option-strict-statement), [Option Infer – příkaz](/dotnet/visual-basic/language-reference/statements/option-infer-statement)a [specifikace jazyka Visual Basic](/dotnet/visual-basic/reference/language-specification).  
+Implicitní typ chybám dochází, když odpovídající typ se nedá odvodit deklarované proměnné, tak typu `Object` je odvozen. To dochází především při použití `Dim` příkaz k deklaraci proměnné bez použití `As` klauzule a `Option Infer` je vypnuté. Další informace najdete v tématu [Option Strict – příkaz](/dotnet/visual-basic/language-reference/statements/option-strict-statement), [Option Infer – příkaz](/dotnet/visual-basic/language-reference/statements/option-infer-statement)a [specifikace jazyka Visual Basic](/dotnet/visual-basic/reference/language-specification).  
   
-**Možnost striktní** nastavení odpovídá [/optionstrict](/dotnet/visual-basic/reference/command-line-compiler/optionstrict) – možnost kompilátoru.  
+**Option Strict** nastavení odpovídá [/optionstrict](/dotnet/visual-basic/reference/command-line-compiler/optionstrict) – možnost kompilátoru.  
   
-Pokud zdrojový soubor obsahuje [Option Strict – příkaz](/dotnet/visual-basic/language-reference/statements/option-strict-statement), `On` nebo `Off` hodnota v příkazu přepíše **možnost striktní** nastavení na **kompilace stránky** .  
+Pokud soubor zdrojového kódu obsahuje [Option Strict – příkaz](/dotnet/visual-basic/language-reference/statements/option-strict-statement), `On` nebo `Off` hodnota v příkazu přepíše **Option Strict** nastavení **kompilace stránky** .  
   
-Při vytváření projektu, **možnost striktní** nastavení na **kompilace stránky** je nastaven na hodnotu **možnost striktní** nastavení v **možnosti** dialogové okno. Zobrazení nebo změna nastavení v tomto dialogovém na **nástroje** nabídky, klikněte na tlačítko **možnosti**. V **možnosti** dialogové okno, rozbalte seznam **projekty a řešení**a potom klikněte na **VB výchozí**. Počáteční výchozí nastavení **možnost striktní** v **VB výchozí** je **vypnout**.  
+Při vytváření projektu, **Option Strict** nastavení **kompilace stránky** je nastavena na hodnotu **Option Strict** nastavení **možnosti** dialogové okno. Chcete-li zobrazit nebo změnit nastavení v tomto dialogovém okně na **nástroje** nabídky, klikněte na tlačítko **možnosti**. V **možnosti** dialogového okna rozbalte **projekty a řešení**a potom klikněte na tlačítko **VB výchozí**. Počáteční výchozí nastavení **Option Strict** v **výchozí hodnoty pro VB** je **vypnout**.  
   
-**Možnost striktní jednotlivých upozornění.** **Upozornění konfigurace** části **kompilace stránky** má nastavení, které odpovídají tři podmínky, které způsobí chybu kompilace při `Option Strict` na. Tato nastavení jsou následující:  
+**Možnost Strict jednotlivých upozornění.** **Upozornění konfigurace** část **kompilace stránky** má nastavení, které odpovídají uvedených tří podmínek, které způsobí chybu kompilace při `Option Strict` zapnutý. Tato nastavení jsou následující:  
   
 -   **Implicitní převod**  
   
--   **Pozdní vazba; volání by mohlo selhat v době běhu**  
+-   **Pozdní vazba. volání by mohlo selhat v době běhu**  
   
--   **Implicitní typ; předpokládá, že objekt**  
+-   **Implicitní typ; převzatý objekt**  
   
-Když nastavíte **možnost striktní** k **na**, všechny tři z těchto nastavení upozornění konfigurace jsou nastaveny na **chyba**. Když nastavíte **možnost striktní** k **vypnout**, všechny tři nastavení **žádné**.  
+Pokud nastavíte **Option Strict** k **na**, všechna tři nastavení konfigurace upozornění jsou nastaveny na **chyba**. Pokud nastavíte **Option Strict** k **vypnout**, všechny tři nastavení **žádný**.  
   
-Jednotlivě můžete změnit nastavení každou upozornění konfigurace **žádné**, **upozornění**, nebo **chyba**. Pokud mají všechny tři nastavení konfigurace upozornění **chyba**, `On` se zobrazí v `Option strict` pole. Pokud mají všechny tři **žádné**, `Off` se zobrazí v tomto poli. Pro libovolnou kombinací těchto nastavení **(vlastní)** se zobrazí.  
+Samostatně můžete změnit nastavení každé upozornění konfigurace **žádný**, **upozornění**, nebo **chyba**. Pokud mají všechny tři nastavení konfigurace upozornění **chyba**, `On` se zobrazí v `Option strict` pole. Pokud mají všechny tři **žádný**, `Off` se zobrazí v tomto poli. Pro libovolnou kombinaci těchto nastavení **(vlastní)** se zobrazí.  
   
-**Možnost porovnání**  
-Určuje typ porovnání řetězců používat. Vyberte **binární** kompilátoru použít porovnávání řetězců binární, malá a velká písmena. Vyberte **Text** použít porovnávání řetězců text národního prostředí, která se velká a malá písmena.  
+**Možnost compare**  
+Určuje typ porovnání řetězců k použití. Vyberte **binární** dáte pokyn, aby kompilátor používal porovnávání řetězců binární, velká a malá písmena. Vyberte **Text** použít porovnávání řetězců specifické pro národní prostředí, nerozlišuje velikost písmen textu.  
   
 Toto nastavení odpovídá [/optioncompare](/dotnet/visual-basic/reference/command-line-compiler/optioncompare) – možnost kompilátoru.  
   
-Pokud obsahuje souboru zdrojového kódu [Option Compare – příkaz](/dotnet/visual-basic/language-reference/statements/option-compare-statement), `Binary` nebo `Text` hodnota v příkazu přepíše **možnost porovnat** nastavení na **kompilace stránka**.  
+Pokud soubor zdrojového kódu obsahuje [možnost porovnat příkaz](/dotnet/visual-basic/language-reference/statements/option-compare-statement), `Binary` nebo `Text` hodnota v příkazu přepíše **Option Compare** nastavení na **kompilace stránka**.  
   
-Při vytváření projektu, **možnost porovnat** nastavení na **kompilace stránky** je nastaven na hodnotu **možnost porovnat** nastavení v **možnosti** dialogové okno. Zobrazení nebo změna nastavení v tomto dialogovém na **nástroje** nabídky, klikněte na tlačítko **možnosti**. V **možnosti** dialogové okno, rozbalte seznam **projekty a řešení**a potom klikněte na **VB výchozí**. Počáteční výchozí nastavení **možnost porovnat** v **VB výchozí** je **binární**.  
+Při vytváření projektu, **Option Compare** nastavení **kompilace stránky** je nastavena na hodnotu **Option Compare** nastavení **možnosti** dialogové okno. Chcete-li zobrazit nebo změnit nastavení v tomto dialogovém okně na **nástroje** nabídky, klikněte na tlačítko **možnosti**. V **možnosti** dialogového okna rozbalte **projekty a řešení**a potom klikněte na tlačítko **VB výchozí**. Počáteční výchozí nastavení **Option Compare** v **výchozí hodnoty pro VB** je **binární**.  
   
-**Option infer –**  
-Určuje, jestli se tak, aby měl odvození místního typu deklarace proměnných. Vyberte **na** k povolení použití odvození místního typu. Vyberte **vypnout** k odvození místního typu bloku.  
+**Možnost infer**  
+Určuje, jestli se má povolit odvození místního typu v deklaraci proměnných. Vyberte **na** k povolení použití odvození místního typu. Vyberte **vypnout** k odvození místního typu blok.  
   
 Toto nastavení odpovídá [/optioninfer](/dotnet/visual-basic/reference/command-line-compiler/optioninfer) – možnost kompilátoru.  
   
-Pokud zdrojový soubor obsahuje [Option Infer – příkaz](/dotnet/visual-basic/language-reference/statements/option-infer-statement), `On` nebo `Off` hodnota v příkazu přepíše **Option Infer –** nastavení na **kompilace stránky** .  
+Pokud soubor zdrojového kódu obsahuje [Option Infer – příkaz](/dotnet/visual-basic/language-reference/statements/option-infer-statement), `On` nebo `Off` hodnota v příkazu přepíše **Option Infer** nastavení **kompilace stránky** .  
   
-Při vytváření projektu, **Option Infer –** nastavení na **kompilace stránky** je nastaven na hodnotu **Option Infer –** nastavení v **možnosti**dialogové okno. Zobrazení nebo změna nastavení v tomto dialogovém na **nástroje** nabídky, klikněte na tlačítko **možnosti**. V **možnosti** dialogové okno, rozbalte seznam **projekty a řešení**a potom klikněte na **VB výchozí**. Počáteční výchozí nastavení **Option Infer –** v **VB výchozí** je **na**.  
+Při vytváření projektu, **Option Infer** nastavení **kompilace stránky** je nastavena na hodnotu **Option Infer** nastavení **možnosti**dialogové okno. Chcete-li zobrazit nebo změnit nastavení v tomto dialogovém okně na **nástroje** nabídky, klikněte na tlačítko **možnosti**. V **možnosti** dialogového okna rozbalte **projekty a řešení**a potom klikněte na tlačítko **VB výchozí**. Počáteční výchozí nastavení **Option Infer** v **výchozí hodnoty pro VB** je **na**.  
   
-**Cíl procesoru**  
-Určuje procesoru, které se zaměřují výstupní soubor. Zadejte **x86** pro jakýkoli 32-bit Intel kompatibilní procesor, **x64** pro všechny 64bitový procesor Intel kompatibilní, **ARM** pro jakýkoli procesor ARM nebo **libovolný procesor**  k určení, že jakýkoli procesor je přijatelná. **Všechny procesoru** je výchozí hodnota pro nové projekty, protože umožňuje aplikaci, aby běžela na největší počet typy hardwaru.  
+**Cíl CPU**  
+Určuje procesor, který bude cílen výstupním souborem. Zadejte **x86** pro jakýkoli procesor kompatibilní s verzí Intel 32-bit **x64** pro jakýkoli procesor kompatibilní s verzí Intel 64-bit **ARM** pro jakýkoli procesor ARM nebo **jakýkoli procesor**  k určení, že je přijatelný jakýkoli procesor. **Jakýkoli procesor** je výchozí hodnota pro nové projekty, protože umožňuje aplikaci, aby běžela na největší počet typů hardwaru.  
   
 Další informace najdete v tématu [/Platform (Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/platform).  
   
-**Dáváte přednost 32-bit**  
-Pokud **Prefer32 bitů** je zaškrtnuté políčko, je aplikace spuštěná jako 32bitová aplikace na 32bitové a 64bitové verze systému Windows. Jinak je aplikace spuštěná jako 32bitová aplikace na 32bitové verze systému Windows a jako 64bitové aplikaci v 64bitových verzích systému Windows.  
+**Preferovat 32 bitů**  
+Pokud **preferovat 32bitovou verzi** zaškrtávací políčko zaškrtnuto, aplikace běží jako 32bitová aplikace ve 32bitové a 64bitové verze Windows. V opačném případě aplikace běží jako 32bitová aplikace ve 32bitové verze Windows a jako na 64bitovými verzemi Windows 64-bit aplikace.  
   
-Spuštění jako 64bitové aplikaci zdvojnásobuje velikost ukazatele a může to způsobit problémy s kompatibilitou s knihovny, které jsou výhradně 32-bit. Má smysl pouze v případě, že výrazně rychleji spustí nebo potřebuje více než 4 GB paměti spuštění aplikace jako 64-bit.  
+Spuštění aplikace 64-bit zdvojnásobuje velikost ukazatele, a to může způsobit problémy s kompatibilitou s knihovnami, které jsou výhradně 32bitové. Je vhodné spustit aplikaci jako 64-bit pouze v případě, že je výrazně rychlejší spuštění, nebo potřebuje více než 4 GB paměti.  
   
 Toto zaškrtávací políčko je dostupné jenom v případě, že jsou splněny všechny následující podmínky:  
   
--   Na **stránka kompilovat**, **cílový procesor** seznamu je nastavena na **libovolný procesor**.  
+-   Na **stránka kompilovat**, **cílový procesor** seznamu je nastavena na **jakýkoli procesor**.  
   
--   Na **stránky aplikace**, **typ aplikace** seznamu určuje, že je projekt aplikace.  
+-   Na **stránky aplikace**, **typ aplikace** seznam určuje, že projekt je aplikace.  
   
--   Na **stránky aplikace**, **cílové rozhraní** seznamu určuje rozhraní .NET Framework 4.5.  
+-   Na **stránky aplikace**, **Cílová architektura** seznamu určuje rozhraní .NET Framework 4.5.  
   
-**Upozornění konfigurace**  
-Tato tabulka uvádí podmínky sestavení a odpovídající úroveň oznámení **žádné**, **upozornění**, nebo **chyba** pro každou.  
+**Konfigurace upozornění**  
+Tato tabulka shrnuje sestavení podmínky a odpovídající úroveň oznámení **žádný**, **upozornění**, nebo **chyba** pro každý.  
   
-Ve výchozím nastavení všechna upozornění kompilátoru se přidají do seznamu úkolů během kompilace. Vyberte **zakázat všech upozornění** kompilátoru nechcete problém varování nebo chyby. Vyberte **zpracovává všechna upozornění jako chyby** Pokud chcete, aby kompilátoru, aby považoval upozornění jako chyby, které musí být vyřešeny.  
+Ve výchozím nastavení všechna upozornění kompilátoru přidají do seznamu úkolů během kompilace. Vyberte **zakázat všechna upozornění** dáte pokyn kompilátoru, aby problém upozornění a chyby. Vyberte **považovat všechna upozornění jako chyby** Pokud chcete, aby kompilátor zpracovávat upozornění jako chyby, které je potřeba opravit.  
   
-**Zakáže všechna upozornění**  
-Určuje, jestli se pro povolení oznámení problému uvedeného v kompilátoru **podmínku a oznámení** tabulky popsané dříve v tomto dokumentu. Ve výchozím nastavení je toto políčko zaškrtnuté. Výběrem tohoto zaškrtávacího políčka kompilátoru není vydat varování nebo chyby.  
+**Zakázat všechna upozornění**  
+Určuje, jestli chce použít kompilátor, aby uvedená v upozornění na problémy **podmínku a oznámení** tabulky popsané dříve v tomto dokumentu. Ve výchozím nastavení je toto políčko zaškrtnuté. Toto políčko zaškrtnuto, abyste instruovali kompilátor není vydat upozornění a chyby.  
   
 Toto nastavení odpovídá [/nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn) – možnost kompilátoru.  
   
-**Zpracovává všechna upozornění jako chyby**  
-Určuje, jak zacházet s upozorněními. Ve výchozím nastavení, tato zaškrtnutí políčka, takže všechna oznámení upozornění zůstanou nastavena **upozornění**. Toto políčko zaškrtněte, chcete-li změnit všechna oznámení upozornění na **chyba**.  
+**Považovat všechna upozornění jako chyby**  
+Určuje, jak zpracovávat upozornění. Ve výchozím nastavení, toto zaškrtávací políčko zaškrtnuto, takže všechna upozornění oznámení zůstanou nastavená na **upozornění**. Zaškrtněte toto políčko, chcete-li změnit všechna oznámení upozornění pro **chyba**.  
   
-Tato možnost je dostupná pouze v případě **zakázat všech upozornění** se vymaže.  
+Tato možnost je dostupná pouze tehdy, pokud **zakázat všechna upozornění** se vymaže.  
   
-**Generování souborů dokumentace XML**  
-Určuje, zda chcete vygenerovat dokumentaci informace. Ve výchozím nastavení toto zaškrtávací políčko zaškrtnuto, instruující kompilátoru generovat informace o dokumentaci a její zahrnutí do souboru XML. Zrušte zaškrtnutí tohoto políčka kompilátoru nevytvářet dokumentaci.  
+**Generovat soubor dokumentace XML**  
+Určuje, jestli se má generovat informace o dokumentaci. Ve výchozím nastavení je toto políčko zaškrtnuto, že kompilátoru generovat informace o dokumentaci a zahrnout do souboru XML. Zrušte zaškrtnutí tohoto políčka, abyste instruovali kompilátor nechcete vytvářet dokumentaci.  
   
 Toto nastavení odpovídá [/doc](/dotnet/visual-basic/reference/command-line-compiler/doc) – možnost kompilátoru.  
   
-**Registrace pro zprostředkovatel komunikace s objekty COM**  
-Určuje, zda se ve spravované aplikaci vystavovat objektu COM (Obálka volatelná aplikacemi COM), která umožňuje objektu COM k interakci s aplikací.  
+**Zaregistrovat pro interoperabilitu COM**  
+Určuje, zda bude vaše spravovaná aplikace vystavovat objekt modelu COM (Obálka volatelná aplikacemi COM) umožňující objektu modelu COM interakci s aplikací.  
   
-Ve výchozím nastavení je toto políčko zaškrtnuté, která určuje, že aplikace nebude povolovat zprostředkovatel komunikace s objekty COM. Výběrem tohoto zaškrtávacího políčka Povolit zprostředkovatel komunikace s objekty COM.  
+Ve výchozím nastavení je toto zaškrtávací políčko zaškrtnuto, který určuje, že aplikace nebude umožňovat komunikace s objekty COM. Vyberte toto zaškrtávací políčko pro povolení komunikace s objekty COM.  
   
-Tato možnost není k dispozici pro aplikaci systému Windows nebo aplikace konzoly projekty.  
+Tato možnost není k dispozici pro projekty aplikací pro Windows nebo konzolové aplikace.  
   
 **Události sestavení**  
-Kliknutím na toto tlačítko přístup **události sestavení** dialogové okno. Pomocí tohoto dialogového okna zadejte pokyny ke konfiguraci před a po sestavení pro projekt. Toto dialogové okno se vztahují na projekty Visual Basic jenom. Další informace najdete v tématu [sestavení dialogové okno události (Visual Basic)](../../ide/reference/build-events-dialog-box-visual-basic.md).  
+Kliknutím na toto tlačítko přístup **události sestavení** dialogové okno. Použijte toto dialogové okno k určení pokyny ke konfiguraci před a po sestavení projektu. Toto dialogové okno se vztahují na projekty Visual Basic pouze. Další informace najdete v tématu [sestavení dialogové okno události (Visual Basic)](../../ide/reference/build-events-dialog-box-visual-basic.md).  
   
 **Možnosti rozšířené kompilace**  
-Kliknutím na toto tlačítko přístup **AdvancedCompiler nastavení** dialogové okno. Použití **AdvancedCompiler nastavení** dialogové okno zadat projektu rozšířenou vlastností konfigurace sestavení. Toto dialogové okno se vztahují na projekty Visual Basic jenom. Další informace najdete v tématu [Advanced kompilátoru dialogové okno nastavení (Visual Basic)](../../ide/reference/advanced-compiler-settings-dialog-box-visual-basic.md).  
+Kliknutím na toto tlačítko přístup **AdvancedCompiler nastavení** dialogové okno. Použití **AdvancedCompiler nastavení** dialogové okno k zadání projekt rozšířenou vlastností konfigurace sestavení. Toto dialogové okno se vztahují na projekty Visual Basic pouze. Další informace najdete v tématu [Advanced kompilátoru dialogové okno nastavení (Visual Basic)](../../ide/reference/advanced-compiler-settings-dialog-box-visual-basic.md).  
 
-## <a name="see-also"></a>Viz také
 
-[Postupy: Určení událostí sestavení (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md)  
-[Visual Basic – kompilátor příkazového řádku](/dotnet/visual-basic/reference/command-line-compiler/index)  
-[Postupy: Vytvoření a úprava konfigurací](../../ide/how-to-create-and-edit-configurations.md)
+## <a name="see-also"></a>Viz také:
+
+- [Postupy: Určení událostí sestavení (Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md)
+- [Kompilátor příkazového řádku jazyka Visual Basic](/dotnet/visual-basic/reference/command-line-compiler/index)
+- [Postupy: Vytvoření a úprava konfigurací](../../ide/how-to-create-and-edit-configurations.md)

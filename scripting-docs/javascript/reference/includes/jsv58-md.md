@@ -1,3 +1,0 @@
-Podporováno v následujících režimech dokumentů: standardy pro Internet Explorer 8, standardy pro Internet Explorer 9, standardy pro Internet Explorer 10, standardy pro Internet Explorer 11. Podporováno také v aplikacích pro Store (Windows 8.1 a Windows Phone 8). Viz [Informace o verzi](../../../javascript/reference/javascript-version-information.md).  
-  
- Není podporováno v následujících režimech dokumentů: Quirks, standardy pro Internet Explorer 6, standardy pro Internet Explorer 7.

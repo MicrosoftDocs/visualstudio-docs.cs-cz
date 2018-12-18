@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31132388"
 ---
 # <a name="source-control-plug-in-architecture"></a>Modul Plug-in architektury zdroje
 Můžete přidat podporu zdroj ovládacího prvku [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] integrované vývojové prostředí (IDE) pomocí implementace a připojení modulu plug-in Správa zdrojového kódu. Prostředí IDE se připojí k modulu plug-in přes dobře definované API Plug-In zdroj řízení zdrojového kódu. Prostředí IDE zpřístupní funkcí správy zdrojového kódu pro řízení verze tím, že poskytuje uživatelské rozhraní (UI), která se skládá z panely nástrojů a příkazy nabídky. Modul plug-in správy zdroje implementuje funkce správy zdrojů.  

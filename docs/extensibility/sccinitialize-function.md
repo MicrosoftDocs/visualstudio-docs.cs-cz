@@ -1,5 +1,5 @@
 ---
-title: Funkce SccInitialize | Microsoft Docs
+title: Sccinitialize – funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1146573f3d969ffc5cd56576ba92faa4e6ffdce0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 136978a6d1dc19a414079ba424ebcd5d50f6840a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49934571"
 ---
 # <a name="sccinitialize-function"></a>SccInitialize – funkce
-Tato funkce inicializuje modul plug-in zdrojového kódu a poskytuje možnosti a omezení na integrované vývojové prostředí (IDE).  
+Tato funkce inicializuje modul plug-in správy zdrojového kódu a poskytuje možnosti a omezení pro integrované vývojové prostředí (IDE).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,52 +42,52 @@ SCCRTN SccInitialize (
   
 #### <a name="parameters"></a>Parametry  
  `ppvContext`  
- [v] Správa zdrojového kódu modul plug-in můžete sem umístěte ukazatel na strukturu jeho kontextu.  
+ [in] Modul plug-in správy zdrojového kódu můžete sem umístěte ukazatel na strukturu jeho kontext.  
   
  `hWnd`  
- [v] Obslužná rutina do okna IDE, modul plug-in správy zdroje můžete použít jako nadřazený objekt pro všechna dialogová okna poskytuje.  
+ [in] Popisovač okna integrovaného vývojového prostředí, které modul plug-in správy zdrojového kódu můžete použít jako nadřazený pro všechna dialogová okna, které poskytuje.  
   
  `lpCallerName`  
- [v] Název programu volání modulu plug-in zdrojového kódu.  
+ [in] Název programu, volání modulu plug-in správy zdrojového kódu.  
   
  `lpSccName`  
- [ve out] Vyrovnávací paměti, které modul plug-in zdrojového kódu vloží svůj vlastní název (není k překročení `SCC_NAME_LEN`).  
+ [out v] Pokud modul plug-in správy zdrojového kódu vloží svůj vlastní název vyrovnávací paměti (která nepřekročí `SCC_NAME_LEN`).  
   
  `lpSccCaps`  
- [out] Vrátí plug-in příznaky funkce zdrojového kódu.  
+ [out] Vrátí ovládací prvek zdroje modulu plug-in příznaky funkcí.  
   
  `lpAuxPathLabel`  
- [ve out] Vyrovnávací paměti, které modul plug-in zdrojového kódu vloží řetězec, který popisuje `lpAuxProjPath` parametr vrácený [SccOpenProject](../extensibility/sccopenproject-function.md) a [SccGetProjPath](../extensibility/sccgetprojpath-function.md) (nepřesahující `SCC_AUXLABEL_LEN`).  
+ [out v] Vyrovnávací paměť, kde modul plug-in správy zdrojového kódu vloží řetězec, který popisuje `lpAuxProjPath` s parametrem vráceným [sccopenproject –](../extensibility/sccopenproject-function.md) a [sccgetprojpath –](../extensibility/sccgetprojpath-function.md) (která nepřekročí `SCC_AUXLABEL_LEN`).  
   
  `pnCheckoutCommentLen`  
- [out] Vrátí maximální povolenou délku najdete v článku věnovaném komentář.  
+ [out] Vrátí maximální povolenou délku pro komentář registrace.  
   
  `pnCommentLen`  
- [out] Vrátí maximální povolenou délku pro ostatní komentáře.  
+ [out] Vrátí maximální povolenou délku pro další komentáře.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Očekává se, že modul plug-in implementace zdroje řízení této funkce vrátí jednu z následujících hodnot:  
+ Modul plug-in implementaci ovládacího prvku zdroje této funkce má vracet instanci jednoho z následujících hodnot:  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
-|SCC_OK|Inicializace řízení zdroj bylo úspěšné.|  
-|SCC_E_INITIALIZEFAILED|Nepodařilo se inicializovat systému.|  
+|SCC_OK|Zdrojový ovládací prvek Inicializace byla úspěšná.|  
+|SCC_E_INITIALIZEFAILED|Systém nemohl být inicializován.|  
 |SCC_E_NOTAUTHORIZED|Uživatel nemůže provést zadanou operaci.|  
-|SCC_E_NONSPECFICERROR|Nespecifikované chybě; správy zdrojového kódu se neinicializoval.|  
+|SCC_E_NONSPECFICERROR|Obecná chyba; systému správy zdrojového kódu nebyla inicializována.|  
   
 ## <a name="remarks"></a>Poznámky  
- Prostředí IDE volá tuto funkci, pokud nejprve načte modul plug-in zdrojového kódu. Umožňuje IDE předávat určité informace, například název volajícího, v modulu plug-in. Prostředí IDE zpět také získá určité informace, jako je například maximální povolenou délku komentáře a jejich plug v společnosti.  
+ Integrované vývojové prostředí volá tuto funkci při prvním načtení modulu plug-in správy zdrojového kódu. Umožňuje rozhraní IDE k předání určité informace, jako je jméno volajícího, v modulu plug-in. Integrované vývojové prostředí také získá zpět určité informace, jako je maximální povolená délka pro komentáře a modul plug-in vaší funkce.  
   
- `ppvContext` Odkazuje na `NULL` ukazatel. Správa zdrojového kódu modul plug-in můžete přidělit strukturu pro vlastní použití a Uložit ukazatel na této struktury v `ppvContext`. Prostředí IDE předá tento ukazatel všechny ostatní funkce rozhraní API VSSCI, povolení modulu plug-in tak, aby měl k dispozici informace o kontextu bez nutnosti globální úložiště a k podpoře více instancí modulu plug-in. Tato struktura by měl být navrácena při [SccUninitialize](../extensibility/sccuninitialize-function.md) je volána.  
+ `ppvContext` Odkazuje `NULL` ukazatele. Modul plug-in správy zdrojového kódu můžete přidělit strukturu pro vlastní použití a ukládají ukazatel na danou strukturu v `ppvContext`. Rozhraní IDE předá tento ukazatel všechny ostatní funkce rozhraní API VSSCI, povolení modulu plug-in mít informace o kontextu k dispozici bez nutnosti uchýlit se do globální paměti a podporují více instancí modulu plug-in. By měla být odebrána tuto strukturu, kdy [sccuninitialize –](../extensibility/sccuninitialize-function.md) je volána.  
   
- `lpCallerName` a `lpSccName` parametry povolit IDE a modul plug-in zdrojového kódu pro výměnu názvy. Názvy těchto může být použit k rozlišení mezi více instancí, nebo může ve skutečnosti se v nabídkách a dialogových oknech.  
+ `lpCallerName` a `lpSccName` parametry povolení integrovaného vývojového prostředí a modulu plug-in správy zdrojového kódu k výměně názvy. Tyto názvy lze jednoduše k rozlišení mezi několik instancí, nebo ve skutečnosti jsou zobrazeny v nabídkách a dialogových oknech.  
   
- `lpAuxPathLabel` Parametr je použit jako komentář k identifikaci cesty pomocného projektu, který je uložený v souboru řešení a předaný zdrojového kódu ve volání modulu plug-in řetězec [SccOpenProject](../extensibility/sccopenproject-function.md). [!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)] použije řetězec "projektu SourceSafe:"; Další zdroje řízení moduly plug-in neměly by pomocí tohoto konkrétního řetězce.  
+ `lpAuxPathLabel` Parametr je řetězec, který slouží k identifikaci pomocné projektu k cestě, která je uložena v souboru řešení a předat při volání k modulu plug-in správy zdrojového kódu jako komentáře [sccopenproject –](../extensibility/sccopenproject-function.md). [!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)] použije řetězec "SourceSafe projektu:"; Pomocí tohoto konkrétního řetězce neměly by být další ovládací prvek moduly plug-in zdrojového kódu.  
   
- `lpSccCaps` Parametr dává zdrojového kódu modulu plug-in místo pro uložení bitové příznaky označující plug v na možnosti. (Úplný seznam bitové příznaky schopností najdete v tématu [schopností příznaky](../extensibility/capability-flags.md)). Například pokud modul plug-in plány zapsat výsledky do funkce zpětného volání zadaný volajícího, modul plug-in byste měli nastavit možnosti bit SCC_CAP_TEXTOUT. To by signál IDE vytvoření okna pro ovládací prvek výsledků verze.  
+ `lpSccCaps` Parametr poskytuje správu zdrojového kódu modulu plug-in místo k uložení bitové příznaky určující modul plug-in vaší funkce. (Úplný seznam příznaky bitflag schopností najdete v tématu [příznaky funkcí](../extensibility/capability-flags.md)). Například pokud modul plug-in plány pro zápis výsledky do funkce poskytované volající zpětného volání, modul plug-in byste nastavit možnost bit SCC_CAP_TEXTOUT. To by signalizuje, že rozhraní IDE k vytvoření okna pro výsledky kontroly verzí.  
   
 ## <a name="see-also"></a>Viz také  
- [Funkce modulu Plug-in rozhraní API ovládacího prvku zdroje](../extensibility/source-control-plug-in-api-functions.md)   
- [SccUninitialize](../extensibility/sccuninitialize-function.md)   
- [SccOpenProject](../extensibility/sccopenproject-function.md)   
+ [Funkce rozhraní API modulu Plug-in zdroje ovládacího prvku](../extensibility/source-control-plug-in-api-functions.md)   
+ [Sccuninitialize –](../extensibility/sccuninitialize-function.md)   
+ [Sccopenproject –](../extensibility/sccopenproject-function.md)   
  [Příznaky funkcí](../extensibility/capability-flags.md)

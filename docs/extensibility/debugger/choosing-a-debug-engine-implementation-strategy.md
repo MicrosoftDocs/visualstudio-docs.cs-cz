@@ -1,5 +1,5 @@
 ---
-title: Výběr strategie implementace modulu ladění | Microsoft Docs
+title: Výběr strategie implementace modulu ladění | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,25 +13,26 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3c3715bac00b25cd2080a1162c8e2ce8cb33e63a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 058e3d3087a46de4bb3c5d9b721d3c9111b77526
+ms.sourcegitcommit: 36835f1b3ec004829d6aedf01938494465587436
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203709"
 ---
-# <a name="choosing-a-debug-engine-implementation-strategy"></a>Výběr strategie implementace modulu ladění
-Architektura běhu použijte k určení strategie implementace ladění modulu (DE). Modul ladění mohou být vytvořeny v rámci procesu pro program, který má být vyladěnou, v rámci procesu sadě Visual Studio relace ladění manager (SDM) nebo mimo proces do obou z nich. Následující pokyny by měly pomoci vám vybrat mezi tyto tři strategie.  
+# <a name="choose-a-debug-engine-implementation-strategy"></a>Volba strategie implementace modulu ladění
+Určení strategie implementace ladicí stroj (DE) pomocí architektury za běhu. Můžete vytvořit ladicí modul v rámci procesu program, který ladíte. Vytvořte ladicí modul v rámci procesu správci ladicí relaci sady Visual Studio (SDM). Nebo můžete vytvořit ladicí stroj mimo proces do obou z nich. Podle následujících pokynů byste mohli vybrat mezi tyto tři strategie.  
   
 ## <a name="guidelines"></a>Pokyny  
- Když je možné pro DE být mimo proces SDM i program chcete ladit, obvykle neexistuje žádný důvod k tomu. Volání přes hranice procesu jsou relativně pomalé.  
+ I když je možné pro Německo mimo proces SDM a program, kterou ladíte, obvykle neexistuje žádný důvod k tomu. Volání přes hranice procesu jsou relativně pomalé.  
   
- Ladění moduly jsou už zadané pro prostředí Win32 nativní run-time a běžné prostředí runtime jazyka. Pokud pro některou z těchto prostředí musí nahradit DE, je nutné vytvořit DE v rámci procesu s SDM.  
+ Ladění moduly jsou už k dispozici pro prostředí Win32 nativní run-time a společné prostředí runtime jazyka. Pokud je nutné nahradit DE buď prostředí, měli byste vytvořit DE-procesu s SDM.  
   
- Jinak můžete zvolit vytváření DE v procesu na SDM nebo v rámci procesu programu chcete ladit. Je důležité zvážit, jestli vyhodnocovací filtr výrazů z DE potřebuje rychlosti přístupu k úložišti symbol program a jestli úložiště symbolů může být načtena do paměti pro rychlý přístup. Zvažte také následující:  
+ V opačném případě můžete buď vytvořit DE v rámci procesu SDM nebo v rámci procesu program, kterou ladíte. Musíte vzít v úvahu, pokud vyhodnocovač výrazů DE vyžaduje časté přístup k úložišti symbolů programu. Nebo, pokud úložiště symbolů je možné načíst do paměti pro rychlý přístup. Zvažte také následující přístupy:  
   
--   Pokud nejsou k dispozici mnoho volání mezi vyhodnocovací filtr výrazů a úložiště symbolů, nebo pokud úložiště symbolů lze číst do paměťového prostoru SDM, vytvořte DE v proces SDM. Musíte se vrátit CLSID ladění stroje do SDM při připojování do vaší aplikace. SDM používá k vytvoření instance v procesu DE tento CLSID.  
+-   Pokud nejsou k dispozici mnoho volání mezi vyhodnocovací filtr výrazů a úložiště symbolů nebo úložiště symbolů lze načíst do paměti SDM, vytvořte DE v rámci procesu SDM. Identifikátor CLSID ladicí stroj musí vrátit SDM při připojování vašeho programu. K vytvoření instance v procesu je DE SDM používá tento identifikátor CLSID.  
   
--   Pokud je DE musí volat program, který má přístup k úložišti symbol, vytvořte DE v rámci procesu s programu. V takovém případě program vytvoří instanci DE.  
+-   Pokud DE musí volat program pro přístup k úložišti symbolů, vytvořte program DE v rámci procesu. V takovém případě program vytvoří instance DE.  
   
-## <a name="see-also"></a>Viz také  
- [Rozšiřitelnost programu Visual Studio Debugger](../../extensibility/debugger/visual-studio-debugger-extensibility.md)
+## <a name="see-also"></a>Viz také:  
+ [Rozšiřitelnost ladicího programu Visual Studio](../../extensibility/debugger/visual-studio-debugger-extensibility.md)

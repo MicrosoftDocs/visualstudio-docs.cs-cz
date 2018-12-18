@@ -1,5 +1,5 @@
 ---
-title: 'DA0004: Vysoké využití procesoru | Microsoft Docs'
+title: 'DA0004: Vysoké využití procesoru | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -15,28 +15,30 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dab522c19971e734e5a42f607d99f38f8e44930d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 87f418c8f145d13dee575c9d45d192a59547e6a0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920882"
 ---
 # <a name="da0004-high-processor-usage"></a>DA0004: Vysoké využití procesoru
+
 |||  
 |-|-|  
 |Id pravidla|DA0004|  
 |Kategorie|Použití nástroje pro profilaci|  
 |Metod profilace|Instrumentace<br /><br /> Vzorkování|  
-|Zpráva|Vaše využití procesoru je větší než 75 % konzistentně. Zvažte použití režimu vzorkování pro aplikace vázané na procesor.|  
+|Zpráva|Využití procesoru je trvale vyšší než 75 %. Zvažte použití režimu vzorkování pro aplikace vázané na procesor.|  
 |Typ pravidla|Informace o|  
-  
- Pokud je profil s použitím vzorkování, využívání paměti rozhraním .NET nebo metody sporu prostředků, musí shromažďovat alespoň 10 vzorků pro aktivaci tohoto pravidla.  
-  
+
+ Při profilování pomocí vzorkování, paměti .NET nebo metodám sporu prostředků, musíte shromáždit minimálně 10 vzorky k aktivaci tohoto pravidla.  
+
 ## <a name="cause"></a>příčina  
- Využití procesoru (CPU) byla v profilaci data, která nebyla shromážděna pomocí metody instrumentace výrazně vysoká. Zvažte použití vzorkování metoda profilace při profilace procesor vázaný aplikace.  
-  
+ Využití procesoru (CPU) je vysoká v profilaci dat, která byla shromážděna pomocí metody instrumentace. Zvažte použití při profilování Procesorem vázán aplikace metoda profilování vzorkování.  
+
 ## <a name="rule-description"></a>Popis pravidla  
- V průběhu této spuštění profilování byly konzistentně velmi zaneprázdněny procesoru (nebo procesory). Vysoké využití procesoru může znamenat aplikace vázané na procesor. Instrumentované profily nejsou obvykle co nejúčinnější způsob, jak prozkoumat využití procesoru scénáře. Vzorkování je obvykle účinnější, pokud jsou profilace aplikací, které stráví velkou část doba pro jejich provádění pokyny na procesor.  
-  
+ Během tohoto spuštění profilování byl trvale zaneprázdněn procesoru (nebo procesory). Vysoké využití procesoru můžete určit aplikace vázané na procesor. Instrumentovaná profily nejsou nejúčinnější způsob pro scénáře využití procesoru. Vzorkování je efektivnější, pokud provádíte profilaci aplikace, které tráví většinu svého času provádění instrukcí na procesor.  
+
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení  
- Vezměte v úvahu profilace aplikace znovu pomocí metody vzorkování místo metody instrumentace, pokud požadujete časování funkce, nebo vás zajímá více Principy vstupu a výstupu než kritické body procesoru.
+ Zvažte profilaci vaší aplikace znovu pomocí metody odběru vzorků namísto metody instrumentace, pokud vyžadujete funkce časování nebo více zájem o porozumění vstupu a výstupu než problémových míst procesoru.

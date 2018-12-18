@@ -1,6 +1,7 @@
 ---
 title: 'Postupy: Vytvoření základní textury'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: 0222e8bf-d29f-421b-9b1f-123d500fa179
@@ -9,84 +10,85 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 45bb45c12e7cbdbec37574f371daf4cd6c207fb1
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b4bd1d34ef2dc31935038bb1be30d548c58208fd
+ms.sourcegitcommit: 25fc9605ba673afb51a24ce587cf4304b06aa577
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47028985"
 ---
-# <a name="how-to-create-a-basic-texture"></a>Postupy: Vytvoření základní textury
-Tento dokument ukazuje, jak vytvořit základní texture pomocí editoru obrázků.
+# <a name="how-to-create-a-basic-texture"></a>Postupy: vytvoření základní textury
 
- Tento dokument ukazuje tyto aktivity:
+Tento článek ukazuje, jak použít Editor obrázků pro vytvoření základní textury, včetně následující činnosti:
 
--   Nastavení velikosti pole textury
+- Nastavení velikosti pole textury
 
--   Nastavení barvy popředí a na pozadí
+- Nastavení barvy popředí a pozadí
 
--   Použitím kanálu alfa (průhlednost)
+- Prostřednictvím alfa kanálu (transparentnost)
 
--   Pomocí **vyplnění** a **elipsy** nástroje
+- Použití **vyplnit** a **Elipsa** nástroje
 
--   Nastavení vlastnosti nástroje
+- Nastavení vlastnosti nástroje
 
-## <a name="creating-a-basic-texture"></a>Vytvoření základní textury
- Editor obrázků slouží k vytvoření a úpravám bitové kopie a textury pro hry nebo aplikace.
+## <a name="create-a-basic-texture"></a>Vytvoření základní textury
 
- Následující kroky ukazují, jak vytvořit texture, který představuje cíl "terč". Po dokončení textury by měla vypadat jako na následujícím obrázku. K předvedení lépe průhlednost v textury, Editor obrázků má nakonfigurované použití vzoru zelený, šachovnicová mřížka můžete ho zobrazit.
+Můžete použít Editor obrázků pro vytvoření a úprava obrazů a textur pro vaše hry nebo aplikace.
 
- !["Terč" cíl s průhlednost zobrazené zeleně](../designers/media/digit-bullseye-texture-in-editor.png "číslice-terč-Texture-v-editoru")
+Následující kroky ukazují, jak vytvořit texturu, která představuje cíl "terč". Až skončíte, by měla textura vypadat jako na následujícím obrázku. K předvedení lépe průhlednosti v textuře, Editor obrázků má nakonfigurovaná pro použití vzoru zelené, šachovnicová mřížka zobrazíte.
 
- Než začnete, ujistěte se, že **vlastnosti** zobrazí se okno. Můžete použít **vlastnosti** okna nastavit velikost bitové kopie, změňte vlastnosti nástroje a zadat barvy při práci.
+![Cíl "Terč" s zobrazené zeleně transparentnosti](../designers/media/digit-bullseye-texture-in-editor.png)
 
-#### <a name="to-create-a-bullseye-target-texture"></a>Chcete-li vytvořit cíl texturou "terč"
+Než začnete, ujistěte se, že **vlastnosti** se zobrazí okno. Můžete použít **vlastnosti** okna nastavte velikost obrázku, změňte vlastnosti nástroje a zadat barvy při práci.
 
-1.  Vytvořte texture pro práci s. Informace o tom, jak do projektu přidejte texturou, najdete v části Začínáme v [Editor obrázků](../designers/image-editor.md).
+### <a name="create-a-bullseye-target-texture"></a>Vytvoření textury cíl "terč"
 
-2.  Nastavte velikost bitové kopie na 512 x 512 pixelů. V **vlastnosti** nastavte hodnoty **šířka** a **výška** vlastnosti, které chcete `512`.
+1. Vytvořte textur, se kterým chcete pracovat. Informace o tom, jak přidat do projektu texturu naleznete v tématu [Editor obrázků](../designers/image-editor.md#get-started).
 
-3.  Na panelu nástrojů editoru obrázků, vyberte **vyplnění** nástroj. **Vlastnosti** okno teď zobrazuje vlastnosti **vyplnění** spolu s vlastnosti bitové kopie.
+2. Nastavte velikost obrázku na 512 x 512 pixelů. V **vlastnosti** okno, nastavte hodnoty **šířka** a **výška** vlastností `512`.
 
-4.  Nastavte barvu popředí na černé zcela průhledná. V **vlastnosti** okno v **barvy** vlastnosti skupiny, vyberte **popředí**. Nastavte hodnoty **R**, **G**, **B**, a **A** vlastnosti vedle volby barev k `0`.
+3. Na panelu nástrojů editoru obrázků **vyplnit** nástroj. **Vlastnosti** okno nyní zobrazuje vlastnosti **vyplnit** spolu s vlastností bitové kopie.
 
-5.  Na panelu nástrojů editoru obrázků, vyberte **vyplnění** nástroje a stiskněte a podržte klávesu Shift a zvolit jakýkoli bod v bitové kopii. Pomocí klávesy Shift způsobí, že alfa hodnotu barvu výplně nahradit barvu v obrázku; alfa hodnotu, jinak se používá a přizpůsobte barvu výplně společně s barvu v obrázku.
+4. Nastavte barvu popředí na zcela průhledný černý. V **vlastnosti** okno v **barvy** skupiny vlastností, vyberte **popředí**. Nastavte hodnoty **R**, **G**, **B**, a **A** vlastnosti vedle výběr barvy tento výběr `0`.
+
+5. Na panelu nástrojů editoru obrázků **vyplnit** nástroj a potom stiskněte a podržte **Shift** klíče a zvolit libovolný bod v bitové kopii. Použití **Shift** klíč způsobí, že alfa hodnota barvy výplně nahradit barvu v obrázku; v opačném případě se používá hodnotu alfa zapojil barvu výplně spolu s barvu v obrázku.
 
     > [!IMPORTANT]
-    >  Tento krok, společně s výběr barev v předchozím kroku, zajistí, že základní bitová kopie je připravená pro cíl texture "terč", který bude kreslení. Když je obrázek vyplněn transparentní černé – a protože ohraničení cíl je černá – budou existovat žádné aliasy artefakty kolem cíl.
+    > Tento krok, společně s výběr barvy v předchozím kroku, zajistí, že základní bitová kopie je připravená pro cílovou texturu "terč", který se vykreslí. Když je na obrázku vyplněna průhledný černý –, a proto je černá ohraničení cíle – bude existovat žádné třepící artefakty kolem cíl.
 
-6.  Na panelu nástrojů editoru obrázků, vyberte **elipsy** nástroj.
+6. Na panelu nástrojů editoru obrázků **Elipsa** nástroj.
 
-7.  Nastavte na černé plně neprůhledné barvu popředí. Nastavte hodnoty **R**, **G**, a **B** vlastnosti, které chcete `0` a hodnota **A** vlastnost `255`.
+7. Neprůhledný černý nastavte barvu popředí. Nastavte hodnoty **R**, **G**, a **B** vlastností `0` a hodnota **A** vlastnost `255`.
 
-8.  Nastaví barvu pozadí na bílou plně neprůhledné. V **vlastnosti** okno v **barvy** vlastnosti skupiny, vyberte **pozadí**. Nastavte hodnoty **R**, **G**, **B**, a **A** vlastnosti, které chcete `255`.
+8. Nastavte barvu pozadí na bílou úplně neprůhledné. V **vlastnosti** okno v **barvy** skupiny vlastností, vyberte **pozadí**. Nastavte hodnoty **R**, **G**, **B**, a **A** vlastností `255`.
 
-9. Nastavená šířka obrysu se třemi tečkami. V **vlastnosti** okno v **vzhled** vlastnosti skupiny, nastavte hodnotu **šířka** vlastnost `8`.
+9. Nastavte šířku obrysu elipsy. V **vlastnosti** okno v **vzhled** skupiny vlastnost, nastavte hodnotu **šířka** vlastnost `8`.
 
-10. Ujistěte se, že je povolená vyhlazení. V **vlastnosti** okno v **vzhled** vlastnosti skupiny, ujistěte se, že **vyhlazení** je nastavena.
+10. Ujistěte se, že je povolená vyhlazení. V **vlastnosti** okno v **vzhled** vlastnost skupině, ujistěte se, že **Vyhladit** je nastavena.
 
-11. Pomocí **elipsy** nástroj, kreslení kruh z pixelů souřadnice `(3, 3)` na pixel souřadnice `(508, 508)`. Kreslení na kruh další snadno můžete stiskněte a podržte klávesu Shift při kreslení.
+11. Použití **Elipsa** nástroj, nakreslete kruh z pixel souřadnice `(3, 3)` pixel koordinovat `(508, 508)`. Chcete-li nakreslit kruh snadněji, můžete stisknutím a podržením **Shift** klíče při kreslení.
 
     > [!NOTE]
-    >  Souřadnice pixelů aktuální umístění ukazatele jsou zobrazené na [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] stavový řádek.
+    > Pixel souřadnice aktuální pozici ukazatele myši se zobrazí ve stavovém řádku sady Visual Studio.
 
-12. Změňte barvu pozadí. Nastavit **R** k `44`, **G** k `165`, **B** k `211`, a **A** k `255`.
+12. Změna barvy pozadí. Nastavte **R** k `44`, **G** k `165`, **B** k `211`, a **A** k `255`.
 
-13. Kreslení jiné kruh z pixelů souřadnice `(64, 64)` na pixel souřadnice `(448, 448)`.
+13. Jiné kruh čerpat pixel souřadnice `(64, 64)` pixel koordinovat `(448, 448)`.
 
-14. Změníte barvu pozadí zpět na plně neprůhledné prázdné. Nastavit **R**, **G**, **B**, a **A** k `255`.
+14. Změna barvy pozadí zpět na úplně neprůhledná bílou. Nastavte **R**, **G**, **B**, a **A** k `255`.
 
-15. Kreslení jiné kruh z pixelů souřadnice `(128, 128)` na pixel souřadnice `(384, 384)`.
+15. Jiné kruh čerpat pixel souřadnice `(128, 128)` pixel koordinovat `(384, 384)`.
 
-16. Změňte barvu pozadí. Nastavit **R** k `255`, **G** a **B** k `64`, a **A** k `255`.
+16. Změna barvy pozadí. Nastavte **R** k `255`, **G** a **B** k `64`, a **A** k `255`.
 
-17. Kreslení jiné kruh z pixelů souřadnice `(192, 192)` na pixel souřadnice `(320, 320)`.
+17. Jiné kruh čerpat pixel souřadnice `(192, 192)` pixel koordinovat `(320, 320)`.
 
- Texture cíl "terč" bylo dokončeno. Zde je výsledný obraz, zobrazí s průhlednost.
+Cílové textury "terč" byla dokončena. Tady je posledním obrázku, s průhlednost.
 
- ![Dokončení "terč" cíle texture](../designers/media/gfx_image_demo_bullseye.png "gfx_image_demo_bullseye")
+![Kompletní "terč" cílovou texturu](../designers/media/gfx_image_demo_bullseye.png)
 
- Jako další krok můžete vygenerovat MIP úrovně pro tento texture. Informace najdete v tématu [postupy: vytvoření a upravit MIP úrovně](../designers/how-to-create-and-modify-mip-levels.md).
+V dalším kroku můžete vygenerovat úrovně MIP této textury. Informace najdete v tématu [postupy: vytvoření a úprava úrovní MIP](../designers/how-to-create-and-modify-mip-levels.md).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Editor obrázků](../designers/image-editor.md)

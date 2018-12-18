@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31475415"
 ---
 # <a name="symbol-load-information-dialog-box"></a>Dialogové okno Informace o načtení symbolů
 **Symbol načíst informace o** otevře se dialogové okno když klikněte pravým tlačítkem na **moduly** okna a zvolte **Symbol načíst informace o**.  

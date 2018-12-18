@@ -1,5 +1,5 @@
 ---
-title: Idiasession::findsymbolbyvaex – | Microsoft Docs
+title: Idiasession::findsymbolbyvaex – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e3fad26dfd43057f02105e867c5f1f0add57b20d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 706049acf99804038f48125b77a71b879658baac
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49874459"
 ---
 # <a name="idiasessionfindsymbolbyvaex"></a>IDiaSession::findSymbolByVAEx
-Načte typ zadaný symbol, který obsahuje, nebo je nejblíže k posunu a zadané virtuální adresy (VA).  
+Načte typ zadaný symbol, který obsahuje, nebo co nejblíže, zadanou virtuální adresu (VA) a posun.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,19 +37,19 @@ HRESULT findSymbolByVAEx (
   
 #### <a name="parameters"></a>Parametry  
  `va`  
- [v] Určuje VA.  
+ [in] Určuje, VA.  
   
  `symtag`  
- [v] Typ symbolu, která se má najít. Z hodnot, která [SymTagEnum – výčet](../../debugger/debug-interface-access/symtagenum.md) výčtu.  
+ [in] Typ symbolu, která se má najít. Hodnoty pocházejí ze [symtagenum – výčet](../../debugger/debug-interface-access/symtagenum.md) výčtu.  
   
  `ppSymbol`  
- [out] Vrátí [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) načíst objekt, který reprezentuje symbolu.  
+ [out] Vrátí [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) načíst objekt představující symbol.  
   
  `displacement`  
- [out] Vrátí hodnotu, která určuje prodlevu mezi virtuální adresy poskytují `va`.  
+ [out] Vrátí hodnotu, která určuje prodlevu virtuální adresy poskytnuté `va`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
   

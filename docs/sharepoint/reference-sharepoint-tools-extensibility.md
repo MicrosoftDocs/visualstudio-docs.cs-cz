@@ -15,23 +15,23 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 75bbdadba08ecb16dd789242feb1b2e2a204981d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d0699df6d6826cf2079f2fcfe0358ce4e0a7eebd
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37120157"
 ---
 # <a name="reference-sharepoint-tools-extensibility"></a>Referenční dokumentace (rozšíření nástrojů služby SharePoint)
   Tato část obsahuje referenční dokumentaci k nástroji pro rozšíření nástrojů SharePoint v sadě Visual Studio.  
   
-## <a name="in-this-section"></a>V tomto oddílu  
- [Referenční dokumentace schématu položek projektu SharePoint](../sharepoint/sharepoint-project-item-schema-reference.md)  
- Obsahuje referenční dokumentaci pro schéma souboru .spdata.  
+## <a name="in-this-section"></a>V tomto oddílu
+ [Referenční dokumentace schématu položek projektu služby SharePoint](../sharepoint/sharepoint-project-item-schema-reference.md)  
+ Obsahuje referenční dokumentaci pro *.spdata* schéma souboru.  
   
  [Referenční dokumentace rozhraní API &#40;rozšíření nástrojů SharePoint&#41;](../sharepoint/api-reference-sharepoint-tools-extensibility.md)  
  Obsahuje referenční dokumentace rozhraní API pro rozšíření nástrojů SharePoint v sadě Visual Studio.  
   
-## <a name="see-also"></a>Viz také  
- [Rozšíření nástrojů SharePoint v aplikaci Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)  
-  
+## <a name="see-also"></a>Viz také:
+ [Rozšíření nástrojů SharePoint v sadě Visual Studio](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)  
   

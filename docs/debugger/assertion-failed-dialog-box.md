@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31456422"
 ---
 # <a name="assertion-failed-dialog-box"></a>Dialogové okno Kontrolní výraz je neplatný
 Příkaz assertion Určuje podmínku, která byste měli uložení true konkrétní někde v programu. Pokud tuto podmínku nemá hodnotu true, kontrolní výraz selže, provádění vašeho programu přeruší a zobrazí se toto dialogové okno.  

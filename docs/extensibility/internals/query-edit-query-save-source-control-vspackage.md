@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131514"
 ---
 # <a name="query-edit-query-save-source-control-vspackage"></a>Dotaz upravit dotaz uložte (Zdroj ovládacího prvku VSPackage)
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] editory můžete vysílání události dotazu upravit dotaz uložit (QEQS). [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Zdroj ovládacího prvku se zakázaným inzerováním implementuje službu QEQS tak, aby se příjemce událostí QEQS. Tyto události jsou pak přeneseny na aktuálně aktivní zdrojového kódu VSPackage. Implementuje VSPackage active zdrojového kódu <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2> a její metody. Metody `IVsQueryEditQuerySave2` rozhraní se běžně označují jako bezprostředně před první a bezprostředně před uložení dokumentu úpravy dokumentu.  

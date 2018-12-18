@@ -1,10 +1,9 @@
 ---
-title: -Nasazení (devenv.exe) | Microsoft Docs
-ms.custom: ''
+title: -Deploy (devenv.exe)
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: reference
 helpviewer_keywords:
 - Devenv, /deploy switch
 - deploy Devenv switch
@@ -16,52 +15,58 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dee247f9c948ae5a5d0ac6926679b7849c4c1fbc
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0297058fea98568551f54d8960e62f80bb35ccd7
+ms.sourcegitcommit: 54c65f81a138fc1e8ff1826f7bd9dcec710618cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51948878"
 ---
 # <a name="deploy-devenvexe"></a>/Deploy (devenv.exe)
-Nasadí řešení po sestavení nebo opětovném sestavení. Týká jenom projektů spravovaného kódu.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-devenv SolutionName /deploy SolnConfigName [/project ProjName] [/projectconfig ProjConfigName] [/out LogFileName]  
-```  
-  
-## <a name="arguments"></a>Arguments  
- `SolnConfigName`  
- Požadováno. Název konfigurace řešení, který se použije k vytvoření řešení s názvem v `SolutionName`.  
-  
- `SolutionName`  
- Požadováno. Úplná cesta a název souboru, řešení.  
-  
- / Project `ProjName`  
- Volitelné. Cesta a název souboru projektu v rámci řešení. Můžete zadat relativní cestu z `SolutionName` složku pro soubor projektu nebo projektu zobrazovaný název, nebo úplnou cestu a název souboru projektu.  
-  
- / projectconfig – `ProjConfigName`  
- Volitelné. Konfigurace, který se má použít při vytváření sestavení název projektu `/project` s názvem.  
-  
-## <a name="remarks"></a>Poznámky  
- Projekt nasazení musí být zadaný projekt. Pokud zadaný projekt není projekt nasazení, když na projekt, který je sestavený předána nasadit, se nezdaří s chybou.  
-  
- Uzavřete řetězců, které obsahují mezery v uvozovkách.  
-  
- Souhrnné informace o sestavení, včetně chyb, můžete zobrazit v **příkaz** okno, nebo v jakékoli souboru protokolu zadaný `/out` přepínače.  
-  
-## <a name="example"></a>Příklad  
- Tento příklad nasadí projekt `CSharpConsoleApp`pomocí `Release` konfigurace sestavení projektu v rámci `Release` konfiguraci řešení `MySolution`.  
-  
-```  
-devenv "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\MySolution\MySolution.sln" /deploy Release /project "CSharpWinApp\CSharpWinApp.csproj" /projectconfig Release   
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Přepínače příkazového řádku nástroje devenv](../../ide/reference/devenv-command-line-switches.md)   
- [/ Project (devenv.exe)](../../ide/reference/project-devenv-exe.md)   
- [/ Sestavení (devenv.exe)](../../ide/reference/build-devenv-exe.md)   
- [/ Clean (devenv.exe)](../../ide/reference/clean-devenv-exe.md)   
- [/ Rebuild (devenv.exe)](../../ide/reference/rebuild-devenv-exe.md)   
- [/ Out (devenv.exe)](../../ide/reference/out-devenv-exe.md)
+Nasadí řešení po sestavení nebo opětovné sestavení. Platí pro pouze projekty spravovaného kódu.
+
+## <a name="syntax"></a>Syntaxe
+
+```
+devenv SolutionName /deploy SolnConfigName [/project ProjName] [/projectconfig ProjConfigName] [/out LogFileName]
+```
+
+## <a name="arguments"></a>Arguments
+ `SolnConfigName`
+
+ Požadováno. Název konfigurace řešení, která se použije k vytvoření řešení s názvem v `SolutionName`.
+
+ `SolutionName`
+
+ Požadováno. Úplná cesta a název souboru řešení.
+
+ / Project `ProjName`
+
+ Volitelné. Cesta a název souboru projektu v rámci řešení. Můžete zadat relativní cestu z `SolutionName` složku do souboru projektu nebo zobrazované jméno projektu, nebo úplnou cestu a název souboru projektu.
+
+ / projectconfig `ProjConfigName`
+
+ Volitelné. Název projektu konfigurace se použije při sestavování sestavení `/project` s názvem.
+
+## <a name="remarks"></a>Poznámky
+ Zadaný projekt musí být projekt nasazení. Pokud zadaný projekt není projekt nasazení, pokud projekt, který je sestavený Build je předán do nasazení, selže s chybou.
+
+ Uzavření řetězců, které obsahují mezery v dvojitých uvozovkách.
+
+ Souhrnné informace o sestavení, včetně chyb, lze zobrazit v **příkaz** okna, nebo do jakéhokoli souboru protokolu zadaný `/out` přepnout.
+
+## <a name="example"></a>Příklad
+ Tento příklad nasadí projekt `CSharpConsoleApp`, použije `Release` konfigurace sestavení projektu v rámci `Release` konfigurace řešení `MySolution`.
+
+```
+devenv "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\MySolution\MySolution.sln" /deploy Release /project "CSharpWinApp\CSharpWinApp.csproj" /projectconfig Release
+```
+
+## <a name="see-also"></a>Viz také
+
+- [Přepínače příkazového řádku nástroje devenv](../../ide/reference/devenv-command-line-switches.md)
+- [/ Project (devenv.exe)](../../ide/reference/project-devenv-exe.md)
+- [/ Sestavení (devenv.exe)](../../ide/reference/build-devenv-exe.md)
+- [/ Clean (devenv.exe)](../../ide/reference/clean-devenv-exe.md)
+- [/ Sestavení (devenv.exe)](../../ide/reference/rebuild-devenv-exe.md)
+- [/ Out (devenv.exe)](../../ide/reference/out-devenv-exe.md)

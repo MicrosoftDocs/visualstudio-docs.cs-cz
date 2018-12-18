@@ -1,5 +1,5 @@
 ---
-title: Rastrové obrázky Element | Microsoft Docs
+title: Bitmaps – Element | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ea89ae212a85ed2a164ce133d055aebe551cf545
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f8812a9dca40a69a4dc23209cdb5f85309a87755
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49861550"
 ---
-# <a name="bitmaps-element"></a>Rastrové obrázky – Element
-Skupiny [rastrový obrázek Element](../extensibility/bitmap-element.md) elementy.  
+# <a name="bitmaps-element"></a>Bitmaps – element
+Skupiny [rastrový obrázek element](../extensibility/bitmap-element.md) elementy.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,16 +40,16 @@ Skupiny [rastrový obrázek Element](../extensibility/bitmap-element.md) element
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|Podmínka|Volitelné. V tématu [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
+|Podmínka|Volitelné. Zobrazit [podmíněné atributy](../extensibility/vsct-xml-schema-conditional-attributes.md).|  
   
-### <a name="child-elements"></a>Podřízené elementy  
+### <a name="child-elements"></a>Podřízené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|[Bitmaps – element](../extensibility/bitmaps-element.md)|Prvky skupiny rastrového obrázku.|  
+|[Bitmaps – element](../extensibility/bitmaps-element.md)|Seskupí elementy rastrového obrázku.|  
 |[Bitmap – element](../extensibility/bitmap-element.md)|Definuje rastrový obrázek.|  
   
-### <a name="parent-elements"></a>Nadřazené elementy  
+### <a name="parent-elements"></a>Nadřazené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
@@ -64,6 +65,6 @@ Skupiny [rastrový obrázek Element](../extensibility/bitmap-element.md) element
 </Bitmaps>  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [Jak přidat VSPackages prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
+## <a name="see-also"></a>Viz také:  
+ [Jak balíčky VSPackages přidávají prvky uživatelského rozhraní](../extensibility/internals/how-vspackages-add-user-interface-elements.md)   
  [Příkazy, nabídky a panely nástrojů](../extensibility/internals/commands-menus-and-toolbars.md)

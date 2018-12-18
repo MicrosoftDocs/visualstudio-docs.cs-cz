@@ -1,5 +1,5 @@
 ---
-title: Položka – Element (MSBuild) | Microsoft Docs
+title: Položka – Element (MSBuild) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 03/13/2017
 ms.technology: msbuild
@@ -18,14 +18,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b55cadc738fb54b1a7fe07a2d891103c0daa755d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 6e33f057f3184a9a9bb19311f7206c6ab273dab8
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39081017"
 ---
-# <a name="item-element-msbuild"></a>Item – prvek (MSBuild)
-Obsahuje uživatelem definovanou položku a jeho metadata. Každá položka, která se používá v [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projektu musí být zadány jako podřízená položka `ItemGroup` elementu.  
+# <a name="item-element-msbuild"></a>Item – element (MSBuild)
+Obsahuje uživatelem definovanou položku a jeho metadata. Všechny položky, který se používá v [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projektu musí být zadán jako podřízený objekt `ItemGroup` elementu.  
 
  \<Project>  
  \<ItemGroup >  
@@ -33,7 +34,7 @@ Obsahuje uživatelem definovanou položku a jeho metadata. Každá položka, kte
 
 ## <a name="syntax"></a>Syntaxe  
 
-```  
+```xml  
 <Item Include="*.cs"  
         Exclude="MyFile.cs"  
         Remove="RemoveFile.cs"  
@@ -44,7 +45,7 @@ Obsahuje uživatelem definovanou položku a jeho metadata. Každá položka, kte
 ```  
 
 ## <a name="specify-metadata-as-attributes"></a>Zadejte metadat jako atributy
-MSBuild 15.1 nebo novější veškerá metadata, s názvem, který není v konfliktu s aktuální seznam atributů může být volitelně vyjádřený jako atribut.
+V MSBuild 15.1 nebo novější může být jakékoli metadat s názvem, který není v konfliktu s aktuální seznam atributů volitelně vyjádřený jako atribut.
 
 Například pokud chcete zadat seznam balíčků NuGet, běžně používáte něco jako následující syntaxi.
 
@@ -56,7 +57,7 @@ Například pokud chcete zadat seznam balíčků NuGet, běžně používáte n�
 </ItemGroup>
 ```
 
-Teď však můžete předat `Version` metadat jako atribut, například v následující syntaxi:
+Teď, ale můžete předat `Version` metadat jako atribut, jako je například následující syntax:
 
 ```xml
 <ItemGroup>
@@ -71,36 +72,36 @@ Teď však můžete předat `Version` metadat jako atribut, například v násle
 
 |Atribut|Popis|  
 |---------------|-----------------|  
-|`Include`|Nepovinný atribut.<br /><br /> Soubor nebo zástupný znak pro zahrnutí do seznamu položek.|  
-|`Exclude`|Nepovinný atribut.<br /><br /> Soubor nebo zástupných znaků, které chcete vyloučit ze seznamu položek.|  
+|`Include`|Nepovinný atribut.<br /><br /> Soubor nebo zástupný znak a v seznamu položek zahrnují.|  
+|`Exclude`|Nepovinný atribut.<br /><br /> Soubor nebo zástupný znak a vyloučit ze seznamu položek.|  
 |`Condition`|Nepovinný atribut.<br /><br /> Podmínku, která má být vyhodnocen. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|  
-|`Remove`|Nepovinný atribut.<br /><br /> Soubor nebo zástupný znak odebrat ze seznamu položek.<br /><br />|  
-|`KeepDuplicates`|Nepovinný atribut.<br /><br /> Určuje, zda by měl být pokud je přesný duplikát stávající položku Přidat položku k cílové skupině. Pokud zdrojové a cílové položky stejné `Include` hodnotu, ale rozdílná metadata, položka je přidaný i když `KeepDuplicates` je nastaven na `false`. Další informace najdete v tématu [položky](../msbuild/msbuild-items.md).<br /><br /> Tento atribut je platný pouze v případě, že je zadán pro položku v `ItemGroup` který se v `Target`.|  
-|`KeepMetadata`|Nepovinný atribut.<br /><br /> Metadata pro zdroj položky, které chcete přidat do cílové položky. Pouze metadata, jejichž názvy jsou určené v seznamu oddělený středníkem přenesou z položky zdroj cílová položka. Další informace najdete v tématu [položky](../msbuild/msbuild-items.md).<br /><br /> Tento atribut je platný pouze v případě, že je zadán pro položku v `ItemGroup` který se v `Target`.|  
-|`RemoveMetadata`|Nepovinný atribut.<br /><br /> Metadata pro položky zdroje není přenášet do cílové položky. Všechna metadata se přenese z položky zdroje na cílová položka s výjimkou metadata jejichž názvy jsou obsaženy v seznamu názvů oddělených středníky. Další informace najdete v tématu [položky](../msbuild/msbuild-items.md).<br /><br /> Tento atribut je platný pouze v případě, že je zadán pro položku v `ItemGroup` který se v `Target`.|  
-|`Update`|Nepovinný atribut. (K dispozici pouze pro .NET Core projektů Visual Studio 2017 nebo novější).<br /><br /> Umožňuje upravit metadata souboru, který je zahrnutý pomocí glob.<br /><br />  Tento atribut je platný pouze v případě, že je zadán pro položku v `ItemGroup` není součástí `Target`.|  
+|`Remove`|Nepovinný atribut.<br /><br /> Soubor nebo zástupný znak a odebrat ze seznamu položek.<br /><br />|  
+|`KeepDuplicates`|Nepovinný atribut.<br /><br /> Určuje, zda položky by měl přidat do cílové skupiny, jde přesnou kopii existující položku. Pokud zdrojové a cílové položky mají stejné `Include` hodnota, ale rozdílná metadata, položka je přidaná i v případě `KeepDuplicates` je nastavena na `false`. Další informace najdete v tématu [položky](../msbuild/msbuild-items.md).<br /><br /> Tento atribut je platný jenom v případě, že je zadané pro položku `ItemGroup` , který je ve `Target`.|  
+|`KeepMetadata`|Nepovinný atribut.<br /><br /> Metadata pro zdrojové položky, které chcete přidat do cílové položky. Jenom metadata, jejichž názvy jsou určené v seznam oddělený středníkem jsou přeneseny z položky zdroje do cílové položky. Další informace najdete v tématu [položky](../msbuild/msbuild-items.md).<br /><br /> Tento atribut je platný jenom v případě, že je zadané pro položku `ItemGroup` , který je ve `Target`.|  
+|`RemoveMetadata`|Nepovinný atribut.<br /><br /> Metadata pro zdrojové položky není přenést na cílí na položky. Všechna metadata se přenesou z položky zdrojové do cílové položky s výjimkou metadat jejichž názvy jsou obsaženy v středníkem oddělený seznam názvů. Další informace najdete v tématu [položky](../msbuild/msbuild-items.md).<br /><br /> Tento atribut je platný jenom v případě, že je zadané pro položku `ItemGroup` , který je ve `Target`.|  
+|`Update`|Nepovinný atribut. (K dispozici pouze pro projekty .NET Core v sadě Visual Studio 2017 nebo novější).<br /><br /> Umožňuje upravit metadata, která byla zahrnuta glob pomocí souboru.<br /><br />  Tento atribut je platný jenom v případě, že je zadané pro položku v `ItemGroup` , který se nepoužívá `Target`.|  
 
-### <a name="child-elements"></a>Podřízené elementy  
-
-|Prvek|Popis|  
-|-------------|-----------------|  
-|[Itemmetadata –](../msbuild/itemmetadata-element-msbuild.md)|Klíč metadata uživatelem definovanou položku, který obsahuje hodnotu položky metadat. Může být nula nebo více `ItemMetadata` elementů v položku.|  
-
-### <a name="parent-elements"></a>Nadřazené elementy  
+### <a name="child-elements"></a>Podřízené prvky  
 
 |Prvek|Popis|  
 |-------------|-----------------|  
-|[ItemGroup](../msbuild/itemgroup-element-msbuild.md)|Element seskupení položek.|  
+|[Itemmetadata](../msbuild/itemmetadata-element-msbuild.md)|Klíč metadat uživatelem definovanou položku katalogu, který obsahuje hodnotu metadat položky. Může být nula nebo více `ItemMetadata` prvky v položce.|  
+
+### <a name="parent-elements"></a>Nadřazené prvky  
+
+|Prvek|Popis|  
+|-------------|-----------------|  
+|[ItemGroup](../msbuild/itemgroup-element-msbuild.md)|Element Grouping pro položky.|  
 
 ## <a name="remarks"></a>Poznámky  
- `Item` elementy definovat vstupy do systému sestavení a jsou seskupené do kolekce položky, které jsou založené na jejich názvy uživatelem definované kolekci. Tyto položky kolekce se dají použít jako parametry pro [úlohy](../msbuild/msbuild-tasks.md), který pomůže jednotlivé položky v kolekci podle kroků procesu sestavení. Další informace najdete v tématu [položky](../msbuild/msbuild-items.md).  
+ `Item` elementy definovat vstupy do systému sestavení a jsou seskupené do kolekcí položek na základě jejich uživatelem definované kolekci názvů. Tyto položky kolekce se dají použít jako parametry pro [úlohy](../msbuild/msbuild-tasks.md), které používají jednotlivé položky v kolekci k provedení kroků procesu sestavení. Další informace najdete v tématu [položky](../msbuild/msbuild-items.md).  
 
- Pomocí zápisu `@(` *myType* `)` umožňuje kolekce položek typu *myType* být rozšířena do seznam řetězců oddělených středníky, a předaný parametr. Pokud je parametr typu `string`, je hodnota parametru seznamu elementů, oddělené středníky. Pokud je parametr pole řetězců (`string[]`), pak každý prvek budou vložena do pole na základě umístění středníky. Pokud je úloha parametr typu <xref:Microsoft.Build.Framework.ITaskItem> `[]`, hodnota bude obsah kolekce položek spolu s veškerá metadata, připojit. Pro každou položku vymezení pomocí znaků než středníkem, použijte syntaxi `@(` *myType*`, '`*oddělovače*`')`.  
+ Pomocí notace @(\<myType >) umožňuje kolekci položek typu \<myType > rozbalí do seznam řetězců oddělených středníkem, a předat parametr. Pokud je parametr typu `string`, hodnota parametru se bude seznam prvků, oddělené středníky. Pokud je parametr pole řetězců (`string[]`), pak každý prvek se vloží do pole na základě umístění středníky. Pokud je parametr úlohy typu <xref:Microsoft.Build.Framework.ITaskItem> `[]`, pak hodnota je obsah kolekce položek spolu s veškerá metadata připojené. K oddělení jednotlivých položek s použitím znaku jiného než středník, použijte syntaxi @(<myType>, "<separator>").  
 
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] Modul vyhodnocení zástupné znaky, jako `*` a `?` a rekurzivní zástupné znaky, jako `/**/*.cs`. Další informace najdete v tématu [položky](../msbuild/msbuild-items.md).  
+ [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] Modul vyhodnocení zástupné znaky, jako `*` a `?` a rekurzivní zástupné znaky, jako  */ \* \* / \*.cs*. Další informace najdete v tématu [položky](../msbuild/msbuild-items.md).  
 
 ## <a name="examples"></a>Příklady  
- Následující příklad kódu ukazuje, jak deklarovat dvě položky typu `CSFile`. Druhý deklarovaný položka obsahuje metadata, která má `MyMetadata` nastavena na `HelloWorld`.  
+ Následující příklad kódu ukazuje, jak deklarovat dvě položky typu `CSFile`. Deklarována druhá položka obsahuje metadata, která má `MyMetadata` nastavena na `HelloWorld`.  
 
 ```xml  
 <ItemGroup>  
@@ -110,7 +111,7 @@ Teď však můžete předat `Version` metadat jako atribut, například v násle
     </CSFile>  
 </ItemGroup>  
 ```  
-Následující příklad kódu ukazuje, jak používat `Update` atribut upravit metadata v souboru s názvem somefile.cs, který byl zahrnut prostřednictvím glob. (K dispozici pouze pro .NET Core projektů Visual Studio 2017 nebo novější).
+Následující příklad kódu ukazuje, jak používat `Update` atribut k úpravě metadat v souboru s názvem *somefile.cs* , která byla zahrnuta prostřednictvím glob. (K dispozici pouze pro projekty .NET Core v sadě Visual Studio 2017 nebo novější).
 
 ```xml  
 <ItemGroup>
@@ -121,7 +122,7 @@ Následující příklad kódu ukazuje, jak používat `Update` atribut upravit 
 ```  
 
 
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Položky](../msbuild/msbuild-items.md)   
  [Vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md)   
  [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)

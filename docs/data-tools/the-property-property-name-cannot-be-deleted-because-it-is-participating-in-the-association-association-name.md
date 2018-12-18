@@ -1,37 +1,39 @@
 ---
-title: Vlastnost nelze odstranit, protože se účastní přidružení
+title: Vlastnost nejde odstranit, protože se účastní asociace
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 389873cc-92dd-48da-bfca-0f6c8e0ae3c2
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 9e65049ae881ff11cd647fe09df3a6919dd8818c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 6ed6b14f64d16d1f18d4b358761169c3d424cee8
+ms.sourcegitcommit: f37affbc1b885dfe246d4b2c295a6538b383a0ca
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37174059"
 ---
-# <a name="the-property-ltproperty-namegt-cannot-be-deleted-because-it-is-participating-in-the-association-ltassociation-namegt"></a>Vlastnost &lt;název vlastnosti&gt; nelze odstranit, protože se účastní přidružení &lt;název přidružení&gt;
+# <a name="the-property-ltproperty-namegt-cannot-be-deleted-because-it-is-participating-in-the-association-ltassociation-namegt"></a>Vlastnost &lt;název vlastnosti&gt; nejde odstranit, protože se účastní asociace &lt;název přidružení&gt;
 
-Vybranou vlastnost je nastavena jako **vlastnosti přidružení** pro přidružení mezi třídami uvedené v chybové zprávě. Vlastnosti nelze odstranit, pokud se účastní přidružení mezi datových tříd.
+Vybraná vlastnost je nastavena jako **přidružení vlastnost** pro přidružení mezi třídami uvedené v chybové zprávě. Vlastnosti nelze odstranit, pokud se účastní asociace mezi datových tříd.
 
-Nastavte **vlastnosti přidružení** na jinou vlastnost třídy dat. Chcete-li povolit úspěšné odstranění požadované vlastnosti.
+Nastavte **přidružení vlastnost** různé vlastnosti třídy dat umožňující úspěšné odstranění sady požadovanou vlastnost.
 
 ## <a name="to-correct-this-error"></a>Oprava této chyby
 
-1. Vyberte řádek přidružení na Návrhář relací objektů, který se připojuje datové třídy uvedené v chybové zprávě.
+1. Vyberte na Asociační čára **O/R Designer** datové třídy uvedené v chybové zprávě, která se připojuje.
 
-2. Klikněte dvakrát na řádek otevřete **přidružení Editor** dialogové okno.
+2. Dvakrát klikněte na řádek otevřít **Editor asociace** dialogové okno.
 
-3. Odeberte vlastnost z **vlastnosti přidružení**.
+3. Odebere vlastnost z **vlastnosti přidružení**.
 
-4. Pokuste se znovu odstranit vlastnost.
+4. Zkuste znovu odstranit vlastnost.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Zprávy Návrháře relací objektů](../data-tools/o-r-designer-messages.md)
-- [Technologie LINQ to SQL nástroje v sadě Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)
+- [Nástroje LINQ to SQL v sadě Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

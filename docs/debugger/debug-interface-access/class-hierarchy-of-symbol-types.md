@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31468851"
 ---
 # <a name="class-hierarchy-of-symbol-types"></a>Hierarchie tříd typů symbolů
 Následující tabulka popisuje typy symbol v hierarchii tříd.  

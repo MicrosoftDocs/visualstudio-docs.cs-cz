@@ -1,82 +1,87 @@
 ---
-title: Jak koupit Cloudová předplatná Visual Studio Enterprise a Visual Studio Professional
+title: Jak zakoupit Cloudová předplatná sady Visual Studio
 author: evanwindom
 ms.author: jaunger
 manager: evelynp
 ms.date: 03/02/2018
 ms.topic: Get-Started-Article
-description: Pronajímat Visual Studio Professional nebo Visual Studio Enterprise na základě-měsíc nebo roční s žádné dlouhodobé kontrakt.
+description: Pronajmout sadu Visual Studio Professional nebo Visual Studio Enterprise na základě – měsíční nebo roční s bez dlouhodobé smlouvy.
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 2b656f7b0c40d9eadecd36fb9aa38fed5bbe1bf9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 878a335f5b576ee3ccf439b35e8a8adc861a9864
+ms.sourcegitcommit: 9765b3fcf89375ca499afd9fc42cf4645b66a8a2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46495658"
 ---
-# <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>Kupte si Visual Studio Professional a Visual Studio Enterprise Cloudová předplatná
+# <a name="buy-visual-studio-professional-and-visual-studio-enterprise-cloud-subscriptions"></a>Nákup cloudových předplatných sady Visual Studio Professional a Visual Studio Enterprise
 
-Můžete si koupit [Visual Studio Professional a Visual Studio Enterprise předplatná](https://www.visualstudio.com/subscriptions/) z [Visual Studio Marketplace](https://marketplace.visualstudio.com). Jedná se o takzvaný Cloudová předplatná.
+Můžete si koupit [předplatných sady Visual Studio Professional a Visual Studio Enterprise](https://visualstudio.microsoft.com/subscriptions/) z [Visual Studio Marketplace](https://marketplace.visualstudio.com). Toto nastavení se nazývá **"Cloudová předplatná"**.
 
-[Porovnání výhody odběru cloudu a ceny](https://www.visualstudio.com/vs/pricing/)
+[Porovnání výhod předplatného cloudu a cen](https://visualstudio.microsoft.com/vs/pricing/)
 
 ## <a name="before-you-start"></a>Než začnete
 
-*   K vyúčtování vaše nákupy, budete potřebovat [předplatné](https://azure.microsoft.com/pricing/purchase-options/).
-Můžete [zaregistrovat](https://portal.azure.com) před první nákupu nebo během první nákup ve Visual Studio Marketplace.
+*   Pro fakturaci nákupů, budete potřebovat [předplatného Azure](https://azure.microsoft.com/pricing/purchase-options/). Je možné [zaregistrovat](https://portal.azure.com) před prvním nákupem nebo v průběhu prvního nákupu na Visual Studio Marketplace.
 
-## <a name="how-to-buy-cloud-subscriptions"></a>Jak koupit Cloudová předplatná
+## <a name="who-can-buy-visual-studio-cloud-subscriptions"></a>Kdo může zakoupit Cloudová předplatná sady Visual Studio?
+Každý, kdo má [přístup přispěvatele nebo vlastníka](https://na01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fvsts%2Forganizations%2Fbilling%2Fadd-backup-billing-managers%3Fview%3Dvsts%2520%2520sa&data=02%7C01%7C%7Cb9e717e8abff47b0cd7e08d618edd860%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636723807145220358&sdata=aIaamEXHhx94KCYVY%2FFibqFzNBEqKPntpql867xAMgU%3D&reserved=0) do Azure můžete zakoupit předplatné cloudových předplatných.  
 
-0.  Přihlaste se k [sady Visual Studio Marketplace > odběry](https://marketplace.visualstudio.com/subscriptions).
+## <a name="how-to-buy-cloud-subscriptions"></a>Jak koupit cloudové předplatné
 
-0.  Vyberte předplatné, které chcete koupit, například:
+0.  Přihlaste se k [Visual Studio Marketplace > předplatná](https://marketplace.visualstudio.com/subscriptions).
 
-    <img alt="Buy a Visual Studio subscription" src="_img/buy-vs-subscriptions/buy-vs-sub-start.png" style="border: 1px solid #CCCCCC" />
+0.  Zvolte předplatné, které chcete přidat, například:
+    > [!div class="mx-imgBorder"]
+    > ![Kupte si předplatné sady Visual Studio](_img/buy-vs-subscriptions/buy-vs-sub-start.png)
 
-0.  Vyberte předplatné Azure, kterou chcete použít pro fakturaci. Pokud nemáte, můžete vytvořit nové předplatné služby Azure.
+0.  Vyberte předplatné Azure pro účely fakturace. Pokud ho nemáte, můžete vytvořit nové předplatné Azure.
+    > [!div class="mx-imgBorder"]
+    > ![Vyberte předplatné Azure pro fakturaci](_img/buy-vs-subscriptions/buy-vs-sub-Azure-sub.png)
 
-    <img alt="Select Azure subscription for biling" src="_img/buy-vs-subscriptions/buy-vs-sub-Azure-sub.png" style="border: 1px solid #CCCCCC" />
+0.  Vyberte počet předplatných si chcete koupit.
+    > [!div class="mx-imgBorder"]
+    > ![Vyberte počet předplatných](_img/buy-vs-subscriptions/buy-vs-sub-users.png)
 
-0.  Vyberte počet odběrů koupit.
+    Pokud nechcete, aby sami přiřazená předplatná, zrušte zaškrtnutí políčka **toto předplatné přiřadit mně**.
 
-    <img alt="Select number of subscriptions" src="_img/buy-vs-subscriptions/buy-vs-sub-users.png" style="border: 1px solid #CCCCCC" />
+0.  Potvrzení a dokončení nákupu. Pokud jste k sobě přiřazené předplatné, můžete přejít [portál pro předplatitele sady Visual Studio](https://my.visualstudio.com) spustíte stahování softwaru a využití dalších výhod pro předplatitele.
 
-    Pokud nechcete, aby odběry přiřazené sami, zrušte **přiřadit toto předplatné vám**.
+> [!div class="mx-imgBorder"]
+> ![Úspěšně dokončit nákup](_img/buy-vs-subscriptions/buy-vs-sub-success.png)
 
-0.  Potvrzení a dokončení nákupu. Pokud jste přiřadili předplatné sami, můžete navštívit [portál odběratele Visual Studio](https://my.visualstudio.com) zahájíte stahování softwaru a použití další výhody pro předplatitele.
+> [!div class="mx-imgBorder"]
+> ![Přejděte na portál pro předplatitele sady Visual Studio](_img/buy-vs-subscriptions/view-subscription-benefits-subscriptions-portal.png)
 
-    <img alt="Finish purchase successfully" src="_img/buy-vs-subscriptions/buy-vs-sub-success.png" style="border: 1px solid #CCCCCC" />
+Pokud jste zakoupili více než jedno předplatné, pokračujte [portál pro správu předplatných sady Visual Studio](https://manage.visualstudio.com) přiřazení předplatných ostatním uživatelům.
 
-    <img alt="Go to Visual Studio subscriber portal" src="_img/buy-vs-subscriptions/view-subscription-benefits-subscriptions-portal.png" style="border: 1px solid #CCCCCC" />
+> [!div class="mx-imgBorder"]
+> ![Přiřazení předplatných pro ostatní](_img/buy-vs-subscriptions/buy-vs-sub-success-many.png)
 
-    Pokud jste zakoupili více než jedno předplatné, pokračujte [portálu pro správu předplatných Visual Studio](https://manage.visualstudio.com/) přiřadit odběry ostatním uživatelům.
+> [!div class="mx-imgBorder"]
+> ![Zobrazení odběrů](_img/buy-vs-subscriptions/assign-subscriptions.png)
 
-    <img alt="Assign subscriptions to others" src="_img/buy-vs-subscriptions/buy-vs-sub-success-many.png" style="border: 1px solid #CCCCCC" />
+## <a name="manage-subscriptions"></a>Zrušit obnovení Cloudová předplatná, které jste zakoupili
 
-    <img alt="View subscriptions" src="_img/buy-vs-subscriptions/assign-subscriptions.png" style="border: 1px solid #CCCCCC" />
+*   Chcete-li změnit počet zakoupených předplatných:
 
-<a name="manage-subscriptions"></a>
-##  <a name="cancel-renewals-of-cloud-subscriptions-youve-purchased"></a>Zrušit obnovení Cloudová předplatná, které jste koupili
+> [!div class="mx-imgBorder"]
+> ![Změnit předplatné](_img/buy-vs-subscriptions/manage-subscriptions.png)
 
+*   Pokud chcete zrušit tyto odběry, snižte počet předplatných na nulu (0). Se nesmí obnovit na začátku dalšího fakturačního období (prvního dne následujícího měsíce pro měsíční Cloudová předplatná, 12 měsíců později pro roční Cloudová předplatná).
 
-*   Chcete-li změnit počet zakoupili předplatné:
+## <a name="buy-cloud-subscriptions-now"></a>Koupit cloudových předplatných
 
-    <img alt="Change subscriptions" src="_img/buy-vs-subscriptions/manage-subscriptions.png" style="border: 1px solid #CCCCCC" />
-
-*   Pokud chcete zrušit tyto odběry, snižte počet odběrů na nulu (0).
-Nebudou se obnovit na začátku další fakturační období (první do následujícího měsíce pro měsíční Cloudová předplatná; dobu 12 měsíců později pro roční předplatná cloudu).
-
-## <a name="buy-cloud-subscriptions-now"></a>Koupit Cloudová předplatná
-
-* [Visual Studio Professional každý měsíc](https://marketplace.visualstudio.com/items?itemName=ms.vs-professional-monthly)
+* [Visual Studio Professional měsíčně](https://marketplace.visualstudio.com/items?itemName=ms.vs-professional-monthly)
 * [Visual Studio Professional roční](https://marketplace.visualstudio.com/items?itemName=ms.vs-professional-annual)
-* [Visual Studio Enterprise každý měsíc](https://marketplace.visualstudio.com/items?itemName=ms.vs-enterprise-monthly)
+* [Visual Studio Enterprise měsíční](https://marketplace.visualstudio.com/items?itemName=ms.vs-enterprise-monthly)
 * [Visual Studio Enterprise roční](https://marketplace.visualstudio.com/items?itemName=ms.vs-enterprise-annual)
 
-## <a name="related-resources"></a>Související informační zdroje
+## <a name="related-resources"></a>Související prostředky
 
-* [Visual Studio odběry správy portálu](https://manage.visualstudio.com/)
-* [Visual Studio – podpora předplatného](https://www.visualstudio.com/vs/support/)
-* [Visual Studio cloudové předplatné fakturace – nejčastější dotazy](vscloud-billing-faq.md)
-* [Visual Studio cloudové předplatné nákupu pro poskytovatele cloudových služeb](vscloud-csp.md)
+* [Portál sady Visual Studio správa předplatných](https://manage.visualstudio.com/)
+* [Předplatné Visual Studio – podpora](https://visualstudio.microsoft.com/vs/support/)
+* [Předplatné cloudu Visual Studio, které jsou nejčastější dotazy k fakturaci](vscloud-billing-faq.md)
+* [Visual Studio nákupu cloudového předplatného sady pro zprostředkovatele kryptografických služeb](vscloud-csp.md)

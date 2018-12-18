@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::SetNextStatement | Microsoft Docs
+title: IDebugThread2::SetNextStatement | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e59d4087e44458ecd49efd5d7be9f45e68c6da2b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: bfc2afb15dbacde1eb0a96178d2769365deb4e31
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49893790"
 ---
 # <a name="idebugthread2setnextstatement"></a>IDebugThread2::SetNextStatement
-Nastaví aktuální ukazatel instrukce v kontextu daného kódu.  
+Nastaví aktuální ukazatel příkazu v kontextu daného kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,19 +46,19 @@ int SetNextStatement (
  Vyhrazeno pro budoucí použití; Nastavte na hodnotu null.  
   
  `pCodeContext`  
- [v] [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) objekt, který popisuje kód umístění chystáte provést a jeho kontextu.  
+ [in] [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) objekt, který popisuje umístění se pokračovalo v kódu a jeho kontext.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby. V následující tabulce jsou uvedeny další možné hodnoty.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby. V následující tabulce jsou uvedeny další možné hodnoty.  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
-|E_CANNOT_SET_NEXT_STATEMENT_ON_NONLEAF_FRAME|Další příkaz nemůže být v zásobníku hlubší v rámce zásobníku.|  
-|E_CANNOT_SETIP_TO_DIFFERENT_FUNCTION|Další příkaz není přidružený žádné rámce v zásobníku.|  
-|E_CANNOT_SET_NEXT_STATEMENT_ON_EXCEPTION|Některé moduly ladění nelze nastavit další příkaz po výjimce.|  
+|E_CANNOT_SET_NEXT_STATEMENT_ON_NONLEAF_FRAME|Následující příkaz nelze v zásobníku hlouběji v zásobníku rámce.|  
+|E_CANNOT_SETIP_TO_DIFFERENT_FUNCTION|Další příkaz není přidružené žádné rámce v zásobníku.|  
+|E_CANNOT_SET_NEXT_STATEMENT_ON_EXCEPTION|Některé ladicí stroj nelze nastavit další příkaz po výjimce.|  
   
 ## <a name="remarks"></a>Poznámky  
- Ukazatel instrukce označuje další instrukce nebo příkaz provést. Tato metoda se používá, opakujte řádek zdrojového kódu a vynutit spuštění, chcete-li pokračovat v jiné funkci, například.  
+ Ukazatele na instrukci označuje další instrukci nebo příkaz ke spuštění. Tato metoda se používá, zkuste řádek zdrojového kódu nebo vynutit spuštění, abyste mohli pokračovat v jiné funkci, třeba.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   

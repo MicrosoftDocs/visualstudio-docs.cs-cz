@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31135819"
 ---
 # <a name="support-for-the-autos-window-in-a-legacy-language-service"></a>Podpora pro automobily okna ve službě jazyk starší verze
 **Automobily** zobrazuje výrazy, například proměnné a parametry, které jsou v oboru, když program laděné je pozastaveno (buď z důvodu zarážku nebo výjimku). Výrazy může obsahovat proměnné, místní nebo globální a parametry, které se změnily v místní oboru. **Automobily** okno může také obsahovat instancí třídy, struktury nebo jiný typ. Potenciálně všechno, co můžete vyhodnotit vyhodnocení výrazu lze zobrazit v **automobily** okno.  

@@ -1,5 +1,5 @@
 ---
-title: IDebugEnumField::GetStringFromValue | Microsoft Docs
+title: IDebugEnumField::GetStringFromValue | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a0b7ac4f7cde93d4637906202f7b4c643750d8e0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e9c1bd0887c8d154501a87ea9a2227e079bbb083
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49872756"
 ---
 # <a name="idebugenumfieldgetstringfromvalue"></a>IDebugEnumField::GetStringFromValue
-Tato metoda získá název konstanta výčtu zadány jeho hodnota.  
+Tato metoda získává název zadaný hodnotou konstanty výčtu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,16 +43,16 @@ int GetStringFromValue(
   
 #### <a name="parameters"></a>Parametry  
  `value`  
- [v] Hodnota, pro které chcete získat název výčtu konstantní.  
+ [in] Hodnota, pro které chcete získat název výčtu konstant.  
   
  `pbstrValue`  
- [out] Vrací název konstanta výčtu.  
+ [out] Vrátí název konstanty výčtu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` Pokud hodnota nemá žádný související název nebo vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` Pokud hodnota nemá žádný přidružený název nebo vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Pokud existuje více než jeden název spojený se stejnou hodnotou, bude vrácen první název definovaný ve výčtu.  
+ Pokud existuje více než jeden název spojený se stejnou hodnotou, bude vrácena křestní jméno definované ve výčtu.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugEnumField](../../../extensibility/debugger/reference/idebugenumfield.md)

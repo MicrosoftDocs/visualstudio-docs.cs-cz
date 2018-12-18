@@ -1,9 +1,9 @@
 ---
-title: Fragmenty kódu v jazyce Visual C++ | Microsoft Docs
-ms.custom: ''
+title: Fragmenty kódu Visual C++
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: reference
 author: gewarren
 ms.author: gewarren
 manager: douge
@@ -11,29 +11,30 @@ dev_langs:
 - CPP
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa6057f45c3c9030264f6a795caece6ed8a3b28e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f119f3b2bc438eacfaaa722bd57fb440aa303052
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49948925"
 ---
 # <a name="visual-c-code-snippets"></a>Fragmenty kódu Visual C++
 
-Fragmenty kódu v sadě Visual Studio, můžete použít přidat kód pro běžně používané soubory s kódem jazyka C++. Obecně platí fragmenty kódu můžete používat stejným způsobem jako v C#, ale sadu výchozí fragmenty kódu se liší.
+Fragmenty kódu v sadě Visual Studio slouží k přidání běžně používá kód pro soubory kódu C++. Obecně platí fragmenty kódu můžete použít stejným způsobem jako v jazyce C#, ale sada výchozí fragmenty kódu se liší.
 
-Můžete přidat fragment kódu v konkrétních místech v kódu (vložení) nebo obklopit některé vybrané kódu pomocí fragmentu kódu.
+Můžete přidat fragment kódu do určitého umístění ve vašem kódu (vložení) nebo před a za některých vybraný kód fragmentem kódu.
 
-## <a name="inserting-a-code-snippet"></a>Vkládání fragmentu kódu
+## <a name="insert-a-code-snippet"></a>Vložit fragment kódu
 
-Pokud chcete vložit fragment kódu, otevřete soubor kódu C++ (sada nebo .h), klikněte na tlačítko někde v souboru a proveďte jednu z následujících akcí:
+Chcete-li vložit fragment kódu, otevřete soubor kódu jazyka C++ (*.cpp* nebo *.h*), klikněte někam do souboru, a proveďte jednu z následujících akcí:
 
-- Klikněte pravým tlačítkem a získat v místní nabídce vyberte **Vložit fragment kódu**
+- Klikněte pravým tlačítkem a získat kontextovou nabídku a vyberte **Vložit fragment**
 
-- V **upravit nebo IntelliSense** nabídce vyberte možnost **Vložit fragment kódu**
+- V **upravit / IntelliSense** příkaz **Vložit fragment**
 
-- Použití klávesových zkratek: **Ctrl**+**tisíc**+**X**
+- Použití klávesových zkratek: **Ctrl**+**K**+**X**
 
-Zobrazí seznam možností počínaje **#if**. Když vyberete **#if**, měli byste vidět následující kód do souboru přidán:
+Zobrazí se seznam možností počínaje **#if**. Když vyberete **#if**, byste měli vidět následující kód do souboru přidán:
 
 ```cpp
 #if 0
@@ -41,19 +42,19 @@ Zobrazí seznam možností počínaje **#if**. Když vyberete **#if**, měli bys
 #endif // 0
 ```
 
-Pak můžete 0 nahradit správné podmínku.
+Pak můžete nahradit **0** s podmínkou správný.
 
-## <a name="using-a-code-snippet-to-surround-selected-code"></a>Obklopit vybraný úsek kódu pomocí fragmentu kódu
+## <a name="use-a-code-snippet-to-surround-selected-code"></a>Pomocí kódu ohraničit vybraný kód
 
-Chcete-li obklopit vybraný úsek kódu pomocí fragmentu kódu, vyberte řádek (nebo více řádků) a proveďte jednu z následujících:
+Použití kódu před a za vybraný kód, vyberte řádek (nebo více řádků) a proveďte jednu z následujících akcí:
 
-- Chcete-li získat v místní nabídce klikněte pravým tlačítkem a vyberte **příkazu Obklopit s**
+- Klikněte pravým tlačítkem na získání kontextovou nabídku a vyberte **obklopit fragmentem**
 
-- Z **upravit** > **IntelliSense** nabídce vyberte možnost **příkazu Obklopit s**
+- Z **upravit** > **IntelliSense** příkaz **obklopit fragmentem**
 
-- Použití klávesnice, stiskněte klávesu: **CTRL**+**tisíc**+**S**
+- Použití klávesnice, stiskněte klávesu: **Ctrl**+**K**+**S**
 
-Vyberte **#if**. Měli byste vidět zhruba takhle:
+Vyberte **#if**. By měl vypadat přibližně takto:
 
 ```cpp
 #if 0
@@ -61,17 +62,17 @@ Vyberte **#if**. Měli byste vidět zhruba takhle:
 #endif // 0
 ```
 
-Pak můžete 0 nahradit správné podmínku.
+0 můžete nahradit pak správná podmínku.
 
-## <a name="where-can-i-find-a-complete-list-of-the-c-code-snippets"></a>Kde úplný seznam fragmenty kódu C++
+## <a name="where-can-i-find-a-complete-list-of-the-c-code-snippets"></a>Kde najdete úplný seznam fragmenty kódu C++
 
-Úplný seznam fragmenty kódu C++ můžete najít na webu **Správce fragmentů kódu** (na **nástroje** nabídky) a nastavení **jazyk** k **Visual C++** . V okně níže, rozbalte položku **Visual C++**. Měli byste vidět názvy všechny fragmenty kódu C++ v abecedním pořadí.
+Úplný seznam fragmenty kódu C++ můžete najít tak, že přejdete **Správce fragmentů kódů** (na **nástroje** nabídky) a nastavení **jazyk** k **Visual C++** . V okně níže, rozbalte **Visual C++**. Měli byste vidět názvy všech fragmenty kódu C++ v abecedním pořadí.
 
-Názvy většina fragmenty kódu jsou zřejmé, ale některé názvy může být matoucí.
+Názvy většina fragmentů kódu není potřeba vysvětlovat, ale některé názvy mohou být matoucí.
 
-## <a name="class-vs-classi"></a>Třída oproti classi
+## <a name="class-vs-classi"></a>Třída vs. classi
 
-**Třída** fragment obsahuje definice třídy s názvem MyClass, s odpovídající výchozí konstruktor a destruktor, kde se nachází definice konstruktor a destruktor mimo třídy:
+**Třídy** fragment kódu obsahuje definici třídy s názvem `MyClass`s odpovídající výchozí konstruktor a destruktor, kde se nachází definice konstruktor a destruktor mimo třídu:
 
 ```cpp
 class MyClass
@@ -93,7 +94,7 @@ MyClass::~MyClass()
 }
 ```
 
-**Classi** fragment kódu také obsahuje definice třídy s názvem MyClass, ale do definice třídy jsou definovány výchozí konstruktor a destruktor:
+**Classi** fragment kódu také poskytuje definici třídy s názvem `MyClass`, ale jsou definovány výchozí konstruktor a destruktor uvnitř definice třídy:
 
 ```cpp
 class MyClass
@@ -112,11 +113,11 @@ private:
 };
 ```
 
-## <a name="for-vs-forr-vs-rfor"></a>pro oproti forr vs rfor
+## <a name="for-vs-forr-vs-rfor"></a>pro porovnání rfor díky vs
 
 Existují tři různé **pro** fragmenty kódu, které poskytují různé typy z `for` smyčky.
 
-**Rfor** fragment obsahuje [na základě rozsahu](/cpp/cpp/range-based-for-statement-cpp) pro smyčky (odkaz). Tento konstruktor je upřednostňovaný nad na základě indexu `for` smyčky.
+**Rfor** poskytuje fragment kódu [založený na rozsahu](/cpp/cpp/range-based-for-statement-cpp) pro smyčky (odkaz). Tento konstruktor je upřednostňované nad indexu `for` smyčky.
 
 ```cpp
 for (auto& i : v)
@@ -125,7 +126,7 @@ for (auto& i : v)
 }
 ```
 
-**Pro** fragment obsahuje `for` smyčky, ve kterém je založena na délku (v `size_t`) objektu.
+**Pro** poskytuje fragment kódu `for` smyčku, ve kterém podmínka je na základě délky (v `size_t`) objektu.
 
 ```cpp
 for (size_t i = 0; i < length; i++)
@@ -134,7 +135,7 @@ for (size_t i = 0; i < length; i++)
 }
 ```
 
-**Forr** fragment obsahuje zpětného `for` smyčky, ve kterém je založena na délce objektu (v celá čísla).
+**Díky** fragment kódu obsahuje obrácenou `for` smyčku, ve kterém podmínka je na základě délky (v celých čísel) objektu.
 
 ```cpp
 for (int i = length - 1; i >= 0; i--)
@@ -143,9 +144,9 @@ for (int i = length - 1; i >= 0; i--)
 }
 ```
 
-## <a name="the-destructor-snippet-"></a>Fragmentu – destruktor (~)
+## <a name="the-destructor-snippet-"></a>Fragment kódu – destruktor (~)
 
-Fragment kódu – destruktor (**~**) ukazuje různé chování v různých kontextech. Pokud je vložit tento fragment kódu uvnitř třídy, poskytuje destruktor pro tuto třídu. Například uděleno následující kód:
+Fragment kódu – destruktor (**~**) ukazuje různé chování v různých kontextech. Pokud je vložit tento fragment kódu uvnitř třídy, obsahuje destruktor pro danou třídu. Mějme například následující kód:
 
 ```cpp
 class SomeClass {
@@ -153,7 +154,7 @@ class SomeClass {
 };
 ```
 
-Pokud vložíte fragmentu destruktor, poskytuje destruktor pro SomeClass:
+Při vložení fragmentu kódu destruktor obsahuje destruktor `SomeClass`:
 
 ```cpp
 class SomeClass {
@@ -164,14 +165,13 @@ class SomeClass {
 };
 ```
 
-Pokud se pokusíte vložit fragment – destruktor mimo třídu, poskytuje destruktor s názvem zástupný text:
+Pokud se pokusíte vložit fragment – destruktor mimo třídu, poskytuje destruktor zástupný název:
 
 ```cpp
 ~TypeNamePlaceholder()
 {
-
 ```
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Fragmenty kódu](../ide/code-snippets.md)
+- [Fragmenty kódu](../ide/code-snippets.md)

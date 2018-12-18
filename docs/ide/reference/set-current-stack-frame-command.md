@@ -1,10 +1,9 @@
 ---
-title: Nastavit aktuální rámec zásobníku – příkaz | Microsoft Docs
-ms.custom: ''
+title: Nastavit aktuální rámec zásobníku – příkaz
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - debug.setcurrentstackframe
 helpviewer_keywords:
@@ -16,33 +15,36 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f8851530dec3e5e1a2c3e829c1508155a2dbda8a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 95f8c762f16eb4a784ccc2cffb5bfa27d215370e
+ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
+ms.locfileid: "33704795"
 ---
 # <a name="set-current-stack-frame-command"></a>Nastavit aktuální rámec zásobníku – příkaz
-Umožňuje nastavit konkrétní zásobníku.  
-  
-## <a name="syntax"></a>Syntaxe  
-  
-```  
-Debug.SetCurrentStackFrame index  
-```  
-  
-## <a name="arguments"></a>Arguments  
- `index`  
- Požadováno. Vybere rámce zásobníku jeho index.  
-  
-## <a name="example"></a>Příklad  
-  
-```  
->Debug.SetCurrentStackFrame 1  
-```  
-  
-## <a name="see-also"></a>Viz také  
- [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)   
- [Příkazové okno](../../ide/reference/command-window.md)   
- [Pole najít/příkaz](../../ide/find-command-box.md)   
- [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)
+Umožňuje nastavit konkrétní zásobníku.
+
+## <a name="syntax"></a>Syntaxe
+
+```cmd
+Debug.SetCurrentStackFrame index
+```
+
+## <a name="arguments"></a>Arguments
+ `index`
+
+ Požadováno. Vybere rámce zásobníku jeho index.
+
+## <a name="example"></a>Příklad
+
+```cmd
+>Debug.SetCurrentStackFrame 1
+```
+
+## <a name="see-also"></a>Viz také
+
+- [Příkazy sady Visual Studio](../../ide/reference/visual-studio-commands.md)
+- [Příkazové okno](../../ide/reference/command-window.md)
+- [Pole najít/příkaz](../../ide/find-command-box.md)
+- [Aliasy příkazů sady Visual Studio](../../ide/reference/visual-studio-command-aliases.md)

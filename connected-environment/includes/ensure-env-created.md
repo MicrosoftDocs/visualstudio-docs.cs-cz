@@ -1,2 +1,0 @@
-## <a name="ensure-the-development-environment-was-successfully-created"></a>Ujistěte se, že byl úspěšně vytvořen vývojového prostředí
-V předchozí části jsme spuštěna `vsce env create` příkaz k vytvoření prostředí pro vývoj v Azure. Může trvat asi 7 minut na dokončení tak to zkuste znovu, aby byl úspěšně vytvořen. Můžete se podívat vždy prostředí, které máte přístup a jejich stav, pomocí tohoto příkazu: `vsce env list`. 

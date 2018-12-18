@@ -1,5 +1,5 @@
 ---
-title: IDebugCanStopEvent2::GetCodeContext | Microsoft Docs
+title: IDebugCanStopEvent2::GetCodeContext | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1a771345d9c3cf0cbfb7324e82eb9519069499eb
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 05cd4729635042d67f063bbba412c19a4a2f89f7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49818338"
 ---
 # <a name="idebugcanstopevent2getcodecontext"></a>IDebugCanStopEvent2::GetCodeContext
-Získá kontext kód, který popisuje umístění této události.  
+Získá kontext kódu, který popisuje umístění této události.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,12 +44,12 @@ int GetCodeContext(
  [out] Vrátí [IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md) objekt, který představuje aktuální umístění v kódu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Pro většinu běhu architektury můžete kód kontextu představit jako adresu v datovém proudu spuštění programu, odkazující na konkrétní instrukce.  
+ Pro většinu za běhu architektury kontext kódu můžete představit jako adresa ve službě stream provádění programu, odkazuje na konkrétní instrukce.  
   
- Chcete-li získat kontext dokumentu, který je zaměřen na řádků zdrojového kódu, zavolejte [GetDocumentContext](../../../extensibility/debugger/reference/idebugcanstopevent2-getdocumentcontext.md) metoda.  
+ Chcete-li získat kontext dokumentu, který je zaměřen na řádky zdrojového kódu, zavolejte [GetDocumentContext](../../../extensibility/debugger/reference/idebugcanstopevent2-getdocumentcontext.md) metody.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugCanStopEvent2](../../../extensibility/debugger/reference/idebugcanstopevent2.md)   

@@ -1,6 +1,7 @@
 ---
 title: 'CA2118: Revize použití SuppressUnmanagedCodeSecurityAttribute'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,13 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be5ebf971d7a852edafc2b54e954c5b06ef81c88
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 900abe516ebd07cf5a8849f269f915623500731e
+ms.sourcegitcommit: ad5fb20f18b23eb8bd2568717f61edc6b7eee5e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47859702"
 ---
 # <a name="ca2118-review-suppressunmanagedcodesecurityattribute-usage"></a>CA2118: Revize použití SuppressUnmanagedCodeSecurityAttribute
+
 |||
 |-|-|
 |TypeName|ReviewSuppressUnmanagedCodeSecurityUsage|
@@ -30,43 +33,47 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Veřejné nebo chráněného typ nebo člen má <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> atribut.
+ Veřejný nebo chráněný typ nebo člen má <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> atribut.
 
 ## <a name="rule-description"></a>Popis pravidla
- <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> Změní výchozí chování systému zabezpečení pro členy, které jsou spouštěny pomocí COM zprostředkovatel komunikace s objekty nebo platformy, volání nespravovaného kódu. Obecně platí, umožňuje systém [Data a modelování](/dotnet/framework/data/index) oprávnění pro nespravovaný kód. Tomuto požadavku dojde v době běhu pro každé vyvolání člena a kontroluje všechny volajícího v zásobníku volání pro oprávnění. Pokud je přítomen atribut, díky systému [požadavky propojení](/dotnet/framework/misc/link-demands) pro oprávnění: oprávnění bezprostředního volajícího jsou zaškrtnutá políčka, pokud má volající kompilována.
+ <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> mění výchozí chování zabezpečení systému pro členy vykonávající nespravovaný kód pomocí modelu COM interop nebo vyvolání platformy. Obecně platí, systém provede [Data a modelování](/dotnet/framework/data/index) oprávnění pro nespravovaný kód. Tomuto požadavku dojde za běhu pro každé vyvolání členu a zkontroluje každý volající v zásobníku volání o oprávnění. Pokud atribut je k dispozici, systém provede [požadavky propojení](/dotnet/framework/misc/link-demands) oprávnění: se kontroluje oprávnění bezprostředního volajícího, když volající je zkompilován JIT Kompilátorem.
 
- Tento atribut slouží především ke zvýšení výkonu, ačkoliv nárůst výkonu může být spojen s významnými riziky zabezpečení. Pokud jste na veřejné členy, které volají metody nativní atribut, volající v zásobníku volání (jiné než bezprostředního volajícího) není nutné nespravovaného kódu oprávnění k provedení nespravovaného kódu. V závislosti na veřejné člen akce a zpracování vstupních se může povolit nedůvěryhodným volajícím funkce přístupu obvykle omezené na důvěryhodného kódu.
+ Tento atribut slouží především ke zvýšení výkonu, ačkoliv nárůst výkonu může být spojen s významnými riziky zabezpečení. Pokud umístit atribut na veřejné členy, které volají metody nativní volající v zásobníku volání (jiné než bezprostředního volajícího) není nutné nespravovaný kód oprávnění k provedení nespravovaného kódu. V závislosti na veřejný člen akce a zpracování vstupních mohl nedůvěryhodných volajících pro přístup k funkcím, obvykle s omezením pomocí specifikátoru pro důvěryhodného kódu.
 
- [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] Spoléhá na kontrol zabezpečení, aby se zabránilo volající získat přímý přístup k aktuální proces adresní prostor. Protože tento atribut obchází normální zabezpečení, představuje váš kód závažné ohrožení, pokud lze číst nebo zapisovat do paměti procesu. Všimněte si, že riziko není omezeno na metody, které záměrně poskytovat přístup ke zpracování paměti; je také součástí nějaký scénář, kde škodlivý kód můžete dosáhnout přístup a to jakýmkoli způsobem, například tím, že poskytuje překvapivé, poškozený nebo neplatný vstup.
+ Rozhraní .NET Framework spoléhá na kontroly zabezpečení, aby volající získat přímý přístup do adresního prostoru aktuální proces. Protože tento atribut obchází normální zabezpečení, váš kód představuje vážné ohrožení, pokud je možné číst nebo zapsat do paměti procesu. Mějte na paměti, že riziko není omezena pouze na metody, které záměrně poskytují přístup ke zpracování v paměti. je také k dispozici ve všech scénářích, kde škodlivý kód můžete dosáhnout přístup žádným způsobem, například tím, že poskytuje překvapivé, chybný nebo není platný vstup.
 
- Výchozí zásady zabezpečení nespravovaného kódu oprávnění k sestavení neposkytne, pokud se spouští z místního počítače nebo je členem jedné z následujících skupin:
+ Výchozí zásady zabezpečení neuděluje oprávnění nespravovaného kódu na sestavení, pokud je spuštěn v místním počítači nebo je členem jedné z následujících skupin:
 
--   Moje skupina počítačů zóny kódu
+- Moje skupina počítačů zóny kódu
 
--   Skupiny kódu název silným Microsoft
+- Microsoft Strong Name kódová skupina
 
--   ECMA silným názvem kód skupiny
+- Skupiny kódu silného názvu ECMA
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Pečlivě zkontrolujte kód a ujistěte se, že tento atribut je nezbytně nutné. Pokud nejste obeznámeni s zabezpečení spravovaného kódu, nebo není srozumitelný zabezpečení důsledky použití tento atribut, odeberte ji z vašeho kódu. Pokud atribut se vyžaduje, je nutné zajistit, že volající závadně nelze použít váš kód. Pokud váš kód nemá oprávnění k provedení nespravovaného kódu, tento atribut nemá žádný vliv a měla by být odebrána.
+ Pečlivě zkontrolujte kód a ujistěte se, že tento atribut je nezbytně nutné. Pokud nejste obeznámeni s spravovaný kód zabezpečení nebo není srozumitelný bezpečnostních důsledcích pomocí tohoto atributu, odeberte ho z vašeho kódu. Pokud je vyžadován atribut, musíte zajistit, že volající speciálně nemůžete použít kód. Pokud váš kód nemá oprávnění k provedení nespravovaného kódu, tento atribut nemá žádný vliv a měly by se odebrat.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Bezpečně potlačit upozornění na toto pravidlo, je nutné zajistit, že váš kód nenabízí volající přístup k nativní operace nebo prostředky, které můžete použít destruktivní způsobem.
+ Můžete bezpečně potlačit upozornění tohoto pravidla, ujistěte se, že váš kód neposkytuje volající přístup k nativním operace nebo prostředky použité destruktivním způsobem.
 
-## <a name="example"></a>Příklad
- Následující příklad porušuje pravidlo.
+## <a name="example-1"></a>Příklad 1
+ Následující příklad poruší toto pravidlo.
 
  [!code-csharp[FxCop.Security.TypesDoNotSuppress#1](../code-quality/codesnippet/CSharp/ca2118-review-suppressunmanagedcodesecurityattribute-usage_1.cs)]
 
-## <a name="example"></a>Příklad
- V následujícím příkladu `DoWork` metoda poskytuje cestu veřejně přístupný kód do metody vyvolání platformy `FormatHardDisk`.
+## <a name="example-2"></a>Příklad 2
+ V následujícím příkladu `DoWork` metoda poskytuje cestu veřejně přístupné kódu do metody vyvolání platformy `FormatHardDisk`.
 
  [!code-csharp[FxCop.Security.PInvokeAndSuppress#1](../code-quality/codesnippet/CSharp/ca2118-review-suppressunmanagedcodesecurityattribute-usage_2.cs)]
 
-## <a name="example"></a>Příklad
- V následujícím příkladu, veřejná metoda `DoDangerousThing` způsobí, že porušení. Chcete-li vyřešit porušení, `DoDangerousThing` je třeba provést privátní a přístup k němu by měla být prostřednictvím veřejná metoda zabezpečeny požadavek zabezpečení, které jsou popsány v `DoWork` metoda.
+## <a name="example-3"></a>Příklad 3
+ V následujícím příkladu, veřejnou metodu `DoDangerousThing` způsobí, že je porušení pravidel. Chcete-li vyřešit porušení zásad, `DoDangerousThing` třeba privátní a přístup k němu můžete použít veřejnou metodu zabezpečena pomocí požadavku zabezpečení, jak je znázorněno v `DoWork` metody.
 
  [!code-csharp[FxCop.Security.TypeInvokeAndSuppress#1](../code-quality/codesnippet/CSharp/ca2118-review-suppressunmanagedcodesecurityattribute-usage_3.cs)]
 
-## <a name="see-also"></a>Viz také
- <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> [Pokyny pro zabezpečené kódování](/dotnet/standard/security/secure-coding-guidelines) [Data a modelování](/dotnet/framework/data/index) [požadavky na propojení](/dotnet/framework/misc/link-demands)
+## <a name="see-also"></a>Viz také:
+
+- <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName>
+- [Pokyny pro zabezpečené kódování](/dotnet/standard/security/secure-coding-guidelines)
+- [Data a modelování](/dotnet/framework/data/index)
+- [Požadavky propojení](/dotnet/framework/misc/link-demands)

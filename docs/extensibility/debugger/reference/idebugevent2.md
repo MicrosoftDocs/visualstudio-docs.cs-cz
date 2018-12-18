@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31111186"
 ---
 # <a name="idebugevent2"></a>IDebugEvent2
 Toto rozhraní se používá ke komunikaci kritické ladicí informace, jako je například pozastavení na zarážce a méně důležité informace, například zprávu ladění.  

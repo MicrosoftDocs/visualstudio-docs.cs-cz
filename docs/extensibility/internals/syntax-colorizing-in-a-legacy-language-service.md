@@ -21,6 +21,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31135945"
 ---
 # <a name="syntax-colorizing-in-a-legacy-language-service"></a>Syntaxe barevné ve službě jazyk starší verze
 Zabarvení syntaxe je funkce, která způsobí, že různé prvky programovací jazyk, který se má zobrazit ve zdrojovém souboru v jiné barvy a styly. Chcete-li tuto funkci podporovat, budete muset zadat analyzátor nebo skener, který můžete identifikovat typy lexikální elementy nebo tokenů v souboru. Mnoho jazyků existenci klíčová slova, oddělovače (například závorkách nebo složené závorky) a komentáře barevné je různými způsoby.  

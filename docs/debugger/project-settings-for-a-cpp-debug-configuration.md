@@ -1,9 +1,9 @@
 ---
-title: Nastavení pro konfiguraci ladění jazyka C++ projektu | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
+title: Nastavení projektu pro konfiguraci ladění jazyka C++
+ms.custom: seodec18
+ms.date: 11/26/2018
 ms.technology: vs-ide-debug
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCDebugSettings.WebBrowser.DebuggerType
 - VC.Project.IVCGPUDebugPageObject.EnvironmentMerge
@@ -113,81 +113,82 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b323ab51f4be02faaddc1df7ab2dd6902323d63
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 951b46bfc6ef0910731dfe76cc9913f2c4a423ad
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53066895"
 ---
 # <a name="project-settings-for-a-c-debug-configuration"></a>Nastavení projektu pro konfiguraci ladění jazyka C++
-Můžete změnit nastavení projektu pro konfiguraci ladění jazyka C nebo Visual C++ v **stránky vlastností** dialogové okno, jak je popsáno v [postupy: nastavení ladění a vydání konfigurace](../debugger/how-to-set-debug-and-release-configurations.md). Následující tabulky popisují kde najít nastavení souvisejících s ladicí program v **stránky vlastností** dialogové okno.  
+Můžete změnit nastavení projektu pro konfiguraci ladění jazyka C nebo Visual C++ v **stránky vlastností** dialogové okno, jak je popsáno v [postupy: nastavení ladění a vydání konfigurace](../debugger/how-to-set-debug-and-release-configurations.md). Následující tabulky popisují, kde najít nastavení související s ladicí program v **stránky vlastností** dialogové okno.  
   
-> [!WARNING]
->  Nastavení projektu ladění na **konfigurace vlastnosti nebo ladění** kategorie pro aplikace UWP a součástí, které jsou napsané v jazyce C++ se liší. V tématu [spustit relaci ladění (jazyka Visual Basic, C#, C++ a XAML)](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md).  
+> [!NOTE]
+>  Nastavení ladění projektu v **konfigurační vlastnosti/ladění** kategorie se liší pro aplikace pro UPW a pro součásti, které jsou napsané v jazyce C++. Zobrazit [spustíte relaci ladění (VB, C#, C++ a XAML)](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md).  
   
- Zadejte které ladicí program pro použití v **ladicí program ke spuštění** pole se seznamem. Vaše volba bude mít vliv na vlastnosti, které jsou viditelné.  
+ Nastavení jednotlivých vlastností ladění automaticky zapíše a uloží do souboru "za user" (. vcxproj.user) pro vaše řešení při uložení vašeho řešení.  
+
+ Určete, který ladicí program používat v **ladicí program ke spuštění** pole se seznamem, jak je popsáno v následující tabulce. Vaše volba bude mít vliv na vlastnosti, které jsou viditelné.  
+    
+## <a name="configuration-properties-folder-debugging-category"></a>Složka s vlastnostmi konfigurace (kategorie ladění)  
   
- Nastavování vlastností ladění je automaticky zapsat a uložit do souboru "uživatelská" (. vcxproj.user) pro vaše řešení při každém uložení řešení.  
+| **Nastavení** | **Popis** |
+| - | - |
+| **Ladicí program ke spuštění** | Určuje ladicí program ke spuštění, s následujícími možnostmi:<br /><br /> -   **Ladicí program místní Windows**<br />-   **Windows vzdáleného ladicího programu**<br />-   **Ladicí program webového prohlížeče**<br />-   **Ladicí program webové služby** |
+| **Příkaz** (ladicí program místní Windows) | Určuje příkaz pro spuštění programu, který právě ladíte v místním počítači. |
+| **Vzdálený příkaz** (Windows vzdálený ladicí program) | Cesta k .exe ve vzdáleném počítači. Zadejte cestu stejně, jako byste ji zadávali ve vzdáleném počítači. |
+| **Argumenty příkazového** (ladicí program místní Windows)<br /><br /> **Argumenty vzdáleného příkazu** (Windows vzdálený ladicí program) | -Určuje argumenty pro příkaz zadaný dříve.<br /><br /> V tomto poli můžete použít následující operátory přesměrování:<br /><br /> < `file`<br /> Čte stdin ze souboru.<br /><br /> > `file`<br /> Zapíše hodnotu stdout do souboru.<br /><br /> >> `file`<br /> Připojí stdout do souboru.<br /><br /> 2> `file`<br /> Zapíše hodnotu stderr do souboru.<br /><br /> 2>> `file`<br /> Připojí stderr do souboru.<br /><br /> 2> &1<br /> Odešle výstup stderr (2) do stejného umístění jako stdout (1).<br /><br /> 1> &2<br /> Odešle stdout (1) výstup do stejného umístění jako stderr (2).<br /><br /> Ve většině případů jsou tyto operátory použitelné pouze pro konzolové aplikace. |
+| **Pracovní adresář** | Určuje pracovní adresář laděného programu, relativně vzhledem k adresáři projektu, kde je umístěn váš soubor EXE. Pokud toto pole ponecháte prázdné, pracovní adresář je adresář projektu. Pro vzdálené ladění projektu adresář je na vzdáleném serveru. |
+| **Připojit** (ladicí program místní Windows a Windows vzdálený ladicí program) | Určuje, zda chcete spustit nebo připojit k aplikaci. Výchozí nastavení je Ne. |
+| **Název vzdáleného severu** (Windows vzdálený ladicí program) | Určuje název počítače (kromě vašeho), na kterém chcete ladit aplikace.<br /><br /> Makro sestavení RemoteMachine je nastavena na hodnotu této vlastnosti; Další informace najdete v tématu [sestavení makra pro příkazy a vlastnosti](/cpp/ide/common-macros-for-build-commands-and-properties). |
+| **Připojení** (Windows vzdálený ladicí program) | Umožňuje přepínat mezi typy standard a bez ověřování připojení pro vzdálené ladění. Zadejte název vzdáleného počítače v **název vzdáleného serveru** pole. Typy připojení patří:<br /><br /> -   **Vzdálený s ověřováním Windows**<br />-   **Vzdálený bez ověřování**<br /><br /> **Poznámka:** vzdálené ladění bez ověřování může zanechat vzdálený počítač zranitelné vůči narušení zabezpečení. Režim ověřování Windows je bezpečnější.<br /><br /> Další informace najdete v tématu [vzdálené ladění nastavení](../debugger/remote-debugging.md). |
+| **Adresa URL operace HTTP** (Web ladicí program služby a ladicí program webového prohlížeče) | Určuje adresu URL, kde je umístěn projekt, který ladíte. |
+| **Typ ladicího programu** | Určuje typ ladicího programu, který se má použít: **pouze nativní**, **pouze spravované**, **pouze GPU**, **smíšený**, **automaticky**(výchozí), nebo **skript**.<br /><br /> -   **Pouze nativní** je pro nespravovaný kód jazyka C++.<br />-   **Režim pouze spravovaný** je pro kód, který běží v rámci common language runtime (spravovaný kód).<br />-   **Smíšené** vyvolá ladicí programy pro spravovaný i nespravovaný kód.<br />-   **Automatické** Určuje typ ladicího programu na základě kompilátoru a informací souboru EXE.<br />-   **Skript** vyvolá ladicí program skriptů.<br />-   **Pouze GPU** je pro kód C++ AMP, který běží na GPU zařízení nebo v rasterizéru referenčního rozhraní DirectX. Zobrazit [kódu ladění GPU](../debugger/debugging-gpu-code.md). |
+| **Prostředí** (ladicí program místní Windows a Windows vzdálený ladicí program) | Určuje proměnné prostředí pro program, který ladíte. Použijte syntaxi proměnných standardního prostředí (například `PATH="%SystemRoot%\..."`). Tyto proměnné přepisují prostředí systému nebo jsou sloučeny s prostředím systému v závislosti na tom **sloučit prostředí** nastavení. Když levým tlačítkem myši ve sloupci nastavení "Upravit..." se zobrazí. Vyberte tento odkaz upravíte proměnné prostředí. |
+| **Sloučit prostředí** (ladicí program místní Windows) | Určuje, zda proměnné, které jsou určené v **prostředí** pole se sloučí s prostředím, který je definován v operačním systému. Výchozí nastavení je Ano. |
+| **Ladění SQL** (všechny kromě ladicího programu clusteru MPI) | Umožňuje ladění procedur SQL z vašich [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] aplikace. Výchozí nastavení je Ne. |
+| **Typ akcelerátoru ladění** (pouze ladění GPU) | Určuje zařízení GPU používané pro ladění. Instalace ovladačů pro kompatibilní zařízení GPU přidá další možnosti. Ve výchozím nastavení **GPU - softwarový emulátor**. |
+| **Výchozí chování zarážky GPU** (pouze ladění GPU) | Určuje, zda by měla být zvýšena událost zarážky pro každý podproces v křivce SIMD. Ve výchozím nastavení je pro vyvolání události zarážky pouze jednou na každý svazek. |
+| **Výchozí akcelerátor amp** | Určuje výchozí akcelerátor AMP při ladění kódu GPU. Zvolte **softwarový akcelerátor WARP** pro zjištění, zda problém způsoben hardwarem nebo ovladačem namísto kódu. |
+| **Adresář nasazení** (Windows vzdálený ladicí program) | Určuje cestu ve vzdáleném počítači, kde bude výstup projektu zkopírovaný před spuštěním. Cesta může být síťová sdílená položka vzdáleného počítače, nebo může být cesta ke složce ve vzdáleném počítači. Ve výchozím nastavení je prázdný, což znamená, že výstup projektu není zkopírován do sdílené síťové složky. Pokud chcete povolit nasazení souborů, musíte také vybrat **nasadit** zaškrtávací políčko v dialogovém okně nástroje Configuration Manager. Další informace najdete v tématu [postupy: vytvoření a úprava konfigurací](../ide/how-to-create-and-edit-configurations.md). |
+| **Další soubory k nasazení** (Windows vzdálený ladicí program) | Pokud je nastavena vlastnost adresáře nasazení, toto je seznam oddělený středníkem další soubory ke zkopírování do adresáře nasazení. Ve výchozím nastavení je prázdný, což znamená, že žádné další soubory nejsou zkopírovány do adresáře nasazení. Pokud chcete povolit nasazení souborů, musíte také vybrat **nasadit** zaškrtávací políčko v dialogovém okně nástroje Configuration Manager. Další informace najdete v tématu [postupy: vytvoření a úprava konfigurací](../ide/how-to-create-and-edit-configurations.md). |
+| **Nasadit běhové knihovny pro ladění jazyka Visual C++** (Windows vzdálený ladicí program) | Pokud je nastavena vlastnost adresáře nasazení, určuje, zda mají být běhové knihovny ladicího programu Visual C++ pro aktuální platformu zkopírovány do sdílené síťové složce. Ve výchozím nastavení je Ano. |
   
-## <a name="configuration-properties-folder-debugging-category"></a>Konfigurace vlastností složky (kategorie ladění)  
-  
-|**Nastavení**|**Popis**|  
-|-----------------|---------------------|  
-|**Ladicí program ke spuštění**|Určuje ladicí program ke spuštění s následujícími možnostmi:<br /><br /> -   **Ladicí program místního systému Windows**<br />-   **Ladicí program vzdáleného systému Windows**<br />-   **Webové prohlížeče ladicí program**<br />-   **Ladicí program webové služby**|  
-|**Příkaz** (ladicí program místního systému Windows)|Určuje příkaz pro spuštění programu, který ladíte v místním počítači.|  
-|**Vzdálený příkaz** (ladicí program vzdáleného systému Windows)|Cesta pro .exe na vzdáleném počítači. Zadejte cestu, stejně, jako by ji zadat ve vzdáleném počítači.|  
-|**Příkaz argumenty** (ladicí program místního systému Windows a ladicí program vzdáleného systému Windows)|-Určuje argumenty pro příkaz dříve zadaný.<br /><br /> V tomto poli můžete použít následující operátory přesměrování:<br /><br /> < `file`<br /> STDIN – čtení ze souboru.<br /><br /> > `file`<br /> Stdout zapisování do souboru.<br /><br /> >> `file`<br /> Stdout připojí k souboru.<br /><br /> 2> `file`<br /> Zapíše stderr do souboru.<br /><br /> 2>> `file`<br /> Připojí stderr do souboru.<br /><br /> 2> &1<br /> Odesílá výstup datového proudu stderr (2) na stejné umístění jako stdout (1).<br /><br /> 1> &2<br /> Odešle stdout (1) výstup do stejné umístění jako stderr (2).<br /><br /> Ve většině případů tyto operátory platí pouze pro konzolové aplikace.|  
-|**Pracovní adresář**|Určuje pracovní adresář programu laděné relativní vzhledem k projektu adresáři, kde se nachází váš EXE. Pokud ji necháte prázdnou, pracovní adresář je adresář projektu. Pro vzdálené ladění adresáři projektu bude na vzdáleném serveru.|  
-|**Připojte** (ladicí program místního systému Windows a ladicí program vzdáleného systému Windows)|Určuje, zda lze spustit nebo připojit k aplikaci. Výchozí nastavení je Ne.|  
-|**Název vzdáleného serveru** (ladicí program vzdáleného systému Windows)|Určuje název počítače (jiné než váš), na kterém chcete ladit aplikace.<br /><br /> Makro sestavení vzdálený počítač je nastaven na hodnotu této vlastnosti; Další informace najdete v tématu [makra pro příkazy sestavení a vlastnosti](/cpp/ide/common-macros-for-build-commands-and-properties).|  
-|**Připojení** (ladicí program vzdáleného systému Windows)|Umožňuje přepínat mezi typy připojení standardní a bez ověřování pro vzdálené ladění. Zadejte název vzdáleného počítače v **název vzdáleného serveru** pole. Typy připojení patří:<br /><br /> -   **Vzdálené pomocí ověřování systému Windows**<br />-   **Vzdálené bez jakéhokoli ověřování**<br /><br /> **Poznámka:** vzdáleného ladění pomocí bez ověřování může vést k vzdálenému počítači větší zranitelnosti narušení zabezpečení. Režim ověřování systému Windows je bezpečnější.<br /><br /> Další informace najdete v tématu [instalací vzdáleného ladění](../debugger/remote-debugging.md).|  
-|**Adresa URL protokolu HTTP** (webové služby ladicího programu a ladicí program webové prohlížeče)|Určuje adresu URL, kde se nachází projektu, kterou ladíte.|  
-|**Typ ladicí program**|Určuje typ ladicí program, který se má použít: **pouze nativní**, **spravovat pouze**, **GPU pouze**, **Mixed**, **automaticky**(výchozí), nebo **skriptu**.<br /><br /> -   **Nativní pouze** je pro nespravovaného kódu C++.<br />-   **Jenom spravované** je pro kód, který běží v rámci modul common language runtime (spravovaný kód).<br />-   **Smíšený** vyvolá ladicí programy pro spravovaných i nespravovaných kódu.<br />-   **Automatické** Určuje typ ladicí program na základě kompilátoru a EXE informace.<br />-   **Skript** vyvolá ladicí program pro skripty.<br />-   **Grafický procesor pouze** je pro C++ AMP kód, který běží na GPU zařízení nebo na umožňuje referenční dokumentace rozhraní DirectX. V tématu [ladění kódu GPU](../debugger/debugging-gpu-code.md).|  
-|**Prostředí** (ladicí program místního systému Windows a ladicí program vzdáleného systému Windows)|Určuje proměnné prostředí pro aplikaci, kterou ladíte. Proměnné syntaxí standardní prostředí (například `PATH="%SystemRoot%\..."`). Tyto proměnné prostředí systému přepsat nebo jsou sloučeny s systémovém prostředí, v závislosti na **sloučení prostředí** nastavení. Když kliknete na tlačítko ve sloupci nastavení "upravit …" se zobrazí. Klikněte na tento odkaz pro úpravy proměnných prostředí.|  
-|**Sloučení prostředí** (ladicí program místního systému Windows)|Určuje, zda proměnné, které jsou zadané v **prostředí** pole se sloučí s prostředím, která je definována v operačním systému. Výchozí nastavení je Ano.|  
-|**Ladění SQL** (všechny kromě ladicí program clusteru MPI)|Povolí ladění na SQL procedury z vaší [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] aplikace. Výchozí nastavení je Ne.|  
-|**Ladění typu akcelerátoru** (pouze GPU ladění)|Určuje GPU zařízení, které chcete používat pro ladění. Instalace ovladačů zařízení pro zařízení kompatibilní grafický procesor přidá další možnosti. Ve výchozím nastavení je "GPU - softwaru emulátor."|  
-|**Grafický procesor výchozí chování zarážek** (pouze GPU ladění)|Určuje, zda má se vrhnout zarážek událostí pro každý podproces v osnově SIMD. Výchozí nastavení je pro vyvolání události zarážek pouze jednou za osnově.|  
-|**Amp výchozí akcelerátoru**|Určuje výchozí AMP akcelerátor při ladění kódu GPU. Zvolte **OSNOVĚ softwaru akcelerátoru** zjistit, zda problém je způsoben hardware nebo ovladač místo kódu.|  
-|**Nasazení Directory** (ladicí program vzdáleného systému Windows)|Určuje cestu na vzdáleném počítači, kde výstup projektu budou zkopírovaný před ke spuštění. Cesta může být sdílené síťové složky na vzdáleném počítači, nebo může být cesta ke složce na vzdáleném počítači. Výchozí nastavení je prázdný, což znamená, že výstup projektu není zkopírovány do sdílené síťové složky. Chcete-li povolit nasazení souborů, je nutné také vybrat **nasadit** políčko v dialogovém okně nástroje Configuration Manager. Další informace najdete v tématu [postupy: vytvoření a úprava konfigurací](../ide/how-to-create-and-edit-configurations.md).|  
-|**Další soubory pro nasazení** (ladicí program vzdáleného systému Windows)|Pokud je nastavena adresáře nasazení, to je středníky oddělený seznam další soubory zkopírovat do adresáře nasazení. Výchozí nastavení je prázdný, což znamená, že žádné další soubory zkopírovaly do adresáře nasazení. Chcete-li povolit nasazení souborů, je nutné také vybrat **nasadit** políčko v dialogovém okně nástroje Configuration Manager. Další informace najdete v tématu [postupy: vytvoření a úprava konfigurací](../ide/how-to-create-and-edit-configurations.md).|  
-|**Nasazení modulu Runtime knihoven Visual C++ ladění** (ladicí program vzdáleného systému Windows)|Pokud je nastavena adresáře nasazení, určuje to, zda knihovny ladění modulu runtime Visual C++ pro aktuální platformě musí by se měl zkopírovat do síťové složky. Výchozí nastavení je Ano.|  
-  
-## <a name="cc-folder-general-category"></a>Složka C/C++ (obecné kategorie)  
-  
-|Nastavení|Popis|  
-|-------------|-----------------|  
-|**Ladění formátu informací** ([/Z7, /Zd, Zi, /ZI](/cpp/build/reference/z7-zi-zi-debug-information-format))|Určuje typ informací ladění pro projekt.<br /><br /> Výchozí možnost (/ZI) vytvoří databázi programu (PDB) ve formátu kompatibilní upravit a pokračovat. Další informace najdete v tématu [/Z7, /Zd, / zi, /ZI (formát informace ladění)](/cpp/build/reference/z7-zi-zi-debug-information-format).|  
-  
-## <a name="cc-folder-optimization-category"></a>Složka C/C++ (optimalizace kategorie)  
+## <a name="cc-folder-general-category"></a>Složka C/C++ (obecná kategorie)  
   
 |Nastavení|Popis|  
 |-------------|-----------------|  
-|**Optimalizace**|Určuje, zda by měl kompilátor optimalizovat kód, který vytváří. Optimalizace změní kód, který se spustí. Optimalizovaný kód už odpovídá zdrojového kódu. Proto je ladění složité.<br /><br /> Výchozí možnost (**zakázané (nebo 0d**) potlačí optimalizace. Můžete vyvíjet s optimalizací Potlačené a pak zapněte, když vytvoříte produkční verzi vašeho kódu.|  
+|**Formát ladicích informací** ([/Z7, / Zd, Zi, /ZI](/cpp/build/reference/z7-zi-zi-debug-information-format))|Určuje typ ladicích informací vytvářených pro projekt.<br /><br /> Výchozí možnost (/ZI) vytvoří databázi programu (PDB) ve formátu kompatibilním upravit a pokračovat. Další informace najdete v tématu [/Z7, / Zd, / zi, /ZI (formát ladicích informací)](/cpp/build/reference/z7-zi-zi-debug-information-format).|  
   
-## <a name="linker-folder-debugging-category"></a>Složka linkeru (ladění kategorie)  
+## <a name="cc-folder-optimization-category"></a>Složka C/C++ (optimalizační kategorie)  
   
 |Nastavení|Popis|  
 |-------------|-----------------|  
-|**Generovat ladicí informace** ([/DEBUG](/cpp/build/reference/debug-generate-debug-info))|Informuje linkeru zahrnout informace o ladění, který bude mít s formátem zadaným /Z7, /Zd, Zi nebo /ZI.|  
-|**Generování souboru databáze programu** ([/PDB:name](/cpp/build/reference/pdb-use-program-database))|Zadejte název souboru PDB v tomto poli. Musíte vybrat ZI nebo /Zi pro ladění formátu informací.|  
-|**Odstranit privátní symboly** ([/PDBSTRIPPED:filename](/cpp/build/reference/pdbstripped-strip-private-symbols))|Zadejte název souboru PDB v tomto poli, pokud nechcete zahrnout do souboru PDB soukromých symbolů. Tato možnost vytvoří druhý soubor databáze (PDB), programu při vytvoření bitové kopie programu s žádným z kompilátoru nebo linkeru možnosti, které generují souboru PDB, jako je/Debug, /Z7, /Zd. Nebo /Zi. Tento druhý soubor PDB vynechá znaky, které byste neměli chtít dodávat zákazníkům. Další informace najdete v tématu [/PDBSTRIPPED (Odstranit privátní symboly)](/cpp/build/reference/pdbstripped-strip-private-symbols).|  
-|**Generování souboru s mapováním** ([/MAP](/cpp/build/reference/map-generate-mapfile))|Informuje ke generování souboru s mapováním při propojování linkeru. Výchozí nastavení je Ne. Další informace najdete v tématu [/map (Generovat soubor mapování)](/cpp/build/reference/map-generate-mapfile).|  
-|**Název souboru mapování** ([/MAP:](/cpp/build/reference/map-generate-mapfile)*název*)|Pokud si zvolíte generování souboru s mapováním, můžete v tomto poli souboru s mapováním. Další informace najdete v tématu [/map (Generovat soubor mapování)](/cpp/build/reference/map-generate-mapfile).|  
-|**Mapování exportuje** ([/MAPINFO:EXPORTS](/cpp/build/reference/mapinfo-include-information-in-mapfile))|Zahrnuje exportovaných funkcí v souboru s mapováním. Výchozí nastavení je Ne. Další informace najdete v tématu [/MAPINFO (zahrnout informace do souboru mapování)](/cpp/build/reference/mapinfo-include-information-in-mapfile).|  
-|**Debuggable sestavení** ([/ASSEMBLYDEBUG](/cpp/build/reference/mapinfo-include-information-in-mapfile))|Určuje nastavení pro Linkeru /ASSEMBLYDEBUG možnost. Možné hodnoty jsou následující:<br /><br /> -   **Žádný debuggable atribut vygenerované**.<br />-   **Sledování a zakázat optimalizace runtime (/ ASSEMBLYDEBUG)**. Toto je výchozí nastavení<br />-   **Žádné runtime sledování a povolit optimizations(/ASSEMBLYDEBUG:DISABLE)**.<br />-   **\<dědit z výchozích nastavení nadřazené nebo produktu project >**.<br />-Další informace najdete v tématu [/ASSEMBLYDEBUG (přidat atribut DebuggableAttribute)](/cpp/build/reference/assemblydebug-add-debuggableattribute).|  
+|**Optimalizace**|Určuje, zda by měl kompilátor optimalizovat kód, který vytvoří. Optimalizace změní kód, který se spouští. Optimalizovaný kód již neodpovídá zdrojovému kódu, takže ladění obtížnější.<br /><br /> Výchozí možnost (**zakázáno (/ 0d)**) potlačí optimalizaci. Můžete vyvíjet s potlačenou optimalizací a potom zapnout, když vytváříte výrobní verzi kódu.|  
   
- Tato nastavení ve složce vlastnosti konfigurace (ladění kategorie) můžete změnit programově pomocí rozhraní Microsoft.VisualStudio.VCProjectEngine.VCDebugSettings. Další informace naleznete v tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCDebugSettings>.
+## <a name="linker-folder-debugging-category"></a>Složka linkeru (kategorie ladění)  
+  
+|Nastavení|Popis|  
+|-------------|-----------------|  
+|**Generovat ladicí informace** ([/DEBUG](/cpp/build/reference/debug-generate-debug-info))|Přikáže linkeru, aby zahrnul informace o ladění, který bude mít formát určený pomocí [/Z7, / Zd, Zi nebo /ZI](/cpp/build/reference/z7-zi-zi-debug-information-format).|  
+|**Generovat soubor databáze programu** ([/PDB:name](/cpp/build/reference/pdb-use-program-database))|Zadejte název souboru databáze (PDB) programu v tomto poli. Je nutné vybrat ZI nebo /Zi pro formát informací o ladění.|  
+|**Odstranit privátní symboly** ([/PDBSTRIPPED:filename](/cpp/build/reference/pdbstripped-strip-private-symbols))|Pokud nechcete zahrnout privátní symboly do souboru PDB, zadejte název souboru PDB do tohoto pole. Tato volba vytvoří druhý soubor PDB při vytváření bitové kopie programu s žádným z kompilátoru nebo linkeru, které vytvářejí soubor PDB, např. / Debug, / Z7, / zd. Nebo/zi. Tento druhý soubor PDB vynechává symboly, které není vhodné k odeslání vašich zákazníků. Další informace najdete v tématu [/PDBSTRIPPED (odstranění privátních symbolů)](/cpp/build/reference/pdbstripped-strip-private-symbols).|  
+|**Generovat soubor mapy** ([/MAP](/cpp/build/reference/map-generate-mapfile))|Přikáže linkeru, aby generoval soubor mapy během propojení. Výchozí nastavení je Ne. Další informace najdete v tématu [parametr/map (generování souboru mapování)](/cpp/build/reference/map-generate-mapfile).|  
+|**Název souboru mapy** ([/MAP:](/cpp/build/reference/map-generate-mapfile)*název*)|Pokud vyberete možnost Generovat soubor mapy, můžete zadat soubor mapy v tomto poli. Další informace najdete v tématu [parametr/map (generování souboru mapování)](/cpp/build/reference/map-generate-mapfile).|  
+|**Mapovat exporty** ([/MAPINFO:EXPORTS](/cpp/build/reference/mapinfo-include-information-in-mapfile))|Obsahuje exportované funkce v souboru mapy. Výchozí nastavení je Ne. Další informace najdete v tématu [parametr/MapInfo (zahrnout informace do souboru mapování)](/cpp/build/reference/mapinfo-include-information-in-mapfile).|  
+|**Laditelné sestavení** ([/assemblydebug](/cpp/build/reference/mapinfo-include-information-in-mapfile))|Určuje nastavení pro Linker/assemblydebug – možnost. Možné hodnoty jsou:<br /><br /> -   **Nevysílat žádný laditelný atribut**.<br />-   **Modul runtime sledování a zakázat optimalizace (/ ASSEMBLYDEBUG)**. Toto je výchozí nastavení<br />-   **Žádný modul runtime sledování a povolit optimizations(/ASSEMBLYDEBUG:DISABLE)**.<br />-   **\<Zdědit z nadřazené nebo projektu výchozích nastavení >**.<br />-Další informace najdete v tématu [/assemblydebug (přidání atributu DebuggableAttribute)](/cpp/build/reference/assemblydebug-add-debuggableattribute).|  
+  
+ Můžete změnit tato nastavení ve složce vlastnosti konfigurace (kategorie ladění) programově pomocí rozhraní Microsoft.VisualStudio.VCProjectEngine.VCDebugSettings. Další informace naleznete v tématu <xref:Microsoft.VisualStudio.VCProjectEngine.VCDebugSettings>.
 
 ## <a name="other-project-settings"></a>Další nastavení projektu
 
-K ladění typy projektů, jako je například statických knihoven a knihovny DLL, musí být schopen najít správný soubory projektu sady Visual Studio. Pokud zdrojový kód je k dispozici, můžete přidat statických knihoven a knihovny DLL jako samostatné projekty do stejného řešení (díky tomu easy ladění). Informace o vytváření tyto typy projektů najdete v tématu [vytváření a používání dynamického propojení knihovny (DLL)](/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp) a [vytváření použití statické knihovny](/cpp/windows/walkthrough-creating-and-using-a-static-library-cpp). S zdrojový kód je k dispozici, můžete také vytvořit nový projekt Visual Studio výběrem **soubor > Nový > projekt z existujícího kódu**.
+Chcete-li ladit typy projektů, jako je například statických knihoven a knihovny DLL, musí být schopen najít správné soubory projektu sady Visual Studio. Pokud zdrojový kód je k dispozici, můžete přidat statických knihoven a knihovny DLL jako samostatné projekty do stejného řešení, k usnadnění ladění. Informace o vytvoření těchto typů projektu naleznete v tématu [vytváření a použití knihovny pro dynamické propojení (DLL)](/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp) a [vytváření použití statické knihovny](/cpp/windows/walkthrough-creating-and-using-a-static-library-cpp). Se zdrojovým kódem k dispozici, můžete také vytvořit nový projekt sady Visual Studio výběrem **souboru** > **nový** > **projekt z existujícího kódu**.
 
-Ladění knihoven DLL, které jsou externí vzhledem k projektu, najdete v tématu [projekty ladění knihoven DLL](../debugger/debugging-dll-projects.md#vxtskdebuggingdllprojectsexternal). Pokud potřebujete ladění projektu pro vlastní knihovny DLL, ale nebudete mít přístup k projektu pro volající aplikace, najdete v článku [ladění z projektu knihovny DLL](../debugger/how-to-debug-from-a-dll-project.md).
+Ladění knihoven DLL, které jsou externí vzhledem k projektu, naleznete v tématu [projektů knihovny DLL ladění](../debugger/debugging-dll-projects.md#vxtskdebuggingdllprojectsexternal). Pokud budete muset svůj projekt knihovny DLL, ladění, ale není mají přístup k projektu pro volající aplikace naleznete v tématu [ladění z projektu knihovny DLL](../debugger/how-to-debug-from-a-dll-project.md).
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Ladění nativního kódu](../debugger/debugging-native-code.md)   
  [Nastavení ladicího programu a příprava](../debugger/debugger-settings-and-preparation.md)   
- [Vytváření a správa projektů Visual C++](/cpp/ide/creating-and-managing-visual-cpp-projects)   
- [/ ASSEMBLYDEBUG (přidat atribut DebuggableAttribute)](/cpp/build/reference/assemblydebug-add-debuggableattribute)   
+ [Vytvářet a spravovat projekty v jazyce Visual C++](/cpp/ide/creating-and-managing-visual-cpp-projects)   
+ [/ ASSEMBLYDEBUG (přidání atributu DebuggableAttribute)](/cpp/build/reference/assemblydebug-add-debuggableattribute)   
  [Běžná makra pro příkazy a vlastnosti sestavení](/cpp/ide/common-macros-for-build-commands-and-properties)

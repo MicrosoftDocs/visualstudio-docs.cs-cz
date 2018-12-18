@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsegments::Next – | Microsoft Docs
+title: Idiaenumsegments::Next – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bdc61b94fb3443282c774719e21f7f7f072858bb
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 7c9966555c673904a423de1b215e438b5db15479
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49951025"
 ---
 # <a name="idiaenumsegmentsnext"></a>IDiaEnumSegments::Next
 Načte zadaný počet segmentů v pořadí výčtu.  
@@ -35,16 +36,16 @@ HRESULT Next (
   
 #### <a name="parameters"></a>Parametry  
  celt  
- [v] Počet segmentů v enumerátor mají být načteny.  
+ [in] Počet segmentů enumerátor, který se má načíst.  
   
  rgelt  
- [out] Pole, které má být vyplněna s požadovanou [idiasegment –](../../debugger/debug-interface-access/idiasegment.md) objekty, které představují segmentů.  
+ [out] Pole, které má být vyplněna požadovaný [idiasegment –](../../debugger/debug-interface-access/idiasegment.md) objekty, které představují segmenty.  
   
  pceltFetched  
- [out] Vrátí počet segmentů v načtených enumerátor.  
+ [out] Vrátí počet segmentů načtených enumerátor.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE` Pokud neexistují žádné další segmenty. Jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud neexistují žádné další segmenty. V opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [Idiaenumsegments –](../../debugger/debug-interface-access/idiaenumsegments.md)   

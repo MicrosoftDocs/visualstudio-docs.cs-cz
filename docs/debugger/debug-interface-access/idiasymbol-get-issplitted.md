@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_issplitted – | Microsoft Docs
+title: Idiasymbol::get_issplitted – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 15420c56dfa16f1bbb4566b1afe3fc7ac958fc07
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 15c30577900a2d2e192bdc2dea45fc89846b102b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49919324"
 ---
 # <a name="idiasymbolgetissplitted"></a>IDiaSymbol::get_isSplitted
-Načte příznak, který určuje, zda je symbol dat rozdělena do agregaci nebo kolekce jiných symbolů; Kompilátor zpracovává symboly jako samostatné entity, i když jsou ve skutečnosti součástí větší symbol.  
+Získá příznak, který určuje, zda byl datový symbol rozdělen do agregaci nebo kolekce jiných symbolů; Kompilátor považuje za samostatné entity, symboly, i když jsou ve skutečnosti součástí větší symbol.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,23 +34,23 @@ HRESULT get_isSplitted(
   
 #### <a name="parameters"></a>Parametry  
  `pFlag`  
- [out] Vrátí `TRUE` Pokud je symbol rozdělena do agregace symbolů; jinak vrátí `FALSE`.  
+ [out] Vrátí `TRUE` Pokud symbol má byl rozdělen do agregace symbolů; v opačném případě vrátí `FALSE`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` nebo kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
->  Vrácená hodnota `S_FALSE` znamená vlastnost není k dispozici pro symbol.  
+>  Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="remarks"></a>Poznámky  
- [Idiasymbol::get_isaggregated –](../../debugger/debug-interface-access/idiasymbol-get-isaggregated.md) metoda vrátí `TRUE` pro všechny symboly, které jsou součástí symbol rozdělení.  
+ [Idiasymbol::get_isaggregated –](../../debugger/debug-interface-access/idiasymbol-get-isaggregated.md) vrátí metoda `TRUE` pro všechny symboly, které jsou součástí rozdělit symbol.  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Požadavek|Popis|  
 |-----------------|-----------------|  
-|Hlavičky:|dia2.h|  
-|Verze:|V8.0 DIA SDK|  
+|Záhlaví:|dia2.h|  
+|Verze:|Ve verzi 8.0 DIA SDK|  
   
 ## <a name="see-also"></a>Viz také  
  [Idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md)   

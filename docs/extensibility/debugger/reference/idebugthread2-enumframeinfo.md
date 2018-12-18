@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::EnumFrameInfo | Microsoft Docs
+title: IDebugThread2::EnumFrameInfo | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4781533d533228e07b4268f5c92b662cf7cda122
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 98cd9db7785d7d7867e48f0bd56a2f5ab657a344
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49942729"
 ---
 # <a name="idebugthread2enumframeinfo"></a>IDebugThread2::EnumFrameInfo
-Načte seznam rámce zásobníku pro tento přístup z více vláken.  
+Načte seznam rámce zásobníku pro toto vlákno.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,19 +45,19 @@ int EnumFrameInfo (
   
 #### <a name="parameters"></a>Parametry  
  `dwFieldSpec`  
- [v] Kombinace příznaků z [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) výčet, který určuje, které pole [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) struktury mají doplnit. Zadejte `FIF_FUNCNAME_FORMAT` příznak k formátování název funkce do jednoho řetězce.  
+ [in] Kombinace příznaků z [FRAMEINFO_FLAGS](../../../extensibility/debugger/reference/frameinfo-flags.md) výčet, který určuje, jaké pole [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) struktury mají doplnit. Zadejte `FIF_FUNCNAME_FORMAT` příznak pro formátování názvu funkce do jednoho řetězce.  
   
  `nRadix`  
- [v] Základ – použité při formátování číselných údajů v enumerátor.  
+ [in] Základ číselné soustavy použitých ve formátování číselných údajů v enumerátor.  
   
  `ppEnum`  
  [out] Vrátí [IEnumDebugFrameInfo2](../../../extensibility/debugger/reference/ienumdebugframeinfo2.md) objekt, který obsahuje seznam [FRAMEINFO](../../../extensibility/debugger/reference/frameinfo.md) struktury popisující rámce zásobníku.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Vlákna rámce jsou uvedené v pořadí, s aktuální snímek ve výčtu první a nejstarší snímek uvedené poslední.  
+ Vlákna snímků jsou uvedené v pořadí, s aktuální rámec nejprve vytvořit výčet a nejstarší rámce uvedené poslední.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)   

@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_unmodifiedtype – | Microsoft Docs
+title: Idiasymbol::get_unmodifiedtype – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 13a07c85bf53d330874eca9e8e0eec37bed8dde9
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 32e636a35d1cfed085ddf1bc44d60249a71d0b69
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49935747"
 ---
 # <a name="idiasymbolgetunmodifiedtype"></a>IDiaSymbol::get_unmodifiedType
-Načte původní typ pro tento symbol. Použijte, když [SymTagEnum – výčet](../../debugger/debug-interface-access/symtagenum.md) je nastavená na typ.  
+Obnoví původní typ pro tento symbol. Použít, když [symtagenum – výčet](../../debugger/debug-interface-access/symtagenum.md) je nastavena na typu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,13 +37,13 @@ HRESULT get_unmodifiedType(
  [out] Vrátí [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) objekt, který představuje původní typ tento symbol.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` nebo chybový kód.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
->  Vrácená hodnota `S_FALSE` znamená vlastnost není k dispozici pro symbol.  
+>  Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="remarks"></a>Poznámky  
- Aktuálním typem je změna vrácený původní typu. Tak nejprve získáte typ symbolu a pak dotazem, který vrátí typ pro původní typ se dá určit původní typ symbolu. Všimněte si, že některé symboly nemusí mít upraveno původní typu.  
+ Aktuální typ je úprava vrácené původního typu. Původní typ symbolu dá určit tak, že nejprve získat typ symbolu a potom dotazem, který vrátil typ pro původního typu. Všimněte si, že některé symboly nemusí mít upravený typ původního typu.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: Dia2.h  

@@ -1,5 +1,5 @@
 ---
-title: REFERENCE_TYPE | Microsoft Docs
+title: REFERENCE_TYPE | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1c30bb562784d9de0d9b44a2c3169b595bb4bd39
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: bcbf8792cf2972c4b419b6309ba2f561b8308812
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49906894"
 ---
 # <a name="referencetype"></a>REFERENCE_TYPE
 Určuje typ odkazu.  
@@ -43,15 +44,15 @@ public enum enum_REFERENCE_TYPE {
   
 ## <a name="members"></a>Členové  
  REF_TYPE_WEAK  
- Určuje slabé odkazy. Nelze kombinovat s `REF_TYPE_STRONG`.  
+ Určuje nestálý odkaz. Nelze kombinovat s `REF_TYPE_STRONG`.  
   
  REF_TYPE_STRONG  
- Určuje silné odkaz. Nelze kombinovat s `REF_TYPE_WEAK`.  
+ Určuje silného odkazu. Nelze kombinovat s `REF_TYPE_WEAK`.  
   
 ## <a name="remarks"></a>Poznámky  
- Použít jako `dwRefType` členem [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) struktury.  
+ Použít jako `dwRefType` člena [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) struktury.  
   
- Předá jako parametr, který se [SetReferenceType](../../../extensibility/debugger/reference/idebugreference2-setreferencetype.md) metoda.  
+ Předán jako parametr [SetReferenceType](../../../extensibility/debugger/reference/idebugreference2-setreferencetype.md) metody.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

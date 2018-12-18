@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31143884"
 ---
 # <a name="strings-element"></a>Element řetězce
 Element řetězce musí obsahovat alespoň **ButtonText** podřízený element. Všechny ostatní podřízené prvky jsou volitelné. Neplatný kód XML znaky, jako například 'a' a ' <' musí být programového jako entity ('&amp;'a'&lt;' a tak dále).  

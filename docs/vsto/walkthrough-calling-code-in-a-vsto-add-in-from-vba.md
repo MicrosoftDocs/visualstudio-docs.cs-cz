@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Volání kódu v doplňku VSTO z jazyka VBA | Microsoft Docs'
+title: 'Návod: Volání kódu v doplňku VSTO z jazyka VBA'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -21,28 +21,29 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 74ca5c12acf7b3bde5a009d5a45d4741451b1760
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9e46cf9032cae7d6400822be7d72394a7845314f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49843818"
 ---
-# <a name="walkthrough-calling-code-in-a-vsto-add-in-from-vba"></a>Postup: Volání kódu v doplňku VSTO z jazyka VBA
-  Tento návod ukazuje, jak vystavit objekt VSTO Add-in do jiných řešení pro Microsoft Office, včetně Visual Basic for Applications (VBA) a doplňků COM VSTO.  
+# <a name="walkthrough-call-code-in-a-vsto-add-in-from-vba"></a>Návod: Volání kódu v doplňku VSTO z jazyka VBA
+  Tento návod ukazuje, jak vystavit objektu v doplňku VSTO do jiných řešení pro Microsoft Office, včetně jazyka Visual Basic for Applications (VBA) a doplňky modelu COM VSTO.  
   
  [!INCLUDE[appliesto_allapp](../vsto/includes/appliesto-allapp-md.md)]  
   
- I když tento návod používá Excel konkrétně, koncepty ukázán podle návodu se vztahují na všechny doplňku VSTO šablona projektu poskytované sadě Visual Studio.  
+ I když tento návod používá konkrétně aplikace Excel, koncepty jsme vám ukázali podle návodu platí pro všechny doplňku VSTO šablona projektu poskytovaný sadou Visual Studio.  
   
  Tento návod znázorňuje následující úlohy:  
   
--   Definování třídu, která mohou být zpřístupněny na jiných řešení pro Office.  
+- Definuje třídu, která by bylo možné vystavit do jiných řešení pro Office.  
   
--   Vystavení třídy pro jiných řešení pro Office.  
+- Vystavení třídy do jiných řešení pro Office.  
   
--   Volání metody třídy z jazyka VBA kód.  
+- Volání metody třídy z jazyka VBA kód.  
   
- [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
 ## <a name="prerequisites"></a>Požadavky  
  K dokončení tohoto návodu budete potřebovat následující komponenty:  
@@ -51,25 +52,25 @@ ms.lasthandoff: 04/16/2018
   
 -   Microsoft Excel  
   
-## <a name="creating-the-vsto-add-in-project"></a>Vytvoření projektu doplňku VSTO  
+## <a name="create-the-vsto-add-in-project"></a>Vytvoření projektu doplňku VSTO  
  Prvním krokem je vytvoření projektu doplňku VSTO pro Excel.  
   
-#### <a name="to-create-a-new-project"></a>Chcete-li vytvořit nový projekt  
+### <a name="to-create-a-new-project"></a>Chcete-li vytvořit nový projekt  
   
-1.  Vytvoření projektu doplňku VSTO pro Excel s názvem **ExcelImportData**, pomocí šablony projektu doplňku VSTO v Excelu. Další informace najdete v tématu [postupy: vytváření projektů Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
+1.  Vytvoření projektu doplňku VSTO pro Excel s názvem **ExcelImportData**, pomocí šablony projektu doplňku VSTO v Excelu. Další informace najdete v tématu [postupy: vytváření projektů pro Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Otevře se **ThisAddIn.cs** nebo **ThisAddIn.vb** kód soubor a přidá **ExcelImportData** projektu do **Průzkumníku řešení**.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Otevře **ThisAddIn.cs** nebo **ThisAddIn.vb** soubor kódu a přidá **ExcelImportData** projektu **Průzkumníka řešení**.  
   
-## <a name="defining-a-class-that-you-can-expose-to-other-office-solutions"></a>Definování třídu, která můžete vystavit do jiných řešení pro systém Office  
- Účelem tohoto návodu je volání do `ImportData` metoda třídy s názvem `AddInUtilities` v doplňku VSTO z jazyka VBA kód. Tato metoda zapíše řetězec do buňky A1 aktivního listu.  
+## <a name="define-a-class-that-you-can-expose-to-other-office-solutions"></a>Definujte třídu, která můžete zpřístupnit pro ostatní řešení pro Office  
+ Účelem tohoto návodu je volat `ImportData` metoda třídy s názvem `AddInUtilities` v doplňku VSTO z jazyka VBA kód. Tato metoda zapíše řetězec do buňky A1 aktivního listu.  
   
- Ke zveřejnění `AddInUtilities` třída chcete jiných řešení pro Office, musíte provést třída veřejné a viditelné v rámci modelu COM. Je nutné také zveřejnit [IDispatch](https://msdn.microsoft.com/library/windows/desktop/ms221608.aspx) rozhraní ve třídě. Kód v následujícím postupu ukazuje jeden způsob, jak tyto požadavky splňují. Další informace najdete v tématu [volání kódu v doplňcích VSTO z jiných řešení pro systém Office](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md).  
+ Zveřejnit `AddInUtilities` třídy do jiných řešení pro Office, je třeba třídu veřejné a zobrazit v modelu COM. Také musí vystavit [IDispatch](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) rozhraní ve třídě. Kód v následujícím postupu ukazuje jeden způsob, jak tyto požadavky splňují. Další informace najdete v tématu [volání kódu v doplňcích VSTO z jiných řešení pro Office](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md).  
   
-#### <a name="to-define-a-class-that-you-can-expose-to-other-office-solutions"></a>Chcete-li definovat třídu, která můžete vystavit do jiných řešení pro Office  
+### <a name="to-define-a-class-that-you-can-expose-to-other-office-solutions"></a>Chcete-li definovat třídu, která mohou vystavit do jiných řešení pro Office  
   
 1.  Na **projektu** nabídky, klikněte na tlačítko **přidat třídu**.  
   
-2.  V **přidat novou položku** dialogové okno pole, změňte název nové třídy pro **AddInUtilities**a klikněte na tlačítko **přidat**.  
+2.  V **přidat novou položku** dialogové okno pole, změňte název nové třídy, která se **AddInUtilities**a klikněte na tlačítko **přidat**.  
   
      **AddInUtilities.cs** nebo **AddInUtilities.vb** soubor se otevře v editoru kódu.  
   
@@ -83,16 +84,16 @@ ms.lasthandoff: 04/16/2018
      [!code-csharp[Trin_AddInInteropWalkthrough#3](../vsto/codesnippet/CSharp/Trin_AddInInteropWalkthrough/AddInUtilities.cs#3)]
      [!code-vb[Trin_AddInInteropWalkthrough#3](../vsto/codesnippet/VisualBasic/Trin_AddInInteropWalkthrough/AddInUtilities.vb#3)]  
   
-     Tento kód má `AddInUtilities` třídy viditelné do modelu COM, a přidá `ImportData` metodu do třídy. Ke zveřejnění [IDispatch](https://msdn.microsoft.com/library/windows/desktop/ms221608.aspx) rozhraní, `AddInUtilities` třída má také <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> atribut a implementuje rozhraní, které se zobrazí COM.  
+     Tento kód provede `AddInUtilities` třídy viditelné modelu COM, a přidá `ImportData` metodu do třídy. Zveřejnit [IDispatch](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) rozhraní, `AddInUtilities` třída má také <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> atribut který implementuje rozhraní, která je viditelná modelu COM.  
   
-## <a name="exposing-the-class-to-other-office-solutions"></a>Vystavení třídy pro jiné řešení pro systém Office  
- Ke zveřejnění `AddInUtilities` třídy do jiných řešení pro Office, přepsat <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A> metoda v `ThisAddIn` – třída. V přepsání, vrátit instanci `AddInUtilities` třídy.  
+## <a name="expose-the-class-to-other-office-solutions"></a>Vystavení třídy do jiných řešení pro Office  
+ Vystavit `AddInUtilities` třídy do jiných řešení pro Office, přepište <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A> metodu `ThisAddIn` třídy. V přepsání, vracet instanci `AddInUtilities` třídy.  
   
-#### <a name="to-expose-the-addinutilities-class-to-other-office-solutions"></a>Aby se zveřejnily třídy pro AddInUtilities jiných řešení pro systém Office  
+### <a name="to-expose-the-addinutilities-class-to-other-office-solutions"></a>K vystavení AddInUtilities třídy do jiných řešení pro Office  
   
-1.  V **Průzkumníku řešení**, rozbalte položku **Excel**.  
+1.  V **Průzkumníka řešení**, rozbalte **Excel**.  
   
-2.  Klikněte pravým tlačítkem na **ThisAddIn.cs** nebo **ThisAddIn.vb**a potom klikněte na **kód zobrazení**.  
+2.  Klikněte pravým tlačítkem na **ThisAddIn.cs** nebo **ThisAddIn.vb**a potom klikněte na tlačítko **zobrazit kód**.  
   
 3.  Přidejte následující kód, který `ThisAddIn` třídy.  
   
@@ -101,33 +102,33 @@ ms.lasthandoff: 04/16/2018
   
 4.  Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.  
   
-     Ověřte, že sestavení řešení bez chyb.  
+     Ověřte, že řešení sestaví bez chyb.  
   
-## <a name="testing-the-vsto-add-in"></a>Testování doplňku VSTO  
- Můžete volat do `AddInUtilities` třídy z několika různých typů řešení pro systém Office. V tomto návodu použijete VBA kód v sešitu aplikace Excel. Další informace o ostatních typů řešení pro systém Office můžete také použít, najdete v části [volání kódu v doplňcích VSTO z jiných řešení pro systém Office](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md).  
+## <a name="test-the-vsto-add-in"></a>Testování doplňku VSTO  
+ Můžete volat `AddInUtilities` třídy z několika různých typů řešení pro systém Office. V tomto názorném postupu použijete kód VBA v sešitu aplikace Excel. Další informace o ostatních typech řešení pro Office můžete také použít, najdete v části [volání kódu v doplňcích VSTO z jiných řešení pro Office](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md).  
   
-#### <a name="to-test-your-vsto-add-in"></a>K testování vaší doplňku VSTO  
+### <a name="to-test-your-vsto-add-in"></a>K otestování vašeho doplňku VSTO  
   
-1.  Stisknutím klávesy F5 spusťte projekt.  
+1.  Stisknutím klávesy **F5** ke spuštění projektu.  
   
-2.  V aplikaci Excel uložte jako sešit aplikace Excel Macro-Enabled (XLSM) aktivním sešitu. Ho uložte do vhodného umístění, jako je například plochy.  
+2.  V aplikaci Excel aktivní sešit uložte jako sešit Excel Macro-Enabled (*.xlsm). Uložte ho na místě, například na plochu.  
   
-3.  Na pásu karet klikněte na **vývojáře** kartě.  
+3.  Na pásu karet klikněte na tlačítko **Developer** kartu.  
   
     > [!NOTE]  
-    >  Pokud **vývojáře** karta není viditelný, musíte ji nejdříve zobrazit. Další informace najdete v tématu [postupy: zobrazení karty Vývojář na pásu karet](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md).  
+    >  Pokud **Developer** karta není zobrazena, musíte ji nejdříve zobrazit. Další informace najdete v tématu [postupy: zobrazení karty Vývojář na pásu karet](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md).  
   
 4.  V **kód** klikněte na možnost **jazyka Visual Basic**.  
   
      Otevře se Editor jazyka Visual Basic.  
   
-5.  V **projektu** okna, klikněte dvakrát na **ThisWorkbook**.  
+5.  V **projektu** okna, dvakrát klikněte na panel **ThisWorkbook**.  
   
      V souboru kódu `ThisWorkbook` objektu se otevře.  
   
-6.  Přidejte následující VBA kód do souboru kódu. Tento kód získá nejprve COMAddIn objekt, který reprezentuje **ExcelImportData** doplňku VSTO. Potom kód používá objekt vlastnost objektu COMAddIn k volání `ImportData` metoda.  
+6.  Přidejte následující kód VBA do souboru kódu. Tento kód nejprve načte COMAddIn objekt, který představuje **ExcelImportData** doplňku VSTO. Potom tento kód použije objekt vlastnosti objektu COMAddIn volat `ImportData` metody.  
   
-    ```  
+    ```vb  
     Sub CallVSTOMethod()  
         Dim addIn As COMAddIn  
         Dim automationObject As Object  
@@ -137,26 +138,26 @@ ms.lasthandoff: 04/16/2018
     End Sub  
     ```  
   
-7.  Stiskněte klávesu F5.  
+7.  Stisknutím klávesy **F5**.  
   
-8.  Ověřte, že nový **importovat Data** list byl přidán do sešitu. Také ověřte, že buňky A1 obsahuje řetězec **jedná se o Moje data**.  
+8.  Ověřte, že nový **importovat Data** list je přidaný do sešitu. Dál ověřte tuto buňku A1 obsahuje řetězec **jedná se o Moje data**.  
   
 9. Ukončete aplikaci Excel.  
   
 ## <a name="next-steps"></a>Další kroky  
  Další informace o programování doplňků VSTO z těchto témat:  
   
--   Použití `ThisAddIn` třída automatizovat hostitelskou aplikaci a provádět další úlohy v projekty doplňku VSTO. Další informace najdete v tématu [programování doplňků VSTO](../vsto/programming-vsto-add-ins.md).  
+-   Použití `ThisAddIn` třídy k automatizaci hostitelská aplikace a provádění dalších úloh v projekty doplňku VSTO. Další informace najdete v tématu [doplňků Program VSTO](../vsto/programming-vsto-add-ins.md).  
   
 -   Vytvoření vlastního podokna úloh v doplňku VSTO. Další informace najdete v tématu [vlastní podokna úloh](../vsto/custom-task-panes.md) a [postupy: Přidání vlastního podokna úloh do aplikace](../vsto/how-to-add-a-custom-task-pane-to-an-application.md).  
   
--   Přizpůsobení pásu karet v doplňku VSTO. Další informace najdete v tématu [přehled pásu karet](../vsto/ribbon-overview.md) a [postupy: získání spuštění přizpůsobení pásu karet](../vsto/how-to-get-started-customizing-the-ribbon.md).  
+-   Přizpůsobení pásu karet v doplňku VSTO. Další informace najdete v tématu [přehled pásu karet](../vsto/ribbon-overview.md) a [postupy: Začínáme s přizpůsobením pásu karet](../vsto/how-to-get-started-customizing-the-ribbon.md).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Programování doplňků VSTO](../vsto/programming-vsto-add-ins.md)   
- [Volání kódu v doplňcích VSTO z jiných řešení pro systém Office](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)   
+ [Volání kódu v doplňcích VSTO z jiných řešení pro Office](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)   
  [Vývoj řešení pro systém Office](../vsto/developing-office-solutions.md)   
- [Postupy: vytváření projektů Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)   
+ [Postupy: vytváření projektů pro systém Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)   
  [Architektura doplňků VSTO](../vsto/architecture-of-vsto-add-ins.md)   
  [Přizpůsobení funkcí uživatelského rozhraní pomocí rozšiřujících rozhraní](../vsto/customizing-ui-features-by-using-extensibility-interfaces.md)  
   

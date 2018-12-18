@@ -1,0 +1,2 @@
+> [!NOTE]
+>  V [!INCLUDE[vs_dev12](../includes/vs-dev12-md.md)], můžete se připojit k databázi SQL serveru buď z **Průzkumník objektů systému SQL Server** nebo **datová připojení** uzel v **Průzkumníka serveru**. **Průzkumník objektů systému SQL Server** nabízí podobné zobrazení jako SQL Server Management Studio. Tohoto Průzkumníka můžete otevřít z řádku nabídek, zvolte **zobrazení**, **Průzkumník objektů systému SQL Server**. Další informace najdete v tématu [vývoj připojených databází](http://go.microsoft.com/fwlink/?LinkId=233646).

@@ -1,6 +1,7 @@
 ---
-title: Anatomie programového testu UI v sadě Visual Studio | Microsoft Docs
+title: Anatomie programového testu UI
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,29 +11,32 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 20cd48c087af5d36fad3cf2a21797210ca963e12
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d5c1a8bcc8ee43aa36b8a39cd53f4be4f6882f06
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52896585"
 ---
-# <a name="anatomy-of-a-coded-ui-test"></a>Anatomie programového uživatelského rozhraní testu
+# <a name="anatomy-of-a-coded-ui-test"></a>Anatomie programového testu uživatelského rozhraní
 
-Když vytvoříte programového uživatelského rozhraní testovací v projektu programových testů uživatelského rozhraní, několik soubory budou přidány k řešení. Tento článek obsahuje informace o souborech.
+Když vytvoříte programový Test uživatelského rozhraní v projektu programového testu UI, několik souborů se přidají do řešení. Tento článek obsahuje informace o souborech.
 
-## <a name="contents-of-a-coded-ui-test"></a>Obsah programového testu UI
+[!INCLUDE [coded-ui-test-deprecation](includes/coded-ui-test-deprecation.md)]
 
-Když vytvoříte programového uživatelského rozhraní otestovat, **programového Tvůrce testování uživatelského rozhraní** vytvoří mapy uživatelského rozhraní v rámci testu a také metody test, parametry a kontrolní výrazy pro všechny testy. Také vytvoří soubor třídy pro každý test.
+## <a name="contents-of-a-coded-ui-test"></a>Obsah kódovaný test uživatelského rozhraní
+
+Když vytvoříte programový Test uživatelského rozhraní, **Tvůrce programového testu UI** vytvoří mapu uživatelského rozhraní v rámci testu a také testovací metody, parametry a kontrolní výrazy pro všechny testy. Také vytvoří soubor třídy pro každý test.
 
 |Soubor|Obsah|Upravitelné?|
-|----------|--------------|---------------|
-|[UIMap.Designer.cs](#UIMapDesignerFile)|[Část deklarace](#UIMapDesignerFile)<br /><br /> [Třída zdroje UIMap](#UIMapClass) (částečné, automaticky vygenerovaný)<br /><br /> [Metody](#UIMapMethods)<br /><br /> [Vlastnosti](#UIMapProperties)|Ne|
-|[UIMap.cs](#UIMapCS)|[Třída zdroje UIMap](#UIMapCS) (částečné)|Ano|
-|[CodedUITest1.cs](#CodedUITestCS)|[CodedUITest1 – třída](#CodedUITestCS)<br /><br /> [Metody](#CodedUITestMethods)<br /><br /> [Vlastnosti](#CodedUITestProperties)|Ano|
-|[UIMap.uitest](#UIMapuitest)|Mapa XML uživatelského rozhraní pro test.|Ne|
+|-|-|-|
+|[UIMap.Designer.cs](#UIMapDesignerFile)|[Část deklarace](#UIMapDesignerFile)<br /><br /> [Třídy UIMap](#UIMapClass) (částečné, automaticky vygenerovaný)<br /><br /> [Metody](#UIMapMethods)<br /><br /> [Vlastnosti](#UIMapProperties)|Ne|
+|[UIMap.cs](#UIMapCS)|[Třídy UIMap](#UIMapCS) (částečné)|Ano|
+|[CodedUITest1.cs](#CodedUITestCS)|[Třída CodedUITest1](#CodedUITestCS)<br /><br /> [Metody](#CodedUITestMethods)<br /><br /> [Vlastnosti](#CodedUITestProperties)|Ano|
+|[UIMap.uitest](#UIMapuitest)|Mapování XML pro test uživatelského rozhraní.|Ne|
 
 ###  <a name="UIMapDesignerFile"></a> UIMap.Designer.cs
- Tento soubor obsahuje kód, který je automaticky vytvořené **programového Tvůrce testování uživatelského rozhraní** vytvoření testu. Tento soubor znovu vytvoří pokaždé, když se změní testu, tak, aby se nejedná o soubor, ve kterém můžete přidávat nebo upravovat kód.
+ Tento soubor obsahuje kód, který je automaticky vytvořen aplikací **Tvůrce programového testu UI** při vytvoření testu. Tento soubor znovu vytvoří pokaždé, když test změní, takže se nejedná o soubor, ve kterém můžete přidat nebo upravit kód.
 
 #### <a name="declarations-section"></a>Část deklarace
  Tato část obsahuje následující deklarace pro uživatelské rozhraní Windows.
@@ -53,19 +57,19 @@ using Mouse = Microsoft.VisualStudio.TestTools.UITesting.Mouse;
 using MouseButtons = System.Windows.Forms.MouseButtons;
 ```
 
- <xref:Microsoft.VisualStudio.TestTools.UITesting.WinControls> Obor názvů je zahrnuté pro uživatelské rozhraní (UI) systému Windows. Pro webovou stránku uživatelského rozhraní, obor názvů by <xref:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls>; pro uživatelské rozhraní Windows Presentation Foundation, obor názvů by být <xref:Microsoft.VisualStudio.TestTools.UITesting.WpfControls>.
+ <xref:Microsoft.VisualStudio.TestTools.UITesting.WinControls> Obor názvů je zahrnuté pro Windows uživatelského rozhraní (UI). Pro webovou stránku uživatelského rozhraní, obor názvů by <xref:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls>; pro uživatelské rozhraní Windows Presentation Foundation, obor názvů by <xref:Microsoft.VisualStudio.TestTools.UITesting.WpfControls>.
 
-####  <a name="UIMapClass"></a> Třída zdroje UIMap
- V další části souboru je <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> třídy.
+####  <a name="UIMapClass"></a> Třídy UIMap
+ V následující části najdete ho <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> třídy.
 
 ```csharp
 [GeneratedCode("Coded UITest Builder", "10.0.21221.0")]
 public partial class UIMap
 ```
 
-Kód třídy začíná <xref:System.CodeDom.Compiler.GeneratedCodeAttribute> atribut, který se použije pro třídu, která je deklarován jako konkrétní třídu. Všimněte si, že atribut platí také pro každé třídy v tomto souboru. Jiný soubor, který může obsahovat další kód pro tuto třídu je `UIMap.cs`, který je popsán později.
+Kód třídy začíná <xref:System.CodeDom.Compiler.GeneratedCodeAttribute> atribut, který se použije pro třídu, která je deklarována jako částečná třída. Všimněte si, že atribut je použit také každá třída v tomto souboru. Druhý soubor, který může obsahovat další kód pro tuto třídu není *UIMap.cs*, která je popsána dále.
 
-Generovaný objekt `UIMap` třída obsahuje kód pro každou metodu, která byla určit, kdy byla zaznamenána test.
+Vygenerovaný `UIMap` třída obsahuje kód pro jednotlivé metody, které bylo zadané při zaznamenávání testu.
 
 ```csharp
 public void LaunchCalculator()
@@ -74,7 +78,7 @@ public void VerifyTotal()
 public void CleanUp()
 ```
 
-Tato část <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> třída také obsahuje generovaný kód pro každou vlastnost, který je požadován pro metody.
+Tato část <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> třída také zahrnuje kód generovaný pro každou vlastnost, který vyžaduje metody.
 
 ```csharp
 public virtual LaunchCalculatorParams LaunchCalculatorParams
@@ -90,8 +94,8 @@ public UIStartWindow UIStartWindow
 public UIMathApplicationWindow UIMathApplicationWindow
 ```
 
-#####  <a name="UIMapMethods"></a> Zdroje UIMap metody
- Každá z metod má strukturu, která vypadá přibližně takto: `AddItems()` metoda. To je vysvětlené podrobněji pod kód, který se zobrazí spolu s přidat přehlednost zalomením řádku.
+#####  <a name="UIMapMethods"></a> Metody třídy UIMap
+ Každá z metod má strukturu, která vypadá podobně jako `AddItems()` metody. To je vysvětleno podrobněji v části kódu, které jsou uvedeny společně s zalomení pro přehlednost přidat.
 
 ```csharp
 /// <summary>
@@ -118,15 +122,15 @@ public void AddItems()
 }
 ```
 
-Souhrn komentář pro každou metodu definici informuje kterou třídu použít hodnoty parametrů pro danou metodu. V takovém případě je `AddItemsParams` třída, která je definována později v `UIMap.cs` souboru a která je také typ hodnoty, který je vrácen `AddItemsParams` vlastnost.
+Souhrn komentář pro každou definici metody říká třídy zadání hodnot parametrů pro danou metodu. V takovém případě je `AddItemsParams` třída, která je definována později v *UIMap.cs* souboru a která je také hodnotový typ, který je vrácený `AddItemsParams` vlastnost.
 
- V horní části metody kódu je `Variable Declarations` oblast, která definuje místní proměnné pro uživatelské rozhraní objekty, které se používají metodou.
+ V horní části metody je kód `Variable Declarations` oblast, která definuje místní proměnné pro uživatelské rozhraní objektů, které jsou používány metody.
 
- Tato metoda obě `UIItemWindow` a `UIItemEdit` jsou vlastnosti, které jsou přístupné pomocí `UICalculatorWindow` třída, která je definována později v `UIMap.cs` souboru.
+ V této metodě obě `UIItemWindow` a `UIItemEdit` jsou vlastnosti, které jsou přístupné pomocí `UICalculatorWindow` třída, která je definována později v *UIMap.cs* souboru.
 
- Dále jsou řádky, které pomocí vlastnosti odesílat text z klávesnice aplikace Kalkulačka `AddItemsParams` objektu.
+ Dále jsou řádky, které odesílají text z klávesnice aplikace Kalkulačka pomocí vlastnosti `AddItemsParams` objektu.
 
- `VerifyTotal()` Metoda má podobnou strukturou a obsahuje následující kód kontrolní výraz:
+ `VerifyTotal()` Metoda má podobnou strukturou a obsahuje následující kód kontrolního výrazu:
 
 ```csharp
 // Verify that 'Unknown Name' text box's property 'Text' equals '9. '
@@ -135,10 +139,10 @@ Assert.AreEqual(
     uIItemEdit.Text);
 ```
 
- Název textového pole je uveden jako neznámá, protože na vývojáře aplikace Windows Kalkulačka neposkytl název veřejně dostupné pro ovládací prvek. <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual%2A?displayProperty=fullName> Metoda selže, když se skutečnou hodnotou není rovno očekávaná hodnota, které by způsobily selhání testu. Všimněte si také, že obsahuje očekávaná hodnota desetinné čárky, který je následované mezerou. Pokud máte někdy a změnit tak funkce tento konkrétní test, musíte povolit pro tuto desetinné čárky a mezery.
+ Název textového pole je uveden jako neznámý, protože vývojář aplikace Windows Kalkulačka neposkytl název veřejně k dispozici pro ovládací prvek. <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual%2A?displayProperty=fullName> Metoda selže při skutečná hodnota nerovná s očekávanou hodnotou, což by způsobilo selhání testu. Všimněte si také, že obsahuje očekávaná hodnota desetinná čárka, za kterým následuje mezera. Pokud je třeba upravit funkce nasazovaných tento konkrétní test, musíte také povolit pro tuto desetinné čárky a místo.
 
-#####  <a name="UIMapProperties"></a> Vlastnosti zdroje UIMap
- Standardní v rámci třídy je také kód pro každou vlastnost. Následující kód `AddItemsParams` vlastnost se používá v `AddItems()` metoda.
+#####  <a name="UIMapProperties"></a> Vlastnosti třídy UIMap
+ Kód pro každou vlastnost je také standard v rámci třídy. Následující kód `AddItemsParams` vlastnost se používá v `AddItems()` metody.
 
 ```csharp
 public virtual AddItemsParams AddItemsParams
@@ -154,7 +158,7 @@ public virtual AddItemsParams AddItemsParams
 }
 ```
 
- Všimněte si, že vlastnost používá privátní místní proměnné s názvem `mAddItemsParams` pro uložení hodnotu, než se vrátí. Název vlastnosti a název třídy pro objekt, který vrátí jsou stejné. Je třída definovaná v později `UIMap.cs` souboru.
+ Všimněte si, že vlastnost používá privátní místní proměnnou s názvem `mAddItemsParams` pro uchování hodnoty před jeho vrácením. Název vlastnosti a název třídy pro objekt, který vrátí jsou stejné. Je třída definovaná v později *UIMap.cs* souboru.
 
  Každá třída, která je vrácena pomocí vlastnosti strukturovaná podobně. Tady je `AddItemsParams` třídy:
 
@@ -179,33 +183,33 @@ public class AddItemsParams
 }
 ```
 
-Stejně jako u všech tříd v `UIMap.cs` souboru začíná Tato třída <xref:System.CodeDom.Compiler.GeneratedCodeAttribute>. V této třídě malé je `Fields` oblast, která definuje řetězce, který chcete použít jako parametry pro <xref:Microsoft.VisualStudio.TestTools.UITesting.Keyboard.SendKeys%2A?displayProperty=fullName> metoda, která se používá v `UIMap.AddItems()` metoda, která byla dříve popsané. Můžete napsat kód pro nahraďte hodnoty v těchto polí s řetězcem, než je volána metoda, ve kterém se používají tyto parametry.
+Stejně jako u všech tříd v *UIMap.cs* soubor, tato třída začíná <xref:System.CodeDom.Compiler.GeneratedCodeAttribute>. V této třídě malé je `Fields` oblast, která definuje řetězce, který se použije jako parametry <xref:Microsoft.VisualStudio.TestTools.UITesting.Keyboard.SendKeys%2A?displayProperty=fullName> metodu, která se používá v `UIMap.AddItems()` metody, který byl popsán výše. Můžete napsat kód k nahrazení hodnoty v těchto polích řetězce před voláním metody, ve kterém se používají tyto parametry.
 
 ###  <a name="UIMapCS"></a> UIMap.cs
- Ve výchozím nastavení tento soubor obsahuje částečné `UIMap` třída, která nemá žádné metody nebo vlastnosti.
+ Ve výchozím nastavení, tento soubor obsahuje částečné `UIMap` třídu, která nemá žádné metody a vlastnosti.
 
-#### <a name="uimap-class"></a>Třída zdroje UIMap
- Toto je, kde můžete vytvořit vlastní kód pro rozšíření funkcí <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> třídy. Kód, který vytvoříte v tomto souboru není přepsána **programového Tvůrce testování uživatelského rozhraní** pokaždé, když se mění testu.
+#### <a name="uimap-class"></a>Třídy UIMap
+ To je, kde můžete vytvořit vlastní kód pro rozšíření funkcí <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> třídy. Kód, který vytvoříte v tomto souboru není přepsán **Tvůrce programového testu UI** pokaždé, když se upraví testu.
 
- Žádná z částí <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> můžete použít metody a vlastnosti z jakékoliv jiné části <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> třídy.
+ Všechny části <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> můžete použít metody a vlastnosti z jakékoliv jiné části <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> třídy.
 
 ###  <a name="CodedUITestCS"></a> CodedUITest1.cs
- Tento soubor je generován **programového Tvůrce testování uživatelského rozhraní**, ale nevytvoří znovu pokaždé, když test je změněn, takže můžete měnit kód v tomto souboru. Název souboru je vytvořen z název, který jste zadali pro test při jeho vytvoření.
+ Tento soubor vygenerovala sada **Tvůrce programového testu UI**, ale nevytvoří znovu pokaždé, když se upraví testu, takže můžete upravit kód v tomto souboru. Název souboru je vytvořen z názvu, který jste zadali pro test při jeho vytváření.
 
-#### <a name="codeduitest1-class"></a>CodedUITest1 – třída
+#### <a name="codeduitest1-class"></a>Třída CodedUITest1
 
-Ve výchozím nastavení tento soubor obsahuje definici jenom jedna třída.
+Ve výchozím nastavení tento soubor obsahuje definici pro pouze jednu třídu.
 
 ```csharp
 [CodedUITest]
 public class CodedUITest1
 ```
 
-<xref:Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute> Se automaticky použije na třídu, která umožňuje testování framework rozpoznat jako testování rozšíření. Všimněte si také, že se nejedná konkrétní třídu. Všechny třídy kódu je obsažený v tomto souboru.
+<xref:Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute> Se automaticky využije na třídu, která umožňuje testovací rozhraní rozpoznat jako testování rozšíření. Všimněte si také, že se nejedná o částečnou třídu. Všechny třídy kód je obsažen v tomto souboru.
 
 #####  <a name="CodedUITestProperties"></a> Vlastnosti CodedUITest1
 
-Třída obsahuje dvě výchozí vlastnosti, které jsou umístěné v dolní části souboru. Neměňte je.
+Třída obsahuje dvě výchozí vlastnosti, které jsou umístěné v dolní části souboru. Neprovádějte žádné změny je.
 
 ```csharp
 /// <summary>
@@ -223,9 +227,9 @@ public UIMap UIMap
 public void CodedUITestMethod1()
 ```
 
- Tato metoda volá všechny `UIMap` metoda, která jste zadali, když jste si poznamenali svůj test, který je popsaný v části na [třída zdroje UIMap](#UIMapClass).
+ Tato metoda volá všechny `UIMap` metodu, která jste zadali, když jste si poznamenali test, který je popsaný v části na [třídy UIMap](#UIMapClass).
 
- Oblasti, která je s názvem `Additional test attributes`, pokud uncommented, obsahuje dvě volitelné metody.
+ Oblast, která má název `Additional test attributes`, pokud komentář, obsahuje dvě metody, volitelné.
 
 ```csharp
 // Use TestInitialize to run code before running each test
@@ -255,16 +259,16 @@ public void MyTestCleanup()
 }
 ```
 
- `MyTestInitialize()` Metoda má <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute> použít, který informuje rozhraní testování mohli volat tuto metodu než jiné metody testu. Podobně `MyTestCleanup()` metoda má <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestCleanupAttribute> použije na ni, která sděluje testování framework mohli volat tuto metodu za všechny ostatní metody testovací mít byla volána. Používání těchto metod je volitelný. Pro tento test `UIMap.LaunchCalculator()` metoda může být volána z `MyTestInitialize()` a `UIMap.CloseCalculator()` metoda může být volána z `MyTestCleanup()` místo z `CodedUITest1Method1()`.
+ `MyTestInitialize()` Metoda má <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute> použit, který informuje testovací rozhraní mohli volat tuto metodu před všechny ostatní metody testu. Podobně `MyTestCleanup()` metoda má <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestCleanupAttribute> použit, který dává pokyn testovací rozhraní mohli volat tuto metodu po všech dalších testovacích metod byly volány. Použití těchto metod je volitelné. Pro tento test `UIMap.LaunchCalculator()` metodu lze volat z `MyTestInitialize()` a `UIMap.CloseCalculator()` metodu lze volat z `MyTestCleanup()` namísto z `CodedUITest1Method1()`.
 
- Pokud přidáte další metody pro tuto třídu pomocí <xref:Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute>, každá metoda volá testování framework v rámci testu.
+ Pokud přidáte další metody do této třídy pomocí <xref:Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute>, testovací rozhraní volání jednotlivých metod jako část testu.
 
 ###  <a name="UIMapuitest"></a> UIMap.uitest
- Toto je soubor XML, představuje strukturu rozhraní programové otestovali zaznamenávání a všech jejích částí. Mezi ně patří třídy kromě metody a vlastnosti těchto tříd a akce. [UIMap.Designer.cs](#UIMapDesignerFile) soubor obsahuje kód, který je generován Tvůrce programového uživatelského rozhraní pro reprodukci strukturu testu a poskytuje připojení k rozhraní testování.
+ Toto je soubor XML, který představuje struktury programového uživatelského rozhraní testu záznam a všech jejích částí. Patří mezi ně akce a třídy kromě metod a vlastností z těchto tříd. [UIMap.Designer.cs](#UIMapDesignerFile) soubor obsahuje kód, který je vygenerován pomocí Tvůrce programového uživatelského rozhraní pro reprodukci struktura testu a poskytuje připojení pro testovací rozhraní.
 
- `UIMap.uitest` Soubor není přímo upravovat. Ale, můžete pomocí Tvůrce programového uživatelského rozhraní změnit test, který automaticky změní `UIMap.uitest` souboru a [UIMap.Designer.cs](#UIMapDesignerFile) souboru.
+ *UIMap.uitest* soubor se nedá přímo upravovat. Můžete však použít Tvůrce programového uživatelského rozhraní upravit test, který automaticky změní *UIMap.uitest* souboru a [ *UIMap.Designer.cs* ](#UIMapDesignerFile) souboru.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap>
 - <xref:Microsoft.VisualStudio.TestTools.UITesting.WinControls>
@@ -277,7 +281,7 @@ public void MyTestCleanup()
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute>
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestCleanupAttribute>
 - [Použití automatizace uživatelského rozhraní k testování kódu](../test/use-ui-automation-to-test-your-code.md)
-- [Vytváření programové testy uživatelského rozhraní](../test/use-ui-automation-to-test-your-code.md)
-- [Doporučené postupy pro programové testy UI](../test/best-practices-for-coded-ui-tests.md)
+- [Vytváření programových testů UI](../test/use-ui-automation-to-test-your-code.md)
+- [Osvědčené postupy pro programové testy uživatelského rozhraní](../test/best-practices-for-coded-ui-tests.md)
 - [Testování rozsáhlé aplikace s více mapami uživatelského rozhraní](../test/testing-a-large-application-with-multiple-ui-maps.md)
-- [Podporované konfigurace a platformy pro programové testy uživatelského rozhraní a zaznamenávání akcí](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
+- [Podporované konfigurace a platformy pro programové testy uživatelského rozhraní a zaznamenávání akcí](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)

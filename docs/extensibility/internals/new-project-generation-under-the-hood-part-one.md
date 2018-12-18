@@ -1,5 +1,5 @@
 ---
-title: 'Nové generace projektu: Pod pokličkou, první část | Microsoft Docs'
+title: 'Nová generace projektů: Pod pokličkou, část 1 | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,42 +14,43 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ac31f2866c6b69587f70775d5ed1245b1a2bb0a9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f678e15a26a85245e22edd323008ab517ea1e39c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49907063"
 ---
-# <a name="new-project-generation-under-the-hood-part-one"></a>Nové generace projektu: Pod pokličkou, první část
-Někdy představit o tom, jak vytvořit vlastní typ projektu? Zajímat, co se ve skutečnosti stane, když vytvoříte nový projekt? Umožňuje provést funkce Náhled pod pokličkou a zjistěte, co se skutečně děje.  
+# <a name="new-project-generation-under-the-hood-part-one"></a>Nová generace projektů: Pod pokličkou, část první
+Někdy mluvit o tom, jak vytvořit vlastní typ projektu? Zajímat, co přesně se stane při vytvoření nového projektu? Pojďme provést náhled pod pokličkou a zjistěte, co se skutečně děje.  
   
- Existuje několik úloh, které souřadnice Visual Studio:  
+ Následuje několik úloh, které můžete koordinuje sady Visual Studio:  
   
--   Zobrazuje strom všechny typy dostupných projektů.  
+-   Zobrazí strom všech typů dostupných projektů.  
   
 -   Zobrazí seznam šablon aplikací pro každý typ projektu a umožňuje vybrat jednu.  
   
--   Shromáždí informace o projektu pro aplikaci, například název projektu a cestu.  
+-   Shromažďuje informace o projektu pro aplikaci, jako je název projektu nebo cesty.  
   
--   Pak předá tyto informace k objektu pro vytváření projektu.  
+-   Tyto informace se předává do objekt pro vytváření projektu.  
   
--   Vygeneruje položky projektu a složky v aktuálním řešení.  
+-   Vygeneruje položky projektu a složek v aktuálním řešení.  
   
-## <a name="the-new-project-dialog-box"></a>Dialogového okna Nový projekt  
- Všechny začíná, když vyberete typ projektu pro nový projekt. Začněme tím, že kliknete na **nový projekt** na **souboru** nabídky. **Nový projekt** zobrazí se dialogové okno, vypadající něco takto:  
+## <a name="the-new-project-dialog-box"></a>Dialogovém okně Nový projekt  
+ Všechno začíná, když vyberete typ projektu pro nový projekt. Začněme tím, že kliknete na **nový projekt** na **souboru** nabídky. **Nový projekt** dialogového okna vypadající podobný následujícímu:  
   
  ![Dialogové okno Nový projekt](../../extensibility/internals/media/newproject.gif "NewProject")  
   
- Se podíváme blíže. **Typy projektů** stromu uvádí různé typy projektů, můžete vytvořit. Když vyberete jako typ projektu **Visual C# Windows**, zobrazí se seznam šablon aplikací, které vám pomůžou začít. **Visual Studio – nainstalované šablony** jsou nainstalované Visual Studio a jsou dostupné pro všechny uživatele počítače. Nové šablony, které vytváříte nebo shromažďovat mohou být přidány do **šablony** a jsou dostupné pouze pro vás.  
+ Pojďme se na to podívat podrobněji. **Typy projektů** stromu uvádí různé typy projektů, můžete vytvořit. Když vyberete typ projektu jako **Visual C# Windows**, zobrazí se seznam šablon aplikací, které vám pomůžou začít. **Instalované šablony sady Visual Studio** jsou nainstalované ve Visual Studio a jsou dostupné pro všechny uživatele počítače. Nové šablony, které vytvoříte nebo shromažďování lze přidat do **šablony** a jsou k dispozici pouze pro vás.  
   
- Když vyberete některou šablonu jako **aplikace Windows**, popis typ aplikace se zobrazí v dialogovém okně; v tomto případě **projektu pro vytváření aplikací s uživatelským rozhraním Windows**.  
+ Když vyberete šablonu jako **aplikace Windows**, v dialogovém okně; v takovém případě se zobrazí popis typu aplikace **projekt pro vytvoření aplikace s uživatelským rozhraním Windows**.  
   
- V dolní části **nový projekt** dialogové okno, zobrazí se několik ovládacích prvků, které zjištění dalších informací. Ovládací prvky zobrazí závisí na typu projektu, ale obecně obsahují projektu **název** textového pole **umístění** textového pole a související **Procházet** tlačítko a **Název řešení** textového pole a související **vytvořit adresář pro řešení** zaškrtávací políčko.  
+ V dolní části **nový projekt** dialogové okno, zobrazí se vám několik ovládacích prvků, které získat další informace. Ovládací prvky se zobrazí, závisí na typu projektu, ale obvykle patří mezi ně projekt **název** textového pole **umístění** textového pole a související **Procházet** tlačítko a **Název řešení** textového pole a související **vytvořit adresář pro řešení** zaškrtávací políčko.  
   
-## <a name="populating-the-new-project-dialog-box"></a>Naplnění dialogového okna Nový projekt  
- Kde se **nový projekt** dialogové okno získat informace o z? Existují dva mechanismy v zde práci, jeden z nich zastaralé. **Nový projekt** dialogové okno kombinuje a informacemi získanými z obou mechanismy.  
+## <a name="populating-the-new-project-dialog-box"></a>Vyplnění dialogového okna Nový projekt  
+ Pokud nemá **nový projekt** dialogové okno získat informace o z? Existují dva mechanismy práci, jeden z nich zastaralé. **Nový projekt** dialogové okno zkombinuje a zobrazí informace získané z obou mechanismy.  
   
- Starší (nepoužívané) metoda používá položky systémového registru a .vsdir soubory. Tento mechanismus se spustí při otevření sady Visual Studio. Novější metoda používá soubory .vstemplate. Tento mechanismus se spustí v případě, že je inicializovat Visual Studio, například v spuštěním  
+ Starší (nepoužívané) metoda používá položky systémového registru a souborů .vsdir. Tento mechanismus spustí při otevření sady Visual Studio. Novější metoda používá soubory .vstemplate. Tento mechanismus spustí, když je inicializován sady Visual Studio, například v spuštěním  
   
 ```  
 devenv /setup  
@@ -62,79 +63,79 @@ devenv /installvstemplates
 ```  
   
 ### <a name="project-types"></a>Typy projektů  
- Pozice a názvy **typy projektů** hlavní uzly, jako například **Visual C#** a **jiné jazyky**, je dáno položky systémového registru. Uspořádání podřízených uzlů, jako například **databáze** a **Smart Device**, odpovídá hierarchii složek, které obsahují odpovídající soubory .vstemplate. Podívejme se na kořenové uzly nejdřív.  
+ Umístění a názvy **typy projektů** kořenové uzly, jako například **Visual C#** a **jiné jazyky**, se určuje podle položky systémového registru. Uspořádání podřízených uzlů, jako například **databáze** a **Smart Device**, odráží hierarchii složek, které obsahují odpovídající soubory .vstemplate. Podívejme se na kořenové uzly první.  
   
 #### <a name="project-type-root-nodes"></a>Projekt typu kořenové uzly  
- Když [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] je inicializován, prochází podklíčů klíče registru systému HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\14.0\NewProjectTemplates\TemplateDirs sestavení a název kořenové uzly **typyprojektů** stromu. Tyto informace se uloží do mezipaměti pro pozdější použití. Podívejte se na TemplateDirs\\{FAE04EC1-301F-11D3-BF4B-00C04F79EFBC} \\ /1 klíč. Každá položka je identifikátor GUID VSPackage. Název podklíče (/ 1) je ignorována, ale jeho přítomnosti označuje, že je to **typy projektů** kořenový uzel. Kořenový uzel pak může mít několik podklíčů, které řídí jeho zobrazení **typy projektů** stromu. Podívejme se na některé z nich.  
+ Když [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] je inicializován, prochází podklíčů klíče registru systému HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\14.0\NewProjectTemplates\TemplateDirs můžete vytvořit a pojmenovat kořenových uzlů **typůprojektů** stromu. Tyto informace jsou uloženy v mezipaměti pro pozdější použití. Podívejte se na TemplateDirs\\{FAE04EC1-301F-11D3-BF4B-00C04F79EFBC} \\ /1 klíč. Každá položka je identifikátor GUID balíčku VSPackage. Název podklíče (/ 1) se ignoruje, ale jeho přítomnost označuje, že se jedná **typy projektů** kořenový uzel. Kořenový uzel zase může mít několik podklíčích, které řídí vzhled v **typy projektů** stromu. Pojďme se podívat na některé z nich.  
   
 ##### <a name="default"></a>(Výchozí)  
- Toto je ID prostředku lokalizované řetězce, který názvy kořenového uzlu. Řetězec prostředku je umístěn ve satelitní knihovny DLL vybraná VSPackage GUID.  
+ To je ID prostředku lokalizovaný řetězec s názvem kořenového uzlu. Prostředek řetězce se nachází v satelitní knihovně DLL zvolila identifikátor GUID balíčku VSPackage.  
   
- V příkladu je identifikátor GUID VSPackage  
+ V tomto příkladu je identifikátor GUID balíčku VSPackage  
   
  {FAE04EC1-301F-11D3-BF4B-00C04F79EFBC}  
   
- ID prostředku (výchozí hodnota) kořenového uzlu a (/ 1) je #2345  
+ a ID prostředku (výchozí hodnota) z kořenového uzlu. (/ 1) je #2345  
   
- Pokud vyhledání identifikátoru GUID v klíči blízkým balíčky a vyhledejte podklíč SatelliteDll, můžete nějakého najít cestu sestavení, které obsahuje řetězec prostředku:  
+ Pokud vyhledání identifikátoru GUID v klíči blízké balíčky a prozkoumat SatelliteDll podklíč, můžete najít cestu k sestavení, které obsahuje prostředek řetězce:  
   
- \<Cesta instalace Visual Studio > \VC#\VCSPackages\1033\csprojui.dll  
+ \<Visual Studio instalační_cesta > \VC#\VCSPackages\1033\csprojui.dll  
   
- Chcete-li to ověřit, otevřete Průzkumníka souborů a přetáhněte csprojui.dll do adresáře sady Visual Studio... Tabulky řetězců zobrazuje, že má prostředek #2345 titulek **Visual C#**.  
+ Chcete-li to ověřit, otevřete Průzkumníka souborů a přetáhněte csprojui.dll do adresáře sady Visual Studio... Tabulka řetězců ukazuje, že má zdroj #2345 titulek **Visual C#**.  
   
 ##### <a name="sortpriority"></a>SortPriority  
- Tato hodnota určuje pozici kořenový uzel ve **typy projektů** stromu.  
+ Určuje pozici kořenový uzel ve **typy projektů** stromu.  
   
  REG_DWORD SortPriority 0x00000014 (20)  
   
- Čím nižší je číslo prioritu, tím vyšší pozice ve stromové struktuře.  
+ Čím nižší je číslo prioritu, tím vyšší pozici ve stromu.  
   
 ##### <a name="developeractivity"></a>DeveloperActivity  
- Pokud se nachází tento podklíč, pozice kořenového uzlu je řízena pomocí dialogu nastavení Developer. Například  
+ Pokud tento podklíč je k dispozici, je řízena pozice kořenový uzel v dialogovém okně nastavení pro vývojáře. Například  
   
  REG_SZ DeveloperActivity VC #  
   
- Určuje, že Visual C# kořenový uzel Pokud Visual Studio je nastavený pro [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] vývoj. Jinak bude podřízený uzel **jiné jazyky**.  
+ Označuje, že Visual C# bude kořenový uzel Pokud Visual Studio je nastaven pro [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] vývoje. V opačném případě bude podřízený uzel **jiné jazyky**.  
   
 ##### <a name="folder"></a>Folder  
- Pokud se nachází tento podklíč, kořenového uzlu stane podřízený uzel do zadané složky. Zobrazí se seznam možných složky pod klíčem  
+ Pokud tento podklíč je k dispozici, kořenový uzel stane podřízený uzel do určené složky. Zobrazí se seznam možných složky pod klíčem  
   
  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\11.0\NewProjectTemplates\PseudoFolders  
   
- Například má položka databázové projekty složky klíč, který odpovídá položce jiné typy projektů v PseudoFolders. Ano, v **typy projektů** stromu **databázové projekty** bude podřízený uzel **jiné typy projektů**.  
+ Databázové projekty položka má například složky klíč, který odpovídá položce ostatní typy projektů v PseudoFolders. Ano, v **typy projektů** stromu **databázové projekty** bude podřízený uzel **ostatní typy projektů**.  
   
 #### <a name="project-type-child-nodes-and-vstdir-files"></a>Typ podřízené uzly a .vstdir soubory projektu  
- Pozice v podřízené uzly **typy projektů** stromu odpovídá hierarchii složek ve složkách ProjectTemplates. Pro počítač šablony (**Visual Studio – nainstalované šablony**), obvyklé umístění je \Program Files\Microsoft 14.0\Common7\IDE\ProjectTemplates\ Visual Studio a pro uživatele šablony (**Moje šablony**), obvyklé umístění je \My Documents\Visual Studio 14.0\Templates\ProjectTemplates\\. Hierarchie složky z těchto dvou umístění jsou sloučeny vytvořit **typy projektů** stromu.  
+ Pozice v podřízené uzly **typy projektů** hierarchii složek ve složkách ProjectTemplates následuje stromu. Pro počítač šablony (**instalované šablony sady Visual Studio**), obvyklé umístění je \Program Files\Microsoft 14.0\Common7\IDE\ProjectTemplates\ sady Visual Studio a pro uživatele šablony (**šablony**), obvyklé umístění je Documents\Visual Studio 14.0\Templates\ProjectTemplates\\. Hierarchie složky z těchto dvou míst jsou sloučeny pro tvorbu **typy projektů** stromu.  
   
- Pro sadu Visual Studio s C# nastaveními vývojáře **typy projektů** stromu vypadá přibližně takto:  
+ Pro Visual Studio s C# nastavení pro vývojáře **typy projektů** stromu vypadá přibližně takto:  
   
  ![Typy projektů](../../extensibility/internals/media/projecttypes.png "ProjectTypes")  
   
- Odpovídající složce ProjectTemplates vypadá takto:  
+ Odpovídající složka ProjectTemplates vypadá takto:  
   
- ![Šablony projektu](../../extensibility/internals/media/projecttemplates.png "ProjectTemplates")  
+ ![Šablony projektů](../../extensibility/internals/media/projecttemplates.png "ProjectTemplates")  
   
- Když **nový projekt** otevře se dialogové okno, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] prochází složce ProjectTemplates a znovu vytvoří jeho struktury v **typy projektů** stromu s některé změny:  
+ Při **nový projekt** otevře se dialogové okno, [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] prochází skrz ProjectTemplates složky a znovu vytvoří jeho strukturu v **typy projektů** stromu se některé změny:  
   
--   Kořenový uzel ve **typy projektů** určuje stromu šablona aplikací.  
+-   Kořenový uzel ve **typy projektů** stromu se určuje podle šablony aplikace.  
   
--   Název uzlu je možné lokalizovat a může obsahovat speciální znaky.  
+-   Název uzlu může být lokalizována a může obsahovat speciální znaky.  
   
 -   Pořadí řazení lze změnit.  
   
-##### <a name="finding-the-root-node-for-a-project-type"></a>Hledání na kořenový uzel pro typ projektu  
- Když Visual Studio prochází ProjectTemplates složek, otevře se všechny soubory .zip a extrahuje soubory .vstemplate. Soubor .vstemplate používá soubor XML k popisu šablony aplikace. Další informace najdete v tématu [nové generace projektu: pod pokličkou, část dvě](../../extensibility/internals/new-project-generation-under-the-hood-part-two.md).  
+##### <a name="finding-the-root-node-for-a-project-type"></a>Pro typ projektu nalezení kořenového uzlu.  
+ Když Visual Studio prochází ProjectTemplates složek, otevře všechny soubory ZIP a extrahuje soubory .vstemplate. Soubor .vstemplate používá XML pro popis šablony aplikace. Další informace najdete v tématu [nová generace projektů: pod pokličkou, část dvě](../../extensibility/internals/new-project-generation-under-the-hood-part-two.md).  
   
- \<ProjectType > Značka Určuje typ projektu pro aplikaci. Například soubor \CSharp\SmartDevice\WindowsCE\1033\WindowsCE-EmptyProject.zip obsahuje soubor EmptyProject.vstemplate, který má tuto značku:  
+ \<ProjectType > značky Určuje typ projektu pro aplikaci. Například soubor \CSharp\SmartDevice\WindowsCE\1033\WindowsCE-EmptyProject.zip obsahuje EmptyProject.vstemplate soubor, který má tuto značku:  
   
 ```  
 <ProjectType>CSharp</ProjectType>  
 ```  
   
- \<ProjectType > značky a není podsložky ve složce ProjectTemplates určuje aplikace kořenový uzel ve **typy projektů** stromu. V příkladu by systém Windows CE aplikace se objeví pod **Visual C#** kořenový uzel, a i v případě, že byste chtěli přesuňte složku WindowsCE VisualBasic složku, systém Windows CE aplikace stále by se objeví pod  **Visual C#** kořenový uzel.  
+ \<ProjectType > značky a ne podsložky ve složce ProjectTemplates určuje kořenového uzlu aplikace v **typy projektů** stromu. V tomto příkladu by aplikace Windows CE se objeví pod **Visual C#** kořenový uzel, a i v případě, že jste byli WindowsCE složky přejděte do složky VisualBasic, aplikace pro Windows CE pořád objevuje pod  **Visual C#** kořenový uzel.  
   
-##### <a name="localizing-the-node-name"></a>Lokalizace je název uzlu  
- Když Visual Studio prochází ProjectTemplates složek, zjistí .vstdir soubory, které nalezne. Soubor .vstdir je soubor XML, který řídí vzhled typ projektu v **nový projekt** dialogové okno. V souboru .vstdir použít \<LocalizedName > značky na název **typy projektů** uzlu.  
+##### <a name="localizing-the-node-name"></a>Lokalizace název uzlu  
+ Když Visual Studio prochází ProjectTemplates složek, zjistí .vstdir soubory, které nalezne. .Vstdir soubor je soubor XML, který řídí vzhled typu projektu v **nový projekt** dialogové okno. V souboru .vstdir použijte \<LocalizedName > značky na název **typy projektů** uzlu.  
   
  Například soubor \CSharp\Database\TemplateIndex.vstdir obsahuje tuto značku:  
   
@@ -142,12 +143,12 @@ devenv /installvstemplates
 <LocalizedName Package="{462b036f-7349-4835-9e21-bec60e989b9c}" ID="4598"/>  
 ```  
   
- Tato hodnota určuje satelitní knihovny DLL a prostředků ID lokalizované řetězce, který v tomto případě názvy kořenový uzel **databáze**. Lokalizovaný název může obsahovat speciální znaky, které nejsou k dispozici pro názvy složek, jako například **.NET**.  
+ Určuje ID satelitní knihovny DLL a prostředků lokalizované řetězce, který v tomto případě názvy kořenový uzel **databáze**. Lokalizovaný název může obsahovat speciální znaky, které nejsou k dispozici pro názvy složek, například **.NET**.  
   
- Pokud žádné \<LocalizedName > značky, typ projektu se ve složce samostatně, nazývá **SmartPhone2003**.  
+ Pokud ne \<LocalizedName > značky, typ projektu je pojmenován podle samotné, složce **SmartPhone2003**.  
   
-##### <a name="finding-the-sort-order-for-a-project-type"></a>Hledání pořadí řazení typu projektu  
- K určení pořadí řazení typ projektu, použijte .vstdir soubory \<SortOrder > značky.  
+##### <a name="finding-the-sort-order-for-a-project-type"></a>Pořadí řazení pro typ projektu nalezení  
+ K určení pořadí řazení typem projektu, použijte .vstdir soubory \<Pořadířazení > značky.  
   
  Například soubor \CSharp\Windows\Windows.vstdir obsahuje tuto značku:  
   
@@ -155,64 +156,64 @@ devenv /installvstemplates
 <SortOrder>5</SortOrder>  
 ```  
   
- Soubor \CSharp\Database\TemplateIndex.vstdir má značku s hodnotou větší:  
+ Soubor \CSharp\Database\TemplateIndex.vstdir má značku s větší hodnotu:  
   
 ```  
 <SortOrder>5000</SortOrder>  
 ```  
   
- Čím nižší je číslo v \<SortOrder > značky, tím vyšší pozice ve stromu, proto **Windows** uzel se objeví vyšší než **databáze** uzel v **typy projektů**  stromu.  
+ Čím nižší je číslo v \<Pořadířazení > značky, tím vyšší pozici ve stromu, proto **Windows** uzel se objeví vyšší než **databáze** uzlu v **typů projektů**  stromu.  
   
- Pokud žádné \<SortOrder > Značka je zadán pro typ projektu, zobrazí se v abecedním pořadí následující všechny typy projektů, které obsahují \<SortOrder > specifikace.  
+ Pokud ne \<Pořadířazení > tag je určen pro typ projektu, se zobrazí v abecedním pořadí podle všechny typy projektů, které obsahují \<Pořadířazení > specifikací.  
   
- Všimněte si, že nejsou žádné .vstdir soubory ve složce Dokumenty (**šablony**) složek. Názvy typů projektu aplikace uživatele nejsou lokalizovány a jsou v abecedním pořadí.  
+ Všimněte si, že neexistují žádné .vstdir soubory ve složce Dokumenty (**šablony**) složky. Názvy typů projektu aplikace uživatele nejsou lokalizovány a jsou v abecedním pořadí.  
   
-#### <a name="a-quick-review"></a>Rychlá kontrola  
+#### <a name="a-quick-review"></a>Stručné shrnutí  
  Pojďme upravit **nový projekt** dialogové okno a vytvořte novou šablonu projektu uživatele.  
   
-1.  Přidáte podsložku MyProjectNode do složky 14.0\Common7\IDE\ProjectTemplates\CSharp \Program Files\Microsoft Visual Studio.  
+1. Přidejte MyProjectNode podsložky do složky 14.0\Common7\IDE\ProjectTemplates\CSharp \Program Files\Microsoft sady Visual Studio.  
   
-2.  Vytvořte soubor MyProject.vstdir ve složce MyProjectNode pomocí libovolného textového editoru.  
+2. Ve složce MyProjectNode pomocí libovolného textového editoru vytvořte soubor MyProject.vstdir.  
   
-3.  Přidejte do souboru .vstdir tyto řádky:  
+3. Přidejte tyto řádky do souboru .vstdir:  
   
-    ```  
-    <TemplateDir Version="1.0.0">  
-        <SortOrder>6</SortOrder>  
-    </TemplateDir>  
-    ```  
+   ```  
+   <TemplateDir Version="1.0.0">  
+       <SortOrder>6</SortOrder>  
+   </TemplateDir>  
+   ```  
   
-4.  Uložte a zavřete soubor .vstdir.  
+4. Uložte a zavřete soubor .vstdir.  
   
-5.  Vytvořte soubor MyProject.vstemplate ve složce MyProjectNode pomocí libovolného textového editoru.  
+5. Ve složce MyProjectNode pomocí libovolného textového editoru vytvořte soubor MyProject.vstemplate.  
   
-6.  Přidejte soubor .vstemplate tyto řádky:  
+6. Do souboru .vstemplate přidejte tyto řádky:  
   
-    ```  
-    <VSTemplate Version="2.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">  
-        <TemplateData>  
-            <ProjectType>CSharp</ProjectType>  
-        </TemplateData>  
-    </VSTemplate>  
-    ```  
+   ```  
+   <VSTemplate Version="2.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">  
+       <TemplateData>  
+           <ProjectType>CSharp</ProjectType>  
+       </TemplateData>  
+   </VSTemplate>  
+   ```  
   
-7.  The.vstemplate soubor uložte a zavřete editor.  
+7. The.vstemplate soubor uložte a zavřete editor.  
   
-8.  Odešlete soubor .vstemplate do nové složky komprimované MyProjectNode\MyProject.zip.  
+8. Soubor .vstemplate odešlete novou komprimovanou složku MyProjectNode\MyProject.zip.  
   
-9. Visual Studio příkazové okno zadejte:  
+9. Příkazové okno Visual Studio zadejte:  
   
     ```  
     devenv /installvstemplates  
     ```  
   
- Otevřete Visual Studio.  
+   Otevřít Visual Studio.  
   
-1.  Otevřete **nový projekt** dialogové okno pole a rozbalte **Visual C#** uzel projektu.  
+10. Otevřít **nový projekt** dialogové okno pole a rozbalte **Visual C#** uzel projektu.  
   
- ![MyProjectNode](../../extensibility/internals/media/myprojectnode.png "MyProjectNode")  
+    ![MyProjectNode](../../extensibility/internals/media/myprojectnode.png "MyProjectNode")  
   
- **MyProjectNode** se zobrazí jako podřízený uzel z Visual C# jenom v uzlu systému Windows.  
+    **MyProjectNode** se zobrazí jako podřízený uzel Visual C# jen v uzlu Windows.  
   
 ## <a name="see-also"></a>Viz také  
  [Nová generace projektů: Pod pokličkou, část druhá](../../extensibility/internals/new-project-generation-under-the-hood-part-two.md)

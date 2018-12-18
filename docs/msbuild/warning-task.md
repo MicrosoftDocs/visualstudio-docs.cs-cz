@@ -1,5 +1,5 @@
 ---
-title: Warning – úloha | Microsoft Docs
+title: Warning – úloha | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -20,35 +20,37 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 51c717cc1bc744438afd277e5f154fdcd8852e8d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: af65489d15420e56387524c553fe00560d462146
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49926979"
 ---
 # <a name="warning-task"></a>Warning – úloha
-Protokoly upozornění během sestavení založené na příkazu vyhodnotí podmíněného.  
-  
+Protokoly upozornění během sestavení podle Vyhodnocená podmíněném příkazu.  
+
 ## <a name="parameters"></a>Parametry  
- V následující tabulce jsou popsány parametry `Warning` úloh.  
-  
-|Parametr|Popis|  
-|---------------|-----------------|  
-|`Code`|Volitelné `String` parametr.<br /><br /> Kód upozornění pro přidružení s upozorněním.|  
-|`File`|Volitelné `String` parametr.<br /><br /> Určuje soubor relevantní, pokud existuje. Pokud je k dispozici žádný soubor, použije se souboru, který obsahuje úlohu upozornění.|  
-|`HelpKeyword`|Volitelné `String` parametr.<br /><br /> Klíčové slovo nápovědy k přidružení s upozorněním.|  
-|`Text`|Volitelné `String` parametr.<br /><br /> Text upozornění, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] protokoly, pokud `Condition` vyhodnocen jako parametr `true`.|  
-  
+ Následující tabulka popisuje parametry `Warning` úloh.  
+
+
+| Parametr | Popis |
+|---------------| - |
+| `Code` | Volitelné `String` parametru.<br /><br /> Kód upozornění pro přidružení k upozornění. |
+| `File` | Volitelné `String` parametru.<br /><br /> Určuje příslušný soubor, pokud existuje. Pokud není žádný soubor zadaný v souboru, který obsahuje upozornění úkolů se používá. |
+| `HelpKeyword` | Volitelné `String` parametru.<br /><br /> Klíčové slovo nápovědy pro přidružení k upozornění. |
+| `Text` | Volitelné `String` parametru.<br /><br /> Text upozornění, která [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] protokoly, pokud `Condition` vyhodnotí jako parametr `true`. |
+
 ## <a name="remarks"></a>Poznámky  
- `Warning` Úloha umožňuje [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projekty tak, aby kontrolovat přítomnost požadovanou konfiguraci nebo vlastnost před pokračováním na další krok sestavení.  
-  
- Pokud `Condition` parametr `Warning` úloh se vyhodnocuje `true`, hodnota `Text` zaznamená parametr a sestavení bude pokračovat v provádění. Pokud `Condition` parametr neobsahuje případech, se do protokolu zapíše text upozornění. Další informace o protokolování naleznete v tématu [získání sestavení protokoly](../msbuild/obtaining-build-logs-with-msbuild.md).  
-  
- Kromě výše uvedených parametrů tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třída, které dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrech a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).  
-  
+ `Warning` Úloha umožňuje [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] projekty ke kontrole přítomnosti požadovanou konfiguraci nebo vlastnost před pokračováním na další krok sestavení.  
+
+ Pokud `Condition` parametr `Warning` vyhodnotí jako úloha `true`, hodnota `Text` parametr je zaznamenána do protokolu a pokračuje v provádění sestavení. Pokud `Condition` neexistuje parametr, se do protokolu zapíše text upozornění. Další informace o protokolování naleznete v tématu [získat protokoly o sestavení](../msbuild/obtaining-build-logs-with-msbuild.md).  
+
+ Kromě výše uvedených parametrů zdědí tento úkol parametry ze <xref:Microsoft.Build.Tasks.TaskExtension> třída, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).  
+
 ## <a name="example"></a>Příklad  
- Následující příklad kódu zkontroluje vlastnosti, které jsou nastaveny na příkazovém řádku. Pokud není nastavený žádný vlastnosti se vyvolá událost upozornění projekt a protokoly hodnotu `Text` parametr `Warning` úloh.  
-  
+ Následující příklad kódu zkontroluje pro vlastnosti, které jsou nastaveny na příkazovém řádku. Pokud neexistují žádná sada vlastností, vyvolá událost upozornění projektu a protokoly hodnotu `Text` parametr `Warning` úloh.  
+
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
     <Target Name="ValidateCommandLine">  
@@ -62,7 +64,7 @@ Protokoly upozornění během sestavení založené na příkazu vyhodnotí podm
     ...  
 </Project>  
 ```  
-  
-## <a name="see-also"></a>Viz také  
- [Získávání protokolů o sestavení](../msbuild/obtaining-build-logs-with-msbuild.md)   
+
+## <a name="see-also"></a>Viz také:  
+ [Získání protokolů o sestavení](../msbuild/obtaining-build-logs-with-msbuild.md)   
  [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)

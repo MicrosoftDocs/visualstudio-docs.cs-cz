@@ -1,13 +1,13 @@
 ---
-title: "& č. 39; vrátí & č. 39; příkaz mimo funkci | Microsoft Docs"
-ms.custom: 
+title: '&#39;Vrátí&#39; příkazu mimo funkci | Dokumentace Microsoftu'
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.WebClient.Help.SCRIPT1018
@@ -16,35 +16,36 @@ dev_langs:
 - TypeScript
 - DHTML
 ms.assetid: 03568f9f-5f4f-4a10-a738-9a73f3832b9e
-caps.latest.revision: 
+caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: 07b633c87dc11b291a5a5783f8121b2a368996d6
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49846515"
 ---
-# <a name="39return39-statement-outside-of-function"></a>& č. 39; vrátí & č. 39; příkaz mimo funkci
-Můžete použít `return` příkaz v globálním oboru kódu. `return` Příkaz by měl vyskytovat pouze v rámci tělo funkce.  
+# <a name="39return39-statement-outside-of-function"></a>&#39;Vrátí&#39; příkazu mimo funkci
+Použili jste `return` příkazu v globálním oboru kódu. `return` Příkaz objevit jenom v těle funkce.  
   
- Volání funkce s `()` operátor je výraz. Mají všechny výrazy hodnoty; `return` příkaz slouží k určení hodnota retuned funkcí. Obecné formuláře je:  
+ Volání funkce s `()` výrazu je operátor. Mají všechny výrazy hodnot. `return` prohlášení se používá k určení hodnoty retuned pomocí funkce. Obecný formát je následující:  
   
 ```  
   
 return [ expression ];  
 ```  
   
- Když `return` je spustit příkaz, *výraz* je vyhodnocena a vrátí jako hodnotu funkce. Pokud neexistuje žádný výraz **nedefinované** je vrácen.  
+ Když `return` je proveden příkaz *výraz* vyhodnotí a vrátí hodnotu funkce. Pokud není žádný výraz **nedefinované** je vrácena.  
   
- Spuštění funkce zastaví, když `return` spustit příkaz, i když existují další příkazy stále zbývající v těle funkce. Výjimka, která má toto pravidlo je pokud **vrátit** příkaz vyskytuje v **zkuste** blok, a že je odpovídající **nakonec** blok kódu  **Nakonec** bloku, budou spuštěny před funkce vrátí hodnotu.  
+ Spuštění funkce zastaví, když `return` je proveden příkaz, i když existují další příkazy stále zbývající v těle funkce. Výjimkou z tohoto pravidla je-li **vrátit** příkazu vyvolá se v rámci **zkuste** bloku, a existuje odpovídající **nakonec** bloku kódu  **Nakonec** blok se spustí předtím, než funkce vrátí.  
   
- Pokud funkce vrátí hodnotu, protože se dosáhne konce tělo funkce bez spuštění `return` prohlášení, je hodnota vrácená **nedefinované** hodnotu (to znamená výsledek funkce nelze použít jako součást rozsáhlejšího výrazu ).  
+ Pokud funkce vrátí, protože ji bez spuštění dosáhne konce tělo funkce `return` příkaz, vrácená hodnota je **nedefinované** hodnotu (to znamená, že výsledek funkce nelze použít jako součást rozsáhlejšího výrazu ).  
   
 ### <a name="to-correct-this-error"></a>Oprava této chyby  
   
--   Odeberte `return` příkaz z hlavní části kódu (globální rozsah).  
+-   Odeberte `return` příkaz od hlavní části kódu (globální rozsah).  
   
 ## <a name="see-also"></a>Viz také  
  [Return – příkaz](../../javascript/reference/return-statement-javascript.md)   

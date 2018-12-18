@@ -1,5 +1,5 @@
 ---
-title: 'Upozornění zabezpečení: Ladicí program musí spustit nedůvěryhodný příkaz | Microsoft Docs'
+title: 'Upozornění zabezpečení: Ladicí program musí spustit nedůvěryhodný příkaz. | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -17,33 +17,34 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 77554795772a5a9e2ce5d9bbe9f620923bc20184
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 3e99c56efc5338feeded20621c7467bbf8274bc9
+ms.sourcegitcommit: 206e738fc45ff8ec4ddac2dd484e5be37192cfbd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39510921"
 ---
 # <a name="security-warning-debugger-must-execute-untrusted-command"></a>Upozornění zabezpečení: Ladicí program musí spustit nedůvěryhodný příkaz.
-Toto dialogové okno upozornění se zobrazí, když používáte zdrojového serveru. Znamená to, ladicího programu je potřeba provést k získání zdrojového kódu příkaz není v seznamu důvěryhodných příkazy pro zdrojový Server, které jsou obsažené v souboru srcsvr.ini. Pokud je to platný příkaz, můžete ho přidat do souboru srcsvr.ini. Jinak by neměl spustit ho. Další informace najdete v tématu [zadejte symbolu (.pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).  
+Toto dialogové okno upozornění se zobrazí při použití zdrojového serveru. Znamená to, že příkaz, který ladicí program potřebuje provést, aby získal zdrojový kód není v seznamu důvěryhodných příkazů pro zdrojový Server obsaženém v souboru srcsvr.ini. Pokud se jedná o platný příkaz, můžete ho přidat do souboru srcsvr.ini. Jinak není spouštění vhodné. Další informace najdete v tématu [zadejte symbolu (.pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).  
   
 ## <a name="message-text"></a>Text zprávy  
- **Ladicí program musí spustit následující nedůvěryhodný příkaz získat zdrojového kódu ze zdrojového serveru.**  
+ **Ladicí program musí spustit nedůvěryhodný příkaz pro získání zdrojového kódu ze zdrojového serveru.**  
   
- **Pokud ladění symbolů souboru (\*PDB) není ze známé a důvěryhodné zdroje, tento příkaz může být neplatná nebo nebezpečných ke spuštění.**  
+ **Pokud soubor symbolů ladění (\*PDB) je tohoto příkazu není od známých a důvěryhodných zdrojů, může být nevhodné nebo nebezpečné ke spuštění.**  
   
- **Opravdu chcete spustit tento příkaz?**  
+ **Chcete spustit tento příkaz?**  
   
 ## <a name="uielement-list"></a>Seznam prvků uživatelského rozhraní  
  Textové pole  
- Příkaz ze souboru PDB ke spuštění.  
+ Ke spuštění příkazu ze souboru .pdb.  
   
  Spustit  
  Povolte příkaz ke spuštění.  
   
  Nespouštět  
- Zastavte provádění příkazu a stahování souborů ze zdrojového serveru.  
+ Zastavení spuštění příkazu a stahování souborů ze zdrojového serveru.  
   
 ## <a name="see-also"></a>Viz také  
- [Zadání symbolu (.pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
+ [Zadání symbolu (.pdb) a zdrojové soubory](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
  [Zabezpečení ladicího programu](../debugger/debugger-security.md)   
- [Zdrojový Server](http://msdn.microsoft.com/library/windows/desktop/ms680641\(v=vs.85\).aspx)
+ [Zdrojový Server](/windows/desktop/Debug/source-server-and-source-indexing)

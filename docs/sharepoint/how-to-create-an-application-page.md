@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: vytvoření stránky aplikace | Microsoft Docs'
+title: 'Postupy: vytvoření stránky aplikace | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,41 +18,41 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a95a7e08a52ff2b6d20f3e84f7456c37e8901ab2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9f390ddf14925b43f1aa1d9e79db05e2aa64f234
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51296200"
 ---
-# <a name="how-to-create-an-application-page"></a>Postupy: Vytvoření stránky aplikace
-  Můžete vytvořit webovou stránku ASP.NET pro jeden nebo více webů služby SharePoint. Ve službě SharePoint se nazývají tyto stránek stránky aplikací. Na rozdíl od stránka stránky aplikace obsahuje kód, který se spouští za stránky. Další informace najdete v tématu [vytváření stránek aplikací pro službu SharePoint](../sharepoint/creating-application-pages-for-sharepoint.md).  
+# <a name="how-to-create-an-application-page"></a>Postupy: vytvoření stránky aplikace
+  Můžete vytvořit webovou stránku ASP.NET pro jeden nebo více webů služby SharePoint. Ve službě SharePoint se nazývají tyto stránky stránky aplikace. Na rozdíl od lokality stránky stránky aplikace obsahuje kód, který spouští za bránou stránky. Další informace najdete v tématu [vytváření stránek aplikací pro SharePoint](../sharepoint/creating-application-pages-for-sharepoint.md).  
   
 ### <a name="to-create-an-application-page"></a>Vytvoření stránky aplikace  
   
 1.  V aplikaci Visual Studio otevřete nebo vytvořte projekt služby SharePoint.  
   
-     Další informace najdete v tématu [projektu služby SharePoint a šablony položek projektu](../sharepoint/sharepoint-project-and-project-item-templates.md).  
+     Další informace najdete v tématu [SharePoint šablony položek projektu a projekt](../sharepoint/sharepoint-project-and-project-item-templates.md).  
   
-2.  V **Průzkumníku**, vyberte uzel projektu.  
+2.  V **Průzkumníka řešení**, zvolte uzel projektu.  
   
-3.  Na řádku nabídek zvolte **projektu**, **přidat novou položku**.  
+3.  V panelu nabídky zvolte **projektu** > **přidat novou položku**.  
   
-4.  V **přidat novou položku** dialogové okno, rozbalte seznam **SharePoint** uzel a potom zvolte **2010** položky.  
+4.  V **přidat novou položku** dialogového okna rozbalte **SharePoint** uzel a klikněte na tlačítko **2010** položky.  
   
 5.  V seznamu šablon služby SharePoint, zvolte **stránky aplikace**.  
   
-6.  V **název** pole, zadejte název pro stránku aplikace a pak zvolte **přidat** tlačítko.  
+6.  V **název** pole, zadejte název pro stránku aplikace a klikněte na tlačítko **přidat** tlačítko.  
   
-     Aplikace Visual Studio přidá do projektu několik složek a souborů. Další informace o těchto souborech najdete v tématu [vytváření stránek aplikací pro službu SharePoint](../sharepoint/creating-application-pages-for-sharepoint.md).  
+     Aplikace Visual Studio přidá do projektu několik složek a souborů. Další informace o těchto souborech najdete v tématu [vytváření stránek aplikací pro SharePoint](../sharepoint/creating-application-pages-for-sharepoint.md).  
   
-     V **zdroj** návrháře Visual Web Developer souboru stránky ASP.NET se zobrazí. Stránky můžete navrhnout přidáním ovládacích prvků z **sada nástrojů** a jejich umístění na zástupné symboly obsahu. Další informace najdete v tématu [zobrazení zdroje, Návrhář webové stránky](http://msdn.microsoft.com/en-us/5911396b-fe51-4150-9ff1-b085f812862f).  
+     V **zdroj** se zobrazení návrháře Visual Web Developer souboru stránky ASP.NET. Stránky můžete navrhnout přidáním ovládacích prvků **nástrojů** a jejich uvedení na obsahu zástupné symboly. Další informace najdete v tématu [zobrazení zdrojového kódu, webové stránky návrháře](/previous-versions/aspnet/ms178154\(v\=vs.100\)).  
   
-7.  Pokud chcete pro zpracování události ovládacího prvku, přidáte kód do souboru kódu pro stránku aplikace.  
+7.  Pokud chcete zpracovat události ovládacího prvku, přidejte kód do souboru kódu stránky aplikace.  
   
-     K souboru kódu se zobrazí v případě, že rozbalte uzel souboru stránky ASP.NET a má příponu cs nebo vb v závislosti na jazyk projektu. Příklad začátku do konce Vytvoření stránky aplikace naleznete v části [návod: vytvoření stránky aplikace služby SharePoint](../sharepoint/walkthrough-creating-a-sharepoint-application-page.md).  
+     Soubor kódu se zobrazí v případě rozbalte uzel pro stránkovací soubor ASP.NET a má *.cs* nebo *.vb* rozšíření, v závislosti na jazyce projektu. Začátku do konce příklad toho, jak vytvořit stránku aplikace, najdete v části [návod: vytvoření stránky aplikace služby SharePoint](../sharepoint/walkthrough-creating-a-sharepoint-application-page.md).  
   
-## <a name="see-also"></a>Viz také  
- [Vytváření stránek aplikací pro službu SharePoint](../sharepoint/creating-application-pages-for-sharepoint.md)   
+## <a name="see-also"></a>Viz také:
+ [Vytváření stránek aplikací pro SharePoint](../sharepoint/creating-application-pages-for-sharepoint.md)   
  [Návod: Vytvoření stránky aplikace služby SharePoint](../sharepoint/walkthrough-creating-a-sharepoint-application-page.md)  
-  
   

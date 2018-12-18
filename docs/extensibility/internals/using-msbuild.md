@@ -1,5 +1,5 @@
 ---
-title: Pomocí nástroje MSBuild | Microsoft Docs
+title: Použití nástroje MSBuild | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,32 +15,33 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4115d6f1b368734631acf3ee4395d71dbe418c07
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f27d3c5c7465314a7e9005972dec1349c1b9d89f
+ms.sourcegitcommit: 99d097d82ee4f9eff6f588e5ebb6b17d8f724b04
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42902228"
 ---
-# <a name="using-msbuild"></a>Pomocí nástroje MSBuild
-MSBuild poskytuje dobře definovaný a rozšiřitelné formátu XML pro vytvoření souborů projektu, které plně popisují položky projektu vytvořeny, vytvářet úlohy a konfigurace sestavení.  
+# <a name="using-msbuild"></a>Použití nástroje MSBuild
+Nástroj MSBuild poskytuje dobře definovaný a rozšiřitelné formátu XML pro vytvoření souborů projektu, která plně popisují položky projektu sestavit úlohy sestavení a konfigurace sestavení.  
   
-## <a name="general-msbuild-considerations"></a>MSBuild Obecné aspekty  
- MSBuild soubory projektu, například [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] .csproj a [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] .vbproj soubory obsahují data, která se používá v čase vytvoření buildu, ale může také obsahovat data, která se používá v době návrhu. Čas sestavení data se ukládají pomocí nástroje MSBuild primitiv, včetně [Item – Element (MSBuild)](../../msbuild/item-element-msbuild.md) a [Property – Element (MSBuild)](../../msbuild/property-element-msbuild.md). Návrh data, která jsou specifická pro typ projektu a všechny související projektu podtypů data, je uložen v libovolném formátu XML pro ně vyhrazené.  
+## <a name="general-msbuild-considerations"></a>Nástroj MSBuild Obecné aspekty  
+ Soubory projektu MSBuild, například [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] csproj a [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] .vbproj soubory obsahují data, která se používá v okamžiku sestavení, ale může také obsahovat data, která se používá v době návrhu. Čas sestavení data uložená pomocí nástroje MSBuild primitiv, včetně [Item – Element (MSBuild)](../../msbuild/item-element-msbuild.md) a [Property – Element (MSBuild)](../../msbuild/property-element-msbuild.md). Doby návrhu data, která jsou specifická pro typ projektu a všechny související projekt podtypy data, uložená v volného tvaru XML pro ně vyhrazené.  
   
- MSBuild nemá nativní podpora pro objekty konfigurace, ale poskytuje podmíněné atributy pro zadání data specifická pro konfiguraci. Příklad:  
+ MSBuild neobsahuje nativní podporu pro objekty konfigurace, ale poskytuje podmíněné atributy pro zadávání dat pro konkrétní konfiguraci. Příklad:  
   
 ```xml  
 <OutputDir Condition="'$(Configuration)'=="release'">Bin\MyReleaseConfig</OutputDir>  
 ```  
   
- Další informace o podmíněné atributy najdete v tématu [podmíněné konstrukce](../../msbuild/msbuild-conditional-constructs.md).  
+ Další informace o podmíněné atributy, naleznete v tématu [podmíněné konstrukce](../../msbuild/msbuild-conditional-constructs.md).  
   
-### <a name="extending-msbuild-for-your-project-type"></a>Rozšíření pro typ vašeho projektu nástroje MSBuild  
- Rozhraní API a nástroje MSBuild rozhraní se může v budoucích verzích změnit [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Proto je vhodné použít třídy spravované balíček framework (MPF), protože poskytují stínění z změny.  
+### <a name="extending-msbuild-for-your-project-type"></a>Rozšíření nástroje MSBuild pro váš typ projektu  
+ Nástroj MSBuild rozhraní a rozhraní API se můžou změnit v budoucích verzích [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Proto je vhodné použít třídy rozhraní framework (MPF) spravovaného balíčku, protože poskytují stínění od změn.  
   
- Spravovaná rozhraní balíčku pro projekty (MPFProj) poskytuje pomocné třídy pro vytváření a správu nového projektu systému. Zdrojový kód a kompilace pokyny naleznete v [sady MPF projektů – Visual Studio 2013](http://mpfproj12.codeplex.com/).  
+ Managed Package Framework pro projekty (MPFProj) poskytuje pomocné třídy pro vytváření a správu nový systém projektů. Zdrojového kódu a kompilace pokyny najdete v [MPF projektů – Visual Studio 2013](https://github.com/tunnelvisionlabs/MPFProj10).  
   
- Třídy specifické pro projekt sady MPF jsou následující:  
+ Třídy specifické pro projekt MPF jsou následující:  
   
 |Třída|Implementace|  
 |-----------|--------------------|  
@@ -50,12 +51,12 @@ MSBuild poskytuje dobře definovaný a rozšiřitelné formátu XML pro vytvoře
 |`Microsoft.VisualStudio.Package.ProjectConfig`|<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg>|  
 |`Microsoft.VisualStudio.Package.SettingsPage`|<xref:Microsoft.VisualStudio.OLE.Interop.IPropertyPageSite>|  
   
- `Microsoft.VisualStudio.Package.ProjectElement` Třída je obálka pro položky nástroje MSBuild.  
+ `Microsoft.VisualStudio.Package.ProjectElement` Třída tvoří obálku pro položky nástroje MSBuild.  
   
-#### <a name="single-file-generators-vs-msbuild-tasks"></a>Jeden soubor generátory vs. Úlohy nástroje MSBuild  
- Jedním souborem jsou dostupné v době návrhu pouze generátory, ale úlohy nástroje MSBuild lze použít v době návrhu a čase vytvoření buildu. Flexibilní tedy používejte úlohy nástroje MSBuild k transformaci a generování kódu. Další informace najdete v tématu [vlastní nástroje](../../extensibility/internals/custom-tools.md).  
+#### <a name="single-file-generators-vs-msbuild-tasks"></a>Vs generátorů tvořených jedním souborem. Úlohy nástroje MSBuild  
+ Jediný soubor generátory jsou dostupné v době návrhu pouze, ale úlohy nástroje MSBuild lze použít v době návrhu a čas sestavení. Kvůli maximální flexibilitě proto použijte úlohy nástroje MSBuild k transformaci a generování kódu. Další informace najdete v tématu [vlastní nástroje](../../extensibility/internals/custom-tools.md).  
   
 ## <a name="see-also"></a>Viz také  
- [MSBuild – Reference](../../msbuild/msbuild-reference.md)   
- [Nástroje MSBuild](../../msbuild/msbuild.md)   
+ [Referenční dokumentace nástroje MSBuild](../../msbuild/msbuild-reference.md)   
+ [Nástroj MSBuild](../../msbuild/msbuild.md)   
  [Vlastní nástroje](../../extensibility/internals/custom-tools.md)

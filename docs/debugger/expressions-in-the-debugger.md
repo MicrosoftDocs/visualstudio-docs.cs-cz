@@ -1,5 +1,5 @@
 ---
-title: Výrazy v ladicím programu | Microsoft Docs
+title: Výrazy v ladicím programu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 02/07/2017
 ms.technology: vs-ide-debug
@@ -21,52 +21,53 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dccd4af0c14787ef34c1c558f83ecb2d6f0c1cea
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 035d66590c6b6087c56887a4eaa2b0538406f87b
+ms.sourcegitcommit: a7de99f36e9ead7ea9e9bac23c88d05ddfc38b00
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52257248"
 ---
 # <a name="expressions-in-the-visual-studio-debugger"></a>Výrazy v ladicím programu sady Visual Studio
-Zahrnuje vyhodnocovače výrazů, které fungují při zadání výrazu v ladicím programu sady Visual Studio **QuickWatch** dialogové okno, **sledovat** okno, nebo **Immediate** okno. Vyhodnocovače výrazů jsou také v práci v **zarážky** okno a mnoho dalších místech ladicího programu.
+Ladicího programu sady Visual Studio obsahuje hodnotitele výrazu, které pracují při zadání výrazu v **QuickWatch** dialogovém okně **Watch** okna, nebo **okamžité** okna. Vyhodnocení výrazu jsou také v práci **zarážky** okno a mnoha dalších místech v ladicím programu.
   
- Následujících oddílech najdete podrobnosti o výrazy v různých jazycích.  
+ V následujících částech se popisuje omezení vyhodnocení výrazu pro jazyky podporované v aplikaci Visual Studio.
   
-## <a name="f-expressions-are-not-supported"></a>F # výrazy nejsou podporovány.  
- F # výrazy nejsou rozpoznány. Pokud ladíte F # – kód, budete muset převede výrazech do jazyka C# – syntaxe před vstupem do ladicí program okno nebo dialogové okno pole výrazů. Když jste přeložit výrazy z F # pro C#, nezapomeňte mějte na paměti, že C# používá `==` operátor k testování rovnosti, zatímco F # používá jedné `=`.  
+## <a name="f-expressions-are-not-supported"></a>F#výrazy nejsou podporovány.  
+ F#výrazy nejsou rozpoznány. Pokud ladíte F# kódu, musíte převést vaše výrazů do C# syntaxe před vstupem do ladicího programu okně nebo dialogovém okně pole výrazy. Při překlad výrazů od F# k C#, nezapomeňte mějte na paměti, C# používá `==` operátor testovat rovnost, zatímco F# používá jedné `=`.  
   
 ## <a name="c-expressions"></a>Výrazy jazyka C++  
- Informace o používání kontextu operátory s výrazy v jazyce C++ najdete v tématu [kontextu – operátor (C++)](../debugger/context-operator-cpp.md).  
+ Informace o použití kontextu operátory s výrazy v jazyce C++, naleznete v tématu [kontextu – operátor (C++)](../debugger/context-operator-cpp.md).  
   
 ### <a name="unsupported-expressions-in-c"></a>Nepodporované výrazy v jazyce C++  
   
 #### <a name="constructors-destructors-and-conversions"></a>Konstruktory, destruktory a převody  
- Pro objekt, nelze volat konstruktor nebo destruktor, explicitně nebo implicitně. Následující výraz například explicitně volá konstruktor a výsledkem chybová zpráva:  
+ Konstruktor nebo destruktor nelze volat pro objekt, explicitně nebo implicitně. Například následující výraz explicitně volá konstruktor a výsledkem chybová zpráva:  
   
 ```C++  
 my_date( 2, 3, 1985 )  
 ```  
   
- Pokud cílovým serverem převod je třída, nelze volat funkci pro převod. Takový převod zahrnuje vytváření objektu. Například pokud `myFraction` je instance `CFraction`, která definuje funkce operátor převodu `FixedPoint`, následující výraz vede k chybě:  
+ Funkce převodu nelze volat, pokud je cíl převodu třídy. Takový převod zahrnuje konstrukce objektu. Například pokud `myFraction` je instance `CFraction`, která definuje funkci operátoru převodu `FixedPoint`, následující výraz způsobí chybu:  
   
 ```C++  
 (FixedPoint)myFraction  
 ```  
   
- Nelze volat nové nebo odstranit operátory. Například následující výraz není podporován:  
+ Nelze zavolat novou nebo odstranit operátory. Například následující výraz není podporovaný:  
   
 ```C++  
 new Date(2,3,1985)  
 ```  
   
 #### <a name="preprocessor-macros"></a>Makra preprocesoru  
- Makra preprocesoru nejsou podporovány v ladicím programu. Například pokud konstanta `VALUE` je deklarován jako: `#define VALUE 3`, nemůžete použít `VALUE` v **sledovat** okno. K tomuto omezení vyhnout, měli byste nahradit `#define`je s výčty a funguje kdykoli je to možné.  
+ Makra preprocesoru nejsou podporovány v ladicím programu. Například pokud konstantu `VALUE` je deklarován jako: `#define VALUE 3`, nemůžete použít `VALUE` v **Watch** okna. Aby se zabránilo toto omezení, byste měli vyměnit `#define`uživatele s výčty a funkce, kdykoli je to možné.  
   
-### <a name="using-namespace-declarations"></a>pomocí deklarace oborů názvů  
- Nemůžete použít `using namespace` deklarace.  Chcete-li získat přístup k název typu nebo proměnné mimo aktuální obor názvů, musíte použít plně kvalifikovaný název.  
+### <a name="using-namespace-declarations"></a>pomocí deklarace oboru názvů  
+ Nemůžete použít `using namespace` deklarace.  Aby bylo možné získat přístup k proměnné mimo aktuální obor názvů a název typu, musíte použít plně kvalifikovaný název.  
   
 ### <a name="anonymous-namespaces"></a>Anonymní obory názvů  
- Anonymní obory názvů nejsou podporovány. Pokud máte následující kód, nelze přidat `test` do okna kukátka:  
+ Anonymní obory názvů nejsou podporovány. Pokud máte následující kód, nelze přidat `test` k oknu kukátka:  
   
 ```C++  
 namespace mars   
@@ -85,95 +86,95 @@ int main()
   
 ```  
   
-###  <a name="BKMK_Using_debugger_intrinisic_functions_to_maintain_state"></a> K zachování stavu používá ladicí program vnitřní funkce  
- Vnitřní funkce ladicího programu poskytnout způsob, jak volat určité funkce C/C++ ve výrazech beze změny stavu aplikace.  
+###  <a name="BKMK_Using_debugger_intrinisic_functions_to_maintain_state"></a> Pomocí vnitřní funkce ladicího programu pro uchování stavu  
+ Vnitřní funkce ladicího programu poskytují způsob, jak volat určité funkce jazyka C/C++ ve výrazech beze změny stavu aplikace.  
   
- Vnitřní funkce ladicí program:  
+ Vnitřní funkce ladicího programu:  
   
--   Je zaručeno bezpečné: provádění vnitřní funkce ladicí program nebude proces, který je právě laděn poškozen.  
+- Je zaručeno bezpečné: provádění vnitřní funkce ladicího programu nebude poškodit proces, který je právě laděna.  
   
--   Jsou povoleny v všechny výrazy ve scénářích, kde vedlejší efekty a vyhodnocení funkce nejsou povoleny.  
+- Jsou povoleny v všechny výrazy, dokonce i ve scénářích, kde nejsou povolené vedlejší efekty a vyhodnocení funkce.  
   
--   Fungovat ve scénářích, kde nejsou možné, například minimální výpis ladění regulární funkce volání.  
+- Práce ve scénářích, kde nejsou volání normální funkce je to možné, jako je ladění s minimálním výpisem.  
   
- Vnitřní funkce ladicí program můžete také nastavit vyhodnocování výrazů pohodlnější. Například `strncmp(str, "asd")` je mnohem snazší zápisu v podmínce zarážek než `str[0] == 'a' && str[1] == 's' && str[2] == 'd'`. )  
+  Vnitřní funkce ladicího programu můžete také nastavit vyhodnocování výrazů pohodlnější. Například `strncmp(str, "asd")` je mnohem jednodušší psaní v podmínku zarážky než `str[0] == 'a' && str[1] == 's' && str[2] == 'd'`. )  
   
 |Oblast|Vnitřní funkce|  
 |----------|-------------------------|  
-|**Délka řetězce**|strlen –, wcslen –, strnlen –, wcsnlen –|  
+|**Délka řetězce**|strlen, wcslen –, strnlen –, wcsnlen –|  
 |**Porovnání řetězců**|strcmp –, wcscmp –, stricmp –, _stricmp –, _strcmpi –, wcsicmp –, _wcscmpi, _wcsnicmp –, strncmp –, wcsncmp –, strnicmp –, wcsnicmp –|  
-|**Hledání řetězců**|strchr –, wcschr –, strstr –, wcsstr –|  
-|**Win32**|Funkce GetLastError(), TlsGetValue()|  
-|**Windows 8**|WindowsGetStringLen() WindowsGetStringRawBuffer()<br /><br /> Tyto funkce vyžadují proces, který je právě laděn, aby byl spuštěn v systému Windows 8. Ladění výpisu soubory vytvořené ze zařízení se systémem Windows 8 také vyžaduje, aby sadě Visual Studio počítače s Windows 8. Ale pokud ladíte zařízení se systémem Windows 8 vzdáleně, sadě Visual Studio počítač může mít spuštěný systém Windows 7.|  
-|**Různé**|__log2<br /><br /> Vrátí protokol základní 2 zadané celé číslo, zaokrouhlí na nejbližší menší celé číslo.|  
+|**Hledání řetězce**|strchr –, wcschr –, strstr –, wcsstr –|  
+|**Win32**|Funkce GetLastError() TlsGetValue()|  
+|**Windows 8**|WindowsGetStringLen() WindowsGetStringRawBuffer()<br /><br /> Tyto funkce vyžadují proces, který je právě laděna, aby byla spuštěna v systému Windows 8. Ladění s výpisem paměti soubory vygenerované ze zařízení s Windows 8 také vyžaduje, aby Visual Studio počítače s Windows 8. Nicméně pokud zařízení s Windows 8 ladíte vzdáleně, počítač Visual Studio může běžet Windows 7.|  
+|**Různé**|__log2<br /><br /> Vrátí základní 2 zadané celé číslo, zaokrouhlí na nejbližší menší celé číslo v protokolu.|  
   
-## <a name="ccli---unsupported-expressions"></a>C + +/ CLI - nepodporovaný výrazy  
+## <a name="ccli---unsupported-expressions"></a>C + +/ CLI - nepodporované výrazy  
   
--   Přetypování, které zahrnují ukazatele nebo uživatelem definované přetypování nejsou podporovány.  
+-   Přetypování, které se týkají ukazatele nebo uživatelem definované přetypování, nejsou podporovány.  
   
--   Objekt porovnání a přiřazení nejsou podporovány.  
+-   Porovnání objektu a přiřazení nejsou podporovány.  
   
--   Přetížené operátory a přetížených funkcí nejsou podporovány.  
+-   Přetížené operátory a přetížené funkce nejsou podporovány.  
   
 -   Zabalení a rozbalení nejsou podporovány.  
   
 -   `Sizeof` operátor není podporován.  
   
-## <a name="c---unsupported-expressions"></a>C# – Nepodporovaná výrazy  
+## <a name="c---unsupported-expressions"></a>C# – nepodporované výrazy  
   
 ### <a name="dynamic-objects"></a>Dynamické objekty  
- Proměnné můžete použít ve výrazech ladicího programu, které jsou zadány staticky jako dynamický. Pokud objekty, které implementují [IDynamicMetaObjectProvider rozhraní](http://msdn.microsoft.com/Library/e887a72d-ebe2-4253-a7e8-3d8d05154647) jsou vyhodnocovány v okně Sledování dynamického zobrazení přidání uzlu. Uzel dynamického zobrazení ukazuje členové objektu, ale neumožňuje úpravy hodnot členů.  
+ Proměnné můžete použít ve výrazech ladicího programu, které staticky se zadávají jako dynamický. Pokud objekty, které implementují <xref:System.Dynamic.IDynamicMetaObjectProvider> jsou vyhodnocovány v okně kukátka, přidat uzel dynamického zobrazení. Uzel dynamického zobrazení zobrazuje členy objektu, ale neumožňuje úpravy hodnot členů.  
   
- Nejsou podporovány následující funkce dynamické objektů:  
+ Nejsou podporovány následující funkce dynamické objekty:  
   
 -   Složené operátory `+=`, `-=`, `%=`, `/=`, a `*=`  
   
 -   Mnoho přetypování, včetně číselné přetypování a argument typu přetypování  
   
--   Volání metod s více než dva argumenty  
+-   Volání metody s více než dva argumenty  
   
--   Vlastnost mechanismy získání s více než dva argumenty  
+-   Gettery vlastností s více než dva argumenty  
   
 -   Nastavením vlastností s argumenty  
   
--   Přiřazení k indexeru.  
+-   Přiřazení k indexeru  
   
 -   Logické operátory `&&` a `||`  
   
 ### <a name="anonymous-methods"></a>Anonymní metody  
- Vytváření nového anonymní metody není podporováno.  
+ Vytvoření nové anonymní metody není podporováno.  
   
-## <a name="visual-basic---unsupported-expressions"></a>Visual Basic – Nepodporovaná výrazy  
+## <a name="visual-basic---unsupported-expressions"></a>Visual Basic – nepodporované výrazy  
   
 ### <a name="dynamic-objects"></a>Dynamické objekty  
- Proměnné můžete použít ve výrazech ladicího programu, které jsou zadány staticky jako dynamický. Pokud objekty, které implementují [IDynamicMetaObjectProvider rozhraní](http://msdn.microsoft.com/Library/e887a72d-ebe2-4253-a7e8-3d8d05154647) jsou vyhodnocovány v okně Sledování dynamického zobrazení přidání uzlu. Uzel dynamického zobrazení ukazuje členové objektu, ale neumožňuje úpravy hodnot členů.  
+ Proměnné můžete použít ve výrazech ladicího programu, které staticky se zadávají jako dynamický. Pokud objekty, které implementují <xref:System.Dynamic.IDynamicMetaObjectProvider> jsou vyhodnocovány v okně kukátka, přidat uzel dynamického zobrazení. Uzel dynamického zobrazení zobrazuje členy objektu, ale neumožňuje úpravy hodnot členů.  
   
- Nejsou podporovány následující funkce dynamické objektů:  
+ Nejsou podporovány následující funkce dynamické objekty:  
   
 -   Složené operátory `+=`, `-=`, `%=`, `/=`, a `*=`  
   
 -   Mnoho přetypování, včetně číselné přetypování a argument typu přetypování  
   
--   Volání metod s více než dva argumenty  
+-   Volání metody s více než dva argumenty  
   
--   Vlastnost mechanismy získání s více než dva argumenty  
+-   Gettery vlastností s více než dva argumenty  
   
 -   Nastavením vlastností s argumenty  
   
--   Přiřazení k indexeru.  
+-   Přiřazení k indexeru  
   
 -   Logické operátory `&&` a `||`  
   
 ### <a name="local-constants"></a>Místní konstanty  
- Místní konstanty nejsou podporovány.  
+ Nepodporují se místní konstanty.  
   
 ### <a name="import-aliases"></a>Import aliasů  
  Import aliasů nejsou podporovány.  
   
 ### <a name="variable-declarations"></a>Deklarace proměnných  
- Nelze deklarovat explicitní nové proměnné v ladicím programu systému windows. Však můžete přiřadit nové implicitní proměnné uvnitř **Immediate** okno. Tyto proměnné implicitní jsou omezená na relaci ladění a nejsou přístupné mimo ladicí program. Například příkaz `o = 5` implicitně vytvoří novou proměnnou `o` a přiřadit hodnotu 5. Takovéto implicitní proměnné jsou typu **objekt** Pokud typu lze odvodit pomocí ladicího programu.  
+ Nelze deklarovat explicitní nové proměnné v ladicím programu systému windows. Však můžete přiřadit nové implicitní proměnné uvnitř **okamžité** okna. Tyto implicitní proměnné jsou omezená na relaci ladění a nejsou přístupné mimo ladicí program. Například příkaz `o = 5` implicitně vytvoří novou proměnnou `o` a jí přiřadit hodnotu 5. Takové implicitní proměnné nejsou typu **objekt** Pokud typu lze odvodit ladicím programem.  
   
-### <a name="unsupported-keywords"></a>Nepodporované klíčová slova  
+### <a name="unsupported-keywords"></a>Nepodporovaná klíčová slova  
   
 -   `AddressOf`  
   
@@ -203,10 +204,10 @@ int main()
   
 -   `With`  
   
--   Modul nebo Namespace úrovně klíčová slova, jako například `End Sub` nebo `Module`.  
+-   Namespace nebo modul úroveň klíčová slova, jako například `End Sub` nebo `Module`.  
   
 ## <a name="see-also"></a>Viz také  
  [Specifikátory formátu v jazyce C++](../debugger/format-specifiers-in-cpp.md)   
- [Context – operátor (C++)](../debugger/context-operator-cpp.md)   
+ [Kontextový operátor (C++)](../debugger/context-operator-cpp.md)   
  [Specifikátory formátu v jazyce C#](../debugger/format-specifiers-in-csharp.md)   
  [Pseudoproměnné](../debugger/pseudovariables.md)

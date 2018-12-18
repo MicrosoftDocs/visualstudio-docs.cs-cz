@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31125900"
 ---
 # <a name="reference-visual-studio-debugging-apis"></a>Referenční dokumentace (Visual Studio ladění v rozhraní API)
 Visual Studio SDK ladění odkazy popisují základní vzor pro spuštění architektura a funkce ladicího programu a jeho součástí. Dokumentace je jako několik předpokladů nejdříve o součástech a rozhraní, které popisuje kromě chování, které definuje pomocí rozhraní.  

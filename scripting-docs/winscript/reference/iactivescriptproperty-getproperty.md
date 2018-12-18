@@ -1,11 +1,11 @@
 ---
-title: IActiveScriptProperty::GetProperty | Microsoft Docs
-ms.custom: 
+title: IActiveScriptProperty::GetProperty | Dokumentace Microsoftu
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - IActiveScriptProperty.GetProperty
@@ -14,18 +14,19 @@ apilocation:
 helpviewer_keywords:
 - GetProperty method, IActiveScriptProperty interface
 ms.assetid: a43383db-b148-4d76-83bd-4f0e899b7cb1
-caps.latest.revision: 
+caps.latest.revision: 24
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d55fb2d816931a74827d318e13860b3f97f0fd23
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 7cd5c7ac948a9001688de69f9db9ee31624ca33d
+ms.sourcegitcommit: 1ab675a872848c81a44d6b4bd3a49958fe673c56
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44284140"
 ---
 # <a name="iactivescriptpropertygetproperty"></a>IActiveScriptProperty::GetProperty
-Získá vlastnost, která je určena parametrem.  
+Získá vlastnost, která je určená parametru.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,7 +43,7 @@ HRESULT GetProperty(
   
 #### <a name="parameters"></a>Parametry  
  `dwProperty`  
- Hodnota vlastnosti získat.  
+ Hodnota vlastnosti zobrazíte.  
   
  `pvarIndex`  
  Nepoužívá se.  
@@ -50,14 +51,14 @@ HRESULT GetProperty(
  `pvarValue`  
  Hodnota vlastnosti  
   
- Povolené hodnoty pro `dwProperty` jsou popsané v následující tabulce.  
+ Povolené hodnoty pro `dwProperty` jsou popsány v následující tabulce.  
   
 |Konstanta|Hodnota|Význam|  
 |--------------|-----------|-------------|  
-|SCRIPTPROP_INTEGERMODE|0x00003000|Vynutí skriptovací stroj k rozdělení v režimu celé číslo místo plovoucí režimu bodu.|  
-|SCRIPTPROP_STRINGCOMPAREINSTANCE|0x00003001|Povoluje funkce Porovnat řetězec skriptovací stroje, které mají být nahrazeny.|  
-|SCRIPTPROP_ABBREVIATE_GLOBALNAME_RESOLUTION|0x70000002|Informuje o skriptovací stroj, který neexistuje žádné skriptovacích strojů přispívání do globální objektu.|  
-|SCRIPTPROP_INVOKEVERSIONING|0x00004000|Vynutí [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] skriptovací stroj pro výběr sady funkcí jazyk podporovaný. Výchozí sadu funkcí jazyka podporovaných [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] skriptovací stroj je ekvivalentní sadu funkcí jazyka, který se objevil ve verzi 5.7 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] skriptovacího stroje.|  
+|SCRIPTPROP_INTEGERMODE|0x00003000|Vynutí skriptovací stroj pro rozdělení v režimu celé číslo místo s plovoucí desetinnou čárkou režim bodu.|  
+|SCRIPTPROP_STRINGCOMPAREINSTANCE|0x00003001|Povolí používání funkce porovnání řetězce skriptovací stroj se nahradí.|  
+|SCRIPTPROP_ABBREVIATE_GLOBALNAME_RESOLUTION|0x70000002|Informuje o tom, který neexistuje žádné skriptovacích strojů přispívat na globální objekt skriptovací stroj.|  
+|SCRIPTPROP_INVOKEVERSIONING|0x00004000|Vynutí [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] skriptovací stroj k výběru sady funkcí jazyka podporovaná. Výchozí sadu funkcí jazyka podporovaná modulem [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] skriptovací stroj je ekvivalentní k sadě funkcí jazyka, které se zobrazovalo ve verzi 5.7 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] skriptovací stroj.|  
   
 ## <a name="return-value"></a>Návratová hodnota  
  Vrátí jednu z následujících hodnot:  
@@ -66,14 +67,14 @@ HRESULT GetProperty(
 |------------------|-------------|  
 |`S_OK`|Úspěch.|  
 |`E_INVALIDARG`|Argument není platný.|  
-|`E_UNEXPECTED`|Nebyl očekáván volání (například skriptovací stroj ještě byla načtena nebo inicializovat).|  
+|`E_UNEXPECTED`|Volání nebylo očekáváno (například skriptovací stroj má ještě nebyly načteny nebo inicializován).|  
   
 ## <a name="remarks"></a>Poznámky  
- Vlastnost SCRIPTPROP_ABBREVIATE_GLOBALNAME_RESOLUTION hostitele slouží k informování skriptovací stroj, který neexistuje žádné skriptovacích strojů přispívání do globální objektu. Například může informovat Internet Exploreru [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] modul, který vykreslované stránky obsahuje pouze [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] skripty. Proto pouze [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] modul můžete přidat nové vlastnosti do okna objekt globální a není k dispozici žádný modul Visual Basic Scripting Edition (VBScript) o stejnou akci. Modul můžete ignorovat tento příznak nebo můžete použít k optimalizaci správu nové členy, které jsou přidány do globální objektu.  
+ Vlastnost SCRIPTPROP_ABBREVIATE_GLOBALNAME_RESOLUTION hostitele slouží k informování skriptovací stroj, který neexistuje žádné skriptovacích strojů přispívat na globální objekt. Například může informovat aplikaci Internet Explorer [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] modul, který obsahuje pouze vykreslované stránky [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] skripty. Proto pouze [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] modul můžete přidat nové vlastnosti do okna globálních objektů a neexistuje žádný modul Visual Basic Scripting Edition (VBScript) škol. Modul může ignorují tento příznak nebo můžete použít k optimalizaci správy nových členů, které jsou přidány do globálního objektu.  
   
- Hostitele můžete použít vlastnost SCRIPTPROP_INVOKEVERSIONING vyberte sadu funkcí jazyka být podporovaná, až [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] je skriptovací stroj spustil. Pokud je tato vlastnost nastavena na hodnotu 1 (SCRIPTLANGUAGEVERSION_5_7), k dispozici jazykové funkce jsou stejné jako ty, které se zobrazovaly ve verzi 5.7 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] skriptovacího stroje. Pokud je nastavena na hodnotu 2 (SCRIPTLANGUAGEVERSION_5_8), jsou k dispozici jazykové funkce ty, které se zobrazovaly ve verzi 5.7 Kromě funkcí, které byly přidány ve verzi 5.8. Ve výchozím nastavení je tato vlastnost nastavena na hodnotu 0 (SCRIPTLANGUAGEVERSION_DEFAULT), což je ekvivalentní sadu funkcí jazyka, který se objevil ve verzi 5.7, pokud hostitel podporuje různé výchozí chování. Pro instanci aplikace Internet Explorer 8 požádá do [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] jazykové funkce podporované verzí 5.8 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] skriptovací stroj ve výchozím nastavení při "Standardy aplikace Internet Explorer 8" režimu je režim dokumentu pro Internet Explorer 8.  
+ Hostitele můžete použít vlastnost SCRIPTPROP_INVOKEVERSIONING vybrat sadu jazykových funkcí na podporovaná, až [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] skriptovací stroj spustil. Pokud je tato vlastnost nastavena na hodnotu 1 (SCRIPTLANGUAGEVERSION_5_7), dostupné jazykové funkce jsou stejné jako ty, které se zobrazovaly ve verzi 5.7 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] skriptovací stroj. Pokud je nastavena na 2 (SCRIPTLANGUAGEVERSION_5_8), dostupné jazykové funkce jsou ty, které se zobrazovaly ve verzi 5.7 Kromě funkcí, které byly přidány ve verzi 5.8. Ve výchozím nastavení tato vlastnost nastavena na hodnotu 0 (SCRIPTLANGUAGEVERSION_DEFAULT), což je ekvivalentní k sadě funkcí jazyka, které se zobrazovalo ve verzi 5.7, pokud hostitel podporuje různé výchozí chování. Pro instanci aplikace Internet Explorer 8 požádá o do [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] funkcí jazyka podporovaná modulem verze 5.8 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] skriptovací stroj ve výchozím nastavení při "Standardy aplikace Internet Explorer 8" režimu je režim dokumentu pro aplikaci Internet Explorer 8.  
   
 ## <a name="see-also"></a>Viz také  
- [Definování kompatibility dokumentu](http://msdn.microsoft.com/library/cc288325)   
+ [Určení kompatibility dokumentu](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/compatibility/cc288325(v=vs.85))   
  [Iactivescriptproperty –](../../winscript/reference/iactivescriptproperty.md)   
- [Informace o verzi](../../javascript/reference/javascript-version-information.md)
+ [Informace o verzích](../../javascript/reference/javascript-version-information.md)

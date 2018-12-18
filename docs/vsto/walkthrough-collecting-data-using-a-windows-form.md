@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Shromažďování dat pomocí formuláře Windows | Microsoft Docs'
+title: 'Návod: Shromažďování dat pomocí formuláře Windows'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,18 +18,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f6a844bd94500f719e5456252d3b923c1ff85960
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1d48f2a104505e6b6ea9942847d8cd4dd2f3e669
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49900472"
 ---
-# <a name="walkthrough-collecting-data-using-a-windows-form"></a>Návod: Shromažďování dat pomocí formuláře Windows
-  Tento návod ukazuje, jak otevřít formuláře Windows z přizpůsobení na úrovni dokumentu pro aplikaci Microsoft Office Excel, shromažďovat informace od uživatele a zapíše tyto informace do buňky listu.  
+# <a name="walkthrough-collect-data-by-using-a-windows-form"></a>Návod: Shromažďování dat pomocí formuláře Windows
+  Tento návod ukazuje, jak otevřít formulář Windows z přizpůsobení úrovni dokumentu pro aplikaci Microsoft Office Excel, shromažďování informací od uživatele a zápisu informací do buňky listu.  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
- I když tento návod používá konkrétně projektu úrovni dokumentu pro Excel, se použijí pro další projekty Office koncepty znázorněno pomocí průvodce.  
+ I když tento návod používá konkrétně projektu úrovni dokumentu pro Excel, se vztahují na jiné projekty Office koncepty jsme vám ukázali podle návodu.  
   
 ## <a name="prerequisites"></a>Požadavky  
  K dokončení tohoto návodu budete potřebovat následující komponenty:  
@@ -39,111 +40,111 @@ ms.lasthandoff: 04/16/2018
 -   [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] nebo [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].  
   
 > [!NOTE]  
->  Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [přizpůsobení prostředí Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
+>  Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [přizpůsobení integrovaného vývojového prostředí sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).  
   
-## <a name="creating-a-new-project"></a>Vytvoření nového projektu  
+## <a name="create-a-new-project"></a>Vytvoření nového projektu  
  Prvním krokem je vytvoření projektu sešitu aplikace Excel.  
   
-#### <a name="to-create-a-new-project"></a>Chcete-li vytvořit nový projekt  
+### <a name="to-create-a-new-project"></a>Chcete-li vytvořit nový projekt  
   
-1.  Vytvoření projektu sešitu aplikace Excel s názvem **WinFormInput**a vyberte **vytvoříte nový textový dokument** v průvodci. Další informace najdete v tématu [postupy: vytváření projektů Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
+1.  Vytvořte projekt sešitu aplikace Excel s názvem **WinFormInput**a vyberte **vytvoříte nový textový dokument** v průvodci. Další informace najdete v tématu [postupy: vytváření projektů pro systém Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
   
-     Visual Studio otevře nové sešitu aplikace Excel v návrháři a přidá **WinFormInput** projektu do **Průzkumníku řešení**.  
+     Visual Studio otevře nový sešit aplikace Excel v návrháři a přidá **WinFormInput** projektu **Průzkumníka řešení**.  
   
-## <a name="adding-a-namedrange-control-to-the-worksheet"></a>Přidání ovládacího prvku NamedRange do listu  
+## <a name="add-a-namedrange-control-to-the-worksheet"></a>Přidání ovládacího prvku NamedRange do listu  
   
-#### <a name="to-add-a-named-range-to-sheet1"></a>Přidání do Sheet1 pojmenované oblasti  
+### <a name="to-add-a-named-range-to-sheet1"></a>Chcete-li přidat pojmenované oblasti List1  
   
 1.  Vyberte buňku **A1** na `Sheet1`.  
   
 2.  V **název** zadejte **formInput**.  
   
-     **Název** pole se nachází vlevo od řádku vzorců, nad sloupec **A** listu.  
+     **Název** pole je umístěno vlevo od řádku vzorců nad sloupci **A** listu.  
   
-3.  Stiskněte klávesu ENTER.  
+3.  Stisknutím klávesy **zadejte**.  
   
-     A <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek přidán do buňky **A1**. Není nijak viditelně naznačeno na listu, ale **formInput** se zobrazí v **název** pole (nad listu na levé straně) a v **vlastnosti** okno při buňky **A1** je vybrána.  
+     A <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek je přidán do buňky **A1**. Není by na listu, ale **formInput** se zobrazí v **název** pole (přímo nad list na levé straně) a **vlastnosti** okno při Buňka **A1** zaškrtnuto.  
   
-## <a name="adding-a-windows-form-to-the-project"></a>Přidávání formuláře Windows k projektu  
+## <a name="add-a-windows-form-to-the-project"></a>Přidat formulář Windows do projektu  
  Vytvoření formuláře Windows k požádat uživatele o informace.  
   
-#### <a name="to-add-a-windows-form"></a>Chcete-li přidat formuláře Windows  
+### <a name="to-add-a-windows-form"></a>Chcete-li přidat formulář Windows  
   
-1.  Vyberte projekt **WinFormInput** v **Průzkumníku řešení**.  
+1. Vyberte projekt **WinFormInput** v **Průzkumníka řešení**.  
   
-2.  Na **projektu** nabídky, klikněte na tlačítko **přidat formuláře Windows**.  
+2. Na **projektu** nabídky, klikněte na tlačítko **přidat formulář Windows**.  
   
-3.  Název formátu **GetInputString.vb** nebo **GetInputString.cs**a potom klikněte na **přidat**.  
+3. Název formuláře **GetInputString.vb** nebo **GetInputString.cs**a potom klikněte na tlačítko **přidat**.  
   
-     Nový formulář se zobrazí v návrháři.  
+    Otevře se v Návrháři nový formulář.  
   
-4.  Přidat <xref:System.Windows.Forms.TextBox> a <xref:System.Windows.Forms.Button> do formuláře.  
+4. Přidat <xref:System.Windows.Forms.TextBox> a <xref:System.Windows.Forms.Button> do formuláře.  
   
-5.  Kliknutím na tlačítko, najít vlastnost **Text** v **vlastnosti** okně a změňte text, který se **OK**.  
+5. Klikněte na tlačítko, vyhledejte vlastnost **Text** v **vlastnosti** okna a změnit text, který má **OK**.  
   
- V dalším kroku přidejte kód, který `ThisWorkbook.vb` nebo `ThisWorkbook.cs` ke shromažďování informací o uživateli.  
+   V dalším kroku přidejte kód pro `ThisWorkbook.vb` nebo `ThisWorkbook.cs` ke shromažďování informací o uživateli.  
   
-## <a name="displaying-the-windows-form-and-collecting-information"></a>Zobrazení formuláře Windows a shromažďování informací o  
- Vytvoření instance `GetInputString` formuláře Windows a zobrazit ji a pak zapsat informace uživatele do buňky v listu.  
+## <a name="display-the-windows-form-and-collecting-information"></a>Zobrazí se formulář Windows a shromažďování údajů o informace  
+ Vytvoření instance `GetInputString` formuláře Windows a zobrazit ho a pak zapsat informace uživatele do buňky v listu.  
   
-#### <a name="to-display-the-form-and-collect-information"></a>Zobrazit formulář a shromažďovat informace  
+#### <a name="to-display-the-form-and-collect-information"></a>Zobrazení formuláře a shromažďovat informace  
   
-1.  Klikněte pravým tlačítkem na **ThisWorkbook.vb** nebo **ThisWorkbook.cs** v **Průzkumníku řešení**a potom klikněte na **kód zobrazení**.  
+1. Klikněte pravým tlačítkem na **ThisWorkbook.vb** nebo **ThisWorkbook.cs** v **Průzkumníka řešení**a potom klikněte na tlačítko **zobrazit kód**.  
   
-2.  V <xref:Microsoft.Office.Tools.Excel.Workbook.Open> obslužné rutiny události z `ThisWorkbook`, přidejte následující kód, který deklarovat proměnnou pro daný formulář `GetInputString` a pak zobrazit formulář.  
+2. V <xref:Microsoft.Office.Tools.Excel.Workbook.Open> obslužná rutina události `ThisWorkbook`, přidejte následující kód k deklaraci proměnné pro formulář `GetInputString` a poté zobrazí formulář.  
   
-    > [!NOTE]  
-    >  V jazyce C#, musíte přidat obslužné rutiny události, jak je znázorněno v <xref:Microsoft.Office.Tools.Excel.Workbook.Startup> následující událost. Informace o vytváření obslužných rutin událostí najdete v tématu [postupy: vytvoření obslužné rutiny událostí v projektech Office](../vsto/how-to-create-event-handlers-in-office-projects.md).  
+   > [!NOTE]  
+   >  V jazyce C#, musíte přidat obslužnou rutinu události, jak je znázorněno <xref:Microsoft.Office.Tools.Excel.Workbook.Startup> následující událost. Informace o vytváření obslužných rutin událostí, naleznete v tématu [postupy: vytváření obslužných rutin událostí v projektech pro systém Office](../vsto/how-to-create-event-handlers-in-office-projects.md).  
   
-     [!code-csharp[Trin_VstcoreProgrammingCollectingData#1](../vsto/codesnippet/CSharp/WinFormInputCS/ThisWorkbook.cs#1)]
-     [!code-vb[Trin_VstcoreProgrammingCollectingData#1](../vsto/codesnippet/VisualBasic/WinFormInput/ThisWorkbook.vb#1)]  
+    [!code-csharp[Trin_VstcoreProgrammingCollectingData#1](../vsto/codesnippet/CSharp/WinFormInputCS/ThisWorkbook.cs#1)]
+    [!code-vb[Trin_VstcoreProgrammingCollectingData#1](../vsto/codesnippet/VisualBasic/WinFormInput/ThisWorkbook.vb#1)]  
   
-3.  Vytvořit metodu s názvem `WriteStringToCell` , zapíše text do pojmenované oblasti. Tato metoda je volána z formuláře a uživatelský vstup je předána <xref:Microsoft.Office.Tools.Excel.NamedRange> řízení, `formInput`, v buňce **A1**.  
+3. Vytvořit metodu nazvanou `WriteStringToCell` , který zapíše text do pojmenované oblasti. Tato metoda je volána z formuláře a uživatelský vstup je předán <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacího prvku, `formInput`, v buňce **A1**.  
   
-     [!code-csharp[Trin_VstcoreProgrammingCollectingData#2](../vsto/codesnippet/CSharp/WinFormInputCS/ThisWorkbook.cs#2)]
-     [!code-vb[Trin_VstcoreProgrammingCollectingData#2](../vsto/codesnippet/VisualBasic/WinFormInput/ThisWorkbook.vb#2)]  
+    [!code-csharp[Trin_VstcoreProgrammingCollectingData#2](../vsto/codesnippet/CSharp/WinFormInputCS/ThisWorkbook.cs#2)]
+    [!code-vb[Trin_VstcoreProgrammingCollectingData#2](../vsto/codesnippet/VisualBasic/WinFormInput/ThisWorkbook.vb#2)]  
   
- Dál přidejte kód pro formulář pro zpracování kliknutím na tlačítko událostí.  
+   Dál přidejte kód do formuláře klikněte na tlačítko na zpracování událostí.  
   
-## <a name="sending-information-to-the-worksheet"></a>Odesílání informace do listu  
+## <a name="send-information-to-the-worksheet"></a>Odesílat informace do listu  
   
-#### <a name="to-send-information-to-the-worksheet"></a>K odeslání informací do listu  
+### <a name="to-send-information-to-the-worksheet"></a>Odesílat informace do listu  
   
-1.  Klikněte pravým tlačítkem na **GetInputString** v **Průzkumníku řešení**a potom klikněte na **Návrhář zobrazení**.  
+1.  Klikněte pravým tlačítkem na **GetInputString** v **Průzkumníka řešení**a potom klikněte na tlačítko **Návrhář zobrazení**.  
   
-2.  Dvakrát klikněte na tlačítko pro otevření souboru kódu pomocí tlačítka <xref:System.Windows.Forms.Control.Click> přidání obslužné rutiny události.  
+2.  Dvakrát klikněte na tlačítko k otevření souboru kódu pomocí tlačítka <xref:System.Windows.Forms.Control.Click> přidali obslužnou rutinu události.  
   
-3.  Přidání kódu do obslužné rutiny události trvat vstup z textového pole, odešle funkce `WriteStringToCell`a pak zavřete formulář.  
+3.  Přidejte kód do obslužné rutiny události využívat vstupu z textového pole, odeslat ho do funkce `WriteStringToCell`a pak zavřete formulář.  
   
      [!code-csharp[Trin_VstcoreProgrammingCollectingData#3](../vsto/codesnippet/CSharp/WinFormInputCS/GetInputString.cs#3)]
      [!code-vb[Trin_VstcoreProgrammingCollectingData#3](../vsto/codesnippet/VisualBasic/WinFormInput/GetInputString.vb#3)]  
   
-## <a name="testing"></a>Testování  
- Teď můžete spustit projekt. Formuláře Windows se zobrazí, a váš vstup v listu.  
+## <a name="test"></a>Test  
+ Nyní můžete spustit projekt. Zobrazí se formulář Windows a váš vstup, zobrazí se v listu.  
   
-#### <a name="to-test-your-workbook"></a>K testování sešitu  
+### <a name="to-test-your-workbook"></a>K otestování vašeho sešitu  
   
-1.  Stisknutím klávesy F5 spusťte projekt.  
+1.  Stisknutím klávesy **F5** ke spuštění projektu.  
   
-2.  Potvrďte, že se zobrazí formuláře Windows.  
+2.  Potvrďte, že se zobrazí formulář Windows.  
   
-3.  Typ **Hello, World** textového pole a pak klikněte na **OK**.  
+3.  Typ **Hello World** textového pole a pak klikněte na **OK**.  
   
-4.  Potvrďte, že **Hello, World** se zobrazí v buňce **A1** listu.  
+4.  Ujistěte se, že **Hello World** se zobrazí v buňce **A1** listu.  
   
 ## <a name="next-steps"></a>Další kroky  
- Tento návod ukazuje základní informace o zobrazení formuláře Windows a předávání dat do listu. Jiné úlohy, které můžete chtít provést patří:  
+ Tento návod ukazuje základní informace o zobrazení formuláře Windows a předání dat do listu. Další úlohy, které můžete provádět, patří:  
   
--   Pomocí ovládacích prvků Windows Forms v sešitu aplikace Excel nebo dokument aplikace Word. Další informace najdete v tématu [ovládacích prvků Windows Forms na přehled dokumenty Office](../vsto/windows-forms-controls-on-office-documents-overview.md).  
+-   Pomocí ovládacích prvků Windows Forms na Excelový sešit nebo dokument aplikace Word. Další informace najdete v tématu [ovládací prvky Windows Forms v přehledu dokumenty Office](../vsto/windows-forms-controls-on-office-documents-overview.md).  
   
--   Upravte uživatelské rozhraní aplikace Microsoft Office z přizpůsobení na úrovni dokumentu nebo doplňku VSTO. Další informace najdete v tématu [přizpůsobení uživatelského rozhraní Office](../vsto/office-ui-customization.md).  
+-   Úprava uživatelského rozhraní aplikace Microsoft Office z přizpůsobení úrovni dokumentu nebo doplňku VSTO. Další informace najdete v tématu [přizpůsobení uživatelského rozhraní Office](../vsto/office-ui-customization.md).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Vývoj řešení pro systém Office](../vsto/developing-office-solutions.md)   
  [Psaní kódu v řešeních pro systém Office](../vsto/writing-code-in-office-solutions.md)   
  [Programování doplňků VSTO](../vsto/programming-vsto-add-ins.md)   
  [Programování přizpůsobení na úrovni dokumentu](../vsto/programming-document-level-customizations.md)   
- [Návody pro práci s aplikací Word](../vsto/walkthroughs-using-word.md)   
- [Návody pro práci s aplikací Excel](../vsto/walkthroughs-using-excel.md)  
+ [Návody pro aplikaci Word](../vsto/walkthroughs-using-word.md)   
+ [Návody pro aplikaci Excel](../vsto/walkthroughs-using-excel.md)  
   
   

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31141900"
 ---
 # <a name="subscribing-to-an-event"></a>Odběr pro událost
 Tento postup vysvětluje, jak vytvořit okno nástroje, který reaguje na události ve spuštěné tabulce dokumentu (r...). Okno nástroje hostitelem uživatelský ovládací prvek, který implementuje <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocTableEvents>. <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable.AdviseRunningDocTableEvents%2A> Metoda připojí k událostem rozhraní.  

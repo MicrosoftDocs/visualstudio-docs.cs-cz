@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: načtení VSPackages na pozadí pomocí AsyncPackage | Microsoft Docs'
+title: 'Postupy: použití AsyncPackage k načtení rozšíření VSPackages na pozadí | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -9,56 +9,57 @@ author: gregvanl
 ms.author: gregvanl
 ms.workload:
 - vssdk
-ms.openlocfilehash: bc014b2072c5e6472d17095f0c0789c35116a3c6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1afd0199401159ace6ccc34bf3f32aa564cf195f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49828517"
 ---
-# <a name="how-to-use-asyncpackage-to-load-vspackages-in-the-background"></a>Postupy: použití AsyncPackage načíst VSPackages na pozadí
-V/v diskových operací může způsobit načtením a inicializací balíčku VS. V případě takové vstupně-výstupních operací na vlákno uživatelského rozhraní může vést k problémům odezvy. Chcete-li to vyřešit, Visual Studio 2015 zavedená <xref:Microsoft.VisualStudio.Shell.AsyncPackage> třídu, která umožňuje načítání balíčku na vlákna na pozadí.  
+# <a name="how-to-use-asyncpackage-to-load-vspackages-in-the-background"></a>Postupy: použití AsyncPackage k načtení rozšíření VSPackages na pozadí
+V / v disku může způsobit načtením a inicializací balíček VS. V případě takových vstupně-výstupních operací na vlákno uživatelského rozhraní může vést k problémů s rychlostí odezvy. Z toho Visual Studio 2015 zavedené <xref:Microsoft.VisualStudio.Shell.AsyncPackage> třídu, která umožňuje načítání balíčku na vlákně na pozadí.  
   
-## <a name="creating-an-asyncpackage"></a>Vytvoření AsyncPackage  
- Můžete spustit vytvořením projektu VSIX (**soubor > Nový > Projekt > Visual C# > Rozšíření > VSIX projektu**) a přidávání VSPackage k projektu (klikněte pravým tlačítkem na projekt a **položku Přidat/nový nebo položky C# nebo Balíček Studio Extensibility/Visual**). Pak můžete vytvořit vaše služby a přidejte tyto služby do vašeho balíčku.  
+## <a name="create-an-asyncpackage"></a>Vytvoření AsyncPackage  
+ Můžete začít tak, že vytvoříte projekt VSIX (**souboru** > **nový** > **projektu** > **Visual C#**   >  **Rozšiřitelnost** > **projekt VSIX**) a VSPackage přidáním do projektu (klikněte pravým tlačítkem na projekt a **přidat**  >  **Nová položka**  >   **C# položky** > **rozšiřitelnost**  >   **Balíček sady Visual Studio**). Můžete vytvořit vaše služby a přidejte tyto služby do vašeho balíčku.  
   
-1.  Odvození balíček <xref:Microsoft.VisualStudio.Shell.AsyncPackage>.  
+1. Odvození balíček z <xref:Microsoft.VisualStudio.Shell.AsyncPackage>.  
   
-2.  Pokud se poskytování služeb, jejíž dotazování může způsobit, že váš balíček načíst:  
+2. Pokud poskytujete služby, jejichž dotazování může způsobit, že váš balíček se načíst:  
   
-     Chcete-li sady Visual Studio upozornit, že váš balíček je bezpečný pro načítání pozadí a který se přidá do toto chování vaší <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute> měli nastavit **AllowsBackgroundLoading** vlastnost na hodnotu true v konstruktoru atributu.  
+    K označení k sadě Visual Studio, váš balíček je bezpečný pro načítání na pozadí a pro přidání do tohoto chování vašeho <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute> měli nastavit **AllowsBackgroundLoading** vlastnost na hodnotu true v konstruktoru atributu.  
   
-    ```csharp  
-    [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]  
+   ```csharp  
+   [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]  
   
-    ```  
+   ```  
   
-     Chcete-li sady Visual Studio upozornit, že je bezpečné pro vytvoření instance služby v vlákna na pozadí, byste měli nastavit <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttributeBase.IsAsyncQueryable%2A> vlastnost na hodnotu true v <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute> konstruktor.  
+    K označení k sadě Visual Studio, je bezpečný pro vytvoření instance služby na vlákně na pozadí, byste měli nastavit <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttributeBase.IsAsyncQueryable%2A> vlastnost na hodnotu true <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute> konstruktoru.  
   
-    ```csharp  
-    [ProvideService(typeof(SMyTestService), IsAsyncQueryable = true)]  
+   ```csharp  
+   [ProvideService(typeof(SMyTestService), IsAsyncQueryable = true)]  
   
-    ```  
+   ```  
   
-3.  Pokud jsou načítání prostřednictvím uživatelského rozhraní kontexty, pak byste měli zadat **PackageAutoLoadFlags.BackgroundLoad** pro <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> nebo zapsat hodnotu (0x2) do příznaků jako hodnotu položky automaticky načíst vašeho balíčku.  
+3. Pokud se načítají prostřednictvím uživatelského rozhraní kontextů, pak byste měli zadat **PackageAutoLoadFlags.BackgroundLoad** pro <xref:Microsoft.VisualStudio.Shell.ProvideAutoLoadAttribute> nebo hodnoty (0x2) do příznaky zapsat jako hodnotu položky automaticky načíst vašeho balíčku.  
   
-    ```csharp  
-    [ProvideAutoLoad(UIContextGuid, PackageAutoLoadFlags.BackgroundLoad)]  
+   ```csharp  
+   [ProvideAutoLoad(UIContextGuid, PackageAutoLoadFlags.BackgroundLoad)]  
   
-    ```  
+   ```  
   
-4.  Pokud máte pracovní asynchronní inicializace uděláte, by měly přepsat <xref:Microsoft.VisualStudio.Shell.AsyncPackage.InitializeAsync%2A>. Odeberte **inicializaci()** metoda poskytované VSIX šablony. ( **Inicializaci()** metoda v **AsyncPackage** je zapečetěná). Můžete použít některou z <xref:Microsoft.VisualStudio.Shell.AsyncPackage.AddService%2A> metody pro přidání asynchronní služby do vašeho balíčku.  
+4. Pokud máte inicializace asynchronní práce, kterou byste měli přepsat <xref:Microsoft.VisualStudio.Shell.AsyncPackage.InitializeAsync%2A>. Odeberte `Initialize()` metodu poskytovanou šablonou VSIX. ( `Initialize()` Metoda **AsyncPackage** je zapečetěná). Můžete použít některý z <xref:Microsoft.VisualStudio.Shell.AsyncPackage.AddService%2A> metody pro přidání asynchronní služby do vašeho balíčku.  
   
-     Poznámka: K volání **základní. InitializeAsync()**, můžete změnit svůj zdrojový kód:  
+    Poznámka: K volání `base.InitializeAsync()`, můžete změnit zdrojový kód:  
   
-    ```csharp  
-    await base.InitializeAsync(cancellationToken, progress);  
-    ```  
+   ```csharp  
+   await base.InitializeAsync(cancellationToken, progress);  
+   ```  
   
-5.  Můžete pečlivě zajistěte, aby nebyly RPC (vzdálené volání procedur) z vašeho kódu asynchronní inicializace (v **InitializeAsync**). To může dojít, když zavoláte <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> přímo nebo nepřímo.  Při načítání synchronizace jsou požadovány, bude blokovat vlákna uživatelského rozhraní pomocí <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory>. Výchozí model blokování zakáže RPC. To znamená, že pokud se pokusíte použít vzdáleného volání Procedur z asynchronních úloh, můžete se zablokování Pokud vlákna uživatelského rozhraní samotného čekání na váš balíček načíst. Obecné alternativou je zařazování svůj kód vlákna uživatelského rozhraní v případě potřeby pomocí něčeho jako jazyk **spojitelného objekt pro vytváření úloh**na <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A> nebo jiný mechanismus, který nepoužívá vzdáleného volání Procedur.  Nepoužívejte **ThreadHelper.Generic.Invoke** nebo obecně blokovat volající vlákno čeká na získání do vlákna uživatelského rozhraní.  
+5. Je musíte pečlivě NEDOVOLTE, aby byly RPC (vzdálené volání procedur) z asynchronní inicializační kód (v **InitializeAsync**). Těm dochází při volání <xref:Microsoft.VisualStudio.Shell.Package.GetService%2A> přímo nebo nepřímo.  Při načítání synchronizace jsou požadovány, bude blokovat vlákno uživatelského rozhraní pomocí <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory>. Výchozí model blokování zakáže Vzdálená volání procedur. To znamená, že při pokusu o použití vzdáleného volání Procedur z vašich úloh s modifikátorem async, můžete se zablokování Pokud vlákno uživatelského rozhraní samotného čekání na váš balíček se načíst. Obecné alternativou je zařadit váš kód na vlákno uživatelského rozhraní v případě potřeby pomocí příkazu podobného tomuto **spojitelné továrny úloh**společnosti <xref:Microsoft.VisualStudio.Threading.JoinableTaskFactory.SwitchToMainThreadAsync%2A> nebo jiný mechanismus, který nepoužívá vzdáleného volání Procedur.  Nepoužívejte **ThreadHelper.Generic.Invoke** nebo obecně blokovat volající vlákno čeká na vlákně UI.  
   
-     Poznámka: Vyhněte se použití **metody GetService** nebo **služby QueryService** ve vaší **InitializeAsync** metoda. Pokud máte použít, musíte nejprve přepnout vlákna uživatelského rozhraní. Alternativou je použít <xref:Microsoft.VisualStudio.Shell.AsyncServiceProvider.GetServiceAsync%2A> z vaší **AsyncPackage** (podle jeho přetypování <xref:Microsoft.VisualStudio.Shell.Interop.IAsyncServiceProvider>.)  
+    Poznámka: Měli byste se vyhnout použití **GetService** nebo **služby QueryService** ve vašich `InitializeAsync` metody. Pokud máte použít, musíte nejprve přepnout na vlákno uživatelského rozhraní. Alternativou je použití <xref:Microsoft.VisualStudio.Shell.AsyncServiceProvider.GetServiceAsync%2A> z vaší **AsyncPackage** (pomocí přetypování na <xref:Microsoft.VisualStudio.Shell.Interop.IAsyncServiceProvider>.)  
   
- C#: Vytvoření AsyncPackage:  
+   C#: Vytvoření AsyncPackage:  
   
 ```csharp  
 [PackageRegistration(UseManagedResourcesOnly = true, AllowsBackgroundLoading = true)]       
@@ -73,29 +74,29 @@ public sealed class TestPackage : AsyncPackage
 }  
 ```  
   
-## <a name="convert-an-existing-vspackage-to-asyncpackage"></a>Převést stávající VSPackage AsyncPackage  
- Většina práce je stejný jako vytvoření nové **AsyncPackage**. Je třeba postupovat podle kroků 1 až 5 výše. Také je třeba provést další upozornění na následujících:  
+## <a name="convert-an-existing-vspackage-to-asyncpackage"></a>Převod existujícího balíčku VSPackage AsyncPackage  
+ Většina práce je stejné jako vytvoření nového **AsyncPackage**. Postupujte podle kroků 1 až 5 výše. Také je potřeba provést další upozornění s následující doporučení:  
   
-1.  Nezapomeňte odebrat **inicializovat** přepsání, které jste měli v balíčku.  
+1.  Nezapomeňte odebrat `Initialize` přepsání, které jste měli v balíčku.  
   
-2.  Vyhněte se zablokování: může být skrytý RPC ve vašem kódu, který teď stát při vlákna na pozadí. Budete muset Ujistěte se, že pokud provádíte vzdáleného volání Procedur (například **metody GetService**), je třeba buď (1) přepněte do hlavního vlákna nebo (2) použijte asynchronní verzi rozhraní API, pokud existuje (například **GetServiceAsync**).  
+2.  Zabránilo zablokování: to může být skrytá RPC ve vašem kódu. které teď provádělo na vlákně na pozadí. Ujistěte se, že pokud provádíte vzdáleného volání Procedur (například **GetService**), budete muset buď (1) přepněte na hlavním vlákně, nebo (2), použijte asynchronní verze rozhraní API, pokud existuje (například **GetServiceAsync**).  
   
-3.  Není přepínat mezi vláken příliš často. Došlo k pokusu o lokalizaci práci, kterou může dojít ve vláknu na pozadí. Tím se snižuje čas zatížení.  
+3.  Přepnutí mezi vlákny příliš často. Došlo k pokusu o lokalizaci práci, kterou může dojít ve vlákně na pozadí zkrátit čas zatížení.  
   
-## <a name="querying-services-from-asyncpackage"></a>Dotazování služby od AsyncPackage  
- **AsyncPackage** může nebo nemusí v závislosti na volající asynchronně zatížení. Pro instanci,  
+## <a name="querying-services-from-asyncpackage"></a>Dotazování služby z AsyncPackage  
+ **AsyncPackage** může nebo nemusí načíst asynchronně v závislosti na volajícího. Pro instanci  
   
--   Pokud má volající volána **metody GetService** nebo **služby QueryService** (i synchronní rozhraní API) nebo  
+- Pokud volající volána **GetService** nebo **služby QueryService** (oběma synchronního rozhraní API) nebo  
   
--   Pokud má volající volána **IVsShell::LoadPackage** (nebo **IVsShell5::LoadPackageWithContext**) nebo  
+- Pokud volající volána **IVsShell::LoadPackage** (nebo **IVsShell5::LoadPackageWithContext**) nebo  
   
--   Zatížení se aktivuje při kontextu uživatelského rozhraní, ale nebyl určen kontextu mechanismus uživatelského rozhraní můžete zátěže můžete asynchronně  
+- Zatížení se aktivuje při kontextu uživatelského rozhraní, ale nezadali jste, že mechanismus kontextu uživatelského rozhraní můžete načíst můžete asynchronně  
   
- potom vašeho balíčku načte synchronně.  
+  váš balíček se potom načte synchronně.  
   
- Všimněte si, že vašeho balíčku má stále příležitost (ve fázi asynchronní inicializace) pro práci vypnout vlákna uživatelského rozhraní, i když se zablokuje vlákna uživatelského rozhraní pro dokončení této pracovní. Pokud má volající používá **IAsyncServiceProvider** asynchronně dotazu služby, potom zatížení a inicializace bude provedeno asynchronně za předpokladu, že nedošlo k blokování okamžitě na výsledný objekt úlohy.  
+  Váš balíček má stále příležitost (ve fázi asynchronní inicializace) k práci mimo vlákno uživatelského rozhraní, ale pro dokončení, které pracují se zablokuje vlákno uživatelského rozhraní. Pokud volající používá **IAsyncServiceProvider** asynchronně dotazu pro vaši službu, pak zatížení a inicializace se provede asynchronně za předpokladu, že nemusíte okamžitě zablokovat výsledného objektu task.  
   
- C#: Jak dotazovat služby asynchronně:  
+  C#: Jak dotazovat služby asynchronně:  
   
 ```csharp  
 using Microsoft.VisualStudio.Shell;   

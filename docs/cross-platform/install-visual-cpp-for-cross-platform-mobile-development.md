@@ -1,7 +1,7 @@
 ---
-title: Instalace Visual C++ pro vývoj pro různé platformy mobilních | Microsoft Docs
+title: Instalace komponenty Visual C++ pro vývoj mobilních řešení napříč platformami | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/21/2018
 ms.technology: vs-ide-mobile
 ms.topic: conceptual
 dev_langs:
@@ -12,125 +12,149 @@ ms.author: corob
 manager: douge
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 64bdc654bc1bcd6721cc29052a9409e00f6afd07
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5dffe82511e75889ea588cb23b1f19490f991ab0
+ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39251904"
 ---
-# <a name="install-visual-c-for-cross-platform-mobile-development"></a>Instalace Visual C++ pro vývoj mobilních pro různé platformy
-[Visual C++ pro vývoj mobilních řešení pro různé platformy](http://go.microsoft.com/fwlink/p/?LinkId=536383) je instalovatelných komponent sady Visual Studio 2015. Zahrnuje šablony sady Visual Studio napříč platformami a nainstaluje nástroje napříč platformami a sady SDK začít rychle, aniž by museli najít, stahování a nakonfigurovat sami. Tyto nástroje můžete v sadě Visual Studio snadno vytvořit, upravit, ladit a testovat projekty napříč platformami. Toto téma popisuje postup instalace nástroje a software jiných výrobců, které jsou potřebné k vývoji aplikací pro různé platformy pomocí sady Visual Studio. Přehled součásti najdete v tématu [Mobile napříč platformami Visual C++](http://go.microsoft.com/fwlink/p/?LinkId=536387)  
-  
- [Požadavky](#Requirements)   
- [Získat nástroje](#GetTheTools)   
- [Nainstalujte nástroje](#InstallTheTools)   
- [Instalace nástrojů pro iOS](#InstallForiOS)   
- [Instalace nebo ručně aktualizovat závislosti](#ThirdParty)  
-  
-##  <a name="Requirements"></a> Požadavky  
-  
--   Požadavky na instalaci, najdete v části [systémové požadavky sady Visual Studio 2015](https://www.visualstudio.com/visual-studio-2015-system-requirements-vs).  
-  
-    > [!IMPORTANT]
-    >  Pokud používáte systém Windows 7 nebo Windows Server 2008 R2, můžete vyvíjet kódu pro aplikace klasické systému Windows, aplikace Android nativní aktivity a knihovny a aplikace a knihovny kódu pro iOS, ale ne aplikace Windows Store nebo Universal Windows.  
-  
- Můžete vytvářet aplikace pro specifické platformy zařízení, jsou některé další požadavky:  
-  
--   Windows Phone emulátory a Microsoft Visual Studio Emulator for Android vyžadují počítač, který můžete spustit technologie Hyper-V. Než bude možné nainstalovat a spustit emulátorů, musí být povolena funkce technologie Hyper-V v systému Windows. Další informace najdete v tématu o emulátor [požadavky na systém](http://msdn.microsoft.com/en-us/4d5bb438-231a-4cd2-84b7-e9660b0e3baf).  
-  
--   X86, které nejlépe fungovat Android emulátorů, které jsou součástí sady SDK pro Android na počítačích, které můžete spustit Intel HAXM ovladače. Tento ovladač vyžaduje procesor Intel x64 s podporou spuštění zakázat Bit a VT-x. Další informace najdete v tématu [pokyny k instalaci pro Intel® hardwaru Accelerated správce spuštění – Microsoft Windows](http://go.microsoft.com/fwlink/p/?LinkId=536385).  
-  
--   Vytváření kódu pro iOS vyžaduje Apple ID, účet programu pro vývojáře iOS a počítač Mac, který můžete spustit [Xcode 6](http://go.microsoft.com/fwlink/p/?LinkId=536387) nebo pozdější OS X Mavericks nebo novější verze. Jednoduché instalační pokyny najdete v tématu [instalace nástrojů pro iOS](#InstallForiOS).  
-  
-##  <a name="GetTheTools"></a> Získat nástroje  
- Visual C++ pro vývoj mobilních řešení pro různé platformy je součástí verze Visual Studio Community, Professional a Enterprise instalovatelných komponent. Visual Studio, přejděte do [Visual Studio 2015 stáhne](http://go.microsoft.com/fwlink/p/?linkid=517106) stránky a stáhněte si Visual Studio 2015 s aktualizací 2 nebo novější.  
-  
-##  <a name="InstallTheTools"></a> Nainstalujte nástroje  
- Instalační program sady Visual Studio 2015 zahrnuje možnost nainstalovat Visual C++ pro vývoj mobilních řešení pro různé platformy. Tím se nainstaluje požadované C++ jazykové nástroje, šablony a součásti pro Visual Studio, RSZ a Clang modulové potřebná pro Android sestavení a ladění a součásti pro komunikaci s počítačem Mac pro vývoj pro iOS. Nainstaluje taky všechny nástroje třetích stran a software development Kit, které jsou potřebné k podpoře vývoj aplikace pro Android a iOS. Většina těchto nástrojů jiných výrobců jsou open-source softwaru, které jsou potřebné pro podporu platformu Android.  
-  
--   Android Kit nativní vývoj (NDK) je potřeba vytvořit kódu C++, která je cílena platformu Android.  
-  
--   Android SDK, Apache Ant a Java SE Development Kit jsou vyžadovány pro proces Android sestavení.  
-  
--   Microsoft Visual Studio Emulator for Android je volitelné vysoce výkonné emulátoru užitečné pro testování a ladění kódu.  
-  
-#### <a name="to-install-visual-c-for-cross-platform-mobile-development-and-the-third-party-tools"></a>Instalace Visual C++ pro vývoj mobilních řešení pro různé platformy a nástroje třetích stran  
-  
-1.  Spusťte instalační program sady Visual Studio 2015, který jste stáhli následující odkaz v [získat nástroje](#GetTheTools). Chcete-li nainstalovat volitelné součásti, zvolte **vlastní** jako typ instalace. Zvolte **Další** vyberte volitelné součásti k instalaci.  
-  
-2.  V vyberte funkce, rozbalte položku **vývoj pro různé platformy Mobile** a zkontrolujte **Visual C++ vývoj mobilních řešení**.  
-  
-     ![Vyberte Visual C&#43; &#43; pro vývoj mobilních řešení](../cross-platform/media/cppmdd_install_vcmdd.png "CPPMDD_Install_VCMDD")  
-  
-     Ve výchozím nastavení, když vyberete **Visual C++ vývoj mobilních řešení**, **programovací jazyky** je možnost nastavena k instalaci **Visual C++**a **běžné nástroje pro a Software Development Kit** jsou nastavené možnosti instalace požadovaných součástí třetích stran. Pokud je potřebujete, můžete zvolit další součásti. Ve výchozím nastavení **Microsoft Visual Studio Emulator for Android** , vybere se také. Neaktivní v seznamu se zobrazí součásti, které jsou již nainstalovány.  
-  
-     K sestavení univerzální aplikace pro Windows a jejich sdílení v kódu mezi nimi a vašich projektů Android a iOS **vyberte funkce**, rozbalte položku **Windows a vývoj webů** a zkontrolujte **univerzální aplikace pro Windows Nástroje pro vývoj**. Pokud nemáte v úmyslu vytvořit univerzální aplikace pro Windows, můžete přeskočit tuto možnost.  
-  
-     Zvolte **Další** pokračujte.  
-  
-3.  Komponenty třetích stran mají své vlastní licenční podmínky. Licenční podmínky můžete zobrazit výběrem **licenční podmínky** odkaz vedle jednotlivých součástí. Zvolte **nainstalovat** přidejte součásti a instalace sady Visual Studio a Visual C++ pro vývoj mobilních řešení pro různé platformy.  
-  
-4.  Po dokončení instalace ukončete instalační program a potom restartujte počítač. Některé akce instalace pro komponenty jiných výrobců se projeví až po restartování počítače.  
-  
-    > [!IMPORTANT]
-    >  Je nutné restartovat a ujistěte se, že se vše správně nainstalovalo.  
-  
-     Pokud emulátor Microsoft Visual Studio pro Android součásti se nepodařilo nainstalovat, váš počítač nemusí mít Hyper-V povolena. Použití **Windows zapnout nebo vypnout funkce** aplikace ovládacích panelů povolit technologie Hyper-V, a poté znovu spusťte instalační program sady Visual Studio.  
-  
-    > [!NOTE]
-    >  Pokud váš počítač nebo vaši verzi systému Windows nepodporuje technologie Hyper-V, nebudete moct používat emulátor sady Microsoft Visual Studio pro Android součást. Domů edice systému Windows nezahrnuje podpory technologie Hyper-V.  
-  
-5.  Otevřete Visual Studio. Pokud je při prvním spuštění sady Visual Studio, může trvat nějakou dobu ke konfiguraci a přihlaste se. Když je připraven, v sadě Visual Studio **nástroje** nabídce vyberte možnost **rozšíření a aktualizace**, **aktualizace**. Pokud že Visual Studio aktualizace k dispozici pro Visual C++ pro vývoj mobilních řešení pro různé platformy, nebo pro Microsoft Visual Studio Emulator for Android, je nainstalujte.  
-  
-##  <a name="InstallForiOS"></a> Instalace nástrojů pro iOS  
- Visual C++ pro vývoj mobilních řešení pro různé platformy můžete použít k úpravám, ladění a nasazení iOS kódu simulátoru iOS nebo zařízení s iOS, ale kvůli licenční omezení, kód musí být vytvořen vzdáleně v počítačích Mac. Sestavení a spuštění aplikace pro iOS pomocí sady Visual Studio, musíte nastavit a nakonfigurovat vzdáleného agenta na vaše Mac. Podrobné pokyny k instalaci, požadavky a možnosti konfigurace najdete v tématu [instalaci a konfiguraci nástroje pro sestavení pomocí iOS](../cross-platform/install-and-configure-tools-to-build-using-ios.md). Pokud nejsou vytvářet pro iOS, můžete tento krok přeskočit.  
-  
-##  <a name="ThirdParty"></a> Instalace nebo ručně aktualizovat závislosti  
- Pokud se rozhodnete nainstalovat jeden nebo více závislostí třetích stran pomocí instalačního programu sady Visual Studio, když instalujete Visual C++ vývoj mobilních řešení možnost, můžete je nainstalovat později pomocí kroků v [nainstalovat nástroje](#InstallTheTools). Můžete také nainstalovat nebo je aktualizovat nezávisle na Visual Studio.  
-  
+# <a name="install-cross-platform-mobile-development-with-c"></a>Instalace multiplatformní vývoj mobilních aplikací pomocí C++
+
+C++ v sadě Visual Studio můžete vytvářet aplikace plochy Windows, aplikací pro univerzální platformu Windows (UPW), Linuxových aplikací a teď aplikace pro Android a iOS. **Vývoj mobilních aplikací pomocí C++** instalovat sadu komponent v sadě Visual Studio, která zahrnuje různé platformy iOS, Android a UPW Visual Studio je zatížení šablony. Nainstaluje nástroje pro různé platformy a sady SDK potřebujete rychle začít, aniž byste museli vyhledat, stáhnout a nakonfigurovat sami. Můžete pomocí těchto nástrojů v sadě Visual Studio můžete snadno vytvářet, upravovat, ladit a testovat vaše multiplatformní projekty. Toto téma popisuje postup instalace nástroje a software jiných výrobců, které jsou potřebné k vývoji aplikací pro různé platformy v C++ pomocí sady Visual Studio. Přehled najdete v tématu [multiplatformní mobilní aplikace Visual C++](https://go.microsoft.com/fwlink/p/?LinkId=536383)
+
+## <a name="requirements"></a>Požadavky
+
+- Požadavky na instalaci, naleznete v tématu [požadavky systému řady produktů sady Visual Studio](/visualstudio/productinfo/vs2017-system-requirements-vs).
+
+   > [!IMPORTANT]
+   > Pokud používáte Windows 7 nebo Windows Server 2008 R2, můžete vyvíjet kód pro aplikace Windows Desktop, aplikace Android Native Activity a knihovny a aplikací a knihoven kódu pro iOS, ale není Windows Phone nebo UWP aplikací.
+
+K vytváření aplikací pro specifické platformy zařízení, existují některé další požadavky:
+
+- Emulátory Windows Phone a Microsoft Visual Studio Emulator for Android vyžadují počítač, který můžete spustit Hyper-V. Aby bylo možné nainstalovat a spustit emulátory, musí být povolena funkce technologie Hyper-V ve Windows. Další informace najdete v tématu o emulátor [požadavky na systém](system-requirements-for-the-visual-studio-emulator-for-android.md).
+
+- X86 emulátorů Androidu, které jsou součástí sady Android SDK fungují nejlépe na počítačích se systémem ovladače Intel HAXM. Tento ovladač vyžaduje procesor Intel x64 VT-x a spustit Bit zakázat podporu. Další informace najdete v tématu [Intel Hardware Accelerated spuštění správce® (Intel® HAXM)](https://go.microsoft.com/fwlink/p/?LinkId=536385).
+
+- Vytvoření kódu pro iOS vyžaduje Apple ID, účet programu pro vývojáře s Iosem a počítače Mac, který může spouštět [Xcode](https://go.microsoft.com/fwlink/p/?LinkId=536387) verze 6 nebo vyšší na OS X Mavericks (verze 10.9) nebo novější verze. Odkaz na postup instalace najdete v části [instalace nástrojů pro iOS](#install-tools-for-ios).
+
+## <a name="get-the-tools"></a>Získání nástrojů
+
+Vývoj mobilních aplikací pomocí C++ je k dispozici v edicích Visual Studio Community, Professional a Enterprise. Chcete-li získat Visual Studio, přejděte na [soubory ke stažení Visual Studio](https://go.microsoft.com/fwlink/p/?linkid=517106) stránky. Nástroje pro vývoj mobilních řešení napříč platformami jsou k dispozici od Visual Studio 2015 Update 2 nebo novější.
+
+## <a name="install-the-tools"></a>Instalace nástrojů
+
+Zahrnuje instalačního programu sady Visual Studio pro Visual Studio 2017 **vývoj mobilních aplikací pomocí C++** úloha, která nainstaluje nástroje jazyka C++, šablon a komponenty potřebné pro vývoj pro Android a iOS v sadě Visual Studio. Nainstaluje GCC a Clang sady nástrojů pro Android sestavení, ladění a součásti potřebné ke komunikaci s počítačem Mac pro vývoj pro iOS. Nainstaluje taky nástroje třetích stran a sad SDK, které jsou potřebné k podpoře vývoj aplikací pro Android a iOS. Většina těchto nástrojů třetích stran jsou open source softwaru vyžadované pro podporu platformy Android.
+
+- Sady Android Native Development Kit (NDK) se vyžaduje k sestavení kódu C++, který cílí na platformy Android.
+
+- Android SDK, Apache Ant a Java SE Development Kit jsou požadovány pro proces sestavení pro Android.
+
+- Emulátor Google Android a Intel Hardware Accelerated spuštění správce jsou volitelné, ale nedoporučuje, komponenty. Můžete vyvíjet a ladit přímo na zařízeních s Androidem, ale často je jednodušší použít emulátor na ploše pro ladění. Společnost Microsoft poskytuje také emulátoru Visual Studia pro Android, která je možné nainstalovat odděleně.
+
+#### <a name="to-install-the-mobile-development-with-c-workload-in-visual-studio-2017"></a>K instalaci vývoj pro mobilní zařízení pomocí úlohy pro C++ v sadě Visual Studio 2017
+
+1. Spustit **instalační program sady Visual Studio** z **Start** nabídky.
+
+1. Pokud jste již nainstalovali aplikaci Visual Studio, zvolte **změnit** tlačítko pro nainstalovanou verzi sady Visual Studio, které chcete upravit. Jinak klikněte na tlačítko **nainstalovat** instalace sady Visual Studio.
+
+1. S **úlohy** vybraná karta, přejděte dolů a vyberte možnost **vývoj mobilních aplikací pomocí C++** úlohy v instalačním programu sady Visual Studio. Pokud je vybraná tato úloha, budou vybrány také další součásti potřebné pro vývoj v jazyce C++. Můžete také dalších úloh a jednotlivé komponenty k instalaci ve stejnou dobu. K vytvoření kódu pro různé platformy, které cílí i na UPW, vyberte **vývoj pro univerzální platformu Windows** pracovního vytížení.
+
+1. V **podrobné informace o instalaci** podokně rozbalte **vývoj mobilních aplikací pomocí C++**. V **volitelné** oddílu, můžete použít další verze sada NDK, emulátor Google Android, Intel Hardware Accelerated spuštění správce a IncrediBuild akcelerace nástroj sestavení.
+
+1. Ve výchozím nastavení jsou zahrnuté jeden nebo více součástí instalace sady Android SDK úlohy. Jsou k dispozici další verze sady SDK pro Android. Přidat do instalace, zvolte **jednotlivé komponenty** kartu a potom přejděte dolů k položce **sad SDK, knihoven a architektur** části svůj výběr.
+
+1. Zvolte **změnit** nebo **nainstalovat** tlačítko k instalaci **vývoj mobilních aplikací pomocí C++** pracovního vytížení a dalších vybrané úlohy a volitelné komponenty.
+
+   Po dokončení instalace, ukončete instalační program a potom restartujte počítač. Některé akce nastavení pro komponenty třetích stran projeví až po restartování počítače.
+
+   > [!IMPORTANT]
+   > Je nutné restartovat, aby se zajistilo, že všechno je správně nainstalované.
+
+1. Otevřít Visual Studio. Pokud je to poprvé, spustíte Visual Studio, může trvat nějakou dobu ke konfiguraci a přihlaste se. Když Visual Studio je připravena, vyhledání všech aktualizací a nainstalujte je.
+
+#### <a name="to-install-the-mobile-development-component-and-third-party-tools-in-visual-studio-2015"></a>Chcete-li nainstalovat vývoj mobilních řešení pro komponenty a nástroje třetích stran v sadě Visual Studio 2015
+
+Pokud používáte Visual Studio 2015, jeho instalační program zahrnuje možnost pro instalaci Visual C++ pro vývoj Multiplatformních mobilních aplikací, který nainstaluje potřebné nástroje jazyka C++, šablon a komponenty v sadě Visual Studio 2015.
+
+1. Spusťte instalační program sady Visual Studio 2015. Pro instalaci volitelné součásti, vyberte možnost **vlastní** jako typ instalace. Zvolte **Další** vybrat volitelné součásti k instalaci.
+
+1. V **zvolte funkce, které**, rozbalte **mobilních řešení pro různé platformy** a zkontrolujte **vývoj v jazyce Visual C++ Mobile**.
+
+   ![Vyberte Visual C&#43; &#43; vývoje pro mobilní zařízení](../cross-platform/media/cppmdd_install_vcmdd.png "CPPMDD_Install_VCMDD")
+
+   Ve výchozím nastavení, když vyberete **vývoj v jazyce Visual C++ Mobile**, **programovací jazyky** je možnost nastavená na instalaci **Visual C++** a **běžné nástroje a Software Development Kit** nastavené možnosti instalace požadovaných komponent třetích stran. Další součásti můžete zvolit, pokud je potřebujete. Ve výchozím nastavení **Microsoft Visual Studio Emulator for Android** , vybere se také. Zobrazí v seznamu neaktivní komponenty, které jsou již nainstalovány.
+
+   Vytvářet aplikace pro Universal Windows a sdílení kódu mezi nimi a vaše projekty pro Android a iOS v **zvolte funkce, které**, rozbalte **Windows a Web Development** a zkontrolujte **univerzální aplikace pro Windows Nástroje pro vývoj**. Pokud nechcete vytvářet aplikace pro Universal Windows, můžete přeskočit tuto možnost.
+
+   Zvolte **Další** pokračujte.
+
+1. Komponenty třetích stran mají své vlastní licenční podmínky. Licenční podmínky můžete zobrazit výběrem **licenční podmínky** odkaz vedle jednotlivých komponent. Zvolte **nainstalovat** k přidání komponenty a instalace sady Visual Studio a Visual C++ pro vývoj mobilních řešení napříč platformami.
+
+1. Po dokončení instalace, ukončete instalační program a potom restartujte počítač. Některé akce nastavení pro komponenty třetích stran projeví až po restartování počítače.
+
+   > [!IMPORTANT]
+   > Je nutné restartovat, aby se zajistilo, že všechno je správně nainstalované.
+
+   Pokud Microsoft Visual Studio Emulator pro Android součásti se nepodařilo nainstalovat, pravděpodobně nemáte v počítači povolená technologie Hyper-V. Použití **Windows zapnout nebo vypnout funkce** aplikace ovládacích panelů k povolení technologie Hyper-V a pak znovu spusťte instalační program sady Visual Studio.
+
+   > [!NOTE]
+   > Pokud váš počítač nebo vaši verzi systému Windows nepodporuje Hyper-V, nelze použít Microsoft Visual Studio Emulator pro Android komponentu. Home Edition z Windows nezahrnuje podporu technologie Hyper-V.
+
+1. Otevřít Visual Studio. Pokud je to poprvé, spustíte Visual Studio, může trvat nějakou dobu ke konfiguraci a přihlaste se. Když je připraven na Visual Studio **nástroje** nabídce vyberte možnost **rozšíření a aktualizace**, **aktualizace**. Pokud jsou že aktualizace nástroje Visual Studio k dispozici pro aplikaci Visual C++ pro vývoj mobilních řešení napříč platformami nebo pro Microsoft Visual Studio Emulator for Android, nainstalujte je.
+
+## <a name="install-tools-for-ios"></a>Instalace nástrojů pro iOS
+
+Visual C++ pro vývoj mobilních řešení napříč platformami můžete použít pro úpravy, ladění a nasazení iOS kódu do simulátoru iOS nebo zařízení s Iosem, ale z důvodu licenčních omezení, kód musí být sestaveny vzdáleně v počítačích Mac. Pokud chcete sestavovat a spouštět aplikace pro iOS pomocí sady Visual Studio, musíte nastavit a nakonfigurovat vzdálený agent na vašem počítači Mac. Podrobné pokyny k instalaci, požadavky a možnosti konfigurace najdete v tématu [instalace a konfigurace nástroje potřebné k vytváření pomocí iOS](../cross-platform/install-and-configure-tools-to-build-using-ios.md). Pokud nejsou vývoj aplikací pro iOS, můžete tento krok přeskočit.
+
+## <a name="install-or-update-dependencies-manually"></a>Ruční instalace nebo aktualizace závislosti
+
+Pokud se rozhodnete nainstalovat jeden nebo více závislostí třetích stran při instalaci pomocí instalačního programu sady Visual Studio **vývoj mobilních aplikací pomocí C++** úlohu (nebo v sadě Visual Studio 2015, Visual C++ vývoj mobilních aplikací možnosti), můžete můžete je nainstalovat později pomocí kroků v [nainstalovat nástroje](#install-the-tools). Instalační program sady Visual Studio se pravidelně aktualizuje nainstalovat nejnovější komponenty třetích stran. Můžete ho použít k instalaci aktualizované sady SDK a NDKs. Můžete také nainstalovat nebo aktualizovat nezávisle na Visual Studio.
+
 > [!CAUTION]
->  Závislosti můžete nainstalovat v libovolném pořadí, s výjimkou Java. Musíte nainstalovat a nakonfigurovat sadu JDK, před instalací sady SDK pro Android.  
-  
- Přečtěte si následující informace a použijte tyto odkazy ruční instalace závislosti.  
-  
--   [Java SE Development Kit](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)  
-  
-     Ve výchozím nastavení převede instalační program nástroje Java v C:\Program Files (x86) \Java.  
-  
--   [Android SDK](https://developer.android.com/sdk/index.html#Other)  
-  
-     Během instalace aktualizace rozhraní API podle doporučení. Ujistěte se, že aspoň je nainstalována sada SDK pro Android 5.0 typu Lupa (API úrovně 21). Ve výchozím nastavení převede instalační program sady SDK pro Android v C:\Program Files (x86) \Android\android-sdk.  
-  
-     SDK Manager aplikaci můžete spustit v adresáři sady SDK pro Android znovu a aktualizovat sadu SDK a instalaci volitelných nástrojů a další úrovně rozhraní API. Aktualizace se pravděpodobně nepodaří nainstalovat, pokud nechcete použít **spustit jako správce** aplikace SDK Manager spustit. Pokud máte potíže s vytváření aplikace pro Android, zkontrolujte SDK Manager aktualizace vašeho nainstalované sady SDK.  
-  
-     Používat některé z Android emulátorů, které jsou součástí sady SDK pro Android, musíte nainstalovat volitelné Intel HAXM ovladače. Možná budete muset odebrat funkce Hyper-V ze systému Windows k instalaci ovladačů Intel HAXM úspěšně. Je nutné obnovit funkce Hyper-V použít emulátorů Windows Phone a emulátor sady Microsoft Visual Studio pro Android.  
-  
--   [Android NDK](https://developer.android.com/tools/sdk/ndk/index.html)  
-  
-     Ve výchozím nastavení instalační program převádí na C:\ProgramData\Microsoft\AndroidNDK Android NDK. Můžete stáhnout a nainstalovat Android NDK znovu, aby NDK instalace aktualizace.  
-  
--   [Apache Ant](http://ant.apache.org/bindownload.cgi)  
-  
-     Ve výchozím nastavení instalační program vloží Apache Ant C:\Program Files (x86) \Microsoft Visual Studio 14.0\Apps.  
-  
--   [Emulátor Microsoft Visual Studio pro Android](http://go.microsoft.com/fwlink/p/?LinkId=536390)  
-  
-     Můžete nainstalovat a aktualizovat emulátor sady Microsoft Visual Studio pro Android z Galerie Visual Studio.  
-  
- Ve většině případů lze zjistit sady Visual Studio konfigurace pro software třetích stran, které jste nainstalovali a udržuje cesty instalace v proměnných prostředí interní. Můžete přepsat výchozí cesty těchto nástrojů pro vývoj pro různé platformy v integrovaném vývojovém prostředí sady Visual Studio.  
-  
-#### <a name="to-set-the-paths-for-third-party-tools"></a>Chcete-li nastavit cesty pro nástroje třetích stran  
-  
-1.  V řádku nabídek Visual Studio, vyberte **nástroje**, **možnosti**.  
-  
-2.  V **možnosti** dialogové okno, rozbalte seznam **křížové platformy**, **C++**a vyberte **Android**.  
-  
-     ![Nástroj pro Android cesta možnosti](../cross-platform/media/cppmdd_options_android.PNG "CPPMDD_Options_Android")  
-  
-3.  Chcete-li změnit tuto cestu používají nástroj, zaškrtněte políčko vedle cestu a upravit cesta ke složce, do textového pole. Můžete také použít tlačítko pro procházení (**...** ) Chcete-li otevřít **vyberte umístění** dialogové okno a vyberte složku.  
-  
-4.  Zvolte **OK** uložit vlastní nástroj umístění složek.  
-  
-## <a name="see-also"></a>Viz také  
- [Instalace a konfigurace nástroje pro sestavení pomocí iOS](../cross-platform/install-and-configure-tools-to-build-using-ios.md)   
- [Visual C++ a platformy Mobile](https://www.visualstudio.com/explore/cplusplus-mdd-vs.aspx)
+> Závislosti můžete nainstalovat v libovolném pořadí, s výjimkou Java. Musíte nainstalovat a nakonfigurovat sadu JDK, před instalací sady Android SDK.
+
+Přečtěte si následující informace a tyto odkazy použít ruční instalace závislostí.
+
+- [Java SE Development Kit](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+
+   Ve výchozím nastavení, instalační program umístí nástroje Java *C:\Program Files (x86) \Java*.
+
+- [Android SDK](https://developer.android.com/sdk/index.html#command-tools)
+
+   Během instalace aktualizace rozhraní API podle doporučení. Ujistěte se, že minimálně je nainstalovaná sada SDK pro Android 5.0 Lollipop (úroveň rozhraní API 21). Ve výchozím nastavení, instalační program umístí sady Android SDK *C:\Program Files (x86) \Android\android-sdk*.
+
+   Aplikace správce sady SDK můžete spustit v adresáři sady Android SDK znovu, chcete-li aktualizovat sadu SDK a nainstalovat volitelné nástroje a další úrovně rozhraní API. Aktualizace může selhat instalace, pokud nechcete použít **spustit jako správce** ke spuštění aplikace správce sady SDK. Pokud máte potíže, vytvářet aplikace pro Android, podívejte se na správce sady SDK k dispozici aktualizace nainstalovaných sad SDK.
+
+   Pokud chcete používat některé z emulátorů Androidu, které jsou součástí sady Android SDK, musíte nainstalovat volitelné ovladače Intel HAXM. Budete muset odebrat funkce technologie Hyper-V z Windows úspěšně instalace ovladače Intel HAXM. Je nutné obnovit funkci Hyper-V použít emulátory Windows Phone a Microsoft Visual Studio Emulator for Android. Další informace najdete v tématu [hardwarovou akceleraci emulátoru Androidu](https://docs.microsoft.com/xamarin/android/get-started/installation/android-emulator/hardware-acceleration?tabs=vswin).
+
+- [Sada Android NDK](https://developer.android.com/tools/sdk/ndk/index.html)
+
+   Ve výchozím nastavení, instalační program umístí sady Android NDK *C:\ProgramData\Microsoft\AndroidNDK*. Můžete stáhnout a nainstalovat sadu Android NDK znovu a aktualizujte instalační sada NDK.
+
+- [Apache Ant](https://ant.apache.org/bindownload.cgi)
+
+   Ve výchozím nastavení, instalační program umístí Apache Ant *C:\Program Files (x86) \Microsoft Visual Studio 14.0\Apps*.
+
+- [Microsoft Visual Studio Emulator for Android](https://aka.ms/vscomemudownload)
+
+   Microsoft Visual Studio Emulator for Android je užitečné pro testování a ladění kódu volitelné emulátoru. Po vydání Visual Studio Emulator for Android Google aktualizoval svůj emulátor Androidu použít hardwarovou akceleraci prostřednictvím HAXM intelu. Doporučujeme že používat urychlené emulátor Googlu Pokud je to možné, protože nabízí přístup k nejnovější Image operačního systému Android a Google Play services.
+
+Ve většině případů sady Visual Studio může zjistit konfiguraci softwaru třetích stran, které jste nainstalovali a udržuje cesty instalace v interní proměnné. Můžete přepsat výchozí cesty těchto nástrojů pro vývoj pro různé platformy v integrovaném vývojovém prostředí sady Visual Studio.
+
+#### <a name="to-set-the-paths-for-third-party-tools"></a>Chcete-li nastavit cesty pro nástroje třetích stran
+
+1. Na panelu nabídek sady Visual Studio vyberte **nástroje** > **možnosti**.
+
+1. V **možnosti** dialogu **různé platformy** > **C++** > **Android**.
+
+   ![Nástroj pro Android cesta možnosti](../cross-platform/media/cppmdd_options_android.PNG "CPPMDD_Options_Android")
+
+1. Chcete-li změnit tuto cestu používají nástroj, zaškrtněte políčko vedle cestu a upravte cestu ke složce, do textového pole. Můžete také použít tlačítko Procházet (**...** ) Chcete-li otevřít **vyberte umístění** dialogového okna a vyberte složku.
+
+1. Zvolte **OK** k uložení umístění složek pro vlastní nástroj.
+
+## <a name="see-also"></a>Viz také:
+
+- [Instalace a konfigurace nástroje potřebné k vytváření pomocí iOS](install-and-configure-tools-to-build-using-ios.md)
+- [Visual C++ mobilní řešení napříč platformami](https://go.microsoft.com/fwlink/p/?LinkId=536383)

@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsourcefiles::Item – | Microsoft Docs
+title: Idiaenumsourcefiles::Item – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b1fda746edf51771e7927efd03094f42903141e6
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 12fa454b0d91c0656e6f6792e0c77158f304af00
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49925547"
 ---
 # <a name="idiaenumsourcefilesitem"></a>IDiaEnumSourceFiles::Item
-Načte zdrojového souboru pomocí indexu.  
+Zkopíruje zdrojový soubor pomocí indexu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,13 +35,13 @@ HRESULT Item (
   
 #### <a name="parameters"></a>Parametry  
  index  
- [v] Z indexu [idiasourcefile –](../../debugger/debug-interface-access/idiasourcefile.md) objekt, který má být načtena. Index je v rozsahu od 0 do `count`-1, kde `count` je vrácený [idiaenumsourcefiles::get_count –](../../debugger/debug-interface-access/idiaenumsourcefiles-get-count.md) metoda.  
+ [in] Index o [idiasourcefile –](../../debugger/debug-interface-access/idiasourcefile.md) objekt, který se má načíst. Index je v rozsahu 0 až `count`-1, kde `count` je vrácený [idiaenumsourcefiles::get_count –](../../debugger/debug-interface-access/idiaenumsourcefiles-get-count.md) metody.  
   
  zdrojový soubor  
- [out] Vrátí [idiasourcefile –](../../debugger/debug-interface-access/idiasourcefile.md) objekt reprezentující požadované zdrojový soubor.  
+ [out] Vrátí [idiasourcefile –](../../debugger/debug-interface-access/idiasourcefile.md) objekt představující požadovaný zdrojový soubor.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [Idiaenumsourcefiles –](../../debugger/debug-interface-access/idiaenumsourcefiles.md)   

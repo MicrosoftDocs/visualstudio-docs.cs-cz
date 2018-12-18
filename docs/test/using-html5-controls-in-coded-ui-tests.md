@@ -1,6 +1,7 @@
 ---
-title: Použití ovládacích prvků HTML5 v programových testů uživatelského rozhraní v sadě Visual Studio | Microsoft Docs
+title: Použití ovládacích prvků HTML5 v programových testech UI
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: gewarren
@@ -8,138 +9,85 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: b440ce0a9f9cf935020ca7ddf0cf392a0d47ad54
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a603a662c9007ab3ee0e66df0b23959bfdce83fb
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52896185"
 ---
 # <a name="using-html5-controls-in-coded-ui-tests"></a>Použití ovládacích prvků HTML5 v programových testech UI
 
-Programové testy uživatelského rozhraní zahrnují podporu pro některé z ovládacích prvků HTML5, které jsou součástí aplikace Internet Explorer 9 a Internet Explorer 10.
+Programové testy UI zahrnují podporu pro některé ovládací prvky jazyka HTML5, které jsou zahrnuty v aplikaci Internet Explorer 9 a Internet Explorer 10.
+
+[!INCLUDE [coded-ui-test-deprecation](includes/coded-ui-test-deprecation.md)]
 
  **Požadavky**
 
 -   Visual Studio Enterprise
 
 > [!WARNING]
->  Ve verzích před Internet Explorer 10 bylo možné spustit programové testy uživatelského rozhraní v porovnání se u procesu aplikace Internet Explorer vyšší úrovni oprávnění. Při spuštění programových testů uživatelského rozhraní na Internet Explorer 10, programového testu uživatelského rozhraní a proces aplikace Internet Explorer musí být na stejné úrovni oprávnění. To je kvůli bezpečnější AppContainer funkce v Internet Exploreru 10.
+> Ve verzích před Internet Explorer 10 bylo možné spustit programové testy uživatelského rozhraní ve vyšší úrovni oprávnění ve srovnání s, proces aplikace Internet Explorer. Při spouštění programových testů UI v Internet Exploreru 10, programový test uživatelského rozhraní a proces aplikace Internet Explorer musí být na stejné úrovni oprávnění. Toto je kvůli lepšímu zabezpečení funkce AppContainer v Internet Exploreru 10.
 
 > [!WARNING]
->  Pokud vytvoříte programového testu uživatelského rozhraní v Internet Exploreru 10, nemusí být možné ji spustit pomocí aplikace Internet Explorer 9 nebo Internet Explorer 8. Je to proto, že Internet Explorer 10 obsahuje ovládacích prvků HTML5 například zvuk, Video, ProgressBar a posuvníku. Tyto ovládací prvky jazyka HTML5 nejsou rozpoznány aplikací Internet Explorer 9 nebo Internet Explorer 8. Podobně váš programový test UI pomocí aplikace Internet Explorer 9 může zahrnovat některé ovládací prvky jazyka HTML5, které aplikace Internet Explorer 8 nerozpozná.
+> Je-li vytvořit programový test uživatelského rozhraní v Internet Exploreru 10, nemusí spouštět, pomocí aplikace Internet Explorer 9 nebo Internet Explorer 8. Je to proto, že aplikace Internet Explorer 10 obsahuje ovládací prvky HTML5, jako je zvuk, Video, indikátor průběhu a posuvník. Tyto ovládací prvky jazyka HTML5 nejsou rozpoznány aplikací Internet Explorer 9 nebo Internet Explorer 8. Podobně váš programový test UI pomocí aplikace Internet Explorer 9 může zahrnovat některé ovládací prvky jazyka HTML5, které aplikace Internet Explorer 8 nerozpozná.
 
-## <a name="supported-html5-controls"></a>Podporované HTML5 ovládací prvky
- Programové testy uživatelského rozhraní zahrnují podporu pro ověření následující ovládacích prvků HTML5, záznam a přehrávání:
+## <a name="audio-control"></a>Ovládací prvek zvuku
 
--   [Zvuk ovládací prvek](#UsingHTML5ControlsCodedUITestsAudio)
+**Ovládací prvek zvuku:** akce na ovládacím prvku Audio HTML5 se správně se zaznamenávají a přehrát.
 
--   [Video ovládací prvek](#UsingHTML5ControlsCodedUITestsVideo)
-
--   [Posuvník](#UsingHTML5ControlsCodedUITestsSlider)
-
--   [ProgressBar](#UsingHTML5ControlsCodedUITestsProgressBar)
-
-###  <a name="UsingHTML5ControlsCodedUITestsAudio"></a> Zvuk ovládací prvek
- **Ovládání zvuku:** akce na ovládací prvek jazyka HTML5 zvuk správně zaznamenána a přehrání.
-
- ![Ovládací prvek jazyka HTML5 zvuk](../test/media/codedui_html5_audio.png "CodedUI_HTML5_Audio")
+![HTML5 Audio ovládacího prvku](../test/media/codedui_html5_audio.png)
 
 |Akce|Záznam|Generovaný kód|
-|------------|---------------|--------------------|
-|**Přehrajte zvuk**<br /><br /> Přímo z ovládacího prvku, nebo z kontextové nabídky ovládací prvky.|Přehrání \<name > zvuk od 00:00:00|HtmlAudio.Play(TimeSpan)|
-|**Hledat v určený čas ve zvukovém souboru**|Hledat \<name > zvuk na 00:01:48|HtmlAudio.Seek(TimeSpan)|
-|**Pozastavení zvuk**<br /><br /> Přímo z ovládacího prvku, nebo z kontextové nabídky ovládací prvky.|Pozastavení \<name > zvuk v 00:01:53|HtmlAudio.Pause(TimeSpan)|
-|**Ztlumení zvuk**<br /><br /> Přímo z ovládacího prvku, nebo z kontextové nabídky ovládací prvky.|Ztlumení \<name > zvuk|HtmlAudio.Mute()|
-|**Zrušení ztlumení zvuk**<br /><br /> Přímo z ovládacího prvku, nebo z kontextové nabídky ovládací prvky.|Zrušit ztlumení \<name > zvuk|HtmlAudio.Unmute()|
-|**Změnit objem zvuk**|Nastavit objem \<name > zvuk 79 %|HtmlAudio.SetVolume(float)|
+|-|---------------|-|
+|**Přehrát zvuk**<br /><br /> Přímo z ovládacího prvku, nebo z místní nabídky ovládací prvky.|Přehrát \<name > zvuku od 00:00:00|HtmlAudio.Play(TimeSpan)|
+|**Hledání na určitou dobu ve zvukovém souboru**|Hledání \<name > zvuku 00:01:48|HtmlAudio.Seek(TimeSpan)|
+|**Pozastavit zvuku**<br /><br /> Přímo z ovládacího prvku, nebo z místní nabídky ovládací prvky.|Pozastavit \<name > zvuku v 00:01:53|HtmlAudio.Pause(TimeSpan)|
+|**Ztlumit zvuk**<br /><br /> Přímo z ovládacího prvku, nebo z místní nabídky ovládací prvky.|Ztlumit \<name > zvuku|HtmlAudio.Mute()|
+|**Zrušit ztlumení zvuk**<br /><br /> Přímo z ovládacího prvku, nebo z místní nabídky ovládací prvky.|Zrušit ztlumení \<name > zvuku|HtmlAudio.Unmute()|
+|**Změnit hlasitost zvuku**|Nastavit hlasitost \<name > zvuku a 79 %|HtmlAudio.SetVolume(float)|
 
- Následující vlastnosti jsou k dispozici pro HtmlAudio a kontrolní výrazy lze přidat na všechny z nich:
+Zobrazit [HTMLAudioElement](https://developer.mozilla.org/docs/Web/API/HTMLAudioElement) pro seznam vlastností, na které můžete přidat kontrolní výraz.
 
-```
-string AutoPlay
-string Controls
-string CurrentSrc
-string CurrentTime
-string CurrentTimeAsString
-string Duration
-string DurationAsString
-string Ended
-string Loop
-string Muted
-string Paused
-string PlaybackRate
-string ReadyState
-string Seeking
-string Src
-string Volume
+ **Prohledat vlastnosti:** vlastnosti hledání pro `HtmlAudio` jsou `Id`, `Name` a `Title`.
 
-```
-
- **Vyhledat vlastnosti:** vlastností vyhledávání pro `HtmlAudio` jsou `Id`, `Name` a `Title`.
-
- **Vlastnosti filtrů:** vlastnosti filtru pro `HtmlAudio` jsou `Src`, `Class`, `ControlDefinition` a `TagInstance`.
+ **Vlastnosti filtru:** vlastnosti filtru pro `HtmlAudio` jsou `Src`, `Class`, `ControlDefinition` a `TagInstance`.
 
 > [!NOTE]
->  Může být významné množství času pro hledání a pozastavení. Při přehrávání, bude programového testu UI počkejte okamžik v `(TimeSpan)` před pauzou zvukovém souboru. Pokud pomocí některé zvláštní okolnosti uplynutí zadané doby. před stiskne příkaz pozastavit, bude vyvolána výjimka.
+> Můžou být významné množství času pro hledání a pozastavit. Během přehrávání programového testu uživatelského rozhraní počká, až do zadaného času v `(TimeSpan)` před pozastavením zvuku. Pokud pomocí některé zvláštní okolnosti, určený čas uplynul před tím příkazu k pozastavení, bude vyvolána výjimka.
 
-###  <a name="UsingHTML5ControlsCodedUITestsVideo"></a> Video ovládací prvek
- **Video ovládacího prvku:** akce v ovládacím prvku HTML5 Video správně zaznamenána a přehrání.
 
- ![Ovládací prvek HTML5 Video](../test/media/codedui_html5_video.png "CodedUI_HTML5_Video")
+## <a name="video-control"></a>Ovládacího prvku video
+ **Ovládacího prvku Video:** akce na ovládacím prvku jako videa HTML5 správně se zaznamenávají a přehrát.
+
+ ![Ovládací prvek jako videa HTML5](../test/media/codedui_html5_video.png)
 
 |Akce|Záznam|Generovaný kód|
-|------------|---------------|--------------------|
-|**Přehrávání videa**<br /><br /> Přímo z ovládacího prvku, nebo z kontextové nabídky ovládací prvky.|Přehrání \<name > Video od 00:00:00|HtmlVideo.Play(TimeSpan)|
-|**Hledat v určený čas na videu**|Hledat \<name > videa na 00:01:48|HtmlVideo.Seek(TimeSpan)|
-|**Pozastavit video**<br /><br /> Přímo z ovládacího prvku, nebo z kontextové nabídky ovládací prvky.|Pozastavení \<name > Video v 00:01:53|HtmlVideo.Pause(TimeSpan)|
-|**Ztlumení video**<br /><br /> Přímo z ovládacího prvku, nebo z kontextové nabídky ovládací prvky.|Ztlumení \<name > Video|HtmlVideo.Mute()|
-|**Zrušení ztlumení video**<br /><br /> Přímo z ovládacího prvku, nebo z kontextové nabídky ovládací prvky.|Zrušit ztlumení \<name > Video|HtmlVideo.Unmute()|
-|**Změnit objem video**|Nastavit objem \<name > videu se 79 %||
+|-|---------------|-|
+|**Přehrát video**<br /><br /> Přímo z ovládacího prvku, nebo z místní nabídky ovládací prvky.|Přehrát \<name > videa od 00:00:00|HtmlVideo.Play(TimeSpan)|
+|**Hledání na určitou dobu ve videu**|Hledání \<name > videa na 00:01:48|HtmlVideo.Seek(TimeSpan)|
+|**Pozastavit video**<br /><br /> Přímo z ovládacího prvku, nebo z místní nabídky ovládací prvky.|Pozastavit \<name > videa v 00:01:53|HtmlVideo.Pause(TimeSpan)|
+|**Ztlumit videa**<br /><br /> Přímo z ovládacího prvku, nebo z místní nabídky ovládací prvky.|Ztlumit \<name > videa|HtmlVideo.Mute()|
+|**Zrušit ztlumení videa**<br /><br /> Přímo z ovládacího prvku, nebo z místní nabídky ovládací prvky.|Zrušit ztlumení \<name > videa|HtmlVideo.Unmute()|
+|**Změna hlasitosti videa**|Nastavit hlasitost \<name > videa a 79 %||
 
- Všechny vlastnosti HtmlAudio jsou k dispozici pro HtmlVideo. Kromě toho jsou následující tři vlastnosti také k dispozici. Kontrolní výraz lze přidat na všechny z nich.
+Zobrazit [HTMLVideoElement](https://developer.mozilla.org/docs/Web/HTML/Element/video) pro seznam vlastností, na které můžete přidat kontrolní výraz.
 
-```
-string Poster
-string VideoHeight
-string VideoWidth
+ **Prohledat vlastnosti:** vlastnosti hledání pro `HtmlVideo` jsou `Id`, `Name` a `Title`.
 
-```
-
- **Vyhledat vlastnosti:** vlastností vyhledávání pro `HtmlVideo` jsou `Id`, `Name` a `Title`.
-
- **Vlastnosti filtrů:** vlastnosti filtru pro `HtmlVideo` jsou `Src`, `Poster`, `Class`, `ControlDefinition` a `TagInstance`.
+ **Vlastnosti filtru:** vlastnosti filtru pro `HtmlVideo` jsou `Src`, `Poster`, `Class`, `ControlDefinition` a `TagInstance`.
 
 > [!NOTE]
->  Pokud rewind nebo rychlé převinutí vpřed videa pomocí-30s nebo +30s popisky, to být agregován požadovat příslušnou dobu.
+> Pokud rewind nebo rychlé převinutí vpřed videa pomocí-30s nebo +30s popisky, se budou agregovat hledání správný čas.
 
-###  <a name="UsingHTML5ControlsCodedUITestsSlider"></a> Posuvník
- **Posuvník:** akce na ovládacího prvku posuvník HTML5 správně zaznamenána a přehrání.
+## <a name="progressbar"></a>ProgressBar
+ **ProgressBar – ovládací prvek:** The ProgressBar je – interactable ovládací prvek. Můžete přidat kontrolní výrazy na `Value` a `Max` vlastnosti tohoto ovládacího prvku. Další informace najdete v tématu [HTMLProgressElement](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress).
 
- ![Posuvník HTML5](../test/media/codedui_html5_slider.png "CodedUI_HTML5_Slider")
+ ![Ovládací prvek HTML5 ProgressBar](../test/media/codedui_html5_progressbar.png)
 
-|Akce|Záznam|Generovaný kód|
-|------------|---------------|--------------------|
-|**Nastavení pozice v posuvníku**|Nastaví pozici \<x > v \<name > posuvníku|HtmlSlider.ValueAsNumber=\<x>|
+## <a name="see-also"></a>Viz také:
 
- Následující vlastnosti jsou k dispozici pro HtmlSlider a assertion lze přidat na všechny z nich:
-
-```
-string Disabled
-string Max
-string Min
-string Required
-string Step
-string ValueAsNumber
-```
-
-###  <a name="UsingHTML5ControlsCodedUITestsProgressbar"></a> ProgressBar
- **Ovládací prvek ProgreesBar:** je ProgressBar – ovládací prvek-interactable. Kontrolní výrazy lze přidat na `Value` a `Max` vlastnosti tohoto ovládacího prvku.
-
- ![HTML5 ProgressBar – ovládací prvek](../test/media/codedui_html5_progressbar.png "CodedUI_HTML5_ProgressBar")
-
-## <a name="see-also"></a>Viz také
-
-- [Elementy HTML](http://go.microsoft.com/fwlink/?LinkID=232441)
+- [Elementy HTML](https://developer.mozilla.org/docs/Web/HTML/Element)
 - [Použití automatizace uživatelského rozhraní k testování kódu](../test/use-ui-automation-to-test-your-code.md)
-- [Vytváření programové testy uživatelského rozhraní](../test/use-ui-automation-to-test-your-code.md)
-- [Podporované konfigurace a platformy pro programové testy uživatelského rozhraní a zaznamenávání akcí](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
+- [Vytvoření programové testy uživatelského rozhraní](../test/use-ui-automation-to-test-your-code.md)
+- [Podporované konfigurace a platformy pro programové testy uživatelského rozhraní a zaznamenávání akcí](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)

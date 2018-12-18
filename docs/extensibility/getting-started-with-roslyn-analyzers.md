@@ -1,5 +1,5 @@
 ---
-title: Začínáme s Roslyn analyzátorů | Microsoft Docs
+title: Začínáme s analyzátory Roslyn | Dokumentace Microsoftu
 ms.date: 04/02/2018
 ms.technology: vs-ide-sdk
 ms.topic: conceptual
@@ -9,32 +9,35 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7b887703343dab10f9cc1f0cbf8e2e2b37b0065b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6077fb8a9f0db360389953ef6a7ed25c6d242247
+ms.sourcegitcommit: d7f232a7596420e40ff8051d42cdf90203af4a74
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52821289"
 ---
-# <a name="getting-started-with-roslyn-analyzers"></a>Začínáme s Roslyn analyzátory
+# <a name="get-started-with-roslyn-analyzers"></a>Začínáme s analyzátory Roslyn
 
-S analyzátorů za provozu, na základě projektu kódu v sadě Visual Studio rozhraní API autoři se dají dodávat analýzy kódu pro konkrétní domény jako součást jejich balíčků NuGet. Protože tyto analyzátorů jsou zapnuté kompilátoru platformou .NET (označován kódovým "Roslyn"), může vést k upozornění do vašeho kódu jako typ i předtím, než jste dokončili řádku (žádné další čekání na sestavení kódu ke zjišťování problémů). Analyzátory můžete také surface automatické kódu oprava prostřednictvím žárovky řádku Visual Studia umožnit vám vyčištění kódu okamžitě.
+Pomocí analyzátorů kódu za provozu, na základě projektu v sadě Visual Studio dodávat autoři rozhraní API pro analýzu kódu specifického pro doménu jako součást své balíčky NuGet. Protože tyto analyzátory využívají platformu kompilátoru .NET (s dřívějším kódovým označením Roslyn), může vést k upozornění ve vašem kódu při psaní ještě předtím, než jste dokončili řádku (žádné další čeká se na vytváření kódu ke zjišťování problémů). Analyzátory můžou také zařízení surface to napravit automatické kód prostřednictvím žárovky řádku sady Visual Studio umožňuje vyčistit váš kód okamžitě.
 
-## <a name="getting-started"></a>Začínáme
+## <a name="get-started"></a>Začínáme
 
-[Analyzátorů za provozu kódu Roslyn úvod a návod](https://msdn.microsoft.com/magazine/dn879356.aspx)
+[Úvod analyzátory Roslyn živého kódu a návody](https://msdn.microsoft.com/magazine/dn879356.aspx)
 
-[Přidání kódu opravy návod: Zadejte uživatelé opravy pro analyzátor problémy](https://msdn.microsoft.com/magazine/dn904670.aspx)
+[Přidejte kód opravy názorný postup: poskytují uživatelům opravy pro analyzátor problémů](https://msdn.microsoft.com/magazine/dn904670.aspx)
 
-[Úvod a návod skutečných analyzátor Talk](http://channel9.msdn.com/events/Build/2015/3-725)
+[Úvod a návod, analyzátor reálného světa mluví](https://channel9.msdn.com/events/Build/2015/3-725)
 
-[Skutečné analyzátor Roslyn World](../extensibility/roslyn-analyzers-and-code-aware-library-for-immutablearrays.md) , můžete také shlédnout jako [komunikovat](http://channel9.msdn.com/events/Build/2015/3-725)
+[Analyzátor Roslyn reálného světa](../extensibility/roslyn-analyzers-and-code-aware-library-for-immutablearrays.md) , můžete se také podívat jako [komunikovat](https://channel9.msdn.com/events/Build/2015/3-725)
 
-[Několik příkladů na githubu, které jsou seskupeny do tři druhy analyzátorů](https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Analyzer%20Samples.md)
+[Několik příkladů na Githubu, seskupených do tři druhy analyzátory](https://github.com/dotnet/roslyn/blob/master/docs/analyzers/Analyzer%20Samples.md)
 
-[Úvod a prohlídka několik analyzátorů komunikovat](http://channel9.msdn.com/Events/dotnetConf/2015/NET-Compiler-Platform-Roslyn-Analyzers-and-the-Rise-of-Code-Aware-Libraries)
+[Úvod a prohlídku několik analyzátory mluví](https://channel9.msdn.com/Events/dotnetConf/2015/NET-Compiler-Platform-Roslyn-Analyzers-and-the-Rise-of-Code-Aware-Libraries)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Přehled Roslyn analyzátory](../code-quality/roslyn-analyzers-overview.md)
-- [Další dokumentace na webu github operačních systémů](https://github.com/dotnet/roslyn/tree/master/docs/analyzers)
-- [Pravidla FxCop implementuje pomocí analyzátorů Roslyn na githubu](https://github.com/dotnet/roslyn/tree/master/src/Diagnostics/FxCop)
+- [Přehled analyzátory Roslyn](../code-quality/roslyn-analyzers-overview.md)
+- [Kurz: Zápis první opravu analyzátoru a kódu](/dotnet/csharp/roslyn-sdk/tutorials/how-to-write-csharp-analyzer-code-fix)
+- [Referenční verze balíčku platformy kompilátoru .NET](roslyn-version-support.md)
+- [Další dokumentace na webu GitHub OSS](https://github.com/dotnet/roslyn/tree/master/docs/analyzers)
+- [Pravidla FxCop implementováno s analyzátory Roslyn na Githubu](https://github.com/dotnet/roslyn/tree/master/src/Diagnostics/FxCop)

@@ -1,5 +1,5 @@
 ---
-title: Idiaenumlinenumbers::Next – | Microsoft Docs
+title: Idiaenumlinenumbers::Next – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6015658a72c264f1421c782a1e6e6c28038748a1
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 9a8c00aa5b3d6e6a9b9251075cc5cc065119cc95
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49909949"
 ---
 # <a name="idiaenumlinenumbersnext"></a>IDiaEnumLineNumbers::Next
-Načte zadaný počet čísla řádků v pořadí výčtu.  
+Načte zadaný počet čísel řádků v pořadí výčtu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,16 +36,16 @@ HRESULT Next (
   
 #### <a name="parameters"></a>Parametry  
  celt  
- [v] Počet čísla řádků v enumerátor mají být načteny.  
+ [in] Počet čísel řádků v enumerátor, který se má načíst.  
   
  rgelt  
- [out] Vrátí pole [idialinenumber –](../../debugger/debug-interface-access/idialinenumber.md) objekty, které představují čísla požadované řádků.  
+ [out] Vrátí pole [idialinenumber –](../../debugger/debug-interface-access/idialinenumber.md) objekty, které představují čísla požadovaných řádků.  
   
  pceltFetched  
- [out] Vrátí počet čísla řádků v načtených enumerátor.  
+ [out] Vrátí počet čísel řádků v načtených enumerátor.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE` Pokud nejsou žádné další čísla řádků. Jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud nejsou žádná další čísla řádku. V opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [Idiaenumlinenumbers –](../../debugger/debug-interface-access/idiaenumlinenumbers.md)   

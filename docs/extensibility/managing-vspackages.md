@@ -1,5 +1,5 @@
 ---
-title: Správa VSPackages | Microsoft Docs
+title: Správa rozšíření VSPackages | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,35 +16,36 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9e3241bae84b89b53e30c3d0949e4f8551110e7d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 14aa17f4692857d650cb3bc9fe1a3498fc4f147a
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39639556"
 ---
-# <a name="managing-vspackages"></a>Správa VSPackages
-Ve většině případů nemusíte si dělat starosti o správě VSPackages, protože šablon projektů a položek registraci a automaticky načíst balíček. V některých případech můžete však zjistěte chvilku další, abyste mohli spravovat váš balíček.  
+# <a name="manage-vspackages"></a>Správa rozšíření VSPackages
+Ve většině případů nemusíte starat o správu rozšíření VSPackages, protože šablony projektů a položek registrovat a automaticky načíst balíček. Ale v některých případech budete muset naučit něco, aby správu balíčků.  
   
-## <a name="using-the-experimental-instance"></a>Pomocí experimentální instanci  
- Další informace o experimentální instanci, najdete v tématu [experimentální instanci](../extensibility/the-experimental-instance.md).  
+## <a name="use-the-experimental-instance"></a>Použít experimentální instance  
+ Další informace o experimentální instanci najdete v tématu [experimentální instanci](../extensibility/the-experimental-instance.md).  
   
-## <a name="registering-and-unregistering-vspackages"></a>Registrace a zrušení registrace VSPackages  
- Způsob registrace a zrušení registrace VSPackages a dalších typů rozšíření naleznete v tématu [registrace a zrušení registrace VSPackages](../extensibility/registering-and-unregistering-vspackages.md).  
+## <a name="register-and-unregister-vspackages"></a>Registrace a zrušení registrace rozšíření VSPackages  
+ Jak vytvářet a rušit registraci rozšíření VSPackages a jinými typy rozšíření najdete v tématu [vytvářet a rušit registraci rozšíření VSPackages](../extensibility/registering-and-unregistering-vspackages.md).  
   
-## <a name="loading-a-vspackage"></a>Načítání VSPackage  
- VSPackages může být nastaven na autoload při konkrétní CMDUICONTEXT GUID zapnutá. Další informace najdete v tématu [načítání VSPackages](../extensibility/loading-vspackages.md).  
+## <a name="load-a-vspackage"></a>Načíst VSPackage  
+ Rozšíření VSPackages lze nastavit na autoload Pokud konkrétní identifikátor GUID CMDUICONTEXT zapnutá. Další informace najdete v tématu [načtení rozšíření VSPackages](../extensibility/loading-vspackages.md).  
   
-## <a name="using-asyncpackage-to-load-vspackages-in-the-background"></a>Pomocí AsyncPackage načíst VSPackages na pozadí  
- Třída AsyncPackage umožňuje balíček načítání na pozadí vlákno pro lepší odezvy uživatelského rozhraní v sadě Visual Studio. Další informace najdete v tématu [postupy: použití AsyncPackage k VSPackages zatížení na pozadí](../extensibility/how-to-use-asyncpackage-to-load-vspackages-in-the-background.md).  
+## <a name="use-asyncpackage-to-load-vspackages-in-the-background"></a>Použití AsyncPackage k načtení rozšíření VSPackages na pozadí  
+ `AsyncPackage` Třída umožňuje načítání balíčku na vlákně na pozadí pro lepší odezvy uživatelského rozhraní v sadě Visual Studio. Další informace najdete v tématu [postupy: použití AsyncPackage k načtení rozšíření VSPackages na pozadí](../extensibility/how-to-use-asyncpackage-to-load-vspackages-in-the-background.md).  
   
-## <a name="rule-based-ui-context-for-extensions"></a>Kontext založený na pravidlech uživatelského rozhraní pro rozšíření  
- Kontexty založeného na pravidlech uživatelského rozhraní umožňuje autorům rozšíření zadat přesné podmínky, za které se aktivuje kontextu uživatelského rozhraní a přidružené VSPackages načíst. Další informace najdete v tématu [postupy: použití pravidla na základě kontextu uživatelského rozhraní pro rozšíření Visual Studia](../extensibility/how-to-use-rule-based-ui-context-for-visual-studio-extensions.md).  
+## <a name="rule-based-ui-context-for-extensions"></a>Podle pravidel kontextu uživatelského rozhraní pro rozšíření  
+ Kontexty uživatelského rozhraní založeného na pravidlech umožňuje autorům rozšíření určit přesné podmínky, za kterých se aktivuje kontextu uživatelského rozhraní a načíst přidružené balíčky VSPackages. Další informace najdete v tématu [postupy: použití založený na pravidlech kontextu uživatelského rozhraní pro rozšíření sady Visual Studio](../extensibility/how-to-use-rule-based-ui-context-for-visual-studio-extensions.md).  
   
-## <a name="diagnosing-extension-performance"></a>Diagnostikování rozšíření výkonu  
-Rozšíření může ovlivnit výkon zatížení spuštění a řešení. Zjistěte, jak se počítá dopad rozšíření sady Visual Studio a jak lze analyzovat lokálně otestovat, pokud rozšíření se může zobrazit jako rozšíření, které mají vliv výkon. Další informace najdete v tématu [postupy: diagnostikování výkonu rozšíření](how-to-diagnose-extension-performance.md). 
+## <a name="diagnose-extension-performance"></a>Diagnostika výkonu rozšíření  
+Rozšíření může ovlivnit výkon zatížení při spuštění a řešení. Zjistěte, jak se počítá dopadu rozšíření sady Visual Studio a jak se dají analyzovat místně Pokud chcete otestovat, jestli rozšíření se může zobrazit jako výkon vliv na rozšíření. Další informace najdete v tématu [postupy: Diagnostika výkonu rozšíření](how-to-diagnose-extension-performance.md). 
   
-## <a name="troubleshooting-vspackages"></a>Řešení potíží s VSPackages  
- Zjistit techniky pro řešení potíží s VSPackages, který Nenačítat nebo výskytu chyb: [VSPackages řešení potíží](../extensibility/troubleshooting-vspackages.md)  
+## <a name="troubleshoot-vspackages"></a>Řešení potíží s rozšířením VSPackages  
+ Přečtěte si techniky pro řešení potíží s rozšířením VSPackages, který se nenačtou nebo dochází k chybám: [řešení potíží s rozšířením VSPackages](../extensibility/troubleshooting-vspackages.md)  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Balíčky VSPackage](../extensibility/internals/vspackages.md)

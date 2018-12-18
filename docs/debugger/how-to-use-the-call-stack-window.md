@@ -1,7 +1,7 @@
 ---
-title: Zobrazit zásobníku volání v ladicím programu sady Visual Studio | Microsoft Docs
-ms.custom: H1Hack27Feb2017
-ms.date: 04/06/2017
+title: Zobrazit zásobník volání v ladicím programu | Dokumentace Microsoftu
+ms.custom: seodec18
+ms.date: 10/29/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
@@ -30,115 +30,118 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d20a1ac9f1a09b93f577c6aa90f550ccd6ff0def
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: fe3b266ee44b326749ed555df77dee66b8e82aae
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53062348"
 ---
-# <a name="view-the-call-stack-and-use-the-call-stack-window-in-the-visual-studio-debugger"></a>Zobrazit zásobník volání a použití okna zásobník volání v ladicím programu sady Visual Studio
+# <a name="view-the-call-stack-and-use-the-call-stack-window-in-the-debugger"></a>Zobrazení zásobníku volání a použití okna zásobník volání v ladicím programu
 
-Pomocí **zásobníkem volání** okno, můžete zobrazit volání funkce nebo procedury, které jsou aktuálně v zásobníku. **Zásobníkem volání** okno zobrazuje pořadí, ve kterém jsou získávání volat metody a funkce. V zásobníku volání je dobrý způsob, jak prozkoumat a lépe pochopit tok spuštění aplikace.
-  
-Při [symboly ladění](#bkmk_symbols) nejsou k dispozici pro zásobník volání, jsou součástí **zásobníkem volání** okno nemusí být možné zobrazit správné informace pro tuto část zásobníku volání. Pokud k tomu dojde, zobrazí se následující zápis:  
-  
+S použitím **zásobník volání** okně můžete zobrazit volání funkce nebo procedury, které jsou aktuálně na zásobníku. **Zásobník volání** okno zobrazuje pořadí, ve kterém jsou získávání volány metody a funkce. Zásobník volání je dobrým způsobem, jak zkoumat a pochopit provádění toku aplikace.
+
+Když [symboly ladění](#bkmk_symbols) nejsou k dispozici pro celý zásobník volání **zásobník volání** okna nemusí být schopno zobrazit správné informace pro tuto část zásobníku volání, místo zobrazení:
+
 `[Frames below may be incorrect and/or missing, no symbols loaded for name.dll]`
 
->  [!NOTE]
-> **Zásobníkem volání** okno se podobá ladění perspektivy v některé integrovaného vývojového prostředí jako Eclipse. 
+> [!NOTE]
+> **Zásobník volání** okno je podobné ladění perspektivy v některých prostředí IDE, jako je Eclipse.
 
 > [!NOTE]
->  Dialogová okna a příkazy nabídky, které vidíte může lišit od těch, které tu popsané, v závislosti na aktivním nastavení nebo edici. Chcete-li změnit nastavení, vyberte **nastavení importu a exportu** na **nástroje** nabídky.  V tématu [přizpůsobení integrovaného vývojového prostředí](../ide/personalizing-the-visual-studio-ide.md)
-  
-## <a name="view-the-call-stack-while-in-the-debugger"></a>Zobrazit zásobníku volání při v ladicím programu 
-  
--   Při ladění ve **ladění** nabídce vyberte možnost **Windows > zásobníkem volání**.
+> Dialogová okna a příkazy nabídek, které se zobrazí mohou lišit od těch zde popsaných v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, vyberte **nastavení importu a exportu** na **nástroje** nabídky.  Zobrazit [Resetovat nastavení](../ide/environment-settings.md#reset-settings).
 
- ![Okno zásobník volání](../debugger/media/dbg_basics_callstack_window.png "CallStackWindow")
+## <a name="view-the-call-stack-while-in-the-debugger"></a>Zobrazit zásobník volání v ladicím programu
 
-Žlutá šipka identifikuje rámce zásobníku, kde se aktuálně nachází provádění ukazatele. Ve výchozím nastavení, to je rámce zásobníku, jehož informace se zobrazí ve zdroji, **místní hodnoty –**, **automobily**, **sledovat**, a **zpětný překlad** windows . Pokud chcete změnit na jiný rámec v zásobníku kontextu ladicího programu, můžete to udělat [přepnutí na jiný rámec zásobníku](#bkmk_switch).   
-  
-## <a name="display-non-user-code-in-the-call-stack-window"></a>Zobrazení kódu neuživatelských v okně zásobník volání  
-  
--   Klikněte pravým tlačítkem myši **zásobníkem volání** a vyberte **zobrazit externí kód**.
+- Při ladění v **ladění** nabídce vyberte možnost **Windows > zásobník volání**.
 
-Kód, který není zobrazena, pokud je kód neuživatelských [pouze můj kód](../debugger/just-my-code.md) je povoleno. Ve spravovaném kódu jsou ve výchozím nastavení skryté rámce bez uživatelského kódu. Následující zápis se zobrazí místo rámce bez uživatelského kódu:  
-  
-**[\<Externí kód >]**  
-  
+  ![Okno zásobník volání](../debugger/media/dbg_basics_callstack_window.png "CallStackWindow")
+
+Žlutá šipka označuje zásobník snímků, kde je nyní umístěn ukazatel spuštění. Ve výchozím nastavení, zobrazí tento rámec zásobníku informace ve zdroji, **lokální**, **automatické hodnoty**, **Watch**, a **zpětný překlad** systému windows. Chcete-li změnit kontext ladicího programu na jiný rámec v zásobníku, [přepnout do jiného zásobníku](#bkmk_switch).
+
+## <a name="display-non-user-code-in-the-call-stack-window"></a>Zobrazení kódu nepocházejícího od uživatele v okně zásobník volání
+
+-   Klikněte pravým tlačítkem myši **zásobník volání** okna a vyberte **zobrazit externí kód**.
+
+Neuživatelský kód je jakýkoli kód, který se zobrazí při [pouze můj kód](../debugger/just-my-code.md) je povolená. Ve spravovaném kódu jsou ve výchozím nastavení skryje neuživatelský kód snímků. Zobrazí se následující zápis místo snímků neuživatelský kód:
+
+`[<External Code>]`
+
 ## <a name="bkmk_switch"></a> Přepnout na jiný rámec zásobníku (Změna kontextu ladicího programu)
-  
-1.  V **zásobníkem volání** okna, klikněte pravým tlačítkem na rámce zásobníku, jejíž kód a data, která chcete zobrazit.
 
-    Nebo můžete dvakrát kliknout na snímek ve **zásobníkem volání** okna přepnout do vybraného rámce. 
-  
-2.  Vyberte **přepnout na rámce**.  
-  
-     Zelenou šipku s složené poškozené databáze se zobrazí vedle rámce zásobníku, který jste vybrali. Provádění ukazatel zůstane v původní rámce, který stále označeno žlutý šipku. Pokud vyberete **krok** nebo **pokračovat** z **ladění** nabídce spuštění bude pokračovat v původní rámečkem, není rámečku, jste vybrali.  
-  
-## <a name="view-the-source-code-for-a-function-on-the-call-stack"></a>Zobrazení zdrojového kódu pro funkce v zásobníku volání  
-  
--   V **zásobníkem volání** okna, klikněte pravým tlačítkem na funkce, jejichž zdrojový kód je chcete zobrazit a vybrat **přejděte do zdrojového kódu**.
+1.  V **zásobník volání** okna, klikněte pravým tlačítkem na snímek zásobníku, jehož kód a data, která chcete zobrazit.
 
-## <a name="run-to-a-specific-function-from-the-call-stack-window"></a>Spustit konkrétní funkce v okně zásobník volání  
-  
--  V **zásobníkem volání** okně vyberte funkce, klikněte pravým tlačítkem myši a zvolte **spustit ke kurzoru**.  
-  
-## <a name="set-a-breakpoint-on-the-exit-point-of-a-function-call"></a>Nastavit zarážky místo přechodu volání funkce  
-  
--   V tématu [nastavit zarážky v zásobníku volání funkce](../debugger/using-breakpoints.md#BKMK_Set_a_breakpoint_in_the_call_stack_window).
+    Nebo můžete dvakrát kliknout na snímek v **zásobník volání** okna přepnout na rámec.
 
-## <a name="display-calls-to-or-from-another-thread"></a>Zobrazení volání do nebo z jiného vlákna  
-  
--   Klikněte pravým tlačítkem myši **zásobníkem volání** a vyberte **zahrnout další vláken To/From volání**.   
-  
-## <a name="visually-trace-the-call-stack"></a>Vizuální sledování zásobníku volání  
+2.  Vyberte **přepnout na rámec**.
 
-Pokud používáte Visual Studio Enterprise (pouze), můžete zobrazit map kódu pro zásobníku volání při ladění.
+     Zelená šipka s vlnitým ocáskem se objeví vedle snímku zásobníku, který jste vybrali. Spuštění ukazatele zůstane v původním rámci stále označeno žlutou šipkou. Pokud vyberete **krok** nebo **pokračovat** z **ladění** nabídky, spuštění bude pokračovat v původním rámci, ne ve vámi vybraném.
 
-- V **zásobníkem volání** okno, otevřete v místní nabídce. Zvolte **zásobník volání zobrazit na mapě kódu**. (Klávesové: **CTRL** + **SHIFT** + **`**)  
-  
-    Podrobné informace najdete v tématu [mapování metod v zásobníku volání při ladění](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md).
+## <a name="view-the-source-code-for-a-function-on-the-call-stack"></a>Zobrazit zdrojový kód pro funkci v zásobníku volání
 
-![Zásobník volání zobrazit na mapě kódu](../debugger/media/dbg_basics_show_call_stack_on_code_map.gif "ShowCallStackOnCodeMap")
-  
-## <a name="view-the-disassembly-code-for-a-function-on-the-call-stack"></a>Zobrazení zpětného překladu kódu pro funkce v zásobníku volání  
-  
--   V **zásobníkem volání** okna, klikněte pravým tlačítkem na funkce, jejíž zpětný překlad kódu je chcete zobrazit a vybrat **přejděte k zpětný překlad**.    
+-   V **zásobník volání** okna, klikněte pravým tlačítkem na funkci, jejíž zdrojový kód chcete zobrazit a vybrat **přejít ke zdrojovému kódu**.
 
-## <a name="change-the-optional-information-displayed"></a>Změnit zobrazené volitelné informace  
-  
--   Klikněte pravým tlačítkem myši **zásobníkem volání** okno a sadu zrušením zaškrtnutí **zobrazit \< ***informace, které chcete***>**.  
-  
-## <a name="bkmk_symbols"></a> Zatížení symboly pro modul
-V **zásobníkem volání** okně můžete načíst symboly pro kód, který momentálně nemá načíst symboly ladění. Tyto symboly může být rozhraní .NET Framework nebo symboly systému stáhli ze serverů Microsoft veřejné symbol nebo symboly v cestě symbol v počítači, který ladíte.  
-  
-V tématu [zadání symbolu (.pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)  
-  
-### <a name="to-load-symbols"></a>Načtení symbolů  
-  
-1.  V **zásobníkem volání** okna, klikněte pravým tlačítkem na rámec zásobníku pro symboly, které nebyly načteny. Rámečku bude nedostupné.  
-  
-2.  Přejděte na příkaz **zatížení symboly** a pak klikněte na **servery symbolů Microsoft** (Pokud je k dispozici) nebo vyhledejte cestu symbol.  
-  
-### <a name="to-set-the-symbol-path"></a>Nastavení cesty symbol  
-  
-1.  V **zásobníkem volání** okně zvolte **Symbol nastavení** z místní nabídky.  
-  
-     **Možnosti** otevře se dialogové okno a **symboly** zobrazí se stránka.  
-  
-2.  Klikněte na tlačítko **symbolů nastavení**.  
-  
-3.  V **možnosti** dialogové okno pole, klikněte na ikonu složky.  
-  
-     V **symbolů umístění souborů (.pdb)** pole, zobrazí se kurzoru.  
-  
-4.  Zadejte název cesty adresáře na umístění symbolu v počítači, který ladíte. Pro místní a vzdálené ladění, jde o cestu v místním počítači.
-  
-5.  Klikněte na tlačítko **OK** zavřete **možnosti** dialogové okno.  
-  
-## <a name="see-also"></a>Viz také  
- [Smíšený kód a chybějící informace v okně zásobník volání](../debugger/mixed-code-and-missing-information-in-the-call-stack-window.md)  
- [Zobrazení dat v ladicím programu](../debugger/viewing-data-in-the-debugger.md)   
- [Zadání symbolu (.pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)   
- [Použití zarážek](../debugger/using-breakpoints.md)
+## <a name="run-to-a-specific-function-from-the-call-stack-window"></a>Spuštění specifické funkce z okna zásobník volání
+
+-  V **zásobník volání** okna, vyberte funkci, klepněte pravým tlačítkem myši a klikněte na tlačítko **spustit ke kurzoru**.
+
+## <a name="set-a-breakpoint-on-the-exit-point-of-a-function-call"></a>Nastavení zarážky ve výstupním bodě volání funkce
+
+-   Zobrazit [nastavení zarážky na volání funkce zásobníku](../debugger/using-breakpoints.md#BKMK_Set_a_breakpoint_in_the_call_stack_window).
+
+## <a name="display-calls-to-or-from-another-thread"></a>Zobrazení volání do nebo z jiného vlákna
+
+-   Klikněte pravým tlačítkem myši **zásobník volání** okna a vyberte **zahrnout hovory do/z jiných podprocesů**.
+
+## <a name="visually-trace-the-call-stack"></a>Vizuální trasování zásobníku volání
+
+V sadě Visual Studio Enterprise (pouze) můžete zobrazit map kódu pro zásobníku volání při ladění.
+
+- V **zásobník volání** okno, otevřete místní nabídku. Zvolte **zobrazit zásobník volání na mapě kódu** (**Ctrl** + **Shift** + **`**).
+
+    Další informace najdete v tématu [mapování metod v zásobníku volání při ladění](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md).
+
+![Zobrazit zásobník volání na mapě kódu](../debugger/media/dbg_basics_show_call_stack_on_code_map.gif "ShowCallStackOnCodeMap")
+
+## <a name="view-the-disassembly-code-for-a-function-on-the-call-stack-c-c-visual-basic-f"></a>Zobrazení zpětného překladu funkce v zásobníku volání (C#, C++, Visual Basic, F#)
+
+-   V **zásobník volání** okna, klikněte pravým tlačítkem na funkci, jejíž zpětně přeložený kód chcete zobrazit a vybrat **přejít na zpětný překlad**.
+
+## <a name="change-the-optional-information-displayed"></a>Změna zobrazených volitelných informací
+
+-   Klikněte pravým tlačítkem **zásobník volání** okna a nastavení nebo vymazat **zobrazit \<**  _informace, které mají_ **>**.
+
+## <a name="bkmk_symbols"></a> Načtení symbolů pro modul (C#, C++, Visual Basic, F#)
+
+V **zásobník volání** okno, které můžete načíst symboly ladění pro kód, který nemá aktuálně načtené symboly. Tyto symboly mohou být v rozhraní .NET Framework nebo systémové symboly stažené ze serverů Microsoft veřejnými symboly nebo symboly v symbolické cestě v počítači, který ladíte.
+
+Zobrazit [zadání symbolu (.pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
+
+### <a name="to-load-symbols"></a>Načtení symbolů
+
+1.  V **zásobník volání** okna, klikněte pravým tlačítkem na rámce zásobníku pro symboly, které nejsou načtené. Snímek bude nepřístupný.
+
+2.  Přejděte na **načíst symboly** a pak vyberte **Microsoft Symbol Servers** (Pokud je k dispozici), nebo vyhledejte cestu k symbolu.
+
+### <a name="to-set-the-symbol-path"></a>Chcete-li nastavit cestu k symbolu
+
+1.  V **zásobník volání** okně zvolte **nastavení symbolu** z místní nabídky.
+
+     **Možnosti** zobrazí se dialogové okno a **symboly** zobrazí se stránka.
+
+2.  Vyberte **Symbol nastavení**.
+
+3.  V **možnosti** dialogovém okně klikněte na ikonu složky.
+
+     V **Symbol umístění souborů (.pdb)** pole, se zobrazí kurzor.
+
+4.  Zadejte cestu adresáře do umístění symbolu v počítači, který ladíte. Pro místní a vzdálené ladění, je cesta k místnímu počítači.
+
+5.  Vyberte **OK** zavřete **možnosti** dialogové okno.
+
+## <a name="see-also"></a>Viz také:
+
+- [Smíšený kód a chybějící informace v okně Zásobník volání](../debugger/mixed-code-and-missing-information-in-the-call-stack-window.md)
+- [Zobrazení dat v ladicím programu](../debugger/viewing-data-in-the-debugger.md)
+- [Zadání symbolu (.pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)
+- [Použití zarážek](../debugger/using-breakpoints.md)

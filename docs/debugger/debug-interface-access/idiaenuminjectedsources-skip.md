@@ -1,5 +1,5 @@
 ---
-title: Idiaenuminjectedsources::Skip – | Microsoft Docs
+title: Idiaenuminjectedsources::Skip – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 038510fbd89d58c0d122457828c2f130df39173e
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 3ed94c7e70d3d4800f8662b35bd13bc351d5bc83
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49863799"
 ---
 # <a name="idiaenuminjectedsourcesskip"></a>IDiaEnumInjectedSources::Skip
-Přeskočí zadaný počet vloženého zdroje v posloupnosti výčtu.  
+Vynechá zadaný počet vloženého zdroje v sekvenci výčtu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,10 +34,10 @@ HRESULT Skip (
   
 #### <a name="parameters"></a>Parametry  
  celt  
- [v] Počet vloženého zdroje v pořadí výčtu tak, aby přeskočil.  
+ [in] Počet vloženého zdroje v pořadí výčtu pro přeskočení.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` Pokud neexistují žádné další vloženého zdroje tak, aby přeskočil.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` Pokud neexistují žádné další vloženého zdroje pro přeskočení.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md)

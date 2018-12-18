@@ -13,16 +13,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 691723e27cc2927733fe82aa1f79e9fd1d9d663d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 21df85a54071a6fffe03483856c55194af08a2da
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34263962"
 ---
-# <a name="customizing-performance-tools-report-views"></a>Zobrazení sestav nástrojů pro přizpůsobení výkonu
+# <a name="customize-performance-tools-report-views"></a>Přizpůsobení zobrazení sestav nástrojů výkonu
 Tato část obsahuje informace o přizpůsobení sestav, které se generují s [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nástrojích pro profilaci.  
   
-## <a name="common-tasks"></a>Obecné úlohy  
+## <a name="common-tasks"></a>Běžné úlohy
   
 |Úloha|Související obsah|  
 |----------|---------------------|  
@@ -35,4 +36,4 @@ Tato část obsahuje informace o přizpůsobení sestav, které se generují s [
  Popisuje zobrazení, která můžete použít k analýze dat profilování.  
   
 ## <a name="see-also"></a>Viz také  
- [Analýza výkonu nástrojů pro Data](../profiling/analyzing-performance-tools-data.md)
+ [Analýza dat nástrojů pro měření výkonu](../profiling/analyzing-performance-tools-data.md)

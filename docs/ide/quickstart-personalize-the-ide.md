@@ -1,51 +1,51 @@
 ---
-title: Nastavit motiv barev a písem v sadě Visual Studio | Microsoft Docs
-ms.custom: ''
+title: Sada barevný motiv a písem
 ms.date: 11/20/2017
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: quickstart
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7024213ca383ee5934df1d413501065b383f7981
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 511c9d44e9aac49c0150be5a13651e5368e10eaf
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53159409"
 ---
-# <a name="quickstart-personalize-the-visual-studio-ide-and-editor"></a>Rychlý úvod: Přizpůsobení Editor a Visual Studio – sada IDE
+# <a name="quickstart-personalize-the-visual-studio-ide-and-editor"></a>Rychlý start: Přizpůsobení integrovaného vývojového prostředí sady Visual Studio a Editor
 
-V tento rychlý start 5 až 10 minut jsme budete přizpůsobit barvu motivu sady Visual Studio a dvě barvy textu v textovém editoru.
+V tomto rychlém startu 5 až 10 minut přizpůsobíme barevný motiv sady Visual Studio tak, že vyberete tmavý motiv. Přizpůsobíme také barvy pro dva různé typy textu v textovém editoru.
 
-Pokud jste ještě nenainstalovali Visual Studio, přejděte k [Visual Studio stáhne](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) stránky instalaci zdarma.
+Pokud jste ještě nenainstalovali aplikaci Visual Studio, přejděte [soubory ke stažení Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) stránku a nainstalovat zdarma.
 
-## <a name="set-the-color-theme"></a>Nastavit Barva motivu
+## <a name="set-the-color-theme"></a>Nastavit barevný motiv
 
-Výchozí motiv barvu pro Visual Studio 2017 nazývá **Blue**. Nyní změníme jeho **tmavý**.
+Výchozí barevný motiv uživatelského rozhraní Visual Studio 2017 se nazývá **modré**. Změňme ji na **tmavě**.
 
-1. Na řádku nabídek zvolte **nástroje** > **možnosti**.
+1. Na panelu nabídek, které, jako je na řádku nabídek **souboru** a **upravit**, zvolte **nástroje** > **možnosti**.
 
-1. Na **prostředí** > **Obecné** stránka Možnosti, změny **barevný motiv** výběr **tmavý**a potom vyberte **OK**.
+1. Na **prostředí** > **Obecné** stránka Možnosti, změna **barevný motiv** výběru **tmavě**a klikněte na tlačítko **OK**.
 
-   Barva motivu pro celý IDE se změní na **tmavý**.
+   Barva motivu pro celý vývojové prostředí (IDE) sady Visual Studio se změní na **tmavě**.
 
-   ![VS v tmavý motiv](media/quickstart-personalize-dark-theme.png)
+   ![VS v tmavém motivu](media/quickstart-personalize-dark-theme.png)
 
 > [!TIP]
-> Můžete nainstalovat další předdefinované motivy nainstalováním **Visual Studio barvu motivu editoru** z [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor). Po instalaci tohoto nástroje se zobrazí další barevné motivy v rozevíracím seznamu Barva motivu.
+> Můžete nainstalovat další předdefinované motivy nainstalováním **Editor motivů sady Visual Studio** z [Visual Studio marketplace](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor). Po instalaci tohoto nástroje, další barevné motivy joinkind **barevný motiv** rozevíracího seznamu.
 
 ## <a name="change-text-color"></a>Změna barvy textu
 
-Nyní jsme budete přizpůsobit některé barvy textu pro Editor. První otevřete soubor XML a zobrazí se výchozí barvy.
+Nyní přizpůsobíme některé barvy textového editoru. Nejprve vytvoříme nový soubor XML, chcete-li zobrazit výchozí barvy.
 
-1. V řádku nabídek zvolte **soubor** > **nový** > **souboru...** .
+1. Na panelu nabídek zvolte **souboru** > **nový** > **souboru**.
 
-1. V **nový soubor** dialogovém **Obecné** kategorie, zvolte **souboru XML**a potom zvolte **otevřete**.
+1. V **nový soubor** dialogovém okně **Obecné** kategorie, zvolte **soubor XML**a klikněte na tlačítko **otevřít**.
 
-1. Vložte následující kód pod řádek, který obsahuje XML `<?xml version="1.0" encoding="utf-8"?>`.
+1. Vložte následující kód XML pod řádkem, který obsahuje `<?xml version="1.0" encoding="utf-8"?>`.
 
    ```xml
    <Catalog>
@@ -73,35 +73,31 @@ Nyní jsme budete přizpůsobit některé barvy textu pro Editor. První otevře
    </Catalog>
    ```
 
-   Všimněte si, že čísla řádků jsou tyrkysová modrou barvu a atributy xml světle modré barvy. Přidáme změnit barvu textu pro tyto položky.
+   Všimněte si, že jsou čísla řádku tyrkysová modrou barvu a atributy XML (například `id="bk101"`) jsou světle modrou barvou. Chceme změnit barvu textu pro tyto položky.
 
    ![Barvy písma souboru XML](media/quickstart-personalize-xml-file.png)
 
-1. Chcete-li otevřít **možnosti** dialogové okno Vyberte **nástroje** > **možnosti** z řádku nabídek.
+1. Chcete-li otevřít **možnosti** dialogového okna zvolte **nástroje** > **možnosti** z řádku nabídek.
 
-1. V části **prostředí**, vyberte **písma a barev** kategorie.
+1. V části **prostředí**, zvolte **písma a barvy** kategorie.
 
-   Všimněte si, že text v rámci **zobrazit nastavení pro** uvádí **textového editoru**&mdash;je to, co chceme. Může rozbalte rozbalovací seznam právě pro rozsáhlé seznamu míst, kde můžete přizpůsobit písma a barvy.
+   Všimněte si, že text pod **zobrazit nastavení pro** říká **textový Editor**&mdash;Toto je chceme. Rozbalte rozevíracího seznamu právě zobrazíte rozsáhlý seznam míst, kde můžete přizpůsobovat písma a barvy textu.
 
-1. Chcete-li změnit barvu textu čísla řádku, v **zobrazení položek** vyberte **číslo řádku**. V **popředí položky** vyberte **olivového**.
+1. Chcete-li změnit barvu textu čísla řádku, v **zobrazení položek** klikněte na položku **číslo řádku**. V **popředí položky** zvolte **Olivově**.
 
-   ![Dialogové okno Možnosti, kategorie písma a barev](media/quickstart-personalize-line-number-color.png)
+   ![Dialogové okno Možnosti, písma a barvy kategorie](media/quickstart-personalize-line-number-color.png)
 
-   Některé jazyky mají své vlastní konkrétní nastavení písma a barev. Pokud jste vývojář C++ a chcete změnit barvu použitou pro funkce, například můžete vyhledat **funkcí jazyka C++** v **zobrazení položek** seznamu.
+   Některé jazyky mají své vlastní zvláštní nastavení písma a barvy. Pokud jste vývojář C++ a chcete změnit barvu použitou pro funkce, například můžete vyhledat **funkcí jazyka C++** v **zobrazení položek** seznamu.
 
-1. Před jsme ukončit dialogové okno, můžeme také změnit barvu atributy XML. V **zobrazení položek** seznamu, přejděte dolů k položce **atribut XML** a vyberte ho. V **popředí položky** vyberte **vápna**. Zvolte **OK** naše výběr uložte a zavřete dialogové okno.
+1. Předtím, než jsme ukončit dialogové okno, můžeme také změnit barvu atributy ve formátu XML. V **zobrazení položek** seznamu, přejděte dolů k položce **atribut XML** a vyberte ji. V **popředí položky** zvolte **Limetkově**. Zvolte **OK** naše výběr uložte a zavřete dialogové okno.
 
-   Čísla řádků jsou nyní oliv barvy a atributy XML jasné, vápna zeleně. Pokud otevřete jiný typ souboru, např. soubor kódu C++ nebo C# uvidíte, že čísla řádků se zobrazí také v oliv barvu.
+   Čísla řádků jsou nyní oliv barvu a atributy XML jsou jasně, Limetkově zelená. Pokud otevřete jiný typ souboru, například soubor kódu jazyka C++ nebo C#, uvidíte, že čísla řádků se zobrazí také v oliv barvu.
 
    ![Soubor XML s novou barvy písma](media/quickstart-personalize-xml-file-new-colors.png)
 
-Jsme prozkoumali jenom několik způsobů přizpůsobení barev v sadě Visual Studio. Doufáme, že budete prozkoumat další možnosti přizpůsobení v **možnosti** dialogové okno, a vytvořit tak Visual Studio vlastní.
+Prozkoumali jsme pár způsoby přizpůsobení barev v sadě Visual Studio. Doufáme, že vám ukážeme si některé další možnosti vlastního nastavení v **možnosti** dialogové okno, aby skutečně sada Visual Studio vlastní.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Rychlý úvod: První pohled na Visual Studio IDE](../ide/quickstart-ide-orientation.md)
-- [Rychlý úvod: Kódování v editoru](../ide/quickstart-editor.md)
-- [Rychlý úvod: Projekty a řešení](../ide/quickstart-projects-solutions.md)
-- [Přizpůsobení sady Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md)
-- [Vlastní nastavení editoru](../ide/customizing-the-editor.md)
-- [Integrované vývojové prostředí sady Visual Studio – přehled](../ide/visual-studio-ide.md)
+- [Přizpůsobení editoru](../ide/customizing-the-editor.md)
+- [Integrované vývojové prostředí sady Visual Studio – přehled](../get-started/visual-studio-ide.md)

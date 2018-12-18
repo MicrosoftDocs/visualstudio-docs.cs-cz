@@ -1,5 +1,5 @@
 ---
-title: Idiaenumsegments::Item – | Microsoft Docs
+title: Idiaenumsegments::Item – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 64089113f0ad5b0e3fea0189a5dc3bf680213158
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 19d42e8bb2cdf950043b6a60a0db82706cf582ac
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49896403"
 ---
 # <a name="idiaenumsegmentsitem"></a>IDiaEnumSegments::Item
-Načte segment prostřednictvím indexu.  
+Segment, který načte prostřednictvím indexu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,13 +35,13 @@ HRESULT Item (
   
 #### <a name="parameters"></a>Parametry  
  index  
- [v] Z indexu [idiasegment –](../../debugger/debug-interface-access/idiasegment.md) objekt, který má být načtena. Index je v rozsahu od 0 do `count`-1, kde `count` je vrácený [idiaenumsegments::get_count –](../../debugger/debug-interface-access/idiaenumsegments-get-count.md) metoda.  
+ [in] Index o [idiasegment –](../../debugger/debug-interface-access/idiasegment.md) objekt, který se má načíst. Index je v rozsahu 0 až `count`-1, kde `count` je vrácený [idiaenumsegments::get_count –](../../debugger/debug-interface-access/idiaenumsegments-get-count.md) metody.  
   
  Segment  
- [out] Vrátí [idiasegment –](../../debugger/debug-interface-access/idiasegment.md) objekt reprezentující segmentu požadované.  
+ [out] Vrátí [idiasegment –](../../debugger/debug-interface-access/idiasegment.md) objekt představující požadovaný segment.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [Idiaenumsegments –](../../debugger/debug-interface-access/idiaenumsegments.md)   

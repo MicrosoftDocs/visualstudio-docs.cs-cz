@@ -1,5 +1,5 @@
 ---
-title: Idiastackwalkhelper::searchforreturnaddressstart – | Microsoft Docs
+title: Idiastackwalkhelper::searchforreturnaddressstart – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b92068c935c90e6cfe278b5f07a995c941b8a89
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 016f2e3ab816b7def9aa0ef1e40ef5727063eb25
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49895766"
 ---
 # <a name="idiastackwalkhelpersearchforreturnaddressstart"></a>IDiaStackWalkHelper::searchForReturnAddressStart
-Vyhledá zadaný zásobníku pro zpáteční adresu nebo blízko adresu zadaným zásobníkem.  
+Vyhledá zadaný zásobník snímků pro zpáteční adresu na nebo blízko ní adresu určeném zásobníku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,16 +36,16 @@ HRESULT searchForReturnAddressStart(
   
 #### <a name="parameters"></a>Parametry  
  `frame`  
- [v] [Idiaframedata –](../../debugger/debug-interface-access/idiaframedata.md) objekt, který představuje aktuální rámec zásobníku.  
+ [in] [Idiaframedata –](../../debugger/debug-interface-access/idiaframedata.md) objekt, který představuje aktuální rámec zásobníku.  
   
  `startAddress`  
- [v] Adresu virtuální paměti, od kterého má začít prohledávání.  
+ [in] Virtuální paměť adresa, ze kterého má být prohledávání.  
   
  `ReturnAddress`  
- [out] Vrátí funkci nejbližší zpáteční adresa pro `startAddress`.  
+ [out] Vrátí funkci nejbližší zpětná adresa `startAddress`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)   

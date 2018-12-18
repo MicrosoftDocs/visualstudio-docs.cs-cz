@@ -1,21 +1,24 @@
 ---
 layout: LandingPage
-author: jasongroce
-ms.author: apexprodleads
+title: Rozšiřitelnost sady Visual Studio
+description: Další informace o rozšiřitelnost sady Visual Studio.
+author: gregvanl
+ms.author: gregvanl
+ms.date: 10/31/2018
 ms.technology: vs-ide-sdk
 ms.topic: landing-page
-title: "Dokumentaci rozšíření sady Visual Studio | Microsoft Docs"
-description: "Další informace o rozšíření sady Visual Studio."
-ms.workload: apexprodleads
-ms.openlocfilehash: 4467608e843a1a917b34937ab3bd16931e76eea3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- apexprodleads
+ms.openlocfilehash: 7a86fb34eb054423127ba2f91b055585a20719b3
+ms.sourcegitcommit: 1df0ae74af03bcf0244129a29fd6bd605efc9f61
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50750742"
 ---
-# <a name="visual-studio-extensibility-documentation"></a>Dokumentaci rozšíření sady Visual Studio
+# <a name="visual-studio-extensibility-documentation"></a>Dokumentace k rozšiřitelnosti sady Visual Studio
 
-Visual Studio poskytuje mnoho možností rozšíření. Visual Studio, samostatně, můžete rozšířit přidat analyzátorů zdrojového kódu pro kompilátor "Roslyn", nebo dokonce vytvářet vlastní sady SDK.
+Sada Visual Studio poskytuje mnoho možností rozšíření. Můžete rozšířit Visual Studio jako takové, přidejte zdrojový kód analyzátory pro kompilátor "Roslyn", nebo dokonce vytvářet vlastní sady SDK.
 
 <ul class="panelContent cardsFTitle">
     <li>
@@ -47,7 +50,7 @@ Visual Studio poskytuje mnoho možností rozšíření. Visual Studio, samostatn
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Rozšiřitelnost rozhraní .NET kompilátoru platformy ("Roslyn")</h3>
+                        <h3>Sada .NET compiler Platform (&quot;Roslyn&quot;) rozšiřitelnosti</h3>
                     </div>
                 </div>
             </div>
@@ -65,7 +68,7 @@ Visual Studio poskytuje mnoho možností rozšíření. Visual Studio, samostatn
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Vytváření Software Development Kit</h3>
+                        <h3>Vytvoření sady SDK (Software Development Kit)</h3>
                     </div>
                 </div>
             </div>

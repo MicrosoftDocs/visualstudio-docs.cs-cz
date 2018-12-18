@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31471161"
 ---
 # <a name="font-dialog-box-microsoft-spy-help"></a>Dialogové okno písem (nápověda nástroje Microsoft Spy++)
 Pomocí tohoto dialogového okna konfigurace znak písmo použité v [zobrazení nástroje Spy ++](../debugger/spy-increment-views.md) okno. Chcete-li zobrazit tohoto dialogového okna, rozbalte **zobrazení** nabídky a zvolte **písma**.  

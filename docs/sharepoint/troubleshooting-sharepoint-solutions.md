@@ -1,5 +1,5 @@
 ---
-title: Řešení potíží s řešeními služby SharePoint | Microsoft Docs
+title: Řešení potíží s řešeními služby SharePoint | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 02/22/2017
 ms.technology:
@@ -19,23 +19,24 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ba8f84db31cbe41e8bd3f62a7806de0a6d2ea58e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f68f6e50be569df6130f7e6c6f3aa4bc7c107214
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51296044"
 ---
-# <a name="troubleshooting-sharepoint-solutions"></a>Řešení potíží s řešeními služby SharePoint
-  S těmito problémy nebo výstrahy může dojít při ladění řešení služby SharePoint pomocí [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ladicí program. Další informace najdete v tématu [ladění řešení pracovního postupu služby SharePoint 2007](http://msdn.microsoft.com/en-us/3a5392f3-66f3-48be-956e-02de23fa6247).
+# <a name="troubleshoot-sharepoint-solutions"></a>Řešení potíží s řešeními služby SharePoint
+  S těmito problémy nebo výstrah může dojít při ladění řešení služby SharePoint pomocí [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] ladicího programu. Další informace najdete v tématu [ladění řešení pracovního postupu služby SharePoint 2007](https://msdn.microsoft.com/3a5392f3-66f3-48be-956e-02de23fa6247).
   
-## <a name="token-restrictions-in-sandboxed-visual-web-parts"></a>Token omezení v v izolovaném prostoru Visual webové části  
- Visual webových částí v řešení v izolovaném prostoru nelze zpracovat standardní tokeny, jako je například $SPUrl, která podporuje modulu runtime služby SharePoint. V důsledku toho není vyřešen adresu URL, a pokud je na něj odkazovat přímo v elementu skriptu, například v následujícím příkladu nelze zobrazit náhled obsah v zobrazení návrhu v Návrháři součástí aplikace visual web:  
+## <a name="token-restrictions-in-sandboxed-visual-web-parts"></a>Omezení tokenu v izolovaném prostoru vizuální webové části
+ Vizuální webové části v řešení v izolovaném prostoru nemůže zpracovat standardní tokeny, například $SPUrl, který podporuje modul runtime služby SharePoint. V důsledku toho adresa URL není vyřešený a pokud se na ni můžete odkazovat přímo v prvku skriptu, jako v následujícím příkladu není možné zobrazit náhled obsahu v návrhovém zobrazení v Návrháři vizuální webové části:  
   
 ```xml  
 <script src="<% $SPUrl:~site/SiteAssets/ListOperations.js %>"></script>  
 ```  
   
- Chcete-li toto omezení obejít a vyřešit token, na ni odkazuje pomocí literály:  
+ Chcete-li toto omezení obejít a analyzovat token, na něj odkazovat pomocí literálů:  
   
 ```xml  
 <asp:literal ID="Literal1" runat="server" Text="<script src='" />  
@@ -43,39 +44,39 @@ ms.lasthandoff: 04/16/2018
 <asp:literal ID="Literal3" runat="server" Text="' type='text/javascript' ></script>" />  
 ```  
   
-## <a name="character-restrictions-in-names-of-projects-and-project-items"></a>Omezení znaků v názvech projektů a položek projektu  
- Názvy projektů a položek projektu může obsahovat pouze znaky, které jsou platné v cestě nasazení v produktu SharePoint 2010. Žádné jiné znaky jsou povoleny.  
+## <a name="character-restrictions-in-names-of-projects-and-project-items"></a>Omezení pro znaky v názvech projektů a položek projektu
+ Názvy projektů a položek projektu může obsahovat pouze znaky, které jsou platné v cestě nasazení v SharePoint 2010. Žádná ostatní znaky jsou povoleny.  
   
-### <a name="error-message"></a>Chybová zpráva  
+### <a name="error-message"></a>Chybová zpráva
  Chybová zpráva "Neplatné znaky".  
   
 ### <a name="resolution"></a>Rozlišení  
- Názvy projektů služby SharePoint a položky projektu použijte jen následující znaky:  
+ Názvy projektů služby SharePoint a položky projektu používejte pouze následující znaky:  
   
--   Alfanumerické znaky ASCII  
+- Alfanumerické znaky ASCII  
   
--   Místo  
+- Místo  
   
--   Tečka (.)  
+- Tečka (.)  
   
--   Čárka (,)  
+- Čárka (,)  
   
--   Podtržítko (_)  
+- Podtržítko (_)  
   
--   Pomlčky (-)  
+- Pomlčky (-)  
   
--   Zpětné lomítko (\\)  
+- Zpětné lomítko (\\)  
   
- Když na projekt je zabalen, pravidla ověřování ověří, že vlastnost Cesta nasazení pro každý soubor, který nasazujete obsahuje pouze tyto platné znaky.  
+  Když je zabalená do projektu, ověřovací pravidlo ověří, že vlastnost cesty nasazení pro každý soubor, který nasazujete obsahuje pouze tyto platné znaky.  
   
-## <a name="errors-when-creating-custom-fields"></a>Chyby při vytváření vlastní pole  
- V [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], vlastní pole jsou definovány v kódu XML. Pokud pole není definované nebo je odkazované ve formátu konkrétní, může dojít k chybám.  
+## <a name="errors-when-creating-custom-fields"></a>Chyby při vytváření vlastního pole
+ V [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], vlastní pole jsou definována ve formátu XML. Pokud pole nejsou definována nebo odkazována pomocí konkrétní formátu, může dojít k chybám.  
   
-### <a name="error-message"></a>Chybová zpráva  
+### <a name="error-message"></a>Chybová zpráva
  Chybová zpráva "Neplatné znaky" v době vytváření balíčků.  
   
 ### <a name="resolution"></a>Rozlišení  
- ID definice pole musí být identifikátor GUID obklopená složené závorky, jak ukazuje následující příklad:  
+ ID pro definici pole musí být identifikátor GUID uzavřeny ve složených závorkách, jako v následujícím příkladu:  
   
 ```xml  
 <Field ID="{5744d18c-305e-4632-8bd1-09d134f4830d}"   
@@ -86,7 +87,7 @@ ms.lasthandoff: 04/16/2018
 </Field>.  
 ```  
   
- Jak ukazuje následující příklad, odkaz na pole v typu obsahu musí být definován v prázdném prvku formátu (\<FieldRef / >), nikoli pomocí počáteční nebo koncové prvky (\<FieldRef >\</FieldRef >):  
+ Jak ukazuje následující příklad, odkazy na pole v typu obsahu musí být definován pomocí formátu prázdného elementu (\<FieldRef / >), nikoli pomocí elementů (\<FieldRef >\</FieldRef >):  
   
 ```xml  
 <FieldRef ID="{5744d18c-305e-4632-8bd1-09d134f4830d}"   
@@ -95,95 +96,95 @@ ms.lasthandoff: 04/16/2018
     Required="TRUE"/>  
 ```  
   
- Pokud zdroj XML pro pole je poškozený, není platný soubor XML nebo jádro vykazuje jinému problému, chyba "nelze analyzovat soubor" dojde.  
+ Chyba "nelze analyzovat soubor" nastane, pokud zdrojového kódu XML pro pole je poškozený, není platný soubor XML nebo nějaký jiný problém projevuje.  
   
-## <a name="new-non-english-site-definitions-do-not-appear-in-site-creation-page-after-deployment"></a>Nové definice jiných než anglických lokality nejsou uvedeny v stránku pro vytvoření webu po nasazení  
- Po vytvoření a nasazení definice webu pomocí jiné než anglické verzi [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] (to znamená, že verze v národním prostředí [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] než 1033), **SharePoint přizpůsobení** nezobrazujekarta**Výběr šablony** pole a novou šablonu lokality se nezobrazí v **nový web služby SharePoint** stránky.  
+## <a name="new-non-english-site-definitions-do-not-appear-in-site-creation-page-after-deployment"></a>Nové definice lokality jiné než anglické jazykové nezobrazí na stránce vytváření webu po nasazení
+ Po vytvoření a nasazení definice webu pomocí jiné než anglické jazykové verzi [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] (to znamená, že verzi s národním prostředím [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)] než 1033), **přizpůsobení Sharepointu** nezobrazujekarta**Výběr šablony** pole a nové šablony webu se nezobrazí v **novému Sharepointovému webu** stránky.  
   
-### <a name="error-message"></a>Chybová zpráva  
+### <a name="error-message"></a>Chybová zpráva
  Žádné  
   
 ### <a name="resolution"></a>Rozlišení  
- K tomuto problému dochází z důvodu nesprávné hodnoty v **cesta** vlastnost pro webtemp definice konfigurační soubor webu, jako je například webtemp_SiteDefinitionProject1.xml. V **cesta** vlastnost pro soubor webtemp, umístěná **umístění nasazení**, změňte 1033 na odpovídající národní prostředí [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)]. Například použijte japonské národní prostředí změňte hodnotu na 1041. Další informace najdete v tématu [Locale IDs Assigned přiřazené společností Microsoft](http://go.microsoft.com/fwlink/?LinkID=165561) na webu MSDN.  
+ K tomuto problému dochází kvůli nesprávné hodnotě v **cesta** vlastnost pro nastavení definice lokality webtemp soubor, třeba *webtemp_SiteDefinitionProject1.xml*. V **cesta** vlastnost souboru webtemp umístěna ve složce **umístění nasazení**, změňte 1033 na odpovídající národní prostředí [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)]. Například použití japonské národní prostředí změňte hodnotu na 1041. Další informace najdete v tématu [ID národního prostředí přiřazené společností Microsoft](http://go.microsoft.com/fwlink/?LinkID=165561).  
   
-## <a name="error-appears-when-a-workflow-project-is-deployed-on-a-clean-system"></a>Zobrazí se chyba při nasazení projektu Workflow vyčištění systému  
- K tomuto problému dochází, pokud nasazujete projekt pracovního postupu v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] vyčištění systému. Vyčistit systém je počítač, který se má nová instalace [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] a služby SharePoint, ale nejsou žádné projekty nasazené pracovního postupu.  
+## <a name="error-appears-when-a-workflow-project-is-deployed-on-a-clean-system"></a>Zobrazí se chyba při nasazení projektu pracovního postupu na vyčištění systému
+ K tomuto problému dochází, pokud provádíte nasazení projektu pracovního postupu v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] čisté systému. Vyčistit systém je počítač, který obsahuje novou instalaci [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] a SharePoint, ale žádné projekty nasazené pracovního postupu.  
   
-### <a name="error-message"></a>Chybová zpráva  
- Nelze najít seznamu služby SharePoint: historie pracovního postupu.  
+### <a name="error-message"></a>Chybová zpráva
+ Nejde najít seznamu služby SharePoint: historie pracovního postupu.  
   
 ### <a name="resolution"></a>Rozlišení  
- K této chybě dochází z důvodu chybějící seznamu historie pracovního postupu. Protože vývojového prostředí je systém čistá, jsou nasazeny žádné pracovní postupy a seznamu historie pracovního postupu dosud neexistuje. Chcete-li vyřešit tento problém, otevřete Průvodce pracovního postupu, což způsobí, že v seznamu historie pracovního postupu vytvořit.  
+ K této chybě dochází z důvodu chybějící seznamu historie pracovního postupu. Vzhledem k tomu, že vývojové prostředí je vyčistit systém, jsou nasazené žádné pracovní postupy a seznamu historie pracovního postupu dosud neexistuje. Pokud chcete tento problém vyřešit, otevřete pracovní postup průvodce, který způsobí, že se seznamu historie pracovního postupu chcete vytvořit.  
   
-##### <a name="to-reenter-the-workflow-wizard"></a>Opětovné zadání Průvodce pracovního postupu  
+##### <a name="to-reenter-the-workflow-wizard"></a>Chcete znovu zadat pracovní postup Průvodce  
   
-1.  V **Průzkumníku**, vyberte uzel pracovního postupu.  
+1.  V **Průzkumníka řešení**, zvolte uzel pracovní postup.  
   
-2.  V **vlastnosti** okně zvolte tlačítko se třemi tečkami (...) na všechny vlastnosti, který má tlačítko se třemi tečkami.  
+2.  V **vlastnosti** okna, klikněte na tlačítko tří teček (...) na jakákoli vlastnost, která obsahuje tlačítko se třemi tečkami.  
   
-## <a name="user-must-refresh-application-page-in-browser-while-debugging-to-view-updated-image"></a>Uživatel musí aktualizovat stránku aplikace v prohlížeči při ladění do zobrazení aktualizované bitové kopie  
- Pokud jsou ladění řešení služby SharePoint, která obsahuje stránky aplikace s ovládacím prvkem, které zobrazí obrázek, například [!INCLUDE[TLA2#tla_html](../sharepoint/includes/tla2sharptla-html-md.md)] vzhled obrázku, je nutné aktualizovat stránku v prohlížeči zobrazit změny, které byly provedeny do bitové kopie.  
+## <a name="user-must-refresh-application-page-in-browser-while-debugging-to-view-updated-image"></a>Uživatel musí aktualizovat stránku aplikace v prohlížeči při ladění, chcete-li zobrazit aktualizovanou bitovou kopii
+ Pokud ladíte řešení služby SharePoint, která obsahuje stránku aplikace s ovládacím prvkem, který zobrazuje obrázek, například [!INCLUDE[TLA2#tla_html](../sharepoint/includes/tla2sharptla-html-md.md)] ovládací prvek obrázku, je nutné aktualizovat stránku v prohlížeči zobrazit všechny změny, které byly provedeny do bitové kopie.  
   
-## <a name="error-the-site-location-is-not-valid"></a>Chyba: Umístění lokality není platný  
- Tomuto problému může dojít, pokud [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)] není nainstalována. Může také nastat, pokud nemáte přístup správce k webu SharePoint, který je uveden v **Průvodce vlastním nastavením SharePoint**.  
+## <a name="error-the-site-location-is-not-valid"></a>Chyba: Umístění webu je neplatný
+ Tento problém může nastat, pokud [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)] není nainstalována. Může také dojít, pokud nemáte přístup správce k webu SharePoint, který je zadán v **Průvodce přizpůsobením SharePoint**.  
   
-### <a name="error-message"></a>Chybová zpráva  
+### <a name="error-message"></a>Chybová zpráva
   
--   Umístění webů služby SharePoint není platný.  
+-   Umístění webu služby SharePoint není platný.  
   
 ### <a name="resolution"></a>Rozlišení  
   
 -   Nainstalujte [!INCLUDE[moss_14_short](../sharepoint/includes/moss-14-short-md.md)].  
   
--   Ujistěte se, že máte přístup správce k webu SharePoint. Další informace najdete v tématu [!INCLUDE[TLA2#tla_office](../sharepoint/includes/tla2sharptla-office-md.md)] Online článku [udělit přístup k portálu](http://go.microsoft.com/fwlink/?LinkId=98310).  
+-   Ujistěte se, že máte přístup správce k webu SharePoint. Další informace najdete v tématu [!INCLUDE[TLA2#tla_office](../sharepoint/includes/tla2sharptla-office-md.md)] Online článku [přiřadit nebo odebrat správce aplikací služeb v produktu SharePoint Server](https://docs.microsoft.com/sharepoint/administration/assign-or-remove-administrators-of-service-applications).  
   
-## <a name="site-deletion-web-event-does-not-occur-in-event-receiver-project"></a>Lokality odstranění webové události nedojde v projektu příjemce událostí  
- Když vytvoříte projekt příjemce událostí a vybrat určité události Web, jako "lokality se odstraňuje", dojde k nikdy události.  
+## <a name="site-deletion-web-event-does-not-occur-in-event-receiver-project"></a>Lokality odstranění webové události nedochází v projektu příjemce událostí
+ Když vytvoříte projekt příjemce událostí a výběru určitých webových událostí jako "Web se odstraňuje", události se nikdy neprovádí.  
   
-### <a name="error-message"></a>Chybová zpráva  
+### <a name="error-message"></a>Chybová zpráva
  Žádné  
   
 ### <a name="resolution"></a>Rozlišení  
- K tomuto problému dochází, protože obor funkce musí být "Server" pro zpracování událostí na úrovni lokality, ale výchozí obor funkcí pro projekty přijímač událostí je "Web". Jsou události webové vliv:  
+ K tomuto problému dochází, protože obor funkcí musí být "Web" pro zpracování událostí na úrovni webu, ale výchozí obor funkce pro projekty přijímač událostí je "Web". Vliv na webové události jsou:  
   
--   Lokality, která má být odstraněn (WebDeleting)  
+- Web se odstraní (WebDeleting)  
   
--   Byla odstraněna lokality (WebDeleted)  
+- Byl odstraněn web (WebDeleted)  
   
--   Lokality se přesunout (WebMoving)  
+- Web se přesunout (WebMoving)  
   
--   Byl přesunut lokality (WebMoved)  
+- Byl přesunut web (WebMoved)  
   
- Chcete-li problém vyřešit, změňte oboru funkce příjemce událostí následujícím způsobem.  
+  Chcete-li vyřešit tento problém, Změna oboru funkce příjemce událostí následujícím způsobem.  
   
-##### <a name="to-change-the-feature-scope-of-the-event-receiver"></a>Chcete-li změnit obor funkcí přijímače událostí  
+##### <a name="to-change-the-feature-scope-of-the-event-receiver"></a>Chcete-li změnit obor funkcí příjemce událostí  
   
-1.  V **Průzkumníku řešení**, otevřete soubor .feature příjemce událostí ve **funkce Návrhář** dvojitým kliknutím na soubor nebo otevírání jeho místní nabídky a pak vyberete **otevřete**.  
+1.  V **Průzkumníku řešení**, otevřete příjemce událostí *.feature* soubor **návrháře funkcí** dvojitým kliknutím na soubor nebo otevřením jeho místní nabídky a pak Výběr **otevřít**.  
   
-2.  Vyberte šipku vedle **oboru**a potom zvolte **lokality** v seznamu, který se zobrazí.  
+2.  Klikněte na šipku vedle položky **oboru**a klikněte na tlačítko **lokality** v seznamu, který se zobrazí.  
   
-## <a name="deployment-error-appears-after-the-name-of-an-identifier-in-a-business-data-connectivity-model-project-is-changed"></a>Chyba nasazení se zobrazí po změně názvu identifikátoru v projektu modelu připojení obchodních dat  
- K tomuto problému dochází, pokud změníte název identifikátor entity v modelu služby Připojení obchodních dat (BDC) a potom se pokusíte nasazení řešení.  
+## <a name="deployment-error-appears-after-the-name-of-an-identifier-in-a-business-data-connectivity-model-project-is-changed"></a>Po změně názvu identifikátoru v projektu model připojení obchodních dat se zobrazí chyba nasazení
+ K tomuto problému dochází, pokud změníte název identifikátoru entity v modelu služby Připojení obchodních dat (BDC) a potom se pokuste nasazení řešení.  
   
-### <a name="error-messages"></a>Chybové zprávy  
+### <a name="error-messages"></a>Chybové zprávy
   
--   \<*Název modelu*> má následující chyby aktivace externí obsah...  
+-   \<*Název modelu*> má následující aktivační chyby externího typu obsahu...  
   
--   IMetadataObject s názvem "\<*název modelu*> se nachází hodnota pole"název", který je duplikována...  
+-   Rozhraní IMetadataObject s názvem "\<*název modelu*>" má hodnotu v poli "name", který je duplicitní...  
   
 ### <a name="resolution"></a>Rozlišení  
- Chcete-li tento problém vyřešit, odstraňte ručně modelu a znovu nasaďte řešení.  Model můžete odstranit pomocí některé z následujících nástrojů:  
+ Chcete-li tento problém vyřešit, odstraňte ručně modelu a pak nasazení řešení.  Model můžete odstranit pomocí některé z následujících nástrojů:  
   
--   Centrální správa SharePoint 2010. Další informace najdete v tématu [správu modelu služby BDC](http://go.microsoft.com/fwlink/?LinkID=181472) na webu Microsoft TechNet Web.  
+-   Centrální správy služby SharePoint 2010. Další informace najdete v tématu [správy modelu služby BDC](http://go.microsoft.com/fwlink/?LinkID=181472) na webové stránce Microsoft TechNet.  
   
--   Prostředí Windows PowerShell. Odstraněním modelu zadáním následujícího příkazu na příkazovém řádku: **odebrat SPBusinessDataCatalogModel**. Další informace najdete v tématu [obecné rutiny (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkID=182375) na webu Microsoft TechNet Web.  
+-   Prostředí Windows PowerShell. Můžete odstranit model zadáním následujícího příkazu na příkazovém řádku: **odebrat SPBusinessDataCatalogModel**. Další informace najdete v tématu [obecné rutiny (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkID=182375) na webové stránce Microsoft TechNet.  
   
-## <a name="an-error-appears-when-you-try-to-view-a-visual-web-part-in-sharepoint"></a>Objeví se chyba při pokusu o zobrazení Visual webové části služby SharePoint  
- K tomuto problému dochází při **cesta** vlastnost uživatelského ovládacího prvku nezačíná řetězec "CONTROLTEMPLATES\\".  
+## <a name="an-error-appears-when-you-try-to-view-a-visual-web-part-in-sharepoint"></a>Objeví se chyba při pokusu o zobrazení vizuální webové části služby SharePoint
+ K tomuto problému dochází při **cesta** vlastnosti uživatelského ovládacího prvku nezačíná řetězcem "CONTROLTEMPLATES\\".  
   
-### <a name="error-messages"></a>Chybové zprávy  
+### <a name="error-messages"></a>Chybové zprávy
   
--   Soubor ' /_CONTROLTEMPLATES/*\<název projektu >*/*\<název webové části >*/*\<uživatelský ovládací prvek název >*.ascx "neexistuje.  
+-   Soubor "/_CONTROLTEMPLATES/*\<název projektu >*/*\<název webové části >*/*\<uživatelského ovládacího prvku název >*.ascx "neexistuje.  
   
 -   Chyba serveru v aplikaci '/'.  
   
@@ -191,95 +192,95 @@ ms.lasthandoff: 04/16/2018
   
 ##### <a name="to-resolve-this-issue"></a>Chcete-li vyřešit tento problém  
   
-1.  V **Průzkumníku**, vyberte soubor uživatelského ovládacího prvku, jehož příponu názvu souboru je .ascx.  
+1.  V **Průzkumníka řešení**, zvolte souboru uživatelského ovládacího prvku, jejichž přípona názvu souboru je *.ascx*.  
   
-2.  Na řádku nabídek zvolte **zobrazení**, **vlastnosti – okno**.  
+2.  V panelu nabídky zvolte **zobrazení** > **okno vlastností**.  
   
-3.  V **vlastnosti** okno, rozbalte **umístění nasazení** uzlu.  
+3.  V **vlastnosti** okna, rozbalte **umístění nasazení** uzlu.  
   
 4.  Ujistěte se, že hodnota **cesta** vlastnost začíná řetězcem "CONTROLTEMPLATES\\".  
   
-## <a name="error-appears-when-an-imported-reusable-workflow-that-contains-a-task-form-field-is-run"></a>Zobrazí se chyba při spuštění importované opakovaně použitelného pracovního postupu, která obsahuje pole formuláře úloh  
- K tomuto problému dochází, pokud provedete import pracovního postupu, který obsahuje úloh formulář, který obsahuje pole a pak spusťte nový pracovní postup ve stejném systému, ze kterého jste importovali.  
+## <a name="error-appears-when-an-imported-reusable-workflow-that-contains-a-task-form-field-is-run"></a>Chyba se zobrazí při spuštění importované opakovaně použitelného pracovního postupu, obsahující pole formuláře úkolu.
+ K tomuto problému dochází, pokud provedete import pracovní postup, který obsahuje formulář úkol, který obsahuje pole a pak spusťte nový pracovní postup ve stejném systému, ze kterého jste ho naimportovali.  
   
-### <a name="error-message"></a>Chybová zpráva  
- V kroku nasazení 'aktivovat funkce došlo k chybě: pole s Id [*Guid*] definovaný ve funkci [*Guid*] nebyl nalezen v aktuální kolekci webů nebo v lokalitě.  
-  
-### <a name="resolution"></a>Rozlišení  
- Tato chyba je výsledek kolizí ID pole, které dojít, protože pracovní postup importu opakovaně použitelného projektu v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] nezmění pole formuláře úkolů ID. Pokud nasadíte pracovním postupu importované na stejném serveru, která obsahuje původní pracovního postupu, dojde k pole ID kolizí.  
-  
- Chcete-li vyřešit tento problém, pomocí funkce Najít a nahradit Chcete-li změnit hodnotu atributu ID pole ve všech soubory importované pracovního postupu.  
-  
-## <a name="error-appears-when-a-renamed-imported-list-instance-is-run"></a>Chyba se zobrazí, když přejmenovat importovat, že je spuštěna Instance seznamu  
- K tomuto problému dochází, pokud přejmenovat importovanou seznamu instance a spustíte ho v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
-  
-### <a name="error-message"></a>Chybová zpráva  
- Chyba sestavení: došlo k chybě v kroku nasazení 'aktivovat funkce: soubor Template\Features\\[*Importovat projekt**funkce**název*] \Files\Lists\\[*staré ** název seznamu*] \Schema.xml neexistuje.  
+### <a name="error-message"></a>Chybová zpráva
+ V kroku nasazení 'Aktivace funkce' došlo k chybě: pole s Id [*Guid*] definované ve funkci [*Guid*] nebyla nalezena v aktuální kolekci webů nebo v lokalitě.  
   
 ### <a name="resolution"></a>Rozlišení  
- Při importu seznamu instance atributu s názvem CustomSchema se přidá do souboru Elements.xml instance seznamu. Elements.XML obsahuje cestu vlastní schema.xml pro instanci seznamu. Pokud přejmenujete instanci seznamu v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], cesta nasazení pro vlastní schema.xml změny, ale cesta hodnota atributu CustomSchema neaktualizuje. Instance seznamu v důsledku toho nemůže najít soubor schema.xml v původní cestě, která je určené atributem CustomSchema, pokud je zapnuta.  
+ Tato chyba je výsledek kolizí pole ID, které způsobeny tím, že Import opakovaně použitelných pracovních postupů projekt [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] nedojde ke změně pole formuláře úkolu ID. Pokud provádíte nasazení importovaných pracovních postupů na stejném serveru, který obsahuje původní pracovního postupu, dojde k kolize ID pole.  
   
- Chcete-li tento problém vyřešit, aktualizujte cestu nasazení umístění souboru schema.xml do atribut CustomSchema.  
+ Chcete-li vyřešit tento problém, použijte funkci Najít a nahradit Chcete-li změnit hodnotu atributu ID pole ve všech souborech importovaných pracovních postupů.  
   
-## <a name="sharepoint-debugging-session-terminated-by-iis"></a>SharePoint ladicí relace ukončen službou IIS.  
- K tomuto problému dochází, pokud jste nastavili zarážky [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] řešení služby SharePoint, zvolte klávesy F5 spusťte ji a potom zůstat na zarážce déle než 90 sekund.  
+## <a name="error-appears-when-a-renamed-imported-list-instance-is-run"></a>Zobrazí se chyba při importu byl přejmenován, že je spuštěna instance seznamu
+ K tomuto problému dochází, je-li přejmenovat instance importované seznamu a pak ho spusťte [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
   
-### <a name="error-message"></a>Chybová zpráva  
- Procesu webového serveru, který byl právě laděn byla ukončena Internetové informační služby (IIS). Tento problém se můžete vyhnout tak, že nakonfigurujete nastavení ping fond aplikací ve službě IIS. V tématu nápovědy pro další podrobnosti.  
+### <a name="error-message"></a>Chybová zpráva
+ Chyba sestavení: v kroku nasazení 'Aktivace funkce' došlo k chybě: soubor Template\Features\\[*Importovat projekt*<em>funkce</em>*název*] \Files\Lists \\[*staré*<em>název seznamu</em>] \Schema.xml neexistuje.  
   
 ### <a name="resolution"></a>Rozlišení  
- Ve výchozím nastavení fond aplikací služby IIS čeká 90 sekund pro aplikaci reagovat předtím, než ho ukončí aplikaci. Tento proces se označuje jako "otestováním" aplikace. Chcete-li vyřešit tento problém, můžete prodloužit dobu čekání nebo vypnout aplikaci zcela otestováním.  
+ Při importu instance seznamu se atribut s názvem CustomSchema se přidá do souboru Elements.xml instanci seznamu. Elements.XML obsahuje cestu k vlastní schema.xml pro instanci seznamu. Pokud přejmenujete instance seznamu v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], se změní cesta pro vlastní schema.xml nasazení, ale cesta hodnota atributu CustomSchema je aktualizována. V důsledku toho nelze najít instanci seznamu *schema.xml* souboru v původní cestě, která je zadaná atributem CustomSchema, když je funkce aktivovaná.  
+  
+ Pokud chcete tento problém vyřešit, aktualizujte cestu umístění nasazení *schema.xml* souboru v atributu CustomSchema.  
+  
+## <a name="sharepoint-debugging-session-terminated-by-iis"></a>SharePoint ladicí relace ukončen službou IIS.
+ K tomuto problému dochází, pokud nastavíte zarážku [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] řešení služby SharePoint, zvolte **F5** klávesy spusťte ji a potom zůstat na zarážce delší než 90 sekund.  
+  
+### <a name="error-message"></a>Chybová zpráva
+ Byl ukončen proces webového serveru, který byl laděn Internetové informační služby (IIS). Je-li předejít tomuto problému, konfigurace nastavení příkazu ping fondu aplikací ve službě IIS. Najdete v nápovědě.  
+  
+### <a name="resolution"></a>Rozlišení  
+ Ve výchozím nastavení fond aplikací IIS čeká 90 sekund pro aplikaci reagovat dříve, než ho ukončí aplikaci. Tento proces se označuje jako "příkazy ping" aplikace. Pokud chcete tento problém vyřešit, můžete zvýšit dobu čekání nebo zakázat aplikaci zcela příkazu ping.  
   
 ##### <a name="to-access-the-iis-app-pool-settings"></a>Pro přístup k nastavení fondu aplikací služby IIS  
   
 1.  Otevřete Správce služby IIS.  
   
-2.  V **připojení** podokně rozbalte uzel serveru SharePoint a potom vyberte **fondy aplikací** uzlu.  
+2.  V **připojení** podokně rozbalte uzel serveru SharePoint a klikněte na tlačítko **fondy aplikací** uzlu.  
   
-3.  Na **fondy aplikací** vyberte fond aplikací služby SharePoint (obvykle "SharePoint - 80") a pak na **akce** podokně, vyberte **Upřesnit nastavení** odkaz.  
+3.  Na **fondy aplikací** zvolte fond aplikací služby SharePoint (obvykle "SharePoint - 80") a pak na **akce** podokně, vyberte **Upřesnit nastavení** odkaz.  
   
-4.  Pokud chcete zvýšit doba čekání před vypršením časového limitu služby IIS, změňte hodnotu **Ping maximální doba odezvy (sekundy)** na hodnotu, která je větší než 90 sekund.  
+4.  Pokud chcete zvýšit dobu čekání před vypršením časového limitu služby IIS, změňte hodnotu vlastnosti **maximální prodleva příkazu Ping (v sekundách)** na hodnotu, která je větší než 90 sekund.  
   
-5.  Pokud chcete zakázat službu IIS otestováním, nastavte **Ping povoleno** k **False**.  
+5.  Chcete-li zakázat příkazy ping služby IIS, nastavte **povolený příkaz Ping** k **False**.  
   
-## <a name="auto-retract-leaves-orphaned-list-instance-in-sharepoint"></a>Odvolat automaticky instanci nechá osamocené seznamu ve službě SharePoint  
- K tomuto problému dochází, pokud proveďte následující kroky.  
+## <a name="auto-retract-leaves-orphaned-list-instance-in-sharepoint"></a>Automatické odvolání opustí instance odděleného seznamu ve službě SharePoint
+ K tomuto problému dochází, pokud je provést následující kroky.  
   
-1.  Vytvoření definice seznamu, který má v seznamu instanci [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
+1.  Vytvoření definice seznamu, který má instance seznamu v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
   
-2.  Zvolte klávesu F5 a spusťte řešení.  
+2.  Zvolte **F5** spusťte řešení.  
   
-3.  Zastavte ladění, nebo zavřete web služby SharePoint.  
+3.  Zastavit ladění, nebo zavřete webu služby SharePoint.  
   
 4.  Otevřete web služby SharePoint a otevřete instanci seznamu.  
   
-### <a name="error-message"></a>Chybová zpráva  
+### <a name="error-message"></a>Chybová zpráva
  Chyba serveru v aplikaci '/'.  
   
 ### <a name="resolution"></a>Rozlišení  
- K tomu dojde, protože po zavřete relaci ladění řešení služby SharePoint, automaticky odvolat funkce odvolá řešení. Při odvolání odstraní definici seznamu služby SharePoint, ale neodstraní instanci seznamu. Základní definice seznamu vyžaduje instanci seznamu.  
+ Proto po ukončení relace ladění řešení služby SharePoint, která automatické odvolání funkce odvolá řešení. Při odvolání odstraní definici seznamu SharePoint, ale nedojde k odstranění instance seznamu. Základní definici seznamu vyžaduje instanci seznamu.  
   
- Chcete-li vyřešit tento problém, nasaďte řešení, v nabídce panelu Výběr **sestavení**, **nasadit**. (Není ladění řešení tak, že zvolíte klávesy F5.) Potom odstraňte skupinu prostředků seznamu ve službě SharePoint.  
+ Chcete-li vyřešit tento problém, nasaďte řešení, na panelu nabídek, výběrem **sestavení** > **nasadit**. (Neladit řešení kliknutím **F5** klíč.) Odstraňte instanci seznamu v Sharepointu.  
   
-## <a name="original-sharepoint-solution-is-replaced-by-an-exported-version"></a>Původní řešení služby SharePoint je nahrazen exportovat verzí  
- Pokud exportujete řešení služby SharePoint, importovat řešení do [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]a pak nasadíte řešení zpět do stejné lokality, ze kterého byl exportován, nahradí původní řešení služby SharePoint. Tento problém neproběhne-li nasadit řešení na server, který nemá v původním řešení aktivovat na něm.  
+## <a name="original-sharepoint-solution-is-replaced-by-an-exported-version"></a>Exportované verze nahrazuje původní řešení služby SharePoint
+ Pokud exportujete řešení služby SharePoint, řešení do importovat [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]a pak nasadíte řešení zpět do stejné lokality, ze kterého byl exportován, se nahradí původní řešení služby SharePoint. Tomuto problému nedojde-li nasadit řešení na serveru, který nemá v původním řešení aktivovat na něj.  
   
-### <a name="error-message"></a>Chybová zpráva  
+### <a name="error-message"></a>Chybová zpráva
  Žádné  
   
 ### <a name="resolution"></a>Rozlišení  
- Aby nedošlo k přepsání řešení na webu, ze kterého byl exportován, změnit identifikátory GUID SolutionID a funkce identifikátorů všechny importované funkce [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projektu.  
+ Aby nedošlo k přepsání řešení na webu, ze kterého byl exportován, změňte identifikátory GUID SolutionID a ID funkce všechny importované funkce [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] projektu.  
   
-## <a name="error-appears-when-debugging-starts"></a>Zobrazí se chyba při spuštění ladění  
- Při spuštění ladění řešení služby SharePoint v sadě Visual Studio chybu označuje, že Visual Studio nelze načíst soubor Web.config, protože nebyl zadaný klíč ve slovníku.  
+## <a name="error-appears-when-debugging-starts"></a>Chyba se zobrazí při spuštění ladění
+ Při spuštění ladění řešení služby SharePoint v sadě Visual Studio, chyba naznačuje, že Visual Studio nelze načíst soubor Web.config, protože nebyl zadaný klíč ve slovníku.  
   
-### <a name="error-message"></a>Chybová zpráva  
- Nepodařilo se načíst konfigurační soubor Web.config. Zkontrolujte soubor pro všechny nesprávně vytvořené elementy XML a zkuste to znovu. Došlo k následující chybě: nebyl nalezen ve slovníku zadaný klíč.  
+### <a name="error-message"></a>Chybová zpráva
+ Nepovedlo se načíst konfigurační soubor Web.config. Nějaké nesprávné elementy XML v souboru a zkuste to znovu. Došlo k následující chybě: daný klíč není k dispozici ve slovníku.  
   
 ### <a name="resolution"></a>Rozlišení  
- Chcete-li vyřešit tento problém, ujistěte se, že adresa URL webu hodnota vlastnosti projektu služby SharePoint v sadě Visual Studio odpovídá adrese URL, kterému je přiřazen výchozí pásmo pro mapování alternativních adres URL webové aplikace. Chyba nelze vyřešit pomocí jiné zóně, jako je například Intranet, pro adresu URL. Lokality adresu URL pro projekt a adresu URL v zóně výchozí musí shodovat. Pro přístup k mapování alternativních adres URL, otevřete nástroj Centrální správa SharePoint 2010, zvolte **Správa aplikací** odkaz a pak v části **webových aplikací**, vyberte  **Konfigurace mapování alternativních adres URL** odkaz. Další informace najdete v tématu [vytvořit zóny pro webové aplikace](http://go.microsoft.com/fwlink/?LinkId=192274).  
+ Chcete-li vyřešit tento problém, ujistěte se, že hodnotu vlastnosti Adresa URL webu projektu služby SharePoint v sadě Visual Studio odpovídá adresu URL, která je přiřazena k výchozí zóna pro mapování alternativních adres URL webové aplikace. Chyba nelze vyřešit pomocí jiné zóny, jako je například Intranet, adresy URL. Web adresu URL pro projekt a adresu URL ve výchozí zóně se musí shodovat. Pro přístup k mapování alternativních adres URL, spusťte nástroj pro centrální správy služby SharePoint 2010, zvolte **správy aplikací** odkaz a pak v části **webových aplikací**, zvolte  **Konfigurace alternativních mapování přístupu** odkaz. Další informace najdete v tématu [vytváření zón pro webové aplikace](http://go.microsoft.com/fwlink/?LinkId=192274).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:
  [Řešení potíží s balení a nasazení SharePoint](../sharepoint/troubleshooting-sharepoint-packaging-and-deployment.md)   
  [Sestavování a ladění řešení služby SharePoint](../sharepoint/building-and-debugging-sharepoint-solutions.md)   
  [Ladění v sadě Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)  

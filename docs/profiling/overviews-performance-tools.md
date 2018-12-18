@@ -10,13 +10,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 709f9b62844a209450daa427efdb3333796828b8
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 904ebf55e7920bfd79fec3afb502d59e5dc82a33
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35254615"
 ---
-# <a name="overviews-performance-tools"></a>Přehledy (Nástroje pro sledování výkonu)
+# <a name="overviews-performance-tools"></a>Přehledy (nástroje pro měření výkonu)
 Tato část obsahuje koncepční a přehled terminologie pro [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] nástrojích pro profilaci, který můžete použít k měření výkonu charakteristik aplikace ve vývoji.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
@@ -26,27 +27,27 @@ Tato část obsahuje koncepční a přehled terminologie pro [!INCLUDE[vsprvs](.
  [Vlastnosti výkonnostní relace](../profiling/performance-session-properties.md)  
  Popisuje vlastnosti, které můžete použít ke konfiguraci výkonnostní relace.  
   
- [Porozumění hodnotám dat vzorkování](../profiling/understanding-sampling-data-values.md)  
+ [Pochopení hodnotám dat vzorkování](../profiling/understanding-sampling-data-values.md)  
  Přečtěte si datových hodnot, které jsou hlášeny při použití metoda profilování se vzorkováním.  
   
- [Porozumění hodnotám dat instrumentace](../profiling/understanding-instrumentation-data-values.md)  
+ [Pochopení hodnotám dat instrumentace](../profiling/understanding-instrumentation-data-values.md)  
  Přečtěte si datových hodnot, které jsou hlášeny při použití metody profilování instrumentace.  
   
- [Princip přidělování paměti a životnosti objektů hodnot](../profiling/understanding-memory-allocation-and-object-lifetime-data-values.md)  
+ [Pochopení hodnoty dat doby paměti pro přidělení a objekt](../profiling/understanding-memory-allocation-and-object-lifetime-data-values.md)  
  Přečtěte si datových hodnot, které jsou hlášeny při použití paměti .NET metoda profilování.  
   
- [Porozumění hodnotám dat kolizí prostředku](../profiling/understanding-resource-contention-data-values.md)  
+ [Pochopení hodnotám dat kolizí prostředku](../profiling/understanding-resource-contention-data-values.md)  
  Přečtěte si datových hodnot, které jsou hlášeny při použití metody profilování souběžného zpracování.  
   
  [Okno Prohlížeč výkonu](../profiling/performance-explorer-window.md)  
  Popisuje okně, které slouží ke konfiguraci a spuštění relace výkonu.  
   
- [Využití procesoru a čítačů systému Windows](../profiling/cpu-and-windows-counters.md)  
+ [Čítače procesoru a systému Windows](../profiling/cpu-and-windows-counters.md)  
  Další informace o čítače výkonu procesoru a systému Windows, které můžete zadat další data o výkonu v relaci výkonu.  
   
- [Profilování a zabezpečení systému Windows Vista](../profiling/profiling-and-windows-vista-security.md)  
+ [Profilace a zabezpečení systému Windows Vista](../profiling/profiling-and-windows-vista-security.md)  
  Další problémy a kroky, které jsou nutné ke shromažďování dat vzorkování a profilu relace mezi aplikací na [!INCLUDE[wiprlhext](../debugger/includes/wiprlhext_md.md)].  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Začínáme](../profiling/getting-started-with-performance-tools.md)   
  [Prohlížeč výkonu](../profiling/performance-explorer.md)

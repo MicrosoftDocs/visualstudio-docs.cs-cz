@@ -1,5 +1,5 @@
 ---
-title: Tooltaskextension – základní třída | Microsoft Docs
+title: Tooltaskextension – základní třída | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -17,37 +17,39 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 01d2abbed85b891378b0a9d5c4a41029bdc46cf3
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 8856011e8b85f049c53947a785f1479e1db25368
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49888551"
 ---
-# <a name="tooltaskextension-base-class"></a>ToolTaskExtension – základní třída
-Dědí celou řadu úloh <xref:Microsoft.Build.Tasks.ToolTaskExtension> třídy, která dědí z <xref:Microsoft.Build.Utilities.ToolTask> třída, které dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Tento řetězec dědičnosti přidá do úlohy, které jsou odvozeny od nich několik parametrů. Tyto parametry jsou uvedeny v tomto dokumentu.  
-  
+# <a name="tooltaskextension-base-class"></a>Tooltaskextension – základní třída
+Dědí celou řadu úloh <xref:Microsoft.Build.Tasks.ToolTaskExtension> třída, která dědí z <xref:Microsoft.Build.Utilities.ToolTask> třída, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Tento řetězec dědičnosti přidá několik parametrů do úlohy, které jsou odvozeny z nich. Tyto parametry jsou uvedeny v tomto dokumentu.  
+
 ## <a name="parameters"></a>Parametry  
  Následující tabulka popisuje parametry základní třídy.  
-  
-|Parametr|Popis|  
-|---------------|-----------------|  
-|<xref:Microsoft.Build.Utilities.Task.BuildEngine%2A>|Volitelné <xref:Microsoft.Build.Framework.IBuildEngine> parametr.<br /><br /> Určuje rozhraní modul sestavení, která je k dispozici pro úlohy. Modul sestavení automaticky nastaví tento parametr umožňuje úloh, které se do ní zpětné volání.|  
-|<xref:Microsoft.Build.Utilities.Task.BuildEngine2%2A>|Volitelné <xref:Microsoft.Build.Framework.IBuildEngine2> parametr.<br /><br /> Určuje rozhraní modul sestavení, která je k dispozici pro úlohy. Modul sestavení automaticky nastaví tento parametr umožňuje úloh, které se do ní zpětné volání.<br /><br /> Toto je užitečný vlastnost tak, aby autoři úloh, která dědí z této třídy nemají převést hodnotu z `IBuildEngine` k `IBuildEngine2`.|  
-|<xref:Microsoft.Build.Utilities.Task.BuildEngine3%2A>|Volitelné <xref:Microsoft.Build.Framework.IBuildEngine3> parametr.<br /><br /> Určuje rozhraní modul sestavení od hostitele.|  
-|<xref:Microsoft.Build.Utilities.ToolTask.EchoOff%2A>|Volitelné `bool` parametr.<br /><br /> Pokud nastavíte hodnotu `true`, tato úloha předává **/Q** k cmd.exe příkazového řádku tak, že v příkazovém řádku není kopírovány do stdout.|  
-|<xref:Microsoft.Build.Utilities.ToolTask.EnvironmentVariables%2A>|Volitelné `String` parametr pole.<br /><br /> Pole dvojic proměnných prostředí, oddělených symboly rovná se. Tyto proměnné jsou předaným ke spustitelnému souboru vytvářený kromě nebo selektivně přepsání bloku regulární prostředí.|  
-|<xref:Microsoft.Build.Utilities.ToolTask.ExitCode%2A>|Volitelné `Int32` výstupní parametr jen pro čtení.<br /><br /> Určuje kód ukončení, které poskytuje provedeného příkazu. Pokud úloha protokolovat všechny chyby, ale proces měl ukončovací kód 0 (úspěch), je nastavena na hodnotu -1.|  
-|<xref:Microsoft.Build.Utilities.Task.HostObject%2A>|Volitelné <xref:Microsoft.Build.Framework.ITaskHost> parametr.<br /><br /> Určuje instanci objektu hostitele (může mít hodnotu null). Modul sestavení tato vlastnost nastaví, pokud hostitel IDE má přidružený objekt hostitele tuto konkrétní úlohu.|  
-|<xref:Microsoft.Build.Tasks.ToolTaskExtension.Log%2A>|Volitelné <xref:Microsoft.Build.Utilities.TaskLoggingHelper> parametr jen pro čtení.<br /><br /> Získá instanci objektu <xref:Microsoft.Build.Tasks.TaskLoggingHelperExtension> třídu, která obsahuje metody protokolování úloh.|  
-|<xref:Microsoft.Build.Utilities.ToolTask.LogStandardErrorAsError%2A>|Možnost `bool` parametr.<br /><br /> Pokud `true`, všechny zprávy přijaté na standardní chybový proud se zaznamenávají jako chyby.|  
-|<xref:Microsoft.Build.Utilities.ToolTask.StandardErrorImportance%2A>|Volitelné `String` parametr.<br /><br /> Důležitost, ke které má být text z standard na datový proud protokolu.|  
-|<xref:Microsoft.Build.Utilities.ToolTask.StandardOutputImportance%2A>|Volitelné `String` parametr.<br /><br /> Důležitost, ke které má být text z standard na datový proud protokolu.|  
-|<xref:Microsoft.Build.Utilities.ToolTask.Timeout%2A>|Volitelné virtuální `Int32` parametr.<br /><br /> Určuje množství času, v milisekundách, po kterých je spustitelný soubor úlohy ukončen. Výchozí hodnota je `Int.MaxValue`, což označuje, že bez doby vypršení časového limitu. Časový limit je uvedena v milisekundách.|  
-|<xref:Microsoft.Build.Utilities.ToolTask.ToolExe%2A>|Volitelné virtuální `string` parametr.<br /><br /> Projekty může implementovat toto přepsání název nástroje. Úlohy může ji přepsat zachovat název nástroje.|  
-|<xref:Microsoft.Build.Utilities.ToolTask.ToolPath%2A>|Volitelné `string` parametr.<br /><br /> Určuje umístění, ze kterých úloha načte základní spustitelný soubor. Pokud není tento parametr zadán, použije úloha SDK Instalační cestu, která odpovídá verzi rozhraní, které běží [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)].|  
-|<xref:Microsoft.Build.Utilities.ToolTask.UseCommandProcessor%2A>|Volitelné `bool` parametr.<br /><br /> Pokud nastavíte hodnotu `true`, tato úloha vytvoří soubor batch pro příkazový řádek a spustí pomocí procesor příkazů místo provedení příkazu přímo.|  
-|<xref:Microsoft.Build.Utilities.ToolTask.YieldDuringToolExecution%2A>|Volitelné `bool` parametr.<br /><br /> Pokud nastavíte hodnotu `true`, tato úloha poskytuje uzlu při je provádění úkolu.|  
-  
-## <a name="see-also"></a>Viz také  
+
+
+| Parametr | Popis |
+| - | - |
+| <xref:Microsoft.Build.Utilities.Task.BuildEngine%2A> | Volitelné <xref:Microsoft.Build.Framework.IBuildEngine> parametru.<br /><br /> Určuje rozhraní modul sestavení k dispozici pro úlohy. Stroj sestavení automaticky nastaví tento parametr umožnit, aby zpětné volání do ní úlohy. |
+| <xref:Microsoft.Build.Utilities.Task.BuildEngine2%2A> | Volitelné <xref:Microsoft.Build.Framework.IBuildEngine2> parametru.<br /><br /> Určuje rozhraní modul sestavení k dispozici pro úlohy. Stroj sestavení automaticky nastaví tento parametr umožnit, aby zpětné volání do ní úlohy.<br /><br /> Toto je vlastnost pohodlí, takže autoři úloh dědění z této třídy nemají k přetypování hodnoty z `IBuildEngine` k `IBuildEngine2`. |
+| <xref:Microsoft.Build.Utilities.Task.BuildEngine3%2A> | Volitelné <xref:Microsoft.Build.Framework.IBuildEngine3> parametru.<br /><br /> Určuje rozhraní modul sestavení poskytovány tímto hostitelem. |
+| <xref:Microsoft.Build.Utilities.ToolTask.EchoOff%2A> | Volitelné `bool` parametru.<br /><br /> Při nastavení na `true`, tato úloha předá **/Q** k *cmd.exe* příkazový řádek tak, že příkazový řádek není se zkopíruje do stdout. |
+| <xref:Microsoft.Build.Utilities.ToolTask.EnvironmentVariables%2A> | Volitelné `String` parametr pole.<br /><br /> Pole párů proměnné prostředí oddělené rovnítko. Tyto proměnné jsou předány do nové kopie spustitelný soubor kromě nebo selektivní přepsání blok regulární prostředí. |
+| <xref:Microsoft.Build.Utilities.ToolTask.ExitCode%2A> | Volitelné `Int32` výstupní parametr jen pro čtení.<br /><br /> Určuje ukončovací kód, který je poskytován provedeného příkazu. Pokud úloha protokoluje chyby, ale proces má ukončovací kód 0 (úspěch), to je nastavena na hodnotu -1. |
+| <xref:Microsoft.Build.Utilities.Task.HostObject%2A> | Volitelné <xref:Microsoft.Build.Framework.ITaskHost> parametru.<br /><br /> Určuje instanci objektu hostitele (může mít hodnotu null). Stroj sestavení nastaví tuto vlastnost, pokud hostitel integrovaného vývojového prostředí přidružené k objekt hostitele tuto konkrétní úlohu. |
+| <xref:Microsoft.Build.Tasks.ToolTaskExtension.Log%2A> | Volitelné <xref:Microsoft.Build.Utilities.TaskLoggingHelper> parametr jen pro čtení.<br /><br /> Získá instanci objektu <xref:Microsoft.Build.Tasks.TaskLoggingHelperExtension> třídu, která obsahuje metody protokolování úloh. |
+| <xref:Microsoft.Build.Utilities.ToolTask.LogStandardErrorAsError%2A> | Možnost `bool` parametru.<br /><br /> Pokud `true`, všechny zprávy přijaté ve standardní chybový proud přihlášeni jako chyby. |
+| <xref:Microsoft.Build.Utilities.ToolTask.StandardErrorImportance%2A> | Volitelné `String` parametru.<br /><br /> Význam, pomocí kterého se má text protokolu úroveň ze standard na datový proud. |
+| <xref:Microsoft.Build.Utilities.ToolTask.StandardOutputImportance%2A> | Volitelné `String` parametru.<br /><br /> Význam, pomocí kterého se má text protokolu úroveň ze standard na datový proud. |
+| <xref:Microsoft.Build.Utilities.ToolTask.Timeout%2A> | Virtuální volitelné `Int32` parametru.<br /><br /> Určuje množství času, v milisekundách, po jejichž uplynutí je spustitelný soubor s úkolem ukončen. Výchozí hodnota je `Int.MaxValue`, která udává, že neexistuje žádný časový limit. Časový limit je uvedena v milisekundách. |
+| <xref:Microsoft.Build.Utilities.ToolTask.ToolExe%2A> | Virtuální volitelné `string` parametru.<br /><br /> Projekty mohou implementovat toto přepsání název nástroje. Úkoly mohou přepsat tuto hodnotu na zachovat název nástroje. |
+| <xref:Microsoft.Build.Utilities.ToolTask.ToolPath%2A> | Volitelné `string` parametru.<br /><br /> Určuje umístění, kde úloha načítá základní spustitelný soubor. Pokud není tento parametr zadán, použije úloha instalační cestu sady SDK, která odpovídá verzi rozhraní framework, na kterém běží [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. |
+| <xref:Microsoft.Build.Utilities.ToolTask.UseCommandProcessor%2A> | Volitelné `bool` parametru.<br /><br /> Pokud je nastavena na `true`, tato úloha vytvoří dávkový soubor pro příkazový řádek a spustí pomocí procesor příkazu namísto provádění příkazu přímo. |
+| <xref:Microsoft.Build.Utilities.ToolTask.YieldDuringToolExecution%2A> | Volitelné `bool` parametru.<br /><br /> Pokud je nastavena na `true`, tato úloha provede uzlu při provádění svých úloh. |
+
+## <a name="see-also"></a>Viz také:  
  [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)   
  [Úlohy](../msbuild/msbuild-tasks.md)

@@ -1,5 +1,5 @@
 ---
-title: Vlastnosti Android ladicího programu (C++) | Microsoft Docs
+title: Vlastnosti ladicího programu pro Android (C++) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 10/23/2017
 ms.technology: vs-ide-mobile
@@ -15,19 +15,20 @@ f1_keywords:
 - VC.Project.AndroidDebugger.LaunchActivity
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 7d18125c6666a8eb68becd828da36ecdab077507
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: be240ed2cea05194d51040fd29a17de9a4472fc9
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39232641"
 ---
-# <a name="android-debugger-properties"></a>Vlastnosti Android ladicí program
+# <a name="android-debugger-properties"></a>Vlastnosti ladicího programu pro Android
 
 Vlastnost | Popis | Možnosti
 --- | ---| ---
-Typ ladicí program | Určuje typ kódu k ladění. | **Jenom Native**<br>**Pouze Java**<br>
-Ladění cíl | Určuje emulátoru nebo zařízení, které chcete použít pro ladění. Pokud se žádné emulátorů běží, použijte 'Manager virtuální zařízení Android (AVD)' při spuštění zařízení.
-Balíček pro spuštění | Určuje umístění .apk, který bude ladit. Tuto volbu použijte k určení, že konkrétní balíček (APK) by měl být spuštěn, když je ladit aplikace.
-Spuštění aktivity | Android aktivity sloužící ke spuštění aplikace, musí odpovídat používaný v manifestu. Klepněte na tlačítko použít k načtení seznamu z AndroidManifest.xml a přidejte do ní dynamicky.
-Cesty hledání další Symbol | Další vyhledávací cesta pro symboly ladění.
-Cesty hledání zdroj další Java | Cesty hledání další pro jazyk Java zdrojové soubory. (Platí, pouze pokud ladicí program je typ Java pouze malá a velká písmena.)
+Typ ladicího programu | Určuje, který typ kódu k ladění. | **Pouze nativní**<br>**Jenom Java**<br>
+Cíl ladění | Určuje emulátor nebo zařízení pro ladění. Pokud žádné emulátory neběží, použijte "Android Virtual Device (AVD) Manager" zařízení spusťte.
+Balíček ke spuštění | Určuje umístění *.apk* , který bude laděn. Tato možnost slouží k určení, že konkrétní balíček APK má být spuštěn při ladění aplikace.
+Spouštěcí aktivita | Aktivita v Androidu použít ke spuštění aplikace, musí odpovídat tomu použitému v manifestu. Klepněte na tlačítko použít k získání seznamu z *AndroidManifest.xml* a dynamicky ho naplníte.
+Další cesty hledání symbolů | Další cesty hledání pro symboly ladění.
+Cesty hledání zdrojového další Java | Další cesty hledání pro zdrojové soubory Javy. (Platí, pouze když je typ ladicího programu jenom Java.)

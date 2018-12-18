@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: implementace značek chyba | Microsoft Docs'
+title: 'Postupy: implementace označování chyb | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,50 +13,51 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f1360f88dba797f96af766f65c9ee41abd6fc808
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: eb6e511fa899680338831f3bc8e2a411f2126006
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49861160"
 ---
-# <a name="how-to-implement-error-markers"></a>Postupy: implementace chyba značky
-Chyba značky (nebo červené podtržení vlnovkou) jsou nejobtížnější přizpůsobení textového editoru k implementaci. Ale výhody, které uvedou uživatelům vaší VSPackage můžete daleko převáží nad náklady na umožníte jim. Chyba značky trochu označte text, který vaše analyzátoru jazyka považuje za nesprávné vlnovkou nebo vlnovkami red řádek. Tento ukazatel pomůže vizuálně zobrazením nesprávný kód programátory v jazyce.  
+# <a name="how-to-implement-error-markers"></a>Postupy: implementace označování chyb
+Označování chyb (nebo červené podtržení vlnovkou) jsou nejobtížnější přizpůsobení editoru textu k implementaci. Však výhody, které nabízejí uživatelům vaší VSPackage můžete mnohem převažují nad náklady a umožnit jim. Označování chyb myš označit text, který předpokládá, že nesprávné s podtržení nebo podtrženo červenou čáru vaše analyzátoru jazyka. Tento ukazatel pomáhá programátoři vizuálně zobrazením nesprávný kód.  
   
- Implementace červené podtržení vlnovkou pomocí značek text. Platí jazyka služby přidat červené podtržení vlnovkou na textová vyrovnávací paměť jako pozadí průchodu, v době nečinnosti nebo ve vláknu na pozadí.  
+ Použití značek text k implementaci červené podtržení vlnovkou. Zpravidla jazykové služby přidat červené podtržení vlnovkou do vyrovnávací paměti textu jako pozadí pass, v době nečinnosti nebo ve vlákně na pozadí.  
   
-### <a name="to-implement-the-red-wavy-underline-feature"></a>K implementaci funkci red podtržení vlnovkou  
+## <a name="to-implement-the-red-wavy-underline-feature"></a>Chcete-li implementovat funkci červenou vlnovkou  
   
-1.  Vyberte text, pod kterým chcete umístit red vlnovkou.  
+1. Vyberte text, u které chcete umístit červenou vlnovkou.  
   
-2.  Vytvořit značku typu `MARKER_CODESENSE_ERROR`. Další informace najdete v tématu [postupy: Přidání značek standardní Text](../extensibility/how-to-add-standard-text-markers.md).  
+2. Vytvořit značku typu `MARKER_CODESENSE_ERROR`. Další informace najdete v tématu [postupy: Přidání standardní text značky](../extensibility/how-to-add-standard-text-markers.md).  
   
-3.  Poté předat <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient> ukazatel rozhraní.  
+3. Potom předejte <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient> ukazatel rozhraní.  
   
- Tento proces také vám umožní vytvořit tip text nebo speciální Kontextová nabídka přes danou značku. Další informace najdete v tématu [postupy: Přidání značek standardní Text](../extensibility/how-to-add-standard-text-markers.md).  
+   Tento proces také umožňuje vytvořit text tipu nebo speciální kontextové nabídky přes danou značku. Další informace najdete v tématu [postupy: Přidání standardní text značky](../extensibility/how-to-add-standard-text-markers.md).  
   
- Následující objekty jsou požadovány, než lze zobrazit chyba značky.  
+   Následující objekty jsou požadovány, než lze zobrazit označování chyb.  
   
--   Analyzátor.  
+- Analyzátor.  
   
--   Úloha zprostředkovatele (tedy implementace <xref:Microsoft.VisualStudio.Shell.Interop.IVsTaskProvider2>) který udržuje záznam změn v řádku informace za účelem zjištění řádky, které chcete být znovu Analyzovaná.  
+- Zprostředkovatel úkolu (to znamená, že implementace <xref:Microsoft.VisualStudio.Shell.Interop.IVsTaskProvider2>), který udržuje záznam změn v řádku informace za účelem zjištění znovu analyzovaný řádky.  
   
--   Filtr zobrazení textu, který zachycuje vsuvka události změn pomocí zobrazení <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewEvents.OnChangeCaretLine%2A>) metoda.  
+- Filtr zobrazení textu, který zachycuje blikající kurzor o události změn pomocí zobrazení <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextViewEvents.OnChangeCaretLine%2A>) metody.  
   
- Analyzátor, úloha zprostředkovatele a Filtr zadejte infrastruktury potřebné k ověření, chyba značky. Následující kroky obsahují proces pro zobrazení značek chyby.  
+  Analyzátor, zprostředkovatel úkolu a filtr poskytují infrastrukturu nutnou k umožnění označování chyb. Následující kroky obsahují procesu pro zobrazení označování chyb.  
   
-1.  V zobrazení, které je filtrované získá filtr ukazatel na úloh zprostředkovatele spojeného s daty tohoto zobrazení.  
+1.  V zobrazení se filtruje je filtr získá ukazatel na úkol zprostředkovatele spojeného s data tohoto zobrazení.  
   
     > [!NOTE]
-    >  Můžete použít stejný příkaz Filtr metoda tipy, dokončování, chyba značky a tak dále.  
+    >  Stejný filtr příkaz můžete použít pro metodu tipy, dokončování příkazů, označování chyb a tak dále.  
   
-2.  Když filtr obdrží událost označující, že byl přesunut do jiného řádku, vytvoří se úloha ke kontrole chyb.  
+2.  Když filtr dostane událost označující, že přesunete na jiný řádek, vytvoří se úkol ke kontrole chyb.  
   
-3.  Obslužná rutina úloh ověří, zda je na řádku nekonzistence. Pokud ano, analyzuje čáry použité k chybám.  
+3.  Obslužná rutina úkol zkontroluje, jestli řádku změny. Pokud ano, analyzuje řádku chyby.  
   
-4.  Pokud k chybám, zprostředkovatele úloh vytvoří instanci položky úloh. Tato instance vytvoří značky text, který prostředí používá jako značky k chybě v zobrazení textu.  
+4.  Pokud byly zjištěny chyby, zprostředkovatel úkolu vytvoří instanci položky úkolu. Tato instance vytvoří značku text, který používá prostředí jako značka chyby v zobrazení textu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Text značky pomocí starší verze rozhraní API](../extensibility/using-text-markers-with-the-legacy-api.md)   
- [Postupy: Přidání značek standardního textu](../extensibility/how-to-add-standard-text-markers.md)   
- [Postupy: vytvoření vlastní Text značek](../extensibility/how-to-create-custom-text-markers.md)   
- [Postupy: použití značek textu](../extensibility/how-to-use-text-markers.md)
+ [Postupy: Přidání standardní text značky](../extensibility/how-to-add-standard-text-markers.md)   
+ [Postupy: vytvoření vlastního textu značky](../extensibility/how-to-create-custom-text-markers.md)   
+ [Postupy: použití značek text](../extensibility/how-to-use-text-markers.md)

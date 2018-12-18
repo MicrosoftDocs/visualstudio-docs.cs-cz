@@ -1,6 +1,7 @@
 ---
-title: 'Návod: Vytvoření realistické 3D kulečníkové míč'
+title: 'Návod: Vytvoření realistické 3D kulečníkové koule'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: af8eb0f3-bf6a-4d1c-ab47-dcd88ab04efa
@@ -9,208 +10,209 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8bd12e380a9362a82ff890dd016e5469e30f136a
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d0f8596e8a2064f09ff817a768dd7ec994e3c920
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49847640"
 ---
-# <a name="walkthrough-create-a-realistic-3d-billiard-ball"></a>Návod: Vytvoření realistické 3D kulečníkové míč
+# <a name="walkthrough-create-a-realistic-3d-billiard-ball"></a>Návod: Vytvoření realistické trojrozměrné kulečníkové koule
 
-Tento návod ukazuje, jak vytvořit realistické 3D kulečníkové míč pomocí návrháře shaderu a Editor obrázků v sadě Visual Studio. 3D vzhled míč kulečníkové je dosáhnout kombinací několik technik shaderu s prostředky vhodné struktury.
+Tento návod ukazuje, jak vytvořit realistické 3D kulečníkové koule pomocí shaderu Designer a editoru obrázků v sadě Visual Studio. Vzhled 3D kulečníkové koule je dosaženo kombinací několika technik shaderu se vhodnými prostředky textur.
 
 ## <a name="prerequisites"></a>Požadavky
 
-Potřebujete následující součásti a dovednosti pro dokončení tohoto názorného postupu:
+Budete potřebovat následující komponenty a dovednosti k dokončení tohoto návodu:
 
--   Nástroj pro ty textury do datové krychle mapy, jako je například nástroj Texture DirectX, který je součástí 2010 června DirectX SDK.
+-   Nástroj pro sestavení textur do mapy krychle, jako je například nástroj DirectX Texture, který je součástí červen 2010 rozhraní DirectX SDK.
 
--   Znalosti s Editor obrázků v sadě Visual Studio.
+-   Důvěrně editoru obrázků v sadě Visual Studio.
 
 -   Znalost návrháře shaderu v sadě Visual Studio.
 
-## <a name="create-the-basic-appearance-with-shape-and-texture"></a>Vytvořte základní vzhled s tvar a textury
+## <a name="create-the-basic-appearance-with-shape-and-texture"></a>Vytvoření základního vzhledu pomocí tvaru a textury
 
-V počítači grafiky většinu – základní prvky vzhled jsou tvar a barvy. V počítači simulaci je běžné využívá 3D model, který představuje tvar reálného objektu. Barva podrobností se potom použije na povrch modelu pomocí mapy textury.
+V počítačové grafice jsou nejzákladnějšími prvky vzhledu tvar a barva. V počítačové simulaci je běžné použití 3D modelu, který zastupuje tvar objektu reálného světa. Barevné detaily jsou pak použity na povrch modelu pomocí mapy textury.
 
-Obvykle možná budete muset požádat umělcem pro vytvoření 3D modelu, který můžete použít, ale protože kulečníkové míč je běžné tvar (oblasti), návrháře shaderu již vhodný model součástí.
+Obvykle budete muset požádat umělce k vytvoření 3D modelu, který můžete použít, ale protože kulečníkové koule jsou běžné obrazce (koule), návrháře shaderu již má vhodný zabudovaný model.
 
-Oblasti je výchozí tvar preview v Návrháři shaderu; Pokud aktuálně používáte jiný obrazce zobrazte náhled vašeho shaderu, přepněte zpět do oblasti.
+Koule je výchozí tvar náhled v Návrháři shaderu; Pokud aktuálně používáte jiný tvar náhledu vašeho shaderu, přepněte zpět do oblasti.
 
-### <a name="to-preview-the-shader-by-using-a-sphere"></a>Zobrazte náhled shaderu pomocí oblasti
+### <a name="to-preview-the-shader-by-using-a-sphere"></a>Náhled shaderu pomocí koule
 
--   Na panelu nástrojů návrháře shaderu zvolte **Preview s oblasti.**
+- Na panelu nástrojů návrháře shaderu zvolte **náhled s koulí.**
 
- V dalším kroku vytvoříte program shaderu, který se týká texturou modelu, ale nejdřív je nutné vytvořit texture, který můžete použít. Tento návod ukazuje, jak vytvořit textury pomocí editoru bitovou kopii, která je součástí sady Visual Studio, ale můžete použít všechny bitové kopie editor, který můžete uložit textury vhodné formát.
+V dalším kroku vytvoříte program shaderu, který používá texturu na model, ale nejprve musíte vytvořit texturu, která můžete použít. Tento návod ukazuje, jak vytvořit texturu pomocí editoru obrázků, která je součástí sady Visual Studio, ale můžete použít libovolný editor obrázků, který umožňuje texturu uložit ve vhodném formátu.
 
- Ujistěte se, že **vlastnosti** okno a **sada nástrojů** jsou zobrazeny.
+Ujistěte se, že **vlastnosti** okno a **nástrojů** jsou zobrazeny.
 
-### <a name="to-create-a-billiard-ball-texture-by-using-the-image-editor"></a>K vytvoření texturou míč kulečníkové pomocí editoru obrázků
+### <a name="to-create-a-billiard-ball-texture-by-using-the-image-editor"></a>Vytvoření textury kulečníkové koule pomocí editoru obrázků
 
-1.  Vytvořte texture pro práci s. Informace o tom, jak do projektu přidejte texturou, najdete v části Začínáme v [Editor obrázků](../designers/image-editor.md).
+1. Vytvořte textur pro práci s. Informace o tom, jak přidat do projektu texturu naleznete v části Začínáme v [Editor obrázků](../designers/image-editor.md).
 
-2.  Nastavit velikost obrázku tak, aby jeho šířka dvakrát výšku; To je nutné kvůli způsobem, že texturou mapována na kulovým prostor míč kulečníkové. Ke změně velikosti obrázku se v **vlastnosti** okno, zadejte nové hodnoty pro **šířka** a **výška** vlastnosti. Například nastavte šířku a výšku na 256 512.
+2. Nastavte velikost obrázku tak, aby jeho šířka byla dvojnásobkem výšky; To je nezbytné vzhledem ke způsobu, že je textura mapována ke kulovému povrchu kulečníkové koule. Změna velikosti obrázku, v **vlastnosti** okno, zadejte nové hodnoty pro **šířka** a **výška** vlastnosti. Například nastavte šířku na 512 a výšku na 256.
 
-3.  Zakreslit texture pro míč kulečníkové, přičemž mějte na tom, jak je texturou mapovány na oblasti.
+3. Nakreslete texturu pro kulečníkovou kouli, přitom na to, jak je textura mapována na kouli.
 
-     Textury by měl vypadat podobně jako tento:
+    Textura by měl vypadat nějak takto:
 
-     ![Texture pro míč kulečníkové](../designers/media/gfx_shader_demo_billiard_art_ball_texture.png "gfx_shader_demo_billiard_art_ball_texture")
+    ![Texturu pro kulečníkovou kouli](../designers/media/gfx_shader_demo_billiard_art_ball_texture.png)
 
-4.  Volitelně můžete chtít snížit požadavky na úložiště z této texture. Můžete to udělat snížením šířku texture tak, aby odpovídala jeho výšku. To komprimaci texture podél šířku, ale vzhledem ke způsobu, že textury je mapována na oblast, bude rozšířena, při vykreslení míč kulečníkové. Po změně velikosti, textury by měl vypadat podobně jako tento:
+4. Volitelně můžete snížit požadavky na úložiště této textury. Můžete tak učinit snížením šířky textury, aby odpovídala její výšce. Tím jsou komprimovány textury podél své šířky, ale kvůli způsobu, že je textura je mapována na kouli, ji budou rozšířeny při vykreslení kulečníkové koule. Po změně velikosti, by měla textura vypadat nějak takto:
 
-     ![Texture kulečníkové komprimované do čtverce](../designers/media/gfx_shader_demo_billiard_art_ball_texture_square.png "gfx_shader_demo_billiard_art_ball_texture_square")
+    ![Textury kulečníkové komprimována do čtverec](../designers/media/gfx_shader_demo_billiard_art_ball_texture_square.png)
 
- Nyní můžete vytvořit shaderu, který se týká tato texture modelu.
+   Nyní můžete vytvořit shader, který použije tuto texturu na model.
 
-### <a name="to-create-a-basic-texture-shader"></a>Chcete-li vytvořit základní texture shaderu
+### <a name="to-create-a-basic-texture-shader"></a>K vytvoření shaderu základní textury
 
-1.  Vytvořte DGSL shaderu pro práci s. Informace o tom, jak do projektu přidejte shaderu DGSL, najdete v části Začínáme v [shaderu Návrhář](../designers/shader-designer.md).
+1. Vytvořte shader DGSL se kterým chcete pracovat. Informace o tom, jak přidat do projektu DGSL shader naleznete v části Začínáme v [návrháře shaderu](../designers/shader-designer.md).
 
-     Ve výchozím nastavení graf shaderu vypadat třeba takto:
+    Standardně vypadá graf shaderu takto:
 
-     ![Graf shaderu výchozí](../designers/media/gfx_shader_demo_billiard_step_0.png "gfx_shader_demo_billiard_step_0")
+    ![Výchozí graf shaderu](../designers/media/gfx_shader_demo_billiard_step_0.png)
 
-2.  Upravte výchozí shaderu tak, aby hodnota vzorku texture se vztahuje na aktuální pixelů. Graf shaderu by měl vypadat takto:
+2. Upravte výchozí shader tak, aby použil hodnotu vzorku textury na aktuální pixel. Graf shaderu by měl vypadat takto:
 
-     ![Shaderu grafu, který se vztahuje k objektu texture](../designers/media/gfx_shader_demo_billiard_step_1.png "gfx_shader_demo_billiard_step_1")
+    ![Graf shaderu, která se vztahuje k objektu textury](../designers/media/gfx_shader_demo_billiard_step_1.png)
 
-3.  Použití textury, kterou jste vytvořili v předchozím postupu pomocí konfigurace vlastností texture. Nastavte hodnotu **Texture** vlastnost **ukázka Texture** uzlu **Texture1**a pak zadejte soubor textury pomocí **Filename**vlastnost **Texture1** skupina vlastností v okně Vlastnosti.
+3. Použijte texturu, kterou jste vytvořili v předchozím postupu konfigurací vlastností textury. Nastavte hodnotu **textury** vlastnost **vzorek textury** uzlu **Texture1**a poté určete soubor textury s použitím **Filename**vlastnost **Texture1** skupinu vlastností ve stejném okně s vlastnostmi.
 
- Další informace o tom, jak používat textury ve vašem shaderu najdete v tématu [postupy: vytvoření základní shaderu Texture](../designers/how-to-create-a-basic-texture-shader.md).
+   Další informace o tom, jak aplikovat texturu na shader, naleznete v tématu [postupy: vytvoření shaderu základní textury](../designers/how-to-create-a-basic-texture-shader.md).
 
- Vaše kulečníkové míč by teď měl vypadat podobně jako tento:
+   Vaše kulečníková koule by teď měl vypadat nějak takto:
 
- ![Closeup míč texturou kulečníkové](../designers/media/gfx_shader_demo_.png "gfx_shader_demo_")
+   ![Detail textury kulečníkové koule](../designers/media/gfx_shader_demo_.png)
 
-## <a name="create-depth-with-the-lambert-lighting-model"></a>Vytvoření hloubka s modelem osvětlení společnost Lambert
+## <a name="create-depth-with-the-lambert-lighting-model"></a>Vytvoření hloubky pomocí Lambertova modelu osvětlení
 
-Zatím jste vytvořili snadno rozpoznatelný kulečníkové míč. Zobrazí se však ploché nebo nezajímavé – více jako obrázek Kreslený vtip kulečníkové míč než přesvědčivé repliky. Plochý vzhled výsledkem shaderu zneužívající vlastností prohlížeče, který se chová, jako by každý pixelů na povrch míč kulečníkové obdrží stejné množství světla.
+Zatím jste vytvořili snadno rozpoznatelnou kulečníkovou kouli. Se zdá ploché a nezajímavé – spíše jako komiksový obrázek kulečníkové koule než její věrná replika. Zobrazení plochých výsledků ze shaderu simplistic, který se chová jako každý pixel na povrchu kulečníkové koule, obdrží stejné množství světla.
 
- V praxi zobrazí se lehký nejjasnější na plochy, které přímo čelí zdroje světla a zobrazuje se méně jasně na plochy, které jsou v úhlu Kosý ke zdroji světla. To je proto energie v světla paprsky je distribuován do oblasti nejmenší prostor, jestliže plocha směřuje přímo ke zdroji světla. Jak se změní na povrchu směřující od zdroje světla, stejnou úroveň energie je distribuován do stále větší prostor oblast. Prostor, který otočená od zdroje světla obdrží žádné světla energie, výsledkem je zcela tmavý vzhled. Tato odchylky také průraznost na povrchu objektu je důležité vizuální upozornění, která pomáhá znamenat tvaru objektu; bez, zobrazí se ploché objektu.
+V reálném světě se světlo zdá být jasnější na površích, které přímo zdroj světla a zobrazí se méně jasné na površích, které jsou v úhlu vůči zdroji světla. Je to proto, že energie v paprscích světla je rozvržena nejmenší oblastí povrchu, pokud povrch směřuje přímo ke zdroji světla. Když se povrch otočí od světla, stejné množství energie je distribuovaná napříč stále větší plochu povrchu. Povrch, který směřuje od zdroje světla obdrží žádnou světelnou energii vůbec, výsledkem je zcela tmavý vzhled. Odchylka v jasu na povrchu objektu je důležitou vizuální nápovědou, která pomáhá určit tvar objektu; bez něj se objekt jeví plochý.
 
- V počítači grafiky *osvětlení modely*– zjednodušená aproximace komplexní, skutečné osvětlení interakce – replikují vzhled reálného osvětlení. Model osvětlení společnost Lambert se množství diffusely reflektované světla liší na povrchu objektu jak je popsáno v předchozím odstavci. Model osvětlení společnost Lambert můžete přidat do vaší shaderu umožnit míč kulečníkové více přesvědčivé 3D vzhled.
+V počítačové grafice *modely osvětlení*– zjednodušené, přibližně nakreslené reálné, komplexní světelných interakcí, se používají k napodobení vzhledu skutečného osvětlení. Jak je popsáno v předchozím odstavci, Lambertova modelu osvětlení se liší v množství rozptýleně odraženého světla na povrchu objektu. Můžete přidat model osvětlení Lambert k shaderu a dát tak kulečníkové kouli přesvědčivější vzhled 3D.
 
-### <a name="to-add-lambert-lighting-to-your-shader"></a>Přidání společnost Lambert osvětlení do vaší shaderu
+### <a name="to-add-lambert-lighting-to-your-shader"></a>Přidání Lambertova světla do vašeho shaderu
 
--   Upravte vaše shaderu provádět úpravy hodnota vzorku texture společnost Lambert osvětlení hodnotou. Graf shaderu by měl vypadat takto:
+- Upravte svůj shader tak, aby moduloval hodnotu vzorku textury Lambertovou hodnotou osvětlení. Shader graf by měl vypadat takto:
 
-     ![Graf shaderu s společnost Lambert osvětlení přidat](../designers/media/gfx_shader_demo_billiard_step_2.png "gfx_shader_demo_billiard_step_2")
+   ![Graf shaderu s použitím osvětlení Lambert přidán](../designers/media/gfx_shader_demo_billiard_step_2.png)
 
--   Volitelně můžete upravit chování osvětlení nakonfigurováním **MaterialDiffuse** vlastnost shaderu grafu. Přístup k vlastnostem shaderu grafu, vyberte na prázdnou oblast na návrhovou plochu a vyhledejte vlastnost, která chcete pro přístup **vlastnosti** okno.
+- Volitelně můžete upravit, jak se osvětlení chová odlesk, konfigurací **MaterialDiffuse** vlastnost grafu shaderu. Přístup k vlastnostem grafu shader zvolte na prázdnou oblast návrhové plochy a potom vyhledejte vlastnost, ke které chcete získat přístup v **vlastnosti** okna.
 
- Další informace o tom, jak používat společnost Lambert osvětlení ve vašem shaderu najdete v tématu [postupy: vytvoření základní shaderu společnost Lambert](../designers/how-to-create-a-basic-lambert-shader.md).
+Další informace o tom, jak aplikovat Lambert osvětlení na shader, naleznete v tématu [postupy: vytvoření základního Lambertova shaderu](../designers/how-to-create-a-basic-lambert-shader.md).
 
- S společnost Lambert osvětlení použít, vaše kulečníkové míč by měl vypadat podobně jako tento:
+S použitím osvětlení Lambert by měla vaše kulečníková koule vypadat nějak takto:
 
- ![Closeup míč texturou a po kulečníkové](../designers/media/gfx_shader_demo_billiard_ball_2.png "gfx_shader_demo_billiard_ball_2")
+![Detail textury a po kulečníkové koule](../designers/media/gfx_shader_demo_billiard_ball_2.png)
 
-## <a name="enhance-the-basic-appearance-with-specular-highlights"></a>Vylepšení základní vzhled s zrcadlová světla
+## <a name="enhance-the-basic-appearance-with-specular-highlights"></a>Vylepšení základního vzhledu pomocí zrcadlového osvětlení
 
-Model osvětlení společnost Lambert poskytuje smysl tvar a dimenze, která byla chybí v shaderu jen texture. Ale míč kulečníkové má stále poněkud obyčejný vzhled.
+Model Lambertova osvětlení poskytuje tvar a dimenze, která chybí v shaderu pouhých textur. Kulečníkové koule stále má však poněkud matné.
 
- Skutečné kulečníkové míč má obvykle lesklý dokončit, která odráží část světlý, která spadá na něm. Některé tohoto projeví světla má za následek zrcadlová světla, které simulovat odrážející vlastnosti prostor. V závislosti na vlastnosti dokončit může být označuje lokalizované nebo široký, velký nebo jemně. Tyto zrcadlová odrazů jsou modelovány pomocí vztah mezi zdroji světla, orientaci na povrch a pozice fotoaparát – zvýraznění je koncentrace při orientaci na povrch odráží ke zdroji světla přímo do fotoaparátu, a je méně intenzivní když je odraz méně SMB direct.
+Skutečné kulečníkové koule má obvykle lesklý povrch, který odráží část světla, které na ni dopadá. Některé z odráženy výsledky světla v odlesky, které simulují vlastnosti odrazného povrchu. V závislosti na vlastnostech dokončení mohou být světelné lokalizované nebo široké, intenzivní nebo malý. Tyto zrcadlové odlesky jsou modelovány pomocí vztahu mezi zdrojem světla, orientace povrchu a polohy kamery – zvýraznění je nejintenzivnější když orientace povrchu odráží světelný zdroj přímo do fotoaparát, a je méně velké zatížení při zrcadlení je méně přímé.
 
- Model osvětlení Phong založený na modelu osvětlení společnost Lambert zahrnout zrcadlová světla, jak je popsáno v předchozím odstavci. Model osvětlení Phong můžete přidat do vaší shaderu umožnit míč kulečníkové simulované dokončit, jejímž výsledkem zajímavějšího vzhled.
+Model osvětlení Phong je založena na modelu osvětlení Lambert k zahrnoval odlesky, jak je popsáno v předchozím odstavci. Můžete přidat model osvětlení Phong k shaderu a dát tak kulečníkové kouli umělý povrch, jehož výsledkem zajímavější vzhled.
 
-### <a name="to-add-specular-highlights-to-your-shader"></a>Přidání zrcadlová světla do vaší shaderu
+### <a name="to-add-specular-highlights-to-your-shader"></a>Přidání odlesků do vašeho shaderu
 
-1.  Upravte vaše shaderu zahrnout zrcadlová příspěvek pomocí sčítání prolnutí. Graf shaderu by měl vypadat takto:
+1. Upravte svůj shader tak, aby zahrnoval příspěvek lesku pomocí aditivního míchání. Shader graf by měl vypadat takto:
 
-     ![Graf shaderu s zrcadlová osvětlení přidat](../designers/media/gfx_shader_demo_billiard_step_3.png "gfx_shader_demo_billiard_step_3")
+    ![Graf shaderu pomocí zrcadlového osvětlení přidat](../designers/media/gfx_shader_demo_billiard_step_3.png)
 
-2.  Volitelně můžete upravit způsob, jakým zrcadlová zvýraznění chová nakonfigurováním vlastností zrcadlení (**MaterialSpecular** a **MaterialSpecularPower**) shaderu grafu. Přístup k vlastnosti shaderu grafu, zvolte na prázdnou oblast na návrhovou plochu a potom v **vlastnosti** okně najít vlastnost, která chcete získat přístup.
+2. Volitelně můžete upravit způsob, jakým chová odlesk, konfigurací vlastností odlesků (**MaterialSpecular** a **MaterialSpecularPower**) grafu shaderu. Chcete-li získat přístup k vlastnostem grafu shader zvolte na prázdnou oblast návrhové plochy a pak v **vlastnosti** okna, vyhledejte vlastnost, ke které chcete získat přístup.
 
- Další informace o tom, jak používat zrcadlová světla ve vašem shaderu najdete v tématu [postupy: vytvoření základní shaderu Phong](../designers/how-to-create-a-basic-phong-shader.md).
+   Další informace o tom, jak aplikovat Zrcadlové osvětlení na shader, naleznete v tématu [postupy: vytvoření základního Phongova shaderu](../designers/how-to-create-a-basic-phong-shader.md).
 
- Zrcadlová zvýrazněné, použít, vaše kulečníkové míč by měl vypadat podobně jako tento:
+   S zvýrazňujících vaše kulečníková koule by měl vypadat nějak takto:
 
- ![Přidat closeup míč kulečníkové s zrcadlová](../designers/media/gfx_shader_demo_billiard_ball_3.png "gfx_shader_demo_billiard_ball_3")
+   ![Přidání detail kulečníkové koule pomocí odlesku](../designers/media/gfx_shader_demo_billiard_ball_3.png)
 
-## <a name="create-a-sense-of-space-by-reflecting-the-environment"></a>Vytvořte si smysl místa odrážející prostředí
+## <a name="create-a-sense-of-space-by-reflecting-the-environment"></a>Vytváření vnímání prostoru pomocí odrazu prostředí
 
-S zrcadlová světla použít vypadá poměrně přesvědčivé vaší kulečníkové míč. Je tu, správného tvaru, úlohy správné Malování a pravém dokončit. Je však stále jeden další technika, který bude vaše kulečníkové míč vypadat spíše jako součást své prostředí.
+Vaše kulečníková koule vypadá s odlesků poměrně přesvědčivě. Má obor správný tvar, správnou malbu a správné konečné propracování. Existuje však ještě jedna další metoda, která způsobí, že vaše kulečníková koule vypadat více jako součást prostředí.
 
- Pokud si projdete skutečné kulečníkové míč úzce, uvidíte, že prostor lesklý není právě vykazovat zrcadlová světla, ale také faintly odráží bitové kopie na světě kolem něj. Tato reflexe můžete simulovat pomocí bitové kopie prostředí jako texturou a že ho propojíte s texture modelu vlastní určit konečné barva každý pixelů. V závislosti na druhu dokončit, které chcete, můžete kombinovat více nebo méně odraz texture společně s rest shaderu. Například shaderu, která simuluje vysoce odrážející prostor jako zrcadlení může použít pouze texture reflexe, ale shaderu, která simuluje více jemně reflexe, jako byl nalezen na míč kulečníkové může kombinovat jenom malou část odraz Hodnota Texture na spolupráci s ostatními shaderu výpočtu.
+Pokud byste pečlivě zkontrolovat skutečné kulečníkové koule, uvidíte, že její lesklý povrch není právě světla, ale také prohlédnete odráží obrázek svět. Tento odraz můžete simulovat pomocí bitové kopie prostředí jako texturu a kombinaci s vlastní texturou modelu k určení konečné barvy jednotlivých obrazových bodů. V závislosti na druhu dokončení, které chcete, můžete kombinovat více nebo méně odrazové textury se zbytkem shaderu. Například shader, který simuluje vysoce odrazivý povrch, jako je zrcadlení může použít pouze pro texturu odrazu, ale shader, který simuluje jemnější odraz, jako je na kulečníkové kouli, lze kombinovat s pouze malou část odrazu hodnoty textury, spolu s ostatními výpočty shaderu.
 
- Samozřejmě jenom u nelze použít bitovou kopii reflektované modelu stejným způsobem, že použijete mapy textury modelu. Pokud jste to udělali, by s míč kulečníkové přesunout odraz na světě, jako kdyby byly odraz připevněná k němu. Protože odraz mohou pocházet z libovolným směrem, budete potřebovat způsob, jak zadat hodnotu reflexe mapování pro všechny úhel a způsob, jak udržovat mapy reflexe zaměřené na konkrétní podle na světě. Splňovat tyto požadavky můžete použít zvláštní druh mapy textury – názvem *datové krychle mapy*– šesti textury uspořádané na formuláři postranní datové krychle, která poskytuje. Z uvnitř této datové krychle, můžete zadat odkaz vede libovolným směrem najít texture hodnotu. Pokud textury na každé straně datové krychle obsahovat bitových kopií prostředí, můžete simulovat žádné reflexe vzorkování správném umístění na povrchu datové krychle. Tím, zachovat datové krychle zarovnán na světě, získáte přesný odraz prostředí. Pokud chcete zjistit, kde se datové krychle odeberou, právě vypočítat odraz fotoaparát vector mimo prostor objektu a použít jej jako 3D texture souřadnice. Pomocí datové krychle map tímto způsobem je běžný postup, který se označuje jako *prostředí mapování*.
+Samozřejmě nestačí pouze použít zrcadlený obraz modelu stejným způsobem, že použijete mapu textur modelu. Pokud jste provedli, odraz světa by posunula s kulečníkovou koulí, jako kdyby ni odraz byl přilepen k němu. Protože odraz může pocházet z libovolného směru, je třeba poskytnout hodnotu mapy odrazů pro každý úhel a způsob, jak mapu odrazu globálně orientovat. Pokud chcete splnit tyto požadavky můžete použít speciální typ mapy textury – volána *stranou mapy krychle*–, který poskytuje šest textur uspořádaných tak, aby tvořily strany krychle. Z vnitřního prostoru této krychle můžete ukázat v libovolném směru a najít tak hodnotu textury. Když textury na každé straně krychle obsahují obrázky prostředí, můžete simulovat jakýkoli odraz vzorkováním správného umístění na povrch datové krychle. Udržováním krychle zarovnán na světě, získáte přesný odraz prostředí. Pokud chcete zjistit, kde datové krychle vzorkování, stačí vypočítat odraz vektoru fotoaparátu povrchu objektu a použít jej jako souřadnice 3D textury. Použití mapy krychle tímto způsobem je běžná technika, která se označuje jako *mapování prostředí*.
 
- Mapování prostředí poskytuje efektivní sblížení skutečné odrazů, jak je popsáno v předchozích odstavcích. Do vaší shaderu umožnit míč kulečníkové, které simulované dokončit, která vytváří míč kulečníkové zdá se, že další založena scény můžete přizpůsobte odrazů mapované prostředí.
+Mapování prostředí poskytuje efektivní přiblížení skutečným odrazům popsaným v předchozích odstavcích. Odrazy mapovaného prostředí lze smíchat vašeho shaderu a dát tak kulečníkové kouli, které umělý povrch, který umožňuje kulečníkové kouli dojem, že další začleněna ve scéně.
 
- Prvním krokem je vytvoření mapy texturou datové krychle. V mnoha typy aplikací nemusí být ideální být efektivní, zejména v případě, že je jemně odraz nebo není zabírat viditelného prostor na obrazovce obsah mapy datové krychle. Mnoho hry například použít pro mapování prostředí a jenom používání ten nejblíže každý objekt odrážející mapy předvypočítaných datové krychle, i když to znamená, že odraz není správný. I hrubý aproximace je často dostatečně vhodné pro přesvědčivé vliv.
+Prvním krokem je vytvoření textury mapy krychle. U mnoha druhů aplikací obsah krychlové mapy nemusí být dokonalý, aby byl efektivní, zejména v případě, je odraz slabý nebo nezaujímá nápadné místo na obrazovce. Například, mnoho her například používá předvypočtenou krychli pro mapování prostředí a pouze ten nejbližší odrazný objekt, ač to znamená, že odraz není správný. I hrubé přiblížení je často dostatečné pro dosažení přesvědčivého efektu.
 
-### <a name="to-create-textures-for-an-environment-map-by-using-the-image-editor"></a>K vytvoření textury pro mapování prostředí pomocí editoru obrázků
+### <a name="to-create-textures-for-an-environment-map-by-using-the-image-editor"></a>Tvorba textur pro mapování prostředí pomocí editoru obrázků
 
-1.  Vytvořte texture pro práci s. Informace o tom, jak do projektu přidejte texturou, najdete v části Začínáme v [Editor obrázků](../designers/image-editor.md).
+1. Vytvořte textur pro práci s. Informace o tom, jak přidat do projektu texturu naleznete v části Začínáme v [Editor obrázků](../designers/image-editor.md).
 
-2.  Nastavit velikost obrázku tak, že jeho šířka rovná výšku a je druhou mocninou dva velikost; To je nutné kvůli způsobem, že je indexovaný mapu datové krychle. Ke změně velikosti obrázku se v **vlastnosti** okno, zadejte nové hodnoty pro **šířka** a **výška** vlastnosti. Například nastavit hodnotu **šířka** a **výška** vlastnosti na 256.
+2. Nastavte velikost obrázku tak, aby jeho šířka rovná jeho výška a je mocninou čísla 2 velikosti; To je nezbytné vzhledem ke způsobu, že se indexuje zpětně mapy krychle. Změna velikosti obrázku, v **vlastnosti** okno, zadejte nové hodnoty pro **šířka** a **výška** vlastnosti. Například nastavte hodnotu **šířka** a **výška** na 256.
 
-3.  Použijte výplň texturou plnou barvou. Tato texture bude dolní mapy datové krychle, která odpovídá na povrch kulečníkové tabulky. Barva, které jste použili mějte na paměti pro další texture.
+3. K vyplnění textury použijte plnou barvu. Tato textura bude spodní stranou mapy krychle, která odpovídá povrchu kulečníkového stolu. Mějte barvu, kterou jste použili pro další textury.
 
-4.  Vytvořte druhý texture, který má stejnou velikost jako první. Tato texture se bude opakovat na čtyři strany mapy datové krychle odpovídajících prostor a stranách kulečníkové tabulky a oblasti kolem kulečníkové tabulky. Zajistěte, aby k vykreslení prostor kulečníkové tabulky v této texture pomocí stejné barvy jako texture dolní. Textury by měl vypadat podobně jako tento:
+4. Vytvořte druhou texturu, která má stejnou velikost jako první. Tato textura bude opakována na čtyřech stranách mapy krychle, které odpovídají povrchu a po stranách kulečníkového stolu a oblasti kolem kulečníkového stolu. Ujistěte se, že nakreslete povrch kulečníkového stolu v této textuře s použitím stejné barvy jako u spodní textury. Textura by měl vypadat nějak takto:
 
-     ![Texture pro postranní cubemap](../designers/media/gfx_shader_demo_billiard_art_env_texture_side.png "gfx_shader_demo_billiard_art_env_texture_side")
+    ![Textury pro strany mapy krychle](../designers/media/gfx_shader_demo_billiard_art_env_texture_side.png)
 
-     Mějte na paměti, že mapu reflexe nemusí být fotorealistické účinná; například datové krychle mapy použít k vytvoření bitové kopie v tomto článku obsahuje pouze čtyři kapsami místo šest.
+    Mějte na paměti, že mapa odrazů nemusí být fotorealistická, aby byla platná; například mapa krychle použitá k vytvoření obrázků v tomto článku obsahuje pouze čtyři kapsy místo šesti.
 
-5.  Vytvořte třetí texture, který má stejnou velikost jako ostatní. Tato texture bude horní mapy datové krychle, která odpovídá mezní hodnoty nad tabulkou kulečníkové. Chcete-li tuto část odraz zajímavějšího, můžete nakreslit režijní najevo, že posílit zrcadlová světla, které jste přidali do shaderu v předchozím postupu. Textury by měl vypadat podobně jako tento:
+5. Vytvořte třetí texturu, která má stejnou velikost jako ostatní. Tato textura bude horní stranou mapy krychle, která odpovídá povrchu stropu nad kulečníkovým stolem. Chcete-li tuto část odrazu zajímavější, můžete nakreslit režijní světlo, aby byly posíleny odlesky, které jste přidali k shaderu v předchozím postupu. Textura by měl vypadat nějak takto:
 
-     ![Texture pro horní části cubemap](../designers/media/gfx_shader_demo_billiard_art_env_texture_top2.png "gfx_shader_demo_billiard_art_env_texture_top2")
+    ![Textury v horní části cubemap](../designers/media/gfx_shader_demo_billiard_art_env_texture_top2.png)
 
- Teď, když jste vytvořili jednotlivých textury pro postranní mapy datové krychle, můžete je spojit do datové krychle mapu, která mohou být uloženy v jednom .dds texture nástroj. Můžete použít libovolné aplikaci, kterou chcete vytvořit datové krychle mapy, dokud ho můžete uložit ve formátu texture .dds mapy datové krychle. Tento návod ukazuje, jak vytvořit textury s použitím rozhraní DirectX Texture nástroj, který je součástí 2010 června DirectX SDK.
+   Teď, když jste vytvořili individuální textury pro strany krychlové mapy, můžete použít nástroje sestavit do krychlové mapy, která mohou být uloženy v jednom *.dds* textury. Můžete použít libovolný program, kterou chcete vytvořit stranou mapy krychle, tak dlouho, dokud ho uložit stranou mapy krychle do formátu textury .dds. Tento návod ukazuje, jak vytvořit texturu pomocí nástroje textury rozhraní DirectX, který je součástí červen 2010 DirectX SDK.
 
-### <a name="to-assemble-a-cube-map-by-using-the-directx-texture-tool"></a>Ke kompilaci mapu datové krychle pomocí nástroje Texture DirectX
+### <a name="to-assemble-a-cube-map-by-using-the-directx-texture-tool"></a>K sestavení mapy krychle pomocí nástroje textury rozhraní DirectX
 
-1.  V nástroji Texture rozhraní DirectX v hlavní nabídce zvolte **soubor**, **nové Texture**. **Nové Texture** zobrazí se dialogové okno.
+1. V nástroji pro textury DirectX v hlavní nabídce zvolte **souboru** > **Nová textura**. **Nová textura** zobrazí se dialogové okno.
 
-2.  V **typu textury** skupiny, vyberte **Cubemap Texture**.
+2. V **typ textury** skupině, zvolte **textura Cubemap**.
 
-3.  V **dimenze** skupině, zadejte správné hodnoty pro **šířka** a **výška**a potom zvolte **OK**. Zobrazí se nové texture dokument. Ve výchozím nastavení, texture nejprve zobrazí v dokumentu texture odpovídá **kladné X** datové krychle řez.
+3. V **dimenze** skupině, zadejte správné hodnoty pro **šířka** a **výška**a klikněte na tlačítko **OK**. Zobrazí se nový dokument textury. Ve výchozím nastavení, odpovídá textury prvním zobrazení v dokumentu **kladná X** krychle.
 
-4.  Načtení textury, kterou jste vytvořili pro stranu texture datové krychle do datové krychle písmo. V hlavní nabídce zvolte **soubor**, **otevřete na tento Cubemap čelní strany**, vyberte texture, kterou jste vytvořili pro stranu datové krychle a potom zvolte **otevřete**.
+4. Načtěte texturu, kterou jste vytvořili pro boční část texturové krychle do ploška krychle. V hlavní nabídce zvolte **souboru** > **otevřít na tuto plošku**, vyberte texturu vytvořenou pro stranu krychle a pak zvolte **otevřít**.
 
-5.  Opakováním kroků 4 pro **záporné X**, **kladné Z**, a **záporné Z** datové krychle řezy. To pokud chcete udělat, musíte zobrazit řez, který chcete načíst. Zobrazíte řez mapy jiné datové krychle, v hlavní nabídce zvolte **zobrazení**, **datové krychle mapy vzhled**a potom vyberte řez, který chcete zobrazit.
+5. Opakujte krok 4 pro **záporné X**, **kladné Z**, a **záporné Z** plošky krychle. Uděláte to tak, musíte zobrazíte plošku, kterou chcete načíst. Zobrazíte jinou ploška mapy, v hlavní nabídce zvolte **zobrazení** > **mapa plošek krychle**a poté vyberte plošku, kterou chcete zobrazit.
 
-6.  Pro **kladné Y** datové krychle řez, načtení textury, kterou jste vytvořili pro horní texture datové krychle.
+6. Pro **Y pozitivní** krychle, načtěte texturu, kterou jste vytvořili pro horní část texturové krychle.
 
-7.  Pro **záporné Y** datové krychle řez, načtení textury, kterou jste vytvořili pro dolní texture datové krychle.
+7. Pro **Y negativní** krychle, načtěte texturu, kterou jste vytvořili pro dolní část texturové krychle.
 
-8.  Uložte textury.
+8. Uložte texturu.
 
- Si lze představit rozložení mapy datové krychle takto:
+   Můžete si představit rozložení cubemap takto:
 
- ![Rozložení mapy datové krychle prostředí](../designers/media/gfx_shader_demo_billiard_art_env_texture_top.png "gfx_shader_demo_billiard_art_env_texture_top")
+   ![Rozložení cubemap prostředí](../designers/media/gfx_shader_demo_billiard_art_env_texture_top.png)
 
- Bitová kopie v horní části je kladné tučné datové krychle Y (+ Y); uprostřed zleva doprava je -X, + Z + X a -Z datové krychle řezy; v dolní části je řez datové krychle -Y.
+   Obrázek navrchu je pozitivní ploška krychle Y (+ Y); uprostřed zleva doprava je -X, + Z, + X a -Z datové krychle tváří; dole je ploška krychle -Y.
 
- Nyní můžete upravit shaderu a přizpůsobte ukázka mapy datové krychle do zbytku shaderu.
+   Nyní můžete upravit shader tak zapojil vzorek mapy krychle do zbytku shaderu.
 
-### <a name="to-add-environment-mapping-to-your-shader"></a>Přidání mapování prostředí do vašeho shaderu
+### <a name="to-add-environment-mapping-to-your-shader"></a>Přidání mapování prostředí vašeho shaderu
 
-1.  Upravte vaše shaderu zahrnout příspěvek mapování prostředí pomocí sčítání prolnutí. Graf shaderu by měl vypadat takto:
+1. Upravte svůj shader tak zahrnoval příspěvek mapování prostředí pomocí aditivního míchání. Shader graf by měl vypadat takto:
 
-     ![Closeup obě typu uzlů odrážející shaderu](../designers/media/gfx_shader_demo_billiard_step_4b.png "gfx_shader_demo_billiard_step_4b")
+    ![Detail oba uzly druh reflektivní shaderu](../designers/media/gfx_shader_demo_billiard_step_4b.png)
 
-     Všimněte si, že můžete použít **násobení přidat** uzlu zjednodušit shaderu grafu.
+    Všimněte si, že můžete použít **vynásobit-přidat** uzlu ke zjednodušení grafu shaderu.
 
-     Tady je podrobnější pohled na shaderu uzlů, které implementují mapování prostředí:
+    Tady je podrobnější zobrazení uzlů shaderu, které implementují mapování prostředí:
 
-     ![Graf shaderu pomocí prostředí mapování přidat](../designers/media/gfx_shader_demo_billiard_step_4a.png "gfx_shader_demo_billiard_step_4a")
+    ![Graf shaderu se přidá mapování prostředí](../designers/media/gfx_shader_demo_billiard_step_4a.png)
 
-2.  Použití textury, kterou jste vytvořili v předchozím postupu pomocí konfigurace vlastností texture mapy datové krychle. Nastavte hodnotu **Texture** vlastnost **Cubemap ukázka** uzlu **Texture2**a pak zadejte soubor textury pomocí **Filename**vlastnost **Texture2** skupina vlastností.
+2. Použijte texturu, kterou jste vytvořili v předchozím postupu konfigurací vlastností textury mapy krychle. Nastavte hodnotu **textury** vlastnost **vzorek Cubemap** uzlu **Texture2**a poté určete soubor textury s použitím **Filename**vlastnost **Texture2** skupiny vlastností.
 
-3.  Volitelně můžete upravit odrazovost míč kulečníkové nakonfigurováním **výstup** vlastnost **konstantní** uzlu. Přístup k vlastnosti uzlu, vyberte ho a potom v **vlastnosti** okně najít vlastnost, která chcete získat přístup.
+3. Volitelně můžete upravit Odrazivost kulečníkové koule konfigurací **výstup** vlastnost **konstantní** uzlu. Pokud chcete získat přístup k vlastnostem uzlu, vyberte ji a pak v **vlastnosti** okno, vyhledejte vlastnost, ke které chcete získat přístup.
 
- S použitím mapování prostředí, vaše kulečníkové míč by měl vypadat podobně jako tento:
+   S použitím mapování prostředí použít, vaše kulečníková koule by měl vypadat nějak takto:
 
- ![Closeup prostředí namapované kulečníkové míč](../designers/media/gfx_shader_demo_billiard_ball_4.png "gfx_shader_demo_billiard_ball_4")
+   ![Detail z namapované kulečníkové koule prostředí](../designers/media/gfx_shader_demo_billiard_ball_4.png)
 
- Na tomto posledním obrázku Všimněte si, jak použít účinky, které jste přidali současně vytvořit velmi přesvědčivé míč kulečníkové. Obrazec, texture a osvětlení vytvoření základní vzhled 3D objektu a zrcadlová světla a odrazů zkontrolujte míč kulečníkové zajímavějšího a vypadat podobně jako součást své prostředí.
+   V tomto konečném obrazu si všimněte si, jak efekty, které jste přidali setkávají, aby se vytvoření velmi přesvědčivou kulečníkovou kouli. Tvar, textury a osvětlení tvoří základní vzhled 3D objektu a zrcadlové odlesky nebo odrazy zkontrolujte kulečníkovou kouli zajímavější a začleňují svého prostředí.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Postupy: Exportování shaderu](../designers/how-to-export-a-shader.md)
-- [Postupy: použití shaderu 3D modelu](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
+- [Postupy: Export shaderu](../designers/how-to-export-a-shader.md)
+- [Postupy: Použití shaderu na 3D model](../designers/how-to-apply-a-shader-to-a-3-d-model.md)
 - [Návrhář shaderů](../designers/shader-designer.md)
 - [Editor obrázků](../designers/image-editor.md)
 - [Uzly návrháře shaderů](../designers/shader-designer-nodes.md)

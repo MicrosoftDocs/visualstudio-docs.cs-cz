@@ -1,7 +1,7 @@
 ---
-title: Řešení potíží s testovacích Kontrolérů a testovacích agentů v sadě Visual Studio | Microsoft Docs
+title: Řešení potíží s testovacími Kontroléry a testovací agenty
 ms.date: 10/20/2016
-ms.topic: conceptual
+ms.topic: troubleshooting
 helpviewer_keywords:
 - load tests, test controllers
 - load tests, troubleshooting
@@ -11,38 +11,43 @@ ms.assetid: 77329348-3a5d-43de-b6cb-90f93296a081
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 3d785a559ff59a96861798a7c96bfdcb4147b7ec
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 274585d864393877b225fe6231c1f775342620f6
+ms.sourcegitcommit: ae46be4a2b2b63da7e7049e9ed67cd80897c8102
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52894739"
 ---
-# <a name="strategies-for-troubleshooting-test-controllers-and-test-agents-in-load-tests"></a>Strategie řešení potíží s testovacími kontroléry a testovacími agenty v zátěžových testech
+# <a name="strategies-for-troubleshooting-test-controllers-and-test-agents-in-load-tests"></a>Strategie pro řešení potíží s testovacími kontroléry a testovacími agenty v zátěžových testech
 
-Tento článek popisuje některé běžné problémy, ke kterým může dojít při práci s testovacích kontrolérů a testovacích agentů v sadě Visual Studio.
+Tento článek popisuje některé běžné problémy, které můžete narazit při práci s testovacími kontroléry a testovací agenty v sadě Visual Studio.
 
-##  <a name="unable-to-collect-performance-counters-on-test-agent-computer"></a>Nelze získat čítače výkonu v počítači agenta Test
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
- Když spustíte zátěžový test, může být, zobrazí se chyba při pokusu o připojení k na testovacím počítači agenta a shromažďování čítačů výkonu. Služba Remote Registry je služba zajišťuje data čítače výkonu ke vzdálenému počítači. U některých operačních systémů služba Remote Registry se nespustí automaticky. Chcete-li tento problém vyřešit, ručně spusťte službu Remote Registry.
+##  <a name="unable-to-collect-performance-counters-on-test-agent-computer"></a>Nepovedlo se získat čítače výkonu v počítači testovacího agenta
+
+Při spuštění zátěžového testu, může dojít k chybám při pokusu o připojení k počítači testovacího agenta a shromáždění čítačů výkonu. Služba Vzdálený registr je služba zodpovědná za poskytování dat čítače výkonu ke vzdálenému počítači. U některých operačních systémů služba Remote Registry se nespustí automaticky. Chcete-li tento problém vyřešit, ručně spusťte službu Remote Registry.
 
 > [!NOTE]
->  Dostanete služba Remote Registry v **ovládací panely.** Zvolte **nástroje pro správu** a potom zvolte **služby**.
+> Můžete přístup k službě Remote Registry v **ovládacích panelech.** Zvolte **nástroje pro správu** a klikněte na tlačítko **služby**.
 
- Další příčinou tohoto problému je, že nemáte dostatečná oprávnění ke čtení čítačů výkonu. Místní testovacích bězích účet uživatele, který spouští test musí být členem skupiny Power Users nebo vyšší nebo být členem skupiny Performance Monitor Users. Pro vzdálené test běží, účet, který kontroleru je nakonfigurovaná tak, aby spustit jako musí být členem skupiny Power Users nebo vyšší, nebo byl uživatel členem skupiny Performance Monitor Users.
+Další příčinou tohoto problému je, že nemáte dostatečná oprávnění ke čtení čítačů výkonu. Místní spouštění testů účet uživatele, který spouští test musí být členem skupiny Power Users nebo vyšší nebo být členem skupiny Performance Monitor Users. Pro vzdálené test běží, účet, který kontroleru je nakonfigurováno spuštění musí být členem skupiny Power Users nebo vyšší, nebo být členem skupiny Performance Monitor Users.
 
-## <a name="setting-the-logging-level-on-a-test-controller-computer"></a>Nastavení úrovně protokolování v testovacím počítači řadiče
- Můžete řídit úroveň protokolování v testovacím počítači řadiče. To je užitečné, když se pokoušíte diagnostikovat problém při spuštění zátěžového testu v prostředí.
+## <a name="set-the-logging-level-on-a-test-controller-computer"></a>Nastavení úrovně protokolování v počítači řadiče testu
 
-### <a name="to-set-the-logging-level-on-a-test-controller-computer"></a>Chcete-li nastavit úroveň protokolování v testovacím počítači řadiče
+Můžete řídit úroveň protokolování v počítači řadiče testu. To je užitečné, když se pokoušíte diagnostikovat problém při spouštění zátěžového testu v prostředí.
 
-1.  Zastavte službu testovací kontroler. Na příkazovém řádku zadejte `net stop vsttcontroller`.
+### <a name="to-set-the-logging-level-on-a-test-controller-computer"></a>Nastavení úrovně protokolování v počítači řadiče testu
 
-2.  Otevřete soubor QTController.exe.config. Tento soubor se nachází v instalačním adresáři řadiče.
+1.  Zastavte službu testovacího řadiče. Na příkazovém řádku zadejte `net stop vsttcontroller`.
 
-3.  Upravit položku `EqtTraceLevel` přepínače v části Diagnostika systému souboru. Váš kód by měl vypadat takto:
+2.  Otevřete soubor *QTController.exe.config*. Tento soubor je umístěn v instalačním adresáři kontroleru.
 
-    ```
+3.  Upravit položku `EqtTraceLevel` přepínat v části Diagnostika systému souboru. Váš kód by měl vypadat takto:
+
+    ```xml
     <system.diagnostics>
         <trace autoflush="true" indentsize="4">
             <listeners>
@@ -65,53 +70,54 @@ Tento článek popisuje některé běžné problémy, ke kterým může dojít p
 
 5.  Spusťte službu řadiče. Na příkazovém řádku zadejte `net start vsttcontroller`.
 
- To platí pro testovací kontroler, Služba agenta test a proces agenta test. Při diagnostice problémů, je vhodné povolit protokolování na všechny tři procesy. Postup nastavení úrovně protokolování je stejný pro všechny tři procesy, jako zadaná výše pro testovací kontroler. Nastavení úrovně protokolování pro agenta test, služby a proces agenta, použijte následující konfigurační soubory:
+To platí pro testovací kontrolér, službu testovacího agenta a proces testovacího agenta. Při diagnostikování potíží je vhodné povolit protokolování všech tří procesů. Postup pro nastavení úrovně protokolování je stejný pro všechny tři procesy, jak je uvedeno výše pro řadič testu. K nastavení úrovní protokolování pro testovacího agenta, služby a proces agenta, použijte následující konfigurační soubory:
 
--   **QTController.exe.config** Conttoller služby
+-   *QTController.exe.config* Služba ovladače
 
--   **QTAgentService.exe.config** Služba agenta
+-   *QTAgentService.exe.config* Služba agenta
 
--   **QTDCAgent (32).exe.config** proces adaptér dat agenta pro 32bitové architektury.
+-   *QTDCAgent (32).exe.config* proces adaptéru dat agenta pro 32bitovou architekturu.
 
--   **QTDCAgent (64).exe.config** proces adaptér dat agenta pro 64bitová architektura.
+-   *QTDCAgent (64).exe.config* proces adaptéru dat agenta pro 64bitová architektura.
 
--   **QTAgent (32).exe.config** proces test Agent pro 32bitové architektury.
+-   *QTAgent (32).exe.config* proces testování agenta pro 32bitovou architekturu.
 
--   **QTAgent (64).exe.config** proces testovacího agenta pro 64bitová architektura.
+-   *QTAgent (64).exe.config* proces testování agenta pro 64bitová architektura.
 
-## <a name="binding-a-test-controller-to-a-network-adapter"></a>Vazba testovací kontroler k síťovému adaptéru
- Při pokusu o nastavení agenta test, může dojít k následující chybě:
+## <a name="bind-a-test-controller-to-a-network-adapter"></a>Vazba testovacího kontroléru na síťový adaptér
 
- **Došlo k chybě 8110. Nelze připojit k počítači zadaný kontroler nebo přístup k objektu kontroleru.**
+Při pokusu o nastavení testovacího agenta, může dojít k následující chybě:
 
- Tato chyba může být způsobeno instalaci řadiče test na počítači, který má více než jeden síťový adaptér.
+**Došlo k chybě 8110. Nelze se připojit k počítači určenému kontroleru nebo přístup k objektu řadiče.**
+
+Tuto chybu může způsobovat instalace testovacího kontroléru na počítači, který má více než jeden síťový adaptér.
 
 > [!NOTE]
->  Je také možné úspěšně nainstalovat testovacích agentů a nejsou vidět tento problém, dokud pokusu o spuštění testu.
+> Je také možné úspěšně nainstalovat testové agenty a tento problém se nezobrazují až do pokusu o spuštění testu.
 
- Pokud chcete vyřešit tuto chybu, je třeba svázat testovací kontroler jeden ze síťových adaptérů. Budete muset nastavit `BindTo` vlastnost testovacího kontroléru a poté změňte agentem test agent k odkazování na testovací kontroler podle IP adresy místo podle názvu. Postup najdete v následujících postupech.
+Chcete-li vyřešit tuto chybu, je třeba svázat testovací kontrolér na jeden ze síťových adaptérů. Je nutné nastavit `BindTo` vlastnost na testovací kontrolér a potom změnit testovacího agenta k odkazování na testovací kontrolér podle IP adresy místo podle názvu. Kroky jsou k dispozici v následujících postupech.
 
-### <a name="to-obtain-the-ip-address-of-the-network-adapter"></a>Získat IP adresu síťového adaptéru
+### <a name="to-obtain-the-ip-address-of-the-network-adapter"></a>Chcete-li získat IP adresu síťového adaptéru
 
-1.  Zvolte **spustit**a potom zvolte **spustit**.
+1.  Zvolte **Start**a klikněte na tlačítko **spustit**.
 
      **Spustit** se zobrazí dialogové okno.
 
-2.  Typ `cmd` a potom zvolte **OK**.
+2.  Typ `cmd` a klikněte na tlačítko **OK**.
 
      Otevře se příkazový řádek.
 
 3.  Typ `ipconfig /all`.
 
-     Zobrazí se IP adresy pro síťové adaptéry. Zaznamenejte IP adresu síťového adaptéru, který chcete vytvořit vazbu na vašem řadiči.
+     Se zobrazují IP adresy pro síťové adaptéry. Zaznamenejte adresu IP síťového adaptéru, který chcete vytvořit vazbu řadiče.
 
-### <a name="to-bind-a-test-controller-to-a-network-adapter"></a>Testovací kontroler vytvořit vazbu na síťový adaptér
+### <a name="to-bind-a-test-controller-to-a-network-adapter"></a>Vazba testovacího kontroléru na síťový adaptér
 
-1.  Zastavte službu testovací kontroler. Na příkazovém řádku zadejte `net stop vsttcontroller`.
+1.  Zastavte službu testovacího řadiče. Na příkazovém řádku zadejte `net stop vsttcontroller`.
 
-2.  Otevřete soubor QTController.exe.config. Tento soubor se nachází v % ProgramFiles(x86) %\Microsoft Visual Studio\2017\Enterprise\Common7\IDE.
+2.  Otevřete soubor *QTController.exe.config*. Tento soubor je umístěn v *% ProgramFiles (x86) %\Microsoft Visual Studio\2017\Enterprise\Common7\IDE*.
 
-3.  Přidejte záznam pro `BindTo` vlastnost pro nastavení aplikace. Zadejte IP adresu, kterou chcete vytvořit vazbu řadiče síťového adaptéru. Váš kód by měl vypadat takto:
+3.  Přidat položku pro `BindTo` vlastností do nastavení aplikace. Zadejte IP adresu, kterou chcete vytvořit vazbu řadiče do síťového adaptéru. Váš kód by měl vypadat takto:
 
     ```xml
     <appSettings>
@@ -127,14 +133,14 @@ Tento článek popisuje některé běžné problémy, ke kterým může dojít p
 
 4.  Uložte soubor.
 
-5.  Spusťte službu testovací kontroler. Na příkazovém řádku zadejte `net start vsttcontroller`.
+5.  Spusťte službu testovacího řadiče. Na příkazovém řádku zadejte `net start vsttcontroller`.
 
-### <a name="to-connect-a-test-agent-to-a-bound-controller"></a>Pro připojení k řadiči vázané testovací agent
+### <a name="to-connect-a-test-agent-to-a-bound-controller"></a>Pro připojení testovacího agenta ke kontroléru vazby
 
--   Spusťte znovu instalaci agenta test. Tentokrát, zadejte IP adresu pro testovací kontroler místo názvu řadiče testu.
+-   Spusťte instalaci testovacího agenta znovu. Tentokrát, zadejte IP adresu testovacího kontroléru, nikoli název řadiče testu.
 
- To platí pro testovací kontroler, Služba agenta test a proces agenta test. `BindTo` Vlastnost musí být nastavena pro každý proces, který běží na počítači, který má více než jeden síťový adaptér. Postup pro nastavení a `BindTo` vlastnost je stejný pro všechny tři procesy, jako zadaná výše pro testovací kontroler. Pokud chcete nastavit úrovně protokolování pro službu agent test a proces agenta test, použijte konfigurační soubory, které jsou uvedeny v [nastavení úrovně protokolování v počítači řadiče testování](#Logging).
+To platí pro testovací kontrolér, službu testovacího agenta a proces testovacího agenta. `BindTo` Musí být nastavena vlastnost pro každý proces, který běží na počítači, který má více než jeden síťový adaptér. Postup pro nastavení `BindTo` vlastnost je stejný pro všechny tři procesy, jak je uvedeno výše pro řadič testu. K nastavení úrovní protokolování pro službu testovacího agenta a proces testovacího agenta použijte konfigurační soubory, které jsou uvedeny v [nastavení úrovně protokolování v počítači řadiče testu](#set-the-logging-level-on-a-test-controller-computer).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Kontrolery testů a testovací agenti](../test/configure-test-agents-and-controllers-for-load-tests.md)

@@ -1,37 +1,40 @@
 ---
-title: Práce s Python, krok 2, zápisu a spouštění kódu
-description: Krok 2 ze základní kurz pro práci s Pythonem v sadě Visual Studio, pokrývajících jak upravit a spustit jednoduchý program Hello, World, a potom zajímavějšího kódem, který popisuje úpravy sady Visual Studio a funkcích IntelliSense.
-ms.date: 01/16/2018
+title: Python v sadě Visual Studio kurz – krok 2, zápis a spouštění kódu
+titleSuffix: ''
+description: Krok 2 průvodce základní funkce Pythonu v sadě Visual Studio, včetně úprav kódu a spuštění projektu.
+ms.date: 10/29/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 607903093735c1ab49886afcf292121e0b7bafb8
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9b2f1c4743652f0925ef083d0ca62a34485c219b
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054797"
 ---
-# <a name="step-2-writing-and-running-code"></a>Krok 2: Psaní a spuštění kódu
+# <a name="step-2-write-and-run-code"></a>Krok 2: Zápis a spouštění kódu
 
-**Předchozí krok: [vytvoření nového projektu Python](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)**
+**Předchozí krok: [vytvoření nového projektu Pythonu](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)**
 
-Sice Průzkumníku řešení, kde budete spravovat soubory projektu, *editor* okno je obvykle kde pracovat *obsah* souborů, jako zdrojový kód. Editor má zasílat informace o typu souboru, který upravujete, včetně programovací jazyk (založené na příponě souboru) a nabízí funkce vhodné pro daný jazyk, například barevné zvýrazňování syntaxe a automatické dokončování pomocí IntelliSense.
+I když **Průzkumníku řešení** je, kde budete spravovat soubory projektu, *editor* okno je obvykle ve kterém můžete pracovat *obsah* souborů, jako je zdrojový kód. Editor je kontextová typu souboru, který upravujete, včetně programovací jazyk (podle přípony souboru), a nabízí funkce vhodné pro daný jazyk, třeba barevné zvýrazňování syntaxe a automatické dokončování pomocí technologie IntelliSense.
 
-1. Po vytvoření nového projektu "Python aplikace", výchozí prázdný soubor s názvem `PythonApplication1.py` je otevřen v editoru Visual Studio.
+1. Po vytvoření nového projektu "Aplikace v Pythonu" výchozí prázdný soubor s názvem *PythonApplication1.py* je otevřen v editoru sady Visual Studio.
 
-1. V editoru, začněte psát `print("Hello, Visual Studio")` a Všimněte si, jak Visual Studio IntelliSense zobrazí možnosti automatického dokončování na cestě. V rozevíracím seznamu možnost pro popsané je výchozí dokončení, která se používá při stiskněte klávesu Tabulátor. Dokončování jsou nejužitečnější, pokud se podílejí delší příkazy nebo identifikátory.
+1. V editoru, začněte psát `print("Hello, Visual Studio")` a Všimněte si, jak IntelliSense ve Visual Studio se zobrazí možnosti automatického dokončování na cestě. Obrysy možnost v rozevíracím seznamu je výchozí dokončení, který se používá po stisknutí klávesy **kartu** klíč. Dokončování jsou nejužitečnější, když se podílejí delší příkazy nebo identifikátory.
 
-    ![Místní nabídka Automatické dokončování IntelliSense](media/vs-getting-started-python-04-IntelliSense1b.png)
+    ![Automaticky otevírané okno automatického dokončování IntelliSense](media/vs-getting-started-python-04-IntelliSense1b.png)
 
-1. IntelliSense ukazuje různé informace v závislosti na příkaz, kterou používáte, funkce, ke kterému se připojujete a tak dále. S `print` fungovat, zadáním `(` po `print` udávajících funkce volání zobrazí informace o této funkci úplné využití. IntelliSense otevíraném také ukazuje aktuální argument tučným (**hodnotu** jak je vidět tady):
+1. Technologie IntelliSense zobrazuje různé informace v závislosti na příkazu, který používáte, funkce, do které voláte a tak dále. S `print` fungovala, zadáním `(` po `print` k označení funkce volání zobrazí informace o úplné využití pro tuto funkci. Okno technologie IntelliSense také ukazuje aktuální argument v tučné písmo (**hodnotu** jak je znázorněno zde):
 
-    ![Místní nabídka Automatické dokončování IntelliSense pro funkci](media/vs-getting-started-python-05-IntelliSense2b.png)
+    ![Automaticky otevírané okno automatického dokončování IntelliSense pro funkci](media/vs-getting-started-python-05-IntelliSense2b.png)
 
 1. Proveďte příkaz tak, aby odpovídala následující:
 
@@ -39,34 +42,34 @@ Sice Průzkumníku řešení, kde budete spravovat soubory projektu, *editor* ok
     print("Hello, Visual Studio")
     ```
 
-1. Všimněte si, zabarvení syntaxe, která odlišuje příkaz `print` v argumentu `"Hello Visual Studio"`. Navíc dočasně odstranit poslední `"` na řetězce a Všimněte si, jak Visual Studio zobrazí červený podtržení pro kód který obsahuje syntaktické chyby. Potom můžete nahradit `"` opravit kód.
+1. Všimněte si, zabarvení syntaxe, která odlišuje příkaz `print` z argumentu `"Hello Visual Studio"`. Navíc dočasně odstranit poslední `"` na řetězec a Všimněte si, jak sada Visual Studio zobrazí červené podtržení pro kód, který obsahuje chyby syntaxe. Potom nahraďte `"` opravit kód.
 
-    ![Barevné zvýrazňování syntaxe IntelliSense a zvýraznění chyby](media/vs-getting-started-python-06-IntelliSense3b.png)
+    ![Barevné zvýrazňování syntaxe technologie IntelliSense a zvýrazňování chyb](media/vs-getting-started-python-06-IntelliSense3b.png)
 
     > [!Tip]
-    > Protože jeden pro vývojové prostředí je velmi osobní záležitosti, Visual Studio poskytuje úplnou kontrolu nad vzhled a chování sady Visual Studio. Vyberte **nástroje > Možnosti** nabídky příkazů a zkontrolovat nastavení v části **prostředí** a **textového editoru** karty. Ve výchozím nastavení zobrazí pouze omezený počet možností; Pokud chcete zobrazit všechny dostupné možnosti pro každou programovací jazyk, vyberte **zobrazit všechna nastavení** v dolní části dialogových oken. 
+    > Protože jeden z vývojového prostředí je velmi osobní řádu, sada Visual Studio poskytuje úplnou kontrolu nad vzhled a chování aplikace Visual Studio. Vyberte **nástroje** > **možnosti** nabídky příkazů a prozkoumejte nastavení v části **prostředí** a **textový Editor** karty. Ve výchozím nastavení se zobrazí pouze omezený počet možností. Pokud chcete zobrazit všechny dostupné možnosti pro každý programovací jazyk, vyberte **zobrazit všechna nastavení** v dolní části dialogového okna. 
 
-1. Spustit kód, který jste zapisovat do tohoto bodu stisknutím Ctrl + F5 nebo výběrem **ladění > Spustit bez ladění** položku nabídky. Visual Studio zobrazí upozornění, pokud máte pořád chyby v kódu.
+1. Spustit kód, který jste zadali do této chvíle stisknutím kombinace kláves **Ctrl**+**F5** nebo jeho výběru **ladění** > **spustit bez ladění**  položky nabídky. Visual Studio vás upozorní, pokud máte stále chyby v kódu.
 
-1. Při spuštění programu, zobrazí okno konzoly zobrazení výsledků, stejně, jako kdyby byste spustili překladač Pythonu s `PythonApplication1.py` z příkazového řádku. Stisknutím klávesy zavřete okno a vrátíte se do editoru Visual Studio.
+1. Při spuštění programu, zobrazí se okno konzoly při zobrazení výsledků, tak, jako kdyby byste spustili interpret Pythonu s *PythonApplication1.py* z příkazového řádku. Stisknutím jakékoli klávesy zavřete okno a vraťte se do editoru sady Visual Studio.
 
-    ![Výstup prvního spuštění programu](media/vs-getting-started-python-07-output.png)
+    ![Výstup pro první spuštění programu](media/vs-getting-started-python-07-output.png)
 
-1. Kromě dokončených pro příkazy a funkce, technologie IntelliSense poskytne dokončených pro jazyk Python `import` a `from` příkazy. Tyto dokončených můžete snadno zjistit, jaké moduly jsou dostupné ve vašem prostředí a členy těchto modulů. V editoru, odstraňte `print` řádku a začněte psát `import `. Seznam modulů se zobrazí, když zadáte místo:
+1. Kromě dokončování příkazů a funkce, technologie IntelliSense poskytne dokončování Python `import` a `from` příkazy. Tyto dokončování vám snadno zjistit, jaké moduly jsou k dispozici ve vašem prostředí a členy těchto modulů. V editoru, odstraňte `print` řádku a začněte psát `import `. Seznam modulů, které se zobrazí, když zadáte pole:
 
-    ![Zobrazuje dostupné moduly pro příkaz import IntellSense](media/vs-getting-started-python-08-import1.png)
+    ![IntellSense zobrazení dostupných modulů pro příkaz importu](media/vs-getting-started-python-08-import1.png)
 
 1. Dokončení řádku zadáním nebo výběrem `sys`.
 
-1. Na následujícím řádku, zadejte `from` znovu zobrazte seznam modulů:
+1. Na dalším řádku, zadejte `from` znovu zobrazíte seznam modulů:
 
-    ![Zobrazuje dostupné moduly pro IntellSense z příkazu](media/vs-getting-started-python-09-import2.png)
+    ![Zobrazení dostupných modulů pro IntellSense z příkazu](media/vs-getting-started-python-09-import2.png)
 
-1. Vyberte nebo zadejte `math`, pokračujte zadáním mezerou a `import`, který zobrazí členy modul:
+1. Vyberte nebo zadejte `math`, pokračujte v zadávání s mezerou a `import`, který zobrazuje modul členy:
 
     ![IntellSense zobrazující modulu členy](media/vs-getting-started-python-10-import3.png)
 
-1. Dokončit importováním `sin`, `cos`, a `radians` členy, pro každou vašeho povšimnutí dostupné dokončených automaticky. Když jste hotovi, váš kód by měl vypadat takto:
+1. Dokončete tak, že import `sin`, `cos`, a `radians` členy vašeho povšimnutí dostupné dokončování automaticky pro každý. Jakmile budete hotovi, váš kód by měl vypadat takto:
 
     ```python
     import sys
@@ -74,25 +77,25 @@ Sice Průzkumníku řešení, kde budete spravovat soubory projektu, *editor* ok
     ```
 
     > [!Tip]
-    > Dokončování dílčích řetězců pracovat, jako typ, odpovídající části slov, písmena na začátku slova a dokonce přeskočen znaků. V tématu [úpravy kódu - dokončených](editing-python-code-in-visual-studio.md#completions) podrobnosti.
+    > Dokončování pracovat podřetězců hned při psaní, odpovídající části slov, písmena na začátku slova a dokonce přeskočeno znaků. Zobrazit [upravit kód – dokončování](editing-python-code-in-visual-studio.md#completions) podrobnosti.
 
-1. Přidejte trochu další kód tisknout kosinus hodnoty 360 stupňů:
+1. Přidejte trochu další kód pro tisk hodnoty kosinus pro 360 stupňů:
 
     ```python
     for i in range(360):
         print(cos(radians(i)))
     ```
 
-1. Spusťte program znovu s Ctrl + F5 nebo **ladění > Spustit bez ladění**. Po dokončení zavřete okno výstup.
+1. Spusťte program znovu s **Ctrl**+**F5** nebo **ladění** > **spustit bez ladění**. Jakmile budete hotovi, zavřete okno výstup.
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-step"></a>Další krok
 
 > [!div class="nextstepaction"]
-> [Používání okna interaktivní REPL](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md)
+> [Použití interaktivního okna REPL](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md)
 
-## <a name="going-deeper"></a>Budete hlubší
+## <a name="go-deeper"></a>Seznamte se blíž
 
 - [Úpravy kódu](editing-python-code-in-visual-studio.md)
-- [Formátování kódu](formatting-python-code.md)
-- [Refaktoring kódu](refactoring-python-code.md)
-- [Použití PyLintu](linting-python-code.md)
+- [Formátovat kód](formatting-python-code.md)
+- [Refaktorování kódu](refactoring-python-code.md)
+- [Použití Pylintu](linting-python-code.md)

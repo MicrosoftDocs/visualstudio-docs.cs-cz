@@ -1,5 +1,5 @@
 ---
-title: IDebugExpression2::Abort | Microsoft Docs
+title: IDebugExpression2::Abort | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5f4809fcf8e6947309182ff595ad2784b873f529
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2001992e1b5a120fd3dea588b785478e4d8ec418
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49876851"
 ---
 # <a name="idebugexpression2abort"></a>IDebugExpression2::Abort
-Tato metoda zruší vyhodnocení asynchronní výrazu, která jsou spuštěna voláním [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) metoda.  
+Tato metoda zruší asynchronní výraz vyhodnocení jako tím, že volání [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) metody.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,10 +38,10 @@ int Abort();
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Při vyhodnocení výrazu asynchronní byla zrušena, nebyla odeslána [IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md) předaný událostí pro událost zpětné volání [Attach](../../../extensibility/debugger/reference/idebugprogram2-attach.md) nebo [připojit](../../../extensibility/debugger/reference/idebugengine2-attach.md) metody.  
+ Při vyhodnocení výrazu asynchronní zrušení, nebyla odeslána [IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md) události pro událost zpětného volání předána [připojit](../../../extensibility/debugger/reference/idebugprogram2-attach.md) nebo [připojit](../../../extensibility/debugger/reference/idebugengine2-attach.md) metody.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md)   

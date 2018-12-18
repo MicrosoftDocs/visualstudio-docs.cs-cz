@@ -1,5 +1,5 @@
 ---
-title: IDebugCoreServer2::GetMachineName | Microsoft Docs
+title: IDebugCoreServer2::GetMachineName | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5f8615c341ff6dbde47140801054fbd47b51022f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 63446ddedaafe94b98dcbfe1f315fd5958fdb2d0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949926"
 ---
 # <a name="idebugcoreserver2getmachinename"></a>IDebugCoreServer2::GetMachineName
-Získá název počítače, který server jádra běží na.  
+Získá název počítače, který core server běží na.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,10 +41,10 @@ int GetName(
   
 #### <a name="parameters"></a>Parametry  
  `pbstrName`  
- [out] Vrací řetězec obsahující název počítače.  
+ [out] Vrátí řetězec obsahující název počítače.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)

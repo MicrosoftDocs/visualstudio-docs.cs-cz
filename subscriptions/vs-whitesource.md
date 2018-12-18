@@ -1,91 +1,97 @@
 ---
-title: Výhody WhiteSource Bolt | Microsoft Docs
+title: Nástroj WhiteSource Bolt Benefit | Dokumentace Microsoftu
 author: evanwindom
 ms.author: jaunger
 manager: evelynp
 ms.date: 01/11/2017
 ms.topic: Get-Started-Article
-description: Postup aktivace předplatného WhiteSource Bolt, které jsou součástí vašeho předplatného sady Visual Studio.
+description: Zjistěte, jak chcete předplatné aktivovat, nástroj WhiteSource Bolt je součástí předplatného sady Visual Studio.
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 0c2eed9efdcca076c20a240d60b4d38cdda23019
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 981d6a655a203a7d44728fa7d12761fba2918d76
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49935773"
 ---
-#  <a name="whitesource-bolt-in-visual-studio-subscriptions"></a>WhiteSource Bolt v sadě Visual Studio předplatných
+#  <a name="whitesource-bolt-in-visual-studio-subscriptions"></a>Nástroj WhiteSource Bolt v předplatných sady Visual Studio
 
-Najít a opravit chyby zabezpečení s otevřeným zdrojem a generovat komplexní sestavy inventáře a licencí všechny součástmi typu open source v buildu.  Vyberte předplatná zahrnují šest měsíců volného přístupu sady Visual Studio. 
+Vyhledejte a opravte slabá místa opensourcového kódu a generovat komplexní inventární a licenční sestavy všech opensourcových komponent ve vašem buildu. Některá předplatná sady Visual Studio zahrnují bezplatný přístup za šest měsíců.
 
 ## <a name="activation-steps"></a>Postup aktivace
 
-1.  Pokud chcete aktivovat vaší WhiteSource Bolt výhody, přihlaste se k [ https://my.visualstudio.com/benefits ](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) .
+1. K aktivaci vaší výhody nástroj WhiteSource Bolt, přihlaste se k [ https://my.visualstudio.com/benefits ](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs) .
 
-2.  Najděte dlaždici WhiteSource Bolt v části nástroje a klikněte na **získat kód** odkaz v dolní části dlaždici výhody.    
+2. Vyhledejte dlaždici nástroj WhiteSource Bolt v části nástroje a klikněte na **získat kód** odkaz v dolní části dlaždice výhodu.
+   > [!div class="mx-imgBorder"]
+   > ![WhiteSource výhodu dlaždice](_img/vs-whitesource/vs-whitesource-tile.png)
 
-    ![Výhody WhiteSource dlaždice](_img\vs-whitesource\vs-whitesource-tile.png)
+3. Obdržíte oznámení zobrazení aktivační kód.  **Zkopírujte kód do vaší schránky**, pak klikněte na tlačítko **aktivovat**.
+   > [!div class="mx-imgBorder"]
+   > ![WhiteSource výhodu kódu ](_img/vs-whitesource/vs-whitesource-code.png)
 
-2.  Obdržíte oznámení zobrazení aktivační kód.  **Zkopírujte kód do schránky**, pak klikněte na tlačítko **aktivovat**. 
+4. Na webové stránce WhiteSource, klikněte na **aktivovat** tlačítko nebo přejděte dolů k položce **aktivaci účtu** části stránky.
+   > [!div class="mx-imgBorder"]
+   > ![WhiteSource výhodu aktivovat](_img/vs-whitesource/vs-whitesource-activate-page-cropped.png)
 
-    ![WhiteSource zvýhodnění kód ](_img\vs-whitesource\vs-whitesource-code.png)
+5. V **aktivaci účtu** části stránky, provedeme vás provede čtyři kroky:
 
-3.  Na webové stránce WhiteSource, klikněte na **aktivovat** tlačítko nebo přejděte dolů k položce **aktivovat svůj účet** části stránky.  
+   - [Nainstalujte](https://marketplace.visualstudio.com/items?itemName=whitesource.ws-bolt) nástroj WhiteSource Bolt rozšíření sady Microsoft Visual Studio Marketplace. Pokud nemáte oprávnění k instalaci rozšíření, přečtěte si téma [instalovat bezplatná rozšíření pro služby Azure DevOps](/azure/devops/marketplace/install-vsts-extension?view=vsts).
 
-    ![Aktivovat výhody WhiteSource](_img\vs-whitesource\vs-whitesource-activate-page-cropped.png)
 
-4.  V **aktivovat svůj účet** části stránky, budete řídit prostřednictvím čtyři kroky:
-    - [Nainstalujte](https://marketplace.visualstudio.com/items?itemName=whitesource.ws-bolt) WhiteSource Bolt rozšíření sady Microsoft Visual Studio Marketplace. Pokud nemáte oprávnění k instalaci rozšíření, navštivte [tuto stránku](https://www.visualstudio.com/docs/marketplace/get-vsts-extensions#request).
+~~~
+Click the green **Install** button if you are using Azure DevOps Services, or the **Download** button for Team Foundation Server.  For this example, we will use Azure DevOps Services.
+> [!div class="mx-imgBorder"]
+> ![WhiteSource Benefit Install Extension](_img\vs-whitesource\vs-whitesource-download-install.png)
 
-    Klikněte na tlačítko se zeleným **nainstalovat** tlačítko Pokud používáte služby VSTS, nebo **Stáhnout** tlačítko pro Team Foundation Server.  V tomto příkladu použijeme služby VSTS. 
+- Next, select the Azure DevOps organization you want to use and click **Confirm**.  (If you have not yet set up Azure DevOps Services, visit the [Benefits](https://my.visualstudio.com/benefits) page and activate your Azure DevOps Services benefit.)
 
-    ![Výhody WhiteSource instalace rozšíření](_img\vs-whitesource\vs-whitesource-download-install.png)
+> [!div class="mx-imgBorder"]
+> ![WhiteSource Benefit Confirm Account](_img\vs-whitesource\vs-whitesource-confirm-account.png)
 
-    - Potom vyberte účet služby VSTS, kterou chcete použít a klikněte na **potvrdit**.  (Pokud jste ještě služby VSTS, přejděte [výhody](https://my.visualstudio.com/benefits) stránky a aktivovat výhody vaší služby VSTS.)
+- You’ll receive a confirmation that the extension is installed and ready to use.  Click **Get started** to return to the WhiteSource Bolt page and continue.
+> [!div class="mx-imgBorder"]
+> ![WhiteSource Benefit Install Complete](_img\vs-whitesource\vs-whitesource-install-complete.png)
+~~~
 
-    ![WhiteSource Benefit potvrďte účtu](_img\vs-whitesource\vs-whitesource-confirm-account.png)
+5. Otevřete řídicí panel Projekt Azure DevOps, klikněte na **kanály Azure** nabídku a zvolte **nástroj WhiteSource Bolt**.
+   > [!div class="mx-imgBorder"]
+   > ![WhiteSource výhodu přidat rozšíření](_img/vs-whitesource/vs-whitesource-installed-cropped.png)
 
-    - Obdržíte potvrzení, že je rozšíření nainstalované a připravené k použití.  Klikněte na tlačítko **Začínáme** návrat na stránku WhiteSource Bolt a pokračujte.  
+6. Vložte aktivační kód z dlaždice nástroj WhiteSource Bolt výhoda a klikněte na tlačítko **aktivovat**. Každá aktivační kódy je možné aktivovat pouze jeden projekt.
+   > [!div class="mx-imgBorder"]
+   > ![WhiteSource výhodu aktivovat kódu](_img/vs-whitesource/vs-whitesource-activate-code-cropped.png)
 
-    ![Výhody WhiteSource instalace byla dokončena](_img\vs-whitesource\vs-whitesource-install-complete.png)
+7. S aktivací je tak dokončená a budete mít 180 dní zbývajících v rámci předplatného.
 
-5.  Otevřete řídicí panel Projekt Visual Studio Team Services (VSTS), klikněte na **sestavení a verze** nabídky a zvolte **WhiteSource Bolt**.
+8. Bude potřeba přidat rozšíření nástroj WhiteSource Bolt jako jeden z kroků sestavení.  Video je k dispozici na [nástroj WhiteSource Bolt stránky](https://www.whitesourcesoftware.com/whitesource_bolt_visualstudio_2017/#activate) ukáže, jak.
 
-    ![Výhody WhiteSource přidat rozšíření](_img\vs-whitesource\vs-whitesource-installed-cropped.png)
-
-6. Vložte aktivační kód z dlaždice benefit WhiteSource Bolt a klikněte na tlačítko **aktivovat**. Každý aktivační kódy lze použít k aktivaci jenom jeden projektu. 
-
-    ![Aktivovat WhiteSource zvýhodnění kód](_img\vs-whitesource\vs-whitesource-activate-code-cropped.png)
-
-7.  Aktivací je nyní dokončen a budete mít 180 dnů zbývající u předplatného. 
-
-8.  Budete muset přidat rozšíření WhiteSource Bolt jako jeden z vaší kroků sestavení.  Video je k dispozici na [WhiteSource Bolt stránky](https://www.whitesourcesoftware.com/whitesource_bolt_visualstudio_2017/#activate) ukáže, jak.  
-
-9. Jakmile spustíte buildu, následující komplexní sestavy a řídicí panely se budou generovat automaticky:
-    - Řídicí panel chyb zabezpečení
-    - Sestava chyb zabezpečení
+9. Jakmile jste si vyzkoušeli vaše sestavení, následující komplexní sestavy a řídicí panely se vygeneruje automaticky:
+    - Řídicí panel zabezpečení ohrožení zabezpečení
+    - Sestava zabezpečení ohrožení zabezpečení
     - Zastaralé knihovny sestav
     - Řídicí panel licence rizik a dodržování předpisů
     - Sestava inventáře
 
-## <a name="eligibility"></a>Podmínky
-| Úrovni předplatného                                                 |     Kanály                                            | Výhody                                                          | Obnovitelných?    |
+## <a name="eligibility"></a>Způsobilost
+
+| Úroveň předplatného                                                 |     Kanály                                            | Výhody                                                          | Obnovitelné?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise (standardní, roční cloud)   | VL, Azure, prodejní, vybrané NFR<sup>1</sup> | 6 měsíců       |  Ano          |
-| Visual Studio Professional (standardní, roční cloud) | VL, Azure, maloobchodní                                       | Není k dispozici                                                           |NÁ         |
-| Visual Studio Test Professional (standardní)                         | VL, prodejní                                              | Není k dispozici                                             |  NÁ         |
-| MSDN platformy (standardní)                                          | VL, prodejní                                              | Není k dispozici                                              | NÁ         |
-| Visual Studio Dev Essentials | NÁ  | Není k dispozici |NÁ |
-| Visual Studio Enterprise, Visual Studio Professional (měsíční cloud) | Azure                                       | Není k dispozici                                                           |NÁ|
+| Visual Studio Enterprise (standardní a roční cloudové)   | VL, Azure, maloobchod, vybrali NFR<sup>1</sup> | 6 měsíců       |  Ano          |
+| Visual Studio Professional (standardní a roční cloudové) | VL, Azure, maloobchodního prodeje                                       | Není k dispozici                                                           |NENÍ K DISPOZICI         |
+| Visual Studio Test Professional (Standard)                         | VL maloobchodního prodeje                                              | Není k dispozici                                             |  NENÍ K DISPOZICI         |
+| Předplatné MSDN Platforms (Standard)                                          | VL maloobchodního prodeje                                              | Není k dispozici                                              | NENÍ K DISPOZICI         |
+| Visual Studio Dev Essentials | NENÍ K DISPOZICI  | Není k dispozici |NENÍ K DISPOZICI |
+| Visual Studio Enterprise, Visual Studio Professional (měsíční cloud) | Azure                                       | Není k dispozici                                                           |NENÍ K DISPOZICI|
 
-<sup>1</sup>*zahrnuje: Microsoft Partner Network (Enterprise).    Vyloučí: Jiné není pro prodej (NFR), Visual Studio Industry Partner (VSIP), FTE, MCT softwaru a služeb Developer, BizSpark, představte si cenná Partner společnosti Microsoft (MVP), oblast ředitel (RD), MCT softwaru a služeb, Microsoft Partner sítě () Professional).*
+<sup>1</sup>*zahrnuje: Microsoft Partner Network (Enterprise).  Vyloučí: Jiné není pro prodej (NFR), Visual Studio Industry Partner (VSIP), FTE, MCT Software & Services pro vývojáře, BizSpark, Imagine, Vážíme si toho Microsoft Professional (MVP), ředitel pro oblast (RD), MCT Software & Services, Microsoft Partner Network () Professional).*
 
-Nejste si jistí jaké předplatné používáte?  Připojení k [ https://my.visualstudio.com/subscriptions ](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) zobrazíte všechny odběry, které jsou přiřazeny k e-mailovou adresu. Pokud nevidíte všechny odběry, můžete mít jeden nebo více přiřadit jinou e-mailovou adresu.  Musíte se přihlásit pomocí tohoto e-mailovou adresu zobrazíte těchto předplatných. 
+Nejste si jistí které předplatné používáte?  Připojte se k [ https://my.visualstudio.com/subscriptions ](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) zobrazíte všechna předplatná, která jsou přiřazená e-mailovou adresu. Pokud se nezobrazí všechna předplatná, může mít jeden nebo více přiřazené na jinou e-mailovou adresu.  Bude potřeba přihlásit se přes tento e-mailovou adresu najdete v těchto předplatných.
 
+## <a name="support-resources"></a>Informační zdroje podpory
 
-## <a name="support-resources"></a>Podpora prostředky
--  Potřebujete pomoc s WhiteSource Bolt?  Chat s WhiteSource Bolt zástupce v za provozu https://www.whitesourcesoftware.com/vse_whitesource_bolt/ 
--  Požádejte o pomoc s prodej, odběry, účtech a cenách pro Visual Studio předplatné sady Visual Studio [odběry podporu](https://www.visualstudio.com/subscriptions/support/).
--  Máte dotaz týkající se Visual Studio IDE, Visual Studio Team Services nebo jiné produkty Visual Studio nebo službám?  Navštivte [Visual Studio – podpora](https://www.visualstudio.com/support/). 
-
+-  Potřebujete pomoc s nástroj WhiteSource Bolt?  Chat s nástroj WhiteSource Bolt zástupce v za provozu https://www.whitesourcesoftware.com/vse_whitesource_bolt/
+-  Potřebujete pomoc se prodeje, předplatnými, účty a fakturací pro předplatná sady Visual Studio, obraťte se na Visual Studio [podpora předplatných](https://visualstudio.microsoft.com/subscriptions/support/).
+-  Máte dotaz k Visual Studio IDE, DevOps služby Azure nebo jiných produktů Visual Studio nebo služeb?  Navštivte [Visual Studio – podpora](https://visualstudio.microsoft.com/support/).

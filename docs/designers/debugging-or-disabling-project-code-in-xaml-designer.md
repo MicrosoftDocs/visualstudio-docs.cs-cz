@@ -1,6 +1,8 @@
 ---
-title: Ladění nebo zakázat kód projektu v Návrháři XAML
+title: Ladění nebo zakázání kódu projektu v Návrháři XAML
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: ac600581-8fc8-49e3-abdf-1569a3483d74
 author: gewarren
@@ -8,81 +10,96 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 536c69aa9131068397fd0a86576f473db82fbe10
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 191d180a68edd439c729fa963b607c992ff3c00e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49816775"
 ---
-# <a name="debugging-or-disabling-project-code-in-xaml-designer"></a>Ladění nebo zakázat kód projektu v Návrháři XAML
-V mnoha případech může být způsobeno neošetřených výjimek v Návrháři XAML kód projektu pokusu o přístup k vlastnosti nebo metody, které vracet různé hodnoty nebo když je aplikace spuštěna v Návrháři pracovních různými způsoby. Můžete tyto výjimky vyřešit ladění projektu kódu v jiné instanci sady Visual Studio, nebo je dočasně zakázat zakázat kód projektu v návrháři.
+# <a name="debug-or-disable-project-code-in-xaml-designer"></a>Ladění nebo zakázání kódu projektu v Návrháři XAML
 
- Kód projektu zahrnuje:
+V mnoha případech neošetřené výjimky v **XAML** Návrhář může být způsobeno kód projektu pokusu o přístup k vlastnosti nebo metody, které vracet různé hodnoty, nebo fungují jiným způsobem, při spuštění aplikace v návrháři. Můžete tyto výjimky vyřešit ladění kódu projektu v jiné instanci sady Visual Studio nebo dočasně zakázat kód projektu v Návrháři tak zabránit výjimky.
 
--   Vlastní ovládací prvky a uživatelské ovládací prvky
+Kód projektu zahrnuje:
+
+-   Vlastní ovládací prvky a uživatelských ovládacích prvků
 
 -   Knihovny tříd
 
 -   Převodníky hodnot
 
--   Vazby proti návrhu časových dat generované z projektu kódu
+-   Vazby proti návrhovém generován z kódu projektu
 
- Pokud je kód projektu zakázáno, Visual Studio se zobrazí zástupné symboly jako název vlastnosti pro vazbu, kde je dat již není k dispozici. nebo zástupný symbol pro ovládací prvek, který je již spuštěn.
+Když kód projektu je zakázaný, sada Visual Studio zobrazí zástupné symboly. Například sada Visual Studio zobrazí název vlastnosti pro vazbu, kde data už nejsou k dispozici, nebo zástupný symbol pro ovládací prvek, který je již neběží.
 
- ![Dialogové okno neošetřené výjimky](../designers/media/xaml_unhandledexception.png "XAML_UnhandledException")
+![Dialogové okno neošetřené výjimky](../designers/media/xaml_unhandledexception.png)
 
-#### <a name="to-determine-if-project-code-is-causing-an-exception"></a>Chcete-li zjistit, zda kód projektu je příčinou výjimku
+## <a name="to-determine-if-project-code-is-causing-an-exception"></a>Chcete-li zjistit, zda kód projektu je příčinou výjimku
 
-1.  V dialogovém okně neošetřené výjimky, vyberte **klikněte sem a znovu načíst návrháře** odkaz.
+1.  V dialogovém okně neošetřenou výjimku, zvolte **klinutím sem zopakujete zavedení návrháře** odkaz.
 
-2.  V řádku nabídek zvolte **ladění**, **spustit ladění** sestavení a spuštění aplikace.
+2.  Na panelu nabídek zvolte **ladění** > **spustit ladění** sestavíte a spustíte aplikaci.
 
-     Pokud aplikace vytvoří a spustí úspěšně, může být způsobeno spuštěna v Návrháři projektu kódu v době návrhu výjimky.
+     Pokud se aplikace sestaví a spustí úspěšně, výjimka návrhu může být způsobeno spuštění v Návrháři projektu kódu.
 
-#### <a name="to-debug-project-code-running-in-the-designer"></a>Chcete-li ladit kód projektu spuštěný v Návrháři
+## <a name="to-debug-project-code-running-in-the-designer"></a>Chcete-li ladit projekt kódu spuštěného v Návrháři
 
-1.  V dialogovém okně neošetřené výjimky, vyberte **kliknutí sem můžete zakázat spuštění kódu projektu a znovu načíst návrháře** odkaz.
+1.  V dialogovém okně neošetřenou výjimku, zvolte **kliknutím sem zakážete spuštění kódu projektu a opětovné načtení návrháře** odkaz.
 
-2.  Zvolte ve Správci úloh systému Windows **ukončit úlohu** tlačítko zavřete všechny instance návrháři XAML pro Visual Studio, které jsou aktuálně spuštěny.
+2.  Vyberte ve Správci úloh Windows **ukončit úlohu** zavřete všechny instance návrháři XAML sady Visual Studio, které jsou aktuálně spuštěny.
 
-     ![Instance návrháře XAML v Správce úloh](../designers/media/xaml_taskmanager.png "XAML_TaskManager")
+     ![Instance návrháře XAML v Správce úloh](../designers/media/xaml_taskmanager.png)
 
 3.  V sadě Visual Studio otevřete stránku XAML, který bude obsahovat kód nebo ovládací prvek, který chcete ladit.
 
-4.  Otevření nové instance sady Visual Studio a pak otevřete druhou instanci projektu.
+4.  Otevřete novou instanci sady Visual Studio a pak otevřete druhou instanci projektu.
 
-5.  Nastavte zarážky v kódu projektu.
+5.  Nastavte zarážku v kódu projektu.
 
-6.  V nové instanci sady Visual Studio na řádku nabídek zvolte **ladění**, **připojit k procesu**.
+6.  V nové instanci sady Visual Studio na řádku nabídek zvolte **ladění** > **připojit k procesu**.
 
-7.  V **připojit k procesu** dialogové okno, v **procesy k dispozici** vyberte **XDesProc.exe**a potom vyberte **Attach** tlačítko.
+7.  V **připojit k procesu** dialogového okna v **procesy k dispozici** klikněte na položku **XDesProc.exe**a klikněte na tlačítko **připojit** tlačítko.
 
-     ![Proces návrháře XAML](../designers/media/xaml_attach.png "XAML_Attach")
+     ![Proces návrháře XAML](../designers/media/xaml_attach.png)
 
-     Toto je proces pro Návrhář XAML v sadě Visual Studio na první instanci.
+     Jedná se o proces pro návrháře XAML v první instance sady Visual Studio.
 
-8.  V první instanci sady Visual Studio na řádku nabídek zvolte **ladění**, **spustit ladění**.
+8.  V první instanci sady Visual Studio na panelu nabídek zvolte **ladění** > **spustit ladění**.
 
-     Můžete teď krok do vašeho kódu, který je spuštěn v návrháři.
+     Nyní můžete krokovat do svého kódu, který je spuštěn v návrháři.
 
-#### <a name="to-disable-project-code-in-the-designer"></a>Chcete-li zakázat kód projektu v Návrháři
+## <a name="to-disable-project-code-in-the-designer"></a>Chcete-li zakázat kód projektu v Návrháři
 
--   V dialogovém okně neošetřené výjimky, vyberte **kliknutí sem můžete zakázat spuštění kódu projektu a znovu načíst návrháře** odkaz.
+-   V dialogovém okně neošetřenou výjimku, zvolte **kliknutím sem zakážete spuštění kódu projektu a opětovné načtení návrháře** odkaz.
 
--   Nebo na panelu nástrojů v Návrháři XAML, zvolte **zakázat kód projektu** tlačítko.
+-   Taky můžete na panelu nástrojů **návrháře XAML**, zvolte **zakázat kód projektu** tlačítko.
 
-     ![Tlačítko Zakázat kód projektu](../designers/media/xaml_disablecode.png "XAML_DisableCode")
+     ![Tlačítko Zakázat kód projektu](../designers/media/xaml_disablecode.png)
 
-     Můžete přepínat na tlačítko znovu a znovu povolte kód projektu.
-
-    > [!NOTE]
-    >  Pro projekty, které používají ARM nebo X64 procesory, Visual Studio nelze spustit projekt kódu v návrháři, proto **zakázat kód projektu** tlačítko k dispozici v návrháři.
-
--   Buď možnost způsobí, že návrháře znovu načíst a pak vypne všechny kód pro přidružené projektu.
+     Můžete přepínat na tlačítko znovu pro opětovné povolení kódu projektu.
 
     > [!NOTE]
-    >  Zakázat kód projektu může vést ke ztrátám dat čase návrhu. Alternativou je ladit kód spuštěný v návrháři.
+    > Pro projekty, které cílí ARM nebo X64 procesory, Visual Studio nelze spustit kód projektu v návrháři, proto **zakázat kód projektu** je tlačítko neaktivní v návrháři.
 
-## <a name="see-also"></a>Viz také
+-   Možnost způsobí, že návrháře znovu načíst a potom zakázat veškerý kód pro přidružený projekt.
 
-- [Navrhování XAML v sadě Visual Studio a nástroj Blend for Visual Studio](../designers/designing-xaml-in-visual-studio.md)
+    > [!NOTE]
+    > Zakázání kódu projektu může vést ke ztrátám dat doby návrhu. Alternativou je pro ladění kódu spuštěného v návrháři.
+
+## <a name="control-display-options"></a>Možnosti zobrazení ovládacího prvku
+
+> [!NOTE]
+> **Možnosti zobrazení ovládání** je dostupná jenom pro aplikace univerzální platformy Windows, které se zaměřují Windows 10 Fall Creators Update (sestavení 16299) nebo novější. **Možnosti zobrazení ovládacího prvku** funkce je k dispozici v sadě Visual Studio 2017 verze 15.9 nebo vyšší. 
+
+V Návrháři XAML můžete změnit možnosti zobrazení ovládacího prvku můžete zobrazit jenom ovládacích prvků platformy ze sady Windows SDK. Toto může vylepšit spolehlivost tohoto návrháře XAML.
+
+Chcete-li změnit možnosti zobrazení ovládacího prvku, klikněte na ikonu v levé dolní části okna návrháře a potom vyberte možnosti v části **možnosti zobrazení ovládacího prvku**:
+
+![Možnosti zobrazení ovládacího prvku](../designers/media/control_display_options.png)
+
+Když vyberete **pouze ovládací prvky zobrazení platformy**, všechny vlastní ovládací prvky pocházející ze sad SDK, zákazníka uživatelské ovládací prvky a další, se nevykreslí úplně. Místo toho budou nahrazeny náhradní ovládací prvky k předvedení velikost a umístění ovládacího prvku.
+
+## <a name="see-also"></a>Viz také:
+
+- [Návrh XAML v sadě Visual Studio a nástroje Blend for Visual Studio](../designers/designing-xaml-in-visual-studio.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugGenericParamField::ConstraintCount | Microsoft Docs
+title: IDebugGenericParamField::ConstraintCount | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bd4cfa82c754625968730ce6828cc08ee9254c8d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9139478b4e3f8134bcb002e51fa3aaab7c10ddbd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49921059"
 ---
 # <a name="idebuggenericparamfieldconstraintcount"></a>IDebugGenericParamField::ConstraintCount
-Vrátí počet omezení, která jsou přidružená tato obecný parametr.  
+Vrátí počet omezujících podmínek, které jsou přidruženy tento obecný parametr.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,10 +40,10 @@ int ConstraintCount(
   
 #### <a name="parameters"></a>Parametry  
  `pcConst`  
- [ve out] Počet omezení, které jsou spojeny s tímto polem.  
+ [out v] Počet omezení, které jsou spojeny s tímto polem.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugGenericParamFieldType** objekt, který zveřejňuje [IDebugGenericParamField](../../../extensibility/debugger/reference/idebuggenericparamfield.md) rozhraní.  

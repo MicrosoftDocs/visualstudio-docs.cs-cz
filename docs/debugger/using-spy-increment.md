@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31475791"
 ---
 # <a name="using-spy"></a>Použití nástroje Spy++
 Nástroje Spy ++ (SPYXX. Soubor EXE) je na základě Win32 nástroj, který nabízí grafické zobrazení systémové procesy, vláken, windows a okna zpráv. Tato část nástroje Spy ++ nápovědy obsahuje následující témata:  

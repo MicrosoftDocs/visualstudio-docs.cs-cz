@@ -1,6 +1,7 @@
 ---
 title: 'CA2239: Poskytujte metody deserializace pro nepovinné pole'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,36 +14,41 @@ ms.assetid: 6480ff5e-0caa-4707-814e-2f927cdafef5
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: e0bd6acae196dc3556994cdd36946b2574aad698
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 8c1b8adb3454b7309eefa49ded129ce899c3cf58
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45548579"
 ---
 # <a name="ca2239-provide-deserialization-methods-for-optional-fields"></a>CA2239: Poskytujte metody deserializace pro nepovinné pole
+
 |||
 |-|-|
 |TypeName|ProvideDeserializationMethodsForOptionalFields|
 |CheckId|CA2239|
 |Kategorie|Microsoft.Usage|
-|Narušující změna|Bez ukončování řádků|
+|Narušující změna|Pevné|
 
 ## <a name="cause"></a>příčina
- Typ obsahuje pole, která je označena pomocí <xref:System.Runtime.Serialization.OptionalFieldAttribute?displayProperty=fullName> atribut a typ neposkytuje zpracování metody deaktivace serializace událostí.
+ Typ má pole, která je označena pomocí <xref:System.Runtime.Serialization.OptionalFieldAttribute?displayProperty=fullName> atribut a typ neposkytuje metody zpracování událostí rušení serializace.
 
 ## <a name="rule-description"></a>Popis pravidla
- <xref:System.Runtime.Serialization.OptionalFieldAttribute> Atribut nemá žádný vliv na serializace; pole s atributem serializován. Pole však je na deaktivace serializace ignorována a zachová výchozí hodnotu přidruženou k jeho typu. Obslužné rutiny událostí deaktivace serializace by měl být deklarován nastavit pole během procesu deaktivace serializace.
+ <xref:System.Runtime.Serialization.OptionalFieldAttribute> Atribut nemá žádný vliv na serializace, je serializována pole označená pomocí atributu. Ale pole se ignoruje u rušení serializace a zachová výchozí hodnotu přidruženou k jeho typu. Rušení serializace obslužné rutiny události by měly být deklarovány nastavit pole během rušení serializace.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení toto pravidlo, přidejte zpracování metody pro typ deaktivace serializace událostí.
+ Chcete-li opravit porušení tohoto pravidla, přidejte metody pro typ zpracování událostí rušení serializace.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Je bezpečné potlačit upozornění na toto pravidlo, je-li pole třeba ji ignorovat během procesu deaktivace serializace.
+ Je bezpečné potlačit upozornění tohoto pravidla, je-li pole mají ignorovat během rušení serializace.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje typ s volitelné pole a deaktivace serializace událostí obslužné metody.
+ Následující příklad ukazuje typ volitelné pole a rušení serializace událostí obslužné metody.
 
  [!code-csharp[FxCop.Usage.OptionalFields#1](../code-quality/codesnippet/CSharp/ca2239-provide-deserialization-methods-for-optional-fields_1.cs)]
  [!code-vb[FxCop.Usage.OptionalFields#1](../code-quality/codesnippet/VisualBasic/ca2239-provide-deserialization-methods-for-optional-fields_1.vb)]

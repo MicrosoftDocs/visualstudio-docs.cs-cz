@@ -1,5 +1,5 @@
 ---
-title: IDebugProgram2::Detach | Microsoft Docs
+title: IDebugProgram2::Detach | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9f2b007fa110c9ef5c344f488e710e3eaf4d097b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ff18f393c609faed6f5aeadbec9903f2d5a5dab5
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49832528"
 ---
 # <a name="idebugprogram2detach"></a>IDebugProgram2::Detach
-Umožňuje odpojit modul ladění programu.  
+Odpojí ladicí stroj z programu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,10 +38,10 @@ int Detach();
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Odpojit program běžet dál, ale je už součástí relace ladění. Žádné další události ladicí program odešlou, jakmile odpojený modul ladění.  
+ Odpojit program bude nadále spuštěn, ale je již součástí relace ladění. Žádné další události ladicí program se posílají až odpojit ladicí stroj.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)

@@ -14,18 +14,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3bf258dbca695fe3f1516d977e02a21058377e02
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 63fe3de8c4322e378f110813ac93fa523f3453ba
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750373"
 ---
-# <a name="cvcreatemarkerserieswithcodepagea-function"></a>CvCreateMarkerSeriesWithCodePageA – funkce
+# <a name="cvcreatemarkerserieswithcodepagea-function"></a>Cvcreatemarkerserieswithcodepagea – funkce
 Vytvoří řady značky daného poskytovatele a zadanou znakovou stránku. Tato funkce slouží k určení kódové stránky explicitně pro text naprogramovaný funkce rozhraní API ANSI značky. Nastavení znakové stránky může být užitečné v případě, že bude zachycen a potom analyzovat na různé počítače s jinou národní prostředí nebo jazyky trasování. Ve výchozím nastavení se používá znaková stránka vrácené funkcí GetACP().  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```C  
 HRESULT CvCreateMarkerSeriesWithCodePageA(  
    _In_ PCV_PROVIDER pProvider,  
    _In_ LPCSTR pSeriesName,  
@@ -51,7 +52,7 @@ HRESULT CvCreateMarkerSeriesWithCodePageA(
  S_OK při řady značky se úspěšně vytvořil nebo kód chyby v případě, že existuje byly všechny chyby. Makra úspěšné nebo NEÚSPĚŠNÉ použijte ke kontrole chybový stav.  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** cvmarkers.h  
+ **Záhlaví:** *cvmarkers.h*  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Referenční dokumentace knihoven jazyka C++](../profiling/cpp-library-reference.md)

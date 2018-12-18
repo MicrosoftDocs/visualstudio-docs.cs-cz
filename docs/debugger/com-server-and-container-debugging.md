@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31458174"
 ---
 # <a name="com-server-and-container-debugging"></a>Ladění serveru a kontejneru modelu COM
 Aplikace modelu COM provést určité úlohy mimo pro programátory přímou kontrolu. Komunikace mezi knihovny DLL, využití počítá na objekty a operace se schránkou je uvedeno několik z oblastí, kde může dojít k neočekávanému chování. Pokud k tomu dojde, je prvním krokem sledovat zdroj problému.  

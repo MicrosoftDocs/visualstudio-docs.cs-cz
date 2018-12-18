@@ -1,5 +1,5 @@
 ---
-title: Přidání příkazů na panely nástrojů | Microsoft Docs
+title: Přidání příkazů na panely nástrojů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,29 +11,30 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a3a2f4080491a32e90c447366260991c5a90d58e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9f6bf8e8dffde406b3c11ebf043246f5b277446d
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39154281"
 ---
-# <a name="adding-commands-to-toolbars"></a>Přidání příkazů na panely nástrojů
-Panel nástrojů je vodorovné nebo svislé pruhu, který obsahuje tlačítka vázána na příkazy. Můžete přidat vlastní příkazy na panely nástrojů v mnoha různých systému windows v sadě Visual Studio: hlavní okno sady Visual Studio, Průzkumníka řešení a vlastní vlastní nástroj windows.  
+# <a name="add-commands-to-toolbars"></a>Přidání příkazů na panely nástrojů
+Panel nástrojů je vodorovný nebo svislý pruh, který obsahuje tlačítka, které jsou vázány na příkazy. Můžete přidat vlastní příkazy na panely nástrojů v mnoha různých systému windows v sadě Visual Studio: hlavní okno Visual Studio, Průzkumníka řešení a vlastní vlastní okna nástrojů.  
   
- Tato část ukazuje několik věcí, které můžete provést pomocí příkazů na panely nástrojů.  
+ Tato část uvádí řadu věcí, které vám pomůžou s příkazy na panely nástrojů.  
   
 ## <a name="in-this-section"></a>V této části  
  [Přidání panelu nástrojů](../extensibility/adding-a-toolbar.md)  
- Vysvětluje, jak přidat panel nástrojů do sady panelů nástrojů v hlavním okně Visual Studio.  
+ Vysvětluje, jak přidat panel nástrojů do sady panelů nástrojů v hlavním okně aplikace Visual Studio.  
   
  [Přidání panelu nástrojů do panelu nástrojů](../extensibility/adding-a-toolbar-to-a-tool-window.md)  
- Vysvětluje, jak přidat panel nástrojů pro okno nástroje.  
+ Vysvětluje, jak přidat panel nástrojů do panelu nástrojů.  
   
- [Přidání příkazu do panelu nástrojů Průzkumník řešení](../extensibility/adding-a-command-to-the-solution-explorer-toolbar.md)  
- Popisuje postup přidání příkazu na panelu nástrojů v Průzkumníku řešení.  
+ [Přidání příkazu do panelu nástrojů Průzkumníka řešení](../extensibility/adding-a-command-to-the-solution-explorer-toolbar.md)  
+ Vysvětluje, jak přidat příkaz na panelu nástrojů v Průzkumníku řešení.  
   
  [Přidání kontroleru nabídky do panelu nástrojů](../extensibility/adding-a-menu-controller-to-a-toolbar.md)  
- Vysvětluje, jak přidat řadič nabídky na panelu nástrojů.  
+ Popisuje postup přidání kontroleru nabídky do panelu nástrojů.  
   
- [Dynamické přidávání položek nabídky](../extensibility/dynamically-adding-menu-items.md)  
- Vysvětluje, jak dynamicky přidání položek nabídky v různých kontextech.
+ [Dynamicky přidat položky nabídky](../extensibility/dynamically-adding-menu-items.md)  
+ Vysvětluje, jak dynamicky přidat položky nabídky v různých kontextech.

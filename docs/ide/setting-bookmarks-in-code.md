@@ -1,7 +1,7 @@
 ---
-title: Nastavení záložek v kódu v sadě Visual Studio | Microsoft Docs
-ms.custom: ''
+title: Nastavit kód záložky
 ms.date: 02/23/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
@@ -12,35 +12,36 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b2c51b360a8df39abfd38e3da175de65c38d59bf
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 37dff534307f7773858ccb43b076ed309504b6ef
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53047639"
 ---
 # <a name="set-bookmarks-in-code"></a>Nastavení záložek v kódu
 
-Záložky můžete označit řádky v kódu tak, abyste mohli rychle vrátit do určitého umístění, nebo přecházet mezi umístěními. Záložka příkazy a ikony jsou k dispozici na dvou místech: **záložku okno** (**zobrazení** > **záložku okno**) a na panelu nástrojů editoru textu.
+Záložky můžete označit řádky v kódu, takže můžete rychle vrátit na konkrétní umístění, nebo přecházet mezi umístěními. Ikony a příkazy záložky jsou k dispozici na dvou místech: **okno záložky** (**zobrazení** > **okno záložky**) a panelu nástrojů textového editoru.
 
-![BOOKMARK panelu nástrojů](media/bookmark-toolbar.png)
+![Panel nástrojů záložky](media/bookmark-toolbar.png)
 
-![BOOKMARK – okno](media/bookmark-window.png)
+![Okno záložek](media/bookmark-window.png)
 
-## <a name="manage-bookmarks"></a>Spravovat záložky
+## <a name="manage-bookmarks"></a>Správa záložek
 
-Chcete-li přidat záložku, umístěte kurzor na řádek, který chcete bookmark. Vyberte **přepnutí záložku** tlačítko nebo klikněte na tlačítko **Ctrl**+**tisíc**, **Ctrl**+**kB** . Tento postup přidá záložky. Pokud se rozhodnete **přepnutí záložku** tlačítko (nebo stiskněte klávesu **Ctrl**+**tisíc**, **Ctrl** +  **K**) znovu, je odebrán záložky.
+Chcete-li přidat záložku, umístěte kurzor na řádek, který chcete přidat k oblíbeným. Zvolte **přepne záložku** tlačítko nebo stisknutím klávesy **Ctrl**+**K**, **Ctrl**+**tis.** . Přidá záložku. Pokud se rozhodnete **přepne záložku** tlačítko (nebo stiskněte klávesu **Ctrl**+**K**, **Ctrl** +  **K**), Záložka bude odebrána.
 
-Vědět na první pohled, jaký konkrétní Záložka je pro můžete přejmenovat ho **záložku okno** v nabídce klikněte pravým tlačítkem nebo kontextu. Můžete odstranit záložky výběrem **odstranit** tlačítka v okně záložky.
+Vědět na první pohled, jaký konkrétní Záložka je pro, můžete ho přejmenovat **okno záložky** z nabídky klikněte pravým tlačítkem nebo kontext. Záložky můžete odstranit kliknutím **odstranit** tlačítka v okně záložek.
 
 > [!IMPORTANT]
-> Záložka je nastavena na číslo řádku, ne ke kódu. Pokud upravíte kód, záložka se zachovává na číslo a nepřesouvá kódem.
+> Záložka je nastavena na číslo řádku, nikoli na kód. Pokud upravíte kód, bude tato záložka zachována na čísle řádku a nepřesune se s kódem.
 
-Mohou procházet mezi záložky pomocí **Další záložka** a **předchozí záložku** tlačítka v okně záložky.
+Můžete procházet mezi záložkami pomocí **Další záložka** a **předchozí Záložka** tlačítka v okně záložek.
 
-Záložky můžete uspořádat do složek, které virtuální výběrem **novou složku** v okně záložku a přetáhnete vybrané záložky do nové složky.
+Záložky lze uspořádat do virtuálních složek kliknutím **novou složku** v okně záložek a následným přetažením vybraných záložek do nové složky.
 
-Můžete vypnout záložky (bez odstranění) tak, že zvolíte **zakažte všechny záložky** tlačítka v okně záložky. Můžete je znovu povolit tak, že zvolíte tlačítko stejné (což se nyní označuje jako **povolit všechny záložky**).
+Můžete záložky můžete vypnout (aniž byste je odebrali) kliknutím **zakázat všechny záložky** tlačítka v okně záložek. Můžete znovu povolit výběrem stejného tlačítka (která se nyní nazývá **povolit všechny záložky**).
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Psaní kódu v editoru](../ide/writing-code-in-the-code-and-text-editor.md)
+- [Funkce editoru kódu](../ide/writing-code-in-the-code-and-text-editor.md)

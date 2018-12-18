@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: aba425823de9f6c9e935e987e2f574ac0733d262
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c5cbae58aeaa1164aab6c254f62e0959da02d31c
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35257670"
 ---
-# <a name="modules-view---net-memory-sampling-data"></a>Zobrazení modulů – Data vzorkování paměti .NET
+# <a name="modules-view---net-memory-sampling-data"></a>Zobrazení modulů – data vzorkování paměti .NET
 Zobrazení modulů dat přidělení paměti .NET, které jsou shromažďovány prostřednictvím metody vzorkování seskupení dat paměti moduly, které byly provedeny v profilaci spustit. Každý modul je kořenem hierarchickou stromovou strukturu. Funkce modulu jsou uvedené pod tímto uzlem modulu.  
   
  Čísla řádků zdrojového souboru příkazů, které přidělit paměť jsou uvedené pod tímto uzlem funkce a pokyny, které provádějí přidělení adresy jsou uvedené pod tímto uzlem řádku. (Včetně) a výhradní hodnoty je vždy stejný pro řádek data a instrukce data.  
@@ -41,7 +42,7 @@ Zobrazení modulů dat přidělení paměti .NET, které jsou shromažďovány p
 |**Výhradní bajtů**|-Pro funkce, celkový počet bajtů, které byly přiděleny funkcí. Číslo nezahrnuje bajtů, které byly přiděleny ve funkcích, které byly volat pomocí této funkce.<br />-Pro modul, součet výhradní bajtů, které byly přiděleny pomocí funkce v modulu.<br />-Pro řádek nebo instrukce, celkový počet objektů, které byly přiděleny touto řádku nebo instrukcí.|  
 |**% Výhradní bajtů**|Procento všech bajtů, které byly přiděleny v profilaci spuštění, které byly výhradní bajtů modulu, funkce, čáry nebo instrukcí.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Postupy: přizpůsobení sloupců zobrazení sestavy](../profiling/how-to-customize-report-view-columns.md)   
  [Zobrazení modulů – instrumentace](../profiling/modules-view-dotnet-memory-instrumentation-data.md)   
  [Zobrazení modulů](../profiling/modules-view-sampling-data.md)   

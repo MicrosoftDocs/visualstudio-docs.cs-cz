@@ -1,5 +1,5 @@
 ---
-title: IDebugArrayField::GetRank | Microsoft Docs
+title: IDebugArrayField::GetRank | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4fee642bb5f19efb62b631d71d3ba95eec45c0be
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6921da02b2df62509dd820795581e3ce6dae92d6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49846236"
 ---
 # <a name="idebugarrayfieldgetrank"></a>IDebugArrayField::GetRank
 Získá pořadí nebo počet rozměrů pole.  
@@ -40,13 +41,13 @@ int GetRank(
   
 #### <a name="parameters"></a>Parametry  
  `pdwRank`  
- [out] Vrátí pořadí.  
+ [out] Vrátí počet rozměrů.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí S_OK; jinak vrátí kód chyby.  
+ V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Pořadí pole odpovídá počet dimenzí. V jazyce C++ a C# vícerozměrných polí jsou skutečně pole polí a lze proto považovat za právě jednorozměrné pole (a `GetRank` metoda vždy vrátí hodnotu 1). V [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)], na druhé straně vícerozměrných polí jsou zpracovány jinak a počet dimenzí odráží pořadí takové pole (a `GetRank` metoda vždy vrátí počet dimenzí).  
+ Rozměr pole odpovídá počet rozměrů. V jazyce C++ a C# vícerozměrná pole jsou ve skutečnosti pole polí a může proto považovat jenom jednorozměrná pole (a `GetRank` metoda vždy vrátí hodnotu 1). V [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)], na druhé straně vícerozměrná pole jsou zpracovány jinak a pořadí těchto pole odpovídá počet rozměrů (a `GetRank` metoda vždy vrátí počet dimenzí).  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugArrayField](../../../extensibility/debugger/reference/idebugarrayfield.md)

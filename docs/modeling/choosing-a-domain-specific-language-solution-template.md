@@ -9,27 +9,29 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 6ec2d2210912011e09e439f25ecaa0e21ab6e918
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: d2977d546d463a8c21446a3643cff7ef49a01fb1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49908824"
 ---
 # <a name="choosing-a-domain-specific-language-solution-template"></a>Výběr šablony řešení jazyka specifického pro doménu
-Pokud chcete vytvořit řešení jazyka domény, vyberte jednu z šablony řešení, které jsou k dispozici v Průvodci Návrhář jazyk specifické pro doménu. Výběrem šablony, která nejvíce podobá jazyk, který chcete vytvořit můžete minimalizovat úpravy, které je nutné provést k počáteční řešení.
+K vytváření řešení jazyka specifického pro doménu, vyberte jednu z šablon řešení, které jsou k dispozici v Průvodci návrháře jazyka specifického pro doménu. Výběrem šablony, která nejlépe odpovídá jazyk, ve kterém chcete vytvořit, můžete minimalizovat úpravy, které je nutné provést počáteční řešení.
 
- Následující řešení šablony jsou dostupné v Průvodci Návrhář jazyk specifické pro doménu.
+ Následující šablony řešení jsou k dispozici v Průvodci návrháře jazyka specifického pro doménu.
 
 |Šablony|Funkce|Popis|
-|--------------|--------------|-----------------|
-|Diagramy tříd|-Prostředí tvarů<br />– Dědičnost třída<br />-Vztah dědičnosti<br />-Tvar dědičnosti<br />-Vlastnosti vztahu|Tuto šablonu řešení použijte, pokud váš jazyk specifické pro doménu zahrnuje entity a vztahy, které mají vlastnosti. Tato šablona vytvoří specifické pro doménu jazyk, který vypadá takto: diagramů tříd UML. Hlavní entity jsou třídy a rozhraní, společně s přidružení, generalizace a implementace vztahy. Třídy nebo rozhraní se zobrazí jako pole, která obsahuje seznam atributů.|
-|Diagramy komponent|-Porty|Tuto šablonu řešení použijte, pokud jazyka specifické pro doménu obsahuje součásti, který je součástí softwaru system. Tato šablona vytvoří jazyk specifické pro doménu, která se podobá diagramy komponent UML. Hlavní entity, které jsou součástí a porty, které se zobrazují jako malé obrazce na vnější součástí.|
-|Diagramy toku úkolů|-Bitové kopie a geometrické obrazce<br />-   *Plaveckých drah*|Tuto šablonu řešení použijte, pokud váš jazyk specifické pro doménu obsahuje pracovní postupy, stavů nebo pořadí. Tato šablona vytvoří jazyk specifické pro doménu, která se podobá diagramy činnosti UML. Hlavní entity je aktivitou, a hlavní bude přechod mezi aktivitami. Šablona obsahuje několik dalších prvků jako počáteční stav, konečného stavu a synchronizace panelu.|
-|Minimální jazyk|-Jedné třídy a tvar<br />-Jeden vztah a konektor|Tuto šablonu řešení použijte, pokud váš jazyk specifické pro doménu není jevil jako další šablony. Tato šablona vytvoří specifické pro doménu jazyk, který má dvě třídy a jedna relace, která jsou reprezentována v **sada nástrojů** jako **pole** a **řádku**. Třídy a relace mít vlastnost příklad řetězec.|
-|Minimální WinForm návrháře|-Malá modelu.<br />– Windows formulář, který zobrazí modelu.|Tuto šablonu použijte, pokud chcete sestavit aplikaci, ve kterém je vázána DSL do formuláře Windows, nikoli grafický Návrhář.<br /><br /> Formulář, který funguje jako uživatelské rozhraní pro jazyk je ve složce Dsl\UI.<br /><br /> Měli byste vytvořit projekt před otevřením formuláře návrháře.<br /><br /> Další informace najdete v tématu [vytváření jazyk specifické pro doménu Windows Forms-Based](../modeling/creating-a-windows-forms-based-domain-specific-language.md).|
-|Návrhář minimální WPF|-Malá modelu<br />– Windows Presentation Foundation uživatelské rozhraní, které zobrazí modelu|Tuto šablonu použijte, pokud chcete sestavit aplikaci, ve kterém je vázána DSL uživatelské rozhraní WPF, nikoli grafický Návrhář.<br /><br /> Návrhář pro uživatelské rozhraní je ve složce Dsl\UI.<br /><br /> Měli byste vytvořit projekt před otevřením návrháře uživatelského rozhraní.<br /><br /> Další informace najdete v tématu [vytváření jazyk specifické pro doménu WPF-Based](../modeling/creating-a-wpf-based-domain-specific-language.md).|
-|Knihovna DSL|-Minimální knihovny|Tuto šablonu použijte, pokud chcete vytvořit definici částečné DSL, který lze importovat do jiné DSL definice.|
+|-|-|-|
+|Diagramy tříd|-Oddíl obrazce<br />– Dědičnost třída<br />-Vztah dědičnosti<br />– Obrazec dědičnosti<br />– Vlastnosti relace|Pomocí této šablony řešení jazyka specifického pro doménu obsahuje entity a vztahy, které mají vlastnosti. Tato šablona vytvoří jazyka specifického pro doménu, která se podobá diagramů tříd UML. Hlavní entity jsou třídy a rozhraní, společně s relací asociace, generalizace a implementaci. Třídy nebo rozhraní se zobrazí jako pole, která obsahuje seznam atributů.|
+|Diagramy komponent|-Porty|Pomocí této šablony řešení jazyka specifického pro doménu obsahuje součásti, tedy součástí softwaru system. Tato šablona vytvoří jazyka specifického pro doménu, která se podobá diagramy komponent UML. Hlavní entity jsou komponenty a porty, které se zobrazí jako malá tvary na povrchu komponenty.|
+|Diagramy toku úkolů|– Image a geometrických obrazců<br />-   *Plaveckých drah*|Pomocí této šablony řešení jazyka specifického pro doménu obsahuje pracovní postupy, stavů nebo pořadí. Tato šablona vytvoří jazyka specifického pro doménu, která se podobá diagramy činnosti UML. Hlavní entity je aktivita a hlavní relace je přechod mezi aktivitami. Šablona obsahuje několik elementů jako počáteční stav, konečného stavu a panel synchronizace.|
+|Minimální jazykový|-Jednu třídu a obrazec<br />– Jeden vztah a spojnici|Pomocí této šablony řešení jazyka specifického pro doménu není vypadat jako další šablony-li. Tato šablona vytvoří jazyka specifického pro doménu, která má dvě třídy a jedna relace, které jsou reprezentovány v **nástrojů** jako **pole** a **řádku**. Třídy a relace mít vlastnost řetězce příklad.|
+|Minimální návrháři formuláře Windows|-Malá modelu.<br />– Windows formulář, který zobrazuje model.|Tuto šablonu použijte, pokud chcete sestavit aplikaci, ve kterém je DSL vázán na formuláři Windows, nikoli grafického návrháře.<br /><br /> Ve složce Dsl\UI je formulář, který funguje jako uživatelské rozhraní pro jazyk.<br /><br /> Projekt má sestavit před otevřením Návrhář formulářů.<br /><br /> Další informace najdete v tématu [vytvoření jazyka specifického pro doménu Windows Forms-Based](../modeling/creating-a-windows-forms-based-domain-specific-language.md).|
+|Minimální WPF Designer|-Malá modelu<br />– Windows Presentation Foundation uživatelské rozhraní, které zobrazuje model|Tuto šablonu použijte, pokud chcete k sestavení aplikace 00Z DSL vázán na uživatelské rozhraní WPF, nikoli grafického návrháře.<br /><br /> Návrhář uživatelského rozhraní je ve složce Dsl\UI.<br /><br /> Projekt má sestavit před otevřením návrháře uživatelského rozhraní.<br /><br /> Další informace najdete v tématu [vytvoření jazyka specifického pro doménu WPF-Based](../modeling/creating-a-wpf-based-domain-specific-language.md).|
+|Knihovna DSL, která|-Minimální knihovny|Tuto šablonu použijte, pokud chcete sestavit částečnou definici DSL, která se dají importovat do jiné definice DSL.|
 
 ## <a name="see-also"></a>Viz také
 

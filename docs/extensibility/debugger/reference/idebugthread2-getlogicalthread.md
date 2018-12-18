@@ -1,5 +1,5 @@
 ---
-title: IDebugThread2::GetLogicalThread | Microsoft Docs
+title: IDebugThread2::GetLogicalThread | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ab093cb4ca4760737f8216452cfde7340b0329fd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b7acf0cbb99fc9541088a339931110e56363213b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49920141"
 ---
 # <a name="idebugthread2getlogicalthread"></a>IDebugThread2::GetLogicalThread
-Ladění moduly neimplementují tuto metodu.  
+Ladicí stroj neimplementují této metody.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,13 +43,13 @@ int GetLogicalThread(
   
 #### <a name="parameters"></a>Parametry  
  `pStackFrame`  
- [v] [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) objekt, který reprezentuje rámce zásobníku.  
+ [in] [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) objekt představující rámec zásobníku.  
   
  `ppLogicalThread`  
- [out] Vrátí `IDebugLogicalThread2` rozhraní, které představuje přidružené logické vlákno. Implementace modulu ladění měli nastavit na hodnotu null.  
+ [out] Vrátí `IDebugLogicalThread2` rozhraní, které představuje přidružené logické vlákno. Implementace modulu ladění by měl nastavíte na hodnotu null.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Ladění implementace modulu vždy návratový `E_NOTIMPL`.  
+ Ladění vždy návratový stroj implementace `E_NOTIMPL`.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)

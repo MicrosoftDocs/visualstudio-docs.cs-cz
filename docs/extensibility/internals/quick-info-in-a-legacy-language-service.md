@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31132146"
 ---
 # <a name="quick-info-in-a-legacy-language-service"></a>Rychlé informace ve službě jazyk starší verze
 Rychlé informace technologie IntelliSense zobrazí informace o identifikátor ve zdroji, když uživatel umístí znak v identifikátoru a vybere **rychlé informace** z **IntelliSense** nabídky nebo obsahuje myši kurzor přes identifikátor. To způsobí, že aby se s informacemi o identifikátor tip nástroj. Tyto informace se obvykle skládá z typu identifier. Pokud modul ladění je aktivní, mohou obsahovat tyto informace aktuální hodnotu. Modul ladění poskytuje hodnot výrazu, zatímco služba jazyka zpracovává jenom identifikátory.  

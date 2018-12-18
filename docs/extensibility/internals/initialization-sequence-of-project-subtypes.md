@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31131605"
 ---
 # <a name="initialization-sequence-of-project-subtypes"></a>Pořadí inicializace podtypů projektu
 Prostředí vytvoří projektu voláním implementace objektu pro vytváření základní projekt <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A>. Konstrukce podtypu projektu spustí, když prostředí určuje, že v seznamu projektu typu GUID příponu souboru projektu není prázdná. Přípona souboru projekt a projekt GUID určete, zda je projekt [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] nebo [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] typ projektu. Například rozšíření .vbproj a {F184B08F-C81C-45F6-A57F-5ABD9991F28F} identifikovat [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] projektu.

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31140833"
 ---
 # <a name="web-site-support-attributes"></a>Atributy webu podpory
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Webový projekt lze rozšířit zajistit podporu pro webové programovacích jazyků. Jazyk musí se registrovat s [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] tak, aby šablony projektů může vyskytovat v **nový web** dialogové okno když je vybraný jazyk.

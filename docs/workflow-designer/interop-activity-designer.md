@@ -1,7 +1,9 @@
 ---
-title: Návrhář aktivity spolupráce | Microsoft Docs
+title: Návrhář postupu provádění – Návrhář aktivity Interop
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - System.Activities.Statements.Interop.UI
 ms.assetid: 800a3403-ba86-41c4-8de1-c4fee9703eb1
@@ -10,39 +12,44 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bbac122e2e12844249be8dad37d6bed65b90ddc3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7f3b5fd2674d63fad6398eeaee082862c4cf6476
+ms.sourcegitcommit: af428c7ccd007e668ec0dd8697c88fc5d8bca1e2
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/16/2018
+ms.locfileid: "51809126"
 ---
-# <a name="interop-activity-designer"></a>Návrhář aktivity spolupráce
-**Zprostředkovatel komunikace s objekty** Návrhář aktivity se používá k vytvoření a konfigurace <xref:System.Activities.Statements.Interop> aktivity.
+# <a name="interop-activity-designer"></a>Návrhář aktivity Interop
 
-## <a name="the-interop-activity"></a>Spolupráce aktivity
- <xref:System.Activities.Statements.Interop> Aktivita řídí provádění typy, které jsou odvozeny od <xref:System.Workflow.ComponentModel.Activity?displayProperty=fullName> v pracovním postupu.
+**Interop** Návrhář aktivity se používá k vytvoření a konfigurace <xref:System.Activities.Statements.Interop> aktivity.
 
-### <a name="using-the-interop-activity-designer"></a>Pomocí návrháře spolupráce aktivity
- **Zprostředkovatel komunikace s objekty** Návrhář aktivity naleznete v **migrace** kategorii **sada nástrojů**, který přistupuje kliknutím **sady nástrojů**karta (případně vyberte možnost **sada nástrojů** z **zobrazení** nabídky nebo CTRL + ALT + X.)
+## <a name="the-interop-activity"></a>Aktivity interoperability
 
- [Migrace](../workflow-designer/migration-activity-designers.md) kategorii, která obsahuje <xref:System.Activities.Statements.Interop> aktivita pouze se zobrazí v **sada nástrojů** Pokud projekt je cílení na celý [!INCLUDE[netfx40_long](../workflow-designer/includes/netfx40_long_md.md)].
+<xref:System.Activities.Statements.Interop> Aktivita řídí spuštění typy, které jsou odvozeny z <xref:System.Workflow.ComponentModel.Activity?displayProperty=fullName> v rámci pracovního postupu.
 
- Pro projekty C#, můžete určit cílovou znovu projekt, který používá celý [!INCLUDE[netfx40_short](../workflow-designer/includes/netfx40_short_md.md)] kliknutím pravým tlačítkem myši na projekt **Průzkumníku řešení** a výběrem **vlastnosti**. Na **aplikace** vyberte **NET Framework 4** možnost **cílové rozhraní**. Vyberte **Ano** v tlačítko **změnit cílový Framework** dialog, který zobrazí s žádostí o potvrzení této změny.
+### <a name="use-the-interop-activity-designer"></a>Použijte Návrhář aktivity Interop
 
- U projektů jazyka Visual Basic, můžete určit cílovou znovu projekt, který používá celý [!INCLUDE[netfx40_short](../workflow-designer/includes/netfx40_short_md.md)] kliknutím pravým tlačítkem myši na projekt v **Průzkumníku řešení** a výběrem **vlastnosti**. Na **zkompilovat** , klikněte na **Upřesnit možnosti kompilace** tlačítko. Vyberte **rozhraní .net Framework 4** z **cílový framework seznam** a pak klikněte na **OK**. Klikněte na tlačítko **Ano** v tlačítko **změnit cílový Framework** dialog, který zobrazí s žádostí o potvrzení této změny.
+**Zprostředkovatele komunikace s objekty** návrháře aktivit najdete v **migrace** kategorii **nástrojů**, který přistupuje po kliknutí **nástrojů**kartu. Můžete také vybrat **nástrojů** z **zobrazení** nabídky nebo stisknutím klávesy **Ctrl**+**Alt** + **X**.
 
- **Zprostředkovatel komunikace s objekty** Návrhář aktivity můžete přetáhnout z **sada nástrojů** a vynechaných na [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] prostor kdekoli aktivity jsou obvykle umístěny, například jako uvnitř <xref:System.Activities.Statements.Sequence>. Tím se vytvoří <xref:System.Activities.Statements.Interop> aktivitu výchozí **DisplayName** z zprostředkovatel komunikace s objekty. <xref:System.Activities.Activity.DisplayName%2A> Lze upravit v hlavičce **zprostředkovatel komunikace s objekty** Návrhář aktivity nebo v **DisplayName** pole mřížku vlastností.
+[Migrace](../workflow-designer/migration-activity-designers.md) kategorii, která obsahuje <xref:System.Activities.Statements.Interop> aktivitu zobrazí jen v **nástrojů** Pokud váš projekt cílí na úplné rozhraní .NET Framework 4.
 
- Klikněte **klikněte na tlačítko Procházet...**  textu v **ActivityType** pole, buď na **zprostředkovatel komunikace s objekty** aktivity návrháře nebo mřížku vlastností se zprovoznit **Procházet a vyberte .net zadejte** Dialogové okno. Jsou zobrazeny pouze typy pro pracovní postup 3.0 nebo aktivity pracovního postupu 3.5 (který je pouze typy odvozené od <xref:System.Workflow.ComponentModel.Activity>). Další informace o použití tohoto políčka a zadáním typu, najdete v článku [Procházet a vyberte typ dialogové okno .NET](../workflow-designer/browse-and-select-a-dotnet-type-dialog-box.md) tématu.
+Pro projekty jazyka C#, můžete znovu cílit projekt na používání úplné rozhraní .NET Framework 4 kliknutím pravým tlačítkem myši na projekt v **Průzkumníka řešení** a vyberete **vlastnosti**. Na **aplikace** kartu, vyberte **NET Framework 4** možnost **Cílová architektura**. Vyberte **Ano** potvrďte tuto změnu.
 
-### <a name="the-interop-properties"></a>Spolupráce vlastnosti
- Následující tabulce je zobrazena <xref:System.Activities.Statements.Interop> vlastnosti a popisuje, jak se používají v návrháři. Tyto vlastnosti lze upravovat vlastnosti mřížky nebo na [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] prostor.
+Pro projekty jazyka Visual Basic, můžete znovu cílit projekt na používání úplné rozhraní .NET Framework 4 kliknutím pravým tlačítkem myši na projekt v **Průzkumníka řešení** a vyberete **vlastnosti**. Na **kompilaci** klikněte na tlačítko **Upřesnit možnosti kompilace** tlačítko. Vyberte **rozhraní .net Framework 4** z **cílového rozhraní framework seznamu**a potom klikněte na tlačítko **OK**. Vyberte **Ano** potvrďte tuto změnu.
+
+**Interop** návrháře aktivit můžete přetáhnout z **nástrojů** a vyřadit na plochu návrháře postupu provádění bez ohledu na to aktivity jsou obvykle umístěny, například jako uvnitř <xref:System.Activities.Statements.Sequence>. Vyřazení **zprostředkovatele komunikace s objekty** vytvoří Návrhář aktivity <xref:System.Activities.Statements.Interop> aktivity s výchozím **DisplayName** ze zprostředkovatele komunikace s objekty. Můžete upravit <xref:System.Activities.Activity.DisplayName%2A> v záhlaví **zprostředkovatele komunikace s objekty** návrháře aktivit, nebo **DisplayName** pole mřížku vlastností.
+
+Klikněte na tlačítko **kliknutím Procházet** textu v **ActivityType** pole na **zprostředkovatele komunikace s objekty** aktivity návrháře nebo v mřížce vlastností, chcete-li otevřít **Procházet a Vyberte .net typ** dialogové okno. Jsou zobrazeny pouze typů pro pracovní postup 3.0 nebo 3.5 pracovního postupu aktivity. To znamená, že pouze typy odvozené z <xref:System.Workflow.ComponentModel.Activity> jsou uvedeny. Další informace o použití tohoto pole zadat typ najdete v tématu [Procházet a vybrat typ dialogovému oknu rozhraní .NET](../workflow-designer/browse-and-select-a-dotnet-type-dialog-box.md).
+
+### <a name="the-interop-properties"></a>Vlastnosti definiční
+
+Následující tabulka ukazuje <xref:System.Activities.Statements.Interop> vlastnosti a popisuje, jak se používají v návrháři. Tyto vlastnosti můžete upravit v mřížce vlastností nebo na povrchu návrháře postupu provádění.
 
 |Název vlastnosti|Požadováno|Použití|
-|-------------------|--------------|-----------|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Popisný název <xref:System.Activities.Statements.Interop> aktivity. Výchozí hodnota je zprostředkovatel komunikace s objekty. I když zobrazovaný název není nezbytně nutné, je osvědčeným postupem použít zobrazovaný název.|
-|<xref:System.Activities.Statements.Interop.ActivityType%2A>|Hodnota TRUE|Určuje typ aktivity obsažených <xref:System.Activities.Statements.Interop> aktivity. Tento typ zadaný musí být odvozeny od <xref:System.Workflow.ComponentModel.Activity>.|
+|-|--------------|-|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|Popisný název <xref:System.Activities.Statements.Interop> aktivity. Výchozí hodnota je **Interop**. I když není potřeba zobrazovaného názvu, doporučujeme poskytnout.|
+|<xref:System.Activities.Statements.Interop.ActivityType%2A>|Hodnota TRUE|Určuje typ aktivity obsažených <xref:System.Activities.Statements.Interop> aktivity. Tento typ zadán musí být odvozen od <xref:System.Workflow.ComponentModel.Activity>.|
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Migrace](../workflow-designer/migration-activity-designers.md)

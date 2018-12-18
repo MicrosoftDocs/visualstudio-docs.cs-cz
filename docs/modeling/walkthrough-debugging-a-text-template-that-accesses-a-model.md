@@ -7,54 +7,56 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: afa61e3d6158e5651fdc88969270a3bcf3af63c5
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: d2c58579cce95c3117aa7653d62733f4e297bcc4
+ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50966463"
 ---
 # <a name="walkthrough-debugging-a-text-template-that-accesses-a-model"></a>Návod: Ladění textové šablony přistupující k modelu
-Když změníte nebo přidáte textové šablony v řešení jazyka domény, může docházet k chybám při modul transformuje šablony ke zdrojovému kódu nebo při kompilaci generovaného kódu. Následující návod ukazuje některé z akcí, které můžete provést k ladění textové šablony.
+Při úpravě nebo přidat textové šablony řešení jazyka specifického pro doménu, může docházet k chybám při modul transformace šablony zdrojový kód nebo při kompilaci vygenerovaného kódu. Následující návod znázorňuje některé z akcí, které vám pomůžou ladění textové šablony.
 
 > [!NOTE]
->  Další informace o text šablony obecně platí, viz [generování kódu a textové šablony T4](../modeling/code-generation-and-t4-text-templates.md). Další informace o ladění textové šablony najdete v tématu [návod: ladění textové šablony](http://msdn.microsoft.com/Library/5c3fd3b7-c110-4e86-a22f-d5756be6b94f).
+>  Další informace o textu šablony, najdete v článku [generování kódu a textové šablony T4](../modeling/code-generation-and-t4-text-templates.md). Další informace o ladění textové šablony najdete v tématu [návod: ladění textové šablony](debugging-a-t4-text-template.md).
 
-## <a name="creating-a-domain-specific-language-solution"></a>Vytváření řešení jazyka domény
- V tomto postupu vytvoříte jazyka domény řešení, které má následující vlastnosti:
+## <a name="creating-a-domain-specific-language-solution"></a>Vytváření řešení jazyka specifického pro doménu
+ V tomto postupu vytvoříte řešení jazyka specifického pro doménu, která má následující vlastnosti:
 
--   Název: DebuggingTestLanguage
+- Název: DebuggingTestLanguage
 
--   Šablona řešení: minimální jazyk
+- Šablona řešení: minimální jazykový
 
--   Příponu souboru: .ddd
+- Přípona souboru: .ddd
 
--   Název společnosti: Fabrikam
+- Název společnosti: Fabrikam
 
- Další informace o vytváření řešení jazyka domény najdete v tématu [postupy: vytvoření řešení jazyk specifické pro doménu](../modeling/how-to-create-a-domain-specific-language-solution.md).
+  Další informace o vytváření řešení jazyka specifického pro doménu, najdete v části [postupy: vytváření řešení jazyka specifického pro doménu](../modeling/how-to-create-a-domain-specific-language-solution.md).
 
-## <a name="creating-a-text-template"></a>Vytváření textové šablony
- Přidáte šablonu text do vašeho řešení.
+## <a name="creating-a-text-template"></a>Vytvoření textové šablony
+ Přidejte textové šablony do vašeho řešení.
 
-#### <a name="to-create-a-text-template"></a>Chcete-li vytvořit textové šablony
+#### <a name="to-create-a-text-template"></a>Vytvoření textové šablony
 
-1.  Sestavte řešení a spustit ji v ladicím programu. (Na **sestavení** nabídky, klikněte na tlačítko **znovu sestavit řešení**a pak na **ladění** nabídky, klikněte na tlačítko **spustit ladění**.) Novou instanci sady Visual Studio otevře ladění projektu.
+1.  Sestavte řešení a začít spouštět v ladicím programu. (Na **sestavení** nabídky, klikněte na tlačítko **znovu sestavit řešení**a pak na **ladění** nabídky, klikněte na tlačítko **spustit ladění**.) Novou instanci sady Visual Studio otevře ladění projektu.
 
-2.  Přidejte textový soubor s názvem `DebugTest.tt` k ladění projektu.
+2.  Přidání textového souboru s názvem `DebugTest.tt` k ladění projektu.
 
 3.  Ujistěte se, že **Custom Tool** vlastnost DebugTest.tt je nastavena na `TextTemplatingFileGenerator`.
 
 ## <a name="debugging-directives-that-access-a-model-from-a-text-template"></a>Ladění direktivy, které přístup k modelu z textové šablony
- Než se dostanete k modelu z příkazy a výrazy v textové šablony, nejprve je třeba volat generovaného procesoru direktiv. Volání metody generované procesoru direktiv zpřístupní třídy v modelu kód šablony text jako vlastnosti. Další informace najdete v tématu [přístup k modely z textové šablony](../modeling/accessing-models-from-text-templates.md).
+ Pro přístup k modelu z příkazy a výrazy v textové šabloně, je třeba nejprve zavolat procesoru vygenerovaných direktiv. Volání procesoru vygenerovaných direktiv zpřístupní třídami v modelu kód textové šablony jako vlastnosti. Další informace najdete v tématu [přístup k modelům z textových šablon](../modeling/accessing-models-from-text-templates.md).
 
- V následujících postupech se ladění nesprávným názvem direktivy a s názvem nesprávný vlastnost.
+ V následujících postupech který budete ladit nesprávný název směrnice a nesprávná vlastnost název.
 
-#### <a name="to-debug-an-incorrect-directive-name"></a>Chcete-li ladit nesprávným názvem direktivy
+#### <a name="to-debug-an-incorrect-directive-name"></a>Chcete-li ladit nesprávný název direktivy
 
 1.  Nahraďte kód v DebugTest.tt následujícím kódem:
 
     > [!NOTE]
-    >  Kód obsahuje chybu. Chyba se sektory za účelem ladění.
+    >  Kód obsahuje chybu. Představujete chyby, aby bylo možné ladit.
 
     ```csharp
     <#@ template language="C#" inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation"#>
@@ -87,19 +89,19 @@ Když změníte nebo přidáte textové šablony v řešení jazyka domény, mů
     #>
     ```
 
-2.  V **Průzkumníku řešení**, klikněte pravým tlačítkem na DebugTest.tt a pak klikněte na tlačítko **spustit nástroj pro vlastní**.
+2.  V **Průzkumníka řešení**, klikněte pravým tlačítkem na DebugTest.tt a potom klikněte na tlačítko **spustit vlastní nástroj**.
 
-     **Seznam chyb** okně se zobrazí tato chyba:
+     **Seznam chyb** v okně se zobrazí tato chyba:
 
-     **Procesor s názvem 'DebuggingTestLanguageDirectiveProcessor' nepodporuje direktiva s názvem 'modelRoot'. Transformace se nespustí.**
+     **Procesor s názvem "DebuggingTestLanguageDirectiveProcessor" nepodporuje direktivu s názvem "modelRoot". Transformace se nespustí.**
 
-     V takovém případě direktivy volání obsahuje nesprávný název direktivy. Zadali jste `modelRoot` jako název direktivy, ale správný název direktivy je `DebuggingTestLanguage`.
+     V takovém případě direktiv volání obsahuje nesprávný název direktivy. Zadali jste `modelRoot` je název direktivy, ale správný název direktivy `DebuggingTestLanguage`.
 
-3.  Dvakrát klikněte na chybu v **seznam chyb** okno Přejít ke kódu.
+3.  Klikněte dvakrát na chybu v **seznam chyb** okna můžete přejít ke kódu.
 
-4.  Chcete-li kód, změňte direktivu název `DebuggingTestLanguage`.
+4.  Chcete-li kód, změňte název direktivy k `DebuggingTestLanguage`.
 
-     Změna je označený.
+     Tato změna se zvýrazní.
 
     ```csharp
     <#@ DebuggingTestLanguage processor="DebuggingTestLanguageDirectiveProcessor" requires="fileName='Sample.ddd'" provides="ExampleModel=ExampleModel" #>
@@ -109,16 +111,16 @@ Když změníte nebo přidáte textové šablony v řešení jazyka domény, mů
     <#@ DebuggingTestLanguage processor="DebuggingTestLanguageDirectiveProcessor" requires="fileName='Sample.ddd'" provides="ExampleModel=ExampleModel" #>
     ```
 
-5.  V **Průzkumníku řešení**, klikněte pravým tlačítkem na DebugTest.tt a pak klikněte na tlačítko **spustit nástroj pro vlastní**.
+5.  V **Průzkumníka řešení**, klikněte pravým tlačítkem na DebugTest.tt a potom klikněte na tlačítko **spustit vlastní nástroj**.
 
-     Systém teď transformuje textové šablony a vygeneruje odpovídající výstupní soubor. Neuvidíte všechny chyby **seznam chyb** okno.
+     Systém nyní transformace textové šablony a generuje odpovídající soubor výstup. Neuvidíte všechny chyby **seznam chyb** okna.
 
-#### <a name="to-debug-an-incorrect-property-name"></a>Chcete-li ladit s názvem nesprávný vlastnost
+#### <a name="to-debug-an-incorrect-property-name"></a>Chcete-li ladit s názvem nesprávná vlastnost
 
 1.  Nahraďte kód v DebugTest.tt následujícím kódem:
 
     > [!NOTE]
-    >  Kód obsahuje chybu. Chyba se sektory za účelem ladění.
+    >  Kód obsahuje chybu. Představujete chyby, aby bylo možné ladit.
 
     ```csharp
     <#@ template language="C#" inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation"#>
@@ -151,29 +153,29 @@ Když změníte nebo přidáte textové šablony v řešení jazyka domény, mů
     #>
     ```
 
-2.  V **Průzkumníku řešení**, klikněte pravým tlačítkem na DebugTest.tt a pak klikněte na tlačítko **spustit nástroj pro vlastní**.
+2.  V **Průzkumníka řešení**, klikněte pravým tlačítkem na DebugTest.tt a potom klikněte na tlačítko **spustit vlastní nástroj**.
 
-     **Seznam chyb** okno se zobrazí a zobrazí jedno z těchto chyb:
+     **Seznam chyb** okno se zobrazí a zobrazí se jedné z následujících chyb:
 
      (C#)
 
-     **Kompilování transformace: Microsoft.VisualStudio.TextTemplating\<GUID >. GeneratedTextTransformation' pro 'ExampleModel' neobsahuje definici**
+     **Kompilování transformace: Microsoft.VisualStudio.TextTemplating\<GUID >. GeneratedTextTransformation' neobsahuje definici pro 'ExampleModel.**
 
      (Visual Basic)
 
-     **Kompilování transformace: 'ExampleModel' není členem ' Microsoft.VisualStudio.TextTemplating\<GUID >. GeneratedTextTransformation'.**
+     **Kompilování transformace: "ExampleModel" není členem "Microsoft.VisualStudio.TextTemplating\<GUID >. GeneratedTextTransformation ".**
 
-     V takovém případě obsahuje kód text šablony s názvem nesprávný vlastnost. Zadali jste `ExampleModel` jako název vlastnosti, ale vlastnost správný název je `LibraryModel`. Můžete najít název správné vlastnosti v obsahuje parametr, jak je vidět v následujícím kódu:
+     V tomto případě kód textové šablony obsahuje název nesprávná vlastnost. Zadali jste `ExampleModel` jako název vlastnosti, ale vlastnost správný název je `LibraryModel`. Můžete najít správné vlastnosti název v poskytuje parametru, jak je znázorněno v následujícím kódu:
 
     ```
     <#@ DebuggingTestLanguage processor="DebuggingTestLanguageDirectiveProcessor" requires="fileName='Sample.ddd'" provides="ExampleModel=LibraryModel" #>
     ```
 
-3.  Dvakrát klikněte na chybu v okně Seznam chyb přejít ke kódu.
+3.  Klikněte dvakrát na chybu v okně Seznam chyb pro přechod na kód.
 
-4.  Chcete-li kód, změňte název vlastnosti do `LibraryModel` v kódu text šablony.
+4.  Chcete-li kód, změňte vlastnost název na `LibraryModel` v kód textové šablony.
 
-     Změny se zvýrazněnou.
+     Změny jsou zvýrazněné.
 
     ```csharp
     <#@ template language="C#" inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation"#>
@@ -206,6 +208,6 @@ Když změníte nebo přidáte textové šablony v řešení jazyka domény, mů
     #>
     ```
 
-5.  V **Průzkumníku řešení**, klikněte pravým tlačítkem na DebugTest.tt a pak klikněte na tlačítko **spustit nástroj pro vlastní**.
+5.  V **Průzkumníka řešení**, klikněte pravým tlačítkem na DebugTest.tt a potom klikněte na tlačítko **spustit vlastní nástroj**.
 
-     Systém teď transformuje textové šablony a vygeneruje odpovídající výstupní soubor. Neuvidíte všechny chyby **seznam chyb** okno.
+     Systém nyní transformace textové šablony a generuje odpovídající soubor výstup. Neuvidíte všechny chyby **seznam chyb** okna.

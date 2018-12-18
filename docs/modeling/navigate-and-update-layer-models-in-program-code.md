@@ -10,24 +10,26 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 57ba3e2b2df938a41129fdf2d05bfa02690d2cce
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 8ca10b8504dc4383ad6251e3819c14b7102d32d3
+ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39566736"
 ---
 # <a name="navigate-and-update-layer-models-in-program-code"></a>Procházení a aktualizace modelů vrstev v programovém kódu
 
-Tento článek popisuje elementů a vztahů v modelech vrstvy, které můžete procházení a aktualizace pomocí kódu programu. Další informace o diagramy závislost z hlediska uživatele najdete v tématu [diagramy závislost: referenční dokumentace](../modeling/layer-diagrams-reference.md) a [diagramy závislost: pokyny](../modeling/layer-diagrams-guidelines.md).
+Tento článek popisuje prvky a vztahy v modelech vrstvy, které můžete přejít a aktualizovat pomocí kódu programu. Další informace o diagramů závislostí z pohledu uživatele najdete v tématu [diagramy závislostí: referenční](../modeling/layer-diagrams-reference.md) a [diagramy závislostí: pokyny](../modeling/layer-diagrams-guidelines.md).
 
-<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer> Model popsaný v tomto tématu je průčelí za na další Obecné <xref:Microsoft.VisualStudio.GraphModel> modelu. Pokud píšete [příkaz nebo gesto rozšíření nabídky](../modeling/add-commands-and-gestures-to-layer-diagrams.md), použijte `Layer` modelu. Pokud píšete [vrstvy ověření rozšíření](../modeling/add-custom-architecture-validation-to-layer-diagrams.md), je jednodušší použít `GraphModel`.
+<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer> Modelu popsaného v tomto tématu je fasáda na obecnějšího <xref:Microsoft.VisualStudio.GraphModel> modelu. Při psaní [rozšíření příkazu nebo gesta nabídky](../modeling/add-commands-and-gestures-to-layer-diagrams.md), použijte `Layer` modelu. Pokud píšete [rozšíření ověření vrstvy](../modeling/add-custom-architecture-validation-to-layer-diagrams.md), je jednodušší použít `GraphModel`.
 
 ## <a name="transactions"></a>Transakce
 
-Při aktualizaci modelu, vezměte v úvahu obklopuje změny v `ILinkedUndoTransaction`, které skupiny změny do jedné transakce. Pokud se všechny změny nezdaří, je celá transakce vrácena zpět. Pokud uživatel vrátí zpět ke změně, jsou všechny změny vrátit zpět společně.
+Při aktualizaci modelu, vezměte v úvahu změny v nadřazeném `ILinkedUndoTransaction`, která seskupuje vaše změny do jedné transakce. Pokud některý z změny selže, celá transakce vrácena zpět. Pokud uživatel vrátí zpět změny, jsou všechny změny vrátit zpět společně.
 
-```
+```csharp
 using (ILinkedUndoTransaction t =
         LinkedUndoContext.BeginTransaction("a name"))
 {
@@ -40,29 +42,29 @@ using (ILinkedUndoTransaction t =
 
 ![ILayer a ILayerModel může obsahovat i ILayers.](../modeling/media/layerapi_containment.png)
 
-Vrstvy (<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayer>) a vrstva modelu (<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerModel>) může obsahovat vrstvy a komentáře.
+Vrstvy (<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayer>) a vrstva modelu (<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerModel>) může obsahovat komentáře a vrstvy.
 
-Vrstva (`ILayer`) může být obsažený ve model vrstvy (`ILayerModel`) nebo mohou být použity v rámci jiného `ILayer`.
+Vrstva (`ILayer`) mohou být obsaženy v modelu vrstvy (`ILayerModel`) nebo může být vnořena do jiné `ILayer`.
 
-Vytvoření metody vytvoření komentáře nebo vrstvy, lze používejte na příslušné kontejneru.
+K vytvoření komentáře nebo vrstvu, používají metody vytvoření odpovídajícího kontejneru.
 
-## <a name="dependency-links"></a>Propojení závislostí
+## <a name="dependency-links"></a>Odkazy závislostí
 
-Odkaz závislostí je reprezentována objekt. Může být navigaci v obou směrech:
+Objekt je reprezentován odkazu závislostí. To lze procházet v obou směrech:
 
-![Připojí se ILayerDependencyLink dva ILayers.](../modeling/media/layerapi_dependency.png)
+![ILayerDependencyLink připojí dva ILayers.](../modeling/media/layerapi_dependency.png)
 
-Chcete-li vytvořit odkaz závislostí, volejte `source.CreateDependencyLink(target)`.
+Chcete-li vytvořit odkaz závislosti, zavolejte `source.CreateDependencyLink(target)`.
 
 ## <a name="comments"></a>Komentáře
 
-Komentáře mohou být obsaženy v vrstvy nebo model vrstvy a také může být propojený libovolný element, vrstvy:
+Komentáře mohou být obsaženy v rámci vrstvy nebo model vrstvy a také může být propojený libovolného prvku vrstvy:
 
-![Komentáře lze připojit k libovolný element, vrstvy.](../modeling/media/layerapi_comments.png)
+![Komentáře lze připojit k libovolnému prvku vrstvy.](../modeling/media/layerapi_comments.png)
 
-Komentář může být propojený libovolný počet elementů, včetně none.
+Komentář může být propojený libovolný počet prvků, včetně none.
 
-Komentáře, které jsou připojené k element a vrstva, použijte:
+Chcete-li získat poznámky, které jsou připojeny k elementu vrstvy, použijte:
 
 ```csharp
 ILayerModel model = diagram.GetLayerModel();
@@ -72,45 +74,45 @@ IEnumerable<ILayerComment> comments =
 ```
 
 > [!CAUTION]
-> `Comments` Vlastnost `ILayer` získá komentáře, které jsou obsaženy v rámci `ILayer`. Komentáře, které jsou propojeny s jeho nedostane.
+> `Comments` Vlastnost `ILayer` získá komentáře, které jsou obsaženy v rámci `ILayer`. Poznámky, které jsou propojeny k němu nedostane.
 
-Vytvoření komentáře voláním `CreateComment()` na odpovídajícího kontejneru.
+Vytvořit poznámku voláním `CreateComment()` na příslušný kontejner.
 
-Vytvořit odkaz pomocí `CreateLink()` na komentář.
+Vytvoření odkazu pomocí `CreateLink()` na komentář.
 
 ## <a name="layer-elements"></a>Elementy vrstvy
 
-Všechny typy elementu, který může být obsažený v modelu jsou elementy vrstvy:
+Všechny typy elementu, který může být součástí modelu jsou elementy vrstvy:
 
 ![obsah diagram závislostí je ILayerElements.](../modeling/media/layerapi_layerelements.png)
 
 ## <a name="properties"></a>Vlastnosti
 
-Každý `ILayerElement` slovník řetězec s názvem `Properties`. Můžete připojit libovolné informace pro libovolný element, vrstvy tohoto slovníku.
+Každý `ILayerElement` s řetězci slovník s názvem `Properties`. Vám pomůže tento slovník připojte libovolné informace do libovolného prvku vrstvy.
 
-## <a name="artifact-references"></a>Artefaktů odkazy
+## <a name="artifact-references"></a>Odkazy na artefaktu
 
-Odkaz na artefaktů (<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerArtifactReference>) představuje propojení mezi vrstvou a položka projektu, například souboru, třída nebo složky. Uživatel vytvoří artefakty při jejich vytvoření vrstvy nebo do ní přidejte tak, že přetáhnete položky z Průzkumníka řešení, zobrazení tříd nebo prohlížeč objektů na diagram závislostí. Libovolný počet artefaktů odkazy lze propojit s vrstvou.
+Odkaz na artefaktu (<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerArtifactReference>) představuje propojení mezi vrstvou a položky projektu, například soubor, třídy nebo složky. Uživatel vytvoří artefakty při vytvoření vrstvy nebo k němu přidat přetažením položek z Průzkumníka řešení, zobrazení tříd nebo prohlížeči objektů na diagram závislostí. Libovolný počet artefaktů odkazy může být propojeny s vrstvou.
 
-Každý řádek v Průzkumníku vrstvy zobrazí odkaz na artefaktů. Další informace najdete v tématu [vytváření diagramů závislost z vašeho kódu](../modeling/create-layer-diagrams-from-your-code.md).
+Každý řádek v Průzkumníku vrstev zobrazí odkaz na artefakt. Další informace najdete v tématu [vytváření diagramů závislostí z kódu](../modeling/create-layer-diagrams-from-your-code.md).
 
-Hlavní typy a metody nevadí artefaktů odkazy jsou následující:
+Hlavní typy a metody s odkazy na artefaktů jsou následující:
 
-<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerArtifactReference>. Vlastnost kategorií určuje, jaký druh artefaktů se odkazuje, jako jsou třídy, spustitelný soubor nebo sestavení. Kategorie vlastnost určuje, jak identifikátor identifikuje artefaktů cíl.
+<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerArtifactReference>. Vlastnost kategorie určuje, jaký druh artefaktu je odkazováno jako třída, spustitelný soubor nebo sestavení. Vlastnost kategorie určuje způsobu, jakým identifikuje identifikátor artefaktu cíl.
 
-<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ArtifactReferenceExtensions.CreateArtifactReferenceAsync%2A> Vytvoří odkaz na artefaktů z <xref:EnvDTE.Project> nebo <xref:EnvDTE.ProjectItem>. Toto je asynchronní operace. Proto obvykle nabízejí zpětného volání, která je volána po dokončení vytvoření.
+<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ArtifactReferenceExtensions.CreateArtifactReferenceAsync%2A> Vytvoří odkaz na artefaktů z <xref:EnvDTE.Project> nebo <xref:EnvDTE.ProjectItem>. Toto je asynchronní operace. Proto se obvykle poskytují zpětné volání, která je volána po dokončení vytváření.
 
-Vrstvu odkazů artefaktů se liší na artefakty v diagramy případů použití.
+Odkazy artefaktů vrstvy se liší na artefakty v diagramech případů použití.
 
-## <a name="shapes-and-diagrams"></a>Tvarů a diagramy
+## <a name="shapes-and-diagrams"></a>Tvary a diagramy
 
-Dva objekty se používají k vyjádření každý prvek ve model vrstvy: <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerElement>a <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape>. `IShape` Představuje umístění a velikost tvaru v diagramu. V modely vrstev každých `ILayerElement` má jeden `IShape`a každou `IShape` na závislost jeden má diagram `ILayerElement`. `IShape` také se používá pro modely UML. Proto nemusí být vždy `IShape` má element vrstvy.
+Dva objekty se používají k vyjádření každý prvek v modelu vrstev: <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerElement>a <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape>. `IShape` Představuje pozici a velikost obrazce v diagramu. V modelů vrstvy každý `ILayerElement` má jeden `IShape`a každý `IShape` na závislost diagram má jeden `ILayerElement`. `IShape` slouží také pro modely UML. Proto nepodporují `IShape` má prvek vrstvy.
 
 Stejným způsobem <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Layer.ILayerModel> se zobrazí na jednom <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram>.
 
-V kódu vlastního příkazu nebo obslužné rutiny gest, můžete získat aktuální diagram a aktuální výběr tvarů z `DiagramContext` importovat:
+V kódu vlastního příkazu nebo obslužné rutiny gesta, můžete získat aktuální diagram a tvarů z aktuálního výběru `DiagramContext` importovat:
 
-```
+```csharp
 public class ... {
 [Import]
     public IDiagramContext DiagramContext { get; set; }
@@ -127,7 +129,7 @@ public void ... (...)
 
 ![Každý ILayerElement je předkládán IShape.](../modeling/media/layerapi_shapes.png)
 
-<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape> a <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram> se taky používají k zobrazení modely UML.
+<xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IShape> a <xref:Microsoft.VisualStudio.ArchitectureTools.Extensibility.Presentation.IDiagram> slouží také k zobrazení modelů UML.
 
 ## <a name="see-also"></a>Viz také
 

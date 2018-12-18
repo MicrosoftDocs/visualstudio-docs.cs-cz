@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130657"
 ---
 # <a name="important-commands-for-language-service-filters"></a>Důležité příkazy pro filtry služby jazyk
 Pokud chcete vytvořit filtr plnohodnotný jazyk služby, vezměte v úvahu zpracování následující příkazy. Úplný seznam identifikátory příkazů je definována v <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> výčtu pro spravovaný kód a Stdidcmd.h hlavičky souboru pro nespravované [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] kódu. Můžete najít v souboru Stdidcmd.h *cesta instalace Visual Studio SDK*\VisualStudioIntegration\Common\Inc.  

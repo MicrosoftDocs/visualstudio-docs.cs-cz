@@ -1,5 +1,5 @@
 ---
-title: Vlastní parametry | Microsoft Docs
+title: Vlastní parametry | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,18 +14,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2fb61109a05b84eeb83b887ba0fc1a9f9fef299f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 101076eb863294fe84ffed26d308f67110b90a33
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39499449"
 ---
 # <a name="custom-parameters"></a>Vlastní parametry
-Vlastní parametry řízení činnosti průvodce po spuštění průvodce. Soubor související .vsz poskytuje pole parametrů definovaný uživatelem, které jsou zabalené integrované vývojové prostředí (IDE) a předá průvodce jako pole řetězců při spuštění průvodce. Průvodce potom analyzuje pole řetězců a informace používá k řízení skutečné činnosti průvodce. Tímto způsobem můžete průvodce přizpůsobit funkce v závislosti na obsahu souboru.  
+Vlastní parametry řídí provoz průvodce po spuštění průvodce. Se souvisejícím *.vsz* souboru poskytují celou řadu uživatelem definované parametry, které jsou zabaleny pomocí integrovaného vývojového prostředí (IDE) a předána průvodci jako pole řetězců, které při spuštění průvodce. Průvodce potom analyzuje pole řetězců a informace používá k řízení skutečné činnosti průvodce. Tímto způsobem můžete průvodce přizpůsobit funkce v závislosti na obsah *.vsz* souboru.  
   
- Kontextové parametry, na druhé straně definovat stav projektu při spuštění průvodce. Další informace najdete v tématu [kontextové parametry](../../extensibility/internals/context-parameters.md).  
+ Kontextové parametry, na druhé straně definovat stav projektu při spuštění průvodce. Další informace najdete v tématu [kontextových parametrů](../../extensibility/internals/context-parameters.md).  
   
- Tady je příklad .vsz souboru, který má vlastní parametry:  
+ Tady je příklad *.vsz* soubor, který má vlastní parametry:  
   
 ```  
 VSWIZARD 8.0  
@@ -37,14 +38,14 @@ Param="PREPROCESS_FUNCTION = CanAddATLSupport"
 Param="PROJECT_TYPE = CSPROJ"  
 ```  
   
- Autor souboru .vsz přidá hodnoty parametrů. Když uživatel vybere **nový projekt** nebo **přidat novou položku** v nabídce Soubor nebo kliknutím pravým tlačítkem na projekt v **Průzkumníku**, rozhraní IDE shromažďuje tyto hodnoty do pole řetězce. Prostředí IDE pak zavolá projektu <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.AddItem%2A> metoda s <xref:Microsoft.VisualStudio.Shell.Interop.VSADDITEMOPERATION> příznak sady a volání projektu <xref:EnvDTE.IVsExtensibility.RunWizardFile%2A> metoda, která je zodpovědná za spuštění průvodce a vrátit výsledek.  
+ Autor *.vsz* soubor, přidá hodnoty parametrů. Když uživatel vybere **nový projekt** nebo **přidat novou položku** na **souboru** nabídek nebo kliknutím pravým tlačítkem myši projekt v **Průzkumníku řešení**, rozhraní IDE shromažďuje tyto hodnoty do pole řetězců. Rozhraní IDE, zavolá projektu <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.AddItem%2A> metodu <xref:Microsoft.VisualStudio.Shell.Interop.VSADDITEMOPERATION> příznak sady a volání projektu <xref:EnvDTE.IVsExtensibility.RunWizardFile%2A> metodu, která je zodpovědná za spuštění průvodce a vrátit výsledek.  
   
- Průvodce je zodpovědná za analýzy pole řetězců a správně funguje na řetězce. Tímto způsobem implementací vlastních parametrů můžete vytvořit jeden průvodce, který provede celou řadu funkcí. Jinými slovy jeden Průvodce může mít tři různé .vsz soubory. Každý soubor předá různé sady vlastních parametrů, které řídí chování Průvodce v různých situacích.  
+ Průvodce je zodpovědné za parsování pole řetězců a správně funguje na řetězce. Tímto způsobem díky implementaci vlastních parametrů můžete vytvořit jeden průvodce, který provádí řadu funkcí. Jinými slovy, jeden Průvodce může mít tři různé *.vsz* soubory. Každý soubor předá jinou sadu vlastních parametrů pro řízení chování Průvodce v různých situacích.  
   
- Další informace najdete v tématu [průvodce (. Soubor vsz)](../../extensibility/internals/wizard-dot-vsz-file.md).  
+ Další informace najdete v tématu [soubor průvodce (.vsz)](../../extensibility/internals/wizard-dot-vsz-file.md).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3>   
  [Kontextové parametry](../../extensibility/internals/context-parameters.md)   
- [Průvodci](../../extensibility/internals/wizards.md)   
- [Soubor průvodce (.Vsz)](../../extensibility/internals/wizard-dot-vsz-file.md)
+ [Průvodce](../../extensibility/internals/wizards.md)   
+ [Soubor průvodce (.vsz)](../../extensibility/internals/wizard-dot-vsz-file.md)

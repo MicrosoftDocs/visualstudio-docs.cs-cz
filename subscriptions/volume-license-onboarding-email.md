@@ -1,28 +1,29 @@
 ---
-title: Svazek licence předplatného registrace e-mailovou komunikaci | Microsoft Docs
+title: Svazek licenci předplatného připojování e-mailovou komunikaci | Dokumentace Microsoftu
 author: evanwindom
 ms.author: jaunger
 manager: evelynp
 ms.date: 3/14/2018
 ms.topic: Get-Started-Article
-description: Příklad komunikace registrace poskytuje správcům VLSC
+description: Příklad připojení komunikace předávané do správci VLSC
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 2d4b103e5edb746133612c4b3e7bbc30aea41106
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: a91626328b60fee748f465e3b5bde8bd29f227dd
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49847842"
 ---
-# <a name="onboarding-email-communications-for-administrators"></a>E-mailovou komunikaci registrace pro správce
+# <a name="onboarding-email-communications-for-administrators"></a>Registrační e-mailovou komunikaci pro správce
 
-Jednotlivé uvedené smlouvy Volume Licensing (VL) vaší organizace dostane tento e-mail, pokud vaše organizace je připravený k přenesení. To popisuje proces, který budou muset postupovat podle pro každého ve společnosti umožní spravovat odběry Visual Studio. 
+Jednotlivé uvedená v dohodě Volume Licensing (VL) vaší organizace dostane tento e-mail, když vaše organizace je připravená k migraci. To popisuje proces, který se musí použít pro každého ve společnosti ke správě předplatných sady Visual Studio. 
 
-![Záhlaví](_img\onboarding-email\header.png)
+![Záhlaví](_img/onboarding-email/header.png)
 
-![Část 2](_img\onboarding-email\section-2.png)
-![část 3](_img\onboarding-email\section-3.png)
-![oddíl 4](_img\onboarding-email\section-4.png)
-![část 5](_img\onboarding-email\section-5.png)
-![část 6](_img\onboarding-email\section-6.png)
+![Oddíl 2](_img/onboarding-email/section-2.png)
+![část 3](_img/onboarding-email/section-3.png)
+![4 části](_img/onboarding-email/section-4.png)
+![oddíl 5](_img/onboarding-email/section-5.png)
+![část 6](_img/onboarding-email/section-6.png)

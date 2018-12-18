@@ -1,5 +1,5 @@
 ---
-title: ItemDefinitionGroup – Element (MSBuild) | Microsoft Docs
+title: ItemDefinitionGroup – Element (MSBuild) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 03/13/2017
 ms.technology: msbuild
@@ -20,21 +20,22 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c064f3398ac29cfa4187c19139e9264e2925689f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 09aa3046c66b9b4beb825dad8e8bc648d50851d0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49887186"
 ---
 # <a name="itemdefinitiongroup-element-msbuild"></a>ItemDefinitionGroup – element (MSBuild)
-`ItemDefinitionGroup` Vám umožňuje definovat sadu definice položek, které jsou hodnoty metadata, která se použijí pro všechny položky v projektu, ve výchozím nastavení. ItemDefinitionGroup nahrazuje nutnost používat [createitem – úloha](../msbuild/createitem-task.md) a [CreateProperty – úloha](../msbuild/createproperty-task.md). Další informace najdete v tématu [definice položek](../msbuild/item-definitions.md).  
+`ItemDefinitionGroup` Prvek umožňuje definovat sadu definice položek, které jsou hodnoty metadat, které se použijí u všech položek v projektu, ve výchozím nastavení. ItemDefinitionGroup – nahrazuje nutnost používat [createitem – úloha](../msbuild/createitem-task.md) a [CreateProperty – úloha](../msbuild/createproperty-task.md). Další informace najdete v tématu [definice položek](../msbuild/item-definitions.md).  
 
  \<Project>  
- \<ItemDefinitionGroup >  
+ \<ItemDefinitionGroup – >  
 
 ## <a name="syntax"></a>Syntaxe  
 
-```  
+```xml  
 <ItemDefinitionGroup Condition="'String A' == 'String B'">  
     <Item1>... </Item1>  
     <Item2>... </Item2>  
@@ -50,20 +51,20 @@ ms.lasthandoff: 04/19/2018
 |---------------|-----------------|  
 |`Condition`|Nepovinný atribut. Podmínku, která má být vyhodnocen. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|  
 
-### <a name="child-elements"></a>Podřízené elementy  
+### <a name="child-elements"></a>Podřízené prvky  
 
 |Prvek|Popis|  
 |-------------|-----------------|  
-|[Položka](../msbuild/item-element-msbuild.md)|Definuje vstupní hodnoty pro proces sestavení. Může být nula nebo více `Item` elementů v `ItemDefinitionGroup`.|  
+|[Položka](../msbuild/item-element-msbuild.md)|Definuje vstupy pro proces sestavení. Může být nula nebo více `Item` prvky `ItemDefinitionGroup`.|  
 
-### <a name="parent-elements"></a>Nadřazené elementy  
+### <a name="parent-elements"></a>Nadřazené prvky  
 
-|Prvek|Popis|  
-|-------------|-----------------|  
-|[Projekt](../msbuild/project-element-msbuild.md)|Požadovaný kořenový element [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] souboru projektu.|  
+| Prvek | Popis |
+| - | - |
+| [Projekt](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] souboru projektu. |
 
 ## <a name="example"></a>Příklad  
- Následující příklad kódu definuje dvě položky metadat, m a n, ItemDefinitionGroup. V tomto příkladu je výchozí metadata "m" použít na položku "i", protože metadata "m" nejsou výslovně definované položkou "i". Výchozí metadata "n" však není použita na položku "i", protože metadata "n" je již definována položka "i".  
+ Následující příklad kódu definuje dvě položky metadat, stiskem n, m v ItemDefinitionGroup –. V tomto příkladu je použít výchozí metadat "m" k položce "i", protože metadata "m" není explicitně určené položky "i". Výchozí metadat "n" však není použít k položce "i", protože metadata "n" je již definován položky "i".  
 
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -83,6 +84,6 @@ ms.lasthandoff: 04/19/2018
 </Project>  
 ```  
 
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)   
  [Položky](../msbuild/msbuild-items.md)

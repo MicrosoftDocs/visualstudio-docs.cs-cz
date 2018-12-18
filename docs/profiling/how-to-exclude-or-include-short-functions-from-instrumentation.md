@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 12f77ae6260fa7401f8afa8030f551227baf50fa
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 6c6234db781925e8c0558513cb7e8bc608b5cfea
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34814681"
 ---
-# <a name="how-to-exclude-or-include-short-functions-from-instrumentation"></a>Postupy: Vyloučení funkce CShort z instrumentace nebo je zahrnout do instrumentace
-Ve výchozím nastavení, nástroje pro profilování vyloučit *malé funkce* z instrumentace. Malé funkce jsou krátkých funkcí, které neprovádějte žádné volání funkcí. Kromě těchto funkcí malé poskytuje pro menší nároky na instrumentace a proto zlepšení instrumentace rychlost. Vyloučení malé funkce taky snižuje velikost souboru (.vsp) výkonu profilování data a času, který je vyžadován pro analýzu. Pokud malá funkce jsou vyloučeny, času stráveného v malých funkce započítává výhradní a včetně době jejich nadřazené funkce. Malé funkce můžete vyloučit nebo součástí instrumentace, jak je popsáno v následujícím postupu.  
+# <a name="how-to-exclude-or-include-short-functions-from-instrumentation"></a>Postupy: vyloučení nebo zahrnutí funkce CShort z instrumentace
+Ve výchozím nastavení, nástroje pro profilování vyloučit *malé funkce* z instrumentace. Malé funkce jsou krátkých funkcí, které neprovádějte žádné volání funkcí. Kromě těchto funkcí malé poskytuje pro menší nároky na instrumentace a proto zlepšení instrumentace rychlost. Vyloučení malé funkcí také snižuje výkon profilace datový soubor (. *Vsp*) velikost a čas, který je vyžadován pro analýzu. Pokud malá funkce jsou vyloučeny, času stráveného v malých funkce započítává výhradní a včetně době jejich nadřazené funkce. Malé funkce můžete vyloučit nebo součástí instrumentace, jak je popsáno v následujícím postupu.  
   
 ### <a name="to-exclude-or-include-short-functions-from-instrumentation"></a>K vyloučení nebo zahrnutí funkce CShort z instrumentace  
   
@@ -39,6 +40,6 @@ Ve výchozím nastavení, nástroje pro profilování vyloučit *malé funkce* z
   
 4.  Click **OK**.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Řízení shromažďování dat](../profiling/controlling-data-collection.md)   
  [Vlastnosti výkonnostní relace](../profiling/performance-session-properties.md)

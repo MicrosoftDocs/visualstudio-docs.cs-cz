@@ -1,100 +1,102 @@
 ---
-title: Formátování kódu jazyka Python
-description: Jak automaticky formátovat kód Python v sadě Visual Studio, včetně mezery, příkazy, zabalení a komentáře.
-ms.date: 07/12/2017
+title: Formátování kódu Pythonu
+description: Visual Studio může automaticky formátovat kód Python včetně mezer, příkazy, zabalení a komentáře.
+ms.date: 10/28/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: douge
+ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 36879efbb7fe95c33d73529e3438350a87226700
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 452dc1104147e5b29dd38790cbfa726ad0de7b1f
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052190"
 ---
-# <a name="formatting-python-code"></a>Formátování kódu jazyka Python
+# <a name="format-python-code"></a>Formátování kódu Pythonu
 
-Visual Studio vám umožní rychle přeformátovat kód tak, aby odpovídala předem nakonfigurované možnosti formátování.
+Visual Studio vám umožňuje rychle přeformátování kódu tak, aby odpovídaly předem nakonfigurované možnosti formátování.
 
-- Chcete-li formátovat výběr: vyberte **Upravit > Upřesnit > Výběr formátu** nebo stiskněte klávesu Ctrl + E, F.
-- K formátování celý soubor: vyberte **Upravit > Upřesnit > Formátovat dokument** nebo stiskněte klávesu Ctrl + E, D.
+- Formátovat výběr: vyberte **upravit** > **Upřesnit** > **výběr formátu** nebo stiskněte klávesu **Ctrl** + **E** > **F**.
+- Formátovat celý soubor: vyberte **upravit** > **Upřesnit** > **formátovat dokument** nebo stiskněte klávesu **Ctrl** + **E** > **D**.
 
-Možnosti se konfigurují pomocí **nástroje > Možnosti > textový Editor > Python > formátování** a jeho vnořené karty. Je nutné vybrat **zobrazit všechna nastavení** pro tyto možnosti se objeví:
+Možnosti se nastavují pomocí **nástroje** > **možnosti** > **textový Editor** > **Python**  >  **Formátování** a jeho vnořená karty. Je nutné vybrat **zobrazit všechna nastavení** pro tyto možnosti se zobrazí:
 
-![Python formátování možnosti v sadě Visual Studio](media/options-editor-formatting.png)
+![Python v sadě Visual Studio možnosti formátování](media/options-editor-formatting.png)
 
-Možnosti formátování ve výchozím nastavení jsou nastavené tak, aby odpovídaly nadmnožinou [průvodci správným stylem období 8](http://www.python.org/dev/peps/pep-0008/). **Obecné** karta určuje, kdy je použit formátování; nastavení pro tři karty jsou popsané v tomto článku.
+Možnosti formátování ve výchozím nastavení jsou nastavené tak, aby odpovídaly nadmnožinu [průvodce správným stylem období 8](https://www.python.org/dev/peps/pep-0008/). **Obecné** kartu určuje při formátování se aplikuje; nastavení na třech kartách jsou popsány v tomto článku.
 
-[Python podporují v sadě Visual Studio](installing-python-support-in-visual-studio.md) také přidá užitečné [zadejte komentář odstavce](#fill-comment-paragraph-command) příkaz **Upravit > Upřesnit** nabídky, jak je popsáno v další části.
+[Podpora Pythonu v sadě Visual Studio](installing-python-support-in-visual-studio.md) přidá také užitečné [ **vyplnit odstavec komentáře** ](#fill-comment-paragraph-command) příkaz **upravit**  >   **Pokročilé** nabídky, jak je popsáno v další části.
 
 ## <a name="spacing"></a>Mezery
 
-**Mezer** ovládací prvky, kde prostory se přidají nebo odebrat kolem různé jazykové konstrukty. Každá možnost má tři možné hodnoty:
+**Mezery** ovládacích prvků, kde prostory se přidají nebo odebrán po různé jazykové konstrukce. Každá možnost má tři možné hodnoty:
 
-- Zaškrtnutí: zajistí, že se použije mezery.
-- Vymazat: Odebere všechny mezery.
-- Neurčitém: ponechá původní formátování na místě.
+- Vráceno: zajistí, že se použije mezery.
+- Zrušeno: Odebere všechny mezery.
+- Neurčitá: opustí, původní formátování na místě.
 
-Příklady pro různé možnosti jsou uvedeny v následujících tabulkách:
+Příklady pro různé možnosti jsou k dispozici v následujících tabulkách:
 
-| Možnost definice třídy | Zaškrtnutí | Vymazat |
+| Možnost definice třídy | Zaškrtnuto | Vymazat |
 | --- | --- | --- | 
-| Vložení mezery mezi deklaraci třídy názvu a seznam základny | `class X (object): pass` | `class X(object): pass` | 
-| Vložení mezery v uvozovkách seznamu základny | `class X( object ): pass` | `class X(object): pass` |
-| Vložení mezery v uvozovkách seznamu prázdný základny | `class X( ): pass` | `class X(): pass` |
+| **Vložit mezeru mezi název třídy prohlášení a seznam základních tříd** | `class X (object): pass` | `class X(object): pass` | 
+| **Vložit mezeru mezi kulaté závorky seznamu základních tříd** | `class X( object ): pass` | `class X(object): pass` |
+| **Vložit mezeru mezi kulaté závorky seznamu prázdném** | `class X( ): pass` | `class X(): pass` |
 
 <br/>
 
-| Definice funkcí – možnost | Zaškrtnutí | Vymazat |
+| Možnost definice funkce | Zaškrtnuto | Vymazat |
 | --- | --- | --- |
-| Vložení mezery mezi deklaraci funkce název a seznam parametrů | `def X (): pass` | `def X(): pass` | 
-| Vložení mezery v uvozovkách seznamu parametr | `def X( a, b ): pass` | `def X(a, b): pass` |
-| Vložení mezery v uvozovkách seznamu prázdný parametr | `def X( ): pass` | `def X(): pass` |
-| Vložení mezer kolem '=' v výchozí hodnoty parametrů | `includes X(a = 42): pass` | `includes X(a=42): pass` |
-| Vložit místo před a za operátory návratový poznámky | `includes X() -> 42: pass` | `includes X()->42: pass` |
+| **Vložit mezeru mezi název funkce deklarace a seznam parametrů** | `def X (): pass` | `def X(): pass` | 
+| **Vložit mezeru mezi kulaté závorky seznamu parametrů** | `def X( a, b ): pass` | `def X(a, b): pass` |
+| **Vložit mezeru mezi kulaté závorky seznamu prázdný parametr** | `def X( ): pass` | `def X(): pass` |
+| **Vložit mezery kolem '=' ve výchozích hodnotách parametrů** | `includes X(a = 42): pass` | `includes X(a=42): pass` |
+| **Vložit mezeru před a za návratové operátory poznámek** | `includes X() -> 42: pass` | `includes X()->42: pass` |
 
 <br/>
 
-| Možnost operátory | Zaškrtnutí | Vymazat |
+| Možnost operátory | Zaškrtnuto | Vymazat |
 | --- | --- | --- |
-| Vložení mezer kolem binární operátory | `a + b` | `a+b` |
-| Vložení mezer kolem přiřazení | `a = b` | `a=b` |
+| **Vložit mezery kolem binárních operátorů** | `a + b` | `a+b` |
+| **Vložit mezery kolem přiřazení** | `a = b` | `a=b` |
 
 <br/>
 
-| Možnost mezery výraz | Zaškrtnutí | Vymazat |
+| Možnost výraz řádkování | Zaškrtnuto | Vymazat |
 | --- | --- | --- |
-| Vložení mezery mezi volání funkce název a seznam argumentů | `X ()` | `X()` |
-| Vložení mezery v uvozovkách seznamu prázdný argument | `X( )` | `X()` |
-| Vložení mezery v uvozovkách seznamu argumentů | `X( a, b )` | `X(a, b)` |
-| Vložení mezery v závorkách výrazu | `( a )` | `(a)` |
-| Vložení mezery v uvozovkách prázdný řazené kolekce členů | `( )` | `()` |
-| Vložení mezery v uvozovkách řazené kolekce členů | `( a, b )` | `(a, b)` |
-| Vložit prostor v rámci prázdný hranaté závorky | `[ ]` | `[]` |
-| Vložení mezer v rámci hranaté závorky seznamů | `[ a, b ]` | `[a, b]` |
-| Vložení mezery před otevřete hranatá závorka | `x [i]` | `x[i]` |
-| Vložit prostor v rámci hranaté závorky | `x[ i ]` | `x[i]` |
+| **Vložit mezeru mezi název funkce volání a seznam argumentů.** | `X ()` | `X()` |
+| **Vložit mezeru mezi kulaté závorky prázdného seznamu argumentů** | `X( )` | `X()` |
+| **Vložit mezeru mezi kulaté závorky seznamu argumentů** | `X( a, b )` | `X(a, b)` |
+| **Vložit mezeru mezi kulaté závorky výrazu** | `( a )` | `(a)` |
+| **Vložit mezeru mezi kulaté závorky prázdné řazené kolekci členů** | `( )` | `()` |
+| **Vložit mezeru mezi kulaté závorky řazené kolekce členů** | `( a, b )` | `(a, b)` |
+| **Vložit mezeru mezi kulaté prázdné hranaté závorky** | `[ ]` | `[]` |
+| **Vložit mezery mezi hranaté závorky seznamů** | `[ a, b ]` | `[a, b]` |
+| **Vložit mezeru před levou hranatou závorku** | `x [i]` | `x[i]` |
+| **Vložit mezeru mezi hranaté závorky** | `x[ i ]` | `x[i]` |
 
 <br/>
 
 ## <a name="statements"></a>Příkazy
 
-**Příkazy** možnosti řízení automatické přepisování různých příkazů do další Pythonic formuláře.
+**Příkazy** možnosti řízení automatické přepisování různé příkazy do další Pythonic formuláře.
 
-| Možnost | Před formátování | Po formátování |
+| Možnost | Před formátováním | Po naformátování |
 | --- | --- | --- |
-| Umístěte importovaných modulů na nový řádek | `import sys, pickle` | `import sys`<br/>`import pickle` |
-| Odebrání nepotřebných středníkem | `x = 42;` | `x = 42` |
-| Umístěte více příkazů na nové řádky | `x = 42; y = 100` | `x = 42`<br/>`y = 100` |
+| **Umístit importované moduly na nový řádek** | `import sys, pickle` | `import sys`<br/>`import pickle` |
+| **Odebrat zbytečné středníky** | `x = 42;` | `x = 42` |
+| **Umístit více příkazů na nových řádcích** | `x = 42; y = 100` | `x = 42`<br/>`y = 100` |
 
 ## <a name="wrapping"></a>Zabalení
 
-**Zabalení** umožňuje nastavíte **maximální šířka komentář** (výchozí hodnota je 80). Pokud **zabalení komentáře, které jsou moc široké** je možnost nastavena, komentáře, které není delší než tento maximální šířka přeformátuje Visual Studio.
+**Obtékání** umožňuje nastavit **maximální šířka komentáře** (výchozí hodnota je 80). Pokud **zabalit komentáře, které jsou moc široké** je nastavena možnost, sada Visual Studio přeformátuje komentáře, aby nedošlo k překročení tohoto maximální šířku.
 
 ```python
 # Wrapped to 40 columns
@@ -107,9 +109,9 @@ Příklady pro různé možnosti jsou uvedeny v následujících tabulkách:
 # There should be one-- and preferably only one --obvious way to do it.
 ```
 
-## <a name="fill-comment-paragraph-command"></a>Zadejte příkaz odstavec komentář
+## <a name="fill-comment-paragraph-command"></a>Vyplnit odstavec komentáře příkaz
 
-**Upravit > Upřesnit > zadejte komentář odstavce** přeteče (Ctrl + E, P) a formáty komentář text, kombinace krátké řádky společně a rozdělení dlouho ty.
+**Upravit** > **Advanced** > **lnit odstavec komentáře** (**Ctrl**+**E**  >  **P**) přeformátuje a formátuje text komentáře, kombinování krátké řádky společně a rozdělení dlouhá.
 
 Příklad:
 

@@ -1,5 +1,5 @@
 ---
-title: METADATA_TYPE | Microsoft Docs
+title: METADATA_TYPE | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 66a1632198a0af5490e66a843458fc55bcad2d6d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 77e0a87f6b20093c1ddca1a9f132003f63afbaa1
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49900316"
 ---
 # <a name="metadatatype"></a>METADATA_TYPE
-Tato struktura Určuje informace o typu pole prováděné z metadat.  
+Tato struktura Určuje informace o typ pole z metadat.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,17 +48,17 @@ public struct METADATA_TYPE {
  ID aplikace, ze kterého přišel symbolu. Slouží k jednoznačné identifikaci instance aplikace.  
   
  guidModule  
- Identifikátor GUID modul, který obsahuje toto pole.  
+ Identifikátor GUID modulu, který obsahuje toto pole.  
   
  tokClass  
- Metadata tokenu ID tohoto typu.  
+ ID tokenu metadat tohoto typu.  
   
  [C++] `_mdToken` je `typedef` pro 32bitovou verzi `int`.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato struktura objeví jako součást sjednocení v [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) struktury, kdy `dwKind` pole z `TYPE_INFO` struktura je nastaven na `TYPE_KIND_METADATA` (hodnoty z [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) výčet).  
+ Tato struktura se zobrazí jako součást sjednocení v [TYPE_INFO](../../../extensibility/debugger/reference/type-info.md) strukturu, kdy `dwKind` pole `TYPE_INFO` struktura je nastavena na `TYPE_KIND_METADATA` (hodnotu z [dwTYPE_KIND](../../../extensibility/debugger/reference/dwtype-kind.md) výčet).  
   
- `tokClass` Hodnota je token metadata, která jednoznačně identifikuje typu. Podrobnosti o tom, jak interpretovat horní bity tokenu ID metadata najdete v tématu `CorTokenType` výčet v souboru corhdr.h ve [!INCLUDE[dnprdnshort](../../../code-quality/includes/dnprdnshort_md.md)] SDK.  
+ `tokClass` Hodnotu, která jednoznačně identifikuje typ tokenu metadat. Podrobnosti o tom, jak interpretovat horní bits ID tokenu metadat najdete v tématu `CorTokenType` výčtu v souboru comimage_flags v [!INCLUDE[dnprdnshort](../../../code-quality/includes/dnprdnshort_md.md)] SDK.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: sh.h  

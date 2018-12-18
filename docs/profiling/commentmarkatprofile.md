@@ -1,5 +1,5 @@
 ---
-title: CommentMarkAtProfile | Microsoft Docs
+title: CommentMarkAtProfile | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -13,18 +13,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d4484e5fdee3158b61e7d1ae6d33966141e2a6a5
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 4eb29336b401b020df52d1ccaa743bb7240e1d2b
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49854816"
 ---
 # <a name="commentmarkatprofile"></a>CommentMarkAtProfile
-`CommentMarkAtProfile` Metoda vloží hodnoty časového razítka, číselné značky a komentáře řetězce v souboru .vsp. Hodnota časového razítka slouží k synchronizaci externí události. Značky a komentáře, které má být vložen profilace podprocesu, který obsahuje funkci CommentMarkAtProfile musí být ON.  
+`CommentMarkAtProfile` Metoda vloží hodnoty časového razítka, číselné značku a řetězec komentáře v. *Vsp* souboru. Hodnota časového razítka je možné synchronizovat vnější události. Značky a komentáře, které má být vložen profilování pro vlákna, které obsahuje funkci CommentMarkAtProfile musí být dále.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkAtProfile (  
                                    __int64 dnTimestamp,  
                                    long lMarker,  
@@ -34,50 +35,50 @@ PROFILE_COMMAND_STATUS PROFILERAPI CommentMarkAtProfile (
 #### <a name="parameters"></a>Parametry  
  `dnTimestamp`  
   
- 64bitové celé číslo, představující hodnotu časového razítka.  
+ 64bitové celé číslo, který představuje hodnotu časového razítka.  
   
  `lMarker`  
   
- Číselné značky pro vložení. Značky musí být větší než nebo rovno 0 (nula).  
+ Číselné značky pro vložení. Značky musí být větší než nebo rovna 0 (nula).  
   
  `szComment`  
   
- Ukazatel na textový řetězec k vložení. Řetězec musí být kratší než 256 znaků včetně ukončení hodnotu NULL.  
+ Ukazatel na textový řetězec pro vložení. Řetězec musí být kratší než 256 znaků včetně ukončovacího znaku NULL.  
   
-## <a name="property-valuereturn-value"></a>Hodnota vlastnosti / návratová hodnota  
- Funkce označuje úspěch či neúspěch pomocí **PROFILE_COMMAND_STATUS** výčtu. Vrácená hodnota může být jeden z následujících akcí:  
+## <a name="property-valuereturn-value"></a>Vlastnost hodnota nebo návratová hodnota  
+ Funkce označuje úspěch nebo neúspěch pomocí **PROFILE_COMMAND_STATUS** výčtu. Návratová hodnota může být jeden z následujících akcí:  
   
 |Enumerátor|Popis|  
 |----------------|-----------------|  
-|MARK_ERROR_MARKER_RESERVED|Parametr je menší než nebo rovna 0. Tyto hodnoty jsou vyhrazené. Značky a komentáře nejsou popsané.|  
-|MARK_ERROR_MODE_NEVER|Profilování režimu byl nastaven na nikdy, při volání funkce. Značky a komentáře nejsou popsané.|  
-|MARK_ERROR_MODE_OFF|Profilování režimu byl nastaven na hodnotu OFF, při volání funkce. Značky a komentáře nejsou popsané.|  
-|MARK_ERROR_NO_SUPPORT|Nepodporuje označit v tomto kontextu. Značky a komentáře nejsou popsané.|  
-|MARK_ERROR_OUTOFMEMORY|Paměť nebyl k dispozici k zaznamenání události. Značky a komentáře nejsou popsané.|  
-|MARK_TEXTTOOLONG|Řetězec překračuje maximální povolenou délku 256 znaků. Řetězec komentáře zkrácen a značky a komentáře se zaznamenávají.|  
-|MARK_OK|MARK_OK je vrácen do indikuje úspěšné provedení.|  
+|MARK_ERROR_MARKER_RESERVED|Parametr je menší než nebo rovna 0. Tyto hodnoty jsou vyhrazené. Nejsou zaznamenána značky a komentáře.|  
+|MARK_ERROR_MODE_NEVER|Režimu profilace byla nastavena na nikdy, když byla volána funkce. Nejsou zaznamenána značky a komentáře.|  
+|MARK_ERROR_MODE_OFF|Režimu profilace byl nastaven na hodnotu OFF, když byla volána funkce. Nejsou zaznamenána značky a komentáře.|  
+|MARK_ERROR_NO_SUPPORT|Bez podpory označení v tomto kontextu. Nejsou zaznamenána značky a komentáře.|  
+|MARK_ERROR_OUTOFMEMORY|Paměť není k dispozici k zaznamenání události. Nejsou zaznamenána značky a komentáře.|  
+|MARK_TEXTTOOLONG|Řetězec překračuje maximum 256 znaků. Komentář řetězce zkráceny a značky a komentáře se zaznamenávají.|  
+|MARK_OK|MARK_OK je vrácena, čímž indikuje úspěšné provedení.|  
   
 ## <a name="remarks"></a>Poznámky  
- Profilování stavu podprocesu, který obsahuje funkci profilu značky musí být v značky a komentáře vložit příkaz Označit nebo s funkcí rozhraní API (CommentMarkAtProfile, CommentMarkProfile nebo MarkProfile). Profil značky jsou globální v oboru. Například profil značka vložen do jedno vlákno slouží k označení počáteční nebo koncové segmentu dat v jakékoli vlákno v souboru .vsp.  
+ Profilace stav podprocesu, který obsahuje funkci profilu značky musí být na značky a komentáře vložená značka příkaz nebo s funkcí rozhraní API (CommentMarkAtProfile, CommentMarkProfile nebo MarkProfile). Profil značky jsou globální v oboru. Například profil značky vložení v jednom vlákně slouží k označení začátku nebo konci segmentu dat v jakékoli vlákno do souboru .vsp.  
   
 > [!IMPORTANT]
->  CommentMarkAtProfile metody musí být použit s pouze instrumentace.  
+>  CommentMarkAtProfile metody by měla sloužit s pouze instrumentace.  
   
-## <a name="net-framework-equivalent"></a>Ekvivalent v rozhraní .NET Framework  
- Microsoft.VisualStudio.Profiler.dll  
+## <a name="net-framework-equivalent"></a>Ekvivalent .NET framework  
+ *Microsoft.VisualStudio.Profiler.dll*  
   
 ## <a name="function-information"></a>Informace o funkci  
   
 |||  
 |-|-|  
-|**Záhlaví**|Zahrnout VSPerf.h|  
-|**Knihovna**|Použití VSPerf.lib|  
-|**Unicode**|Implementovaný jako CommentMarkAtProfileW (Unicode) a CommentMarkAtProfileA (ANSI).|  
+|**Záhlaví**|Zahrnout *VSPerf.h*|  
+|**Knihovna**|Použití *VSPerf.lib*|  
+|**Unicode**|Implementovat jako CommentMarkAtProfileW (Unicode) a CommentMarkAtProfileA (ANSI).|  
   
 ## <a name="example"></a>Příklad  
- Následující kód ukazuje použití volání CommentMarkAtProfile obecné funkce. Příklad předpokládá použití Win32 řetězce makra a nastavení kompilátoru pro ANSI k určení, zda kód zavolá metodu ANSI povolený funkce.  
+ Následující kód ukazuje použití CommentMarkAtProfile obecná funkce volání. Příklad předpokládá použití maker řetězec Win32 a nastavení kompilátoru standardu ANSI k určení, zda kód volá ANSI povolena funkce.  
   
-```  
+```cpp  
 void ExerciseCommentMarkAtProfile(void)  
 {  
     // Declare and initalize variables to pass to   
@@ -115,5 +116,5 @@ void ExerciseCommentMarkAtProfile(void)
 }  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [Referenční dokumentace rozhraní API sady Visual Studio Profiler (nativní)](../profiling/visual-studio-profiler-api-reference-native.md)
+## <a name="see-also"></a>Viz také:  
+ [Referenční dokumentace jazyka Visual Studio Profiler API (nativní)](../profiling/visual-studio-profiler-api-reference-native.md)

@@ -1,5 +1,5 @@
 ---
-title: Vytváření přenosných datových souborů z příkazového řádku profilaci | Microsoft Docs
+title: Vytváření přenosných datových souborů z příkazového řádku pro profilaci | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -10,36 +10,37 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dd329df74c88f5edadef27444bf3b3c89ee1b30d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: be919183f18efc29ea562b0e4cc60c84febe60c8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49841933"
 ---
-# <a name="creating-portable-profiling-data-files-from-the-command-line"></a>Vytváření přenosných datových souborů profilace z příkazového řádku
-Chcete-li sdílení profilace data jednodušší, můžete použít [vsperfreport –](../profiling/vsperfreport.md) nástroj příkazového řádku pro vložení symbolů pro profilace spustit do souboru .vsp.  
+# <a name="create-portable-profiling-data-files-from-the-command-line"></a>Vytváření přenosných datových souborů profilace z příkazového řádku
+Chcete-li sdílet data profilování snadněji, můžete použít [VSPerfReport](../profiling/vsperfreport.md) vložit symboly pro běh profilování do nástroje příkazového řádku. *Vsp* souboru.  
   
- Můžete také vytvořit soubor pro předem analyzovaných profilování dat (.vsps), která je menší a rychlejší spouštění v prostředí IDE.  
+ Můžete také vytvořit předem analyzovaný dat profilování (. *vsps*) soubor, který je menší a rychlejší načítání v integrovaném vývojovém prostředí.  
   
 > [!NOTE]
->  Zkontrolujte, zda jsou k dispozici pro soubory symbolu (.pdb) **vsperfreport –**. Další informace najdete v tématu [postupy: určení umístění souboru se symboly z příkazového řádku](../profiling/how-to-specify-symbol-file-locations-from-the-command-line.md).  
+>  Ujistěte se, že symbol (. *soubor PDB*) soubory jsou k dispozici **VSPerfReport**. Další informace najdete v tématu [postupy: určení umístění souboru se symboly z příkazového řádku](../profiling/how-to-specify-symbol-file-locations-from-the-command-line.md).  
 >   
->  Informace o cestě k **VSReport**, najdete v části [určení cesty k nástrojům příkazového řádku](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).  
+>  Informace o cestě k **VSReport**, naleznete v tématu [zadejte cestu k nástroji příkazového řádku](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md).  
 >   
->  Data profilování v souboru .vsps nelze filtrovat.  
+>  Profilování dat v. *vsps* souboru se nedají filtrovat.  
   
-### <a name="to-embed-the-symbols-for-a-profiling-run-into-a-profiling-data-vsp-file"></a>Chcete-li vložit symboly pro profilace spustit do souboru profilování dat (.vsp)  
+### <a name="to-embed-the-symbols-for-a-profiling-run-into-a-profiling-data-vsp-file"></a>Chcete-li vložit symboly pro běh profilování do dat profilování (. *Vsp*) souboru  
   
--   V okně příkazového řádku zadejte následující příkaz:  
+- V okně příkazového řádku zadejte následující příkaz:  
   
-     \<Cesta >**vsperfreport – \<** VSP soubor > **/PackSymbols**  
+   \<Cesta ><strong>VSPerfReport \<</strong> verzi souboru VSP >   **/packsymbols**  
   
-     Ve výchozím nastavení je soubor .vsps stejný základní název souboru .vsp. Můžete zadat alternativní název pomocí **výstup** možnost.  
+   Ve výchozím nastavení. *vsps* soubor má název základní názvem. *Vsp* souboru. Můžete zadat alternativní název pomocí **výstup** možnost.  
   
-### <a name="to-create-a-summary-profiling-data-file"></a>K vytvoření shrnutí datového souboru profilace  
+### <a name="to-create-a-summary-profiling-data-file"></a>Chcete-li vytvořit souhrnné datového souboru profilování  
   
--   V okně příkazového řádku zadejte následující příkaz:  
+- V okně příkazového řádku zadejte následující příkaz:  
   
-     \<Cesta >**vsperfreport – \<** VSP soubor > **/SummaryFile** [**/výstup:**\<název souboru >]  
+   \<Cesta ><strong>VSPerfReport \<</strong> verzi souboru VSP > **/summaryfile** [**/Output:**\<název souboru >]  
   
-     Ve výchozím nastavení je soubor .vsps stejný základní název souboru .vsp. Můžete zadat alternativní název pomocí **výstup** možnost.
+   Ve výchozím nastavení. *vsps* soubor má název základní názvem. *Vsp* souboru. Můžete zadat alternativní název pomocí **výstup** možnost.

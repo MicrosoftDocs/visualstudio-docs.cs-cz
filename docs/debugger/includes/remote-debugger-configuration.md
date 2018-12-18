@@ -13,34 +13,37 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: cfb41cf6274238fef2de9b74496a33fba110e04f
-ms.sourcegitcommit: fb73b56d45ebc0386cd4de1a706ba9e20c59daf1
+ms.openlocfilehash: d89dbc0b752c2b8c538ec53769c166b6edbd802f
+ms.sourcegitcommit: 1df0ae74af03bcf0244129a29fd6bd605efc9f61
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50915137"
 ---
-Musíte mít oprávnění správce na vzdáleném počítači.  
+1. Na vzdáleném počítači, najít a spustit **vzdálený ladicí program** z **Start** nabídky. 
+   
+   Pokud nemáte oprávnění správce na vzdáleném počítači, klikněte pravým tlačítkem myši **vzdálený ladicí program** aplikaci a vyberte **spustit jako správce**. V opačném případě stačí spusťte normálně.
+
+   Můžou existovat různé verze *msvsmon.exe* v *x64*, *x32*, či v jiných složkách. Ujistěte se, že spustíte verze potřebné k ladění aplikace. 
+   
+1. Při prvním spuštění vzdáleného ladicího programu (nebo předtím, než jste nakonfigurovali) **konfigurace vzdáleného ladění** zobrazí se dialogové okno.  
   
-1.  Vyhledejte aplikaci vzdáleného ladicího programu. (Msvsmon.exe najít v umístění, kde je nainstalován, nebo otevřete nabídku Start a vyhledejte **vzdáleného ladicího programu**.)
+    ![Konfigurace vzdáleného ladicího programu](../media/remotedebuggerconfwizardpage.png "konfigurace vzdáleného ladicího programu")  
   
-     Pokud používáte vzdálený ladicí program na vzdáleném serveru, budete moct klikněte pravým tlačítkem na aplikaci vzdáleného ladicího programu a vybrat **spustit jako správce**. Pokud jste neběží na vzdáleném serveru, právě spusťte normálně.
+1. Pokud rozhraní API webových služeb Windows není nainstalována, který se pouze v systému Windows Server 2008 R2, vyberte **nainstalovat** tlačítko.  
   
-3.  Při spuštění nástrojů pro vzdálenou poprvé (nebo předtím, než jste ji nakonfigurovali), **konfigurace vzdáleného ladění** zobrazí se dialogové okno.  
+1. Vyberte alespoň jeden síťový typ, který chcete použít nástroje remote tools na. Pokud jsou počítače připojené do domény, je třeba zvolit první položku. Pokud jsou tyto počítače připojeny přes domácí nebo pracovní skupině, vyberte druhý nebo třetí položka podle potřeby.  
   
-     ![RemoteDebuggerConfWizardPage](../media/remotedebuggerconfwizardpage.png "RemoteDebuggerConfWizardPage")  
+1. Vyberte **konfigurovat vzdálené ladění** nakonfigurovat bránu firewall a spustit vzdálený ladicí program.  
   
-4.  Pokud API služby systému Windows není nainstalována (která se dělá jenom v systému Windows Server 2008 R2), vyberte **nainstalovat** tlačítko.  
+1. Po dokončení konfigurace **vzdálený ladicí program** zobrazí se okno.
   
-5.  Vyberte typy síťových chcete pomocí nástrojů pro vzdálenou na. Musí být vybrán alespoň jeden typ sítě. Pokud jsou počítače připojené přes domény, musíte zvolit první položka. Pokud jsou počítače připojené přes domácí nebo pracovní skupině, musíte vybrat druhý a třetí položku podle potřeby.  
+    ![Vzdálený ladicí program okno](../media/remotedebuggerwindow.png "okna vzdáleného ladicího programu")
   
-6.  Zvolte **konfigurace vzdálené ladění** nakonfigurovat bránu firewall, a spusťte nástroj.  
+    Vzdálený ladicí program je nyní čeká na připojení. Použijte název serveru a port číslo zobrazené nastavit konfiguraci vzdáleného připojení v sadě Visual Studio.  
   
-7.  Po dokončení konfigurace, zobrazí se okno vzdáleného ladicího programu.
+Chcete-li zastavit vzdáleného ladicího programu, vyberte **souboru** > **ukončovací**. Můžete restartovat z **Start** nabídky, nebo z příkazového řádku:  
   
-     ![RemoteDebuggerWindow](../media/remotedebuggerwindow.png "RemoteDebuggerWindow")
-  
-     Vzdálený ladicí program nyní čeká na připojení. Poznamenejte si název serveru a portu číslo, které se zobrazí, protože tento název musí odpovídat konfiguraci, kterou použijete později v sadě Visual Studio.  
-  
- Po dokončení ladění a muset zastavit vzdáleného ladicího programu, klikněte na tlačítko **soubor > ukončení** v okně. Můžete restartovat z **spustit** nabídky nebo z příkazového řádku:  
-  
- **\<Visual Studio Instalační adresář > \Common7\IDE\Remote ladicí program\\< x86, x64 nebo Appx > \msvsmon.exe**.  
+```cmd
+<Remote debugger installation directory>\msvsmon.exe
+```

@@ -1,5 +1,5 @@
 ---
-title: IDebugEngine2::CauseBreak | Microsoft Docs
+title: IDebugEngine2::CauseBreak | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2ba10e167246ce2467f2faebf157e46306749bdb
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 08544fb80e1006dbed08e51689c1bb3b01212edb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49820509"
 ---
 # <a name="idebugengine2causebreak"></a>IDebugEngine2::CauseBreak
-Požadavky, že všechny programy programem tento modul ladění (DE) k zastavení při příštím spuštění jeden z jejich vláken pokusí o spuštění.  
+Požadavky, že všechny programy právě laděny ve tento ladicí stroj (DE) pro zastavení provádění příště, jeden z jejich vláken pokusí o spuštění.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,10 +38,10 @@ int CauseBreak();
 ```  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda je asynchronní: [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md) událost je odeslána, když program vedle pokusí spustit po tato metoda je volána.  
+ Tato metoda je asynchronní: [IDebugBreakEvent2](../../../extensibility/debugger/reference/idebugbreakevent2.md) události se odešle, když program další pokusy o spuštění po volání této metody.  
   
 ## <a name="see-also"></a>Viz také  
  [CauseBreak](../../../extensibility/debugger/reference/idebugprogram2-causebreak.md)   

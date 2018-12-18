@@ -1,5 +1,5 @@
 ---
-title: CONSTRUCTOR_ENUM | Microsoft Docs
+title: CONSTRUCTOR_ENUM | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b4abc7e2eb8b29a0a7486264732778502c032f42
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5a8302d89bb90902f2a31a81545f14dd233bbe1f
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49820535"
 ---
 # <a name="constructorenum"></a>CONSTRUCTOR_ENUM
-Vybere různé typy konstruktory.  
+Vybere různé druhy konstruktory.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,7 +54,7 @@ public enum ConstructorMatchOptions {
  Vybere statické konstruktory.  
   
 ## <a name="remarks"></a>Poznámky  
- Předat jako argument k [EnumConstructors](../../../extensibility/debugger/reference/idebugclassfield-enumconstructors.md) metoda.  
+ Předán jako argument [EnumConstructors](../../../extensibility/debugger/reference/idebugclassfield-enumconstructors.md) metody.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: sh.h  
@@ -64,4 +65,4 @@ public enum ConstructorMatchOptions {
   
 ## <a name="see-also"></a>Viz také  
  [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [Getreason –](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md)
+ [GetReason](../../../extensibility/debugger/reference/idebugcanstopevent2-getreason.md)

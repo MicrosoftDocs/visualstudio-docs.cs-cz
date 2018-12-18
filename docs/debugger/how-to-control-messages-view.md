@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: řízení zobrazení zpráv | Microsoft Docs'
+title: 'Postupy: řízení zobrazení zpráv | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -13,21 +13,22 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e06757307a71d34e2d38aa24695915b7e64bc8d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 64b83107d4dda72aea7db9e9c911305c96de7097
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49836369"
 ---
 # <a name="how-to-control-messages-view"></a>Postupy: Řízení zobrazení zpráv
-Pomocí nástroje Spy ++, budete mít značnou kontrolu nad obsah [zobrazení zpráv](../debugger/messages-view.md) okno. Můžete [spuštění a zastavení](../debugger/how-to-start-and-stop-the-message-log-display.md) zobrazení zpráv v kdykoli a můžete zadat:  
+Pomocí nástroje Spy ++, budete mít významnou kontrolu nad obsah [zobrazení zpráv](../debugger/messages-view.md) okna. Je možné [spouští a zastavují](../debugger/how-to-start-and-stop-the-message-log-display.md) zobrazování zpráv v okamžiku a můžete zadat:  
   
--   Typy zpráv, které chcete zobrazit.  
+- Typy zpráv, které chcete zobrazit.  
   
--   Windows, které chcete monitorovat.  
+- Windows, které chcete monitorovat.  
   
--   Formát zobrazení pro zprávu řádky.  
+- Formát zobrazení zpráv řádky.  
   
- Tato nastavení jsou dostupná z [dialogové okno možností zpráv](../debugger/message-options-dialog-box.md), a vztahují se pouze na aktivní [zobrazení zpráv](../debugger/messages-view.md) okno. Chcete-li otevřít toto dialogové okno, zvolte **zprávy protokolu** z **Spy** nabídky.  
+  Tato nastavení jsou k dispozici [dialogové okno možností zpráv](../debugger/message-options-dialog-box.md), a použijí pouze na aktivním [zobrazení zpráv](../debugger/messages-view.md) okna. Chcete-li otevřít toto dialogové okno, zvolte **zprávy protokolu** z **Spy** nabídky.  
   
- Jsou k dispozici tři záložkách podokna možností zprávy. Další informace najdete v tématu [karta okna, dialogové okno možností zpráv](../debugger/windows-tab-message-options-dialog-box.md), [karta zprávy, dialogové okno možností zpráv](../debugger/messages-tab-message-options-dialog-box.md), a [karta výstup, dialogové okno možností zpráv](../debugger/output-tab-message-options-dialog-box.md).
+  Jsou k dispozici tři podokna s kartami možností zprávy. Další informace najdete v tématu [karta Windows, dialogové okno možností zpráv](../debugger/windows-tab-message-options-dialog-box.md), [karta zprávy, dialogové okno možností zpráv](../debugger/messages-tab-message-options-dialog-box.md), a [karta výstup, dialogové okno možností zpráv](../debugger/output-tab-message-options-dialog-box.md).

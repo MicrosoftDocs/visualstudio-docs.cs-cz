@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ca4bb0bbcfa30562955226d8304c4762031095b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: cb50f0a1a16a8b6a72862a3441cf1e72697042ec
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34690764"
 ---
 # <a name="cores-view-logical-cores"></a>Logická jádra zobrazení jader
 Každý název kanálu představuje jeden z logické jádra, které existují v PROFILOVANÉHO systému. Pojmenování počty až od 0 celkový počet logických jader. Například čtyři jádra systému bude počítat od logické základní 0 logická jádra 3.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Zobrazení jader](../profiling/cores-view.md)

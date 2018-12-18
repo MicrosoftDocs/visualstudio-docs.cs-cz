@@ -1,7 +1,7 @@
 ---
-title: Writelinestofile – úloha | Microsoft Docs
+title: Writelinestofile – úloha | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/20/2018
 ms.technology: msbuild
 ms.topic: reference
 f1_keywords:
@@ -20,32 +20,34 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f321eadf4fa02d55e869dcc0d9c93b637a2d3ac3
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 909c35ca889295385cae98d51a81b22b4f7eb5d8
+ms.sourcegitcommit: 95aedf723c6be5272c3c5a2911cb2bdec50e2148
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47228835"
 ---
 # <a name="writelinestofile-task"></a>WriteLinesToFile – úloha
-Zapíše cesty zadaných položek pro zadaný textový soubor.  
+Zapíše cest zadaných položek do zadaného textového souboru.  
   
 ## <a name="task-parameters"></a>Parametry úlohy  
  Následující tabulka popisuje parametry `WriteLinestoFile` úloh.  
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|`File`|Požadované <xref:Microsoft.Build.Framework.ITaskItem> parametr.<br /><br /> Určuje soubor k zápisu položky, které chcete.|  
-|`Lines`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametr.<br /><br /> Určuje položky, které chcete zapisovat do souboru.|  
-|`Overwrite`|Volitelné `Boolean` parametr.<br /><br /> Pokud `true`, úloha přepíše existující obsah v souboru.|  
-|`Encoding`|Volitelné `String` parametr.<br /><br /> Vybere kódování, například "Unicode" znaků.  Viz také <xref:System.Text.Encoding>.|  
-  
+|`File`|Vyžaduje <xref:Microsoft.Build.Framework.ITaskItem> parametru.<br /><br /> Určuje soubor pro zápis položky, které chcete.|  
+|`Lines`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametru.<br /><br /> Určuje položky, které chcete zapisovat do souboru.|  
+|`Overwrite`|Volitelné `Boolean` parametru.<br /><br /> Pokud `true`, úloha přepíše veškerý existující obsah v souboru.|  
+|`Encoding`|Volitelné `String` parametru.<br /><br /> Vybere kódování, například "Unicode" znaků.  Viz také <xref:System.Text.Encoding>.|  
+|`WriteOnlyWhenDifferent`|Volitelné `Boolean` parametru.<br /><br /> Pokud `true`, cílový soubor, který je zadán, pokud existuje, bude číst nejprve k porovnání, co by vytvořilo úlohu. Pokud shodné, soubor není zapsán na disk a časové razítko zůstane zachovaná.|  
+
 ## <a name="remarks"></a>Poznámky  
- Pokud `Overwrite` je `true`, vytvoří nový soubor, zapisovat obsah do souboru a poté uzavře soubor. Jestliže cílový soubor již existuje, je přepsán. Pokud `Overwrite` je `false`, připojí obsah do souboru, vytváření cílový soubor, pokud ještě neexistuje.  
+ Pokud `Overwrite` je `true`, vytvoří nový soubor, zapsat obsah do souboru a pak se soubor zavře. Pokud cílový soubor už existuje, je přepsán. Pokud `Overwrite` je `false`, připojí obsah do souboru, vytváření cílový soubor, pokud ještě neexistuje.  
   
- Kromě výše uvedených parametrů tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třída, které dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrech a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).  
+ Kromě výše uvedených parametrů zdědí tento úkol parametry ze <xref:Microsoft.Build.Tasks.TaskExtension> třída, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).  
   
 ## <a name="example"></a>Příklad  
- Následující příklad používá `WriteLinesToFile` úloh zápis cesty položky v `MyItems` kolekce do souboru určeného položek `MyTextFile` kolekce položek.  
+ V následujícím příkladu `WriteLinesToFile` úlohy pro zápis cesty položky v `MyItems` kolekci do souboru určeného položek `MyTextFile` kolekci položek.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -64,8 +66,33 @@ Zapíše cesty zadaných položek pro zadaný textový soubor.
     </Target>  
   
 </Project>  
+```
+
+V tomto příkladu používáme vlastnost s vložený tabulátorů pro zápis do textového souboru s více řádky. Pokud položka v `Lines` obsahuje vložené znaky nového řádku, nové řádky se zahrnou do výstupního souboru. Tímto způsobem můžete odkazovat na více řádků vlastnosti.
+
+```xml  
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <Target Name="WriteLaunchers" AfterTargets="CopyFilesToOutputDirectory">
+      <PropertyGroup>
+        <LauncherCmd>
+@ECHO OFF
+dotnet %~dp0$(AssemblyName).dll %*
+        </LauncherCmd>
+      </PropertyGroup>
+
+      <WriteLinesToFile
+        File="$(OutputPath)$(AssemblyName).cmd"
+        Overwrite="true"
+        Lines="$(LauncherCmd)" />
+  </Target>
+</Project>
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Úlohy](../msbuild/msbuild-tasks.md)   
  [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)

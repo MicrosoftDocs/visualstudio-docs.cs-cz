@@ -1,9 +1,8 @@
 ---
-title: Zobrazení řádků – Data kolizí | Microsoft Docs
+title: Zobrazení řádků – Data kolizí | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - Lines view
@@ -13,58 +12,59 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a4207808e224cd2dbf31d737c7f7c5c967dfbae
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7c05f928d7c5c6f35226985147b6a4545e2a2937
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49890046"
 ---
-# <a name="lines-view---contention-data"></a>Zobrazení řádků – Data kolizí
-Zobrazení řádků dat kolizí uvádí údaje o výkonu pro příkazy, které byly prováděny, kdy ukázky byly shromážděny v profilaci spustit. Ve zdrojovém souboru příkaz může mít rozsah více než jeden řádek v souboru zdroje a jeden řádek může obsahovat více než jeden výraz.  
+# <a name="lines-view---contention-data"></a>Zobrazení řádků – data kolizí
+Zobrazení řádků dat kolizí obsahuje údaje o výkonu pro příkazy, které se spouští při ukázky byly shromážděny během spuštění profilování. Ve zdrojovém souboru příkaz se týkají více než jeden řádek ve zdrojovém souboru a jeden řádek může obsahovat více než jeden výraz.  
   
- Příkaz je identifikována následující data:  
+ Příkaz je identifikován následující data:  
   
--   Zdrojový soubor, který obsahuje příkaz funkce.  
+- Zdrojový soubor, který obsahuje Function – příkaz  
   
--   Funkce, která obsahuje příkaz.  
+- Funkce, která obsahuje příkaz.  
   
--   Zdrojového řádku, od kterého začne příkaz.  
+- Zdrojový řádek, ve kterém se spustí příkaz.  
   
--   Znak v řádku zdroje, od kterého začne příkaz.  
+- Znak ve zdrojovém řádku, ve kterém se spustí příkaz.  
   
--   Řádku zdroje, u které končí příkaz.  
+- Řádku zdroje, u které končí příkaz.  
   
--   Znak v řádku zdroje, u které končí příkaz.  
+- Znak ve zdrojovém řádku, kdy příkaz skončí.  
   
- Sloupec názvu řádku poskytuje řazení zřetězení dat identifikátor.  
+  Sloupec název řádek obsahuje seřaditelné zřetězení těchto dat identifikátor.  
   
- Následující tabulka popisuje sloupce řádky zobrazit sestavu.  
+  Následující tabulka popisuje sloupce řádky zobrazit sestavu.  
   
 |Sloupec|Popis|  
 |------------|-----------------|  
-|**Výhradní blokované čas**|Množství času, během kterého byl zablokován spuštěním kódu v příkazu z důvodu kolizní událostí tohoto prohlášení. Blokované čas v funkce, které volá příkaz není součástí.|  
-|**Výhradní blokované čas: %**|Procento všech blokovaných času v procesu, který byl výhradní blokované čas příkaz.|  
-|**Výhradní kolizí**|Počet pokusů, které tento příkaz byl zablokován spuštěním kódu v příkazu z důvodu kolizní událostí. Kolizní události ve funkcích, které volá příkaz nejsou zahrnuty.|  
-|**% Výhradní kolizí**|Procento kolizní události v procesu, které byly výhradní kolizí tohoto prohlášení.|  
+|**Výhradní čas zablokování**|Množství času, během které byl tento příkaz blokovat spouštění kódu v příkazu z důvodu kolize události. Čas zablokování ve funkcích, které volá příkaz není součástí.|  
+|**% Výhradního času zablokování**|Procento času zablokování všech proces, který byl výhradní čas zablokování příkazu.|  
+|**Výhradní spory**|Počet případů, kdy se tento příkaz bylo zablokováno spouštění kódu v příkazu z důvodu kolize události. Kolizní události ve funkcích, které volá příkaz nejsou zahrnuty.|  
+|**% Výhradních sporů**|Procento kolizní události v procesu, které byly výhradních sporů tohoto prohlášení.|  
 |**Adresa funkce**|Adresa funkce, která obsahuje tento příkaz.|  
 |**Název funkce**|Plně kvalifikovaný název funkce, která obsahuje tento příkaz.|  
-|**Blokované čas (včetně).**|Volá se v příkazu blokované čas v tento příkaz a funkce.|  
-|**Včetně blokované čas: %**|Procento všech blokovaných času v procesu, který byl včetně blokované čas příkaz.|  
-|**Kolizí (včetně).**|Počet pokusů, tento příkaz a funkce, které byly volat v příkazu nebyly blokované spuštění.|  
-|**% Kolizí (včetně).**|Procento kolizní události v procesu, které byly včetně kolizí tohoto prohlášení.|  
-|**Název řádku**|Generované profileru identifikátor řádku. Identifikátor se používá následující syntaxe:`SourceFile`**; [** `LineNumberStart` **,**`CharacterStart`**] ->; [**`LineNumberEnd`**,**`CharacterEnd`**]**|  
-|**Číslo řádku – funkce**|Číslo řádku spuštění této funkce ve zdrojovém souboru.|  
-|**Název modulu**|Název modul, který obsahuje příkaz.|  
-|**Cesta modulu**|Cesta modul, který obsahuje příkaz.|  
+|**Celkový čas zablokování**|Čas zablokování v této smlouvě a funkce se volá v příkazu.|  
+|**% Celkového času zablokování**|Procento času zablokování všech proces, který byl celkový čas zablokování příkazu.|  
+|**Celkově sporů**|Počet pokusů, že tento příkaz a funkce, které byly volány v příkazu se zablokoval spuštění.|  
+|**% Celkových sporů**|Procento kolizní události v procesu, které byly celkových sporů tohoto prohlášení.|  
+|**Název čáry**|Profiler generovaný identifikátor řádku. Identifikátor se používá následující syntaxe:`SourceFile`**; [** `LineNumberStart` **,**`CharacterStart`**] ->; [**`LineNumberEnd`**,**`CharacterEnd`**]**|  
+|**Číslo řádku funkce**|Číslo řádku začátku této funkce ve zdrojovém souboru.|  
+|**Název modulu**|Název modulu, který obsahuje příkaz.|  
+|**Cesta modulu**|Cesta k napadenému modulu, který obsahuje příkaz.|  
 |**ID procesu**|ID procesu (PID) PROFILOVANÉHO procesu.|  
 |**Název procesu**|Název procesu.|  
-|**Začátek znaku zdroje**|Posun počáteční znak v řádku souboru zdroje, ve kterém se spustí tento příkaz.|  
-|**End znaku zdroje**|Posun počáteční znak v řádku souboru zdroje, u které končí tohoto prohlášení.|  
+|**Počáteční znak zdrojového kódu**|Odsazení počátečního znaku ve zdrojovém souboru řádku, na který tento příkaz spustí.|  
+|**Koncový znak zdrojového kódu**|Odsazení počátečního znaku ve zdrojovém souboru řádku, u které končí tento příkaz.|  
 |**Zdrojový soubor**|Název zdrojového souboru, který obsahuje příkaz funkce.|  
-|**Začátek řádku zdroje**|Číslo řádku ve zdrojovém souboru, ve kterém se příkaz spustí.|  
-|**End řádku zdroje**|Číslo řádku ve zdrojovém souboru, u které končí příkaz.|  
+|**Začátek řádku zdroje**|Číslo řádku ve zdrojovém souboru, ve kterém se spustí příkaz.|  
+|**Konec řádku zdroje**|Číslo řádku ve zdrojovém souboru, u které končí příkaz.|  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Postupy: přizpůsobení sloupců zobrazení sestavy](../profiling/how-to-customize-report-view-columns.md)   
  [Zobrazení řádků](../profiling/lines-view.md)   
  [Zobrazení řádků – vzorkování](../profiling/lines-view-dotnet-memory-sampling-data.md)   

@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31129625"
 ---
 # <a name="source-control"></a>Správa zdrojového kódu
 Tato část popisuje možnosti pro implementaci správy zdrojového kódu jako integrovaná funkce [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], buď pomocí modulu plug-in Správa zdrojového kódu nebo zdroj ovládacího prvku VSPackage.  

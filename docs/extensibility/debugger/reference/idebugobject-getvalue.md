@@ -1,5 +1,5 @@
 ---
-title: IDebugObject::GetValue | Microsoft Docs
+title: IDebugObject::GetValue | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 50f65cba807abf4e8a0d7bc85ed28c765f7c6849
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dc7b0f063e64649a07954367105df6a20d997033
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49868414"
 ---
 # <a name="idebugobjectgetvalue"></a>IDebugObject::GetValue
-Získá hodnotu objektu jako po sobě jdoucích řadu bajtů.  
+Získá hodnotu objektu ve formě po sobě jdoucích řady bajtů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,16 +43,16 @@ int GetValue(
   
 #### <a name="parameters"></a>Parametry  
  `pValue`  
- [ve out] Pole, které obsahuje po sobě jdoucích řady bajtů představující hodnotu objektu.  
+ [out v] Pole, které se vyplní sérii po sobě jdoucích bajtů představující hodnotu objektu.  
   
  `nSize`  
- [v] Maximální počet bajtů k načtení.  
+ [in] Maximální počet bajtů k načtení.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí S_OK; jinak vrátí kód chyby.  
+ V případě úspěchu vrátí hodnotu S_OK; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Získat celkový počet bajtů hodnoty, které mohou být vyvolány voláním [getsize –](../../../extensibility/debugger/reference/idebugobject-getsize.md) metoda.  
+ Získat celkový počet bajtů hodnoty, které můžete načíst pomocí volání [getsize –](../../../extensibility/debugger/reference/idebugobject-getsize.md) metody.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugObject](../../../extensibility/debugger/reference/idebugobject.md)

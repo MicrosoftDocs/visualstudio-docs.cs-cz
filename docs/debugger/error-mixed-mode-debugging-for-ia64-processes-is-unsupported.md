@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31471356"
 ---
 # <a name="error-mixed-mode-debugging-for-ia64-processes-is-unsupported"></a>Chyba: Ladění ve smíšeném režimu není pro procesy IA64 podporováno.
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Ladicí program nepodporuje ladění smíšený nativního a spravovaného kódu v procesu s procesorem Itanium.  

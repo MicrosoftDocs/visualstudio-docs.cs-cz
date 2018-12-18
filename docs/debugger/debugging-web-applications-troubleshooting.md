@@ -1,6 +1,6 @@
 ---
-title: 'Ladění webových aplikací: Řešení potíží s | Microsoft Docs'
-ms.custom: ''
+title: Ladění webových aplikací – řešení potíží | Dokumentace Microsoftu
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -19,22 +19,23 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3720dccfd6118aaacd122ea254618d0ce226cf8d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: b5f931a9942a89ae56836b5fbe91473b9dc9f568
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53063992"
 ---
 # <a name="debugging-web-applications-troubleshooting"></a>Ladění webových aplikací: řešení potíží
-Tato část obsahuje běžné postupy, které lze použít k řešení chyb.  
+Tato část obsahuje běžné postupy, které můžete použít k vyřešení chyby.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Postupy: ověření nastavení vlastnosti služby IIS](../debugger/how-to-verify-iis-property-settings.md)  
- Vysvětluje, jak se správně nastavit vlastnosti ve službě IIS, pokud chcete povolit ladění.  
+ [Postupy: Ověření nastavení vlastnosti služby IIS](../debugger/how-to-verify-iis-property-settings.md)  
+ Vysvětluje, jak správně nastavit vlastnosti ve službě IIS pro povolení ladění.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Ladění webových aplikací: Chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md)  
- Vysvětluje řešení potíží a chyb řešení.  
+ Vysvětluje, řešení potíží a chybě rozlišení.  
   
  [Ladění webových aplikací a skriptu](../debugger/debugging-web-applications-and-script.md)  
- Přehled ladění webových aplikací, jako [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)], webové služby XML a projekty knihovny ATL server.
+ Přehled ladění webových aplikací, jako [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)], webové služby XML a projektech ATL server.

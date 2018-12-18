@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31468369"
 ---
 # <a name="data-debug-interface-access-sdk"></a>Data (Přístup k rozhraní ladění SDK)
 Všechny proměnné, jako je například parametry, místní proměnné, globální proměnné a členy třídy, jsou identifikovány `SymTagData` symboly. Konstantní hodnoty (`LocIsConstant`) se také identifikují s tímto typem.  

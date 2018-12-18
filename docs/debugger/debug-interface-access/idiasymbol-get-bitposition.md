@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_bitposition – | Microsoft Docs
+title: Idiasymbol::get_bitposition – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 406cfd6c94af4d9dbd3f66b7321241f906e80648
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: bba39752470cf9f282245cbece7f260558b8b21d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49838472"
 ---
 # <a name="idiasymbolgetbitposition"></a>IDiaSymbol::get_bitPosition
-Načte pozici bit umístění. Použít, když [LocationType – výčet](../../debugger/debug-interface-access/locationtype.md) je `LocIsBitField`.  
+Načte pozici bit umístění. Použít, pokud [locationtype – výčet](../../debugger/debug-interface-access/locationtype.md) je `LocIsBitField`.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,16 +37,16 @@ HRESULT get_bitPosition (
  [out] Vrátí pozici bit umístění.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` nebo kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
->  Vrácená hodnota `S_FALSE` znamená vlastnost není k dispozici pro symbol.  
+>  Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Požadavek|Popis|  
 |-----------------|-----------------|  
-|Hlavičky:|dia2.h|  
+|Záhlaví:|dia2.h|  
 |Verze:|V7.0 DIA SDK|  
   
 ## <a name="see-also"></a>Viz také  

@@ -1,5 +1,5 @@
 ---
-title: 'span:: ~ span – destruktor | Microsoft Docs'
+title: 'span:: ~ span – destruktor | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,25 +14,26 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 489490033530befa31f8109d8dfa717e8236cc8e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ebde2e9659716a73943e2861f8856f6a9817b34b
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35676608"
 ---
-# <a name="spanspan-destructor"></a>span::~span – destruktor
-Zničí `span` objektu a jeho prostředky.  
+# <a name="spanspan-destructor"></a>span:: ~ span – destruktor
+Odstraní `span` objektu a jeho prostředky.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 ~span();  
 ```  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** cvmarkersobj.h  
+ **Záhlaví:** *cvmarkersobj.h*  
   
  **Namespace:** Concurrency::Diagnostic –
  
- ## <a name="see-also"></a>Viz také
- [span – třída](../profiling/span-class.md)
+ ## <a name="see-also"></a>Viz také:
+ [span třídy](../profiling/span-class.md)

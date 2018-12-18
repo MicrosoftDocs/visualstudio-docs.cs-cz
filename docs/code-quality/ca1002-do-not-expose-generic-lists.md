@@ -1,6 +1,7 @@
 ---
 title: 'CA1002: Nezveřejňujte obecné seznamy'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,13 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bdfee238bc6cb77f77d38151c1a604cf3f463e7f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 24646a2ac02f4ec8974c1806ca761b2e7a5af5a0
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49923954"
 ---
 # <a name="ca1002-do-not-expose-generic-lists"></a>CA1002: Nezveřejňujte obecné seznamy
+
 |||
 |-|-|
 |TypeName|DoNotExposeGenericLists|
@@ -30,22 +33,22 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Typ obsahuje externě viditelné člena, který je <xref:System.Collections.Generic.List%601?displayProperty=fullName> typ, vrátí <xref:System.Collections.Generic.List%601?displayProperty=fullName> typu nebo jejichž podpis zahrnuje <xref:System.Collections.Generic.List%601?displayProperty=fullName> parametr.
+ Typ obsahuje externě viditelného členu, který je <xref:System.Collections.Generic.List%601?displayProperty=fullName> typ, vrátí <xref:System.Collections.Generic.List%601?displayProperty=fullName> typu nebo jehož signatura obsahuje <xref:System.Collections.Generic.List%601?displayProperty=fullName> parametru.
 
 ## <a name="rule-description"></a>Popis pravidla
- <xref:System.Collections.Generic.List%601?displayProperty=fullName> je obecná kolekce, která je určená pro výkon a není dědičnosti. <xref:System.Collections.Generic.List%601?displayProperty=fullName> neobsahuje virtuální členy, které usnadňují změnit chování zděděné třídy. Následující obecné kolekce jsou navrženy pro dědičnosti a by měly být vystaveny místo <xref:System.Collections.Generic.List%601?displayProperty=fullName>.
+ <xref:System.Collections.Generic.List%601?displayProperty=fullName> je obecná kolekce navržená pro výkon a nikoli dědičnost. <xref:System.Collections.Generic.List%601?displayProperty=fullName> neobsahuje virtuální členy, které chcete změnit chování zděděné třídy. Následující obecné kolekce navržené pro dědičnost a měla by být vystavena místo <xref:System.Collections.Generic.List%601?displayProperty=fullName>.
 
--   <xref:System.Collections.ObjectModel.Collection%601?displayProperty=fullName>
+- <xref:System.Collections.ObjectModel.Collection%601?displayProperty=fullName>
 
--   <xref:System.Collections.ObjectModel.ReadOnlyCollection%601?displayProperty=fullName>
+- <xref:System.Collections.ObjectModel.ReadOnlyCollection%601?displayProperty=fullName>
 
--   <xref:System.Collections.ObjectModel.KeyedCollection%602?displayProperty=fullName>
+- <xref:System.Collections.ObjectModel.KeyedCollection%602?displayProperty=fullName>
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení toto pravidlo, změňte <xref:System.Collections.Generic.List%601?displayProperty=fullName> typ na jednu z obecné kolekce, které je určená pro dědičnosti.
+ Chcete-li opravit porušení tohoto pravidla, změňte <xref:System.Collections.Generic.List%601?displayProperty=fullName> typ na jednu z obecné kolekce, které je navržené pro dědičnost.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Pokud sestavení, které vyvolá toto upozornění by neměl být opakovaně použitelné knihovny není potlačení upozornění od tohoto pravidla. Například je bezpečné potlačit toto upozornění v aplikaci výkonu přizpůsobená kde získané výkonu výhody použití obecné seznamy.
+ Nepotlačujte upozornění tohoto pravidla, pokud sestavení, které toto upozornění vyvolá neměl být opakovaně použitelné knihovny. Například je bezpečný pro potlačení tohoto upozornění v aplikaci výkonu, která je vyladěná ve kterém bylo zvýšení výkonu získané z použití obecné seznamy.
 
 ## <a name="related-rules"></a>Související pravidla
  [CA1005: Vyhněte se nadbytečným parametrům na obecných typech](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)
@@ -62,5 +65,5 @@ ms.lasthandoff: 04/19/2018
 
  [CA1007: Použijte obecné typy, kde je to vhodné](../code-quality/ca1007-use-generics-where-appropriate.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
  [Obecné typy](/dotnet/csharp/programming-guide/generics/index)

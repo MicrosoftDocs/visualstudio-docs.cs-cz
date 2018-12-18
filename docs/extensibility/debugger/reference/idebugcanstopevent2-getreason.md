@@ -1,5 +1,5 @@
 ---
-title: IDebugCanStopEvent2::GetReason | Microsoft Docs
+title: IDebugCanStopEvent2::GetReason | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4c0eaefee714467084898182b338ceda63ebdc0f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d32f8be53d88b8268fdbbc82e6d774bffe3d7c3a
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49898411"
 ---
 # <a name="idebugcanstopevent2getreason"></a>IDebugCanStopEvent2::GetReason
-Získá důvod, proč chce Zastavte ladění modulu (DE).  
+Získá důvod, proč chce zastavit ladicí stroj (DE).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,12 +44,12 @@ int GetReason(
  [out] Vrátí hodnotu z [CANSTOP_REASON](../../../extensibility/debugger/reference/canstop-reason.md) výčet, který je popsaný i důvod pro tuto událost.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda je volána obvykle před [CanStop](../../../extensibility/debugger/reference/idebugcanstopevent2-canstop.md) metoda tak volajícím určit, zda chcete předat nulová (`TRUE`) k `IDebugCanStopEvent2::CanStop` metoda.  
+ Tato metoda je obvykle volána před provedením [CanStop](../../../extensibility/debugger/reference/idebugcanstopevent2-canstop.md) metodu, volající můžete určit, jestli se má předat nenulovou (`TRUE`) k `IDebugCanStopEvent2::CanStop` metody.  
   
- Z důvodu pro zastavení může být buď `CANSTOP_ENTRYPOINT`, což znamená, že je DE dosáhl vstupního bodu, nebo `CANSTOP_STEPIN`, což znamená, že je DE vstoupí do funkce.  
+ Může být důvodem zastavení `CANSTOP_ENTRYPOINT`, což znamená, že je DE dosáhla vstupní bod, nebo `CANSTOP_STEPIN`, což znamená, že je DE vstoupí do funkce.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugCanStopEvent2](../../../extensibility/debugger/reference/idebugcanstopevent2.md)   

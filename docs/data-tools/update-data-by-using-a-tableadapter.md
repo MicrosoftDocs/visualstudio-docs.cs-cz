@@ -1,5 +1,5 @@
 ---
-title: Aktualizace dat pomocí TableAdapter
+title: Aktualizace dat pomocí objektu TableAdapter
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,16 +16,18 @@ ms.assetid: 5e32e10e-9bac-4969-9bdd-b8f6919d3516
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 05a61aa42c086ba3fd0a71fa221426c763df14d7
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 88d4da868174396bfed148fc6088e5675e1198b2
+ms.sourcegitcommit: d9e4ea95d0ea70827de281754067309a517205a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37116890"
 ---
-# <a name="update-data-by-using-a-tableadapter"></a>Aktualizace dat pomocí TableAdapter
+# <a name="update-data-by-using-a-tableadapter"></a>Aktualizace dat pomocí objektu TableAdapter
 
 Poté, co byla upravena a ověřit data v datovou sadu, můžete odeslat aktualizovaná data zpět na databázi zavoláním `Update` metodu [TableAdapter](../data-tools/create-and-configure-tableadapters.md). `Update` Metoda aktualizace do jedné tabulky datového a spustí příkaz správný (INSERT, UPDATE nebo DELETE) na základě <xref:System.Data.DataRow.RowState%2A> z každý řádek dat v tabulce. Když datovou sadu s související tabulky, Visual Studio generuje TableAdapterManager třídy, které můžete použít k provedení aktualizace. Třída TableAdapterManager zajistí, že jsou ve správném pořadí podle omezení cizího klíče, které jsou definovány v databázi provedeny aktualizace. Pokud používáte ovládací prvky vázané na data, vytvoří architektuře vazby dat členské proměnné volané tableAdapterManager TableAdapterManager třídy.
 
@@ -51,6 +53,6 @@ Volání `Update` metoda TableAdapter. Předejte název tabulky dat, která obsa
      [!code-csharp[VbRaddataSaving#9](../data-tools/codesnippet/CSharp/update-data-by-using-a-tableadapter_1.cs)]
      [!code-vb[VbRaddataSaving#9](../data-tools/codesnippet/VisualBasic/update-data-by-using-a-tableadapter_1.vb)]
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Ukládání dat zpět do databáze](../data-tools/save-data-back-to-the-database.md)

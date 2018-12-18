@@ -1,5 +1,5 @@
 ---
-title: Description – Element (šablony sady Visual Studio) | Microsoft Docs
+title: Description – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,16 +13,17 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 471633a4c786a879b333a09a4d7975739a56ccfa
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 13a93ce9eb5bca506751e215fe74477839e961d9
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39500797"
 ---
-# <a name="description-element-visual-studio-templates"></a>Element popisu (šablony sady Visual Studio)
-Určuje popis šablony, jak se objevuje v buď **nový projekt** nebo **přidat novou položku** dialogové okno.  
+# <a name="description-element-visual-studio-templates"></a>Description – element (šablony sady Visual Studio)
+Určuje popis šablony, protože se zobrazí buď **nový projekt** nebo **přidat novou položku** dialogové okno.  
   
- \<VSTemplate >  
+ \<Vstemplate – >  
  \<TemplateData >  
  \<Popis >  
   
@@ -45,25 +46,25 @@ Určuje popis šablony, jak se objevuje v buď **nový projekt** nebo **přidat 
   
 |Atribut|Popis|  
 |---------------|-----------------|  
-|`Package`|Volitelný atribut pro pokročilé uživatele scénáře.<br /><br /> ID identifikátor GUID, který určuje balíčku sady Visual Studio.|  
-|`ID`|Volitelný atribut pro pokročilé uživatele scénáře.<br /><br /> Určuje ID sady Visual Studio prostředku.|  
+|`Package`|Volitelný atribut pro scénáře pro pokročilé uživatele.<br /><br /> Identifikátor GUID, který určuje balíček sady Visual Studio.|  
+|`ID`|Volitelný atribut pro scénáře pro pokročilé uživatele.<br /><br /> Určuje ID prostředku. Visual Studio|  
   
-### <a name="child-elements"></a>Podřízené elementy  
+### <a name="child-elements"></a>Podřízené prvky  
  Žádné  
   
-### <a name="parent-elements"></a>Nadřazené elementy  
+### <a name="parent-elements"></a>Nadřazené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Rozděluje šablonu a definuje, jak se zobrazuje v buď **nový projekt** nebo **přidat novou položku** dialogové okno.|  
+|[TemplateData –](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Rozděluje šablonu a definuje, jak se zobrazuje **nový projekt** nebo **přidat novou položku** dialogové okno.|  
   
 ## <a name="text-value"></a>Textová hodnota  
- Pokud je vyžadována hodnota textu `Package` a `ID` atributy se používají.  
+ Pokud je vyžadována textová hodnota `Package` a `ID` atributy se používají.  
   
  Text obsahuje popis šablony.  
   
 ## <a name="remarks"></a>Poznámky  
- `Description` je požadovaný podřízený element `TemplateData` elementu.  
+ `Description` je vyžadovaný podřízený prvek `TemplateData` elementu.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje metadata pro šablona projektu pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] aplikace.  
@@ -92,6 +93,6 @@ Určuje popis šablony, jak se objevuje v buď **nový projekt** nebo **přidat 
 </VSTemplate>  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
+## <a name="see-also"></a>Viz také:  
+ [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)   
  [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

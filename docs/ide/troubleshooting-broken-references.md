@@ -1,10 +1,9 @@
 ---
-title: Řešení potíží s poškozenými odkazy | Microsoft Docs
-ms.custom: ''
+title: Řešení potíží s poškozenými odkazy
 ms.date: 03/21/2017
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: troubleshooting
 helpviewer_keywords:
 - C# projects, references
 - Visual Basic projects, references
@@ -16,11 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 256e7018b29402a2d67693de3c8e2cfe18ea2f71
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3c1879b67558cb57fba7bc462e4c7df03fb5efc8
+ms.sourcegitcommit: 04a717340b4ab4efc82945fbb25dfe58add2ee4c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/28/2018
+ms.locfileid: "32064347"
 ---
 # <a name="troubleshoot-broken-references"></a>Řešení potíží s poškozenými odkazy
 
@@ -43,11 +43,11 @@ Níže jsou uvedeny náhrad těchto problémů.
 
 ## <a name="reference-path-is-incorrect"></a>Cesta odkazu je nesprávný
 
-Pokud projekty jsou sdíleny na různých počítačích, nemusí při součást se nachází v jiném adresáři v každém počítači nalezena některé odkazy. Odkazy jsou uloženy pod názvem souboru součásti (například MyComponent). Když je přidán odkaz na projekt, umístění složky souboru komponenty (například C:\MyComponents\\) se připojí k **ReferencePath** projektu vlastnost.
+Pokud projekty jsou sdíleny na různých počítačích, nemusí při součást se nachází v jiném adresáři v každém počítači nalezena některé odkazy. Odkazy jsou uložené pod názvem souboru součásti (například *MyComponent*). Když je přidán odkaz na projekt, umístění složky souboru komponenty (například *C:\MyComponents*) se připojí k **ReferencePath** projektu vlastnost.
 
-Při otevření projektu, pokusí se vyhledat tyto soubory odkazované komponenty podle adresáře v cestě odkazu. Pokud je na počítači, který ukládá součásti v jiném adresáři, jako je například D:\MyComponents otevřít projekt\\, odkaz nelze nalézt a chyba se zobrazí v seznamu úloh.
+Při otevření projektu, pokusí se vyhledat tyto soubory odkazované komponenty podle adresáře v cestě odkazu. Pokud v počítači, který ukládá součásti v jiném adresáři, jako například otevření projektu *D:\MyComponents*, nelze najít odkaz na a objeví se chyba v **seznam úkolů**.
 
-Chcete-li tento problém vyřešit, můžete odstranit poškozený odkaz a pak jej nahradit pomocí dialogového okna Přidat odkaz. Jiným řešením je použití **referenční cesty pro** položky na stránkách vlastností projektu a upravit složky v seznamu tak, aby odkazovaly do správných umístění. **Referenční cesty pro** vlastnost je uložena pro každého uživatele na každém počítači. Změna cesty k odkazu proto neovlivňuje ostatní uživatelé projektu.
+Chcete-li tento problém vyřešit, můžete odstranit poškozený odkaz a pak jej nahradit pomocí **přidat odkaz na** dialogové okno. Jiným řešením je použití **referenční cesty pro** položky na stránkách vlastností projektu a upravit složky v seznamu tak, aby odkazovaly do správných umístění. **Referenční cesty pro** vlastnost je uložena pro každého uživatele na každém počítači. Změna cesty k odkazu proto neovlivňuje ostatní uživatelé projektu.
 
 > [!TIP]
 > Odkazy na projekt na projekt nemají tyto problémy. Z tohoto důvodu je použijte místo odkazů na soubor, pokud je to možné.
@@ -88,8 +88,8 @@ Může být možné příčiny nepřístupných souborů: došlo k chybě síťo
 
 ## <a name="com-component-is-not-installed-on-computer"></a>V počítači není nainstalována komponenty modelu COM
 
-Pokud uživatel byl přidán odkaz na komponentu modelu COM a druhý uživatel pokusí spustit kód na počítači, který nemá tato součást nainstalována, druhý uživatel se zobrazí chyba, odkaz je poškozený. Instalace součásti v druhém počítači bude opravte chybu. Další informace o tom, jak použít odkazy na komponenty modelu COM v projektech najdete v tématu [interoperabilita modelů COM v aplikacích .NET Framework](/dotnet/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications).
+Pokud uživatel byl přidán odkaz na komponentu modelu COM a druhý uživatel pokusí spustit kód na počítači, který nemá tato součást nainstalována, druhý uživatel se zobrazí chyba, odkaz je poškozený. Instalace součásti v druhém počítači bude opravte chybu. Další informace o tom, jak použít odkazy na komponenty modelu COM v projektech najdete v tématu [interoperabilita modelů COM v rozhraní .NET Framework aplikace](/dotnet/visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications).
 
 ## <a name="see-also"></a>Viz také
 
-[Stránka Odkazy, Návrhář projektu (Visual Basic)](../ide/reference/references-page-project-designer-visual-basic.md)
+- [Stránka Odkazy, Návrhář projektu (Visual Basic)](../ide/reference/references-page-project-designer-visual-basic.md)

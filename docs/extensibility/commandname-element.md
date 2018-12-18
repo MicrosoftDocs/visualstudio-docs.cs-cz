@@ -1,5 +1,5 @@
 ---
-title: CommandName Element | Microsoft Docs
+title: CommandName – Element | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2a18d5f15ca4c8c258e57a1018b3841b3a47746f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ca5f38febab608aedf794fb02dbfbc65debbfc5e
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39230914"
 ---
-# <a name="commandname-element"></a>CommandName Element
-`CommandName` Element určuje text, který se zobrazí v kategorii klávesnice v **možnosti** dialogové okno a v **příkazy** v seznamu **přizpůsobit** dialogové okno pole.  
+# <a name="commandname-element"></a>CommandName – element
+`CommandName` Prvek určuje text, který se zobrazí v kategorii klávesnice v **možnosti** dialogovém okně a **příkazy** v seznamu **vlastní** dialogové okno pole.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,14 +36,14 @@ ms.lasthandoff: 04/16/2018
 ### <a name="attributes"></a>Atributy  
  Žádné  
   
-### <a name="child-elements"></a>Podřízené elementy  
+### <a name="child-elements"></a>Podřízené prvky  
  Žádné  
   
-### <a name="parent-elements"></a>Nadřazené elementy  
+### <a name="parent-elements"></a>Nadřazené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|[Strings – element](../extensibility/strings-element.md)|Skupiny elementy textu, například `ButtonText` a `CommandName`.|  
+|[Strings – element](../extensibility/strings-element.md)|Seskupí textové prvky, jako například `ButtonText` a `CommandName`.|  
   
-## <a name="see-also"></a>Viz také  
- [Soubory tabulek příkazů sady Visual Studio (.Vsct)](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)
+## <a name="see-also"></a>Viz také:  
+ [Soubory tabulky (.vsct) příkaz pro Visual Studio](../extensibility/internals/visual-studio-command-table-dot-vsct-files.md)

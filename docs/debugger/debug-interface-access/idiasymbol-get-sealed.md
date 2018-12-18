@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_sealed – | Microsoft Docs
+title: Idiasymbol::get_sealed – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d6ec278fd3ed2b3fef157c30300c16ccaaa8087b
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: e77e379d3f3635cf6976765450ba32ea6de81ef2
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49841803"
 ---
 # <a name="idiasymbolgetsealed"></a>IDiaSymbol::get_sealed
-Načte příznak, který určuje, zda je zapečetěná třída nebo metoda.  
+Získá příznak, který určuje, zda je třída nebo metoda je zapečetěná.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,16 +34,16 @@ HRESULT get_sealed(
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí `TRUE` Pokud je zapečetěna třída nebo metoda; jinak vrátí `FALSE`.  
+ [out] Vrátí `TRUE` Pokud třída nebo metoda je zapečetěná; v opačném případě vrátí `FALSE`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` nebo chybový kód.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
->  Vrácená hodnota `S_FALSE` znamená vlastnost není k dispozici pro symbol.  
+>  Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="remarks"></a>Poznámky  
- Zapečetěné třídy nelze použít jako základní třída. Zapečetěné metody nemůže být overidden.  
+ Zapečetěnou třídu nelze použít jako základní třídu. Zapečetěné metody nemůže být overidden.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: Dia2.h  

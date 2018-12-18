@@ -1,68 +1,72 @@
 ---
 title: Principy konfigurací sestavení
-description: ''
-author: asb3993
-ms.author: amburns
+description: Tento článek popisuje různé konfigurace sestavení v sadě Visual Studio pro Mac
+author: conceptdev
+ms.author: crdun
 ms.date: 04/14/2017
 ms.assetid: 78107CFA-9308-4293-A92A-9B552A259E15
-ms.openlocfilehash: 1ca2d7dc7b450367e5f87d62cf2a3c43a6331e13
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 7f130f5dec77e0a1965c68cf71e642fdb636832f
+ms.sourcegitcommit: 0a8ac5f2a685270d9ca79bb39d26fd90099bfa29
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51296174"
 ---
 # <a name="understanding-build-configurations"></a>Principy konfigurací sestavení
 
-## <a name="project-build-configurations"></a>Konfigurace sestavení projektu 
+## <a name="project-build-configurations"></a>Konfigurace sestavení projektu
 
-Projekty mívají k více konfigurací a přepínání mezi nimi umožňuje různých výstupy v čase vytvoření buildu. Například výstup konfiguraci ladění symboly pro ladění, což ladicí program přeložit názvy funkcí, parametrů nebo proměnné z trasování zásobníku chyb aplikace. Pokud tyto další informace jsou užitečné při vývoji, vede k velikost zvýšeným souboru a není vhodné pro distribuci.
+Projekty obvykle obsahují více konfigurací a přepínání mezi nimi umožňuje různé výstupy v okamžiku sestavení. Konfigurace ladění bude například výstupu symboly pro ladění, což ladicímu programu přeložit názvy funkcí, parametry nebo proměnné z trasování zásobníku chyb aplikace. Zatímco tyto další informace jsou užitečné při vývoji, vede velikost zvýšeným souboru a není ideální pro distribuci.
 
-Každá platforma má konkrétní konfigurace pro jeho sestavení. 
+Každá platforma má konkrétní konfigurací pro jeho sestavení.
 
 ## <a name="solution-configurations"></a>Konfigurace řešení
 
-Konfigurace řešení se podobají konfigurace projektu použít k vytvoření vlastní konfigurace pro celý projekt. Pomocí **konfigurace mapování** v části **sestavení > Konfigurace** položky, můžete přiřadit konfigurace cílového pro každou položku řešení, jak je znázorněno na následujícím obrázku:
+Podobají konfigurace projektu se konfigurace řešení používají k vytvoření vlastní konfigurace pro celý projekt. S použitím **mapování konfigurace** kartu **sestavení > Konfigurace** položky, můžete přiřadit cílovou konfiguraci pro každou položku řešení, jak je znázorněno v na následujícím obrázku:
 
+![Možnosti konfigurace mapování](media/projects-and-solutions-image3.png)
 
- ![Možnosti konfigurace mapování](media/projects-and-solutions-image3.png)
+Další informace o konfiguracích najdete v článku [nástroje Configuration Manager](https://www.youtube.com/watch?v=tjSdkqYh5Vg) video od Jamese Montemagno.
 
-Další informace o konfiguracích najdete v tématu [nástroje Configuration Manager](https://www.youtube.com/watch?v=tjSdkqYh5Vg) video od James Montemagno.
+## <a name="run-configuration"></a>Konfigurace spuštění
 
-## <a name="run-configuration"></a>Spuštění nástroje Konfigurace
+V předchozích verzích nástroje Xamarin Studio, můžete vybrat možnost nastavit jako projekt **spouštěný projekt**, což je projekt, který je spustit/ladit při použití příkazu globální spuštění/ladění. To byl označen tučné písmo pro název projektu v oblasti projektu.
 
-V předchozích verzích nástroje Xamarin Studio můžete třeba vybrat možnost nastavte projekt jako **spouštěný projekt**, což je projekt, který je spustit nebo ladit při použití příkazu globální spustit/debug. To se indikován tučné písmo pro název projektu v panelu pro projekt.
+V sadě Visual Studio pro Mac, namísto nastavení spouštěný projekt, můžete nastavit _konfigurace spuštění_. Spuštění konfigurace jsou uvedeny v rozevíracím seznamu na panelu nástrojů vedle selektor konfigurace sestavení, jak je znázorněno níže:
 
-V sadě Visual Studio pro Mac, namísto nastavování spouštěný projekt, můžete nastavit _spustit konfigurace_. Spuštění konfigurace jsou uvedeny v rozevíracím seznamu v panelu nástrojů vedle selektor sestavení konfigurace, jak je uvedeno dále:
+![Spustit rozevíracího seznamu konfigurace](media/projects-and-solutions-image8.png)
 
- ![Spuštění konfigurace rozevíracího seznamu](media/projects-and-solutions-image8.png)
+Konfigurace spuštění je sada možností spuštění s názvem a některé konfigurace, které jsou definovány v projektu pro různé účely. Spuštění konfigurace jsou definovány na úrovni projektu a výchozí vytvoří automaticky pro každý spustitelný projekt, i když je možné přidat, kolik potřebné. Některé typy projektu automaticky generovat další konfigurace spuštění. Například na projekty watchOS mohou generovat  _konfigurace přehledu a oznámení._
 
-Spuštění konfigurace je sada možností spouštění s názvem a několik konfigurací, které jsou definovány v projektu pro jiné účely. Spuštění konfigurace jsou definovány na úrovni projektu a výchozí automaticky se vytvoří pro každý projekt, spustitelný soubor, i když je možné přidat až potřebné. Některé typy projektů automaticky generovat další spuštění konfigurace. Například může vygenerovat watchOS projekty _konfigurace přehledu a oznámení._ 
- 
-Konfigurace můžete sdílet s jinými vývojáři (v takovém případě konfigurace bude uložen v souboru .csproj) nebo uchovávají místně (v takovém případě budou uloženy v souboru .uživatel).
+Konfigurace můžete sdílet s ostatními vývojáři (v takovém případě bude se vaše konfigurace bude uložen v souboru .csproj) nebo uložený místně (v takovém případě budou uloženy v souboru .user).
 
-### <a name="android-run-configurations"></a>Android spustit konfigurace
- 
-Spuštění konfigurace pro Android projekty umožňují určit, které aktivity, služby nebo všesměrového vysílání příjemce pro spuštění při spuštění nebo ladění projektu. Můžete předat záměrné doplňující data a nastavte záměrné příznaky mohli otestovat vaše komponenty pro v různých spuštění podmínkách.
+### <a name="android-run-configurations"></a>Android konfigurace spuštění
 
-Aktivity jinak než `MainLauncher` potřebovat `Exported=true` přidat do atribut aktivity pro ladění na fyzické zařízení nebo definovali záměrné filtry.
+Spuštění konfigurace pro projekty pro Android umožňují určit, kterou aktivitu, službu nebo přijímač všesměrového vysílání spustit při spuštění nebo ladění projektu. Můžete předat záměru doplňující data a Nastavení záměru příznaků, které mít možnost Testovat vaše komponenty v rámci podmínek pro jiný spuštění.
 
-## <a name="examples-of-data-that-might-be-included-in-run-configurations"></a>Příklady data, která může být součástí spuštění konfigurace
+Aktivity jinak než `MainLauncher` bude muset mít `Exported=true` přidána do aktivity atribut pro ladění na fyzickém zařízení, nebo jste definovali záměru filtry.
 
-Následující seznam uvádí některé příklady data, která může být součástí spuštění konfigurace:
+## <a name="examples-of-data-that-might-be-included-in-run-configurations"></a>Mezi data, která může být součástí konfigurace spuštění
 
-* Pravidelné projektové rozhraní .NET
-    * Alternativní spuštění aplikace
-    * Spustit argumenty
+Následující seznam obsahuje několik příkladů dat, která může být součástí konfigurace spuštění:
+
+* Pravidelné projektové .NET
+    * Alternativní umístění pro spouštění aplikací
+    * Počáteční argumenty
     * Pracovní adresář
     * Proměnné prostředí
-    * Možnosti mono runtime (který se má použít, pouze pokud se používá na Mono)
+    * Modul mono runtime možnosti (který se má použít jenom při spouštění v Mono)
 * Projekt pro Android
     * Vstupní bod (aktivity, služby, příjemce)
-    * Záměrné argumentů a dat
+    * Záměru argumenty a data
 * projekt pro iOS
     * Režim (normální, načítání na pozadí)
-* rozšíření projektu iOS
-    * Spuštění aplikace: výchozí nebo vlastní
-* WatchKit projektu
-    * Režim (přehledu, oznámení)
+* projekt rozšíření pro iOS
+    * Při spuštění aplikace: výchozí nebo vlastní
+* Projekt WatchKit
+    * Režim (první pohled, oznámení)
     * Datová část oznámení
+
+## <a name="see-also"></a>Viz také:
+
+- [Principy konfigurací sestavení (Visual Studio na Windows)](/visualstudio/ide/understanding-build-configurations)

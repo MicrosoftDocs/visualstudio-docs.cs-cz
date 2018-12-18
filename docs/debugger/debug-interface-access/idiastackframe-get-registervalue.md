@@ -1,5 +1,5 @@
 ---
-title: Idiastackframe::get_registervalue – | Microsoft Docs
+title: Idiastackframe::get_registervalue – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c1c08258c98b46536f17f7819ce01c296d2d1900
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 7799316a933e5f021df78699e41e6e9483746575
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49845950"
 ---
 # <a name="idiastackframegetregistervalue"></a>IDiaStackFrame::get_registerValue
-Načte hodnotu zadanou registraci, jak je uložen v rámci zásobníku.  
+Načte hodnotu zadaného registru uložené v bloku zásobníku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,13 +35,13 @@ HRESULT get_registerValue(
   
 #### <a name="parameters"></a>Parametry  
  `registerIndex`  
- [v] Jeden z [CV_HREG_e – výčet](../../debugger/debug-interface-access/cv-hreg-e.md) hodnot výčtu.  
+ [in] Jeden z [cv_hreg_e – výčet](../../debugger/debug-interface-access/cv-hreg-e.md) hodnot výčtu.  
   
  `pRetVal`  
  [out] Hodnota uložená v registru.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [Idiastackframe –](../../debugger/debug-interface-access/idiastackframe.md)   

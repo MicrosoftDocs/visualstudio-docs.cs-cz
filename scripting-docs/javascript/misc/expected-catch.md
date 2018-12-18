@@ -1,13 +1,13 @@
 ---
-title: "Očekávaný & č. 39; catch & č. 39; | Microsoft Docs"
-ms.custom: 
+title: Očekávaný & č. 39; catch & č. 39; | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.WebClient.Help.SCRIPT1033
@@ -16,7 +16,7 @@ dev_langs:
 - TypeScript
 - DHTML
 ms.assetid: f1cd947f-eba2-411e-8e84-8ca86f608643
-caps.latest.revision: 
+caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -25,6 +25,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24788994"
 ---
 # <a name="expected-39catch39"></a>Očekávaný & č. 39; catch & č. 39;
 Použít zpracování výjimek **zkuste** blokovat, ale zapsat přidruženého **catch** příkaz. Výjimka mechanismu pro zpracování vyžaduje, aby kód, který může selhat, společně s kód, který by neměl spustit, pokud dojde k výjimce, zabalit uvnitř **zkuste** bloku. Jsou výjimky vyvolány v rámci **zkuste** blokovat, s využitím **throw** příkaz a zachycení mimo **zkuste** bloku s jedním nebo více **catch**příkazy.  

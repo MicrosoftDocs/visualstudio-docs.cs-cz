@@ -1,5 +1,5 @@
 ---
-title: Rozšíření uživatelská nastavení a možnosti | Microsoft Docs
+title: Rozšíření uživatelských nastavení a možnosti | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,26 +16,27 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d71328c84f69b2a6adbd682be3a2b326d9f542e8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 60e5f70e471c3385ccae5ee39e9e68db1e93b20c
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39498630"
 ---
-# <a name="extending-user-settings-and-options"></a>Rozšíření uživatelská nastavení a možnosti
-V sadě Visual Studio jsou dva hlavní způsoby předvoleb uživatelů. **Nástroje / možnosti** stránky povolit uživatelům nastavit své vlastní hodnoty pro různé druhy, obecné a jazykové nastavení. Uživatelská nastavení umožňují uživatelům zadání obecných vlastností konfigurace sady Visual Studio. Další informace o možnosti stránky najdete v tématu [možnosti a možnosti stránky](../extensibility/internals/options-and-options-pages.md). Další informace o nastavení uživatele najdete v tématu [podpora pro uživatelských nastavení](../extensibility/internals/support-for-user-settings.md).  
+# <a name="extend-user-settings-and-options"></a>Rozšířit možnosti a nastavení uživatele
+V sadě Visual Studio existují dva hlavní způsoby, jak předvoleb uživatelů. **Nástroje** > **možnosti** stránky povolit uživatelům nastavit vlastní hodnoty u různých druhů, obecné a jazykově specifické nastavení. Uživatelská nastavení umožňují uživatelům zadání obecných vlastností konfigurace sady Visual Studio. Další informace o stránky možnosti najdete v tématu [možnosti a stránky možnosti](../extensibility/internals/options-and-options-pages.md). Další informace o nastavení uživatele, najdete v části [podpora pro uživatelská nastavení](../extensibility/internals/support-for-user-settings.md).  
   
  [Vytvoření stránky Možnosti](../extensibility/creating-an-options-page.md)  
- Vysvětluje, jak vytvořit stránku možnosti.  
+ Vysvětluje, jak vytvořit stránku možností.  
   
  [Vytvoření kategorie nastavení](../extensibility/creating-a-settings-category.md)  
  Vysvětluje, jak vytvořit kategorii nastavení.  
   
- [Použití úložiště nastavení](../extensibility/using-the-settings-store.md)  
- Vysvětluje, jak používat nastavení úložiště.  
+ [Použití nastavení úložiště](../extensibility/using-the-settings-store.md)  
+ Vysvětluje, jak použít nastavení úložiště.  
   
- [Získávání informací o službě z úložiště nastavení](../extensibility/getting-service-information-from-the-settings-store.md)  
- Vysvětluje, jak získat dostupné služby z obchodu nastavení.  
+ [Získat informace o službě z úložiště nastavení](../extensibility/getting-service-information-from-the-settings-store.md)  
+ Vysvětluje, jak načíst dostupné služby z nastavení úložiště.  
   
- [Zápis do úložiště uživatelských nastavení](../extensibility/writing-to-the-user-settings-store.md)  
- Vysvětluje, jak k zápisu do úložiště uživatelských nastavení.
+ [Zapsat do úložiště uživatelských nastavení](../extensibility/writing-to-the-user-settings-store.md)  
+ Vysvětluje, jak zapsat do úložiště uživatelských nastavení.

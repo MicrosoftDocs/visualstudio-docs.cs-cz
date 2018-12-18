@@ -7,21 +7,23 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: bef33f10446df92ae8424b23aa17695748222808
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: c5770cc071e8d981b3410db6165b5bf1ed6ef350
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49834003"
 ---
 # <a name="api-reference-for-t4-text-templates"></a>Referenční dokumentace k rozhraní API pro textové šablony T4
 
-Rozhraní API ukázka Text umožňuje vyvolání a přizpůsobení transformace [textové šablony](../modeling/code-generation-and-t4-text-templates.md).
+Rozhraní API Šablonování Text vám umožňuje vyvolávat a přizpůsobovat transformaci [textových šablon](../modeling/code-generation-and-t4-text-templates.md).
 
 ## <a name="namespaces"></a>Jmenné prostory
 
 |Obor názvů|Účel|
-|---------------|-------------|
-|<xref:Microsoft.VisualStudio.TextTemplating>|Obsahuje třídy pro funkci text šablony transformace. Textové šablony transformační modul je integrována do sady Visual Studio a transformuje textové šablony soubory na výstupní soubory generované text.|
-|<xref:Microsoft.VisualStudio.TextTemplating.Modeling>|Poskytuje text související s modely UML a specifické pro doménu jazyky, jako je přístup k zařízení transformace [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ModelBus.|
-|<xref:Microsoft.VisualStudio.TextTemplating.VSHost>|Poskytuje přístup ke službě ukázka text v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].|
+|-|-|
+|<xref:Microsoft.VisualStudio.TextTemplating>|Obsahuje třídy pro funkce transformace textu šablony. Modul transformace textové šablony je integrován do sady Visual Studio a převádí soubory textových šablon do vygenerovaných textových výstupních souborů.|
+|<xref:Microsoft.VisualStudio.TextTemplating.Modeling>|Poskytuje text související s modely UML a jazyky specifické pro doménu, jako je přístup k Visual Studio ModelBus zařízení pro transformaci.|
+|<xref:Microsoft.VisualStudio.TextTemplating.VSHost>|Poskytuje přístup ke službě šablonování textu v sadě Visual Studio.|

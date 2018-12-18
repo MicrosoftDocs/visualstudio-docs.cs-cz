@@ -1,5 +1,5 @@
 ---
-title: Findunderpath – úloha | Microsoft Docs
+title: Findunderpath – úloha | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -20,31 +20,32 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 84054917a47fc4d56c107965feebbc353e6de76f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c1f7ea93011878e9e47a5daa843a71d904318ce4
+ms.sourcegitcommit: c57ae28181ffe14a30731736661bf59c3eff1211
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37946518"
 ---
 # <a name="findunderpath-task"></a>FindUnderPath – úloha
-Určuje, které položky v kolekci určenou položku mají cesty, které jsou v nebo níže v zadané složce.  
+Určuje, které položky v kolekci určenou položku mají cesty, které jsou v nebo nižší než zadané složky.  
   
 ## <a name="parameters"></a>Parametry  
  Následující tabulka popisuje parametry `FindUnderPath` úloh.  
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|`Files`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametr.<br /><br /> Určuje soubory, jejichž cesty se porovná s cestu určenou položkou `Path` parametr.|  
+|`Files`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` parametru.<br /><br /> Určuje soubory, jejichž cesty by měly být porovnány s Cesta zadaná položkou `Path` parametru.|  
 |`InPath`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje položky, které nebyly nalezeny v zadané cestě.|  
 |`OutOfPath`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje položky, které nebyly nalezeny v zadané cestě.|  
-|`Path`|Požadované <xref:Microsoft.Build.Framework.ITaskItem> parametr.<br /><br /> Určuje cestu složky chcete použít jako odkaz.|  
-|`UpdateToAbsolutePaths`|Volitelné `Boolean` parametr.<br /><br /> V případě hodnoty true cesty výstupní položky se aktualizují jako absolutní cesty.|  
+|`Path`|Vyžaduje <xref:Microsoft.Build.Framework.ITaskItem> parametru.<br /><br /> Určuje cestu složky pro použití jako odkaz.|  
+|`UpdateToAbsolutePaths`|Volitelné `Boolean` parametru.<br /><br /> Při hodnotě true se cesty výstupní položky jsou aktualizované tak být absolutní cesty.|  
   
 ## <a name="remarks"></a>Poznámky  
- Kromě výše uvedených parametrů tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třída, které dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrech a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).  
+ Kromě výše uvedených parametrů zdědí tento úkol parametry ze <xref:Microsoft.Build.Tasks.TaskExtension> třída, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).  
   
 ## <a name="example"></a>Příklad  
- Následující příklad používá `FindUnderPath` úloh k určení, pokud soubory obsažené v `MyFiles` položky mít cesty, které existují v cestě určeného `SearchPath` vlastnost. Po dokončení úlohy `FilesNotFoundInPath` položka obsahuje `File1.txt` souboru a `FilesFoundInPath` položka obsahuje `File2.txt` souboru.  
+ V následujícím příkladu `FindUnderPath` úloh k určení, pokud soubory obsažené v `MyFiles` položky mají cesty, které existují v cestě určené `SearchPath` vlastnost. Po dokončení úlohy `FilesNotFoundInPath` obsahuje položku *File1.txt* souboru a `FilesFoundInPath` položka obsahuje *Soubor2.txt* souboru.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -73,7 +74,7 @@ Určuje, které položky v kolekci určenou položku mají cesty, které jsou v 
 </Project>  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)   
  [Úlohy](../msbuild/msbuild-tasks.md)   
  [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)

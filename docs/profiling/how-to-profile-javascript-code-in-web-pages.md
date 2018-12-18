@@ -13,13 +13,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7da608523430724e279efc3d5c7c5d5b27564845
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 007603f0695a658b6bfa6c1ab1173b4483004c13
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843920"
 ---
-# <a name="how-to-profile-javascript-code-in-web-pages"></a>Postupy: profilování kódu JavaScript ve webové stránky
+# <a name="how-to-profile-javascript-code-in-web-pages"></a>Postupy: kódu JavaScript profil ve webových stránkách
 
 Profilace nástroje sady Visual Studio můžete shromažďovat data o výkonu pro kód JavaScript, který se spustí v [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] webové aplikace, libovolné webové stránky nebo aplikace JavaScript pomocí metoda profilování instrumentace. Vyžaduje Internet Explorer 8 nebo novější.
 
@@ -34,7 +35,7 @@ Když zadáte JavaScript – profilace, kód jazyka JavaScript, která se spouš
 
 - Pro webovou stránku libovolný je profilovaným kód JavaScript, který se spustí v prohlížeči.
 
-## <a name="to-profile-javascript-in-an-aspnet-web-application-project"></a>Do profilu JavaScript v projektu aplikace ASP.NET
+## <a name="to-profile-javascript-in-an-aspnet-web-application-project"></a>Do profilu JavaScript v projekt webové aplikace technologie ASP.NET
 
 1. Otevřete [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] webového projektu v sadě Visual Studio.
 

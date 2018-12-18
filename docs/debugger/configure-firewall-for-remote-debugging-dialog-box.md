@@ -27,6 +27,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31459646"
 ---
 # <a name="configure-firewall-for-remote-debugging-dialog-box"></a>Dialogové okno Konfigurace brány firewall pro vzdálené ladění
 Toto dialogové okno se zobrazí, když brána Windows Firewall blokuje ladicí program příjem informací přes síť. Chcete-li pokračovat, vzdálené ladění, musíte otevřít díru v bráně firewall tak ladicího programu můžete získat informace.  

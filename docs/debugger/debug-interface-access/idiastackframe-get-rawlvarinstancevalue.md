@@ -1,5 +1,5 @@
 ---
-title: Idiastackframe::get_rawlvarinstancevalue – | Microsoft Docs
+title: Idiastackframe::get_rawlvarinstancevalue – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c50b1db74674158d4c7304bbacb4105f387cd56
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 7f5e34b766e27693326aba34b7b7259042870f00
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49933492"
 ---
 # <a name="idiastackframegetrawlvarinstancevalue"></a>IDiaStackFrame::get_rawLVarInstanceValue
-Tato metoda načte hodnotu zadaného místní proměnné nezpracovaná bajtů.  
+Tato metoda načte hodnotu místní proměnné zadané jako nezpracovaný bajtů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,19 +37,19 @@ HRESULT get_rawLVarInstanceValue(
   
 #### <a name="parameters"></a>Parametry  
  `pInstance`  
- [v] `IDiaLVarInstance` Objekt reprezentující instanci k získání hodnoty pro místní proměnné.  
+ [in] `IDiaLVarInstance` Objekt představující instance má být získána hodnota pro lokální proměnné.  
   
  `cbDataMax`  
- [v] Maximální počet bajtů ve vyrovnávací paměti na kterou odkazuje `pbData`. To může být maximálně 8 bajtů (`sizeof(ULONGLONG)`).  
+ [in] Maximální počet bajtů ve vyrovnávací paměti na které odkazuje `pbData`. To může být maximálně 8 bajtů (`sizeof(ULONGLONG)`).  
   
  `pcbData`  
- [out] Vrátí skutečný počet bajtů, které jsou uložené ve vyrovnávací paměti.  
+ [out] Vrátí skutečný počet bajtů uložených do vyrovnávací paměti.  
   
  `pbData`  
- [out] Vyrovnávací paměť pro vyplnění data. Nesmí to být `NULL`.  
+ [out] Vyrovnávací paměti, která vyplní data. IP adresa nesmí být `NULL`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md)

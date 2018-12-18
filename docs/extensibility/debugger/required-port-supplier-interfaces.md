@@ -1,5 +1,5 @@
 ---
-title: Požadovaná rozhraní dodavatele Port | Microsoft Docs
+title: Požadovaná rozhraní dodavatele portu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,43 +14,44 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e34627effce5e2f0d1401da683536548a32d3f6e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1c727cb39b480d72a3e0aa2083ca795bb65ac0ff
+ms.sourcegitcommit: 71b307ce86c4079cc7ad686d8d5f96a6a123aadd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39252411"
 ---
-# <a name="required-port-supplier-interfaces"></a>Požadovaný Port dodavatele rozhraní
-Port dodavatele musí implementovat [IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md) rozhraní.[ IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md)  
+# <a name="required-port-supplier-interfaces"></a>Požadovaná rozhraní dodavatele portu
+Musí implementovat dodavatele portu [IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md) rozhraní.[ IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md)  
   
- Vzhledem k tomu, že port dodavatele poskytuje porty, musí je také implementovat. Proto se musí implementovat rozhraní následující:  
+ Dodavatele portu poskytuje porty a je implementuje. Proto ho musíte spustit následující rozhraní:  
   
 -   [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md)  
   
-     Popisuje, port a můžete vytvořit výčet všech procesů spuštěných na tomto portu.  
+     Popisuje, port a vytváří výčet všechny procesy spuštěné na portu.  
   
 -   [IDebugPortEx2](../../extensibility/debugger/reference/idebugportex2.md)  
   
-     Poskytuje pro spuštění a ukončení procesů na portu.  
+     Umožňuje spouštění a ukončování procesů na portu.  
   
 -   [IDebugPortNotify2](../../extensibility/debugger/reference/idebugportnotify2.md)  
   
-     Poskytuje mechanismus pro aplikace běžící v rámci kontextu tento port k upozornění na program uzlu vytváření a likvidace. Další informace najdete v tématu [Program uzly](../../extensibility/debugger/program-nodes.md).  
+     Poskytuje mechanismus pro programy spuštěné v rámci kontextu tento port oznámit ho program uzel vytváření a zničení. Další informace najdete v tématu [programu uzly](../../extensibility/debugger/program-nodes.md).  
   
 -   `IConnectionPointContainer`  
   
      Poskytuje bod připojení pro [IDebugPortEvents2](../../extensibility/debugger/reference/idebugportevents2.md).  
   
 ## <a name="port-supplier-operation"></a>Operace dodavatele portu  
- [IDebugPortEvents2](../../extensibility/debugger/reference/idebugportevents2.md) podřízený obdrží oznámení, když proces a programy jsou vytvořen a zničen na portu. Port je potřeba poslat [IDebugProcessCreateEvent2](../../extensibility/debugger/reference/idebugprocesscreateevent2.md) vytvoření procesu a [IDebugProcessDestroyEvent2](../../extensibility/debugger/reference/idebugprocessdestroyevent2.md) při procesu zničen na portu. Port je také potřeba odesílat [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) vytvoření programu a [IDebugProgramDestroyEvent2](../../extensibility/debugger/reference/idebugprogramdestroyevent2.md) při program zničen v procesu spuštěného na tomto portu.  
+ [IDebugPortEvents2](../../extensibility/debugger/reference/idebugportevents2.md) jímky obdrží oznámení při zpracování a programy jsou vytvořeno a zničeno na portu. Port je vyžadován pro odeslání [IDebugProcessCreateEvent2](../../extensibility/debugger/reference/idebugprocesscreateevent2.md) při vytvoření procesu a [IDebugProcessDestroyEvent2](../../extensibility/debugger/reference/idebugprocessdestroyevent2.md) při zničení proces na portu. Port je také potřeba odeslat [IDebugProgramCreateEvent2](../../extensibility/debugger/reference/idebugprogramcreateevent2.md) při vytvoření programu v jazyce a [IDebugProgramDestroyEvent2](../../extensibility/debugger/reference/idebugprogramdestroyevent2.md) při je program zničeny v procesu spuštěného na portu.  
   
- Port obvykle zasílá program vytvořit a zrušení události v reakci [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md) a [RemoveProgramNode](../../extensibility/debugger/reference/idebugportnotify2-removeprogramnode.md) metody, v uvedeném pořadí.  
+ Port obvykle odešle programu vytvořit a zničit událostí v reakci [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md) a [RemoveProgramNode](../../extensibility/debugger/reference/idebugportnotify2-removeprogramnode.md) metody, v uvedeném pořadí.  
   
- Protože port se můžou spouštět a ukončit procesy fyzické a logické programy, musí tato rozhraní taky implementovat pomocí modulu ladění:  
+ Protože portu můžete spustit a ukončit procesy fyzické a logické programy, následující rozhraní musí být také implementováno pomocí ladicího stroje:  
   
 -   [IDebugProcess2](../../extensibility/debugger/reference/idebugprocess2.md)  
   
-     Popisuje proces fyzické. Minimálně musí být implementována následujících metod:  
+     Popisuje proces fyzické. Minimálně musí implementovat následující metody:  
   
     -   [EnumPrograms](../../extensibility/debugger/reference/idebugprocess2-enumprograms.md)  
   
@@ -60,17 +61,17 @@ Port dodavatele musí implementovat [IDebugPortSupplier2](../../extensibility/de
   
     -   [GetPhysicalProcessId](../../extensibility/debugger/reference/idebugprocess2-getphysicalprocessid.md)  
   
-    -   [Getprocessid –](../../extensibility/debugger/reference/idebugprocess2-getprocessid.md)  
+    -   [GetProcessId](../../extensibility/debugger/reference/idebugprocess2-getprocessid.md)  
   
     -   [GetAttachedSessionName](../../extensibility/debugger/reference/idebugprocess2-getattachedsessionname.md)  
   
 -   [IDebugProcessEx2](../../extensibility/debugger/reference/idebugprocessex2.md)  
   
-     Poskytuje způsob, jak SDM k připojení a odpojení sám sebe z procesu.  
+     Poskytuje způsob, jakým SDM připojit a samotné odpojit od procesu.  
   
 -   [IDebugProgram2](../../extensibility/debugger/reference/idebugprogram2.md)  
   
-     Popisuje logické program. Minimálně musí být implementována následujících metod:  
+     Popisuje logické programu. Minimálně musí implementovat následující metody:  
   
     -   [GetName –](../../extensibility/debugger/reference/idebugprogram2-getname.md)  
   
@@ -80,7 +81,7 @@ Port dodavatele musí implementovat [IDebugPortSupplier2](../../extensibility/de
   
 -   [IDebugProgramEx2](../../extensibility/debugger/reference/idebugprogramex2.md)  
   
-     Poskytuje způsob, jak SDM připojit k tomuto programu.  
+     Poskytuje způsob, jakým SDM připojit k tomuto programu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Implementace dodavatele portu](../../extensibility/debugger/implementing-a-port-supplier.md)

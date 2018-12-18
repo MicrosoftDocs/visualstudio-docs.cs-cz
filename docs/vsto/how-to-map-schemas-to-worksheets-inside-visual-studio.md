@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: mapování schémat na listy v sadě Visual Studio | Microsoft Docs'
+title: 'Postupy: mapování schémat na listy v sadě Visual Studio'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,13 +18,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b2d0caadfc08d7fa1d2ea29d04e84a5d954a42fd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8b95e24d151ef6bf8a0083d130c4e38f3f33d480
+ms.sourcegitcommit: 34f7d23ce3bd140dcae875b602d5719bb4363ed1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35256042"
 ---
-# <a name="how-to-map-schemas-to-worksheets-inside-visual-studio"></a>Postupy: Mapování schémat na listy v prostředí Visual Studio
+# <a name="how-to-map-schemas-to-worksheets-inside-visual-studio"></a>Postupy: mapování schémat na listy v sadě Visual Studio
   Do listu můžete namapovat schématu XML listu je otevřen v sadě Visual Studio. Můžete použít stejné nástroje Microsoft Office Excel, které používáte, když je sešit otevřít mimo Visual Studio. Microsoft Office project vytvoří stejné objekty, zda mapování schématu na listu před nebo po vytvoření řešení aplikace Excel.  
   
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]  
@@ -32,7 +33,7 @@ ms.lasthandoff: 04/16/2018
 > [!NOTE]  
 >  V řešení pro aplikaci Excel nelze použít s více částmi schémat XML.  
   
-### <a name="to-map-an-xml-schema-to-an-excel-worksheet-in-visual-studio"></a>Pro mapování schématu XML listu aplikace Excel v sadě Visual Studio  
+## <a name="to-map-an-xml-schema-to-an-excel-worksheet-in-visual-studio"></a>Pro mapování schématu XML listu aplikace Excel v sadě Visual Studio  
   
 1.  Otevřete projekt sešitu nebo šablony aplikace Excel v sadě Visual Studio.  
   
@@ -63,10 +64,10 @@ ms.lasthandoff: 04/16/2018
   
      Přetáhnete element schématu bez opakování, Microsoft Office project generuje <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> ovládací prvek, který je automaticky vázána <xref:System.Windows.Forms.BindingSource>.  
   
-     Přetažením opakující se prvek schématu generuje Microsoft Office project <xref:Microsoft.Office.Tools.Excel.ListObject> ovládací prvek, který není vázán automaticky ke zdroji dat. Další informace najdete v tématu [schémat XML a Data v přizpůsobeních na úrovni dokumentu](../vsto/xml-schemas-and-data-in-document-level-customizations.md).  
+     Přetažením opakující se prvek schématu generuje Microsoft Office project <xref:Microsoft.Office.Tools.Excel.ListObject> ovládací prvek, který není vázán automaticky ke zdroji dat. Další informace najdete v tématu [schémat XML a dat na úrovni dokumentu přizpůsobení](../vsto/xml-schemas-and-data-in-document-level-customizations.md).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Postupy: mapování schémat na dokumenty aplikace Word v sadě Visual Studio](../vsto/how-to-map-schemas-to-word-documents-inside-visual-studio.md)   
- [Schémata XML a data v přizpůsobeních na úrovni dokumentu](../vsto/xml-schemas-and-data-in-document-level-customizations.md)  
+ [Schémata XML a data v přizpůsobeních na úrovni dokumentu](../vsto/xml-schemas-and-data-in-document-level-customizations.md)  
   
   

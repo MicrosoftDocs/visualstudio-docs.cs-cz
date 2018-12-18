@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: zobrazení karty Vývojář na pásu karet | Microsoft Docs'
+title: 'Postupy: zobrazení karty Vývojář na pásu karet'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,56 +16,58 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9921c10d8a886eb4051b3d5f3d8392ddc77c2da7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: edcbcb969e45403d9ca138b259073e3cf4d73be0
+ms.sourcegitcommit: bc43970c000f07c9cc2051f1264a9742943a9755
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51349621"
 ---
-# <a name="how-to-show-the-developer-tab-on-the-ribbon"></a>Postupy: Zobrazení karty Vývojář na pásu karet
-  Abyste měli přístup **vývojáře** karty na pásu karet aplikace Office, je nutné nakonfigurovat ji zobrazit tuto kartu, protože se zobrazí ve výchozím nastavení. Například musíte zobrazit dané kartě Pokud chcete přidat <xref:Microsoft.Office.Tools.Word.GroupContentControl> k přizpůsobení na úrovni dokumentu ve Wordu.  
+# <a name="how-to-show-the-developer-tab-on-the-ribbon"></a>Postupy: zobrazení karty Vývojář na pásu karet
+  Pro přístup **Developer** kartu na pásu karet aplikace sady Office, je nutné nakonfigurovat ji k zobrazení této karty, protože se nezobrazuje ve výchozím nastavení. Například můžete musíte zobrazit kartu, pokud chcete přidat <xref:Microsoft.Office.Tools.Word.GroupContentControl> k přizpůsobení úrovni dokumentu pro aplikaci Word.  
   
 > [!NOTE]  
->  Tyto pokyny platí pro Office 2010 nebo novější pouze aplikací. Pokud chcete zobrazit na této kartě v systému Microsoft Office 2007, najdete v následující verzi tohoto tématu [postupy: zobrazení karty Vývojář na pásu karet](http://msdn.microsoft.com/library/bb608625(v=vs.90).aspx).  
+>  Tyto pokyny platí pro Office 2010 nebo novější pouze aplikací. Pokud chcete zobrazit tuto kartu v systému Microsoft Office 2007, přečtěte si následující verzi tohoto tématu [postupy: zobrazení karty Vývojář na pásu karet](https://web.archive.org/web/20140303033431/msdn.microsoft.com/library/bb608625(v=vs.90).aspx
+).  
   
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]  
   
 > [!NOTE]  
->  Nemá přístup **vývojáře** kartě.  
+>  Nemá přístup **Developer** kartu.  
   
-### <a name="to-show-the-developer-tab"></a>K zobrazení karty Vývojář  
+## <a name="to-show-the-developer-tab"></a>Chcete-li zobrazit kartu Vývojář  
   
-1.  Spuštění aplikace Office, které jsou podporovány v tomto tématu. Najdete v článku **platí pro:** Poznámka dříve v tomto tématu.  
+1.  Spustíte některou z aplikací Office, které jsou podporovány v tomto tématu. Zobrazit **platí pro:** Poznámka: výše v tomto tématu.  
   
-2.  Na **soubor** , zvolte **možnosti** tlačítko.  
+2.  Na **souboru** , vyberte **možnosti** tlačítko.  
   
-     Následující obrázek ukazuje **soubor** kartě a **možnosti** tlačítko v Office 2010.  
+     Následující obrázek ukazuje **souboru** kartu a **možnosti** tlačítko v aplikaci Office 2010.  
   
-     ![Výběr souborů, možnosti v aplikaci Outlook 2010](../vsto/media/vsto-office-file-tab.png "vyberete soubor, možnosti v aplikaci Outlook 2010")  
+     ![Výběr souboru, možnosti v aplikaci Outlook 2010](../vsto/media/vsto-office-file-tab.png "výběr souboru, možnosti v aplikaci Outlook 2010")  
   
-     Následující obrázek ukazuje **souboru** ve Office 2013.  
+     Následující obrázek ukazuje **souboru** kartě v aplikaci Office 2013.  
   
-     ![Karta souboru v aplikaci Outlook 2013](../vsto/media/vsto-office2013-filetab.png "karta soubor v aplikaci Outlook 2013")  
+     ![Karta soubor v Outlooku 2013](../vsto/media/vsto-office2013-filetab.png "karta soubor v aplikaci Outlook 2013")  
   
-     Následující obrázek ukazuje **možnosti** tlačítko v Office 2013.  
+     Následující obrázek ukazuje **možnosti** tlačítko v aplikaci Office 2013.  
   
-     ![Tlačítko Možnosti můžete v aplikaci Outlook 2013 Preview](../vsto/media/vsto-office2013-optionsbutton.png "možnosti tlačítko v aplikaci Outlook 2013 Preview")  
+     ![Tlačítko Možnosti v aplikaci Outlook 2013 Preview](../vsto/media/vsto-office2013-optionsbutton.png "tlačítko Možnosti v aplikaci Outlook 2013 Preview")  
   
-3.  V *ApplicationName *** možnosti** dialogové okno, vyberte **přizpůsobení pásu karet** tlačítko.  
+3.  V _ApplicationName_**možnosti** dialogového okna zvolte **Přizpůsobit pás karet** tlačítko.  
   
-     Následující obrázek ukazuje **možnosti** dialogové okno a **přizpůsobení pásu karet** tlačítko v aplikaci Excel 2010. Umístění toto tlačítko je podobný v všechny ostatní aplikace uvedené v části "Platí pro" v horní části tohoto tématu.  
+     Následující obrázek ukazuje **možnosti** dialogové okno a **Přizpůsobit pás karet** tlačítko v aplikaci Excel 2010. Umístění tohoto tlačítka je podobné jako u všech ostatních aplikací uvedených v části "Platí pro" v horní části tohoto tématu.  
   
-     ![Přizpůsobení pásu karet tlačítko](../vsto/media/vsto-office2010-customizeribbonbutton.png "The přizpůsobení pásu karet tlačítko")  
+     ![Vlastní nastavení pásu karet tlačítko](../vsto/media/vsto-office2010-customizeribbonbutton.png "The vlastní nastavení pásu karet tlačítko")  
   
-4.  V seznamu hlavní karty, vyberte **vývojáře** zaškrtávací políčko.  
+4.  Vyberte v seznamu hlavních karet **Developer** zaškrtávací políčko.  
   
-     Následující obrázek ukazuje **vývojáře** políčko v aplikaci Word 2010 a [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)]. Umístění tohoto zaškrtávacího políčka se podobá v všechny ostatní aplikace uvedené v části "Platí pro" v horní části tohoto tématu.  
+     Následující obrázek ukazuje **Developer** zaškrtávací políčko v aplikaci Word 2010 a [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)]. Umístění tohoto zaškrtávacího políčka je podobné jako u všech ostatních aplikací uvedených v části "Platí pro" v horní části tohoto tématu.  
   
-     ![Zaškrtněte políčko vývojáře v dialogovém okně Možnosti v aplikaci Word](../vsto/media/vsto-office2010-developercheckbox.png "Developer zaškrtněte políčko v dialogovém okně Možnosti v aplikaci Word")  
+     ![Zaškrtněte políčko pro vývojáře v dialogovém okně Možnosti v aplikaci Word](../vsto/media/vsto-office2010-developercheckbox.png "políčko Vývojář v dialogovém okně Možnosti v aplikaci Word")  
   
-5.  Vyberte **OK** tlačítko zavřete **možnosti** dialogové okno.  
+5.  Zvolte **OK** tlačítko pro uzavření **možnosti** dialogové okno.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Přizpůsobení uživatelského rozhraní systému Office](../vsto/office-ui-customization.md)  
   
   

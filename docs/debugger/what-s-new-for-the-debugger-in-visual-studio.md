@@ -1,7 +1,7 @@
 ---
-title: Co je nového v ladicím programu Visual Studio 2017 | Microsoft Docs
+title: Co je nového v ladicím programu sady Visual Studio 2017 | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 03/07/2016
+ms.date: 01/22/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
@@ -20,55 +20,57 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 07f25edb63e3418bab44d71bc8314d3aa83e7a84
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 342cb6c1f014c94bd86363415177ec747b0dc1b7
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49943138"
 ---
 # <a name="whats-new-for-the-debugger-in-includevsdev15miscincludesvsdev15mdmd"></a>Co je nového v ladicím programu [!include[vs_dev15](../misc/includes/vs_dev15_md.md)]
 
 Ladicí program obsahuje tyto nové funkce:
 
-- Nové v 15,5, **ladicí program snímku** pořídí snímek aplikací v provozním když provede kód, který vás zajímá. Dáte pokyn, aby ladicí program na pořízení snímku, nastavte snappoints a logpoints ve vašem kódu. Ladicí program umožňuje zobrazit přesně kde došlo k chybě, bez vlivu na provoz produkční aplikace. Ladicí program snímku můžete výrazně zkrátit dobu potřebnou k vyřešení problémů, ke kterým došlo v produkčním prostředí.
+- Nové ve verzi 15.5, **Snapshot Debugger** pořídí snímek vaší aplikace do produkčního prostředí, když spustí kód, který vás zajímá. Dáte pokyn, aby ladicí program k vytvoření snímku, můžete nastavit snímkovací a protokolovací body ve vašem kódu. Ladicí program umožňuje zobrazit přesně toho, co nefunguje, aniž by to ovlivnilo provozu aplikace v produkčním prostředí. Snapshot Debugger můžete výrazně zkrátit čas potřebný k vyřešení problémů, ke kterým dochází v produkčním prostředí.
 
-    Snímek kolekce je k dispozici pro následující webové aplikace běžící v Azure App Service:
+    Shromažďování snímků je k dispozici pro následující web apps ve službě Azure App Service:
 
-    * Aplikace ASP.NET spuštěné na rozhraní .NET Framework 4.6.1 nebo novější.
-    * ASP.NET Core aplikací běžících na .NET Core 2.0 nebo novější na systému Windows.
+  * Aplikace ASP.NET spuštěné na rozhraní .NET Framework 4.6.1 nebo novější.
+  * Aplikace ASP.NET Core na .NET Core 2.0 nebo novější na Windows.
 
-    Další informace najdete v tématu [ladění za provozu aplikace ASP.NET pomocí ladicího programu snímku](../debugger/debug-live-azure-applications.md).
+    Další informace najdete v tématu [ladit živé aplikace ASP.NET pomocí ladicího programu snímků](../debugger/debug-live-azure-applications.md).
 
-- Nové v 15,5 ve Visual Studio Enterprise pouze **zpětný krok IntelliTrace** automaticky vytvoří snímek vaší aplikace v každé zarážek a ladicí program krok události. Zaznamenaná snímky umožňují přejděte zpět na předchozí zarážky nebo kroky a zobrazení stavu aplikace, stejně jako tomu bylo v minulosti. IntelliTrace zpětný krok vám může ušetřit čas když chcete zobrazit předchozí stav aplikace, ale nechcete, aby se znovu spustit ladění nebo znovu vytvořte stav požadované aplikace.
+- Nové ve verzi 15.5 v sadě Visual Studio Enterprise, **zpětného kroku IntelliTrace** automaticky vytvoří snímek vaší aplikace v každé zarážce a ladicí program krok události. Zaznamenané snímky umožňují snadno vrátit k předchozím zarážkám nebo krokům a zobrazit stav aplikace jako v minulosti. IntelliTrace zpětným krokem vám může ušetřit čas při chcete zobrazit předchozí stav aplikace, ale nebudete chtít znovu spusťte ladění nebo znovu vytvořit stav požadované aplikace.
 
-    Můžete vyhledat a zobrazit snímky pomocí **krok zpětné** a **krok dál** tlačítek na panelu nástrojů ladění. Tato tlačítka přejděte události, které se zobrazují v **události** ve **diagnostické nástroje** okno.
+    Můžete procházet a zobrazit snímky pomocí **krok zpět** a **krok vpřed** tlačítka na panelu nástrojů ladění. Tato tlačítka Procházet události, které se zobrazují v **události** kartu **diagnostické nástroje** okna.
 
-    ![Krok tlačítka vpřed a zpět](../debugger/media/intellitrace-step-back-icons-description.png  "krok zpět a jejich předávání tlačítka")
+    ![Krokovat zpět a vpřed tlačítka](../debugger/media/intellitrace-step-back-icons-description.png  "krok zpět a vpřed tlačítka")
 
-    Další informace najdete v tématu [zobrazit snímky IntelliTrace zpětným krok pomocí](../debugger/how-to-use-intellitrace-step-back.md) stránky.
+    Další informace najdete v tématu [kontrolovat předchozí nové aplikace pomocí nástroje IntelliTrace](../debugger/view-historical-application-state.md) stránky.
 
-- **Pomocníka výjimka** nahrazuje Pomocníka pro výjimky a se zobrazí v nemodálním dialogovém kde došlo k chybě. **Pomocníka výjimka** poskytuje rychlejší přístup k žádné vnitřní výjimky, další analýzu, ladicího programu (Pokud je k dispozici) a okamžitý přístup k **nastavení výjimky** pro výjimku. Pomocníka výjimka můžete také přetáhnout plovoucí zobrazení, pokud blokuje něco, co potřebujete zobrazit.
+- **Pomocníka výjimky** nahrazuje Pomocníka pro výjimky a se zobrazí v nemodálním dialogovém kde došlo k chybě. **Pomocníka výjimky** poskytuje rychlejší přístup k žádné vnitřní výjimky, další analýzu, ladicí program (Pokud je k dispozici) a okamžitý přístup k **nastavení výjimek** pro výjimku. Pomocníka výjimky lze také přetáhnout do zobrazení s plovoucí desetinnou čárkou Pokud blokuje něco, co potřebujete zobrazit.
 
-    Například **NullReferenceException** nyní zobrazuje proměnné, která obsahuje odkaz na hodnotu null (Další informace o).
+    Například **NullReferenceException** nyní zobrazuje proměnné, která má nulový odkaz (Další informace).
 
-    ![Ladicí program na pomocníka výjimka](../debugger/media/dbg-exception-helper.png "DbgExceptionHelper")
+    ![Pomocníka pro výjimky ladicího programu](../debugger/media/dbg-exception-helper.png "DbgExceptionHelper")
 
-    Další informace najdete v tématu [pomocí nového pomocníka výjimka v sadě Visual Studio](https://blogs.msdn.microsoft.com/visualstudioalm/2016/03/31/using-the-new-exception-helper-in-visual-studio-15-preview/) příspěvku na blogu.
+    Další informace najdete v tématu [pomocí nového pomocníka výjimky v sadě Visual Studio](https://blogs.msdn.microsoft.com/visualstudioalm/2016/03/31/using-the-new-exception-helper-in-visual-studio-15-preview/) blogový příspěvek.
 
-- Teď můžete spustit na řádek kódu při pozastavena v ladicím programu výběrem **spuštění zde** ikonu zelenou šipku (při se zobrazí ikona ukazatele myši na řádek kódu). Tím se eliminuje potřeba nastavit dočasné zarážky.
+- Teď můžete spustit na řádek kódu během pozastavení v ladicím programu tak, že vyberete **běžet do tohoto místa** ikonou zelené šipky (uvidíte ikonu při najetí myší nad řádek kódu). Tím se eliminuje potřeba nastavovat dočasné zarážky.
 
-    ![Ladicí program je spustit kliknutím](../debugger/media/dbg-run-to-click.png "DbgRunToClick") 
+    ![Ladicí program je běžet do kliknutí](../debugger/media/dbg-run-to-click.png "DbgRunToClick")
 
-- Podmínky můžete nastavit výjimky v **nastavení výjimky** dialogové okno (můžete to provést pomocí **upravit podmínky** v dialogovém okně Nastavení výjimky nebo pomocí v místní nabídce na ikonu došlo k výjimce.) Aktuálně podporované podmínky zahrnují názvy modulu pro zahrnutí nebo vyloučení pro výjimku.
+- Můžete nastavit podmínky pro výjimky v **nastavení výjimek** dialogové okno (můžete to provést pomocí **upravit podmínku** v dialogovém okně Nastavení výjimek nebo v nabídce klepněte pravým tlačítkem myši na ikonu došlo k výjimce.) Aktuálně se podporují příkladem podmínek může být její název modulu pro zahrnutí nebo vyloučení pro výjimku.
 
-    ![Podmínky se u výjimku](../debugger/media/dbg-conditional-exception.png "DbgConditionalException")
+    ![Podmínky při výskytu výjimky](../debugger/media/dbg-conditional-exception.png "DbgConditionalException")
 
-- Připojte k procesu dialogové okno obsahuje novou funkci vyhledávání, která vám může pomoct další rychle identifikovat proces, který je potřeba přiřadit.
+- Připojte k procesu, dialogové okno obsahuje novou funkci vyhledávání, která může vám umožní rychle identifikovat, které potřebujete k připojení k procesu.
 
-    ![Hledání v připojit k procesu](../debugger/media/dbg-attach-to-process-search.png "DbgAttachToProcessSearch") 
+    ![Hledání v připojení k procesu](../debugger/media/dbg-attach-to-process-search.png "DbgAttachToProcessSearch")
 
-Další informace o těchto nových funkcích najdete v tématu [poznámky k verzi pro [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] ](https://www.visualstudio.com/en-us/news/releasenotes/vs2017-relnotes#debuggingdiag).
-  
-## <a name="see-also"></a>Viz také  
- [Ladění v sadě Visual Studio](../debugger/index.md)  
- [Prohlídka funkce ladicí program](../debugger/debugger-feature-tour.md)
+Další informace o těchto nových funkcích najdete v článku [zpráva k vydání verze pro [!include[vs_dev15](../misc/includes/vs_dev15_md.md)] ](/visualstudio/releasenotes/vs2017-relnotes#debuggingdiag).
+
+## <a name="see-also"></a>Viz také:
+
+- [Ladění v sadě Visual Studio](../debugger/index.md)
+- [Prohlídka funkcí ladicího programu](../debugger/debugger-feature-tour.md)

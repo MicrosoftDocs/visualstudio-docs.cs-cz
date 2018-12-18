@@ -1,5 +1,5 @@
 ---
-title: DISASSEMBLY_FLAGS | Microsoft Docs
+title: DISASSEMBLY_FLAGS | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: dd1aa9c73fad40d07be371ad7f9b3108464aeb34
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f6d42a7c5e9247359abfcdb4d65db5a4e0de247e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49916389"
 ---
 # <a name="disassemblyflags"></a>DISASSEMBLY_FLAGS
-Určuje příznaky pro zpětný překlad.  
+Určuje příznaky pro převod do strojového jazyka.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,27 +52,27 @@ public enum enum_DISASSEMBLY_FLAGS {
   
 ## <a name="members"></a>Členové  
  DF_DOCUMENTCHANGE  
- Označuje, že tento pokyn je v jiném dokumentu než předchozí.  
+ Označuje, že tento pokyn je v jiném dokumentu než ta předchozí.  
   
  DF_DISABLED  
- Označuje, že tento pokyn nebudou provedeny.  
+ Označuje, že tento pokyn nebude provedeno.  
   
  DF_INSTRUCTION_ACTIVE  
- Označuje, že je tento pokyn jeden další pokyny spouštění (může existovat více než jeden).  
+ Označuje, že je tento pokyn jeden další pokyny, který se spustí (může existovat více než jeden).  
   
  DF_DATA  
- Označuje, že je tento pokyn skutečně dat (ne kód).  
+ Označuje, že tento pokyn je ve skutečnosti data (ne kódu).  
   
  DF_HASSOURCE  
- Určuje, zda má tento pokyn zdroj. Některé pokyny, jako je například kód kolekce profilace nebo paměti, mít žádný odpovídající zdroj.  
+ Označuje, že tento pokyn má zdroj. Některé pokyny, jako je například profilace nebo uvolňování paměti kolekce kód, mít žádný odpovídající zdroj.  
   
  DF_DOCUMENT_CHECKSUM  
- Určuje, že `bstrDocumentUrl` pole obsahuje kontrolního součtu dat po adresu URL dokumentu. Naleznete v části poznámky [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) strukturu pro způsob uložení dat kontrolního součtu.  
+ Označuje, že `bstrDocumentUrl` pole obsahovat data kontrolních součtů za adresu URL dokumentu. V části poznámky [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) strukturu pro způsob uložení dat kontrolního součtu.  
   
 ## <a name="remarks"></a>Poznámky  
- Použít jako `dwFlags` členem [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) struktury.  
+ Použít jako `dwFlags` člena [DisassemblyData](../../../extensibility/debugger/reference/disassemblydata.md) struktury.  
   
- Tyto příznaky mohou být kombinovány s bitové `OR`.  
+ Tyto příznaky lze kombinovat pomocí logické bitové `OR`.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

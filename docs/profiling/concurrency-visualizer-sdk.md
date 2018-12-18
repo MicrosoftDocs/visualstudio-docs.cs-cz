@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7268e786c7d68d642778f0c0dca31de170b424b4
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c02959f30f89b8f7c79527026404099a4452a827
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34691183"
 ---
 # <a name="concurrency-visualizer-sdk"></a>SDK Vizualizéru souběžnosti
 Pomocí sady SDK Vizualizéru souběžnosti zobrazíte další informace v Concurrency Visualizer můžou instrumentovat vašeho zdrojového kódu. Další data můžete přidružit fáze a události v kódu. Tyto další vizualizace se označují jako *značek*.  Úvodní prohlídka, najdete v části [představení SDK Vizualizéru souběžnosti](http://go.microsoft.com/fwlink/?LinkId=235405).  
@@ -59,7 +60,7 @@ Pomocí sady SDK Vizualizéru souběžnosti zobrazíte další informace v Concu
   
 4.  Přidat pomocí příkazu do vašeho kódu.  
   
-    ```  
+    ```cpp  
     using namespace Concurrency::diagnostic;  
     ```  
   
@@ -120,7 +121,7 @@ Pomocí sady SDK Vizualizéru souběžnosti zobrazíte další informace v Concu
     CvWriteFlag(series, _T("Writing a flag"));  
     ```  
   
-## <a name="related-topics"></a>Související témata  
+## <a name="see-also"></a>Viz také:  
   
 |Název|Popis|  
 |-----------|-----------------|  

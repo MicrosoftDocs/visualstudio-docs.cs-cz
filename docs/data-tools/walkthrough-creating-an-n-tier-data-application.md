@@ -12,223 +12,227 @@ ms.assetid: d15e4d31-2839-48d9-9e0e-2e73404d82a2
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: b62c39ea1c261612568cb0d228c9082fa2d19070
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 71c1c8dbaf34613d07ce29fa3f5e08d8e9c6961f
+ms.sourcegitcommit: 81e9d90843ead658bc73b30c869f25921d99e116
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52305698"
 ---
-# <a name="walkthrough-creating-an-n-tier-data-application"></a>Návod: Vytvoření víceúrovňové datové aplikace
-*N-vrstvá* data aplikace jsou aplikace, které přístup k datům a jsou rozdělené do několika logických vrstev, nebo *vrstev*. Rozdělit součásti aplikace do diskrétní úrovní zvyšuje udržovatelnosti a škálovatelnost aplikace. Dělá to tím, že umožňuje snazší přijetí nové technologie, které mohou být použity k jedné vrstvě, aniž by bylo potřeba změnit návrh celého řešení. N-vrstvá architektura obsahuje prezentační vrstvy, střední vrstvy, a datové vrstvy. Střední vrstva obvykle zahrnuje vrstva přístupu k datům, vrstvy obchodní logiky a sdílené komponenty, například ověřování a ověřování. Datová vrstva obsahuje relační databáze. Vícevrstvé aplikace obvykle uložit citlivé informace vrstva přístupu k datům ze střední vrstvě udržovat izolace koncovým uživatelům, kteří přistupují k prezentační vrstvy. Další informace najdete v tématu [vícevrstvé datové aplikace přehled](../data-tools/n-tier-data-applications-overview.md).
+# <a name="walkthrough-create-an-n-tier-data-application"></a>Návod: Vytvoření vícevrstvé datové aplikace
+*N-vrstvá* datové aplikace jsou aplikace, které přístup k datům a jsou rozdělené do několika logické vrstvy, nebo *úrovně*. Rozdělení komponent aplikace do samostatných vrstev zvyšuje udržovatelnost a škálovatelnost aplikace. Dělá to tak, že umožněno snadnější přijímání nových technologií, které lze použít u jedné vrstvě, aniž by bylo potřeba změnit návrh celého řešení. N-vrstvá architektura obsahuje prezentační vrstvu, střední vrstvy, a datové vrstvy. Střední vrstva obvykle zahrnuje vrstvy přístupu k datům, vrstvy obchodní logiky a sdílené komponenty, jako je například ověřování a ověřování. Datová vrstva obsahuje relační databáze. N-vrstvá aplikace obvykle ukládá citlivé informace do vrstvy přístupu k datům z střední vrstvy, aby se zachovala izolace koncovým uživatelům, kteří přistupují k prezentační vrstvy. Další informace najdete v tématu [přehled vícevrstvých datových aplikací](../data-tools/n-tier-data-applications-overview.md).
 
-Jedním ze způsobů k oddělení různých vrstev ve vícevrstvé aplikace je vytvoření diskrétní projekty pro každou vrstvu, kterou chcete zahrnout do vaší aplikace. Typové datové sady obsahují `DataSet Project` vlastnost který určuje, které projekty generované datové sady a `TableAdapter` kód by měl přejděte do.
+Jedním ze způsobů k rozdělení různých vrstev v n vrstvé aplikaci je vytvoření samostatných projektů pro každou vrstvu, která chcete zahrnout do vaší aplikace. Typové datové sady obsahují `DataSet Project` vlastnost, která určuje, že generované datová sada projekty, které a `TableAdapter` kódu by měly patřit do.
 
-Tento návod ukazuje, jak jednotlivé datové sady a `TableAdapter` kód do projektů knihovny tříd diskrétní pomocí **návrháře Dataset**. Po oddělíte datovou sadu a TableAdapter kódu, vytvoříte [služby Windows Communication Foundation a služby WCF Data Services v sadě Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md) služby provést volání do úroveň přístupu data. Nakonec se vytvoří aplikace Windows Forms jako prezentační vrstvy. Tato úroveň přistupuje k datům ze služby data.
+Tento návod ukazuje, jak oddělit datové sady a `TableAdapter` kód do samostatné třídy knihovny projektů s použitím **Návrhář Dataset**. Po oddělíte datové sady a TableAdapter kódu, můžete vytvořit [služby Windows Communication Foundation a služby WCF Data Services v sadě Visual Studio](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md) služby, chcete-li volat vrstvě přístupu k datům. Nakonec vytvořte aplikaci Windows Forms jako prezentační vrstvy. Tato úroveň přistupuje k datům z datové služby.
 
-Během tohoto návodu budete provádět následující kroky:
+V tomto návodu provedete následující kroky:
 
--   Vytvořte nové řešení n vrstvá, která bude obsahovat více projektů.
+-   Vytvořte nové n vrstvé řešení, která obsahuje více projektů.
 
--   Přidejte dva projektů knihovny tříd do vícevrstvé řešení.
+-   Přidejte dva projekty knihovny tříd pro n vrstvého řešení.
 
--   Vytvoření typové datové sady pomocí **Průvodce konfigurací zdroje dat**.
+-   Vytvoření typové datové sady s použitím **Průvodce konfigurací zdroje dat**.
 
--   Oddělení vygenerovaného [TableAdapters](create-and-configure-tableadapters.md) a kód datové sady do diskrétní projektů.
+-   Oddělení generované [objekty TableAdapter](create-and-configure-tableadapters.md) a kód datovou sadu do samostatných projektů.
 
--   Vytvoření služby Windows Communication Foundation (WCF) provést volání do úroveň přístupu data.
+-   Vytvoření služby Windows Communication Foundation (WCF) Chcete-li volat vrstvě přístupu k datům.
 
--   Vytvoření funkce ve službě k načtení dat z úrovně přístupu data.
+-   Funkce můžete vytvořte ve službě k načtení dat z vrstvě přístupu k datům.
 
--   Vytvořte aplikaci Windows Forms sloužit jako prezentační vrstvy.
+-   Vytvoření aplikace Windows Forms, která bude sloužit jako prezentační vrstvy.
 
 -   Ovládací prvky Windows Forms, které jsou vázány na zdroj dat vytvořte.
 
--   Napište kód pro naplnění dat tabulky.
+-   Napsání kódu pro naplnění dat tabulky.
 
-![odkaz na video](../data-tools/media/playvideo.gif "PlayVideo") video verzi tohoto tématu naleznete v části [Video postupy: vytvoření datové aplikace s N-vrstvá](http://go.microsoft.com/fwlink/?LinkId=115188).
+![odkaz na video](../data-tools/media/playvideo.gif) video verzi tohoto tématu naleznete v tématu [Video postupy: vytvoření vícevrstvé datové aplikace](http://go.microsoft.com/fwlink/?LinkId=115188).
 
 ## <a name="prerequisites"></a>Požadavky
-Tento návod používá SQL Server Express LocalDB a ukázková databáze Northwind.
+Tento návod používá SQL Server Express LocalDB a ukázkové databáze Northwind.
 
-1.  Pokud nemáte SQL serveru Express LocalDB, nainstalovat buď z [SQL Server Express stránky pro stažení](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo pomocí **instalační program Visual Studio**. V instalačním programu Visual Studio se může nainstalovat SQL Server Express LocalDB jako součást **vývoj aplikací .NET** zatížení, nebo jako jednotlivých součástí.
+1. Pokud nemáte SQL Server Express LocalDB, nainstalujte ji z [SQL Server Express stránku pro stažení](https://www.microsoft.com/sql-server/sql-server-editions-express), nebo prostřednictvím **instalační program sady Visual Studio**. V **instalační program sady Visual Studio**, jako součást můžete nainstalovat SQL Server Express LocalDB **vývoj desktopových aplikací .NET** úlohy, nebo jako jednotlivých komponent.
 
-2.  Ukázková databáze Northwind nainstalujte pomocí následujících kroků:
+2. Instalace ukázkové databáze Northwind pomocí následujících kroků:
 
-    1. V sadě Visual Studio, otevřete **Průzkumník objektů systému SQL Server** okno. (Průzkumník objektů systému SQL Server je nainstalován jako součást **úložiště dat a zpracování** zatížení v instalačním programu Visual Studio.) Rozbalte **systému SQL Server** uzlu. Klikněte pravým tlačítkem na vaší instanci LocalDB a vyberte **nový dotaz...** .
+    1. V sadě Visual Studio, otevřete **Průzkumník objektů systému SQL Server** okna. (**Průzkumník objektů systému SQL Server** je nainstalován jako součást **ukládání a zpracování dat** úlohy v instalačním programu sady Visual Studio.) Rozbalte **systému SQL Server** uzlu. Klikněte pravým tlačítkem na instanci LocalDB a vyberte **nový dotaz**.
 
-       Otevře se okno editoru dotazů.
+       Otevře se okno editor dotazů.
 
-    2. Kopírování [Northwind Transact-SQL skriptu](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) do schránky. Tento skript T-SQL vytvoří databázi Northwind od začátku a naplní s daty.
+    2. Kopírovat [Northwind příkazů jazyka Transact-SQL skriptů](https://github.com/MicrosoftDocs/visualstudio-docs/blob/master/docs/data-tools/samples/northwind.sql?raw=true) do schránky. Tento skript T-SQL vytvoří databázi Northwind úplně od začátku a naplní daty.
 
-    3. Vložit do editoru dotazů skriptu T-SQL a potom vyberte **Execute** tlačítko.
+    3. Vložte skript T-SQL do editoru dotazů a klikněte na tlačítko **Execute** tlačítko.
 
-       Po krátkou dobu dotaz dokončí provádění a vytvoření databáze Northwind.
+       Po chvilce dotaz doběhnutí a vytvořit databázi Northwind.
 
-## <a name="creating-the-n-tier-solution-and-class-library-to-hold-the-dataset-dataentitytier"></a>Vytvoření N-vrstvého řešení a knihovny tříd pro objekt Dataset (DataEntityTier)
- Prvním krokem tohoto návodu je vytvoření řešení a dvou projektů knihovny tříd. První třídy knihovny bude obsahovat datovou sadu (vygenerovaného typovaných DataSet – třída a DataTables, který bude obsahovat data aplikace). Tento projekt se používá jako datová vrstva entity aplikace a se obvykle nachází ve střední vrstvě. Datasetis slouží k vytvoření počátečních datových sad a automaticky oddělení kód do knihovny dvou tříd.
+## <a name="create-the-n-tier-solution-and-class-library-to-hold-the-dataset-dataentitytier"></a>Vytvoření n vrstvé řešení a třídy knihovny pro objekt dataset (DataEntityTier)
+ Prvním krokem tohoto průvodce je k vytváření řešení a dva projekty knihovny tříd. První třídy knihovny obsahuje datovou sadu (generované typy `DataSet` třídy a datové tabulky, které uchovávají data, aplikace). Tento projekt slouží jako vrstva entity dat aplikace a je obvykle umístěn ve střední vrstvě. Datová sada vytvoří počáteční datová sada a automaticky odděluje kód do knihovny dvou tříd.
 
 > [!NOTE]
->  Ujistěte se, zda jste název projektu a řešení správně před kliknutím na **OK**. Díky tomu bude bylo snazší pro vás k dokončení tohoto postupu.
+> Nezapomeňte před kliknutím na správně název projektu a řešení **OK**. To usnadní vám k dokončení tohoto návodu.
 
-#### <a name="to-create-the-n-tier-solution-and-dataentitytier-class-library"></a>Vytvoření n-vrstvého řešení a knihovny tříd DataEntityTier
+### <a name="to-create-the-n-tier-solution-and-dataentitytier-class-library"></a>Vytvoření n-vrstvého řešení a knihovny tříd DataEntityTier
 
-1. V sadě Visual Studio na **soubor** nabídce vyberte možnost **nový**, **projektu...** .
+1. V sadě Visual Studio na **souboru** nabídce vyberte možnost **nový** > **projektu**.
 
-2. Rozbalte **Visual C#** nebo **jazyka Visual Basic** klikněte v levém podokně, pak vyberte **Windows Classic Desktop**.
+2. Rozbalte buď **Visual C#** nebo **jazyka Visual Basic** v levém podokně vyberte **Windows Desktop**.
 
 3. V prostředním podokně, vyberte **knihovny tříd** typ projektu.
 
-4. Název projektu **DataEntityTier**.
+4. Pojmenujte projekt **DataEntityTier**.
 
-5. Název řešení **NTierWalkthrough**a potom zvolte **OK**.
+5. Pojmenujte řešení **NTierWalkthrough**a klikněte na tlačítko **OK**.
 
-     Řešení s NTierWalkthrough obsahující projekt DataEntityTier je vytvořen a přidán do **Průzkumníku řešení**.
+     Řešení NTierWalkthrough obsahující DataEntityTier projekt je vytvořen a přidán do **Průzkumníka řešení**.
 
-## <a name="creating-the-class-library-to-hold-the-tableadapters-dataaccesstier"></a>Vytvoření knihovny tříd pro objekty TableAdapter (DataAccessTier)
- Dalším krokem po vytvoření projektu DataEntityTier je vytvoření jiného projektu knihovny tříd. Tento projekt bude obsahovat vygenerovaného `TableAdapter`s a je volána *úroveň přístupu dat* aplikace. Úroveň přístupu dat obsahuje informace, které je požadované pro připojení k databázi a se obvykle nachází ve střední vrstvě.
+## <a name="create-the-class-library-to-hold-the-tableadapters-dataaccesstier"></a>Vytvoření knihovny tříd pro objekty TableAdapter (DataAccessTier)
+ Dalším krokem po vytvoření projektu DataEntityTier je vytvořte nový projekt knihovny tříd. Tento projekt obsahuje vygenerované objekty TableAdapter a je volána *vrstvě přístupu k datům* aplikace. Úroveň přístupu dat obsahuje informace, které se nejde připojit k databázi a je obvykle umístěn ve střední vrstvě.
 
-#### <a name="to-create-a-separate-class-library-for-the-tableadapters"></a>Vytvoření samostatné třídy knihovny pro TableAdapters
+### <a name="to-create-a-separate-class-library-for-the-tableadapters"></a>Chcete-li vytvořit samostatné knihovně tříd pro objekty TableAdapter
 
-1.  Klikněte pravým tlačítkem na řešení v Průzkumníku řešení a zvolte **přidat**, **nový projekt...** .
+1. Klikněte pravým tlačítkem na řešení v **Průzkumníka řešení** a zvolte **přidat** > **nový projekt**.
 
-2.  V **nový projekt** dialogové okno, v prostředním podokně, vyberte **knihovny tříd**.
+2. V **nový projekt** dialogové okno, v prostředním podokně vyberte **knihovny tříd**.
 
-3.  Název projektu **DataAccessTier** a zvolte **OK**.
+3. Pojmenujte projekt **DataAccessTier** a zvolte **OK**.
 
-     Projekt DataAccessTier je vytvořen a přidán do NTierWalkthrough řešení.
+     Projektu DataAccessTier je vytvořen a přidán do řešení NTierWalkthrough.
 
-## <a name="creating-the-dataset"></a>Vytvoření datové sady
- Dalším krokem je vytvoření typové datové sady. Typové datové sady jsou vytvořeny pomocí obou třídě datové sady (včetně třídy DataTables) a `TableAdapter` třídy v jednom projektu. (Všechny třídy jsou generovány, do jediného souboru.) Když oddělíte datovou sadu a `TableAdapter`s do různých projektů, je datová sada třídu, která je přesunut do jiného projektu, a `TableAdapter` třídy v původním projektu. Proto vytvořit datová sada v projektu, který bude obsahovat nakonec `TableAdapter`s (DataAccessTier projekt). Datová sada se vytvoří pomocí **Průvodce konfigurací zdroje dat**.
+## <a name="create-the-dataset"></a>Vytvořte datovou sadu
+ Dalším krokem je vytvoření typové datové sady. Typové datové sady vytvořené pomocí třídy datové sady (včetně `DataTables` třídy) a `TableAdapter` třídy v jednom projektu. (Všechny třídy jsou generovány, do jediného souboru.) Když oddělíte datové sady a TableAdapters do různých projektů, je třída datovou sadu, která je přesunut do jiného projektu, byste museli opustit `TableAdapter` třídy v původní projekt. Proto se v projektu, který bude obsahovat nakonec objekty TableAdapter (DataAccessTier projekt) vytvořte datovou sadu. Vytvořte datovou sadu s použitím **Průvodce konfigurací zdroje dat**.
 
 > [!NOTE]
->  Musíte mít přístup k ukázková databáze Northwind k vytvoření připojení. Informace o tom, jak nastavit ukázková databáze Northwind najdete v tématu [postupy: Instalace ukázkové databáze](../data-tools/installing-database-systems-tools-and-samples.md).
+> Musíte mít přístup k ukázkové databázi Northwind k vytvoření připojení. Informace o tom, jak nastavit ukázkové databáze Northwind naleznete v tématu [postupy: Instalace ukázkových databází](../data-tools/installing-database-systems-tools-and-samples.md).
 
-#### <a name="to-create-the-dataset"></a>Vytvoření datové sady
+### <a name="to-create-the-dataset"></a>Vytvoření datové sady
 
-1.  Vyberte DataAccessTier v **Průzkumníku řešení**.
+1. Vyberte **DataAccessTier** v **Průzkumníka řešení**.
 
-2.  Na **Data** nabídce vyberte možnost **zobrazit zdroje dat**.
+2. Na **Data** nabídce vyberte možnost **zobrazit zdroje dat**.
 
-3.  V **zdroje dat** vyberte **přidat nový zdroj dat** spustit **Průvodce konfigurací zdroje dat**.
+   **Zdroje dat** otevře se okno.
 
-4.  Na **zvolte typ zdroje dat** vyberte **databáze** a pak vyberte **Další**.
+3. V **zdroje dat** okně **přidat nový zdroj dat** spustit **Průvodce konfigurací zdroje dat**.
 
-5.  Na **vybrat datové připojení** proveďte některý z následujících akcí:
+4. Na **zvolte typ zdroje dat** stránce **databáze** a pak vyberte **Další**.
+
+5. Na **vyberte datové připojení** stránce, proveďte jednu z následujících akcí:
 
      Pokud je připojení dat k ukázkové databázi Northwind k dispozici v rozevíracím seznamu, vyberte je.
 
      -nebo-
 
-     Vyberte **nové připojení** otevřete **přidat připojení** dialogové okno.
+     Vyberte **nové připojení** otevřít **přidat připojení** dialogové okno.
 
-6.  Pokud databáze vyžaduje heslo, vyberte možnost obsahují citlivá data a potom vyberte **Další**.
+6. Pokud databáze vyžaduje heslo, vyberte možnost zahrnutí důvěrných osobních údajů a klikněte na tlačítko **Další**.
 
     > [!NOTE]
-    >  Pokud jste vybrali místního databázového souboru (namísto připojení k systému SQL Server) může být žádost, pokud chcete soubor přidat do projektu. Zvolte **Ano** přidat databázový soubor do projektu.
+    > Pokud jste vybrali lokálního databázového souboru (místo připojování k serveru SQL Server) může být vyzváni, pokud budete chtít přidat soubor do projektu. Zvolte **Ano** přidáte databázový soubor do projektu.
 
-7.  Vyberte **Další** na **uložit připojovací řetězec do konfiguračního souboru aplikace** stránky.
+7. Vyberte **Další** na **uložit připojovací řetězec do konfiguračního souboru aplikace** stránky.
 
-8.  Rozbalte **tabulky** uzlu **zvolte si databázové objekty** stránky.
+8. Rozbalte **tabulky** uzlu **zvolte vaše databázové objekty** stránky.
 
-9.  Zaškrtněte políčka u **zákazníci** a **objednávky** tabulky a potom vyberte **Dokončit**.
+9. Zaškrtněte políčka pro **zákazníkům** a **objednávky** tabulky a klikněte na tlačítko **Dokončit**.
 
-     NorthwindDataSet se přidá do projektu DataAccessTier a zobrazí se v **zdroje dat** okno.
+     NorthwindDataSet se přidá do projektu DataAccessTier a zobrazí se v **zdroje dat** okna.
 
-## <a name="separating-the-tableadapters-from-the-dataset"></a>Oddělení objektů TableAdapter od objektu DataSet
- Po vytvoření datové sady, nezávislá na generovaného dataset – třída TableAdapters. To provedete nastavením **DataSet projekt** vlastnost na název projektu, do které chcete uložit oddělených na třídu datové sady.
+## <a name="separate-the-tableadapters-from-the-dataset"></a>Oddělení objektů TableAdapter od objektu Dataset
+ Po vytvoření datové sady, nezávislá na infrastruktuře vytvořenou třídu datové sady objektů TableAdapter. To provedete tak, že nastavíte **projektu DataSet** nastavte na název projektu, do které můžete ukládat oddělených mimo třídu datové sady.
 
-#### <a name="to-separate-the-tableadapters-from-the-dataset"></a>Oddělení objektů TableAdapter od objektu DataSet
+### <a name="to-separate-the-tableadapters-from-the-dataset"></a>Oddělení objektů TableAdapter od objektu DataSet
 
-1.  Klikněte dvakrát na **NorthwindDataSet.xsd** v **Průzkumníku řešení** otevřete datovou sadu v **návrháře Dataset**.
+1. Dvakrát klikněte na panel **NorthwindDataSet.xsd** v **Průzkumníka řešení** otevření datové sady v **Návrhář Dataset**.
 
-2.  Vyberte na prázdnou oblast na návrháře.
+2. Vyberte prázdnou oblast v návrháři.
 
-3.  Vyhledejte **DataSet projekt** uzlu **vlastnosti** okno.
+3. Vyhledejte **projektu DataSet** uzlu **vlastnosti** okna.
 
-4.  V **DataSet projekt** seznamu, vyberte **DataEntityTier**.
+4. V **projektu DataSet** seznamu vyberte **DataEntityTier**.
 
-5.  Na **sestavení** nabídce vyberte možnost **sestavit řešení**.
+5. Na **sestavení** nabídce vyberte možnost **sestavit řešení**.
 
- Datové sady a TableAdapters jsou rozdělené do projektů knihovny dvou tříd. Projekt, který původně obsažené celou datovou sadu (DataAccessTier) teď obsahuje pouze TableAdapters. Projekt uvedených v **DataSet projekt** vlastnost (DataEntityTier) obsahuje typové datové sady: NorthwindDataSet.Dataset.Designer.vb (nebo NorthwindDataSet.Dataset.Designer.cs).
-
-> [!NOTE]
->  Když oddělíte datových sad a TableAdapters (nastavením **DataSet projekt** vlastnost), nebude automaticky přesunout existující datovou sadu částečné třídy v projektu. Částečné třídy existující datovou sadu musí ručně přesunout do projektu datovou sadu.
-
-## <a name="creating-a-new-service-application"></a>Vytvoření nové aplikace služby
-Tento návod ukazuje, jak přístup úroveň přístupu dat pomocí služby WCF, takže umožňuje vytvořit novou aplikaci služby WCF.
-
-#### <a name="to-create-a-new-wcf-service-application"></a>Vytvoření nové aplikace služby WCF
-
-1.  Klikněte pravým tlačítkem na řešení v Průzkumníku řešení a zvolte **přidat**, **nový projekt...** .
-
-2.  V **nový projekt** dialogové okno, v levém podokně vyberte **WCF**.  V prostředním podokně vyberte **knihovny služby WCF**.
-
-3.  Název projektu **DataService** a vyberte **OK**.
-
-     Projekt DataService je vytvořen a přidán do NTierWalkthrough řešení.
-
-## <a name="creating-methods-in-the-data-access-tier-to-return-the-customers-and-orders-data"></a>Vytvoření metod, které vrací data zákazníků a objednávek, ve vrstvě přístupu k datům
- Služba data je volat dvě metody v datové vrstvě přístup: GetCustomers a GetOrders. Tyto metody vrátí tabulky zákazníků Northwind a objednávky. Vytvoření metody GetCustomers a GetOrders v DataAccessTier projektu.
-
-#### <a name="to-create-a-method-in-the-data-access-tier-that-returns-the-customers-table"></a>Vytvoření metody, která vrací tabulku Customers, ve vrstvě přístupu k datům
-
-1.  V **Průzkumníku**, dvakrát klikněte na NorthwindDataset.xsd otevřete datovou sadu.
-
-2.  Klikněte pravým tlačítkem na CustomersTableAdapter a klikněte na tlačítko **přidat dotazu**.
-
-3.  Na **zvolte typ příkazu** ponechte výchozí hodnotu **příkazy SQL pomocí** a klikněte na tlačítko **Další**.
-
-4.  Na **vyberte typ dotazu** ponechte výchozí hodnotu **vyberte, které vrací řádky** a klikněte na tlačítko **Další**.
-
-5.  Na **zadejte příkazu SQL SELECT** , ponechte výchozí dotaz a klikněte na tlačítko **Další**.
-
-6.  Na **zvolte metody pro generování** zadejte **GetCustomers** pro **název metody** v **vrátit DataTable** části.
-
-7.  Klikněte na tlačítko **Dokončit**.
-
-#### <a name="to-create-a-method-in-the-data-access-tier-that-returns-the-orders-table"></a>Vytvoření metody, která vrací tabulku Orders, ve vrstvě přístupu k datům
-
-1.  Klikněte pravým tlačítkem na OrdersTableAdapter a klikněte na tlačítko **přidat dotazu**.
-
-2.  Na **zvolte typ příkazu** ponechte výchozí hodnotu **příkazy SQL pomocí** a klikněte na tlačítko **Další**.
-
-3.  Na **vyberte typ dotazu** ponechte výchozí hodnotu **vyberte, které vrací řádky** a klikněte na tlačítko **Další**.
-
-4.  Na **zadejte příkazu SQL SELECT** , ponechte výchozí dotaz a klikněte na tlačítko **Další**.
-
-5.  Na **zvolte metody pro generování** zadejte **GetOrders** pro **název metody** v **vrátit DataTable** části.
-
-6.  Klikněte na tlačítko **Dokončit**.
-
-7.  Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
-
-## <a name="adding-a-reference-to-the-data-entity-and-data-access-tiers-to-the-data-service"></a>Přidání odkazu na vrstvu datové entity a vrstvu přístupu k datům do datové služby
- Protože služba dat vyžaduje informace ze sady dat a objektů TableAdapters, přidejte odkazy na projekty DataEntityTier a DataAccessTier.
-
-#### <a name="to-add-references-to-the-data-service"></a>Přidání odkazů do datové služby
-
-1.  Klikněte pravým tlačítkem na DataService v **Průzkumníku řešení** a klikněte na tlačítko **přidat odkaz na**.
-
-2.  Klikněte na tlačítko **projekty** ve **přidat odkaz na** dialogové okno.
-
-3.  Vyberte **DataAccessTier** a **DataEntityTier** projekty.
-
-4.  Click **OK**.
-
-## <a name="adding-functions-to-the-service-to-call-the-getcustomers-and-getorders-methods-in-the-data-access-tier"></a>Přidání funkcí do služby za účelem volání metod GetCustomers a GetOrders ve vrstvě přístupu k datům
- Teď, když datová vrstva obsahuje metody, které se vrátit data, vytvořte metody ve službě data k volání metody v datové vrstvě přístup.
+   Datové sady a objekty TableAdapter jsou rozděleny do projektů knihovny dvou tříd. Projekt, který je původně obsahoval celou datovou sadu (`DataAccessTier`) teď obsahuje pouze objekty TableAdapter. Projekt je určeno v **projektu DataSet** vlastnosti (`DataEntityTier`) obsahuje typové datové sady: *NorthwindDataSet.Dataset.Designer.vb* (nebo  *NorthwindDataSet.Dataset.Designer.cs*).
 
 > [!NOTE]
->  Pro projekty C#, musíte přidat odkaz na `System.Data.DataSetExtensions` sestavení pro následující kód zkompilovat.
+> Když oddělíte datové sady a objekty TableAdapter (nastavením **projektu DataSet** vlastnost), existující částečné třídy v projektu nebudou automaticky přesunuty. Existující částečné třídy datové sady musí ručně přesunout do projektu datové sady.
 
-#### <a name="to-create-the-getcustomers-and-getorders-functions-in-the-data-service"></a>Vytvoření funkcí GetCustomers a GetOrders v datové službě
+## <a name="create-a-new-service-application"></a>Vytvoření nové aplikace služby
+Tento návod ukazuje, jak k vrstvě přístupu k datům s využitím služby WCF, takže vytvoření nové aplikace služby WCF.
 
-1.  V **DataService** projektu, klikněte dvakrát na IService1.vb nebo IService1.cs.
+### <a name="to-create-a-new-wcf-service-application"></a>Vytvoření nové aplikace služby WCF
 
-2.  Přidejte následující kód pod **přidat operací služby zde** komentář:
+1. Klikněte pravým tlačítkem na řešení v **Průzkumníka řešení** a zvolte **přidat** > **nový projekt**.
+
+2. V **nový projekt** dialogové okno, v levém podokně vyberte **WCF**. V prostředním podokně vyberte **knihovny služby WCF**.
+
+3. Pojmenujte projekt **DataService** a vyberte **OK**.
+
+     Službě DataService projekt je vytvořen a přidán do řešení NTierWalkthrough.
+
+## <a name="create-methods-in-the-data-access-tier-to-return-the-customers-and-orders-data"></a>Vytvoření metod ve vrstvě přístupu k datům pro vrácení dat zákazníci a objednávky
+ Datové služby je volat dvě metody ve vrstvě přístupu k datům: `GetCustomers` a `GetOrders`. Tyto metody vrací Northwind `Customers` a `Orders` tabulky. Vytvořte `GetCustomers` a `GetOrders` metody v `DataAccessTier` projektu.
+
+### <a name="to-create-a-method-in-the-data-access-tier-that-returns-the-customers-table"></a>Vytvoření metody, která vrací tabulku Customers, ve vrstvě přístupu k datům
+
+1. V **Průzkumníka řešení**, dvakrát klikněte na panel **NorthwindDataset.xsd** otevřete datovou sadu.
+
+2. Klikněte pravým tlačítkem na **CustomersTableAdapter** a klikněte na tlačítko **přidat dotaz**.
+
+3. Na **zvolit typ příkazu** ponechte výchozí hodnotu **použít SQL příkazy** a klikněte na tlačítko **Další**.
+
+4. Na **zvolit typ dotazu** ponechte výchozí hodnotu **SELECT, který vrátí řádky** a klikněte na tlačítko **Další**.
+
+5. Na **zadat příkaz jazyka SQL SELECT** stránce nechejte výchozí dotaz a klikněte na tlačítko **Další**.
+
+6. Na **zvolte metody k vytvoření** zadejte **GetCustomers** pro **název metody** v **vrátit tabulku DataTable** oddílu.
+
+7. Klikněte na tlačítko **Dokončit**.
+
+### <a name="to-create-a-method-in-the-data-access-tier-that-returns-the-orders-table"></a>Vytvoření metody, která vrací tabulku Orders, ve vrstvě přístupu k datům
+
+1. Klikněte pravým tlačítkem na **OrdersTableAdapter** a klikněte na tlačítko **přidat dotaz**.
+
+2. Na **zvolit typ příkazu** ponechte výchozí hodnotu **použít SQL příkazy** a klikněte na tlačítko **Další**.
+
+3. Na **zvolit typ dotazu** ponechte výchozí hodnotu **SELECT, který vrátí řádky** a klikněte na tlačítko **Další**.
+
+4. Na **zadat příkaz jazyka SQL SELECT** stránce nechejte výchozí dotaz a klikněte na tlačítko **Další**.
+
+5. Na **zvolte metody k vytvoření** zadejte **GetOrders** pro **název metody** v **vrátit tabulku DataTable** oddílu.
+
+6. Klikněte na tlačítko **Dokončit**.
+
+7. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
+
+## <a name="add-a-reference-to-the-data-entity-and-data-access-tiers-to-the-data-service"></a>Přidat odkaz na entitu dat a datovou vrstvou přístupu k datové službě
+ Vzhledem k tomu, že datová služba vyžaduje informace z datové sady a instancí TableAdapter, přidejte odkazy **DataEntityTier** a **DataAccessTier** projekty.
+
+### <a name="to-add-references-to-the-data-service"></a>Přidání odkazů do datové služby
+
+1. Klikněte pravým tlačítkem na **DataService** v **Průzkumníka řešení** a klikněte na tlačítko **přidat odkaz**.
+
+2. Klikněte na tlačítko **projekty** kartu **přidat odkaz** dialogové okno.
+
+3. Vyberte **DataAccessTier** a **DataEntityTier** projekty.
+
+4. Klikněte na tlačítko **OK**.
+
+## <a name="add-functions-to-the-service-to-call-the-getcustomers-and-getorders-methods-in-the-data-access-tier"></a>Přidání funkcí do služby pro volání metod GetCustomers a GetOrders ve vrstvě přístupu k datům
+ Teď, když datová vrstva obsahuje metody, které se vrátí data, vytvářet metody v datové službě dovoluje volat metody ve vrstvě přístupu k datům.
+
+> [!NOTE]
+> Pro projekty jazyka C#, je nutné přidat odkaz na `System.Data.DataSetExtensions` sestavení pro následující kód pro kompilaci.
+
+### <a name="to-create-the-getcustomers-and-getorders-functions-in-the-data-service"></a>Vytvoření funkcí GetCustomers a GetOrders v datové službě
+
+1. V **DataService** projektu, klikněte dvakrát na **IService1.vb** nebo **IService1.cs**.
+
+2. Přidejte následující kód **přidejte servisní operace zde** komentář:
 
     ```vb
     <OperationContract()> _
@@ -246,9 +250,9 @@ Tento návod ukazuje, jak přístup úroveň přístupu dat pomocí služby WCF,
     DataEntityTier.NorthwindDataSet.OrdersDataTable GetOrders();
     ```
 
-3.  V projektu DataService klikněte dvakrát na Service1.vb (nebo Service1.cs).
+3. Ve službě DataService projektu, klikněte dvakrát na **Service1.vb** (nebo **Service1.cs**).
 
-4.  Přidejte následující kód do třídy Service1:
+4. Přidejte následující kód, který **Service1** třídy:
 
     ```vb
     Public Function GetCustomers() As DataEntityTier.NorthwindDataSet.CustomersDataTable Implements IService1.GetCustomers
@@ -279,68 +283,68 @@ Tento návod ukazuje, jak přístup úroveň přístupu dat pomocí služby WCF,
     }
     ```
 
-5.  Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
+5. Na **sestavení** nabídky, klikněte na tlačítko **sestavit řešení**.
 
-## <a name="creating-a-presentation-tier-to-display-data-from-the-data-service"></a>Vytvoření prezentační vrstvy zobrazující data z datové služby
- Teď, když řešení obsahuje služba dat, která obsahuje metody, které volají do úroveň přístupu data, vytvořte jiný projekt, který bude provádět volání do službu data a data k dispozici pro uživatele. V tomto návodu vytvořte aplikaci Windows Forms; Toto je prezentační vrstvou vícevrstvé aplikace.
+## <a name="create-a-presentation-tier-to-display-data-from-the-data-service"></a>Vytvoření prezentační vrstvy zobrazující data z datové služby
+ Teď, když řešení obsahuje datové služby, která obsahuje metody, která volá do dat vrstvě přístupu k, vytvořte nový projekt, který volá do datové služby a představují data pro uživatele. V tomto návodu vytvoření aplikace Windows Forms; Toto je prezentační vrstvy n vrstvé aplikace.
 
-#### <a name="to-create-the-presentation-tier-project"></a>Vytvoření projektu prezentační vrstvy
+### <a name="to-create-the-presentation-tier-project"></a>Vytvoření projektu prezentační vrstvy
 
-1.  Klikněte pravým tlačítkem na řešení v Průzkumníku řešení a zvolte **přidat**, **nový projekt...** .
+1. Klikněte pravým tlačítkem na řešení v **Průzkumníka řešení** a zvolte **přidat** > **nový projekt**.
 
-2.  V **nový projekt** dialogové okno, v levém podokně vyberte **Windows Classic Desktop**. V prostředním podokně vyberte **aplikace pro Windows Forms**.
+2. V **nový projekt** dialogové okno, v levém podokně vyberte **Windows Desktop**. V prostředním podokně vyberte **aplikace Windows Forms**.
 
-3.  Název projektu **PresentationTier** a klikněte na tlačítko **OK**.
+3. Pojmenujte projekt **PresentationTier** a klikněte na tlačítko **OK**.
 
-    Projekt PresentationTier je vytvořen a přidán do NTierWalkthrough řešení.
+    Projektu PresentationTier je vytvořen a přidán do řešení NTierWalkthrough.
 
-## <a name="setting-the-presentationtier-project-as-the-startup-project"></a>Nastavení projektu PresentationTier jako spouštěného projektu
-Vytvoříme PresentationTier projekt, který má být projekt po spuštění pro řešení, protože je skutečný klientské aplikace, která se používají k zobrazení a interakci s daty.
+## <a name="set-the-presentationtier-project-as-the-startup-project"></a>Nastavení projektu PresentationTier jako spouštěného projektu
+Nastavíme **PresentationTier** projekt jako projekt po spuštění pro řešení, protože se jedná o skutečné klientská aplikace, která představuje a pracuje s daty.
 
-#### <a name="to-set-the-new-presentation-tier-project-as-the-startup-project"></a>Nastavení nového projektu prezentační vrstvy jako spouštěného projektu
+### <a name="to-set-the-new-presentation-tier-project-as-the-startup-project"></a>Nastavení nového projektu prezentační vrstvy jako spouštěného projektu
 
--   V **Průzkumníku řešení**, klikněte pravým tlačítkem na **PresentationTier** a klikněte na tlačítko **nastavit jako spouštěný projekt**.
+-   V **Průzkumníka řešení**, klikněte pravým tlačítkem na **PresentationTier** a klikněte na tlačítko **nastavit jako spouštěný projekt**.
 
-## <a name="adding-references-to-the-presentation-tier"></a>Přidání odkazů do prezentační vrstvy
- Klientská aplikace PresentationTier vyžaduje odkaz na službu ve službě data přístup metody ve službě. Odkaz na datovou sadu se kromě toho je potřeba povolit sdílení službou WCF typu. Dokud nepovolíte sdílení dat pomocí služby typu kódu přidat ke třídě částečné datovou sadu, nebudou k dispozici na prezentační vrstvy. Vzhledem k tomu obvykle přidáte kód, jako je například ověřování do řádků a sloupců Změna události tabulky dat, je pravděpodobné, že budete chtít přístup tento kód z klienta.
+## <a name="add-references-to-the-presentation-tier"></a>Přidání odkazů do prezentační vrstvy
+ Klientská aplikace PresentationTier vyžaduje odkaz na službu ve službě data k přístup k metodám ve službě. Odkaz na datovou sadu se kromě toho je potřeba povolit typ sdílení ve službě WCF. Dokud nepovolíte sdílení prostřednictvím datové služby typu kódu do částečné třídy není k dispozici do prezentační vrstvy. Vzhledem k tomu obvykle přidáte kód, jako je například kód pro ověření do řádků a sloupců, změna událostí datové tabulky, je pravděpodobné, že budete chtít přístup tento kód z klienta.
 
-#### <a name="to-add-a-reference-to-the-presentation-tier"></a>Přidání odkazu do prezentační vrstvy
+### <a name="to-add-a-reference-to-the-presentation-tier"></a>Přidání odkazu do prezentační vrstvy
 
-1.  V **Průzkumníku řešení**, klikněte pravým tlačítkem na PresentationTier a vyberte **přidat odkaz na**.
+1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na **PresentationTier** a vyberte **přidat odkaz**.
 
-2.  V **přidat odkaz na** dialogové okno, vyberte **projekty** kartě.
+2. V **přidat odkaz** dialogové okno, vyberte **projekty** kartu.
 
-3.  Vyberte **DataEntityTier** a zvolte **OK**.
+3. Vyberte **DataEntityTier** a zvolte **OK**.
 
-#### <a name="to-add-a-service-reference-to-the-presentation-tier"></a>Přidání odkazu na službu do prezentační vrstvy
+### <a name="to-add-a-service-reference-to-the-presentation-tier"></a>Přidání odkazu na službu do prezentační vrstvy
 
-1.  V **Průzkumníku řešení**, klikněte pravým tlačítkem na PresentationTier a vyberte **přidat odkaz na službu**.
+1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na **PresentationTier** a vyberte **přidat odkaz na službu**.
 
-2.  V **přidat odkaz na službu** dialogové okno, vyberte **Discover**.
+2. V **přidat odkaz na službu** dialogu **Discover**.
 
-3.  Vyberte **Service1** a zvolte **OK**.
+3. Vyberte **Service1** a zvolte **OK**.
 
     > [!NOTE]
-    >  Pokud máte více služeb v počítači, vyberte službu, kterou jste vytvořili dříve v tomto návodu (služba, která obsahuje metody GetCustomers a GetOrders).
+    > Pokud máte několik služeb, které na počítač, vyberte službu, kterou jste vytvořili dříve v tomto názorném postupu (službu, která obsahuje `GetCustomers` a `GetOrders` metody).
 
-## <a name="adding-datagridviews-to-the-form-to-display-the-data-returned-by-the-data-service"></a>Přidání ovládacích prvků DataGridView do formuláře a zobrazení dat vrácených datovou službou
- Po přidání odkazu služby pro službu data **zdroje dat** okno se automaticky zadá data, která je vrácena službou.
+## <a name="add-datagridviews-to-the-form-to-display-the-data-returned-by-the-data-service"></a>Přidání ovládacích prvků DataGridView do formuláře a zobrazení dat vrácených datovou službou
+ Poté, co přidáte odkaz na službu do datové služby **zdroje dat** okno se automaticky načtou data, která je vrácena službou.
 
-#### <a name="to-add-two-data-bound-datagridviews-to-the-form"></a>Přidání dvou ovládacích prvků DataGridView vázaných na data do formuláře
+### <a name="to-add-two-data-bound-datagridviews-to-the-form"></a>Přidání dvou ovládacích prvků DataGridView vázaných na data do formuláře
 
-1.  V **Průzkumníku**, vyberte PresentationTier projekt.
+1. V **Průzkumníka řešení**, vyberte **PresentationTier** projektu.
 
-2.  V **zdroje dat** okně rozbalte **NorthwindDataSet** a najděte **zákazníci** uzlu.
+2. V **zdroje dat** okna rozbalte **NorthwindDataSet** a vyhledejte **zákazníkům** uzlu.
 
-3.  Přetáhněte **zákazníci** uzlu na Form1.
+3. Přetáhněte **zákazníkům** uzlu do formuláře Form1.
 
-4.  V **zdroje dat** okno, rozbalte **zákazníci** uzlu a vyhledejte související **objednávky** uzlu ( **objednávky** uzlu vnořených v  **Zákazníci** uzlu).
+4. V **zdroje dat** okna, rozbalte **zákazníkům** uzlu a vyhledejte související **objednávky** uzel ( **objednávky** uzel vnořené v  **Zákazníci** uzlu).
 
-5.  Přetáhněte související **objednávky** uzlu na Form1.
+5. Přetáhněte související **objednávky** uzlu do formuláře Form1.
 
-6.  Vytvoření `Form1_Load` obslužné rutiny události dvojitým kliknutím na prázdnou oblast formuláře.
+6. Vytvoření `Form1_Load` obslužná rutina události dvojitým kliknutím na prázdnou oblast formuláře.
 
-7.  Přidejte následující kód, který `Form1_Load` obslužné rutiny události.
+7. Přidejte následující kód, který `Form1_Load` obslužné rutiny události.
 
     ```vb
     Dim DataSvc As New ServiceReference1.Service1Client
@@ -355,29 +359,29 @@ Vytvoříme PresentationTier projekt, který má být projekt po spuštění pro
     northwindDataSet.Orders.Merge(DataSvc.GetOrders());
     ```
 
-## <a name="increasing-the-maximum-message-size-allowed-by-the-service"></a>Zvětšení maximální velikosti zprávy povolené službou
-Výchozí hodnota pro maxReceivedMessageSize není dostatečně velký pro uložení data načtená z tabulky Zákazníci a objednávky. V následujícím postupu zvýšíte hodnota, která má 6553600. Bude-li změnit hodnotu na klienta, které automaticky aktualizuje odkaz na službu.
+## <a name="increase-the-maximum-message-size-allowed-by-the-service"></a>Zvětšete maximální velikost zprávy povolené službou
+Výchozí hodnota pro `maxReceivedMessageSize` není dostatečně velký pro uložení dat načtených z `Customers` a `Orders` tabulky. V následujícím postupu zvýšíte hodnotu 6553600. Můžete změnit hodnoty na straně klienta, která automaticky aktualizuje odkaz na službu.
 
 > [!NOTE]
->  Nižší výchozí velikost je určena k omezení rizika útoku DoS (DoS). Další informace naleznete v tématu <xref:System.ServiceModel.WSHttpBindingBase.MaxReceivedMessageSize%2A>.
+> Nižší výchozí velikost je určena k omezení rizika útoky na dostupnost služby (DoS). Další informace naleznete v tématu <xref:System.ServiceModel.WSHttpBindingBase.MaxReceivedMessageSize%2A>.
 
-#### <a name="to-increase-the-maxreceivedmessagesize-value"></a>Zvýšení hodnoty maxReceivedMessageSize
+### <a name="to-increase-the-maxreceivedmessagesize-value"></a>Zvýšení hodnoty maxReceivedMessageSize
 
-1.  V **Průzkumníku**, poklikejte na soubor app.config v PresentationTier projektu.
+1. V **Průzkumníka řešení**, dvakrát klikněte **app.config** ve **PresentationTier** projektu.
 
-2.  Vyhledejte **maxReceivedMessage** velikost atribut a změňte hodnotu na `6553600`.
+2. Vyhledejte **maxReceivedMessage** velikost atribut a změňte hodnotu na `6553600`.
 
-## <a name="testing-the-application"></a>Testování aplikace
-Spusťte aplikaci stisknutím **F5**. Data z tabulky Zákazníci a objednávky z službu data načíst a zobrazit ve formuláři.
+## <a name="test-the-application"></a>Testování aplikace
+Spusťte aplikaci stisknutím klávesy **F5**. Data z `Customers` a `Orders` tabulek je načten z datové služby a zobrazí ve formuláři.
 
 ## <a name="next-steps"></a>Další kroky
- V závislosti na požadavcích vaší aplikace existuje několik kroků, které můžete provést po uložení souvisejících dat v aplikaci systému Windows. Například můžete dokonce vytvářet následující vylepšení do této aplikace:
+ V závislosti na požadavcích aplikace existuje několik kroků, které můžete chtít provést po uložení souvisejících dat v aplikaci založené na Windows. Může například vytvořit následující vylepšení této aplikace:
 
 -   Přidání ověřování do datové sady.
 
--   Přidejte další metody do služby pro aktualizaci data zpět do databáze.
+-   Přidáte další metody pro službu pro aktualizaci dat zpět do databáze.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Práce s datovými sadami ve vícevrstvých aplikacích](../data-tools/work-with-datasets-in-n-tier-applications.md)
 - [Hierarchická aktualizace](../data-tools/hierarchical-update.md)

@@ -1,5 +1,5 @@
 ---
-title: Locationfieldmruprefix – Element (šablony sady Visual Studio) | Microsoft Docs
+title: Locationfieldmruprefix – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,18 +16,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: cef7e1e09d81c4ff0fb28198ff9a4d68f1e9c501
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 050d9b060fe9976dc9262b2878f570abbdc9bb42
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39636899"
 ---
-# <a name="locationfieldmruprefix-element-visual-studio-templates"></a>LocationFieldMRUPrefix – element (šablony sady Visual Studio)
-Určuje naposledy použité cesty (naposledy použitých) v **nový projekt** a **přidat novou položku** dialogové okno.  
+# <a name="locationfieldmruprefix-element-visual-studio-templates"></a>Locationfieldmruprefix – element (šablony sady Visual Studio)
+Určuje cesty (MRU) nedávno použité v **nový projekt** a **přidat novou položku** dialogové okno.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```xml  
 <LocationFieldMRUPrefix> ... </LocationFieldMRUPrefix>  
 ```  
   
@@ -37,18 +38,18 @@ Určuje naposledy použité cesty (naposledy použitých) v **nový projekt** a 
 ### <a name="attributes"></a>Atributy  
  Žádné  
   
-### <a name="child-elements"></a>Podřízené elementy  
+### <a name="child-elements"></a>Podřízené prvky  
  Žádné  
   
-### <a name="parent-elements"></a>Nadřazené elementy  
+### <a name="parent-elements"></a>Nadřazené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Rozděluje šablonu a definuje, jak se zobrazuje v buď **nový projekt** nebo **přidat novou položku** dialogové okno.|  
+|[TemplateData –](../extensibility/templatedata-element-visual-studio-templates.md)|Rozděluje šablonu a definuje, jak se zobrazuje **nový projekt** nebo **přidat novou položku** dialogové okno.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tento element musí být použit pouze pro šablony vytváří prostřednictvím [!INCLUDE[vsipprvsip](../extensibility/includes/vsipprvsip_md.md)].  
+ Tento element lze používat pouze pro šablony vytvořené prostřednictvím [!INCLUDE[vsipprvsip](../extensibility/includes/vsipprvsip_md.md)].  
   
-## <a name="see-also"></a>Viz také  
- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
+## <a name="see-also"></a>Viz také:  
+ [Visual Studio odkaz na schéma šablon](../extensibility/visual-studio-template-schema-reference.md)   
  [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31121310"
 ---
 # <a name="idebugstepcompleteevent2"></a>IDebugStepCompleteEvent2
 Toto rozhraní zasílá modul ladění (DE) zadaný pro relaci ladění správce (SDM) po dokončení programu laděné krok do, krok přes nebo krok přesahující zdrojový kód nebo příkazu nebo instrukcí.  

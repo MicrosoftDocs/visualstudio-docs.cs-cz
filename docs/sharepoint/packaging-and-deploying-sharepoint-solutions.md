@@ -1,5 +1,5 @@
 ---
-title: Balení a nasazení řešení služby SharePoint | Microsoft Docs
+title: Zabalení a nasazení řešení služby SharePoint | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -19,94 +19,94 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 8faeb21b7c32f1af91a9149b1b9f6bcadafeed7c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6c5993f09581faf6e3cedb4c71598ea26b16b699
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49863266"
 ---
-# <a name="packaging-and-deploying-sharepoint-solutions"></a>Balení a nasazení řešení služby SharePoint
-  Obvykle řešení služby SharePoint je nasazený na serveru služby SharePoint pomocí souboru balíčku (WSP) řešení. Visual Studio můžete použít k uspořádání vaší SharePoint – položky projektu do funkcí a chcete-li vytvořit balíček pro nasazení vaší funkcí služby SharePoint.  
+# <a name="package-and-deploy-sharepoint-solutions"></a>Zabalení a nasazení řešení služby SharePoint
+  Obvykle nasazuje řešení služby SharePoint na SharePoint server s použitím souboru balíčku (.wsp) řešení. Visual Studio můžete použít k uspořádání položek projektu služby SharePoint do funkcí a chcete-li vytvořit balíček pro nasazení vašich funkcí služby SharePoint.  
   
  Toto téma poskytuje následující informace:  
   
 -   [Vytváření funkcí a balíčků](#Creating)  
   
--   [Funkce a balení nástroj podpory](#Tools)  
+-   [Funkce a podpora nástroje balení](#Tools)  
   
 -   [Nasazení řešení služby SharePoint](#Deploying)  
   
 -   [Nasazení souborů v řešení služby SharePoint](#DeployingFiles)  
   
-##  <a name="Creating"></a> Vytváření funkcí a balíčků  
- Visual Studio můžete použít k seskupení souvisejících prvků služby SharePoint do *funkce*. Funkce pro definici seznamu kontaktů může obsahovat třeba instanci seznamu a definice seznamu. Tyto dva prvky můžete zkombinovat do jednoho funkce pro účely nasazení. Další informace o funkcích najdete v tématu [stavebním blokem: funkce](http://go.microsoft.com/fwlink/?LinkID=169183).  
+## <a name="create-features-and-packages"></a>Vytváření funkcí a balíčků
+ Visual Studio můžete použít k seskupení souvisejících prvků SharePoint do *funkce*. Funkce pro definici seznamu kontaktů mohou být například instanci seznamu a definice seznamu. Tyto dva prvky můžete zkombinovat do jedné funkce pro účely nasazení. Další informace o funkcích najdete v tématu [stavebním blokem: funkce](http://go.microsoft.com/fwlink/?LinkID=169183).  
   
- Potom můžete vytvořit SharePoint balíčku řešení (WSP) sady více funkcí, definice webů, sestavení a dalších souborů do jednoho balíčku, který ukládá soubory ve formátu vyžaduje k nasazení soubory na server služby SharePoint. Další informace najdete v tématu [stavebním blokem: řešení](http://go.microsoft.com/fwlink/?LinkID=169186).  
+ V dalším kroku vytvoříte balíčku řešení služby SharePoint (*.wsp*) můžete seskupit několik funkcí, lokality definice sestavení a dalších souborů do jediného balíčku, který ukládá soubory ve formátu vyžaduje SharePoint soubory, které chcete nasadit serveru. Další informace najdete v tématu [stavebním blokem: řešení](http://go.microsoft.com/fwlink/?LinkID=169186).  
   
-##  <a name="Tools"></a> Funkce a balení nástroj podpory  
- Nástroje pro vývoj pro SharePoint v sadě Visual Studio vám pomůže rychle uspořádání souborů služby SharePoint do funkcí a řešení balíčky pro nasazení jednodušší. Tyto nástroje můžete nakonfigurovat balíček funkcí a řešení.  
+## <a name="feature-and-packaging-tool-support"></a>Funkce a podpora nástroje balení
+ Nástroje pro vývoj služby SharePoint v sadě Visual Studio můžete použít k rychlé uspořádání souborů služby SharePoint do funkce a řešení balíčky pro nasazení. Nakonfigurování funkce a řešení můžete použít následující nástroje.  
   
--   Funkce Designer a návrháře balíčků.  
+-   Funkce návrháře a návrháři balíčku.  
   
--   Průzkumníku balíčků, okno nástroje.  
+-   Průzkumník balení, panel nástrojů.  
   
 -   Průzkumník řešení.  
   
-### <a name="feature-designer-and-package-designer"></a>Funkce Designer a návrháře balíčků  
- Můžete vytvořit funkce, nastavení rozsahů a označit další funkce, jako závislosti pomocí návrháře funkce. Návrhář také zobrazí poslední souboru XML, který popisuje každou funkci. Další informace najdete v tématu [vytváření funkcí služby SharePoint](../sharepoint/creating-sharepoint-features.md).  
+### <a name="feature-designer-and-package-designer"></a>Funkce návrháře a návrháři balíčku
+ Můžete vytvořit funkce, nastavit obory a označit jiné funkce jako závislosti pomocí návrháře funkcí. Návrhář zobrazí také konečný soubor XML, který popisuje každou funkci. Další informace najdete v tématu [funkcí služby SharePoint vytvořit](../sharepoint/creating-sharepoint-features.md).  
   
- Použijte funkci k určitému webu nebo skupinu webů tak, že nastavení jeho *oboru* v Návrháři funkce. Pokud je zapnuta pro jednotlivé webové stránky, tato funkce funguje jen v této určitého webového serveru. Pokud je zapnuta pro kolekci webů, položky ve funkci se vztahují ke kolekci celý web. Další informace najdete v tématu [Element oboru](http://go.microsoft.com/fwlink/?LinkID=169189).  
+ Použít funkci na určitý webový server nebo skupina webových serverů tak, že nastavíte její *oboru* v Návrháři funkce. Pokud se funkce aktivuje pro jednotlivé webové stránky, tato funkce funguje pouze v konkrétní webový server. Pokud se funkce aktivuje pro kolekci webů, položky ve funkci se vztahují celou kolekci webů. Další informace najdete v tématu [obor prvku](http://go.microsoft.com/fwlink/?LinkID=169189).  
   
- Pokud vaše funkce závisí na jiné funkce, můžete nastavit *funkci aktivace závislost* označit závislé součásti před zpřístupněním vaší funkce. Závislost aktivace funkce zkontroluje, pokud jsou v tomto oboru již aktivován závislé součásti. Další informace najdete v tématu [aktivace závislosti a oboru](http://go.microsoft.com/fwlink/?LinkID=169190).  
+ Pokud vaše funkce závisí na jiné funkce, můžete nastavit *závislost aktivace funkce* k označení závislé součásti před zpřístupněním vaši funkci. Závislost aktivace funkce ověří, pokud jsou v tomto oboru již aktivován závislé součásti. Další informace najdete v tématu [závislosti aktivace a oboru](http://go.microsoft.com/fwlink/?LinkID=169190).  
   
- V Návrháři balíček můžete seskupit prvky služby SharePoint do jednoho řešení balíčku a nakonfigurovat, zda chcete-li obnovit webový server během nasazení. Pokud chcete nastavit typ nasazení serveru, použijte **vlastnosti** okno. Návrhář také vytvoří soubor XML, který popisuje obsah balíčku. Další informace najdete v tématu [vytváření balíčků řešení služby SharePoint](../sharepoint/creating-sharepoint-solution-packages.md).  
+ V Návrháři balíčku můžete seskupit prvky SharePoint do jediného řešení balíček a nakonfigurovat, jestli se má resetovat webový server během nasazení. Pokud chcete nastavit typ serveru nasazení, použijte **vlastnosti** okna. Návrhář také vygeneruje soubor XML, který popisuje obsah balíčku. Další informace najdete v tématu [balíčků řešení služby SharePoint vytvořit](../sharepoint/creating-sharepoint-solution-packages.md).  
   
- Během nasazení službu Internetové informační služby (IIS) je zastavena zkopírovat soubory řešení na serveru SharePoint. Pomocí návrháře balíčků v sadě Visual Studio, můžete určit, zda má webový server restartovat. Pokud chcete konfigurovat, pokud je řešení nasazeno na front-end webovém serveru nebo aplikační server, použijte **vlastnosti** okno. Další informace najdete v tématu [prvek řešení (řešení)](http://go.microsoft.com/fwlink/?LinkID=169191).  
+ Během nasazování zkopírujte soubory řešení na server SharePoint zastavení služby Internetové informační služby (IIS). Pomocí návrháře balíčků v sadě Visual Studio, můžete vybrat, zda webový server by měla být restartována. Chcete-li nakonfigurovat, pokud se řešení nasadí na front-end webovém serveru nebo aplikační server, použijte **vlastnosti** okna. Další informace najdete v tématu [prvek řešení (Solution)](http://go.microsoft.com/fwlink/?LinkID=169191).  
   
-### <a name="packaging-explorer"></a>Průzkumníku balíčků  
- Aby doplňovala funkce Designer a návrháře balíčků, můžete v Průzkumníku balíčků seskupit soubory služby SharePoint do funkcí a balíčků. Kromě toho se zobrazí hierarchické zobrazení projektu služby SharePoint balíčku, funkce, položky a soubory. Průzkumníku balíčků je okno nástroje, který vám pomůže dokončit následující úlohy:  
+### <a name="packaging-explorer"></a>Průzkumník balení  
+ K doplnění funkce návrháře a návrháři balíčku, můžete použít Průzkumník balení do skupiny souborů služby SharePoint do funkcí a balíčků. Kromě toho uvidí hierarchickým zobrazením Sharepointového projektu balíček, funkce, položky a soubory. Průzkumník balení je okno nástroje, který vám pomůže dokončit následující úlohy:  
   
--   Otevřete položky projektu služby SharePoint a soubory.  
+- Otevřete položky Sharepointového projektu a soubory.  
   
--   Přetahování položek projektu služby SharePoint z jednu funkci do jiného.  
+- Přetažení položek projektu služby SharePoint z jednu funkci do jiného.  
   
--   Přetahování položek projektu služby SharePoint a funkce z jeden balíček do jiného.  
+- Přetažení položek projektu služby SharePoint a funkce z jednoho balíčku do jiného.  
   
--   Přidejte novou funkci balíčku.  
+- Přidáte novou funkci do balíčku.  
   
--   Otevřete návrháře funkce nebo balíčku.  
+- Otevření Návrháře funkci nebo balíčku.  
   
--   Ověřte funkce a balíčky.  
+- Ověření funkcí a balíčků.  
   
- Nástroje pro vývoj pro SharePoint v sadě Visual Studio mít pravidel ověřování k zajištění, že je správně vytvořen balíčku řešení. Kromě toho pravidla ověřte, zda soubor řešení WSP může být úspěšně nasazen a aktivovat na serveru služby SharePoint. Další informace o schématu XML pro funkce, najdete v tématu [funkce schémata](http://go.microsoft.com/fwlink/?LinkID=169192).  
+  Nástroje pro vývoj služby SharePoint v sadě Visual Studio mají ověřovacích pravidel pro zajištění, že je správně vytvořen balíček řešení. Kromě toho pravidla ověřte, že *.wsp* soubor řešení je možné úspěšně nasadit a aktivovat na Sharepointovém serveru. Další informace o schématu XML pro funkce, najdete v části [funkce schémata](http://go.microsoft.com/fwlink/?LinkID=169192).  
   
- V systému projektu služby SharePoint můžete přidat vlastní funkce a pravidel ověřování balíčku. Další informace najdete v tématu [postupy: vytvoření vlastní funkce a pravidel ověřování balíčku pro řešení služby SharePoint](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md).  
+  Vlastní funkce a pravidel ověřování balíčku můžete přidat do systému Sharepointových projektů. Další informace najdete v tématu [postupy: vytvoření vlastní funkce a balíku ověřovacích pravidel pro řešení služby SharePoint](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md).  
   
- Další informace o Průzkumníku balíčků najdete v tématu [postupy: Přidání nebo odebrání funkcí a položek z balíku pomocí Průzkumníku balíčků](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer.md).  
+  Další informace o Průzkumníku balíčků naleznete v tématu [postupy: Přidání nebo odebrání funkcí a položek z balíku pomocí Průzkumníku balíčků](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer.md).  
   
-### <a name="solution-explorer"></a>Průzkumník řešení  
- Procházejte a otevřít soubory projektu služby SharePoint můžete Průzkumníku řešení. Použít místní nabídky v Průzkumníku řešení pro přidání funkcí, přijímačů událostí funkce a funkce prostředky. Kromě toho můžete otevřít funkce návrhářů a návrháři balíček ke konfiguraci funkce a balíčky pro nasazení.  
+### <a name="solution-explorer"></a>Průzkumník řešení
+ Průzkumník řešení můžete použít k procházení a otevírání souborů projektu služby SharePoint. Chcete-li přidat funkce, přijímačů událostí funkce, pomocí místní nabídky v Průzkumníku řešení a zdroje funkcí. Kromě toho můžete otevřít funkce návrháře a návrháři balíčku konfigurace funkcí a balíčků pro nasazení.  
   
-##  <a name="Deploying"></a> Nasazení řešení služby SharePoint  
- Po přizpůsobení funkcí a balíčku v sadě Visual Studio, můžete vytvořit soubor WSP nasazení na servery služby SharePoint. Visual Studio můžete použít pro ladění a testování WSP pouze na serveru SharePoint na vývojovém počítači. Další informace o tom, jak nasadit řešení služby SharePoint na vzdálený server služby SharePoint, naleznete v části [nasazení řešení](http://go.microsoft.com/fwlink/?LinkID=169194).  
+## <a name="deploy-sharepoint-solutions"></a>Nasazení řešení služby SharePoint
+ Po přizpůsobení funkcí a balíčků v sadě Visual Studio, můžete vytvořit *.wsp* souborů k nasazení na servery služby SharePoint. Visual Studio můžete použít k ladění a testování. *wsp* pouze na serveru SharePoint ve vývojovém počítači. Další informace o tom, jak nasadit řešení služby SharePoint na vzdáleném serveru SharePoint, naleznete v tématu [nasazení řešení](http://go.microsoft.com/fwlink/?LinkID=169194).  
   
- Můžete také upravit jednotlivé kroky nasazení na vývojovém počítači. Další informace najdete v tématu [nasazení, publikování a upgradování balíčků řešení služby SharePoint](../sharepoint/deploying-publishing-and-upgrading-sharepoint-solution-packages.md).  
+ Můžete také upravit kroky nasazení na vývojovém počítači. Další informace najdete v tématu [nasazení, publikování a upgradování balíčků řešení služby SharePoint](../sharepoint/deploying-publishing-and-upgrading-sharepoint-solution-packages.md).  
   
-##  <a name="DeployingFiles"></a> Nasazení souborů v řešení služby SharePoint  
- Obvykle když přidáte položky projektu služby SharePoint do řešení služby SharePoint, všechny požadované soubory jsou zahrnuty. Soubory, které mohou být zkompilovány (soubory kódu) jsou integrované ve výstupu sestavení řešení. Však může také musíte přidat-kompilační soubory, například XML, txt nebo soubory prostředků, do projektu služby SharePoint. Tyto soubory nejsou zabalené automaticky ve vašem řešení. Aby se zajistilo, že přitom se zabalí, buď přidejte soubory do mapované složky nebo do položky projektu služby SharePoint.  
+## <a name="deploy-files-in-sharepoint-solutions"></a>Nasazení souborů v řešení služby SharePoint
+ Obvykle když přidáte položku Sharepointového projektu do řešení služby SharePoint, všechny požadované soubory jsou zahrnuty. Soubory, které mohou být zkompilovány (soubory kódu) jsou integrované do výstupního sestavení řešení. Ale může také musíte přidat-zkompilovat soubory, například *.xml*, *.txt*, nebo soubory prostředků, do projektu služby SharePoint. Tyto soubory nejsou zabaleny automaticky v rámci vašeho řešení. Pokud chcete mít jistotu, že jsou zabaleny, přidat soubory pro mapovanou složku nebo položky Sharepointového projektu.  
   
- Soubory přidány do mapované složky se automaticky zkopírují do podregistr služby SharePoint, když je řešení nasazeno. Soubory přidané do položky projektu služby SharePoint se nasadí do umístění, které je zadáno v **umístění nasazení** na základě vlastnosti pro každý soubor, který je částečně nastaven **typ nasazení** vlastnost. Ve výchozím nastavení **typ nasazení** hodnota vlastnosti je **NoDeployment**, což znamená, že soubor není nasazený s řešením. Je nutné nastavit jinou hodnotu pro vlastnost, zahrnout soubor v balíčku.  
+ Soubory přidané do mapované složky se automaticky zkopírují do podregistru služby SharePoint, když se řešení nasadí. Soubory přidané do položky projektu služby SharePoint jsou nasazené do umístění zadaného ve **umístění nasazení** na základě vlastností pro každý soubor, který je částečně nastavena **typ nasazení** vlastnost. Ve výchozím nastavení **typ nasazení** hodnota vlastnosti je **NoDeployment**, což znamená, že soubor není nasazen s řešením. Je nutné nastavit jinou hodnotu pro vlastnost, která má soubor zahrnout do balíčku.  
   
- Například pokud chcete přidat do projektu služby SharePoint soubor .xml, proveďte jednu z těchto akcí:  
+ Například, chcete-li přidat *.xml* soubor do projektu služby SharePoint, proveďte jednu z těchto akcí:  
   
--   Do projektu přidejte složku namapované "Rozložení" služby SharePoint. Tím se vytvoří v **Průzkumníku řešení** složku s názvem **rozložení** má podsložku pro projekt. Soubor .xml přidáte do nové složky. Ve výchozím nastavení je soubor nasazeny do systému souborů služby SharePoint v části... \TEMPLATE\LAYOUTS\\*název složky*\\. Informace o tom, jak přidat mapované složky najdete v tématu [postupy: Přidání a odebrání mapované složky](../sharepoint/how-to-add-and-remove-mapped-folders.md).  
+- Přidejte SharePoint "Rozložení" namapované složky do projektu. Tím se vytvoří v **Průzkumníka řešení** složku s názvem **rozložení** , která obsahuje podsložky pro projekt. Přidat *.xml* souboru do této nové podsložky. Ve výchozím nastavení je soubor nasazen do systému souborů služby SharePoint v části *... \TEMPLATE\LAYOUTS\\\<název složky >*. Informace o tom, jak přidat mapované složky najdete v tématu [postupy: Přidání a odebrání mapovaných složek](../sharepoint/how-to-add-and-remove-mapped-folders.md).  
   
--   Přidejte soubor .xml do složky položky projektu služby SharePoint a poté změňte **typ nasazení** vlastnost souboru .xml z **NoDeployment** jiné nastavení, jako **RootFile** nebo **ElementFile**. Odpovídající **typ nasazení** nastavení závisí na soubor a projekt. Další informace o **typ nasazení** najdete v části Nastavení vlastností [vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md).  
+- Přidat *.xml* soubor do složky položky projektu služby SharePoint a potom změňte **typ nasazení** vlastnost *.xml* souboru z **NoDeployment**  další nastavení, jako **RootFile** nebo **ElementFile**. Odpovídající **typ nasazení** nastavení závisí na soubor a projekt. Další informace o **typ nasazení** naleznete v tématu Nastavení vlastností [řešení pro vývoj SharePoint](../sharepoint/developing-sharepoint-solutions.md).  
   
- Pokud přidaný soubor se nevztahuje na žádné konkrétní projekty v řešení, můžete přidat prázdného projektu služby SharePoint k řešení a potom k němu přidejte další soubory. Další alternativou k nasazení soubory do služby SharePoint, zejména k databázi obsahu je do projektu přidejte modul a potom přidat soubory do modulu. Další informace najdete v tématu [pomocí modulů souborů v řešení](../sharepoint/using-modules-to-include-files-in-the-solution.md).  
+  Pokud je přidaný soubor se nedá použít u žádného konkrétního projektu v řešení, můžete přidat prázdný projekt SharePoint do vašeho řešení a potom k němu přidejte další soubory. Další alternativou k nasazení souborů pro službu SharePoint, zejména pro databázi obsahu, je přidat modul do projektu a pak přidat soubory do modulu. Další informace najdete v tématu [vložení souborů do řešení pomocí modulů](../sharepoint/using-modules-to-include-files-in-the-solution.md).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:
  [Vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md)   
  [Sestavování a ladění řešení služby SharePoint](../sharepoint/building-and-debugging-sharepoint-solutions.md)  
-  
   

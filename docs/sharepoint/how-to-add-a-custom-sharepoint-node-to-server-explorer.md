@@ -16,13 +16,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 47b51070a3f3368dbff636858c9a2e1ebf2e9f80
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: bb0ba7f09ae564a794792ad6f7a60f53f6f6422e
+ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36755638"
 ---
-# <a name="how-to-add-a-custom-sharepoint-node-to-server-explorer"></a>Postupy: Přidání vlastního uzlu služby SharePoint do průzkumníka serveru
+# <a name="how-to-add-a-custom-sharepoint-node-to-server-explorer"></a>Postupy: Přidání vlastního uzlu služby SharePoint do Průzkumníka serveru
   Můžete přidat vlastní uzly v rámci **připojení služby SharePoint** uzlu v **Průzkumníka serveru**. To je užitečné, pokud chcete zobrazit další součásti služby SharePoint, které nejsou zobrazeny v **Průzkumníka serveru** ve výchozím nastavení. Další informace najdete v tématu [rozšíření uzlu připojení služby SharePoint v Průzkumníku serveru](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md).  
   
  Chcete-li přidat vlastní uzel, nejdřív vytvořte třídu, která definuje nový uzel. Pak vytvořte rozšíření, které přidá uzlu jako podřízenou stávající uzel.  
@@ -79,7 +80,7 @@ ms.lasthandoff: 04/16/2018
      [!code-vb[SPExtensibility.ProjectSystemExtension.General#7](../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/serverexplorernode.vb#7)]
      [!code-csharp[SPExtensibility.ProjectSystemExtension.General#7](../sharepoint/codesnippet/CSharp/projectsystemexamples/extension/serverexplorernode.cs#7)]  
   
-## <a name="complete-example"></a>Kompletní příklad  
+## <a name="complete-example"></a>Úplný příklad
  Následující příklad kódu obsahuje kompletní kód definovat Jednoduchý uzel a přidat ji jako podřízený uzel serveru SharePoint v **Průzkumníka serveru**.  
   
  [!code-vb[SPExtensibility.ProjectSystemExtension.General#5](../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/serverexplorernode.vb#5)]
@@ -94,12 +95,12 @@ ms.lasthandoff: 04/16/2018
   
 -   System.Drawing  
   
-## <a name="deploying-the-extension"></a>Nasazení rozšíření  
- K nasazení **Průzkumníka serveru** rozšíření, vytvořte [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] balíček rozšíření (VSIX) pro sestavení a všechny další soubory, které chcete distribuovat s rozšířením. Další informace najdete v tématu [nasazení rozšíření pro nástroje služby SharePoint v sadě Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).  
+## <a name="deploy-the-extension"></a>Nasazení rozšíření  
+ K nasazení **Průzkumníka serveru** rozšíření, vytvořte [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] balíček rozšíření (VSIX) pro sestavení a všechny další soubory, které chcete distribuovat s rozšířením. Další informace najdete v tématu [nasadit rozšíření pro nástroje služby SharePoint v sadě Visual Studio](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:
  [Rozšíření uzlu připojení služby SharePoint v Průzkumníku serveru](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)   
  [Postupy: rozšíření uzlu služby SharePoint v Průzkumníku serveru](../sharepoint/how-to-extend-a-sharepoint-node-in-server-explorer.md)   
- [Návod: Rozšíření průzkumníka serveru pro zobrazení částí webu](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)  
+ [Návod: Rozšíření Průzkumníka serveru pro zobrazení webové části](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)  
   
   

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31148935"
 ---
 # <a name="animations-for-visual-studio"></a>Animace pro sadu Visual Studio
 ## <a name="animation-fundamentals"></a>Základy animace  

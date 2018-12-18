@@ -1,7 +1,7 @@
 ---
-title: 'Postupy: přizpůsobení posuvník sledují kódu | Microsoft Docs'
-ms.custom: ''
-ms.date: 11/04/2016
+title: Režim mapování posuvníku panelu a řádku režimu
+ms.date: 09/25/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 author: gewarren
@@ -9,52 +9,66 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ff36af9a034f3a369369a0916f468826c053d05
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 6f60d7f573ed275ff4d827e0a4209f21444ee64c
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50219949"
 ---
-# <a name="how-to-track-your-code-by-customizing-the-scrollbar"></a>Postupy: přizpůsobení posuvník sledují kódu
+# <a name="how-to-customize-the-scroll-bar"></a>Postupy: přizpůsobení posuvníku
 
-Při práci se soubory dlouho kódu, může být obtížné všechno mějte na paměti. Můžete přizpůsobit posuvníku okna kód tak, abyste získali pohled z ptačí perspektivy co se děje ve vašem kódu.
+Při práci se soubory kódu dlouho, může být obtížné sledovat kde všechno, co je v souboru. Můžete upravit posuvník Editor kódu, abyste získali celkový přehled o co se děje ve vašem kódu.
 
-## <a name="to-show-annotations-on-the-scroll-bar"></a>Chcete-li zobrazit poznámky na posuvníku
+## <a name="annotations"></a>Poznámky
 
-1. Posuvník můžete nastavit pro zobrazení změn kódu, zarážky, chyb a záložky.
+Můžete vybrat, zda posuvník zobrazuje poznámky, jako je například změny kódu, zarážky, záložek, chyby a pozici blikajícího kurzoru.
 
-    Otevřete **posuvníku** stránka Možnosti výběrem **nástroje** > **možnosti** > **textového editoru**  >  **Všechny jazyky** nebo konkrétní jazyk, nebo zadáním **posuvníku** v **Snadné spuštění** okno.
+   1. Otevřít **posuvníky** stránka možností výběrem **nástroje** > **možnosti** > **textový Editor**  >  **Všechny jazyky** > **posuvníky**.
 
-2. Vyberte **zobrazit poznámky přes svislý posuvník**, pak vybrat poznámky, které chcete zobrazit.
+   2. Vyberte **zobrazit poznámky přes svislý posuvník**a pak vybrat poznámky, které chcete zobrazit. Jsou dostupné poznámky:
 
-    **Značky** zahrnuje možnost zarážky a záložky.
+      - změny
+      - značky
+      - chyby
+      - pozici blikajícího kurzoru
 
-3. Nyní vyzkoušejte ji. Otevřete soubor velké kód a nahraďte něco, co dojde na několika místech v souboru. Posuvník ukazuje účinku nahrazení, tak můžete zálohovat na změny, pokud je něco, co by nemělo být nahrazen.
+      > [!TIP]
+      > **Zobrazit značky** možnost obsahuje zarážky a záložky.
 
-    Zde je, jak vypadá posuvníku po hledání řetězce. Všimněte si, že se zobrazují všechny instance řetězce.
+Vyzkoušejte si, že otevřete soubor kódu a nahrazení nějaký text, který se nachází na několika místech v souboru. Posuvník demonstruje účinek nahrazení, tak si změny můžete zálohovat, pokud něco, co by nemělo být nahrazen.
 
-    ![Posuvník po hledání řetězce. ] (../ide/media/enhancedscrollbarsearch.png "EnhancedScrollbarSearch")
+Tady je vzhled posuvníku po hledání řetězce. Všimněte si, že všechny instance řetězce zobrazí posuvník.
 
-    Zde je posuvníku po nahrazení všechny instance řetězce. Můžete zobrazit okamžitě, že operace nezdařila z důvodu některé problémy.
+![Visual Studio posuvník po hledání řetězce](../ide/media/enhancedscrollbarsearch.png)
 
-    ![Scrollbar po nahrazení řetězec s chybami](../ide/media/enhancedscrollbarreplace.png "EnhancedScrollbarReplace")
+Tady je posuvník po nahrazení všechny instance řetězce. Červené značky v pořadu posuvníku panelu, kde nahrazování textu zavedeny chyby.
 
-## <a name="to-set-the-display-mode-for-the-scroll-bar"></a>Chcete-li nastavit režim zobrazení pro posuvník
+![Visual Studio posuvník po nahrazení řetězce s chybami](../ide/media/enhancedscrollbarreplace.png)
 
-1. Posuvník obsahuje dva režimy: panel režim (výchozí) a režim mapy. Panelu režimu jenom zobrazí indikátory poznámky na posuvníku. V režimu mapy řádky kódu uváděny na posuvníku. Můžete zvolit jsou jak široké a zda jejich kódu zobrazit při přesunutí ukazatele myši na ně. Když kliknete na panelu přejděte do umístění, kurzor se přesune do tohoto umístění v kódu. Sbalené oblasti jsou zobrazena šedě jinak; stavu rozbalení poklepáním na nich.
+## <a name="display-modes"></a>Režimy zobrazení
 
-    Na **posuvníku** možnosti vyberte buď **použití panelu režim pro svislý posuvník** nebo **Map použití režimu pro svislý posuvník**. Šířka v můžete **zdroj přehled** rozevíracího seznamu.
+Posuvník má dva režimy: panelu režim a režim mapování.
 
-    Zde je, jak vypadá v příkladu vyhledávání map režim je na a šířka je nastavena na **střední**:
+### <a name="bar-mode"></a>Panel režimu
 
-    ![Posuvník v režimu mapy](../ide/media/enhancedscrollbar.png "EnhancedScrollbar")
+*Panel režimu* zobrazí poznámka ukazatelů posuvníku. Kliknutím na posuvník posune stránku nahoru nebo dolů, ale nepřejde do tohoto umístění v souboru.
 
-2. V režimu mapy, chcete-li verze Preview kódu při přesunutí ukazatele nahoru a dolů posuvníku, vyberte **zobrazit náhled popisek** možnost. Zde je, jak vypadá:
+### <a name="map-mode"></a>Režim mapování
 
-    ![Posuvník s popisek](../ide/media/enhancedscrollbarsearchtooltip.png "EnhancedScrollbarSearchTooltip")
+V *režim mapování*po kliknutí na umístění na posuvník, kurzor přejde do tohoto umístění v souboru namísto pouze posouvání navýšení nebo snížení kapacity na stránce. Řádky kódu jsou uvedeny v miniaturní posuvníku. Můžete zvolit, jak široké sloupce mapy je tak, že vyberete hodnotu v **hled zdrojů**. Pokud chcete povolit větší náhled kódu při přesunutí ukazatele myši na mapě, vyberte **zobrazení popisu tlačítka ve verzi Preview** možnost. Sbalených oblasti jinak jsou zobrazena šedě a rozbalte při dvojitém kliknutí na ně.
 
-    Pokud chcete zachovat režimu mapy posouvání chování a popisek preview, ale nechcete, aby zobrazíte Přehled zdrojového kódu, můžete nastavit **zdroj přehled** k **vypnout**.
+> [!TIP]
+> Můžete vypnout zobrazení miniaturní kódu v režimu mapování tak, že nastavíte **hled zdrojů** k **vypnout**. Pokud **zobrazení popisu tlačítka ve verzi Preview** je vybrané, se stále zobrazuje náhled kódu na tomto místě při najetí na ukazatel na posuvníku a kurzor stále přejde do tohoto umístění v souboru po kliknutí na.
 
-## <a name="see-also"></a>Viz také
+Následující obrázek ukazuje příklad prohledávání, když je zapnut režim mapování a je nastavena šířku na **střední**:
 
-[Psaní kódu v editoru](../ide/writing-code-in-the-code-and-text-editor.md)
+![Visual Studio posuvník v režimu mapy](../ide/media/enhancedscrollbar.png)
+
+Na následujícím obrázku **zobrazení popisu tlačítka ve verzi Preview** možnost:
+
+![Visual Studio posuvník s popisem](../ide/media/enhancedscrollbarsearchtooltip.png)
+
+## <a name="see-also"></a>Viz také:
+
+- [Funkce editoru kódu](../ide/writing-code-in-the-code-and-text-editor.md)

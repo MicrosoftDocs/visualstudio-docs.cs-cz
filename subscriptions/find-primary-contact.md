@@ -1,37 +1,37 @@
 ---
-title: Visual Studio odběry - vyhledání primárního kontaktu | Microsoft Docs
+title: Předplatná sady Visual Studio – vyhledání primární kontakt | Dokumentace Microsoftu
 author: evanwindom
 ms.author: jaunger
 manager: evelynp
 ms.date: 01/22/2018
 ms.topic: Get-Started-Article
-description: Visual Studio odběry - vyhledání primárního kontaktu
+description: Předplatná sady Visual Studio – vyhledání adresu primárního kontaktu
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: a50fef244d7b656271adf36544166c9f8256c1ae
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: 2a9108009e497a4685659cdc904e77352f94365a
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39637978"
 ---
-# <a name="locating-the-primary-contact-associated-with-visual-studio-subscriptions"></a>Vyhledání primárního kontaktu přidružené předplatné sady Visual Studio
+# <a name="locating-the-primary-contact-associated-with-visual-studio-subscriptions"></a>Vyhledání primární kontakt přidružené k předplatným sady Visual Studio
 
-K dokončení registrace vaší organizace na portálu pro správu předplatných, budete potřebovat k identifikaci primárního kontaktu.  Tento článek vysvětluje, kde lze najít tyto informace.
+K dokončení registrace vaší organizace na portál pro správu předplatného, budete muset identifikovat váš primární kontakt.  Tento článek vysvětluje, kde najít tyto informace.
 
-1. Můžete vyhledat primárního kontaktu společnosti Volume Licensing Service Center v: https://www.Microsoft.com/licensing/servicecenter a klikněte na tlačítko **přihlásit**.
+1. Vyhledejte váš primární kontakt, navštivte Volume Licensing Service Center na: https://www.Microsoft.com/licensing/servicecenter a klikněte na tlačítko **Sign In**.
 
-    ![Přihlaste se k webu VLSC](_img/locate-primary-contact/vlsc-sign-in.png)
+2. Na kartě licence vyberte **Přehled vztahů** v rozevírací nabídce.
+    > [!div class="mx-imgBorder"]
+    > ![Vyberte vztah](_img/locate-primary-contact/vlsc-relationship.png)
+   
+3. Vyberte příslušnou smlouvou pro číslo. 
+    > [!div class="mx-imgBorder"]
+    > ![Zvolit smlouvu](_img/locate-primary-contact/vlsc-agreement.png)
 
-2. Na kartě licencí, vyberte **vztah Souhrn** v rozevírací nabídce.
+4. Vyberte **kontakty** kartu.  Primární kontakt bude uveden v seznamu kontaktů přidružený ke smlouvě. 
+    > [!div class="mx-imgBorder"]
+    > ![Zvolte kontakty](_img/locate-primary-contact/vlsc-contacts.png)
 
-    ![Vyberte vztah](_img/locate-primary-contact/vlsc-relationship.png)
 
-3. Vyberte číslo příslušné smlouvy. 
-
-    ![Zvolte smlouvu](_img/locate-primary-contact/vlsc-agreement.png)
-
-4. Vyberte **kontakty** kartě.  Primárního kontaktu se objeví v seznamu kontaktů přidružené k této smlouvy. 
-
-    ![Zvolte kontakty](_img/locate-primary-contact/vlsc-contacts.png)
- 

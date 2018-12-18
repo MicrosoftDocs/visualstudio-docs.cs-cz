@@ -1,6 +1,6 @@
 ---
-title: Průvodce začátečníka vzorkování procesoru v sadě Visual Studio | Microsoft Docs
-ms.custom: H1Hack27Feb2017
+title: Průvodce vzorkováním procesoru pro začátečníky
+ms.custom: seodec18
 ms.date: 02/27/2017
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -16,116 +16,117 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ee85f9946e16b0ecaafa196e1b197304ccde3bd9
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 29ef34a15591a87b7eeb70e204f58329c8c55838
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53066389"
 ---
-# <a name="beginners-guide-to-cpu-sampling"></a>Průvodce začátečníka procesoru vzorkování
-Nástroje pro profilaci sady Visual Studio můžete použít k analýze problémy s výkonem v aplikaci. Tento postup ukazuje, jak používat **vzorkování** data.
+# <a name="beginners-guide-to-cpu-sampling"></a>Průvodce vzorkováním procesoru pro začátečníky
+Nástroje pro profilaci v sadě Visual Studio můžete použít k analýze problémů s výkonem aplikace. Tento postup vám ukáže, jak používat data **Vzorkování**.
 
 > [!NOTE]
->  Doporučujeme použít [využití procesoru](../profiling/beginners-guide-to-performance-profiling.md) nástroje v okně diagnostické nástroje místo starší verze nástroje procesoru vzorkování, pokud budete potřebovat speciální funkce jako je podpora instrumentace.
+>  Doporučujeme použít raději nástroj [Využití procesoru](../profiling/beginners-guide-to-performance-profiling.md) v okně Diagnostické nástroje než starší nástroj Vzorkování procesoru, pokud nepotřebujete specializované funkce, jako je například podpora instrumentace.
   
- **Vzorkování** je statistické profilování metoda, která ukazuje, pracovní funkce, které provádějí většinu režimu uživatele v aplikaci. Vzorkování je vhodná k zjištění oblastí zrychlit aplikace.  
+ **Vzorkování** je metoda statistické profilace, která vám předvede funkce provádějící nejvíce práce uživatelského režimu v aplikaci. Vzorkování je vhodným místem, odkud můžete začít vyhledávat oblasti aplikace, které můžete zrychlit.  
   
- V určitých intervalech **vzorkování** metoda shromažďuje informace o funkcích, které jsou prováděny ve vaší aplikaci. Po dokončení profilace spustit, **Souhrn** zobrazení profilace data zobrazují stromu Nejaktivnější volání funkce volá **aktivní trase**, kde byla provedena většinu práce v aplikaci. Zobrazení také uvádí funkce, které byly provádění většiny jednotlivých pracovních a nabízí časová osa grafu, které můžete používat a zaměřit se na konkrétní segmenty relace vzorkování.  
+ V určených intervalech metoda **Vzorkování** shromažďuje informace o funkcích, které se spouštějí ve vaší aplikaci. Po skončení běhu profilace se v zobrazení **Souhrn** objeví strom volání nejaktivnějších funkcí označovaný jako **Kritická cesta**, kde se prováděla většina práce v aplikaci. Zobrazení také uvádí seznam funkcí, které provedly nejvíce individuální práce, a poskytuje graf s časovou osou, který můžete použít k řešení konkrétních segmentů relace vzorkování.  
   
- Pokud **vzorkování** nezískáte data, která budete potřebovat, ostatní profilování kolekce metody nástroje poskytují různé druhy informace, které mohou být užitečné pro vás. Další informace o těchto dalších metod najdete v tématu [postupy: výběr metod kolekcí](../profiling/how-to-choose-collection-methods.md).  
+ Pokud potřebná data nezískáte pomocí **vzorkování**, můžete v nástrojích pro profilaci použít jiné metody shromažďování, které poskytují různé druhy užitečných informací. Další informace o těchto metodách najdete v článku s [postupy při výběru metod shromažďování](../profiling/how-to-choose-collection-methods.md).  
   
 > [!TIP]
->  Pokud kód, který volá funkce systému Windows, profilu, měli byste si ověřit, že máte nejnovější soubory PDB. Bez těchto souborů v zobrazeních sestav zobrazí seznam názvů funkce Windows, které jsou jako nesrozumitelné a vzhledem k. Další informace o tom, abyste měli jistotu, že máte soubory, které potřebujete, najdete v části [postupy: odkaz na informace o symbolech Windows](../profiling/how-to-reference-windows-symbol-information.md).  
+>  Pokud profilujete kód, který volá funkce Windows, by měl Ujistěte se, že máte nejnovější. *pdb* soubory. Bez těchto souborů se v zobrazeních sestav zobrazí seznam funkcí Windows, jejichž názvy jsou nesrozumitelné a obtížně pochopitelné. Další informace o tom, jak zjistit, že máte potřebné soubory, najdete v článku věnovaném [referenčním informacím o symbolech Windows](../profiling/how-to-reference-windows-symbol-information.md).  
   
-##  <a name="Step1"></a> Vytvoření a spuštění výkonnostní relace  
- Pokud chcete získat data, která potřebujete analyzovat, musíte nejprve vytvořit relaci výkonu a spusťte relaci. **Průvodce výkonu** umožňuje proveďte obojí.  
+## <a name="create-and-run-a-performance-session"></a>Vytvoření a spuštění relace výkonu  
+ Abyste získali data potřebná k analýze, musíte nejprve vytvořit výkonnostní relaci a potom ji spustit. S oběma úlohami vám pomůže **Průvodce výkonu**.  
   
- Pokud nejsou profilace aplikace na ploše systému Windows nebo aplikace ASP.NET, musí používat jednu z dalších nástrojů pro profilaci. V tématu [nástroje pro profilaci](../profiling/profiling-tools.md).  
+ Pokud neprofilujete desktopovou aplikaci pro Windows ani aplikaci pro ASP.NET, musíte použít některý z jiných nástrojů pro profilaci. Zobrazit [nejdřív se podívejte na nástroje pro profilaci](../profiling/profiling-feature-tour.md).  
   
-#### <a name="to-create-and-run-a-performance-session"></a>Vytvořit a spustit výkonnostní relace  
+#### <a name="to-create-and-run-a-performance-session"></a>Vytvoření a spuštění výkonnostní relace  
   
-1.  Otevřete řešení v sadě Visual Studio. Nastavte konfiguraci na verzi. (Najít **konfigurace řešení** na panelu nástrojů, který je nastaven na **ladění** ve výchozím nastavení. Změňte ho na **verze**.)  
+1.  Otevřete řešení v sadě Visual Studio. Nastavte konfiguraci na Verze. (Na panelu nástrojů vyhledejte pole **Konfigurace řešení**, které je ve výchozím nastavení nastaveno na **Ladit**. Změňte nastavení na **Verze**.)  
   
     > [!IMPORTANT]
-    >  Pokud si nejste správce v počítači, který používáte, byste měli při používání profileru spustit Visual Studio jako správce. (Klikněte pravým tlačítkem myši na ikonu aplikace Visual Studio a pak klikněte na **spustit jako správce**.  
+    >  Pokud nejste správcem na počítači, který používáte, musíte při použití profileru spustit Visual Studio jako správce. (Pravým tlačítkem myši klikněte na ikonu aplikace Visual Studio a potom klikněte na **Spustit jako správce**.  
   
-2.  Na **ladění** nabídce vyberte možnost **profileru**a potom vyberte **výkonu profileru**.  
+2.  V nabídce **Ladit** vyberte **Profiler** a potom **Profiler výkonu**.  
   
-3.  Zkontrolujte **Průvodce výkonu** a klikněte na **spustit**.  
+3.  Zaškrtněte políčko **Průvodce výkonu** a klikněte na **Spustit**.  
   
-4.  Zkontrolujte **vzorkování procesoru (doporučeno)** možnost a klikněte na tlačítko **Dokončit**.  
+4.  Zaškrtněte políčko **Vzorkování procesoru (doporučeno)** a klikněte na **Dokončit**.  
   
-5.  Spuštění aplikace a profileru začne shromažďovat data.  
+5.  Aplikace se spustí a profiler začne shromažďovat data.  
   
-6.  Výkonu funkce, které mohou obsahovat problémy s výkonem.  
+6.  Spusťte funkci, která by mohla obsahovat problémy s výkonem.  
   
-7.  Zavře se aplikace, stejně jako obvykle.  
+7.  Aplikaci zavřete jako obvykle.  
   
-     Po spuštění aplikace, **Souhrn** v hlavním okně Visual Studio se zobrazí zobrazení data profilování a ikonu pro novou relaci v **prohlížeč výkonu** okno.  
+     Po spuštění a ukončení aplikace se zobrazení **Souhrn** dat profilace zobrazí v hlavním okně sady Visual Studio a ikona nové relace se zobrazí v okně **Prohlížeč výkonu**.  
   
-##  <a name="Step2"></a> Krok 2: Analýza dat vzorkování  
- Po dokončení spuštění výkonnostní relace **Souhrn** profilování sestavy se zobrazí v hlavním okně v sadě Visual Studio.  
+## <a name="step-2-analyze-sampling-data"></a>Krok 2: Analýza dat vzorkování  
+ Po spuštění a ukončení výkonnostní relace se zobrazení **Souhrn** sestavy profilace objeví v hlavním okně v sadě Visual Studio.  
   
- Doporučujeme začít analýza dat tak, že prověří **aktivní trase,** pak seznam funkcí, které jsou nejvíce pracuje a nakonec pomocí zaměřené na jiných funkcí s použitím **časová osa Souhrn** . Můžete také zobrazit profilování návrhy a upozornění v **seznam chyb** okno.  
+ Doporučujeme začít analýzu dat tím, že pomocí **časové osy v souhrnu** zkontrolujete **kritickou cestu**, potom seznam nejvytíženějších funkcí a nakonec se zaměříte na ostatní funkce. V okně **Seznam chyb** se můžete podívat také na návrhy a upozornění týkající se profilace.  
   
- Upozorňujeme, že metoda vzorkování nemusí získáte informace, které potřebujete. Například ukázky se shromažďují jenom v případě, že aplikace je provádění kódu v režimu uživatele. Některé funkce, jako jsou vstupní a výstupní operace, není proto zachycenou vzorkování. Nástroje pro profilaci poskytují několik metod kolekce, které vám umožní zaměřit se na důležitá data, můžete povolit. Další informace o dalších metodách v tématu [postupy: výběr metod kolekcí](../profiling/how-to-choose-collection-methods.md).  
+ Nezapomeňte, že metoda vzorkování vám nemusí poskytnout informace, které potřebujete. Vzorky se například shromažďují pouze v případě, že aplikace spouští kód uživatelského režimu. Z tohoto důvodu vzorkování nezachytává některé funkce, jako jsou operace vstupu a výstupu. Nástroje pro profilaci poskytují několik metod shromažďování, které vám umožňují zaměřit se na důležitá data. Další informace o jiných metodách najdete v článku s [postupy při výběru metod shromažďování](../profiling/how-to-choose-collection-methods.md).  
   
- Každou číslem oblast na obrázku má vztah k krok v postupu.  
+ Každé číslo na následujícím obrázku se týká některého kroku v postupu.  
   
- ![Zobrazení souhrnné sestavy pro vzorkování](../profiling/media/summary_sampling.png "Summary_Sampling")  
+ ![Zobrazení souhrnné sestavy pro vzorkování](../profiling/media/summary_sampling.png "Summar_Sampling")  
   
-#### <a name="to-analyze-sampling-data"></a>K analýze dat vzorkování  
+#### <a name="to-analyze-sampling-data"></a>Analýza dat vzorkování  
   
-1.  V **Souhrn** zobrazení, **aktivní trase** ukazuje větev stromu volání aplikace s nejvyšší ukázky (včetně). Je to cesta ke spuštění, který byl nejvíce aktivní, pokud data nebyla shromážděna. Vysoká (včetně). hodnoty můžou značit, že algoritmus, který generuje stromu volání lze optimalizovat. Najít funkce ve vašem kódu, který je nejnižší v cestě. Všimněte si, že cesta může také obsahovat funkce systému nebo funkce v modulech externí.  
+1.  V zobrazení **Souhrn** se v části **Kritická cesta** zobrazí větev stromu volání v aplikaci s nejvyšším počtem inkluzivních vzorků. Jedná se o cestu provedení, která byla při shromažďování dat nejaktivnější. Vysoké hodnoty u inkluzivních vzorků označují, že algoritmus generující strom volání je možné optimalizovat. Vyhledejte v kódu funkci, která se v cestě nachází na nejnižším místě. Všimněte si, že cesta může zahrnovat také systémové funkce nebo funkce v externích modulech.  
   
-     ![Profiler Hot Path](../profiling/media/profiler_hotpath.png "Profiler_HotPath")  
+     ![Kritická cesta profileru](../profiling/media/profiler_hotpath.png "Profiler_HotPath")  
   
-    1.  **Včetně ukázky** určit, kolik práce se provádí funkce a všechny funkce je volána. Vysoké počty (včetně). přejděte na funkce, které jsou nejnákladnější celkové.  
+    1.  **Inkluzivní vzorky** označují, kolik práce daná funkce vykonala, a všechny funkce, které volala. Vysoký počet inkluzivních vzorků ukazuje na funkce, které jsou celkově nejnáročnější.  
   
-    2.  **Výhradní ukázky** určit, kolik práce bylo provedeno pomocí kódu v tělo funkce, s výjimkou podle funkce, které byly volány. Vysoké počty výhradní může znamenat přetížení v rámci funkce sám sebe.  
+    2.  **Výhradní vzorky** označují, kolik práce vykonal daný kód v těle funkce, vyjma práce vykonané funkcemi, které volal. Vysoký počet výhradních vzorků může signalizovat kritické místo v samotné funkci.  
   
-2.  Klikněte na název funkce zobrazíte **podrobností funkce** zobrazení data profilování. **Podrobností funkce** zobrazení poskytuje grafické zobrazení profilace data pro vybrané funkce, všechny funkce, které volá této funkce a všechny funkce, které byly volány vybrané funkce.  
+2.  Kliknutím na název funkce otevřete zobrazení **Podrobnosti funkce** dat profilace. Zobrazení **Podrobnosti funkce** znázorňuje grafické zobrazení dat profilace pro vybranou funkci a zobrazuje všechny funkce, které volaly danou funkci, a všechny funkce, které volala vybraná funkce.  
   
-    -   Velikost bloků volající a volaná funkce představují relativní frekvenci funkce volá nebo byla volána.  
+    -   Velikost bloků volajících a volaných funkcí představuje relativní četnost, s jakou funkce volaly nebo byly volány.  
   
-    -   Kliknutím na název volání nebo volal funkci chcete-li funkci vybrané zobrazení podrobností funkce.  
+    -   Můžete kliknout na název volající nebo volané funkce a nastavit ji jako vybranou funkci v zobrazení Podrobnosti funkce.  
   
-    -   Ve spodní části podokna **podrobností funkce** systém windows zobrazí samotný kód funkce. Pokud kód zkontrolovat a najít příležitost k optimalizaci jeho výkon, klikněte na název zdrojového souboru k otevření souboru v editoru Visual Studio.  
+    -   Dolní podokno v okně **Podrobnosti funkce** zobrazuje samotný kód funkce. Pokud prohlížíte kód a narazíte na možnost optimalizace jeho výkonu, klikněte na název zdrojového souboru a otevřete ho v editoru sady Visual Studio.  
   
-3.  Chcete-li pokračovat analýzy, vraťte se k **Souhrn** zobrazení tak, že vyberete **Souhrn** z rozevíracího seznamu zobrazení. Potom si prohlédněte funkcí v **nejvíce jednotlivých pracuje funkce**. Tento seznam obsahuje funkce s nejvyšší výhradní ukázky. Kód v těle funkce těchto funkcí provést velice pracné je možné ji optimalizovat. K další analýze určitou funkci, klikněte na název funkce zobrazte jej v **podrobností funkce** zobrazení.  
+3.  Chcete-li pokračovat v analýze, vraťte se na **Souhrn** zobrazení tak, že vyberete **Souhrn** z **zobrazení** rozevíracího seznamu. Potom si prohlédněte funkce v části **Funkce provádějící nejvíce individuální práce**. V seznamu se zobrazují funkce s nejvyšším počtem výhradních vzorků. Kód v těle těchto funkcí provedl významnou část práce a je možné, že ho budete moci optimalizovat. Pokud chcete určitou funkci dále analyzovat, klikněte na její název, aby se otevřela v zobrazení **Podrobnosti funkce**.  
   
-     ![Seznam funkcí, které nejvíce pracuje](../profiling/media/functions_mostwork.png "Functions_MostWork")  
+     ![Seznam funkcí, které provádějí nejvíce práce](../profiling/media/functions_mostwork.png "Functions_MostWork")  
   
-     Pokračujte šetření z profilace spustit je můžete opakovat analýzu segment data profilování pomocí časové osy v **Souhrn** zobrazení tak, aby zobrazovalo **aktivní trase** a **funkce Většina jednotlivých pracuje** z vybraného segmentu. Například zaměřené na menší ve špičce v časové ose může odhalit nákladné volání stromy a funkce, které nejsou uvedené v analýzu celého profilace spustit.  
+     Pokud chcete běh profilace zkoumat dále, můžete znovu analyzovat segment dat profilace pomocí časové osy v zobrazení **Souhrn**. V tomto zobrazení si můžete prohlédnout **Kritickou cestu** a **Funkce provádějící nejvíce individuální práce** u vybraného segmentu. Když se například zaměříte na menší špičku na časové ose, můžete odhalit náročné stromy volání a funkce, které se nezobrazily v analýze celkového běhu profilace.  
   
-     Pokud chcete opakovat analýzu segment, vyberte segment uvnitř pole Časová osa souhrn a pak klikněte na tlačítko **filtrovat podle výběru**.  
+     Chcete-li opakovat analýzu segmentu, vyberte segment v **časová osa souhrnu** pole a potom klikněte na tlačítko **filtrovat podle výběru**.  
   
-     ![Časová osa zobrazení se souhrnnými informacemi výkonu](../profiling/media/performancesummary.png "PerformanceSummary")  
+     ![Časová osa zobrazení souhrnných informací o výkonu](../profiling/media/performancesummary.png "PerformanceSummary")  
   
-4.  Profileru také používá sada pravidel, zjistíte, jak zlepšit profilování spustit a identifikovat problémy s výkonem možné. Pokud je nalezen problém, zobrazí se upozornění v **seznam chyb** okno. Chcete-li otevřít **seznam chyb** okno na **zobrazení** nabídce klikněte na tlačítko **seznam chyb**.  
+4.  Profiler také prostřednictvím sady pravidel navrhuje způsoby vylepšení běhu profilace a identifikuje možné problémy s výkonem. Pokud najde problém, zobrazí upozornění v okně **Seznam chyb**. Pokud chcete zobrazit okno **Seznam chyb**, klikněte v nabídce **Zobrazit** na **Seznam chyb**.  
   
-    -   Chcete-li zobrazit funkce, která vyvolá upozornění **podrobností funkce** klikněte dvakrát na upozornění.  
+    -   Pokud se chcete v zobrazení **Podrobnosti funkce** podívat na funkci, která upozornění vyvolala, poklikejte na upozornění.  
   
-    -   Chcete-li zobrazit podrobné informace o upozornění, klikněte pravým tlačítkem na chybu a pak klikněte na **zobrazit nápovědu k chybě**  
+    -   Podrobné informace o upozornění zobrazíte kliknutím pravého tlačítka myši na chybu a potom kliknutím na **Zobrazit nápovědu chyby**.  
   
-##  <a name="Step3"></a> Krok 3: Zkontrolovat kód a znovu spusťte relaci  
- Po najít a optimalizovat jednu nebo více funkcí, můžete opakovat profilování spustit a porovnávání dat rozdíl, která provedla změny na výkon vaší aplikace.  
+## <a name="step-3-revise-code-and-rerun-a-session"></a>Krok 3: Kontrola kódu a opětovné spuštění relace  
+ Po vyhledání a optimalizaci jedné nebo více funkcí můžete běh profilace zopakovat a porovnat data, abyste zjistili, jaký vliv měly změny na výkon aplikace.  
   
-#### <a name="to-revise-code-and-rerun-the-profiler"></a>Chcete-li zkontrolovat kód a znovu spusťte profileru  
+#### <a name="to-revise-code-and-rerun-the-profiler"></a>Revize kódu a opakované spuštění profileru  
   
-1.  Upravit svůj kód.  
+1.  Změňte kód.  
   
-2.  Otevřete **prohlížeč výkonu**na **ladění** nabídce klikněte na tlačítko **profileru**, pak **prohlížeč výkonu** a pak klikněte na **Zobrazit prohlížeč výkonu**.  
+2.  **Prohlížeč výkonu** otevřete tak, že v nabídce **Ladit** kliknete na **Profiler**, dále kliknete na **Prohlížeč výkonu** a nakonec na **Zobrazit Prohlížeč výkonu**.  
   
-3.  V **prohlížeč výkonu**, klikněte pravým tlačítkem na relace, který chcete znovu spustit a pak klikněte na tlačítko **spouštění profilování.**  
+3.  V **Prohlížeči výkonu** klikněte pravým tlačítkem myši na relaci, kterou chcete spustit znovu, a potom klikněte na **Spustit s profilací**.  
   
-4.  Po je znovu spustit relaci, je do jiného souboru dat **sestavy** složku pro relaci v **prohlížeč výkonu**. Vyberte obě původní a nové profilace data, klikněte pravým tlačítkem na výběr a pak klikněte na **porovnat sestavy pro zvýšení výkonu**.  
+4.  Po dokončení opakovaného běhu relace se v **Prohlížeči výkonu** do složky *Sestavy* přidá další datový soubor pro danou relaci. Vyberte původní i nová data profilace, klikněte pravým tlačítkem myši na výběr a potom klikněte na **Porovnat sestavy výkonu**.  
   
-     Otevře se nové okno sestavy, zobrazení výsledků porovnání. Další informace o tom, jak použít zobrazení porovnání najdete v tématu [postupy: porovnávání datových souborů výkonu](../profiling/how-to-compare-performance-data-files.md).
+     Otevře se nové okno sestavy s výsledky porovnání. Další informace o použití zobrazení pro porovnání najdete v článku s [postupy porovnání datových souborů výkonu](../profiling/how-to-compare-performance-data-files.md).
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Prohlížeč výkonu](../profiling/performance-explorer.md)   
  [Začínáme](../profiling/getting-started-with-performance-tools.md)   
  [Přehledy](../profiling/overviews-performance-tools.md)  
  [Profilace v sadě Visual Studio](../profiling/index.md)  
- [Prohlídka funkce profilace](../profiling/profiling-feature-tour.md)
+ [Nejdřív se podívejte na nástroje pro profilaci](../profiling/profiling-feature-tour.md)

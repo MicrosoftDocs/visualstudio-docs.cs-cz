@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_count – | Microsoft Docs
+title: Idiasymbol::get_count – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f4b65c043faaadacd4a272b441d6902e23d7612
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 56382811c88f865b45f3e027ced6a78d0d7b80ff
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49899835"
 ---
 # <a name="idiasymbolgetcount"></a>IDiaSymbol::get_count
-Načte počet položek v seznamu nebo pole.  
+Získá počet položek v seznamu nebo pole.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,7 +37,7 @@ HRESULT get_count (
  [out] Vrátí počet položek v seznamu nebo pole.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` nebo chybový kód.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
 >  Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
@@ -45,7 +46,7 @@ HRESULT get_count (
   
 |Požadavek|Popis|  
 |-----------------|-----------------|  
-|Hlavičky:|dia2.h|  
+|Záhlaví:|dia2.h|  
 |Verze:|V7.0 DIA SDK|  
   
 ## <a name="see-also"></a>Viz také  

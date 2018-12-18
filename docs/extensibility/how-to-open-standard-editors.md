@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: otevření standardní editory | Microsoft Docs'
+title: 'Postupy: otevření standardních editorů | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,46 +14,47 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2adcdc0f2d05061c412c5233a16e21a1b9fb252a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2e740cdbb04a9b20ddb5a9d0465434333dd29264
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39639380"
 ---
-# <a name="how-to-open-standard-editors"></a>Postupy: otevření standardní editory
-Když otevřete standardního editoru, umožníte IDE určit standardní editor pro určený typ souboru, místo zadání editor projektu specifické pro soubor.  
+# <a name="how-to-open-standard-editors"></a>Postupy: otevření standardních editorů
+Při otevření standardní editor necháte rozhraní IDE, určení standardní editor pro určený typ souboru, místo určení editoru specifické pro projekt k souboru.  
   
- Proveďte následující postup k implementaci <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.OpenItem%2A> metoda. Otevře se soubor projektu v standardního editoru.  
+ Proveďte následující postup k implementaci <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.OpenItem%2A> metody. Otevře se soubor projektu v standardní editor.  
   
-### <a name="to-implement-the-openitem-method-with-a-standard-editor"></a>Implementovat metodu OpenItem s standardního editoru  
+## <a name="to-implement-the-openitem-method-with-a-standard-editor"></a>O implementaci metody OpenItem standardní Editor  
   
-1.  Volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable> (`RDT_EditLock`) k určení, zda soubor dokumentu data objektu je již otevřen.  
+1.  Volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable> (`RDT_EditLock`) k určení, zda soubor dokumentu datový objekt je již otevřen.  
   
-2.  Pokud soubor je již spuštěna, resurface soubor voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.IsDocumentOpen%2A> metoda, zadáte třeba hodnotu `IDO_ActivateIfOpen` pro `grfIDO` parametr.  
+2.  Pokud soubor již je otevřen, resurface soubor voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.IsDocumentOpen%2A> metodu, zadáte třeba hodnotu `IDO_ActivateIfOpen` pro `grfIDO` parametru.  
   
-     Pokud je otevřený soubor a na jiný projekt než volajícím projekt vlastní dokument, projekt obdrží upozornění, které je editor otevíráte z jiného projektu. Okno souboru je pak prezentované.  
+     Pokud je soubor otevřen a dokumentu vlastní jiný projekt než volajícího projektu, váš projekt se zobrazí upozornění, editor otevírané je z jiného projektu. Pak se zobrazí okno souboru.  
   
-3.  Pokud dokument není otevřené nebo není ve spuštěné tabulce dokumentu volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> – metoda (`OSE_ChooseBestStdEditor`) otevřete standardního editoru souboru.  
+3.  Pokud dokument není otevřené nebo není v tabulce spuštěných dokumentů, zavolejte <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenStandardEditor%2A> – metoda (`OSE_ChooseBestStdEditor`) standardní editor pro tento soubor otevřít.  
   
-     Při volání metody rozhraní IDE provede následující úlohy:  
+     Při volání metody integrovaného vývojového prostředí provádí následující úlohy:  
   
-    1.  Prostředí IDE kontrol editorech / {guidEditorType} / rozšíření podklíč registru k určení které editor můžete otevřít soubor a má nejvyšší prioritu tohoto postupu.  
+    1.  Rozhraní IDE prohledá editorech / {guidEditorType} / rozšíření podklíč registru a určit, které editor můžete otevřít soubor a má nejvyšší prioritu, jak to udělat.  
   
-    2.  Po IDE určil, které editor můžete otevřít soubor, zavolá rozhraní IDE <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>. Editoru implementace této metody vrátí informace, které je požadované pro prostředí IDE volat <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.CreateDocumentWindow%2A> a lokality nově otevřené dokumentu.  
+    2.  Poté, co prostředí IDE určil, které editor můžete otevřít soubor, integrovaném vývojovém prostředí volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A>. Editoru implementace této metody vrátí informace, které jsou požadovány pro integrované vývojové prostředí pro volání <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.CreateDocumentWindow%2A> a lokality nově otevřeném dokumentu.  
   
-    3.  Nakonec IDE načte dokument pomocí rozhraní obvyklé trvalost <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2>.  
+    3.  A konečně, rozhraní IDE načte dokument pomocí rozhraní obvykle trvalost <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2>.  
   
-    4.  Pokud IDE dříve určil, že je k dispozici hierarchie nebo hierarchie položek, zavolá rozhraní IDE <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.GetItemContext%2A> metoda na projektu získat místní úrovni projektu <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> ukazatel na předat zpět s <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.CreateDocumentWindow%2A> volání metody.  
+    4.  Pokud rozhraní IDE dříve určil, že je k dispozici na úrovni hierarchie nebo hierarchie položek, zavolá rozhraní IDE <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.GetItemContext%2A> metodu na projekt, abyste získali kontext projektu <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> ukazatel na předávání zpátky pomocí <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShell.CreateDocumentWindow%2A> volání metody.  
   
-4.  Vrátí <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> ukazatel na IDE při volání rozhraní IDE <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.GetItemContext%2A> v projektu, pokud chcete umožnit kontext editor get ze svého projektu.  
+4.  Vrátí <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> ukazatel na rozhraní IDE při volání rozhraní IDE <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.GetItemContext%2A> na váš projekt, pokud chcete, aby kontextu editoru get z projektu.  
   
-     Provedením tohoto kroku umožňuje další služby v rámci nabídky projektu do editoru.  
+     Provedením tohoto kroku umožňuje projektu nabídky další služby do editoru.  
   
-     Pokud dokument zobrazení nebo objekt zobrazení dokumentu byl úspěšně umístěný v rámec okna, objekt je inicializován s jeho data voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.LoadDocData%2A>.  
+     Pokud zobrazení dokumentu nebo objekt zobrazení dokumentu byl úspěšně umístěn v rámci okna, objekt je inicializován s jeho daty voláním <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2.LoadDocData%2A>.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider>   
- [Otevření a uložení položky projektu](../extensibility/internals/opening-and-saving-project-items.md)   
- [Postupy: otevření projektu konkrétní editory](../extensibility/how-to-open-project-specific-editors.md)   
- [Postupy: otevření editory pro otevřené dokumenty](../extensibility/how-to-open-editors-for-open-documents.md)   
+ [Otevření a uložení položek projektu](../extensibility/internals/opening-and-saving-project-items.md)   
+ [Postupy: otevření editoru pro konkrétní projekt](../extensibility/how-to-open-project-specific-editors.md)   
+ [Postupy: Otevření editorů pro otevřené dokumenty](../extensibility/how-to-open-editors-for-open-documents.md)   
  [Zobrazení souborů pomocí příkazu Otevřít soubor](../extensibility/internals/displaying-files-by-using-the-open-file-command.md)

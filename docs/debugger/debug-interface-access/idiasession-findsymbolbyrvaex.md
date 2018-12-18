@@ -1,5 +1,5 @@
 ---
-title: Idiasession::findsymbolbyrvaex – | Microsoft Docs
+title: Idiasession::findsymbolbyrvaex – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 809598b5203878b70b57a061b75bc60d4dc84bac
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: d7dc9cfb435da1a4204c8a7ed23e398478aef0ea
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49832430"
 ---
 # <a name="idiasessionfindsymbolbyrvaex"></a>IDiaSession::findSymbolByRVAEx
-Načte typ zadaný symbol, který obsahuje, nebo je nejblíže k zadaný relativní virtuální adresy (RVA) a posun.  
+Načte typ zadaný symbol, který obsahuje, nebo je nejblíže zadanou relativní virtuální adresu (RVA) a posun.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,19 +37,19 @@ HRESULT findSymbolByRVAEx (
   
 #### <a name="parameters"></a>Parametry  
  `rva`  
- [v] Určuje RVA.  
+ [in] Určuje, adresa RVA.  
   
  `symtag`  
- [v] Typ symbolu, která se má najít. Z hodnot, která [SymTagEnum – výčet](../../debugger/debug-interface-access/symtagenum.md) výčtu.  
+ [in] Typ symbolu, která se má najít. Hodnoty pocházejí ze [symtagenum – výčet](../../debugger/debug-interface-access/symtagenum.md) výčtu.  
   
  `ppSymbol`  
- [out] Vrátí [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) načíst objekt, který reprezentuje symbolu.  
+ [out] Vrátí [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) načíst objekt představující symbol.  
   
  `displacement`  
- [out] Vrátí hodnotu udávající, posun vůči relativní virtuální adresu určenou v `rva`.  
+ [out] Vrátí hodnotu určující, posun od relativní virtuální adresu zadanou v `rva`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
   

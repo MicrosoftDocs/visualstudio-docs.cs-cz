@@ -1,5 +1,5 @@
 ---
-title: IDiaStackWalkHelper::put_registerValue | Microsoft Docs
+title: IDiaStackWalkHelper::put_registerValue | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c094384fd4c1e01b28edcc809d58ab56b3bb225
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 81ac9c2366f97497fca4f7faa49facf2a3f819b9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49838930"
 ---
 # <a name="idiastackwalkhelperputregistervalue"></a>IDiaStackWalkHelper::put_registerValue
 Nastaví hodnotu registru.  
@@ -34,16 +35,16 @@ HRESULT put_registerValue (
   
 #### <a name="parameters"></a>Parametry  
  `index`  
- [v] Hodnota z [CV_HREG_e – výčet](../../debugger/debug-interface-access/cv-hreg-e.md) výčtu zadání registrace k zápisu.  
+ [in] Hodnota z [cv_hreg_e – výčet](../../debugger/debug-interface-access/cv-hreg-e.md) výčet určující k zápisu do registru.  
   
  `NewVal`  
- [v] Nová hodnota registru.  
+ [in] Nové hodnoty registru.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Bez ohledu velikost hodnoty by měla být uložena implementace pouze co registru obvykle obsahuje. Například 8bitový registr by obsahovat pouze na nejnižší 8-bits předané hodnoty.  
+ Bez ohledu na velikost hodnota by měla implementace ukládání co do registru obvykle obsahuje pouze. Například 8bitový registr, by uchovával jen nejnižší 8 bitů předané hodnoty.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaStackWalkHelper](../../debugger/debug-interface-access/idiastackwalkhelper.md)   

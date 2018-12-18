@@ -1,5 +1,5 @@
 ---
-title: IDebugPortEx2::LaunchSuspended | Microsoft Docs
+title: IDebugPortEx2::LaunchSuspended | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9f22afc50a1a2874d4853acbf9ff72cae622e790
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0a16241e406ea89b33c417bd873949979c3f6e82
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49882311"
 ---
 # <a name="idebugportex2launchsuspended"></a>IDebugPortEx2::LaunchSuspended
-Spouští spustitelný soubor.  
+Spustí spustitelný soubor.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,36 +55,36 @@ int LaunchSuspended(
   
 #### <a name="parameters"></a>Parametry  
  `pszExe`  
- [v] Název spustitelného souboru, který má být spuštěna. To může být úplná cesta nebo relativně k zadané v pracovní adresář `pszDir` parametr.  
+ [in] Název spustitelného souboru, která se má spustit. To může být úplná cesta nebo relativní vzhledem k zadaný v pracovní adresář `pszDir` parametru.  
   
  `pszArgs`  
- [v] Argumenty, které mají být předána do spustitelného souboru. Může mít hodnotu null, pokud žádné argumenty.  
+ [in] Argumenty k předání do spustitelného souboru. Může mít hodnotu null, pokud nejsou žádné argumenty.  
   
  `pszDir`  
- [v] Název pracovní adresář používá spustitelný soubor. Může mít hodnotu null, pokud není třeba žádné pracovní adresář.  
+ [in] Název pracovní adresář, který používá spustitelný soubor. Může mít hodnotu null, pokud je potřeba žádné pracovní adresář.  
   
  `bstrEnv`  
- [v] Blok prostředí řetězce ukončené hodnotou null, za nímž následuje další ukončovací hodnotu NULL.  
+ [in] Blok prostředí řetězec zakončený null, za nímž následuje další ukončovací znak NULL.  
   
  `hStdInput`  
- [v] Popisovač alternativní vstupního datového proudu. Může být 0, pokud přesměrování není potřeba.  
+ [in] Popisovač alternativní vstupní datový proud. Může být 0, pokud se nevyžaduje přesměrování.  
   
  `hStdOutput`  
- [v] Zpracování alternativní výstupního proudu. Může být 0, pokud přesměrování není potřeba.  
+ [in] Popisovač alternativní výstupní datový proud. Může být 0, pokud se nevyžaduje přesměrování.  
   
  `hStdError`  
- [v] Zpracování do výstupního datového proudu alternativní chyby. Může být 0, pokud přesměrování není potřeba.  
+ [in] Zpracování do výstupního datového proudu alternativní chyby. Může být 0, pokud se nevyžaduje přesměrování.  
   
  `ppPortProcess`  
- [out] Vrátí [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) objekt, který reprezentuje spuštěného procesu.  
+ [out] Vrátí [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) objekt, který reprezentuje spuštěn proces.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato metoda by měla spusťte proces, to je pozastavená a neběží. žádný kód. [ResumeProcess](../../../extensibility/debugger/reference/idebugportex2-resumeprocess.md) metoda je volána obnovit proces.  
+ Tato metoda by měla spustit proces tak, že je pozastavený a neběží žádný kód. [ResumeProcess](../../../extensibility/debugger/reference/idebugportex2-resumeprocess.md) metoda je volána, aby se proces obnovil.  
   
- Program lze spustit také z modul ladění. Podrobnosti najdete v tématu [spuštění programu](../../../extensibility/debugger/launching-a-program.md).  
+ Program můžete také spustit z ladicího stroje. Podrobnosti najdete v tématu [spuštění programu](../../../extensibility/debugger/launching-a-program.md).  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugPortEx2](../../../extensibility/debugger/reference/idebugportex2.md)   

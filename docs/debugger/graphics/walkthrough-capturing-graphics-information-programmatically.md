@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Zaznamenání grafických informací prostřednictvím kódu programu | Microsoft Docs'
+title: 'Návod: Zaznamenání grafických informací prostřednictvím kódu programu | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -9,45 +9,46 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a2caae8a3ef2a6342cf98094994d5ebccbe3275
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 659e370d664b3db2c3624d73164b4489cc2680a3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49933284"
 ---
 # <a name="walkthrough-capturing-graphics-information-programmatically"></a>Návod: Zaznamenání grafických informací prostřednictvím kódu
-Můžete použít [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] diagnostiky grafiky k prostřednictvím kódu programu zaznamenání grafických informací z aplikace Direct3D.  
+Můžete použít [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] diagnostiky grafiky k programově zachytit informace grafiky z aplikace Direct3D.  
   
- Zachytávání prostřednictvím kódu programu je užitečný ve scénářích, jako například:  
+ Programové zachytávání je užitečné v situacích, jako například:  
   
--   Začněte zachytávání prostřednictvím kódu programu, až aplikace grafiky nepoužívá swapchain existuje, například když vykresluje texturou.  
+-   Začne sběr dat prostřednictvím kódu programu grafiky aplikace nepoužívá swapchain k dispozici, například při vykreslení textury.  
   
--   Začněte zachytávání prostřednictvím kódu programu, až aplikace nemá vykreslení vůbec, například když používá DirectCompute k provádění výpočtů.  
+-   Začněte zachytávání prostřednictvím kódu programu, až vaši aplikaci nevykreslí vůbec, například když používá rozhraní DirectCompute k provádění výpočtů.  
   
--   Volání `CaptureCurrentFrame`při vykreslování problém je obtížné předvídat a zaznamenat v manuálním testováním, ale můžete pomocí informací o stavu aplikace za běhu prostřednictvím kódu programu předpovědět.  
+-   Volání `CaptureCurrentFrame`při problému vykreslování je obtížné odhadnout a zachycení při ručním testování, ale můžete programově předpovědět s použitím informací o stavu aplikace za běhu.  
   
-##  <a name="CaptureDX11_2"></a> Zachytávání prostřednictvím kódu programu v systému Windows 10  
- Tato část průvodce ukazuje zachytávání prostřednictvím kódu programu v aplikacích, které používají rozhraní API 11.2 DirectX ve Windows 10, která používá metodu robustní zachycení.
+##  <a name="CaptureDX11_2"></a> Programové zachytávání ve Windows 10  
+ Tato část návodu ukazuje zachytávání prostřednictvím kódu programu do aplikace, které používají rozhraní API pro rozhraní DirectX 11.2 ve Windows 10, která používá metodu robustní zachycení.
   
- V této části ukazuje, jak provést tyto úlohy:  
+ Tato část ukazuje, jak k provádění těchto úkolů:  
   
--   Příprava aplikace použít zachytávání prostřednictvím kódu programu  
+-   Příprava aplikace pro použití zachytávání prostřednictvím kódu programu  
   
--   Získání rozhraní IDXGraphicsAnalysis  
+-   Získávání rozhraní IDXGraphicsAnalysis  
   
 -   Zachycení informací grafiky  
   
 > [!NOTE]
->  Předchozích implementacích zachytávání prostřednictvím kódu programu spolehlivé vzdálených nástrojů pro Visual Studio pro [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nakonfigurovánu zachycení.
+>  Předchozích implementacích zachytávání prostřednictvím kódu programu spoléhat Remote Tools for Visual Studio pro [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] nakonfigurovánu zachycení.
   
-### <a name="preparing-your-app-to-use-programmatic-capture"></a>Příprava aplikace použít zachytávání prostřednictvím kódu programu  
- Pokud chcete použít zachytávání prostřednictvím kódu programu ve vaší aplikaci, musí obsahovat potřebné hlavičky. Tyto hlavičky jsou součástí Windows 10 SDK.  
+### <a name="preparing-your-app-to-use-programmatic-capture"></a>Příprava aplikace pro použití zachytávání prostřednictvím kódu programu  
+ Použití zachytávání prostřednictvím kódu programu ve vaší aplikaci, musí zahrnovat potřebné hlavičky. Tyto hlavičky jsou součástí sady Windows 10 SDK.  
   
-##### <a name="to-include-programmatic-capture-headers"></a>Chcete-li patří hlavičky zachytávání prostřednictvím kódu programu  
+##### <a name="to-include-programmatic-capture-headers"></a>Zahrnout záhlaví zachytávání prostřednictvím kódu programu  
   
--   Zdrojový soubor, ve které definujete rozhraní IDXGraphicsAnalysis zahrňte tyto hlavičky:  
+-   Obsahovat tato záhlaví ve zdrojovém souboru, ve kterém budete definovat IDXGraphicsAnalysis rozhraní:  
   
-    ```  
+    ```cpp
     #include <DXGItype.h>  
     #include <dxgi1_2.h>  
     #include <dxgi1_3.h>  
@@ -55,65 +56,65 @@ Můžete použít [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] d
     ```  
   
     > [!IMPORTANT]
-    >  Nezahrnovat záhlaví souboru vsgcapture.h—which podporuje zachytávání prostřednictvím kódu programu na Windows 8.0 a starší – provádět v vaší aplikace pro Windows 10 zachytávání prostřednictvím kódu programu. Tuto hlavičku není kompatibilní s DirectX 11.2. Pokud tento soubor je zahrnuto po zahrnuté hlavičku d3d11_2.h, vydá upozornění. Pokud vsgcapture.h je zahrnutý před d3d11_2.h, aplikace se nespustí.  
+    >  Záhlaví souboru vsgcapture.h—which podporuje zachytávání prostřednictvím kódu programu na Windows 8.0 a výše nezahrnují – provádět zachytávání prostřednictvím kódu programu do vaší aplikace pro Windows 10. Není kompatibilní s rozhraním DirectX 11.2 této hlavičky. Pokud tento soubor je zahrnuto po záhlaví d3d11_2.h je zahrnuta, kompilátor vyvolá upozornění. Pokud před d3d11_2.h je zahrnutý vsgcapture.h, aplikace se nespustí.  
   
     > [!NOTE]
-    >  Pokud 2010 června DirectX SDK je v počítači nainstalován a obsahuje cesta zahrnutí vašeho projektu `%DXSDK_DIR%includex86`, ho přesunout na konec cesty zahrnutí. Totéž pro vaši cestu knihovny.  
+    >  Pokud červen 2010 na vašem počítači je nainstalovaná rozhraní DirectX SDK a cesty zahrnutí váš projekt obsahuje `%DXSDK_DIR%includex86`, přesunout na konec cesty zahrnutí. Proveďte totéž pro vaši cestu ke knihovně.  
   
-### <a name="getting-the-idxgraphicsanalysis-interface"></a>Získání rozhraní IDXGraphicsAnalysis  
- Než budete moct zachytit grafických informací z DirectX 11.2, budete muset získat rozhraní DXGI ladění.  
+### <a name="getting-the-idxgraphicsanalysis-interface"></a>Získávání rozhraní IDXGraphicsAnalysis  
+ Než budete moct zachytit informace grafiky z rozhraní DirectX 11.2, budete muset získat rozhraní DXGI ladění.  
   
 > [!IMPORTANT]
->  Pokud používáte zachytávání prostřednictvím kódu programu, musí stále spuštění aplikace v rámci diagnostiky grafiky (Alt + F5 v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]) nebo v části [nástroje příkazového řádku snímek](command-line-capture-tool.md).  
+>  Při použití zachytávání prostřednictvím kódu programu, musí i nadále spuštění aplikace v rámci diagnostiky grafiky (Alt + F5 v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]) nebo v části [nástroj příkazového řádku pro zachycení](command-line-capture-tool.md).  
   
-##### <a name="to-get-the-idxgraphicsanalysis-interface"></a>Chcete-li získat rozhraní IDXGraphicsAnalysis  
+##### <a name="to-get-the-idxgraphicsanalysis-interface"></a>Chcete-li získat IDXGraphicsAnalysis rozhraní  
   
--   Použijte následující kód spojit rozhraní IDXGraphicsAnalysis rozhraní DXGI ladění.  
+- Použijte následující kód k připojení k rozhraní ladění DXGI rozhraní IDXGraphicsAnalysis.  
   
-    ```  
-    IDXGraphicsAnalysis* pGraphicsAnalysis;  
-    HRESULT getAnalysis = DXGIGetDebugInterface1(0, __uuidof(pGraphicsAnalysis), reinterpret_cast<void**>(&pGraphicsAnalysis));  
-    ```  
+  ```cpp
+  IDXGraphicsAnalysis* pGraphicsAnalysis;  
+  HRESULT getAnalysis = DXGIGetDebugInterface1(0, __uuidof(pGraphicsAnalysis), reinterpret_cast<void**>(&pGraphicsAnalysis));  
+  ```  
   
-     Nezapomeňte se podívat `HRESULT` vrácený [DXGIGetDebugInterface1](https://msdn.microsoft.com/library/windows/desktop/dn457937(v=vs.85).aspx) zajistit získat platný rozhraní dříve, než ho použijete:  
+   Nezapomeňte se podívat `HRESULT` vrácený [DXGIGetDebugInterface1](/windows/desktop/api/dxgi1_3/nf-dxgi1_3-dxgigetdebuginterface1) zajistit získat platný rozhraní před jejich použitím:  
   
-    ```  
-    if (FAILED(getAnalysis))  
-    {  
-        // Abort program or disable programmatic capture in your app.  
-    }  
-    ```  
+  ```cpp
+  if (FAILED(getAnalysis))  
+  {  
+      // Abort program or disable programmatic capture in your app.  
+  }  
+  ```  
   
-    > [!NOTE]
-    >  Pokud `DXGIGetDebugInterface1` vrátí `E_NOINTERFACE` (`error: E_NOINTERFACE No such interface supported`), zajistěte, aby aplikace běží v rámci diagnostiky grafiky (Alt + F5 v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]).  
+  > [!NOTE]
+  >  Pokud `DXGIGetDebugInterface1` vrátí `E_NOINTERFACE` (`error: E_NOINTERFACE No such interface supported`), ujistěte se, že je aplikace spuštěna v rámci diagnostiky grafiky (Alt + F5 v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]).  
   
 ### <a name="capturing-graphics-information"></a>Zachycení informací grafiky  
- Teď, když máte platné `IDXGraphicsAnalysis` rozhraní, můžete použít `BeginCapture` a `EndCapture` k zaznamenání grafických informací.  
+ Teď, když máte platný `IDXGraphicsAnalysis` rozhraní, můžete použít `BeginCapture` a `EndCapture` k zachycení informací grafiky.  
   
-##### <a name="to-capture-graphics-information"></a>K zaznamenání grafických informací  
+##### <a name="to-capture-graphics-information"></a>Chcete-li zachytit informace grafiky  
   
-- Spusťte zaznamenání grafických informací pomocí `BeginCapture`:  
+- Chcete-li spustit zachycení informací grafiky, použijte `BeginCapture`:  
   
-    ```  
+    ```cpp
     ...  
     pGraphicsAnalysis->BeginCapture();  
     ...  
     ```  
   
-     Zachycení začne okamžitě při `BeginCapture` nazývá; nemá čekat na Další zahájíte rámečku. Zaznamenat zastaví, když se zobrazí aktuální rámečku, nebo když zavoláte `EndCapture`:  
+     Sběr dat začne okamžitě po `BeginCapture` nazývá; nečeká na další snímek začít. Zachycení zastaví převedou aktuálního snímku nebo při volání `EndCapture`:  
   
-    ```  
+    ```cpp
     ...  
     pGraphicsAnalysis->EndCapture();  
     ...  
     ```  
 
-- Po zavolání `EndCapture`, vydání grafické objekty. 
+- Po volání `EndCapture`, uvolnění objektu grafiky. 
   
 ## <a name="next-steps"></a>Další kroky  
- Tento návod ukázal, jak k zaznamenání grafických informací prostřednictvím kódu programu. Jako další krok vezměte v úvahu tuto možnost:  
+ Tento názorný postup ukázal, jak k zaznamenání grafických informací prostřednictvím kódu programu. V dalším kroku vezměte v úvahu tuto možnost:  
   
--   Zjistěte, jak analyzovat zaznamenané grafických informací pomocí diagnostiky grafiky nástrojů. V tématu [přehled](overview-of-visual-studio-graphics-diagnostics.md).  
+-   Zjistěte, jak analyzovat zachycené informace grafiky pomocí nástrojů diagnostiky grafiky. Zobrazit [přehled](overview-of-visual-studio-graphics-diagnostics.md).  
   
 ## <a name="see-also"></a>Viz také  
  [Návod: Zaznamenání grafických informací](walkthrough-capturing-graphics-information.md)   

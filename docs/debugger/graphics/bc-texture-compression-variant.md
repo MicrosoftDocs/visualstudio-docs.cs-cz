@@ -1,5 +1,5 @@
 ---
-title: BC Texture komprese Variant | Microsoft Docs
+title: Varianta komprese textur BC | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -10,36 +10,37 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 49dfc92eeede177e843c9fd98b16b030f76079c0
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 919191ec29ad45a8385d32b82de99d44fcdaa2ea
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49922442"
 ---
-# <a name="bc-texture-compression-variant"></a>BC Texture komprese Variant
-Umožňuje blokovat kompresi na textury, které mají Pixelový formát, který se odlišuje od B8G8R8X8, B8G8R8A8 nebo R8G8B8A8.  
+# <a name="bc-texture-compression-variant"></a>Varianta komprese textur BC
+Umožňuje zablokovat kompresi na textury, které mají žádnému pixelovému formátu, který je varianta B8G8R8X8, B8G8R8A8 nebo R8G8B8A8.  
   
-## <a name="interpretation"></a>Interpretace  
- Blokový komprese formáty jako BC1, BC2, a BC3 zabírají výrazně méně paměti, než nekomprimovaným formáty obrázků a proto využívat šířku pásma výrazně méně paměti. Ve srovnání s nekomprimované formátu, který používá 32 bitů na pixel, BC1 (dříve označované jako DXT1) dosahuje komprese 8:1 a 4:1, která patří dosahuje BC3 (dříve označované jako DXT5). Rozdíl mezi BC1 a BC3 je, že BC1 nepodporuje alfa kanál, zatímco BC3 podporuje kompresí bloku alfa kanálu. Navzdory vysoké komprese poměrům je pouze dílčí snížení kvality obrázku pro typické textury. Ale blokovat komprese určité druhy textury – například ty, které jsou důležité barvu variace v malých oblasti – může mít nepřijatelné výsledky.  
+## <a name="interpretation"></a>interpretace  
+ Blokový komprese formáty, jako jsou BC1, BC2, a BC3 zabírat výrazně méně paměti, než nekomprimovaný formátů obrázku a proto spotřebovávají výrazně menší šířku pásma paměti. Ve srovnání s nekomprimovaný formát, který používá 32 bitů na pixel, BC1 (dříve označované jako DXT1) dosahuje komprese 8:1 a BC3 (dříve označované jako DXT5) dosahuje 4:1. Rozdíl mezi BC1 a BC3 je, že BC1 nepodporuje alfa kanál, zatímco BC3 podporuje komprimovaný alfa kanálu. Bez ohledu na vysoké Kompresní poměry je pouze dílčí snížení kvality obrázku pro typické textury. Ale blokovat komprese určité druhy textury – například ty, které mají významný barev ve malou oblast – může mít nepřijatelné výsledky.  
   
- Pokud vaše textury jsou vhodné pro blokový komprese a není nutné ideální věrnosti barvu, zvažte použití formátu kompresí bloku snížit využití paměti a využívat menší šířku pásma.  
+ Pokud vaše textury jsou vhodné pro kompresi blokových a není nutné zdokonalujete barva věrností, zvažte použití formátu komprimovanými ke snížení využití paměti a využívat menší šířku pásma.  
   
 ## <a name="remarks"></a>Poznámky  
- Komprimovat textury ve formátu Blokový komprese při každém volání do `ID3DDevice::CreateTexture2D` vytvářející texture zdroje. Konkrétně jsou komprimované textury při:  
+ Komprimovat textury s použitím komprese Blokový formát pro každé volání do `ID3DDevice::CreateTexture2D` , který vytváří zdrojovou texturu. Konkrétně jsou komprimovány textury při:  
   
--   `D3D11_TEXTURE2D_DESC` Objekt předaný v `pDesc` popisuje neměnné shaderu prostředků, který je:  
+- `D3D11_TEXTURE2D_DESC` Objekt předaný v `pDesc` popisuje neměnné prostředek shaderu; který je:  
   
-    -   Člen BindFlags má pouze D3D11_BIND_SHADER_RESOURCE příznak nastavený.  
+  -   Člen BindFlags má pouze D3D11_BIND_SHADER_RESOURCE příznak nastaven.  
   
-    -   Člen využití je nastavena na D3D11_USAGE_DEFAULT nebo D3D11_USAGE_IMMUTABLE.  
+  -   Využití člen je nastavený na D3D11_USAGE_DEFAULT nebo D3D11_USAGE_IMMUTABLE.  
   
-    -   Člen CPUAccessFlags nastavena na hodnotu 0 (žádný přístup procesoru).  
+  -   Člen CPUAccessFlags je nastavený na hodnotu 0 (žádný přístup procesoru).  
   
-    -   Člen SamplerDesc má jeho Count – člen nastavena na hodnotu 1 (žádné více ukázka Anti-Aliasing (MSAA)).  
+  -   Člen SamplerDesc má jeho Count – člen nastavena na hodnotu 1 (žádné více ukázka Anti-Aliasing (MSAA)).  
   
--   Počáteční data je určena k volání `CreateTexture2D`.  
+- Nejsou k dispozici počáteční data volání `CreateTexture2D`.  
   
- Tady jsou podporované zdrojové formáty a jejich formáty kompresí bloku.  
+  Tady jsou formáty podporované zdrojové a jejich komprimovanými formátů.  
   
 |Původním formátu (od)|Komprimované formátu (do)|  
 |------------------------------|------------------------------|  
@@ -53,13 +54,13 @@ Umožňuje blokovat kompresi na textury, které mají Pixelový formát, který 
 |`DXGI_FORMAT_R8G8B8A8_UNORM_SRGB`|BC3|  
 |`DXGI_FORMAT_R8G8B8A8_TYPELESS`|BC3|  
   
- Pokud vaše texture má formát, který není uveden, textury se nemění.  
+ Pokud vaše textury má formát, který není uveden, se nezmění textury.  
   
 ## <a name="restrictions-and-limitations"></a>Omezení a omezení  
- Někdy textury, které jsou vytvořeny pomocí varianta formátů obrázku B8G8R8A8 nebo R8G8B8A8 nepoužívejte ve skutečnosti alfa kanálu, ale neexistuje žádný způsob varianty vědět, jestli se používá nebo ne. Pokud chcete zachovat správnost v případě, že se používá alfa kanálu, varianta vždy kóduje tyto formáty do méně efektivní BC3 formátu. Může pomoci lépe pochopit potenciální výkon vykreslování vaší aplikace s Tato varianta pomocí varianta formátu B8G8R8X8 obrázku, pokud nepoužíváte alfa kanálu tak, aby varianta může používat další efektivní formát BC1 analýza grafických snímků.  
+ Někdy textury, které jsou vytvořeny pomocí varianta formátů obrázku B8G8R8A8 nebo R8G8B8A8 nepoužívejte skutečně alfa kanál, ale neexistuje žádný způsob, jak variant vědět, jestli se používá nebo ne. Zachování správnosti v případě, že se používá kanál alfa, varianty vždy kóduje tyto formáty méně efektivní BC3 formátu. Může pomoct lépe porozumět výkonu vaší aplikace potenciální vykreslování s Tato varianta pomocí varianta B8G8R8X8 formát obrázku, pokud nepoužíváte alfa kanál tak, aby varianty pomocí formátu efektivní informace BC1 analýza grafických snímků.  
   
 ## <a name="example"></a>Příklad  
- Tento typ variant bloku zkomprimuje textury za běhu, před voláním `CreateTexture2D`. Nedoporučujeme tento přístup pro kód produkční, protože nekomprimované textury využívat více místa na disku a protože další krok může značně zvýšit časů načítání ve vaší aplikaci, protože vyžaduje významné Blokový komprese výpočetní prostředky ke kódování. Místo toho doporučujeme kompresi vaší textury offline pomocí editoru bitové kopie nebo bitové kopie procesoru, který je součástí vaší sestavení kanálu. Tyto přístupy snížit požadavky na místo na disku, eliminovat běhu režie ve vaší aplikaci a dovolit více času na zpracování, aby můžete zachovat nejlepší kvality obrázku.  
+ Tato varianta bloku komprimovat textury v době běhu, před voláním `CreateTexture2D`. Nedoporučujeme tento přístup pro produkční kód, protože nekomprimované textury využívat více místa na disku a další krok může významně zvýšit dobu načítání v aplikaci, protože založené na blocích komprese vyžaduje důležité výpočetní prostředky ke kódování. Namísto toho doporučujeme komprimovat vaše textury offline pomocí editoru obrázků nebo obrázků procesor, který je součástí vašeho kanálu sestavení. Tyto přístupy snížit požadavky na místo na disku, odstranění nároky ve vaší aplikaci za běhu a dovolit více času na zpracování, takže můžete zachovat nejlepší kvalitu obrazu.  
   
 ## <a name="see-also"></a>Viz také  
- [Texture půl/čtvrtletí dimenze typu Variant](half-quarter-texture-dimensions-variant.md)
+ [Varianta polovičních/čtvrtinových dimenzí textury](half-quarter-texture-dimensions-variant.md)

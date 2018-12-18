@@ -1,0 +1,1 @@
+Visual Studio – správa životního cyklu aplikací

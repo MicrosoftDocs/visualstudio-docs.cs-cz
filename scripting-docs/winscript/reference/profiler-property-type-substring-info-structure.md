@@ -1,13 +1,13 @@
 ---
 title: Struktura PROFILER_PROPERTY_TYPE_SUBSTRING_INFO | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/18/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3845c872-4302-47b6-8912-7b2d7a3b3357
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: mikejo5000
 ms.author: mikejo
 ms.openlocfilehash: ba7c0c865ae875d22fa82e48557eb2ed8b170e65
@@ -15,6 +15,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24796407"
 ---
 # <a name="profilerpropertytypesubstringinfo-structure"></a>Struktura PROFILER_PROPERTY_TYPE_SUBSTRING_INFO
 Představuje informace o typu substring použitých ve vztahu. Použít v [profiler_heap_object_relationship – struktura](../../winscript/reference/profiler-heap-object-relationship-structure.md).  

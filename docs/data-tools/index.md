@@ -1,22 +1,25 @@
 ---
+title: Vývoj řešení pro data
+description: Další informace o různých nástrojů pro vývoj řešení pro data v sadě Visual Studio, včetně nástroje rozhraní .NET Framework, SQL Server Data Tools, Azure Data Lake, Azure HDInsight a Azure Stream Analytics.
 layout: LandingPage
+ms.date: 01/01/2018
 author: gewarren
 ms.author: gewarren
-title: Pomocí nástrojů data v sadě Visual Studio pro vývoj řešení pro data
-description: Další informace o nástrojích pro řešení pro data v sadě Visual Studio.
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.topic: landing-page
 ms.workload:
 - data-storage
-ms.openlocfilehash: f8dbea90a21da05b67fdc730a6965d3f295807ca
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 866737bc91615663df59856b8d06b457ad47c15f
+ms.sourcegitcommit: 0cdd8e8a53fb4fd5e869f07c35204419fa12783d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53159682"
 ---
-# <a name="use-data-tools-in-visual-studio-to-develop-data-solutions"></a>Pomocí nástrojů data v sadě Visual Studio pro vývoj řešení pro data
+# <a name="use-data-tools-in-visual-studio-to-develop-data-solutions"></a>Pomocí nástrojů data v sadě Visual Studio a vyvíjet řešení pro data
 
-Další informace o použití nástrojů data v sadě Visual Studio pro vývoj a testování pomocí serveru SQL Server, Azure Data Lake nebo Hadoop řešení data.
+Zjistěte, jak pomocí nástrojů data v sadě Visual Studio můžete vyvíjet a testovat datová řešení pomocí systému SQL Server, Azure Data Lake nebo Hadoop.
 
 <ul class="panelContent cardsFTitle">
     <li>
@@ -26,11 +29,11 @@ Další informace o použití nástrojů data v sadě Visual Studio pro vývoj a
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../data-tools/media/logo_VS.svg" alt="" />
+                            <img src="../data-tools/media/logo_VS.svg" alt="Use Visual Studio and .NET framework tooling to develop your data applications" />
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Další informace o sadě Visual Studio a nástroje a rozhraní API rozhraní .NET Framework podporu pro vývoj aplikací dat</h3>
+                        <h3>Další informace o sadě Visual Studio a rozhraní .NET Framework&#39;s nástroje a rozhraní API pro podporu vývoji datových aplikací</h3>
                     </div>
                 </div>
             </div>
@@ -44,11 +47,11 @@ Další informace o použití nástrojů data v sadě Visual Studio pro vývoj a
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../data-tools/media/logo_azure-sql-database.svg" alt="" />
+                            <img src="../data-tools/media/logo_azure-sql-database.svg" alt="Use SQL Server Data Tools to design, deploy, and maintain your databases" />
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Další informace o návrhu, nasazení a údržbu databáze s SQL Server Data Tools</h3>
+                        <h3>Další informace o navrhování, nasazování a správu databází pomocí SQL Server Data Tools</h3>
                     </div>
                 </div>
             </div>
@@ -62,7 +65,7 @@ Další informace o použití nástrojů data v sadě Visual Studio pro vývoj a
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../data-tools/media/logo_azure-datalake.svg" alt="" />
+                            <img src="../data-tools/media/logo_azure-datalake.svg" alt="Use Azure Data Lake to develop Big Data applications with U-SQL and .NET" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -80,7 +83,7 @@ Další informace o použití nástrojů data v sadě Visual Studio pro vývoj a
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../data-tools/media/logo_azure-hd-insight.svg" alt="" />
+                            <img src="../data-tools/media/logo_azure-hd-insight.svg" alt="Run Hive queries on Azure HDInsight with Hadoop" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -98,11 +101,11 @@ Další informace o použití nástrojů data v sadě Visual Studio pro vývoj a
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../data-tools/media/logo_azure-stream-analytics.svg" alt="" />
+                            <img src="../data-tools/media/logo_azure-stream-analytics.svg" alt="Use Azure Streaming Analytics to develop near-real time, big data solutions" />
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Další informace o vývoji řešení pro velká data skoro v reálném čase s Azure streamování Analytics</h3>
+                        <h3>Další informace o vývoji řešení pro velké objemy dat téměř v reálném čase pomocí Azure Stream Analytics</h3>
                     </div>
                 </div>
             </div>
@@ -113,7 +116,6 @@ Další informace o použití nástrojů data v sadě Visual Studio pro vývoj a
 
 ---
 
-<hr>
 <h2>Odkaz</h2>
 
 <ul class="panelContent cardsW">
@@ -123,7 +125,7 @@ Další informace o použití nástrojů data v sadě Visual Studio pro vývoj a
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <p><Accessing data in Visual Studio></p>
+                        <p><Access data in Visual Studio></p>
                     </div>
                 </div>
             </div>

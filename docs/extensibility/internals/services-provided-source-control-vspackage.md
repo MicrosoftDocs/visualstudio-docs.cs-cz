@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31129599"
 ---
 # <a name="services-provided-source-control-vspackage"></a>Služby poskytované (Zdroj ovládacího prvku VSPackage)
 Služby jsou primární mechanismus, pomocí kterého je funkce sdílené mezi VSPackages a mezi integrované vývojové prostředí (IDE) sady Visual Studio a jeho nainstalované VSPackages. Podrobný popis služeb a jejich důležitosti v integrovaném vývojovém prostředí sady Visual Studio naleznete v tématu[pomocí a poskytování služeb](../../extensibility/using-and-providing-services.md).  

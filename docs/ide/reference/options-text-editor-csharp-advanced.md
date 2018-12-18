@@ -1,116 +1,133 @@
 ---
-title: Možnosti, textový Editor, C#, Upřesnit | Microsoft Docs
-ms.date: 11/04/2016
+title: Možnosti, textový editor, C#, upřesnit
+ms.date: 10/29/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Outlining
 - VS.ToolsOptionsPages.Text_Editor.CSharp.Advanced
-helpviewer_keywords:
-- XML comments
-- XML documentation, generating
-- outlining options [C#]
-- XML documentation, creating
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0df7b6b38f8982e92d3b7cdee3165ae19e5567a4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7cfbc6d57e5bfd3c6a8f317967448039a9b3f5e4
+ms.sourcegitcommit: be938c7ecd756a11c9de3e6019a490d0e52b4190
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50670712"
 ---
 # <a name="options-text-editor-c-advanced"></a>Možnosti, textový editor, C#, upřesnit
 
-Použití **Upřesnit** stránka Možnosti, chcete-li změnit nastavení pro editor formátování, kódu refaktoringu a dokumentační komentáře XML pro jazyk C#. Chcete-li získat přístup k této stránce Možnosti, zvolte **nástroje** > **možnosti**a potom vyberte **textového editoru** > **C#**  >  **Rozšířené**.
+Použití **Upřesnit** stránka Možnosti, chcete-li změnit nastavení editoru formátování, refaktoringu kódu a komentáře dokumentace XML pro jazyk C#. Chcete-li získat přístup k této stránce Možnosti, zvolte **nástroje** > **možnosti**a klikněte na tlačítko **textový Editor** > **jazyka C#**  >  **Advanced**.
 
 > [!NOTE]
-> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, zvolte **nastavení importu a exportu** na **nástroje** nabídky. Další informace najdete v tématu [přizpůsobení prostředí Visual Studio IDE](../../ide/personalizing-the-visual-studio-ide.md).
+> Ne všechny možnosti mohou být uvedeny zde.
 
 ## <a name="analysis"></a>Analýza
 
-- Povolit úplnou analýzu řešení
+- Povolení úplné analýzy řešení
 
-   Analýza kódu umožňuje u všech souborů v řešení, ne jenom otevřít soubory kódu. Další informace najdete v tématu [úplné analýzy řešení](../../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md).
+   Umožňuje analýzu kódu u všech souborů v řešení, ne jenom otevřít soubory kódu. Další informace najdete v tématu [úplné analýzy řešení](../../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md).
 
-- Provedení analýzy funkce editor v externího procesu (experimentální)
+## <a name="using-directives"></a>Direktivy using
 
-## <a name="using-directives"></a>Pomocí direktiv
+- Umístit nejdřív direktivy "System", při řazení direktiv Using
 
-- Nejprve umístit direktivy "Systém", pokud řazení direktiv Using
+   Pokud je vybráno, **odebrat a seřadit direktivy using** příkaz v nabídce seřadí klikněte pravým tlačítkem `using` direktivy a místa obory názvů "Systém" v horní části seznamu.
 
-- Oddělit pomocí direktivy skupin
+   Před řazením:
 
-- Navrhněte direktiv using pro typy v referenční sestavení
+   ```csharp
+   using AutoMapper;
+   using FluentValidation;
+   using System.Collections.Generic;
+   using System.Linq;
+   using Newtonsoft.Json;
+   using System;
+   ```
+   
+   Po seřazení:
 
-- Navrhněte direktiv using pro typy v balíčků NuGet
+   ```csharp
+   using System;
+   using System.Collections.Generic;
+   using System.Linq;
+   using AutoMapper;
+   using FluentValidation;
+   using Newtonsoft.Json;
+   ```
+   
+- Oddělovat skupiny direktiv using
 
+   Pokud je vybráno, **odebrat a seřadit direktivy using** odděluje příkazu v místní nabídce `using` direktivy vložením prázdný řádek mezi skupinami direktivy, které mají stejný obor názvů root.
+
+   Před řazením:
+
+   ```csharp
+   using AutoMapper;
+   using FluentValidation;
+   using System.Collections.Generic;
+   using System.Linq;
+   using Newtonsoft.Json;
+   using System;
+   ```
+   
+   Po seřazení:
+   
+   ```csharp
+   using AutoMapper;
+   
+   using FluentValidation;
+   
+   using Newtonsoft.Json;
+   
+   using System;
+   using System.Collections.Generic;
+   using System.Linq;
+   ```
+   
+- Navrhnout použití typů v sestaveních reference 
+- Navrhnout použití typů v balíčcích NuGet 
+
+   Když tyto možnosti jsou vybrané, [rychlá akce](../quick-actions.md) je k dispozici pro instalaci balíčku NuGet a přidejte `using` směrnice pro neodkazovaný typy.
+
+   ![Rychlé akce pro instalaci balíčku NuGet v sadě Visual Studio](media/nuget-lightbulb.png)
+  
 ## <a name="highlighting"></a>Zvýraznění
 
-- Zvýrazněte odkazy na symbolů v místě kurzoru
+- Zvýrazňovat odkazy na _symbol pod kurzorem
 
-   Když kurzor je nastavený uvnitř symbol, nebo když klikněte na symbol, jsou vyznačené všechny instance tohoto symbolu v souboru kódu.
-
-- Zvýrazněte související klíčová slova v místě kurzoru
+   Když se kurzor uvnitř symbol, nebo když kliknete na symbol, jsou zvýrazněny všechny instance tohoto symbolu v souboru kódu.
 
 ## <a name="outlining"></a>Sbalování
 
-- Zadejte popisující režimu při otevírání souborů
+- Po otevření souborů vstoupit do režimu sbalování
 
-   Při výběru automaticky přehled souboru kódu, který vytvoří sbalitelné bloky kódu. Při prvním otevření souboru #regions bloky a bloky kódu neaktivní sbalte.
+   Pokud je vybráno, automaticky popisuje, jak soubor kódu, který vytvoří sbalitelnou bloky kódu. Při prvním otevření souboru #regions bloky a bloky neaktivního kódu sbalte.
 
-- Zobrazit postup čáry oddělovače
+- Zobrazit oddělovače řádků procedury
 
-- Zobrazení osnovy pro úrovně konstrukce deklarace
+   Textový editor označuje visual oboru postupy. Řádek je vykreslen v *.vb* zdrojové soubory vašeho projektu v umístěních uvedených v následující tabulce:
 
-- Zobrazení osnovy pro úrovně konstrukce kódu
+   |Umístění ve zdrojovém souboru .vb|Příklad umístění řádku|
+   |---------------------------------|------------------------------|
+   |Po uzavření bloku deklarace konstruktoru|– Na konci třída, struktura, modul, rozhraní nebo výčet<br />-After vlastnost, funkce nebo procedury sub<br />-Není mezi get a set klauzule ve vlastnosti|
+   |Po sadu konstrukce jeden řádek|-After příkazy pro import, před definici typu v souboru třídy<br />-After proměnné deklarované ve třídě, před všechny postupy|
+   |Po jeden řádek deklarací (deklarace mimo blok úrovně)|-Následující příkazy pro import, dědí příkazy deklarace proměnných, deklarace události, delegát deklarace a příkazy deklarovat knihovny DLL|
 
-- Zobrazení osnovy pro komentáře a oblastí, preprocesoru
+## <a name="editor-help"></a>Nápověda k editoru
 
-- Sbalit #regions při sbalení do definice
+- Generování komentářů k dokumentaci XML pro / / / / /
 
-## <a name="fading"></a>Pozvolného vysouvání
+   Pokud je vybráno, vloží prvky XML pro dokumentační komentáře XML po zadání `///` Úvod komentář. Další informace o dokumentaci XML, naleznete v tématu [XML – dokumentační komentáře (C# Programming Guide)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments).
 
-- Vykreslit out nepoužitých direktiv Using
+## <a name="see-also"></a>Viz také:
 
-- Vykreslit out nedostupný kódu
-
-## <a name="block-structure-guides"></a>Blokovat struktura příručky
-
-- Zobrazit příručky pro úrovně konstrukce deklarace
-
-- Zobrazit příručky pro úrovně konstrukce kódu
-
-## <a name="editor-help"></a>Nápovědy k editoru
-
-- Generovat dokumentační komentáře XML pro / / /
-
-   Pokud vybraná, vloží elementy XML pro dokumentační komentáře XML po zadání `///` Úvod komentář. Další informace o dokumentace XML, najdete v části [dokumentační komentáře XML (C# Průvodce programováním)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments).
-
-- Vložit \* na začátku nového řádku při zápisu nebo\* \*/ komentáře
-
-- Zobrazit náhled pro přejmenování sledování
-
-- Zadejte rozdělení textové literály v
-
-- Sestavy neplatná zástupné symboly v ' řetězec. Formát ' volání
-
-## <a name="extract-method"></a>extrahování metody
-
-- Nepřidávejte put ref nebo out na vlastní – struktura
-
-## <a name="implement-interface-or-abstract-class"></a>Implementace rozhraní nebo abstraktní třídy
-
-- Při vkládání vlastnosti, události a metody, umístěte je s ostatními členy stejného druhu nebo na konci
-
-- Při generování vlastnosti, raději vyvolání vlastnosti nebo vhodnější automaticky vlastnosti
-
-## <a name="see-also"></a>Viz také
-
-[Postupy: vložení komentáře XML pro dokumentaci generování](../../ide/reference/generate-xml-documentation-comments.md)  
-[Dokumentační komentáře XML (C# Průvodce programováním)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)  
-[Dokumentace kódu s XML – komentáře (Průvodce C#)](/dotnet/csharp/codedoc)  
-[Nastavení možností editoru pro konkrétní jazyk](../../ide/reference/setting-language-specific-editor-options.md)  
-[C# IntelliSense](../../ide/visual-csharp-intellisense.md)
+- [Postupy: vložení komentáře XML pro generování dokumentace](../../ide/reference/generate-xml-documentation-comments.md)
+- [XML – dokumentační komentáře (C# Programming Guide)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)
+- [Dokumentaci kódu pomocí komentářů XML (Průvodce v C#)](/dotnet/csharp/codedoc)
+- [Nastavení možností editoru pro konkrétní jazyk](../../ide/reference/setting-language-specific-editor-options.md)
+- [C# IntelliSense](../../ide/visual-csharp-intellisense.md)

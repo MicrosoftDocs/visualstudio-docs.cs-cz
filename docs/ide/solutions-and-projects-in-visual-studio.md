@@ -1,7 +1,7 @@
 ---
-title: Řešení a projektů v sadě Visual Studio | Microsoft Docs
-ms.custom: ''
-ms.date: 10/5/2017
+title: Řešení a projekty
+ms.date: 10/05/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
@@ -26,46 +26,59 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 11441c826a316d995e75f2b6c79232f19985c17b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: db576170443952a3090d57fc8046b34428cc8095
+ms.sourcegitcommit: 75e02ed88a1ace6e8265fd4e3a82a1bc78f3adca
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53348340"
 ---
-# <a name="solutions-and-projects-in-visual-studio"></a>Řešení a projektů v sadě Visual Studio
+# <a name="solutions-and-projects-in-visual-studio"></a>Řešení a projekty v sadě Visual Studio
+
+Tento článek popisuje koncept *projektu* a *řešení* v sadě Visual Studio. Také stručně popisuje, jak vytvořit nový projekt a **Průzkumníka řešení** panelu nástrojů.
+
+> [!NOTE]
+> Toto téma se vztahuje k sadě Visual Studio ve Windows. Visual Studio pro Mac, najdete v části [projekty a řešení v sadě Visual Studio pro Mac](/visualstudio/mac/projects-and-solutions).
 
 ## <a name="projects"></a>Projekty
 
-Když vytvoříte aplikaci, web, modul plug-in, atd. v sadě Visual Studio spustíte s *projektu*. V logických smysl projekt obsahuje všechny soubory zdrojového kódu, ikony, bitové kopie, datové soubory, atd., které jsou zkompilovány do spustitelný soubor, knihovny nebo webu. Projekt obsahuje také nastavení kompilátoru a ostatní konfigurační soubory, které mohou být potřebné různé služby nebo součásti, které váš program komunikuje s.
+Když vytvoříte aplikaci, web, modul plug-in a tak dále v sadě Visual Studio začínáte *projektu*. Z logického pohledu projekt obsahuje všechny soubory zdrojového kódu, ikony, obrázky, datových souborů, atd., které jsou kompilovány do spustitelný soubor, knihovny nebo webu. Projekt obsahuje také nastavení kompilátoru a další konfigurační soubory, které mohou být potřebné různé služby nebo komponenty, které aplikace komunikuje s.
 
 > [!NOTE]
-> Nemusíte používat řešení nebo projekty v sadě Visual Studio k úpravám, sestavení a ladění kódu. Můžete jednoduše otevřete složku, která obsahuje zdrojové soubory v sadě Visual Studio a začít upravovat. V tématu [vývoj kódu v sadě Visual Studio bez projekty a řešení](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md) Další informace.
+> Není nutné používat řešení nebo projektů v sadě Visual Studio k úpravám, sestavení a ladění kódu. Můžete jednoduše otevřete složku, která obsahuje zdrojové soubory v sadě Visual Studio a můžete začít upravovat. Další informace najdete v tématu [vývoj kódu v sadě Visual Studio bez projektů nebo řešení](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md).
 
-Projekt je definován v souboru XML s příponou, třeba .vbproj, .csproj nebo VCXPROJ. Tento soubor obsahuje hierarchii virtuální složek a cesty pro všechny položky v projektu. Obsahuje taky nastavení sestavení.
+Projekt je definována v souboru XML s příponou jako například *.vbproj*, *.csproj*, nebo *.vcxproj*. Tento soubor obsahuje hierarchii virtuální složka a cesty pro všechny položky v projektu. Obsahuje také nastavení sestavení.
 
 > [!TIP]
-> Podívat se na obsah souboru projektu v sadě Visual Studio, nejdřív uvolnit projekt v Průzkumníku řešení výběrem název projektu a zvolením **uvolnit projekt** z nabídky kontext nebo klikněte pravým tlačítkem. Pak znovu otevřete kontextu nabídku a vyberte **upravit \<projectname\>**.
+> Podívat se na obsah souboru projektu v sadě Visual Studio, nejprve uvolněte projekt tak, že vyberete název projektu v **Průzkumníka řešení** a zvolíte **uvolnit projekt** z nabídky kontextu nebo klikněte pravým tlačítkem. Potom znovu otevřete kontextovou nabídku a zvolte **upravit \<projectname\>**.
 
-V sadě Visual Studio je soubor projektu vrstva Průzkumníku řešení používá pro zobrazení obsahu projektu a nastavení. Při kompilaci projektu nástroje MSBuild modul využívá soubor projektu pro vytvoření spustitelného souboru. Můžete také upravit projekty k vytvoření jiné druhy výstup.
+V sadě Visual Studio, soubor projektu používá **Průzkumníka řešení** zobrazíte obsah projektu a nastavení. Při kompilaci projektu využívá stroji MSBuild engine souboru projektu k vytvoření spustitelného souboru. Můžete také upravit projekty k vytvoření jiných typů výstup.
 
 ## <a name="solutions"></a>Řešení
 
-Je součástí projektu *řešení*. Řešení obsahuje jeden nebo více souvisejících projekty, společně s informacemi o sestavení, Visual Studio okna nastavení a všechny ostatní soubory, které nejsou přidruženy k konkrétní projekt. Řešení je popsán textový soubor (rozšíření .sln) s svůj vlastní jedinečný formát; Obecně není určen k provádění úprav ručně.
+Je součástí projektu *řešení*. Bez ohledu na jeho název řešení není "odpověď". Je prostě kontejner pro jeden nebo více souvisejících projektů, spolu s informacemi o sestavení, nastavení okna sady Visual Studio a všechny ostatní soubory, které nejsou spojeny s konkrétní projekt. Řešení je popsán textového souboru (rozšíření *.sln*) s svůj vlastní jedinečný formát; má nejsou určeny upravit ručně.
 
-Řešení má přidruženou *.suo* soubor, který ukládá nastavení, předvoleb a informace o konfiguraci pro každý uživatel, který pracoval na projekt.
+Visual Studio používá dva typy souborů (*.sln* a *.suo*) k ukládání nastavení řešení:
 
-## <a name="creating-new-projects"></a>Vytváření nových projektů
+|Linka|Název|Popis|
+|---------------|----------|-----------------|
+|.sln|Řešení sady Visual Studio|Uspořádá projekty, položky projektu a řešení položky v řešení.|
+|.suo|Uživatelské možnosti řešení|Ukládají se nastavení na úrovni uživatele a vlastní nastavení, jako například zarážky.|
 
-Nejjednodušší způsob, jak vytvořit nový projekt je spuštění z šablona projektu pro konkrétní typ aplikace nebo webu. Šablona projektu se skládá z základní sadu souborů předem generovaného kódu, konfigurační soubory, prostředky a nastavení. Tyto šablony jsou, co se zobrazí v **nový projekt** nebo **nový web** dialogové okno když zvolíte **soubor**, **nový**,  **Projekt** nebo **soubor**, **nové**, **webu**. Další informace najdete v tématu [vytváření řešení a projekty](../ide/creating-solutions-and-projects.md).
+## <a name="create-new-projects"></a>Vytvořit nové projekty
 
-Můžete také vytvořit vlastní šablony projektů a položek. Další informace najdete v tématu [vytváření projektů a šablon položek](../ide/creating-project-and-item-templates.md).
+Nejjednodušší způsob, jak vytvořit nový projekt je začít z šablony projektu pro konkrétní typ aplikace nebo webu. Šablona projektu se skládá ze základní sady souborů předem generovaného kódu, konfigurační soubory, prostředky a nastavení. Tyto šablony se zobrazí v **nový projekt** dialogové okno při výběru **souboru** > **nový** > **projektu**. Další informace najdete v tématu [vytvářet řešení a projekty](../ide/creating-solutions-and-projects.md).
 
-## <a name="managing-projects-in-solution-explorer"></a>Správa projektů v Průzkumníku řešení
+Můžete také vytvořit vlastní šablony projektů a položek. Další informace najdete v tématu [vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md).
 
-Po vytvoření nového projektu, můžete použít **Průzkumníku řešení** k zobrazení a správě projektu a řešení a jejich přidružené položky. Následující obrázek znázorňuje Průzkumníku řešení s řešením C#, který obsahuje dva projekty.
+## <a name="manage-projects-in-solution-explorer"></a>Spravovat projekty v Průzkumníkovi řešení
 
-![Průzkumník řešení](../ide/media/vs2015_solution_explorer.png "vs2015_solution_explorer")
+Když vytvoříte nový projekt, můžete použít **Průzkumníka řešení** k zobrazení a správě projektu a řešení a jejich přidružené položky. Následující ilustrace ukazuje **Průzkumníka řešení** s C# řešení, které obsahuje dva projekty:
 
-## <a name="see-also"></a>Viz také
+![Průzkumník řešení](../ide/media/vs2015_solution_explorer.png)
 
-[Integrované vývojové prostředí sady Visual Studio](../ide/visual-studio-ide.md)
+## <a name="see-also"></a>Viz také:
+
+- [Integrované vývojové prostředí sady Visual Studio](../get-started/visual-studio-ide.md)
+- [Projekty a řešení (Visual Studio for Mac)](/visualstudio/mac/projects-and-solutions)
+- [Přidání a odebrání položek projektu (Visual Studio for Mac)](/visualstudio/mac/add-and-remove-project-items)

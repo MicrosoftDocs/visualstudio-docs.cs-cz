@@ -1,5 +1,5 @@
 ---
-title: 1 × 1 velikosti zobrazovacího okna Variant | Microsoft Docs
+title: Varianta velikosti oblasti zobrazení 1 x 1 | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -10,27 +10,28 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0c2f97793c838316d252aa56dcadd9fbb045decf
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 168b358bf58dcb2c91814f5460b203873255e275
+ms.sourcegitcommit: 80f9daba96ff76ad7e228eb8716df3abfd115bc3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37433242"
 ---
-# <a name="1x1-viewport-size-variant"></a>1 × 1 velikosti zobrazovacího okna Variant
-Snižuje dimenze zobrazení na všechny cíle vykreslování do 1 x 1 pixel.  
+# <a name="1x1-viewport-size-variant"></a>Varianta velikosti oblasti zobrazení 1x1
+Snižuje rozměry zobrazení na všechny cíle vykreslení na 1 × 1 pixelů.  
   
-## <a name="interpretation"></a>Interpretace  
- Menší zobrazení snižuje počet pixelů, které musí být šedou barvou, ale není snížit počet vrcholy, které musí být zpracován. Nastavení zobrazení dimenzí 1 x 1 pixel efektivně eliminuje pixelů stínování z vaší aplikace.  
+## <a name="interpretation"></a>interpretace  
+ Menší zobrazení snižuje počet pixelů, které mají na odstín. Ale není menší zobrazení snížit počet vrcholy, které budete muset proces. Nastavení rozměry zobrazení 1 x 1 pixelů efektivně eliminuje pixel stínování z vaší aplikace.  
   
- Pokud tato varianta zobrazuje velké výkonnější, může to znamenat, že vaše aplikace využívá příliš mnoho fillrate. Může to znamenat, že rozlišení zvolili jste je příliš vysoká. pro cílovou platformu nebo který aplikace tráví déle stínování pixelů, které jsou přepsány později (overdraw). Tento výsledek naznačuje, že při snížení velikosti vašeho framebuffer nebo snižuje množství overdraw se zvýší výkon vaší aplikace.  
+ Pokud se tato varianta zobrazí zisk náročné na výkon, může to znamenat, že vaše aplikace spotřebovává příliš mnoho míra naplnění. Kromě toho vaše řešení může být příliš vysoká. pro cílovou platformu nebo vaše aplikace může trávit spoustu času stínování pixelů, které jsou přepsány později, jsou označovány také jako *overdraw*. Menší vyrovnávací paměť snímku nebo snížit množství overdraw zlepší výkon vaší aplikace.  
   
 ## <a name="remarks"></a>Poznámky  
- Dimenze zobrazení se obnoví do 1 x 1 pixel po každé volání `ID3D11DeviceContext::OMSetRenderTargets` nebo `ID3D11DeviceContext::RSSetViewports`.  
+ Rozměry zobrazení se resetují na pixelech 1 × 1 po každém volání do `ID3D11DeviceContext::OMSetRenderTargets` nebo `ID3D11DeviceContext::RSSetViewports`.  
   
 ## <a name="example"></a>Příklad  
- Tento typ variant lze reprodukovat pomocí kódu takto:  
+ Tato varianta možné reprodukovat následujícím kódem:  
   
-```  
+```cpp
 D3D11_VIEWPORT viewport;  
 viewport.TopLeftX = 0;  
 viewport.TopLeftY = 0;  

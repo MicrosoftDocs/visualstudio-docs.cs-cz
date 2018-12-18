@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Vytvoření vlastní stránky aktivit pracovního postupu | Microsoft Docs'
+title: 'Návod: Vytvoření vlastní pracovní postup aktivity na webu | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -21,113 +21,113 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 14eaa5f23af978ae603c4f8b94d3c3d18953943f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2adb6dd8788027d89a743518adee4425e424ce60
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49894167"
 ---
-# <a name="walkthrough-create-a-custom-site-workflow-activity"></a>Návod: Vytvoření vlastní aktivity pracovního postupu na webu
-  Tento návod ukazuje, jak vytvořit vlastní aktivity pracovního postupu úrovni webu použití [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]. (Pracovních postupů na úrovni lokality se vztahují na celý web, ne jenom seznam v lokalitě.) Vlastní aktivity vytvoří zálohu seznam oznámení a pak zkopíruje obsah seznamu oznámení do ní.  
+# <a name="walkthrough-create-a-custom-site-workflow-activity"></a>Návod: Vytvoření vlastní pracovní postup aktivity webu
+  Tento návod ukazuje, jak vytvořit vlastní aktivitu pro pracovní postup na úrovni serveru pomocí [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]. (Pracovní postupy na úrovni serveru platí pro celý web, nikoli pouze seznam na webu.) Vlastní aktivita vytvoří zálohu seznam oznámení a pak do něj zkopíruje obsah seznam oznámení.  
   
- Tento návod ukazuje následující úlohy:  
+ Tento návod demonstruje následující úkoly:  
   
--   Vytvoření pracovního postupu úrovni webu.  
+- Vytvoření pracovního postupu úrovni webu.  
   
--   Vytvoření vlastního pracovního postupu aktivity.  
+- Vytváří se vlastní pracovní aktivitu.  
   
--   Vytváření a odstraňování seznamu služby SharePoint.  
+- Vytváření a odstraňování Sharepointového seznamu.  
   
--   Kopírování položek seznamu jednoho do jiného.  
+- Kopírování položky z jednoho seznamu do jiného.  
   
--   Zobrazení seznamu v panel Rychlé spuštění.  
+- Zobrazení seznamu na panelu Rychlé spuštění.  
   
- [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
 ## <a name="prerequisites"></a>Požadavky  
  K dokončení tohoto návodu budete potřebovat následující komponenty:  
   
--   Podporované edice systému [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] a služby SharePoint. Další informace najdete v tématu [požadavky pro vývoj řešení služby SharePoint](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
+-   Podporované edice systému [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] a SharePoint.
   
 -   Visual Studio.  
   
-## <a name="creating-a-site-workflow-custom-activity-project"></a>Vytvoření projektu vlastní aktivity pracovního postupu lokality  
- Nejprve vytvořte projekt k uložení a otestovat vlastní pracovní postup aktivity.  
+## <a name="create-a-site-workflow-custom-activity-project"></a>Vytvoření projektu webu vlastní aktivity pracovního postupu
+ Nejprve vytvořte projekt k uložení a otestovat vlastní pracovní aktivitu.  
   
-#### <a name="to-create-a-site-workflow-custom-activity-project"></a>Vytvoření projektu vlastní aktivity pracovního postupu lokality  
+#### <a name="to-create-a-site-workflow-custom-activity-project"></a>Vytvoření projektu webu vlastní aktivity pracovního postupu  
   
-1.  Na řádku nabídek zvolte **soubor**, **nový**, **projektu** zobrazíte **nový projekt** dialogové okno.  
+1.  V panelu nabídky zvolte **souboru** > **nový** > **projektu** zobrazíte **nový projekt** dialogové okno.  
   
-2.  Rozbalte **SharePoint** uzel v rámci buď **Visual C#** nebo **jazyka Visual Basic**a potom zvolte **2010** uzlu.  
+2.  Rozbalte **SharePoint** uzlu buď **Visual C#** nebo **jazyka Visual Basic**a klikněte na tlačítko **2010** uzlu.  
   
 3.  V **šablony** podokně, vyberte **projektu služby SharePoint 2010** šablony.  
   
-4.  V **název** zadejte **AnnouncementBackup**a potom zvolte **OK** tlačítko.  
+4.  V **název** zadejte **AnnouncementBackup**a klikněte na tlačítko **OK** tlačítko.  
   
-     **Průvodce vlastním nastavením SharePoint** se zobrazí.  
+     **Průvodce přizpůsobením SharePoint** se zobrazí.  
   
-5.  Na **zadejte úroveň lokality a zabezpečení pro ladění** vyberte **nasadit jako řešení farmy** možnost tlačítko a potom vyberte **Dokončit** tlačítko tak, aby přijímal úroveň a výchozí web vztah důvěryhodnosti.  
+5.  Na **zadejte web a úroveň zabezpečení pro ladění** zvolte **nasadit jako řešení farmy** přepínač a klikněte na tlačítko **Dokončit** tlačítko tak, aby přijímal vztah důvěryhodnosti úroveň a výchozí web.  
   
-     Tento krok nastaví úroveň důvěryhodnosti pro řešení jako řešení farmy, k dispozici jenom možnost pro projekty pracovního postupu.  
+     Tento krok nastaví úroveň důvěryhodnosti řešení jako řešení farmy, jediná dostupná možnost pro projekty pracovního postupu.  
   
-6.  V **Průzkumníku řešení**, vyberte uzel projektu a potom na řádku nabídek zvolte **projektu**, **přidat novou položku**.  
+6.  V **Průzkumníka řešení**, zvolte uzel projektu a pak na panelu nabídek zvolte **projektu** > **přidat novou položku**.  
   
-7.  V části buď **Visual C#** nebo **jazyka Visual Basic**, rozbalte **SharePoint** uzel a potom vyberte **2010** uzlu.  
+7.  V části **Visual C#** nebo **jazyka Visual Basic**, rozbalte **SharePoint** uzel a klikněte na tlačítko **2010** uzlu.  
   
-8.  V **šablony** podokně, vyberte **sekvenční pracovní postup (pouze řešení farmy)** šablony a potom zvolte **přidat** tlačítko.  
+8.  V **šablony** podokně, vyberte **sekvenčního pracovního postupu (pouze řešení farmy)** šablony a klikněte na tlačítko **přidat** tlačítko.  
   
-     **Průvodce vlastním nastavením SharePoint** se zobrazí.  
+     **Průvodce přizpůsobením SharePoint** se zobrazí.  
   
-9. Na **zadejte název pracovního postupu pro ladění** přijměte výchozí název (AnnouncementBackup - Workflow1). Změnit typ šablony pracovního postupu na **pracovní postup webu**a potom zvolte **Další** tlačítko.  
+9. Na **zadejte název pracovního postupu pro ladění** stránce, přijměte výchozí název (AnnouncementBackup - Workflow1). Změňte typ šablony pracovního postupu na **pracovní postup webu**a klikněte na tlačítko **Další** tlačítko.  
   
-10. Vyberte **Dokončit** tlačítko tak, aby přijímal zbývající výchozí nastavení.  
+10. Zvolte **Dokončit** tlačítko potvrďte zbývající výchozí nastavení.  
   
-## <a name="adding-a-custom-workflow-activity-class"></a>Přidání třídy aktivity vlastní pracovní postup  
- V dalším kroku přidejte třídu do projektu obsahuje kód pro aktivitu vlastní pracovní postup.  
+## <a name="add-a-custom-workflow-activity-class"></a>Přidání třídy activity vlastní pracovní postup
+ V dalším kroku přidejte třídu do projektu tak, aby obsahovala kód pro vlastní pracovní aktivitu.  
   
-#### <a name="to-add-a-custom-workflow-activity-class"></a>Přidání třídy aktivity vlastní pracovní postup  
+#### <a name="to-add-a-custom-workflow-activity-class"></a>Chcete-li přidat třídy activity vlastní pracovní postup  
   
-1.  Na řádku nabídek zvolte **projektu**, **přidat novou položku** zobrazíte **přidat novou položku** dialogové okno.  
+1.  V panelu nabídky zvolte **projektu** > **přidat novou položku** zobrazíte **přidat novou položku** dialogové okno.  
   
-2.  V **nainstalovaných šablonách** stromové zobrazení, vyberte **kód** uzel a potom zvolte **– třída** šablony v seznamu šablon položek projektu. Použijte výchozí název Class1. Vyberte **přidat** tlačítko.  
+2.  V **nainstalované šablony** stromové zobrazení, zvolte **kód** uzel a klikněte na tlačítko **třídy** šablony v seznamu šablon položek projektu. Použití výchozího názvu Class1. Zvolte **přidat** tlačítko.  
   
-3.  Nahraďte kód v Class1 následující:  
+3.  Veškerý kód v Class1 nahraďte následujícím kódem:  
   
      [!code-csharp[SP_AnnBackup#1](../sharepoint/codesnippet/CSharp/announcementbackup/class1.cs#1)]
      [!code-vb[SP_AnnBackup#1](../sharepoint/codesnippet/VisualBasic/announcementbackupvb/class1.vb#1)]  
   
-4.  Uložte projekt a potom na řádku nabídek zvolte **sestavení**, **sestavit řešení**.  
+4.  Uložte projekt a pak na panelu nabídek zvolte **sestavení** > **sestavit řešení**.  
   
-     Class1 se zobrazí jako vlastní akce v **sada nástrojů** na **AnnouncementBackup součásti** kartě.  
+     Class1 se zobrazí jako vlastní akce v **nástrojů** na **AnnouncementBackup součásti** kartu.  
   
-## <a name="adding-the-custom-activity-to-the-site-workflow"></a>Přidání vlastní aktivitu do pracovního postupu lokality  
+## <a name="add-the-custom-activity-to-the-site-workflow"></a>Přidat vlastní aktivity pracovního postupu lokality
  V dalším kroku přidáte aktivitu do pracovního postupu tak, aby obsahovala vlastní kód.  
   
-#### <a name="to-add-a-custom-activity-to-the-site-workflow"></a>Chcete-li přidat vlastní aktivity k webu pracovního postupu  
+#### <a name="to-add-a-custom-activity-to-the-site-workflow"></a>Chcete-li přidat vlastní aktivity do pracovního postupu lokality
   
-1.  Otevřete Workflow1 v Návrháři pracovních postupů v zobrazení návrhu.  
+1.  V Návrháři pracovních postupů v návrhovém zobrazení otevřete Workflow1.  
   
-2.  Přetáhněte Class1 z **sada nástrojů** tak, aby se v části `onWorkflowActivated1` aktivity nebo otevřete místní nabídky pro Class1, zvolte **kopie**, otevřete místní nabídku pro řádek v části `onWorkflowActivated1` aktivity a potom zvolte **vložení**.  
+2.  Přetáhněte Class1 z **nástrojů** tak, aby se objevila pod `onWorkflowActivated1` aktivity nebo otevřete místní nabídku pro Class1, zvolte **kopírování**, otevřete místní nabídku pro řádek u `onWorkflowActivated1` aktivita a klikněte na tlačítko **vložit**.  
   
 3.  Uložte projekt.  
   
-## <a name="testing-the-site-workflow-custom-activity"></a>Testování webu vlastní aktivity pracovního postupu  
- Potom spusťte projekt a spusťte pracovní postup webu. Vlastní aktivity vytvoří zálohování seznam oznámení a zkopíruje obsah z aktuální seznam oznámení do ní. Kód také zkontroluje, zda zálohování seznamu před vytvořením jedna již existuje. Pokud zálohování seznamu již existuje, je odstraněn. Kód také přidá odkaz na nový seznam na panel Rychlé spuštění webu služby SharePoint.  
+## <a name="test-the-site-workflow-custom-activity"></a>Vlastní aktivita pracovního postupu lokality testu
+ V dalším kroku spusťte projekt a spustit webový pracovní postup. Vlastní aktivita vytvoří záložní seznam oznámení a zkopíruje obsah z aktuální seznam oznámení do něj. Kód také zkontroluje, jestli seznam záloh je už před vytvořením jedné. Pokud záložní seznam již existuje, je odstranit. Kód také přidá odkaz do nového seznamu na panelu Rychlé spuštění webu služby SharePoint.  
   
-#### <a name="to-test-the-site-workflow-custom-activity"></a>K testování webu vlastní aktivity pracovního postupu  
+#### <a name="to-test-the-site-workflow-custom-activity"></a>Testování webu vlastní aktivity pracovního postupu  
   
-1.  Zvolte klávesy F5 spusťte projekt a nasaďte ho do služby SharePoint.  
+1.  Zvolte **F5** klávesy spusťte projekt a nasaďte ji do služby SharePoint.  
   
-2.  Na panel Rychlé spuštění, zvolte **uvádí** odkaz zobrazíte všechny seznamy, které jsou k dispozici na webu služby SharePoint. Všimněte si, že je pouze jeden seznam pro oznámení s názvem **oznámení**.  
+2.  Na panelu Rychlé spuštění zvolte **uvádí** odkazu zobrazíte všechny seznamy, které jsou k dispozici na Sharepointovém webu. Všimněte si, že existuje pouze jeden seznam oznámení s názvem o **oznámení**.  
   
-3.  V horní části na webovou stránku služby SharePoint, vyberte **pracovní postupy uzlu** odkaz.  
+3.  V horní části stránky na webovou stránku služby SharePoint, zvolte **pracovní postupy uzlu** odkaz.  
   
-4.  V části spuštění oddíl nový pracovní postup, vyberte **AnnouncementBackup - Workflow1** odkaz. To spustí pracovní postup webu a spouští kód ve vlastní akci.  
+4.  V části úvodní části nového pracovního postupu, vyberte **AnnouncementBackup - Workflow1** odkaz. To spustí pracovní postup lokalitě a spouští kód ve vlastní akci.  
   
-5.  Na panel Rychlé spuštění, zvolte **zálohování oznámení** odkaz. Všimněte si, že všechna oznámení, které jsou součástí **oznámení** seznamu byly zkopírovány do tohoto nového seznamu.  
+5.  Na panelu Rychlé spuštění zvolte **oznámení zálohování** odkaz. Všimněte si, že všechna oznámení, které jsou součástí **oznámení** seznamu byly zkopírovány do tohoto nového seznamu.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:
  [Postupy: vytvoření přijímače událostí](../sharepoint/how-to-create-an-event-receiver.md)   
  [Vývoj řešení služby SharePoint](../sharepoint/developing-sharepoint-solutions.md)  
-  
   

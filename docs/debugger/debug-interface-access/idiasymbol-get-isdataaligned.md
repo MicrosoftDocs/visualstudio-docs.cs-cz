@@ -1,5 +1,5 @@
 ---
-title: Idiasymbol::get_isdataaligned – | Microsoft Docs
+title: Idiasymbol::get_isdataaligned – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2888ce16c64b12ad846289148412733b18bc2500
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: d4c2d43129eadb0b0779086fc5dba0860c735cac
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49837799"
 ---
 # <a name="idiasymbolgetisdataaligned"></a>IDiaSymbol::get_isDataAligned
-Načte příznak, který určuje, zda některé hranic konkrétní paměti byl zarovnán uživatelem definovaný typ (UDT).  
+Získá příznak, který určuje, zda některé hranic konkrétní paměti byl zarovnán uživatelem definovaný typ (UDT).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,23 +34,23 @@ HRESULT get_isDataAligned(
   
 #### <a name="parameters"></a>Parametry  
  `pFlag`  
- [out] Vrátí `TRUE` Pokud UDT má byla zarovnány na některé paměti hranici; jinak vrátí `FALSE`.  
+ [out] Vrátí `TRUE` Pokud UDT má byla zarovnána některé hranice paměti; v opačném případě vrátí `FALSE`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí `S_FALSE` nebo kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí `S_FALSE` nebo kód chyby.  
   
 > [!NOTE]
 >  Vrácená hodnota `S_FALSE` znamená, že vlastnost není k dispozici pro symbol.  
   
 ## <a name="remarks"></a>Poznámky  
- Tato vlastnost nastavena obecně při spustitelný soubor je kompilovat s zarovnání dat jiný než výchozí. Například Microsoft C++ compiler, můžete změnit zarovnání dat s parametrem příkazového řádku /Zp*#*, kde *#* je hodnotu v bajtech.  
+ Tato vlastnost nastavena obecně při spustitelný soubor je zkompilován s zarovnání dat jiný než výchozí. Kompilátor C++ společnosti Microsoft můžete například změnit zarovnání dat s parametrem příkazového řádku/zp<em>#</em>, kde *#* je hodnota bajtu.  
   
 ## <a name="requirements"></a>Požadavky  
   
 |Požadavek|Popis|  
 |-----------------|-----------------|  
-|Hlavičky:|dia2.h|  
-|Verze:|V8.0 DIA SDK|  
+|Záhlaví:|dia2.h|  
+|Verze:|Ve verzi 8.0 DIA SDK|  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)

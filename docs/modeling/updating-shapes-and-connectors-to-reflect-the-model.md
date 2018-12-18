@@ -7,44 +7,46 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: e66d0f10f08f17f3376f44453450c467244ecf4c
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 5b8b70e1446894d93aa29024dada76af29b818eb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49889630"
 ---
-# <a name="update-shapes-and-connectors-to-reflect-the-model"></a>Aktualizace tvarů a konektory tak, aby odrážela modelu
+# <a name="update-shapes-and-connectors-to-reflect-the-model"></a>Aktualizace obrazců a konektorů k vyjádření modelu
 
-V jazyce specifické pro doménu v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], můžete provést vzhled obrazce odpovídal stavu základní model.
+V jazyka specifického pro doménu v sadě Visual Studio můžete provést vzhledu tvar odráží stav základní model.
 
-Příklady kódu v tomto tématu, musí být přidaní do `.cs` ve vaší `Dsl` projektu. Je třeba tyto příkazy do každého souboru:
+Příklady kódu v tomto tématu by se měl přidat k `.cs` ve vašich `Dsl` projektu. Je nutné tyto příkazy do každého souboru:
 
 ```csharp
 using Microsoft.VisualStudio.Modeling;
 using Microsoft.VisualStudio.Modeling.Diagrams;
 ```
 
-## <a name="set-shape-map-properties-to-control-the-visibility-of-a-decorator"></a>Nastavit vlastnosti obrazce mapy pro řízení viditelnost dekoratéra
+## <a name="set-shape-map-properties-to-control-the-visibility-of-a-decorator"></a>Nastavit vlastnosti Mapa obrazce pro řízení viditelnosti dekorátoru
 
-Můžete ovládat viditelnost dekoratéra bez nutnosti psaní kódu programu, nakonfigurováním mapování mezi tvar a třída domény v definici DSL. Další informace najdete v tématu [jak definovat jazyka domény](../modeling/how-to-define-a-domain-specific-language.md).
+Můžete řídit viditelnosti dekorátoru bez psaní kódu programu, tím, že nakonfigurujete mapování mezi obrazcem a doménová třída v definici DSL. Další informace najdete v tématu [jak se definuje jazyk specifický pro doménu](../modeling/how-to-define-a-domain-specific-language.md).
 
-## <a name="expose-the-color-and-style-of-a-shape-as-properties"></a>Vystavení barvy a stylu obrazce jako vlastnosti
+## <a name="expose-the-color-and-style-of-a-shape-as-properties"></a>Zpřístupnění barvu a styl v tvaru formě vlastnosti
 
-V definici DSL, klikněte pravým tlačítkem na třídu tvaru, přejděte na **přidat zveřejněné**a pak klikněte na jednu z položek, jako **Barva výplně**.
+V definici DSL, klikněte pravým tlačítkem na třídu tvar, přejděte na **přidat vystavený**a potom klikněte na jednu z položek, jako **Barva výplně**.
 
-Tvar, který má nyní vlastnosti domény, která můžete nastavit v programovém kódu nebo jako uživatel. Například pro ni nastavit v programovém kódu příkaz nebo pravidlo, můžete napsat:
+Doménová vlastnost, kterou můžete nastavit v kódu programu nebo jako uživatel nyní má obrazec. Například chcete-li nastavit v kódu programu, příkazu nebo pravidlo, můžete napsat:
 
 `shape.FillColor = System.Drawing.Color.Red;`
 
-Pokud chcete, aby vlastnost proměnná pouze pod kontrolou program a není uživatelem, vyberte novou vlastnost domény, jako **Barva výplně** v diagramu DSL definice. Potom v okně vlastností nastavte **je Procházet** k `false` nebo nastavte **je jen pro čtení uživatelského rozhraní** k `true`.
+Pokud chcete vlastnost proměnné pouze v rámci řízení programu a ne uživatele, vyberte novou vlastnost domény jako je například **Barva výplně** v diagramem definice DSL. Potom v okně Vlastnosti nastavte **je Prohlížitelná** k `false` nebo nastavte **je jen pro čtení uživatelského rozhraní** k `true`.
 
-## <a name="define-change-rules-to-make-color-style-or-location-depend-on-model-element-properties"></a>Definuje pravidla změnit barvu, styl nebo umístění, které závisí na vlastnosti prvku modelu
- Můžete definovat pravidla, které aktualizují vzhled tvar, který závisí na dalších částí modelu. Například můžete definovat pravidla změnit na element modelu, který aktualizuje barva jeho závislé na vlastnostech modelu elementu obrazce. Další informace o změnit pravidla najdete v tématu [pravidla rozšíří změny v rámci modelu](../modeling/rules-propagate-changes-within-the-model.md).
+## <a name="define-change-rules-to-make-color-style-or-location-depend-on-model-element-properties"></a>Definovat pravidla změnit barvu, styl nebo umístění závisí na vlastnosti prvku modelu
+ Můžete definovat pravidla, které aktualizují vzhledu tvar závisí na dalších součástí modelu. Například můžete definovat pravidla změnit na prvek modelu, který aktualizuje barva jeho tvar závisí na vlastnostech prvku modelu. Další informace o pravidlech změnu, naleznete v tématu [pravidla šíření změn v rámci the Model](../modeling/rules-propagate-changes-within-the-model.md).
 
- Pravidla používejte pouze k aktualizaci vlastností, které se udržují v rámci úložiště, protože pravidla nejsou volána, když se provádí příkaz Undo. Nezahrnuje některé grafické funkce, jako je například velikost a viditelnost obrazce. Chcete-li aktualizovat tyto funkce obrazce, přečtěte si téma [aktualizace bez úložiště grafické funkce](#OnAssociatedProperty).
+ Pravidla by měla používat jenom k aktualizaci vlastností, které jsou zachovány v rámci Store, protože pravidla nejsou vyvolány při provádění příkazu zpět. To nezahrnuje některé grafické funkce, třeba velikost a zda se tvar. K aktualizaci těchto funkcí tvaru, naleznete v tématu [aktualizace Non-Store grafické funkce](#OnAssociatedProperty).
 
- V následujícím příkladu se předpokládá, že máte vystavení `FillColor` jako vlastnost domain, jak je popsáno v předchozí části.
+ V následujícím příkladu se předpokládá, že mají přístup `FillColor` jako doménová vlastnost, jak je popsáno v předchozí části.
 
 ```csharp
 [RuleOn(typeof(ExampleElement))]
@@ -80,12 +82,11 @@ Pokud chcete, aby vlastnost proměnná pouze pod kontrolou program a není uživ
       return types.ToArray();
     }
   }
-
 ```
 
-## <a name="use-onchildconfigured-to-initialize-a-shapes-properties"></a>Inicializace vlastností obrazce pomocí OnChildConfigured
+## <a name="use-onchildconfigured-to-initialize-a-shapes-properties"></a>Použít OnChildConfigured k inicializaci vlastností obrazce
 
-Chcete-li nastavit vlastnosti obrazce při prvním vytvoření přepsání `OnChildConfigured()` v definici částečné vaší třídy diagram. Diagram třídy je zadané ve vaší definice DSL, a generovaný kód je v **Dsl\Generated Code\Diagram.cs**. Příklad:
+Chcete-li nastavit vlastnosti obrazec při prvním vytvoření přepsání `OnChildConfigured()` v částečnou definici třídy diagramu. Diagram tříd je zadán v definici DSL a generovaného kódu je v **Dsl\Generated Code\Diagram.cs**. Příklad:
 
 ```csharp
 partial class MyLanguageDiagram
@@ -105,16 +106,15 @@ partial class MyLanguageDiagram
     // else deal with other types of shapes and connectors.
   }
 }
-
 ```
 
-Tuto metodu můžete použít pro vlastnosti domény i bez úložiště funkce, jako je například velikost tvaru.
+Tuto metodu lze pro vlastnosti domény i bez úložiště funkcí, jako je například velikost tvaru.
 
-##  <a name="OnAssociatedProperty"></a> Použít AssociateValueWith() k aktualizaci dalších funkcí obrazce
+## <a name="OnAssociatedProperty"></a> Použití AssociateValueWith() k aktualizaci další funkce obrazec
 
-Pro některé funkce obrazce, jako je například, jestli má stín nebo styl šipky konektoru neexistuje žádné předdefinované metoda vystavení funkce jako vlastnost domain.  Změny na tyto funkce nejsou pod kontrolou transakcí systému. Proto není vhodné k jejich aktualizaci pomocí pravidel, protože pravidla nejsou volána, když uživatel provede příkaz Undo.
+Pro některé funkce obrazce, jako je například, zda má stín nebo styl šipky konektoru neexistuje žádná integrovaná metoda vystavení funkce jako doménovou vlastnost.  Změny těchto funkcí nejsou pod kontrolou transakcí systému. Proto není třeba je aktualizovat pomocí pravidel, protože pravidla nejsou vyvolány, když uživatel provádí příkaz zpět.
 
-Místo toho, funkce, můžete aktualizovat pomocí <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnAssociatedPropertyChanged%2A>. V následujícím příkladu styl šipky konektoru řídí hodnotu vlastnosti domény v relaci, která zobrazuje konektor:
+Místo toho můžete aktualizovat tyto funkce pomocí <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnAssociatedPropertyChanged%2A>. V následujícím příkladu se provádí styl šipky konektoru podle hodnoty vlastnosti domény ve vztahu, který zobrazuje konektoru:
 
 ```csharp
 public partial class ArrowConnector // My connector class.
@@ -155,6 +155,6 @@ public partial class ArrowConnector // My connector class.
 }
 ```
 
-`AssociateValueWith()` by měla být volána jednou pro každou vlastnost domény, který chcete zaregistrovat. Poté, co byla volána, všechny změny zadanou vlastnost zavolá `OnAssociatedPropertyChanged()` ve všech tvarů, která představují element vlastnosti modelu.
+`AssociateValueWith()` by měla být volána jednou pro každou doménovou vlastnost, kterou chcete zaregistrovat. Poté, co byla volána, bude volat jakékoli změny pro zadanou vlastnost `OnAssociatedPropertyChanged()` v obrazce, které se prvek vlastnosti modelu.
 
-Není nutné volat `AssociateValueWith()` pro každou instanci. I když InitializeResources je metoda instance, je volána, pouze jednou pro každou třídu tvaru.
+Není nutné volat `AssociateValueWith()` pro každou instanci. I když InitializeResources je metoda instance, je vyvolána pouze jednou pro každou třídu tvaru.

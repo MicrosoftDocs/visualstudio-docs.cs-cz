@@ -1,5 +1,5 @@
 ---
-title: Funkce SccRename | Microsoft Docs
+title: Sccrename – funkce | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c24d84ff659d287f3b32be2b5585ded16b148395
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 92c19e47f680d4feb6c4a4acd6de358c1a6191ab
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49841227"
 ---
 # <a name="sccrename-function"></a>SccRename – funkce
-Tato funkce přejmenuje soubor v systému správy zdrojů.  
+Tato funkce přejmenuje soubor v systému správy zdrojového kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,33 +38,33 @@ SCCRTN SccRename(
   
 #### <a name="parameters"></a>Parametry  
  pvContext  
- [v] Struktura modulu plug-in kontextu řízení zdroje.  
+ [in] Struktura kontext modulu plug-in zdroje ovládacího prvku.  
   
  hWnd  
- [v] Obslužná rutina do okna IDE, modul plug-in správy zdroje můžete použít jako nadřazený objekt pro všechna dialogová okna poskytuje.  
+ [in] Popisovač okna integrovaného vývojového prostředí, které modul plug-in správy zdrojového kódu můžete použít jako nadřazený pro všechna dialogová okna, které poskytuje.  
   
  lpFileName  
- [v] Soubor plně kvalifikovaný název souboru je přejmenován.  
+ [in] Plně kvalifikovaný název souboru se přejmenovat.  
   
  lpNewName  
- [v] Plně kvalifikovaný název nové. Pokud cesta k adresáři se liší, pak soubor přesunula z jednoho podadresáře do jiného.  
+ [in] Plně kvalifikovaný název nového. Pokud cesta k adresáři se liší, pak tento soubor se přesunul z jednoho podadresáře do jiného.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Očekává se, že modul plug-in implementace zdroje řízení této funkce vrátí jednu z následujících hodnot:  
+ Modul plug-in implementaci ovládacího prvku zdroje této funkce má vracet instanci jednoho z následujících hodnot:  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
 |SCC_OK|Přejmenování operace byla úspěšně dokončena.|  
-|SCC_E_PROJNOTOPEN|Projekt není otevřen v části Správa zdrojového kódu.|  
-|SCC_E_FILENOTCONTROLLED|Soubor není ve správě zdrojového kódu.|  
-|SCC_E_ACCESSFAILURE|Došlo k chybě při přístupu správy zdrojového kódu, pravděpodobně kvůli problémům s sítě nebo kolizí.|  
+|SCC_E_PROJNOTOPEN|Projekt není otevřen v rámci správy zdrojového kódu.|  
+|SCC_E_FILENOTCONTROLLED|Soubor není pod správou zdrojových kódů.|  
+|SCC_E_ACCESSFAILURE|Došlo k problému, přístup k systému správy zdrojového kódu, pravděpodobně kvůli problémům se síti nebo kolize.|  
 |SCC_E_NOTAUTHORIZED|Uživatel nemá oprávnění k dokončení této operace.|  
-|SCC_E_COULDNOTCREATEPROJECT|Projekt nelze vytvořit jako součást procesu přejmenování.|  
-|SCC_E_OPNOTPERFORMED|Operace nebyla provedena.|  
+|SCC_E_COULDNOTCREATEPROJECT|Projekt nejde vytvořit, protože část procesu přejmenování.|  
+|SCC_E_OPNOTPERFORMED|Operace se neprovedla.|  
 |SCC_E_NONSPECIFICERROR|Došlo k neurčené nebo obecné chybě.|  
   
 ## <a name="remarks"></a>Poznámky  
- Tato funkce slouží k přejmenování souboru nebo ho přesunout z jednoho umístění do druhého v systému správy zdrojů. Modul plug-in správy zdroje neměli přístup k souboru na disku. Je zodpovědností rozhraní IDE Přejmenování místního souboru.  
+ Tato funkce slouží k přejmenování souboru nebo ji přesunout z jednoho umístění do druhého v systému správy zdrojového kódu. Modul plug-in správy zdrojového kódu by se neměly pokoušet získat přístup k souboru na disku. Je zodpovědností rozhraní IDE přejmenovat místní soubor.  
   
 ## <a name="see-also"></a>Viz také  
  [Funkce modulu plug-in správy zdrojového kódu v rozhraní API](../extensibility/source-control-plug-in-api-functions.md)

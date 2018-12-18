@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31129326"
 ---
 # <a name="implementing-a-legacy-language-service"></a>Implementace služby jazyk starší verze
 Třídy v rámci spravované balíčku (MPF) můžete použít k implementaci starší verze jazyka služba, která podporuje širokou řadu funkcí, například zvýraznění syntaxe, odpovídající složené závorce a doplňování IntelliSense.  

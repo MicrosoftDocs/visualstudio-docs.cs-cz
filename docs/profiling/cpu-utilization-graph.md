@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cfbce376425d4e98d493aa3478e9cf00ac837a17
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 40bc0be19ffa0daa9a0ea786d7e06a4e9e7dfd4b
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750126"
 ---
 # <a name="cpu-utilization-graph"></a>Graf využití procesoru
 Graf využití procesoru v aplikaci znázorňuje úroveň využití v průběhu času. Osy x představuje dobu trvání trasování a osy y představuje počet logických jader v systému. Graf nezobrazí, které konkrétní základní je aktivní v daném okamžiku. Například pokud každé dvě jádra jsou spuštěné v 50 procent kapacity pro dané časové období, pak toto zobrazení uvádí jednoho logického jádra využívání.  
@@ -33,6 +34,6 @@ Graf využití procesoru v aplikaci znázorňuje úroveň využití v průběhu 
   
 -   Prázdné označuje dostupnost nepoužívané logické jádra systému. Pokud zjistíte většího počtu možností pro stupně paralelního zpracování jsou k dispozici pro váš proces těchto jader.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Zobrazení využití](../profiling/utilization-view.md)   
  [Průměrné využití procesoru](../profiling/average-cpu-utilization.md)

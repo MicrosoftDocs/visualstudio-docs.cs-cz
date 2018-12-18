@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31129360"
 ---
 # <a name="implementing-single-file-generators"></a>Implementace generátory jedním souborem
 Vlastní nástroj – někdy označovány jako generátor jednoho souboru – umožňuje rozšířit [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] a [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] projektu systémy v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]. Vlastní nástroj je komponenty modelu COM, který implementuje <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator> rozhraní. Použití tohoto rozhraní, transformuje vlastní nástroj jeden vstupní soubor do jednoho výstupního souboru. Výsledek transformace může být zdrojový kód nebo jakékoliv výstup, který je užitečné. Dva příklady vlastní nástroj generuje kód souborů jsou kódu vygenerované v reakci na změny v souborech generována pomocí webové služby popis Language (WSDL) a vizuálního návrháře.  

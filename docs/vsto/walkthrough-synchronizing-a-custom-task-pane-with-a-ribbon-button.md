@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Synchronizace vlastního podokna úloh s tlačítkem pásu karet | Microsoft Docs'
+title: 'Návod: Synchronizace vlastního podokna úloh s tlačítkem pásu karet'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -26,29 +26,30 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ff3252a1ae234615cc4d4ed83a07d98a15092bee
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7b6c36e93d9dd8dd4ef81d0d124ae33e842a16d7
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35676061"
 ---
-# <a name="walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button"></a>Návod: Synchronizace vlastního podokna úloh s tlačítkem na pásu karet
-  Tento návod ukazuje postup vytvoření vlastního podokna úloh, uživatelé mohou zobrazit nebo skrýt kliknutím na tlačítko přepnutí na pásu karet. Vždy byste měli vytvořit prvek uživatelského rozhraní (UI), jako je tlačítko, které mohou uživatelé kliknout a zobrazit nebo skrýt vlastního podokna úloh, protože aplikace Microsoft Office neposkytují výchozí způsob, jak uživatelům zobrazit nebo skrýt vlastní podokna úloh.  
+# <a name="walkthrough-synchronize-a-custom-task-pane-with-a-ribbon-button"></a>Návod: Synchronizace vlastního podokna úloh s tlačítkem pásu karet
+  Tento návod ukazuje, jak vytvořit vlastního podokna úloh, které uživatelé můžou skrýt nebo zobrazit kliknutím na přepínací tlačítko na pásu karet. Vždy byste měli vytvořit prvek uživatelského rozhraní (UI), jako je například tlačítko, který mohou uživatelé kliknout a zobrazit nebo skrýt vlastního podokna úloh, protože aplikace Microsoft Office se neposkytuje výchozí způsob, jak uživatelé zobrazení nebo skrytí vlastních podoken úloh.  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
- I když tento návod používá Excel konkrétně, platí pro všechny aplikace, které jsou uvedeny výše koncepty znázorněno pomocí průvodce.  
+ I když tento návod používá konkrétně aplikace Excel, koncepty jsme vám ukázali podle návodu platí pro všechny aplikace, které jsou uvedené výše.  
   
  Tento návod znázorňuje následující úlohy:  
   
 -   Návrh uživatelského rozhraní vlastního podokna úloh.  
   
--   Přidání přepínací tlačítko pásu karet.  
+-   Přidání přepínacího tlačítka na pás karet.  
   
--   Přepínací tlačítko synchronizace s vlastního podokna úloh.  
+-   Synchronizace přepínacího tlačítka s vlastní podokno úloh.  
   
 > [!NOTE]  
->  Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [přizpůsobení prostředí Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
+>  Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [přizpůsobení integrovaného vývojového prostředí sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).  
   
 ## <a name="prerequisites"></a>Požadavky  
  K dokončení tohoto návodu budete potřebovat následující komponenty:  
@@ -57,127 +58,127 @@ ms.lasthandoff: 04/16/2018
   
 -   Aplikace Microsoft Excel nebo Microsoft [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)].  
   
-## <a name="creating-the-add-in-project"></a>Vytvoření projektu doplňku  
- V tomto kroku vytvoříte projektu doplňku VSTO pro Excel.  
+## <a name="create-the-add-in-project"></a>Vytvořte projekt doplňku  
+ V tomto kroku vytvoříte projekt doplňku VSTO pro Excel.  
   
-#### <a name="to-create-a-new-project"></a>Chcete-li vytvořit nový projekt  
+### <a name="to-create-a-new-project"></a>Chcete-li vytvořit nový projekt  
   
-1.  Vytvoření projektu doplněk aplikace Excel s názvem **SynchronizeTaskPaneAndRibbon**, pomocí šablony projektu doplněk aplikace Excel. Další informace najdete v tématu [postupy: vytváření projektů Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
+1.  Vytvoření projektu doplňku aplikace Excel s názvem **SynchronizeTaskPaneAndRibbon**, pomocí šablony projektu doplňku aplikace Excel. Další informace najdete v tématu [postupy: vytvoření Office projekty v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Otevře se **ThisAddIn.cs** nebo **ThisAddIn.vb** kód soubor a přidá **SynchronizeTaskPaneAndRibbon** projektu do **Průzkumníku řešení**.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Otevře **ThisAddIn.cs** nebo **ThisAddIn.vb** soubor kódu a přidá **SynchronizeTaskPaneAndRibbon** projektu **Průzkumníka řešení**.  
   
-## <a name="adding-a-toggle-button-to-the-ribbon"></a>Přidání přepínače na pásu karet  
- Jedním z pokynů pro návrh aplikace Office je, že uživatelé by měli mít vždy řízení aplikace Office uživatelského rozhraní. Pokud chcete povolit uživatelům řídit vlastního podokna úloh, můžete přidat přepínací tlačítko pásu karet, který zobrazí a skryje do podokna úloh. Chcete-li vytvořit přepínací tlačítko, přidejte **pásu karet (vizuálního návrháře)** položku do projektu. Návrháře umožňuje přidat a umístěte ovládací prvky, nastavení vlastností ovládacího prvku a zpracování události ovládacího prvku. Další informace najdete v tématu [Návrhář pásu karet](../vsto/ribbon-designer.md).  
+## <a name="add-a-toggle-button-to-the-ribbon"></a>Přidání přepínacího tlačítka na pás karet  
+ Jedním z pokynů pro návrh aplikace Office je, že uživatelé by měli vždy mít ovládací prvek uživatelského rozhraní aplikace Office. Umožňuje uživatelům řídit vlastního podokna úloh, můžete přidat přepínací tlačítko pásu karet, který zobrazí a skryje podokno úloh. Chcete-li vytvořit přepínací tlačítko, přidejte **pás karet (vizuální návrhář)** položky do projektu. Návrhář pomáhá přidat a umístit ovládací prvky, nastavit vlastnosti ovládacího prvku a zpracovat události ovládacího prvku. Další informace najdete v tématu [Návrháře pásu karet](../vsto/ribbon-designer.md).  
   
-#### <a name="to-add-a-toggle-button-to-the-ribbon"></a>Chcete-li přidat přepínač na pásu karet  
+### <a name="to-add-a-toggle-button-to-the-ribbon"></a>Přidání přepínacího tlačítka na pás karet  
   
 1.  Na **projektu** nabídky, klikněte na tlačítko **přidat novou položku**.  
   
-2.  V **přidat novou položku** dialogové okno, vyberte **pásu karet (vizuálního návrháře)**.  
+2.  V **přidat novou položku** dialogu **pás karet (vizuální návrhář)**.  
   
-3.  Změňte název nové pásu karet na **ManageTaskPaneRibbon**a klikněte na tlačítko **přidat**.  
+3.  Změňte název nového pásu karet na **ManageTaskPaneRibbon**a klikněte na tlačítko **přidat**.  
   
-     **ManageTaskPaneRibbon.cs** nebo **ManageTaskPaneRibbon.vb** soubor se otevře v Návrháři pásu karet a zobrazí se výchozí kartě a skupiny.  
+     **ManageTaskPaneRibbon.cs** nebo **ManageTaskPaneRibbon.vb** soubor se otevře v Návrháři pásu karet a zobrazí výchozí kartu a skupinu.  
   
 4.  V Návrháři pásu karet klikněte na tlačítko **group1**.  
   
-5.  V **vlastnosti** nastavte **popisek** vlastnost **podokně Správce úloh**.  
+5.  V **vlastnosti** okno, nastaveno **popisek** vlastnost **správce podokna úloh**.  
   
-6.  Z **ovládacích prvků pásu karet Office** kartě **sada nástrojů**, přetáhněte **přepínací tlačítko** na **podokně Správce úloh** skupiny.  
+6.  Z **ovládací prvky Ribbon Office** karty **nástrojů**, přetáhněte **ToggleButton** na **správce podokna úloh** skupiny.  
   
 7.  Klikněte na tlačítko **toggleButton1**.  
   
-8.  V **vlastnosti** nastavte **popisek** vlastnost **zobrazit podokno úloha**.  
+8.  V **vlastnosti** okno, nastaveno **popisek** vlastnost **zobrazit podokno úloh**.  
   
-## <a name="designing-the-user-interface-of-the-custom-task-pane"></a>Návrh uživatelského rozhraní vlastního podokna úloh  
- Neexistuje žádné vizuálního návrháře pro vlastní podokna úloh, ale můžete navrhnout uživatelský ovládací prvek pro rozložení, které chcete. Dále v tomto návodu přidáte vlastního podokna úloh uživatelského ovládacího prvku.  
+## <a name="design-the-user-interface-of-the-custom-task-pane"></a>Návrh uživatelského rozhraní vlastního podokna úloh  
+ Neexistuje žádné vizuálního návrháře pro vlastní podokna úloh, ale můžete navrhnout uživatelský ovládací prvek rozložení, které chcete. Dále v tomto názorném postupu se přidat uživatelský ovládací prvek do vlastního podokna úloh.  
   
-#### <a name="to-design-the-user-interface-of-the-custom-task-pane"></a>Návrh uživatelského rozhraní vlastního podokna úloh  
+### <a name="to-design-the-user-interface-of-the-custom-task-pane"></a>K návrhu uživatelského rozhraní vlastního podokna úloh  
   
 1.  Na **projektu** nabídky, klikněte na tlačítko **přidat uživatelský ovládací prvek**.  
   
-2.  V **přidat novou položku** dialogové okno pole, změňte název uživatelského ovládacího prvku na **TaskPaneControl**a klikněte na tlačítko **přidat**.  
+2.  V **přidat novou položku** dialogové okno pole, změňte název uživatelský ovládací prvek **TaskPaneControl**a klikněte na tlačítko **přidat**.  
   
-     Otevře se v Návrháři uživatelského ovládacího prvku.  
+     Uživatelský ovládací prvek se otevře v návrháři.  
   
-3.  Z **běžné ovládací prvky** kartě **sada nástrojů**, přetáhněte **TextBox** ovládacího prvku do uživatelského ovládacího prvku.  
+3.  Z **běžné ovládací prvky** karty **nástrojů**, přetáhněte **textového pole** ovládacího prvku do uživatelského ovládacího prvku.  
   
-## <a name="creating-the-custom-task-pane"></a>Vytvoření vlastního podokna úloh  
- Vytvoření vlastního podokna úloh při doplňku VSTO spustí, přidat uživatelský ovládací prvek do podokna úloh v <xref:Microsoft.Office.Tools.AddIn.Startup> obslužné rutiny události z doplňku VSTO. Ve výchozím nastavení nebudou viditelné vlastního podokna úloh. Dále v tomto návodu přidáte kód, který bude zobrazení nebo skrytí podokna úloh, když uživatel klikne přepínací tlačítko, které jste přidali na pásu karet.  
+## <a name="create-the-custom-task-pane"></a>Vytvoření vlastního podokna úloh  
+ Pokud chcete vytvořit vlastní podokno úloh při spuštění doplňku VSTO, přidat uživatelský ovládací prvek do podokna úloh v <xref:Microsoft.Office.Tools.AddIn.Startup> obslužná rutina události doplňku VSTO. Ve výchozím nastavení se nezobrazí podokno úloh. Dále v tomto názorném postupu přidáte kód, který se bude zobrazení nebo skrytí podokna úloh, když uživatel klikne na přepínací tlačítko, které jste přidali na pás karet.  
   
-#### <a name="to-create-the-custom-task-pane"></a>Vytvoření vlastního podokna úloh  
+### <a name="to-create-the-custom-task-pane"></a>Vytvoření vlastního podokna úloh  
   
-1.  V **Průzkumníku řešení**, rozbalte položku **Excel**.  
+1.  V **Průzkumníka řešení**, rozbalte **Excel**.  
   
-2.  Klikněte pravým tlačítkem na **ThisAddIn.cs** nebo **ThisAddIn.vb** a klikněte na tlačítko **kód zobrazení**.  
+2.  Klikněte pravým tlačítkem na **ThisAddIn.cs** nebo **ThisAddIn.vb** a klikněte na tlačítko **zobrazit kód**.  
   
-3.  Přidejte následující kód, který `ThisAddIn` třídy. Tento kód deklaruje instanci `TaskPaneControl` jako člen skupiny `ThisAddIn`.  
+3.  Přidejte následující kód, který `ThisAddIn` třídy. Tento kód deklaruje instanci `TaskPaneControl` jako člen `ThisAddIn`.  
   
      [!code-csharp[Trin_TaskPaneRibbonSynchronize#1](../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ThisAddIn.cs#1)]
      [!code-vb[Trin_TaskPaneRibbonSynchronize#1](../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ThisAddIn.vb#1)]  
   
-4.  Nahraďte `ThisAddIn_Startup` obslužné rutiny události s následujícím kódem. Tento kód přidá `TaskPaneControl` do objektu `CustomTaskPanes` pole, ale nezobrazí vlastního podokna úloh (ve výchozím nastavení, <xref:Microsoft.Office.Tools.CustomTaskPane.Visible%2A> vlastnost <xref:Microsoft.Office.Tools.CustomTaskPane> třída je **false**). Kód jazyka Visual C# také připojí obslužnou rutinu události a <xref:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged> událostí.  
+4.  Nahradit `ThisAddIn_Startup` obslužné rutiny události s následujícím kódem. Tento kód přidá `TaskPaneControl` objektu `CustomTaskPanes` pole, ale nejsou zobrazeny v podokně úloh (ve výchozím nastavení, <xref:Microsoft.Office.Tools.CustomTaskPane.Visible%2A> vlastnost <xref:Microsoft.Office.Tools.CustomTaskPane> třída je **false**). Kód jazyka Visual C# také připisuje obslužnou rutinu události pro <xref:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged> událostí.  
   
      [!code-csharp[Trin_TaskPaneRibbonSynchronize#2](../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ThisAddIn.cs#2)]
      [!code-vb[Trin_TaskPaneRibbonSynchronize#2](../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ThisAddIn.vb#2)]  
   
-5.  Přidejte následující metodu do `ThisAddIn` třídy. Tato metoda zpracovává <xref:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged> událostí. Když uživatel nezavře do podokna úloh kliknutím **Zavřít** tlačítko (X), tato metoda aktualizace stavu přepínač na pásu karet.  
+5.  Přidejte následující metodu do `ThisAddIn` třídy. Tato metoda obsluhuje <xref:Microsoft.Office.Tools.CustomTaskPane.VisibleChanged> událostí. Když uživatel zavírá podokna úloh po kliknutí **Zavřít** tlačítko (X), tato metoda aktualizace, stav přepínacího tlačítko na pásu karet.  
   
      [!code-csharp[Trin_TaskPaneRibbonSynchronize#3](../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ThisAddIn.cs#3)]
      [!code-vb[Trin_TaskPaneRibbonSynchronize#3](../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ThisAddIn.vb#3)]  
   
-6.  Přidejte následující vlastnosti, která má `ThisAddIn` třídy. Tato vlastnost zpřístupní privátní `myCustomTaskPane1` objekt, který má jiné třídy. Dále v tomto návodu přidáte kód, který `MyRibbon` třídu, která používá tuto vlastnost.  
+6.  Přidejte následující vlastnost, která má `ThisAddIn` třídy. Tato vlastnost poskytuje privátní `myCustomTaskPane1` objekt do jiné třídy. Dále v tomto názorném postupu přidáte kód, který `MyRibbon` třídu, která používá tuto vlastnost.  
   
      [!code-csharp[Trin_TaskPaneRibbonSynchronize#4](../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ThisAddIn.cs#4)]
      [!code-vb[Trin_TaskPaneRibbonSynchronize#4](../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ThisAddIn.vb#4)]  
   
-## <a name="hiding-and-showing-the-custom-task-pane-by-using-the-toggle-button"></a>Skrytí a zobrazení vlastního podokna úloh s použitím přepínací tlačítko  
- Posledním krokem je přidání kód, který zobrazí nebo skryje vlastního podokna úloh, když uživatel klikne na tlačítko přepnutí na pásu karet.  
+## <a name="hide-and-show-the-custom-task-pane-by-using-the-toggle-button"></a>Skrytí a zobrazení vlastního podokna úloh pomocí přepínacího tlačítka  
+ Posledním krokem je přidání kódu, který zobrazí nebo skryje podokno úloh, když uživatel klikne na přepínací tlačítko na pásu karet.  
   
-#### <a name="to-display-and-hide-the-custom-task-pane-by-using-the-toggle-button"></a>K zobrazení a skrytí vlastního podokna úloh s použitím přepínací tlačítko  
+### <a name="to-display-and-hide-the-custom-task-pane-by-using-the-toggle-button"></a>K zobrazení a skrytí vlastního podokna úloh pomocí přepínacího tlačítka  
   
-1.  V Návrháři pásu karet klikněte dvakrát na **zobrazit podokno úloha** přepínací tlačítko.  
+1.  V Návrháři pásu karet klikněte dvakrát na **zobrazit podokno úloh** přepínacího tlačítka.  
   
-     Visual Studio automaticky vygeneruje obslužné rutiny události s názvem `toggleButton1_Click`, která zpracovává <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> událostí přepínací tlačítko. Visual Studio se rovněž otevře **MyRibbon.cs** nebo **MyRibbon.vb** souboru v editoru kódu.  
+     Visual Studio vygeneruje obslužnou rutinu události s názvem automaticky `toggleButton1_Click`, která zpracovává <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> události přepínacího tlačítka. Visual Studio také otevře *MyRibbon.cs* nebo *MyRibbon.vb* souboru v editoru kódu.  
   
-2.  Nahraďte `toggleButton1_Click` obslužné rutiny události s následujícím kódem. Když uživatel klikne na tlačítko přepnutí, tento kód zobrazí nebo skryje vlastního podokna úloh, v závislosti na tom, jestli je přepínací tlačítko stisknutí nebo nebyla stisknuta klávesa.  
+2.  Nahradit `toggleButton1_Click` obslužné rutiny události s následujícím kódem. Když uživatel klikne na přepínací tlačítko, tento kód zobrazí nebo skryje podokno úloh, v závislosti na tom, jestli je přepínací tlačítko stisknuté nebo nestisknuté.  
   
      [!code-vb[Trin_TaskPaneRibbonSynchronize#5](../vsto/codesnippet/VisualBasic/Trin_TaskPaneRibbonSynchronize/ManageTaskPaneRibbon.vb#5)]
      [!code-csharp[Trin_TaskPaneRibbonSynchronize#5](../vsto/codesnippet/CSharp/Trin_TaskPaneRibbonSynchronize/ManageTaskPaneRibbon.cs#5)]  
   
-## <a name="testing-the-add-in"></a>Testování v aplikaci  
- Při spuštění projektu aplikace Excel se spustí bez zobrazení vlastního podokna úloh. Klikněte na tlačítko přepnutí na pásu karet k testování kódu.  
+## <a name="test-the-add-in"></a>Testování v aplikaci  
+ Při spuštění projektu se otevře Excel bez zobrazení vlastního podokna úloh. Klikněte na přepínací tlačítko na pásu karet pro otestování kódu.  
   
-#### <a name="to-test-your-vsto-add-in"></a>K testování vaší doplňku VSTO  
+### <a name="to-test-your-vsto-add-in"></a>K otestování vašeho doplňku VSTO  
   
-1.  Stisknutím klávesy F5 spusťte projekt.  
+1.  Stisknutím klávesy **F5** ke spuštění projektu.  
   
-     Potvrďte, že aplikace Excel se otevře a **doplňky** karta se zobrazí na pásu karet.  
+     Potvrďte, že se otevře Excel a **Add-Ins** kartě se zobrazí na pásu karet.  
   
-2.  Klikněte **doplňky** na pásu karet.  
+2.  Klikněte na tlačítko **Add-Ins** kartu na pásu karet.  
   
-3.  V **podokně Správce úloh** klikněte na možnost **zobrazit podokno úloha** přepínací tlačítko.  
+3.  V **správce podokna úloh** klikněte na položku **zobrazit podokno úloh** přepínacího tlačítka.  
   
-     Ověřte, zda je do podokna úloh můžete případně zobrazí a skryté po kliknutí na tlačítko přepínací tlačítko.  
+     Ověřte, že v podokně úloh střídavě zobrazí a skryté klepnete přepínacího tlačítka.  
   
-4.  Pokud je zobrazen v podokně úloh, klikněte na tlačítko **Zavřít** tlačítko (X) v dolním podokně úloh.  
+4.  Když v podokně úloh je zobrazen, klikněte na tlačítko **Zavřít** tlačítko (X) v horním rohu podokna úloh.  
   
-     Ověřte, že přepínací tlačítko pravděpodobně nebyla stisknuta.  
+     Ověřte, že se nebudou stisknutí přepínacího tlačítka.  
   
 ## <a name="next-steps"></a>Další kroky  
- Další informace o tom, jak vytvořit vlastní podokna úloh z těchto témat:  
+ Další informace o tom, jak vytvořit vlastní podokna úloh naleznete v těchto tématech:  
   
--   Vytvoření vlastního podokna úloh v doplňku VSTO pro jinou aplikaci. Další informace o aplikacích, které podporují vlastní podokna úloh najdete v tématu [vlastní podokna úloh](../vsto/custom-task-panes.md).  
+-   Vytvoření vlastního podokna úloh v doplňku VSTO pro jinou aplikaci. Další informace o aplikacích, které podporují vlastní podokna úloh, naleznete v tématu [vlastní podokna úloh](../vsto/custom-task-panes.md).  
   
 -   Automatizace aplikace z vlastního podokna úloh. Další informace najdete v tématu [návod: automatizace aplikace z vlastního podokna úloh](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md).  
   
--   Vytvoření vlastního podokna úloh pro každý e-mailová zpráva, která je otevřen v aplikaci Outlook. Další informace najdete v tématu [návod: zobrazení vlastních podoken s e-mailových zpráv v aplikaci Outlook](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md).  
+-   Vytvoření vlastního podokna úloh pro každou e-mailové zprávy, která je otevřena v Outlooku. Další informace najdete v tématu [návod: zobrazení vlastních podoken úloh s e-mailové zprávy v aplikaci Outlook](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Vlastní podokna úloh](../vsto/custom-task-panes.md)   
  [Postupy: Přidání vlastního podokna úloh do aplikace](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)   
  [Návod: Automatizace aplikace z vlastního podokna úloh](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)   
- [Návod: Zobrazení vlastních podoken úloh s e-mailových zpráv v aplikaci Outlook](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md)   
+ [Návod: Zobrazení vlastních podoken úloh s e-mailové zprávy v aplikaci Outlook](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md)   
  [Přehled pásu karet](../vsto/ribbon-overview.md)  
   
   

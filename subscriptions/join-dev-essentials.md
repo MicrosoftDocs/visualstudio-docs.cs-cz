@@ -9,18 +9,19 @@ description: Další informace o Essentials vývojáře Visual Studio a jak se p
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: ad767d776d6b1f653f3417e12faae73a0a92904b
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: e04e361dc36b0e4253edc695d79664995f681970
+ms.sourcegitcommit: 4667e6ad223642bc4ac525f57281482c9894daf4
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36283045"
 ---
 # <a name="how-to-join-visual-studio-dev-essentials"></a>Postup připojení Essentials vývojáře Visual Studio
 
 Visual Studio Dev Essentials poskytuje vše, co potřebujete k vytvoření a nasazení aplikace na jakékoli platformě. Pomocí nástroje stavu techniky, výkon cloudu, školení a podpory je naše nejúplnější volné programu pro vývojáře někdy.
 
-Navštivte [ https://www.visualstudio.com/dev-essentials/ ](https://www.visualstudio.com/dev-essentials/) Další informace o všechno, která je součástí Visual Studio Dev Essentials členství. 
+Navštivte [Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/) Další informace o všechno, která je součástí Visual Studio Dev Essentials členství.
 
-Až budete připraveni k registraci, stačí kliknout na [připojení nebo přístup teď](https://my.visualstudio.com/Benefits?wt.mc_id=o~msft~vscom~devessentials-hero~mt689&campaign=o~msft~vscom~devessentials-hero~mt689) tlačítko. 
+Až budete připraveni k registraci, stačí kliknout na [připojení nebo přístup teď](https://my.visualstudio.com/Benefits?wt.mc_id=o~msft~vscom~devessentials-hero~mt689&campaign=o~msft~vscom~devessentials-hero~mt689) tlačítko.
 
-To je všechno je k němu.  
+To je všechno je k němu.

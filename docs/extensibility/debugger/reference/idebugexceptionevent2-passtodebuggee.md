@@ -1,5 +1,5 @@
 ---
-title: IDebugExceptionEvent2::PassToDebuggee | Microsoft Docs
+title: IDebugExceptionEvent2::PassToDebuggee | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ce8e6b53a07f191d967bbd676e6fcfc96b53dc14
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3b1fb575299000e4b9ab894a4700fdf314d17d6c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49832703"
 ---
 # <a name="idebugexceptionevent2passtodebuggee"></a>IDebugExceptionEvent2::PassToDebuggee
-Určuje, zda výjimku by měla být předána laděné při obnoví spuštění programu, nebo pokud by měl být vymazány výjimka.  
+Určuje, zda výjimky by měly být předány program laděn při provádění pokračuje, nebo pokud by měl být zahozeny výjimku.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,17 +41,17 @@ int PassToDebuggee(
   
 #### <a name="parameters"></a>Parametry  
  `fPass`  
- [v] Nenulové hodnoty (`TRUE`) Pokud výjimky by měla být předána laděné při obnoví spuštění programu, nebo nula (`FALSE`) Pokud výjimka měly by se zahodit.  
+ [in] Nenulová (`TRUE`) Pokud výjimky by měly být předány program laděn při provádění pokračuje nebo nula (`FALSE`) Pokud výjimky by měl být zahozeny.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Voláním této metody nezpůsobí ve skutečnosti žádný kód, který má být proveden v programu laděné. Volání je jenom pro nastavení stavu pro další provádění kódu. Například volání [CanPassToDebuggee](../../../extensibility/debugger/reference/idebugexceptionevent2-canpasstodebuggee.md) metoda může vrátit `S_OK` s [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md).`dwState` pole nastavené na `EXCEPTION_STOP_SECOND_CHANCE`.  
+ Voláním této metody nezpůsobí skutečně jakýkoli kód, který se spustí v programu, který se právě ladí. Volání je pouze se nastavit stav pro další spuštění kódu. Například volání [CanPassToDebuggee](../../../extensibility/debugger/reference/idebugexceptionevent2-canpasstodebuggee.md) metoda může vrátit `S_OK` s [EXCEPTION_INFO](../../../extensibility/debugger/reference/exception-info.md).`dwState` pole nastaveno `EXCEPTION_STOP_SECOND_CHANCE`.  
   
- Může se zobrazit IDE [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md) událostí a volání [pokračovat](../../../extensibility/debugger/reference/idebugprogram2-continue.md) metoda. Modul ladění (DE) musí mít výchozí chování pro zpracování případ nastane, pokud `PassToDebuggee` metoda není volána.  
+ Rozhraní IDE se může zobrazit [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md) událostí a volání [pokračovat](../../../extensibility/debugger/reference/idebugprogram2-continue.md) metody. Ladicí stroj (DE) by měly mít výchozí chování pro zpracování v případě, pokud `PassToDebuggee` metoda není volána.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugExceptionEvent2](../../../extensibility/debugger/reference/idebugexceptionevent2.md)   
  [CanPassToDebuggee](../../../extensibility/debugger/reference/idebugexceptionevent2-canpasstodebuggee.md)   
- [Pokračovat](../../../extensibility/debugger/reference/idebugprogram2-continue.md)
+ [Continue](../../../extensibility/debugger/reference/idebugprogram2-continue.md)

@@ -1,5 +1,5 @@
 ---
-title: Výčty | Microsoft Docs
+title: Výčty | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,40 +13,41 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 84102435092096b7154a46100e9d857a31537482
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e555ca317dea79d1fe3b856a7c449d01f0b792af
+ms.sourcegitcommit: 06db1892fff22572f0b0a11994dc547c2b7e2a48
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39636223"
 ---
-# <a name="enumerators"></a>Výčty
-Tato část uvádí enumerátor datových typů v rozhraní API Plug-in ovládací prvek zdroje, musíte znát modulu plug-in zdrojového kódu.  
+# <a name="enumerators"></a>Enumerátory
+Tato část uvádí výčet datových typů v rozhraní API modulu Plug-in zdroje ovládacího prvku, které musíte znát plug-in správy zdrojových kódů.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
- [Příkaz kódu](../extensibility/command-code-enumerator.md)  
- Vytvoří výčet možností pro [SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md) a [SccPopulateList](../extensibility/sccpopulatelist-function.md) funkce.  
+ [Kód příkazu.](../extensibility/command-code-enumerator.md)  
+ Vytvoří výčet možností pro [sccgetcommandoptions –](../extensibility/sccgetcommandoptions-function.md) a [sccpopulatelist –](../extensibility/sccpopulatelist-function.md) funkce.  
   
  [Zpráva](../extensibility/message-enumerator.md)  
- Vytvoří výčet příznaků používá pro tiskové zpětné volání, [LPTEXTOUTPROC](../extensibility/lptextoutproc.md).  
+ Vytvoří výčet příznaky použité pro tiskové zpětné volání, [LPTEXTOUTPROC](../extensibility/lptextoutproc.md).  
   
- [Soubor stavový kód](../extensibility/file-status-code-enumerator.md)  
- Obsahuje pojmenované konstantní hodnoty, které určují stav soubor ve správě zdrojového kódu.  
+ [Kód stavu souboru](../extensibility/file-status-code-enumerator.md)  
+ Obsahuje s názvem konstantní hodnoty, které určují stav souboru pod správou zdrojových kódů.  
   
- [Directory stavový kód](../extensibility/directory-status-code-enumerator.md)  
- Obsahuje pojmenované konstantní hodnoty, které určují stav adresáře v rámci správy zdrojového kódu.  
+ [Adresář stavový kód](../extensibility/directory-status-code-enumerator.md)  
+ Obsahuje s názvem konstantní hodnoty, které určují stav adresáře pod správou zdrojových kódů.  
   
 ## <a name="related-sections"></a>Související oddíly  
  [Vytvoření modulu plug-in správy zdrojového kódu](../extensibility/internals/creating-a-source-control-plug-in.md)  
- Definuje sadu SDK Plug-in Zdroj ovládacího prvku a popisuje zahrnuté prostředky.  
+ Definuje ovládací prvek modulu Plug-in Source sad SDK a popisuje zahrnuté prostředky.  
   
- [SccGetCommandOptions](../extensibility/sccgetcommandoptions-function.md)  
+ [Sccgetcommandoptions –](../extensibility/sccgetcommandoptions-function.md)  
  Vyzve uživatele k rozšířené možnosti pro daný příkaz.  
   
- [SccPopulateList](../extensibility/sccpopulatelist-function.md)  
- Prozkoumá seznam souborů pro jejich aktuální stav. Kromě toho používá `pfnPopulate` funkce, které oznámí souboru neodpovídá kritériím pro volající `nCommand`.  
+ [Sccpopulatelist –](../extensibility/sccpopulatelist-function.md)  
+ Zkontroluje seznam souborů pro jejich aktuální stav. Kromě toho používá `pfnPopulate` funkce oznámit volajícímu, soubor neodpovídá kritériím pro `nCommand`.  
   
  [LPTEXTOUTPROC](../extensibility/lptextoutproc.md)  
- Popisuje funkce zpětného volání, který je používán [SccOpenProject](../extensibility/sccopenproject-function.md) pro zobrazení zpráv ze zdrojového kódu modulu plug-in pomocí rozhraní IDE.  
+ Popisuje funkce zpětného volání, který používá [sccopenproject –](../extensibility/sccopenproject-function.md) pro zobrazení zpráv ze správy zdrojového kódu modulu plug-in pomocí integrovaného vývojového prostředí.  
   
- [Moduly plug-in správy zdrojového kódu](../extensibility/source-control-plug-ins.md)  
- Obsahuje úplný seznam všech elementů v rozhraní API ovládacího prvku Plug-in zdroje.
+ [Ovládací prvek moduly plug-in zdrojového kódu](../extensibility/source-control-plug-ins.md)  
+ Obsahuje úplný seznam všech prvků v rozhraní API modulu Plug-in zdroje ovládacího prvku.

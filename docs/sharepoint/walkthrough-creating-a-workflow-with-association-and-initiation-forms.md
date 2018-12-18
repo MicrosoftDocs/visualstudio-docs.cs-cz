@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Vytvoření pracovního postupu pomocí formulářů přidružení a inicializace | Microsoft Docs'
+title: 'Návod: Vytvoření pracovního postupu pomocí formulářů přidružení a inicializace | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -22,127 +22,128 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 92aefd2292976bd9dcb50603e93b460cdf2bf991
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b6aafde6fed0a1f1722c2d355499523114aaaa00
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49873874"
 ---
-# <a name="walkthrough-creating-a-workflow-with-association-and-initiation-forms"></a>Návod: Vytvoření pracovního postupu pomocí formulářů přidružení a inicializace
-  Tento návod ukazuje, jak vytvořit základní sekvenční pracovní postup, která zahrnuje použití formulářů přidružení a inicializace. Jedná se o ASPX formulářů, které umožňují parametry mají být přidány do pracovního postupu, pokud je první přidružená správcem služby SharePoint (formulář přidružení) a při spuštění pracovního postupu uživatelem (formulář spuštění).  
+# <a name="walkthrough-create-a-workflow-with-association-and-initiation-forms"></a>Návod: Vytvoření pracovního postupu pomocí formulářů přidružení a inicializace
+  Tento návod ukazuje, jak vytvořit základní sekvenční pracovní postup, který zahrnuje použití formuláře pro asociaci a. Jedná se o ASPX formuláře, které umožňují parametry se mají přidat do pracovního postupu, pokud je první související (formulář přidružení) správcem služby SharePoint a při spuštění pracovního postupu uživatelem (inicializační formulář).  
   
- Tento návod popisuje scénář, kde uživatel chce vytvořit pracovní postup schválení pro vyúčtování který má následující požadavky:  
+ Tento návod popisuje scénář, kdy uživatel chce vytvořit schvalovací pracovní postup pro vyúčtování, který má následující požadavky:  
   
--   Když pracovní postup je přidružen seznam, správce se zobrazí výzva s formuláře přidružení, kde zadat dolaru limit pro vyúčtování.  
+- Když pracovní postup přidružen se seznamem, správce se zobrazí výzva s formulář přidružení kde vstupem limitem pro vyúčtování.  
   
--   Zaměstnanci nahrát jejich vyúčtování do seznamu Sdílené dokumenty, spustit workflow a potom zadejte náklady celkem formuláře inicializace pracovního postupu.  
+- Zaměstnanci nahrát jejich vyúčtování seznamu Sdílené dokumenty, spustit pracovní postup a zadejte výdajů celkem inicializační formulář pracovního postupu.  
   
--   Pokud sestavu výdajů zaměstnanec celkový překračuje limit předdefinované správce, úloha se vytvoří pro zaměstnance správce ke schválení vyúčtování. Pokud celkový počet sestav výdajů zaměstnance je menší než nebo rovna hodnotě limitu náklady, zprávu schvalovat automaticky zapsána do seznamu historie pracovního postupu.  
+- Pokud vyúčtování celkový počet zaměstnanců překračuje limit předdefinovaného správce, se vytvoří úkol k nadřízenému ke schválení vyúčtování. Pokud zaměstnance výdajů sestavy součet je menší než nebo rovna omezení výdajů, zprávu o schvalovány automaticky zapsat do seznamu historie pracovního postupu.  
   
- Tento návod znázorňuje následující úlohy:  
+  Tento návod znázorňuje následující úlohy:  
   
--   Vytvoření projektu služby SharePoint seznamu definice sekvenční pracovní postup v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
+- Vytvoření projektu sekvenční pracovní postup definice seznamu služby SharePoint v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)].  
   
--   Vytvoření plánu pracovního postupu.  
+- Vytvoření plánu pracovního postupu.  
   
--   Zpracování události aktivit pracovního postupu.  
+- Zpracování události aktivit pracovního postupu.  
   
--   Vytváření formulářů přidružení a inicializace pracovního postupu.  
+- Vytvoření formuláře pro asociaci a přidružení pracovního postupu.  
   
--   Přidružení pracovního postupu.  
+- Přidružení pracovního postupu.  
   
--   Ruční spuštění pracovního postupu.  
+- Ruční spuštění pracovního postupu.  
   
 > [!NOTE]  
->  I když tento návod používá projekt sekvenčního pracovního postupu, proces je stejný pro pracovní postupy stav počítače.  
+>  I když tento návod používá projekt sekvenčního pracovního postupu, proces je stejný pro pracovní postupy stavu počítače.  
 >   
->  Kromě toho, že váš počítač může zobrazovat odlišné názvy nebo umístění některých [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] prvky uživatelského rozhraní v následujících pokynech. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Edici, která máte a nastavení, které používáte, určují tyto prvky. Další informace najdete v tématu [přizpůsobení prostředí Visual Studio IDE](../ide/personalizing-the-visual-studio-ide.md).  
+>  Kromě toho, že váš počítač může zobrazit jiné názvy nebo umístění některých [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] prvky uživatelského rozhraní v následujících pokynech. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Edicí a nastavení, které používáte určit tyto prvky. Další informace najdete v tématu [přizpůsobení integrovaného vývojového prostředí sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).  
   
 ## <a name="prerequisites"></a>Požadavky  
  K dokončení tohoto návodu budete potřebovat následující komponenty:  
   
--   Podporované edice systému [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] a služby SharePoint. Další informace najdete v tématu [požadavky pro vývoj řešení služby SharePoint](../sharepoint/requirements-for-developing-sharepoint-solutions.md).  
+-   Podporované edice systému [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] a SharePoint.  
   
 -   Visual Studio.  
   
-## <a name="creating-a-sharepoint-sequential-workflow-project"></a>Vytvoření projektu sekvenčního pracovního postupu služby SharePoint  
- Nejprve vytvořte projekt sekvenčního pracovního postupu v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]. Sekvenční pracovní postup je sérii kroků, které provádí v pořadí, až skončí poslední aktivita. V tomto postupu vytvoříte sekvenční pracovní postup, který se vztahuje na seznamu sdílených dokumentů ve službě SharePoint. Průvodce pracovního postupu umožňuje přidružit webu nebo v seznamu definici pracovního postupu a umožňuje vám určit, kdy se spustí pracovní postup.  
+## <a name="create-a-sharepoint-sequential-workflow-project"></a>Vytvoření projektu sekvenčního pracovního postupu služby SharePoint
+ Nejprve vytvořte projekt sekvenčního pracovního postupu v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]. Sekvenční pracovní postup je posloupnost kroků, které provádí v pořadí, dokud se nedokončí poslední aktivita. V tomto postupu bude Vytvoření sekvenčního pracovního postupu, která se použije k seznamu sdílených dokumentů v Sharepointu. Průvodce pracovním postupu umožňuje pracovní postup přidružit k webu nebo definici seznamu a umožňuje určit, kdy se spustí pracovní postup.  
   
-#### <a name="to-create-a-sharepoint-sequential-workflow-project"></a>Vytvoření projektu sekvenčního pracovního postupu služby SharePoint  
+#### <a name="to-create-a-sharepoint-sequential-workflow-project"></a>Chcete-li vytvořit projekt sekvenčního pracovního postupu služby SharePoint  
   
-1.  Na řádku nabídek zvolte **soubor**, **nový**, **projektu** zobrazíte **nový projekt** dialogové okno.  
+1.  V panelu nabídky zvolte **souboru** > **nový** > **projektu** zobrazíte **nový projekt** dialogové okno.  
   
-2.  Rozbalte **SharePoint** uzel v rámci buď **Visual C#** nebo **jazyka Visual Basic**a potom zvolte **2010** uzlu.  
+2.  Rozbalte **SharePoint** uzlu buď **Visual C#** nebo **jazyka Visual Basic**a klikněte na tlačítko **2010** uzlu.  
   
-3.  V **šablony** podokně, vyberte **projektu služby SharePoint 2010** šablona projektu.  
+3.  V **šablony** podokně, vyberte **projektu služby SharePoint 2010** šablony projektu.  
   
-4.  V **název** zadejte **ExpenseReport** a potom zvolte **OK** tlačítko.  
+4.  V **název** zadejte **ExpenseReport** a klikněte na tlačítko **OK** tlačítko.  
   
-     **Průvodce vlastním nastavením SharePoint** se zobrazí.  
+     **Průvodce přizpůsobením SharePoint** se zobrazí.  
   
-5.  V **zadejte úroveň lokality a zabezpečení pro ladění** vyberte **nasadit jako řešení farmy** možnost tlačítko a potom vyberte **Dokončit** tlačítko tak, aby přijímal úroveň a výchozí web vztah důvěryhodnosti.  
+5.  V **zadejte web a úroveň zabezpečení pro ladění** zvolte **nasadit jako řešení farmy** přepínač a klikněte na tlačítko **Dokončit** tlačítko tak, aby přijímal vztah důvěryhodnosti úroveň a výchozí web.  
   
-     Tento krok také nastaví úroveň důvěryhodnosti pro řešení jako řešení farmy, která je k dispozici jenom možnost pro projekty pracovního postupu.  
+     Tento krok také nastaví úroveň důvěryhodnosti řešení jako řešení farmy, která je k dispozici jenom možnost pro projekty pracovního postupu.  
   
-6.  V **Průzkumníku**, vyberte uzel projektu.  
+6.  V **Průzkumníka řešení**, zvolte uzel projektu.  
   
-7.  Na řádku nabídek zvolte **projektu**, **přidat novou položku**.  
+7.  V panelu nabídky zvolte **projektu** > **přidat novou položku**.  
   
-8.  V části buď **Visual C#** nebo **jazyka Visual Basic**, rozbalte **SharePoint** uzel a potom vyberte **2010** uzlu.  
+8.  V části **Visual C#** nebo **jazyka Visual Basic**, rozbalte **SharePoint** uzel a klikněte na tlačítko **2010** uzlu.  
   
-9. V **šablony** podokně vyberte **sekvenční pracovní postup (pouze řešení farmy)** šablony a potom zvolte **přidat** tlačítko.  
+9. V **šablony** podokně zvolte **sekvenčního pracovního postupu (pouze řešení farmy)** šablony a klikněte na tlačítko **přidat** tlačítko.  
   
-     **Průvodce vlastním nastavením SharePoint** se zobrazí.  
+     **Průvodce přizpůsobením SharePoint** se zobrazí.  
   
-10. V **zadejte název pracovního postupu pro ladění** přijměte výchozí název (**ExpenseReport - Workflow1**). Ponechte výchozí hodnotu typu šablony pracovního postupu (**pracovní postup seznamu)**. Vyberte **Další** tlačítko.  
+10. V **zadejte název pracovního postupu pro ladění** stránce, přijměte výchozí název (**ExpenseReport - Workflow1**). Ponechte výchozí hodnotu typu šablony pracovního postupu (**pracovní postup seznamu)**. Zvolte **Další** tlačítko.  
   
-11. V **chcete Visual Studio automaticky přidružení pracovního postupu v relaci ladění?** zrušte zaškrtnutí pole, která automaticky přiřadí šablony pracovního postupu, pokud je zaškrtnuto.  
+11. V **přejete si Visual Studio automaticky přidružovala pracovní postup v ladicí relaci?** stránce, zrušte zaškrtnutí pole, které se automaticky přidruží šablony pracovního postupu, pokud je zaškrtnuto.  
   
      Tento krok umožňuje ručně přidružení pracovního postupu s později na seznamu Sdílené dokumenty, které zobrazí formulář přidružení.  
   
-12. Vyberte **Dokončit** tlačítko.  
+12. Zvolte **Dokončit** tlačítko.  
   
-## <a name="adding-an-association-form-to-the-workflow"></a>Přidání formuláře přidružení do pracovního postupu  
- Dále vytvořte. Formuláře přidružení ASPX, který se zobrazí, když správce služby SharePoint přidruží dokument zprávy o nákladech nejprve pracovního postupu.  
+## <a name="add-an-association-form-to-the-workflow"></a>Přidat formulář přidružení pracovního postupu
+ Dále vytvořte. Formulář přidružení ASPX, který se zobrazí, když správce Sharepointu nejprve přidruží pracovní postup s dokumentem sestavy výdajů.  
   
-#### <a name="to-add-an-association-form-to-the-workflow"></a>Chcete-li přidat formuláře přidružení do pracovního postupu  
+#### <a name="to-add-an-association-form-to-the-workflow"></a>Chcete-li přidat formulář přidružení pracovního postupu  
   
-1.  Vyberte **Workflow1** uzlu v **Průzkumníku řešení**.  
+1.  Zvolte **Workflow1** uzel v **Průzkumníka řešení**.  
   
-2.  Na řádku nabídek zvolte **projektu**, **přidat novou položku** zobrazíte **přidat novou položku** dialogové okno.  
+2.  V panelu nabídky zvolte **projektu** > **přidat novou položku** zobrazíte **přidat novou položku** dialogové okno.  
   
-3.  V dialogovém okně pole stromové zobrazení, rozbalte položku buď **Visual C#** nebo **jazyka Visual Basic** (v závislosti na vaší jazyk projektu), rozbalte položku **SharePoint** uzel a potom vyberte **2010** uzlu.  
+3.  Ve stromovém zobrazení pole dialogového okna rozbalte buď **Visual C#** nebo **jazyka Visual Basic** (v závislosti na jazyku projektu), rozbalte **SharePoint** uzel a klikněte na tlačítko **2010** uzlu.  
   
-4.  V seznamu šablon, vyberte **formuláře přidružení pracovního postupu** šablony.  
+4.  V seznamu šablon vyberte **formulář přidružení pracovního postupu** šablony.  
   
 5.  V **název** textové pole, zadejte **ExpenseReportAssocForm.aspx**.  
   
-6.  Vyberte **přidat** tlačítko pro přidání formuláře do projektu.  
+6.  Zvolte **přidat** tlačítko pro přidání formuláře do projektu.  
   
-## <a name="designing-and-coding-the-association-form"></a>Navrhování a kódování formuláře přidružení  
- V tomto postupu zavést funkce formuláře přidružení přidáním ovládacími prvky a kódem na ni.  
+## <a name="designing-and-coding-the-association-form"></a>Návrh a kódování formulář přidružení
+ V tomto postupu zavedení funkce do formuláře přidružení tak, že do ní přidáte ovládací prvky a kódem.  
   
-#### <a name="to-design-and-code-the-association-form"></a>Návrh a kód formuláře přidružení  
+#### <a name="to-design-and-code-the-association-form"></a>Návrh a kód formulář přidružení  
   
-1.  Ve formuláři přidružení (ExpenseReportAssocForm.aspx), vyhledejte `asp:Content` element, který má `ID="Main"`.  
+1.  Formulář přidružení (ExpenseReportAssocForm.aspx), vyhledejte `asp:Content` element, který má `ID="Main"`.  
   
-2.  Přímo po prvním řádku v tomto obsahu elementu, přidejte následující kód k vytvoření popisek a textové pole, které vyzve k zadání limit schválení náklady (*AutoApproveLimit*):  
+2.  Přímo za první řádek v tomto obsahu elementu, přidejte následující kód k vytvoření popisku a textového pole, které zobrazí výzvu k zadání schválení limitu výdajů (*AutoApproveLimit*):  
   
-    ```  
+    ```aspx-csharp  
     <asp:Label ID="lblAutoApproveLimit" Text="Auto Approval Limit:" runat="server" />  
   
     <asp:TextBox ID="AutoApproveLimit" runat="server" />  
     <br /><br />  
     ```  
   
-3.  Rozbalte **ExpenseReportAssocForm.aspx** souboru v **Průzkumníku řešení** zobrazíte jeho závislých souborů.  
+3.  Rozbalte **ExpenseReportAssocForm.aspx** ve **Průzkumníka řešení** zobrazíte jeho závislých souborů.  
   
     > [!NOTE]  
-    >  Pokud je váš projekt v [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)], musíte zvolit **zobrazit všechny soubory** tlačítko k provedení tohoto kroku.  
+    >  Pokud je váš projekt v [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)], je nutné vybrat **zobrazit všechny soubory** tlačítko k provedení tohoto kroku.  
   
-4.  Otevřete místní nabídku pro soubor ExpenseReportAssocForm.aspx a zvolte **kód zobrazení**.  
+4.  Otevřete místní nabídku pro soubor ExpenseReportAssocForm.aspx a zvolte **zobrazit kód**.  
   
-5.  Nahraďte `GetAssociationData` metodu se:  
+5.  Nahradit `GetAssociationData` metody:  
   
     ```vb  
     Private Function GetAssociationData() As String  
@@ -163,33 +164,33 @@ ms.lasthandoff: 04/16/2018
     }  
     ```  
   
-## <a name="adding-an-initiation-form-to-the-workflow"></a>Přidávání do spouštěcího formuláře do pracovního postupu  
- Dále vytvořte inicializačního formuláře, který se zobrazí, když uživatelé spustí pracovní postup před jejich vyúčtování.  
+## <a name="add-an-initiation-form-to-the-workflow"></a>Přidat inicializační formulář pracovního postupu
+ Dále vytvořte inicializační formulář, který se zobrazí, když uživatelé spustí pracovní postup před jejich vyúčtování.  
   
-#### <a name="to-create-an-initiation-form"></a>K vytvoření inicializačního formuláře  
+#### <a name="to-create-an-initiation-form"></a>Chcete-li vytvořit inicializační formulář  
   
-1.  Vyberte **Workflow1** uzlu v **Průzkumníku řešení**.  
+1.  Zvolte **Workflow1** uzel v **Průzkumníka řešení**.  
   
-2.  Na řádku nabídek zvolte **projektu**, **přidat novou položku** zobrazení **přidat novou položku** dialogové okno.  
+2.  V panelu nabídky zvolte **projektu** > **přidat novou položku** zobrazení **přidat novou položku** dialogové okno.  
   
-3.  V dialogovém okně pole stromové zobrazení, rozbalte položku buď **Visual C#** nebo **jazyka Visual Basic** (v závislosti na vaší jazyk projektu), rozbalte položku **SharePoint** uzel a potom vyberte **2010** uzlu.  
+3.  Ve stromovém zobrazení pole dialogového okna rozbalte buď **Visual C#** nebo **jazyka Visual Basic** (v závislosti na jazyku projektu), rozbalte **SharePoint** uzel a klikněte na tlačítko **2010** uzlu.  
   
-4.  V seznamu šablon, vyberte **formuláře inicializace pracovního postupu** šablony.  
+4.  V seznamu šablon vyberte **inicializační formulář pracovního postupu** šablony.  
   
 5.  V **název** textové pole, zadejte **ExpenseReportInitForm.aspx**.  
   
-6.  Vyberte **přidat** tlačítko pro přidání formuláře do projektu.  
+6.  Zvolte **přidat** tlačítko pro přidání formuláře do projektu.  
   
-## <a name="designing-and-coding-the-initiation-form"></a>Navrhování a kódování inicializačního formuláře  
- V dalším kroku zavést funkce formuláře inicializace přidáním ovládacími prvky a kódem na ni.  
+## <a name="designing-and-coding-the-initiation-form"></a>Návrh a kódování inicializační formulář
+ V dalším kroku zavedení funkce, které inicializační formulář tak, že do ní přidáte ovládací prvky a kódem.  
   
-#### <a name="to-code-the-initiation-form"></a>Kód inicializačního formuláře  
+#### <a name="to-code-the-initiation-form"></a>Do kódu inicializační formulář  
   
-1.  Ve formuláři spuštění (ExpenseReportInitForm.aspx), vyhledejte `asp:Content` elementu, který obsahuje `ID="Main"`.  
+1.  Inicializační formulář (ExpenseReportInitForm.aspx), vyhledejte `asp:Content` element, který obsahuje `ID="Main"`.  
   
-2.  Přímo po prvním řádku v tomto obsahu elementu, přidejte následující kód k vytvoření popisek a textové pole, které zobrazí limit schválení náklady (*AutoApproveLimit*), byl zadán ve formuláři přidružení a jiný popisek a textové pole pro zadání celkové náklady (*ExpenseTotal*):  
+2.  Přímo za první řádek v tomto obsahu elementu, přidejte následující kód k vytvoření popisku a textového pole, která zobrazuje schválení limitu výdajů (*AutoApproveLimit*), který jste zadali v formulář přidružení a další popisek a textové pole pro zadání celkové náklady (*ExpenseTotal*):  
   
-    ```  
+    ```aspx-csharp  
     <asp:Label ID="lblAutoApproveLimit" Text="Auto Approval Limit:" runat="server" />  
   
     <asp:TextBox ID="AutoApproveLimit" ReadOnly="true" runat="server" />  
@@ -200,11 +201,11 @@ ms.lasthandoff: 04/16/2018
     <br /><br />  
     ```  
   
-3.  Rozbalte **ExpenseReportInitForm.aspx** souboru v **Průzkumníku řešení** zobrazíte jeho závislých souborů.  
+3.  Rozbalte **ExpenseReportInitForm.aspx** ve **Průzkumníka řešení** zobrazíte jeho závislých souborů.  
   
-4.  Otevřete místní nabídku pro soubor ExpenseReportInitForm.aspx a zvolte **kód zobrazení**.  
+4.  Otevřete místní nabídku pro soubor ExpenseReportInitForm.aspx a zvolte **zobrazit kód**.  
   
-5.  Nahraďte `Page_Load` metoda s v následujícím příkladu:  
+5.  Nahradit `Page_Load` metodou v následujícím příkladu:  
   
     ```vb  
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As   
@@ -226,7 +227,7 @@ ms.lasthandoff: 04/16/2018
     }  
     ```  
   
-6.  Nahraďte `GetInitiationData` metoda s v následujícím příkladu:  
+6.  Nahradit `GetInitiationData` metodou v následujícím příkladu:  
   
     ```vb  
     ' This method is called when the user clicks the button to start the workflow.  
@@ -250,57 +251,57 @@ ms.lasthandoff: 04/16/2018
     }  
     ```  
   
-## <a name="customizing-the-workflow"></a>Přizpůsobení pracovního postupu  
- Dále přizpůsobte pracovního postupu. Později kterou přidružíte dvě formy do pracovního postupu.  
+## <a name="cutomize-the-workflow"></a>Vlastní nastavení pracovního postupu
+ Dále přizpůsobte pracovní postup. Později kterou přidružíte dvě různými formami do pracovního postupu.  
   
-#### <a name="to-customize-the-workflow"></a>Chcete-li přizpůsobit pracovního postupu  
+#### <a name="to-customize-the-workflow"></a>Přizpůsobení pracovního postupu  
   
-1.  Zobrazení pracovního postupu v Návrháři pracovních postupů otevřením Workflow1 v projektu.  
+1.  Zobrazení pracovního postupu tak, že otevřete Workflow1 v projektu v Návrháři pracovních postupů.  
   
-2.  V **sada nástrojů**, rozbalte **v3.0 Windows Workflow** uzlu a vyhledejte **IfElse** aktivity.  
+2.  V **nástrojů**, rozbalte **pracovního postupu Windows v3.0** uzlu a vyhledejte **IfElse** aktivity.  
   
 3.  Přidejte tuto aktivitu do pracovního postupu pomocí jedné z následujících kroků:  
   
-    -   Otevřete místní nabídku pro **IfElse** aktivitu, zvolte **kopie**, otevřete místní nabídku pro řádek v části **onWorkflowActivated1** aktivity v Návrháři pracovních postupů a potom zvolte **vložení**.  
+    -   Otevřete místní nabídku **IfElse** aktivitu, zvolte **kopírování**, otevřete místní nabídku pro řádek u **onWorkflowActivated1** aktivity v Návrháři postupu provádění a klikněte na tlačítko **vložit**.  
   
-    -   Přetáhněte **IfElse** aktivity z **sada nástrojů**a připojte ho k řádku pod **onWorkflowActiviated1** aktivity v Návrháři pracovních postupů.  
+    -   Přetáhněte **IfElse** aktivita z **nástrojů**a připojte ho k řádku pod **onWorkflowActiviated1** aktivity v Návrháři pracovních postupů.  
   
-4.  V sadě nástrojů, rozbalte **pracovního postupu služby SharePoint** uzlu a najděte **createtask –** aktivity.  
+4.  Na panelu nástrojů rozbalte **pracovního postupu služby SharePoint** uzlu a vyhledejte **createtask –** aktivity.  
   
 5.  Přidejte tuto aktivitu do pracovního postupu pomocí jedné z následujících kroků:  
   
-    -   Otevřete místní nabídku pro **createtask –** aktivitu, zvolte **kopie**, otevřete místní nabídku pro jednu ze dvou **vyřadit aktivity sem** oblasti v rámci  **IfElseActivity1** v Návrháři pracovních postupů a potom zvolte **vložení**.  
+    -   Otevřete místní nabídku **createtask –** aktivitu, zvolte **kopírování**, otevřete místní nabídku pro jednu ze dvou **Sem přetáhněte aktivity** oblastí v rámci  **IfElseActivity1** v Návrháři pracovních postupů a klikněte na tlačítko **vložit**.  
   
-    -   Přetáhněte **createtask –** aktivity z **sada nástrojů** na jednu ze dvou **vyřadit aktivity sem** oblasti v rámci **IfElseActivity1**.  
+    -   Přetáhněte **createtask –** aktivita z **nástrojů** na jednu ze dvou **Sem přetáhněte aktivity** oblastí v rámci **IfElseActivity1**.  
   
-6.  V **vlastnosti** okno, zadejte hodnotu vlastnosti o *taskToken* pro **CorrelationToken** vlastnost.  
+6.  V **vlastnosti** okno, zadejte hodnotu vlastnosti *taskToken* pro **CorrelationToken** vlastnost.  
   
-7.  Rozbalte **CorrelationToken** vlastnost tak, že zvolíte na symbol plus (![TreeView plus](../sharepoint/media/plus.gif "TreeView plus")) vedle sebe.  
+7.  Rozbalte **CorrelationToken** vlastnost kliknutím na symbol plus (![TreeView plus](../sharepoint/media/plus.gif "TreeView plus")) vedle sebe.  
   
-8.  Zvolit na šipku rozevíracího seznamu **hodnota vlastnosti OwnerActivityName** sub vlastnost a nastavte *Workflow1* hodnotu.  
+8.  Klikněte na šipku rozevíracího seznamu na **OwnerActivityName** dílčí vlastnost a nastavte *Workflow1* hodnotu.  
   
-9. Vyberte **TaskId** vlastnost a klikněte na tlačítko se třemi tečkami (![ASP.NET – Návrhář mobilních řešení elipsy](../sharepoint/media/mwellipsis.gif "ASP.NET – Návrhář mobilních řešení elipsy")) tlačítko pro zobrazení **Vazby vlastnosti** dialogové okno.  
+9. Zvolte **TaskId** vlastnost a klikněte na tlačítko se třemi tečkami (![ASP.NET – Návrhář mobilních řešení Elipsa](../sharepoint/media/mwellipsis.gif "elipsa ASP.NET – Návrhář mobilních řešení")) tlačítko pro zobrazení **Svázat vlastnost** dialogové okno.  
   
-10. Vyberte **vytvořit vazbu na nový člen** , zvolte **vytvořit pole** možnost tlačítko a potom vyberte **OK** tlačítko.  
+10. Zvolte **vytvořit vazbu na nového člena** , vyberte **vytvořit pole** přepínač a klikněte na tlačítko **OK** tlačítko.  
   
-11. Vyberte **TaskProperties** vlastnost a klikněte na tlačítko se třemi tečkami (![ASP.NET – Návrhář mobilních řešení elipsy](../sharepoint/media/mwellipsis.gif "ASP.NET – Návrhář mobilních řešení elipsy")) tlačítko pro zobrazení  **Vytvořit vazbu vlastnosti** dialogové okno.  
+11. Zvolte **TaskProperties** vlastnost a klikněte na tlačítko se třemi tečkami (![elipsa ASP.NET – Návrhář mobilních řešení](../sharepoint/media/mwellipsis.gif "ASP.NET – Návrhář mobilních řešení Elipsa")) tlačítko pro zobrazení  **Vytvořit vazbu vlastnosti** dialogové okno.  
   
-12. Vyberte **vytvořit vazbu na nový člen** , zvolte **vytvořit pole** možnost tlačítko a potom vyberte **OK** tlačítko.  
+12. Zvolte **vytvořit vazbu na nového člena** , vyberte **vytvořit pole** přepínač a klikněte na tlačítko **OK** tlačítko.  
   
-13. V **sada nástrojů**, rozbalte **pracovního postupu služby SharePoint** uzel a vyhledejte **LogToHistoryListActivity** aktivity.  
+13. V **nástrojů**, rozbalte **pracovního postupu služby SharePoint** uzel a vyhledejte **LogToHistoryListActivity** aktivity.  
   
 14. Přidejte tuto aktivitu do pracovního postupu pomocí jedné z následujících kroků:  
   
-    -   Otevřete místní nabídku pro **LogToHistoryListActivity** aktivitu, zvolte **kopie**, otevřete místní nabídku pro druhý **vyřadit aktivity sem** oblasti v rámci **IfElseActivity1** v Návrháři pracovních postupů a potom zvolte **vložení**.  
+    -   Otevřete místní nabídku **LogToHistoryListActivity** aktivitu, zvolte **kopírování**, otevřete místní nabídku pro ostatní **Sem přetáhněte aktivity** oblasti v rámci **IfElseActivity1** v Návrháři pracovních postupů a klikněte na tlačítko **vložit**.  
   
-    -   Přetáhněte **LogToHistoryListActivity** aktivity z **sada nástrojů**a umístěte jej do dalších **vyřadit aktivity sem** oblasti v rámci **IfElseActivity1** .  
+    -   Přetáhněte **LogToHistoryListActivity** aktivita z **nástrojů**a umístěte ho na druhou **Sem přetáhněte aktivity** oblasti v rámci **IfElseActivity1** .  
   
-## <a name="adding-code-to-the-workflow"></a>Přidání kódu do pracovního postupu  
- Dál přidejte kód pracovního postupu pro ni funkce.  
+## <a name="add-code-to-the-workflow"></a>Přidejte kód do pracovního postupu
+ Dál přidejte kód do pracovního postupu pro ni funkce.  
   
-#### <a name="to-add-code-to-the-workflow"></a>Chcete-li přidat kód do pracovního postupu  
+#### <a name="to-add-code-to-the-workflow"></a>Přidání kódu do pracovního postupu  
   
-1.  Otevřete místní nabídku pro **createTask1** aktivity v Návrháři pracovních postupů a potom zvolte **kód zobrazení**.  
+1.  Otevřete místní nabídku **createTask1** aktivity v Návrháři postupu provádění a klikněte na tlačítko **zobrazit kód**.  
   
 2.  Přidejte následující metodu:  
   
@@ -329,9 +330,9 @@ ms.lasthandoff: 04/16/2018
     ```  
   
     > [!NOTE]  
-    >  V kódu, nahraďte `somedomain\\someuser` s doména a uživatelské jméno, pro který úloha bude vytvořen, jako je třeba "`Office\\JoeSch`". Pro testování je nejjednodušší použít účet, který vyvíjíte s.  
+    >  V kódu, nahraďte `somedomain\\someuser` s doména a uživatelské jméno, pro kterou se vytvoří úkol, například "`Office\\JoeSch`". Pro účely testování je nejjednodušší na používání účtu, který vyvíjíte s.  
   
-3.  Níže `MethodInvoking` metody přidat v následujícím příkladu:  
+3.  Níže `MethodInvoking` metodu, přidejte v následujícím příkladu:  
   
     ```vb  
     Private Sub checkApprovalNeeded(ByVal sender As Object, ByVal e As   
@@ -359,15 +360,15 @@ ms.lasthandoff: 04/16/2018
     }   
     ```  
   
-4.  V Návrháři pracovních postupů, vyberte **ifElseBranchActivity1** aktivity.  
+4.  V Návrháři postupu provádění, zvolte **ifElseBranchActivity1** aktivity.  
   
-5.  V **vlastnosti** okně vyberte šipku rozevíracího seznamu **podmínku** vlastnost a potom nastavte *kód stavu* hodnotu.  
+5.  V **vlastnosti** okno, zvolte šipku rozevíracího seznamu **podmínku** vlastnost a poté nastavte *podmínka kódu* hodnotu.  
   
-6.  Rozbalte **podmínku** vlastnost tak, že zvolíte na symbol plus (![TreeView plus](../sharepoint/media/plus.gif "TreeView plus")) vedle sebe a pak jeho hodnotu nastavte *checkApprovalNeeded* .  
+6.  Rozbalte **podmínku** vlastnost kliknutím na symbol plus (![TreeView plus](../sharepoint/media/plus.gif "TreeView plus")) vedle něj a pak nastavte jej na hodnotu *checkApprovalNeeded* .  
   
-7.  V Návrháři pracovních postupů otevřete místní nabídku pro **logToHistoryListActivity1** aktivitu a potom vyberte **Generovat obslužné rutiny** ke generování pro metodu prázdný `MethodInvoking` událostí.  
+7.  V Návrháři postupu provádění, otevřete místní nabídku **logToHistoryListActivity1** aktivitu a klikněte na tlačítko **Generovat obslužné rutiny** vytvořit prázdnou metodu pro `MethodInvoking` událostí.  
   
-8.  Nahraďte `MethodInvoking` kódu pomocí následující:  
+8.  Nahradit `MethodInvoking` kód následujícím kódem:  
   
     ```vb  
     Private Sub logToHistoryListActivity1_MethodInvoking(ByVal sender As   
@@ -386,71 +387,70 @@ ms.lasthandoff: 04/16/2018
     }   
     ```  
   
-9. Zvolte klávesy F5 k ladění programu.  
+9. Zvolte **F5** klíč pro ladění programu.  
   
-     To kompilaci aplikace, balíčky jej, pak ji nasadí, aktivuje jeho funkce, recykluje [!INCLUDE[TLA2#tla_iis5](../sharepoint/includes/tla2sharptla-iis5-md.md)] fond aplikací a poté spustí prohlížeč v umístění zadané v **adresa Url webu** vlastnost.  
+     Kompilaci aplikace, balíčky ho, ho nasadí, aktivuje jeho funkce, recykluje [!INCLUDE[TLA2#tla_iis5](../sharepoint/includes/tla2sharptla-iis5-md.md)] fond aplikací a pak spustí prohlížeč v umístění zadané v **adresa Url webu** vlastnost.  
   
-## <a name="associating-the-workflow-to-the-documents-list"></a>Přidružení pracovního postupu do seznamu dokumentů  
- V dalším kroku zobrazení formuláře přidružení pracovního postupu tím, že přidružíte pracovního postupu se **SharedDocuments** seznamu na web služby SharePoint.  
+## <a name="associating-the-workflow-to-the-documents-list"></a>Přidružení pracovního postupu do seznam dokumentů
+ V dalším kroku tím, že přidružíte pracovní postup s zobrazit formulář přidružení pracovního postupu **SharedDocuments** seznam na Sharepointovém webu.  
   
-#### <a name="to-associate-the-workflow"></a>Chcete-li přidružit pracovního postupu  
+#### <a name="to-associate-the-workflow"></a>Pro přidružení pracovního postupu  
   
-1.  Vyberte **sdílené dokumenty** odkaz na panel Rychlé spuštění.  
+1.  Zvolte **sdílené dokumenty** odkaz na panelu Rychlé spuštění.  
   
-2.  Vyberte **knihovny** odkaz na **nástroje knihovny** a pak klikněte na příkaz **nastavení knihovny** tlačítko pásu karet.  
+2.  Zvolte **knihovny** odkaz na **nástroje knihovny** kartě a klikněte na tlačítko **nastavení knihovny** tlačítko na pásu karet.  
   
-3.  V **oprávnění a správa** zvolte **nastavení pracovních postupů** propojit a potom zvolte **přidat pracovní postup** odkaz na **pracovních** stránky.  
+3.  V **oprávnění a správa** zvolte **nastavení pracovního postupu** propojit a klikněte na tlačítko **přidat pracovní postup** odkaz na **pracovníchpostupů** stránky.  
   
 4.  V horním seznamu na stránce nastavení pracovního postupu, vyberte **ExpenseReport - Workflow1** šablony.  
   
-5.  V poli Další zadejte **ExpenseReportWorkflow** a potom zvolte **Další** tlačítko.  
+5.  V další pole, zadejte **ExpenseReportWorkflow** a klikněte na tlačítko **Další** tlačítko.  
   
-     To přiřadí pracovního postupu se **sdílené dokumenty** seznamu a zobrazí formuláře přidružení pracovního postupu.  
+     To přiřadí pracovní postup s **sdílené dokumenty** seznamu a zobrazí formulář přidružení pracovního postupu.  
   
-6.  V **Limit pro automatické schvalování** text zadejte **1200** a potom zvolte **přidružení pracovního postupu** tlačítko.  
+6.  V **Limit pro automatické schvalování** textové pole, zadejte **1200** a klikněte na tlačítko **přidružení pracovního postupu** tlačítko.  
   
-## <a name="starting-the-workflow"></a>Spuštění pracovního postupu  
- V dalším kroku přidružení pracovního postupu do jednoho z dokumentů v **sdílené dokumenty** seznamu zobrazíte formuláře inicializace pracovního postupu.  
+## <a name="start-the-workflow"></a>Spuštění pracovního postupu
+ V dalším kroku přidružení pracovního postupu k jednomu z dokumentů v **sdílené dokumenty** seznamu zobrazíte inicializační formulář pracovního postupu.  
   
 #### <a name="to-start-the-workflow"></a>Spustit pracovní postup  
   
-1.  Na stránce služby SharePoint, vyberte **Domů** tlačítko.  
+1.  Na stránce služby SharePoint, zvolte **Domů** tlačítko.  
   
-2.  Vyberte **sdílené dokumenty** odkaz na panel Rychlé spuštění zobrazíte **sdílené dokumenty** seznamu.  
+2.  Zvolte **sdílené dokumenty** odkaz na panelu Rychlé spuštění zobrazíte **sdílené dokumenty** seznamu.  
   
-3.  Vyberte **dokumenty** odkaz na **knihovny nástroje** v horní části stránky a potom vyberte **odeslat dokument** na pásu karet nahrát nový dokument do **Sdílené dokumenty** seznamu.  
+3.  Zvolte **dokumenty** odkaz na **nástroje knihovny** kartě v horní části stránky a klikněte na tlačítko **uložit dokument** tlačítko na pásu karet a nahrát nový dokument do **Sdílené dokumenty** seznamu.  
   
-4.  V **odeslat dokument** dialogovém okně vyberte **Procházet** tlačítko, vyberte všechny souboru dokumentu, vyberte **otevřete** tlačítko a potom vyberte **OK** tlačítko.  
+4.  V **uložit dokument** dialogového okna zvolte **Procházet** tlačítko, vyberte libovolný soubor dokumentu, zvolte **otevřít** tlačítko a klikněte na tlačítko **OK** tlačítko.  
   
-     Můžete změnit nastavení pro dokument v tomto dialogovém, ale je v ponechte výchozí hodnoty tak, že zvolíte **Uložit** tlačítko.  
+     Můžete změnit nastavení pro dokument v tomto dialogovém, ale ponechte jejich výchozí hodnoty výběrem **Uložit** tlačítko.  
   
-5.  Zvolte nahrané dokumentu a potom vyberte šipku rozevíracího seznamu, který se zobrazí a potom vyberte **pracovních** položky.  
+5.  Zvolte odeslaný dokument, zvolte šipku rozevíracího seznamu, který se zobrazí a klikněte na tlačítko **pracovních postupů** položky.  
   
-6.  Vyberte bitovou kopii vedle ExpenseReportWorkflow.  
+6.  Zvolte image vedle ExpenseReportWorkflow.  
   
-     Zobrazí se formuláře inicializace pracovního postupu. (Všimněte si, že hodnota zobrazena v **Limit pro automatické schvalování** pole je jen pro čtení, protože byl zadán ve formuláři přidružení.)  
+     Zobrazí se inicializační formulář pracovního postupu. (Všimněte si, že hodnota zobrazena v **Limit pro automatické schvalování** pole je jen pro čtení, protože jste zadali v formulář přidružení.)  
   
-7.  V **celkové náklady** text zadejte **1 600**a potom zvolte **spustit pracovní postup** tlačítko.  
+7.  V **celkové výdaje** text zadejte **1600**a klikněte na tlačítko **spuštění pracovního postupu** tlačítko.  
   
-     Zobrazí se **sdílené dokumenty** seznamu znovu. Nový sloupec s názvem **ExpenseReportWorkflow** s hodnotou **dokončeno** se přidá do položky pracovního postupu je právě spuštěna.  
+     Zobrazí se **sdílené dokumenty** znovu. Nový sloupec s názvem **ExpenseReportWorkflow** s hodnotou **dokončeno** se přidá do položky jenom se spustil pracovního postupu.  
   
-8.  Zvolte na šipku rozevíracího seznamu vedle nahrané dokumentu a pak **pracovních** položku si můžete zobrazit na stavové stránce pracovního postupu. Vyberte **dokončeno** hodnoty v části **dokončit pracovní postupy**. Úloha je uveden v části **úlohy** části.  
+8.  Klikněte na šipku rozevíracího seznamu vedle nahraného dokumentu a klikněte na tlačítko **pracovních postupů** položky k zobrazení stavové stránce pracovního postupu. Zvolte **dokončeno** pod **dokončit pracovní postupy**. Úloha je uvedený v části **úlohy** oddílu.  
   
 9. Zvolte název úlohy zobrazíte její podrobnosti úlohy.  
   
-10. Přejděte zpět **SharedDocuments** seznamu a restartujte pracovní postup, pomocí stejného dokumentu nebo jiný.  
+10. Přejděte zpět **SharedDocuments** seznamu a restartujte pomocí stejného dokumentu nebo jiný pracovní postup.  
   
-11. Zadejte dobu spuštění stránky, která je menší než nebo rovna výše uvedených na stránce přidružení (**1200**).  
+11. Zadejte dobu, jakou se na zahájení stránce, která je menší než velikost zadaná na stránce přidružení (**1200**).  
   
-     V takovém případě se místo úlohu vytvoří položku v seznamu historie. Zobrazí položky v **historie pracovního postupu** části stránky Stav pracovního postupu. Všimněte si zprávy v **výsledek** sloupec Historie událostí. Obsahuje zadaný v text `logToHistoryListActivity1.MethodInvoking` událost, která zahrnuje dobu, která byla schvalovat automaticky.  
+     Pokud k tomu dojde, položky v seznamu historie vytvořil, a nikoli úkolu. Položka se zobrazí v **historie pracovního postupu** na stránce stavu pracovního postupu. Mějte na paměti tuto zprávu najdete v **výsledek** sloupec Historie událostí. Obsahuje text zadaný do `logToHistoryListActivity1.MethodInvoking` událost, která zahrnuje množství, která byla automaticky schválena.  
   
-## <a name="next-steps"></a>Další kroky  
- Další informace o tom, jak vytvořit pracovní postup šablony z těchto témat:  
+## <a name="next-steps"></a>Další kroky
+ Další informace o tom, jak vytvořit pracovní postup šablony naleznete v těchto tématech:  
   
--   Další informace o pracovních postupů služby SharePoint, najdete v části [pracovních postupů v služby Windows SharePoint Services](http://go.microsoft.com/fwlink/?LinkID=166275).  
+-   Další informace o pracovních postupech služby SharePoint, naleznete v tématu [pracovní postupy ve službě Windows SharePoint Services](http://go.microsoft.com/fwlink/?LinkID=166275).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:
  [Vytváření řešení pracovního postupu služby SharePoint](../sharepoint/creating-sharepoint-workflow-solutions.md)   
  [Návod: Přidání stránky aplikace do pracovního postupu](../sharepoint/walkthrough-add-an-application-page-to-a-workflow.md)  
-  
   

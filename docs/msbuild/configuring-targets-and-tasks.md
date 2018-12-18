@@ -1,5 +1,5 @@
 ---
-title: Konfigurace cílů a úloh | Microsoft Docs
+title: Konfigurace cílů a úloh | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -10,24 +10,25 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f71ef4a5b2471dd8b15ac96b61a67dd159b12833
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b6075eea96d217b029f7febb8bcf80aef2a47eb2
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39151142"
 ---
-# <a name="configuring-targets-and-tasks"></a>Konfigurace cílů a úloh
-Můžete nakonfigurovat cíle MSBuild a aby úlohy běžely out-of-process pomocí nástroje MSBuild tak, aby můžete určit cílovou kontextů, které se liší od toho, kterou používáte na. Například můžete určit cílovou 32bitová aplikace rozhraní .NET Framework 2.0, když vývojovém počítači běží na operačním systému 64bitová verze rozhraní .NET Framework 4.5. Také můžete vybrat počítače, které spustit v rozhraní .NET Framework 4 nebo starším. Kombinace 32 - bitová nebo 64verze a na konkrétní verzi rozhraní .NET Framework se označuje jako *cílový kontext*.  
+# <a name="configure-targets-and-tasks"></a>Konfigurace cílů a úloh
+Můžete nakonfigurovat cíle nástroje MSBuild a aby úlohy běžely na více instancí procesu pomocí nástroje MSBuild tak, že je možné cílit na kontextu, které se liší od spustíte v. Můžete například směrovat 32bitovou aplikaci rozhraní .NET Framework 2.0 v operačním systému 64bitová verze rozhraní .NET Framework 4.5 je spuštěn vývojovém počítači. Můžete také směrovat počítače se systémem pomocí rozhraní .NET Framework 4 nebo dřívější. Kombinace 32 nebo 64bitovou a konkrétní verzi rozhraní .NET Framework se označuje jako *cílový kontext*.  
   
 ## <a name="installation"></a>Instalace  
- Rozhraní .NET Framework 4.5 a 4.5.1 nahraďte bez přejmenování je modul common language runtime (CLR), cíle, úlohy a nástroje pro rozhraní .NET Framework 4. Rozhraní .NET Framework 4.5.1 je nainstalován jako součást [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)].  
+ Rozhraní .NET Framework 4.5 a 4.5.1 nahradit common language runtime (CLR), cíle, úkoly a nástroje rozhraní .NET Framework 4 bez nich. Rozhraní .NET Framework 4.5.1 je nainstalován jako součást [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)].  
   
- Pokud chcete instalovat nástroje MSBuild samostatně ze sady Visual Studio, můžete stáhnout instalační balíček z [MSBuild Stáhnout](http://go.microsoft.com/fwlink/?LinkId=309745). Je také nutné nainstalovat rozhraní .NET Framework verze, která si přejete použít taky.  
+ Pokud chcete nainstalovat MSBuild odděleně od sady Visual Studio, můžete stáhnout instalační balíček z [MSBuild stažení](http://go.microsoft.com/fwlink/?LinkId=309745). Musíte také nainstalovat rozhraní .NET Framework verze, kterou chcete použít.  
   
-## <a name="targets-and-tasks"></a>Cílů a úloh  
- Spuštění nástroje MSBuild určité úlohy mimo proces cílit s větším počtem kontexty sestavení.  32-bit MSBuild například může spustit úlohu sestavení v procesu 64-bit do cílového počítače 64-bit. Toto se řídí `UsingTask` argumenty a `Task` parametry. Cíle nainstalovat rozhraní .NET Framework 4.5 nastavte tyto argumentů a parametrů a k vytváření aplikací pro různé cílové kontexty se nevyžadují žádné změny.  
+## <a name="targets-and-tasks"></a>Cíle a úlohy  
+ Spuštění nástroje MSBuild určité úlohy mimo proces cílit s větším počtem kontexty sestavení.  32bitový nástroj MSBuild může být například spuštění úlohy sestavení jako 64bitový proces na 64bitovém počítači. Toto se řídí `UsingTask` argumenty a `Task` parametry. Nastavte cíle nainstalovat rozhraní .NET Framework 4.5 těchto argumentů a parametrů a nevyžaduje žádné změny k sestavování aplikací pro různé kontexty cíl.  
   
- Pokud chcete vytvořit vlastní cílový kontext, musíte nastavit tyto argumentů a parametrů správně. Vyhledejte v rozhraní .NET Framework 4.5 Microsoft.Common.targets soubor a soubor Microsoft.Common.Tasks příklady.  Informace o tom, jak vytvořit vlastní úkol, který můžete pracovat s více kontexty cíl nebo jak upravit stávající úlohy najdete v tématu [postupy: konfigurace cílů a úloh](../msbuild/how-to-configure-targets-and-tasks.md).  
+ Pokud chcete vytvořit vlastní cílový kontext, musíte nastavit tyto argumentů a parametrů odpovídajícím způsobem. Hledat v rozhraní .NET Framework 4.5 *cílů Microsoft.Common.targets* souboru a *Microsoft.Common.Tasks* souboru příklady.  Informace o tom, jak vytvořit vlastní úkol, který můžete pracovat s více kontexty cíl nebo úprava existující úlohy najdete v tématu [postupy: konfigurace cílů a úloh](../msbuild/how-to-configure-targets-and-tasks.md).  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Cílení na více verzí](../msbuild/msbuild-multitargeting-overview.md)

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130568"
 ---
 # <a name="optional-comparison-of-local-project-folder-to-source-control-store"></a>Volitelné porovnání projektu místní složku pro zdrojové úložiště ovládací prvek
 Ve zdroji řízení 1.2 rozhraní API modulu Plugin porovnání mezi složky místní projektu a Správa zdrojového kódu se dá udělat pomocí funkce [SccDirQueryInfo](../../extensibility/sccdirqueryinfo-function.md) a [SccDirDiff](../../extensibility/sccdirdiff-function.md).  

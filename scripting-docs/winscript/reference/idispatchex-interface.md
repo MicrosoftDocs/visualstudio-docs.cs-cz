@@ -1,74 +1,75 @@
 ---
-title: "IDispatchEx – rozhraní | Microsoft Docs"
-ms.custom: 
+title: IDispatchEx – rozhraní | Dokumentace Microsoftu
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - IDispatchEx interface, about IDispatchEx
 - IDispatchEx interface
 ms.assetid: 37a3303f-f78e-4b5b-aac8-b836c92819de
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9a100a193f5e3abcb076fb8aaf3d64a0d0c38833
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 22ccc54dee335fd8c81343557d2f32c48eb30560
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49837916"
 ---
 # <a name="idispatchex-interface"></a>IDispatchEx – rozhraní
-`IDispatchEx`, rozšíření `IDispatch` rozhraní, podporuje funkce vhodné pro dynamické jazyků, například skriptovací jazyky. Tato část popisuje `IDispatchEx` rozhraní samostatně, rozdíly mezi `IDispatch` a `IDispatchEx`a důvody tohoto rozšíření. Očekává se, že čtečky obeznámeni s `IDispatch` a mají přístup ke `IDispatch` dokumentaci.  
+`IDispatchEx`, rozšíření `IDispatch` rozhraní, podporuje funkce vhodné pro dynamické jazyky, jako je například skriptovací jazyky. Tato část popisuje `IDispatchEx` rozhraní, rozdíly mezi `IDispatch` a `IDispatchEx`a důvody tohoto rozšíření. Očekává se, že čtečky obeznámeni s `IDispatch` a mají přístup k `IDispatch` dokumentaci.  
   
 ## <a name="remarks"></a>Poznámky  
- `IDispatch`byla vyvinuta v podstatě pro Microsoft Visual Basic. Primární omezení `IDispatch` je, že předpokládá, že se objekty statické. Jinými slovy protože objekty neměňte během doby běhu, informace o typu můžete plně popisují je v době kompilace. Dynamické běhové modely, které se nacházejí v skriptovací jazyky, jako je například Visual Basic Scripting Edition (VBScript) a [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] a objekt modely, jako je Dynamic HTML vyžadují flexibilnější rozhraní.  
+ `IDispatch` byl vyvinut v podstatě pro Microsoft Visual Basicu. Primární omezení `IDispatch` se předpokládá, že objekty jsou statické. Jinými slovy protože objekty nejsou změnit za běhu, informace o typu můžete plně popisují je v době kompilace. Dynamické modely za běhu, které se nacházejí v skriptovacích jazyků, jako je například Visual Basic Scripting Edition (VBScript) a [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] a objekt modely, jako je Dynamic HTML vyžadují flexibilnější rozhraní.  
   
- `IDispatchEx`byl vyvinut poskytnout všechny služby `IDispatch` a také některé rozšíření, které jsou vhodné pro dynamičtější pozdní vazbou jazyků, například skriptovací jazyky. Další funkce `IDispatchEx` nad rámec `IDispatch` jsou:  
+ `IDispatchEx` byla vyvinuta poskytují všechny služby `IDispatch` a také některá rozšíření, které jsou vhodné pro dynamičtějších s pozdní vazbou jazyků, jako je skriptovací jazyky. Další funkce `IDispatchEx` nad rámec těch, které poskytuje podle `IDispatch` jsou:  
   
--   Přidat nové členy k objektu ("expando") – použijte `GetDispID` s `fdexNameEnsure` příznak.  
+- Přidat nové členy do objektu ("expando" "") – použijte `GetDispID` s `fdexNameEnsure` příznak.  
   
--   Odstranit členům v objektu – použít `DeleteMemberByName` nebo `DeleteMemberByDispID`.  
+- Odstranit členy objektu – použijte `DeleteMemberByName` nebo `DeleteMemberByDispID`.  
   
--   Malá a velká písmena výstupních operací – použít `fdexNameCaseSensitive` nebo `fdexNameCaseInsensitive`.  
+- Operace odeslání velká a malá písmena, použijte `fdexNameCaseSensitive` nebo `fdexNameCaseInsensitive`.  
   
--   Vyhledejte člen s názvem implicitní – použijte `fdexNameImplicit`.  
+- Hledání pro člena s názvem implicitní – použijte `fdexNameImplicit`.  
   
--   Zobrazení výčtu hodnoty dispID objektu – použijte `GetNextDispID`.  
+- Vytvořit výčet hodnoty dispID objektu – použijte `GetNextDispID`.  
   
--   Mapa ze DISPID pro název elementu – použijte `GetMemberName`.  
+- Mapování z DISPID pro název elementu – použijte `GetMemberName`.  
   
--   Získat vlastnosti objektu členů – použijte `GetMemberProperties`.  
+- Získání vlastností členů objektu – použijte `GetMemberProperties`.  
   
--   Volání metody s `this` ukazatel – použít `InvokeEx` s DISPATCH_METHOD.  
+- Volání metody s `this` ukazatel – použijte `InvokeEx` s DISPATCH_METHOD.  
   
--   Povolit prohlížeče, které podporují koncept obory názvů získat název místa nadřazeného objektu – použijte `GetNameSpaceParent`.  
+- Povolit prohlížeče, které podporují koncept obory názvů získat nadřazené místo názvu objektu – použijte `GetNameSpaceParent`.  
   
- Objektů, které podporují `IDispatchEx` může také podporovat `IDispatch` z důvodu zpětné kompatibility. Dynamické povaha objekty, které podporují `IDispatchEx` má několik důsledky pro `IDispatch` rozhraní těchto objektů. Například `IDispatch` nepředpokládá následující:  
+  Objekty, které podporují `IDispatchEx` může také podporovat `IDispatch` z důvodu zpětné kompatibility. Dynamické povaze objekty, které podporují `IDispatchEx` má několik vliv `IDispatch` rozhraní těchto objektů. Například `IDispatch` díky následujících předpokladů:  
   
--   Člen a parametr musí zůstat hodnoty dispID konstantní po dobu jeho existence objektu. To umožňuje klientům získat hodnoty dispID jednou a ukládat je do mezipaměti pro pozdější použití.  
+- Člen a parametr hodnoty dispID musí zůstat konstantní dobu života objektu. To umožňuje klientům získat hodnoty dispID jednou a mezipaměti pro pozdější použití.  
   
- Vzhledem k tomu `IDispatchEx` umožňuje přidání a odstranění členů sadu platné hodnoty dispID zůstanou není konstantní. Ale `IDispatchEx` vyžaduje, že mapování mezi DISPID a člen název zůstat konstantní. To znamená, že pokud dojde k odstranění člen:  
+  Protože `IDispatchEx` umožňuje přidávání a odstraňování členů sady platné hodnoty dispID zůstat není konstantní. Ale `IDispatchEx` vyžaduje, aby zůstal neměnný mapování mezi DISPID a názvu člena. To znamená, že pokud je člen odstraněn:  
   
--   DISPID nemůže znovu, dokud nebude vytvořen člen se stejným názvem.  
+- Hodnota DISPID nesmí znovu použít, dokud se nevytvoří člena se stejným názvem.  
   
--   DISPID musí zůstat platné pro `GetNextDispID`.  
+- Hodnota DISPID musí zůstat platný pro `GetNextDispID`.  
   
--   DISPID musí přijmout řádně podle těchto sloupců `IDispatch` nebo `IDispatchEx` metody – musí rozpoznat člena, protože odstraněny a vrátí odpovídající chybový kód (obvykle DISP_E_MEMBERNOTFOUND nebo S_FALSE).  
+- Hodnota DISPID musí být přijata řádně podle těchto sloupců `IDispatch` nebo `IDispatchEx` metody – musí rozpoznat člena jako odstraněný a vrátí příslušnou chybovou kód (obvykle DISP_E_MEMBERNOTFOUND nebo S_FALSE).  
   
 ## <a name="examples"></a>Příklady  
- To [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] kód v test() funkce provede následující akce:  
+ To [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] kódu ve funkci test() provede následující akce:  
   
--   Vytvoří nový objekt voláním `Object` konstruktor a přiřadí ukazatel na nový objekt k proměnné objektu vývoz.  
+- Vytvoří nový objekt voláním `Object` konstruktor a přiřadí ukazatel na objekt, nové proměnné knihovna  
   
--   Vytvoří nového elementu s názvem Elem v objektu a přiřadí do tohoto elementu ukazatel na funkci cat.  
+- Vytvoří nový prvek v objektu s názvem Elem a přiřadí ukazatel na funkci cat tohoto elementu.  
   
--   Volání této funkce. Vzhledem k tomu, že se nazývá jako metodu, `this` ukazatel odkazuje na objekt objektu vývoz. Funkce přidá nového elementu řádku, aby se objekt.  
+- Volá tuto funkci. Protože je volána jako metody, `this` ukazatel odkazuje na objekt knihovna Funkce přidá nový prvek panel na objekt.  
   
- Úplný kód HTML je:  
+  Úplný kód HTML je:  
   
 ```  
 <html>  
@@ -99,7 +100,7 @@ test();
 </html>  
 ```  
   
- Prvek řízení umístěný na této stejné webové stránce může získat odesílání ukazatel k skriptovacích strojů ukládaných z prohlížeče. Ovládací prvek pak může implementovat test() funkce:  
+ Prvek řízení umístěný na tomto stejné webové stránce může získat odeslání ukazatele na skriptovacích strojů ukládaných z prohlížeče. Ovládací prvek pak může implementovat test() funkce:  
   
 ```  
 <html>  
@@ -117,25 +118,25 @@ function cat()
 </html>  
 ```  
   
- Kód z ovládacího prvku, testování, má stejnou funkci jako [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] funkce `test()`. Všimněte si, že tyto odesílání volání do spuštění [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] modul a ke změně stavu modulu:  
+ Kódu z ovládacího prvku, testování, provede totéž, jako [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] funkce `test()`. Všimněte si, že tyto odeslání volání do běhu [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] motoru a ke změně stavu modul:  
   
--   Získá odesílání ukazatele na funkce pomocí cat `GetDispID()`.  
+- Získá ukazatel odeslání ke cat pomocí funkce `GetDispID()`.  
   
--   Získá odesílání ukazatele na funkce pomocí objektu `GetDispID()`.  
+- Získá odeslání ukazatel na objekt pomocí funkce `GetDispID()`.  
   
--   Vytvoří objekt voláním funkce objektu se `InvokeEx()` a získá odesílání ukazatel na nově vytvořený objekt.  
+- Vytvoří objekt voláním funkce objektu s `InvokeEx()` a získá odeslání ukazatel na nově vytvořený objekt.  
   
--   Vytvoří nového elementu, Elem, v objektu pomocí `GetDispID()` s `fdexNameEnsure` příznak.  
+- Vytvoří nový prvek Elem, v objektu pomocí `GetDispID()` s `fdexNameEnsure` příznak.  
   
--   Vloží odesílání ukazatele na cat v elementu pomocí `InvokeEx()`.  
+- Umístí ukazatel odeslání cat v prvku pomocí `InvokeEx()`.  
   
--   Volání odesílání ukazatel na cat jako metodu voláním `InvokeEx()` a předání v odesílání ukazatele konstruovaný objekt, jako `this` ukazatel.  
+- Volá metodu odeslání ukazatel ke cat voláním `InvokeEx()` a předání v odesílání ukazateli na konstruovaný objekt jako `this` ukazatele.  
   
--   Metoda cat vytvoří nového elementu panelu na aktuální `this` objektu.  
+- Metoda cat vytvoří nový prvek panel na aktuální `this` objektu.  
   
--   Ověřuje, že nového elementu panelu, byl vytvořen v konstruovaný objekt výčet prostřednictvím elementů pomocí `GetNextDispID()`.  
+- Ověřuje, že nový prvek panelu byl vytvořen ve vytvořeném objektu vytyčením přes prvky pomocí `GetNextDispID()`.  
   
- Kód pro ovládací prvek testu:  
+  Kód pro ovládací prvek testu:  
   
 ```  
    BOOL test(IDispatchEx *pdexScript)  

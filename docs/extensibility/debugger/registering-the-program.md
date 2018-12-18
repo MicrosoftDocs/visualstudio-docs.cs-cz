@@ -1,5 +1,5 @@
 ---
-title: Registrace do programu | Microsoft Docs
+title: Registrace programu | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,33 +14,34 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: febc798888cc046e514db4013edb077e25f5aaca
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e12e0ed9abf90911e9d22de60d8dc11363f67adb
+ms.sourcegitcommit: 20d1b9a5bf041bb28453501eb63bc0537a8e4f54
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51645065"
 ---
-# <a name="registering-the-program"></a>Registrace do programu
-Po modul ladění získal port, reprezentována [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) rozhraní, je dalším krokem při povolování program, který chcete ladit a zaregistrujte ho pomocí portu. Po registraci programu je k dispozici pro ladění pomocí jedné z těchto způsobů:  
+# <a name="register-the-program"></a>Registrace programu
+Po ladicí stroj získal port, reprezentovaný [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) rozhraní, je dalším krokem při povolení ladění programu registrace s portem. Po registraci do programu je k dispozici pro ladění pomocí jedné z následujících způsobů:  
   
--   Proces připojení, který umožňuje získat ladění kontrolu spuštěné aplikace ladicího programu.  
+-   Proces připojení, která umožňuje ladicího programu k získání úplné kontroly ladění běžící aplikace.  
   
--   V běhu (JIT) ladění, která umožňuje za fakt ladění programu, který spouští nezávisle na ladicí program. Při běhu architektura zachytí chybu, ladicího programu upozornění před operačního systému nebo prostředí runtime uvolní paměť a prostředky chybující programu.  
+-   Just-in-time (JIT) ladění, která umožňuje za fakt ladění programu, který se spustí bez ohledu na jejich ladicí program. Za běhu architektury zachytí chyba, ladicí program se upozornění před operačního systému nebo běhové prostředí uvolní paměť a prostředky neškodné programu.  
   
 ## <a name="registering-procedure"></a>Postup registrace  
   
-#### <a name="to-register-your-program"></a>K registraci vašeho programu  
+### <a name="to-register-your-program"></a>Registrace aplikace  
   
-1.  Volání [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md) metoda implementované port.  
+1.  Volání [AddProgramNode](../../extensibility/debugger/reference/idebugportnotify2-addprogramnode.md) metoda implementovaná port.  
   
-     `IDebugPortNotify2::AddProgramNode` ukazatel na vyžaduje [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) rozhraní.  
+     `IDebugPortNotify2::AddProgramNode` vyžaduje ukazatel [IDebugProgramNode2](../../extensibility/debugger/reference/idebugprogramnode2.md) rozhraní.  
   
-     Obvykle když operační systém nebo běhové prostředí načte program, vytvoří uzlu programu. Pokud modul ladění (DE) se zobrazí výzva k načtení program DE vytvoří a zaregistruje uzlu programu.  
+     Obvykle když operační systém nebo prostředí za běhu načte program, vytvoří uzel programu. Pokud ladicí stroj (DE) se zobrazí výzva k načtení programu, DE vytváří a registruje uzel programu.  
   
-     Následující příklad ukazuje modul ladění spuštěním programu a její registrací s portem.  
+     Následující příklad ukazuje ladicí stroj spuštění programu a její registrací pomocí portu.  
   
     > [!NOTE]
-    >  Toto není jediný způsob, jak spustit a pokračovat v procesu; Toto je především Příklad registrace program s portem.  
+    >  Tento vzorový kód není jediným způsobem, jak spustit a pokračovat v procesu. Tento kód je především Příklad registrace programu s portem.  
   
     ```cpp  
     // This is an IDebugEngineLaunch2 method.  
@@ -72,7 +73,7 @@ Po modul ladění získal port, reprezentována [IDebugPort2](../../extensibilit
                 if (SUCCEEDED(hr))  
                 {  
                     // pass on the parameters we were given (omitted here)  
-                    hr = spPortEx->LaunchSuspended(/* omitted paramters */,ppDebugProcess)  
+                    hr = spPortEx->LaunchSuspended(/* omitted parameters */,ppDebugProcess)  
                 }  
             }  
         }  
@@ -106,6 +107,6 @@ Po modul ladění získal port, reprezentována [IDebugPort2](../../extensibilit
   
     ```  
   
-## <a name="see-also"></a>Viz také  
- [Získávání Port](../../extensibility/debugger/getting-a-port.md)   
+## <a name="see-also"></a>Viz také:  
+ [Získání portu](../../extensibility/debugger/getting-a-port.md)   
  [Povolení ladění programu](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)

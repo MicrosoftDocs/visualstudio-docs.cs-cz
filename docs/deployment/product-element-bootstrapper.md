@@ -1,5 +1,5 @@
 ---
-title: '&lt;Produkt&gt; prvek (zavaděče) | Microsoft Docs'
+title: '&lt;Produkt&gt; – Element (zaváděcí nástroj) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -17,18 +17,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fa27f5b2af87ec3a174c26ccae1ad4e4e47749b3
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 90179df4595ea58a771dd941ea388555b52c7374
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39080402"
 ---
-# <a name="ltproductgt-element-bootstrapper"></a>&lt;Produkt&gt; – Element (zaváděcího nástroje)
-`Product` Element je element XML nejvyšší úrovně v rámci souboru produktu.  
+# <a name="ltproductgt-element-bootstrapper"></a>&lt;Produkt&gt; – element (zaváděcí nástroj)
+`Product` Prvek je element XML nejvyšší úrovně v rámci souboru produktu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```xml  
 <Product  
 ProductCode  
 >  
@@ -139,16 +140,16 @@ ProductCode
 ```  
   
 ## <a name="elements-and-attributes"></a>Elementy a atributy  
- `Product` Element je potřeba v souboru produktu. Má následující atribut.  
+ `Product` Je vyžadován prvek v souboru produktu. Má tento atribut.  
   
 |Atribut|Popis|  
 |---------------|-----------------|  
 |`ProductCode`|Jedinečný identifikátor pro produkt.|  
   
 ## <a name="example"></a>Příklad  
- Následující příklad kódu ukazuje soubor dokončení produktu pro instalaci [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)].  
+ Následující příklad kódu ukazuje kompletní soubor produktu pro instalaci [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)].  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
   
 <Product  
@@ -250,5 +251,5 @@ ProductCode
 </Product>  
 ```  
   
-## <a name="see-also"></a>Viz také  
- [Referenční schéma balíčku a produktu](../deployment/product-and-package-schema-reference.md)
+## <a name="see-also"></a>Viz také:  
+ [Referenční dokumentace schématu produktů a balíčků](../deployment/product-and-package-schema-reference.md)

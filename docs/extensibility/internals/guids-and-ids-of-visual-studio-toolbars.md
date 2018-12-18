@@ -1,5 +1,5 @@
 ---
-title: Identifikátory panelů nástrojů Visual Studio a identifikátory GUID | Microsoft Docs
+title: Identifikátory GUID a ID panelů nástrojů sady Visual Studio | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,26 +19,27 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 394e0991d734279879df89422ac23fdd26899eeb
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6982835b9d3b6259a47439dbe7b1b9252edc3dbe
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39499003"
 ---
-# <a name="guids-and-ids-of-visual-studio-toolbars"></a>Identifikátory panelů nástrojů Visual Studio a identifikátory GUID
-Toto téma uvádí hodnoty GUID a ID panelů nástrojů, které jsou zahrnuté v sadě Visual Studio integrované vývojové prostředí (IDE) a skupiny obsahují. Tyto hodnoty jsou definovány v .vsct soubory, které jsou nainstalovány v rámci sady Visual Studio SDK. Další informace najdete v tématu [IDE-Defined příkazy, nabídky a skupiny](../../extensibility/internals/ide-defined-commands-menus-and-groups.md).  
+# <a name="guids-and-ids-of-visual-studio-toolbars"></a>Identifikátory GUID a ID sady Visual Studio panelů nástrojů
+Toto téma uvádí hodnoty GUID a ID panelů nástrojů, které jsou součástí integrovaného vývojového prostředí (IDE) sady Visual Studio a skupin, které obsahují. Tyto hodnoty jsou definovány v *.vsct* soubory, které se instalují jako součást sady Visual Studio SDK. Další informace najdete v tématu [příkazy definované prostředím IDE, nabídky a skupiny](../../extensibility/internals/ide-defined-commands-menus-and-groups.md).  
   
 > [!NOTE]
->  Množství dostupné pro Visual Studio panely nástrojů nejsou definované sadě Visual Studio a jejich identifikátoru GUID a ID hodnoty nejsou veřejná. Toto téma uvádí jenom panely nástrojů, které jsou definovány v souborech .vsct Visual Studio SDK.  
+>  Mnohé z panelů nástrojů sady Visual Studio nejsou definovány tak, že Visual Studio a jejich identifikátoru GUID a ID hodnoty nejsou veřejné. Toto téma obsahuje seznam pouze panely nástrojů, které jsou definovány v sadě Visual Studio SDK *.vsct* soubory.  
   
- Další informace o tom, jak pracovat s objekty IDE, které jsou definovány v souborech .vsct najdete v tématu [rozšíření nabídek a příkazů](../../extensibility/extending-menus-and-commands.md).  
+ Další informace o tom, jak pracovat s objekty integrovaného vývojového prostředí, které jsou definovány v *.vsct* soubory, naleznete v tématu [rozšířit nabídek a příkazů](../../extensibility/extending-menus-and-commands.md).  
   
- Výchozí panely nástrojů poskytovaných Visual Studio IDE použít identifikátor GUID `guidSHLMainMenu`, pokud pomocí syntaxe GUID:ID uvedeno jinak.  
+ Výchozí panely nástrojů poskytuje integrované vývojové prostředí sady Visual Studio použijte identifikátor GUID `guidSHLMainMenu`, s výjimkou stanoveno jinak pomocí `GUID:ID` syntaxe.  
   
 ## <a name="ide-toolbars"></a>Panely nástrojů rozhraní IDE  
- Visual Studio IDE jsou poskytovány následující panely nástrojů. Panely nástrojů lze zobrazit výběrem na **panely nástrojů** podnabídce **nástroje** nabídky. Panely nástrojů v systému windows nástroj nejsou zahrnuté v této části.  
+ Následující panely nástrojů jsou k dispozici v integrovaném vývojovém prostředí sady Visual Studio. Panely nástrojů lze zobrazit tak, že je vyberete na **panely nástrojů** podnabídce **nástroje** nabídky. Panely nástrojů v oknech nástrojů nejsou zahrnuté v této části.  
   
- Pouze skupiny, můžete sestup přímo z panely nástrojů. Přidat skupinu, nastavte jeho nadřazený identifikátor GUID a ID panelu nástrojů. K přidání tlačítka na panel nástrojů, nastavte jeho nadřazený objekt do skupiny na panelu nástrojů.  
+ Pouze skupiny můžete sestup přímo z panelů nástrojů. Přidat skupinu, nastavte jeho nadřazený objekt na identifikátor GUID a ID panelu nástrojů. Přidáte tlačítko na panelu nástrojů, nastavte jeho nadřazený objekt do skupiny na panelu nástrojů.  
   
 |Panel nástrojů|ID|  
 |-------------|--------|  
@@ -46,43 +47,43 @@ Toto téma uvádí hodnoty GUID a ID panelů nástrojů, které jsou zahrnuté v
 |Sestavení|IDM_VS_TOOL_BUILD|  
 |Textový editor|IDM_VS_TOOL_TEXTEDITOR|  
 |Ladit|guidVSDebugGroup:IDM_DEBUG_TOOLBAR|  
-|Ladění umístění|guidVSDebugGroup:IDM_DEBUG_CONTEXT_TOOLBAR|  
+|Ladit umístění|guidVSDebugGroup:IDM_DEBUG_CONTEXT_TOOLBAR|  
   
-### <a name="special-toolbars"></a>Speciální panely nástrojů  
- Panely nástrojů jsou definovaná sadou Visual Studio IDE, ale sloužit specializované funkce a není hostitelem příkaz skupiny.  
+### <a name="special-toolbars"></a>Speciální panelů nástrojů  
+ Panely nástrojů, které jsou definovány pomocí integrovaného vývojového prostředí sady Visual Studio, ale sloužit specializované funkce a není hostitelem pro skupinu příkazů.  
   
 |Panel nástrojů|ID|  
 |-------------|--------|  
-|Příkaz Přidat|IDM_VS_TOOL_ADDCOMMAND|  
-|Nedefinovaná|IDM_VS_TOOL_UNDEFINED|  
-|XML schéma|IDM_VS_TOOL_SCHEMA|  
-|XML Data|IDM_VS_TOOL_DATA|  
+|Přidat – příkaz|IDM_VS_TOOL_ADDCOMMAND|  
+|Nedefinovaný|IDM_VS_TOOL_UNDEFINED|  
+|Schématu XML|IDM_VS_TOOL_SCHEMA|  
+|data XML|IDM_VS_TOOL_DATA|  
   
 ## <a name="groups-on-the-ide-toolbars"></a>Skupiny na panely nástrojů rozhraní IDE  
- Přidání tlačítka na standardním panelu nástrojů, nastavte jednu z následujících skupin jako svůj nadřazený uzel. Skupiny jsou seřazené podle nadřazené panelu nástrojů.  
+ Na standardním panelu nástrojů přidejte tlačítko, nastavte jednu z následujících skupin jako jeho nadřazený objekt. Skupiny jsou seřazeny podle nadřazeného panelu nástrojů.  
   
-### <a name="standard-toolbar-groups"></a>Skupiny standardním panelu nástrojů  
+### <a name="standard-toolbar-groups"></a>Skupiny na standardním panelu nástrojů  
   
 |Název|ID|  
 |----------|--------|  
 |Uložit a otevřít|IDG_VS_TOOLSB_SAVEOPEN|  
 |Vyjmout/Kopírovat|IDG_VS_TOOLSB_CUTCOPY|  
-|Vrátit/opakovat|IDG_VS_TOOLSB_UNDOREDO|  
-|Spustit nebo sestavení|IDG_VS_TOOLSB_RUNBUILD|  
+|Zpět/znovu|IDG_VS_TOOLSB_UNDOREDO|  
+|Spuštění/sestavení|IDG_VS_TOOLSB_RUNBUILD|  
 |Hledat|IDG_VS_TOOLSB_SEARCH|  
 |Windows|IDG_VS_TOOLSB_WINDOWS|  
-|Nové Windows|IDG_VS_TOOLSB_NEWWINDOWS|  
-|Načíst nebo uložit|IDG_VS_WINDOWUI_LOADSAVE|  
+|Nový systém windows|IDG_VS_TOOLSB_NEWWINDOWS|  
+|Načtení a uložení|IDG_VS_WINDOWUI_LOADSAVE|  
 |Měřidla|IDG_VS_TOOLSB_GAUGE|  
   
-### <a name="build-toolbar-groups"></a>Vytvoření skupiny panelu nástrojů  
+### <a name="build-toolbar-groups"></a>Vytvořit skupiny pro panel nástrojů  
   
 |Název|ID|  
 |----------|--------|  
 |Panelu sestavení|IDG_VS_BUILDBAR|  
 |Zrušit|IDG_VS_BUILD_CANCEL|  
   
-### <a name="text-editor-toolbar-groups"></a>Skupiny textového editoru panelu nástrojů  
+### <a name="text-editor-toolbar-groups"></a>Text editoru panelu nástrojů skupiny  
   
 |Název|ID|  
 |----------|--------|  
@@ -91,28 +92,28 @@ Toto téma uvádí hodnoty GUID a ID panelů nástrojů, které jsou zahrnuté v
 |Komentář|IDG_VS_EDITTOOLBAR_COMMENT|  
 |Záložky|IDG_VS_EDITTOOLBAR_TEMPBOOKMARKS|  
   
-### <a name="debug-toolbar-groups"></a>Ladění skupiny panelu nástrojů  
+### <a name="debug-toolbar-groups"></a>Ladění nástrojů skupiny  
   
 |Název|ID|  
 |----------|--------|  
 |Spuštění|IDM_DEBUG_TOOLBAR|  
-|Krokování s|IDG_DEBUG_TOOLBAR_STEPPING|  
+|Krokování|IDG_DEBUG_TOOLBAR_STEPPING|  
 |Sledování|IDG_DEBUG_TOOLBAR_WATCH|  
 |Windows|IDG_DEBUG_TOOLBAR_WINDOWS|  
   
-### <a name="debug-location-toolbar-groups"></a>Ladění skupiny umístění panelu nástrojů  
+### <a name="debug-location-toolbar-groups"></a>Skupiny nástrojů umístění ladění  
   
 |Název|ID|  
 |----------|--------|  
-|Ladění umístění|IDG_DEBUG_CONTEXT_TOOLBAR|  
+|Ladit umístění|IDG_DEBUG_CONTEXT_TOOLBAR|  
   
-## <a name="tool-window-toolbars"></a>Nástroj panely nástrojů  
- Panely nástrojů může vyskytovat přímo v prostředí IDE nebo v panelech nástrojů, jako **Průzkumníku řešení**. Protože nástroj windows nejsou definovány v souborech .vsct, nástroj panely nástrojů nemají definované nadřazené položky. Místo toho jsou umístěny v kódu. V následující tabulce jsou uvedeny panely nástrojů, které se zobrazují v systému windows nástroj v prostředí IDE a příkaz skupiny, které obsahují.  
+## <a name="tool-window-toolbars"></a>Panelech nástrojů  
+ Panely nástrojů lze zobrazit přímo v integrovaném vývojovém prostředí nebo v oknech nástrojů třeba **Průzkumníka řešení**. Protože nástroj windows nejsou definovány v *.vsct* soubory panelech nástrojů není definovali nadřazených objektů. Místo toho jsou umístěny v kódu. V následující tabulce jsou uvedeny panely nástrojů, které se zobrazují na okna nástrojů v prostředí IDE a příkaz skupiny, které obsahují.  
   
 > [!NOTE]
->  Panely nástrojů a skupiny použít identifikátor GUID `guidSHLMainMenu`, pokud pomocí syntaxe GUID:ID uvedeno jinak. Kde je identifikátor GUID je zadán pro panel nástrojů, platí také pro skupiny, které sestup tohoto panelu nástrojů.  
+>  Panely nástrojů a skupiny použijte identifikátor GUID `guidSHLMainMenu`, s výjimkou pomocí syntaxe GUID:ID uvedeno jinak. Kde GUID je zadaný pro panel nástrojů, platí i pro skupiny, ke kterým sestup z panelu nástrojů.  
   
-|Okno nástroje|Panel nástrojů|Skupiny|  
+|Panel nástrojů|Panel nástrojů|Skupiny|  
 |-----------------|-------------|------------|  
 |Průzkumník řešení|IDM_VS_TOOL_PROJWIN|IDG_VS_PROJ_TOOLBAR1... 5|  
 |Průzkumník serveru|guid_SE_MenuGroup:IDM_SE_TOOLBAR_SERVEREXPLORER|IDG_SE_TOOLBAR_REFRESH|  
@@ -125,18 +126,18 @@ Toto téma uvádí hodnoty GUID a ID panelů nástrojů, které jsou zahrnuté v
 |hledání a nahrazování|IDM_VS_TOOL_UNIFIEDFIND|IDG_VS_FINDTAB<br /><br /> IDG_VS_REPLACETAB|  
 |Najít výsledky 1|IDM_VS_TOOL_FINDRESULTS1|IDG_VS_FINDRESULTS1_GOTO<br /><br /> IDG_VS_FINDRESULTS1_NEXTPREV<br /><br /> IDG_VS_FINDRESULTS1_CLEAR<br /><br /> IDG_VS_FINDRESULTS1_STOPFIND|  
 |Najít výsledky 2|IDM_VS_TOOL_FINDRESULTS2|IDG_VS_FINDRESULTS2_GOTO<br /><br /> IDG_VS_FINDRESULTS2_NEXTPREV<br /><br /> IDG_VS_FINDRESULTS2_CLEAR<br /><br /> IDG_VS_FINDRESULTS2_STOPFIND|  
-|fragment kódu|IDM_VS_TOOL_SNIPPETMENUS|IDG_VS_SNIPPET_REPL<br /><br /> IDG_VS_SNIPPET_REF<br /><br /> IDG_VS_SNIPPET_PROP|  
+|Fragment kódu|IDM_VS_TOOL_SNIPPETMENUS|IDG_VS_SNIPPET_REPL<br /><br /> IDG_VS_SNIPPET_REF<br /><br /> IDG_VS_SNIPPET_PROP|  
 |Záložky|IDM_VS_TOOL_BOOKMARKWIND|IDG_VS_BWNEWFOLDER<br /><br /> IDG_VS_BWNEXTBM<br /><br /> IDG_VS_BWNEXTBMF<br /><br /> IDG_VS_BWENABLE<br /><br /> IDG_VS_BWDELETE|  
 |Seznam úloh|IDM_VS_TOOL_TASKLIST|IDG_VS_TASKLIST_PROVIDERLIST|  
-|Úlohy uživatele|IDM_VS_TOOL_USERTASKS|IDG_VS_TASKLIST_PROVIDERLIST<br /><br /> IDG_VS_USERTASKS_EDIT|  
+|Uživatelské úkoly|IDM_VS_TOOL_USERTASKS|IDG_VS_TASKLIST_PROVIDERLIST<br /><br /> IDG_VS_USERTASKS_EDIT|  
 |Seznam chyb|IDM_VS_TOOL_ERRORLIST|IDG_VS_ERRORLIST_ERRORGROUP<br /><br /> IDG_VS_ERRORLIST_WARNINGGROUP<br /><br /> IDG_VS_ERRORLIST_MESSAGEGROUP|  
-|Volání prohlížeče|IDM_VS_TOOL_CALLBROWSER1... 16|IDG_VS_TOOLBAR_CALLBROWSER1_ACTIONS<br /><br /> IDG_VS_TOOLBAR_CALLBROWSER1_TYPE<br /><br /> IDG_VS_TOOLBAR_CALLBROWSER1_CBSETTINGS|  
+|Prohlížeč volání|IDM_VS_TOOL_CALLBROWSER1... 16|IDG_VS_TOOLBAR_CALLBROWSER1_ACTIONS<br /><br /> IDG_VS_TOOLBAR_CALLBROWSER1_TYPE<br /><br /> IDG_VS_TOOLBAR_CALLBROWSER1_CBSETTINGS|  
 |Zarážky|guidVSDebugGroup:IDM_BREAKPOINTS_WINDOW_TOOLBAR|IDG_BREAKPOINTS_WINDOW_NEW<br /><br /> IDG_BREAKPOINTS_WINDOW_DELETE<br /><br /> IDG_BREAKPOINTS_WINDOW_ALL<br /><br /> IDG_BREAKPOINTS_WINDOW_VIEW<br /><br /> IDG_BREAKPOINTS_WINDOW_EDIT<br /><br /> IDG_BREAKPOINTS_WINDOW_COLUMNS|  
-|Zpětný překlad|guidVSDebugGroup:IDM_DISASM_WINDOW_TOOLBAR|IDG_DISASM_WINDOW_TOOLBAR|  
+|Převod do strojového jazyka|guidVSDebugGroup:IDM_DISASM_WINDOW_TOOLBAR|IDG_DISASM_WINDOW_TOOLBAR|  
 |Paměť 1 – 4|guidVSDebugGroup:IDM_MEMORY_WINDOW_TOOLBAR1... 4|IDG_MEMORY_EXPRESSION1... 4<br /><br /> IDG_MEMORY_COLUMNS1... 4|  
 |Procesy|guidVSDebugGroup:IDM_ATTACHED_PROCS_TOOLBAR|IDG_ATTACHED_PROCS_EXECCNTRL IDG_ATTACHED_PROCS_STEPPING<br /><br /> IDG_ATTACHED_PROCS_EXECCNTRL2<br /><br /> IDG_ATTACHED_PROCS_ATTACH<br /><br /> IDG_ATTACHED_PROCS_COLUMNS|  
   
-## <a name="see-also"></a>Viz také  
- [Přidávání řadiče nabídky na panelu nástrojů](../../extensibility/adding-a-menu-controller-to-a-toolbar.md)   
- [Přidávání panelů nástrojů do okno nástroje](../../extensibility/adding-a-toolbar-to-a-tool-window.md)   
- [Identifikátory GUID a ID nabídek sady Visual Studio](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md)
+## <a name="see-also"></a>Viz také:  
+ [Přidání kontroleru nabídky do panelu nástrojů](../../extensibility/adding-a-menu-controller-to-a-toolbar.md)   
+ [Přidání panelu nástrojů do panelu nástrojů](../../extensibility/adding-a-toolbar-to-a-tool-window.md)   
+ [Identifikátory GUID a ID sady Visual Studio nabídky](../../extensibility/internals/guids-and-ids-of-visual-studio-menus.md)

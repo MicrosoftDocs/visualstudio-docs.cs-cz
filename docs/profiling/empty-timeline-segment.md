@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f45306283d6aaa2346b121455cca398e918b66e2
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ad8d87c0574ac2c7671012fff6a81a568d6bff5f
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34764527"
 ---
 # <a name="empty-timeline-segment"></a>Prázdný segment časové osy
 V Concurrency Visualizer, důvod, proč části časové osy je prázdná (má bílé pozadí) závisí na druhu kanálu.  
@@ -31,6 +32,6 @@ V Concurrency Visualizer, důvod, proč části časové osy je prázdná (má b
   
 -   Pro kanál značky to znamená, že byly vygenerovány žádné značky.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Zobrazení vláken](../profiling/threads-view-parallel-performance.md)   
- [Ovládací prvek Lupa (Zobrazení vláken)](../profiling/zoom-control-threads-view.md)
+ [Ovládací prvek Lupa (zobrazení vláken)](../profiling/zoom-control-threads-view.md)

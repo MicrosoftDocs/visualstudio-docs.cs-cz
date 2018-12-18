@@ -1,5 +1,5 @@
 ---
-title: IDebugMethodField::IsCustomAttributeDefined | Microsoft Docs
+title: IDebugMethodField::IsCustomAttributeDefined | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f8515fd9fc9914daa7f28f876777dd5eb26ac14c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9d2481c014c149e51c4c9ee3ff837a65e040b7e8
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49882265"
 ---
 # <a name="idebugmethodfieldiscustomattributedefined"></a>IDebugMethodField::IsCustomAttributeDefined
-Určuje, zda byla definována konkrétní vlastní atribut.  
+Určuje, zda konkrétní vlastního atributu je definována.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,10 +41,10 @@ int IsCustomAttributeDefined(
   
 #### <a name="parameters"></a>Parametry  
  `pszCustomAttributeName`  
- [v] Řetězec obsahující název pro vlastní atribut najít.  
+ [in] Řetězec obsahující název vlastního atributu k vyhledání.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrátí že S_OK Pokud vlastní atribut je definován na tuto metodu, jinak vrátí S_FALSE.  
+ Vrátí že hodnotu S_OK Pokud vlastního atributu je definována na tuto metodu, v opačném případě vrátí S_FALSE.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugMethodField](../../../extensibility/debugger/reference/idebugmethodfield.md)

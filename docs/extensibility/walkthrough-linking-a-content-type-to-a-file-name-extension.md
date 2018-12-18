@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Propojení typu obsahu s příponu názvu souboru | Microsoft Docs'
+title: 'Návod: Propojení typu obsahu s příponu názvu souboru | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -13,27 +13,28 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: cca12f7c04b51bcf2b695e00d9305a7feb72ebc4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 54570ec03788f88f58f14249f200ed2028686c37
+ms.sourcegitcommit: ef828606e9758c7a42a2f0f777c57b2d39041ac3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39566750"
 ---
-# <a name="walkthrough-linking-a-content-type-to-a-file-name-extension"></a>Návod: Propojení typu obsahu s příponu názvu souboru
-Můžete definovat vlastní typu obsahu a propojení příponu názvu souboru k němu pomocí rozšíření editorů Managed Extensibility Framework (MEF). V některých případech již byl definován příponu názvu souboru službou jazyk. Nicméně pro použití s MEF musíte stále propojit je typ obsahu.  
+# <a name="walkthrough-link-a-content-type-to-a-file-name-extension"></a>Návod: Propojení typ obsahu, který má příponu názvu souboru
+Můžete definovat vlastní typ obsahu a odkaz na něj příponu názvu souboru s použitím rozšíření editoru Managed Extensibility Framework (MEF). V některých případech přípona souboru už definuje služba jazyka. Ale na jeho použití s MEF, je třeba stále propojit ho typu obsahu.  
   
 ## <a name="prerequisites"></a>Požadavky  
- Od sady Visual Studio 2015 se neinstalovat sadu Visual Studio SDK z webu Stažení softwaru. Je zahrnuta jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+ Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK ze služby Stažení softwaru. Je zahrnutý jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## <a name="creating-a-mef-project"></a>Vytvoření projektu MEF  
+## <a name="create-a-mef-project"></a>Vytvořit projekt rozhraní MEF  
   
-1.  Vytvoření projektu C# VSIX. (V **nový projekt** dialogovém okně, vyberte **Visual C# nebo rozšíření**, pak **projektu VSIX**.) Název řešení `ContentTypeTest`.  
+1.  Vytvořte projekt VSIX C#. (V **nový projekt** dialogového okna, vyberte **Visual C# / rozšíření**, pak **projekt VSIX**.) Pojmenujte řešení `ContentTypeTest`.  
   
-2.  V **source.extension.vsixmanifest** souboru, přejděte na **prostředky** kartě a nastavte **typ** do **Microsoft.VisualStudio.MefComponent**, **zdroj** do **na projekt v aktuálním řešení**a **projektu** pole na název projektu.  
+2.  V **source.extension.vsixmanifest** souboru, přejděte na **prostředky** kartu a nastavit **typ** pole **Microsoft.VisualStudio.MefComponent**, **zdroj** pole **projekt v aktuálním řešení**a **projektu** pole pro název projektu.  
   
-## <a name="defining-the-content-type"></a>Definování typu obsahu  
+## <a name="define-the-content-type"></a>Typ obsahu definovat  
   
-1.  Přidejte soubor třídy a pojmenujte ji `FileAndContentTypes`.  
+1.  Přidejte soubor třídy a pojmenujte ho `FileAndContentTypes`.  
   
 2.  Přidejte odkazy na následující sestavení:  
   
@@ -59,7 +60,7 @@ Můžete definovat vlastní typu obsahu a propojení příponu názvu souboru k 
     {. . .}  
     ```  
   
-5.  V této třídě exportovat <xref:Microsoft.VisualStudio.Utilities.ContentTypeDefinition> s názvem "hid" a jeho základní definice jako "text" deklarovat.  
+5.  V této třídě exportovat <xref:Microsoft.VisualStudio.Utilities.ContentTypeDefinition> s názvem "hid" a deklarovat jeho základní definici, aby se "text".  
   
     ```csharp  
     internal static class FileAndContentTypeDefinitions  
@@ -71,9 +72,9 @@ Můžete definovat vlastní typu obsahu a propojení příponu názvu souboru k 
     }  
     ```  
   
-## <a name="linking-a-file-name-extension-to-a-content-type"></a>Propojování příponu názvu souboru na typ obsahu  
+## <a name="link-a-file-name-extension-to-a-content-type"></a>Odkaz na typ obsahu příponu názvu souboru  
   
--   Tento typ obsahu mapovat příponu názvu souboru, exportovat <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition> s příponou "HID" a typu obsahu "hid".  
+-   Pokud chcete namapovat příponu názvu souboru tohoto typu obsahu, exportovat <xref:Microsoft.VisualStudio.Utilities.FileExtensionToContentTypeDefinition> , který má příponu *HID* a typu obsahu "hid".  
   
     ```csharp  
     internal static class FileAndContentTypeDefinitions  
@@ -90,18 +91,18 @@ Můžete definovat vlastní typu obsahu a propojení příponu názvu souboru k 
     }  
     ```  
   
-## <a name="adding-the-content-type-to-an-editor-export"></a>Přidání typu obsahu pro Export editoru  
+## <a name="add-the-content-type-to-an-editor-export"></a>Přidat typ obsahu k editoru export  
   
-1.  Vytváření rozšíření editoru. Například můžete použít rozšíření glyfy okraj popsané v [návod: vytváření glyf okraj](../extensibility/walkthrough-creating-a-margin-glyph.md).  
+1.  Vytvoření rozšíření editoru. Například můžete použít rozšíření piktogram okraj, je popsáno v [návod: vytvoření okrajového piktogramu](../extensibility/walkthrough-creating-a-margin-glyph.md).  
   
-2.  Přidáte třídy, na kterou jste definovali v tomto postupu.  
+2.  Přidání třídy, které jste definovali v tomto postupu.  
   
-3.  Pokud exportujete rozšíření třídy, přidejte <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> typu "hid" k němu.  
+3.  Při exportu rozšíření třídy, přidejte <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute> typu "hid" k němu.  
   
     ```csharp  
     [Export]  
     [ContentType("hid")]  
     ```  
   
-## <a name="see-also"></a>Viz také  
- [Rozšiřovací body služeb jazyka a editoru](../extensibility/language-service-and-editor-extension-points.md)
+## <a name="see-also"></a>Viz také:  
+ [Jazykové služby a editor Rozšiřovací body](../extensibility/language-service-and-editor-extension-points.md)

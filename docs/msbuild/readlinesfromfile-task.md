@@ -1,5 +1,5 @@
 ---
-title: Readlinesfromfile – úloha | Microsoft Docs
+title: Readlinesfromfile – úloha | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -20,28 +20,29 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f05bb6e3f12dde2fbfd17120b9e2d646cb6e9f59
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9b545efb397e2dcd5052605db1d14e113ea9fc76
+ms.sourcegitcommit: 0e5289414d90a314ca0d560c0c3fe9c88cb2217c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39152045"
 ---
 # <a name="readlinesfromfile-task"></a>ReadLinesFromFile – úloha
-Čte seznam položek z textového souboru.  
+Načte seznam položek z textového souboru.  
   
 ## <a name="parameters"></a>Parametry  
  Následující tabulka popisuje parametry `ReadLinesFromFile` úloh.  
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|`File`|Požadované <xref:Microsoft.Build.Framework.ITaskItem> parametr.<br /><br /> Určuje soubor ke čtení. Soubor musí obsahovat jednu položku na každý řádek.|  
+|`File`|Vyžaduje <xref:Microsoft.Build.Framework.ITaskItem> parametru.<br /><br /> Určuje soubor, který se má načíst. Soubor musí mít jednu položku na každý řádek.|  
 |`Lines`|Volitelné <xref:Microsoft.Build.Framework.ITaskItem> `[]` výstupní parametr.<br /><br /> Obsahuje řádky čtení ze souboru.|  
   
 ## <a name="remarks"></a>Poznámky  
- Kromě výše uvedených parametrů tato úloha dědí parametry z <xref:Microsoft.Build.Tasks.TaskExtension> třída, které dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrech a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).  
+ Kromě výše uvedených parametrů zdědí tento úkol parametry ze <xref:Microsoft.Build.Tasks.TaskExtension> třída, která sama dědí z <xref:Microsoft.Build.Utilities.Task> třídy. Seznam těchto dalších parametrů a jejich popisy najdete v tématu [taskextension – základní třída](../msbuild/taskextension-base-class.md).  
   
 ## <a name="example"></a>Příklad  
- Následující příklad používá `ReadLinesFromFile` úlohy k vytvoření položky ze seznamu do textového souboru. Položky čtení ze souboru jsou uložené v `ItemsFromFile` kolekce položek.  
+ V následujícím příkladu `ReadLinesFromFile` úkolu k vytvoření položky ze seznamu do textového souboru. Čtení ze souboru položky jsou uloženy v `ItemsFromFile` kolekci položek.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
@@ -62,7 +63,7 @@ ms.lasthandoff: 04/19/2018
 </Project>  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)   
  [Koncepty nástroje MSBuild](../msbuild/msbuild-concepts.md)   
  [Úlohy](../msbuild/msbuild-tasks.md)

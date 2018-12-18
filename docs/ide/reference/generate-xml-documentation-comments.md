@@ -1,57 +1,58 @@
 ---
-title: Vložit dokumentační komentáře XML v sadě Visual Studio | Microsoft Docs
-ms.custom: ''
+title: Vložit komentáře dokumentace XML
 ms.date: 01/26/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: reference
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0fae2411a77f405404e34c7a2357554c1e5398ab
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 04ee7c992fc67e0025bd2481d392a38806d51ed9
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53063471"
 ---
-# <a name="how-to-insert-xml-comments-for-documentation-generation"></a>Postupy: vložení komentáře XML pro dokumentaci generování
+# <a name="how-to-insert-xml-comments-for-documentation-generation"></a>Postupy: vložení komentáře XML pro generování dokumentace
 
-Visual Studio může pomoct dokumentu elementy kódu, jako jsou třídy a metody, pomocí automatického generování standardní struktura komentáře dokumentace XML. Při kompilaci můžete generovat soubor XML, který obsahuje dokumentační komentáře. Soubor XML generované kompilátorem lze distribuovat souběžně s vaší sestavení .NET, tak, aby Visual Studio a dalších integrovaného vývojového prostředí pomocí technologie IntelliSense můžete zobrazit rychlé informace o typy a členy. Kromě toho lze spustit soubor XML prostřednictvím nástrojů, například [DocFX](https://dotnet.github.io/docfx/) a [aplikaci Sandcastle](https://www.microsoft.com/download/details.aspx?id=10526) ke generování weby referenční dokumentace rozhraní API.
+Visual Studio vám může pomoct dokumentovat prvků kódu, jako jsou třídy a metody, pomocí automatického generování standardní struktura komentáře dokumentace XML. V době kompilace můžete vygenerovat soubor XML, který obsahuje komentáře k dokumentaci. XML souboru generovaného kompilátorem můžete distribuovat spolu s sestavení .NET, aby Visual Studio a jiná Integrovaná vývojová prostředí pomocí technologie IntelliSense můžete zobrazit rychlé informace o typech a členech. Kromě toho lze spustit soubor XML prostřednictvím nástrojů jako [DocFX](https://dotnet.github.io/docfx/) a [Sandcastle](https://www.microsoft.com/download/details.aspx?id=10526) ke generování websites referenční dokumentace rozhraní API.
 
 > [!NOTE]
-> **Vložit komentář** příkaz, který automaticky vloží dokumentační komentáře XML je k dispozici v [C#](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments) a [jazyka Visual Basic](/dotnet/visual-basic/programming-guide/program-structure/how-to-create-xml-documentation). Však můžete ručně vložit [dokumentační komentáře XML v jazyce C++](/cpp/ide/xml-documentation-visual-cpp) soubory a stále generování souborů dokumentace XML v době kompilace.
+> **Vložit komentář** příkaz, který automaticky vloží dokumentační komentáře XML je k dispozici v [ C# ](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments) a [jazyka Visual Basic](/dotnet/visual-basic/programming-guide/program-structure/how-to-create-xml-documentation). Však můžete ručně vložit [dokumentační komentáře XML v jazyce C++](/cpp/ide/xml-documentation-visual-cpp) soubory a stále Generovat soubory dokumentace XML v době kompilace.
 
-## <a name="to-insert-xml-comments-for-a-code-element"></a>Chcete-li vložit komentáře XML pro element kódu
+## <a name="to-insert-xml-comments-for-a-code-element"></a>Chcete-li vložit komentáře XML pro prvek kódu
 
-1. Umístěte kurzor text nad elementem chcete dokumentů, například metodu.
+1. Umístěte kurzor nad element, který má k dokumentu, například metoda text.
 
 1. Proveďte jednu z těchto akcí:
 
-   - Typ `///` v jazyce C# nebo `'''` v jazyce Visual Basic
+   - Typ `///` v C#, nebo `'''` v jazyce Visual Basic
 
    - Z **upravit** nabídce zvolte **IntelliSense** > **Vložit komentář**
 
-   - Z klikněte pravým tlačítkem nebo kontextové nabídky na nebo nad tento element kódu, zvolte **fragment kódu** > **Vložit komentář**
+   - Z klikněte pravým tlačítkem nebo místní nabídky nebo přímo nad prvek kódu, zvolte **fragment** > **Vložit komentář**
 
-   Šablona XML je vytvořena okamžitě výše element kódu. Například při psaní komentářů metodu, vygeneruje **\<souhrnné\>** elementu **\<param\>** element pro každý parametr a **\<vrátí\>** element dokumentu návratovou hodnotu.
+   XML šablony okamžitě generováno nad prvek kódu. Například když při psaní komentářů metodu, vygeneruje **\<souhrnu\>** elementu, **\<param\>** – element pro každý parametr a **\<vrátí\>** element dokumentu návratovou hodnotu.
 
-   ![Šablona komentáře XML - C#](media/doc-preview-cs.png)
+   ![Šablona komentáře XML –C#](media/doc-preview-cs.png)
 
-   ![Šablona komentáře XML - jazyka Visual Basic](media/doc-preview-vb.png)
+   ![Šablona komentáře XML – Visual Basic](media/doc-preview-vb.png)
 
-1. Zadejte popis pro každý plně dokumentovat code element – element XML.
+1. Zadejte popis jednotlivých prvků XML do plně dokumentu na prvek kódu.
 
    ![Dokončené komentář](media/doc-result-cs.png)
 
 > [!NOTE]
-> Došlo [možnost](../../ide/reference/options-text-editor-csharp-advanced.md) pro dokumentační komentáře XML přepnutí po zadání `///` v jazyce C# nebo `'''` jazyka Visual Basic. V řádku nabídek zvolte **nástroje** > **možnosti** otevřete **možnosti** dialogové okno. Potom přejděte na **textového editoru** > **C#** nebo **základní** > **Upřesnit**. V **nápovědy k editoru** část, vyhledejte **dokumentační komentáře XML vygenerovat** možnost.
+> Je [možnost](../../ide/reference/options-text-editor-csharp-advanced.md) pro dokumentační komentáře XML přepnout po zadání `///` v C# nebo `'''` jazyka Visual Basic. Na panelu nabídek zvolte **nástroje** > **možnosti** otevřít **možnosti** dialogové okno. Pak přejděte do **textový Editor**  >  **C#** nebo **základní** > **Upřesnit**. V **Nápověda k editoru** části, vyhledejte **generovat komentáře dokumentace XML** možnost.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-[Dokumentační komentáře XML (C# Průvodce programováním)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)  
-[Dokumentace kódu s XML – komentáře (Průvodce C#)](/dotnet/csharp/codedoc)  
-[Postupy: vytvoření dokumentace XML (Visual Basic)](/dotnet/visual-basic/programming-guide/program-structure/how-to-create-xml-documentation)  
-[Komentáře v jazyce C++](/cpp/cpp/comments-cpp)  
-[Dokumentace XML (C++)](/cpp/ide/xml-documentation-visual-cpp)  
-[Generování kódu](../code-generation-in-visual-studio.md)
+- [XML – dokumentační komentáře (C# Programming Guide)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)
+- [Dokumentace kódu s komentáři XML (C# průvodce)](/dotnet/csharp/codedoc)
+- [Postupy: vytvoření dokumentace XML (Visual Basic)](/dotnet/visual-basic/programming-guide/program-structure/how-to-create-xml-documentation)
+- [Komentáře v jazyce C++](/cpp/cpp/comments-cpp)
+- [XML dokumentace (C++)](/cpp/ide/xml-documentation-visual-cpp)
+- [Generování kódu](../code-generation-in-visual-studio.md)

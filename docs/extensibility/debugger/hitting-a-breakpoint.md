@@ -1,5 +1,5 @@
 ---
-title: Stiskne zarážku | Microsoft Docs
+title: Dosažení zarážky | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,20 +14,21 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9f4788f8a038a274d6d94b4edf368e30ef495665
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8a9b110abdaf0ebfaed720dd5d09c0e215a6b2e7
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39231552"
 ---
-# <a name="hitting-a-breakpoint"></a>Stiskne zarážky
-Následující část popisuje proces při ladění modulu (DE) dotkne zarážku při spuštění nebo krokování:  
+# <a name="hit-a-breakpoint"></a>Na zarážku
+Následující část popisuje proces, při ladicího stroje (DE) narazí na zarážku při spuštění nebo při krokování:  
   
-## <a name="troubleshooting-a-hit-breakpoint"></a>Řešení potíží s přístupů zarážek  
+## <a name="troubleshoot-a-hit-breakpoint"></a>Řešení potíží s průchodů zarážky  
   
 1.  Odešle DE [IDebugBreakpointEvent2](../../extensibility/debugger/reference/idebugbreakpointevent2.md) rozhraní jako **EVENT_SYNC_STOP**.  
   
-2.  Volá správce ladicí relace (SDM) [IDebugBreakpointEvent2:::EnumBreakpoints](../../extensibility/debugger/reference/idebugbreakpointevent2-enumbreakpoints.md) získat zarážek, který byl vybrán.  
+2.  Správce ladění relace (SDM) volá [IDebugBreakpointEvent2:::EnumBreakpoints](../../extensibility/debugger/reference/idebugbreakpointevent2-enumbreakpoints.md) zobrazíte, které bylo dosaženo zarážky.  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Volání událostí ladicího programu](../../extensibility/debugger/calling-debugger-events.md)

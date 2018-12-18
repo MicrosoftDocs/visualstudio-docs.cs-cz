@@ -1,5 +1,5 @@
 ---
-title: PENDING_BP_STATE | Microsoft Docs
+title: PENDING_BP_STATE | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ae632ab67a21d795a0594d37301c162c1c4ba753
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 30e70c956afc6aef5025d35425fbc2ee42605b90
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49921056"
 ---
 # <a name="pendingbpstate"></a>PENDING_BP_STATE
-Určuje stav Čeká na zarážek (zarážek, který nebyl ještě vázaný).  
+Určuje stav čekající zarážkou (zarážky, který nebyl dosud vázán).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,19 +48,19 @@ public enum enum_PENDING_BP_STATE {
   
 ## <a name="members"></a>Členové  
  PBPS_NONE  
- Zástupný symbol pro nula. Tato hodnota se nikdy vrátí.  
+ Zástupný symbol nula. Tato hodnota se nikdy vrátí.  
   
  PBPS_DELETED  
- Označuje odstraněný čekající zarážek.  
+ Označuje, že čekající zarážka byla smazána.  
   
  PBPS_DISABLED  
- Označuje, že čekající zarážek zakázána.  
+ Určuje, že je zakázána čekající zarážka.  
   
  PBPS_ENABLED  
- Označuje, zda je povoleno čekající zarážek.  
+ Označuje, zda je povoleno čekající zarážka.  
   
 ## <a name="remarks"></a>Poznámky  
- Použít jako `state` členem [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) struktury.  
+ Použít jako `state` člena [PENDING_BP_STATE_INFO](../../../extensibility/debugger/reference/pending-bp-state-info.md) struktury.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  

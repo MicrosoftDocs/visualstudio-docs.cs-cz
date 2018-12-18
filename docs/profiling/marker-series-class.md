@@ -14,18 +14,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dc78c49aae49704e2dd56abfee7b0e43b285845d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e638d9316b46a8600fe2e88ca5e4a6611fa1ec4d
+ms.sourcegitcommit: ce154aee5b403d5c1c41da42302b896ad3cf8d82
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843832"
 ---
 # <a name="markerseries-class"></a>marker_series – třída
 Představuje sériové kanál událostí generovaných jednoho zprostředkovatele.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```cpp  
 class marker_series;  
 ```  
   
@@ -36,7 +37,7 @@ class marker_series;
 |Název|Popis|  
 |----------|-----------------|  
 |[marker_series::marker_series – konstruktor](../profiling/marker-series-marker-series-constructor.md)|Inicializuje novou instanci třídy `marker_series` třídy.|  
-|[marker_series::~marker_series – destruktor](../profiling/marker-series-tilde-marker-series-destructor.md)|Odstraní objekt marker_series a uvolní všechny přidělené prostředky.|  
+|[marker_series:: ~ marker_series – destruktor](../profiling/marker-series-tilde-marker-series-destructor.md)|Odstraní objekt marker_series a uvolní všechny přidělené prostředky.|  
   
 ### <a name="public-methods"></a>Veřejné metody  
   
@@ -51,9 +52,9 @@ class marker_series;
  `marker_series`  
   
 ## <a name="requirements"></a>Požadavky  
- **Záhlaví:** cvmarkersobj.h  
+ **Záhlaví:** *cvmarkersobj.h*  
   
  **Namespace:** Concurrency::Diagnostic –  
   
-## <a name="see-also"></a>Viz také  
- [diagnostic – obor názvů](../profiling/diagnostic-namespace.md)
+## <a name="see-also"></a>Viz také:  
+ [Diagnostic – obor názvů](../profiling/diagnostic-namespace.md)

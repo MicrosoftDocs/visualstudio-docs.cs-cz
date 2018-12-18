@@ -1,5 +1,5 @@
 ---
-title: Legenda k analýze zátěžových testů v sadě Visual Studio pomocí v grafech zobrazení | Microsoft Docs
+title: Použití legendy zobrazení grafů k analýze zátěžových testů
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,33 +9,37 @@ ms.assetid: 0f6ba8e4-1343-419c-8a9f-240cf50efed7
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: a6c14375d46c4317b86b9da67526230369cfbcb6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3e379cd3f05063424a7db9905611fa86467bee2d
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53067191"
 ---
-# <a name="using-the-graphs-view-legend-to-analyze-load-tests"></a>Použití legendy zobrazení grafů k analýze zátěžových testů
+# <a name="use-the-graphs-view-legend-to-analyze-load-tests"></a>Použití legendy zobrazení grafů k analýze zátěžových testů
 
 Zobrazení grafů Analyzéru zátěžového testu obsahuje panel legendy, jenž zobrazuje informace pro každý čítač výkonu, který je přidružen k aktuálně vybranému grafu.
 
-![Legenda zobrazení grafů](../test/media/load_viewlegend.png "Load_ViewLegend")
+![Legenda zobrazení grafů](../test/media/load_viewlegend.png)
+
+[!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 
 Legenda obsahuje následující informace:
 
--   **Zobrazit v grafu:** pomocí zaškrtávacích políček k určení zda řádek pro konkrétní čítač, jako například **zatížení uživatele** nebo **chyby/s**, se vykreslí v grafu. Vyberte zaškrtávací políčko, pokud chcete na řádku bude zobrazena v grafu. Zrušte zaškrtnutí políčka k odebrání řádku vykreslení grafu. I po odstranění čáry grafu zůstane statistika čítače nadále zobrazena v legendě.
+-   **Zobrazit v grafu:** pomocí zaškrtávacích políček k určení, zda řádek pro konkrétní čítač, jako například **uživatelské zatížení** nebo **chyby/s**, vykreslit v grafu. Vyberte zaškrtávací políčko, pokud chcete řádek vykreslit v grafu. Zrušte zaškrtnutí políčka pro odebrání řádku vykreslení grafu. I po odstranění čáry grafu zůstane statistika čítače nadále zobrazena v legendě.
 
--   **Rozsah:** v tomto sloupci se zobrazuje rozsah osy y čítač výkonu. Ve výchozím nastavení tato hodnota automaticky upraví jako řadu ukázková data změny. Automaticky upravený rozsah bude vždy o další mocninu desíti větší než maximální hodnota, včetně záporných mocnin desíti. Graf může obsahovat mnoho různých čítačů, z nichž každý má jiný rozsah. Osa y tedy není popsána žádným konkrétním rozsahem. Namísto toho je popsána hodnotami 0 až 100 představujícími procento celkového rozsahu každého čítače. Například pro čítač s rozsahem 1000 by datový bod 60 na ose y odpovídal hodnotě čítače 600.
+-   **Rozsah:** tento sloupec zobrazuje rozsah čítače výkonu osy y. Ve výchozím nastavení tato hodnota automaticky upraví jako rozsah změny ukázková data. Automaticky upravený rozsah bude vždy o další mocninu desíti větší než maximální hodnota, včetně záporných mocnin desíti. Graf může obsahovat mnoho různých čítačů, z nichž každý má jiný rozsah. Osa y tedy není popsána žádným konkrétním rozsahem. Namísto toho je popsána hodnotami 0 až 100 představujícími procento celkového rozsahu každého čítače. Například pro čítač s rozsahem 1000 by datový bod 60 na ose y odpovídal hodnotě čítače 600.
 
     > [!NOTE]
-    > Úpravy hodnot automatického rozsahu můžete vypnout blokováním rozsahu na určitou hodnotu. Je-li rozsah uzamčen, jsou všechny hodnoty přesahující tento rozsah zobrazeny jako maximální hodnota zadaná v horní části grafu. Použití **vykreslení možnosti** dialogové okno se uzamknout rozsahu na určitou hodnotu. Další informace najdete v tématu [postup: Zadejte možnosti pro vytváření grafů čítače vykreslení](../test/how-to-specify-plot-options-for-graphing-counters.md).
+    > Úpravy hodnot automatického rozsahu můžete vypnout podle rozsahu na určitou hodnotu. Je-li rozsah uzamčen, jsou všechny hodnoty přesahující tento rozsah zobrazeny jako maximální hodnota zadaná v horní části grafu. Použití **možnosti grafu** dialogové okno k uzamčení rozsah na konkrétní hodnotu.
 
--   **Čítač:** čtyři sloupce s názvem **čítač**, **Instance**, **kategorie**, a **počítače** společně jednoznačně Identifikujte čítače výkonu.
+-   **Čítač:** čtyři sloupce pojmenované **čítač**, **Instance**, **kategorie**, a **počítače** dohromady jedinečně identifikují čítač výkonu.
 
--   **Barva:** **barva** sloupci se zobrazuje barvy a řádku styl čáry možná vykreslená pro čítač výkonu. Použití **vykreslení možnosti** dialogové okno změnit barvu nebo řádku styl čítače výkonu v grafu. **Vykreslení možnosti** dialogové okno je k dispozici z místní nabídky legendě. Další informace najdete v tématu [postup: Zadejte možnosti pro vytváření grafů čítače vykreslení](../test/how-to-specify-plot-options-for-graphing-counters.md).
+-   **Barva:** **barva** sloupci se zobrazuje barvu a styl čáry možná vykreslená čáry pro čítač výkonu. Použití **možnosti grafu** dialogové okno změnit barvu nebo řádek styl čítače výkonu v grafu. **Možnosti grafu** dialogové okno je k dispozici z místní nabídky legendy.
 
--   **Statistiky:** **Min**, **maximální**, **průměr** a **poslední** sloupcích se zobrazují odpovídající statistické údaje o výkonu Čítač. Tyto hodnoty odpovídají data, která se zobrazí na viditelné oblasti grafu. Pokud například přiblížíte zobrazení na nějakou oblast běhu, statistika legendy bude odpovídat hodnotám platným pouze pro přiblíženou oblast. "Posledního" sloupce je hodnota čítače výkonu v nedávno provedených intervalu vzorkování.
+-   **Statistika:** **Min**, **maximální**, **Avg** a **poslední** sloupce zobrazují příslušné statistiky výkonu Čítač. Tyto hodnoty odpovídají data, která se zobrazí na viditelné oblasti grafu. Pokud například přiblížíte zobrazení na nějakou oblast běhu, statistika legendy bude odpovídat hodnotám platným pouze pro přiblíženou oblast. "Posledního" sloupce je hodnota čítače výkonu v nedávno provedených intervalu vzorkování.
 
     > [!NOTE]
     > Sloupec Poslední se zobrazí v legendě Analyzéru zátěžového testu pouze za běhu zátěžového testu.
@@ -44,19 +48,18 @@ Legenda obsahuje následující informace:
 
 Výběr položky v legendě provede následující:
 
--   Umožňuje položka, která má být odebráni ze legendu a grafu. Buď klikněte pravým tlačítkem položku a vyberte **odstranit**, nebo stiskněte klávesu **odstranit** klíč.
+-   Umožňuje položky k odebrání z legendy a graf. Buď klikněte pravým tlačítkem na položku a vyberte **odstranit**, nebo stisknutím klávesy **odstranit** klíč.
 
--   Označuje možná vykreslená řádku v grafu.
+-   Zvýrazní možná vykreslená řádek v grafu.
 
--   Způsobí, že mřížky data k zobrazení dat pro vybranou položku.
+-   Způsobí, že datovou mřížku zobrazení dat pro vybranou položku.
 
--   Umožňuje přístup **vykreslení možnosti** dialogové okno pro čítač.
+-   Umožňuje přístup **možnosti grafu** dialogové okno pro čítač.
 
 > [!TIP]
-> Můžete použít **rozevírací seznam možnosti grafu** tlačítka na panelu nástrojů a vyberte Analyzéru zátěžového testu **zobrazit legendu** zobrazit nebo skrýt **legendy** panel, který je spojen s zobrazení grafu.
+> Můžete použít **rozevíracího seznamu Možnosti grafu** tlačítko **Analyzéru zátěžového testu** nástrojů a vyberte **zobrazit legendu** zobrazení nebo skrytí **legendy** panel, který je přidružený k zobrazení grafu.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Postupy: určení možností grafu pro čítače grafů](../test/how-to-specify-plot-options-for-graphing-counters.md)
 - [Postupy: přiblížení oblasti grafu](../test/how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results.md)
 - [Analýza výsledků zátěžových testů v zobrazení grafů](../test/analyze-load-test-results-in-the-graphs-view.md)

@@ -1,11 +1,11 @@
 ---
-title: IPerPropertyBrowsing2::GetPredefinedStrings | Microsoft Docs
-ms.custom: 
+title: IPerPropertyBrowsing2::GetPredefinedStrings | Dokumentace Microsoftu
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-script-interfaces
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - IPerPropertyBrowsing2.GetPredefinedStrings
@@ -14,18 +14,19 @@ apilocation:
 helpviewer_keywords:
 - IPerPropertyBrowsing2::GetPredefinedStrings
 ms.assetid: d2fa30f7-a566-4dbd-8b47-ffdc00419771
-caps.latest.revision: 
+caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e07d52eca9434acc7e54f3b35b111cf12af0a871
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: a60225e69a04399a3ff0160291b84e9f3fda513c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49915958"
 ---
 # <a name="iperpropertybrowsing2getpredefinedstrings"></a>IPerPropertyBrowsing2::GetPredefinedStrings
-Umožňuje volajícímu vyplníte pole se seznamem spočítané pole ukazatele řetězce, které představují potenciální hodnoty této vlastnosti.  
+Umožňuje volajícímu naplnit pole se seznamem spočítaný počet pole ukazatelů na řetězec, které představují potenciální hodnoty této vlastnosti.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,16 +40,16 @@ HRESULT GetPredefinedStrings(
   
 #### <a name="parameters"></a>Parametry  
  `dispid`  
- [v] Odesílání identifikátor vlastnosti, pro kterou je volající požadování seznamu řetězec.  
+ [in] Identifikátor odeslání vlastnost, pro kterou volající požaduje seznam řetězců.  
   
  `pCaStrings`  
- [out] Ukazatel na strukturu přidělené volajícího, spočítané pole, který obsahuje element počet a adresu přidělené metoda řadu řetězec ukazatele. Pokud metoda nezdaří, je přidělená není dostatek paměti a obsah struktury není definován.  
+ [out] Ukazatel na strukturu pole přidělené volajícímu, spočítaný počet, který obsahuje počet prvků a adresa přidělena metoda pole ukazatelů na řetězec. Jestliže metoda selže, žádná paměť je přidělena a obsah struktury nejsou definovány.  
   
  `pCaCookies`  
- [out] Ukazatel na strukturu přidělené volajícího, spočítané pole, která obsahuje element počet a adresu metoda přidělené pole typu DWORD. Pokud metoda nezdaří, je přidělená není dostatek paměti a obsah struktury není definován.  
+ [out] Ukazatel na strukturu pole přidělené volajícímu, spočítaný počet, který obsahuje počet prvků a adresa přidělena metoda pole typu DWORD. Jestliže metoda selže, žádná paměť je přidělena a obsah struktury nejsou definovány.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Vrací platnou `HRESULT`, obvykle `S_OK`.  
+ Bude vracet platnou `HRESULT`, obvykle `S_OK`.  
   
 ## <a name="see-also"></a>Viz také  
- [Iperpropertybrowsing2 – rozhraní 1](../../winscript/reference/iperpropertybrowsing2-interface-1.md)
+ [IPerPropertyBrowsing2 – rozhraní 1](../../winscript/reference/iperpropertybrowsing2-interface-1.md)

@@ -1,5 +1,5 @@
 ---
-title: Idiasession::symbolbyid – | Microsoft Docs
+title: Idiasession::symbolbyid – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 55e5e2815985aacd43603d24f1c6f4052b66c19c
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 8ca800c4409c9c3c1b72b625aa8cedac31e5b194
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49911628"
 ---
 # <a name="idiasessionsymbolbyid"></a>IDiaSession::symbolById
-Získá symbol svůj jedinečný identifikátor.  
+Načte symbol podle jejího jedinečného identifikátoru.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,21 +35,21 @@ HRESULT symbolById (
   
 #### <a name="parameters"></a>Parametry  
  `id`  
- [v] Jedinečný identifikátor.  
+ [in] Jedinečný identifikátor.  
   
  `ppSymbol`  
- [out] Vrátí [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) načíst objekt, který reprezentuje symbolu.  
+ [out] Vrátí [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) načíst objekt představující symbol.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Zadaný identifikátor je jedinečný hodnota interně používané DIA SDK, aby všechny symboly jedinečný.  
+ Zadaný identifikátor je jedinečná hodnota používaná interně pomocí sady DIA SDK jedinečných aby všechny symboly.  
   
- Tuto metodu lze použít například k načtení symbol představující typ symbolu jiné (podívejte se na příklad).  
+ Tuto metodu lze použít například k načtení symbol představující typ jiného symbolu (podívejte se na příklad).  
   
 ## <a name="example"></a>Příklad  
- Tento příklad načte [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) představující typ symbolu jiné. Tento příklad ukazuje způsob použití `symbolById` metoda v relaci. Jednodušší je volání [idiasymbol::get_type –](../../debugger/debug-interface-access/idiasymbol-get-type.md) metoda pro načtení symbol typu přímo.  
+ Tento příklad načte [idiasymbol –](../../debugger/debug-interface-access/idiasymbol.md) představující typ jiného symbolu. Tento příklad ukazuje způsob použití `symbolById` metoda v relaci. Je jednodušší přístup k volání [idiasymbol::get_type –](../../debugger/debug-interface-access/idiasymbol-get-type.md) metody k získání typu symbol přímo.  
   
 ```C++  
 IDiaSymbol *GetSymbolType(IDiaSymbol *pSymbol, IDiaSession *pSession)  

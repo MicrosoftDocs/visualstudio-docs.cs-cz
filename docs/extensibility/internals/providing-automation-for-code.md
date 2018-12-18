@@ -18,6 +18,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31130663"
 ---
 # <a name="providing-automation-for-code"></a>Poskytnutí automatizace pro kód
 Vytvoření modelu automatizace kódu se nevyžaduje. Sada SDK prostředí neposkytuje ukázku jak to udělat. Přehled o kód – modely, najdete v článku <xref:EnvDTE.CodeModel> objektu.  

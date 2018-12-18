@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Přidání ovládacích prvků obsahu do dokumentů aplikace Word | Microsoft Docs'
+title: 'Postupy: Přidání obsahu ovládacích prvků do dokumentů aplikace Word'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -29,163 +29,164 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6edddf79bea7c3d4cd3cd5ef762dd9757509c754
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f654efacace3e4b7cbdfff8919309a09d4a544ff
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49936963"
 ---
-# <a name="how-to-add-content-controls-to-word-documents"></a>Postupy: Přidání ovládacích prvků obsahu do dokumentů aplikace Word
-  V aplikaci Word projekty na úrovni dokumentu můžete přidat ovládací prvky obsahu v dokumentu ve vašem projektu, v době návrhu nebo za běhu. V projektu doplňku VSTO pro Word můžete přidat ovládací prvky obsahu pro všechny otevřené dokumenty v době běhu.  
+# <a name="how-to-add-content-controls-to-word-documents"></a>Postupy: Přidání obsahu ovládacích prvků do dokumentů aplikace Word
+  V projektech aplikace Word úrovni dokumentu můžete přidat ovládací prvky obsahu v dokumentu v projektu, v době návrhu nebo za běhu. V projekty doplňku VSTO pro Word můžete přidat ovládací prvky obsahu do libovolného otevřeného dokumentu za běhu.  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
- Toto téma popisuje následující úlohy:  
+ Toto téma popisuje následující úkoly:  
   
--   [Přidání ovládacích prvků obsahu v době návrhu](#designtime)  
+- [Přidání ovládacích prvků obsahu v době návrhu](#designtime)  
   
--   [Přidání ovládacích prvků obsahu za běhu v projektech na úrovni dokumentu](#runtimedoclevel)  
+- [Přidání ovládacích prvků obsahu za běhu v projektu úrovni dokumentu](#runtimedoclevel)  
   
--   [Přidání ovládacích prvků obsahu za běhu v projektu doplňku VSTO](#runtimeaddin)  
+- [Přidání ovládacích prvků obsahu za běhu v projektu doplňku VSTO](#runtimeaddin)  
   
- Informace o ovládacích prvcích obsahu najdete v tématu [ovládací prvky obsahu](../vsto/content-controls.md).  
+  Informace o ovládacích prvcích obsahu najdete v tématu [ovládací prvky obsahu](../vsto/content-controls.md).  
   
-##  <a name="designtime"></a> Přidání ovládacích prvků obsahu v době návrhu  
- Přidání ovládacích prvků obsahu v dokumentu v projektech na úrovni dokumentu v době návrhu několika způsoby:  
+##  <a name="designtime"></a> Přidat obsah ovládací prvky v době návrhu  
+ Existuje několik způsobů, jak přidat ovládací prvky obsahu v dokumentu v projektu úrovni dokumentu v době návrhu:  
   
--   Přidání obsahu ovládacího prvku z **ovládací prvky aplikace Word** kartě **sada nástrojů**.  
+- Přidejte ovládací prvek obsahu z **ovládací prvky aplikace Word** karty **nástrojů**.  
   
--   Přidání obsahu ovládacího prvku do dokumentu stejným způsobem by přidání nativní obsahu ovládacího prvku v aplikaci Word.  
+- Přidání ovládacího prvku obsahu do dokumentu stejným způsobem by přidat nativní ovládací prvek obsahu v aplikaci Word.  
   
--   Přetáhněte ovládací prvek obsahu do dokumentu z **zdroje dat** okno. To je užitečné, pokud chcete vytvořit vazbu ovládacího prvku na data, při vytvoření ovládacího prvku. Další informace najdete v tématu [postupy: naplnění dokumentů daty z objektů](../vsto/how-to-populate-documents-with-data-from-objects.md) a [postupy: naplnění dokumentů daty z databáze](../vsto/how-to-populate-documents-with-data-from-a-database.md).  
+- Přetáhněte ovládací prvek obsahu do dokumentu z **zdroje dat** okna. To je užitečné, pokud chcete ovládací prvek svázat data při vytvoření ovládacího prvku. Další informace najdete v tématu [postupy: naplnění dokumentů daty z objektů](../vsto/how-to-populate-documents-with-data-from-objects.md) a [postupy: naplnění dokumentů daty z databáze](../vsto/how-to-populate-documents-with-data-from-a-database.md).  
   
- [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
+  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-#### <a name="to-add-a-content-control-to-a-document-by-using-the-toolbox"></a>Přidání obsahu ovládacího prvku do dokumentu pomocí sady nástrojů  
+### <a name="to-add-a-content-control-to-a-document-by-using-the-toolbox"></a>Chcete-li přidat ovládací prvek obsahu do dokumentu pomocí panelu nástrojů  
   
-1.  V dokumentu, který je hostován v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] designer, umístěte kurzor na místo, kde chcete přidat obsahu ovládací prvek, nebo vyberte text, který má obsah ovládacího prvku nahradit.  
+1.  V dokumentu, který je hostován v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] návrháře, umístěte kurzor na místo, kde chcete přidat ovládací prvek obsahu, nebo vyberte text, který má ovládací prvek obsahu pro nahrazení.  
   
-2.  Otevřete **sada nástrojů** a klikněte na tlačítko **ovládací prvky aplikace Word** kartě.  
+2.  Otevřít **nástrojů** a klikněte na tlačítko **ovládací prvky aplikace Word** kartu.  
   
-3.  Přidání ovládacího prvku, jednu z následujících způsobů:  
+3.  Přidejte ovládací prvek jednoho z následujících způsobů:  
   
-    -   Dvakrát klikněte na ovládací prvek v obsahu **sada nástrojů**.  
-  
-         or  
-  
-    -   Klikněte na ovládací prvek obsahu v **sada nástrojů** a potom stiskněte klávesu ENTER.  
+    -   Poklepejte na ovládací prvek obsahu v **nástrojů**.  
   
          or  
   
-    -   Přetáhněte ovládací prvek obsahu z **sada nástrojů** k dokumentu. Obsahu ovládací prvek přidán na aktuální výběr v dokumentu, není v umístění ukazatele myši.  
+    -   Klikněte na ovládací prvek obsahu v **nástrojů** a potom stiskněte klávesu **Enter** klíč.  
+  
+         or  
+  
+    -   Přetáhněte ovládací prvek obsahu z **nástrojů** v dokumentu. Ovládací prvek obsahu se přidá na aktuální výběr v dokumentu, není v umístění ukazatele myši.  
   
 > [!NOTE]  
->  Nelze přidat <xref:Microsoft.Office.Tools.Word.GroupContentControl> pomocí **sada nástrojů**. Můžete přidat pouze <xref:Microsoft.Office.Tools.Word.GroupContentControl> v aplikaci Word nebo za běhu.  
+>  Nelze přidat <xref:Microsoft.Office.Tools.Word.GroupContentControl> pomocí **nástrojů**. Lze přidat pouze <xref:Microsoft.Office.Tools.Word.GroupContentControl> v aplikaci Word nebo za běhu.  
   
 > [!NOTE]  
->  Visual Studio neposkytuje ovládací prvek zaškrtávací políčko obsahu v panelu nástrojů. Chcete-li přidat obsahu ovládací prvek zaškrtávací políčko k dokumentu, musíte vytvořit <xref:Microsoft.Office.Tools.Word.ContentControl> objektu prostřednictvím kódu programu. Další informace najdete v tématu [ovládací prvky obsahu](../vsto/content-controls.md).  
+>  Visual Studio neposkytuje obsahu ovládacího prvku zaškrtávací políčko v panelu nástrojů. Chcete-li přidat ovládací prvek zaškrtávací políčko obsahu v dokumentu, musíte vytvořit <xref:Microsoft.Office.Tools.Word.ContentControl> objektu prostřednictvím kódu programu. Další informace najdete v tématu [ovládací prvky obsahu](../vsto/content-controls.md).  
   
-#### <a name="to-add-a-content-control-to-a-document-in-word"></a>Přidání obsahu ovládacího prvku na dokument v aplikaci Word  
+#### <a name="to-add-a-content-control-to-a-document-in-word"></a>Chcete-li přidat ovládací prvek obsahu dokumentu ve Wordu  
   
-1.  V dokumentu, který je hostován v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] designer, umístěte kurzor na místo, kde chcete přidat obsahu ovládací prvek, nebo vyberte text, který má obsah ovládacího prvku nahradit.  
+1.  V dokumentu, který je hostován v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] návrháře, umístěte kurzor na místo, kde chcete přidat ovládací prvek obsahu, nebo vyberte text, který má ovládací prvek obsahu pro nahrazení.  
   
-2.  Na pásu karet klikněte na **vývojáře** kartě.  
+2.  Na pásu karet klikněte na tlačítko **Developer** kartu.  
   
     > [!NOTE]  
-    >  Pokud **vývojáře** karta není viditelný, musíte ji nejdříve zobrazit. Další informace najdete v tématu [postupy: zobrazení karty Vývojář na pásu karet](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md).  
+    >  Pokud **Developer** karta není zobrazena, musíte ji nejdříve zobrazit. Další informace najdete v tématu [postupy: zobrazení karty Vývojář na pásu karet](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md).  
   
-3.  V **ovládací prvky** skupiny, klepněte na ikonu pro ovládací prvek obsahu, který chcete přidat.  
+3.  V **ovládací prvky** klikněte na ikonu ovládacího prvku obsahu, který chcete přidat.  
   
-##  <a name="runtimedoclevel"></a> Přidání ovládacích prvků obsahu za běhu v projektech na úrovni dokumentu  
- Přidáním ovládací prvky obsahu prostřednictvím kódu programu do dokumentu za běhu pomocí metody <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> vlastnost `ThisDocument` třídy ve vašem projektu. Každá z metod má tři přetížení, které můžete použít k přidání obsahu ovládacího prvku následujícím způsobem:  
+##  <a name="runtimedoclevel"></a> Přidání ovládacích prvků obsahu za běhu v projektu úrovni dokumentu  
+ Můžete přidat ovládací prvky obsahu prostřednictvím kódu programu do dokumentu za běhu pomocí metod <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> vlastnost `ThisDocument` třídu ve vašem projektu. Každá z metod má tři přetížení, které můžete použít k přidání ovládacího prvku obsahu následujícími způsoby:  
   
--   Přidání ovládacího prvku v aktuálním výběru.  
+- Přidejte ovládací prvek na aktuální výběr.  
   
--   Přidání ovládacího prvku v zadaném rozsahu.  
+- Přidání ovládacího prvku v zadaném rozsahu.  
   
--   Přidání ovládacího prvku, který je založen na nativní obsahu ovládacího prvku v dokumentu.  
+- Přidejte ovládací prvek, který je založen na nativním ovládacím prvku obsahu v dokumentu.  
   
- Dynamicky vytvoří obsahu, které nejsou trvalé ovládací prvky v dokumentu, při zavření dokumentu. Nativní obsahu ovládacího prvku však zůstane v dokumentu. Ovládací prvek obsahu, která je založená na nativní obsahu ovládacího prvku při příštím otevření dokumentu můžete znovu vytvořit. Další informace najdete v tématu [přidání ovládacích prvků do dokumentů Office za běhu](../vsto/adding-controls-to-office-documents-at-run-time.md).  
+  Dynamicky vytvoří obsah, který se jako trvalý ovládací prvky v dokumentu, při zavření dokumentu. Nativní ovládací prvek obsahu, ale zůstává v dokumentu. Můžete znovu vytvořit ovládací prvek obsahu, který je založen na nativním ovládacím prvku obsahu při příštím otevření dokumentu. Další informace najdete v tématu [přidání ovládacích prvků do dokumentů Office za běhu](../vsto/adding-controls-to-office-documents-at-run-time.md).  
   
 > [!NOTE]  
->  Chcete-li přidat obsahu ovládací prvek zaškrtávací políčko k dokumentu ve Wordu 2010 projektu, musíte vytvořit <xref:Microsoft.Office.Tools.Word.ContentControl> objektu. Další informace najdete v tématu [ovládací prvky obsahu](../vsto/content-controls.md).  
+>  Chcete-li přidat ovládací prvek zaškrtávací políčko obsahu dokumentu v projektu aplikace Word 2010, musíte vytvořit <xref:Microsoft.Office.Tools.Word.ContentControl> objektu. Další informace najdete v tématu [ovládací prvky obsahu](../vsto/content-controls.md).  
   
-#### <a name="to-add-a-content-control-at-the-current-selection"></a>Přidání obsahu ovládacího prvku na aktuální výběr  
+### <a name="to-add-a-content-control-at-the-current-selection"></a>Chcete-li přidat ovládací prvek obsahu v aktuálním výběru  
   
-1.  Použití <xref:Microsoft.Office.Tools.Word.ControlCollection> metoda, která má název `Add` \< *třídu ovládacího prvku*> (kde *třídu ovládacího prvku* je název třídy obsahu ovládacího prvku, který chcete přidat, jako je například <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>), a který má jeden parametr pro název nového ovládacího prvku.  
+1.  Použití <xref:Microsoft.Office.Tools.Word.ControlCollection> metodu, která má název `Add` \< *třídu ovládacího prvku*> (kde *třídu ovládacího prvku* je název třídy obsahu ovládacího prvku, který chcete přidat, jako je například <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>), a který má jeden parametr pro název nového ovládacího prvku.  
   
-     Následující příklad kódu používá <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> metoda pro přidání nové <xref:Microsoft.Office.Tools.Word.RichTextContentControl> na začátek dokumentu. Pokud chcete spustit tento kód, přidejte kód, který `ThisDocument` třídy v projektu a volání `AddRichTextControlAtSelection` metoda z `ThisDocument_Startup` obslužné rutiny události.  
+     Následující příklad kódu používá <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> způsob, jak přidat nové <xref:Microsoft.Office.Tools.Word.RichTextContentControl> na začátek dokumentu. Tento kód spustit, přidejte kód, který `ThisDocument` třídu v projektu a volejte `AddRichTextControlAtSelection` metodu z `ThisDocument_Startup` obslužné rutiny události.  
   
      [!code-csharp[Trin_ContentControlReference#700](../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/RichText.cs#700)]
      [!code-vb[Trin_ContentControlReference#700](../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/RichText.vb#700)]  
   
-#### <a name="to-add-a-content-control-at-a-specified-range"></a>Přidání obsahu ovládacího prvku v zadaném rozsahu  
+### <a name="to-add-a-content-control-at-a-specified-range"></a>Přidání obsahu ovládacího prvku v zadaném rozsahu  
   
-1.  Použití <xref:Microsoft.Office.Tools.Word.ControlCollection> metoda, která má název `Add` \< *třídu ovládacího prvku*> (kde *třídu ovládacího prvku* je název třídy obsahu ovládacího prvku, který chcete přidat, jako je například <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>), a který má <xref:Microsoft.Office.Interop.Word.Range> parametr.  
+1.  Použití <xref:Microsoft.Office.Tools.Word.ControlCollection> metodu, která má název `Add` \< *třídu ovládacího prvku*> (kde *třídu ovládacího prvku* je název třídy ovládacího prvku obsahu, který chcete přidat, jako je například <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>), a který má <xref:Microsoft.Office.Interop.Word.Range> parametru.  
   
-     Následující příklad kódu používá <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> metoda pro přidání nové <xref:Microsoft.Office.Tools.Word.RichTextContentControl> na začátek dokumentu. Pokud chcete spustit tento kód, přidejte kód, který `ThisDocument` třídy v projektu a volání `AddRichTextControlAtRange` metoda z `ThisDocument_Startup` obslužné rutiny události.  
+     Následující příklad kódu používá <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> způsob, jak přidat nové <xref:Microsoft.Office.Tools.Word.RichTextContentControl> na začátek dokumentu. Tento kód spustit, přidejte kód, který `ThisDocument` třídu v projektu a volejte `AddRichTextControlAtRange` metodu z `ThisDocument_Startup` obslužné rutiny události.  
   
      [!code-csharp[Trin_ContentControlReference#701](../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/RichText.cs#701)]
      [!code-vb[Trin_ContentControlReference#701](../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/RichText.vb#701)]  
   
-#### <a name="to-add-a-content-control-that-is-based-on-a-native-content-control"></a>Chcete-li přidat ovládací prvek obsahu, který je založen na nativní obsahu ovládacího prvku  
+### <a name="to-add-a-content-control-that-is-based-on-a-native-content-control"></a>Chcete-li přidat ovládací prvek obsahu, který je založen na nativním ovládacím prvku obsahu  
   
-1.  Použití <xref:Microsoft.Office.Tools.Word.ControlCollection> metoda, která má název `Add` \< *třídu ovládacího prvku*> (kde *třídu ovládacího prvku* je název třídy obsahu ovládacího prvku, který chcete přidat, jako je například <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>), a má parametr Microsoft.Office.Interop.Word.ContentControl.  
+1.  Použití <xref:Microsoft.Office.Tools.Word.ControlCollection> metodu, která má název `Add` \< *třídu ovládacího prvku*> (kde *třídu ovládacího prvku* je název třídy ovládacího prvku obsahu, který chcete přidat, jako je například <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>), a který má `Microsoft.Office.Interop.Word.ContentControl` parametru.  
   
-     Následující příklad kódu používá <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> metodu pro vytvoření nové <xref:Microsoft.Office.Tools.Word.RichTextContentControl> každých nativní RTF ovládacího prvku, který je v dokumentu. Pokud chcete spustit tento kód, přidejte kód, který `ThisDocument` třídy v projektu a volání `CreateRichTextControlsFromNativeControls` metoda z `ThisDocument_Startup` obslužné rutiny události.  
+     Následující příklad kódu používá <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> metodu pro vytvoření nového <xref:Microsoft.Office.Tools.Word.RichTextContentControl> pro každý ovládací prvek nativní formátovaný text, který je v dokumentu. Tento kód spustit, přidejte kód, který `ThisDocument` třídu v projektu a volejte `CreateRichTextControlsFromNativeControls` metodu z `ThisDocument_Startup` obslužné rutiny události.  
   
      [!code-csharp[Trin_ContentControlReference#702](../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/RichText.cs#702)]
      [!code-vb[Trin_ContentControlReference#702](../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/RichText.vb#702)]  
   
 ##  <a name="runtimeaddin"></a> Přidání ovládacích prvků obsahu za běhu v projektu doplňku VSTO  
- Můžete přidat ovládací prvky obsahu programově pro všechny otevřené dokumenty v době běhu pomocí doplňku VSTO. Chcete-li to provést, vygenerovat <xref:Microsoft.Office.Tools.Word.Document> hostitelem položku, která je založená na dokument otevřít a potom pomocí metody <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> vlastnosti této položky hostitele. Každá z metod má tři přetížení, které můžete použít k přidání obsahu ovládacího prvku následujícím způsobem:  
+ Přidáním ovládacích prvků obsahu prostřednictvím kódu programu do libovolného otevřeného dokumentu za běhu pomocí doplňku VSTO. Chcete-li to provést, vygenerovat <xref:Microsoft.Office.Tools.Word.Document> hostitelem položku, která vychází z otevřeného dokumentu a pak použijte metody <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> vlastnosti této položky hostitele. Každá z metod má tři přetížení, které můžete použít k přidání ovládacího prvku obsahu následujícími způsoby:  
   
--   Přidání ovládacího prvku v aktuálním výběru.  
+- Přidejte ovládací prvek na aktuální výběr.  
   
--   Přidání ovládacího prvku v zadaném rozsahu.  
+- Přidání ovládacího prvku v zadaném rozsahu.  
   
--   Přidání ovládacího prvku, který je založen na nativní obsahu ovládacího prvku v dokumentu.  
+- Přidejte ovládací prvek, který je založen na nativním ovládacím prvku obsahu v dokumentu.  
   
- Dynamicky vytvoří obsahu, které nejsou trvalé ovládací prvky v dokumentu, při zavření dokumentu. Nativní obsahu ovládacího prvku však zůstane v dokumentu. Ovládací prvek obsahu, která je založená na nativní obsahu ovládacího prvku při příštím otevření dokumentu můžete znovu vytvořit. Další informace najdete v tématu [uchování dynamických ovládacích prvků v dokumentech Office](../vsto/persisting-dynamic-controls-in-office-documents.md).  
+  Dynamicky vytvoří obsah, který se jako trvalý ovládací prvky v dokumentu, při zavření dokumentu. Nativní ovládací prvek obsahu, ale zůstává v dokumentu. Můžete znovu vytvořit ovládací prvek obsahu, který je založen na nativním ovládacím prvku obsahu při příštím otevření dokumentu. Další informace najdete v tématu [uchování dynamických ovládacích prvků v dokumentech systému Office](../vsto/persisting-dynamic-controls-in-office-documents.md).  
   
- Další informace o generování hostitelských položkách v projekty doplňku VSTO v tématu [rozšíření dokumentů aplikace Word a sešitů aplikace Excel v doplňcích VSTO za běhu](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).  
+  Další informace o generování hostitelských položkách v projekty doplňku VSTO v tématu [rozšíření Wordových dokumentů a Excelových sešitů v doplňcích VSTO za běhu](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).  
   
 > [!NOTE]  
->  Chcete-li přidat obsahu ovládací prvek zaškrtávací políčko k dokumentu, musíte vytvořit <xref:Microsoft.Office.Tools.Word.ContentControl> objektu. Další informace najdete v tématu [ovládací prvky obsahu](../vsto/content-controls.md).  
+>  Chcete-li do dokumentu přidat ovládací prvek zaškrtávací políčko obsahu, musíte vytvořit <xref:Microsoft.Office.Tools.Word.ContentControl> objektu. Další informace najdete v tématu [ovládací prvky obsahu](../vsto/content-controls.md).  
   
-#### <a name="to-add-a-content-control-at-the-current-selection"></a>Přidání obsahu ovládacího prvku na aktuální výběr  
+### <a name="to-add-a-content-control-at-the-current-selection"></a>Chcete-li přidat ovládací prvek obsahu v aktuálním výběru  
   
-1.  Použití <xref:Microsoft.Office.Tools.Word.ControlCollection> metoda, která má název `Add` \< *třídu ovládacího prvku*> (kde *třídu ovládacího prvku* je název třídy obsahu ovládacího prvku, který chcete přidat, jako je například <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>), a který má jeden parametr pro název nového ovládacího prvku.  
+1.  Použití <xref:Microsoft.Office.Tools.Word.ControlCollection> metodu, která má název `Add` \< *třídu ovládacího prvku*> (kde *třídu ovládacího prvku* je název třídy obsahu ovládacího prvku, který chcete přidat, jako je například <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>), a který má jeden parametr pro název nového ovládacího prvku.  
   
-     Následující příklad kódu používá <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> metoda pro přidání nové <xref:Microsoft.Office.Tools.Word.RichTextContentControl> na začátek aktivní dokument. Pokud chcete spustit tento kód, přidejte kód, který `ThisAddIn` třídy v projektu a volání `AddRichTextControlAtSelection` metoda z `ThisAddIn_Startup` obslužné rutiny události.  
+     Následující příklad kódu používá <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> způsob, jak přidat nové <xref:Microsoft.Office.Tools.Word.RichTextContentControl> začátek aktivní dokument. Tento kód spustit, přidejte kód, který `ThisAddIn` třídu v projektu a volejte `AddRichTextControlAtSelection` metodu z `ThisAddIn_Startup` obslužné rutiny události.  
   
      [!code-vb[Trin_WordAddInDynamicControls#1](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#1)]
      [!code-csharp[Trin_WordAddInDynamicControls#1](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#1)]  
   
-#### <a name="to-add-a-content-control-at-a-specified-range"></a>Přidání obsahu ovládacího prvku v zadaném rozsahu  
+### <a name="to-add-a-content-control-at-a-specified-range"></a>Přidání obsahu ovládacího prvku v zadaném rozsahu  
   
-1.  Použití <xref:Microsoft.Office.Tools.Word.ControlCollection> metoda, která má název `Add` \< *třídu ovládacího prvku*> (kde *třídu ovládacího prvku* je název třídy obsahu ovládacího prvku, který chcete přidat, jako je například <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>), a který má <xref:Microsoft.Office.Interop.Word.Range> parametr.  
+1.  Použití <xref:Microsoft.Office.Tools.Word.ControlCollection> metodu, která má název `Add` \< *třídu ovládacího prvku*> (kde *třídu ovládacího prvku* je název třídy ovládacího prvku obsahu, který chcete přidat, jako je například <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>), a který má <xref:Microsoft.Office.Interop.Word.Range> parametru.  
   
-     Následující příklad kódu používá <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> metoda pro přidání nové <xref:Microsoft.Office.Tools.Word.RichTextContentControl> na začátek aktivní dokument. Pokud chcete spustit tento kód, přidejte kód, který `ThisAddIn` třídy v projektu a volání `AddRichTextControlAtRange` metoda z `ThisAddIn_Startup` obslužné rutiny události.  
+     Následující příklad kódu používá <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> způsob, jak přidat nové <xref:Microsoft.Office.Tools.Word.RichTextContentControl> začátek aktivní dokument. Tento kód spustit, přidejte kód, který `ThisAddIn` třídu v projektu a volejte `AddRichTextControlAtRange` metodu z `ThisAddIn_Startup` obslužné rutiny události.  
   
      [!code-vb[Trin_WordAddInDynamicControls#2](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#2)]
      [!code-csharp[Trin_WordAddInDynamicControls#2](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#2)]  
   
-#### <a name="to-add-a-content-control-that-is-based-on-a-native-content-control"></a>Chcete-li přidat ovládací prvek obsahu, který je založen na nativní obsahu ovládacího prvku  
+#### <a name="to-add-a-content-control-that-is-based-on-a-native-content-control"></a>Chcete-li přidat ovládací prvek obsahu, který je založen na nativním ovládacím prvku obsahu  
   
-1.  Použití <xref:Microsoft.Office.Tools.Word.ControlCollection> metoda, která má název `Add` \< *třídu ovládacího prvku*> (kde *třídu ovládacího prvku* je název třídy obsahu ovládacího prvku, který chcete přidat, jako je například <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>), a má parametr Microsoft.Office.Interop.Word.ContentControl.  
+1.  Použití <xref:Microsoft.Office.Tools.Word.ControlCollection> metodu, která má název `Add` \< *třídu ovládacího prvku*> (kde *třídu ovládacího prvku* je název třídy ovládacího prvku obsahu, který chcete přidat, jako je například <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A>), a který má `Microsoft.Office.Interop.Word.ContentControl` parametru.  
   
-     Následující příklad kódu používá <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> metodu pro vytvoření nové <xref:Microsoft.Office.Tools.Word.RichTextContentControl> každých nativní RTF ovládacího prvku, který je v dokumentu, po otevření dokumentu. Pokud chcete spustit tento kód, přidejte kód, který `ThisAddIn` třídy ve vašem projektu.  
+     Následující příklad kódu používá <xref:Microsoft.Office.Tools.Word.ControlCollection.AddRichTextContentControl%2A> metodu pro vytvoření nového <xref:Microsoft.Office.Tools.Word.RichTextContentControl> pro každý ovládací prvek nativní formátovaný text, který je v dokumentu, po otevření dokumentu. Tento kód spustit, přidejte kód, který `ThisAddIn` třídu ve vašem projektu.  
   
      [!code-vb[Trin_WordAddInDynamicControls#3](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#3)]
      [!code-csharp[Trin_WordAddInDynamicControls#3](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#3)]  
   
-     Pro jazyk C#, musíte připojit `Application_DocumentOpen` obslužná rutina události <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentOpen> událostí.  
+     Pro jazyk C#, je nutné také připojit `Application_DocumentOpen` obslužnou rutinu události <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentOpen> událostí.  
   
      [!code-csharp[Trin_WordAddInDynamicControls#6](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#6)]  
   
-## <a name="see-also"></a>Viz také  
- [Automatizace v aplikaci Word s použitím rozšířených objektů](../vsto/automating-word-by-using-extended-objects.md)   
+## <a name="see-also"></a>Viz také:  
+ [Automatizace aplikace Word s použitím rozšířených objektů](../vsto/automating-word-by-using-extended-objects.md)   
  [Přehled ovládacích prvků hostitele a hostitelské položky](../vsto/host-items-and-host-controls-overview.md)   
  [Přidání ovládacích prvků do dokumentů Office za běhu](../vsto/adding-controls-to-office-documents-at-run-time.md)   
  [Programová omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   

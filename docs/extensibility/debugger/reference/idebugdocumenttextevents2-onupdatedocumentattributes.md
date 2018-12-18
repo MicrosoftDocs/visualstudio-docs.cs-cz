@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentTextEvents2::onUpdateDocumentAttributes | Microsoft Docs
+title: IDebugDocumentTextEvents2::onUpdateDocumentAttributes | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 098698041ab90611e29132a9f9205b7b78238062
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3bda3f7869715b3c0ab08d64cdb7ef1f13ca4898
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49816726"
 ---
 # <a name="idebugdocumenttextevents2onupdatedocumentattributes"></a>IDebugDocumentTextEvents2::onUpdateDocumentAttributes
-Upozorní příjemce události, že byly aktualizovány atributy dokumentu.  
+Upozorní příjemce události, aby se aktualizovaly atributy dokumentu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,10 +41,10 @@ int onUpdateDocumentAttributes(
   
 #### <a name="parameters"></a>Parametry  
  `textdocattr`  
- [v] Kombinace příznaků z [TEXT_DOC_ATTR_2](../../../extensibility/debugger/reference/text-doc-attr-2.md) výčet, který určuje aktualizované atributy dokumentu.  
+ [in] Kombinace příznaků z [TEXT_DOC_ATTR_2](../../../extensibility/debugger/reference/text-doc-attr-2.md) výčet, který určuje aktualizované atributy dokumentu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugDocumentTextEvents2](../../../extensibility/debugger/reference/idebugdocumenttextevents2.md)   

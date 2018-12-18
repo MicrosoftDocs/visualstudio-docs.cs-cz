@@ -1,5 +1,5 @@
 ---
-title: IDebugField::GetExtendedInfo | Microsoft Docs
+title: IDebugField::GetExtendedInfo | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,11 +15,12 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 63bf182e4e8b17133fbefd4f4a19c4b8b4a458e9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b276b2bff8e8ab5af0f007fbc5bd5dd6074c4d9d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49896040"
 ---
 # <a name="idebugfieldgetextendedinfo"></a>IDebugField::GetExtendedInfo
 Tato metoda získá rozšířené informace o pole.  
@@ -44,24 +45,24 @@ int GetExtendedInfo(
   
 #### <a name="parameters"></a>Parametry  
  `guidExtendedInfo`  
- [v] Vybere informace, které má být vrácen. Platné hodnoty jsou:  
+ [in] Vybere informace, které se mají vrátit. Platné hodnoty jsou:  
   
 |Hodnota|Popis|  
 |-----------|-----------------|  
-|`guidConstantValue`|Hodnota jako pořadí bajtů.|  
+|`guidConstantValue`|Hodnota jako sekvence bajtů.|  
 |`guidConstantType`|Typ jako typ podpisu.|  
   
  `prgBuffer`  
- [out] Vrací rozšířené informace.  
+ [out] Vrátí rozšířené informace.  
   
  `pdwLen`  
- [ve out] Vrátí velikost rozšířených informací v bajtech.  
+ [out v] Vrátí velikost rozšířených informací v bajtech.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- V současné době tato metoda vrátí typ nebo hodnotu konstanty. Volající musí volné vyrovnávací paměti, vrátí se v `prgBuffer` pomocí volání COM na `CoTaskMemFree` – funkce (C++) nebo <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> (C#).  
+ V současné době tato metoda vrátí pouze typem nebo hodnotou konstanty. Volající musí uvolnit vrácené ve vyrovnávací paměti `prgBuffer` volala modelu COM `CoTaskMemFree` – funkce (C++) nebo <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> (C#).  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugField](../../../extensibility/debugger/reference/idebugfield.md)

@@ -1,10 +1,9 @@
 ---
-title: Obecné, prostředí, dialogové okno Možnosti | Microsoft Docs
-ms.custom: ''
+title: Obecné, prostředí, dialogové okno Možnosti
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - VS.Message.0x800a002e
 - VS.ToolsOptionsPages.Environment.General
@@ -28,56 +27,64 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c427752fa1b89acb2fa55afc7acd8c4535686c37
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b52a6815fe9eb9333d6a87b25c1b8dd33ff7eb08
+ms.sourcegitcommit: dd839de3aa24ed7cd69f676293648c6c59c6560a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52389160"
 ---
 # <a name="general-environment-options-dialog-box"></a>Obecné, prostředí, dialogové okno Možnosti
 
-Na této stránce můžete změnit barevné motivy, stav panelu nastavení a přiřazení přípony souboru, mezi další možnosti pro integrované vývojové prostředí (IDE). Dostanete **možnosti** dialogové okno otevřením **nástroje** nabídce Výběr **možnosti**, otevřete **prostředí** složku a potom Výběr **Obecné** stránky. Pokud tato stránka se nezobrazí v seznamu, vyberte **zobrazit všechna nastavení** zaškrtávací políčko **možnosti** dialogové okno.
+Pomocí této stránky můžete změnit barevné motivy, nastavení panelu stavu a přidružení přípony souboru, mezi další možnosti pro integrované vývojové prostředí (IDE). Můžete přistupovat **možnosti** dialogové okno tak, že otevřete **nástroje** nabídku, zvolíte **možnosti**, otevřete **prostředí** složky a pak Výběr **Obecné** stránky. Pokud se tato stránka se nezobrazí v seznamu, vyberte **zobrazit všechna nastavení** zaškrtávací políčko **možnosti** dialogové okno.
 
-> [!NOTE]
-> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, otevřete **nástroje** nabídce a potom zvolte **nastavení importu a exportu**. Další informace najdete v tématu [přizpůsobení prostředí Visual Studio IDE](../../ide/personalizing-the-visual-studio-ide.md).
+## <a name="visual-experience"></a>Vzhled
 
-## <a name="visual-experience"></a>Vizuální prostředí
+**Barevný motiv**
 
-**Barva motivu**
+Zvolte **modré**, **světla** nebo **tmavě** barvy motivu rozhraní IDE.
 
-Vyberte **Blue**, **Light** nebo **tmavý** barevný motiv rozhraní IDE.
-
-Můžete nainstalovat další předdefinované motivy a vytvořit vlastní motivy, stahuje a instaluje **Visual Studio barvu motivu editoru** z [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor). Po instalaci tohoto nástroje se zobrazí další barevné motivy v seznamu Barva motivu.
+Můžete nainstalovat další předdefinované motivy a vytvářet vlastní motivy stažením a instalací **Editor motivů sady Visual Studio** z [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor). Po instalaci tohoto nástroje se zobrazí v seznamu Barva motivu další barevné motivy.
 
 **Použít název velká a malá písmena v řádku nabídek**
 
-Nabídky jsou v **Title velká a malá písmena** ve výchozím nastavení. Zrušte výběr této možnosti je nastavena na **velká písmena**.
+Nabídky jsou v **malých a velkých písmen názvu** ve výchozím nastavení. Zrušte zaškrtnutí políčka tuto možnost nastavíte **všechna velká mají standardní**.
 
-**Automaticky upravit visual prostředí založené na výkon klienta**
+**Automaticky upravit vzhled na základě výkonu klienta**
 
-Určuje, zda Visual Studio úpravou automaticky nastaví na visual prostředí nebo explicitně nastavit úpravou. Tato úprava může změnit zobrazení barvy z přechody ploché barvy, ani ho může omezit použití animace v nabídkách nebo místní windows.
+Určuje, zda sady Visual Studio úpravy automaticky nastaví na vizuální prostředí nebo explicitně nastavit úpravy. Toto nastavení může změnit zobrazení barvy z přechody pro plochý barev, nebo to může omezit použití animací v nabídkách nebo automaticky otevíraného okna windows.
 
-**Povolit plně funkčního klienta prostředí**
+**Povolit vzhled plně funkčního klienta**
 
-Umožňuje úplné visual prostředí sady Visual Studio, včetně přechody a animace. Při použití připojení ke vzdálené ploše nebo starší grafických adaptérů, protože tato funkce může dojít ke snížení výkonu v těchto případech, zrušte tuto možnost. Tato možnost je dostupná jenom v případě, že zrušíte výběr **automaticky upravit visual prostředí založené na klienta** možnost.
+Poskytuje možnost celý vizuální prostředí sady Visual Studio, včetně přechody a animace. Při použití připojení ke vzdálené ploše nebo starší grafických adaptérů, protože tyto funkce může dojít ke snížení výkonu v těchto případech, zrušte tuto možnost. Tato možnost je dostupná jenom v případě, že zrušíte výběr **automaticky upravit vzhled na základě klienta** možnost.
 
 **Použít hardwarovou akceleraci grafiky, pokud je k dispozici**
 
-Použije hardwarovou akceleraci grafiky, pokud je k dispozici, nikoli akcelerace softwaru.
+Používá hardwarovou akceleraci grafiky, pokud je k dispozici, nebo softwarové akcelerace.
 
 ## <a name="other"></a>Ostatní
 
-**Položky zobrazené v nabídce okno** přizpůsobí počet windows, které se zobrazují v seznamu Windows **okno** nabídky. Zadejte číslo mezi 1 a 24. Ve výchozím nastavení počet je 10.
+**Položek zobrazených v nabídce okno**
 
-**Položky, které jsou uvedené v nedávno použity seznamy** přizpůsobí počet nedávno použité projekty a soubory, které se zobrazují na **souboru** nabídky. Zadejte číslo mezi 1 a 24. Ve výchozím nastavení počet je 10. Toto je snadný způsob, jak načíst nedávno použité projekty a soubory.
+Přizpůsobí počet období, která se zobrazí v seznamu Windows **okno** nabídky. Zadejte číslo mezi 1 a 24. Ve výchozím nastavení počet je 10.
 
-**Zobrazit stavový řádek** zobrazí stavový řádek. Stavový řádek je umístěn v dolní části okna IDE a zobrazí informace o průběhu probíhající operace.
+**Počet položek zobrazovaných v seznamech**
 
-**Tlačítko Zavřít ovlivňuje pouze okno active nástroje** Určuje, kdy **Zavřít** po kliknutí na tlačítko, panel nástrojů, který má právě fokus, je uzavřený a ne všechny pouze nástroj Windows v sadě ukotveného. Ve výchozím nastavení je tato možnost vybrána.
+Přizpůsobí počet naposledy použitých projekty a soubory, které se zobrazují na **souboru** nabídky. Zadejte číslo mezi 1 a 24. Ve výchozím nastavení počet je 10. Toto je snadný způsob, jak načíst nedávno použité projekty a soubory.
 
-**Skrýt tlačítko automaticky ovlivňuje pouze okno nástroje active** Určuje, kdy **skrýt automaticky** po kliknutí na tlačítko, pouze panel nástrojů, který má právě fokus, je skrytý automaticky a není všechna okna nástrojů v sadě ukotveného. Ve výchozím nastavení tato možnost není vybraná.
+**Zobrazit stavový řádek**
 
-## <a name="see-also"></a>Viz také
+Zobrazí stavový řádek. Stavový řádek je umístěn na spodní části okna IDE a zobrazí informace o průběhu probíhající operace.
 
-[Dialogové okno Možnosti prostředí](../../ide/reference/environment-options-dialog-box.md)
-[přizpůsobení rozložení oken](../../ide/customizing-window-layouts-in-visual-studio.md)
+**Tlačítko Zavřít ovlivní pouze aktivní okno nástrojů**
+
+Určuje, kdy **Zavřít** po kliknutí na tlačítko, jen pro okno nástroje, který má právě fokus, je uzavřený a ne všechny oken nástrojů ukotvených v sadě. Ve výchozím nastavení je tato možnost vybrána.
+
+**Automaticky skrýt ovlivní pouze aktivní okno nástrojů**
+
+Určuje, kdy **automaticky skrýt** po kliknutí na tlačítko, pouze panel nástrojů, který má právě fokus, je skrytý automaticky a nikoli všech oken nástrojů ukotvených v sadě. Ve výchozím nastavení tato možnost není vybraná.
+
+## <a name="see-also"></a>Viz také:
+
+- [Prostředí, dialogové okno Možnosti](../../ide/reference/environment-options-dialog-box.md)
+- [Přizpůsobení rozložení oken](../../ide/customizing-window-layouts-in-visual-studio.md)

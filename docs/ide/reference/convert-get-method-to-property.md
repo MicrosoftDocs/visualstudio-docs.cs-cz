@@ -1,51 +1,52 @@
 ---
-title: Převést metodu Get pro vlastnost a proveďte převod vlastnosti na metodu Get v sadě Visual Studio | Microsoft Docs
-ms.custom: ''
+title: Převedení metody Get na vlastnost a převod vlastnosti na metodu Get
 ms.date: 01/26/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: reference
 ms.devlang: csharp
-author: kuhlenh
-ms.author: kaseyu
+author: gewarren
+ms.author: gewarren
 manager: douge
 f1_keywords:
 - vs.csharp.refactoring.convertmethodtoproperty
 dev_langs:
-- csharp
+- CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: fc1ef42761ad0816772dc68e00e2fdab693fac27
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c5e7cc7be759991647a9bd40415639ab3b08fa1d
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056344"
 ---
-# <a name="convert-get-method-to-property--convert-property-to-get-method-refactorings"></a>Převést metodu Get pro vlastnost / převést vlastnost na refaktoring Metoda Get
+# <a name="convert-get-method-to-property--convert-property-to-get-method-refactorings"></a>Převedení metody Get na vlastnost / vlastnost převést na refaktoringy Get – metoda
 
-Tyto refaktoring platí pro:
+Tyto refaktoringy platí pro:
 
 - C#
 
-## <a name="convert-get-method-to-property"></a>Převést metodu Get pro vlastnost
+## <a name="convert-get-method-to-property"></a>Převedení metody Get na vlastnost
 
-**Co:** umožňuje převést metodu Get vlastnost (a volitelně metodu sada) a naopak.
+**Co:** umožňuje převést metody Get na vlastnosti (a volitelně metodu Set).
 
-**Kdy:** máte metodu Get, která neobsahuje žádné logiku.
+**Kdy:** měl odpovídající metodu Get, který neobsahuje žádnou logiku.
 
 ### <a name="how-to"></a>Postupy
 
-1. Umístěte kurzor název Metoda Get.
+1. Umístěte ukazatel myši v názvu metody Get.
 
 1. Dále proveďte jednu z následujících akcí:
 
    - **Klávesnice**
-     - Stiskněte klávesu **Ctrl**+**.** k aktivační události **rychlé akce a refaktoring** nabídce a vyberte **metoda nahraďte vlastnost** z okna náhledu – místní nabídka.
-   - **Myš**
-     - Klikněte pravým tlačítkem na kód, vyberte **rychlé akce a refaktoring** nabídce a vyberte **metoda nahraďte vlastnost** z okna náhledu – místní nabídka.
+      - Stisknutím klávesy **Ctrl**+**.** aktivační událost **rychlé akce a Refaktoringy** nabídky a vybereme **nahraďte metodu pomocí vlastnosti** z automaticky otevíraného okna okno náhledu.
+   - **Myši**
+      - Klikněte pravým tlačítkem na kód, vyberte **rychlé akce a Refaktoringy** nabídky a vybereme **nahraďte metodu vlastnost** z automaticky otevíraného okna okno náhledu.
 
-1. (Volitelné) Pokud máte sadu metodu, můžete také metodu Set v tuto chvíli převést tak, že vyberete **metoda nahradit Get a Set – metoda s vlastností**.
+1. (Volitelné) Pokud máte metodu Set, můžete také metodu Set v tuto chvíli převést tak, že vyberete **metoda nahradit Get a Set – metoda s vlastností**.
 
-1. Pokud jste spokojeni se změnami ve verzi preview kód, stiskněte klávesu **Enter** nebo klikněte na opravu z nabídky a změny budou potvrzeny.
+1. Pokud jste spokojení se změnou ve verzi preview kód, stiskněte **Enter** nebo klikněte na opravu z nabídky a změny budou potvrzeny.
 
 Příklad:
 
@@ -67,26 +68,26 @@ public int MyValue
 }
 ```
 
-## <a name="convert-property-to-get-method"></a>Převést vlastnosti na metodu Get
+## <a name="convert-property-to-get-method"></a>Převod vlastnosti na metodu Get
 
 **Co:** umožňuje převod vlastnosti na metodu Get
 
-**Kdy:** máte vlastnost, která zahrnuje více než okamžitě nastavení a získání hodnotu
+**Kdy:** mít zadanou vlastnost, která zahrnuje více než okamžitě nastavení a získání hodnoty
 
 ### <a name="how-to"></a>Postupy
 
-1. Umístěte kurzor název Metoda Get.
+1. Umístěte ukazatel myši v názvu metody Get.
 
 1. Dále proveďte jednu z následujících akcí:
 
    - **Klávesnice**
-     - Stiskněte klávesu **Ctrl**+**.** spuštění **rychlé akce a refaktoring** nabídku a vyberte **vlastnost nahraďte metody** z okna náhledu – místní nabídka.
-   - **Myš**
-     - Klikněte pravým tlačítkem na kód, vyberte **rychlé akce a refaktoring** nabídku a vyberte **vlastnost nahraďte metody** z okna náhledu – místní nabídka.
+      - Stisknutím klávesy **Ctrl**+**.** aktivační událost **rychlé akce a Refaktoringy** nabídky a vybereme **vlastnost nahraďte metody** z automaticky otevíraného okna okno náhledu.
+   - **Myši**
+      - Klikněte pravým tlačítkem na kód, vyberte **rychlé akce a Refaktoringy** nabídky a vybereme **vlastnost nahraďte metody** z automaticky otevíraného okna okno náhledu.
 
-1. Pokud jste spokojeni se změnami ve verzi preview kód, stiskněte klávesu **Enter** nebo klikněte na opravu z nabídky a změny budou potvrzeny.
+1. Pokud jste spokojení se změnou ve verzi preview kód, stiskněte **Enter** nebo klikněte na opravu z nabídky a změny budou potvrzeny.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Refactoring](../refactoring-in-visual-studio.md)
 - [Náhled změn](../../ide/preview-changes.md)

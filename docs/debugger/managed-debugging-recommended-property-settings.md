@@ -1,6 +1,6 @@
 ---
-title: 'Spravované ladění: Doporučené nastavení vlastností | Microsoft Docs'
-ms.custom: ''
+title: Doporučené nastavení vlastností pro ladicí program C#, VB | Dokumentace Microsoftu
+ms.custom: seodec18
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -18,38 +18,39 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: e1c4b725871012f1fbf2c80f3e978f133d4db5b0
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 69b98fe00301ad9230cb4f560a0a1d9dc1d3922f
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53064955"
 ---
 # <a name="managed-debugging-recommended-property-settings"></a>Spravované ladění: doporučené nastavení vlastností
-Některé vlastnosti musí být nastaven stejným způsobem jako pro všechny spravované ladění scénáře.  
+Určité vlastnosti měly být nastaveny stejným způsobem jako pro všechny spravované scénáře ladění.  
   
  Následující tabulky obsahují doporučené nastavení vlastností.  
   
- Mezi typy jiný spravovaný projekt se mohou lišit nastavení, které zde nejsou uvedeny. Například **spustit akci** bude nastavena jinak v projektu Windows Forms než [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] projektu.  
+ Nastavení, které tu nejsou uvedené, mohou lišit mezi různými typy spravovaných projektů. Například **spustit akci** bude nastaveno jinak v projektu Windows Forms než [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] projektu.  
   
 ### <a name="configuration-properties-on-the-build-c-or-compile-visual-basic-tab"></a>Vlastnosti konfigurace na kartě sestavení (C#) nebo kompilace (Visual Basic)  
   
 |**Název vlastnosti**|**Nastavení**|  
 |-----------------------|-----------------|  
-|**Definování ladění konstanta**|C# a F #: nastavte políčko zaškrtnuté. To umožňuje vaší aplikace pro použití třídy ladění.|  
-|**Definování trasování konstanta**|C# a F #: nastavte políčko zaškrtnuté. To umožňuje vaší aplikaci používat třídu trasování.|  
-|**Optimalizace kódu**|C#, F # a Visual Basic: nastavte na hodnotu false. Optimalizovaný kód je těžší ladit, protože vygenerovaný pokyny neodpovídají přímo ke zdrojovému kódu. Pokud zjistíte chybu, která se zobrazí pouze v optimalizovaný kód má program, můžete zapnout toto nastavení, ale mějte na paměti, tento kód ukazuje **zpětný překlad** okno se generují z optimalizované zdroj, který se nemusí shodovat s co vidíte v kódu Editor. K ladění optimalizovaného kódu, je nutné vypnout pouze můj kód. (Viz [omezit zanoříte se pouze můj kód](../debugger/navigating-through-code-with-the-debugger.md#BKMK_Restrict_stepping_to_Just_My_Code)).<br /><br /> Další informace najdete v tématu [nastavení projektu pro ladění konfigurace C#](../debugger/project-settings-for-csharp-debug-configurations.md) nebo [nastavení projektu pro konfiguraci ladění jazyka Visual Basic](../debugger/project-settings-for-a-visual-basic-debug-configuration.md).|  
+|**Definovat konstantu DEBUG**|C#a F#: zaškrtávací políčko zaškrtnuté. To umožňuje vaší aplikaci použít třídu ladění.|  
+|**Definovat konstantu TRACE**|C#a F#: zaškrtávací políčko zaškrtnuté. To umožňuje vaší aplikaci použít třídu trasování.|  
+|**Optimalizovat kód**|C#, F#a Visual Basic: nastavte na hodnotu false. Optimalizovaný kód je těžší ladit, protože generované pokyny neodpovídají přímo ke zdrojovému kódu. Pokud zjistíte, váš program obsahuje chybu, která se zobrazí pouze v optimalizovaném kódu, můžete zapnout toto nastavení, ale mějte na paměti, že kód zobrazený v **zpětný překlad** okna je generován z optimalizovaného zdrojového, který se nemusí shodovat, co se zobrazí v kódu Editor. Chcete-li ladit optimalizovaný kód, musíte vypnout volbu pouze vlastní kód. (Viz [omezení krokování na pouze můj kód](../debugger/navigating-through-code-with-the-debugger.md#BKMK_Restrict_stepping_to_Just_My_Code)).<br /><br /> Další informace najdete v tématu [nastavení projektu pro ladění konfigurace jazyka C#](../debugger/project-settings-for-csharp-debug-configurations.md) nebo [nastavení projektu pro konfiguraci ladění jazyka Visual Basic](../debugger/project-settings-for-a-visual-basic-debug-configuration.md).|  
 |**Výstupní cesta**|Nastavte na bin\Debug\\.|  
-|**Možnosti rozšířené kompilace**|Pouze v jazyce Visual Basic. Klikněte na tlačítko **Upřesnit** nastavit rozšířené vlastnosti, které jsou popsané v následující tabulce.|  
+|**Možnosti rozšířené kompilace**|Pouze v jazyce Visual Basic. Klikněte na tlačítko **Upřesnit** nastavit rozšířené vlastnosti, které jsou popsány v následující tabulce.|  
   
 ### <a name="advanced-compiler-settings-dialog-box"></a>dialogové okno Upřesnit nastavení kompilátoru  
   
 |**Název vlastnosti**|**Nastavení**|  
 |-----------------------|-----------------|  
-|**Povolit optimalizace**|Z důvodů uvedených v nastavena na hodnotu false **optimalizace kódu** možnost v předchozí tabulce.|  
-|**Generovat ladicí informace**|Výběrem tohoto zaškrtávacího políčka způsobí příznak/Debug nastavit, když kompilujete, který bude generovat informace potřebné k usnadnění ladění.|  
-|**Definování ladění konstanta**|Toto políčko zaškrtněte, chcete-li definovat `DEBUG` konstanta, která umožňuje aplikace pomocí <xref:System.Diagnostics.Debug> třídy.|  
-|**Definování trasování konstanta**|Toto políčko zaškrtněte, chcete-li definovat `TRACE` konstanta, která umožňuje aplikace pomocí <xref:System.Diagnostics.Trace> třídy.|  
+|**Povolit optimalizace**|Nastavte na hodnotu false z důvodů uvedených v **optimalizovat kód** možnost v předchozí tabulce.|  
+|**Generovat ladicí informace**|Toto políčko zaškrtněte způsobit příznak/Debug bude nastaven při kompilaci, která bude generovat informace potřebné k usnadnění ladění.|  
+|**Definovat konstantu DEBUG**|Zaškrtněte toto políčko, chcete-li definovat `DEBUG` – konstanta, která umožňuje aplikacím používat <xref:System.Diagnostics.Debug> třídy.|  
+|**Definovat konstantu TRACE**|Zaškrtněte toto políčko, chcete-li definovat `TRACE` – konstanta, která umožňuje aplikacím používat <xref:System.Diagnostics.Trace> třídy.|  
   
 ## <a name="see-also"></a>Viz také  
  [Ladění spravovaného kódu](../debugger/debugging-managed-code.md)   
- [C#, F # a typy projektů jazyka Visual Basic](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)
+ [Typy projektů jazyka C#, F# a Visual Basic](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)

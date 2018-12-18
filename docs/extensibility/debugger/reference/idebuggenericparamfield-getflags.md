@@ -1,5 +1,5 @@
 ---
-title: IDebugGenericParamField::GetFlags | Microsoft Docs
+title: IDebugGenericParamField::GetFlags | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: abeb26d0e8078eeaaf6ba6c8850b3636367bebc7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 51aed81c26a4f62185d3dd7bcd588b7e955a92d9
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49934337"
 ---
 # <a name="idebuggenericparamfieldgetflags"></a>IDebugGenericParamField::GetFlags
-Načte příznaky pro tento obecný parametr.  
+Získá příznaky pro tento obecný parametr.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,10 +40,10 @@ int GetFlags(
   
 #### <a name="parameters"></a>Parametry  
  `pdwFlags`  
- [out] Vrátí pro tento obecný parametr příznaky.  
+ [out] Vrátí příznaky pro tento obecný parametr.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
  Tyto příznaky obsahují informace o různých zvláštní omezení.  

@@ -1,5 +1,5 @@
 ---
-title: RC – úloha | Microsoft Docs
+title: RC – úloha | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -24,34 +24,33 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 28f600d01765c37b3e9a896afa8b6d2a55c7df12
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 0db327943dcaf9b14a921cf4437b6c23874b4380
+ms.sourcegitcommit: d462dd10746624ad139f1db04edd501e7737d51e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50219429"
 ---
 # <a name="rc-task"></a>RC – úloha
-Zabalí nástroj Microsoft kompilátor prostředků Windows rc.exe. **RC** úloh zkompiluje prostředky, například kurzory, ikony, rastrové obrázky, dialogová okna a písem a do souboru prostředků (.res). Další informace najdete v tématu "Kompilátor prostředků" na [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) webu.  
+Zabalí nástroj Microsoft Windows Resource Compiler *rc.exe*. **RC** úloh zkompiluje prostředky, jako je například kurzorů, ikony, bitmapy, dialogová okna a písma, do prostředku (*.res*) soubor. Další informace najdete v tématu [Resource Compiler](https://docs.microsoft.com/windows/desktop/menurc/resource-compiler).
   
 ## <a name="parameters"></a>Parametry  
- Následující tabulka popisuje parametry RCtask. Většina úloh parametry a několik sad parametrů, odpovídají možnosti příkazového řádku.  
+ Následující tabulka popisuje parametry úkolu RC. Většinu úkolů parametrů a několik sad parametrů, odpovídají možnost příkazového řádku.  
   
 |Parametr|Popis|  
 |---------------|-----------------|  
-|**AdditionalIncludeDirectories**|Volitelné **řetězec []** parametr.<br /><br /> Přidá do seznamu adresáře, které se vyhledávají zahrnout soubory adresář.<br /><br /> Další informace najdete v tématu **/I** možnost [pomocí RC (The RC příkazového řádku)](http://go.microsoft.com/fwlink/?LinkId=155730) na webu MSDN.|  
-|**AdditionalOptions**|Volitelné **řetězec** parametr.<br /><br /> Seznam například příkazového řádku optionsor **"***nebo možnost 1 /option2 /option#*". Pomocí tohoto parametru lze zadat parametry příkazového řádku, které nejsou reprezentovány jakékoliv **RC** parametr úloh.<br /><br /> Další informace najdete v tématu Možnosti v [pomocí RC (The RC příkazového řádku)](http://go.microsoft.com/fwlink/?LinkId=155730) na webu MSDN.|  
-|**Jazyková verze**|Volitelné **řetězec** parametr.<br /><br /> Určuje ID národního prostředí, který představuje jazyková verze použitá v prostředcích.<br /><br /> Další informace najdete v tématu **/l** možnost [pomocí RC (The RC příkazového řádku)](http://go.microsoft.com/fwlink/?LinkId=155730) na webu MSDN.|  
-|**IgnoreStandardIncludePath**|Volitelné **Boolean** parametr.<br /><br /> Pokud `true`, brání kompilátor prostředků kontrola proměnné prostředí zahrnout při vyhledávání pro soubory hlaviček nebo soubory prostředků.<br /><br /> Další informace najdete v tématu **/x** možnost [pomocí RC (The RC příkazového řádku)](http://go.microsoft.com/fwlink/?LinkId=155730) na webu MSDN.|  
-|**NullTerminateStrings**|Volitelné **Boolean** parametr.<br /><br /> Pokud `true`, ukončí všechny řetězce v tabulce řetězec hodnotu null.<br /><br /> Další informace najdete v tématu **/n** možnost [pomocí RC (The RC příkazového řádku)](http://go.microsoft.com/fwlink/?LinkId=155730) na webu MSDN.|  
-|**PreprocessorDefinitions**|Volitelné **řetězec []** parametr.<br /><br /> Zadejte jeden nebo více preprocesoru symboly pro kompilátor prostředků. Zadejte seznam makro symboly.<br /><br /> Další informace najdete v tématu **/d** možnost [pomocí RC (The RC příkazového řádku)](http://go.microsoft.com/fwlink/?LinkId=155730) na webu MSDN. Viz také **UndefinePreprocessorDefinitions** v této tabulce.|  
-|**ResourceOutputFileName**|Volitelné **řetězec** parametr.<br /><br /> Určuje název souboru prostředků. Zadejte název souboru prostředků.<br /><br /> Další informace najdete v tématu **/fo** možnost [pomocí RC (The RC příkazového řádku)](http://go.microsoft.com/fwlink/?LinkId=155730) na webu MSDN.|  
-|**ShowProgress**|Volitelné **Boolean** parametr.<br /><br /> Pokud `true`, zobrazuje zprávy, které hlásit průběh kompilátoru.<br /><br /> Další informace najdete v tématu **/v** možnost [pomocí RC (The RC příkazového řádku)](http://go.microsoft.com/fwlink/?LinkId=155730) na webu MSDN.|  
-|**Zdroj**|Požadované `ITaskItem[]` parametr.<br /><br /> Definuje pole MSBuild zdrojového souboru položek, které je možné využívat a vygenerované úlohami.|  
-|**SuppressStartupBanner**|Volitelné **Boolean** parametr.<br /><br /> Pokud `true`, zabraňuje zobrazení číslo zprávy o autorských právech a verzi, po spuštění úlohy.<br /><br /> Další informace získáte zadáním **/?** možnost příkazového řádku a přejděte **/nologo** možnost.|  
-|**TrackerLogDirectory**|Volitelné **řetězec** parametr.<br /><br /> Určuje adresář protokolu sledovací modul.|  
-|**UndefinePreprocessorDefinitions**|Nedefinované symbol preprocesoru.<br /><br /> Další informace najdete v tématu **/u** možnost [pomocí RC (The RC příkazového řádku)](http://go.microsoft.com/fwlink/?LinkId=155730) na webu MSDN. Viz také **PreprocessorDefinitions** v této tabulce.|  
+|**AdditionalIncludeDirectories**|Volitelné **String []** parametru.<br /><br /> Přidá adresář do seznamu adresáře, které se budou hledat vkládané soubory.<br /><br /> Další informace najdete v tématu **/I** možnost [pomocí RC (RC příkazového řádku)](http://go.microsoft.com/fwlink/?LinkId=155730).|  
+|**AdditionalOptions**|Volitelné **řetězec** parametru.<br /><br /> Seznam možností příkazového řádku; třeba /\<možnost1 > /\<možnost2 > /\<možnost #>. Tento parametr použijte k určení možnosti příkazového řádku, které nejsou reprezentovány jakýkoli jiný **RC** parametr úlohy.<br /><br /> Další informace najdete v tématu Možnosti v [pomocí RC (RC příkazového řádku)](http://go.microsoft.com/fwlink/?LinkId=155730).|  
+|**Jazyková verze**|Volitelné **řetězec** parametru.<br /><br /> Určuje ID národního prostředí, který představuje jazykovou verzi používané prostředky.<br /><br /> Další informace najdete v tématu **/l** možnost [pomocí RC (RC příkazového řádku)](http://go.microsoft.com/fwlink/?LinkId=155730).|  
+|**IgnoreStandardIncludePath**|Volitelné **logická** parametru.<br /><br /> Pokud `true`, zabrání kontrole proměnná prostředí INCLUDE při hledání hlavičkové soubory nebo soubory prostředků kompilátor prostředků.<br /><br /> Další informace najdete v tématu **/x** možnost [pomocí RC (RC příkazového řádku)](http://go.microsoft.com/fwlink/?LinkId=155730).|  
+|**NullTerminateStrings**|Volitelné **logická** parametru.<br /><br /> Pokud `true`, všechny řetězce v tabulce řetězců končí hodnotou null.<br /><br /> Další informace najdete v tématu **/n** možnost [pomocí RC (RC příkazového řádku)](http://go.microsoft.com/fwlink/?LinkId=155730).|  
+|**PreprocessorDefinitions**|Volitelné **String []** parametru.<br /><br /> Definujte symboly preprocesoru nejmíň jeden pro kompilátor prostředků. Zadejte seznam symboly maker.<br /><br /> Další informace najdete v tématu **/d** možnost [pomocí RC (RC příkazového řádku)](http://go.microsoft.com/fwlink/?LinkId=155730). Viz také **UndefinePreprocessorDefinitions** v této tabulce.|  
+|**ResourceOutputFileName**|Volitelné **řetězec** parametru.<br /><br /> Určuje název souboru prostředků. Zadejte název souboru prostředku.<br /><br /> Další informace najdete v tématu **/fo** možnost [pomocí RC (RC příkazového řádku)](http://go.microsoft.com/fwlink/?LinkId=155730).|  
+|**ShowProgress**|Volitelné **logická** parametru.<br /><br /> Pokud `true`, zobrazuje zprávy, které podávat zprávy o pokroku kompilátor.<br /><br /> Další informace najdete v tématu **/v** možnost [pomocí RC (RC příkazového řádku)](http://go.microsoft.com/fwlink/?LinkId=155730).|  
+|**Zdroj**|Vyžaduje `ITaskItem[]` parametru.<br /><br /> Definuje pole objektů položky nástroje MSBuild zdrojových souborů, které lze používat a, protože ho vygeneroval úlohy.|  
+|**SuppressStartupBanner**|Volitelné **logická** parametru.<br /><br /> Pokud `true`, zabraňuje zobrazování čísel zprávu o autorských právech a verze při spuštění úlohy.<br /><br /> Další informace získáte zadáním **/?** možnost příkazového řádku a přejděte **/nologo** možnost.|  
+|**TrackerLogDirectory**|Volitelné **řetězec** parametru.<br /><br /> Určuje adresář protokolu sledovacího modulu.|  
+|**UndefinePreprocessorDefinitions**|Definice preprocesoru symbolu.<br /><br /> Další informace najdete v tématu **/u** možnost [pomocí RC (RC příkazového řádku)](http://go.microsoft.com/fwlink/?LinkId=155730). Viz také **PreprocessorDefinitions** v této tabulce.|  
   
-## <a name="remarks"></a>Poznámky  
-  
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)

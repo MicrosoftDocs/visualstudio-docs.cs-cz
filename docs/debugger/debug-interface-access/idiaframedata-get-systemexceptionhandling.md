@@ -1,5 +1,5 @@
 ---
-title: Idiaframedata::get_systemexceptionhandling – | Microsoft Docs
+title: Idiaframedata::get_systemexceptionhandling – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 218cc1c9bc9b031621df1d6a3722d698f82999e1
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 889f2cf72d27b84cff86792f7b0ba3a43d63d09e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49882727"
 ---
 # <a name="idiaframedatagetsystemexceptionhandling"></a>IDiaFrameData::get_systemExceptionHandling
-Načte příznak, který určuje, zda je systém zpracování výjimek v platnosti.  
+Získá příznak, který určuje, zda systém zpracování výjimek je v platnosti.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,15 +34,15 @@ HRESULT get_systemExceptionHandling (
   
 #### <a name="parameters"></a>Parametry  
  pRetVal  
- [out] Vrátí `TRUE` Pokud systému výjimek je v platnosti; jinak vrátí `FALSE`.  
+ [out] Vrátí `TRUE` pokud zpracování výjimek systému je v platnosti; v opačném případě vrátí `FALSE`.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. Jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Zpracovávání výjimek v jazyce systému se běžně označuje jako strukturované zpracování výjimek.  
+ Zpracování výjimek systému se běžně označuje jako strukturované zpracování výjimek.  
   
- Pokud chcete zjistit, pokud je v platnosti zpracovávání výjimek v jazyce C++, volání [idiaframedata::get_cplusplusexceptionhandling –](../../debugger/debug-interface-access/idiaframedata-get-cplusplusexceptionhandling.md) metoda.  
+ Chcete-li zjistit, zda zpracování výjimek jazyka C++ je v platnosti, zavolejte [idiaframedata::get_cplusplusexceptionhandling –](../../debugger/debug-interface-access/idiaframedata-get-cplusplusexceptionhandling.md) metody.  
   
 ## <a name="see-also"></a>Viz také  
  [Idiaframedata –](../../debugger/debug-interface-access/idiaframedata.md)   

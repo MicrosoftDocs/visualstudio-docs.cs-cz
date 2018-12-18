@@ -1,6 +1,6 @@
 ---
 title: Správce balíčků pro R
-description: Jak používat Správce balíčků R v sadě Visual Studio k instalaci a manager R balíčky.
+description: Jak používat Správce balíčků R ve Visual Studiu k instalaci a správce R balíčky.
 ms.date: 01/24/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-rtvs
@@ -10,36 +10,37 @@ ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 8086d28c9591195c90268b52a03325b8acc2e420
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 4063787711ae825cd587f72d735710444906d99b
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35666511"
 ---
 # <a name="package-manager"></a>Správce balíčků
 
-R nástrojů pro Visual Studio (RTVS) Správce balíčků je uživatelského rozhraní pro správu balíčků R. Otevřete ho vyberte **R nástroje > Windows > balíčky** nebo stiskněte kombinaci kláves Ctrl + 7.
+Nástroje R pro Visual Studio (RTVS) Správce balíčků je uživatelské rozhraní pro správu balíčků R. Pokud chcete soubor otevřít, vyberte **nástroje R** > **Windows** > **balíčky** nebo stiskněte **Ctrl** + **7**.
 
-Správce balíčků má tři karty. Každý karta zobrazuje seznam relevantní balíčků na levé straně a konkrétní podrobnosti pro vybraný balíček na pravé straně, včetně verze balíčku, popisu, licence, nainstalujte umístění a odkazy na další důležité informace. Do vyhledávacího pole v pravém horním rohu umožňuje filtrovat seznam.
+Správce balíčku obsahuje tři karty. Každá karta zobrazuje seznam relevantních balíčků na levé straně a konkrétní podrobnosti pro vybraný balíček na pravé straně, včetně verze balíčku, popisu, licence, nainstalujte umístění a odkazy na další relevantní informace. Pole Hledat v pravém horním rohu umožňuje filtrovat seznam.
 
 > [!Tip]
-> Do pole hledání termín zůstává v platnosti se při přepínání mezi kartami.
+> Výraz v poli vyhledat zůstává v platnosti při přepínání mezi kartami.
 
-- **K dispozici** umožňuje procházet balíčky pro instalaci. Pokud balíček je již nainstalován, **nainstalovat** tlačítko na pravé straně se změní na **odinstalovat**.
+- **K dispozici** umožňuje procházet balíčky pro instalaci. Pokud je již nainstalován balíček, **nainstalovat** tlačítko na pravé straně se změní na **odinstalovat**.
 
-    ![Karta dostupné balíčky v nástrojích R pro správce balíčků sady Visual Studio](media/package-manager-available.png)
+    ![Karta dostupné balíčky v nástroje jazyka R pro správce balíčků sady Visual Studio](media/package-manager-available.png)
 
-- **Nainstalovat** zobrazuje všechny nainstalované a načíst balíčky. Zelená tečka vedle balíček označuje, že je načten do relace R. Na červené X ikonu v levé seznamu nebo **odinstalovat** tlačítko na pravé straně lze použít k odinstalaci balíčku. Pokud je k dispozici novější verze nainstalovaných balíčku, modrá šipka vpravo balíčku nahoru provede aktualizace.
+- **Nainstalované** uvádí všechny nainstalované a načtení balíčků. Zelenou tečku vedle balíčku znamená, že je načtena do relace jazyka R. Na červené X ikony v levém seznamu nebo **odinstalovat** tlačítko na pravé straně lze použít k odinstalaci balíčku. Pokud je k dispozici novější verzi nainstalovaného balíčku, provádí modrý nahoru šipka vpravo od balíček aktualizace.
 
-    ![Karta balíčky nainstalované v R nástrojů pro Visual Studio Správce balíčků](media/package-manager-installed.png)
+    ![Nainstalované balíčky kartu v nástroje jazyka R pro správce balíčků sady Visual Studio](media/package-manager-installed.png)
 
-- **Načíst** zobrazí pouze balíčky, které jsou načteny do relace R všechny z nich se zobrazí zelená tečkou. Také můžete odinstalovat a aktualizovat balíčky sem.
+- **Načíst** zobrazí pouze balíčky, které se načtou do relace jazyka R, které se zobrazí s zelenou tečku. Můžete rovněž odinstalovat a aktualizace balíčků tady.
 
-    ![Načíst balíčky na kartě R nástrojů pro Visual Studio Správce balíčků](media/package-manager-loaded.png)
+    ![Načíst kartu balíčky v nástroje jazyka R pro správce balíčků sady Visual Studio](media/package-manager-loaded.png)
 
 ## <a name="package-locations"></a>Umístění balíčku
 
 Balíčky jsou nainstalovány v následujících umístěních:
 
-- Základní balíčky, které jsou součástí RTVS jsou nainstalovány v `C:\Program Files\Microsoft\R Client\R_SERVER\library`
-- Další balíčky instalují `%userprofile%\Documents\R\win-library\3.3`
+- Základní balíčky, které jsou součástí RTVS jsou nainstalovány v *C:\Program Files\Microsoft\R Client\R_SERVER\library*
+- Další balíčky se nainstalují do *%userprofile%\Documents\R\win-library\3.3*

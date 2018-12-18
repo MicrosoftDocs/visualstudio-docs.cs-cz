@@ -1,5 +1,5 @@
 ---
-title: Rozložení pro sadu Visual Studio | Microsoft Docs
+title: Rozložení pro sadu Visual Studio | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -11,152 +11,153 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2e26caa6e47f0f2ee2a20611cf12e166832e007b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 638cfc29ed2aa05a8576a2244b81f0625453076d
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49816675"
 ---
 # <a name="layout-for-visual-studio"></a>Rozložení pro sadu Visual Studio
-Většina dialogová okna v sadě Visual Studio je [rozložení dialogové okno nástroj](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_UtilityDialogLayout), které jsou unthemed tento standard postupujte podle kroků v dialogových oknech [Windows Desktop dialogové okno rozložení Principy](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742499\(v=vs.85\).aspx). Při přesunu Visual Studio k aktualizaci jeho uživatelském rozhraní, některé výraznější dialogová okna mají nový návrh, který stanoví je jako produktu definování prostředí. Tyto [motivu dialogové okno rozložení](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_ThemedDialogLayout) vzhled motivu.  
+Většina dialogová okna Visual Studio je [rozložení dialogového okna nástroje](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_UtilityDialogLayout), které jsou unthemed dialogů tento standard postupujte [Principy rozložení dialogového okna Windows Desktop](/windows/desktop/uxguide/win-dialog-box). Visual Studio přesune na aktualizovat jeho uživatelské rozhraní, některé z nejvážnějších dialogová okna mít nový návrh, který vytváří je jako produkt definování prostředí. Tyto [rozložení dialogového okna s motivem](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_ThemedDialogLayout) s motivem vzhled.  
   
-##  <a name="BKMK_UtilityDialogLayout"></a> Dialogové okno nástroj rozložení  
+##  <a name="BKMK_UtilityDialogLayout"></a> Rozložení dialogového okna nástroje  
   
--   Všechny ovládací prvky v dialogovém okně Nástroj začínat v horní části levého a toku dolů.  
+-   Všechny ovládací prvky v dialogovém okně nástroje by měla začít od levého nebo horního a tok směrem dolů.  
   
--   Nikdy center ovládacích prvků v dialogovém okně k vyplnění velké oblasti.  
+-   Nikdy center ovládacích prvků v dialogovém okně tak, aby vyplnil velké oblasti.  
   
--   Použijte prostředí písmo veškerého textu v dialogovém okně. Při zápisu visual specifikace, zadejte místo výběru konkrétní písma a velikost písma prostředí. V tématu [písmo prostředí](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TheEnvironmentFont).  
+-   Použijte prostředí písmo veškerého textu dialogového okna. Při zápisu visual specifikace, zadejte místo výběru konkrétního písma a velikost písma prostředí. Zobrazit [písmo prostředí](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TheEnvironmentFont).  
   
--   Použít konzistentní řízení mezery a umístění pro podporu cílem kvality v řemeslné ruční práce.  
+-   Použití mezery konzistentní řízení a umístění na podporu cílem kvality v řemeslné ruční práce.  
   
--   Dialogová okna se může stát složitější z větší počet ovládací prvky, jedinečné srovnáním ovládacích prvků nebo obojí. Pro tyto situace komplexní povolte dostatečným místem mezi řízení seskupení a přidělit uživateli logický tok analyzovat.  
+-   Dialogová okna se může stát složitější z větší počet ovládacích prvků a jedinečný srovnáním ovládacích prvků. Pro tyto komplexní situace povolte dostatečný prostor mezi seskupení řízení uživateli přidělit logický tok analyzovat.  
   
-### <a name="utility-dialog-layout-examples"></a>Příklady rozložení nástroj dialogové okno  
- Všechny dimenze jsou vyjádřené jako pixelů.  
+### <a name="utility-dialog-layout-examples"></a>Příklady rozložení dialogového okna nástroje  
+ Všechny dimenze jsou vyjádřeny v pixelech.  
   
- ![Dialogové okno mezery pro popisky výše ovládací prvky](../../extensibility/ux-guidelines/media/0801-a_utilityspacingabove.png "0801 a_UtilitySpacingAbove")  
+ ![Dialogové okno mezery pro popisky nad ovládací prvky](../../extensibility/ux-guidelines/media/0801-a_utilityspacingabove.png "0801 a_UtilitySpacingAbove")  
   
  **Obrázek 08.01-a: Mezery pokyny pro dialogová okna nástroje s popisky nad ovládací prvky**  
   
- ![Dialogové okno mezery pro popisky nalevo od ovládací prvky](../../extensibility/ux-guidelines/media/0801-b_utilityspacingleft.png "0801 b_UtilitySpacingLeft")  
+ ![Dialogové okno mezery pro popisky nalevo od ovládacích prvků](../../extensibility/ux-guidelines/media/0801-b_utilityspacingleft.png "0801 b_UtilitySpacingLeft")  
   
- **Obrázek 08.01-b: Mezery pokyny pro dialogová okna nástroje s popisky vlevo ovládacích prvků**  
+ **Obrázek 08.01-b: Mezery pokyny pro dialogová okna nástroje s popisky nalevo od ovládacích prvků**  
   
 ### <a name="layout-details"></a>Podrobnosti o rozložení  
   
 #### <a name="margins"></a>Okraje  
   
--   Všechna dialogová okna by měl mít 12 pixelů ohraničení okrajů všechny.  
+-   Všechna dialogová okna by měl mít 12 pixel ohraničení všech okrajů.  
   
--   Okraje v rámci skupiny musí mít 9 pixelů od okraje rámečku.  
+-   Okraje v rámci skupiny musí mít 9 pixelů od levého okraje rámce.  
   
--   Okraje v rámci ovládacího prvku karta by měl být 6 pixelů od okraje ovládacího prvku karta.  
+-   Okraje v rámci ovládacího prvku karta by měla být 6 pixelů od levého okraje ovládacího prvku karta.  
   
 #### <a name="command-buttons"></a>Příkazová tlačítka  
   
--   Příkazová tlačítka pracovat v dialogovém okně rámečku, nikoli na obsah. Tyto musí být umístěny v dolní části správné a musí mít dostatek proměnné místa výše a nastavit odlišné samostatné tlačítka.  
+- Příkazová tlačítka pracovat v rámci dialogového okna, ne na obsah. Jsou třeba umístit na dolní pravé a musí mít dostatek variabilní mezerou výše uvedených nastavení odděleně samostatné tlačítka.  
   
--   Pokud existují vodorovné tlačítka, která pracovat v dialogovém okně, konfigurace tlačítko alternativní příkaz je nad sebou v pravém horním rohu. V tématu [vnitřních příkazová tlačítka](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_InteriorCommandButtons) níže.  
+- Pokud existují vodorovná tlačítka, který provoz v rámci dialogového okna, konfigurace tlačítko alternativní příkaz je svislý zásobník v pravém horním rohu. Zobrazit [vnitřní příkazová tlačítka](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_InteriorCommandButtons) níže.  
   
--   Místo na levé straně příkazová tlačítka (nižší nalevo od středu dialogového okna) se považuje za součást "vzdálené" ovládací prvky dialogového okna operaci. Jediné, co by měl pronikat na toto místo je odkaz nápovědy, které se týkají celkové úloh nebo dialogové okno.  
+- Místo nalevo od příkazová tlačítka (nižší vlevo/na střed dialogového okna) je považováno za součást "vzdálené" operace ovládací prvky dialogového okna. Jediné, co by měl pronikat na toto místo je odkaz nápovědy, které se týkají jedné úlohy nebo dialogového okna.  
   
--   Příkazová tlačítka by měl být 75 x 23 pixelů.  
+- Příkazová tlačítka by měla být 75 × 23 pixelů.  
   
--   Příkazová tlačítka by měla být 6 pixelů od sebe.  
+- Příkazová tlačítka by měla být 6 pixelů od sebe.  
   
- ![Základní tlačítko zarovnání](../../extensibility/ux-guidelines/media/0801-c_buttonalign.png "0801 c_ButtonAlign")  
+  ![Tlačítko základní zarovnání](../../extensibility/ux-guidelines/media/0801-c_buttonalign.png "0801 c_ButtonAlign")  
   
- **Obrázku 08.01 – c: Základní tlačítko zarovnání**  
+  **Obrázek 08.01-c: Tlačítko základní zarovnání**  
   
 #### <a name="labels"></a>Popisky  
   
--   Zarovnání doleva všechny popisky.  
+-   Zarovnat vlevo všechny popisky.  
   
--   Pro popisky, které se nacházejí výše ovládacího prvku, se musí doleva align přesněji s ovládacím prvkem pod ním a dolní části popisek by měl být 5 pixelů nad horní části Další ovládací prvek (například pole se seznamem).  
+-   Popisky, které se nacházejí nad ovládací prvek by měl vlevo – zařízení vyhovují přesně ovládacího prvku pod ní a dolní popisek by měla být vyšší než ten druhý ovládací prvek (například pole se seznamem) 5 pixelů.  
   
--   Pro popisky, které se nacházejí na levé straně ovládacích prvků je minimální šířka až vstupního ovládacího prvku popisek 10 pixelů. Předpokládané druhý sloupec by se mělo vytvořit pro zarovnání textová pole, pole se seznamem nebo jiných ovládacích prvků.  
+-   Minimální šířka mezi popiskem a vstupní ovládací prvek pro popisky, které se nacházejí na levé straně ovládacích prvků, je 10 pixelů. Implicitní druhý sloupec stanovit pro zarovnání textová pole, pole se seznamem nebo jiných ovládacích prvků.  
   
--   Popisky jsou věty a jsou následovaným dvojtečkou. V tématu [styl textu](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TextStyle).  
+-   Popisky jsou věty a následuje dvojtečka. Zobrazit [styl textu](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TextStyle).  
   
 #### <a name="distance-between-controls"></a>Vzdálenost mezi ovládacími prvky  
- Ovládací prvky zásobníku přiměřeně. Neexistuje žádné absolutní platí pro mezery mezi skládaný ovládací prvky. Těsnost mezi ovládacími prvky mohou mírně lišit dialogová okna. Doporučené mezery je 20 pixelů pro dvojice svislé nebo popisek ovládacího prvku a 9 pixelů pro dvojice vodorovné nebo popisek ovládacího prvku. Mezery minimální ovládací prvek pro vodorovné dvojice je 6 pixelů.  
+ Ovládací prvky zásobníku přiměřeným způsobem. Neexistuje žádné absolutní pokyny k vytvoření mezer mezi ovládacími prvky skládaný. Těsnost mezi ovládacími prvky mohou mírně lišit dialogová okna. Doporučené mezery je 20 pixelů pro dvojice svislé/popisek ovládacího prvku a 9 pixelů pro dvojice Vodorovný/popisek ovládacího prvku. Mezery minimální ovládací prvek pro vodorovné dvojice je 6 pixelů.  
   
- ![Doporučená vzdálenost mezi ovládacími prvky](../../extensibility/ux-guidelines/media/0801-d_controldistance.png "0801 d_ControlDistance")  
+ ![Doporučené vzdálenost mezi ovládacími prvky](../../extensibility/ux-guidelines/media/0801-d_controldistance.png "0801 d_ControlDistance")  
   
- **Obrázek 08.01 – d: Doporučení pro vzdálenost mezi ovládacími prvky**  
+ **Obrázek 08.01-d: Doporučení pro vzdálenost mezi ovládacími prvky**  
   
 #### <a name="control-indentation"></a>Ovládací prvek odsazení  
- Když jsou vnořené ovládací prvky, Zarovnat vnitřní ovládací prvky vodorovně s levým okrajem ovládací prvek nahoře, obvykle popisku.  
+ Když jsou vnořené ovládací prvky, Zarovnat vnitřní ovládací prvky vodorovně s levým okrajem ovládacího prvku výše, obvykle popisek.  
   
- ![Vnořené zarovnání ovládacího prvku](../../extensibility/ux-guidelines/media/0801-e_controlalign.png "0801 e_ControlAlign")  
+ ![Vnořené řízení zarovnání](../../extensibility/ux-guidelines/media/0801-e_controlalign.png "0801 e_ControlAlign")  
   
  **Obrázek 08.01 – e: Zarovnání ovládacího prvku vnořené**  
   
-#### <a name="control-width"></a>Šířka ovládacího prvku  
- Šířka textového pole nebo jiné podobné ovládací prvky musí být delší než průměrná vstup pro pole. Průměrná anglické slovo je pět znaků. Textové pole, které vyžaduje dlouhého názvu cesty by měl být například, pokud umožňuje vodorovném rozložení, při rozevírací seznam pro platformu názvy by měly být pouze délku, která umožňuje nejdelší položku.  
+#### <a name="control-width"></a>Šířku ovládacího prvku  
+ Šířka textového pole nebo další podobné prvky musí být delší než průměrná vstupní pole. Průměrná anglického slova je pět znaků. Například textové pole, která vyžaduje dlouhého názvu cesty by měl být libovolně dlouhý umožňuje vodorovné rozložení, přestože rozevírací seznam pro platformu názvy by měly být pouze délkou, která umožňuje nejdelší položce.  
   
-#### <a name="helper-text"></a>Textu Pomocník  
+#### <a name="helper-text"></a>Pomocné rutiny, textu  
   
--   Zobrazí se dialogové okno můžete zobrazit text pomocné rutiny, který poskytuje další informace o účelu dialogového okna. To většinou nachází v horní části a může být 1 – 2 věty.  
+-   Text pomocné rutiny, s dalšími informacemi o účelu dialogového okna můžete zobrazit dialogové okno. To obvykle nachází v horní části a může být 1 až 2 věty.  
   
--   Délka řádku by měla být možnost šířku pro uživatele, pro analýzu a číst. Střední dialogové okno by měl být delší než 550 pixelů.  
+-   Délka řádku by měla být pohodlné šířku pro uživatele k analýze a číst. Střední dialogového okna by měl být více než 550 pixelů na šířku.  
   
 ####  <a name="BKMK_InteriorCommandButtons"></a> Vnitřní příkazová tlačítka  
- V dialogových oknech složitější pravděpodobně ovládacího prvku interní vlastní související tlačítka, které by mohly ovlivnit, kde se nachází dialogové okno potvrzení tlačítka.  
+ V dialogových oknech složitější vnitřní ovládací prvek může mít svůj vlastní související tlačítka, což může ovlivnit, kde se nachází tlačítka dialogového okna potvrzení.  
   
--   Svislé zarovnání (sloupec) interior tlačítka při použití **OK**/**zrušit** jsou orientovány vodorovně v pravém dolním rohu.  
+- Svislé zarovnání (sloupec) vnitřní tlačítka při použití **OK**/**zrušit** jsou orientovaný vodorovně v pravém dolním rohu.  
   
--   Vodorovné zarovnání (řádek) interior tlačítka při použití **OK**/**zrušit** jsou orientovány svisle v pravém horním rohu. Tato situace je méně častých.  
+- Vodorovné zarovnání (řádků) vnitřní tlačítka při použití **OK**/**zrušit** jsou orientovány svisle v pravém horním rohu. Tato situace je méně častý.  
   
--   Velikost vnitřních tlačítka cílem by měl velikost standardní tlačítko 75 x 23 pixelů, odpovídající velikost **OK**/**zrušit** tlačítka, pokud je to možné. Pokud popisků tlačítka provede tlačítko přesáhla velikost standardní tlačítko, by měl tlačítek v dané sadě přiblížili tato širší velikost.  
+- Velikost vnitřní tlačítka zaměřit standardní tlačítko velikost 75 × 23 pixelech odpovídající velikost **OK**/**zrušit** tlačítka, pokud je to možné. Pokud popisek tlačítka tlačítko přesáhla velikost standardní tlačítko, by mělo odpovídat tato velikost rozšířit další tlačítka v dané sadě.  
   
- ![Tlačítka OK vodorovné a zrušit](../../extensibility/ux-guidelines/media/0801-f_horizokcan.png "0801 f_HorizOKCan")  
+  ![Tlačítka OK vodorovné a zrušit](../../extensibility/ux-guidelines/media/0801-f_horizokcan.png "0801 f_HorizOKCan")  
   
- **Obrázek 08.01-f: Svislé Interior tlačítka s vodorovné OK nebo Storno**  
+  **Obrázek 08.01-f: Svislé vnitřní tlačítka s vodorovné OK/zrušit**  
   
- ![Tlačítka OK svislé a zrušit](../../extensibility/ux-guidelines/media/0801-g_vertokcan.png "0801 g_VertOKCan")  
+  ![Tlačítka OK svislé a zrušit](../../extensibility/ux-guidelines/media/0801-g_vertokcan.png "0801 g_VertOKCan")  
   
- **Obrázek 08.01-g: Vodorovné vnitřních tlačítka s svislé OK nebo Storno**  
+  **Obrázek 08.01-g: Vodorovné vnitřní tlačítka s svislé OK/zrušit**  
   
 #### <a name="browse-button"></a>[Procházet...] tlačítko  
- **[Procházet...]**  tlačítka, které budou následovat v textovém poli by se "Procházet..." pravopisu v úplné, včetně se třemi tečkami. Pokud je na úzkou místa nebo je více **[Procházet...]**  tlačítka v dialogovém okně tlačítko se může snížit na právě se třemi tečkami.  
+ **[Procházet...]**  tlačítka, které následují textové pole by si "Procházet..." pravopisu v plném rozsahu, včetně na tři tečky. Pokud je na úzkou místa nebo je více **[Procházet...]**  tlačítka na obrazovce, na tlačítko můžete omezit na právě na tři tečky.  
   
-##  <a name="BKMK_ThemedDialogLayout"></a> Rozložení motivu dialogové okno  
- Motivu dialogová okna v sadě Visual Studio světlejší vzhled a nabízí další prázdné znaky. Typografie poskytuje další zvýraznění a zájmu, nabízí více otevřete mezery mezi řádky a změnu velikosti písem a váhu. Kde je to možné, byly chrome a název řádky snížit nebo odebrat. Rozložení tyto dialogy postupujte podle tohoto vzoru základní:  
+##  <a name="BKMK_ThemedDialogLayout"></a> Rozložení s motivem dialogového okna  
+ S motivem dialogová okna v sadě Visual Studio světlejší vzhled a nabízí další prázdné znaky. Typografie poskytuje další důraz a oblastí zájmu, nabízí otevřenější řádkování a změnu velikosti písma a váhy. Tam, kde je to možné, byly pruhy chrome a názvu nižší nebo odebrán. Rozložení těchto dialozích postupujte podle tohoto základního modelu:  
   
 1.  Je bílé pozadí dialogového okna.  
   
-2.  V šedá střední hodnota je 1 pixel pravidlo ohraničení.  
+2.  Je střední hodnota šedě hranici pravidlo 1 pixelu.  
   
-3.  Název dialogového okna již nachází v záhlaví okna, ale poskytuje visual a zvýraznit větší velikost bodu. (Najdete v části velikost písma v [styl textu](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TextStyle).)  
+3.  Název dialogového okna už umístěn v záhlaví okna, ale poskytuje vizuální přitažlivost a zvýraznit větší bod. (Viz část velikost písma v [styl textu](../../extensibility/ux-guidelines/fonts-and-formatting-for-visual-studio.md#BKMK_TextStyle).)  
   
-4.  Popisky spolu s další text, například popis, by měla být **prostředí písma + Bold**.  
+4.  Popisky spolu se další text, například popis, musí být **písmo prostředí + tučné**.  
   
-5.  Vnitřní sloupce jsou odděleny pravidlo 1 pixel barvou.  
+5.  Vnitřní sloupce jsou odděleny pravidlo 1 pixelu ve světle šedá.  
   
-6.  Výchozí odkazy mít žádné podtržítka. Hover a při stisknutí tlačítka stavy mít změna barvy a podtržítka.  
+6.  Výchozí odkazy mít žádná podtržení. Při najetí myší a stavy při stisknutí mít změna barvy a podtržítka.  
   
-7.  Potvrdit tlačítka (jako je **OK**/**zrušit**) nacházejí v pravém dolním rohu.  
+7.  Potvrdit tlačítka (například **OK**/**zrušit**) nacházejí v pravém dolním rohu.  
   
-### <a name="themed-dialog-layout-examples"></a>Příklady rozložení motivu dialogové okno  
- ![Dialogové okno motivu rozložení](../../extensibility/ux-guidelines/media/0801-h_themeddialog.png "0801 h_ThemedDialog")  
+### <a name="themed-dialog-layout-examples"></a>Příklady s motivem dialogu rozložení  
+ ![Rozložení dialogového okna s motivem](../../extensibility/ux-guidelines/media/0801-h_themeddialog.png "0801 h_ThemedDialog")  
   
- **Obrázek 08.01v: Dialogové okno motivu**  
+ **Obrázek 08.01v: Dialogové okno s motivem**  
   
- ![Dialogové okno motivu dimenze](../../extensibility/ux-guidelines/media/0801-i_themeddialogdimensions.png "0801 i_ThemedDialogDimensions")  
+ ![Dialogové okno s motivem dimenze](../../extensibility/ux-guidelines/media/0801-i_themeddialogdimensions.png "0801 i_ThemedDialogDimensions")  
   
- **Obrázek 08.01-i: Motivu dialogu - dimenze**  
+ **Obrázek 08.01-i: s motivem dialogového okna - dimenze**  
   
- ![Motivu dialogové okno písem](../../extensibility/ux-guidelines/media/0801-j_themeddialogfonts.png "0801 j_ThemedDialogFonts")  
+ ![Písma dialogového okna s motivem](../../extensibility/ux-guidelines/media/0801-j_themeddialogfonts.png "0801 j_ThemedDialogFonts")  
   
- **Obrázek 08.01-j: Motivu dialogu - písem**  
+ **Obrázek 08.01-j: s motivem dialogové okno – písma**  
   
- ![Motivu dialogové okno barvy](../../extensibility/ux-guidelines/media/0801-k_themeddialogcolors.png "0801 k_ThemedDialogColors")  
+ ![Dialogové okno motivy barev](../../extensibility/ux-guidelines/media/0801-k_themeddialogcolors.png "0801 k_ThemedDialogColors")  
   
- **Obrázek 08.01-k: Motivu dialogu - barvy**  
+ **Obrázek 08.01-k: s motivem dialogové okno – barvy**  
   
 ## <a name="see-also"></a>Viz také  
- [Aplikace vzory pro sadu Visual Studio](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md)   
- [Ovládací prvky (Windows)](https://msdn.microsoft.com/library/windows/desktop/dn742399.aspx)   
- [Dialogová okna (Windows)](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742499\(v=vs.85\).aspx)
+ [Modely aplikací pro sadu Visual Studio](../../extensibility/ux-guidelines/application-patterns-for-visual-studio.md)   
+ [Ovládací prvky (Windows)](/windows/desktop/uxguide/controls)   
+ [Dialogová okna (Windows)](/windows/desktop/uxguide/win-dialog-box)

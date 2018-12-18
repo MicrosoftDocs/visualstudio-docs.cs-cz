@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: publikování projektu s konkrétním národním prostředím | Microsoft Docs'
+title: 'Postupy: publikování projektu s konkrétním národním | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -22,33 +22,34 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e8975c362039e347700e4256036998e8386c2e2
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ca121a8f8a68ca7a036b14c0f0c2bd6d1a84ff00
+ms.sourcegitcommit: 6a955a2d179cd0e137942389f940d9fcbbe125de
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51607585"
 ---
-# <a name="how-to-publish-a-project-that-has-a-specific-locale"></a>Postupy: Publikování projektu s konkrétním národním prostředím
-Je běžné pro aplikaci tak, aby obsahovala součásti, které mají různá národní prostředí. V tomto scénáři by vytvářet řešení, která má několik projektů a pak publikovat samostatné projekty pro každé národní prostředí. Tento postup ukazuje, jak pomocí makra publikování první projekt v řešení s použitím národního prostředí "en". Pokud chcete vyzkoušet tuto proceduru s národním prostředím než "en", nezapomeňte nastavit `localeString` v makru na odpovídající národního prostředí, který používáte (pro příklad, "de" nebo "de-DE").  
+# <a name="how-to-publish-a-project-that-has-a-specific-locale"></a>Postupy: publikování projektu s konkrétním národním
+Není, že aplikace obsahuje součásti, které mají různá národní prostředí. V tomto scénáři by vytvářet řešení, která se má několik projektů a potom publikovat samostatné projekty pro každé národní prostředí. Tento postup ukazuje, jak pomocí makra publikování první projekt v řešení s použitím národního prostředí "en". Pokud chcete vyzkoušet tuto proceduru s národním prostředí než "en", nezapomeňte nastavit `localeString` v makru tak, aby odpovídaly národní prostředí, který používáte (pro příklad, "de" nebo "de-DE").  
   
 > [!NOTE]
->  Při použití této makro umístění publikování musí být platná adresa URL nebo Universal Naming Convention (UNC) sdílené složky. Navíc Internetové informační služby (IIS) musí být nainstalovaná ve vašem počítači. Instalace služby IIS, na **spustit** nabídky, klikněte na tlačítko **ovládací panely**. Klikněte dvakrát na **přidat nebo odebrat programy**. V **přidat nebo odebrat programy**, klikněte na tlačítko **přidat nebo odebrat součásti systému Windows**. V **Průvodce součástmi systému Windows**, vyberte **Internetové informační služby (IIS)** zaškrtávací políčko **součásti** seznamu. Pak klikněte na tlačítko **Dokončit** zavřete průvodce.  
+>  Při použití tohoto makra umístění publikování by mělo být platná adresa URL nebo Universal Naming Convention (UNC) sdílené složky. Internetové informační služby (IIS) má také nainstalované v počítači. Instalace služby IIS, na **Start** nabídky, klikněte na tlačítko **ovládací panely**. Dvakrát klikněte na panel **přidat nebo odebrat programy**. V **přidat nebo odebrat programy**, klikněte na tlačítko **přidat nebo odebrat součásti Windows**. V **Průvodce součásti Windows**, vyberte **Internetové informační služby (IIS)** zaškrtávací políčko **součásti** seznamu. Pak klikněte na tlačítko **Dokončit** zavřete průvodce.  
   
-### <a name="to-create-the-publishing-macro"></a>K vytvoření publikování makra  
+### <a name="to-create-the-publishing-macro"></a>Chcete-li vytvořit publikování – makro  
   
-1.  Otevřete Průzkumníka maker na **nástroje** nabídce přejděte na **makra**a potom klikněte na **Průzkumník maker**.  
+1.  Otevřete Průzkumník maker na **nástroje** nabídky, přejděte k **makra**a potom klikněte na tlačítko **– makro Explorer**.  
   
-2.  Vytvoření nového makra. V Průzkumníku maker vyberte **Moje makra**. Na **nástroje** nabídky, přejděte na příkaz **makra**a potom klikněte na **nového makra**. Název modulu **PublishSpecificCulture**.  
+2.  Vytvořte nový modul makra. V aplikaci – makro Explorer vyberte **MyMacros**. Na **nástroje** nabídky, přejděte k **makra**a potom klikněte na tlačítko **nový modul – makro**. Název modulu **PublishSpecificCulture**.  
   
-3.  V Průzkumníku maker rozbalte **Moje makra** uzel a potom otevřete **publikovat všechny projekty poklikáním** modulu poklepáním (nebo z **nástroje** nabídky, přejděte na příkaz **Makra**a potom klikněte na **makra IDE**).  
+3.  V aplikaci – makro Explorer rozbalte **MyMacros** uzlu a pak otevřete **publikovat všechny projekty poklikáním** modulu poklepáním (nebo z **nástroje** nabídky, přejděte k **Makra**a potom klikněte na tlačítko **Macros IDE**).  
   
-4.  V prostředí IDE makra, přidejte následující kód do modulu, po `Import` příkazy:  
+4.  V integrovaném vývojovém prostředí makra, přidejte následující kód do modulu, po `Import` příkazy:  
   
     ```vb  
     Module PublishSpecificCulture  
         Sub PublishProjectFirstProjectWithEnLocale()  
             ' Note: You should publish projects by using the IDE at least once  
-            ' before you use this macro. Items such as the certficate and the   
+            ' before you use this macro. Items such as the certificate and the   
             ' security zone must be set.  
             Dim localeString As String = "en"  
   
@@ -136,34 +137,34 @@ Je běžné pro aplikaci tak, aby obsahovala součásti, které mají různá n�
     End Module  
     ```  
   
-5.  Zavřete makra IDE. Pak se fokus vrátí do sady Visual Studio.  
+5.  Zavřete Macros IDE. Fokus vrátí do sady Visual Studio.  
   
 ### <a name="to-publish-a-project-for-a-specific-locale"></a>Chcete-li publikovat projekt pro specifické národní prostředí  
   
-1.  K vytvoření projektu jazyka Visual Basic aplikace systému Windows, na **soubor** nabídky, přejděte na příkaz **nový**a potom klikněte na **projektu**.  
+1.  Vytvoření projektu jazyka Visual Basic aplikací Windows, na **souboru** nabídky, přejděte k **nový**a potom klikněte na tlačítko **projektu**.  
   
-2.  V **nový projekt** dialogové okno, vyberte **aplikace Windows** z **jazyka Visual Basic** uzlu. Název projektu **PublishLocales**.  
+2.  V **nový projekt** dialogu **aplikace Windows** z **jazyka Visual Basic** uzlu. Pojmenujte projekt *PublishLocales*.  
   
-3.  Klikněte na tlačítko Form1. V **vlastnosti** okno, v části **návrhu**, změnit **jazyk** vlastnost z **(výchozí)** k **Angličtina**. Změna **Text** vlastnost formuláře **MyForm**.  
+3.  Klikněte na tlačítko Form1. V **vlastnosti** okně v části **návrhu**, změnit **jazyk** vlastnost z **(výchozí)** k **Angličtina**. Změnit **Text** vlastnost formuláře **MyForm**.  
   
-     Všimněte si, že lokalizovaný prostředek knihovny DLL se nevytvoří, dokud jsou potřeba. Například jsou vytvořeny při změně textu formuláře nebo jeden z jeho ovládacích prvků po zadání nové národní prostředí.  
+     Všimněte si, že lokalizovaný prostředek knihovny DLL se nevytvoří, dokud se v případě potřeby zapíná. Například jsou vytvořeny při změně textu formuláře nebo jeden z jeho ovládacích prvků po zadání nové národní prostředí.  
   
-4.  Publikování PublishLocales pomocí prostředí Visual Studio IDE.  
+4.  Publikování *PublishLocales* pomocí integrovaného vývojového prostředí sady Visual Studio.  
   
-     V **Průzkumníku**, zvolte PublishLocales. Na **projektu** nabídce vyberte možnost **vlastnosti**. V Návrháři projektu na **publikovat** stránky, zadejte umístění pro publikování **http://localhost/PublishLocales**a potom klikněte na **publikovat**.  
+     V **Průzkumníka řešení**vyberte *PublishLocales*. Na **projektu** nabídce vyberte možnost **vlastnosti**. V Návrháři projektu na **publikovat** určete umístění pro publikování, **http://localhost/PublishLocales**a potom klikněte na tlačítko **publikovat**.  
   
-     Jakmile se zobrazí webová stránka publikování, zavřete ji. (Pro tento krok, budete muset publikování tohoto projektu, není nutné ji nainstalovat.)  
+     Když se objeví publikované webové stránky, zavřete ho. (V tomto kroku budete muset projekt publikovat; není nutné k jeho instalaci.)  
   
-5.  Znovu publikujte PublishLocales vyvoláním makra v okně příkazového řádku Visual Studia. Chcete-li zobrazit okno příkazového řádku, na **zobrazení** nabídky, přejděte na příkaz **ostatní okna** a pak klikněte na **příkazové okno**, nebo stiskněte klávesu CTRL + ALT + A. V okně příkazového řádku zadejte `macros`; automatické dokončování poskytne seznam dostupných makra. Vyberte následující makro a stiskněte klávesu ENTER:  
+5.  Publikování *PublishLocales* znovu vyvoláním makra v okně Příkazový řádek sady Visual Studio. Chcete-li zobrazit okno příkazového řádku na **zobrazení** nabídky, přejděte na **ostatní Windows** a potom klikněte na tlačítko **příkazové okno**, nebo stiskněte klávesu **Ctrl** + **Alt**+**A**. V okně příkazového řádku zadejte `macros`; automatické dokončování vám poskytne seznam dostupných maker. Vyberte následující makra a stiskněte klávesu ENTER:  
   
      `Macros.MyMacros.PublishSpecificCulture.PublishProjectFirstProjectWithEnLocale`  
   
-6.  Pokud je proces publikování úspěšná, vygeneruje se zpráva s oznámením "publikování byl úspěšný pro PublishLocales\PublishLocales.vbproj. Publikování jazyk byl "en". " Klikněte na tlačítko **OK** do pole zpráva. Jakmile se zobrazí webová stránka publikování, klikněte na tlačítko **nainstalovat**.  
+6.  Při procesu publikování bude úspěšné, vygeneruje se zpráva, že "publikování bylo úspěšné pro *PublishLocales\PublishLocales.vbproj*. Publikování byl jazyk "en". " Klikněte na tlačítko **OK** v okně se zprávou. Když se objeví publikované webové stránky, klikněte na tlačítko **nainstalovat**.  
   
-7.  Vyhledejte v C:\Inetpub\wwwroot\PublishLocales\en. Měli byste vidět nainstalované soubory například manifesty, setup.exe a soubor publikovat webovou stránku, kromě lokalizované DLL prostředků. (Ve výchozím nastavení ClickOnce přidá příponu .deploy soubory .exe a knihovny DLL, můžete odebrat toto rozšíření po nasazení.)  
+7.  Hledat v *C:\Inetpub\wwwroot\PublishLocales\en*. Měli byste vidět nainstalovaných souborů, jako je například manifestů, *setup.exe*a publikovat soubor webovou stránku, kromě lokalizovaný prostředek knihovny DLL. (Ve výchozím nastavení technologie ClickOnce přidá *.deploy* rozšíření na souborů exe a DLL; odeberete toto rozšíření po nasazení.)  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Publikování aplikací ClickOnce](../deployment/publishing-clickonce-applications.md)   
- [Makra vývojového prostředí](http://msdn.microsoft.com/en-us/d23105d8-34fe-4ad9-8278-fae2c660aeac)   
- [Okno Průzkumníka – makro](http://msdn.microsoft.com/en-us/762169e6-f83f-44b4-bffa-d0f107cae9a3)   
- [Postupy: úprava a vytváření makra prostřednictvím kódu programu](http://msdn.microsoft.com/en-us/6716f820-1feb-48ad-a718-27eb6b473c5a)
+ [Makra vývojové prostředí](/previous-versions/visualstudio/visual-studio-2010/fb30sxt3(v=vs.100))   
+ [Okno Průzkumníka – makro](/previous-versions/visualstudio/visual-studio-2010/wwkx67sw(v=vs.100))   
+ [Postupy: úpravy a vytváření makra prostřednictvím kódu programu](/previous-versions/visualstudio/visual-studio-2010/k91y6132(v=vs.100))

@@ -1,84 +1,86 @@
 ---
-title: Přehled Visual Studio Návrhář relací objektů
+title: Přehled O/R Designer
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 45e477c0-5c6b-41f9-b2d0-2808fb4f6537
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: c1d065a31c8c15ac26b7ded368499846cb9f0645
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 68b19993448ed68520f267177ca760975cd4d4aa
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53066800"
 ---
-# <a name="linq-to-sql-tools-in-visual-studio"></a>Technologie LINQ to SQL nástroje v sadě Visual Studio
+# <a name="linq-to-sql-tools-in-visual-studio"></a>Nástroje LINQ to SQL v sadě Visual Studio
 
-Technologie LINQ to SQL je první objekt relační mapování technologie vydaných společností Microsoft. Je dobře funguje v základní scénáře a nadále podporován v sadě Visual Studio, ale je již ve službě active vývoji. Pomocí LINQ to SQL při zachování starší verze aplikace, který je již používán nebo v jednoduché aplikace, které používá SQL Server a nevyžadují mapování více tabulek. Obecně platí nové aplikace by měly používat rozhraní Entity Framework, pokud je potřeba vrstva relační objekt mapper.
+Technologie LINQ to SQL byl první objektově relační mapování technologie vydané společností Microsoft. Dobře funguje v základní scénáře a jsou nadále podporované v sadě Visual Studio, ale už se aktivně vyvíjí. Použití LINQ to SQL při zachování starší verze aplikací, který je již používán, nebo jednoduché aplikace, které používají SQL Server a nevyžadují žádná mapování více tabulek. Obecně platí nové aplikace by měly používat Entity Framework, pokud je nutné použít vrstvu objektově relační Mapovač.
 
-V sadě Visual Studio vytvořte LINQ na SQL třídy, které představují tabulky SQL pomocí Návrhář relací objektů (Návrhář relací objektů).
+V sadě Visual Studio, je vytvoření tříd LINQ to SQL, které představují tabulky SQL s použitím **Návrhář relací objektů** (**O/R Designer**).
 
-Návrhář relací objektů má dvě odlišné oblasti na jeho návrhové ploše: entity podokna na levé straně a metody na pravé straně. V podokně entity je hlavní návrhovou plochu, který zobrazí tříd entit a přidružení a hierarchie dědičnosti. V podokně metody se na návrhovou plochu, která zobrazuje <xref:System.Data.Linq.DataContext> metody, které jsou namapované na uložené procedury a funkce.
+**O/R Designer** má dva různé oblasti na svém povrchu návrhu: v podokně entity na levé straně a metody podokno na pravé straně. V podokně entity je hlavní návrhovou plochu, zobrazující tříd entit, přidružení a hierarchie dědičnosti. Podokno metody je na návrhovou plochu, zobrazující <xref:System.Data.Linq.DataContext> metody, které jsou mapovány na uložené procedury a funkce.
 
-Návrhář relací objektů poskytuje návrhové ploše k vytváření [technologie LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index) tříd entit a přidružení (relace), které jsou založeny na objekty v databázi. Jinými slovy Návrhář relací objektů se používá k vytvoření objektu modelu v aplikaci, která se mapuje na objekty v databázi. Také vytváří silného typu <xref:System.Data.Linq.DataContext> používané k odesílání a příjmu dat mezi tříd entit a databáze. Návrhář relací objektů také poskytuje funkce pro mapování uložené procedury a funkce na <xref:System.Data.Linq.DataContext> metody pro vrácení dat a tříd entit naplnění. Návrhář relací objektů navíc poskytuje možnost návrhu dědičnosti vztahy mezi třídami entity.
+**O/R Designer** poskytuje vizuální návrhová plocha pro vytváření [technologie LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index) tříd entit a přidružení (relace), které jsou založeny na objekty v databázi. Jinými slovy **O/R Designer** vytvoří objektový model v aplikaci, která mapuje pro objekty v databázi. Zároveň se vygeneruje silného typu <xref:System.Data.Linq.DataContext> , který odesílá i přijímá data mezi třídami entit a databáze. **O/R Designer** také přiřazuje funkce mapě uložených procedur a funkcí <xref:System.Data.Linq.DataContext> metody pro vrácení dat a naplnění tříd entit. Nakonec **O/R Designer** umožňuje návrh vztahy dědičnosti mezi třídami entit.
 
-## <a name="open-the-or-designer"></a>Otevřít Návrhář relací objektů
+## <a name="open-the-or-designer"></a>Otevření Návrháře relací objektů
 
-Chcete-li přidat LINQ do modelu entity SQL do projektu, zvolte **projektu** > **přidat novou položku**a potom vyberte **třídy LINQ to SQL** ze seznamu položek projektu:
+Chcete-li přidat LINQ do SQL entity modelu do projektu, zvolte **projektu** > **přidat novou položku**a pak vyberte **třídy LINQ to SQL** ze seznamu položek projektu:
 
 ![Třídy LINQ to SQL](../data-tools/media/raddata-linq-to-sql-classes.png)
 
-Visual Studio vytvoří soubor dbml a přidá ji do vašeho řešení. Toto je soubor XML mapování a jeho soubory související kódu.
+Visual Studio vytvoří *dbml* soubor a přidá ji do vašeho řešení. Toto je soubor mapování XML a jeho soubory související kód.
 
-![Technologie LINQ to SQL třídy v Průzkumníku řešení](../data-tools/media/raddata-linq-to-sql-classes-in-solution-explorer.png)
+![LINQ na třídy SQL v Průzkumníku řešení](../data-tools/media/raddata-linq-to-sql-classes-in-solution-explorer.png)
 
-Když vyberete soubor DBML, Visual Studio zobrazí plochu návrháře relací objektů, která umožňuje vizuálně vytvoření modelu. Následující obrázek znázorňuje Návrháře po tabulky zákazníků Northwind a objednávky byl přetažen z Průzkumníka serveru. Poznámka: vztah mezi tabulkami.
+Když vyberete *dbml* soubor, sada Visual Studio zobrazí **O/R Designer** povrch, který vám umožní vizuálně vytvářet model. Následující obrázek znázorňuje Návrháře po Northwind `Customers` a `Orders` tabulky byl přetažen z **Průzkumníka serveru**. Poznámka: relace mezi tabulkami.
 
 ![Technologie LINQ to SQL Návrháře](../data-tools/media/raddata-linq-to-sql-designer.png)
 
 > [!IMPORTANT]
-> Návrhář relací objektů je relační mapper jednoduchého objektu, protože podporuje jenom relace 1:1 mapování. Jinými slovy třídu entity může mít pouze vztah mapování 1:1 s databázové tabulky nebo zobrazení. Komplexní mapování, jako je například mapování třídu entity na připojené k tabulce nepodporuje; použijte pro komplexní mapování rozhraní Entity Framework. Kromě toho návrháře je generátor kódu jednosměrná. To znamená, že se projeví pouze změny, které provedete na plochu návrháře do souboru kódu. Ruční změny do souboru kódu se neprojeví v Návrháři relací objektů. Veškeré změny, které můžete provést ručně v souboru kódu přepíšou, když je uložen v návrháři a kód vygenerován znovu. Informace o tom, jak přidat uživatelský kód a rozšíření třídy generované Návrhář relací objektů najdete v tématu [postupy: rozšíření kód vygenerován Návrhář relací objektů](../data-tools/how-to-extend-code-generated-by-the-o-r-designer.md).
+> **O/R Designer** je jednoduchý objekt relační Mapovač, protože podporuje pouze relace mapování 1:1. Jinými slovy třídu entity může mít pouze mapování 1:1 relaci s databázové tabulky nebo zobrazení. Komplexní mapování, jako je například mapování třídu entity do tabulky připojené k doméně, není podporována. použití rozhraní Entity Framework pro komplexní mapování. Kromě toho Návrhář je generátor kódu jednosměrná. To znamená, že se projeví pouze změny provedené na plochu návrháře do souboru kódu. Ruční změny do souboru kódu se neprojeví v **O/R Designer**. Všechny změny, které můžete provést ručně v souboru kódu jsou přepsány při návrháři se uloží a kód vygenerován znovu. Informace o tom, jak přidat uživatelský kód a rozšíření třídy generované **O/R Designer**, naleznete v tématu [postupy: rozšíření kódu vygenerovaného návrhářem relací objektů](../data-tools/how-to-extend-code-generated-by-the-o-r-designer.md).
 
-## <a name="create-and-configure-the-datacontext"></a>Vytvořit a nakonfigurovat DataContext
+## <a name="create-and-configure-the-datacontext"></a>Vytvoření a konfigurace DataContext
 
-Po přidání **třídy LINQ to SQL** položku do projektu a otevřít Návrhář relací objektů, prázdný návrhovou plochu, která reprezentuje prázdnou <xref:System.Data.Linq.DataContext> připravení nakonfigurovat. <xref:System.Data.Linq.DataContext> je nakonfigurovaná s informacemi o připojení poskytované první položka, která je přetáhnout na návrhovou plochu... Proto <xref:System.Data.Linq.DataContext> se konfiguruje pomocí informace o připojení z první položky vyřadit na návrhovou plochu. Další informace o <xref:System.Data.Linq.DataContext> najdete třída [DataContext metody (Návrhář relací objektů)](../data-tools/datacontext-methods-o-r-designer.md).
+Po přidání **třídy LINQ to SQL** položky do projektu a otevřete **O/R Designer**, prázdný návrhové ploše představuje prázdný <xref:System.Data.Linq.DataContext> jste připravení nakonfigurovat. <xref:System.Data.Linq.DataContext> má nakonfigurovanou připojení na základě informací poskytnutých první položka, která je přetažena na návrhovou plochu. Proto <xref:System.Data.Linq.DataContext> je nakonfigurován s použitím informací o připojení z první položky na návrhové ploše. Další informace o <xref:System.Data.Linq.DataContext> třídy viz [metod DataContext (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md).
 
-## <a name="create-entity-classes-that-map-to-database-tables-and-views"></a>Vytvořit tříd entit, které jsou namapovány na databázi tabulek a zobrazení
+## <a name="create-entity-classes-that-map-to-database-tables-and-views"></a>Vytvoření tříd entit, která je namapována na databázové tabulky a zobrazení
 
-Můžete vytvořit tříd entit, které jsou namapované na tabulky a zobrazení, přetáhněte databázových tabulek a zobrazení z **Průzkumníka serveru**/**Průzkumník databáze** na Návrhář relací objektů. Jak je uvedeno v předchozí části <xref:System.Data.Linq.DataContext> je nakonfigurovaná s informacemi o připojení poskytované první položka, která je přetáhnout na návrhovou plochu. Pokud je Návrhář relací objektů přidáte další položku, která používá jiné připojení, můžete změnit připojení pro <xref:System.Data.Linq.DataContext>. Další informace najdete v tématu [postupy: vytvoření třídy LINQ to SQL namapované na tabulky a zobrazení (Návrhář relací objektů)](../data-tools/how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md).
+Můžete vytvořit přetažením databázových tabulek a zobrazení z namapované na tabulky a zobrazení tříd entit **Průzkumníka serveru** nebo **Průzkumník databáze** na **O/R Designer**. Jak je uvedeno v předchozí části <xref:System.Data.Linq.DataContext> má nakonfigurovanou připojení na základě informací poskytnutých první položka, která je přetažena na návrhovou plochu. Pokud je přidána následující položky, který používá jiné připojení do **O/R Designer**, můžete změnit na připojení pro <xref:System.Data.Linq.DataContext>. Další informace najdete v tématu [postupy: vytvoření třídy LINQ to SQL namapovaných na tabulky a zobrazení (O/R Designer)](../data-tools/how-to-create-linq-to-sql-classes-mapped-to-tables-and-views-o-r-designer.md).
 
-## <a name="create-datacontext-methods-that-call-stored-procedures-and-functions"></a>Vytvoření DataContext metody, které volají uložené procedury a funkce
+## <a name="create-datacontext-methods-that-call-stored-procedures-and-functions"></a>Vytvoření metod DataContext, které volají uložených procedur a funkcí
 
-Můžete vytvořit <xref:System.Data.Linq.DataContext> metody, které volají (jsou namapované na) uložené procedury a funkce přetažením z **Průzkumníka serveru**/**Průzkumník databáze** na Návrhář relací objektů. Uložené procedury a funkce jsou přidány do Návrhář relací objektů jako metody <xref:System.Data.Linq.DataContext>.
+Můžete vytvořit <xref:System.Data.Linq.DataContext> metody, které volají (jsou namapovány na) uložené procedury a funkce přetažením z **Průzkumníka serveru** nebo **Průzkumník databáze** na **Návrháře relací objektů** . Uložené procedury a funkce jsou přidány do **O/R Designer** jako metody <xref:System.Data.Linq.DataContext>.
 
 > [!NOTE]
-> Při přetažení uložené procedury a funkce z **Průzkumníka serveru**/**Průzkumník databáze** na Návrhář relací objektů, návratový typ vygenerovaného <xref:System.Data.Linq.DataContext> metoda se liší. v závislosti na tom, kde vyřadit položky. Další informace najdete v tématu [DataContext metody (Návrhář relací objektů)](../data-tools/datacontext-methods-o-r-designer.md).
+> Při přetažení uložených procedur a funkcí z **Průzkumníka serveru** nebo **Průzkumník databáze** na **O/R Designer**, návratový typ vytvořeného <xref:System.Data.Linq.DataContext> Metoda se liší v závislosti na tom, kde je vyřadit položku. Další informace najdete v tématu [metod DataContext (O/R Designer)](../data-tools/datacontext-methods-o-r-designer.md).
 
-## <a name="configure-a-datacontext-to-use-stored-procedures-to-save-data-between-entity-classes-and-a-database"></a>Konfigurace DataContext používat k uložení dat mezi tříd entit a databáze uložené procedury
+## <a name="configure-a-datacontext-to-use-stored-procedures-to-save-data-between-entity-classes-and-a-database"></a>Konfigurace DataContext pro uložení dat mezi třídami entit a databází pomocí uložených procedur
 
-Jak jsme uvedli dříve, můžete vytvořit <xref:System.Data.Linq.DataContext> metody, které volají uložené procedury a funkce. Kromě toho můžete přiřadit také uložené procedury, které lze použít pro výchozí LINQ modul runtime chování SQL, který provede vložení, aktualizace a odstraní. Další informace najdete v tématu [postupy: přiřazení uložené procedury k provedení aktualizací, vložení a odstranění (Návrhář relací objektů)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md).
+Jak bylo uvedeno dříve, můžete vytvořit <xref:System.Data.Linq.DataContext> metody, které volají uložených procedur a funkcí. Kromě toho můžete také přiřadit uložené procedury, které se používají pro výchozí LINQ to SQL chování za běhu, který provádí vloží, aktualizace a odstranění. Další informace najdete v tématu [postupy: přiřazení uložených procedur za účelem aktualizace, vložení a odstranění (O/R Designer)](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md).
 
-## <a name="inheritance-and-the-or-designer"></a>Dědičnost a Návrhář relací objektů
+## <a name="inheritance-and-the-or-designer"></a>Dědičnost a Návrháře relací objektů
 
-Jako u jiných objektů třídy LINQ to SQL můžete použít dědičnosti a být odvozen od jiné třídy. V databázi jsou vytvořit relace dědičnosti několika způsoby. Návrhář relací objektů podporuje koncept dědění jedné tabulky, jak často jsou implementované v relačním systémech. Další informace najdete v tématu [postupy: Konfigurace dědičnosti pomocí Návrhář relací objektů](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md).
+Jako u jiných objektů třídy LINQ to SQL můžete použít dědičnosti a být odvozen od jiných tříd. V databázi vztahy dědičnosti vytvoří několika způsoby. **O/R Designer** podporují koncept dědičnosti jedné tabulky, jak často je implementován v relačních systémech. Další informace najdete v tématu [postupy: Konfigurace dědičnosti pomocí Návrháře relací objektů](../data-tools/how-to-configure-inheritance-by-using-the-o-r-designer.md).
 
 ## <a name="linq-to-sql-queries"></a>Dotazy LINQ to SQL
 
-Třídy entity vytvořené Návrhář relací objektů jsou navrženy pro použití s [Language-Integrated Query (LINQ)](/dotnet/csharp/linq/). Další informace najdete v tématu [postupy: dotaz na informace o](/dotnet/framework/data/adonet/sql/linq/how-to-query-for-information).
+Tříd entit, které jsou vytvořené **O/R Designer** jsou určeny k použití s [Language-Integrated query (LINQ)](/dotnet/csharp/linq/). Další informace najdete v tématu [postupy: dotaz na informace o](/dotnet/framework/data/adonet/sql/linq/how-to-query-for-information).
 
-## <a name="separate-the-generated-datacontext-and-entity-class-code-into-different-namespaces"></a>Oddělení generovaný kód třída DataContext a entity do různých oborech názvů
+## <a name="separate-the-generated-datacontext-and-entity-class-code-into-different-namespaces"></a>Vygenerovaný kód třídy DataContext a entity rozdělit do různých oborech názvů
 
-Návrhář relací objektů poskytuje **kontextu Namespace** a **Entity Namespace** vlastnosti <xref:System.Data.Linq.DataContext>. Tyto vlastnosti určují, jaký obor názvů <xref:System.Data.Linq.DataContext> a generování kódu entity třídy do. Ve výchozím nastavení, jsou tyto vlastnosti prázdné a <xref:System.Data.Linq.DataContext> a tříd entit, které se generují do oboru názvů aplikace. Ke generování kódu do oboru názvů než obor názvů aplikace, zadejte hodnotu do **kontextu Namespace** nebo **Entity Namespace** vlastnosti.
+**O/R Designer** poskytuje **kontextu Namespace** a **Entity Namespace** vlastnosti <xref:System.Data.Linq.DataContext>. Tyto vlastnosti určují, jaký obor názvů <xref:System.Data.Linq.DataContext> a generování kódu entity třídy do. Ve výchozím nastavení, tyto vlastnosti jsou prázdné a <xref:System.Data.Linq.DataContext> a tříd entit, které jsou vygenerovány do oboru názvů aplikace. Ke generování kódu do oboru názvů, než je obor názvů aplikace, zadejte hodnotu do **kontextu Namespace** a/nebo **Entity Namespace** vlastnosti.
 
-## <a name="reference-content"></a>Odkaz na obsah
+## <a name="reference-content"></a>Odkazování na obsah
 
 - <xref:System.Linq>
 - <xref:System.Data.Linq>
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
-- [Technologie LINQ to SQL (rozhraní .NET Framework)](/dotnet/framework/data/adonet/sql/linq/index)
-- [Nejčastější dotazy (rozhraní .NET Framework)](/dotnet/framework/data/adonet/sql/linq/frequently-asked-questions)
+- [Technologie LINQ to SQL (.NET Framework)](/dotnet/framework/data/adonet/sql/linq/index)
+- [Nejčastější dotazy (.NET Framework)](/dotnet/framework/data/adonet/sql/linq/frequently-asked-questions)

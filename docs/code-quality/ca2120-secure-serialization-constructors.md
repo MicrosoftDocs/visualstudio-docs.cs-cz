@@ -1,6 +1,7 @@
 ---
 title: 'CA2120: Zabezpečte serializační konstruktory'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,13 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 06d6dd2bab5bf47b4e384c6d260cda4221155fde
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 123bff32b847342f4081a73abb1d8b899cc0efec
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45548501"
 ---
 # <a name="ca2120-secure-serialization-constructors"></a>CA2120: Zabezpečte serializační konstruktory
+
 |||
 |-|-|
 |TypeName|SecureSerializationConstructors|
@@ -30,19 +33,19 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Typ implementuje <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> rozhraní, není delegáta nebo rozhraní a je deklarován v sestavení, které umožňuje částečně důvěryhodné volající. Má tento typ konstruktor, který přebírá <xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName> objektu a <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName> objektu (podpis konstruktoru serializace). Tento konstruktor není zabezpečené kontrolu zabezpečení, ale jeden nebo více regulární konstruktory v typu musí být zabezpečená.
+ Tento typ implementuje <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> rozhraní, není delegát nebo rozhraní a je deklarována v sestavení, které povoluje částečně důvěryhodné volající. Typ má konstruktor, který přijímá <xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName> objektu a <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName> objektu (podpis serializace konstruktoru). Tento konstruktor není zabezpečen pomocí kontroly zabezpečení, ale jeden nebo více běžných konstruktorů typ je zabezpečen.
 
 ## <a name="rule-description"></a>Popis pravidla
- Toto pravidlo je relevantní pro typy, které podporují vlastní serializace. Typ podporuje vlastní serializace, pokud se implementuje <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> rozhraní. Konstruktor serializace je vyžadován a slouží k deserializovat nebo znovu vytvářet objekty, které byl serializován pomocí <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=fullName> metoda. Protože konstruktor serializace přiděluje a inicializuje objekty, kontrol zabezpečení, které se nacházejí na regulární konstruktory musí být k dispozici také v konstruktoru serializace. Pokud toto pravidlo porušují, může k tomu použít konstruktor serializace volající, které jinak nelze vytvořit instanci.
+ Toto pravidlo platí pro typy, které podporují vlastní serializace. Typ podporuje vlastní serializace v případě, že implementuje <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> rozhraní. Serializační konstruktor je povinný a slouží k deserializovat, nebo znovu vytvořit objekty, které byl serializován pomocí <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=fullName> metody. Protože Serializační konstruktor přiděluje a inicializuje objekty, kontroly zabezpečení, které se nacházejí na běžných konstruktorů musí být k dispozici také u konstruktoru serializace. Pokud toto pravidlo porušují, může k tomu použít Serializační konstruktor volajícím, které jinak nelze vytvořit instanci.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Opravit porušení toto pravidlo, Chraňte serializace konstruktor s požadavky na zabezpečení, které jsou stejné jako ochrana další konstruktory.
+ Chcete-li opravit porušení tohoto pravidla, Chraňte Serializační konstruktor s požadavky na zabezpečení, které jsou stejné jako ty chrání ostatní konstruktory.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Není potlačit narušení pravidla.
+ Nepotlačujte porušení tohoto pravidla.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje typ, který porušuje pravidlo.
+ Následující příklad ukazuje typ, který porušuje pravidla.
 
  [!code-csharp[FxCop.Security.SerialCtors#1](../code-quality/codesnippet/CSharp/ca2120-secure-serialization-constructors_1.cs)]
 
@@ -51,5 +54,8 @@ ms.lasthandoff: 04/19/2018
 
  [CA2237: Označte typy ISerializable pomocí SerializableAttribute](../code-quality/ca2237-mark-iserializable-types-with-serializableattribute.md)
 
-## <a name="see-also"></a>Viz také
- <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> <xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName> <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName>
+## <a name="see-also"></a>Viz také:
+
+- <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName>
+- <xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName>
+- <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName>

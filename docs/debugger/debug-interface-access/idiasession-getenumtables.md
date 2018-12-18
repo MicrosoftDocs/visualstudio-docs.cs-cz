@@ -1,5 +1,5 @@
 ---
-title: Idiasession::getenumtables – | Microsoft Docs
+title: Idiasession::getenumtables – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7556999e1455dcfa0d79b131ee4661a77732990f
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 4f68da36fc527e0390789df22ed4550a6165adbb
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49885834"
 ---
 # <a name="idiasessiongetenumtables"></a>IDiaSession::getEnumTables
-Získá enumerátor pro všechny tabulky obsažené v úložišti symbol.  
+Získá enumerátor pro všechny tabulky, které jsou obsaženy v úložišti symbolů.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,13 +34,13 @@ HRESULT getEnumTables (
   
 #### <a name="parameters"></a>Parametry  
  `ppEnumTables`  
- [out] Vrátí [idiaenumtables –](../../debugger/debug-interface-access/idiaenumtables.md) objektu. Pomocí tohoto rozhraní výčet tabulek v úložiště symbolů.  
+ [out] Vrátí [idiaenumtables –](../../debugger/debug-interface-access/idiaenumtables.md) objektu. Pomocí tohoto rozhraní vytvořit výčet tabulek v úložišti symbolů.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
- V tomto příkladu představuje obecné funkci, která používá `getEnumTables` metody pro získání objektu konkrétní enumerátor. Pokud je nalezen enumerátor, funkce vrátí ukazatele, který může být převeden na požadované rozhraní; jinak, funkce vrátí hodnotu `NULL`.  
+ V tomto příkladu představuje obecné funkce, která se používá `getEnumTables` metody pro získání objektu konkrétní enumerátor. Pokud čítač není nalezen, funkce vrátí ukazatel, který lze převést na požadované rozhraní; v opačném případě vrátí funkce `NULL`.  
   
 ```C++  
 IUnknown *GetTable(IDiaSession *pSession, REFIID iid)  

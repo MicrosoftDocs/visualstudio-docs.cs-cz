@@ -1,5 +1,5 @@
 ---
-title: CustomDataSignature – Element (šablony sady Visual Studio) | Microsoft Docs
+title: CustomDataSignature – Element (šablony sady Visual Studio) | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,18 +14,19 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1f56f9b2ffcb09ea8399b6d949cc781f5a99e7c2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b2f32c90adf1732cac1542935a8a6ce2da983c35
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39500641"
 ---
 # <a name="customdatasignature-element-visual-studio-templates"></a>CustomDataSignature – element (šablony sady Visual Studio)
 Určuje text podpis vyhledejte vlastní data.  
   
- \<VSTemplate >  
+ \<Vstemplate – >  
  \<TemplateData >  
- \<CustomDataSignature >  
+ \<CustomDataSignature – >  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,23 +40,23 @@ Určuje text podpis vyhledejte vlastní data.
 ### <a name="attributes"></a>Atributy  
  Žádné  
   
-### <a name="child-elements"></a>Podřízené elementy  
+### <a name="child-elements"></a>Podřízené prvky  
  Žádné  
   
-### <a name="parent-elements"></a>Nadřazené elementy  
+### <a name="parent-elements"></a>Nadřazené prvky  
   
 |Prvek|Popis|  
 |-------------|-----------------|  
-|[TemplateData](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Rozděluje šablonu a definuje, jak se zobrazí ve buď **nový projekt** nebo **přidat novou položku** dialogové okno.|  
+|[TemplateData –](../extensibility/templatedata-element-visual-studio-templates.md)|Požadovaný element.<br /><br /> Rozděluje šablonu a definuje, jak se zobrazí buď **nový projekt** nebo **přidat novou položku** dialogové okno.|  
   
 ## <a name="text-value"></a>Textová hodnota  
  Je vyžadována textová hodnota.  
   
- Text je řetězec, který má podpisu text, který je potřeba najít vlastní data.  
+ Text je řetězec, který nemá podpis text, který je potřeba najít vlastní data.  
   
 ## <a name="remarks"></a>Poznámky  
- `CustomDataSignature` je volitelný element.  
+ `CustomDataSignature` je volitelný prvek.  
   
-## <a name="see-also"></a>Viz také  
- [Odkaz na schéma šablon sady Visual Studio](../extensibility/visual-studio-template-schema-reference.md)   
+## <a name="see-also"></a>Viz také:  
+ [Odkaz na schéma Visual Studio šablon](../extensibility/visual-studio-template-schema-reference.md)   
  [Vytváření šablon projektů a položek](../ide/creating-project-and-item-templates.md)

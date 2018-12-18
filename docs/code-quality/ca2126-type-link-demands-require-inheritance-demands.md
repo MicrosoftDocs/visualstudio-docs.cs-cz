@@ -1,6 +1,7 @@
 ---
 title: 'CA2126: Požadavky propojení typů vyžadují dědičnost požadavků'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,15 +14,21 @@ ms.assetid: 07b604e5-5579-4df9-a578-dadd0d8370a7
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CPP
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: a9ee3817d445144c3c83756cda07da2ed41adee6
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 82fe9045173e65b24204a3b04e12b6a7f655c651
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45548396"
 ---
 # <a name="ca2126-type-link-demands-require-inheritance-demands"></a>CA2126: Požadavky propojení typů vyžadují dědičnost požadavků
+
 |||
 |-|-|
 |TypeName|TypeLinkDemandsRequireInheritanceDemands|
@@ -30,19 +37,19 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Veřejné nezapečetěných typ je chráněný pomocí požadavků na propojení má metodu přepisovatelné a typ ani metodu chráněné pomocí požadavek dědičnosti.
+ Veřejný nezapečetěný typ je chráněn pomocí požadavku propojení, má přepisovatelnou metodu a typ ani metoda nejsou chráněny pomocí vyžádané dědičnosti.
 
 ## <a name="rule-description"></a>Popis pravidla
- Požadavek propojení na metodu nebo jeho deklarující typ vyžaduje bezprostředního volajícího metody tak, aby měl zadaný oprávnění. Požadavek dědičnosti na metodu vyžaduje metodu přepsání zadané oprávnění k. Požadavek dědičnosti pro typ vyžaduje odvozující třídě tak, aby měl zadaný oprávnění.
+ Požadavek propojení na metody nebo její deklarující typ vyžaduje okamžitou volajícímu metody zadané oprávnění. Požadavek dědičnosti na metodě vyžaduje metodu přepsání zadané oprávnění. Požadavek dědičnosti na typu vyžaduje odvozená třída má zadané oprávnění.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Opravit porušení toto pravidlo, zabezpečte typ nebo metoda s požadavek dědičnosti pro stejné oprávnění jako požadavek propojení.
+ Chcete-li opravit porušení tohoto pravidla, zabezpečte typu nebo metody pomocí vyžádané dědičnosti pro stejné oprávnění jako požadavek propojení.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Nepotlačujte upozornění na toto pravidlo.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje typ, který porušuje pravidlo.
+ Následující příklad ukazuje typ, který porušuje pravidla.
 
  [!code-cpp[FxCop.Security.TypesWithLinkDemands#1](../code-quality/codesnippet/CPP/ca2126-type-link-demands-require-inheritance-demands_1.cpp)]
  [!code-vb[FxCop.Security.TypesWithLinkDemands#1](../code-quality/codesnippet/VisualBasic/ca2126-type-link-demands-require-inheritance-demands_1.vb)]
@@ -57,5 +64,7 @@ ms.lasthandoff: 04/19/2018
 
  [CA2123: Požadavky na přepsání odkazu musejí být identické s bází](../code-quality/ca2123-override-link-demands-should-be-identical-to-base.md)
 
-## <a name="see-also"></a>Viz také
- [Pokyny pro zabezpečené kódování](/dotnet/standard/security/secure-coding-guidelines) [požadavky na propojení](/dotnet/framework/misc/link-demands)
+## <a name="see-also"></a>Viz také:
+
+- [Pokyny pro zabezpečené kódování](/dotnet/standard/security/secure-coding-guidelines)
+- [Požadavky propojení](/dotnet/framework/misc/link-demands)

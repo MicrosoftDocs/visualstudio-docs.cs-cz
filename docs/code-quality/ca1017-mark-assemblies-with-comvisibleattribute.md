@@ -1,6 +1,7 @@
 ---
 title: 'CA1017: Označte sestavení pomocí atributu ComVisibleAttribute'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,15 +14,21 @@ ms.assetid: 4842cb49-8dd8-4e5d-a2d6-ceeaf6c6cf8e
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CPP
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 886de205e59ae7a10787dafe15f0ba726b99b465
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d2e720bf4e0bd613b5f31b82e7c50084b1b6d3c1
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45548553"
 ---
 # <a name="ca1017-mark-assemblies-with-comvisibleattribute"></a>CA1017: Označte sestavení pomocí atributu ComVisibleAttribute
+
 |||
 |-|-|
 |TypeName|MarkAssembliesWithComVisible|
@@ -33,20 +40,22 @@ ms.lasthandoff: 04/19/2018
  Sestavení nemá <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> byt aplikovaný atribut.
 
 ## <a name="rule-description"></a>Popis pravidla
- <xref:System.Runtime.InteropServices.ComVisibleAttribute> Atribut určuje, jak klienti COM přístup spravovaného kódu. Dobrý návrh přikazuje, aby sestavení explicitně uvedla viditelnost modelu COM. Viditelnost COM můžete nastavit pro celé sestavení a pak pro jednotlivé typy a členy typu přepsána. Pokud atribut neexistuje, obsah sestavení jsou viditelné modelu COM klientů.
+ <xref:System.Runtime.InteropServices.ComVisibleAttribute> Atribut určuje způsob přístupu klientů COM ke spravovanému kódu. Dobrý návrh přikazuje, aby sestavení explicitně uvedla viditelnost modelu COM. Viditelnost modelu COM lze nastavit pro celé sestavení a poté přepsána pro jednotlivé typy a členy typu. Pokud atribut neexistuje, je obsah sestavení viditelný klientům com.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Opravit porušení toto pravidlo, přidejte atribut sestavení. Pokud nechcete, aby sestavení, které má být viditelné modelu COM klientů, použijte atribut a jeho hodnotu nastavte `false`.
+ Chcete-li opravit porušení tohoto pravidla, přidejte atribut do sestavení. Pokud nechcete, aby sestavení viditelný klientům modelu COM, použijte atribut a nastavte jej na hodnotu `false`.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Nepotlačujte upozornění na toto pravidlo. Pokud chcete sestavení, které má být viditelná, použijte atribut a jeho hodnotu nastavte `true`.
+ Nepotlačujte upozornění na toto pravidlo. Pokud chcete sestavení viditelný, použijte atribut a nastavte jej na hodnotu `true`.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje, sestavení, který má <xref:System.Runtime.InteropServices.ComVisibleAttribute> atribut použitý brání jeho viditelné modelu COM klientům.
+ Následující příklad ukazuje sestavení, který má <xref:System.Runtime.InteropServices.ComVisibleAttribute> atribut tak, aby se pro klienty modelu COM viditelný.
 
  [!code-cpp[FxCop.Design.AssembliesCom#1](../code-quality/codesnippet/CPP/ca1017-mark-assemblies-with-comvisibleattribute_1.cpp)]
  [!code-vb[FxCop.Design.AssembliesCom#1](../code-quality/codesnippet/VisualBasic/ca1017-mark-assemblies-with-comvisibleattribute_1.vb)]
  [!code-csharp[FxCop.Design.AssembliesCom#1](../code-quality/codesnippet/CSharp/ca1017-mark-assemblies-with-comvisibleattribute_1.cs)]
 
-## <a name="see-also"></a>Viz také
- [Spolupráce pomocí nespravovaného kódu](/dotnet/framework/interop/index) [kvalifikace typů .NET pro spolupráci](/dotnet/framework/interop/qualifying-net-types-for-interoperation)
+## <a name="see-also"></a>Viz také:
+
+- [Spolupráce s nespravovaným kódem](/dotnet/framework/interop/index)
+- [Kvalifikace typů .NET pro spolupráci](/dotnet/framework/interop/qualifying-net-types-for-interoperation)

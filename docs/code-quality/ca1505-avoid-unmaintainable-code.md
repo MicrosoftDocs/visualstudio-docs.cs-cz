@@ -1,6 +1,7 @@
 ---
 title: 'CA1505: Vyhněte se neudržovatelnému kódu'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,13 +16,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b65e6c8c7826887e411b2210b613633c1e963aaf
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9aae34f6e999bcf74fdfbae4597b22529863e34f
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45546912"
 ---
 # <a name="ca1505-avoid-unmaintainable-code"></a>CA1505: Vyhněte se neudržovatelnému kódu
+
 |||
 |-|-|
 |TypeName|AvoidUnmantainableCode|
@@ -33,15 +36,17 @@ ms.lasthandoff: 04/19/2018
  Typ nebo metoda má nízkou hodnotu indexu udržovatelnosti.
 
 ## <a name="rule-description"></a>Popis pravidla
- Index udržovatelnosti se vypočítává pomocí následující metriky: řádky kódu, program svazku a složitost cyclomatic. Program svazek je míra potíže se Principy typ nebo metoda, která je založena na počtu operátory a operandy v kódu. Složitost Cyclomatic se rozumí míra složitosti strukturální typ nebo metoda. Další informace o kódu metriky [měření složitosti a udržovatelnosti spravovaného kódu](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md).
+ Index udržovatelnosti se vypočítává pomocí následující metriky: řádky kódu, program svazku a cyklomatická složitost. Program svazek je míra obtížnost znalost typ nebo metoda, která je založena na počet operátorů a operandů v kódu. Cyklomatická složitost je míra složitosti strukturální typ nebo metodu. Další informace o metriky kódu na [měření složitosti a udržovatelnosti spravovaného kódu](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md).
 
- Index nízkou udržovatelnosti označuje, že typ nebo metoda je pravděpodobně poměrně složitá a může být vhodným kandidátem změnit návrh.
+ Nízký index udržovatelnosti označuje, že typ nebo metodu je pravděpodobně obtížné udržovat a by být dobrým kandidátem, aby změnit návrh.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li odstranit tento porušení, přepracovat typ nebo metoda a pokuste se ho rozdělit na menší a zaměřují se více typů nebo metody.
+ Pokud chcete vyřešit toto porušení, změnit návrh typu nebo metodě a zkuste ho rozdělte do menších a přesněji zaměřené typy a metody.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
- Vylučte toto upozornění, když typ nebo metoda se přesto považuje za udržovatelného ohledu na jeho velké nebo typ nebo metoda nelze rozdělit.
+ Vylučte toto upozornění, když se typ nebo metoda je stále považovány za udržovatelného bez ohledu na její velikost nebo typu nebo metodě nelze rozdělit.
 
-## <a name="see-also"></a>Viz také
- [Upozornění udržovatelnosti](../code-quality/maintainability-warnings.md) [měření složitosti a udržovatelnosti spravovaného kódu](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)
+## <a name="see-also"></a>Viz také:
+
+- [Upozornění udržovatelnosti](../code-quality/maintainability-warnings.md)
+- [Měření složitosti a udržovatelnosti spravovaného kódu](../code-quality/measuring-complexity-and-maintainability-of-managed-code.md)

@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentTextEvents2::onRemoveText | Microsoft Docs
+title: IDebugDocumentTextEvents2::onRemoveText | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fa02de7773ec40f4ee7caacd4d5e17638459c792
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 33071194b4370becf66f7870ab65abef9b56f77e
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49897729"
 ---
 # <a name="idebugdocumenttextevents2onremovetext"></a>IDebugDocumentTextEvents2::onRemoveText
-Upozorní balíček ladění, text byl odebrán z dokumentu.  
+Upozorní balíček ladění, že text byl odebrán z dokumentu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,13 +43,13 @@ int onRemoveText(
   
 #### <a name="parameters"></a>Parametry  
  `pos`  
- [v] A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) struktura, která určuje, kde byla odebrána text.  
+ [in] A [TEXT_POSITION](../../../extensibility/debugger/reference/text-position.md) struktura, která označuje, kde byla odebrána text.  
   
  `dwNumToRemove`  
- [v] Určuje počet znaků textu, které byly odebrány.  
+ [in] Určuje počet znaků textu, které byly odebrány.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugDocumentTextEvents2](../../../extensibility/debugger/reference/idebugdocumenttextevents2.md)   

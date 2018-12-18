@@ -1,5 +1,5 @@
 ---
-title: Přidávání řadiče nabídky na panel nástrojů | Microsoft Docs
+title: Přidání Kontroleru nabídky do panelu nástrojů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,106 +15,105 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 63db98df400333216f5e753f8b6f82a61e785cd5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 93bf6af51488b5609f24c5664dee040ea086c26c
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49867258"
 ---
-# <a name="adding-a-menu-controller-to-a-toolbar"></a>Přidávání řadiče nabídky na panelu nástrojů
-Tento názorný postup je založený na [přidání panelu nástrojů na okno nástroje](../extensibility/adding-a-toolbar-to-a-tool-window.md) návod a ukazuje, jak přidat řadič nabídky na panelu nástrojů okna. Postupy v tomto poli lze použít také na panelu nástrojů, který je vytvořen v [přidávání panelů nástrojů](../extensibility/adding-a-toolbar.md) návod.  
+# <a name="add-a-menu-controller-to-a-toolbar"></a>Přidání kontroleru nabídky do panelu nástrojů
+Tento návod vychází [přidat panel nástrojů do panelu nástrojů](../extensibility/adding-a-toolbar-to-a-tool-window.md) návod a ukazuje, jak přidat kontroleru nabídky do panelu nástrojů okno nástrojů. Zde uvedených kroků můžete použít také na panel nástrojů, který je vytvořen v [přidat panel nástrojů](../extensibility/adding-a-toolbar.md) návodu.  
   
- Řadič nabídky je ovládací prvek rozdělení. Levá strana řadiče nabídky obsahuje příkaz naposledy použité a spuštěním kliknutím. Šipka není pravé straně nabídky řadiče, při kliknutí na, otevře se seznam další příkazy. Po klepnutí na příkaz v seznamu, je příkaz spuštěn, a nahrazuje příkaz v levé nabídce řadiče. Tímto způsobem řadičem nabídky funguje jako příkazového tlačítka, které vždy zobrazí příkaz naposledy použité ze seznamu.  
+ Kontroleru nabídky je ovládací prvek rozdělení. Levé straně kontroleru nabídky zobrazí příkaz poslední použitá, a můžete ji spustit kliknutím. Pravé straně kontroleru nabídky je šipka, při kliknutí otevře seznam dalších příkazů. Když kliknete na příkaz v seznamu spuštění příkazu a nahrazuje příkaz na levé straně kontroleru nabídky. Tímto způsobem kontroleru nabídky funguje stejně jako příkazové tlačítko, které vždy zobrazí poslední použitá příkaz ze seznamu.  
   
- Nabídky řadiče může zobrazit v nabídkách ale používají se nejčastěji používá na panely nástrojů.  
+ Nabídka řadiče se může objevit v nabídkách, ale se nejčastěji používají na panely nástrojů.  
   
 ## <a name="prerequisites"></a>Požadavky  
- Od sady Visual Studio 2015 se neinstalovat sadu Visual Studio SDK z webu Stažení softwaru. Je zahrnuta jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
+ Spouští se v sadě Visual Studio 2015, nenainstalujete sadu Visual Studio SDK ze služby Stažení softwaru. Je zahrnut jako volitelná funkce v instalačním programu sady Visual Studio. VS SDK můžete také nainstalovat později. Další informace najdete v tématu [instalace sady Visual Studio SDK](../extensibility/installing-the-visual-studio-sdk.md).  
   
-## <a name="creating-a-menu-controller"></a>Vytvoření řadiče nabídky  
+## <a name="create-a-menu-controller"></a>Vytvoření kontroleru nabídky  
   
-#### <a name="to-create-a-menu-controller"></a>Pokud chcete vytvořit řadič nabídky  
+1. Postupujte podle postupů popsaných v [přidat panel nástrojů do panelu nástrojů](../extensibility/adding-a-toolbar-to-a-tool-window.md) vytvořit panel nástrojů s panelem nástrojů.  
   
-1.  Postupujte podle postupů popsaných v [přidání panelu nástrojů na okno nástroje](../extensibility/adding-a-toolbar-to-a-tool-window.md) vytvořit okno nástroje, který má panelu nástrojů.  
+2. V *TWTestCommandPackage.vsct*, přejděte do části symboly. V guidsymbol – element s názvem **guidTWTestCommandPackageCmdSet**, deklarujte kontroler vaší nabídky, skupina kontroleru nabídky a tři položky nabídky.  
   
-2.  V TWTestCommandPackage.vsct přejděte do části symboly. V elementu GuidSymbol s názvem **guidTWTestCommandPackageCmdSet**, deklarovat řadiči nabídky, nabídky řadiče skupiny a tři položky nabídky.  
+   ```xml  
+   <IDSymbol name="TestMenuController" value="0x1300" /><IDSymbol name="TestMenuControllerGroup" value="0x1060" /><IDSymbol name="cmdidMCItem1" value="0x0130" /><IDSymbol name="cmdidMCItem2" value="0x0131" /><IDSymbol name="cmdidMCItem3" value="0x0132" />  
+   ```  
   
-    ```xml  
-    <IDSymbol name="TestMenuController" value="0x1300" /><IDSymbol name="TestMenuControllerGroup" value="0x1060" /><IDSymbol name="cmdidMCItem1" value="0x0130" /><IDSymbol name="cmdidMCItem2" value="0x0131" /><IDSymbol name="cmdidMCItem3" value="0x0132" />  
-    ```  
+3. V části nabídky po poslední položka nabídky definujte jako nabídka kontroleru nabídky.  
   
-3.  V části nabídky po poslední položky nabídky, definujte jako nabídky řadičem nabídky.  
+   ```xml  
+   <Menu guid="guidTWTestCommandPackageCmdSet" id="TestMenuController" priority="0x0100" type="MenuController">  
+       <Parent guid="guidTWTestCommandPackageCmdSet" id="TWToolbarGroup" />  
+       <CommandFlag>IconAndText</CommandFlag>  
+       <CommandFlag>TextChanges</CommandFlag>  
+       <CommandFlag>TextIsAnchorCommand</CommandFlag>  
+       <Strings>  
+           <ButtonText>Test Menu Controller</ButtonText>  
+           <CommandName>Test Menu Controller</CommandName>  
+       </Strings>  
+   </Menu>  
+   ```  
   
-    ```xml  
-    <Menu guid="guidTWTestCommandPackageCmdSet" id="TestMenuController" priority="0x0100" type="MenuController">  
-        <Parent guid="guidTWTestCommandPackageCmdSet" id="TWToolbarGroup" />  
-        <CommandFlag>IconAndText</CommandFlag>  
-        <CommandFlag>TextChanges</CommandFlag>  
-        <CommandFlag>TextIsAnchorCommand</CommandFlag>  
-        <Strings>  
-            <ButtonText>Test Menu Controller</ButtonText>  
-            <CommandName>Test Menu Controller</CommandName>  
-        </Strings>  
-    </Menu>  
-    ```  
+    `TextChanges` a `TextIsAnchorCommand` příznaky musí být zahrnut umožňuje kontroleru nabídky tak, aby odrážely posledních vybraný příkaz.  
   
-     `TextChanges` a `TextIsAnchorCommand` příznaky musí být zahrnut povolit řadičem nabídky tak, aby odrážela poslední vybraný příkaz.  
+4. Ve skupinách části po poslední záznam skupiny přidáte skupinu nabídek kontroleru.  
   
-4.  Ve skupinách části poslední položku skupiny, přidejte skupinu řadiče nabídky.  
+   ```xml  
+   <Group guid="guidTWTestCommandPackageCmdSet" id="TestMenuControllerGroup" priority="0x000">  
+       <Parent guid="guidTWTestCommandPackageCmdSet" id="TestMenuController" />  
+   </Group>  
+   ```  
   
-    ```xml  
-    <Group guid="guidTWTestCommandPackageCmdSet" id="TestMenuControllerGroup" priority="0x000">  
-        <Parent guid="guidTWTestCommandPackageCmdSet" id="TestMenuController" />  
-    </Group>  
-    ```  
+    Nastavením kontroleru nabídky jako nadřazený všechny příkazy umístěn v této skupině se zobrazí v kontroleru nabídky. `priority` Atribut je vynechán, který nastaví na výchozí hodnotu 0, protože se jedná pouze skupiny na kontroleru nabídky.  
   
-     Nastavením řadičem nabídky jako nadřazená položka žádné příkazy umístěny v této skupině zobrazí v nabídce kontroleru. `priority` Atribut je vynechán, která nastaví na výchozí hodnotu 0, protože budou pouze skupiny na řadiči nabídky.  
+5. V části tlačítka po poslední položka tlačítko přidáte element přepínače pro každou z položek nabídky.  
   
-5.  V části tlačítka po poslední tlačítko položky, přidejte Button element pro každou z položek nabídky.  
+   ```xml  
+   <Button guid="guidTWTestCommandPackageCmdSet" id="cmdidMCItem1" priority="0x0000" type="Button">  
+       <Parent guid="guidTWTestCommandPackageCmdSet" id="TestMenuControllerGroup" />  
+       <Icon guid="guidImages" id="bmpPic1" />  
+       <CommandFlag>IconAndText</CommandFlag>  
+       <Strings>  
+           <ButtonText>MC Item 1</ButtonText>  
+           <CommandName>MC Item 1</CommandName>  
+       </Strings>  
+   </Button>  
+   <Button guid="guidTWTestCommandPackageCmdSet" id="cmdidMCItem2" priority="0x0100" type="Button">  
+       <Parent guid="guidTWTestCommandPackageCmdSet" id="TestMenuControllerGroup" />  
+       <Icon guid="guidImages" id="bmpPic2" />  
+       <CommandFlag>IconAndText</CommandFlag>  
+       <Strings>  
+           <ButtonText>MC Item 2</ButtonText>  
+           <CommandName>MC Item 2</CommandName>  
+       </Strings>  
+   </Button>  
+   <Button guid="guidTWTestCommandPackageCmdSet" id="cmdidMCItem3" priority="0x0200" type="Button">  
+       <Parent guid="guidTWTestCommandPackageCmdSet" id="TestMenuControllerGroup" />  
+       <Icon guid="guidImages" id="bmpPicSearch" />  
+       <CommandFlag>IconAndText</CommandFlag>  
+       <Strings>  
+           <ButtonText>MC Item 3</ButtonText>  
+           <CommandName>MC Item 3</CommandName>  
+       </Strings>  
+   </Button>  
+   ```  
   
-    ```xml  
-    <Button guid="guidTWTestCommandPackageCmdSet" id="cmdidMCItem1" priority="0x0000" type="Button">  
-        <Parent guid="guidTWTestCommandPackageCmdSet" id="TestMenuControllerGroup" />  
-        <Icon guid="guidImages" id="bmpPic1" />  
-        <CommandFlag>IconAndText</CommandFlag>  
-        <Strings>  
-            <ButtonText>MC Item 1</ButtonText>  
-            <CommandName>MC Item 1</CommandName>  
-        </Strings>  
-    </Button>  
-    <Button guid="guidTWTestCommandPackageCmdSet" id="cmdidMCItem2" priority="0x0100" type="Button">  
-        <Parent guid="guidTWTestCommandPackageCmdSet" id="TestMenuControllerGroup" />  
-        <Icon guid="guidImages" id="bmpPic2" />  
-        <CommandFlag>IconAndText</CommandFlag>  
-        <Strings>  
-            <ButtonText>MC Item 2</ButtonText>  
-            <CommandName>MC Item 2</CommandName>  
-        </Strings>  
-    </Button>  
-    <Button guid="guidTWTestCommandPackageCmdSet" id="cmdidMCItem3" priority="0x0200" type="Button">  
-        <Parent guid="guidTWTestCommandPackageCmdSet" id="TestMenuControllerGroup" />  
-        <Icon guid="guidImages" id="bmpPicSearch" />  
-        <CommandFlag>IconAndText</CommandFlag>  
-        <Strings>  
-            <ButtonText>MC Item 3</ButtonText>  
-            <CommandName>MC Item 3</CommandName>  
-        </Strings>  
-    </Button>  
-    ```  
+6. V tomto okamžiku můžete si prohlédnout kontroleru nabídky. Sestavte projekt a spusťte ladění. Měli byste vidět experimentální instanci aplikace.  
   
-6.  V tomto okamžiku můžete prohlížet řadičem nabídky. Sestavte projekt a spusťte ladění. Měli byste vidět experimentální instanci.  
+   1. Na **zobrazení / ostatní Windows** nabídce otevřete **testovací třídy ToolWindow**.  
   
-    1.  Na **zobrazení nebo ostatní okna** nabídce otevřete **okno Test nástrojů**.  
+   2. Kontroleru nabídky se zobrazí na panelu nástrojů v okně nástroje.  
   
-    2.  Řadiče nabídky se zobrazí na panelu nástrojů v okně nástroje.  
+   3. Klikněte na šipku na pravé straně kontroleru nabídky se zobrazí tři možné příkazy.  
   
-    3.  Klikněte na šipku na pravé straně nabídky řadiče se tři možné příkazy.  
+      Všimněte si, že po kliknutí na příkaz, názvu kontroleru nabídky mění k zobrazení tohoto příkazu. V další části přidáme kód pro aktivaci těchto příkazů.  
   
-     Všimněte, že když kliknete příkaz, název nabídky řadiče změní k zobrazení tohoto příkazu. V další části přidáme kód pro aktivaci těchto příkazů.  
+## <a name="implement-the-menu-controller-commands"></a>Implementace příkazy kontroleru nabídky  
   
-## <a name="implementing-the-menu-controller-commands"></a>Implementace řadiče příkazy nabídky  
-  
-1.  V TWTestCommandPackageGuids.cs přidejte po existující příkaz ID ID příkazu pro vaše položky tři nabídky.  
+1.  V *TWTestCommandPackageGuids.cs*, přidejte ID příkazu pro vaše položky nabídky tři po příkazu existující identifikátory.  
   
     ```csharp  
     public const int cmdidMCItem1 = 0x130;  
@@ -122,13 +121,13 @@ Tento názorný postup je založený na [přidání panelu nástrojů na okno n�
     public const int cmdidMCItem3 = 0x132;  
     ```  
   
-2.  V TWTestCommand.cs přidejte následující kód v horní části třídy TWTestCommand.  
+2.  V *TWTestCommand.cs*, přidejte následující kód v horní části `TWTestCommand` třídy.  
   
     ```csharp  
     private int currentMCCommand; // The currently selected menu controller command  
     ```  
   
-3.  V konstruktoru TWTestCommand po posledním volání `AddCommand` metoda, přidat kód pro směrování události pro každý příkaz prostřednictvím stejné obslužné rutiny.  
+3.  V konstruktoru TWTestCommand po posledním volání `AddCommand` metodu, přidejte kód pro směrování událostí pro každý příkaz prostřednictvím stejné obslužné rutiny.  
   
     ```csharp  
     for (int i = TWTestCommandPackageGuids.cmdidMCItem1; i <=  
@@ -149,7 +148,7 @@ Tento názorný postup je založený na [přidání panelu nástrojů na okno n�
     }  
     ```  
   
-4.  Přidání obslužné rutiny události pro třídu TWTestCommand označit vybraný příkaz jako zaškrtnuté.  
+4.  Přidat obslužnou rutinu události pro **TWTestCommand** třídu Označit vybrané příkazu, kontrolovaný.  
   
     ```csharp  
     private void OnMCItemQueryStatus(object sender, EventArgs e)  
@@ -162,7 +161,7 @@ Tento názorný postup je založený na [přidání panelu nástrojů na okno n�
     }  
     ```  
   
-5.  Přidání obslužné rutiny události, který se zobrazí MessageBox, když uživatel vybere příkaz nabídky řadiče:  
+5.  Přidáte obslužnou rutinu události, která zobrazí prvek MessageBox, když uživatel vybere příkaz na kontroleru nabídky:  
   
     ```csharp  
     private void OnMCItemClicked(object sender, EventArgs e)  
@@ -212,20 +211,20 @@ Tento názorný postup je založený na [přidání panelu nástrojů na okno n�
     }  
     ```  
   
-## <a name="testing-the-menu-controller"></a>Testování řadičem nabídky  
+## <a name="testing-the-menu-controller"></a>Testování kontroleru nabídky  
   
-1.  Sestavte projekt a spusťte ladění. Měli byste vidět experimentální instanci.  
+1.  Sestavte projekt a spusťte ladění. Měli byste vidět experimentální instanci aplikace.  
   
-2.  Otevřete **okno Test nástrojů** na **zobrazení nebo ostatní okna** nabídky.  
+2.  Otevřít **testovací třídy ToolWindow** na **zobrazení / ostatní Windows** nabídky.  
   
-     Řadičem nabídky se zobrazí na panelu nástrojů v okně nástroje a zobrazí **MC položka 1**.  
+     Kontroleru nabídky se zobrazí na panelu nástrojů v okně nástroje a zobrazí **MC položka 1**.  
   
-3.  Klikněte na tlačítko řadiče nabídce nalevo na šipku.  
+3.  Klikněte na tlačítko kontroleru nabídky na levé straně na šipku.  
   
-     Měli byste vidět tři položky, první z nich je vybraná a kolem jeho ikonu obdélník zvýraznění. Klikněte na tlačítko **MC položky 3**.  
+     Měli byste vidět tři položky se vybere první z nich a má pole zvýraznění kolem jeho ikonu. Klikněte na tlačítko **MC položky 3**.  
   
-     Zobrazí se dialogové okno se zprávou **jste vybrali nabídky řadiče 3 položky**. Všimněte si, zda zpráva odpovídá na text na tlačítku řadiče nabídky. Tlačítko nabídky řadiče teď zobrazuje **3 položky MC**.  
+     Zobrazí se dialogové okno se zprávou **vyberete kontroleru nabídky 3 položky**. Všimněte si, že zpráva odpovídá text na tlačítku kontroleru nabídky. Tlačítko nabídky řadiče se teď zobrazují **3 položky MC**.  
   
-## <a name="see-also"></a>Viz také  
- [Přidávání panelů nástrojů do okno nástroje](../extensibility/adding-a-toolbar-to-a-tool-window.md)   
+## <a name="see-also"></a>Viz také:  
+ [Přidání panelu nástrojů do panelu nástrojů](../extensibility/adding-a-toolbar-to-a-tool-window.md)   
  [Přidání panelu nástrojů](../extensibility/adding-a-toolbar.md)

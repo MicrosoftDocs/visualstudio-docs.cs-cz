@@ -1,7 +1,7 @@
 ---
-title: Publikování na web - Visual Studio | Microsoft Docs
+title: Publikovat na web
 ms.custom: ''
-ms.date: 11/22/2017
+ms.date: 06/22/2018
 ms.technology: vs-ide-deployment
 ms.topic: quickstart
 helpviewer_keywords:
@@ -12,66 +12,48 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 176bb028d176ce789977149f9e0380bf1ca284fc
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 036d7549995f79808142c3a0a64e7e5f2075df2c
+ms.sourcegitcommit: 8ee7efb70a1bfebcb6dd9855b926a4ff043ecf35
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39077500"
 ---
-# <a name="publish-a-web-app-or-a-net-core-app-to-a-web-site-using-the-visual-studio-publish-tool"></a>Publikování webu pomocí nástroje Visual Studio publikovat webovou aplikaci nebo aplikaci .NET Core
+# <a name="publish-a-web-app-to-a-web-site-using-visual-studio"></a>Publikování webové aplikace na webu pomocí sady Visual Studio
 
-Můžete použít **publikovat** nástroj pro publikování aplikací ASP.NET pro web.
+Můžete použít **publikovat** nástroj pro publikování aplikací ASP.NET, ASP.NET Core, .NET Core a Python na web ze sady Visual Studio. Pro Node.js kroky jsou podporované, ale uživatelské rozhraní se liší.
 
-Tento postup platí pro technologii ASP.NET, ASP.NET Core, .NET Core a Python aplikace v sadě Visual Studio. Pro platformu Node.js kroky jsou podporované, ale uživatelské rozhraní se liší.
+[!INCLUDE [quickstart-prereqs](includes/quickstart-prereqs.md)]
 
-## <a name="create-a-new-project"></a>Vytvoření nového projektu 
+## <a name="publish-to-a-web-site"></a>Publikování na web
 
-1. V sadě Visual Studio, vyberte **soubor > Nový projekt**.
+1. V Průzkumníku řešení klikněte pravým tlačítkem na projekt a zvolte **publikovat** (nebo použijte **sestavení** > **publikovat** položky nabídky).
 
-1. V části **Visual C#** nebo **jazyka Visual Basic**, zvolte **webové**a potom v prostředním podokně vyberte buď **webové aplikace ASP.NET (rozhraní .NET Framework)**nebo (C# pouze) **webové aplikace ASP.NET Core**a potom klikněte na **OK**.
+    ![Příkaz Publikovat v místní nabídce projektu v Průzkumníku řešení](../deployment/media/quickstart-publish.png "tlačítko Publikovat")
 
-1. Zvolte **MVC**, ujistěte se, že **bez ověřování** je vybrána a potom klikněte na **OK**.
+1. Pokud jste dříve nakonfigurovali všech profilů publikování **publikovat** otevře se podokno. Vyberte **vytvořit nový profil**.
 
-1. Zadejte název jako **MyWebApp** a klikněte na tlačítko **OK**.
+1. V **vyberte cíl publikování** dialogového okna zvolte **služby IIS, FTP, atd**.
 
-    Visual Studio vytvoří projekt.
+    ![Zvolte službu IIS, FTP atd](../deployment/media/quickstart-publish-iis-ftp.png "zvolte službu IIS, FTP atd.")
 
-1. Zvolte **sestavení > Sestavit řešení** a tím projekt sestavit.
+1. Vyberte **publikovat**. Zobrazí se dialogové okno s nastavením publikování profilu.
 
-## <a name="publish-to-a-web-site"></a>Publikování na webu.
+    ![Vyberte složku](../deployment/media/quickstart-publish-settings-web.png "výběr složky")
 
-1. V Průzkumníku řešení klikněte pravým tlačítkem na projekt a zvolte **publikovat**.
+1. V **metodu publikování** zvolte jako metodu **Webdeploy** nebo **FTP**. Nastavení, která se zobrazí vedle odpovídají publikování metodu. Nástroj nasazení webu zjednodušuje nasazení webové aplikace a weby pro servery služby IIS a musí být nainstalovaná jako aplikace na serveru. Použití [instalačního programu webové platformy](https://www.microsoft.com/web/downloads/platform.aspx) k její instalaci.
 
-    ![Zvolte publikování](../deployment/media/quickstart-publish-aspnet.png "zvolte publikování")
-
-1. V **publikovat** podokně vyberte **služby IIS, FTP, atd**.
-
-    ![Zvolte služby IIS, FTP, atd.](../deployment/media/quickstart-publish-iis-ftp.png "zvolte služby IIS, FTP, atd.")
-
-1. Klikněte na tlačítko **publikování**.
-
-    Profil publikování nastavení, které se otevře se dialogové okno.
-
-    ![Vyberte složku,](../deployment/media/quickstart-publish-settings-web.png "vyberte složku,")
-
-1. V **metodu publikování** pole, jako například vybrat metodu **Web Deploy** nebo **FTP**.
-
-    Nastavení, která se zobrazí vedle odpovídají způsob publikování.
-
-1. Nakonfigurujte požadovaná nastavení pro metodu publikování a klikněte na tlačítko **ověřit připojení**.
-
-    Pokud je k dispozici server nebo cíl a správnost nastavení, zobrazí se zpráva s oznámením, připojení se ověří a jste připraveni k publikování.
+1. Nakonfigurujte požadovaná nastavení pro metodu publikování a vyberte **ověřit připojení**. Pokud je k dispozici server nebo cíl a nastavení jsou správné, zprávu, která označuje, připojení se ověří a jste připraveni publikovat.
 
     ![Ověření připojení k](../deployment/media/quickstart-publish-web-deploy.png "ověření připojení k")
 
-1. Pokud chcete konfigurovat další nastavení nasazení, klikněte na tlačítko **nastavení**.
+1. Vyberte **nastavení** nakonfigurovat další nastavení nasazení, jako je například, jestli se má nasadit konfigurace ladění nebo uvolnění a pak vyberte **Uložit**. Pokud ladíte vzdáleně, není nutná konfigurace ladění.
 
-    Můžete nakonfigurovat možnosti, například zda ladění nebo verze konfigurace nasazení a pak klikněte na tlačítko **Uložit**. Pokud ladíte vzdáleně, není potřeba konfiguraci ladění.
-
-1. Chcete-li publikovat, klikněte na tlačítko **publikovat**.
-
-    Ve výstupním okně zobrazuje průběh nasazení a výsledky.
+1. Chcete-li publikovat, vyberte **publikovat**. V okně výstupu se zobrazí nasazení průběh a výsledky.
 
 ## <a name="next-steps"></a>Další kroky
 
-- [Nasazení technologie ASP.NET do služby IIS](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)
+V tomto rychlém startu jste zjistili, jak pomocí sady Visual Studio k vytvoření profilu publikování. Můžete také nakonfigurovat publikování profilu pomocí importu nastavení publikování.
+
+> [!div class="nextstepaction"]
+> [Import nastavení publikování a nasazení do služby IIS](tutorial-import-publish-settings-iis.md)

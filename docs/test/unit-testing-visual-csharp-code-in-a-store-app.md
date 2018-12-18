@@ -1,6 +1,7 @@
 ---
-title: Testování kódu Visual C# v sadě Visual Studio částí | Microsoft Docs
+title: Testování jednotek kódu Visual C#
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: gewarren
@@ -8,33 +9,34 @@ manager: douge
 ms.workload:
 - uwp
 author: gewarren
-ms.openlocfilehash: 32f76e3ebd6827ecb9ce0c27fa69b17a3da02f4e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 76c20fb987bb1380cb4d3f00e078aac81f26e89f
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53064851"
 ---
-# <a name="unit-testing-visual-c-code"></a>Kód jazyka Visual C# testování částí
+# <a name="unit-testing-visual-c-code"></a>Testování jednotek kódu Visual C#
 
-Toto téma popisuje jeden způsob, jak vytvářet testy částí pro třídu Visual C# v aplikaci UWP. Třída Rooter ukazuje nepřesných vědomosti limit teoreticky z calculus implementací funkce pro výpočet odhad druhou odmocninu čísla na zadanou mocninu. Matematické výrazy aplikace potom pomocí této funkce můžete zobrazit uživatele fun věcí, které lze provést pomocí matematické.
+Tento článek popisuje jeden ze způsobů vytvoření testů jednotek pro třídy Visual C# v aplikaci UWP. Třída Rooter ukazuje vágní paměti limit teorie z calculus implementací funkce, která vypočítá odhad odmocninu daného čísla. Matematické výrazy aplikace pak pomocí této funkce můžete zobrazit uživateli zábavných věcí, které lze provést s matematickým výrazem.
 
-Toto téma ukazuje, jak používat jako první krok při vývoji testování částí. V tento přístup napíšete testovací metodu, která ověřuje konkrétní chování v systému, která jsou testování a potom napíšete kód, který projde testem. Provedením změn v pořadí podle následujících postupů můžete nechat provést zpětnou Tato strategie prvním zápisu kód, který chcete otestovat a zapište si testování částí.
+Tento článek ukazuje, jak používat jako první krok při vývoji testování částí. V takovém případě napíšete testovací metoda, která ověřuje konkrétní chování v systému, který testujete a potom napíšete kód, který projde testem. Tím, že změny v pořadí podle následujících postupů lze zrušit tuto strategii první zapisovat kód, který chcete otestovat a teprve pak píšete jednotkové testy.
 
-Toto téma také vytvoří jeden řešení sady Visual Studio a samostatné projekty pro testy částí a knihovnu DLL, kterou chcete testovat. Testy jednotek můžete zahrnout taky přímo v projektu knihovny DLL, nebo můžete vytvořit samostatné řešení pro testování částí a knihovny DLL.
+Tento článek vytvoří také jedno řešení sady Visual Studio a samostatné projekty pro testy jednotky a knihovny DLL, který chcete testovat. Můžete také zahrnout jednotkové testy přímo do projektu knihovny DLL, nebo můžete vytvořit samostatné řešení pro testování částí a knihovny DLL.
 
 ## <a name="create-the-solution-and-the-unit-test-project"></a>Vytvoření řešení a projektu testování částí
 
-1. Na **soubor** nabídce zvolte **nový** > **projektu...** .
+1. Na **souboru** nabídce zvolte **nový** > **projektu**.
 
-2. V **nový projekt** dialogové okno, rozbalte seznam **nainstalovaná** > **Visual C#** a zvolte **univerzální pro Windows**. Zvolte **prázdnou aplikaci** ze seznamu šablon projektu.
+2. V **nový projekt** dialogového okna rozbalte **nainstalováno** > **Visual C#** a zvolte **Windows Universal**. Klikněte na tlačítko **prázdnou aplikaci** ze seznamu šablon projektu.
 
-3. Název projektu `Maths` a zajistěte, aby **vytvořit adresář pro řešení** je vybrána.
+3. Pojmenujte projekt `Maths` a ujistěte se, že **vytvořit adresář pro řešení** zaškrtnuto.
 
-4. V Průzkumníku řešení, zvolte název řešení a potom vyberte **přidat** z místní nabídky a potom zvolte **nový projekt**.
+4. V **Průzkumníka řešení**vyberte název řešení, vyberte **přidat** z místní nabídky a klikněte na tlačítko **nový projekt**.
 
-5. V **nový projekt** dialogové okno, rozbalte seznam **nainstalovaná**, pak rozbalte **Visual C#** a zvolte **univerzální pro Windows**. Zvolte **jednotky testování aplikace (univerzální pro Windows)** ze seznamu šablon projektu.
+5. V **nový projekt** dialogového okna rozbalte **nainstalováno**, potom rozbalte **Visual C#** a zvolte **Windows Universal**. Klikněte na tlačítko **aplikace testů jednotek (Universal Windows)** ze seznamu šablon projektu.
 
-6. Otevřete *UnitTest1.cs* v editoru Visual Studio.
+6. Otevřít *UnitTest1.cs* v editoru sady Visual Studio.
 
    ```csharp
    using System;
@@ -58,17 +60,17 @@ Toto téma také vytvoří jeden řešení sady Visual Studio a samostatné proj
 
    Všimněte si, že:
 
-   - Každý test se definuje pomocí <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> atribut. Metoda test musí vracet typ void a nemůže mít žádné parametry.
+   - Každý test se definuje pomocí <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> atribut. Testovací metoda musí vracet typ void a nemůže mít žádné parametry.
 
-   - Test metody musí být v třídě označených pomocí <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> atribut.
+   - Testovací metody musí být ve třídě dekorován <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> atribut.
 
-        Když se testy spouštějí, se vytvoří instance třídy každého testu. Test metody jsou volány v neurčené pořadí.
+        Při spuštění testů, je vytvořena instance každé testovací třídy. Testovací metody jsou zavolány v nespecifikovaném pořadí.
 
-   - Můžete definovat speciální metody, které jsou vyvolány před a po každém modulu, třída nebo metoda. Další informace najdete v tématu [pomocí rozhraní Mstestu při testech jednotek](../test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests.md).
+   - Můžete definovat speciální metody, které jsou vyvolány před a za každého modulu, třídy nebo metody. Další informace najdete v tématu [použít rozhraní MSTest při testech jednotek](../test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests.md).
 
-## <a name="verify-that-the-tests-run-in-test-explorer"></a>Ověřte, zda spustit testy v Průzkumníka testů
+## <a name="verify-that-the-tests-run-in-test-explorer"></a>Ověřte, že testy spustit v Průzkumníku testů
 
-1. Vložte TestMethod1 v některé testovacího kódu **UnitTest1.cs** souboru:
+1. Vložte kód testu v TestMethod1 v *UnitTest1.cs* souboru:
 
    ```csharp
    [TestMethod]
@@ -78,17 +80,17 @@ Toto téma také vytvoří jeden řešení sady Visual Studio a samostatné proj
    }
    ```
 
-   Všimněte si, že <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> třída poskytuje několik statických metod, které můžete ověřit výsledky v testovací metody.
+   Všimněte si, že <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> třída poskytuje několik statických metod, které slouží k ověření výsledků v testovacích metod.
 
-2. Na **Test** nabídce zvolte **spustit** a potom zvolte **spustit všechny**.
+2. Na **testovací** nabídce zvolte **spustit** a klikněte na tlačítko **spustit všechny**.
 
-   K testovacímu projektu vytvoří a spustí. Zobrazí se okno Průzkumníka testů a testovací je uveden v části **předán testy**. Souhrn panelu v dolní části okna poskytuje další informace o vybrané testu.
+   Testovací projekt vytvoří a spustí. **Průzkumníka testů** okno a test je uvedený v části **úspěšné testy**. **Souhrn** poskytuje další podrobnosti o vybrané testovací podokno v dolní části okna.
 
    ![Průzkumník testů](../test/media/ute_cpp_testexplorer_testmethod1.png)
 
-## <a name="add-the-rooter-class-to-the-maths-project"></a>Přidejte do projektu matematické výrazy Rooter – třída
+## <a name="add-the-rooter-class-to-the-maths-project"></a>Přidat třídu Rooter matematické výrazy projektu
 
-1. V Průzkumníku řešení, vyberte **matematické výrazy** název projektu. V místní nabídce vyberte příkaz **přidat**a potom **třída**.
+1. V **Průzkumníka řešení**, zvolte **matematické výrazy** název projektu. V místní nabídce zvolte **přidat**a potom **třídy**.
 
 2. Název souboru třídy *Rooter.cs*.
 
@@ -106,23 +108,23 @@ Toto téma také vytvoří jeden řešení sady Visual Studio a samostatné proj
    }
    ```
 
-   `Rooter` Třída deklaruje konstruktor a `SquareRoot` odhadu metoda.
+   `Rooter` Třída deklaruje konstruktor a `SquareRoot` estimator metody.
 
-4. `SquareRoot` Metoda je pouze minimální implementace, právě dostatek otestovat základní strukturu testování instalačního programu.
+4. `SquareRoot` Pouze minimální implementaci, je metoda právě takové, aby test základní struktura nastavení testování.
 
-## <a name="couple-the-test-project-to-the-app-project"></a>Několik k testovacímu projektu do projektu aplikace
+## <a name="couple-the-test-project-to-the-app-project"></a>Několik testů projektu do projektu aplikace
 
-1. Do projektu RooterTests přidáte odkaz na aplikaci matematické výrazy.
+1. Přidáte odkaz na aplikaci matematické výrazy RooterTests projektu.
 
-    1. V Průzkumníku řešení, vyberte **RooterTests** projektu a potom zvolte **přidat odkaz na...**  v místní nabídce.
+    1. V **Průzkumníka řešení**, zvolte **RooterTests** projektu a klikněte na tlačítko **přidat odkaz** v místní nabídce.
 
-    2. V **přidat odkaz - RooterTests** dialogové okno, rozbalte seznam **řešení** a zvolte **projekty**. Vyberte **matematické výrazy** položky.
+    2. V **přidat odkaz - RooterTests** dialogového okna rozbalte **řešení** a zvolte **projekty**. Vyberte **matematické výrazy** položky.
 
         ![Přidat odkaz na projekt matematické výrazy](../test/media/ute_cs_windows_addreference.png)
 
-2. Přidat používat příkaz, který má *UnitTest1.cs* souboru:
+2. Přidat sadu pomocí příkazu *UnitTest1.cs* souboru:
 
-    1. Otevřete *UnitTest1.cs*.
+    1. Otevřít *UnitTest1.cs*.
 
     2. Přidejte tento kód níže `using Microsoft.VisualStudio.TestTools.UnitTesting;` řádku:
 
@@ -146,17 +148,17 @@ Toto téma také vytvoří jeden řešení sady Visual Studio a samostatné proj
 
 4. Sestavte řešení.
 
-   Nový test se zobrazí v Průzkumníku testování v **není spuštění testů** uzlu.
+   Nový test se zobrazí v **Průzkumníka testů** v **nespuštěné testy** uzlu.
 
-5. V Průzkumníku testu zvolte **spustit všechny**.
+5. V **Průzkumník testů**, zvolte **spustit všechny**.
 
-   ![Základní Test proběhl úspěšně.](../test/media/ute_cpp_testexplorer_basictest.png)
+   ![Základní Test proběhl úspěšně](../test/media/ute_cpp_testexplorer_basictest.png)
 
-Máte nastavení testu a projektů kód a ověřit, že můžete spustit testy, které běží funkce v projektu kódu. Teď můžete začít zapisovat skutečné testy a kódu.
+Máte nastavení testu a kódové projekty a ověřit, že je možné spustit testy, na kterých běží funkce v projektu kódu. Teď můžete začít psát skutečné testů a kódu.
 
-## <a name="iteratively-augment-the-tests-and-make-them-pass"></a>Opakované posílení testy a ujistěte se, je předat
+## <a name="iteratively-augment-the-tests-and-make-them-pass"></a>Využívejte iterativní posílit testy a daly se předat
 
-1. Přidejte nový test:
+1. Přidáte nový test:
 
    ```csharp
    [TestMethod]
@@ -174,20 +176,20 @@ Máte nastavení testu a projektů kód a ověřit, že můžete spustit testy, 
    ```
 
    > [!TIP]
-   > Doporučujeme neměnit testy, které uplynuly. Místo toho přidejte nový test, aktualizujte kód tak, aby test bude provedeno úspěšně a poté přidejte jiného testu, a tak dále.
+   > Doporučujeme neměňte testy, které prošly. Místo toho přidat nový test, aktualizovat kód tak, aby byl test úspěšný a pak přidejte jiného testu, a tak dále.
    >
-   > Pokud vaši uživatelé změnit jejich požadavky, zakažte testy, které již nejsou správné. Zápis nových testů a jejich fungování jeden po druhém, stejným způsobem jako přírůstkové.
+   > Pokud uživatelé změní své požadavky, zakážete testy, které už nejsou správné. Psát nové testy a jejich fungování postupně, přírůstkové stejně.
 
-2. V Průzkumníku testu zvolte **spustit všechny**.
+2. V **Průzkumník testů**, zvolte **spustit všechny**.
 
 3. Test se nezdaří.
 
    ![RangeTest selže](../test/media/ute_cpp_testexplorer_rangetest_fail.png)
 
    > [!TIP]
-   > Ihned po jste napsali ho, ověřte, že každý test se nezdaří. To umožňuje vyhnout se snadno chybu zápisu testu, který nikdy selže.
+   > Ihned poté, co jste ho napsali, ověřte, že každý test se nezdaří. To umožňuje vyhnout se snadno chybu zápisu test, který se nikdy selže.
 
-4. Vylepšení testovaného kódu tak, aby nový test předá. Změna `SquareRoot` fungovat v *Rooter.cs* k tomuto:
+4. Vylepšete testovaného kódu tak, aby nový test byl úspěšný. Změnit `SquareRoot` fungovat v *Rooter.cs* tomuto:
 
    ```csharp
    public double SquareRoot(double x)
@@ -204,16 +206,16 @@ Máte nastavení testu a projektů kód a ověřit, že můžete spustit testy, 
    }
    ```
 
-5. Sestavte řešení a potom v **Průzkumníka testů**, zvolte **spustit všechny**.
+5. Sestavte řešení a potom v **Průzkumník testů**, zvolte **spustit všechny**.
 
-   Všechny tři testy teď předat.
+   Všechny tři testy jsou nyní úspěšné.
 
 > [!TIP]
-> Vývoj kódu přidáním testy jeden najednou. Ujistěte se, že všechny testy byly úspěšné po každé iteraci.
+> Vývoj kódu tak, že přidáte testy jeden po druhém. Ujistěte se, že všechny testy jsou úspěšné po každé iteraci.
 
-## <a name="debug-a-failing-test"></a>Ladění selhání testu
+## <a name="debug-a-failing-test"></a>Ladit test chybou
 
-1. Přidání jiného testu na *UnitTest1.cs*:
+1. Přidat jiného testu k *UnitTest1.cs*:
 
     ```csharp
     // Verify that negative inputs throw an exception.
@@ -245,21 +247,21 @@ Máte nastavení testu a projektů kód a ověřit, že můžete spustit testy, 
     }
     ```
 
-2. V **Průzkumníka testů**, zvolte **spustit všechny**.
+2. V **Průzkumník testů**, zvolte **spustit všechny**.
 
-   Test se nezdaří. Zvolte název testu v **testování Explorer**. Je označený selhání kontrolního výrazu. Zpráva o neúspěšném zpracování je zobrazen v podokně podrobností **Průzkumníka testů**.
+   Test se nezdaří. Zvolte název testu v **Průzkumníka testů**. Neplatnost kontrolního výrazu je zvýrazněn. Zpráva o selhání je viditelný v podokně podrobností **Průzkumník testů**.
 
    ![NegativeRangeTests se nezdařilo](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png)
 
-3. Chcete-li zjistit, proč test se nezdaří, kroku prostřednictvím funkce:
+3. Chcete-li zjistit, proč se test nezdaří, kroku pomocí funkce:
 
-    1. Nastavit zarážky na začátku `SquareRoot` funkce.
+    1. Nastavit zarážku na začátku `SquareRoot` funkce.
 
-    2. V místní nabídce selhání testu, zvolte **ladění vybrané testy**.
+    2. V místní nabídce neúspěšných testů, zvolte **ladit vybrané testy**.
 
-        Při spuštění, zastavení u zarážky, projděte kód.
+        Při spuštění se zastaví na zarážce, krokovat kód.
 
-    3. Přidejte kód do metody Rooter k zachycení výjimky:
+    3. Přidejte kód do metody Rooter pro zachycení výjimky:
 
         ```csharp
         public double SquareRoot(double x)
@@ -270,13 +272,13 @@ Máte nastavení testu a projektů kód a ověřit, že můžete spustit testy, 
         }
         ```
 
-4. V Průzkumníku otestovat, zvolte **spustit všechny** test opravené metody a ujistěte se, že nebyla zavedena regrese.
+4. V **Průzkumníka testů**, zvolte **spustit všechny** testovací metoda opravené a ujistěte se, že nebyla zavedena regrese.
 
-Všechny testy byly úspěšné teď.
+Všechny testy jsou nyní úspěšné.
 
 ![Všechny testy byly úspěšné](../test/media/ute_ult_alltestspass.png)
 
-## <a name="refactor-the-code"></a>Refaktorovat kód
+## <a name="refactor-the-code"></a>Refaktorování kódu
 
 **Zjednodušení centrální výpočtu ve funkci SquareRoot.**
 
@@ -289,16 +291,16 @@ Všechny testy byly úspěšné teď.
     result = (result + v/result) / 2.0;
     ```
 
-2. Zvolte **spustit všechny** test refactored metody a ujistěte se, že nebyla zavedena regrese.
+2. Zvolte **spustit všechny** testovací metoda refaktorovaný a ujistěte se, že nebyla zavedena regrese.
 
 > [!TIP]
-> Stabilní sadu testů pro funkční jednotku poskytuje jistotu, že nebyla zavedena chyby při změně kódu.
+> Se spouští stabilní sada testů jednotek dobré poskytuje jistotu, že nebyly zavedeny chyby při změně kódu.
 
-**Refaktorovat testovacího kódu eliminovat duplicitní kódu.**
+**Testovací kód Refaktorujte k vyloučení duplicitním kódem.**
 
-Všimněte si, že `RangeTest` metoda pevný kódy jmenovatele `tolerance` proměnné, která je předána <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> metoda. Pokud máte v plánu přidat další testy, které používají stejný výpočet tolerance, použití hodnotu pevně zakódovaná na více místech může vést k chyby.
+Všimněte si, že `RangeTest` metoda pevné kódů jmenovatele `tolerance` proměnné, která je předána <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> metoda. Pokud budete chtít přidat další testy, které používají stejný výpočet proti chybám, použijte hodnotu pevně zakódované v několika umístěních může vést k chybám.
 
-1. Přidejte privátní metodu do třídy Unit1Test k výpočtu hodnoty tolerance a pak místo toho volat tuto metodu.
+1. Přidejte privátní metodu do třídy Unit1Test pro výpočet hodnoty proti chybám a místo toho volejte tuto metodu.
 
     ```csharp
     private double ToleranceHelper(double expected)
@@ -321,7 +323,7 @@ Všimněte si, že `RangeTest` metoda pevný kódy jmenovatele `tolerance` prom�
     ...
     ```
 
-2. Zvolte **spustit všechny** test refactored metody a ujistěte se, že nebyla zavedena k chybě.
+2. Zvolte **spustit všechny** testovací metoda refaktorovaný a ujistěte se, že nebyla zavedena chybu.
 
 > [!NOTE]
-> Když přidáte pomocnou metodu testovací třídu, která nechcete, aby se objeví v **testování Explorer**, nepřidávejte <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> atribut do metody.
+> Pokud přidáte pomocnou metodu na testovací třídu, která nechcete, aby se zobrazí v **Průzkumníka testů**, nepřidávejte <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> atribut do metody.

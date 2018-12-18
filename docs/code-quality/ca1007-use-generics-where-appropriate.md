@@ -1,6 +1,7 @@
 ---
 title: 'CA1007: Použijte obecné typy, kde je to vhodné'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -13,15 +14,20 @@ ms.assetid: eab780ea-3b1f-4d32-b15a-5d48da2df46b
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 4aa1bb976cdbcc3d3b97e463ce0076bccdd26ba6
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d3e03c1028dc310748aff7c8263ce75ace9985be
+ms.sourcegitcommit: 568bb0b944d16cfe1af624879fa3d3594d020187
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45551729"
 ---
 # <a name="ca1007-use-generics-where-appropriate"></a>CA1007: Použijte obecné typy, kde je to vhodné
+
 |||
 |-|-|
 |TypeName|UseGenericsWhereAppropriate|
@@ -30,19 +36,19 @@ ms.lasthandoff: 04/19/2018
 |Narušující změna|Narušující|
 
 ## <a name="cause"></a>příčina
- Externě viditelné metoda obsahuje odkaz na parametr typu <xref:System.Object?displayProperty=fullName>a obsahující sestavení cíle [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)].
+ Externě viditelná metoda obsahuje referenční parametr typu <xref:System.Object?displayProperty=fullName>a obsahující cíle sestavení [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)].
 
 ## <a name="rule-description"></a>Popis pravidla
- Parametr odkazu je parametr, který je změnit pomocí `ref` (`ByRef` v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) – klíčové slovo. Argument typu, který je pro parametr odkazu musí přesně shodovat s typem parametru odkazu. Pokud chcete použít typ, který je odvozený od typu parametru odkazu, typ musíte nejprve být přetypování a přiřazený k proměnné parametrů typu odkazu. Obecná metoda umožňuje všechny typy vztahují omezení, mají být předány metodě bez první přetypování typ pro parametr typu odkazu.
+ Odkaz na parametr je parametr, který je upraven pomocí `ref` (`ByRef` v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) – klíčové slovo. Typ argumentu, který je zadán pro referenční parametr musí přesně odpovídat na referenční typ parametru. Pokud chcete použít typ, který je odvozen z parametrů typu odkazu, typ musí nejprve být přetypování a přiřazen proměnné typu odkazu, parametr. Použití generické metody umožňuje všechny typy v souladu s omezením, které se mají předat metodě bez předchozího přetypování typu na referenční typ parametru.
 
 ## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
- Chcete-li opravit porušení toto pravidlo, zkontrolujte obecná metoda a nahraďte <xref:System.Object> parametru pomocí typu parametru.
+ Chcete-li opravit porušení tohoto pravidla, ujistěte se, metoda obecný a nahraďte <xref:System.Object> parametru pomocí typu parametru.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
  Nepotlačujte upozornění na toto pravidlo.
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje rutinou pro obecné účely odkládacího souboru, která je implementovaná jako neobecné a obecné metody. Všimněte si, jak efektivně řetězce jsou vzájemně zaměněny pomocí obecná metoda ve srovnání s neobecné metoda.
+ Následující příklad ukazuje rutinu prohození pro obecné účely, která je implementována jako neobecné a obecné metody. Všimněte si, jak efektivní jsou přehozeny řetězců s použitím ve srovnání s neobecnou metodu obecnou metodu.
 
  [!code-vb[FxCop.Design.UseGenerics#1](../code-quality/codesnippet/VisualBasic/ca1007-use-generics-where-appropriate_1.vb)]
  [!code-csharp[FxCop.Design.UseGenerics#1](../code-quality/codesnippet/CSharp/ca1007-use-generics-where-appropriate_1.cs)]
@@ -62,5 +68,5 @@ ms.lasthandoff: 04/19/2018
 
  [CA1003: Použijte instance obecných obslužných rutin události](../code-quality/ca1003-use-generic-event-handler-instances.md)
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
  [Obecné typy](/dotnet/csharp/programming-guide/generics/index)

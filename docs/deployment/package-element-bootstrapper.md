@@ -1,5 +1,5 @@
 ---
-title: '&lt;Balíček&gt; – Element (zaváděcího nástroje) | Microsoft Docs'
+title: '&lt;Balíček&gt; – Element (zaváděcí nástroj) | Dokumentace Microsoftu'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -17,18 +17,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c04676f03f4734a25601e772208939e0b3f8482d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 49867ddc897a9c1a1241a891a3ba3de866d84688
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49899237"
 ---
-# <a name="ltpackagegt-element-bootstrapper"></a>&lt;Balíček&gt; – Element (zaváděcího nástroje)
-`Package` Element je element XML nejvyšší úrovně v rámci souboru balíčku.  
-  
+# <a name="ltpackagegt-element-bootstrapper"></a>&lt;Balíček&gt; – element (zaváděcí nástroj)
+`Package` Prvek je element XML nejvyšší úrovně v rámci souboru balíčku.  
+
 ## <a name="syntax"></a>Syntaxe  
-  
-```  
+
+```xml  
 <Package  
     Culture  
     Name  
@@ -74,7 +75,7 @@ ms.lasthandoff: 04/19/2018
             SearchDepth  
         />  
     </InstallChecks>  
-  
+
     <Commands  
         Reboot  
     >  
@@ -110,7 +111,7 @@ ms.lasthandoff: 04/19/2018
             </ExitCodes>  
         </Command>  
     </Commands>  
-  
+
     <PackageFiles  
         CopyAllComponents  
     >  
@@ -121,14 +122,14 @@ ms.lasthandoff: 04/19/2018
             PublicKey  
         />  
     </PackageFiles>  
-  
+
     <Strings>  
         <String  
             Name  
         >  
         </String>  
     </Strings>  
-  
+
     <Schedules>  
         <Schedule  
             Name  
@@ -140,33 +141,34 @@ ms.lasthandoff: 04/19/2018
     </Schedules>  
 </Package>  
 ```  
-  
+
 ## <a name="elements-and-attributes"></a>Elementy a atributy  
- `Package` Prvek je nutný. Má následující atributy.  
-  
-|Atribut|Popis|  
-|---------------|-----------------|  
-|`Culture`|Požadováno. Definuje jazykovou verzi pro tento balíček, který určuje jazyk, který se má použít. Tento atribut je klíč do `Strings` element, který obsahuje seznam řetězců specifické pro jazykovou verzi pro názvy produktů a chybové zprávy během instalace.|  
-|`Name`|Požadováno. Název balíčku zobrazený vývojáři v rámci nástroje, jako [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Tento atribut je klíč do `Strings` element, který by měl obsahovat `String` element s `Name` a `Culture` nastavit vlastnosti tak, aby odpovídala `Name` a `Culture` vlastnosti `Package`.|  
-|`LicenseAgreement`|Volitelné. Určuje název souboru v balíčku pro distribuci, který obsahuje licenční smlouvy s koncovým uživatelem (EULA).  Tento soubor může být prostý text (TXT) nebo formátu RTF. (.rtf)|  
-  
+ `Package` Je vyžadován element. Má následující atributy.  
+
+
+| Atribut | Popis |
+|--------------------| - |
+| `Culture` | Požadováno. Určuje jazykovou verzi pro tento balíček, který určuje jazyk, který chcete použít. Tento atribut je klíč do `Strings` element, který obsahuje seznam řetězců specifické pro jazykovou verzi pro názvy produktů a chybové zprávy během instalace. |
+| `Name` | Požadováno. Název balíčku zobrazeného vývojářům v rámci nástroje, jako [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Tento atribut je klíč do `Strings` element, který by měl obsahovat `String` element s `Name` a `Culture` vlastnosti nastavené tak, aby odpovídaly `Name` a `Culture` vlastnosti `Package`. |
+| `LicenseAgreement` | Volitelné. Určuje název souboru v distribuci balíčku, který obsahuje licenční smlouvy s koncovým uživatelem (EULA).  Tento soubor může být prostý text (*.txt*) nebo formátu RTF. (*.rtf*) |
+
 ## <a name="example"></a>Příklad  
- Následující příklad kódu ukazuje soubor kompletní balíček pro Redistribuce [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)].  
-  
-```  
+ Následující příklad kódu ukazuje kompletní soubor balíčku pro redistribuci [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)].  
+
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
-  
+
 <Package  
   xmlns="http://schemas.microsoft.com/developer/2004/01/bootstrapper"  
   Name="DisplayName"  
   Culture="Culture"  
   LicenseAgreement="eula.rtf"  
 >  
-  
+
     <PackageFiles>  
         <PackageFile Name="eula.rtf"/>  
     </PackageFiles>  
-  
+
     <!-- Defines a localizable string table for error messages-->  
     <Strings>  
         <String Name="DisplayName">.NET Framework 2.0</String>  
@@ -184,9 +186,9 @@ ms.lasthandoff: 04/19/2018
         <String Name="InstMsiAExe">http://go.microsoft.com/fwlink/?LinkId=37285</String>  
         <String Name="Msi30Exe">http://go.microsoft.com/fwlink/?LinkId=37287</String>  
     </Strings>  
-  
+
 </Package>  
 ```  
-  
-## <a name="see-also"></a>Viz také  
- [Referenční schéma balíčku a produktu](../deployment/product-and-package-schema-reference.md)
+
+## <a name="see-also"></a>Viz také:  
+ [Referenční dokumentace schématu produktů a balíčků](../deployment/product-and-package-schema-reference.md)

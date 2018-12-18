@@ -1,5 +1,5 @@
 ---
-title: IDebugDocumentText2::GetSize | Microsoft Docs
+title: IDebugDocumentText2::GetSize | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fe37c7157f96a905e52fb6656d5ebb8ff6f4971a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0c62ca1695de65b005fa839c69cbcc02452f1207
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49819664"
 ---
 # <a name="idebugdocumenttext2getsize"></a>IDebugDocumentText2::GetSize
-Velikost textu v této pozici v dokumentu načte.  
+Získá velikost textu na této pozici v dokumentu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,12 +49,12 @@ int GetSize(
  [out] Vrátí počet znaků textu.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- [Pouze C++] Pokud není žádoucí určitou hodnotu, předejte hodnotu NULL pro parametr.  
+ [Jenom C++] Pokud konkrétní hodnoty není žádoucí, předejte hodnotu NULL pro parametr.  
   
- [C# pouze] Musí být zadány oba parametry.  
+ [Jenom v C#] Je třeba zadat oba parametry.  
   
 ## <a name="see-also"></a>Viz také  
  [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md)

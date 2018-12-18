@@ -1,5 +1,5 @@
 ---
-title: Sestavování více projektů současně pomocí nástroje MSBuild | Microsoft Docs
+title: Sestavování více projektů současně pomocí nástroje MSBuild | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -14,41 +14,42 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 164767c628a6b48a3d9479fdd4f7918f12093ea7
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 5c375f9af63f1622df995ca28315048f682c1ca4
+ms.sourcegitcommit: 71218ffc33da325cc1b886f69ff2ca50d44f5f33
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48879002"
 ---
-# <a name="building-multiple-projects-in-parallel-with-msbuild"></a>Paralelní sestavování více projektů současně pomocí nástroje MSBuild
+# <a name="build-multiple-projects-in-parallel-with-msbuild"></a>Sestavování více projektů současně pomocí nástroje MSBuild
 Nástroj MSBuild lze použít pro rychlejší sestavení více projektů tak, že budou tyto projekty spuštěny paralelně. Pro paralelní spuštění sestavení je možné na počítači s více jádry nebo s více procesory použít následující nastavení:  
   
--   Přepínač příkazového řádku `/maxcpucount`.  
+-   Přepínač příkazového řádku `-maxcpucount`.  
   
 -   Parametr úlohy <xref:Microsoft.Build.Tasks.MSBuild.BuildInParallel%2A> na úlohu nástroje MSBuild.  
   
 > [!NOTE]
->  **/Verbosity** (**/v**) přepínače v příkazovém řádku může také ovlivnit výkon sestavení. Výkon sestavení se může snížit, je-li podrobnost informací protokolu sestavení nastavena na možnosti podrobné nebo diagnostické, které se používají pro řešení potíží. Další informace najdete v tématu [získání sestavení protokoly](../msbuild/obtaining-build-logs-with-msbuild.md) a [Reference k příkazovému řádku](../msbuild/msbuild-command-line-reference.md).  
+>  **-Podrobností** (**- v**) přepínač pomocí nástroje příkazového řádku může také ovlivnit výkon sestavení. Výkon sestavení se může snížit, je-li podrobnost informací protokolu sestavení nastavena na možnosti podrobné nebo diagnostické, které se používají pro řešení potíží. Další informace najdete v tématu [získat protokoly o sestavení](../msbuild/obtaining-build-logs-with-msbuild.md) a [odkaz na příkazový řádek](../msbuild/msbuild-command-line-reference.md).  
   
-## <a name="maxcpucount-switch"></a>Přepínač /maxcpucount  
- Použitím přepínače `/maxcpucount` nebo pomocí zkratky `/m` může nástroj MSBuild vytvořit zadaný počet procesů MSBuild.exe, které probíhají souběžně. Tyto procesy jsou známé také jako „pracovní procesy“. Každý pracovní proces používá samostatné jádro nebo procesor – je-li nějaký k dispozici – pro sestavení projektu ve stejnou dobu, kdy ostatní procesory provádějí sestavení ostatních projektů. Například nastavení tohoto přepínače na hodnotu „4“ způsobí, že nástroj MSBuild vytvoří čtyři pracovní procesy pro sestavení projektu.  
+## <a name="-maxcpucount-switch"></a>-maxcpucount přepínače  
+ Pokud používáte `-maxcpucount` přepnout, nebo `-m` zkráceně, může nástroj MSBuild vytvořit zadaný počet *MSBuild.exe* procesy, které můžou běžet paralelně. Tyto procesy jsou známé také jako „pracovní procesy“. Každý pracovní proces používá samostatné jádro nebo procesor – je-li nějaký k dispozici – pro sestavení projektu ve stejnou dobu, kdy ostatní procesory provádějí sestavení ostatních projektů. Například nastavení tohoto přepínače na hodnotu „4“ způsobí, že nástroj MSBuild vytvoří čtyři pracovní procesy pro sestavení projektu.  
   
- Při použití přepínače `/maxcpucount` bez zadání hodnoty použije nástroj MSBuild číslo odpovídající počtu procesorů v počítači.  
+ Při použití přepínače `-maxcpucount` bez zadání hodnoty použije nástroj MSBuild číslo odpovídající počtu procesorů v počítači.  
   
- Další informace o tohoto přepínače, která byla představena v MSBuild 3.5, najdete v části [Reference k příkazovému řádku](../msbuild/msbuild-command-line-reference.md).  
+ Další informace o tomto přepínači, která byla zavedena v MSBuild 3.5, naleznete v tématu [odkaz na příkazový řádek](../msbuild/msbuild-command-line-reference.md).  
   
  Následující příklad nastaví nástroj MSBuild pro použití tří pracovních procesů. Použitím této konfigurace může nástroj MSBuild provádět souběžné sestavení tří projektů.  
   
+```cmd  
+msbuild.exe myproj.proj -maxcpucount:3   
 ```  
-msbuild.exe myproj.proj /maxcpucount:3   
-```  
-  
+
 ## <a name="buildinparallel-task-parameter"></a>Parametr úlohy BuildInParallel  
- `BuildInParallel` je volitelný logický parametr úlohy nástroje [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Když `BuildInParallel` je nastaven na `true` (výchozí hodnota je `false`), k vytvoření projektů, jako jsou v mnoha ve stejnou dobu jako možné se generují několik pracovních procesů. Aby tento postup správně fungoval, musí být přepínač `/maxcpucount` nastaven na hodnotu větší než 1 a systém musí být alespoň dvoujádrový nebo mít dva nebo více procesorů.  
+ `BuildInParallel` je volitelný logický parametr úlohy nástroje [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Když `BuildInParallel` je nastavena na `true` (výchozí hodnota je `false`), více procesů, kolik je vytvořeno pro sestavení tolik projekty ve stejnou dobu jako možný. Aby tento postup správně fungoval, musí být přepínač `-maxcpucount` nastaven na hodnotu větší než 1 a systém musí být alespoň dvoujádrový nebo mít dva nebo více procesorů.  
   
- Následuje příklad z webu microsoft.common.targets o tom, jak nastavit parametr `BuildInParallel`.  
+ Následuje příklad, na základě *cílů microsoft.common.targets*, o tom, jak nastavit `BuildInParallel` parametru.  
   
-```  
+```xml  
 <PropertyGroup>  
     <BuildInParallel Condition="'$(BuildInParallel)' ==   
         ''">true</BuildInParallel>  
@@ -70,7 +71,7 @@ msbuild.exe myproj.proj /maxcpucount:3
 </MSBuild>  
 ```  
   
-## <a name="see-also"></a>Viz také  
+## <a name="see-also"></a>Viz také:  
  [Použití více procesorů k sestavení projektů](../msbuild/using-multiple-processors-to-build-projects.md)   
- [Zápis více-procesorů protokolovacích nástrojů](../msbuild/writing-multi-processor-aware-loggers.md)   
- [Ladění blog paralelismus sestavení C++](http://go.microsoft.com/fwlink/?LinkId=251457)
+ [Zápis více procesorů protokolovacích](../msbuild/writing-multi-processor-aware-loggers.md)   
+ [Ladění blogu paralelismu sestavení C++](http://go.microsoft.com/fwlink/?LinkId=251457)

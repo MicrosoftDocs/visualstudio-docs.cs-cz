@@ -1,5 +1,5 @@
 ---
-title: IDebugComPlusSymbolProvider::GetSymAttribute | Microsoft Docs
+title: IDebugComPlusSymbolProvider::GetSymAttribute | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,14 +14,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 283333c8d505952e36dc8524d1377fd828142aca
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ae9bafa3aa97146abd63cd6f98516632d079bfd3
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49903240"
 ---
 # <a name="idebugcomplussymbolprovidergetsymattribute"></a>IDebugComPlusSymbolProvider::GetSymAttribute
-Načte symboly ladění s danou nadřazený atribut pro zadaný modul.  
+Načte symboly ladění s atributem daná nadřazená pro zadaný modul.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,19 +52,19 @@ int GetSymAttribute (
   
 #### <a name="parameters"></a>Parametry  
  `ulAppDomainID`  
- [v] Identifikátor domény aplikace.  
+ [in] Identifikátor domény aplikace.  
   
  `guidModule`  
- [v] Jedinečný identifikátor modulu.  
+ [in] Jedinečný identifikátor modulu.  
   
  `tokParent`  
- [v] Token pro nadřazený atribut.  
+ [in] Token pro nadřazený atribut.  
   
  `pstrName`  
- [v] Název modulu.  
+ [in] Název modulu.  
   
  `cBuffer`  
- [v] Počet bajtů požadovaných pro výstup `buffer`.  
+ [in] Počet bajtů potřebných pro výstup `buffer`.  
   
  `pcBuffer`  
  [out] Délka výstupu `buffer`.  
@@ -72,7 +73,7 @@ int GetSymAttribute (
  [out] Pole, které obsahuje symboly.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="example"></a>Příklad  
  Následující příklad ukazuje, jak pro tuto metodu implementovat **CDebugSymbolProvider** objekt, který zveřejňuje [IDebugComPlusSymbolProvider](../../../extensibility/debugger/reference/idebugcomplussymbolprovider.md) rozhraní.  

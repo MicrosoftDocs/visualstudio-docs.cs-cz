@@ -7,39 +7,41 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 98038aa6ab09333587abbefcd373bb4aba75f1b3
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 48000bbf05fd15163c0c6f61ff4a13838aaf75b6
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49881739"
 ---
 # <a name="defining-shapes-and-connectors"></a>Definování obrazců a konektorů
-Existuje několik typů základní tvary, které můžete použít k zobrazení informací v diagramu v jazyce specifické pro doménu (DSL).
+Existuje několik typů základní tvary, které můžete použít k zobrazení informací v diagramu v jazyka specifického pro doménu (DSL).
 
-##  <a name="shapeTypes"></a> Základní typy tvarů a konektory
- DSL diagram zobrazuje kolekce *tvarů* vzájemně propojena linkami nebo *konektory*.  Obvykle, ale ne vždy:
+##  <a name="shapeTypes"></a> Základní typy obrazců a konektorů
+ DSL diagram ukazuje kolekci *tvary* vzájemně propojena těmito řádky nebo *konektory*.  Obvykle, ale ne vždy:
 
--   Obrazce jsou viditelné reprezentace prvků modelu.
+- Tvary jsou viditelné reprezentace prvky modelu.
 
--   Spojnice představují referenčních relací.
+- Konektory představují vztahy odkazu.
 
--   Diagram představuje instanci kořenové modelu.
+- Diagram představuje instanci kořenovém modelu.
 
--   Vnoření vztahy mezi elementy modelu jsou uvedeny ve členství ve skupině. Například elementy představující součásti porty jsou vloženy do komponentu.
+- Vkládání vztahy mezi elementy modelu jsou uvedeny ve členství ve skupině. Například prvků, která představuje součást porty jsou vložené v komponentě.
 
- Tyto vzory nejsou vynucená, ale podporovány jsou více důrazně. Při návrhu DSL berte v úvahu, který by měl být návrh vnoření vztahy vliv jak má být k dispozici modelu na obrazovce. Naopak referenční relace by měla odpovídat koncepty vaší firemní domény.
+  Tyto modely nejsou vynucená, ale jsou silněji podporovány. Při návrhu DSL berte v úvahu, který návrh vztahů obsažení by měl být ovlivněno způsob, jak mají být k dispozici modelu na obrazovce. Naopak referenční stavy by měly odrážet koncepty obchodní domény.
 
- K dispozici jsou následující typy tvarů:
+  K dispozici jsou následující typy tvarů:
 
-|Obrazce typu|Popis|
-|----------------|-----------------|
-|Geometrické obrazce|Obecné účely obdélníková nebo eliptické tvaru. Text a ikona dekoratéry můžete zobrazit v konkrétní umístění vůči hranice tvaru.<br /><br /> Vnořit tvarů uvnitř geometrické obrazce, najdete v tématu [vnoření tvarů](../modeling/nesting-shapes.md).|
-|Tvar prostředí|Rámeček obsahující hlavičku a oddílů, jako například třída UML. Každé prostředí může obsahovat seznam řádků textu.<br /><br /> Řádky obvykle představují elementy vložených pod elementem reprezentována tvaru. Příklad vytvořte DSL ze šablony řešení diagramů tříd.|
-|Tvar bitové kopie|Obrazec, který zobrazí obrázek.|
-|Port obrazce|Malé obdélníku navržený tak, aby připojení k obrys jiného obrazce. Obvykle se používá v modelech součásti.<br /><br /> Element modelu reprezentována port je obvykle vložených pod reprezentována tvaru nadřazeného elementu. Příklad vytvořte DSL pomocí šablony řešení součásti.<br /><br /> Ve výchozím nastavení můžete po stranách nadřazené Vysuňte obrazce portu. Můžete definovat rozsah pravidla omezit na konkrétní pozici.<br /><br /> Tím, že port obrazce velmi malé a transparentní, můžete ji zadat pevné spojovací bod na povrch jeho nadřazeného obrazce.|
-|Plaveckých drah|Plaveckých drah oddílu diagram na vodorovné nebo svislé segmenty. Dráha stále pod ostatním tvarům v diagramu.<br /><br /> Obvykle jsou elementy modelu dráha nadřazena v kořenovém adresáři modelu a další elementy jsou nadřazena na ně. Příklad vytvořte DSL ze šablony řešení tok úkolů.|
-|Konektory|Řádky vykreslovat mezi tvary obvykle představují referenčních relací. Můžete nastavit možnosti aby konektor přímá nebo lomené a mít různé typy šipku.|
+|Obrazec typu|Popis|
+|-|-|
+|Obrazec geometrie|Obecné účely obrazec obdélníkové nebo elipsy. Text a ikona dekoratéry můžete zobrazit v konkrétní pozici vzhledem k hranicím tvaru.<br /><br /> Vnoření obrazců uvnitř obrazce geometrie, naleznete v tématu [vnořování obrazců](../modeling/nesting-shapes.md).|
+|Obrazec oddílu|Obdélník, který obsahuje hlavičky a obory, jako je třída UML. Každý oddíl může obsahovat seznam řádků textu.<br /><br /> Řádky představují obvykle prvky vložené v rámci elementu reprezentována tvaru. Příklad vytvoření DSL ze šablony řešení diagramy tříd.|
+|Obrazec obrázku|Obrazec, který zobrazuje obrázek.|
+|Tvar portu|Malý obdélník navržené tak, aby připojení k osnovy jiný tvar. Obvykle se používá v modelech komponenty.<br /><br /> Prvek modelu, který je reprezentován port je obvykle vložený pod element reprezentovaný nadřazeného obrazce. Příklad vytvoření DSL pomocí šablony řešení komponenty.<br /><br /> Ve výchozím nastavení můžete snímek obrazec portu spolu strany svého nadřazeného objektu. Můžete definovat pravidla hranice omezit na konkrétní pozici.<br /><br /> Tím, že obrazec portu velmi malé a transparentní, můžete ho poskytnout pevné spojovacího bodu na povrchu nadřazeného obrazce.|
+|Plaveckých drah|Plaveckých drah diagramu rozdělit do segmentů vodorovně nebo svisle. Plavecké stále pod tvary v diagramu.<br /><br /> Obvykle jsou prvky modelu plavecké nadřazena na kořen modelu a další prvky jsou nadřazena na ně. Příklad vytvoření DSL ze šablony řešení tok úkolů.|
+|Konektory|Čáry dekorace mezi tvary obvykle představují vztahy odkazu. Můžete nastavit možnosti, aby konektor přímá nebo Pravoúhlá a mají různé typy šipky.|
 
 ##  <a name="shapeInheritance"></a> Tvar dědičnosti
- Obrazce může dědit vlastnosti z jiného tvaru. Obrazce však musí být stejného druhu. Například pouze geometrické obrazce dědit z geometrické obrazce. Zděděné obrazce mají přihrádky a dekorátory jejich základní tvaru. Konektory lze dědit z konektorů.
+ Obrazce mohou dědit z jiného obrazce. Tvary však musí být stejného druhu. Například může dědit pouze obrazec geometrie z obrazec geometrie. Zděděné tvary mít oddíly a dekorátory jejich základní obrazec. Konektory mohou dědit z konektorů.

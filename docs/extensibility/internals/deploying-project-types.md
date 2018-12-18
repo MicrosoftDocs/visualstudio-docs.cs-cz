@@ -1,5 +1,5 @@
 ---
-title: Nasazení projektu typy | Microsoft Docs
+title: Nasazování typů projektů | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,17 +14,18 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 12af8607dd1561a4a2561cc688d2bb4ba0f07c88
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4bed37260925d4961ed5b5b7d3e69d55169444ad
+ms.sourcegitcommit: 1c2ed640512ba613b3bbbc9ce348e28be6ca3e45
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39497898"
 ---
-# <a name="deploying-project-types"></a>Nasazení typy projektů
-[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] nainstaluje nový agregátor typu projektu (ProjectAggregator2.dll) a také balíček Instalační služby systému Windows pro opětovnou distribuci (ProjectAggregator2.msi). Je nutné použít nový agregátor pro typy projektů spravovaného kódu. ProjectAggregator2 funguje postupy omezení [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] projektu agregátoru, které zabrání typy projektů spravovaného kódu z funguje správně. Následující kroky popisují, jak chcete-li změnit váš VSPackage používat se novému agregátoru.  
+# <a name="deploy-project-types"></a>Nasazování typů projektů
+[!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] nainstaluje nový agregátor typu projektu (*ProjectAggregator2.dll*) a také balíček Instalační služby systému Windows pro automatické distribuce signatur (*ProjectAggregator2.msi*). Je nutné použít nový agregátor pro typy projektů spravovaného kódu. ProjectAggregator2 obejde omezení [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] projektu agregátorem, který brání typy projektů spravovaný kód podle vašich představ. Následující kroky popisují, jak změnit vašeho balíčku VSPackage pro použití se novému agregátoru.  
   
-1.  Projekt NativeHierarchyWrapper odeberte z vašeho řešení.  
+1.  Odeberte projekt NativeHierarchyWrapper z vašeho řešení.  
   
-2.  Odeberte všechny binární soubory NativeHierarchyWrapper z vašeho nastavení.  
+2.  Odebrání binárních souborů NativeHierarchyWrapper vašeho nastavení.  
   
-3.  Přidejte ProjectAggregator2.msi do vašeho nastavení.
+3.  Přidat *ProjectAggregator2.msi* do vašeho nastavení.

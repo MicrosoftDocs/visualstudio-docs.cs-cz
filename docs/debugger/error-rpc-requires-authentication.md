@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31471613"
 ---
 # <a name="error-rpc-requires-authentication"></a>Chyba: RPC vyžaduje ověření.
 Ladicí program Visual Studio se nemůže připojit ke vzdálenému počítači. Zásada protokolu RPC je povoleno v místním počítači, což zabraňuje vzdálené ladění.  

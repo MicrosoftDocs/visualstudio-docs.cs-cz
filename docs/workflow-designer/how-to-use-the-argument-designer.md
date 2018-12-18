@@ -1,7 +1,9 @@
 ---
-title: 'Postupy: používání Argument Designer | Microsoft Docs'
+title: 'Návrhář postupu provádění - postupy: používání Argument Designer'
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - System.Activities.Presentation.View.ArgumentDesigner.UI
 - System.Activities.Presentation.View.DesignTimeArgument.UI
@@ -11,18 +13,20 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b5f4af6e06bbebe3f543deed68ff85f4cd0a39be
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 868fc13474e90be219cf1acebc00074641df142e
+ms.sourcegitcommit: 30f653d9625ba763f6b58f02fb74a24204d064ea
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36755519"
 ---
 # <a name="how-to-use-the-argument-designer"></a>Postupy: používání Argument Designer
-Ve srovnání s předchozí verzí technologie [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)], argument designer usnadňuje povolit datový tok do a z aktivity. Návrhář přistupuje kliknutím **argumenty** tlačítko v levém horním rohu na plátno návrhu. Návrhář obsahuje seznam argumentů, které jsou uvedeny ve formě tabulky a lze seřadit podle jednotlivých záhlaví sloupců, s výjimkou **výchozí hodnota** sloupce. Všechny argumenty obsahuje název, směr v nebo na více systémů/v – out nebo vlastnost, typ a výchozí hodnota výrazu (pokud existuje). Název a výchozí hodnota výrazu jsou upravitelných textových polí a typu a směr jsou rozevírací seznamy. Další informace najdete v tématu [proměnné a argumenty (.NET)](/dotnet/framework/windows-workflow-foundation/variables-and-arguments).
 
-### <a name="to-create-a-new-argument"></a>Chcete-li vytvořit nový argument
+Ve srovnání s předchozí verzí rozhraní .NET Framework, argument designer usnadňuje povolit datový tok do a z aktivity. Návrhář přistupuje kliknutím **argumenty** tlačítko v levém horním rohu na plátno návrhu. Návrhář obsahuje seznam argumentů, které jsou uvedeny ve formě tabulky a lze seřadit podle jednotlivých záhlaví sloupců, s výjimkou **výchozí hodnota** sloupce. Všechny argumenty obsahuje název, směr v nebo na více systémů/v – out nebo vlastnost, typ a výchozí hodnota výrazu (pokud existuje). Název a výchozí hodnota výrazu jsou upravitelných textových polí a typu a směr jsou rozevírací seznamy. Další informace najdete v tématu [proměnné a argumenty (.NET)](/dotnet/framework/windows-workflow-foundation/variables-and-arguments).
 
-1.  Otevřete řešení pracovního postupu nebo aktivity v [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)].
+## <a name="to-create-a-new-argument"></a>Chcete-li vytvořit nový argument
+
+1.  Otevřete řešení pracovního postupu nebo aktivity v sadě Visual Studio.
 
 2.  Otevřít návrhář argumenty kliknutím **argumenty** tlačítko v levém horním rohu na plátno návrhu. Návrhář argumenty se zobrazí.
 
@@ -31,7 +35,7 @@ Ve srovnání s předchozí verzí technologie [!INCLUDE[dnprdnshort](../code-qu
     > [!NOTE]
     > Pokud chcete odstranit argument, kliknutím vyberte argument a potom stiskněte klávesu **odstranit** klíč.
 
-## <a name="see-also"></a>Viz také
+## <a name="see-also"></a>Viz také:
 
 - [Používání návrháře postupu provádění](../workflow-designer/using-the-workflow-designer.md)
 - [Proměnné a argumenty](/dotnet/framework/windows-workflow-foundation/variables-and-arguments)

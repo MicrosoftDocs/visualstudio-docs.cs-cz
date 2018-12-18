@@ -1,5 +1,5 @@
 ---
-title: Ve službě jazyk starší verze aplikace Word dokončení | Microsoft Docs
+title: Word dokončení ve službě starší verze jazyka | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,40 +15,41 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 72ddf4e7c755fdecf562f4c190abfb145e6f9819
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 55fbe636c77d77b3b4f61f9f56a4fa91fe49a090
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49879074"
 ---
-# <a name="word-completion-in-a-legacy-language-service"></a>Dokončení slova ve službě jazyk starší verze
-Dokončení slova vyplní chybějící znaky na částečně typu aplikace word. Pokud existuje jenom jeden možné dokončení, slovo byla dokončena, pokud je zadaný znak dokončení. Částečné aplikace word odpovídá více než jednu možnost, zobrazí se seznam možná dokončení. Znak dokončení může být libovolný znak, který se nepoužívá pro identifikátory.  
+# <a name="word-completion-in-a-legacy-language-service"></a>Dokončování slov ve službě starší verze jazyka
+Dokončování slov vyplní chybějící znaky na částečně napsaného slova. Pokud existuje jenom jeden možných dokončení, slovo dokončení po zadání znaku dokončení. Pokud částečné slovo odpovídá více než jednu možnost, zobrazí se seznam možných dokončení. Dokončení znak může být libovolný znak, který se nepoužívá pro identifikátory.  
   
- Starší verze jazyka služby jsou implementovány jako součást VSPackage, ale novější způsob implementace funkce služby jazyk je použití MEF rozšíření. Další informace naleznete v tématu [rozšíření pro Editor a služby, jazyk](../../extensibility/extending-the-editor-and-language-services.md).  
+ Služby starší verze jazyka jsou implementovány jako součást sady VSPackage, ale novější způsob implementace funkce služba jazyka je pro použití rozšíření MEF. Další informace najdete v tématu [rozšíření pro Editor a jazykových služeb](../../extensibility/extending-the-editor-and-language-services.md).  
   
 > [!NOTE]
->  Doporučujeme vám, že začnete používat co nejdříve editoru nové rozhraní API. Tím zvýšit výkon služby jazyk a umožňují využívat výhod nových funkcí editoru.  
+>  Doporučujeme vám, že začnete používat nový editor API co nejdříve. Tím vylepšíme výkonu vaší služby jazyka a umožňují využívat nové funkce editoru.  
   
 ## <a name="implementation-steps"></a>Postup implementace  
   
-1.  Když uživatel vybere **dokončení Word** z **IntelliSense** nabídce <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> příkaz posílá služba jazyka.  
+1. Když uživatel vybere **dokončit slovo** z **IntelliSense** nabídce <xref:Microsoft.VisualStudio.VSConstants.VSStd2KCmdID> příkazu se odesílají službě jazyka.  
   
-2.  <xref:Microsoft.VisualStudio.Package.ViewFilter> Třída zachytí příkaz i jeho volání <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> metoda pomocí důvodu analýzy <xref:Microsoft.VisualStudio.Package.ParseReason>.  
+2. <xref:Microsoft.VisualStudio.Package.ViewFilter> Zachytí třídy příkazu a volání <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> metodu parse důvod <xref:Microsoft.VisualStudio.Package.ParseReason>.  
   
-3.  <xref:Microsoft.VisualStudio.Package.Source> Třídy volání a pak <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metoda získat seznam možných word dokončování a potom zobrazí seznam slova v popisu tlačítka, pomocí <xref:Microsoft.VisualStudio.Package.CompletionSet> – třída.  
+3. <xref:Microsoft.VisualStudio.Package.Source> Třídy volání a pak <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> metodu k získání seznamu dokončování slov je to možné a pak zobrazí seznam slov v popisu tlačítka pomocí <xref:Microsoft.VisualStudio.Package.CompletionSet> třídy.  
   
-     Pokud existuje jenom jeden odpovídající aplikace word <xref:Microsoft.VisualStudio.Package.Source> třída dokončení slovo.  
+    Pokud existuje pouze jeden odpovídající aplikace <xref:Microsoft.VisualStudio.Package.Source> třídy dokončí slovo.  
   
- Alternativně Pokud skeneru vrátí hodnotu aktivační událost <xref:Microsoft.VisualStudio.Package.TokenTriggers> Pokud je zadán první znak identifikátoru, <xref:Microsoft.VisualStudio.Package.Source> třída to zjistí a volá <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> metoda pomocí důvodu analýzy <xref:Microsoft.VisualStudio.Package.ParseReason>. V takovém případě musíte analyzátor zjistit přítomnost znak Výběr člena a poskytnout seznam členů.  
+   Případně Pokud skener vrací hodnotu aktivační událost <xref:Microsoft.VisualStudio.Package.TokenTriggers> při první znak identifikátoru se <xref:Microsoft.VisualStudio.Package.Source> třídy to zjistí a volá <xref:Microsoft.VisualStudio.Package.Source.Completion%2A> metodu parse důvod <xref:Microsoft.VisualStudio.Package.ParseReason>. V tomto případě musíte analyzátor zjištění přítomnosti tohoto znaku výběru člena a poskytnout seznam členů.  
   
-## <a name="enabling-support-for-the-complete-word"></a>Povolení podpory pro dokončení aplikace Word  
- Povolení podpory pro sadu dokončení aplikace word `CodeSense` s názvem parametr předaný <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> atribut uživatele přidružené k balíčku jazyk. Toto nastaví <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCodeSense%2A> vlastnost na <xref:Microsoft.VisualStudio.Package.LanguagePreferences> třídy.  
+## <a name="enabling-support-for-the-complete-word"></a>Povolení podpory pro dokončit slovo  
+ Povolení podpory pro sadu dokončování slov `CodeSense` s názvem parametr předaný <xref:Microsoft.VisualStudio.Shell.ProvideLanguageServiceAttribute> atribut uživatele přidružené k balíčku jazyka. Tím se nastaví <xref:Microsoft.VisualStudio.Package.LanguagePreferences.EnableCodeSense%2A> vlastnost <xref:Microsoft.VisualStudio.Package.LanguagePreferences> třídy.  
   
- Analyzátor jazyka musí vrátit seznam deklarace v reakci na hodnotu důvod analýzy <xref:Microsoft.VisualStudio.Package.ParseReason>, word dokončení pracovat.  
+ Analyzátor jazyka musí vrátit seznam deklarací v reakci na hodnotu parse důvod <xref:Microsoft.VisualStudio.Package.ParseReason>, pro dokončování slov fungovat.  
   
-## <a name="implementing-complete-word-in-the-parsesource-method"></a>Implementace dokončení aplikace Word v metodě ParseSource  
- Pro dokončení slova <xref:Microsoft.VisualStudio.Package.Source> třídy volání <xref:Microsoft.VisualStudio.Package.AuthoringScope.GetDeclarations%2A> metodu <xref:Microsoft.VisualStudio.Package.AuthoringScope> třída získat seznam možných word odpovídá. V seznamu musí implementovat třídu, která je odvozená od <xref:Microsoft.VisualStudio.Package.Declarations> třídy. Najdete v článku <xref:Microsoft.VisualStudio.Package.Declarations> třída podrobnosti o metody, je nutné implementovat.  
+## <a name="implementing-complete-word-in-the-parsesource-method"></a>Implementace dokončit slovo v ParseSource – metoda  
+ Pro dokončení slova <xref:Microsoft.VisualStudio.Package.Source> třídy volání <xref:Microsoft.VisualStudio.Package.AuthoringScope.GetDeclarations%2A> metodu na <xref:Microsoft.VisualStudio.Package.AuthoringScope> třídy získat seznam možných slovo shody. V seznamu musí implementovat do třídy, která je odvozena od <xref:Microsoft.VisualStudio.Package.Declarations> třídy. Zobrazit <xref:Microsoft.VisualStudio.Package.Declarations> třídy podrobnosti pro metody, je nutné implementovat.  
   
- Pokud seznam obsahuje pouze jednoho slova, pak se <xref:Microsoft.VisualStudio.Package.Source> třída automaticky vloží dané slovo místo částečné aplikace word. Pokud seznam obsahuje více než jeden word <xref:Microsoft.VisualStudio.Package.Source> třída představuje seznam nástroj tip, ze kterého může uživatel vybrat příslušnou volbu.  
+ Pokud seznam obsahuje pouze jediné slovo, pak bude <xref:Microsoft.VisualStudio.Package.Source> třídy automaticky vloží toto slovo místo částečného slova. Pokud seznam obsahuje více než jedno slovo a <xref:Microsoft.VisualStudio.Package.Source> třída představuje seznam nástroj tip, ze kterého může uživatel vybrat vhodnou volbou.  
   
- Také podívat na příklad <xref:Microsoft.VisualStudio.Package.Declarations> implementaci třídy v [dokončení člen ve službě jazyk starší](../../extensibility/internals/member-completion-in-a-legacy-language-service.md).
+ V příkladu se také podívat <xref:Microsoft.VisualStudio.Package.Declarations> implementace třídy v [dokončování členů ve službě starší verze jazyka](../../extensibility/internals/member-completion-in-a-legacy-language-service.md).

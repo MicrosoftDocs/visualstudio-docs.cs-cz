@@ -1,5 +1,5 @@
 ---
-title: Idiasectioncontrib::get_addresssection – | Microsoft Docs
+title: Idiasectioncontrib::get_addresssection – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a0fb267e2a3e4c0a2b8f5a1e5ce95e986e4c1ee
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 5458fea42c799289554df7761fbc3056b423c592
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49880466"
 ---
 # <a name="idiasectioncontribgetaddresssection"></a>IDiaSectionContrib::get_addressSection
-Načte část oddílu příspěvku na adresu.  
+Načte části část adresy příspěvek.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,10 +34,10 @@ HRESULT get_addressSection (
   
 #### <a name="parameters"></a>Parametry  
  `pRetVal`  
- [out] Vrátí část oddílu příspěvku na adresu.  
+ [out] Vrátí část reprezentující části adresy příspěvek.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. Jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` -li tato vlastnost není podporována. V opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md)

@@ -10,28 +10,31 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 94d04d70192e2730cdf2682a3d2d138089eef891
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 7755444781bb0205e7483e2365d80cac909c62c6
+ms.sourcegitcommit: 495bba1d8029646653f99ad20df2f80faad8d58b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39380100"
 ---
-# <a name="customizing-t4-text-transformation"></a>Přizpůsobení transformace textu T4
+# <a name="customize-t4-text-transformation"></a>Přizpůsobení transformace textu T4
 
-Textové šablony jsou funkce [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] které umožňují generovat kód programu nebo jiných textových souborů procesem transformace. Pomocí [!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)], přizpůsobením procesoru direktiv text šablony nebo hostitele textových šablon můžete rozšířit výchozí proces transformace šablony.
+Textové šablony jsou funkce sady Visual Studio, které umožňují generování programového kódu nebo jiných textových souborů pomocí transformace procesu. Pomocí [!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)], přizpůsobením procesor direktiv šablony textu nebo hostitele textových šablon můžete rozšířit výchozí proces transformace šablon.
 
 ## <a name="in-this-section"></a>V tomto oddílu
- [Proces transformace textových šablon](../modeling/the-text-template-transformation-process.md) popisuje, jak funguje transformace textu a vysvětluje roli hostitele šablon a procesory direktiv.
 
- [Vytváření vlastní T4 Text šablony direktiva procesory](../modeling/creating-custom-t4-text-template-directive-processors.md) procesoru direktiv zabývá direktivy v šabloně, jako například `<#@template#>.` spouští během kompilace šablony a můžete načíst sestavení a dalším prostředkům. Můžete vložit také kód, který načte prostředky za běhu. Definování vlastního procesoru direktiv, můžete snížit složitost vašich šablon.
+ [Proces transformace textových šablon](../modeling/the-text-template-transformation-process.md) popisuje, jak transformace textu fungují a vysvětluje roli hostitele šablon a procesorů direktiv.
 
- [Volání transformací textu v rozšíření VS](../modeling/invoking-text-transformation-in-a-vs-extension.md) Pokud píšete [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] rozšíření, jako jsou nabídky příkaz nebo událostí obslužná rutina, rozšíření můžete použít službu ukázka Text k transformaci žádné textové šablony. Můžete předat parametru data do šablony s použitím objektu Session a získat hodnoty z v rámci šablony pomocí `<#@parameter#>` – direktiva.
+ [Vytváření vlastních procesorů direktivy textových šablon T4](../modeling/creating-custom-t4-text-template-directive-processors.md) procesoru direktiv se zabývá direktivy v šabloně, jako například `<#@template#>.` spustí během kompilace šablony a můžete načíst sestavení a další prostředky. Můžete také vložit kód, který načte prostředky v době běhu. Definuje vlastní procesor direktiv, lze omezit složitost vaší šablony.
 
- [Zpracování textových šablon pomocí vlastního hostitele](../modeling/processing-text-templates-by-using-a-custom-host.md) při kód textové šablony provede, hostitel poskytuje přístup k externí soubory a stav aplikace. Například hostiteli, který spouští transformací textu v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] může poskytnout přístup do Průzkumníka řešení. Zobrazí také chyby v okně chybové zprávy. Pokud chcete spustit transformací textu v jiném kontextu, můžete definovat vlastní hostitele, který poskytuje přístup ke službám, které jsou k dispozici v tomto kontextu.
+ [Volání transformací textu v rozšíření VS](../modeling/invoking-text-transformation-in-a-vs-extension.md) Pokud píšete rozšíření sady Visual Studio, jako je například obslužnou rutinu příkazu nebo událost nabídky, rozšíření můžete použít službu Šablonování textu k transformaci všechny textové šablony. Můžete předat data parametrů do šablony s použitím objektu relace a získat hodnoty z v rámci šablony s použitím `<#@parameter#>` směrnice.
 
- Pokud píšete [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] rozšíření, zvažte použití existující službu transformace textu místo psaní vlastního hostitele. Další informace najdete v tématu [volání transformací textu v rozšíření VS](../modeling/invoking-text-transformation-in-a-vs-extension.md).
+ [Zpracování textových šablon pomocí vlastního hostitele](../modeling/processing-text-templates-by-using-a-custom-host.md) při spustí kód textové šablony, hostitel poskytuje přístup k externí soubory a stav aplikace. Například můžete hostitele, na kterém běží transformace textu v sadě Visual Studio poskytují přístup k **Průzkumníka řešení**. Zobrazí také chyby v okně chybové zprávy. Pokud chcete spustit transformace textu v jiném kontextu, můžete definovat vlastního hostitele, který poskytuje přístup ke službám v tomto kontextu k dispozici.
+
+ Pokud píšete rozšíření sady Visual Studio, zvažte použití existující službu transformace textu místo psaní vlastního hostitele. Další informace najdete v tématu [volání transformací textu v rozšíření VS](../modeling/invoking-text-transformation-in-a-vs-extension.md).
 
 ## <a name="reference"></a>Odkaz
 
-- [Zápis textové šablony T4](../modeling/writing-a-t4-text-template.md) poskytuje syntaxe direktivy textových šablon a řídicí bloky.
+- [Zápis textové šablony T4](../modeling/writing-a-t4-text-template.md) poskytuje syntaxe direktivy textové šablony a řídicí bloky.

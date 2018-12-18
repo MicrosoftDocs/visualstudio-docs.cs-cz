@@ -9,72 +9,74 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 0962ee3fb780b1634438af48766f2ba086e9f4b2
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 538ebb2121c488fa56f693a424f91b8af19a0c3e
+ms.sourcegitcommit: 768d7877fe826737bafdac6c94c43ef70bf45076
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50966840"
 ---
 # <a name="overview-of-domain-specific-language-tools"></a>Přehled Jazykových nástrojů specifických pro doménu
-Domény jazykové nástroje specifické (DSL Tools), které jsou hostované v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], umožňují návrh jazyka domény a pak generovat vše, co uživatelé musí mít k vytváření modelů, které jsou založeny na jazyce.
+Nástroje jazyka specifického pro doménu (DSL Tools), které jsou hostovány v sadě Visual Studio, vám umožní navrhnout jazyka specifického pro doménu a potom generovat vše, co uživatelé musí mít k vytváření modelů, které jsou založeny na jazyce.
 
- Tyto nástroje jsou součástí nástrojů DSL:
+ Tyto nástroje jsou součástí nástroje DSL:
 
--   Průvodce projektu, který používá jiné řešení šablony můžete začít vyvíjet jazyka specifické pro doménu.
+-   Průvodce projektem, který používá jiné řešení šablony můžete začít s vývojem jazyka specifického pro doménu.
 
--   Grafický návrhář pro vytváření a úpravy vaší definice jazyka domény.
+-   Grafický návrhář pro vytváření a úpravu definice jazyka specifického pro doménu.
 
--   Modul ověřování, který zajišťuje, že je ve správném formátu definici jazyka domény a zobrazí chyby a upozornění, pokud dochází k problémům.
+-   Modul ověřování, který zajišťuje, že definice jazyka specifického pro doménu ve správném formátu a pokud dojde k problémům se zobrazí chyby a upozornění.
 
--   Generátor kódu, který přebírá definici jazyka domény jako vstup a vytvoří zdrojový kód jako výstup.
+-   Generátor kódu, který má definice jazyka specifického pro doménu jako vstup a vytvoří zdrojový kód jako výstup.
 
-## <a name="the-dsl-tools-solution"></a>Řešení nástroje DSL
- Průvodce specifické pro doménu Návrhář poskytuje následující řešení šablony:
+## <a name="the-dsl-tools-solution"></a>Řešení nástrojů DSL
+ Průvodce Designer specifického pro doménu poskytuje následující šablony řešení:
 
--   Tok úkolů
+- Tok úkolů
 
--   Diagramy tříd
+- Diagramy tříd
 
--   Minimální jazyk
+- Minimální jazykový
 
--   Součást modely
+- Komponenta modelů
 
--   Minimální WPF
+- Minimální WPF
 
--   Minimální Windows.Forms
+- Minimální Windows.Forms
 
--   Knihovna DSL
+- Knihovna DSL, která
 
- Další informace najdete v tématu [výběr šablony řešení jazyk specifické pro doménu](../modeling/choosing-a-domain-specific-language-solution-template.md).
+  Další informace najdete v tématu [výběr šablony řešení jazyka specifického pro doménu](../modeling/choosing-a-domain-specific-language-solution-template.md).
 
- Průvodce vytvoří [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] řešení, která má následující projekty:
+  Průvodce vytvoří řešení sady Visual Studio, který má následující projekty:
 
--   DSL
+- DSL
 
-     Projekt Dsl definuje jazyka domény a jeho nástroje pro úpravy a zpracování.
+   Projektu Dsl definuje jazyka specifického pro doménu a jeho nástrojů úprav a zpracování.
 
--   **DslPackage**
+- **DslPackage**
 
-     Projekt DslPackage Určuje, jak integrovat nástroje jazyk [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
+   DslPackage projektu určuje, jak integrovat nástroje jazyka pomocí sady Visual Studio.
 
-## <a name="the-dsl-tools-graphical-interface"></a>Grafické rozhraní nástroje DSL
- Grafické rozhraní nástroje DSL můžete přidat elementů a vztahů pro váš jazyk specifické pro doménu. Po přidání elementy, můžete definovat jejich vzhled mapování je do tvarů, přizpůsobení barev a přidáním dekorátory. Elementy můžete také přidat do sady nástrojů.
+## <a name="the-dsl-tools-graphical-interface"></a>Grafické rozhraní nástrojů DSL
+ Přidání elementů a vztahů do jazyka specifického pro doménu, můžete použít grafické rozhraní nástrojů DSL. Po přidání prvků, můžete definovat jejich vzhled mapování na obrazce, přizpůsobení barev a přidáním dekorátory. Můžete také přidat prvky do panelu nástrojů.
 
-## <a name="validation-in-dsl-tools"></a>Ověření v nástrojích DSL
- DSL poskytuje jednu úroveň ověření, abyste měli jistotu, že model domény splňuje základní požadavky pro generování kódu. Obvykle při vytváření jazyka specifické pro doménu, měli byste přidat vlastní ověření, který má express vaše obchodní logiku pravidla. Další informace o vlastního ověřování najdete v tématu [ověření v jazyce specifické pro doménu](../modeling/validation-in-a-domain-specific-language.md).
+## <a name="validation-in-dsl-tools"></a>Ověřování v nástroje DSL
+ DSL poskytuje jednu úroveň ověření, že splňuje model domény základní požadavky pro generování kódu. Obvykle při vytváření jazyka specifického pro doménu přidáte vlastní ověření vyjádřit vaše obchodní logiky pravidla. Další informace o vlastních ověřovacích, naleznete v tématu [ověřování v jazyka specifického pro doménu](../modeling/validation-in-a-domain-specific-language.md).
 
- Doporučujeme, abyste ověřili jazyka specifické pro doménu často při navrhování. Pokud váš jazyk specifické pro doménu došlo k chybám ověřování, nelze generovat zdrojového kódu. Generování zdrojového kódu z šablon proces se provádí kliknutím **transformaci všech šablon** na panelu nástrojů Průzkumníka řešení. Vždy, když upravíte definici jazyka, ujistěte se také k **transformaci všech šablon**. Další informace najdete v tématu [postupy: vytvoření řešení jazyk specifické pro doménu](../modeling/how-to-create-a-domain-specific-language-solution.md).
+ Doporučujeme, abyste ověřili svůj jazyk specifický pro doménu často při jeho návrhu. Pokud doménově specifického jazyka došlo k chybám ověřování, nelze generovat zdrojový kód. Generování zdrojového kódu z šablon procesu se provádí kliknutím **Transformovat všechny šablony** na panelu nástrojů Průzkumníku řešení. Pokaždé, když změníte definice jazyka, nezapomeňte také **Transformovat všechny šablony**. Další informace najdete v tématu [postupy: vytváření řešení jazyka specifického pro doménu](../modeling/how-to-create-a-domain-specific-language-solution.md).
 
-## <a name="customization-of-dsl-tools"></a>Přizpůsobení nástroje DSL
- Můžete zadat další kód pro upřesnění nastavení modelu a definování omezení přes svůj jazyk. V případě potřeby můžete provést změnou textové šablony významné změny.
+## <a name="customization-of-dsl-tools"></a>Přizpůsobení nástrojů DSL
+ Můžete zadat další kód Upřesnit chování modelu a definování omezení přes svůj jazyk. V případě potřeby můžete provádět významné změny tak, že upravíte textových šablon.
 
 ## <a name="distributing-your-dsl-solution"></a>Distribuce řešení DSL
- Nástroje pro DSL generuje balíček, který je hostován v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]. Balíček zobrazí sady nástrojů, DSL explorer a další prvky uživatelského rozhraní, které umožní uživatelům vytvářet modely pomocí jazyka specifické pro doménu.
+ Nástroje DSL vygeneruje balíček, který je hostovaný v sadě Visual Studio. Balíček se zobrazí panelu nástrojů Průzkumník DSL a další prvky uživatelského rozhraní, které umožní uživatelům vytvářet modely s využitím jazyka specifického pro doménu.
 
- Při sestavení a spuštění řešení DSL nástroje [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], druhé instance [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ukazuje, jak vypadá jazyka specifické pro doménu pro uživatele jazyka. Po ověření, že všechno funguje správně, můžete distribuovat `.vsix` soubor, který najdete ve složce sestavení projektu DslPackage. Tento soubor lze použít k instalaci DSL jako [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] rozšíření na jiných počítačích.  Další informace najdete v tématu [nasazení řešení jazyk specifické pro doménu](../modeling/deploying-domain-specific-language-solutions.md).
+ Při sestavení a spuštění řešení nástrojů DSL v sadě Visual Studio, druhou instanci aplikace Visual Studio se dozvíte, jak vypadá jazyka specifického pro doménu pro uživatele jazyka. Až ověříte, že vše funguje správně, které můžete distribuovat `.vsix` soubor, který najdete ve složce sestavení testovaného projektu DslPackage. Tento soubor je možné nainstalovat DSL jako rozšíření sady Visual Studio v jiných počítačích.  Další informace najdete v tématu [nasazení řešení jazyka specifického pro doménu](../modeling/deploying-domain-specific-language-solutions.md).
 
 ## <a name="see-also"></a>Viz také
 
 - [Experimentální instance](../extensibility/the-experimental-instance.md)
-- [Glosář nástroje jazyka domény](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
+- [Glosář nástrojů jazyka specifického pro doménu](https://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

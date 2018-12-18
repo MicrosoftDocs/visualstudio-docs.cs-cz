@@ -1,5 +1,5 @@
 ---
-title: IDebugClassField::GetDefaultIndexer | Microsoft Docs
+title: IDebugClassField::GetDefaultIndexer | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3f16f4dc94a5019fa66425f55c8f7706db566db9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 75bb1bc0adb63a3c606b03cafc0b8a8c92d956df
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49934311"
 ---
 # <a name="idebugclassfieldgetdefaultindexer"></a>IDebugClassField::GetDefaultIndexer
-Získá název výchozí indexeru.  
+Získá název výchozímu indexeru.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +41,13 @@ int GetDefaultIndexer(
   
 #### <a name="parameters"></a>Parametry  
  `pbstrIndexer`  
- [out] Vrací řetězec obsahující název výchozí indexeru.  
+ [out] Vrátí řetězec obsahující název výchozí indexeru.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí S_OK nebo vrátí S_FALSE, pokud neexistuje žádný výchozí indexer. Jinak vrátí kód chyby.  
+ V případě úspěchu vrátí hodnotu S_OK nebo vrátí S_FALSE v případě, že neexistuje žádný výchozí indexer. V opačném případě vrátí kód chyby.  
   
 ## <a name="remarks"></a>Poznámky  
- Indexer výchozí třídy je vlastnost, která je označena jako `Default` vlastnost pro pole přístupů. To platí pouze pro [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]. Tady je příklad výchozí indexeru, deklarované v [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] a jeho použití.  
+ Indexer výchozí třídy je vlastnost, která je označena jako `Default` vlastnost pro pole přístupy. To je specifické pro [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)]. Tady je příklad výchozímu indexeru deklarované v [!INCLUDE[vbprvb](../../../code-quality/includes/vbprvb_md.md)] a způsobu jejich použití.  
   
 ```vb  
 Imports System.Collections;  

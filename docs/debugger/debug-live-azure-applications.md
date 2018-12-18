@@ -1,10 +1,10 @@
 ---
-title: Ladění aplikací za provozu technologie ASP.NET Azure – Visual Studio | Microsoft Docs
-ms.description: Learn how to set snappoints and view snapshots with the Snapshot Debugger
+title: Ladění živé aplikace Azure technologie ASP.NET
+description: Zjistěte, jak nastavit snímkovací body a zobrazit snímky se Snapshot Debugger.
 ms.custom: mvc
 ms.date: 03/16/2018
 ms.technology: vs-ide-debug
-ms.topic: tutorial
+ms.topic: conceptual
 helpviewer_keywords:
 - debugger
 ms.assetid: adb22512-4d4d-40e5-9564-1af421b7087e
@@ -14,132 +14,137 @@ manager: douge
 ms.workload:
 - aspnet
 - azure
-ms.openlocfilehash: e6ef3acf3373f03249b9ffa4456195f25b9991a3
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: b7f98dccebe9db183c63c6f859ceb2234fdb1acf
+ms.sourcegitcommit: 708f77071c73c95d212645b00fa943d45d35361b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056915"
 ---
-# <a name="debug-live-aspnet-azure-apps-using-the-snapshot-debugger"></a>Ladění za provozu aplikací ASP.NET Azure pomocí snímku ladicí program
+# <a name="debug-live-aspnet-azure-apps-using-the-snapshot-debugger"></a>Ladění živé aplikace ASP.NET Azure pomocí ladicího programu snímků
 
-Ladicí program snímku pořídí snímek aplikací v provozním, když provede kód, který vás zajímá. Dáte pokyn, aby ladicí program na pořízení snímku, nastavte snappoints a logpoints ve vašem kódu. Ladicí program umožňuje zobrazit přesně kde došlo k chybě, bez vlivu na provoz produkční aplikace. Ladicí program snímku můžete výrazně zkrátit dobu potřebnou k vyřešení problémů, ke kterým došlo v produkčním prostředí.
+Snapshot Debugger pořídí snímek vaší aplikace do produkčního prostředí, když spustí kód, který vás zajímá. Dáte pokyn, aby ladicí program k vytvoření snímku, můžete nastavit snímkovací a protokolovací body ve vašem kódu. Ladicí program umožňuje zobrazit přesně toho, co nefunguje, aniž by to ovlivnilo provozu aplikace v produkčním prostředí. Snapshot Debugger můžete výrazně zkrátit čas potřebný k vyřešení problémů, ke kterým dochází v produkčním prostředí.
 
-Snappoints a logpoints jsou podobná zarážky, ale na rozdíl od zarážky, nemusíte snappoints zastavení aplikace při průchodu. Pořízením na snappoint obvykle trvá 10 20 milisekund. 
+Snímkovací a protokolovací body jsou podobná zarážky, ale na rozdíl od zarážek, není snímkovacích bodů: zastavení aplikace při průchodu. Zachytávání snímků na snímkovacího bodu obvykle trvá 10 20 milisekund.
 
-Snímek kolekce je k dispozici pro následující webové aplikace běžící v Azure App Service:
-
-- Aplikace ASP.NET spuštěné na rozhraní .NET Framework 4.6.1 nebo novější.
-- ASP.NET Core aplikací běžících na .NET Core 2.0 nebo novější na systému Windows.
-
-Kromě toho ladicí program snímku je dostupná jenom pro Visual Studio Enterprise 2017 verze 15,5 nebo vyšší a plány služby App Service základní nebo vyšší. 
-
-V tomto kurzu provedete následující:
+V tomto kurzu se naučíte:
 
 > [!div class="checklist"]
-> * Spuštění ladicího programu snímku
-> * Nastavení snappoint a zobrazení snímku
-> * Nastavte logpoint
+> * Spuštění ladicího programu snímků
+> * Nastavení snímkovacího bodu a zobrazení snímku
+> * Nastavte protokolovacích bodů:
 
-## <a name="start-the-snapshot-debugger"></a>Spuštění ladicího programu snímku
+## <a name="prerequisites"></a>Požadavky
 
-1. Nainstalujte [Visual Studio Enterprise 2017 verze 15,5](https://www.visualstudio.com/downloads/) nebo novější. Při aktualizaci z předchozí instalace Visual Studio 2017, spusťte instalační program Visual Studio a zkontrolujte ladicí program snímku součástí technologie ASP.NET a webové úlohy vývoj.
+* Snapshot Debugger je dostupná jenom pro Visual Studio Enterprise 2017 verze 15.5 nebo novější s **úlohy pro vývoj pro ASP.NET a web**. Pro ASP.NET Core, musíte také **vývoj v .NET Core** nainstalovaná úloha.
 
-2. Otevřete projekt, který chcete snímek ladění. 
+    Pokud ještě není nainstalovaný, nainstalujte [Visual Studio Enterprise 2017 verze 15.5](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) nebo novější. Při aktualizaci z předchozí instalace sady Visual Studio 2017, spusťte instalační program sady Visual Studio a vrátit se změnami komponenty ladicího programu snímků **úlohy pro vývoj pro ASP.NET a web**.
 
-    > [!IMPORTANT] 
-    > K ladění snímek, budete muset otevřít **stejnou verzi zdrojový kód** je publikována ve službě Azure App Service. 
+* Plán služby App Service Basic nebo vyšší.
 
-3. V Průzkumníku cloudu (**zobrazení > Průzkumník cloudu**), klikněte pravým tlačítkem na projekt se nasadí do služby Azure App Service a vyberte **připojit ladicí program snímku**.
+* Shromažďování snímků je k dispozici pro následující web apps ve službě Azure App Service:
 
-   ![Spuštění ladicího programu snímku](../debugger/media/snapshot-launch.png)
+    * Aplikace ASP.NET spuštěné na rozhraní .NET Framework 4.6.1 nebo novější.
+    * Aplikace ASP.NET Core na .NET Core 2.0 nebo novější na Windows.
 
-    Při prvním vyberete **připojit ladicí program snímku**, se zobrazí výzva k instalaci rozšíření lokality snímku ladicí program na Azure App Service. Tato instalace vyžaduje restart služby Azure App Service. 
+## <a name="open-your-project-and-start-the-snapshot-debugger"></a>Otevřete svůj projekt a spusťte ladicí program snímků
 
-   Visual Studio je nyní v režimu ladění snímek.
+1. Otevřete projekt, který chcete snímek ladění.
+
+    > [!IMPORTANT]
+    > K ladění snímků, budete muset otevřít **stejnou verzi zdrojového kódu** , který je publikován do služby Azure App Service.
+
+1. V Průzkumníku cloudu (**zobrazení > Průzkumník cloudu**), klikněte pravým tlačítkem na projekt je nasazen na službě Azure App Service a vyberte **připojit Snapshot Debugger**.
+
+   ![Spuštění ladicího programu snímků](../debugger/media/snapshot-launch.png)
+
+    Při prvním vyberete **připojit Snapshot Debugger**, budete vyzváni k instalaci rozšíření webu pro Snapshot Debugger ve službě Azure App Service. Tato instalace vyžaduje restartování služby Azure App Service.
+
+   Visual Studio je nyní v režimu ladění snímků.
 
     > [!NOTE]
-    > Rozšíření lokality služby Application Insights podporuje také ladění snímku. Pokud narazíte na chybová zpráva "lokality rozšíření zastaralá", přečtěte si téma [řešení potíží s tipy a známé problémy pro ladění snímku](../debugger/debug-live-azure-apps-troubleshooting.md) pro upgrade podrobnosti.
+    > Rozšíření webu Application Insights podporuje také ladění snímků. Pokud narazíte na chybovou zprávu "aktuální rozšíření webu", přečtěte si téma [řešení potíží, tipy a známé problémy pro ladění snímků](../debugger/debug-live-azure-apps-troubleshooting.md) pro upgrade podrobnosti.
 
-   ![Režim ladění snímku](../debugger/media/snapshot-message.png)
+   ![Režim ladění snímků](../debugger/media/snapshot-message.png)
 
-   **Moduly** okno zobrazí, když mají všechny moduly načten pro Azure App Service (zvolte **ladění / Windows / moduly** otevřete toto okno).
+   **Moduly** okno zobrazuje, když jste načetli všech modulů pro službu Azure App Service (zvolte **ladění / Windows / moduly** otevřete toto okno).
 
-   ![Zkontrolujte okna moduly](../debugger/media/snapshot-modules.png)
+   ![Zkontrolujte okno modulů](../debugger/media/snapshot-modules.png)
 
-## <a name="set-a-snappoint"></a>Nastavte snappoint
+## <a name="set-a-snappoint"></a>Nastavte snímkovacího bodu
 
-1. V editoru kódu klikněte na levém oddělovací mezery u řádek kódu, které vás zajímají nastavení snappoint. Ujistěte se, že je kód, který znáte, budou spuštěny.
+1. V editoru kódu klikněte na levém hřbetu vedle řádku kódu, které vás zajímají nastavení snímkovacího bodu. Ujistěte se, že je kód, o kterém víte, že se spustí.
 
-   ![Nastavte snappoint](../debugger/media/snapshot-set-snappoint.png)
+   ![Nastavte snímkovacího bodu](../debugger/media/snapshot-set-snappoint.png)
 
-2. Klikněte na tlačítko **Start Collection** zapnout snappoint.  
+2. Klikněte na tlačítko **spustit shromažďování** zapnout snímkovacího bodu.
 
-   ![Zapnout snappoint](../debugger/media/snapshot-start-collection.png)
+   ![Zapnout snímkovací bod](../debugger/media/snapshot-start-collection.png)
 
     > [!TIP]
-    > Nelze krok při zobrazení snímku, ale můžete umístit více snappoints ve vašem kódu provést spuštění na různé řádky kódu. Pokud máte více snappoints ve vašem kódu, ladicího programu snímku zajišťuje, že odpovídající snímky jsou ze stejné relace koncového uživatele. Ladicí program snímku tomu i v případě, že existuje mnoho uživatelů stiskne vaší aplikace.
+    > Nelze krok při zobrazení snímku, ale můžete umístit více snímkovacích bodů: ve vašem kódu sledovat provádění na různé řádky kódu. Pokud máte více snímkovacích bodů: ve vašem kódu, Snapshot Debugger zajišťují, že odpovídající snímky se ze stejné relace koncového uživatele. Snapshot Debugger nepodporuje to i v případě, že existují mnoho uživatelé, kteří vyvolávají vaší aplikace.
 
 ## <a name="take-a-snapshot"></a>Pořízení snímku
 
-Když je zapnutý snappoint, bude zachytit snímek, při každém řádku kódu, kde je umístěn snappoint provede. Spuštění tohoto může být způsobeno skutečné žádosti na vašem serveru. Chcete-li vynutit vaší snappoint přístupů, přejděte do zobrazení prohlížeče vašeho webu a provádět žádné akce požadované které způsobit vaší snappoint být narazí.
+Když snímkovacího bodu je zapnutá, budou se pokaždé, když se spustí na řádek kódu, kde je umístěn snímkovací bod zachytit snímek. Toto spuštění může být způsobeno skutečné žádosti na serveru. K vynucení vašich snímkovací bod přístupů, přejdete na zobrazení prohlížeče vašeho webu a provádět všechny akce požadované to způsobit vaší snímkovací bod k.
 
-## <a name="inspect-snapshot-data"></a>Zkontrolujte data snímku
+## <a name="inspect-snapshot-data"></a>Kontrolovat data snímku
 
-1. Když je dosaženo snappoint, se zobrazí v okně diagnostické nástroje snímek. Chcete-li otevřít toto okno, zvolte **ladění / Windows / zobrazit diagnostické nástroje**.
+1. Při dosažení snímkovacího bodu, se zobrazí v okně diagnostické nástroje snímku. Chcete-li otevřít toto okno, zvolte **ladění / Windows / zobrazit diagnostické nástroje**.
 
-   ![Otevřete snappoint](../debugger/media/snapshot-diagsession-window.png)
+   ![Otevřete snímkovacího bodu](../debugger/media/snapshot-diagsession-window.png)
 
-1. Dvakrát klikněte na snappoint otevřete snímku v editoru kódu.
+1. Dvakrát klikněte na panel snímkovacího bodu otevřete snímku v editoru kódu.
 
-   ![Zkontrolujte data snímku](../debugger/media/snapshot-inspect-data.png)
+   ![Kontrolovat data snímku](../debugger/media/snapshot-inspect-data.png)
 
-   Z tohoto hlediska můžete podržet přes proměnné, které chcete zobrazit datatips –, použijte **místní hodnoty –**, **sleduje**, a **zásobníkem volání** windows a také vyhodnocení výrazů.
+   V tomto zobrazení můžete najedete myší proměnné, které chcete zobrazit datové tipy, použijte **lokální**, **hodinky**, a **zásobník volání** windows a také vyhodnocujte výrazy.
 
-    Web, samotné stále za provozu a nejsou dopad na koncové uživatele. Pouze jeden snímek pořízen za snappoint ve výchozím nastavení: Po zachycení snímku snappoint vypne. Pokud chcete zaznamenat jiného snímku na snappoint, můžete zapnout snappoint zpět na kliknutím **aktualizace kolekce**.
+    Je webem jako takovým stále aktivní a nejsou to vliv na koncové uživatele. Pouze jeden snímek je ve výchozím nastavení zaznamenávány za snímkovacích bodů: Po zachycení snímku snímkovací bod vypne. Pokud chcete zaznamenat další snímek na snímkovacího bodu, můžete zapnout snímkovací bod zpět kliknutím **aktualizovat shromažďování**.
 
-Můžete také přidat další snappoints do vaší aplikace a je zapnout pomocí **aktualizace kolekce** tlačítko.
+Můžete také přidat další snímkovací body do vaší aplikace a je zapnout pomocí **aktualizovat shromažďování** tlačítko.
 
-**Potřebujete pomoc?** Najdete v článku [řešení potíží a známé problémy](../debugger/debug-live-azure-apps-troubleshooting.md) a [– nejčastější dotazy k ladění snímku](../debugger/debug-live-azure-apps-faq.md) stránky.
+**Potřebujete pomoc?** Zobrazit [řešení potíží a známé problémy](../debugger/debug-live-azure-apps-troubleshooting.md) a [– nejčastější dotazy k ladění snímků](../debugger/debug-live-azure-apps-faq.md) stránky.
 
-## <a name="set-a-conditional-snappoint"></a>Nastavit podmíněný snappoint
+## <a name="set-a-conditional-snappoint"></a>Nastavit podmíněné snímkovací bod
 
-Pokud je obtížné znovu vytvořit konkrétní stav ve vaší aplikaci, zvažte, zda může pomoci použití podmíněného snappoint. Podmíněné snappoints vyhnuli se vytvoření snímku, dokud aplikace vstupuje do požadovaného stavu, například když proměnná má určitou hodnotu, kterou chcete zkontrolovat. Můžete nastavit podmínky pomocí výrazů, filtry, nebo počtu položek.
+Pokud je obtížné znovu vytvořit určitého stavu ve vaší aplikaci, zvažte, zda může pomoci použití podmíněné snímkovacího bodu. Podmíněné snímkovací body umožňují předcházet pořízení snímku, dokud aplikace přejde do požadovaného stavu, například pokud má proměnná určitou hodnotu, kterou chcete zkontrolovat. Můžete nastavit podmínky, které využívají výrazy a filtry, nebo počtu položek.
 
-#### <a name="to-create-a-conditional-snappoint"></a>Chcete-li vytvořit podmíněného snappoint
+#### <a name="to-create-a-conditional-snappoint"></a>Chcete-li vytvořit podmíněného snímkovací bod
 
-1. Klikněte pravým tlačítkem na ikonu snappoint (dutý míč) a zvolte **nastavení**.
+1. Klikněte pravým tlačítkem na ikonu snímkovací bod (prázdný koule) a zvolte **nastavení**.
 
-   ![Vyberte nastavení](../debugger/media/snapshot-snappoint-settings.png)
+   ![Zvolit nastavení](../debugger/media/snapshot-snappoint-settings.png)
 
-1. V okně Nastavení snappoint zadejte výraz.
+1. V okně Nastavení snímkovací bod zadejte výraz.
 
    ![Zadejte výraz](../debugger/media/snapshot-snappoint-conditions.png)
 
-   V předchozí ilustraci, provede se výpis pouze pro snappoint při `visitor.FirstName == "Dan"`.
+   V předchozí ilustraci snímku pouze prováděné na snímkovací bod při `visitor.FirstName == "Dan"`.
 
-## <a name="set-a-logpoint"></a>Nastavte logpoint
+## <a name="set-a-logpoint"></a>Nastavte protokolovacích bodů:
 
-Kromě vytvoření snímku, když je dosaženo snappoint, můžete také nakonfigurovat snappoint do protokolu zprávu (to znamená, vytvořit logpoint). Můžete nastavit logpoints bez nutnosti nasazení vaší aplikace. Logpoints prakticky spustí a způsobit, že žádný dopad nebo vedlejší účinky na běžící aplikaci.
+Kromě pořízení snímku při dosažení snímkovacího bodu, můžete také nakonfigurovat snímkovací bod k zaznamenání zprávy (to znamená, vytvořit protokolovacích bodů:). Můžete nastavit protokolovací body bez nutnosti nasazení vaší aplikace. Protokolovací body prakticky spustí a způsobit, že žádný dopad nebo vedlejší účinky k běžící aplikaci.
 
-#### <a name="to-create-a-logpoint"></a>Chcete-li vytvořit logpoint
+#### <a name="to-create-a-logpoint"></a>Chcete-li vytvořit protokolovacích bodů:
 
-1. Klikněte pravým tlačítkem na ikonu snappoint (modré šestiúhelník) a zvolte **nastavení**.
+1. Klikněte pravým tlačítkem na ikonu snímkovací bod (modré šestiúhelník) a zvolte **nastavení**.
 
-1. V okně Nastavení snappoint vyberte **akce**.
+1. V okně Nastavení snímkovací bod vyberte **akce**.
 
-    ![Vytvoření logpoint](../debugger/media/snapshot-logpoint.png)
+    ![Vytvoření protokolovacích bodů:](../debugger/media/snapshot-logpoint.png)
 
-1. Do pole zpráva můžete zadat nový zprávu protokolu, kterou chcete protokolovat. Můžete také vyhodnotit proměnné ve zprávě protokolu tím, že je uvnitř složené závorky.
+1. Do pole zpráva můžete zadat nové zprávy protokolu, které chcete se přihlásit. Můžete také vyhodnotit proměnné ve zprávě protokolu je umístit uvnitř složených závorek.
 
-    Pokud se rozhodnete **odeslat do okna výstupu**, když logpoint přístupů, tato zpráva se zobrazí v okně diagnostické nástroje.
+    Pokud se rozhodnete **odeslat do okna výstup**, když protokolovacích bodů: dosažení, zpráva se zobrazí v okně diagnostické nástroje.
 
-    ![V okně diagsession datový Logpoint](../debugger/media/snapshot-logpoint-output.png)
+    ![V okně archivu diagsession data protokolovacích bodů:](../debugger/media/snapshot-logpoint-output.png)
 
-    Pokud si zvolíte **poslat protokolu aplikace**, když je dosaženo logpoint, zpráva se zobrazí, kdekoli, zobrazí se zprávy z `System.Diagnostics.Trace` (nebo `ILogger` v .NET Core), například [App Insights](/azure/application-insights/app-insights-asp-net-trace-logs).
+    Pokud se rozhodnete **odeslat do protokolu aplikace**, když protokolovacích bodů: dosažení, zpráva se zobrazí kdekoli, zobrazí se zprávy z `System.Diagnostics.Trace` (nebo `ILogger` v .NET Core), například [App Insights](/azure/application-insights/app-insights-asp-net-trace-logs).
 
 ## <a name="next-steps"></a>Další kroky
 
-V tomto kurzu jste zjistili, jak používat ladicí program snímku. Můžete přečíst další informace o této funkci.
+V tomto kurzu jste zjistili, jak používat Snapshot Debugger. Můžete chtít přečtěte si další podrobnosti o této funkci.
 
 > [!div class="nextstepaction"]
 > [Nejčastější dotazy k ladění snímků](../debugger/debug-live-azure-apps-faq.md)

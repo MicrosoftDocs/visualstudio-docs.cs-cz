@@ -1,5 +1,5 @@
 ---
-title: Idiaenumframedata::Next – | Microsoft Docs
+title: Idiaenumframedata::Next – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6835cda6c8c2a5cb20135abf92a523a270b32c78
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 55320b4f07eb2acda1d46875fa6f3bd5eefe2813
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49949978"
 ---
 # <a name="idiaenumframedatanext"></a>IDiaEnumFrameData::Next
-Načte zadaný počet elementů dat rámce v pořadí výčtu.  
+Načte zadaný počet snímků datové prvky v pořadí výčtu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,16 +36,16 @@ HRESULT Next (
   
 #### <a name="parameters"></a>Parametry  
  celt  
- [v] Počet elementů rámce data v enumerátor mají být načteny.  
+ [in] Počet datových elementů rámce v enumerátor, který se má načíst.  
   
  rgelt  
- [out] Pole [idiaframedata –](../../debugger/debug-interface-access/idiaframedata.md) objekty pro vyplnění rámce požadované datové prvky.  
+ [out] Pole [idiaframedata –](../../debugger/debug-interface-access/idiaframedata.md) objekty vyplní rámce požadované datové prvky.  
   
  pceltFetched  
- [out] Vrátí počet datových elementů rámce v načtených enumerátor.  
+ [out] Vrátí počet prvků rámce dat načtených enumerátor.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`. Vrátí `S_FALSE` Pokud neexistují žádné další záznamy. Jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`. Vrátí `S_FALSE` Pokud neexistují žádné další záznamy. V opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [Idiaenumframedata –](../../debugger/debug-interface-access/idiaenumframedata.md)   

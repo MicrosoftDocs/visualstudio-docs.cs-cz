@@ -1,5 +1,5 @@
 ---
-title: MSBuild vyhrazené a známé vlastnosti | Microsoft Docs
+title: Nástroj MSBuild vyhrazené a známé vlastnosti | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: msbuild
@@ -17,63 +17,67 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d8979877a8cd1fbf60c617e9c03316a46a47879
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 50bb5a21f93368533a6514cdaf19a7b88486eb06
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49894479"
 ---
-# <a name="msbuild-reserved-and-well-known-properties"></a>Vyhrazené a známé vlastnosti nástroje MSBuild
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] poskytuje sadu předdefinovaných vlastností, které obsahují informace o souboru projektu a [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] binární soubory. Tyto vlastnosti jsou vyhodnocovány v stejným způsobem jako jiné [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] vlastnosti. Chcete-li například použít `MSBuildProjectFile` vlastnost, zadáte `$(MSBuildProjectFile)`.  
-  
- MSBuild používá předdefinovat vyhrazené a známé vlastnosti hodnoty v následující tabulce. Rezervované vlastnosti nelze přepsat, ale dobře známé vlastnosti lze přepsat pomocí vlastnosti stejně jako s názvem prostředí, globální vlastnosti nebo vlastnosti, které jsou deklarované v souboru projektu.
-  
-## <a name="reserved-and-well-known-properties"></a>Vyhrazené a známé vlastnosti  
+# <a name="msbuild-reserved-and-well-known-properties"></a>Nástroj MSBuild vyhrazené a dobře známé vlastnosti
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] poskytuje sadu předdefinovaných vlastností, které ukládají informace o souboru projektu a [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] binární soubory. Tyto vlastnosti jsou vyhodnocovány stejným způsobem jako ostatní [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] vlastnosti. Chcete-li například použít `MSBuildProjectFile` vlastnost, typ `$(MSBuildProjectFile)`.  
+
+ Nástroj MSBuild používá hodnoty v následující tabulce pro předdefinování rezervovaných a dobře známých vlastností. Rezervované vlastnosti nemohou být potlačeny, ale dobře známé vlastnosti lze přepsat pomocí nazvanými vlastnostmi prostředí, globálními vlastnostmi nebo vlastnostmi, které jsou deklarovány v souboru projektu.
+
+## <a name="reserved-and-well-known-properties"></a>Vyhrazené a dobře známé vlastnosti  
  V následující tabulce jsou popsány [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] předdefinované vlastnosti.  
-  
-|Vlastnost|Popis|Vyhrazené nebo Well-Known|  
-|--------------|-----------------|-----------------------------|  
-|`MSBuildBinPath`|Absolutní cesta ke složce kde [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] binární soubory, které jsou právě používány nacházejí (například C:\Windows\Microsoft.Net\Framework\\*Cisloverze*). Tato vlastnost je užitečná, pokud máte k odkazování na soubory v [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] adresáře.<br /><br /> Nezahrnujte konečné zpětné lomítko na tuto vlastnost.|Vyhrazené|  
-|`MSBuildExtensionsPath`|Byla zavedená v rozhraní .NET Framework 4: není žádný rozdíl mezi výchozí hodnoty `MSBuildExtensionsPath` a `MSBuildExtensionsPath32`. Můžete nastavit proměnné prostředí `MSBUILDLEGACYEXTENSIONSPATH` na nenulovou hodnotu povolit chování na výchozí hodnotu `MSBuildExtensionsPath` v dřívějších verzích.<br /><br /> V rozhraní .NET Framework 3.5 a starší, výchozí hodnota `MSBuildExtensionsPath` odkazuje na cestu MSBuild podsložku \Program Files\ nebo \Program soubory (x86) složky, v závislosti na počtu bitů aktuálním procesu. Pro 32bitový proces na 64bitový počítač, například tuto vlastnost odkazuje na složce \Program Files (x86). Pro 64bitový proces na 64bitový počítač tato vlastnost odkazuje na složce \Program Files.<br /><br /> Nezahrnujte konečné zpětné lomítko na tuto vlastnost.<br /><br /> Toto umístění je užitečné místo pro soubory vlastní cíl. Cílové soubory například může nainstalovat na \Program Files\MSBuild\MyFiles\Northwind.targets a pak importovat v souborech projektu pomocí tohoto kódu XML:<br /><br /> `<Import Project="$(MSBuildExtensionsPath)\MyFiles\Northwind.targets"/>`|Známé|  
-|`MSBuildExtensionsPath32`|Cestu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] podsložku \Program soubory nebo složky \Program Files (x86). Tato cesta vždycky směřuje na 32-bit \Program složka souborů na 32bitový počítač a \Program soubory (x86) na 64bitový počítač. Viz také `MSBuildExtensionsPath` a `MSBuildExtensionsPath64`.<br /><br /> Nezahrnujte konečné zpětné lomítko na tuto vlastnost.|Známé|  
-`MSBuildExtensionsPath64`|Cestu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] podsložky ve složce \Program Files. Pro 64bitový počítač tato cesta vždycky směřuje na složce \Program Files. Pro 32bitový počítač je tato cesta je prázdná. Viz také `MSBuildExtensionsPath` a `MSBuildExtensionsPath32`.<br /><br /> Nezahrnujte konečné zpětné lomítko na tuto vlastnost.|Známé|  
-|`MSBuildLastTaskResult`|`true` Pokud předchozí úloha dokončeno bez chyb (i když došlo k upozorněním), nebo `false` Pokud předchozí úloha došlo k chybám. Obvykle když dojde k chybě v úloze, chyba je poslední, co se děje v tomto projektu. Hodnota této vlastnosti je proto nikdy `false`, s výjimkou v těchto scénářích:<br /><br /> – Když `ContinueOnError` atribut [Task – Element (MSBuild)](../msbuild/task-element-msbuild.md) je nastaven na `WarnAndContinue` (nebo `true`) nebo `ErrorAndContinue`.<br /><br /> – Když `Target` má [OnError – Element (MSBuild)](../msbuild/onerror-element-msbuild.md) jako podřízený element.|Vyhrazené|  
-|`MSBuildNodeCount`|Maximální počet souběžných procesů, které se používají při vytváření. Toto je hodnota, která jste zadali pro **/maxcpucount** na příkazovém řádku. Pokud jste zadali **/maxcpucount** bez zadání hodnoty, pak `MSBuildNodeCount` určuje počet procesorů v počítači. Další informace najdete v tématu [Reference k příkazovému řádku](../msbuild/msbuild-command-line-reference.md) a [sestavování více projektů současně](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md).|Vyhrazené|  
-|`MSBuildProgramFiles32`|Umístění složky 32bitový program; například `C:\Program Files (x86)`.<br /><br /> Nezahrnujte konečné zpětné lomítko na tuto vlastnost.|Vyhrazené|  
-|`MSBuildProjectDefaultTargets`|Úplný seznam cílů, které jsou určené v `DefaultTargets` atribut `Project` elementu. Například následující `Project` by měla mít element `MSBuildDefaultTargets` hodnota vlastnosti `A;B;C`:<br /><br /> `<Project DefaultTargets="A;B;C" >`|Vyhrazené|  
-|`MSBuildProjectDirectory`|Absolutní cesta k adresáři, kde souboru projektu nachází, například `C:\MyCompany\MyProduct`.<br /><br /> Nezahrnujte konečné zpětné lomítko na tuto vlastnost.|Vyhrazené|  
-|`MSBuildProjectDirectoryNoRoot`|Hodnota `MSBuildProjectDirectory` vlastnost, s výjimkou kořenovou jednotku.<br /><br /> Nezahrnujte konečné zpětné lomítko na tuto vlastnost.|Vyhrazené|  
-|`MSBuildProjectExtension`|Příponu názvu souboru souboru projektu, včetně období; například .proj.|Vyhrazené|  
-|`MSBuildProjectFile`|Název souboru dokončení souboru projektu, včetně přípony názvu souboru; například MyApp.proj.|Vyhrazené|  
-|`MSBuildProjectFullPath`|Absolutní cesta a název souboru dokončení souboru projektu, včetně přípony názvu souboru; například C:\MyCompany\MyProduct\MyApp.proj.|Vyhrazené|  
-|`MSBuildProjectName`|Název souboru bez přípony názvu souboru; souboru projektu například Moje aplikace.|Vyhrazené|  
-|`MSBuildRuntimeType`|Typ modulu runtime, který je aktuálně spuštěné. Zavedly v nástroji MSBuild 15. Hodnota může být definován (před verzí nástroje MSBuild 15), `Full` označující, že MSBuild běží na ploše rozhraní .NET Framework, `Core` označující, že MSBuild běží na .NET Core, nebo `Mono` označující, že MSBuild běží na Mono.|Vyhrazené|  
-|`MSBuildStartupDirectory`|Absolutní cesta ke složce kde [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] je volána. Pomocí této vlastnosti můžete vytvořit všechno pod určitého bodu v projektu stromu bez vytvoření dirs.proj soubory ve všech adresářích. Místo toho máte pouze jednu projektu – například c:\traversal.proj, jak je vidět tady:<br /><br /> `<Project ...>     <ItemGroup>         <ProjectFiles              Include="$            (MSBuildStartupDirectory)            **\*.csproj"/>     </ItemGroup>     <Target Name="build">         <MSBuild             Projects="@(ProjectFiles)"/>     </Target> </Project>`<br /><br /> Chcete-li vytvořit v libovolném bodě ve stromové struktuře, zadejte:<br /><br /> `msbuild c:\traversal.proj`<br /><br /> Nezahrnujte konečné zpětné lomítko na tuto vlastnost.|Vyhrazené|  
-|`MSBuildThisFile`|Název souboru a soubor rozšíření část `MSBuildThisFileFullPath`.|Vyhrazené|  
-|`MSBuildThisFileDirectory`|Část directory `MSBuildThisFileFullPath`.<br /><br /> Zahrňte do cesty konečné zpětné lomítko.|Vyhrazené|  
-|`MSBuildThisFileDirectoryNoRoot`|Část directory `MSBuildThisFileFullPath`, s výjimkou kořenovou jednotku.<br /><br /> Zahrňte do cesty konečné zpětné lomítko.|Vyhrazené|  
-|`MSBuildThisFileExtension`|Název souboru příponu část `MSBuildThisFileFullPath`.|Vyhrazené|  
-|`MSBuildThisFileFullPath`|Absolutní cesta souboru projektu nebo cíle, který obsahuje cíl, který běží.<br /><br /> Tip: Zadejte relativní cestu v souboru cíle, která je relativní vzhledem k souboru cíle a není vzhledem k původní soubor projektu.|Vyhrazené|  
-|`MSBuildThisFileName`|Část názvu souboru `MSBuildThisFileFullPath`, bez přípony názvu souboru.|Vyhrazené|  
-|`MSBuildToolsPath`|Cesta instalace [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] verzi, která je přidružená hodnota `MSBuildToolsVersion`.<br /><br /> V cestě nezahrnují konečné zpětné lomítko.<br /><br /> Tuto vlastnost nelze přepsat.|Vyhrazené|  
-|`MSBuildToolsVersion`|Verze [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] sada nástrojů, který je použit k vytvoření projektu.<br /><br /> Poznámka: [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] nástrojů se skládá z úloh, cílů a nástroje, které se používají k vytvoření aplikace. K nástrojům patří kompilátory například csc.exe a vbc.exe. Další informace najdete v tématu [sada nástrojů (atribut ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md), a [standardní a vlastní konfigurace sady nástrojů](../msbuild/standard-and-custom-toolset-configurations.md).|Vyhrazené|  
 
-## <a name="names-that-conflict-with-msbuild-elements"></a>Názvy, které je v konfliktu s prvky nástroje MSBuild
 
-Kromě výše uvedeného názvy odpovídající MSBuild jazykové elementy nelze použít pro uživatelem definované vlastnosti, položky nebo položky metadat:
+| Vlastnost | Vyhrazené nebo známé | Popis |
+|----------------------------------|------------------------| - |
+| `MSBuildBinPath` | Rezervováno | Absolutní cesta ke složce kde [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] jsou umístěny binární soubory, které jsou právě používány (například *C:\Windows\Microsoft.Net\Framework\\\<číslo_verze >*). Tato vlastnost je užitečná, pokud máte k odkazování na soubory v [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] adresáře.<br /><br /> Nezahrnují konečné zpětné lomítko pro tuto vlastnost. |
+| `MSBuildExtensionsPath` | Známé | Zavedena v rozhraní .NET Framework 4: není žádný rozdíl mezi výchozími hodnotami `MSBuildExtensionsPath` a `MSBuildExtensionsPath32`. Můžete nastavit proměnné prostředí `MSBUILDLEGACYEXTENSIONSPATH` na nenulovou hodnotu, chcete-li povolit chování výchozí hodnoty `MSBuildExtensionsPath` v dřívějších verzích.<br /><br /> V rozhraní .NET Framework 3.5 a starších, výchozí hodnota `MSBuildExtensionsPath` odkazuje na cestu podsložky MSBuild ve složce *\Program Files\\*  nebo *\Program Files (x86)* složce v závislosti na počtu bitů aktuálního procesu. Například pro 32bitový proces na 64bitovém počítači, tato vlastnost odkazuje na *\Program Files (x86)* složky. Pro 64bitový proces na 64bitovém počítači, tato vlastnost odkazuje na *\Program Files* složky.<br /><br /> Nezahrnují konečné zpětné lomítko pro tuto vlastnost.<br /><br /> Toto umístění je vhodné místo pro vlastní cílové soubory. Například cílové soubory mohl nainstalovat na *\Program Files\MSBuild\MyFiles\Northwind.targets* a následně importovány do projektových souborů pomocí tohoto kódu XML:<br /><br /> `<Import Project="$(MSBuildExtensionsPath)\MyFiles\Northwind.targets"/>` |
+| `MSBuildExtensionsPath32` | Známé | Cesta [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] podsložku *\Program Files* nebo *\Program Files (x86)* složky. Tato cesta vždy odkazuje na 32bitovou verzi *\Program Files* složky na 32bitovém počítači a *\Program Files (x86)* na 64bitovém počítači. Viz také `MSBuildExtensionsPath` a `MSBuildExtensionsPath64`.<br /><br /> Nezahrnují konečné zpětné lomítko pro tuto vlastnost. |
+| `MSBuildExtensionsPath64` | Známé | Cesta [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] podsložku *\Program Files* složky. Pro 64bitový počítač tato cesta vždy odkazuje na *\Program Files* složky. Pro 32bitový počítač tato cesta je prázdná. Viz také `MSBuildExtensionsPath` a `MSBuildExtensionsPath32`.<br /><br /> Nezahrnují konečné zpětné lomítko pro tuto vlastnost. |
+| `MSBuildLastTaskResult` | Rezervováno | `true` Pokud byl předchozí úkol dokončen bez chyb (i kdyby to byla upozornění), nebo `false` Pokud předchozí úloha obsahovala chyby. Obvykle když dojde k chybě v úloze, chyba je poslední věcí, ke které dochází v daném projektu. Hodnota této vlastnosti tedy nikdy `false`, s výjimkou v těchto scénářích:<br /><br /> – Když `ContinueOnError` atribut [Task – element (MSBuild)](../msbuild/task-element-msbuild.md) je nastavena na `WarnAndContinue` (nebo `true`) nebo `ErrorAndContinue`.<br /><br /> – Když `Target` má [onerror – element (MSBuild)](../msbuild/onerror-element-msbuild.md) jako podřízený prvek. |
+| `MSBuildNodeCount` | Rezervováno | Maximální počet souběžných procesů, které se používají při sestavování. Jedná se o hodnotu, která jste zadali pro **- maxcpucount** na příkazovém řádku. Pokud jste zadali **- maxcpucount** bez zadání hodnoty, pak `MSBuildNodeCount` určuje počet procesorů v počítači. Další informace najdete v tématu [odkaz na příkazový řádek](../msbuild/msbuild-command-line-reference.md) a [sestavování více projektů současně](../msbuild/building-multiple-projects-in-parallel-with-msbuild.md). |
+| `MSBuildProgramFiles32` | Rezervováno | Umístění složky 32bitových programů; například *C:\Program Files (x86)*.<br /><br /> Nezahrnují konečné zpětné lomítko pro tuto vlastnost. |
+| `MSBuildProjectDefaultTargets` | Rezervováno | Úplný seznam cílů, které jsou určené v `DefaultTargets` atribut `Project` elementu. Například následující `Project` element bude mít `MSBuildDefaultTargets` hodnotou vlastnosti `A;B;C`:<br /><br /> `<Project DefaultTargets="A;B;C" >` |
+| `MSBuildProjectDirectory` | Rezervováno | Absolutní cesta adresáře, kde je soubor projektu umístěn, například *C:\MyCompany\MyProduct*.<br /><br /> Nezahrnují konečné zpětné lomítko pro tuto vlastnost. |
+| `MSBuildProjectDirectoryNoRoot` | Rezervováno | Hodnota `MSBuildProjectDirectory` vlastnost, s výjimkou kořenové jednotky.<br /><br /> Nezahrnují konečné zpětné lomítko pro tuto vlastnost. |
+| `MSBuildProjectExtension` | Rezervováno | Příponu názvu souboru projektu, včetně tečky; například *souborů .proj*. |
+| `MSBuildProjectFile` | Rezervováno | Celý název souboru projektu, včetně přípony názvu souboru; například *MyApp.proj*. |
+| `MSBuildProjectFullPath` | Rezervováno | Absolutní cesta a celý název souboru projektu, včetně přípony názvu souboru; například *C:\MyCompany\MyProduct\MyApp.proj*. |
+| `MSBuildProjectName` | Rezervováno | Název souboru bez přípony názvu souboru; v souboru projektu například *MyApp*. |
+| `MSBuildRuntimeType` | Rezervováno | Typ modulu runtime, který aktuálně spouští. Zavedená v nástroji MSBuild 15. Hodnota může nedefinovaný (před MSBuild 15) `Full` označující, že nástroj MSBuild běží na klasické pracovní plochy rozhraní .NET Framework, `Core` označující, že nástroj MSBuild je spuštěn v rozhraní .NET Core nebo `Mono` označující, že nástroj MSBuild je spuštěn na Mono. |
+| `MSBuildStartupDirectory` | Rezervováno | Absolutní cesta ke složce kde [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] je volána. Pomocí této vlastnosti můžete sestavit vše pod určitým bodem ve stromu projektu bez vytváření  *\<adresáře > souborů .proj* soubory v každém adresáři. Místo toho máte pouze jeden projekt, například *c:\traversal.proj*, jak je znázorněno zde:<br /><br /> `<Project ...>     <ItemGroup>         <ProjectFiles              Include="$            (MSBuildStartupDirectory)            **\*.csproj"/>     </ItemGroup>     <Target Name="build">         <MSBuild             Projects="@(ProjectFiles)"/>     </Target> </Project>`<br /><br /> Pokud chcete sestavit jakýkoli bod ve stromové struktuře, zadejte:<br /><br /> `msbuild c:\traversal.proj`<br /><br /> Nezahrnují konečné zpětné lomítko pro tuto vlastnost. |
+| `MSBuildThisFile` | Rezervováno | Název souboru a část přípony souboru `MSBuildThisFileFullPath`. |
+| `MSBuildThisFileDirectory` | Rezervováno | Část adresáře `MSBuildThisFileFullPath`.<br /><br /> Zahrňte v cestě konečné zpětné lomítko. |
+| `MSBuildThisFileDirectoryNoRoot` | Rezervováno | Část adresáře `MSBuildThisFileFullPath`, s výjimkou kořenové jednotky.<br /><br /> Zahrňte v cestě konečné zpětné lomítko. |
+| `MSBuildThisFileExtension` | Rezervováno | Část přípony názvu souboru z `MSBuildThisFileFullPath`. |
+| `MSBuildThisFileFullPath` | Rezervováno | Absolutní cesta souboru projektu nebo cílů, který obsahuje cíl, na kterém běží.<br /><br /> Tip: Lze zadat relativní cestu v souboru cílů, která je relativní vzhledem k souboru cílů a ne vzhledem k původnímu souboru projektu. |
+| `MSBuildThisFileName` | Rezervováno | Část názvu souboru `MSBuildThisFileFullPath`, bez přípony názvu souboru. |
+| `MSBuildToolsPath` | Rezervováno | Instalační cesta [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] verzi, která je přidružená hodnota `MSBuildToolsVersion`.<br /><br /> Nezahrnují v cestě konečné zpětné lomítko.<br /><br /> Tuto vlastnost nelze přepsat. |
+| `MSBuildToolsVersion` | Rezervováno | Verze [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] nástrojů, která se používá k sestavení projektu.<br /><br /> Poznámka: [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] sada nástrojů obsahuje úkoly, cíle a nástroje, které slouží k sestavení aplikace. Mezi tyto nástroje patří kompilátory jako *csc.exe* a *vbc.exe*. Další informace najdete v tématu [sada nástrojů (atribut ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md), a [standardní a vlastní konfigurace sady nástrojů](../msbuild/standard-and-custom-toolset-configurations.md). |
+
+## <a name="names-that-conflict-with-msbuild-elements"></a>Názvy, které jsou v konfliktu s elementy MSBuild
+
+Kromě výše uvedeného pojmenuje odpovídající jazykové prvky nelze použít pro uživatelem definované vlastnosti, položky nebo metadata položky nástroje MSBuild:
 
 * VisualStudioProject
-* cíl
-* PropertyGroup –
+* Cíl
+* PropertyGroup
 * Výstup
 * ItemGroup
 * Usingtask –
-* ProjectExtensions
-* OnError
-* ImportGroup
+* Projectextensions –
+* Onerror –
+* Importgroup –
 * Zvolte
 * Kdy
-* v opačném případě
+* jinak
 
-## <a name="see-also"></a>Viz také  
- [MSBuild – Reference](../msbuild/msbuild-reference.md) [vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md)
+## <a name="see-also"></a>Viz také:  
+[Referenční dokumentace nástroje MSBuild](../msbuild/msbuild-reference.md)
+
+[Vlastnosti nástroje MSBuild](../msbuild/msbuild-properties.md)

@@ -1,9 +1,8 @@
 ---
-title: Globalizace aplikací | Microsoft Docs
-ms.custom: ''
+title: Globalizace aplikací
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Basic code, international applications
@@ -15,27 +14,25 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8dfcdb9d78b58c4079664dfa3824c852ff9b43ce
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f1ab77b58047c92cfbf692e014f041e34456a01e
+ms.sourcegitcommit: b6dfa1bdf4c23c2e341754454bbd4758db2218e0
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48863579"
 ---
-# <a name="globalizing-applications"></a>Globalizace aplikací
-Globalizace je proces návrhu a vývoje této funkce pro více jazykových verzí softwarového produktu. V následujícím článku platí pro Windows forms a stránky webových formulářů.  
-  
- [Třídy specifické pro jazykovou verzi pro globální formuláře systému Windows a webové formuláře](../ide/culture-specific-classes-for-global-windows-forms-and-web-forms.md)  
- Popisuje třídy, které formátování data, času, čísla, měny a další informace podle nastavení jazykové verze.  
-  
-### <a name="see-also"></a>Viz také  
- [Globalizace Windows forms](/dotnet/framework/winforms/advanced/globalizing-windows-forms)  
- Obsahuje odkazy na stránky nápovědy o globalizace Windows Forms.  
-  
- [Globalizace a lokalizace](http://msdn.microsoft.com/Library/8ef3838e-9d05-4236-9dd0-ceecff9df80d)  
- Poskytuje odkazy na stránky nápovědy o globalizaci web forms stránky.  
-  
- [Úvod do mezinárodních aplikací založených na rozhraní .NET Framework](../ide/introduction-to-international-applications-based-on-the-dotnet-framework.md)  
- Popisuje základní koncepty o vývoji softwaru pro mezinárodní trh pomocí Visual Basic a C#.  
-  
- [Osvědčené postupy pro vývoj aplikací připravených](http://msdn.microsoft.com/Library/f08169c7-aad8-4ec3-9a21-9ebd3b89986c)  
- Obsahuje informace o programování pro mezinárodní cílovou skupinu, například problémy návrhu a terminologii.
+# <a name="globalize-applications"></a>Globalizace aplikací
+
+Globalizace je proces návrhu a vývoje softwarového produktu, který funguje pro více jazykových verzí. V následujícím článku se vztahuje na Windows forms a webového formuláře.
+
+ [Třídy specifické pro jazykovou verzi pro globální Windows forms a webové formuláře](../ide/culture-specific-classes-for-global-windows-forms-and-web-forms.md) popisuje třídy, které formátování kalendářních dat, čas, čísla, měny a další informace podle nastavení jazykové verze.
+
+### <a name="see-also"></a>Viz také:
+
+- [Globalizace Windows forms](/dotnet/framework/winforms/advanced/globalizing-windows-forms) obsahuje odkazy na stránky nápovědy o globalizaci formulářů Windows.
+
+- [Globalizace a lokalizace](https://msdn.microsoft.com/Library/8ef3838e-9d05-4236-9dd0-ceecff9df80d) poskytuje odkazy na stránky nápovědy o globalizaci webové stránky formulářů.
+
+- [Představení mezinárodních aplikací založené na rozhraní .NET Framework](../ide/introduction-to-international-applications-based-on-the-dotnet-framework.md) Tento článek popisuje zásadní pojmy týkající se vývoje softwaru pro mezinárodní trh pomocí jazyka Visual Basic nebo C#.
+
+- [Osvědčené postupy pro vývoj globalizovaných aplikací](/dotnet/standard/globalization-localization/best-practices-for-developing-world-ready-apps) poskytuje informace o programování pro mezinárodní cílové skupiny, jako jsou problémy s návrhem a terminologii.

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31146816"
 ---
 # <a name="using-visual-studio-interop-assemblies"></a>Pomocí sady Visual Studio spolupráce – sestavení
 Visual Studio sestavení vzájemné spolupráce povolit spravované aplikace pro přístup k rozhraní modelu COM, která zajistí možnosti rozšíření sady Visual Studio. Existují určité rozdíly mezi přímých rozhraní COM a jejich vzájemné spolupráce verze. Hodnoty HRESULT jsou obecně vyjádřené hodnoty int a je nutné zacházet stejným způsobem jako výjimky a parametry (zejména výstupní parametry) jsou zpracovávat odděleně.  
@@ -50,7 +51,7 @@ Visual Studio sestavení vzájemné spolupráce povolit spravované aplikace pro
 > [!NOTE]
 >  Snížit výkon, výjimky, které slouží k označení neobvyklého podmínky. Podmínky, které dochází často, by měly být zpracovávaný vložené, místo vyvolaná výjimka.  
   
-## <a name="iunknown-parameters-passed-as-type-void"></a>Parametry IUnknown předány jako typ void **  
+## <a name="iunknown-parameters-passed-as-type-void"></a>Parametry IUnknown předány jako typ void**  
  Vyhledejte [parametry, které jsou definovány jako typ out] `void **` v modelu COM rozhraní, ale které jsou definovány jako `[``iid_is``]` v [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] sestavení vzájemné spolupráce metoda prototypu.  
   
  V některých případech vygeneruje rozhraní modelu COM `IUnknown` objekt a rozhraní COM pak předá ji jako typ `void **`. Tato rozhraní jsou zvlášť důležité, protože pokud proměnnou je definován jako [out] v IDL, pak se `IUnknown` objekt je odkaz počítá s `AddRef` metoda. Nevrácená paměť systému nastane, pokud objekt není správně zpracovat.  

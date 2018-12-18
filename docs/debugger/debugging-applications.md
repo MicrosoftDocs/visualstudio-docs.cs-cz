@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
 ms.lasthandoff: 04/18/2018
+ms.locfileid: "31472659"
 ---
 # <a name="debugging-applications"></a>Ladicí aplikace
 V následujících částech se zabývají ladění pro konkrétní typy aplikací. Typy jinou aplikaci a různé jazyky vyžadují různá nastavení a techniky a dispozici různé problémy, které je potřeba ladit.  

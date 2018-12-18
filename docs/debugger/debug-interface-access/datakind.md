@@ -1,5 +1,5 @@
 ---
-title: DataKind | Microsoft Docs
+title: Datakind – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c3de9ef6128c3cd5ca6eae80a257b3dc2982cd0f
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 8f2b46e420db8addf19ef8694112058bdb8b2f91
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49867621"
 ---
 # <a name="datakind"></a>DataKind
-Určuje konkrétní rozsah datové hodnoty.  
+Určuje konkrétní obor datové hodnoty.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,37 +43,37 @@ enum DataKind {
   
 ## <a name="elements"></a>Elementy  
  DataIsUnknown  
- Datový symbol nelze určit.  
+ Datový symbol nejde určit.  
   
  DataIsLocal  
  Položka dat je místní proměnné.  
   
  DataIsStaticLocal  
- Položka dat je statický místní proměnné.  
+ Položka dat je statické místní proměnné.  
   
  DataIsParam  
  Položka dat je formální parametr.  
   
  DataIsObjectPtr  
- Datová položka je objekt ukazatel (`this`).  
+ Položka dat je ukazatelem na objekt (`this`).  
   
  DataIsFileStatic  
- Položka dat je proměnné s rozsahem souboru.  
+ Položka dat je proměnnou s rozsahem souboru.  
   
  DataIsGlobal  
  Položka dat je globální proměnné.  
   
  DataIsMember  
- Položka dat je proměnná člen objektu.  
+ Položka dat je proměnná člena objektu.  
   
  DataIsStaticMember  
- Položka dat je proměnné statické třídy.  
+ Položka dat je statická proměnná třídy.  
   
  DataIsConstant  
- Položka dat je konstantní hodnotu.  
+ Položka dat je konstantní hodnota.  
   
 ## <a name="remarks"></a>Poznámky  
- Jsou vrácené hodnoty v tento výčet [idiasymbol::get_datakind –](../../debugger/debug-interface-access/idiasymbol-get-datakind.md) metoda.  
+ Jsou vrácené hodnoty v tento výčet [idiasymbol::get_datakind –](../../debugger/debug-interface-access/idiasymbol-get-datakind.md) metody.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: cvconst.h  

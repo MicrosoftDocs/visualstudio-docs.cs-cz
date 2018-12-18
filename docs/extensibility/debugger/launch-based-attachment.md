@@ -1,5 +1,5 @@
 ---
-title: Na základě spuštění přílohu | Microsoft Docs
+title: Příloha založená na spuštění | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,26 +14,27 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 892518cc92286f9415e39c96b6ed2afa8eb0d792
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 518a3f804298df6c0af98a6e5d2a6d851b645aee
+ms.sourcegitcommit: 25a62c2db771f938e3baa658df8b1ae54a960e4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39231701"
 ---
-# <a name="launch-based-attachment"></a>Na základě spuštění přílohy
-Na základě spuštění přílohy program je automaticky. Při spuštění procesu hostování program podle SDM odpovídá na základě spuštění přílohy podobná metodu ručního přílohy cestu. Informace najdete v tématu [připojení k programu](../../extensibility/debugger/attaching-to-the-program.md).  
+# <a name="launch-based-attachment"></a>Příloha založená na spuštění
+Příloha založená na spuštění programu je automatické. Při spuštění procesu hostování program podle SDM Příloha založená na spuštění se řídí podobná metoda ručního přílohy cestu. Informace najdete v tématu [připojit k programu](../../extensibility/debugger/attaching-to-the-program.md).  
   
 ## <a name="the-attaching-process"></a>Proces připojení  
- Hlavní rozdíl je posloupnost událostí následující **Attach** volat, následujícím způsobem:  
+ Hlavní rozdíl je posloupnost událostí po **připojit** volání následujícím způsobem:  
   
-1.  Odeslat **IDebugEngineCreateEvent2** událostí objekt, který chcete SDM. Podrobnosti najdete v tématu [odesílání událostí](../../extensibility/debugger/sending-events.md).  
+1.  Odeslání **IDebugEngineCreateEvent2** objekt SDM události. Podrobnosti najdete v tématu [odesílání událostí](../../extensibility/debugger/sending-events.md).  
   
-2.  Volání `IDebugProgram2::GetProgramId` metodu **IDebugProgram2** předaný rozhraní **Attach** metoda.  
+2.  Volání `IDebugProgram2::GetProgramId` metodu na **IDebugProgram2** předán rozhraní **připojit** metody.  
   
-3.  Odeslat **IDebugProgramCreateEvent2** objekt události pro upozornění SDM, místní **IDebugProgram2** představující program k DE se objekt vytvořil.  
+3.  Odeslání **IDebugProgramCreateEvent2** události objektu oznámit SDM, místní **IDebugProgram2** byl vytvořen objekt představující program DE.  
   
-4.  Odeslat [IDebugThreadCreateEvent2](../../extensibility/debugger/reference/idebugthreadcreateevent2.md) objekt události oznámení SDM vytvořený nové vlákno pro proces, který spuštěn.  
+4.  Odeslání [IDebugThreadCreateEvent2](../../extensibility/debugger/reference/idebugthreadcreateevent2.md) události objektu oznámit SDM, že se vytvoří nové vlákno pro proces, který spustil.  
   
-## <a name="see-also"></a>Viz také  
- [Odesílání požadované událostí](../../extensibility/debugger/sending-the-required-events.md)   
- [Povolení ladění programu](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)
+## <a name="see-also"></a>Viz také:  
+ [Odesílání požadovaných událostí](../../extensibility/debugger/sending-the-required-events.md)   
+ [Povolit program k ladění](../../extensibility/debugger/enabling-a-program-to-be-debugged.md)

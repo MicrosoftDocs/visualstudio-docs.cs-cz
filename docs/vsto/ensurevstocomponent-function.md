@@ -1,5 +1,5 @@
 ---
-title: Ensurevstocomponent – funkce | Microsoft Docs
+title: Ensurevstocomponent – funkce
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -13,18 +13,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 5561d3c046c083c1495b858d36f6c867050ed842
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 08b22ed86851a35f23306fc765f62f265da4701e
+ms.sourcegitcommit: 6944ceb7193d410a2a913ecee6f40c6e87e8a54b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "35675909"
 ---
-# <a name="ensurevstocomponent-function"></a>EnsureVSTOComponent – funkce
-  Toto rozhraní API podporuje infrastrukturu rozhraní Office a není určena pro použití přímo z vašeho kódu.  
+# <a name="ensurevstocomponent-function"></a>Ensurevstocomponent – funkce
+  Toto rozhraní API podporuje infrastrukturu sady Office a není určena pro použití přímo v kódu.  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```csharp  
 HRESULT EnsureVSTOComponent(  
     IVSTProject *pProject  
 );  
@@ -37,6 +38,6 @@ HRESULT EnsureVSTOComponent(
 |*pProject*|Nepoužívejte.|  
   
 ## <a name="return-value"></a>Návratová hodnota  
- Pokud funkci úspěšné, vrátí **S_OK**. Pokud se funkce nezdaří, vrátí kód chyby.  
+ Pokud funkce uspěje, vrátí **S_OK**. Pokud funkce selže, vrátí kód chyby.  
   
   

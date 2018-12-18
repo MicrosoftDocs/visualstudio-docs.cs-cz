@@ -1,0 +1,40 @@
+items:
+- name: Dokumentace Node.js
+- name: Rychlý start
+  items:
+  - name: Vytvořit projekt Node.js
+    href: /visualstudio/ide/quickstart-nodejs?toc=/visualstudio/javascript/toc.json
+  - name: Vytvoření projektu Vue.js
+    href: quickstart-vuejs-with-nodejs.md
+- name: Kurzy
+  items:
+  - name: Vytvoření aplikace Node.js přes Express
+    href: tutorial-nodejs.md
+  - name: Vytvoření aplikace Node.js přes React
+    href: tutorial-nodejs-with-react-and-jsx.md
+  - name: Publikování do App Service pro Linux
+    href: publish-nodejs-app-azure.md
+- name: Návody
+  items:
+  - name: Vytvoření aplikace Vue.js
+    href: create-application-with-vuejs.md
+  - name: Správa balíčků npm
+    href: npm-package-management.md
+  - name: Vývoj bez projektů nebo řešení (Otevřít složku)
+    href: develop-javascript-code-without-solutions-projects.md
+  - name: Testování jednotek javascriptového kódu
+    href: unit-testing-javascript-with-visual-studio.md
+  - name: JavaScript IntelliSense
+    href: /visualstudio/ide/javascript-intellisense?toc=/visualstudio/javascript/toc.json
+- name: Prostředky
+  items:
+  - name: Konfigurace package.json
+    href: configure-packages-with-package-json.md
+  - name: Stránka Wiki pro nástroje Node.js
+    href: https://github.com/Microsoft/nodejstools
+ms.openlocfilehash: 934d7cd68dd61dacb5bd60d06e07aef72c34dd04
+ms.sourcegitcommit: aea5cdb76fbc7eb31d1e5cc3c8d6adb0c743220f
+ms.translationtype: HT
+ms.contentlocale: cs-CZ
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44124941"

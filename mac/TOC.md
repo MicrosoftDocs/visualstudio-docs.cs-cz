@@ -1,8 +1,9 @@
 # [Představení Visual Studia pro Mac](index.md)
-## [Výhody sady Visual Studio pro Mac oproti Xamarin Studiu](benefits-vsmac-over-xs.md)
 # [Prohlídka integrovaného vývojového prostředí (IDE)](ide-tour.md)
 
 # [Instalace](installation.md)
+## [Instalace a používání za bránou firewall nebo proxy serverem](install-behind-a-firewall-or-proxy-server.md)
+## [Instalace verze Preview](install-preview.md)
 ## [Aktualizace](update.md)
 ## [Odinstalace](uninstall.md)
 
@@ -21,6 +22,7 @@
 ## [Správa odkazů v projektu](managing-references-in-a-project.md)
 ### [Návod: Zahrnutí balíčku NuGet do projektu](nuget-walkthrough.md)
 ## [Správa prostředků aplikace](managing-app-resources.md)
+## [Postupy: Otevření více řešení nebo instancí](open-multiple-solutions.md)
 
 # [Editor zdrojového kódu](source-editor.md)
 ## [Refactoring](refactoring.md)
@@ -30,6 +32,7 @@
 ## [Fragmenty](snippets.md)
 ## [Blokový výběr](block-selection.md)
 ## [Motivy editoru](editor-themes.md)
+## [EditorConfig](editorconfig.md)
 ## [Běžné klávesové zkratky](keyboard-shortcuts.md)
 
 # [Ladění](debugging.md)
@@ -43,6 +46,7 @@
 ### [Vytvoření a úprava konfigurací](create-and-edit-configurations.md)
 
 # [Správa verzí](version-control.md)
+## [Správa verzí TF](tf-version-control.md)
 ## [Nastavení úložiště Git](set-up-git-repository.md)
 ## [Práce s úložištěm Git](working-with-git.md)
 ## [Nastavení úložiště Subversion](set-up-subversion-repository.md)
@@ -50,13 +54,20 @@
 
 # [Úlohy](workloads.md)
 ## [ASP.NET Core](asp-net-core.md)
+### [Razor](razor.md)
+### [JavaScript](javascript.md)
 ## [Azure](azure-workload.md)
+### [Úvod do Azure Functions](azure-functions.md)
+### [Kurz: Azure Functions](azure-functions-lab.md)
 ### [Připojené služby](connected-services.md)
 ## [Vývoj her pro Unity](unity-tools.md)
 ### [Instalace a nastavení](setup-vsmac-tools-unity.md)
 ### [Používání nástrojů Unity](using-vsmac-tools-unity.md)
+### [Používání .NET 4.x v Unity](/visualstudio/cross-platform/unity-scripting-upgrade/?context=visualstudio/mac/context)
+### [Protokol Změn](/visualstudio/cross-platform/change-log-visual-studio-tools-for-unity-mac/?context=visualstudio/mac/context)
 
 # [Usnadnění](accessibility.md)
 
 # [Odstraňování potíží](troubleshooting.md)
+## [Program Zlepšování softwaru a služeb na základě zkušeností uživatelů](visual-studio-experience-improvement-program.md)
 ## [Nahlášení problému](report-a-problem.md)

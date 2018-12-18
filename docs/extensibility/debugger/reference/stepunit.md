@@ -1,5 +1,5 @@
 ---
-title: STEPUNIT | Microsoft Docs
+title: STEPUNIT | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,14 +15,15 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 993c92d457baa2008387aad2bc6749ce7ad9387b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a88cb7126166462e64680938eb5f1b0d456a75f4
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49901109"
 ---
 # <a name="stepunit"></a>STEPUNIT
-Určuje jednotku kroku pro krokování s.  
+Určuje jednotku kroku pro procházení.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,13 +49,13 @@ enum enum_STEPUNIT {
  Kroky příkazem.  
   
  STEP_LINE  
- Kroky podle řádku.  
+ Kroky po řádku.  
   
  STEP_INSTRUCTION  
- Kroky podle instrukcí.  
+ Kroky podle instrukce.  
   
 ## <a name="remarks"></a>Poznámky  
- Předat jako argument k [krok](../../../extensibility/debugger/reference/idebugprocess3-step.md) metoda.  
+ Předán jako argument [krok](../../../extensibility/debugger/reference/idebugprocess3-step.md) metody.  
   
 ## <a name="requirements"></a>Požadavky  
  Záhlaví: msdbg.h  
@@ -65,4 +66,4 @@ enum enum_STEPUNIT {
   
 ## <a name="see-also"></a>Viz také  
  [Výčty](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   
- [Krok](../../../extensibility/debugger/reference/idebugprocess3-step.md)
+ [Step](../../../extensibility/debugger/reference/idebugprocess3-step.md)

@@ -1,5 +1,5 @@
 ---
-title: Idiaenumframedata::get_count – | Microsoft Docs
+title: Idiaenumframedata::get_count – | Dokumentace Microsoftu
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-debug
@@ -14,14 +14,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a15df11cbdc5cc13aa991e5a7704929e65e29875
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 34cf638b9d0448adc6ec06a09f41a93e65fdc362
+ms.sourcegitcommit: 240c8b34e80952d00e90c52dcb1a077b9aff47f6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49923848"
 ---
 # <a name="idiaenumframedatagetcount"></a>IDiaEnumFrameData::get_Count
-Získá počet elementů datové rámce.  
+Získá počet elementů datového rámce.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,10 +34,10 @@ HRESULT get_Count (
   
 #### <a name="parameters"></a>Parametry  
  pRetVal  
- [out] Vrátí počet datových elementů rámce.  
+ [out] Vrátí počet prvků datového rámce.  
   
 ## <a name="return-value"></a>Návratová hodnota  
- V případě úspěchu vrátí `S_OK`, jinak vrátí kód chyby.  
+ Pokud je úspěšná, vrátí `S_OK`; v opačném případě vrátí kód chyby.  
   
 ## <a name="see-also"></a>Viz také  
  [Idiaenumframedata –](../../debugger/debug-interface-access/idiaenumframedata.md)   

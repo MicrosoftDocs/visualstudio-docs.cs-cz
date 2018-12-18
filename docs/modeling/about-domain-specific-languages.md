@@ -9,64 +9,66 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: b12c11032527477348ac6542feb758db8dfe6a59
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 501b85579460038d6d20ca38b17ab22be7825f5c
+ms.sourcegitcommit: 5b767247b3d819a99deb0dbce729a0562b9654ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39176990"
 ---
 # <a name="about-domain-specific-languages"></a>O jazycích specifických pro konkrétní domény
 
-Na rozdíl od obecný jazyk například C# nebo UML jazyk specifické pro doménu (DSL) slouží k express příkazy v místo konkrétního problému, nebo doméně.
+Na rozdíl od pro obecné účely jazyka, jako je C# nebo UML jazyka specifického pro doménu (DSL) slouží k vyjádření příkazy v místo konkrétního problému, nebo doméně.
 
-Známé DSL, linky obsahovat regulární výrazy a SQL. Každý DSL je mnohem lepší než obecný jazyk pro popis operace v textové řetězce nebo databáze, ale mnohem nejhorší popisující nápady, které jsou mimo svůj vlastní rozsah. Jednotlivé odvětví mají také vlastní DSL, linky. Například v odvětví telecommunications popis volání jazyky se často používají k zadejte pořadí stavů v telefonního hovoru a v vzduchem cestují oborový standard DSL se používá k popisu letu rezervace.
+Známé DSL zahrnují regulárních výrazů a SQL. Každý DSL je mnohem lepší než obecný jazyk pro popis operace v textových řetězců nebo databázi, ale mnohem horší popisující nápadech, které jsou mimo svůj vlastní obor. Jednotlivé obory také mít své vlastní DSL. Například v odvětví telekomunikace popis volání jazyky se běžně používají k určení posloupnost stavy v telefonní hovor a ve vzduchu cestovní odvětví standardního DSL slouží k popisu letu rezervace.
 
-Vaši firmu a projekt také speciální sady koncepty, které může být popsáno pomocí DSL zabývat. Můžete třeba definovat DSL pro jednu z těchto aplikací:
+Vaše podnikání a váš projekt také řešit speciální sadu koncepty, které by mohly být popsané společně s DSL. Můžete například definovat DSL pro jednu z těchto aplikací:
 
 -   Plán cesty navigace na webu.
 
--   Vzájemné propojení diagramy pro elektronické součásti.
+-   Vzájemné propojení diagramy pro elektronických komponent.
 
--   Sítě dopravní pásů a zpracování zařízení pro letišti sobě.
+-   Sítě dopravní pásy a zpracování zařízení pro letišti sobě.
 
-Při návrhu DSL, můžete definovat *domény třída* pro každou důležité koncepty v doméně, jako je například webové stránce, svítilna nebo letiště vrácení se změnami podpory. Můžete definovat *vztahy domén* například hypertextový odkaz, přenosová nebo běžícím pásu propojení koncepty společně.
+Při návrhu DSL, můžete definovat *doménové třídy* pro všechny důležité koncepty v doméně, třeba webové stránky, lamp nebo letiště stolu vrácení se změnami. Můžete definovat *vztahy domén* jako hypertextový odkaz, při přenosu nebo dopravní pás koncepty propojit dohromady.
 
-Vytvoření uživatelů vaší DSL *modelů.* Modely jsou *instance* linek. Například popisují určitý web nebo zapojení se určité zařízení nebo sobě zpracování systému v určitém letišti.
+Vytvoření uživatelů tohoto kódu DSL *modely.* Modely jsou *instance* nástroje DSL. Například popisují určitý web nebo její konkrétní zařízení nebo sobě systém v určitém letišti zpracování.
 
-Vaši uživatelé můžete zobrazit model jako diagram nebo formuláře systému Windows. Modely lze také zobrazit ve formátu XML, který je, jak jsou uložené. Když definujete DSL, definujete jak instance každé domény třídy a relace zobrazí na obrazovce uživatele. Typické DSL se zobrazuje jako kolekci ikony nebo obdélníků pomocí šipky.
+Vaši uživatelé mohou zobrazit model, jako diagram nebo formulář Windows. Modely lze také zobrazit ve formátu XML, jak jsou uložené. Při definování DSL definujete, jak se zobrazují instance každé doménové třídy a relace na obrazovce uživatele. Typické DSL se zobrazí kolekce ikon nebo obdélníky propojené pomocí šipky.
 
-Následující obrázek znázorňuje model malé v graficky DSL:
+Následující obrázek znázorňuje malé modelu v graficky DSL:
 
-![Tudor rodiny stromu modelu](../modeling/media/tudor_familytreemodel.png "Tudor_FamilyTreeModel")
+![Tudor řady stromu modelu](../modeling/media/tudor_familytreemodel.png)
 
-## <a name="what-you-can-do-with-dsls"></a>Co můžete dělat s DSL, linky
+## <a name="what-you-can-do-with-dsls"></a>Co můžete dělat s DSL
 
-Typická aplikace DSL je generování kódu programu nebo jiné artefakty. Když definujete vaší DSL, můžete definovat *textové šablony* , čtení model DSL a generování textových souborů.
+Typická aplikace DSL je generování programového kódu nebo jiné artefakty. Při definování vašeho DSL, můžete definovat *textových šablon* , který čtení modelu DSL a generování textových souborů.
 
-Můžete například napsat šablony, které trvat plán letiště a generovat součástí softwaru pro zpracování, a také některé dokumenty uživatele, které popisují plán sobě.
+Můžete například napsat šablony, které používat plán letišti a generovat část softwaru pro zpracování, a také některé dokumenty uživatele, které popisují plánu sobě.
 
-Pokud jste definovali DSL, můžete ho distribuovat jiným uživatelům, kteří můžete nainstalovat na své počítače. Uživatelé vaší DSL můžete vytvořit a upravit modelů v sadě Visual Studio.
+Po nadefinování DSL, můžete ho distribuovat ostatním uživatelům, kteří ji můžete nainstalovat na svých počítačích. Uživatelé tohoto kódu DSL můžete vytvářet a upravovat modelů v sadě Visual Studio.
 
-Můžete také definovat příkazy nabídky a jiné nástroje, které pomáhají uživatelům upravit DSL, omezení ověřování k zajištění, že je správně použít DSL a šablony položek, které pomáhají uživatelům vytvořit nové instance. Jeden nebo více DSL, linky s jejich nástroje a další rozšíření sady Visual Studio může obtékat jako integrované balíček.
+Můžete také definovat příkazy a další nástroje, které pomáhají uživatelům upravit DSL omezení ověření k zajištění, že se správně používá DSL a šablon položek, které pomáhají uživatelům vytvoření nových instancí. Jeden nebo více DSL, své nástroje a další rozšíření sady Visual Studio lze zabalit jako integrované balíček.
 
-Obvykle jazyka domény je vytvořena při vývojový tým má napsat podobné kód pro více produktů. Například společnost, která se specializuje na sobě systémy zpracování může definovat DSL sledovat sobě, ze kterého se mohou generovat kód pro každou instalaci. DSL výhody, může být srozumitelné svým zákazníkům, zda kód, který vygenerovala z něj spolehlivé a že v systému mohou být rychle aktualizovány, pokud se změní požadavky zákazníků.
+Obvykle jazyka specifického pro doménu se vytvoří při vývojový tým musí zapisovat podobný kód pro několik produktů. Společnost, která se specializuje na sobě systémy zpracování může například definovat DSL sledování sobě ze kterého se generovat kód pro každou instalaci. Nástroje DSL je, že lze chápat tak svým zákazníkům, že kód generovaný z něj je spolehlivý a, že systém je možné rychle aktualizovat, pokud se změní požadavky zákazníků.
 
-[!INCLUDE[dsl](../modeling/includes/dsl_md.md)] Umožňuje vytvořit specifické pro doménu jazyka, který má vlastní grafický Návrhář a vlastní diagram zápis a pak použít ke generování příslušné zdrojového kódu pro každý projekt jazyka.
+[!INCLUDE[dsl](../modeling/includes/dsl_md.md)] Umožňuje vytvoření jazyka specifického pro doménu, která má grafického návrháře a zápis diagramu a potom použít ke generování příslušného zdrojového kódu pro každý projekt jazyk.
 
-## <a name="domain-specific-development"></a>Vývoj pro specifické pro doménu
+## <a name="domain-specific-development"></a>Vývoj specifického pro doménu
 
-Vývoj pro specifické pro doménu je proces identifikace součástí vaší aplikace, které můžete modelovány pomocí pomocí jazyka specifické pro doménu a pak vytváření jazyk a jeho nasazení na vývojáře aplikace. Vývojáři pomocí jazyka domény sestavit modely, které jsou specifické pro své aplikace, používat modely ke generování zdrojového kódu a pak použít zdrojový kód pro vývoj aplikací.
+Vývoj specifického pro doménu je proces identifikace části vašich aplikací, které mohou být modelovaná pomocí jazyka specifického pro doménu, vytváření jazyka a jeho nasazení pro vývojáře aplikací. Vývojáři jazyka specifického pro doménu můžete vytvořit modely, které jsou specifické pro své aplikace, používat modely k vygenerování zdrojového kódu a pak pomocí zdrojového kódu pro vývoj aplikací.
 
-## <a name="aspects-of-graphical-domain-specific-development"></a>Aspekty grafické vývoj specifické pro doménu
+## <a name="aspects-of-graphical-domain-specific-development"></a>Aspekty vývoje grafické specifického pro doménu
 
-Grafické domény jazyka musí zahrnovat následující funkce:
+Grafické jazyka specifického pro doménu, musí obsahovat následující funkce:
 
 - Zápis
 
-- Model domény
+- Doménový model
 
-- Generování artefaktů
+- Generování artefaktu
 
 - Serializace
 
@@ -74,52 +76,52 @@ Grafické domény jazyka musí zahrnovat následující funkce:
 
 ### <a name="notation"></a>Zápis
 
-Jazyka domény musí mít přiměřené malého elementů, které se dají snadno definované a rozšířené představují konstrukce specifické pro doménu. Zápis se skládá z tvarů, které představují prvky, a konektory, které představují vztahy mezi elementy, na povrchu Grafický diagram. V [!INCLUDE[dsl](../modeling/includes/dsl_md.md)], obrazce může být dále rozšiřována a vylepšení představují elementy jazyka specifické pro doménu.
+Jazyka specifického pro doménu, musí mít poměrně malého počtu prvků, které lze snadno definované a rozšířená tak, aby představují konstrukce jazyka specifického pro doménu. Zápis se skládá z tvary, které zastupují elementy, a konektorů, které představují vztahy mezi elementy, na ploše Grafický diagram. V [!INCLUDE[dsl](../modeling/includes/dsl_md.md)], tvary můžou být dále rozšiřována a vylepšili o představují prvky jazyka specifického pro doménu.
 
-### <a name="domain-model"></a>Model domény
+### <a name="domain-model"></a>Doménový Model
 
-Jazyka domény musíte kombinovat sadu elementů a vztahů mezi nimi do souvislý gramatika. Musí také definovat, zda jsou platné kombinace elementů a vztahů. Například programovací jazyky obvykle zakázat cyklické dědičnosti, ve kterém je jednu třídu odvozenou od třídy sekundu a druhé třídy je odvozena od třídy první. Omezení slouží také k express obchodní logiky, například jedna osoba nelze závislé služby sám. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] pomocí omezení express druhy omezení, které vyžadují nejvíc jazyky specifické pro doménu.
+Jazyka specifického pro doménu obsahující kombinaci sadu elementů a vztahů mezi nimi do koherentního gramatiky. Musíte také definovat, zda kombinace různých typů elementů a vztahů jsou platné. Například programovacích jazyků obvykle zakázat Cyklické dědění, ve které jedna třída je odvozena z třídy sekundu a druhá třída je odvozena od třídy první. Omezení je také možné vyjádřit obchodní logiky, například jedna osoba nemůže být závislá aplikace sám. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] pomocí omezení express typy omezení, které vyžadují nejvíc jazyky specifickými pro doménu.
 
-### <a name="artifact-generation"></a>Generování artefaktů
+### <a name="artifact-generation"></a>Generování artefaktu
 
-Jedním z hlavní účely jazyka domény je ke generování artefakt, například zdrojový kód, soubor XML nebo některá použitelné data. Změny v modelu obvykle znamená změnu artefakt. Můžete použít [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] generování artefaktů a obnovit je při změně modelu.
+Jedním z hlavních účelů jazyka specifického pro doménu je generování artefakt, například zdrojový kód, soubor XML nebo jiných využitelná data. Změny v modelu obvykle znamená změnu v artefaktu. Můžete použít [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] ke generování artefakty a znovu vygenerovat, je při změně modelu.
 
 ### <a name="serialization"></a>Serializace
 
-Jazyk specifické pro doménu musí nastavit jako trvalý, v některých formulář, který lze upravovat, uložit, ukončeno a znovu načíst. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] používá formát XML, který umožňuje definovat a přizpůsobit, jak je jazyka specifické pro doménu serializován nebo trvalé.
+Jazyka specifického pro doménu, musíte nastavit jako trvalý, v nějaké podobě, který je možné upravit, uložit, zavření a znovu načíst. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] používá formát XML, který umožňuje definování a přizpůsobení jak jazyka specifického pro doménu je serializován nebo trvalé.
 
 ### <a name="integration-with-visual-studio"></a>Integrace se sadou Visual Studio
 
-Protože [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] je hostován v sadě Visual Studio, rozšiřuje mnoha windows Visual Studio a ovládací prvky. To také umožňuje přizpůsobit chování příkazy nabídky, položek sady nástrojů a další prvky uživatelského rozhraní.
+Protože [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] hostována v sadě Visual Studio rozšiřuje mnoho okna sady Visual Studio a ovládací prvky. Můžete ho taky přizpůsobit chování příkazy nabídek, položky panelu nástrojů a další prvky uživatelského rozhraní.
 
-Můžete také vytvořit adaptér sběrnice modelu pro váš jazyk specifické pro doménu. Tento adaptér umožňuje referenční model a elementů v rámci modelu a umožňuje, které můžete psát kód, které můžete používat a aktualizovat instance DSL. Pomocí o efektivní mechanismus modelu sběrnice můžete napsat rozšíření Visual Studia, které pracují s více modelů. Je také možné zapsat samostatné aplikace, které pracují s modely. Další informace najdete v tématu [integrace modelů pomocí Visual Studio Modelbus](../modeling/integrating-models-by-using-visual-studio-modelbus.md).
+Můžete také vytvořit adaptér sběrnice modelu pro jazyka specifického pro doménu. Tento adaptér umožňuje odkaz modelem a prvky v rámci modelu a umožňuje, aby při psaní kódu, které můžete používat a aktualizovat instance DSL. S použitím o efektivní mechanismus sběrnice modelu, můžete napsat s rozšířeními Visual Studia, které pracují s více modely. Můžete taky psát samostatné aplikace, které pracují s modely. Další informace najdete v tématu [integrace modelů pomocí Visual Studio Modelbus](../modeling/integrating-models-by-using-visual-studio-modelbus.md).
 
-## <a name="benefits-of-domain-specific-development"></a>Výhody vývoj specifické pro doménu
+## <a name="benefits-of-domain-specific-development"></a>Výhody vývoj specifického pro doménu
 
-Jazyka domény můžou poskytovat následující výhody:
+Jazyka specifického pro doménu může poskytnout následující výhody:
 
-- Obsahuje konstrukce, přesně splňující místo na problém.
+- Obsahuje konstruktory, které přesně odpovídají místo problém.
 
-     Na rozdíl od pro obecné účely jazyky jazyka domény se skládá z elementů a vztahy, které přímo představují logiku prostoru problém. Například pojistku aplikace musí obsahovat prvky pro zásady a deklarace identity. Jazyk specifické pro doménu usnadňuje aplikací a najít a opravit chyby logiky.
+     Na rozdíl od pro obecné účely jazyků jazyka specifického pro doménu se skládá z prvky a vztahy, které představují přímo logiku místo problém. Například pojistku aplikace musí zahrnovat elementy pro zásady a deklarace identity. Jazyka specifického pro doménu usnadňuje návrh aplikace a najít a opravit chyby logiky.
 
-- Umožňuje bez vývojáři a osoby neznáte domény pochopit celkový návrh.
+- Umožňuje nevývojáře a uživatelů, kteří neznáte domény pochopit celkový návrh.
 
-     Pomocí grafického rozhraní jazyka specifické pro doménu můžete vytvořit vizuální reprezentace domény tak, aby bez vývojářům snadno porozumíte návrhu aplikace.
+     S použitím grafického jazyka specifického pro doménu, můžete vytvořit vizuální reprezentaci domény tak, aby nevývojáře, můžete snadno seznámit se s návrhem aplikace.
 
-- Usnadňuje vytvoření prototypu konečné aplikace.
+- Usnadňuje vytvoření prototypu poslední aplikace.
 
-     Vývojáři mohou použít kód, který generuje jejich modelu k vytvoření prototypu aplikace, která můžete zobrazit na klienty.
+     Vývojáři mohou použít kód, který generuje jejich model k vytvoření prototypu aplikace, která můžete zobrazit na klienty.
 
-## <a name="the-process-of-domain-specific-development"></a>Proces vývoje specifické pro doménu
+## <a name="the-process-of-domain-specific-development"></a>Proces vývoje specifického pro doménu
 
-Většina softwaru vývojové týmy, které používají specifické pro doménu jazyky použijte následující postup vytvoření a používání jejich modely:
+Většina vývojových týmů, které používají jazyky specifickými pro doménu použijte následující postup vytvoření a používání svoje modely:
 
--   Tým rozlišuje části proměnné domény z části, které nikdy nezmění.
+-   Tým odlišuje části proměnné domény, z části, které nikdy nezmění.
 
--   Vývojáři psát kód pro pevné části a nechte body rozšíření pro proměnné části.
+-   Vývojáři psát kód pro pevnou části a nechat Rozšiřovací body proměnné částí.
 
--   Vývojář softwaru realizace nebo architekt vytvoří jazyk specifické pro doménu, která zahrnuje vzory návrhu pevné částí domény, a body rozšíření pro proměnné části.
+-   Vedoucí softwarový vývojář nebo architekt vytvoří jazyka specifického pro doménu, zahrnující vzory návrhu pevné částí domény a Rozšiřovací body proměnné částí.
 
--   Vývojář softwaru realizace nebo architekt nasadí jazyka domény pro vývojáře různé aplikace, které vytvoří tým.
+-   Vedoucí softwarový vývojář nebo architekt nasadí vývojářům různé aplikace, které vytvoří tým jazyka specifického pro doménu.
 
--   Každý vývojář vytvoří model, který se vztahuje na konkrétní aplikaci.
+-   Každý vývojář vytvoří model, který platí pro konkrétní aplikaci.
