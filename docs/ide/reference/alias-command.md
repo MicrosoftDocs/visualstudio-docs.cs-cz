@@ -46,7 +46,7 @@ Volitelné. Úplný název příkazu nebo existující alias a všechny parametr
 /Delete nebo/del nebo/D\
 Volitelné. Odstraní zadaný alias a odebere ho z automatického dokončování.
 
-/Reset po vyčištění
+/Reset po vyčištění\
 Volitelné. Obnoví původní nastavení seznamu předem definovaných aliasů. To znamená, že obnoví všechny předdefinované aliasy a odstraní všechny aliasy definované uživatelem.
 
 ## <a name="remarks"></a>Poznámky

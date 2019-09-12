@@ -21,7 +21,7 @@ Tyto výrazy slouží k popisu Microsoft Build Engine (MSBuild) a jeho součást
 
 ## <a name="glossary"></a>Slovníček
 
-AssemblyFoldersEx
+AssemblyFoldersEx\
 Umístění v registru, kde dodavatelé třetích stran uchovávají cesty pro každou verzi rozhraní .NET Framework, které podporují, kde řešení pro dobu návrhu může vyhledat referenční sestavení.
 
 dávkování

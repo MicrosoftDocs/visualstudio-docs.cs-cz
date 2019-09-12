@@ -58,7 +58,7 @@ Volitelné. Používá předem definované speciální znaky v `findwhat` argume
 /Reset po vyčištění nebo/e\
 Volitelné. Vrátí možnosti hledání do jejich výchozího nastavení a neprovádí hledání.
 
-/stop
+/stop\
 Volitelné. Zastaví aktuální operaci hledání, pokud právě probíhá. Při hledání se ignorují všechny `/stop` ostatní argumenty, pokud je zadaný. Pokud například chcete zastavit aktuální hledání, zadejte následující:
 
 ```cmd
