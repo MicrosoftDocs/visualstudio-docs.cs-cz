@@ -24,13 +24,13 @@ Tyto výrazy slouží k popisu Microsoft Build Engine (MSBuild) a jeho součást
 AssemblyFoldersEx\
 Umístění v registru, kde dodavatelé třetích stran uchovávají cesty pro každou verzi rozhraní .NET Framework, které podporují, kde řešení pro dobu návrhu může vyhledat referenční sestavení.
 
-dávkování
+dávkování\
 Dávkování znamená rozdělení položek do různých kategorií, které jsou v závislosti na metadatech položek známé jako *dávky*, a následným spuštěním cíle nebo úlohy jednou pomocí každé dávky. Dávkování je ekvivalentem konstruktoru smyčky for--Loop. Další informace najdete v tématu [dávkování](../msbuild/msbuild-batching.md).
 
-obor sestavení \
+obor sestavení\
 Obor sestavení popisuje objekt MSBuild, například globální vlastnost, která je potenciálně viditelná pro projekt, a pro všechny podřízené projekty, které jsou vytvořeny v sestavení více projektů.
 
-podřízený projekt \
+podřízený projekt\
 Viz *projekt, podřízená položka*.
 
 pomocné
