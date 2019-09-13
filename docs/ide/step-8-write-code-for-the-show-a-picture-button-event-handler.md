@@ -16,20 +16,20 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ab10700e984f50089a3e66b6b89f449d963fd208
-ms.sourcegitcommit: 9c07ae6fb18204ea080c8248994a683fa12e5c82
+ms.openlocfilehash: 26bfd4d74580fecd15b1891895e5ae28a18f3296
+ms.sourcegitcommit: 4dfe098ac0df294aad63e6b384d6575980798ca3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293556"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70887965"
 ---
 # <a name="step-8-write-code-for-the-show-a-picture-button-event-handler"></a>Krok 8: Napsat kód pro zobrazení obslužné rutiny události tlačítka Zobrazit obrázek
 
 V tomto kroku uděláte tlačítko **Zobrazit obrázek** následujícím způsobem:
 
-- Když uživatel zvolí toto tlačítko, program otevře <xref:System.Windows.Forms.OpenFileDialog> okno.
+- Když uživatel zvolí toto tlačítko, aplikace otevře <xref:System.Windows.Forms.OpenFileDialog> pole.
 
-- Pokud uživatel otevře soubor s obrázkem, program zobrazí tento obrázek v <xref:System.Windows.Forms.PictureBox>.
+- Pokud uživatel otevře soubor s obrázkem, aplikace zobrazí tento obrázek v <xref:System.Windows.Forms.PictureBox>.
 
 Rozhraní IDE má výkonný nástroj nazvaný IntelliSense, který vám pomůže psát kód. Při psaní kódu IDE otevře pole s navrhovanými dokončeními pro částečná slova, která zadáte.
 
@@ -69,7 +69,7 @@ Dále pomocí technologie IntelliSense zadáte další kód pro otevření dialo
  1. Při použití metody v ovládacím prvku nebo součásti (označované jako *volání metody*) je nutné přidat závorky. Proto zadejte levou a pravou závorku hned za "g" v `ShowDialog`: `()`Měl by nyní vypadat například "openFileDialog1. ShowDialog ()".
 
     > [!NOTE]
-    > Metody jsou důležitou součástí jakéhokoli programu a tento kurz ukázal několik způsobů použití metod. Můžete zavolat metodu komponenty a sdělit jí, že má dělat něco, jako jste volali `ShowDialog()` metodu **OpenFileDialog** komponentu. Můžete vytvořit vlastní metody, které program provede, jako je ten, který právě sestavíte, se nazývá `showButton_Click()` metoda, která otevře dialogové okno a obrázek, když uživatel zvolí tlačítko.
+    > Metody jsou důležitou součástí jakékoli aplikace a tento kurz ukázal několik způsobů použití metod. Můžete zavolat metodu komponenty a sdělit jí, že má dělat něco, jako jste volali `ShowDialog()` metodu **OpenFileDialog** komponentu. Můžete vytvořit vlastní metody, aby vaše aplikace provedla věci, jako je ta, kterou právě sestavíte, `showButton_Click()` nazývaná metoda, která otevře dialogové okno a obrázek, když uživatel zvolí tlačítko.
 
  1. C#V případě přidejte mezeru a pak přidejte dva symboly rovná se (`==`). Pro Visual Basic přidejte mezeru a pak použijte jeden znak rovná se (`=`). (C# a Visual Basic použít jiné operátory rovnosti.)
 
@@ -102,7 +102,7 @@ Dále pomocí technologie IntelliSense zadáte další kód pro otevření dialo
 
 ## <a name="next-steps"></a>Další postup
 
-* Pokud chcete přejít na další krok kurzu, přečtěte si [krok 9: Přečtěte si, pokomentujte a](../ide/step-9-review-comment-and-test-your-code.md)otestujte svůj kód.
+* Pokud chcete přejít na další krok kurzu, přečtěte si  **[krok 9: Přečtěte si, pokomentujte a](../ide/step-9-review-comment-and-test-your-code.md)otestujte svůj kód**.
 
 * Pokud se chcete vrátit k předchozímu kroku kurzu [, přečtěte si krok 7: Přidejte součásti dialogového okna do formuláře](../ide/step-7-add-dialog-components-to-your-form.md).
 

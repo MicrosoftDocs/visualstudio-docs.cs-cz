@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 123a843676a7562478710bf607f62c92743c462d
-ms.sourcegitcommit: 9c07ae6fb18204ea080c8248994a683fa12e5c82
+ms.openlocfilehash: 1cf71ca26a26aecceb605c0483499bc0b0e24d30
+ms.sourcegitcommit: b60a00ac3165364ee0e53f7f6faef8e9fe59ec4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293580"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913152"
 ---
 # <a name="step-3-set-your-form-properties"></a>Krok 3: Nastavení vlastností formuláře
 
@@ -31,7 +31,7 @@ Dále pomocí okna **vlastnosti** změníte vzhled formuláře.
 1. Zvolte libovolné místo uvnitř formuláře **Form1** a vyberte ho. Podívejte se na okno **vlastnosti** , ve kterém by se teď měly zobrazovat vlastnosti formuláře. Formuláře mají různé vlastnosti. Například můžete nastavit barvu popředí a pozadí, text nadpisu, který se zobrazí v horní části formuláře, velikost formuláře a další vlastnosti.
 
    > [!NOTE]
-   > Pokud se okno **vlastnosti** nezobrazí, ukončete program výběrem čtvercového tlačítka **Zastavit ladění** na panelu nástrojů nebo pouze zavřít okno. Pokud je program zastaven a stále nevidíte okno **vlastnosti** , v řádku nabídek vyberte možnost **Zobrazit** > **okno vlastností**.
+   > Pokud se okno **vlastnosti** nezobrazí, zastavte aplikaci výběrem čtvercového tlačítka **Zastavit ladění** na panelu nástrojů nebo pouhým zavřením okna. Pokud je aplikace zastavena a stále nevidíte okno **vlastnosti** , v řádku nabídek vyberte možnost **Zobrazit** > **okno vlastností**.
 
 1. Po výběru formuláře vyhledejte vlastnost **text** v okně **vlastnosti** . V závislosti na tom, jak je seznam seřazený, se možná budete muset posunout dolů. Zvolte **text**, zadejte **Prohlížeč obrázků**a pak zvolte **ENTER**.  Formulář by měl mít nyní v záhlaví text **Viewer** a okno **vlastnosti** by mělo vypadat podobně jako na následujícím snímku obrazovky.
 
@@ -50,7 +50,7 @@ Dále pomocí okna **vlastnosti** změníte vzhled formuláře.
 
 1. Podívejte se na okno **vlastnosti** a Všimněte si, že se změnila vlastnost **Size** . Vlastnost **Size** se změní pokaždé, když změníte velikost formuláře. Zkuste přetáhnout táhlo formuláře, aby se změnila velikost formuláře přibližně **550, 350** (není potřeba přesně), což by mělo pro tento projekt dobře fungovat. Alternativně můžete zadat hodnoty přímo do vlastnosti **Size** a pak zvolit klávesu **ENTER** .
 
-1. Spusťte program znovu. Nezapomeňte, že ke spuštění programu můžete použít kteroukoli z následujících metod.
+1. Spusťte aplikaci znovu. Nezapomeňte, že ke spuštění vaší aplikace můžete použít kteroukoli z následujících metod.
 
    - Klikněte na klávesu **F5** .
 
@@ -61,9 +61,9 @@ Dále pomocí okna **vlastnosti** změníte vzhled formuláře.
       ![Spustit ladění – tlačítko panelu nástrojů](../ide/media/express_icondebug.png)<br>
      ***Spustit ladění*** *tlačítko panelu nástrojů*
 
-     Stejně jako předtím, rozhraní IDE sestaví a spustí program a zobrazí se okno.
+     Stejně jako předtím, rozhraní IDE sestaví a spustí vaši aplikaci a zobrazí se okno.
 
-1. Než budete pokračovat k dalšímu kroku, zastavte program, protože rozhraní IDE vám neumožní změnit program, pokud je spuštěný. Nezapomeňte, že k zastavení programu můžete použít kteroukoli z následujících metod.
+1. Než budete pokračovat k dalšímu kroku, zastavte aplikaci, protože rozhraní IDE vám neumožní změnit vaši aplikaci, když je spuštěná. Nezapomeňte, že k zastavení vaší aplikace můžete použít kteroukoli z následujících metod.
 
    - Na panelu nástrojů klikněte na tlačítko **Zastavit ladění** .
 
@@ -73,11 +73,11 @@ Dále pomocí okna **vlastnosti** změníte vzhled formuláře.
 
    - V horním rohu okna **Prohlížeč obrázků** klikněte na tlačítko **X** .
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
-* Pokud chcete přejít na další krok kurzu, přečtěte si [krok 4: Rozložte formulář pomocí ovládacího prvku](../ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md)TableLayoutPanel.
+* Pokud chcete přejít na další krok kurzu, přečtěte si  **[krok 4: Rozložte formulář pomocí ovládacího prvku](../ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md)** TableLayoutPanel.
 
-* Pokud se chcete vrátit k předchozímu kroku kurzu [, přečtěte si článek krok 2: Spusťte program](../ide/step-2-run-your-program.md).
+* Pokud se chcete vrátit k předchozímu kroku kurzu [, přečtěte si článek krok 2: Spusťte aplikaci](../ide/step-2-run-your-program.md)prohlížeč obrázků.
 
 ## <a name="see-also"></a>Viz také:
 

@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 00874c8fd7ded67c380de1166d7e9753a3bd3c24
-ms.sourcegitcommit: 044bb54cb4552c8f4651feb11d62e52726117e75
+ms.openlocfilehash: 33ef3c31acd39798df84c39fff82faba063fdaa9
+ms.sourcegitcommit: b60a00ac3165364ee0e53f7f6faef8e9fe59ec4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68662040"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913236"
 ---
 # <a name="msbuild-target-framework-and-target-platform"></a>Cílová architektura a cílová platforma nástroje MSBuild
 Projekt může být sestaven pro spuštění na *cílovém rozhraní*, což je konkrétní verze .NET Framework a *cílovou platformu*, která je konkrétní softwarovou architekturou.  Můžete například cílit na aplikaci tak, aby běžela na .NET Framework 2,0 na 32 platformě, která je kompatibilní s řadou procesorů 802x86 (x86). Kombinace cílového rozhraní a cílové platformy je označována jako *cílový kontext*.
@@ -58,7 +58,10 @@ Cílová architektura je určena ve `TargetFrameworkVersion` vlastnosti v soubor
 
  *Cílový profil* je podmnožinou cílového rozhraní. Například profil klienta .NET Framework 4 neobsahuje odkazy na sestavení nástroje MSBuild.
 
- Cílový profil je zadán ve `TargetFrameworkProfile` vlastnosti v souboru projektu. Cílový profil můžete změnit pomocí ovládacího prvku cílový – rozhraní na stránkách vlastností projektu v rozhraní IDE. Další informace najdete v tématu [jak: Cílí na verzi .NET Framework](../ide/how-to-target-a-version-of-the-dotnet-framework.md).
+ > [!NOTE]
+ > Cílové profily platí pouze pro [přenosné knihovny tříd](/dotnet/standard/cross-platform/cross-platform-development-with-the-portable-class-library).
+
+ Cílový profil je zadán ve `TargetFrameworkProfile` vlastnosti v souboru projektu. Cílový profil můžete změnit pomocí ovládacího prvku cílový – rozhraní na stránkách vlastností projektu v rozhraní IDE.
 
 ```xml
 <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>

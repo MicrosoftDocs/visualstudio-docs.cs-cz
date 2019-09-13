@@ -11,14 +11,12 @@ dev_langs:
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.workload:
-- multiple
-ms.openlocfilehash: f6aa9cb62bc0ae956a85acd75d1a9615a2283133
-ms.sourcegitcommit: f42b5318c5c93e2b5ecff44f408fab8bcdfb193d
+ms.openlocfilehash: 24bc4c54e455f43aa5fd5fee0ce0d5a44042e497
+ms.sourcegitcommit: b60a00ac3165364ee0e53f7f6faef8e9fe59ec4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69976780"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913190"
 ---
 # <a name="use-code-coverage-to-determine-how-much-code-is-being-tested"></a>Určení rozsahu testovaného kódu pomocí pokrytí kódu
 
@@ -28,33 +26,51 @@ Analýza pokrytí kódu může být použita jak pro spravovaný (CLI), tak pro 
 
 Pokrytí kódu je jedna z možností při spouštění testovacích metod pomocí Průzkumníku testů. Tabulka výsledků zobrazuje procentuální podíl kódu, který byl spuštěn v každém sestavení, třídě a metodě. Editor zdrojového kódu navíc ukazuje samotný kód, který byl testován.
 
+::: moniker range="vs-2017"
+
 ![Výsledky pokrytí kódu s barevné zvýrazňování](../test/media/codecoverage1.png)
+
+::: moniker-end
 
 ## <a name="requirements"></a>Požadavky
 
 Funkce pokrytí kódu je k dispozici pouze v edici Visual Studio Enterprise.
 
-## <a name="to-analyze-code-coverage-on-unit-tests-in-test-explorer"></a>Analýza pokrytí kódu jednotkovými testy v Průzkumníku testů
+## <a name="analyze-code-coverage"></a>Analyzovat pokrytí kódu
 
 ::: moniker range="vs-2017"
+
 1. V nabídce **test** vyberte možnost **Analyzovat pokrytí kódu**.
+
 ::: moniker-end
+
 ::: moniker range=">=vs-2019"
-1. V **Průzkumníku testů**vyberte v nabídce **Spustit** možnost **Analyzovat pokrytí kódu** .
+
+1. V **Průzkumníku testů**vyberte v nabídce **Spustit** možnost **Analyzovat pokrytí kódu pro všechny testy** .
+
+   ![Nabídka Analýza pokrytí kódu ve VS 2019](../test/media/vs-2019/analyze-code-coverage.png)
+
+   Pokud **není Průzkumník testů** otevřený, otevřete ho tak, že vyberete **test** > **Průzkumník testů** **systému Windows** > , nebo stisknete klávesy **CTRL**+**E**,**T**.
+
 ::: moniker-end
 
-2. Chcete-li zjistit, které řádky byly spuštěny, klikněte na ![možnost](../test/media/codecoverage-showcoloringicon.png) zobrazit ikonu barevného pokrytí kódu **Zobrazit barvy pokrytí kódu**.
+2. Po spuštění testů, chcete-li zjistit, které řádky byly spuštěny, ![vyberte možnost Zobrazit ikonu](../test/media/codecoverage-showcoloringicon.png) barevného pokrytí kódu **Zobrazit barvy pokrytí kódu** v okně **výsledky pokrytí kódu** . Ve výchozím nastavení je kód, který je pokrytý testy, zvýrazněný světle modře.
 
-   Chcete-li změnit barvy nebo použít tučnou plochu, vyberte možnost **nástroje** > **Možnosti** > **prostředí** > **písma a barvy** > **zobrazit nastavení pro: Textový editor**. V části **Zobrazit položky**upravte položky pokrytí.
+   > [!TIP]
+   > Chcete-li změnit barvy nebo použít tučnou plochu, vyberte možnost **nástroje** > **Možnosti** > **prostředí** > **písma a barvy** > **zobrazit nastavení pro: Textový editor**. V části **Zobrazit položky**upravte nastavení položek pokrytí, například **Rozsah nedotčená oblast**.
+   >
+   > ![Písma a barvy pokrytí kódu](media/vs-2019/coverage-fonts-and-colors.png)
 
 3. Pokud výsledky zobrazují nízké pokrytí, prozkoumejte, které části kódu nejsou testovány, a vytvořte pro ně další testy. Vývojové týmy obvykle usilují o 80% pokrytí kódu. V některých situacích je přijatelné i nižší pokrytí. Nižší pokrytí je například přijatelné tehdy, pokud je část kódu generována ze standardní šablony.
 
 > [!TIP]
-> - Ujistěte se, že je vypnutá optimalizace kompilátoru.
+> - Zapnout optimalizaci kompilátoru
 > - Pokud pracujete s nespravovaným (nativním) kódem, použijte sestavení pro ladění.
-> - Ujistěte se, že generujete soubory. pdb (symbol) pro každé sestavení
+> - Generovat soubory. pdb (symbol) pro každé sestavení
 
-Pokud nezískáte očekávané výsledky, přečtěte si téma [řešení potíží s pokrytím kódu](../test/troubleshooting-code-coverage.md). Po aktualizaci kódu nezapomeňte znovu spustit pokrytí kódu. Výsledky pokrytí kódu a barevné zvýraznění kódu nejsou po změně kódu nebo při spuštění testů automaticky aktualizovány.
+Pokud nezískáte očekávané výsledky, přečtěte si téma [řešení potíží s pokrytím kódu](../test/troubleshooting-code-coverage.md).
+
+Po aktualizaci kódu nezapomeňte znovu spustit pokrytí kódu. Výsledky pokrytí kódu a barevné zvýraznění kódu nejsou po změně kódu nebo při spuštění testů automaticky aktualizovány.
 
 ## <a name="report-in-blocks-or-lines"></a>Sestava v blocích nebo řádcích
 

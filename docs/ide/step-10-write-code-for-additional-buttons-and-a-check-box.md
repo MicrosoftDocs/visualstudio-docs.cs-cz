@@ -16,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 281c98ca52b6dd18ee726e3191d47d6755fd8326
-ms.sourcegitcommit: 9c07ae6fb18204ea080c8248994a683fa12e5c82
+ms.openlocfilehash: 9763026a4ef1c219bcb9f5b5270ac5d3b48e2e14
+ms.sourcegitcommit: 4dfe098ac0df294aad63e6b384d6575980798ca3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293620"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70887865"
 ---
 # <a name="step-10-write-code-for-additional-buttons-and-a-check-box"></a>Krok 10: Napsání kódu pro přídavná tlačítka a zaškrtávací políčko
 
@@ -30,7 +30,7 @@ Nyní jste připraveni provést další čtyři metody. Tento kód můžete zkop
 Tento kód přidá funkce do tlačítek, které jste přidali dříve. Bez tohoto kódu nejsou tlačítka dělat nic. Tlačítka používají kód ve svých <xref:System.Windows.Forms.Control.Click> událostech (a zaškrtávací políčko <xref:System.Windows.Forms.CheckBox.CheckedChanged> používá událost) k provedení různých akcí při aktivaci ovládacích prvků. Například `clearButton_Click` událost (nebo `ClearButton_Click`), která se aktivuje po kliknutí na tlačítko **Vymazat obrázek** , vymaže aktuální obrázek nastavením jeho vlastnosti **Image** na **hodnotu null** (nebo, **Nothing**). Každá událost v kódu obsahuje komentáře, které vysvětlují, co kód dělá.
 
 > [!TIP]
-> Osvědčeným postupem: Vždy přikomentujte kód. Komentáře jsou informace, které uživatel přečte, a je to čas, kdy se váš kód může pochopit. Vše na řádku komentáře program ignoruje. V C#aplikaci můžete zadat komentář k řádku zadáním dvou lomítka na začátku (//) a v Visual Basic přidáte komentář k řádku, který začíná jednoduchou uvozovkou (').
+> Osvědčeným postupem: Vždy přikomentujte kód. Komentáře jsou informace, které uživatel přečte, a je to čas, kdy se váš kód může pochopit. Vše na řádku komentáře ignoruje aplikace. V C#aplikaci můžete zadat komentář k řádku zadáním dvou lomítka na začátku (//) a v Visual Basic přidáte komentář k řádku, který začíná jednoduchou uvozovkou (').
 
 ## <a name="how-to-write-code-for-additional-buttons-and-a-check-box"></a>Postup psaní kódu pro další tlačítka a zaškrtávací políčko
 
@@ -42,9 +42,9 @@ Přidejte následující kód do souboru kódu **Form1** (*Form1.cs* nebo *Form1
 
   [!code-vb[VbExpressTutorial1Step9_10#2](../ide/codesnippet/VisualBasic/step-10-write-code-for-additional-buttons-and-a-check-box_1.vb)]
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
-* Pokud chcete přejít na další krok kurzu, přečtěte si [krok 11: Spusťte program a vyzkoušejte další funkce](../ide/step-11-run-your-program-and-try-other-features.md).
+* Pokud chcete přejít na další krok kurzu, přečtěte si  **[krok 11: Spusťte aplikaci a vyzkoušejte jiné funkce](../ide/step-11-run-your-program-and-try-other-features.md).**
 
 * Pokud se chcete vrátit k předchozímu kroku kurzu [, přečtěte si krok 9: Přečtěte si, pokomentujte a](../ide/step-9-review-comment-and-test-your-code.md)otestujte svůj kód.
 

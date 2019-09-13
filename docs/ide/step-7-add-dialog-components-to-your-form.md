@@ -13,16 +13,16 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 58721610a493283ff0bed8fca9cf6e6f6d668c4d
-ms.sourcegitcommit: 9c07ae6fb18204ea080c8248994a683fa12e5c82
+ms.openlocfilehash: 402d24ae90c6a7523398b21bfc77eb1b30bdf04f
+ms.sourcegitcommit: 4dfe098ac0df294aad63e6b384d6575980798ca3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293469"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70887883"
 ---
 # <a name="step-7-add-dialog-components-to-your-form"></a>Krok 7: Přidání komponent dialogových oken do formuláře
 
-Chcete-li programu povolit otevírání souborů obrázků a výběr barvy pozadí, v tomto kroku přidáte <xref:System.Windows.Forms.OpenFileDialog> komponentu <xref:System.Windows.Forms.ColorDialog> a komponentu do formuláře.
+Chcete-li aplikaci povolit, aby otevírala soubory obrázků a zvolila barvu pozadí, v tomto kroku přidáte <xref:System.Windows.Forms.OpenFileDialog> komponentu <xref:System.Windows.Forms.ColorDialog> a komponentu do formuláře.
 
 Komponenta je jako ovládací prvek v některých způsobech. Pomocí **panelu nástrojů** přidáte komponentu do formuláře a nastavíte její vlastnosti pomocí okna **vlastnosti** . Ale na rozdíl od ovládacího prvku, přidání komponenty do formuláře nepřidá viditelnou položku, kterou může uživatel zobrazit ve formuláři. Místo toho poskytuje určité chování, které lze aktivovat pomocí kódu. Je to komponenta, která otevře dialogové okno **otevřít soubor** .
 
@@ -52,9 +52,9 @@ Komponenta je jako ovládací prvek v některých způsobech. Pomocí **panelu n
     > [!TIP]
     > Pokud chcete zobrazit příklad dialogového okna **otevřít soubor** v jiné aplikaci, otevřete **Poznámkový blok** nebo **Malování**a na panelu nabídek vyberte **soubor** > **otevřít**. Všimněte si, jak je rozevírací seznam vedle názvu souboru, který umožňuje zvolit typ souboru. <br/><br/>Právě jste v komponentě **OpenFileDialog** použili vlastnost **Filter** a nastavili jste ji v aplikaci. Všimněte si také, jak jsou vlastnosti **nadpisu** a **filtru** tučné v okně **vlastnosti** . Integrované vývojové prostředí (IDE) umožňuje zobrazit všechny vlastnosti, které byly změněny z jejich výchozích hodnot.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
-* Pokud chcete přejít na další krok kurzu, přečtěte si [krok 8: Napište kód pro zobrazení obslužné rutiny](../ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md)události tlačítka Zobrazit obrázek.
+* Pokud chcete přejít na další krok kurzu, přečtěte si  **[krok 8: Napište kód pro zobrazení obslužné rutiny](../ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md)** události tlačítka Zobrazit obrázek.
 
 * Pokud se chcete vrátit k předchozímu kroku kurzu [, přečtěte si krok 6: Pojmenujte své](../ide/step-6-name-your-button-controls.md)ovládací prvky tlačítek.
 

@@ -12,19 +12,19 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f8046ba598873329e6aa9fcea344504f15b4dbc
-ms.sourcegitcommit: 5694c5236fa32ba7f5bc1236a853f725ec7557e9
+ms.openlocfilehash: 9fbe3ff31d00945ef462c5c20eb1c4b33c250f97
+ms.sourcegitcommit: 4dfe098ac0df294aad63e6b384d6575980798ca3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680591"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70887747"
 ---
 # <a name="tell-the-debugger-what-to-show-using-the-debuggerdisplay-attribute-c-visual-basic-f-ccli"></a>Sdělte ladicímu programu, co se má zobrazit pomocí atributuC#DebuggerDisplay (, F#Visual Basic C++,,/CLI).
 Určuje <xref:System.Diagnostics.DebuggerDisplayAttribute> , jak se objekt, vlastnost nebo pole zobrazí v oknech proměnných ladicího programu. Tento atribut lze použít pro typy, delegáty, vlastnosti, pole a sestavení. Pokud se použije na základní typ, atribut se vztahuje také na podtřídu.
 
 `DebuggerDisplay` Atribut má jeden argument, což je řetězec, který se zobrazí ve sloupci value pro instance daného typu. Tento řetězec může obsahovat složené závorky`{` ( `}`a). Text v páru složených závorek je vyhodnocen jako pole, vlastnost nebo metoda.
 
-Pokud má třída potlačenou `ToString()` metodu, ladicí program použije potlačenou metodu namísto výchozího. `{<typeName>}` Proto, pokud jste přepsali `ToString()` metodu, ladicí program použije přepsanou metodu namísto výchozího`{<typeName>}`a nemusíte ji používat `DebuggerDisplay`. Použijete-li obojí, `DebuggerDisplay` má atribut přednost před potlačenou `ToString()` metodou.
+Pokud má třída potlačenou `ToString()` metodu, ladicí program použije potlačenou metodu namísto výchozího. `{<typeName>}` Proto, pokud jste přepsali `ToString()` metodu, ladicí program použije přepsanou metodu namísto výchozího`{<typeName>}`a nemusíte ji používat `DebuggerDisplay`. Použijete-li obojí, `DebuggerDisplay` má atribut přednost před potlačenou `ToString()` metodou. Atribut má také přednost před potlačenou `ToString()` metodou v podtříde. `DebuggerDisplay`
 
 Bez ohledu na to, zda ladicí `ToString()` program vyhodnocuje Toto implicitní volání, závisí na nastavení uživatele v dialogovém okně **Nástroje/možnosti/ladění** . Visual Basic neimplementuje Toto implicitní `ToString()` vyhodnocení.
 
@@ -93,12 +93,12 @@ public sealed class MyClass
 Přípona ", NQ" oznamuje vyhodnocení výrazu, aby při zobrazení konečné hodnoty (NQ = bez uvozovek) odebrala uvozovky.
 
 ## <a name="example"></a>Příklad
-Následující příklad kódu ukazuje, jak použít `DebuggerDisplay`spolu s `DebuggerBrowseable` a `DebuggerTypeProxy`. Při zobrazení v okně proměnných ladicího programu, jako je například okno kukátka, vytvoří rozšíření, které vypadá takto:
+Následující příklad kódu ukazuje, jak použít `DebuggerDisplay`spolu s `DebuggerBrowseable` a `DebuggerTypeProxy`. Při zobrazení v okně proměnných ladicího programu, jako je například okno **kukátka** , vytvoří rozšíření, které vypadá takto:
 
 |**Název**|**Hodnota**|**Typ**|
 |--------------|---------------|--------------|
 |Key|3|objekt {String}|
-|Hodnota|3|objekt {int}|
+|Value|3|objekt {int}|
 
 ```csharp
 [DebuggerDisplay("{value}", Name = "{key}")]

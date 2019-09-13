@@ -1,54 +1,54 @@
 ---
 title: Začínáme s ASP.NET Core
-description: Tento článek popisuje, jak začít pracovat s technologií ASP.NET v sadě Visual Studio pro Mac, včetně instalace a vytvoření nového projektu.
+description: Tento článek popisuje, jak začít s ASP.NET v Visual Studio pro Mac, včetně instalace a vytvoření nového projektu.
 author: sayedihashimi
 ms.author: sayedha
 ms.date: 04/02/2019
 ms.assetid: 6E8B0C90-33D6-4546-8207-CE0787584565
 ms.custom: video
-ms.openlocfilehash: 9dcd1b65e9d8ea60f082304b4f84a7108efb99a6
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.openlocfilehash: d07849a362779f3fad8f7544899dc23b9d4538d6
+ms.sourcegitcommit: b60a00ac3165364ee0e53f7f6faef8e9fe59ec4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67692947"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913320"
 ---
 # <a name="getting-started-with-aspnet-core"></a>Začínáme s ASP.NET Core
 
- Visual Studio pro Mac usnadňuje vývoj vaší aplikace služby s jeho podporu pro nejnovější platformy vývoj webové aplikace ASP.NET Core. ASP.NET Core běží na .NET Core, nejnovější vývoj rozhraní .NET Framework a modulu runtime. Má se vše vyladěno pro rychlý výkon, dostaneme pro malé instalace velikosti a směry ke spuštění na systému Linux a macOS i Windows.
+ Visual Studio pro Mac usnadňuje vývoj služby vaší aplikace pomocí podpory nejnovější ASP.NET Core webové vývojové platformy. ASP.NET Core běží na .NET Core, což je nejnovější vývoj .NET Framework a modulu runtime. Je vyladěný z hlediska rychlého výkonu, faktoringu pro menší velikosti instalací a pro spuštění v systémech Linux a macOS i v systému Windows.
 
 ## <a name="installing-net-core"></a>Instalace .NET Core
 
-.NET core 2.1 je automaticky nainstalován při instalaci sady Visual Studio pro Mac.
+Rozhraní .NET Core 2,1 se automaticky nainstaluje při instalaci Visual Studio pro Mac.
 
-## <a name="creating-an-aspnet-core-app-in-visual-studio-for-mac"></a>Vytvoření aplikace ASP.NET Core v sadě Visual Studio pro Mac
+## <a name="creating-an-aspnet-core-app-in-visual-studio-for-mac"></a>Vytvoření aplikace ASP.NET Core v Visual Studio pro Mac
 
-Otevřít Visual Studio pro Mac. Na obrazovce Start vyberte **nový projekt...**
+Otevřete Visual Studio pro Mac. Na úvodní obrazovce vyberte **Nový projekt...**
 
-![Dialogové okno nového projektu](media/asp-net-core-2019-new-asp-core.png)
+![Dialog Nový projekt](media/asp-net-core-2019-new-asp-core.png)
 
-Zobrazí se dialogové okno Nový projekt, což vám umožní vybrat šablonu pro vytvoření vaší aplikace.
+Tím se zobrazí dialogové okno Nový projekt, ve kterém můžete vybrat šablonu pro vytvoření aplikace.
 
-Existuje mnoho projektů, které vám poskytne předem připravené šablony, abyste mohli začít vytvářet vaše aplikace ASP.NET Core. Toto jsou:
+K dispozici je řada projektů, které vám poskytnou předem vytvořenou šablonu pro zahájení sestavování aplikace ASP.NET Core. Toto jsou:
 
-- **.NET core > prázdný**
-- **.NET core > rozhraní API**
-- **.NET core > Webová aplikace**
-- **.NET core > Webová aplikace (Model-View-Controller)**
+- **Rozhraní .NET Core > prázdné**
+- **Rozhraní .NET Core > API**
+- **Webová aplikace > .NET Core**
+- **Webová aplikace > .NET Core (model-zobrazení-kontroler)**
 
 ![Možnosti projektu ASP.NET](media/asp-net-core-2019-new-asp-core.png)
 
-Vyberte **prázdná webová aplikace ASP.NET Core** a stiskněte klávesu **Další**. Dejte projektu název a stiskněte klávesu **vytvořit**. Tím se vytvoří nové aplikace ASP.NET Core, který by měl vypadat podobně jako na následujícím obrázku:
+Vyberte **ASP.NET Core prázdné webové aplikace** a klikněte na tlačítko **Další**. Zadejte název projektu a stiskněte **vytvořit**. Tím se vytvoří nová aplikace ASP.NET Core. V levém podokně panelu řešení rozbalte druhou šipku a pak vyberte **Startup.cs**. Měl by vypadat podobně jako na následujícím obrázku:
 
-![Nové zobrazení prázdný projekt ASP.NET Core](media/asp-net-core-2019-empty-project.png)
+![Nové ASP.NET Core prázdné zobrazení projektu](media/asp-net-core-2019-empty-project.png)
 
-ASP.NET Core prázdné šablony vytvoří webovou aplikaci se dvěma výchozí soubory: **Soubor program.cs** a **Startup.cs**, což je vysvětleno níže. Také vytvoří složku, závislosti, která obsahuje závislosti balíčku NuGet projektu, jako je ASP.NET Core, .NET Core framework a cíle nástroje MSBuild, které se projekt sestavil:
+Prázdná šablona ASP.NET Core vytvoří webovou aplikaci se dvěma výchozími soubory: **Program.cs** a **Startup.cs**, které jsou vysvětleny níže. Vytvoří také složku závislosti, která obsahuje závislosti balíčku NuGet vašeho projektu, například ASP.NET Core, rozhraní .NET Core Framework a cíle MSBuild, které sestavují projekt:
 
-![Zobrazení závislostí oblasti řešení](media/asp-net-core-2019-solution-dependencies.png)
+![Oblast řešení zobrazení závislostí](media/asp-net-core-2019-solution-dependencies.png)
 
 ### <a name="programcs"></a>Program.cs
 
-Otevřít a zkontrolovat **Program.cs** souboru ve vašem projektu. Všimněte si, že několik věcí probíhají `Main` metoda – záznam do vaší aplikace:
+Otevřete soubor **program.cs** a prozkoumejte ho v projektu. Všimněte si, že v `Main` metodě se děje několik věcí – vstup do vaší aplikace:
 
 ```csharp
     public class Program
@@ -64,21 +64,21 @@ Otevřít a zkontrolovat **Program.cs** souboru ve vašem projektu. Všimněte s
     }
 ```
 
-Aplikace ASP.NET Core vytvoří webový server v jeho hlavní metoda konfigurací a spuštění hostitele prostřednictvím instance [ `WebHostBuilder` ](/aspnet/core/fundamentals/hosting). Tato Tvůrce poskytuje metody, které umožňují hostitele nakonfigurovat. V aplikaci šablony jsou použité následující konfigurace:
+Aplikace ASP.NET Core vytvoří webový server v jeho hlavní metodě konfigurací a spuštěním hostitele prostřednictvím instance [`WebHostBuilder`](/aspnet/core/fundamentals/hosting). Tento tvůrce poskytuje metody, které umožňují konfigurovat hostitele. V aplikaci šablon se používají následující konfigurace:
 
-* `.UseStartup<Startup>()`: Určuje třídu pro spuštění.
+* `.UseStartup<Startup>()`: Určuje třídu po spuštění.
 
-Ale můžete také přidat další konfigurace, jako například:
+Můžete ale také přidat další konfigurace, například:
 
-* `UseKestrel`: Určuje, že Kestrel server budou používat aplikaci
-* `UseContentRoot(Directory.GetCurrentDirectory())`: Jako obsah kořenové aplikace používá kořenové složce webového projektu při spuštění aplikace z této složky
-* `.UseIISIntegration()`: Určuje, že aplikace by měla fungovat se službou IIS. Použití služby IIS s ASP.NET Core `UseKestrel` a `UseIISIntegration` musí být zadána.
+* `UseKestrel`: Určuje, že aplikace bude server Kestrel používat.
+* `UseContentRoot(Directory.GetCurrentDirectory())`: Při spuštění aplikace z této složky použije kořenovou složku webového projektu jako kořen obsahu aplikace.
+* `.UseIISIntegration()`: Určuje, že aplikace by měla spolupracovat se službou IIS. Aby bylo možné používat službu IIS `UseKestrel` s `UseIISIntegration` ASP.NET Core a je třeba je zadat.
 
 ### <a name="startupcs"></a>Startup.cs
 
-Třída po spuštění pro vaše aplikace je určena `UseStartup()` metodu `CreateWebHostBuilder`. Je v této třídě, kterou specifikujete požadavku zpracování kanálu, a kde konfigurovat všechny služby.
+Spouštěcí třída vaší aplikace je určena v `UseStartup()` metodě `CreateWebHostBuilder`na. Je v této třídě, kterou určíte kanál pro zpracování požadavků a kde nakonfigurujete nějaké služby.
 
-Otevřít a zkontrolovat **Startup.cs** soubor v projektu:
+Otevřete a zkontrolujte soubor **Startup.cs** v projektu:
 
 ```csharp
     public class Startup
@@ -105,48 +105,48 @@ Otevřít a zkontrolovat **Startup.cs** soubor v projektu:
     }
 ```
 
-Tato třída při spuštění musí vždycky dodržovat následující pravidla:
+Tato spouštěcí třída musí vždy splňovat následující pravidla:
 
-- Vždy musí být veřejné
-- Musí obsahovat dvě veřejné metody: `ConfigureServices` a `Configure`
+- Musí být vždycky veřejné.
+- Musí obsahovat dvě veřejné metody: `ConfigureServices` a`Configure`
 
-`ConfigureServices` Metoda definuje služby, které budou používat vaši aplikaci.
+`ConfigureServices` Metoda definuje služby, které bude aplikace používat.
 
-`Configure` Lze sestavit pomocí kanálu požadavku [Middleware](/aspnet/core/fundamentals/middleware). Toto jsou komponenty použité v rámci kanálu určité aplikace technologie ASP.NET pro zpracování požadavků a odpovědí. HTTP kanál se skládá z počtu požadavek delegátů, volá se v sekvenci. Všem delegátům možné zpracovat žádost o samotné nebo předat do další delegáta.
+Umožňuje vytvořit kanál požadavků pomocí [middlewaru.](/aspnet/core/fundamentals/middleware) `Configure` Jedná se o komponenty, které se používají v kanálu aplikace ASP.NET ke zpracování požadavků a odpovědí. Kanál HTTP se skládá z několika delegátů požadavků, které se nazývají v sekvenci. Každý delegát může zvolit buď zpracování samotného požadavku, nebo ho předat dalšímu delegátovi.
 
-Delegáty lze nakonfigurovat pomocí `Run`,`Map`, a `Use` metody `IApplicationBuilder`, ale `Run` metoda se nikdy neměl volat další delegáta a musí použít značka na konci vašeho kanálu.
+Delegáty lze konfigurovat pomocí `Run`metod`Map` `Use` `IApplicationBuilder`, a, ale `Run` metoda nikdy nevolá dalšího delegáta a měla by být vždy použita na konci vašeho kanálu.
 
-`Configure` Metoda předem připravené šablony je vytvořená tak udělat několik věcí. Nejprve nastaví výjimku zpracování stránky pro použití během vývoje. Pak odešle odpověď na žádost o webovou stránku s jednoduchou "Hello World".
+`Configure` Metoda předem připravené šablony je sestavena tak, aby procházela několik věcí. Nejprve nakonfiguruje stránku zpracování výjimek pro použití během vývoje. Pak pošle odpověď na žádající webovou stránku pomocí jednoduchého "Hello Worldho".
 
-Tento jednoduchý text Hello, World projektu můžete nyní spustit bez jakékoli další přidávaný kód. Spusťte aplikaci a zobrazit v prohlížeči, kliknutím na tlačítko Přehrát (triangulace) na panelu nástrojů:
+Tento jednoduchý Hello, World Project může běžet hned bez dalšího přidávaného kódu. Pokud chcete aplikaci spustit a zobrazit ji v prohlížeči, stiskněte tlačítko Přehrát (trojúhelník) na panelu nástrojů:
 
-![Spuštění aplikace](media/asp-net-core-2019-run-debug.png)
+![Spustit aplikaci](media/asp-net-core-2019-run-debug.png)
 
-Visual Studio pro Mac používá náhodný port spustit webový projekt. Chcete-li zjistit, co je to port je, otevřete výstup aplikace, která je uvedená v části **zobrazení > panely**. Výstup by měl najít podobný tomu vidíte níže:
+Visual Studio pro Mac používá náhodný port pro spuštění webového projektu. Chcete-li zjistit, jaký port je to, otevřete výstup aplikace, který je uveden v části **zobrazit > panely**. Výsledek by měl vypadat podobně jako v následujícím příkladu:
 
-![Výstup aplikace zobrazení port pro naslouchání](media/asp-net-core-image6.png)
+![Výstup aplikace zobrazující port naslouchání](media/asp-net-core-image6.png)
 
-Po spuštění projektu by měl ve webovém prohlížeči výchozí spuštění a připojení k adrese URL uvedená ve výstupu aplikace. Alternativně můžete otevřít libovolného prohlížeče podle vašeho výběru a zadat `http://localhost:5000/`a nahraďte `5000` s portem, který výstupu sady Visual Studio ve výstupu aplikace. Měli byste vidět text `Hello World!`:
+Po spuštění projektu by měl být výchozí webový prohlížeč spuštěn a připojen k adrese URL uvedené ve výstupu aplikace. Alternativně můžete otevřít libovolný prohlížeč, a to tak, že zadáte `http://localhost:5000/`a `5000` nahradíte port, který je ve výstupu aplikace Visual Studio. Měl by se zobrazit text `Hello World!`:
 
 ![prohlížeč zobrazující text](media/asp-net-core-image7.png)
 
 ## <a name="adding-a-controller"></a>Přidání kontroleru
 
-Aplikace ASP.NET Core pomocí vzoru návrhu Model-View-Controller (MVC) k poskytování logické rozdělení povinností mezi jednotlivé části aplikace. MVC se skládá z následujících akcí:
+ASP.NET Core aplikace používají vzor návrhu MVC (Model-View-Controller) k poskytnutí logického oddělení zodpovědností pro každou část aplikace. MVC se skládá z následujících:
 
-- **Model**: Třída, která představuje data aplikace.
-- **Zobrazení**: Zobrazí uživatelské rozhraní aplikace (což se často stává datový model).
-- **Kontroler**: Třída, která zpracovává požadavky na prohlížeč, jsou reaguje na vstup uživatele a interakce.
+- **Model**: Třída, která představuje data aplikace
+- **Zobrazit**: Zobrazuje uživatelské rozhraní aplikace (často se jedná o modelová data).
+- **Kontroler**: Třída, která zpracovává požadavky prohlížeče, reaguje na vstupy a interakce uživatele.
 
-Další informace o používání MVC najdete [přehled ASP.NET Core MVC](/aspnet/core/mvc/overview) průvodce.
+Další informace o použití MVC najdete v tématu [přehled ASP.NET Core příručka MVC](/aspnet/core/mvc/overview) .
 
-Chcete-li přidat kontroler, postupujte takto:
+Chcete-li přidat kontroler, postupujte následovně:
 
-1. Klikněte pravým tlačítkem na název projektu a vyberte **Přidat > Nová soubory**. Vyberte **Obecné > prázdná třída**a zadejte název kontroleru:
+1. Klikněte pravým tlačítkem myši na název projektu a vyberte **přidat > nové soubory**. Vyberte **obecné > prázdnou třídu**a zadejte název kontroleru:
 
     ![Dialogové okno Nový soubor](media/asp-net-core-image8.png)
 
-2. Přidejte následující kód do nového řadiče:
+2. Do nového kontroleru přidejte následující kód:
 
     ```csharp
     using System;
@@ -169,13 +169,13 @@ Chcete-li přidat kontroler, postupujte takto:
     }
     ```
 
-3. Přidat `Microsoft.AspNetCore.Mvc` závislostí do projektu kliknutím pravým tlačítkem myši **závislost** složky a výběru **přidat balíček...** .
+3. Přidejte závislost do projektu tak, že kliknete pravým tlačítkem na složku **závislosti** a vyberete **Přidat balíček....** `Microsoft.AspNetCore.Mvc`
 
-4. Pomocí vyhledávacího pole procházet NuGet knihovny pro `Microsoft.AspNetCore.Mvc`a vyberte **přidat balíček**. To může trvat několik minut, než instalace a můžete být vyzváni tak, aby přijímal různých licencí pro požadované závislosti:
+4. Pomocí vyhledávacího pole můžete procházet knihovnu NuGet pro `Microsoft.AspNetCore.Mvc`a vybrat **Přidat balíček**. Instalace může trvat několik minut a může se vám zobrazit výzva, abyste přijali různé licence na požadované závislosti:
 
-    ![Přidat Nuget](media/asp-net-core-image9.png)
+    ![Přidat NuGet](media/asp-net-core-image9.png)
 
-5. Ve třídě spuštění odebrat `app.Run` lambda a logiku směrování URL MVC používá k určení, která kódu by měla vyvolat pro následující nastavení:
+5. Ve spouštěcí třídě odstraňte `app.Run` výraz lambda a nastavte logiku směrování adres URL, kterou používá MVC, abyste zjistili, který kód by měl vyvolat následující:
 
     ```csharp
     app.UseMvc(routes =>
@@ -186,15 +186,15 @@ Chcete-li přidat kontroler, postupujte takto:
     });
     ```
 
-    Ujistěte se, že chcete odebrat `app.Run` lambda, protože se přepíše logiku směrování.
+    Nezapomeňte odebrat `app.Run` výraz lambda, protože tato akce přepíše logiku směrování.
 
-    Chcete-li určit, jaký kód ke spuštění aplikace MVC používá následující formát:
+    MVC používá následující formát pro určení kódu, který se má spustit:
 
     `/[Controller]/[ActionName]/[Parameters]`
 
-    Když přidáte výše uvedeném fragmentu kódu, oznamujete tím aplikaci výchozí nastavení `HelloWorld` Kontroleru a `Index` metody akce.
+    Když přidáte fragment kódu výše, oznamujete aplikaci výchozímu `HelloWorld` kontroleru `Index` a metodě Action.
 
-6. Přidat `services.AddMvc();` volání `ConfigureServices` způsob, jak je znázorněno níže:
+6. `services.AddMvc();` Přidejte volání `ConfigureServices` metody, jak je znázorněno níže:
 
     ```csharp
     public void ConfigureServices(IServiceCollection services)
@@ -203,9 +203,9 @@ Chcete-li přidat kontroler, postupujte takto:
     }
     ```
 
-    Můžete také předat parametr informace z adresy URL ke kontroleru.
+    Můžete také předat informace o parametrech z adresy URL do kontroleru.
 
-7. Přidejte jinou metodu HelloWorldController, jak je znázorněno níže:
+7. Přidejte další metodu do HelloWorldController, jak je znázorněno níže:
 
     ```csharp
     public string Xamarin(string name)
@@ -214,32 +214,32 @@ Chcete-li přidat kontroler, postupujte takto:
     }
     ```
 
-8. Pokud nyní spustíte aplikaci, by měl automaticky otevře prohlížeč:
+8. Pokud teď aplikaci spustíte, měla by se automaticky otevřít v prohlížeči:
 
-    ![Běžící aplikaci v prohlížeči](media/asp-net-core-image13.png)
+    ![Běžící aplikace v prohlížeči](media/asp-net-core-image13.png)
 
-9. Zkuste přejít ke `http://localhost:xxxx/HelloWorld/Xamarin?name=Amy` (nahrazení `xxxx` s správný port), měli byste vidět následující:
+9. Zkuste přejít na `http://localhost:xxxx/HelloWorld/Xamarin?name=Amy` adresu (nahraďte `xxxx` správným portem), měli byste vidět následující:
 
-    ![Běžící aplikaci v prohlížeči s argumenty](media/asp-net-core-image10.png)
+    ![Spuštění aplikace v prohlížeči s argumenty](media/asp-net-core-image10.png)
 
 ## <a name="troubleshooting"></a>Poradce při potížích
 
-Pokud je potřeba nainstalovat sadu .NET Core ručně v Mac OS 10.12 (Sierra) a vyšší, postupujte takto:
+Pokud potřebujete .NET Core nainstalovat ručně na Mac OS 10,12 (Sierra) a vyšší, udělejte toto:
 
-1. Před zahájením instalace .NET Core, ujistěte se, že jste aktualizovali všechny aktualizace operačního systému na nejnovější stabilní verzi. Můžete to zkontrolovat, že přejdete do aplikace pro App Store a vyberete kartu aktualizace.
+1. Než začnete s instalací .NET Core, ujistěte se, že jste aktualizovali všechny aktualizace operačního systému na nejnovější stabilní verzi. Můžete to vrátit tak, že v aplikaci App Storu kliknete na kartu aktualizace a vyberete kartu aktualizace.
 
-2. Postupujte podle kroků uvedených v [webu .NET Core](https://www.microsoft.com/net/core#macos).
+2. Postupujte podle kroků uvedených na [webu .NET Core](https://www.microsoft.com/net/core#macos).
 
-Ujistěte se, že jste dokončili všechny kroky úspěšně zajistit úspěšné instalaci .NET Core.
+Ujistěte se, že jste úspěšně dokončili všechny kroky, abyste zajistili, že se .NET Core nainstaluje úspěšně.
 
 ## <a name="summary"></a>Souhrn
 
-Tato příručka poskytl úvod do ASP.NET Core. Popisuje, je, kdy se má použít a poskytuje informace o používání v aplikaci Visual Studio pro Mac.
+Tento průvodce vám poskytl Úvod do ASP.NET Core. Popisuje, co je, kdy se používá, a poskytuje informace o jeho použití v Visual Studio pro Mac.
 Další informace o dalších krocích odsud najdete v následujících příručkách:
-- [ASP.NET Core](/aspnet/core/?view=aspnetcore-2.1#build-web-apis-and-web-ui-using-aspnet-core-mvc) dokumentace.
-- [Vytváření back-endových služeb pro nativní mobilní aplikace](/aspnet/core/mobile/native-mobile-backend), který ukazuje, jak sestavit služby REST pro aplikace na platformě Xamarin.Forms pomocí ASP.NET Core.
-- [ASP.NET Core praktických cvičení](https://github.com/Microsoft/vs4mac-labs/tree/master/Web/Getting-Started).
+- [ASP.NET Core](/aspnet/core/?view=aspnetcore-2.1#build-web-apis-and-web-ui-using-aspnet-core-mvc) docs.
+- [Vytváření back-end služeb pro nativní mobilní aplikace](/aspnet/core/mobile/native-mobile-backend), které ukazují, jak vytvořit službu REST pomocí ASP.NET Core pro aplikaci Xamarin. Forms.
+- [ASP.NET Core praktické laboratorní prostředí](https://github.com/Microsoft/vs4mac-labs/tree/master/Web/Getting-Started).
 
-## <a name="related-video"></a>Související videa
+## <a name="related-video"></a>Související video
 
 > [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Visual-Studio-for-Mac-Build-Your-First-App/player]

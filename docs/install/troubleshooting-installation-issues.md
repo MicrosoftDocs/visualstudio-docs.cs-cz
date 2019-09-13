@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 2f2ff06cc920568b8c344fef42d01408d3134fd8
-ms.sourcegitcommit: dae5dfd626277b58ebd7b21a75757f683f1eacc5
+ms.openlocfilehash: ce451ecdeb6d196e6520acffb9a6c76add36f5bf
+ms.sourcegitcommit: b60a00ac3165364ee0e53f7f6faef8e9fe59ec4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70739306"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913260"
 ---
 # <a name="troubleshoot-visual-studio-installation-and-upgrade-issues"></a>Řešení potíží s instalací a upgradem sady Visual Studio
 
@@ -29,9 +29,9 @@ ms.locfileid: "70739306"
 
 Tento průvodce odstraňováním potíží obsahuje podrobné pokyny, které by měla vyřešit většinu problémů s instalací.
 
-## <a name="troubleshoot-an-online-installation"></a>Řešení potíží s online instalací
+## <a name="online-installations"></a>Online instalace
 
-Následující kroky jsou optimalizované pro typické instalace online. Problém, který má vliv na offline instalaci, najdete v tématu [postupy řešení potíží s offline instalací](#troubleshoot-an-offline-installation).
+Následující kroky jsou optimalizované pro typické instalace online. Problém, který má vliv na offline instalaci, najdete v tématu [postupy řešení potíží s offline instalací](#offline-installations).
 
 ### <a name="step-1---check-whether-this-problem-is-a-known-issue"></a>Krok 1 – Zkontrolujte, zda tento problém se o známý problém
 
@@ -82,7 +82,7 @@ V některých situacích, jako je ta, která souvisí poškozené soubory možn�
 
 ::: moniker range="vs-2017"
 
-1. Shromážděte vaše protokoly instalace. Zobrazit [jak získat protokoly instalace sady Visual Studio](#get-installation-logs) podrobnosti.
+1. Shromážděte vaše protokoly instalace. Zobrazit [jak získat protokoly instalace sady Visual Studio](#installation-logs) podrobnosti.
 2. Otevřete instalační program sady Visual Studio a pak klikněte na tlačítko **nahlásit problém** otevřete Nástroje pro zpětnou vazbu Visual Studio.
 ![Vytvořit kartu k tlačítku poskytnout zpětnou vazbu a otevřete nástroj pro zpětnou vazbu](media/report-a-problem.png)
 3. Pojmenujte hlášení o problému a poskytuje relevantní podrobnosti. Klikněte na tlačítko **Další** přejdete **přílohy** části a připojte soubor protokolu vygenerovaný (obvykle je soubor na `%TEMP%\vslogs.zip`).
@@ -92,7 +92,7 @@ V některých situacích, jako je ta, která souvisí poškozené soubory možn�
 
 ::: moniker range="vs-2019"
 
-1. Shromážděte vaše protokoly instalace. Zobrazit [jak získat protokoly instalace sady Visual Studio](#get-installation-logs) podrobnosti.
+1. Shromážděte vaše protokoly instalace. Zobrazit [jak získat protokoly instalace sady Visual Studio](#installation-logs) podrobnosti.
 2. Otevřete instalační program sady Visual Studio a pak klikněte na tlačítko **nahlásit problém** otevřete Nástroje pro zpětnou vazbu Visual Studio.
 ![Vytvořit kartu k tlačítku poskytnout zpětnou vazbu a otevřete nástroj pro zpětnou vazbu](media/vs-2019/vs-installer-report-problem.png)
 3. Pojmenujte hlášení o problému a poskytuje relevantní podrobnosti. Klikněte na tlačítko **Další** přejdete **přílohy** části a připojte soubor protokolu vygenerovaný (obvykle je soubor na `%TEMP%\vslogs.zip`).
@@ -112,7 +112,7 @@ Jako poslední možnost, můžete [odebrání sady Visual Studio](remove-visual-
 
 Pokud žádný z předchozích kroků vám pomůžou úspěšně instalaci nebo upgradu sady Visual Studio, kontaktujte nás pomocí našich [ **živý chat** ](https://visualstudio.microsoft.com/vs/support/#talktous) požádejte o pomoc podporu možnost (jenom v angličtině).
 
-## <a name="troubleshoot-an-offline-installation"></a>Řešení potíží s offline instalací
+## <a name="offline-installations"></a>Offline instalace
 
 Tady je tabulka znázorňující známé problémy a některé řešení, které vám můžou pomoct při instalaci z místní rozložení.
 
@@ -121,7 +121,7 @@ Tady je tabulka znázorňující známé problémy a některé řešení, které
 | Uživatelé nebudou mít přístup k souborům. | oprávnění (ACL) | Ujistěte se, že upravit oprávnění (ACL), tak, aby se ostatním uživatelům udělit oprávnění ke čtení *před* sdílené složky offline instalace. |
 | Nové úlohy, komponenty nebo jazyky nepodaří nainstalovat.  | `--layout`  | Ujistěte se, že máte přístup k Internetu, pokud nainstalujete z částečné rozložení a vyberte úlohy, komponenty nebo jazyky, které nebyly staženy dříve v tomto částečné rozložení. |
 
-## <a name="get-installation-logs"></a>Získat protokoly instalace
+## <a name="installation-logs"></a>Protokoly instalace
 
 Protokoly instalace jsou potřeba k odstranění většiny potíží instalace. Po odeslání chyby pomocí [nahlásit problém](../ide/how-to-report-a-problem-with-visual-studio.md) ve Visual Studio Installerem. Tyto protokoly jsou automaticky obsažené v sestavě.
 
@@ -137,7 +137,7 @@ Shromažďování protokolů:
 > [!NOTE]
 > Nástroj musí běžet pod stejným uživatelským účtem, který byl spuštěn neúspěšné instalace v části. Pokud nástroj spouštíte z jiného uživatelského účtu, nastavte `–user:<name>` možnost k určení uživatelského účtu, pod kterým byla spuštěna instalace, která selhala. Spustit `Collect.exe -?` z příkazového řádku správce pro další informace o možnostech a využití.
 
-## <a name="get-live-help"></a>Získejte pomoc za provozu
+## <a name="live-help"></a>Živá pomáhat
 
 Pokud řešení uvedené v této příručce pro řešení potíží vám jak úspěšně nainstalovat nebo upgradovat sadu Visual Studio, naší [ **živý chat** ](https://visualstudio.microsoft.com/vs/support/#talktous) požádejte o pomoc podporu možnost (jenom v angličtině).
 

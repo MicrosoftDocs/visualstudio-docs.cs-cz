@@ -1,5 +1,5 @@
 ---
-title: 'Krok 1: Vytvoření projektu formulářové aplikace Windows'
+title: 'Krok 1: Vytvoření projektu aplikace model Windows Forms'
 ms.date: 08/30/2019
 ms.assetid: 16ac2422-e720-4e3a-b511-bc2a54201a86
 ms.topic: tutorial
@@ -13,14 +13,14 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dc2b21edcae4cd825ade551b92f98853da8f2516
-ms.sourcegitcommit: 9c07ae6fb18204ea080c8248994a683fa12e5c82
+ms.openlocfilehash: 65339eabcffdf0f333036442ea8473ecf8c8f06e
+ms.sourcegitcommit: 4dfe098ac0df294aad63e6b384d6575980798ca3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293669"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888007"
 ---
-# <a name="step-1-create-a-windows-forms-application-project"></a>Krok 1: Vytvoření projektu formulářové aplikace Windows
+# <a name="step-1-create-a-windows-forms-app-project"></a>Krok 1: Vytvoření projektu aplikace model Windows Forms
 
 Při vytváření prohlížeče obrázků je prvním krokem vytvoření projektu aplikace model Windows Forms.
 
@@ -70,9 +70,9 @@ Při vytváření prohlížeče obrázků je prvním krokem vytvoření projektu
 
 ::: moniker-end
 
-Visual Studio vytvoří řešení pro váš program. Řešení funguje jako kontejner pro všechny projekty a soubory, které váš program potřebuje. Tyto výrazy budou podrobněji vysvětleny dále v tomto kurzu.
+Visual Studio vytvoří řešení pro vaši aplikaci. Řešení funguje jako kontejner pro všechny projekty a soubory, které vaše aplikace potřebuje. Tyto výrazy budou podrobněji vysvětleny dále v tomto kurzu.
 
-## <a name="about-the-windows-forms-application-project"></a>O projektu model Windows Forms aplikace
+## <a name="about-the-windows-forms-app-project"></a>O projektu aplikace model Windows Forms
 
 1. Vývojové prostředí obsahuje tři okna: hlavní okno, **Průzkumník řešení**a okno **vlastnosti** .
 
@@ -96,7 +96,7 @@ Visual Studio vytvoří řešení pro váš program. Řešení funguje jako kont
 
     * **Průzkumník řešení okno** V tomto okně můžete zobrazit a přejít na všechny položky ve vašem řešení.
 
-       Pokud zvolíte soubor, obsah okna **vlastnosti** se změní. Pokud otevřete soubor kódu (který končí na *. cs* v C# a *. vb* v Visual Basic), zobrazí se soubor kódu nebo Návrhář souboru s kódem. Návrhář je vizuální plocha, do které můžete přidat ovládací prvky, jako jsou tlačítka a seznamy. Pro formuláře sady Visual Studio se Návrhář nazývá **Návrhář formulářů**.
+    Pokud zvolíte soubor, obsah okna **vlastnosti** se změní. Pokud otevřete soubor kódu (který končí na *. cs* v C# a *. vb* v Visual Basic), zobrazí se soubor kódu nebo Návrhář souboru s kódem. Návrhář je vizuální plocha, do které můžete přidat ovládací prvky, jako jsou tlačítka a seznamy. Pro formuláře sady Visual Studio se Návrhář nazývá **Návrhář formulářů**.
 
     * **Okno Vlastnosti** V tomto okně můžete změnit vlastnosti položek, které zvolíte v ostatních oknech. Například pokud zvolíte Form1, můžete změnit jeho nadpis nastavením vlastnosti **text** a můžete změnit barvu pozadí nastavením vlastnosti **BackColor** .
 
@@ -112,9 +112,9 @@ Visual Studio vytvoří řešení pro váš program. Řešení funguje jako kont
 
      Visual Studio automaticky vyplní název složky a název projektu a pak projekt uloží ve složce Projects.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
-* Pokud chcete přejít na další krok kurzu, přečtěte si [článek krok 2: Spusťte program](../ide/step-2-run-your-program.md).
+* Pokud chcete přejít na další krok kurzu, přečtěte si  **[článek krok 2: Spusťte aplikaci](../ide/step-2-run-your-program.md).**
 
 * Pokud se chcete vrátit k tématu Přehled, [Přečtěte si kurz 1: Vytvoření prohlížeče](../ide/tutorial-1-create-a-picture-viewer.md)obrázků
 

@@ -16,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 794244bcdb814f78338a119d27ec0b0299023e59
-ms.sourcegitcommit: 9c07ae6fb18204ea080c8248994a683fa12e5c82
+ms.openlocfilehash: fc843cceea35d196e3f9719a0690764611865600
+ms.sourcegitcommit: 4dfe098ac0df294aad63e6b384d6575980798ca3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293489"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70887976"
 ---
 # <a name="step-6-name-your-button-controls"></a>Krok 6: Pojmenování tlačítkových ovládacích prvků
 
@@ -71,14 +71,14 @@ Karta ***Form1.cs*** *s C# kódem*
    > [!IMPORTANT]
    > Pomocí ovládacího prvku programovací jazyk v pravém horním rohu této stránky můžete zobrazit fragment C# kódu nebo Visual Basic fragment kódu.<br><br>![Řízení programovacího jazyka pro Docs.Microsoft.com](../ide/media/docs-programming-language-control.png)
 
-   Díváte jste se na kód s `showButton_Click()` názvem ( `ShowButton_Click()`případně). Rozhraní IDE bylo přidáno do kódu formuláře při otevření souboru kódu pro tlačítko **showButton** . V době návrhu při otevření souboru kódu pro ovládací prvek ve formuláři se kód vygeneruje pro ovládací prvek, pokud ještě neexistuje. Tento kód, který se označuje jako *Metoda*, se spouští při spuštění programu a výběru ovládacího prvku – v tomto případě se **zobrazí tlačítko Zobrazit obrázek** .
+   Díváte jste se na kód s `showButton_Click()` názvem ( `ShowButton_Click()`případně). Rozhraní IDE bylo přidáno do kódu formuláře při otevření souboru kódu pro tlačítko **showButton** . V době návrhu při otevření souboru kódu pro ovládací prvek ve formuláři se kód vygeneruje pro ovládací prvek, pokud ještě neexistuje. Tento kód, který se označuje jako *Metoda*, se spouští při spuštění aplikace a výběru ovládacího prvku – v tomto případě se **zobrazí tlačítko Zobrazit obrázek** .
 
 1. Zvolte znovu kartu **Návrhář formulářů** (**Form1.cs [Design]** ) a pak otevřete soubor kódu pro tlačítko **Vymazat obrázek** pro vytvoření metody v kódu formuláře. Tento postup opakujte pro zbývající dvě tlačítka. V každém okamžiku rozhraní IDE přidá novou metodu do souboru kódu formuláře.
 
 1. Chcete-li přidat další metodu, otevřete soubor kódu pro ovládací prvek **CheckBox** v **Návrhář formulářů** , aby `checkBox1_CheckedChanged()` rozhraní IDE přidalo metodu. Tato metoda je volána vždy, když uživatel vybere nebo zruší zaškrtnutí políčka.
 
    > [!TIP]
-   > Při práci na programu se často přesouváte mezi editorem kódu a **Návrhář formulářů**. Rozhraní IDE usnadňuje navigaci v projektu. Pomocí **Průzkumník řešení** otevřít **Návrhář formulářů** dvojím kliknutím na *Form1.cs* v C# nebo *Form1. vb* v Visual Basic nebo na panelu nabídek vyberte možnost**Návrhář** **zobrazení** > .
+   > Při práci na aplikaci se často přesouváte mezi editorem kódu a **Návrhář formulářů**. Rozhraní IDE usnadňuje navigaci v projektu. Pomocí **Průzkumník řešení** otevřít **Návrhář formulářů** dvojím kliknutím na *Form1.cs* v C# nebo *Form1. vb* v Visual Basic nebo na panelu nabídek vyberte možnost**Návrhář** **zobrazení** > .
 
     Následující příklad ukazuje nový kód, který se zobrazí v editoru kódu.
 
@@ -86,7 +86,7 @@ Karta ***Form1.cs*** *s C# kódem*
     
     [!code-vb[VbExpressTutorial1Step6_#2](../ide/codesnippet/VisualBasic/step-6-name-your-button-controls_2.vb)]
 
-    Pět metod, které jste přidali, se nazývají *obslužné rutiny událostí*, protože je program volá vždy, když dojde k události (jako je například uživatel výběr tlačítka nebo výběru pole).
+    Pět metod, které jste přidali, se nazývají *obslužné rutiny událostí*, protože vaše aplikace je volá vždy, když dojde k události (jako je například uživatel výběr tlačítka nebo výběru pole).
 
     Při zobrazení kódu pro ovládací prvek v rozhraní IDE v době návrhu, Visual Studio přidá metodu obslužné rutiny události pro ovládací prvek, pokud žádný není. Například když dvakrát kliknete na tlačítko, rozhraní IDE přidá obslužnou rutinu události pro <xref:System.Windows.Forms.Control.Click> událost (která je volána vždy, když uživatel zvolí tlačítko). Když dvakrát kliknete na zaškrtávací políčko, rozhraní IDE přidá obslužnou rutinu události pro <xref:System.Windows.Forms.CheckBox.CheckedChanged> událost (která je volána vždy, když uživatel vybere nebo zruší pole).
 
@@ -100,7 +100,7 @@ Karta ***Form1.cs*** *s C# kódem*
 
 ## <a name="next-steps"></a>Další kroky
 
-* Pokud chcete přejít na další krok kurzu, přečtěte si [článek krok 7: Přidejte součásti dialogového okna do formuláře](../ide/step-7-add-dialog-components-to-your-form.md).
+* Pokud chcete přejít na další krok kurzu, přečtěte si  **[článek krok 7: Přidejte součásti dialogového okna do formuláře](../ide/step-7-add-dialog-components-to-your-form.md).**
 
 * Pokud se chcete vrátit k předchozímu kroku kurzu [, přečtěte si krok 5: Přidejte ovládací prvky do formuláře](../ide/step-5-add-controls-to-your-form.md).
 

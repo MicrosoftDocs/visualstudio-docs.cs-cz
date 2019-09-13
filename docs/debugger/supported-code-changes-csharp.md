@@ -1,5 +1,5 @@
 ---
-title: Podporované změny kódu (C# a Visual Basic) | Dokumentace Microsoftu
+title: Podporované změny kódu (C# a Visual Basic) | Microsoft Docs
 ms.date: 10/11/2018
 ms.topic: conceptual
 dev_langs:
@@ -16,93 +16,94 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: f20f61ffc4a6e4105a96b58c3dc73e7154e7c9cd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c5f54a2b50447125b0abffd8cc62ba9c2a1d2b37
+ms.sourcegitcommit: 4dfe098ac0df294aad63e6b384d6575980798ca3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62929721"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70887783"
 ---
 # <a name="supported-code-changes-c-and-visual-basic"></a>Podporované změny kódu (C# a Visual Basic)
-Upravit a pokračovat zpracovává většinu typů změn kódu uvnitř těla metody. Během ladění, ale nejde použít většinu změn mimo těl metod a několik změn v rámci těla metod. Nepodporované změny použít, musíte Zastavit ladění a znovu s novou verzi kódu.
+Upravit a pokračovat zpracovává většinu typů změn kódu v rámci těla metody. Většina změn mimo tělo metody a několik změn v rámci těla metod nelze použít během ladění. Chcete-li použít tyto nepodporované změny, je nutné zastavit ladění a restartovat s novou verzí kódu.
 
 ## <a name="supported-changes-to-code"></a>Podporované změny kódu
 
-Následující tabulka uvádí změny, které mohou být provedeny C# a kód jazyka Visual Basic během relace ladění bez restartování relace.
+V následující tabulce jsou uvedeny změny, které mohou být provedeny C# a Visual Basic kódu během relace ladění, aniž by bylo nutné relaci restartovat.
 
-|Element Language/funkce|Operace podporované úprav|Omezení|
+|Jazykové prvky/funkce|Podporovaná operace Edit|Omezení|
 |-|-|-|
-|Typy|Přidejte metody, pole, konstruktory, et al.|[Ano](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
+|Typy|Přidat metody, pole, konstruktory, et al|[Ano](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
 |Iterátory|Přidat nebo upravit|Ne|
-|Async/await výrazy|Přidat nebo upravit|[Ano](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
-|Dynamické objekty|Přidat nebo upravit|Ne|
+|výrazy Async/await|Přidat nebo upravit|[Ano](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
+|dynamické objekty|Přidat nebo upravit|Ne|
 |lambda – výrazy|Přidat nebo upravit|[Ano](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
-|LINQ – výrazy|Přidat nebo upravit|[Stejně jako výrazy lambda](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
+|Výrazy LINQ|Přidat nebo upravit|[Stejné jako výrazy lambda](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
 
 > [!NOTE]
-> Novějších funkcí jazyka, jako je například interpolace řetězců a podmíněné operátory s null jsou obecně podporována možností upravit a pokračovat. Nejnovější informace najdete v tématu [nepodporuje úpravy Enc](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits) stránky.
+> Novější funkce jazyka, jako je například interpolace řetězců a podmíněné operátory null, jsou obecně podporovány funkcí upravit a pokračovat. Nejaktuálnější informace najdete na stránce s [podporovanými úpravami](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits) .
 
 ## <a name="unsupported-changes-to-code"></a>Nepodporované změny kódu
- Následující změny nejde použít u C# a kód jazyka Visual Basic během relace ladění:
+ Následující změny nelze použít pro C# a Visual Basic kódu během relace ladění:
 
-- Změny aktuálního příkazu nebo jiné aktivní příkaz.
+- Změny aktuálního příkazu nebo jakéhokoli jiného aktivního příkazu.
 
-     Aktivní příkazy zahrnout všechny příkazy, funkce v zásobníku volání, které byly volány zobrazíte aktuální příkaz.
+     Aktivní příkazy zahrnují všechny příkazy ve funkcích v zásobníku volání, které byly volány pro získání na aktuální příkaz.
 
-     Aktuální příkaz je označena žlutým pozadím v okně zdroje. Jiné aktivní příkazy jsou označené nástrojem pozadí označeno šedou barvou a jsou jen pro čtení. Tyto výchozí barvy lze změnit v **možnosti** dialogové okno.
+     Aktuální příkaz je označen žlutým pozadím v okně zdroje. Další aktivní příkazy jsou označeny šedým pozadím a jsou jen pro čtení. Tyto výchozí barvy lze změnit v dialogovém okně **Možnosti** .
 
-- Následující tabulka uvádí nepodporované změny kódu pomocí prvku jazyka.
+- V následující tabulce jsou uvedeny nepodporované změny kódu podle prvku jazyka.
 
-|Element Language/funkce|Nepodporované úpravy operace|
+|Jazykové prvky/funkce|Nepodporovaná operace Edit|
 |-|-|
-|Všechny prvky kódu|Přejmenování|
+|Všechny elementy kódu|Přejmenování|
 |Jmenné prostory|Přidejte|
 |Obory názvů, typy, členy|Odstranit|
 |Obecné typy|Přidat nebo upravit|
-|Rozhraní|Modify|
-|Typy|Přidat člena abstraktní nebo virtuální, přidejte přepsání (viz [podrobnosti](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits))|
+|Rozhraní|Upravíte|
+|Typy|Přidat abstraktní nebo virtuální člen, přidat přepsání (viz [Podrobnosti](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits))|
 |Typy|Přidat destruktor|
-|Členové|Upravte člen odkazující na vloženém typu spolupráce|
-|Členové (Visual Basic)|Upravte člena s On Error nebo Resume – příkaz|
-|Členové (Visual Basic)|Upravte člen obsahující klauzuli dotazu agregace, Group By, jednoduché připojení nebo skupiny připojení LINQ|
-|Metody|Změna podpisů|
-|Metody|Díky přidání těla metody abstraktní metoda stát jako neabstraktní|
-|Metody|Odstranění těla metody|
+|Členové|Úprava člena odkazujícího na vložený definiční typ|
+|Členové|Úprava statického člena poté, co byl již otevřen spuštěním kódu|
+|Členové (Visual Basic)|Úprava člena pomocí příkazu Error nebo Resume|
+|Členové (Visual Basic)|Úprava člena obsahujícího agregační klauzuli, Group by, Simple JOIN nebo Group Join join klauzule dotazu LINQ|
+|Metody|Úprava podpisů|
+|Metody|Nastavit abstraktní metodu jako neabstraktní přidáním těla metody|
+|Metody|Odstranit tělo metody|
 |Atributy|Přidat nebo upravit|
-|Vlastnosti nebo události|Upravit parametr typu, základní typ, typ delegáta nebo návratový typ |
-|Operátory nebo indexerů|Upravit parametr typu, základní typ, typ delegáta nebo návratový typ |
-|catch – bloky|Když obsahuje aktivní příkaz|
-|konstrukce try-catch-finally bloky|Když obsahuje aktivní příkaz|
+|Události nebo vlastnosti|Úprava parametru typu, základního typu, typu delegáta nebo návratového typu |
+|Operátory nebo indexery|Úprava parametru typu, základního typu, typu delegáta nebo návratového typu |
+|catch – bloky|Upravit, když obsahuje aktivní příkaz|
+|bloky try-catch-finally|Upravit, když obsahuje aktivní příkaz|
 |using – příkazy|Přidejte|
-|asynchronní metody nebo výrazy lambda|Upravit asynchronní metody nebo lambda v projekt cílí na rozhraní .NET Framework 4 a snížení (viz [podrobnosti](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits))|
-|Iterátory|Upravit iterátor v projekt cílí na rozhraní .NET Framework 4 a snížení (viz [podrobnosti](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits))|
+|asynchronní metody/výrazy lambda|Úprava asynchronní metody nebo výrazu lambda v projektu cílících na .NET Framework 4 a nižší (viz [Podrobnosti](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits))|
+|Iterátory|Úprava iterátoru v projektu cílící na .NET Framework 4 a nižší (viz [Podrobnosti](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits))|
 
 ## <a name="unsafe-code"></a>Nebezpečný kód
- Změny nezabezpečený kód mají stejná omezení jako změny bezpečný kód, jeden další omezení: Upravit a pokračovat nepodporuje změny nebezpečný kód, který ukončí v rámci metody, která obsahuje `stackalloc` operátor.
+ Změny v nebezpečném kódu mají stejná omezení jako změny v bezpečném kódu s jedním dalším omezením: Operace Upravit a pokračovat nepodporuje změny nezabezpečeného kódu, který ukončuje v rámci metody, která obsahuje `stackalloc` operátor.
 
-## <a name="unsupported-app-scenarios"></a>Scénáře pro nepodporované aplikace
+## <a name="unsupported-app-scenarios"></a>Nepodporované scénáře aplikací
 
-Nepodporované aplikace a platformy obsahují ASP.NET 5, Silverlight 5 a Windows 8.1.
+Mezi nepodporované aplikace a platformy patří ASP.NET 5, Silverlight 5 a Windows 8.1.
 
 > [!NOTE]
-> Aplikace, které jsou podporovány zahrnout UWP ve Windows 10 a x86 a x64 aplikací určených pro rozhraní .NET Framework 4.6 klasické pracovní plochy nebo novější verze (jenom desktopové verze rozhraní .NET Framework je).
+> Mezi podporované aplikace patří UWP ve Windows 10 a aplikace x86 a x64, které cílí na .NET Framework 4,6 Desktop nebo novějších verzích (.NET Framework je jenom verze desktopu).
 
 ## <a name="unsupported-scenarios"></a>Nepodporované scénáře
- Upravit a pokračovat není k dispozici v následujících scénářích ladění:
+ Úpravy a pokračování nejsou k dispozici v následujících scénářích ladění:
 
-- Ladění ve smíšeném režimu (nativní a spravovaná).
+- Ladění ve smíšeném režimu (nativní/spravované)
 
 - Ladění SQL.
 
-- Ladění zotavení po havárii. Watson s výpisem paměti.
+- Ladění Dr. Výpis programu Watson.
 
-- Ladění aplikace vložený modul runtime.
+- Ladění vložené aplikace modulu runtime.
 
-- Ladění aplikace s využitím připojit k procesu (**ladit > připojit k procesu**) namísto spuštění aplikace výběrem **Start** z **ladění** nabídky.
+- Ladění aplikace pomocí příkazu připojit k procesu (**ladění > připojit k procesu**) místo spuštění aplikace výběrem možnosti **Spustit** v nabídce **ladění** .
 
 - Ladění optimalizovaného kódu.
 
-- Ladění starou verzi kódu po nové verze se nepovedlo sestavit kvůli chybám sestavení.
+- Ladění staré verze kódu po neúspěšném sestavení nové verze z důvodu chyb sestavení.
 
 ## <a name="see-also"></a>Viz také
 - [Upravit a pokračovat (Visual C#)](../debugger/edit-and-continue-visual-csharp.md)

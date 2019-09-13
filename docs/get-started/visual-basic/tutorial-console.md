@@ -2,7 +2,7 @@
 title: 'Kurz: Začínáme s Visual Basic'
 description: Naučte se vytvářet Visual Basic konzolové aplikace v aplikaci Visual Studio, krok za krokem.
 ms.custom: seodec18, get-started
-ms.date: 03/23/2019
+ms.date: 09/11/2019
 ms.technology: vs-ide-general
 ms.prod: visual-studio-windows
 ms.topic: tutorial
@@ -14,12 +14,12 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: 899c47154a3d55811579ff01786096f35272593a
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: eb0bbc0cdf7aff548053c813cdf1b29ed1fed080
+ms.sourcegitcommit: b60a00ac3165364ee0e53f7f6faef8e9fe59ec4a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180418"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913312"
 ---
 # <a name="tutorial-get-started-with-visual-basic-in-visual-studio"></a>Kurz: Začínáme s Visual Basic v aplikaci Visual Studio
 
@@ -47,7 +47,7 @@ Nejprve vytvoříme projekt aplikace Visual Basic. Typ projektu se dodává se v
 
 2. V horním řádku nabídek vyberte **soubor** > **Nový** > **projekt**.
 
-3. V dialogovém okně **Nový projekt** v levém podokně rozbalte položku **Visual Basic**a pak zvolte možnost **.NET Core**. V prostředním podokně vyberte **aplikace konzoly (.NET Core)** . Pak název souboru *HelloWorld*.
+3. V dialogovém okně **Nový projekt** v levém podokně rozbalte položku **Visual Basic**a pak zvolte možnost **.NET Core**. V prostředním podokně vyberte **aplikace konzoly (.NET Core)** . Pak pojmenujte projekt *WhatIsYourName*.
 
    ![Šablona projektu Konzolová aplikace (.NET Core) v dialogovém okně Nový projekt v integrovaném vývojovém prostředí sady Visual Studio](media/new-project-vb-dotnetcore-whatisyourname-console-app.png)
 
@@ -257,7 +257,7 @@ Konzolová aplikace přebírá vstup a zobrazuje výstup v okně příkazového 
 
 .NET Core je vývojovým dalším krokem .NET Framework. Pokud .NET Framework umožňují sdílet kód mezi programovacími jazyky, .NET Core přidá možnost sdílení kódu napříč platformami. Ještě lepší, jedná se o open source. (.NET Framework i .NET Core zahrnují knihovny předem sestavených funkcí i modul CLR (Common Language Runtime), který funguje jako virtuální počítač, ve kterém se má váš kód spustit.)
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 Blahopřejeme k dokončení tohoto kurzu! Další informace najdete v následujícím kurzu.
 

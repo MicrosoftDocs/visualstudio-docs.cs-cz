@@ -1,5 +1,5 @@
 ---
-title: 'Krok 2: Spuštění programu'
+title: 'Krok 2: Spuštění aplikace pro prohlížeč obrázků'
 ms.date: 09/06/2019
 ms.assetid: 9a8fe90e-c97b-4e98-b6c8-0c6b3962c49d
 ms.topic: tutorial
@@ -13,18 +13,18 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 12ae2a50b114c34f72f4e25ec52db40fc77943d3
-ms.sourcegitcommit: bd4e45f1697a8fbfdbc0a7c6b531c8f7b9fb8a48
+ms.openlocfilehash: a6c7e90f8113f5fa03da907db5dbb8f374a564e7
+ms.sourcegitcommit: 4dfe098ac0df294aad63e6b384d6575980798ca3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70808783"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70887916"
 ---
-# <a name="step-2-run-your-pictureviewer-app"></a>Krok 2: Spuštění aplikace PictureViewer
+# <a name="step-2-run-your-picture-viewer-app"></a>Krok 2: Spuštění aplikace pro prohlížeč obrázků
 
-Při vytváření projektu model Windows Forms aplikace ve skutečnosti vytvoříte program, na kterém běží. V tomto kurzu vaše aplikace *PictureViewer* neprovádí mnohem ještě&mdash;daleko, přestože to nebude. V takovém případě se zobrazí pouze prázdné okno, které v záhlaví zobrazuje **Form1** .
+Když vytváříte projekt aplikace model Windows Forms, ve skutečnosti vytvoříte program, který běží. V tomto kurzu aplikace pro prohlížení obrázků nepracuje mnohem ještě&mdash;daleko, i když to bude. Prozatím zobrazí prázdné okno, které zobrazuje **Form1** v záhlaví.
 
-Zde je postup, jak spustit program. 
+Tady je postup, jak aplikaci spustit. 
 
 1. Vyberte jednu z následujících metod:
 
@@ -37,17 +37,17 @@ Zde je postup, jak spustit program.
       ![Spustit ladění – tlačítko panelu nástrojů](../ide/media/express_icondebug.png)<br>
       ***Spustit ladění*** *tlačítko panelu nástrojů*
 
-1. Visual Studio spustí program a zobrazí se okno s názvem **Form1** . Na následujícím snímku obrazovky vidíte program, který jste právě sestavili. Program je spuštěn a později do něj přidáte.
+1. Visual Studio spustí vaši aplikaci a zobrazí se okno s názvem **Form1** . Na následujícím snímku obrazovky vidíte aplikaci, kterou jste právě sestavili. Aplikace je spuštěná a později do ní přidáte.
 
-     ![Běžící program aplikace formuláře Windows](../ide/media/express_firstrun.png)<br>
-***Model Windows Forms*** *aplikační program, spuštěný*
+     ![Spuštěná aplikace model Windows Forms](../ide/media/express_firstrun.png)<br>
+***Aplikace model Windows Forms***, *spuštěné*
 
-1. Vraťte se do integrovaného vývojového prostředí (IDE) sady Visual Studio a podívejte se na nový panel nástrojů. Další tlačítka se zobrazí na panelu nástrojů při spuštění programu. Tato tlačítka umožňují provádět akce, jako je zastavení a spuštění programu, a pomohou vám sledovat případné chyby. V tomto příkladu ho používáme ke spuštění a zastavení programu.
+1. Vraťte se do integrovaného vývojového prostředí (IDE) sady Visual Studio a podívejte se na nový panel nástrojů. Další tlačítka se zobrazí na panelu nástrojů při spuštění aplikace. Tato tlačítka umožňují provádět akce, jako je zastavení a spuštění vaší aplikace, a umožňují vám sledovat případné chyby, které může mít. V tomto příkladu ho používáme ke spuštění a zastavení aplikace.
 
      ![Panel nástrojů ladění](../ide/media/express_debugtoolbar.png)<br>
 ***Ladění*** *panel nástrojů*
 
-1. K zastavení programu použijte jednu z následujících metod:
+1. K zastavení vaší aplikace použijte jednu z následujících metod:
 
     - Na panelu nástrojů klikněte na tlačítko **Zastavit ladění** .
 
@@ -58,11 +58,11 @@ Zde je postup, jak spustit program.
     - Klikněte na tlačítko **X** v horním rohu okna **Form1** .
 
     > [!NOTE]
-    > Když spustíte program zevnitř rozhraní IDE, nazývá se to ladění, protože to obvykle provedete tak, že v programu vyhledáte a opravíte chyby (chyby). I když je tento program malý a ve skutečnosti ještě nic nedělá, je to stále skutečný program. Stejný postup můžete použít ke spuštění a ladění dalších programů. Další informace o ladění naleznete v tématu [první pohled na ladicí program](../debugger/debugger-feature-tour.md).
+    > Když aplikaci spouštíte zevnitř rozhraní IDE, nazývá se to ladění, protože to obvykle provedete tak, že v aplikaci vyhledáte a opravíte chyby (chyby). I když je tato aplikace malá a ve skutečnosti ještě nic nedělá, je to stále skutečný program. Stejný postup můžete použít ke spuštění a ladění dalších programů. Další informace o ladění naleznete v tématu [první pohled na ladicí program](../debugger/debugger-feature-tour.md).
 
-## <a name="next-steps"></a>Další kroky
+## <a name="next-steps"></a>Další postup
 
-* Pokud chcete přejít na další krok kurzu, [přejděte na krok 3: Nastavte vlastnosti](../ide/step-3-set-your-form-properties.md)formuláře.
+* Pokud chcete přejít na další krok kurzu,  **[přejděte na krok 3: Nastavte vlastnosti](../ide/step-3-set-your-form-properties.md)** formuláře.
 
 * Pokud se chcete vrátit k předchozímu kroku kurzu [, přečtěte si téma krok 1: Vytvořte projekt](../ide/step-1-create-a-windows-forms-application-project.md)aplikace model Windows Forms.
 

@@ -18,12 +18,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c3456ab48822873fb51ad8614ff9a6dd5f07598
-ms.sourcegitcommit: f42b5318c5c93e2b5ecff44f408fab8bcdfb193d
+ms.openlocfilehash: f3f9c0f4913c80e1cf2f2fee24dbed5ad910ca75
+ms.sourcegitcommit: 4dfe098ac0df294aad63e6b384d6575980798ca3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69976715"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70887792"
 ---
 # <a name="how-to-sign-application-and-deployment-manifests"></a>Postupy: Podepsání manifestů aplikace a nasazení
 
@@ -71,7 +71,7 @@ Informace o vytváření souborů klíčů naleznete v tématu [How to: Vytvoř�
 4. Zadejte heslo pro přístup k souboru klíče a pak vyberte **ENTER**.
 
 > [!NOTE]
-> Soubor *. pfx* nemůže obsahovat informace o řetězení certifikátů. V takovém případě dojde k následující chybě importu: **Nejde najít certifikát a privátní klíč pro dešifrování**.
+> Soubor *. pfx* nemůže obsahovat informace o řetězení certifikátů. V takovém případě dojde k následující chybě importu: **Nejde najít certifikát a privátní klíč pro dešifrování**. Chcete-li odebrat informace o řetězení certifikátů, můžete použít program *certmgr. msc* a [zakázat možnost](/previous-versions/aa730868(v=vs.80)?redirectedfrom=MSDN#rsvssign_topic3) **zahrnutí všech certifikátů** při exportování souboru *. pfx.
 
 ## <a name="sign-using-a-test-certificate"></a>Podepsat pomocí testovacího certifikátu
 
