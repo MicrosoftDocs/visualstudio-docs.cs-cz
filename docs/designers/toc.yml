@@ -116,9 +116,9 @@
             - name: Přehled
               displayName: Tutorial 1 Picture viewer
               href: ../ide/tutorial-1-create-a-picture-viewer.md
-            - name: 'Krok 1: Vytvoření projektu formulářové aplikace Windows'
+            - name: 'Krok 1: Vytvoření projektu aplikace modelu Windows Forms'
               href: ../ide/step-1-create-a-windows-forms-application-project.md
-            - name: 'Krok 2: Spuštění programu'
+            - name: 'Krok 2: Spuštění aplikace'
               href: ../ide/step-2-run-your-program.md
             - name: 'Krok 3: Nastavení vlastností formuláře'
               href: ../ide/step-3-set-your-form-properties.md
@@ -136,7 +136,7 @@
               href: ../ide/step-9-review-comment-and-test-your-code.md
             - name: 'Krok 10: Napsání kódu pro přídavná tlačítka a zaškrtávací políčko'
               href: ../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md
-            - name: 'Krok 11: Spuštění programu a vyzkoušení dalších funkcí'
+            - name: 'Krok 11: Spuštění aplikace a vyzkoušení dalších funkcí'
               href: ../ide/step-11-run-your-program-and-try-other-features.md
         - name: "Kurz 2: Vytvoření matematického kvízu s\_časovým limitem (C#)"
           items:
