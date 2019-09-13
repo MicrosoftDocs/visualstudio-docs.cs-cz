@@ -108,11 +108,11 @@ Správce rozšíření pro roaming sleduje všechna rozšíření, která nainst
 
 Pokud používáte Správce rozšíření pro roaming, v seznamu jsou tři typy ikon:
 
-* ![Roamingovaná ikona](media/vs2017ide-roamedicon.png) : **** Rozšíření, které je součástí tohoto seznamu roamingu, ale není nainstalované na vašem počítači.
+* ![Roamingovaná ikona](media/vs2017ide-roamedicon.png) : Rozšíření, které je součástí tohoto seznamu roamingu, ale není nainstalované na vašem počítači.
   (Můžete je nainstalovat pomocí tlačítka pro **stažení** .)
 * ![Ikona](media/vs2017ide-roamedinstalledicon.png) nainstalovaného & s roamingem nainstalovaná **_& nainstalována_** : Všechna rozšíření, která jsou součástí tohoto seznamu roamingu a jsou nainstalovaná ve vašem vývojovém prostředí.
   (Pokud se rozhodnete, že nechcete roaming, můžete je odebrat pomocí tlačítka **zastavit roaming** .)
-* ![Nainstalovaná](media/vs2017ide-installedicon.png) ikona nainstalované: **** Všechna rozšíření, která jsou nainstalovaná v tomto prostředí, ale nejsou součástí vašeho seznamu roamingu.
+* ![Nainstalovaná](media/vs2017ide-installedicon.png) ikona nainstalované: Všechna rozšíření, která jsou nainstalovaná v tomto prostředí, ale nejsou součástí vašeho seznamu roamingu.
   (Do seznamu roaming můžete přidat rozšíření pomocí tlačítka **Spustit roaming** .)
 
 Všechna rozšíření, která jste si stáhli během přihlašování, se do seznamu přidají jako **& nainstalovaná**s roamingem. Rozšíření se pak bude nacházet jako součást vašeho seznamu roamingu, který vám umožní přístup k němu z libovolného počítače.
