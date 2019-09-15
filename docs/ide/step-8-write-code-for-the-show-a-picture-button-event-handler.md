@@ -16,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 26bfd4d74580fecd15b1891895e5ae28a18f3296
-ms.sourcegitcommit: 4dfe098ac0df294aad63e6b384d6575980798ca3
+ms.openlocfilehash: 2b5502101bb2e199830b68c0fe0b929608a427ed
+ms.sourcegitcommit: 0e482cfc15f809b564c3de61646f29ecd7bfcba6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70887965"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70987933"
 ---
 # <a name="step-8-write-code-for-the-show-a-picture-button-event-handler"></a>Krok 8: Napsat kód pro zobrazení obslužné rutiny události tlačítka Zobrazit obrázek
 
@@ -42,6 +42,9 @@ Technologie IntelliSense se pokusí určit, co chcete udělat dále, a automatic
 1. Zadejte do prázdného řádku mezi dvě `{ }`složené závorky. `i` (V Visual Basic zadejte do prázdného řádku mezi `Private Sub...` a `End Sub`.) Otevře se okno **technologie IntelliSense** , jak je znázorněno na následujícím obrázku.
 
     ![IntelliSense s kódem jazyka&#35; Visual C](../ide/media/express_ifintellisense.png)
+
+    > [!NOTE]
+    > Váš kód nemusí zobrazit obslužné rutiny událostí ve camelCase písmenech. 
 
 1. Okno **technologie IntelliSense** by mělo zvýraznit slovo `if`. (Pokud ne, zadejte malá a `f`velká písmena.) Všimněte si, jak se pole *ToolTip* vedle okna **IntelliSense** zobrazí s popisem, **fragmentem kódu pro příkaz if**. (V Visual Basic Popis také uvádí, že se jedná o fragment, ale s mírně odlišným použitím slov.) Chcete použít tento fragment kódu, proto vyberte klávesu **tabulátor** pro vložení `if` do kódu. Potom znovu stiskněte klávesu **TAB** , aby se `if` fragment používal. (Pokud jste si zvolili někam jinde a okno **IntelliSense** zmizelo, `i` je třeba ho znovu zadat a znovu se otevře okno **IntelliSense** .)
 

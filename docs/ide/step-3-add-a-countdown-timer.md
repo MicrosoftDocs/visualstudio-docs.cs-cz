@@ -1,7 +1,12 @@
 ---
 title: 'Krok 3: Přidání časovače odpočítávání'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: tutorial
+ms.prod: visual-studio-windows
+ms.technology: vs-ide-general
+ms.devlang:
+- csharp
+- vb
 dev_langs:
 - csharp
 - vb
@@ -11,18 +16,21 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 86e19e99bc6732ddadabdb3e308dcf8e0def41fa
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: 6756000cc2db853589d98c21abab7db452d55af9
+ms.sourcegitcommit: 0e482cfc15f809b564c3de61646f29ecd7bfcba6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416706"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70987882"
 ---
 # <a name="step-3-add-a-countdown-timer"></a>Krok 3: Přidání časovače odpočítávání
+
 V třetí části tohoto kurzu přidáte časovač odpočítávání za účelem sledování počtu sekund, které zbývá pro dokončení příjemce kvízu.
 
 > [!NOTE]
-> Toto téma je součástí série kurzů o základních konceptech kódování. Přehled tohoto kurzu najdete v [kurzu 2: Vytvoření časovaného matematického](../ide/tutorial-2-create-a-timed-math-quiz.md)kvízu
+> Toto téma je součástí série kurzů o základních konceptech kódování. 
+> - Přehled tohoto kurzu najdete v [kurzu 2: Vytvoření časovaného matematického](../ide/tutorial-2-create-a-timed-math-quiz.md)kvízu 
+> - Chcete-li stáhnout dokončenou verzi kódu, přečtěte si [ukázku kurzu dokončení matematického kvízu](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).
 
 ## <a name="to-add-a-countdown-timer"></a>Přidání časovače odpočítávání
 
@@ -30,6 +38,9 @@ V třetí části tohoto kurzu přidáte časovač odpočítávání za účelem
 
      [!code-vb[VbExpressTutorial3Step3#5](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_1.vb)]
      [!code-csharp[VbExpressTutorial3Step3#5](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_1.cs)]
+
+   > [!IMPORTANT]
+   > Pomocí ovládacího prvku programovací jazyk v pravém horním rohu této stránky můžete zobrazit fragment C# kódu nebo Visual Basic fragment kódu.<br><br>![Řízení programovacího jazyka pro Docs.Microsoft.com](../ide/media/docs-programming-language-control.png)
 
      Nyní potřebujete metodu, která ve skutečnosti počítá sekundy, jako je například časovač, který po dobu, kterou určíte, vyvolá událost.
 
@@ -57,7 +68,7 @@ V třetí části tohoto kurzu přidáte časovač odpočítávání za účelem
      Právě jste přidali `if else` příkaz, což je způsob, jak říct programům rozhodování. `if else` Příkaz vypadá následovně.
 
     > [!NOTE]
-    > Následující příklad je pouze ilustrační – Nepřidávat ho do projektu.
+    > Následující příklad je pouze pro ukázku – Nepřidávat ho do projektu.
 
     ```vb
     If (something that your program will check) Then
@@ -102,10 +113,11 @@ V třetí části tohoto kurzu přidáte časovač odpočítávání za účelem
 
      Časovač se začne počítat. Když čas vyprší, kvíz skončí a odpověď se zobrazí. Následující ilustrace znázorňuje kvíz probíhá.
 
-     ![Matematický kvíz probíhající v](../ide/media/express_addcountdown.png) průběhu matematického kvízu
+     ![Probíhá Matematický kvíz.](../ide/media/express_addcountdown.png)<br/>
+*Probíhá Matematický kvíz.*
 
 ## <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
 
-- Pokud chcete přejít na další krok kurzu, přečtěte si [krok 4: Přidejte metodu](../ide/step-4-add-the-checktheanswer-parens-method.md)metodu CheckTheAnswer ().
+- Pokud chcete přejít na další krok kurzu, přečtěte si  **[krok 4: Přidejte metodu](../ide/step-4-add-the-checktheanswer-parens-method.md)** metodu CheckTheAnswer ().
 
 - Pokud se chcete vrátit k předchozímu kroku kurzu [, přečtěte si článek krok 2: Vytvoří náhodný problém](../ide/step-2-create-a-random-addition-problem.md)sčítání.

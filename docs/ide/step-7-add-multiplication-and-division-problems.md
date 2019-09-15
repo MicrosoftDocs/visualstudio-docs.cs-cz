@@ -1,7 +1,12 @@
 ---
 title: 'Krok 7: Přidání úloh násobení a dělení'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: tutorial
+ms.prod: visual-studio-windows
+ms.technology: vs-ide-general
+ms.devlang:
+- csharp
+- vb
 dev_langs:
 - csharp
 - vb
@@ -11,15 +16,21 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 887af3a439e1f6e0f21d5ca68061d2f9977dfac7
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: 182ab3c06ef0956d6c0d97c4276a44c3f3239875
+ms.sourcegitcommit: 0e482cfc15f809b564c3de61646f29ecd7bfcba6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416547"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70987867"
 ---
 # <a name="step-7-add-multiplication-and-division-problems"></a>Krok 7: Přidání úloh násobení a dělení
+
 V sedmé části tohoto kurzu přidáte problémy násobení a dělení, ale nejprve si myslíte, jak tuto změnu provést. Vezměte v úvahu počáteční krok, který zahrnuje ukládání hodnot.
+
+> [!NOTE]
+> Toto téma je součástí série kurzů o základních konceptech kódování. 
+> - Přehled tohoto kurzu najdete v [kurzu 2: Vytvoření časovaného matematického](../ide/tutorial-2-create-a-timed-math-quiz.md)kvízu 
+> - Chcete-li stáhnout dokončenou verzi kódu, přečtěte si [ukázku kurzu dokončení matematického kvízu](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).
 
 ## <a name="to-add-multiplication-and-division-problems"></a>Přidání problémů násobení a dělení
 
@@ -27,6 +38,9 @@ V sedmé části tohoto kurzu přidáte problémy násobení a dělení, ale nej
 
      [!code-vb[VbExpressTutorial3Step7#15](../ide/codesnippet/VisualBasic/step-7-add-multiplication-and-division-problems_1.vb)]
      [!code-csharp[VbExpressTutorial3Step7#15](../ide/codesnippet/CSharp/step-7-add-multiplication-and-division-problems_1.cs)]
+
+     > [!IMPORTANT]
+     > Pomocí ovládacího prvku programovací jazyk v pravém horním rohu této stránky můžete zobrazit fragment C# kódu nebo Visual Basic fragment kódu.<br><br>![Řízení programovacího jazyka pro Docs.Microsoft.com](../ide/media/docs-programming-language-control.png)
 
 2. Jak jste předtím, upravte `StartTheQuiz()` metodu tak, aby vyplnila náhodná čísla pro problémy násobení a dělení.
 
@@ -49,11 +63,11 @@ V sedmé části tohoto kurzu přidáte problémy násobení a dělení, ale nej
 
      Kvíz uživatelé vyplňující musí odpovědět na čtyři problémy, aby se dokončil kvíz, jak ukazuje následující obrázek.
 
-     ![Matematický kvíz se čtyřmi](../ide/media/express_finishedquiz.png)
-problémy**Matematický kvíz** se čtyřmi problémy
+     ![Matematický kvíz se čtyřmi problémy](../ide/media/express_finishedquiz.png)<br/>
+***Matematický kvíz*** *se čtyřmi problémy*
 
 ## <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
 
-- Pokud chcete přejít na další krok kurzu, přečtěte si [krok 8: Přizpůsobení kvízu](../ide/step-8-customize-the-quiz.md).
+- Pokud chcete přejít na další krok kurzu, přečtěte si  **[krok 8: Přizpůsobení kvízu](../ide/step-8-customize-the-quiz.md)** S.
 
 - Pokud se chcete vrátit k předchozímu kroku kurzu [, přečtěte si krok 6: Přidejte problém](../ide/step-6-add-a-subtraction-problem.md)odčítání.

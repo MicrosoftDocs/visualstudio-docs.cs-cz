@@ -14,16 +14,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: db966d2c0ac048bd650500ed6ab191e6bc867e36
-ms.sourcegitcommit: 9753c7544cec852ca5efd0834e0956d9e53a5734
+ms.openlocfilehash: 61c1efea7340425090adbdd1c9bc865c4a056d42
+ms.sourcegitcommit: 0e482cfc15f809b564c3de61646f29ecd7bfcba6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67043302"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70987766"
 ---
 # <a name="learn-productivity-tips-and-tricks-for-the-debugger-in-visual-studio"></a>Další tipy pro vyšší produktivitu a triky pro ladicí program v sadě Visual Studio
 
-Přečtěte si toto téma a další pár produktivitu tipy a triky pro ladicí program sady Visual Studio. Podívejte se na základní funkce ladicího programu, najdete v části [nejdřív se podívejte na ladicí program](../debugger/debugger-feature-tour.md). V tomto tématu se budeme zabývat některé oblasti, které nejsou součástí prohlídka funkcí.
+Přečtěte si toto téma a další pár produktivitu tipy a triky pro ladicí program sady Visual Studio. Pokud se chcete podívat na základní funkce ladicího programu, podívejte se na téma [první pohled na ladicí program](../debugger/debugger-feature-tour.md). V tomto tématu se budeme zabývat některé oblasti, které nejsou součástí prohlídka funkcí.
 
 ## <a name="pin-data-tips"></a>PIN kód datových tipech
 
@@ -39,6 +39,10 @@ Ve většině jazyky podporované v aplikaci Visual Studio můžete upravit kód
 
 Další informace o použití funkce a omezení funkcí, naleznete v tématu [upravit a pokračovat](../debugger/edit-and-continue.md).
 
+## <a name="edit-xaml-code-and-continue-debugging"></a>Upravit kód XAML a pokračovat v ladění
+
+Chcete-li upravit kód XAML během relace ladění, [Přečtěte si téma zápis a ladění spouštění kódu XAML pomocí programu XAML Hot reloading](xaml-hot-reload.md).
+
 ## <a name="debug-issues-that-are-hard-to-reproduce"></a>Ladění problémů, které je těžké reprodukovat
 
 Pokud je obtížné nebo znovu vytvořit určitého stavu ve vaší aplikaci časově náročné, zvažte, zda může pomoci použití podmíněné zarážky. Můžete použít [podmíněné zarážky](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression) a filtrovat zarážky vyhnuli narušení funkčnosti do kódu aplikace, dokud aplikace přejde do požadovaného stavu (jako je například stav, ve kterém je proměnná ukládání chybnými daty). Můžete nastavit podmínky, pomocí výrazů, filtry, počty přístupů a tak dále.
@@ -53,9 +57,9 @@ Pokud je obtížné nebo znovu vytvořit určitého stavu ve vaší aplikaci ča
 
 3. Pokud vás zajímají další typ podmínky, vyberte **filtr** místo **podmíněný výraz** v **nastavení zarážek** dialogové okno a pak proveďte Tipy pro filtr.
 
-## <a name="configure-the-data-to-show-in-the-debugger"></a>Nakonfigurujte daná data zobrazit v ladicím programu
+## <a name="configure-the-data-to-show-in-the-debugger"></a>Konfigurace dat, která se mají zobrazit v ladicím programu
 
-Pro C#, Visual Basic a C++ (C++pouze kód vyhodnocovací), poznáte ladicího programu ukazují, pomocí informací [DebuggerDisplay](../debugger/using-the-debuggerdisplay-attribute.md) atribut. Pro C++ kódu, můžete provést stejný použití [vizualizace Natvis](create-custom-views-of-native-objects.md).
+Pro C#, Visual Basic a C++ (C++pouze kód/CLI) můžete sdělit ladicímu programu, které informace se mají zobrazit pomocí atributu [DebuggerDisplay](../debugger/using-the-debuggerdisplay-attribute.md) . Pro C++ kód můžete stejný postup provést pomocí [vizualizací Natvis](create-custom-views-of-native-objects.md).
 
 ## <a name="change-the-execution-flow"></a>Změna toku provádění
 
@@ -110,7 +114,7 @@ Vizualizér řetězce může vám pomůžou zjistit, jestli řetězec má chybn�
 
 ![Vizualizér řetězce JSON](../debugger/media/dbg-tips-string-visualizer-json.png "JSONStringVisualizer")
 
-U několika jiných typů jako je objekt DataSet a DataTable objekty, které se zobrazují v oknech ladicího programu můžete také otevřít integrované vizualizéru.
+Pro několik dalších typů, například datových sad a objektů DataTable, které se zobrazují v oknech ladicího programu, můžete také otevřít vestavěný Vizualizér.
 
 ## <a name="break-into-code-on-handled-exceptions"></a>Přepnutí do kódu na zpracování výjimek
 

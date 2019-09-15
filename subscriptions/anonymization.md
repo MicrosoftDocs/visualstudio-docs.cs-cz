@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/19/2019
 ms.topic: conceptual
 description: Přečtěte si, jak se data předplatitelů při ztrátě přístupu k předplatným nezdařila.
-ms.openlocfilehash: 8ba1a462083281c2228f2d6e25c42485ead8aa19
-ms.sourcegitcommit: 485881e6ba872c7b28a7b17ceaede845e5bea4fe
+ms.openlocfilehash: d15fce8d5e1a64066a42cea69b770f55c9607f06
+ms.sourcegitcommit: 02acadb912faced7eaffe27c2c19104bf0428bcd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68377959"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70936917"
 ---
 # <a name="anonymization-of-visual-studio-subscriber-information"></a>Anonymita informací předplatitele sady Visual Studio
 Když dojde k události, která blokuje použití předplatného předplatitele, jako je například vypršení platnosti předplatného nebo odstranění přihlašovacího účtu odběratele, osobní údaje uživatele, například jméno a přihlašovací účet, jsou v podstatě zakódované pro vykreslování. nepoužitelné.  Tento postup slouží k ochraně osobních údajů předplatitele.
@@ -36,5 +36,10 @@ O:  Ne.  Anonymita je v reakci na událost, která způsobuje ztrátu přístupu
 ### <a name="q--im-an-administrator-for-my-organizations-subscriptions--if-one-of-my-subscribers-information-is-anonymized-can-that-subscription-be-reassigned-to-another-user"></a>Č  Jsem správcem předplatných mojí organizace.  Pokud je jedna z informací o mém předplatiteli anonymá, může se předplatné znovu přiřadit jinému uživateli?
 O:  Ano – Pokud platnost předplatného nevypršela, je možné ji přiřadit jinému předplatiteli.
 
+### <a name="q-how-can-i-prevent-anonymization-caused-by-deleting-a-sign-in-email-address"></a>Č Jak lze zabránit tomu, aby se odstranila e-mailová adresa pro přihlášení?
+O:  Neexistují dva způsoby, jak zabránit problému:
+- Nasaďte jeden systém pro správu identit – buď MSA, nebo AAD, ale ne obojí.  
+- Přidružte identity AAD a MSA prostřednictvím tenanta. 
+
 ## <a name="next-steps"></a>Další kroky
-Přečtěte si, jak se vyhnout anonymitě pomocí [propojení MSA a identit AAD](/azure/active-directory/b2b/add-users-administrator).
+Přečtěte si, jak se vyhnout anonymitě pomocí [přidružení identit MSA a AAD](/azure/active-directory/b2b/add-users-administrator).

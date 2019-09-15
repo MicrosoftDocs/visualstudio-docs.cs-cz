@@ -1,7 +1,12 @@
 ---
 title: 'Krok 2: Vytvoření úlohy sčítání náhodných čísel'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: tutorial
+ms.prod: visual-studio-windows
+ms.technology: vs-ide-general
+ms.devlang:
+- csharp
+- vb
 dev_langs:
 - csharp
 - vb
@@ -11,18 +16,21 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d5b83edaec6b81c3a2c5699184c62dbd70d71913
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: d1eee0c161de486740b7576b184f869bffd7fb98
+ms.sourcegitcommit: 0e482cfc15f809b564c3de61646f29ecd7bfcba6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416874"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70987704"
 ---
 # <a name="step-2-create-a-random-addition-problem"></a>Krok 2: Vytvoření úlohy sčítání náhodných čísel
+
 V druhé části tohoto kurzu uděláte nenáročný kvíz přidáním matematických problémů, které jsou založeny na náhodných číslech. Také vytvoříte metodu s názvem `StartTheQuiz()` , která vyplní problémy a spustí časovač odpočítávání. Později v tomto kurzu přidáte problémy odčítání, násobení a dělení.
 
 > [!NOTE]
-> Toto téma je součástí série kurzů o základních konceptech kódování. Přehled tohoto kurzu najdete v [kurzu 2: Vytvoření časovaného matematického](../ide/tutorial-2-create-a-timed-math-quiz.md)kvízu
+> Toto téma je součástí série kurzů o základních konceptech kódování. 
+> - Přehled tohoto kurzu najdete v [kurzu 2: Vytvoření časovaného matematického](../ide/tutorial-2-create-a-timed-math-quiz.md)kvízu 
+> - Chcete-li stáhnout dokončenou verzi kódu, přečtěte si [ukázku kurzu dokončení matematického kvízu](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).
 
 ## <a name="to-create-a-random-addition-problem"></a>Postup vytvoření náhodného přidání problému
 
@@ -36,6 +44,9 @@ V druhé části tohoto kurzu uděláte nenáročný kvíz přidáním matematic
 
      [!code-csharp[VbExpressTutorial3Step2#1](../ide/codesnippet/CSharp/step-2-create-a-random-addition-problem_1.cs)]
      [!code-vb[VbExpressTutorial3Step2#1](../ide/codesnippet/VisualBasic/step-2-create-a-random-addition-problem_1.vb)]
+
+   > [!IMPORTANT]
+   > Pomocí ovládacího prvku programovací jazyk v pravém horním rohu této stránky můžete zobrazit fragment C# kódu nebo Visual Basic fragment kódu.<br><br>![Řízení programovacího jazyka pro Docs.Microsoft.com](../ide/media/docs-programming-language-control.png)
 
      Přidali jste do formuláře náhodný objekt a pojmenovali jste objekt **randomizer**.
 
@@ -60,7 +71,8 @@ V druhé části tohoto kurzu uděláte nenáročný kvíz přidáním matematic
 
      Všimněte si, že při zadání tečky (.) `randomizer` po v kódu se otevře okno IntelliSense a zobrazí se všechny metody náhodného objektu, které lze volat. Například IntelliSense Vypíše `Next()` metodu následujícím způsobem.
 
-     ![](../ide/media/express_randomwhite.png) Další metoda Next
+     ![Next – metoda](../ide/media/express_randomwhite.png)<br/>
+*Next – metoda*
 
      Když zadáte tečku po objektu, IntelliSense zobrazí seznam členů objektu, jako jsou vlastnosti, metody a události.
 
@@ -87,14 +99,15 @@ V druhé části tohoto kurzu uděláte nenáročný kvíz přidáním matematic
 
 8. Uložte kód, spusťte jej a pak klikněte na tlačítko **Start** .
 
-     Zobrazí se náhodný problém sčítání, jak ukazuje následující obrázek.
+     Zobrazí se náhodný problém sčítání, jak je znázorněno na následujícím snímku obrazovky.
 
-     ![Náhodné přidání](../ide/media/express_additionproblem.png) problému náhodného přidávání
+     ![Náhodný problém sčítání](../ide/media/express_additionproblem.png)<br/>
+*Náhodný problém sčítání*
 
      V dalším kroku kurzu přidáte součet.
 
 ## <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
 
-- Pokud chcete přejít na další krok kurzu, [přejděte na krok 3: Přidejte časovač](../ide/step-3-add-a-countdown-timer.md)odpočítávání.
+- Pokud chcete přejít na další krok kurzu,  **[přejděte na krok 3: Přidejte časovač](../ide/step-3-add-a-countdown-timer.md)** odpočítávání.
 
 - Pokud se chcete vrátit k předchozímu kroku kurzu [, přečtěte si téma krok 1: Vytvořte projekt a přidejte do svého formuláře](../ide/step-1-create-a-project-and-add-labels-to-your-form.md)popisky.

@@ -12,12 +12,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c0c7f3695be87f6cb4081b3aa02fc7a129869a4c
-ms.sourcegitcommit: 9c07ae6fb18204ea080c8248994a683fa12e5c82
+ms.openlocfilehash: 51bda0a85735bf2b1dae5044b9e4ab8e5384f8ae
+ms.sourcegitcommit: 0e482cfc15f809b564c3de61646f29ecd7bfcba6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293700"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70987876"
 ---
 # <a name="tutorial-2-create-a-timed-math-quiz"></a>Kurz 2: Vytvoření časovaného matematického kvízu
 
@@ -31,7 +31,7 @@ V tomto kurzu sestavíte kvíz, ve kterém musí příjemce kvízu odpovědět n
 
 - V kódu provádějte základní aritmetické operace.
 
-Po dokončení bude kvíz vypadat jako na následujícím obrázku, s výjimkou různých čísel:
+Po dokončení bude kvíz vypadat podobně jako na následujícím snímku obrazovky s výjimkou různých čísel:
 
 ![Matematický kvíz se čtyřmi problémy](../ide/media/express_finishedquiz.png)
 
@@ -40,7 +40,7 @@ Po dokončení bude kvíz vypadat jako na následujícím obrázku, s výjimkou 
 Pokud si chcete stáhnout dokončenou verzi kvízu, přečtěte si [ukázku kurz dokončení matematického kvízu](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).
 
 > [!NOTE]
-> Tento kurz se zabývá vizuálů C# i Visual Basic, takže se zaměřte na informace, které jsou specifické pro programovací jazyk, který používáte.
+> Tento kurz se zabývá C# i Visual Basic, takže se zaměřte na informace, které jsou specifické pro programovací jazyk, který používáte.
 
 ## <a name="related-topics"></a>Související témata
 

@@ -6,15 +6,15 @@ manager: lank
 ms.date: 07/29/2019
 ms.topic: conceptual
 description: Naučte se aktivovat výhody technické podpory, které jsou součástí vašeho předplatného sady Visual Studio.
-ms.openlocfilehash: 705ec75afc2ba870b5e596f63e27fae92fbedf58
-ms.sourcegitcommit: 5694c5236fa32ba7f5bc1236a853f725ec7557e9
+ms.openlocfilehash: 6474cf3322b878055053eaaf1f1943ebc546b206
+ms.sourcegitcommit: 02acadb912faced7eaffe27c2c19104bf0428bcd
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68681607"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70936909"
 ---
 # <a name="activate-and-use-the-technical-support-benefit-in-visual-studio-subscriptions"></a>Aktivace a používání výhod technické podpory v předplatných sady Visual Studio
-Výhoda technické podpory v rámci předplatných sady Visual Studio je určena pro řešení problémů s opravou chyb v neprodukčních prostředích pro produkty, které jsou stále ve fázi běžné podpory [životního cyklu podpory](https://support.microsoft.com/lifecycle/search). Visual Studio Enterprise standardní a roční cloudová předplatná obdrží čtyři incidenty, zatímco Visual Studio Professional standardní a roční předplatné cloudu obdrží dvě incidenty až po dobu 1 roku od aktivace výhod. Aktivace výhody musí nastat, když je předplatné aktuální.
+Výhoda technické podpory v rámci předplatných sady Visual Studio je určena pro řešení problémů s opravou chyb v **neprodukčních prostředích** pro produkty, které jsou stále ve fázi běžné podpory [životního cyklu podpory](https://support.microsoft.com/lifecycle/search). Visual Studio Enterprise standardní a roční cloudová předplatná obdrží čtyři incidenty, zatímco Visual Studio Professional standardní a roční předplatné cloudu obdrží dvě incidenty až po dobu 1 roku od aktivace výhod. Aktivace výhody musí nastat, když je předplatné aktuální.
 
 > [!NOTE]
 > Společnost Microsoft už nenabízí Visual Studio Professional roční předplatné a Visual Studio Enterprise roční předplatné v cloudových předplatných. Stávající prostředí pro zákazníky se nijak nemění a možnost obnovit, zvýšit, snížit nebo zrušit jejich odběry. Novým zákazníkům doporučujeme přejít na https://visualstudio.microsoft.com/vs/pricing/ a prozkoumat různé možnosti nákupu předplatných sady Visual Studio.
@@ -23,6 +23,13 @@ Výhoda technické podpory v rámci předplatných sady Visual Studio je určena
 > Ne všechna předplatná na dané úrovni jsou oprávněná přijímat incidenty podpory. Předplatná získaná prostřednictvím plného úvazku, NFR, MPN, MCT a dalších programů neobdrží incidenty podpory. Pokud vaše předplatné nemá nárok na získání incidentů technické podpory, dlaždice technické podpory se nezobrazí v dostupných výhodách.
 
 **Pokud chcete odeslat žádost o podporu pomocí výhody, musíte ji nejdřív aktivovat.  K dokončení aktivace použijte postup v následující části.**
+
+## <a name="supported-products"></a>Podporované produkty 
+Vývojářské nástroje, jako je Visual Studio IDE a Azure DevOps Server, obdrží jak hlavní, tak rozšířenou podporu prostřednictvím předplatných sady Visual Studio.
+
+Nevývojářské produkty (jako SQL, Windows, SharePoint) stažené z předplatných sady Visual Studio mají nárok jenom na hlavní podporu. Tyto produkty jsou licencované jenom pro vývojová prostředí pro návrh, vývoj, testování nebo předvedení aplikací. Tyto produkty nejsou licencované pro produkční prostředí.
+
+Popisy na úrovni produktu – Rozšiřte **nedostupné plány podpory** , pokud vidíte plán podpory nelze použít k podpoře zadaného produktu (kód: 8). Vaši smlouvu o podpoře nelze použít pro verzi produktu, kterou jste vybrali.
 
 ## <a name="how-to-activate-the-benefit"></a>Jak aktivovat výhody
 1. Přejděte na https://my.visualstudio.com/Benefits, přejděte dolů na část podpora a na dlaždici technická podpora klikněte na **chat (aktivovat**).
@@ -41,7 +48,7 @@ Výhoda technické podpory v rámci předplatných sady Visual Studio je určena
    > [!div class="mx-imgBorder"]
    > ![Výhody technické podpory najít ID předplatného](_img/vs-tech-support/vs-tech-support-subID-cropped.png)
 
-4. Po dokončení procesu obdržíte e-mail s **ID** a **ID** vašeho kontraktu, který použijete při vytváření incidentu podpory.  Poskytne vám taky pokyny k odeslání incidentů podpory pomocí nového přístupového ID a ID smlouvy. 
+4. Po dokončení procesu obdržíte e-mail s ID a **ID** vašeho **kontraktu** , který použijete při vytváření incidentu podpory.  Poskytne vám taky pokyny k odeslání incidentů podpory pomocí nového přístupového ID a ID smlouvy. 
 
 > [!NOTE]
 > Pokud chcete aktivovat svůj účet podpory v jiném jazyce než v angličtině, vyberte ze [seznamu](https://support.microsoft.com/help/14084/activate-support-contract)zemi.
@@ -102,7 +109,7 @@ Pokud chcete použít výhody technické podpory předplatného sady Visual Stud
 
 ## <a name="eligibility"></a>Vznik
 
-| Úroveň předplatného                                                 |     Kanály                                            | Výhodnosti                                                          | Mlčky?    |
+| Úroveň předplatného                                                 |     Kanály                                            | výhodnosti                                                          | Mlčky?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
 | Visual Studio Enterprise (Standard)   | VL, Azure, Retail, vybrané NFR<sup>1</sup> | 4 incidenty       |  Ano|
 | Visual Studio Professional (Standard) | VL, Azure, Retail, vybrané NFR<sup>2</sup>                                        | 2 incidenty                                                          |Ano         |

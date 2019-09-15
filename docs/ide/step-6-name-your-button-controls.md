@@ -16,12 +16,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fc843cceea35d196e3f9719a0690764611865600
-ms.sourcegitcommit: 4dfe098ac0df294aad63e6b384d6575980798ca3
+ms.openlocfilehash: b739e3a786d3765721b562538148f044416d38d4
+ms.sourcegitcommit: 0e482cfc15f809b564c3de61646f29ecd7bfcba6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70887976"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70987916"
 ---
 # <a name="step-6-name-your-button-controls"></a>Krok 6: Pojmenování tlačítkových ovládacích prvků
 
@@ -52,7 +52,7 @@ Názvy můžete ověřit tak, že v okně **vlastnosti** zvolíte rozevírací s
 Karta ***Form1.cs*** *s C# kódem*
 
     > [!NOTE]
-    > Karta Form1.cs může místo toho zobrazovat **showButton** jako **showButton** .
+    > Vaše Form1.cs karty Form1. vb může místo toho zobrazovat **showButton** jako **showButton** .
 
 1. Zaměřte se na tuto část kódu.
 
@@ -85,6 +85,9 @@ Karta ***Form1.cs*** *s C# kódem*
     [!code-csharp[VbExpressTutorial1Step6_#2](../ide/codesnippet/CSharp/step-6-name-your-button-controls_2.cs)]
     
     [!code-vb[VbExpressTutorial1Step6_#2](../ide/codesnippet/VisualBasic/step-6-name-your-button-controls_2.vb)]
+
+    > [!NOTE]
+    > Váš kód nemusí zobrazit obslužné rutiny událostí ve camelCase písmenech. 
 
     Pět metod, které jste přidali, se nazývají *obslužné rutiny událostí*, protože vaše aplikace je volá vždy, když dojde k události (jako je například uživatel výběr tlačítka nebo výběru pole).
 

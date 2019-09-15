@@ -1,7 +1,12 @@
 ---
 title: 'Krok 8: Přizpůsobení kvízu'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: tutorial
+ms.prod: visual-studio-windows
+ms.technology: vs-ide-general
+ms.devlang:
+- csharp
+- vb
 dev_langs:
 - csharp
 - vb
@@ -11,36 +16,43 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1868cd30cc41187ac995e71ee86d81dd0fb83d5a
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: b68d46ad5c585dca9fd48f39a2e47ac95f5a11c8
+ms.sourcegitcommit: 0e482cfc15f809b564c3de61646f29ecd7bfcba6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416460"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70987849"
 ---
 # <a name="step-8-customize-the-quiz"></a>Krok 8: Přizpůsobení kvízu
+
 V poslední části tutoriálu prozkoumáte několik způsobů, jak kvíz přizpůsobit a rozšíříte si již nabyté znalosti. Například se zamyslíte nad tím, jak program vytvoří problém náhodného dělení, jehož odpovědí není nikdy zlomek. Chcete-li získat další informace `timeLabel` , přepněte ovládací prvek na jinou barvu a dejte pomocnému kvízu.
+
+> [!NOTE]
+> Toto téma je součástí série kurzů o základních konceptech kódování. 
+> - Přehled tohoto kurzu najdete v [kurzu 2: Vytvoření časovaného matematického](../ide/tutorial-2-create-a-timed-math-quiz.md)kvízu 
+> - Chcete-li stáhnout dokončenou verzi kódu, přečtěte si [ukázku kurzu dokončení matematického kvízu](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).
 
 ## <a name="to-customize-the-quiz"></a>Přizpůsobení kvízu
 
-- Když v kvízu zůstane jenom pět sekund, otočte ovládací prvek **timeLabel** červen nastavením jeho vlastnosti **BackColor** .
+- Pokud je v kvízu ponecháno pouze pět sekund, zapněte ovládací prvek **timeLabel** Red nastavením jeho vlastnosti **BackColor** .
 
-```csharp
-timeLabel.BackColor = Color.Red;
-```
+  ```csharp
+  timeLabel.BackColor = Color.Red;
+  ```
 
-```vb
-timeLabel.BackColor = Color.Red
-```
+  ```vb
+  timeLabel.BackColor = Color.Red
+  ```
 
-Resetovat barvu při překročení kvízu.
+  > [!IMPORTANT]
+  > Pomocí ovládacího prvku programovací jazyk v pravém horním rohu této stránky můžete zobrazit fragment C# kódu nebo Visual Basic fragment kódu.<br><br>![Řízení programovacího jazyka pro Docs.Microsoft.com](../ide/media/docs-programming-language-control.png)
+
+  Resetovat barvu při překročení kvízu.
 
 - Dejte tomuto kvízu pokyn, aby pomohli přehrání zvuku při zadání správné odpovědi do <xref:System.Windows.Forms.NumericUpDown> ovládacího prvku. (Pro každou událost ovládacího prvku <xref:System.Windows.Forms.NumericUpDown.ValueChanged> je nutné napsat obslužnou rutinu události, která se vyvolá vždy, když účastník kvízu změní hodnotu ovládacího prvku.)
 
 ## <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
 
-- Pokud si chcete stáhnout dokončenou verzi kvízu, přečtěte si [ukázku kurz dokončení matematického kvízu](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).
-
-- Pokud chcete přejít k dalšímu kurzu, přečtěte si [kurz 3: Vytvořte porovnávací hru](../ide/tutorial-3-create-a-matching-game.md).
+- Pokud chcete přejít k dalšímu kurzu, přečtěte si  **[kurz 3: Vytvořte porovnávací hru](../ide/tutorial-3-create-a-matching-game.md).**
 
 - Pokud se chcete vrátit k předchozímu kroku kurzu [, přečtěte si krok 7: Přidejte problémy](../ide/step-7-add-multiplication-and-division-problems.md)násobení a dělení.

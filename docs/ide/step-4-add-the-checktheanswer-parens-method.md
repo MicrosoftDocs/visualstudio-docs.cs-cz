@@ -1,7 +1,12 @@
 ---
 title: 'Krok 4: Přidání metody CheckTheAnswer()'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: tutorial
+ms.prod: visual-studio-windows
+ms.technology: vs-ide-general
+ms.devlang:
+- csharp
+- vb
 dev_langs:
 - csharp
 - vb
@@ -11,20 +16,26 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c691b1db57fa1a00ad33441e36ff0f7f79716f11
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: 8c40150c3fbcd07abfad4a10155722750cbe4849
+ms.sourcegitcommit: 0e482cfc15f809b564c3de61646f29ecd7bfcba6
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416510"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70987699"
 ---
 # <a name="step-4-add-the-checktheanswer-method"></a>Krok 4: Přidání metody CheckTheAnswer()
+
 Ve čtvrté části tohoto kurzu napíšete metodu `CheckTheAnswer()`, která určuje, zda jsou odpovědi na matematické problémy správné. Toto téma je součástí série kurzů o základních konceptech kódování. Přehled tohoto kurzu najdete v [kurzu 2: Vytvoření časovaného matematického](../ide/tutorial-2-create-a-timed-math-quiz.md)kvízu
 
 > [!NOTE]
-> Pokud sledujete v Visual Basic, použijete `Function` místo obvyklého `Sub` klíčového slova klíčové slovo, protože tato metoda vrací hodnotu. Je to opravdu jednoduché: procedura Sub nevrací hodnotu, ale funkce.
+> Toto téma je součástí série kurzů o základních konceptech kódování. 
+> - Přehled tohoto kurzu najdete v [kurzu 2: Vytvoření časovaného matematického](../ide/tutorial-2-create-a-timed-math-quiz.md)kvízu 
+> - Chcete-li stáhnout dokončenou verzi kódu, přečtěte si [ukázku kurzu dokončení matematického kvízu](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).
 
 ## <a name="to-verify-whether-the-answers-are-correct"></a>Ověření, zda jsou odpovědi správné
+
+> [!NOTE]
+> Pokud sledujete v Visual Basic, použijete `Function` místo obvyklého `Sub` klíčového slova klíčové slovo, protože tato metoda vrací hodnotu. Je to opravdu jednoduché: procedura Sub nevrací hodnotu, ale funkce.
 
 1. `CheckTheAnswer()` Přidejte metodu.
 
@@ -32,6 +43,9 @@ Ve čtvrté části tohoto kurzu napíšete metodu `CheckTheAnswer()`, která ur
 
      [!code-vb[VbExpressTutorial3Step4#8](../ide/codesnippet/VisualBasic/step-4-add-the-checktheanswer-parens-method_1.vb)]
      [!code-csharp[VbExpressTutorial3Step4#8](../ide/codesnippet/CSharp/step-4-add-the-checktheanswer-parens-method_1.cs)]
+
+     > [!IMPORTANT]
+     > Pomocí ovládacího prvku programovací jazyk v pravém horním rohu této stránky můžete zobrazit fragment C# kódu nebo Visual Basic fragment kódu.<br><br>![Řízení programovacího jazyka pro Docs.Microsoft.com](../ide/media/docs-programming-language-control.png)
 
      V dalším kroku zkontrolujete odpověď tím, že aktualizujete kód v metodě obslužné rutiny <xref:System.Windows.Forms.Timer.Tick> události časovače k volání nové `CheckTheAnswer()` metody.
 
@@ -51,6 +65,6 @@ Ve čtvrté části tohoto kurzu napíšete metodu `CheckTheAnswer()`, která ur
 
 ## <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
 
-- Pokud chcete přejít na další krok kurzu, přečtěte si [krok 5: Přidejte obslužné rutiny událostí Enter pro ovládací](../ide/step-5-add-enter-event-handlers-for-the-numericupdown-controls.md)prvky NumericUpDown.
+- Pokud chcete přejít na další krok kurzu, přečtěte si  **[krok 5: Přidejte obslužné rutiny událostí Enter pro ovládací](../ide/step-5-add-enter-event-handlers-for-the-numericupdown-controls.md)prvky**NumericUpDown.
 
 - Pokud se chcete vrátit k předchozímu kroku kurzu [, podívejte se na krok 3: Přidejte časovač](../ide/step-3-add-a-countdown-timer.md)odpočítávání.
