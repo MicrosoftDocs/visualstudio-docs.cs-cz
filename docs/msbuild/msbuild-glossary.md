@@ -33,7 +33,7 @@ Obor sestavení popisuje objekt MSBuild, například globální vlastnost, kter�
 podřízený projekt\
 Viz *projekt, podřízená položka*.
 
-pomocné
+pomocné\
 Mnoho elementů MSBuild lze definovat podmíněně. To znamená, `Condition` že se atribut objeví v elementu. Obsah podmíněných elementů je ignorován, pokud není podmínka vyhodnocena `true`jako. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).
 
 definice, položka \
