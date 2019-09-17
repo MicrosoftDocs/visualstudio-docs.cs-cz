@@ -126,8 +126,12 @@
               href: edit-and-continue-visual-basic.md
             - name: Použití úprav v režimu pozastavení operace Upravit a pokračovat
               href: how-to-apply-edits-in-break-mode-with-edit-and-continue.md
-        - name: Psaní a ladění spuštěného kódu XAML
-          href: xaml-hot-reload.md
+        - name: Opětovné načítání XAML za provozu
+          items:
+            - name: Psaní a ladění spuštěného kódu XAML
+              href: xaml-hot-reload.md
+            - name: Řešení potíží s opětovným načítáním XAML za provozu
+              href: xaml-hot-reload-troubleshooting.md
         - name: 'Nepodporovaná operace Upravit a pokračovat v F#'
           href: edit-and-continue-not-supported-for-f-hash.md
     - name: Zobrazení dat ladicího programu
@@ -708,7 +712,7 @@
               href: assertion-failed-dialog-box.md
             - name: Nelze změnit hodnotu – dialogové okno
               href: cannot-change-value-dialog-box.md
-            - name: Ladicí program nemůže zobrazit zdrojový kód nebo zpětný překlad
+            - name: Ladicí program nemůže zobrazit zdrojový kód nebo zpětný překlad.
               href: debugger-cannot-display-source-code-or-disassembly.md
             - name: Službám ladicího programu začíná docházet paměť
               href: error-debugger-services-no-memory.md
