@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1b5591d9c05ee0449b9ff77729d73722c18e4d3a
-ms.sourcegitcommit: 0e482cfc15f809b564c3de61646f29ecd7bfcba6
+ms.openlocfilehash: aedc785a86966cf6425dfe35c5925efc9b78a509
+ms.sourcegitcommit: b02c40c1ba193e38b5ace14590a6d57590d3270f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70987654"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71012608"
 ---
 # <a name="write-and-debug-running-xaml-code-with-xaml-hot-reload-in-visual-studio"></a>Zápis a ladění spuštěného kódu XAML pomocí programu XAML Hot reloading v aplikaci Visual Studio
 
@@ -66,5 +66,5 @@ Při použití kódu XAML Hot reload může docházet k následujícím chybám.
 
 ## <a name="see-also"></a>Viz také:
 
-[Řešení potíží s opětovným](xaml-hot-reload-troubleshooting.md)
-načtením XAML Hot[reloading pro Xamarin. Forms](/xamarin/xamarin-forms/xaml/hot-reload)
+* [Řešení potíží s Hot reloading XAML](xaml-hot-reload-troubleshooting.md)
+* [Hot Reloades XAML pro Xamarin. Forms](/xamarin/xamarin-forms/xaml/hot-reload)
