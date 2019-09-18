@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 7aef839027639770e60292210aaddf998c97fce0
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: abd5075d04f26b9795695bfcd4fcd387e1a15d24
+ms.sourcegitcommit: 541a0556958201ad6626bc8638406ad02640f764
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926546"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71079584"
 ---
 # <a name="troubleshoot-code-coverage"></a>Řešení problémů s pokrytím kódu
 
@@ -56,6 +56,8 @@ Vysvětlení&mdash;nástroj pokrytí kódu vyžaduje, aby všechna sestavení m�
 *PDB* souboru je nutné vygenerovat ze stejného sestavení, jako *.dll* nebo *.exe* soubory.
 
 Rozlišení&mdash;Ujistěte se, že nastavení sestavení generuje *PDB* souboru. Pokud *PDB* nejsou aktualizovány soubory při sestavení projektu, otevřete vlastnosti projektu, vyberte **sestavení** zvolte **Upřesnit**a zkontrolujte **Ladicí informace modulu**.
+
+V C++ případě projektů zajistěte, aby generované soubory. pdb měly úplné informace o ladění. Otevřete vlastnosti projektu a ověřte, že**ladění** >  **linkeru** > **generovat informace o ladění** je nastaveno na **generovat ladicí informace optimalizované pro sdílení a publikování (/debug: Full)** .
 
 Pokud *PDB* a *.dll* nebo *.exe* jsou na různých místech, zkopírujte soubory *PDB* soubor do stejného adresáře. Je také možné nakonfigurovat nástroj pokrytí kódu pro hledání *PDB* soubory v jiném umístění. Další informace najdete v tématu [přizpůsobení analýzy pokrytí kódu](../test/customizing-code-coverage-analysis.md).
 

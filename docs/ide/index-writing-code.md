@@ -1,6 +1,6 @@
 ---
-title: Zápis a správu kódu
-description: Další informace o použití editoru kódu a další nástroje v sadě Visual Studio k psaní, navigace, spravovat a vylepšení vašeho kódu.
+title: Zápis a Správa kódu
+description: Naučte se, jak pomocí editoru kódu a dalších nástrojů v aplikaci Visual Studio zapisovat, Procházet, spravovat a zdokonalovat kód.
 ms.date: 01/01/2018
 layout: LandingPage
 ms.topic: landing-page
@@ -8,16 +8,16 @@ author: gewarren
 ms.author: gewarren
 ms.workload:
 - multiple
-ms.openlocfilehash: d18ca688c1eac02fc2b24c3f8cb0f9551e4939ae
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 49c8ac683c83753b75c20e15ca9aa12845135905
+ms.sourcegitcommit: 6993bcb0d2b0067b1b7b7899bfba52c31c70b7e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62430292"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095230"
 ---
-# <a name="write-and-manage-code-using-visual-studio"></a>Psaní a správa kódu pomocí sady Visual Studio
+# <a name="write-and-manage-code-using-visual-studio"></a>Zápis a Správa kódu pomocí sady Visual Studio
 
-Další informace o použití editoru kódu a další nástroje v sadě Visual Studio k psaní, navigace, spravovat a vylepšení vašeho kódu.
+Naučte se, jak pomocí editoru kódu a dalších nástrojů v aplikaci Visual Studio zapisovat, Procházet, spravovat a zdokonalovat kód.
 
 <!-- markdownlint-disable MD033 -->
 
@@ -69,7 +69,7 @@ Další informace o použití editoru kódu a další nástroje v sadě Visual S
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Vyhledání kódu</h3>
+                        <h3>Navigace v kódu</h3>
                     </div>
                 </div>
             </div>
@@ -105,7 +105,7 @@ Další informace o použití editoru kódu a další nástroje v sadě Visual S
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Pomocí sady Visual Studio bez projektů nebo řešení</h3>
+                        <h3>Použití sady Visual Studio bez projektů nebo řešení</h3>
                     </div>
                 </div>
             </div>
@@ -123,7 +123,7 @@ Další informace o použití editoru kódu a další nástroje v sadě Visual S
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Spravovat kód pomocí Gitu ve Visual Studio</h3>
+                        <h3>Správa kódu pomocí Gitu se sadou Visual Studio</h3>
                     </div>
                 </div>
             </div>
@@ -132,9 +132,9 @@ Další informace o použití editoru kódu a další nástroje v sadě Visual S
     </li>
 </ul>
 
-## <a name="get-started-with-programming-languages-in-visual-studio"></a>Začínáme s programovacích jazyků v sadě Visual Studio
+## <a name="get-started-with-programming-languages-in-visual-studio"></a>Začínáme s programovacími jazyky v aplikaci Visual Studio
 
-Vytvoření první aplikace v sadě Visual Studio.
+Vytvořte svou první aplikaci v aplikaci Visual Studio.
 
 <ul class="panelContent cardsFTitle">
     <li>
@@ -148,7 +148,7 @@ Vytvoření první aplikace v sadě Visual Studio.
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Začínáme s C# a ASP.NET Core v sadě Visual Studio</h3>
+                        <h3>Začínáme s C# a ASP.NET Core v aplikaci Visual Studio</h3>
                     </div>
                 </div>
             </div>
@@ -156,7 +156,7 @@ Vytvoření první aplikace v sadě Visual Studio.
         </a>
     </li>
     <li>
-        <a href="/visualstudio/ide/getting-started-with-cpp-in-visual-studio">
+        <a href="/cpp/get-started/tutorial-console-cpp">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -166,7 +166,7 @@ Vytvoření první aplikace v sadě Visual Studio.
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Vytvoření konzolové aplikace jazyka C++ v sadě Visual Studio</h3>
+                        <h3>Vytvoření C++ konzolové aplikace v aplikaci Visual Studio</h3>
                     </div>
                 </div>
             </div>
@@ -184,7 +184,7 @@ Vytvoření první aplikace v sadě Visual Studio.
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Začněte používat Python v sadě Visual Studio</h3>
+                        <h3>Začínáme s Pythonem v aplikaci Visual Studio</h3>
                     </div>
                 </div>
             </div>
@@ -238,7 +238,7 @@ Vytvoření první aplikace v sadě Visual Studio.
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Začínáme s nástroji R pro Visual Studio</h3>
+                        <h3>Začínáme s Nástroje R pro Visual Studio</h3>
                     </div>
                 </div>
             </div>
@@ -256,7 +256,7 @@ Vytvoření první aplikace v sadě Visual Studio.
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Vytvoření aplikace pro UPW v jazyce C#</h3>
+                        <h3>Vytvoření aplikace pro UWP vC#</h3>
                     </div>
                 </div>
             </div>
@@ -274,7 +274,7 @@ Vytvoření první aplikace v sadě Visual Studio.
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Vytvoření konzolové aplikace .NET Core v jazyce C#</h3>
+                        <h3>Vytvoření konzolové aplikace .NET Core vC#</h3>
                     </div>
                 </div>
             </div>
@@ -292,7 +292,7 @@ Vytvoření první aplikace v sadě Visual Studio.
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Vytvoření webové aplikace Azure v sadě Visual Studio</h3>
+                        <h3>Vytvoření webové aplikace Azure v aplikaci Visual Studio</h3>
                     </div>
                 </div>
             </div>

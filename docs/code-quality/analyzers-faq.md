@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ae41d9ac30567a32780af422c3af1e2b0d6a63ae
-ms.sourcegitcommit: b761a4a457646d04adfda510c8837734ee4d8f17
+ms.openlocfilehash: 26e48664c40db018df60f2b6d600fab0767a7b72
+ms.sourcegitcommit: 2db01751deeee7b2bdb1db25419ea6706e6fcdf8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929762"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71062167"
 ---
 # <a name="code-analysis-faq"></a>Nejčastější dotazy k analýze kódu
 
@@ -24,15 +24,15 @@ Tato stránka obsahuje odpovědi na některé nejčastější dotazy týkající
 
 **OTÁZKA**: Mám použít analýzu kódu nebo EditorConfig pro kontrolu stylu kódu?
 
-**A**: Analýza kódu a soubory. editorconfig fungují ručně. Pokud definujete styly kódu [v souboru. editorconfig](../ide/editorconfig-code-style-settings-reference.md) nebo na stránce [Možnosti textového editoru](../ide/code-styles-and-code-cleanup.md) , budete ve skutečnosti konfigurovat analyzátory kódu, které jsou součástí sady Visual Studio. Soubory EditorConfig lze také použít ke konfiguraci některých balíčků analyzátoru NuGet, jako jsou například [analyzátory FxCop](configure-fxcop-analyzers.md).
+**A**: Analýza kódu a soubory EditorConfig fungují ručně. Při definování stylů kódu [v souboru EditorConfig](../ide/editorconfig-code-style-settings-reference.md) nebo na stránce [Možnosti textového editoru](../ide/code-styles-and-code-cleanup.md) ve skutečnosti konfigurujete analyzátory kódu, které jsou součástí sady Visual Studio. Soubory EditorConfig lze také použít ke konfiguraci některých balíčků analyzátoru NuGet, jako jsou například [analyzátory FxCop](configure-fxcop-analyzers.md).
 
 ## <a name="editorconfig-versus-rule-sets"></a>EditorConfig oproti sadám pravidel
 
-**OTÁZKA**: Mám analyzátory nakonfigurovat pomocí sady pravidel nebo souboru. editorconfig?
+**OTÁZKA**: Mám analyzátory nakonfigurovat pomocí sady pravidel nebo souboru EditorConfig?
 
-**A**: Sady pravidel a soubory. editorconfig se vzájemně vylučují, jak je nakonfigurovat analyzátory. Můžou existovat společně. [Sady pravidel](analyzer-rule-sets.md) umožňují povolit a zakázat pravidla a nastavit jejich závažnost. Soubory EditorConfig nabízejí další způsoby konfigurace pravidel. Pro analyzátory FxCop vám soubory. editorconfig umožňují [definovat, které typy kódu se mají analyzovat](fxcop-analyzer-options.md). Pro analyzátory, které jsou součástí sady Visual Studio, umožňují soubory. editorconfig [definovat preferované styly kódu](../ide/editorconfig-code-style-settings-reference.md) pro základ kódu.
+**A**: Sady pravidel a soubory EditorConfig můžou existovat společně a dají se použít ke konfiguraci analyzátorů. [Sady pravidel](analyzer-rule-sets.md) umožňují povolit a zakázat pravidla a nastavit jejich závažnost. Soubory EditorConfig nabízejí další způsoby konfigurace pravidel. Pro analyzátory FxCop vám soubory EditorConfig umožňují [definovat, které typy kódu se mají analyzovat](fxcop-analyzer-options.md). Pro analyzátory ve stylu kódu, které jsou součástí sady Visual Studio, EditorConfig soubory umožňují [definovat preferované styly kódu](../ide/editorconfig-code-style-settings-reference.md) pro základ kódu.
 
-Kromě sad pravidel a souborů. editorconfig jsou některé analyzátory nakonfigurovány pomocí textových souborů označených jako [Další soubory](../ide/build-actions.md#build-action-values) pro kompilátory C# a VB.
+Kromě sad pravidel a souborů EditorConfig jsou některé analyzátory nakonfigurovány pomocí textových souborů označených jako [Další soubory](../ide/build-actions.md#build-action-values) pro kompilátory C# a VB.
 
 > [!NOTE]
 > Soubory EditorConfig se nedají použít ke konfiguraci analýzy starší verze, zatímco sady pravidel můžou.

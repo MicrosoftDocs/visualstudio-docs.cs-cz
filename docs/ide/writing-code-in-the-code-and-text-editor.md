@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: aa2c9a4585947fb7d2e21d1eea4e6613cdd33964
-ms.sourcegitcommit: 614d5b99576ea27a41957cd94062dc95cbd29c1c
+ms.openlocfilehash: 3d2540b0c725860ea9a21f32d1d01074cf39380f
+ms.sourcegitcommit: 6993bcb0d2b0067b1b7b7899bfba52c31c70b7e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65531660"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095287"
 ---
 # <a name="features-of-the-code-editor"></a>Funkce editoru kódu
 
@@ -56,15 +56,15 @@ Najdete řadu pokročilých funkcí na **upravit** > **Upřesnit** nabídka na p
 |Výběr formátu|Nastaví správné odsazení řádků kódu a přesune složené závorky do samostatných řádků ve výběru.|
 |Vybrané řádky posunout tabulátorem|Změny úvodních mezer na karty, kde je to vhodné.|
 |Zrušit posunutí tabulátorem u vybraných řádků|Změny úvodních karet na mezery. Pokud chcete převést všechny mezery v souboru na tabulátory (nebo všechny tabulátory na mezery), můžete použít `Edit.ConvertSpacesToTabs` a `Edit.ConvertTabsToSpaces` příkazy. Tyto příkazy se nezobrazují v nabídkách aplikace Visual Studio, ale můžete je z volat **rychlý přístup** okna nebo příkazové okno.|
-|Převést na velká písmena|Změní všechny znaky ve výběru na velká písmena, nebo pokud není nic vybráno, znak na pozici kurzoru na velká písmena se změní. Zástupce: **Ctrl**+**Shift**+**U**.|
-|Nastavit jako malé písmeno|Změní všechny znaky ve výběr na malá písmena, nebo pokud není nic vybráno, znak na pozici kurzoru změní na malá písmena. Zástupce: **Ctrl**+**U**.|
-|Přesunout vybrané řádky nahoru|Posune vybraný řádek jeden řádek nahoru. Zástupce: **ALT**+**šipka nahoru**.|
-|Přesunout vybrané řádky dolů|Posune vybraný řádek jeden řádek dolů. Zástupce: **ALT**+**šipka dolů**.|
-|Odstranit vodorovné prázdné znaky|Odstraní tabulátory nebo mezery na konci aktuálního řádku. Zástupce: **Ctrl**+**K**, **Ctrl**+ **\\**|
+|Převést na velká písmena|Změní všechny znaky ve výběru na velká písmena, nebo pokud není nic vybráno, znak na pozici kurzoru na velká písmena se změní. Shortcut **CTRL**+ **+ SHIFT**U+|
+|Nastavit jako malé písmeno|Změní všechny znaky ve výběr na malá písmena, nebo pokud není nic vybráno, znak na pozici kurzoru změní na malá písmena. ShortcutCTRL+**U**.|
+|Přesunout vybrané řádky nahoru|Posune vybraný řádek jeden řádek nahoru. Shortcut+**Šipka nahoru**ALT.|
+|Přesunout vybrané řádky dolů|Posune vybraný řádek jeden řádek dolů. Shortcut+**Šipka dolů**ALT.|
+|Odstranit vodorovné prázdné znaky|Odstraní tabulátory nebo mezery na konci aktuálního řádku. Shortcut **Ctrl**+**K**, **Ctrl**+ **\\**|
 |Zobrazit prázdné znaky|Zobrazí mezery jako zvýšené tečky a karty jako šipky. Konec souboru se zobrazí jako obdélníkový glyf. Pokud **nástroje** > **možnosti** > **textový Editor** > **všechny jazyky**  >  **Zalamování** > **zobrazit viditelné piktogramy pro zalamování řádků** je vybráno, že zobrazí se také piktogram.|
 |Zalamování řádků|Způsobí, že všechny řádky v dokumentu mají být zobrazeny v okně kódu. Zalamování slov můžete vypnout nebo zapnout v **všechny jazyky textového editoru** nastavení (**nástroje** > **možnosti** > **textový Editor**   >  **Všechny jazyky**).|
-|Zakomentovat výběr|Přidá znaky komentáře do výběru nebo aktuálního řádku. Zástupce: **Ctrl**+**K**, **Ctrl**+**C**|
-|Odkomentovat výběr|Odebere znaky komentáře z výběru nebo aktuálního řádku. Zástupce: **Ctrl**+**K**, **Ctrl**+**U**|
+|Zakomentovat výběr|Přidá znaky komentáře do výběru nebo aktuálního řádku. Shortcut **Ctrl**+**K**, **Ctrl**+**C**|
+|Odkomentovat výběr|Odebere znaky komentáře z výběru nebo aktuálního řádku. Shortcut **Ctrl**+**K**, **Ctrl**+**U**|
 |Zvětšit odsazení řádku|Přidá kartu (nebo ekvivalentní mezery) do vybraných řádků nebo aktuálního řádku.|
 |Zmenšit odsazení řádku|Odebere kartu (nebo ekvivalentní mezery) z vybraných řádků nebo aktuálního řádku.|
 |Vybrat značku|V dokumentu, který obsahuje značky (například XML nebo HTML) vybere značku.|
@@ -76,7 +76,7 @@ Můžete pohybovat v editoru kódu v několika různými způsoby, včetně zpě
 
 ## <a name="find-references-in-your-code-base"></a>Hledání odkazů v vašeho základu kódu
 
-Chcete-li zjistit, kde jsou prvky konkrétního kódu odkazovat v rámci vašeho základu kódu, můžete použít **najít všechny odkazy** příkaz nebo stisknutím klávesy **Shift**+**F12**. Také, když kliknete na typ nebo člen, **zvýraznění odkazů** funkce automaticky zvýrazní všechny odkazy na tento typ nebo člen. Další informace najdete v tématu [najít odkazy ve vašem kódu](finding-references.md).
+Chcete-li zjistit, kde se v rámci základu kódu odkazuje na konkrétní prvky kódu, můžete použít příkaz **Najít všechny odkazy** nebo stisknout **SHIFT**+**F12**. Také, když kliknete na typ nebo člen, **zvýraznění odkazů** funkce automaticky zvýrazní všechny odkazy na tento typ nebo člen. Další informace najdete v tématu [najít odkazy ve vašem kódu](finding-references.md).
 
 ## <a name="customize-the-editor"></a>Přizpůsobení editoru
 
@@ -90,6 +90,6 @@ Možnosti editoru jazyka JavaScript specifické najdete v tématu [možnosti edi
 
 - [Editor zdrojového kódu (Visual Studio for Mac)](/visualstudio/mac/source-editor)
 - [Integrované vývojové prostředí sady Visual Studio](../get-started/visual-studio-ide.md)
-- [Začínáme s C++ v sadě Visual Studio](../ide/getting-started-with-cpp-in-visual-studio.md)
+- [Začínáme s C++ v sadě Visual Studio](/cpp/get-started/tutorial-console-cpp)
 - [Začínáme s C# a technologie ASP.NET v sadě Visual Studio](../get-started/csharp/tutorial-aspnet-core.md)
 - [Začněte používat Python v sadě Visual Studio](../ide/quickstart-python.md)

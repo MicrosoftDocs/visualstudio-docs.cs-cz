@@ -1,19 +1,24 @@
 ---
 title: 'Krok 9: Vyzkoušení dalších funkcí'
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: tutorial
+ms.prod: visual-studio-windows
+ms.technology: vs-ide-general
+ms.devlang:
+- csharp
+- vb
 ms.assetid: 1b0c5c80-e5a6-4f69-a4a4-0e89a82d4de0
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 24637ba56c3dfa2d9ce9c7e70452bcdc6788b51b
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 6745b320d7f8c2d4d0434bf2410dc2ab37a288aa
+ms.sourcegitcommit: 541a0556958201ad6626bc8638406ad02640f764
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68918718"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71079341"
 ---
 # <a name="step-9-try-other-features"></a>Krok 9: Vyzkoušení dalších funkcí
 Chcete-li získat další informace, zkuste změnit ikony a barvy, přidat časovač hry a zvuky. Chcete-li, aby hra byla náročnější, zkuste zvětšit hrací plochu a upravte časovač.

@@ -11,12 +11,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: b6741b40925f5d9914152d396be4686d166bf222
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 0f83304daa0e86bb9d4f999262f827615923fe4d
+ms.sourcegitcommit: 6993bcb0d2b0067b1b7b7899bfba52c31c70b7e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180198"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095355"
 ---
 # <a name="learn-to-use-the-code-editor"></a>Zjistěte, jak pomocí editoru kódu
 
@@ -36,7 +36,7 @@ V tomto úvodu během 10 minut do editoru kódu v sadě Visual Studio přidáme 
 
 ::: moniker-end
 
-Tento článek předpokládá, že jste již obeznámeni s programovacím jazyce. Pokud si nejste, doporučujeme nejdřív podívat na jeden z programovací šablon rychlý start, jako je například vytvoření webové aplikace s využitím [Python](../ide/quickstart-python.md) nebo [jazyka C#](../get-started/csharp/tutorial-aspnet-core.md), nebo vytvořte aplikaci konzoly pomocí [jazyka Visual Basic](../ide/quickstart-visual-basic-console.md) nebo [C++](../ide/getting-started-with-cpp-in-visual-studio.md).
+Tento článek předpokládá, že jste již obeznámeni s programovacím jazyce. Pokud si nejste, doporučujeme nejdřív podívat na jeden z programovací šablon rychlý start, jako je například vytvoření webové aplikace s využitím [Python](../ide/quickstart-python.md) nebo [jazyka C#](../get-started/csharp/tutorial-aspnet-core.md), nebo vytvořte aplikaci konzoly pomocí [jazyka Visual Basic](../ide/quickstart-visual-basic-console.md) nebo [C++](/cpp/get-started/tutorial-console-cpp).
 
 ## <a name="create-a-new-code-file"></a>Vytvořte nový soubor kódu
 
@@ -66,7 +66,7 @@ Začněte tím, že vytváří se nový soubor a přidat nějaký kód do něj.
 
 Visual Studio poskytuje užitečné *fragmenty kódu* , že vám pomůže rychle a snadno generovat běžně používá bloky kódu. [Fragmenty kódu](../ide/code-snippets.md) jsou k dispozici pro různé programovací jazyky, včetně C#, Visual Basic a C++. Přidejme jazyka C# `void Main` fragment kódu do souboru.
 
-1. Umístěte kurzor hned nad poslední pravou závorku do souboru a zadejte znaky `svm`. C# (`svm` zkratka`static void Main`; Metoda [Main ()](/dotnet/csharp/programming-guide/main-and-command-args/) je vstupním bodem pro aplikace.)
+1. Umístěte kurzor hned nad poslední pravou `svm`závorku do souboru a zadejte znaky. C# (`svm` zkratka`static void Main`; Metoda [Main ()](/dotnet/csharp/programming-guide/main-and-command-args/) je vstupním bodem pro aplikace.)
 
    Automaticky se zobrazí dialogové okno s informacemi o `svm` fragmentu kódu.
 

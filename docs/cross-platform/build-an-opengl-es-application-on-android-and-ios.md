@@ -1,7 +1,7 @@
 ---
 title: Sestavení aplikace OpenGL ES v Androidu a iOS | Microsoft Docs
 ms.custom: ''
-ms.date: 05/16/2019
+ms.date: 09/17/2019
 ms.technology: vs-ide-mobile
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +12,12 @@ ms.author: corob
 manager: jillfra
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: b235576f21b63a7be4170f36abf58bed9fab9df3
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 259092668c336a90758a669efdc4b154b2097cab
+ms.sourcegitcommit: 541a0556958201ad6626bc8638406ad02640f764
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68923841"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71079271"
 ---
 # <a name="build-an-opengl-es-application-on-android-and-ios"></a>Sestavení aplikace OpenGL ES v Androidu a iOS
 
@@ -25,17 +25,21 @@ Můžete vytvářet řešení a projekty sady Visual Studio pro aplikace pro iOS
 
 ## <a name="requirements"></a>Požadavky
 
-Než budete moct vytvořit aplikaci OpenGL ES pro iOS a Android, ujistěte se, že jste splnili všechny požadavky na systém. Pokud jste to ještě neudělali, nainstalujte si C++ vývoj pro mobilní zařízení pomocí úlohy v instalační program pro Visual Studio. Při sestavování pro iOS zahrňte C++ volitelné vývojové nástroje pro iOS. Pro sestavení pro Android Nainstalujte nástroje pro C++ vývoj pro Android a požadované nástroje třetích stran: Android NDK, Apache Ant, Google Android Emulator a Intel Hardware Accelerated Execution Manager. Dále nakonfigurujte Intel modul HAXM a Android Emulator pro spuštění ve vašem systému. Další informace a podrobné pokyny najdete v tématu [instalace vizuálu C++ pro vývoj mobilních aplikací pro různé platformy](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md). K sestavení a otestování aplikace pro iOS budete potřebovat počítač Mac, který je nastavený podle pokynů k instalaci. Další informace o tom, jak nastavit pro vývoj pro iOS, najdete v tématu [instalace a konfigurace nástrojů pro sestavení pomocí iOS](../cross-platform/install-and-configure-tools-to-build-using-ios.md).
+Než budete moct vytvořit aplikaci OpenGL ES pro iOS a Android, ujistěte se, že jste splnili všechny požadavky na systém. Pokud jste to ještě neudělali, nainstalujte si C++ vývoj pro mobilní zařízení pomocí úlohy v instalační program pro Visual Studio. Při sestavování pro iOS zahrňte C++ volitelné vývojové nástroje pro iOS. Pro sestavení pro Android Nainstalujte nástroje pro C++ vývoj pro Android a požadované nástroje třetích stran: Android NDK, Apache Ant a Google Android Emulator. Pro lepší výkon emulátoru na platformách Intel doporučujeme také nainstalovat Intel Hardware Accelerated Execution Manager (modul HAXM). Dále nakonfigurujte Intel modul HAXM a Android Emulator pro spuštění ve vašem systému. Další informace a podrobné pokyny najdete v tématu [instalace vizuálu C++ pro vývoj mobilních aplikací pro různé platformy](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md).
+
+K sestavení a otestování aplikace pro iOS budete potřebovat počítač Mac, který je nastavený podle pokynů k instalaci. Další informace o tom, jak nastavit pro vývoj pro iOS, najdete v tématu [instalace a konfigurace nástrojů pro sestavení pomocí iOS](../cross-platform/install-and-configure-tools-to-build-using-ios.md).
 
 ## <a name="create-a-new-opengles-application-project"></a>Vytvoření nového projektu aplikace OpenGL
 
-V tomto kurzu nejprve vytvoříte nový projekt aplikace OpenGL ES a potom sestavíte a spustíte výchozí aplikaci v emulátoru sady Visual Studio pro Android. V dalším kroku sestavíte aplikaci pro iOS a spustíte ji na zařízení s iOS.
+V tomto kurzu nejprve vytvoříte nový projekt aplikace OpenGL ES. a potom v emulátoru sady Visual Studio pro Android Sestavte a spusťte výchozí aplikaci. V dalším kroku sestavíte aplikaci pro iOS a spustíte ji na zařízení s iOS.
 
-1. V sadě Visual Studio, zvolte **souboru** > **nový** > **projektu**.
+::: moniker range="vs-2017"
 
-1. V dialogovém okně **Nový projekt** v části **šablony**zvolte možnost **vizuální C++**   > pro **různé platformy**a pak zvolte šablonu **aplikace OpenGL (Android, iOS)** .
+1. V aplikaci Visual Studio vyberte **soubor** > **Nový** > **projekt**.
 
-1. Přiřaďte aplikaci název jako `MyOpenGLESApp`a pak zvolte **OK**.
+1. V dialogovém okně **Nový projekt** v části **šablony**zvolte možnost **vizuální C++**  > pro **různé platformy**a pak zvolte šablonu **aplikace OpenGL (Android, iOS)** .
+
+1. Dejte aplikaci název jako *MyOpenGLESApp*a pak zvolte **OK**.
 
    ![Nový projekt aplikace OpenGL](../cross-platform/media/cppmdd_opengles_newproj.PNG "CPPMDD_OpenGLES_NewProj")
 
@@ -43,7 +47,23 @@ V tomto kurzu nejprve vytvoříte nový projekt aplikace OpenGL ES a potom sesta
 
    ![MyOpenGLESApp v Průzkumník řešení](../cross-platform/media/cppmdd_opengles_solexpl.PNG "CPPMDD_OpenGLES_SolExpl")
 
-   Nové řešení aplikace OpenGL ES zahrnuje tři projekty knihovny a dva aplikační projekty. Složka knihovny obsahuje projekt sdíleného kódu a dva projekty specifické pro platformu, které odkazují na sdílený kód:
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+1. V aplikaci Visual Studio vyberte **soubor** > **Nový** > **projekt**.
+
+1. V dialogovém okně **vytvořit nový projekt** vyberte šablonu **aplikace OpenGL (Android, iOS)** a pak klikněte na tlačítko **Další**.
+
+1. V dialogovém okně **Konfigurovat nový projekt** zadejte název jako *MyOpenGLESApp* do pole **název projektu**a klikněte na tlačítko **vytvořit**.
+
+   Visual Studio vytvoří nové řešení a otevře Průzkumník řešení.
+
+   ![MyOpenGLESApp v Průzkumník řešení](../cross-platform/media/cppmdd_opengles_solexpl.PNG "CPPMDD_OpenGLES_SolExpl")
+
+::: moniker-end
+
+Nové řešení aplikace OpenGL ES zahrnuje tři projekty knihovny a dva aplikační projekty. Složka knihovny obsahuje projekt sdíleného kódu a dva projekty specifické pro platformu, které odkazují na sdílený kód:
 
 - `MyOpenGLESApp.Android.NativeActivity`obsahuje odkazy a připevnění kódu, který implementuje vaši aplikaci jako nativní aktivitu v Androidu. Vstupní body z kódu připevňování jsou implementovány v *Main. cpp*, který obsahuje společný sdílený kód v `MyOpenGLESApp.Shared`. Předkompilované hlavičky jsou v souboru *PCH. h*. Tento projekt nativní aplikace aktivity je zkompilován do sdíleného souboru knihovny ( *. so*), který je vybrán v `MyOpenGLESApp.Android.Packaging` rámci projektu.
 
@@ -153,7 +173,7 @@ Pokud chcete nasadit aplikaci pro iOS do zařízení se systémem iOS, musíte t
 
    V okně výstup se zobrazí výstup procesu sestavení pro statickou knihovnu iOS a aplikaci pro iOS. Na Macu se v okně terminálu, na kterém běží vzdálený agent, zobrazuje příkaz a aktivitu přenosu souborů.
 
-   Na počítači Mac se může zobrazit výzva, abyste povolili kodesign pro přístup k řetězci klíčů. Pokračujte výběrem možnosti pokračovat.
+   Na počítači Mac se může zobrazit výzva, abyste povolili kodesign pro přístup k řetězci klíčů. Pokračujte **výběrem možnosti** pokračovat.
 
 1. Vyberte zařízení s iOS na panelu nástrojů a spusťte aplikaci na svém zařízení připojeném k počítači Mac. Pokud se aplikace nespustí, ověřte, že zařízení uděluje oprávnění k tomu, aby se vaše nasazená aplikace spustila na zařízení. Toto oprávnění můžete nastavit tak, že v zařízení nasadíte na **Nastavení** > **Obecné** > **Správa zařízení** . Vyberte svůj účet aplikace pro vývojáře, důvěřovat účtu a ověřte aplikaci. Zkuste znovu spustit aplikaci ze sady Visual Studio.
 

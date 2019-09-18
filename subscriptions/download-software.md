@@ -6,18 +6,18 @@ manager: lank
 ms.date: 07/18/2019
 ms.topic: conceptual
 description: Naučte se vyhledávat a stahovat tituly softwaru Microsoftu v předplatných sady Visual Studio.
-ms.openlocfilehash: 1386add84ef86b5bf4c255d176b86d5fd9f294f6
-ms.sourcegitcommit: 485881e6ba872c7b28a7b17ceaede845e5bea4fe
+ms.openlocfilehash: 003d27e1c8344c6c4cb22a69e06efc94238bb622
+ms.sourcegitcommit: 6993bcb0d2b0067b1b7b7899bfba52c31c70b7e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68377896"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095400"
 ---
 # <a name="downloading-software-titles-in-visual-studio-subscriptions"></a>Stažení softwarových titulů v předplatných sady Visual Studio
 V závislosti na tom, jaké Předplatné sady Visual Studio máte, může být k dispozici celá řada softwarových titulů Microsoftu.  V tomto článku se dozvíte, jak vyhledat a stáhnout software, který potřebujete k tomu, abyste mohli využít své předplatné na maximum. 
 
 > [!NOTE]
-> Na stránce [ke stažení](https://my.visualstudio.com/downloads/featured) se zobrazí pouze soubory ke stažení, které jsou součástí vašeho předplatného.  Pokud máte více než jedno členství v předplatném nebo programu, zobrazí se pro **nejvyšší předplatné** , které jste si podržíte, a to i v případě, že aktuálně zobrazujete jiné předplatné.  Pokud máte například předplatné Visual Studio Professional a předplatné Visual Studio Test Professional, které je přidruženo ke stejnému přihlašovacímu ID, budou zobrazené položky ke stažení zahrnuty v předplatném na úrovni Professional, i když jste aktuálně si prohlížíte výhody Dev Essentials.
+> Na stránce [ke stažení](https://my.visualstudio.com/downloads/featured) se zobrazí pouze soubory ke stažení, které jsou součástí vašeho předplatného.  Pokud máte více než jedno členství v předplatném nebo programu, zobrazí se pro **nejvyšší předplatné** , které jste si podržíte, a to i v případě, že aktuálně zobrazujete jiné předplatné.  Pokud máte například předplatné Visual Studio Enterprise a předplatné Visual Studio Professional, které je přidruženo ke stejnému přihlašovacímu ID, budou se zde uvedené položky ke stažení zobrazovat v rámci podnikového předplatného, a to i v případě, že právě prohlížíte. výhody vašeho profesionálního předplatného.
 
 ## <a name="how-do-i-find-downloads-in-the-subscriber-portal"></a>Návody najít soubory ke stažení na portálu odběratele?
 Když navštívíte stránku se [soubory ke stažení](https://my.visualstudio.com/downloads/featured?wt.mc_id=o~msft~docs) , uvidíte oblíbené soubory ke stažení uspořádané do skupin podle typu produktu.  Můžete vybrat jeden z oblíbených souborů ke stažení nebo vyhledat libovolný produkt pomocí panelu hledání v horní části stránky.

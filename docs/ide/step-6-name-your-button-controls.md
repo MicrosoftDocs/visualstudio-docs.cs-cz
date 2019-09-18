@@ -9,19 +9,19 @@ ms.devlang:
 - csharp
 - vb
 dev_langs:
-- csharp
-- vb
+- CSharp
+- VB
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: db84490c5e3067012ec37643996bd3c0a4874abc
-ms.sourcegitcommit: b02c40c1ba193e38b5ace14590a6d57590d3270f
+ms.openlocfilehash: 397f65639b6ac277aa6975964ba8317adea58a49
+ms.sourcegitcommit: 2db01751deeee7b2bdb1db25419ea6706e6fcdf8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71012594"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71062855"
 ---
 # <a name="step-6-name-your-button-controls"></a>Krok 6: Pojmenování tlačítkových ovládacích prvků
 
@@ -64,7 +64,7 @@ Karta ***Form1.cs*** *s C# kódem*
 
     ```vb
         Private Sub showButton_Click() Handles showButton.Click
-    
+
     End Sub
     ```
 
@@ -83,11 +83,11 @@ Karta ***Form1.cs*** *s C# kódem*
     Následující příklad ukazuje nový kód, který se zobrazí v editoru kódu.
 
     [!code-csharp[VbExpressTutorial1Step6_#2](../ide/codesnippet/CSharp/step-6-name-your-button-controls_2.cs)]
-    
+
     [!code-vb[VbExpressTutorial1Step6_#2](../ide/codesnippet/VisualBasic/step-6-name-your-button-controls_2.vb)]
 
     > [!NOTE]
-    > Váš kód nemusí zobrazit obslužné rutiny událostí ve camelCase písmenech. 
+    > Váš kód nemusí zobrazit obslužné rutiny událostí ve camelCase písmenech.
 
     Pět metod, které jste přidali, se nazývají *obslužné rutiny událostí*, protože vaše aplikace je volá vždy, když dojde k události (jako je například uživatel výběr tlačítka nebo výběru pole).
 
@@ -101,7 +101,7 @@ Karta ***Form1.cs*** *s C# kódem*
 
     Pokud se rozhodnete, že chcete změnit název proměnné kódu, klikněte pravým tlačítkem myši na proměnnou v kódu a pak zvolte příkaz **refaktor** > **Rename**. Všechny instance této proměnné v kódu jsou přejmenovány. Další informace najdete v tématu [refaktoringu přejmenování](../ide/reference/rename.md).
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 * Pokud chcete přejít na další krok kurzu, přečtěte si  **[článek krok 7: Přidejte součásti dialogového okna do formuláře](../ide/step-7-add-dialog-components-to-your-form.md).**
 

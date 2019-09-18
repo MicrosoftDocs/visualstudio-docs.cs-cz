@@ -1,7 +1,7 @@
 ---
 title: Řešení potíží s instalací nebo upgradovat problémy
 description: V některých případech může něco selže. Pokud instalace sady Visual Studio nebo upgrade selže, může pomoct tuto stránku.
-ms.date: 03/30/2019
+ms.date: 09/13/2019
 ms.custom: seodec18
 ms.topic: troubleshooting
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: ce451ecdeb6d196e6520acffb9a6c76add36f5bf
-ms.sourcegitcommit: b60a00ac3165364ee0e53f7f6faef8e9fe59ec4a
+ms.openlocfilehash: f9612d9943c425a91bb3d01ea3bb5b1e37f270d3
+ms.sourcegitcommit: 2db01751deeee7b2bdb1db25419ea6706e6fcdf8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70913260"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71062816"
 ---
 # <a name="troubleshoot-visual-studio-installation-and-upgrade-issues"></a>Řešení potíží s instalací a upgradem sady Visual Studio
 
@@ -114,12 +114,14 @@ Pokud žádný z předchozích kroků vám pomůžou úspěšně instalaci nebo 
 
 ## <a name="offline-installations"></a>Offline instalace
 
-Tady je tabulka znázorňující známé problémy a některé řešení, které vám můžou pomoct při instalaci z místní rozložení.
+Tady je tabulka známých problémů a některá alternativní řešení, která vám můžou při vytváření [offline instalace](create-an-offline-installation-of-visual-studio.md) a následné instalaci z místního rozložení pomáhat.
 
 | Problém       | Položka                   | Řešení |
 | ----------- | ---------------------- | -------- |
 | Uživatelé nebudou mít přístup k souborům. | oprávnění (ACL) | Ujistěte se, že upravit oprávnění (ACL), tak, aby se ostatním uživatelům udělit oprávnění ke čtení *před* sdílené složky offline instalace. |
 | Nové úlohy, komponenty nebo jazyky nepodaří nainstalovat.  | `--layout`  | Ujistěte se, že máte přístup k Internetu, pokud nainstalujete z částečné rozložení a vyberte úlohy, komponenty nebo jazyky, které nebyly staženy dříve v tomto částečné rozložení. |
+
+Další informace o řešení potíží s [instalací sítě](create-a-network-installation-of-visual-studio.md)najdete v tématu [řešení potíží souvisejících se sítí při instalaci nebo používání sady Visual Studio](troubleshooting-network-related-errors-in-visual-studio.md).
 
 ## <a name="installation-logs"></a>Protokoly instalace
 

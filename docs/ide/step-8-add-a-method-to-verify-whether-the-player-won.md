@@ -1,22 +1,27 @@
 ---
 title: 'Krok 8: Přidání metody k ověření, jestli hráč vyhrál'
 ms.date: 11/04/2016
-ms.topic: conceptual
-dev_langs:
+ms.topic: tutorial
+ms.prod: visual-studio-windows
+ms.technology: vs-ide-general
+ms.devlang:
 - csharp
 - vb
+dev_langs:
+- CSharp
+- VB
 ms.assetid: 6e317f6e-ba4c-4306-8924-300b0c2f65c6
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9daa4d939eb1cd5c03d3811337f258fc3ef3c70c
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: b22f55c2f2e620c2ac1ff7110125e2422aa5e492
+ms.sourcegitcommit: 541a0556958201ad6626bc8638406ad02640f764
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68415633"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71079353"
 ---
 # <a name="step-8-add-a-method-to-verify-whether-the-player-won"></a>Krok 8: Přidání metody k ověření, jestli hráč vyhrál
 Vytvořili jste zábavnou hru, která však potřebuje ještě něco. Hra by měla skončit, když je přehrávač WINS, takže potřebujete přidat `CheckForWinner()` metodu pro ověření, zda hráč zvítězil.

@@ -15,46 +15,47 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d6238919db971492ffd226708209b97bceceb9e0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: HT
+ms.openlocfilehash: 9d3a8c087e6b07bad34c76865bbbb852d115e055
+ms.sourcegitcommit: 2db01751deeee7b2bdb1db25419ea6706e6fcdf8
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62540765"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71062426"
 ---
 # <a name="code-analysis-for-managed-code-warnings"></a>Upozornění Analýzy kódu pro spravovaný kód
-Nástroj pro analýzu spravovaného kódu poskytuje upozornění, které označují porušení pravidel v knihovnách spravovaného kódu. Upozornění jsou uspořádány do pravidla oblasti, jako jsou návrh, lokalizaci, výkonu a zabezpečení. Každému varování oznamuje porušení pravidla analýzy spravovaného kódu. Tato část poskytuje podrobné diskuze a příklady pro každé upozornění analýzy spravovaného kódu.
+Nástroj Analýza spravovaného kódu poskytuje upozornění indikující porušení pravidel ve spravovaných knihovnách kódu. Upozornění se uspořádají do oblastí pravidla, jako je návrh, lokalizace, výkon a zabezpečení. Každé upozornění znamená porušení pravidla analýzy spravovaného kódu. Tato část poskytuje podrobné diskuze a příklady pro každé upozornění analýzy spravovaného kódu.
 
- V následující tabulce jsou uvedeny typ informací, která je k dispozici pro každé upozornění.
+ V následující tabulce je uveden typ informací, které jsou k dispozici pro každé upozornění.
 
 |Položka|Popis|
 |----------|-----------------|
-|Type|Název typu pravidla.|
-|CheckId|Jedinečný identifikátor pro pravidlo. ID kontroly a kategorie se používají pro-source potlačení upozornění.|
-|Kategorie|Kategorie upozornění.|
-|Narušující změna|Určuje, zda oprava porušení tohoto pravidla je zásadní změnu. Zásadní změna znamená, že sestavení, které obsahuje závislost na cíl, který způsobil porušení nebude znovu zkompilovat pomocí nové verze nelze upravovat nebo může v době běhu selhat z důvodu této změny. Při více opravy jsou k dispozici a alespoň jednu opravu je zásadní změnu a jednu opravu není, jsou určeny "Přerušení" i "Bez přerušení".|
-|Příčina|Konkrétní spravovaný kód, který způsobí, že pravidlo generování upozornění.|
-|Popis|Tento článek popisuje problémy, které jsou za upozornění.|
-|Jak vyřešit porušení|Vysvětluje, jak změnit zdrojový kód a splňovat pravidla zabránit generování upozornění.|
-|Kdy potlačit upozornění|Popisuje, když je bezpečný pro potlačení upozornění z pravidla.|
-|Příklad kódu|Příklady, které porušují pravidlo a opravit příklady, které splňují pravidla.|
+|type|Název TypeName pro pravidlo|
+|CheckId|Jedinečný identifikátor pravidla CheckId a kategorie se používají pro potlačení varování ve zdrojovém zobrazení.|
+|Kategorie|Kategorie upozornění|
+|Narušující změna|Zda je oprava pro porušení pravidla zásadní změnou. Zásadní změna znamená, že sestavení, které má závislost na cíli, který způsobil porušení, nebude znovu zkompilováno s novou opravenou verzí nebo může v době běhu selhat z důvodu změny. Je-li k dispozici více oprav a nejméně jedna oprava je zásadní změna a jedna oprava není, je určena možnost "průlom" i "nemožnost".|
+|příčina|Konkrétní spravovaný kód, který způsobí, že pravidlo vygeneruje upozornění.|
+|Popis|Popisuje problémy, které jsou za upozorněním.|
+|Jak vyřešit porušení|Vysvětluje, jak změnit zdrojový kód pro splnění pravidla a zabránit tomu, aby vygenerovalo upozornění.|
+|Kdy potlačit upozornění|Popisuje, kdy je bezpečné potlačit upozornění od pravidla.|
+|Příklad kódu|Příklady, které porušují pravidlo a opravené příklady, které splňují pravidlo.|
 |Související upozornění|Související upozornění.|
 
 ## <a name="in-this-section"></a>V tomto oddílu
 
 |||
 |-|-|
-|[Upozornění podle CheckId](../code-quality/code-analysis-warnings-for-managed-code-by-checkid.md)|Obsahuje seznam všech upozornění podle CheckId|
-|[Upozornění kryptografie](../code-quality/cryptography-warnings.md)|Upozornění, které podporují bezpečnější knihovny a aplikace prostřednictvím správné použití šifrování.|
-|[Upozornění ohledně návrhu](../code-quality/design-warnings.md)|Upozornění, které podporují správná knihovna návrhu uvedené pokyny k návrhu architektury .NET.|
-|[Upozornění globalizace](../code-quality/globalization-warnings.md)|Upozornění, které podporují aplikací a knihoven nasadit kdekoli na světě.|
-|[Upozornění interoperability](../code-quality/interoperability-warnings.md)|Upozornění, které podporují u klientů modelu COM interakci.|
-|[Upozornění udržovatelnosti](../code-quality/maintainability-warnings.md)|Upozornění, které podporují údržby knihovny a aplikace.|
-|[Upozornění mobility](../code-quality/mobility-warnings.md)|Upozornění, které podporují power účinného využití.|
-|[Upozornění na pojmenování](../code-quality/naming-warnings.md)|Upozornění, které podporují dodržování konvencí pokyny k návrhu architektury .NET.|
-|[Upozornění výkonu](../code-quality/performance-warnings.md)|Upozornění, které podporují výkonné knihovny a aplikace.|
-|[Upozornění přenositelnosti](../code-quality/portability-warnings.md)|Upozornění, které podporují přenositelnost napříč různými platformami.|
-|[Upozornění spolehlivosti](../code-quality/reliability-warnings.md)|Upozornění, které podporují spolehlivost knihovny a aplikace, jako třeba správné využití paměti a podproces.|
-|[Upozornění zabezpečení](../code-quality/security-warnings.md)|Upozornění, které podporují bezpečnější knihovny a aplikace.|
-|[Upozornění využití](../code-quality/usage-warnings.md)|Upozornění, které podporují správné použití rozhraní .NET Framework.|
-|[Chyby zásad Analýzy kódu](../code-quality/code-analysis-policy-errors.md)|Chyby, ke kterým dochází při splnění zásad analýzy kódu nejsou při vrácení se změnami.|
+|[Upozornění podle CheckId](../code-quality/code-analysis-warnings-for-managed-code-by-checkid.md)|Zobrazí všechna upozornění podle CheckId|
+|[Upozornění kryptografie](../code-quality/cryptography-warnings.md)|Upozornění, která podporují bezpečnější knihovny a aplikace přes správné použití kryptografie.|
+|[Upozornění ohledně návrhu](../code-quality/design-warnings.md)|Upozornění, která podporují správný návrh knihovny podle pokynů pro návrh .NET.|
+|[Upozornění dokumentace](../code-quality/documentation-warnings.md)|Upozornění, která podporují dobře dokumentovaný návrh knihovny pomocí správného používání dokumentačních komentářů XML.|
+|[Upozornění globalizace](../code-quality/globalization-warnings.md)|Upozornění, která podporují knihovny a aplikace připravené pro použití ve světě.|
+|[Upozornění interoperability](../code-quality/interoperability-warnings.md)|Upozornění podporující interakci s klienty modelu COM.|
+|[Upozornění udržovatelnosti](../code-quality/maintainability-warnings.md)|Upozornění, která podporují údržbu knihovny a aplikace.|
+|[Upozornění mobility](../code-quality/mobility-warnings.md)|Upozornění, která podporují efektivní využití výkonu.|
+|[Upozornění na pojmenování](../code-quality/naming-warnings.md)|Upozornění, která podporují dodržování konvencí pojmenování v pokynech pro návrh .NET.|
+|[Upozornění výkonu](../code-quality/performance-warnings.md)|Upozornění, která podporují vysoce výkonné knihovny a aplikace.|
+|[Upozornění přenositelnosti](../code-quality/portability-warnings.md)|Upozornění, která podporují přenositelnost napříč různými platformami.|
+|[Upozornění spolehlivosti](../code-quality/reliability-warnings.md)|Upozornění, která podporují spolehlivost knihovny a aplikace, jako je třeba správné využití paměti a vlákna.|
+|[Upozornění zabezpečení](../code-quality/security-warnings.md)|Upozornění, která podporují bezpečnější knihovny a aplikace.|
+|[Upozornění využití](../code-quality/usage-warnings.md)|Upozornění podporující vhodné použití rozhraní .NET.|
+|[Chyby zásad Analýzy kódu](../code-quality/code-analysis-policy-errors.md)|Chyby, ke kterým dojde, pokud není při vrácení se změnami splněna zásada analýzy kódu.|

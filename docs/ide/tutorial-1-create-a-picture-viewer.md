@@ -13,12 +13,12 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c0f867179fd78ecb753a9b66cfbdb8479e16c3b
-ms.sourcegitcommit: b60a00ac3165364ee0e53f7f6faef8e9fe59ec4a
+ms.openlocfilehash: 803bd02b43b290cba4a3afe7bc7040e0dee1e2eb
+ms.sourcegitcommit: 6993bcb0d2b0067b1b7b7899bfba52c31c70b7e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70913273"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095343"
 ---
 # <a name="tutorial-1-create-a-picture-viewer"></a>Kurz 1: Vytvoření prohlížeče obrázků
 
@@ -63,7 +63,7 @@ Až skončíte, aplikace by měla vypadat podobně jako na následujícím obrá
 |[Krok 10: Psaní kódu pro další tlačítka a zaškrtávací políčko](../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md)|Napíšete kód pro nastavení dalších tlačítek a zaškrtávací políčko v práci pomocí technologie IntelliSense.|
 |[Krok 11: Spusťte aplikaci a zkuste jiné funkce.](../ide/step-11-run-your-program-and-try-other-features.md)|Spusťte aplikaci a nastavte barvu pozadí. Vyzkoušejte jiné funkce, jako je například změna barev, písem a ohraničení.|
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 Pokud chcete začít s kurzem, **začněte v [kroku 1: Vytvořte projekt](../ide/step-1-create-a-windows-forms-application-project.md)** aplikace model Windows Forms.
 
@@ -71,4 +71,4 @@ Pokud chcete začít s kurzem, **začněte v [kroku 1: Vytvořte projekt](../ide
 
 * [Další C# kurzy](/visualstudio/get-started/csharp/)
 * [Kurzy Visual Basic](/visualstudio/get-started/visual-basic/)
-* [C++výuka](../ide/getting-started-with-cpp-in-visual-studio.md)
+* [C++výuka](/cpp/get-started/tutorial-console-cpp)

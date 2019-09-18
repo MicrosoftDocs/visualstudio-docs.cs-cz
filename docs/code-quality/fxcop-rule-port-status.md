@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d6d891001bbb46e01049c2c8d71bb25372bb8c29
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 07a5130edd534008b4343ab439bf20bf63bc3cde
+ms.sourcegitcommit: 2db01751deeee7b2bdb1db25419ea6706e6fcdf8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551067"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71062403"
 ---
 # <a name="fxcop-rule-port-status"></a>Stav portu pravidla FxCop
 
@@ -69,7 +69,7 @@ ID pravidla | Název
 [CA1065](ca1065-do-not-raise-exceptions-in-unexpected-locations.md) | Nevyvolávejte výjimky v neočekávaných umístěních
 CA1066 | Typ {0} by měl implementovat\<IEquatable T >, protože přepisuje rovnost
 CA1067 | Přepsat Object. Equals (objekt) při implementaci IEquatable\<T >
-CA1068 | Parametry CancellationToken se musí nacházet jako poslední.
+[CA1068](ca1068.md) | Parametry CancellationToken se musí nacházet jako poslední.
 CA1200 | Nepoužívejte značky cref s předponou.
 [CA1303](ca1303-do-not-pass-literals-as-localized-parameters.md) | Nepředávejte literály jako lokalizované parametry
 [CA1304](ca1304-specify-cultureinfo.md) | Určete CultureInfo
@@ -204,7 +204,7 @@ CA9999 | Neshoda verze analyzátoru
 
 ## <a name="unported-rules"></a>Nepřenosná pravidla
 
-Sada pravidel, která se nerozšířila na [analyzátory FxCop](install-fxcop-analyzers.md) , se skládá z pravidel, která ještě nejsou, ale pořád se [můžou přenést](#rules-that-may-be-ported), a těch, které jsou zastaralé a [nebudou se](#deprecated-rules)přepravovat.
+Sada pravidel, která se nerozšířila na [analyzátory FxCop](install-fxcop-analyzers.md) , se skládá z pravidel, která ještě nejsou, ale pořád se [můžou přenést](#rules-that-may-be-ported), a těch, které jsou zastaralé a [nebudou se přepravovat](#deprecated-rules).
 
 ### <a name="rules-that-may-be-ported"></a>Pravidla, která je možné přenést
 

@@ -1,5 +1,5 @@
 ---
-title: Uživatelské účty a aktualizace | Dokumentace Microsoftu
+title: Uživatelské účty a aktualizace | Microsoft Docs
 ms.date: 11/15/2016
 ms.prod: visual-studio-dev14
 ms.technology: vs-ide-general
@@ -9,27 +9,32 @@ caps.latest.revision: 7
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: e955eaacd2f290558c5d786439373a9cc8febb35
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4ecd7a4d237a53a19286790346f790b82b981f60
+ms.sourcegitcommit: 2db01751deeee7b2bdb1db25419ea6706e6fcdf8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "68158290"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71062877"
 ---
 # <a name="user-accounts-and-updates"></a>Uživatelské účty a aktualizace
+
 [!INCLUDE[vs2017banner](../includes/vs2017banner.md)]
 
-Samotné sady Visual Studio je propojené prostředí. Při podepisování se změnami můžete povolte přístup ke všem službám, které jsou přidružené k účtu uživatele, jakož i všechny účty, které jsou propojeny k tomuto účtu. Nastavení účtu se zpřístupní, bez ohledu na to pomocí sady Visual Studio. Můžete nakonfigurovat úroveň oprávnění na konkrétní instanci aplikace Visual Studio pro jednotlivé uživatele. Visual Studio poskytuje také případy, kdy jakékoliv součásti instalace, jako jsou sady SDK, byl k dispozici aktualizace.  
+> [!WARNING]
+> Visual Studio 2015 nemůže získat přístup k prostředkům, které jsou nakonfigurované pro podmíněný přístup. Pokud chcete s těmito prostředky pracovat, upgradujte na Visual Studio 2017 nebo novější.
+
+Aplikace Visual Studio je sama o sobě připojená prostředí. Když se přihlásíte, povolíte přístup ke všem službám přidruženým k vašemu uživatelskému účtu a všem účtům, které jsou k tomuto účtu propojené. Nastavení vašeho účtu vám umožní roaming bez ohledu na to, kde používáte Visual Studio. Můžete nakonfigurovat úrovně oprávnění pro konkrétní instanci sady Visual Studio pro jednotlivé uživatele. Sada Visual Studio také informuje o tom, že je k dispozici aktualizace jakékoli součásti vaší instalace, jako je například sada SDK.  
   
 ## <a name="in-this-section"></a>V tomto oddílu  
   
 |||  
 |-|-|  
-|[Přihlášení k sadě Visual Studio](../ide/signing-in-to-visual-studio.md)|Popisuje, jak a proč k přihlášení k sadě Visual Studio.|  
-|[Práce s několika uživatelskými účty](../ide/work-with-multiple-user-accounts.md)|Popisuje, jak přidružit více účtů Microsoft a/nebo pracovní nebo školní účty k umožnění přístupu k prostředkům a službám z vašich účtů.|  
-|[Synchronizovaná nastavení](../ide/synchronized-settings-in-visual-studio.md)|Popisuje, jak přenášet.|  
-|[Jak odemknout Visual Studio](../ide/how-to-unlock-visual-studio.md)|Popisuje, jak odemknout Visual Studio v různých scénářích.|  
-|[Oznámení](../ide/visual-studio-notifications.md)|Popisuje, jak Visual Studio vás upozorní, když komponent, jako jsou sady SDK nebo Visual Studio jako takové, máte k dispozici aktualizace.|  
+|[Přihlášení k sadě Visual Studio](../ide/signing-in-to-visual-studio.md)|Popisuje, jak a proč se přihlašovat k aplikaci Visual Studio.|  
+|[Práce s několika uživatelskými účty](../ide/work-with-multiple-user-accounts.md)|Popisuje, jak přidružit více účtů Microsoft a pracovní nebo školní účty a povolit přístup k prostředkům a službám ze všech vašich účtů.|  
+|[Synchronizovaná nastavení](../ide/synchronized-settings-in-visual-studio.md)|Popisuje nastavení roamingu.|  
+|[Jak odemknout Visual Studio](../ide/how-to-unlock-visual-studio.md)|Popisuje, jak odemknout aplikaci Visual Studio v různých scénářích.|  
+|[Oznámení](../ide/visual-studio-notifications.md)|Popisuje, jak Visual Studio vás upozorní, když komponenty jako sady SDK nebo vlastní aplikace sady Visual Studio mají k dispozici aktualizaci.|  
   
-## <a name="see-also"></a>Viz také  
- [Integrované vývojové prostředí sady Visual Studio](../ide/visual-studio-ide.md)
+## <a name="see-also"></a>Viz také:
+
+- [Integrované vývojové prostředí sady Visual Studio](../ide/visual-studio-ide.md)

@@ -8,28 +8,28 @@ ms.devlang:
 - csharp
 - vb
 dev_langs:
-- csharp
-- vb
+- CSharp
+- VB
 ms.assetid: dc8edb13-1b23-47d7-b859-8c6f7888c1a9
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b68d46ad5c585dca9fd48f39a2e47ac95f5a11c8
-ms.sourcegitcommit: 0e482cfc15f809b564c3de61646f29ecd7bfcba6
+ms.openlocfilehash: 86fb0b7d22e02e563fe022b470651e2c335e4000
+ms.sourcegitcommit: 541a0556958201ad6626bc8638406ad02640f764
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70987849"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71079452"
 ---
 # <a name="step-8-customize-the-quiz"></a>Krok 8: Přizpůsobení kvízu
 
 V poslední části tutoriálu prozkoumáte několik způsobů, jak kvíz přizpůsobit a rozšíříte si již nabyté znalosti. Například se zamyslíte nad tím, jak program vytvoří problém náhodného dělení, jehož odpovědí není nikdy zlomek. Chcete-li získat další informace `timeLabel` , přepněte ovládací prvek na jinou barvu a dejte pomocnému kvízu.
 
 > [!NOTE]
-> Toto téma je součástí série kurzů o základních konceptech kódování. 
-> - Přehled tohoto kurzu najdete v [kurzu 2: Vytvoření časovaného matematického](../ide/tutorial-2-create-a-timed-math-quiz.md)kvízu 
+> Toto téma je součástí série kurzů o základních konceptech kódování.
+> - Přehled tohoto kurzu najdete v [kurzu 2: Vytvoření časovaného matematického](../ide/tutorial-2-create-a-timed-math-quiz.md)kvízu
 > - Chcete-li stáhnout dokončenou verzi kódu, přečtěte si [ukázku kurzu dokončení matematického kvízu](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).
 
 ## <a name="to-customize-the-quiz"></a>Přizpůsobení kvízu

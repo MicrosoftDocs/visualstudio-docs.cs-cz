@@ -14,12 +14,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: dab237eeb99f4d4d67652dba583bf9851b6d6175
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 930512d762a05a91ab233566b76c6591ab2ea6d4
+ms.sourcegitcommit: 6993bcb0d2b0067b1b7b7899bfba52c31c70b7e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180462"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095379"
 ---
 # <a name="tutorial-create-your-first-universal-windows-platform-application-in-visual-studio-with-xaml-and-c35"></a>Kurz: Vytvoření první aplikace Univerzální platforma Windows v aplikaci Visual Studio s použitím jazyka XAML a jazyka C&#35;
 
@@ -97,7 +97,7 @@ Je čas začít vyvíjet. Přidáte ovládací prvek tlačítko, přidáte pro n
 
    (Pokud nevidíte možnost **panelu nástrojů** , můžete ji otevřít z řádku nabídek. Provedete to tak, že kliknete na**panel nástrojů** **zobrazení** > . Také můžete stisknout klávesu **Ctrl**+**Alt**+**X**.)
 
-1. Kliknutím na ikonu připnutí můžete ukotvit okno panelu nástrojů.
+1. Kliknutím na ikonu **připnutí** můžete ukotvit okno panelu nástrojů.
 
    ![Kliknutím na ikonu připnutí můžete ukotvit okno panelu nástrojů.](media/uwp-toolbox-autohide.png)
 
@@ -178,3 +178,8 @@ Blahopřejeme k dokončení tohoto kurzu! Doufáme, že jste se seznámili se z�
 
 > [!div class="nextstepaction"]
 > [Vytvoření uživatelského rozhraní](/windows/uwp/design/basics/xaml-basics-ui)
+
+## <a name="see-also"></a>Viz také:
+
+- [Přehled UWP](/windows/uwp/get-started/universal-application-platform-guide)
+- [Získat ukázky aplikace pro UWP](/windows/uwp/get-started/get-uwp-app-samples)

@@ -1,22 +1,27 @@
 ---
 title: 'Krok 7: Zachování dvojic ve viditelném stavu'
 ms.date: 11/04/2016
-ms.topic: conceptual
-dev_langs:
+ms.topic: tutorial
+ms.prod: visual-studio-windows
+ms.technology: vs-ide-general
+ms.devlang:
 - csharp
 - vb
+dev_langs:
+- CSharp
+- VB
 ms.assetid: 42e1d08c-7b2e-4efd-9f47-85d6206afe35
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5194d3925393228d951f35a966dff8fd620ea924
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: 01eba06b569d48a6ab49174183438fcea96cb5c7
+ms.sourcegitcommit: 541a0556958201ad6626bc8638406ad02640f764
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416525"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71079307"
 ---
 # <a name="step-7-keep-pairs-visible"></a>Krok 7: Zachování dvojic ve viditelném stavu
 Hra funguje dobře tak dlouho, dokud hráč vybírá pouze dvojice ikon, které neodpovídají. Ale zvažte, co by mělo nastat, pokud hráč vybere shodnou dvojici. Místo toho, aby ikony zmizely zapnutím časovače (pomocí <xref:System.Windows.Forms.Timer.Start> metody), by se hra měla resetovat sama tak, aby již nesledovala popisky `firstClicked` pomocí proměnných a `secondClicked` , aniž by bylo nutné resetovat barvy pro dva popisky, které byly zvoleny.

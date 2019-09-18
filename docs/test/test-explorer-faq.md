@@ -14,12 +14,12 @@ ms.workload:
 - multiple
 author: kendrahavens
 manager: jillfra
-ms.openlocfilehash: a37cdea4206dafe657dc8cf8adbbcf98ce18afc9
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 1f51b8d3e75d7db19e1b92e909638cee99303c48
+ms.sourcegitcommit: 541a0556958201ad6626bc8638406ad02640f764
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551857"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71079625"
 ---
 # <a name="visual-studio-test-explorer-faq"></a>Průzkumník testů sady Visual Studio – nejčastější dotazy
 ::: moniker range=">=vs-2019"
@@ -115,7 +115,6 @@ Filtr cesty k souboru v poli Hledat v **Průzkumníku testů** byl odebrán v ap
 
 V aplikaci Visual Studio 2019 se odeberou některé testovacího okna rozhraní API, které byly dříve označeny veřejné, ale nebyly nikdy oficiálně popsané. Označí se jako "zastaralé" v sadě Visual Studio 2017 poskytnout programu rozšíření včasného varování. Naši znalostní bázi měl velmi málo rozšíření nalezena tato rozhraní API a s nimi provádějí závislost. Patří mezi ně `IGroupByProvider`, `IGroupByProvider<T>`, `KeyComparer`, `ISearchFilter`, `ISearchFilterToken`, `ISearchToken`, a `SearchFilterTokenType`. Pokud se tato změna ovlivní vaše rozšíření, dejte nám vědět, vyplňte chybu na [komunity vývojářů](https://developercommunity.visualstudio.com).
 
-::: moniker range="vs-2017"
 ## <a name="test-adapter-nuget-reference"></a>Testovací adaptér referenční dokumentace pro NuGet
 
 **V sadě Visual Studio 2017 verze 15.8 mé testy se zjistí, ale nemusíte spouštět.**
@@ -126,6 +125,7 @@ Všechny projekty testů musí obsahovat testovací adaptér jejich .NET NuGet o
 
 Namísto použití rozšíření adaptérů testů, jsou nutné k použití balíčků adaptéru NuGet testovací projekty. Tento požadavek výrazně zvyšuje výkon a způsobí, že snižuje počet možných problémů s využitím průběžné integrace. Další informace o vyřazení rozšíření adaptér testu .NET v [poznámky k verzi](/visualstudio/releasenotes/vs2017-relnotes-v15.8#testadapterextension).
 
+::: moniker range="vs-2017"
 > [!NOTE]
 > Pokud používáte NUnit 2 Test Adapter a jsou nelze provést migraci k NUnit 3 test adapter, můžete ji vypnout toto nové chování zjišťování v sadě Visual Studio verzi 15.8 v **nástroje** > **možnosti**  >  **Test**.
 

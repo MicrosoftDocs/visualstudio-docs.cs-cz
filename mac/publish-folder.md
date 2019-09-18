@@ -2,31 +2,31 @@
 title: Publikovat do složky
 ms.date: 04/02/2019
 helpviewer_keywords:
-- deployment, website
+- deployment, website, console, publish
 ms.assetid: e963fb4b-6d32-4d45-86bb-ef7e4d3028b0
 author: sayedihashimi
 ms.author: sayedha
 manager: unniravindranathan
 ms.prod: visual-studio-mac
-ms.openlocfilehash: e22176d2188df92f0956f88c912d48cb9c954dd9
-ms.sourcegitcommit: fe212f8960d7882a1b0fdae9e22f008996aacf3c
+ms.openlocfilehash: 165cfc38b8289946e0966083785defd18ca87d77
+ms.sourcegitcommit: 6993bcb0d2b0067b1b7b7899bfba52c31c70b7e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222774"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095413"
 ---
-# <a name="publish-a-web-app-to-a-folder-using-visual-studio-for-mac"></a>Publikování webové aplikace do složky pomocí Visual Studio pro Mac
+# <a name="publish-to-a-folder-using-visual-studio-for-mac"></a>Publikování do složky pomocí Visual Studio pro Mac
 
-K publikování aplikací ASP.NET Core do složky můžete použít nástroj pro publikování.
+Pomocí nástroje Publikovat můžete publikovat konzolu .NET Core nebo ASP.NET Core aplikace do složky.
 
 ## <a name="prerequisites"></a>Požadavky
 
-- Je nainstalována [aplikace Visual Studio 2019 pro systém Mac](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs4mac2019) s povoleným ASP.NET Core.
-- ASP.NET Core projekt. Pokud projekt ještě nemáte, můžete [vytvořit nový](https://docs.microsoft.com/visualstudio/mac/create-new-projects?view=vsmac-2019).
+- Je nainstalována [aplikace Visual Studio 2019 pro systém Mac](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs4mac2019) s povoleným rozhraním .NET Core.
+- Konzola rozhraní .NET Core nebo projekt ASP.NET Core. Pokud projekt ještě nemáte, můžete [vytvořit nový](https://docs.microsoft.com/visualstudio/mac/create-new-projects?view=vsmac-2019).
 
 ## <a name="publish-to-folder"></a>Publikování do složky
 
-Pomocí Visual Studio pro Mac můžete publikovat ASP.NET Core projekty do složky pomocí nástroje Publikovat. Po publikování do složky můžete přenést soubory na webový server, abyste je získali do jiného prostředí. Chcete-li publikovat do složky, postupujte podle těchto kroků.
+Pomocí Visual Studio pro Mac můžete publikovat projekty .NET Core do složky pomocí nástroje Publikovat. Po publikování do složky můžete soubory přenést do jiného prostředí. Chcete-li publikovat do složky, postupujte podle těchto kroků.
 
  1. V Oblast řešení klikněte pravým tlačítkem myši na projekt a vyberte možnost **publikovat**.
 

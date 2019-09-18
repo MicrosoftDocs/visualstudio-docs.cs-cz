@@ -1,20 +1,20 @@
 ---
 title: Ladění aplikací v místním kontejneru Docker | Microsoft Docs
 description: Naučte se, jak upravit aplikaci, která běží v místním kontejneru Docker, aktualizujte kontejner pomocí možností upravit a aktualizovat a pak nastavte zarážky ladění.
+ms.author: ghogen
 author: ghogen
 manager: jillfra
 ms.assetid: 480e3062-aae7-48ef-9701-e4f9ea041382
 ms.topic: conceptual
 ms.workload: multiple
 ms.date: 07/25/2019
-ms.author: ghogen
 ms.technology: vs-azure
-ms.openlocfilehash: d7a7fa83fe0976ee1e08c6c614a11f783178a285
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 5af092bbcb987f45b10121f37d40eaa5466c3da5
+ms.sourcegitcommit: 2db01751deeee7b2bdb1db25419ea6706e6fcdf8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70179856"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71062177"
 ---
 # <a name="debug-apps-in-a-local-docker-container"></a>Ladění aplikací v místním kontejneru Docker
 
@@ -48,14 +48,14 @@ Kontejnery Docker jsou k dispozici pro projekty .NET Framework a .NET Core. Poj�
 [!INCLUDE [create-aspnet5-app](../azure/includes/create-aspnet5-app.md)]
 ::: moniker-end
 ::: moniker range=">= vs-2019"
-[!INCLUDE [create-aspnet5-app-2019](../azure/includes/vs-2019/create-aspnet5-app-2019.md)
+[!INCLUDE [create-aspnet5-app-2019](../azure/includes/vs-2019/create-aspnet5-app-2019.md)]
 ::: moniker-end
 
 ### <a name="edit-your-code-and-refresh"></a>Úprava kódu a aktualizace
 
 Chcete-li rychle iterovat změny, můžete aplikaci spustit v kontejneru. Pak můžete pokračovat v provádění změn a zobrazit je stejně jako u IIS Express.
 
-1. Nastavte **konfiguraci řešení** na **ladit**. Potom stisknutím kombinace kláves CTRL + F5 Sestavte image Docker a spusťte ji místně.
+1. Nastavte **konfiguraci řešení** na **ladit**. Potom stisknutím klávesy **CTRL**+**F5** Sestavte image Docker a spusťte ji místně.
 
     Když je image kontejneru sestavená a spuštěná v kontejneru Docker, Visual Studio spustí webovou aplikaci ve výchozím prohlížeči.
 

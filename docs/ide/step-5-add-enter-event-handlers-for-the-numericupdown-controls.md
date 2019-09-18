@@ -16,20 +16,20 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 718a24b5afbd1196fdb1fb382cc45197975a0242
-ms.sourcegitcommit: 0e482cfc15f809b564c3de61646f29ecd7bfcba6
+ms.openlocfilehash: 9566e5bb8bd5be3c1a44ff79690fb1f8107b40f9
+ms.sourcegitcommit: 541a0556958201ad6626bc8638406ad02640f764
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70987903"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71079468"
 ---
 # <a name="step-5-add-enter-event-handlers-for-the-numericupdown-controls"></a>Krok 5: Přidání obslužných rutin událostí Enter pro ovládací prvky NumericUpDown
 
 V páté části tohoto kurzu přidáte <xref:System.Windows.Forms.Control.Enter> obslužné rutiny událostí, aby bylo možné zadat odpovědi na otázky kvízu, které jsou poněkud jednodušší. Tento kód vybere a vymaže aktuální hodnotu v každém <xref:System.Windows.Forms.NumericUpDown> ovládacím prvku, jakmile ho si ten vybere a začne zadat jinou hodnotu.
 
 > [!NOTE]
-> Toto téma je součástí série kurzů o základních konceptech kódování. 
-> - Přehled tohoto kurzu najdete v [kurzu 2: Vytvoření časovaného matematického](../ide/tutorial-2-create-a-timed-math-quiz.md)kvízu 
+> Toto téma je součástí série kurzů o základních konceptech kódování.
+> - Přehled tohoto kurzu najdete v [kurzu 2: Vytvoření časovaného matematického](../ide/tutorial-2-create-a-timed-math-quiz.md)kvízu
 > - Chcete-li stáhnout dokončenou verzi kódu, přečtěte si [ukázku kurzu dokončení matematického kvízu](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).
 
 ## <a name="to-verify-the-default-behavior"></a>Ověření výchozího chování

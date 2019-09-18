@@ -1,22 +1,27 @@
 ---
 title: 'Krok 2: Přidat náhodný objekt a seznam ikon'
 ms.date: 11/04/2016
-ms.topic: conceptual
-dev_langs:
+ms.topic: tutorial
+ms.prod: visual-studio-windows
+ms.technology: vs-ide-general
+ms.devlang:
 - csharp
 - vb
+dev_langs:
+- CSharp
+- VB
 ms.assetid: 95faea28-eddc-4cfa-95fb-3b34b5a976d7
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 955cc700a6be93474e29acf1aaa0e0c36c271e16
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: 9f1a8a6c6ec1535e36eae5ebc2e8f56282ef03fc
+ms.sourcegitcommit: 541a0556958201ad6626bc8638406ad02640f764
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416694"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71079572"
 ---
 # <a name="step-2-add-a-random-object-and-a-list-of-icons"></a>Krok 2: Přidat náhodný objekt a seznam ikon
 V tomto kroku vytvoříte sadu odpovídajících symbolů pro hru. Každý symbol je přidán do dvou náhodných buněk v kontejneru TableLayoutPanel ve formuláři. K tomu použijte dva `new` příkazy k vytvoření dvou objektů. První je <xref:System.Random> objekt, jako ten, který jste použili ve hře matematického kvízu. V tomto kódu slouží k náhodnému výběru buněk v kontejneru TableLayoutPanel. Druhý objekt, který může být pro vás nový, je <xref:System.Collections.Generic.List%601> objekt, který se používá k ukládání náhodně zvolených symbolů.

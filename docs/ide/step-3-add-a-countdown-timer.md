@@ -8,28 +8,28 @@ ms.devlang:
 - csharp
 - vb
 dev_langs:
-- csharp
-- vb
+- CSharp
+- VB
 ms.assetid: 62670a2b-efdc-45c6-9646-9b17eeb33dcb
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6756000cc2db853589d98c21abab7db452d55af9
-ms.sourcegitcommit: 0e482cfc15f809b564c3de61646f29ecd7bfcba6
+ms.openlocfilehash: 67c2b34bf37f5f1b0ea7fb5222c6fcb8655fcc74
+ms.sourcegitcommit: 541a0556958201ad6626bc8638406ad02640f764
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70987882"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71079563"
 ---
 # <a name="step-3-add-a-countdown-timer"></a>Krok 3: Přidání časovače odpočítávání
 
 V třetí části tohoto kurzu přidáte časovač odpočítávání za účelem sledování počtu sekund, které zbývá pro dokončení příjemce kvízu.
 
 > [!NOTE]
-> Toto téma je součástí série kurzů o základních konceptech kódování. 
-> - Přehled tohoto kurzu najdete v [kurzu 2: Vytvoření časovaného matematického](../ide/tutorial-2-create-a-timed-math-quiz.md)kvízu 
+> Toto téma je součástí série kurzů o základních konceptech kódování.
+> - Přehled tohoto kurzu najdete v [kurzu 2: Vytvoření časovaného matematického](../ide/tutorial-2-create-a-timed-math-quiz.md)kvízu
 > - Chcete-li stáhnout dokončenou verzi kódu, přečtěte si [ukázku kurzu dokončení matematického kvízu](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).
 
 ## <a name="to-add-a-countdown-timer"></a>Přidání časovače odpočítávání

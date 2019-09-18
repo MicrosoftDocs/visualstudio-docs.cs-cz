@@ -6,16 +6,16 @@ manager: lank
 ms.date: 12/28/2017
 ms.topic: conceptual
 description: Vyhledejte seznam stažení softwaru, který je součástí vašeho předplatného sady Visual Studio.
-ms.openlocfilehash: 7d6f533189bded975618e7dd65230a23d42b90f5
-ms.sourcegitcommit: 485881e6ba872c7b28a7b17ceaede845e5bea4fe
+ms.openlocfilehash: aba0af561559142c186d9bfa5728bd00b6f4d1dc
+ms.sourcegitcommit: 6993bcb0d2b0067b1b7b7899bfba52c31c70b7e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68377910"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095268"
 ---
 # <a name="what-software-is-available-for-download"></a>Který software je k dispozici ke stažení?
 
-[Seznam stažení softwaru](http://download.microsoft.com/download/1/5/4/15454442-CF17-47B9-A65D-DF84EF88511B/Visual_Studio_by_Subscription_Level.xlsx) , který je k dispozici, závisí na předplatném, které používáte.  Pokud máte ke stejnému přihlašovacímu adrese více než jedno předplatné, zobrazí se soubory ke stažení, které jsou součástí předplatného nejvyšší úrovně bez ohledu na to, jaké Předplatné si právě prohlížíte.  Pokud máte například předplatné Visual Studio Enterprise Standard a Visual Studio Dev Essentials členství, zobrazí se úplný seznam souborů ke stažení, které jsou k dispozici v rámci vašeho podnikového předplatného.  Seznam vašich předplatných najdete na stránce [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs).
+[Seznam stažení softwaru](http://download.microsoft.com/download/1/5/4/15454442-CF17-47B9-A65D-DF84EF88511B/Visual_Studio_by_Subscription_Level.xlsx) , který je k dispozici, závisí na předplatném, které používáte.  Pokud máte ke stejnému přihlašovacímu adrese více než jedno předplatné, zobrazí se soubory ke stažení, které jsou součástí předplatného nejvyšší úrovně bez ohledu na to, jaké Předplatné si právě prohlížíte.  Pokud máte například předplatné Visual Studio Enterprise Standard a předplatné Visual Studio Professional, zobrazí se úplný seznam souborů ke stažení, které jsou k dispozici v rámci vašeho podnikového předplatného.  Seznam vašich předplatných najdete na stránce [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs).
 
 Pokud již máte předplatné sady Visual Studio:
 1. Přejít na[https://my.visualstudio.com/downloads](https://my.visualstudio.com/downloads?wt.mc_id=o~msft~docs)

@@ -9,19 +9,19 @@ ms.devlang:
 - csharp
 - vb
 dev_langs:
-- csharp
-- vb
+- CSharp
+- VB
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 34f4b8272494e4d1bdef1f073cf602a6c2397445
-ms.sourcegitcommit: 4dfe098ac0df294aad63e6b384d6575980798ca3
+ms.openlocfilehash: 86f9cd4d5b0f7af2c543c2fdcea8864d092d2971
+ms.sourcegitcommit: 2db01751deeee7b2bdb1db25419ea6706e6fcdf8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70887930"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71062429"
 ---
 # <a name="step-9-review-comment-and-test-your-code"></a>Krok 9: Kontrola, okomentování a otestování kódu
 
@@ -61,7 +61,7 @@ Právě jste vytvořili něco, co funguje, a i když ještě není hotové, mů�
     > Pomocí ovládacího prvku programovací jazyk v pravém horním rohu této stránky můžete zobrazit fragment C# kódu nebo Visual Basic fragment kódu.<br><br>![Řízení programovacího jazyka pro Docs.Microsoft.com](../ide/media/docs-programming-language-control.png)
 
      [!code-csharp[VbExpressTutorial1Step9_10#1](../ide/codesnippet/CSharp/step-9-review-comment-and-test-your-code_1.cs)]
-     
+
      [!code-vb[VbExpressTutorial1Step9_10#1](../ide/codesnippet/VisualBasic/step-9-review-comment-and-test-your-code_1.vb)]
 
     Obslužná rutina <xref:System.Windows.Forms.Control.Click> události tlačítka showButton je teď dokončená a funguje. Začali jste psát kód, počínaje `if` příkazem. `if` Příkaz je způsob, jakým vaše aplikace poznáte, "Podívejte se na tuto jednu věc a pokud ano, udělejte tyto akce." V tomto případě určíte, aby aplikace otevřela dialogové okno **otevřít soubor** , a pokud uživatel vybere soubor a klikne na tlačítko **OK** , načte tento soubor do **ovládacího prvku PictureBox**.

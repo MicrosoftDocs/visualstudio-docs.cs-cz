@@ -20,12 +20,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: ac40a7e7d62417d2d89302304501fb2b3ecd34f4
-ms.sourcegitcommit: 9c07ae6fb18204ea080c8248994a683fa12e5c82
+ms.openlocfilehash: 5d83086720a94c23d0ceb3f07d9398a7d5256f68
+ms.sourcegitcommit: 6993bcb0d2b0067b1b7b7899bfba52c31c70b7e7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293708"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095367"
 ---
 # <a name="install-visual-studio"></a>Instalace sady Visual Studio
 
@@ -236,7 +236,7 @@ Další informace najdete na stránce [Výběr umístění instalace](change-ins
 
 3. Vyberte typ projektu.
 
-   Chcete-li například [sestavit C++ aplikaci](../ide/getting-started-with-cpp-in-visual-studio.md), zvolte možnost **nainstalováno**, rozbalte položku **vizuál C++** a pak zvolte C++ typ projektu, který chcete sestavit.
+   Chcete-li například [sestavit C++ aplikaci](/cpp/get-started/tutorial-console-cpp), zvolte možnost **nainstalováno**, rozbalte položku **vizuál C++** a pak zvolte C++ typ projektu, který chcete sestavit.
 
    Chcete-li [sestavit C# aplikaci](../get-started/csharp/tutorial-console.md), zvolte možnost **nainstalováno**, rozbalte položku **vizuál C#** a C# pak zvolte typ projektu, který chcete sestavit.
 
