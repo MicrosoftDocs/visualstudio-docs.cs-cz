@@ -332,8 +332,17 @@
                   href: ca1064-exceptions-should-be-public.md
                 - name: 'CA1065: Nevyvolávejte výjimky v neočekávaných umístěních'
                   href: ca1065-do-not-raise-exceptions-in-unexpected-locations.md
+                - name: 'CA1068: Parametry CancellationToken musí být poslední.'
+                  href: ca1068.md
                 - name: 'CA2210: Sestavení by měla mít platné silné názvy'
                   href: ca2210-assemblies-should-have-valid-strong-names.md
+            - name: Upozornění k dokumentaci
+              items:
+                - name: Přehled
+                  displayName: documentation warnings
+                  href: documentation-warnings.md
+                - name: 'CA1200: Nepoužívejte značky cref s předponou'
+                  href: ca1200.md
             - name: Upozornění globalizace
               items:
                 - name: Přehled
@@ -1030,7 +1039,7 @@
           href: c26812.md
         - name: C26814
           href: c26814.md
-    - name: Upozornění jazyka C/C++
+    - name: upozornění pro C/C++
       items:
         - name: Přehled
           displayName: C++ warnings

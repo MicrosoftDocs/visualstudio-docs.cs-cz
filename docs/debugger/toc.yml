@@ -42,6 +42,8 @@
       items:
         - name: Použití zarážek
           href: using-breakpoints.md
+        - name: Použití zarážek s trasováním
+          href: using-tracepoints.md
         - name: Řešení potíží se zarážkami
           href: troubleshooting-breakpoints.md
     - name: Kontrola dat
