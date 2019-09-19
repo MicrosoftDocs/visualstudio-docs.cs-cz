@@ -9,12 +9,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d0a806ef6e6c3fb20ce4d2697f3b4fe6ff6674e
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 58f69d5188a82937c44552e8fd192ea2dba28d3e
+ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63403552"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71128143"
 ---
 # <a name="analyze-network-usage-in-uwp-apps"></a>Analýza využití sítě v aplikacích pro UWP
 Visual Studio **sítě** diagnostický nástroj, který shromažďuje data o síťových operacích pomocí provádí [Windows.Web.Http API](/uwp/api/windows.web.http). Analýza dat vám může pomoct vyřešit problémy, jako jsou problémy přístupu a ověřování, nesprávné použití mezipaměti a špatné zobrazení a stáhnout výkonu.
@@ -74,7 +74,7 @@ Visual Studio **sítě** diagnostický nástroj, který shromažďuje data o sí
 ## <a name="see-also"></a>Viz také:
 
 - [Spouštění nástrojů pro profilaci s ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md)
-- [Visual Studio blog: Představení sady Visual Studio sítě inspektoru](http://go.microsoft.com/fwlink/?LinkId=535022)
-- [Video pro kanál 9: Diagnostické nástroje VS - Profiler nové sítě](https://channel9.msdn.com/Series/ConnectOn-Demand/206)
-- [Profilace v sadě Visual Studio](../profiling/index.md)
+- [Blog sady Visual Studio: Představení kontroly sítě sady Visual Studio](http://go.microsoft.com/fwlink/?LinkId=535022)
+- [Video pro kanál 9: Diagnostické nástroje VS – nové síťové profilery](https://channel9.msdn.com/Series/ConnectOn-Demand/206)
+- [Profilace v sadě Visual Studio](../profiling/index.yml)
 - [Nejdřív se podívejte na nástroje pro profilaci](../profiling/profiling-feature-tour.md)

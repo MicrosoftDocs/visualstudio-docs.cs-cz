@@ -10,52 +10,52 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bcf17504f5ae057e68544d26e071bb74cc7b83bf
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 862310c8c763ce366798bfacd4f4759d606bb33c
+ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263525"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71128208"
 ---
 # <a name="deploy-an-app-to-a-local-folder-using-visual-studio"></a>Nasazení aplikace do místní složky pomocí sady Visual Studio
 
-Můžete použít **publikovat** nástroj pro publikování aplikace ASP.NET, ASP.NET Core, .NET Core a Pythonu do místní složky ze sady Visual Studio. Pro Node.js kroky jsou podporované, ale uživatelské rozhraní se liší.
+Pomocí nástroje **publikovat** můžete publikovat aplikace ASP.NET, ASP.NET Core, .NET Core a Python do místní složky ze sady Visual Studio. Pro Node. js je postup podporován, ale uživatelské rozhraní je jiné.
 
 [!INCLUDE [quickstart-prereqs](includes/quickstart-prereqs.md)]
 
 > [!NOTE]
-> Pokud je potřeba publikovat do místní složky aplikace pracovní plochy Windows, přečtěte si téma [nasazení stolní aplikace pomocí technologie ClickOnce](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) (C# nebo Visual Basic). Pro C++/CLR, najdete v článku [nasazení nativní aplikace pomocí technologie ClickOnce](/cpp/windows/clickonce-deployment-for-visual-cpp-applications) nebo pro C /C++, naleznete v tématu [nasazení nativní aplikace pomocí projektu instalace](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project).
+> Pokud potřebujete publikovat desktopovou aplikaci pro Windows do místní složky, přečtěte si téma [nasazení desktopové aplikace pomocí](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) technologieC# ClickOnce (nebo Visual Basic). V C++případě/CLI si přečtěte téma [nasazení nativní aplikace pomocí ClickOnce](/cpp/windows/clickonce-deployment-for-visual-cpp-applications) nebo pro CC++/, viz [nasazení nativní aplikace pomocí projektu instalace](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project).
 
 ## <a name="deploy-to-a-local-folder"></a>Nasazení do místní složky
 
-1. V Průzkumníku řešení klikněte pravým tlačítkem na projekt a zvolte **publikovat** (nebo použijte **sestavení** > **publikovat** položky nabídky).
+1. V Průzkumník řešení klikněte pravým tlačítkem myši na projekt a vyberte **publikovat** (nebo použijte položku nabídky**publikovat** **sestavení** > ).
 
-    ![Příkaz Publikovat v místní nabídce projektu v Průzkumníku řešení](../deployment/media/quickstart-publish.png "tlačítko Publikovat")
+    ![Příkaz publikovat v místní nabídce projektu v Průzkumník řešení](../deployment/media/quickstart-publish.png "Zvolit publikování")
 
-1. Pokud jste dříve nakonfigurovali všech profilů publikování **publikovat** otevře se podokno. Vyberte **vytvořit nový profil**.
+1. Pokud jste již dříve nakonfigurovali všechny publikační profily, otevře se podokno **publikování** . Vyberte **vytvořit nový profil**.
 
-1. V **vyberte cíl publikování** dialogového okna zvolte **složky**.
+1. V dialogovém okně **vybrat cíl publikování** zvolte možnost **Složka**.
 
-    ![Zvolte místní složku jako cíl publikování](../deployment/media/quickstart-publish-folder.png "vybrat složku")
+    ![Zvolit místní složku jako cíl publikování](../deployment/media/quickstart-publish-folder.png "Zvolit složku")
 
-1. Zadejte cestu nebo vyberte **Procházet** určit místní složku.
+1. Zadejte cestu nebo vyberte **Procházet** a zadejte místní složku.
 
-1. Vyberte **Publikovat**. Visual Studio vytvoří projekt a publikuje ji do zadané složky. Vlastnosti projektu **publikovat** otevře se podokno, zobrazuje profil souhrnu.
+1. Vyberte **Publikovat**. Visual Studio vytvoří projekt a publikuje ho do určené složky. Zobrazí se podokno **publikování** vlastností projektu, které zobrazuje souhrn profilu.
 
-    ![Podokno vlastností zobrazuje souhrn profil publikování](../deployment/media/quickstart-publish-folder-summary.png)
+    ![Podokno vlastností publikování znázorňující souhrn profilu](../deployment/media/quickstart-publish-folder-summary.png)
 
-1. Chcete-li konfigurovat nastavení nasazení, vyberte **konfigurovat** v profilu summary a vyberte **nastavení** kartu.
+1. Pokud chcete nakonfigurovat nastavení nasazení, vyberte **Konfigurovat** v souhrnu profilu a vyberte kartu **Nastavení** .
 
-    ![Nastavení profilu](../deployment/media/quickstart-profile-settings.png "nastavení profilu")
+    ![Nastavení profilu](../deployment/media/quickstart-profile-settings.png "Nastavení profilu")
 
-1. Konfigurovat možnosti, jako například, jestli se má nasadit konfigurace ladění nebo uvolnění a pak vyberte **Uložit**.
+1. Nakonfigurujte možnosti, jako je například, zda se má nasadit konfigurace ladění nebo vydání, a pak vyberte **Uložit**.
 
-1. Chcete-li znovu publikovat, vyberte **publikovat**.
+1. Pro opětovné publikování vyberte **publikovat**.
 
-Nasaďte publikované soubory žádným způsobem, který vám vyhovuje. Například je do balíčku *ZIP* souboru, použijte příkaz jednoduché kopírování nebo nasazení v balíčcích instalace podle vašeho výběru.
+Nasaďte publikované soubory jakýmkoli způsobem. Můžete je například zabalit do souboru *. zip* , použít jednoduchý příkaz pro kopírování nebo je nasadit s libovolným instalačním balíčkem podle vašeho výběru.
 
 ## <a name="next-steps"></a>Další kroky
 
 - [Nasazení aplikace .NET Core pomocí nástroje Publish](/dotnet/core/deploying/deploy-with-vs?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
 - [Balíček desktopové aplikace pro Microsoft Store (přemostění na desktop)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
-- (.NET) [Nasazení rozhraní .NET Framework a aplikace](/dotnet/framework/deployment/)
+- Platformy [Nasazení .NET Framework a aplikací](/dotnet/framework/deployment/)

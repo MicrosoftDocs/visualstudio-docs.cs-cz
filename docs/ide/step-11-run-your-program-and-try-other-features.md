@@ -5,20 +5,17 @@ ms.assetid: 656614d0-4fe7-4a67-8edc-c10919377d09
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.devlang:
-- csharp
-- vb
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d57852a356b2399a358f1636495e96a3dcec44f
-ms.sourcegitcommit: 6993bcb0d2b0067b1b7b7899bfba52c31c70b7e7
+ms.openlocfilehash: ad0489cce76642df0dd069e0a05e1e50b55d5d8f
+ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095322"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118798"
 ---
 # <a name="step-11-run-your-picture-viewer-app-and-try-other-features"></a>Krok 11: Spusťte aplikaci pro prohlížení obrázků a zkuste jiné funkce.
 
@@ -50,7 +47,7 @@ Vaše aplikace pro prohlížení obrázků je dokončená a připravená ke spu�
 
 * Použijte vlastnosti **AcceptButton** a **CancelButton** vašeho formuláře, aby se tlačítka automaticky brala, když uživatel zvolí klávesu **ENTER** nebo **ESC** . Nastavit aplikaci tak, aby otevřela dialogové okno **otevřít soubor** , když uživatel zvolí **ENTER** a zavřít pole, když uživatel zvolí **klávesu ESC**.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 Další informace najdete v následujícím kurzu:
 

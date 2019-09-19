@@ -17,19 +17,23 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a79bcf2aade3a84e0453aec1d64e37c8a6a5c24c
-ms.sourcegitcommit: 91c7f1b525e0c22d938bc4080ba4ceac2483474f
+ms.openlocfilehash: f5dd3b1dc758a9b4f7634d4b6e73ab294289d6cd
+ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67033038"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71128292"
 ---
 # <a name="measure-application-performance-by-analyzing-cpu-usage"></a>Měřit výkon aplikace díky analýze využití procesoru
-Nástroje pro profilaci v sadě Visual Studio můžete použít k analýze problémů s výkonem aplikace. V tomto postupu si ukážeme, jak používat kartu **Využití procesoru** v diagnostických nástrojích k získání dat o výkonu vaší aplikace. Diagnostické nástroje jsou podporované pro vývoj rozhraní .NET v sadě Visual Studio, včetně ASP.NET, nativního vývoje a vývoje v jazyce C++.
+
+Nástroje pro profilaci v sadě Visual Studio můžete použít k analýze problémů s výkonem aplikace. V tomto postupu si ukážeme, jak používat kartu **Využití procesoru** v diagnostických nástrojích k získání dat o výkonu vaší aplikace.
 
 Když se ladicí program pozastaví, shromáždí nástroj **Využití procesoru** informace o funkcích spuštěných ve vaší aplikaci. Nástroj zobrazí seznam funkcí, které pracovaly, a nabídce graf s časovou osou, který můžete použít k podrobnému řešení konkrétních úseků vzorkovací relace.
 
 Diagnostické centrum nabízí řadu dalších možností, jak spustit a spravovat diagnostické relace. Pokud potřebná data nezískáte nástrojem **Využití procesoru**, použijte [jiné nástroje pro profilaci](../profiling/profiling-feature-tour.md), které nabízejí různé druhy užitečných informací. V řadě případů může být kritickým bodem aplikace něco jiného než procesor, třeba paměť, vykreslování uživatelského rozhraní nebo dlouhá odezva síťového požadavku. Diagnostické centrum nabízí řadu dalších možností, jak data tohoto druhu zaznamenávat a analyzovat.
+
+> [!Important]
+> Diagnostické nástroje jsou podporované pro vývoj rozhraní .NET v sadě Visual Studio, včetně ASP.NET, nativního vývoje a vývoje v jazyce C++.
 
 V tomto článku probereme analýza využití procesoru v normální ladicí pracovní postup. Využití procesoru také můžete analyzovat bez připojeného ladicího programu nebo se můžete zaměřit na spuštěnou aplikaci. Další informace najdete v tématu věnovaném [shromažďování profilačních dat bez ladění](../profiling/running-profiling-tools-with-or-without-the-debugger.md#collect-profiling-data-without-debugging) v článku o [spuštění nástrojů pro profilaci s ladicím programem nebo bez něj](../profiling/running-profiling-tools-with-or-without-the-debugger.md).
 
@@ -41,7 +45,7 @@ V tomto kurzu se naučíte:
 > * Shromažďovat data o využití procesoru
 > * Analyzovat data o využití procesoru
 
-## <a name="step-1-collect-profiling-data"></a>Krok 1: Shromažďovat data vytváření profilů
+## <a name="step-1-collect-profiling-data"></a>Krok 1: Shromažďování dat profilace
 
 1. Otevřete projekt, který chcete v sadě Visual Studio ladit, a nastavte v aplikaci zarážku do bodu, kde chcete prověřit využití procesoru.
 
@@ -60,7 +64,7 @@ V tomto kurzu se naučíte:
 
 5. Klikněte na tlačítko **ladění** > **spustit ladění** (nebo **Start** na panelu nástrojů nebo **F5**).
 
-     Jakmile se aplikace načte, zobrazí se souhrnný přehled diagnostických nástrojů. Pokud chcete otevřít okno, klikněte na tlačítko **ladění** > **Windows** > **zobrazit diagnostické nástroje**.
+     Jakmile se aplikace načte, zobrazí se souhrnný přehled diagnostických nástrojů. Pokud potřebujete okno otevřít, klikněte na tlačítko **ladit** > **Windows** > **show diagnostické nástroje**.
 
      ![Karta Souhrn v diagnostických nástrojích](../profiling/media/diag-tools-summary-tab.png "DiagToolsSummaryTab")
 
@@ -86,7 +90,7 @@ V tomto kurzu se naučíte:
 
      ![Karta Využití procesoru v diagnostických nástrojích](../profiling/media/diag-tools-cpu-usage-tab.png "DiagToolsCPUUsageTab")
 
-9. Pokud chcete vybrat více konkrétní oblasti kódu k analýze, vyberte oblast na časové ose procesoru (musí to být oblast, která zobrazuje data profilování).
+9. Pokud chcete vybrat konkrétnější oblast kódu k analýze, vyberte oblast v časové ose procesoru (musí se jednat o oblast, která zobrazuje data profilace).
 
      ![Výběr časového úseku v diagnostických nástrojích](../profiling/media/diag-tools-select-time-segment.png "DiagToolsSelectTimeSegment")
 
@@ -109,15 +113,15 @@ Analýzu dat doporučujeme začít tím, že zkontrolujete seznam funkcí na kar
 
     ![Zobrazení Volající/volaný v diagnostických nástrojích](../profiling/media/diag-tools-caller-callee.png "DiagToolsCallerCallee")
 
-    V tomto zobrazení se vybraná funkce zobrazí v záhlaví i v poli **Aktuální funkce** (v tomto příkladu je to GetNumber). Funkce, který volal aktuální funkci je zobrazena na levé straně v části **volání funkce**, a všechny funkce volány aktuální funkcí jsou uvedeny v **volaných funkcích** pole na pravé straně. (Pokud chcete aktuální funkci změnit, vyberte libovolné pole.)
+    V tomto zobrazení se vybraná funkce zobrazí v záhlaví i v poli **Aktuální funkce** (v tomto příkladu je to GetNumber). Funkce, která se nazývá aktuální funkce, je zobrazena vlevo pod položkou **volání funkce**a všechny funkce, které jsou volány aktuální funkcí, jsou zobrazeny v poli **nazvané funkce** na pravé straně. (Pokud chcete aktuální funkci změnit, vyberte libovolné pole.)
 
     V tomto zobrazení vidíte celkový čas (ms) a procento z celkové doby spuštění aplikace, kterou funkce potřebovala k dokončení.
-    **Tělo funkce** také zobrazuje celkovou dobu (a procento času) spotřebovanou tělem funkce, ale bez doby spotřebované volajícími a volanými funkcemi. (V tomto příkladu byly 2367 mimo 2389 ms stráví v těle funkce a zbývající 22 ms byly stráveného externí kód volaných touto funkcí).
+    **Tělo funkce** také zobrazuje celkovou dobu (a procento času) spotřebovanou tělem funkce, ale bez doby spotřebované volajícími a volanými funkcemi. (V tomto příkladu bylo vyčerpáno 2367 z 2389 MS v těle funkce a zbylé 22 MS bylo vyčerpáno v externím kódu, který tato funkce volá).
 
     > [!TIP]
     > Vysoké hodnoty v **těle funkce** pravděpodobně znamenají kritické místo výkonu samotné funkce.
 
-3. Pokud chcete zobrazit vyšší úrovně zobrazení pořadí, ve kterém jsou volány funkce, vyberte **stromu volání** z rozevíracího seznamu v horní části podokna.
+3. Chcete-li zobrazit zobrazení vyšší úrovně znázorňující pořadí, ve kterém jsou funkce volány, v rozevíracím seznamu v horní části podokna vyberte možnost **strom volání** .
 
     Každé číslo na následujícím obrázku odpovídá některému kroku v postupu.
 
@@ -144,13 +148,13 @@ Analýzu dat doporučujeme začít tím, že zkontrolujete seznam funkcí na kar
     - **Moduly**: Název modulu, který funkci obsahuje, nebo počet modulů obsahujících funkce v uzlu [Externí kód].
 
     ::: moniker range=">=vs-2019"
-    Pokud chcete zobrazit volání funkce, které používají nejvyšší procento procesoru v zobrazení stromu volání, klikněte na tlačítko **rozbalit kritickou cestu**.
+    Chcete-li zobrazit volání funkce, která používají nejvyšší procento CPU ve stromovém zobrazení volání, klikněte na možnost **Rozbalit cestu k pochodu**.
 
-    ![Nástroje diagnostiky kritickou cestu](../profiling/media/vs-2019/diag-tools-hot-path.png "DiagToolsHotPath")
+    ![Horká cesta nástrojů pro diagnostiku](../profiling/media/vs-2019/diag-tools-hot-path.png "DiagToolsHotPath")
     ::: moniker-end
 
     > [!NOTE]
-    > Pokud se zobrazí kód ve stromu volání označen jako kód "přerušení" nebo "unwalkable stohování", to znamená, že události trasování událostí pro Windows (ETW) pravděpodobně byly vyřazeny. Zkuste shromažďování trasování stejné podruhé k vyřešení daného problému.
+    > Pokud se ve stromu volání zobrazí kód označený jako "porušený" kód nebo "Projděte" zásobník ", znamená to, že události trasování událostí pro Windows (ETW) byly pravděpodobně vyřazeny. Zkuste shromáždit stejné trasování podruhé, aby se problém vyřešil.
 
 ## <a name="view-external-code"></a>Zobrazit externí kód
 

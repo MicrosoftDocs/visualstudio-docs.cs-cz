@@ -5,20 +5,17 @@ ms.assetid: 9a8fe90e-c97b-4e98-b6c8-0c6b3962c49d
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.devlang:
-- csharp
-- vb
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a6c7e90f8113f5fa03da907db5dbb8f374a564e7
-ms.sourcegitcommit: 4dfe098ac0df294aad63e6b384d6575980798ca3
+ms.openlocfilehash: 772b80452c20d84b1145a5b8762365f2fe3a8e69
+ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70887916"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118829"
 ---
 # <a name="step-2-run-your-picture-viewer-app"></a>Krok 2: Spuštění aplikace pro prohlížeč obrázků
 
@@ -60,7 +57,7 @@ Tady je postup, jak aplikaci spustit.
     > [!NOTE]
     > Když aplikaci spouštíte zevnitř rozhraní IDE, nazývá se to ladění, protože to obvykle provedete tak, že v aplikaci vyhledáte a opravíte chyby (chyby). I když je tato aplikace malá a ve skutečnosti ještě nic nedělá, je to stále skutečný program. Stejný postup můžete použít ke spuštění a ladění dalších programů. Další informace o ladění naleznete v tématu [první pohled na ladicí program](../debugger/debugger-feature-tour.md).
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 * Pokud chcete přejít na další krok kurzu,  **[přejděte na krok 3: Nastavte vlastnosti](../ide/step-3-set-your-form-properties.md)** formuláře.
 

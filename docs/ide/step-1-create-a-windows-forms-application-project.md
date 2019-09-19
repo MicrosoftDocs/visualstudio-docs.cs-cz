@@ -1,26 +1,23 @@
 ---
-title: 'Krok 1: Vytvoření projektu aplikace model Windows Forms'
+title: 'Krok 1: Vytvoření projektu aplikace modelu Windows Forms'
 ms.date: 08/30/2019
 ms.assetid: 16ac2422-e720-4e3a-b511-bc2a54201a86
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
-ms.devlang:
-- csharp
-- vb
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 65339eabcffdf0f333036442ea8473ecf8c8f06e
-ms.sourcegitcommit: 4dfe098ac0df294aad63e6b384d6575980798ca3
+ms.openlocfilehash: be7b9bd67ed88b9f59ed279211bf15c96ae59569
+ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70888007"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71119009"
 ---
-# <a name="step-1-create-a-windows-forms-app-project"></a>Krok 1: Vytvoření projektu aplikace model Windows Forms
+# <a name="step-1-create-a-windows-forms-app-project"></a>Krok 1: Vytvoření projektu aplikace modelu Windows Forms
 
 Při vytváření prohlížeče obrázků je prvním krokem vytvoření projektu aplikace model Windows Forms.
 

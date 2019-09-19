@@ -10,12 +10,12 @@ metadata:
   monikerRange: '>=vs-2017'
   f1_keywords:
   - MSDNSTART
-  ms.openlocfilehash: 0853a20309869e5cde753685f20584bbd0a3e7dd
-  ms.sourcegitcommit: 78e2637e4fbfadd4509b55276816b64f5c24c606
+  ms.openlocfilehash: f8d8ed358779471d68a460ae923df5f9d316c2b0
+  ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
   ms.translationtype: MT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 09/10/2019
-  ms.locfileid: "70864668"
+  ms.lasthandoff: 09/19/2019
+  ms.locfileid: "71128264"
 highlightedContent:
   items:
   - title: Nastavení a instalace
@@ -138,7 +138,7 @@ additionalContent:
       url: test/improve-code-quality.md
     - title: Nasazení
       summary: Sdílejte své aplikace a kód pomocí Nasazení webu, InstallShield, NuGet, průběžné integrace a dalších.
-      url: deployment/index.md
+      url: deployment/index.yml
     - title: Správa verzí
       summary: Sdílení kódu pomocí technologie pro řízení verze jako je Git a TFVC.
       url: version-control/index.md
@@ -147,7 +147,7 @@ additionalContent:
       url: /azure/devops
     - title: Měření výkonu
       summary: Identifikujte kritické body a optimalizovat výkon kódu pomocí diagnostických nástrojů.
-      url: profiling/index.md
+      url: profiling/index.yml
     - title: Rozšíření
       summary: Přidáte vlastní funkce pro Visual Studio IDE, chcete-li vylepšit vaše zkušenosti s vývojem.
       url: extensibility/index.md

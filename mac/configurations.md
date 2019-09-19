@@ -1,72 +1,77 @@
 ---
 title: Principy konfigurací sestavení
-description: Tento článek popisuje různé konfigurace sestavení v sadě Visual Studio pro Mac
+description: Tento článek popisuje různé konfigurace sestavení v Visual Studio pro Mac
 author: heiligerdankgesang
 ms.author: dominicn
-ms.date: 04/14/2017
+ms.date: 09/18/2019
 ms.assetid: 78107CFA-9308-4293-A92A-9B552A259E15
-ms.openlocfilehash: 0bd35d415a60ea64c479b19cb506c58c2c346cc0
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: d1511434a34017a7f0f7da65fe1ea6956d45d497
+ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826073"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71128402"
 ---
 # <a name="understanding-build-configurations"></a>Principy konfigurací sestavení
 
-## <a name="project-build-configurations"></a>Konfigurace sestavení projektu
+Můžete ukládat různé konfigurace vlastností řešení a projektu pro použití v různých typech sestavení během procesu vývoje. Projekty vytvořené pomocí Visual Studio pro Mac, které používají šablonu, budou obvykle zahrnovat konfigurace ladění a vydání, které podporují ladění aplikace a nasazení aplikace v uvedeném pořadí. 
 
-Projekty obvykle obsahují více konfigurací a přepínání mezi nimi umožňuje různé výstupy v okamžiku sestavení. Konfigurace ladění bude například výstupu symboly pro ladění, což ladicímu programu přeložit názvy funkcí, parametry nebo proměnné z trasování zásobníku chyb aplikace. Zatímco tyto další informace jsou užitečné při vývoji, vede velikost zvýšeným souboru a není ideální pro distribuci.
+Chcete-li vytvořit vlastní konfigurace, přečtěte si téma [vytváření a úpravy konfigurací sestavení](/visualstudio/mac/create-and-edit-configurations).
 
-Každá platforma má konkrétní konfigurací pro jeho sestavení.
+>[!NOTE]
+>Toto téma se týká Visual Studio pro Mac. Informace o aplikaci Visual Studio ve Windows najdete v tématu [Principy konfigurací sestavení](/visualstudio/ide/understanding-build-configurations).
 
 ## <a name="solution-configurations"></a>Konfigurace řešení
 
-Podobají konfigurace projektu se konfigurace řešení používají k vytvoření vlastní konfigurace pro celý projekt. S použitím **mapování konfigurace** kartu **sestavení > Konfigurace** položky, můžete přiřadit cílovou konfiguraci pro každou položku řešení, jak je znázorněno na následujícím obrázku:
+Konfigurace řešení se používají k určení konfigurací pro všechny projekty v řešení. Pomocí karty **mapování konfigurace** pod položkou **Konfigurace > sestavení** můžete přiřadit cílovou konfiguraci pro každou položku v otevřeném řešení. To je znázorněno na následujícím obrázku:
 
-![Možnosti konfigurace mapování](media/projects-and-solutions-image3.png)
+![Možnosti mapování konfigurace](media/projects-and-solutions-image3.png)
 
-Další informace o konfiguracích najdete v článku [nástroje Configuration Manager](https://www.youtube.com/watch?v=tjSdkqYh5Vg) video od Jamese Montemagno.
+Další informace o konfiguracích najdete v tématu [Configuration Manager](https://www.youtube.com/watch?v=tjSdkqYh5Vg) video od James Montemagno.
+
+## <a name="project-build-configurations"></a>Konfigurace sestavení projektu
+
+Projekty mají více konfigurací. Konfigurace a platforma: cíle projektu se společně používají k určení vlastností, které se použijí při sestavení. Přepínání mezi konfiguracemi umožňuje různé výstupy v době sestavení. Například konfigurace ladění bude výstupem symbolů ladění, což umožňuje ladicímu programu překládat názvy, parametry a proměnné funkcí z chybných trasování zásobníku aplikace. I když jsou tyto další informace užitečné během vývoje, vede k neploché velikosti souborů a nejsou ideální pro distribuci.
+
+Každá platforma má specifické konfigurace pro sestavení. Stránky konfigurace sestavení pro projekty mohou být k dispozici, když přejdete na část **sestavení** v dialogovém okně **Možnosti projektu** . Otevřete toto dialogové okno tak, že kliknete pravým tlačítkem na projekt a vyberete **Možnosti** nebo dvakrát kliknete na projekt v Průzkumníku řešení.
 
 ## <a name="run-configuration"></a>Konfigurace spuštění
 
-V předchozích verzích nástroje Xamarin Studio, můžete vybrat možnost nastavit jako projekt **spouštěný projekt**, což je projekt, který je spustit/ladit při použití příkazu globální spuštění/ladění. To byl označen tučné písmo pro název projektu v oblasti projektu.
+Visual Studio pro Mac umožňuje nastavit _konfiguraci spuštění_. Konfigurace spuštění jsou uvedeny v rozevíracím seznamu na panelu nástrojů vedle selektoru konfigurace sestavení, jak je znázorněno níže:
 
-V sadě Visual Studio pro Mac, namísto nastavení spouštěný projekt, můžete nastavit _konfigurace spuštění_. Spuštění konfigurace jsou uvedeny v rozevíracím seznamu na panelu nástrojů vedle selektor konfigurace sestavení, jak je znázorněno níže:
+![Rozevírací seznam konfigurace spuštění](media/projects-and-solutions-image8.png)
 
-![Spustit rozevíracího seznamu konfigurace](media/projects-and-solutions-image8.png)
+Konfigurace spuštění je sada možností spuštění s názvem a několika konfiguracemi, které jsou definovány v projektu pro různé účely. Konfigurace spuštění jsou definovány na úrovni projektu a výchozí nastavení se vytvoří automaticky pro každý spustitelný projekt, i když je možné přidat tolik, kolik potřebujete. Některé typy projektů automaticky generují další konfigurace spuštění. Například projekty watchOS mohou generovat _přehledy a konfigurace oznámení._
 
-Konfigurace spuštění je sada možností spuštění s názvem a některé konfigurace, které jsou definovány v projektu pro různé účely. Spuštění konfigurace jsou definovány na úrovni projektu a výchozí vytvoří automaticky pro každý spustitelný projekt, i když je možné přidat, kolik potřebné. Některé typy projektu automaticky generovat další konfigurace spuštění. Například na projekty watchOS mohou generovat _konfigurace přehledu a oznámení._
+Konfigurace je možné sdílet s jinými vývojáři (v takovém případě se konfigurace uloží v souboru. csproj) nebo v místním prostředí (v takovém případě budou uloženy v souboru. User).
 
-Konfigurace můžete sdílet s ostatními vývojáři (v takovém případě bude se vaše konfigurace bude uložen v souboru .csproj) nebo uložený místně (v takovém případě budou uloženy v souboru .user).
+### <a name="android-run-configurations"></a>Konfigurace spuštění Androidu
 
-### <a name="android-run-configurations"></a>Android konfigurace spuštění
+Konfigurace spuštění pro projekty v systému Android umožňují zadání konkrétní aktivity, služby nebo přijímače všesměrového vysílání, které se spustí při spuštění nebo ladění projektu. Můžete předat dodatečné data a nastavit příznaky záměru k otestování komponent v rámci různých podmínek spuštění.
 
-Spuštění konfigurace pro projekty pro Android umožňují určit, kterou aktivitu, službu nebo přijímač všesměrového vysílání spustit při spuštění nebo ladění projektu. Můžete předat záměru doplňující data a Nastavení záměru příznaků, které mít možnost Testovat vaše komponenty v rámci podmínek pro jiný spuštění.
+Jiné aktivity než `MainLauncher` musí být `Exported=true` přidány do atributu Activity pro ladění na fyzickém zařízení nebo mají definovány filtry záměrů.
 
-Aktivity jinak než `MainLauncher` bude muset mít `Exported=true` přidána do aktivity atribut pro ladění na fyzickém zařízení, nebo jste definovali záměru filtry.
+## <a name="examples-of-data-that-might-be-included-in-run-configurations"></a>Příklady dat, která mohou být součástí konfigurací spuštění
 
-## <a name="examples-of-data-that-might-be-included-in-run-configurations"></a>Mezi data, která může být součástí konfigurace spuštění
+Následující seznam obsahuje příklady dat, která mohou být součástí konfigurací spuštění:
 
-Následující seznam obsahuje několik příkladů dat, která může být součástí konfigurace spuštění:
-
-* Pravidelné projektové .NET
-  * Alternativní umístění pro spouštění aplikací
+* Běžný projekt .NET
+  * Alternativní úvodní aplikace
   * Počáteční argumenty
   * Pracovní adresář
   * Proměnné prostředí
-  * Modul mono runtime možnosti (který se má použít jenom při spouštění v Mono)
+  * Možnosti Mono runtime (budou použity pouze při spuštění na mono)
 * Projekt pro Android
-  * Vstupní bod (aktivity, služby, příjemce)
-  * Záměru argumenty a data
-* projekt pro iOS
+  * Vstupní bod (aktivita, služba, přijímač)
+  * Argumenty záměru a data
+* projekt iOS
   * Režim (normální, načítání na pozadí)
 * projekt rozšíření pro iOS
-  * Při spuštění aplikace: výchozí nebo vlastní
+  * Aplikace po spuštění: výchozí nebo vlastní
 * Projekt WatchKit
-  * Režim (první pohled, oznámení)
+  * Režim (stručný přehled, oznámení)
   * Datová část oznámení
 
 ## <a name="see-also"></a>Viz také:
 
-- [Principy konfigurací sestavení (Visual Studio na Windows)](/visualstudio/ide/understanding-build-configurations)
+- [Principy konfigurací sestavení (Visual Studio ve Windows)](/visualstudio/ide/understanding-build-configurations)

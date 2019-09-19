@@ -1,70 +1,75 @@
 ---
 title: Vytváření a úpravy konfigurací sestavení
-description: Tento článek popisuje vytváření konfigurací sestavení v sadě Visual Studio pro Mac
+description: Tento článek popisuje vytvoření konfigurací sestavení v Visual Studio pro Mac
 author: heiligerdankgesang
 ms.author: dominicn
-ms.date: 05/06/2018
+ms.date: 09/18/2019
 ms.assetid: CC1B72D6-12FF-4CCC-A9D4-00F2DC14589F
 ms.custom: video
-ms.openlocfilehash: 09591cb4feee4e9dc673f925bf3917eb3d07319b
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.openlocfilehash: 26f6e25bfe1284fc31bcd484b905bf5d75c2ba15
+ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67693077"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71128423"
 ---
 # <a name="creating-and-editing-build-configurations"></a>Vytváření a úpravy konfigurací sestavení
 
-Vytvoření konfigurace je možné vytvořit pro jednotlivé projekty nebo v rámci celého řešení. Tyto konfigurace poskytují mít naprostou kontrolu nad sestavení.
+Konfigurace sestavení vám poskytují přesnou kontrolu nad sestavením, které vám umožní vytvářet konfigurace pro stravování v různých situacích testování a distribuce. Můžete vytvářet konfigurace sestavení pro jednotlivé projekty nebo na úrovni jednotlivých řešení.
 
-Nabídka možnosti pro projekty a řešení poskytují prostor pro vytvoření a úprava konfigurací nové i stávající.
+Pomocí dialogového okna Možnosti projektu můžete vytvořit nové konfigurace a upravit stávající pro oba projekty a řešení.
 
-## <a name="creating-a-project-build-configurations"></a>Vytváření konfigurace sestavení projektu
+>[!NOTE]
+>Toto téma se týká Visual Studio pro Mac. V případě sady Visual Studio ve Windows [, přečtěte si téma How to: Vytvářejte a upravujte konfigurace](/visualstudio/ide/how-to-create-and-edit-configurations).
 
-Chcete-li vytvořit vlastní proces sestavení projektu, proveďte následující kroky:
+## <a name="creating-a-project-build-configuration"></a>Vytváření konfigurace sestavení projektu
 
-1. Klikněte pravým tlačítkem na uzel projektu a vyberte **možnosti**.
+Chcete-li vytvořit konfiguraci sestavení projektu, použijte následující postup:
 
-2. V dialogovém okně Možnosti projektu vyberte **sestavení > Konfigurace**:
+1. Klikněte pravým tlačítkem myši na uzel projektu a vyberte **možnost možnosti**. Můžete také dvakrát kliknout na uzel projektu a vyvolat tak dialogové okno Možnosti projektu.
+
+2. V dialogovém okně Možnosti projektu vyberte **sestavení > konfigurace**:
 
     ![Správce konfigurace v možnostech projektu](media/create-and-edit-configurations-image2.png)
 
-3. Chcete-li vytvořit novou konfiguraci, vyberte **přidat**. Alternativně můžete zkopírovat jednu z existujících konfigurací.
+3. Pokud chcete vytvořit novou konfiguraci, vyberte **Přidat** . Můžete také zkopírovat jakoukoli existující konfiguraci.
 
-Po vytvoření konfigurace můžete použít **sestavení** části v možnostech projektu pro přizpůsobení vlastnosti odpovídající konfigurace:
+Po vytvoření konfigurace můžete použít část **sestavení** v možnostech projektu pro přizpůsobení vlastností, které jsou vhodné pro vaši konfiguraci:
 
-![Konfigurace možností sestavení](media/create-and-edit-configurations-image3.png)
+![Konfigurovat možnosti sestavení](media/create-and-edit-configurations-image3.png)
 
 ## <a name="creating-a-solution-build-configuration"></a>Vytváření konfigurace sestavení řešení
 
-Vytvoření konfigurace sestavení řešení proveďte následující kroky:
+Chcete-li vytvořit konfiguraci sestavení řešení, postupujte podle následujících kroků:
 
-1. Klikněte pravým tlačítkem na uzel řešení a vyberte **možnosti**.
+1. Klikněte pravým tlačítkem na uzel řešení a vyberte **Možnosti**. Můžete také dvakrát kliknout na uzel řešení a vyvolat tak dialogové okno Možnosti řešení.
 
-2. V dialogovém okně Možnosti řešení vyberte **sestavení > Konfigurace**:
+2. V dialogovém okně Možnosti řešení vyberte **sestavení > konfigurace**:
 
-    ![Správce konfigurace v řešení možnosti](media/create-and-edit-configurations-image1.png)
+    ![Správce konfigurace v možnostech řešení](media/create-and-edit-configurations-image1.png)
 
-3. Chcete-li vytvořit novou konfiguraci, vyberte **přidat**. Alternativně můžete zkopírovat jednu z existujících konfigurací.
+3. Pokud chcete vytvořit novou konfiguraci, vyberte **Přidat** . Můžete také zkopírovat jakoukoli existující konfiguraci.
 
-Po vytvoření konfigurace můžete použít **sestavení** části každého projektu možnosti pro přizpůsobení vlastnosti odpovídající konfigurace:
+Po vytvoření konfigurace můžete použít část **sestavení** v dialogovém okně Možnosti projektu pro každý z vašich projektů k přizpůsobení vlastností, které jsou vhodné pro vaši konfiguraci:
 
-![Konfigurace možností sestavení](media/create-and-edit-configurations-image3.png)
+![Konfigurovat možnosti sestavení](media/create-and-edit-configurations-image3.png)
 
-## <a name="editing-a-build-configuration"></a>Úprava konfigurace sestavení
+## <a name="renaming-a-build-configuration"></a>Přejmenování konfigurace sestavení
 
-Přejmenovat konfiguraci, vyberte ho ze seznamu konfigurace v projektu nebo řešení možnosti:
+Pokud chcete přejmenovat konfiguraci, vyberte ji ze seznamu konfigurace tak, že přejdete na **sestavení > konfigurací** v projektu nebo v možnostech řešení:
 
-![Konfigurace seznamu](media/create-and-edit-configurations-image4.png)
+![seznam konfigurací](media/create-and-edit-configurations-image4.png)
 
-Vyberte **přejmenovat** tlačítko.
+Vyberte tlačítko **Přejmenovat** .
 
-![Dialogové okno přejmenování](media/create-and-edit-configurations-image5.png)
+![Dialogové okno Přejmenovat](media/create-and-edit-configurations-image5.png)
 
-## <a name="related-video"></a>Související videa
+Pak kliknutím na **OK** potvrďte.
+
+## <a name="related-video"></a>Související video
 
 > [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Visual-Studio-for-Mac-Launch-Multiple-Projects/player]
 
 ## <a name="see-also"></a>Viz také:
 
-- [Vytvoření a úprava konfigurací sestavení (Visual Studio na Windows)](/visualstudio/ide/how-to-create-and-edit-configurations)
+- [Vytváření a úpravy konfigurací sestavení (Visual Studio ve Windows)](/visualstudio/ide/how-to-create-and-edit-configurations)

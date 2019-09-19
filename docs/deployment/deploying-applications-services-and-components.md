@@ -23,16 +23,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: cf78e17d4d804c94392da045a90c98869319d185
-ms.sourcegitcommit: fe212f8960d7882a1b0fdae9e22f008996aacf3c
+ms.openlocfilehash: 02e8beae03dc2828d81b80813325300fe31b3cea
+ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222624"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71128160"
 ---
 # <a name="first-look-at-deployment-in-visual-studio"></a>První pohled na nasazení v aplikaci Visual Studio
 
-Nasazením aplikace, služby nebo součásti ji distribuujete pro instalaci na jiné počítače, zařízení nebo servery nebo v cloudu. V sadě Visual Studio můžete zvolit vhodnou metodu pro potřebný typ nasazení. (Řada typů aplikací podporuje jiné nástroje pro nasazení, jako je například nasazení na příkazovém řádku nebo NuGet, které zde nejsou popsané.)
+Nasazením aplikace, služby nebo součásti ji distribuujete pro instalaci na jiné počítače, zařízení nebo servery nebo v cloudu. V sadě Visual Studio můžete zvolit vhodnou metodu pro potřebný typ nasazení. (Řada typů aplikací podporuje jiné nástroje pro nasazení, jako je například nasazení příkazového řádku, které zde nejsou popsané.)
 
 Podrobné pokyny k nasazení najdete v tématu rychlé starty a kurzy. Přehled možností nasazení najdete v tématu [Jaké možnosti publikování jsou pro mě nejvhodnější?](deploying-applications-services-and-components-resources.md#what-publishing-options-are-right-for-me).
 
@@ -44,7 +44,7 @@ Nasazení do místní složky se obvykle používá pro testování nebo pro zah
 
     ![Zvolit publikování](../deployment/media/quickstart-publish.png)
 
-- **Plocha Windows** Desktopovou aplikaci pro Windows můžete publikovat do složky pomocí nasazení ClickOnce. Uživatelé pak mohou aplikaci nainstalovat jediným kliknutím. Další informace najdete v tématu [nasazení desktopové aplikace pomocí](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) technologie ClickOnceC# (a Visual Basic). V C++případě/CLR si přečtěte téma [nasazení nativní aplikace pomocí ClickOnce](/cpp/windows/clickonce-deployment-for-visual-cpp-applications) nebo pro CC++/, viz [nasazení nativní aplikace pomocí projektu instalace](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project).
+- **Plocha Windows** Desktopovou aplikaci pro Windows můžete publikovat do složky pomocí nasazení ClickOnce. Uživatelé pak mohou aplikaci nainstalovat jediným kliknutím. Další informace najdete v tématu [nasazení desktopové aplikace pomocí](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) technologie ClickOnceC# (a Visual Basic). V C++případě/CLI si přečtěte téma [nasazení nativní aplikace pomocí ClickOnce](/cpp/windows/clickonce-deployment-for-visual-cpp-applications) nebo pro CC++/, viz [nasazení nativní aplikace pomocí projektu instalace](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project).
 
 ## <a name="publish-to-azure"></a>Publikování do Azure
 
@@ -83,7 +83,7 @@ Nasazení do místní složky se obvykle používá pro testování nebo pro zah
 
     Aplikace a služby ASP.NET můžete také nasadit různými způsoby. Další informace najdete v tématu [nasazení webových aplikací a služeb ASP.NET](http://www.asp.net/aspnet/overview/deployment).
 
-- **Plocha Windows** Pomocí nasazení ClickOnce můžete publikovat desktopovou aplikaci pro Windows na webový server nebo do síťové sdílené složky. Uživatelé pak mohou aplikaci nainstalovat jediným kliknutím. Další informace najdete v tématu [nasazení desktopové aplikace pomocí](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) technologie ClickOnceC# (a Visual Basic). V C++případě/CLR si přečtěte téma [nasazení nativní aplikace pomocí ClickOnce](/cpp/windows/clickonce-deployment-for-visual-cpp-applications) nebo pro CC++/, viz [nasazení nativní aplikace pomocí projektu instalace](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project).
+- **Plocha Windows** Pomocí nasazení ClickOnce můžete publikovat desktopovou aplikaci pro Windows na webový server nebo do síťové sdílené složky. Uživatelé pak mohou aplikaci nainstalovat jediným kliknutím. Další informace najdete v tématu [nasazení desktopové aplikace pomocí](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) technologie ClickOnceC# (a Visual Basic). V C++případě/CLI si přečtěte téma [nasazení nativní aplikace pomocí ClickOnce](/cpp/windows/clickonce-deployment-for-visual-cpp-applications) nebo pro CC++/, viz [nasazení nativní aplikace pomocí projektu instalace](/cpp/windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project).
 
 ## <a name="publish-to-microsoft-store"></a>Publikovat do Microsoft Store
 
@@ -93,9 +93,9 @@ Ze sady Visual Studio můžete vytvořit balíčky aplikací pro nasazení do Mi
 
     ![Vytvoření balíčku aplikace](../deployment/media/feature-tour-create-app-package.jpg)
 
-- **Plocha Windows**: Do Microsoft Store můžete nasadit pomocí mostu pro stolní počítače počínaje verzí Visual Studio 2017 verze 15,4. Pokud to chcete provést, Začněte vytvořením projektu pro vytváření balíčků aplikací pro Windows. Další informace najdete v tématu [zabalení desktopové aplikace pro Microsoft Store (most pro stolní počítače)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net).
+- **Plocha Windows**: Můžete nasadit na Microsoft Store počínaje verzí Visual Studio 2017 verze 15,4. Pokud to chcete provést, Začněte vytvořením projektu pro vytváření balíčků aplikací pro Windows. Další informace najdete v tématu [zabalení desktopové aplikace pro Microsoft Store](/windows/msix/desktop/desktop-to-uwp-packaging-dot-net).
 
-    ![Most pro stolní počítače](../deployment/media/feature-tour-desktop-bridge.png)
+    ![Zabalení desktopové aplikace](../deployment/media/feature-tour-desktop-bridge.png)
 
 ## <a name="deploy-net-packages-to-nugetorg"></a>Nasazení balíčků .NET do NuGet.org
 
@@ -150,7 +150,7 @@ K povolení průběžného nasazování aplikace můžete použít Azure Pipelin
 | **WCF nebo služba OData** | Jiné aplikace mohou používat služby WCF RIA, které nasadíte na webový server. | [Vývoj a nasazení WCF Data Services](/dotnet/framework/data/wcf/developing-and-deploying-wcf-data-services) |
 | **Aplikace LightSwitch** | LightSwitch již není v sadě Visual Studio 2017 podporován, ale lze jej stále nasadit ze sady Visual Studio 2015 a starší. | [Nasazení aplikací LightSwitch](https://msdn.microsoft.com/Library/4818d933-295c-4ecc-9148-7ad9ca28dcdb) |
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 V tomto kurzu jste si vybrali rychlý přehled možností nasazení pro různé aplikace.
 

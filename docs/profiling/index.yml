@@ -1,0 +1,60 @@
+### YamlMime:Landing
+title: Měřit výkon aplikace v sadě Visual Studio
+summary: Profilace a Diagnostika nástroje pomáhají diagnostikovat paměť a využití procesoru a dalších problémů na úrovni aplikací. Pomocí těchto nástrojů můžete shromažďovat údaje o výkonu při spuštění aplikace.
+metadata:
+  title: Měření výkonu v aplikaci Visual Studio
+  description: Naučte se používat Visual Studio k měření výkonu pomocí nástrojů pro profilaci.
+  ms.topic: landing-page
+  author: mikejo5000
+  ms.author: mikejo
+  manager: jillfra
+  ms.date: 09/17/2019
+  ms.openlocfilehash: fcb3e40870d6f916cf754368359a90215ce1b665
+  ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+  ms.translationtype: MT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 09/19/2019
+  ms.locfileid: "71130641"
+landingContent:
+- title: O profilaci
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: První pohled na nástroje pro profilaci
+      url: profiling-feature-tour.md
+  - linkListType: concept
+    links:
+    - text: Způsoby spuštění nástrojů pro profilaci
+      url: running-profiling-tools-with-or-without-the-debugger.md
+- title: Začínáme
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Analýza využití procesoru (C#, Visual Basic)
+      url: quickstart-cpu-usage-managed.md
+    - text: Analýza využití procesoru (C++)
+      url: quickstart-cpu-usage-native.md
+    - text: Analýza využití procesoru (ASP.NET)
+      url: quickstart-cpu-usage-aspnet.md
+  - linkListType: tutorial
+    links:
+    - text: Začínáme s analýzou využití CPU
+      url: beginners-guide-to-performance-profiling.md
+    - text: Začít s měřením využití paměti
+      url: beginners-guide-to-performance-profiling.md
+- title: Další nástroje pro výkon
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Tipy pro výkon
+      url: perftips.md
+    - text: Analyzovat spotřebu prostředků (XAML)
+      url: application-timeline.md
+    - text: Analýza využití GPU (Direct3D)
+      url: gpu-usage.md
+    - text: Analýza využití sítě (UWP)
+      url: network-usage.md
+    - text: Analýza využití energie (UWP)
+      url: analyze-energy-use-in-store-apps.md
+    - text: Prohlížeč výkonu (starší verze)
+      url: performance-explorer.md

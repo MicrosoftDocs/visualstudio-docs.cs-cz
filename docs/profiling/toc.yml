@@ -1,5 +1,5 @@
 - name: Dokumentace k profilaci
-  href: index.md
+  href: index.yml
 - name: Přehled
   href: profiling-overview.md
 - name: Rychlý start
