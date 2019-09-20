@@ -523,6 +523,8 @@
                   href: ca1823-avoid-unused-private-fields.md
                 - name: 'CA1824: Označte sestavení pomocí NeutralResourcesLanguageAttribute'
                   href: ca1824-mark-assemblies-with-neutralresourceslanguageattribute.md
+                - name: 'CA1825: Vyhněte se přidělení pole s nulovou délkou.'
+                  href: ca1825.md
             - name: Upozornění přenositelnosti
               items:
                 - name: Přehled
