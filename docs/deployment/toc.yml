@@ -1,5 +1,5 @@
 - name: Dokumentace k nasazení
-  href: index.md
+  href: index.yml
 - name: Přehled
   items:
     - name: Přehled nasazování
@@ -22,8 +22,8 @@
       items:
         - name: Nasazení aplikace .NET Core pomocí nástroje Publish
           href: /dotnet/core/deploying/deploy-with-vs
-        - name: Balíček desktopové aplikace pro Microsoft Store (přemostění na desktop)
-          href: /windows/uwp/porting/desktop-to-uwp-packaging-dot-net
+        - name: Zabalení desktopové aplikace pro Microsoft Store
+          href: /windows/msix/desktop/desktop-to-uwp-packaging-dot-net
         - name: Nasazení desktopové aplikace pomocí technologie ClickOnce
           href: how-to-publish-a-clickonce-application-using-the-publish-wizard.md
         - name: Vytváření aplikací ClickOnce z příkazového řádku
@@ -38,14 +38,12 @@
           href: tutorial-import-publish-settings-azure.md
         - name: Průběžné nasazování ASP.NET Core do Azure s Gitem
           href: /aspnet/core/publishing/azure-continuous-deployment
-        - name: Publikování do Kubernetes pomocí rozšíření Visual Studio Kubernetes Tools
-          href: ../containers/tutorial-kubernetes-tools.md?toc=/visualstudio/deployment/toc.json
     - name: C++
       items:
         - name: Nasazení aplikace v jazyce C/C++
           href: /cpp/ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project
-        - name: Balíček desktopové aplikace pro Microsoft Store (přemostění na desktop)
-          href: /windows/uwp/porting/desktop-to-uwp-packaging-dot-net
+        - name: Zabalení desktopové aplikace pro Microsoft Store
+          href: /windows/msix/desktop/desktop-to-uwp-packaging-dot-net
         - name: Nasazení aplikace v jazyce C/C++ pomocí technologie ClickOnce...
           href: /cpp/ide/clickonce-deployment-for-visual-cpp-applications
     - name: UWP
