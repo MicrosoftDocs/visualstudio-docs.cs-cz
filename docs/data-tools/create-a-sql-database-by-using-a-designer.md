@@ -1,7 +1,7 @@
 ---
-title: Vytvoření souboru databáze a Návrhář tabulky
-description: Kurz, který popisuje, jak přidat tabulky a cizí klíče k databázi pomocí Návrháře tabulky v sadě Visual Studio. Také ukazuje, jak přidat data prostřednictvím grafického rozhraní.
-ms.date: 11/03/2017
+title: Vytvoření databázového souboru a použití Návrháře tabulky
+description: Kurz popisující, jak přidat tabulky a cizí klíče do databáze pomocí Návrháře tabulky v aplikaci Visual Studio. Také ukazuje, jak přidat data prostřednictvím grafického rozhraní.
+ms.date: 09/19/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - database tables, creating
@@ -13,177 +13,169 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6f227a7948f5a842120341432c03747119988ddf
-ms.sourcegitcommit: aeb1a1135dd789551e15aa5124099a5fe3f0f32b
+ms.openlocfilehash: 595b8ea35799effd36e4a8599c61b3ab42efb940
+ms.sourcegitcommit: a1e899248adaf104697fa7dea32a36e69e9cc119
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66501074"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71159958"
 ---
-# <a name="create-a-database-and-add-tables-in-visual-studio"></a>Vytvoření databáze a přidání tabulek v sadě Visual Studio
+# <a name="create-a-database-and-add-tables-in-visual-studio"></a>Vytvoření databáze a přidání tabulek v aplikaci Visual Studio
 
-Visual Studio můžete použít k vytvoření a aktualizaci souboru místní databáze v serveru SQL Server Express LocalDB. Můžete také vytvořit databázi spuštěním příkazů jazyka Transact-SQL v **Průzkumník objektů systému SQL Server** panelu nástrojů v sadě Visual Studio. V tomto tématu vytvoříme *.mdf* a přidejte tabulkami a klíči pomocí Návrháře tabulky.
+Můžete použít Visual Studio k vytvoření a aktualizaci místního databázového souboru v SQL Server Express LocalDB. Databázi můžete vytvořit také spuštěním příkazů jazyka Transact-SQL v okně nástroje **Průzkumník objektů systému SQL Server** v aplikaci Visual Studio. V tomto tématu vytvoříme soubor *. mdf* a přidáte tabulky a klíče pomocí Návrháře tabulky.
 
 ## <a name="prerequisites"></a>Požadavky
 
-K dokončení tohoto návodu, musíte mít nepovinný **ukládání a zpracování dat** úlohy nainstalovaná v sadě Visual Studio. Ho Pokud chcete nainstalovat, otevřete **instalační program sady Visual Studio** a zvolte **změnit** nebo **Další** > **změnit** vedle verze Visual Studio, kterou chcete upravit.
-
-::: moniker range=">=vs-2019"
-
-Na **úlohy** ve skupině **další sady nástrojů**, zvolte **ukládání a zpracování dat**a potom klikněte na tlačítko **změnit** přidat úlohy Visual Studio.
-
-::: moniker-end
-
-::: moniker range="=vs-2017"
-
-Na **úlohy** ve skupině **Web a Cloud**, zvolte **ukládání a zpracování dat**a potom klikněte na tlačítko **změnit** přidat úlohy Visual Studio.
-
-::: moniker-end
+K dokončení tohoto Názorného postupu budete potřebovat úlohy pro **vývoj desktopových** aplikací pro .NET a **ukládání a zpracování dat,** které jsou nainstalované v aplikaci Visual Studio. Pokud je chcete nainstalovat, otevřete **instalační program pro Visual Studio** a vyberte možnost **Upravit** (nebo **Další** > **Upravit**) vedle verze sady Visual Studio, kterou chcete upravit.
 
 ## <a name="create-a-project-and-a-local-database-file"></a>Vytvoření projektu a lokálního databázového souboru
 
-1. Vytvořte nový **aplikace Windows Forms** projektu a pojmenujte ho **SampleDatabaseWalkthrough**.
+1. Vytvořte nový projekt **aplikace model Windows Forms** a pojmenujte ho **SampleDatabaseWalkthrough**.
 
-2. Na panelu nabídek vyberte **projektu** > **přidat novou položku**.
+2. Na panelu nabídek vyberte **projekt** > **Přidat novou položku**.
 
-3. V seznamu šablon položek, přejděte dolů a vyberte **databáze založené na službě**.
+3. V seznamu šablon položek přejděte dolů a vyberte možnost **databáze na základě služby**.
 
-     ![Dialogové okno šablon položek](../data-tools/media/raddata-vsitemtemplates.png)
+   ![Šablony položek – dialogové okno](../data-tools/media/raddata-vsitemtemplates.png)
 
-4. Pojmenujte databázi **SampleDatabase**a potom klikněte na tlačítko **přidat**.
+4. Pojmenujte databázi **SampleDatabase**a pak klikněte na **Přidat**.
 
 ### <a name="add-a-data-source"></a>Přidání zdroje dat
 
-1. Pokud **zdroje dat** okno není otevřeno, otevřete ho stisknutím kombinace kláves **Shift**+**Alt**+**D** nebo jeho výběru **Zobrazení** > **ostatní Windows** > **zdroje dat** na řádku nabídek.
+1. Pokud není okno **zdroje dat** otevřené, otevřete ho stisknutím klávesy **SHIFT**+**ALT**+**D** nebo výběrem možnosti **Zobrazit** > **ostatní** > **zdroje dat** Windows na panel nabídek.
 
-1. V **zdroje dat** okna, vyberte **přidat nový zdroj dat** odkaz.
+1. V okně **zdroje dat** vyberte **Přidat nový zdroj dat**.
 
-   **Průvodce konfigurací zdroje dat** otevře.
+   ![Přidat nový zdroj dat v aplikaci Visual Studio](media/add-new-data-source.png)
 
-1. Na **zvolte typ zdroje dat** zvolte **databáze** a klikněte na tlačítko **Další**.
+   Otevře se **Průvodce konfigurací zdroje dat** .
 
-1. Na **vyberte databázový Model** zvolte **Další** přijměte výchozí nastavení (datová sada).
+1. Na stránce **Zvolte typ zdroje dat** zvolte možnost **databáze** a pak klikněte na tlačítko **Další**.
 
-1. Na **vyberte datové připojení** stránky, vyberte **SampleDatabase.mdf** souboru v rozevíracím seznamu a klikněte na tlačítko **Další**.
+1. Na stránce **výběr databázového modelu** přijměte výchozí nastavení (datová sada) kliknutím na tlačítko **Další** .
 
-1. Na **uložit připojovací řetězec do konfiguračního souboru aplikace** zvolte **Další**.
+1. Na stránce **Vyberte datové připojení** vyberte v rozevíracím seznamu soubor **SampleDatabase. mdf** a klikněte na tlačítko **Další**.
 
-1. Jeden **zvolte vaše databázové objekty** stránky, zobrazí se zpráva, že databáze neobsahuje žádné objekty. Zvolte **Dokončit**.
+1. Na stránce **Uložit připojovací řetězec do konfiguračního souboru aplikace** klikněte na tlačítko **Další**.
+
+1. Na stránce **Výběr databázových objektů** se zobrazí zpráva oznamující, že databáze neobsahuje žádné objekty. Zvolte **Dokončit**.
 
 ### <a name="view-properties-of-the-data-connection"></a>Zobrazit vlastnosti datového připojení
 
-Připojovací řetězec můžete zobrazit *SampleDatabase.mdf* souboru tak, že otevřete okno Vlastnosti datového připojení:
+Připojovací řetězec pro soubor *SampleDatabase. mdf* můžete zobrazit otevřením okno Vlastnosti datového připojení:
 
-- Vyberte **zobrazení** > **Průzkumník objektů systému SQL Server** otevřít **Průzkumník objektů systému SQL Server** okna. Rozbalte **(localdb) \MSSQLLocalDB** > **databází**a potom klikněte pravým tlačítkem na *SampleDatabase.mdf* a vyberte **vlastnosti**.
+- Vyberte **zobrazení** > **Průzkumník objektů systému SQL Server** a otevřete **Průzkumník objektů systému SQL Server** okno. Rozbalte **(LocalDB) \MSSQLLocalDB** > **databáze**a potom klikněte pravým tlačítkem na *SampleDatabase. mdf* a vyberte **vlastnosti**.
 
-- Alternativně můžete vybrat **zobrazení** > **Průzkumníka serveru**, pokud toto okno ještě není otevřený. Otevřete okno vlastností rozbalením **datová připojení** uzel, otevřete místní nabídku pro *SampleDatabase.mdf*a pak vyberete **vlastnosti**.
+- Případně můžete vybrat možnost **Zobrazit** > **Průzkumník serveru**, pokud už toto okno není otevřené. Otevřete okno Vlastnosti rozbalením uzlu **datová připojení** , kliknutím pravým tlačítkem myši na *SampleDatabase. mdf*a následným výběrem **vlastností**.
 
-## <a name="create-tables-and-keys-by-using-table-designer"></a>Vytvoření tabulky a klíče pomocí Návrháře tabulky
+## <a name="create-tables-and-keys-by-using-table-designer"></a>Vytváření tabulek a klíčů pomocí Návrháře tabulky
 
-V této části vytvoříte dvě tabulky, primární klíč v každé tabulce a několik řádků ukázkových dat. Také vytvoříte cizí klíč k určení, jak záznamy v jedné tabulce odpovídat záznamům v druhé tabulce.
+V této části vytvoříte dvě tabulky, primární klíč v každé tabulce a několik řádků ukázkových dat. Také vytvoříte cizí klíč k určení způsobu, jakým budou záznamy v jedné tabulce odpovídat záznamům v druhé tabulce.
 
-### <a name="create-the-customers-table"></a>Vytvoření tabulky Zákazníci
+### <a name="create-the-customers-table"></a>Vytvoření tabulky Customers
 
-1. V **Průzkumníka serveru**, rozbalte **datová připojení** uzel a potom rozbalte **SampleDatabase.mdf** uzlu.
+1. V **Průzkumník serveru**rozbalte uzel **datová připojení** a poté rozbalte uzel **SampleDatabase. mdf** .
 
-2. Otevřete místní nabídku pro **tabulky**a pak vyberte **přidat novou tabulku**.
+2. Klikněte pravým tlačítkem na **tabulky** a vyberte **Přidat novou tabulku**.
 
-     **Návrháře tabulky** otevře a zobrazí mřížku s jedním výchozím řádkem, který představuje jeden sloupec v tabulce, kterou vytváříte. Přidáním řádků do mřížky přidáte další sloupce v tabulce.
+   Návrhář tabulky otevře a zobrazí mřížku s jedním výchozím řádkem, který představuje jeden sloupec v tabulce, kterou vytváříte. Přidáním řádků do mřížky přidáte další sloupce v tabulce.
 
 3. V mřížce přidejte řádek pro každou z následujících položek:
 
-    |Název sloupce|Datový typ|Povolit hodnoty NULL|
-    |-----------------|---------------|-----------------|
-    |`CustomerID`|`nchar(5)`|Nepravda (nezaškrtnuto)|
-    |`CompanyName`|`nvarchar(50)`|Nepravda (nezaškrtnuto)|
-    |`ContactName`|`nvarchar (50)`|Pravda (zaškrtnuto)|
-    |`Phone`|`nvarchar (24)`|Pravda (zaškrtnuto)|
+   |Název sloupce|Datový typ|Povolit hodnoty NULL|
+   |-----------------|---------------|-----------------|
+   |`CustomerID`|`nchar(5)`|Nepravda (nezaškrtnuto)|
+   |`CompanyName`|`nvarchar(50)`|Nepravda (nezaškrtnuto)|
+   |`ContactName`|`nvarchar (50)`|Pravda (zaškrtnuto)|
+   |`Phone`|`nvarchar (24)`|Pravda (zaškrtnuto)|
 
-4. Otevřete místní nabídku `CustomerID` řádku a potom vyberte **nastavit primární klíč**.
+4. Klikněte pravým tlačítkemna řádekapakvybertenastavitprimární`CustomerID` klíč.
 
-5. Otevřete místní nabídku pro výchozí řádek a pak vyberte **odstranit**.
+5. Klikněte pravým tlačítkem na výchozí řádek (`Id`) a pak vyberte **Odstranit**.
 
 6. Pojmenujte tabulku Zákazníci prostřednictvím aktualizace prvního řádku v podokně se skriptem tak, aby odpovídala následující ukázce:
 
-    ```sql
-    CREATE TABLE [dbo].[Customers]
-    ```
+   ```sql
+   CREATE TABLE [dbo].[Customers]
+   ```
 
-    By měl vypadat přibližně takto:
+   Mělo by se zobrazit něco podobného:
 
-    ![Návrhář tabulky](../data-tools/media/raddata-table-designer.png)
+   ![Návrhář tabulky](../data-tools/media/table-designer.png)
 
-7. V levém horním rohu **návrháře tabulky**vyberte **aktualizace**.
+7. V levém horním rohu **Návrháře tabulky**vyberte **aktualizovat**.
 
-8. V **náhled aktualizací databáze** dialogu **aktualizace databáze**.
+8. V dialogovém okně **Náhled aktualizací databáze** vyberte **aktualizovat databázi**.
 
-    Vaše změny jsou uloženy do lokálního databázového souboru.
+   Tabulka Customers (zákazníci) se vytvoří v souboru místní databáze.
 
-### <a name="create-the-orders-table"></a>Vytvoření tabulky objednávek
+### <a name="create-the-orders-table"></a>Vytvoření tabulky Orders
 
 1. Přidejte další tabulku a potom přidejte řádek pro každou položku v následující tabulce:
 
-    |Název sloupce|Datový typ|Povolit hodnoty NULL|
-    |-----------------|---------------|-----------------|
-    |`OrderID`|`int`|Nepravda (nezaškrtnuto)|
-    |`CustomerID`|`nchar(5)`|Nepravda (nezaškrtnuto)|
-    |`OrderDate`|`datetime`|Pravda (zaškrtnuto)|
-    |`OrderQuantity`|`int`|Pravda (zaškrtnuto)|
+   |Název sloupce|Datový typ|Povolit hodnoty NULL|
+   |-----------------|---------------|-----------------|
+   |`OrderID`|`int`|Nepravda (nezaškrtnuto)|
+   |`CustomerID`|`nchar(5)`|Nepravda (nezaškrtnuto)|
+   |`OrderDate`|`datetime`|Pravda (zaškrtnuto)|
+   |`OrderQuantity`|`int`|Pravda (zaškrtnuto)|
 
-2. Nastavte **OrderID** jako primární klíč a potom odstraňte výchozí řádek.
+2. Jako primární klíč nastavte **ČísloObjednávky** a pak výchozí řádek odstraňte.
 
 3. Pojmenujte tabulku Objednávky prostřednictvím aktualizace prvního řádku v podokně se skriptem tak, aby odpovídala následující ukázce:
 
-    ```sql
-    CREATE TABLE [dbo].[Orders]
-    ```
+   ```sql
+   CREATE TABLE [dbo].[Orders]
+   ```
 
-4. V levém horním rohu **návrháře tabulky**, vyberte **aktualizace** tlačítko.
+4. V levém horním rohu **Návrháře tabulky**vyberte **aktualizovat**.
 
-5. V **náhled aktualizací databáze** dialogové okno, vyberte **aktualizace databáze** tlačítko.
+5. V dialogovém okně **Náhled aktualizací databáze** vyberte **aktualizovat databázi**.
 
-    Vaše změny jsou uloženy do lokálního databázového souboru.
+   Tabulka Orders (objednávky) se vytvoří v souboru místní databáze. Pokud rozbalíte uzel **tabulky** v Průzkumník serveru, zobrazí se tyto dvě tabulky:
+
+   ![Uzel Tables se rozšířil v Průzkumník serveru.](media/server-explorer-tables-node.png)
 
 ### <a name="create-a-foreign-key"></a>Vytvoření cizího klíče
 
-1. V kontextovém podokně na pravé straně tabulky, otevřete místní nabídku pro **cizí klíče**a pak vyberte **přidat nový cizí klíč**, jak je vidět na následujícím obrázku.
+1. V kontextovém podokně na pravé straně mřížky Návrháře tabulky pro tabulku objednávky klikněte pravým tlačítkem na **cizí klíče** a vyberte **Přidat nový cizí klíč**.
 
-     ![Přidání cizí klíče v Návrháři tabulek](../data-tools/media/foreignkey.png)
+   ![Přidání cizího klíče v Návrháři tabulky v aplikaci Visual Studio](../data-tools/media/add-foreign-key.png)
 
-2. V textovém poli nahraďte **ToTable** s **zákazníkům**.
+2. Do textového pole, které se zobrazí, nahraďte text ToTable **zákazníky**.
 
-3. V podokně T-SQL aktualizujte poslední řádek tak, aby odpovídala následující ukázce:
+3. V podokně T-SQL aktualizujte poslední řádek tak, aby odpovídal následující ukázce:
 
-    ```sql
-    CONSTRAINT [FK_Orders_Customers] FOREIGN KEY ([CustomerID]) REFERENCES [Customers]([CustomerID])
-    ```
+   ```sql
+   CONSTRAINT [FK_Orders_Customers] FOREIGN KEY ([CustomerID]) REFERENCES [Customers]([CustomerID])
+   ```
 
-4. V levém horním rohu **návrháře tabulky**, vyberte **aktualizace** tlačítko.
+4. V levém horním rohu **Návrháře tabulky**vyberte **aktualizovat**.
 
-5. V **náhled aktualizací databáze** dialogové okno, vyberte **aktualizace databáze** tlačítko.
+5. V dialogovém okně **Náhled aktualizací databáze** vyberte **aktualizovat databázi**.
 
-    Vaše změny jsou uloženy do lokálního databázového souboru.
+   Je vytvořen cizí klíč.
 
 ## <a name="populate-the-tables-with-data"></a>Naplnění tabulek daty
 
-1. V **Průzkumníka serveru** nebo **Průzkumník objektů systému SQL Server**, rozbalte uzel pro vzorovou databázi.
+1. V **Průzkumník serveru** nebo **Průzkumník objektů systému SQL Server**rozbalte uzel pro ukázkovou databázi.
 
-2. Otevřete místní nabídku **tabulky** uzlu, vyberte **aktualizovat**a potom rozbalte **tabulky** uzlu.
+2. Otevřete místní nabídku pro uzel **tabulky** , vyberte **aktualizovat**a potom rozbalte uzel **tabulky** .
 
-3. Otevřete místní nabídku tabulky Zákazníci a zvolte **zobrazit Data tabulky**.
+3. Otevřete místní nabídku tabulky Customers a potom vyberte možnost **Zobrazit data tabulky**.
 
-4. Přidejte jakákoli data pro některé zákazníky.
+4. Přidejte libovolná data, která chcete pro některé zákazníky.
 
     Jako ID zákazníka můžete zadat libovolných pět znaků, ale vyberte alespoň jedno ID takové, které si zapamatujete, abyste je mohli použít později v tomto postupu.
 
-5. Otevřete místní nabídku tabulky objednávky a pak vyberte **zobrazit Data tabulky**.
+5. Otevřete místní nabídku tabulky Orders a pak vyberte možnost **Zobrazit data tabulky**.
 
-6. Přidání dat pro některé objednávky.
+6. Přidejte data pro některé objednávky.
 
     > [!IMPORTANT]
-    > Ujistěte se, že všechna ID objednávek a množství objednávek celými čísly a že každé ID zákazníka odpovídá hodnotě uvedené v **CustomerID** sloupec v tabulce Zákazníci.
+    > Zajistěte, aby všechny ID objednávek a množství objednávek byly celá čísla a aby každé ID zákazníka odpovídalo hodnotě, kterou jste zadali ve sloupci **KódZákazníka** tabulky Customers.
 
-7. Na panelu nabídek vyberte **souboru** > **Uložit vše**.
+7. Na řádku nabídek vyberte **soubor** > **Uložit vše**.
 
 ## <a name="see-also"></a>Viz také:
 

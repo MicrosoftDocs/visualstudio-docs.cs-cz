@@ -1,21 +1,21 @@
 ---
-title: Sada Visual Studio + GitHub Microsoft Docs
+title: Visual Studio + nabídka GitHub | Microsoft Docs
 author: evanwindom
 ms.author: lank
 manager: lank
 ms.date: 07/19/2019
 ms.topic: conceptual
-description: Další informace o nové sadě Visual Studio + GitHub sady
-ms.openlocfilehash: 1d7b55a32c796747d50fac8dae14d6af2f847c46
-ms.sourcegitcommit: 485881e6ba872c7b28a7b17ceaede845e5bea4fe
+description: Další informace o nové nabídce aplikace Visual Studio + GitHub
+ms.openlocfilehash: 6c34ecc37285166135584a98453a1e92393073ab
+ms.sourcegitcommit: a2df993dc5e11c5131dbfcba686f0028a589068f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68377646"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71150081"
 ---
 # <a name="introducing-visual-studio-subscriptions-with-github-enterprise"></a>Představení předplatných sady Visual Studio s GitHubem Enterprise  
 
-Zákazníci, kteří mají smlouvu Enterprise (EA) s Microsoftem, mají nárok na zakoupení nového balíčku předplatného, který přináší standardní předplatná sady Visual Studio a společnost GitHub Enterprise. Předplatitelé sady Visual Studio mají snadný a ekonomický způsob získání GitHubu Enterprise. 
+Zákazníci, kteří mají smlouvu Enterprise (EA) se společností Microsoft, mají nárok na zakoupení nové nabídky předplatných, která přináší společné předplatné sady Visual Studio a společnost GitHub. Předplatitelé sady Visual Studio mají snadný a ekonomický způsob získání GitHubu Enterprise. 
 
 - Pomocí sady Visual Studio a GitHubu inovujte ve velkém měřítku, a to tak, že v integrovaném vývojovém prostředí a pracovních postupech bezpečně načtete otevřený zdrojový kód.
 - Využijte nejlepší vývojové nástroje a služby pro vývoj tříd pro vývojáře s nejkomplexnější sadou prostředků pro vytváření, nasazování a správu skvělých aplikací. 
@@ -28,7 +28,7 @@ Pokud vaše organizace zadává nový EA nebo si ho obnovuje, jsou k dispozici n
 - Visual Studio Enterprise s GitHubem Enterprise
 - Visual Studio Professional s GitHubem Enterprise
 
-Pokud má vaše organizace EA, který ještě není v důsledku obnovení, můžete si koupit SKLADOVOU položku "Step-up" a přidat do stávajícího Visual Studio Enterprise nebo Visual Studio Professional předplatná GitHubu.  Po obnovení vaší smlouvy si můžete sadu koupit.
+Pokud má vaše organizace EA, který ještě není v důsledku obnovení, můžete si koupit SKLADOVOU položku "Step-up" a přidat do stávajícího Visual Studio Enterprise nebo Visual Studio Professional předplatná GitHubu. Po obnovení vaší smlouvy si můžete nabídku koupit.
 
 Existující SKU pro Visual Studio Enterprise, Visual Studio Professional a GitHub Enterprise budou také nadále dostupné samostatně. 
 
@@ -40,7 +40,7 @@ Předplatná sady Visual Studio + GitHub Enterprise jsou přiřazena ve dvou č�
 1. Předplatné sady Visual Studio (Enterprise nebo Professional)
 2. Předplatné GitHub Enterprise
 
-Když vaše organizace zakoupí předplatné, přiřadí ho správci.  Předplatná sady Visual Studio a předplatné GitHub Enterprise se přiřazují samostatně.  
+Když vaše organizace zakoupí předplatné, přiřadí ho správci. Předplatná sady Visual Studio a předplatné GitHub Enterprise se přiřazují samostatně.  
 
 Pokud jste přiřadili předplatné sady Visual Studio + GitHub, dostanete vám e-mail s oznámením, že vám správce předplatného sady Visual Studio přiřadil předplatné.  V tomto okamžiku je budete moci zobrazit v https://my.visualstudio.com/subscriptions.  
 
@@ -77,5 +77,5 @@ O:  Společně s předplatným na GitHubu Enterprise obdržíte plné předplatn
 - Máte dotaz o integrovaném vývojovém prostředí (IDE) sady Visual Studio, Azure DevOps Services nebo jiných produktech nebo službách sady Visual Studio?  Navštivte [podporu sady Visual Studio](https://visualstudio.microsoft.com/support/).
 - Získejte [technickou podporu](https://support.microsoft.com/en-us/supportforbusiness/productselection?sapId=b77fe80f-5417-80bd-4b2a-275cf0018c24) pro GitHub Enterprise.   
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 Pokud s GitHubem začínáte, Projděte si [výukové](https://lab.github.com/)cvičení GitHubu, které vás provede řadou zábavnéch a praktických projektů, které vám umožní sdílet užitečnou zpětnou vazbu na cestě.

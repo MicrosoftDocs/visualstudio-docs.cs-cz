@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 0395e2d6e54e737af9a98d8c24b8ea29eff7577a
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
+ms.openlocfilehash: a22bdbc30fc222e26c01a10afdd7a666eebcb9f6
+ms.sourcegitcommit: a2df993dc5e11c5131dbfcba686f0028a589068f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118674"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71150114"
 ---
 # <a name="customize-code-coverage-analysis"></a>Přizpůsobení analýzy pokrytí kódu
 
@@ -63,7 +63,7 @@ Chcete-li vlastní nastavení vypnout a zapnout, zrušte výběr nebo vyberte so
 
 ::: moniker-end
 
-### <a name="specify-symbol-search-paths"></a>Určení cest pro hledání symbolů
+## <a name="symbol-search-paths"></a>Cesty pro hledání symbolů
 
 Pokrytí kódu vyžaduje soubory symbolů (*PDB* soubory) pro sestavení. Pro sestavení sestavená vaším řešením jsou soubory symbolů obvykle přítomny společně s binárními soubory a pokrytí kódu funguje automaticky. V některých případech může být vhodné zahrnout odkazovaná sestavení do analýzy pokrytí kódu. V takovém případě *PDB* soubory nemusí být vedle binární soubory, ale můžete zadat cestu pro hledání symbolů v *s příponou .runsettings* souboru.
 
@@ -77,9 +77,11 @@ Pokrytí kódu vyžaduje soubory symbolů (*PDB* soubory) pro sestavení. Pro se
 > [!NOTE]
 > Vyhodnocování symbolů může trvat dobu, zvláště při použití vzdáleného umístění souborů s mnoha sestavení. Zvažte proto možnost zkopírování *PDB* soubory do stejného umístění jako binární soubor ( *.dll* a *.exe*) soubory.
 
-### <a name="exclude-and-include"></a>Vyloučení a zahrnutí
+## <a name="include-or-exclude-assemblies-and-members"></a>Zahrnout nebo vyloučit sestavení a členy
 
-Vybraná sestavení lze vyloučit z analýzy pokrytí kódu. Příklad:
+Můžete zahrnout nebo vyloučit sestavení nebo konkrétní typy a členy z analýzy pokrytí kódu. Pokud je oddíl **include** prázdný nebo vynechán, jsou zahrnuta všechna sestavení, která jsou načtena a přidruženy soubory PDB. Pokud sestavení nebo člen souhlasí s klauzulí v oddílu **Exclude** , je vyloučen z pokrytí kódu. Oddíl **Exclude** má přednost před oddílem **include** : Pokud je sestavení uvedeno v **zahrnutí** i **vyloučení**, nebude zahrnuto do pokrytí kódu.
+
+Například následující kód XML vyloučí jedno sestavení zadáním jeho názvu:
 
 ```xml
 <ModulePaths>
@@ -90,7 +92,7 @@ Vybraná sestavení lze vyloučit z analýzy pokrytí kódu. Příklad:
 </ModulePaths>
 ```
 
-Nebo naopak můžete vybrat sestavení, která chcete do analýzy zahrnout. Tento přístup má nevýhodu, že když do řešení přidáte více sestavení, je nutné si je přidat do seznamu:
+Následující příklad určuje, že v pokrytí kódu by mělo být zahrnuto pouze jedno sestavení:
 
 ```xml
 <ModulePaths>
@@ -101,11 +103,20 @@ Nebo naopak můžete vybrat sestavení, která chcete do analýzy zahrnout. Tent
 </ModulePaths>
 ```
 
-Pokud je **zahrnutí** prázdné, zpracuje zpracování pokrytí kódu všechna sestavení, která jsou načtena a pro které lze nalézt soubory *. pdb* . Pokrytí kódu neobsahuje položky, které odpovídají klauzuli v **vyloučit** seznamu. **Zahrnout** je zpracován před atributem **vyloučit**.
+Následující tabulka ukazuje různé způsoby, jak mohou být sestavení a členové spárovány s zahrnutím do nebo z pokrytí kódu.
+
+| XML – element | Co odpovídá |
+| - | - |
+| ModulePath nastavte | Odpovídá sestavením určeným názvem sestavení nebo cestou k souboru. |
+| CompanyName | Porovnává sestavení podle atributu **společnosti** . |
+| PublicKeyToken | Odpovídá podepsaným sestavením tokenu veřejného klíče. |
+| Zdroj | Porovná prvky podle názvu cesty zdrojového souboru, ve kterém jsou definovány. |
+| Atribut | Porovná prvky, které mají zadaný atribut. Zadejte úplný název atributu, například `<Attribute>^System\.Diagnostics\.DebuggerHiddenAttribute$</Attribute>`.<br/><br/>Pokud <xref:System.Runtime.CompilerServices.CompilerGeneratedAttribute> atribut vyloučíte, kód, který používá funkce `async`jazyka, jako `await`jsou `yield return`,, a automaticky implementované vlastnosti, je vyloučen z analýzy pokrytí kódu. Chcete-li vyloučit skutečně generovaný kód, vylučte <xref:System.CodeDom.Compiler.GeneratedCodeAttribute> pouze atribut. |
+| Funkce | Porovná procedury, funkce nebo metody podle plně kvalifikovaného názvu, včetně seznamu parametrů. Můžete také porovnat část názvu pomocí [regulárního výrazu](#regular-expressions).<br/><br/>Příklady:<br/><br/>`Fabrikam.Math.LocalMath.SquareRoot(double);` (C#)<br/><br/>`Fabrikam::Math::LocalMath::SquareRoot(double)`(C++) |
 
 ### <a name="regular-expressions"></a>Regulární výrazy
 
-Uzly include a Exclude používejte regulární výrazy, které nejsou stejné jako zástupné znaky. Další informace najdete v tématu [použití regulárních výrazů v sadě Visual Studio](../ide/using-regular-expressions-in-visual-studio.md). Mezi příklady patří:
+Uzly include a Exclude používejte regulární výrazy, které nejsou stejné jako zástupné znaky. Ve shodách se nerozlišují velká a malá písmena. Mezi příklady patří:
 
 - **. odpovídá\***  řetězci libovolných znaků
 
@@ -119,9 +130,7 @@ Uzly include a Exclude používejte regulární výrazy, které nejsou stejné j
 
 - **$** odpovídá konci řetězce
 
-Ve shodách se nerozlišují velká a malá písmena.
-
-Příklad:
+Následující kód XML ukazuje, jak zahrnout a vyloučit konkrétní sestavení pomocí regulárních výrazů:
 
 ```xml
 <ModulePaths>
@@ -138,48 +147,27 @@ Příklad:
 </ModulePaths>
 ```
 
+Následující kód XML ukazuje, jak zahrnout a vyloučit konkrétní funkce pomocí regulárních výrazů:
+
+```xml
+<Functions>
+  <Include>
+    <!-- Include methods in the Fabrikam namespace: -->
+    <Function>^Fabrikam\..*</Function>
+    <!-- Include all methods named EqualTo: -->
+    <Function>.*\.EqualTo\(.*</Function>
+  </Include>
+  <Exclude>
+    <!-- Exclude methods in a class or namespace named UnitTest: -->
+    <Function>.*\.UnitTest\..*</Function>
+  </Exclude>
+</Functions>
+```
+
 > [!WARNING]
 > Pokud dojde k chybě v regulárním výrazu, jako je například znakem nebo nespárované závorky, analýza pokrytí kódu se nespustí.
 
-### <a name="other-ways-to-include-or-exclude-elements"></a>Další způsoby zahrnutí nebo vyloučení prvků
-
-- **ModulePath** – porovná sestavení určená cestou k souboru sestavení.
-
-- **CompanyName** – porovná sestavení podle **společnosti** atribut.
-
-- **PublicKeyToken** – porovná podepsaná sestavení podle tokenu veřejného klíče.
-
-- **Zdroj** – porovná prvky podle názvu cesty zdrojového souboru, ve kterém jsou definovány.
-
-- **Atribut** – porovná prvky, ke kterým je připojen určitý atribut. Zadejte úplný název atributu, například `<Attribute>^System\.Diagnostics\.DebuggerHiddenAttribute$</Attribute>`.
-
-  > [!TIP]
-  > Pokud <xref:System.Runtime.CompilerServices.CompilerGeneratedAttribute> atribut vyloučíte, kód, který používá funkce `async`jazyka, jako `await`jsou `yield return`,, a automaticky implementované vlastnosti, je vyloučen z analýzy pokrytí kódu. Chcete-li vyloučit skutečně generovaný kód, vylučte <xref:System.CodeDom.Compiler.GeneratedCodeAttribute> pouze atribut.
-
-- **Funkce** – porovná procedury, funkce nebo metody podle plně kvalifikovaného názvu. Tak, aby odpovídaly názvu funkce, musí odpovídat regulárnímu výrazu plně kvalifikovaný název funkce včetně oboru názvů, název třídy, názvu metody a seznamu parametrů. Příklad:
-
-   ```csharp
-   Fabrikam.Math.LocalMath.SquareRoot(double);
-   ```
-
-   ```cpp
-   Fabrikam::Math::LocalMath::SquareRoot(double)
-   ```
-
-   ```xml
-   <Functions>
-     <Include>
-       <!-- Include methods in the Fabrikam namespace: -->
-       <Function>^Fabrikam\..*</Function>
-       <!-- Include all methods named EqualTo: -->
-       <Function>.*\.EqualTo\(.*</Function>
-     </Include>
-     <Exclude>
-       <!-- Exclude methods in a class or namespace named UnitTest: -->
-       <Function>.*\.UnitTest\..*</Function>
-     </Exclude>
-   </Functions>
-   ```
+Další informace o regulárních výrazech naleznete v tématu [použití regulárních výrazů v sadě Visual Studio](../ide/using-regular-expressions-in-visual-studio.md).
 
 ## <a name="sample-runsettings-file"></a>Ukázkový soubor s příponou .runsettings
 
