@@ -6,37 +6,34 @@ ms.author: sayedha
 ms.date: 05/03/2018
 ms.technology: vs-ide-general
 ms.assetid: F898CB6E-05ED-44CD-8DB6-427B2592CCC6
-ms.openlocfilehash: 964b949d20d63a4564615fef0e719b85ae41762d
-ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+ms.openlocfilehash: 791182255448db01a1c43796da72bedeec9f2f96
+ms.sourcegitcommit: 9a227faafdd0bad6f017ace607dc61eb56b32d72
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71128371"
+ms.lasthandoff: 09/21/2019
+ms.locfileid: "71175450"
 ---
 # <a name="create-razor-web-apps"></a>Vytváření webových aplikací Razor
 
 Tato příručka nabízí Úvod k vytvoření první webové aplikace Razor. Podrobné pokyny najdete v tématu [Úvod do Razor Pages v ASP.NET Core](https://docs.microsoft.com/aspnet/core/razor-pages/index).
 
-Visual Studio pro Mac poskytuje podporu pro úpravy Razor, včetně IntelliSense a zvýrazňování syntaxe v souborech *. cshtml* .
+Visual Studio pro Mac poskytuje podporu pro úpravy Razor, včetně IntelliSense a zvýrazňování syntaxe v souborech *. cshtml* . Novinka v sadě Visual Studio 2019 pro Mac 8.3 + je schopnost mít v rámci souboru Razor kontextovou technologii IntelliSense, takže dostanete IntelliSense, který odpovídá jazyku, který právě upravujete v rámci dokumentu.
 
-![Úpravy Razor v Visual Studio pro Mac](media/razor-editor.png)
+![Úpravy Razor v Visual Studio pro Mac](media/razor-2019.png)
 
 ## <a name="creating-a-new-razor-project"></a>Vytvoření nového projektu Razor
 
 1. Na úvodní obrazovce vyberte **Nový** a vytvořte nový projekt:
 
-     ![Visual Studio pro Mac nový projekt](media/razor-new.png)
-
+   ![Visual Studio pro Mac nový projekt](media/razor-new.png)
 1. V dialogovém **okně Nový projekt** , přejít do**webové aplikace** **.NET Core** > **App** > a vyberte **Další**:
 
-     ![Šablona projektu Razor](media/razor-new-project1.png)
-
+   ![Šablona projektu Razor](media/razor-new-project1.png)
 1. Vyberte cílové rozhraní .NET Core (doporučujeme verzi 2,2 nebo novější) a pak vyberte **Další**. Vyberte název projektu a v případě potřeby přidejte podporu Gitu. Vyberte **vytvořit** a vytvořte projekt.
 
-     ![Název projektu Razor](media/razor-new-project2.png)
+   ![Název projektu Razor](media/razor-new-project2.png)
 
    Visual Studio pro Mac otevře projekt v okně rozložení kódu.
-
 1. Spusťte projekt bez ladění pomocí **příkazu Command + Option + F5**.
 
    Visual Studio spustí [Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), otevře prohlížeč `https://localhost:5001`a zobrazí svou první webovou aplikaci Razor.
