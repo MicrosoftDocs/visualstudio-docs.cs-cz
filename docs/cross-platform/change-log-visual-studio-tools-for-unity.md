@@ -1,7 +1,7 @@
 ---
 title: Protokol změn (Visual Studio Tools for Unity, Windows) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 07/29/2019
+ms.date: 09/18/2019
 ms.technology: vs-unity-tools
 ms.topic: conceptual
 ms.assetid: ea490b7e-fc0d-44b1-858a-a725ce20e396
@@ -10,20 +10,105 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: d9b89be226ca7cafbfe66a14cd606f50678a013a
-ms.sourcegitcommit: 044bb54cb4552c8f4651feb11d62e52726117e75
+ms.openlocfilehash: 713535bb11b4bd9cab4ef1b31507b96fe1c9897a
+ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661961"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185989"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-windows"></a>Protokol změn (Visual Studio Tools for Unity, Windows)
 
 Protokol změn Visual Studio Tools for Unity.
 
+## <a name="4330"></a>4.3.3.0
+
+Vydáno 23. září 2019
+
+### <a name="bug-fixes"></a>Opravy chyb
+
+- **Integrace:**
+
+  - Opravili jsme chybu a hlášení upozornění pro odlehčená sestavení.
+
+## <a name="4320"></a>4.3.2.0
+
+Vydáno 16. září 2019
+
+### <a name="new-features"></a>Nové funkce
+
+- **Integrace:**
+
+  - Provedli jsme porozumění, že Visual Studio má pro projekty Unity přidat novou diagnostiku specifickou pro Unity. Také jsme zvýšili inteligenci integrovaného vývojového prostředí (IDE) tím, že jsme potlačili obecnou diagnostiku C#, která se nevztahuje na projekty Unity. Například rozhraní IDE nebude zobrazovat rychlou opravu pro změnu proměnné inspektoru, `readonly` která by zabránila v úpravách proměnné v editoru Unity.
+    - `UNT0001`: Zprávy Unity jsou volány modulem runtime, i když jsou prázdné, proto je nedeklarujte, aby nedocházelo ke zbytečnému zpracování modulem runtime Unity.
+    - `UNT0002`: Porovnávání značek pomocí rovnosti řetězců je pomalejší než integrovaná metoda CompareTag.
+    - `UNT0003`: Kvůli bezpečnosti typů se upřednostňuje použití obecné formy getComponent.
+    - `UNT0004`: Zpráva Update je závislá na snímkové frekvenci a měla by místo Time.fixedDeltaTime používat Time.deltaTime.
+    - `UNT0005`: Zpráva FixedUpdate je nezávislá na snímkové frekvenci a měla by místo Time.deltaTime používat Time.fixedDeltaTime.
+    - `UNT0006`: Pro tuto zprávu Unity byl zjištěn nesprávný podpis metody.
+    - `UNT0007`: Unity přepisuje operátor porovnání s hodnotou null pro objekty Unity, které nejsou kompatibilní se sloučením s hodnotou null.
+    - `UNT0008`: Unity přepisuje operátor porovnání s hodnotou null pro objekty Unity, které nejsou kompatibilní s šířením hodnoty null.
+    - `UNT0009`: Při použití atributu InitializeOnLoad pro třídu musíte poskytnout statický konstruktor. Atribut InitializeOnLoad zajistí, že bude volán při spuštění editoru.
+    - `UNT0010`: Objekty MonoBehaviour by se měly vytvářet jen pomocí metody AddComponent(). Objekt MonoBehaviour je komponenta, která musí být připojená k objektu GameObject.
+    - `UNT0011`: Objekt ScriptableObject by se měl vytvářet jen pomocí metody CreateInstance(). Objekt ScriptableObject musí být vytvořený modulem Unity, aby zpracovával metody zpráv Unity.
+    - `USP0001`pro `IDE0029`: Objekty Unity by neměly používat slučování s hodnotou null.
+    - `USP0002`pro `IDE0031`: Objekty Unity by neměly používat šíření hodnoty null.
+    - `USP0003`pro `IDE0051`: Zprávy Unity jsou vyvolány modulem runtime Unity.
+    - `USP0004`pro `IDE0044`: Pole s atributem SerializeField by neměla být určena jen pro čtení.
+
+## <a name="4310"></a>4.3.1.0
+
+vydáno 4. září 2019
+
+### <a name="new-features"></a>Nové funkce
+
+- **Vyhodnocení:**
+
+  - Přidání podpory pro lepší zobrazení typu, tj. `List<object>` `List'1[[System.Object, <corlib...>]]`místo.
+
+  - Přidání podpory pro přístup ke členu ukazatele, `p->data->member`tj.
+
+  - Přidání podpory pro implicitní převody v inicializátorech pole, tj. `new byte [] {1,2,3,4}`
+
+## <a name="4300"></a>4.3.0.0
+
+vydáno 13. srpna 2019
+
+### <a name="new-features"></a>Nové funkce
+
+- **Ladicí program:**
+
+  - Byla přidána podpora protokolu MDS 2,51.
+
+- **Integrace:**
+
+  - Vylepšilo se okno připojit k instanci Unity s funkcemi řazení, hledání a aktualizace. PID se teď zobrazuje i pro místní přehrávače (dotazuje se na naslouchající sokety v systému, aby získal vlastnící proces).
+
+  - Přidání podpory pro soubory asmdef
+
+### <a name="bug-fixes"></a>Opravy chyb
+
+- **Integrace:**
+
+  - Pevné zpracování poškozených zpráv při komunikaci s přehrávači Unity.
+
+- **Vyhodnocení:**
+
+  - Pevné zpracování oborů názvů ve výrazech.
+
+  - Pevná kontrola s použitím typů IntPtr.
+  
+  - Opravili jsme problémy krokování s výjimkami.
+
+  - Pevné vyhodnocení pseudo identifikátorů (například $exception).
+
+  - Zabraňte selhání při přesměrování neplatných adres.  
+
+  - Opravili jsme problém s uvolněnými doménami AppDomain.
+
 ## <a name="4201"></a>4.2.0.1
 
-Vydáno 24. července 2019
+vydáno 24. července 2019
 
 ### <a name="new-features"></a>Nové funkce
 
@@ -79,7 +164,7 @@ Vydáno 21. května 2019
 
   - Byl aktualizován mechanismus extrakce názvů projektů pomocí Unity 2019. x.
 
-  - Přidala se podpora pro balíčky Unity v UPE. Jsou viditelné pouze odkazované balíčky (používající manifest. JSON ```Packages``` ve složce) a místní balíčky (vložené ```Packages``` do složky).
+  - Přidala se podpora pro balíčky Unity v UPE. Jsou viditelné pouze odkazované balíčky (používající manifest. JSON `Packages` ve složce) a místní balíčky (vložené `Packages` do složky).
 
 - **Generování projektu:**
 
@@ -89,7 +174,7 @@ Vydáno 21. května 2019
 
   - Byla přidána podpora názvů kvalifikovaných aliasů (pouze globální obor názvů pro nyní). Proto vyhodnocovací filtr výrazů nyní přijímá typy pomocí formuláře Global:: Namespace. Type.
 
-  - Přidání podpory pro ```pointer[index]``` formulář, která je sémanticky totožná s odkazem ```*(pointer+index)``` na odkazy na ukazatel.
+  - Přidání podpory pro `pointer[index]` formulář, která je sémanticky totožná s odkazem `*(pointer+index)` na odkazy na ukazatel.
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
@@ -129,7 +214,7 @@ Vydáno 13. února 2019
 
   - Přidání podpory pro správné detekci procesů Unity během instalace a povolení instalačního modulu pro lepší zpracování zámků souborů.
 
-  - Aktualizace rozhraní API ScriptableObject
+  - Rozhraní API `ScriptableObject` se aktualizovalo.
 
 ## <a name="4003"></a>4.0.0.3
 
@@ -139,13 +224,13 @@ Vydáno 31. ledna 2019
 
 - **Generování projektu:**
 
-  - Veřejná a serializovaná pole už nebudou způsobovat upozornění. Automaticky jsme potlačili upozornění kompilátoru CS0649 a IDE0051 v projektech Unity, které tyto zprávy vytvořily.
+  - Veřejná a serializovaná pole už nebudou způsobovat upozornění. Automaticky jsme potlačili `CS0649` upozornění kompilátoru a `IDE0051` v projektech Unity, která tyto zprávy vytvořila.
 
 - **Integrace:**
 
   - Zlepšilo se uživatelské prostředí pro zobrazování editoru Unity a instancí přehrávače (Windows teď měnitelné velikosti, používejte jednotné okraje a zobrazují úchyt pro změnu velikosti). Přidání informací o ID procesu pro editory Unity
 
-  - Aktualizace rozhraní API MonoBehaviour
+  - Rozhraní API `MonoBehaviour` se aktualizovalo.
 
 - **Vyhodnocení:**
 

@@ -1,6 +1,6 @@
 ---
 title: Dialogové okno Upřesnit nastavení sestavení (C#)
-ms.date: 06/20/2017
+ms.date: 08/05/2019
 ms.technology: vs-ide-compile
 ms.topic: reference
 f1_keywords:
@@ -13,16 +13,16 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 306cecc6bdc194e0022c056ac0a87e2ab063d20b
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: c4a1c902047b76ef3b29814d10cfc112ab9c7274
+ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461887"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71186785"
 ---
 # <a name="advanced-build-settings-dialog-box-c"></a>Dialogové okno Upřesnit nastavení sestavení (C#)
 
-Dialogové okno **Upřesnit nastavení sestavení** **Návrháře projektu** slouží k určení rozšířených vlastností konfigurace sestavení projektu. Toto dialogové okno se vztahuje [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] pouze na projekty.
+Dialogové okno **Upřesnit nastavení sestavení** **Návrháře projektu** slouží k určení rozšířených vlastností konfigurace sestavení projektu. Toto dialogové okno se vztahuje C# pouze na projekty.
 
 ## <a name="general"></a>Obecné
 
@@ -30,19 +30,19 @@ Následující možnosti umožňují nastavit obecná Pokročilá nastavení.
 
 **Verze jazyka**
 
-Určuje verzi jazyka, který se má použít. Sada funkcí se v každé verzi liší, takže tuto možnost lze použít k vynucení, aby kompilátor povoloval pouze podmnožinu implementovaných funkcí, nebo aby povoloval pouze ty funkce, které jsou kompatibilní se stávajícím standardem. Toto nastavení má následující možnosti:
+::: moniker range=">=vs-2019"
 
-- **default**
+Odkazuje na [/langversion (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/langversion-compiler-option), které poskytují informace o výběru výchozí jazykové verze v závislosti na cílové verzi rozhraní projektu.
 
-   Cílí na aktuální verzi.
+::: moniker-end
 
-- **ISO-1** a **ISO-2**
+::: moniker range="vs-2017"
 
-   Cílí na standardní funkce ISO-1 a ISO-2 v uvedeném pořadí.
+Určuje verzi jazyka, který se má použít. Sada funkcí se v každé verzi liší, takže tuto možnost lze použít k vynucení, aby kompilátor povoloval pouze podmnožinu implementovaných funkcí, nebo aby povoloval pouze ty funkce, které jsou kompatibilní se stávajícím standardem.
 
-- **C#[číslo verze]**
+Výchozí hodnota je C# 7,0.
 
-   Cílí na konkrétní verzi C#. Další informace naleznete v tématu [/langversion (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/langversion-compiler-option).
+::: moniker-end
 
 **Zasílání zpráv o vnitřních chybách kompilátoru**
 
@@ -97,4 +97,4 @@ Určuje upřednostňovanou základní adresu, na které se má načíst knihovna
 ## <a name="see-also"></a>Viz také
 
 - [Možnosti kompilátoru jazyka C#](/dotnet/csharp/language-reference/compiler-options/index)
-- [Stránka Sestavení, Návrhář projektu (C#)](../../ide/reference/build-page-project-designer-csharp.md)
+- [Stránka sestavení, Návrhář projektu (C#)](../../ide/reference/build-page-project-designer-csharp.md)

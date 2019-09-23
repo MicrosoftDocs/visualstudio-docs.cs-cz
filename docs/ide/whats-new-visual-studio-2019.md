@@ -2,7 +2,7 @@
 title: Novinky v sadě Visual Studio 2019
 titleSuffix: ''
 description: Seznamte se s novými funkcemi v aplikaci Visual Studio 2019.
-ms.date: 07/23/2019
+ms.date: 09/23/2019
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -15,16 +15,16 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c9526a0cbf33278bbc3cab8120bb20ab0f5377a
-ms.sourcegitcommit: 9c07ae6fb18204ea080c8248994a683fa12e5c82
+ms.openlocfilehash: c2caed210edbed5f17d74ee78a55612aa0afa4cb
+ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70293721"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71186475"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Novinky v sadě Visual Studio 2019
 
-**Aktualizováno pro [verzi 16,2](/visualstudio/releases/2019/release-notes/)**
+**Aktualizováno pro [verzi 16,3](/visualstudio/releases/2019/release-notes/)**
 
 >[!div class="button"]
 >[Stáhněte si Visual Studio 2019](https://visualstudio.microsoft.com/downloads)
@@ -146,7 +146,7 @@ Zavádíme nové rozšíření, které můžete stáhnout pro použití se sadou
 
 Další informace najdete v příspěvku na blogu o [revizích kódu pomocí rozšíření pro žádosti o získání dat v aplikaci Visual Studio](https://devblogs.microsoft.com/visualstudio/code-reviews-using-the-visual-studio-pull-requests-extension/) .
 
-## <a name="debug"></a>Ladění
+## <a name="debug"></a>Ladit
 
 Podívejte se na následující video, kde se dozvíte víc o tom, jak můžete s přesným cílem v průběhu ladění vynulovat. <br><br>*Délka videa: 3,54 minut*
 

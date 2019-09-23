@@ -16,12 +16,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: ac544f033e8b021b7ef0a6253fbd0cb65b4450f5
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: b719c78bd4800121e36346a095c2a4141b7e2de3
+ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180482"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71186634"
 ---
 # <a name="tutorial-get-started-with-c-and-aspnet-core-in-visual-studio"></a>Kurz: Začínáme s C# a ASP.NET Core v aplikaci Visual Studio
 
@@ -129,9 +129,9 @@ Pokud nevidíte šablonu projektu **ASP.NET Core webové aplikace** , můžete j
 
    ![v okně Konfigurovat nový projekt pojmenujte projekt ' MyCoreApp '.](./media/vs-2019/csharp-name-your-aspnet-mycoreapp-project.png)
 
-1. V okně **vytvořit novou webovou aplikaci ASP.NET Core** ověřte, zda se v horní rozevírací nabídce zobrazí **ASP.NET Core 2,1** . Pak zvolte **Webová aplikace**, která obsahuje například Razor Pages. Pak vyberte **vytvořit**.
+1. V okně **vytvořit novou webovou aplikaci ASP.NET Core** ověřte, zda se v horní rozevírací nabídce zobrazí **ASP.NET Core 3,0** . Pak zvolte **Webová aplikace**, která obsahuje například Razor Pages. Pak vyberte **vytvořit**.
 
-   ![Okno vytvořit novou ASP.NET Core webovou aplikaci](./media/vs-2019/csharp-create-aspnet-core-razor-pages-app.png)
+   ![Okno vytvořit novou ASP.NET Core webovou aplikaci](./media/vs-2019/csharp-create-aspnet-razor-pages-app.png)
 
    Visual Studio otevře nový projekt.
 
@@ -141,6 +141,7 @@ Pokud nevidíte šablonu projektu **ASP.NET Core webové aplikace** , můžete j
 
 Toto řešení se řídí vzorem návrhu **stránky Razor** . Je jiný než vzor návrhu [MVC (Model-View-Controller)](/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-2.1&tabs=aspnetcore2x) v tom, že je zjednodušený tak, aby zahrnoval model a kód kontroleru v rámci samotné stránky Razor.
 
+::: moniker range="vs-2017"
 ## <a name="tour-your-solution"></a>Projděte si řešení
 
  1. Šablona projektu vytvoří řešení s jedním ASP.NET Core projektem s názvem _MyCoreApp_. Kliknutím na kartu **Průzkumník řešení** zobrazíte její obsah.
@@ -216,7 +217,7 @@ Toto řešení se řídí vzorem návrhu **stránky Razor** . Je jiný než vzor
      public void OnGet()
      {
          string directory = Environment.CurrentDirectory;
-     Message = String.Format("Your directory is {0}.", directory);
+         Message = String.Format("Your directory is {0}.", directory);
      }
     ```
 
@@ -240,6 +241,110 @@ Toto řešení se řídí vzorem návrhu **stránky Razor** . Je jiný než vzor
 
 1. Zavřete webový prohlížeč, stisknutím klávesy **SHIFT**+**F5** zastavte režim ladění a poté zavřete aplikaci Visual Studio.
 
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+## <a name="tour-your-solution"></a>Projděte si řešení
+
+ 1. Šablona projektu vytvoří řešení s jedním ASP.NET Core projektem s názvem _MyCoreApp_. Kliknutím na kartu **Průzkumník řešení** zobrazíte její obsah.
+
+    ![ASP.NET Průzkumník řešení v aplikaci Visual Studio pro Razor Pages řešení s názvem MyCoreApp](media/csharp-aspnet-razor-solution-explorer-mycoreapp.png)
+
+ 1. Rozbalte složku **stránky** .
+
+     ![Složka stránky v Průzkumník řešení](media/vs-2019/csharp-aspnet-solution-explorer-pages.png)
+
+ 1. Zobrazení souboru **index. cshtml** v editoru kódu.
+
+     ![Zobrazení souboru index. cshtml v editoru kódu sady Visual Studio](media/vs-2019/csharp-aspnet-index-cshtml.png)
+
+ 1. Každý soubor. cshtml má přidružený soubor kódu. Chcete-li otevřít soubor kódu v editoru, rozbalte uzel **index. cshtml** v Průzkumník řešení a vyberte soubor **index.cshtml.cs** .
+
+     ![Zvolit soubor Index.cshtml.cs v editoru kódu sady Visual Studio](media/vs-2019/csharp-aspnet-choose-index-cshtml.png)
+
+ 1. Zobrazit soubor **index.cshtml.cs** v editoru kódu.
+
+     ![Zobrazení souboru About. cshtml v editoru kódu sady Visual Studio](media/vs-2019/csharp-aspnet-index-cshtml-editing.png)
+
+ 1. Projekt obsahuje složku **wwwroot** , která je kořenem vašeho webu. Rozbalte složku pro zobrazení jejího obsahu.
+
+     ![Složka wwwroot v Průzkumník řešení v aplikaci Visual Studio](media/csharp-aspnet-razor-solution-explorer-wwwroot.png)
+
+    Statický obsah&mdash;webu, jako jsou CSS, obrázky a knihovny&mdash;JavaScriptu, můžete umístit přímo do cest, kde je chcete.
+
+ 1. Projekt také obsahuje konfigurační soubory, které spravují webovou aplikaci za běhu. Výchozí [Konfigurace](/aspnet/core/fundamentals/configuration) aplikace je uložena v souboru *appSettings. JSON*. Tato nastavení však můžete přepsat pomocí *appSettings. Vývoj. JSON*. Rozbalením souboru **appSettings. JSON** zobrazíte **appSettings. Soubor Development. JSON** .
+
+     ![Konfigurační soubory v Průzkumník řešení v aplikaci Visual Studio](media/csharp-aspnet-razor-solution-explorer-appsettingsjson.png)
+
+## <a name="run-debug-and-make-changes"></a>Spuštění, ladění a provádění změn
+
+1. Kliknutím na tlačítko **IIS Express** v integrovaném vývojovém prostředí sestavíte a spustíte aplikaci v režimu ladění. (Nebo stiskněte klávesu **F5**nebo zvolte **ladění** > **Spustit ladění** z řádku nabídek.)
+
+     ![Výběr tlačítka IIS Express v aplikaci Visual Studio](media/csharp-aspnet-razor-iisexpress.png)
+
+     > [!NOTE]
+     > Pokud se zobrazí chybová zpráva s oznámením, že se **nelze připojit k webovému serveru ' IIS Express '** , ukončete aplikaci Visual Studio a pak ji otevřete pomocí možnosti **Spustit jako správce** v nabídce nebo v místní nabídce klikněte pravým tlačítkem myši. Spusťte aplikaci znovu.
+     >
+     > Může se také zobrazit zpráva s dotazem, zda chcete přijmout certifikát IIS SSL Express. Chcete-li zobrazit kód ve webovém prohlížeči, zvolte možnost **Ano**a zvolte možnost **Ano** , pokud se zobrazí zpráva s upozorněním na následné zabezpečení.
+
+1. Visual Studio spustí okno prohlížeče. Na panelu nabídek byste měli vidět stránky **Domů**a **soukromí** .
+
+1. Z panelu nabídek vyberte **Ochrana osobních údajů** .
+
+   Stránka **soukromí** v prohlížeči vykreslí text, který je nastavený v souboru *osobních údajů. cshtml* .
+
+   ![Zobrazit text na stránce ochrany osobních údajů](media/vs-2019/csharp-aspnet-browser-page-privacy.png)
+
+1. Vraťte se do sady Visual Studio a stisknutím **SHIFT + F5** zastavte režim ladění. Tím se také zavře projekt v okně prohlížeče.
+
+1. V aplikaci Visual Studio otevřete položku **Privacy. cshtml** pro úpravy. Pak odstraňte slova _pomocí této stránky podrobnější informace o zásadách ochrany osobních údajů vaší lokality_ a na jejím místě přidejte slova, která _je tato stránka konstrukcí, @ViewDatajako ["časové razítko"]_ .
+
+    ![Změna textu v souboru osobních údajů. cshtml](media/vs-2019/csharp-aspnet-privacy-cshtml-code-changed.png)
+
+1. Teď si provedeme změnu kódu. Vyberte **Privacy.cshtml.cs**. Pak v horní části souboru `using` vyčistěte direktivy pomocí následujícího zástupce:
+
+   Vyberte některou z šedých direktiv-out `using` a žárovku s [rychlými akcemi](../../ide/quick-actions.md) se zobrazí hned pod blikajícím kurzorem nebo na levém okraji. Zvolte žárovku a pak najeďte myší na **odebrat nepotřebné**direktivy using. 
+
+   ![Odebrat nepotřebné direktivy using v souboru Privacy.cshtml.cs](media/vs-2019/csharp-aspnet-remove-unnecessary-usings.png)
+
+   Teď vyberte **Náhled změn** , abyste viděli, co se změní.
+
+   ![Zobrazit náhled změn](media/vs-2019/csharp-aspnet-preview-changes.png)
+
+   Zvolte **Použít**. Visual Studio odstraní nepotřebné `using` direktivy ze souboru.
+
+1. Dále v `OnGet()` metodě změňte tělo na následující kód:
+
+     ```csharp
+     public void OnGet()
+     {
+        string dateTime = DateTime.Now.ToShortDateString();
+        ViewData["TimeStamp"] = dateTime;
+     }
+    ```
+
+1. Všimněte si, že v poli **DateTime**se zobrazí dvě podtržení vlnovkou. Podtržení vlnovkou se zobrazí, protože tento typ není v oboru.
+
+   ![Chyby označené podtrženými vlnovkami v metodě OnGet](media/vs-2019/csharp-aspnet-add-new-onget-method.png)
+
+    Otevřete panel nástrojů **Seznam chyb** pro zobrazení stejných chyb uvedených v seznamu. (Pokud panel nástrojů **Seznam chyb** nevidíte, vyberte v horním řádku nabídky možnost **Zobrazit** > **Seznam chyb** .)
+
+   ![Seznam chyb v sadě Visual Studio](media/vs-2019/csharp-aspnet-error-list.png)
+
+1. Pojďme to opravit. V editoru kódu umístěte kurzor na buď řádek, který obsahuje chybu, a pak zvolte žárovku rychlé akce na levém okraji. Pak z rozevírací nabídky zvolte **použít systém;** k přidání této direktivy do horní části souboru a vyřešení chyb.
+
+   ![Přidat direktivu using System;](media/vs-2019/csharp-aspnet-add-usings.png)
+
+1. Stisknutím klávesy **F5** otevřete projekt ve webovém prohlížeči.
+
+1. V horní části webu vyberte možnost **soukromí** pro zobrazení změn.
+
+   ![Zobrazit aktualizovanou stránku ochrany osobních údajů obsahující změny, které jste provedli](media/vs-2019/csharp-aspnet-browser-page-privacy-changed.png)
+
+1. Zavřete webový prohlížeč, stisknutím klávesy **SHIFT**+**F5** zastavte režim ladění a poté zavřete aplikaci Visual Studio.
+::: moniker-end
+
 ## <a name="quick-answers-faq"></a>Rychlé odpovědi – Nejčastější dotazy
 
 Tady je rychlý přehled nejčastějších dotazů, které vám pomůžeme zvýraznit některé klíčové koncepty.
@@ -256,7 +361,7 @@ ASP.NET Core je open source architektura pro různé platformy pro vytváření 
 
 Visual Studio je integrovaná vývojová sada nástrojů pro produktivitu pro vývojáře. Představte si ho jako program, který můžete použít k vytvoření programů a aplikací.
 
-## <a name="next-steps"></a>Další postup
+## <a name="next-steps"></a>Další kroky
 
 Blahopřejeme k dokončení tohoto kurzu! Doufáme, že jste se dozvěděli C#trochu o, ASP.NET Core a integrovaném vývojovém prostředí sady Visual Studio. Další informace o vytváření webové aplikace nebo webu pomocí C# a ASP.NET najdete v následujících kurzech:
 

@@ -1,5 +1,5 @@
 ---
-title: Nastavení pro EditorConfig konvence psaní kódu .NET
+title: Nastavení konvence kódování .NET pro EditorConfig
 ms.date: 06/14/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -13,40 +13,40 @@ manager: jillfra
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4ba419c1dc20b46a08460e20a437e7edf21f2857
-ms.sourcegitcommit: b468d71052a1b8a697f477ab23a3644de139f1e9
+ms.openlocfilehash: d8be11a8705686ade370a8107aad826b7cab9851
+ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67253720"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71186550"
 ---
-# <a name="net-coding-convention-settings-for-editorconfig"></a>EditorConfig nastavení konvence psaní kódu .NET
+# <a name="net-coding-convention-settings-for-editorconfig"></a>Nastavení konvence kódování .NET pro EditorConfig
 
-Můžete definovat a udržovat konzistentní kódu styl v vašeho základu kódu s použitím [EditorConfig](../ide/create-portable-custom-editor-options.md) souboru. EditorConfig obsahuje několik vlastností formátování core, jako například `indent_style` a `indent_size`. V sadě Visual Studio je nastavení konvence psaní kódu .NET nakonfigurovat také pomocí souboru EditorConfig. Můžete povolit nebo zakázat jednotlivé konvence kódování .NET a nakonfigurovat míru, do kterého má být každé pravidlo vynucuje prostřednictvím úrovní závažnosti.
+V základu kódu můžete definovat a udržovat konzistentní styl kódu s použitím souboru [EditorConfig](../ide/create-portable-custom-editor-options.md) . EditorConfig zahrnuje několik základních vlastností formátování, jako jsou `indent_style` a `indent_size`. V aplikaci Visual Studio je možné konfigurovat nastavení konvencí kódování .NET také pomocí souboru EditorConfig. Můžete povolit nebo zakázat jednotlivé konvence kódování .NET a nakonfigurovat míru, na kterou chcete každé pravidlo vyhovět, a to prostřednictvím úrovně závažnosti.
 
 > [!TIP]
-> - Při definování konvence psaní kódu v souboru .editorconfig konfigurujete způsob [analyzátory stylu kódu](../code-quality/roslyn-analyzers-overview.md) , které jsou součástí Visual Studia pro analýzu kódu. Souboru .editorconfig se konfigurační soubor pro tyto analyzátory.
-> - Předvolby stylu kódu pro Visual Studio lze také nastavit [Možnosti textového editoru](code-styles-and-code-cleanup.md) dialogového okna. Vezměte ale v .editorconfig nastavení priority a předvoleb nastavíte v **možnosti** nejsou spojeny s konkrétní projekt.
+> - Při definování konvencí kódování v souboru EditorConfig konfigurujete, jak chcete, aby [analyzátory stylu kódu](../code-quality/roslyn-analyzers-overview.md) , které jsou integrovány do sady Visual Studio, analyzovaly váš kód. Soubor EditorConfig je konfigurační soubor pro tyto analyzátory.
+> - V dialogovém okně [Možnosti textového editoru](code-styles-and-code-cleanup.md) lze také nastavit předvolby stylu kódu pro sadu Visual Studio. Nicméně nastavení EditorConfig mají přednost a předvolby, které nastavíte v **možnostech** , nejsou přidružené ke konkrétnímu projektu.
 
-## <a name="convention-categories"></a>Vytváření kategorie
+## <a name="convention-categories"></a>Kategorie konvence
 
-Existují tři podporované .NET kódování konvence kategorie:
+Existují tři podporované kategorie konvence kódování .NET:
 
 - [Jazykové konvence](../ide/editorconfig-language-conventions.md)
 
-   Pravidla týkající se jazyka C# nebo Visual Basic. Například můžete zadat pravidla ohledně použití `var` nebo explicitních typů, při definování proměnných nebo preferují s výrazem v těle členy.
+   Pravidla týkající se jazyka C# nebo Visual Basic. Můžete například určit pravidla pro použití `var` nebo explicitní typy při definování proměnných nebo předvodit členy Expression-těle.
 
 - [Konvence formátování](../ide/editorconfig-formatting-conventions.md)
 
-   Pravidla týkající se rozložení a struktura vašeho kódu, aby bylo možné snadněji čitelné. Například můžete zadat pravidla ohledně Allman složené závorky nebo preferují mezery v řídicí bloky.
+   Pravidla týkající se rozložení a struktury kódu, aby bylo snazší ho číst. Například můžete zadat pravidla kolem Allman složených závorek nebo odvodit mezery v řídicích blocích.
 
 - [Zásady vytváření názvů](../ide/editorconfig-naming-conventions.md)
 
-   Pravidla týkající se názvů prvků kódu. Například můžete určit, že `async` musí metod končí slovem "Async".
+   Pravidla týkající se názvů prvků kódu. Například můžete určit, že `async` metody musí končit "Async".
 
 ## <a name="example-editorconfig-file"></a>Příklad souboru EditorConfig
 
-Abyste mohli začít pracovat, tady je příklad *.editorconfig* soubor s výchozími možnostmi:
+Tady je příklad souboru *. editorconfig* s výchozími možnostmi, které vám pomůžou začít:
 
 ```ini
 ###############################
@@ -207,5 +207,5 @@ visual_basic_preferred_modifier_order = Partial,Default,Private,Protected,Public
 ## <a name="see-also"></a>Viz také:
 
 - [Rychlé akce](../ide/quick-actions.md)
-- [Vytvoření přenosné vlastního editoru](../ide/create-portable-custom-editor-options.md)
-- [.NET compiler Platform .editorconfig file](https://github.com/dotnet/roslyn/blob/master/.editorconfig)
+- [Vytvoření možností přenosného vlastního editoru](../ide/create-portable-custom-editor-options.md)
+- [Soubor .NET Compiler Platform. editorconfig](https://github.com/dotnet/roslyn/blob/master/.editorconfig)

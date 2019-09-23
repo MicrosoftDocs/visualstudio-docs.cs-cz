@@ -1,7 +1,7 @@
 ---
 title: Protokol změn (Visual Studio Tools for Unity, Mac) | Dokumentace Microsoftu
 ms.custom: ''
-ms.date: 04/02/2019
+ms.date: 09/18/2019
 ms.technology: vs-unity-tools
 ms.topic: conceptual
 ms.assetid: 33a6ac54-d997-4308-b5a0-af7387460849
@@ -10,16 +10,84 @@ ms.author: johmil
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: ff2bcce9e041ff28393020c48563fe345c4fa076
-ms.sourcegitcommit: 044bb54cb4552c8f4651feb11d62e52726117e75
+ms.openlocfilehash: 897851055bd2eacc10edea9fdff2ab3ecd61b963
+ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661823"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185963"
 ---
 # <a name="change-log-visual-studio-tools-for-unity-mac"></a>Protokol změn (Visual Studio Tools for Unity, Mac)
 
 Protokol změn Visual Studio Tools for Unity.
+
+## <a name="2330"></a>2.3.3.0
+
+Vydáno 23. září 2019
+
+### <a name="new-features"></a>Nové funkce
+
+- **Integrace:**
+
+  - Přidání nového Suppressor pro IDE0060, aby se zabránilo tomu, aby se IDE zobrazovala Rychlá oprava pro odebrání nepoužitých parametrů.
+    - `USP0005`pro `IDE0060`: Zprávy Unity jsou vyvolány modulem runtime Unity.
+
+## <a name="2320"></a>2.3.2.0
+
+Vydáno 16. září 2019
+
+### <a name="new-features"></a>Nové funkce
+
+- **Integrace:**
+
+  - Provedli jsme porozumění, že Visual Studio má pro projekty Unity přidat novou diagnostiku specifickou pro Unity. Také jsme zvýšili inteligenci integrovaného vývojového prostředí (IDE) tím, že jsme potlačili obecnou diagnostiku C#, která se nevztahuje na projekty Unity. Například rozhraní IDE nebude zobrazovat rychlou opravu pro změnu proměnné inspektoru, `readonly` která by zabránila v úpravách proměnné v editoru Unity.
+    - `UNT0001`: Zprávy Unity jsou volány modulem runtime, i když jsou prázdné, proto je nedeklarujte, aby nedocházelo ke zbytečnému zpracování modulem runtime Unity.
+    - `UNT0002`: Porovnávání značek pomocí rovnosti řetězců je pomalejší než integrovaná metoda CompareTag.
+    - `UNT0003`: Kvůli bezpečnosti typů se upřednostňuje použití obecné formy getComponent.
+    - `UNT0004`: Zpráva Update je závislá na snímkové frekvenci a měla by místo Time.fixedDeltaTime používat Time.deltaTime.
+    - `UNT0005`: Zpráva FixedUpdate je nezávislá na snímkové frekvenci a měla by místo Time.deltaTime používat Time.fixedDeltaTime.
+    - `UNT0006`: Pro tuto zprávu Unity byl zjištěn nesprávný podpis metody.
+    - `UNT0007`: Unity přepisuje operátor porovnání s hodnotou null pro objekty Unity, které nejsou kompatibilní se sloučením s hodnotou null.
+    - `UNT0008`: Unity přepisuje operátor porovnání s hodnotou null pro objekty Unity, které nejsou kompatibilní s šířením hodnoty null.
+    - `UNT0009`: Při použití atributu InitializeOnLoad pro třídu musíte poskytnout statický konstruktor. Atribut InitializeOnLoad zajistí, že bude volán při spuštění editoru.
+    - `UNT0010`: Objekty MonoBehaviour by se měly vytvářet jen pomocí metody AddComponent(). Objekt MonoBehaviour je komponenta, která musí být připojená k objektu GameObject.
+    - `UNT0011`: Objekt ScriptableObject by se měl vytvářet jen pomocí metody CreateInstance(). Objekt ScriptableObject musí být vytvořený modulem Unity, aby zpracovával metody zpráv Unity.
+    - `USP0001`pro `IDE0029`: Objekty Unity by neměly používat slučování s hodnotou null.
+    - `USP0002`pro `IDE0031`: Objekty Unity by neměly používat šíření hodnoty null.
+    - `USP0003`pro `IDE0051`: Zprávy Unity jsou vyvolány modulem runtime Unity.
+    - `USP0004`pro `IDE0044`: Pole s atributem SerializeField by neměla být určena jen pro čtení.
+
+## <a name="2310"></a>2.3.1.0
+
+vydáno 4. září 2019
+
+### <a name="new-features"></a>Nové funkce
+
+- **Vyhodnocení:**
+
+  - Přidání podpory pro lepší zobrazení typu, tj. `List<object>` `List'1[[System.Object, <corlib...>]]`místo.
+
+  - Přidání podpory pro přístup ke členu ukazatele, `p->data->member`tj.
+
+  - Přidání podpory pro implicitní převody v inicializátorech pole, tj. `new byte [] {1,2,3,4}`
+
+  - Byla přidána podpora šestnáctkového editoru při kontrole bajtových polí a řetězců.
+
+## <a name="2300"></a>2.3.0.0
+
+vydáno 13. srpna 2019
+
+### <a name="bug-fixes"></a>Opravy chyb
+
+- **Vyhodnocení:**
+
+  - Opravili jsme problémy krokování s výjimkami.
+
+  - Pevné vyhodnocení pseudo identifikátorů (například $exception).
+
+  - Zabraňte selhání při přesměrování neplatných adres.  
+
+  - Opravili jsme problém s uvolněnými doménami AppDomain.
 
 ## <a name="2200"></a>2.2.0.0
 
@@ -37,7 +105,7 @@ Vydáno 25. července 2019
 
 ## <a name="2130"></a>2.1.3.0
 
-Vydáno 9. července 2019
+vydáno 9. července 2019
 
 ### <a name="new-features"></a>Nové funkce
 
@@ -65,7 +133,7 @@ Vydáno 9. července 2019
 
 ## <a name="2120"></a>2.1.2.0
 
-Vydáno 2. července 2019
+vydáno 2. července 2019
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
@@ -103,7 +171,7 @@ Vydáno 20. června 2019
 
   - Pro projekty Unity se zakázalo úplné sestavení, a to na základě chyb a upozornění technologie IntelliSense. Ve skutečnosti Unity vytvoří řešení sady Visual Studio s projekty knihoven tříd, které reprezentují, co Unity interně dělá. To se říká, výsledek sestavení v sadě Visual Studio se nikdy nepoužívá nebo nezískala v Unity, protože je jejich kanál kompilace uzavřený. Sestavování v aplikaci Visual Studio právě spotřebovává prostředky pro nic. Pokud potřebujete úplné sestavení, protože máte nástroje nebo nastavení, které na něm závisí, můžete tuto optimalizaci zakázat (nastavení/nástroje pro Unity nebo zakázat úplné sestavení projektů).
   
-  - Přidala se podpora pro balíčky Unity v UPE. Jsou viditelné pouze odkazované balíčky (používající manifest. JSON ve složce Packages) a místní balíčky (vložené do složky Packages).
+  - Přidala se podpora pro balíčky Unity v UPE. Jsou viditelné pouze odkazované balíčky (používající manifest. JSON `Packages` ve složce) a místní balíčky (vložené `Packages` do složky).
 
 ## <a name="2021"></a>2.0.2.1
 
@@ -164,6 +232,12 @@ Vydáno 20. března 2019
 - **Generování projektu:**
 
   - Při zpracování souboru řešení zachovat externí vlastnosti.
+  
+- **Vyhodnocení:**
+
+  - Byla přidána podpora názvů kvalifikovaných aliasů (pouze globální obor názvů pro nyní). Proto vyhodnocovací filtr výrazů nyní přijímá typy pomocí formuláře Global:: Namespace. Type.
+
+  - Přidání podpory pro `pointer[index]` formulář, která je sémanticky totožná s odkazem `*(pointer+index)` na odkazy na ukazatel.
 
 ## <a name="2004"></a>2.0.0.4
 
@@ -173,7 +247,7 @@ Vydáno 5. března 2019
 
 - **Integrace:**
 
-  - Aktualizace rozhraní API ScriptableObject
+  - Rozhraní API `ScriptableObject` se aktualizovalo.
 
 ### <a name="bug-fixes"></a>Opravy chyb
 
@@ -189,7 +263,7 @@ Vydáno 5. března 2019
 
 - **Generování projektu:**
 
-  - Veřejná a serializovaná pole už nebudou způsobovat upozornění. Automaticky jsme potlačili upozornění kompilátoru CS0649 a IDE0051 v projektech Unity, které tyto zprávy vytvořily.
+  - Veřejná a serializovaná pole už nebudou způsobovat upozornění. Automaticky jsme potlačili `CS0649` upozornění kompilátoru a `IDE0051` v projektech Unity, která tyto zprávy vytvořila.
 
 - **Integrace:**
 

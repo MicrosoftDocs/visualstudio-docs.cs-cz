@@ -3,7 +3,7 @@ title: Vytvoření aplikace Univerzální platforma Windows (UWP) pomocí sady V
 description: Vytvoření aplikace UWP v aplikaci Visual Studio s použitím jazyka XAML aC#
 titleSuffix: ''
 ms.custom: seodec18, get-started
-ms.date: 03/23/2019
+ms.date: 09/20/2019
 ms.technology: vs-ide-general
 ms.topic: tutorial
 ms.devlang: CSharp
@@ -14,12 +14,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 930512d762a05a91ab233566b76c6591ab2ea6d4
-ms.sourcegitcommit: 6993bcb0d2b0067b1b7b7899bfba52c31c70b7e7
+ms.openlocfilehash: 1be0e656489c4bbff9064db329fb8b015b446297
+ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095379"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71186826"
 ---
 # <a name="tutorial-create-your-first-universal-windows-platform-application-in-visual-studio-with-xaml-and-c35"></a>Kurz: Vytvoření první aplikace Univerzální platforma Windows v aplikaci Visual Studio s použitím jazyka XAML a jazyka C&#35;
 
@@ -62,6 +62,10 @@ Nejprve vytvořte projekt Univerzální platforma Windows. Typ projektu se dodá
 
    > [!NOTE]
    > Pokud nevidíte šablonu projektu **prázdná aplikace (univerzální pro Windows)** , klikněte na odkaz **instalovat další nástroje a funkce** .<br><br>![Klikněte na odkaz instalovat další nástroje a funkce.](media/vs-2019/uwp-not-finding.png)<br><br>Spustí se instalační program pro Visual Studio. Zvolte **Univerzální platforma Windows úlohy vývoje** a pak zvolte **Upravit**.<br><br>![Univerzální platforma Windows úlohy vývoje v Instalační program pro Visual Studio](media/uwp-dev-workload.png)
+
+1. Dejte projektu název, _HelloWorld_a klikněte na **vytvořit**.
+
+   ![Obrazovka konfigurace projektu](media/vs-2019/uwp-configure-your-project.png)
 
 1. V dialogovém okně **Nový projekt Univerzální platforma Windows** přijměte výchozí nastavení **cílové verze** a **Minimální verze** .
 
@@ -154,6 +158,8 @@ Kód používá některá rozhraní API systému Windows k vytvoření objektu s
 
 ## <a name="run-the-application"></a>Spuštění aplikace
 
+
+::: moniker range="vs-2017"
 Je čas sestavování, nasazování a spuštění aplikace "Hello World", která zobrazuje vzhled a zvuky jako. Tady je způsob.
 
 1. K spuštění aplikace v místním počítači použijte tlačítko Přehrát ( **místní počítač**obsahuje text).
@@ -172,7 +178,29 @@ Je čas sestavování, nasazování a spuštění aplikace "Hello World", která
 
 1. Pokud chcete aplikaci zavřít, klikněte na tlačítko **Zastavit ladění** na panelu nástrojů. (Případně zvolte možnost **ladění** > **Zastavit ladění** z řádku nabídek nebo stiskněte klávesy Shift + F5.)
 
-## <a name="next-steps"></a>Další postup
+::: moniker-end
+::: moniker range=">=vs-2019"
+Je čas sestavování, nasazování a spuštění aplikace "Hello World", která zobrazuje vzhled a zvuky jako. Tady je způsob.
+
+1. K spuštění aplikace v místním počítači použijte tlačítko Přehrát ( **místní počítač**obsahuje text).
+
+   ![Kliknutím na místní počítač spustíte a naladíte aplikaci UWP.](media/uwp-start-or-debug.png)
+
+   (Případně můžete zvolit **ladění** > **Spustit ladění** z řádku nabídek nebo stisknout klávesu F5 pro spuštění aplikace.)
+
+1. Zobrazte si aplikaci, která se zobrazí, jakmile se nezobrazí úvodní obrazovka. Aplikace by měla vypadat nějak takto:
+
+   ![Aplikace Hello World UWP](media/vs-2019/uwp-hello-world-app.png)
+
+1. Klikněte na tlačítko **Hello World** .
+
+   Vaše zařízení s Windows 10 bude doslova vyslovit text "Hello, World!".
+
+1. Pokud chcete aplikaci zavřít, klikněte na tlačítko **Zastavit ladění** na panelu nástrojů. (Případně zvolte možnost **ladění** > **Zastavit ladění** z řádku nabídek nebo stiskněte klávesy Shift + F5.)
+
+::: moniker-end
+
+## <a name="next-steps"></a>Další kroky
 
 Blahopřejeme k dokončení tohoto kurzu! Doufáme, že jste se seznámili se základními informacemi o UWP a prostředí IDE sady Visual Studio. Další informace najdete v následujícím kurzu:
 

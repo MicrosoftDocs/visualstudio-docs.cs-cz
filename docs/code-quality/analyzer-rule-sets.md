@@ -1,6 +1,6 @@
 ---
-title: Sady pravidel analyzátoru
-ms.date: 04/22/2019
+title: Sady pravidel nástroje FxCop Analyzer
+ms.date: 09/23/2019
 ms.topic: conceptual
 helpviewer_keywords:
 - analyzer packages, rule sets
@@ -10,16 +10,27 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 68410fd43f182873c27e3d5fed742bed7ba8a4ed
-ms.sourcegitcommit: b83fefa8177c5554cbe2c59c4d102cbc534f7cc6
+ms.openlocfilehash: da1567dd088ecc060f031e59827ff33024e9e955
+ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69585145"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71185949"
 ---
 # <a name="rule-sets-for-analyzer-packages"></a>Sady pravidel pro balíčky analyzátoru
 
 Předdefinované sady pravidel jsou součástí některých balíčků analyzátorů NuGet. Například sady pravidel, které jsou součástí balíčku NuGet [Microsoft. CodeAnalysis. FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/) (počínaje verzí 2.6.2), povolují nebo zakazují pravidla na základě jejich kategorie, jako je například zabezpečení, pojmenování nebo výkon. Použití sad pravidel usnadňuje rychlé zobrazení pouze těch porušení pravidel, která se vztahují k určité kategorii pravidla.
+
+Sada pravidel je seskupení pravidel analýzy kódu, která identifikují cílené problémy a konkrétní podmínky. Sady pravidel umožňují povolit nebo zakázat pravidla a nastavit závažnost pro porušení jednotlivých pravidel. Balíček NuGet pro FxCop Analyzer obsahuje předdefinované sady pravidel pro následující kategorie pravidel:
+
+- návrh
+- dokumentace
+- udržovatelnosti
+- pojmenování
+- výkon
+- spolehlivost
+- zabezpečení
+- využití
 
 Pokud migrujete ze starší analýzy "FxCop" na analýzu kódu na základě .NET Compiler Platform, tyto sady pravidel vám umožní pokračovat v používání podobných konfigurací pravidel pro [ty, které jste použili dříve](rule-set-reference.md).
 
@@ -74,5 +85,5 @@ Balíček [Microsoft. CodeAnalysis. FxCopAnalyzers](https://www.nuget.org/packag
 - [Nejčastější dotazy k analyzátorům](analyzers-faq.md)
 - [Přehled analyzátorů .NET Compiler Platform](roslyn-analyzers-overview.md)
 - [Nainstalovat analyzátory](install-roslyn-analyzers.md)
-- [Použít analyzátory](use-roslyn-analyzers.md)
+- [Konfigurovat analyzátory](use-roslyn-analyzers.md)
 - [Použití sad pravidel k seskupení pravidel analýzy kódu](using-rule-sets-to-group-code-analysis-rules.md)

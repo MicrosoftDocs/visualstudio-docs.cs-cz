@@ -1,6 +1,6 @@
 ---
 title: Jazykové konvence rozhraní .NET pro EditorConfig
-ms.date: 07/17/2019
+ms.date: 09/23/2019
 ms.topic: reference
 dev_langs:
 - CSharp
@@ -13,22 +13,23 @@ manager: jillfra
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2231d3637b4a016d1da783d65d4237b9f5d6bab2
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: e4f49df2c775bc3bb95888d76da133898ab9c76e
+ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551414"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71186526"
 ---
 # <a name="language-conventions"></a>Konvence jazyka
 
 Jazykové konvence pro EditorConfig v aplikaci Visual Studio spadají do dvou kategorií: ty, které se C#vztahují na Visual Basic a a C# ty, které jsou specifické. Jazykové konvence mají vliv na to, jak se používají různé aspekty programovacího jazyka, například modifikátory a závorky.
 
 > [!TIP]
-> - Pomocí odkazu **v tomto článku** můžete přejít na jiné části stránky.
 > - Chcete-li zobrazit příklady kódu v upřednostňovaném programovacím jazyce, vyberte jej pomocí nástroje pro výběr jazyka v pravém horním rohu okna prohlížeče.
 >
 >   ![Ovládací prvek pro výběr jazyka kódu](media/code-language-picker.png)
+>
+> - Pomocí odkazu **v tomto článku** můžete přejít na jiné části stránky.
 
 ## <a name="rule-format"></a>Formát pravidla
 
@@ -36,19 +37,48 @@ Pravidla pro jazykové konvence mají následující obecný formát:
 
 `option_name = value:severity`
 
-Pro každou jazykovou konvenci zadáte hodnotu, která definuje, kdy nebo kdy chcete styl preferovat. `true` Mnoho pravidel přijímá hodnotu (Tento styl upřednostňuje) nebo `false` (nepreferovat tento styl); `when_on_single_line` ostatní akceptují hodnoty jako nebo `never`. Druhá část pravidla určuje **závažnost**.
+Pro každou jazykovou konvenci zadáte hodnotu, která definuje, kdy nebo kdy chcete styl preferovat. Mnoho pravidel přijímá hodnotu `true` (Tento styl upřednostňuje) nebo `false` (nepreferovat tento styl). Jiná pravidla akceptují hodnoty, `when_on_single_line` jako `never`například nebo. Druhá část pravidla určuje [závažnost](#severity-levels).
 
-### <a name="severity"></a>severity
+::: moniker range=">=vs-2019"
+
+> [!NOTE]
+> Vzhledem k tomu, že jsou jazykové konvence vynutily analyzátory, můžete také nastavit jejich závažnost pomocí výchozí syntaxe konfigurace pro analyzátory. Syntaxe má formu `dotnet_diagnostic.<rule ID>.severity = <severity>`, `dotnet_diagnostic.IDE0040.severity = silent`například. Další informace najdete v tématu [nastavení závažnosti pravidla v souboru EditorConfig](../code-quality/use-roslyn-analyzers.md#set-rule-severity-in-an-editorconfig-file).
+
+::: moniker-end
+
+## <a name="severity-levels"></a>Úrovně závažnosti
 
 Závažnost jazykové konvence určuje úroveň, na které se má tento styl vyhovět. V následující tabulce jsou uvedeny možné hodnoty závažnosti a jejich důsledky:
 
 severity | Efekt
 :------- | ------
-`none` | Nezobrazovat uživateli žádné údaje, pokud je toto pravidlo porušeno. Funkce pro generování kódu generují kód v tomto stylu, ale. Pravidla se `none` závažností se nikdy neobjevují v nabídce **rychlé akce a** refaktoringu. Ve většině případů se to považuje za "zakázané" nebo "ignorované".
-`silent`(také `refactoring` v aplikaci Visual Studio 2017 verze 15,8 a novější) | Nezobrazovat uživateli žádné údaje, pokud je toto pravidlo porušeno. Funkce pro generování kódu generují kód v tomto stylu, ale. Pravidla se `silent` závažností se účastní vyčištění i v nabídce **rychlé akce a** refaktoringy.
-`suggestion` | Když je toto pravidlo stylu porušeno, zobrazte ho uživateli jako návrh. Návrhy se zobrazí jako tři šedé tečky pod prvními dvěma znaky.
-`warning` | Při porušení tohoto pravidla stylu zobrazit upozornění kompilátoru.
 `error` | Při porušení tohoto pravidla stylu zobrazit chybu kompilátoru.
+`warning` | Při porušení tohoto pravidla stylu zobrazit upozornění kompilátoru.
+`suggestion` | Když je toto pravidlo stylu porušeno, zobrazte ho uživateli jako návrh. Návrhy se zobrazí jako tři šedé tečky pod prvními dvěma znaky.
+`silent` | Nezobrazovat uživateli žádné údaje, pokud je toto pravidlo porušeno. Funkce pro generování kódu generují kód v tomto stylu, ale. Pravidla se `silent` závažností se účastní vyčištění a zobrazují se v nabídce **rychlé akce a refaktoringy** .
+`none` | Nezobrazovat uživateli žádné údaje, pokud je toto pravidlo porušeno. Funkce pro generování kódu generují kód v tomto stylu, ale. Pravidla se `none` závažností se nikdy neobjevují v nabídce **rychlé akce a** refaktoringu. Ve většině případů se to považuje za "zakázané" nebo "ignorované".
+
+::: moniker range=">=vs-2019"
+
+## <a name="automatically-configure-code-styles"></a>Automaticky konfigurovat styly kódu
+
+Počínaje verzí Visual Studio 2019 verze 16,3 můžete nakonfigurovat pravidla stylu kódu z nabídky návrhy [rychlých akcí](quick-actions.md) poté, co dojde k porušení stylu.
+
+Změna konvence stylu kódu:
+
+1. Najeďte myší na vlnovkou v editoru a pak otevřete nabídku žárovky, která se zobrazí. Vyberte možnost **Konfigurovat nebo potlačit problémy** > **Konfigurovat \<ID pravidla > stylu kódu**.
+
+   ![Konfigurace stylu kódu z nabídky světlé žárovky v aplikaci Visual Studio](media/vs-2019/configure-code-style.png)
+
+2. Odtud vyberte jednu z možností stylu kódu.
+
+   ![Konfigurovat nastavení stylu kódu](media/vs-2019/configure-code-style-setting.png)
+
+   Visual Studio přidá nebo upraví konfigurační nastavení v souboru EditorConfig, jak je znázorněno v poli Náhled.
+
+Chcete-li změnit závažnost porušení stylu kódu, postupujte podle stejných kroků, ale vyberte možnost **Konfigurovat \<ID pravidla > závažnost** namísto **konfigurace \<ID pravidla > stylu kódu**. Další informace najdete v tématu [automatické konfigurace závažnosti pravidla](../code-quality/use-roslyn-analyzers.md#automatically-configure-rule-severity).
+
+::: moniker-end
 
 ## <a name="net-code-style-settings"></a>Nastavení stylu kódu .NET
 
