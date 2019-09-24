@@ -654,7 +654,7 @@
         - name: "Návod: Vytvoření prostředí pro sestavení s\_použitím více počítačů"
           href: ide/walkthrough-creating-a-multiple-computer-build-environment.md
     - name: Ladění >>
-      href: debugger/index.md
+      href: debugger/index.yml
     - name: Test >>
       displayName: Unit testing
       href: test/improve-code-quality.md
