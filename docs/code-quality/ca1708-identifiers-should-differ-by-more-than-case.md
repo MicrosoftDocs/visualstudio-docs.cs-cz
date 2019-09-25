@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5098e2feadc6d67c466e31ab19d059ac70c7d833
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 7203f7f287ebb5b71ecad6e6ad4a861d63e5cf08
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69547395"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71234218"
 ---
 # <a name="ca1708-identifiers-should-differ-by-more-than-case"></a>CA1708: Identifikátory by se měly lišit více než použitím malých a velkých písmen
 
@@ -28,7 +28,7 @@ ms.locfileid: "69547395"
 |TypeName|IdentifiersShouldDifferByMoreThanCase|
 |CheckId|CA1708|
 |Kategorie|Microsoft.Naming|
-|Narušující změna|Narušující|
+|Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
 

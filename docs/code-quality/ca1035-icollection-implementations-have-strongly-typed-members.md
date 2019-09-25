@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a20feb514b87f2906fd4db32dfb38d3d9b661999
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 8d9e74daa464a55a543b5eb8c189c9ddf1295301
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68922833"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71236029"
 ---
 # <a name="ca1035-icollection-implementations-have-strongly-typed-members"></a>CA1035: Implementace ICollection mají členy silného typu
 
@@ -28,7 +28,7 @@ ms.locfileid: "68922833"
 |TypeName|ICollectionImplementationsHaveStronglyTypedMembers|
 |CheckId|CA1035|
 |Kategorie|Microsoft.Design|
-|Narušující změna|Narušující|
+|Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
 Veřejný nebo chráněný typ implementuje <xref:System.Collections.ICollection?displayProperty=fullName> , ale neposkytuje metodu se silným typem pro. <xref:System.Collections.ICollection.CopyTo%2A?displayProperty=fullName> Verze <xref:System.Collections.ICollection.CopyTo%2A> silného typu musí přijmout dva parametry a nemůže <xref:System.Array?displayProperty=fullName> mít ani pole <xref:System.Object?displayProperty=fullName> jako první parametr.

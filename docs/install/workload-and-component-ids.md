@@ -6,7 +6,7 @@ keywords: ''
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.date: 07/23/2019
+ms.date: 09/23/2019
 ms.topic: reference
 helpviewer_keywords:
 - workload ID, Visual Studio
@@ -16,12 +16,12 @@ ms.custom: seodec18
 ms.assetid: 34e19ef1-abfb-44fd-aad2-33c5d7874482
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: c0f7f52b79c1c6e165aabe19df8848361a096653
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: 51d5c25b9e8a3125a0f1b09a4fbfd5f6d6139084
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461607"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71211390"
 ---
 # <a name="visual-studio-workload-and-component-ids"></a>ID úloh a komponent sady Visual Studio
 
@@ -50,7 +50,7 @@ Další informace o použití těchto seznamů naleznete na stránce [ [použit�
 
 ::: moniker range="vs-2019"
 
-**Aktualizováno pro [verzi 16,2](/visualstudio/releases/2019/release-notes/)**
+**Aktualizováno pro [verzi 16,3](/visualstudio/releases/2019/release-notes/)**
 
 | **Edice** | **ID** | **Popis** |
 | ----------- | ------ | --------------- |

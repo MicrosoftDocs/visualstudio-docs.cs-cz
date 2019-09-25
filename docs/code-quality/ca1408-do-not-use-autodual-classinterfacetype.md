@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: b79483e8703ea297634d0d81d5449c09b58c9fb7
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: b26d92ca63a94cac7e293a688b1c7b3331586877
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68921987"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71234796"
 ---
 # <a name="ca1408-do-not-use-autodual-classinterfacetype"></a>CA1408: Nepoužívejte typ AutoDual ClassInterface
 
@@ -31,7 +31,7 @@ ms.locfileid: "68921987"
 |TypeName|DoNotUseAutoDualClassInterfaceType|
 |CheckId|CA1408|
 |Kategorie|Microsoft. interoperabilita|
-|Narušující změna|Narušující|
+|Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
 Viditelný typ modelu COM (Component Object Model) je označen <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> atributem nastaveným `AutoDual` na hodnotu <xref:System.Runtime.InteropServices.ClassInterfaceType>.

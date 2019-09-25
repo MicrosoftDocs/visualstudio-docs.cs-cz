@@ -7,12 +7,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f98b022aef49a4d98ad4864793aa55732f8de6c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 1c6c5df0109a8cff3cefcc308ea27077ef0fbe03
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62541087"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71237080"
 ---
 # <a name="ca3076-insecure-xslt-script-execution"></a>CA3076: Spuštění nezabezpečeného skriptu XSLT
 
@@ -21,31 +21,31 @@ ms.locfileid: "62541087"
 |TypeName|InsecureXSLTScriptExecution|
 |CheckId|CA3076|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Pevné|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Pokud spuštění šablony stylů transformace XSLT (Extensible Language) v aplikacích .NET nezabezpečeným způsobem, procesor může vyřešit nedůvěryhodné identifikátor URI odkazy, které může odhalit citlivé informace, které útočníci, což vede k Denial of Service a webů útoky. Další informace najdete v tématu [Considerations(.NET Guide) zabezpečení XSLT](/dotnet/standard/data/xml/xslt-security-considerations).
+Pokud v aplikacích .NET nezabezpečeně vyplníte Extensible Stylesheet Language Transformers (XSLT), může procesor vyřešit nedůvěryhodné odkazy identifikátorů URI, které by mohly zveřejnit citlivé informace pro útočníky, což by způsobilo odepření služby a vzájemného pracoviště. ohrožující. Další informace najdete v tématu věnovaném [bezpečnostním hlediskům XSLT (. NET Guide)](/dotnet/standard/data/xml/xslt-security-considerations).
 
 ## <a name="rule-description"></a>Popis pravidla
 
-**XSLT** je standard pro transformaci dat XML World Wide Web Consortium (W3C). XSLT se obvykle používá k zápisu šablony stylů k transformaci dat XML do jiných formátů, jako jsou HTML, text pevné délky, text oddělený čárkami nebo jiný formát XML. I když zakázané ve výchozím nastavení, můžete ji povolit pro váš projekt.
+**XSLT** je standard konsorcium World Wide Web (W3C) pro transformaci dat XML. XSLT se obvykle používá pro zápis šablon stylů pro transformaci dat XML do jiných formátů, jako je HTML, text s pevnou délkou, textový soubor s oddělovači nebo jiný formát XML. I když je ve výchozím nastavení zakázaná, můžete ji povolit pro svůj projekt.
 
-Aby bylo zajištěno nevystavujete rovinu útoku, toto pravidlo aktivuje vždy, když XslCompiledTransform.<xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> přijímá nezabezpečené kombinaci instance <xref:System.Xml.Xsl.XsltSettings> a <xref:System.Xml.XmlResolver>, která umožňuje zpracování škodlivým skriptem.
+Aby se zajistilo, že nezveřejňujete plochu pro útok, toto pravidlo se aktivuje při každém XslCompiledTransform.<xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> přijímá nezabezpečené instance <xref:System.Xml.Xsl.XsltSettings> kombinace a <xref:System.Xml.XmlResolver>, což umožňuje škodlivé zpracování skriptů.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-- Nahraďte XsltSettings nezabezpečené XsltSettings argument.<xref:System.Xml.Xsl.XsltSettings.Default%2A> nebo s instancí, který byl zakázán spuštění funkce a skriptu dokumentu.
+- Nahraďte nezabezpečený argument XsltSettings pomocí XsltSettings.<xref:System.Xml.Xsl.XsltSettings.Default%2A> nebo s instancí, která má zakázanou funkci dokumentu a provádění skriptu.
 
-- Nahradit <xref:System.Xml.XmlResolver> argument s hodnotou null nebo <xref:System.Xml.XmlSecureResolver> instance.
+- <xref:System.Xml.XmlSecureResolver> Nahraďte <xref:System.Xml.XmlResolver> argument hodnotou null nebo instancí.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Pokud si nejste jisti, že vstup je znám jako z důvěryhodného zdroje, nepotlačujte pravidlo z tohoto upozornění.
+Pokud si nejste jistí, že je vstup z důvěryhodného zdroje známý, nedoporučujeme z tohoto upozornění pravidlo potlačit.
 
-## <a name="pseudo-code-examples"></a>Příklady pseudo kódu
+## <a name="pseudo-code-examples"></a>Příklady kódu pseudo
 
-### <a name="violation-that-uses-xsltsettingstrustedxslt"></a>Narušení, který používá XsltSettings.TrustedXslt
+### <a name="violation-that-uses-xsltsettingstrustedxslt"></a>Porušení, které používá XsltSettings. TrustedXslt
 
 ```csharp
 using System.Xml;
@@ -66,7 +66,7 @@ namespace TestNamespace
 }
 ```
 
-### <a name="solution-that-uses-xsltsettingsdefault"></a>Řešení, které využívá XsltSettings.Default
+### <a name="solution-that-uses-xsltsettingsdefault"></a>Řešení, které používá XsltSettings. Default
 
 ```csharp
 using System.Xml;
@@ -87,7 +87,7 @@ namespace TestNamespace
 }
 ```
 
-### <a name="violationmdashdocument-function-and-script-execution-not-disabled"></a>Porušení&mdash;dokumentu spuštění funkce a skript nejsou zakázané
+### <a name="violationmdashdocument-function-and-script-execution-not-disabled"></a>Funkce&mdash;dokumentu porušení a provádění skriptu není zakázané.
 
 ```csharp
 using System.Xml;
@@ -112,7 +112,7 @@ namespace TestNamespace
 }
 ```
 
-### <a name="solutionmdashdisable-document-function-and-script-execution"></a>Řešení&mdash;zakázat spuštění funkce a skriptu dokumentu
+### <a name="solutionmdashdisable-document-function-and-script-execution"></a>Řešení&mdash;– zakázat funkci dokumentu a provádění skriptu
 
 ```csharp
 using System.Xml;
@@ -141,4 +141,4 @@ namespace TestNamespace
 
 ## <a name="see-also"></a>Viz také:
 
-- [Aspekty zabezpečení XSLT (Průvodce technologií .NET)](/dotnet/standard/data/xml/xslt-security-considerations)
+- [Požadavky na zabezpečení XSLT (. Průvodce NET)](/dotnet/standard/data/xml/xslt-security-considerations)

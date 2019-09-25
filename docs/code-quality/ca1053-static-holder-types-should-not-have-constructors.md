@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fec59e1d683c7867eb1cad9ae4e796a0815200d4
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.openlocfilehash: 44bdb8c12b48a983b88e6a035fc1522856b306be
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68604783"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71235588"
 ---
 # <a name="ca1053-static-holder-types-should-not-have-default-constructors"></a>CA1053: Typy statických držitelů by neměly mít výchozí konstruktory.
 
@@ -28,7 +28,7 @@ ms.locfileid: "68604783"
 |TypeName|StaticHolderTypesShouldNotHaveConstructors|
 |CheckId|CA1053|
 |Kategorie|Microsoft.Design|
-|Narušující změna|Narušující|
+|Zásadní změna|Narušující|
 
 > [!NOTE]
 > Pravidlo CA1053 je kombinované do [CA1052: Statické typy držitelů by měly](ca1052-static-holder-types-should-be-sealed.md) být zapečetěné v [analyzátorech FxCop](fxcop-analyzers.yml).

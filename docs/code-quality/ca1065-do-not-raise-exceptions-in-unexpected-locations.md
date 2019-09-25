@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9dd45410a2c928a0ffbbe827b100edd119cf59f0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 257100be0eb2766ef413854795c934b230e29370
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62797493"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71235248"
 ---
 # <a name="ca1065-do-not-raise-exceptions-in-unexpected-locations"></a>CA1065: Nevyvolávejte výjimky v neočekávaných umístěních
 
@@ -28,21 +28,21 @@ ms.locfileid: "62797493"
 |TypeName|DoNotRaiseExceptionsInUnexpectedLocations|
 |CheckId|CA1065|
 |Kategorie|Microsoft.Design|
-|Narušující změna|Pevné|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
 Metoda, u které není předpokládáno vyvolání výjimky, vyvolá výjimku.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Metody, které není předpokládáno vyvolání výjimky lze označit následujícím způsobem:
+Metody, které nejsou očekávány k vyvolání výjimek, mohou být zařazeny následujícím způsobem:
 
 - Metody Get vlastnosti
 
-- Metody přístupových objektů události
+- Metody přístupového objektu události
 
-- Metody Equals
+- Equals – metody
 
 - Metody GetHashCode
 
@@ -56,97 +56,97 @@ Metody, které není předpokládáno vyvolání výjimky lze označit následuj
 
 - Operátory rovnosti
 
-- Implicitní přetypování operátory
+- Operátory implicitního přetypování
 
-Následující části popisují tyto typy metody.
+Následující části popisují tyto typy metod.
 
 ### <a name="property-get-methods"></a>Metody Get vlastnosti
 
-Vlastnosti jsou v podstatě inteligentních polí. Proto by se měly chovat jako pole co největší míře. Pole není vyvolat výjimky a ani by měly vlastnosti. Pokud je vlastnost, která vyvolá výjimku, zvažte jeho metodu.
+Vlastnosti jsou v podstatě inteligentní pole. Proto by se měly chovat jako pole co nejvíce. Pole nevyvolají výjimky a nemají ani žádné vlastnosti. Pokud máte vlastnost, která vyvolá výjimku, zvažte její vytvoření metodou.
 
-Následující výjimky mohou být vyvolány z metody get vlastnosti:
+Následující výjimky mohou být vyvolány z metody Get vlastnosti:
 
-- <xref:System.InvalidOperationException?displayProperty=fullName> a všechny odvozené (včetně <xref:System.ObjectDisposedException?displayProperty=fullName>)
+- <xref:System.InvalidOperationException?displayProperty=fullName>a všechny odvozené (včetně <xref:System.ObjectDisposedException?displayProperty=fullName>)
 
-- <xref:System.NotSupportedException?displayProperty=fullName> a všechny odvozené konfigurace
+- <xref:System.NotSupportedException?displayProperty=fullName>a všechny deriváty
 
-- <xref:System.ArgumentException?displayProperty=fullName> (pouze z indexované get)
+- <xref:System.ArgumentException?displayProperty=fullName>(jenom z indexovaného Get)
 
-- <xref:System.Collections.Generic.KeyNotFoundException> (pouze z indexované get)
+- <xref:System.Collections.Generic.KeyNotFoundException>(jenom z indexovaného Get)
 
-### <a name="event-accessor-methods"></a>Metody přístupových objektů události
+### <a name="event-accessor-methods"></a>Metody přístupového objektu události
 
-Přístupové objekty událostí by měl být jednoduché operace, které není vyvolat výjimku. Události by neměly vyvolat výjimku při pokusu o přidání nebo odebrání obslužné rutiny události.
+Přístupové objekty událostí by měly být jednoduché operace, které nevyvolávají výjimky. Událost by neměla vyvolat výjimku při pokusu o přidání nebo odebrání obslužné rutiny události.
 
-Z přístupový objekt události mohou být vyvolány následující výjimky:
+Následující výjimky mohou být vyvolány z přístupového objektu události:
 
-- <xref:System.InvalidOperationException?displayProperty=fullName> a všechny odvozené (včetně <xref:System.ObjectDisposedException?displayProperty=fullName>)
+- <xref:System.InvalidOperationException?displayProperty=fullName>a všechny odvozené (včetně <xref:System.ObjectDisposedException?displayProperty=fullName>)
 
-- <xref:System.NotSupportedException?displayProperty=fullName> a všechny odvozené konfigurace
+- <xref:System.NotSupportedException?displayProperty=fullName>a všechny deriváty
 
-- <xref:System.ArgumentException> a vy
+- <xref:System.ArgumentException>a deriváty
 
-### <a name="equals-methods"></a>Metody Equals
+### <a name="equals-methods"></a>Equals – metody
 
-Následující **rovná** metody by neměla vyvolávat výjimky:
+Následující metody **Equals** by neměly vyvolat výjimky:
 
 - <xref:System.Object.Equals%2A?displayProperty=fullName>
 
 - <xref:System.IEquatable%601.Equals%2A>
 
-**Rovná** metoda by měla vrátit `true` nebo `false` namísto vyvolání výjimky. Například pokud se rovná se předá dva typy neodpovídající měla by jenom vrátit `false` namísto vyvolání <xref:System.ArgumentException>.
+Metoda **Equals** by měla vracet `true` nebo `false` namísto vyvolání výjimky. Například pokud se rovná se předává dvěma neodpovídajícím typům, měl by se `false` vracet pouze místo <xref:System.ArgumentException>vyvolání.
 
 ### <a name="gethashcode-methods"></a>Metody GetHashCode
 
-Následující **GetHashCode** metody obvykle by neměla vyvolávat výjimky:
+Následující metody **GetHashCode** by obvykle neměly vyvolat výjimky:
 
 - <xref:System.Object.GetHashCode%2A>
 
 - <xref:System.Collections.IEqualityComparer.GetHashCode%2A>
 
-**Metoda GetHashCode** by vždy vrátit hodnotu. V opačném případě může dojít ke ztrátě položky v zatřiďovací tabulce.
+**GetHashCode** by měla vždycky vracet hodnotu. V opačném případě můžete ztratit položky v zatřiďovací tabulce.
 
-Verze **GetHashCode** trvají může vyvolat argument <xref:System.ArgumentException>. Ale **Object.GetHashCode** by nikdy nevyvolají výjimku.
+Verze **GetHashCode** , které přebírají argument, mohou vyvolat <xref:System.ArgumentException>. **Objekt. GetHashCode** by však nikdy neměl vyvolat výjimku.
 
 ### <a name="tostring-methods"></a>Metody ToString
 
-Ladicí program používá <xref:System.Object.ToString%2A?displayProperty=fullName> usnadňují zobrazení informací o objektech ve formátu řetězce. Proto **ToString** by neměly měnit stav objektu, a to by neměla vyvolávat výjimky.
+Ladicí program používá <xref:System.Object.ToString%2A?displayProperty=fullName> k zobrazení informací o objektech ve formátu řetězce. Proto by **ToString** neměl měnit stav objektu a neměl by vyvolat výjimky.
 
 ### <a name="static-constructors"></a>Statické konstruktory
 
-Vyvolávání výjimek ze statického konstruktoru způsobí, že typ nebude v aktuální doméně aplikace. Pro vyvolání výjimky z statický konstruktor byste měli mít dobrý důvod (například potíže se zabezpečením).
+Vyvolávání výjimek ze statického konstruktoru způsobí, že typ bude v aktuální doméně aplikace nepoužitelný. Měli byste mít dobrý důvod (například problém zabezpečení) pro vyvolání výjimky ze statického konstruktoru.
 
 ### <a name="finalizers"></a>Finalizační metody
 
-Došlo k výjimce z finalizační metody způsobí, že modul CLR k selhání, které strhne proces. Proto vyvolávání výjimek v finalizační metody by vždy se jim vyhnout.
+Vyvolání výjimky z finalizační metody způsobí, že modul CLR nebude úspěšný, což rozvine proces. Proto by se měly vyvarovat výjimky v finalizační metodě vždy.
 
 ### <a name="dispose-methods"></a>Metody Dispose
 
-A <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> metoda by neměla vyvolávat výjimky. Uvolnění se často označuje jako součást logiky čištění `finally` klauzuli. Proto se explicitně vyvolání výjimky z metody Dispose vynutí uživateli přidat uvnitř zpracování výjimek `finally` klauzuli.
+<xref:System.IDisposable.Dispose%2A?displayProperty=fullName> Metoda by neměla vyvolat výjimku. Dispose se často volá jako součást logiky čištění v `finally` klauzuli. Proto explicitní vyvolání výjimky z Dispose vynutí uživatele přidat zpracování výjimek uvnitř `finally` klauzule.
 
-**Dispose(false)** cesta kódu by nikdy nevyvolají výjimky, protože metody Dispose je téměř vždy volán z finalizační metody.
+Cesta kódu **Dispose (false)** by nikdy neměla vyvolat výjimky, protože Dispose je téměř vždy voláno z finalizační metody.
 
-### <a name="equality-operators--"></a>Operátory rovnosti (==,! =)
+### <a name="equality-operators--"></a>Operátory rovnosti (= =,! =)
 
-Stejně jako metody Equals, operátory rovnosti by měla vrátit buď `true` nebo `false`a by neměla vyvolávat výjimky.
+Podobně jako metody Equals by operátory rovnosti měli `true` vracet `false`buď nebo, a neměly by vyvolat výjimky.
 
-### <a name="implicit-cast-operators"></a>Implicitní přetypování operátory
+### <a name="implicit-cast-operators"></a>Operátory implicitního přetypování
 
-Vzhledem k tomu, že uživatel je často vědět, že operátor implicitní přetypování se zavolala, je výjimka vyvolána operátorem implicitní přetypování neočekávané. Proto žádné výjimky, měla by být vyvolána z operátory implicitní přetypování.
+Vzhledem k tomu, že uživatel často neví, že byl volán implicitní operátor přetypování, výjimka vyvolaná implicitním operátorem přetypování je neočekávaná. Proto by neměly být vyvolány žádné výjimky z implicitních operátorů přetypování.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-U gettery vlastností buď změnit logiku tak, aby už byly k vyvolání výjimky, nebo změňte vlastnost na metodu.
+Pro metodu getter vlastnosti buď změňte logiku tak, že již není nutné vyvolat výjimku, nebo změňte vlastnost na metodu.
 
-Pro všechny ostatní metody typy uvedených výše změňte tak, aby ho už musí vyvolat výjimku logiku.
+U všech ostatních typů metod, které jsou uvedeny dříve, změňte logiku tak, aby již nemusela vyvolat výjimku.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Pokud deklaraci výjimky namísto vyvolanou výjimku způsobila porušení zásady, je bezpečný pro potlačení upozornění tohoto pravidla.
+Pokud bylo porušení způsobeno deklarací výjimky místo vyvolané výjimky, je bezpečné potlačit upozornění od tohoto pravidla.
 
 ## <a name="related-rules"></a>Související pravidla
 
-- [CA2219: Nevyvolávejte výjimky v klauzulích výjimky](../code-quality/ca2219-do-not-raise-exceptions-in-exception-clauses.md)
+- [CA2219 Nevyvolávání výjimek v klauzulích výjimky](../code-quality/ca2219-do-not-raise-exceptions-in-exception-clauses.md)
 
 ## <a name="see-also"></a>Viz také:
 

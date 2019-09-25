@@ -18,12 +18,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 41d3db6e4807c77236868e3ab5746da971ddce6c
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: e6bd77a49690979ea7ab3c4619fdd578a80bb77c
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68922495"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71235513"
 ---
 # <a name="ca1057-string-uri-overloads-call-systemuri-overloads"></a>CA1057: Přetížení řetězce identifikátoru URI volají přetížení System.Uri
 
@@ -32,7 +32,7 @@ ms.locfileid: "68922495"
 |TypeName|StringUriOverloadsCallSystemUriOverloads|
 |CheckId|CA1057|
 |Kategorie|Microsoft.Design|
-|Narušující změna|Nenarušující|
+|Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
 

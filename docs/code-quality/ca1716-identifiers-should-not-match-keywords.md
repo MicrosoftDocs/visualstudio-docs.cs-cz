@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9a51ac9509cf891c05166d46e4b72b862c0dc723
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 7a3f030c9c64d975d93aa2aeee90d37f765a6a63
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69547077"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71234046"
 ---
 # <a name="ca1716-identifiers-should-not-match-keywords"></a>CA1716: Identifikátory by se neměly shodovat s klíčovými slovy
 
@@ -28,7 +28,7 @@ ms.locfileid: "69547077"
 |TypeName|IdentifiersShouldNotMatchKeywords|
 |CheckId|CA1716|
 |Kategorie|Microsoft.Naming|
-|Narušující změna|Narušující|
+|Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
 

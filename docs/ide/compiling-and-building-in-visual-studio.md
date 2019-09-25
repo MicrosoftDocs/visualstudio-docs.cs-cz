@@ -12,12 +12,12 @@ ms.author: ghogen
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fe8528b9e6ad302319f1fb1ebb010c7f55b93932
-ms.sourcegitcommit: 59e5758036223ee866f3de5e3c0ab2b6dbae97b6
+ms.openlocfilehash: 2c99408530344c72d2e9669178c5e79f7c34d551
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68416594"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71211254"
 ---
 # <a name="compile-and-build-in-visual-studio"></a>Kompilace a sestavení v sadě Visual Studio
 
@@ -25,7 +25,7 @@ Při sestavování zdrojového kódu se jádro sestavení vytvoří sestavení a
 
 Podle častým sestavováním kódu, můžete rychle identifikovat chyby kompilace, jako je nesprávná syntaxe, překlepy v klíčových slovech a neshody typu. Můžete také zjistit a opravit chyby za běhu, jako jsou logické a sémantické chyby, sestavováním a spouštěním ladicí verze kódu.
 
-Úspěšné sestavení ověří, že zdrojový kód aplikace obsahuje správnou syntaxi a, umí přeložit všechny statické odkazy na knihovny, sestavení a další komponenty. Je vytvořen spustitelný soubor aplikace, které můžete testovat pro správné fungování v obou [ladicí prostředí](../debugger/index.md) a s celou řadou ručních a automatizovaných testů, které [ověření kvality kódu](../test/improve-code-quality.md). Jakmile aplikace byly plně testovány, můžete kompilaci verze vydání k nasazení na vaše zákazníky. Úvod k tomuto procesu najdete v tématu [Návod: Sestavování](../ide/walkthrough-building-an-application.md)aplikace.
+Úspěšné sestavení ověří, že zdrojový kód aplikace obsahuje správnou syntaxi a, umí přeložit všechny statické odkazy na knihovny, sestavení a další komponenty. Je vytvořen spustitelný soubor aplikace, které můžete testovat pro správné fungování v obou [ladicí prostředí](../debugger/index.yml) a s celou řadou ručních a automatizovaných testů, které [ověření kvality kódu](../test/improve-code-quality.md). Jakmile aplikace byly plně testovány, můžete kompilaci verze vydání k nasazení na vaše zákazníky. Úvod k tomuto procesu najdete v tématu [Návod: Sestavování](../ide/walkthrough-building-an-application.md)aplikace.
 
 Pro vytvoření aplikace můžete použít některý z následujících metod: integrované vývojové prostředí sady Visual Studio, nástroje příkazového řádku MSBuild a kanály Azure:
 

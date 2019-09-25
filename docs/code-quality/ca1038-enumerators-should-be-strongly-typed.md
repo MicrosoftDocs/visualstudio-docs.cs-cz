@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2dae77bf7783edc165305f9b3ba60969d4f126a8
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 56c2281f76b9064427d1d651523b9cda441eb029
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68922896"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71236006"
 ---
 # <a name="ca1038-enumerators-should-be-strongly-typed"></a>CA1038: Enumerátory by měly být silného typu
 
@@ -28,7 +28,7 @@ ms.locfileid: "68922896"
 |TypeName|EnumeratorsShouldBeStronglyTyped|
 |CheckId|CA1038|
 |Kategorie|Microsoft.Design|
-|Narušující změna|Narušující|
+|Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
 Veřejný nebo chráněný typ implementuje <xref:System.Collections.IEnumerator?displayProperty=fullName> , ale neposkytuje verzi <xref:System.Collections.IEnumerator.Current%2A?displayProperty=fullName> silného typu vlastnosti. Typy, které jsou odvozeny z následujících typů, jsou vyloučeny z tohoto pravidla:

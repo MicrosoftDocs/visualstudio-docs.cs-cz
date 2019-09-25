@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4a45b7061ae9d183ec7ee02a3b733ee9340b3689
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: d878572c4391805773a9a711ee88e7b58f507c65
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68921307"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71233299"
 ---
 # <a name="ca1901-pinvoke-declarations-should-be-portable"></a>CA1901: Deklarace volání nespravovaného kódu by měla být přenosná
 
@@ -28,7 +28,7 @@ ms.locfileid: "68921307"
 |TypeName|PInvokeDeclarationsShouldBePortable|
 |CheckId|CA1901|
 |Kategorie|Microsoft. přenositelnost|
-|Narušující změna|Přerušení – Pokud je volání nespravovaného modulu mimo sestavení viditelné. Bez přerušení – Pokud není volání nespravovaného volání mimo sestavení viditelné.|
+|Zásadní změna|Přerušení – Pokud je volání nespravovaného modulu mimo sestavení viditelné. Bez přerušení – Pokud není volání nespravovaného prostředí viditelné mimo sestavení.|
 
 ## <a name="cause"></a>příčina
 Toto pravidlo vyhodnocuje velikost každého parametru a návratovou hodnotu volání nespravovaného kódu a ověřuje, zda je jejich velikost, je-li zařazování na nespravovaný kód na 32 a 64-bitových platforem správná. Nejběžnějším porušením tohoto pravidla je předávat celé číslo s pevnou velikostí, kde je vyžadována proměnná závislá na platformě a proměnné velikosti ukazatele.

@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8ca28f364307d4a2b73235bc6541cb8aa01abd56
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 67d1a1c37a1c39e07dd5b8754fef223bfa8ad7a2
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68920662"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71232282"
 ---
 # <a name="ca2134-methods-must-keep-consistent-transparency-when-overriding-base-methods"></a>CA2134: Metody musí při přepisování základních metod zachovávat konzistentní transparentnost
 
@@ -24,7 +24,7 @@ ms.locfileid: "68920662"
 |TypeName|MethodsMustOverrideWithConsistentTransparency|
 |CheckId|CA2134|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Narušující|
+|Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
 Toto pravidlo je vyvoláno, je- <xref:System.Security.SecurityCriticalAttribute> li metoda označena s přepsáním metody, která <xref:System.Security.SecuritySafeCriticalAttribute>je průhledná nebo označena atributem. Pravidlo se aktivuje také v případě, že metoda, která je průhledná <xref:System.Security.SecuritySafeCriticalAttribute> nebo označená s přepsáním metody, <xref:System.Security.SecurityCriticalAttribute>která je označena atributem.

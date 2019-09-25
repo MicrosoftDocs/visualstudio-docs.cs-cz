@@ -10,12 +10,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 383011e53b14ec2cc7dd7474cd050f05295a2a73
-ms.sourcegitcommit: 2ee11676af4f3fc5729934d52541e9871fb43ee9
+ms.openlocfilehash: 6bcf32401abdeae499097bc5187d11154e7dfc6e
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65841474"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71237421"
 ---
 # <a name="ca3002-review-code-for-xss-vulnerabilities"></a>CA3002: Zkontrolujte ohrožení zabezpečení proti XSS v kódu
 
@@ -24,41 +24,41 @@ ms.locfileid: "65841474"
 |TypeName|ReviewCodeForXssVulnerabilities|
 |CheckId|CA3002|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Pevné|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Potenciálně nedůvěryhodný vstup požadavku HTTP dosáhne nezpracovaného výstupu HTML.
+Potenciálně nedůvěryhodný vstup požadavku HTTP dostane nezpracovaný výstup HTML.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Při práci s nedůvěryhodný vstup z webových požadavků, dávejte (XSS) útoky skriptování napříč weby. Útok XSS vkládá nedůvěryhodný vstup do nezpracovaný kód HTML výstup, mu umožní spuštění škodlivých skriptů nebo nebezpečným způsobem upravovat obsah na webové stránce. Vložení typickou techniku `<script>` prvky s škodlivý kód ve vstupu. Další informace najdete v tématu [společnosti OWASP XSS](https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)).
+Při práci s nedůvěryhodným vstupem z webových požadavků zajistěte útoky skriptování XSS (mezi weby). Útok XSS vloží nedůvěryhodný vstup do nezpracovaného výstupu HTML a umožní útočníkovi spustit škodlivé skripty nebo škodlivým způsobem upravovat obsah na webové stránce. Typickou technikou je umístit `<script>` prvky se škodlivým kódem do vstupu. Další informace najdete v tématu [OWASP skriptování xss](https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)).
 
-Toto pravidlo se pokusí najít vstup dosažení nezpracovaného výstupu HTML požadavků HTTP.
-
-> [!NOTE]
-> Toto pravidlo nelze sledovat data napříč sestavení. Například pokud jedno sestavení načte vstup požadavku HTTP a předává je na jiné sestavení, který zobrazí nezpracovaný kód HTML, nevytvoří toto pravidlo upozornění.
+Toto pravidlo se pokusí najít vstup z požadavků HTTP, které dosáhnou nezpracovaného výstupu HTML.
 
 > [!NOTE]
-> Je konfigurovatelná omezení jak hluboko bude toto pravidlo analyzovat tok dat mezi volání metody. Zobrazit [Analyzer Configuration](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md#dataflow-analysis) jak nakonfigurovat limit v souboru EditorConfig.
+> Toto pravidlo nemůže sledovat data napříč sestaveními. Například pokud jedno sestavení přečte vstup požadavku HTTP a pak ho předává do jiného sestavení, které výstupuje nezpracovaných HTML, toto pravidlo nevytvoří upozornění.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+> [!NOTE]
+> Existuje konfigurovatelné omezení, jak hluboko bude toto pravidlo analyzovat tok dat napříč voláními metod. Postup konfigurace limitu v souboru EditorConfig naleznete v tématu [Configuration Analyzer](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md#dataflow-analysis) .
 
-- Místo výstupu nezpracovaný kód HTML, použijte metodu nebo vlastnost tento první umístí kódování HTML vstup.
-- Data s kódováním HTML nedůvěryhodné před výstupu nezpracovaný kód HTML.
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
+
+- Místo výstupu nezpracovaného kódu HTML použijte metodu nebo vlastnost, která nejprve zakóduje svůj vstup ve formátu HTML.
+- HTML – kódování nedůvěryhodných dat před výstupem nezpracovaného HTML.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Je bezpečné potlačit upozornění tohoto pravidla, pokud:
-- Víte, že vstup je ověřen vůči známé bezpečné množinu znaků, neobsahující HTML.
-- Víte, že data jsou kódovaný jazykem HTML způsobem nenajde tímto pravidlem.
+Upozornění z tohoto pravidla je bezpečné potlačit, pokud:
+- Víte, že vstup je ověřený proti známé bezpečné sadě znaků, které neobsahují kód HTML.
+- Víte, že data jsou ve formátu HTML kódovaná způsobem, který toto pravidlo nerozpoznalo.
 
 > [!NOTE]
-> Toto pravidlo může hlásit počet falešně pozitivních výsledků pro některé metody nebo vlastnosti tohoto kódování HTML svůj vstup.
+> Toto pravidlo může hlásit falešně pozitivní výsledky některých metod nebo vlastností, které jsou ve formátu HTML zakódováním jejich vstupu.
 
-## <a name="pseudo-code-examples"></a>Příklady pseudo kódu
+## <a name="pseudo-code-examples"></a>Příklady kódu pseudo
 
-### <a name="violation"></a>Porušení
+### <a name="violation"></a>Selhání
 
 ```csharp
 using System;

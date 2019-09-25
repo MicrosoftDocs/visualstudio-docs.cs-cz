@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f25b74949c734921c313ae2cf00a2d217029e52
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 11f210b9d37f15b3ea92b92112e48eecd3c8b9e1
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68921390"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71233412"
 ---
 # <a name="ca1822-mark-members-as-static"></a>CA1822: Označte členy jako statické
 
@@ -28,7 +28,7 @@ ms.locfileid: "68921390"
 |TypeName|MarkMembersAsStatic|
 |CheckId|CA1822|
 |Kategorie|Microsoft. Performance|
-|Narušující změna|Bez přerušení – Pokud člen není viditelný mimo sestavení, bez ohledu na změnu, kterou provedete. Bez přerušení – Pokud pouze změníte člena na člen instance pomocí `this` klíčového slova.<br /><br /> Přerušení – Pokud změníte člena z instance členu na statický člen a je viditelný mimo sestavení.|
+|Zásadní změna|Bez přerušení – Pokud člen není viditelný mimo sestavení, bez ohledu na změnu, kterou provedete. Bez přerušení – Pokud pouze změníte člena na člen instance pomocí `this` klíčového slova.<br /><br /> Přerušení – Pokud změníte člena z instance členu na statický člen a je viditelný mimo sestavení.|
 
 ## <a name="cause"></a>příčina
 Člen, který nemá přístup k datům instance, není označený jako static (Shared [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]in).

@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b3789b5e786038c2bf1fe5e823a1b0fb4f7a7c9
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 69b6256f2c6ae54467eb21cc17d50119b3c67a9f
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68922730"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71235180"
 ---
 # <a name="ca1302-do-not-hardcode-locale-specific-strings"></a>CA1302: Nekódujte pevně řetězce závislé na národním prostředí
 
@@ -31,7 +31,7 @@ ms.locfileid: "68922730"
 |TypeName|DoNotHardcodeLocaleSpecificStrings|
 |CheckId|CA1302|
 |Kategorie|Microsoft.Globalization|
-|Narušující změna|Nenarušující|
+|Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
 Metoda používá řetězcový literál, který představuje část cesty určitých systémových složek.

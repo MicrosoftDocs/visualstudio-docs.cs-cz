@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 38d92194a5aa2b46a0cb65a1525bc01d9de67b86
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: fa1ffbb393700647f12c455c8d1307a77548f2d1
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69547368"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71235498"
 ---
 # <a name="ca1058-types-should-not-extend-certain-base-types"></a>CA1058: Typy by neměly rozšiřovat určité základní typy
 
@@ -28,7 +28,7 @@ ms.locfileid: "69547368"
 |TypeName|TypesShouldNotExtendCertainBaseTypes|
 |CheckId|CA1058|
 |Kategorie|Microsoft.Design|
-|Narušující změna|Narušující|
+|Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
 

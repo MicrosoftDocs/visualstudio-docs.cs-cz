@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 37f4cac83c83b47fda5cf9cde85a3e14d857d2bc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4107800a5623de29448a9213184dd44feed2cac9
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62545535"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71232808"
 ---
 # <a name="ca2108-review-declarative-security-on-value-types"></a>CA2108: Zkontrolujte deklarativní zabezpečení u typů hodnot
 
@@ -28,33 +28,33 @@ ms.locfileid: "62545535"
 |TypeName|ReviewDeclarativeSecurityOnValueTypes|
 |CheckId|CA2108|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Pevné|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Veřejný nebo chráněný hodnotový typ je zabezpečen pomocí [Data a modelování](/dotnet/framework/data/index) nebo [požadavky propojení](/dotnet/framework/misc/link-demands).
+Veřejný nebo chráněný typ hodnoty je zabezpečený [daty a modelováním](/dotnet/framework/data/index) nebo [požadavky propojení](/dotnet/framework/misc/link-demands).
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Typy hodnot jsou přiděleny a inicializován pomocí jejich výchozí konstruktory před další konstruktory. Pokud hodnota typ je zabezpečen pomocí s požadavkem nebo LinkDemand a volající nemá oprávnění, které splňují kontrola zabezpečení, některý konstruktor jiné než výchozí hodnota se nezdaří a bude vyvolána výjimka zabezpečení. Typ hodnoty není uvolněný; je ponechána ve stavu, nastavte jeho výchozí konstruktor. Nepředpokládejte, že volající, který předá instance typu hodnoty má oprávnění k vytváření a přístup k instanci.
+Typy hodnot jsou přiděleny a inicializovány jejich výchozími konstruktory předtím, než se spustí jiné konstruktory. Pokud je typ hodnoty zabezpečený požadavkem nebo LinkDemand a volající nemá oprávnění, která splní kontrolu zabezpečení, jakýkoliv jiný konstruktor než výchozí selže a vyvolá se výjimka zabezpečení. Typ hodnoty není navrácený; je ponechán ve stavu nastaveném jeho výchozím konstruktorem. Nepředpokládají, že volající, který předává instanci typu hodnoty, má oprávnění vytvořit nebo získat přístup k instanci.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Pokud odeberete z typu kontroly zabezpečení a použití zabezpečení na úrovni metoda zkontroluje místo něj nelze opravit porušení tohoto pravidla. Oprava porušení tímto způsobem nezabrání volajícím s nedostatečná oprávnění od získání instance typu hodnoty. Ujistěte se, že instance typu hodnoty ve svém výchozím stavu není zveřejnit citlivé informace a nelze použít škodlivých způsobem.
+Porušení tohoto pravidla nelze opravit, Pokud neodeberete kontrolu zabezpečení z daného typu a na svém místě použijete kontrolu zabezpečení na úrovni metod. Oprava porušení tímto způsobem nebrání volajícím s nedostatečnými oprávněními v získání instancí typu hodnoty. Je nutné zajistit, aby instance typu hodnoty ve svém výchozím stavu nezveřejnila citlivé informace, a nelze ji použít škodlivou způsobem.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Upozornění tohoto pravidla můžete potlačit, pokud jakýkoli volající můžete získat instance typu hodnoty ve svém výchozím stavu bez představující ohrožení zabezpečení.
+Můžete potlačit upozornění z tohoto pravidla, pokud kterýkoli volající může získat instance typu hodnoty ve svém výchozím stavu bez ohrožení zabezpečení.
 
 ## <a name="example-1"></a>Příklad 1
 
-Následující příklad ukazuje knihovnu obsahující hodnotový typ, který porušuje tato pravidla. `StructureManager` Typ předpokládá, že volající, který předá instance typu hodnoty má oprávnění k vytváření a přístup k instanci.
+Následující příklad ukazuje knihovnu obsahující typ hodnoty, který toto pravidlo porušuje. `StructureManager` Typ předpokládá, že volající, který předává instanci typu hodnoty, má oprávnění vytvořit nebo získat přístup k instanci.
 
 [!code-csharp[FxCop.Security.DemandOnValueType#1](../code-quality/codesnippet/CSharp/ca2108-review-declarative-security-on-value-types_1.cs)]
 
 ## <a name="example-2"></a>Příklad 2
 
-Následující aplikace ukazuje slabé stránky knihovny.
+Následující aplikace demonstruje slabé stránky knihovny.
 
 [!code-csharp[FxCop.Security.TestDemandOnValueType#1](../code-quality/codesnippet/CSharp/ca2108-review-declarative-security-on-value-types_2.cs)]
 

@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: de64e0271370a3cdcc6f0963dbf06925621b9b65
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 5283c96a484f47fe280a07c5889b8db877db5ffc
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68920192"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71230988"
 ---
 # <a name="ca2223-members-should-differ-by-more-than-return-type"></a>CA2223: Členy by se měly lišit více než návratovým typem
 
@@ -28,7 +28,7 @@ ms.locfileid: "68920192"
 |TypeName|MembersShouldDifferByMoreThanReturnType|
 |CheckId|CA2223|
 |Kategorie|Microsoft.Usage|
-|Narušující změna|Narušující|
+|Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
 Dva veřejné nebo chráněné členy mají signatury, které jsou stejné s výjimkou návratového typu.

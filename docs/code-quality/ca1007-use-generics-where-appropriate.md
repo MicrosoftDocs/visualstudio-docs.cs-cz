@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: ffb18316b5f009a0f2854c8a158e528f15c92326
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 0d7783bea936b04fcb600563dadea6a65ac5ef5e
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68923209"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71236524"
 ---
 # <a name="ca1007-use-generics-where-appropriate"></a>CA1007: Použijte obecné typy, kde je to vhodné
 
@@ -31,7 +31,7 @@ ms.locfileid: "68923209"
 |TypeName|UseGenericsWhereAppropriate|
 |CheckId|CA1007|
 |Kategorie|Microsoft.Design|
-|Narušující změna|Narušující|
+|Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
 Externě viditelná metoda obsahuje referenční parametr typu <xref:System.Object?displayProperty=fullName>a sestavení obsahující cíle .NET Framework 2,0.

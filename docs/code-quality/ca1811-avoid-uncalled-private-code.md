@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c144db920bfa04055c81227e4cc2c230ed2f097d
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 92a7542499eceeccbd62ce327b386dc099b726b2
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68921333"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71233625"
 ---
 # <a name="ca1811-avoid-uncalled-private-code"></a>CA1811: Vyhněte se nevolanému privátnímu kódu
 
@@ -28,7 +28,7 @@ ms.locfileid: "68921333"
 |TypeName|AvoidUncalledPrivateCode|
 |CheckId|CA1811|
 |Kategorie|Microsoft. Performance|
-|Narušující změna|Nenarušující|
+|Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
 Soukromý nebo interní člen (na úrovni sestavení) nemá volající v sestavení, není vyvolán modulem CLR (Common Language Runtime) a není vyvolán delegátem. Následující členové nejsou kontrolováni tímto pravidlem:

@@ -18,12 +18,12 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: 8a6ced277aa442450418ce55f4e1db56ad5d8af1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3d097a67c9a62a6847ff6ab0bb882257c082ca6f
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62806534"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71231301"
 ---
 # <a name="ca2227-collection-properties-should-be-read-only"></a>CA2227: Vlastnosti kolekce by měly být pouze pro čtení
 
@@ -32,31 +32,31 @@ ms.locfileid: "62806534"
 |TypeName|CollectionPropertiesShouldBeReadOnly|
 |CheckId|CA2227|
 |Kategorie|Microsoft.Usage|
-|Narušující změna|Narušující|
+|Zásadní změna|Narušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Externě viditelný, Zapisovat vlastnosti je typu, který implementuje <xref:System.Collections.ICollection?displayProperty=fullName>. Toto pravidlo ignoruje pole, indexery (vlastnosti s názvem "Položka") a sady oprávnění.
+Externě viditelná vlastnost s možností zápisu je typu, který implementuje <xref:System.Collections.ICollection?displayProperty=fullName>. Toto pravidlo ignoruje pole, indexery (vlastnosti s názvem Item) a sady oprávnění.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Zapisovatelná vlastnost kolekce umožňuje uživateli nahradit kolekci zcela jinou kolekci. Vlastnost jen pro čtení neumožňuje kolekci nahradit, ale stále umožňuje nastavit jednotlivé členy. Pokud nahrazující kolekce je cíl, vzor upřednostňovaný návrh je metoda odebrání všechny elementy z kolekce a způsob, jak znovu vytvořit kolekci. Najdete v článku <xref:System.Collections.ArrayList.Clear%2A> a <xref:System.Collections.ArrayList.AddRange%2A> metody <xref:System.Collections.ArrayList?displayProperty=fullName> třídy příklad tohoto modelu.
+Vlastnost zapisovatelné kolekce umožňuje uživateli nahradit kolekci zcela jinou kolekcí. Vlastnost jen pro čtení zastaví vyměnění kolekce, ale stále umožňuje nastavit jednotlivé členy. Pokud nahradíte kolekci cílem, preferovaný vzor návrhu je zahrnout metodu pro odebrání všech prvků z kolekce a metodu pro přeplnění kolekce. Příklad tohoto vzoru <xref:System.Collections.ArrayList.AddRange%2A> naleznete v metodách <xref:System.Collections.ArrayList?displayProperty=fullName>atřídy. <xref:System.Collections.ArrayList.Clear%2A>
 
-Binární soubor a serializace XML podporují jen pro čtení vlastnosti, které jsou kolekce. <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> Třída má specifické požadavky na typy, které implementují <xref:System.Collections.ICollection> a <xref:System.Collections.IEnumerable?displayProperty=fullName> -li být serializovatelný.
+Binární i XML serializace podporují vlastnosti jen pro čtení, které jsou kolekcemi. Třída má specifické požadavky pro typy, které implementují <xref:System.Collections.IEnumerable?displayProperty=fullName> <xref:System.Collections.ICollection> a mají být serializovatelný. <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, nastavte vlastnost jen pro čtení. Pokud to vyžaduje návrh, přidejte metody, zrušte a znovu vytvořit kolekci.
+Chcete-li opravit porušení tohoto pravidla, nastavte vlastnost jen pro čtení. Pokud je návrh vyžaduje, přidejte metody, které vymaže a znovu naplní kolekci.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Upozornění můžete potlačit, pokud vlastnost je součástí [objekt pro přenos dat (DTO)](/previous-versions/msp-n-p/ff649585(v=pandp.10)) třídy.
+Můžete potlačit upozornění, pokud je vlastnost součástí třídy [přenos dat objektů (DTO)](/previous-versions/msp-n-p/ff649585(v=pandp.10)) .
 
-V opačném případě nepotlačujte upozornění tohoto pravidla.
+V opačném případě potlačí upozornění z tohoto pravidla.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje typ s zapisovatelná vlastnost kolekce a jak kolekce se dá nahradit přímo. Kromě toho ukazuje upřednostňovaný způsob nahrazení vlastnost kolekce jenom pro čtení pomocí `Clear` a `AddRange` metody.
+Následující příklad ukazuje typ s zapisovatelnou vlastností Collection a ukazuje, jak lze kolekci nahradit přímo. Kromě toho zobrazuje preferovaný způsob nahrazení vlastnosti kolekce jen pro čtení pomocí `Clear` metod a. `AddRange`
 
 [!code-csharp[FxCop.Usage.PropertiesReturningCollections#1](../code-quality/codesnippet/CSharp/ca2227-collection-properties-should-be-read-only_1.cs)]
 [!code-vb[FxCop.Usage.PropertiesReturningCollections#1](../code-quality/codesnippet/VisualBasic/ca2227-collection-properties-should-be-read-only_1.vb)]

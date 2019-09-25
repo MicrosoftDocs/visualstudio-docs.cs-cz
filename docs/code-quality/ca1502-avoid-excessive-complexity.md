@@ -18,12 +18,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: e968cef6491e1c24d98e5f64248b5104db8c5b65
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: db4f767aa2ecb31bca3a5530e1b4bbf5ce15729d
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62797408"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71234550"
 ---
 # <a name="ca1502-avoid-excessive-complexity"></a>CA1502: Vyhněte se nadměrné složitosti
 
@@ -31,44 +31,44 @@ ms.locfileid: "62797408"
 |-|-|
 |TypeName|AvoidExcessiveComplexity|
 |CheckId|CA1502|
-|Kategorie|Microsoft.Maintainability|
-|Narušující změna|Nenarušující|
+|Kategorie|Microsoft. udržovatelnost|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Metoda má nadměrnou cyklomatická složitost.
+Metoda má nadměrně Cyklomatická složitost.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-*Cyklomatická složitost* měří počet lineárně nezávislých cest skrze metodu, která je určeno počtem a složitostí podmínkových větví. Nízká cyclomatickou složitost obecně označuje metodu, která je snadno pochopit, testování a udržovat. Cyklomatická složitost se počítá z ovládacího prvku grafu toku metody a dostane následujícím způsobem:
+*Cyklomatická složitost* měří počet lineárně nezávislých cest pomocí metody, která je určena počtem a složitostí podmíněných větví. Nízká složitost cyklomatická obecně označuje metodu, která je snadno srozumitelná, testovat a udržovatelná. Složitá cyklomatická je počítána z grafu toku ovládacích prvků metody a je dána následujícím způsobem:
 
-cyklomatická složitost = počtu hran – počet uzlů + 1
+Cyklomatická složitost = počet okrajů – počet uzlů + 1
 
-A *uzel* představuje bod větve logiky a *edge* reprezentuje řádek mezi uzly.
+*Uzel* představuje bod logické větve a *hrana* představuje spojnici mezi uzly.
 
-Pravidlo oznámí porušení cyklomatická složitost po více než 25.
+Pravidlo nahlásí porušení, pokud je Cyklomatická složitost větší než 25.
 
-Další informace o metriky kódu na [měření složitost spravovaného kódu](../code-quality/code-metrics-values.md).
+Můžete získat další informace o metrikách kódu při [Měření složitosti spravovaného kódu](../code-quality/code-metrics-values.md).
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, Refaktorujte metodu pro snížení jeho cyklomatická složitost.
+Chcete-li opravit porušení tohoto pravidla, refaktorujte metodu pro snížení složitosti cyklomatická.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Je bezpečné potlačit upozornění tohoto pravidla, pokud nelze snadno snižují složitost a metoda je snadno pochopit, testování a udržovat. Zejména metoda, která obsahuje velké `switch` (`Select` v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) příkaz je mezi kandidáty pro vyloučení. Riziko destabilizing základní pozdní v cyklu vývoje nebo zavedení nečekaným změnám v chování za běhu v dříve dodané kódu může pomocí převážit nad výhodami refaktorování kódu udržovatelnosti kódu.
+Z tohoto pravidla je bezpečné potlačit upozornění, pokud složitost nelze snadno snížit a metodu je snadné pochopit, otestovat a udržovat. Konkrétně metoda, která obsahuje velký `switch` (`Select` v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) příkaz, je kandidátem pro vyloučení. Riziko, že destabilizující základ kódu v cyklu vývoje nebo Představujeme neočekávanou změnu v chování za běhu v dříve dodaném kódu, může mít za následek převážení výhod udržovatelnosti refaktoringu kódu.
 
-## <a name="how-cyclomatic-complexity-is-calculated"></a>Jak se počítá Cyklomatická složitost
+## <a name="how-cyclomatic-complexity-is-calculated"></a>Jak se počítá složitost cyklomatická
 
-Cyklomatická složitost se vypočte tak, že přidáte 1 takto:
+Složitost cyklomatická se počítá přidáním 1 k následujícím akcím:
 
-- Počet větví (například `if`, `while`, a `do`)
+- Počet větví (například `if`, `while`a `do`)
 
-- Počet `case` příkazů v `switch`
+- `case` Počet příkazů v`switch`
 
 ## <a name="example"></a>Příklad
 
-Následující příklady ukazují metody, které mají různou cyklomatické složitosti.
+Následující příklady znázorňují metody, které mají různé cyklomatická složité.
 
 **Cyklomatická složitost 1**
 

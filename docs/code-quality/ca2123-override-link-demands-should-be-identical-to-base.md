@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ecc30f3fe16b283c0eb9cc1f369458bb1d7f952
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 3b5bd062ca37ae477f5ab7d52d56fd7e4b4fb71b
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68920811"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71232494"
 ---
 # <a name="ca2123-override-link-demands-should-be-identical-to-base"></a>CA2123: Požadavky na propojení přepisů by měly být identické s bází
 
@@ -28,7 +28,7 @@ ms.locfileid: "68920811"
 |TypeName|OverrideLinkDemandsShouldBeIdenticalToBase|
 |CheckId|CA2123|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Narušující|
+|Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
 Veřejná nebo chráněná metoda ve veřejném typu přepisuje metodu nebo implementuje rozhraní a nemá stejné [propojení](/dotnet/framework/misc/link-demands) jako rozhraní nebo virtuální metoda.

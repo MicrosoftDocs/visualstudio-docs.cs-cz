@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bb5160ef663375ee3dd4b45797e8f4536acdf793
-ms.sourcegitcommit: 5483e399f14fb01f528b3b194474778fd6f59fa6
+ms.openlocfilehash: b197cacc764f1f5472d3eb074ac89199db508408
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66744647"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71233420"
 ---
 # <a name="ca1820-test-for-empty-strings-using-string-length"></a>CA1820: Testujte prázdné řetězce pomocí délky řetězce
 
@@ -27,29 +27,29 @@ ms.locfileid: "66744647"
 |-|-|
 |TypeName|TestForEmptyStringsUsingStringLength|
 |CheckId|CA1820|
-|Kategorie|Microsoft.Performance|
-|Narušující změna|Nenarušující|
+|Kategorie|Microsoft. Performance|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Řetězec je ve srovnání s prázdný řetězec s použitím <xref:System.Object.Equals%2A?displayProperty=nameWithType>.
+Řetězec je porovnán s prázdným řetězcem pomocí <xref:System.Object.Equals%2A?displayProperty=nameWithType>.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Porovnání řetězců pomocí <xref:System.String.Length%2A?displayProperty=nameWithType> vlastnost nebo <xref:System.String.IsNullOrEmpty%2A?displayProperty=nameWithType> metoda je rychlejší než použití <xref:System.Object.Equals%2A>. Důvodem je, že <xref:System.Object.Equals%2A> provádí výrazně více instrukcí jazyka MSIL než buď <xref:System.String.IsNullOrEmpty%2A> nebo počet instrukcí provést k načtení <xref:System.String.Length%2A> vlastnost hodnotu a porovnat ho na hodnotu nula.
+Porovnávání řetězců pomocí <xref:System.String.Length%2A?displayProperty=nameWithType> vlastnosti <xref:System.String.IsNullOrEmpty%2A?displayProperty=nameWithType> nebo metody je rychlejší než použití <xref:System.Object.Equals%2A>. Důvodem je to <xref:System.Object.Equals%2A> , že provádí podstatně více instrukcí <xref:System.String.IsNullOrEmpty%2A> jazyka MSIL, než buď, nebo počet instrukcí, které byly <xref:System.String.Length%2A> provedeny pro načtení hodnoty vlastnosti a jejich porovnání na nulu.
 
-Pro řetězce s hodnotou null <xref:System.Object.Equals%2A> a `<string>.Length == 0` chovat jinak. Pokud se pokusíte získat hodnotu <xref:System.String.Length%2A> vlastnost na řetězec s hodnotou null, modul common language runtime vyvolá <xref:System.NullReferenceException?displayProperty=fullName>. Pokud provádíte srovnání řetězec s hodnotou null a prázdné řetězce, modul common language runtime nevyvolá výjimku a vrátí `false`. Testování pro null neovlivní výrazně relativní výkon tyto dvě metody. Při cílení na rozhraní .NET Framework 2.0 nebo novější, použijte <xref:System.String.IsNullOrEmpty%2A> metody. Jinak použijte <xref:System.String.Length%2A> == 0 porovnání, kdykoli je to možné.
+Pro řetězce null a <xref:System.Object.Equals%2A> `<string>.Length == 0` chovají se jinak. Pokud se pokusíte získat hodnotu <xref:System.String.Length%2A> vlastnosti u řetězce s hodnotou null, modul CLR (Common Language Runtime) <xref:System.NullReferenceException?displayProperty=fullName>vyvolá výjimku. Pokud provedete porovnání mezi řetězcem s hodnotou null a prázdným řetězcem, modul CLR (Common Language Runtime) nevyvolá `false`výjimku a vrátí. Testování pro hodnotu null nijak významně neovlivňuje relativní výkon těchto dvou přístupů. Při cílení na .NET Framework 2,0 nebo novější použijte <xref:System.String.IsNullOrEmpty%2A> metodu. V opačném případě <xref:System.String.Length%2A> použijte porovnávání = = 0, kdykoli je to možné.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, změňte porovnání pro použití <xref:System.String.IsNullOrEmpty%2A> metody.
+Chcete-li opravit porušení tohoto pravidla, změňte porovnání na použití <xref:System.String.IsNullOrEmpty%2A> metody.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Je bezpečné potlačit upozornění tohoto pravidla, pokud výkon není problém.
+Pokud výkon není problémem, je bezpečné potlačit upozornění od tohoto pravidla.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje různé techniky, které se používají k vyhledání prázdný řetězec.
+Následující příklad znázorňuje různé techniky, které se používají k vyhledání prázdného řetězce.
 
 [!code-csharp[FxCop.Performance.StringTest#1](../code-quality/codesnippet/CSharp/ca1820-test-for-empty-strings-using-string-length_1.cs)]

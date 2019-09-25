@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c05c0b17bc9866edd7c07874be14578ed4cf884
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: cfa705654a5cc4122e5ee554fe050722d7883970
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68922550"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71235483"
 ---
 # <a name="ca1060-move-pinvokes-to-nativemethods-class"></a>CA1060: Přesuňte volání nespravovaných kódů do třídy NativeMethods
 
@@ -31,7 +31,7 @@ ms.locfileid: "68922550"
 |TypeName|MovePInvokesToNativeMethodsClass|
 |CheckId|CA1060|
 |Kategorie|Microsoft.Design|
-|Narušující změna|Narušující|
+|Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
 
@@ -52,7 +52,7 @@ Tyto třídy jsou deklarovány `internal` jako`Friend`(, v Visual Basic) a dekla
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 Chcete-li opravit porušení tohoto pravidla, přesuňte metodu do příslušné třídy **NativeMethods** . Pro většinu aplikací je k dispozici pouze přesun volání nespravovaného volání do nové třídy s názvem **NativeMethods** .
 
-Pokud však vyvíjíte knihovny pro použití v jiných aplikacích, měli byste zvážit definování dvou dalších tříd, které se nazývají **SafeNativeMethods** a **UnsafeNativeMethods**. Tyto třídy připomínají třídu **NativeMethods** ; jsou však označeny pomocí speciálního atributu s názvem **SuppressUnmanagedCodeSecurityAttribute**. Při použití tohoto atributu modul runtime neprovede kompletní procházení zásobníku, aby bylo zajištěno, že všichni volající mají oprávnění k dispozici . Modul runtime obvykle při spuštění kontroluje toto oprávnění. Vzhledem k tomu, že se kontrolu neprovádí, může výrazně zlepšit výkon pro volání těchto nespravovaných metod, ale také umožňuje kód, který má omezená oprávnění k volání těchto metod.
+Pokud však vyvíjíte knihovny pro použití v jiných aplikacích, měli byste zvážit definování dvou dalších tříd, které se nazývají **SafeNativeMethods** a **UnsafeNativeMethods**. Tyto třídy připomínají třídu **NativeMethods** ; jsou však označeny pomocí speciálního atributu s názvem **SuppressUnmanagedCodeSecurityAttribute**. Při použití tohoto atributu modul runtime neprovede kompletní procházení zásobníku, aby bylo zajištěno, že všichni volající **mají oprávnění k** dispozici. Modul runtime obvykle při spuštění kontroluje toto oprávnění. Vzhledem k tomu, že se kontrolu neprovádí, může výrazně zlepšit výkon pro volání těchto nespravovaných metod, ale také umožňuje kód, který má omezená oprávnění k volání těchto metod.
 
 Tento atribut byste však měli používat s velkou opatrností. Může mít vážné důsledky na zabezpečení, pokud je nesprávně implementován..
 
@@ -70,7 +70,7 @@ Následující příklad deklaruje metodu, která porušuje toto pravidlo. Chcet
 ## <a name="nativemethods-example"></a>Příklad NativeMethods
 
 ### <a name="description"></a>Popis
-Vzhledem k tomu, že třída **NativeMethods** by neměla být označena pomocí metody **SuppressUnmanagedCodeSecurityAttribute**, volání nespravovaného přístupu, která jsou uvedena v této třídě, budou vyžadovat oprávnění k roztřídě. Vzhledem k tomu, že většina aplikací běží z místního počítače a běží společně s úplným vztahem důvěryhodnosti, obvykle se nejedná o problém. Nicméně pokud vyvíjíte opakovaně použitelné knihovny, měli byste zvážit definování třídy **SafeNativeMethods** nebo **UnsafeNativeMethods** .
+Vzhledem k tomu, že třída **NativeMethods** by neměla být označena pomocí metody **SuppressUnmanagedCodeSecurityAttribute**, volání nespravovaného **přístupu,** která jsou uvedena v této třídě, budou vyžadovat oprávnění k roztřídě. Vzhledem k tomu, že většina aplikací běží z místního počítače a běží společně s úplným vztahem důvěryhodnosti, obvykle se nejedná o problém. Nicméně pokud vyvíjíte opakovaně použitelné knihovny, měli byste zvážit definování třídy **SafeNativeMethods** nebo **UnsafeNativeMethods** .
 
 Následující příklad ukazuje metodu **interakce. ZvukovýSignál** , která zabalí funkci **MessageBeep** z User32. dll. **MessageBeep** P/Invoke je vložen do třídy **NativeMethods** .
 
@@ -92,7 +92,7 @@ Následující příklad ukazuje vlastnost **prostředí. TickCount** , která z
 ## <a name="unsafenativemethods-example"></a>Příklad UnsafeNativeMethods
 
 ### <a name="description"></a>Popis
-Metody volání, které nelze bezpečně volat a které by mohly způsobit vedlejší účinky, by měly být umístěny ve třídě s názvem **UnsafeNativeMethods**. Tyto metody by měly být přísně kontrolovány, aby se zajistilo, že nejsou uživateli k úmyslu nevystaveni. Pravidlo [CA2118: Kontrola využití](../code-quality/ca2118-review-suppressunmanagedcodesecurityattribute-usage.md) SuppressUnmanagedCodeSecurityAttribute vám může s tímto. Další možností je, že metody by měly mít jiné oprávnění, které je požadováno namísto nejenom při jejich použití.
+Metody volání, které nelze bezpečně volat a které by mohly způsobit vedlejší účinky, by měly být umístěny ve třídě s názvem **UnsafeNativeMethods**. Tyto metody by měly být přísně kontrolovány, aby se zajistilo, že nejsou uživateli k úmyslu nevystaveni. Pravidlo [CA2118: Kontrola využití](../code-quality/ca2118-review-suppressunmanagedcodesecurityattribute-usage.md) SuppressUnmanagedCodeSecurityAttribute vám může s tímto. Další možností je, že metody by měly mít jiné oprávnění, které je **požadováno namísto nejenom při jejich** použití.
 
 Následující příklad ukazuje metodu **Cursor. Hide** , která zabalí funkci **ShowCursor** z User32. dll.
 

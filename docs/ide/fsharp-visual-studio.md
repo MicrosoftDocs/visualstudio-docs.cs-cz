@@ -1,6 +1,6 @@
 ---
 title: Nástroje jazyka F#
-description: Další informace, které funkce sady Visual Studio jsou podporovány v F#.
+description: Seznamte se s funkcemi sady Visual Studio, F#které se podporují v nástroji.
 ms.date: 07/11/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -10,166 +10,166 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: f71e17eae1e728ab755d048daee2c0d156425964
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: fef50748942aaa800cf1181e4c8f8b8a030f99ee
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66747589"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71211312"
 ---
-# <a name="develop-with-visual-f-in-visual-studio"></a>Vývoj s Vizuálem F# v sadě Visual Studio
+# <a name="develop-with-visual-f-in-visual-studio"></a>Vývoj s využitím vizuálu F# v aplikaci Visual Studio
 
-Tento článek obsahuje informace o funkcích sady Visual Studio pro F# vývoje.
+Tento článek obsahuje informace o funkcích sady Visual Studio F# pro vývoj.
 
-## <a name="install-f-support"></a>Nainstalujte F# podpory
+## <a name="install-f-support"></a>Instalace F# podpory
 
-Vývoj pomocí F# v sadě Visual Studio, nejdřív nainstalovat **vývoj desktopových aplikací .NET** pracovního vytížení, pokud jste tak již neučinili. Nainstalovat Visual Studio úloh prostřednictvím instalačního programu Visual Studio, které můžete otevřít tak, že vyberete **nástroje** > **stažení nástrojů a funkcí**.
+Pro vývoj v F# nástroji v aplikaci Visual Studio nejprve nainstalujte úlohu **vývoj pro desktopy .NET** , pokud jste to ještě neudělali. Úlohy sady Visual Studio nainstalujete prostřednictvím instalační program pro Visual Studio, které můžete otevřít tak, že vyberete **nástroje** > **získat nástroje a funkce**.
 
-![Úloha vývoj desktopových aplikací .NET v sadě Visual Studio](media/dotnet-desktop-development-workload.png)
+![Úloha vývoj desktopových aplikací .NET v aplikaci Visual Studio](media/dotnet-desktop-development-workload.png)
 
-## <a name="f-project-features"></a>F#Funkce projektu
+## <a name="f-project-features"></a>F#funkce projektu
 
-Jsou k dispozici pro různé šablony projektů a položek F# v sadě Visual Studio. Následující obrázek ukazuje některé F# šablony projektů pro .NET Core a .NET Standard:
+F# V aplikaci Visual Studio jsou k dispozici různé šablony projektů a položek. Následující obrázek ukazuje některé šablony F# projektu pro .NET Core a .NET Standard:
 
-![F#šablony projektů v sadě Visual Studio](media/fsharp-project-templates.png)
+![F#šablony projektů v aplikaci Visual Studio](media/fsharp-project-templates.png)
 
-Následující obrázek ukazuje některé F# šablon položek:
+Následující obrázek ukazuje některé šablony F# položek:
 
-![F#šablony položek v sadě Visual Studio](media/fsharp-item-templates.png)
+![F#šablony položek v aplikaci Visual Studio](media/fsharp-item-templates.png)
 
-Další informace o šablonách položek pro přístup k datům najdete v tématu [ F# poskytovatelů](/dotnet/fsharp/tutorials/type-providers/index).
+Další informace o šablonách položek pro přístup k datům naleznete v tématu [ F# Poskytovatelé typů](/dotnet/fsharp/tutorials/type-providers/index).
 
 Následující tabulka shrnuje funkce ve vlastnostech projektu pro F#:
 
-|Nastavení projektu|Podporované v F#?|Poznámky|
+|Nastavení projektu|Podporuje se F#v?|Poznámky|
 |---------------|----------------|-----|
 |Soubory prostředků|Ano||
-|Odkaz na nastavení, ladění a sestavení|Ano||
+|Nastavení sestavení, ladění a odkazů|Ano||
 |Cílení na více verzí|Ano||
-|Ikona a manifest|Ne|K dispozici prostřednictvím možnosti příkazového řádku kompilátoru.|
-|Klienta služby ASP.NET|Ne||
-|ClickOnce|Ne|Použijte projekt klienta v jiném jazyce .NET, pokud je k dispozici.|
-|Vytváření silných názvů|Ne|K dispozici prostřednictvím možnosti příkazového řádku kompilátoru.|
-|Sestavení, publikování a správa verzí|Ne||
-|Analýza kódu|Ne|Nástroje pro analýzu kódu můžete spustit ručně nebo jako součást příkazu po sestavení.|
-|Zabezpečení (Změna úrovně důvěryhodnosti)|Ne||
+|Ikona a manifest|Ne|K dispozici prostřednictvím možností příkazového řádku kompilátoru.|
+|ASP.NET klientské služby|Ne||
+|ClickOnce|Ne|Použijte projekt klienta v jiném jazyce rozhraní .NET (je-li k dispozici).|
+|Vytváření silných názvů|Ne|K dispozici prostřednictvím možností příkazového řádku kompilátoru.|
+|Publikování sestavení a správa verzí|Ne||
+|Analýza kódu|Ne|Nástroje pro analýzu kódu lze spustit ručně nebo jako součást příkazu po sestavení.|
+|Zabezpečení (změna úrovní důvěryhodnosti)|Ne||
 
 ## <a name="project-designer"></a>návrhář projektu
 
-**Návrhář projektu** se skládá z několika stránky vlastností projektu seskupeny související funkce. K dispozici stránky F# projekty jsou většinou podmnožinu těchto k dispozici pro ostatní jazyky a jsou popsány v následující tabulce. Jsou uvedeny odkazy na odpovídající jazyka C# **Návrháře projektu** stránky.
+**Návrhář projektu** se skládá z několika stránek vlastností projektu seskupených podle souvisejících funkcí. Stránky dostupné pro F# projekty jsou většinou podmnožinou dostupných pro jiné jazyky a jsou popsány v následující tabulce. Odkazy jsou k dispozici na C# odpovídající stránce **Návrháře projektu** .
 
-|Stránky Návrháře projektu|Související odkazy|Popis|
+|Stránka Návrháře projektu|Související odkazy|Popis|
 | - |-------------|-----------|
-|Aplikace|[Stránka aplikace, Návrhář projektu](reference/application-page-project-designer-csharp.md)|Umožňuje určit nastavení na úrovni aplikace a vlastnosti, například zda vytváříte knihovnu nebo spustitelný soubor, jakou verzi .NET cíle aplikace a informace o umístění ukládaných souborů prostředků, které aplikace používá.|
-|Sestavení|[Vytvořit stránku, Návrhář projektu](reference/build-page-project-designer-csharp.md)|Umožňuje řídit způsob kompilace kódu.|
-|Události sestavení|[Stránka události, Návrhář projektu sestavení](reference/build-events-page-project-designer-csharp.md)|Umožňuje určit příkazy se spustí před nebo po kompilaci.|
-|Ladění|[Stránka Ladění, Návrhář projektu](reference/debug-page-project-designer.md)|Umožňuje řídit, jak je aplikace spuštěná během ladění. Jedná se o co příkazy mají použít, a co je vaše aplikace spouští, adresář je a jakékoli speciální režimů ladění, které chcete povolit, jako je například nativního kódu a SQL.|
-|Balíček (pouze sada .NET SDK)|Není k dispozici|Umožňuje definovat metadata balíčku NuGet při publikování jako balíček NuGet.|
-|Cesty odkazů|[Správa odkazů v projektu](managing-references-in-a-project.md)|Umožňuje zadat, kam mají hledat sestavení, na kterém závisí kódu.|
-|Prostředky (pouze sada .NET SDK)|Není k dispozici|Umožňuje vytvářet a spravovat výchozí soubor prostředků.|
+|Aplikace|[Stránka aplikace, Návrhář projektu](reference/application-page-project-designer-csharp.md)|Umožňuje zadat nastavení a vlastnosti na úrovni aplikace, například zda vytváříte knihovnu nebo spustitelný soubor, jakou verzi rozhraní .NET aplikace cílí, a informace o tom, kde jsou uloženy soubory prostředků, které aplikace používá.|
+|Sestavení|[Stránka sestavení, Návrhář projektu](reference/build-page-project-designer-csharp.md)|Umožňuje řídit způsob kompilování kódu.|
+|Události sestavení|[Stránka události sestavení, Návrhář projektu](reference/build-events-page-project-designer-csharp.md)|Umožňuje zadat příkazy, které se spustí před nebo po kompilaci.|
+|Ladit|[Stránka Ladění, Návrhář projektu](reference/debug-page-project-designer.md)|Umožňuje řídit, jak aplikace běží během ladění. To zahrnuje příkazy, které se mají použít, a informace o tom, co je spouštěcí adresář vaší aplikace, a všechny speciální režimy ladění, které chcete povolit, jako je například nativní kód a SQL.|
+|Balíček (jenom .NET SDK)|Není k dispozici|Umožňuje definovat metadata balíčku NuGet při publikování jako balíček NuGet.|
+|Cesty odkazů|[Správa odkazů v projektu](managing-references-in-a-project.md)|Umožňuje určit, kde se mají hledat sestavení, na kterých závisí kód.|
+|Prostředky (pouze sada .NET SDK)|Není k dispozici|Umožňuje generovat a spravovat výchozí soubor prostředků.|
 
-### <a name="f-specific-settings"></a>F#-konkrétní nastavení
+### <a name="f-specific-settings"></a>F#-specifické nastavení
 
-V následující tabulce najdete souhrn nastavení, které jsou specifické pro F#:
+Následující tabulka shrnuje nastavení specifická pro F#:
 
-|Stránky Návrháře projektu|Nastavení|Popis|
+|Stránka Návrháře projektu|Nastavení|Popis|
 | - |-------|-----------|
-|Sestavení|Generovat volání tail|Pokud vybraná, umožňuje použití funkce tail Microsoft Intermediate Language (MSIL) instrukce. To způsobí, že rámec zásobníku znovu použije pro rekurzivní funkce chvostu. Ekvivalentní `--tailcalls` – možnost kompilátoru.|
-|Sestavení|Nastavení další příznaky|Umožňuje určit možnosti příkazového řádku kompilátoru Další.|
+|Sestavení|Generovat volání funkce tail|Pokud je tato možnost vybrána, umožňuje použití instrukce koncového jazyka MSIL (Microsoft Intermediate Language). To způsobí, že bude rámec zásobníku znovu použit pro funkce tail. Ekvivalent možnosti kompilátoru `--tailcalls` .|
+|Sestavení|Další příznaky|Umožňuje zadat další možnosti příkazového řádku kompilátoru.|
 
-## <a name="code-and-text-editor-features"></a>Funkce editoru kódu a text
+## <a name="code-and-text-editor-features"></a>Funkce kódu a textového editoru
 
-Jsou podporovány následující funkce editory sady Visual Studio code a text v F#:
+V F#nástroji jsou podporovány následující funkce editoru kódu a textu sady Visual Studio:
 
-|Funkce|Popis|Podporované v F#?|
+|Funkce|Popis|Podporuje se F#v?|
 |-------|-----------|----------------|
-|Automaticky komentář|Umožňuje komentář nebo zrušte komentář u části kódu.|Ano|
-|Automaticky formátovat|Přeformátuje kódu pomocí standardní odsazení a stylu.|Ne|
-|Záložky|Umožňuje uložit míst v editoru.|Ano|
-|Změna odsazení|Odsazení nebo zruší odsazení vybraných řádků.|Ano|
-|Inteligentní odsazení|Automaticky odsadí a zrušení odsazení kurzor podle F# pravidel oboru.|Ano|
-|[Vyhledání a nahrazení textu](finding-and-replacing-text.md)|Umožňuje hledat v souboru, projekt nebo řešení a potenciálně změnit text.|Ano|
-|Přejít k definici rozhraní API .NET|Když se kurzor na rozhraní API .NET, se zobrazí kód generovaný z .NET metadat.|Ne|
-|Přejít k definici pro uživatelské rozhraní API|Pokud je kurzor na entitu program, který jste definovali, přesune kurzor na místo v kódu, kde je definován entity.|Ano|
-|Přechod na řádek|Umožňuje přejít na konkrétní řádek v souboru číslem řádku.|Ano|
-|Navigační panely v horní části souboru|Umožňuje přejít na umístění v kódu, například název funkce.|Ano|
-|Pokyny pro strukturu bloku|Zobrazí pokyny, které označují F# obory, které mohou být myš pro verzi preview.|Ano|
-|[Sbalení](outlining.md)|Umožňuje sbalit oddílů kódu vytvoření kompaktnějším zobrazení.|Ano|
+|Automaticky komentovat|Umožňuje komentovat nebo odkomentovat oddíly kódu.|Ano|
+|Automaticky formátovat|Přeformátuje kód pomocí standardního odsazení a stylu.|Ne|
+|Záložky|Umožňuje ukládat místa v editoru.|Ano|
+|Změnit odsazení|Odsadí nebo zruší odsazení vybraných řádků.|Ano|
+|Inteligentní odsazení|Automaticky odsadí a odsadí kurzor podle pravidel určení F# rozsahu.|Ano|
+|[Vyhledání a nahrazení textu](finding-and-replacing-text.md)|Umožňuje vyhledávat v souboru, projektu nebo řešení a potenciálně měnit text.|Ano|
+|Přejít k definici rozhraní .NET API|Když je kurzor umístěný na rozhraní .NET API, zobrazuje kód vygenerovaný z metadat .NET.|Ne|
+|Přejít k definici pro uživatelsky definované rozhraní API|Když se ukazatel myši nachází na entitě programu, kterou jste definovali, přesune kurzor do umístění ve vašem kódu, kde je entita definovaná.|Ano|
+|Přechod na řádek|Umožňuje přejít na konkrétní řádek v souboru podle čísla řádku.|Ano|
+|Navigační panely v horní části souboru|Umožňuje přejít do umístění v kódu, například jako název funkce.|Ano|
+|Pokyny ke strukturám bloků|Zobrazuje pokyny, které F# označují obory, u kterých je možné najetí myší na verzi Preview.|Ano|
+|[Sbalení](outlining.md)|Umožňuje sbalit části kódu a vytvořit tak kompaktnější zobrazení.|Ano|
 |Převést na tabulátory|Převede mezery na tabulátory.|Ano|
-|Zabarvení typu|Zobrazí názvy typů definované v speciální barvu.|Ano|
-|Rychlé hledání. Podívejte se rychle najít, najít a nahradit okna.|Umožňuje hledat v souboru nebo projektu.|Ano|
-|**CTRL**+**klikněte na tlačítko** přejít k definici|Umožňuje uložení **Ctrl** a klikněte na F# symbol, který má být vyvolán přejít k definici.|Ano|
-|Přechod na definici z rychlé informace|Po kliknutí symboly uvnitř popisky, které vyvolávají přejít k definici.|Ano|
-|Přejít na vše|Povolí globální navigační přibližné shody pro všechny F# vytvoří prostřednictvím **Ctrl**+**T**.|Ano|
-|Přejmenování na řádku|Přejmenuje všechny výskyty symbolu vložené.|Ano|
-|Najít všechny odkazy|Najde všechny výskyty symbolu v základu kódu.|Ano|
-|Zjednodušit název opravu kódu|Odstraní nepotřebné kvalifikátory pro F# symboly.|Ano|
-|Odebrat nepoužité `open` opravu kódu – příkaz|Odebere všechny nepotřebné `open` příkazů v dokumentu.|Ano|
-|Oprava kódu nepoužívané hodnota|Navrhuje přejmenování nevyužité identifikátor pro podtržítkem.|Ano|
+|Zabarvení typu|Zobrazuje názvy definovaných typů ve speciální barvě.|Ano|
+|Rychlé hledání. Viz okno rychlé hledání, najít a nahradit.|Umožňuje vyhledávat v souboru nebo v projektu.|Ano|
+|+Přejít na definici**kliknutím** CTRL|Umožňuje podržet **klávesu CTRL** a kliknout na F# symbol a vyvolat přejít k definici.|Ano|
+|Přejít k definici z QuickInfo|Klikněte na symboly v popiscích, které vyvolávají přejít k definici.|Ano|
+|Přejít na vše|Umožňuje globální, přibližné a navigační navigace pro všechny F# konstrukce prostřednictvím **CTRL**+**T**.|Ano|
+|Přejmenování na řádku|Přejmenuje všechny výskyty vloženého symbolu.|Ano|
+|Najít všechny odkazy|Vyhledá všechny výskyty symbolu v základu kódu.|Ano|
+|Zjednodušení opravy názvu kódu|Odebere nepotřebné kvalifikátory F# pro symboly.|Ano|
+|Odebrat opravu `open` nepoužívaného kódu příkazu|Odebere všechny nepotřebné `open` příkazy v dokumentu.|Ano|
+|Oprava kódu nepoužité hodnoty|Navrhuje přejmenovat nepoužitý identifikátor na podtržítko.|Ano|
 
-Obecné informace o úpravách kódu v sadě Visual Studio a funkce textového editoru, najdete v části [psaní kódu v editoru](writing-code-in-the-code-and-text-editor.md).
+Obecné informace o úpravách kódu v aplikaci Visual Studio a funkcích textového editoru naleznete [v tématu Write code in the Editor](writing-code-in-the-code-and-text-editor.md).
 
-## <a name="intellisense-features"></a>Funkce technologie IntelliSense
+## <a name="intellisense-features"></a>Funkce IntelliSense
 
-Následující tabulka shrnuje funkce IntelliSense podporované a nepodporované ve F#:
+Následující tabulka shrnuje podporované funkce IntelliSense a nepodporuje je F#:
 
-|Funkce|Popis|Podporované v F#?|
+|Funkce|Popis|Podporuje se F#v?|
 |-------|-----------|----------------|
-|Automaticky implementovat rozhraní|Generuje kód zástupné procedury pro metody rozhraní.|Ano|
-|Fragmenty kódu|Vkládá kód z knihovny běžné konstrukce kódování do témat.|Ne|
-|Dokončit slovo|Uloží typování tím dokončuje slova a názvy se během psaní.|Ano|
-|Automatické dokončování|Pokud povolená, způsobí, že dokončení slova vyberte první shodu, jak budete zadávat, místo abyste čekali, vyberte jednu nebo stisknutím klávesy **Ctrl**+**místo**.|Ano|
-|Nabízí dokončování pro symboly v neotevřených oborech názvů|Pomocí automatického dokončování, je určeno odpovídající symbol, který se nachází v neotevřených oboru názvů, nabízí dokončete s odpovídajícím `open` příkaz při výběru.|Ano|
-|Generovat prvky kódu|Umožňuje generování kódu zástupné procedury pro různé konstrukce.|Ne|
-|Vypsat členy|Při psaní operátor přístupu členů (.) obsahuje členy typu.|Ano|
-|Uspořádat direktivy using/Open|Slouží k uspořádání obory názvů odkazované **pomocí** příkazů v C# nebo **otevřete** direktivy v F#.|Ne|
-|Informace o parametrech|Při psaní volání funkce, zobrazí se užitečné informace o parametrech.|Ano|
+|Automaticky implementovat rozhraní|Generuje zástupné kódy kódu pro metody rozhraní.|Ano|
+|Fragmenty kódu|Vloží kód z knihovny běžných kódových konstrukcí do témat.|Ne|
+|Dokončit slovo|Ukládá text tak, že při psaní dokončí slova a jména.|Ano|
+|Automatické dokončování|Když je tato možnost povolená, způsobí, že při psaní se při psaní slova vybere první shoda, a ne čekání na výběr jednoho nebo**více kláves** **CTRL**+.|Ano|
+|Nabídka dokončování symbolů v neotevřených oborech názvů|Při automatickém dokončení je navržen odpovídající symbol, který je umístěn v neotevřeném oboru názvů, nabídka k dokončení s odpovídajícím `open` příkazem, pokud je vybrána možnost.|Ano|
+|Generovat elementy kódu|Umožňuje generovat kód zástupné procedury pro nejrůznější konstrukce.|Ne|
+|Vypsat členy|Když zadáte operátor přístupu ke členu (.), zobrazí se členové pro typ.|Ano|
+|Uspořádat pomocí/otevřít|Uspořádá obory názvů odkazované příkazy **pomocí** příkazů C# nebo direktiv **Open** v F#.|Ne|
+|Informace o parametrech|Zobrazuje užitečné informace o parametrech při psaní volání funkce.|Ano|
 |Rychlé informace|Zobrazí úplnou deklaraci pro libovolný identifikátor ve vašem kódu.|Ano|
-|Automatické uzavírání závorek|Automaticky dokončí F# složenou závorku syntaxe konstrukce transakčním způsobem.|Ano|
+|Automatické dokončování složených závorek|Automaticky dokončuje F# konstruktory syntaxe podobné závorce transakčním způsobem.|Ano|
 
-Obecné informace o technologii IntelliSense, najdete v části [použití IntelliSense](using-intellisense.md).
+Obecné informace o technologii IntelliSense najdete v tématu [použití technologie IntelliSense](using-intellisense.md).
 
 ## <a name="debugging-features"></a>Funkce ladění
 
 Následující tabulka shrnuje funkce, které jsou k dispozici při ladění F# kódu:
 
-|Funkce|Popis|Podporované v F#?|
+|Funkce|Popis|Podporuje se F#v?|
 |-------|-----------|----------------|
-|Automatické hodnoty – okno|Ukazuje, automatické nebo dočasné proměnné.|Ne|
-|Zarážky|Umožňuje pozastavit provádění kódu v určitých bodech během ladění.|Ano|
-|Podmíněné zarážky|Umožňuje zarážky, které testovací podmínku, která určuje, zda by měl pozastavit provádění.|Ano|
-|Upravit a pokračovat|Umožňuje kódu se dají upravit a zkompilovat jako ladění programu, spuštěna bez zastavení a restartování ladicího programu.|Ne|
-|Chyba při vyhodnocování výrazu|Vyhodnotí a spustí kód v době běhu.|Ne, ale jazyka C# vyhodnocovací filtr výrazů je možné, i když je nutné použít syntaxi jazyka C#.|
-|Historické ladění|Můžete krokovat s vnořením dříve spuštěný kód.|Ano|
-|Místní hodnoty – okno|Ukazuje místně definované hodnoty a proměnné.|Ano|
-|Spustit ke kurzoru|Umožňuje spustit kód, dokud nebude dosaženo řádek obsahující kurzor.|Ano|
-|Krokovat s vnořením|Umožňuje provádění záloh a přesunout do každé volání funkce.|Ano|
-|Krok přes|Umožňuje předem spouštění v aktuální rámec zásobníku a přesunout za každé volání funkce.|Ano|
+|Automatické hodnoty – okno|Zobrazuje automatické nebo dočasné proměnné.|Ne|
+|Zarážky|Umožňuje pozastavit provádění kódu v určitých okamžicích během ladění.|Ano|
+|Podmíněné zarážky|Povoluje zarážky, které testují podmínku, která určuje, zda se má spuštění pozastavit.|Ano|
+|Upravit a pokračovat|Umožňuje upravovat a kompilovat kód při ladění spuštěného programu bez zastavení a restartování ladicího programu.|Ne|
+|Vyhodnocení výrazu|Vyhodnotí a spustí kód v době běhu.|Ne, můžete však C# použít vyhodnocovací filtr výrazů, i když je nutné použít C# syntaxi.|
+|Historické ladění|Umožňuje Krokovat s dřív provedeným kódem.|Ano|
+|Místní hodnoty – okno|Zobrazuje místně definované hodnoty a proměnné.|Ano|
+|Spustit ke kurzoru|Umožňuje spustit kód až do chvíle, kdy je dosaženo řádku obsahujícího kurzor.|Ano|
+|Krokovat s vnořením|Umožňuje pokračovat v provádění a přesun do libovolného volání funkce.|Ano|
+|Krok přes|Umožňuje provést předběžné spuštění v aktuálním bloku zásobníku a přesunout minulé volání funkce.|Ano|
 
-Obecné informace o ladicím programu sady Visual Studio najdete v tématu [ladění v sadě Visual Studio](../debugger/index.md).
+Obecné informace o ladicím programu sady Visual Studio naleznete [v tématu ladění v aplikaci Visual Studio](../debugger/index.yml).
 
 ## <a name="additional-tools"></a>Další nástroje
 
-Následující tabulka shrnuje podporu pro F# v nástrojích Visual Studio.
+Následující tabulka shrnuje podporu nástroje F# v nástrojích sady Visual Studio.
 
-|Nástroj|Popis|Podporované v F#?|
+|Nástroj|Popis|Podporuje se F#v?|
 |----|-----------|----------------|
-|Hierarchie volání|Zobrazí vnořené struktury funkce volá ve vašem kódu.|Ne|
-|Metriky kódu|Shromažďuje informace o kódu, jako jsou počty řádků.|Ne|
-|zobrazení tříd|Poskytuje pohled na základě typu kódu v projektu.|Ne|
-|[Okno Seznam chyb](reference/error-list-window.md)|Zobrazí seznam chyb v kódu.|Ano|
-|[F# Interactive](/dotnet/fsharp/tutorials/fsharp-interactive/)|Umožňuje zadejte (nebo zkopírujte a vložte) F# kódu a spustit okamžitě, bez ohledu na jejich vytváření projektu. F# Interaktivní okno je pro čtení, vyhodnocení, smyčka tisku (REPL).|Ano|
-|prohlížeč objektů|Umožňuje zobrazení typů v sestavení.|F#typy, jak se objeví v kompilovaných sestavení se nezobrazují přesně tak, jak je vytvářet. Můžete procházet pomocí kompilované reprezentace F# typy, ale nelze zobrazit typy, jak se objeví z F#.|
+|Hierarchie volání|Zobrazuje vnořenou strukturu volání funkce ve vašem kódu.|Ne|
+|Metriky kódu|Shromažďuje informace o kódu, například počty řádků.|Ne|
+|zobrazení tříd|Poskytuje zobrazení kódu v projektu podle typu.|Ne|
+|[Seznam chyb okno](reference/error-list-window.md)|Zobrazuje seznam chyb v kódu.|Ano|
+|[F# Interactive](/dotnet/fsharp/tutorials/fsharp-interactive/)|Umožňuje napsat (nebo zkopírovat a vložit) F# kód a okamžitě ho spustit, nezávisle na sestavování projektu. F# Interaktivní okno je čtení, vyhodnocení, tisková smyčka (REPL).|Ano|
+|prohlížeč objektů|Umožňuje zobrazit typy v sestavení.|F#typy, které se zobrazují v kompilovaných sestaveních, se neobjeví přesně tak, jak je vytváříte. Můžete procházet zkompilované reprezentace F# typů, ale nemůžete zobrazit typy, jak jsou uvedeny v. F#|
 |[Okno výstup](reference/output-window.md)|Zobrazí výstup sestavení.|Ano|
 |Analýza výkonu|Poskytuje nástroje pro měření výkonu kódu.|Ano|
-|Vlastnosti – okno|Zobrazuje a umožňuje úpravy vlastností objektu ve vývojovém prostředí, který má právě fokus.|Ano|
-|Průzkumník serveru|Poskytuje způsoby, jak pracovat s různými prostředky serveru.|Ano|
+|Vlastnosti – okno|Zobrazí a povolí úpravy vlastností objektu ve vývojovém prostředí, které má fokus.|Ano|
+|Průzkumník serveru|Poskytuje možnosti pro interakci s nejrůznějšími prostředky serveru.|Ano|
 |Průzkumník řešení|Umožňuje zobrazit a spravovat projekty a soubory.|Ano|
-|Seznam úkolů|Umožňuje spravovat pracovní položky týkající se vašeho kódu.|Ne|
-|Projekty testů|Poskytuje funkce, které umožňují testování kódu.|Ne|
-|Sada nástrojů|Zobrazí karty, které obsahují přetažitelného objekty, jako jsou ovládací prvky a části textu nebo kódu.|Ano|
+|Seznam úkolů|Umožňuje spravovat pracovní položky, které se vztahují k vašemu kódu.|Ne|
+|Projekty testů|Poskytuje funkce, které vám pomůžou otestovat váš kód.|Ne|
+|Sada nástrojů|Zobrazí karty, které obsahují přetažené objekty, jako jsou například ovládací prvky a oddíly textu nebo kódu.|Ano|
 
 ## <a name="see-also"></a>Viz také:
 
 - [F#Průvodce (.NET Framework)](/dotnet/fsharp/)
-- [Začínáme s F# v sadě Visual Studio](/dotnet/fsharp/get-started/get-started-visual-studio)
+- [Začínáme s nástrojem F# v aplikaci Visual Studio](/dotnet/fsharp/get-started/get-started-visual-studio)

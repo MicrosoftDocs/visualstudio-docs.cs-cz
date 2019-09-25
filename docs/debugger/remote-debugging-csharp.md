@@ -19,12 +19,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4c646f8f6dc228d42d6efb5ec44f3ec19a53a551
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 3490cab7c902dcdf1a7d0095eb69dd44de47a727
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63408539"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71211124"
 ---
 # <a name="remote-debugging-a-c-or-visual-basic-project-in-visual-studio"></a>Vzdálené ladění projektu C# nebo Visual Basic v sadě Visual Studio
 Ladění aplikace Visual Studio, který byl nasazen na jiný počítač, nainstalovat a spustit nástroje remote tools v počítači, kam jste nasadili aplikaci, nakonfigurujte projekt tak, aby připojení ke vzdálenému počítači ze sady Visual Studio a spusťte aplikaci.
@@ -71,14 +71,14 @@ Ladicí program nemůže nasadit Visual C# nebo Visual Basic desktopové aplikac
 
 5. Ujistěte se, **pracovní adresář** textové pole je prázdné.
 
-6. Zvolte **použít vzdálený počítač**a typ **yourmachinename:port** v textovém poli. (Číslo portu se zobrazují v okně vzdáleného ladicího programu. Číslo portu zvýší 2 v každé verzi sady Visual Studio).
+6. Vyberte možnost **použít vzdálený počítač**a do textového pole zadejte **yourmachinename: port** . (Číslo portu se zobrazí v okně vzdáleného ladicího programu. Číslo portu zvýší 2 v každé verzi sady Visual Studio).
 
     V tomto příkladu použijte:
     ::: moniker range=">=vs-2019"
-    **MJO-DL:4024** on Visual Studio 2019
+    **Mjo-DL: 4024** v aplikaci Visual Studio 2019
     ::: moniker-end
     ::: moniker range="vs-2017"
-    **MJO-DL:4022** on Visual Studio 2017
+    **Mjo-DL: 4022** v aplikaci Visual Studio 2017
     ::: moniker-end
 
 7. Ujistěte se, že **povolit ladění nativního kódu** není vybraná.
@@ -117,7 +117,7 @@ Ladicí program nemůže nasadit Visual C# nebo Visual Basic desktopové aplikac
 [!INCLUDE [remote-debugger-symbols](../debugger/includes/remote-debugger-symbols.md)]
 
 ## <a name="see-also"></a>Viz také
-- [Ladění v sadě Visual Studio](../debugger/index.md)
+- [Ladění v sadě Visual Studio](../debugger/index.yml)
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)
 - [Konfigurace brány firewall ve Windows pro vzdálené ladění](../debugger/configure-the-windows-firewall-for-remote-debugging.md)
 - [Přiřazení portů vzdáleného ladicího programu](../debugger/remote-debugger-port-assignments.md)

@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 82146c2ac997a0202c20e15492becb89a293f427
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6763fd9f8999bd590511026f6571db6a747c43bc
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62541920"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71231847"
 ---
 # <a name="ca2204-literals-should-be-spelled-correctly"></a>CA2204: Literály by měly být zadány správně
 
@@ -28,27 +28,27 @@ ms.locfileid: "62541920"
 |TypeName|LiteralsShouldBeSpelledCorrectly|
 |CheckId|CA2204|
 |Kategorie|Microsoft.Usage|
-|Narušující změna|Pevné|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Řetězcový literál je předán jako argument pro parametr lokalizovatelné nebo lokalizovatelné vlastnosti a řetězec obsahuje jedno nebo více slov, která knihovna kontroly pravopisu společnosti Microsoft nerozpoznala.
+Literální řetězec je předán jako argument pro Lokalizovatelný parametr nebo na Lokalizovatelný vlastnost a řetězec obsahuje jedno nebo více slov, která nejsou rozpoznána knihovnou kontroly pravopisu společnosti Microsoft.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Toto pravidlo zkontroluje řetězcový literál, který je předán jako hodnotu parametru nebo vlastnost, pokud jeden nebo více z následujících případech má hodnotu true:
+Toto pravidlo zkontroluje literálový řetězec, který je předán jako hodnota parametru nebo vlastnosti v případě, že jeden nebo více následujících případů je pravdivé:
 
 - <xref:System.ComponentModel.LocalizableAttribute> Atribut parametru nebo vlastnosti je nastaven na hodnotu true.
 
-- Název parametru nebo vlastnosti obsahuje "Text", "Zpráva" nebo "Popisu".
+- Název parametru nebo vlastnosti obsahuje text "text", "zpráva" nebo "titulek".
 
-- Název proměnné řetězec, který je předán <xref:System.Console.Write%2A> nebo <xref:System.Console.WriteLine> metoda je "value" nebo "format".
+- Název řetězcové proměnné, která je předána <xref:System.Console.Write%2A> metodě nebo <xref:System.Console.WriteLine> , je buď "value" nebo "Format".
 
-Toto pravidlo analyzuje řetězcový literál do slov, tokenizací složených slov a zkontroluje pravopis pro každé slovo nebo token. Informace o analýze algoritmus, najdete v části [CA1704: Identifikátory by měly být zadány správně](../code-quality/ca1704-identifiers-should-be-spelled-correctly.md).
+Toto pravidlo analyzuje řetězcový literál do slov, tokenizací složených slov a kontroluje pravopis každého slova nebo tokenu. Informace o algoritmu analýzy naleznete v tématu [CA1704: Identifikátory by měly být zadány](../code-quality/ca1704-identifiers-should-be-spelled-correctly.md)správně.
 
 ## <a name="language"></a>Jazyk
 
-Nástroj pro kontrolu pravopisu aktuálně zkontroluje pouze proti jazykovou verzi na základě angličtina slovníky. Jazyková verze projektu v souboru projektu, můžete změnit tak, že přidáte **CodeAnalysisCulture** elementu.
+Kontrola pravopisu aktuálně kontroluje pouze proti slovníkům jazykové verze v angličtině. Můžete změnit jazykovou verzi projektu v souboru projektu přidáním elementu **CodeAnalysisCulture** .
 
 Příklad:
 
@@ -59,15 +59,15 @@ Příklad:
 ```
 
 > [!IMPORTANT]
-> Pokud nastavíte jazykovou verzi na jinou hodnotu než jazykovou verzi na základě angličtina, tento pravidel nástroje Analýza kódu je tiše zakázaná.
+> Pokud nastavíte jazykovou verzi na jinou než anglickou jazykovou verzi, toto pravidlo analýzy kódu je tiše zakázané.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, opravte pravopis slova nebo přidejte slovo do vlastního slovníku. Informace o tom, jak použít vlastní slovníky najdete v tématu [jak: Přizpůsobení slovníku analýzy kódu](../code-quality/how-to-customize-the-code-analysis-dictionary.md).
+Chcete-li opravit porušení tohoto pravidla, opravte pravopis slova nebo přidejte slovo do vlastního slovníku. Informace o tom, jak používat vlastní slovníky, [najdete v tématu How to: Přizpůsobení slovníku](../code-quality/how-to-customize-the-code-analysis-dictionary.md)analýzy kódu.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Nepotlačujte upozornění na toto pravidlo. Správně hláskovaným slov snížit učit se vyžaduje pro nové knihovny softwaru.
+Nepotlačujte upozornění na toto pravidlo. Správná pravopisná slova omezují výukovou křivku nutnou pro nové knihovny softwaru.
 
 ## <a name="related-rules"></a>Související pravidla
 

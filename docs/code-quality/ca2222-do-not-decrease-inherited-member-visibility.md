@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: d63f4509872cc117ae03ff3a668d38a6efb07ef9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c737a30569ab4cd59931a3fca0e500ebe96e62de
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62541819"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71230985"
 ---
 # <a name="ca2222-do-not-decrease-inherited-member-visibility"></a>CA2222: Nesnižujte viditelnost zděděného členu
 
@@ -31,19 +31,19 @@ ms.locfileid: "62541819"
 |TypeName|DoNotDecreaseInheritedMemberVisibility|
 |CheckId|CA2222|
 |Kategorie|Microsoft.Usage|
-|Narušující změna|Pevné|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Soukromé metody v nezapečetěný typ má podpis, který je stejný jako veřejné metody deklarované v základním typu. Privátní metoda není konečný.
+Soukromá metoda v nezapečetěném typu má signaturu, která je shodná s veřejnou metodou deklarovanou v základním typu. Soukromá metoda není finální.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Neměnit modifikátor přístupu u zděděných členů. Změna zděděného členu na soukromý nezabrání volajícím v přístupu k implementaci základní třídy dané metody. Pokud je k privátní člen a typ nezapečetěná, odvozující typy může volat poslední veřejné implementace metody v hierarchii dědičnosti. Pokud potřebujete změnit modifikátor přístupu, metoda by měla být označena finální nebo jeho typ by měl být zapečetěný zabránit přepsání metody.
+Neměňte modifikátor přístupu pro zděděné členy. Změna zděděného členu na soukromý nezabrání volajícím v přístupu k implementaci základní třídy dané metody. Pokud je člen vytvořen jako soukromý a typ je nezapečetěný, dědění typů může zavolat poslední veřejnou implementaci metody v hierarchii dědičnosti. Pokud je nutné změnit modifikátor přístupu, buď by měla být metoda označena jako konečná, nebo její typ by měl být zapečetěný, aby se zabránilo přepsání metody.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, změňte přístup být veřejné. Případně pokud svůj oblíbený programovací jazyk podporuje, můžete vytvořit metodu finální.
+Chcete-li opravit porušení tohoto pravidla, změňte přístup na neprivátní. Případně, pokud je váš programovací jazyk podporován, můžete nastavit metodu jako konečnou.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
@@ -51,7 +51,7 @@ Nepotlačujte upozornění na toto pravidlo.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje typ, který porušuje tato pravidla.
+Následující příklad ukazuje typ, který je v rozporu s tímto pravidlem.
 
 [!code-vb[FxCop.Usage.InheritedPublic#1](../code-quality/codesnippet/VisualBasic/ca2222-do-not-decrease-inherited-member-visibility_1.vb)]
 [!code-csharp[FxCop.Usage.InheritedPublic#1](../code-quality/codesnippet/CSharp/ca2222-do-not-decrease-inherited-member-visibility_1.cs)]

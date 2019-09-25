@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 78917bcd4c67e1da205595bac07c8e0e5947318d
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 82a1ed8610ce84279f5fde3b802d976a3e766d99
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68923062"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71236243"
 ---
 # <a name="ca1018-mark-attributes-with-attributeusageattribute"></a>CA1018: Označte atributy pomocí AttributeUsageAttribute
 
@@ -31,7 +31,7 @@ ms.locfileid: "68923062"
 |TypeName|MarkAttributesWithAttributeUsage|
 |CheckId|CA1018|
 |Kategorie|Microsoft.Design|
-|Narušující změna|Narušující|
+|Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
 <xref:System.AttributeUsageAttribute?displayProperty=fullName> Atribut není přítomen u vlastního atributu.

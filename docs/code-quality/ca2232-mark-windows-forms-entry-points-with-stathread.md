@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: dd3f5b76015a3a54ee085b5cc2dd532920ff0795
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 06772f8dd91c27834b329293d06cfbc2a7dcfcef
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68920180"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71230760"
 ---
 # <a name="ca2232-mark-windows-forms-entry-points-with-stathread"></a>CA2232: Označte vstupní body modelu Windows Forms pomocí STAThread
 
@@ -31,7 +31,7 @@ ms.locfileid: "68920180"
 |TypeName|MarkWindowsFormsEntryPointsWithStaThread|
 |CheckId|CA2232|
 |Kategorie|Microsoft.Usage|
-|Narušující změna|Bez přerušení|
+|Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
 Sestavení odkazuje na <xref:System.Windows.Forms> obor názvů a jeho vstupní bod není označen <xref:System.STAThreadAttribute?displayProperty=fullName> atributem.

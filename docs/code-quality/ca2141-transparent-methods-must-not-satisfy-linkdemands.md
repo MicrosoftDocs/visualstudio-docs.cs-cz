@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 24723559988974c51798c3e099ff8c1d86a15db9
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 0365d82917b8cfbaf291d557a6ac2d95c220562a
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68920507"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71232123"
 ---
 # <a name="ca2141transparent-methods-must-not-satisfy-linkdemands"></a>CA2141:Transparentní metody nesmějí vyhovovat LinkDemands
 
@@ -24,7 +24,7 @@ ms.locfileid: "68920507"
 |TypeName|TransparentMethodsMustNotSatisfyLinkDemands|
 |CheckId|CA2141|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Narušující|
+|Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
 Transparentní metoda zabezpečení volá metodu v sestavení, které není označeno <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atributem (APTCA), nebo transparentní metoda zabezpečení vyhovuje <xref:System.Security.Permissions.SecurityAction> `.LinkDemand` pro typ nebo metodu.

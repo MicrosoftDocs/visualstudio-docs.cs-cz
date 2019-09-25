@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f734d0cf28a5aec28ebbf635dd384efe176b1774
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 4bef51c547d4a1614137e0691343bef635aed50d
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68921323"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71233279"
 ---
 # <a name="ca1900-value-type-fields-should-be-portable"></a>CA1900: Pole typů hodnot by měla být přenosná
 
@@ -28,7 +28,7 @@ ms.locfileid: "68921323"
 |TypeName|ValueTypeFieldsShouldBePortable|
 |CheckId|CA1900|
 |Kategorie|Microsoft. přenositelnost|
-|Narušující změna|Přerušení – Pokud se pole může zobrazit mimo sestavení.<br /><br /> Bez přerušení – Pokud pole není viditelné mimo sestavení.|
+|Zásadní změna|Přerušení – Pokud se pole může zobrazit mimo sestavení.<br /><br /> Bez přerušení – Pokud pole není viditelné mimo sestavení.|
 
 ## <a name="cause"></a>příčina
 Toto pravidlo kontroluje, zda struktury, které jsou deklarovány s explicitním rozložením, budou správně zarovnány při zařazení do nespravovaného kódu v 64 operačních systémech. IA-64 neumožňuje nezarovnaný přístup k paměti a proces se nezdaří, pokud toto porušení není opraveno.

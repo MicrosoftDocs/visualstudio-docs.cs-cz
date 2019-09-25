@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a74f6313f90a31d43cf39443b1c44d78f0628f8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: eb6d28e15870907034479e698ba8e7464f4f5159
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62545186"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71232727"
 ---
 # <a name="ca2115-call-gckeepalive-when-using-native-resources"></a>CA2115: Volejte GC.KeepAlive při použití nativních prostředků
 
@@ -28,38 +28,38 @@ ms.locfileid: "62545186"
 |TypeName|CallGCKeepAliveWhenUsingNativeResources|
 |CheckId|CA2115|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Pevné|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Metoda deklarovaného v typu s finalizační metoda odkazuje <xref:System.IntPtr?displayProperty=fullName> nebo <xref:System.UIntPtr?displayProperty=fullName> pole, ale nevolá <xref:System.GC.KeepAlive%2A?displayProperty=fullName>.
+Metoda deklarovaná v typu s finalizační metodou odkazuje na <xref:System.IntPtr?displayProperty=fullName> pole nebo <xref:System.UIntPtr?displayProperty=fullName> , ale nevolá <xref:System.GC.KeepAlive%2A?displayProperty=fullName>.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Uvolňování paměti dokončí objektu, pokud neexistují žádné další odkazy na ni ve spravovaném kódu. Nespravované odkazy na objekty nebrání uvolňování paměti. Toto pravidlo zjistí chyby, které mohou nastat, protože nespravovaný prostředek je finalizován v době, kdy je stále používán nespravovaným kódem.
+Uvolňování paměti dokončí objekt, pokud na něj nejsou žádné další odkazy ve spravovaném kódu. Nespravované odkazy na objekty nebrání uvolňování paměti. Toto pravidlo zjistí chyby, které mohou nastat, protože nespravovaný prostředek je finalizován v době, kdy je stále používán nespravovaným kódem.
 
-Toto pravidlo předpokládá, že <xref:System.IntPtr> a <xref:System.UIntPtr> ukládání pole ukazatelů na nespravované prostředky. Protože účel finalizační metodu pro uvolnění nespravovaných prostředků, pravidlo předpokládá, že finalizační metoda uvolní nespravovaný prostředek, který ukazuje ukazatel pole. Toto pravidlo předpokládá také, že metoda odkazuje na pole ukazatel k předání tohoto nespravovaného prostředku do nespravovaného kódu.
+Toto pravidlo předpokládá, <xref:System.IntPtr> že <xref:System.UIntPtr> a pole ukládají ukazatele na nespravované prostředky. Vzhledem k tomu, že účelem finalizační metody je uvolnit nespravované prostředky, pravidlo předpokládá, že finalizační metoda uvolní nespravovaný prostředek, na který odkazuje pole ukazatelů. Toto pravidlo také předpokládá, že metoda odkazuje na pole ukazatele na předání nespravovaného prostředku do nespravovaného kódu.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, přidejte volání <xref:System.GC.KeepAlive%2A> metody, předejte aktuální instanci (`this` v C# a C++) jako argument. Umístěte volání za posledním řádkem kódu, kde musí být chráněné objekt z kolekce uvolnění paměti. Ihned po volání <xref:System.GC.KeepAlive%2A>, objekt je znovu považovat za připravené pro uvolnění paměti za předpokladu, že neexistují žádné spravované odkazy na ni.
+Chcete-li opravit porušení tohoto pravidla, přidejte <xref:System.GC.KeepAlive%2A> volání do metody a předejte aktuální instanci (`this` v C# a C++) jako argument. Umístěte volání za poslední řádek kódu, kde musí být objekt chráněn z uvolňování paměti. Ihned po volání na <xref:System.GC.KeepAlive%2A>je objekt znovu považován za připravený pro uvolňování paměti za předpokladu, že na něj nejsou žádné spravované odkazy.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Toto pravidlo do určité míry vyhodnotit, které můžou vést k počet falešně pozitivních výsledků. Můžete bezpečně potlačit upozornění tohoto pravidla, pokud:
+Toto pravidlo vytváří některé předpoklady, které mohou vést k falešně pozitivním hodnotám. Upozornění můžete v tomto pravidle bezpečně potlačit, pokud:
 
-- Finalizační metoda neuvolní obsah <xref:System.IntPtr> nebo <xref:System.UIntPtr> pole odkazuje metodu.
+- Finalizační metoda neuvolní obsah <xref:System.IntPtr> pole nebo <xref:System.UIntPtr> odkazované metodou.
 
-- Metoda nepředává <xref:System.IntPtr> nebo <xref:System.UIntPtr> pole do nespravovaného kódu.
+- Metoda nepředá <xref:System.IntPtr> pole nebo <xref:System.UIntPtr> do nespravovaného kódu.
 
-Pečlivě si prostudujte ostatní zprávy před jejich vyloučení. Toto pravidlo zjistí chyby, které je obtížné reprodukovat a ladění.
+Pečlivě zkontrolujte další zprávy, než je vyloučíte. Toto pravidlo detekuje chyby, které je obtížné rekládat a ladit.
 
 ## <a name="example"></a>Příklad
 
-V následujícím příkladu `BadMethod` nezahrnuje volání `GC.KeepAlive` a proto porušuje pravidlo. `GoodMethod` obsahuje opraveným kódem.
+V následujícím příkladu `BadMethod` nezahrnuje `GC.KeepAlive` volání a proto porušuje pravidlo. `GoodMethod`obsahuje opravený kód.
 
 > [!NOTE]
-> V tomto příkladu je pseudokódu. Ačkoli kód se zkompiluje a spustí, upozornění není aktivováno, protože nespravovaný prostředek není vytvoření nebo uvolnění.
+> V tomto příkladu je to pseudo code. I když se kód zkompiluje a spustí, upozornění se neaktivuje, protože nespravovaný prostředek není vytvořen nebo je uvolněn.
 
 [!code-csharp[FxCop.Security.IntptrAndFinalize#1](../code-quality/codesnippet/CSharp/ca2115-call-gc-keepalive-when-using-native-resources_1.cs)]
 

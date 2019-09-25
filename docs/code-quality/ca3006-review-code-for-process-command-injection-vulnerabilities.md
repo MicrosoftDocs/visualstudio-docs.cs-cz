@@ -10,12 +10,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 35e41301dcf0a1358b6d063ce557212915b5f591
-ms.sourcegitcommit: 2ee11676af4f3fc5729934d52541e9871fb43ee9
+ms.openlocfilehash: 986607d7f42f49c99396bbb021c48bad549930c9
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65841449"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71237282"
 ---
 # <a name="ca3006-review-code-for-process-command-injection-vulnerabilities"></a>CA3006: Zkontrolujte ohrožení zabezpečení injektáží příkazu procesu v kódu
 
@@ -24,36 +24,36 @@ ms.locfileid: "65841449"
 |TypeName|ReviewCodeForProcessCommandInjectionVulnerabilities|
 |CheckId|CA3006|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Pevné|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
 Potenciálně nedůvěryhodný vstup požadavku HTTP dosáhne příkazu procesu.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Při práci s nedůvěryhodnému vstupu, dávejte útoků prostřednictvím injektáže příkazu. Útok prostřednictvím injektáže příkaz můžete spustit škodlivé příkazy na základního operačního systému, tím bylo narušeno zabezpečení a integrity vašeho serveru.
+Při práci s nedůvěryhodným vstupem se zaměříte na útoky vkládání příkazů. Útok injektáže příkazu může spustit škodlivé příkazy v podkladovém operačním systému a ohrozit tak zabezpečení a integritu serveru.
 
-Toto pravidlo se pokusí najít vstup dosažení příkaz process požadavků HTTP.
-
-> [!NOTE]
-> Toto pravidlo nelze sledovat data napříč sestavení. Například pokud jedno sestavení načte vstup požadavku HTTP a předává je na jiné sestavení, který spustí proces, nevytvoří toto pravidlo upozornění.
+Toto pravidlo se pokouší najít vstup z požadavků HTTP, které dosáhnou příkazu procesu.
 
 > [!NOTE]
-> Je konfigurovatelná omezení jak hluboko bude toto pravidlo analyzovat tok dat mezi volání metody. Zobrazit [Analyzer Configuration](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md#dataflow-analysis) jak nakonfigurovat limit v souboru EditorConfig.
+> Toto pravidlo nemůže sledovat data napříč sestaveními. Například pokud jedno sestavení přečte vstup požadavku HTTP a pak ho předá do jiného sestavení, které spustí proces, toto pravidlo nevytvoří upozornění.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+> [!NOTE]
+> Existuje konfigurovatelné omezení, jak hluboko bude toto pravidlo analyzovat tok dat napříč voláními metod. Postup konfigurace limitu v souboru EditorConfig naleznete v tématu [Configuration Analyzer](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md#dataflow-analysis) .
 
-- Pokud je to možné Vyhněte se spouštění procesů na základě uživatelského zadání.
-- Ověření vstupu oproti bezpečné známé sady znaků a jehož délka.
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
+
+- Pokud je to možné, vyhněte se spouštění procesů na základě vstupu uživatele.
+- Ověří vstup proti známé bezpečné sadě znaků a délky.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Pokud znáte vstup byl ověřen nebo uvozen řídicími znaky, jako bezpečné, je bezpečný pro potlačení tohoto upozornění.
+Pokud víte, že vstup byl ověřen nebo byl jeho řídicím znakem zabezpečený, je bezpečné toto upozornění potlačit.
 
-## <a name="pseudo-code-examples"></a>Příklady pseudo kódu
+## <a name="pseudo-code-examples"></a>Příklady kódu pseudo
 
-### <a name="violation"></a>Porušení
+### <a name="violation"></a>Selhání
 
 ```csharp
 using System;

@@ -3,18 +3,18 @@ title: Přihlášení k Visual Studio pro Mac
 description: Jak se přihlásit k Visual Studio pro Mac
 author: asb3993
 ms.author: amburns
-ms.date: 08/08/2019
+ms.date: 09/18/2019
 ms.assetid: E4CFD03C-03AF-48CA-B409-6DB1CA45E991
-ms.openlocfilehash: a3911826314710f5b47fb248e452b4a10b56e2dd
-ms.sourcegitcommit: 6f3cf7a1bfc81a61f9a603461a1c34fd2221f100
+ms.openlocfilehash: 7b1e912583cf0ac63307bf1c75912059c39fe427
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957382"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71213659"
 ---
 # <a name="sign-in-to-visual-studio-for-mac"></a>Přihlášení k Visual Studio pro Mac
 
-Přihlášení k Visual Studio pro Mac je způsob [Aktivace](enable-subscription.md)předplatného. Když stahujete Visual Studio pro Mac, vždy ve výchozím nastavení dostanete edici Community. Pokud máte licenci pro [Professional nebo Enterprise](https://visualstudio.microsoft.com/vs/compare/), měli byste se při prvním spuštění přihlásit, abyste mohli odemknout všechny další funkce. Kromě toho získáte také následující:
+Přihlášení k Visual Studio pro Mac je způsob [Aktivace předplatného](enable-subscription.md). Když stahujete Visual Studio pro Mac, vždy ve výchozím nastavení dostanete edici Community. Pokud máte licenci pro [Professional nebo Enterprise](https://visualstudio.microsoft.com/vs/compare/), měli byste se při prvním spuštění přihlásit, abyste mohli odemknout všechny další funkce. Kromě toho získáte také následující:
 
 * **Přístup k Visual Studio Dev Essentials programu** – tento program zahrnuje bezplatné nabídky softwaru, školení, podporu a další. Zobrazit [Visual Studio Dev Essentials](https://aka.ms/vsdevhelp) Další informace.
 
@@ -29,17 +29,17 @@ Pokud se rozhodnete, že se nechcete přihlašovat přímo, budete moct zkušebn
 > [!TIP]
 > Než se přihlásíte k Visual Studio pro Mac, ujistěte se, že jste připojení k Internetu. Odběry > lze aktivovat pouze online. Pokud nejste připojeni, klikněte na tlačítko "Chci provést později" a přihlaste se prostřednictvím nabídky, až se připojíte.
 
-Pokud se chcete přihlásit k Visual Studio pro Mac, proveďte následující kroky:
+Pokud se chcete přihlásit k Visual Studio pro Mac při prvním spuštění, proveďte následující kroky:
 
 1. V okně přihlášení klikněte na tlačítko **Přihlásit se účtem Microsoft** :
 
-    ![Dialogové okno účty v Visual Studio pro Mac](media/signing-in-image12.png)
+    ![Dialogové okno účty v Visual Studio pro Mac](media/ide-tour-2019-start-signin.png)
 
 2. Zadejte svoje přihlašovací údaje Microsoftu:
 
     ![Dialogové okno přihlašovací údaje Microsoftu](media/signing-in-image13.png)
 
-3. Po přihlášení se zobrazí okno Start sady Visual Studio 2019 for Mac. Odsud můžete otevřít nebo vytvořit nový projekt:
+4. Po přihlášení se zobrazí možnost vybrat klávesové zkratky. Vyberte možnost, kterou chcete použít, a **pokračujte**. Pak se zobrazí výzva s úvodním oknem sady Visual Studio 2019 for Mac. Odsud můžete otevřít nebo vytvořit nový projekt:
 
     ![Úspěšné přihlášení](media/signing-in-image14.png)
 

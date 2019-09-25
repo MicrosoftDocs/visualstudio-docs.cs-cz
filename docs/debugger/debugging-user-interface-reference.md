@@ -1,5 +1,5 @@
 ---
-title: Ladění odkazu uživatelského rozhraní | Dokumentace Microsoftu
+title: Ladění odkazu uživatelského rozhraní | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,17 +18,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d459e1c6611fa1b20e05ba2d5bd24e23750109d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 28757580b7f45e3d63cba1782f17283ad01f26c6
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62852179"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71211052"
 ---
 # <a name="debugging-user-interface-reference"></a>Ladění odkazu uživatelského rozhraní
-Jak ladit aplikaci se můžete setkat s následující dialogových oknech.
+Při ladění aplikace můžete zaznamenat následující dialogová okna.
 
- Mnoho funkcí ladicího programu můžete automatizovat pomocí sady Visual Studio model rozšiřitelnosti. Další informace najdete v tématu Visual Studio SDK ladění.
+ Můžete automatizovat mnoho funkcí ladicího programu pomocí modelu rozšiřitelnosti sady Visual Studio. Další informace najdete v tématu Visual Studio Debugging SDK.
 
 - [Dialogové okno Vybrat zarážky](../debugger/choose-breakpoints-dialog-box.md)
 
@@ -43,6 +43,6 @@ Jak ladit aplikaci se můžete setkat s následující dialogových oknech.
 - [Ladění chyb a dialogových oken s upozorněním](../debugger/debugging-errors-and-warning-dialog-boxes.md)
 
 ## <a name="see-also"></a>Viz také
-- [Ladění v sadě Visual Studio](../debugger/index.md)
+- [Ladění v sadě Visual Studio](../debugger/index.yml)
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)
 - [Příkazové okno](../ide/reference/command-window.md)

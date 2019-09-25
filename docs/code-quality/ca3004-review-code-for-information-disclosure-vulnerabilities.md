@@ -10,12 +10,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e8c8c58a01b9527df472907c8b55a9d175dd91d
-ms.sourcegitcommit: 2ee11676af4f3fc5729934d52541e9871fb43ee9
+ms.openlocfilehash: 4965c9df3c2256511b8e44de8d388a9155d0d8f9
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65841616"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71237381"
 ---
 # <a name="ca3004-review-code-for-information-disclosure-vulnerabilities"></a>CA3004: Zkontrolujte ohrožení zabezpečení zpřístupněním informací v kódu
 
@@ -24,35 +24,35 @@ ms.locfileid: "65841616"
 |TypeName|ReviewCodeForInformationDisclosureVulnerabilities|
 |CheckId|CA3004|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Pevné|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Zprávu výjimky, trasování zásobníku nebo řetězcové vyjádření dosáhne webové výstup.
+Webový výstup představuje zprávu o výjimce, trasování zásobníku nebo řetězcové vyjádření.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Zveřejnění informací o výjimce poskytuje přehled o tom, interních dat vaší aplikace, který může pomoct útočníci najít další chyby zneužít útočníci.
+Vydávání informací o výjimce poskytne útočníkům přehled o vnitřních verzích vaší aplikace, které můžou útočníkům pomoci najít další ohrožení zabezpečení pro zneužití.
 
-Toto pravidlo se pokusí najít zpráva o výjimce, trasování zásobníku nebo řetězcové vyjádření se výstup do odpovědi HTTP.
-
-> [!NOTE]
-> Toto pravidlo nelze sledovat data napříč sestavení. Například pokud jedno sestavení zachytí výjimku a předává je na jiné sestavení, jejichž výstupem jsou výjimky, nevytvoří toto pravidlo upozornění.
+Toto pravidlo se pokouší najít zprávu o výjimce, trasování zásobníku nebo řetězcové vyjádření, které jsou odesílány do odpovědi HTTP.
 
 > [!NOTE]
-> Je konfigurovatelná omezení jak hluboko bude toto pravidlo analyzovat tok dat mezi volání metody. Zobrazit [Analyzer Configuration](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md#dataflow-analysis) jak nakonfigurovat limit v souboru EditorConfig.
+> Toto pravidlo nemůže sledovat data napříč sestaveními. Například pokud jedno sestavení zachytí výjimku a poté předá do jiného sestavení, které vrací výjimku, toto pravidlo nevydá upozornění.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+> [!NOTE]
+> Existuje konfigurovatelné omezení, jak hluboko bude toto pravidlo analyzovat tok dat napříč voláními metod. Postup konfigurace limitu v souboru EditorConfig naleznete v tématu [Configuration Analyzer](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md#dataflow-analysis) .
 
-Není výstupní informace o výjimce do odpovědi protokolu HTTP. Místo toho poskytují obecné chybové zprávy. Zobrazit [OWASP pro zpracování chyb stránky](https://www.owasp.org/index.php/Error_Handling) další pokyny.
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
+
+Nevytvářejte výstup informací o výjimkách odpovědí HTTP. Místo toho zadejte obecnou chybovou zprávu. Další pokyny najdete na [stránce o zpracování chyb v OWASP](https://www.owasp.org/index.php/Error_Handling) .
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Pokud znáte webové výstup je v rámci hranice vztahů důvěryhodnosti vaší aplikace a nikdy nezveřejní, je možné pro potlačení tohoto upozornění. Je to vzácný. Vzít v úvahu, že hranice vztahů důvěryhodnosti vaší aplikace a toky dat může postupem času změnit.
+Pokud víte, že váš webový výstup spadá do hranice vztahu důvěryhodnosti vaší aplikace a nikdy se nezveřejňuje mimo, je možné toto upozornění potlačit. To je zřídka. Vezměte v úvahu, že hranice vztahu důvěryhodnosti vaší aplikace a toky dat se můžou v průběhu času měnit.
 
-## <a name="pseudo-code-examples"></a>Příklady pseudo kódu
+## <a name="pseudo-code-examples"></a>Příklady kódu pseudo
 
-### <a name="violation"></a>Porušení
+### <a name="violation"></a>Selhání
 
 ```csharp
 using System;

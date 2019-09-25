@@ -7,12 +7,12 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - multiple
-ms.openlocfilehash: 478efc77bd1fb14f6241e026cfe280355a90746a
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 27570e282c230d4bec47e70aa1bcdd053b75597c
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68919446"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71236749"
 ---
 # <a name="best-practices-and-examples-sal"></a>Doporučené postupy a příklady (poznámky SAL)
 Tady je několik způsobů, jak využít jazyk pro poznámky ke zdrojovému kódu (SAL) a vyhnout se některým běžným problémům.
@@ -238,11 +238,11 @@ V tomto příkladu `_Out_opt_` říká, že ukazatel může mít hodnotu null ja
 
 ## <a name="see-also"></a>Viz také:
 
-[Použití poznámek SAL keC++ snížení vad](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)
-C/kódu, které porozuměly[](../code-quality/understanding-sal.md)
-[parametrům funkcí a návratovým hodnotám](../code-quality/annotating-function-parameters-and-return-values.md)
-, které přizpůsobují[chování funkcí](../code-quality/annotating-function-behavior.md) 
- [Přidávání](../code-quality/annotating-structs-and-classes.md)
-poznámek ke strukturám a třídám s poznámkami k[chování](../code-quality/annotating-locking-behavior.md)
-při zamykání s[určením, kdy a kde Poznámka aplikuje](../code-quality/specifying-when-and-where-an-annotation-applies.md)
-[vnitřní funkce](../code-quality/intrinsic-functions.md)
+[Použití poznámek SAL k snížení míry výskytu závad kódu C/C++](../code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects.md)  
+[Porozumění SAL](../code-quality/understanding-sal.md)  
+[Zadávání poznámek k parametrům funkcí a návratovým hodnotám](../code-quality/annotating-function-parameters-and-return-values.md)  
+[Zadávání poznámek k chování funkcí](../code-quality/annotating-function-behavior.md)  
+[Zadávání poznámek ke strukturám a třídám](../code-quality/annotating-structs-and-classes.md)  
+[Zadávání poznámek o chování při zamykání](../code-quality/annotating-locking-behavior.md)  
+[Určení, kdy a kde se má poznámka použít](../code-quality/specifying-when-and-where-an-annotation-applies.md)  
+[Vnitřní funkce](../code-quality/intrinsic-functions.md)  

@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 55c58f098616a5c3c2d6ad72f56e8eda51f689be
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5cf7fc6e31b9250392fc3ea447a5b91225640a50
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62796842"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71231898"
 ---
 # <a name="ca2200-rethrow-to-preserve-stack-details"></a>CA2200: Znovu vyvolejte pro zachování podrobností zásobníku
 
@@ -31,19 +31,19 @@ ms.locfileid: "62796842"
 |TypeName|RethrowToPreserveStackDetails|
 |CheckId|CA2200|
 |Kategorie|Microsoft.Usage|
-|Narušující změna|Pevné|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Výjimka je znovu vyvolána a výjimky je jednoznačně uvedena v `throw` příkazu.
+Výjimka je znovu vyvolána a výjimka je explicitně určena v `throw` příkazu.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Jakmile je vyvolána výjimka, je součástí informace, které vykonává trasování zásobníku. Trasování zásobníku je seznam hierarchii volání metody, který začíná metody, která vyvolá výjimku a končí u metody, která zachytí výjimku. Pokud výjimka je znovu vyvolána zadáním výjimky v `throw` prohlášení, trasování zásobníku se restartuje v aktuální metodě a dojde ke ztrátě seznam volání metody mezi původní metodou, která vyvolala výjimku a aktuální metoda. Chcete-li zachovat původní informace o trasování zásobníku s tím rozdílem, použijte `throw` příkaz bez zadání výjimku.
+Jakmile je vyvolána výjimka, je součástí informací trasování zásobníku. Trasování zásobníku je seznam hierarchie volání metody, která začíná metodou, která vyvolá výjimku a končí metodou, která výjimku zachytí. Pokud je výjimka znovu vyvolána zadáním výjimky v `throw` příkazu, je trasování zásobníku restartováno v aktuální metodě a seznam volání metody mezi původní metodou, která vyvolala výjimku, a aktuální metodou je ztraceno. Chcete-li zachovat původní informace o trasování zásobníku s výjimkou, `throw` použijte příkaz bez zadání výjimky.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, výjimka znovu vyvolána bez explicitním zadáním výjimky.
+Chcete-li opravit porušení tohoto pravidla, znovu vyvolejte výjimku bez explicitní specifikace výjimky.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
@@ -51,7 +51,7 @@ Nepotlačujte upozornění na toto pravidlo.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje metodu, `CatchAndRethrowExplicitly`, který porušuje pravidla a metodu, `CatchAndRethrowImplicitly`, který splňuje pravidlo.
+Následující příklad ukazuje metodu, `CatchAndRethrowExplicitly`, která porušuje pravidlo a metodu, `CatchAndRethrowImplicitly`,,, který splňuje pravidlo.
 
 [!code-csharp[FxCop.Usage.Rethrow#1](../code-quality/codesnippet/CSharp/ca2200-rethrow-to-preserve-stack-details_1.cs)]
 [!code-vb[FxCop.Usage.Rethrow#1](../code-quality/codesnippet/VisualBasic/ca2200-rethrow-to-preserve-stack-details_1.vb)]

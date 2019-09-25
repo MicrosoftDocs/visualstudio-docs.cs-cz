@@ -2,7 +2,7 @@
 title: Novinky v sadě Visual Studio 2019
 titleSuffix: ''
 description: Seznamte se s novými funkcemi v aplikaci Visual Studio 2019.
-ms.date: 09/23/2019
+ms.date: 09/24/2019
 helpviewer_keywords:
 - Visual Studio, what's new
 - what's new [Visual Studio]
@@ -15,12 +15,12 @@ ms.technology: vs-ide-general
 ms.topic: conceptual
 ms.workload:
 - multiple
-ms.openlocfilehash: c2caed210edbed5f17d74ee78a55612aa0afa4cb
-ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
+ms.openlocfilehash: 5871e782ee84e49762d26a925380ad481e3623d1
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71186475"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71211328"
 ---
 # <a name="whats-new-in-visual-studio-2019"></a>Novinky v sadě Visual Studio 2019
 
@@ -107,6 +107,12 @@ Další informace najdete v blogovém příspěvku o [lepším prostředí pro v
 **Novinka v 16,2**: Aktualizovali jsme Průzkumníka testů, aby poskytoval lepší zacházení s velkými testovacími sadami, jednodušším filtrováním, více zjistitelnými příkazy, zobrazeními seznamu skladeb a přizpůsobitelnými sloupci, které vám umožní doladit informace o tom, jaké informace o testu se zobrazí.
 
    ![Snímek obrazovky, který zobrazuje vylepšení uživatelského rozhraní v Průzkumníku testů](media/vs-2019/test-explorer-ui.png)
+
+### <a name="net-core"></a>.NET Core
+
+**Novinka v 16,3**: Zahrnuli jsme podporu pro .NET Core 3,0. Pro různé platformy, open source&mdash;a plně podporované Microsoftem. 
+
+Další informace najdete v příspěvku na blogu o [.NET Core 3,0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/) .
 
 ## <a name="collaborate"></a>Spolupráce
 

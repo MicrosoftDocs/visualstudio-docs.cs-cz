@@ -3,15 +3,15 @@ title: Zahrnutí balíčku NuGet do projektu
 description: Tento dokument popisuje, jak zahrnout balíček NuGet do projektu pomocí Visual Studio pro Mac. Provede vás tím, že najde a stáhne balíček a také zavádí funkce integrace IDE.
 author: jmatthiesen
 ms.author: jomatthi
-ms.date: 09/17/2019
+ms.date: 09/18/2019
 ms.assetid: 5C800815-0B13-4B27-B017-95FCEF1A0EA2
 ms.custom: conceptual
-ms.openlocfilehash: 22b2e07509403d8e19e3a3e920d45b064c2e51c0
-ms.sourcegitcommit: 541a0556958201ad6626bc8638406ad02640f764
+ms.openlocfilehash: 55b4691a7adb03d4ee8fd5e05e7bd9d7daa28f13
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71079479"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71213687"
 ---
 # <a name="install-and-manage-nuget-packages-in-visual-studio-for-mac"></a>Instalace a Správa balíčků NuGet v Visual Studio pro Mac
 
@@ -23,17 +23,17 @@ Tento článek popisuje, jak zahrnout balíček NuGet do projektu a demonstruje 
 
 ## <a name="find-and-install-a-package"></a>Vyhledání a instalace balíčku
 
-1. Otevřete-li projekt v Visual Studio pro Mac, klikněte pravým tlačítkem myši na složku **závislosti** (složka**balíčky** , pokud používáte projekt Xamarin) v **oblast řešení** a vyberte možnost **Přidat balíčky**.
+1. Otevřete-li projekt v Visual Studio pro Mac, klikněte pravým tlačítkem myši na složku **závislosti** (složka**balíčky** , pokud používáte projekt Xamarin) v **oblast řešení** a vyberte možnost **Spravovat balíčky NuGet...** .
 
-    ![Akce kontextu přidání nového balíčku NuGet](media/nuget-walkthrough-PackagesMenu.png)
+    ![Akce kontextu přidání nového balíčku NuGet](media/nuget-walkthrough-packages-menu.png)
 
-2. Tím se otevře okno **Přidat balíčky** . Zajistěte, aby se v levém horním rohu dialogu nastavila `nuget.org`zdrojová rozevírací seznam.
+2. Tím se spustí okno **Spravovat balíčky NuGet** . Zajistěte, aby se v levém horním rohu dialogu nastavila `nuget.org`zdrojová rozevírací seznam.
 
-    ![Výpis balíčků NuGet](media/nuget-walkthrough-AddPackages1.png)
+    ![Výpis balíčků NuGet](media/nuget-walkthrough-add-packages1.png)
 
 3. Pomocí vyhledávacího pole v pravém horním rohu Najděte konkrétní balíček, například `EntityFramework`. Po nalezení balíčku, který chcete použít, ho vyberte a kliknutím na tlačítko **Přidat balíček** zahajte instalaci.
 
-    ![Přidat balíček NuGet Azure](media/nuget-walkthrough-AddPackages2.png)
+    ![Přidat balíček NuGet EntityFramework](media/nuget-walkthrough-add-packages2.png)
 
 4. Po stažení balíčku se do projektu přidá. Řešení se změní v závislosti na typu projektu, který upravujete:
 
@@ -43,7 +43,7 @@ Tento článek popisuje, jak zahrnout balíček NuGet do projektu a demonstruje 
     
     **Projekty .NET Core**
 
-    Uzel **nuget > Node NuGet** zobrazí každý balíček NuGet, který jste stáhli. Balíček můžete aktualizovat nebo odebrat z tohoto seznamu.
+    * Uzel **nuget > Node NuGet** zobrazí každý balíček NuGet, který jste stáhli. Balíček můžete aktualizovat nebo odebrat z tohoto seznamu.
 
 ## <a name="using-nuget-packages"></a>Používání balíčků NuGet
 
@@ -59,11 +59,11 @@ using Newtonsoft.Json;
 
 ## <a name="updating-packages"></a>Aktualizace balíčků
 
-Aktualizace balíčků lze provést buď najednou, kliknutím pravým tlačítkem myši na uzel **závislosti** (nebo na uzlu **balíčky** pro projekty Xamarin) nebo jednotlivě na každé součásti.
+Aktualizace balíčků lze provést buď najednou, kliknutím pravým tlačítkem myši na uzel **závislosti** (uzel**balíčky** pro projekty Xamarin) nebo jednotlivě na každém balíčku. Když je k dispozici nová verze balíčku NuGet, zobrazí se ![ikona aktualizace](media/nuget-walkthrough-update-icon.png)se šipkou.
 
-Kliknutím pravým tlačítkem myši na **závislosti** přistupujete k místní nabídce:
+Kliknutím pravým tlačítkem na **závislosti** přistupujete k kontextové nabídce a kliknutím na **aktualizovat** aktualizujte všechny balíčky:
 
-![Nabídka balíčky](media/nuget-walkthrough-PackagesMenu.png)
+![Nabídka balíčky](media/nuget-walkthrough-packages-menu-update.png)
 
 * **Spravovat balíčky NuGet** – otevře okno pro přidání dalších balíčků do projektu.
 * **Aktualizace** – zkontroluje zdrojový server pro každý balíček a stáhne všechny novější verze.

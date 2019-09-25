@@ -15,12 +15,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3fa6bfa5b590d330d791eb8c735099e619ffaf3a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 72bcf01b9c0613bb390ac9adbbba2fb176db13bd
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62541907"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71231219"
 ---
 # <a name="ca2224-override-equals-on-overloading-operator-equals"></a>CA2224: Přepište Equals při přetížení operátoru rovnosti
 
@@ -29,33 +29,33 @@ ms.locfileid: "62541907"
 |TypeName|OverrideEqualsOnOverloadingOperatorEquals|
 |CheckId|CA2224|
 |Kategorie|Microsoft.Usage|
-|Narušující změna|Pevné|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
 Veřejný typ implementuje operátor rovnosti, ale nepřepisuje <xref:System.Object.Equals%2A?displayProperty=fullName>.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Operátor rovnosti má být syntakticky pohodlný způsob, jak přistupovat k funkcím <xref:System.Object.Equals%2A> metody. Pokud se rozhodnete implementovat operátor rovnosti, musí být shodná s svou logikou <xref:System.Object.Equals%2A>.
+Operátor rovnosti má být syntakticky pohodlný způsob, jak získat přístup k funkcím <xref:System.Object.Equals%2A> metody. Při implementaci operátoru rovnosti musí být jeho logika shodná s <xref:System.Object.Equals%2A>vlastností.
 
-Kompilátor jazyka C# vyvolá upozornění, pokud váš kód poruší toto pravidlo.
+C# Kompilátor vydá upozornění, pokud váš kód narušuje toto pravidlo.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, buď odstranit implementace operátoru rovnosti, nebo přepsat <xref:System.Object.Equals%2A> a mít dvě metody vrací stejné hodnoty. Pokud operátor rovnosti nezavádí nekonzistentní chování, porušení zásad můžete vyřešit tím, že poskytuje implementace <xref:System.Object.Equals%2A> , která volá <xref:System.Object.Equals%2A> metodu v základní třídě.
+Chcete-li opravit porušení tohoto pravidla, měli byste buď odebrat implementaci operátoru rovnosti, nebo přepsat <xref:System.Object.Equals%2A> a mít dvě metody vracet stejné hodnoty. Pokud operátor rovnosti nezavádí nekonzistentní chování, můžete opravit porušení poskytnutím implementace <xref:System.Object.Equals%2A> , která <xref:System.Object.Equals%2A> volá metodu v základní třídě.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Je bezpečné potlačit upozornění tohoto pravidla, je-li operátor rovnosti vrací stejnou hodnotu jako zděděná implementace metody <xref:System.Object.Equals%2A>. Příklady v tomto článku zahrnují typ, který může bezpečně potlačit upozornění tohoto pravidla.
+Je bezpečné potlačit upozornění z tohoto pravidla, pokud operátor rovnosti vrací stejnou hodnotu jako zděděná implementace <xref:System.Object.Equals%2A>. Příklady v tomto článku zahrnují typ, který by mohl bezpečně potlačit upozornění od tohoto pravidla.
 
-## <a name="examples-of-inconsistent-equality-definitions"></a>Příklady definice nekonzistentní rovnosti
+## <a name="examples-of-inconsistent-equality-definitions"></a>Příklady nekonzistentních definic rovnosti
 
-Následující příklad ukazuje typ s nekonzistentní definice rovnosti. `BadPoint` Změní význam rovnosti poskytnutím vlastní implementace operátoru rovnosti, ale nepřepisuje <xref:System.Object.Equals%2A> tak, aby se chová stejně.
+Následující příklad ukazuje typ s nekonzistentními definicemi rovnosti. `BadPoint`změní význam rovnosti tím, že poskytuje vlastní implementaci operátoru rovnosti, ale nepřepisuje <xref:System.Object.Equals%2A> tak, aby se choval stejně.
 
 [!code-csharp[FxCop.Usage.OperatorEqualsRequiresEquals#1](../code-quality/codesnippet/CSharp/ca2224-override-equals-on-overloading-operator-equals_1.cs)]
 
-Následující kód testy chování `BadPoint`.
+Následující kód testuje chování `BadPoint`.
 
 [!code-csharp[FxCop.Usage.TestOperatorEqualsRequiresEquals#1](../code-quality/codesnippet/CSharp/ca2224-override-equals-on-overloading-operator-equals_2.cs)]
 
@@ -70,11 +70,11 @@ b and bcopy are equal ? No
 b == bcopy ? Yes
 ```
 
-Následující příklad ukazuje typ, který technicky poruší toto pravidlo, ale nechová nekonzistentní způsobem.
+Následující příklad ukazuje typ, který je technicky v rozporu s tímto pravidlem, ale nepracuje nekonzistentním způsobem.
 
 [!code-csharp[FxCop.Usage.ValueTypeEquals#1](../code-quality/codesnippet/CSharp/ca2224-override-equals-on-overloading-operator-equals_3.cs)]
 
-Následující kód testy chování `GoodPoint`.
+Následující kód testuje chování `GoodPoint`.
 
 [!code-csharp[FxCop.Usage.TestValueTypeEquals#1](../code-quality/codesnippet/CSharp/ca2224-override-equals-on-overloading-operator-equals_4.cs)]
 
@@ -91,32 +91,32 @@ b == bcopy ? Yes
 
 ## <a name="class-example"></a>Příklad třídy
 
-Následující příklad ukazuje třídu (odkaz), který porušuje tato pravidla.
+Následující příklad ukazuje třídu (odkazový typ), která toto pravidlo porušuje.
 
 [!code-csharp[FxCop.Usage.OverrideEqualsClassViolation#1](../code-quality/codesnippet/CSharp/ca2224-override-equals-on-overloading-operator-equals_5.cs)]
 
-V následujícím příkladu řeší porušení zásady tak, že přepíšete <xref:System.Object.Equals%2A?displayProperty=fullName>.
+Následující příklad opravuje porušení pomocí přepsání <xref:System.Object.Equals%2A?displayProperty=fullName>.
 
 [!code-csharp[FxCop.Usage.OverrideEqualsClassFixed#1](../code-quality/codesnippet/CSharp/ca2224-override-equals-on-overloading-operator-equals_6.cs)]
 
 ## <a name="structure-example"></a>Příklad struktury
 
-Následující příklad ukazuje strukturu (typ hodnoty), který porušuje tato pravidla:
+Následující příklad ukazuje strukturu (typ hodnoty), která porušuje toto pravidlo:
 
 [!code-csharp[FxCop.Usage.OverrideEqualsStructViolation#1](../code-quality/codesnippet/CSharp/ca2224-override-equals-on-overloading-operator-equals_7.cs)]
 
-V následujícím příkladu řeší porušení zásady tak, že přepíšete <xref:System.ValueType.Equals%2A?displayProperty=fullName>.
+Následující příklad opravuje porušení pomocí přepsání <xref:System.ValueType.Equals%2A?displayProperty=fullName>.
 
 [!code-csharp[FxCop.Usage.OverrideEqualsStructFixed#1](../code-quality/codesnippet/CSharp/ca2224-override-equals-on-overloading-operator-equals_8.cs)]
 
 ## <a name="related-rules"></a>Související pravidla
 
-[CA1046: Nepřetěžujte operátory rovnosti na odkazových typech](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)
+[CA1046: Nepřetížit operátor přetížení se rovná na odkazových typech](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)
 
-[CA2225: Přetížení operátoru mají pojmenované alternativy](../code-quality/ca2225-operator-overloads-have-named-alternates.md)
+[CA2225: Přetížení operátoru mají pojmenované alternativy.](../code-quality/ca2225-operator-overloads-have-named-alternates.md)
 
-[CA2226: Operátory by měly mít symetrické přetížení](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)
+[CA2226 Operátory by měly mít symetrické přetížení](../code-quality/ca2226-operators-should-have-symmetrical-overloads.md)
 
-[CA2218: Přepište GetHashCode při přepsání Equals](../code-quality/ca2218-override-gethashcode-on-overriding-equals.md)
+[CA2218: Přepsat GetHashCode při přepsání Equals](../code-quality/ca2218-override-gethashcode-on-overriding-equals.md)
 
-[CA2231: Přetižte operátor equals při přepsání ValueType.Equals](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)
+[CA2231: Operátor přetížení se rovná přepisování ValueType. Equals.](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)

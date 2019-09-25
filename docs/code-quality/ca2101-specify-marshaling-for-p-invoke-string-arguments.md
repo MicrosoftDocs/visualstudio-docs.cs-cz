@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d1eb4c2535060f9a110d149e88ac2532e6ad1412
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: f49c9dfdac1d8d8aec8ec32df7374b5ae0a28e92
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68921104"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71233027"
 ---
 # <a name="ca2101-specify-marshaling-for-pinvoke-string-arguments"></a>CA2101: Určete zařazování pro argumenty řetězce volání nespravovaného kódu
 
@@ -28,7 +28,7 @@ ms.locfileid: "68921104"
 |TypeName|SpecifyMarshalingForPInvokeStringArguments|
 |CheckId|CA2101|
 |Kategorie|Microsoft.Globalization|
-|Narušující změna|Nenarušující|
+|Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
 Člen vyvolání platformy umožňuje částečně důvěryhodných volajících, má řetězcový parametr a explicitně nezařazuje řetězec.

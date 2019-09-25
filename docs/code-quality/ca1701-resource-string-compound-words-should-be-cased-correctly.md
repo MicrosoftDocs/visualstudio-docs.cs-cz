@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8fdae06137586f11de1a30a73894c46c7fb18fa6
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: ed5ae8c0845755fe626e7e801f500389f9263cf5
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62546281"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71234366"
 ---
 # <a name="ca1701-resource-string-compound-words-should-be-cased-correctly"></a>CA1701: Malá a velká písmena složených slov řetězců prostředků by měla být použita správně
 
@@ -28,43 +28,43 @@ ms.locfileid: "62546281"
 |TypeName|ResourceStringCompoundWordsShouldBeCasedCorrectly|
 |CheckId|CA1701|
 |Kategorie|Microsoft.Naming|
-|Narušující změna|Nenarušující|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Zdrojový řetězec obsahuje složené slovo, který zřejmě není správně formátováno.
+Řetězec prostředku obsahuje složené slovo, které zřejmě není správně použita.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Každé slovo řetězce zdroje je rozděleno na tokeny, které jsou založeny na velká a malá písmena. Každá kombinace dvou sousedících tokenů je zkontrolována knihovnou kontroly pravopisu společnosti Microsoft. Je-li kombinace rozpoznána, způsobí slovo porušení pravidla. Příklady složených slov, které způsobují porušení: "Kontrolního součtu" a "MultiPart", která by měla být malá a velká použita jako "Kontrolního součtu" a "Multipart", v uvedeném pořadí. Z důvodu předchozí běžné použití několik výjimek jsou integrované do pravidla a jsou označeny několik jednotlivá slova, jako je například "Panel nástrojů" a "Název_souboru", který by měl být malá a velká použita jako dvě různá slova. V tomto příkladu by být označený "Panel nástrojů" a "Název_souboru".
+Každé slovo v řetězci prostředku je rozděleno na tokeny, které jsou založeny na velikosti písmen. Každá kombinace dvou sousedících tokenů je zkontrolována knihovnou kontroly pravopisu společnosti Microsoft. Je-li kombinace rozpoznána, způsobí slovo porušení pravidla. Příklady složených slov, která způsobují porušení, jsou "kontrolní součet" a "MultiPart", které by měly být použita jako "kontrolní součet" a "multipart". Kvůli předchozímu běžnému využití jsou do pravidla integrována několik výjimek a několik jednoduchých slov je označeno jako "panel nástrojů" a "filename", které by se měly použita jako dvě odlišná slova. V tomto příkladu by byl označený příznak "panel nástrojů" a "FileName".
 
-Zásady vytváření názvů poskytují obecný vzhled knihovnám využívajících common language runtime. To snižuje učit se, která vyžaduje nové knihovny softwaru a zvyšuje důvěru zákazníků, že byla vyvinuta knihovny někdo, kdo má odborných znalostí v vývoj spravovaného kódu.
+Zásady vytváření názvů poskytují běžný vzhled pro knihovny, které cílí na modul CLR (Common Language Runtime). Tím se zmenší výuková křivka, která je požadována pro nové knihovny softwaru, a zvyšuje důvěru zákazníků, že knihovna byla vyvinuta někým, kdo má zkušenosti s vývojem spravovaného kódu.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Změní celé slovo tak, že je správně formátováno.
+Změňte slovo tak, aby se použita správně.
 
-## <a name="change-the-dictionary-language"></a>Změnit jazyk slovníku
+## <a name="change-the-dictionary-language"></a>Změna jazyka slovníku
 
-Ve výchozím nastavení je použít nástroj pro kontrolu pravopisu verze Angličtina (en). Pokud chcete změnit jazyk kontroly pravopisu, může to tak, že přidáte jednu z následujících atributů vaše *AssemblyInfo.cs* nebo *AssemblyInfo.vb* souboru:
+Ve výchozím nastavení se používá anglická (EN) verze kontroly pravopisu. Pokud chcete změnit jazyk kontroly pravopisu, můžete to udělat tak, že do souboru *AssemblyInfo.cs* nebo *AssemblyInfo. vb* přidáte jeden z následujících atributů:
 
-- Použití <xref:System.Reflection.AssemblyCultureAttribute> zadat jazykovou verzi, pokud jsou vaše prostředky v satelitní sestavení.
-- Použití <xref:System.Resources.NeutralResourcesLanguageAttribute> zadat *neutrální jazykovou verzi* vašeho sestavení, pokud jsou vaše prostředky ve stejném sestavení jako svůj kód.
+- Použijte <xref:System.Reflection.AssemblyCultureAttribute> k určení jazykové verze, pokud jsou prostředky v satelitním sestavení.
+- Použijte <xref:System.Resources.NeutralResourcesLanguageAttribute> k určení *neutrální jazykové verze* sestavení, pokud jsou prostředky ve stejném sestavení jako váš kód.
 
 > [!IMPORTANT]
-> Pokud nastavíte jazykovou verzi na jinou hodnotu než jazykovou verzi na základě angličtina, tento pravidel nástroje Analýza kódu je tiše zakázaná.
+> Pokud nastavíte jazykovou verzi na jinou než anglickou jazykovou verzi, toto pravidlo analýzy kódu je tiše zakázané.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Je bezpečné potlačit upozornění tohoto pravidla, je-li obě části složené slovo, které jsou rozpoznány modulem slovníku a cílem je používat dvě slova.
+Z tohoto pravidla je bezpečné potlačit upozornění, pokud slovník pravopisu rozpozná obě části složeného slova a záměr je použít dvě slova.
 
-Složených slov můžete také přidat do slovníku pro kontrolu pravopisu. Vlastní slovník nezpůsobí porušení. Další informace najdete v tématu [jak: Přizpůsobení slovníku analýzy kódu](../code-quality/how-to-customize-the-code-analysis-dictionary.md).
+Pro kontrolu pravopisu můžete také přidat složená slova do vlastního slovníku. Slova ve vlastním slovníku nezpůsobují porušení. Další informace najdete v tématu [jak: Přizpůsobení slovníku](../code-quality/how-to-customize-the-code-analysis-dictionary.md)analýzy kódu.
 
 ## <a name="related-rules"></a>Související pravidla
 
-- [CA1702: Složených slov by měla správně formátováno.](../code-quality/ca1702-compound-words-should-be-cased-correctly.md)
-- [CA1709: Identifikátory by měly správně formátováno.](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
-- [CA1708: Identifikátory by se měly lišit o více než velikostí písmen](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
+- [CA1702: Složená slova by se měla použita správně.](../code-quality/ca1702-compound-words-should-be-cased-correctly.md)
+- [CA1709: Identifikátory by se měly použita správně.](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+- [CA1708: Identifikátory by se měly lišit o více než malých písmenech](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
 
 ## <a name="see-also"></a>Viz také:
 

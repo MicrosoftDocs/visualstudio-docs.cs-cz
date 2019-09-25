@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 43ef4165823f59045dda8c05b5679fdd3b795114
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 48cfcfd4feb794137e1634158b5af632aa976c60
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68921085"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71232766"
 ---
 # <a name="ca2112-secured-types-should-not-expose-fields"></a>CA2112: Zabezpečené typy by neměly vystavovat pole
 
@@ -28,7 +28,7 @@ ms.locfileid: "68921085"
 |TypeName|SecuredTypesShouldNotExposeFields|
 |CheckId|CA2112|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Narušující|
+|Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
 Veřejný nebo chráněný typ obsahuje veřejná pole a je zabezpečený [požadavky propojení](/dotnet/framework/misc/link-demands).

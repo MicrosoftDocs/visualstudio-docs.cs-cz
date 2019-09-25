@@ -18,12 +18,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: ba54b9f87fe8c8cd8bfdc86f39e3121135241e92
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 757b6b46e0c0892f5eb4c868b15654b29cd51c0e
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69547514"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71235620"
 ---
 # <a name="ca1052-static-holder-types-should-be-static-or-notinheritable"></a>CA1052: Statické typy držitelů by měly být statické nebo NotInheritable.
 
@@ -32,11 +32,11 @@ ms.locfileid: "69547514"
 |TypeName|StaticHolderTypesAnalyzer|
 |CheckId|CA1052|
 |Kategorie|Microsoft.Design|
-|Narušující změna|Narušující|
+|Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
 
-Neabstraktní typ obsahuje pouze statické členy (kromě možného výchozího konstruktoru) a není deklarován se [statickým](/dotnet/csharp/language-reference/keywords/static) nebo sdíleným modifikátorem [](/dotnet/visual-basic/language-reference/modifiers/shared) .
+Neabstraktní typ obsahuje pouze statické členy (kromě možného výchozího konstruktoru) a není deklarován se [statickým](/dotnet/csharp/language-reference/keywords/static) nebo [sdíleným](/dotnet/visual-basic/language-reference/modifiers/shared) modifikátorem.
 
 Ve výchozím nastavení toto pravidlo vyhledává pouze externě viditelné typy, ale je možné jej [nakonfigurovat](#configurability).
 

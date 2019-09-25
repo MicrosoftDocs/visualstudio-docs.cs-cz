@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dc7f4a82b9a75e4d189e969712472f06b4019b73
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 38de3597d3693b072fec12f64211af4469851627
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68920871"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71232546"
 ---
 # <a name="ca2120-secure-serialization-constructors"></a>CA2120: Zabezpečte serializační konstruktory
 
@@ -28,7 +28,7 @@ ms.locfileid: "68920871"
 |TypeName|SecureSerializationConstructors|
 |CheckId|CA2120|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Narušující|
+|Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
 Typ implementuje <xref:System.Runtime.Serialization.ISerializable?displayProperty=fullName> rozhraní, není delegát ani rozhraní a je deklarován v sestavení, které umožňuje částečně důvěryhodné volající. Typ má konstruktor, který přebírá <xref:System.Runtime.Serialization.SerializationInfo?displayProperty=fullName> objekt <xref:System.Runtime.Serialization.StreamingContext?displayProperty=fullName> a objekt (signatura konstruktoru serializace). Tento konstruktor není zabezpečen kontrolou zabezpečení, ale jeden nebo více regulárních konstruktorů v typu je zabezpečeno.

@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 43b294d72c8f8ec317803f2aa400e9cc50693162
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 832d2c9fc1d4b9138a7cd1bc39868b3c4bf1b814
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62545684"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71232645"
 ---
 # <a name="ca2117-aptca-types-should-only-extend-aptca-base-types"></a>CA2117: Typy APTCA by měl rozšiřovat pouze základní typy APTCA
 
@@ -28,51 +28,51 @@ ms.locfileid: "62545684"
 |TypeName|AptcaTypesShouldOnlyExtendAptcaBaseTypes|
 |CheckId|CA2117|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Narušující|
+|Zásadní změna|Narušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Veřejný nebo chráněný typ v sestavení <xref:System.Security.AllowPartiallyTrustedCallersAttribute?displayProperty=fullName> atribut je odvozen z typu deklarované v sestavení, který nemá atribut.
+Veřejný nebo chráněný typ v sestavení s <xref:System.Security.AllowPartiallyTrustedCallersAttribute?displayProperty=fullName> atributem dědí z typu deklarovaného v sestavení, které nemá atribut.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Ve výchozím nastavení, veřejné nebo chráněné typy v sestavení se silnými názvy jsou implicitně chráněné [InheritanceDemand](xref:System.Security.Permissions.SecurityAction#System_Security_Permissions_SecurityAction_InheritanceDemand) pro úplný vztah důvěryhodnosti. Sestavení se silným názvem označené <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atribut (APTCA) nemají tuto ochranu. Atribut zakáže vyžádané dědičnosti. Odvoditelný typy, které nemají úplný vztah důvěryhodnosti jsou vystavené typy deklarované v sestavení bez vyžádané dědičnosti.
+Ve výchozím nastavení jsou veřejné nebo chráněné typy v sestaveních se silnými názvy implicitně chráněny [InheritanceDemand](xref:System.Security.Permissions.SecurityAction#System_Security_Permissions_SecurityAction_InheritanceDemand) pro úplnou důvěryhodnost. Sestavení se silným názvem označená <xref:System.Security.AllowPartiallyTrustedCallersAttribute> atributem (APTCA) nemají tuto ochranu. Atribut zakáže požadavek dědičnosti. Vystavené typy deklarované v sestavení bez požadavku dědičnosti jsou dědičné typy, které nemají úplný vztah důvěryhodnosti.
 
-Když je atribut APTCA uveden pro plně důvěryhodná sestavení a typ v sestavení je odvozen z typu, který neumožňuje volání částečně důvěryhodným volajícím, je možné zneužití zabezpečení. Pokud dva typy `T1` a `T2` splňovat následující podmínky, škodlivý volající použít typ `T1` obejít požadavek dědičnosti implicitní úplný vztah důvěryhodnosti, který chrání `T2`:
+Pokud je atribut APTCA přítomen v plně důvěryhodném sestavení a typ v sestavení dědí z typu, který nepovoluje částečně důvěryhodné volající, je možné zajistit zneužití zabezpečení. Pokud existují dva `T1` typy `T2` a splňují následující podmínky, škodlivé volající mohou použít typ `T1` pro obejít požadavek dědičnosti implicitní plné důvěryhodnosti, který chrání `T2`:
 
-- `T1` je veřejný typ deklarovaný v plně důvěryhodná sestavení, který má atribut APTCA.
+- `T1`je veřejný typ deklarovaný v plně důvěryhodném sestavení, které má atribut APTCA.
 
-- `T1` je odvozen z typu `T2` mimo sestavení.
+- `T1`dědí z typu `T2` mimo jeho sestavení.
 
-- `T2`od sestavení nemá atribut APTCA a proto by neměl být odvoditelný typy v částečně důvěryhodné sestavení.
+- `T2`sestavení nemá atribut APTCA a proto by nemělo být děděno typy v částečně důvěryhodných sestaveních.
 
-Částečně důvěryhodný typ `X` může dědit z `T1`, které jí přístup na zděděné členy deklarované v `T2`. Protože `T2` nemá atribut APTCA, její okamžitý odvozeného typu (`T1`) musí splňovat vyžádané dědičnosti pro úplný vztah důvěryhodnosti; `T1` má úplný vztah důvěryhodnosti a proto splňuje tato kontrola. Je bezpečnostní riziko, protože `X` není součástí nesplňujete vyžádané dědičnosti, který chrání `T2` z nedůvěryhodné vytváření podtříd. Z tohoto důvodu nesmí typy s atributem APTCA rozšiřují typy, které nemají atribut.
+Částečně důvěryhodný typ `X` může dědit z `T1`, což dává přístup k zděděným členům deklarovaným v `T2`. Vzhledem `T2` k tomu, že nemá atribut APTCA, musí jeho bezprostřední odvozený typ (`T1`) splňovat požadavky dědičnosti pro úplný vztah důvěryhodnosti; `T1` má úplný vztah důvěryhodnosti a proto splňuje tuto kontrolu. Bezpečnostní riziko je způsobeno `X` tím, že se nepodílí na splnění požadavku dědičnosti, který chrání `T2` před nedůvěryhodným podtřídou. Z tohoto důvodu typy s atributem APTCA nesmí rozkrývat typy, které nemají atribut.
 
-Jiné potíže se zabezpečením a možná častější ten, který je odvozený typ (`T1`) můžou prostřednictvím chyba programátora, zveřejnit chráněných členů z typu, který vyžaduje úplný vztah důvěryhodnosti (`T2`). Dojde-li se tato ohrožení, nedůvěryhodných volajících získat přístup k informacím, které by měly být k dispozici pouze pro typy plně důvěryhodné.
+Jiné potíže se zabezpečením a možná i běžnější, je, že odvozený typ (`T1`) může prostřednictvím chyby programátora zveřejnit chráněné členy z typu, který vyžaduje úplný vztah důvěryhodnosti (`T2`). Pokud dojde k této expozici, nedůvěryhodní volající získají přístup k informacím, které by měly být k dispozici pouze pro plně důvěryhodné typy.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Pokud je typ hlášených porušení zásad v sestavení, která nevyžaduje atribut APTCA, odeberte ji.
+Pokud typ hlášených porušením je v sestavení, které nevyžaduje atribut APTCA, odeberte jej.
 
-Pokud je vyžadován atribut APTCA, přidejte na typ vyžádané dědičnosti pro úplný vztah důvěryhodnosti. Vyžádané dědičnosti chrání proti dědičnosti nedůvěryhodné typy.
+Pokud je požadován atribut APTCA, přidejte do typu požadavek dědičnosti pro úplný vztah důvěryhodnosti. Požadavek dědičnosti chrání proti dědění nedůvěryhodných typů.
 
-Je možné opravit porušení tak, že přidáte atribut APTCA k sestavení základní typy hlášených porušení zásady. Neprovádějte tuto akci bez první provedení revize náročné na zabezpečení veškerého kódu v sestaveních a veškerý kód, který závisí na sestavení.
+Je možné opravit porušení přidáním atributu APTCA do sestavení základních typů hlášených porušením. Neprovádějte to bez toho, aby nejprve provedla intenzivní kontrolu zabezpečení všech kódů v sestaveních a veškerý kód, který závisí na sestaveních.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Můžete bezpečně potlačit upozornění tohoto pravidla, ujistěte se, že chráněné členy zveřejněné podle typu přímo nebo nepřímo neumožňují nedůvěryhodných volajících pro přístup k citlivé informace, operace nebo prostředky použité destruktivním způsobem.
+Chcete-li bezpečně potlačit upozornění od tohoto pravidla, je nutné zajistit, aby chránění členové vystavené vaším typem nepřímo ani nepřímo nepovolovali nedůvěryhodným volajícím přístup k citlivým informacím, operacím nebo prostředkům, které lze použít destruktivním způsobem.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad používá dva sestavení a testovací aplikaci pro ilustraci ohrožení zabezpečení, zjistí toto pravidlo. První sestavení nemá atribut APTCA a neměla by být odvoditelný částečně důvěryhodné typy (představované `T2` v předchozím diskusí).
+Následující příklad používá dvě sestavení a testovací aplikaci k ilustraci chyby zabezpečení zjištěné tímto pravidlem. První sestavení nemá atribut APTCA a neměl by být dědičný pomocí částečně důvěryhodných typů (reprezentovaných `T2` v předchozí diskuzi).
 
 [!code-csharp[FxCop.Security.NoAptcaInherit#1](../code-quality/codesnippet/CSharp/ca2117-aptca-types-should-only-extend-aptca-base-types_1.cs)]
 
-Druhý sestavení reprezentována `T1` v předchozím diskusí je plně důvěryhodný a povoluje částečně důvěryhodné volající.
+Druhé sestavení reprezentované `T1` v předchozí diskuzi je plně důvěryhodné a povoluje částečně důvěryhodné volající.
 
 [!code-csharp[FxCop.Security.YesAptcaInherit#1](../code-quality/codesnippet/CSharp/ca2117-aptca-types-should-only-extend-aptca-base-types_2.cs)]
 
-Typ testu, reprezentovaný `X` v předchozím diskusí je v částečně důvěryhodné sestavení.
+Typ testu reprezentovaný `X` v předchozí diskuzi je v částečně důvěryhodném sestavení.
 
 [!code-csharp[FxCop.Security.TestAptcaInherit#1](../code-quality/codesnippet/CSharp/ca2117-aptca-types-should-only-extend-aptca-base-types_3.cs)]
 

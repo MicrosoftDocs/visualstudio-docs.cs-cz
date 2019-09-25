@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Použití nativních kontrol za běhu | Dokumentace Microsoftu'
+title: 'Postupy: Použití nativních kontrol za běhu | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -37,48 +37,48 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ccf0fea80ddfcc7db0921512391f5063a8f2dad
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: aeebdd8a86cb8ca6ffc1358a8558654d1e4d0b92
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62846967"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71211040"
 ---
 # <a name="how-to-use-native-run-time-checks"></a>Postupy: Použití nativních kontrol za běhu
-Ve Vizuálu C++, můžete použít nativní [runtime_checks –](/cpp/preprocessor/runtime-checks) zachytit běžné chyby za běhu, jako:
+V jazyce C++Visual můžete použít nativní [runtime_checks](/cpp/preprocessor/runtime-checks) k zachycení běžných chyb za běhu, jako například:
 
-- Poškození ukazatele zásobníku.
+- Poškození ukazatele zásobníku
 
-- Přetečení místního pole.
+- Přetečení místních polí.
 
 - Poškození zásobníku.
 
-- Závislostí na neinicializovaných místních proměnných.
+- Závislosti na neinicializovaných místních proměnných.
 
-- Ztráta dat na přiřazení k proměnné kratší.
+- Ztráta dat u přiřazení do kratší proměnné.
 
-  Pokud používáte **/RTC** s optimalizované (**/O**) výsledky Chyba kompilátoru sestavení. Pokud používáte `runtime_checks` direktivy pragma v optimalizovaných sestavení, direktivy pragma nemá žádný vliv.
+  Použijete-li **/RTC** s optimalizovaným sestavením ( **/o**), dojde k chybě kompilátoru. Použijete- `runtime_checks` li direktivu pragma v rámci optimalizovaného sestavení, tato direktiva pragma nemá žádný vliv.
 
-  Když ladíte program, který má povolené kontroly za běhu, je výchozí akce pro program a řízení ladicímu programu, když dojde k chybě za běhu. Můžete změnit toto výchozí chování pro všechny kontroly za běhu. Další informace najdete v tématu [Správa výjimek pomocí ladicího programu](../debugger/managing-exceptions-with-the-debugger.md).
+  Když ladíte program, který má povolenou kontrolu za běhu, je výchozí akcí pro program zastavení a přerušení ladicího programu v případě, že dojde k chybě za běhu. Toto výchozí chování můžete změnit pro jakoukoli kontrolu za běhu. Další informace naleznete v tématu [Správa výjimek pomocí ladicího programu](../debugger/managing-exceptions-with-the-debugger.md).
 
-  Následující postupy popisují, jak povolit nativní kontroly za běhu v sestavení pro ladění a jak změnit chování nativní kontroly za běhu.
+  Následující postupy popisují, jak povolit nativní kontroly za běhu v sestavení pro ladění a jak upravit chování při nativním běhu kontroly.
 
-  Další témata v této části obsahují informace:
+  Další témata v této části poskytují informace o:
 
-- [Přizpůsobení Run-Time zkontroluje knihovny Run-Time jazyka C](../debugger/native-run-time-checks-customization.md)
+- [Přizpůsobení kontrol za běhu pomocí knihovny run-time jazyka C](../debugger/native-run-time-checks-customization.md)
 
-- [Pomocí za běhu bez běhové knihovny jazyka C kontrol](../debugger/using-run-time-checks-without-the-c-run-time-library.md)
+- [Použití kontrol za běhu bez běhové knihovny jazyka C](../debugger/using-run-time-checks-without-the-c-run-time-library.md)
 
-### <a name="to-enable-native-run-time-checks-in-a-debug-build"></a>K povolení nativních kontrol za běhu v sestavení pro ladění
+### <a name="to-enable-native-run-time-checks-in-a-debug-build"></a>Povolení nativních kontrol za běhu v sestavení ladění
 
-- Použití **/RTC** možnost a propojení s ladicí verzí knihovny run-time jazyka C (/ MDd, například).
+- Použijte možnost **/RTC** a propojte s ladicí verzí knihovny run-time jazyka C (například/MDD).
 
-### <a name="to-modify-native-run-time-check-behavior"></a>Jestliže chcete upravit chování nativní kontroly za běhu
+### <a name="to-modify-native-run-time-check-behavior"></a>Postup změny nativního chování při kontrole za běhu
 
-- Použití `runtime_checks` direktivy pragma.
+- `runtime_checks` Použijte direktivu pragma.
 
 ## <a name="see-also"></a>Viz také
-- [Ladění v sadě Visual Studio](../debugger/index.md)
+- [Ladění v sadě Visual Studio](../debugger/index.yml)
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)
 - [runtime_checks](/cpp/preprocessor/runtime-checks)
 - [Kontrola chyb za běhu](/cpp/c-runtime-library/run-time-error-checking)

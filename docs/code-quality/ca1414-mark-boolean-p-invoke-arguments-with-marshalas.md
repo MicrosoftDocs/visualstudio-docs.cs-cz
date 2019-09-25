@@ -18,12 +18,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e8d47b73009e0bd742c989ddc0311644453e5d9
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 22e62a1e3209399be4b10a3ec28db4afdd6f0f20
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68921870"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71234677"
 ---
 # <a name="ca1414-mark-boolean-pinvoke-arguments-with-marshalas"></a>CA1414: Označte logické argumenty volání nespravovaného kódu pomocí MarshalAs
 
@@ -32,7 +32,7 @@ ms.locfileid: "68921870"
 |TypeName|MarkBooleanPInvokeArgumentsWithMarshalAs|
 |CheckId|CA1414|
 |Kategorie|Microsoft. interoperabilita|
-|Narušující změna|Narušující|
+|Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
 Deklarace metody Invoke platformy obsahuje <xref:System.Boolean?displayProperty=fullName> parametr nebo návratovou hodnotu, <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=fullName> ale atribut není aplikován na parametr nebo návratovou hodnotu.

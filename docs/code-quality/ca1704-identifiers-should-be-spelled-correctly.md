@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8dbfc8081f980b7b9e978da782f1627a88a716a3
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fa04ca237134c1947b5c58b921f87f32a1ecfb16
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62809405"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71234295"
 ---
 # <a name="ca1704-identifiers-should-be-spelled-correctly"></a>CA1704: Identifikátory by měly být zadány správně
 
@@ -28,29 +28,29 @@ ms.locfileid: "62809405"
 |TypeName|IdentifiersShouldBeSpelledCorrectly|
 |CheckId|CA1704|
 |Kategorie|Microsoft.Naming|
-|Narušující změna|Narušující|
+|Zásadní změna|Narušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Název identifikátoru obsahuje jedno nebo více slov, která knihovna kontroly pravopisu společnosti Microsoft nerozpoznala. Toto pravidlo není zkontrolujte konstruktory nebo členy s názvem speciální, jako je například get a nastavte přistupující objekty vlastnosti.
+Název identifikátoru obsahuje jedno nebo více slov, která knihovna kontroly pravopisu společnosti Microsoft nerozpoznala. Toto pravidlo nekontroluje konstruktory nebo členy se speciálním jménem, jako jsou například GET a Set Access Property.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Toto pravidlo analyzuje identifikátor do tokenů a zkontroluje pravopis pro každý token. Parsování algoritmus provede následující transformace:
+Toto pravidlo analyzuje identifikátor na tokeny a kontroluje pravopis každého tokenu. Algoritmus analýzy provádí následující transformace:
 
-- Velká písmena spustit nový token. Například MyNameIsJoe tokenizes "My", "Name", "Je", "Jan".
+- Velká písmena zahájí nový token. Například MyNameIsJoe tokenizes na "my", "Name", "is", "Jana".
 
-- Více velkých písmen spustí poslední velké písmeno nový token. Například GUIEditor tokenizes na "Grafického uživatelského rozhraní", "Editoru".
+- U více velkých písmen začíná poslední velké písmeno novému tokenu. Například GUIEditor tokenizes na "GUI", "Editor".
 
-- Úvodní a koncové apostrofy se odeberou. Například 'sender' tokenizes na "sender".
+- Úvodní a koncové apostrofy jsou odebrány. Například "Sender" tokenizes na "Sender".
 
-- Podtržítka místo koncový token a se odeberou. Například Hello_world tokenizes na "Hello"; "world".
+- Podtržítka označují konec tokenu a jsou odebrána. Například hello_world tokenizes na "Hello", "World".
 
-- Odeberou se tyto vložené znaky. Například pro & mat tokenizes na "format".
+- Vložené ampersandy se odeberou. Například pro & mat tokenizes do formátu "Format".
 
 ## <a name="language"></a>Jazyk
 
-Nástroj pro kontrolu pravopisu aktuálně zkontroluje pouze proti jazykovou verzi na základě angličtina slovníky. Jazyková verze projektu v souboru projektu, můžete změnit tak, že přidáte **CodeAnalysisCulture** elementu.
+Kontrola pravopisu aktuálně kontroluje pouze proti slovníkům jazykové verze v angličtině. Můžete změnit jazykovou verzi projektu v souboru projektu přidáním elementu **CodeAnalysisCulture** .
 
 Příklad:
 
@@ -61,23 +61,23 @@ Příklad:
 ```
 
 > [!IMPORTANT]
-> Pokud nastavíte jazykovou verzi na jinou hodnotu než jazykovou verzi na základě angličtina, tento pravidel nástroje Analýza kódu je tiše zakázaná.
+> Pokud nastavíte jazykovou verzi na jinou než anglickou jazykovou verzi, toto pravidlo analýzy kódu je tiše zakázané.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
 Chcete-li opravit porušení tohoto pravidla, opravte pravopis slova nebo přidejte slovo do vlastního slovníku.
 
-### <a name="to-add-words-to-a-custom-dictionary"></a>Chcete-li přidat slova do vlastního slovníku
+### <a name="to-add-words-to-a-custom-dictionary"></a>Přidání slov do vlastního slovníku
 
-Název souboru vlastního slovníku XML *CustomDictionary.xml*. Umístit do slovníku v instalačním adresáři nástroje adresáři projektu nebo do adresáře, který je přidružený k nástroji v rámci profilu uživatele (*%USERPROFILE%\Application Data\\...* ). Zjistěte, jak přidat vlastní slovník do projektu v sadě Visual Studio, najdete v článku [jak: Přizpůsobení slovníku analýzy kódu](../code-quality/how-to-customize-the-code-analysis-dictionary.md).
+Pojmenujte soubor XML vlastního slovníku *CustomDictionary. XML*. Umístěte slovník do instalačního adresáře nástroje, adresáře projektu nebo v adresáři, který je přidružen k nástroji v rámci profilu uživatele ( *%UserProfile%\Application data\\...* ). Další informace o tom, jak přidat vlastní slovník do projektu v aplikaci Visual Studio, [naleznete v tématu How to: Přizpůsobení slovníku](../code-quality/how-to-customize-the-code-analysis-dictionary.md)analýzy kódu.
 
-- Přidáte slova, která by nemělo způsobit narušení v rámci slovníku/slova/Recognized cesty.
+- Přidejte slova, která by neměla způsobovat porušení v rámci slovníku/slov/rozpoznané cesty.
 
-- Přidáte slova, která by neměly způsobit narušení v cestě slovníku/slova/Nerozpoznán.
+- Přidejte slova, která by měla způsobit porušení v rámci slovníku/slov/nerozpoznaná cesta.
 
-- Přidáte slova, která by měla být označena jako zastaralá v cestě slovníku/slova nebo zastaralé funkce. Naleznete v tématu související pravidlo [CA1726: Použijte upřednostňované výrazy](../code-quality/ca1726-use-preferred-terms.md) Další informace.
+- Přidejte slova, která by měla být označena příznakem jako zastaralá v cestě Dictionary/Word/zastaralá cesta. Podívejte se na téma [související pravidlo CA1726: Pro další informace](../code-quality/ca1726-use-preferred-terms.md) použijte preferované výrazy.
 
-- Přidáte výjimky pravidla malých a velkých písmen zkratka do slovníku nebo zkratky/CasingExceptions cesty.
+- Do slovníku/akronymy/CasingExceptions cesty přidejte výjimky do pravidel pro velká a malá písmena.
 
 Následuje příklad struktury souboru vlastního slovníku:
 
@@ -106,16 +106,16 @@ Následuje příklad struktury souboru vlastního slovníku:
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Potlačit upozornění tohoto pravidla pouze v případě, že je záměrně chybně napsaná slova a slovo platí pro omezenou sadu knihovny. Správně hláskovaným slov snížit učit se, která je požadována pro nové knihovny softwaru.
+Potlačí upozornění z tohoto pravidla pouze v případě, že je slovo úmyslně špatně napsané a slovo se vztahuje na omezené sady knihovny. Správná pravopisná slova omezují výukovou křivku, která je požadována pro nové knihovny softwaru.
 
 ## <a name="related-rules"></a>Související pravidla
 
 - [CA2204: Literály by měly být zadány správně](../code-quality/ca2204-literals-should-be-spelled-correctly.md)
 - [CA1703: Řetězce prostředků by měly být zadány správně](../code-quality/ca1703-resource-strings-should-be-spelled-correctly.md)
-- [CA1709: Identifikátory by měly správně formátováno.](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
-- [CA1708: Identifikátory by se měly lišit o více než velikostí písmen](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
+- [CA1709: Identifikátory by se měly použita správně.](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+- [CA1708: Identifikátory by se měly lišit o více než malých písmenech](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
 - [CA1707: Identifikátory by neměly obsahovat podtržítka](../code-quality/ca1707-identifiers-should-not-contain-underscores.md)
-- [CA1726: Použijte upřednostňované výrazy](../code-quality/ca1726-use-preferred-terms.md)
+- [CA1726: Použít preferované výrazy](../code-quality/ca1726-use-preferred-terms.md)
 
 ## <a name="see-also"></a>Viz také:
 

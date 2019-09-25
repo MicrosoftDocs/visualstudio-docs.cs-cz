@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ee5b1d92a6c7a813eea6efb409d3c2a22f68547c
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 88fbd5bbe873ae8bec9a506efbdb20d3fc77a2c1
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68921131"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71232804"
 ---
 # <a name="ca2109-review-visible-event-handlers"></a>CA2109: Zkontrolujte viditelné obslužné rutiny událostí
 
@@ -28,7 +28,7 @@ ms.locfileid: "68921131"
 |TypeName|ReviewVisibleEventHandlers|
 |CheckId|CA2109|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Narušující|
+|Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
 Byla zjištěna veřejná nebo chráněná metoda zpracování událostí.

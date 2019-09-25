@@ -1,5 +1,5 @@
 ---
-title: Nejčastější dotazy k ladění snímků | Dokumentace Microsoftu
+title: Nejčastější dotazy k ladění snímků | Microsoft Docs
 ms.date: 11/07/2017
 ms.topic: reference
 helpviewer_keywords:
@@ -10,75 +10,75 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 813f06f55b6ae8f03a8d5a8e452ca05c4fe2054c
-ms.sourcegitcommit: 32144a09ed46e7223ef7dcab647a9f73afa2dd55
+ms.openlocfilehash: ceda2dd4e85c8db5b66ef753a748977204b8caab
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586843"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71211211"
 ---
-# <a name="frequently-asked-questions-for-snapshot-debugging-in-visual-studio"></a>Nejčastější dotazy k ladění snímků v sadě Visual Studio
+# <a name="frequently-asked-questions-for-snapshot-debugging-in-visual-studio"></a>Nejčastější dotazy k ladění snímků v aplikaci Visual Studio
 
-Tady je seznam dotazů, ke kterým může při ladění pomocí ladicího programu snímků živé aplikace Azure.
+Tady je seznam otázek, které se můžou zobrazit při ladění živých aplikací Azure pomocí Snapshot Debugger.
 
-#### <a name="what-is-the-performance-cost-of-taking-a-snapshot"></a>Co je náklady na pořízení snímku?
+#### <a name="what-is-the-performance-cost-of-taking-a-snapshot"></a>Jaké jsou náklady na výkon při pořízení snímku?
 
-Pokud ladicí program snímků zachytí snímek vaší aplikace, větve proces aplikací a pozastaví rozvětveného kopírování. Při ladění snímku, kterou ladíte proti rozvětveného kopii procesu. Tento proces trvá jenom 10-20 MS ale nekopíruje haldě úplné aplikace. Místo toho zkopíruje pouze tabulky stránky a zkopírování při zápisu na stránkách. Pokud některé objekty vaší aplikace na změnu haldy příslušných stránkách s poté zkopírován. To je syrovátky jednotlivých snímků má malé v paměti náklady (v řádu stovek kB pro většinu aplikací).
+Když Snapshot Debugger zachytí snímek aplikace, rozvětvení zpracuje proces aplikace a pozastaví rozvětvenou kopii. Při ladění snímku budete ladit proti rozvětvené kopii procesu. Tento proces trvá jenom 10-20 milisekund, ale nekopíruje celou haldu aplikace. Místo toho zkopíruje pouze stránku tabulky a nastaví stránky pro kopírování při zápisu. Pokud se některé objekty vaší aplikace v haldě změní, jejich příslušné stránky se zkopírují. Tato Syrovátka má každý snímek za malý objem paměti (v pořadí stovek kilobajtů pro většinu aplikací).
 
-#### <a name="what-happens-if-i-have-a-scaled-out-azure-app-service-multiple-instances-of-my-app"></a>Co se stane, když mám horizontálním navýšením kapacity služby Azure App Service (více instancí aplikace)?
+#### <a name="what-happens-if-i-have-a-scaled-out-azure-app-service-multiple-instances-of-my-app"></a>Co se stane, když mám Azure App Service s horizontálním škálováním (více instancí mojí aplikace)?
 
-Pokud máte více instancí vaší aplikace, snímkovacích bodů: použije na každý jednu instanci. Pouze první snímkovací bod k dosažení s podmínkami uvedenými vytvoří snímek. Pokud máte více snímkovacích bodů: novější snímky pocházet ze stejné instance, kterou vytvořili první snímek. Protokolovací body odesílané do okna výstup se zobrazí jen zprávy z jedné instance, zatímco odesílat protokoly aplikací protokolovacích bodů: odesílání zpráv z každé instance.
+Pokud máte více instancí aplikace, snímkovací body se aplikuje na každou jednu instanci. Pouze první snímkovací bod, který se má vysáhnout se zadanými podmínkami vytvoří snímek. Pokud máte více snímkovací body, pozdější snímky pocházejí ze stejné instance, která vytvořila první snímek. Protokolovacích bodů odeslané do okna výstup bude zobrazovat pouze zprávy z jedné instance, zatímco protokolovacích bodů odesílání do protokolů aplikací odesílá zprávy ze všech instancí.
 
-#### <a name="how-does-the-snapshot-debugger-load-symbols"></a>Jak Snapshot Debugger načíst symboly
+#### <a name="how-does-the-snapshot-debugger-load-symbols"></a>Jak Snapshot Debugger načte symboly?
 
-Snapshot Debugger vyžaduje, abyste měli odpovídající symboly pro vaši aplikaci, místní nebo nasazenou do služby Azure App Service. (Vložené soubory PDB se momentálně nepodporují.) Snapshot Debugger automaticky stahuje symboly ze služby Azure App Service. Od verze Visual Studio 2017 verze 15.2, nasazení do služby Azure App Service také nasadí symboly vaší aplikace.
+Snapshot Debugger vyžaduje, abyste měli odpovídající symboly pro vaši aplikaci buď místně, nebo nasazené do Azure App Service. (Vložené soubory PDB se v tuto chvíli nepodporují.) Snapshot Debugger automaticky stáhne symboly z vašeho Azure App Service. Počínaje verzí Visual Studio 2017 verze 15,2, nasazení pro Azure App Service také nasadí symboly vaší aplikace.
 
-#### <a name="does-the-snapshot-debugger-work-against-release-builds-of-my-application"></a>Funguje Snapshot Debugger pro buildy vydaných verzí mojí aplikace?
+#### <a name="does-the-snapshot-debugger-work-against-release-builds-of-my-application"></a>Funguje Snapshot Debugger v sestavách pro vydání mé aplikace?
 
-Ano – Snapshot Debugger by měla fungovat pro buildy vydaných verzí. Pokud snímkovacího bodu je umístěn ve funkci, funkci přepsán zpět do ladicí verze, takže laditelný. Při zastavení ladicího programu snímků vrací funkce verze sestavení pro vydání.
+Ano – Snapshot Debugger je určeno pro práci s buildy vydaných verzí. Při umístění snímkovací bod do funkce je funkce znovu zkompilována zpět do ladicí verze, takže je možné ji ladit. Zastavení Snapshot Debugger vrátí funkce do verze buildu pro vydání.
 
-#### <a name="can-logpoints-cause-side-effects-in-my-production-application"></a>Může způsobit protokolovacích bodů: vedlejší účinky v produkční aplikace?
+#### <a name="can-logpoints-cause-side-effects-in-my-production-application"></a>Může protokolovacích bodů způsobit vedlejší účinky v mé produkční aplikaci?
 
-Prakticky ne - vyhodnocují všechny zprávy protokolu, které přidáte do vaší aplikace. Ve vaší aplikaci se nemůže způsobit žádné vedlejší účinky. Některé vlastnosti nativní však nemusí být přístupný pomocí protokolovacích bodů.
+Ne – všechny zprávy protokolu, které přidáte do vaší aplikace, se vyhodnocují prakticky. Nemůžou v aplikaci způsobit žádné vedlejší účinky. Některé nativní vlastnosti ale nemusí být dostupné pomocí protokolovacích bodů.
 
-#### <a name="does-the-snapshot-debugger-work-if-my-server-is-under-load"></a>Funguje Snapshot Debugger při zatížení serveru?
+#### <a name="does-the-snapshot-debugger-work-if-my-server-is-under-load"></a>Funguje Snapshot Debugger, pokud je můj server v zatížení?
 
-Ano, ladění snímků může fungovat pro servery v zatížení. Snapshot Debugger omezuje a nebude zachycení snímků v situacích, ve kterých je nízká množství volné paměti na serveru.
+Ano, ladění snímků může fungovat pro servery, které jsou v zatížení. Snapshot Debugger omezuje a nezachytí snímky v situacích, kdy je na serveru málo volné paměti.
 
-#### <a name="how-do-i-uninstall-the-snapshot-debugger"></a>Jak odinstaluji Snapshot Debugger?
+#### <a name="how-do-i-uninstall-the-snapshot-debugger"></a>Návody odinstalovat Snapshot Debugger?
 
-Odinstalovat rozšíření pro Snapshot Debugger web ve službě App Service pomocí následujících kroků:
+Rozšíření Snapshot Debugger lokality můžete odinstalovat v App Service pomocí následujících kroků:
 
-1. Vypněte službu App Service pomocí Průzkumníka cloudu v sadě Visual Studio nebo na webu Azure portal.
-1. Přejděte na Web App Service Kudu (to znamená, yourappservice. **Správce řízení služeb**. azurewebsites.net) a přejděte do **rozšířením webu**.
-1. Kliknutím na křížek v rozšíření webu pro Snapshot Debugger jeho odstranění.
+1. Vypněte svůj App Service buď pomocí Průzkumníka cloudu v aplikaci Visual Studio, nebo Azure Portal.
+1. Přejděte na web Kudu vašeho App Service (to znamená yourappservice. **SCM**. azurewebsites.NET) a přejděte na **rozšíření webu**.
+1. Kliknutím na X na rozšíření Snapshot Debugger webu ho odeberte.
 
-#### <a name="why-are-ports-opened-during-a-snapshot-debugger-session"></a>Proč jsou otevřené porty během relace Snapshot Debugger?
+#### <a name="why-are-ports-opened-during-a-snapshot-debugger-session"></a>Proč jsou porty otevřené během Snapshot Debugger relace?
 
-Snapshot Debugger je potřeba otevřít sadu porty Pokud chcete ladit snímkům pořízeným v Azure, jde o stejné porty vyžadované pro vzdálené ladění. [Můžete najít seznam portů zde](../debugger/remote-debugger-port-assignments.md).
+Snapshot Debugger musí otevřít sadu portů, aby bylo možné ladit snímky provedené v Azure, jsou to stejné porty, které jsou vyžadovány pro vzdálené ladění. [Seznam portů můžete najít tady](../debugger/remote-debugger-port-assignments.md).
 
-#### <a name="how-do-i-disable-the-remote-debugger-extension"></a>Jak zakázat rozšíření vzdálený ladicí program?
+#### <a name="how-do-i-disable-the-remote-debugger-extension"></a>Návody zakázat rozšíření vzdáleného ladicího programu?
 
-Pro App Service:
-1. Zakážete rozšíření vzdálený ladicí program přes Azure portal pro službu App Service.
-2. Azure portal > okno prostředek aplikace služby > *nastavení aplikace*
-3. Přejděte *ladění* části a klikněte na tlačítko *vypnout* tlačítko pro *vzdálené ladění*.
+Pro App Services:
+1. Zakažte rozšíření vzdáleného ladicího programu prostřednictvím Azure Portal pro vaši App Service.
+2. Azure Portal > okno prostředků služby Application Service > *nastavení aplikace*
+3. Přejděte do části *ladění* a klikněte na tlačítko *vypnout* pro *vzdálené ladění*.
 
 Pro AKS:
-1. Aktualizovat váš soubor Dockerfile odebrat oddíly odpovídající [Visual Studio Snapshot Debugger na imagích Dockeru](https://github.com/Microsoft/vssnapshotdebugger-docker).
-2. Sestavili a upravenou image Dockeru.
+1. Aktualizujte souboru Dockerfile tak, aby se odebraly oddíly odpovídající [Visual Studio Snapshot Debugger v imagích Docker](https://github.com/Microsoft/vssnapshotdebugger-docker).
+2. Znovu sestavte a nasaďte upravenou image Docker.
 
-Pro virtuální počítač nebo virtuální počítače škálovací sady odeberte rozšíření, certifikáty, KeyVaults a příchozí NAT fondů vzdálený ladicí program následujícím způsobem:
+V případě virtuálních počítačů nebo virtuálních počítačů můžete odebrat rozšíření vzdáleného ladícího programu, certifikáty, trezory klíčů a příchozí fondy NAT následujícím způsobem:
 
 1. Odebrat rozšíření vzdáleného ladicího programu
 
-   Existuje několik způsobů, jak zakázat vzdálený ladicí program pro virtuální počítače a škálovací sady virtuálních počítačů:
+   Existuje několik způsobů, jak zakázat vzdálený ladicí program pro virtuální počítače a sady škálování virtuálních počítačů:
 
-      - Zakažte vzdálený ladicí program pomocí Průzkumníka cloudu
+      - Zakázání vzdáleného ladicího programu přes Průzkumníka cloudu
 
-         - Cloud Explorer > prostředku vašeho virtuálního počítače > Zakázat ladění (Zakázání ladění neexistuje pro škálovací sady na Průzkumník cloudu virtuálních počítačů).
+         - Průzkumník cloudu > prostředku virtuálního počítače > zakázat ladění (Zakázání ladění pro sadu škálování virtuálního počítače v Průzkumníkovi cloudu neexistuje).
 
-      - Zakažte vzdálený ladicí program pomocí skriptů a rutin prostředí PowerShell
+      - Zakázání vzdáleného ladicího programu pomocí skriptů a rutin PowerShellu
 
          Pro virtuální počítač:
 
@@ -86,7 +86,7 @@ Pro virtuální počítač nebo virtuální počítače škálovací sady odeber
          Remove-AzVMExtension -ResourceGroupName $rgName -VMName $vmName -Name Microsoft.VisualStudio.Azure.RemoteDebug.VSRemoteDebugger
          ```
 
-         Pro škálovací sady virtuálních počítačů:
+         Pro Virtual Machine Scale Sets:
 
          ```powershell
          $vmss = Get-AzVmss -ResourceGroupName $rgName -VMScaleSetName $vmssName
@@ -94,20 +94,20 @@ Pro virtuální počítač nebo virtuální počítače škálovací sady odeber
          Remove-AzVmssExtension -VirtualMachineScaleSet $vmss -Name $extension
          ```
 
-      - Zakažte vzdálený ladicí program na webu Azure portal
-         - Azure portal > virtuální počítač nebo virtuální machine scale sets s okno prostředků > rozšíření
-         - Odinstalovat rozšíření Microsoft.VisualStudio.Azure.RemoteDebug.VSRemoteDebugger
+      - Zakázání vzdáleného ladicího programu pomocí Azure Portal
+         - Azure Portal > > rozšíření pro virtuální počítač nebo virtuální počítač sady VM Scale Sets
+         - Odinstalace rozšíření Microsoft. VisualStudio. Azure. RemoteDebug. VSRemoteDebugger
 
          > [!NOTE]
-         > Škálovací sady virtuálních počítačů – portál neumožňuje odebrání DebuggerListener porty. Je potřeba použít Azure PowerShell. Podrobnosti najdete níže.
+         > Virtual Machine Scale Sets – portál nepovoluje odebírání DebuggerListener portů. Budete muset použít Azure PowerShell. Podrobnosti najdete níže.
 
-2. Odebrat certifikáty a Azure KeyVault
+2. Odebrání certifikátů a Azure webtrezoru
 
-   Při instalaci rozšíření vzdálený ladicí program pro virtuální počítač nebo škálovací sady virtuálních počítačů, klientské a serverové certifikáty se vytváří za účelem ověření klienta VS s Azure Virtual Machine a virtual machine scale sets s prostředky.
+   Při instalaci rozšíření vzdáleného ladicího programu pro virtuální počítač nebo virtuální počítače se vytvoří certifikáty klienta i serveru, aby se ověřil klient VS s prostředky virtuálních počítačů Azure nebo virtuálních počítačů.
 
-   - Klientský certifikát
+   - Certifikát klienta
 
-      Tento certifikát je podepsaný svým držitelem certifikátu uloženého v certifikátu: / CurrentUser/Moje /
+      Tento certifikát je certifikát podepsaný svým držitelem, který je umístěný v certifikátu:/CurrentUser/my/
 
       ```
       Thumbprint                                Subject
@@ -116,7 +116,7 @@ Pro virtuální počítač nebo virtuální počítače škálovací sady odeber
       1234123412341234123412341234123412341234  CN=ResourceName
       ```
 
-      Je možné odebrat tento certifikát z vašeho počítače přes PowerShell
+      Jeden ze způsobů, jak tento certifikát z počítače odebrat, je přes PowerShell.
 
       ```powershell
       $ResourceName = 'ResourceName' # from above
@@ -124,9 +124,9 @@ Pro virtuální počítač nebo virtuální počítače škálovací sady odeber
       ```
 
    - Certifikát serveru
-      - Odpovídající kryptografický otisk certifikátu serveru je nasazená jako tajný kód do Azure Key Vaultu. VS. pokusí se vyhledat nebo vytvořit trezor klíčů s předponou MSVSAZ * v oblasti odpovídající virtuální počítač nebo škálovací sady virtuálních počítačů resource. Všechny virtuální počítače nebo virtuálního počítače škálovací sady prostředky nasazené do této oblasti se proto sdílet stejný trezor klíčů.
-      - Odstranění tajného klíče kryptografický otisk certifikátu serveru, přejděte na web Azure Portal a vyhledejte ve stejné oblasti, který je hostitelem vašeho prostředku KeyVault MSVSAZ *. Odstranění tajného klíče, které by měly být popsány `remotedebugcert<<ResourceName>>`
-      - Musíte také odstranit tajný klíč serveru z vašich prostředků pomocí Powershellu.
+      - Odpovídající kryptografický otisk certifikátu serveru je nasazený jako tajný kód do trezoru klíčů Azure. VS se pokusí najít nebo vytvořit Trezor klíčů s předponou MSVSAZ * v oblasti odpovídající virtuálnímu počítači nebo prostředku Virtual Machine Scale Sets. Všechny prostředky virtuálních počítačů nebo Virtual Machine Scale Sets nasazené do této oblasti budou sdílet stejný Trezor klíčů.
+      - Pokud chcete odstranit tajný kód kryptografického otisku certifikátu serveru, přejdete na Azure Portal a najděte úložiště klíčů MSVSAZ * ve stejné oblasti, která je hostitelem vašeho prostředku. Odstraní tajný klíč, který by měl být označený.`remotedebugcert<<ResourceName>>`
+      - Budete taky muset z prostředku odstranit tajný klíč serveru přes PowerShell.
 
       Pro virtuální počítače:
 
@@ -135,16 +135,16 @@ Pro virtuální počítač nebo virtuální počítače škálovací sady odeber
       Update-AzVM -ResourceGroupName $rgName -VM $vm
       ```
 
-      Pro škálovací sady virtuálních počítačů:
+      Pro Virtual Machine Scale Sets:
 
       ```powershell
       $vmss.VirtualMachineProfile.OsProfile.Secrets[0].VaultCertificates.Clear()
       Update-AzVmss -ResourceGroupName $rgName -VMScaleSetName $vmssName -VirtualMachineScaleSet $vmss
       ```
 
-3. Odeberte všechny fondy DebuggerListener příchozí NAT (škálovací sady virtuálních počítačů pouze)
+3. Odebrat všechny DebuggerListener příchozí fondy NAT (jenom virtuální počítače s měřítkem)
 
-   Vzdálený ladicí program představuje fondy NAT ve vázané na DebuggerListener, které se použijí pro nástroj pro vyrovnávání zatížení vaší škálovací sadě.
+   Vzdálený ladicí program zavádí DebuggerListener fondy překladu adres (NAT), které se používají pro nástroj pro vyrovnávání zatížení škálovací sady.
 
    ```powershell
    $inboundNatPools = $vmss.VirtualMachineProfile.NetworkProfile.NetworkInterfaceConfigurations.IpConfigurations.LoadBalancerInboundNatPools
@@ -158,30 +158,30 @@ Pro virtuální počítač nebo virtuální počítače škálovací sady odeber
    }
    ```
 
-#### <a name="how-do-i-disable-snapshot-debugger"></a>Jak zakázat Snapshot Debugger?
+#### <a name="how-do-i-disable-snapshot-debugger"></a>Návody zakázat Snapshot Debugger?
 
-Pro službu App Service:
-1. Zakážete Snapshot Debugger pro službu App Service prostřednictvím portálu Azure portal.
-2. Azure portal > okno prostředek aplikace služby > *nastavení aplikace*
-3. Odstraňte následující nastavení aplikace na webu Azure Portal a uložte provedené změny.
+Pro App Service:
+1. Zakažte Snapshot Debugger pomocí Azure Portal pro vaši App Service.
+2. Azure Portal > okno prostředků služby Application Service > *nastavení aplikace*
+3. V Azure Portal odstraňte následující nastavení aplikace a uložte provedené změny.
    - INSTRUMENTATIONENGINE_EXTENSION_VERSION
    - SNAPSHOTDEBUGGER_EXTENSION_VERSION
 
    > [!WARNING]
-   > Všechny změny nastavení aplikace opraví, zahájí se restartování aplikace. Další informace o nastavení aplikace najdete v tématu [nakonfigurovat aplikaci služby App Service na webu Azure Portal](/azure/app-service/web-sites-configure).
+   > Všechny změny nastavení aplikace spustí restart aplikace. Další informace o nastavení aplikace najdete v tématu [Konfigurace aplikace App Service v Azure Portal](/azure/app-service/web-sites-configure).
 
 Pro AKS:
-1. Aktualizovat váš soubor Dockerfile odebrat oddíly odpovídající [Visual Studio Snapshot Debugger na imagích Dockeru](https://github.com/Microsoft/vssnapshotdebugger-docker).
-2. Sestavili a upravenou image Dockeru.
+1. Aktualizujte souboru Dockerfile tak, aby se odebraly oddíly odpovídající [Visual Studio Snapshot Debugger v imagích Docker](https://github.com/Microsoft/vssnapshotdebugger-docker).
+2. Znovu sestavte a nasaďte upravenou image Docker.
 
-Pro virtuální počítač nebo virtuální počítače škálovací sady:
+Pro virtuální počítače/sady škálování virtuálních počítačů:
 
-Chcete-li zakázat Snapshot Debugger několika způsoby:
-- Cloud Explorer > váš virtuální počítač nebo virtuální počítače škálovací sady prostředků > zakázat diagnostiku
+K dispozici je několik způsobů, jak Snapshot Debugger zakázat:
+- Průzkumník cloudu > prostředku virtuálního počítače/sady škálování virtuálního počítače > zakázat diagnostiku
 
-- Azure portal > váš virtuální počítač nebo virtuální počítače škálovací sady okno prostředků > Rozšíření > Microsoft.Insights.VMDiagnosticsSettings odinstalace rozšíření
+- Azure Portal > v okně prostředků virtuálního počítače nebo virtuálního počítače > rozšíření > Odinstalace rozšíření Microsoft. Insights. VMDiagnosticsSettings
 
-- Rutiny Powershellu z [Az Powershellu](https://docs.microsoft.com/powershell/azure/overview)
+- Rutiny PowerShellu z [AZ PowerShell](https://docs.microsoft.com/powershell/azure/overview)
 
    Virtuální počítač:
 
@@ -189,7 +189,7 @@ Chcete-li zakázat Snapshot Debugger několika způsoby:
       Remove-AzVMExtension -ResourceGroupName $rgName -VMName $vmName -Name Microsoft.Insights.VMDiagnosticsSettings
    ```
 
-   Škálovací sady virtuálních počítačů:
+   Sady škálování virtuálních počítačů:
 
    ```powershell
       $vmss = Get-AzVmss -ResourceGroupName $rgName -VMScaleSetName $vmssName
@@ -198,8 +198,8 @@ Chcete-li zakázat Snapshot Debugger několika způsoby:
 
 ## <a name="see-also"></a>Viz také:
 
-- [Ladění v sadě Visual Studio](../debugger/index.md)
+- [Ladění v sadě Visual Studio](../debugger/index.yml)
 - [Ladění živé aplikace v ASP.NET pomocí ladicího programu snímků](../debugger/debug-live-azure-applications.md)
-- [Ladění za provozu technologie ASP.NET Azure Virtual Machines Machines\Virtual škálovací sady pomocí ladicího programu snímků](../debugger/debug-live-azure-virtual-machines.md)
-- [Ladění za provozu technologie ASP.NET Kubernetes se službou Azure pomocí ladicího programu snímků](../debugger/debug-live-azure-kubernetes.md)
+- [Ladění živých ASP.NET počítačů Azure Virtual Machines\Virtual pro škálování pomocí Snapshot Debugger](../debugger/debug-live-azure-virtual-machines.md)
+- [Ladění Live ASP.NET Azure Kubernetes pomocí Snapshot Debugger](../debugger/debug-live-azure-kubernetes.md)
 - [Řešení potíží a známé problémy pro ladění snímků](../debugger/debug-live-azure-apps-troubleshooting.md)

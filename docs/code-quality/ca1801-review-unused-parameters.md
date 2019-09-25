@@ -15,12 +15,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a73ce207d8efb0c6309ba52648c7231f89bc7984
-ms.sourcegitcommit: 0f44ec8ba0263056ad04d2d0dc904ad4206ce8fc
+ms.openlocfilehash: 6de48bf273a5c93afcd14e7bab2c5d4c4c4b5a7c
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70766048"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71233829"
 ---
 # <a name="ca1801-review-unused-parameters"></a>CA1801: Zkontrolujte nepoužité parametry
 
@@ -29,7 +29,7 @@ ms.locfileid: "70766048"
 |TypeName|ReviewUnusedParameters|
 |CheckId|CA1801|
 |Kategorie|Microsoft.Usage|
-|Narušující změna|Bez přerušení – Pokud člen není viditelný mimo sestavení, bez ohledu na změnu, kterou provedete.<br /><br /> Bez přerušení – Pokud změníte člena tak, aby používal parametr v rámci jeho těla.<br /><br /> Přerušení – Pokud odeberete parametr a je viditelný mimo sestavení.|
+|Zásadní změna|Bez přerušení – Pokud člen není viditelný mimo sestavení, bez ohledu na změnu, kterou provedete.<br /><br /> Bez přerušení – Pokud změníte člena tak, aby používal parametr v rámci jeho těla.<br /><br /> Přerušení – Pokud odeberete parametr a je viditelný mimo sestavení.|
 
 ## <a name="cause"></a>příčina
 

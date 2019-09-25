@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2f361720f45a24e561ab2a886537bda02c73c006
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f62ad97bbb96f49a7263edd29f0f8a7c263bec4c
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62545769"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71233015"
 ---
 # <a name="ca2102-catch-non-clscompliant-exceptions-in-general-handlers"></a>CA2102: Zachycujte výjimky bez CLSCompliant v obecných obslužných rutinách
 
@@ -27,33 +27,33 @@ ms.locfileid: "62545769"
 |TypeName|CatchNonClsCompliantExceptionsInGeneralHandlers|
 |CheckId|CA2102|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Nenarušující|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Člen v sestavení, který není označen atributem <xref:System.Runtime.CompilerServices.RuntimeCompatibilityAttribute> nebo je označeno `RuntimeCompatibility(WrapNonExceptionThrows = false)` obsahuje zachytávací blok, který zpracovává <xref:System.Exception?displayProperty=fullName> a neobsahuje bezprostředně následující obecný zachytávací blok. Toto pravidlo ignoruje [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] sestavení.
+Člen v sestavení, které není označeno <xref:System.Runtime.CompilerServices.RuntimeCompatibilityAttribute> nebo je označen `RuntimeCompatibility(WrapNonExceptionThrows = false)` jako, obsahuje blok catch, který zpracovává <xref:System.Exception?displayProperty=fullName> a neobsahuje okamžitě následující obecný blok catch. Toto pravidlo ignoruje [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] sestavení.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Blok catch, který zpracovává <xref:System.Exception> zachytává všechny výjimky kompatibilní s specifikace CLS (Common Language). To však nebude zachytávat výjimky kompatibilní neodpovídající specifikaci CLS. Specifikací CLS kompatibilní výjimky mohou být vyvolány z nativního kódu nebo ze spravovaného kódu, který vygeneroval Microsoft zprostředkující jazyk MSIL Assembler. Všimněte si, že jazyka C# a [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] kompilátory neumožňují neodpovídající specifikaci CLS kompatibilní výjimky, která je vyvolána a [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] nezachytí výjimky kompatibilní neodpovídající specifikaci CLS. Pokud je cílem bloku catch ošetření všech výjimek, použijte následující syntaxi obecný zachytávací blok.
+Blok catch, který zpracovává <xref:System.Exception> všechny výjimky kompatibilní se specifikací CLS (Common Language Specification). Nevyhovuje však výjimkám, které nejsou kompatibilní se specifikací CLS. Výjimky, které nejsou kompatibilní se specifikací CLS, mohou být vyvolány z nativního kódu nebo ze spravovaného kódu vygenerovaného assemblerem jazyka MSIL (Microsoft Intermediate Language). Všimněte si, C# že [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] kompilátory a neumožňují vyvolání výjimek nekompatibilních se specifikací CLS a [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] nezachytí výjimky nekompatibilní se specifikací CLS. Pokud záměr bloku catch má zpracovat všechny výjimky, použijte následující obecný syntax bloku catch.
 
 - C#: `catch {}`
 
-- Jazyk C++: `catch(...) {}` nebo `catch(Object^) {}`
+- C++: `catch(...) {}` nebo`catch(Object^) {}`
 
-Kompatibilní výjimka neošetřená neodpovídající specifikaci CLS nebude potíže se zabezpečením, když se odeberou dřív povolené oprávnění v bloku catch. Protože nejsou zachyceny kompatibilní výjimky neodpovídající specifikaci CLS, může se zvýšenými oprávněními spustit škodlivý metodu, která se vyvolá výjimka specifikací CLS.
+Neošetřená výjimka, která není kompatibilní se specifikací CLS, se stala problémem se zabezpečením v případě, že byla dříve povolená oprávnění odebrána v bloku catch. Vzhledem k tomu, že výjimky nekompatibilní se specifikací CLS nejsou zachyceny, by škodlivá metoda, která vyvolá výjimku nekompatibilní se specifikací CLS, mohla běžet se zvýšenými oprávněními.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, pokud je cílem zachytit všechny výjimky, nahradit nebo přidat obecný zachytávací blok nebo označit sestavení `RuntimeCompatibility(WrapNonExceptionThrows = true)`. Pokud jsou oprávnění odebrána v bloku catch, duplicitní funkce v obecné blok catch. Pokud není cílem ošetření všech výjimek, nahraďte blok catch, který zpracovává <xref:System.Exception> s bloky catch, které zpracovávají výjimky pro konkrétní typy.
+Chcete-li opravit porušení tohoto pravidla, je-li záměr zachytit všechny výjimky, nahraďte nebo přidejte obecný blok catch nebo označte sestavení `RuntimeCompatibility(WrapNonExceptionThrows = true)`. Pokud jsou v bloku catch odebrána oprávnění, duplikujte funkci v obecném bloku catch. Pokud není záměrem zpracovat všechny výjimky, nahraďte blok catch, který zpracovává <xref:System.Exception> bloky catch, které zpracovávají konkrétní typy výjimek.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Je bezpečné potlačit upozornění tohoto pravidla, je-li testovaného bloku neobsahuje žádné příkazy, které mohou vytvořit kompatibilní výjimka kompilace neodpovídající specifikaci CLS. Vzhledem k tomu, že žádný nativní nebo spravovaný kód může vyvolat bez specifikace CLS výjimka, to se vyžaduje znalost veškerý kód, který mohou být provedeny ve všech cestách kódu uvnitř bloku try. Všimněte si, že nejsou vyvolány kompatibilní výjimky neodpovídající specifikaci CLS modulem common language runtime.
+V případě, že blok try neobsahuje žádné příkazy, které by mohly vygenerovat výjimku nekompatibilní se specifikací CLS, je bezpečné potlačit upozornění od tohoto pravidla. Protože jakýkoliv nativní nebo spravovaný kód může vyvolat výjimku nekompatibilní se specifikací CLS, vyžaduje se znalost veškerého kódu, který lze spustit ve všech cestách kódu uvnitř bloku try. Všimněte si, že modul CLR nevolá výjimky, které nejsou kompatibilní se specifikací CLS.
 
 ## <a name="example-1"></a>Příklad 1
 
-Následující příklad ukazuje třídu jazyk MSIL, která vyvolá kompatibilní výjimka kompilace neodpovídající specifikaci CLS.
+Následující příklad ukazuje třídu jazyka MSIL, která vyvolá výjimku, která není kompatibilní se specifikací CLS.
 
 ```cpp
 .assembly ThrowNonClsCompliantException {}
@@ -71,11 +71,11 @@ Následující příklad ukazuje třídu jazyk MSIL, která vyvolá kompatibiln�
 
 ## <a name="example-2"></a>Příklad 2
 
-Následující příklad ukazuje metodu, která obsahuje obecný zachytávací blok, který splňuje pravidlo.
+Následující příklad ukazuje metodu, která obsahuje obecný blok catch, který splňuje pravidlo.
 
 [!code-csharp[FxCop.Security.CatchNonClsCompliantException#1](../code-quality/codesnippet/CSharp/ca2102-catch-non-clscompliant-exceptions-in-general-handlers_1.cs)]
 
-V předchozích příkladech kompilaci následujícím způsobem.
+Následujícím způsobem zkompilujte předchozí příklady.
 
 ```cpp
 ilasm /dll ThrowNonClsCompliantException.il
@@ -84,7 +84,7 @@ csc /r:ThrowNonClsCompliantException.dll CatchNonClsCompliantException.cs
 
 ## <a name="related-rules"></a>Související pravidla
 
-[CA1031: Nezachycujte výjimky obecného typu](../code-quality/ca1031-do-not-catch-general-exception-types.md)
+[CA1031: Nezachytit obecné typy výjimek](../code-quality/ca1031-do-not-catch-general-exception-types.md)
 
 ## <a name="see-also"></a>Viz také:
 

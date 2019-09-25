@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ad0659241e75c862b3d82c64a7e8b2ad3ccada21
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 28d71fbfc10532f7c9420ea7e847ef4c29b88854
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69547675"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71236081"
 ---
 # <a name="ca1030-use-events-where-appropriate"></a>CA1030: Použijte události, kde je to vhodné
 
@@ -28,7 +28,7 @@ ms.locfileid: "69547675"
 |TypeName|UseEventsWhereAppropriate|
 |CheckId|CA1030|
 |Kategorie|Microsoft.Design|
-|Narušující změna|Nenarušující|
+|Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
 
@@ -37,7 +37,7 @@ Název metody začíná jedním z následujících způsobů:
 - PhotoDraw
 - RemoveOn
 - Nebezpečí
-- Výkop
+- výkop
 
 Ve výchozím nastavení toto pravidlo vypadá pouze externě viditelnými metodami, ale je možné jej [nakonfigurovat](#configurability).
 

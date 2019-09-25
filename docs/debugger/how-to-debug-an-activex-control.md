@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Ladění ovládacího prvku ActiveX | Dokumentace Microsoftu'
+title: 'Postupy: Ladění ovládacího prvku ActiveX | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -24,42 +24,42 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3c76167468d9eb6fbe93c3bef0c4ae8c15634fc5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c1d02cb4d581a7234ad2dd950fa51f46a5d128b2
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894427"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71211079"
 ---
 # <a name="how-to-debug-an-activex-control"></a>Postupy: Ladění ovládacího prvku ActiveX
 
 > [!NOTE]
-> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, zvolte nastavení importu a exportu v nabídce Nástroje. Další informace najdete v tématu [Resetovat nastavení](../ide/environment-settings.md#reset-settings).
+> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, v nabídce Nástroje klikněte na položku Nastavení importu a exportu. Další informace najdete v tématu [Resetovat nastavení](../ide/environment-settings.md#reset-settings).
 
-Chcete-li ladit ovládací prvek ActiveX, je nutné zadat (spustitelného souboru) pro ovládací prvek pro spuštění v kontejneru.
+Chcete-li ladit ovládací prvek ActiveX, je nutné zadat kontejner (spustitelný soubor), v němž bude ovládací prvek spuštěn.
 
-## <a name="to-specify-a-container-for-the-debug-session"></a>K určení kontejneru se pro relaci ladění
+## <a name="to-specify-a-container-for-the-debug-session"></a>Určení kontejneru pro relaci ladění
 
 1. V Průzkumníku řešení vyberte projekt.
 
-2. Z **zobrazení** nabídce zvolte **stránky vlastností**.
+2. V nabídce **zobrazení** klikněte na položku **stránky vlastností**.
 
-3. V **stránky vlastností projektu** dialogovém okně Otevřít **vlastnosti konfigurace** a pak zvolte položku **ladění**.
+3. V dialogovém okně **stránky vlastností projektu** otevřete složku **Vlastnosti konfigurace** a vyberte možnost **ladění**.
 
-4. V části **ladění** kategorie, vyhledejte **příkaz** vlastnost.
+4. V kategorii **ladění** vyhledejte vlastnost **Command** .
 
-5. Zadejte název cesty pro kontejner. Například C:\Program Files\Internet Explorer\IEXPLORE. SOUBOR EXE.
+5. Zadejte název cesty pro kontejner. Například C:\Program Files\Internet Explorer\IEXPLORE. Programu.
 
-6. Pokud zadáte jako kontejner aplikace Internet Explorer a používáte aktivní plochu, zadejte `/new` v **argumenty příkazu** pole.
+6. Pokud jako kontejner určíte aplikaci Internet Explorer a používáte službu Active Desktop, zadejte `/new` do pole **argumenty příkazu** .
 
 7. Klikněte na **OK**.
 
-     Pokud nezadáte kontejner ve službě **stránky vlastností projektu** dialogovém okně můžete zadat kontejner při zahájení ladění. Po výběru příkazu ke spuštění pro spuštění ladění, [spustitelný soubor pro dialogové okno ladění relace](../debugger/executable-for-debugging-session-dialog-box.md) se zobrazí. V dialogovém okně zadejte název cesty kontejneru.
+     Pokud nezadáte kontejner do dialogového okna **stránky vlastností projektu** , můžete zadat kontejner při zahájení ladění. Když vyberete příkaz pro spuštění pro spuštění ladění, zobrazí se [dialogové okno spustitelný soubor pro relaci ladění](../debugger/executable-for-debugging-session-dialog-box.md) . Zadejte název cesty kontejneru v dialogovém okně.
 
 ## <a name="see-also"></a>Viz také
 
 - [ActiveX – ovládací prvky](/cpp/mfc/activex-controls)
 - [Testování vlastností a událostí pomocí testovacího kontejneru](/cpp/mfc/testing-properties-and-events-with-test-container)
 - [Ladění modelů COM a prvků ActiveX](../debugger/com-and-activex-debugging.md)
-- [Ladění v sadě Visual Studio](../debugger/index.md)
+- [Ladění v sadě Visual Studio](../debugger/index.yml)
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)

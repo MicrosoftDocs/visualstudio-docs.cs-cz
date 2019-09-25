@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 3868061a01572d0b1adadec6619f88269d353dff
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 8106a4c0244cbd79e88a2bdc50e04ea74627dab4
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68922440"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71235339"
 ---
 # <a name="ca1062-validate-arguments-of-public-methods"></a>CA1062: Ověřte argumenty veřejných metod
 
@@ -31,7 +31,7 @@ ms.locfileid: "68922440"
 |TypeName|ValidateArgumentsOfPublicMethods|
 |CheckId|CA1062|
 |Kategorie|Microsoft.Design|
-|Narušující změna|Bez přerušení|
+|Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
 

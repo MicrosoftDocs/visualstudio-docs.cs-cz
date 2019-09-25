@@ -18,12 +18,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 7b1610d07e5e38632056df237d284b40b6f101c6
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: c1dc1e5ed18ddcd42d42c96f3f853808c58ade48
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68922910"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71236068"
 ---
 # <a name="ca1031-do-not-catch-general-exception-types"></a>CA1031: Nezachycujte výjimky obecného typu
 
@@ -32,7 +32,7 @@ ms.locfileid: "68922910"
 |TypeName|DoNotCatchGeneralExceptionTypes|
 |CheckId|CA1031|
 |Kategorie|Microsoft.Design|
-|Narušující změna|Nenarušující|
+|Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
 <xref:System.Exception?displayProperty=fullName> Obecná výjimka <xref:System.SystemException?displayProperty=fullName> ,jako`catch` je například nebo, zachycena v příkazu nebo obecná klauzule catch, jako jenapříklad.`catch()`

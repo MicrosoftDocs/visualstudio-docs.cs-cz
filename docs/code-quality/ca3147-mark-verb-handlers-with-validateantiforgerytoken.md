@@ -9,12 +9,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 0cd54f932a99ea79bf792ebe4175ddc6a031ddcb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 01b290a4e4656aef079b27ce3abb2a66d7adeb75
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62541061"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71236987"
 ---
 # <a name="ca3147-mark-verb-handlers-with-validateantiforgerytoken"></a>CA3147: Označte obslužné rutiny příkazů pomocí ValidateAntiForgeryToken
 
@@ -23,41 +23,41 @@ ms.locfileid: "62541061"
 |TypeName|MarkVerbHandlersWithValidateAntiForgeryToken|
 |CheckId|CA3147|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Pevné|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Metody akce kontroleru ASP.NET MVC není označen atributem [ValidateAntiForgeryTokenAttribute](/previous-versions/aspnet/dd492108(v=vs.118)), nebo atribut určení příkaz protokolu HTTP, jako například [HttpGetAttribute](/previous-versions/aspnet/ee470993(v%3dvs.118)) nebo [ AcceptVerbsAttribute](/previous-versions/aspnet/dd470553%28v%3dvs.118%29).
+Metoda akce kontroleru ASP.NET MVC není označená atributem [ValidateAntiForgeryTokenAttribute](/previous-versions/aspnet/dd492108(v=vs.118))nebo atributem určujícím operaci http, jako je [HttpGetAttribute](/previous-versions/aspnet/ee470993(v%3dvs.118)) nebo [AcceptVerbsAttribute](/previous-versions/aspnet/dd470553%28v%3dvs.118%29).
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Při navrhování kontroler ASP.NET MVC, dávejte útoků proti padělání žádosti více webů. Útok proti padělání žádosti více webů odesílat škodlivé žádosti od ověřeného uživatele do vaší kontroler ASP.NET MVC. Další informace najdete v tématu [prevence XSRF/CSRF v ASP.NET MVC a na webových stránkách](/aspnet/mvc/overview/security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages).
+Při navrhování kontroleru ASP.NET MVC si zajistěte útoky proti falšování požadavků mezi lokalitami. Útok proti padělání žádostí mezi servery může odesílat škodlivé požadavky od ověřeného uživatele do kontroleru ASP.NET MVC. Další informace najdete v tématu [prevence/CSRF prevence v ASP.NET MVC a na webových stránkách](/aspnet/mvc/overview/security/xsrfcsrf-prevention-in-aspnet-mvc-and-web-pages).
 
-Toto pravidlo kontroluje, že kontroler ASP.NET MVC metod akce buď:
+Toto pravidlo zkontroluje, že metody akce kontroleru ASP.NET MVC:
 
-- Máte [ValidateAntiforgeryTokenAttribute](/previous-versions/aspnet/dd492108%28v%3dvs.118%29) a určení povolených příkazů HTTP, bez zahrnutí HTTP GET.
+- [ValidateAntiforgeryTokenAttribute](/previous-versions/aspnet/dd492108%28v%3dvs.118%29) a zadejte povolené příkazy HTTP, včetně HTTP GET.
 
-- Zadejte GET protokolu HTTP jako povolených operací.
+- Jako povolenou operaci zadejte HTTP GET.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-- Pro akce kontroleru ASP.NET MVC, které zpracovávají požadavky HTTP GET a nemají potenciálně škodlivé vedlejší účinky, přidejte [HttpGetAttribute](/previous-versions/aspnet/ee470993%28v%3dvs.118%29) metody.
+- Pro akce kontroleru ASP.NET MVC, které zpracovávají požadavky HTTP GET a nemají potenciálně škodlivé vedlejší účinky, přidejte do metody [HttpGetAttribute](/previous-versions/aspnet/ee470993%28v%3dvs.118%29) .
 
-   Pokud máte ASP.NET MVC požaduje akce kontroleru, který zpracovává HTTP GET a má potenciálně škodlivé vedlejší účinky, jako je třeba změna citlivá data, aplikace je ohrožen útoky proti padělání žádosti více webů.  Bude potřeba změnit návrh aplikace tak, aby pouze žádosti HTTP POST, PUT a DELETE provádět citlivé operace.
+   Máte-li akci kontroleru ASP.NET MVC, která zpracovává požadavky HTTP GET a má potenciálně škodlivé vedlejší účinky, jako je třeba úprava citlivých dat, je vaše aplikace zranitelná vůči útokům proti padělání požadavků mezi lokalitami.  Budete muset změnit návrh aplikace tak, aby pouze požadavky HTTP POST, PUT a DELETE prováděly citlivé operace.
 
-- Pro akce kontroleru ASP.NET MVC, které zpracovávají HTTP POST, PUT nebo požádá o odstranění, přidání [ValidateAntiForgeryTokenAttribute](/previous-versions/aspnet/dd492108(v=vs.118)) a atributů určujících povolené příkazy HTTP ([AcceptVerbsAttribute](/previous-versions/aspnet/dd470553%28v%3dvs.118%29) [HttpPostAttribute](/previous-versions/aspnet/ee264023%28v%3dvs.118%29), [HttpPutAttribute](/previous-versions/aspnet/ee470909%28v%3dvs.118%29), nebo [HttpDeleteAttribute](/previous-versions/aspnet/ee470917%28v%3dvs.118%29)). Kromě toho je třeba volat [HtmlHelper.AntiForgeryToken()](/previous-versions/aspnet/dd504812%28v%3dvs.118%29) metoda ze zobrazení MVC nebo Razor webové stránky. Příklad najdete v tématu [zkoumání metod edit a zobrazení upravit](/aspnet/mvc/overview/getting-started/introduction/examining-the-edit-methods-and-edit-view).
+- Pro akce kontroleru ASP.NET MVC, které zpracovávají žádosti HTTP POST, PUT nebo DELETE, přidejte [ValidateAntiForgeryTokenAttribute](/previous-versions/aspnet/dd492108(v=vs.118)) a atributy určující povolené příkazy HTTP ([AcceptVerbsAttribute](/previous-versions/aspnet/dd470553%28v%3dvs.118%29), [HttpPostAttribute](/previous-versions/aspnet/ee264023%28v%3dvs.118%29), [ HttpPutAttribute](/previous-versions/aspnet/ee470909%28v%3dvs.118%29)nebo [HttpDeleteAttribute](/previous-versions/aspnet/ee470917%28v%3dvs.118%29)). Kromě toho je nutné volat metodu [HtmlHelper. AntiForgeryToken ()](/previous-versions/aspnet/dd504812%28v%3dvs.118%29) ze zobrazení MVC nebo webové stránky Razor. Příklad naleznete v tématu [prozkoumání metod Edit a zobrazení pro úpravy](/aspnet/mvc/overview/getting-started/introduction/examining-the-edit-methods-and-edit-view).
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Je bezpečné potlačit upozornění tohoto pravidla, pokud:
+Upozornění z tohoto pravidla je bezpečné potlačit, pokud:
 
-- Akce řadiče ASP.NET MVC nemá žádné škodlivé vedlejší účinky.
+- Akce kontroleru ASP.NET MVC nemá žádné škodlivé vedlejší účinky.
 
-- Aplikace ověří daný token antiforgery jiným způsobem.
+- Aplikace neověřuje token proti padělání jiným způsobem.
 
-## <a name="validateantiforgerytoken-attribute-example"></a>Příklad ValidateAntiForgeryToken atribut
+## <a name="validateantiforgerytoken-attribute-example"></a>Příklad atributu ValidateAntiForgeryToken
 
-### <a name="violation"></a>Porušení
+### <a name="violation"></a>Selhání
 
 ```csharp
 namespace TestNamespace
@@ -98,9 +98,9 @@ namespace TestNamespace
 }
 ```
 
-## <a name="httpget-attribute-example"></a>Příklad třídy MetadataExchangeClientMode atribut
+## <a name="httpget-attribute-example"></a>Příklad atributu HttpGet
 
-### <a name="violation"></a>Porušení
+### <a name="violation"></a>Selhání
 
 ```csharp
 namespace TestNamespace

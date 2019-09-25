@@ -1,0 +1,76 @@
+### YamlMime:Landing
+title: Dokumentace k ladicímu programu sady Visual Studio
+summary: Ladicí program sady Visual Studio pomáhá sledovat chování běhu programu a najít problémy.
+metadata:
+  title: Ladění v sadě Visual Studio
+  description: Naučte se používat Visual Studio k ladění aplikací a kódu.
+  ms.topic: landing-page
+  author: mikejo5000
+  ms.author: mikejo
+  manager: jillfra
+  ms.date: 09/20/2019
+  ms.openlocfilehash: 2ce5c3c8c9baf6f513f7dca4b4072e02e461a62a
+  ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+  ms.translationtype: MT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 09/24/2019
+  ms.locfileid: "71213749"
+landingContent:
+- title: O ladění
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Co je ladění?
+      url: what-is-debugging.md
+    - text: Techniky ladění a související nástroje
+      url: write-better-code-with-visual-studio.md
+    - text: První seznámení s ladicím programem
+      url: debugger-feature-tour.md
+- title: Začínáme
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Ladění pro naprosté začátečníky
+      url: debugging-absolute-beginners.md
+    - text: Naučte se ladit kód v C#
+      url: /visualstudio/get-started/csharp/tutorial-debugger?toc=/visualstudio/debugger/toc.json
+    - text: Naučte se ladit kód v C++
+      url: getting-started-with-the-debugger-cpp.md
+    - text: Naučte se ladit kód ve Visual Basicu
+      url: /visualstudio/get-started/visual-basic/tutorial-debugger?toc=/visualstudio/debugger/toc.json
+    - text: Spuštění kódu Pythonu v ladicím programu > >
+      url: ../python/tutorial-working-with-python-in-visual-studio-step-04-debugging.md
+- title: Pozastavení a procházení kódu
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Procházení kódu ladicím programem
+      url: navigating-through-code-with-the-debugger.md
+    - text: Použití zarážek
+      url: using-breakpoints.md
+    - text: Úprava kódu a pokračování ladění
+      url: edit-and-continue.md
+- title: Kontrola dat
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Kontrola proměnných
+      url: autos-and-locals-windows.md
+    - text: Nastavení sledování proměnných
+      url: watch-and-quickwatch-windows.md
+    - text: Zobrazení zásobníku volání
+      url: how-to-use-the-call-stack-window.md
+- title: Hlubší procházením pomocí ladicího programu
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Tipy a triky pro ladicí program
+      url: debugger-tips-and-tricks.md
+    - text: Psaní a ladění spuštěného kódu XAML
+      url: xaml-hot-reload.md
+    - text: Ladění živé aplikace Azure
+      url: debug-live-azure-applications.md
+    - text: Instruování ladicího programu, co se má zobrazit
+      url: using-the-debuggerdisplay-attribute.md
+    - text: Vzdálené ladění
+      url: remote-debugging.md

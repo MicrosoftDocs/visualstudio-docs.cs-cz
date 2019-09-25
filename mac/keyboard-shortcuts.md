@@ -5,18 +5,18 @@ ms.date: 03/14/2019
 author: asb3993
 ms.author: amburns
 ms.assetid: 48E06A61-7294-4EC8-A09D-1763C32AD910
-ms.openlocfilehash: bb0d92496412792643ae67745afae2fec51fca90
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 3e6ae24ea9e9a5dea263c2449a9b23b6027f7a96
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68872092"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71211320"
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio-for-mac"></a>Výchozí klávesové zkratky v Visual Studio pro Mac
 
 Informace o přístupnosti klávesnice najdete [v tématu How to: Použijte navigaci](~/accessibility.md#how-to-use-keyboard-navigation)pomocí klávesnice.
 
-K nejrůznějším příkazům v Visual Studio pro Mac můžete přistupovat pomocí příslušné klávesové zkratky. Tento dokument obsahuje seznam výchozích klávesových zkratek pro schéma vázání klíčů sady **Visual Studio** . Další informace o tom, jak změnit schéma vázání klíčů, najdete v tématu [přizpůsobení rozhraní IDE](~/customizing-the-ide.md#key-bindings). Zástupce příkazu můžete také přizpůsobit pomocí položky nabídky**Předvolby** **Visual Studio pro Mac** > a volbou**vazby klíče** **prostředí** > v okně **Předvolby** .
+K nejrůznějším příkazům v Visual Studio pro Mac můžete přistupovat pomocí příslušné klávesové zkratky. Tento dokument obsahuje seznam výchozích klávesových zkratek pro schéma vazby **Visual Studio pro Mac** Key. Další informace o tom, jak změnit schéma vázání klíčů, najdete v tématu [přizpůsobení rozhraní IDE](~/customizing-the-ide.md#key-bindings). Zástupce příkazu můžete také přizpůsobit pomocí položky nabídky**Předvolby** **Visual Studio pro Mac** > a volbou**vazby klíče** **prostředí** > v okně **Předvolby** .
 
 > [!TIP]
 > Klávesové zkratky zobrazené v tomto dokumentu a předvolby pro vázání klíčů v Visual Studio pro Mac se zobrazují pomocí symbolů běžně používaných v macOS. Pokud si nejste jisti symbolem, podívejte se do [tabulky MacOS Key Symbols loopkup](#macos-key-symbols-lookup).
@@ -32,7 +32,7 @@ K nejrůznějším příkazům v Visual Studio pro Mac můžete přistupovat pom
 |Předchozí chyba|**⌥⇧⇞**|
 |Předchozí problém v souboru|**⌥⇞**|
 
-## <a name="debug"></a>Ladění
+## <a name="debug"></a>Ladit
 
 |Příkazy|Klávesové zkratky|
 |-|-|
@@ -105,7 +105,7 @@ K nejrůznějším příkazům v Visual Studio pro Mac můžete přistupovat pom
 |Uložit|**⌘S**|
 |Uložit vše|**⇧⌘S**|
 
-## <a name="help"></a>Help
+## <a name="help"></a>Nápověda
 
 |Příkazy|Klávesové zkratky|
 |-|-|
@@ -117,7 +117,7 @@ K nejrůznějším příkazům v Visual Studio pro Mac můžete přistupovat pom
 |Příkazy|Klávesové zkratky|
 |-|-|
 |Implementace zpráv Unity|**⇧⌘M**|
-|Prohlížen|**⌥⌘I**|
+|prohlížen|**⌥⌘I**|
 
 ## <a name="project"></a>Project
 
@@ -263,7 +263,7 @@ K nejrůznějším příkazům v Visual Studio pro Mac můžete přistupovat pom
 |⇟|O **stránku dolů** (**Rozlišující název stránky**)|
 |⌫|**Odstranit** (**BACKSPACE**)|
 |⌦|**Před odstraněním**|
-|⏎|**Vrátit**|
+|❌|**Vrátit**|
 |← → ↑ ↓|**Klávesy se šipkami**|
 |↖|**Domovská stránka**|
 |↘|**ukončení**|

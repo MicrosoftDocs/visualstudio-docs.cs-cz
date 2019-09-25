@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: a17c5bdc9e21bdf877206b1dc28596c251049455
-ms.sourcegitcommit: 5483e399f14fb01f528b3b194474778fd6f59fa6
+ms.openlocfilehash: 12371c34c846991a0ec41f5e9d9588c5bde8e4d6
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66714747"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71233600"
 ---
 # <a name="ca1813-avoid-unsealed-attributes"></a>CA1813: Vyhněte se nezapečetěným atributům
 
@@ -30,24 +30,24 @@ ms.locfileid: "66714747"
 |-|-|
 |TypeName|AvoidUnsealedAttributes|
 |CheckId|CA1813|
-|Kategorie|Microsoft.Performance|
-|Narušující změna|Narušující|
+|Kategorie|Microsoft. Performance|
+|Zásadní změna|Narušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Veřejný typ dědí z <xref:System.Attribute?displayProperty=fullName>není abstraktní a není zapečetěná (`NotInheritable` v jazyce Visual Basic).
+Veřejný typ dědí z <xref:System.Attribute?displayProperty=fullName>, není abstraktní a není zapečetěný (`NotInheritable` v Visual Basic).
 
 ## <a name="rule-description"></a>Popis pravidla
 
-.NET poskytuje metody pro načítání vlastních atributů. Ve výchozím nastavení tyto metody prohledávají hierarchii dědičnosti atributů. Například <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=fullName> vyhledá zadaného typu atributu nebo libovolný typ atributu, který rozšiřuje zadaného typu atributu. Zapečetění atributu eliminuje prohledávání hierarchie dědičnosti a může zlepšit výkon.
+Rozhraní .NET poskytuje metody pro načítání vlastních atributů. Ve výchozím nastavení tyto metody prohledávají hierarchii dědičnosti atributů. Například <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=fullName> vyhledá zadaný typ atributu nebo jakýkoli typ atributu, který rozšiřuje zadaný typ atributu. Zapečetění atributu eliminuje hledání prostřednictvím Hierarchie dědičnosti a může zvýšit výkon.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, zapečeťte typ atributu nebo vytvořit abstraktní.
+Chcete-li opravit porušení tohoto pravidla, zapečeťte typ atributu nebo jej zajistěte jako abstraktní.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Je bezpečné potlačit upozornění tohoto pravidla. Potlačit pouze v případě, že definujete hierarchii atributů a nelze zapečetit atribut nebo vytvořit abstraktní.
+Z tohoto pravidla je bezpečné potlačit upozornění. Potlačíte pouze v případě, že definujete hierarchii atributů a nelze ji zapečetit ani ji nelze nastavit jako abstraktní.
 
 ## <a name="example"></a>Příklad
 
@@ -58,8 +58,8 @@ Následující příklad ukazuje vlastní atribut, který splňuje toto pravidlo
 
 ## <a name="related-rules"></a>Související pravidla
 
-- [CA1019: Definujte přístupové objekty pro argumenty atributu](../code-quality/ca1019-define-accessors-for-attribute-arguments.md)
-- [CA1018: Označte atributy pomocí AttributeUsageAttribute](../code-quality/ca1018-mark-attributes-with-attributeusageattribute.md)
+- [CA1019: Definovat přístupové objekty pro argumenty atributu](../code-quality/ca1019-define-accessors-for-attribute-arguments.md)
+- [CA1018: Označení atributů pomocí AttributeUsageAttribute](../code-quality/ca1018-mark-attributes-with-attributeusageattribute.md)
 
 ## <a name="see-also"></a>Viz také:
 

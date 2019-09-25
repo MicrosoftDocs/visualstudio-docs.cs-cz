@@ -3,15 +3,15 @@ title: Odinstalace Visual Studio pro Mac
 description: Pokyny k odinstalaci Visual Studio pro Mac a souvisejících nástrojů
 author: asb3993
 ms.author: amburns
-ms.date: 08/09/2019
+ms.date: 09/18/2019
 ms.technology: vs-ide-install
 ms.assetid: 4EB95F75-BC2E-4982-9564-2975805712D8
-ms.openlocfilehash: bb2da7b181cb8065c310780a27a5f0190971d915
-ms.sourcegitcommit: cf8c0fef2b9690595e99ce3802586cdd55fd37c2
+ms.openlocfilehash: 7d86e5abbb25d8c348f550d28618aae614725471
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108153"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71211519"
 ---
 # <a name="uninstalling-visual-studio-for-mac"></a>Odinstalace Visual Studio pro Mac
 
@@ -33,7 +33,7 @@ Následující části obsahují informace o stahování a používání skript�
 
 ### <a name="visual-studio-for-mac-and-xamarin-script"></a>Visual Studio pro Mac a skript Xamarin
 
-Součásti sady Visual Studio a Xamarin můžete odinstalovat v jednom z nich pomocí [skriptu](https://raw.githubusercontent.com/MicrosoftDocs/visualstudio-docs/master/mac/resources/uninstall-vsmac.sh)pro odinstalaci.
+Součásti sady Visual Studio a Xamarin můžete odinstalovat v jednom z nich pomocí [skriptu pro odinstalaci](https://raw.githubusercontent.com/MicrosoftDocs/visualstudio-docs/master/mac/resources/uninstall-vsmac.sh).
 
 Tento skript pro odinstalaci obsahuje většinu příkazů, které najdete v článku. Skript obsahuje tři hlavní opomenutí a není zahrnutý v důsledku možných vnějších závislostí. Pokud to chcete odebrat, přejděte do příslušné části níže a odstraňte je ručně:
 

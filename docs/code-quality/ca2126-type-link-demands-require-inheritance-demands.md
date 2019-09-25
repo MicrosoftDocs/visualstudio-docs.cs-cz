@@ -18,12 +18,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 2be42519f87c3c040c1f80c80d53d490853d986e
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 4f01ba5af7640521333093e4bba1f36a95363b60
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68920756"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71232467"
 ---
 # <a name="ca2126-type-link-demands-require-inheritance-demands"></a>CA2126: Požadavky na propojení typů vyžadují požadavky na dědičnost
 
@@ -32,7 +32,7 @@ ms.locfileid: "68920756"
 |TypeName|TypeLinkDemandsRequireInheritanceDemands|
 |CheckId|CA2126|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Narušující|
+|Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
 Veřejný nezapečetěný typ je chráněn s požadavkem propojení, má přepsatelné metody a ani typ ani metoda není chráněna pomocí požadavku dědičnosti.

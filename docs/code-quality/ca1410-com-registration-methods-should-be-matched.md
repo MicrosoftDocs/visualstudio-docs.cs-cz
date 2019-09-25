@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: a424e3c884d47b7deb848b418fbf0f3344d6c379
-ms.sourcegitcommit: 5483e399f14fb01f528b3b194474778fd6f59fa6
+ms.openlocfilehash: bca9e06c861ab2bcaceead8bf8ee195b64e45c83
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66714729"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71234739"
 ---
 # <a name="ca1410-com-registration-methods-should-be-matched"></a>CA1410: Metody registrace modelu COM by si měly odpovídat
 
@@ -30,20 +30,20 @@ ms.locfileid: "66714729"
 |-|-|
 |TypeName|ComRegistrationMethodsShouldBeMatched|
 |CheckId|CA1410|
-|Kategorie|Microsoft.Interoperability|
-|Narušující změna|Nenarušující|
+|Kategorie|Microsoft. interoperabilita|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Typ deklaruje metodu, která je označena <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute?displayProperty=fullName> atribut, ale nedeklaruje metodu označenou atributem <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=fullName> atribut, nebo naopak.
+Typ deklaruje metodu, která je označena <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute?displayProperty=fullName> atributem, ale nedeklaruje metodu, která je označena <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=fullName> atributem, nebo naopak.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Pro klienty modelu COM (Component Object) k vytvoření typu .NET musí být nejprve registrována typu. Pokud je k dispozici, metodu, která je označena <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> atribut je volána v průběhu procesu registrace ke spouštění kódu zadaného uživatelem. Odpovídající metodu označenou atributem <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute> atribut je volána v průběhu procesu zrušení registrace operací metoda registrace.
+Pro klienty modelu COM (Component Object Model) pro vytvoření typu .NET musí být tento typ nejprve zaregistrován. Je-li k dispozici, metoda, která je označena <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> atributem, je volána během procesu registrace pro spuštění kódu zadaného uživatelem. Odpovídající metoda, která je označena <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute> atributem, je volána během procesu zrušení registrace pro vrácení operací registrační metody.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, přidejte odpovídající registraci nebo zrušení registrace metody.
+Chcete-li opravit porušení tohoto pravidla, přidejte odpovídající metodu registrace nebo zrušení registrace.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
@@ -51,7 +51,7 @@ Nepotlačujte upozornění na toto pravidlo.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje typ, který porušuje pravidla. Komentářem kódu ukazuje oprava porušení zásady.
+Následující příklad ukazuje typ, který je v rozporu s pravidlem. Kód s komentářem zobrazuje opravu porušení.
 
 [!code-csharp[FxCop.Interoperability.ComRegistration#1](../code-quality/codesnippet/CSharp/ca1410-com-registration-methods-should-be-matched_1.cs)]
 [!code-vb[FxCop.Interoperability.ComRegistration#1](../code-quality/codesnippet/VisualBasic/ca1410-com-registration-methods-should-be-matched_1.vb)]
@@ -63,5 +63,5 @@ Následující příklad ukazuje typ, který porušuje pravidla. Komentářem k�
 ## <a name="see-also"></a>Viz také:
 
 - <xref:System.Runtime.InteropServices.RegistrationServices?displayProperty=fullName>
-- [Registrace sestavení s modelem COM](/dotnet/framework/interop/registering-assemblies-with-com)
+- [Registrace sestavení pomocí modelu COM](/dotnet/framework/interop/registering-assemblies-with-com)
 - [Regasm.exe (nástroj registrace sestavení)](/dotnet/framework/tools/regasm-exe-assembly-registration-tool)

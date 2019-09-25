@@ -1,5 +1,5 @@
 ---
-title: Ladění aplikací | Dokumentace Microsoftu
+title: Ladění aplikací | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -13,25 +13,27 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b918559742e9570ba3ad0ad1233ab643d087fdd
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 63d393e5ab056f16e54382b2295a667f079ede95
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62852251"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71211163"
 ---
 # <a name="debugging-applications"></a>Ladicí aplikace
-Následující části se zabývají ladění pro konkrétní typy aplikací. Typy různých aplikací a různé jazyky vyžadují jiná nastavení a techniky a k dispozici různé problémy, které je potřeba ladit.
+Následující části se týkají ladění pro konkrétní typy aplikací. Různé typy aplikací a různé jazyky vyžadují různá nastavení a techniky a představují různé problémy, které je potřeba ladit.
 
 ## <a name="debugging-for-different-types-of-applications"></a>Ladění pro různé typy aplikací
 
 |||
 |-|-|
-|[Ladění aplikací pro UWP](../debugger/debugging-windows-store-and-windows-universal-apps.md)|Popisuje, jak ladit aplikace pro UPW.|
-|[Ladění spravovaného kódu](../debugger/debugging-managed-code.md)|Popisuje, jak ladit spravovaný kód (Visual C#, Visual Basic a F3).|
-|[Ladění nativního kódu](../debugger/debugging-native-code.md)|Popisuje, jak ladit jiný druh nativní aplikace C++.|
-|[Ladění kódu GPU](../debugger/debugging-gpu-code.md)|Popisuje, jak ladit kód jazyka C++, na které poběží grafický procesor (GPU).|
-|[Diagnostika grafiky (ladění v rozhraní DirectX graphics)](/visualstudio/debugger/graphics/visual-studio-graphics-diagnostics)|Popisuje, jak ladění grafiky DirectX.|
-|[Ladění aplikací ASP.NET](../debugger/how-to-enable-debugging-for-aspnet-applications.md)|Popisuje, jak ladění aplikací ASP.NET.|
-|[Ladění webových aplikací](../debugger/debugging-web-applications.md)|Popisuje postup ladění webové aplikace a skripty.|
-|[Ladění služeb WCF](../debugger/debugging-wcf-services.md)|Popisuje, jak ladit služby Windows Communication Foundation.|
+|[Ladění aplikací pro UWP](../debugger/debugging-windows-store-and-windows-universal-apps.md)|Popisuje, jak ladit aplikace pro UWP.|
+|[Ladění spravovaného kódu](../debugger/debugging-managed-code.md)|Popisuje, jak ladit spravovaný kód (Visual C#, Visual Basic, F#a C++/CLI).|
+|[Ladění nativního kódu](../debugger/debugging-native-code.md)|Popisuje, jak ladit různé druhy nativních C++ aplikací.|
+|[Ladění kódu GPU](../debugger/debugging-gpu-code.md)|Popisuje, jak ladit C++ kód, který běží na grafické procesorové jednotce (GPU).|
+|[Diagnostika grafiky (ladění grafiky DirectX)](/visualstudio/debugger/graphics/visual-studio-graphics-diagnostics)|Popisuje ladění grafiky rozhraní DirectX.|
+|[Ladění aplikací ASP.NET](../debugger/how-to-enable-debugging-for-aspnet-applications.md)|Popisuje, jak ladit aplikace ASP.NET.|
+|[Ladění kódu Pythonu](../python/tutorial-working-with-python-in-visual-studio-step-04-debugging.md)|Popisuje, jak ladit kód Pythonu.|
+|[Ladění aplikací JavaScript a TypeScript](/javascript/debug-nodejs.md)|Popisuje, jak ladit aplikace JavaScript, TypeScript a Node. js.|
+|[Ladění webových aplikací](../debugger/debugging-web-applications.md)|Popisuje, jak ladit webové aplikace a skripty.|
+|[Ladění služeb WCF](../debugger/debugging-wcf-services.md)|Popisuje, jak ladit služby Windows Communication Foundation Services.|

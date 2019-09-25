@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 16cd44f00db13027d737b6a6b496877075ac6fa9
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 5f50be12f4d601161ec20659bbb6b710e5a7cf24
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68922266"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71235168"
 ---
 # <a name="ca1301-avoid-duplicate-accelerators"></a>CA1301: Vyhněte se duplicitním akcelerátorům
 
@@ -28,7 +28,7 @@ ms.locfileid: "68922266"
 |TypeName|AvoidDuplicateAccelerators|
 |CheckId|CA1301|
 |Kategorie|Microsoft.Globalization|
-|Narušující změna|Nenarušující|
+|Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
 Typ rozšiřuje <xref:System.Windows.Forms.Control?displayProperty=fullName> a obsahuje dva nebo více ovládacích prvků nejvyšší úrovně, které mají stejné přístupové klíče, které jsou uloženy v souboru prostředků.

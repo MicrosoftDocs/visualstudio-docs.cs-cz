@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1abef0067a58225eea6110d4cc2f7257bc605463
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 95209067f3821b6446b64dc7990e189720d20cea
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62808384"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71233196"
 ---
 # <a name="ca2001-avoid-calling-problematic-methods"></a>CA2001: Vyhněte se volání problematických metod
 
@@ -28,31 +28,31 @@ ms.locfileid: "62808384"
 |TypeName|AvoidCallingProblematicMethods|
 |CheckId|CA2001|
 |Kategorie|Microsoft.Reliability|
-|Narušující změna|Nenarušující|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
 Člen volá potencionálně nebezpečnou nebo problematickou metodu.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Vyhněte se volání zbytečných a potenciálně nebezpečných metod. Porušení tohoto pravidla vyvolá se v případě, že člen volá jedno z následujících metod:
+Vyhněte se zbytečným a potenciálně nebezpečným voláním metody. Porušení tohoto pravidla nastane, když člen volá jednu z následujících metod:
 
 |Metoda|Popis|
 |------------|-----------------|
-|<xref:System.GC.Collect%2A?displayProperty=fullName>|Volání uvolňování paměti. Shromáždit může výrazně ovlivnit výkon aplikace a je zřídka nezbytné. Další informace najdete v tématu [výkon Tidbits pro Rico Mariani](http://go.microsoft.com/fwlink/?LinkId=169256) blogu na webu MSDN.|
-|<xref:System.Threading.Thread.Resume%2A?displayProperty=fullName><br /><br /> <xref:System.Threading.Thread.Suspend%2A?displayProperty=fullName>|Thread.Suspend a Thread.Resume jsou zastaralé z důvodu jejich nepředvídatelné chování.  Použití jiných tříd v <xref:System.Threading> obor názvů, například <xref:System.Threading.Monitor>, <xref:System.Threading.Mutex>, a <xref:System.Threading.Semaphore>, k synchronizaci vláken nebo chránit prostředky.|
-|<xref:System.Runtime.InteropServices.SafeHandle.DangerousGetHandle%2A?displayProperty=fullName>|Metoda metody DangerousGetHandle představuje bezpečnostní riziko, protože může vrátit popisovač, který není platný. Zobrazit <xref:System.Runtime.InteropServices.SafeHandle.DangerousAddRef%2A> a <xref:System.Runtime.InteropServices.SafeHandle.DangerousRelease%2A> metody pro další informace o tom, jak použít metodu metody DangerousGetHandle bezpečně.|
-|<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName><br /><br /> <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=fullName><br /><br /> <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=fullName>|Tyto metody můžete načítat sestavení z neočekávaných umístěních. Například zobrazit příspěvky blogu .NET CLR poznámky Suzanne Cookovy [funkci LoadFile vs. LoadFrom](http://go.microsoft.com/fwlink/?LinkId=164450) a [výběr kontextu vazby](http://go.microsoft.com/fwlink/?LinkId=164451) informace o metodách, které načítají sestavení.|
-|[CoSetProxyBlanket](http://go.microsoft.com/fwlink/?LinkID=169250) (Ole32)<br /><br /> [CoInitializeSecurity](http://go.microsoft.com/fwlink/?LinkId=169255) (Ole32)|Podle času uživatelský kód začne provádět v spravovaného procesu je příliš pozdě spolehlivě volání funkce CoSetProxyBlanket. Modul CLR (CLR) má inicializace akce, které mohou bránit úspěšné uživatelé P/Invoke.<br /><br /> Pokud máte k volání funkce CoSetProxyBlanket pro spravovanou aplikaci, doporučujeme spustit proces pomocí spustitelného souboru nativního kódu (C++), volání funkce CoSetProxyBlanket v nativním kódu a pak spusťte aplikaci spravovaného kódu v procesu. (Nezapomeňte zadat číslo verze modulu runtime.)|
+|<xref:System.GC.Collect%2A?displayProperty=fullName>|Volání GC. Shromažďování může významně ovlivnit výkon aplikace a je zřídka nezbytné. Další informace najdete v tématu o záznamu [Mariani Performance pikantní pro výkon](http://go.microsoft.com/fwlink/?LinkId=169256) na webu MSDN.|
+|<xref:System.Threading.Thread.Resume%2A?displayProperty=fullName><br /><br /> <xref:System.Threading.Thread.Suspend%2A?displayProperty=fullName>|Vlákno. Suspend a Thread. Resume bylo Zastaralé z důvodu jejich nepředvídatelného chování.  <xref:System.Threading> Použijte jiné třídy v oboru názvů, <xref:System.Threading.Monitor>například, <xref:System.Threading.Mutex>a <xref:System.Threading.Semaphore>, k synchronizaci vláken nebo ochraně prostředků.|
+|<xref:System.Runtime.InteropServices.SafeHandle.DangerousGetHandle%2A?displayProperty=fullName>|Metoda DangerousGetHandle představuje bezpečnostní riziko, protože může vrátit neplatný popisovač. Další informace o tom <xref:System.Runtime.InteropServices.SafeHandle.DangerousRelease%2A> , jak bezpečně používat metodu DangerousGetHandle, naleznete v tématu ametody.<xref:System.Runtime.InteropServices.SafeHandle.DangerousAddRef%2A>|
+|<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=fullName><br /><br /> <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=fullName><br /><br /> <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=fullName>|Tyto metody mohou načítat sestavení z neočekávaných umístění. Podívejte se například na blogové příspěvky [v Suzanne Cookovy pro .NET LoadFile vs. LoadFrom](http://go.microsoft.com/fwlink/?LinkId=164450) a [Výběr kontextu vazby](http://go.microsoft.com/fwlink/?LinkId=164451) pro informace o metodách, které načítají sestavení.|
+|[CoSetProxyBlanket](http://go.microsoft.com/fwlink/?LinkID=169250) (Ole32)<br /><br /> [CoInitializeSecurity](http://go.microsoft.com/fwlink/?LinkId=169255) (Ole32)|V době, kdy se uživatelský kód začne spouštět ve spravovaném procesu, je příliš pozdě spolehlivě volat CoSetProxyBlanket. Modul CLR (Common Language Runtime) provede inicializační akce, které mohou zabránit úspěšnému volání uživatelů.<br /><br /> Pokud je třeba volat CoSetProxyBlanket pro spravovanou aplikaci, doporučujeme spustit proces pomocí spustitelného souboru nativního kódu (C++), zavolat CoSetProxyBlanket v nativním kódu a pak spustit aplikaci spravovaného kódu v procesu. (Nezapomeňte zadat číslo verze modulu runtime.)|
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, odeberte nebo nahraďte volání nebezpečnou nebo problematickou metodu.
+Chcete-li opravit porušení tohoto pravidla, odeberte nebo nahraďte volání nebezpečné nebo problematické metody.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Zprávy z tohoto pravidla můžete potlačit pouze v případě, že jsou k dispozici žádné alternativy k metodě problematické.
+Zprávy z tohoto pravidla byste měli potlačit pouze v případě, že nejsou k dispozici žádné alternativy problematické metody.
 
 ## <a name="see-also"></a>Viz také:
 

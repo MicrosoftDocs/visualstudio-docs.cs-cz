@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4557b61afab08c7db05c734c6f2ac927a40edb71
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 9d9e486d4193645335189c475fdd3ca220374d96
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69546849"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71231439"
 ---
 # <a name="ca2226-operators-should-have-symmetrical-overloads"></a>CA2226: Operátory by měly mít symetrická přetížení
 
@@ -28,7 +28,7 @@ ms.locfileid: "69546849"
 |TypeName|OperatorsShouldHaveSymmetricalOverloads|
 |CheckId|CA2226|
 |Kategorie|Microsoft.Usage|
-|Narušující změna|Bez přerušení|
+|Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
 

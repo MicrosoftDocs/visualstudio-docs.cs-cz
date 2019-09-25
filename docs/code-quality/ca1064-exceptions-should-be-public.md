@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b17ccfe66875588ac19c587ff6fcbd889d1e6a44
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 0ffc12d8d047be1bb13fcac133a61b047152ce3d
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68922321"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71235322"
 ---
 # <a name="ca1064-exceptions-should-be-public"></a>CA1064: Výjimky by měly být veřejné
 
@@ -28,7 +28,7 @@ ms.locfileid: "68922321"
 |TypeName|ExceptionsShouldBePublic|
 |CheckId|CA1064|
 |Kategorie|Microsoft.Design|
-|Narušující změna|Bez přerušení|
+|Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
 Výjimka, která není veřejná, je odvozena <xref:System.Exception>přímo <xref:System.SystemException>z, <xref:System.ApplicationException>nebo.

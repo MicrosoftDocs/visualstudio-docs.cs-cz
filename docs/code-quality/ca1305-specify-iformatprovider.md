@@ -16,12 +16,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: eda86085a5a2b8ba8e42116005890d2bda0b1dca
-ms.sourcegitcommit: 5483e399f14fb01f528b3b194474778fd6f59fa6
+ms.openlocfilehash: a9f6c8fd44749de43d86bf8037df0130ad682321
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66714687"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71235038"
 ---
 # <a name="ca1305-specify-iformatprovider"></a>CA1305: Určete IFormatProvider
 
@@ -30,13 +30,13 @@ ms.locfileid: "66714687"
 |TypeName|SpecifyIFormatProvider|
 |CheckId|CA1305|
 |Kategorie|Microsoft.Globalization|
-|Narušující změna|Nenarušující|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Metoda nebo konstruktor volá jeden nebo více členů, které mají přetížení <xref:System.IFormatProvider?displayProperty=fullName> parametr a tato metoda nebo konstruktor nevolá přetížení přebírající <xref:System.IFormatProvider> parametru.
+Metoda nebo konstruktor volá jeden nebo více členů, které mají přetížení přijímající <xref:System.IFormatProvider?displayProperty=fullName> parametr, a metoda nebo konstruktor nevolá přetížení, které <xref:System.IFormatProvider> přijímá parametr.
 
-Toto pravidlo ignoruje volání metod rozhraní .NET, které jsou popsány jako ignoruje <xref:System.IFormatProvider> parametru. Pravidla i ignoruje následujících metod:
+Toto pravidlo ignoruje volání metod .NET, které jsou zdokumentovány jako ignorování <xref:System.IFormatProvider> parametru. Pravidlo také ignoruje následující metody:
 
 - <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType>
 - <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=nameWithType>
@@ -44,27 +44,27 @@ Toto pravidlo ignoruje volání metod rozhraní .NET, které jsou popsány jako 
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Když <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> nebo <xref:System.IFormatProvider> objektu není zadán, výchozí hodnota zadaná pomocí přetíženého členu nemusí mít ve všech národních prostředích požadovaný efekt. Kromě toho členy rozhraní .NET zvolte výchozí jazykovou verzi a formátování podle předpokladů, které nemusí být správná pro váš kód. Pokud chcete mít jistotu, že kód funguje podle očekávání pro vaše scénáře, by měla poskytnout informace specifické jazykové verze podle následujících pokynů:
+V případě, <xref:System.IFormatProvider> že objekt nebonenízadán,nemusímítvýchozíhodnota,kterájeposkytnutapřetíženýmčlenem,efekt,kterýchcetevevšechnárodníchprostředích.<xref:System.Globalization.CultureInfo?displayProperty=nameWithType> Kromě toho členové rozhraní .NET zvolí výchozí jazykovou verzi a formátování na základě předpokladů, které nemusí být pro váš kód správné. Chcete-li se ujistit, že kód funguje podle očekávání pro vaše scénáře, měli byste dodávat informace specifické pro jazykovou verzi podle následujících pokynů:
 
-- Pokud uživateli se zobrazí hodnotu, použijte aktuální jazykové verze. Viz <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>.
+- Pokud se hodnota zobrazí uživateli, použijte aktuální jazykovou verzi. Viz <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>.
 
-- Pokud hodnota se budou ukládat a přístupný softwarem (trvale uložena do souboru nebo databáze), pomocí neutrální jazykové verze. Viz <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.
+- Pokud bude hodnota uložena a bude mít k dispozici software (uložený v souboru nebo databázi), použijte invariantní jazykovou verzi. Viz <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>.
 
-- Pokud si nejste jisti cílové hodnoty, mají příjemce dat nebo zprostředkovatele zadejte jazykovou verzi.
+- Pokud neznáte cíl hodnoty, je nutné, aby příjemce dat nebo poskytovatel tuto jazykovou verzi určil.
 
-I v případě, že výchozí chování přetíženého členu je vhodné pro vaše potřeby, je lepší explicitně volat přetížení specifické pro jazykovou verzi tak, aby váš kód je držitelem dokumentů a snadněji zachována.
+I v případě, že je výchozí chování přetíženého členu vhodné pro vaše potřeby, je lepší explicitně volat přetížení specifické pro jazykovou verzi, aby váš kód byl vlastní dokument a snadněji se udržoval.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, použijte přetížení přijímající <xref:System.IFormatProvider> argument. Nebo můžete použít [jazyka C# interpolovaný řetězec](/dotnet/csharp/tutorials/string-interpolation) a předejte ji do <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> metody.
+Chcete-li opravit porušení tohoto pravidla, použijte přetížení, které přijímá <xref:System.IFormatProvider> argument. Nebo použijte [ C# interpolující řetězec](/dotnet/csharp/tutorials/string-interpolation) a předejte <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> ho do metody.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Je bezpečné potlačit upozornění tohoto pravidla, když je jisté, že výchozí formát je správnou volbou a udržovatelnosti kódu není prioritou důležité vývojové.
+Z tohoto pravidla je bezpečné potlačit upozornění, když je jisté, že výchozí formát je správný, a pokud je zachování kódu důležitou prioritou.
 
 ## <a name="example"></a>Příklad
 
-V následujícím kódu `example1` řetězec porušuje pravidlo CA1305. `example2` Řetězec splňuje pravidlo CA1305 předáním <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>, která implementuje <xref:System.IFormatProvider>do <xref:System.String.Format(System.IFormatProvider,System.String,System.Object)?displayProperty=nameWithType>. `example3` Řetězec splňuje pravidlo CA1305 předáním interpolovaném řetězci na <xref:System.FormattableString.Invariant%2A?displayProperty=fullName]>.
+V následujícím kódu `example1` řetězec porušuje CA1305 pravidla. Řetězec splňuje CA1305 pravidla předáním <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>, který implementuje <xref:System.IFormatProvider>na <xref:System.String.Format(System.IFormatProvider,System.String,System.Object)?displayProperty=nameWithType>. `example2` Řetězec splňuje CA1305 pravidla předáním interpolované <xref:System.FormattableString.Invariant%2A?displayProperty=fullName]>řetězce. `example3`
 
 ```csharp
 string name = "Georgette";
@@ -81,8 +81,8 @@ string example3 = FormattableString.Invariant($"Hello {name}");
 
 ## <a name="related-rules"></a>Související pravidla
 
-- [CA1304: Zadejte možnosti CultureInfo](../code-quality/ca1304-specify-cultureinfo.md)
+- [CA1304: Zadat CultureInfo](../code-quality/ca1304-specify-cultureinfo.md)
 
 ## <a name="see-also"></a>Viz také:
 
-- [Pomocí třídy CultureInfo](/dotnet/standard/globalization-localization/globalization#work-with-culture-specific-settings)
+- [Použití třídy CultureInfo](/dotnet/standard/globalization-localization/globalization#work-with-culture-specific-settings)

@@ -19,12 +19,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: cc32db1aea9c5514a7548bc889b65463de3de3d5
-ms.sourcegitcommit: 5483e399f14fb01f528b3b194474778fd6f59fa6
+ms.openlocfilehash: 2700dc2ade7ba901f15f67045e3170e2bbb40ff8
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66714698"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71235119"
 ---
 # <a name="ca1303-do-not-pass-literals-as-localized-parameters"></a>CA1303: Nepředávejte literály jako lokalizované parametry
 
@@ -33,37 +33,37 @@ ms.locfileid: "66714698"
 |TypeName|DoNotPassLiteralsAsLocalizedParameters|
 |CheckId|CA1303|
 |Kategorie|Microsoft.Globalization|
-|Narušující změna|Pevné|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Metoda předává řetězcový literál jako parametr do konstruktoru .NET nebo metoda a tento řetězec by měl být lokalizovatelný.
+Metoda předává řetězcový literál jako parametr konstruktoru nebo metodě .NET a tento řetězec by měl být Lokalizovatelný.
 
-Toto upozornění je vyvoláno, když řetězcový literál je předán jako hodnotu parametru nebo vlastnost a nejméně jednu z následujících případech má hodnotu true:
+Toto upozornění je vyvoláno, když je řetězcový literál předán jako hodnota parametru nebo vlastnosti a jeden nebo více z následujících případů je pravda:
 
 - <xref:System.ComponentModel.LocalizableAttribute> Atribut parametru nebo vlastnosti je nastaven na hodnotu true.
 
-- Název parametru nebo vlastnosti obsahuje "Text", "Zpráva" nebo "Popisu".
+- Název parametru nebo vlastnosti obsahuje text "text", "zpráva" nebo "titulek".
 
-- Název parametru řetězce, který se předá metodě Console.Write nebo Console.WriteLine je "value" nebo "format".
+- Název řetězcového parametru, který je předán metodě Console. Write nebo Console. WriteLine, je buď hodnota, nebo formát.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Řetězcové literály, které jsou vloženy do zdrojového kódu se obtížně lokalizují.
+Řetězcové literály, které jsou vloženy ve zdrojovém kódu, je obtížné lokalizovat.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, nahraďte řetězcový literál řetězce načíst prostřednictvím instance <xref:System.Resources.ResourceManager> třídy.
+Chcete-li opravit porušení tohoto pravidla, nahraďte řetězcový literál řetězcem načteným prostřednictvím instance <xref:System.Resources.ResourceManager> třídy.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Je bezpečné potlačit upozornění tohoto pravidla, pokud nebude lokalizovat kód knihovny nebo pokud řetězec není vystavený koncovému uživateli nebo vývojáři pomocí knihovny kódu.
+Je bezpečné potlačit upozornění z tohoto pravidla, pokud knihovna kódu nebude lokalizována nebo pokud řetězec není vystaven koncovému uživateli nebo vývojáři pomocí knihovny kódu.
 
-Uživatelům můžete eliminovat šumu proti metody, které by neměly být předány lokalizované řetězce přejmenování parametru nebo vlastnost, nebo označení tyto položky jako podmíněný.
+Uživatelé mohou odstranit šum proti metodám, které by neměly být předány lokalizované řetězce buď přejmenováním parametru nebo vlastnosti, nebo označením těchto položek jako podmíněné.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje metodu, která vyvolá výjimku, pokud některý z jeho dva argumenty jsou mimo rozsah. Pro první argument je předán konstruktoru výjimka řetězcový literál, který porušuje tato pravidla. Pro druhý argument je předán konstruktoru správně načtené pomocí řetězce <xref:System.Resources.ResourceManager>.
+Následující příklad ukazuje metodu, která vyvolá výjimku, pokud některý z jejích dvou argumentů je mimo rozsah. Pro první argument je konstruktoru výjimky předán literální řetězec, který porušuje toto pravidlo. Pro druhý argument je konstruktor správně předán pomocí řetězce načteného prostřednictvím <xref:System.Resources.ResourceManager>.
 
 [!code-cpp[FxCop.Globalization.DoNotPassLiterals#1](../code-quality/codesnippet/CPP/ca1303-do-not-pass-literals-as-localized-parameters_1.cpp)]
 [!code-vb[FxCop.Globalization.DoNotPassLiterals#1](../code-quality/codesnippet/VisualBasic/ca1303-do-not-pass-literals-as-localized-parameters_1.vb)]
@@ -71,4 +71,4 @@ Následující příklad ukazuje metodu, která vyvolá výjimku, pokud někter�
 
 ## <a name="see-also"></a>Viz také:
 
-- [Prostředky v desktopových aplikacích](/dotnet/framework/resources/index)
+- [Prostředky v aplikacích klasické pracovní plochy](/dotnet/framework/resources/index)

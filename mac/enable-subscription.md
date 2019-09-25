@@ -3,14 +3,14 @@ title: Povolení předplatného
 description: Tento článek popisuje, jak pomocí účet Microsoft povolit vaše předplatné a odemykat funkce v Visual Studio pro Mac
 author: asb3993
 ms.author: amburns
-ms.date: 05/06/2018
+ms.date: 09/18/2019
 ms.assetid: 898DFEB8-5757-4CCE-8AD2-8BC7706F5855
-ms.openlocfilehash: 862edbac114eedf42cfd799a89eb4b828d1f499a
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 563b512b9ecf0114a6795d2541a5e8e7f53414de
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68872113"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71213673"
 ---
 # <a name="enable-subscription"></a>Povolení předplatného
 
@@ -34,7 +34,7 @@ Pokud vypršela platnost vašeho předplatného, máte dvě možnosti:
 
 ## <a name="product-key-usage"></a>Použití kódu Product Key
 
-V současné době neexistuje způsob, jak používat kód Product Key k zajištění nároků na Professional nebo Enterprise pro Visual Studio pro Mac. Pokud chcete použít Visual Studio Enterprise pro Mac nebo Visual Studio Professional pro Mac, musíte mít relevantní [předplatné](https://visualstudio.microsoft.com/subscriptions/) a přihlášeni k rozhraní IDE. [](signing-in.md)
+V současné době neexistuje způsob, jak používat kód Product Key k zajištění nároků na Professional nebo Enterprise pro Visual Studio pro Mac. Pokud chcete použít Visual Studio Enterprise pro Mac nebo Visual Studio Professional pro Mac, musíte mít relevantní [předplatné](https://visualstudio.microsoft.com/subscriptions/) a [přihlášeni](signing-in.md) k rozhraní IDE.
 
 ## <a name="offline-activation"></a>Offline aktivace
 

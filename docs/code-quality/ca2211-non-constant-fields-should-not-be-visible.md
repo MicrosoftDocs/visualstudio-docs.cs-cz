@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 77909627385a7aa2e41f87c23ec41dc8ac0e1a5e
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 11ff4ca3a3146c1080e26fd3ab50af7f7cf0e4e6
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68920361"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71231766"
 ---
 # <a name="ca2211-non-constant-fields-should-not-be-visible"></a>CA2211: Nekonstantní pole by neměla být viditelná
 
@@ -31,7 +31,7 @@ ms.locfileid: "68920361"
 |TypeName|NonConstantFieldsShouldNotBeVisible|
 |CheckId|CA2211|
 |Kategorie|Microsoft.Usage|
-|Narušující změna|Narušující|
+|Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
 Veřejné nebo chráněné statické pole není konstantní ani jen pro čtení.

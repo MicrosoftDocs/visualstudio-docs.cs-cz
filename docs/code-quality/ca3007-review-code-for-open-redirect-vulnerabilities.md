@@ -10,12 +10,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: e60d0fad1262138b57f079485bc7455e55c7ec25
-ms.sourcegitcommit: 2ee11676af4f3fc5729934d52541e9871fb43ee9
+ms.openlocfilehash: 0226c0e2e66a6543b81cd8ee674a743766b65f3e
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65841334"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71237275"
 ---
 # <a name="ca3007-review-code-for-open-redirect-vulnerabilities"></a>CA3007: Zkontrolujte ohrožení zabezpečení otevřeným přesměrováním v kódu
 
@@ -24,41 +24,41 @@ ms.locfileid: "65841334"
 |TypeName|ReviewCodeForOpenRedirectVulnerabilities|
 |CheckId|CA3007|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Pevné|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Potenciálně nedůvěryhodný vstup požadavku HTTP dosáhne odpovědi přesměrování HTTP.
+Potenciálně nedůvěryhodný vstup požadavku HTTP dosáhne přesměrování odpovědi HTTP.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Při práci s nedůvěryhodnému vstupu, mějte na otevřeném přesměrování ohrožení zabezpečení. Útočník může zneužít ohrožení zabezpečení otevřeném přesměrování vzhled legitimní adresu URL, ale přesměrování nic netušící návštěvníky útoky phishing nebo jiných škodlivou webovou stránku pomocí vašeho webu.
+Při práci s nedůvěryhodným vstupem nezapomeňte na otevřené chyby zabezpečení přesměrování. Útočník může zneužít otevřenou chybu zabezpečení přesměrování pro použití vašeho webu k poskytnutí vzhledu legitimní adresy URL, ale přesměruje nepodezřelého návštěvníka na podvodný nebo jinou škodlivou webovou stránku.
 
-Toto pravidlo se pokusí najít vstup dosáhnout základní adresy URL pro přesměrování požadavků HTTP.
-
-> [!NOTE]
-> Toto pravidlo nelze sledovat data napříč sestavení. Například pokud jedno sestavení načte vstup požadavku HTTP a předává je na jiné sestavení, který odpoví přesměrování HTTP, nevytvoří toto pravidlo upozornění.
+Toto pravidlo se pokouší najít vstup z požadavků HTTP, které dosáhly adresy URL pro přesměrování HTTP.
 
 > [!NOTE]
-> Je konfigurovatelná omezení jak hluboko bude toto pravidlo analyzovat tok dat mezi volání metody. Zobrazit [Analyzer Configuration](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md#dataflow-analysis) jak nakonfigurovat limit v souboru EditorConfig.
+> Toto pravidlo nemůže sledovat data napříč sestaveními. Například pokud jedno sestavení přečte vstup požadavku HTTP a pak ho předává do jiného sestavení, které reaguje na přesměrování HTTP, toto pravidlo nevytvoří upozornění.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+> [!NOTE]
+> Existuje konfigurovatelné omezení, jak hluboko bude toto pravidlo analyzovat tok dat napříč voláními metod. Postup konfigurace limitu v souboru EditorConfig naleznete v tématu [Configuration Analyzer](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md#dataflow-analysis) .
 
-Některé přístupy k opravě chyby zabezpečení otevřeném přesměrování patří:
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-- Nepovolit uživatelům zahájení přesměrování.
-- Nepovolit uživatelům zadat libovolnou část adresy URL v případě přesměrování.
-- Omezte přesměrování předdefinované "seznamu povolených" z adres URL.
-- Ověření adresy URL pro přesměrování.
-- Pokud je k dispozici, zvažte použití stránky právní omezení, když uživatelé přesměrovaní z vašeho webu.
+Mezi přístupy k opravě slabých chyb zabezpečení při přesměrování patří:
+
+- Nepovolujte uživatelům iniciování přesměrování.
+- Nepovolujte uživatelům zadání jakékoli části adresy URL ve scénáři přesměrování.
+- Omezí přesměrování na předdefinovaný seznam povolených adres URL.
+- Ověřte adresy URL přesměrování.
+- Pokud je to možné, zvažte použití stránky s omezením, když se uživatelé přesměrují z webu.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Pokud víte, že jste ověřili vstupu je omezeno pouze na určené adresy URL, je v pořádku pro potlačení tohoto upozornění.
+Pokud víte, že jste ověřili, že vstup bude omezený na zamýšlené adresy URL, je dobré toto upozornění potlačit.
 
-## <a name="pseudo-code-examples"></a>Příklady pseudo kódu
+## <a name="pseudo-code-examples"></a>Příklady kódu pseudo
 
-### <a name="violation"></a>Porušení
+### <a name="violation"></a>Selhání
 
 ```csharp
 using System;

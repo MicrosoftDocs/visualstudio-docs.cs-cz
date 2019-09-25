@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d29eb9475d48e634766df65836162d6a79fed77
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0e671deab060346bb998932495e5590f19945eaa
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62808407"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71233106"
 ---
 # <a name="ca2006-use-safehandle-to-encapsulate-native-resources"></a>CA2006: Použijte SafeHandle k zapouzdření nativních prostředků
 
@@ -28,27 +28,27 @@ ms.locfileid: "62808407"
 |TypeName|UseSafeHandleToEncapsulateNativeResources|
 |CheckId|CA2006|
 |Kategorie|Microsoft.Reliability|
-|Narušující změna|Nenarušující|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Spravovat kód používá <xref:System.IntPtr> pro přístup k nativní prostředky.
+Spravovaný kód používá <xref:System.IntPtr> pro přístup k nativním prostředkům.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Použití `IntPtr` ve spravovaném kódu může znamenat potenciální problém zabezpečení a spolehlivost. Všechny výskyty `IntPtr` musí být přezkoumána k určení, zda použití <xref:System.Runtime.InteropServices.SafeHandle> , nebo podobné technologie, je nutné na příslušné místo. Pokud dojde k problémům `IntPtr` představuje některé nativní prostředky, jako je například paměť, popisovače souboru nebo soketu, že spravovaný kód se považuje za vlastní. Pokud spravovaný kód vlastní prostředek, se musí také uvolnit nativní prostředky spojené s ním, protože selhání k tomu by způsobilo úniku prostředků.
+`IntPtr` Použití ve spravovaném kódu může poukazovat na potenciální problém zabezpečení a spolehlivosti. Aby bylo možné `IntPtr` zjistit, zda je na svém místě vyžadováno použití <xref:System.Runtime.InteropServices.SafeHandle> nebo podobná technologie, je nutné zkontrolovat všechna použití. K problémům dojde, pokud `IntPtr` představuje určitý nativní prostředek, jako je například paměť, popisovač souboru nebo soket, který je spravovaným kódem považován za vlastní. Pokud spravovaný kód vlastní prostředek, musí také uvolnit nativní prostředky, které jsou k němu přidruženy, protože v důsledku selhání by to způsobilo únik prostředků.
 
-V takových scénářích, problémy zabezpečení a spolehlivosti bude také existovat, pokud je povolen přístup s více vlákny na `IntPtr` a způsob, jak uvolnění prostředků, která je reprezentována `IntPtr` je k dispozici. Tyto potíže týkají recyklaci `IntPtr` hodnotu na uvolnění prostředků během souběžné používání prostředku v jiném vlákně. To může způsobit konflikty časování kde jedno vlákno může číst nebo zapisovat data, která souvisí s nesprávnou prostředků. Například, pokud váš typ uloží popisovač operačního systému jako `IntPtr` a umožňuje uživatelům pro volání obou **Zavřít** a jiným způsobem, který používá tento popisovač současně a využijte bez nějaký druh synchronizace, váš kód obsahuje popisovač recyklace došlo k potížím.
+V takových scénářích budou k dispozici také problémy se zabezpečením a spolehlivostí, pokud je povolen `IntPtr` přístup s více vlákny a způsob uvolnění prostředku, který je `IntPtr` reprezentován systémem. Tyto problémy zahrnují recyklaci `IntPtr` hodnoty pro vydanou verzi prostředků, zatímco současné využití prostředku se provádí v jiném vlákně. To může způsobit časování časování, ve kterém jedno vlákno může číst nebo zapisovat data přidružená k chybnému prostředku. Například pokud váš typ uchovává popisovač operačního systému jako `IntPtr` a umožňuje uživatelům volat jak **Zavřít** , tak i jinou metodu, která tento popisovač používá současně a bez určitého druhu synchronizace, váš kód má potíže s recyklací popisovače.
 
-Tento popisovač recyklace problém může způsobit poškození dat a často, ohrožení zabezpečení. `SafeHandle` a své třídy na stejné úrovni <xref:System.Runtime.InteropServices.CriticalHandle> poskytují mechanismus pro zapouzdření nativní popisovač pro prostředek tak, aby tyto problémy dělení na vlákna se můžete vyhnout. Kromě toho můžete použít `SafeHandle` a jeho třída na stejné úrovni `CriticalHandle` pro ostatní problémy s tvorbou vláken, například pečlivě řídit dobu života spravovaných objektů, které obsahují kopii nativní popisovač prostřednictvím volání do nativní metody. V takovém případě můžete často eliminovat, volání `GC.KeepAlive`. Nároky na výkon, k nimž dochází při použití `SafeHandle` a menší míře `CriticalHandle`, často bylo možné zmenšit prostřednictvím pečlivého návrhu.
+Tento problém recyklace obslužné rutiny může způsobit poškození dat a často ohrožení zabezpečení. `SafeHandle`a jeho třída <xref:System.Runtime.InteropServices.CriticalHandle> na stejné úrovni poskytuje mechanismus pro zapouzdření nativního popisovače do prostředku tak, aby se takové problémy s vlákny mohly vyhnout. Kromě toho můžete použít `SafeHandle` a jeho třídu `CriticalHandle` stejné úrovně pro jiné problémy s vlákny, například k pečlivému řízení životnosti spravovaných objektů, které obsahují kopii nativního popisovače přes volání do nativních metod. V této situaci můžete často odebrat volání do `GC.KeepAlive`. Režie na výkon, kterou jste se zaznamenali při používání `SafeHandle` a, na menší `CriticalHandle`stupeň, se může často snížit prostřednictvím pečlivého návrhu.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Převést `IntPtr` informací o využití a `SafeHandle` pro bezpečnou správu přístupu pro nativní prostředky. Zobrazit <xref:System.Runtime.InteropServices.SafeHandle> článku příklady.
+Převeďte `IntPtr` použití `SafeHandle` na pro bezpečnou správu přístupu k nativním prostředkům. Příklady najdete <xref:System.Runtime.InteropServices.SafeHandle> v referenčním článku.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Nepotlačujte upozornění.
+Toto upozornění potlačit.
 
 ## <a name="see-also"></a>Viz také:
 

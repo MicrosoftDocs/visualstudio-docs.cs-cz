@@ -8,12 +8,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6de817e3aaecbdd1c89cc2174e91126ea39d99d7
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 42efb51dfe9c447538fe8f01bdd37c73bf993d8f
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62541113"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71237121"
 ---
 # <a name="ca3075-insecure-dtd-processing"></a>CA3075: Zpracování nezabezpečené specifikace DTD
 
@@ -22,62 +22,62 @@ ms.locfileid: "62541113"
 |TypeName|InsecureDTDProcessing|
 |CheckId|CA3075|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Pevné|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Pokud používáte nezabezpečené <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> instance nebo odkaz na externí entity zdroje, analyzátor může přijmout nedůvěryhodné vstupní tak zveřejnit citlivé informace, které útočníci.
+Pokud používáte nezabezpečené <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> instance nebo odkazujete na zdroje externích entit, analyzátor může přijmout nedůvěryhodné vstupní a únik citlivých informací útočníkům.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-A *dokumentu typ definice (DTD)* je jedním ze dvou způsobů analyzátor jazyka XML můžete určit platnosti dokumentu, podle definice [World Wide Web Consortium (W3C) značky XML (Extensible Language) 1.0](http://www.w3.org/TR/2008/REC-xml-20081126/). Toto pravidlo vyhledá vlastnosti a instance, kde je nedůvěryhodná data přijat upozornit vývojáře o potenciál [informacím](/dotnet/framework/wcf/feature-details/information-disclosure) hrozby nebo [útok na dostupnost služby (DoS)](/dotnet/framework/wcf/feature-details/denial-of-service) útoky. Toto pravidlo aktivuje, když:
+*Definice typu dokumentu (DTD)* je jedním ze dvou způsobů, jak může analyzátor XML určit platnost dokumentu, jak je definováno v [konsorcium World Wide Web (W3C) jazyk XML (Extensible Markup Language) (XML) 1,0](http://www.w3.org/TR/2008/REC-xml-20081126/). Toto pravidlo vyhledává vlastnosti a instance, kde jsou přijímána nedůvěryhodná data pro upozornění vývojářů o potenciálních hrozbách [zpřístupnění informací](/dotnet/framework/wcf/feature-details/information-disclosure) nebo útokech DOS [(Denial of Service)](/dotnet/framework/wcf/feature-details/denial-of-service) . Toto pravidlo se aktivuje v těchto případech:
 
-- Je zapnutá DtdProcessing <xref:System.Xml.XmlReader> instanci, která přeloží externí entity XML pomocí <xref:System.Xml.XmlUrlResolver>.
+- DtdProcessing je povolena pro <xref:System.Xml.XmlReader> instanci, která řeší externí entity XML pomocí. <xref:System.Xml.XmlUrlResolver>
 
-- <xref:System.Xml.XmlNode.InnerXml%2A> Nastavenou v souboru XML.
+- <xref:System.Xml.XmlNode.InnerXml%2A> Vlastnost v kódu XML je nastavena.
 
-- <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A> je nastavena na analýzy.
+- <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A>vlastnost je nastavena na hodnotu Parse.
 
-- Nedůvěryhodný vstup zpracována pomocí <xref:System.Xml.XmlResolver> místo <xref:System.Xml.XmlSecureResolver>.
+- Nedůvěryhodný vstup je zpracován pomocí <xref:System.Xml.XmlResolver> <xref:System.Xml.XmlSecureResolver>místo.
 
-- <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType> Metoda je volána s nezabezpečené <xref:System.Xml.XmlReaderSettings> instance nebo vůbec žádné instance.
+- Metoda je vyvolána s nezabezpečenou <xref:System.Xml.XmlReaderSettings> instancí nebo žádnou instancí. <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType>
 
-- <xref:System.Xml.XmlReader> je vytvořen s nezabezpečené výchozí nastavení nebo hodnoty.
+- <xref:System.Xml.XmlReader>je vytvořeno s nezabezpečenými výchozími nastaveními nebo hodnotami.
 
-Ve všech těchto případech je výsledek stejný: obsah buď soubor systému nebo síťových sdílených složek z počítače, kde je zpracování souboru XML se zveřejní pro útočníka nebo zpracování DTD může sloužit jako vektor DoS.
+V každém z těchto případů je výsledek stejný: obsah buď ze systému souborů nebo síťových sdílených složek z počítače, ve kterém je zpracován soubor XML, bude útočníkovi zpřístupněn, nebo může být zpracování DTD použito jako vektor DoS.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-- Zachytit a zpracovat všechny výjimky XmlTextReader správně, aby se zabránilo zpřístupnění informací cestu.
+- Zachyťte a zpracujte všechny výjimky XmlTextReader správně, aby nedocházelo k odhalení informací o cestách.
 
-- Použití <xref:System.Xml.XmlSecureResolver> omezit prostředky, ke kterým přístup XmlTextReader.
+- <xref:System.Xml.XmlSecureResolver> Použijte k omezení prostředků, ke kterým má aplikace XmlTextReader přístup.
 
-- Nejsou povoleny <xref:System.Xml.XmlReader> otevřete všem externím prostředkům tak, že nastavíte <xref:System.Xml.XmlResolver> vlastnost **null**.
+- Nepovolujte <xref:System.Xml.XmlReader> otevření žádných externích prostředků <xref:System.Xml.XmlResolver> nastavením vlastnosti na **hodnotu null**.
 
-- Ujistěte se, <xref:System.Data.DataViewManager.DataViewSettingCollectionString%2A?displayProperty=nameWithType> je vlastnosti přiřazen z důvěryhodného zdroje.
+- Ujistěte se, <xref:System.Data.DataViewManager.DataViewSettingCollectionString%2A?displayProperty=nameWithType> že je vlastnost přiřazena z důvěryhodného zdroje.
 
-**Rozhraní .NET 3.5 a starší**
+**.NET 3,5 a starší**
 
-- Zakázat zpracování DTD, pokud pracujete se sekvenčním nedůvěryhodných zdrojů tak, že nastavíte <xref:System.Xml.XmlReaderSettings.ProhibitDtd%2A> vlastnost **true**.
+- Pokud pracujete s nedůvěryhodnými zdroji, zakažte zpracování DTD nastavením <xref:System.Xml.XmlReaderSettings.ProhibitDtd%2A> vlastnosti na **hodnotu true**.
 
-- Pomocí třídy XmlTextReader má vyžádané dědičnosti úplný vztah důvěryhodnosti.
+- Třída XmlTextReader má úplný požadavek dědičnosti vztahu důvěryhodnosti.
 
-**Rozhraní .NET 4 a novější**
+**.NET 4 a novější**
 
-- Nedoporučujeme povolovat DtdProcessing, pokud pracujete s nedůvěryhodných zdrojů tak, že nastavíte <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A?displayProperty=nameWithType> vlastnost **zakázat** nebo **Ignorovat**.
+- Pokud pracujete s nedůvěryhodnými zdroji nastavením <xref:System.Xml.XmlReaderSettings.DtdProcessing%2A?displayProperty=nameWithType> vlastnosti na **Zakázat** nebo **Ignorovat**, vyhněte se povolení DtdProcessing.
 
-- Zajistěte, aby metoda Load() XmlReader instance ve všech případech InnerXml.
+- Zajistěte, aby metoda Load () přebírá instanci XmlReader ve všech případech InnerXml.
 
 > [!NOTE]
-> Toto pravidlo může vykazovat některé platné instance XmlSecureResolver počet falešně pozitivních výsledků.
+> Toto pravidlo může v některých platných instancích XmlSecureResolver hlásit falešně pozitivní výsledky.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Pokud si nejste jisti, že vstup je znám jako z důvěryhodného zdroje, nepotlačujte pravidlo z tohoto upozornění.
+Pokud si nejste jistí, že je vstup z důvěryhodného zdroje známý, nedoporučujeme z tohoto upozornění pravidlo potlačit.
 
-## <a name="pseudo-code-examples"></a>Příklady pseudo kódu
+## <a name="pseudo-code-examples"></a>Příklady kódu pseudo
 
-### <a name="violation"></a>Porušení
+### <a name="violation"></a>Selhání
 
 ```csharp
 using System.IO;
@@ -121,7 +121,7 @@ class TestClass
 }
 ```
 
-### <a name="violation"></a>Porušení
+### <a name="violation"></a>Selhání
 
 ```csharp
 using System.Xml;
@@ -209,7 +209,7 @@ public static void TestMethod(string xml)
 }
 ```
 
-### <a name="violation"></a>Porušení
+### <a name="violation"></a>Selhání
 
 ```csharp
 using System.IO;
@@ -250,7 +250,7 @@ namespace TestNamespace
 }
 ```
 
-### <a name="violation"></a>Porušení
+### <a name="violation"></a>Selhání
 
 ```csharp
 using System.Xml;
@@ -287,7 +287,7 @@ namespace TestNamespace
 }
 ```
 
-### <a name="violation"></a>Porušení
+### <a name="violation"></a>Selhání
 
 ```csharp
 using System.Xml;

@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 505aa8cdc1371a3bc288772d77b49eb7a50e9830
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 0639d30771b3a6bb288ddbf9644dda2efcd5f90d
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68920143"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71231362"
 ---
 # <a name="ca2230-use-params-for-variable-arguments"></a>CA2230: Použijte parametry pro proměnné argumenty
 
@@ -28,7 +28,7 @@ ms.locfileid: "68920143"
 |TypeName|UseParamsForVariableArguments|
 |CheckId|CA2230|
 |Kategorie|Microsoft.Usage|
-|Narušující změna|Narušující|
+|Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
 Veřejný nebo chráněný typ obsahuje veřejnou nebo chráněnou metodu, která používá `VarArgs` konvenci volání.

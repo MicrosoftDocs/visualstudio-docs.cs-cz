@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f8a672056c8663c2e27ec730e542083aee9738f
-ms.sourcegitcommit: 5483e399f14fb01f528b3b194474778fd6f59fa6
+ms.openlocfilehash: b3c6298c2186b6a73b4a7ef441b5f4c42c90ff6a
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66714977"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71231065"
 ---
 # <a name="ca2228-do-not-ship-unreleased-resource-formats"></a>CA2228: Nedodávejte nevydané formáty prostředku
 
@@ -28,19 +28,19 @@ ms.locfileid: "66714977"
 |TypeName|DoNotShipUnreleasedResourceFormats|
 |CheckId|CA2228|
 |Kategorie|Microsoft.Usage|
-|Narušující změna|Pevné|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Soubor prostředků bylo vytvořeno pomocí verze rozhraní .NET, která se momentálně nepodporuje.
+Soubor prostředků byl vytvořen pomocí verze rozhraní .NET, která není aktuálně podporována.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Soubory prostředků, které byly vytvořeny pomocí předprodejní verze rozhraní .NET nemusí být použitelné podporovanými verzemi rozhraní .NET.
+Soubory prostředků, které byly vytvořeny pomocí předprodejní verze rozhraní .NET, nemusí být použitelné pro podporované verze rozhraní .NET.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, vytvoření prostředku, který používá podporovanou verzi rozhraní .NET.
+Chcete-li opravit porušení tohoto pravidla, sestavte prostředek pomocí podporované verze rozhraní .NET.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 

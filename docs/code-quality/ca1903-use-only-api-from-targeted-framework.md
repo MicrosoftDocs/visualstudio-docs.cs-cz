@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7d972198898dd1a4cafa5280c129db38bb3e4982
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 704972127130cc7be991213249ff41212fa40676
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68921290"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71233272"
 ---
 # <a name="ca1903-use-only-api-from-targeted-framework"></a>CA1903: Používejte jen rozhraní API z cílové architektury
 
@@ -28,7 +28,7 @@ ms.locfileid: "68921290"
 |TypeName|UseOnlyApiFromTargetedFramework|
 |CheckId|CA1903|
 |Kategorie|Microsoft. přenositelnost|
-|Narušující změna|Přerušení – při vyvolání proti podpisu externě viditelného člena nebo typu.<br /><br /> Bez přerušení – při vyvolání v těle metody.|
+|Zásadní změna|Přerušení – při vyvolání proti podpisu externě viditelného člena nebo typu.<br /><br /> Bez přerušení – při vyvolání v těle metody.|
 
 ## <a name="cause"></a>příčina
 Člen nebo typ používá člen nebo typ, který byl představen v aktualizaci Service Pack, která nebyla zahrnuta do cíleného rozhraní projektu.

@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 521a44b432a5b8ea886b23aab6b39789efe3b1b0
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 802442a71eed3267a71fad9a5a208c9ee82cb556
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68920712"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71232352"
 ---
 # <a name="ca2131-security-critical-types-may-not-participate-in-type-equivalence"></a>CA2131: Typy kritické pro zabezpečení se nesmí účastnit ekvivalence typů
 
@@ -24,7 +24,7 @@ ms.locfileid: "68920712"
 |TypeName|CriticalTypesMustNotParticipateInTypeEquivalence|
 |CheckId|CA2131|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Narušující|
+|Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
 Typ se účastní rovnocennosti typu a buď samotný typ, nebo člen nebo pole typu, je označen <xref:System.Security.SecurityCriticalAttribute> atributem.

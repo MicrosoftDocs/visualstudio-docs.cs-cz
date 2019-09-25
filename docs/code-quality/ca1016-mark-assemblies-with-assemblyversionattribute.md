@@ -18,12 +18,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 85e09a670ac85d37bc2c0297201db93462f64ca1
-ms.sourcegitcommit: 5483e399f14fb01f528b3b194474778fd6f59fa6
+ms.openlocfilehash: 140037b025db88230762bc0d540d933cec7a5119
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66714456"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71236314"
 ---
 # <a name="ca1016-mark-assemblies-with-assemblyversionattribute"></a>CA1016: Označte sestavení pomocí AssemblyVersionAttribute
 
@@ -32,9 +32,9 @@ ms.locfileid: "66714456"
 |TypeName|MarkAssembliesWithAssemblyVersion|
 |CheckId|CA1016|
 |Kategorie|Microsoft.Design|
-|Narušující změna|Nenarušující|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
 Sestavení nemá číslo verze.
 
@@ -48,21 +48,21 @@ Identita sestavení se skládá z následujících informací:
 
 - Jazyková verze
 
-- Veřejný klíč (pro sestavení se silným názvem).
+- Veřejný klíč (pro silně pojmenovaná sestavení).
 
-.NET používá číslo verze k jednoznačné identifikaci sestavení a pro svázání s typy v sestaveních se silným názvem. Číslo verze je používáno spolu se zásadou verze a vydavatele. Ve výchozím nastavení mohou být aplikace spuštěny pouze ve verzi sestavení, v níž byly sestaveny.
+Rozhraní .NET používá číslo verze k jednoznačné identifikaci sestavení a k vytvoření vazby na typy v silně pojmenovaných sestaveních. Číslo verze je používáno spolu se zásadou verze a vydavatele. Ve výchozím nastavení mohou být aplikace spuštěny pouze ve verzi sestavení, v níž byly sestaveny.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, přidejte číslo verze na sestavení s použitím <xref:System.Reflection.AssemblyVersionAttribute?displayProperty=fullName> atribut.
+Chcete-li opravit porušení tohoto pravidla, přidejte do sestavení číslo verze pomocí <xref:System.Reflection.AssemblyVersionAttribute?displayProperty=fullName> atributu.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Nepotlačujte upozornění tohoto pravidla pro sestavení, které jsou používány třetími stranami nebo v produkčním prostředí.
+Potlačit upozornění z tohoto pravidla pro sestavení, která používají třetí strany nebo v produkčním prostředí.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje sestavení, který má <xref:System.Reflection.AssemblyVersionAttribute> atribut.
+Následující příklad ukazuje sestavení, které má <xref:System.Reflection.AssemblyVersionAttribute> atribut použit.
 
 [!code-csharp[FxCop.Design.AssembliesVersion#1](../code-quality/codesnippet/CSharp/ca1016-mark-assemblies-with-assemblyversionattribute_1.cs)]
 [!code-vb[FxCop.Design.AssembliesVersion#1](../code-quality/codesnippet/VisualBasic/ca1016-mark-assemblies-with-assemblyversionattribute_1.vb)]
@@ -71,4 +71,4 @@ Následující příklad ukazuje sestavení, který má <xref:System.Reflection.
 ## <a name="see-also"></a>Viz také:
 
 - [Správa verzí sestavení](/dotnet/framework/app-domains/assembly-versioning)
-- [Postupy: Vytváření zásad vydavatele](/dotnet/framework/configure-apps/how-to-create-a-publisher-policy)
+- [Postupy: Vytvoření zásady vydavatele](/dotnet/framework/configure-apps/how-to-create-a-publisher-policy)

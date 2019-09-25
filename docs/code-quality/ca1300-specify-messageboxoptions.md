@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: bd269b099095326a260da7613bf3c2c402e864be
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 746475e60bbe72c4ebfc51f13d0b2d4d0552ff62
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62797693"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71235197"
 ---
 # <a name="ca1300-specify-messageboxoptions"></a>CA1300: Určete MessageBoxOptions
 
@@ -31,27 +31,27 @@ ms.locfileid: "62797693"
 |TypeName|SpecifyMessageBoxOptions|
 |CheckId|CA1300|
 |Kategorie|Microsoft.Globalization|
-|Narušující změna|Nenarušující|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Metoda volá přetížení <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=fullName> metodu, která se nedají <xref:System.Windows.Forms.MessageBoxOptions?displayProperty=fullName> argument.
+Metoda volá přetížení <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=fullName> metody, která <xref:System.Windows.Forms.MessageBoxOptions?displayProperty=fullName> nepřijímá argument.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Chcete-li zobrazit okno se zprávou správně pro jazykové verze, které používají směr čtení zprava doleva, předejte [MessageBoxOptions.RightAlign](<xref:System.Windows.Forms.MessageBoxOptions.RightAlign>) a [MessageBoxOptions.RtlReading](<xref:System.Windows.Forms.MessageBoxOptions.RtlReading>) polím <xref:System.Windows.Forms.MessageBox.Show%2A> Metoda. Zkontrolujte <xref:System.Windows.Forms.Control.RightToLeft%2A?displayProperty=fullName> vlastnost ovládacího prvku obsahujícího k určení, jestli se má použít pořadí čtení zprava doleva.
+Chcete-li zobrazit okno se zprávou pro jazykové verze, které používají pořadí čtení zprava doleva, předejte do <xref:System.Windows.Forms.MessageBox.Show%2A> metody pole [MessageBoxOptions. RightAlign](<xref:System.Windows.Forms.MessageBoxOptions.RightAlign>) a [MessageBoxOptions. RtlReading](<xref:System.Windows.Forms.MessageBoxOptions.RtlReading>) . <xref:System.Windows.Forms.Control.RightToLeft%2A?displayProperty=fullName> Zkontrolujte vlastnost obsahujícího ovládacího prvku, abyste zjistili, jestli chcete použít směr čtení zprava doleva.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, zavolejte přetížení <xref:System.Windows.Forms.MessageBox.Show%2A> metodu, která přebírá <xref:System.Windows.Forms.MessageBoxOptions> argument.
+Chcete-li opravit porušení tohoto pravidla, zavolejte přetížení <xref:System.Windows.Forms.MessageBox.Show%2A> metody, která <xref:System.Windows.Forms.MessageBoxOptions> přijímá argument.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Je bezpečné potlačit upozornění tohoto pravidla, když knihovny kódu nesmí být lokalizována pro jazykovou verzi, která používá pořadí čtení zprava doleva.
+Je bezpečné potlačit upozornění z tohoto pravidla, pokud knihovna kódu nebude lokalizována do jazykové verze, která používá pořadí čtení zprava doleva.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje metodu, která zobrazí okno se zprávou, která obsahuje možnosti, které jsou vhodné pro pořadí čtení jazykové verze. Soubor prostředků, který není zobrazený, je potřeba vytvořit příklad. Postupujte podle komentáře v příkladu, k vytvoření příkladu bez souboru prostředků a otestovat funkci zprava doleva.
+Následující příklad ukazuje metodu, která zobrazí okno se zprávou s možnostmi, které jsou vhodné pro pořadí čtení jazykové verze. Soubor prostředků, který není zobrazen, je požadován k sestavení příkladu. Použijte komentáře v příkladu k sestavení příkladu bez souboru prostředků a k otestování funkce zprava doleva.
 
 [!code-vb[FxCop.Globalization.SpecifyMBOptions#1](../code-quality/codesnippet/VisualBasic/ca1300-specify-messageboxoptions_1.vb)]
 [!code-csharp[FxCop.Globalization.SpecifyMBOptions#1](../code-quality/codesnippet/CSharp/ca1300-specify-messageboxoptions_1.cs)]

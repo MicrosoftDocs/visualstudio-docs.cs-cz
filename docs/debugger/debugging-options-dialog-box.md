@@ -1,5 +1,5 @@
 ---
-title: Ladění, dialogové okno Možnosti | Dokumentace Microsoftu
+title: Ladění, dialogové okno Možnosti | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 dev_langs:
@@ -21,15 +21,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d0a6a6d8312dba4ae89e773fc2be8fa0b9984e0b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4fc11269713770bbc1950d8f15626936ddd2174f
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62851658"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71211137"
 ---
 # <a name="debugging-options-dialog-box"></a>Ladění, dialogové okno Možnosti
-**Ladění** složky v **možnosti** dialogové okno na **nástroje** nabídky, poskytuje na následujících stránkách, které vám umožní určit ladicí program možnosti nástroje.
+Složka **ladění** , v dialogovém okně **Možnosti** v nabídce **nástroje** , poskytuje následující stránky, které umožňují zadat možnosti ladicího nástroje.
 
 - [Obecné, Ladění, dialogové okno Možnosti](../debugger/general-debugging-options-dialog-box.md)
 
@@ -41,6 +41,6 @@ ms.locfileid: "62851658"
 
 ## <a name="see-also"></a>Viz také
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)
-- [Ladění v sadě Visual Studio](../debugger/index.md)
+- [Ladění v sadě Visual Studio](../debugger/index.yml)
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)
 - [Ladění odkazu uživatelského rozhraní](../debugger/debugging-user-interface-reference.md)

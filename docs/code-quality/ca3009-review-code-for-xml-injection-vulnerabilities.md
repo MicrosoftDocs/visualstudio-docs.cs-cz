@@ -10,12 +10,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 2f0b0ba39c8edee9b2b8df608b47a00e6353538f
-ms.sourcegitcommit: 2ee11676af4f3fc5729934d52541e9871fb43ee9
+ms.openlocfilehash: 37ba7e8664c6fa24e302dbebd38643a0c451114c
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65841072"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71237248"
 ---
 # <a name="ca3009-review-code-for-xml-injection-vulnerabilities"></a>CA3009: Zkontrolujte ohrožení zabezpečení injektáží XML v kódu
 
@@ -24,37 +24,37 @@ ms.locfileid: "65841072"
 |TypeName|ReviewCodeForXmlInjectionVulnerabilities|
 |CheckId|CA3009|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Pevné|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Potenciálně nedůvěryhodný vstup požadavku HTTP dosáhne nezpracovaného výstupu XML.
+Potenciálně nedůvěryhodný vstup požadavku HTTP dostane nezpracovaný výstup XML.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Při práci s nedůvěryhodnému vstupu, dávejte útoků prostřednictvím injektáže XML. Útočník může pomocí vkládání XML vkládání speciálních znaků do dokumentu XML, což neplatný dokument XML. Nebo útočník může vložit speciálně z uzlů XML podle vlastního uvážení.
+Při práci s nedůvěryhodným vstupem nezapomeňte na útoky prostřednictvím injektáže XML. Útočník může použít injektáže XML k vložení speciálních znaků do dokumentu XML, takže dokument XML je neplatný. Nebo by útočník mohl záměrně vložit uzly XML podle jejich výběru.
 
-Toto pravidlo se pokusí najít vstup dosažení nezpracované zápisu XML požadavků HTTP.
-
-> [!NOTE]
-> Toto pravidlo nelze sledovat data napříč sestavení. Například pokud jedno sestavení načte vstup požadavku HTTP a předává je na jiné sestavení, která zapisuje nezpracovaném kódu XML, nevytvoří toto pravidlo upozornění.
+Toto pravidlo se pokouší najít vstup z požadavků HTTP, které dosáhly nezpracovaného zápisu XML.
 
 > [!NOTE]
-> Je konfigurovatelná omezení jak hluboko bude toto pravidlo analyzovat tok dat mezi volání metody. Zobrazit [Analyzer Configuration](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md#dataflow-analysis) jak nakonfigurovat limit v souboru EditorConfig.
+> Toto pravidlo nemůže sledovat data napříč sestaveními. Například pokud jedno sestavení přečte vstup požadavku HTTP a pak ho předává do jiného sestavení, které zapisuje nezpracovaný kód XML, toto pravidlo nevytvoří upozornění.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+> [!NOTE]
+> Existuje konfigurovatelné omezení, jak hluboko bude toto pravidlo analyzovat tok dat napříč voláními metod. Postup konfigurace limitu v souboru EditorConfig naleznete v tématu [Configuration Analyzer](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md#dataflow-analysis) .
 
-Nezapisujte nezpracovaném kódu XML. Místo toho použijte metody nebo vlastnosti tohoto XML zakódovat svůj vstup.
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Nebo kódování XML zadat před zápisem nezpracovaném kódu XML.
+Nezapište nezpracovaný kód XML. Místo toho použijte metody nebo vlastnosti, které jsou ve formátu XML, zakódovat jejich vstup.
+
+Nebo zakódování XML před zápisem nezpracovaného kódu XML.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Není potlačit upozornění tohoto pravidla.
+Potlačit upozornění z tohoto pravidla
 
-## <a name="pseudo-code-examples"></a>Příklady pseudo kódu
+## <a name="pseudo-code-examples"></a>Příklady kódu pseudo
 
-### <a name="violation"></a>Porušení
+### <a name="violation"></a>Selhání
 
 ```csharp
 using System;

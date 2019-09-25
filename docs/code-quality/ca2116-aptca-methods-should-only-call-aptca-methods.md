@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f55c48583e47a4602f33d69799d1d86a6c9c3e56
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: f09817e9248fdc28f56ac0162e783bf72643ee5c
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68921144"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71232690"
 ---
 # <a name="ca2116-aptca-methods-should-only-call-aptca-methods"></a>CA2116: Metody APTCA by měly volat pouze metody APTCA
 
@@ -28,7 +28,7 @@ ms.locfileid: "68921144"
 |TypeName|AptcaMethodsShouldOnlyCallAptcaMethods|
 |CheckId|CA2116|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Narušující|
+|Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
 

@@ -10,12 +10,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a4b80b8ede1ab2b8d858ed7378f318f2eebe5fa
-ms.sourcegitcommit: 2ee11676af4f3fc5729934d52541e9871fb43ee9
+ms.openlocfilehash: 1d001dc306bbb225c4ecc1c0f17bf46619e2d0a7
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65841539"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71237265"
 ---
 # <a name="ca3008-review-code-for-xpath-injection-vulnerabilities"></a>CA3008: Zkontrolujte ohrožení zabezpečení injektáží XPath v kódu
 
@@ -24,39 +24,39 @@ ms.locfileid: "65841539"
 |TypeName|ReviewCodeForXPathInjectionVulnerabilities|
 |CheckId|CA3008|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Pevné|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Potenciálně nedůvěryhodný vstup požadavku HTTP dosáhne dotaz XPath.
+Potenciálně nedůvěryhodný vstup požadavku HTTP dosáhne dotazu XPath.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Při práci s nedůvěryhodnému vstupu, dávejte útoků prostřednictvím injektáže XPath. Vytváření dotazů XPath pomocí nedůvěryhodný vstup může útočníkovi umožnit speciálně manipulovat s dotaz, který vrací výsledek neúmyslnému a pravděpodobně zpřístupnit obsah XML poslal dotaz.
+Při práci s nedůvěryhodným vstupem si vědomete útoků prostřednictvím injektáže XPath. Vytváření dotazů XPath pomocí nedůvěryhodného vstupu může útočníkovi umožnit škodlivým způsobem manipulovat s dotazem, aby vrátil nezamýšlený výsledek a případně vyzradit obsah dotazovaného XML.
 
-Toto pravidlo se pokusí najít vstup požadavků HTTP dosáhnout pomocí výrazu XPath.
-
-> [!NOTE]
-> Toto pravidlo nelze sledovat data napříč sestavení. Například pokud jedno sestavení načte vstup požadavku HTTP a předává je na jiné sestavení, který provede dotaz XPath, nevytvoří toto pravidlo upozornění.
+Toto pravidlo se pokouší najít vstup z požadavků HTTP, které dosáhly výrazu XPath.
 
 > [!NOTE]
-> Je konfigurovatelná omezení jak hluboko bude toto pravidlo analyzovat tok dat mezi volání metody. Zobrazit [Analyzer Configuration](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md#dataflow-analysis) jak nakonfigurovat limit v souboru EditorConfig.
+> Toto pravidlo nemůže sledovat data napříč sestaveními. Například pokud jedno sestavení přečte vstup požadavku HTTP a pak ho předává do jiného sestavení, které provádí dotaz XPath, toto pravidlo nevytvoří upozornění.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+> [!NOTE]
+> Existuje konfigurovatelné omezení, jak hluboko bude toto pravidlo analyzovat tok dat napříč voláními metod. Postup konfigurace limitu v souboru EditorConfig naleznete v tématu [Configuration Analyzer](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md#dataflow-analysis) .
 
-Některé přístupy k opravě chyby vkládání XPath patří:
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-- Nemusíte vytvářet dotazy XPath ze vstupu uživatele.
-- Ověřte, že vstup obsahuje pouze bezpečné množinu znaků.
+Některé přístupy k opravám ohrožení zabezpečení vkládání XPath zahrnují:
+
+- Nevytvářejte dotazy XPath ze vstupu uživatele.
+- Ověřte, zda vstup obsahuje pouze bezpečnou sadu znaků.
 - Řídicí uvozovky.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Pokud víte, že jste ověřili vstup bezpečné, je v pořádku pro potlačení tohoto upozornění.
+Pokud víte, že jste ověřili, že vstup je bezpečný, je v pořádku Toto upozornění potlačit.
 
-## <a name="pseudo-code-examples"></a>Příklady pseudo kódu
+## <a name="pseudo-code-examples"></a>Příklady kódu pseudo
 
-### <a name="violation"></a>Porušení
+### <a name="violation"></a>Selhání
 
 ```csharp
 using System;

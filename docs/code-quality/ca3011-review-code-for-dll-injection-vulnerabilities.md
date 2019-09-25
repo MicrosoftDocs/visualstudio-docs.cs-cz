@@ -10,12 +10,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 4c9fbb4b8b11b0fce7d3e7530eef80af19b35b73
-ms.sourcegitcommit: 2ee11676af4f3fc5729934d52541e9871fb43ee9
+ms.openlocfilehash: a459be8c8ab028581c850f5b5770a95cb70e3510
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65841034"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71237194"
 ---
 # <a name="ca3011-review-code-for-dll-injection-vulnerabilities"></a>CA3011: Zkontrolujte ohrožení zabezpečení injektáží knihovny DLL v kódu
 
@@ -24,35 +24,35 @@ ms.locfileid: "65841034"
 |TypeName|ReviewCodeForDllInjectionVulnerabilities|
 |CheckId|CA3011|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Pevné|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Vstup dosáhne metodu, která potenciálně nedůvěryhodné požadavku HTTP načte sestavení.
+Potenciálně nedůvěryhodný vstup požadavku HTTP dosáhne metody, která načte sestavení.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Při práci s nedůvěryhodnému vstupu, dávejte načítání nedůvěryhodného kódu. Pokud vaše webová aplikace načte nedůvěryhodný kód, útočník může být schopni injektovat škodlivý knihoven DLL do procesu a spustit škodlivý kód.
+Při práci s nedůvěryhodným vstupem nezapomeňte načíst nedůvěryhodný kód. Pokud vaše webová aplikace načte nedůvěryhodný kód, útočník může být schopen vložit do procesu škodlivé knihovny DLL a spustit škodlivý kód.
 
-Toto pravidlo se pokusí najít vstup z požadavku HTTP, kterou půjde používat metodu, která načte sestavení.
-
-> [!NOTE]
-> Toto pravidlo nelze sledovat data napříč sestavení. Například pokud jedno sestavení načte vstup požadavku HTTP a předává je na jiné sestavení, která načte sestavení, nevytvoří toto pravidlo upozornění.
+Toto pravidlo se pokouší najít vstup z požadavku HTTP, který dosáhne metody, která načte sestavení.
 
 > [!NOTE]
-> Je konfigurovatelná omezení jak hluboko bude toto pravidlo analyzovat tok dat mezi volání metody. Zobrazit [Analyzer Configuration](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md#dataflow-analysis) jak nakonfigurovat limit v souboru EditorConfig.
+> Toto pravidlo nemůže sledovat data napříč sestaveními. Například pokud jedno sestavení přečte vstup požadavku HTTP a pak ho předá do jiného sestavení, které načte sestavení, toto pravidlo nevytvoří upozornění.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+> [!NOTE]
+> Existuje konfigurovatelné omezení, jak hluboko bude toto pravidlo analyzovat tok dat napříč voláními metod. Postup konfigurace limitu v souboru EditorConfig naleznete v tématu [Configuration Analyzer](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md#dataflow-analysis) .
 
-Nenačítat nedůvěryhodné knihoven DLL ze vstupu uživatele.
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
+
+Neprovádějte načítání nedůvěryhodných knihoven DLL ze vstupu uživatele.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Není potlačit upozornění tohoto pravidla.
+Potlačit upozornění z tohoto pravidla
 
-## <a name="pseudo-code-examples"></a>Příklady pseudo kódu
+## <a name="pseudo-code-examples"></a>Příklady kódu pseudo
 
-### <a name="violation"></a>Porušení
+### <a name="violation"></a>Selhání
 
 ```csharp
 using System;

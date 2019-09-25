@@ -18,12 +18,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 644c581757a559311b6660a77c4d9190a7361314
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: dcb5937f58088684e7bfc204ab4143434b0684ae
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62779544"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71236399"
 ---
 # <a name="ca1011-consider-passing-base-types-as-parameters"></a>CA1011: Zvažte předání základních typů jako parametrů
 
@@ -32,35 +32,35 @@ ms.locfileid: "62779544"
 |TypeName|ConsiderPassingBaseTypesAsParameters|
 |CheckId|CA1011|
 |Kategorie|Microsoft.Design|
-|Narušující změna|Narušující|
+|Zásadní změna|Narušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Deklarace metody obsahuje formální parametr, který je odvozený typ a metodu volá pouze členy základního typu parametru.
+Deklarace metody obsahuje formální parametr, který je odvozeným typem, a metoda volá pouze členy základního typu parametru.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Je-li v deklaraci metody zadán jako parametr základní typ, lze jako příslušný argument k metodě předat kterýkoliv typ odvozený z tohoto základního typu. Pokud argument je použit uvnitř těla metody, konkrétní metody, která se spustí záviset na typu argumentu. Pokud je další funkce, která je poskytována odvozený typ není vyžadována, umožňuje použití základního typu širší využití metody.
+Je-li v deklaraci metody zadán jako parametr základní typ, lze jako příslušný argument k metodě předat kterýkoliv typ odvozený z tohoto základního typu. Pokud je argument použit uvnitř těla metody, konkrétní metoda, která je spuštěna, závisí na typu argumentu. Pokud nejsou vyžadovány další funkce, které jsou poskytovány odvozeným typem, použití základního typu umožňuje širší použití metody.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, změňte na jeho základní typ typu parametru.
+Chcete-li opravit porušení tohoto pravidla, změňte typ parametru na jeho základní typ.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Je bezpečné potlačit upozornění tohoto pravidla
+Z tohoto pravidla je bezpečné potlačit upozornění.
 
-- Pokud metoda vyžaduje konkrétní funkce, která je poskytována odvozený typ
+- Pokud metoda vyžaduje konkrétní funkce, které jsou poskytovány odvozeným typem
 
      \- nebo –
 
-- k vynucení pouze odvozený typ, nebo více odvozeného typu, je předán metodě.
+- aby bylo možné vyhovět, že pouze odvozený typ nebo více odvozený typ, je předán metodě.
 
-V takových případech bude kód robustnější kvůli silný typ kontroly, které poskytuje kompilátoru a modulu runtime.
+V těchto případech bude kód robustnější z důvodu kontroly silného typu, který je poskytován kompilátorem a modulem runtime.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje metodu, `ManipulateFileStream`, který jde použít jenom s <xref:System.IO.FileStream> objektu, který porušuje tato pravidla. Druhá metoda `ManipulateAnyStream`, splňuje pravidlo tak, že nahradíte <xref:System.IO.FileStream> parametr pomocí <xref:System.IO.Stream>.
+Následující příklad ukazuje metodu, `ManipulateFileStream`, která se dá použít jenom <xref:System.IO.FileStream> s objektem, který porušuje toto pravidlo. Druhá metoda `ManipulateAnyStream`, splňuje pravidlo tím, že <xref:System.IO.FileStream> nahradí parametr pomocí <xref:System.IO.Stream>.
 
 [!code-csharp[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/CSharp/ca1011-consider-passing-base-types-as-parameters_1.cs)]
 [!code-cpp[FxCop.Design.ConsiderPassingBaseTypes#1](../code-quality/codesnippet/CPP/ca1011-consider-passing-base-types-as-parameters_1.cpp)]
@@ -68,4 +68,4 @@ Následující příklad ukazuje metodu, `ManipulateFileStream`, který jde pou�
 
 ## <a name="related-rules"></a>Související pravidla
 
-[CA1059: Členy by neměly zveřejňovat určité konkrétní typy](../code-quality/ca1059-members-should-not-expose-certain-concrete-types.md)
+[CA1059: Členové by neměli zveřejňovat určité konkrétní typy](../code-quality/ca1059-members-should-not-expose-certain-concrete-types.md)

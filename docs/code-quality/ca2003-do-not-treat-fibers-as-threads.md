@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8faaf3c6557065188c795d75ea9bbe4e78998709
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9f5e4e7eb28207cb37824b23acbbac02b6df380d
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62806984"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71233135"
 ---
 # <a name="ca2003-do-not-treat-fibers-as-threads"></a>CA2003: Nezacházejte s vlákénky jako s vlákny
 
@@ -28,20 +28,20 @@ ms.locfileid: "62806984"
 |TypeName|DoNotTreatFibersAsThreads|
 |CheckId|CA2003|
 |Kategorie|Microsoft.Reliability|
-|Narušující změna|Nenarušující|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Spravovaným vláknem se zachází jako vlákno Win32.
+Spravované vlákno je považováno za vlákno Win32.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Nepředpokládejte, že se že spravovaným vláknem se vlákno Win32; je vlákno. Modul CLR (CLR) spouští spravovaná vlákna jako jsou vlákna v kontextu reálného vlákna, které jsou vlastněny SQL. Tato vlákna mohou být sdíleny napříč objektů třídy AppDomains a dokonce i databází v procesu serveru SQL Server. Pomocí spravovaného funguje místní úložiště vláken, ale nemusí používat místní úložiště nespravovaného vlákna nebo se předpokládá, že váš kód poběží v aktuálním vlákně operačního systému znovu. Neměňte nastavení, jako je národní prostředí vlákna. Nevolejte CreateCriticalSection nebo CreateMutex – prostřednictvím P/Invoke, protože vyžadují vlákna, která se zadá zámku musí také ukončení uzamčení. Vzhledem k tomu vlákna, která se zadá zámek není zámek ukončit, při použití vlákének, kritické oddíly Win32 a vzájemně vyloučené přístupy jsou zbytečné v SQL. Většina stavu může bezpečně používat na spravované <xref:System.Threading.Thread> objektu, včetně místním úložišti spravované vlákno a aktuální uživatelské rozhraní (UI) jazykovou verzi vlákna. Ale pro programovací model důvody, nebudete moct změnit aktuální jazykovou verzi vlákna, při použití SQL. Toto omezení se vynucují prostřednictvím nové oprávnění.
+Nepředpokládat spravované vlákno je vlákno Win32; je to vlákno. Modul CLR (Common Language Runtime) spouští spravovaná vlákna jako vlákna v kontextu reálných vláken, která vlastní SQL. Tato vlákna lze sdílet napříč doménami aplikace a dokonce i databázemi v procesu SQL Server. Použití spravovaného úložiště thread local funguje, ale nepoužíváte nespravované úložiště thread local nebo předpokládáte, že váš kód bude spuštěn v aktuálním vláknu operačního systému. Neměňte nastavení, jako je národní prostředí vlákna. Nevolejte CreateCriticalSection ani CreateMutex prostřednictvím P/Invoke, protože vyžadují, aby vlákno, které vstupuje na zámek, také ukončilo zámek. Vzhledem k tomu, že vlákno, které zadává zámek, neukončí zámek při použití vlákna, jsou důležité oddíly a mutexy Win32 v SQL nepoužitelné. Většinu stavu můžete bezpečně použít u spravovaného <xref:System.Threading.Thread> objektu, včetně spravovaného Thread localho úložiště a aktuální jazykové verze daného vlákna v uživatelském rozhraní. Nicméně pro účely programovacího modelu nebudete moci změnit aktuální jazykovou verzi vlákna při použití jazyka SQL. Toto omezení bude vynutilo nové oprávnění.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Zkontrolujte vaše použití vláken a odpovídajícím způsobem měnit kód.
+Prověřte použití vláken a odpovídajícím způsobem změňte kód.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Nepotlačujte toto pravidlo.
+Toto pravidlo potlačit.

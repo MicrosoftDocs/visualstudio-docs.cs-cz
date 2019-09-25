@@ -6,16 +6,16 @@ keywords: ''
 author: TerryGLee
 ms.author: tglee
 manager: jillfra
-ms.date: 07/24/2019
+ms.date: 09/23/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
 ms.topic: include
-ms.openlocfilehash: ba3cf453e1eba86f78bf04d8cb5105a475533e76
-ms.sourcegitcommit: 0f5f7955076238742f2071d286ad8e896f3a6cad
+ms.openlocfilehash: 129eaa6286cf8cb4691486adaba441895fb93bc2
+ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68484779"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71210180"
 ---
 ## <a name="visual-studio-core-editor-included-with-visual-studio-team-explorer-2019"></a>Základní editor Visual Studio (zahrnutý v rámci sady Visual Studio Team Explorer 2019)
 

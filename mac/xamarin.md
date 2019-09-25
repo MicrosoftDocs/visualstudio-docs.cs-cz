@@ -5,16 +5,24 @@ author: therealjohn
 ms.author: johmil
 ms.date: 06/18/2019
 ms.assetid: 339F6051-5F90-48DC-8237-EBBC8A03A32B
-ms.openlocfilehash: 4eec080655c0f47823810dfd689fe49a6f7e43eb
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: c8b6bddac92a9ec6b40ba08ebcdc3fe3577b0bc8
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68872351"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71211472"
 ---
 # <a name="xamarin-mobile-app-development"></a>Vývoj mobilních aplikací Xamarin
 
 Prvotřídní podpora [Xamarinu](/xamarin) umožňuje vývoj propracovaných nativních možností pro Android, macOS, iOS, tvOS a watchOS. Multiplatformní aplikace Xamarin.Forms usnadňují sdílení kódu uživatelského rozhraní založeného na XAML mezi Androidem, iOSem a macOSem bez omezení přístupu k nativním funkcím.
+
+## <a name="xamarinforms"></a>Xamarin.Forms
+
+Verze XAML Hot reloading pro Xamarin. Forms je integrovaná do Visual Studio pro Mac ve verzi 8,3 a novější. Když je tato funkce povolená, změny se okamžitě projeví ve spuštěné aplikaci pokaždé, když soubor uložíte.
+
+Hot reloading XAML se dá povolit zaškrtnutím políčka **Povolit Xamarin Hot reload** v **aplikaci Visual Studio > předvolby > projekty > Xamarin Hot reloading**.
+
+Další informace o opětovném načtení najdete v dokumentaci v tématu [Hot reloading v jazyce XAML pro Xamarin. Forms](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/xaml/hot-reload) .
 
 ## <a name="android"></a>Android
 
@@ -24,7 +32,7 @@ Pro aplikace pro Android Visual Studio pro Mac obsahuje vlastní Návrhář, kte
 
 ![Návrhář uživatelského rozhraní pro Android](media/intro-image31.png)
 
-Další informace o Android Designer najdete v průvodci přehledem [Xamarin. Android Designer](/xamarin/android/user-interface/android-designer/index) .
+Další informace o Android Designer najdete v průvodci [přehledem Xamarin. Android Designer](/xamarin/android/user-interface/android-designer/index) .
 
 ## <a name="ios"></a>iOS
 

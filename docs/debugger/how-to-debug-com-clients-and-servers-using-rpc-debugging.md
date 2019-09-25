@@ -26,14 +26,14 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f5c98405b424dd5402a903a236b1c5549a43616d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: 2cca09e917cddffd0d1d844db14ae8a4ca4f0088
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63387520"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71211073"
 ---
-# <a name="how-to-debug-com-clients-and-servers-using-rpc-debugging"></a>Postupy: Ladění modelu COM klientů a serverů pomocí ladění RPC
+# <a name="how-to-debug-com-clients-and-servers-using-rpc-debugging"></a>Postupy: Ladění klientů a serverů modelu COM pomocí ladění RPC
 Ladění vzdáleného volání (procedur RPC) můžete použít k ladění aplikace modelu COM klient/server. Je nutné povolit RPC Ladění ji používat. S povoleným laděním RPC, při krokování s vnořením volání serveru z klienta, ladicí program připojí k serveru a umožňuje ladit svůj kód. Když je připojen ladicí program, můžete použít všechny funkce ladicího programu s klientem a serverem procesy.
 
 ### <a name="to-enable-rpc-debugging"></a>Pokud chcete povolit ladění RPC
@@ -54,5 +54,5 @@ Ladění vzdáleného volání (procedur RPC) můžete použít k ladění aplik
 
 ## <a name="see-also"></a>Viz také
 - [Ladění serveru a kontejneru modelu COM](../debugger/com-server-and-container-debugging.md)
-- [Ladění v sadě Visual Studio](../debugger/index.md)
+- [Ladění v sadě Visual Studio](../debugger/index.yml)
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)

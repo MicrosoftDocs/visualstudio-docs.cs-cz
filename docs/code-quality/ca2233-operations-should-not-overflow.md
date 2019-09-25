@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 7c07dde4c3b992db30c9fc72a0dfa01f0f13b31e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: b99aae681dbe7bbeece557a15d78aed0b3f07f6f
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62806599"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71230819"
 ---
 # <a name="ca2233-operations-should-not-overflow"></a>CA2233: Operace by neměly přetéct
 
@@ -31,32 +31,32 @@ ms.locfileid: "62806599"
 |TypeName|OperationsShouldNotOverflow|
 |CheckId|CA2233|
 |Kategorie|Microsoft.Usage|
-|Narušující změna|Pevné|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Metoda provádí aritmetické operace a neověřuje operandy předem, aby zabránil přetečení.
+Metoda provede aritmetickou operaci a předem neověřuje operandy, aby se zabránilo přetečení.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Aritmetické operace není provést bez prvního ověřování operandů, abyste měli jistotu, že výsledek operace není mimo rozsah možných hodnot pro typy dat zapojených. V závislosti na kontextu spuštění a souvisejících datových typech, může způsobit přetečení aritmetické operace v jednom <xref:System.OverflowException?displayProperty=fullName> nebo zahozeny nejvýznamnější části výsledku.
+Neprovádějte aritmetické operace bez prvotního ověření operandů, abyste se ujistili, že výsledek operace není mimo rozsah možných hodnot datových typů, které jsou v provozu. V závislosti na kontextu spuštění a v souvislosti s datovými typy může aritmetické přetečení způsobit, <xref:System.OverflowException?displayProperty=fullName> že dojde k zahození výsledku nebo z nejvýznamnějších bitů výsledku.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, ověření operandů před provedením operace.
+Chcete-li opravit porušení tohoto pravidla, před provedením operace ověřte operandy.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Je bezpečné potlačit upozornění tohoto pravidla, je-li možné hodnoty z operandů nikdy nezpůsobí Přetečení aritmetické operace.
+Z tohoto pravidla je bezpečné potlačit upozornění, pokud možné hodnoty operandů nebudou nikdy způsobit přetečení aritmetické operace.
 
-## <a name="example-of-a-violation"></a>Příkladem porušení
+## <a name="example-of-a-violation"></a>Příklad porušení
 
-Metoda v následujícím příkladu manipuluje s celým číslem, který porušuje tato pravidla. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] vyžaduje **odebrat** možnost přetečení celého čísla pro to, aby se mohly aktivovat deaktivuje.
+Metoda v následujícím příkladu zpracovává celé číslo, které toto pravidlo porušuje. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]k vyvolání této možnosti je nutné zakázat možnost **Odebrat** přetečení celého čísla.
 
 [!code-vb[FxCop.Usage.OperationOverflow#1](../code-quality/codesnippet/VisualBasic/ca2233-operations-should-not-overflow_1.vb)]
 [!code-csharp[FxCop.Usage.OperationOverflow#1](../code-quality/codesnippet/CSharp/ca2233-operations-should-not-overflow_1.cs)]
 
-Pokud je předán metodě v tomto příkladu <xref:System.Int32.MinValue?displayProperty=fullName>, operace by podtečení. To způsobí, že nejvýznamnější bit výsledek, který má být zrušena. Následující kód ukazuje, jak k tomu dochází.
+Pokud je metoda v tomto příkladu předána <xref:System.Int32.MinValue?displayProperty=fullName>, operace by měla být podtečení. To způsobí, že je nejvýznamnější bit výsledku zahozen. Následující kód ukazuje, jak se to stane.
 
 ```csharp
 public static void Main()
@@ -81,32 +81,32 @@ Výstup:
 2147483647
 ```
 
-## <a name="fix-with-input-parameter-validation"></a>Oprava pomocí ověření vstupu parametru
+## <a name="fix-with-input-parameter-validation"></a>Opravit se vstupním parametrem ověřování
 
-Následující příklad opravuje předchozí porušení ověřením hodnotu vstupu.
+Následující příklad opravuje předchozí porušení ověřením hodnoty vstup.
 
 [!code-csharp[FxCop.Usage.OperationOverflowFixed#1](../code-quality/codesnippet/CSharp/ca2233-operations-should-not-overflow_2.cs)]
 [!code-vb[FxCop.Usage.OperationOverflowFixed#1](../code-quality/codesnippet/VisualBasic/ca2233-operations-should-not-overflow_2.vb)]
 
-## <a name="fix-with-a-checked-block"></a>Oprava s bloku Checked
+## <a name="fix-with-a-checked-block"></a>Oprava pomocí kontrolovaného bloku
 
-Následující příklad opravuje předchozí porušení obalením operaci v vybraný blok. Pokud operace způsobí přetečení, <xref:System.OverflowException?displayProperty=fullName> bude vyvolána výjimka.
+Následující příklad opravuje předchozí porušení tím, že zabalí operaci do kontrolovaného bloku. Pokud operace způsobí přetečení, <xref:System.OverflowException?displayProperty=fullName> bude vyvolána výjimka.
 
-Checked bloků nejsou podporovány v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)].
+Kontrolované bloky nejsou v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]nástroji podporovány.
 
 [!code-csharp[FxCop.Usage.OperationOverflowChecked#1](../code-quality/codesnippet/CSharp/ca2233-operations-should-not-overflow_3.cs)]
 
-## <a name="turn-on-checked-arithmetic-overflowunderflow"></a>Zapnout Checked aritmetické přetečení a podtečení
+## <a name="turn-on-checked-arithmetic-overflowunderflow"></a>Zapnout kontrolované aritmetické přetečení nebo podtečení
 
-Pokud zapnete checked aritmetické přetečení a podtečení v jazyce C#, je ekvivalentní obtékání každé operace celé číslo v vybraný blok.
+Pokud zapnete kontrolované aritmetické přetečení nebo podtečení C#v, je ekvivalentem zabalení každé celočíselné operace do kontrolovaného bloku.
 
-Chcete-li kontrolovat aritmetické přetečení a podtečení v jazyce C#:
+Zapnutí kontrolovaného aritmetického přetečení nebo podtečení C#v:
 
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt a zvolte **vlastnosti**.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem myši na projekt a vyberte možnost **vlastnosti**.
 
-2. Vyberte **sestavení** kartě a klikněte na tlačítko **Upřesnit**.
+2. Vyberte kartu **sestavení** a klikněte na **Upřesnit**.
 
-3. Vyberte **kontrolovat aritmetické přetečení a podtečení** a klikněte na tlačítko **OK**.
+3. Vyberte možnost **kontrolovat aritmetické přetečení a podtečení** a klikněte na tlačítko **OK**.
 
 ## <a name="see-also"></a>Viz také:
 

@@ -18,12 +18,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: f11a93380f149648ece4ae6d71bc9c2f25df5191
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 387eb464959fba522e31f9586998335cb306d844
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68923107"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71236328"
 ---
 # <a name="ca1014-mark-assemblies-with-clscompliantattribute"></a>CA1014: Označte sestavení pomocí CLSCompliantAttribute
 
@@ -32,7 +32,7 @@ ms.locfileid: "68923107"
 |TypeName|MarkAssembliesWithClsCompliant|
 |CheckId|CA1014|
 |Kategorie|Microsoft.Design|
-|Narušující změna|Nenarušující|
+|Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
 Pro sestavení není <xref:System.CLSCompliantAttribute?displayProperty=fullName> použit atribut.

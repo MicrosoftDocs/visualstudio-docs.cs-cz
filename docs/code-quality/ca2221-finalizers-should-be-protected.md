@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e88f22f25ff0620a88685dee93fd5658c302db74
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 827a8ee01575d6d263c8f8ee423de72cfe939e39
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68920245"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71231181"
 ---
 # <a name="ca2221-finalizers-should-be-protected"></a>CA2221: Finalizační metody by měly být chráněné
 
@@ -28,7 +28,7 @@ ms.locfileid: "68920245"
 |TypeName|FinalizersShouldBeProtected|
 |CheckId|CA2221|
 |Kategorie|Microsoft.Usage|
-|Narušující změna|Bez přerušení|
+|Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
 Veřejný typ implementuje finalizační metodu, která neurčuje přístup Family (Protected).

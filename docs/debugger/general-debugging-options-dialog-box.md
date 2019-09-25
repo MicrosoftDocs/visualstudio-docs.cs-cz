@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 03634b5a2bd1417e75f843fd9026712313f1923d
-ms.sourcegitcommit: 0e482cfc15f809b564c3de61646f29ecd7bfcba6
+ms.openlocfilehash: db4756107bb9f5e7e766634897013649db351faa
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70987631"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71211021"
 ---
 # <a name="general-debugging-options"></a>Obecné možnosti ladění
 
@@ -176,5 +176,5 @@ Pokud používáte starší verzi sady Visual Studio, mohou být k dispozici ně
 
 ## <a name="see-also"></a>Viz také:
 
-- [Ladění v sadě Visual Studio](../debugger/index.md)
+- [Ladění v sadě Visual Studio](../debugger/index.yml)
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)

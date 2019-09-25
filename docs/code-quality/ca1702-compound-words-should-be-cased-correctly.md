@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f78ea4f44c48d2740df58def03a6335bce6637a2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5480d3dde926dfe31b018a5cd0b1ea6a5813063b
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62545929"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71234335"
 ---
 # <a name="ca1702-compound-words-should-be-cased-correctly"></a>CA1702: Malá a velká písmena složených slov by měla být použita správně
 
@@ -28,25 +28,25 @@ ms.locfileid: "62545929"
 |TypeName|CompoundWordsShouldBeCasedCorrectly|
 |CheckId|CA1702|
 |Kategorie|Microsoft.Naming|
-|Narušující změna|Při ukončování pro sestavení vyvolala.<br /><br /> Bez konce – při vyvolání na parametry typu.|
+|Zásadní změna|Přerušení – při vyvolání na sestavení.<br /><br /> Bez přerušení – při vyvolání v parametrech typu.|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
 Název identifikátoru obsahuje více slov a alespoň jedno ze slov se zdá být složené slovo, které není správně formátováno.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Název identifikátoru je rozdělený do slov, které jsou založeny na velká a malá písmena. Každá kombinace souvislých dvě slova je zaškrtnuté políčko knihovnou kontroly pravopisu společnosti Microsoft. Pokud je rozpoznána, vytvoří identifikátor porušení tohoto pravidla. Příklady složených slov, které způsobují porušení: "Kontrolního součtu" a "MultiPart", která by měla být malá a velká použita jako "Kontrolního součtu" a "Multipart", v uvedeném pořadí. Z důvodu předchozí běžné použití několika výjimkami jsou součástí pravidla a jsou označeny několik jednotlivá slova, jako je například "Panel nástrojů" a "Název_souboru", který by měl být notaci jako dvě různá slova (v tomto případě "Panel nástrojů" a "Název_souboru").
+Název identifikátoru je rozdělen na slova, která jsou založena na velikosti písmen. Každá souvislá kombinace dvou slov je kontrolována knihovnou kontroly pravopisu společnosti Microsoft. Pokud je rozpoznáno, identifikátor vytvoří porušení pravidla. Příklady složených slov, která způsobují porušení, jsou "kontrolní součet" a "MultiPart", které by měly být použita jako "kontrolní součet" a "multipart". Kvůli předchozímu běžnému využití jsou do pravidla integrována několik výjimek a několik jednoduchých slov je označeno jako "panel nástrojů" a "filename", které by se měly použita jako dvě odlišná slova (v tomto případě "panel nástrojů" a "FileName").
 
-Zásady vytváření názvů poskytují obecný vzhled knihovnám využívajících common language runtime. To snižuje učit se, která vyžaduje nové knihovny softwaru a zvyšuje důvěru zákazníků, že byla vyvinuta knihovny někdo, kdo má odborných znalostí v vývoj spravovaného kódu.
+Zásady vytváření názvů poskytují běžný vzhled pro knihovny, které cílí na modul CLR (Common Language Runtime). Tím se zmenší výuková křivka, která je požadována pro nové knihovny softwaru, a zvyšuje důvěru zákazníků, že knihovna byla vyvinuta někým, kdo má zkušenosti s vývojem spravovaného kódu.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Změňte název tak, že je správně formátováno.
+Změňte název tak, aby byl použita správně.
 
 ## <a name="language"></a>Jazyk
 
-Nástroj pro kontrolu pravopisu aktuálně zkontroluje pouze proti jazykovou verzi na základě angličtina slovníky. Jazyková verze projektu v souboru projektu, můžete změnit tak, že přidáte **CodeAnalysisCulture** elementu.
+Kontrola pravopisu aktuálně kontroluje pouze proti slovníkům jazykové verze v angličtině. Můžete změnit jazykovou verzi projektu v souboru projektu přidáním elementu **CodeAnalysisCulture** .
 
 Příklad:
 
@@ -57,17 +57,17 @@ Příklad:
 ```
 
 > [!IMPORTANT]
-> Pokud nastavíte jazykovou verzi na jinou hodnotu než jazykovou verzi na základě angličtina, tento pravidel nástroje Analýza kódu je tiše zakázaná.
+> Pokud nastavíte jazykovou verzi na jinou než anglickou jazykovou verzi, toto pravidlo analýzy kódu je tiše zakázané.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Je bezpečné potlačit upozornění tohoto pravidla, je-li obě části složené slovo, které jsou rozpoznány modulem slovníku a cílem je používat dvě slova.
+Z tohoto pravidla je bezpečné potlačit upozornění, pokud slovník pravopisu rozpozná obě části složeného slova a záměr je použít dvě slova.
 
 ## <a name="related-rules"></a>Související pravidla
 
-- [CA1701: Složených slov prostředku řetězců by měla správně formátováno.](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)
-- [CA1709: Identifikátory by měly správně formátováno.](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
-- [CA1708: Identifikátory by se měly lišit o více než velikostí písmen](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
+- [CA1701: Složená slova řetězce prostředků by se měla použita správně.](../code-quality/ca1701-resource-string-compound-words-should-be-cased-correctly.md)
+- [CA1709: Identifikátory by se měly použita správně.](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+- [CA1708: Identifikátory by se měly lišit o více než malých písmenech](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
 
 ## <a name="see-also"></a>Viz také:
 

@@ -10,12 +10,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 10b9091df08368674511b770158ea47c247aade7
-ms.sourcegitcommit: 2ee11676af4f3fc5729934d52541e9871fb43ee9
+ms.openlocfilehash: c0c99d5d0adb145a061693f8a83b1f674e05eed4
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65841360"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71237344"
 ---
 # <a name="ca3005-review-code-for-ldap-injection-vulnerabilities"></a>CA3005: Zkontrolujte ohrožení zabezpečení injektáží protokolu LDAP v kódu
 
@@ -24,40 +24,40 @@ ms.locfileid: "65841360"
 |TypeName|ReviewCodeForLdapInjectionVulnerabilities|
 |CheckId|CA3005|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Pevné|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
 Potenciálně nedůvěryhodný vstup požadavku HTTP dosáhne příkazu LDAP.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Při práci s nedůvěryhodnému vstupu, dávejte útoků prostřednictvím injektáže Lightweight Directory Access Protocol (LDAP). Útočník může spustit potenciálně škodlivé příkazy LDAP proti informace adresáře. Aplikace, které používají uživatelský vstup k sestavování dynamických LDAP příkazů pro přístup k adresářové služby jsou zvlášť citlivé.
+Při práci s nedůvěryhodným vstupem si vědomete útoků prostřednictvím injektáže protokolu LDAP (Lightweight Directory Access Protocol). Útočník může potenciálně spustit škodlivé příkazy LDAP na informačních adresářích. Aplikace, které používají vstup uživatele k vytváření dynamických příkazů LDAP pro přístup k adresářovým službám, jsou obzvláště zranitelné.
 
-Toto pravidlo se pokusí najít vstup dosažení příkazem LDAP požadavků HTTP.
-
-> [!NOTE]
-> Toto pravidlo nelze sledovat data napříč sestavení. Například pokud jedno sestavení načte vstup požadavku HTTP a předává je na jiné sestavení, který se spustí příkaz LDAP, nevytvoří toto pravidlo upozornění.
+Toto pravidlo se pokouší najít vstup z požadavků HTTP, které dosáhnou příkazu LDAP.
 
 > [!NOTE]
-> Je konfigurovatelná omezení jak hluboko bude toto pravidlo analyzovat tok dat mezi volání metody. Zobrazit [Analyzer Configuration](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md#dataflow-analysis) jak nakonfigurovat limit v souboru EditorConfig.
+> Toto pravidlo nemůže sledovat data napříč sestaveními. Například pokud jedno sestavení přečte vstup požadavku HTTP a pak ho předává do jiného sestavení, které spustí příkaz LDAP, toto pravidlo nevytvoří upozornění.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+> [!NOTE]
+> Existuje konfigurovatelné omezení, jak hluboko bude toto pravidlo analyzovat tok dat napříč voláními metod. Postup konfigurace limitu v souboru EditorConfig naleznete v tématu [Configuration Analyzer](https://github.com/dotnet/roslyn-analyzers/blob/master/docs/Analyzer%20Configuration.md#dataflow-analysis) .
 
-Část řízené uživatelem příkazy LDAP zvážit jednu ze:
-- Povolit pouze bezpečné seznam jiné speciální znaky.
-- Zakažte speciální znak
-- Řídicí znaky.
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Zobrazit [OWASP na LDAP vkládání ochrany před únikem informací Ošidit list](https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/LDAP_Injection_Prevention_Cheat_Sheet.md) další pokyny.
+V případě uživatelsky řízené části příkazů protokolu LDAP zvažte jednu z těchto akcí:
+- Povolí pouze bezpečný seznam znaků, které nejsou speciální.
+- Zakázat speciální znak
+- Speciální znaky escape.
+
+Další pokyny najdete v [listu tahák prevence vkládání LDAP v OWASP](https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/LDAP_Injection_Prevention_Cheat_Sheet.md) .
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Pokud znáte vstup byl ověřen nebo uvozen řídicími znaky, jako bezpečné, je v pořádku pro potlačení tohoto upozornění.
+Pokud víte, že vstup byl ověřen nebo byl jeho řídicím znakem zabezpečený, je v pořádku Toto upozornění potlačit.
 
-## <a name="pseudo-code-examples"></a>Příklady pseudo kódu
+## <a name="pseudo-code-examples"></a>Příklady kódu pseudo
 
-### <a name="violation"></a>Porušení
+### <a name="violation"></a>Selhání
 
 ```csharp
 using System;

@@ -17,12 +17,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 942a9911d0dadbf5f130344735ca9aa504cb71fd
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 85d168e97f422a3965096a334cb2a448406604f9
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68921586"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71233845"
 ---
 # <a name="ca1800-do-not-cast-unnecessarily"></a>CA1800: Nepřetypujte zbytečně
 
@@ -31,7 +31,7 @@ ms.locfileid: "68921586"
 |TypeName|DoNotCastUnnecessarily|
 |CheckId|CA1800|
 |Kategorie|Microsoft. Performance|
-|Narušující změna|Nenarušující|
+|Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
 Metoda provádí duplicitní přetypování na jednom z jeho argumentů nebo místních proměnných.
@@ -41,7 +41,7 @@ Pro úplnou analýzu podle tohoto pravidla musí být testované sestavení sest
 ## <a name="rule-description"></a>Popis pravidla
 Duplicitní přetypování snižuje výkon, zvláště když jsou přetypování vykonána v příkazech kompaktní iterace. U explicitních operací přetypování uložte výsledek přetypování do místní proměnné a místo duplicitních operací přetypování použijte místní proměnnou.
 
-Pokud operátor slouží k otestování, zda bude přetypování úspěšné před samotným přetypováním, zvažte místo toho testování výsledku `as` operátoru. `is` C# To poskytuje stejnou funkčnost bez operace implicitního přetypování, kterou provádí `is` operátor. Nebo v C# 7,0 a novějším, použijte `is` operátor s porovnáváním [vzorů](/dotnet/csharp/language-reference/keywords/is#pattern-matching-with-is) pro kontrolu převodu typu a přetypujte výraz na proměnnou daného typu v jednom kroku.
+Pokud operátor slouží k otestování, zda bude přetypování úspěšné před samotným přetypováním, zvažte místo toho testování výsledku `as` operátoru. `is` C# To poskytuje stejnou funkčnost bez operace implicitního přetypování, kterou provádí `is` operátor. Nebo v C# 7,0 a novějším, použijte `is` operátor s [porovnáváním vzorů](/dotnet/csharp/language-reference/keywords/is#pattern-matching-with-is) pro kontrolu převodu typu a přetypujte výraz na proměnnou daného typu v jednom kroku.
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 Chcete-li opravit porušení tohoto pravidla, upravte implementaci metody tak, aby minimalizovala počet operací přetypování.

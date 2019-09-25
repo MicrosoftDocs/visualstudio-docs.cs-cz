@@ -1,5 +1,5 @@
 ---
-title: Vzdálené ladění projektu ve Visual C++ | Dokumentace Microsoftu
+title: Vzdálené ladění vizuálního C++ projektu | Microsoft Docs
 ms.custom: remotedebugging
 ms.date: 08/14/2018
 ms.topic: conceptual
@@ -17,15 +17,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fbfdb246769ac55afd7f164d91673e39e293f4c4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 81a5ebba2d14a0e091b3b0bcd78a066ef50ed759
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62903500"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71211107"
 ---
-# <a name="remote-debugging-a-visual-c-project-in-visual-studio"></a>Vzdálené ladění projektu ve Visual C++ v sadě Visual Studio
-Ladění aplikace Visual Studio na jiném počítači, nainstalovat a spustit nástroje remote tools v počítači, kde bude nasazovat aplikace, nakonfigurujte projekt tak, aby připojení ke vzdálenému počítači ze sady Visual Studio a pak nasaďte a spusťte aplikaci.
+# <a name="remote-debugging-a-visual-c-project-in-visual-studio"></a>Vzdálené ladění vizuálního C++ projektu v aplikaci Visual Studio
+Chcete-li ladit aplikaci Visual Studio na jiném počítači, nainstalujte a spusťte nástroje Remote Tools v počítači, kde budete nasazovat aplikaci, nakonfigurujte projekt tak, aby se připojil ke vzdálenému počítači ze sady Visual Studio, a potom aplikaci nasaďte a spusťte.
 
 ![Vzdálený ladicí program komponenty](../debugger/media/remote-debugger-client-apps.png "Remote_debugger_components")
 
@@ -52,62 +52,62 @@ Vzdálený ladicí program podporuje se ve Windows 7 a novější (ne telefon) a
 > [!NOTE]
 > Pokud potřebujete přidat oprávnění pro další uživatele, změnit režim ověřování, nebo číslo portu pro vzdálené ladění, naleznete v tématu [konfigurovat vzdálený ladicí program](../debugger/remote-debugging.md#configure_msvsmon).
 
-## <a name="remote_cplusplus"></a> Vzdálené ladění projektu Visual C++
- V následujícím postupu, název a cestu k projektu je C:\remotetemp\MyMfc a je název vzdáleného počítače **MJO DL**.
+## <a name="remote_cplusplus"></a>Vzdálené ladění projektu Visual C++
+ V následujícím postupu je název a cesta k projektu C:\remotetemp\MyMfc a název vzdáleného počítače je **mjo-DL**.
 
-1. Vytvoření aplikace knihovny MFC s názvem **mymfc.**
+1. Vytvořte aplikaci knihovny MFC s názvem **mymfc.**
 
-2. Nastavit zarážku někde v aplikaci, která je snadno dosaženo, například v **MainFrm.cpp**, na začátku `CMainFrame::OnCreate`.
+2. Nastavte zarážku někde v aplikaci, která je snadno dostupná, například v **mainfrm. cpp**na začátku `CMainFrame::OnCreate`.
 
-3. V Průzkumníku řešení klikněte pravým tlačítkem na projekt a vyberte **vlastnosti**. Otevřít **ladění** kartu.
+3. V Průzkumník řešení klikněte pravým tlačítkem na projekt a vyberte **vlastnosti**. Otevřete kartu **ladění** .
 
-4. Nastavte **ladicí program ke spuštění** k **vzdálený ladicí program Windows**.
+4. Nastavte **ladicí program na spouštění** pro **vzdálený ladicí program systému Windows**.
 
     ![RemoteDebuggingCPlus](../debugger/media/remotedebuggingcplus.png "RemoteDebuggingCPlus")
 
-5. Proveďte změny následujících vlastností:
+5. Proveďte následující změny vlastností:
 
-   |Nastavení|Hodnota|
+   |Nastavení|Value|
    |-|-|
    |Vzdálený příkaz|C:\remotetemp\mymfc.exe|
    |Pracovní adresář|C:\remotetemp|
-   |Název vzdáleného serveru|MJO DL:*číslo_portu*|
-   |Připojení|Vzdálený s ověřováním Windows|
+   |Název vzdáleného serveru|MJO-DL:*číslo_portu*|
+   |Připojení|Vzdálený s ověřováním systému Windows|
    |Typ ladicího programu|Pouze nativní|
    |Adresář nasazení|C:\remotetemp.|
    |Další soubory k nasazení|C:\data\mymfcdata.txt.|
 
-    Pokud nasadíte další soubory (volitelné), složka musí existovat v obou počítačích.
+    Pokud nasadíte další soubory (volitelné), složka musí existovat na obou počítačích.
 
-6. V Průzkumníku řešení klikněte pravým tlačítkem na řešení a zvolte **nástroje Configuration Manager**.
+6. V Průzkumník řešení klikněte pravým tlačítkem na řešení a vyberte možnost **Configuration Manager**.
 
-7. Pro **ladění** konfigurace, vyberte **nasadit** zaškrtávací políčko.
+7. V případě konfigurace **ladění** zaškrtněte políčko **nasadit** .
 
     ![RemoteDebugCplusDeploy](../debugger/media/remotedebugcplusdeploy.png "RemoteDebugCplusDeploy")
 
-8. Spustit ladění (**ladit > Spustit ladění**, nebo **F5**).
+8. Spusťte ladění (**ladění > spustit ladění**nebo **F5**).
 
-9. Spustitelný soubor je automaticky nasadí do vzdáleného počítače.
+9. Spustitelný soubor se automaticky nasadí do vzdáleného počítače.
 
 10. Pokud se zobrazí výzva, zadejte přihlašovací údaje k síti pro připojení ke vzdálenému počítači.
 
-     Požadované přihlašovací údaje jsou specifické pro konfiguraci zabezpečení vaší sítě. Například v počítači domény, může vybrat si certifikát zabezpečení nebo zadejte název domény a heslo. Na počítači mimo doménu, můžete například zadat název počítače a platné uživatelské jméno účtu, jako je třeba <strong>MJO-DL\name@something.com</strong>, spolu s správné heslo.
+     Požadovaná pověření jsou specifická pro konfiguraci zabezpečení vaší sítě. Například v počítači domény můžete zvolit certifikát zabezpečení nebo zadat název domény a heslo. Na počítači mimo doménu, můžete například zadat název počítače a platné uživatelské jméno účtu, jako je třeba <strong>MJO-DL\name@something.com</strong>, spolu s správné heslo.
 
-11. V počítači, Visual Studio měli byste vidět zastavením spuštění na zarážce.
+11. V počítači se systémem Visual Studio by se mělo zobrazit, že je spuštění zastaveno na zarážce.
 
     > [!TIP]
-    > Alternativně můžete nasadit soubory jako samostatný krok. V **Průzkumníku řešení klikněte** klikněte pravým tlačítkem myši **mymfc** uzel a klikněte na tlačítko **nasadit**.
+    > Případně můžete soubory nasadit jako samostatný krok. V **Průzkumník řešení** klikněte pravým tlačítkem na uzel **mymfc** a pak zvolte **nasadit**.
 
-    Pokud máte souborům bez kódu, které jsou vyžadované aplikací, můžete je zadat **další soubory k nasazení** na **vzdálený ladicí program Windows** stránky.
+    Pokud máte soubory bez kódu, které jsou vyžadovány aplikací, můžete je zadat v **dalších souborech k nasazení** na stránce **vzdáleného ladicího programu systému Windows** .
 
-    Alternativně můžete zahrnout soubory ve vašem projektu a nastavit **obsahu** vlastnost **Ano** v **vlastnosti** stránky pro každý soubor. Tyto soubory se zkopírují do **adresáře nasazení** zadané **vzdálený ladicí program Windows** stránky. Můžete také změnit **typ položky** k **kopírovat soubor** a zadat další vlastnosti existuje, pokud potřebujete soubory zkopírovány do podsložky **adresáře nasazení**.
+    Alternativně můžete zahrnout soubory do projektu a nastavit vlastnost **obsah** na **hodnotu Ano** na stránce **vlastnosti** pro každý soubor. Tyto soubory jsou zkopírovány do **adresáře nasazení** zadaného na stránce **vzdáleného ladicího programu systému Windows** . Můžete také změnit **typ položky** na **Kopírovat soubor** a zadat další vlastnosti tam, kde potřebujete zkopírovat soubory do podsložky **adresáře nasazení**.
 
 ## <a name="set-up-debugging-with-remote-symbols"></a>Nastavení se vzdálený symboly ladění
 
 [!INCLUDE [remote-debugger-symbols](../debugger/includes/remote-debugger-symbols.md)]
 
 ## <a name="see-also"></a>Viz také
-- [Ladění v sadě Visual Studio](../debugger/index.md)
+- [Ladění v sadě Visual Studio](../debugger/index.yml)
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)
 - [Konfigurace brány firewall ve Windows pro vzdálené ladění](../debugger/configure-the-windows-firewall-for-remote-debugging.md)
 - [Přiřazení portů vzdáleného ladicího programu](../debugger/remote-debugger-port-assignments.md)

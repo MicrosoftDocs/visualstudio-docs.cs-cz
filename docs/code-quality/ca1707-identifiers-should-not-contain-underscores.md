@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1cbd6d3999525808180f69652290807d327b6814
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: adfa0ccd63d0433d367b0e7278693608bb83d685
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62797353"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71234272"
 ---
 # <a name="ca1707-identifiers-should-not-contain-underscores"></a>CA1707: Identifikátory by neměly obsahovat podtržítka
 
@@ -28,21 +28,21 @@ ms.locfileid: "62797353"
 |TypeName|IdentifiersShouldNotContainUnderscores|
 |CheckId|CA1707|
 |Kategorie|Microsoft.Naming|
-|Narušující změna|Zásadní – při aktivaci pro sestavení<br /><br /> Bez konce – při aktivaci pro parametry typu|
+|Zásadní změna|Přerušení – při vyvolání na sestavení<br /><br /> Nerozdělitelné – při vyvolání u parametrů typu|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Název identifikátoru obsahuje podtržítko (\_) znaků.
+Název identifikátoru obsahuje znak podtržítka (\_).
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Názvy identifikátorů podle konvence neobsahují znak podtržítka (\_) znaků. Toto pravidlo kontroluje obory názvů, typy, členy a parametry.
+Podle konvence názvy identifikátorů neobsahují znak podtržítka\_(). Pravidlo kontroluje obory názvů, typy, členy a parametry.
 
-Zásady vytváření názvů poskytují obecný vzhled knihovnám využívajících common language runtime. To snižuje učit se, která vyžaduje nové knihovny softwaru a zvyšuje důvěru zákazníků, že byla vyvinuta knihovny někdo, kdo má odborných znalostí v vývoj spravovaného kódu.
+Zásady vytváření názvů poskytují běžný vzhled pro knihovny, které cílí na modul CLR (Common Language Runtime). Tím se zmenší výuková křivka, která je požadována pro nové knihovny softwaru, a zvyšuje důvěru zákazníků, že knihovna byla vyvinuta někým, kdo má zkušenosti s vývojem spravovaného kódu.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Odeberte všechny znaky podtržítka z názvu.
+Odebere všechny znaky podtržítka z názvu.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
@@ -50,5 +50,5 @@ Nepotlačujte upozornění na toto pravidlo.
 
 ## <a name="related-rules"></a>Související pravidla
 
-- [CA1709: Identifikátory by měly správně formátováno.](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
-- [CA1708: Identifikátory by se měly lišit o více než velikostí písmen](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
+- [CA1709: Identifikátory by se měly použita správně.](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+- [CA1708: Identifikátory by se měly lišit o více než malých písmenech](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)

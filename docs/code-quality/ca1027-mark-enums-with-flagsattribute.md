@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 92b74bcf587492155445c500252ea10773a5978b
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 8375d2096417948b19a228d8a4f02accac7c0b5f
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69547811"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71236117"
 ---
 # <a name="ca1027-mark-enums-with-flagsattribute"></a>CA1027: Označte výčty pomocí FlagsAttribute
 
@@ -28,7 +28,7 @@ ms.locfileid: "69547811"
 |TypeName|MarkEnumsWithFlags|
 |CheckId|CA1027|
 |Kategorie|Microsoft.Design|
-|Narušující změna|Nenarušující|
+|Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
 
@@ -40,7 +40,7 @@ Ve výchozím nastavení toto pravidlo vyhledává pouze veřejné výčty, ale 
 
 Výčet je typ hodnoty, který definuje množinu souvisejících pojmenovaných konstant. Platí <xref:System.FlagsAttribute> pro výčet, pokud se jeho pojmenované konstanty dají smysluplně kombinovat. Představte si například výčet dnů v týdnu v aplikaci, který uchovává přehled o dostupných prostředcích. Pokud je dostupnost každého prostředku kódována pomocí výčtu, který <xref:System.FlagsAttribute> je k dispozici, lze reprezentovat libovolnou kombinaci dnů. Bez atributu lze reprezentovat pouze jeden den v týdnu.
 
-Pro pole, která ukládají kombinovatelné výčty, jsou jednotlivé hodnoty výčtu považovány za skupiny bitů v poli. Proto se tato pole někdy označují jako bitová *pole*. Pro kombinování hodnot výčtu pro úložiště v bitovém poli použijte logické podmíněné operátory. Chcete-li otestovat bitové pole k určení, zda je zadána konkrétní hodnota výčtu, použijte logické logické operátory. Pro bitové pole pro uložení a načtení kombinovaných hodnot výčtu správně musí být každá hodnota, která je definována ve výčtu, Mocnina dvou. Pokud to tak není, logické operátory logických operátorů nebudou moci extrahovat jednotlivé hodnoty výčtu, které jsou uloženy v poli.
+Pro pole, která ukládají kombinovatelné výčty, jsou jednotlivé hodnoty výčtu považovány za skupiny bitů v poli. Proto se tato pole někdy označují jako *Bitová pole*. Pro kombinování hodnot výčtu pro úložiště v bitovém poli použijte logické podmíněné operátory. Chcete-li otestovat bitové pole k určení, zda je zadána konkrétní hodnota výčtu, použijte logické logické operátory. Pro bitové pole pro uložení a načtení kombinovaných hodnot výčtu správně musí být každá hodnota, která je definována ve výčtu, Mocnina dvou. Pokud to tak není, logické operátory logických operátorů nebudou moci extrahovat jednotlivé hodnoty výčtu, které jsou uloženy v poli.
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 

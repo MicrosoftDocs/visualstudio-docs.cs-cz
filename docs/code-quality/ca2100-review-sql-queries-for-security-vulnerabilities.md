@@ -19,12 +19,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: b3ba92e154e3091f6ec483ba469c3fe60f50ec61
-ms.sourcegitcommit: 5483e399f14fb01f528b3b194474778fd6f59fa6
+ms.openlocfilehash: 837abb051467135b6332b53b2c59e5016d3adff6
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66744804"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71233055"
 ---
 # <a name="ca2100-review-sql-queries-for-security-vulnerabilities"></a>CA2100: Zkontrolujte chyby zabezpečení u dotazů SQL
 
@@ -33,23 +33,23 @@ ms.locfileid: "66744804"
 |TypeName|ReviewSqlQueriesForSecurityVulnerabilities|
 |CheckId|CA2100|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Nenarušující|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Nastaví metodu <xref:System.Data.IDbCommand.CommandText%2A?displayProperty=fullName> vlastnost s použitím řetězec, který je sestaven z řetězcového argumentu k metodě.
+Metoda nastavuje <xref:System.Data.IDbCommand.CommandText%2A?displayProperty=fullName> vlastnost pomocí řetězce, který je sestaven z řetězcového argumentu metody.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Toto pravidlo předpokládá, že řetězcový argument obsahuje vstup uživatele. Řetězec příkazu SQL sestavený ze vstupu uživatele je ohrožen útoky prostřednictvím injektáže SQL. Při útoku prostřednictvím injektáže SQL uživatel se zlými úmysly zadává vstup, který mění návrh dotazu ve snaze poškodit nebo získání neoprávněného přístupu k podkladové databázi. Mezi typické dostupné techniky patří vkládání jednoduchá uvozovka nebo apostrof, což je oddělovač řetězcového literálu SQL; dva spojovníky, které označuje, že komentář SQL; a středník, což znamená, že nový příkaz následuje. Pokud uživatelský vstup musí být část dotazu, použijte některou z těchto možností uvedeny v pořadí podle účinnosti, aby se snížilo riziko útoku.
+Toto pravidlo předpokládá, že řetězcový argument obsahuje vstup uživatele. Řetězec příkazu SQL sestavený ze vstupu uživatele je ohrožen útoky prostřednictvím injektáže SQL. V případě útoku prostřednictvím injektáže SQL uživatel se zlými úmysly dodává vstup, který mění návrh dotazu při pokusu o poškození nebo získání neoprávněného přístupu k podkladové databázi. Mezi obvyklé techniky patří vložení jednoduché uvozovky nebo apostrofu, což je oddělovač řetězcového literálu SQL. dvě pomlčky, což znamená komentář SQL; a středníkem, který indikuje, že následuje nový příkaz. Pokud musí být vstup uživatele součástí dotazu, použijte jednu z následujících možností, která je uvedena v řádu účinnosti, aby se snížilo riziko útoku.
 
-- Použití uložené procedury.
+- Použijte uloženou proceduru.
 
-- Použití parametrizovaného příkazu řetězce.
+- Použijte parametrizovaný řetězec příkazu.
 
-- Ověření vstupu uživatele pro typ a obsah, před sestavením řetězec příkazu.
+- Před sestavením řetězce příkazu ověřte vstup uživatele pro typ i obsah.
 
-Implementujte následující typy .NET <xref:System.Data.IDbCommand.CommandText%2A> vlastnost nebo zadejte konstruktory, které se nastavit vlastnost použitím argumentu řetězce.
+Následující typy rozhraní .NET implementují <xref:System.Data.IDbCommand.CommandText%2A> vlastnost nebo poskytují konstruktory, které nastavily vlastnost pomocí řetězcového argumentu.
 
 - <xref:System.Data.Odbc.OdbcCommand?displayProperty=fullName> a <xref:System.Data.Odbc.OdbcDataAdapter?displayProperty=fullName>
 
@@ -59,33 +59,33 @@ Implementujte následující typy .NET <xref:System.Data.IDbCommand.CommandText%
 
 - <xref:System.Data.SqlClient.SqlCommand?displayProperty=fullName> a <xref:System.Data.SqlClient.SqlDataAdapter?displayProperty=fullName>
 
-Všimněte si, že při použití metody ToString typu explicitně nebo implicitně porušení tohoto pravidla k vytvoření řetězce dotazu. Následuje příklad.
+Všimněte si, že toto pravidlo je porušené, když se metoda ToString typu používá explicitně nebo implicitně k sestavení řetězce dotazu. Následuje příklad.
 
 ```csharp
 int x = 10;
 string query = "SELECT TOP " + x.ToString() + " FROM Table";
 ```
 
-Porušení pravidla vzhledem k tomu, že uživatel se zlými úmysly může přepsat metodu ToString().
+Toto pravidlo je porušeno, protože uživatel se zlými úmysly může přepsat metodu ToString ().
 
-Toto pravidlo je také poruší, když se implicitně používá ToString.
+Toto pravidlo je porušeno také v případě implicitního použití ToString.
 
 ```csharp
 int x = 10;
 string query = String.Format("SELECT TOP {0} FROM Table", x);
 ```
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, použijte parametrický dotaz.
+Chcete-li opravit porušení tohoto pravidla, použijte parametrizovaný dotaz.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Je bezpečné potlačit upozornění tohoto pravidla, je-li text příkazu neobsahuje vstupu uživatele.
+Pokud text příkazu neobsahuje žádný vstup uživatele, je bezpečné potlačit upozornění od tohoto pravidla.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje metodu, `UnsafeQuery`, který porušuje pravidla a metodu, `SaferQuery`, který splňuje pravidlo s použitím řetězec parametrizovaného příkazu.
+Následující příklad ukazuje metodu, `UnsafeQuery`, která porušuje pravidlo a metodu, `SaferQuery`,, který splňuje pravidlo pomocí parametrizovaného řetězce příkazu.
 
 [!code-vb[FxCop.Security.ReviewSqlQueries#1](../code-quality/codesnippet/VisualBasic/ca2100-review-sql-queries-for-security-vulnerabilities_1.vb)]
 [!code-csharp[FxCop.Security.ReviewSqlQueries#1](../code-quality/codesnippet/CSharp/ca2100-review-sql-queries-for-security-vulnerabilities_1.cs)]

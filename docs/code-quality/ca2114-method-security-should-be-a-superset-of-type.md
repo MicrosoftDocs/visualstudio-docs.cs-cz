@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d83da42a029d746899bfaccf5d62f8856a040611
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 536e676a1b2527c466aae741ca7117be507bfb9a
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68921105"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71232744"
 ---
 # <a name="ca2114-method-security-should-be-a-superset-of-type"></a>CA2114: Zabezpečení metod by mělo být nadmnožinou typu
 
@@ -28,7 +28,7 @@ ms.locfileid: "68921105"
 |TypeName|MethodSecurityShouldBeASupersetOfType|
 |CheckId|CA2114|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Narušující|
+|Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
 Typ má deklarativní zabezpečení a jedna z jeho metod má deklarativní zabezpečení pro stejnou akci zabezpečení a akce zabezpečení není [propojením požadavků](/dotnet/framework/misc/link-demands)a oprávnění kontrolovaného typem nejsou podmnožinou oprávnění zkontrolovaných metodou.

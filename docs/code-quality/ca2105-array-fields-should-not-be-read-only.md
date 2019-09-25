@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f8a02ae357dbf36cb4d3e4bd21aaad0fed3a320
-ms.sourcegitcommit: 32144a09ed46e7223ef7dcab647a9f73afa2dd55
+ms.openlocfilehash: 7407fcbe035d02992f414027114d69c257f5f390
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586577"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71232912"
 ---
 # <a name="ca2105-array-fields-should-not-be-read-only"></a>CA2105: Pole s poli by neměla být pouze pro čtení
 
@@ -28,43 +28,43 @@ ms.locfileid: "67586577"
 |TypeName|ArrayFieldsShouldNotBeReadOnly|
 |CheckId|CA2105|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Narušující|
+|Zásadní změna|Narušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-Veřejné nebo chráněné pole obsahující pole je deklarován jen pro čtení.
+Veřejné nebo chráněné pole, které obsahuje pole, je deklarované jen pro čtení.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Pokud použijete `readonly` (`ReadOnly` v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) modifikátor pro pole, které obsahuje pole, pole nelze změnit pro odkazování na jiné pole. Avšak prvky pole, které jsou uloženy v poli určeném jen pro čtení, mohou být změněny. Kód, který se rozhoduje nebo provádí operace, které jsou založeny na elementy pole jen pro čtení, který je veřejně přístupný může obsahovat chybu zneužitelné zabezpečení.
+Když použijete `readonly` modifikátor (`ReadOnly` in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) na pole, které obsahuje pole, nelze změnit pole tak, aby odkazovalo na jiné pole. Avšak prvky pole, které jsou uloženy v poli určeném jen pro čtení, mohou být změněny. Kód, který provádí rozhodnutí nebo provádí operace založené na prvcích pole určeného jen pro čtení, které může být veřejně přístupný, může obsahovat zneužitou chybu zabezpečení.
 
-Všimněte si, že s polem veřejné také porušuje pravidla návrhu [CA1051: Nedeklarujte viditelná pole instance](../code-quality/ca1051-do-not-declare-visible-instance-fields.md).
+Uvědomte si, že pokud máte veřejné pole také v rozporu [s pravidlem návrhu CA1051: Nedeklarujte viditelná pole](../code-quality/ca1051-do-not-declare-visible-instance-fields.md)instance.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li vyřešit ohrožení zabezpečení, který je identifikován podle tohoto pravidla, nespoléhejte na obsah, který je veřejně přístupný pole jen pro čtení. Důrazně doporučujeme používat jednu z následujících postupů:
+Chcete-li opravit chybu zabezpečení, která je identifikována tímto pravidlem, nespoléhejte na obsah pole jen pro čtení, které může být veřejně přístupné. Důrazně doporučujeme použít jeden z následujících postupů:
 
-- Nahraďte pole kolekcí siného typu, který se nedá změnit. Další informace naleznete v tématu <xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>.
+- Nahraďte pole kolekcí silného typu, kterou nelze změnit. Další informace naleznete v tématu <xref:System.Collections.ReadOnlyCollectionBase?displayProperty=fullName>.
 
-- Nahraďte veřejné pole, která vrací klon soukromého pole. Protože váš kód nespoléhala se na klonu, nehrozí nebezpečí, pokud dojde k úpravě prvky.
+- Nahraďte veřejné pole metodou, která vrací klon soukromého pole. Vzhledem k tomu, že váš kód nespoléhá na klonování, neexistuje nebezpečí, pokud jsou prvky změněny.
 
-Pokud jste zvolili druhého přístupu, nenahrazují pole k vlastnosti; vlastnosti, které vrací pole nepříznivě ovlivnit výkon. Další informace najdete v tématu [CA1819: Vlastnosti by neměly vracet pole](../code-quality/ca1819-properties-should-not-return-arrays.md).
+Pokud jste zvolili druhý přístup, neměňte pole pomocí vlastnosti; vlastnosti, které vracejí pole nepříznivě ovlivňující výkon. Další informace najdete v tématu [CA1819: Vlastnosti by neměly vracet pole](../code-quality/ca1819-properties-should-not-return-arrays.md).
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Vyloučení upozornění tohoto pravidla se důrazně nedoporučuje. Téměř žádné scénáře dojít, pokud nejsou důležité obsah pole jen pro čtení. Pokud je tomu u vašeho scénáře, odeberte `readonly` modifikátor místo vyloučení zprávy.
+Vyloučení upozornění z tohoto pravidla se důrazně nedoporučuje. Téměř žádné scénáře nevzniká, pokud obsah pole jen pro čtení není neimportované. Pokud se jedná o případ s vaším scénářem, odeberte `readonly` modifikátor místo vyloučení zprávy.
 
 ## <a name="example-1"></a>Příklad 1
 
-Tento příklad ukazuje nebezpečí porušení tohoto pravidla. První část ukazuje příklad knihovny, která má typ, `MyClassWithReadOnlyArrayField`, který obsahuje dvě pole (`grades` a `privateGrades`), které nejsou zabezpečené. Pole `grades` je veřejná a proto citlivé na jakýkoli volající. Pole `privateGrades` privátní, ale je stále vztahují rizika vyplývající, protože se vrátí volajícímu podle `GetPrivateGrades` metody. `securePrivateGrades` Pole je přístupný bezpečným způsobem podle `GetSecurePrivateGrades` metody. Je deklarována jako soukromá dodržovat postupy dobrý návrh. Druhá část zobrazuje kód, který změní hodnoty uložené v `grades` a `privateGrades` členy.
+Tento příklad ukazuje nebezpečí porušení tohoto pravidla. První část ukazuje příklad knihovny, která má typ, `MyClassWithReadOnlyArrayField`, který obsahuje dvě pole (`grades` a `privateGrades`), která nejsou zabezpečená. Pole `grades` je veřejné, a proto je zranitelné pro libovolného volajícího. Pole `privateGrades` je privátní, ale je stále zranitelné, protože je vráceno volajícím `GetPrivateGrades` pomocí metody. Pole je vystaveno bezpečným způsobem `GetSecurePrivateGrades` pomocí metody. `securePrivateGrades` Deklarace je deklarovaná jako soukromá, aby sledovala dobré postupy návrhu. Druhá část zobrazuje kód, který mění hodnoty uložené v `grades` členech a. `privateGrades`
 
-Příklad knihovny tříd se zobrazí v následujícím příkladu.
+Ukázková knihovna tříd se zobrazí v následujícím příkladu.
 
 [!code-csharp[FxCop.Security.ArrayFieldsNotReadOnly#1](../code-quality/codesnippet/CSharp/ca2105-array-fields-should-not-be-read-only_1.cs)]
 
 ## <a name="example-2"></a>Příklad 2
 
-Následující kód používá příklad knihovny tříd pro ilustraci problémy se zabezpečením pole jen pro čtení.
+Následující kód používá ukázkovou knihovnu tříd k ilustraci problémů zabezpečení pole jen pro čtení.
 
 [!code-csharp[FxCop.Security.TestArrayFieldsRead#1](../code-quality/codesnippet/CSharp/ca2105-array-fields-should-not-be-read-only_2.cs)]
 
@@ -77,7 +77,7 @@ After tampering: Grades: 90, 555, 90 Private Grades: 90, 555, 90  Secure Grades,
 
 ## <a name="related-rules"></a>Související pravidla
 
-- [CA2104 : Nedeklarujte čtení proměnlivé odkazové typy pouze](../code-quality/ca2104-do-not-declare-read-only-mutable-reference-types.md)
+- [CA2104 Nedeklarujte proměnlivé odkazové typy pouze pro čtení](../code-quality/ca2104-do-not-declare-read-only-mutable-reference-types.md)
 
 ## <a name="see-also"></a>Viz také:
 

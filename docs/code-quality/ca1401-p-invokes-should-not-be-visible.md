@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: e26daf68e0031358605427b310bb7284d43baf1b
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: d4a0a1c001407d947988497c422fdb8e88dd7c83
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68922137"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71234900"
 ---
 # <a name="ca1401-pinvokes-should-not-be-visible"></a>CA1401: Volání nespravovaných kódů by neměla být viditelná
 
@@ -31,7 +31,7 @@ ms.locfileid: "68922137"
 |TypeName|PInvokesShouldNotBeVisible|
 |CheckId|CA1401|
 |Kategorie|Microsoft. interoperabilita|
-|Narušující změna|Narušující|
+|Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
 Veřejná nebo chráněná metoda ve veřejném typu má <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> atribut (také implementováno `Declare` klíčovým slovem [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]v).

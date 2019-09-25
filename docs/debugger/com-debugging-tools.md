@@ -1,5 +1,5 @@
 ---
-title: Nástroje pro ladění modelu COM | Dokumentace Microsoftu
+title: Nástroje pro ladění modelu COM | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -21,30 +21,30 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 181596e7b76dc2288da82e731455710fde0205d8
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 723549865a39b390d411ffe83ee1fefad7ecb82d
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62564740"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71211275"
 ---
 # <a name="com-debugging-tools"></a>Nástroje pro ladění modelu COM
 
-Toto téma obsahuje seznam nástrojů, které vám může pomoct otestovat a zkontrolovat COM programy.
+Toto téma obsahuje seznam nástrojů, které vám pomůžou s testováním a kontrolou programů modelu COM.
 
 Prohlížeč objektů OLE/COM
 
-OLEVIEW zobrazí ovládací prvky ActiveX a OLE objekty, které jsou nainstalované v počítači a rozhraní, které podporují. Umožňuje také upravit registr a podívejte se na knihovny typů.
+OLEVIEW zobrazuje objekty ActiveX a OLE nainstalované ve vašem počítači a rozhraní, která podporují. Umožňuje také upravit registr a prohlédnout si knihovny typů.
 
-Ukázky tříd Microsoft Foundation
+Ukázky Microsoft Foundation Class
 
-Ukázky knihovny MFC ActiveX OCLIENT a SUPERPAD jsou také dostupných pro testování vašich aplikací proti. Úplný zdrojový kód pro tyto ukázky je v ceně.
+OCLIENT a SUPERPAD knihovny MFC jsou také k dispozici k otestování svých aplikací. K dispozici je úplný zdrojový kód pro tyto ukázky.
 
 ### <a name="see-also"></a>Viz také:
 
 - [Ladění modelů COM a prvků ActiveX](../debugger/com-and-activex-debugging.md)
 - [Nástroje pro ladění modelu COM](../debugger/com-debugging-tools.md)
-- [Ladění v sadě Visual Studio](../debugger/index.md)
+- [Ladění v sadě Visual Studio](../debugger/index.yml)
 - [První seznámení s ladicím programem](../debugger/debugger-feature-tour.md)
-- [Ukázka OCLIENT: Ukazuje aplikaci kontejneru vizuálních úprav](https://msdn.microsoft.com/library/8cd5c234-9a4e-4934-8f5d-bac189ad92c4)
-- [Ukázka SUPERPAD: Ukazuje Server, který upravuje Text pomocí třídy CEditView úprav s náhledem](https://msdn.microsoft.com/library/7b14e975-d986-4e6a-8289-226485cfcb72)
+- [Ukázka OCLIENT: Znázorňuje vizuální úpravu kontejneru aplikace.](https://msdn.microsoft.com/library/8cd5c234-9a4e-4934-8f5d-bac189ad92c4)
+- [Ukázka SUPERPAD: Ukazuje server pro vizuální úpravy, který upravuje text pomocí CEditView.](https://msdn.microsoft.com/library/7b14e975-d986-4e6a-8289-226485cfcb72)

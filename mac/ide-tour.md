@@ -1,126 +1,155 @@
 ---
 title: Visual Studio for Mac Tour
-description: Visual Studio for Mac obsahuje integrované vývojové prostředí pro vytváření aplikací .NET v systému macOS, včetně webů ASP.NET Core a projekty Xamarin pro iOS, Android, Mac a Xamarin.Forms.
+description: Visual Studio pro Mac poskytuje integrované vývojové prostředí pro sestavování aplikací .NET na macOS, včetně ASP.NET Core webů a projektů Xamarin pro iOS, Android, Mac a Xamarin. Forms.
 author: asb3993
 ms.author: amburns
-ms.date: 04/02/2019
+ms.date: 09/18/2019
 ms.assetid: 7DC64A52-AA41-4F3A-A8A1-8A20BCD81CC7
 ms.custom: video
-ms.openlocfilehash: aabb6b575edb68f3e72cad06f2497b8176e950fe
-ms.sourcegitcommit: 7fbfb2a1d43ce72545096c635df2b04496b0be71
+ms.openlocfilehash: 60691ef47b3a3dfdb2fa1148507697a27a99ef7b
+ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67691499"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71213734"
 ---
 # <a name="visual-studio-2019-for-mac-tour"></a>Visual Studio 2019 for Mac tour
 
-Visual Studio for Mac je .NET _integrovaného vývojového prostředí_ na počítači Mac, který je možné upravit, ladit a vytvářet kód a pak publikujete aplikaci. Kromě očekávané funkce, jako je standardní editor a ladicí program Visual Studio for Mac obsahuje kompilátory, nástroje dokončování kódu, grafičtí návrháři a správy zdrojového kódu usnadňují proces vývoje softwaru.
+Visual Studio pro Mac je _integrované vývojové prostředí_ .NET na Macu, které se dá použít k úpravám, ladění a sestavování kódu a publikování aplikace. Kromě očekávaných funkcí, jako je standardní editor a ladicí program, Visual Studio pro Mac zahrnuje kompilátory, nástroje pro dokončování kódu, grafické návrháře a správu zdrojového kódu pro usnadnění procesu vývoje softwaru.
 
-Visual Studio for Mac podporuje mnoho stejné typy souborů jako jeho protějšek Windows, například `.csproj`, `.fsproj`, nebo `.sln` soubory a podporuje funkce, jako je například EditorConfig, což znamená, že můžete použít rozhraní IDE, který vám bude nejlépe vyhovovat.
-Vytvoření, otevření nebo vyvíjet aplikace bude známým všem uživatelům, kteří dříve používali Visual Studio na Windows. Kromě toho Visual Studio for Mac využívá mnoho výkonných nástrojů, které usnadňují jeho protějšek Windows výkonné IDE. Platforma kompilátor Roslyn se používá pro refaktoring a technologii IntelliSense. Jeho modul systému a sestavení projektu pomocí nástroje MSBuild a jeho Editor zdrojového kódu podporuje sady TextMate. Používá stejný ladicím modulem pro aplikace Xamarin a .NET Core a stejného návrháře pro Xamarin.iOS a Xamarin.Android.
+Visual Studio pro Mac podporuje mnoho stejných typů souborů jako jejich protějšky v systému Windows, například `.csproj` `.fsproj`soubory, nebo `.sln` , a podporuje funkce, jako je například EditorConfig, což znamená, že můžete použít integrované vývojové prostředí (IDE), které pro vás vyhovuje nejlépe.
+Vytvoření, otevření a vývoj aplikace bude známé prostředí pro kohokoli, kdo dřív používal aplikaci Visual Studio ve Windows. Navíc Visual Studio pro Mac využívá spoustu výkonných nástrojů, které jejich protějšky v systému Windows poskytují takové výkonné integrované vývojové prostředí (IDE). Platforma kompilátoru Roslyn se používá pro refaktoring a IntelliSense. Systém projektu a modul sestavení používají MSBuild a jeho zdrojový editor používá stejný základ jako Visual Studio ve Windows. Používá stejné moduly ladicího programu pro aplikace Xamarin a .NET Core a stejné návrháře pro Xamarin. iOS a Xamarin. Android.
 
-## <a name="what-can-i-do-in-visual-studio-for-mac"></a>Co můžu dělat v sadě Visual Studio for Mac
+## <a name="what-can-i-do-in-visual-studio-for-mac"></a>Co můžu v Visual Studio pro Mac
 
-Visual Studio for Mac podporuje následující typy vývoje pro:
+Visual Studio pro Mac podporuje následující typy vývoje:
 
-- Webové aplikace ASP.NET Core s C#, F#a podpora pro stránky Razor, JavaScript a TypeScript
-- Konzolové aplikace .NET core s C# neboF#
-- Hry Unity pro různé platformy a aplikace sC#
-- Aplikace pro Android, iOS, tvOS a watchOS v Xamarinu s C# nebo F# a XAML
-- Desktopové aplikace cocoa v C# neboF#
+- ASP.NET Core webové aplikace s C#podporou F#, a pro stránky Razor, JavaScript a TypeScript
+- Konzolové aplikace .NET Core C# s neboF#
+- Hry a aplikace Unity pro různé platformy sC#
+- Aplikace pro Android, iOS, tvOS a watchOS v Xamarin s C# nebo F# a XAML
+- Desktopové aplikace pro C# kakao v neboF#
 
-Tento článek se věnuje různých oddílů sady Visual Studio pro Mac, poskytuje pohled na některé z funkcí, které usnadňují výkonný nástroj pro vytváření těchto aplikací.
+V tomto článku se seznámíte s různými částmi Visual Studio pro Mac, kde se můžete podívat na některé funkce, díky kterým je vytváření těchto aplikací výkonným nástrojem.
 
-## <a name="ide-tour"></a>Prohlídka integrovaného vývojového prostředí
+## <a name="ide-tour"></a>Prohlídka IDE
 
-Visual Studio for Mac je uspořádaný do několika oddílů pro správu souborů aplikace a nastavení, vytvoření kódu aplikace a ladění.
+Visual Studio pro Mac je uspořádána do několika oddílů pro správu souborů a nastavení aplikace, vytváření kódu aplikace a ladění.
 
-## <a name="start-window"></a>Časový interval pro spuštění
+## <a name="getting-started"></a>Začínáme
 
-Při spuštění. 2019 Visual Studio pro Mac nové uživatelům se zobrazí okno přihlášení. Přihlaste se pomocí svého účtu Microsoft k aktivaci placenou licenci (pokud nějakou máte) nebo odkaz na předplatná Azure. Stisknutím klávesy **přeskočit** a později přihlásit přes **sady Visual Studio > přihlaste** položky nabídky:
+Když spustíte Visual Studio 2019 for Mac, noví uživatelé uvidí přihlašovací okno. Přihlaste se pomocí svého účet Microsoft, abyste mohli aktivovat placenou licenci (pokud ji máte) nebo propojit s předplatným Azure. Můžete stisknout **I později** a později se přihlásit pomocí položky nabídky **přihlášení k Visual Studiu >** :
 
-![Přihlaste se ke svému účtu Microsoft](media/ide-tour-2019-start-signin.png)
+![Přihlaste se ke svému účet Microsoft](media/ide-tour-2019-start-signin.png)
 
-Přihlášených uživatelů se zobrazí nové _časový interval pro spuštění_, která zobrazuje seznam posledních projektů a tlačítka Otevřít existující projekt nebo vytvořte novou:
+Pak budete mít možnost přizpůsobit IDE výběrem preferovaných klávesových zkratek: Visual Studio pro Mac, Visual Studio, Visual Studio Code nebo Xcode:
 
-![Výběr z nedávných projektů, nebo vytvořit něco nového](media/ide-tour-2019-start-projects.png)
+![Výběr oblíbených klávesových zkratek](media/ide-tour-2019-keyboard-shortcut.png)
+
+Přihlášený uživatel uvidí nové _okno Start_, které zobrazuje seznam posledních projektů, a tlačítka k otevření existujícího projektu nebo vytvoření nového projektu:
+
+![Vyberte si z posledních projektů nebo vytvořte něco nového.](media/ide-tour-2019-start-projects.png)
 
 ## <a name="solutions-and-projects"></a>Řešení a projekty
 
-Následující obrázek ukazuje Visual Studio for Mac pomocí aplikace načíst:
+Následující obrázek ukazuje Visual Studio pro Mac s načtenou aplikací:
 
-![Načtení sady Visual Studio pro Mac s aplikací](media/ide-tour-image17.png)
+![Visual Studio pro Mac s načtenou aplikací](media/ide-tour-image17.png)
 
-Následující části obsahují základní informace o hlavních oblastech v sadě Visual Studio pro Mac.
+Následující části obsahují přehled hlavních oblastí v Visual Studio pro Mac.
 
-## <a name="solution-pad"></a>Oblasti řešení
+## <a name="solution-pad"></a>Panel řešení
 
-Oblasti řešení Uspořádá projekty v řešení:
+Oblast řešení uspořádá projekt (y) v řešení:
 
-![Projekty, které jsou uspořádány v oblasti řešení](media/ide-tour-image18.png)
+![Projekty uspořádané v Oblast řešení](media/ide-tour-image18.png)
 
-Je to, kde soubory pro zdrojový kód, prostředky, uživatelské rozhraní a závislosti jsou uspořádány do projektů specifické pro platformu.
+To je místo, kde jsou soubory zdrojového kódu, prostředků, uživatelského rozhraní a závislostí uspořádány do projektů specifických pro platformu.
 
-Další informace o použití projekty a řešení v sadě Visual Studio pro Mac, najdete v článku [projekty a řešení](/visualstudio/mac/projects-and-solutions) článku.
+Další informace o použití projektů a řešení v Visual Studio pro Mac naleznete v článku [projekty a řešení](/visualstudio/mac/projects-and-solutions) .
 
 ## <a name="assembly-references"></a>Odkazy na sestavení
 
 Odkazy na sestavení pro každý projekt jsou k dispozici ve složce odkazy:
 
-![Složka s odkazy v oblasti řešení](media/ide-tour-image19.png)
+![Odkazuje na složku na panelu řešení.](media/ide-tour-image19.png)
 
-Další odkazy jsou přidána pomocí **upravit odkazy** dialogové okno, které se zobrazí na něj poklikejte na složku odkazy nebo tak, že vyberete **upravit odkazy** na jeho místní nabídky akce:
+Další odkazy jsou přidány pomocí dialogového okna **Upravit odkazy** , které se zobrazí Poklikáním na složku odkazy, nebo výběrem možnosti **Upravit odkazy** v jeho kontextových nabídkách:
 
-![Odkazy na dialogové okno Upravit](media/ide-tour-image20.png)
+![Dialogové okno Upravit odkazy](media/ide-tour-image20.png)
 
-Další informace o používání odkazů v sadě Visual Studio pro Mac, najdete v článku [Správa odkazů v projektu](/visualstudio/mac/managing-references-in-a-project) článku.
+Další informace o použití odkazů v Visual Studio pro Mac naleznete v článku [Správa odkazů v projektu](/visualstudio/mac/managing-references-in-a-project) .
 
-## <a name="dependencies--packages"></a>Závislosti / balíčky
+## <a name="dependencies--packages"></a>Závislosti/balíčky
 
-Všechny externí závislosti používaných v aplikaci jsou uloženy ve složce závislosti nebo balíčky, v závislosti na tom, jestli jste v.Net Core nebo Xamarin.iOS/Xamarin.Android projektu. Ty se obvykle poskytují ve formě NuGet.
+Všechny externí závislosti použité ve vaší aplikaci se ukládají do složky závislosti nebo balíčky v závislosti na tom, jestli jste v projektu .Net Core nebo Xamarin. iOS/Xamarin. Android. Tyto jsou obvykle poskytovány ve formě NuGet.
 
-Správce balíčků NuGet je nejoblíbenější Správce balíčků pro vývoj na platformě .NET. Díky podpoře NuGet sady Visual Studio můžete snadno vyhledat a přidat balíčky do vašeho projektu do aplikace.
+NuGet je nejoblíbenější správce balíčků pro vývoj pro .NET. Díky podpoře NuGet v aplikaci Visual Studio můžete snadno vyhledat a přidat balíčky do projektu do aplikace.
 
-Chcete-li přidat závislost pro vaši aplikaci, klikněte pravým tlačítkem na závislosti / balíčky a pak zvolte položku **přidat balíčky**:
+Pokud chcete do aplikace přidat závislost, klikněte pravým tlačítkem na složku závislosti/balíčky a vyberte **Přidat balíčky**:
 
-![Přidání balíčku NuGet](media/ide-tour-image21.png)
+![Přidat balíček NuGet](media/ide-tour-image21.png)
 
-Informace o použití balíčku NuGet v aplikaci najdete v [projektu včetně NuGet ve vašem projektu](/visualstudio/mac/nuget-walkthrough) článku.
+Informace o použití balíčku NuGet v aplikaci najdete v článku [zahrnutí projektu NuGet v projektu](/visualstudio/mac/nuget-walkthrough) .
+
+## <a name="source-editor"></a>Editor zdroje
+
+Bez ohledu na to, zda píšete v C#, XAML nebo JavaScript, Editor kódu sdílí stejné základní komponenty s Windows Visual Studio s zcela nativním uživatelským rozhraním.
+
+To přináší některé z následujících funkcí:
+
+* Nativní uživatelské rozhraní macOS (založené na verzi Cocoa) (popisky, vzhled editoru, ozdobné okraje, vykreslování textu, IntelliSense)
+* Filtrování typu IntelliSense a "Zobrazit položky importu"
+* Podpora nativního zadávání textu
+* Podpora jazyků psaných zprava doleva a obousměrných jazyků
+* Roslyn 3
+* Podpora více míst vložení
+* Zalamování řádků
+* Aktualizované uživatelské rozhraní technologie IntelliSense
+* Vylepšené hledání a nahrazování
+* Podpora fragmentů kódu 
+* Formátovat výběr
+* Vložené lightbulbs
+
+Další informace o použití editoru zdrojového kódu v Visual Studio pro Mac naleznete v dokumentaci ke [zdrojovému editoru](/visualstudio/mac/source-editor) .
+
+Pokud chcete, aby se karty zobrazovaly stále, můžete je využít k jejich připnutí. Tím zajistíte, že při každém spuštění projektu se vždy zobrazí karta, kterou potřebujete. Pokud chcete kartu připnout, najeďte myší na kartu a klikněte na ikonu _připnutí_ :
+
+![Připnutí karty](media/ide-tour-tabpin.png)
 
 ## <a name="refactoring"></a>Refaktoring
 
-Visual Studio for Mac obsahuje dva užitečné způsoby, jak kód Refaktorovat: Kontext akce a zdrojová analýza. Další informace o nich v [refaktoringu](/visualstudio/mac/refactoring) článku.
+Visual Studio pro Mac poskytuje dva užitečné způsoby refaktorování kódu: Akce kontextu a zdrojová analýza. Další informace o těchto možnostech si můžete přečíst v článku [refaktoringu](/visualstudio/mac/refactoring) .
 
 ## <a name="debugging"></a>Ladění
 
-Visual Studio for Mac obsahuje nativní ladicí program umožňuje ladění podporu pro aplikace Xamarin.Android, Xamarin.iOS a Xamarin.Mac. Visual Studio pro Mac používá Mono Obnovitelně ladicí program, který je implementován do modulu Mono runtime, umožňuje rozhraní IDE k ladění spravovaného kódu na všech platformách. Další informace o ladění, najdete [ladění](/visualstudio/mac/debugging) článku.
+Visual Studio pro Mac má nativní ladicí program umožňující ladění pro aplikace Xamarin. iOS, Xamarin. Mac a Xamarin. Android. Visual Studio pro Mac používá měkký ladicí program mono, který je implementován do Mono runtime a umožňuje rozhraní IDE ladit spravovaný kód napříč všemi platformami. Další informace o ladění naleznete v článku [ladění](/visualstudio/mac/debugging) .
 
-Ladicí program obsahuje bohatou vizualizéry pro speciální typy, jako jsou řetězce, barvy, adresy URL, jakož i velikostí, souřadnice a Bézierovy křivky.
+Ladicí program obsahuje bohatých vizualizací pro speciální typy, jako jsou například řetězce, barvy, adresy URL a také velikosti, souřadnice a Bézierovy křivky.
 
-Další informace o datové vizualizace ladicího programu, najdete [vizualizace dat](/visualstudio/mac/data-visualizations) článku.
+Další informace o vizualizacích dat ladicího programu najdete v článku [vizualizace dat](/visualstudio/mac/data-visualizations) .
 
 ## <a name="version-control"></a>Správa verzí
 
-Visual Studio pro Mac se integruje s systémy správy zdrojového kódu Git a Subversion. Projekty v rámci správy zdrojového kódu, jsou označeny větev uvedená vedle názvu řešení:
+Visual Studio pro Mac se integruje se systémy správy zdrojového kódu Git a subverze. Projekty pod správou zdrojových kódů jsou označeny větví uvedenou vedle názvu řešení:
 
-![Název větve k označení projekt pod správou zdrojových kódů](media/ide-tour-image22.png)
+![Název větve, který označuje projekt pod správou zdrojových kódů](media/ide-tour-image22.png)
 
-Soubory s nepotvrzené změny mít anotaci na jejich ikonami v podokně řešení, jak je znázorněno na následujícím obrázku:
+Soubory s nepotvrzenými změnami mají pro své ikony v podokně řešení poznámku, jak je znázorněno na následujícím obrázku:
 
-![Nepotvrzené soubory v oblasti řešení](media/ide-tour-image23.png)
+![Nepotvrzené soubory na panelu řešení](media/ide-tour-image23.png)
 
-Další informace o používání správy verzí v sadě Visual Studio, najdete v článku [verzí](/visualstudio/mac/version-control) článku.
+Další informace o použití správy verzí v aplikaci Visual Studio naleznete v článku Správa [verzí](/visualstudio/mac/version-control) .
 
 ## <a name="next-steps"></a>Další kroky
 
 - [Instalace sady Visual Studio pro Mac](installation.md)
-- [Zkontrolujte dostupné úlohy](workloads.md)
+- [Kontrola dostupných úloh](workloads.md)
 
-## <a name="related-video"></a>Související videa
+## <a name="related-video"></a>Související video
 
 > [!Video https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Visual-Studio-for-Mac-Overview/player]
 
 ## <a name="see-also"></a>Viz také:
 
-- [Visual Studio IDE (on Windows)](/visualstudio/ide/visual-studio-ide)
+- [Rozhraní IDE sady Visual Studio (ve Windows)](/visualstudio/ide/visual-studio-ide)
