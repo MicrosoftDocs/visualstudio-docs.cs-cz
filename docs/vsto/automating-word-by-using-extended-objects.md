@@ -1,5 +1,5 @@
 ---
-title: Automatizace aplikace Word s použitím rozšířených objektů
+title: Automatizace Wordu pomocí rozšířených objektů
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -20,39 +20,39 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: c75708afa3c230dcc4bba308cf2d7c97b77d802b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 083fe8cdd3bf9d0e4de4809aacfb78b537e4ed8e
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62939548"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71255538"
 ---
-# <a name="automate-word-by-using-extended-objects"></a>Automatizace aplikace Word s použitím rozšířených objektů
-  Při vývoji řešení aplikace Word v sadě Visual Studio, můžete použít *hostovat položky* a *hostování ovládacího prvku*s ve vašich řešeních. Jedná se o objekty, které rozšiřují některé běžně používané objekty v objektovém modelu aplikace Word (to znamená, objektový model, který je zveřejněný prostřednictvím primárních sestavení vzájemné spolupráce pro aplikaci Word), například <xref:Microsoft.Office.Interop.Word.Document> a <xref:Microsoft.Office.Interop.Word.ContentControl> objekty. Rozšířené objekty se chovají jako objekty aplikace Word, které jsou založeny na, ale přidávají další události a možnosti vázání dat na objekty.
+# <a name="automate-word-by-using-extended-objects"></a>Automatizace Wordu pomocí rozšířených objektů
+  Při vývoji řešení aplikace Word v aplikaci Visual Studio můžete použít *hostitelské položky* a *hostitelské řízení*s ve vašich řešeních. Jedná se o objekty, které rozšířily určité běžně používané objekty v objektovém modelu aplikace Word (tj. objektový model, který je zveřejněn v rámci primárního definičního sestavení pro Word) <xref:Microsoft.Office.Interop.Word.Document> , <xref:Microsoft.Office.Interop.Word.ContentControl> jako jsou například objekty a. Rozšířené objekty se chovají jako objekty aplikace Word, na kterých jsou založeny, ale přidávají do objektů další události a funkce vazby dat.
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
- Hostitelských položek a hostitelských ovládacích prvků jsou k dispozici v doplňcích VSTO a přizpůsobení na úrovni dokumentu, i když se liší pro každý typ řešení kontext, ve kterém ty je možné použít. Další informace najdete v tématu [hostovat položky a hostujte Přehled ovládacích prvků](../vsto/host-items-and-host-controls-overview.md).
+ Hostitelské položky a hostitelské ovládací prvky jsou k dispozici v doplňcích VSTO i v přizpůsobení na úrovni dokumentu, i když kontext, ve kterém je lze použít, je pro každý typ řešení odlišný. Další informace naleznete v tématu [Přehled hostitelských položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md).
 
-## <a name="document-host-item"></a>Hostitelská položka Document
- Projekty vám poskytnou přístup k aplikaci Word <xref:Microsoft.Office.Tools.Word.Document> hostitelský objekt. <xref:Microsoft.Office.Tools.Word.Document> Hostitelský objekt funguje jako kontejner pro ostatní ovládací prvky, včetně hostitelské ovládací prvky a ovládací prvky Windows Forms, a udržuje informace o ovládacích prvcích na svém povrchu. <xref:Microsoft.Office.Tools.Word.Document> Hostitelský objekt také poskytuje většinu stejné členy jako <xref:Microsoft.Office.Interop.Word.Document> třídy, která je odpovídající třídou v objektovém modelu aplikace Word.
+## <a name="document-host-item"></a>Položka hostitele dokumentu
+ Projekty aplikace Word poskytují přístup k <xref:Microsoft.Office.Tools.Word.Document> položce hostitele. <xref:Microsoft.Office.Tools.Word.Document> Hostitelská položka funguje jako kontejner pro jiné ovládací prvky, včetně hostitelských ovládacích prvků a model Windows Formsch ovládacích prvků, a udržuje informace o ovládacích prvcích na jeho povrchu. Položka hostitele také poskytuje většinu stejných členů <xref:Microsoft.Office.Interop.Word.Document> jako třídu, která je odpovídající třídou v objektovém modelu aplikace Word. <xref:Microsoft.Office.Tools.Word.Document>
 
- Další informace najdete v tématu [hostitelská položka Document](../vsto/document-host-item.md).
+ Další informace najdete v tématu [položka hostitele dokumentu](../vsto/document-host-item.md).
 
 ## <a name="word-host-controls"></a>hostitelské ovládací prvky aplikace Word
- Existuje několik hostitelů ovládací prvky pro aplikaci Word, které vám pomůžou vytvořit, uspořádání a automatizovat dokumenty. Většina jejich funkce zahrnuje import, prezentování a chrání data. Tyto ovládací prvky hostitele poskytnout události a datové vazby, které nemají jejich protějšky v nativní objektovému modelu Wordu.
+ Existuje několik ovládacích prvků pro hostování aplikace Word, které vám pomohou vytvořit, uspořádat a automatizovat dokumenty. Většina jejich funkcí zahrnuje import, prezentaci a ochranu dat. Tyto hostitelské ovládací prvky poskytují události a funkce vazby dat, které jejich protějšky v nativním objektovém modelu aplikace Word nemají.
 
- V projektech na úrovni dokumentu můžete přidat libovolný ovládací prvek hostitele do dokumentu v době návrhu nebo za běhu můžete přidat ovládací prvky obsahu a ovládacích prvků záložek. V doplňku VSTO projektů můžete přidat ovládací prvky obsahu a ovládacích prvků záložek do libovolného otevřeného dokumentu za běhu.
+ V projektech na úrovni dokumentu můžete do dokumentu přidat libovolný hostitelský ovládací prvek v době návrhu nebo můžete přidat ovládací prvky obsahu a ovládací prvky záložky za běhu. V projektech doplňku VSTO můžete přidat ovládací prvky obsahu a ovládací prvky záložek do libovolného otevřeného dokumentu v době běhu.
 
- Další informace o hostitelské ovládací prvky, které můžete použít v projektech aplikace Word naleznete v následujících tématech:
+ Další informace o hostitelských ovládacích prvcích, které lze použít v projektech aplikace Word, naleznete v následujících tématech:
 
 - [Ovládací prvky obsahu](../vsto/content-controls.md)
 
-- [BOOKMARK – ovládací prvek](../vsto/bookmark-control.md)
+- [Ovládací prvek záložek](../vsto/bookmark-control.md)
 
-- [XmlNode – ovládací prvek](../vsto/xmlnode-control.md)
+- [XMLNode – ovládací prvek](../vsto/xmlnode-control.md)
 
-- [XmlNodes – ovládací prvek](../vsto/xmlnodes-control.md)
+- [Ovládací prvek XMLNodes](../vsto/xmlnodes-control.md)
 
 ## <a name="see-also"></a>Viz také:
 - [Postupy: Přidání ovládacích prvků obsahu do dokumentů aplikace Word](../vsto/how-to-add-content-controls-to-word-documents.md)
@@ -60,10 +60,10 @@ ms.locfileid: "62939548"
 - [Postupy: Přidání ovládacích prvků XMLNode do dokumentů aplikace Word](../vsto/how-to-add-xmlnode-controls-to-word-documents.md)
 - [Postupy: Přidání ovládacích prvků XMLNodes do dokumentů aplikace Word](../vsto/how-to-add-xmlnodes-controls-to-word-documents.md)
 - [Postupy: Změna velikosti ovládacích prvků záložek](../vsto/how-to-resize-bookmark-controls.md)
-- [Návod: Vytvoření šablony s použitím ovládacích prvků obsahu](../vsto/walkthrough-creating-a-template-by-using-content-controls.md)
-- [Návod: Vytvoření vazby ovládacích prvků obsahu do vlastní části XML](../vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md)
-- [Návod: Vytváření místních nabídek pro záložky](../vsto/walkthrough-creating-shortcut-menus-for-bookmarks.md)
-- [Řešení aplikace Word](../vsto/word-solutions.md)
-- [Přehled ovládacích prvků hostitele a hostitelské položky](../vsto/host-items-and-host-controls-overview.md)
-- [Programová omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
-- [Rozšíření dokumentů aplikace Word a sešitů aplikace Excel v doplňcích VSTO za běhu](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)
+- [Návod: Vytvoření šablony pomocí ovládacích prvků obsahu](../vsto/walkthrough-creating-a-template-by-using-content-controls.md)
+- [Návod: Svázání ovládacích prvků obsahu s vlastními částmi XML](../vsto/walkthrough-binding-content-controls-to-custom-xml-parts.md)
+- [Návod: Vytvořit místní nabídky pro záložky](../vsto/walkthrough-creating-shortcut-menus-for-bookmarks.md)
+- [Řešení pro Word](../vsto/word-solutions.md)
+- [Přehled hostitelských položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md)
+- [Programové omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
+- [Rozšiřování dokumentů aplikace Word a excelových sešitů v doplňcích VSTO za běhu](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)

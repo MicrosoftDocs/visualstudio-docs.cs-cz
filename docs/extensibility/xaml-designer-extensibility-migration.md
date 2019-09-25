@@ -9,12 +9,12 @@ dev_langs:
 - csharp
 - vb
 monikerRange: vs-2019
-ms.openlocfilehash: 6ffa8888529586e23d6f9762c3ec5b724c708ca5
-ms.sourcegitcommit: ab2c49ce72ccf44b27b5c8852466d15a910453a6
+ms.openlocfilehash: 9f5085c7a655f186c3c8a4a6eecada8b440650cd
+ms.sourcegitcommit: 528178a304e66c0cb7ab98b493fe3c409f87493a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69024547"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71273222"
 ---
 # <a name="xaml-designer-extensibility-migration"></a>Migrace rozšíření návrháře XAML
 
@@ -26,7 +26,7 @@ Návrhář WPF používá **izolaci návrháře** pro projekty, které cílí na
 
 ![Rozšiřitelnost – architektura migrace](media/xaml-designer-extensibility-migration-architecture.png)
 
-Z důvodu tohoto přechodu architektury již nejsou rozšíření jiných výrobců načítána do stejného procesu jako knihovny ovládacích prvků třetích stran. Rozšíření již nemohou mít přímé závislosti na řídicích knihovnách nebo přímo přistupovat k objektům modulu runtime. Rozšíření, která byla dříve vytvořena pro architekturu izolace návrháře pomocí rozhraní API *Microsoft. Windows. rozšiřitelnost. dll* , je nutné migrovat na nový přístup pro práci s architekturou izolace povrchu. V praxi bude nutné kompilovat existující rozšíření proti novým rozšiřujícím sestavením rozhraní API. Přístup k běhovým typům běhu prostřednictvím [typeof](/dotnet/csharp/language-reference/keywords/typeof) nebo instancí modulu runtime musí být nahrazen nebo odebrán, protože knihovny ovládacích prvků jsou nyní načteny v jiném procesu.
+Z důvodu tohoto přechodu architektury již nejsou rozšíření jiných výrobců načítána do stejného procesu jako knihovny ovládacích prvků třetích stran. Rozšíření již nemohou mít přímé závislosti na knihovnách ovládacích prvků nebo přímo přistupují k objektům modulu runtime. Rozšíření, která byla dříve vytvořena pro architekturu izolace návrháře pomocí rozhraní API *Microsoft. Windows. rozšiřitelnost. dll* , je nutné migrovat na nový přístup pro práci s architekturou izolace povrchu. V praxi bude nutné kompilovat existující rozšíření proti novým rozšiřujícím sestavením rozhraní API. Přístup k běhovým typům běhu prostřednictvím [typeof](/dotnet/csharp/language-reference/keywords/typeof) nebo instancí run-time musí být nahrazen nebo odebrán, protože knihovny ovládacích prvků jsou nyní načteny v jiném procesu.
 
 ## <a name="new-extensibility-api-assemblies"></a>Nová rozšiřitelná sestavení rozhraní API
 
@@ -43,7 +43,7 @@ Namísto použití přípony souboru *. Design. dll* budou nové rozšíření S
 
 I když jsou knihovny ovládacích prvků třetích stran kompilovány pro skutečný cílový modul runtime (.NET Core nebo UWP), přípona *. DesignTools. dll* by měla být vždy kompilována jako sestavení .NET Framework.
 
-## <a name="decouple-attribute-tables-from-runtime-types"></a>Oddělit tabulky atributů z typů modulu runtime
+## <a name="decouple-attribute-tables-from-run-time-types"></a>Oddělit tabulky atributů z běhových typů
 
 Model rozšiřitelnosti izolace povrchu nepovoluje, aby rozšíření byla závislá na vlastních knihovnách ovládacích prvků, a proto rozšíření nemůžou odkazovat na typy z knihovny ovládacích prvků. Například *MyLibrary. DesignTools. dll* by neměl mít závislost na *MyLibrary. dll*.
 
@@ -103,8 +103,9 @@ V současné době jsou podporovány následující poskytovatelé funkcí:
 * `ContextMenuProvider`
 * `ParentAdapter`
 * `PlacementAdapter`
+* `DesignModeValueProvider`je podporován s omezením, `TranslatePropertyValue` které bude voláno `InvalidateProperty` prostřednictvím nebo při změně v návrháři. Nevolá se, když se upraví v běhovém kódu.
 
-Protože poskytovatelé funkcí jsou nyní načítány v jiném procesu než skutečný kód modulu runtime a knihovny ovládacích prvků, již nejsou schopny přistupovat k objektům modulu runtime přímo. Místo toho je nutné všechny takové interakce převést tak, aby používaly odpovídající rozhraní API založených na modelu. Rozhraní API modelu bylo aktualizováno a přístup <xref:System.Type> k nebo <xref:System.Object> již není k dispozici nebo byl nahrazen pomocí `TypeIdentifier` a `TypeDefinition`.
+Vzhledem k tomu, že poskytovatelé funkcí jsou nyní načítány v jiném procesu než vlastní knihovny kódu run-time a Control, již nejsou schopny přistupovat přímo k objektům modulu runtime. Místo toho je nutné všechny takové interakce převést tak, aby používaly odpovídající rozhraní API založených na modelu. Rozhraní API modelu bylo aktualizováno a přístup <xref:System.Type> k nebo <xref:System.Object> již není k dispozici nebo byl nahrazen pomocí `TypeIdentifier` a `TypeDefinition`.
 
 `TypeIdentifier`představuje řetězec bez názvu sestavení identifikující typ. Lze ji přeložit `TypeDefinition` na, chcete-li zadat dotaz na Další informace o typu. `TypeIdenfifier` `TypeDefinition`instance se nedají ukládat do mezipaměti v kódu rozšíření.
 
@@ -133,12 +134,15 @@ Rozhraní API, která se odebrala ze sady rozhraní API pro rozšíření izolac
 * `ModelFactory.CreateItem(EditingContext context, object item)`
 * `ViewItem.PlatformObject`
 * `ModelProperty.DefaultValue`
+* `AssemblyReferences.GetTypes(Type baseType)`
 
 Rozhraní API, `TypeIdentifier` která se <xref:System.Type>používají místo:
 
 * `ModelFactory.CreateItem(EditingContext context, Type itemType, params object[] arguments)`
 * `ModelFactory.CreateItem(EditingContext context, Type itemType, CreateOptions options, params object[] arguments)`
 * `ModelFactory.CreateStaticMemberItem(EditingContext context, Type type, string memberName)`
+* `ModelFactory.ResolveType(EditingContext context, Type)`změněno na`MetadataFactory.ResolveType(EditingContext context, TypeIdentifier typeIdentifier)`
+* `ModelService.ResolveType(TypeIdentifier typeIdentifier)`změněno na`MetadataService.ResolveType(TypeIdentifier typeIdentifier)`
 * `ViewItem.ItemType`
 * `ModelEvent.EventType`
 * `ModelEvent.IsEventOfType(Type type)`
@@ -157,7 +161,6 @@ Rozhraní API, `TypeIdentifier` která používají <xref:System.Type> místo a 
 
 Rozhraní API, `TypeDefinition` která se <xref:System.Type>používají místo:
 
-* `ModelFactory.ResolveType(EditingContext context, TypeIdentifier typeIdentifier)`
 * `ValueTranslationService.GetProperties(Type itemType)`
 * `ValueTranslationService.HasValueTranslation(Type itemType, PropertyIdentifier identifier)`
 * `ValueTranslationService.TranslatePropertyValue(Type itemType, ModelItem item, PropertyIdentifier identifier, object value)`
@@ -172,15 +175,12 @@ Rozhraní API, `TypeDefinition` která se <xref:System.Type>používají místo:
 * `FeatureManager.GetCustomAttributes(Type type, Type attributeType)`
 * `AdapterService.GetAdapter<TAdapterType>(Type itemType)`
 * `AdapterService.GetAdapter(Type adapterType, Type itemType)`
+* `PropertyEntry.PropertyType`
 
-Rozhraní API, `ModelItem` která se <xref:System.Object>používají místo:
+Rozhraní API, `AssemblyIdentifier` která se `<xref:System.Reflection.AssemblyName?displayProperty=fullName>`používají místo:
 
-* `ModelItemCollection.Insert(int index, object value)`
-* `ModelItemCollection.Remove(object value)`
-* `ModelItemDictionary.Add(object key, object value)`
-* `ModelItemDictionary.ContainsKey(object key)`
-* `ModelItemDictionary.Remove(object key)`
-* `ModelItemDictionary.TryGetValue(object key, out ModelItem value)`
+* `AssemblyReferences.ReferencedAssemblies`
+* `AssemblyReferences.LocalAssemblyName`změněno na`AssemblyReferences.LocalAssemblyIdentifier`
 
 Rozhraní API podobně jako `SetValue` budou podporovat pouze instance primitivních typů nebo předdefinované .NET Framework typy, které lze převést pro cílový modul runtime. `ModelItem` V současné době jsou tyto typy podporovány:
 

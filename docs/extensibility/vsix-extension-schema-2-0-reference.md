@@ -11,12 +11,12 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9333f2fb1bff0fdb8a3f0dac8004f66156b8863d
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 5c288764cf9182bc34233d312546f7915eed5975
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68870826"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71252184"
 ---
 # <a name="vsix-extension-schema-20-reference"></a>Referenční dokumentace schématu rozšíření VSIX 2,0
 Soubor manifestu nasazení VSIX popisuje obsah balíčku VSIX. Formát souboru se řídí schématem. Verze 2,0 tohoto schématu podporuje přidávání vlastních typů a atributů.  Schéma manifestu je rozšiřitelné. Zavaděč manifestu ignoruje prvky XML a atributy, které nerozumí.
@@ -38,7 +38,7 @@ Soubor manifestu nasazení VSIX popisuje obsah balíčku VSIX. Formát souboru s
 
 - `<Assets>`– Tato část obsahuje všechny prostředky obsažené v rámci tohoto balíčku. Bez této části Tento balíček nebude mít žádný obsah.
 
-- `<AnyElement>*`– Schéma manifestu je dostatečně flexibilní, aby bylo možné jakékoli jiné prvky. Všechny podřízené elementy, které nejsou rozpoznány zavaděčem manifestu, jsou zveřejněny v rozhraní API Správce rozšíření jako extra objekty XmlElement. Pomocí těchto podřízených prvků mohou rozšíření VSIX definovat další data v souboru manifestu, který kód spuštěný v aplikaci Visual Studio má přístup za běhu. Viz [Microsoft. VisualStudio. ExtensionManager. IExtension. AdditionalElements](/previous-versions/visualstudio/visual-studio-2013/hh265266(v=vs.120)).
+- `<AnyElement>*`– Schéma manifestu je dostatečně flexibilní, aby bylo možné jakékoli jiné prvky. Všechny podřízené elementy, které nejsou rozpoznány zavaděčem manifestu, jsou zveřejněny v rozhraní API Správce rozšíření jako extra objekty XmlElement. Pomocí těchto podřízených prvků mohou rozšíření VSIX definovat další data v souboru manifestu, který kód spuštěný v aplikaci Visual Studio může přistupovat v době běhu. Viz [Microsoft. VisualStudio. ExtensionManager. IExtension. AdditionalElements](/previous-versions/visualstudio/visual-studio-2013/hh265266(v=vs.120)).
 
 ### <a name="metadata-element"></a>Element metadata
  V této části najdete metadata týkající se balíčku, jeho identity a reklamních informací. `<Metadata>`obsahuje následující prvky:
@@ -71,7 +71,7 @@ Soubor manifestu nasazení VSIX popisuje obsah balíčku VSIX. Formát souboru s
 
 - `<GettingStartedGuide>`– Tento volitelný prvek je buď relativní cesta k souboru HTML, nebo adresa URL webu, který obsahuje informace o tom, jak používat rozšíření nebo obsah v rámci tohoto balíčku. Tato příručka se spouští jako součást instalace.
 
-- `<AnyElement>*`– Schéma manifestu je dostatečně flexibilní, aby bylo možné jakékoli jiné prvky. Všechny podřízené prvky, které nejsou rozpoznány zavaděčem manifestu, jsou zveřejněny jako seznam objektů XmlElement. Pomocí těchto podřízených prvků mohou rozšíření VSIX definovat další data v souboru manifestu a vytvořit jejich výčet za běhu.
+- `<AnyElement>*`– Schéma manifestu je dostatečně flexibilní, aby bylo možné jakékoli jiné prvky. Všechny podřízené prvky, které nejsou rozpoznány zavaděčem manifestu, jsou zveřejněny jako seznam objektů XmlElement. Pomocí těchto podřízených prvků mohou rozšíření VSIX definovat další data v souboru manifestu a zobrazit je v době běhu.
 
 ### <a name="installation-element"></a>Element instalace
  Tato část definuje způsob, jakým se tento balíček dá nainstalovat, a SKU aplikace, do kterých se dá nainstalovat. Tato část obsahuje následující atributy:
@@ -90,7 +90,7 @@ Soubor manifestu nasazení VSIX popisuje obsah balíčku VSIX. Formát souboru s
 
 - `SystemComponent`– Tento volitelný atribut určuje, zda má být tento balíček považován za součást systému. Systémové součásti se nezobrazují v uživatelském rozhraní Správce rozšíření a nelze je aktualizovat. Ve výchozím nastavení má tento atribut hodnotu false, která určuje, že balíček není součástí systému.
 
-- `AnyAttribute*``Installation` -Element přijímá sadu atributů Open-Ed, která bude zveřejněna za běhu jako dvojici název-hodnota.
+- `AnyAttribute*``Installation` – Prvek přijímá sadu atributů Open-ukončeno, které budou zveřejněny za běhu jako dvojici název-hodnota.
 
 - `<InstallationTarget>`– Tento prvek řídí umístění, kde instalační program VSIX balíček nainstaluje. Pokud je hodnota `Scope` atributu "ProductExtension", balíček musí cílit na SKU, který má k dispozici soubor manifestu jako součást jeho obsahu pro inzerování jeho dostupnosti pro rozšíření. Element má následující atributy, `Scope` Pokud má atribut explicitní nebo výchozí hodnotu "ProductExtension": `<InstallationTarget>`
 
@@ -133,7 +133,7 @@ Soubor manifestu nasazení VSIX popisuje obsah balíčku VSIX. Formát souboru s
 
     Při vyjádření verze pro vydání sady Visual Studio 2017 by měla podverze vždycky být **0**. Například Visual Studio 2017 verze 15.3.26730.0 by měla být vyjádřena jako [15.0.26730.0, 16.0). To se vyžaduje jenom pro Visual Studio 2017 a novější čísla verzí.
 
-  - `AnyAttribute*``<InstallationTarget>` – Element umožňuje otevřené, ukončené sady atributů, které jsou vystaveny za běhu jako dvojice název-hodnota.
+  - `AnyAttribute*``<InstallationTarget>` -Element umožňuje otevřené, ukončené sady atributů, které jsou zpřístupněny v době běhu jako dvojice název-hodnota.
 
 ### <a name="dependencies-element"></a>Element závislosti
  Tento prvek obsahuje seznam závislostí, které tento balíček deklaruje. Pokud jsou zadány jakékoli závislosti, musí být tyto balíčky ( `Id`identifikované jejich) nainstalovány před.
@@ -158,7 +158,7 @@ Soubor manifestu nasazení VSIX popisuje obsah balíčku VSIX. Formát souboru s
 
   - `Location`– Tento nepovinný atribut určuje buď relativní cestu v rámci tohoto VSIX, do vnořeného balíčku VSIX nebo adresu URL umístění pro stažení závislosti. Tento atribut slouží k tomu, aby uživatel mohl najít požadovaný balíček.
 
-  - `AnyAttribute*``Dependency` -Element přijímá sadu atributů Open-Ed, která bude zveřejněna za běhu jako dvojici název-hodnota.
+  - `AnyAttribute*``Dependency` – Prvek přijímá sadu atributů Open-ukončeno, které budou zveřejněny za běhu jako dvojici název-hodnota.
 
 ### <a name="assets-element"></a>Asset – element
  Tento prvek obsahuje seznam `<Asset>` značek pro každé rozšíření nebo element obsahu, který je v tomto balíčku Surface.
@@ -187,9 +187,9 @@ Soubor manifestu nasazení VSIX popisuje obsah balíčku VSIX. Formát souboru s
 
   - `TargetVersion`– rozsah verzí, na který se daný prostředek vztahuje. Používá se pro přenos více verzí prostředků do různých verzí sady Visual Studio. K tomu je potřeba, aby se projevily sady Visual Studio 2017,3 nebo novější.
 
-  - `AnyAttribute*`– Otevřená sada atributů, která je vystavena za běhu jako dvojici název-hodnota.
+  - `AnyAttribute*`– Otevřená sada atributů, která je zveřejněna v době běhu jako dvojice název-hodnota.
 
-    `<AnyElement>*`– Mezi `<Asset>` začátkem a koncovou značkou je povolený libovolný strukturovaný obsah. Všechny elementy jsou zveřejněny jako seznam objektů XmlElement. Rozšíření VSIX mohou v souboru manifestu definovat strukturovaná metadata specifická pro typ a vytvořit jejich výčet za běhu.
+    `<AnyElement>*`– Mezi `<Asset>` začátkem a koncovou značkou je povolený libovolný strukturovaný obsah. Všechny elementy jsou zveřejněny jako seznam objektů XmlElement. Rozšíření VSIX mohou v souboru manifestu definovat strukturovaná metadata specifická pro typ a zobrazit je v době běhu.
 
 ### <a name="sample-manifest"></a>Vzorový manifest
 

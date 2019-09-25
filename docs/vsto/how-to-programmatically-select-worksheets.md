@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Výběr listů prostřednictvím kódu programu'
+title: 'Postupy: Programové vybírání listů'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,48 +13,48 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0b56df406049f3f4076f6e4d1efebcf0eb2abb18
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 20ebc8fea14b3dc52c802543f97318ec7fae7529
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62962285"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71255632"
 ---
-# <a name="how-to-programmatically-select-worksheets"></a>Postupy: Výběr listů prostřednictvím kódu programu
-  <xref:Microsoft.Office.Tools.Excel.Worksheet.Select%2A> Metoda vybere zadaný objekt, který přesune výběr uživatele na nový objekt. Použití <xref:Microsoft.Office.Tools.Excel.Worksheet.Activate%2A> metody, pokud chcete vyvést fokus na objekt beze změny výběru uživatele.
+# <a name="how-to-programmatically-select-worksheets"></a>Postupy: Programové vybírání listů
+  <xref:Microsoft.Office.Tools.Excel.Worksheet.Select%2A> Metoda vybere zadaný objekt, který přesune výběr uživatele do nového objektu. Použijte metodu <xref:Microsoft.Office.Tools.Excel.Worksheet.Activate%2A> , pokud chcete přenést fokus na objekt beze změny výběru uživatele.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
- Pokud chcete vybrat existujícího listu v doplňku VSTO nebo pokud sešit byl vytvořen za běhu v přizpůsobení na úrovni dokumentu, je zapotřebí k němu přistoupit pomocí aplikace Excel <xref:Microsoft.Office.Interop.Excel.Sheets> kolekce sešitu aplikace Excel; v opačném případě můžete přistupovat <xref:Microsoft.Office.Tools.Excel.Worksheet>hostitelský objekt přímo.
+ Pokud chcete vybrat existující list v doplňku VSTO nebo pokud byl list vytvořen v době běhu v přizpůsobení na úrovni dokumentu, je nutné k němu přistupovat pomocí excelové <xref:Microsoft.Office.Interop.Excel.Sheets> kolekce excelového sešitu. v opačném případě získáte přístup k <xref:Microsoft.Office.Tools.Excel.Worksheet>Hostitelská položka přímo.
 
-## <a name="use-the-worksheet-host-item"></a>Použití hostitelská položka worksheet
- V přizpůsobení na úrovni dokumentu, přidejte následující kód, který *Sheet1.vb* nebo *Sheet1.cs*.
+## <a name="use-the-worksheet-host-item"></a>Použít položku hostitele listu
+ V přizpůsobení na úrovni dokumentu přidejte následující kód do souboru *List1. vb* nebo *Sheet1.cs*.
 
-### <a name="to-select-the-first-worksheet-in-a-workbook-using-a-host-item"></a>Vyberte první sešit v pomocí hostitelská položka sešitu
+### <a name="to-select-the-first-worksheet-in-a-workbook-using-a-host-item"></a>Výběr prvního listu v sešitu pomocí položky hostitele
 
-1. Volání <xref:Microsoft.Office.Tools.Excel.Worksheet.Select%2A> metoda `Sheet1`.
+1. <xref:Microsoft.Office.Tools.Excel.Worksheet.Select%2A> Zavolejte`Sheet1`metodu.
 
      [!code-csharp[Trin_VstcoreExcelAutomation#19](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#19)]
      [!code-vb[Trin_VstcoreExcelAutomation#19](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#19)]
 
-## <a name="use-the-sheets-collection-of-the-excel-workbook"></a>Kolekce stylů Excelový sešit
- Přístup pomocí aplikace Excel listu <xref:Microsoft.Office.Interop.Excel.Sheets> kolekce.
+## <a name="use-the-sheets-collection-of-the-excel-workbook"></a>Použití kolekce listů excelového sešitu
+ Přístup k listu pomocí kolekce aplikace Excel <xref:Microsoft.Office.Interop.Excel.Sheets> .
 
-### <a name="to-select-the-first-worksheet-in-a-workbook-using-the-sheets-collection-of-the-excel-workbook"></a>Vyberte první listu v sešitu pomocí kolekce listech sešitu aplikace Excel
+### <a name="to-select-the-first-worksheet-in-a-workbook-using-the-sheets-collection-of-the-excel-workbook"></a>Výběr prvního listu v sešitu pomocí kolekce listů sešitu aplikace Excel
 
-1. Volání <xref:Microsoft.Office.Interop.Excel.Sheets.Select%2A> metodu <xref:Microsoft.Office.Interop.Excel.Sheets> kolekci vyberte první sešit aktivním sešitu.
+1. Voláním <xref:Microsoft.Office.Interop.Excel.Sheets> metody kolekce vyberte první list aktivního sešitu. <xref:Microsoft.Office.Interop.Excel.Sheets.Select%2A>
 
      [!code-csharp[Trin_VstcoreExcelAutomation#20](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#20)]
      [!code-vb[Trin_VstcoreExcelAutomation#20](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#20)]
 
 ## <a name="see-also"></a>Viz také:
 - [Práce s listy](../vsto/working-with-worksheets.md)
-- [Postupy: Tisk listů prostřednictvím kódu programu](../vsto/how-to-programmatically-print-worksheets.md)
-- [Postupy: Odstraňování listů ze sešitů prostřednictvím kódu programu](../vsto/how-to-programmatically-delete-worksheets-from-workbooks.md)
-- [Postupy: Skrývání listů prostřednictvím kódu programu](../vsto/how-to-programmatically-hide-worksheets.md)
-- [Postupy: Zamykání listů](../vsto/how-to-programmatically-protect-worksheets.md)
-- [Hostitelská položka Worksheet](../vsto/worksheet-host-item.md)
+- [Postupy: Programové listy tisku](../vsto/how-to-programmatically-print-worksheets.md)
+- [Postupy: Programové odstraňování listů ze sešitů](../vsto/how-to-programmatically-delete-worksheets-from-workbooks.md)
+- [Postupy: Programové skrývání listů](../vsto/how-to-programmatically-hide-worksheets.md)
+- [Postupy: Programové zabezpečení listů](../vsto/how-to-programmatically-protect-worksheets.md)
+- [Položka hostitele listu](../vsto/worksheet-host-item.md)
 - [Globální přístup k objektům v projektech pro systém Office](../vsto/global-access-to-objects-in-office-projects.md)
-- [Programová omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
+- [Programové omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
 - [Volitelné parametry v řešeních pro systém Office](../vsto/optional-parameters-in-office-solutions.md)
-- [Přehled ovládacích prvků hostitele a hostitelské položky](../vsto/host-items-and-host-controls-overview.md)
+- [Přehled hostitelských položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md)

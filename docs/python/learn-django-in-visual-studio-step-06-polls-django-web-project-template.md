@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 31f125c11bb364f2650384d8d5894f7f48a9bd3e
-ms.sourcegitcommit: 3cda0d58c5cf1985122b8977b33a171c7359f324
+ms.openlocfilehash: 5e9220df4f9abdb806495e6108fb6039b28e0b7b
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154921"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71254385"
 ---
 # <a name="step-6-use-the-polls-django-web-project-template"></a>Krok 6: Použití šablony webového projektu Django pro cyklické dotazování
 
@@ -112,9 +112,9 @@ class Choice(models.Model):
         return self.text
 ```
 
-Jak je vidět, hlasování udržuje popis v jeho `text` publikace a pole datum v `pub_date`. Tato pole jsou pouze ty, které existují pro dané dotazování v databázi. `total_votes` pole se počítá za běhu.
+Jak je vidět, hlasování udržuje popis v jeho `text` publikace a pole datum v `pub_date`. Tato pole jsou pouze ta, která existují pro cyklické dotazování v databázi. `total_votes` pole je vypočítáváno v době běhu.
 
-Možnost volby má vztah k dotazování prostřednictvím `poll` pole, obsahuje popis v `text`a udržuje počet pro výběr v `votes`. `votes_percentage` Pole se počítá za běhu a nebyl nalezen v databázi.
+Možnost volby má vztah k dotazování prostřednictvím `poll` pole, obsahuje popis v `text`a udržuje počet pro výběr v `votes`. `votes_percentage` Pole se počítá za běhu a nebylo nalezeno v databázi.
 
 Úplný seznam typů polí je `CharField` (omezeným text) `TextField` (neomezený počet text), `EmailField`, `URLField`, `DateTimeField`, `IntegerField`, `DecimalField`, `BooleanField`, `ForeignKey`, a `ManyToMany`. Každé pole má některé atributy, jako je `max_length`. `blank=True` Atribut znamená, že pole je volitelné. `null=true` znamená, že hodnota je volitelná. K dispozici je také `choices` atribut, který omezuje hodnoty na hodnoty v poli data hodnotu/zobrazovat hodnota řazené kolekce členů. (Najdete v článku [Model referenční dokumentace polí](https://docs.djangoproject.com/en/2.0/ref/models/fields/) v dokumentaci k Django.)
 
@@ -192,7 +192,7 @@ Celkově Django pro funkci migrace znamená, že potřebujete nikdy spravovat sc
 
 ### <a name="question-what-happens-if-i-forget-to-run-the-migrate-command-after-making-changes-to-models"></a>Daná Co se stane, když po provedení změn modelů zapomenete spustit příkaz migrace?
 
-Zodpovědět Pokud se modely neshodují s tím, co je v databázi, Django v době běhu s příslušnými výjimkami. Například pokud zapomenete migrovat Změna modelu je znázorněno v předchozí části, se zobrazí chyba **žádný takový sloupec: app_poll.author**:
+Zodpovědět Pokud se modely neshodují s tím, co je v databázi, Django v době běhu s příslušnými výjimkami neproběhne. Například pokud zapomenete migrovat Změna modelu je znázorněno v předchozí části, se zobrazí chyba **žádný takový sloupec: app_poll.author**:
 
 ![Chyba zobrazí, když nebyla migrována Změna modelu](media/django/step06-exception-when-forgetting-to-migrate.png).
 

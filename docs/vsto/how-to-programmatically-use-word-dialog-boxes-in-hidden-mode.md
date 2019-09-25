@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Používání dialogových oken aplikace Word ve skrytém režimu prostřednictvím kódu programu'
+title: 'Postupy: Programové použití dialogových oken aplikace Word ve skrytém režimu'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -14,32 +14,32 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: e7a422e9548fabefa2066fb439c01e382586cd36
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e32c97069e3400b447f8756f9638c9d88d38d99a
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62961602"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71255851"
 ---
-# <a name="how-to-programmatically-use-word-dialog-boxes-in-hidden-mode"></a>Postupy: Používání dialogových oken aplikace Word ve skrytém režimu prostřednictvím kódu programu
-  Vyvoláním předdefinovaných dialogových oken v aplikaci Microsoft Office Word bez zobrazení uživateli můžete provádět komplexní operace s jedné metody volání. Můžete to provést pomocí <xref:Microsoft.Office.Interop.Word.Dialog.Execute%2A> metodu <xref:Microsoft.Office.Interop.Word.Dialog> objektu bez volání <xref:Microsoft.Office.Interop.Word.Dialog.Display%2A> metoda.
+# <a name="how-to-programmatically-use-word-dialog-boxes-in-hidden-mode"></a>Postupy: Programové použití dialogových oken aplikace Word ve skrytém režimu
+  Můžete provádět komplexní operace s jedním voláním metody vyvoláním vestavěných dialogových oken v aplikaci systém Microsoft Office Word bez jejich zobrazení uživateli. To lze provést pomocí <xref:Microsoft.Office.Interop.Word.Dialog.Execute%2A> metody <xref:Microsoft.Office.Interop.Word.Dialog> objektu bez volání <xref:Microsoft.Office.Interop.Word.Dialog.Display%2A> metody.
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
 ## <a name="examples"></a>Příklady
- Následující příklady kódu ukazují, jak používat **vzhled stránky** dialogové okno ve skrytém režimu můžete nastavit více stránek vlastnosti instalaci bez vstupu uživatele. V příkladech se používá <xref:Microsoft.Office.Interop.Word.Dialog> objektu, který chcete konfigurovat vlastní velikost stránky. Specifické nastavení pro vzhled stránky, jako je například horní okraj, dolní okraj a tak dále, jsou k dispozici jako vlastnosti s pozdní vazbou <xref:Microsoft.Office.Interop.Word.Dialog> objektu. Tyto vlastnosti jsou dynamicky vytvořené aplikace Word v době běhu.
+ Následující příklady kódu ukazují, jak použít dialogové okno **nastavení stránky** v skrytém režimu k nastavení více vlastností nastavení stránky bez zásahu uživatele. V příkladech se <xref:Microsoft.Office.Interop.Word.Dialog> pomocí objektu konfiguruje vlastní velikost stránky. Konkrétní nastavení pro nastavení stránky, například horní okraj, dolní okraj atd., jsou k dispozici jako vlastnosti <xref:Microsoft.Office.Interop.Word.Dialog> s pozdní vazbou objektu. Tyto vlastnosti jsou v době běhu dynamicky vytvářeny slovem.
 
- Následující příklad ukazuje, jak k provedení této úlohy v projektech Visual Basicu kde **Option Strict** je vypnout a v projektech Visual C#, které se zaměřují [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]. V těchto projektech můžete pozdní vazba funkce v kompilátorech jazyka Visual Basic a Visual C#. Pokud chcete použít tento příklad, spusťte jej z `ThisDocument` nebo `ThisAddIn` třídu ve vašem projektu.
+ Následující příklad ukazuje, jak provést tuto úlohu v Visual Basic projektů, kde **Option Strict** je off a v vizuálních C# projektech cílících [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]na. V těchto projektech můžete použít funkce pozdní vazby v Visual Basic a vizuálních C# kompilátorech. Chcete-li použít tento příklad, spusťte jej `ThisDocument` z `ThisAddIn` třídy nebo v projektu.
 
  [!code-vb[Trin_VstcoreWordAutomation#123](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#123)]
  [!code-csharp[Trin_VstcoreWordAutomation#123](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#123)]
 
- Následující příklad ukazuje, jak k provedení této úlohy v projektech Visual Basicu kde **Option Strict** zapnutý. V těchto projektech je nutné použít reflexe pro přístup k vlastnosti s pozdní vazbou. Pokud chcete použít tento příklad, spusťte jej z `ThisDocument` nebo `ThisAddIn` třídu ve vašem projektu.
+ Následující příklad ukazuje, jak provést tuto úlohu v Visual Basic projekty, kde je **možnost Option Strict** zapnutá. V těchto projektech je nutné použít reflexi pro přístup k vlastnostem s pozdní vazbou. Chcete-li použít tento příklad, spusťte jej `ThisDocument` z `ThisAddIn` třídy nebo v projektu.
 
  [!code-vb[Trin_VstcoreWordAutomation#104](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#104)]
 
 ## <a name="see-also"></a>Viz také:
-- [Postupy: Používání předdefinovaných dialogových oken v aplikaci Word prostřednictvím kódu programu](../vsto/how-to-programmatically-use-built-in-dialog-boxes-in-word.md)
+- [Postupy: Programové použití vestavěných dialogových oken ve Wordu](../vsto/how-to-programmatically-use-built-in-dialog-boxes-in-word.md)
 - [Přehled modelu objektů aplikace Word](../vsto/word-object-model-overview.md)
 - [Pozdní vazba v řešeních pro systém Office](../vsto/late-binding-in-office-solutions.md)
 - [Reflexe (C#)](/dotnet/csharp/programming-guide/concepts/reflection)

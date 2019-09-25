@@ -11,96 +11,96 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dad84145200b09cfbddab63bd9994096d0ba3e17
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0627a96bf100232987ace5a42430310912f97b8c
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62537310"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71252094"
 ---
 # <a name="manage-application-settings-net"></a>Správa nastavení aplikace (.NET)
 
-Nastavení aplikace umožňují uložení informací aplikace dynamicky. Nastavení vám umožňují ukládat informace na klientský počítač, který by neměl být zařazen do kódu aplikace (například připojovací řetězec), uživatelských předvoleb a dalších informací, které potřebujete v době běhu.
+Nastavení aplikace umožňují dynamicky ukládat informace o aplikaci. Nastavení umožňují ukládat informace v klientském počítači, které by neměly být zahrnuty do kódu aplikace (například připojovací řetězec), předvolby uživatele a další informace, které potřebujete v době běhu.
 
-Nastavení aplikace nahradí dynamické vlastnosti použité v dřívějších verzích sady Visual Studio.
+Nastavení aplikace nahradí dynamické vlastnosti používané v dřívějších verzích sady Visual Studio.
 
-Každé nastavení aplikace musí mít jedinečný název. Název může obsahovat libovolnou kombinaci písmen, čísel nebo podtržítek, která nezačíná řetězcem číslo a nemůže obsahovat mezery. Název změnit prostřednictvím `Name` vlastnost.
+Každé nastavení aplikace musí mít jedinečný název. Název může být libovolná kombinace písmen, číslic nebo podtržítka, která nesmí začínat číslicí a nesmí obsahovat mezery. Název se změní prostřednictvím `Name` vlastnosti.
 
-Nastavení aplikace mohou být uloženy jako libovolného datového typu, který je serializován do formátu XML nebo má `TypeConverter` , který implementuje `ToString` / `FromString`. Nejběžnější typy jsou `String`, `Integer`, a `Boolean`, ale můžete také uložit hodnoty jako <xref:System.Drawing.Color>, <xref:System.Object>, nebo jako připojovací řetězec.
+Nastavení aplikace lze uložit jako libovolný datový typ, který je serializován do formátu XML nebo má `TypeConverter` implementované `ToString` / `FromString`rozhraní. Nejběžnější `String`typy jsou <xref:System.Object>, `Integer`a `Boolean`, ale můžete také uložit hodnoty jako <xref:System.Drawing.Color>, nebo jako připojovací řetězec.
 
-Nastavení aplikace také obsahovat hodnotu. Tato hodnota nastavená s **hodnotu** vlastnost a musí odpovídat datovému typu nastavení.
+Nastavení aplikace také drží hodnotu. Hodnota je nastavena s vlastností **Value** a musí odpovídat datovému typu nastavení.
 
-Kromě toho nastavení aplikace mohou být vázány na vlastnost formuláře nebo ovládacího prvku v době návrhu.
+Kromě toho může být nastavení aplikace svázána s vlastností formuláře nebo ovládacího prvku v době návrhu.
 
 Existují dva typy nastavení aplikace založené na rozsahu:
 
-- Nastavení oboru aplikace lze použít pro informace, jako je adresa URL pro webovou službu nebo připojovací řetězec databáze. Tyto hodnoty jsou spojeny s aplikací. Proto je uživatelé nemohou změnit za běhu.
+- Nastavení s rozsahem aplikace lze použít pro informace, jako je například adresa URL webové služby nebo databázového připojovacího řetězce. Tyto hodnoty jsou přidruženy k aplikaci. Proto je uživatelé nemohou měnit v době běhu.
 
-- Nastavení s rozsahem uživatele lze použít pro informace, jako jsou například uchování poslední pozice formuláře nebo předvoleb písma. Uživatelé mohou změnit tyto hodnoty v době běhu.
+- Nastavení s rozsahem uživatele lze použít pro informace, jako je například uchování poslední pozice formuláře nebo Předvolby písma. Uživatelé mohou tyto hodnoty v době běhu změnit.
 
-Typ nastavení můžete změnit pomocí **oboru** vlastnost.
+Typ nastavení lze změnit pomocí vlastnosti **Scope** .
 
 Systém projektu ukládá nastavení aplikace ve dvou souborech XML:
 
-- *app.config* soubor, který je vytvořen v době návrhu, když vytvoříte první nastavení aplikace
+- soubor *App. config* , který je vytvořen v době návrhu při vytváření prvního nastavení aplikace
 
-- *user.config* soubor, který je vytvořen v době běhu, když uživatel, který spouští aplikaci změní hodnotu nastavení některého uživatele.
+- soubor *User. config* , který je vytvořen v době běhu, když uživatel, který spouští aplikaci, změní hodnotu jakéhokoli nastavení uživatele.
 
-Všimněte si, že změny v nastavení uživatele nejsou zapsány na disk, pokud aplikace konkrétně nevolá metodu, chcete-li to provést.
+Všimněte si, že změny v nastavení uživatele nejsou zapsány na disk, pokud aplikace konkrétně nevolá metodu, která to provede.
 
-## <a name="create-application-settings-at-design-time"></a>Vytvořit nastavení aplikace v době návrhu
+## <a name="create-application-settings-at-design-time"></a>Vytvoření nastavení aplikace v době návrhu
 
-V době návrhu, můžete vytvořit nastavení aplikace dvěma způsoby: pomocí **nastavení** stránku **Návrháře projektu**, nebo pomocí **vlastnosti** okna pro formulář nebo ovládací prvek, který umožňuje svázat nastavení vlastnosti.
+V době návrhu můžete vytvořit nastavení aplikace dvěma způsoby: pomocí stránky **Nastavení** **Návrháře projektu**nebo pomocí okna **vlastnosti** pro formulář nebo ovládací prvek, který umožňuje vytvořit svázání nastavení s vlastností.
 
-Když vytvoříte nastavení s rozsahem aplikace (například připojovací řetězec databáze nebo odkaz na prostředky serveru), [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] uloží ho v *app.config* s `<applicationSettings>` značky. (Připojovací řetězce jsou uloženy v rámci `<connectionStrings>` značka.)
+Když vytvoříte nastavení s rozsahem aplikace (například připojovací řetězec databáze nebo odkaz na prostředky serveru), [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] uloží se do `<applicationSettings>` souboru App. config se značkou. (Připojovací řetězce jsou uloženy pod `<connectionStrings>` značkou.)
 
-Když vytvoříte nastavení s rozsahem uživatele (například výchozí písmo, domovská stránka nebo velikost okna), [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] uloží ho v *app.config* s `<userSettings>` značky.
+Když vytvoříte nastavení s rozsahem uživatele (například výchozí písmo, Domovská stránka nebo velikost okna), [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] uloží se do `<userSettings>` souboru App. config se značkou.
 
 > [!IMPORTANT]
-> Při ukládání připojovacích řetězců v *app.config*, byste měli podniknout opatření k zamezení odhalení citlivých informací, jako jsou hesla nebo cesty k serveru, v připojovacím řetězci.
+> Když ukládáte připojovací řetězce do *souboru App. config*, měli byste podniknout opatření, abyste zabránili odhalení citlivých informací, jako jsou hesla nebo cesty na serveru, v připojovacím řetězci.
 >
-> Pokud budete postupovat informace o připojovacím řetězci z externího zdroje, jako je například uživatelské zadání ID uživatele a heslo, musíte být opatrní a zkontrolujte, že hodnoty, které můžete použít k vytvoření připojení řetězec neobsahují další parametry připojovacího řetězce která mění chování vašeho připojení.
+> Pokud převezmete informace připojovacího řetězce z externího zdroje, například uživatel, který zadal ID a heslo uživatele, musíte být opatrní, abyste zajistili, že hodnoty, které použijete k vytvoření připojovacího řetězce, neobsahují další parametry připojovacího řetězce. změny chování připojení.
 >
-> Zvažte použití funkce Protected Configuration pro šifrování citlivých informací v konfiguračním souboru. Další informace najdete v tématu [chránit informace o připojení](/dotnet/framework/data/adonet/protecting-connection-information).
+> Zvažte použití funkce Protected Configuration k šifrování citlivých informací v konfiguračním souboru. Další informace najdete v tématu [ochrana informací o připojení](/dotnet/framework/data/adonet/protecting-connection-information).
 
 > [!NOTE]
-> Protože neexistuje žádný model konfiguračního souboru pro knihovny tříd, nastavení aplikace nelze aplikovat na projekty knihovny tříd. Výjimkou je Visual Studio Tools for Office DLL projekt, který může mít konfigurační soubor.
+> Vzhledem k tomu, že není k dispozici žádný model konfiguračního souboru pro knihovny tříd, nastavení aplikace neplatí pro projekty knihovny tříd. Výjimkou je projekt Visual Studio Tools for Office DLL, který může mít konfigurační soubor.
 
-## <a name="use-customized-settings-files"></a>Použití vlastních souborů nastavení
+## <a name="use-customized-settings-files"></a>Použít soubory s vlastním nastavením
 
-Soubory vlastního nastavení můžete přidat do projektu pro pohodlné řízení skupin nastavení. Nastavení, které jsou obsaženy v jednom souboru jsou načtena a uložena jako celek. Ukládání nastavení do samostatných souborů pro často používané a zřídka používané skupiny může ušetřit čas při načítání a ukládání nastavení.
+Můžete přidat přizpůsobené soubory nastavení do projektu, abyste mohli pohodlně spravovat skupiny nastavení. Nastavení, která jsou obsažena v jednom souboru, jsou načtena a ukládána jako jednotka. Ukládání nastavení do samostatných souborů pro často používané a zřídka používané skupiny může ušetřit čas při načítání a ukládání nastavení.
 
-Například můžete přidat soubor jako *SpecialSettings.settings* do projektu. Během vaší `SpecialSettings` třída není vystaveno v `My` obor názvů, **zobrazit kód** může číst, která obsahuje soubor s vlastním nastavením `Partial Class SpecialSettings`.
+Můžete například do svého projektu přidat soubor, například *SpecialSettings. Settings* . I když `SpecialSettings` vaše třída není vystavena `My` v oboru názvů, **Zobrazit kód** může přečíst soubor vlastního nastavení, který `Partial Class SpecialSettings`obsahuje.
 
-**Návrháře nastavení** nejprve hledá *Settings.settings* souboru, který vytvoří systém projektu; tento soubor je výchozí soubor, který **Návrháře projektu** Zobrazí **nastavení** kartu. *Settings.Settings* se nachází v *Můj projekt* složku pro [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] projekty a *vlastnosti* složku pro [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] projekty. **Návrháře projektu** pak vyhledá ostatní soubory nastavení v kořenové složce projektu. Proto byste měli existuje umístit soubor s vlastním nastavením. Pokud chcete přidat *.settings* soubor jinde v projektu, **Návrháře projektu** nebude schopen jej vyhledat.
+**Návrhář nastavení** nejprve vyhledá soubor *Settings. Settings* , který vytváří systém projektu. Tento soubor je výchozím souborem, který **Návrhář projektu** zobrazuje na kartě **Nastavení** . *Settings. Settings* je umístěn ve složce *můj projekt* pro [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] projekty a ve složce *Properties (vlastnosti* ) [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] pro projekty. **Návrhář projektu** pak vyhledá další soubory nastavení v kořenové složce projektu. Proto byste měli umístit soubor vlastních nastavení do souboru. Pokud přidáte soubor *. Settings* jinde v projektu, **Návrhář projektu** jej nebude moci vyhledat.
 
-## <a name="access-or-change-application-settings-at-run-time-in-visual-basic"></a>Přístup nebo změna nastavení aplikace za běhu v jazyce Visual Basic
+## <a name="access-or-change-application-settings-at-run-time-in-visual-basic"></a>Přístup nebo změna nastavení aplikace za běhu v Visual Basic
 
-V projektech Visual Basicu můžete přistupujete k nastavení aplikace za běhu pomocí `My.Settings` objektu. Na **nastavení** stránky, klikněte na tlačítko **zobrazení kódu** tlačítko Zobrazit *Settings.vb* souboru. *Settings.vb* definuje `Settings` třídu, která umožňuje zpracování těchto událostí na třídě nastavení: <xref:System.Configuration.ApplicationSettingsBase.SettingChanging>, <xref:System.Configuration.ApplicationSettingsBase.PropertyChanged>, <xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>, a <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>. Všimněte si, `Settings` třídy v *Settings.vb* je částečná třída zobrazující pouze uživatele kód, nikoli celou generovanou třídu. Další informace o přístup k nastavení aplikace s použitím `My.Settings` objektu, najdete v článku [přístup k nastavení aplikace (.NET Framework)](/dotnet/visual-basic/developing-apps/programming/app-settings/accessing-application-settings).
+V Visual Basic projekty můžete k nastavení aplikace přistupovat v době běhu pomocí `My.Settings` objektu. Na stránce **Nastavení** klikněte na tlačítko **Zobrazit kód** a zobrazte soubor *Settings. vb* . *Settings. vb* definuje `Settings` třídu, která umožňuje zpracovávat tyto události ve třídě nastavení: <xref:System.Configuration.ApplicationSettingsBase.SettingChanging>, <xref:System.Configuration.ApplicationSettingsBase.PropertyChanged>, <xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>a <xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>. Všimněte si, `Settings` že třída v *Settings. vb* je částečná třída, která zobrazuje pouze uživatelský kód, nikoli celou generovanou třídu. Další informace o přístupu k nastavení aplikace pomocí `My.Settings` objektu naleznete v tématu [Access Application Settings (.NET Framework)](/dotnet/visual-basic/developing-apps/programming/app-settings/accessing-application-settings).
 
-Hodnoty nastavení rozsahu uživatele, které změny uživatelů v době běhu (například umístění formuláře) jsou uložené v *user.config* souboru. Všimněte si, že výchozí hodnoty jsou stále uloženy v *app.config*.
+Hodnoty všech nastavení v uživatelském rozsahu, které uživatel změní v době běhu (například pozice formuláře), jsou uloženy v souboru *User. config* . Všimněte si, že výchozí hodnoty jsou pořád uložené v *App. config*.
 
-Pokud nastavení rozsahu uživatele se změní za běhu, třeba při testování aplikace a chcete resetovat tato nastavení na výchozí hodnoty, klikněte na tlačítko **synchronizovat** tlačítko.
+Pokud se během běhu změní jakékoli nastavení s rozsahem uživatele, například při testování aplikace a chcete resetovat tato nastavení na výchozí hodnoty, klikněte na tlačítko **synchronizovat** .
 
-Důrazně doporučujeme používat `My.Settings` objektu a ve výchozím nastavení *.settings* souboru pro přístup k nastavení. Důvodem je, že můžete použít **návrháře nastavení** k přiřazení vlastností do nastavení a kromě toho také uživatelské nastavení je automaticky uloženo před vypnutím aplikace. Ale aplikace Visual Basic můžete přístup k nastavení přímo. V takovém případě budete muset získat přístup `MySettings` třídy a používat vlastní *.settings* souboru v kořenovém adresáři projektu. Musíte uložit nastavení uživatele před ukončením aplikace, jako byste to udělali pro aplikaci v C#; je to popsané v následující části.
+Důrazně doporučujeme, abyste k nastavení `My.Settings` přístupu použili objekt a soubor Default *. Settings* . Důvodem je, že můžete použít **Návrháře nastavení** k přiřazení vlastností nastavení, a navíc se uživatelská nastavení automaticky ukládají před vypnutím aplikace. Vaše aplikace Visual Basic však může získat přímý přístup k nastavení. V takovém případě musíte získat přístup `MySettings` ke třídě a použít vlastní soubor *. Settings* v kořenu projektu. Před ukončením aplikace je nutné uložit uživatelská nastavení, stejně jako v případě C# aplikace. Tento postup je popsaný v následující části.
 
 <!-- markdownlint-disable MD003 MD020 -->
-## <a name="access-or-change-application-settings-at-run-time-in-c"></a>Přístup nebo změna nastavení aplikace za běhu v jazyce C#
+## <a name="access-or-change-application-settings-at-run-time-in-c"></a>Přístup nebo změna nastavení aplikace v době běhu vC#
 <!-- markdownlint-enable MD003 MD020 -->
 
-V jiných jazycích než jazyka Visual Basic, jako je C#, je nutné přejít `Settings` třídy přímo, jak je znázorněno v následujícím [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] příklad.
+V jiných jazycích než Visual Basic, například C#, je nutné přistupovat ke `Settings` třídě přímo, jak je znázorněno v následujícím [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] příkladu.
 
 ```csharp
 Properties.Settings.Default.FirstUserSetting = "abc";
 ```
 
-Musíte explicitně volat `Save` metoda této obálkové třídy s cílem zachovat nastavení uživatele. Obvykle to provedete `Closing` obslužná rutina události hlavního formuláře. Následující příklad jazyka C# ukazuje volání `Save` metody.
+Chcete-li zachovat nastavení `Save` uživatele, je nutné explicitně volat metodu této obálkové třídy. Obvykle to provedete v `Closing` obslužné rutině události v hlavním formuláři. Následující C# příklad ukazuje volání `Save` metody.
 
 ```csharp
 Properties.Settings.Default.Save();
 ```
 
-Obecné informace o přístupu k nastavení aplikace prostřednictvím `Settings` najdete v tématu [přehled nastavení aplikace (.NET Framework)](/dotnet/framework/winforms/advanced/application-settings-overview). Informace o provádění iterací přes nastavení naleznete v tomto [příspěvek na fóru](https://social.msdn.microsoft.com/Forums/vstudio/40fbb470-f1e8-4a02-a4a0-9f62b54d0fc4/is-this-possible-propertiessettingsdefault?forum=csharpgeneral).
+Obecné informace o přístupu k nastavení aplikace přes `Settings` třídu najdete v tématu [Přehled nastavení aplikace (.NET Framework)](/dotnet/framework/winforms/advanced/application-settings-overview). Informace o iteraci v nastaveních najdete v tomto [příspěvku na fóru](https://social.msdn.microsoft.com/Forums/vstudio/40fbb470-f1e8-4a02-a4a0-9f62b54d0fc4/is-this-possible-propertiessettingsdefault?forum=csharpgeneral).
 
 ## <a name="see-also"></a>Viz také:
 

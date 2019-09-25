@@ -1,5 +1,5 @@
 ---
-title: 'Návrhář pracovního postupu: Ladění XAML'
+title: 'Návrhář postupu provádění: Ladit XAML'
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: d9305dbc-af62-4bdd-b03f-c54e3fe9ecc7
@@ -8,31 +8,31 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 0d22668089581dcf44609756a4e7f8f4527dd751
-ms.sourcegitcommit: ba5e072c9fedeff625a1332f22dcf3644d019f51
+ms.openlocfilehash: af5b7585ed5c0f34eeb44edba8c60ba0d5e14559
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66431814"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71254779"
 ---
 # <a name="how-to-debug-xaml-with-the-workflow-designer"></a>Postupy: Ladění XAML pomocí návrháře postupu provádění
 
-Pracovní postupy jsou definována v XAML. Uživatelské rozhraní reprezentace pracovního postupu je nástavbou stromu XAML definování pracovního postupu. Možnosti ladění je podobné ladění pracovních postupů v Návrháři pracovních postupů. Například při ladění XAML, místní hodnoty, kukátko a vlákna windows fungovat stejným způsobem jako stejně jako v Návrháři postupu provádění ladění. Kromě toho zobrazení zásobníku volání během ladění XAML je založené na řádku hierarchické zobrazení toku provádění pracovního postupu.
+Pracovní postupy jsou definovány z podmínek XAML. Reprezentace uživatelského rozhraní pracovního postupu je postavená na stromu XAML, který definuje pracovní postup. Prostředí ladění je podobné jako při ladění pracovních postupů v Návrhář postupu provádění. Například při ladění XAML fungují okna místní hodnoty, sledování a vlákna stejným způsobem jako při ladění Návrhář postupu provádění. Kromě toho zobrazení zásobníku volání během ladění XAML je spojnicové hierarchické zobrazení toku spuštění pro pracovní postup.
 
 > [!NOTE]
-> Pokud XAML pro pracovní postup je umístěn ve stejném sestavení, aktivity, část sestavení pro názvy tříd nejsou zahrnuty. Bez této části názvy tříd (aktivita) nelze načíst XAML za běhu. Nedoporučuje se definovat aktivity v stejný obor názvů jako hlavní projektu. v opačném případě XAML bude potřeba ručně upravit po upravována v návrháři.
+> Pokud je XAML pro pracovní postup umístěn ve stejném sestavení jako aktivity, část sestavení názvů tříd nejsou zahrnuty. Bez této části názvů třídy (aktivity) nelze v době běhu načíst XAML. Nedoporučujeme definovat aktivity ve stejném oboru názvů jako hlavní projekt; v opačném případě bude po úpravě v Návrháři nutné ručně upravit kód XAML.
 
-## <a name="to-debug-workflow-xaml"></a>Chcete-li ladit pracovní postup XAML
+## <a name="to-debug-workflow-xaml"></a>Ladění kódu XAML pracovního postupu
 
-1. Otevřete projekt pracovního postupu nebo aktivity v sadě Visual Studio.
+1. Otevřete pracovní postup nebo projekt aktivity v aplikaci Visual Studio.
 
-2. Nastavit zarážku na aktivitu nebo aktivity, který chcete ladit, jak je popsáno v [jak: Nastavení zarážek v pracovních postupech](../workflow-designer/how-to-set-breakpoints-in-workflows.md).
+2. Nastavte zarážku pro aktivitu nebo aktivity, které chcete ladit, jak je popsáno [v tématu How to: Nastavení zarážek v pracovních](../workflow-designer/how-to-set-breakpoints-in-workflows.md)postupech.
 
-3. Klikněte pravým tlačítkem na soubor .xaml, který obsahuje definici pracovního postupu a vyberte **zobrazit kód**. Zobrazí se zarážku na stejném řádku jako deklarace prvku XAML, které jste nastavili zarážku na v návrhovém zobrazení aktivity.
+3. Klikněte pravým tlačítkem na soubor. XAML, který obsahuje definici pracovního postupu a vyberte **Zobrazit kód**. Zobrazí se zarážka na stejném řádku jako deklarace elementu XAML aktivity, na které jste nastavili zarážku v zobrazení Návrh.
 
-4. Vyvolání ladicího programu, jak je popsáno v [ladění pracovních postupů](debugging-workflows-with-the-workflow-designer.md).
+4. Vyvolejte ladicí program, jak je popsáno v tématu [ladění pracovních postupů](debugging-workflows-with-the-workflow-designer.md).
 
-5. Při provádění kódu dosáhnou některé z vašich zarážek, budou zvýrazněny elementu XAML přidružené k této zarážky. Chcete-li přejít k další zarážce, použijte **F10** nebo **F11** klíč.
+5. Když spuštění kódu dosáhne jedné z vašich zarážek, bude zvýrazněn prvek XAML přidružený k této zarážce. K přechodu na další zarážku použijte klávesu **F10** nebo **F11** .
 
 ## <a name="see-also"></a>Viz také:
 

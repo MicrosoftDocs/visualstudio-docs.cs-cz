@@ -1,5 +1,5 @@
 ---
-title: Přizpůsobte pás karet pro aplikaci InfoPath
+title: Přizpůsobení pásu karet pro aplikaci InfoPath
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,50 +13,50 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6ec01b49ca61fcf295884deafa280c8ee33a2b4c
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 76ec069ef71890a69fdbd41f40bd91cf75d93cd4
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63437447"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71255511"
 ---
-# <a name="customize-a-ribbon-for-infopath"></a>Přizpůsobte pás karet pro aplikaci InfoPath
-  Při vlastním nastavení pásu karet v aplikaci Microsoft Office InfoPath, musíte zvážit, kde se zobrazí váš vlastní pás karet v aplikaci. [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)] můžete zobrazit na pásu karet v následující tři typy InfoPath aplikace pro windows:
+# <a name="customize-a-ribbon-for-infopath"></a>Přizpůsobení pásu karet pro aplikaci InfoPath
+  Při přizpůsobení pásu karet v aplikaci systém Microsoft Office InfoPath je nutné vzít v úvahu, kde se vlastní pás karet zobrazí v aplikaci. [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)]může zobrazit pás karet v následujících třech typech oken aplikace InfoPath:
 
-- Windows, který zobrazí šablony formuláře, která je otevřena v režimu návrhu.
+- Systém Windows, který zobrazuje šablonu formuláře, která je otevřena v režimu návrhu.
 
-- Windows, které zobrazí formulář, který je založen na šabloně.
+- Systém Windows, který zobrazuje formulář založený na šabloně formuláře.
 
-- Okno náhledu.
+- Okno náhledu tisku.
 
-  **Platí pro:** Informace v tomto tématu se vztahují na projekty doplňku VSTO pro InfoPath 2010. Další informace najdete v tématu [dostupné funkce podle typu aplikace a projekt sady Office](../vsto/features-available-by-office-application-and-project-type.md).
+  **Platí pro:** Informace v tomto tématu se vztahují na projekty doplňku VSTO v InfoPathu 2010. Další informace najdete v tématu [dostupné funkce podle aplikace systému Office a typu projektu](../vsto/features-available-by-office-application-and-project-type.md).
 
-  Uživatelé a návrháři otevřete šablonu formulář v režimu návrhu můžete upravit vzhled a rozložení šablony. Uživatelé otevřít v šabloně k přidání obsahu formuláře, které jsou založeny.
+  Uživatelé a návrháři otevřou šablonu formuláře v návrhovém režimu pro úpravu vzhledu a rozložení šablony. Uživatelé otevřou formuláře, které jsou založeny na šabloně formuláře pro přidání obsahu.
 
-  V okně Náhled umožňuje uživatelům a návrháři před kroky vytiskněte náhled na stránkách formuláře nebo šabloně.
+  Okno Náhled tisku umožňuje návrhářům a uživatelům zobrazit náhled stránek formuláře nebo šablony formuláře před jejich tiskem.
 
 > [!NOTE]
-> **AddIns** karta není zobrazena v okně Náhled tisku. Pokud chcete na vlastní kartě se zobrazí v okně Náhled, ujistěte se, že **OfficeId** vlastnost karty není nastavena na **TabAddIns**.
+> Karta **Doplňky** se nezobrazí v okně náhledu tisku. Pokud chcete, aby se v okně náhledu tisku zobrazovala vlastní karta, ujistěte se, že vlastnost **OfficeId** karty není nastavená na **TabAddIns**.
 
- Musíte zadat typ každé okno, ve kterém chcete, aby vaše pásu karet se zobrazí pásu karet.
+ Je nutné zadat typ pásu karet pro každé okno, ve kterém se má pás karet zobrazit.
 
-## <a name="specify-the-ribbon-type-in-the-ribbon-designer"></a>Zadejte typ pásu karet v Návrháři pásu karet
- Pokud používáte **pás karet (vizuální návrhář)** položky, klikněte na tlačítko **RibbonType** vlastnost pásu karet **vlastnosti** okna a pak vyberte některou z ID pásu karet popsané v následující tabulce.
+## <a name="specify-the-ribbon-type-in-the-ribbon-designer"></a>Určení typu pásu karet v Návrháři pásu karet
+ Pokud používáte položku **pás karet (vizuální Návrhář)** , klikněte na vlastnost **RibbonType** pásu karet v okně **vlastnosti** a pak vyberte libovolné ID pásu karet popsané v následující tabulce.
 
-|ID pásu karet|Okno, ve kterém se zobrazí na pásu karet při spuštění projektu|
+|ID pásu karet|Okno, ve kterém se zobrazí pás karet při spuštění projektu|
 |---------------|---------------------------------------------------------------------|
-|**Microsoft.InfoPath.Designer**|Windows, který zobrazí šablony formuláře, která je otevřena v režimu návrhu.|
-|**Microsoft.InfoPath.Editor**|Windows, které zobrazí formulář, který je založen na šabloně.|
-|**Microsoft.InfoPath.PrintPreview**|Okno náhledu.|
+|**Microsoft.InfoPath.Designer**|Systém Windows, který zobrazuje šablonu formuláře, která je otevřena v režimu návrhu.|
+|**Microsoft.InfoPath.Editor**|Systém Windows, který zobrazuje formulář založený na šabloně formuláře.|
+|**Microsoft.InfoPath.PrintPreview**|Okno náhledu tisku.|
 
- Přidání více než jeden pásu karet do projektu. Pokud více než jeden pásu karet sdílet ID pásu karet, má přednost před `CreateRibbonExtensibilityObject` metodu `ThisAddin` třídy projektu k určení, které pásu karet a zobrazí v době běhu. Další informace najdete v tématu [přehled pásu karet](../vsto/ribbon-overview.md).
+ Do projektu můžete přidat více než jeden pás karet. Pokud má více než jeden pás sdílení ID pásu karet, přepište `CreateRibbonExtensibilityObject` metodu `ThisAddin` ve třídě projektu, abyste určili, který pás karet se má zobrazit v době běhu. Další informace najdete v tématu [Přehled pásu karet](../vsto/ribbon-overview.md).
 
-## <a name="specify-the-ribbon-type-by-using-ribbon-xml"></a>Zadejte typ pásu karet pomocí kódu XML pásu karet
- Pokud používáte **pásu karet (XML)** položku, zkontrolujte hodnotu *ribbonID* parametr <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> metodu a vrátí odpovídající pásu karet.
+## <a name="specify-the-ribbon-type-by-using-ribbon-xml"></a>Určení typu pásu karet pomocí kódu XML pásu karet
+ Pokud používáte položku **pásu karet (XML)** , ověřte hodnotu <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> parametru *RibbonId* v metodě a vraťte příslušný pás karet.
 
- <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> Metoda je automaticky generuje služba Visual Studio v soubor kódu pásu karet. *RibbonID* parametr je řetězec, který identifikuje typ okna aplikace InfoPath, který se otevírá.
+ <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> Metoda je automaticky vygenerována v aplikaci Visual Studio v souboru kódu pásu karet. Parametr *RibbonId* je řetězec, který určuje typ okna aplikace InfoPath, které se otevírá.
 
- Následující příklad kódu ukazuje, jak zobrazit vlastní pás karet pouze v okně, který zobrazí šablony formuláře v režimu návrhu. Na pásu karet zobrazíte je zadán v `GetResourceText()` metody, který je generován ve třídě pásu karet. Další informace o třídě pásu karet najdete v tématu [kódu XML pásu karet](../vsto/ribbon-xml.md).
+ Následující příklad kódu ukazuje, jak zobrazit vlastní pás karet pouze v okně, které v návrhovém režimu zobrazuje šablonu formuláře. Pás karet, který se má zobrazit, `GetResourceText()` je určen v metodě, která je vygenerována ve třídě pásu karet. Další informace o třídě pásu karet naleznete v tématu [XML pásu karet](../vsto/ribbon-xml.md).
 
  [!code-csharp[Trin_RibbonInfoPathBasic#1](../vsto/codesnippet/CSharp/myinfopathproject/ribbon.cs#1)]
  [!code-vb[Trin_RibbonInfoPathBasic#1](../vsto/codesnippet/VisualBasic/myinfopathproject/ribbon.vb#1)]

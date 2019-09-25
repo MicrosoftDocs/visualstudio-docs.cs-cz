@@ -1,74 +1,74 @@
 ---
-title: Konfigurace nástroje kontejneru sady Visual Studio
-description: Konfigurace k dispozici v sadě Visual Studio tools pro práci s kontejnery Dockeru.
+title: Konfigurace nástrojů pro kontejner sady Visual Studio
+description: Nakonfigurujte nástroje dostupné v aplikaci Visual Studio pro práci s kontejnery Docker.
 author: ghogen
 ms.author: ghogen
 ms.topic: conceptual
 ms.date: 03/20/2019
 ms.technology: vs-azure
-ms.openlocfilehash: 90f90f4e7f085dc4f7ea188833edb3462cbe7e3e
-ms.sourcegitcommit: db30651dc0ce4d0b274479b23a6bd102a5559098
+ms.openlocfilehash: f05eb5d92c0cdaa1242f0d98c3d877eebae27bb1
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65084080"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71253155"
 ---
-# <a name="how-to-configure-visual-studio-container-tools"></a>Postup konfigurace nástroje kontejneru sady Visual Studio
+# <a name="how-to-configure-visual-studio-container-tools"></a>Jak konfigurovat nástroje kontejneru sady Visual Studio
 
-Pomocí nastavení aplikace Visual Studio, můžete ovládat některé aspekty toho, jak Visual Studio funguje s kontejnery Dockeru, včetně nastavení, které ovlivňují výkon a využití prostředků, při práci s kontejnery Dockeru.
+Pomocí nastavení aplikace Visual Studio můžete řídit některé aspekty fungování sady Visual Studio s kontejnery Docker, včetně nastavení, která mají vliv na výkon a využití prostředků při práci s kontejnery Docker.
 
-## <a name="container-tools-settings"></a>Nastavení nástroje kontejneru
+## <a name="container-tools-settings"></a>Nastavení nástrojů kontejneru
 
-V hlavní nabídce zvolte **nástroje > Možnosti**a rozbalte **nástroje kontejneru sady > Nastavení**. Nastavení nástroje kontejneru se zobrazí.
+V hlavní nabídce vyberte **nástroje > možnosti**a rozbalte položku **nástroje kontejneru > Nastavení**. Zobrazí se nastavení nástroje kontejneru.
 
 ::: moniker range="vs-2017"
 
-![Visual Studio kontejnerových nástrojů možnosti zobrazení: Automaticky získat požadované Image Dockeru při načtení projektu, automaticky spustit kontejnery na pozadí, automaticky ukončit kontejnery v řešení zavřít a nechcete zobrazovat výzvu pro důvěřující certifikát SSL.](./media/overview/visual-studio-docker-tools-options.png)
+![Možnosti nástrojů kontejnerů sady Visual Studio zobrazující: Automatické vyžádání požadovaných imagí Docker při načtení projektu, automatické spuštění kontejnerů na pozadí, automatické ukončení kontejnerů při zavření řešení a nedotazování na důvěryhodný certifikát SSL.](./media/overview/visual-studio-docker-tools-options.png)
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Nástroje kontejneru sady **Obecné** nastavení:
+**Obecné** nastavení nástrojů kontejneru:
 
-![Visual Studio kontejnerových nástrojů možnosti zobrazení: Nainstalujte Docker Desktop v případě potřeby a certifikátu důvěřovat ASP.NET Core SSL.](./media/configure-container-tools/tools-options-1.png)
+![Možnosti nástrojů kontejnerů sady Visual Studio zobrazující: V případě potřeby nainstalujte Docker Desktop a ASP.NET Core certifikát SSL.](./media/configure-container-tools/tools-options-1.png)
 
-Nástroje kontejneru sady **jednoho projektu** a **Docker Compose** nastavení:
+Nastavení **jednoho projektu** a **Docker Compose** v nástrojích kontejnerů:
 
-![Visual Studio kontejnerových nástrojů možnosti zobrazení: Ukončit kontejnery na Zavřít projekt, získat požadované Image Dockeru v projektu otevřít a spustit kontejnery na projektu otevřete.](./media/configure-container-tools/tools-options-2.png)
+![Možnosti nástrojů kontejnerů sady Visual Studio zobrazující: Dezaktivační kontejnery při zavření projektu, vyžádané obrázky Docker v otevřeném projektu a spuštění kontejnerů v otevřeném projektu.](./media/configure-container-tools/tools-options-2.png)
 ::: moniker-end
 
-V následující tabulce může pomoct při rozhodování, jak nastavit tyto možnosti.
+Následující tabulka vám může pomáhat při rozhodování, jak tyto možnosti nastavit.
 
 ::: moniker range="vs-2017"
 | Name | Výchozí nastavení | Platí pro | Popis |
 | -----|:---------------:|:----------:| ----------- |
-| Automaticky získat požadované Image Dockeru při načtení projektu | On | Docker Compose | Pro zvýšení výkonu při načítání projektů sady Visual Studio spustí operaci Docker pull na pozadí tak, že až budete připraveni ke spuštění kódu, se image nestáhne již nebo probíhá stahování. Pokud jste právě načítá projekty a procházení kódu, můžete to vypnout aby se zabránilo stahování imagí kontejnerů, které nepotřebujete. |
-| Automaticky spustit kontejnery na pozadí | On | Docker Compose | Znovu pro zajištění zvýšeného výkonu sady Visual Studio vytvoří kontejner s připojí svazek připravené pro když sestavíte a spustíte svůj kontejner. Pokud chcete řídit, kdy se vytvoří kontejner, vypněte toto. |
-| Automaticky ukončit kontejnery na řešení zavřít | On | Docker Compose | Pokud byste o ni kontejnerů pro vaše řešení, aby kontinuálně běžely po zavření řešení nebo zavření sady Visual Studio, vypnutí této funkce. |
-| Nezobrazovat výzvu důvěřující certifikátu SSL pro localhost | Off | Projekty ASP.NET Core 2.1 | Pokud localhost certifikát SSL není důvěryhodný, Visual Studio zobrazí výzvu pokaždé, když spuštění projektu, pokud je toto políčko zaškrtnuté. |
+| Při načtení projektu automaticky stáhnout požadované image Docker | On | Docker Compose | Pro zvýšení výkonu při načítání projektů aplikace Visual Studio spustí operaci získání dat Docker na pozadí, takže až budete připraveni ke spuštění kódu, image je již stažena nebo v procesu stahování. Pokud načítáte pouze projekty a kód procházení, můžete tuto možnost vypnout, aby nedocházelo ke stahování imagí kontejneru, které nepotřebujete. |
+| Automatické spouštění kontejnerů na pozadí | On | Docker Compose | Pro zvýšení výkonu Visual Studio vytvoří kontejner s připojenými svazky, který je připravený pro sestavení a spuštění kontejneru. Pokud chcete určit, kdy se kontejner vytvoří, vypněte ho. |
+| Automaticky odstranit kontejnery v blízkosti řešení | On | Docker Compose | Tuto funkci zapněte, pokud chcete, aby kontejnery pro vaše řešení nadále běžely po zavření řešení nebo ukončení sady Visual Studio. |
+| Nedotazovat se na důvěřování certifikátům SSL místního hostitele | Off | Projekty ASP.NET Core 2,1 | Pokud se nejedná o důvěryhodný certifikát SSL pro localhost, Visual Studio se zobrazí dotaz při každém spuštění projektu, pokud není zaškrtnuto toto políčko. |
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-Následující tabulka popisuje **Obecné** nastavení:
+Následující tabulka popisuje **Obecná** nastavení:
 
 | Name | Výchozí nastavení | Platí pro | Popis |
 | -----|:---------------:|:----------:| ----------- |
-| V případě potřeby nainstalujte Docker Desktop | Zobrazit dotaz | Jeden projekt, Docker Compose | Zvolte, zda chcete být vyzváni, pokud není nainstalovaný Docker Desktop. |
-| Důvěřovat certifikátu ASP.NET Core SSL | Zobrazit dotaz | Projekty ASP.NET Core 2.x | Pokud je nastavena na **řádku mě**, pokud certifikát SSL pro localhost není důvěryhodný, Visual Studio zobrazí výzvu pokaždé, když spuštění projektu. |
+| V případě potřeby nainstalovat Docker Desktop | Zobrazit výzvu | Jeden projekt, Docker Compose | Vyberte, jestli se má zobrazit výzva, pokud není nainstalovaný Docker Desktop. |
+| Důvěryhodný ASP.NET Core certifikát SSL | Zobrazit výzvu | ASP.NET Core 2. x projekty | Když se nastaví **výzva k zadání výzvy**, pokud není důvěryhodný certifikát SSL pro localhost, Visual Studio se zobrazí dotazování při každém spuštění projektu. |
 
-Následující tabulka popisuje **jednoho projektu** a **Docker Compose** nastavení:
+Následující tabulka popisuje nastavení **jednoho projektu** a **Docker Compose** :
 
 | Name | Výchozí nastavení | Platí pro | Popis |
 | -----|:---------------:|:----------:| ----------- |
-| Získat požadované Image Dockeru v projektu otevřít | Pravda | Jeden projekt, Docker Compose | Pro zvýšení výkonu při načítání projektů sady Visual Studio spustí operaci Docker pull na pozadí tak, že až budete připraveni ke spuštění kódu, se image nestáhne již nebo probíhá stahování. Pokud jste právě načítá projekty a procházení kódu, můžete nastavit na **False** aby se zabránilo stahování imagí kontejnerů, není nutné. |
-| Spouštění kontejnerů v projektu otevřít | Pravda | Jeden projekt, Docker Compose | Znovu pro zajištění zvýšeného výkonu sady Visual Studio vytvoří kontejner předem tak, aby byl připraven k když sestavíte a spustíte svůj kontejner. Pokud chcete řídit, kdy se vytvoří kontejner, nastavte na **False**. |
-| Zastavit kontejnery při zavření projektu | Pravda | Jeden projekt a Docker Compose | Nastavte na **False** Pokud byste chtěli kontejnerů pro vaše řešení, aby kontinuálně běžely po zavření řešení nebo zavření sady Visual Studio. |
+| Při otevření projektu vyžadovat vyžádání imagí Docker | Pravda | Jeden projekt, Docker Compose | Pro zvýšení výkonu při načítání projektů aplikace Visual Studio spustí operaci získání dat Docker na pozadí, takže až budete připraveni ke spuštění kódu, image je již stažena nebo v procesu stahování. Pokud načítáte pouze projekty a kód procházení, můžete nastavit na **hodnotu false** , aby nedocházelo ke stahování imagí kontejneru, které nepotřebujete. |
+| Spustit kontejnery v otevřeném projektu | Pravda | Jeden projekt, Docker Compose | Pro zvýšení výkonu Visual Studio vytvoří kontejner předem, aby byl připravený pro sestavení a spuštění kontejneru. Pokud chcete řídit, kdy se kontejner vytvoří, nastavte **hodnotu false**. |
+| Zastavit kontejnery při zavření projektu | Pravda | Jeden projekt a Docker Compose | Nastavte na **hodnotu false** , pokud chcete, aby kontejnery pro vaše řešení pokračovaly v běhu i po zavření řešení nebo ukončení sady Visual Studio. |
 
 ::: moniker-end
 > [!WARNING]
-> Pokud localhost certifikát SSL není důvěryhodný a zaškrtněte políčko pro potlačení výzvy k potvrzení, nemusí podařit HTTPS webové požadavky v době běhu ve vaší aplikaci nebo službě. V takovém případě zrušte zaškrtnutí políčka **nechcete zobrazovat výzvu** zaškrtávací políčko, spouštění vašeho projektu a označuje vztah důvěryhodnosti na řádku.
+> Pokud certifikát localhost místního hostitele není důvěryhodný a zaškrtnete políčko pro potlačení výzvy, můžou webové požadavky HTTPS v době spuštění vaší aplikace nebo služby selhat. V takovém případě zrušte zaškrtnutí políčka **nedotazovat** se na výzvu, spusťte projekt a na příkazovém řádku uveďte vztah důvěryhodnosti.
 
 ## <a name="next-steps"></a>Další kroky
 
-Další informace o práci s kontejnery v sadě Visual Studio v tomto [přehled](visual-studio-tools-for-docker.md).
+Další informace o práci s kontejnery v aplikaci Visual Studio najdete v tomto [přehledu](visual-studio-tools-for-docker.md).

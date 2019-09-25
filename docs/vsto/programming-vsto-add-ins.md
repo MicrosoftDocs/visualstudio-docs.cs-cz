@@ -32,12 +32,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 292852207a595d34f35a433a86f6554b5e68cf9e
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 93470ebcea306d3cea762d60e061994b2bf27cc8
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68872035"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71253852"
 ---
 # <a name="program-vsto-add-ins"></a>Programové doplňky VSTO
   Když rozšíříte systém Microsoft Office aplikaci vytvořením doplňku VSTO, napíšete kód přímo proti `ThisAddIn` třídě v projektu. Tuto třídu můžete použít k provádění úloh, jako je například přístup k objektovému modelu aplikace systém Microsoft Office hosta, přizpůsobení uživatelského rozhraní (UI) aplikace a vystavení objektů v doplňku VSTO do dalších řešení pro Office.
@@ -136,7 +136,7 @@ Excel.Workbook newWorkbook = Globals.ThisAddIn.Application.Workbooks.Add(System.
 
  Pokud chcete přizpůsobit jednu z těchto funkcí způsobem, který není podporován třídami a návrháři, můžete tyto funkce také přizpůsobit implementací *rozhraní rozšiřitelnosti* v doplňku VSTO. Další informace najdete v tématu [Přizpůsobení funkcí uživatelského rozhraní pomocí rozhraní rozšiřitelnosti](../vsto/customizing-ui-features-by-using-extensibility-interfaces.md).
 
- Kromě toho můžete upravit uživatelské rozhraní dokumentů aplikace Word a sešitů aplikace Excel vygenerováním položek hostitele, které zvyšují chování dokumentů a sešitů. To umožňuje přidat spravované ovládací prvky do dokumentů a listů. Další informace najdete v tématu [rozšiřování dokumentů aplikace Word a sešitů aplikace Excel v doplňcích VSTO za běhu](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).
+ Kromě toho můžete upravit uživatelské rozhraní dokumentů aplikace Word a sešitů aplikace Excel vygenerováním položek hostitele, které zvyšují chování dokumentů a sešitů. To umožňuje přidat spravované ovládací prvky do dokumentů a listů. Další informace najdete v tématu [rozšiřování dokumentů aplikace Word a sešitů aplikace Excel v doplňkech VSTO za běhu](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md).
 
 ## <a name="call-code-in-vsto-add-ins-from-other-solutions"></a>Volání kódu v doplňcích VSTO z jiných řešení
  Objekty v doplňku VSTO můžete vystavit jiným řešením, včetně dalších řešení pro Office. To je užitečné v případě, že doplněk VSTO poskytuje službu, kterou chcete povolit pro používání jiných řešení. Pokud máte například doplněk VSTO pro systém Microsoft Office Excel, který provádí výpočty s finančními daty z webové služby, další řešení mohou provádět tyto výpočty voláním do doplňku Excel VSTO v době běhu.

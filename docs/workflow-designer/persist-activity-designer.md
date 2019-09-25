@@ -1,5 +1,5 @@
 ---
-title: Návrhář aktivity Persist návrháře postupu provádění-
+title: Návrhář aktivity trvalého Návrhář postupu provádění
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,34 +10,34 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2c97d916d00d1c976b4e27381f55e42cbb7cb0db
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7be70d18b1fc8ff12e2d1fb177b41775954334ed
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63004123"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71254852"
 ---
 # <a name="persist-activity-designer"></a>Návrhář aktivity Persist
 
-**Trvalého** Návrhář aktivity se používá k vytvoření a konfigurace <xref:System.Activities.Statements.Persist> aktivity.
+Návrhář **trvalé** aktivity se používá k vytvoření a konfiguraci <xref:System.Activities.Statements.Persist> aktivity.
 
-## <a name="the-persist-activity"></a>Uchování aktivity
+## <a name="the-persist-activity"></a>Aktivita trvalosti
 
-<xref:System.Activities.Statements.Persist> Aktivity uloží pracovní postup na disk, pokud je to možné. <xref:System.Activities.Statements.Persist> Aktivitu nelze v zóně není trvalost jako je třeba provést v rámci <xref:System.Activities.Statements.TransactionScope> aktivity. Pokud použijete <xref:System.Activities.Statements.Persist> aktivity v oboru bez trvalost, dojde k výjimce za běhu.
+Pokud <xref:System.Activities.Statements.Persist> je to možné, aktivita ukládá pracovní postup na disk. Aktivitu nelze provést v zóně bez trvalého uložení, například <xref:System.Activities.Statements.TransactionScope> v rámci aktivity. <xref:System.Activities.Statements.Persist> Pokud použijete <xref:System.Activities.Statements.Persist> aktivitu v oboru, který není trvalý, výjimka je vyvolána v době běhu.
 
-### <a name="using-the-persist-activity-designer"></a>Použití Návrhář aktivity Persist
+### <a name="using-the-persist-activity-designer"></a>Použití návrháře trvalé aktivity
 
-**Trvalého** návrháře aktivit najdete v **Runtime** kategorie **nástrojů**, který přistupuje po kliknutí **nástrojů** Karta (případně vyberte možnost **nástrojů** z **zobrazení** nabídky nebo CTRL + ALT + X.)
+Návrháře **trvalých** aktivit lze najít v kategorii **runtime** sady **nástrojů**, ke které se dostanete kliknutím na kartu **panel** nástrojů (případně můžete vybrat možnost **Sada nástrojů** v nabídce **zobrazení** nebo CTRL + ALT + X).)
 
-**Trvalého** návrháře aktivit můžete přetáhnout z **nástrojů** a vyřadit na povrch návrháře postupu provádění bez ohledu na to aktivity jsou obvykle umístěny, například jako uvnitř <xref:System.Activities.Statements.Sequence>. Tím se vytvoří <xref:System.Activities.Statements.Persist> aktivity s výchozím **DisplayName** trvalého. <xref:System.Activities.Activity.DisplayName%2A> Můžete upravovat v záhlaví **trvalého** Návrhář aktivity nebo v **DisplayName** pole mřížku vlastností.
+Návrhář **trvalé** aktivity lze přetáhnout ze **sady nástrojů** a vyřadit na Návrhář postupu provádění plochu všude, kde jsou obvykle umístěny aktivity, například dovnitř <xref:System.Activities.Statements.Sequence>. Tím se vytvoří <xref:System.Activities.Statements.Persist> aktivita s výchozím **názvem DisplayName** trvalého. Lze upravit v záhlaví návrháře **trvalé** aktivity nebo v poli DisplayName v mřížce vlastností. <xref:System.Activities.Activity.DisplayName%2A>
 
-### <a name="the-persist-properties"></a>Zachovat vlastnosti
+### <a name="the-persist-properties"></a>Trvalé vlastnosti
 
-Následující tabulka ukazuje <xref:System.Activities.Statements.Persist> vlastnosti a popisuje, jak se používají v návrháři. Tyto vlastnosti můžete upravit v mřížce vlastností a některé z nich můžete upravit na plochu návrháře postupu provádění.
+V následující tabulce jsou uvedeny <xref:System.Activities.Statements.Persist> vlastnosti a popisuje, jak se používají v návrháři. Tyto vlastnosti se dají upravovat v mřížce vlastností a některé z nich je možné upravovat na Návrhář postupu provádění povrchu.
 
 |Název vlastnosti|Požadováno|Použití|
 |-|--------------|-|
-|<xref:System.Activities.Activity.DisplayName%2A>|False|Popisný název <xref:System.Activities.Statements.Persist> aktivity. Výchozí hodnota je zachovat. I když zobrazovaný název není bezpodmínečně nutné, je osvědčeným postupem použít zobrazovaný název.|
+|<xref:System.Activities.Activity.DisplayName%2A>|False|Popisný název <xref:System.Activities.Statements.Persist> aktivity Výchozí hodnota je trvalá. I když zobrazovaný název není nezbytně nutný, je vhodné použít zobrazovaný název.|
 
 ## <a name="see-also"></a>Viz také:
 

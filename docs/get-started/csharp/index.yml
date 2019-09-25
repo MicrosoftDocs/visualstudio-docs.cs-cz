@@ -1,119 +1,67 @@
-### YamlMime:YamlDocument
-documentType: LandingData
-title: 'Visual Studio tutorials | C#'
+### YamlMime:Landing
+title: Kurzy pro Visual Studio |C#
+summary: Vytvářejte C# aplikace pomocí sady Visual Studio.
 metadata:
-  title: 'C#Vývoj v sadě Visual Studio | Dokumentace Microsoftu'
-  description: 'Kurzy a koncepčních článků o vývoji C# aplikací pomocí sady Visual Studio.'
+  title: C#vývoj pomocí sady Visual Studio
+  description: Vytvářejte C# aplikace pomocí sady Visual Studio.
   ms.custom: seodec18
+  ms.topic: landing-page
+  ms.date: 09/20/2019
   author: ghogen
+  ms.author: ghogen
   manager: jillfra
   ms.prod: visual-studio-windows
   ms.technology: vs-acquisition
-  ms.topic: landing-page
-  ms.date: 10/30/2018
-  ms.author: ghogen
   dev_langs:
-    - CSharp
-abstract:
-  description: 'Tato stránka obsahuje odkazy na kurzy pro začátečníky pro učit, jak vytvořit C# aplikací pomocí sady Visual Studio. Úplnou dokumentaci sady Visual Studio najdete v tématu <a href="/visualstudio/ide/">sady Visual Studio</a>. Pro C# dokumentace k jazyku, najdete v článku <a href="/dotnet/csharp"> C# průvodce</a>.'
-sections:
-  - title: Začínáme
-    items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: ../../install/install-visual-studio.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_setup.svg'
-            title: Instalace sady Visual Studio
-          - href: visual-studio-ide.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_visual-studio.svg'
-            title: Spustit prohlídku s průvodcem
-  - title: 'C#kurzy'
-    items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: tutorial-console.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_csharp.svg'
-            title: 'Vytvoření první aplikace jazyka C#'
-          - href: tutorial-aspnet-core.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_web-color.svg'
-            title: Vytvoření webové aplikace
-          - href: tutorial-uwp.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_Windows.svg'
-            title: Vytvoření aplikace pro Universal Windows
-          - href: tutorial-wpf.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_Windows.svg'
-            title: Vytvoření desktopové aplikace Windows
-          - href: /dotnet/csharp/tutorials/intro-to-csharp/
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_csharp.svg'
-            title: 'Další informace C# jazyka'
-  - title: Video kurzy
-    items:
-      - type: list
-        style: cards
-        classname: cardsM
-        columns: 3
-        items:
-          - href: tutorial-aspnet-core-ef-step-01.md
-            html: '<p>Vytvoření webové aplikace, která používá data a poskytuje webové rozhraní API pomocí Visual Studio 2019 a nasaďte ji do Azure.</p>'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_video.svg'
-            title: Vytvoření první aplikace ASP.NET Core
-  - title: Poznejte Visual Studio
-    items:
-      - type: paragraph
-        text: Další informace o použití sady Visual Studio pro úlohy vývoje.
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: ../tutorial-open-project-from-repo.md?toc=/visualstudio/get-started/csharp/toc.json&bc=/visualstudio/get-started/csharp/breadcrumb/toc.json
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_pull-request.svg'
-            title: Otevřete kód z úložiště
-          - href: tutorial-editor.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_code-edit.svg'
-            title: Psaní kódu a jeho úpravy
-          - href: ../../ide/compiling-and-building-in-visual-studio.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_build.svg'
-            title: Kompilace a sestavení
-          - href: ../csharp/tutorial-debugger.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_debug.svg'
-            title: Ladění kódu
-          - href: ../../test/getting-started-with-unit-testing.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_test.svg'
-            title: Testování kódu
-          - href: ../../data-tools/create-a-sql-database-by-using-a-designer.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_generic-database.svg'
-            title: Přístup k datům
+  - CSharp
+  ms.openlocfilehash: cefa370c40ccd32a1ddd7b108ccc493d8019fcb2
+  ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+  ms.translationtype: MT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 09/25/2019
+  ms.locfileid: "71252151"
+landingContent:
+- title: Začínáme
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Instalace sady Visual Studio
+      url: ../../install/install-visual-studio.md
+  - linkListType: get-started
+    links:
+    - text: Spustit prohlídku s asistencí
+      url: visual-studio-ide.md
+- title: Vytváření C# aplikací
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Vytvoření konzolové aplikace
+      url: tutorial-console.md
+    - text: Vytvoření webové aplikace
+      url: tutorial-aspnet-core.md
+    - text: Vytvoření první aplikace ASP.NET Core
+      url: tutorial-aspnet-core-ef-step-01.md
+    - text: Vytvoření aplikace Univerzální platforma Windows
+      url: tutorial-uwp.md
+    - text: Vytvoření desktopové aplikace pro Windows
+      url: tutorial-wpf.md
+    - text: Další informace o C# jazyku
+      url: /dotnet/csharp/tutorials/intro-to-csharp/
+- title: Poznejte Visual Studio
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Otevření kódu z úložiště
+      url: ../tutorial-open-project-from-repo.md?
+    - text: Psaní kódu a jeho úpravy
+      url: tutorial-editor.md
+    - text: Kompilace a sestavení
+      url: ../../ide/compiling-and-building-in-visual-studio.md
+    - text: Ladění kódu
+      url: ../csharp/tutorial-debugger.md
+    - text: Testování kódu
+      url: ../../test/getting-started-with-unit-testing.md
+  - linkListType: how-to-guide
+    links:
+    - text: Přístup k datům
+      url: ../../data-tools/create-a-sql-database-by-using-a-designer.md

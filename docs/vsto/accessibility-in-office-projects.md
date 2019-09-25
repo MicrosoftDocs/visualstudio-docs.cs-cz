@@ -15,78 +15,78 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a54c9d5322b35092d635edd00e3b200ee67997a9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e7b80db6f8f54c897a370d53db56773ad8296f6e
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62945216"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71255782"
 ---
 # <a name="accessibility-in-office-projects"></a>Usnadnění v projektech pro systém Office
 
-Microsoft Visual Studio a Microsoft Office zahrnout mnoho funkcí usnadnění, které vám umožní sestavovat vlastní řešení, které splňují požadavky na standardní usnadnění přístupu. Microsoft zveřejňuje pokyny pro přístupnost na webu. Podrobnosti najdete v tématu [webu usnadnění](http://go.microsoft.com/fwlink/?LinkID=37113).
+Microsoft Visual Studio a systém Microsoft Office obsahují mnoho funkcí pro usnadnění přístupu, které umožňují vytvářet vlastní řešení, která splňují standardní požadavky na přístupnost. Microsoft zveřejňuje pokyny pro přístupnost na webu. Podrobnosti najdete na [webu usnadnění](http://go.microsoft.com/fwlink/?LinkID=37113).
 
-Ve většině případů splňovat projektech pro systém Office v sadě Visual Studio usnadnění standardy nebo zveřejňuje vlastnosti, které lze nastavit na zpřístupnit vaše řešení. Existují však některé funkce, které mají omezenou dostupnost.
+Ve většině případů projekty Office v sadě Visual Studio splňují standardy přístupnosti nebo zpřístupňují vlastnosti, které můžete nastavit tak, aby vaše řešení byla přístupná. Existují však některé funkce, které mají omezené usnadnění přístupu.
 
 [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
-## <a name="accessibility-at-design-time"></a>Usnadnění přístupu v době návrhu
+## <a name="accessibility-at-design-time"></a>Přístupnost v době návrhu
 
 ### <a name="use-shortcut-keys-in-document-level-projects"></a>Použití klávesových zkratek v projektech na úrovni dokumentu
- V otevřeném dokumentu aplikace Microsoft Office Word nebo sešitu aplikace Microsoft Office Excel v sadě Visual Studio, obdrží jenom jednu aplikaci v čase klíče příkazy místní. Ve výchozím nastavení, Visual Studio přijímá všechny místní klíče příkazy, ale může být Word nebo Excel přijímat, když je dokument fokus tak, že vyberete **chéma dynamické klávesnice** na **nastavení klávesnice** stránky nástroje **možnosti** dialogové okno. Další informace najdete v tématu [klávesnice Microsoft Office Word, nastavení klávesnice Microsoft Office, dialogové okno Možnosti](../vsto/microsoft-office-word-keyboard-microsoft-office-keyboard-settings-options-dialog-box.md) a [klávesnice Microsoft Office Excel, nastavení klávesnice Microsoft Office, dialogové okno Možnosti](../vsto/microsoft-office-excel-keyboard-microsoft-office-keyboard-settings-options-dialog-box.md).
+ Systém Microsoft Office když je v aplikaci Visual Studio otevřený dokument aplikace Word nebo excelový sešit aplikace systém Microsoft Office, obdrží příkazy klávesových zkratek jenom jedna aplikace v jednom okamžiku. Ve výchozím nastavení Visual Studio obdrží všechny příkazy klávesových zkratek, ale Word nebo Excel je přijme, když na stránce **nastavení klávesnice** v dialogovém okně **Možnosti** vyberete možnost **Dynamická klávesnice** . Další informace najdete v tématu [systém Microsoft Office klávesnice Word, nastavení systém Microsoft Office klávesnice, dialogové okno Možnosti](../vsto/microsoft-office-word-keyboard-microsoft-office-keyboard-settings-options-dialog-box.md) a [systém Microsoft Office klávesnicí aplikace Excel, systém Microsoft Office nastavení klávesnice, dialogové okno Možnosti](../vsto/microsoft-office-excel-keyboard-microsoft-office-keyboard-settings-options-dialog-box.md).
 
-### <a name="display-shortcut-keys-for-the-ribbon-in-document-level-projects"></a>Zobrazí klávesové zkratky pro pás karet v projektech na úrovni dokumentu
- Při otevření v sadě Visual Studio Wordového dokumentu nebo Excelového sešitu nejde stisknout klávesa **Alt** klíče zobrazíte klávesové zkratky pro ovládací prvky na pásu karet a karty. Chcete-li zobrazit klávesové zkratky, zatímco je otevřen v Návrháři dokumentem nebo sešitem, proveďte následující kroky.
+### <a name="display-shortcut-keys-for-the-ribbon-in-document-level-projects"></a>Zobrazení klávesových zkratek pro pás karet v projektech na úrovni dokumentu
+ Když je v aplikaci Visual Studio otevřen dokument aplikace Word nebo excelový sešit, nelze stisknutím klávesy **ALT** zobrazit klávesové zkratky karet a ovládacích prvků na pásu karet. Chcete-li zobrazit klávesové zkratky v době, kdy je dokument nebo sešit otevřen v návrháři, proveďte následující kroky.
 
-#### <a name="to-view-shortcut-keys-for-ribbon-tabs-and-controls-in-the-designer"></a>Chcete-li zobrazit klávesové zkratky pro pás karet a ovládacích prvků v Návrháři
+#### <a name="to-view-shortcut-keys-for-ribbon-tabs-and-controls-in-the-designer"></a>Zobrazení klávesových zkratek pro karty pásu karet a ovládací prvky v Návrháři
 
-1. V sadě Visual Studio na **nástroje** nabídky, klikněte na tlačítko **možnosti**.
+1. V aplikaci Visual Studio v nabídce **nástroje** klikněte na možnost **Možnosti**.
 
-2. Rozbalte **nástroje Office** uzel a vyberte možnost **klávesnice Microsoft Office Excel** nebo **klávesnice Microsoft Office Word**podle potřeby.
+2. Rozbalte uzel **nástroje Office** a v případě potřeby vyberte **systém Microsoft Office klávesnice aplikace Excel** nebo **systém Microsoft Office Word**.
 
-3. Vyberte **chéma dynamické klávesnice**.
+3. Vyberte **dynamické schéma klávesnice**.
 
-     Zobrazí se zpráva s oznámením, že je třeba restartovat Visual Studio tato změna projevila.
+     Zobrazí se zpráva, že je nutné restartovat aplikaci Visual Studio, aby se změna projevila.
 
 4. Klikněte na **OK**.
 
 5. Restartujte Visual Studio a znovu otevřete projekt.
 
-6. Otevření dokumentu nebo sešitu Návrháře projektu.
+6. Otevřete návrháře dokumentu nebo sešitu pro váš projekt.
 
-7. Stisknutím klávesy **F6** zobrazíte klávesové zkratky pro pás karet.
+7. Stisknutím klávesy **F6** Zobrazte klávesové zkratky pro pás karet.
 
-## <a name="accessibility-at-runtime"></a>Usnadnění přístupu za běhu
+## <a name="accessibility-at-run-time"></a>Přístupnost v době běhu
 
-### <a name="windows-forms-controls-on-office-documents"></a>Ovládací prvky Windows Forms v dokumentech Office
- Ovládací prvky Windows Forms vystavit vlastnosti usnadnění poskytnout informace o ovládacím prvku pro usnadnění, například čtečky obrazovky. Můžete využít výhod tyto vlastnosti usnadnění přístupu, když jsou ovládací prvky v dokumentu systému Office v přizpůsobení na úrovni dokumentu. Další informace najdete v tématu [poskytují informace o usnadnění pro ovládací prvky ve formuláři Windows](/dotnet/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form).
+### <a name="windows-forms-controls-on-office-documents"></a>model Windows Forms ovládací prvky v dokumentech Office
+ Model Windows Forms ovládací prvky zpřístupňují vlastnosti přístupnosti a poskytují informace o ovládacím prvku k pomůckám pro usnadnění přístupu, jako jsou třeba čtečky obrazovky. Tyto vlastnosti přístupnosti můžete využít, když jsou ovládací prvky v dokumentu Office v přizpůsobení na úrovni dokumentu. Další informace najdete v tématu [poskytnutí informací o usnadnění pro ovládací prvky ve formuláři Windows](/dotnet/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form).
 
- Existují však některá omezení usnadnění přístupu za běhu při ovládacích prvků Windows Forms jsou hostované na Excelový sešit nebo dokument aplikace Word:
+ Při spuštění model Windows Formsch ovládacích prvků v excelovém sešitu nebo v dokumentu aplikace Word je však k dispozici několik omezení přístupnosti.
 
-- Nelze kartu z jednoho ovládacího prvku do jiného.
+- Nemůžete z jednoho ovládacího prvku tabulátor na jiný.
 
-- Ovládací prvky v dokumentu zakázány, když se změní nastavení přiblížení dokumentu na jinou hodnotu než 100 %.
+- Ovládací prvky v dokumentu jsou zakázané, když změníte nastavení přiblížení dokumentu na jinou hodnotu než 100%.
 
-  Informace o omezeních ovládacích prvků Windows Forms v dokumentech, najdete v části [omezení Windows Forms ovládací prvky v dokumentech Office](../vsto/limitations-of-windows-forms-controls-on-office-documents.md).
+  Informace o omezeních ovládacích prvků model Windows Forms v dokumentech najdete v tématu [omezení model Windows Forms ovládacích prvků v dokumentech Office](../vsto/limitations-of-windows-forms-controls-on-office-documents.md).
 
-### <a name="actions-panes-and-custom-task-panes"></a>Podokna akcí a vlastních podoken úloh
- Když je podokna akcí nebo vlastního podokna úloh fokus, můžete ovládací prvky přístupu stejným způsobem, jakým přistupujete by ovládací prvky v aplikaci Windows Forms. Přesunutím kurzoru mezi podoknem akcí a dokumentu, můžete stisknutím **F6**.
+### <a name="actions-panes-and-custom-task-panes"></a>Podokna akcí a vlastní podokna úloh
+ Pokud má podokno akce nebo vlastní podokno úloh fokus, získáte přístup k řízení stejným způsobem jako při přístupu k ovládacím prvkům aplikace model Windows Forms. Pokud chcete přesunout kurzor mezi podoknem Akce a dokumentem, můžete stisknout klávesu **F6**.
 
- Další informace o podoknech akcí a vlastních podoken úloh najdete v tématu [přehled podokna akcí](../vsto/actions-pane-overview.md) a [vlastní podokna úloh](../vsto/custom-task-panes.md).
+ Další informace o podoknech akcí a vlastních podoknech úloh najdete v části [Přehled podokna akce](../vsto/actions-pane-overview.md) a [vlastní podokna úloh](../vsto/custom-task-panes.md).
 
 ### <a name="display-modes"></a>Režimy zobrazení
 
-Visual Studio má následující omezení související s režimy zobrazení:
+Visual Studio má následující omezení související se režimy zobrazení:
 
-- Ovládací prvky ve Wordovém dokumentu nebo Excelového listu jsou zakázané, když se změní nastavení přiblížení dokumentu na jinou hodnotu než 100 %.
+- Ovládací prvky dokumentu aplikace Word nebo excelového listu jsou při změně nastavení přiblížení dokumentu na jinou hodnotu než 100% zakázané.
 
-- **Nový projekt** dialogové okno zobrazit ovládací prvky správně, jestliže uživatel změní možnosti usnadnění přístupu počítače a **vysoký kontrast – použití**.
+- V dialogovém okně **Nový projekt** se nezobrazí ovládací prvky správně, pokud uživatel změní možnosti přístupnosti počítače na **použití vysoký kontrast**.
 
-Lupa můžete použít k překonání těchto omezení. Lupa je nástroj, který zobrazení ve Windows, který vytvoří samostatné okno zobrazující zvětšená část obrazovky.
+Tato omezení můžete překonat pomocí lupy. Lupa je zobrazovací nástroj ve Windows, který vytvoří samostatné okno, ve kterém se zobrazí zvětšená část obrazovky.
 
 ## <a name="see-also"></a>Viz také:
 
 - [Vývoj řešení pro systém Office](../vsto/developing-office-solutions.md)
 - [Ovládací prvky v dokumentech Office](../vsto/controls-on-office-documents.md)
-- [Usnadnění pro postižené osoby](../ide/reference/accessibility-for-people-with-disabilities.md)
+- [Usnadnění pro osoby s postižením](../ide/reference/accessibility-for-people-with-disabilities.md)
 - [Funkce pro usnadnění přístupu sady Visual Studio](../ide/reference/accessibility-features-of-visual-studio.md)

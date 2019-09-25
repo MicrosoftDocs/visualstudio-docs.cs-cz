@@ -1,5 +1,5 @@
 ---
-title: Rozbíjející změny v rozšíření sady Visual Studio 2017
+title: Průlomové změny v rozšíření Visual Studio 2017
 titleSuffix: ''
 ms.date: 11/09/2016
 ms.topic: conceptual
@@ -9,66 +9,66 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0cc62384f2a413362f53ed0626031501e163d6a4
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: a1a12470530589c8d19a088428bc265c530b55f0
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67823810"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71252322"
 ---
 # <a name="changes-in-visual-studio-2017-extensibility"></a>Změny v rozšíření sady Visual Studio 2017
 
-Poskytuje Visual Studio 2017 [rychlejší, nenáročný prostředí instalace sady Visual Studio](https://devblogs.microsoft.com/visualstudio/faster-leaner-visual-studio-installer) , která snižuje dopad sady Visual Studio v systémech uživatelů současně uživatelům poskytuje větší výběr úloh a funkcí, které jsou nainstalovat. Pro podporu těchto vylepšení jsme udělali změny model rozšiřitelnosti, včetně odstraňuje některé narušující změny. Tento článek popisuje technické podrobnosti o tyto změny a co se dá dělat k jejich řešení.
+Visual Studio 2017 nabízí [rychlejší a světlejší prostředí pro instalaci sady Visual Studio](https://devblogs.microsoft.com/visualstudio/faster-leaner-visual-studio-installer) , které snižuje dopad sady Visual Studio na uživatelské systémy a zároveň dává uživatelům větší možnosti pro úlohy a funkce, které jsou nainstalovány. Pro podporu těchto vylepšení jsme provedli změny v modelu rozšiřitelnosti, včetně některých nezměněných změn. Tento článek popisuje technické podrobnosti o těchto změnách a o tom, co se dá udělat, abyste je mohli řešit.
 
 > [!NOTE]
-> Některé informace se podrobnosti implementace v daném okamžiku a může být později změnit.
+> Některé informace jsou podrobné informace o implementaci k určitému časovému okamžiku a mohou být později změněny.
 
-## <a name="changes-affecting-vsix-format-and-installation"></a>Změny, které mají vliv formát VSIX a instalace
+## <a name="changes-affecting-vsix-format-and-installation"></a>Změny ovlivňující formát VSIX a instalaci
 
-Zavedená VSIX v. 3 sady Visual Studio 2017 (verze 3) formát pro podporu prostředí odlehčenou instalaci.
+Visual Studio 2017 zavedlo formát VSIX V3 (verze 3), který podporuje odlehčené instalace.
 
-Změny formátu VSIX patří:
+Změny ve formátu VSIX zahrnují:
 
-* Prohlášení o požadovaných součástí instalace. K doručování na příslib odlehčený, rychlý instalace sady Visual Studio, instalační program teď nabízí další možnosti konfigurace pro uživatele. Kvůli tomu aby se zajistilo, že jsou nainstalované funkce a součásti vyžadované pro rozšíření, rozšíření potřeba deklarovat jejich závislosti.
+* Deklarace požadavků na instalaci Za účelem doplňování odlehčené a rychlé instalace sady Visual Studio nabízí instalační program nyní pro uživatele další možnosti konfigurace. V důsledku toho musí rozšíření deklarovat své závislosti, aby bylo zajištěno, že jsou nainstalované součásti a součásti požadované rozšířením.
 
-  * Instalační program sady Visual Studio 2017 nabízí automaticky chcete získat a nainstalovat komponenty potřebné pro daného uživatele jako součást instalace příslušného rozšíření.
-  * Uživatelé se také zobrazí upozornění při pokusu o instalaci rozšíření, které nebylo vytvořené pomocí nového formátu VSIX v3, i když bylo označeno ve svém manifestu jako cílení na verzi 15.0.
+  * Instalační program sady Visual Studio 2017 automaticky nabídne získání a instalaci nezbytných součástí pro uživatele jako součást instalace rozšíření.
+  * Uživatelé jsou také upozorněni při pokusu o instalaci rozšíření, které nebylo vytvořeno pomocí nového formátu VSIX v3, i když byly označeny v manifestu jako cílený na verzi 15,0.
 
-* Vylepšené funkce pro formát VSIX. Dodržujeme [nízkým dopadem instalace](https://devblogs.microsoft.com/visualstudio/anatomy-of-a-low-impact-visual-studio-install) sady Visual Studio, která podporuje také nainstaluje vedle sebe, už většina konfigurační data uložit do registru systému jsme přesunuli Visual Studio konkrétní sestavení z mezipaměti GAC. Také jsme zvýšili funkce formát VSIX a instalace modulu VSIX, abyste mohli používat ho místo MSI nebo EXE instalace rozšíření pro některé typy instalace.
+* Rozšířené možnosti pro formát VSIX Aby bylo možné doručovat instalaci sady Visual Studio s [nízkými důsledky](https://devblogs.microsoft.com/visualstudio/anatomy-of-a-low-impact-visual-studio-install) , která podporuje i souběžné instalace, již neukládáme většinu konfiguračních dat do systémového registru a přesunuli sestavení specifická pro sadu Visual Studio z GAC. Zvýšili jsme také možnosti formátu VSIX a instalačního modulu VSIX, což vám umožní použít ho místo MSI nebo EXE k instalaci rozšíření pro některé typy instalace.
 
-Mezi nové schopnosti patří:
+Mezi nové funkce patří:
 
 * Registrace do zadané instance sady Visual Studio.
 * Instalace mimo [složku rozšíření](set-install-root.md).
-* Zjišťování na architektuře procesoru.
-* Závislost na oddělené jazyk jazykových sad.
-* Instalace s [podpora technologie NGEN](ngen-support.md).
+* Detekce architektury procesoru.
+* Závislost na jazykových sadách oddělených jazykem
+* Instalace s [podporou Ngen](ngen-support.md).
 
 ## <a name="build-an-extension-for-visual-studio-2017"></a>Sestavení rozšíření pro Visual Studio 2017
 
-Návrhářské nástroje pro vytváření nového formát manifestu VSIX v3 je k dispozici v sadě Visual Studio 2017. Zobrazit související dokument [jak: Migrace projektů rozšíření do sady Visual Studio 2017](how-to-migrate-extensibility-projects-to-visual-studio-2017.md) podrobnosti o použití návrhářské nástroje nebo provádění ruční aktualizací do projektu a manifest pro vývoj rozšíření VSIX v3.
+Nástroje návrháře pro vytváření nového formátu manifestu VSIX V3 jsou k dispozici v aplikaci Visual Studio 2017. Další informace najdete v [doprovodném dokumentu: Migrujte projekty rozšíření do sady Visual](how-to-migrate-extensibility-projects-to-visual-studio-2017.md) Studio 2017, kde najdete podrobné informace o používání nástrojů návrháře nebo provádění ručních aktualizací projektu a manifestu pro vývoj rozšíření VSIX v3.
 
-## <a name="change-visual-studio-user-data-path"></a>Změna: Visual Studio cesta k datům uživatele
+## <a name="change-visual-studio-user-data-path"></a>Mění Cesta k uživatelským datům v aplikaci Visual Studio
 
-Dříve může existovat pouze jedna instalace každá hlavní verze produktu Visual Studio na každém počítači. Pro podporu-souběžnými instalacemi sady Visual Studio 2017, může existovat více cesty k datům uživatelů pro sadu Visual Studio na počítači uživatele.
+Dříve mohli na každém počítači existovat pouze jedna instalace každé hlavní verze sady Visual Studio. Aby bylo možné podporovat souběžné instalace sady Visual Studio 2017, může v počítači uživatele existovat více cest k datům uživatelů pro sadu Visual Studio.
 
-Chcete-li použít nastavení správce sady Visual Studio se musí aktualizovat kód spuštěný v procesu sady Visual Studio. Kód spuštěný mimo proces sady Visual Studio můžete najít cestu uživatele konkrétní instalaci sady Visual Studio [podle pokynů tady](locating-visual-studio.md).
+Kód spuštěný uvnitř procesu sady Visual Studio by měl být aktualizován tak, aby používal správce nastavení sady Visual Studio. Kód spuštěný mimo proces sady Visual Studio může najít cestu uživatele konkrétní instalace sady Visual Studio [podle pokynů uvedených tady](locating-visual-studio.md).
 
-## <a name="change-global-assembly-cache-gac"></a>Změna: Globální mezipaměť sestavení (GAC)
+## <a name="change-global-assembly-cache-gac"></a>Mění Globální mezipaměť sestavení (GAC)
 
-Většina základních sestavení sady Visual Studio jsou již nainstalovány do mezipaměti GAC. Byly provedeny následující změny tak, aby kód spuštěný v procesu sady Visual Studio, stále můžete najít požadovaná sestavení za běhu.
+Většina základních sestavení sady Visual Studio již není nainstalována do GAC. Byly provedeny následující změny, aby kód spuštěný v procesu sady Visual Studio mohl stále vyhledat požadovaná sestavení v době běhu.
 
 > [!NOTE]
-> [INSTALLDIR] tady odkazuje na kořenový adresář instalace sady Visual Studio. *VSIXInstaller.exe* se to automaticky vyplní, ale k psaní kódu, vlastní nasazení, přečtěte si prosím [vyhledání sady Visual Studio](locating-visual-studio.md).
+> [INSTALLDIR] níže odkazuje na kořenový adresář instalace aplikace Visual Studio. *VSIXInstaller. exe* to automaticky naplní, ale pokud chcete napsat vlastní kód nasazení, přečtěte si prosím [umístění sady Visual Studio](locating-visual-studio.md).
 
-* Sestavení, které byly nainstalovány pouze do GAC:
+* Sestavení, která byla nainstalována pouze do globální mezipaměti sestavení (GAC):
 
-  Tato sestavení jsou teď nainstalované v adresáři <em>[INSTALLDIR] \Common7\IDE\*, * [INSTALLDIR] \Common7\IDE\PublicAssemblies</em> nebo *[INSTALLDIR] \Common7\IDE\PrivateAssemblies*. Tyto složky jsou součástí definovaných cest proces sady Visual Studio.
+  Tato sestavení jsou nyní nainstalována v rámci <em>[INSTALLDIR]\*\Common7\IDE, * [INSTALLDIR] \Common7\IDE\PublicAssemblies</em> nebo *[INSTALLDIR] \Common7\IDE\PrivateAssemblies*. Tyto složky jsou součástí cest zjišťování procesu sady Visual Studio.
 
-* Sestavení, které byly nainstalovány do cesty – testování a do mezipaměti GAC:
+* Sestavení, která byla nainstalována do cesty bez zjišťování a do globální mezipaměti sestavení (GAC):
 
-  * Kopie v mezipaměti GAC byl odebrán z instalačního programu.
-  * A *.pkgdef* soubor se přidal k určení základní záznam kódu pro sestavení.
+  * Kopie v mezipaměti GAC byla odebrána z instalačního programu.
+  * Byl přidán soubor *. pkgdef* , který určuje základní položku kódu pro sestavení.
 
     Příklad:
 
@@ -80,42 +80,42 @@ Většina základních sestavení sady Visual Studio jsou již nainstalovány do
     "version"=15.0.0.0
     ```
 
-    Za běhu, subsystému pkgdef sady Visual Studio slučuje tyto položky do konfigurační soubor procesu Visual Studio modulu runtime (v části *[VSAPPDATA]\devenv.exe.config*) jako [ `<codeBase>` ](/dotnet/framework/configure-apps/file-schema/runtime/codebase-element) elementy. Toto je doporučeným způsobem, jak umožnit proces sady Visual Studio najít sestavení, protože se eliminuje prohledávat zjišťování cesty.
+    V době spuštění sloučí podsystém pkgdef sady Visual Studio tyto položky do konfiguračního souboru modulu runtime procesu sady Visual Studio (pod *[VSAPPDATA] \devenv.exe.config*) jako [`<codeBase>`](/dotnet/framework/configure-apps/file-schema/runtime/codebase-element) elementy. Toto je doporučený způsob, jak nechat proces sady Visual Studio najít vaše sestavení, protože se zabrání v hledání prostřednictvím cest pro zjišťování.
 
-### <a name="reacting-to-this-breaking-change"></a>Reakce na tento zásadní změna
+### <a name="reacting-to-this-breaking-change"></a>Reakce na tuto změnu přerušení
 
-* Pokud v rámci procesu Visual Studio běží vaše rozšíření:
+* Pokud je vaše rozšíření spuštěné v rámci procesu sady Visual Studio:
 
-  * Váš kód bude moct vyhledat sestavení sady Visual Studio core.
-  * Zvažte použití *.pkgdef* soubor v případě potřeby zadejte cestu k sestavení.
+  * Váš kód bude moci najít základní sestavení sady Visual Studio.
+  * Zvažte použití souboru *. pkgdef* k určení cesty k sestavení v případě potřeby.
 
-* Pokud vaše rozšíření běží mimo proces sady Visual Studio:
+* Pokud je vaše rozšíření spuštěné mimo proces sady Visual Studio:
 
-  Vezměte v úvahu hledáte Visual Studio core sestavení v rámci <em>[INSTALLDIR] \Common7\IDE\*, * [INSTALLDIR] \Common7\IDE\PublicAssemblies</em> nebo *[INSTALLDIR] \Common7\IDE\PrivateAssemblies*použitím překladač konfigurační soubor nebo sestavení.
+  Zvažte možnost vyhledat základní sestavení sady Visual Studio v <em>[INSTALLDIR]\*\Common7\IDE, * [INSTALLDIR] \Common7\IDE\PublicAssemblies</em> nebo *[INSTALLDIR] \Common7\IDE\PrivateAssemblies* pomocí konfiguračního souboru nebo sestavení. výrobce.
 
-## <a name="change-reduce-registry-impact"></a>Změna: Dopad registru
+## <a name="change-reduce-registry-impact"></a>Mění Snížit dopad registru
 
-### <a name="global-com-registration"></a>Globální registrace modelu COM
+### <a name="global-com-registration"></a>Globální registrace COM
 
-* Dříve nainstalované sady Visual Studio do HKEY_CLASSES_ROOT a HKEY_LOCAL_MACHINE podregistry pro podporu nativních registrace modelu COM mnoho klíče registru. Chcete-li odstranit tento dopad, Visual Studio nyní používá [Bezregistrační aktivace komponent COM](https://msdn.microsoft.com/library/ms973913.aspx).
-* V důsledku toho většina vyrovnávací paměti TLB / OLB / knihovny DLL v části % ProgramFiles (x86) %\Common Files\Microsoft Shared\MSEnv nebudou nainstalované ve výchozím nastavení sada Visual Studio. Tyto soubory jsou teď nainstalované v [INSTALLDIR] s odpovídající manifesty COM bez registrace používá hostitelský proces sady Visual Studio.
-* V důsledku toho najdete externí kód, který využívá globální registrace modelu COM pro rozhraní Visual Studio COM už tyto registrace. Kód spuštěný v procesu sady Visual Studio se nezobrazí rozdíl.
+* Dříve Visual Studio nainstalovalo mnoho klíčů registru do podregistru HKEY_CLASSES_ROOT a HKEY_LOCAL_MACHINE pro podporu registrace nativního modelu COM. Aby se tento dopad vyloučil, Visual Studio teď používá [aktivaci bez registrace pro komponenty com](https://msdn.microsoft.com/library/ms973913.aspx).
+* V důsledku toho většina souborů TLB/OLB/DLL pod% ProgramFiles (x86)% \ Common Files\Microsoft Shared\MSEnv již není ve výchozím nastavení sady Visual Studio nainstalována. Tyto soubory jsou nyní nainstalovány v rámci [INSTALLDIR] s odpovídajícími manifesty COM bez registrace, které používá hostitelský proces sady Visual Studio.
+* Výsledkem je, že externí kód, který závisí na globální registraci COM pro rozhraní COM sady Visual Studio, již nebude tyto registrace najít. Kód spuštěný uvnitř procesu sady Visual Studio neuvidí rozdíl.
 
-### <a name="visual-studio-registry"></a>Visual Studio registru
+### <a name="visual-studio-registry"></a>Registr sady Visual Studio
 
-* Dříve nainstalované sady Visual Studio mnoho klíče registru do systému **HKEY_LOCAL_MACHINE** a **HKEY_CURRENT_USER** podregistry v rámci Visual Studio konkrétní klíče:
+* Dříve Visual Studio nainstalovalo mnoho klíčů registru do podregistrů **HKEY_LOCAL_MACHINE** a **HKEY_CURRENT_USER** v rámci klíče specifického pro Visual Studio:
 
-  * **HKLM\Software\Microsoft\VisualStudio\{Version}** : Klíče registru vytvořené pomocí Instalační služby MSI a rozšíření vázaná na počítač.
-  * **HKCU\Software\Microsoft\VisualStudio\{Version}** : Klíče registru vytvořené pomocí sady Visual Studio k ukládání nastavení specifických pro uživatele.
-  * **HKCU\Software\Microsoft\VisualStudio\{Version}_Config**: Kopii aplikace Visual Studio HKLM klávesy výše a klíče registru sloučením *.pkgdef* souborů podle přípony.
+  * **HKLM\Software\Microsoft\VisualStudio\{Version}** : Klíče registru vytvořené instalačními programy MSI a rozšířeními vázanými na počítač.
+  * **HKCU\Software\Microsoft\VisualStudio\{Version}** : Klíče registru vytvořené v aplikaci Visual Studio k ukládání nastavení specifických pro uživatele.
+  * **HKCU\Software\Microsoft\VisualStudio\{Version}_Config**: Výše uvedený klíč registru pro sadu Visual Studio a klíče registru sloučené ze souborů *. pkgdef* podle rozšíření.
 
-* Pokud chcete snížit dopad na registru, Visual Studio nyní používá [RegLoadAppKey](/windows/desktop/api/winreg/nf-winreg-regloadappkeya) funkce pro ukládání klíčů registru v privátní binárního souboru v rámci *[VSAPPDATA]\privateregistry.bin*. Velmi malý počet Visual Studio zkratky specifické pro zůstat v systémovém registru.
-* Stávající kód spuštěný v procesu sady Visual Studio to neovlivní. Visual Studio přesměruje do privátního registru, všechny operace registru pod klíčem konkrétní HKCU Visual Studio. Čtení a zápis do jiných umístění registru bude nadále používat systémového registru.
-* Externí kód bude potřebovat k načtení a čtení z tohoto souboru pro položky registru sady Visual Studio.
+* Aby se snížil dopad v registru, Visual Studio teď používá funkci [RegLoadAppKey](/windows/desktop/api/winreg/nf-winreg-regloadappkeya) k ukládání klíčů registru do privátního binárního souboru v *[VSAPPDATA] \privateregistry.bin*. V systémovém registru zůstane pouze velmi malý počet klíčů specifických pro sadu Visual Studio.
+* Existující kód spuštěný uvnitř procesu sady Visual Studio nemá vliv. Visual Studio bude přesměrovat všechny operace registru v rámci klíče HKCU sady Visual Studio do privátního registru. Čtení a zápis do jiných umístění registru bude pokračovat v používání systémového registru.
+* Externí kód bude potřebovat načíst a číst z tohoto souboru pro položky registru sady Visual Studio.
 
-### <a name="react-to-this-breaking-change"></a>Reakce na tento zásadní změna
+### <a name="react-to-this-breaking-change"></a>Reagovat na tuto zásadní změnu
 
-* Pro účely Bezregistrační aktivace komponent COM také mají být převedeny externí kód.
-* Externí komponenty můžete vyhledat umístění sady Visual Studio [podle pokynů tady](https://devblogs.microsoft.com/setup/changes-to-visual-studio-15-setup).
-* Doporučujeme použít externí komponenty [externí prostřednictvím Správce nastavení](/dotnet/api/microsoft.visualstudio.settings.externalsettingsmanager) místo čtení/zápis přímo na klíče registru sady Visual Studio.
-* Zkontrolujte, jestli komponenty, které používá vaše rozšíření může implementovat další techniku pro registraci. Rozšíření ladicího programu může být například moct využívat nové [msvsmon registrace modelu COM soubor JSON](migrate-debugger-COM-registration.md).
+* Externí kód by měl být převeden tak, aby používal i aktivaci bez registrace pro komponenty modelu COM.
+* Externí komponenty mohou najít umístění sady Visual Studio [podle pokynů uvedených tady](https://devblogs.microsoft.com/setup/changes-to-visual-studio-15-setup).
+* Doporučujeme, aby externí komponenty používaly [Správce externích nastavení](/dotnet/api/microsoft.visualstudio.settings.externalsettingsmanager) namísto čtení/zápisu přímo do klíčů registru sady Visual Studio.
+* Ověřte, zda komponenty používané rozšířením mohou být implementovány jiným způsobem pro registraci. Například rozšíření ladicího programu může být schopné využít novou [registraci souboru com msvsmon JSON](migrate-debugger-COM-registration.md).

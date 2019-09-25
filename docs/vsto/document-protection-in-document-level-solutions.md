@@ -16,19 +16,19 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5a894f1e0fb9d5e9d55f46c442bc975de0bd900d
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: 6c5f019907495c3cad3fddef501455aedf345bb2
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68872075"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71253811"
 ---
 # <a name="document-protection-in-document-level-solutions"></a>Ochrana dokumentů v řešeních na úrovni dokumentu
   Můžete použít funkce ochrany aplikace systém Microsoft Office Word a systém Microsoft Office Excel v projektech na úrovni dokumentu. Tyto funkce blokují neoprávněným uživatelům provádění změn v chráněných částech dokumentu.
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
- Pomocí aplikace Excel můžete zapnout nebo vypnout ochranu, zatímco je sešit otevřený v návrháři. Pomocí aplikace Word můžete ochranu zapnout pouze mimo návrháře. Za běhu můžete ochranu povolit nebo zakázat programově pro Word i Excel.
+ Pomocí aplikace Excel můžete zapnout nebo vypnout ochranu, zatímco je sešit otevřený v návrháři. Pomocí aplikace Word můžete ochranu zapnout pouze mimo návrháře. V době běhu můžete ochranu povolit nebo zakázat programově pro Word a Excel.
 
  Je-li povolena ochrana dokumentu v dokumentu, který je otevřen v návrháři, jsou všechny ovládací prvky odebrány z **panelu nástrojů** nebo nejsou k dispozici, a nelze přetáhnout cokoli z okna **zdroje dat** do dokumentu.
 

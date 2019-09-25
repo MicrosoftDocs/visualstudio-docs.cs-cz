@@ -16,44 +16,44 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 37633d02f4b7a9a140b41058a39369fde7f64002
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 160897a37ff6a8b335479b42a80f4186f176cab6
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62951157"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71254406"
 ---
 # <a name="controls-on-office-documents"></a>Ovládací prvky v dokumentech Office
-  Nástroje pro vývoj pro Office v sadě Visual Studio můžete použít k přidávání ovládacích prvků Windows Forms a *hostování ovládacích prvků* do dokumentů aplikace Word a sešitů aplikace Excel. Hostitelské ovládací prvky jsou objekty, které rozšiřují různých objektů uživatelského rozhraní (UI) v objektové modely aplikace Word a Excel.
+  Vývojové nástroje pro Office v sadě Visual Studio můžete použít k přidání ovládacích prvků model Windows Forms a *hostitelských ovládacích prvků* do dokumentů aplikace Word a sešitů aplikace Excel. Hostitelské ovládací prvky jsou objekty, které rozšíří různé objekty uživatelského rozhraní (UI) v modelech objektů Word a Excel.
 
  [!INCLUDE[appliesto_controls](../vsto/includes/appliesto-controls-md.md)]
 
- Při vývoji projekty doplňku VSTO pro Excel nebo Word prostřednictvím kódu programu přidáte tyto ovládací prvky otevřeného dokumentu nebo sešitu v době běhu.
+ Při vývoji projektů doplňku VSTO pro Excel nebo Word můžete programově přidat tyto ovládací prvky do libovolného otevřeného dokumentu nebo sešitu v době běhu.
 
- Při vývoji projekty na úrovni dokumentu pro aplikaci Excel nebo Word prostřednictvím kódu programu přidáte těchto ovládacích prvků za běhu nebo návrháře aplikace Visual Studio můžete použít k přidání těchto ovládacích prvků do dokumentu nebo sešitu v projektu v době návrhu.
+ Při vývoji projektů na úrovni dokumentu v aplikaci Excel nebo Word můžete programově přidat tyto ovládací prvky za běhu, nebo můžete pomocí návrháře sady Visual Studio přidat tyto ovládací prvky do dokumentu nebo sešitu v projektu v době návrhu.
 
 ## <a name="in-this-section"></a>V tomto oddílu
-- [Přehled ovládacích prvků hostitele a hostitelské položky](../vsto/host-items-and-host-controls-overview.md)
+- [Přehled hostitelských položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md)
 
- Popisuje funkce hostitelských položek a hostitelských ovládacích prvků, včetně programování v události, vytvoření vazby ovládacích prvků na data a jak se liší od nativních objektů ovládací prvky.
+ Popisuje funkce hostitelských položek a hostitelských ovládacích prvků, včetně programování proti událostem, vázání ovládacích prvků na data a způsobu, jakým se ovládací prvky liší od nativních objektů.
 
-- [Programová omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
+- [Programové omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
 
- Popisuje problémy, které se můžete setkat při použití hostitelských položek a hostitelských ovládacích prvků v kódu.
+ Popisuje problémy, se kterými se můžete setkat při používání hostitelských položek a hostitelských ovládacích prvků v kódu.
 
 - [Ovládací prvky Windows Forms na dokumenty Office – přehled](../vsto/windows-forms-controls-on-office-documents-overview.md)
 
- Poskytuje informace o používání ovládacích prvků Windows Forms v Excelu a Wordu dokumenty a jak se liší od ovládací prvky ve formuláři Windows.
+ Poskytuje informace o použití ovládacích prvků model Windows Forms v aplikacích Excel a Word a o tom, jak se liší od ovládacích prvků ve formuláři Windows.
 
-- [Přidání ovládacích prvků do dokumentů Office za běhu](../vsto/adding-controls-to-office-documents-at-run-time.md)
+- [Přidání ovládacích prvků do dokumentů Office v době běhu](../vsto/adding-controls-to-office-documents-at-run-time.md)
 
- Popisuje, jak přidat ovládací prvky Windows Forms a ovládacích prvků do dokumentů aplikace Word a Excel hostitele a popisuje omezení, o tom, jak zachovat tyto ovládací prvky v dokumentu.
+ Popisuje, jak přidat ovládací prvky model Windows Forms a hostitelské ovládací prvky do dokumentů aplikace Word a Excel a popisuje omezení způsobu, jakým tyto ovládací prvky v dokumentu uchovávají.
 
 ## <a name="related-sections"></a>Související oddíly
 - [Přizpůsobení uživatelského rozhraní systému Office](../vsto/office-ui-customization.md)
 
- Poskytuje informace o různých způsobů přizpůsobení uživatelského rozhraní systému Microsoft Office aplikací pomocí sady Visual Studio.
+ Poskytuje informace o různých způsobech přizpůsobení uživatelského rozhraní systém Microsoft Office aplikací pomocí sady Visual Studio.
 
-- [Vytvoření vazby dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [Vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
 
- Popisuje, jak zobrazit data v dokumentech aplikace Word a Excel pomocí vazby dat na hostitelské ovládací prvky v rámci dokumentu.
+ Popisuje, jak lze zobrazit data v dokumentech aplikace Word a Excel pomocí vazby dat na hostitelské ovládací prvky v rámci dokumentu.

@@ -5,16 +5,16 @@ ms.date: 03/14/2019
 author: asb3993
 ms.author: amburns
 ms.assetid: 48E06A61-7294-4EC8-A09D-1763C32AD910
-ms.openlocfilehash: 3e6ae24ea9e9a5dea263c2449a9b23b6027f7a96
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: b569887005d22a4eab7289c4ab940c9d9539d040
+ms.sourcegitcommit: 528178a304e66c0cb7ab98b493fe3c409f87493a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211320"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71273323"
 ---
 # <a name="default-keyboard-shortcuts-in-visual-studio-for-mac"></a>Výchozí klávesové zkratky v Visual Studio pro Mac
 
-Informace o přístupnosti klávesnice najdete [v tématu How to: Použijte navigaci](~/accessibility.md#how-to-use-keyboard-navigation)pomocí klávesnice.
+Informace o přístupnosti klávesnice najdete [v tématu How to: Použijte navigaci](~/accessibility-keyboard.md)pomocí klávesnice.
 
 K nejrůznějším příkazům v Visual Studio pro Mac můžete přistupovat pomocí příslušné klávesové zkratky. Tento dokument obsahuje seznam výchozích klávesových zkratek pro schéma vazby **Visual Studio pro Mac** Key. Další informace o tom, jak změnit schéma vázání klíčů, najdete v tématu [přizpůsobení rozhraní IDE](~/customizing-the-ide.md#key-bindings). Zástupce příkazu můžete také přizpůsobit pomocí položky nabídky**Předvolby** **Visual Studio pro Mac** > a volbou**vazby klíče** **prostředí** > v okně **Předvolby** .
 

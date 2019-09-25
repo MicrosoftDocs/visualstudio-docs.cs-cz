@@ -1,8 +1,8 @@
 ### YamlMime:Landing
-title: Dokumentace k rozhraní IDE sady Visual Studio
+title: Dokumentace k integrovanému vývojovému prostředí (IDE) v sadě Visual Studio
 summary: Integrované vývojové prostředí (IDE) je aplikace s bohatou funkcí, kterou lze použít pro mnoho aspektů vývoje softwaru. Integrované vývojové prostředí (IDE) sady Visual Studio usnadňuje úpravy, ladění, vytváření a publikování vaší aplikace.
 metadata:
-  title: Dokumentace k rozhraní IDE sady Visual Studio
+  title: Dokumentace k integrovanému vývojovému prostředí (IDE) v sadě Visual Studio
   titleSuffix: ''
   description: Přejděte na jiné stránky, které vám pomůžou naučit se používat interaktivní vývojové prostředí sady Visual Studio.
   ms.prod: visual-studio-windows
@@ -11,12 +11,12 @@ metadata:
   author: gewarren
   ms.author: gewarren
   ms.date: 09/24/2019
-  ms.openlocfilehash: 8fd51b6f94ef89f821223076453979b805722e53
-  ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+  ms.openlocfilehash: f45e063db85f782f7b51b3cc71b69cca61589f27
+  ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
   ms.translationtype: MT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 09/24/2019
-  ms.locfileid: "71238169"
+  ms.lasthandoff: 09/25/2019
+  ms.locfileid: "71254567"
 landingContent:
 - title: Začínáme
   linkLists:

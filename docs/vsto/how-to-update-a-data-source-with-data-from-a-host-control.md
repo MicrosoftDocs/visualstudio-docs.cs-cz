@@ -15,105 +15,105 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 24bbd859b4867225e5ec5df95d298dd04146df46
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 41ccdc77c58ef95a63e3e5273b7ea00d4f942681
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63421019"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71255662"
 ---
 # <a name="how-to-update-a-data-source-with-data-from-a-host-control"></a>Postupy: Aktualizace zdroje dat s použitím dat z hostitelského ovládacího prvku
-  Můžete vytvořit vazbu hostitelského ovládacího prvku do zdroje dat a aktualizovat zdroj dat změny provedené u dat v ovládacím prvku. V tomto procesu existují dva hlavní kroky:
+  Můžete navázat hostitelský ovládací prvek ke zdroji dat a aktualizovat zdroj dat změnami provedenými v datech v ovládacím prvku. V tomto procesu jsou dva hlavní kroky:
 
-1. Aktualizujte zdroj dat v paměti změněných dat v ovládacím prvku. Obvykle je zdroje dat v paměti <xref:System.Data.DataSet>, <xref:System.Data.DataTable>, nebo jiný datový objekt.
+1. Aktualizuje zdroj dat v paměti změněnými daty v ovládacím prvku. Zdrojem dat v paměti je <xref:System.Data.DataSet> <xref:System.Data.DataTable>obvykle, nebo nějaký jiný datový objekt.
 
-2. Aktualizujte databázi s změněná data ve zdroji dat v paměti. To platí jenom v případě, že zdroj dat je připojený k back-end databáze, jako je například databáze systému SQL Server nebo Microsoft Office Access.
+2. Aktualizuje databázi se změněnými daty ve zdroji dat v paměti. To platí pouze v případě, že je zdroj dat připojen k back-endové databázi, jako je například SQL Server nebo databáze systém Microsoft Office Access.
 
-   Další informace o hostitelské ovládací prvky a datové vazby, naleznete v tématu [hostovat položky a hostujte Přehled ovládacích prvků](../vsto/host-items-and-host-controls-overview.md) a [vytvoření vazby dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md).
+   Další informace o ovládacích prvcích hostování a datových vazbách naleznete v tématu Přehled hostitelských [položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md) a [vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md).
 
    [!INCLUDE[appliesto_controls](../vsto/includes/appliesto-controls-md.md)]
 
 ## <a name="update-the-in-memory-data-source"></a>Aktualizace zdroje dat v paměti
- Ve výchozím nastavení hostitelské ovládací prvky, které umožňují jednoduché datové vazby (jako je například ovládací prvky obsahu na dokumentu aplikace Word nebo pojmenované oblasti ovládacího prvku na listu aplikace Excel) bez uložení změn dat do zdroje dat v paměti. To znamená když koncový uživatel změní hodnotu v ovládacím prvku hostitele a pak přejde mimo ovládací prvek, nová hodnota v ovládacím prvku není automaticky uloženy do zdroje dat.
+ Ve výchozím nastavení hostitelské ovládací prvky, které umožňují jednoduchou datovou vazbu (například ovládací prvky obsahu v dokumentu aplikace Word nebo pojmenovaném ovládacím prvku rozsahu na listu aplikace Excel), neukládají změny dat do zdroje dat v paměti. To znamená, že když koncový uživatel změní hodnotu v hostitelském ovládacím prvku a přejde pryč z ovládacího prvku, nová hodnota v ovládacím prvku se automaticky neuloží do zdroje dat.
 
- Chcete-li uložit data do zdroje dat, můžete napsat kód, který aktualizuje zdroj dat v reakci na konkrétní událost za běhu nebo můžete konfigurovat řízení se automaticky aktualizovat zdroj dat při změně hodnoty v ovládacím prvku.
+ Chcete-li uložit data do zdroje dat, můžete napsat kód, který aktualizuje zdroj dat v reakci na konkrétní událost v době běhu, nebo můžete nakonfigurovat ovládací prvek tak, aby automaticky aktualizoval zdroj dat, když se změní hodnota v ovládacím prvku.
 
- Není potřeba uložit <xref:Microsoft.Office.Tools.Excel.ListObject> změny do zdroje dat v paměti. Po vytvoření vazby <xref:Microsoft.Office.Tools.Excel.ListObject> ovládacího prvku k datům, <xref:Microsoft.Office.Tools.Excel.ListObject> ovládací prvek automaticky uloží změny do zdroje dat v paměti bez potřeby dalšího kódu.
+ Nemusíte ukládat <xref:Microsoft.Office.Tools.Excel.ListObject> změny do zdroje dat v paměti. Při navázání <xref:Microsoft.Office.Tools.Excel.ListObject> ovládacího prvku s daty <xref:Microsoft.Office.Tools.Excel.ListObject> ovládací prvek automaticky ukládá změny do zdroje dat v paměti bez nutnosti dalšího kódu.
 
-### <a name="to-update-the-in-memory-data-source-at-runtime"></a>Chcete-li aktualizovat zdroje dat v paměti za běhu
+### <a name="to-update-the-in-memory-data-source-at-run-time"></a>Aktualizace zdroje dat v paměti za běhu
 
-- Volání <xref:System.Windows.Forms.Binding.WriteValue%2A> metodu <xref:System.Windows.Forms.Binding> objekt, který váže ovládací prvek na zdroj dat.
+- <xref:System.Windows.Forms.Binding.WriteValue%2A> Zavolejte metodu <xref:System.Windows.Forms.Binding> objektu, který sváže ovládací prvek se zdrojem dat.
 
-     Uloží změny provedené v následujícím příkladu <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek na listu aplikace Excel do datového zdroje. Tento příklad předpokládá, že máte <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek s názvem `namedRange1` s jeho <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> vlastnost vázána na pole ve zdroji dat.
+     Následující příklad uloží změny provedené <xref:Microsoft.Office.Tools.Excel.NamedRange> v ovládacím prvku listu aplikace Excel do zdroje dat. V <xref:Microsoft.Office.Tools.Excel.NamedRange> tomto příkladu se předpokládá, že máte ovládací `namedRange1` prvek s <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> názvem s vlastností vázaný na pole ve zdroji dat.
 
      [!code-csharp[Trin_VstcoreDataExcel#1](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#1)]
      [!code-vb[Trin_VstcoreDataExcel#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#1)]
 
-### <a name="automatically-update-the-in-memory-data-source"></a>Automaticky aktualizovat zdroj dat v paměti
- Ovládací prvek lze také nakonfigurovat tak, aby automaticky aktualizuje zdroj dat v paměti. V úrovni dokumentu projektu můžete to provést pomocí kódu nebo návrháře. V projektu doplňku VSTO je nutné použít kód.
+### <a name="automatically-update-the-in-memory-data-source"></a>Automatické aktualizace zdroje dat v paměti
+ Můžete také nakonfigurovat ovládací prvek tak, aby automaticky aktualizován zdroj dat v paměti. V projektu na úrovni dokumentu můžete to provést pomocí kódu nebo návrháře. V projektu doplňku VSTO je nutné použít kód.
 
-#### <a name="to-set-a-control-to-automatically-update-the-in-memory-data-source-by-using-code"></a>Chcete-li nastavit ovládací prvek se automaticky aktualizovat zdroj dat v paměti pomocí kódu
+#### <a name="to-set-a-control-to-automatically-update-the-in-memory-data-source-by-using-code"></a>Nastavení ovládacího prvku na automatickou aktualizaci zdroje dat v paměti pomocí kódu
 
-1. Použít režim System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged <xref:System.Windows.Forms.Binding> objekt, který váže ovládací prvek na zdroj dat. Existují dvě možnosti pro aktualizaci zdroje dat:
+1. Použijte režim <xref:System.Windows.Forms.Binding> System. Windows. Forms. DataSourceUpdateMode. propropertychanged objektu, který sváže ovládací prvek se zdrojem dat. Existují dvě možnosti aktualizace zdroje dat:
 
-   - Aktualizace zdroje dat, když ovládací prvek je ověřen, nastavte tuto vlastnost na System.Windows.Forms.DataSourceUpdateMode.OnValidation.
+   - Chcete-li aktualizovat zdroj dat při ověřování ovládacího prvku, nastavte tuto vlastnost na System. Windows. Forms. DataSourceUpdateMode. provaliding.
 
-   - Pokud chcete aktualizovat zdroj dat při změně hodnoty vlastnosti vázané na data ovládacího prvku, nastavte tuto vlastnost na System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged.
+   - Chcete-li aktualizovat zdroj dat, když se změní hodnota vlastnosti vázané na data ovládacího prvku, nastavte tuto vlastnost na System. Windows. Forms. DataSourceUpdateMode. PropertyChanged.
 
      > [!NOTE]
-     > Možnost System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged se nevztahují na hostitelské ovládací prvky aplikace Word, protože slovo nemá nabídka dokumentů – nebo ovládací prvek – změna oznámení. Tato možnost je však možné pro ovládací prvky Windows Forms v dokumentech aplikace Word.
+     > Možnost System. Windows. Forms. DataSourceUpdateMode. PropertyChanged se nevztahuje na ovládací prvky hostitele aplikace Word, protože aplikace Word nenabízí oznámení změny dokumentu nebo řízení-změna. Tuto možnost lze však použít pro model Windows Forms ovládací prvky v dokumentech aplikace Word.
 
-     Následující příklad nastaví <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek se automaticky aktualizovat zdroj dat při změně hodnoty v ovládacím prvku. Tento příklad předpokládá, že máte <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek s názvem `namedRange1` s jeho <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> vlastnost vázána na pole ve zdroji dat.
+     Následující příklad konfiguruje <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek tak, aby automaticky aktualizoval zdroj dat, když se změní hodnota v ovládacím prvku. V <xref:Microsoft.Office.Tools.Excel.NamedRange> tomto příkladu se předpokládá, že máte ovládací `namedRange1` prvek s <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> názvem s vlastností vázaný na pole ve zdroji dat.
 
      [!code-csharp[Trin_VstcoreDataExcel#19](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#19)]
      [!code-vb[Trin_VstcoreDataExcel#19](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#19)]
 
-#### <a name="to-set-a-control-to-automatically-update-the-in-memory-data-source-by-using-the-designer"></a>Chcete-li nastavit ovládací prvek se automaticky aktualizovat zdroj dat v paměti pomocí návrháře
+#### <a name="to-set-a-control-to-automatically-update-the-in-memory-data-source-by-using-the-designer"></a>Nastavení ovládacího prvku na automatickou aktualizaci zdroje dat v paměti pomocí návrháře
 
-1. V sadě Visual Studio otevřete Wordový dokument nebo Excelový sešit v návrháři.
+1. V aplikaci Visual Studio otevřete dokument aplikace Word nebo excelový sešit v návrháři.
 
-2. Klepněte na ovládací prvek, který chcete automaticky aktualizovat zdroj dat.
+2. Klikněte na ovládací prvek, u kterého chcete zdroj dat automaticky aktualizovat.
 
-3. V **vlastnosti** okna, rozbalte **(DataBindings)** vlastnost.
+3. V okně **vlastnosti** rozbalte vlastnost **(DataBindings)** .
 
-4. Vedle položky **(rozšířené)** vlastnosti, klikněte na tlačítko se třemi tečkami (![VisualStudioEllipsesButton snímek obrazovky](../vsto/media/vbellipsesbutton.png "snímek obrazovky VisualStudioEllipsesButton")).
+4. Vedle vlastnosti **(rozšířené)** klikněte na tlačítko se třemi tečkami (![VisualStudioEllipsesButton screenshot](../vsto/media/vbellipsesbutton.png "VisualStudioEllipsesButton snímek obrazovky")).
 
-5. V **formátování a rozšířené vazby** dialogové okno, klikněte na tlačítko **režim aktualizace zdroje dat** rozevíracího seznamu a vyberte jednu z následujících hodnot:
+5. V dialogovém okně **formátování a rozšířené vazby** klikněte na rozevírací seznam **režim aktualizace zdroje dat** a vyberte jednu z následujících hodnot:
 
-    - Chcete-li aktualizovat zdroj dat, když ovládací prvek je ověřen, vyberte **OnValidation**.
+    - Chcete-li aktualizovat zdroj dat, když je ovládací prvek ověřen, vyberte možnost **ověření**.
 
-    - Chcete-li aktualizovat zdroj dat při změně hodnoty vlastnosti vázané na data ovládacího prvku, vyberte **OnPropertyChanged –**.
+    - Chcete-li aktualizovat zdroj dat, když se změní hodnota vlastnosti vázané na data ovládacího prvku, vyberte možnost- **propertyChanged**.
 
         > [!NOTE]
-        > **OnPropertyChanged –** možnost se nevztahuje na hostitelské ovládací prvky aplikace Word, protože slovo nemá nabídka dokumentů – nebo ovládací prvek – změna oznámení. Tato možnost je však možné pro ovládací prvky Windows Forms v dokumentech aplikace Word.
+        > Možnost- **propertyChanged** se nevztahuje na hostitelské ovládací prvky aplikace Word, protože aplikace Word nenabízí oznámení změny dokumentu nebo řízení. Tuto možnost lze však použít pro model Windows Forms ovládací prvky v dokumentech aplikace Word.
 
-6. Zavřít **formátování a rozšířené vazby** dialogové okno.
+6. Zavřete dialogové okno **formátování a rozšířené vazby** .
 
 ## <a name="update-the-database"></a>Aktualizace databáze
- Pokud zdroj dat v paměti je přidružen k databázi, je nutné aktualizovat databázi se změny do zdroje dat. Další informace o aktualizaci databáze najdete v tématu [uložit data zpět do databáze](../data-tools/save-data-back-to-the-database.md) a [aktualizace dat pomocí TableAdapter](../data-tools/update-data-by-using-a-tableadapter.md) .
+ Pokud je zdroj dat v paměti přidružený k databázi, je nutné aktualizovat databázi se změnami ve zdroji dat. Další informace o aktualizaci databáze naleznete v tématu [uložení dat zpět do databáze](../data-tools/save-data-back-to-the-database.md) a [aktualizace dat pomocí TableAdapter](../data-tools/update-data-by-using-a-tableadapter.md) .
 
 ### <a name="to-update-the-database"></a>Postup aktualizace databáze
 
-1. Volání <xref:System.Windows.Forms.BindingSource.EndEdit%2A> metodu <xref:System.Windows.Forms.BindingSource> pro ovládací prvek.
+1. <xref:System.Windows.Forms.BindingSource.EndEdit%2A> Zavolejte metodu <xref:System.Windows.Forms.BindingSource> pro ovládací prvek.
 
-     <xref:System.Windows.Forms.BindingSource> Se automaticky vygeneruje, když přidáte ovládací prvek vázaný na data do dokumentu nebo sešitu v době návrhu. <xref:System.Windows.Forms.BindingSource> Ovládacího prvku se připojí k typové datové sady ve vašem projektu. Další informace najdete v tématu [přehled komponenty BindingSource](/dotnet/framework/winforms/controls/bindingsource-component-overview).
+     Automaticky <xref:System.Windows.Forms.BindingSource> se generuje při přidání ovládacího prvku vázaného na data do dokumentu nebo sešitu v době návrhu. <xref:System.Windows.Forms.BindingSource> Připojí ovládací prvek k typované datové sadě ve vašem projektu. Další informace najdete v tématu [Přehled komponent BindingSource](/dotnet/framework/winforms/controls/bindingsource-component-overview).
 
-     Následující příklad kódu předpokládá, že váš projekt obsahuje <xref:System.Windows.Forms.BindingSource> s názvem `customersBindingSource`.
+     Následující příklad kódu předpokládá, že projekt obsahuje <xref:System.Windows.Forms.BindingSource> pojmenovaný. `customersBindingSource`
 
      [!code-csharp[Trin_VstcoreDataExcel#20](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#20)]
      [!code-vb[Trin_VstcoreDataExcel#20](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#20)]
 
-2. Volání `Update` metody generované třídy TableAdapter ve vašem projektu.
+2. `Update` Volejte metodu generovaného TableAdapter ve vašem projektu.
 
-     TableAdapter není automaticky vygenerován, když přidáte ovládací prvek vázaný na data do dokumentu nebo sešitu v době návrhu. TableAdapter připojí k databázi typové datové sady ve vašem projektu. Další informace najdete v tématu [TableAdapter – přehled](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview).
+     TableAdapter se automaticky vygeneruje při přidání ovládacího prvku vázaného na data do dokumentu nebo sešitu v době návrhu. TableAdapter spojuje typovou datovou sadu v projektu s databází. Další informace najdete v tématu [TableAdapter Overview](../data-tools/fill-datasets-by-using-tableadapters.md#tableadapter-overview).
 
-     Následující příklad kódu předpokládá, že máte připojení k tabulku Customers v databázi Northwind a že váš projekt obsahuje TableAdapter s názvem `customersTableAdapter` a typové datové sady s názvem `northwindDataSet`.
+     Následující příklad kódu předpokládá, že máte připojení k tabulce Customers v databázi Northwind a že projekt obsahuje TableAdapter s názvem `customersTableAdapter` a zadanou datovou sadu s názvem. `northwindDataSet`
 
      [!code-csharp[Trin_VstcoreDataExcel#21](../vsto/codesnippet/CSharp/Trin_VstcoreDataExcelCS/Sheet1.cs#21)]
      [!code-vb[Trin_VstcoreDataExcel#21](../vsto/codesnippet/VisualBasic/Trin_VstcoreDataExcelVB/Sheet1.vb#21)]
 
 ## <a name="see-also"></a>Viz také:
-- [Vytvoření vazby dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [Vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
 - [Ukládání dat zpět do databáze](../data-tools/save-data-back-to-the-database.md)
 - [Aktualizace dat pomocí objektu TableAdapter](../data-tools/update-data-by-using-a-tableadapter.md)
 - [Postupy: Procházení databázových záznamů na listu](../vsto/how-to-scroll-through-database-records-in-a-worksheet.md)

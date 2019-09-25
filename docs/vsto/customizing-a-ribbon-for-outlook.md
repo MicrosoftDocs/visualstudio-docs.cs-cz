@@ -1,5 +1,5 @@
 ---
-title: Přizpůsobte pás karet pro aplikaci Outlook
+title: Přizpůsobení pásu karet pro Outlook
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -16,36 +16,36 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 58735a36afd48132f919e370da5e27fd0c42a0f0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 646192baa6caaa33410b1dd8d17d1983f7d27e30
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62956146"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71255554"
 ---
-# <a name="customize-a-ribbon-for-outlook"></a>Přizpůsobte pás karet pro aplikaci Outlook
-  Při vlastním nastavení pásu karet v aplikaci Microsoft Office Outlook, musíte zvážit, kde se zobrazí váš vlastní pás karet v aplikaci. Aplikace Outlook zobrazí na pásu karet v hlavní aplikaci uživatelské rozhraní (UI) a v systému windows, které se otevřou při uživatelům provádět určité úlohy, jako je například vytváření e-mailové zprávy. Tyto aplikace pro windows jsou pojmenovány kontroly.
+# <a name="customize-a-ribbon-for-outlook"></a>Přizpůsobení pásu karet pro Outlook
+  Při přizpůsobení pásu karet v aplikaci systém Microsoft Office Outlook je nutné vzít v úvahu, kde se vlastní pás karet zobrazí v aplikaci. Outlook zobrazí pás karet v hlavním uživatelském rozhraní aplikace (UI) a ve Windows, které se otevře, když uživatelé provedou určité úlohy, například vytváření e-mailových zpráv. Tato okna aplikací jsou pojmenována jako kontroloři.
 
- ![odkaz na video](../vsto/media/playvideo.gif "odkaz na video") související video ukázku naleznete v tématu [postup: Použít Návrháře pásu karet k přizpůsobení pásu karet Outlooku? ](http://go.microsoft.com/fwlink/?LinkID=130312).
+ ![odkaz na video](../vsto/media/playvideo.gif "odkaz na video") Související video ukázku najdete v tématu [návody: K přizpůsobení pásu karet v aplikaci Outlook použijte Návrháře pásu karet? ](http://go.microsoft.com/fwlink/?LinkID=130312).
 
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]
 
-## <a name="add-a-custom-ribbon-to-the-main-application-ui"></a>Přidat vlastní pás karet k hlavní aplikaci uživatelského rozhraní
- Hlavní aplikace uživatelského rozhraní v Outlooku se nazývá Průzkumníka. Pokud používáte **pás karet (vizuální návrhář)** položky, můžete přidat pásu karet do Průzkumníka kliknutím **RibbonType** vlastnost pásu karet **vlastnosti** okně a pak vyberete **Microsoft.Outlook.Explorer**.
+## <a name="add-a-custom-ribbon-to-the-main-application-ui"></a>Přidání vlastního pásu karet do hlavního uživatelského rozhraní aplikace
+ Hlavní uživatelské rozhraní aplikace v Outlooku se nazývá Průzkumník. Pokud používáte položku **pás karet (vizuální Návrhář)** , můžete do Průzkumníka přidat pás karet kliknutím na vlastnost **RibbonType** na pásu karet v okně **vlastnosti** a následným výběrem **Microsoft. Outlook. Explorer**.
 
-## <a name="assign-a-ribbon-to-an-inspector"></a>Přiřadit pás karet je kontrola
- Můžete identifikovat, který chcete přizpůsobit zadáním pásu karet, která odpovídá třídu zpráv pro inspektor inspektor.
+## <a name="assign-a-ribbon-to-an-inspector"></a>Přiřazení pásu karet k kontrolorovi
+ Určíte inspektora, který chcete přizpůsobit, zadáním typu pásu karet, který odpovídá třídě zpráv pro inspektora.
 
- Pokud používáte **pás karet (vizuální návrhář)** položky, klikněte na tlačítko **RibbonType** vlastnost pásu karet **vlastnosti** a pak vyberte okno, jeden nebo více ID z pásu karet seznam hodnot.
+ Pokud používáte položku **pás karet (vizuální Návrhář)** , klikněte na vlastnost **RibbonType** pásu karet v okně **vlastnosti** a potom v seznamu hodnot vyberte jedno nebo více ID pásu karet.
 
- Přidání více než jeden pásu karet do projektu. Pokud více než jeden pásu karet sdílí ID pásu karet, má přednost před `CreateRibbonExtensibilityObject` metodu `ThisAddin` třídy projektu k určení, které pásu karet pro zobrazení v době běhu. Další informace najdete v tématu [přehled pásu karet](../vsto/ribbon-overview.md). Další informace o jednotlivých typech pásu karet, najdete v článku technické [přizpůsobení pásu karet aplikace Outlook 2007](/previous-versions/office/developer/office-2007/bb226712(v=office.12)).
+ Do projektu můžete přidat více než jeden pás karet. Pokud ID pásu karet sdílí více než jeden pás karet, přepište `CreateRibbonExtensibilityObject` metodu `ThisAddin` ve třídě projektu, abyste určili, který pás karet se má zobrazit v době běhu. Další informace najdete v tématu [Přehled pásu karet](../vsto/ribbon-overview.md). Další informace o jednotlivých typech pásu karet najdete v technickém článku [přizpůsobení pásu karet v aplikaci Outlook 2007](/previous-versions/office/developer/office-2007/bb226712(v=office.12)).
 
-## <a name="specify-the-ribbon-type-by-using-ribbon-xml"></a>Zadejte typ pásu karet pomocí kódu XML pásu karet
- Pokud používáte **pásu karet (XML)** položku, zkontrolujte hodnotu *ribbonID* parametr <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> metodu a vrátí odpovídající pásu karet.
+## <a name="specify-the-ribbon-type-by-using-ribbon-xml"></a>Určení typu pásu karet pomocí kódu XML pásu karet
+ Pokud používáte položku **pásu karet (XML)** , ověřte hodnotu <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> parametru *RibbonId* v metodě a vraťte příslušný pás karet.
 
- <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> Metoda je automaticky generuje služba Visual Studio v soubor kódu pásu karet. *RibbonID* parametr je řetězec, který identifikuje v Průzkumníku nebo konkrétního typu inspector. Úplný seznam možných hodnot *ribbonID* parametr, najdete v článku na technické [přizpůsobení pásu karet aplikace Outlook 2007](/previous-versions/office/developer/office-2007/bb226712(v=office.12)).
+ <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> Metoda je automaticky vygenerována v aplikaci Visual Studio v souboru kódu pásu karet. Parametr *RibbonId* je řetězec, který identifikuje Průzkumníka nebo konkrétní typ kontrolora. Úplný seznam možných hodnot parametru *RibbonId* najdete v technickém článku [přizpůsobení pásu karet v aplikaci Outlook 2007](/previous-versions/office/developer/office-2007/bb226712(v=office.12)).
 
- Následující příklad kódu ukazuje, jak zobrazit vlastní pouze v pásu karet `Microsoft.Outlook.Mail.Compose` inspector. Toto je kontrola, které se otevře, když uživatel vytvoří novou e-mailové zprávy. Na pásu karet zobrazíte je zadán v `GetResourceText()` metody, který je generován v **pásu karet** třídy. Další informace o **pásu karet** najdete v tématu [kódu XML pásu karet](../vsto/ribbon-xml.md).
+ Následující příklad kódu ukazuje, jak zobrazit vlastní pás karet pouze v `Microsoft.Outlook.Mail.Compose` inspektoru. Toto je kontroler, který se otevře, když uživatel vytvoří novou e-mailovou zprávu. Pás karet, který se má zobrazit, `GetResourceText()` je určen v metodě, která je vygenerována ve třídě **pásu karet** . Další informace o třídě **pásu karet** naleznete v tématu [XML pásu karet](../vsto/ribbon-xml.md).
 
  [!code-csharp[Trin_RibbonOutlookBasic#1](../vsto/codesnippet/CSharp/Trin_RibbonOutlookBasic/Ribbon1.cs#1)]
  [!code-vb[Trin_RibbonOutlookBasic#1](../vsto/codesnippet/VisualBasic/Trin_RibbonOutlookBasic/Ribbon1.vb#1)]

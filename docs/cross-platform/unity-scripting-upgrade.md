@@ -8,12 +8,12 @@ ms.assetid: E2C9420F-A5D5-4472-9020-2B63FB27A133
 ms.technology: vs-unity-tools
 ms.workload:
 - unity
-ms.openlocfilehash: 82556ea0ed043c11cb9098383daf912ff17372ef
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0fb4560a196404687c60ce67f39b9c0754a24769
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62818399"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71253145"
 ---
 # <a name="using-net-4x-in-unity"></a>Pomocí rozhraní .NET 4.x v Unity
 
@@ -335,7 +335,7 @@ public class UsingStaticExample: MonoBehaviour
 
 Při exportu svoji hru do platformy, jako je iOS, bude používat Unity jeho endem IL2CPP modul "transpiluje" IL pro kód jazyka C++, který je poté zkompilován pomocí nativního kompilátoru cílovou platformu. V tomto scénáři se několik funkcí .NET, které nejsou podporovány, jako je například součástí reflexe a využití `dynamic` – klíčové slovo. Při použití těchto funkcí ve svém vlastním kódu, můžete řídit, můžete jej spustit do problémy pomocí 3. stran knihovny DLL a sady SDK, které nebyly vytvořeny pomocí nástrojů Unity a endem IL2CPP v úvahu. Další informace o tomto tématu najdete v tématu [skriptování omezení](https://docs.unity3d.com/Manual/ScriptingRestrictions.html) dokumentace na webu společnosti Unity.
 
-Kromě toho jak je uvedeno ve výše uvedeném příkladu Json.NET Unity pokusí odstranit nepoužívané kódu během procesu exportu endem IL2CPP.  Když to většinou není problém, s knihovnami, které používají reflexi, může omylem odstranit vlastnosti nebo metody, které se dřív říkalo za běhu, která nemůže být určena v době exportu.  Chcete-li tyto problémy vyřešit, přidejte **link.xml** soubor pro váš projekt, který obsahuje seznam sestavení a obory názvů a nebudou tedy spuštěny procesu vypuzovacího proti.  Úplné podrobnosti najdete v tématu [Unity a dokumentace na odstranění bajtového kódu](https://docs.unity3d.com/Manual/IL2CPP-BytecodeStripping.html).
+Kromě toho jak je uvedeno ve výše uvedeném příkladu Json.NET Unity pokusí odstranit nepoužívané kódu během procesu exportu endem IL2CPP.  Přestože se obvykle nejedná o problém s knihovnami, které používají reflexi, může dojít k náhodnému vystavení vlastností nebo metod, které budou volány za běhu, které nelze určit v době exportu.  Chcete-li tyto problémy vyřešit, přidejte **link.xml** soubor pro váš projekt, který obsahuje seznam sestavení a obory názvů a nebudou tedy spuštěny procesu vypuzovacího proti.  Úplné podrobnosti najdete v tématu [Unity a dokumentace na odstranění bajtového kódu](https://docs.unity3d.com/Manual/IL2CPP-BytecodeStripping.html).
 
 ## <a name="net-4x-sample-unity-project"></a>.NET 4.x ukázkový projekt v Unity
 

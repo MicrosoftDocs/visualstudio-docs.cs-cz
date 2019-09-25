@@ -9,19 +9,19 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 03/21/2017
 ms.author: ghogen
-ms.openlocfilehash: 598ced6d3e924ecf1d2826be6a6976f56c02afa5
-ms.sourcegitcommit: 3cc73e74921a9ceb622542e0e263abeebc455c00
+ms.openlocfilehash: ded315917fb0e40159aed327ed98f747bb31c4b1
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67624068"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71253601"
 ---
 # <a name="configure-azure-cloud-service-roles-with-visual-studio"></a>Konfigurace rolí cloudové služby Azure v sadě Visual Studio
 Cloudové služby Azure může mít jednu nebo více pracovních procesů nebo webové role. Pro každou roli budete muset definovat, jak nastavit tuto roli a také nakonfigurovat tak, jak tuto roli běží. Další informace o rolích v cloudových službách, podívejte se na video [Úvod do služby Azure Cloud Services](https://channel9.msdn.com/Series/Windows-Azure-Cloud-Services-Tutorials/Introduction-to-Windows-Azure-Cloud-Services).
 
 Informace pro cloudové služby jsou uloženy v následující soubory:
 
-- **Soubor ServiceDefinition.csdef** – definiční soubor služby definuje nastavení běhového prostředí pro cloudové služby, včetně toho, jaké role jsou povinné, koncové body a velikost virtuálního počítače. Žádná z dat uložených v `ServiceDefinition.csdef` lze změnit, pokud vaše role běží.
+- **ServiceDefinition. csdef** – definiční soubor služby definuje nastavení modulu runtime pro cloudovou službu, včetně toho, jaké role jsou povinné, koncové body a velikost virtuálního počítače. Žádná z dat uložených v `ServiceDefinition.csdef` lze změnit, pokud vaše role běží.
 - **Soubor ServiceConfiguration.cscfg** – konfigurační soubor služby nakonfiguruje, kolik instancí role jsou spuštěny a hodnoty nastavení definované pro roli. Data uložená v `ServiceConfiguration.cscfg` lze změnit, když vaše role běží.
 
 Pokud chcete uchovávat různé hodnoty pro nastavení, které řídí vykonávání roli, můžete definovat více konfigurací služby. Pro jednotlivá prostředí nasazení můžete použít konfiguraci jinou službu. Můžete třeba nastavit připojovací řetězec účtu úložiště pomocí emulátoru lokálního úložiště Azure v místní službě konfigurace a vytvořit další konfigurace služby pro použití služby Azure storage v cloudu.

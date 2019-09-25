@@ -7,12 +7,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 36442ad0792ef712acd322d17688d8ceb21444cb
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 0179a9609907adc07dc6d8a085eb9a2a0c38c065
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71231896"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71253223"
 ---
 # <a name="ca2153-avoid-handling-corrupted-state-exceptions"></a>CA2153: Vyhnout se zpracování výjimek poškozených stavů
 
@@ -39,7 +39,7 @@ Toto upozornění se aktivuje při zachycení rozšíření pomocí obecné obsl
 
 Chcete-li vyřešit toto upozornění, proveďte jednu z následujících akcí:
 
-- <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute> Odeberte atribut. Vrátí se k výchozímu chování modulu runtime, kde rozšíření nejsou předány obslužným rutinám catch.
+- <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute> Odeberte atribut. Vrátí se k výchozímu chování za běhu, kde rozšíření nejsou předány obslužným rutinám catch.
 
 - Odeberte obslužnou rutinu obecné catch v předvolbách obslužných rutin, které zachycují konkrétní typy výjimek. To může zahrnovat rozšíření, za předpokladu, že kód obslužné rutiny může bezpečně zpracovat (vzácná).
 

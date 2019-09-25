@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - data-storage
-ms.openlocfilehash: 595b8ea35799effd36e4a8599c61b3ab42efb940
-ms.sourcegitcommit: a1e899248adaf104697fa7dea32a36e69e9cc119
+ms.openlocfilehash: 365037d3eeeec5077d724ca72d43cce5dcbe0ebd
+ms.sourcegitcommit: 528178a304e66c0cb7ab98b493fe3c409f87493a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71159958"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71273365"
 ---
 # <a name="create-a-database-and-add-tables-in-visual-studio"></a>Vytvoření databáze a přidání tabulek v aplikaci Visual Studio
 
@@ -68,6 +68,9 @@ Připojovací řetězec pro soubor *SampleDatabase. mdf* můžete zobrazit otev�
 
 - Případně můžete vybrat možnost **Zobrazit** > **Průzkumník serveru**, pokud už toto okno není otevřené. Otevřete okno Vlastnosti rozbalením uzlu **datová připojení** , kliknutím pravým tlačítkem myši na *SampleDatabase. mdf*a následným výběrem **vlastností**.
 
+  > [!TIP]
+  > Pokud nemůžete rozšířit uzel datová připojení, nebo není uvedené připojení SampleDatabase. mdf, vyberte na panelu nástrojů Průzkumník serveru tlačítko **připojit k databázi** . V dialogovém okně **Přidat připojení** se ujistěte, že je v části **zdroj dat**vybraná možnost **Microsoft SQL Server databázový soubor** , a pak vyhledejte a vyberte soubor SampleDatabase. mdf. Kliknutím na **tlačítko OK**dokončete přidání připojení.
+
 ## <a name="create-tables-and-keys-by-using-table-designer"></a>Vytváření tabulek a klíčů pomocí Návrháře tabulky
 
 V této části vytvoříte dvě tabulky, primární klíč v každé tabulce a několik řádků ukázkových dat. Také vytvoříte cizí klíč k určení způsobu, jakým budou záznamy v jedné tabulce odpovídat záznamům v druhé tabulce.
@@ -75,6 +78,8 @@ V této části vytvoříte dvě tabulky, primární klíč v každé tabulce a 
 ### <a name="create-the-customers-table"></a>Vytvoření tabulky Customers
 
 1. V **Průzkumník serveru**rozbalte uzel **datová připojení** a poté rozbalte uzel **SampleDatabase. mdf** .
+
+   Pokud nemůžete rozšířit uzel datová připojení, nebo není uvedené připojení SampleDatabase. mdf, vyberte na panelu nástrojů Průzkumník serveru tlačítko **připojit k databázi** . V dialogovém okně **Přidat připojení** se ujistěte, že je v části **zdroj dat**vybraná možnost **Microsoft SQL Server databázový soubor** , a pak vyhledejte a vyberte soubor SampleDatabase. mdf. Kliknutím na **tlačítko OK**dokončete přidání připojení.
 
 2. Klikněte pravým tlačítkem na **tabulky** a vyberte **Přidat novou tabulku**.
 

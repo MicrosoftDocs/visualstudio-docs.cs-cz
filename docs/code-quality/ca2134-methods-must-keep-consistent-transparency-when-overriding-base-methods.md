@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 67d1a1c37a1c39e07dd5b8754fef223bfa8ad7a2
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 517588826983613c71a74296914b1dfeb3eaa2b4
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71232282"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71253319"
 ---
 # <a name="ca2134-methods-must-keep-consistent-transparency-when-overriding-base-methods"></a>CA2134: Metody musí při přepisování základních metod zachovávat konzistentní transparentnost
 
@@ -34,13 +34,13 @@ Pravidlo je použito při přepisování virtuální metody nebo implementaci ro
 ## <a name="rule-description"></a>Popis pravidla
 Toto pravidlo je vyvoláno při pokusech o změnu přístupnosti zabezpečení metody v rámci řetězce dědičnosti. Například pokud je virtuální metoda v základní třídě transparentní nebo bezpečná, pak musí být odvozená třída popsána transparentní nebo bezpečnou metodou. Naopak, pokud je virtuální z hlediska zabezpečení kritická, musí odvozená třída tuto třídu přepsat metodou kritické pro zabezpečení. Stejné pravidlo platí pro implementaci metod rozhraní.
 
-Pravidla transparentnosti jsou vynutila, pokud je kód zkompilován kompilátorem JIT namísto za běhu, takže výpočet transparentnosti neobsahuje dynamické informace o typu. Proto je možné výsledek výpočtu transparentnosti určit výhradně ze statických typů, které jsou kompilovány JIT, bez ohledu na dynamický typ.
+Pravidla transparentnosti jsou vynutila, pokud je kód zkompilován kompilátorem JIT namísto za běhu, takže výpočet transparentnosti nemá informace o dynamickém typu. Proto je možné výsledek výpočtu transparentnosti určit výhradně ze statických typů, které jsou kompilovány JIT, bez ohledu na dynamický typ.
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 Chcete-li opravit porušení tohoto pravidla, změňte transparentnost metody, která přepisuje virtuální metodu nebo implementuje rozhraní, aby odpovídala průhlednosti metody Virtual nebo rozhraní.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
-Potlačit upozornění z tohoto pravidla Porušení tohoto pravidla budou mít za následek modul runtime <xref:System.TypeLoadException> pro sestavení, která používají transparentnost úrovně 2.
+Potlačit upozornění z tohoto pravidla Porušení tohoto pravidla vyplývají z doby <xref:System.TypeLoadException> běhu pro sestavení, která používají transparentnost úrovně 2.
 
 ## <a name="examples"></a>Příklady
 

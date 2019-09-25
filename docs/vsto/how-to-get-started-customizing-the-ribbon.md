@@ -15,31 +15,31 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: f164a8f1d1c84725530e7a3afab5e63472ae257e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a9b0f1ef704f5dd1426374e23806e5950ed5f6bb
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62967895"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71255865"
 ---
 # <a name="how-to-get-started-customizing-the-ribbon"></a>Postupy: Začínáme s přizpůsobením pásu karet
-  Přizpůsobení pásu karet aplikace Microsoft Office, přidejte **pás karet (vizuální návrhář)** nebo **pásu karet (XML)** položky projektu sady Office.
+  Chcete-li přizpůsobit pás systém Microsoft Office aplikace, přidejte položku pás **karet (vizuální Návrhář)** nebo položku **pásu karet (XML)** do projektu sady Office.
 
  [!INCLUDE[appliesto_ribbon](../vsto/includes/appliesto-ribbon-md.md)]
 
-### <a name="to-add-a-ribbon-to-a-project"></a>Chcete-li přidat pásu karet do projektu
+### <a name="to-add-a-ribbon-to-a-project"></a>Přidání pásu karet do projektu
 
-1. Na **projektu** nabídky, klikněte na tlačítko **přidat novou položku**.
+1. V nabídce **projekt** klikněte na příkaz **Přidat novou položku**.
 
-2. V **přidat novou položku** dialogu **pás karet (vizuální návrhář)** nebo **pásu karet (XML)**. Další informace o těchto šablon naleznete v tématu [přehled pásu karet](../vsto/ribbon-overview.md).
+2. V dialogovém okně **Přidat novou položku** vyberte možnost **pás karet (vizuální Návrhář)** nebo **pás karet (XML)** . Další informace o těchto šablonách najdete v tématu [Přehled pásu karet](../vsto/ribbon-overview.md).
 
-3. V **název** zadejte název položky pásu karet.
+3. Do pole **název** zadejte název položky pásu karet.
 
-    Názvy nesmí obsahovat následující znaky:
+    Názvy nesmí obsahovat tyto znaky:
 
-   - Křížek (#)
+   - Libra (#)
 
-   - Procent (%)
+   - Procento (%)
 
    - Ampersand (&)
 
@@ -47,7 +47,7 @@ ms.locfileid: "62967895"
 
    - Svislá čára (|)
 
-   - Zpětné lomítko (\\)
+   - Zpětné lomítko\\()
 
    - Dvojtečka (:)
 
@@ -59,15 +59,15 @@ ms.locfileid: "62967895"
 
    - Otazník (?)
 
-   - Vpřed lomítko (/)
+   - Lomítko (/)
 
-   - Úvodní a koncové mezery ("")
+   - Mezery na začátku nebo na konci (' ')
 
-   - Názvy vyhrazené pro Windows nebo DOS, jako je například ("nul", "aux", "con", "com1", "lpt1" a tak dále)
+   - Názvy vyhrazené pro Windows nebo DOS, například (nul, AUX, "con", "COM1", "LPT1" atd.)
 
 4. Klikněte na **OK**.
 
-   Položky pásu karet se zobrazí v **Průzkumníka řešení**. Informace o dalších krocích, najdete v tématu [přehled pásu karet](../vsto/ribbon-overview.md).
+   Položka pásu karet se zobrazí v **Průzkumník řešení**. Další informace o dalších krocích najdete v tématu [Přehled pásu karet](../vsto/ribbon-overview.md).
 
 ## <a name="see-also"></a>Viz také:
 - [Přístup k pásu karet za běhu](../vsto/accessing-the-ribbon-at-run-time.md)

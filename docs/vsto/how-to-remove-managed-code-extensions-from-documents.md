@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Odebrání rozšíření spravovaného kódu z dokumentů'
+title: 'Postupy: Odebrat rozšíření spravovaného kódu z dokumentů'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -13,46 +13,46 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 438658af3f182ea732d0fefef0f5a5d6ecbefa03
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 83bd57c8ffdcb268a560431c74806ddb6544d4e8
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62961589"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71252159"
 ---
-# <a name="how-to-remove-managed-code-extensions-from-documents"></a>Postupy: Odebrání rozšíření spravovaného kódu z dokumentů
-  Přizpůsobení sestavení můžete odebrat prostřednictvím kódu programu z dokumentu nebo sešitu, který je součástí přizpůsobení na úrovni dokumentu pro aplikaci Microsoft Office Word nebo Microsoft Office Excel. Uživatelé pak můžete otevřít dokumenty a zobrazit obsah, ale nezobrazí se žádné vlastní uživatelské rozhraní (UI) přidáte k dokumentům a kódu se nespustí.
+# <a name="how-to-remove-managed-code-extensions-from-documents"></a>Postupy: Odebrat rozšíření spravovaného kódu z dokumentů
+  Můžete programově odebrat sestavení přizpůsobení z dokumentu nebo sešitu, který je součástí přizpůsobení na úrovni dokumentu pro systém Microsoft Office Word nebo systém Microsoft Office Excel. Uživatelé pak můžou otevřít dokumenty a zobrazit obsah, ale jakékoli vlastní uživatelské rozhraní (UI), které přidáte do dokumentů, se nezobrazí a váš kód se nespustí.
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
- Přizpůsobení sestavení můžete odebrat pomocí jedné z `RemoveCustomization` metody poskytované objektem [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]. Jakou metodu použijete, závisí na tom, jestli chcete odebrat vlastní nastavení v době běhu (spouštěním kódu v přizpůsobení při slovo dokumentu nebo Excelového sešitu je otevřený), nebo pokud chcete odebrat ze zavřeného dokumentu nebo dokumentu přizpůsobení této i s na serveru, který nemá nainstalovanou sadu Microsoft Office.
+ Můžete odebrat sestavení vlastního nastavení pomocí jedné z `RemoveCustomization` metod, které poskytuje. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] To, kterou metodu použijete, závisí na tom, zda chcete odebrat vlastní nastavení v době běhu (to znamená spuštěním kódu v přizpůsobení během otevřeného dokumentu nebo sešitu aplikace Word), nebo pokud chcete odebrat vlastní nastavení z zavřeného dokumentu nebo dokumentu, který jsem s na serveru, na kterém není nainstalovaná systém Microsoft Office.
 
- ![odkaz na video](../vsto/media/playvideo.gif "odkaz na video") související video ukázku naleznete v tématu [postupy: Připojení nebo odpojení sestavení VSTO z Wordového dokumentu? ](http://go.microsoft.com/fwlink/?LinkId=136782).
+ ![odkaz na video](../vsto/media/playvideo.gif "odkaz na video") Související video ukázku naleznete v tématu [How to: Připojení nebo odpojení sestavení VSTO z wordového dokumentu? ](http://go.microsoft.com/fwlink/?LinkId=136782).
 
-## <a name="to-remove-the-customization-assembly-at-runtime"></a>Chcete-li odebrat vlastní nastavení sestavení za běhu
+## <a name="to-remove-the-customization-assembly-at-run-time"></a>Odebrání sestavení vlastního nastavení v době běhu
 
-1. Ve vlastním kódu volat <xref:Microsoft.Office.Tools.Word.Document.RemoveCustomization%2A> – metoda (pro aplikaci Word) nebo <xref:Microsoft.Office.Tools.Excel.Workbook.RemoveCustomization%2A> – metoda (pro aplikace Excel). Tuto metodu lze volat pouze po přizpůsobení je už je nepotřebujete.
+1. V kódu vlastního nastavení zavolejte <xref:Microsoft.Office.Tools.Word.Document.RemoveCustomization%2A> metodu (pro Word) <xref:Microsoft.Office.Tools.Excel.Workbook.RemoveCustomization%2A> nebo metodu (pro Excel). Tato metoda by se měla volat až po tom, co už nepotřebujete vlastní nastavení.
 
-     Pokud volání této metody v kódu závisí na použití vašeho vlastního nastavení. Například pokud vaše přizpůsobení funkce zákazníkům používat, dokud jsou připravené k odeslání dokumentu jiným klientům, kteří potřebují pouze dokumentu (ne přizpůsobení), můžete zadat některé uživatelské rozhraní, která volá `RemoveCustomization` když zákazník klikne. Případně pokud vaše přizpůsobení naplní dokument s daty při prvním otevření, ale přizpůsobení neposkytuje žádné funkce, které jsou k němu přistupuje přímo zákazníkům, pak můžete volat RemoveCustomization co nejdříve vaše vlastní nastavení dokončení inicializace dokumentu.
+     Místo volání této metody v kódu závisí na způsobu použití vlastního nastavení. Pokud například zákazníci použijí funkce vlastního nastavení, dokud nebudou připraveni k odeslání dokumentu do jiných klientů, kteří potřebují pouze samotný dokument (nikoli přizpůsobení), můžete poskytnout nějaké uživatelské rozhraní, které volá `RemoveCustomization` , když na něj zákazník klikne. Případně, pokud vaše přizpůsobení naplní dokument daty při prvním otevření, ale přizpůsobení neposkytuje žádné jiné funkce, ke kterým přistupovali přímo zákazníci, pak můžete volat RemoveCustomization hned po přizpůsobení dokončí inicializaci dokumentu.
 
-## <a name="to-remove-the-customization-assembly-from-a-closed-document-or-a-document-on-a-server"></a>Odebrat vlastní nastavení sestavení ze zavřeného dokumentu nebo dokumentu na serveru
+## <a name="to-remove-the-customization-assembly-from-a-closed-document-or-a-document-on-a-server"></a>Odebrání sestavení vlastního nastavení z zavřeného dokumentu nebo dokumentu na serveru
 
-1. V projektu, který nevyžaduje, aby aplikace Microsoft Office, jako je například projekt aplikace Windows Forms a konzolové aplikace, přidejte odkaz na *Microsoft.VisualStudio.Tools.Applications.ServerDocument.dll* sestavení.
+1. V projektu, který nevyžaduje systém Microsoft Office, jako je například Konzolová aplikace nebo projekt model Windows Forms, přidejte odkaz na sestavení *Microsoft. VisualStudio. Tools. Applications. ServerDocument. dll* .
 
-2. Přidejte následující **importy** nebo **pomocí** příkaz do horní části souboru kódu.
+2. Přidejte následující příkaz **Imports** nebo **using** do horní části souboru kódu.
 
      [!code-csharp[Trin_VstcoreDeployment#1](../vsto/codesnippet/CSharp/Trin_VstcoreDeploymentCS/Program.cs#1)]
      [!code-vb[Trin_VstcoreDeployment#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreDeploymentVB/Program.vb#1)]
 
-3. Zavolejte statickou <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.RemoveCustomization%2A> metodu <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> třídy a zadejte cestu k dokumentu řešení pro parametr.
+3. Zavolejte statickou <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.RemoveCustomization%2A> metodu <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> třídy a určete cestu k dokumentu řešení pro parametr.
 
-     Následující příklad kódu předpokládá, že odeberete vlastní nastavení z dokumentu s názvem *WordDocument1.docx* , který je na ploše.
+     Následující příklad kódu předpokládá, že odebíráte vlastní nastavení z dokumentu s názvem *WordDocument1. docx* , který je na ploše.
 
      [!code-csharp[Trin_VstcoreDeployment#2](../vsto/codesnippet/CSharp/Trin_VstcoreDeploymentCS/Program.cs#2)]
      [!code-vb[Trin_VstcoreDeployment#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreDeploymentVB/Program.vb#2)]
 
-4. Sestavte projekt a spusťte aplikaci v počítači, ve které chcete odebrat vlastní nastavení. Na počítači musí být Visual Studio 2010 Tools for Office runtime nainstalovaný.
+4. Sestavte projekt a spusťte aplikaci na počítači, na kterém chcete odebrat vlastní nastavení. Počítač musí mít nainstalované sady Visual Studio 2010 Tools for Office runtime.
 
 ## <a name="see-also"></a>Viz také:
-- [Správa dokumentů na serveru s použitím třídy ServerDocument](../vsto/managing-documents-on-a-server-by-using-the-serverdocument-class.md)
-- [Postupy: Připojení rozšíření spravovaného kódu k dokumentům](../vsto/how-to-attach-managed-code-extensions-to-documents.md)
+- [Správa dokumentů na serveru pomocí třídy ServerDocument](../vsto/managing-documents-on-a-server-by-using-the-serverdocument-class.md)
+- [Postupy: Připojit rozšíření spravovaného kódu k dokumentům](../vsto/how-to-attach-managed-code-extensions-to-documents.md)

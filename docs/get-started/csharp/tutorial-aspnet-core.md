@@ -16,12 +16,12 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: b719c78bd4800121e36346a095c2a4141b7e2de3
-ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
+ms.openlocfilehash: 4c2e9c890b0b676216a02a526cad5380df4ceb57
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71186634"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71252462"
 ---
 # <a name="tutorial-get-started-with-c-and-aspnet-core-in-visual-studio"></a>Kurz: Začínáme s C# a ASP.NET Core v aplikaci Visual Studio
 
@@ -170,7 +170,7 @@ Toto řešení se řídí vzorem návrhu **stránky Razor** . Je jiný než vzor
 
     Statický obsah&mdash;webu, jako jsou CSS, obrázky a knihovny&mdash;JavaScriptu, můžete umístit přímo do cest, kde je chcete.
 
- 1. Projekt také obsahuje konfigurační soubory, které spravují webovou aplikaci za běhu. Výchozí [Konfigurace](/aspnet/core/fundamentals/configuration) aplikace je uložena v souboru *appSettings. JSON*. Tato nastavení však můžete přepsat pomocí *appSettings. Vývoj. JSON*. Rozbalením souboru **appSettings. JSON** zobrazíte **appSettings. Soubor Development. JSON** .
+ 1. Projekt také obsahuje konfigurační soubory, které spravují webovou aplikaci v době běhu. Výchozí [Konfigurace](/aspnet/core/fundamentals/configuration) aplikace je uložena v souboru *appSettings. JSON*. Tato nastavení však můžete přepsat pomocí *appSettings. Vývoj. JSON*. Rozbalením souboru **appSettings. JSON** zobrazíte **appSettings. Soubor Development. JSON** .
 
      ![Konfigurační soubory v Průzkumník řešení v aplikaci Visual Studio](media/csharp-aspnet-razor-solution-explorer-appsettingsjson.png)
 
@@ -273,7 +273,7 @@ Toto řešení se řídí vzorem návrhu **stránky Razor** . Je jiný než vzor
 
     Statický obsah&mdash;webu, jako jsou CSS, obrázky a knihovny&mdash;JavaScriptu, můžete umístit přímo do cest, kde je chcete.
 
- 1. Projekt také obsahuje konfigurační soubory, které spravují webovou aplikaci za běhu. Výchozí [Konfigurace](/aspnet/core/fundamentals/configuration) aplikace je uložena v souboru *appSettings. JSON*. Tato nastavení však můžete přepsat pomocí *appSettings. Vývoj. JSON*. Rozbalením souboru **appSettings. JSON** zobrazíte **appSettings. Soubor Development. JSON** .
+ 1. Projekt také obsahuje konfigurační soubory, které spravují webovou aplikaci v době běhu. Výchozí [Konfigurace](/aspnet/core/fundamentals/configuration) aplikace je uložena v souboru *appSettings. JSON*. Tato nastavení však můžete přepsat pomocí *appSettings. Vývoj. JSON*. Rozbalením souboru **appSettings. JSON** zobrazíte **appSettings. Soubor Development. JSON** .
 
      ![Konfigurační soubory v Průzkumník řešení v aplikaci Visual Studio](media/csharp-aspnet-razor-solution-explorer-appsettingsjson.png)
 
@@ -304,7 +304,7 @@ Toto řešení se řídí vzorem návrhu **stránky Razor** . Je jiný než vzor
 
 1. Teď si provedeme změnu kódu. Vyberte **Privacy.cshtml.cs**. Pak v horní části souboru `using` vyčistěte direktivy pomocí následujícího zástupce:
 
-   Vyberte některou z šedých direktiv-out `using` a žárovku s [rychlými akcemi](../../ide/quick-actions.md) se zobrazí hned pod blikajícím kurzorem nebo na levém okraji. Zvolte žárovku a pak najeďte myší na **odebrat nepotřebné**direktivy using. 
+   Vyberte některou z šedých direktiv-out `using` a žárovku s [rychlými akcemi](../../ide/quick-actions.md) se zobrazí hned pod blikajícím kurzorem nebo na levém okraji. Zvolte žárovku a pak najeďte myší na **odebrat nepotřebné**direktivy using.
 
    ![Odebrat nepotřebné direktivy using v souboru Privacy.cshtml.cs](media/vs-2019/csharp-aspnet-remove-unnecessary-usings.png)
 

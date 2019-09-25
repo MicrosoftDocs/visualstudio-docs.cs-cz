@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 11f210b9d37f15b3ea92b92112e48eecd3c8b9e1
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 7ebbbbe01f1dd23dfc560e019133dacd3517b388
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71233412"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71253452"
 ---
 # <a name="ca1822-mark-members-as-static"></a>CA1822: Označte členy jako statické
 
@@ -34,7 +34,7 @@ ms.locfileid: "71233412"
 Člen, který nemá přístup k datům instance, není označený jako static (Shared [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]in).
 
 ## <a name="rule-description"></a>Popis pravidla
-Členové, kteří nemají přístup k instanci dat nebo metodám instance volání může být označený jako statické (sdílené v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]). Po označení metod jako statických bude kompilátor generovat těmto členům nevirtuální místa volání. Vygenerování nevirtuálních lokalit volání zabrání v běhu kontrolu za běhu pro každé volání, které zajistí, že aktuální ukazatel na objekt je jiný než null. To může dosáhnout měřitelného nárůstu výkonu pro kód citlivý na výkon. V některých případech představuje selhání přístupu k aktuální instanci objektu problém se správností.
+Členové, kteří nemají přístup k instanci dat nebo metodám instance volání může být označený jako statické (sdílené v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]). Po označení metod jako statických bude kompilátor generovat těmto členům nevirtuální místa volání. Vygenerování nevirtuálních lokalit volání zabrání v době spuštění kontroly pro každé volání, které zajistí, že aktuální ukazatel na objekt je jiný než null. To může dosáhnout měřitelného nárůstu výkonu pro kód citlivý na výkon. V některých případech představuje selhání přístupu k aktuální instanci objektu problém se správností.
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 Označte člen jako statický (nebo sdílený v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) nebo použijte ' this '/' já ' v těle metody, pokud je to vhodné.

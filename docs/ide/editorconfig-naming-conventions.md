@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ab118197c29ef950907839e8c04d6e49a9843f1a
-ms.sourcegitcommit: 6f3cf7a1bfc81a61f9a603461a1c34fd2221f100
+ms.openlocfilehash: 644c73dea58936773acde98ccc535dfc61979288
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957432"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71251692"
 ---
 # <a name="net-naming-conventions-for-editorconfig"></a>Konvence vytváření názvů .NET pro EditorConfig
 
@@ -184,7 +184,7 @@ Konvence pojmenování by se měly seřadit od nejvíce specifických po nejmén
 
 ::: moniker range=">=vs-2019"
 
-Počínaje verzí Visual Studio 2019 verze 16,2 je pořadí, ve kterém jsou pravidla pro pojmenování definována v souboru EditorConfig, nezáleží. Místo toho Visual Studio řadí pravidla pojmenování automaticky podle definice samotných pravidel. [Rozšíření služby EditorConfig Language](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.EditorConfig) může analyzovat soubory EditorConfig a sestavy, kde se pořadí pravidel v souboru liší od toho, co kompilátor použije za běhu.
+Počínaje verzí Visual Studio 2019 verze 16,2 je pořadí, ve kterém jsou pravidla pro pojmenování definována v souboru EditorConfig, nezáleží. Místo toho Visual Studio řadí pravidla pojmenování automaticky podle definice samotných pravidel. [Rozšíření služby EditorConfig Language](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.EditorConfig) může analyzovat soubory EditorConfig a sestavy, kde pořadí pravidel v souboru se liší od toho, co kompilátor použije za běhu.
 
 Pokud používáte starší verzi sady Visual Studio, zásady vytváření názvů by se měly seřadit od nejvíce specifických po nejméně specifické v souboru EditorConfig. První pravidlo, které se dá použít, je jediné použité pravidlo. Pokud však existuje více *vlastností* pravidla se stejným názvem, má přednost vlastnost naposledy Nalezeno s tímto názvem. Další informace najdete v tématu [hierarchie souborů a Priorita](create-portable-custom-editor-options.md#file-hierarchy-and-precedence).
 

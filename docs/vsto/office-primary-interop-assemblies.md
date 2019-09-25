@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5c1038d0d7e7d20c28cdd0cb52804461376a4e89
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 385b2d451d8202356d56ab7b1a5fd5158d267f1c
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551711"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71253743"
 ---
 # <a name="office-primary-interop-assemblies"></a>primární spolupracující sestavení sady Office
 
@@ -66,7 +66,7 @@ Počínaje sadou Visual Studio 2017 se tyto kopie PIA nainstalují do následuj�
 - (nebo *% ProgramFiles (x86)% \ Microsoft Visual Studio\Shared\Visual Studio Tools for Office\PIA\* v 64 bitových operačních systémech)
 
 > [!NOTE]
-> Pro starší verze sady Visual Studio budou tyto PIA nainstalovány do složky Visual Studio Tools pro složku Office\PIA ve složce *% ProgramFiles% pro danou verzi sady Visual Studio.  
+> Pro starší verze sady Visual Studio budou tyto PIA nainstalovány do složky Visual Studio Tools pro složku Office\PIA ve složce *% ProgramFiles% pro danou verzi sady Visual Studio.
 > Například: *% ProgramFiles (x86)% \ Microsoft Visual Studio 14.0 \ Visual Studio Tools pro Office\PIA\*
 
 ### <a name="primary-interop-assemblies-in-the-global-assembly-cache"></a>Primární spolupracující sestavení v globální mezipaměti sestavení (GAC)
@@ -121,7 +121,7 @@ Následující tabulka uvádí primární spolupracující sestavení, která js
 
 ### <a name="binding-redirect-assemblies"></a>Sestavení přesměrování vazeb
 
-Když instalujete a zaregistrujete PIA pro Office v globální mezipaměti sestavení (buď pomocí sady Office, nebo instalací redistribuovatelného balíčku pro PIA), sestavení přesměrování vazby se také nainstalují pouze do globální mezipaměti sestavení (GAC). Tato sestavení vám pomůžou zajistit, aby byla při běhu načtena správná verze primárních sestavení spolupráce.
+Když instalujete a zaregistrujete PIA pro Office v globální mezipaměti sestavení (buď pomocí sady Office, nebo instalací redistribuovatelného balíčku pro PIA), sestavení přesměrování vazby se také nainstalují pouze do globální mezipaměti sestavení (GAC). Tato sestavení vám pomůžou zajistit, aby byla v době běhu načtena správná verze primárních sestavení spolupráce.
 
 Například pokud řešení, které odkazuje [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] na sestavení, běží na počítači, který [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] má verzi stejného primárního definičního sestavení, sestavení [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)] přesměrování vazby vydá modulu runtime pokyn, aby načetl [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] verze primárního definičního sestavení
 

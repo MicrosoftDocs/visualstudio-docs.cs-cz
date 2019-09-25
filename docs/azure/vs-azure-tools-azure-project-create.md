@@ -9,12 +9,12 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 03/19/2019
 ms.author: ghogen
-ms.openlocfilehash: 900e677ce670c49036ea6d76596ff509129ce979
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 722c816329c70bb2efad03f9554e201bcc9fde16
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62572770"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71253464"
 ---
 # <a name="create-an-azure-cloud-service-project-with-visual-studio"></a>Vytvoření projektu cloudové služby Azure v sadě Visual Studio
 
@@ -24,9 +24,9 @@ Nástroje Azure pro sadu Visual Studio poskytuje šablony projektu, který vám 
 Tato část vás provede vytvořením projektu cloudové služby Azure v sadě Visual Studio s jeden nebo více webových rolí.
 
 ::: moniker range="vs-2017"
-1. Otevřít Visual Studio jako správce.
+1. Otevřete Visual Studio jako správce.
 
-1. V hlavní nabídce vyberte **souboru** > **nový** > **projektu**.
+1. V hlavní nabídce vyberte **soubor** > **Nový** > **projekt**.
 
 1. Vyberte **cloudu** z jazyka Visual C# nebo Visual Basic projektu šablony uzlů a vyberte **Azure Cloud Service** ze seznamu šablon.
 
@@ -39,15 +39,15 @@ Tato část vás provede vytvořením projektu cloudové služby Azure v sadě V
 1. Vyberte **OK**.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-1. V okně start zvolte **vytvořte nový projekt**.
+1. V okně Start vyberte možnost **vytvořit nový projekt**.
 
-1. Do vyhledávacího pole zadejte *cloudu*a klikněte na tlačítko **Azure Cloud Service**.
+1. Do vyhledávacího pole zadejte *Cloud*a pak zvolte **cloudová služba Azure**.
 
    ![Nová Cloudová služba Azure](./media/vs-azure-tools-azure-project-create/vs-2019/new-project-cloud-service.png)
 
-1. Pojmenujte projekt a zvolte **vytvořit**.
+1. Zadejte název projektu a klikněte na **vytvořit**.
 
-   ![Pojmenujte projekt](./media/vs-azure-tools-azure-project-create/vs-2019/new-project-cloud-service-2.png)
+   ![Zadat název projektu](./media/vs-azure-tools-azure-project-create/vs-2019/new-project-cloud-service-2.png)
 ::: moniker-end
 
 1. V **nová Cloudová služba Microsoft Azure** dialogového okna, vyberte role, které chcete přidat a zvolte tlačítko se šipkou doprava a přidejte je do vašeho řešení.
@@ -60,7 +60,7 @@ Tato část vás provede vytvořením projektu cloudové služby Azure v sadě V
 
 Projekt sady Visual Studio v Azure má přiřazení k roli projekty v řešení. Projekt obsahuje také *definiční soubor služby* a *konfigurační soubor služby*:
 
-- **Definiční soubor služby** -určuje nastavení běhového prostředí pro aplikace, včetně toho, jaké role jsou povinné, koncové body a velikost virtuálního počítače.
+- **Definiční soubor služby** – definuje nastavení modulu runtime pro vaši aplikaci, včetně toho, jaké role jsou povinné, koncové body a velikost virtuálního počítače.
 - **Konfigurační soubor služby** – nakonfiguruje, kolik instancí role jsou spouštění a hodnoty k nastavení určenému pro roli.
 
 Další informace o těchto souborech najdete v tématu [nakonfigurovat role cloudové služby Azure pomocí sady Visual Studio](vs-azure-tools-configure-roles-for-cloud-service.md).

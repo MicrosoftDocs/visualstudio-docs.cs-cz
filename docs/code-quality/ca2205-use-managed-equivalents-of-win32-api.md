@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6481bbcca68c7471e4f25c7629e3b55fa407d175
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: ad26dcbbbef5a34796ca0aa134653c3c9df5d763
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71231709"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71253261"
 ---
 # <a name="ca2205-use-managed-equivalents-of-win32-api"></a>CA2205: Použijte spravované ekvivalenty rozhraní Win32 API
 
@@ -39,7 +39,7 @@ Metoda Invoke platformy je definována a v rozhraní .NET existuje metoda s ekvi
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Metoda Invoke platformy se používá k volání nespravované funkce knihovny DLL a je definována pomocí <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> atributu `Declare` nebo klíčového slova v Visual Basic. Nesprávně definovaná metoda Invoke platformy může vést k výjimkám za běhu z důvodu problémů, jako je nesprávně pojmenovaná funkce, chybné mapování parametrů a návratové hodnoty datových typů a nesprávných specifikací polí, jako je konvence volání a znak. stanovenými. Je-li k dispozici, je jednodušší a méně náchylná k chybám pro volání ekvivalentní spravované metody, než pro definování a volání nespravované metody přímo. Volání metody Invoke platformy může také vést k dalším problémům zabezpečení, které je potřeba řešit.
+Metoda Invoke platformy se používá k volání nespravované funkce knihovny DLL a je definována pomocí <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> atributu `Declare` nebo klíčového slova v Visual Basic. Nesprávně definovaná metoda Invoke platformy může vést k výjimkám za běhu, protože došlo k problémům, jako je například nesprávně pojmenovaná funkce, chybné mapování parametrů a návratové hodnoty datových typů a nesprávné specifikace polí, jako je konvence volání a znak. stanovenými. Je-li k dispozici, je jednodušší a méně náchylná k chybám pro volání ekvivalentní spravované metody, než pro definování a volání nespravované metody přímo. Volání metody Invoke platformy může také vést k dalším problémům zabezpečení, které je potřeba řešit.
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 

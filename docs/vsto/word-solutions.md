@@ -26,12 +26,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5c8837c1c95dc5f032a10773645f93a46ec29662
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 3cef71cc5f6c4e25d04e6045be7059d81c06b484
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551207"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71254944"
 ---
 # <a name="word-solutions"></a>řešení pro aplikaci Word
   Visual Studio poskytuje projektové šablony, které můžete použít k vytvoření přizpůsobení na úrovni dokumentu a doplňku VSTO pro systém Microsoft Office Word. Tato řešení můžete použít k automatizaci aplikace Word, rozšiřování funkcí aplikace Word a přizpůsobení uživatelského rozhraní (UI) aplikace Word. Další informace o rozdílech mezi přizpůsobení na úrovni dokumentu a doplňky VSTO najdete v tématu [přehled vývoje řešení pro Office &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
@@ -77,7 +77,7 @@ ms.locfileid: "69551207"
 ### <a name="word-add-in-programming-model"></a>Programovací model doplňku aplikace Word
  Když vytvoříte projekt doplňku VSTO pro Word, aplikace Visual Studio vygeneruje třídu, která je `ThisAddIn`volána, což je základem vašeho řešení. Tato třída poskytuje výchozí bod pro psaní kódu a také zpřístupňuje objektový model aplikace Word doplňku VSTO.
 
- Další informace o `ThisAddIn` třídě a dalších funkcích, které můžete použít v doplňku VSTO, najdete v tématu Programová doplňky [VSTO](../vsto/programming-vsto-add-ins.md).
+ Další informace o `ThisAddIn` třídě a dalších funkcích, které můžete použít v doplňku VSTO, najdete v tématu [Programová doplňky VSTO](../vsto/programming-vsto-add-ins.md).
 
 ## <a name="UI"></a>Přizpůsobení uživatelského rozhraní Wordu
  Existuje několik různých způsobů, jak přizpůsobit uživatelské rozhraní aplikace Word. Některé možnosti jsou dostupné pro všechny typy projektů a další možnosti jsou k dispozici pouze pro doplňky VSTO nebo přizpůsobení na úrovni dokumentu.

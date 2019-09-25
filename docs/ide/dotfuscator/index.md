@@ -3,7 +3,7 @@ title: Dotfuscator Community
 ms.date: 03/28/2019
 ms.devlang: dotnet
 ms.topic: conceptual
-keywords: Nástroj Dotfuscator, řešení Dotfuscator CE, nástroj Dotfuscator Community, PreEmptive, společnosti PreEmptive Solutions PreEmptive ochrany, ochranu, community edition, obfuskace, .NET, bezplatný, Visual Studio. 2019, Visual Studio 2017, Visual Studio
+keywords: Dotfuscator, Dotfuscator CE, Dotfuscator Community, bezplatná, bezplatná řešení, bezplatná ochrana, ochrana, Community Edition, zmatene, .NET, free, Visual Studio 2019, Visual Studio 2017, Visual Studio
 helpviewer_keywords:
 - PreEmptive Protection Dotfuscator
 - Dotfuscator Community Edition
@@ -12,87 +12,87 @@ helpviewer_keywords:
 - Dotfuscator
 - obfuscation
 - protection
-description: Zjistěte, jak můžete ochránit vaše aplikace .NET s bezplatnou kopii nástroje Dotfuscator Community součástí sady Visual Studio.
+description: Seznamte se s tím, jak můžete chránit aplikace .NET pomocí bezplatné kopie komunity Dotfuscator, která je součástí sady Visual Studio.
 ms.assetid: d9550502-0a82-49a6-b005-2caa791fbe02
 author: Joe-Sewell-PreEmptive
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: bf77f2796a224d6fad81c4a1485ba82f8822cfcc
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 53bd95875cf990afee6d356744961d3637f16842
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62557412"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71253772"
 ---
 # <a name="dotfuscator-community"></a>Dotfuscator Community
 
-***PreEmptive ochranu – řešení Dotfuscator*** poskytuje komplexní ochranu aplikací .NET snadno přizpůsobí do vývojového cyklu zabezpečeného softwaru.
-Použijte ho k posílení zabezpečení, ochraně a vyřadit plochy, mobilních, server a vložené aplikace zabezpečené obchodní tajemství a jinému duševnímu (IP), snížit pirátství a padělání a Chraňte se proti manipulaci a neoprávněným ladění.
-Nástroj Dotfuscator funguje v kompilovaných sestavení bez potřeby dalšího programování nebo dokonce i přístup ke zdrojovému kódu.
+Bezstavová ***ochrana – Dotfuscator*** poskytuje komplexní ochranu aplikací .NET, kterou snadno zapadá do životního cyklu bezpečného vývojového softwaru.
+Použijte ho k posílení, ochraně a vyřazení aplikací pro stolní počítače, mobilní zařízení, servery a aplikace, které vám pomůžou zabezpečit obchodní tajemství a jiné duševní vlastnictví (IP), omezit pirátství a padělání a chránit před manipulací a neoprávněným laděním.
+Dotfuscator pracuje na kompilovaných sestaveních, aniž by bylo nutné další programování nebo dokonce přístup ke zdrojovému kódu.
 
 ![PreEmptive ochranu – řešení Dotfuscator](media/header.svg)
 
-## <a name="why-protection-matters"></a>Proč na záleží ochrany
+## <a name="why-protection-matters"></a>Proč v oblasti ochrany
 
-Je důležité **chránit duševní vlastnictví** (IP).
-Kód vaší aplikace obsahuje návrhu a podrobnosti implementace, které lze považovat za IP.
-Ale aplikace založená na rozhraní .NET Framework [významné metadat a základní mezikódu obsahovat][assemblies], provedení je snadné provést zpětnou analýzu, stačí použít jeden z mnoha zdarma, automatizovat nástroje.
-Přerušení a zastavení zpětné analýzy vám může zabránit neautorizovaným zveřejněním IP, jakož i prokázat, že váš kód obsahuje tajemství.
-Nástroje Dotfuscator můžete [obfuskaci] [ obfuscation] sestavení .NET bránit zpětné analýzy, při zachování původního chování aplikace.
+Je důležité **chránit duševní** vlastnictví (IP).
+Kód vaší aplikace obsahuje podrobnosti návrhu a implementace, které lze považovat za IP adresu.
+Aplikace založené na .NET Framework však [obsahují významné metadata a průběžný kód vysoké úrovně][assemblies], což usnadňuje zpětnou analýzu, a to pouze pomocí jednoho z mnoha bezplatných automatizovaných nástrojů.
+Přerušením a zastavením zpětného řízení můžete zabránit neoprávněnému zpřístupnění IP adresy a také prokázat, že váš kód obsahuje obchodní tajemství.
+Dotfuscator může [Zaměnit vaše sestavení][obfuscation] .NET, aby bránila zpětnému strojírenství, a přitom zachovala chování původní aplikace.
 
-Je také důležité **chrání integritu aplikace**.
-Kromě zpětné analýzy můžou snažit nesprávnými účastníky pirate vaší aplikace, měnit chování aplikace za běhu ani manipulaci s daty.
-Nástroje Dotfuscator můžete vkládat aplikace možnost [rozpoznání hrozeb a reakce na neoprávněné použití][checks], včetně úmyslné poškozování, ladění třetích stran a zařízením s rootem.
+Je také důležité **chránit integritu aplikace**.
+Kromě zpětného strojírenství se mohou špatné aktéry pokusit o nedovolenou aplikaci, měnit chování aplikace za běhu nebo manipulovat s daty.
+Dotfuscator může vložit vaši aplikaci s možností [rozpoznávat a reagovat na neoprávněná použití][checks], včetně manipulace, ladění třetích stran a zařízení s rootem.
 
-Další informace o jak řešení Dotfuscator zapadá do životního cyklu vývoje zabezpečeného softwaru, najdete v článku společnosti PreEmptive Solutions [SDL App Protection stránky][sdl-protection].
+Další informace o tom, jak Dotfuscator zapadá do životního cyklu zabezpečení softwaru, najdete na stránce s možnostmi řešení pro správu [SDL][sdl-protection].
 
-## <a name="about-dotfuscator-community"></a>Informace o řešení Dotfuscator Community
+## <a name="about-dotfuscator-community"></a>O komunitě Dotfuscator
 
-Vaše kopie sady Microsoft Visual Studio obsahuje kopii ***PreEmptive ochranu – nástroj Dotfuscator Community***, zdarma pro osobní použití.
-(Tato bezplatná verze byla dříve označovanou jako nástroj Dotfuscator Community Edition nebo řešení Dotfuscator CE.) Pokyny o tom, jak nainstalovat verzi nástroje Dotfuscator Community součástí sady Visual Studio najdete v tématu [stránky instalace][install].
+Vaše kopie Microsoft Visual Studio obsahuje kopii bezplatné ***ochrany Dotfuscator Community***, která je bezplatná pro osobní použití.
+(Tato bezplatná verze se dřív nazývala jako Dotfuscator Community Edition nebo Dotfuscator CE.) Pokyny k instalaci verze Dotfuscator Community, která je součástí sady Visual Studio, najdete na [stránce instalace][install].
 
-Nástroj Dotfuscator Community nabízí celou řadu [ochrany před softwarem a posílení zabezpečení] [ software-protection] služby pro vývojáře, architekty a testery.
-Příklady [.NET obfuskace] [ obfuscation] a dalších [Ochrana aplikace] [ app-protection] jsou funkce obsažené v řešení Dotfuscator Community:
+Komunita Dotfuscator nabízí řadu [ochrany softwaru a posílení][software-protection] služeb pro vývojáře, architekty a testery.
+Příklady [Zazmatenosti rozhraní .NET][obfuscation] a dalších funkcí [ochrany aplikací][app-protection] , které jsou součástí komunity Dotfuscator:
 
-* *[Přejmenování] [ renaming]*  identifikátorů, které mají ztížit zpětnou zkompilovaného sestavení.
-* *[Boj proti] [ tamper]*  k detekci spuštění zmanipulovanou aplikací a ukončit nebo v reakci na manipulováno relace.
-* *[Ladění proti] [ debug]*  -li zjistit přílohy ladicího programu k běžící aplikaci a ukončit nebo reakce na ladit relace.
-* *[Zařízení s rootem proti] [ root]*  -li zjistit, pokud aplikace běží na rootovaném zařízení s Androidem a ukončit nebo reakce na relace na těchto zařízeních.
-* *[Chování vypršení platnosti aplikací] [ shelflife]*  , který kódování datem "ukončení životnosti technologie" a ukončí aplikaci vypršela platnost relace.
+* *[Přejmenování][renaming]* identifikátorů, aby zpětná analýza kompilovaných sestavení byla obtížnější.
+* *[Ochrana proti falšování][tamper]* za účelem zjištění provádění poškozených aplikací a ukončení nebo reakce na úmyslně neoprávněné relace.
+* *[Anti-Debug][debug]* pro detekci přílohy ladicího programu ke spuštěné aplikaci a ukončení nebo reakce na laděné relace.
+* *[Zařízení s odrootem][root]* , aby se zjistilo, jestli je aplikace spuštěná na kořenovém zařízení s Androidem a jak na těchto zařízeních dokončí nebo reaguje na relace.
+* *[Chování vypršení platnosti aplikace][shelflife]* , které zakódují "datum ukončení životního cyklu" a ukončí relaci aplikace s vypršenou platností.
 
-Podrobnosti o těchto funkcích, včetně toho, jak se vešly do strategie ochrany aplikací najdete v tématu [stránka schopnosti][capabilities].
+Podrobnosti o těchto funkcích, včetně toho, jak se vejdou do vaší strategie ochrany aplikací, najdete na [stránce s funkcemi][capabilities].
 
-Nástroj Dotfuscator Community nabízí základní ochranu out-of-the-box.
-Ještě více opatření na ochranu aplikací jsou k dispozici pro registrovaného uživatele nástroj Dotfuscator Community a uživatelům ***PreEmptive ochrany - nástroje Dotfuscator Professional***, nejlepší na světě [.NET Obfuskátor] [net-obfuscator].
-Informace o rozšíření Dotfuscator, najdete v článku [stránce upgrady][upgrades].
+Dotfuscator komunita nabízí základní ochranu předem.
+K dispozici jsou i další míry ochrany aplikací pro registrované uživatele komunity Dotfuscator a pro uživatele s ***ochranou Dotfuscator Professional***na světě, což je špičkové špičkové [rozhraní .NET][net-obfuscator].
+Informace o vylepšení Dotfuscator naleznete na [stránce upgrady][upgrades].
 
 ## <a name="getting-started"></a>Začínáme
 
 ::: moniker range="vs-2019"
 
-Chcete-li začít používat nástroj Dotfuscator Community ze sady Visual Studio, zadejte `dotfuscator` do **vyhledávacího pole** (Ctrl + Q).
+Pokud chcete začít používat komunitu Dotfuscator ze sady Visual `dotfuscator` Studio, zadejte do **vyhledávacího pole** (CTRL + Q).
 
-* Pokud nástroj Dotfuscator Community je už nainstalovaný, **vyhledávacího pole** se zobrazí možnost spustit nástroj Dotfuscator Community v části *nabídky* záhlaví. Podrobnosti najdete v tématu [stránku Začínáme úplné řešení Dotfuscator Community uživatelské příručce nástroje][get-started].
-* Pokud ještě není nainstalovaný nástroj Dotfuscator Community, **vyhledávacího pole** místo toho zobrazí **instalace nástroje PreEmptive ochranu – řešení Dotfuscator** pod *jednotlivé komponenty* záhlaví . Zobrazit [stránky instalace] [ install] podrobnosti.
+* Pokud je komunita Dotfuscator už nainstalovaná, **vyhledávací pole** zobrazí možnost spustit komunitu Dotfuscator v záhlaví *nabídek* . Podrobnosti najdete [na stránce Začínáme v úplné příručce pro uživatele komunity Dotfuscator][get-started].
+* Pokud komunita Dotfuscator ještě není nainstalovaná, **vyhledávací pole** se místo toho zobrazí v záhlaví *jednotlivé komponenty* v části instalace s možností **přerušení ochrany – Dotfuscator** . Podrobnosti najdete na [stránce instalace][install] .
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-Chcete-li začít používat nástroj Dotfuscator Community ze sady Visual Studio, zadejte `dotfuscator` do **Snadné spuštění** panelu hledání (Ctrl + Q).
+Pokud chcete začít používat komunitu Dotfuscator ze sady Visual `dotfuscator` Studio, zadejte do panelu hledání **Rychlé spuštění** (CTRL + Q).
 
-* Pokud nástroj Dotfuscator Community je už nainstalovaný, **Snadné spuštění** vyvolá *nabídky* možnosti spuštění uživatelského rozhraní nástroje Dotfuscator Community. Podrobnosti najdete v tématu [stránku Začínáme úplné řešení Dotfuscator Community uživatelské příručce nástroje][get-started].
-* Pokud ještě není nainstalovaný nástroj Dotfuscator Community, **Snadné spuštění** zobrazí příslušné *nainstalovat* možnost. Zobrazit [stránky instalace] [ install] podrobnosti.
+* Pokud je komunita Dotfuscator už nainstalovaná, zobrazí se v nabídce **Snadné spuštění** možnost *nabídky* , která spustí uživatelské rozhraní komunity Dotfuscator. Podrobnosti najdete [na stránce Začínáme v úplné příručce pro uživatele komunity Dotfuscator][get-started].
+* Pokud komunita Dotfuscator ještě není nainstalovaná, zobrazí se v okně **Snadné spuštění** odpovídající možnost *instalace* . Podrobnosti najdete na [stránce instalace][install] .
 
 ::: moniker-end
 
-Můžete získat také **nejnovější verzi** nástroje Dotfuscator Community z [stránce soubory ke stažení nástroje Dotfuscator preemptive.com][download].
+**Nejnovější verzi** Dotfuscator Community můžete získat také [na stránce soubory ke stažení Dotfuscator na PreEmptive.com][download].
 
-## <a name="full-documentation"></a>Úplnou dokumentaci
+## <a name="full-documentation"></a>Úplná dokumentace
 
-Na této stránce a její podstránky poskytují přehled funkce řešení Dotfuscator Community, stejně jako [pokyny k instalaci nástroje][install].
+Tato stránka a její podstránky poskytují podrobný přehled funkcí komunity Dotfuscator a také [pokyny pro instalaci nástroje][install].
 
-Zobrazit [úplného Průvodce uživatele řešení Dotfuscator Community v preemptive.com] [ full] podrobné pokyny k použití, včetně [spuštění pomocí uživatelského rozhraní nástroje Dotfuscator Community][get-started].
+Podrobné pokyny k používání najdete v tématu [Úplná Dotfuscator uživatelská příručka komunity na adrese PreEmptive.com][full] , včetně [toho, jak začít používat uživatelské rozhraní komunity Dotfuscator][get-started].
 
 <!-- Copyright © 2019 PreEmptive Solutions, LLC -->
 

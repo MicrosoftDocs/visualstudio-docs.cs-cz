@@ -12,12 +12,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e5219e6e3977be59d89b7835413092f1fbeb200
-ms.sourcegitcommit: 5694c5236fa32ba7f5bc1236a853f725ec7557e9
+ms.openlocfilehash: 5fe671b10a701bb355a476ff9bc577bb4cdca71b
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68680623"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71252533"
 ---
 # <a name="using-the-intellitrace-stand-alone-collector-c-visual-basic"></a>Použití samostatného kolektoru IntelliTrace (C#, Visual Basic)
 
@@ -315,7 +315,7 @@ ms.locfileid: "68680623"
 
   - Dobu spuštění můžete zkrátit tím, že zakážete události, které nejsou relevantní pro danou aplikaci. Například můžete zakázat události Windows Workflow pro aplikace, které nepoužívají pracovní postup systému Windows.
 
-  - Můžete vylepšit spouštěcí i běhový výkon zakázáním událostí registru pro aplikace, které přistupují k registru, ale nezobrazujete problémy s nastavením registru.
+  - Můžete zlepšit výkon při spuštění i za běhu tím, že zakážete události registru pro aplikace, které přistupují k registru, ale nezobrazují problémy s nastavením registru.
 
 - Zkontrolujte moduly v plánu shromažďování dat, pro které IntelliTrace shromažďuje data. Upravte plán shromažďování dat tak, aby obsahoval pouze ty moduly, které vás zajímají:
 

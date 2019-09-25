@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Vytvoření vazby dat k ovládacím prvkům v podokně akcí aplikace Excel'
+title: 'Návod: Svázání dat s ovládacími prvky v podokně akcí aplikace Excel'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -17,173 +17,173 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 5882f81eefb55bb0dc4451b8ffa43c2acfbf1df5
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 1543f872961d556674dd5ad6b3f5b8071d2d404b
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63438677"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71253885"
 ---
-# <a name="walkthrough-bind-data-to-controls-on-an-excel-actions-pane"></a>Návod: Vytvoření vazby dat k ovládacím prvkům v podokně akcí aplikace Excel
-  Tento návod ukazuje vytváření datových vazeb k ovládacím prvkům v podokně Akce v aplikaci Microsoft Office Excel. Ovládací prvky ukazují záznamů master/detail relace mezi tabulkami v databázi serveru SQL Server.
+# <a name="walkthrough-bind-data-to-controls-on-an-excel-actions-pane"></a>Návod: Svázání dat s ovládacími prvky v podokně akcí aplikace Excel
+  Tento návod ukazuje datovou vazbu k ovládacím prvkům v podokně akce v aplikaci systém Microsoft Office Excel. Ovládací prvky ukazují relaci hlavního/podrobností mezi tabulkami v SQL Server databázi.
 
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
 
  Tento návod znázorňuje následující úlohy:
 
-- Přidání ovládacích prvků na list.
+- Přidávání ovládacích prvků do listu.
 
-- Vytvoření ovládacího prvku podokna akcí.
+- Vytváření ovládacího prvku podokna akcí
 
-- Přidání ovládacích prvků Windows Forms vázané na data do ovládacího prvku podokna akcí.
+- Přidání ovládacích prvků model Windows Forms vázaných na data do ovládacího prvku podokna akcí.
 
-- Zobrazení podokna akcí při otevření aplikace.
+- Zobrazuje se podokno akce při otevření aplikace.
 
 > [!NOTE]
-> Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [přizpůsobení integrovaného vývojového prostředí sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
+> Váš počítač může v následujících pokynech zobrazovat odlišné názvy nebo umístění některých prvků uživatelského rozhraní sady Visual Studio. Tyto prvky jsou určeny edicí sady Visual Studio a použitým nastavením. Další informace najdete v tématu [Přizpůsobení integrovaného vývojového prostředí (IDE) sady Visual Studio](../ide/personalizing-the-visual-studio-ide.md).
 
 ## <a name="prerequisites"></a>Požadavky
  K dokončení tohoto návodu budete potřebovat následující komponenty:
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
 
-- [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)] nebo [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].
+- [!INCLUDE[Excel_15_short](../vsto/includes/excel-15-short-md.md)]nebo [!INCLUDE[Excel_14_short](../vsto/includes/excel-14-short-md.md)].
 
 - Přístup k serveru s ukázkovou databází Northwind SQL Server.
 
-- Oprávnění ke čtení a zápis do databáze serveru SQL Server.
+- Oprávnění ke čtení a zápisu do databáze SQL Server.
 
 ## <a name="create-the-project"></a>Vytvoření projektu
- Prvním krokem je vytvoření projektu sešitu aplikace Excel.
+ Prvním krokem je vytvoření projektu excelového sešitu.
 
-### <a name="to-create-a-new-project"></a>Chcete-li vytvořit nový projekt
+### <a name="to-create-a-new-project"></a>Vytvoření nového projektu
 
-1. Vytvořte projekt sešitu aplikace Excel s názvem **Moje podokně akcí aplikace Excel**. V průvodci vyberte **vytvoříte nový textový dokument**. Další informace najdete v tématu [jak: Vytvářet projekty pro Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. Vytvořte projekt sešitu aplikace Excel pomocí **podokna akce název v aplikaci Excel**. V průvodci vyberte možnost **vytvořit nový dokument**. Další informace najdete v tématu [jak: Vytváření projektů Office v sadě Visual](../vsto/how-to-create-office-projects-in-visual-studio.md)Studio.
 
-     Visual Studio otevře nový sešit aplikace Excel v návrháři a přidá **Moje podokně akcí aplikace Excel** projektu **Průzkumníka řešení**.
+     Visual Studio otevře nový excelový sešit v návrháři a přidá projekt **podokna akce aplikace Excel** do **Průzkumník řešení**.
 
-## <a name="add-a-new-data-source-to-the-project"></a>Přidat nový zdroj dat do projektu
+## <a name="add-a-new-data-source-to-the-project"></a>Přidat do projektu nový zdroj dat
 
-### <a name="to-add-a-new-data-source-to-the-project"></a>Chcete-li přidat nový zdroj dat do projektu
+### <a name="to-add-a-new-data-source-to-the-project"></a>Přidání nového zdroje dat do projektu
 
-1. Pokud **zdroje dat** okně není zobrazena, zobrazte ho tak, na panelu nabídek, výběrem **zobrazení** > **ostatní Windows**  >   **Zdroje dat**.
+1. Pokud není **okno zdroje dat** viditelné, zobrazte ho tak, že v řádku nabídek vyberete možnost **Zobrazit** > **ostatní** > **zdroje dat**Windows.
 
-2. Zvolte **přidat nový zdroj dat** spustit **Průvodce konfigurací zdroje dat**.
+2. Zvolením možnosti **Přidat nový zdroj dat** spusťte **Průvodce konfigurací zdroje dat**.
 
-3. Vyberte **databáze** a potom klikněte na tlačítko **Další**.
+3. Vyberte **databáze** a pak klikněte na **Další**.
 
-4. Vyberte datové připojení k ukázkové databázi Northwind systému SQL Server, nebo přidejte nové připojení s použitím **nové připojení** tlačítko.
+4. Vyberte datové připojení k ukázce databáze Northwind SQL Server databázi nebo přidejte nové připojení pomocí tlačítka **nové připojení** .
 
 5. Klikněte na **Další**.
 
-6. Uložit připojení, pokud je zaškrtnuto a pak klikněte na tlačítko Vymazat **Další**.
+6. Pokud je vybraná možnost Uložit připojení, zrušte zaškrtnutí políčka a klikněte na tlačítko **Další**.
 
-7. Rozbalte **tabulky** uzlu **databázové objekty** okna.
+7. Rozbalte uzel **tabulky** v okně **objekty databáze** .
 
-8. Zaškrtněte políčko vedle položky **Dodavatelé** tabulky.
+8. Zaškrtněte políčko vedle tabulky **Dodavatelé** .
 
-9. Rozbalte **produkty** tabulce a vybrat **ProductName**, **KódDodavatele**, **QuantityPerUnit**, a **UnitPrice**.
+9. Rozbalte tabulku **Products** a vyberte **NázevVýrobku**, **KódDodavatele**, **QuantityPerUnit**a **UnitPrice**.
 
 10. Klikněte na tlačítko **Dokončit**.
 
-    Průvodce přidá **dodavatelů** tabulky a **produkty** tabulky **zdroje dat** okno. Také přidá typové datové sady do projektu, který se zobrazuje **Průzkumníka řešení**.
+    Průvodce přidá tabulku **Dodavatelé** a **produkty** do okna **zdroje dat** . Také přidá do projektu typovou datovou sadu, která je viditelná v **Průzkumník řešení**.
 
-## <a name="add-controls-to-the-worksheet"></a>Přidání ovládacích prvků na list
- V dalším kroku přidejte <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacího prvku a <xref:Microsoft.Office.Tools.Excel.ListObject> ovládacího prvku na první sešit.
+## <a name="add-controls-to-the-worksheet"></a>Přidat ovládací prvky do listu
+ Dále přidejte <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek <xref:Microsoft.Office.Tools.Excel.ListObject> a ovládací prvek do prvního listu.
 
-### <a name="to-add-a-namedrange-control-and-a-listobject-control"></a>Chcete-li přidat ovládací prvek NamedRange a ovládacího prvku ListObject
+### <a name="to-add-a-namedrange-control-and-a-listobject-control"></a>Přidání ovládacího prvku NamedRange a ovládacího prvku ListObject
 
-1. Ověřte, že **Moje aplikace Excel akce Pane.xlsx** sešitu je otevřen v návrháři aplikace Visual Studio s `Sheet1` zobrazí.
+1. Ověřte, že je v návrháři sady Visual Studio otevřený sešit **Actions v aplikaci Excel. xlsx** se `Sheet1` zobrazením.
 
-2. V **zdroje dat** okna, rozbalte **Dodavatelé** tabulky.
+2. V okně **zdroje dat** rozbalte tabulku **Dodavatelé** .
 
-3. Klikněte na šipku rozevíracího seznamu **název společnosti** uzlu a pak klikněte na tlačítko **NamedRange**.
+3. Klikněte na šipku rozevíracího seznamu v uzlu **název společnosti** a pak klikněte na **NamedRange**.
 
-4. Přetáhněte **název společnosti** z **zdroje dat** okno do buňky **A2** v `Sheet1`.
+4. Přetáhněte **název společnosti** z okna **zdroje dat** do buňky **a2** v `Sheet1`.
 
-     A <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládací prvek s názvem `CompanyNameNamedRange` je vytvořen a text \<NázevSpolečnosti > se zobrazí v buňce **A2**. Ve stejnou dobu <xref:System.Windows.Forms.BindingSource> s názvem `suppliersBindingSource`, tabulka adaptéru a <xref:System.Data.DataSet> jsou přidány do projektu. Ovládací prvek vázaný <xref:System.Windows.Forms.BindingSource>, která je dále vázán na <xref:System.Data.DataSet> instance.
+     Vytvoří se `CompanyNameNamedRange` \<ovládací prvek s názvem a text CompanyName > se zobrazí v buňce a2. <xref:Microsoft.Office.Tools.Excel.NamedRange> Ve stejnou dobu <xref:System.Windows.Forms.BindingSource> se do projektu přidají pouze pojmenované `suppliersBindingSource`, adaptér s <xref:System.Data.DataSet> tabulkou a. Ovládací prvek je vázán <xref:System.Windows.Forms.BindingSource>na, který je zase svázán <xref:System.Data.DataSet> s instancí.
 
-5. V **zdroje dat** okna, procházejte minulé sloupce, které jsou pod správou **Dodavatelé** tabulky. V dolní části seznamu je **produkty** tabulky; je zde, protože je podřízeným prvkem **Dodavatelé** tabulky. Tuto možnost vyberte, **produkty** tabulky není ten, který je na stejné úrovni jako **Dodavatelé** tabulku a pak klikněte na šipku rozevíracího seznamu, který se zobrazí.
+5. V okně **zdroje dat** se posuňte dolů po sloupcích, které jsou v tabulce **Dodavatelé** . V dolní části seznamu je tabulka **produkty** . je to proto, že se jedná o podřízenou tabulku **dodavatelů** . Vyberte tuto tabulku **produktů** , nikoli tu, která je na stejné úrovni jako tabulka **Dodavatelé** , a potom klikněte na šipku rozevíracího seznamu, která se zobrazí.
 
-6. Klikněte na tlačítko **ListObject** v rozevíracím seznamu a pak přetáhněte **produkty** tabulky do buňky **A6** v `Sheet1`.
+6. V rozevíracím seznamu klikněte na **ListObject** a pak přetáhněte tabulku **Products** do buňky **a6** v `Sheet1`.
 
-     A <xref:Microsoft.Office.Tools.Excel.ListObject> ovládací prvek s názvem `ProductNameListObject` se vytvoří v buňce **A6**. Ve stejnou dobu <xref:System.Windows.Forms.BindingSource> s názvem `productsBindingSource` a adaptér tabulky jsou přidány do projektu. Ovládací prvek vázaný <xref:System.Windows.Forms.BindingSource>, která je dále vázán na <xref:System.Data.DataSet> instance.
+     Ovládací prvek s `ProductNameListObject` názvem je vytvořen v buňce **a6.** <xref:Microsoft.Office.Tools.Excel.ListObject> Současně jsou do projektu přidány `productsBindingSource` pojmenovanéatabulkovéadaptéry.<xref:System.Windows.Forms.BindingSource> Ovládací prvek je vázán <xref:System.Windows.Forms.BindingSource>na, který je zase svázán <xref:System.Data.DataSet> s instancí.
 
-7. Pro C# pouze vyberte **suppliersBindingSource** na hlavní panel komponenty a změnit **modifikátory** vlastnost **interní** v **vlastnosti**  okna.
+7. V C# části suppliersBindingSource (součást) vyberte jen možnost a v okně **vlastnosti** změňte vlastnost **modifikátory** na **interní** .
 
-## <a name="add-controls-to-the-actions-pane"></a>Přidání ovládacích prvků do podokna akcí
- Dále je třeba prvek podokna akce, která má pole se seznamem.
+## <a name="add-controls-to-the-actions-pane"></a>Přidání ovládacích prvků do podokna akce
+ Dále budete potřebovat ovládací prvek podokna akce, který obsahuje pole se seznamem.
 
-### <a name="to-add-an-actions-pane-control"></a>Chcete-li přidat ovládací prvek podokna akce
+### <a name="to-add-an-actions-pane-control"></a>Přidání ovládacího prvku podokna akce
 
-1. Vyberte **Moje podokně akcí aplikace Excel** projekt **Průzkumníka řešení**.
+1. Vyberte projekt **podokna akce aplikace Excel** v **Průzkumník řešení**.
 
-2. Na **projektu** nabídky, klikněte na tlačítko **přidat novou položku**.
+2. V nabídce **projekt** klikněte na příkaz **Přidat novou položku**.
 
-3. V **přidat novou položku** dialogu **ovládacího prvku podokna akcí**, pojmenujte ho **ActionsControl**a klikněte na tlačítko **přidat**.
+3. V dialogovém okně **Přidat novou položku** vyberte možnost **ovládací prvek podokno akce**, pojmenujte ji **ActionsControl**a klikněte na tlačítko **Přidat**.
 
-### <a name="to-add-data-bound-windows-forms-controls-to-an-actions-pane-control"></a>Chcete-li přidat ovládací prvky Windows Forms vázané na data na ovládací prvek podokna akce
+### <a name="to-add-data-bound-windows-forms-controls-to-an-actions-pane-control"></a>Přidání ovládacích prvků model Windows Forms vázaných na data do ovládacího prvku podokna akcí
 
-1. Z **běžné ovládací prvky** karet **nástrojů**, přetáhněte <xref:System.Windows.Forms.ComboBox> ovládacího prvku do ovládacího prvku podokna akcí.
+1. Z karet **běžných ovládacích prvků** na **panelu nástrojů**přetáhněte <xref:System.Windows.Forms.ComboBox> ovládací prvek do ovládacího prvku podokno akcí.
 
-2. Změnit **velikost** vlastnost **171, 21**.
+2. Změňte vlastnost **Size** na **171, 21**.
 
-3. Změna velikosti uživatelského ovládacího prvku podle pole se seznamem.
+3. Změňte velikost uživatelského ovládacího prvku tak, aby odpovídal poli se seznamem.
 
-## <a name="bind-the-control-on-the-actions-pane-to-data"></a>Vytvoření vazby ovládacího prvku v podokně Akce k datům
- V této části budete nastavit zdroj dat <xref:System.Windows.Forms.ComboBox> ke stejnému zdroji dat, jako <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacího prvku na listu.
+## <a name="bind-the-control-on-the-actions-pane-to-data"></a>Navázání ovládacího prvku v podokně akce na data
+ V této části nastavíte zdroj <xref:System.Windows.Forms.ComboBox> dat na stejný zdroj dat <xref:Microsoft.Office.Tools.Excel.NamedRange> jako ovládací prvek na listu.
 
-### <a name="to-set-data-binding-properties-of-the-control"></a>Chcete-li nastavit vlastnosti datové vazby ovládacího prvku
+### <a name="to-set-data-binding-properties-of-the-control"></a>Nastavení vlastností datové vazby ovládacího prvku
 
-1. Klikněte pravým tlačítkem na ovládací prvek podokna akce a potom klikněte na tlačítko **zobrazit kód**.
+1. Klikněte pravým tlačítkem myši na ovládací prvek podokna akce a poté klikněte na možnost **Zobrazit kód**.
 
-2. Přidejte následující kód, který <xref:System.Windows.Forms.UserControl.Load> události ovládacího prvku podokna akcí.
+2. Do <xref:System.Windows.Forms.UserControl.Load> události ovládacího prvku podokno akcí přidejte následující kód.
 
      [!code-vb[Trin_VstcoreActionsPaneExcel#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ActionsControl.vb#1)]
      [!code-csharp[Trin_VstcoreActionsPaneExcel#1](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ActionsControl.cs#1)]
 
-3. V C#, je nutné vytvořit obslužná rutina události `ActionsControl`. Tento kód v můžete umístit `ActionsControl` konstruktoru. Další informace o vytváření obslužných rutin událostí, naleznete v tématu [jak: Vytváření obslužných rutin událostí v projektech pro systém Office](../vsto/how-to-create-event-handlers-in-office-projects.md).
+3. V C#nástroji je nutné vytvořit obslužnou rutinu události pro `ActionsControl`. Tento kód můžete umístit do `ActionsControl` konstruktoru. Další informace o vytváření obslužných rutin událostí naleznete [v tématu How to: Vytváření obslužných rutin událostí v](../vsto/how-to-create-event-handlers-in-office-projects.md)projektech pro systém Office.
 
      [!code-csharp[Trin_VstcoreActionsPaneExcel#2](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ActionsControl.cs#2)]
 
 ## <a name="show-the-actions-pane"></a>Zobrazit podokno akcí
- V podokně Akce není zobrazen, dokud nepřidáte ovládacího prvku za běhu.
+ Podokno akce není viditelné, dokud nepřidáte ovládací prvek za běhu.
 
-#### <a name="to-show-the-actions-pane"></a>Chcete-li zobrazit podokno akcí
+#### <a name="to-show-the-actions-pane"></a>Zobrazení podokna akce
 
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na *ThisWorkbook.vb* nebo *ThisWorkbook.cs*a potom klikněte na tlačítko **zobrazit kód**.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem na *ThisWorkbook. vb* nebo *ThisWorkbook.cs*a pak klikněte na **Zobrazit kód**.
 
-2. Vytvořit novou instanci třídy uživatelského ovládacího prvku v `ThisWorkbook` třídy.
+2. Vytvořte ve `ThisWorkbook` třídě novou instanci uživatelského ovládacího prvku.
 
      [!code-csharp[Trin_VstcoreActionsPaneExcel#3](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs#3)]
      [!code-vb[Trin_VstcoreActionsPaneExcel#3](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#3)]
 
-3. V <xref:Microsoft.Office.Tools.Excel.Workbook.Startup> obslužná rutina události `ThisWorkbook`, přidejte ovládací prvek do podokna akcí.
+3. V obslužné rutině <xref:Microsoft.Office.Tools.Excel.Workbook.Startup>událostiovládacího prvku přidejte ovládací prvek do podokna akce. `ThisWorkbook`
 
      [!code-csharp[Trin_VstcoreActionsPaneExcel#4](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs#4)]
      [!code-vb[Trin_VstcoreActionsPaneExcel#4](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#4)]
 
 ## <a name="test-the-application"></a>Testování aplikace
- Nyní můžete otestovat dokumentu ověřte, že se otevře podokno akcí při otevření dokumentu, a zda mají ovládací prvky hlavní a podrobný vztah.
+ Nyní můžete testovat dokument a ověřit tak, že se podokno akce otevře při otevření dokumentu a že ovládací prvky mají relaci hlavního/podrobností.
 
-### <a name="to-test-your-document"></a>K otestování vašeho dokumentu
+### <a name="to-test-your-document"></a>Testování dokumentu
 
-1. Stisknutím klávesy **F5** ke spuštění projektu.
+1. Stisknutím klávesy **F5** spusťte projekt.
 
-2. Potvrďte, že v podokně Akce je viditelný.
+2. Potvrďte, že je podokno akce viditelné.
 
-3. V rozevíracím seznamu vyberte společnost. Ověřte, zda název společnosti je uveden v <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacího prvku a, že jsou v uvedené podrobnosti o produktu <xref:Microsoft.Office.Tools.Excel.ListObject> ovládacího prvku.
+3. V seznamu vyberte společnost. Ověřte, zda je název společnosti uveden v <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládacím prvku a zda jsou uvedeny podrobnosti o produktu <xref:Microsoft.Office.Tools.Excel.ListObject> v ovládacím prvku.
 
-4. Vyberte různé společnosti, aby ověření názvu společnosti a podle potřeby změnit podrobnosti o produktu.
+4. Vyberte různé společnosti a ověřte podle potřeby změnu názvu společnosti a podrobností o produktu.
 
 ## <a name="next-steps"></a>Další kroky
- Tady jsou některé úlohy, které by mohl pocházet Další:
+ Tady jsou některé úkoly, které mohou být další:
 
-- Vazba dat k ovládacím prvkům v aplikaci Word. Další informace najdete v tématu [názorný postup: Vytvoření vazby dat s ovládacími prvky v podokně akcí aplikace Word](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md).
+- Umožňuje svázat data s ovládacími prvky ve Wordu. Další informace najdete v tématu [Návod: Svázání dat s ovládacími prvky v podokně](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md)akcí aplikace Word.
 
-- Nasazení projektu. Další informace najdete v tématu [nasazení řešení Office s použitím technologie ClickOnce](../vsto/deploying-an-office-solution-by-using-clickonce.md).
+- Nasazení projektu. Další informace najdete v tématu [nasazení řešení pro systém Office pomocí technologie ClickOnce](../vsto/deploying-an-office-solution-by-using-clickonce.md).
 
 ## <a name="see-also"></a>Viz také:
 - [Přehled podokna akcí](../vsto/actions-pane-overview.md)
 - [Postupy: Správa rozložení ovládacích prvků v podoknech akcí](../vsto/how-to-manage-control-layout-on-actions-panes.md)
-- [Vytvoření vazby dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [Vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)

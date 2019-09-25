@@ -1,5 +1,5 @@
 ---
-title: Použití služby Microsoft Monitoring Agent | Dokumentace Microsoftu
+title: Použití Microsoft Monitoring Agent | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: fd0a86b9-015d-408e-aa58-59a0a97826ac
@@ -8,84 +8,84 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4fb7f14b4906d2342c4b190fa00f0da559ecde8c
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 0e4aaf70925ee0561729cb73d84586c10c07b258
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65679139"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71252543"
 ---
-# <a name="using-the-microsoft-monitoring-agent-c-visual-basic"></a>Použití služby Microsoft Monitoring Agent (C#, Visual Basic)
+# <a name="using-the-microsoft-monitoring-agent-c-visual-basic"></a>Použití Microsoft Monitoring Agent (C#Visual Basic)
 
-Místně můžete monitorovat webové aplikace ASP.NET hostované službou IIS a službu SharePoint 2010 nebo 2013 aplikací pro chyby, problémy s výkonem nebo jiné problémy s použitím **agenta Microsoft Monitoring Agent**. Můžete uložit diagnostické události z agenta do souboru protokolu IntelliTrace (.iTrace). V protokolu pak můžete otevřít v sadě Visual Studio Enterprise (ale ne edice Professional nebo Community) pro ladění problémů s všechny diagnostické nástroje sady Visual Studio. Může také shromažďovat diagnostická data IntelliTrace a metoda dat spuštěním agenta v **trasování** režimu. Microsoft Monitoring Agent je možné integrovat s [Application Insights](/azure/application-insights/) a [System Center Operation Manageru](/previous-versions/system-center/system-center-2012-R2/hh205987(v=sc.12)). Agenta Microsoft Monitoring Agent změnit prostředí cílového systému, když je nainstalovaná.
+Můžete místně monitorovat webové aplikace ASP.NET hostované službou IIS a aplikace SharePoint 2010 nebo 2013 pro chyby, problémy s výkonem nebo jiné problémy pomocí **Microsoft Monitoring Agent**. Diagnostické události můžete uložit z agenta do souboru protokolu IntelliTrace (. iTrace). Pak můžete otevřít protokol Visual Studio Enterprise (ale ne edice Professional nebo Community) a ladit problémy se všemi diagnostickými nástroji sady Visual Studio. Data diagnostických dat a metod IntelliTrace můžete také shromažďovat spuštěním agenta v režimu **trasování** . Microsoft Monitoring Agent lze integrovat s [Application Insights](/azure/application-insights/) a [nástrojem System Center Operations Manager](/previous-versions/system-center/system-center-2012-R2/hh205987(v=sc.12)). Microsoft Monitoring Agent při instalaci změní prostředí cílového systému.
 
 > [!NOTE]
-> Může také shromažďovat data IntelliTrace diagnostiky a metoda pro webový server, SharePoint, WPF a Windows aplikace formuláře na vzdálených počítačích beze změny cílového prostředí s použitím **samostatného kolektoru IntelliTrace**. Samostatný kolektor má větší dopad na výkon ve srovnání se spouštěním agenta Microsoft Monitoring Agent **monitorování** režimu. Zobrazit [použití samostatného kolektoru IntelliTrace](../debugger/using-the-intellitrace-stand-alone-collector.md).
+> Data diagnostiky a metody IntelliTrace můžete také shromažďovat pro webové aplikace, SharePoint, WPF a aplikace Windows Form na vzdálených počítačích, aniž byste museli měnit cílové prostředí pomocí samostatného **kolektoru IntelliTrace**. Samostatný kolektor má vyšší dopad na výkon než spuštění Microsoft Monitoring Agent v režimu **monitorování** . Viz [Použití samostatného kolektoru IntelliTrace](../debugger/using-the-intellitrace-stand-alone-collector.md).
 
- Pokud používáte System Center 2012, použijte agenta Microsoft Monitoring Agent pomocí nástroje Operations Manager dostávat upozornění na problémy a vytváření pracovních položek sady Team Foundation Server s odkazy na uložené protokoly IntelliTrace. Můžete přiřadit tyto pracovní položky ostatním uživatelům k dalšímu ladění. Zobrazit [integrace nástroje Operations Manager s procesy vývoje](/previous-versions/system-center/system-center-2012-R2/jj614609(v=sc.12)) a [sledování pomocí agenta Microsoft Monitoring Agent](/previous-versions/system-center/system-center-2012-R2/dn465153(v=sc.12)).
+ Pokud používáte System Center 2012, můžete pomocí Microsoft Monitoring Agent s Operations Manager získat výstrahy týkající se problémů a vytvořit Team Foundation Server pracovní položky s odkazy na uložené protokoly IntelliTrace. Pak můžete přiřadit tyto pracovní položky jiným uživatelům k dalšímu ladění. Viz [integrace Operations Manager s procesy vývoje](/previous-versions/system-center/system-center-2012-R2/jj614609(v=sc.12)) a [monitorování pomocí Microsoft Monitoring Agent](/previous-versions/system-center/system-center-2012-R2/dn465153(v=sc.12)).
 
- Než začnete, zkontrolujte, zda je odpovídajícího zdroje a symbolů pro kód sestavené a nasazené. Díky tomu můžete přejít přímo do kódu aplikace při spuštění ladění a prohlížení diagnostických událostí v protokolu IntelliTrace. [Nastavte se sestavení](../debugger/diagnose-problems-after-deployment.md) tak, aby Visual Studio může automaticky vyhledat a otevřít odpovídající zdroj k nasazenému kódu.
+ Než začnete, ověřte, zda máte odpovídající zdroj a symboly pro sestavený a nasazený kód. To vám pomůže přejít přímo k kódu aplikace při spuštění ladění a procházení diagnostických událostí v protokolu IntelliTrace. [Nastavte sestavení](../debugger/diagnose-problems-after-deployment.md) tak, aby sada Visual Studio automaticky nalezla a otevřela odpovídající zdroj pro váš nasazený kód.
 
-1. [Krok 1: Nastavení agenta Microsoft Monitoring Agent](#SetUpMonitoring)
+1. [Krok 1: Nastavit Microsoft Monitoring Agent](#SetUpMonitoring)
 
 2. [Krok 2: Zahájení monitorování aplikace](#MonitorEvents)
 
-3. [Krok 3: Uložení zaznamenaných událostí](#SaveEvents)
+3. [Krok 3: Uložit zaznamenané události](#SaveEvents)
 
-## <a name="SetUpMonitoring"></a> Krok 1: Nastavení agenta Microsoft Monitoring Agent
+## <a name="SetUpMonitoring"></a>Krok 1: Nastavit Microsoft Monitoring Agent
 
- Nastavení samostatného agenta na webovém serveru provádět místní monitorování bez změny vašich aplikací. Pokud používáte System Center 2012, přečtěte si [instalace agenta Microsoft Monitoring Agent](/previous-versions/system-center/system-center-2012-R2/dn465156(v=sc.12)).
+ Nastavte samostatného agenta na webovém serveru, aby se provádělo místní monitorování beze změny aplikace. Pokud používáte System Center 2012, přečtěte si téma [instalace Microsoft Monitoring Agent](/previous-versions/system-center/system-center-2012-R2/dn465156(v=sc.12)).
 
-### <a name="SetUpStandaloneMMA"></a> Nastavte samostatného agenta
+### <a name="SetUpStandaloneMMA"></a>Nastavení samostatného agenta
 
 1. Ujistěte se, že:
 
-    - Webový server je spuštěn [podporované verze Internetové informační služby (IIS)](/previous-versions/system-center/system-center-2012-R2/dn465154(v=sc.12)).
+    - Webový server používá [podporované verze Internetová informační služba (IIS)](/previous-versions/system-center/system-center-2012-R2/dn465154(v=sc.12)).
 
-    - Webový server má rozhraní .NET Framework 3.5, 4 nebo 4.5.
+    - Váš webový server má .NET Framework 3,5, 4 nebo 4,5.
 
-    - Webový server běží prostředí Windows PowerShell 3.0 nebo novější. [DOTAZ: Co když budu mít Windows PowerShell 2.0?](#PowerShell2)
+    - Na vašem webovém serveru běží Windows PowerShell 3,0 nebo novější. [Č Co když mám Windows PowerShell 2,0?](#PowerShell2)
 
-    - Máte oprávnění správce na vašem webovém serveru spouštět příkazy prostředí PowerShell a recyklovat fond aplikací při spuštění sledování.
+    - Máte oprávnění správce na vašem webovém serveru, aby bylo možné spouštět příkazy prostředí PowerShell a recyklovat fond aplikací při spuštění monitorování.
 
-    - Jste odinstalovat všechny předchozí verze agenta Microsoft Monitoring Agent.
+    - Odinstalovali jste všechny dřívější verze Microsoft Monitoring Agent.
 
-2. [Stáhněte si zdarma Microsoft Monitoring Agent](http://go.microsoft.com/fwlink/?LinkId=320384), 32bitová verze **MMASetup-i386.exe** nebo 64bitovou verzi **MMASetup-AMD64.exe**, z webu Microsoft Download Center na webu Server.
+2. [Stáhněte si bezplatný Microsoft Monitoring Agent](http://go.microsoft.com/fwlink/?LinkId=320384), buď 32 **. exe** , nebo 64 verze **MMASetup-AMD64. exe**, z webu Microsoft Download Center na váš webový server.
 
-3. Spouštění staženého spustitelného souboru spusťte Průvodce instalací.
+3. Spusťte stažený spustitelný soubor a spusťte tak Průvodce instalací nástroje.
 
-4. Vytvořte zabezpečený adresář na webovém serveru k ukládání protokolů IntelliTrace, například **C:\IntelliTraceLogs**.
+4. Na webovém serveru vytvořte zabezpečený adresář pro ukládání protokolů IntelliTrace, například **C:\IntelliTraceLogs**.
 
-     Ujistěte se, že tento adresář vytvořit před zahájením monitorování. Aby se zabránilo zpomalení vaší aplikace, vyberte umístění na místním vysokorychlostním disku, který není velmi aktivní.
+     Než začnete s monitorováním, nezapomeňte vytvořit tento adresář. Abyste se vyhnuli zpomalení vaší aplikace, vyberte umístění na místním vysokorychlostním disku, který není příliš aktivní.
 
     > [!IMPORTANT]
-    > Protokoly nástroje IntelliTrace může obsahovat osobní a citlivé údaje. Omezte tento adresář pouze na ty identity, které musí pracovat se soubory. Zkontrolujte zásady ochrany osobních údajů vaší společnosti.
+    > Protokoly IntelliTrace můžou obsahovat osobní a citlivá data. Omezí tento adresář jenom na identity, které musí v souborech fungovat. Podívejte se na zásady ochrany osobních údajů vaší společnosti.
 
-5. Ke spuštění podrobné úrovni funkcí monitorování nebo k monitorování aplikací služby SharePoint, měl fond aplikací, který je hostitelem vaší webové aplikaci nebo aplikaci služby SharePoint oprávnění čtení a zápisu do adresáře protokolu IntelliTrace. [DOTAZ: Jak můžu nastavit oprávnění pro fond aplikací?](#FullPermissionsITLog)
+5. Chcete-li spustit podrobné monitorování na úrovni funkcí nebo monitorovat aplikace služby SharePoint, udělte fondu aplikací, který je hostitelem vaší webové aplikace nebo oprávnění ke čtení a zápisu aplikace služby SharePoint, do adresáře protokolu IntelliTrace. [Č Návody nastavit oprávnění pro fond aplikací?](#FullPermissionsITLog)
 
 ### <a name="q--a"></a>Dotazy a odpovědi
 
-#### <a name="PowerShell2"></a> DOTAZ: Co když budu mít Windows PowerShell 2.0?
- **ODPOVĚĎ:** Důrazně doporučujeme používat PowerShell 3.0. V opačném případě budete muset importovat rutiny Microsoft Monitoring Agent PowerShell při každém spuštění prostředí PowerShell. Také nebude mít přístup ke stažení obsahu nápovědy.
+#### <a name="PowerShell2"></a>Č Co když mám Windows PowerShell 2,0?
+ **URČITÉHO** Důrazně doporučujeme, abyste používali PowerShell 3,0. V opačném případě budete muset importovat rutiny Microsoft Monitoring Agent PowerShellu při každém spuštění prostředí PowerShell. Nemáte také přístup k obsahu s nápovědě ke stažení.
 
-1. Otevřít **prostředí Windows PowerShell** nebo **Windows PowerShell ISE** okno příkazového řádku jako správce.
+1. Otevřete **prostředí Windows PowerShell** nebo **Integrované skriptovací prostředí (ISE) v prostředí Windows PowerShell** okno příkazového řádku jako správce.
 
 2. Importujte modul Microsoft Monitoring Agent PowerShell z výchozího umístění instalace:
 
-     **PS C: > Import-Module "C:\Program Files\Microsoft Monitoring Agent\Agent\PowerShell\Microsoft.MonitoringAgent.PowerShell\Microsoft.MonitoringAgent.PowerShell.dll"**
+     **PS C: > Import-Module "C:\Program Files\Microsoft monitoring Agent\Agent\PowerShell\Microsoft.MonitoringAgent.PowerShell\Microsoft.MonitoringAgent.PowerShell.dll"**
 
-3. [Najdete na webu TechNet](https://technet.microsoft.com/systemcenter/default) zobrazíte nejaktuálnějšího obsahu nápovědy.
+3. Nejnovější obsah obsahu můžete získat na [webu TechNet](https://technet.microsoft.com/systemcenter/default) .
 
-#### <a name="FullPermissionsITLog"></a> DOTAZ: Jak můžu nastavit oprávnění pro fond aplikací?
- **ODPOVĚĎ:** Použít Windows **icacls** příkaz % $n nebo pomocí Průzkumníka Windows (nebo Průzkumníka souborů). Příklad:
+#### <a name="FullPermissionsITLog"></a>Č Návody nastavit oprávnění pro fond aplikací?
+ **URČITÉHO** Použijte příkaz Windows **Icacls** nebo použijte Průzkumníka Windows (nebo Průzkumníka souborů). Příklad:
 
-- Nastavení oprávnění se Windows **icacls** příkaz:
+- Nastavení oprávnění pomocí příkazu Windows **Icacls** :
 
-  - Pro webovou aplikaci v **DefaultAppPool** fondu aplikací:
+  - Pro webovou aplikaci ve fondu aplikací **DefaultAppPool** :
 
      `icacls "C:\IntelliTraceLogs" /grant "IIS APPPOOL\DefaultAppPool":RX`
 
-  - Pro aplikaci služby SharePoint ve **SharePoint - 80** fondu aplikací:
+  - Pro aplikaci SharePoint ve fondu aplikací **SharePoint-80** :
 
      `icacls "C:\IntelliTraceLogs" /grant "IIS APPPOOL\SharePoint - 80":RX`
 
@@ -93,89 +93,89 @@ Místně můžete monitorovat webové aplikace ASP.NET hostované službou IIS a
 
 - Nastavení oprávnění pomocí Průzkumníka Windows (nebo Průzkumníka souborů):
 
-  1. Otevřít **vlastnosti** pro adresář protokolu IntelliTrace.
+  1. Otevřete **vlastnosti** adresáře protokolu IntelliTrace.
 
-  2. Na **zabezpečení** kartě **upravit**, **přidat**.
+  2. Na kartě **zabezpečení** vyberte možnost **Upravit**, **Přidat**.
 
-  3. Ujistěte se, že **zabudované objekty zabezpečení** se zobrazí v **vyberte typ objektu** pole. Pokud ji má, možnost **typy objektů** a přidejte ji.
+  3. Zajistěte, aby se v poli **Vybrat typ objektu** zobrazily **předdefinované objekty zabezpečení** . Pokud tam není, vyberte **typy objektů** , které chcete přidat.
 
-  4. Ujistěte se, že se zobrazí v místním počítači **z tohoto umístění** pole. Pokud ji má, možnost **umístění** ho změnit.
+  4. Ujistěte se, že se Váš místní počítač zobrazuje v poli **z tohoto umístění** . Pokud tam není, vyberte **umístění** a změňte je.
 
-  5. V **zadejte názvy objektů k výběru** pole, přidat fond aplikací pro webovou aplikaci nebo aplikaci služby SharePoint.
+  5. Do pole **Zadejte názvy objektů k výběru** přidejte fond aplikací pro webovou aplikaci nebo aplikaci služby SharePoint.
 
-  6. Zvolte **Kontrola názvů** přeložit název. Zvolte **OK**.
+  6. Pro překlad názvu vyberte možnost **kontrolovat názvy** . Zvolte **OK**.
 
-  7. Ujistěte se, že má fond aplikací **čtení & Spustit** oprávnění.
+  7. Ujistěte se, že fond aplikací má oprávnění **ke čtení & spouštění** .
 
-## <a name="MonitorEvents"></a> Krok 2: Zahájení monitorování aplikace
- Použít rutinu prostředí Windows PowerShell [Start-WebApplicationMonitoring](http://go.microsoft.com/fwlink/?LinkID=313686) příkazu zahajte sledování vaší aplikace. Pokud používáte System Center 2012, přečtěte si [monitorování webových aplikací pomocí agenta Microsoft Monitoring Agent](https://technet.microsoft.com/library/dn465157.aspx).
+## <a name="MonitorEvents"></a>Krok 2: Zahájení monitorování aplikace
+ Pomocí příkazu Windows PowerShell [Start-WebApplicationMonitoring](http://go.microsoft.com/fwlink/?LinkID=313686) můžete začít monitorovat svoji aplikaci. Pokud používáte System Center 2012, přečtěte si téma [monitorování webových aplikací pomocí Microsoft Monitoring Agent](https://technet.microsoft.com/library/dn465157.aspx).
 
-1. Na webovém serveru, otevřete **prostředí Windows PowerShell** nebo **Windows PowerShell ISE** okno příkazového řádku jako správce.
+1. Na webovém serveru otevřete **Windows PowerShell** nebo **Integrované skriptovací prostředí (ISE) v prostředí Windows PowerShell** okno příkazového řádku jako správce.
 
-     ![Otevřete prostředí Windows PowerShell jako správce](../debugger/media/ffr_powershellrunadmin.png "FFR_PowerShellRunAdmin")
+     ![Otevřete Windows PowerShell jako správce] . (../debugger/media/ffr_powershellrunadmin.png "FFR_PowerShellRunAdmin")
 
-2. Spustit [Start-WebApplicationMonitoring](http://go.microsoft.com/fwlink/?LinkID=313686) příkazu zahajte sledování vaší aplikace. Tato operace restartuje všechny webové aplikace na webovém serveru.
+2. Spusťte příkaz [Start-WebApplicationMonitoring](http://go.microsoft.com/fwlink/?LinkID=313686) , abyste mohli začít monitorovat vaši aplikaci. Tato akce restartuje všechny webové aplikace na webovém serveru.
 
-     Tady je krátkou syntaxi:
+     Tady je krátká syntaxe:
 
-     **Start-WebApplicationMonitoring** *"\<appName>"* *\<monitoringMode>* *"\<outputPath>"* *\<UInt32>* *"\<collectionPlanPathAndFileName>"*
+     **Spustit – WebApplicationMonitoring** *"\<AppName >"*  *\<monitoringMode >* *"\<outputPath >"*  *\<UInt32 >* *"\<collectionPlanPathAndFileName >"*
 
-     Tady je příklad, který používá jenom název webové aplikace a zjednodušené **monitorování** režimu:
+     Tady je příklad, který používá pouze název webové aplikace a režim zjednodušeného **monitorování** :
 
-     **PS C: > Start-WebApplicationMonitoring "FabrikamFabrikamFiber.Web" sledovat "C:IntelliTraceLogs"**
+     **PS C: > Start-WebApplicationMonitoring "FabrikamFabrikamFiber. Web" monitor "C:IntelliTraceLogs"**
 
-     Tady je příklad, který používá cesta služby IIS a zjednodušené **monitorování** režimu:
+     Tady je příklad, který používá cestu služby IIS a režim zjednodušeného **monitorování** :
 
-     **PS C:>Start-WebApplicationMonitoring "IIS:sitesFabrikamFabrikamFiber.Web" Monitor "C:IntelliTraceLogs"**
+     **PS C: > Start-WebApplicationMonitoring "IIS: sitesFabrikamFabrikamFiber. Web" monitor "C:IntelliTraceLogs"**
 
-     Jakmile bude monitorování zahájeno, se může zobrazit pozastavení agenta sledování Microsoft během restartování aplikace.
+     Až začnete s monitorováním, může se při restartu aplikace zobrazit Microsoft Monitoring Agent pozastavení.
 
-     ![Spuštění sledování pomocí agenta MMA potvrzení](../debugger/media/ffr_powershellstartmonitoringconfirmation.png "FFR_PowerShellStartMonitoringConfirmation")
+     ![Spustit monitorování s potvrzením MMA](../debugger/media/ffr_powershellstartmonitoringconfirmation.png "FFR_PowerShellStartMonitoringConfirmation")
 
     |||
     |-|-|
-    |*"\<appName>"*|Zadejte cestu k názvu webu a webové aplikace ve službě IIS. Můžete také zahrnout cestu ke službě IIS, pokud dáváte přednost.<br /><br /> *"\<IISWebsiteName>\\<IISWebAppName\>"*<br /><br /> -nebo-<br /><br /> **"IIS:\sites** *\\<IISWebsiteName\>\\<IISWebAppName\>"*<br /><br /> Tuto cestu můžete najít ve Správci služby IIS. Příklad:<br /><br /> ![Cesta k webu služby IIS a web app](../debugger/media/ffr_iismanager.png "FFR_IISManager")<br /><br /> Můžete také použít [Get-WebSite](https://technet.microsoft.com/library/ee807832.aspx) a [získat WebApplication](https://technet.microsoft.com/library/ee790554.aspx) příkazy.|
-    |*\<monitoringMode>*|Zadejte režim monitorování:<br /><br /> <ul><li>**Monitorování**: Záznam minimální podrobnosti o událostech výjimky a události související s výkonem. Tento režim použije výchozí plán kolekce.</li><li>**Trasování**: Zaznamenejte podrobnosti na úrovni funkce nebo monitorování aplikací služby SharePoint 2010 a SharePoint 2013 s použitím zadaný plán shromažďování. V tomto režimu by mohlo způsobit nepoužitelnost vaše aplikace spouštět pomaleji.<br /><br /> <ul><li>[DOTAZ: Jak můžu nastavit oprávnění pro fond aplikací?](#FullPermissionsITLog)</li><li>[DOTAZ: Jak lze získat většinu dat bez zpomalení aplikace?](#Minimizing)</li></ul><br />     V tomto příkladu zaznamenává události Sharepointu aplikace hostované na webu služby SharePoint:<br /><br />     **Start-WebApplicationMonitoring "FabrikamSharePointSite\FabrikamSharePointApp" trasování C:\IntelliTraceLogs""C:\Program Files\Microsoft Monitoring Agent\Agent\IntelliTraceCollector\collection_plan.ASP.NET.default.xml""**</li><li>**Vlastní**: Podrobnosti záznamu vlastní s využitím zadat vlastní plán. Budete muset restartovat monitorování při úpravě plánu kolekce po monitorování je již spuštěna.</li></ul>|
-    |*"\<outputPath>"*|Zadejte úplné adresář pro ukládání protokolů IntelliTrace. Ujistěte se, že tento adresář vytvořit před zahájením monitorování.|
-    |*\<UInt32>*|Zadejte maximální velikost pro protokol nástroje IntelliTrace. Výchozí maximální velikost protokolu IntelliTrace je 250 MB.<br /><br /> Když se dosáhne tohoto limitu, agent přepíše nejstarší položky, abyste udělali místo pro další položky. Chcete-li tento limit změnit, použijte **- MaximumFileSizeInMegabytes** možnost nebo upravit `MaximumLogFileSize` atribut v plánu shromažďování.|
-    |*"\<collectionPlanPathAndFileName>"*|Zadejte úplnou cestu nebo relativní cestu a název souboru v plánu shromažďování. Tento plán je soubor XML, který konfiguruje nastavení pro agenta.<br /><br /> Tyto plány jsou součástí agenta a pracovat s web apps a aplikací služby SharePoint:<br /><br /> -   **plán collection_plan.ASP.NET.default.XML**<br />     Shromažďuje pouze události, jako je například výjimky, události výkonu, volání databáze a požadavky na webový server.<br />-   **collection_plan.ASP.NET.trace.xml**<br />     Shromažďuje volání úrovni funkcí a všechna data ve výchozí plán kolekce. Tento plán je vhodný pro podrobnou analýzu, ale může zpomalit vaši aplikaci.<br /><br /> Lokalizované verze těchto plánů můžete najít v podsložkách agenta. Můžete také [přizpůsobte tyto plány nebo vytvořte vlastní plány](http://go.microsoft.com/fwlink/?LinkId=227871) k nedocházelo ke zpomalování vaší aplikace. Umístěte vlastní plány do stejného zabezpečeného umístění jako agenta.<br /><br /> [DOTAZ: Jak lze získat většinu dat bez zpomalení aplikace?](#Minimizing)|
+    |*"\<appName>"*|Zadejte cestu k webovému serveru a názvu webové aplikace ve službě IIS. Pokud budete chtít, můžete také zahrnout cestu služby IIS.<br /><br /> *"\<IISWebsiteName>\\<IISWebAppName\>"*<br /><br /> -nebo-<br /><br /> **"IIS:\sites** *\\<IISWebsiteName\>\\<IISWebAppName\>"*<br /><br /> Tuto cestu najdete ve Správci služby IIS. Příklad:<br /><br /> ![Cesta k webu služby IIS a webové aplikaci](../debugger/media/ffr_iismanager.png "FFR_IISManager")<br /><br /> Můžete také použít příkazy [Get-web](https://technet.microsoft.com/library/ee807832.aspx) a [získat webové aplikace](https://technet.microsoft.com/library/ee790554.aspx) .|
+    |*\<monitoringMode >*|Zadejte režim monitorování:<br /><br /> <ul><li>**Monitorování**: Zaznamenejte minimální podrobnosti o událostech výjimek a událostech výkonu. Tento režim používá výchozí plán shromažďování dat.</li><li>**Trasování**: Zaznamenejte si podrobnosti na úrovni funkcí nebo sledujte aplikace SharePoint 2010 a SharePoint 2013 pomocí zadaného plánu shromažďování dat. V tomto režimu může být aplikace spuštěná pomaleji.<br /><br /> <ul><li>[Č Návody nastavit oprávnění pro fond aplikací?](#FullPermissionsITLog)</li><li>[Č Návody získat nejvíc dat bez zpomalení aplikace?](#Minimizing)</li></ul><br />     Tento příklad zaznamenává události pro aplikaci služby SharePoint hostované na webu služby SharePoint:<br /><br />     **Start-WebApplicationMonitoring "FabrikamSharePointSite\FabrikamSharePointApp" trasování "C:\Program Files\Microsoft monitoring Agent\Agent\IntelliTraceCollector\collection_plan.ASP.NET.default.xml" "C:\IntelliTraceLogs"**</li><li>**Vlastní**: Zaznamenejte si vlastní podrobnosti pomocí zadaného plánu vlastní kolekce. Pokud upravíte plán shromažďování po spuštění monitorování, bude nutné restartovat monitorování.</li></ul>|
+    |*"\<outputPath>"*|Zadejte úplnou cestu k adresáři, kam se mají ukládat protokoly IntelliTrace. Než začnete s monitorováním, nezapomeňte vytvořit tento adresář.|
+    |*\<UInt32>*|Zadejte maximální velikost protokolu IntelliTrace. Výchozí maximální velikost protokolu IntelliTrace je 250 MB.<br /><br /> Když protokol dosáhne tohoto limitu, Agent přepíše nejstarší položky, aby bylo možné místo pro další položky. Pokud chcete tento limit změnit, použijte možnost **-MaximumFileSizeInMegabytes** nebo upravte `MaximumLogFileSize` atribut v plánu shromažďování dat.|
+    |*"\<collectionPlanPathAndFileName>"*|Zadejte úplnou cestu nebo relativní cestu a název souboru plánu kolekce. Tento plán je soubor. XML, který konfiguruje nastavení pro agenta.<br /><br /> Tyto plány jsou součástí agenta a pracují s webovými aplikacemi a aplikacemi SharePoint:<br /><br /> -   **collection_plan. ASP. NET. default. XML**<br />     Shromažďuje pouze události, jako jsou výjimky, události výkonu, volání databáze a požadavky webového serveru.<br />-   **collection_plan.ASP.NET.trace.xml**<br />     Shromažďuje volání na úrovni funkcí a všechna data ve výchozím plánu shromažďování dat. Tento plán je vhodný pro podrobnou analýzu, ale může zpomalit vaši aplikaci.<br /><br /> Lokalizované verze těchto plánů můžete najít v podsložkách agenta. Můžete také [přizpůsobit tyto plány nebo vytvořit vlastní plány](http://go.microsoft.com/fwlink/?LinkId=227871) , abyste se vyhnuli zpomalení aplikace. Jakékoli vlastní plány umístěte do stejného zabezpečeného umístění jako agenta.<br /><br /> [Č Návody získat nejvíc dat bez zpomalení aplikace?](#Minimizing)|
 
-     Další informace o úplnou syntaxi a další příklady, spusťte **get-help Start-WebApplicationMonitoring-podrobné** příkazu nebo **get-help Start-WebApplicationMonitoring-příklady** příkaz.
+     Další informace o úplné syntaxi a dalších příkladech získáte spuštěním příkazu **Get-Help Start-WebApplicationMonitoring-detailed** a příkazu **Get-Help Start-WebApplicationMonitoring-Examples** .
 
-3. Chcete-li zkontrolovat stav všech sledovaných webových aplikace, spusťte [Get-WebApplicationMonitoringStatus](http://go.microsoft.com/fwlink/?LinkID=313685) příkazu.
+3. Pokud chcete zjistit stav všech monitorovaných webových aplikací, spusťte příkaz [Get-WebApplicationMonitoringStatus](http://go.microsoft.com/fwlink/?LinkID=313685) .
 
 ### <a name="q--a"></a>Dotazy a odpovědi
 
-#### <a name="Minimizing"></a> DOTAZ: Jak lze získat většinu dat bez zpomalení aplikace?
- **ODPOVĚĎ:** Microsoft Monitoring Agent může shromažďovat velké množství dat a má vliv na výkon vaší aplikace v závislosti na tom, které chcete shromažďovat data a jak shromažďovat. Tady jsou některé způsoby, jak získat většinu dat bez zpomalení vaší aplikace:
+#### <a name="Minimizing"></a>Č Návody získat nejvíc dat bez zpomalení aplikace?
+ **URČITÉHO** Microsoft Monitoring Agent může shromažďovat spoustu dat a ovlivnit výkon vaší aplikace v závislosti na datech, která jste si zvolili ke shromáždění, a jak je shromažďovat. Tady je několik způsobů, jak získat většinu dat bez zpomalení aplikace:
 
-- Agent pro webové aplikace a aplikace služby SharePoint, zaznamenává data pro každou aplikaci, která sdílí určený fond aplikací. To může zpomalit jakékoli aplikaci, která sdílí stejný fond aplikací, i když můžete omezit kolekci pro moduly pro jednu aplikaci. Aby se zabránilo zpomalení jiné aplikace, hostujte každou aplikaci v jejím vlastním fondu aplikací.
+- U webových aplikací a aplikací služby SharePoint Agent zaznamenává data pro každou aplikaci, která sdílí určený fond aplikací. To může zpomalit jakoukoliv aplikaci, která sdílí stejný fond aplikací, a to i v případě, že kolekci můžete omezit na moduly pro jednu aplikaci. Chcete-li zabránit zpomalování ostatních aplikací, hostovat každou aplikaci ve vlastním fondu aplikací.
 
-- Prohlédněte si události, pro které agent shromažďuje data v plánu shromažďování. Upravte plán shromažďování a zakažte události, které nejsou důležité nebo vás nezajímají. Tím lze vylepšit výkon při spouštění a výkon modulu runtime.
+- Zkontrolujte události, pro které Agent shromažďuje data v plánu shromažďování dat. Upravte plán shromažďování dat, abyste zakázali události, které nejsou důležité nebo vás zajímají. To může zlepšit výkon při spuštění a výkon v době běhu.
 
-   Chcete-li zakázat událost, nastavte `enabled` atribut pro `<DiagnosticEventSpecification>` elementu `false`:
+   Chcete-li zakázat událost, nastavte `enabled` atribut `<DiagnosticEventSpecification>` elementu na `false`:
 
    `<DiagnosticEventSpecification enabled="false">`
 
-   Pokud `enabled` atribut neexistuje, je událost povolena.
+   `enabled` Pokud atribut neexistuje, událost je povolena.
 
    Příklad:
 
-  - Zakážete události pracovního postupu Windows pro aplikace, které nepoužívají Windows Workflow.
+  - Zakáže události Windows workflowu pro aplikace, které nepoužívají pracovní postup Windows.
 
-  - Zakažte registru pro aplikace, které přístup k registru, ale nemají problémy s nastavením registru.
+  - Zakažte události registru pro aplikace, které přistupují k registru, ale nezobrazují problémy s nastavením registru.
 
-- Zkontrolujte moduly, pro které agent shromažďuje data v plánu shromažďování. Upravte plán kolekce umožňuje zahrnout pouze moduly, které vás zajímají.
+- Zkontrolujte moduly, pro které Agent shromažďuje data v plánu shromažďování dat. Upravte plán shromažďování dat tak, aby obsahoval pouze ty moduly, které vás zajímají.
 
-   To snižuje množství informací o volání metody a dalších instrumentačních dat, které agent shromažďuje při spuštění a spuštění aplikace. Tato data vám umožní krokovat kód při ladění a kontrola hodnoty předané do a vrácené z volání funkcí.
+   Tím se sníží množství informací o volání metody a další data instrumentace, která agent shromažďuje při spuštění a spuštění aplikace. Tato data vám pomůžou krokovat kód při ladění a kontrole hodnot předaných do a vrácených z volání funkce.
 
-  1. Otevřete plán shromažďování. Najít `<ModuleList>` elementu.
+  1. Otevřete plán kolekce. `<ModuleList>` Vyhledejte element.
 
-  2. V `<ModuleList>`, nastavte `isExclusionList` atribut `false`.
+  2. V `<ModuleList>`, `false`nastavte atribut na. `isExclusionList`
 
-  3. Použití `<Name>` – element pro určení každého modulu s některou z následujících akcí: název souboru, Řetězcová hodnota pro zahrnutí každého modulu, jehož název obsahuje daný řetězec, nebo veřejný klíč.
+  3. `<Name>` Pomocí elementu zadejte každý modul s jedním z následujících způsobů: název souboru, Řetězcová hodnota pro zahrnutí jakéhokoli modulu, jehož název obsahuje tento řetězec nebo veřejný klíč.
 
-     Tento příklad vytvoří seznam, který shromažďuje data pouze z modulu hlavní webové aplikace Fabrikam Fiber:
+     Tento příklad vytvoří seznam, který shromažďuje data pouze z hlavního modulu webové aplikace Fabrikam Fiber:
 
   ```xml
   <ModuleList isExclusionList="false">
@@ -184,7 +184,7 @@ Místně můžete monitorovat webové aplikace ASP.NET hostované službou IIS a
 
   ```
 
-   Pro shromažďování dat z libovolného modulu, jehož název obsahuje "Fabrikam", vytvořte seznam podobný následujícímu:
+   Chcete-li shromažďovat data z jakéhokoli modulu, jehož název obsahuje "fabrikam", vytvořte seznam jako takový:
 
   ```xml
   <ModuleList isExclusionList="false">
@@ -193,7 +193,7 @@ Místně můžete monitorovat webové aplikace ASP.NET hostované službou IIS a
 
   ```
 
-   Ke shromažďování dat z modulů zadáním jejich tokenů veřejných klíčů, vytvořte seznam podobný následujícímu:
+   Chcete-li shromažďovat data z modulů zadáním jejich tokenů veřejných klíčů, vytvořte seznam, jako je tento:
 
   ```xml
   <ModuleList isExclusionList="false">
@@ -206,43 +206,43 @@ Místně můžete monitorovat webové aplikace ASP.NET hostované službou IIS a
 
   ```
 
-   **DOTAZ: Proč právě namísto toho Nevyloučit moduly?**
+   **Č Proč místo toho nejenom vyloučit moduly?**
 
-   **ODPOVĚĎ:** Ve výchozím nastavení plány shromažďování dat vylučují moduly nastavením `isExclusionList` atribut `true`. Však to může být stále shromažďování dat z modulů, které nesplňují kritéria v seznamu nebo, které vás nemusejí zajímat, například moduly třetích stran nebo open source.
+   **URČITÉHO** Ve výchozím nastavení plány shromažďování dat vyloučí moduly `isExclusionList` nastavením atributu na. `true` To však může stále shromažďovat data z modulů, které nesplňují kritéria seznamu nebo které vás nemusejí zajímat, například moduly třetích stran nebo open source.
 
-#### <a name="q-what-values-does-the-agent-collect"></a>DOTAZ: Jaké hodnoty agent shromažďuje?
+#### <a name="q-what-values-does-the-agent-collect"></a>Č Jaké hodnoty shromažďuje Agent?
 
-**ODPOVĚĎ:** Pokud chcete snížit dopad na výkon, agent shromažďuje pouze tyto hodnoty:
+**URČITÉHO** Aby se snížil dopad na výkon, agent shromáždí jenom tyto hodnoty:
 
-- Primitivní datové typy, které jsou předány do a vracené z metod
+- Primitivní datové typy, které se předávají a vracejí z metod
 
-- Předán primitivních datových typů v polích objektů nejvyšší úrovně a vracené z metod
+- Primitivní datové typy v polích pro objekty nejvyšší úrovně předávané a vrácené z metod
 
-Předpokládejme například, že máte `AlterEmployee` podpis metody, která přijímá celočíselné `id` a `Employee` objekt `oldemployee`:
+Předpokládejme například, že `AlterEmployee` máte signaturu metody, která přijímá celé číslo `id` a `Employee` objekt `oldemployee`:
 
 `public Employee AlterEmployee(int id, Employee oldemployee)`
 
-`Employee` Typ má následující atributy: `Id`, `Name`, a `HomeAddress`. Existuje vztah přidružení mezi `Employee` a `Address` typu.
+Typ má následující atributy: `Id`, `Name`a `HomeAddress`. `Employee` `Employee` Mezi`Address` a typem existuje vztah přidružení.
 
-![Vztah mezi zaměstnanci a adresa](../debugger/media/employeeaddressrelationship.png "EmployeeAddressRelationship")
+![Vztah mezi zaměstnancem a adresou](../debugger/media/employeeaddressrelationship.png "EmployeeAddressRelationship")
 
-Agent zaznamenává hodnoty `id`, `Employee.Id`, `Employee.Name` a `Employee` objekt vrácený z `AlterEmployee` metody. Agent však nezaznamenává informace o `Address` objektu, než zda měl hodnotu null nebo ne. Agent také nezaznamenává data o místních proměnných v `AlterEmployee` metoda Pokud jiné metody nepoužívají tyto místní proměnné jako parametry v tomto okamžiku jsou zaznamenávány jako parametry metod.
+Agent zaznamenává `id`hodnoty pro `Employee.Id` `AlterEmployee` , `Employee.Name` a`Employee` objekt vrácený z metody. Agent však nezaznamená informace o objektu, který `Address` je jiný než bez ohledu na to, zda byl null nebo ne. Agent také nezaznamenává data týkající se místních proměnných v metodě `AlterEmployee` , pokud jiné metody tyto místní proměnné nepoužívají jako parametry, které ukazují, že jsou zaznamenávány jako parametry metody.
 
-## <a name="SaveEvents"></a> Krok 3: Uložení zaznamenaných událostí
- Když najdete chybu nebo potíže s výkonem, uložte zaznamenané události do protokolu IntelliTrace. Agent vytvoří protokol pouze v případě, že zaznamenal události. Pokud používáte System Center 2012, přečtěte si [monitorování webových aplikací pomocí agenta Microsoft Monitoring Agent](https://technet.microsoft.com/library/dn465157.aspx).
+## <a name="SaveEvents"></a>Krok 3: Uložit zaznamenané události
+ Když najdete chybu nebo problém s výkonem, uložte zaznamenané události do protokolu IntelliTrace. Agent vytvoří protokol pouze v případě, že zaznamenal události. Pokud používáte System Center 2012, přečtěte si téma [monitorování webových aplikací pomocí Microsoft Monitoring Agent](https://technet.microsoft.com/library/dn465157.aspx).
 
-### <a name="save-recorded-events-but-continue-monitoring"></a>Uložení zaznamenaných událostí ale pokračovat v monitorování
- Když chcete vytvořit protokol nástroje IntelliTrace, ale nechcete, aby k restartování aplikace nebo zastavit monitorování, postupujte podle těchto kroků. Agent pokračuje ve sledování i v případě restartování serveru nebo aplikace.
+### <a name="save-recorded-events-but-continue-monitoring"></a>Uložte zaznamenané události, ale pokračujte v monitorování.
+ Pokud chcete vytvořit protokol IntelliTrace, ale nechcete aplikaci restartovat, ale nechcete, aby se monitorování zastavilo, postupujte podle těchto kroků. Agent pokračuje v monitorování i v případě, že dojde k restartování serveru nebo aplikace.
 
-1. Na vašem webovém serveru otevřete okno příkazového řádku prostředí Windows PowerShell jako správce.
+1. Na webovém serveru otevřete okno příkazového řádku Windows PowerShellu jako správce.
 
-2. Spustit [Checkpoint-WebApplicationMonitoring](http://go.microsoft.com/fwlink/?LinkID=313684) příkazu uložte snímek protokolu IntelliTrace:
+2. Spuštěním příkazu [Checkpoint-WebApplicationMonitoring](http://go.microsoft.com/fwlink/?LinkID=313684) uložte snímek protokolu IntelliTrace:
 
     **Checkpoint-WebApplicationMonitoring** *"\<IISWebsiteName>\\<IISWebAppName\>"*
 
     \- nebo –
 
-    **Checkpoint-WebApplicationMonitoring "IIS:\sites** *\\<IISWebsiteName\>\\<IISWebAppName\>"*
+    **Checkpoint-WebApplicationMonitoring "IIS: \ sites** *<IISWebsiteName\><IISWebAppName\>" \\\\*
 
     Příklad:
 
@@ -252,54 +252,54 @@ Agent zaznamenává hodnoty `id`, `Employee.Id`, `Employee.Name` a `Employee` ob
 
     **PS C:>Checkpoint-WebApplicationMonitoring "IIS:sitesFabrikamFabrikamFiber.Web"**
 
-    Další informace získáte spuštěním **get-help Checkpoint-WebApplicationMonitoring-podrobné** příkazu nebo **get-help Checkpoint-WebApplicationMonitoring-příklady** příkazu.
+    Další informace získáte spuštěním příkazu **Get-Help Checkpoint-WebApplicationMonitoring-detailed** a příkazu **Get-Help Checkpoint-WebApplicationMonitoring-Examples** .
 
-3. Zkopírujte protokol k zabezpečení sdílené složky a potom otevřete protokol z počítače, který má Visual Studio Enterprise (ale ne edice Professional nebo Community).
+3. Zkopírujte protokol do zabezpečené sdílené složky a pak otevřete protokol z počítače, který má Visual Studio Enterprise (ale ne edice Professional nebo Community).
 
    > [!IMPORTANT]
-   > Buďte opatrní při sdílení protokolů IntelliTrace, protože mohou obsahovat osobní a citlivé údaje. Ujistěte se, kdo má přístup k tyto protokoly má oprávnění k oprávněn prohlížet tato data. Zkontrolujte zásady ochrany osobních údajů vaší společnosti.
+   > Buďte opatrní při sdílení protokolů IntelliTrace, protože by mohly obsahovat osobní a citlivá data. Ujistěte se, že kdokoli má přístup k těmto protokolům, má oprávnění zobrazit tato data. Podívejte se na zásady ochrany osobních údajů vaší společnosti.
 
-   **Další:** [Diagnostika zaznamenané události v sadě Visual Studio Enterprise](../debugger/diagnose-problems-after-deployment.md#InvestigateEvents)
+   **Generace** [Diagnostika zaznamenaných událostí v Visual Studio Enterprise](../debugger/diagnose-problems-after-deployment.md#InvestigateEvents)
 
-### <a name="save-recorded-events-and-stop-monitoring"></a>Uložení zaznamenaných událostí a zastavit monitorování
- Chcete-li pouze diagnostické informace při reprodukci konkrétního problému, postupujte podle těchto kroků. Tato operace restartuje všechny webové aplikace na webovém serveru.
+### <a name="save-recorded-events-and-stop-monitoring"></a>Uložit zaznamenané události a zastavit monitorování
+ Pokud chcete získat diagnostické informace jenom při reprodukci konkrétního problému, postupujte podle těchto kroků. Tato akce restartuje všechny webové aplikace na webovém serveru.
 
-1. Na vašem webovém serveru otevřete okno příkazového řádku prostředí Windows PowerShell jako správce.
+1. Na webovém serveru otevřete okno příkazového řádku Windows PowerShellu jako správce.
 
-2. Spustit [Stop-WebApplicationMonitoring](http://go.microsoft.com/fwlink/?LinkID=313687) příkaz k vytvoření protokolu IntelliTrace a zastavte sledování konkrétní webové aplikace:
+2. Spuštěním příkazu [Stop-WebApplicationMonitoring](http://go.microsoft.com/fwlink/?LinkID=313687) vytvořte protokol IntelliTrace a zastavte monitorování konkrétní webové aplikace:
 
-    **Stop-WebApplicationMonitoring** *"\<IISWebsiteName>\\<IISWebAppName\>"*
+    **Stop – WebApplicationMonitoring** *"\<IISWebsiteName>\\< IISWebAppName\>"*
 
     \- nebo –
 
-    **Stop-WebApplicationMonitoring "IIS:\sites** *\\<IISWebsiteName\>\\<IISWebAppName\>"*
+    **Stop-WebApplicationMonitoring "IIS: \ sites** *<IISWebsiteName\><IISWebAppName\>" \\\\*
 
-    Nebo se zastavit monitorování všech webových aplikací:
+    Nebo pokud chcete zastavit monitorování všech webových aplikací:
 
-    **Stop-WebApplicationMonitoring - všechny**
+    **Stop-WebApplicationMonitoring – vše**
 
     Příklad:
 
-    **PS C:\\>Stop-WebApplicationMonitoring "Fabrikam\iFabrikamFiber.Web"**
+    **PS C:\\> Stop-WebApplicationMonitoring "Fabrikam\iFabrikamFiber.Web"**
 
     \- nebo –
 
     **PS C:\\>Stop-WebApplicationMonitoring "IIS:\sites\Fabrikam\FabrikamFiber.Web"**
 
-    Další informace získáte spuštěním **get-help Stop-WebApplicationMonitoring-podrobné** příkazu nebo **get-help Stop-WebApplicationMonitoring-příklady** příkazu.
+    Další informace získáte spuštěním příkazu **Get-Help Stop-WebApplicationMonitoring-detailed** a příkazu **Get-Help Stop-WebApplicationMonitoring-Examples** .
 
-3. Zkopírujte protokol k zabezpečení sdílené složky a potom otevřete protokol z počítače, který má Visual Studio Enterprise.
+3. Zkopírujte protokol do zabezpečené sdílené složky a pak otevřete protokol z počítače, ve kterém je Visual Studio Enterprise.
 
-   **Další:** [Diagnostika zaznamenané události v sadě Visual Studio Enterprise](../debugger/diagnose-problems-after-deployment.md#InvestigateEvents)
+   **Generace** [Diagnostika zaznamenaných událostí v Visual Studio Enterprise](../debugger/diagnose-problems-after-deployment.md#InvestigateEvents)
 
 ## <a name="q--a"></a>Dotazy a odpovědi
 
-### <a name="q-where-can-i-get-more-information"></a>DOTAZ: Kde lze získat další informace?
+### <a name="q-where-can-i-get-more-information"></a>Č Kde lze získat další informace?
 
 #### <a name="blogs"></a>Blogy
- [Představujeme službu Microsoft Monitoring Agent.](https://devblogs.microsoft.com/devops/introducing-microsoft-monitoring-agent/)
+ [Představujeme Microsoft Monitoring Agent](https://devblogs.microsoft.com/devops/introducing-microsoft-monitoring-agent/)
 
- [Optimalizace kolekce IntelliTrace na provozních serverech](http://go.microsoft.com/fwlink/?LinkId=255233)
+ [Optimalizace kolekce IntelliTrace na produkčních serverech](http://go.microsoft.com/fwlink/?LinkId=255233)
 
 #### <a name="forums"></a>Diskuzní fóra
  [Diagnostika sady Visual Studio](http://go.microsoft.com/fwlink/?LinkId=262263)

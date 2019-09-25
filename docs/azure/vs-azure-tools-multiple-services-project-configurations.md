@@ -1,6 +1,6 @@
 ---
-title: Konfigurace Azure projektu s více konfigurace služby
-description: Zjistěte, jak nakonfigurovat projekt cloudové služby Azure tak, že změníte soubor ServiceDefinition.csdef ServiceConfiguration.Local.cscfg a ServiceConfiguration.Cloud.cscfg soubory.
+title: Konfigurace projektu Azure s několika konfiguracemi služeb
+description: Přečtěte si, jak nakonfigurovat projekt cloudové služby Azure změnou souborů ServiceDefinition. csdef, ServiceConfiguration. Local. cscfg a ServiceConfiguration. Cloud. cscfg.
 author: ghogen
 manager: jillfra
 assetId: a4fb79ed-384f-4183-9f74-5cac257206b9
@@ -9,98 +9,98 @@ ms.workload: azure-vs
 ms.topic: conceptual
 ms.date: 11/11/2017
 ms.author: ghogen
-ms.openlocfilehash: dfb58c9eabb135b69033c065fa606511043a2c8b
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 5314e92065cb29691aca75d424a331d10284a558
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66260653"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71253436"
 ---
 # <a name="configuring-your-azure-project-in-visual-studio-to-use-multiple-service-configurations"></a>Konfigurace projektu Azure v sadě Visual Studio za účelem použití více konfigurací služby
 
-Projektu cloudové služby Azure v sadě Visual Studio obsahuje tři konfigurační soubory: `ServiceDefinition.csdef`, `ServiceConfiguration.Local.cscfg`, a `ServiceConfiguration.Cloud.cscfg`:
+Projekt cloudové služby Azure v aplikaci Visual Studio zahrnuje tři konfigurační soubory `ServiceDefinition.csdef`: `ServiceConfiguration.Local.cscfg`, `ServiceConfiguration.Cloud.cscfg`a:
 
-- `ServiceDefinition.csdef` nasazení do Azure k popisu požadavků cloudové službě a její role a k poskytování nastavení, která se vztahují na všechny instance. Nastavení lze číst za běhu pomocí rozhraní API služeb Azure hostování modulu Runtime. Tento soubor je aktualizovat v Azure, pouze v případě, že Cloudová služba je zastavena.
-- `ServiceConfiguration.Local.cscfg` a `ServiceConfiguration.Cloud.cscfg` zadejte hodnoty pro nastavení v definici souboru a zadejte počet instancí se mají spustit pro každou roli. "Local" soubor obsahuje hodnoty použité v místním ladění. soubor "Cloud" je nasadit do Azure jako `ServiceConfiguration.cscfg` a poskytuje nastavení pro prostředí serveru. Tento soubor můžete aktualizovat, pokud vaše Cloudová služba je spuštěná v Azure.
+- `ServiceDefinition.csdef`je nasazený do Azure a popisuje požadavky cloudové služby a jejích rolí a poskytuje nastavení, která se vztahují na všechny instance. Nastavení je možné číst za běhu pomocí služby Azure hostující běhové rozhraní API. Tento soubor se dá aktualizovat v Azure jenom v případě, že je cloudová služba zastavená.
+- `ServiceConfiguration.Local.cscfg`a `ServiceConfiguration.Cloud.cscfg` zadejte hodnoty pro nastavení v definičním souboru a určete počet instancí, které mají být spuštěny pro každou roli. "Místní" soubor obsahuje hodnoty používané při místním ladění; soubor "Cloud" je nasazen do Azure jako `ServiceConfiguration.cscfg` a poskytuje nastavení pro serverové prostředí. Tento soubor se dá aktualizovat, i když je cloudová služba spuštěná v Azure.
 
-Nastavení konfigurace jsou spravovaná a upravit v sadě Visual Studio pomocí stránky vlastností pro příslušné roli (pravým tlačítkem myši na roli a vyberte **vlastnosti**, nebo dvakrát klikněte na roli). Změny se dají vymezit na podle toho, která konfigurace je vybrán v **konfigurace služby** rozevíracího seznamu. Vlastnosti pro webové a pracovní role jsou podobné, s výjimkou tam, kde je popsáno v následujících částech.
+Nastavení konfigurace se v aplikaci Visual Studio spravují a upravují pomocí stránek vlastností příslušné role (klikněte pravým tlačítkem na roli a vyberte **vlastnosti**nebo poklikejte na roli). V rozevíracím seznamu **Konfigurace služby** můžou být změny vymezené podle zvolené konfigurace. Vlastnosti pro webovou roli a role pracovního procesu jsou podobné, s výjimkou případů popsaných v následujících oddílech.
 
 ![VS_Solution_Explorer_Roles_Properties](./media/vs-azure-tools-multiple-services-project-configurations/IC784076.png)
 
-Informace o základní schémata pro definici služby a služby konfigurační soubory, najdete v článku [.csdef XML schématu](/azure/cloud-services/schema-csdef-file) a [.cscfg XML schématu](/azure/cloud-services/schema-cscfg-file) článků. Další informace o konfiguraci služby najdete v tématu [jak konfigurovat Cloud Services](/azure/cloud-services/cloud-services-how-to-configure-portal).
+Informace o základních schématech pro konfigurační soubory definice služby a konfiguraci služby najdete v článcích schématu [XML. csdef](/azure/cloud-services/schema-csdef-file) a [. cscfg XML](/azure/cloud-services/schema-cscfg-file) . Další informace o konfiguraci služby naleznete v tématu [How to configure Cloud Services](/azure/cloud-services/cloud-services-how-to-configure-portal).
 
-## <a name="configuration-page"></a>Stránka Konfigurace
+## <a name="configuration-page"></a>Konfigurační stránka
 
 ### <a name="service-configuration"></a>Konfigurace služby
 
-Vybere, které `ServiceConfiguration.*.cscfg` souboru je ovlivněny změnami. Ve výchozím nastavení, jsou místní a cloudové variant a můžete použít **spravovat...**  příkaz Kopírovat, přejmenovat a odstranit konfigurační soubory. Tyto soubory jsou přidány do projektu cloudové služby a zobrazí v **Průzkumníka řešení**. Ale přejmenování nebo odstranění konfigurace lze provést pouze z tohoto ovládacího prvku.
+Vybere, `ServiceConfiguration.*.cscfg` který soubor má vliv na změny. Ve výchozím nastavení existují místní a cloudové varianty a k kopírování, přejmenování a odebírání konfiguračních souborů můžete použít příkaz **Spravovat...** . Tyto soubory se přidají do vašeho projektu cloudové služby a zobrazí se v **Průzkumník řešení**. Přejmenování nebo odebrání konfigurací se ale dá udělat jenom z tohoto ovládacího prvku.
 
 ### <a name="instances"></a>Instance
 
-Nastavte **Instance** počet na počet instancí služby by měl spustit pro tuto roli.
+Nastavte vlastnost počet **instancí** na počet instancí, které má služba spustit pro tuto roli.
 
-Nastavte **velikost virtuálního počítače** vlastnost **nejmenším instancím**, **malé**, **střední**, **velké**, nebo **Velmi velká**.  Další informace najdete v tématu [velikosti pro Cloud Services](/azure/cloud-services/cloud-services-sizes-specs).
+Nastavte vlastnost **Velikost virtuálního počítače** tak, aby byla větší než **malá**, **malá**, **střední**, **Velká**nebo **velmi velká**.  Další informace najdete v tématu [velikosti pro Cloud Services](/azure/cloud-services/cloud-services-sizes-specs).
 
-### <a name="startup-action-web-role-only"></a>Spuštění akcí (jenom webové role)
+### <a name="startup-action-web-role-only"></a>Spouštěcí akce (jenom webová role)
 
-Nastavení této vlastnosti a určit tak, že by měl Visual Studio při spuštění ladění spusťte webový prohlížeč pro koncové body HTTP nebo koncové body HTTPS nebo obojí.
+Nastavte tuto vlastnost, pokud chcete určit, že má Visual Studio spustit webový prohlížeč pro koncové body HTTP nebo koncové body HTTPS, nebo při spuštění ladění.
 
-**Koncový bod HTTPS** možnost je dostupná jenom v případě, že jsou již definovány koncový bod HTTPS pro vaši roli. Můžete definovat koncový bod HTTPS na **koncové body** stránku vlastností.
+Možnost **koncový bod HTTPS** je dostupná jenom v případě, že jste už pro vaši roli definovali koncový bod HTTPS. Koncový bod HTTPS můžete definovat na stránce vlastností **koncových bodů** .
 
-Pokud jste už přidali koncový bod HTTPS, je ve výchozím nastavení povolena možnost koncový bod HTTPS a spustí prohlížeč pro tento koncový bod aplikace Visual Studio při spuštění ladění, kromě prohlížeče pro vaše koncové body HTTP, za předpokladu, že jsou povoleny obě možnosti spuštění.
+Pokud jste už přidali koncový bod HTTPS, je ve výchozím nastavení povolená možnost koncový bod HTTPS a Visual Studio spustí prohlížeč pro tento koncový bod při spuštění ladění, a to za předpokladu, že jsou povolené možnosti spuštění.
 
 ### <a name="diagnostics"></a>Diagnostika
 
-Ve výchozím nastavení je povolená Diagnostika pro webovou roli. Účet služby Azure cloud projektu a úložiště jsou nastaveny na použití emulátoru lokálního úložiště. Až budete připravení nasadit do Azure, můžete vybrat tlačítko Tvůrce ( **...** ) místo toho použít Azure storage. Diagnostická data můžou přenášet do účtu úložiště na vyžádání nebo automaticky plánovaných intervalech. Další informace o diagnostice Azure najdete v tématu [povolení diagnostiky v Azure Cloud Services a Virtual Machines](/azure/cloud-services/cloud-services-dotnet-diagnostics).
+Ve výchozím nastavení jsou pro webovou roli povoleny diagnostiky. Projekt cloudové služby Azure a účet úložiště se nastaví tak, aby používal emulátor místního úložiště. Až budete připraveni k nasazení do Azure, můžete vybrat tlačítko Tvůrce ( **...** ) a místo toho použít službu Azure Storage. Diagnostická data můžete přenést na účet úložiště na vyžádání nebo v automaticky naplánovaných intervalech. Další informace o diagnostice Azure najdete v tématu [Povolení diagnostiky v azure Cloud Services a Virtual Machines](/azure/cloud-services/cloud-services-dotnet-diagnostics).
 
 ## <a name="settings-page"></a>Stránka Nastavení
 
-Na **nastavení** stránky, můžete přidat nastavení konfigurace jako dvojice název hodnota. Kód spuštěný v roli můžete číst hodnoty nastavení konfigurace v době běhu pomocí tříd poskytovaných oborem [spravované knihovny Azure](http://go.microsoft.com/fwlink?LinkID=171026), konkrétně [GetConfigurationSettingValue](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleenvironment.getconfigurationsettingvalue.aspx) metoda.
+Na stránce **Nastavení** můžete přidat nastavení do konfigurace jako páry název-hodnota. Kód spuštěný v roli může číst hodnoty nastavení konfigurace za běhu pomocí tříd poskytovaných [spravovanou knihovnou Azure](http://go.microsoft.com/fwlink?LinkID=171026), konkrétně metodou [GetConfigurationSettingValue](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.serviceruntime.roleenvironment.getconfigurationsettingvalue.aspx) .
 
 ### <a name="configuring-a-connection-string-for-a-storage-account"></a>Konfigurace připojovacího řetězce pro účet úložiště
 
-Připojovací řetězec je nastavení, která poskytuje informace o připojení a ověřování pro emulátor úložiště nebo pro účet úložiště Azure. Pokaždé, když kód v roli přistupuje k Azure storage (objekty BLOB, fronty nebo tabulky), musí připojovací řetězec.
+Připojovací řetězec je nastavení, které poskytuje informace o připojení a ověřování pro emulátor úložiště nebo pro účet úložiště Azure. Vždy, když kód v roli přistupuje k Azure Storage (objekty blob, fronty nebo tabulky), potřebuje připojovací řetězec.
 
 > [!Note]
-> Připojovací řetězec pro účet úložiště Azure, musíte použít definovaném formátu (viz [Konfigurace připojovacích řetězců úložiště Azure](/azure/storage/common/storage-configure-connection-string)).
+> Připojovací řetězec pro účet úložiště Azure musí používat definovaný formát (viz [konfigurace Azure Storage připojovací řetězce](/azure/storage/common/storage-configure-connection-string)).
 
-Můžete nastavit připojovací řetězec má použít místní úložiště, podle potřeby, když nasazujete aplikace nastavte na účet úložiště Azure, cloudové službě. Nepodařilo se nastavit připojovací řetězec správně může způsobit vaše role spustit, nebo k cyklování skrze stavy inicializace, zaneprázdněný a zastavuje.
+Připojovací řetězec můžete nastavit tak, aby v případě potřeby používal místní úložiště, a když nasadíte aplikaci do cloudové služby, nastaví se na účet služby Azure Storage. Chybné nastavení připojovacího řetězce může způsobit, že se vaše role nespustí, nebo se má cyklicky přepínat stav inicializace, zaneprázdnění a zastavení.
 
-Vytvoření připojovacího řetězce, vyberte **přidat nastavení** a nastavte **typ** "Připojovací řetězec".
+Pokud chcete vytvořit připojovací řetězec, vyberte **Přidat nastavení** a nastavit **typ** na připojovací řetězec.
 
-Pro nové nebo existující připojovací řetězce, vyberte **...** * na pravé straně **hodnotu** pole, které chcete otevřít **vytvořit připojovací řetězec úložiště** dialogové okno:
+Pro nové nebo existující připojovací řetězce vyberte **...** * napravo od pole **hodnota** otevřete dialogové okno **vytvořit připojovací řetězec úložiště** :
 
-1. V části **připojit pomocí**, zvolte **předplatného** možnost vybrat účet úložiště z předplatného. Visual Studio pak získá přihlašovací údaje účtu úložiště automaticky z `.publishsettings` souboru.
-1. Výběr **ručně zadali přihlašovací údaje** umožňuje zadat název účtu a klíč přímo pomocí informací na webu Azure Portal. Zkopírování klíče účtu:
-    1. Přejděte na účet úložiště na Azure portal a vyberte **Správa klíčů**.
-    1. Pokud chcete zkopírovat klíč účtu, přejděte na účet úložiště na webu Azure portal vyberte **Nastavení > přístupové klíče**, potom pomocí tlačítka pro kopírování zkopírujte primární přístupový klíč do schránky.
-1. Vyberte jednu z možností připojení. **Zadejte vlastní koncové body** se zeptá, abyste zadali konkrétní adresy URL pro objekty BLOB, tabulky a zařadí do fronty. Vlastní koncové body umožňují jeho používání [vlastních domén](/azure/storage/blobs/storage-custom-domain-name) a řízení přístupu k více přesně. Zobrazit [nakonfigurování připojovacích řetězců Azure Storage](/azure/storage/common/storage-configure-connection-string).
-1. Vyberte **OK**, pak **soubor > Uložit** se aktualizovat konfiguraci s nový připojovací řetězec.
+1. V části **připojit pomocí**zvolte možnost **vaše předplatné** a vyberte účet úložiště z předplatného. Visual Studio pak automaticky získá přihlašovací údaje k účtu úložiště ze `.publishsettings` souboru.
+1. Po výběru **ručně zadaných přihlašovacích údajů** můžete zadat název účtu a klíč přímo pomocí informací z Azure Portal. Zkopírování klíče účtu:
+    1. V Azure Portal přejděte na účet úložiště a vyberte **spravovat klíče**.
+    1. Pokud chcete zkopírovat klíč účtu, přejděte na účet úložiště na Azure Portal, vyberte **nastavení > přístupových klíčů**a pak pomocí tlačítka Kopírovat zkopírujte primární přístupový klíč do schránky.
+1. Vyberte jednu z možností připojení. **Zadáním vlastních koncových bodů** se zobrazí výzva, abyste zadali konkrétní adresy URL pro objekty blob, tabulky a fronty. Vlastní koncové body umožňují používat [vlastní domény](/azure/storage/blobs/storage-custom-domain-name) a řídit přístup přesně. Viz [Konfigurace připojovacích řetězců Azure Storage](/azure/storage/common/storage-configure-connection-string).
+1. Vyberte **OK**a pak **soubor > Uložit** , aby se konfigurace aktualizovala pomocí nového připojovacího řetězce.
 
-Při publikování aplikace do Azure, znovu, vyberte konfiguraci služby, které obsahuje připojovací řetězec účtu úložiště Azure. Po publikování aplikace ověřte, že aplikace funguje podle očekávání pro služby Azure storage.
+Po publikování aplikace do Azure pak vyberte konfiguraci služby, která obsahuje účet úložiště Azure pro připojovací řetězec. Po publikování aplikace ověřte, že aplikace funguje podle očekávání pro služby Azure Storage.
 
-Další informace o tom, jak aktualizovat konfigurace služby, najdete v části [spravovat připojovací řetězce pro účty úložiště](vs-azure-tools-configure-roles-for-cloud-service.md#manage-connection-strings-for-storage-accounts).
+Další informace o tom, jak aktualizovat konfigurace služby, najdete v části [Správa připojovacích řetězců pro účty úložiště](vs-azure-tools-configure-roles-for-cloud-service.md#manage-connection-strings-for-storage-accounts).
 
 ## <a name="endpoints-page"></a>Stránka Koncové body
 
-Webová role obvykle obsahuje jeden koncový bod protokolu HTTP na portu 80. Role pracovního procesu, na druhé straně může mít libovolný počet koncových bodů HTTP, HTTPS nebo TCP. Koncové body můžou být vstupní koncové body, které jsou k dispozici do externích klientů, nebo vnitřní koncové body, které jsou k dispozici pro jiné role, na kterých běží ve službě.
+Webová role má obvykle jeden koncový bod HTTP na portu 80. Role pracovního procesu na druhé straně může mít libovolný počet koncových bodů HTTP, HTTPS nebo TCP. Koncovými body můžou být vstupní koncové body, které jsou k dispozici pro externí klienty, nebo interní koncové body, které jsou k dispozici jiným rolím, které jsou spuštěny ve službě.
 
-- Pro zpřístupnění koncový bod HTTP do externích klientů a webové prohlížeče, změňte typ koncových bodů na vstup a zadejte název a číslo veřejného portu.
-- Pokud chcete zpřístupnit koncového bodu HTTPS do externích klientů a webové prohlížeče, změňte typ koncových bodů na **vstupní**a zadejte název, číslo veřejného portu a název certifikátu správy. Certifikátu musíte také definovat v **certifikáty** stránky vlastností, abyste mohli zadat certifikát pro správu.
-- Aby bylo koncový bod interního přístupu pomocí jiné role v cloudové službě, změňte typ koncových bodů na interní a zadejte název a je to možné privátních portů pro tento koncový bod.
+- Pokud chcete koncový bod HTTP zpřístupnit externím klientům a webovým prohlížečům, změňte typ koncového bodu na vstup a zadejte název a číslo veřejného portu.
+- Aby byl koncový bod HTTPS dostupný pro externí klienty a webové prohlížeče, změňte typ koncového bodu na **vstup**a zadejte název, číslo veřejného portu a název certifikátu pro správu. Než budete moci zadat certifikát pro správu, je nutné také definovat certifikát na stránce vlastností **certifikáty** .
+- Pokud chcete, aby byl koncový bod dostupný pro interní přístup k jiným rolím v cloudové službě, změňte typ koncového bodu na interní a zadejte název a možné privátní porty pro tento koncový bod.
 
-## <a name="local-storage-page"></a>Stránka Místní úložiště
+## <a name="local-storage-page"></a>Stránka místního úložiště
 
-Můžete použít **místní úložiště** stránku vlastností vyhradit jeden nebo více prostředků pro roli místního úložiště. Místní úložiště prostředků je vyhrazené adresáře v systému souborů v Azure virtuální počítač, ve kterém je spuštěna instance role.
+Pomocí stránky vlastností **místního úložiště** můžete rezervovat jeden nebo více prostředků místního úložiště pro roli. Prostředek místního úložiště je rezervovaný adresář v systému souborů virtuálního počítače Azure, ve kterém je spuštěná instance role.
 
-## <a name="certificates-page"></a>Stránka certifikátů
+## <a name="certificates-page"></a>Stránka certifikáty
 
-**Certifikáty** stránku vlastností přidá informace o certifikátech pro vaše konfigurace služby. Všimněte si, že vaše certifikáty nejsou zabalené službou; musíte nahrát certifikáty samostatně k Azure prostřednictvím [webu Azure portal](http://portal.azure.com).
+Stránka vlastností **certifikáty** přidává do vaší konfigurace služby informace o certifikátech. Všimněte si, že vaše certifikáty nejsou součástí vaší služby. své certifikáty musíte nahrát samostatně do Azure prostřednictvím [Azure Portal](http://portal.azure.com).
 
-Přidání certifikátu tady přidá informace o certifikátech pro vaše konfigurace služby. Certifikáty nejsou zabalené službou; musíte nahrát certifikáty samostatně prostřednictvím webu Azure portal.
+Přidáním certifikátu sem přidáte informace o certifikátech do vaší konfigurace služby. Certifikáty nejsou zabaleny se službou. certifikáty musíte nahrát samostatně prostřednictvím Azure Portal.
 
-Pokud chcete přidružit certifikát vaší role, zadejte název certifikátu. Použijte tento název k odkazování na certifikátu, když konfigurujete koncový bod HTTPS na **koncové body** stránky. Dále určete, zda je do úložiště certifikátů **místního počítače** nebo **aktuálního uživatele** a název úložiště. Nakonec zadejte kryptografický otisk certifikátu. Pokud je certifikát v aktuální User\Personal úložiště (Moje), můžete zadat kryptografický otisk certifikátu tak, že vyberete certifikát naplněný seznam. Pokud se nachází v jiném umístění, zadejte hodnotu kryptografického otisku ručně.
+Chcete-li přidružit certifikát k roli, zadejte název certifikátu. Tento název se používá pro odkazování na certifikát při konfiguraci koncového bodu HTTPS na stránce **koncové body** . Dále určete, zda je úložiště certifikátů **místní počítač** nebo **aktuální uživatel** a název úložiště. Nakonec zadejte kryptografický otisk certifikátu. Pokud se certifikát nachází v aktuálním úložišti User\Personal (My), můžete zadat kryptografický otisk certifikátu tak, že ho vyberete ze seznamu s vyplněnými certifikáty. Pokud se nachází v jakémkoli jiném umístění, zadejte hodnotu kryptografického otisku ručně.
 
-Po přidání certifikátu z úložiště certifikátů všechny zprostředkující certifikáty jsou automaticky přidány do konfigurace nastavení za vás. Kromě toho tyto zprostředkující certifikáty, musí se nahrát do Azure a správnou konfiguraci služby pro protokol SSL.
+Když přidáte certifikát z úložiště certifikátů, všechny zprostředkující certifikáty se automaticky přidají do nastavení konfigurace za vás. Kromě toho musí být tyto zprostředkující certifikáty nahrané do Azure, aby bylo možné správně nakonfigurovat službu pro protokol SSL.
 
-Všechny certifikáty pro správu, které spojují s vaší službou použijte k vaší službě pouze v případě, že je spuštěná v cloudu. Pokud vaše služba je spuštěná v místním vývojovém prostředí, používá standardní certifikát, který je spravovaný nástrojem emulátor služby výpočty.
+Všechny certifikáty pro správu, které přiřadíte ke službě, se vztahují na vaši službu jenom v případě, že běží v cloudu. Když je vaše služba spuštěná v místním vývojovém prostředí, používá standardní certifikát, který je spravovaný emulátorem služby Compute.

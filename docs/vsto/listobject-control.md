@@ -18,66 +18,66 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 323286555bf1ed932b85ed6da84a344787fae265
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 3b5286a4bddff2b529abd0a565bb4dbeef7ffaf3
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63438790"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71251870"
 ---
 # <a name="listobject-control"></a>ListObject – ovládací prvek
-  <xref:Microsoft.Office.Tools.Excel.ListObject> Je ovládací prvek seznamu, který zpřístupňuje události a může být vázaný na data. Když přidáte seznam do listu, vytvoří Visual Studio <xref:Microsoft.Office.Tools.Excel.ListObject> ovládací prvek, který můžete programovat proti přímo bez nutnosti procházení objektový model aplikace Microsoft Office Excel.
+  <xref:Microsoft.Office.Tools.Excel.ListObject> Ovládací prvek je seznam, který zpřístupňuje události a může být svázán s daty. Když přidáte seznam do listu, Visual Studio vytvoří <xref:Microsoft.Office.Tools.Excel.ListObject> ovládací prvek, který lze programovat přímo bez nutnosti procházet systém Microsoft Office objektový model aplikace Excel.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
 ## <a name="create-the-control"></a>Vytvoření ovládacího prvku
- Projekty na úrovni dokumentu, můžete přidat <xref:Microsoft.Office.Tools.Excel.ListObject> ovládacích prvků na list v době návrhu nebo v době běhu. Projekty doplňků VSTO, můžete přidat <xref:Microsoft.Office.Tools.Excel.ListObject> ovládacích prvků na listech pouze za běhu. Další informace najdete v tématu [jak: Přidání ovládacích prvků ListObject do listů](../vsto/how-to-add-listobject-controls-to-worksheets.md).
+ V projektech na úrovni dokumentu můžete přidat <xref:Microsoft.Office.Tools.Excel.ListObject> ovládací prvky do listu v době návrhu nebo v době běhu. V projektech doplňku VSTO můžete přidat <xref:Microsoft.Office.Tools.Excel.ListObject> ovládací prvky do listů pouze v době běhu. Další informace najdete v tématu [jak: Přidejte ovládací prvky ListObject do](../vsto/how-to-add-listobject-controls-to-worksheets.md)listů.
 
 > [!NOTE]
-> Ve výchozím nastavení, nejsou trvalé dynamicky vytvořený seznam objektů v listu jako hostitele Určuje, kdy je uzavřen do listu. Další informace najdete v tématu [přidání ovládacích prvků do dokumentů Office za běhu](../vsto/adding-controls-to-office-documents-at-run-time.md).
+> Ve výchozím nastavení se dynamicky vytvořené objekty seznamu neukládají v listu jako hostitelské ovládací prvky při zavření listu. Další informace najdete v tématu [Přidání ovládacích prvků do dokumentů Office v době běhu](../vsto/adding-controls-to-office-documents-at-run-time.md).
 
-## <a name="bind-data-to-the-control"></a>Vytvoření vazby dat k ovládacímu prvku
- A <xref:Microsoft.Office.Tools.Excel.ListObject> ovládací prvek podporuje jednoduché a komplexní datovou vazbu. <xref:Microsoft.Office.Tools.Excel.ListObject> Ovládací prvek může být vázán na zdroji dat pomocí <xref:Microsoft.Office.Tools.Excel.ListObject.DataSource%2A> a <xref:Microsoft.Office.Tools.Excel.ListObject.DataMember%2A> vlastnosti v době návrhu nebo <xref:Microsoft.Office.Tools.Excel.ListObject.SetDataBinding%2A> metoda za běhu.
-
-> [!NOTE]
-> <xref:Microsoft.Office.Tools.Excel.ListObject> Automaticky aktualizuje, když je vázán na zdroj dat, jako například <xref:System.Data.DataTable>, která vyvolává události, když se data změní. Svážete-li <xref:Microsoft.Office.Tools.Excel.ListObject> ke zdroji dat, který nevyvolá události, když se data změní, musíte zavolat <xref:Microsoft.Office.Tools.Excel.ListObject.RefreshDataRow%2A> nebo <xref:Microsoft.Office.Tools.Excel.ListObject.RefreshDataRows%2A> způsob aktualizace <xref:Microsoft.Office.Tools.Excel.ListObject>.
-
- Když přidáte <xref:Microsoft.Office.Tools.Excel.ListObject> na listu buňku mapováním opakující se element schématu na tuto buňku, Visual Studio automaticky mapuje <xref:Microsoft.Office.Tools.Excel.ListObject> pro generované datová sada. Ale <xref:Microsoft.Office.Tools.Excel.ListObject> není automaticky vázán na data. Můžete provést kroky k vytvoření vazby <xref:Microsoft.Office.Tools.Excel.ListObject> do datové sady v době návrhu nebo za běhu v projektu úrovni dokumentu. Můžete programově vytvořit vazbu <xref:Microsoft.Office.Tools.Excel.ListObject> k datové sadě za běhu v doplňku VSTO.
-
- Protože data jsou oddělená od <xref:Microsoft.Office.Tools.Excel.ListObject>, by měla přidávat a odebírat data prostřednictvím vázané datové sady a ne přímo prostřednictvím <xref:Microsoft.Office.Tools.Excel.ListObject>. Pokud prostřednictvím každý použitý mechanizmus, se aktualizuje data v datové sadě vázané <xref:Microsoft.Office.Tools.Excel.ListObject> změny automaticky odrazí v ovládacím prvku. Další informace najdete v tématu [vytvoření vazby dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md).
-
- Můžete rychle přejít k vyplnění <xref:Microsoft.Office.Tools.Excel.ListObject> ovládacího prvku pomocí vytvoření vazby <xref:Microsoft.Office.Tools.Excel.ListObject> ke zdroji dat. Pokud upravíte data v vázaný na data <xref:Microsoft.Office.Tools.Excel.ListObject>, změny se automaticky provedeny ve zdroji dat. Pokud chcete, aby vyplnil <xref:Microsoft.Office.Tools.Excel.ListObject> a potom povolit uživatelům změnit data v <xref:Microsoft.Office.Tools.Excel.ListObject> beze změny zdroje dat, můžete použít <xref:Microsoft.Office.Tools.Excel.ListObject.Disconnect%2A> metodu detach <xref:Microsoft.Office.Tools.Excel.ListObject> ze zdroje dat. Další informace najdete v tématu [jak: Vyplnění ovládacích prvků ListObject daty](../vsto/how-to-fill-listobject-controls-with-data.md).
+## <a name="bind-data-to-the-control"></a>Vázání dat k ovládacímu prvku
+ <xref:Microsoft.Office.Tools.Excel.ListObject> Ovládací prvek podporuje jednoduchou a složitou datovou vazbu. Ovládací prvek může být svázán se zdrojem dat <xref:Microsoft.Office.Tools.Excel.ListObject.DataSource%2A> pomocí vlastností a <xref:Microsoft.Office.Tools.Excel.ListObject.DataMember%2A> v době návrhu nebo <xref:Microsoft.Office.Tools.Excel.ListObject.SetDataBinding%2A> metodou v době běhu. <xref:Microsoft.Office.Tools.Excel.ListObject>
 
 > [!NOTE]
-> Vytváření datových vazeb není podporováno na překrývající se <xref:Microsoft.Office.Tools.Excel.ListObject> ovládacích prvků.
+> Automaticky se aktualizuje, když je svázán se zdrojem dat, jako <xref:System.Data.DataTable>je například, který vyvolává události při změně dat. <xref:Microsoft.Office.Tools.Excel.ListObject> Pokud svážete <xref:Microsoft.Office.Tools.Excel.ListObject> se zdrojem dat, který nevyvolává události při změně dat, je nutné <xref:Microsoft.Office.Tools.Excel.ListObject.RefreshDataRow%2A> zavolat metodu <xref:Microsoft.Office.Tools.Excel.ListObject>nebo <xref:Microsoft.Office.Tools.Excel.ListObject.RefreshDataRows%2A> pro aktualizaci.
 
-### <a name="improve-performance-in-listobject-controls"></a>Zlepšení výkonu ovládacích prvků ListObject
- Čtení souboru XML do vázaný na data <xref:Microsoft.Office.Tools.Excel.ListObject> ovládací prvek je spíše pomalejší, pokud nejprve vazbu ovládacího prvku a následně zavolat <xref:System.Data.DataSet.ReadXml%2A> pro naplnění dataset. Chcete-li zvýšit výkon, zavolejte <xref:System.Data.DataSet.ReadXml%2A> před vazbu ovládacího prvku.
+ Při přidání <xref:Microsoft.Office.Tools.Excel.ListObject> do buňky listu pomocí mapování opakujícího se elementu schématu na tuto buňku aplikace Visual Studio automaticky <xref:Microsoft.Office.Tools.Excel.ListObject> mapuje na vygenerovanou datovou sadu. <xref:Microsoft.Office.Tools.Excel.ListObject> Není však automaticky svázán s daty. Můžete provést kroky pro svázání <xref:Microsoft.Office.Tools.Excel.ListObject> s datovou sadou v době návrhu nebo v době běhu v projektu na úrovni dokumentu. Můžete programově navazovat <xref:Microsoft.Office.Tools.Excel.ListObject> na datovou sadu v době běhu v doplňku VSTO.
 
-### <a name="disconnect-listobject-controls-from-the-data-source"></a>Odpojit ovládacích prvků ListObject ze zdroje dat.
- Po vyplnění <xref:Microsoft.Office.Tools.Excel.ListObject> ovládacího prvku s daty pomocí vazby ke zdroji dat, můžete odpojit ho tak, aby se změny provedené v datech v objektu seznamu nemají vliv na zdroj dat. Další informace najdete v tématu [jak: Vyplnění ovládacích prvků ListObject daty](../vsto/how-to-fill-listobject-controls-with-data.md).
+ Vzhledem k tomu <xref:Microsoft.Office.Tools.Excel.ListObject>, že jsou data oddělená od, byste měli přidat a odebrat data prostřednictvím vázané datové sady, a ne <xref:Microsoft.Office.Tools.Excel.ListObject>přímo přes. Pokud jsou data v vázané datové sadě aktualizována prostřednictvím libovolného mechanismu, <xref:Microsoft.Office.Tools.Excel.ListObject> ovládací prvek automaticky odráží změny. Další informace najdete v tématu [vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md).
 
-### <a name="restore-column-and-row-order"></a>Obnovení pořadí sloupců a řádků
- Po vytvoření vazby dat k <xref:Microsoft.Office.Tools.Excel.ListObject> ovládací prvek, který byl přidán do dokumentu v době návrhu, Visual Studio uchovává informace o pořadí sloupců a řádků pokaždé, když sešit uložený. Pokud se uživatel přesune <xref:Microsoft.Office.Tools.Excel.ListObject> sloupců nebo řádků za běhu, při příštím otevření sešitu zachování nové pořadí a <xref:Microsoft.Office.Tools.Excel.ListObject> ke zdroji dat znovu naváže ovládací prvek.
+ <xref:Microsoft.Office.Tools.Excel.ListObject> Ovládací prvek můžete rychle vyplnit vazbou <xref:Microsoft.Office.Tools.Excel.ListObject> na zdroj dat. Pokud data upravíte v datové vazbě <xref:Microsoft.Office.Tools.Excel.ListObject>, změny se automaticky provedou také ve zdroji dat. Pokud chcete vyplnit <xref:Microsoft.Office.Tools.Excel.ListObject> a pak uživateli povolit změnu dat v okně <xref:Microsoft.Office.Tools.Excel.ListObject> bez změny zdroje dat <xref:Microsoft.Office.Tools.Excel.ListObject.Disconnect%2A> , můžete použít metodu k odpojení <xref:Microsoft.Office.Tools.Excel.ListObject> od zdroje dat. Další informace najdete v tématu [jak: Naplní ovládací prvky ListObject](../vsto/how-to-fill-listobject-controls-with-data.md)daty.
 
- Pokud chcete provést obnovení <xref:Microsoft.Office.Tools.Excel.ListObject> na jeho původní pořadí sloupců a řádků, můžete volat <xref:Microsoft.Office.Tools.Excel.ListObject.ResetPersistedBindingInformation%2A> metody. Tato metoda odstraní vlastní šablony dokumentů vlastnosti související s sloupec a zadaný řádek pořadí <xref:Microsoft.Office.Tools.Excel.ListObject>. Volejte tuto metodu z <xref:Microsoft.Office.Tools.Excel.Workbook.Shutdown> událostí v sešitu, pokud nechcete zachovat pořadí sloupců a řádků <xref:Microsoft.Office.Tools.Excel.ListObject>.
+> [!NOTE]
+> Datová vazba není podporována u překrývajících <xref:Microsoft.Office.Tools.Excel.ListObject> se ovládacích prvků.
+
+### <a name="improve-performance-in-listobject-controls"></a>Zvýšení výkonu v ovládacích prvcích ListObject
+ Čtení souboru XML do ovládacího prvku vázaného <xref:Microsoft.Office.Tools.Excel.ListObject> na data má za následek pomalejší, pokud ovládací prvek navážete jako první, a potom zavolejte <xref:System.Data.DataSet.ReadXml%2A> k vyplnění datové sady. Chcete-li zvýšit výkon <xref:System.Data.DataSet.ReadXml%2A> , zavolejte před vytvořením vazby ovládacího prvku.
+
+### <a name="disconnect-listobject-controls-from-the-data-source"></a>Odpojit ovládací prvky ListObject ze zdroje dat
+ Po vyplnění <xref:Microsoft.Office.Tools.Excel.ListObject> ovládacího prvku daty jeho navázáním na zdroj dat ho můžete odpojit, aby změny provedené v datech v objektu list neovlivnily zdroj dat. Další informace najdete v tématu [jak: Naplní ovládací prvky ListObject](../vsto/how-to-fill-listobject-controls-with-data.md)daty.
+
+### <a name="restore-column-and-row-order"></a>Obnovit pořadí sloupců a řádků
+ Při vytváření vazby dat k <xref:Microsoft.Office.Tools.Excel.ListObject> ovládacímu prvku, který byl přidán do dokumentu v době návrhu, aplikace Visual Studio při každém uložení sešitu sleduje sloupec a pořadí řádků. Pokud uživatel během běhu přesune <xref:Microsoft.Office.Tools.Excel.ListObject> sloupce nebo řádky, nová objednávka se zachová při příštím otevření sešitu <xref:Microsoft.Office.Tools.Excel.ListObject> a ovládací prvek se znovu připojí ke zdroji dat.
+
+ Chcete-li obnovit <xref:Microsoft.Office.Tools.Excel.ListObject> původní pořadí sloupců a řádků, můžete <xref:Microsoft.Office.Tools.Excel.ListObject.ResetPersistedBindingInformation%2A> zavolat metodu. Tato metoda odebere vlastnosti vlastního dokumentu související se zadaným <xref:Microsoft.Office.Tools.Excel.ListObject>pořadím sloupce a řádku. Tuto metodu zavolejte z <xref:Microsoft.Office.Tools.Excel.Workbook.Shutdown> události sešitu, pokud nechcete zachovat pořadí <xref:Microsoft.Office.Tools.Excel.ListObject>sloupců a řádků.
 
 ## <a name="format"></a>Formát
- Který lze použít k formátování <xref:Microsoft.Office.Interop.Excel.ListObject> lze použít u <xref:Microsoft.Office.Tools.Excel.ListObject> ovládacího prvku. To zahrnuje ohraničení, písma, formát čísla a styly. Koncoví uživatelé mohou změnit uspořádání sloupců v vázaný na data <xref:Microsoft.Office.Tools.Excel.ListObject>, a tyto změny se zachovat pomocí poskytnutého dokumentu <xref:Microsoft.Office.Tools.Excel.ListObject> byl přidán do dokumentu v době návrhu. Při příštím otevření dokumentu, objekt seznamu bude vázán ke stejnému zdroji dat, ale pořadí sloupců se změny uživatelů projeví.
+ Formátování, které lze použít na objekt <xref:Microsoft.Office.Interop.Excel.ListObject> , lze použít <xref:Microsoft.Office.Tools.Excel.ListObject> pro ovládací prvek. To zahrnuje ohraničení, písma, formát čísel a styly. Koncoví uživatelé mohou změnit uspořádání sloupců v datové vazbě <xref:Microsoft.Office.Tools.Excel.ListObject>a tyto změny budou trvale provedeny s dokumentem, a to za předpokladu, že <xref:Microsoft.Office.Tools.Excel.ListObject> byl přidán do dokumentu v době návrhu. Při příštím otevření dokumentu bude objekt list svázán se stejným zdrojem dat, ale pořadí sloupců bude odrážet změny provedené uživateli.
 
-## <a name="add-and-remove-columns-at-runtime"></a>Přidat a odebrat sloupce za běhu
- Nemůžete ručně přidat nebo odebrat sloupce v vázaný na data <xref:Microsoft.Office.Tools.Excel.ListObject> ovládacího prvku za běhu. Pokud koncový uživatel pokusí odstranit sloupec, se okamžitě obnoví a všechny sloupce, které přidává se odeberou. Proto je potřeba napsat kód, který vysvětlovat uživatelům, proč jim nelze provádět tyto akce na <xref:Microsoft.Office.Tools.Excel.ListObject> , který je vázán na data. Visual Studio obsahuje několik událostí <xref:Microsoft.Office.Tools.Excel.ListObject> související s datovou vazbu. Například můžete použít <xref:Microsoft.Office.Tools.Excel.ListObject.OriginalDataRestored> události a upozornit uživatele, kteří se pokusí odstranit data nejde odstranit a byla obnovena.
+## <a name="add-and-remove-columns-at-run-time"></a>Přidat a odebrat sloupce za běhu
+ V ovládacím prvku vázaného <xref:Microsoft.Office.Tools.Excel.ListObject> na data nelze za běhu přidat ani odebrat sloupce. Pokud se koncový uživatel pokusí odstranit sloupec, bude okamžitě obnoven a všechny přidané sloupce budou odebrány. Proto je důležité napsat kód pro vysvětlení uživatelům, proč nemůže provádět tyto akce na objekt <xref:Microsoft.Office.Tools.Excel.ListObject> , který je vázán na data. Visual Studio poskytuje několik událostí <xref:Microsoft.Office.Tools.Excel.ListObject> souvisejících s datovou vazbou. Můžete například použít <xref:Microsoft.Office.Tools.Excel.ListObject.OriginalDataRestored> událost, která upozorní uživatele, že data, která se pokusila o odstranění, nelze odstranit a že byla obnovena.
 
-## <a name="add-and-remove-rows-at-runtime"></a>Přidání a odebrání řádků za běhu
- Můžete ručně přidat a odebrat řádky v vázaný na data <xref:Microsoft.Office.Tools.Excel.ListObject> ovládací prvek, pokud zdroj dat umožňuje přidání nových řádků a není jen pro čtení. Můžete napsat kód před událostmi, jako <xref:Microsoft.Office.Tools.Excel.ListObject.BeforeAddDataBoundRow> ověřit data. Další informace najdete v tématu [jak: Ověření dat při přidání nového řádku do ovládacího prvku ListObject](../vsto/how-to-validate-data-when-a-new-row-is-added-to-a-listobject-control.md).
+## <a name="add-and-remove-rows-at-run-time"></a>Přidat a odebrat řádky v době běhu
+ Můžete ručně přidat a odebrat řádky v ovládacím prvku vázaného <xref:Microsoft.Office.Tools.Excel.ListObject> na data, pokud zdroj dat umožňuje přidání nových řádků a není jen pro čtení. Můžete napsat kód proti událostem, jako je <xref:Microsoft.Office.Tools.Excel.ListObject.BeforeAddDataBoundRow> například, k ověření dat. Další informace najdete v tématu [jak: Ověří data při přidání nového řádku do ovládacího prvku](../vsto/how-to-validate-data-when-a-new-row-is-added-to-a-listobject-control.md)ListObject.
 
- Vztah mezi objektem seznamu do zdroje dat. někdy způsobí běžné chyby. Například můžete namapovat sloupce, které chcete zobrazit v <xref:Microsoft.Office.Tools.Excel.ListObject>, takže pokud vynecháte sloupce, které mají omezení, jako je například pole, ve kterém nelze přijmout hodnoty null, chyby jsou vyvolány při každém vytvoření řádku. Můžete napsat kód v obslužné rutině události pro přidání chybějících hodnot <xref:Microsoft.Office.Tools.Excel.ListObject.ErrorAddDataBoundRow> událostí.
+ V některých případech je relace objektu seznamu ke zdroji dat způsobena běžnými chybami. Například můžete namapovat <xref:Microsoft.Office.Tools.Excel.ListObject>, které sloupce se mají zobrazit v, takže pokud vynecháte sloupce, které mají omezení, například pole, které nemůže přijmout hodnoty null, jsou při každém vytvoření řádku vyvolány chyby. Můžete napsat kód pro přidání chybějících hodnot v obslužné rutině události pro <xref:Microsoft.Office.Tools.Excel.ListObject.ErrorAddDataBoundRow> událost.
 
 ## <a name="rename-listobject-controls-in-excel"></a>Přejmenování ovládacích prvků ListObject v aplikaci Excel
- Excel umožňuje uživatelům změnit název tabulky aplikace Excel v době běhu pomocí **návrhu** kartu. Ale <xref:Microsoft.Office.Tools.Excel.ListObject> ovládací prvek nepodporuje tuto funkci. Pokud se uživatel pokusí o přejmenování Excelovou tabulku, která odpovídá <xref:Microsoft.Office.Tools.Excel.ListObject>, název tabulky aplikace Excel se automaticky vrátí k původnímu názvu při uložení sešitu.
+ Aplikace Excel umožňuje uživatelům měnit názvy tabulek aplikace Excel v době běhu pomocí karty **Návrh** . <xref:Microsoft.Office.Tools.Excel.ListObject> Tento ovládací prvek však tuto funkci nepodporuje. Pokud se uživatel pokusí přejmenovat excelovou tabulku, která odpovídá <xref:Microsoft.Office.Tools.Excel.ListObject>, název tabulky aplikace Excel se při uložení sešitu automaticky vrátí k původnímu názvu.
 
 ## <a name="events"></a>Události
- Tyto události jsou k dispozici pro <xref:Microsoft.Office.Tools.Excel.ListObject> ovládacího prvku:
+ Pro <xref:Microsoft.Office.Tools.Excel.ListObject> ovládací prvek jsou k dispozici následující události:
 
 - <xref:Microsoft.Office.Tools.Excel.ListObject.BeforeAddDataBoundRow>
 
@@ -111,13 +111,13 @@ ms.locfileid: "63438790"
 - [Automatizace aplikace Excel s použitím rozšířených objektů](../vsto/automating-excel-by-using-extended-objects.md)
 - [Postupy: Přidání ovládacích prvků ListObject do listů](../vsto/how-to-add-listobject-controls-to-worksheets.md)
 - [Postupy: Změna velikosti ovládacích prvků ListObject](../vsto/how-to-resize-listobject-controls.md)
-- [Postupy: Ověření dat při přidání nového řádku do ovládacího prvku ListObject](../vsto/how-to-validate-data-when-a-new-row-is-added-to-a-listobject-control.md)
-- [Postupy: Mapování sloupců objektu ListObject na data](../vsto/how-to-map-listobject-columns-to-data.md)
-- [Postupy: Vyplnění ovládacích prvků ListObject daty](../vsto/how-to-fill-listobject-controls-with-data.md)
-- [Ukázky vývoje pro Office a názorné postupy](../vsto/office-development-samples-and-walkthroughs.md)
-- [Vytvoření vazby dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
-- [Rozšíření dokumentů aplikace Word a sešitů aplikace Excel v doplňcích VSTO za běhu](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)
+- [Postupy: Ověřit data při přidání nového řádku do ovládacího prvku ListObject](../vsto/how-to-validate-data-when-a-new-row-is-added-to-a-listobject-control.md)
+- [Postupy: Mapování sloupců ListObject na data](../vsto/how-to-map-listobject-columns-to-data.md)
+- [Postupy: Vyplnit ovládací prvky ListObject daty](../vsto/how-to-fill-listobject-controls-with-data.md)
+- [Ukázky a návody pro vývoj pro Office](../vsto/office-development-samples-and-walkthroughs.md)
+- [Vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [Rozšiřování dokumentů aplikace Word a excelových sešitů v doplňcích VSTO za běhu](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)
 - [Ovládací prvky v dokumentech Office](../vsto/controls-on-office-documents.md)
-- [Přidání ovládacích prvků do dokumentů Office za běhu](../vsto/adding-controls-to-office-documents-at-run-time.md)
+- [Přidání ovládacích prvků do dokumentů Office v době běhu](../vsto/adding-controls-to-office-documents-at-run-time.md)
 - [Postupy: Naplnění listů daty z databáze](../vsto/how-to-populate-worksheets-with-data-from-a-database.md)
-- [Programová omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
+- [Programové omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)

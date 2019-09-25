@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Změna velikosti ovládacích prvků v buňkách listu'
+title: 'Postupy: Změnit velikost ovládacích prvků v buňkách listu'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,50 +15,50 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: b51f26a4ea2dec50c5ee90c38f49412866b6f866
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 08c65be450c45d7797984105723d5ae1b01a2d63
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62961488"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71252078"
 ---
-# <a name="how-to-resize-controls-within-worksheet-cells"></a>Postupy: Změna velikosti ovládacích prvků v buňkách listu
-  Při změně velikosti sloupce nebo řádky v listu, změnit velikost hostitelských ovládacích prvků v buňkách automaticky na výšku nebo šířku na buňku, která se změnila. Ovládací prvky Windows Forms se velikost automaticky ve výchozím nastavení.
+# <a name="how-to-resize-controls-within-worksheet-cells"></a>Postupy: Změnit velikost ovládacích prvků v buňkách listu
+  Když změníte velikost sloupců nebo řádků na listu, všechny ovládací prvky hostitele v buňkách se automaticky změní na výšku nebo šířku buňky, u které se změnila velikost. Ovládací prvky model Windows Forms ve výchozím nastavení automaticky nemění velikost.
 
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]
 
- Pokud chcete přidat ovládací prvky v době návrhu, musíte nastavit možnosti pro každý ovládací prvek umístění.
+ Pokud přidáte ovládací prvky v době návrhu, je nutné nastavit možnosti umístění pro každý ovládací prvek.
 
- Pokud přidáte ovládací prvek Windows Forms prostřednictvím kódu programu a zadat argument rozsahu, ovládací prvek automaticky změní velikost při změně velikosti buněk v rámci rozsahu. Další informace najdete v tématu [přidání ovládacích prvků do dokumentů Office za běhu](../vsto/adding-controls-to-office-documents-at-run-time.md).
+ Pokud přidáte ovládací prvek model Windows Forms programově a zadáte argument rozsahu, ovládací prvek automaticky změní velikost při změně velikosti buňky v rozsahu. Další informace najdete v tématu [Přidání ovládacích prvků do dokumentů Office v době běhu](../vsto/adding-controls-to-office-documents-at-run-time.md).
 
-## <a name="resize-controls-at-design-time"></a>Změna velikosti ovládacích prvků v době návrhu
+## <a name="resize-controls-at-design-time"></a>Změnit velikost ovládacích prvků v době návrhu
 
-### <a name="to-make-controls-resize-with-cells-at-design-time"></a>Chcete-li ovládací prvky, změna velikosti buněk v době návrhu
+### <a name="to-make-controls-resize-with-cells-at-design-time"></a>Chcete-li změnit velikost ovládacích prvků s buňkami v době návrhu
 
-1. Z **nástrojů**, přetáhněte ovládací prvek Windows Forms do listu.
+1. Z **panelu nástrojů**přetáhněte ovládací prvek model Windows Forms do listu.
 
-2. Klikněte pravým tlačítkem na ovládací prvek a potom klikněte na tlačítko **formát ovládacího prvku**.
+2. Klikněte pravým tlačítkem myši na ovládací prvek a potom klikněte na možnost **Formát ovládacího prvku**.
 
-3. V **formát ovládacího prvku** dialogové okno, klikněte na tlačítko **vlastnosti** kartu.
+3. V dialogovém okně **Formát ovládacího prvku** klikněte na kartu **vlastnosti** .
 
-4. V části **umístění objektu**, vyberte **přesunutí a změna velikosti buněk** možnost a potom klikněte na tlačítko **OK**.
+4. V části **umístění objektu**vyberte možnost **přesunout a velikost s buňkami** a pak klikněte na tlačítko **OK**.
 
-     Když změníte velikost buňky, která obsahuje ovládací prvek, ovládací prvek přizpůsobí svou velikost buňky.
+     Když změníte velikost buňky, která obsahuje ovládací prvek, ovládací prvek změní velikost tak, aby odpovídala buňce.
 
-## <a name="resize-controls-at-runtime"></a>Změna velikosti ovládacích prvků za běhu
- Pokud přidáte ovládacího prvku Windows Forms v době běhu a předat <xref:Microsoft.Office.Interop.Excel.Range> jako umístění pro ovládací prvek, ovládací prvek automaticky změní velikost při změně velikosti na buňku listu, která obsahuje rozsah.
+## <a name="resize-controls-at-run-time"></a>Změnit velikost ovládacích prvků za běhu
+ Pokud přidáte model Windows Forms ovládací prvek za běhu a předáte <xref:Microsoft.Office.Interop.Excel.Range> ho jako umístění pro ovládací prvek, ovládací prvek se změní automaticky, když se změní velikost buňky listu, která obsahuje rozsah.
 
-### <a name="to-make-controls-resize-with-cells-at-run-time"></a>Aby se změna velikosti buněk v době běhu ovládací prvky
+### <a name="to-make-controls-resize-with-cells-at-run-time"></a>Chcete-li změnit velikost ovládacích prvků na buňky v době běhu
 
-1. Přidání ovládacího prvku na rozsah A1.
+1. Přidejte ovládací prvek do rozsahu a1.
 
      [!code-vb[Trin_VstcoreProgrammingControlsExcel#5](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#5)]
      [!code-csharp[Trin_VstcoreProgrammingControlsExcel#5](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#5)]
 
-     Když změníte velikost buňky, která obsahuje ovládací prvek, ovládací prvek přizpůsobí svou velikost buňky.
+     Když změníte velikost buňky, která obsahuje ovládací prvek, ovládací prvek změní velikost tak, aby odpovídala buňce.
 
-## <a name="reset-control-placement"></a>Obnovení umístění ovládacího prvku
- Můžete resetovat, umístění a změnu velikosti ovládacího prvku tak, že nastavíte `Placement` vlastnost na jednu z následujících <xref:Microsoft.Office.Interop.Excel.XlPlacement> hodnoty:
+## <a name="reset-control-placement"></a>Resetovat umístění ovládacího prvku
+ Umístění a změnu velikosti ovládacího prvku můžete obnovit nastavením `Placement` vlastnosti na jednu z následujících <xref:Microsoft.Office.Interop.Excel.XlPlacement> hodnot:
 
 - <xref:Microsoft.Office.Interop.Excel.XlPlacement.xlFreeFloating>
 
@@ -66,16 +66,16 @@ ms.locfileid: "62961488"
 
 - <xref:Microsoft.Office.Interop.Excel.XlPlacement.xlMoveAndSize>
 
-### <a name="to-change-the-behavior-of-a-control-so-that-it-does-not-resize-or-move-with-the-cell"></a>Chcete-li změnit chování ovládacího prvku tak, aby nepodporuje velikost ani přesunout s buňky
+### <a name="to-change-the-behavior-of-a-control-so-that-it-does-not-resize-or-move-with-the-cell"></a>Změna chování ovládacího prvku tak, aby se nezměnila velikost ani přesun s buňkou
 
-1. Třeba volat vlastnost umístění ovládacího prvku a nastavte hodnotu na <xref:Microsoft.Office.Interop.Excel.XlPlacement.xlFreeFloating>.
+1. Zavolejte vlastnost umístění ovládacího prvku a nastavte hodnotu na <xref:Microsoft.Office.Interop.Excel.XlPlacement.xlFreeFloating>.
 
      [!code-vb[Trin_VstcoreProgrammingControlsExcel#6](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#6)]
      [!code-csharp[Trin_VstcoreProgrammingControlsExcel#6](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#6)]
 
 ## <a name="see-also"></a>Viz také:
 - [Ovládací prvky v dokumentech Office](../vsto/controls-on-office-documents.md)
-- [Postupy: Přidání ovládacích prvků Windows Forms do dokumentů Office](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)
-- [Postupy: Skrytí ovládacích prvků na listech při tisku](../vsto/how-to-hide-controls-on-worksheets-when-printing.md)
-- [Přidání ovládacích prvků do dokumentů Office za běhu](../vsto/adding-controls-to-office-documents-at-run-time.md)
-- [Omezení ovládacích prvků Windows Forms v dokumentech Office](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)
+- [Postupy: Přidání ovládacích prvků model Windows Forms do dokumentů Office](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)
+- [Postupy: Při tisku skrývat ovládací prvky na listech](../vsto/how-to-hide-controls-on-worksheets-when-printing.md)
+- [Přidání ovládacích prvků do dokumentů Office v době běhu](../vsto/adding-controls-to-office-documents-at-run-time.md)
+- [Omezení model Windows Formsch ovládacích prvků v dokumentech Office](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)

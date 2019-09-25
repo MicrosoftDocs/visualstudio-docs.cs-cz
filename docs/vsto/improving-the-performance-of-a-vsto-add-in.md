@@ -1,5 +1,5 @@
 ---
-title: Zvýšení výkonu doplňku VSTO
+title: Zlepšení výkonu doplňku VSTO
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -10,54 +10,54 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2add0dfced6a3b8e8263dafe133ee3a2f86637f5
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 79f1c4a55321a1b039cc2702b1040e2ab9d4ac9d
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63420941"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71255644"
 ---
-# <a name="improve-the-performance-of-a-vsto-add-in"></a>Zvýšení výkonu doplňku VSTO
-  Může dát uživatelům lepší prostředí pomocí optimalizace doplňků VSTO, které vytvoříte pro Office, aplikace tak, aby jejich rychlé spuštění, vypnutí, otevřete položky a provádět další úlohy. Pokud váš doplněk VSTO pro Outlook, může snížit pravděpodobnost, že váš doplněk VSTO bude zakázána z důvodu nízký výkon. Můžete zvýšit výkon vašeho doplňku VSTO pomocí implementace následujících strategií:
+# <a name="improve-the-performance-of-a-vsto-add-in"></a>Zlepšení výkonu doplňku VSTO
+  Uživatelům můžete poskytnout lepší prostředí tím, že optimalizujete doplňky VSTO, které vytvoříte pro aplikace Office tak, aby se rychle spouštěly, vypnuly, otevíraly položky a prováděly další úkoly. Pokud je doplněk VSTO pro Outlook k dispozici, můžete také snížit pravděpodobnost, že bude váš doplněk VSTO zakázán z důvodu špatného výkonu. Výkon doplňku VSTO můžete zvýšit implementací následujících strategií:
 
-- [Načtení doplňků VSTO na vyžádání](#Load).
+- [Načíst doplňky VSTO na vyžádání](#Load)
 
-- [Publikování řešení pro systém Office pomocí Instalační služby systému Windows](#Publish).
+- [Publikujte řešení pro Office pomocí Instalační služba systému Windows](#Publish).
 
-- [Obejít pásu karet reflexe](#Bypass).
+- [Vynechat odraz pásu karet](#Bypass)
 
-- [Provádět nákladné operace v samostatných prováděcího vlákna](#Perform).
+- [Provádějte náročné operace v samostatném vlákně pro spuštění](#Perform).
 
-  Další informace o tom, jak optimalizovat doplňku VSTO pro Outlook, naleznete v tématu [kritéria výkonu zachovat doplňků VSTO povolené](http://go.microsoft.com/fwlink/?LinkID=266503).
+  Další informace o tom, jak optimalizovat doplněk pro Outlook VSTO, najdete v tématu [kritéria výkonu, aby doplňky VSTO byly povolené](http://go.microsoft.com/fwlink/?LinkID=266503).
 
-## <a name="Load"></a> Načtení doplňků VSTO na vyžádání
- Můžete nakonfigurovat doplňku VSTO pro načtení pouze za následujících okolností:
+## <a name="Load"></a>Načíst doplňky VSTO na vyžádání
+ Doplněk VSTO můžete nakonfigurovat tak, aby se načetl jenom za následujících okolností:
 
-- Když se poprvé uživatel spustí aplikaci, která po instalaci doplňku VSTO.
+- Když uživatel poprvé spustí aplikaci po instalaci doplňku VSTO.
 
-- Když se poprvé interakci uživatele po spuštění aplikace kdykoli následné s doplňku VSTO.
+- Když uživatel poprvé komunikuje s doplňkem VSTO po spuštění aplikace v dalším čase.
 
-  Například doplňku VSTO může vyplnit tabulku s daty když se uživatel rozhodne, která má popisek tlačítka s vlastní **získat Moje Data**. Aplikace musí načíst doplňku VSTO aspoň jednou tak, aby **získat Moje Data** tlačítko můžete zobrazit na pásu karet. Ale doplňku VSTO nenačte znovu když uživatel spustí aplikaci, která příště. Doplněk VSTO načte, pouze když uživatel vybere možnost **získat Moje Data** tlačítko.
+  Například doplněk VSTO může naplnit list daty, když uživatel zvolí vlastní tlačítko s popiskem **načíst moje data**. Aplikace musí načíst doplněk VSTO aspoň jednou, aby se na pásu karet mohl zobrazit tlačítko **získat data** . Doplněk VSTO se ale znovu nenačte, když uživatel aplikaci poprvé spustí. Doplněk VSTO se načte jenom v případě, že uživatel zvolí tlačítko **získat data** .
 
-### <a name="to-configure-a-clickonce-solution-to-load-vsto-add-ins-on-demand"></a>Konfigurace řešení ClickOnce k načtení doplňků VSTO na vyžádání
+### <a name="to-configure-a-clickonce-solution-to-load-vsto-add-ins-on-demand"></a>Konfigurace řešení ClickOnce pro načtení doplňků VSTO na vyžádání
 
-1. V **Průzkumníka řešení**, zvolte uzel projektu.
+1. V **Průzkumník řešení**vyberte uzel projektu.
 
 2. V panelu nabídky zvolte **zobrazení** > **stránky vlastností**.
 
-3. Na **publikovat** , vyberte **možnosti** tlačítko.
+3. Na kartě **publikovat** klikněte na tlačítko **Možnosti** .
 
-4. V **možnosti publikování** dialogového okna zvolte **nastavení Office** položky seznamu, zvolte **načíst na požádání** možnost a klikněte na tlačítko **OK**tlačítko.
+4. V dialogovém okně **Možnosti publikování** zvolte položku seznam **nastavení sady Office** , zvolte možnost **načíst na vyžádání** a pak klikněte na tlačítko **OK** .
 
-### <a name="to-configure-a-windows-installer-solution-to-load-vsto-add-ins-on-demand"></a>Konfigurace řešení Instalační služby systému Windows pro načtení doplňků VSTO na vyžádání
+### <a name="to-configure-a-windows-installer-solution-to-load-vsto-add-ins-on-demand"></a>Konfigurace řešení Instalační služba systému Windows, aby se načetly doplňky VSTO na vyžádání
 
-1. V registru, nastavte `LoadBehavior` vstupu **_kořenové_\Software\Microsoft\Office\\_ApplicationName_\Addins\\  _ID doplňku_** klíč **0x10**.
+1. V registru nastavte `LoadBehavior` zadáním klíče **_root_\Software\Microsoft\Office\\_ApplicationName_\Addins\\_Add-in_** na **0x10**.
 
      Další informace najdete v tématu [položky registru pro doplňky VSTO](../vsto/registry-entries-for-vsto-add-ins.md).
 
-### <a name="to-configure-a-solution-to-load-vsto-add-ins-on-demand-while-you-debug-the-solution"></a>Konfigurace řešení načítá doplňků VSTO na vyžádání při ladění řešení
+### <a name="to-configure-a-solution-to-load-vsto-add-ins-on-demand-while-you-debug-the-solution"></a>Konfigurace řešení, které načte doplňky VSTO na vyžádání při ladění řešení
 
-1. Vytvořit skript, který nastaví `LoadBehavior` vstupu **_kořenové_\Software\Microsoft\Office\\_ApplicationName_\Addins\\  _ID doplňku_** klíč **0x10**.
+1. Vytvořte skript, který `LoadBehavior` nastaví položku klíč **_ID doplňku_ _root_\Software\Microsoft\Office\\_ApplicationName_\Addins\\** na **0x10**.
 
      Následující kód ukazuje příklad tohoto skriptu.
 
@@ -72,49 +72,49 @@ ms.locfileid: "63420941"
 
 2. Vytvořte událost po sestavení, která aktualizuje registr pomocí skriptu.
 
-     Následující kód ukazuje příklad příkazu řetězec, který můžete přidat událost po sestavení.
+     Následující kód ukazuje příklad řetězce příkazu, který může být přidán do události po sestavení.
 
     ```cmd/sh
     regedit /s "$(SolutionDir)$(SolutionName).reg"
 
     ```
 
-     Informace o tom, jak vytvořit událost po sestavení v C# projektu naleznete v tématu [jak: Určení událostí sestavení &#40;C&#35;&#41;](../ide/how-to-specify-build-events-csharp.md).
+     Informace o tom, jak vytvořit událost po sestavení v C# projektu, naleznete v tématu [How to: Zadejte &#40;události sestavení C&#35;&#41;](../ide/how-to-specify-build-events-csharp.md).
 
-     Informace o tom, jak vytvořit událost po sestavení v projektu jazyka Visual Basic najdete v tématu [jak: Určení událostí sestavení &#40;jazyka Visual Basic&#41;](../ide/how-to-specify-build-events-visual-basic.md).
+     Informace o tom, jak vytvořit událost po sestavení v projektu Visual Basic, naleznete v tématu [How to: Zadejte &#40;&#41;VisualBasic](../ide/how-to-specify-build-events-visual-basic.md)události sestavení.
 
-## <a name="Publish"></a> Publikování řešení pro systém Office pomocí Instalační služby systému Windows
- Pokud publikujete vašeho řešení pomocí Instalační služby systému Windows, Visual Studio 2010 Tools for Office runtime obchází následující kroky při načtení doplňku VSTO.
+## <a name="Publish"></a>Publikování řešení pro Office pomocí Instalační služba systému Windows
+ Pokud publikujete řešení pomocí Instalační služba systému Windows, sada Visual Studio 2010 Tools for Office runtime při načtení doplňku VSTO obejít následující kroky.
 
-- Ověření schématu manifestu.
+- Ověřuje se schéma manifestu.
 
-- Automatické zjišťování aktualizací.
+- Automatické zjišťování aktualizací
 
-- Ověření digitálních podpisů manifesty nasazení.
+- Ověřování digitálních podpisů manifestů nasazení.
 
   > [!NOTE]
-  > Tento přístup není nutné v případě nasazení doplňku VSTO do zabezpečeného umístění v počítačích uživatelů.
+  > Tento přístup není nutný, pokud doplněk VSTO nasazujete do zabezpečeného umístění v počítačích uživatelů.
 
-  Další informace najdete v tématu [nasazení řešení Office s použitím Instalační služby systému Windows](../vsto/deploying-an-office-solution-by-using-windows-installer.md).
+  Další informace najdete v tématu [nasazení řešení pro Office pomocí Instalační služba systému Windows](../vsto/deploying-an-office-solution-by-using-windows-installer.md).
 
-## <a name="Bypass"></a> Obejít reflexe pásu karet
- Při sestavování řešení s použitím [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)], ujistěte se, že vaši uživatelé nainstalovali nejnovější verzi aplikace Visual Studio 2010 Tools for Office runtime při nasazení řešení. Starší verze tohoto modulu runtime projeví do řešení sestavení k vyhledání vlastních nastavení pásu karet. Tento proces může způsobit doplňku VSTO pro načítají se pomaleji.
+## <a name="Bypass"></a>Vynechat odraz pásu karet
+ Pokud vytváříte řešení pomocí [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)]nástroje, ujistěte se, že uživatelé nainstalovali nejnovější verzi sady Visual Studio 2010 Tools for Office runtime při nasazení řešení. Starší verze modulu VSTO runtime, které se projeví v sestaveních řešení pro vyhledání přizpůsobení pásu karet. Tento proces může způsobit pomalejší načtení doplňku VSTO.
 
- Jako alternativu můžete zabránit všechny verze sady Visual Studio 2010 Tools for Office runtime k identifikaci vlastních nastavení pásu karet pomocí operace reflection. Pokud chcete postupovat podle této strategie, přepsat `CreateRibbonExtensibility` metoda a explicitně návratových objektů pásu karet. Pokud váš doplněk VSTO neobsahuje všechna vlastní nastavení pásu karet, vrátí `null` uvnitř metody.
+ Alternativně můžete zabránit jakékoli verzi nástrojů sady Visual Studio 2010 pro prostředí Office runtime z použití reflexe k identifikaci přizpůsobení pásu karet. Chcete-li postupovat podle této `CreateRibbonExtensibility` strategie, přepište metodu a explicitně vraťte objekty pásu karet. Pokud doplněk VSTO neobsahuje žádné vlastní nastavení pásu karet, vraťte `null` se v rámci metody.
 
  Následující příklad vrátí objekt pásu karet na základě hodnoty pole.
 
  [!code-vb[Trin_Ribbon_Choose_Ribbon#1](../vsto/codesnippet/VisualBasic/trin_ribbon_choose_ribbon_4/ThisWorkbook.vb#1)]
  [!code-csharp[Trin_Ribbon_Choose_Ribbon#1](../vsto/codesnippet/CSharp/trin_ribbon_choose_ribbon_4/ThisWorkbook.cs#1)]
 
-## <a name="Perform"></a> Provádět nákladné operace v samostatných prováděcího vlákna
- Vezměte v úvahu provádění časově náročných úloh (jako je například dlouhotrvající úlohy, připojení k databázi nebo jiné druhy volání sítě) v samostatném vlákně. Další informace najdete v tématu [podpora v systému Office práce s vlákny](../vsto/threading-support-in-office.md).
+## <a name="Perform"></a>Provádění náročných operací v samostatném vlákně pro spuštění
+ V samostatném vlákně zvažte provádění časově náročných úloh (například dlouhotrvajících úloh, připojení k databázi nebo jiné řazení síťových volání). Další informace najdete v tématu [Podpora vláken v Office](../vsto/threading-support-in-office.md).
 
 > [!NOTE]
-> Veškerý kód, který volá do objektového modelu Office musí být spuštěn v hlavním vlákně.
+> Veškerý kód, který volá do objektového modelu Office, musí být spuštěn v hlavním vlákně.
 
 ## <a name="see-also"></a>Viz také:
 
-- [Doplňky VSTO vyžádání načítání](https://blogs.msdn.microsoft.com/andreww/2008/07/14/demand-loading-vsto-add-ins/)
-- [Zpoždění načtení modulu CLR v doplňky sady Office](https://blogs.msdn.microsoft.com/andreww/2008/04/19/delay-loading-the-clr-in-office-add-ins/)
-- [Vytváření doplňků VSTO pro Office s použitím sady Visual Studio](create-vsto-add-ins-for-office-by-using-visual-studio.md)
+- [Doplňky VSTO na vyžádání – načítání doplňků](https://blogs.msdn.microsoft.com/andreww/2008/07/14/demand-loading-vsto-add-ins/)
+- [Zpožděné načítání CLR v doplňcích pro Office](https://blogs.msdn.microsoft.com/andreww/2008/04/19/delay-loading-the-clr-in-office-add-ins/)
+- [Vytváření doplňků VSTO pro Office pomocí sady Visual Studio](create-vsto-add-ins-for-office-by-using-visual-studio.md)

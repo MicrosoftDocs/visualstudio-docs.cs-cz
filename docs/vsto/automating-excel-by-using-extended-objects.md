@@ -1,5 +1,5 @@
 ---
-title: Automatizace aplikace Excel s použitím rozšířených objektů
+title: Automatizace Excelu pomocí rozšířených objektů
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -20,59 +20,59 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: a8a08b58871652cea6332f4239e9da98b28f28e0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 65734f5397bae8c35fb8e312041d0600b8fa84e9
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62939577"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71254334"
 ---
-# <a name="automate-excel-by-using-extended-objects"></a>Automatizace aplikace Excel s použitím rozšířených objektů
-  Při vývoji řešení pro aplikaci Excel v sadě Visual Studio, můžete použít *hostovat položky* a *hostování ovládacího prvku*s ve vašich řešeních. Jedná se o objekty, které rozšiřují některé běžně používané objekty v objektovém modelu (to znamená, objektový model, který je zveřejněný prostřednictvím sestavení primární spolupráce pro aplikace Excel), Excel, jako <xref:Microsoft.Office.Interop.Excel.Worksheet> a <xref:Microsoft.Office.Interop.Excel.Range> objekty. Rozšířené objekty se chovají jako objekty aplikace Excel, které jsou založeny na, ale přidávají další funkce, jako je nové události a možnosti vázání dat na objekty.
+# <a name="automate-excel-by-using-extended-objects"></a>Automatizace Excelu pomocí rozšířených objektů
+  Při vývoji řešení v aplikaci Excel v aplikaci Visual Studio můžete použít *hostitelské položky* a *hostitelské řízení*s ve vašich řešeních. Jedná se o objekty, které rozšířily určité běžně používané objekty v objektovém modelu aplikace Excel (tj. objektový model, který je zveřejněn v rámci primárního definičního sestavení pro aplikaci Excel <xref:Microsoft.Office.Interop.Excel.Worksheet> ) <xref:Microsoft.Office.Interop.Excel.Range> , jako jsou například objekty a. Rozšířené objekty se chovají jako objekty aplikace Excel, na kterých jsou založeny, ale přidávají další funkce, jako jsou například nové události a funkce vazby dat do objektů.
 
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]
 
- Jsou k dispozici v obou doplňku VSTO hostitelských položek a hostitelských ovládacích prvků a úrovni dokumentu přizpůsobení, i když kontext, ve kterém ty je možné použít se liší pro každý typ řešení. Další informace najdete v tématu [hostovat položky a hostujte Přehled ovládacích prvků](../vsto/host-items-and-host-controls-overview.md).
+ Hostitelské položky a hostitelské ovládací prvky jsou k dispozici v doplňku VSTO i v přizpůsobení na úrovni dokumentu, i když kontext, ve kterém je lze použít, je pro každý typ řešení odlišný. Další informace naleznete v tématu [Přehled hostitelských položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md).
 
-## <a name="excel-host-items"></a>Excel hostitelské položky
- Projekty aplikace Excel poskytují přístup k několika hostitelské položky:
+## <a name="excel-host-items"></a>Položky hostitele Excelu
+ Projekty aplikace Excel vám umožní přístup k několika položkám hostitele:
 
-- <xref:Microsoft.Office.Tools.Excel.Worksheet>. Tato položka hostitele obsahuje a představuje listu v projektu. Taky funguje jako kontejner pro spravované ovládací prvky, včetně hostitelské ovládací prvky a ovládací prvky Windows Forms, a udržuje informace o ovládacích prvcích na svém povrchu. Další informace najdete v tématu [hostitelská položka Worksheet](../vsto/worksheet-host-item.md).
+- <xref:Microsoft.Office.Tools.Excel.Worksheet>. Tato položka hostitele obsahuje a představuje list v projektu. Slouží také jako kontejner pro spravované ovládací prvky, včetně hostitelských ovládacích prvků a model Windows Formsch ovládacích prvků, a uchovává informace o ovládacích prvcích na jeho povrchu. Další informace najdete v tématu [položka hostitele na listu](../vsto/worksheet-host-item.md).
 
-- <xref:Microsoft.Office.Tools.Excel.Workbook>. Tato položka hostitele představuje sešitu ve vašem projektu a funguje jako kontejner pro komponenty, které jsou sdíleny ve všech listů v sešitu. Další informace najdete v tématu [hostitelská položka Workbook](../vsto/workbook-host-item.md).
+- <xref:Microsoft.Office.Tools.Excel.Workbook>. Tato položka hostitele představuje sešit v projektu a slouží jako kontejner pro komponenty, které jsou sdíleny všemi listy v sešitu. Další informace najdete v tématu [položka hostitele sešitu](../vsto/workbook-host-item.md).
 
-- <xref:Microsoft.Office.Tools.Excel.ChartSheet>. Tento hostitel položka sešitu v Excelu, který obsahuje pouze grafu a zpřístupní události.
+- <xref:Microsoft.Office.Tools.Excel.ChartSheet>. Tato položka hostitele je list v aplikaci Excel, který obsahuje pouze graf a zpřístupňuje události.
 
-     Když přidáte list s grafem v době návrhu jako nový list ve vašem projektu přizpůsobení na úrovni dokumentu aplikace Microsoft Office Excel, sada Visual Studio automaticky vytvoří <xref:Microsoft.Office.Tools.Excel.ChartSheet> hostitelský objekt.
+     Když přidáte list grafu v době návrhu jako nový list v projektu systém Microsoft Office aplikace Excel pro přizpůsobení na úrovni dokumentu, aplikace Visual Studio automaticky vytvoří <xref:Microsoft.Office.Tools.Excel.ChartSheet> položku hostitele.
 
-     I když <xref:Microsoft.Office.Tools.Excel.ChartSheet> hostitelský objekt je listu aplikace Excel, všechny ovládací prvky nelze přidat do listu s grafem. Pokud chcete mít další ovládací prvky na listu s grafem, nepoužívejte list s grafem. Místo toho můžete umístit grafu jako vložený objekt na listu s použitím <xref:Microsoft.Office.Tools.Excel.Chart> hostování ovládacího prvku. Další informace najdete v tématu [ovládacího prvku grafu](../vsto/chart-control.md).
+     I když je položka hostitelelistemvaplikaciExcel,nelzedolistugrafupřidatžádnéovládacíprvky.<xref:Microsoft.Office.Tools.Excel.ChartSheet> Chcete-li mít v listu s grafem jiné ovládací prvky, nepoužívejte list grafu. Místo toho můžete graf umístit jako vložený objekt na list pomocí <xref:Microsoft.Office.Tools.Excel.Chart> hostitelského ovládacího prvku. Další informace najdete v tématu [ovládací prvek grafu](../vsto/chart-control.md).
 
 ## <a name="excel-host-controls"></a>hostitelské ovládací prvky aplikace Excel
- Existuje několik hostitelů ovládací prvky pro Excel, které vám pomůžou vytvářet, organizovat a automatizovat pracovní sešity a listy nástroje. Tyto ovládací prvky hostitele poskytnout události a datové vazby, které nemají jejich protějšky v nativní objektovému modelu Excelu.
+ K dispozici je několik ovládacích prvků pro hostování v aplikaci Excel, které vám pomohou vytvořit, uspořádat a automatizovat sešity a listy. Tyto hostitelské ovládací prvky poskytují události a funkce vazby dat, které jejich protějšky v nativním objektovém modelu aplikace Excel nemají.
 
- Další informace o hostitelské ovládací prvky, které můžete použít v projektech aplikace Excel naleznete v následujících tématech:
+ Další informace o hostitelských ovládacích prvcích, které lze použít v projektech aplikace Excel, naleznete v následujících tématech:
 
-- [Graf – ovládací prvek](../vsto/chart-control.md)
+- [Ovládací prvek grafu](../vsto/chart-control.md)
 
-- [ListObject – ovládací prvek](../vsto/listobject-control.md)
+- [Ovládací prvek ListObject](../vsto/listobject-control.md)
 
-- [Namedrange – ovládací prvek](../vsto/namedrange-control.md)
+- [Ovládací prvek NamedRange](../vsto/namedrange-control.md)
 
-- [Xmlmappedrange – ovládací prvek](../vsto/xmlmappedrange-control.md)
+- [Ovládací prvek XmlMappedRange –](../vsto/xmlmappedrange-control.md)
 
 ## <a name="see-also"></a>Viz také:
-- [Postupy: Vyplnění ovládacích prvků ListObject daty](../vsto/how-to-fill-listobject-controls-with-data.md)
-- [Postupy: Přidání ovládacích prvků graf do listů](../vsto/how-to-add-chart-controls-to-worksheets.md)
+- [Postupy: Vyplnit ovládací prvky ListObject daty](../vsto/how-to-fill-listobject-controls-with-data.md)
+- [Postupy: Přidat ovládací prvky grafu do listů](../vsto/how-to-add-chart-controls-to-worksheets.md)
 - [Postupy: Přidání ovládacích prvků ListObject do listů](../vsto/how-to-add-listobject-controls-to-worksheets.md)
 - [Postupy: Přidání ovládacích prvků NamedRange do listů](../vsto/how-to-add-namedrange-controls-to-worksheets.md)
-- [Postupy: Přidání ovládacích prvků XMLMappedRange do listů](../vsto/how-to-add-xmlmappedrange-controls-to-worksheets.md)
+- [Postupy: Přidání ovládacích prvků XmlMappedRange – do listů](../vsto/how-to-add-xmlmappedrange-controls-to-worksheets.md)
 - [Postupy: Změna velikosti ovládacích prvků NamedRange](../vsto/how-to-resize-namedrange-controls.md)
 - [Postupy: Změna velikosti ovládacích prvků ListObject](../vsto/how-to-resize-listobject-controls.md)
-- [Postupy: Ověření dat při přidání nového řádku do ovládacího prvku ListObject](../vsto/how-to-validate-data-when-a-new-row-is-added-to-a-listobject-control.md)
-- [Postupy: Mapování sloupců objektu ListObject na data](../vsto/how-to-map-listobject-columns-to-data.md)
-- [Návod: Program ošetření událostí ovládacího prvku NamedRange](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)
-- [Rozšíření dokumentů aplikace Word a sešitů aplikace Excel v doplňcích VSTO za běhu](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)
+- [Postupy: Ověřit data při přidání nového řádku do ovládacího prvku ListObject](../vsto/how-to-validate-data-when-a-new-row-is-added-to-a-listobject-control.md)
+- [Postupy: Mapování sloupců ListObject na data](../vsto/how-to-map-listobject-columns-to-data.md)
+- [Návod: Program pro události ovládacího prvku NamedRange](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)
+- [Rozšiřování dokumentů aplikace Word a excelových sešitů v doplňcích VSTO za běhu](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)
 - [Ovládací prvky v dokumentech Office](../vsto/controls-on-office-documents.md)
-- [Přidání ovládacích prvků do dokumentů Office za běhu](../vsto/adding-controls-to-office-documents-at-run-time.md)
-- [Přehled ovládacích prvků hostitele a hostitelské položky](../vsto/host-items-and-host-controls-overview.md)
-- [Programová omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
+- [Přidání ovládacích prvků do dokumentů Office v době běhu](../vsto/adding-controls-to-office-documents-at-run-time.md)
+- [Přehled hostitelských položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md)
+- [Programové omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)

@@ -1,5 +1,5 @@
 ---
-title: Uživatelské rozhraní vlastností projektu | Dokumentace Microsoftu
+title: Uživatelské rozhraní vlastnosti projektu | Microsoft Docs
 ms.date: 03/22/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,34 +12,34 @@ ms.author: madsk
 manager: jillfra
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9f701c1a2e31a52c05f0a7514c9d403522579e45
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: a83e5c9fb633322da536e62f1ba03484b965b162
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67825842"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71252341"
 ---
 # <a name="project-property-user-interface"></a>Uživatelské rozhraní vlastností projektu
 
-Podtyp projektu pomocí položek v projektu **stránky vlastností** dialogové okno poskytnuté základního projektu, skrýt nebo dodávaný vytvořit ovládací prvky jen pro čtení a celé stránky nebo přidání stránek specifických pro podtyp projektu **Stránky vlastností** dialogové okno.
+Podtyp projektu může použít položky v dialogovém okně **stránky vlastností** projektu, protože jsou dodány základním projektem, skrývat nebo provádět ovládací prvky jen pro čtení a celé stránky jako dodané nebo přidat stránky pro konkrétní projekt v dialogovém okně **stránky vlastností** . seznam.
 
-## <a name="extending-the-project-property-dialog-box"></a>Rozšíření dialogové okno vlastností projektu
+## <a name="extending-the-project-property-dialog-box"></a>Rozšíření dialogového okna vlastností projektu
 
-Podtyp projektu implementuje rozšiřující objekty automatizace a objekty procházet konfigurace projektu. Implementace těchto zařízení Extender <xref:EnvDTE.IFilterProperties> rozhraní provést určité vlastnosti, skrytá nebo jen pro čtení. **Stránky vlastností** dialogové okno základního projektu, implementovaných základní projekt respektuje filtrování prováděné zařízení Extender automatizace.
+Podtyp projektu implementuje objekty pro automatizaci automatizace a objekty pro procházení konfigurace projektu. Tyto rozšířené implementace implementují <xref:EnvDTE.IFilterProperties> rozhraní, aby určité vlastnosti byly skryté nebo jen pro čtení. Dialogové okno **stránky vlastností** základního projektu implementovaného základním projektem respektuje filtrování prováděné pomocí rozšířených objektů automatizace.
 
-Součástí procesu rozšíření **vlastnost projektu** dialogové okno je popsaný níže:
+Následující postup je popsaný v části proces rozšíření **vlastností projektu** :
 
-- Základní projekt načte rozšiřujících objektů z podtyp projektu implementací <xref:EnvDTE80.IInternalExtenderProvider> rozhraní. Toto rozhraní implementují procházet, automatizace projektu a procházet objekty konfigurace projektu všechny základního projektu.
+- Základní projekt načte rozšířené typy z podtypu projektu implementací <xref:EnvDTE80.IInternalExtenderProvider> rozhraní. Všechny objekty základního projektu, které implementují toto rozhraní, jsou v procházení, automatizaci projektů a v konfiguraci projektu.
 
-- Provádění <xref:EnvDTE80.IInternalExtenderProvider> pro objekt procházení projektu a projekt automatizační objekt delegovat <xref:EnvDTE80.IInternalExtenderProvider> provádění agregátoru podtyp projektu (to znamená, že `QueryInterface` pro <xref:EnvDTE80.IInternalExtenderProvider> na <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> objekt projektu).
+- Implementace <xref:EnvDTE80.IInternalExtenderProvider> pro objekt procházení projektu a delegáta objektu automatizace projektu <xref:EnvDTE80.IInternalExtenderProvider> pro implementaci Agregátoru podtypu projektu `QueryInterface` (to znamená <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> , že pro <xref:EnvDTE80.IInternalExtenderProvider> na objekt projektu).
 
-- Objekt konfigurace procházet základní projektu také implementuje <xref:EnvDTE80.IInternalExtenderProvider> propojí přímo v zařízení Extender automatizace z objektu konfigurace podtyp projektu. Jeho implementace delegoval vůči <xref:EnvDTE80.IInternalExtenderProvider> rozhraní implementované agregátoru podtyp projektu.
+- Základní objekt pro procházení konfigurace projektu také implementuje <xref:EnvDTE80.IInternalExtenderProvider> přímý přenos z objektu konfigurace podtypu projektu přímo do zařízení. Jeho implementace deleguje <xref:EnvDTE80.IInternalExtenderProvider> rozhraní implementované Agregátorem podtypu projektu.
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgBrowseObject.GetProjectItem%2A>, implementované procházet objekt konfigurace projektu, vrátí <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> objektu.
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgBrowseObject.GetProjectItem%2A>, implementované objektem procházení konfigurace projektu, vrátí <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> objekt.
 
-- <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgBrowseObject.GetCfg%2A>, také implementováno pomocí procházení objekt konfigurace projektu, vrátí <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg> objektu.
+- <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfgBrowseObject.GetCfg%2A>, který je implementován také objektem procházení konfigurace projektu, vrátí <xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg> objekt.
 
-- Podtyp projektu můžete určit odpovídající identifikátory CatID pro různé objekty Dal základního projektu za běhu načtením následujících <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> hodnoty:
+- Podtyp projektu může určit vhodné CATID pro různé objekty, které mají základní projekt v době běhu, načtením následujících <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2> hodnot:
 
   - <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2.VSHPROPID_ExtObjectCATID>
 
@@ -47,15 +47,15 @@ Součástí procesu rozšíření **vlastnost projektu** dialogové okno je pops
 
   - <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID2.VSHPROPID_CfgBrowseObjectCATID>
 
-Pokud chcete zjistit identifikátory CatID pro rozsahu projektu, načte podtyp projektu výše uvedené vlastnosti pro [VSITEMID. Kořenové](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID#Microsoft_VisualStudio_VSConstants_VSITEMID_Root>) z `VSITEMID typedef`. Podtyp projektu může být také vhodné určit, které **stránky vlastností** stránek dialogového okna se zobrazí pro projekt, závislé na konfiguraci a konfigurace, které jsou nezávislé. Některé podtypů projektů mohou muset odebrat integrované stránky a přidat konkrétní stránky podtyp projektu. Chcete-li povolit toto volání klienta spravovaného projektu <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> metoda pro následující vlastnosti:
+Pro určení CATID pro rozsah projektu načte podtyp projektu výše uvedené vlastnosti pro [VSITEMID. Kořen](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID#Microsoft_VisualStudio_VSConstants_VSITEMID_Root>) z `VSITEMID typedef`. Podtyp projektu může také chtít určit, které stránky **vlastností** dialogového okna se zobrazí pro projekt, jak závislé na konfiguraci, tak i na nezávisle na konfiguraci. Některé podtypy projektů mohou potřebovat odebrat předdefinované stránky a přidat konkrétní stránky podtypu projektu. Aby to bylo možné povolit, projekt spravovaného klienta volá <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetProperty%2A> metodu pro následující vlastnosti:
 
-- `VSHPROPID_PropertyPagesCLSIDList` – seznam oddělený středníkem CLSID stránky vlastností nezávislé na konfiguraci.
+- `VSHPROPID_PropertyPagesCLSIDList`– středníkem oddělený seznam identifikátorů CLSID na stránkách vlastností nezávislých na konfiguraci.
 
-- `VSHPROPID_CfgPropertyPagesCLSIDList —` středníkem oddělený seznam CLSID stránky vlastností závislé na konfiguraci.
+- `VSHPROPID_CfgPropertyPagesCLSIDList —`středníkem oddělený seznam identifikátorů CLSID na stránkách vlastností závislých na konfiguraci.
 
-Vzhledem k tomu, že projekt podtypu agregace <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> objektu, jej můžete přepsat definice těchto vlastností lze určit, které **stránky vlastností** dialogová okna se zobrazí. Podtyp projektu můžete načíst tyto vlastnosti z vnitřní základního projektu a pak přidat nebo odebrat CLSID podle potřeby.
+Vzhledem k tomu, že podtyp projektu agreguje <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> objekt, může přepsat definici těchto vlastností, aby bylo možné určit, které dialogová okna **stránky vlastností** budou zobrazena. Podtyp projektu může načíst tyto vlastnosti z vnitřního základního projektu a pak podle potřeby přidávat nebo odebírat identifikátory CLSID.
 
-Nové stránky vlastností přidal podtyp projektu se předá objekt procházet konfigurace projektu z implementací základní projekt. Tento objekt procházet konfigurace projektu podporuje zařízení Extender automatizace. Další informace o AutomationExtenders najdete v tématu [implementace a rozšiřující objekty pomocí](https://msdn.microsoft.com/Library/0d5c218c-f412-4b28-ab0c-33a611f62356). Na stránkách vlastností, které implementují volání podtyp projektu <xref:EnvDTE.Project.Extender%2A> načíst vlastní projekt podtyp procházet objekt konfigurace, která rozšiřuje objekt procházet konfigurace základního projektu.
+Nové stránky vlastností přidané podtypu projektu jsou předány objektem pro procházení konfigurace projektu ze základní implementace projektu. Tento objekt pro procházení konfigurace projektu podporuje rozšířené služby automatizace. Další informace o AutomationExtenders najdete v tématu [implementace a používání zařízení s rozšířenými automatizace](https://msdn.microsoft.com/Library/0d5c218c-f412-4b28-ab0c-33a611f62356). Stránky vlastností implementované voláním <xref:EnvDTE.Project.Extender%2A> podtypu projektu pro načtení vlastního objektu pro procházení konfigurace podtypu projektu, který rozšiřuje objekt procházení Konfigurace základního projektu.
 
 ## <a name="see-also"></a>Viz také:
 

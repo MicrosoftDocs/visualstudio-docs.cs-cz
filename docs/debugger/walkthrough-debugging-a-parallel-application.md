@@ -22,16 +22,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: efd3ffb81d8ef1ad69a24acc277b8f5fe10df436
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: dcc63eef048dd1e4ae205214ac62f8aa04d8a824
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62930372"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71252522"
 ---
-# <a name="walkthrough-debugging-a-parallel-application-in-visual-studio-c-visual-basic-c"></a>Návod: Ladění paralelní aplikace v sadě Visual Studio (C#, Visual Basic, C++)
+# <a name="walkthrough-debugging-a-parallel-application-in-visual-studio-c-visual-basic-c"></a>Návod: Ladění paralelní aplikace v aplikaci Visual Studio (C#Visual Basic, C++)
 
-Tento návod ukazuje, jak používat **paralelní úlohy** a **paralelní zásobníky** ladění paralelní aplikace systému windows. Tato okna vám pomůžou pochopit a chování za běhu kódu, který se používá ověření [Task Parallel Library (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl) nebo [Concurrency Runtime](/cpp/parallel/concrt/concurrency-runtime). Tento názorný postup obsahuje ukázkový kód, který má integrovanou zarážky. Poté, co kód přestane fungovat, návodu ukazuje způsob použití **paralelní úlohy** a **paralelní zásobníky** windows jej prozkoumat.
+Tento návod ukazuje, jak používat **paralelní úlohy** a **paralelní zásobníky** ladění paralelní aplikace systému windows. Tato okna vám pomůžou pochopit a ověřit chování kódu, který používá [Task Parallel Library (TPL)](/dotnet/standard/parallel-programming/task-parallel-library-tpl) nebo [Concurrency Runtime](/cpp/parallel/concrt/concurrency-runtime). Tento názorný postup obsahuje ukázkový kód, který má integrovanou zarážky. Poté, co kód přestane fungovat, návodu ukazuje způsob použití **paralelní úlohy** a **paralelní zásobníky** windows jej prozkoumat.
 
  Tento návod vás naučí tyto úlohy:
 
@@ -62,27 +62,27 @@ Tento návod ukazuje, jak používat **paralelní úlohy** a **paralelní zásob
 
 #### <a name="to-create-the-sample-project"></a>K vytvoření ukázkového projektu
 
-1. Otevřít Visual Studio a vytvořte nový projekt.
+1. Otevřete Visual Studio a vytvořte nový projekt.
 
     ::: moniker range=">=vs-2019"
-    Stisknutím klávesy **Esc** zavřete okno start. Typ **Ctrl + Q** otevřete do vyhledávacího pole zadejte **konzoly** (nebo **c ++** ), zvolte **šablony**a pak:
+    Stisknutím klávesy **ESC** zavřete okno Start. Zadáním **CTRL + Q** otevřete vyhledávací pole, zadejte příkaz **Console** (nebo **c++** ), zvolte **šablony**a potom:
 
-    - Pro C# nebo Visual Basic, zvolte **vytvořit nový projekt Konzolová aplikace (.NET Framework)** buď C# nebo Visual Basic. V dialogovém okně, které se zobrazí, zvolte **vytvořit**.
-    - Pro jazyk C++, zvolte **vytvořit nový projekt konzolové aplikace** jazyka C++. V dialogovém okně, které se zobrazí, zvolte **vytvořit**.
+    - Pro C# nebo Visual Basic vyberte možnost **vytvořit nový projekt konzolové aplikace (.NET Framework)** pro C# nebo Visual Basic. V dialogovém okně, které se zobrazí, vyberte **vytvořit**.
+    - Pro C++vyberte možnost **vytvořit nový projekt konzolové aplikace** pro C++. V dialogovém okně, které se zobrazí, vyberte **vytvořit**.
 
-    Potom zadejte název nebo použijte výchozí název a klikněte na tlačítko **vytvořit**.
+    Pak zadejte název nebo použijte výchozí název a klikněte na **vytvořit**.
     ::: moniker-end
     ::: moniker range="vs-2017"
-    V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**. V levém podokně **nový projekt** dialogovém okně zvolte následující:
+    V horním řádku nabídek zvolte **Soubor** > **Nový** > **Projekt**. V levém podokně dialogového okna **Nový projekt** vyberte následující:
 
-    - Pro C# aplikace v části **Visual C#** , zvolte **Windows Desktop**a potom v prostředním podokně vyberte **Konzolová aplikace (.NET Framework)** .
-    - Pro aplikace v jazyce Visual Basic v části **jazyka Visual Basic**, zvolte **Windows Desktop**a potom v prostředním podokně vyberte **Konzolová aplikace (.NET Framework)** .
-    - Pro aplikace s C++ v rámci **Visual C++** , zvolte **Windows Desktop**a klikněte na tlačítko **Konzolová aplikace Windows**.
+    - V případě C# aplikace v části **vizuál C#** zvolte **Windows Desktop**a potom v prostředním podokně zvolte **Konzolová aplikace (.NET Framework)** .
+    - V případě aplikace Visual Basic vyberte v části **Visual Basic**možnost **plocha Windows**a potom v prostředním podokně zvolte **Konzolová aplikace (.NET Framework)** .
+    - V případě C++ aplikace v části **vizuál C++** zvolte **plocha Windows**, a pak zvolte **Konzolová aplikace Windows**.
 
-    Potom zadejte název nebo použijte výchozí název a klikněte na tlačítko **OK**.
+    Pak zadejte název nebo použijte výchozí název a klikněte na **OK**.
     ::: moniker-end
 
-    Pokud se nezobrazí **konzolovou aplikaci** šablony projektu, přejděte na **nástroje** > **získat nástroje a funkce...** , který otevře instalačního programu sady Visual Studio. Zvolte **vývoj desktopových aplikací .NET** nebo **vývoj desktopových aplikací pomocí C++** úloh, klikněte na tlačítko **změnit**.
+    Pokud nevidíte šablonu projektu **konzolové aplikace** , přejděte do části **nástroje** > **získat nástroje a funkce...** , které otevře instalační program pro Visual Studio. Zvolte možnost vývoj **desktopových** aplikací pro .NET nebo **Desktop C++**  a zvolte možnost **Upravit**.
 
 1. Otevřete soubor kódu .cpp, .cs nebo .vb v projektu. Odstraňte její obsah, chcete-li vytvořit prázdný soubor kódu.
 
@@ -98,7 +98,7 @@ Tento návod ukazuje, jak používat **paralelní úlohy** a **paralelní zásob
 
     Všimněte si, že existují čtyři volání `Debugger.Break` (`DebugBreak` v C++ ukázce) proto není potřeba vložit zarážky; jednoduše spuštěním aplikace způsobí jeho přerušení v ladicím programu až čtyřikrát.
 
-## <a name="using-the-parallel-stacks-window-threads-view"></a>Použití okna paralelní zásobníky: Zobrazení vláken
+## <a name="using-the-parallel-stacks-window-threads-view"></a>Použití okna Paralelní zásobníky: Zobrazení vláken
  Na **ladění** nabídky, klikněte na tlačítko **spustit ladění**. Počkejte první zarážce.
 
 #### <a name="to-view-the-call-stack-of-a-single-thread"></a>Chcete-li zobrazit zásobník volání z jednoho vlákna

@@ -18,94 +18,94 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 25b30db78706dce95188289187ce55011ce1362d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 129962209d8cfa541a34bc1575a73382cd63d7c4
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63441736"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71254670"
 ---
 # <a name="how-to-protect-parts-of-documents-by-using-content-controls"></a>Postupy: Ochrana částí dokumentů pomocí ovládacích prvků obsahu
-  Když chráníte část dokumentu, zabránit uživatelům v měnit nebo odstraňovat obsah v této části dokumentu. Existuje několik způsobů, jak může ochrana částí dokumentu aplikace Microsoft Office Word s použitím ovládacích prvků obsahu:
+  Při ochraně části dokumentu zabráníte uživatelům měnit nebo odstraňovat obsah v této části dokumentu. Existuje několik způsobů, jak můžete chránit části dokumentu aplikace systém Microsoft Office Word pomocí ovládacích prvků obsahu:
 
-- Budete moci chránit obsah ovládacího prvku.
+- Můžete chránit ovládací prvek obsahu.
 
-- Můžete chránit část dokumentu, který není v obsahu prvku.
+- Můžete chránit část dokumentu, který není v ovládacím prvku obsahu.
 
   [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
-## <a name="EditDeleteControl"></a> Ochrana obsahu ovládacího prvku
- Můžete zabránit uživatelům v úpravách nebo odstraňování ovládací prvek obsahu nastavením vlastností ovládacího prvku v projektu úrovni dokumentu v době návrhu nebo za běhu.
+## <a name="EditDeleteControl"></a>Ochrana ovládacího prvku obsahu
+ Můžete zabránit uživatelům v úpravách nebo odstraňování ovládacího prvku obsahu nastavením vlastností ovládacího prvku v projektu na úrovni dokumentu v době návrhu nebo v době běhu.
 
- Můžete taky chránit ovládacích prvků obsahu, které přidáte do dokumentu za běhu pomocí projektu doplňku VSTO. Další informace najdete v tématu [jak: Přidání ovládacích prvků obsahu do dokumentů aplikace Word](../vsto/how-to-add-content-controls-to-word-documents.md).
+ Pomocí projektu doplňku VSTO můžete také chránit ovládací prvky obsahu, které do dokumentu přidáte v době běhu. Další informace najdete v tématu [jak: Přidejte ovládací prvky obsahu do dokumentů](../vsto/how-to-add-content-controls-to-word-documents.md)aplikace Word.
 
-### <a name="to-protect-a-content-control-at-design-time"></a>K ochraně obsahu ovládacího prvku v době návrhu
+### <a name="to-protect-a-content-control-at-design-time"></a>Ochrana ovládacího prvku obsahu v době návrhu
 
-1. V dokumentu, který je hostován v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Návrhář, vyberte ovládací prvek obsahu, který chcete chránit.
+1. V dokumentu, který je hostován v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] návrháři, vyberte ovládací prvek obsahu, který chcete chránit.
 
-2. V **vlastnosti** okno, nastavte jednu nebo obě z následujících vlastností:
+2. V okně **vlastnosti** nastavte jednu nebo obě následující vlastnosti:
 
-    - Chcete-li zabránit uživatelům v úpravách ovládacího prvku, nastavte **LockContents** k **True**.
+    - Chcete-li uživatelům zabránit v úpravách ovládacího prvku, nastavte **LockContents** na **hodnotu true**.
 
-    - Chcete-li uživatelům zabránit v odstranění ovládacího prvku, nastavte **LockContentControl** k **True**.
+    - Chcete-li uživatelům zabránit v odstranění ovládacího prvku, nastavte **LockContentControl** na **hodnotu true**.
 
 3. Klikněte na **OK**.
 
-### <a name="to-protect-a-content-control-at-runtime"></a>K ochraně obsahu ovládacího prvku za běhu
+### <a name="to-protect-a-content-control-at-run-time"></a>Ochrana ovládacího prvku obsahu v době běhu
 
-1. Nastavte `LockContents` vlastnost obsahu ovládacího prvku na **true** zabránit uživatelům v úpravách ovládací prvek a nastavit `LockContentControl` vlastnost **true** uživatelům zabránit v odstranění ovládacího prvku.
+1. Nastavte vlastnost ovládacího prvku obsahu na **hodnotu true** `LockContentControl` , chcete-li uživatelům zabránit v úpravách ovládacího prvku, a nastavte vlastnost na **hodnotu true** , aby uživatelé nemohli tento ovládací prvek odstranit. `LockContents`
 
-     Následující příklad kódu ukazuje použití <xref:Microsoft.Office.Tools.Word.RichTextContentControl.LockContents%2A> a <xref:Microsoft.Office.Tools.Word.RichTextContentControl.LockContentControl%2A> dva různé vlastnosti <xref:Microsoft.Office.Tools.Word.RichTextContentControl> objekty v projektu úrovni dokumentu. Tento kód spustit, přidejte kód, který `ThisDocument` třídu v projektu a volejte `AddProtectedContentControls` metodu z `ThisDocument_Startup` obslužné rutiny události.
+     Následující příklad kódu ukazuje použití <xref:Microsoft.Office.Tools.Word.RichTextContentControl.LockContents%2A> vlastností a <xref:Microsoft.Office.Tools.Word.RichTextContentControl.LockContentControl%2A> dvou různých <xref:Microsoft.Office.Tools.Word.RichTextContentControl> objektů v projektu na úrovni dokumentu. Chcete-li spustit tento kód, přidejte kód do `ThisDocument` třídy v projektu a `AddProtectedContentControls` zavolejte metodu z `ThisDocument_Startup` obslužné rutiny události.
 
      [!code-csharp[Trin_ContentControlHowToProtect#2](../vsto/codesnippet/CSharp/Trin_ContentControlHowToProtect/ThisDocument.cs#2)]
      [!code-vb[Trin_ContentControlHowToProtect#2](../vsto/codesnippet/VisualBasic/Trin_ContentControlHowToProtect/ThisDocument.vb#2)]
 
-     Následující příklad kódu ukazuje použití <xref:Microsoft.Office.Tools.Word.RichTextContentControl.LockContents%2A> a <xref:Microsoft.Office.Tools.Word.RichTextContentControl.LockContentControl%2A> dva různé vlastnosti <xref:Microsoft.Office.Tools.Word.RichTextContentControl> objekty v projektu doplňku VSTO. Tento kód spustit, přidejte kód, který `ThisAddIn` třídu v projektu a volejte `AddProtectedContentControls` metodu z `ThisAddIn_Startup` obslužné rutiny události.
+     Následující příklad kódu ukazuje použití <xref:Microsoft.Office.Tools.Word.RichTextContentControl.LockContents%2A> vlastností a <xref:Microsoft.Office.Tools.Word.RichTextContentControl.LockContentControl%2A> dvou různých <xref:Microsoft.Office.Tools.Word.RichTextContentControl> objektů v projektu doplňku VSTO. Chcete-li spustit tento kód, přidejte kód do `ThisAddIn` třídy v projektu a `AddProtectedContentControls` zavolejte metodu z `ThisAddIn_Startup` obslužné rutiny události.
 
      [!code-vb[Trin_WordAddInDynamicControls#14](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#14)]
      [!code-csharp[Trin_WordAddInDynamicControls#14](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#14)]
 
-## <a name="protect-a-part-of-a-document-that-is-not-in-a-content-control"></a>Ochrana část dokumentu, který není v ovládacím prvku obsahu
- Můžete zabránit uživatelům možnost měnit oblast v dokumentu tak, že vložíte oblasti <xref:Microsoft.Office.Tools.Word.GroupContentControl>. To je užitečné v následujících scénářích:
+## <a name="protect-a-part-of-a-document-that-is-not-in-a-content-control"></a>Ochrana části dokumentu, který není v ovládacím prvku obsahu
+ Uživatelům můžete zabránit v změně oblasti dokumentu tak, že umístíte oblast do <xref:Microsoft.Office.Tools.Word.GroupContentControl>. To je užitečné v následujících scénářích:
 
-- Chcete chránit prostor, který obsahuje ovládací prvky obsahu.
+- Chcete chránit oblast, která neobsahuje ovládací prvky obsahu.
 
-- Chcete chránit prostor, který již obsahuje ovládací prvky obsahu, ale text nebo jiné položky, které chcete chránit, nejsou v ovládacích prvcích obsahu.
+- Chcete chránit oblast, která již obsahuje ovládací prvky obsahu, ale text nebo jiné položky, které chcete chránit, nejsou v ovládacích prvcích obsahu.
 
 > [!NOTE]
-> Pokud jste vytvořili <xref:Microsoft.Office.Tools.Word.GroupContentControl> , která obsahuje vložené ovládací prvky obsahu, embedded ovládacích prvků obsahu nejsou chráněné automaticky. Pokud chcete zabránit uživatelům v úpravách vložené ovládací prvek obsahu, použijte **LockContents** vlastnost ovládacího prvku.
+> Pokud vytvoříte objekt <xref:Microsoft.Office.Tools.Word.GroupContentControl> , který obsahuje ovládací prvky vloženého obsahu, ovládací prvky vloženého obsahu nejsou automaticky chráněny. Chcete-li uživatelům zabránit v úpravách vloženého ovládacího prvku obsahu, použijte vlastnost **LockContents** ovládacího prvku.
 
-### <a name="to-protect-an-area-of-a-document-at-design-time"></a>K ochraně oblast dokumentu v době návrhu
+### <a name="to-protect-an-area-of-a-document-at-design-time"></a>Ochrana oblasti dokumentu v době návrhu
 
-1. V dokumentu, který je hostován v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Návrhář, vyberte oblast, která chcete chránit.
+1. V dokumentu, který je hostován v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] návrháři, vyberte oblast, kterou chcete chránit.
 
-2. Na pásu karet klikněte na tlačítko **Developer** kartu.
+2. Na pásu karet klikněte na kartu **vývojář** .
 
     > [!NOTE]
-    > Pokud **Developer** karta není zobrazena, musíte ji nejdříve zobrazit. Další informace najdete v tématu [jak: Zobrazení karty Vývojář na pásu karet](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md).
+    > Pokud karta **vývojář** není zobrazená, musíte ji nejdřív zobrazit. Další informace najdete v tématu [jak: Na pásu karet](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)zobrazit kartu Vývojář.
 
-3. V **ovládací prvky** klikněte na položku **skupiny** tlačítko rozevíracího seznamu a pak klikněte na tlačítko **skupiny**.
+3. Ve skupině **ovládací prvky** klikněte na rozevírací tlačítko **Skupina** a pak klikněte na **Skupina**.
 
-     A <xref:Microsoft.Office.Tools.Word.GroupContentControl> , který obsahuje chráněnou oblast není automaticky vygenerován v `ThisDocument` třídu ve vašem projektu. Ohraničení, která představuje ovládacího prvku skupiny je viditelný v době návrhu, ale neexistuje žádná viditelná ohraničení za běhu.
+     Objekt <xref:Microsoft.Office.Tools.Word.GroupContentControl> , který obsahuje chráněnou oblast, je automaticky vygenerován `ThisDocument` ve třídě v projektu. Ohraničení, které představuje ovládací prvek skupiny, je viditelné v době návrhu, ale v době běhu není viditelné ohraničení.
 
-### <a name="to-protect-an-area-of-a-document-at-runtime"></a>K ochraně oblast v dokumentu za běhu
+### <a name="to-protect-an-area-of-a-document-at-run-time"></a>Ochrana oblasti dokumentu v době běhu
 
-1. Prostřednictvím kódu programu vyberte oblast, kterou chcete chránit a poté zavolejte <xref:Microsoft.Office.Tools.Word.ControlCollection.AddGroupContentControl%2A> metodu pro vytvoření <xref:Microsoft.Office.Tools.Word.GroupContentControl>.
+1. Programově vyberte oblast, kterou chcete chránit, a pak zavolejte <xref:Microsoft.Office.Tools.Word.ControlCollection.AddGroupContentControl%2A> metodu pro <xref:Microsoft.Office.Tools.Word.GroupContentControl>vytvoření.
 
-     Následující příklad kódu na úrovni dokumentu projekt přidá text do prvního odstavce v dokumentu, vybere prvního odstavce a poté vytvoří instanci <xref:Microsoft.Office.Tools.Word.GroupContentControl>. Tento kód spustit, přidejte kód, který `ThisDocument` třídu v projektu a volejte `ProtectFirstParagraph` metodu z `ThisDocument_Startup` obslužné rutiny události.
+     Následující příklad kódu pro projekt na úrovni dokumentu přidá text k prvnímu odstavci v dokumentu, vybere první odstavec a potom vytvoří instanci <xref:Microsoft.Office.Tools.Word.GroupContentControl>. Chcete-li spustit tento kód, přidejte kód do `ThisDocument` třídy v projektu a `ProtectFirstParagraph` zavolejte metodu z `ThisDocument_Startup` obslužné rutiny události.
 
      [!code-csharp[Trin_ContentControlHowToProtect#1](../vsto/codesnippet/CSharp/Trin_ContentControlHowToProtect/ThisDocument.cs#1)]
      [!code-vb[Trin_ContentControlHowToProtect#1](../vsto/codesnippet/VisualBasic/Trin_ContentControlHowToProtect/ThisDocument.vb#1)]
 
-     Následující příklad kódu pro projekt doplňku VSTO přidá text do prvního odstavce v aktivním dokumentu, vybere prvního odstavce a poté vytvoří instanci <xref:Microsoft.Office.Tools.Word.GroupContentControl>. Tento kód spustit, přidejte kód, který `ThisAddIn` třídu v projektu a volejte `ProtectFirstParagraph` metodu z `ThisAddIn_Startup` obslužné rutiny události.
+     Následující příklad kódu pro projekt doplňku VSTO přidá text do prvního odstavce v aktivním dokumentu, vybere první odstavec a potom vytvoří instanci <xref:Microsoft.Office.Tools.Word.GroupContentControl>. Chcete-li spustit tento kód, přidejte kód do `ThisAddIn` třídy v projektu a `ProtectFirstParagraph` zavolejte metodu z `ThisAddIn_Startup` obslužné rutiny události.
 
      [!code-vb[Trin_WordAddInDynamicControls#15](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#15)]
      [!code-csharp[Trin_WordAddInDynamicControls#15](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#15)]
 
 ## <a name="see-also"></a>Viz také:
-- [Automatizace aplikace Word s použitím rozšířených objektů](../vsto/automating-word-by-using-extended-objects.md)
+- [Automatizace Wordu pomocí rozšířených objektů](../vsto/automating-word-by-using-extended-objects.md)
 - [Ovládací prvky obsahu](../vsto/content-controls.md)
 - [Postupy: Přidání ovládacích prvků obsahu do dokumentů aplikace Word](../vsto/how-to-add-content-controls-to-word-documents.md)
-- [Přehled ovládacích prvků hostitele a hostitelské položky](../vsto/host-items-and-host-controls-overview.md)
-- [Programová omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
-- [Přidání ovládacích prvků do dokumentů Office za běhu](../vsto/adding-controls-to-office-documents-at-run-time.md)
+- [Přehled hostitelských položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md)
+- [Programové omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
+- [Přidání ovládacích prvků do dokumentů Office v době běhu](../vsto/adding-controls-to-office-documents-at-run-time.md)

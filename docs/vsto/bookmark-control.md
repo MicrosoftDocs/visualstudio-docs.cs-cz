@@ -17,83 +17,83 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 00271d77cb5b172fbbbf02682eb7e23c6246ca23
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2b8557581e93c8d2ba5a54a13c04d5de74b24f71
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62939331"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71255151"
 ---
 # <a name="bookmark-control"></a>Bookmark – ovládací prvek
-  <xref:Microsoft.Office.Tools.Word.Bookmark> Ovládací prvek je záložku, která má jedinečný název, zpřístupní události a může být vázaný na data. Záložka může sloužit jako zástupný symbol pro označení položku nebo místo v dokumentu aplikace Microsoft Office Word. <xref:Microsoft.Office.Tools.Word.Bookmark> Ovládací prvek je kombinací identifikátoru <xref:Microsoft.Office.Interop.Word.Bookmark> objektu a <xref:Microsoft.Office.Interop.Word.Range> objektu.
+  <xref:Microsoft.Office.Tools.Word.Bookmark> Ovládací prvek je záložka, která má jedinečný název, zpřístupňuje události a může být vázána na data. Záložka se dá použít jako zástupný symbol k označení položky nebo umístění v dokumentu aplikace Wordu systém Microsoft Office. Ovládací prvek je kombinací <xref:Microsoft.Office.Interop.Word.Bookmark> objektu a <xref:Microsoft.Office.Interop.Word.Range> objektu. <xref:Microsoft.Office.Tools.Word.Bookmark>
 
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]
 
- Projekty na úrovni dokumentu, můžete přidat <xref:Microsoft.Office.Tools.Word.Bookmark> ovládacích prvků do dokumentu v době návrhu nebo za běhu. Projekty doplňků VSTO, můžete přidat <xref:Microsoft.Office.Tools.Word.Bookmark> ovládacích prvků do libovolného otevřeného dokumentu za běhu. Další informace najdete v tématu [jak: Přidání ovládacích prvků záložek do dokumentů aplikace Word](../vsto/how-to-add-bookmark-controls-to-word-documents.md).
+ V projektech na úrovni dokumentu můžete přidat <xref:Microsoft.Office.Tools.Word.Bookmark> ovládací prvky do dokumentu v době návrhu nebo v době běhu. V projektech doplňku VSTO můžete přidat <xref:Microsoft.Office.Tools.Word.Bookmark> ovládací prvky do libovolného otevřeného dokumentu v době běhu. Další informace najdete v tématu [jak: Přidejte ovládací prvky záložky do dokumentů](../vsto/how-to-add-bookmark-controls-to-word-documents.md)aplikace Word.
 
-## <a name="bind-data-to-the-control"></a>Vytvoření vazby dat k ovládacímu prvku
- A <xref:Microsoft.Office.Tools.Word.Bookmark> ovládací prvek podporuje jednoduchou datovou vazbu. Záložky by měl být vázaný na zdroji dat pomocí <xref:System.Windows.Forms.IBindableComponent.DataBindings%2A> vlastnost. Je výchozí vlastnost vazby dat záložky <xref:Microsoft.Office.Tools.Word.Bookmark.Text%2A> vlastnost.
+## <a name="bind-data-to-the-control"></a>Vázání dat k ovládacímu prvku
+ <xref:Microsoft.Office.Tools.Word.Bookmark> Ovládací prvek podporuje jednoduchou datovou vazbu. Záložka by měla být vázána na zdroj dat pomocí <xref:System.Windows.Forms.IBindableComponent.DataBindings%2A> vlastnosti. Výchozí vlastnost datové vazby záložky je <xref:Microsoft.Office.Tools.Word.Bookmark.Text%2A> vlastnost.
 
- Pokud aktualizaci dat v datové sadě vázané <xref:Microsoft.Office.Tools.Word.Bookmark> ovládací prvek zobrazuje změny.
+ Pokud jsou data v vázané sadě dat aktualizována, <xref:Microsoft.Office.Tools.Word.Bookmark> ovládací prvek zobrazí změny.
 
- V projektech na úrovni dokumentu, můžete také navázat data do záložek s použitím **zdroje dat** okna. Další informace najdete v tématu [jak: Naplnění dokumentů daty z objektů](../vsto/how-to-populate-documents-with-data-from-objects.md).
+ V projektech na úrovni dokumentu můžete také vytvořit vazby mezi daty a záložkami pomocí okna **zdroje dat** . Další informace najdete v tématu [jak: Naplnit dokumenty daty z objektů](../vsto/how-to-populate-documents-with-data-from-objects.md).
 
 ## <a name="formatting"></a>Formátování
- Který lze použít k formátování <xref:Microsoft.Office.Interop.Word.Bookmark> lze použít u <xref:Microsoft.Office.Tools.Word.Bookmark> ovládacího prvku. Toto formátování zahrnuje písma, odsazení, mezeru, číslování a styly.
+ Formátování, které lze použít na objekt <xref:Microsoft.Office.Interop.Word.Bookmark> , lze použít <xref:Microsoft.Office.Tools.Word.Bookmark> pro ovládací prvek. Toto formátování zahrnuje písma, odsazení, mezery, číslování a styly.
 
-## <a name="assign-text-to-the-bookmark"></a>Přiřadit text na záložku
- Další rozdíl mezi <xref:Microsoft.Office.Interop.Word.Bookmark?displayProperty=nameWithType> objektu a <xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=nameWithType> ovládací prvek je, jak se chová při přiřazení text na záložku. Pokud přiřadíte text nulové délky <xref:Microsoft.Office.Interop.Word.Bookmark?displayProperty=nameWithType>, text se připojí k pravému záložky a zůstane Záložka nulové délky. Nicméně pokud přiřadíte text nulové délky <xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=nameWithType>, text je vložen do záložky a délky na záložku rozšíří na celkový počet znaků, které jsou vloženy.
+## <a name="assign-text-to-the-bookmark"></a>Přiřadit text k záložce
+ Dalším rozdílem mezi <xref:Microsoft.Office.Interop.Word.Bookmark?displayProperty=nameWithType> objektem <xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=nameWithType> a ovládacím prvkem je způsob, jakým se chová při přiřazení textu k záložce. Pokud přiřadíte text nulové délce <xref:Microsoft.Office.Interop.Word.Bookmark?displayProperty=nameWithType>, text se připojí napravo od záložky a Záložka zůstane s nulovou délkou. Pokud ale přiřadíte text nulové délce <xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=nameWithType>, text se vloží do záložky a délka záložky se rozšíří na celkový počet vložených znaků.
 
- <xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=nameWithType> Ovládací prvek má také <xref:Microsoft.Office.Tools.Word.Bookmark.Text?displayProperty=nameWithType> vlastnost. Tato vlastnost se liší od <xref:Microsoft.Office.Interop.Word.Range.Text?displayProperty=nameWithType> vlastnost, která je k dispozici na <xref:Microsoft.Office.Tools.Word.Bookmark.Range?displayProperty=nameWithType> vlastnost <xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=nameWithType> ovládacího prvku, nebo <xref:Microsoft.Office.Interop.Word.Bookmark.Range?displayProperty=nameWithType> vlastnost <xref:Microsoft.Office.Interop.Word.Bookmark?displayProperty=nameWithType> objektu.
+ <xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=nameWithType> Ovládací prvek <xref:Microsoft.Office.Tools.Word.Bookmark.Text?displayProperty=nameWithType> má také vlastnost. Tato vlastnost je odlišná od <xref:Microsoft.Office.Interop.Word.Range.Text?displayProperty=nameWithType> vlastnosti, která je k dispozici <xref:Microsoft.Office.Tools.Word.Bookmark.Range?displayProperty=nameWithType> ve vlastnosti <xref:Microsoft.Office.Tools.Word.Bookmark?displayProperty=nameWithType> ovládacího prvku, nebo <xref:Microsoft.Office.Interop.Word.Bookmark.Range?displayProperty=nameWithType> vlastnosti <xref:Microsoft.Office.Interop.Word.Bookmark?displayProperty=nameWithType> objektu.
 
 |Vlastnost text|Popis|
 |-------------------|-----------------|
-|<xref:Microsoft.Office.Tools.Word.Bookmark.Text?displayProperty=nameWithType>|Tuto vlastnost použijte k zobrazení textu v záložce a nechat záložky v dokumentu. Přiřazení text na záložku rozšiřuje rozsah záložky a nedojde k odstranění na záložku.<br /><br /> Například `Bookmark1.Text = "Hello world"` vloží text do záložky a ponechá beze změny na záložku.|
-|<xref:Microsoft.Office.Interop.Word.Range.Text?displayProperty=nameWithType>|Tuto vlastnost použijte k zobrazení textu v umístění záložku a automaticky odstranit záložky. Například `Bookmark1.Range.Text = "Hello world"` vloží text do záložky a odstraní záložky.|
+|<xref:Microsoft.Office.Tools.Word.Bookmark.Text?displayProperty=nameWithType>|Tato vlastnost slouží k zobrazení textu v rámci záložky a ponechání záložky v dokumentu. Přiřazení textu k záložce rozbalí rozsah záložky a neodstraní záložku.<br /><br /> Například `Bookmark1.Text = "Hello world"` vloží text do záložky a nechá záložku beze změny.|
+|<xref:Microsoft.Office.Interop.Word.Range.Text?displayProperty=nameWithType>|Tato vlastnost slouží k zobrazení textu v umístění záložky a k automatickému odstranění záložky. Například `Bookmark1.Range.Text = "Hello world"` vloží text do záložky a odstraní záložku.|
 
-## <a name="rename-the-control-at-design-time"></a>Přejmenujte ovládací prvek v době návrhu
- V projektech na úrovni dokumentu, při přetažení <xref:Microsoft.Office.Tools.Word.Bookmark> ovládacího prvku **nástrojů** do dokumentu sady Visual Studio automaticky vygeneruje název ovládacího prvku. Můžete změnit název ovládacího prvku **vlastnosti** okna.
+## <a name="rename-the-control-at-design-time"></a>Přejmenování ovládacího prvku v době návrhu
+ Pokud v projektech na úrovni dokumentu přetáhnete <xref:Microsoft.Office.Tools.Word.Bookmark> ovládací prvek z **panelu nástrojů** do dokumentu, sada Visual Studio automaticky vygeneruje název ovládacího prvku. Můžete změnit název ovládacího prvku v okně **vlastnosti** .
 
-## <a name="overlapping-controls"></a>Překrývání ovládacích prvků
- Ovládacích prvků záložek můžete vzájemně překrývat. Stejný text může být sdílen více než jednu záložku. Když přiřadíte nový text do jednoho z překrývající se záložky, obsahuje pouze nový text a záložky už překrývat. Na další záložku nyní obsahuje pouze text, který nebyl sdílen mezi původní překrývající se záložkami.
+## <a name="overlapping-controls"></a>Překrývající se ovládací prvky
+ Ovládací prvky záložek se můžou vzájemně překrývat. Stejný text může být sdílen více než jednou záložkou. Když přiřadíte nový text k jedné z překrývajících se záložek, bude obsahovat pouze nový text a záložky již nebudou překrývat. Druhá záložka teď obsahuje jenom text, který se nesdílel mezi původními překrývajícími se záložkami.
 
- Následující tabulka ukazuje, jak se věta "Toto je ukázkový text". je sdílen dvěma překrývající se záložek:
+ Následující tabulka ukazuje, jak se jedná o větu "This je ukázkový text." sdílí se dvěma překrývajícími se záložkami:
 
-|záložky|Text|
+|záložku|Text|
 |--------------|----------|
-|Překrývající se záložky|[Toto je ukázka {] text.}|
+|Překrývající se záložky|[this je {Sample] text.}|
 |Bookmark1|Toto je ukázka|
-|Bookmark2|text v ukázce.|
+|Bookmark2|Vzorový text.|
 
- Pokud přiřadíte nové text "Toto je náhrada." Bookmark1 záložky nepřekrývají, a Bookmark2 zachová pouze text, který není součástí Bookmark1 původně.
+ Pokud přiřadíte nový text "Toto je náhrada". bookmark1 záložky se nepřekrývají a Bookmark2 uchová pouze text, který nebyl původně součástí bookmark1.
 
-|záložky|Text|
+|záložku|Text|
 |--------------|----------|
-|Dva samostatné záložky|[Toto je nahrazení] {text}.|
-|Bookmark1|Toto je nahrazení|
-|Bookmark2|Text.|
+|Dvě samostatné záložky|[Toto je náhrada] {text.}|
+|Bookmark1|Toto je náhrada|
+|Bookmark2|textové.|
 
-Pokud změníte text, který obsahuje další Záložka záložku, vnitřní záložky se neodstraní. Vnitřní záložku však stane prázdný záložku a přesune na konec vnější záložku.
+Pokud změníte text záložky, která obsahuje jinou záložku, vnitřní záložka se neodstraní. Nicméně vnitřní záložka se stane prázdnou záložkou a přejde na konec vnější záložky.
 
-Následující tabulka ukazuje, jak se věta "Toto je ukázkový text". sdílí záložku, která je obsažena v jiné záložku:
+Následující tabulka ukazuje, jak se jedná o větu "This je ukázkový text." je sdílen záložkou, která je obsažena v jiné záložce:
 
-|záložky|Text|
+|záložku|Text|
 |--------------|----------|
-|Překrývající se záložky|[Toto je text {ukázka}].|
+|Překrývající se záložky|[tohle je {Sample} text.]|
 |Bookmark1|Toto je ukázkový text.|
 |Bookmark2|ukázka|
 
- Pokud přiřadíte nové text "Toto je náhrada." Chcete-li Bookmark1 už překrývající se záložky a Bookmark2 stane prázdný záložku, která se nachází na konci Bookmark1.
+ Pokud přiřadíte nový text "Toto je náhrada". bookmark1 záložky již nejsou překrývající a Bookmark2 se stane prázdnou záložkou, která je umístěna na konci bookmark1.
 
-|záložky|Text|
+|záložku|Text|
 |--------------|----------|
-|Dva samostatné záložky|[Toto je náhrada.]{}|
-|Bookmark1|Toto je nahrazení.|
-|Bookmark2|*\<Prázdný >*|
+|Dvě samostatné záložky|[Toto je náhrada.]{}|
+|Bookmark1|Toto je náhrada.|
+|Bookmark2|*\<prázdné >*|
 
 ## <a name="events"></a>Události
 
-Tyto události jsou k dispozici pro <xref:Microsoft.Office.Tools.Word.Bookmark> ovládacího prvku:
+Pro <xref:Microsoft.Office.Tools.Word.Bookmark> ovládací prvek jsou k dispozici následující události:
 
 - <xref:Microsoft.Office.Tools.Word.Bookmark.BeforeDoubleClick>
 
@@ -111,8 +111,8 @@ Tyto události jsou k dispozici pro <xref:Microsoft.Office.Tools.Word.Bookmark> 
 
 ## <a name="see-also"></a>Viz také:
 
-- [Automatizace aplikace Word s použitím rozšířených objektů](../vsto/automating-word-by-using-extended-objects.md)
+- [Automatizace Wordu pomocí rozšířených objektů](../vsto/automating-word-by-using-extended-objects.md)
 - [Postupy: Přidání ovládacích prvků záložek do dokumentů aplikace Word](../vsto/how-to-add-bookmark-controls-to-word-documents.md)
-- [Návod: Vytváření místních nabídek pro záložky](../vsto/walkthrough-creating-shortcut-menus-for-bookmarks.md)
-- [Vytvoření vazby dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
-- [Programová omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
+- [Návod: Vytvořit místní nabídky pro záložky](../vsto/walkthrough-creating-shortcut-menus-for-bookmarks.md)
+- [Vázání dat k ovládacím prvkům v řešeních pro systém Office](../vsto/binding-data-to-controls-in-office-solutions.md)
+- [Programové omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)

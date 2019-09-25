@@ -30,32 +30,32 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 7266e7fa26574332bcb343b552eea2b707a8672b
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: f05f18201a055ac88e4af90d7b8e4d9db8f4e4b6
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63427948"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71253448"
 ---
 # <a name="global-access-to-objects-in-office-projects"></a>Globální přístup k objektům v projektech pro systém Office
-  Při vytváření projektu aplikace Office, Visual Studio automaticky vygeneruje třídu pojmenovanou `Globals` v projektu. Můžete použít `Globals` pro přístup k několika položek jiného projektu za běhu v žádném kódu v projektu.
+  Při vytváření projektu sady Office sada Visual Studio automaticky generuje třídu s názvem `Globals` v projektu. `Globals` Třídu můžete použít pro přístup k několika různým projektovým položkám v době běhu z libovolného kódu v projektu.
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
-## <a name="how-to-use-the-globals-class"></a>Jak používat Globals – třída
- `Globals` je statická třída, která zajišťuje odkazy na některé položky ve vašem projektu. S použitím `Globals` třídy, následující položky se dá dostat z žádný kód v projektu za běhu:
+## <a name="how-to-use-the-globals-class"></a>Jak použít třídu Globals
+ `Globals`je statická třída, která udržuje odkazy na určité položky v projektu. Pomocí `Globals` třídy můžete získat přístup k následujícím položkám z libovolného kódu v projektu v době běhu:
 
-- `ThisWorkbook` a `Sheet` *n* třídy v projektu sešitu nebo šabloně aplikace Excel. Můžete přístup k těmto objektům s použitím `Globals.ThisWorkbook` a `Sheet` *n* vlastnosti.
+- Třídy `ThisWorkbook` a `Sheet` *n* v excelovém sešitu nebo šabloně projektu. K těmto objektům můžete přistupovat pomocí `Globals.ThisWorkbook` vlastností a `Sheet` *n* .
 
-- `ThisDocument` Třídy v projektu dokumentu nebo šabloně aplikace Word. Můžete přístup k tomuto objektu pomocí `Globals.ThisDocument` vlastnost.
+- `ThisDocument` Třída ve wordovém dokumentu nebo šabloně projektu. K tomuto objektu můžete přistupovat pomocí `Globals.ThisDocument` vlastnosti.
 
-- `ThisAddIn` Třídu v projektu doplňku VSTO. Můžete přístup k tomuto objektu pomocí `Globals.ThisAddIn` vlastnost.
+- `ThisAddIn` Třída v projektu doplňku VSTO. K tomuto objektu můžete přistupovat pomocí `Globals.ThisAddIn` vlastnosti.
 
-- Všechny pásy karet v projektu, který můžete přizpůsobit pomocí Návrháře pásu karet. Pásy přístupné prostřednictvím `Globals.Ribbons` vlastnost. Další informace najdete v tématu [přístup k pásu karet za běhu](../vsto/accessing-the-ribbon-at-run-time.md).
+- Všechny pásy v projektu, které jste přizpůsobili pomocí Návrháře pásu karet. K pás karet můžete přistupovat pomocí `Globals.Ribbons` vlastnosti. Další informace najdete v tématu [přístup k pásu karet v době běhu](../vsto/accessing-the-ribbon-at-run-time.md).
 
-- Všechny oblastí formulářů aplikace Outlook v projektu doplňku VSTO v Outlooku. Můžete přístup k oblasti formuláře pomocí `Globals.FormRegions` vlastnost. Další informace najdete v tématu [přístup k oblasti formuláře za běhu](../vsto/accessing-a-form-region-at-run-time.md).
+- Všechny oblasti formulářů aplikace Outlook v projektu doplňku aplikace Outlook VSTO. K oblastem formuláře můžete přistupovat pomocí `Globals.FormRegions` vlastnosti. Další informace najdete v tématu [přístup k oblasti formuláře v době běhu](../vsto/accessing-a-form-region-at-run-time.md).
 
-- Objekt factory, který vám umožní vytvořit ovládací prvky pásu karet a hostovat položky v době běhu v projektech, které se zaměřují [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]. Můžete přístup k tomuto objektu pomocí `Globals.Factory` vlastnost. Tento objekt je instancí třídy, která implementuje jednu následujících rozhraní:
+- Objekt factory, který umožňuje vytvořit ovládací prvky pásu karet a položky hostitele v době běhu v projektech, které cílí na [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]nebo. K tomuto objektu můžete přistupovat pomocí `Globals.Factory` vlastnosti. Tento objekt je instancí třídy, která implementuje jedno z následujících rozhraní:
 
   - <xref:Microsoft.Office.Tools.Factory>
 
@@ -65,22 +65,22 @@ ms.locfileid: "63427948"
 
   - <xref:Microsoft.Office.Tools.Word.Factory>
 
-  Například můžete použít `Globals.Sheet1` vlastnost vložit text do <xref:Microsoft.Office.Tools.Excel.NamedRange> ovládání na `Sheet1` když uživatel klikne na tlačítko v podokně akcí v projektu úrovni dokumentu pro Excel.
+  Můžete například použít `Globals.Sheet1` vlastnost pro vložení textu <xref:Microsoft.Office.Tools.Excel.NamedRange> do ovládacího prvku `Sheet1` , když uživatel klikne na tlačítko v podokně akce v projektu na úrovni dokumentu v aplikaci Excel.
 
   [!code-vb[Trin_VstcoreProgramming#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/Sheet1.vb#1)]
   [!code-csharp[Trin_VstcoreProgramming#1](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingExcelCS/Sheet1.cs#1)]
 
-## <a name="initialize-the-globals-class"></a>Inicializovat Globals – třída
- Kód, který se pokouší použít `Globals` třídy před inicializací dokumentu nebo doplňku VSTO může vyvolat výjimku běhu. Například použití `Globals` při deklarování proměnné úrovni třídy může selhat, protože `Globals` třída nebyla pravděpodobně inicializována s odkazy na všechny položky hostitele před vytvořením instance deklarovanému objektu.
+## <a name="initialize-the-globals-class"></a>Inicializovat třídu Globals
+ Kód, který se pokusí použít `Globals` třídu před inicializací dokumentu nebo doplňku VSTO, může vyvolat výjimku za běhu. Například použití `Globals` při deklaraci proměnné na úrovni třídy může selhat, `Globals` protože třída nemusí být inicializována s odkazy na všechny položky hostitele před vytvořením instance deklarovaného objektu.
 
 > [!NOTE]
-> `Globals` Třída je inicializována nikdy v době návrhu, ale v návrháři se vytvářejí instance ovládacího prvku. To znamená, že je-li vytvořit uživatelský ovládací prvek, který používá vlastnost `Globals` třídy z uvnitř třídy uživatelského ovládacího prvku, je nutné zkontrolovat, zda vlastnost vrací **null** předtím, než se pokusíte použít vráceného objektu.
+> `Globals` Třída není nikdy inicializována v době návrhu, ale instance ovládacích prvků jsou vytvořeny návrhářem. To znamená, že pokud vytvoříte uživatelský ovládací prvek, který používá vlastnost `Globals` třídy v rámci třídy uživatelského ovládacího prvku, je nutné před pokusem o použití vráceného objektu ověřit, zda vlastnost vrací **hodnotu null** .
 
 ## <a name="see-also"></a>Viz také:
 - [Přístup k pásu karet za běhu](../vsto/accessing-the-ribbon-at-run-time.md)
-- [Přístup k oblasti formuláře za běhu](../vsto/accessing-a-form-region-at-run-time.md)
-- [Přehled ovládacích prvků hostitele a hostitelské položky](../vsto/host-items-and-host-controls-overview.md)
-- [Hostitelská položka Document](../vsto/document-host-item.md)
-- [Hostitelská položka Workbook](../vsto/workbook-host-item.md)
-- [Hostitelská položka Worksheet](../vsto/worksheet-host-item.md)
+- [Přístup k oblasti formuláře v době běhu](../vsto/accessing-a-form-region-at-run-time.md)
+- [Přehled hostitelských položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md)
+- [Položka hostitele dokumentu](../vsto/document-host-item.md)
+- [Položka hostitele sešitu](../vsto/workbook-host-item.md)
+- [Položka hostitele listu](../vsto/worksheet-host-item.md)
 - [Psaní kódu v řešeních pro systém Office](../vsto/writing-code-in-office-solutions.md)

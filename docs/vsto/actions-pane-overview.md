@@ -15,12 +15,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 6cbade56f80d75e6ab8d735aaf586d45d2dedb42
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 9d2dc3afb69c2febdcd8e59618c43c52ab9294cf
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926670"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71255688"
 ---
 # <a name="actions-pane-overview"></a>Přehled podokna akcí
   Podokno akcí je podokno úloh přizpůsobitelné **Akce dokumentu** , které je připojené k určitému systém Microsoft Office dokumentu aplikace Word nebo systém Microsoft Office excelovém sešitu. Podokno akce je hostováno v podokně úloh Office společně s dalšími vestavěnými podokny úloh, jako je podokno úloh **zdroj XML** v aplikaci Excel nebo podokno úloh **styly a formátování** ve Wordu. Můžete použít ovládací prvky model Windows Forms nebo ovládací prvky WPF pro návrh uživatelského rozhraní podokna akce.
@@ -40,7 +40,7 @@ ms.locfileid: "68926670"
  [!code-csharp[Trin_VstcoreActionsPaneWord#7](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#7)]
  [!code-vb[Trin_VstcoreActionsPaneWord#7](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#7)]
 
- Podokno akce se zobrazí za běhu hned po explicitním přidání ovládacího prvku do něj. Po zobrazení podokna akce můžete dynamicky přidávat nebo odebírat ovládací prvky v reakci na akce uživatele. Obvykle přidáte kód pro zobrazení podokna akce v `Startup` `ThisDocument` obslužné rutině události nebo `ThisWorkbook` tak, aby se podokno akce zobrazilo, když uživatel poprvé otevře dokument. Je však možné, že budete chtít zobrazit podokno akce pouze v reakci na akci uživatele v dokumentu. Můžete například přidat kód do `Click` události ovládacího prvku v dokumentu.
+ Podokno akce se zobrazí v době běhu hned po přidání ovládacího prvku do něj. Po zobrazení podokna akce můžete dynamicky přidávat nebo odebírat ovládací prvky v reakci na akce uživatele. Obvykle přidáte kód pro zobrazení podokna akce v `Startup` `ThisDocument` obslužné rutině události nebo `ThisWorkbook` tak, aby se podokno akce zobrazilo, když uživatel poprvé otevře dokument. Je však možné, že budete chtít zobrazit podokno akce pouze v reakci na akci uživatele v dokumentu. Můžete například přidat kód do `Click` události ovládacího prvku v dokumentu.
 
 ### <a name="add-multiple-controls-to-the-actions-pane"></a>Přidání více ovládacích prvků do podokna akce
  Přidáte-li do podokna akce více ovládacích prvků, měli byste seskupit ovládací prvky do uživatelského ovládacího prvku a následně do <xref:Microsoft.Office.Tools.ActionsPane.Controls%2A> vlastnosti přidat uživatelský ovládací prvek. Tento proces zahrnuje následující kroky:
@@ -66,12 +66,12 @@ ms.locfileid: "68926670"
      [!code-csharp[Trin_VstcoreActionsPaneWord#34](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#34)]
      [!code-vb[Trin_VstcoreActionsPaneWord#34](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#34)]
 
-- V aplikaci Excel nastavte <xref:Microsoft.Office.Interop.Excel._Application.DisplayDocumentActionTaskPane%2A> vlastnost <xref:Microsoft.Office.Tools.Excel.Workbook.Application%2A> objektu na hodnotu NEPRAVDA. Následující příklad kódu je určen ke spuštění z `ThisWorkbook` třídy v projektu.
+- V aplikaci Excel nastavte <xref:Microsoft.Office.Interop.Excel._Application.DisplayDocumentActionTaskPane%2A> vlastnost <xref:Microsoft.Office.Tools.Excel.Workbook.Application%2A> objektu na **hodnotu NEPRAVDA**. Následující příklad kódu je určen ke spuštění z `ThisWorkbook` třídy v projektu.
 
      [!code-csharp[Trin_VstcoreActionsPaneExcel#11](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs#11)]
      [!code-vb[Trin_VstcoreActionsPaneExcel#11](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#11)]
 
-- V aplikaci Word nebo Excel můžete případně nastavit <xref:Microsoft.Office.Core.CommandBar.Visible%2A> vlastnost panelu příkazů, která představuje podokno úloh na hodnotu NEPRAVDA. Následující příklad kódu je určen ke spuštění z `ThisDocument` třídy nebo `ThisWorkbook` v projektu.
+- V aplikaci Word nebo Excel můžete případně nastavit <xref:Microsoft.Office.Core.CommandBar.Visible%2A> vlastnost panelu příkazů, která představuje podokno úloh na **hodnotu NEPRAVDA**. Následující příklad kódu je určen ke spuštění z `ThisDocument` třídy nebo `ThisWorkbook` v projektu.
 
      [!code-csharp[Trin_VstcoreActionsPaneExcel#9](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs#9)]
      [!code-vb[Trin_VstcoreActionsPaneExcel#9](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#9)]
@@ -122,7 +122,7 @@ ms.locfileid: "68926670"
  [!code-vb[Trin_VstcoreActionsPaneExcel#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#10)]
 
 ## <a name="anchor-controls"></a>Ovládací prvky ukotvení
- Pokud uživatel změní velikost podokna akce za běhu, ovládací prvky mohou změnit velikost pomocí podokna akce. Můžete použít <xref:System.Windows.Forms.Control.Anchor%2A> vlastnost ovládacího prvku model Windows Forms k ukotvení ovládacích prvků do podokna akce. Můžete také ukotvit ovládací prvky model Windows Forms do uživatelského ovládacího prvku stejným způsobem. Další informace najdete v tématu [jak: Ovládací prvky kotvy](/dotnet/framework/winforms/controls/how-to-anchor-controls-on-windows-forms)na model Windows Forms.
+ Pokud uživatel změní velikost podokna akce v době běhu, ovládací prvky mohou změnit velikost pomocí podokna akce. Můžete použít <xref:System.Windows.Forms.Control.Anchor%2A> vlastnost ovládacího prvku model Windows Forms k ukotvení ovládacích prvků do podokna akce. Můžete také ukotvit ovládací prvky model Windows Forms do uživatelského ovládacího prvku stejným způsobem. Další informace najdete v tématu [jak: Ovládací prvky kotvy](/dotnet/framework/winforms/controls/how-to-anchor-controls-on-windows-forms)na model Windows Forms.
 
 ## <a name="resize-the-actions-pane"></a>Změna velikosti podokna akcí
  Nemůžete přímo změnit velikost objektu <xref:Microsoft.Office.Tools.ActionsPane> , <xref:Microsoft.Office.Tools.ActionsPane> protože je vložený v podokně úloh. Šířku podokna úloh ale můžete programově změnit nastavením <xref:Microsoft.Office.Core.CommandBar.Width%2A> vlastnosti <xref:Microsoft.Office.Core.CommandBar> , která představuje podokno úloh. Můžete změnit výšku podokna úloh, pokud je ukotven vodorovně nebo je plovoucí.

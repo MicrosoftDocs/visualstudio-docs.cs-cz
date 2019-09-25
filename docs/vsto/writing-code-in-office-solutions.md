@@ -33,98 +33,98 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 2c5163de342415113321b6bd2337cd75ff528f6c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cead0569ae067fcc503f7f2074807c609e6eed75
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62810774"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71255045"
 ---
 # <a name="write-code-in-office-solutions"></a>Psaní kódu v řešeních pro systém Office
-  Existují některé aspekty psaní kódu v projektech Office, které se liší od ostatních typů projektů v sadě Visual Studio. Mnohé z těchto rozdílů jsou týkající se způsobu, jakým Office – objektové modely jsou přístupné pro spravovaný kód. Další rozdíly v návrhu projektů Office souvisejí.
+  Existují některé aspekty psaní kódu v projektech pro systém Office, které se liší od jiných typů projektů v sadě Visual Studio. Mnohé z těchto rozdílů se týkají způsobu, jakým jsou modely objektů Office vystaveny spravovanému kódu. Další rozdíly se týkají návrhu projektů Office.
 
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]
 
-## <a name="managed-code-and-office-programming"></a>Spravovaný kód a programování pro systém Office
- Klíčové technologie, která umožňuje vytváření integrované řešení Microsoft Office je automatizace, která je součástí technologie modelu COM (Component Object). Automation vám umožní použít kód k vytvoření a řízení objektů softwaru zveřejněné ve všech aplikacích, knihovny DLL, nebo ovládacího prvku ActiveX, který podporuje odpovídající programových rozhraní.
+## <a name="managed-code-and-office-programming"></a>Spravovaný kód a programování pro Office
+ Klíčová technologie, která vytváří integrované řešení systém Microsoft Office, je automatizace, která je součástí technologie COM (Component Object Model). Automatizace umožňuje používat kód k vytváření a řízení softwarových objektů vystavených všemi aplikacemi, knihovnou DLL nebo ovládacím prvkem ActiveX, který podporuje odpovídající programová rozhraní.
 
-### <a name="understand-primary-interop-assemblies"></a>Vysvětlení primárních sestavení vzájemné spolupráce
- Aplikace Microsoft Office vystavit většina jejich funkcí automatizace. Spravovaný kód (například Visual Basic nebo C#) však nelze použít přímo pro automatizaci aplikací Office. K automatizaci aplikace Office pomocí spravovaného kódu, musíte použít Office primární sestavení interop (PIA). Primární spolupracující sestavení povolit spravovanému kódu pracovat s modelem objektů založené na modelu COM z aplikací Office.
+### <a name="understand-primary-interop-assemblies"></a>Pochopení primárních sestavení vzájemné spolupráce
+ Systém Microsoft Office aplikace zveřejňují většinu jejich funkcí pro automatizaci. Spravovaný kód (například Visual Basic ani C#) ale nemůžete použít přímo k automatizaci aplikací Office. Chcete-li automatizovat aplikace Office pomocí spravovaného kódu, je nutné použít primární spolupracující sestavení (PIA) sady Office. Primární spolupracující sestavení umožňují spravovanému kódu pracovat s modelem objektu založeným na modelu COM aplikací Office.
 
- Má každá aplikace Microsoft Office PIA. Při vytváření projektu pro Office v sadě Visual Studio se do projektu automaticky přidá odkaz na příslušný PIA. K automatizaci funkcí ostatních aplikací Office z projektu, musíte přidat odkaz na příslušný PIA ručně. Další informace najdete v tématu [jak: Cílení na aplikace Office primárních sestaveních vzájemné spolupráce](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md).
+ Každá aplikace systém Microsoft Office má hodnotu PIA. Při vytváření projektu Office v sadě Visual Studio se do projektu automaticky přidá odkaz na příslušné PIA. Chcete-li automatizovat funkce jiných aplikací Office z projektu, je nutné ručně přidat odkaz na příslušné PIA. Další informace najdete v tématu [jak: Cílové aplikace Office v rámci primárních](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)sestavení spolupráce
 
-### <a name="use-primary-interop-assemblies-at-design-time-and-runtime"></a>Použít sestavení primární spolupráce v době návrhu a běhu
- PIA pro systém Office nainstalována a zaregistrována v globální mezipaměti sestavení na vašem vývojovém počítači provádět většinu vývojářských úkolů musíte mít. Další informace najdete v tématu [konfigurace počítače pro vývoj řešení pro systém Office](../vsto/configuring-a-computer-to-develop-office-solutions.md).
+### <a name="use-primary-interop-assemblies-at-design-time-and-runtime"></a>Použít primární spolupracující sestavení v době návrhu a modulu runtime
+ Abyste mohli provádět většinu vývojářských úloh, musíte mít nainstalovanou a zaregistrované PIA Office v globální mezipaměti sestavení (GAC) ve vývojovém počítači. Další informace najdete v tématu [Konfigurace počítače pro vývoj řešení pro systém Office](../vsto/configuring-a-computer-to-develop-office-solutions.md).
 
- Sestavení PIA sady Office nejsou vyžadovány v počítačích koncových uživatelů ke spuštění řešení pro systém Office, které se zaměřují [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] nebo novější. Další informace najdete v tématu [návrhu a vytvořte řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md).
+ Na počítačích koncových uživatelů se nevyžadují PIA Office, aby bylo možné spouštět řešení Office, [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] která cílí na nebo novější. Další informace najdete v tématu [Návrh a vytváření řešení pro Office](../vsto/designing-and-creating-office-solutions.md).
 
-### <a name="use-types-in-primary-interop-assemblies"></a>Použít typy v sestavení primární spolupráce
- Sestavení PIA sady Office obsahovat kombinaci typů, které zveřejňují objektový model aplikace Office a další infrastrukturu typy, které nejsou určeny k použití přímo ve vašem kódu. Přehled typů v sestavení PIA sady Office naleznete v tématu [přehled třídy a rozhraní v primární spolupracující sestavení Office](/previous-versions/office/office-12/ms247299\(v\=office.12\)).
+### <a name="use-types-in-primary-interop-assemblies"></a>Použít typy v primárních sestaveních vzájemné spolupráce
+ PIA Office obsahuje kombinaci typů, které zveřejňují objektový model aplikací Office a další typy infrastruktury, které nejsou určené pro použití přímo v kódu. Přehled typů v rámci PIA pro Office najdete v tématu [Přehled tříd a rozhraní v primárních sestaveních vzájemné spolupráce pro systém Office](/previous-versions/office/office-12/ms247299\(v\=office.12\)).
 
- Vzhledem k tomu, že typy v sestavení PIA sady Office odpovídají typům v modelech objektů založené na modelu COM, je často způsob, jak používat tyto typy liší od jiné spravované typy. Způsob volání metody, které mají volitelné parametry v sestavení primární spolupráce Office, například závisí na programovací jazyk, který používáte ve vašem projektu. Další informace naleznete v následujících tématech:
+ Vzhledem k tomu, že typy v PIA Office odpovídají typům v modelech objektů založených na modelu COM, způsob, jakým tyto typy použijete, se často liší od jiných spravovaných typů. Například způsob volání metod, které mají volitelné parametry v primární definiční sestavení sady Office, závisí na programovacím jazyku, který používáte v projektu. Další informace naleznete v následujících tématech:
 
 - [Volitelné parametry v řešeních pro systém Office](../vsto/optional-parameters-in-office-solutions.md).
 
-- [Pozdní vazba v řešeních pro systém Office](../vsto/late-binding-in-office-solutions.md).
+- [Pozdní vazba v řešeních pro systém Office](../vsto/late-binding-in-office-solutions.md)
 
-## <a name="program-model-of-office-projects"></a>Model program projektů Office
- Všechny projekty Office zahrnují jeden nebo více generované třídy, které poskytují vstupní bod pro kód. Tyto třídy také poskytují přístup k objektovému modelu hostitelské aplikace a přístup k funkcím, jako jsou podokna akcí a vlastních podoken úloh.
+## <a name="program-model-of-office-projects"></a>Model programu projektů pro systém Office
+ Všechny projekty Office obsahují jednu nebo více vygenerovaných tříd, které poskytují vstupní bod pro váš kód. Tyto třídy také poskytují přístup k objektovému modelu aplikace hostitele a přístup k funkcím, jako jsou podokna akcí a vlastní podokna úloh.
 
-### <a name="understand-the-generated-classes"></a>Vysvětlení vygenerovaných tříd
- V projekty na úrovni dokumentu pro Excel a Word generované třídy vypadá podobně jako objekt nejvyšší úrovně v objektovém modelu aplikace. Například generované `ThisDocument` třídu v projektu dokumentu aplikace Word poskytuje stejné členy jako <xref:Microsoft.Office.Interop.Word.Document> třídy v objektovém modelu aplikace Word. Další informace o vygenerovaných tříd v projektech na úrovni dokumentu naleznete v tématu [programování přizpůsobení na úrovni dokumentu](../vsto/programming-document-level-customizations.md).
+### <a name="understand-the-generated-classes"></a>Pochopení generovaných tříd
+ V projektech na úrovni dokumentu v aplikaci Excel a Word se vygenerovaná třída podobá objektu nejvyšší úrovně v objektovém modelu aplikace. Například vygenerovaná `ThisDocument` třída v projektu wordového dokumentu poskytuje stejné členy <xref:Microsoft.Office.Interop.Word.Document> jako třída v objektovém modelu aplikace Word. Další informace o generovaných třídách v projektech na úrovni dokumentu najdete v tématu [přizpůsobení na úrovni dokumentu programu](../vsto/programming-document-level-customizations.md).
 
- Projekty doplňků VSTO poskytují generovanou třídu s názvem `ThisAddIn`. Tato třída není vypadat podobně jako na třídu v objektovém modelu hostitelskou aplikaci. Místo toho tato třída reprezentuje doplňku VSTO samotného a poskytuje členy, které můžete použít pro přístup k modelu objektu hostitelské aplikace a přistupovat k dalším funkcím, které jsou k dispozici pro doplňky VSTO. Další informace najdete v tématu [doplňků Program VSTO](../vsto/programming-vsto-add-ins.md).
+ Projekty doplňku VSTO poskytují generovanou třídu s názvem `ThisAddIn`. Tato třída se nepodobá třídě v objektovém modelu hostitelské aplikace. Místo toho tato třída představuje samotný doplněk VSTO a poskytuje členy, které můžete použít pro přístup k objektovému modelu aplikace hostitele a k přístupu k dalším funkcím dostupným pro doplňky VSTO. Další informace najdete v tématu [programové doplňky VSTO](../vsto/programming-vsto-add-ins.md).
 
- Zahrnout všechny generované třídy v projektech pro systém Office `Startup` a `Shutdown` obslužných rutin událostí. Abyste mohli začít psát kód, obvykle přidejte kód do těchto obslužných rutin událostí. K inicializaci doplňku VSTO, můžete přidat kód, který `Startup` obslužné rutiny události. Pokud chcete vyčistit prostředky využívané třídou doplňku VSTO, můžete přidat kód, který `Shutdown` obslužné rutiny události. Další informace najdete v tématu [události v projektech pro systém Office](../vsto/events-in-office-projects.md).
+ Všechny generované třídy v projektech systému Office `Startup` zahrnují `Shutdown` a obslužné rutiny událostí. Chcete-li začít psát kód, obvykle přidáte kód do těchto obslužných rutin událostí. K inicializaci doplňku VSTO můžete přidat kód do `Startup` obslužné rutiny události. K vyčištění prostředků používaných doplňkem VSTO můžete přidat kód do `Shutdown` obslužné rutiny události. Další informace najdete v tématu [události v projektech Office](../vsto/events-in-office-projects.md).
 
-### <a name="access-the-generated-classes-at-runtime"></a>Přístup k generované třídy za běhu
- Při načítání řešení Office [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] vytvoří instanci každý z vygenerovaných tříd ve vašem projektu. Tyto objekty lze přístup z jakéhokoli kódu ve vašem projektu s použitím `Globals` třídy. Například můžete použít `Globals` třídy pro volání kódu `ThisAddIn` třídy z obslužné rutiny události tlačítko pásu karet v doplňku VSTO.
+### <a name="access-the-generated-classes-at-run-time"></a>Přístup k vygenerovaným třídám v době běhu
+ Po načtení řešení pro [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] sadu Office vytvoří instance každého generované třídy v projektu. K těmto objektům můžete přistupovat z libovolného kódu v projektu pomocí `Globals` třídy. Můžete například použít `Globals` třídu pro volání kódu `ThisAddIn` ve třídě z obslužné rutiny události tlačítka pásu karet v doplňku VSTO.
 
  Další informace najdete v tématu [globální přístup k objektům v projektech Office](../vsto/global-access-to-objects-in-office-projects.md).
 
-### <a name="namespace-considerations-in-office-solutions"></a>Důležité informace o Namespace v řešeních pro systém Office
- Nelze změnit *výchozí obor názvů* (nebo *kořenový obor názvů* v jazyce Visual Basic) Office Project po vytvoření projektu. Výchozí obor názvů se vždy odpovídat názvu projektu, který jste zadali při vytváření projektu. Pokud přejmenujete projekt, výchozí obor názvů se nezmění. Další informace o výchozí obor názvů v projektech, naleznete v tématu [stránka aplikace, Návrhář projektu &#40;C&#35; &#41; ](../ide/reference/application-page-project-designer-csharp.md) a [stránka aplikace, Návrhář projektu &#40;jazyka Visual Basic&#41; ](../ide/reference/application-page-project-designer-visual-basic.md).
+### <a name="namespace-considerations-in-office-solutions"></a>Hlediska oboru názvů v řešeních pro systém Office
+ Po vytvoření projektu nelze změnit *výchozí obor názvů* (nebo *kořenový obor názvů* v Visual Basic) projektu Office. Výchozí obor názvů se vždycky bude shodovat s názvem projektu, který jste zadali při vytváření projektu. Pokud přejmenujete projekt, výchozí obor názvů se nemění. Další informace o výchozím oboru názvů v projektech naleznete v tématu [Stránka aplikace, Návrhář &#40;projektu C&#35; ](../ide/reference/application-page-project-designer-csharp.md) a [Stránka aplikace, Návrhář &#40;projektu Visual Basic&#41;](../ide/reference/application-page-project-designer-visual-basic.md).
 
-### <a name="change-the-namespace-of-host-item-classes-in-c-projects"></a>Změna oboru názvů tříd položek hostitele v projektech C#
- Hostování tříd položek (například `ThisAddIn`, `ThisWorkbook`, nebo `ThisDocument` třídy) mají své vlastní obory názvů v projektech Visual C# Office. Ve výchozím nastavení obor názvů pro hostitelské položky ve vašem projektu odpovídá názvu projektu, který jste zadali při vytváření projektu.
+### <a name="change-the-namespace-of-host-item-classes-in-c-projects"></a>Změna oboru názvů tříd hostitelských položek v C# projektech
+ Třídy `ThisAddIn`hostitelských položek (například třídy, `ThisWorkbook`nebo `ThisDocument` ) mají své vlastní obory názvů v projektech sady C# Visual Office. Ve výchozím nastavení se obor názvů pro položky hostitele v projektu shoduje s názvem projektu, který jste zadali při vytváření projektu.
 
- Chcete-li změnit obor názvů hostitelské položky v projektu Visual C# Office, použijte **Namespace pro hostitelský objekt** vlastnost. Další informace najdete v tématu [vlastnosti v projektech pro systém Office](../vsto/properties-in-office-projects.md).
+ Chcete-li změnit obor názvů hostitelských položek v projektu C# sady Visual Office, použijte **obor názvů pro vlastnost položka hostitele** . Další informace najdete v tématu [vlastnosti v projektech Office](../vsto/properties-in-office-projects.md).
 
 ## <a name="supported-programming-languages-in-office-projects"></a>Podporované programovací jazyky v projektech pro systém Office
- Šablony projektů pro Office v sadě Visual Studio podporují pouze jazyce Visual Basic a Visual C# programovacích jazyků. Proto nejsou k dispozici pouze v rámci těchto šablon projektů **jazyka Visual Basic** a **Visual C#** uzly **nový projekt** dialogové okno v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]. Další informace najdete v tématu [jak: Vytvářet projekty pro Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
+ Šablony projektů Office v sadě Visual Studio podporují pouze programovací jazyky Visual Basic a C# Visual. Proto jsou tyto šablony projektů k dispozici pouze v rámci **Visual Basic** a  **C# vizuálních** uzlů dialogového okna **Nový projekt** v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]. Další informace najdete v tématu [jak: Vytváření projektů Office v sadě Visual](../vsto/how-to-create-office-projects-in-visual-studio.md)Studio.
 
-## <a name="language-choice-and-office-programming"></a>Volba jazyka a programování pro systém Office
- Aplikace Microsoft Office a Visual Basic for Applications (VBA) byly vyvinuty spolupráce pro optimalizaci pracovního postupu přizpůsobení aplikace. Visual Basic zdědil některé z těchto vývoje. Například Visual Basic podporuje volitelné parametry, což znamená, že při volání některé metody v primární definiční sestavení Microsoft Office než při použití jazyka Visual C# můžete napsat menším množstvím kódu.
+## <a name="language-choice-and-office-programming"></a>Volba jazyka a programování pro Office
+ Systém Microsoft Office a jazyk Visual Basic for Application (VBA) byly vyvinuty pro spolupráci k optimalizaci pracovního postupu přizpůsobení aplikace. Visual Basic zdědil některé z těchto vývojů. Například Visual Basic podporuje volitelné parametry, což znamená, že můžete napsat méně kódu při volání některých metod v systém Microsoft Office primárních sestaveních vzájemné spolupráce, než když použijete C#vizuál.
 
-## <a name="program-with-visual-basic-vs-visual-c-in-office-solutions"></a>Program s vs jazyka Visual Basic. Visual C# v řešeních pro systém Office
- Řešení pro Office můžete vytvořit pomocí jazyka Visual Basic nebo Visual C#. Vzhledem k tomu, Microsoft Office – objektové modely byly navrženy pro použití s Microsoft Visual Basic for Applications (VBA), vývojáře jazyka Visual Basic můžete pohodlně pracovat s objekty vystavené aplikace Microsoft Office. Visual C# mohou vývojáři většinu stejné funkce jako vývojáři v jazyce Visual Basic, ale existují případy, kdy musíte napsat další kód, který použijete Office – objektové modely. Existují také některé rozdíly mezi základní funkce programování v vývoj pro Office a spravovaný kód napsaný v jazyce Visual Basic a C#.
+## <a name="program-with-visual-basic-vs-visual-c-in-office-solutions"></a>Program s Visual Basic vs. Vizuál C# v řešeních pro systém Office
+ Řešení pro Office můžete vytvořit pomocí Visual Basic nebo vizuálu C#. Vzhledem k tomu, že systém Microsoft Office objektové modely byly navrženy pro použití s Microsoft jazyk Visual Basic for Application (VBA), vývojáři Visual Basic mohou pohodlně pracovat s objekty, které jsou vystaveny systém Microsoft Office aplikacemi. Vývojáři C# vizuálů můžou použít většinu stejných funkcí jako Visual Basic vývojářům, ale v některých případech musí napsat další kód pro použití objektových modelů Office. Mezi základními programovacími funkcemi ve vývoji pro Office a spravovaným kódem napsaným v Visual Basic C#a jsou také rozdíly.
 
 <!-- markdownlint-disable MD003 MD020 -->
-## <a name="key-differences-between-visual-basic-and-visual-c"></a>Hlavní rozdíly mezi Visual Basic a Visual C#
+## <a name="key-differences-between-visual-basic-and-visual-c"></a>Klíčové rozdíly mezi Visual Basic a vizuáluC#
 <!-- markdownlint-enable MD003 MD020 -->
 
-Následující tabulka uvádí hlavní rozdíly mezi Visual Basic a Visual C# v vývoj pro Office.
+V následující tabulce jsou uvedeny klíčové rozdíly mezi Visual Basic a C# vizuálu při vývoji pro Office.
 
-|Funkce|Popis|Podpora jazyka Visual Basic|Podpora Visual C#|
+|Funkce|Popis|Podpora Visual Basic|Podpora C# vizuálů|
 |-------------|-----------------|--------------------------|------------------------|
-|Volitelné parametry|Mnoho metod Microsoft Office mají parametry, které nejsou nutné voláte metodu. Pokud není předána žádná hodnota pro parametr, je použita výchozí hodnota.|Visual Basic podporuje volitelné parametry.|Visual C# ve většině případů podporuje volitelné parametry. Další informace najdete v tématu [volitelné parametry v řešeních pro systém Office](../vsto/optional-parameters-in-office-solutions.md).|
-|Předávání parametrů odkazem.|Volitelné parametry ve většině primární definiční sestavení Microsoft Office může být předán podle hodnoty. Některé primárních sestavení vzájemné spolupráce, musí být předána volitelné parametry, které přijímají typy odkazů podle odkazu.<br /><br /> Další informace o parametrech typu hodnoty a odkazu, naleznete v tématu [předávání argumentů podle hodnoty a podle reference &#40;jazyka Visual Basic&#41; ](/dotnet/visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference) (pro jazyk Visual Basic) a [předávat parametry &#40;C&#35; Průvodce programováním pro&#41;](/dotnet/csharp/programming-guide/classes-and-structs/passing-parameters).|Žádné další kroky je potřeba pro předání parametrů podle odkazu. Parametry kompilátoru jazyka Visual Basic automaticky předá odkazem. Pokud je to nezbytné.|Ve většině případů kompilátor Visual C# automaticky předá parametry podle odkazu, pokud je to nezbytné. Další informace najdete v tématu [volitelné parametry v řešeních pro systém Office](../vsto/optional-parameters-in-office-solutions.md).|
-|Parametrizované vlastnosti|Některé vlastnosti přijímají parametry a fungují jako funkce jen pro čtení.|Visual Basic podporuje vlastnosti, které přijímají parametry.|Visual C# podporuje vlastnosti, které přijímají parametry.|
-|Pozdní vazba|Pozdní vazby zahrnuje určení vlastnosti objektů za běhu, místo proměnných přetypování na typ objektu v době návrhu.|Visual Basic provádí pozdní vazby při **Option Strict** je vypnuté. Když **Option Strict** zapnutý, je nutné explicitně převést objekty a použití typů v <xref:System.Reflection> obor názvů pro přístup ke členům s pozdní vazbou. Další informace najdete v tématu [pozdní vazba v řešeních pro systém Office](../vsto/late-binding-in-office-solutions.md).|Visual C# provádí pozdní vazby v projektech, které se zaměřují [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]. Další informace najdete v tématu [pozdní vazba v řešeních pro systém Office](../vsto/late-binding-in-office-solutions.md).|
+|Volitelné parametry|Mnoho metod systém Microsoft Office má parametry, které nejsou požadovány při volání metody. Pokud pro parametr není předána žádná hodnota, použije se výchozí hodnota.|Visual Basic podporuje volitelné parametry.|Vizuál C# podporuje ve většině případů volitelné parametry. Další informace najdete v tématu [volitelné parametry v řešeních pro systém Office](../vsto/optional-parameters-in-office-solutions.md).|
+|Předávání parametrů odkazem|Volitelné parametry ve většině systém Microsoft Officech primárních sestavení vzájemné spolupráce mohou být předány hodnotou. V některých primárních sestaveních spolupráce však musí být nepovinné parametry, které přijímají odkazové typy, předány odkazem.<br /><br /> Další informace o parametrech typu hodnoty a odkazu naleznete v tématu [Pass argumentů podle Value a reference &#40;Visual Basic&#41; ](/dotnet/visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference) (pro Visual Basic) a [Pass Parameters &#40;průvodce&#35; &#41;programováním C](/dotnet/csharp/programming-guide/classes-and-structs/passing-parameters).|K předání parametrů odkazem se nevyžaduje žádná další práce. Kompilátor Visual Basic v případě potřeby automaticky předává parametry podle odkazu.|Ve většině případů kompilátor vizuálu C# automaticky předává parametry podle potřeby podle odkazu. Další informace najdete v tématu [volitelné parametry v řešeních pro systém Office](../vsto/optional-parameters-in-office-solutions.md).|
+|Parametrizované vlastnosti|Některé vlastnosti přijímají parametry a fungují jako funkce jen pro čtení.|Visual Basic podporuje vlastnosti, které přijímají parametry.|Vizuál C# podporuje vlastnosti, které přijímají parametry.|
+|Pozdní vazba|Pozdní vazba zahrnuje určení vlastností objektů za běhu, namísto přetypování proměnných na typ objektu v době návrhu.|Visual Basic provádí pozdní vazbu, je-li **možnost Option Strict** vypnutá. Pokud je **parametr Option Strict** zapnutý, je nutné explicitně převést objekty a použít typy <xref:System.Reflection> v oboru názvů pro přístup ke členům s pozdní vazbou. Další informace najdete v tématu [pozdní vazba v řešeních pro systém Office](../vsto/late-binding-in-office-solutions.md).|Vizuál C# provede pozdní vazbu v projektech, které cílí [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]na. Další informace najdete v tématu [pozdní vazba v řešeních pro systém Office](../vsto/late-binding-in-office-solutions.md).|
 
-## <a name="key-differences-between-office-development-and-managed-code"></a>Hlavní rozdíly mezi vývoj pro Office a spravovaný kód
- Následující tabulka uvádí hlavní rozdíly mezi vývoj pro Office a spravovaný kód napsaný v jazyce Visual Basic nebo Visual C#.
+## <a name="key-differences-between-office-development-and-managed-code"></a>Klíčové rozdíly mezi vývojem a spravovaným kódem pro Office
+ V následující tabulce jsou uvedeny klíčové rozdíly mezi vývojem a spravovaným kódem pro Office napsané v Visual Basic nebo vizuálu C#.
 
-|Funkce|Popis|Podpora jazyka Visual Basic a Visual C#|
+|Funkce|Popis|Podpora Visual Basic a C# vizuálů|
 |-------------|-----------------|-----------------------------------------|
-|Indexy pole|Dolní mez pole z kolekce v aplikacích Microsoft Office začíná 1. Visual Basic a Visual C# pomocí pole založené na 0. Další informace najdete v tématu [pole &#40;C&#35; programováním&#41; ](/dotnet/csharp/programming-guide/arrays/index) a [pole v jazyce Visual Basic](/dotnet/visual-basic/programming-guide/language-features/arrays/index).|Pro přístup k první položku v kolekci v objektovém modelu aplikace Microsoft Office, použijte místo 0 index 1.|
+|Indexy polí|Dolní hranice pole kolekcí ve systém Microsoft Officech aplikacích začíná 1. Visual Basic a vizuální C# použití polí na bázi 0. Další informace naleznete v části [pole &#40;průvodce&#35; &#41; programováním](/dotnet/csharp/programming-guide/arrays/index) v jazyce C a [pole v Visual Basic](/dotnet/visual-basic/programming-guide/language-features/arrays/index).|Chcete-li získat přístup k první položce kolekce v objektovém modelu aplikace systém Microsoft Office, použijte index 1 místo 0.|
 
 ## <a name="see-also"></a>Viz také:
 
 - [Volitelné parametry v řešeních pro systém Office](../vsto/optional-parameters-in-office-solutions.md)
 - [Globální přístup k objektům v projektech pro systém Office](../vsto/global-access-to-objects-in-office-projects.md)
 - [Události v projektech pro systém Office](../vsto/events-in-office-projects.md)
-- [Postupy: Cílení na aplikace Office primárních sestaveních vzájemné spolupráce](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)
+- [Postupy: Cílové aplikace Office prostřednictvím primárních sestavení spolupráce](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)
 - [Postupy: Vytváření obslužných rutin událostí v projektech pro systém Office](../vsto/how-to-create-event-handlers-in-office-projects.md)
 - [Pozdní vazba v řešeních pro systém Office](../vsto/late-binding-in-office-solutions.md)
 - [Spolupráce na vývoji řešení pro systém Office](../vsto/collaborative-development-of-office-solutions.md)

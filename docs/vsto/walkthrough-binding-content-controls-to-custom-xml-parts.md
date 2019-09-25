@@ -1,5 +1,5 @@
 ---
-title: 'Návod: Vytvoření vazby ovládacích prvků obsahu do vlastní části XML'
+title: 'Návod: Svázání ovládacích prvků obsahu s vlastními částmi XML'
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -17,33 +17,33 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 52366cc268335df98da53701e5cde283c67a022d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: b4c5ea74a1892834b6eaaeb98277918985471ac4
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63438706"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71253923"
 ---
-# <a name="walkthrough-bind-content-controls-to-custom-xml-parts"></a>Návod: Vytvoření vazby ovládacích prvků obsahu do vlastní části XML
-  Tento návod ukazuje, jak svázat ovládací prvky obsahu v přizpůsobení na úrovni dokumentu pro Word XML data, která je uložena v dokumentu.
+# <a name="walkthrough-bind-content-controls-to-custom-xml-parts"></a>Návod: Svázání ovládacích prvků obsahu s vlastními částmi XML
+  Tento návod ukazuje, jak navazovat ovládací prvky obsahu v přizpůsobení na úrovni dokumentu pro Word na data XML, která jsou uložená v dokumentu.
 
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]
 
- Word umožňuje ukládat data XML s názvem *vlastní části XML*, v dokumentu. Zobrazení těchto dat můžete řídit pomocí vytvoření vazby ovládacích prvků obsahu k elementům ve vlastní část XML. Ukázkový dokument v tomto názorném postupu se zobrazí informace o zaměstnancích, která je uložena v vlastní část XML. Když otevřete dokument, zobrazí ovládací prvky obsahu hodnoty elementů XML. Všechny změny provedené v textu v ovládacích prvcích obsahu jsou ukládány do vlastní část XML.
+ Word umožňuje ukládat data XML s názvem *Custom XML Parts*v dokumentu. Zobrazení těchto dat můžete řídit vazbou ovládacích prvků obsahu na prvky ve vlastní části XML. Vzorový dokument v tomto návodu zobrazuje informace o zaměstnancích, které jsou uložené ve vlastní části XML. Když otevřete dokument, ovládací prvky obsahu zobrazí hodnoty prvků XML. Všechny změny, které provedete v textu v ovládacích prvcích obsahu, budou uloženy ve vlastní části XML.
 
  Tento návod znázorňuje následující úlohy:
 
-- Přidání ovládacích prvků obsahu do dokumentu aplikace Word v projektu úrovni dokumentu v době návrhu.
+- Přidávání ovládacích prvků obsahu do dokumentu aplikace Word v projektu na úrovni dokumentu v době návrhu.
 
-- Vytvoření datového souboru XML a schématu XML, který definuje prvky pro vytvoření vazby ovládacích prvků obsahu.
+- Vytvoření datového souboru XML a schématu XML, které definuje prvky pro svázání s ovládacími prvky obsahu.
 
-- V době návrhu se připojuje k dokumentu schématu XML.
+- Připojení schématu XML k dokumentu v době návrhu.
 
-- Přidání obsahu souboru XML na vlastní část XML v dokumentu za běhu.
+- Přidání obsahu souboru XML do vlastní části XML v dokumentu v době běhu.
 
-- Vytvoření vazby ovládacích prvků obsahu na prvky ve vlastní část XML.
+- Svázat ovládací prvky obsahu s prvky ve vlastní části XML.
 
-- Vytvoření vazby <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> sadu hodnot, které jsou definovány ve schématu XML.
+- Vytvoří vazbu <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> a na sadu hodnot, které jsou definovány ve schématu XML.
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
@@ -54,25 +54,25 @@ ms.locfileid: "63438706"
 
 - Microsoft Word.
 
-## <a name="create-a-new-word-document-project"></a>Vytvoření nového projektu dokumentu aplikace Word
+## <a name="create-a-new-word-document-project"></a>Vytvořit nový projekt wordového dokumentu
  Vytvořte dokument aplikace Word, který budete používat v tomto návodu.
 
-### <a name="to-create-a-new-word-document-project"></a>K vytvoření nového projektu dokumentu aplikace Word
+### <a name="to-create-a-new-word-document-project"></a>Vytvoření nového projektu wordového dokumentu
 
-1. Vytvoření projektu dokumentu aplikace Word s názvem **EmployeeControls**. Vytvoření nového dokumentu pro řešení. Další informace najdete v tématu [jak: Vytvářet projekty pro Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
+1. Vytvořte projekt wordového dokumentu s názvem **EmployeeControls**. Vytvořte nový dokument pro řešení. Další informace najdete v tématu [jak: Vytváření projektů Office v sadě Visual](../vsto/how-to-create-office-projects-in-visual-studio.md)Studio.
 
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] Otevře se nový dokument aplikace Word v návrháři a přidá **EmployeeControls** projektu **Průzkumníku řešení**.
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]otevře nový wordový dokument v návrháři a přidá projekt **EmployeeControls** do **Průzkumník řešení**.
 
-## <a name="add-content-controls-to-the-document"></a>Přidání ovládacích prvků obsahu do dokumentu
- Vytvořte tabulku, která obsahuje tři různé typy ovládacích prvků obsahu ve kterém může uživatel zobrazit nebo upravit informace o zaměstnance.
+## <a name="add-content-controls-to-the-document"></a>Přidat do dokumentu ovládací prvky obsahu
+ Vytvoří tabulku, která obsahuje tři různé typy ovládacích prvků obsahu, kde může uživatel zobrazit nebo upravit informace o zaměstnanci.
 
-### <a name="to-add-content-controls-to-the-document"></a>Chcete-li přidat ovládací prvky obsahu dokumentu
+### <a name="to-add-content-controls-to-the-document"></a>Přidání ovládacích prvků obsahu do dokumentu
 
-1. V dokumentu, který je hostován v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] designer na pásu karet, zvolte **vložit** kartu.
+1. V dokumentu aplikace Word, který je hostován v [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] návrháři, klikněte na pásu karet na kartu **Vložit** .
 
-2. V **tabulky** skupině, zvolte **tabulky**a vložit tabulku se sloupci 2 a 3 řádky.
+2. Ve skupině **tabulky** vyberte **tabulka**a vložte tabulku se dvěma sloupci a 3 řádky.
 
-3. Zadejte text v prvním sloupci tak, aby se podobá následující sloupce:
+3. Zadejte text do prvního sloupce tak, aby vypadal jako následující sloupec:
 
    ||
    |-|
@@ -80,41 +80,41 @@ ms.locfileid: "63438706"
    |**Datum přijetí**|
    |**Název**|
 
-4. Ve druhém sloupci tabulky, zvolte na prvním řádku (vedle **jméno zaměstnance**).
+4. Ve druhém sloupci tabulky vyberte první řádek (vedle **pole jméno zaměstnance**).
 
-5. Na pásu karet, zvolte **Developer** kartu.
+5. Na pásu karet vyberte kartu **vývojář** .
 
    > [!NOTE]
-   > Pokud **Developer** karta není zobrazena, musíte ji nejdříve zobrazit. Další informace najdete v tématu [jak: Zobrazení karty Vývojář na pásu karet](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md).
+   > Pokud karta **vývojář** není zobrazená, musíte ji nejdřív zobrazit. Další informace najdete v tématu [jak: Na pásu karet](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)zobrazit kartu Vývojář.
 
-6. V **ovládací prvky** skupině, zvolte **Text** tlačítko ![plaintextcontentcontrol –](../vsto/media/plaintextcontrol.gif "plaintextcontentcontrol –") přidáte <xref:Microsoft.Office.Tools.Word.PlainTextContentControl>do první buňky.
+6. Ve skupině **ovládací prvky** kliknutím na tlačítko **text** ![PlainTextContentControl](../vsto/media/plaintextcontrol.gif "PlainTextContentControl") přidejte <xref:Microsoft.Office.Tools.Word.PlainTextContentControl> do první buňky.
 
-7. V druhém sloupci v tabulce, vyberte druhý řádek (vedle **datum přijetí**).
+7. Ve druhém sloupci tabulky vyberte druhý řádek (vedle pole **Datum zařazení**).
 
-8. V **ovládací prvky** skupině, zvolte **výběr data** tlačítko ![datepickercontentcontrol –](../vsto/media/datepicker.gif "datepickercontentcontrol –") přidáte <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> do druhé buňce.
+8. Ve skupině **ovládací prvky** kliknutím na tlačítko **pro výběr data** ![DatePickerContentControl](../vsto/media/datepicker.gif "DatePickerContentControl") přidejte <xref:Microsoft.Office.Tools.Word.DatePickerContentControl> do druhé buňky.
 
-9. Ve druhém sloupci tabulky, zvolte třetí řádek (vedle **Title**).
+9. Ve druhém sloupci tabulky vyberte třetí řádek (vedle **názvu**).
 
-10. V **ovládací prvky** skupině, zvolte **rozevíracího seznamu** tlačítko ![dropdownlistcontentcontrol –](../vsto/media/dropdownlist.gif "dropdownlistcontentcontrol –") přidat <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> do poslední buňky.
+10. Ve skupině **ovládací prvky** kliknutím na tlačítko **rozevíracího seznamu** ![DropDownListContentControl](../vsto/media/dropdownlist.gif "DropDownListContentControl") přidejte <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> do poslední buňky.
 
-    To je celé uživatelské rozhraní pro tento projekt. Pokud spustíte projekt teď můžete do prvního řádku zadejte text a vyberte datum ve druhém řádku. Dalším krokem je připojení dat, který chcete zobrazit v dokumentu v souboru XML.
+    To je celé uživatelské rozhraní pro tento projekt. Pokud projekt teď spustíte, můžete zadat text do prvního řádku a vybrat datum ve druhém řádku. Dalším krokem je připojení dat, která chcete zobrazit v dokumentu v souboru XML.
 
 ## <a name="create-the-xml-data-file"></a>Vytvoření datového souboru XML
- Obvykle se získat data XML pro ukládání ve vlastní část XML z externího zdroje, jako je například soubor nebo databáze. V tomto návodu vytvoříte soubor XML, který obsahuje data zaměstnanců, označen prvky, které vytvoří vazbu na ovládací prvky obsahu v dokumentu. Zpřístupnit data za běhu, vložen jako prostředek v sestavení přizpůsobení souboru XML.
+ Obvykle budete získávat data XML pro uložení ve vlastní části XML z externího zdroje, jako je například soubor nebo databáze. V tomto návodu vytvoříte soubor XML, který obsahuje údaje o zaměstnancích, označené prvky, které budete navazovat k ovládacím prvkům obsahu v dokumentu. Aby byla data v době běhu k dispozici, vložte soubor XML jako prostředek do sestavení vlastního nastavení.
 
 #### <a name="to-create-the-data-file"></a>Vytvoření datového souboru
 
-1. Na **projektu** nabídce zvolte **přidat novou položku**.
+1. V nabídce **projekt** klikněte na příkaz **Přidat novou položku**.
 
      Zobrazí se dialogové okno **Přidat novou položku**.
 
-2. V **šablony** vyberte **soubor XML**.
+2. V podokně **šablony** vyberte **soubor XML**.
 
-3. Název souboru **employees.xml**a klikněte na tlačítko **přidat** tlačítko.
+3. Pojmenujte soubor **Employees. XML**a potom klikněte na tlačítko **Přidat** .
 
-     **Employees.xml** soubor se otevře v editoru kódu.
+     V editoru kódu se otevře soubor **Employees. XML** .
 
-4. Nahraďte obsah **employees.xml** soubor s následujícím textem.
+4. Obsah souboru **Employees. XML** nahraďte následujícím textem.
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -127,30 +127,30 @@ ms.locfileid: "63438706"
     </employees>
     ```
 
-5. V **Průzkumníka řešení**, zvolte **employees.xml** souboru.
+5. V **Průzkumník řešení**vyberte soubor **Employees. XML** .
 
-6. V **vlastnosti** okna, vyberte **akce sestavení** vlastnost a potom změňte hodnotu na **integrovaný prostředek**.
+6. V okně **vlastnosti** vyberte vlastnost **Akce sestavení** a pak změňte hodnotu na **Integrovaný prostředek**.
 
-     Tento krok vloží soubor XML jako prostředek v sestavení při vytváření projektu. Umožňuje získat přístup k obsahu souboru XML v době běhu.
+     Tento krok vloží soubor XML jako prostředek v sestavení při sestavování projektu. To umožňuje přístup k obsahu souboru XML v době běhu.
 
 ## <a name="create-an-xml-schema"></a>Vytvoření schématu XML
- Pokud chcete vytvořit vazbu ovládacího prvku obsahu na jednom elementu vlastní část XML, není nutné používat schématu XML. Však vazba <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> do sady hodnot, je nutné vytvořit schéma XML, která ověřuje datový soubor XML, který jste vytvořili dříve. Možné hodnoty pro definuje schéma XML `title` elementu. Vytvoří vazbu <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> na tento element později v tomto názorném postupu.
+ Pokud chcete vytvořit propojení ovládacího prvku obsahu s jediným prvkem ve vlastní části XML, nemusíte používat schéma XML. Chcete-li však vytvořit <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> vázání na sadu hodnot, je nutné vytvořit schéma XML, které ověřuje datový soubor XML, který jste vytvořili dříve. Schéma XML definuje možné hodnoty pro `title` element. <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> K tomuto prvku budete přivážet později v tomto návodu.
 
 #### <a name="to-create-an-xml-schema"></a>Vytvoření schématu XML
 
-1. Na **projektu** nabídce zvolte **přidat novou položku**.
+1. V nabídce **projekt** klikněte na příkaz **Přidat novou položku**.
 
      Zobrazí se dialogové okno **Přidat novou položku**.
 
-2. V **šablony** vyberte **schématu XML**.
+2. V podokně **šablony** vyberte **schéma XML**.
 
-3. Název schématu **employees.xsd** a zvolte **přidat** tlačítko.
+3. Pojmenujte schéma **Employees. xsd** a klikněte na tlačítko **Přidat** .
 
      Otevře se Návrhář schémat.
 
-4. V **Průzkumníka řešení**, otevřete místní nabídku pro **employees.xsd**a klikněte na tlačítko **zobrazit kód**.
+4. V **Průzkumník řešení**otevřete místní nabídku pro **Employees. xsd**a pak zvolte **Zobrazit kód**.
 
-5. Nahraďte obsah **employees.xsd** soubor s následujícím schématu.
+5. Obsah souboru **Employees. xsd** nahraďte následujícím schématem.
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -181,97 +181,97 @@ ms.locfileid: "63438706"
     </xs:schema>
     ```
 
-6. Na **souboru** nabídky, klikněte na tlačítko **Uložit vše** uložte provedené změny do **employees.xml** a **employees.xsd** soubory.
+6. V nabídce **soubor** klikněte na **Uložit vše** a uložte změny do souborů **Employees. XML** a **Employees. xsd** .
 
-## <a name="attach-the-xml-schema-to-the-document"></a>Připojit schéma XML v dokumentu
- Schéma XML musí připojit k dokumentu, vytvoření vazby <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> na platné hodnoty `title` elementu.
+## <a name="attach-the-xml-schema-to-the-document"></a>Připojit schéma XML k dokumentu
+ Musíte připojit schéma XML k dokumentu, aby bylo možné vytvořit vazby <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> k platným hodnotám `title` elementu.
 
-### <a name="to-attach-the-xml-schema-to-the-document--includeword15shortvstoincludesword-15-short-mdmd"></a>Připojit k tomuto dokumentu schématu XML ( [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)])
+### <a name="to-attach-the-xml-schema-to-the-document--includeword_15_shortvstoincludesword-15-short-mdmd"></a>Připojení schématu XML k dokumentu ( [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)])
 
-1. Aktivovat **EmployeeControls.docx** v návrháři.
+1. V Návrháři aktivujte **EmployeeControls. docx** .
 
-2. Na pásu karet, zvolte **Developer** kartu a klikněte na tlačítko **Add-Ins** tlačítko.
+2. Na pásu karet klikněte na kartu **vývojář** a pak klikněte na tlačítko **Doplňky** .
 
-3. V **šablon a doplňků** dialogového okna zvolte **schématu XML** kartu a klikněte na tlačítko **přidat schéma** tlačítko.
+3. V dialogovém okně **šablony a doplňky** klikněte na kartu **schéma XML** a pak klikněte na tlačítko **Přidat schéma** .
 
-4. Přejděte **employees.xsd** schématu jste vytvořili dříve, který je umístěn v adresáři projektu a klikněte na tlačítko **otevřít** tlačítko.
+4. Přejděte do schématu **Employees. xsd** , které jste vytvořili dříve, který je umístěn v adresáři projektu, a poté klikněte na tlačítko **otevřít** .
 
-5. Zvolte **OK** tlačítko **schéma – nastavení** dialogové okno.
+5. V dialogovém okně **Nastavení schématu** klikněte na tlačítko **OK** .
 
-6. Zvolte **OK** tlačítko pro uzavření **šablon a doplňků** dialogové okno.
+6. Kliknutím na tlačítko **OK** zavřete dialogové okno **šablony a doplňky** .
 
-### <a name="to-attach-the-xml-schema-to-the-document-word-2010"></a>Připojit schéma XML v dokumentu (Wordu 2010)
+### <a name="to-attach-the-xml-schema-to-the-document-word-2010"></a>Připojení schématu XML k dokumentu (Word 2010)
 
-1. Aktivovat **EmployeeControls.docx** v návrháři.
+1. V Návrháři aktivujte **EmployeeControls. docx** .
 
-2. Na pásu karet, zvolte **Developer** kartu.
+2. Na pásu karet vyberte kartu **vývojář** .
 
-3. V **XML** skupině, zvolte **schématu** tlačítko.
+3. Ve skupině **XML** klikněte na tlačítko **schéma** .
 
-4. V **šablon a doplňků** dialogového okna zvolte **schématu XML** kartu a klikněte na tlačítko **přidat schéma** tlačítko.
+4. V dialogovém okně **šablony a doplňky** klikněte na kartu **schéma XML** a pak klikněte na tlačítko **Přidat schéma** .
 
-5. Přejděte **employees.xsd** schématu, který jste vytvořili dříve, který je umístěn v adresáři projektu a zvolte **otevřít** tlačítko.
+5. Přejděte do schématu **Employees. xsd** , které jste vytvořili dříve, který je umístěn v adresáři projektu, a klikněte na tlačítko **otevřít** .
 
-6. Zvolte **OK** tlačítko **schéma – nastavení** dialogové okno.
+6. V dialogovém okně **Nastavení schématu** klikněte na tlačítko **OK** .
 
-7. Zvolte **OK** tlačítko pro uzavření **šablon a doplňků** dialogové okno.
+7. Kliknutím na tlačítko **OK** zavřete dialogové okno **šablony a doplňky** .
 
-     **Struktura XML** otevře se podokno úloh.
+     Otevře se podokno úloh **Struktura XML** .
 
-8. Zavřít **struktura XML** podokna úloh.
+8. Zavřete podokno úloh **Struktura XML** .
 
-## <a name="add-a-custom-xml-part-to-the-document"></a>Přidat vlastní část XML v dokumentu
- Než ovládacích prvků obsahu můžete vázat na prvky v souboru XML, musíte přidat obsah souboru XML do nové vlastní část XML v dokumentu.
+## <a name="add-a-custom-xml-part-to-the-document"></a>Přidat vlastní část XML do dokumentu
+ Předtím, než můžete navazovat ovládací prvky obsahu na prvky v souboru XML, je nutné přidat obsah souboru XML do nové vlastní části XML v dokumentu.
 
-### <a name="to-add-a-custom-xml-part-to-the-document"></a>Chcete-li přidat vlastní část XML v dokumentu
+### <a name="to-add-a-custom-xml-part-to-the-document"></a>Přidání vlastní části XML do dokumentu
 
-1. V **Průzkumníka řešení**, otevřete místní nabídku pro **ThisDocument.cs** nebo **ThisDocument.vb**a klikněte na tlačítko **zobrazit kód**.
+1. V **Průzkumník řešení**otevřete místní nabídku pro **ThisDocument.cs** nebo **ThisDocument. vb**a pak zvolte **Zobrazit kód**.
 
-2. Přidejte následující deklarace do `ThisDocument` třídy. Tento kód deklaruje několik objektů, které použijete k přidání vlastních částí XML v dokumentu.
+2. Do `ThisDocument` třídy přidejte následující deklarace. Tento kód deklaruje několik objektů, které použijete k přidání vlastní části XML do dokumentu.
 
      [!code-csharp[Trin_ContentControlXmlPartWalkthrough#1](../vsto/codesnippet/CSharp/EmployeeControls/ThisDocument.cs#1)]
      [!code-vb[Trin_ContentControlXmlPartWalkthrough#1](../vsto/codesnippet/VisualBasic/EmployeeControls/ThisDocument.vb#1)]
 
-3. Přidejte následující metodu do `ThisDocument` třídy. Tato metoda načte obsah datového souboru XML, který je vložený jako prostředek v sestavení a vrátí obsah jako řetězec XML.
+3. Do `ThisDocument` třídy přidejte následující metodu. Tato metoda načte obsah datového souboru XML, který je vložen jako prostředek v sestavení, a vrátí obsah jako řetězec XML.
 
      [!code-csharp[Trin_ContentControlXmlPartWalkthrough#3](../vsto/codesnippet/CSharp/EmployeeControls/ThisDocument.cs#3)]
      [!code-vb[Trin_ContentControlXmlPartWalkthrough#3](../vsto/codesnippet/VisualBasic/EmployeeControls/ThisDocument.vb#3)]
 
-4. Přidejte následující metodu do `ThisDocument` třídy. `AddCustomXmlPart` Metoda vytvoří novou vlastní část XML, který obsahuje řetězec XML, který je předán metodě.
+4. Do `ThisDocument` třídy přidejte následující metodu. `AddCustomXmlPart` Metoda vytvoří novou vlastní část XML, která obsahuje řetězec XML, který je předán metodě.
 
-     Ujistěte se, že vlastní část XML je vytvořen pouze jednou, kterou metoda vytvoří vlastní XML část jenom v případě, že vlastní část XML s odpovídajícím identifikátorem GUID již neexistuje v dokumentu. Tato metoda je volána, poprvé ji uloží hodnotu <xref:Microsoft.Office.Core._CustomXMLPart.Id%2A> vlastnost `employeeXMLPartID` řetězec. Hodnota `employeeXMLPartID` řetězce je trvalá v dokumentu, protože byla deklarovaná příkazem using <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> atribut.
+     Aby bylo zajištěno, že je vlastní část XML vytvořena pouze jednou, metoda vytvoří vlastní část XML pouze v případě, že v dokumentu již neexistuje vlastní část XML se shodným identifikátorem GUID. Při prvním volání této metody uloží hodnotu <xref:Microsoft.Office.Core._CustomXMLPart.Id%2A> vlastnosti `employeeXMLPartID` do řetězce. Hodnota `employeeXMLPartID` řetězce je uchována v dokumentu, protože byla deklarována <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> pomocí atributu.
 
      [!code-csharp[Trin_ContentControlXmlPartWalkthrough#4](../vsto/codesnippet/CSharp/EmployeeControls/ThisDocument.cs#4)]
      [!code-vb[Trin_ContentControlXmlPartWalkthrough#4](../vsto/codesnippet/VisualBasic/EmployeeControls/ThisDocument.vb#4)]
 
-## <a name="bind-the-content-controls-to-elements-in-the-custom-xml-part"></a>Vytvoření vazby ovládacích prvků obsahu k elementům ve vlastní část XML
- Vytvoření vazby každý ovládací prvek na prvek v vlastní část XML pomocí **XMLMapping** vlastností každého ovládacího prvku obsahu.
+## <a name="bind-the-content-controls-to-elements-in-the-custom-xml-part"></a>Svázání ovládacích prvků obsahu s prvky ve vlastní části XML
+ Navažte každý ovládací prvek obsahu na prvek ve vlastní části XML pomocí vlastnosti **XmlMapping** každého ovládacího prvku obsahu.
 
-### <a name="to-bind-the-content-controls-to-elements-in-the-custom-xml-part"></a>K vytvoření vazby ovládacích prvků obsahu k elementům ve vlastní část XML
+### <a name="to-bind-the-content-controls-to-elements-in-the-custom-xml-part"></a>Svázání ovládacích prvků obsahu s prvky ve vlastní části XML
 
-1. Přidejte následující metodu do `ThisDocument` třídy. Tato metoda váže každý ovládací prvek k prvku v vlastní část XML a nastaví formát zobrazení data <xref:Microsoft.Office.Tools.Word.DatePickerContentControl>.
+1. Do `ThisDocument` třídy přidejte následující metodu. Tato metoda váže každý ovládací prvek obsahu k elementu ve vlastní části XML a nastaví formát <xref:Microsoft.Office.Tools.Word.DatePickerContentControl>zobrazení data.
 
      [!code-csharp[Trin_ContentControlXmlPartWalkthrough#5](../vsto/codesnippet/CSharp/EmployeeControls/ThisDocument.cs#5)]
      [!code-vb[Trin_ContentControlXmlPartWalkthrough#5](../vsto/codesnippet/VisualBasic/EmployeeControls/ThisDocument.vb#5)]
 
-## <a name="run-your-code-when-the-document-is-opened"></a>Svůj kód spustit, když je dokument otevřít
- Vytvořit vlastní část XML a vytvořit vazbu na vlastní ovládací prvky na data při otevření dokumentu.
+## <a name="run-your-code-when-the-document-is-opened"></a>Spustit kód při otevření dokumentu
+ Vytvořte vlastní část XML a navažte vlastní ovládací prvky na data při otevření dokumentu.
 
-### <a name="to-run-your-code-when-the-document-is-opened"></a>Ke spuštění kódu při otevření dokumentu
+### <a name="to-run-your-code-when-the-document-is-opened"></a>Spuštění kódu při otevření dokumentu
 
-1. Přidejte následující kód, který `ThisDocument_Startup` metodu `ThisDocument` třídy. Tento kód získá řetězec XML z **employees.xml** soubor, přidá řetězec XML do nové vlastní část XML v dokumentu a naváže ovládací prvky obsahu na prvky ve vlastní část XML.
+1. Do `ThisDocument_Startup` metody`ThisDocument` třídy přidejte následující kód. Tento kód Získá řetězec XML ze souboru **Employees. XML** , přidá řetězec XML do nové vlastní části XML v dokumentu a váže ovládací prvky obsahu k prvkům ve vlastní části XML.
 
      [!code-csharp[Trin_ContentControlXmlPartWalkthrough#2](../vsto/codesnippet/CSharp/EmployeeControls/ThisDocument.cs#2)]
      [!code-vb[Trin_ContentControlXmlPartWalkthrough#2](../vsto/codesnippet/VisualBasic/EmployeeControls/ThisDocument.vb#2)]
 
 ## <a name="test-the-project"></a>Testování projektu
- Když otevřete dokument, ovládací prvky obsahu zobrazení dat z prvků v vlastní část XML. Můžete kliknout <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> vyberte jednu ze tří platné hodnoty pro `title` element, který jsou definovány v **employees.xsd** souboru. Při úpravě dat v některém z ovládacích prvků obsahu, nové hodnoty jsou ukládány do vlastní část XML v dokumentu.
+ Když otevřete dokument, ovládací prvky obsahu zobrazí data z prvků ve vlastní části XML. Kliknutím <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> na můžete vybrat jednu ze tří platných hodnot `title` prvku, které jsou definovány v souboru **Employees. xsd** . Pokud data upravíte v některém z ovládacích prvků obsahu, budou nové hodnoty uloženy do vlastní části XML v dokumentu.
 
-### <a name="to-test-the-content-controls"></a>Pro testování ovládacích prvků obsahu
+### <a name="to-test-the-content-controls"></a>Testování ovládacích prvků obsahu
 
 1. Stisknutím klávesy **F5** spusťte projekt.
 
-2. Ověřte, že v tabulce v dokumentu, vypadá podobně jako v následující tabulce. Každý z řetězců v druhém sloupci je získat z prvku v vlastní část XML v dokumentu.
+2. Ověřte, že tabulka v dokumentu se podobá následující tabulce. Každý z řetězců ve druhém sloupci je získán z prvku v části vlastní XML v dokumentu.
 
     |||
     |-|-|
@@ -279,48 +279,48 @@ ms.locfileid: "63438706"
     |**Datum přijetí**|**1. dubna 1999**|
     |**Název**|**Manager**|
 
-3. Vyberte buňku napravo od **jméno zaměstnance** buňky a zadejte jiný název.
+3. Vyberte buňku napravo od buňky **název zaměstnance** a zadejte jiný název.
 
-4. Vyberte buňku napravo od **datum přijetí** buňku a vyberte jiné datum v prvku Výběr data.
+4. Zvolte buňku napravo od buňky **kalendářního data přijetí** a vyberte jiné datum v ovládacím prvku pro výběr data.
 
-5. Vyberte buňku napravo od **název** buňku a vyberte novou položku z rozevíracího seznamu.
+5. Zvolte buňku napravo od buňky **nadpisu** a v rozevíracím seznamu vyberte novou položku.
 
 6. Uložte a zavřete dokument.
 
-7. V Průzkumníku souborů otevřete *\bin\Debug* složku v umístění projektu.
+7. V Průzkumníku souborů otevřete složku *\bin\debug* v umístění projektu.
 
-8. Otevřete místní nabídku pro **EmployeeControls.docx** a klikněte na tlačítko **přejmenovat**.
+8. Otevřete místní nabídku pro **EmployeeControls. docx** a pak zvolte **Přejmenovat**.
 
-9. Název souboru **EmployeeControls.docx.zip**.
+9. Pojmenujte soubor **EmployeeControls. docx. zip**.
 
-     **EmployeeControls.docx** je dokument uložen ve formátu Open XML. Přejmenováním tohoto dokumentu se *ZIP* příponu názvu souboru můžete prozkoumat obsah dokumentu. Další informace o Open XML naleznete v tématu technického článku [Představujeme Open XML Office (2007) formáty souborů](/previous-versions/office/developer/office-2007/aa338205(v=office.12)).
+     Dokument **EmployeeControls. docx** je uložený ve formátu Open XML. Přejmenováním tohoto dokumentu s příponou názvu souboru *. zip* můžete prošetřit obsah dokumentu. Další informace o Open XML najdete v technickém článku [představení formátů souborů XML sady Office (2007)](/previous-versions/office/developer/office-2007/aa338205(v=office.12)).
 
-10. Otevřít **EmployeeControls.docx.zip** souboru.
+10. Otevřete soubor **EmployeeControls. docx. zip** .
 
-11. Otevřít **customXml** složky.
+11. Otevřete složku **customXml** .
 
-12. Otevřete místní nabídku pro **item2.xml** a klikněte na tlačítko **otevřít**.
+12. Otevřete místní nabídku pro **Item2. XML** a pak zvolte **otevřít**.
 
-     Tento soubor obsahuje vlastní část XML, který jste přidali do dokumentu.
+     Tento soubor obsahuje vlastní část XML, kterou jste přidali do dokumentu.
 
-13. Ověřte, že `name`, `hireDate`, a `title` elementy obsahovat nové hodnoty, které jste zadali do ovládacích prvků obsahu v dokumentu.
+13. Ověřte, zda `name`prvky `hireDate`, a `title` obsahují nové hodnoty, které jste zadali do ovládacích prvků obsahu v dokumentu.
 
-14. Zavřít **item2.xml** souboru.
+14. Zavřete soubor **Item2. XML** .
 
 ## <a name="next-steps"></a>Další kroky
- Další informace o tom, jak používat ovládací prvky obsahu naleznete v těchto tématech:
+ Další informace o tom, jak používat ovládací prvky obsahu, najdete v těchto tématech:
 
-- Použijte všechny dostupné ovládací prvky obsahu k vytvoření šablony. Další informace najdete v tématu [názorný postup: Vytvoření šablony s použitím ovládacích prvků obsahu](../vsto/walkthrough-creating-a-template-by-using-content-controls.md).
+- K vytvoření šablony použijte všechny dostupné ovládací prvky obsahu. Další informace najdete v tématu [Návod: Vytvořte šablonu pomocí ovládacích prvků](../vsto/walkthrough-creating-a-template-by-using-content-controls.md)obsahu.
 
-- Upravte data ve vlastních částí XML při zavření dokumentu. Při příštím otevření dokumentu a ovládací prvky obsahu, které jsou vázány na prvky XML se zobrazí nová data.
+- Upravte data ve vlastních částech XML při zavření dokumentu. Při příštím otevření dokumentu uživatel zobrazí ovládací prvky obsahu, které jsou vázány na prvky XML, a zobrazí nová data.
 
-- Použití ovládacích prvků obsahu s ochrana částí dokumentů. Další informace najdete v tématu [jak: Ochrana částí dokumentů pomocí ovládacích prvků obsahu](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md).
+- Pomocí ovládacích prvků obsahu můžete chránit části dokumentu. Další informace najdete v tématu [jak: Chránit části dokumentů pomocí ovládacích prvků](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)obsahu.
 
 ## <a name="see-also"></a>Viz také:
-- [Automatizace aplikace Word s použitím rozšířených objektů](../vsto/automating-word-by-using-extended-objects.md)
+- [Automatizace Wordu pomocí rozšířených objektů](../vsto/automating-word-by-using-extended-objects.md)
 - [Ovládací prvky obsahu](../vsto/content-controls.md)
 - [Postupy: Přidání ovládacích prvků obsahu do dokumentů aplikace Word](../vsto/how-to-add-content-controls-to-word-documents.md)
 - [Postupy: Ochrana částí dokumentů pomocí ovládacích prvků obsahu](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)
-- [Přehled ovládacích prvků hostitele a hostitelské položky](../vsto/host-items-and-host-controls-overview.md)
-- [Programová omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
-- [Přidání ovládacích prvků do dokumentů Office za běhu](../vsto/adding-controls-to-office-documents-at-run-time.md)
+- [Přehled hostitelských položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md)
+- [Programové omezení hostitelských položek a hostitelských ovládacích prvků](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)
+- [Přidání ovládacích prvků do dokumentů Office v době běhu](../vsto/adding-controls-to-office-documents-at-run-time.md)

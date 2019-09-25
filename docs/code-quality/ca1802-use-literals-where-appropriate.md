@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: b8be913ab1f66e82038afce776bc326e5f91c7f2
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 435eb5a9fd7e41a69c873df4c728e42551734a37
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71233808"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71253369"
 ---
 # <a name="ca1802-use-literals-where-appropriate"></a>CA1802: Použijte literály, kde je to vhodné
 
@@ -41,11 +41,11 @@ Ve výchozím nastavení toto pravidlo vypadá pouze v externě viditelných pol
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Hodnota `static readonly` pole je vypočítána za běhu při volání statického konstruktoru pro deklarující typ. Pokud je `static readonly` pole inicializováno, když je deklarováno a statický konstruktor není deklarován explicitně, kompilátor vygeneruje statický konstruktor pro inicializaci pole.
+Hodnota `static readonly` pole je vypočítána v době běhu při volání statického konstruktoru pro deklarující typ. Pokud je `static readonly` pole inicializováno, když je deklarováno a statický konstruktor není deklarován explicitně, kompilátor vygeneruje statický konstruktor pro inicializaci pole.
 
-Hodnota `const` pole je vypočítána v době kompilace a uložena v metadatech, což zvyšuje výkon modulu runtime při porovnání `static readonly` s polem.
+Hodnota `const` pole je vypočítána v době kompilace a uložena v metadatech, což zvyšuje výkon za běhu při porovnání `static readonly` s polem.
 
-Vzhledem k tomu, že hodnota přiřazená cílovému poli je COMPUTE v době kompilace, změňte deklaraci `const` na pole tak, aby se hodnota vypočítala v době kompilace namísto za běhu.
+Vzhledem k tomu, že hodnota přiřazená cílovému poli je COMPUTE v době kompilace, změňte deklaraci `const` na pole tak, aby se hodnota vypočítala v době kompilace místo v době běhu.
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 

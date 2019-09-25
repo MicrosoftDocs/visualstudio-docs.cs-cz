@@ -25,12 +25,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 766c93bb45380098af984db256d36d1e0948e56f
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 804fbf7e6d9069f6d0fb406e2a5191dcbafbbcee
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68926708"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71254396"
 ---
 # <a name="custom-task-panes"></a>Vlastní podokna úloh
   Podokna úloh jsou panely uživatelského rozhraní, které jsou obvykle ukotveny na jednu stranu okna aplikace systém Microsoft Office. Vlastní podokna úloh poskytují způsob, jak vytvořit vlastní podokno úloh a poskytnout uživatelům známé rozhraní pro přístup k funkcím vašeho řešení. Rozhraní může například obsahovat ovládací prvky, které spouštějí kód pro úpravu dokumentů nebo zobrazení dat ze zdroje dat.
@@ -59,7 +59,7 @@ ms.locfileid: "68926708"
    Další informace najdete v tématu [jak: Přidejte vlastní podokno úloh do aplikace](../vsto/how-to-add-a-custom-task-pane-to-an-application.md).
 
 ### <a name="create-the-user-interface"></a>Vytvoření uživatelského rozhraní
- Všechna vlastní podokna úloh, která jsou vytvořena pomocí vývojářských nástrojů pro Office v sadě Visual Studio <xref:System.Windows.Forms.UserControl> , obsahují objekt. Tento uživatelský ovládací prvek poskytuje uživatelské rozhraní vlastního podokna úloh. Uživatelský ovládací prvek lze vytvořit v době návrhu nebo za běhu. Pokud vytvoříte uživatelský ovládací prvek v době návrhu, můžete pomocí Návrhář formulářů vytvořit uživatelské rozhraní podokna úloh.
+ Všechna vlastní podokna úloh, která jsou vytvořena pomocí vývojářských nástrojů pro Office v sadě Visual Studio <xref:System.Windows.Forms.UserControl> , obsahují objekt. Tento uživatelský ovládací prvek poskytuje uživatelské rozhraní vlastního podokna úloh. Uživatelský ovládací prvek lze vytvořit v době návrhu nebo v době běhu. Pokud vytvoříte uživatelský ovládací prvek v době návrhu, můžete pomocí Návrhář formulářů vytvořit uživatelské rozhraní podokna úloh.
 
 ### <a name="instantiate-the-custom-task-pane"></a>Vytvoření instance vlastního podokna úloh
  Po vytvoření uživatelského ovládacího prvku, který obsahuje uživatelské rozhraní vlastního podokna úloh, je nutné vytvořit instanci <xref:Microsoft.Office.Tools.CustomTaskPane>. Chcete-li to provést, předejte uživatelský ovládací <xref:Microsoft.Office.Tools.CustomTaskPaneCollection> prvek v doplňku VSTO voláním jedné <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> z metod. Tato kolekce je vystavena jako `CustomTaskPanes` pole `ThisAddIn` třídy. Následující příklad kódu je určen ke spuštění z `ThisAddIn` třídy.

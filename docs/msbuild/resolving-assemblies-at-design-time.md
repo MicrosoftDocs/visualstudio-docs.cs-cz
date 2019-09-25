@@ -1,5 +1,5 @@
 ---
-title: Překlad sestavení v době návrhu | Dokumentace Microsoftu
+title: Řešení sestavení v době návrhu | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,31 +10,31 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a18082810feeabe0dcb17796f65e3dbd744e2da2
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 131cc61614c9f3e814cca5bcbc0ff6db303414cf
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62996719"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71253758"
 ---
 # <a name="resolve-assemblies-at-design-time"></a>Přeložit sestavení v době návrhu
-Když přidáte odkaz na sestavení pomocí **.NET** karty **přidat odkaz** dialogové okno, odkaz odkazuje na zprostředkující referenční sestavení, což znamená, sestavení, která obsahuje všechny typ a informace o podpisu, ale nutně neobsahuje žádný kód. **.NET** karta obsahuje referenční sestavení, které odpovídají sestavením modulu runtime v rozhraní .NET Framework. Kromě toho obsahují referenční sestavení, které odpovídají sestavením modulu runtime v registrovaných složkách AssemblyFoldersEx, které jsou používány třetími stranami.
+Přidáte-li odkaz na sestavení prostřednictvím karty **.NET** dialogového okna **Přidat odkaz** , odkaz odkazuje na sestavení zprostředkujícího odkazu; To znamená, že sestavení, které obsahuje všechny informace o typu a podpisu, ale nutně neobsahuje žádný kód. Karta **.NET** obsahuje seznam referenčních sestavení, která odpovídají sestavením modulu runtime v .NET Framework. Kromě toho obsahuje referenční sestavení, která odpovídají sestavením modulu runtime v registrovaných složkách AssemblyFoldersEx, které používají třetí strany.
 
 ## <a name="multi-targeting"></a>Cílení na více platforem
- Aplikace [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)] umožňuje používat cílové verze rozhraní .NET Framework, které spouští modul CLR (Common Language Runtime) verze 2.0 nebo verze 4. Tyto verze zahrnují rozhraní .NET Framework verze 2.0, 3.0, 3.5, 4, 4.5 a 4.5.1 a verze Silverlight 1.0, 2.0 a 3.0. Je-li vydána nová verze rozhraní .NET Framework založeného na modulu CLR verze 2.0 nebo verze 4, může být rozhraní nainstalováno pomocí sady cílů a automaticky zobrazeno jako cíl v sadě Visual Studio.
+ Aplikace [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)] umožňuje používat cílové verze rozhraní .NET Framework, které spouští modul CLR (Common Language Runtime) verze 2.0 nebo verze 4. Mezi tyto verze patří .NET Framework verze 2,0, 3,0, 3,5, 4, 4,5 a 4.5.1 a verze programu Silverlight, 1,0, 2,0 a 3,0. Je-li vydána nová verze rozhraní .NET Framework založeného na modulu CLR verze 2.0 nebo verze 4, může být rozhraní nainstalováno pomocí sady cílů a automaticky zobrazeno jako cíl v sadě Visual Studio.
 
-## <a name="how-type-resolution-works"></a>Zadejte jak funguje překlad
- V době běhu překládá CLR typy v sestavení podle v mezipaměti GAC, *bin* adresář a do všech definovaných cest. K tomuto účelu se používá zavaděč syntézy. Jak ale zavaděč syntézy ví, kde má hledat? To závisí na rozlišení provedeno v době návrhu, když je aplikace sestavena.
+## <a name="how-type-resolution-works"></a>Jak řešení typu funguje
+ V době běhu modul CLR vyřeší typy v sestavení tak, že prohlíží v mezipaměti GAC, adresáři *bin* a v rámci všech cest zjišťování. K tomuto účelu se používá zavaděč syntézy. Jak ale zavaděč syntézy ví, kde má hledat? Závisí na řešení provedeném v době návrhu, při sestavení aplikace.
 
- Během sestavování přeloží kompilátor typy aplikací pomocí referenčních sestavení. V rozhraní .NET Framework verze 2.0, 3.0, 3.5, 4, 4.5 a 4.5.1 referenční sestavení nainstalovat při instalaci rozhraní .NET Framework.
+ Během sestavování přeloží kompilátor typy aplikací pomocí referenčních sestavení. V .NET Framework verzích 2,0, 3,0, 3,5, 4, 4,5 a 4.5.1, se referenční sestavení nainstalují při instalaci .NET Framework.
 
  Referenční sestavení jsou poskytována v sadě cílů, která je dodávána spolu s konkrétní verzí sady SDK rozhraní .NET Framework. Rozhraní samotné poskytuje pouze sestavení modulu runtime. Při sestavování aplikací je nutné nainstalovat jak rozhraní .NET Framework, tak i odpovídající sadu SDK pro rozhraní .NET Framework.
 
- Při cílení na určité rozhraní .NET Framework přeloží systém sestavení všechny typy pomocí referenčních sestavení v sadě cílů. Zavaděč syntézy přeloží tyto totožné typy v době běhu na sestavení modulu runtime, která se obvykle nachází v globální mezipaměti sestavení (GAC).
+ Při cílení na určité rozhraní .NET Framework přeloží systém sestavení všechny typy pomocí referenčních sestavení v sadě cílů. V době spuštění překládá zavaděč Fusion stejné typy na sestavení modulu runtime, která jsou obvykle umístěna v mezipaměti GAC.
 
- Nejsou-li referenční sestavení dostupná, přeloží systém typy sestavení pomocí sestavení modulu runtime. Protože sestavení modulu runtime v mezipaměti GAC nejsou odlišené čísly podverze, je možné, že bude proveden překlad na špatné sestavení. K tomu může dojít například při odkazování na metodu, která je představena v rozhraní .NET Framework verze 3.5, ale cíleno je na verzi 3.0. Sestavení proběhne úspěšně a aplikace bude spuštěna na počítači, na kterém je prováděno sestavení, ale nasazení této aplikace selže na počítači, který nemá nainstalovánu verzi 3.5.
+ Nejsou-li referenční sestavení dostupná, přeloží systém typy sestavení pomocí sestavení modulu runtime. Vzhledem k tomu, že běhová sestavení v mezipaměti GAC nejsou odlišena čísly podverze, je možné, že řešení bude provedeno na nesprávné sestavení. K tomu může dojít například při odkazování na metodu, která je představena v rozhraní .NET Framework verze 3.5, ale cíleno je na verzi 3.0. Sestavení proběhne úspěšně a aplikace bude spuštěna na počítači, na kterém je prováděno sestavení, ale nasazení této aplikace selže na počítači, který nemá nainstalovánu verzi 3.5.
 
- Targeting pack, které je nyní součástí sady SDK rozhraní .NET Framework obsahuje seznam všech sestavení modulu runtime v této verzi rozhraní Framework, názvem seznam Redistribuce (redist) může znemožnit systému sestavení přeložit typy vůči chybného verze sestavení.
+ Sada targeting pack, která je nyní dodávána se sadou .NET Framework SDK, obsahuje seznam všech sestavení modulu runtime v této verzi rozhraní označovaného jako seznam Redistribuce (Redist), což znemožňuje systému sestavení překládat typy proti chybnému verze sestavení
 
 ## <a name="see-also"></a>Viz také:
-- [Rozšířené koncepty](../msbuild/msbuild-advanced-concepts.md)
+- [Pokročilé koncepty](../msbuild/msbuild-advanced-concepts.md)

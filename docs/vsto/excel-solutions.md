@@ -26,12 +26,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 0c9af0a0c90d042d5720423150899971ffca8ec9
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 532689afe4e07c3151be6eac923f2b591aa34f46
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551528"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71253625"
 ---
 # <a name="excel-solutions"></a>řešení pro aplikaci Excel
   Visual Studio obsahuje šablony projektů, které lze použít k vytvoření přizpůsobení na úrovni dokumentu a doplňky VSTO pro aplikaci Microsoft Office Excel. Tato řešení můžete použít k automatizaci aplikace Excel, rozšíření funkcí aplikace Excel a přizpůsobení uživatelského rozhraní (UI) aplikace Excel. Další informace o rozdílech mezi přizpůsobení na úrovni dokumentu a doplňky VSTO najdete v tématu [přehled vývoje řešení pro Office &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md).
@@ -115,6 +115,6 @@ ms.locfileid: "69551528"
 | [Ovládací prvky Windows Forms na dokumenty Office – přehled](../vsto/windows-forms-controls-on-office-documents-overview.md) | Popisuje, jak přidat ovládací prvky Windows Forms na listech aplikace Excel. |
 | [Návod: Vytvoření prvního přizpůsobení na úrovni dokumentu pro Excel](../vsto/walkthrough-creating-your-first-document-level-customization-for-excel.md) | Ukazuje, jak vytvořit základní přizpůsobení úrovni dokumentu pro Excel. |
 | [Návod: Vytvoření prvního doplňku VSTO pro Excel](../vsto/walkthrough-creating-your-first-vsto-add-in-for-excel.md) | Ukazuje, jak vytvořit základní Add-in VSTO pro Excel. |
-| [Návod: Přidání ovládacích prvků do listu za běhu v projektu doplňku VSTO](../vsto/walkthrough-adding-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project.md) | Ukazuje, jak přidat tlačítko Windows Forms <xref:Microsoft.Office.Tools.Excel.NamedRange>a <xref:Microsoft.Office.Tools.Excel.ListObject> na list za běhu pomocí doplňku VSTO. |
+| [Návod: Přidání ovládacích prvků na list v době běhu v projektu doplňku VSTO](../vsto/walkthrough-adding-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project.md) | Ukazuje <xref:Microsoft.Office.Tools.Excel.NamedRange>, jak přidat model Windows Forms tlačítko, <xref:Microsoft.Office.Tools.Excel.ListObject> a a do listu za běhu pomocí doplňku VSTO. |
 | [Principy spoluvytváření a doplňků](./understanding-coauthoring-and-addins.md) | Popisuje úpravy, které možná budete muset provést tak, aby vyhovovaly spoluvytváření svá řešení. |
 | [Excel 2010 ve vývoji Office](http://go.microsoft.com/fwlink/?LinkId=199011) | Obsahuje odkazy na články a referenční dokumentaci o vývoji řešení pro aplikaci Excel. Ty nejsou specifická pro vývoj pro Office pomocí sady Visual Studio. |
