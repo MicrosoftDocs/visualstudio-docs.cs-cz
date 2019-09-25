@@ -1,4 +1,4 @@
-- name: Dokumentace sady Visual Studio
+- name: Dokumentace k integrovanému vývojovému prostředí (IDE) v sadě Visual Studio
   href: ide/index.yml
   pdf_name: Visual Studio documentation
 - name: Přehled

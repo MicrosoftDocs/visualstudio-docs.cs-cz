@@ -1,5 +1,5 @@
 - name: Dokumentace k ladicímu programu
-  href: index.md
+  href: index.yml
 - name: Přehled
   items:
     - name: Co je ladění?
@@ -450,7 +450,7 @@
               href: how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md
             - name: Předběžné načtení obsahu pro aplikace pro Microsoft Store
               href: prefetch-content-for-windows-store-apps.md
-        - name: Spravovaný kód
+        - name: 'Spravovaný kód (C#, Visual Basic, F#)'
           items:
             - name: Ladění spravovaného kódu
               href: debugging-managed-code.md
@@ -494,7 +494,7 @@
                   href: how-to-display-wpf-trace-information.md
             - name: 'Ladění F#'
               href: debugging-f-hash.md
-        - name: Nativní kód
+        - name: Kód jazyka C/C++
           items:
             - name: Ladění nativního kódu
               href: debugging-native-code.md
@@ -582,7 +582,7 @@
                   href: com-debugging-tools.md
             - name: Ladění vloženého kódu
               href: how-to-debug-injected-code.md
-        - name: Ladění kódu GPU
+        - name: Kód GPU
           href: debugging-gpu-code.md
         - name: Diagnostika grafiky
           href: graphics/toc.yml
@@ -632,6 +632,10 @@
                       href: error-the-web-server-could-not-find-the-requested-resource.md
                     - name: Webový server není správně nakonfigurovaný.
                       href: error-the-web-server-is-not-configured-correctly.md
+        - name: Python
+          href: ../python/tutorial-working-with-python-in-visual-studio-step-04-debugging.md
+        - name: JavaScript a TypeScript
+          href: ../javascript/debug-nodejs.md
         - name: Webové aplikace
           items:
             - name: Ladění webových aplikací
