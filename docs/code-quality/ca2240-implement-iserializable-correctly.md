@@ -18,12 +18,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 1a6d9acc3a74505f766fbf9cfe26fc6878fdbb4b
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 2640fddcde0d8777363a3c56e398e7ff307a20c7
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68920046"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71237883"
 ---
 # <a name="ca2240-implement-iserializable-correctly"></a>CA2240: Implementujte správně ISerializable
 
@@ -32,7 +32,7 @@ ms.locfileid: "68920046"
 |TypeName|ImplementISerializableCorrectly|
 |CheckId|CA2240|
 |Kategorie|Microsoft.Usage|
-|Narušující změna|Bez přerušení|
+|Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
 

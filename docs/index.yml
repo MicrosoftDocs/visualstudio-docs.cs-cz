@@ -3,19 +3,19 @@ title: Dokumentace sady Visual Studio
 summary: Naučte se používat Visual Studio k vývoji aplikací, služeb a nástrojů v jazyce podle vašeho výběru, pro vaše platformy a zařízení.
 brand: visual-studio
 metadata:
-  title: Dokumentace k sadě Visual Studio | Dokumentace Microsoftu
+  title: Dokumentace k sadě Visual Studio | Microsoft Docs
   titleSuffix: ''
   description: Naučte se používat Visual Studio k vývoji aplikací, služeb a nástrojů v jazyce podle vašeho výběru, a to pro libovolnou platformu nebo zařízení.
   ms.topic: hub-page
   monikerRange: '>=vs-2017'
   f1_keywords:
   - MSDNSTART
-  ms.openlocfilehash: f8d8ed358779471d68a460ae923df5f9d316c2b0
-  ms.sourcegitcommit: 53bc4c11b82882ab658e34c65ae374060f823531
+  ms.openlocfilehash: f754d62f95dee9531429f9421571982307af9966
+  ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
   ms.translationtype: MT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 09/19/2019
-  ms.locfileid: "71128264"
+  ms.lasthandoff: 09/24/2019
+  ms.locfileid: "71238130"
 highlightedContent:
   items:
   - title: Nastavení a instalace
@@ -132,7 +132,7 @@ additionalContent:
       url: ide/compiling-and-building-in-visual-studio.md
     - title: Ladit
       summary: Prověřte a opravte chyby ve vašem kódu.
-      url: debugger/index.md
+      url: debugger/index.yml
     - title: Test
       summary: Spouštějte testy na projektech.
       url: test/improve-code-quality.md

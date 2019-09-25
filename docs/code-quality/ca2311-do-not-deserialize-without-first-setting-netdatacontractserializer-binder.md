@@ -13,12 +13,12 @@ ms.workload:
 f1_keywords:
 - CA2311
 - DoNotDeserializeWithoutFirstSettingNetDataContractSerializerBinder
-ms.openlocfilehash: 2ec13d78e364940fa9c210cf0792e810c8f0f341
-ms.sourcegitcommit: 673b9364fc9a96b027662dcb4cf5d61cab60ef11
+ms.openlocfilehash: 8445c6260592bbaf109dd3786111fe64441a4da0
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69891179"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71237689"
 ---
 # <a name="ca2311-do-not-deserialize-without-first-setting-netdatacontractserializerbinder"></a>CA2311: Nedeserializovat dříve, než se nastaví NetDataContractSerializer.Binder
 
@@ -27,7 +27,7 @@ ms.locfileid: "69891179"
 |TypeName|DoNotDeserializeWithoutFirstSettingNetDataContractSerializerBinder|
 |CheckId|CA2311|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Bez přerušení|
+|Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
 
@@ -41,13 +41,13 @@ Toto pravidlo najde <xref:System.Runtime.Serialization.NetDataContractSerializer
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-- Pokud je to možné, použijte místo toho zabezpečený serializátor a nepovolujte **útočníkovi zadání libovolného typu k**deserializaci. Mezi bezpečnější serializátory patří:
+- Pokud je to možné, použijte místo toho zabezpečený serializátor a **nepovolujte útočníkovi zadání libovolného typu k deserializaci**. Mezi bezpečnější serializátory patří:
   - <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>
   - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType>
   - <xref:System.Web.Script.Serialization.JavaScriptSerializer?displayProperty=nameWithType>– Nikdy nepoužívejte <xref:System.Web.Script.Serialization.SimpleTypeResolver?displayProperty=nameWithType>. Pokud je nutné použít překladač typů, omezte deserializovatelné typy na očekávaný seznam.
   - <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>
   - Newtonsoft Json.NET – použijte TypeNameHandling. None. Pokud je nutné použít jinou hodnotu pro TypeNameHandling, omezte deserializovatelné typy na očekávaný seznam pomocí vlastního ISerializationBinder.
-  - Vyrovnávací paměti protokolu
+  - Vyrovnávací paměti protokolů
 - Proveďte serializovanou manipulaci s daty. Po serializaci kryptograficky podepisují Serializovaná data. Před deserializací ověřte kryptografický podpis. Chránit kryptografický klíč před zveřejněním a návrhem pro střídání klíčů.
 - Omezí deserializovatelné typy. Implementujte vlastní <xref:System.Runtime.Serialization.SerializationBinder?displayProperty=nameWithType>. Před deserializací pomocí <xref:System.Runtime.Serialization.NetDataContractSerializer> <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder> nastavte vlastnost na instanci vašeho vlastního <xref:System.Runtime.Serialization.SerializationBinder>. Pokud je typ <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> v přepsané metodě neočekávaný, vyvolejte výjimku pro zastavení deserializace.
 

@@ -18,12 +18,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 3bdb8ef315c9702cc10352368aba7202a8f29f7f
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 3767d361375ce1b3d54281a6850d9ac3b960ece6
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68920005"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71237866"
 ---
 # <a name="ca2241-provide-correct-arguments-to-formatting-methods"></a>CA2241: Zadejte správné argumenty pro metody formátování
 
@@ -32,7 +32,7 @@ ms.locfileid: "68920005"
 |TypeName|ProvideCorrectArgumentsToFormattingMethods|
 |CheckId|CA2241|
 |Kategorie|Microsoft.Usage|
-|Narušující změna|Bez přerušení|
+|Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
 Řetězcový argument předaný metodě <xref:System.Console.WriteLine%2A>jako, <xref:System.Console.Write%2A>nebo <xref:System.String.Format%2A?displayProperty=fullName> neobsahuje položku formátu, která odpovídá jednotlivým argumentům objektu, nebo naopak. `format`

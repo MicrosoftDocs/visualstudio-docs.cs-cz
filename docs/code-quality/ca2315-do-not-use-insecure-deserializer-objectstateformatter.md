@@ -1,5 +1,5 @@
 ---
-title: 'CA2315: Nepoužívejte nezabezpečené deserializátor ObjectStateFormatter'
+title: 'CA2315: Nepoužívat nezabezpečený deserializátor ObjectStateFormatter'
 ms.date: 05/01/2019
 ms.topic: reference
 author: dotpaul
@@ -13,33 +13,33 @@ ms.workload:
 f1_keywords:
 - CA2315
 - DoNotUseInsecureDeserializerObjectStateFormatter
-ms.openlocfilehash: 793fa9df333eed7e485d7d8829849ae30d9c93a2
-ms.sourcegitcommit: db30651dc0ce4d0b274479b23a6bd102a5559098
+ms.openlocfilehash: 30e9d55fa5aa9c909c29935988f76107a4b5556d
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65135575"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71237677"
 ---
-# <a name="ca2315-do-not-use-insecure-deserializer-objectstateformatter"></a>CA2315: Nepoužívejte nezabezpečené deserializátor ObjectStateFormatter
+# <a name="ca2315-do-not-use-insecure-deserializer-objectstateformatter"></a>CA2315: Nepoužívat nezabezpečený deserializátor ObjectStateFormatter
 
 |||
 |-|-|
 |TypeName|DoNotUseInsecureDeserializerObjectStateFormatter|
 |CheckId|CA2315|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Pevné|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-A <xref:System.Web.UI.ObjectStateFormatter?displayProperty=nameWithType> metody deserializace byla volána nebo odkazovat.
+<xref:System.Web.UI.ObjectStateFormatter?displayProperty=nameWithType> Byla volána nebo odkazována metoda deserializace.
 
 ## <a name="rule-description"></a>Popis pravidla
 
 [!INCLUDE[insecure-deserializers-description](includes/insecure-deserializers-description-md.md)]
 
-Toto pravidlo vyhledá <xref:System.Web.UI.ObjectStateFormatter?displayProperty=nameWithType> deserializace volání metody nebo odkazy.
+Toto pravidlo vyhledá <xref:System.Web.UI.ObjectStateFormatter?displayProperty=nameWithType> volání nebo odkazy metody deserializace.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
 [!INCLUDE[insecure-deserializers-fixes-for-always-insecure-deserializers](includes/insecure-deserializers-fixes-for-always-insecure-deserializers-md.md)]
 
@@ -47,9 +47,9 @@ Toto pravidlo vyhledá <xref:System.Web.UI.ObjectStateFormatter?displayProperty=
 
 [!INCLUDE[insecure-deserializers-common-safe-to-suppress](includes/insecure-deserializers-common-safe-to-suppress-md.md)]
 
-## <a name="pseudo-code-examples"></a>Příklady pseudo kódu
+## <a name="pseudo-code-examples"></a>Příklady kódu pseudo
 
-### <a name="violation"></a>Porušení
+### <a name="violation"></a>Selhání
 
 ```csharp
 using System.IO;

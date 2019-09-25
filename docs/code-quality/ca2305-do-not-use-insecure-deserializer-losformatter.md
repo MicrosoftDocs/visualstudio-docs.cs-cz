@@ -1,5 +1,5 @@
 ---
-title: 'CA2305: Nepoužívejte nezabezpečené deserializátor LosFormatter'
+title: 'CA2305: Nepoužívat nezabezpečený deserializátor LosFormatter'
 ms.date: 05/01/2019
 ms.topic: reference
 author: dotpaul
@@ -13,33 +13,33 @@ ms.workload:
 f1_keywords:
 - CA2305
 - DoNotUseInsecureDeserializerLosFormatter
-ms.openlocfilehash: 4e589bbea53dd6a73a6e6e4fc44b6cb397d6dcbd
-ms.sourcegitcommit: db30651dc0ce4d0b274479b23a6bd102a5559098
+ms.openlocfilehash: 145d45d79f1dda27d5c69f0c481277572d3eeaa2
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65135566"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71237731"
 ---
-# <a name="ca2305-do-not-use-insecure-deserializer-losformatter"></a>CA2305: Nepoužívejte nezabezpečené deserializátor LosFormatter
+# <a name="ca2305-do-not-use-insecure-deserializer-losformatter"></a>CA2305: Nepoužívat nezabezpečený deserializátor LosFormatter
 
 |||
 |-|-|
 |TypeName|DoNotUseInsecureDeserializerLosFormatter|
 |CheckId|CA2305|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Pevné|
+|Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
-A <xref:System.Web.UI.LosFormatter?displayProperty=nameWithType> metody deserializace byla volána nebo odkazovat.
+<xref:System.Web.UI.LosFormatter?displayProperty=nameWithType> Byla volána nebo odkazována metoda deserializace.
 
 ## <a name="rule-description"></a>Popis pravidla
 
 [!INCLUDE[insecure-deserializers-description](includes/insecure-deserializers-description-md.md)]
 
-Toto pravidlo vyhledá <xref:System.Web.UI.LosFormatter?displayProperty=nameWithType> deserializace volání metody nebo odkazy.
+Toto pravidlo vyhledá <xref:System.Web.UI.LosFormatter?displayProperty=nameWithType> volání nebo odkazy metody deserializace.
 
-## <a name="how-to-fix-violations"></a>Jak vyřešit porušení
+## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
 [!INCLUDE[insecure-deserializers-fixes-for-always-insecure-deserializers](includes/insecure-deserializers-fixes-for-always-insecure-deserializers-md.md)]
 
@@ -47,9 +47,9 @@ Toto pravidlo vyhledá <xref:System.Web.UI.LosFormatter?displayProperty=nameWith
 
 [!INCLUDE[insecure-deserializers-common-safe-to-suppress](includes/insecure-deserializers-common-safe-to-suppress-md.md)]
 
-## <a name="pseudo-code-examples"></a>Příklady pseudo kódu
+## <a name="pseudo-code-examples"></a>Příklady kódu pseudo
 
-### <a name="violation"></a>Porušení
+### <a name="violation"></a>Selhání
 
 ```csharp
 using System.IO;

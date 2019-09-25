@@ -6,12 +6,12 @@ manager: lank
 ms.date: 07/19/2019
 ms.topic: conceptual
 description: Další informace o nové nabídce aplikace Visual Studio + GitHub
-ms.openlocfilehash: 6c34ecc37285166135584a98453a1e92393073ab
-ms.sourcegitcommit: a2df993dc5e11c5131dbfcba686f0028a589068f
+ms.openlocfilehash: 09168bffbdb8caf9e6366335f5d08f5bf81573f9
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71150081"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71238146"
 ---
 # <a name="introducing-visual-studio-subscriptions-with-github-enterprise"></a>Představení předplatných sady Visual Studio s GitHubem Enterprise  
 
@@ -32,7 +32,7 @@ Pokud má vaše organizace EA, který ještě není v důsledku obnovení, můž
 
 Existující SKU pro Visual Studio Enterprise, Visual Studio Professional a GitHub Enterprise budou také nadále dostupné samostatně. 
 
-Další informace o výhodách, možnostech a cenách najdete na stránce https://visualstudio.microsoft.com/subscriptions/visual-studio-github. 
+Další informace o výhodách a možnostech najdete na https://visualstudio.microsoft.com/subscriptions/visual-studio-github stránce. 
 
 ## <a name="getting-your-subscriptions"></a>Načítají se vaše předplatná
 

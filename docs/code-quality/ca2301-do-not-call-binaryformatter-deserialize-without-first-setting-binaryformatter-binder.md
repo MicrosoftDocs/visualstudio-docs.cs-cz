@@ -13,12 +13,12 @@ ms.workload:
 f1_keywords:
 - CA2301
 - DoNotCallBinaryFormatterDeserializeWithoutFirstSettingBinaryFormatterBinder
-ms.openlocfilehash: 0291aa4d8130cfdc9b919e0c8430e56ef0f95296
-ms.sourcegitcommit: 673b9364fc9a96b027662dcb4cf5d61cab60ef11
+ms.openlocfilehash: 24bb9c9762a57f7ce97e41a9a8e6c2831a1dde20
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69891183"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71237773"
 ---
 # <a name="ca2301-do-not-call-binaryformatterdeserialize-without-first-setting-binaryformatterbinder"></a>CA2301: Nevolat BinaryFormatter.Deserialize dříve, než se nastaví BinaryFormatter.Binder
 
@@ -27,7 +27,7 @@ ms.locfileid: "69891183"
 |TypeName|DoNotCallBinaryFormatterDeserializeWithoutFirstSettingBinaryFormatterBinder|
 |CheckId|CA2301|
 |Kategorie|Microsoft.Security|
-|Narušující změna|Bez přerušení|
+|Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
 
@@ -41,13 +41,13 @@ Toto pravidlo najde <xref:System.Runtime.Serialization.Formatters.Binary.BinaryF
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-- Pokud je to možné, použijte místo toho zabezpečený serializátor a nepovolujte **útočníkovi zadání libovolného typu k**deserializaci. Mezi bezpečnější serializátory patří:
+- Pokud je to možné, použijte místo toho zabezpečený serializátor a **nepovolujte útočníkovi zadání libovolného typu k deserializaci**. Mezi bezpečnější serializátory patří:
   - <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>
   - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer?displayProperty=nameWithType>
   - <xref:System.Web.Script.Serialization.JavaScriptSerializer?displayProperty=nameWithType>– Nikdy nepoužívejte <xref:System.Web.Script.Serialization.SimpleTypeResolver?displayProperty=nameWithType>. Pokud je nutné použít překladač typů, omezte deserializovatelné typy na očekávaný seznam.
   - <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>
   - Newtonsoft Json.NET – použijte TypeNameHandling. None. Pokud je nutné použít jinou hodnotu pro TypeNameHandling, omezte deserializovatelné typy na očekávaný seznam pomocí vlastního ISerializationBinder.
-  - Vyrovnávací paměti protokolu
+  - Vyrovnávací paměti protokolů
 - Proveďte serializovanou manipulaci s daty. Po serializaci kryptograficky podepisují Serializovaná data. Před deserializací ověřte kryptografický podpis. Chránit kryptografický klíč před zveřejněním a návrhem pro střídání klíčů.
 - Omezí deserializovatelné typy. Implementujte vlastní <xref:System.Runtime.Serialization.SerializationBinder?displayProperty=nameWithType>. Před deserializací pomocí <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Binder> nastavte vlastnost na instanci vašeho vlastního <xref:System.Runtime.Serialization.SerializationBinder>. Pokud je typ <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> v přepsané metodě neočekávaný, vyvolejte výjimku pro zastavení deserializace.
 

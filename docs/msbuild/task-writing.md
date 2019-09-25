@@ -1,5 +1,5 @@
 ---
-title: Úloha zápis | Dokumentace Microsoftu
+title: Vytváření úkolů | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,26 +12,26 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: de860c8d177a12d8283ae4f3a9b0f36dab1cc96d
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 9cf7f82d628c0c093e0d807920b379263c20ff0b
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63439996"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71238199"
 ---
-# <a name="task-writing"></a>Zápis úloh
-Úlohy poskytují kód, který se spustí během procesu sestavení. Úkoly jsou obsaženy v cíli. Je součástí knihovny typické úlohy [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], a můžete také vytvořit vlastní úlohy. Další informace o knihovně úlohy, které jsou součástí [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)], naleznete v tématu [úkolů odkaz](../msbuild/msbuild-task-reference.md).
+# <a name="task-writing"></a>Zápis úlohy
+Úlohy poskytují kód, který se spouští během procesu sestavení. Úkoly jsou obsaženy v cílech. Součástí [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]je knihovna typických úkolů. můžete také vytvořit vlastní úkoly. Další informace o knihovně úloh, které jsou součástí [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]nástroje, naleznete v tématu [Task reference](../msbuild/msbuild-task-reference.md).
 
 ## <a name="tasks"></a>Úkoly
- Příklady úloh [kopírování](../msbuild/copy-task.md), který kopíruje jeden nebo více souborů, [MakeDir](../msbuild/makedir-task.md), který vytvoří adresář, a [Csc](../msbuild/csc-task.md), který zkompiluje [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] souborů zdrojového kódu. Každý úkol je implementován jako třída rozhraní .NET, která implementuje <xref:Microsoft.Build.Framework.ITask> rozhraní, která je definována v *Microsoft.Build.Framework.dll* sestavení.
+ Mezi příklady úloh patří [kopírování](../msbuild/copy-task.md), které kopíruje jeden nebo více souborů, [MakeDir –](../msbuild/makedir-task.md), které vytvoří adresář a [CSC](../msbuild/csc-task.md), který kompiluje [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] soubory zdrojového kódu. Každá úloha je implementována jako třída .NET, která implementuje <xref:Microsoft.Build.Framework.ITask> rozhraní, které je definováno v sestavení *Microsoft. Build. Framework. dll* .
 
- Existují dvě metody, které můžete použít při implementaci úkolu:
+ Existují dva přístupy, které můžete použít při implementaci úlohy:
 
-- Implementace <xref:Microsoft.Build.Framework.ITask> rozhraní přímo.
+- Implementujte <xref:Microsoft.Build.Framework.ITask> rozhraní přímo.
 
-- Odvodit třídu z pomocná třída <xref:Microsoft.Build.Utilities.Task>, který je definován v *Microsoft.Build.Utilities.dll* sestavení. Úloha implementuje ITask a poskytuje výchozí implementaci některých ITask členů. Protokolování je navíc jednodušší.
+- Odvodit třídu z pomocné třídy <xref:Microsoft.Build.Utilities.Task>,, která je definována v sestavení *Microsoft. Build. Utilities. dll* . Úloha implementuje ITask a poskytuje výchozí implementace některých ITask členů. Protokolování je navíc jednodušší.
 
-V obou případech musíte přidat do vaší třídy metodu s názvem `Execute`, což je metoda, která je volána, když je úloha spuštěna. Tato metoda nemá žádné parametry a vrátí `Boolean` hodnota: `true` Pokud byla úloha úspěšná nebo `false` Pokud se něco nepovedlo. Následující příklad zobrazuje úlohu, která neprovede žádnou akci a vrátí `true`.
+V obou případech je nutné přidat do třídy a metodu s názvem `Execute`, což je metoda, která je volána při spuštění úlohy. Tato metoda nepřijímá žádné parametry a vrací `Boolean` hodnotu: `true` Pokud úloha proběhla úspěšně `false` , nebo pokud se nezdařila. Následující příklad ukazuje úlohu, která neprovede žádnou akci a vrátí `true`.
 
 ```csharp
 using System;
@@ -50,7 +50,7 @@ namespace MyTasks
 }
 ```
 
- Tato úloha spuštěna následující soubor projektu:
+ Následující soubor projektu spouští tuto úlohu:
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -60,7 +60,7 @@ namespace MyTasks
 </Project>
 ```
 
- Pokud úkoly spouštějí, můžete také obdrží vstupů ze souboru projektu Pokud vytvoříte .NET vlastnosti ve třídě úlohy. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] Nastaví tyto vlastnosti bezprostředně před volání úkolu `Execute` metody. K vytvoření vlastnosti typu string, použijte kód úlohy, jako:
+ Když jsou spouštěny úlohy, mohou také přijímat vstupy ze souboru projektu, pokud vytvoříte vlastnosti rozhraní .NET pro třídu Task. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]Tyto vlastnosti nastaví těsně před voláním `Execute` metody úkolu. Chcete-li vytvořit řetězcovou vlastnost, použijte kód úlohy, například:
 
 ```csharp
 using System;
@@ -81,7 +81,7 @@ namespace MyTasks
 }
 ```
 
- Následující projekt soubor spuštění této úlohy a sady `MyProperty` na zadanou hodnotu:
+ Následující soubor projektu spustí tuto úlohu a nastaví `MyProperty` na danou hodnotu:
 
 ```xml
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
@@ -91,16 +91,16 @@ namespace MyTasks
 </Project>
 ```
 
-## <a name="register-tasks"></a>Registrace úlohy
- Pokud je projekt spustit úlohu, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] musí vědět, jak najít sestavení obsahující třídu úloh. Úkoly jsou registrované pomocí [usingtask – element (MSBuild)](../msbuild/usingtask-element-msbuild.md).
+## <a name="register-tasks"></a>Registrovat úlohy
+ Pokud projekt spustí úlohu, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] musí znát, jak najít sestavení, které obsahuje třídu Task. Úlohy jsou registrovány pomocí [elementu UsingTask (MSBuild)](../msbuild/usingtask-element-msbuild.md).
 
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] Souboru *Microsoft.Common.Tasks* je soubor projektu, který obsahuje seznam `UsingTask` prvky, které registrují všechny úkoly, které jsou součástí [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. Tento soubor je automaticky zahrnuty při sestavování každý projekt. Pokud úkol, který je registrován v *Microsoft.Common.Tasks* je zaregistrovaná taky v aktuálním souboru projektu, aktuální soubor projektu má přednost před; to znamená, můžete přepsat výchozí úlohu s vlastní úkol, který má stejný název.
+ Soubor Microsoft *. Common. Tasks* je soubor projektu, který `UsingTask` obsahuje seznam prvků, které registrují [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]všechny úkoly, které jsou součástí nástroje. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] Tento soubor je automaticky zahrnut při sestavování všech projektů. Pokud úkol, který je zaregistrován v *Microsoft. Common. Tasks* , je zaregistrován také v aktuálním souboru projektu, aktuální soubor projektu má přednost. To znamená, že můžete přepsat výchozí úkol vlastní úlohou, která má stejný název.
 
 > [!TIP]
-> Zobrazí se seznam úloh, které jsou součástí [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] zobrazením obsah *Microsoft.Common.Tasks*.
+> Seznam úkolů, které jsou k [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] dispozici, zobrazíte zobrazením obsahu *Microsoft. Common. Tasks*.
 
-## <a name="raise-events-from-a-task"></a>Vyvolávání událostí z úlohy
- Pokud vaše úlohy je odvozen od <xref:Microsoft.Build.Utilities.Task> pomocná třída, můžete použít některý z následujících metod helper na <xref:Microsoft.Build.Utilities.Task> třídy pro vyvolání události, které bude zachycena a zobrazí všechny registrované protokolovacích nástrojů:
+## <a name="raise-events-from-a-task"></a>Vyvolání událostí z úkolu
+ Pokud je úloha odvozena z <xref:Microsoft.Build.Utilities.Task> pomocné třídy, můžete použít jakoukoli z následujících pomocných metod <xref:Microsoft.Build.Utilities.Task> třídy k vyvolání událostí, které budou zachyceny a zobrazeny všemi registrovanými protokolovacími nástroji:
 
 ```csharp
 public override bool Execute()
@@ -112,7 +112,7 @@ public override bool Execute()
 }
 ```
 
- Pokud vaše úloha implementuje <xref:Microsoft.Build.Framework.ITask> přímo, stále může vyvolat tyto události ale musí používat IBuildEngine rozhraní. Následující příklad zobrazuje úlohu, která implementuje ITask a vyvolává vlastní události:
+ Pokud úloha přímo implementuje <xref:Microsoft.Build.Framework.ITask> , můžete i nadále vyvolávat takové události, ale je nutné použít rozhraní IBuildEngine. Následující příklad ukazuje úlohu, která implementuje ITask a vyvolá vlastní událost:
 
 ```csharp
 public class SimpleTask : ITask
@@ -131,20 +131,45 @@ public class SimpleTask : ITask
 }
 ```
 
-## <a name="require-task-parameters-to-be-set"></a>Vyžadovat parametry úlohy, která se má nastavit
- Některé vlastnosti úlohy jako "povinné" můžete označit tak, aby libovolný soubor projektu, na kterém běží úloha musí nastavit hodnoty těchto vlastností nebo sestavení selže. Použít `[Required]` atribut vlastnosti .NET v úkolu následujícím způsobem:
+## <a name="require-task-parameters-to-be-set"></a>Vyžadovat nastavení parametrů úkolu
+ Některé vlastnosti úlohy můžete označit jako "požadováno", aby všechny soubory projektu, které spouštějí úlohu, musely nastavovat hodnoty pro tyto vlastnosti nebo sestavení selhalo. `[Required]` Použijte atribut na vlastnost .NET v úkolu následujícím způsobem:
 
 ```csharp
 [Required]
 public string RequiredProperty { get; set; }
 ```
 
- `[Required]` Je definován atribut <xref:Microsoft.Build.Framework.RequiredAttribute> v <xref:Microsoft.Build.Framework> oboru názvů.
+ Atribut je <xref:Microsoft.Build.Framework.RequiredAttribute> definován v<xref:Microsoft.Build.Framework> oboru názvů. `[Required]`
+
+## <a name="how-includevstecmsbuildextensibilityinternalsincludesvstecmsbuild_mdmd-invokes-a-task"></a>Způsob [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] vyvolání úlohy
+
+Při vyvolání úlohy [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] nejprve vytvoří instanci třídy Task a pak zavolá metodu setter vlastností objektu pro parametry úlohy, které jsou nastaveny v elementu Task v souboru projektu. Pokud element Task nespecifikuje parametr, nebo pokud je výraz zadaný v elementu vyhodnocen jako prázdný řetězec, vlastnost setter není volána.
+
+Například v projektu
+
+```xml
+<Project>
+ <Target Name="InvokeCustomTask">
+  <CustomTask Input1=""
+              Input2="$(PropertyThatIsNotDefined)"
+              Input3="value3" />
+ </Target>
+</Project>
+```
+
+je volána pouze metoda `Input3` setter pro.
+
+Úkol by neměl záviset na jakémkoli pořadí volání setter vlastnosti parametru.
+
+### <a name="task-parameter-types"></a>Typy parametrů úlohy
+
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] Nativně zpracovává vlastnosti `string`typu, `ITaskItem` , a `ITaskItem[]`. `bool` Pokud úkol akceptuje parametr jiného typu, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] <xref:System.Convert.ChangeType%2A> vyvolá se pro převod z `string` (se všemi rozbalenými odkazy na vlastnosti a položku) na cílový typ. Pokud převod není pro jakýkoliv vstupní parametr úspěšný, [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] vygeneruje chybu a nevolá `Execute()` metodu úkolu.
 
 ## <a name="example"></a>Příklad
 
 ### <a name="description"></a>Popis
- V následující [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] ukazuje úkol odvozený od třídy <xref:Microsoft.Build.Utilities.Task> pomocná třída. Tato úloha vrátí `true`, což indikuje, že byla úspěšná.
+
+Tato třída ukazuje úlohu odvozenou <xref:Microsoft.Build.Utilities.Task> z pomocné třídy. [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Tato úloha vrátí `true`hodnotu, která označuje, že byla úspěšná.
 
 ### <a name="code"></a>Kód
 
@@ -168,7 +193,8 @@ namespace SimpleTask1
 ## <a name="example"></a>Příklad
 
 ### <a name="description"></a>Popis
- V následující [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] třídy ukazuje úkolů implementace <xref:Microsoft.Build.Framework.ITask> rozhraní. Tato úloha vrátí `true`, což indikuje, že byla úspěšná.
+
+Tato třída předvádí úlohu implementující <xref:Microsoft.Build.Framework.ITask>rozhraní. [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Tato úloha vrátí `true`hodnotu, která označuje, že byla úspěšná.
 
 ### <a name="code"></a>Kód
 
@@ -203,15 +229,18 @@ namespace SimpleTask2
 ## <a name="example"></a>Příklad
 
 ### <a name="description"></a>Popis
- To [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] ukazuje úlohu, která je odvozena z třídy <xref:Microsoft.Build.Utilities.Task> pomocná třída. Má vlastnost požadovaný řetězec a vyvolá událost, která se zobrazí všechny registrované protokolovacích nástrojů.
+
+Tato [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] třída předvádí úlohu, která je odvozena <xref:Microsoft.Build.Utilities.Task> z pomocné třídy. Má požadovanou řetězcovou vlastnost a vyvolá událost, která se zobrazí ve všech zaregistrovaných protokolovacích nástrojích.
 
 ### <a name="code"></a>Kód
- [!code-csharp[msbuild_SimpleTask3#1](../msbuild/codesnippet/CSharp/task-writing_1.cs)]
+
+[!code-csharp[msbuild_SimpleTask3#1](../msbuild/codesnippet/CSharp/task-writing_1.cs)]
 
 ## <a name="example"></a>Příklad
 
 ### <a name="description"></a>Popis
- Následující příklad ukazuje volání předchozí příklad úkolu, SimpleTask3 souboru projektu.
+
+Následující příklad ukazuje soubor projektu, který volá předchozí příklad úlohy SimpleTask3.
 
 ### <a name="code"></a>Kód
 
@@ -227,4 +256,5 @@ namespace SimpleTask2
 ```
 
 ## <a name="see-also"></a>Viz také:
-- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+
+- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)

@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: c0cd59ec30ce45c94ac3422c4271959d74073bff
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: cf2e30956879c0c61bb57d65b89445962f34959a
+ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68920054"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71237897"
 ---
 # <a name="ca2239-provide-deserialization-methods-for-optional-fields"></a>CA2239: Zadejte metody deserializace pro nepovinná pole
 
@@ -31,7 +31,7 @@ ms.locfileid: "68920054"
 |TypeName|ProvideDeserializationMethodsForOptionalFields|
 |CheckId|CA2239|
 |Kategorie|Microsoft.Usage|
-|Narušující změna|Bez přerušení|
+|Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
 Typ obsahuje pole, které je označeno <xref:System.Runtime.Serialization.OptionalFieldAttribute?displayProperty=fullName> atributem a typ neposkytuje metody zpracování událostí rušení serializace.
