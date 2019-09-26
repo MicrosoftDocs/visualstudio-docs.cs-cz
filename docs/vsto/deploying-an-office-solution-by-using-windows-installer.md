@@ -19,10 +19,10 @@ manager: jillfra
 ms.workload:
 - office
 ms.openlocfilehash: 20df85952b4e76e60d6e93067c1f1e7838b692cd
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69551716"
 ---
 # <a name="deploy-an-office-solution-by-using-windows-installer"></a>Nasazení řešení Office pomocí Instalační služba systému Windows
@@ -99,7 +99,7 @@ Soubor Instalační služba systému Windows můžete vytvořit pomocí nástroj
 
 5. Na stránce pro stažení pro program InstallShield Limited Edition zadejte požadované informace do příslušných polí a pak zvolte odkaz **Stáhnout nyní** .
 
-   Po stažení, instalaci a aktivaci produktu se v aplikaci Visual Studio zobrazí šablona **projektu InstallShield** s omezeným vydáním.
+   Po stažení, instalaci a aktivaci produktu se v aplikaci Visual Studio zobrazí šablona **projektu InstallShield s omezeným vydáním** .
 
 ## <a name="Create"></a>Vytvořit projekt instalace
 
@@ -163,13 +163,13 @@ V aplikaci pro instalaci musíte zahrnout nejen následující součásti, ale t
 
 ### <a name="add-the-net-framework-4-or-the-net-framework-45-as-a-prerequisite"></a>Přidejte .NET Framework 4 nebo .NET Framework 4,5 jako požadavek.
 
-1. V **Průzkumník řešení**rozbalte uzel projektu **OfficeAddInSetup** , rozbalte uzel **zadat data aplikace** a pak zvolte soubor redistribuovatelného souboru, který je znázorněn na následujícím obrázku.
+1. V **Průzkumník řešení**rozbalte uzel projektu **OfficeAddInSetup** , rozbalte uzel **zadat data aplikace** a pak zvolte soubor **redistribuovatelného** souboru, který je znázorněn na následujícím obrázku.
 
    ![Distribuovatelný soubor v Průzkumník řešení](../vsto/media/installshield-redistributablesfile.png "Distribuovatelný soubor v Průzkumník řešení")
 
 2. Na panelu nabídek vyberte možnost **Zobrazit** > **otevřené**.
 
-   Otevře se stránka distribuovatelné součásti.
+   Otevře se stránka **distribuovatelné** součásti.
 
 3. V seznamu distribuovatelné součásti zaškrtněte políčko pro verzi .NET Framework, na kterou je vaše řešení cíleno.
 
@@ -179,7 +179,7 @@ V aplikaci pro instalaci musíte zahrnout nejen následující součásti, ale t
 
 ### <a name="AddToolsForOffice"></a>Přidejte sadu Visual Studio 2010 Tools for Office runtime.
 
-Stránka **distribuovatelné** obsahuje položku s názvem **Microsoft VSTO 2010 Runtime**, ale odkazuje na starší verzi modulu runtime. Proto můžete ručně vytvořit konfigurační soubor, který odkazuje na nejnovější verzi. Pak je nutné umístit tento soubor do stejného adresáře jako konfigurační soubory pro všechny ostatní položky, které se zobrazí na stránce distribuovatelné .
+Stránka **distribuovatelné** obsahuje položku s názvem **Microsoft VSTO 2010 Runtime**, ale odkazuje na starší verzi modulu runtime. Proto můžete ručně vytvořit konfigurační soubor, který odkazuje na nejnovější verzi. Pak je nutné umístit tento soubor do stejného adresáře jako konfigurační soubory pro všechny ostatní položky, které se zobrazí na stránce **distribuovatelné** .
 
 #### <a name="to-add-the-visual-studio-2010-tools-for-office-runtime-as-a-prerequisite"></a>Přidání nástrojů sady Visual Studio 2010 pro Office runtime jako předpokladu
 
@@ -390,7 +390,7 @@ Chcete-li upravit vlastní vlastnosti, vytvořte program, který odebere přizp�
 
 2. V podokně šablony pod uzlem pro jazyk, který chcete použít, vyberte složku **Windows** .
 
-3. V seznamu typů projektů pro **systém Windows**vyberte šablonu Konzolová **aplikace** .
+3. V seznamu typů projektů pro **systém Windows**vyberte šablonu **Konzolová aplikace** .
 
 4. Pojmenujte projekt **SetExcelDocumentProperties**a pak klikněte na tlačítko **OK** .
 

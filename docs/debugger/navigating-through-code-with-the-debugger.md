@@ -16,10 +16,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: e07e2612e01453115cf4cd6120d92bfd5b0168bd
-ms.sourcegitcommit: fe212f8960d7882a1b0fdae9e22f008996aacf3c
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/03/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70222651"
 ---
 # <a name="navigate-through-code-with-the-visual-studio-debugger"></a>Procházení kódu s ladicím programu sady Visual Studio

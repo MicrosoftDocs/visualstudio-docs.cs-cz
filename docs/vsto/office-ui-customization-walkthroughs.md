@@ -1,5 +1,5 @@
 ---
-title: Návody pro přizpůsobení uživatelského rozhraní Office
+title: Návody pro přizpůsobení uživatelského rozhraní systému Office
 ms.date: 02/02/2017
 ms.topic: conceptual
 dev_langs:
@@ -15,60 +15,60 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 95561f1404da1efd71ff3418f9154392f393795c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e961479fc500e53133c62337478368878bf26893
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977884"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71254133"
 ---
-# <a name="office-ui-customization-walkthroughs"></a>Návody pro přizpůsobení uživatelského rozhraní Office
-  Následující postupy ukazují, že se způsoby, které lze přizpůsobit uživatelské rozhraní (UI) aplikace Microsoft Office s použitím přizpůsobení na úrovni dokumentu a doplňky VSTO.
+# <a name="office-ui-customization-walkthroughs"></a>Návody pro přizpůsobení uživatelského rozhraní systému Office
+  Následující návody ukazují způsoby, jak můžete přizpůsobit uživatelské rozhraní (UI) systém Microsoft Office aplikací pomocí přizpůsobení na úrovni dokumentu a doplňků VSTO.
 
-## <a name="actions-pane-walkthroughs"></a>Návody pro podokna akcí
-- [Návod: Vkládání textu do dokumentu z podokna akcí](../vsto/walkthrough-inserting-text-into-a-document-from-an-actions-pane.md) ukazuje, jak vytvořit podokna akcí ve Wordovém dokumentu. V podokně Akce obsahuje dva ovládací prvky, které odesílají vstupu uživatele pro dokument.
+## <a name="actions-pane-walkthroughs"></a>Návody podokna akcí
+- [Návod: Vložení textu do dokumentu z podokna](../vsto/walkthrough-inserting-text-into-a-document-from-an-actions-pane.md) akcí ukazuje, jak vytvořit podokno akcí v dokumentu aplikace Word. Podokno akce obsahuje dva ovládací prvky, které odesílají uživateli vstup do dokumentu.
 
-- [Návod: Vytvoření vazby dat s ovládacími prvky v podokně akcí aplikace Word](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md) ukazuje, jak svázat ovládací prvky v podokně akcí ve Wordu k datům. Ovládací prvky ukazují záznamů master/detail relace mezi tabulkami v databázi serveru SQL Server.
+- [Návod: Svázání dat s ovládacími prvky v podokně](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md) akcí aplikace Word ukazuje, jak navazovat ovládací prvky v podokně akcí ve Wordu na data. Ovládací prvky ukazují relaci hlavního/podrobností mezi tabulkami v SQL Server databázi.
 
-- [Návod: Vytvoření vazby dat k ovládacím prvkům v podokně akcí aplikace Excel](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md) popisuje, jak přidat ovládací prvky, které jsou vázány na zdroj dat do podokna akcí v aplikaci Excel.
+- [Návod: Svázání dat s ovládacími prvky v podokně](../vsto/walkthrough-binding-data-to-controls-on-an-excel-actions-pane.md) akcí aplikace Excel popisuje, jak přidat ovládací prvky, které jsou svázané se zdrojem dat, do podokna akcí v aplikaci Excel.
 
-## <a name="custom-task-pane-walkthroughs"></a>Návody pro podokno úloh
-- [Návod: Automatizace aplikace z vlastního podokna úloh](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md) ukazuje, jak vytvořit vlastního podokna úloh, která obsahuje ovládací prvek, který automatizuje hostitelská aplikace, když uživatel klikne ovládací prvek.
+## <a name="custom-task-pane-walkthroughs"></a>Návody pro vlastní podokno úloh
+- [Návod: Automatizace aplikace z vlastního podokna](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md) úloh ukazuje, jak vytvořit vlastní podokno úloh, které obsahuje ovládací prvek, který automatizuje hostitelskou aplikaci, když uživatel klikne na ovládací prvek.
 
-- [Návod: Synchronizace vlastního podokna úloh s tlačítkem pásu karet](../vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md) ukazuje, jak vytvořit vlastního podokna úloh, které uživatelé můžou skrýt nebo zobrazit kliknutím na přepínací tlačítko na pásu karet.
+- [Návod: Synchronizace vlastního podokna úloh s tlačítkem](../vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md) na pásu karet ukazuje, jak vytvořit vlastní podokno úloh, které uživatelé mohou skrýt nebo zobrazit kliknutím na přepínací tlačítko na pásu karet.
 
-- [Návod: Zobrazení vlastních podoken úloh s e-mailové zprávy v aplikaci Outlook](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md) ukazuje, jak zobrazit jedinečnou instanci vlastního podokna úloh s každou e-mailové zprávy, který je vytvořen nebo otevřen v aplikaci Outlook.
+- [Návod: Zobrazení vlastních podoken úloh s e-mailovými](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md) zprávami v aplikaci Outlook ukazuje, jak zobrazit jedinečnou instanci vlastního podokna úloh s každou e-mailovou zprávou vytvořenou nebo otevřenou v aplikaci Outlook.
 
-## <a name="ribbon-walkthroughs"></a>Návody pro pás karet
-- [Návod: Vytvoření vlastní karty pomocí Návrháře pásu karet](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md) ukazuje, jak vytvořit vlastní pásu karet pomocí Návrháře pásu karet. Na kartě obsahuje tlačítko, které lze použít pro skrytí nebo zobrazení podokna akcí.
+## <a name="ribbon-walkthroughs"></a>Názorné postupy pro pás karet
+- [Návod: Vytvoření vlastní karty pomocí návrháře](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md) pásu karet ukazuje, jak vytvořit vlastní kartu pásu karet pomocí Návrháře pásu karet. Karta obsahuje tlačítko, které lze použít k skrytí nebo zobrazení podokna akcí.
 
-- [Návod: Aktualizace ovládacích prvků na pásu karet za běhu](../vsto/walkthrough-updating-the-controls-on-a-ribbon-at-run-time.md) demonstruje použití objektového modelu pásu karet po načtení pásu do aplikace sady Office aktualizace ovládacích prvků na pásu karet.
+- [Návod: Aktualizace ovládacích prvků na pásu karet za běhu](../vsto/walkthrough-updating-the-controls-on-a-ribbon-at-run-time.md) demonstruje způsob použití modelu objektu pásu karet k aktualizaci ovládacích prvků na pásu karet po načtení pásu karet do aplikace Office.
 
-- [Návod: Vytvoření vlastní karty pomocí kódu XML pásu karet](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md) ukazuje, jak vytvořit vlastní pásu karet pomocí kódu XML pásu karet namísto použití Návrháře pásu karet.
+- [Návod: Vytvoření vlastní karty pomocí kódu XML](../vsto/walkthrough-creating-a-custom-tab-by-using-ribbon-xml.md) pásu karet ukazuje, jak vytvořit vlastní kartu pásu karet pomocí kódu XML pásu karet namísto použití Návrháře pásu karet.
 
 ## <a name="controls-on-word-documents"></a>Ovládací prvky v dokumentech aplikace Word
-- [Návod: Přidání ovládacích prvků do dokumentu za běhu v doplňku VSTO](../vsto/walkthrough-adding-controls-to-a-document-at-run-time-in-a-vsto-add-in.md) ukazuje, jak přidat ovládací prvky do dokumentu pomocí doplňku VSTO.
+- [Návod: Přidání ovládacích prvků do dokumentu za běhu v doplňku](../vsto/walkthrough-adding-controls-to-a-document-at-run-time-in-a-vsto-add-in.md) VSTO ukazuje, jak přidat ovládací prvky do dokumentu pomocí doplňku VSTO.
 
-- [Návod: Změna formátování dokumentů s použitím ovládacích prvků CheckBox](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md) ukazuje, jak se změna formátování pomocí zaškrtávacích políček v přizpůsobení na úrovni dokumentu dokument aplikace Word.
+- [Návod: Změna formátování dokumentu pomocí ovládacích prvků](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md) CheckBox ukazuje, jak změnit formátování v dokumentu aplikace Word pomocí zaškrtávacích políček v přizpůsobení na úrovni dokumentu.
 
-- [Návod: Zobrazení textu v textovém poli v dokumentu s použitím tlačítka](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md) ukazuje, jak pomocí tlačítka a textová pole v dokumentech aplikace Word.
+- [Návod: Zobrazení textu v textovém poli v dokumentu pomocí tlačítka](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md) ukazuje, jak používat tlačítka a textová pole v dokumentech aplikace Word.
 
-- [Návod: Aktualizace grafu v dokumentu s použitím přepínačů](../vsto/walkthrough-updating-a-chart-in-a-document-using-radio-buttons.md) ukazuje, jak změnit styly grafu ve Wordovém dokumentu pomocí tlačítek možností v přizpůsobení na úrovni dokumentu.
+- [Návod: Aktualizace grafu v dokumentu pomocí přepínačů](../vsto/walkthrough-updating-a-chart-in-a-document-using-radio-buttons.md) ukazuje, jak změnit styly grafů v dokumentu aplikace Word pomocí tlačítek možností v přizpůsobení na úrovni dokumentu.
 
-## <a name="controls-on-excel-worksheets"></a>Ovládacích prvků na listech aplikace Excel
-- [Návod: Přidání ovládacích prvků na list za běhu v projektu doplňku VSTO](../vsto/walkthrough-adding-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project.md) ukazuje, jak přidat ovládací prvky do listu pomocí doplňku VSTO.
+## <a name="controls-on-excel-worksheets"></a>Ovládací prvky na listech aplikace Excel
+- [Návod: Přidání ovládacích prvků do listu v době běhu v projektu](../vsto/walkthrough-adding-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project.md) doplňku VSTO ukazuje, jak přidat ovládací prvky do listu pomocí doplňku VSTO.
 
-- [Návod: Změna formátování listů s použitím ovládacích prvků CheckBox](../vsto/walkthrough-changing-worksheet-formatting-using-checkbox-controls.md) ukazuje základy používání zaškrtávacích políček na listu aplikace Excel Změna formátování.
+- [Návod: Změna formátování listů pomocí ovládacích prvků](../vsto/walkthrough-changing-worksheet-formatting-using-checkbox-controls.md) CheckBox ukazuje základy používání zaškrtávacích políček v excelovém listu ke změně formátování.
 
-- [Návod: Zobrazení textu v textovém poli na listu s použitím tlačítka](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-worksheet-using-a-button.md) ukazuje základy používání tlačítka a textová pole na listech aplikace Excel.
+- [Návod: Zobrazení textu v textovém poli na listu pomocí tlačítka](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-worksheet-using-a-button.md) ukazuje základy používání tlačítek a textových polí na listech aplikace Excel.
 
-- [Návod: Aktualizace grafu na listu s použitím přepínačů](../vsto/walkthrough-updating-a-chart-in-a-worksheet-using-radio-buttons.md) ukazuje základy změna stylů grafu na listu aplikace Excel pomocí přepínače.
+- [Návod: Aktualizace grafu na listu pomocí přepínačů](../vsto/walkthrough-updating-a-chart-in-a-worksheet-using-radio-buttons.md) zobrazuje základy změny stylů grafu pomocí tlačítek možností na listu aplikace Excel.
 
 ## <a name="see-also"></a>Viz také:
-- [Návody pro aplikaci Word](../vsto/walkthroughs-using-word.md)
-- [Návody pro aplikaci Excel](../vsto/walkthroughs-using-excel.md)
-- [Data v návody pro řešení Office](../vsto/data-in-office-solutions-walkthroughs.md)
-- [Návody pro zabezpečení a nasazení](../vsto/security-and-deployment-walkthroughs.md)
-- [Začínáme &#40;vývoj pro Office v sadě Visual Studio&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
+- [Návody pomocí aplikace Word](../vsto/walkthroughs-using-word.md)
+- [Návody pomocí Excelu](../vsto/walkthroughs-using-excel.md)
+- [Návody pro data v řešeních pro systém Office](../vsto/data-in-office-solutions-walkthroughs.md)
+- [Návody k zabezpečení a nasazení](../vsto/security-and-deployment-walkthroughs.md)
+- [Začínáme &#40;s vývojem pro Office v sadě Visual Studio&#41;](../vsto/getting-started-office-development-in-visual-studio.md)
 - [Běžné úlohy při programování pro systém Office](../vsto/common-tasks-in-office-programming.md)
-- [Návrh a vytvoření řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)
+- [Návrh a tvorba řešení pro systém Office](../vsto/designing-and-creating-office-solutions.md)

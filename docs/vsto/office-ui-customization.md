@@ -16,92 +16,92 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 052149783f93c1bf2f394be2fac9f6a51c9c0cf5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e5fd0253c6ca560c58724c8a83e343164b678923
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62977914"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71254145"
 ---
 # <a name="office-ui-customization"></a>Přizpůsobení uživatelského rozhraní systému Office
-  Můžete přizpůsobit uživatelské rozhraní (UI) aplikace Microsoft Office s použitím nástroje Office developer tools v sadě Visual Studio. Toto téma popisuje funkce uživatelského rozhraní, které můžete přizpůsobit v následujících částech:
+  Můžete přizpůsobit uživatelské rozhraní (UI) systém Microsoft Office aplikací pomocí nástrojů Office Developer Tools v sadě Visual Studio. Toto téma popisuje funkce uživatelského rozhraní, které můžete přizpůsobit v následujících částech:
 
 - [Porovnání funkcí uživatelského rozhraní](#Comparison)
 
-- [Podokna akcí a vlastních podoken úloh](#Actions)
+- [Podokna akcí a vlastní podokna úloh](#Actions)
 
-- [Vlastní uživatelské rozhraní pásu karet](#Ribbon)
+- [Uživatelské rozhraní vlastního pásu karet](#Ribbon)
 
 - [Zobrazení Backstage](#Backstage)
 
-- [Oblastí formulářů aplikace Outlook](#FormRegion)
+- [Oblasti formulářů aplikace Outlook](#FormRegion)
 
 - [Ovládací prvky v dokumentech](#Controls)
 
-- [Používání místních nabídek](#Shortcut)
+- [Místní nabídky](#Shortcut)
 
-## <a name="Comparison"></a> Porovnání funkcí uživatelského rozhraní
- Následující tabulka porovnává hlavní funkce uživatelského rozhraní, které můžete přizpůsobit v projektech pro aplikaci Microsoft Office.
+## <a name="Comparison"></a>Porovnání funkcí uživatelského rozhraní
+ Následující tabulka porovnává hlavní funkce uživatelského rozhraní, které můžete přizpůsobit v systém Microsoft Office projekty.
 
-|Funkce|Podporované typy projektů|Podporované aplikace Microsoft Office|
+|Funkce|Podporované typy projektů|Podporované aplikace systém Microsoft Office|
 |-------------|-----------------------------|---------------------------------------------|
-|Podokna akcí|Přizpůsobení na úrovni dokumentu|Excel<br /><br /> Word|
+|Podokno akcí|Přizpůsobení na úrovni dokumentu|Excel<br /><br /> Word|
 |Vlastní podokna úloh|Doplňky VSTO|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)]<br /><br /> [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)]<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> Word<br /><br /> Excel|
-|Vlastní uživatelské rozhraní pásu karet|Přizpůsobení na úrovni dokumentu<br /><br /> Doplňky VSTO|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)]<br /><br /> [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)]<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> Project<br /><br /> Word<br /><br /> Visio|
+|Uživatelské rozhraní vlastního pásu karet|Přizpůsobení na úrovni dokumentu<br /><br /> Doplňky VSTO|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)]<br /><br /> [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)]<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> Project<br /><br /> Word<br /><br /> Visio|
 |Zobrazení Backstage|Přizpůsobení na úrovni dokumentu<br /><br /> Doplňky VSTO|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)].<br /><br /> [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)]<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> Project<br /><br /> Word<br /><br /> Visio|
-|Oblastí formulářů aplikace Outlook|Doplňky VSTO|Outlook|
+|Oblasti formulářů aplikace Outlook|Doplňky VSTO|Outlook|
 |Ovládací prvky v dokumentech|Přizpůsobení na úrovni dokumentu<br /><br /> Doplňky VSTO|Excel<br /><br /> Word|
-|Používání místních nabídek|Přizpůsobení na úrovni dokumentu<br /><br /> Doplňky VSTO|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)]<br /><br /> [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)]<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> Project<br /><br /> Word<br /><br /> Visio<br /><br /> Excel|
+|Místní nabídky|Přizpůsobení na úrovni dokumentu<br /><br /> Doplňky VSTO|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)]<br /><br /> [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)]<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> Project<br /><br /> Word<br /><br /> Visio<br /><br /> Excel|
 
-## <a name="Actions"></a> Podokna akcí a vlastních podoken úloh
- Panely uživatelského rozhraní, které jsou obvykle ukotven k okraji okna v aplikaci Microsoft Office jsou podokna úloh. Téměř všechny aplikace sady Office zahrnují integrované podoken. Příkladem podokna úloh je v podokně úloh nápovědy v aplikaci Word.
+## <a name="Actions"></a>Podokna akcí a vlastní podokna úloh
+ Podokna úloh jsou panely uživatelského rozhraní, které jsou obvykle ukotveny na jednu stranu okna aplikace systém Microsoft Office. Skoro všechny systém Microsoft Office aplikace obsahují integrovaná podokna úloh. Příkladem podokna úloh je podokno úloh Help (aplikace Word).
 
- Vývojářské nástroje balíku Office v sadě Visual Studio poskytuje dva různé způsoby přizpůsobení podokna úloh:
+ Vývojové nástroje pro Office v sadě Visual Studio poskytují dva různé způsoby přizpůsobení podoken úloh:
 
-- Přidání podokna akcí do přizpůsobení na úrovni dokumentu. Ve výchozím nastavení zobrazí se na pravé straně aplikace napravo od dokumentu podokno akcí. Na levé straně, horní nebo dolní části dokumentu však lze rovněž zobrazit podokno akcí.
+- Do přizpůsobení na úrovni dokumentu můžete přidat podokno akcí. Ve výchozím nastavení se podokno akce zobrazuje na pravé straně aplikace, napravo od dokumentu. Nicméně podokno akce lze také zobrazit vlevo, nahoře nebo dole v dokumentu.
 
-- Můžete přidat vlastního podokna úloh do doplňku VSTO. Uživatelům můžete ukotvit vlastní podokna úloh do jiné straně okna aplikace nebo vlastní podokna úloh, můžete přetáhnout do libovolného umístění v okně.
+- Do doplňku VSTO můžete přidat vlastní podokno úloh. Uživatelé mohou ukotvit vlastní podokna úloh do různých stran okna aplikace nebo mohou přetahovat vlastní podokna úloh na libovolné místo v okně.
 
-  Podokna akcí a vlastních podoken úloh nakonfigurovánu hostováním širokou škálu ovládacích prvků pro pomoc s úkoly, jako je například zadávání dat uživatelům. Ve srovnání s skupiny pásu karet, podokna akcí a vlastních podoken úloh poskytují mnohem větší oblasti obsahovat text a ovládací prvky.
+  Podokna akcí a vlastní podokna úloh poskytují funkce hostováním nejrůznějších ovládacích prvků, které uživatelům pomůžou s úkoly, jako je zadávání dat. V porovnání se skupinou pásu karet představují podokna akcí a vlastní podokna úloh mnohem větší oblast pro zahrnutí textu a ovládacích prvků.
 
-  Další informace o podoknech akcí najdete v tématu [přehled podokna akcí](../vsto/actions-pane-overview.md). Další informace o vlastních podoknech úloh najdete v tématu [vlastní podokna úloh](../vsto/custom-task-panes.md).
+  Další informace o podoknech akcí najdete v tématu [Přehled podokna akcí](../vsto/actions-pane-overview.md). Další informace o vlastních podoknech úloh najdete v tématu [vlastní podokna úloh](../vsto/custom-task-panes.md).
 
-## <a name="Ribbon"></a> Vlastní uživatelské rozhraní pásu karet
- Můžete přizpůsobit uživatelské rozhraní pásu karet na funkci, která přidáte do aplikace sady Office. Na pásu karet je způsob, jak uspořádat související příkazy (ve formuláři ovládací prvky), aby byly snadněji najít. Můžete vytvořit vlastní karty pásu karet a skupiny můžete uživatelům udělit přístup k funkcím, které poskytujete ve vašem řešení. Většina funkcí, které byly přístupné prostřednictvím nabídek a panelů nástrojů v dřívějších verzích systému Microsoft Office je teď přístupný pomocí pásu karet.
+## <a name="Ribbon"></a>Uživatelské rozhraní vlastního pásu karet
+ Můžete přizpůsobit uživatelské rozhraní pásu karet a vystavit funkce, které přidáte do aplikací v systému Office. Pás karet je způsob, jak uspořádat související příkazy (ve formě ovládacích prvků) tak, aby byly snáze najít. Můžete vytvořit vlastní karty a skupiny pásu karet, které uživatelům umožní přístup k funkcím, které zadáte ve vašem řešení. Většina funkcí, k nimž došlo pomocí nabídek a panelů nástrojů v předchozích verzích systém Microsoft Office systému, je teď dostupná pomocí pásu karet.
 
- Další informace najdete v tématu [přehled pásu karet](../vsto/ribbon-overview.md).
+ Další informace najdete v tématu [Přehled pásu karet](../vsto/ribbon-overview.md).
 
-## <a name="Backstage"></a> Zobrazení Backstage
- V aplikacích Office, kliknutím **souboru** kartě se otevře zobrazení Backstage. Zobrazení Backstage poskytuje uživatelské rozhraní, který kombinuje úrovni souboru úloh a akcí a nahrazuje podobné funkce, které jsou k dispozici tlačítko Microsoft Office v systému Microsoft Office 2007. Zobrazení Backstage je plná rozšiřitelnost pomocí XML.
+## <a name="Backstage"></a>Zobrazení Backstage
+ V aplikacích Office kliknutím na kartu **soubor** otevřete zobrazení Backstage. Zobrazení Backstage poskytuje uživatelské rozhraní, které kombinuje úlohy a akce na úrovni souborů, a nahrazuje podobné funkce, které jsou k dispozici na tlačítku systém Microsoft Office v systému 2007 systém Microsoft Office. Zobrazení Backstage je plně rozšiřitelné pomocí XML.
 
- Visual Studio neposkytuje Návrhář nebo rozhraní API pro přizpůsobení zobrazení Backstage. Ale pokud přidáte **pásu karet (XML)** položky do projektu sady Office můžete přidat XML do souboru XML pásu karet k přizpůsobení zobrazení Backstage. Další informace o **pásu karet (XML)** položky, naleznete v tématu [kódu XML pásu karet](../vsto/ribbon-xml.md).
+ Visual Studio neposkytuje návrháře ani rozhraní API pro přizpůsobení zobrazení Backstage. Pokud však přidáte položku **pásu karet (XML)** do projektu sady Office, můžete přidat XML do souboru XML pásu karet pro přizpůsobení zobrazení Backstage. Další informace o položkách **pásu karet (XML)** najdete v tématu [XML pásu karet](../vsto/ribbon-xml.md).
 
- Další informace o úpravách zobrazení Backstage naleznete v tématu [Úvod do zobrazení Office 2010 Backstage pro vývojáře](http://go.microsoft.com/fwlink/?LinkId=182189) a [přizpůsobení zobrazení Office 2010 Backstage pro vývojáře](http://go.microsoft.com/fwlink/?LinkId=182188).
+ Další informace o přizpůsobení zobrazení Backstage najdete v tématu [Úvod do zobrazení Backstage office 2010 pro vývojáře](http://go.microsoft.com/fwlink/?LinkId=182189) a [přizpůsobení zobrazení Backstage Office 2010 pro vývojáře](http://go.microsoft.com/fwlink/?LinkId=182188).
 
-## <a name="FormRegion"></a> Oblastí formulářů aplikace Outlook
- Použijte oblasti formuláře pro přidání vlastních funkcí do standardní formulářů aplikace Microsoft Office Outlook. Můžete vytvořit oblasti formulářů, které rozšiřují jakékoli existujícího formuláře s další pole nebo ovládací prvky. Pokud vytvoříte novou oblast formuláře pomocí nástroje pro vývoj sady Office v sadě Visual Studio, můžete použít pouze Windows Forms ovládací prvky na oblast formuláře. Pokud importujete oblasti formuláře, která je navržená v Outlooku, můžete použít pouze nativní ovládací prvky aplikace Outlook.
+## <a name="FormRegion"></a>Oblasti formulářů aplikace Outlook
+ Pomocí oblastí formuláře můžete přidat vlastní funkce do formulářů Standard systém Microsoft Office Outlook. Můžete vytvořit oblasti formulářů, které rozšíří libovolný existující formulář s dalšími poli nebo ovládacími prvky. Pokud vytvoříte novou oblast formuláře pomocí nástrojů pro vývoj pro Office v sadě Visual Studio, můžete použít pouze ovládací prvky model Windows Forms v oblasti formuláře. Pokud importujete oblast formuláře, která byla navržena v aplikaci Outlook, můžete použít pouze nativní ovládací prvky aplikace Outlook.
 
- Můžete vytvořit oblasti formulářů, které zabírají různé oblasti uživatelského rozhraní aplikace Outlook. Například sousední oblasti formuláře se zobrazí v dolní části na první stránku formuláři a každý sousední oblasti formuláře je možné sbalit. Můžete také přidat oblasti formuláře samostatné, která se zobrazí jako stránky s úplné další formuláře a, který se může objevit v žádné stávající standardní formuláře nebo vlastního formuláře.
+ Můžete vytvořit oblasti formulářů, které zabírají různé oblasti uživatelského rozhraní aplikace Outlook. Například sousední oblasti formuláře se zobrazí v dolní části první stránky formuláře a všechny sousední oblasti formuláře jsou sbalitelné. Můžete také přidat samostatnou oblast formuláře, která se zobrazí jako plná další stránka formuláře a která se může objevit v jakékoli existující standardní formuláři nebo vlastním formuláři.
 
- Další informace najdete v tématu [oblastí formulářů aplikace Outlook vytvořit](../vsto/creating-outlook-form-regions.md).
+ Další informace najdete v tématu [vytvoření oblastí formuláře aplikace Outlook](../vsto/creating-outlook-form-regions.md).
 
-## <a name="Controls"></a> Ovládací prvky v dokumentech
- Můžete přidat širokou škálu ovládacích prvků na dokumenty aplikace Word a sešitů aplikace Excel. Můžete například chtít přidejte ovládací prvek Výběr data do dokumentu, aby uživatel mohl zadat data ve standardním formátu, nebo umístit tlačítko na list pro odesílání dat do databáze.
+## <a name="Controls"></a>Ovládací prvky v dokumentech
+ Do dokumentů aplikace Word a sešitů aplikace Excel lze přidat nejrůznější ovládací prvky. Například můžete chtít přidat ovládací prvek pro výběr data do dokumentu, aby uživatel mohl zadat data ve standardním formátu, nebo vložit tlačítko na list pro odeslání dat do databáze.
 
- Při vývoji projekty na úrovni dokumentu pro aplikaci Excel nebo Word návrháře aplikace Visual Studio můžete použít k přidání ovládacích prvků do dokumentu nebo sešitu v projektu v době návrhu nebo prostřednictvím kódu programu můžete přidat ovládací prvky za běhu. Při vývoji projekty doplňku VSTO pro Excel nebo Word prostřednictvím kódu programu můžete přidat ovládací prvky otevřeného dokumentu nebo sešitu v době běhu.
+ Při vývoji projektů na úrovni dokumentu v aplikaci Excel nebo Word můžete pomocí návrháře aplikace Visual Studio přidat ovládací prvky do dokumentu nebo sešitu v projektu v době návrhu nebo programově přidat ovládací prvky za běhu. Když vyvíjíte projekty doplňku VSTO v Excelu nebo Wordu, můžete programově přidat ovládací prvky do libovolného otevřeného dokumentu nebo sešitu v době běhu.
 
- Další informace najdete v tématu [hostovat položky a hostujte Přehled ovládacích prvků](../vsto/host-items-and-host-controls-overview.md) a [ovládacích prvků na dokumenty Office – přehled Windows forms](../vsto/windows-forms-controls-on-office-documents-overview.md).
+ Další informace naleznete v tématu Přehled [hostitelských položek a hostitelských ovládacích prvků](../vsto/host-items-and-host-controls-overview.md) a [ovládací prvky Windows Forms v dokumentech Office](../vsto/windows-forms-controls-on-office-documents-overview.md).
 
-## <a name="Shortcut"></a> Používání místních nabídek
- Místní nabídce se zobrazí, když kliknete pravým tlačítkem v okně aplikace nebo dokumentu. Můžete nastavit místní nabídce se zobrazí po provedení událost, například když uživatel klepne pravým tlačítkem myši dokumentu, sešitu nebo hostitelského ovládacího prvku. Počet různých příkazů nebo ovládacích prvků můžete přidat do místní nabídky. Vytvořte místní nabídky pomocí XML. Pokud chcete přidat **pásu karet (XML)** položky do projektu sady Office můžete přidat XML do souboru XML pásu karet, chcete-li vytvořit místní nabídky. Další informace o vytváření místních nabídek pomocí XML, naleznete v tématu [jak: Přidání příkazů do místních nabídek](../vsto/how-to-add-commands-to-shortcut-menus.md).
+## <a name="Shortcut"></a>Místní nabídky
+ Místní nabídka se zobrazí po kliknutí pravým tlačítkem myši v dokumentu nebo v okně aplikace. Můžete nastavit místní nabídku, která se zobrazí poté, co dojde k události, například když uživatel klikne pravým tlačítkem myši na dokument, sešit nebo hostitelský ovládací prvek. Do místní nabídky můžete přidat několik různých příkazů nebo ovládacích prvků nabídky. Vytvořte místní nabídky pomocí XML. Pokud přidáte položku **pásu karet (XML)** do projektu sady Office, můžete přidat XML do souboru XML pásu karet a vytvořit tak místní nabídky. Další informace o použití jazyka XML k vytvoření místních nabídek naleznete v [tématu How to: Přidejte příkazy do místních nabídek](../vsto/how-to-add-commands-to-shortcut-menus.md).
 
 ## <a name="see-also"></a>Viz také:
 - [Přehled pásu karet](../vsto/ribbon-overview.md)
-- [Windows forms ovládacích prvků na dokumenty Office – přehled](../vsto/windows-forms-controls-on-office-documents-overview.md)
+- [Přehled ovládacích prvků Windows Forms v dokumentech Office](../vsto/windows-forms-controls-on-office-documents-overview.md)
 - [Přehled podokna akcí](../vsto/actions-pane-overview.md)
-- [Vytváření oblastí formulářů aplikace Outlook](../vsto/creating-outlook-form-regions.md)
+- [Vytvoření oblastí formuláře aplikace Outlook](../vsto/creating-outlook-form-regions.md)
 - [Vlastní podokna úloh](../vsto/custom-task-panes.md)
 - [Použití ovládacích prvků WPF v řešeních pro systém Office](../vsto/using-wpf-controls-in-office-solutions.md)
 - [Postupy: Zobrazení karty Vývojář na pásu karet](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)
-- [Postupy: Zobrazení doplňku uživatele chyb rozhraní](../vsto/how-to-show-add-in-user-interface-errors.md)
+- [Postupy: Zobrazit chyby uživatelského rozhraní doplňku](../vsto/how-to-show-add-in-user-interface-errors.md)
 - [Návod: Shromažďování dat pomocí formuláře Windows](../vsto/walkthrough-collecting-data-using-a-windows-form.md)

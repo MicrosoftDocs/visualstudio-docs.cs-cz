@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eb7dd7df55f67d486d03048860bf3d20f976a70f
-ms.sourcegitcommit: 2da366ba9ad124366f6502927ecc720985fc2f9e
+ms.openlocfilehash: b9e3b3762b127b1f66b43d6c961054b9cef04048
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68870703"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71254124"
 ---
 # <a name="access-models-from-text-templates"></a>Přístup k modelům z textových šablon
 
@@ -136,7 +136,7 @@ For Each element As ExampleElement In Me.WorkModel.Elements
 ```
 
 ## <a name="loading-models-dynamically"></a>Dynamické načítání modelů
- Pokud chcete určit za běhu, které modely načíst, můžete místo použití direktivy specifické pro DSL načíst soubor modelu dynamicky v kódu programu.
+ Pokud chcete určit za běhu, které modely se mají načíst, můžete dynamicky načíst soubor modelu do kódu programu namísto použití direktivy specifické pro DSL.
 
  Jedna z funkcí direktivy specifické pro DSL je však importovat obor názvů DSL, aby kód šablony mohl používat doménové třídy definované v této DSL. Vzhledem k tomu, že nepoužíváte direktivu, je nutné přidat  **\<sestavení >** a  **\<importovat >** direktiv pro všechny modely, které mohou být načteny. To je jednoduché, pokud jsou různé modely, které můžete načíst, všechny instance stejné DSL.
 

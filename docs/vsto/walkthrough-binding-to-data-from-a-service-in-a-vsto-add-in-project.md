@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 60aefd40c48dc3789ab84ee5873aa6a53f4ee3fe
-ms.sourcegitcommit: b56dc6fadc6c924beed36bb4c2ccc16cf6bcfa1c
+ms.openlocfilehash: 74a43a0c601fa8a96c8737644bf5bd0261f59796
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68740109"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71254059"
 ---
 # <a name="walkthrough-bind-to-data-from-a-service-in-a-vsto-add-in-project"></a>Návod: Vytvoření vazby na data ze služby v projektu doplňku VSTO
   Data můžete navazovat na hostitelské ovládací prvky v projektech doplňku VSTO. Tento návod ukazuje, jak přidat ovládací prvky do dokumentu aplikace systém Microsoft Office Word, navazovat ovládací prvky na data získaná ze služby obsahu MSDN a reagovat na události v době běhu.
@@ -28,7 +28,7 @@ ms.locfileid: "68740109"
 
  Tento návod znázorňuje následující úlohy:
 
-- <xref:Microsoft.Office.Tools.Word.RichTextContentControl> Přidání ovládacího prvku do dokumentu za běhu.
+- <xref:Microsoft.Office.Tools.Word.RichTextContentControl> Přidání ovládacího prvku do dokumentu v době běhu.
 
 - Navázání <xref:Microsoft.Office.Tools.Word.RichTextContentControl> ovládacího prvku na data z webové služby.
 
@@ -73,8 +73,8 @@ ms.locfileid: "68740109"
 
 6. V dialogovém okně **Průvodce přidáním odkazu** klikněte na tlačítko **Dokončit**.
 
-## <a name="add-a-content-control-and-bind-to-data-at-runtime"></a>Přidání ovládacího prvku obsahu a vytvoření vazby k datům za běhu
- V projektech doplňku VSTO přidáte a svážete ovládací prvky za běhu. Pro tento návod nakonfigurujte ovládací prvek obsahu, aby načetl data z webové služby, když uživatel klikne dovnitř ovládacího prvku.
+## <a name="add-a-content-control-and-bind-to-data-at-run-time"></a>Přidání ovládacího prvku obsahu a vazba na data v době běhu
+ V projektech doplňku VSTO přidáte a svážete ovládací prvky v době běhu. Pro tento návod nakonfigurujte ovládací prvek obsahu, aby načetl data z webové služby, když uživatel klikne dovnitř ovládacího prvku.
 
 ### <a name="to-add-a-content-control-and-bind-to-data"></a>Přidání ovládacího prvku obsahu a vytvoření vazby na data
 
