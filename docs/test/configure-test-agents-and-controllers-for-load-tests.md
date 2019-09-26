@@ -7,19 +7,19 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 5c10a624d78c1dc362c9d0e5d7c0e58e24efc3cf
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: f7a912ff25e2782490b711d909a64c5d9438ed8f
+ms.sourcegitcommit: 9a3972eb85de5443ac2bc03964c5a251c39b2921
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68918373"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71301706"
 ---
 # <a name="overview-of-test-agents-and-test-controllers-for-running-load-tests"></a>Přehled testovacích agentů a testovacích kontrolérů pro spouštění zátěžových testů
 
 Visual Studio může generovat simulované zatížení pro vaši aplikaci s využitím fyzických nebo virtuálních počítačů. Tyto počítače musíte nastavit jako jediný testovací kontrolér a jeden nebo více testovacích agentů. Testovací kontrolér a testovací agenty můžete použít k vygenerování větší zátěže, než jeden počítač můžete vygenerovat samostatně.
 
 > [!NOTE]
-> Cloudové zátěžové testování můžete použít také k poskytování virtuálních počítačů, které generují zatížení odpovídající mnoha uživatelům využívajícím web ve stejnou dobu. Další informace o cloudové zátěžové testování v [spuštění zátěžových testů pomocí testovacích plánů Azure](/azure/devops/test/load-test/get-started-simple-cloud-load-test?view=vsts).
+> Cloudové zátěžové testování můžete použít také k poskytování virtuálních počítačů, které generují zatížení odpovídající mnoha uživatelům využívajícím web ve stejnou dobu. Použití testovacího kontroléru nebo instalace testovacího agenta u virtuálních počítačů hostovaných v cloudu se ale nepodporuje. Další informace o cloudové zátěžové testování v [spuštění zátěžových testů pomocí testovacích plánů Azure](/azure/devops/test/load-test/get-started-simple-cloud-load-test?view=vsts).
 
 [!INCLUDE [web-load-test-deprecated](includes/web-load-test-deprecated.md)]
 

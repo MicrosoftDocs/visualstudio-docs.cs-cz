@@ -12,29 +12,53 @@ manager: jillfra
 ms.workload:
 - uwp
 author: gewarren
-ms.openlocfilehash: 1284dc529e4f150b282dcab2d919e027c9b606c4
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a123657e148e4c19c0fab1c1a9bf567ad2ea6fa8
+ms.sourcegitcommit: 9a3972eb85de5443ac2bc03964c5a251c39b2921
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62976406"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71301717"
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-uwp-apps"></a>Návod: Vytváření a spouštění testů jednotek pro aplikace pro UPW
 
-Visual Studio zahrnuje podporu pro testování částí aplikací pro univerzální platformu Windows (UPW). Obsahuje šablony projektů testů jednotek pro jazyk Visual C#, Visual Basic a Visual C++.
+Visual Studio zahrnuje podporu pro testování částí aplikací pro univerzální platformu Windows (UPW). Visual Studio poskytuje šablony projektů testů jednotek pro C#, Visual Basic a C++.
 
 > [!TIP]
 > Další informace o vývoji aplikací pro UWP, naleznete v tématu [Začínáme s aplikací pro UWP](/windows/uwp/get-started/).
 
-Následující postupy popisují postup vytvoření, spuštění a ladění testů jednotek pro aplikace pro UPW.
+Následující postupy popisují kroky pro vytvoření, spuštění a ladění testování částí aplikace pro UWP.
 
 ## <a name="create-a-unit-test-project-for-a-uwp-app"></a>Vytvořte projekt testu jednotek pro aplikace pro UPW
 
+::: moniker range=">=vs-2019"
+
+1. Otevřít Visual Studio. V okně Start vyberte možnost **vytvořit nový projekt**.
+
+2. Do vyhledávacího pole na stránce **vytvořit nový projekt** zadejte **Test jednotky**.
+
+   Seznam šablon filtruje hodnoty pro testování částí.
+
+3. Vyberte šablonu **aplikace pro testování částí (Universal Windows)** pro C# nebo Visual Basic a pak vyberte **Další**.
+
+   ![Vytvoření nové aplikace pro testování jednotek UWP v aplikaci Visual Studio](media/vs-2019/new-uwp-unit-test-app.png)
+
+4. Volitelně můžete změnit název projektu nebo řešení a jeho umístění a pak vybrat **vytvořit**.
+
+5. Volitelně můžete změnit cíl a minimální verzi platformy a pak vybrat **OK**.
+
+Po dokončení těchto kroků se vytvoří projekt testování částí a zobrazí se v Průzkumník řešení.
+
+![Projekt testu jednotek UWP v Průzkumník řešení](media/vs-2019/uwp-unit-test-project-solution-explorer.png)
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
 1. Z **souboru** nabídce zvolte **nový projekt**.
 
-     **Nový projekt** zobrazí se dialogové okno.
+   **Nový projekt** zobrazí se dialogové okno.
 
-2. V části šablony vyberte programovací jazyk, který chcete vytvořit testy jednotek v a klikněte na tlačítko přidružených jednotek Windows Universal testu knihovny. Například zvolte **Visual C#** , klikněte na tlačítko **Windows Universal**a klikněte na tlačítko **knihovna testu jednotek (Universal Windows)**.
+2. V části šablony vyberte programovací jazyk, který chcete vytvořit testy jednotek v a klikněte na tlačítko přidružených jednotek Windows Universal testu knihovny. Například zvolte **Visual C#** , klikněte na tlačítko **Windows Universal**a klikněte na tlačítko **knihovna testu jednotek (Universal Windows)** .
 
 3. (Volitelné) V **název** textového pole zadejte název, kterou chcete použít pro projekt.
 
@@ -44,65 +68,60 @@ Následující postupy popisují postup vytvoření, spuštění a ladění test
 
 6. Nechte **vytvořit adresář pro řešení** možnost vybranou a stiskněte tlačítko **OK** tlačítko.
 
-     ![Knihovna testu jednotek míru](../test/media/unit_test_win8_1.png)
+   ![Knihovna testu jednotek míru](../test/media/unit_test_win8_1.png)
 
-     **Průzkumník řešení** se vyplní projekt testování částí UPW a editor kódu zobrazí výchozí test jednotky s názvem UnitTest1.
+   **Průzkumník řešení** se vyplní projekt testování částí UPW a editor kódu zobrazí výchozí test jednotky s názvem UnitTest1.
 
-     ![Nový projekt testu jednotky míru](../test/media/unit_test_win8_unittestexplorer_newprojectcreated.png)
+   ![Nový projekt testu jednotky míru](../test/media/unit_test_win8_unittestexplorer_newprojectcreated.png)
+
+::: moniker-end
 
 ## <a name="edit-the-unit-test-projects-uwp-application-manifest-file"></a>Úprava souboru manifestu aplikace UPW projekt testu jednotek
 
 1. V **Průzkumníku řešení**, klikněte pravým tlačítkem myši *Package.appxmanifest* soubor a zvolte **otevřít**.
 
-     **Manifest Designer** zobrazení úprav.
-
 2. V **Manifest Designer**, zvolte **možnosti** kartu.
 
 3. V seznamu v části **možnosti**, vyberte možnosti, které potřebujete otestovat u vaší jednotky a kód, který je testován mít. Vyberte například **Internet** zaškrtávací políčko, pokud test jednotky a kód je testování musí mít přístup k Internetu.
 
-    > [!NOTE]
-    > Funkce, které vyberete by měl obsahovat pouze funkce, které jsou nezbytné pro správnou funkci testu jednotky.
+   > [!NOTE]
+   > Funkce, které vyberete by měl obsahovat pouze funkce, které jsou nezbytné pro správnou funkci testu jednotky.
 
-     ![Manifest testu jednotek](../test/media/unit_test_win8_.png)
+   ![Manifest testu jednotek](../test/media/unit_test_win8_.png)
 
 ## <a name="code-the-unit-test-for-a-uwp-app"></a>Programování testu jednotek pro aplikace pro UPW
 
-V **Editor kódu**, upravte test jednotky a přidejte kontrolní výrazy a logiku nezbytnou pro test.
+V editoru kódu upravte test jednotky a přidejte výrazy a logiku vyžadované pro váš test.
 
 ## <a name="run-unit-tests"></a>Spouštění testů jednotek
 
-### <a name="to-build-the-solution-and-run-the-unit-test-using-test-explorer"></a>Sestavte řešení a spuštění testování částí pomocí Průzkumníka testů
+Chcete-li sestavit řešení a spustit test jednotky pomocí Průzkumníka testů:
 
 1. Na **testovací** nabídce zvolte **Windows**a klikněte na tlačítko **Průzkumník testů**.
 
-     **Průzkumník testů** zobrazí bez uvedení vašeho testu.
-
 2. Z **sestavení** nabídce zvolte **sestavit řešení**.
 
-     Jednotkový test je nyní obsažena.
+   Test jednotek je nyní zobrazen v Průzkumníku testů.
 
-    > [!NOTE]
-    > Třeba vytvořit řešení Chcete-li aktualizovat seznam testů jednotek v Průzkumníku testů.
+   > [!NOTE]
+   > Třeba vytvořit řešení Chcete-li aktualizovat seznam testů jednotek v Průzkumníku testů.
 
 3. V **Průzkumníka testů**, vyberte test jednotky, které jste vytvořili.
 
-    > [!TIP]
-    > Průzkumník testů obsahuje odkaz na zdrojový kód vedle **zdroj:**.
-
 4. Zvolte **spustit všechny**.
 
-     ![Průzkumník testů jednotek &#45; spustit test jednotek](../test/media/unit_test_win8_unittestexplorer_contextmenurun.png)
+   ![Průzkumník testů jednotek &#45; spustit test jednotek](../test/media/unit_test_win8_unittestexplorer_contextmenurun.png)
 
-    > [!TIP]
-    > Vyberte jeden nebo více jednotek testů uvedených v Průzkumníkovi, klepněte pravým tlačítkem myši a zvolte **spustit vybrané testy**.
-    >
-    > Kromě toho můžete také **ladit vybrané testy**, **Otevřít testovací**a použít **vlastnosti** možnost.
-    >
-    > ![Průzkumník testů jednotek &#45; uni test kontextové nabídky](../test/media/unit_test_win8_unittestexplorer_contextmenu.png)
+   > [!TIP]
+   > Můžete vybrat jednu nebo více testů jednotek uvedených v Průzkumníku testů a potom kliknout pravým tlačítkem a vybrat možnost **Spustit vybrané testy**.
+   >
+   > Kromě toho můžete také **ladit vybrané testy**, **Otevřít testovací**a použít **vlastnosti** možnost.
+   >
+   > ![Místní nabídka testu &#45; jednotek Průzkumníka testu jednotek](../test/media/unit_test_win8_unittestexplorer_contextmenu.png)
 
-    Test jednotky probíhá. Po dokončení **Průzkumníka testů** svat testu, uplynulý čas a získáte odkaz na zdroj.
+   Test jednotky probíhá. Po dokončení zobrazí Průzkumník testů stav testu a uplynulý čas a poskytne odkaz na zdroj.
 
-    ![Průzkumník testů jednotek &#45; test byl dokončen](../test/media/unit_test_win8_unittestexplorer_done.png)
+   ![Průzkumník testů jednotek &#45; test byl dokončen](../test/media/unit_test_win8_unittestexplorer_done.png)
 
 ## <a name="see-also"></a>Viz také:
 
