@@ -12,41 +12,41 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ab2cb4562f816b254b658cfdc152dc38033fbe03
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a3f2d4d86f80bc7c2966d5156267352154b1279f
+ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62949683"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71254802"
 ---
 # <a name="error-messages-in-workflow-designer"></a>Chybové zprávy v návrháři postupu provádění
 
-Toto téma popisuje typy chybové zprávy, které mohou nastat při práci s návrháře postupu provádění.
+Toto téma popisuje typy chybových zpráv, které mohou být zjištěny při práci s Návrhář postupu provádění.
 
-## <a name="situations-in-which-errors-in-the-workflow-designer-occur"></a>Situace, ve kterých dojde k chybám v Návrháři postupu provádění
+## <a name="situations-in-which-errors-in-the-workflow-designer-occur"></a>Situace, ve kterých dochází k chybám Návrhář postupu provádění
 
-Dojít k chybám v Návrháři pracovních postupů v následujících situacích:
+K chybám v Návrhář postupu provádění dochází v následujících situacích:
 
-1. Ve výrazu dojde k chybě.
+1. Ve výrazu je chyba.
 
-2. Omezení ověřování aktivity nebyly splněny.
+2. Nebyla splněna omezení ověření aktivity.
 
-3. Existují chyby v souboru XAML, které způsobují aktivitu na nepodaří zavést.
+3. V souboru XAML jsou chyby, které způsobují selhání načtení aktivity.
 
-4. Existují chyby v souboru XAML, které způsobí selhání načtení pracovního postupu.
+4. V souboru XAML jsou chyby, které způsobují, že se pracovní postup nepodařilo načíst.
 
-Neplatné výrazy a omezení nespokojen/nespokojena ověření nespouštějí pracovní postup sestavení nezdaří. Vytvoření pracovního postupu bude úspěšné, ale <xref:System.Activities.InvalidWorkflowException> je vyvolána výjimka za běhu. Pokud nejsou chyby v souboru XAML, sestavení selže.
+Neplatné výrazy a nesplněná omezení ověřování nezpůsobí, že se pracovní postup nedaří sestavit. Sestavení pracovního postupu <xref:System.Activities.InvalidWorkflowException> je úspěšné, ale v době běhu je vyvolána výjimka. Pokud v souboru XAML dojde k chybám, sestavení selhalo.
 
-V sadě Visual Studio při načítání pracovního postupu jeho chyby zobrazují v **seznam chyb**. Přejděte na aktivitu, která je zdrojem chyby klikněte dvakrát na chybu v **seznam chyb**.
+V rámci sady Visual Studio se při načtení pracovního postupu zobrazí jeho chyby v **Seznam chyb**. Chcete-li přejít k aktivitě, která je zdrojem chyby, dvakrát klikněte na chybu v **Seznam chyb**.
 
-### <a name="expression-errors"></a>Výraz chyby
- Neplatný výraz označuje symbolem červené kolečko s bílým vykřičníkem vedle výraz. Ukazatel myši tuto ikonu zobrazí popisek, který popisuje zdroje chyby. V sadě Visual Studio klikněte na výraz, který má zobrazit na řádek, který podtrhuje zdroje chyby. Ukazatel myši zobrazí řádkovaný text popisu, který popisuje zdroje chyby.
+### <a name="expression-errors"></a>Chyby výrazu
+ Neplatný výraz je označen červeným kroužkem s bílým vykřičníkem vedle výrazu. Po najetí myší na tuto ikonu se zobrazí popis, který popisuje zdroj chyby. V aplikaci Visual Studio klikněte na výraz, abyste zobrazili řádek, který je podtržený zdrojem chyby. Při najetí myší na řádek textu se zobrazí popis, který popisuje zdroj chyby.
 
-### <a name="activity-validation-errors"></a>Chyby ověřování aktivit
- Když splněné omezení ověřování aktivity, zobrazí se v pravém horním rohu aktivity červené kolečko s bílým vykřičník. Ukazatel myši tuto ikonu zobrazí popisek, který popisuje zdroje chyby.
+### <a name="activity-validation-errors"></a>Chyby ověřování aktivity
+ Pokud nebyla splněna omezení ověření aktivity, v pravém horním rohu aktivity se zobrazí červené kolečko s bílým vykřičníkem. Po najetí myší na tuto ikonu se zobrazí popis, který popisuje zdroj chyby.
 
-### <a name="xaml-load-errors"></a>Chyby načítání XAML
- Když aktivity se nepodaří načíst, zobrazí se červená pole s textem "aktivitu nelze načíst z důvodu chyby v XAML". K tomu obvykle dochází, když nelze rozpoznat typ aktivity. Neplatný aktivity můžete odstranit v Návrháři výběrem červeným rámečkem a jeho odstranění.
+### <a name="xaml-load-errors"></a>Chyby načtení XAML
+ Pokud se aktivita nepovede načíst, nepovedlo se načíst červené pole s textem "aktivita", protože se zobrazí chyby v kódu XAML. K tomu obvykle dochází, když typ aktivity nelze přeložit. Neplatnou aktivitu lze v Návrháři odstranit tak, že vyberete červené pole a odstraníte ji.
 
 ### <a name="workflow-load-errors"></a>Chyby načtení pracovního postupu
- Když pracovní postup se nepodaří načíst, text "Návrháře postupu provádění došlo k problémům s vaším dokumentem" se zobrazí na návrhové ploše, spolu s, která způsobila Chyba pracovního postupu se načíst informace o výjimce. K tomu obvykle dochází, když nelze analyzovat soubor XAML.
+ V případě, že se pracovní postup nepodařilo načíst, text "Návrhář postupu provádění zjistil problémy s dokumentem" na návrhové ploše, spolu s informacemi o výjimkách, které způsobily selhání pracovního postupu při načtení. K tomu obvykle dochází v případě, že soubor XAML nelze analyzovat.
