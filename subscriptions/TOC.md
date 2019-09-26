@@ -41,6 +41,7 @@
 ##### [WhiteSource Bolt](vs-whitesource.md)
 ##### [Vývojářský účet pro Windows](vs-windows-dev.md)
 #### Profesní rozvoj
+##### [CODE Magazine](vs-code-magazine.md)
 ##### [DataCamp](vs-datacamp.md)
 ##### [LinkedIn Learning](vs-linkedin-learning.md)
 ##### [Předplatné MSDN Magazine](vs-msdn.md)

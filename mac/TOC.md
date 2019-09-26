@@ -95,6 +95,10 @@
 ## [Mobilní aplikace s Xamarinem](/visualstudio/mac/xamarin)
 
 # [Usnadnění](accessibility.md)
+## [Nastavení možností usnadnění přístupu v integrovaném vývojovém prostředí](accessibility-ide-options.md)
+## [Použití nástrojů pro usnadnění přístupu v systému macOS](accessibility-macos.md)
+### [Navigace s použitím klávesnice](accessibility-keyboard.md)
+### [Použití funkce VoiceOver](accessibility-voiceover.md)
 
 # Poradce při potížích
 ## [Protokoly a výjimky](troubleshooting.md)
