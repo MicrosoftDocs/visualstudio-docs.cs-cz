@@ -1,39 +1,39 @@
 ---
 title: Použití možností usnadnění macOS
-description: Použití možností usnadnění macOS a funkcí, jako je vysoký kontrast, navigace pomocí klávesnice a VoiceOver
+description: Použití možností a funkcí macOS Accessibility, jako je vysoký kontrast, navigace pomocí klávesnice a VoiceOver
 author: alanjclark
 ms.author: alcl
 ms.date: 09/23/2019
 ms.assetid: 598FC25A-6DA3-44BB-B128-AD979E9F86EA
-ms.openlocfilehash: 57ce081af87ac9e73438404db5aa245dbf0ab445
-ms.sourcegitcommit: 528178a304e66c0cb7ab98b493fe3c409f87493a
+ms.openlocfilehash: 82d6d34c78efb425dfdb832cae3efd6c2bbcc425
+ms.sourcegitcommit: 689ba54ea14257d13031de881f5d4fe937a36f56
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274413"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342465"
 ---
 # <a name="accessibility-features-of-macos"></a>Funkce usnadnění pro macOS
 
-macOS je přístupný operační systém. Má řadu vestavěných funkcí, které pomáhají uživatelům s proměnlivými schopnostmi. Mezi tyto funkce patří režim vysokého kontrastu, navigace pomocí klávesnice a VoiceOver. čtečka obrazovky macOS.
+macOS je přístupný operační systém s řadou funkcí, které pomáhají uživatelům s proměnlivými schopnostmi. Mezi tyto funkce patří režim vysokého kontrastu, navigace pomocí klávesnice a VoiceOver (čtečka obrazovky macOS).
 
-## <a name="enabling-accessibility-features"></a>Povolení funkcí usnadnění přístupu
+## <a name="enable-accessibility-features"></a>Povolit funkce usnadnění přístupu
 
-Ve výchozím nastavení je podpora pro technologie usnadnění v Visual Studio pro Mac vypnutá. Pokud chcete povolit podporu usnadnění přístupu, postupujte podle těchto kroků:
+V Visual Studio pro Mac je podpora pro technologie pro usnadnění ve výchozím nastavení vypnutá. Pokud chcete povolit podporu usnadnění přístupu:
 
-1. Přejít do sady **Visual Studio (nabídka) > předvolby > jiné > přístupnost**
+1. Přejděte do sady **Visual Studio (nabídka)**  > **Předvolby** > **Další**a vyberte možnost **usnadnění**.
 
-1. Zaškrtněte políčko **Povolit přístupnost** :
+1. Zaškrtněte políčko **Povolit přístupnost** .
 
-   ![Zaškrtávací políčko přístupnosti předvoleb](media/accessibility-preferences.png)
+   ![Snímek obrazovky s předvolby přístupnosti s vybraným možností povolit přístupnost](media/accessibility-preferences.png)
 
-1. Vyberte tlačítko **restartovat Visual Studio** a restartujte Visual Studio a povolte podporu pro technologie pro usnadnění společnosti Apple.
+1. Vyberte **restartovat Visual Studio** , aby se aktivovala podpora pro technologie usnadnění společnosti Apple.
 
-## <a name="increasing-the-contrast-in-macos"></a>Zvýšení kontrastu v macOS
+## <a name="increase-the-contrast-in-macos"></a>Zvýšit kontrast v macOS
 
-Visual Studio pro Mac podporuje zvýšený kontrast v macOS, což zvyšuje kontrast prvků uživatelského rozhraní a usnadňuje vytváření osnovy. Chcete-li tento postup povolit, postupujte takto:
+Visual Studio pro Mac podporuje zvýšený kontrast v macOS, což zvyšuje kontrast prvků uživatelského rozhraní a usnadňuje vytváření osnovy. Postup pro povolení:
 
-1. Otevřete Předvolby systému
+1. Otevřete **Předvolby systému**.
 
-1. Přejděte na **přístupnost** a vyberte **Zobrazit** .
+1. Přejít na **přístupnost**a vyberte **Zobrazit**.
 
-1. Zaškrtněte políčko **zvýšit kontrast** .
+1. Zaškrtněte políčko **Zvětšit kontrast** .

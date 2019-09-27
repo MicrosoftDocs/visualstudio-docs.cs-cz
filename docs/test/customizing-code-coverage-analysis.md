@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: a22bdbc30fc222e26c01a10afdd7a666eebcb9f6
-ms.sourcegitcommit: a2df993dc5e11c5131dbfcba686f0028a589068f
+ms.openlocfilehash: 517f3f5911df6c7de1f59232a4e836bcdc84c448
+ms.sourcegitcommit: 689ba54ea14257d13031de881f5d4fe937a36f56
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71150114"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342356"
 ---
 # <a name="customize-code-coverage-analysis"></a>Přizpůsobení analýzy pokrytí kódu
 
@@ -40,7 +40,7 @@ Chcete-li přizpůsobit pokrytí kódu, postupujte podle těchto kroků:
 
 ::: moniker range=">=vs-2019"
 
-3. Chcete-li vybrat soubor parametrů spuštění, v **Průzkumníku testů**vyberte šipku na tlačítku **Nastavení** a potom vyberte **možnost soubor nastavení**. Chcete-li zadat soubor parametrů běhu pro spuštění testů z příkazového řádku, přečtěte si téma [Konfigurace testování částí](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#command-line).
+3. Chcete-li vybrat soubor s parametry spuštění, v nabídce **test** zvolte **možnost soubor nastavení**. Chcete-li zadat soubor parametrů běhu pro spuštění testů z příkazového řádku, přečtěte si téma [Konfigurace testování částí](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md#command-line).
 
 ::: moniker-end
 
@@ -59,7 +59,7 @@ Chcete-li vlastní nastavení vypnout a zapnout, zrušte výběr nebo vyberte so
 
 ::: moniker range=">=vs-2019"
 
-Chcete-li vlastní nastavení vypnout a zapnout, zrušte výběr nebo vyberte soubor v nabídce **Nastavení** v **Průzkumníku testů**.
+Chcete-li vlastní nastavení vypnout a zapnout, zrušte výběr nebo vyberte soubor v nabídce **test** .
 
 ::: moniker-end
 
@@ -110,7 +110,7 @@ Následující tabulka ukazuje různé způsoby, jak mohou být sestavení a čl
 | ModulePath nastavte | Odpovídá sestavením určeným názvem sestavení nebo cestou k souboru. |
 | CompanyName | Porovnává sestavení podle atributu **společnosti** . |
 | PublicKeyToken | Odpovídá podepsaným sestavením tokenu veřejného klíče. |
-| Zdroj | Porovná prvky podle názvu cesty zdrojového souboru, ve kterém jsou definovány. |
+| Source | Porovná prvky podle názvu cesty zdrojového souboru, ve kterém jsou definovány. |
 | Atribut | Porovná prvky, které mají zadaný atribut. Zadejte úplný název atributu, například `<Attribute>^System\.Diagnostics\.DebuggerHiddenAttribute$</Attribute>`.<br/><br/>Pokud <xref:System.Runtime.CompilerServices.CompilerGeneratedAttribute> atribut vyloučíte, kód, který používá funkce `async`jazyka, jako `await`jsou `yield return`,, a automaticky implementované vlastnosti, je vyloučen z analýzy pokrytí kódu. Chcete-li vyloučit skutečně generovaný kód, vylučte <xref:System.CodeDom.Compiler.GeneratedCodeAttribute> pouze atribut. |
 | Funkce | Porovná procedury, funkce nebo metody podle plně kvalifikovaného názvu, včetně seznamu parametrů. Můžete také porovnat část názvu pomocí [regulárního výrazu](#regular-expressions).<br/><br/>Příklady:<br/><br/>`Fabrikam.Math.LocalMath.SquareRoot(double);` (C#)<br/><br/>`Fabrikam::Math::LocalMath::SquareRoot(double)`(C++) |
 
@@ -270,7 +270,7 @@ Included items must then not match any entries in the exclude list to remain inc
             </PublicKeyTokens>
 
             <!-- We recommend you do not change the following values: -->
-            
+
             <!-- Set this to True to collect coverage information for functions marked with the "SecuritySafeCritical" attribute. Instead of writing directly into a memory location from such functions, code coverage inserts a probe that redirects to another function, which in turns writes into memory. -->
             <UseVerifiableInstrumentation>True</UseVerifiableInstrumentation>
             <!-- When set to True, collects coverage information from child processes that are launched with low-level ACLs, for example, UWP apps. -->

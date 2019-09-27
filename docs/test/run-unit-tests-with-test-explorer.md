@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d18f510b3b30207079b644e540d8b5db22609f97
-ms.sourcegitcommit: 673b9364fc9a96b027662dcb4cf5d61cab60ef11
+ms.openlocfilehash: 27ca8a39d39fcc8b4e5ddca2cbedf72e44c6cc81
+ms.sourcegitcommit: 689ba54ea14257d13031de881f5d4fe937a36f56
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69891326"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342447"
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>Spouštění testů částí pomocí Průzkumníka testů
 
@@ -70,7 +70,7 @@ Spustit všechny testy v řešení, všechny testy ve skupině nebo sadu testů,
 V horní části okna **Průzkumníka testů** je animovaný **řádek Pass/selhat** , protože testy jsou spouštěny. Při uzavírání testovacího běhu se **pruh úspěch/selhání** změní na zelený, pokud všechny testy proběhly úspěšně, nebo pokud dojde k selhání testu na červenou.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-Spustit všechny testy v řešení, všechny testy ve skupině nebo sadu testů, které jste vybrali. Proveďte jednu z těchto akcí:
+Spustit všechny testy v řešení, všechny testy ve skupině nebo sadu testů, které jste vybrali. Udělejte jednu z těchto věcí:
 
 - Chcete-li spustit všechny testy v řešení, vyberte ikonu **Spustit vše** .
 
@@ -134,16 +134,16 @@ Průzkumník testů umožňuje seskupit testy do předdefinovaných kategorií. 
 ### <a name="group-tests-in-the-test-list"></a>Seskupit testy v seznamu testů
 
 ::: moniker range="vs-2017"
-Chcete-li změnit způsob, jakým jsou testy uspořádány, zvolte šipku dolů vedle tlačítka skupina ![pro tlačítko](../test/media/ute_groupby_btn.png) test Průzkumníka a vyberte Nová kritéria seskupení.
+Chcete-li změnit způsob, jakým jsou testy uspořádány, zvolte šipku dolů vedle tlačítka **Seskupit podle** @no__t – tlačítko 1Test Průzkumník skupiny @ no__t-2 a vyberte Nová kritéria seskupení.
 
 ![Seskupit testy podle kategorie v Průzkumníku testů](../test/media/ute_groupbycategory.png)
 ::: moniker-end
 ::: moniker range=">=vs-2019"
-Průzkumník testů umožňuje seskupit testy do hierarchie. Výchozím seskupením hierarchie je **projekt**, **obor názvů**a **Třída**. Chcete-li změnit způsob, jakým jsou testy uspořádány, zvolte ![tlačítko **Seskupit v** Průzkumníku](../test/media/ute_groupby_btn.png) testu a vyberte Nová kritéria seskupení.
+Průzkumník testů umožňuje seskupit testy do hierarchie. Výchozím seskupením hierarchie je **projekt**, **obor názvů**a **Třída**. Chcete-li změnit způsob, jakým jsou testy uspořádány, zvolte tlačítko **Seskupit podle** ![Test Explorer tlačítko skupiny @ no__t-2 a vyberte Nová kritéria seskupení.
 
 ![Seskupit testy podle kategorie v Průzkumníku testů](../test/media/vs-2019/test-explorer-groupby-162.png)
 
-Můžete definovat vlastní úrovně hierarchie a seskupit podle **stavu** a pak třídou, například výběrem možnosti Seskupit podle v upřednostňovaném pořadí.
+Můžete definovat vlastní úrovně hierarchie a seskupit podle **stavu** a pak **třídou** , například výběrem možnosti Seskupit podle v upřednostňovaném pořadí.
 
 ![Seskupit podle State a pak Class](../test/media/vs-2019/test-explorer-groupby-state-16-2.png)
 ::: moniker-end
@@ -162,7 +162,7 @@ Můžete definovat vlastní úrovně hierarchie a seskupit podle **stavu** a pak
 |Skupina|Popis|
 |-|-----------------|
 |**Doba trvání**|Seskupuje testy podle doby spuštění: **Rychlé**, **střední**a **pomalé**.|
-|**Stav**|Seskupí testy podle výsledků spuštění: **Neúspěšné testy**, **vynechané testy**, **Úspěšné testy**, Nespuštěné|
+|**Stav**|Seskupí testy podle výsledků spuštění: **Neúspěšné testy**, **vynechané testy**, **Úspěšné testy**, **Nespuštěné**|
 |**Cílová architektura** | Seskupí testy podle cíle v rámci svých projektů. |
 |**Namespace**|Seskupí testy podle obsahujícího oboru názvů.|
 |**Projekt**|Seskupí testy podle obsahujícího projektu.|
@@ -175,7 +175,7 @@ Vlastnost je obvykle dvojice název/hodnota kategorie, ale může to být také 
 
 **Vlastnosti v rozhraní testování částí společnosti Microsoft pro spravovaný kód**
 
-V rozhraní Microsoft pro testování částí pro spravované aplikace definujete v <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute> atributu dvojici název/hodnota vlastnosti. Testovací rozhraní obsahuje také tyto předdefinované vlastnosti:
+V rozhraní Microsoft pro testování částí pro spravované aplikace definujete dvojici název/hodnota vlastnosti v atributu <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute>. Testovací rozhraní obsahuje také tyto předdefinované vlastnosti:
 
 |Znak|Popis|
 |-|-----------------|
@@ -196,18 +196,18 @@ Můžete vytvořit a uložit seznam testů, které chcete spustit nebo zobrazit 
 
 ![Zvolit seznam testů](../test/media/ute_playlist.png)
 
-**Chcete-li vytvořit seznam stop**, vyberte jeden nebo více testů v Průzkumníku testů. V nabídce kliknutím pravým tlačítkem myši vyberte možnost **Přidat do seznamu** > **NewPlaylist**. Uložte soubor s názvem a umístěním, které zadáte v dialogovém okně **vytvořit nový seznam** testů.
+**Chcete-li vytvořit seznam stop**, vyberte jeden nebo více testů v Průzkumníku testů. V nabídce kliknutím pravým tlačítkem myši vyberte možnost **Přidat do seznamu skladeb** > **NewPlaylist**. Uložte soubor s názvem a umístěním, které zadáte v dialogovém okně **vytvořit nový seznam** testů.
 
 **Chcete-li přidat testy do seznamu stop**, vyberte jeden nebo více testů v Průzkumníku testů. V nabídce klepněte pravým tlačítkem myši na položku **Přidat do seznamu stop**a zvolte seznam testů, do kterého chcete přidat testy.
 
-**Chcete-li otevřít seznam stop**, zvolte možnost **test** > **seznamu** testů v nabídce aplikace Visual Studio a buď zvolte ze seznamu naposledy použitých seznamů stop, nebo zvolte možnost **otevřít seznam stop** a zadejte název a umístění seznamu skladeb.
+**Chcete-li otevřít seznam stop**, zvolte možnost test > **seznam** **testů** v nabídce aplikace Visual Studio a zvolte ze seznamu naposledy použitých seznamů stop nebo zvolte možnost **otevřít seznam stop** a zadejte název a umístění seznamu skladeb.
 
 Je-li jednotlivé testy nemají žádné závislosti, které brání spuštění v libovolném pořadí, zapněte paralelní provádění testů s ![USTIT&#95;parallelicon&#45;malé](../test/media/ute_parallelicon-small.png) přepínací tlačítko na panelu nástrojů. To může výrazně snížit čas potřebný ke spuštění všech testů.
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 Můžete vytvořit a uložit seznam testů, které chcete spustit nebo zobrazit jako skupinu. Když vyberete seznam testů, testy v seznamu se zobrazí na nové kartě Průzkumník testů. Test můžete přidat do více než jednoho seznamu skladeb.
 
-**Chcete-li vytvořit seznam stop**, vyberte jeden nebo více testů v Průzkumníku testů. V nabídce kliknutím pravým tlačítkem myši vyberte možnost **Přidat do seznamu skladeb** > **Nový seznam**.
+**Chcete-li vytvořit seznam stop**, vyberte jeden nebo více testů v Průzkumníku testů. V nabídce kliknutím pravým tlačítkem myši vyberte možnost **Přidat do seznamu skladeb** > **Nový seznam**testů.
 
 ![Vytvořit seznam testů](../test/media/vs-2019/test-explorer-playlist-16-2.png)
 
@@ -215,7 +215,7 @@ Seznam se otevře na nové kartě Průzkumník testů. Tento seznam je možné p
 
 ![Seznam testů se otevře na samostatné kartě Průzkumníka testů.](../test/media/vs-2019/test-explorer-playlist-tab-16-2.png)
 
-**Chcete-li vytvořit seznam stop**, vyberte jeden nebo více testů v Průzkumníku testů. Klikněte pravým tlačítkem a vyberte **Přidat do seznamu** > testů**Nový seznam**testů.
+**Chcete-li vytvořit seznam stop**, vyberte jeden nebo více testů v Průzkumníku testů. Klikněte pravým tlačítkem a vyberte možnost **Přidat do seznamu**testů  > **Nový seznam**testů.
 
 **Chcete-li otevřít seznam**testů, zvolte ikonu seznamu stop na panelu nástrojů sady Visual Studio a v nabídce vyberte dříve uložený soubor seznamu testů.
 ::: moniker-end
@@ -273,7 +273,7 @@ Filtrování podle různých kritérií:
 |**Chybová zpráva**|Vyhledá shodu v uživatelsky definovaných chybových zprávách vrácených neúspěšnými kontrolními výrazy.|
 |**Cesta k souboru**|Vyhledá shody v plně kvalifikovaném názvu souboru zdrojových souborů testu.|
 |**Plně kvalifikovaný název**|Vyhledá plně kvalifikovaný název testovacích oborů názvů, tříd a metod pro shody.|
-|**Output**|Vyhledá chybové zprávy definované uživatelem, které jsou zapsány do standardního výstupu (stdout) nebo standardní chyby (stderr). Syntaxe pro určení výstupních zpráv je definována v rámci testovacího rozhraní jednotky.|
+|**Výstup**|Vyhledá chybové zprávy definované uživatelem, které jsou zapsány do standardního výstupu (stdout) nebo standardní chyby (stderr). Syntaxe pro určení výstupních zpráv je definována v rámci testovacího rozhraní jednotky.|
 |**Výsledek**|Vyhledá odpovídající názvy kategorií Průzkumníka testů: **Neúspěšné testy**, **vynechané testy**, **Úspěšné testy**.|
 ::: moniker-end
 ::: moniker range=">=vs-2019"
@@ -320,6 +320,7 @@ Množství kódu produktu, který je skutečně testován pomocí testů jednote
 Spuštění pokrytí kódu pro testovací metody v řešení:
 
 ::: moniker range="vs-2017"
+
 1. Zvolte možnost **test** na horním řádku nabídek a pak zvolte možnost **Analyzovat pokrytí kódu**.
 
 2. V podnabídce vyberte jeden z následujících příkazů:
@@ -327,9 +328,13 @@ Spuštění pokrytí kódu pro testovací metody v řešení:
     - **Vybrané testy** spouští testovací metody, které jste vybrali v Průzkumníku testů.
 
     - **Všechny testy** spustí všechny testovací metody v řešení.
+
 ::: moniker-end
+
 ::: moniker range=">=vs-2019"
+
 * Klikněte pravým tlačítkem myši v Průzkumníku testů a vyberte možnost **Analyzovat pokrytí kódu pro vybrané testy** .
+
 ::: moniker-end
 
 **Výsledky pokrytí kódu** okno zobrazuje procento bloků kódu produktu, které byly vykonány podle řádku, funkce, třídy, oboru názvů a modulu.
@@ -338,14 +343,14 @@ Další informace najdete v tématu [použití pokrytí kódu k určení, kolik 
 
 ## <a name="test-shortcuts"></a>Zástupci testů
 
-Testy lze spustit z **Průzkumníka testů**kliknutím pravým tlačítkem myši v editoru kódu na test a výběrem možnosti **Spustit test**nebo pomocí výchozího [zástupce Průzkumníka testů](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_testexplorerGLOBAL) v aplikaci Visual Studio. Některé zástupce jsou založené na kontextu. To znamená, že spouštějí nebo ladí testy na základě toho, kde je kurzor v editoru kódu. Pokud je kurzor uvnitř testovací metody, pak se tato testovací metoda spustí. Pokud je kurzor na úrovni třídy, pak se spustí všechny testy v této třídě. To je stejné i pro úrovni oboru názvů.
+Testy lze spustit z Průzkumníka testů kliknutím pravým tlačítkem myši v editoru kódu na test a výběrem možnosti **Spustit test** nebo pomocí výchozího [zástupce Průzkumníka testů](../ide/default-keyboard-shortcuts-in-visual-studio.md#bkmk_testexplorerGLOBAL) v aplikaci Visual Studio. Některé zástupce jsou založené na kontextu. To znamená, že spouštějí nebo ladí testy na základě toho, kde je kurzor v editoru kódu. Pokud je kurzor uvnitř testovací metody, pak se tato testovací metoda spustí. Pokud je kurzor na úrovni třídy, pak se spustí všechny testy v této třídě. To je stejné i pro úrovni oboru názvů.
 
 |Časté příkazy| Klávesové zkratky|
 |-|------------------------|
 |TestExplorer.DebugAllTestsInContext|**Ctrl**+**R**, **Ctrl**+**T**|
 |TestExplorer.RunAllTestsInContext|**Ctrl**+**R**, **T**|
-|TestExplorer.RunAllTests|**CTRL**+**R**, **A**|
-|TestExplorer.RepeatLastRun|**CTRL**+**R**, **L**|
+|TestExplorer.RunAllTests|**Ctrl**+**R**, **a**|
+|TestExplorer.RepeatLastRun|**Ctrl**+**R**, **L**|
 
 > [!NOTE]
 > Nemůžete spustit test v abstraktní třídě, protože testy jsou definovány pouze v abstraktních třídách a nikoli v instanci. Chcete-li spustit testy v abstraktních třídách, vytvořte třídu, která je odvozena z abstraktní třídy.

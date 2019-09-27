@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5060b2a3b532de26d78eca4ce16661768748bbd7
-ms.sourcegitcommit: 673b9364fc9a96b027662dcb4cf5d61cab60ef11
+ms.openlocfilehash: aff50f5933d540297711e44487c775d93968f0fd
+ms.sourcegitcommit: 689ba54ea14257d13031de881f5d4fe937a36f56
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69891344"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342445"
 ---
 # <a name="unit-test-basics"></a>Základní informace o testování částí
 
@@ -30,15 +30,15 @@ Průzkumník testů také můžete spustit třetích stran a open source rozhran
 
 Úvod do testování částí, která vás přesměruje přímo do psaní kódu naleznete v těchto tématech:
 
-- [Návod: Vytvoření a spuštění testů jednotek pro spravovaný kód](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)
+- [Návod: Vytvoření a spuštění testů jednotek pro spravovaný kód @ no__t-0
 
-- [Rychlý start: Vývoj řízených testů pomocí Průzkumníka testů](../test/quick-start-test-driven-development-with-test-explorer.md)
+- [Rychlý start: Vývoj řízených testů pomocí Průzkumníka testů @ no__t-0
 
 - [Zápis testů jednotek pro C/C++ v sadě Visual Studio](../test/writing-unit-tests-for-c-cpp.md)
 
 ## <a name="the-mybank-solution-example"></a>Příklad MyBank řešení
 
-V tomto článku používáme vývoj fiktivní aplikace označované `MyBank` jako příklad. Není nutné skutečný kód a postupujte v tomto tématu vysvětlené v částech. Testovací metody jsou napsané v jazyce C# a zobrazí s použitím Microsoft Unit Testing Framework pro spravovaný kód. Koncepty se však snadno přenést do jiných jazyků a architektur.
+V tomto článku používáme jako příklad vývoj fiktivní aplikace s názvem `MyBank`. Není nutné skutečný kód a postupujte v tomto tématu vysvětlené v částech. Testovací metody jsou napsané v jazyce C# a zobrazí s použitím Microsoft Unit Testing Framework pro spravovaný kód. Koncepty se však snadno přenést do jiných jazyků a architektur.
 
 ::: moniker range="vs-2017"
 ![MyBank řešení](../test/media/ute_mybanksolution.png)
@@ -120,7 +120,7 @@ Projekt testování částí obvykle zrcadlí strukturu projektu jeden kód. V t
 
 **Chcete-li přidat projekt do řešení pro testování částí:**
 
-1. V **Průzkumník řešení**klikněte pravým tlačítkem na řešení a vyberte možnost **Přidat** > **Nový** **projekt**.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem na řešení a vyberte **Přidat** > **Nový** **projekt**.
 
 ::: moniker range="vs-2017"
 
@@ -137,7 +137,7 @@ Projekt testování částí obvykle zrcadlí strukturu projektu jeden kód. V t
 
 2. Pomocí vyhledávacího pole šablony projektu vyhledejte šablonu projektu testování částí pro testovací rozhraní, které chcete použít.
 
-3. Na další stránce pojmenujte projekt. Chcete-li `Accounts` otestovat projekt našeho příkladu, můžete pojmenovat projekt. `AccountsTests`
+3. Na další stránce pojmenujte projekt. Chcete-li otestovat projekt `Accounts` v našem příkladu, můžete projekt pojmenovat `AccountsTests`.
 
 ::: moniker-end
 
@@ -240,7 +240,7 @@ Když sestavíte testovací projekt, testy se zobrazí v **Průzkumníka testů*
 ![Průzkumník testu jednotek](../test/media/vs-2019/basics-test-explorer.png)
 ::: moniker-end
 
-Když spouštíte, píšete a znovu spustíte testy, **Průzkumník testů** může zobrazit výsledky ve skupinách neúspěšných **testů**, **Úspěšné testy**, přeskočené **testy** a nespouštět **testy**. Na panelu nástrojů můžete vybrat jiné možnosti seskupení.
+Když spouštíte, píšete a znovu spustíte testy, **Průzkumník testů** může zobrazit výsledky ve skupinách **neúspěšných testů**, **Úspěšné testy**, **přeskočené testy** a **nespouštět testy**. Na panelu nástrojů můžete vybrat jiné možnosti seskupení.
 
 Můžete také filtrovat testy ve všech zobrazeních odpovídající text do vyhledávacího pole na globální úrovni nebo výběrem jedné z předdefinovaných filtrů. Kdykoli můžete spustit libovolných vybraných testů. Výsledky testovacího běhu se okamžitě zřejmý v panel úspěšný/selhání v horní části okna Průzkumníka. Podrobnosti výsledku testu metody se zobrazí, když vyberete testu.
 
@@ -307,7 +307,7 @@ Další informace najdete v tématu [spouštění testů jednotek pomocí Průzk
 
 ## <a name="qa"></a>FUNKCE Q &AMP; A
 
-**Č Návody ladit testy jednotek?**
+**Č Návody ladit testy jednotek**
 
 **URČITÉHO** Pomocí **Průzkumníka testů** spusťte ladicí relaci pro vaše testy. Krokování kódu s ladicím programem Visual Studio bez problémů přejdete vpřed a zpět mezi testováním částí a testovaný projekt. Spuštění ladění:
 
@@ -369,7 +369,7 @@ Další informace o [testy jednotek řízené daty](../test/how-to-create-a-data
 
 Můžete spustit pokrytí kódem u vybraných testů nebo u všech testů v řešení. **Výsledky pokrytí kódu** okno zobrazuje procento bloků kódu produktu, které byly vykonány podle řádku, funkce, třídy, oboru názvů a modulu.
 
-Chcete-li spustit pokrytí kódu pro testovací metody v řešení, zvolte **testy** v nabídce sady Visual Studio a klikněte na tlačítko **analyzovat pokrytí kódu**.
+Chcete-li spustit pokrytí kódu pro testovací metody v řešení, vyberte možnost **test** > **Analyzovat pokrytí kódu pro všechny testy**.
 
 Výsledky pokrytí se zobrazí v **výsledky pokrytí kódu** okna.
 

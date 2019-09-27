@@ -11,12 +11,12 @@ dev_langs:
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: 24bc4c54e455f43aa5fd5fee0ce0d5a44042e497
-ms.sourcegitcommit: b60a00ac3165364ee0e53f7f6faef8e9fe59ec4a
+ms.openlocfilehash: 1962a977cb282613405342f225d63140f1854453
+ms.sourcegitcommit: 689ba54ea14257d13031de881f5d4fe937a36f56
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70913190"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342431"
 ---
 # <a name="use-code-coverage-to-determine-how-much-code-is-being-tested"></a>Určení rozsahu testovaného kódu pomocí pokrytí kódu
 
@@ -46,11 +46,11 @@ Funkce pokrytí kódu je k dispozici pouze v edici Visual Studio Enterprise.
 
 ::: moniker range=">=vs-2019"
 
-1. V **Průzkumníku testů**vyberte v nabídce **Spustit** možnost **Analyzovat pokrytí kódu pro všechny testy** .
+1. V nabídce **test** vyberte možnost **Analyzovat pokrytí kódu pro všechny testy**.
 
    ![Nabídka Analýza pokrytí kódu ve VS 2019](../test/media/vs-2019/analyze-code-coverage.png)
 
-   Pokud **není Průzkumník testů** otevřený, otevřete ho tak, že vyberete **test** > **Průzkumník testů** **systému Windows** > , nebo stisknete klávesy **CTRL**+**E**,**T**.
+   Pokrytí kódu lze také spustit z okna nástroje Průzkumník testů.
 
 ::: moniker-end
 

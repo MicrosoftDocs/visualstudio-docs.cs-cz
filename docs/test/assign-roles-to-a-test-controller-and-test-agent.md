@@ -12,12 +12,12 @@ ms.assetid: 57ed43ae-4e67-4139-8aec-3e9fceb0a745
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.openlocfilehash: dc7936041746872fdf30ce3159506d93c378376d
-ms.sourcegitcommit: 5b34052a1c7d86179d7898ed532babb2d9dad4a3
+ms.openlocfilehash: 6a5fcb489e403ff4297b4e8520346d0cc7be8361
+ms.sourcegitcommit: 689ba54ea14257d13031de881f5d4fe937a36f56
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490603"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342341"
 ---
 # <a name="assign-roles-to-a-test-controller-and-test-agent"></a>Přiřazení rolí k testovacímu kontroleru a testovacímu agentovi
 
@@ -53,7 +53,7 @@ Tento článek ukazuje, jak vytvořit a nakonfigurovat nastavení testu, které 
 
 6. V části **Popis**zadejte **Nastavení distribuovaného testu**.
 
-7. Ponechte vybrané **výchozí schéma** pojmenování.
+7. Ponechte vybrané **výchozí schéma pojmenování** .
 
 ## <a name="to-assign-roles-to-a-test-controller-and-test-agents"></a>Přiřazení rolí k testovacímu kontroleru a testovacím agentům
 
@@ -63,7 +63,7 @@ Tento článek ukazuje, jak vytvořit a nakonfigurovat nastavení testu, které 
 
 2. Chcete-li spustit test vzdáleně, použijte rozevírací seznam **Metoda provedení testu** a vyberte **vzdálené spuštění**.
 
-3. V rozevíracím seznamu **kontrolér** zadejte název počítače testovacího kontroléru. [](../test/lab-management/install-configure-test-agents.md)
+3. V rozevíracím seznamu **kontrolér** zadejte název počítače [testovacího kontroléru](../test/lab-management/install-configure-test-agents.md).
 
     > [!NOTE]
     > Pokud přidáváte řadič poprvé, v rozevíracím seznamu nejsou uvedené žádné řadiče. Seznam je vyplněn předchozími řadiči, které jste zadali v rámci jiných nastaveních testu.
@@ -84,7 +84,7 @@ Tento článek ukazuje, jak vytvořit a nakonfigurovat nastavení testu, které 
 
      Informace o těchto adaptérech a jiných adaptérech, které lze použít v nastavení testu, naleznete v tématu [Configure Unit Tests](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md).
 
-4. Vybertemožnost hostitelé.
+4. Vyberte možnost **hostitelé**.
 
 5. Volitelné Pokud je v počítači spuštěná 64 verze Microsoft Windows a váš test jste zkompilováni pomocí **jakékoli konfigurace CPU** , použijte rozevírací seznam **spustit test v 32 bitové nebo 64 bitový proces** a vyberte možnost **spouštět testy 64 v procesu 16bitového procesu na 64. počítač**.
 
@@ -97,13 +97,13 @@ Tento článek ukazuje, jak vytvořit a nakonfigurovat nastavení testu, které 
 
 ::: moniker range="vs-2017"
 
-8. V nabídce Test vyberte **možnost vybrat soubor nastavení testu** a pak zvolte možnost *TestSettingDistributedTestWalkthrough. testsettings*.
+8. V nabídce **test** vyberte **nastavení testu** > **Vyberte soubor nastavení testu** a pak zvolte soubor *TestSettingDistributedTestWalkthrough. testsettings* .
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-8. V **Průzkumníku testů**vyberte šipku na tlačítku **Nastavení** a potom vyberte **Vybrat soubor nastavení**. Vyhledejte a vyberte soubor *TestSettingDistributedTestWalkthrough. testsettings* .
+8. V nabídce **test** zvolte **možnost vybrat soubor nastavení**. Vyhledejte a vyberte soubor *TestSettingDistributedTestWalkthrough. testsettings* .
 
 ::: moniker-end
 

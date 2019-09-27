@@ -14,12 +14,12 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 385b2d451d8202356d56ab7b1a5fd5158d267f1c
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 6a709a59e85f65cf2e0caa0551610dd496bedda5
+ms.sourcegitcommit: 689ba54ea14257d13031de881f5d4fe937a36f56
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71253743"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342500"
 ---
 # <a name="office-primary-interop-assemblies"></a>primární spolupracující sestavení sady Office
 
@@ -61,13 +61,13 @@ Tyto kopie PIA umožňují aplikaci Visual Studio vyhnout se několika problém�
 
 Počínaje sadou Visual Studio 2017 se tyto kopie PIA nainstalují do následujících sdílených umístění na vývojovém počítači:
 
-- *%ProgramFiles%\Microsoft Visual Studio\Shared\Visual Studio Tools pro Office\PIA\*
+- `%ProgramFiles%\Microsoft Visual Studio\Shared\Visual Studio Tools for Office\PIA\`
 
-- (nebo *% ProgramFiles (x86)% \ Microsoft Visual Studio\Shared\Visual Studio Tools for Office\PIA\* v 64 bitových operačních systémech)
+- (nebo `%ProgramFiles(x86)%\Microsoft Visual Studio\Shared\Visual Studio Tools for Office\PIA\` v 64 operačních systémech)
 
 > [!NOTE]
-> Pro starší verze sady Visual Studio budou tyto PIA nainstalovány do složky Visual Studio Tools pro složku Office\PIA ve složce *% ProgramFiles% pro danou verzi sady Visual Studio.
-> Například: *% ProgramFiles (x86)% \ Microsoft Visual Studio 14.0 \ Visual Studio Tools pro Office\PIA\*
+> Pro starší verze sady Visual Studio budou tyto PIA nainstalovány do složky Visual Studio Tools pro složku Office\PIA ve složce `%ProgramFiles%` pro danou verzi sady Visual Studio.
+> Například: `%ProgramFiles(x86)%\Microsoft Visual Studio 14.0\Visual Studio Tools for Office\PIA\`
 
 ### <a name="primary-interop-assemblies-in-the-global-assembly-cache"></a>Primární spolupracující sestavení v globální mezipaměti sestavení (GAC)
 
@@ -86,7 +86,7 @@ Ve většině případů byste měli přidat odkazy na PIA, které jsou nainstal
 Pokud jste nainstalovali a zaregistrovali PIA v globální mezipaměti sestavení (GAC), tyto verze sestavení se zobrazí na kartě **com** dialogového okna **Správce odkazů** . Měli byste se vyhnout přidávání odkazů na tyto verze sestavení, protože existují některé problémy s vývojem, které mohou nastat při jejich použití. Pokud jste například zaregistrovali různé verze PIA v globální mezipaměti sestavení (GAC), projekt se automaticky připojí k verzi sestavení, které bylo zaregistrováno jako poslední – i v případě, že zadáte jinou verzi sestavení v **modelu COM** . na kartě dialogového okna **Správce odkazů** .
 
 > [!NOTE]
-> Některá sestavení jsou přidána do projektu automaticky při přidání sestavení, které na ně odkazuje. Například odkazy na sestavení *Office. dll* a *Microsoft. vbe. Interop. dll* jsou přidány automaticky při přidání odkazu do sestavení aplikace Word, Excel, Outlook, Microsoft Forms nebo Graph.
+> Některá sestavení jsou přidána do projektu automaticky při přidání sestavení, které na ně odkazuje. Například odkazy na sestavení `Office.dll` a `Microsoft.Vbe.Interop.dll` jsou přidány automaticky při přidání odkazu do sestavení aplikace Word, Excel, Outlook, Microsoft Forms nebo Graph.
 
 <a name="pialist"></a>
 

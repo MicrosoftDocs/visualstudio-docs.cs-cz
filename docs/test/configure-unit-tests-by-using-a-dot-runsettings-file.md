@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 25d0f49939a42d9a9b8cc56f03ed37ab83aa98f2
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 799d3f23a6b4e269c08bc889461596178e71b4c8
+ms.sourcegitcommit: 689ba54ea14257d13031de881f5d4fe937a36f56
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251831"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342497"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>Konfigurace testů jednotek pomocí souboru *. runsettings*
 
@@ -38,11 +38,11 @@ Soubor se zobrazí v nabídce nastavení testu a můžete ho vybrat nebo zrušit
 
 ::: moniker range=">=vs-2019"
 
-Chcete-li zadat soubor parametrů spuštění v integrovaném vývojovém prostředí, v **Průzkumníku testů**vyberte šipku na tlačítku **Nastavení** a potom vyberte **možnost soubor nastavení**. Vyhledejte a vyberte soubor *. runsettings* .
+Chcete-li v integrovaném vývojovém prostředí zadat soubor parametrů spuštění, vyberte možnost **Test** > **soubor nastavení**. Vyhledejte a vyberte soubor *. runsettings* .
 
-![Výběr nabídky soubor nastavení testu v aplikaci Visual Studio 2019](media/vs-2019/select-test-settings-file.png)
+![Výběr nabídky soubor nastavení testu v aplikaci Visual Studio 2019](media/vs-2019/select-settings-file.png)
 
-Soubor se zobrazí v nabídce nastavení v Průzkumníku testů a můžete ho vybrat nebo zrušit jeho výběr. Když vyberete možnost **Analyzovat pokrytí kódu**, soubor parametrů běhu se použije vždy.
+Soubor se zobrazí v nabídce Test a můžete ho vybrat nebo zrušit jeho výběr. Když vyberete možnost **Analyzovat pokrytí kódu**, soubor parametrů běhu se použije vždy.
 
 ::: moniker-end
 
@@ -70,7 +70,7 @@ Chcete-li spustit testy z příkazového řádku, použijte *VSTest. Console. ex
    vstest.console.exe MyTestAssembly.dll /EnableCodeCoverage /Settings:CodeCoverage.runsettings
    ```
 
-   or
+   nebo
 
    ```cmd
    vstest.console.exe --settings:test.runsettings test.dll
@@ -97,7 +97,7 @@ K přizpůsobení testů pomocí souboru *. runsettings* použijte následujíc�
 
 ::: moniker range=">=vs-2019"
 
-3. Chcete-li vybrat soubor parametrů spuštění, v **Průzkumníku testů**vyberte šipku na tlačítku **Nastavení** a potom vyberte **možnost soubor nastavení**. Přejděte k souboru *. runsettings* , který jste vytvořili, a pak vyberte **OK**.
+3. Chcete-li vybrat soubor s parametry spuštění, zvolte možnost **Test** > **Vyberte soubor nastavení**. Přejděte k souboru *. runsettings* , který jste vytvořili, a pak vyberte **OK**.
 
 ::: moniker-end
 
@@ -118,7 +118,7 @@ Následující kód XML ukazuje obsah typického souboru *. runsettings* . Každ
     <ResultsDirectory>.\TestResults</ResultsDirectory>
 
     <!-- x86 or x64 -->
-    <!-- You can also change it from the test settings menu; choose "Processor Architecture for AnyCPU Projects" -->
+    <!-- You can also change it from the Test menu; choose "Processor Architecture for AnyCPU Projects" -->
     <TargetPlatform>x86</TargetPlatform>
 
     <!-- Framework35 | [Framework40] | Framework45 -->
@@ -157,7 +157,7 @@ Následující kód XML ukazuje obsah typického souboru *. runsettings* . Každ
       <DataCollector uri="datacollector://microsoft/VideoRecorder/1.0" assemblyQualifiedName="Microsoft.VisualStudio.TestTools.DataCollection.VideoRecorder.VideoRecorderDataCollector, Microsoft.VisualStudio.TestTools.DataCollection.VideoRecorder, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" friendlyName="Screen and Voice Recorder">
         <!--Video data collector was introduced in Visual Studio 2017 version 15.5 -->
         <Configuration>
-           <!-- Change to "false" to only add video attachments to failed tests -->
+          <!-- Change to "false" to only add video attachments to failed tests -->
           <MediaRecorder sendRecordedMediaForPassedTestCase="true" xmlns="" />
         </Configuration>
       </DataCollector>
@@ -284,7 +284,7 @@ Chcete-li použít parametry testovacího běhu, <xref:Microsoft.VisualStudio.Te
 
 Tato nastavení jsou specifická pro testovací adaptér, který spouští testovací metody, které mají <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> atribut.
 
-|Konfigurace|Výchozí|Hodnoty|
+|Konfiguraci|Výchozí|Hodnoty|
 |-|-|-|
 |**ForcedLegacyMode**|false|V aplikaci Visual Studio 2012 byl adaptér MSTest optimalizován, aby byl rychlejší a lépe škálovatelný. Některé rysy chování sady, jako například pořadí, ve kterém jsou testy spuštěny, nemusí být přesně stejné jako v předchozích edicích sady Visual Studio. Nastavte tuto hodnotu na **true** , pokud chcete použít starší testovací adaptér.<br /><br />Toto nastavení můžete použít například v případě, že máte zadaný soubor *App. config* pro testování částí.<br /><br />Doporučujeme zvážit refaktoring testů, aby bylo možné použít novější adaptér.|
 |**IgnoreTestImpact**|false|Funkce dopadu testu upřednostňuje při spuštění testů prostřednictvím adaptéru MSTest nebo nástroje Microsoft Test Manager testy, které jsou ovlivněny nedávnými změnami. Toto nastavení funkci deaktivuje. Další informace naleznete v tématu [které testy mají být spuštěny od předchozího sestavení](https://msdn.microsoft.com/library/dd286589).|

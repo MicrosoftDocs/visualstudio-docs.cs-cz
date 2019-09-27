@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3bfe750e8dca68876ac5d894c0ca194f82a42f21
-ms.sourcegitcommit: b593bb889f049fcbdff502c30b73178ed17dbdf0
+ms.openlocfilehash: ca5a80c07cb64cfd638542da4e1deefe7e373b18
+ms.sourcegitcommit: 689ba54ea14257d13031de881f5d4fe937a36f56
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67291032"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342397"
 ---
 # <a name="customize-build-and-debug-tasks-for-open-folder-development"></a>Přizpůsobení sestavení a ladění úlohy pro vývoj "Otevřít složku"
 
@@ -30,8 +30,8 @@ Přizpůsobení vašeho projektu bez základu kódu s použitím následujícíc
 
 |Název souboru|Účel|
 |-|-|
-|*tasks.vs.json*|Určení vlastního sestavení příkazy a přepínače kompilátoru a libovolného (bez sestavení související) úlohy.<br>Přístup přes **Průzkumníka řešení** klikněte pravým tlačítkem na položku nabídky **nakonfigurovat úlohy**.|
-|*launch.vs.json*|Zadejte argumenty příkazového řádku pro ladění.<br>Přístup přes **Průzkumníka řešení** klikněte pravým tlačítkem na položku nabídky **nastavení ladění a spouštění**.|
+|*tasks.vs.json*|Určení vlastního sestavení příkazy a přepínače kompilátoru a libovolného (bez sestavení související) úlohy.<br>K dispozici prostřednictvím **Průzkumník řešení** položky nabídky po kliknutí pravým tlačítkem myši **Konfigurovat úkoly**.|
+|*launch.vs.json*|Zadejte argumenty příkazového řádku pro ladění.<br>K dispozici prostřednictvím **Průzkumník řešení** položky nabídky po kliknutí pravým tlačítkem myši na položku **nastavení ladění a spuštění**.|
 
 Tyto *.json* soubory jsou umístěny ve skryté složce s názvem *.vs* v kořenové složce vašeho základu kódu. *Tasks.vs.json* a *souboru launch.vs.json* soubory jsou vytvořeny pomocí sady Visual Studio na základě potřeby, po výběru některé **nakonfigurovat úlohy** nebo **ladění Nastavení a spouštění** pro soubor nebo složku v **Průzkumníka řešení**. Tyto *.json* soubory jsou skryté, protože uživatelé zbytečné vrátit je do správy zdrojového kódu. Ale pokud chcete mít možnost zkontrolovat do správy zdrojového kódu, přetáhněte soubory v kořenové složce vašeho základu kódu, kde jsou viditelné.
 
@@ -44,7 +44,7 @@ Můžete automatizovat skripty sestavení ani žádné jiné externí operace se
 
 ![Konfigurace nabídka úkoly](../ide/media/customize-configure-tasks-menu.png)
 
-To vytvoří (nebo se otevře) *tasks.vs.json* ve *.vs* složky. Můžete definovat úloha sestavení nebo libovolných úloh v tomto souboru a pak ho pomocí názvu, dáte mu z vyvolat **Průzkumníka řešení** místní nabídce.
+To vytvoří (nebo se otevře) *tasks.vs.json* ve *.vs* složky. V tomto souboru můžete definovat úlohu sestavení nebo libovolný úkol a potom ji vyvolat pomocí názvu, který jste zadali v nabídce **Průzkumník řešení** kliknutím pravým tlačítkem myši.
 
 Vlastní úlohy se dají přidat pro jednotlivé soubory nebo pro všechny soubory určitého typu. Například soubory balíčku NuGet lze nakonfigurovat pro úkol "Packages obnovení", nebo všechny zdrojové soubory se dají konfigurovat mít statické analýzy úloh, jako je linter pro všechny *js* soubory.
 
@@ -117,7 +117,7 @@ Pro tento *makefile* , který obsahuje sestavení, vyčištění a znovu sestavt
 }
 ```
 
-Po definování úloh sestavení v *tasks.vs.json*, klikněte pravým tlačítkem na další položky nabídky (kontextová nabídka) jsou přidány do odpovídající soubory v **Průzkumníka řešení**. V tomto příkladu "sestavení", "sestavení" a "Vyčištění" možnosti jsou přidány do kontextové nabídky žádné *makefile* soubory.
+Po definování úloh sestavení v *Tasks. vs. JSON*jsou do odpovídajících souborů v **Průzkumník řešení**přidány další nabídky pravým tlačítkem myši (kontextová nabídka) položek. V tomto příkladu "sestavení", "sestavení" a "Vyčištění" možnosti jsou přidány do kontextové nabídky žádné *makefile* soubory.
 
 ![místní nabídka souboru pravidel se sestavením, opětovné sestavení a vyčištění](media/customize-build-rebuild-clean.png)
 
@@ -147,7 +147,7 @@ Následující příklad ukazuje *tasks.vs.json* soubor, který definuje jeden �
 }
 ```
 
-- `taskName` Určuje název, který se zobrazí v místní nabídce.
+- `taskName` určuje název, který se zobrazí v nabídce kliknutím pravým tlačítkem myši.
 - `appliesTo` Určuje soubory, které lze příkaz provést na.
 - `command` Vlastnost určuje příkaz, který má být vyvolán. V tomto příkladu `COMSPEC` proměnné prostředí se používá k identifikaci překladač příkazového řádku, obvykle *cmd.exe*.
 - `args` Vlastnost určuje argumenty, které mají být předány je volaný příkaz.
@@ -191,7 +191,7 @@ Více *tasks.vs.json* soubory mohou existovat v kořenové a podadresářů zák
 - Nadřazený adresář aktuálního adresáře, až do kořenového adresáře.
 - Soubory nastavení v kořenovém adresáři.
 
-Platí následující pravidla agregace *tasks.vs.json*. Informace o tom, jak se agregují nastavení v jiném souboru naleznete v části odpovídající pro tento soubor v tomto článku.
+Tato pravidla agregace platí pro *Tasks. vs. JSON*. Informace o tom, jak se agregují nastavení v jiném souboru naleznete v části odpovídající pro tento soubor v tomto článku.
 
 ### <a name="properties-for-tasksvsjson"></a>Vlastnosti pro tasks.vs.json
 
@@ -257,6 +257,9 @@ Můžete vytvářet úkoly pro kterýkoli soubor nebo složku tak, že zadáte j
 
    Pokud zvolíte **F5**, ladicí program se spustí a zastaví na zarážce, všechny možná jste už nastavili. Všechny známé ladicí program systému windows jsou dostupné a funkční.
 
+   > [!IMPORTANT]
+   > Další podrobnosti o vlastních úkolech sestavení a ladění v C++ projektech otevřených složek naleznete v tématu [Podpora otevřených složek C++ pro systémy sestavení v aplikaci Visual Studio](/cpp/build/open-folder-projects-cpp).
+
 ### <a name="specify-arguments-for-debugging"></a>Zadejte argumenty pro ladění
 
 Můžete zadat argumenty příkazového řádku a zajistěte tak předání pro ladění *souboru launch.vs.json* souboru. Přidání argumentů `args` pole, jak je znázorněno v následujícím příkladu:
@@ -307,7 +310,7 @@ Můžete mít libovolný počet *.vscode\settings.json* soubory ve vašem zákla
 ## <a name="see-also"></a>Viz také:
 
 - [Vývoj kódu bez projektů nebo řešení](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)
-- [Projekty Otevřít složku pro C++](/cpp/build/open-folder-projects-cpp)
-- [Projekty CMakeC++](/cpp/build/cmake-projects-in-visual-studio)
+- [Otevřete složku projekty jazyka C++](/cpp/build/open-folder-projects-cpp)
+- [Projekty CMake proC++](/cpp/build/cmake-projects-in-visual-studio)
 - [NMake – odkaz](/cpp/build/reference/nmake-reference)
 - [Funkce editoru kódu](../ide/writing-code-in-the-code-and-text-editor.md)

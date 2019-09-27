@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: abd5075d04f26b9795695bfcd4fcd387e1a15d24
-ms.sourcegitcommit: 541a0556958201ad6626bc8638406ad02640f764
+ms.openlocfilehash: 6416045f040e9825bab6eeb33dd4b75478166ee3
+ms.sourcegitcommit: 689ba54ea14257d13031de881f5d4fe937a36f56
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71079584"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342472"
 ---
 # <a name="troubleshoot-code-coverage"></a>Řešení problémů s pokrytím kódu
 
@@ -29,6 +29,7 @@ Další informace najdete v tématu [použití pokrytí kódu k určení, kolik 
 ## <a name="possible-reasons-for-seeing-no-results-or-old-results"></a>Možné příčiny zobrazení žádných nebo starých výsledků
 
 ### <a name="do-you-have-the-right-edition-of-visual-studio"></a>Máte správnou verzi sady Visual Studio?
+
 Je třeba Visual Studio Enterprise.
 
 ### <a name="no-tests-were-executed"></a>Nebyly provedeny žádné testy
@@ -43,7 +44,7 @@ Rozlišení&mdash;v Průzkumníku testů, zvolte **spustit všechny** k ověřen
 
 Když změníte a znovu spustit testy, můžete se předchozí výsledek pokrytí kódu dál zobrazovat, včetně barevného zvýraznění kódu z minulého spuštění testu.
 
-1. Spusťte analýzu pokrytí kódu.
+1. Spusťte **analýzu pokrytí kódu**.
 
 2. Ujistěte se, zda jste vybrali nejnovější sadu výsledků **výsledky pokrytí kódu** okna.
 
