@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: fdb973718e56279e7bfb04c9d412bcd83410223d
-ms.sourcegitcommit: 0e482cfc15f809b564c3de61646f29ecd7bfcba6
+ms.openlocfilehash: 182c9e37764a247ec24b4b477975ccb7b8811c4b
+ms.sourcegitcommit: 4d2620bee4688fb881e09a07ea4a264b99f0743e
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70987752"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71322551"
 ---
 # <a name="inspect-xaml-properties-while-debugging"></a>Kontrola vlastností XAML při ladění
 Můžete získat přehled o běhu kódu XAML v reálném čase pomocí **živého vizuálního stromu** a nástroje **Live Property Explorer**. Tyto nástroje poskytují stromové zobrazení prvků uživatelského rozhraní vaší běžící aplikace XAML a zobrazují vlastnosti modulu runtime libovolného prvku uživatelského rozhraní, který vyberete.
@@ -81,7 +81,10 @@ Nyní otevřete okno **živého vizuálního stromu** (**ladění > Windows > ž
 
 Vraťte se do okna aplikace a přidejte několik dalších položek. V **živém vizuálním stromu**by se měla zobrazit více položek v poli se seznamem.
 
-Nyní se podívejme na vlastnosti jedné z položek seznamu. Vyberte první položku seznamu v **živém vizuálním stromu** a na panelu nástrojů klikněte na ikonu **Zobrazit vlastnosti** . Měl by se zobrazit **Průzkumník vlastností živě** . Všimněte si, že pole **Content** je "Item1 –" a pole na **pozadí** je **#FFFFFFE0** (světle žlutá). Vraťte se do **živého vizuálního stromu** a vyberte položku se seznamem sekund. V nástroji **Live Property Explorer** by se měl zobrazit, že pole **Content** je "Item2" a pole na **pozadí** je **#FFD3D3D3** (světle šedá).
+Nyní se podívejme na vlastnosti jedné z položek seznamu. Vyberte první položku seznamu v **živém vizuálním stromu** a na panelu nástrojů klikněte na ikonu **Zobrazit vlastnosti** . Měl by se zobrazit **Průzkumník vlastností živě** . Všimněte si, že pole **Content** je "Item1 –" a pole**Barva** **pozadí** > je **#FFFFFFE0**. Vraťte se do **živého vizuálního stromu** a vyberte položku se seznamem sekund. V **Průzkumníku živých vlastností** by se měl zobrazit, že pole **Content** je "Item2" a pole**Barva** **pozadí** > je **#FFD3D3D3**.
+
+> [!NOTE]
+> Žluté ohraničení kolem vlastnosti v nástroji **Live Property Explorer** znamená, že hodnota vlastnosti je nastavena prostřednictvím vazby, například `Color = {BindingExpression}`. Zelená ohraničení znamená, že hodnota je nastavena pomocí prostředku, například `Color = {StaticResource MyBrush}`.
 
 Skutečná struktura XAML má velký počet prvků, na které se pravděpodobně nepřímo zajímáte, a pokud neznáte kód, může se stát, že budete mít k dispozici nějaký tvrdý čas navigace ve stromu, aby bylo možné najít, co hledáte. Proto má **živý vizuální strom** několik způsobů, jak můžete použít uživatelské rozhraní aplikace, které vám pomůžou najít prvek, který chcete prošetřit.
 

@@ -1,88 +1,58 @@
-### YamlMime:YamlDocument
-documentType: LandingData
-title: Visual Studio | Python
+### YamlMime:Landing
+title: Visual Studio | Dokumentace k Pythonu
+summary: Kurzy a koncepční články o vývoji aplikací v Pythonu pomocí sady Visual Studio.
 metadata:
-  title: Vývoj v jazyce Python pomocí sady Visual Studio
-  titleSuffix: ''
-  meta.description: Tutorials and conceptual articles about developing Python apps with Visual Studio.
-  author: JoshuaPartlow
-  manager: jillfra
+  title: Vývoj v Pythonu se sadou Visual Studio
+  description: Kurzy a koncepční články o vývoji aplikací v Pythonu pomocí sady Visual Studio.
   ms.prod: visual-studio-windows
   ms.technology: vs-python
   ms.topic: landing-page
-  ms.date: 12/14/2018
+  ms.collection: collection
+  author: JoshuaPartlow
   ms.author: joshuapa
-  dev_langs:
-    - Python
-sections:
-  - title: Začínáme se sadou Visual Studio
-    items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: ../install/install-visual-studio.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_setup.svg'
-            title: Instalace sady Visual Studio
-          - href: visual-studio-ide.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_visual-studio.svg'
-            title: Prohlídka integrovaného vývojového prostředí sady Visual Studio
-  - title: Kurzy Pythonu
-    items:
-      - type: paragraph
-        text: Začínáme s Pythonem v sadě Visual Studio
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: tutorial-working-with-python-in-visual-studio-step-00-installation.md
-            html: <p>Prostředí Visual Studio – podpora pro Python</p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_python.svg'
-          - href: learn-django-in-visual-studio-step-01-project-and-solution.md
-            html: <p>Vytvoření webové aplikace pomocí rozhraní Django</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_web-color.svg'
-          - href: learn-flask-visual-studio-step-01-project-solution.md
-            html: <p>Vytvoření webové aplikace s použitím rozhraní framework Flask</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_web-color.svg'
-  - title: Vývoj aplikací
-    items:
-      - type: paragraph
-        text: Kurzy zaměřené na používání sady Visual Studio k vývoji aplikací s využitím Pythonu
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: editing-python-code-in-visual-studio.md
-            html: <p>Psaní kódu a jeho úpravy</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_code-edit.svg'
-          - href: python-interactive-repl-in-visual-studio.md
-            html: <p>Použití interaktivní funkce REPL</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_cligeneric.svg'
-          - href: managing-python-environments-in-visual-studio.md
-            html: <p>Správa prostředí Pythonu</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_package.svg'
-          - href: debugging-python-in-visual-studio.md
-            html: <p>Ladění kódu</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_debug.svg'
-          - href: working-with-c-cpp-python-in-visual-studio.md
-            html: <p>Tvorba rozšíření jazyka C/C++ pro Python</p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_Cplusplus.svg'
-          - href: unit-testing-python-in-visual-studio.md
-            html: <p>Psání a spouštění testů jednotek</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_unit-testing.svg'
+  ms.date: 09/23/2019
+  ms.openlocfilehash: e85bdedfc91c949213528718d147a7f1890964ce
+  ms.sourcegitcommit: 4d2620bee4688fb881e09a07ea4a264b99f0743e
+  ms.translationtype: MT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 09/27/2019
+  ms.locfileid: "71322475"
+landingContent:
+- title: O podpoře Pythonu v aplikaci Visual Studio
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Přehled podpory Pythonu
+      url: overview-of-python-tools-for-visual-studio.md
+    - text: Prohlídka integrovaného vývojového prostředí sady Visual Studio
+      url: visual-studio-ide.md
+- title: Začínáme s Pythonem
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Instalace podpory Pythonu v sadě Visual Studio
+      url: installing-python-support-in-visual-studio.md
+    - text: Psaní kódu a jeho úpravy
+      url: editing-python-code-in-visual-studio.md
+    - text: Ladění kódu
+      url: debugging-python-in-visual-studio.md
+    - text: Psání a spouštění testů
+      url: unit-testing-python-in-visual-studio.md
+    - text: Použití interaktivní funkce REPL
+      url: python-interactive-repl-in-visual-studio.md
+    - text: Správa prostředí Pythonu
+      url: managing-python-environments-in-visual-studio.md
+    - text: Zápis C/C++ rozšíření pro Python
+      url: working-with-c-cpp-python-in-visual-studio.md
+  - linkListType: tutorial
+    links:
+    - text: Práce s Pythonem v aplikaci Visual Studio
+      url: tutorial-working-with-python-in-visual-studio-step-00-installation.md
+- title: Začínáme s vývojem pro web
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Vytvoření webové aplikace s využitím Django Framework
+      url: learn-django-in-visual-studio-step-01-project-and-solution.md
+    - text: Vytvoření webové aplikace s využitím architektury baněk
+      url: learn-flask-visual-studio-step-01-project-solution.md
