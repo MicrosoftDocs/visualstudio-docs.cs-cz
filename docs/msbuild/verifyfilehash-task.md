@@ -15,12 +15,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e7330e750d0f636979f52eacf398ca7d496c523
-ms.sourcegitcommit: 689ba54ea14257d13031de881f5d4fe937a36f56
+ms.openlocfilehash: 3acdaabffc35122616cced4113abbc5a43beb9a1
+ms.sourcegitcommit: 16175e0cea6af528e9ec76f0b94690faaf1bed30
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71342417"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71481978"
 ---
 # <a name="verifyfilehash-task"></a>VerifyFileHash – úloha
 
@@ -34,7 +34,7 @@ Tato úloha se přidala do 15,8, ale vyžaduje [alternativní řešení](https:/
 
 |Parametr|Popis|
 |---------------|-----------------|
-|`File`|Povinný <xref:Microsoft.Build.Framework.ITaskItem> parametr.<br /><br />Soubory, které se mají vyhodnotit a ověřit|
+|`File`|Povinný `String` parametr.<br /><br />Soubor, který se má vyhodnotit a ověřit|
 |`Hash`|Povinný `String` parametr.<br /><br />Očekávaná hodnota hash souboru.|
 |`Algorithm`|Volitelný `String` parametr.<br /><br />Algoritmus. Povolené hodnoty: `SHA256`, `SHA384` `SHA512`. Výchozí hodnota = `SHA256`.|
 |`HashEncoding`|Volitelný `String` parametr.<br /><br />Kódování, které má být použito pro vygenerované hodnoty hash. Výchozí hodnota je `hex`. Povolené hodnoty = `hex`, `base64`.|

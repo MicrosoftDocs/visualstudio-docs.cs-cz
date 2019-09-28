@@ -12,14 +12,14 @@ ms.assetid: af8f7ab1-63ad-4861-afb9-b7a7a2be15e1
 author: gewarren
 ms.author: gewarren
 manager: jillfra
-ms.workload:
-- multiple
-ms.openlocfilehash: c027bc4581919f814b4d93eacba77248349fdf8b
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+dev_langs:
+- CSharp
+ms.openlocfilehash: b4db3074d334fe32f95c4d1b8446921c4e4d47ba
+ms.sourcegitcommit: 16175e0cea6af528e9ec76f0b94690faaf1bed30
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71231089"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71481777"
 ---
 # <a name="ca2225-operator-overloads-have-named-alternates"></a>CA2225: Přetížení operátoru mají pojmenované alternativy
 
@@ -27,10 +27,10 @@ ms.locfileid: "71231089"
 |-|-|
 |TypeName|OperatorOverloadsHaveNamedAlternates|
 |CheckId|CA2225|
-|Kategorie|Microsoft.Usage|
+|Category|Microsoft.Usage|
 |Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
 
 Bylo zjištěno přetížení operátoru a očekávaná pojmenovaná alternativní metoda nebyla nalezena.
 
@@ -38,58 +38,61 @@ Ve výchozím nastavení toto pravidlo vyhledává pouze externě viditelné typ
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Přetížení operátoru umožňuje použít symboly k vyjádření výpočtů pro typ. Například typ, který přetěžuje symbol plus (+) pro sčítání, by měl obvykle alternativní člen s názvem add. Pojmenovaný alternativní člen poskytuje přístup ke stejným funkcím jako operátor a je k dispozici pro vývojáře, kteří programují v jazycích, které nepodporují přetížené operátory.
+Přetížení operátoru umožňuje použít symboly k vyjádření výpočtů pro typ. Například typ, který přetěžuje symbol plus `+` pro přidání by měl obvykle alternativní člen s názvem `Add`. Pojmenovaný alternativní člen poskytuje přístup ke stejným funkcím jako operátor. Je k dispozici pro vývojáře, kteří programují v jazycích, které nepodporují přetížené operátory.
 
-Toto pravidlo prověřuje operátory uvedené v následující tabulce.
+Toto pravidlo prověřuje:
 
-|C#|Visual Basic|C++|Alternativní název|
-|---------|------------------|-----------|--------------------|
-|+ (binární)|+|+ (binární)|Přidejte|
-|+=|+=|+=|Přidejte|
+- Implicitní a explicitní operátory přetypování v typu vyhledají metody s názvem `To<typename>` a `From<typename>`.
+
+- Operátory uvedené v následující tabulce:
+
+|C#|Visual Basic|C++|Alternativní název metody|
+|-|-|-|-|
+|+ (binární)|+|+ (binární)|Přidat|
+|+=|+=|+=|Přidat|
 |&|A|&|BitwiseAnd|
 |&=|A =|&=|BitwiseAnd|
 |&#124;|Nebo|&#124;|Bitový operátor|
 |&#124;=|Nebo =|&#124;=|Bitový operátor|
-|--|Není k dispozici|--|Snížení|
+|--|neuvedeno|--|Snížení|
 |/|/|/|Rozdělovací|
 |/=|/=|/=|Rozdělovací|
 |==|=|==|Je rovno|
 |^|XOR|^|XOR|
 |^=|XOR =|^=|XOR|
-|>|>|>|Porovnat|
-|>=|>=|>=|Porovnat|
-|++|Není k dispozici|++|Zvětš|
-|<>|!=|Je rovno|
+|>|>|>|CompareTo nebo Compare|
+|>=|>=|>=|CompareTo nebo Compare|
+|++|neuvedeno|++|Zvětš|
+|!=|<>|!=|Je rovno|
 |<<|<<|<<|LeftShift|
 |<<=|<<=|<<=|LeftShift|
-|<|<|<|Porovnat|
-|<=|<=|\<=|Porovnat|
-|&&|Není k dispozici|&&|LogicalAnd|
-|&#124;&#124;|Není k dispozici|&#124;&#124;|Logický operátor|
-|!|Není k dispozici|!|LogicalNot|
+|<|<|<|CompareTo nebo Compare|
+|<=|<=|\<=|CompareTo nebo Compare|
+|&&|neuvedeno|&&|LogicalAnd|
+|&#124;&#124;|neuvedeno|&#124;&#124;|Logický operátor|
+|!|neuvedeno|!|LogicalNot|
 |%|Mod|%|Střední nebo zbytek|
-|%=|Není k dispozici|%=|Mod|
+|%=|neuvedeno|%=|Mod|
 |* (binární)|*|*|Hodnotou|
-|*=|Není k dispozici|*=|Hodnotou|
+|*=|neuvedeno|*=|Hodnotou|
 |~|Not|~|OnesComplement|
 |>>|>>|>>|RightShift|
-=|Není k dispozici|>>=|RightShift|
+=|neuvedeno|>>=|RightShift|
 |-(binární)|-(binární)|-(binární)|Odečten|
-|-=|Není k dispozici|-=|Odečten|
-|true|IsTrue|Není k dispozici|True (vlastnost)|
-|– (Unární)|Není k dispozici|-|Negate|
-|+ (Unární)|Není k dispozici|+|I|
+|-=|neuvedeno|-=|Odečten|
+|true|IsTrue|neuvedeno|True (vlastnost)|
+|– (Unární)|neuvedeno|-|Negate|
+|+ (Unární)|neuvedeno|+|I|
 |false|IsFalse|False|True (vlastnost)|
 
-N/A = = nemůže být přetížený ve vybraném jazyce.
+\* N/A znamená, že operátor nemůže být přetížen ve vybraném jazyce.
 
-Pravidlo také kontroluje implicitní a explicitní operátory přetypování v typu (`SomeType`) kontrolou metod pojmenovaných `ToSomeType` a `FromSomeType`.
-
-V C#, je-li binární operátor přetížen, je také implicitně přetížen odpovídající operátor přiřazení, je-li nějaký.
+> [!NOTE]
+> V C#, je-li binární operátor přetížen, je také implicitně přetížen odpovídající operátor přiřazení, je-li nějaký.
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, implementujte alternativní metodu pro operátor; pojmenujte ji pomocí doporučeného alternativního názvu.
+Chcete-li opravit porušení tohoto pravidla, implementujte alternativní metodu pro operátor. Pojmenujte ji pomocí doporučeného alternativního názvu.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 

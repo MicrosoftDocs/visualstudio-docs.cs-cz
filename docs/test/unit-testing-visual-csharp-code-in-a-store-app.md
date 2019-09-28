@@ -7,16 +7,16 @@ manager: jillfra
 ms.workload:
 - uwp
 author: gewarren
-ms.openlocfilehash: 359f2f8b078c197f12a6db09858ca7c9da5a621a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: dfb0ed5775e011471ba32d4962b0bf25cfcda2b1
+ms.sourcegitcommit: 16175e0cea6af528e9ec76f0b94690faaf1bed30
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62809627"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71481893"
 ---
-# <a name="unit-test-c-code"></a>Testování částí kódu jazyka C#
+# <a name="unit-test-c-code"></a>Test jednotek kódu C#
 
-Tento článek popisuje jeden ze způsobů vytvoření testů jednotek pro C# třídy v aplikaci UWP. Třída Rooter ukazuje vágní paměti limit teorie z calculus implementací funkce, která vypočítá odhad odmocninu daného čísla. Matematické výrazy aplikace pak pomocí této funkce můžete zobrazit uživateli zábavných věcí, které lze provést s matematickým výrazem.
+Tento článek popisuje jeden ze způsobů, jak vytvořit testy jednotek C# pro třídu v aplikaci pro UWP. Třída Rooter ukazuje vágní paměti limit teorie z calculus implementací funkce, která vypočítá odhad odmocninu daného čísla. Matematické výrazy aplikace pak pomocí této funkce můžete zobrazit uživateli zábavných věcí, které lze provést s matematickým výrazem.
 
 Tento článek ukazuje, jak používat jako první krok při vývoji testování částí. V takovém případě napíšete testovací metoda, která ověřuje konkrétní chování v systému, který testujete a potom napíšete kód, který projde testem. Tím, že změny v pořadí podle následujících postupů lze zrušit tuto strategii první zapisovat kód, který chcete otestovat a teprve pak píšete jednotkové testy.
 
@@ -26,13 +26,13 @@ Tento článek vytvoří také jedno řešení sady Visual Studio a samostatné 
 
 1. Na **souboru** nabídce zvolte **nový** > **projektu**.
 
-2. Vyhledání a výběr **prázdná aplikace (Universal Windows)** šablony projektu.
+2. Vyhledejte a vyberte šablonu projektu **prázdná aplikace (univerzální pro Windows)** .
 
-3. Pojmenujte projekt `Maths`.
+3. Pojmenujte `Maths`projekt.
 
 4. V **Průzkumníka řešení**vyberte název řešení, vyberte **přidat** z místní nabídky a klikněte na tlačítko **nový projekt**.
 
-5. Vyhledání a výběr **aplikace testů jednotek (Universal Windows)** šablony projektu.
+5. Vyhledejte a vyberte šablonu projektu **aplikace pro testování jednotek (univerzální pro Windows)** .
 
 6. Otevřít *UnitTest1.cs* v editoru sady Visual Studio.
 
@@ -167,7 +167,7 @@ Máte nastavení testu a kódové projekty a ověřit, že je možné spustit te
        {
            double expected = v;
            double actual = rooter.SquareRoot(v*v);
-           double tolerance = ToleranceHelper(expected);
+           double tolerance = expected/1000;
            Assert.AreEqual(expected, actual, tolerance);
        }
    }
