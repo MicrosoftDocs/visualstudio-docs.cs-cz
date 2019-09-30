@@ -1,5 +1,8 @@
 # [Visual Studio pro Mac](index.yml)
-# [Prohlídka integrovaného vývojového prostředí (IDE)](ide-tour.md)
+
+# Začínáme
+## [Prohlídka integrovaného vývojového prostředí (IDE)](ide-tour.md)
+## [Visual Studio IDE pro uživatele Windows](vsmac-for-windows-users.md)
 
 # Instalace
 ## [Instalace sady Visual Studio 2019 pro Mac](installation.md)
@@ -94,11 +97,14 @@
 ### [Protokol Změn](/visualstudio/cross-platform/change-log-visual-studio-tools-for-unity-mac/?context=visualstudio/mac/context)
 ## [Mobilní aplikace s Xamarinem](/visualstudio/mac/xamarin)
 
-# [Usnadnění](accessibility.md)
+# Usnadnění
+## [Přehled](accessibility.md)
 ## [Nastavení možností usnadnění přístupu v integrovaném vývojovém prostředí](accessibility-ide-options.md)
 ## [Použití nástrojů pro usnadnění přístupu v systému macOS](accessibility-macos.md)
 ### [Navigace s použitím klávesnice](accessibility-keyboard.md)
 ### [Použití funkce VoiceOver](accessibility-voiceover.md)
+
+# [Visual Studio IDE pro uživatele Windows](vsmac-for-windows-users.md)
 
 # Poradce při potížích
 ## [Protokoly a výjimky](troubleshooting.md)

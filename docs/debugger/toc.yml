@@ -666,6 +666,10 @@
               href: how-to-step-into-wcf-services.md
             - name: Ladění služby WCF s vlastním hostováním
               href: how-to-debug-a-self-hosted-wcf-service.md
+    - name: Spolupráce
+      items:
+        - name: Zápis a ladění kódu pomocí rozšíření Live Share
+          href: /visualstudio/liveshare/use/vs
     - name: Soubory výpisů paměti
       items:
         - name: Použití souborů výpisů paměti
