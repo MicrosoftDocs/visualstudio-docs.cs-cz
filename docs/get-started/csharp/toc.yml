@@ -21,6 +21,8 @@
       href: tutorial-uwp.md
     - name: Vytvoření aplikace WPF
       href: tutorial-wpf.md
+    - name: Vytvoření aplikace modelu Windows Forms
+      href: ../../ide/create-csharp-winform-visual-studio.md?toc=/visualstudio/get-started/csharp/toc.json&bc=/visualstudio/get-started/csharp/breadcrumb/toc.json
     - name: 'Videokurz: Vytvoření webové aplikace ASP.NET Core'
       items:
         - name: '1: Instalace sady Visual Studio'
