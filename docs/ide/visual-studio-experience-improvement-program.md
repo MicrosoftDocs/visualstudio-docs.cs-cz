@@ -1,6 +1,6 @@
 ---
 title: Program Zlepšování softwaru a služeb na základě zkušeností uživatelů
-description: Zjistěte, jak spravovat nastavení ochrany osobních údajů v sadě Visual Studio.
+description: Zjistěte, jak spravovat nastavení ochrany osobních údajů v aplikaci Visual Studio.
 ms.date: 05/21/2018
 ms.topic: conceptual
 author: PoulChapman
@@ -8,50 +8,52 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a1e4f59b672049ee8148c94dbbf51e560e22c31e
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: HT
+ms.openlocfilehash: b6c785b755b64f0dd7e367a01d9c05c1981ea558
+ms.sourcegitcommit: d3e423a9a4ed773a54d14b247e1b5bfc95de8816
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62581999"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71693017"
 ---
 # <a name="visual-studio-customer-experience-improvement-program"></a>Program Zlepšování softwaru a služeb na základě zkušeností uživatelů pro Visual Studio
 
-Visual Studio zákazníka prostředí pro zlepšování programu (VSCEIP) je navržená můžete pomoci společnosti Microsoft, vylepšení sady Visual Studio v čase. Tento program [shromažďuje informace o chybách](../ide/diagnostic-data-collection.md), počítačový hardware, a jak ostatní používají Visual Studio, aniž by to ovlivnilo uživatele ve své úkoly v počítači. Shromažďované informace pomáhají společnosti Microsoft určit funkce, které ke zlepšení. Tento dokument obsahuje postup pro aktivování nebo zrušení VSCEIP.
+Aplikace Visual Studio program Zlepšování softwaru a služeb na základě zkušeností uživatelů (VSCEIP) je navržena tak, aby pomohla Microsoftu v průběhu času zdokonalit Visual Studio. Tento program [shromažďuje informace o chybách](../ide/diagnostic-data-collection.md), hardwaru počítače a způsobu, jakým uživatelé používají aplikaci Visual Studio, aniž by přerušil uživatele v jejich úkolech v počítači. Shromážděné informace pomáhají společnosti Microsoft určit, které funkce se mají zlepšit. Tento dokument obsahuje informace o tom, jak vyjádřit nebo odhlásit VSCEIP.
 
 [!INCLUDE [gdpr-hybrid-note](../misc/includes/gdpr-hybrid-note.md)]
+> [!NOTE]
+> Nastavení opt nebo out VSCEIP telemetrie neplatí pro nahlášení problému v aplikaci Visual Studio. Když zadáte zprávu o problémech, shromáždí se Microsoftu a pošle se společnosti Microsoft jenom po poskytnutí oprávnění kliknutím na Odeslat. Pokud vás zajímá Správa protokolů před odesláním do ' nahlášení problému ', přečtěte si informace o [ochraně osobních údajů pro zpětnou vazbu](./developer-community-privacy.md) .
 
-## <a name="opt-in-or-out"></a>Optimalizované snížení nebo navýšení kapacity
+## <a name="opt-in-or-out"></a>Výslovný souhlas nebo odhlášení
 
-VSCEIP je ve výchozím nastavení zapnutá. Můžete ji vypnout nebo zpět na, podle těchto pokynů:
+VSCEIP je ve výchozím nastavení zapnutý. Můžete ho zase zapnout nebo znovu spustit pomocí následujících pokynů:
 
-1. V sadě Visual Studio, zvolte **pomáhají** > **odeslat zpětnou vazbu**a pak vyberte **nastavení**.
+1. V aplikaci Visual Studio zvolte možnost **Help** > **Odeslat názor**a pak vyberte **Nastavení**.
 
-   **Programu zlepšování zkušeností sady Visual Studio** zobrazí se dialogové okno.
+   Otevře se dialogové okno **Program zlepšování sady Visual Studio na základě zkušeností uživatelů** .
 
-1. Chcete-li odhlásit, vyberte **Ne, nechci se zúčastnit**a pak vyberte **OK**. Chcete-li vyjádřit výslovný souhlas, vyberte **Ano, chci se zúčastnit**a pak vyberte **OK**.
+1. Pokud se chcete odhlásit, vyberte **Ne,** nechci se zúčastnit a pak vyberte **OK**. Pokud se chcete přihlásit, vyberte **Ano, chci se zúčastnit**a pak vyberte **OK**.
 
-   ![Dialogové okno Visual Studio na základě zlepšení zkušeností](media/experience-improvement-program.png)
+   ![Dialog Program zlepšování sady Visual Studio na základě zkušeností uživatelů](media/experience-improvement-program.png)
 
 ### <a name="registry-settings"></a>Nastavení registru
 
-Pokud nainstalujete [Build Tools pro Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017), je nutné aktualizovat registr a nakonfigurujte VSCEIP. Podnikoví zákazníci můžete vytvořit zásady skupiny pro aktivování nebo zrušení VSCEIP nastavením zásady založené na registru.
+Pokud nainstalujete [Nástroje sestavení pro Visual Studio](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017), je nutné aktualizovat registr a nakonfigurovat VSCEIP. Podnikoví zákazníci mohou vytvořit zásady skupiny pro výslovný souhlas nebo odhlášení VSCEIP nastavením zásad založených na registru.
 
-Příslušný klíč registru a nastavení jsou následující:
+Relevantní klíč registru a nastavení jsou následující:
 
 ::: moniker range="vs-2017"
 
-- V operačním systému 64-bit, klíč = **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSCommon\15.0\SQM**
-- V 32bitovém operačním systému, klíč = **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\15.0\SQM**
-- Když je povolené zásady skupiny, klíč = **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM**
+- V 64 operačním systému, Key = **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSCommon\15.0\SQM**
+- V 32 operačním systému, Key = **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\15.0\SQM**
+- Když je povolený Zásady skupiny, klíč = **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM**
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-- V operačním systému 64-bit, klíč = **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSCommon\16.0\SQM**
-- V 32bitovém operačním systému, klíč = **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\16.0\SQM**
-- Když je povolené zásady skupiny, klíč = **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM**
+- V 64 operačním systému, Key = **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSCommon\16.0\SQM**
+- V 32 operačním systému, Key = **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\16.0\SQM**
+- Když je povolený Zásady skupiny, klíč = **HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM**
 
 ::: moniker-end
 
@@ -59,18 +61,18 @@ Položka = **OptIn**
 
 Hodnota = (DWORD)
 
-- **0** je vyjádřil se výslovný nesouhlas (vypnout VSCEIP)
-- **1** přihlášení (zapnout VSCEIP)
+- **0** se odsouhlasí (vypnutí VSCEIP)
+- **1** je výslovný souhlas (zapnout VSCEIP)
 
 > [!CAUTION]
-> Pokud chybně upravíte registr, může dojít k vážnému poškození systému. Před provedením změn v registru doporučujeme zálohovat všechna důležitá data v počítači. Můžete také použít **poslední známá funkční konfigurace** možnost spuštění, pokud narazíte na potíže po ručně provedených změnách.
+> Nesprávná úprava registru může vážně poškodit systém. Před prováděním změn registru byste měli v počítači zálohovat veškerá cenná data. Pokud při použití ručních změn dojde k problémům, můžete použít také možnost při spuštění **Poslední známá funkční konfigurace** .
 
-Další informace o údajích shromažďovaných, zpracovávaných a přenášených podle VSCEIP, naleznete v tématu [prohlášení o ochraně osobních údajů Microsoft](https://privacy.microsoft.com/privacystatement).
+Další informace o informacích shromažďovaných, zpracovávaných nebo odeslaných službou VSCEIP naleznete v tématu [prohlášení o zásadách ochrany osobních údajů společnosti Microsoft](https://privacy.microsoft.com/privacystatement).
 
 ## <a name="see-also"></a>Viz také:
 
-* [Diagnostické informace shromážděné funkcí sady Visual Studio](diagnostic-data-collection.md)
-* [Kontaktujte nás](../ide/talk-to-us.md)
-* [Postup ohlášení problému se sadou Visual Studio](../ide/how-to-report-a-problem-with-visual-studio.md)
+* [Diagnostické informace shromažďované aplikací Visual Studio](diagnostic-data-collection.md)
+* [Možnosti zpětné vazby v aplikaci Visual Studio](../ide/feedback-options.md)
+* [Nahlášení problému se sadou Visual Studio](../ide/how-to-report-a-problem-with-visual-studio.md)
 * [Visual Studio Developer Community](https://developercommunity.visualstudio.com/)
-* [Prohlášení o ochraně osobních údajů společnosti Microsoft](https://privacy.microsoft.com/privacystatement)
+* [Prohlášení o zásadách ochrany osobních údajů společnosti Microsoft](https://privacy.microsoft.com/privacystatement)

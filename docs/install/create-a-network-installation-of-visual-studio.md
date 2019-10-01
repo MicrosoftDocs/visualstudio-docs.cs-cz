@@ -1,7 +1,7 @@
 ---
 title: Vytvoření síťové instalace
 description: Zjistěte, jak vytvořit bod instalace sítě pro nasazení sady Visual Studio v rámci organizace.
-ms.date: 08/06/2019
+ms.date: 10/01/2019
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 1d18d3a3de423cc63569911bbe49477b5e6f5f26
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 178bd693c514e42fb77c0addce3fa6c00d1bef4f
+ms.sourcegitcommit: a2f1f27aa33d807b39292d65a49d8db4653491ba
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180291"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71709058"
 ---
 # <a name="create-a-network-installation-of-visual-studio"></a>Vytvoření síťové instalace sady Visual Studio
 
@@ -43,8 +43,9 @@ Nastavení spustitelných&mdash;nebo na konkrétnější, soubor zaváděcí ná
 |-------------|-----------------------|
 |Visual Studio Enterprise | [**vs_enterprise.exe**](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&rel=15&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=network+install&utm_content=download+vs2017) |
 |Visual Studio Professional | [**vs_professional.exe**](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=professional&rel=15&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=network+install&utm_content=download+vs2017) |
+| Visual Studio Build Tools   | [vs_buildtools. exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=buildtools&rel=15&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2017) |
 
-Zahrnout další podporované bootstrapperů [vs_buildtools.exe](https://aka.ms/vs/15/release/vs_buildtools.exe), [vs_feedbackclient.exe](https://aka.ms/vs/15/release/vs_feedbackclient.exe), [vs_teamexplorer.exe](https://aka.ms/vs/15/release/vs_teamexplorer.exe), [vs_testagent.exe](https://aka.ms/vs/15/release/vs_testagent.exe), [vs_testcontroller.exe](https://aka.ms/vs/15/release/vs_testcontroller.exe), a [vs_testprofessional.exe](https://aka.ms/vs/15/release/vs_testprofessional.exe).
+Mezi další podporované zaváděcí nástroje patří [vs_feedbackclient. exe](https://aka.ms/vs/15/release/vs_feedbackclient.exe), [vs_TeamExplorer. exe](https://aka.ms/vs/15/release/vs_teamexplorer.exe), [vs_testagent. exe](https://aka.ms/vs/15/release/vs_testagent.exe), [vs_testcontroller. exe](https://aka.ms/vs/15/release/vs_testcontroller.exe)a [vs_testprofessional. exe](https://aka.ms/vs/15/release/vs_testprofessional.exe).
 
 ::: moniker-end
 
@@ -54,14 +55,15 @@ Zahrnout další podporované bootstrapperů [vs_buildtools.exe](https://aka.ms/
 |-------------|-----------------------|
 |Visual Studio Enterprise | [**vs_enterprise.exe**](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=network+install&utm_content=download+vs2019) |
 |Visual Studio Professional | [**vs_professional.exe**](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=professional&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=network+install&utm_content=download+vs2019) |
+| Visual Studio Build Tools   | [vs_buildtools. exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=buildtools&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2019) |
 
-Mezi další podporované zaváděcí nástroje patří [vs_buildtools. exe](https://aka.ms/vs/16/release/vs_buildtools.exe), [vs_TeamExplorer. exe](https://aka.ms/vs/16/release/vs_teamexplorer.exe), [vs_testagent. exe](https://aka.ms/vs/16/release/vs_testagent.exe)a [vs_testcontroller. exe](https://aka.ms/vs/16/release/vs_testcontroller.exe).
+Mezi další podporované zaváděcí nástroje patří [vs_TeamExplorer. exe](https://aka.ms/vs/16/release/vs_teamexplorer.exe), [vs_testagent. exe](https://aka.ms/vs/16/release/vs_testagent.exe)a [vs_testcontroller. exe](https://aka.ms/vs/16/release/vs_testcontroller.exe).
 
 ::: moniker-end
 
 ## <a name="create-an-offline-installation-folder"></a>Vytvořte složku offline instalace
 
-Musíte mít internetové připojení k dokončení tohoto kroku. K vytvoření offline instalace jazykům a všechny funkce, použijte jeden z příkazů z následujících příkladů.
+Musíte mít internetové připojení k dokončení tohoto kroku. Chcete-li vytvořit offline instalaci se všemi jazyky a všemi funkcemi, použijte příkaz, který je podobný jednomu z následujících příkladů.
 
    > [!IMPORTANT]
    > Kompletní rozložení sady Visual Studio vyžaduje minimálně 35 GB místa na disku a stažení může nějakou dobu trvat. Podrobné informace o tom, jak vytvořit rozložení jenom s součástmi, které chcete nainstalovat, najdete v části [přizpůsobení rozložení sítě](#customize-the-network-layout) .
@@ -71,11 +73,11 @@ Musíte mít internetové připojení k dokončení tohoto kroku. K vytvoření 
 
 - Pro Visual Studio Enterprise spusťte:
 
-  ```vs_enterprise.exe --layout c:\vsoffline```
+  ```vs_enterprise.exe --layout c:\VSLayout```
 
 - Pro sadu Visual Studio Professional spusťte:
 
-  ```vs_professional.exe --layout c:\vsoffline```
+  ```vs_professional.exe --layout c:\VSLayout```
 
 ## <a name="modify-the-responsejson-file"></a>Upravte soubor response.json
 
@@ -93,7 +95,7 @@ Následující příklad používá [xcopy](/windows-server/administration/windo
 Příklad:
 
 ```cmd
-xcopy /e c:\vsoffline \\server\products\VS2017
+xcopy /e c:\VSLayout \\server\products\VS2017
 ```
 
 ::: moniker-end
@@ -101,7 +103,7 @@ xcopy /e c:\vsoffline \\server\products\VS2017
 ::: moniker range="vs-2019"
 
 ```cmd
-xcopy /e c:\vsoffline \\server\products\VS2019
+xcopy /e c:\VSLayout \\server\products\VS2019
 ```
 
 ::: moniker-end
@@ -113,7 +115,7 @@ xcopy /e c:\vsoffline \\server\products\VS2019
 
 Existuje několik možností, které lze použít k přizpůsobení rozvržení sítě. Lze vytvořit částečné rozložení obsahující jenom určitou sadu [národní prostředí](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales), [úlohy, komponenty a jejich doporučená nebo volitelné závislosti](workload-and-component-ids.md). To může být užitečné, pokud víte, že budete nasazovat pouze podmnožinu úloh do klientských pracovních stanic. Typické parametry příkazového řádku pro přizpůsobení rozložení patří:
 
-* `--add` Chcete-li určit [ID úlohy nebo komponenty](workload-and-component-ids.md). <br>Pokud `--add` se používá, pouze úlohy a komponenty zadaným `--add` se stáhnou.  Pokud `--add` se nepoužije, stáhnou se všechny úlohy a součásti.
+* `--add` Chcete-li určit [ID úlohy nebo komponenty](workload-and-component-ids.md). <br>Pokud `--add` se používá, pouze úlohy a komponenty zadaným `--add` se stáhnou.  Pokud se nepoužije `--add`, stáhnou se všechny úlohy a součásti.
 * `--includeRecommended` Chcete-li zahrnout všechny součásti, které jsou doporučené pro zadané ID úlohy
 * `--includeOptional` Chcete-li zahrnout všechny doporučené a volitelné součásti pro zadané ID úlohy.
 * `--lang` Chcete-li určit [národní prostředí](use-command-line-parameters-to-install-visual-studio.md#list-of-language-locales).
@@ -123,37 +125,37 @@ Tady je několik příkladů toho, jak vytvořit vlastní částečné rozložen
 * Pokud chcete stáhnout všechny úlohy a komponenty pouze pro jeden jazyk, spusťte:
 
     ```cmd
-    vs_enterprise.exe --layout C:\vsoffline --lang en-US
+    vs_enterprise.exe --layout C:\VSLayout --lang en-US
     ```
 
 * Pokud chcete stáhnout všechny úlohy a komponenty pro různé jazyky, spusťte:
 
     ```cmd
-    vs_enterprise.exe --layout C:\vsoffline --lang en-US de-DE ja-JP
+    vs_enterprise.exe --layout C:\VSLayout --lang en-US de-DE ja-JP
     ```
 
 * Chcete-li stáhnout jednu úlohu pro všechny jazyky, spusťte příkaz:
 
     ```cmd
-    vs_enterprise.exe --layout C:\vsoffline --add Microsoft.VisualStudio.Workload.Azure --includeRecommended
+    vs_enterprise.exe --layout C:\VSLayout --add Microsoft.VisualStudio.Workload.Azure --includeRecommended
     ```
 
 * Ke stažení dvou úloh a volitelnou součástí tři jazyky, spusťte:
 
     ```cmd
-    vs_enterprise.exe --layout C:\vsoffline --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Component.GitHub.VisualStudio --includeRecommended --lang en-US de-DE ja-JP
+    vs_enterprise.exe --layout C:\VSLayout --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Component.GitHub.VisualStudio --includeRecommended --lang en-US de-DE ja-JP
     ```
 
 * Stažení dvou úloh a všech doporučených součástí:
 
     ```cmd
-    vs_enterprise.exe --layout C:\vsoffline --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Component.GitHub.VisualStudio --includeRecommended
+    vs_enterprise.exe --layout C:\VSLayout --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Component.GitHub.VisualStudio --includeRecommended
     ```
 
 * Chcete-li stáhnout dvě úlohy a všechny jejich doporučené a volitelné součásti, spusťte:
 
     ```cmd
-    vs_enterprise.exe --layout C:\vsoffline --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Component.GitHub.VisualStudio --includeOptional
+    vs_enterprise.exe --layout C:\VSLayout --add Microsoft.VisualStudio.Workload.Azure --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Component.GitHub.VisualStudio --includeOptional
     ```
 
 ::: moniker range="vs-2017"
@@ -205,7 +207,7 @@ Správci můžou nasadit sady Visual Studio na klientských pracovních stanic, 
 * Správci se můžou instalovat v bezobslužném režimu spuštěním následujícího příkazu:
 
     ```cmd
-    \server\products\VS\vs_enterprise.exe --quiet --wait --norestart
+    \\server\products\VS\vs_enterprise.exe --quiet --wait --norestart
     ```
 
 > [!IMPORTANT]
@@ -221,7 +223,7 @@ Správci můžou nasadit sady Visual Studio na klientských pracovních stanic, 
 Při instalaci z rozložení, je obsah, který je nainstalován získaných z rozložení. Pokud však vyberete komponentu, která není v rozložení, bude získána z Internetu.  Pokud chcete zabránit ve stahování veškerý obsah, který nebyl nalezen v rozložení, použijte instalační program sady Visual Studio `--noWeb` možnost. Pokud `--noWeb` se používá a rozložení chybí veškerý obsah, který je se rozhodli nainstalovat, instalace selže.
 
 > [!IMPORTANT]
-> `--noWeb` Možnost neukončí instalaci sady Visual Studio ze zjišťování aktualizací. Další informace naleznete na stránce [ovládací prvky aktualizace pro síťové nasazení sady Visual Studio](controlling-updates-to-visual-studio-deployments.md) .
+> Možnost `--noWeb` neukončí instalaci sady Visual Studio ze zjišťování aktualizací. Další informace naleznete na stránce [ovládací prvky aktualizace pro síťové nasazení sady Visual Studio](controlling-updates-to-visual-studio-deployments.md) .
 
 ### <a name="error-codes"></a>Kódy chyb
 
@@ -257,7 +259,7 @@ Jakmile budou dostupné aktualizace produktu, můžete chtít [aktualizovat sí�
 
 ::: moniker-end
 
-Pokud potřebujete vytvořit rozložení pro starší verzi sady Visual Studio, přejít na [https://my.visualstudio.com](https://my.visualstudio.com) adresu a Stáhněte si "opravené" verze spouštěcích prvků sady Visual Studio.
+Pokud potřebujete vytvořit rozložení pro starší verzi sady Visual Studio, přejít na [https://my.visualstudio.com](https://my.visualstudio.com) a Stáhněte si "pevné" verze spouštěcích prvků sady Visual Studio.
 
 ### <a name="how-to-get-support-for-your-offline-installer"></a>Jak získat podporu pro offline instalační program
 
