@@ -708,7 +708,7 @@
         - name: Chování při spuštění
           displayName: Start page window
           href: ide/customizing-the-start-page-for-visual-studio.md
-        - name: Vyhledání a používání rozšíření sady Visual Studio
+        - name: Správa rozšíření
           href: ide/finding-and-using-visual-studio-extensions.md
           displayName: 'marketplace, gallery, vsix'
         - name: Správa externích nástrojů
