@@ -34,12 +34,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: c2bf6a62bde77ce49c7723e435bc34c3cad74702
-ms.sourcegitcommit: 01c3c9dcade5d913bde2c7efa8c931a7b04e6cd0
+ms.openlocfilehash: b40c18c4b85b39e118ac59b97649253d27324854
+ms.sourcegitcommit: 8a3545329a58e446672181cfed2083f850e1ad14
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67365399"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71814362"
 ---
 # <a name="use-breakpoints-in-the-visual-studio-debugger"></a>Používání zarážek v ladicím programu sady Visual Studio
 Zarážky jsou jedním z nejdůležitějších technik ladění mezi nástroji pro vývojáře sady nástrojů. Můžete nastavit zarážky, bez ohledu na to chcete provést pozastavení spuštění ladicího programu. Můžete například zobrazit stav proměnných kódu se také podívat na zásobník volání na určité zarážce. Pokud je to poprvé, kterou jste se pokusili ladění kódu, můžete chtít číst [ladění pro naprosté začátečníky](../debugger/debugging-absolute-beginners.md) před provedením tohoto článku.
@@ -59,7 +59,7 @@ V C# automaticky zvýrazněný kód, zarážky a aktuální provádění řádky
 
  ![Zastavit provádění zarážku](../debugger/media/breakpointexecution.png "provádění zarážku")
 
- Pokud ladicí program se zastaví na zarážce, můžete si prohlédnout aktuální stav aplikace, včetně hodnot proměnných a zásobníku volání. Další informace o zásobníku volání, naleznete v tématu [jak: Použití okna zásobník volání](../debugger/how-to-use-the-call-stack-window.md).
+ Pokud ladicí program se zastaví na zarážce, můžete si prohlédnout aktuální stav aplikace, včetně hodnot proměnných a zásobníku volání. Další informace o zásobníku volání naleznete v tématu [How do: Použijte okno zásobníku volání @ no__t-0.
 
 - Zarážka je přepínací tlačítko. Můžete na ni klikněte, stiskněte klávesu **F9**, nebo použijte **ladění** > **Přepnout zarážku** odstranění nebo vložením.
 
@@ -67,11 +67,11 @@ V C# automaticky zvýrazněný kód, zarážky a aktuální provádění řádky
 
 - Nastavení podmínek a akcí, přidat a upravit štítky nebo exportujte zarážky tak, že pravým tlačítkem myši a vyberete příslušný příkaz, nebo je ukazatel myši a vyberete **nastavení** ikonu.
 
-## <a name="BKMK_Set_a_breakpoint_in_a_function"></a> Nastavit body přerušení z ladicího programu systému windows
+## <a name="BKMK_Set_a_breakpoint_from_debugger_windows"></a> Nastavit body přerušení z ladicího programu systému windows
 
 Můžete také nastavit zarážky z **zásobník volání** a **zpětný překlad** ladicího programu systému windows.
 
-### <a name="BKMK_Set_a_breakpoint_in_the_call_stack_window"></a> Nastavení zarážky v okně zásobník volání
+### <a name="set-a-breakpoint-in-the-call-stack-window"></a>Nastavení zarážky v okně zásobník volání
 
  Přerušení na pokynu nebo řádku, který funkce volání vrací, můžete nastavit zarážku **zásobník volání** okna.
 
@@ -87,7 +87,7 @@ Zarážky zásobníku volání se zobrazí v **zarážky** okno jako adresy s ob
 
 Ladicí program přeruší podle instrukce.
 
-Další informace o zásobníku volání, naleznete v tématu [jak: Použití okna zásobník volání](../debugger/how-to-use-the-call-stack-window.md).
+Další informace o zásobníku volání naleznete v tématu [How do: Použijte okno zásobníku volání @ no__t-0.
 
 Vizuálně sledovat zarážky během provádění kódu, naleznete v tématu [mapování metod v zásobníku volání při ladění](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md).
 
@@ -150,23 +150,23 @@ Vizuálně sledovat zarážky během provádění kódu, naleznete v tématu [ma
 
 ::: moniker range=">= vs-2019"
 
-## <a name="BKMK_set_a_data_breakpoint_managed"></a>Nastavení datové zarážky (.NET Core 3.0 nebo vyšší)
+## <a name="BKMK_set_a_data_breakpoint_managed"></a>Nastavení zarážek s daty (.NET Core 3,0 nebo vyšší)
 
-Body zarážek přeruší provádění, když se změní vlastnost s určitým objektem.
+Datové zarážky přeruší provádění při změně vlastnosti určitého objektu.
 
-**K nastavení datové zarážky**
+**Nastavení datové zarážky**
 
-1. V projektu .NET Core spustit ladění a počkejte, dokud není dosaženo zarážky.
+1. V projektu .NET Core spusťte ladění a počkejte na dosažení zarážky.
 
-2. V **automatické hodnoty**, **Watch**, nebo **lokální** okna, klikněte pravým tlačítkem na vlastnosti a vyberte **přerušit, když se změní hodnota** v místní nabídce.
+2. V okně **Automatické**hodnoty, **kukátko**nebo **místních** hodnot klikněte pravým tlačítkem na vlastnost a v místní nabídce vyberte možnost **přerušit při změně hodnoty** .
 
-    ![Spravované datová zarážka](../debugger/media/managed-data-breakpoint.png "spravované datová zarážka")
+    (../debugger/media/managed-data-breakpoint.png "Zarážka spravované datové") ![zarážky spravovaného data]
 
-Datové zarážky v .NET Core nebude fungovat pro:
+Datové zarážky v .NET Core nebudou fungovat pro:
 
-- Vlastnosti, které nejsou rozšiřitelné v popisu, lokální, automatické hodnoty, nebo okno kukátka
+- Vlastnosti, které se nerozšiřují v popiscích, místních hodnotách, Autoch nebo okno Kukátko
 - Statické proměnné
-- Třídy pomocí atributu DebuggerTypeProxy
+- Třídy s atributem používání DebuggerTypeProxy
 - Pole uvnitř struktur
 
 ::: moniker-end
@@ -179,7 +179,7 @@ Datové zarážky v .NET Core nebude fungovat pro:
 
 1. V projektu jazyka C++ spustit ladění a počkejte, dokud není dosaženo zarážky. Na **ladění** nabídce zvolte **Nová zarážka** > **datová zarážka**
 
-    Můžete také vybrat **nový** > **datová zarážka** v **zarážky** okno nebo klikněte pravým tlačítkem na položku **automatické hodnoty**, **Watch**, nebo **lokální** okna a vyberte **přerušit, když se změní hodnota**v místní nabídce.
+    Můžete také vybrat možnost **Nová** **zarážka dat**  >  v okně **zarážky** nebo kliknout pravým tlačítkem myši na položku v okně **Automatické**hodnoty, **kukátko**nebo **místních** hodnot a vybrat možnost **přerušit při změně hodnoty** v místní nabídce.
 
 2. V **adresu** zadejte adresu paměti nebo výraz, který vyhodnocuje adresu paměti. Zadejte například `&avar` pro přerušení, když obsah proměnné `avar` změny.
 
@@ -189,7 +189,7 @@ Zarážky data nefungují za těchto podmínek:
 - Proces, který se neladí se zapíše do umístění v paměti.
 - Umístění v paměti jsou sdílena mezi dvěma nebo více procesy.
 - Umístění v paměti je aktualizováno v rámci jádra. Například, pokud je paměť předána 32bitové Windows `ReadFile` funkce, paměť se budou aktualizovat z režimu jádra, aby ladicí program nebudou porušovat na aktualizaci.
-- Kde je větší než 4 bajtů na 32-bit hardwaru a 8 bajtů na 64bitový hardware výrazu kukátka. Jedná se o omezení x86 architektury.
+- Kde výraz kukátka je větší než 4 bajty na 32ovém hardwaru a 8 bajtů na 64 bitového hardwaru. Toto je omezení architektury x86.
 
 > [!NOTE]
 > - Datové zarážky, závisí na konkrétní paměťové adresy. Adresa proměnné změny z jedné relace ladění na další, abyste na konci každé relace ladění jsou automaticky zakázány datové zarážky.
@@ -242,7 +242,7 @@ Zarážek s stanovené podmínky, zobrazí se **+** symbol ve zdrojovém kódu a
 <a name="BKMK_Specify_a_breakpoint_condition_using_a_code_expression"></a>
 ### <a name="conditional-expression"></a>Podmíněný výraz
 
-Když vyberete **podmíněný výraz**, můžete si vybrat mezi dvě podmínky: **Má hodnotu true** nebo **při změně**. Zvolte **platí** přerušit, když je splněna výrazu, nebo **při změně** k rozdělení se při změně hodnoty výrazu.
+Když vyberete **podmíněný výraz**, můžete si vybrat ze dvou podmínek: **Je true** nebo **při změně**. Zvolte **platí** přerušit, když je splněna výrazu, nebo **při změně** k rozdělení se při změně hodnoty výrazu.
 
  V následujícím příkladu, zarážka se projeví pouze tehdy, když hodnota `testInt` je **4**:
 
@@ -259,6 +259,7 @@ Když vyberete **podmíněný výraz**, můžete si vybrat mezi dvě podmínky: 
  >- Pro nativní kód ladicí program nezahrne hodnocení první podmínku, která má být změněna, takže nebude zarážce při prvním hodnocení.
  >- Pro spravovaný kód, ladicí program narazí na zarážku při prvním hodnocení po **při změně** zaškrtnuto.
 
+<a name="using-object-ids-in-breakpoint-conditions-c-and-f"></a>
 ### <a name="using-object-ids-in-conditional-expressions-c-and-f-only"></a>Pomocí ID objektů v podmíněných výrazech (C# a F# jenom)
  Existují situace, kdy budete chtít sledovat chování s určitým objektem. Můžete třeba chtít zjistit, proč objekt byl vložen do kolekce více než jednou. V C# a F#, můžete vytvořit objekt ID pro určité instance [referenční typy](/dotnet/csharp/language-reference/keywords/reference-types)a jejich použití v podmínky zarážky. ID objektu je generována modulem common language runtime (CLR) ladění služeb a přidružená k objektu.
 
@@ -268,7 +269,7 @@ Když vyberete **podmíněný výraz**, můžete si vybrat mezi dvě podmínky: 
 
 2. Spustit ladění a při spuštění, pozastavení na zarážce, vyberte **ladění** > **Windows** > **lokální** nebo **Alt** + **4** otevřít **lokální** okna.
 
-   Najít instanci určitého objektu v **lokální** okně pravým tlačítkem myši a vyberte **Ujistěte se, ID objektu**.
+   V okně **místní** hodnoty Najděte konkrétní instanci objektu, klikněte na ni pravým tlačítkem myši a vyberte **vytvořit ID objektu**.
 
    Měli byste vidět **$** plus číslo v **místní hodnoty** okna. To je ID objektu.
 
