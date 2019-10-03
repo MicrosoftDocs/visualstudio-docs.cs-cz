@@ -292,6 +292,8 @@
               href: taskextension-base-class.md
             - name: ToolTaskExtension – základní třída
               href: tooltaskextension-base-class.md
+            - name: Diagnostikování selhání úloh
+              href: diagnosing-task-failures.md
             - name: AL (linker sestavení) – úloha
               href: al-assembly-linker-task.md
             - name: AspNetCompiler – úloha

@@ -6,6 +6,8 @@
       href: what-is-debugging.md
     - name: Techniky ladění a související nástroje
       href: write-better-code-with-visual-studio.md
+    - name: Nalezení úlohy ladění
+      href: find-your-debugging-task.md
 - name: Rychlý start
   items:
     - name: První seznámení s ladicím programem
@@ -236,7 +238,7 @@
                   href: visual-cpp-custom-visualizer-compatibility.md
             - name: Vlastní zobrazení (spravovaná)
               items:
-                - name: Vytváření vlastních zobrazení spravovaných objektů
+                - name: Vytváření vlastních zobrazení objektů
                   href: create-custom-views-of-dot-managed-objects.md
                 - name: 'Instruování ladicího programu, co se má zobrazit'
                   href: using-the-debuggerdisplay-attribute.md
@@ -352,9 +354,9 @@
               href: how-to-use-the-gpu-threads-window.md
         - name: Ladění více procesů
           href: debug-multiple-processes.md
-        - name: 'Návod: Ladění pomocí okna Vlákna'
+        - name: Ladění pomocí okna Vlákna
           href: how-to-use-the-threads-window.md
-        - name: 'Návod: Ladění paralelní aplikace'
+        - name: Ladění paralelní aplikace
           href: walkthrough-debugging-a-parallel-application.md
         - name: Přepnutí na jiné vlákno během ladění
           href: how-to-switch-to-another-thread-while-debugging.md
