@@ -1,12 +1,12 @@
 ---
-title: Vlastnosti NMake (Android C++) | Dokumentace Microsoftu
+title: Vlastnosti NMake (Android C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/23/2017
 ms.technology: vs-ide-mobile
 ms.topic: conceptual
 ms.assetid: d901c572-16c4-402a-b230-7ae59ce9fad4
-author: corob
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: jillfra
 f1_keywords:
 - VC.Project.VCNMakeTool.BuildCommandLine
@@ -18,22 +18,22 @@ f1_keywords:
 - VC.Project.VCNMakeTool.ForcedIncludes
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: ba13da583e5ea5dd6cc625e165902bbf6c408f28
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 9a04acc335d86aaa895fdb399ce7086868e9770d
+ms.sourcegitcommit: 6ae0a289f1654dec63b412bfa22035511a2ef5ad
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62815711"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71950616"
 ---
 # <a name="nmake-properties-android-c"></a>Vlastnosti NMake (Android C++)
 
 Vlastnost | Popis
 --- | ---
-Sestavení příkazového řádku | Určuje příkazový řádek pro spuštění příkazu "Sestavení".
-Opětovné sestavení všech příkazového řádku | Určuje příkazový řádek pro spuštění příkazu "Sestavit vše znovu".
-Příkazový řádek příkazu vyčistit | Určuje příkazový řádek pro spuštění příkazu "Clean".
-Výstup | Určuje výstupní soubor pro vygenerování.
-Definice preprocesoru | Určuje direktivy preprocesoru define použité zdrojovými soubory.
-Zahrnout cestu vyhledávání | Určuje cestu hledání pro zahrnuté soubory řešení.
-Vynucené zahrnuje | Určuje soubory, které jsou Vynuceně zahrnuté.
-Další možnosti | Určuje další přepínače kompilátoru pro použití technologií IntelliSense při analýze souborů C++
+Příkazový řádek sestavení | Určuje příkazový řádek, který se má spustit pro příkaz Build.
+Sestavit vše znovu z příkazového řádku | Určuje příkazový řádek pro spuštění příkazu znovu sestavit vše.
+Příkazový řádek vyčištění | Určuje příkazový řádek pro spuštění příkazu vyčistit.
+Výstup | Určuje výstupní soubor, který se má vygenerovat.
+Definice preprocesoru | Určuje Definice preprocesoru používané zdrojovými soubory.
+Cesta pro hledání vložených součástí | Určuje cestu pro vyhledávání vložených souborů pro řešení zahrnutých souborů.
+Vynucené zahrnutí | Určuje soubory, které jsou vynuceně zahrnuté.
+Další možnosti | Určuje další přepínače kompilátoru pro použití technologií IntelliSense při analýze C++ souborů.

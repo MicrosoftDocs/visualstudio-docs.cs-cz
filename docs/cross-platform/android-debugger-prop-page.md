@@ -1,12 +1,12 @@
 ---
-title: Vlastnosti ladicího programu pro Android (C++) | Dokumentace Microsoftu
+title: Vlastnosti ladicího programuC++pro Android () | Microsoft Docs
 ms.custom: ''
 ms.date: 10/23/2017
 ms.technology: vs-ide-mobile
 ms.topic: conceptual
 ms.assetid: 789f7a1c-38b4-41d0-809b-14f4d96c8116
-author: corob
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: jillfra
 f1_keywords:
 - VC.Project.AndroidDebugger.DebuggerType
@@ -15,20 +15,20 @@ f1_keywords:
 - VC.Project.AndroidDebugger.LaunchActivity
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 9a4d7baa970008c2de7a3bc28966f7edbad68b21
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 0a052223fe7acac87acf15c5c5091c774451e4e4
+ms.sourcegitcommit: 6ae0a289f1654dec63b412bfa22035511a2ef5ad
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62819500"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71950622"
 ---
 # <a name="android-debugger-properties"></a>Vlastnosti ladicího programu pro Android
 
-Vlastnost | Popis | Možnosti
+Vlastnost | Popis | Vlastnit
 --- | ---| ---
-Typ ladicího programu | Určuje, který typ kódu k ladění. | **Pouze nativní**<br>**Jenom Java**<br>
-Cíl ladění | Určuje emulátor nebo zařízení pro ladění. Pokud žádné emulátory neběží, použijte "Android Virtual Device (AVD) Manager" zařízení spusťte.
-Balíček ke spuštění | Určuje umístění *.apk* , který bude laděn. Tato možnost slouží k určení, že konkrétní balíček APK má být spuštěn při ladění aplikace.
-Spouštěcí aktivita | Aktivita v Androidu použít ke spuštění aplikace, musí odpovídat tomu použitému v manifestu. Klepněte na tlačítko použít k získání seznamu z *AndroidManifest.xml* a dynamicky ho naplníte.
-Další cesty hledání symbolů | Další cesty hledání pro symboly ladění.
-Cesty hledání zdrojového další Java | Další cesty hledání pro zdrojové soubory Javy. (Platí, pouze když je typ ladicího programu jenom Java.)
+Typ ladicího programu | Určuje, který typ kódu se má ladit. | **Pouze nativní**<br>**Pouze Java**<br>
+Cíl ladění | Určuje emulátor nebo zařízení, které se má použít pro ladění. Pokud nejsou spuštěné žádné emulátory, spusťte prosím zařízení pomocí příkazu ' Android Virtual Device (AVD) Manager '.
+Balíček, který se má spustit | Určuje umístění *. apk* , které se bude ladit. Tuto možnost vyberte, pokud chcete určit, že se má při ladění aplikace spustit konkrétní balíček (APK).
+Spouštěcí aktivita | Aktivita Androidu, která se má použít pro spuštění aplikace, musí odpovídat hodnotě používané v manifestu. Stisknutím tlačítka použít načtete seznam ze *souboru souboru AndroidManifest. XML* a dynamicky jej nasadíte.
+Další cesty pro hledání symbolů | Další cesta hledání pro symboly ladění
+Další cesty pro vyhledávání zdrojového kódu Java | Další vyhledávací cesty pro zdrojové soubory Java (Platí pouze v případě, že typ ladicího programu je pouze Java.)

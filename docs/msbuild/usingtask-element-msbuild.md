@@ -1,5 +1,5 @@
 ---
-title: Usingtask – Element (MSBuild) | Dokumentace Microsoftu
+title: UsingTask – element (MSBuild) | Microsoft Docs
 ms.date: 03/13/2017
 ms.topic: reference
 f1_keywords:
@@ -18,17 +18,17 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 36e310688b8305b2d5986a1b29d34895f02bc4d7
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
-ms.translationtype: HT
+ms.openlocfilehash: 8341a83443855f2fd90d7f5a742251fa54fc4890
+ms.sourcegitcommit: dc12a7cb66124596089f01d3e939027ae562ede9
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63411009"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71962906"
 ---
-# <a name="usingtask-element-msbuild"></a>Usingtask – element (MSBuild)
-Mapuje na úkol, který se odkazuje v [úloh](../msbuild/task-element-msbuild.md) element na sestavení, které obsahuje implementaci úkolu.
+# <a name="usingtask-element-msbuild"></a>UsingTask – element (MSBuild)
+Mapuje úlohu, na kterou je odkazováno v elementu [Task](../msbuild/task-element-msbuild.md) , na sestavení, které obsahuje implementaci úlohy.
 
- \<Projekt > \<UsingTask >
+ \<Project > \<UsingTask >
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,6 +39,9 @@ Mapuje na úkol, který se odkazuje v [úloh](../msbuild/task-element-msbuild.md
     Condition="'String A'=='String B'" />
 ```
 
+> [!NOTE]
+> Na rozdíl od vlastností a položek se použije *první* prvek `UsingTask`, který se vztahuje na `TaskName`. Chcete-li přepsat úkoly, je nutné definovat nové `UsingTask` *před* stávajícím.
+
 ## <a name="attributes-and-elements"></a>Atributy a elementy
  Následující části popisují atributy, podřízené prvky a nadřazené prvky.
 
@@ -46,35 +49,35 @@ Mapuje na úkol, který se odkazuje v [úloh](../msbuild/task-element-msbuild.md
 
 |Atribut|Popis|
 |---------------|-----------------|
-|`AssemblyName`|Buď `AssemblyName` atribut nebo `AssemblyFile` atribut je vyžadován.<br /><br /> Název sestavení, které chcete načíst. `AssemblyName` Atribut je možné zadat sestavení se silným názvem, i když není potřeba silné názvy. Pomocí tohoto atributu je ekvivalentní k načtení sestavení s použitím <xref:System.Reflection.Assembly.Load%2A> metoda v rozhraní .NET.<br /><br /> Tento atribut nelze použít, pokud `AssemblyFile` atribut se používá.|
-|`AssemblyFile`|Buď `AssemblyName` nebo `AssemblyFile` atribut je vyžadován.<br /><br /> Cesta k souboru sestavení. Tento atribut je možné zadat relativní cesty nebo úplné cesty. Relativní cesty jsou relativní vzhledem k adresáři projektu soubor nebo soubor cílů kde `UsingTask` je deklarován element. Pomocí tohoto atributu je ekvivalentní k načtení sestavení s použitím <xref:System.Reflection.Assembly.LoadFrom%2A> metoda v rozhraní .NET.<br /><br /> Tento atribut nelze použít, pokud `AssemblyName` atribut se používá.|
-|`TaskFactory`|Nepovinný atribut.<br /><br /> Určuje třídu v sestavení, který je zodpovědný za generování instance zadaného `Task` název.  Uživatel může také určit `TaskBody` jako podřízený prvek, který přijímá objekt pro vytváření úkolů a používá ke generování úlohy. Obsah `TaskBody` jsou specifická pro objekt pro vytváření úloh.|
-|`TaskName`|Požadovaný atribut.<br /><br /> Název úkolu odkazovat ze sestavení. Pokud nejasnostem, je možné, tento atribut by měl být určen úplný obory názvů. Pokud existují nejednoznačnosti, vybere MSBuild libovolného shodu, což může vést k neočekávaným výsledkům.|
-|`Condition`|Nepovinný atribut.<br /><br /> Podmínky pro hodnocení. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|
+|`AssemblyName`|Je požadován buď atribut `AssemblyName`, nebo atribut `AssemblyFile`.<br /><br /> Název sestavení, které chcete načíst. Atribut `AssemblyName` přijímá sestavení se silným názvem, i když silné pojmenovávání není vyžadováno. Použití tohoto atributu je ekvivalentní k načtení sestavení pomocí metody <xref:System.Reflection.Assembly.Load%2A> v rozhraní .NET.<br /><br /> Tento atribut nelze použít, je-li použit atribut `AssemblyFile`.|
+|`AssemblyFile`|Je požadován buď atribut `AssemblyName`, nebo atribut `AssemblyFile`.<br /><br /> Cesta k souboru sestavení. Tento atribut přijímá úplné cesty nebo relativní cesty. Relativní cesty jsou relativní vzhledem k adresáři souboru projektu nebo souboru cílů, kde je deklarován element `UsingTask`. Použití tohoto atributu je ekvivalentní k načtení sestavení pomocí metody <xref:System.Reflection.Assembly.LoadFrom%2A> v rozhraní .NET.<br /><br /> Tento atribut nelze použít, je-li použit atribut `AssemblyName`.|
+|`TaskFactory`|Nepovinný atribut.<br /><br /> Určuje třídu v sestavení, která je zodpovědná za generování instancí zadaného názvu `Task`.  Uživatel může také zadat `TaskBody` jako podřízený prvek, který objekt pro vytváření úloh obdrží a použije k vygenerování úkolu. Obsah `TaskBody` je specifický pro objekt pro vytváření úloh.|
+|`TaskName`|Požadovaný atribut.<br /><br /> Název úkolu, který se má odkazovat ze sestavení. Pokud je to možné, měl by tento atribut vždy určovat celé obory názvů. Pokud existují dvojznačnosti, nástroj MSBuild zvolí libovolnou shodu, což by mohlo způsobit neočekávané výsledky.|
+|`Condition`|Nepovinný atribut.<br /><br /> Podmínka, která má být vyhodnocena. Další informace najdete v tématu [podmínky](../msbuild/msbuild-conditions.md).|
 
 ### <a name="child-elements"></a>Podřízené prvky
 
 |Prvek|Popis|
 |-------------|-----------------|
-|[ParameterGroup](../msbuild/parametergroup-element.md)|Sada parametrů, které se zobrazují na úkol, který je generována pomocí zadané `TaskFactory`.|
-|[Úloha](../msbuild/task-element-msbuild.md)|Data, která je předána `TaskFactory` k vytvoření instance úlohy.|
+|[ParameterGroup](../msbuild/parametergroup-element.md)|Sada parametrů, která se zobrazí u úlohy vygenerované zadaným `TaskFactory`.|
+|[Úloha](../msbuild/task-element-msbuild.md)|Data předaná `TaskFactory` pro vygenerování instance úkolu.|
 
 ### <a name="parent-elements"></a>Nadřazené prvky
 
 | Prvek | Popis |
 | - | - |
-| [Projekt](../msbuild/project-element-msbuild.md) | Požadovaný kořenový element [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] souboru projektu. |
+| [Projekt](../msbuild/project-element-msbuild.md) | Požadovaný kořenový prvek souboru projektu [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]. |
 
 ## <a name="remarks"></a>Poznámky
- Proměnné prostředí, vlastnosti příkazového řádku, vlastností na úrovni projektu a položek na úrovni projektu může být odkazováno v `UsingTask` prvky, které jsou zahrnuty v souboru projektu, ať už přímo nebo prostřednictvím importovaném projektu souboru. Další informace najdete v tématu [úlohy](../msbuild/msbuild-tasks.md).
+ Proměnné prostředí, vlastnosti příkazového řádku, vlastnosti na úrovni projektu a položky na úrovni projektu lze odkazovat v prvcích `UsingTask` obsažených v souboru projektu buď přímo, nebo prostřednictvím importovaného souboru projektu. Další informace najdete v tématu [úlohy](../msbuild/msbuild-tasks.md).
 
 > [!NOTE]
-> Vlastnosti na úrovni projektu a položky nemají význam, pokud `UsingTask` element pochází z jednoho z *.tasks* soubory, které jsou globálně zaregistrované stroji MSBuild engine. Hodnoty na úrovni projektu nejsou globální nástroji MSBuild.
+> Vlastnosti a položky na úrovni projektu nemají žádný význam, pokud prvek `UsingTask` pochází z jednoho ze souborů *. Tasks* , které jsou globálně registrovány pomocí modulu MSBuild. Hodnoty na úrovni projektu nejsou globálním pro MSBuild.
 
- V MSBuild 4.0 pomocí úlohy je možné načíst z *.overridetask* soubory.
+ V MSBuild 4,0 lze pomocí úloh načíst ze souborů *. overridetask* .
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje způsob použití `UsingTask` element s `AssemblyName` atribut.
+ Následující příklad ukazuje způsob použití prvku `UsingTask` s atributem `AssemblyName`.
 
 ```xml
 <UsingTask TaskName="MyTask" AssemblyName="My.Assembly" TaskFactory="MyTaskFactory">
@@ -90,7 +93,7 @@ Mapuje na úkol, který se odkazuje v [úloh](../msbuild/task-element-msbuild.md
 ```
 
 ## <a name="example"></a>Příklad
- Následující příklad ukazuje způsob použití `UsingTask` element s `AssemblyFile` atribut.
+ Následující příklad ukazuje způsob použití prvku `UsingTask` s atributem `AssemblyFile`.
 
 ```xml
 <UsingTask TaskName="Email"
@@ -98,6 +101,6 @@ Mapuje na úkol, který se odkazuje v [úloh](../msbuild/task-element-msbuild.md
 ```
 
 ## <a name="see-also"></a>Viz také:
-- [Úlohy](../msbuild/msbuild-tasks.md)
-- [Referenční dokumentace úlohy](../msbuild/msbuild-task-reference.md)
+- [Úkoly](../msbuild/msbuild-tasks.md)
+- [Odkaz na úkol](../msbuild/msbuild-task-reference.md)
 - [Referenční dokumentace schématu souboru projektu](../msbuild/msbuild-project-file-schema-reference.md)

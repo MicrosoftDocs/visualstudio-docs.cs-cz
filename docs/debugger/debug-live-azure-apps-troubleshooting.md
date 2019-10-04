@@ -11,16 +11,16 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ee8633a9ad58981297f00338cd6c375c5cf721e
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 27df4c097d829a4d28a77b9b1ad96eb389f4096c
+ms.sourcegitcommit: dc12a7cb66124596089f01d3e939027ae562ede9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211236"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71962930"
 ---
 # <a name="troubleshooting-and-known-issues-for-snapshot-debugging-in-visual-studio"></a>Řešení potíží a známé problémy pro ladění snímků v sadě Visual Studio
 
-Pokud kroky popsané v tomto článku problém nevyřeší, vyhledejte problém v [komunitě vývojářů](https://developercommunity.visualstudio.com/spaces/8/index.html) nebo Nahlášením nového problému výběrem možnosti **pomáhat** > **Odeslat zpětnou vazbu** > **ohlásit problém** v vizuálu. Studio.
+Pokud kroky popsané v tomto článku problém nevyřeší, vyhledejte problém v [komunitě vývojářů](https://developercommunity.visualstudio.com/spaces/8/index.html) nebo nahlásit nový problém výběrem možnosti **help** > **Odeslat názor** > **ohlásit problém** v aplikaci Visual Studio.
 
 ## <a name="issue-attach-snapshot-debugger-encounters-an-http-status-code-error"></a>Problém: Při "připojení Snapshot Debugger" dojde k chybě stavového kódu HTTP
 
@@ -34,7 +34,7 @@ Tato chyba označuje, že volání REST vydané aplikací Visual Studio do Azure
 
 Proveďte tyto kroky:
 
-* Ujistěte se, že váš účet přizpůsobení sady Visual Studio má oprávnění k předplatnému Azure a prostředku, ke kterému se připojujete. Rychlý způsob, jak to zjistit, je ověřit, jestli je prostředek k dispozici v dialogovém okně z okna **ladit** > **připojit Snapshot Debugger...**  >  **Prostředek**AzureVyberteexistujícínebovPrůzkumníkucloudu. > 
+* Ujistěte se, že váš účet přizpůsobení sady Visual Studio má oprávnění k předplatnému Azure a prostředku, ke kterému se připojujete. Rychlý způsob, jak to zjistit, je ověřit, jestli je prostředek k dispozici v dialogovém okně z **ladění** > **připojit Snapshot Debugger...**  > **prostředek Azure** > **Vyberte existující**nebo v Průzkumníku cloudu.
 * Pokud tato chyba nadále zůstává zachována, použijte jeden z kanálů zpětné vazby popsaných na začátku tohoto článku.
 
 ### <a name="403-forbidden"></a>(403) zakázáno
@@ -54,7 +54,8 @@ Tato chyba označuje, že web nebyl na serveru nalezen.
 Proveďte tyto kroky:
 
 * Ověřte, že je web nasazený a spuštěný na prostředku App Service, ke kterému se připojujete.
-* Ověřte, že je web k dispozici\<na\>adrese https://Resource. azurewebsites.NET
+* Ověřte, že je web k dispozici na adrese https://@no__t -0resource\>.azurewebsites.net
+* Ověřte, že vaše správně běžící vlastní webová aplikace nevrátí stavový kód 404 při použití https://@no__t -0resource\>.azurewebsites.net
 * Pokud tato chyba nadále zůstává zachována, použijte jeden z kanálů zpětné vazby popsaných na začátku tohoto článku.
 
 ### <a name="406-not-acceptable"></a>(406) nepřijatelný
@@ -63,7 +64,7 @@ Tato chyba značí, že server nemůže reagovat na sadu typů v hlavičce Accep
 
 Proveďte tyto kroky:
 
-* Ověřte, že je web k dispozici\<na\>adrese https://Resource. azurewebsites.NET
+* Ověřte, že je web k dispozici na adrese https://@no__t -0resource\>.azurewebsites.net
 * Ověřte, že se váš web nemigruje na nové instance. Snapshot Debugger používá pojem ARRAffinity pro směrování požadavků na konkrétní instance, které mohou tuto chybu způsobit občas.
 * Pokud tato chyba nadále zůstává zachována, použijte jeden z kanálů zpětné vazby popsaných na začátku tohoto článku.
 
@@ -156,11 +157,11 @@ Proveďte tyto kroky:
 
 Visual Studio 2019 vyžaduje pro Azure App Service novější verzi rozšíření Snapshot Debugger webu.  Tato verze není kompatibilní se starší verzí rozšíření Snapshot Debugger webového serveru, kterou používá Visual Studio 2017.  Tato chyba se zobrazí, pokud se pokusíte připojit Snapshot Debugger v aplikaci Visual Studio 2019 k Azure App Service, která byla dříve Laděna Snapshot Debugger v aplikaci Visual Studio 2017:
 
-![Nekompatibilní rozšíření Snapshot Debugger webu Visual Studio 2019](../debugger/media/snapshot-troubleshooting-incompatible-vs2019.png "Nekompatibilní rozšíření Snapshot Debugger webu Visual Studio 2019")
+![Nekompatibilní Snapshot Debugger rozšíření webu Visual studio 2019](../debugger/media/snapshot-troubleshooting-incompatible-vs2019.png "nekompatibilní Snapshot Debugger rozšíření webu Visual Studio 2019")
 
 Naopak, pokud použijete Visual Studio 2017 k připojení Snapshot Debugger k Azure App Service, která byla dříve Laděna Snapshot Debugger v aplikaci Visual Studio 2019, zobrazí se následující chyba:
 
-![Nekompatibilní rozšíření Snapshot Debugger webu Visual Studio 2017](../debugger/media/snapshot-troubleshooting-incompatible-vs2017.png "Nekompatibilní rozšíření Snapshot Debugger webu Visual Studio 2017")
+![Nekompatibilní Snapshot Debugger rozšíření webu Visual studio 2017](../debugger/media/snapshot-troubleshooting-incompatible-vs2017.png "nekompatibilní Snapshot Debugger rozšíření webu Visual Studio 2017")
 
 Pokud to chcete opravit, odstraňte v Azure Portal následující nastavení aplikace a připojte Snapshot Debugger znovu:
 
@@ -189,7 +190,7 @@ Protokoly agentů najdete v následujících umístěních:
 Protokoly instrumentace najdete v následujících umístěních:
 
 - App Services:
-  - Protokolování chyb je automaticky odesláno do D:\Home\LogFiles\eventlog.XML, události jsou označeny `<Provider Name="Instrumentation Engine" />` pomocí nebo "produkčních zarážek".
+  - Protokolování chyb je automaticky odesláno do D:\Home\LogFiles\eventlog.xml, události jsou označeny `<Provider Name="Instrumentation Engine" />` nebo "produkčními zarážkami".
 - VM/VMSS:
   - Přihlaste se ke svému VIRTUÁLNÍmu počítači a otevřete Prohlížeč událostí.
   - Otevřete následující zobrazení: *Protokoly Windows > aplikaci*.

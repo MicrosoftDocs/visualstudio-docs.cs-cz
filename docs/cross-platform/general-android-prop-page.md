@@ -1,12 +1,12 @@
 ---
-title: Obecné vlastnosti projektů (Android C++) | Dokumentace Microsoftu
+title: Obecné vlastnosti projektu (Android C++) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/23/2017
 ms.technology: vs-ide-mobile
 ms.topic: conceptual
 ms.assetid: 65f4868b-b864-4989-a275-1e51869ef599
-author: corob
-ms.author: mblome
+author: corob-msft
+ms.author: corob
 manager: jillfra
 f1_keywords:
 - VC.Project.VCConfiguration.OutputDirectory
@@ -22,25 +22,25 @@ f1_keywords:
 - VC.Project.VCConfiguration.ThumbMode
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 4bb6f26fe40b639b43cb803577a785fa9b48823d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 4526a329b4e047a449995b7b5ef66362aff1cc8f
+ms.sourcegitcommit: 6ae0a289f1654dec63b412bfa22035511a2ef5ad
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62818944"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71950589"
 ---
 # <a name="general-project-properties-android-c"></a>Obecné vlastnosti projektů (Android C++)
 
-Vlastnost | Popis | Možnosti
+Vlastnost | Popis | Vlastnit
 --- | ---| ---
-Výstupní adresář | Určuje relativní cestu k adresáři výstupního souboru; může obsahovat proměnné prostředí.
-Zprostředkující adresář | Určuje relativní cestu k adresáři přechodového souboru; může obsahovat proměnné prostředí.
+Výstupní adresář | Určuje relativní cestu k adresáři výstupního souboru. může obsahovat proměnné prostředí.
+Zprostředkující adresář | Určuje relativní cestu k adresáři zprostředkujícího souboru. může obsahovat proměnné prostředí.
 Cílový název | Určuje název souboru, který bude tento projekt generovat.
-Cílová přípona | Určuje rozšíření souboru, který bude tento projekt generovat. (Příklad: *.exe* nebo *.dll*)
-Přípony odstraňované při čištění | Středníkem oddělená specifikace zástupných znaků určujících, které soubory v přechodovém adresáři odstranit při čištění nebo opětovném sestavení.
-Soubor protokolu sestavení | Určuje soubor protokolu sestavení pro zápis při protokolování sestavení je povolená.
-Sada nástrojů platformy | Určuje, nástrojů pro sestavení aktuální konfigurace. Pokud není využito set, výchozí sady nástrojů
-Typ konfigurace | Určuje typ výstupu generovaného touto konfigurací. | **Dynamická knihovna (.so)** – dynamická knihovna (*.so*)<br>**Statická knihovna (.a)** – statická knihovna (*.a*)<br>**Nástroj** – nástroj<br>**Soubor pravidel** -souboru pravidel<br>
-Cílová úroveň rozhraní API | Android NDK rozhraní API: úroveň kterou míří tato konfigurace.
-Použití STL | Určuje, která standardní knihovna C++ použít pro tuto konfiguraci. | **Minimální knihovny prostředí runtime jazyka C++ (systém)**<br>**C++prostředí stlport (gabi ++ _static)**<br>**C++sdílená knihovna běhového (gabi ++ _shared)**<br>**Sdílená knihovna běhového prostředí stlport (stlport_static)**<br>**Sdílená knihovna běhového prostředí (stlport stlport_shared)**<br>**Statická knihovna GNU STL (gnustl_static)**<br>**Sdílená knihovna GNU STL (gnustl_shared)**<br>**Knihovna LLVM libc ++ statické (c ++ _static)**<br>**Knihovna LLVM libc ++ sdílené (c ++ _shared)**<br>
-Režim thumb | Generovat kód, který spouští pro mikroarchitekturu thumb. To platí jenom pro architekturu arm. | **Miniatury**<br>**Arm**<br>**Disabled** (Zakázáno)<br>
+Cílová Přípona | Určuje příponu souboru, kterou bude tento projekt generovat. (Příklad: *. exe* nebo *. dll*)
+Přípony k odstranění při čištění | Středníky oddělená specifikace zástupných znaků, pro které se soubory v zprostředkujícím adresáři odstraňují při čištění nebo opětovném sestavení.
+Soubor protokolu sestavení | Určuje soubor protokolu sestavení, do kterého se má zapisovat, pokud je povolené protokolování sestavení.
+Sada nástrojů platformy | Určuje sadu nástrojů použitou pro sestavení aktuální konfigurace. Pokud není nastavená, použije se výchozí sada nástrojů.
+Typ konfigurace | Určuje typ výstupu, který tato konfigurace generuje. | **Dynamická knihovna (. so)** – dynamická knihovna ( *. so*)<br>**Statická knihovna (. a)** – statická knihovna ( *. a*)<br>**Nástroj** – nástroj<br>**Makefile** -makefile<br>
+Cílová úroveň rozhraní API | Úroveň rozhraní API pro Android NDK, na kterou cílí Tato konfigurace.
+Použití STL | Určuje, C++ která standardní knihovna se má použít pro tuto konfiguraci. | **Minimální C++ běhová knihovna (systém)**<br>**C++Statická knihovna modulu runtime (Gabi + + _static)**<br>**C++Běhová knihovna Shared (Gabi + + _shared)**<br>**Statická knihovna sdílená knihovna běhového runtime (stlport_static)**<br>**Sdílená knihovna sdílená knihovna běhového runtime (stlport_shared)**<br>**Statická knihovna GNU STL (gnustl_static)**<br>**Sdílená knihovna GNU STL (gnustl_shared)**<br>**Statická knihovna LLVM libc + + (c++ _static)**<br>**Sdílená knihovna LLVM libc + + (c++ _shared)**<br>
+Režim miniatur | Vygeneruje kód, který se spustí pro mikroarchitekturu pro palec. To platí jenom pro architekturu ARM. | **Táhl**<br>**ARM**<br>**Disabled** (Zakázáno)<br>

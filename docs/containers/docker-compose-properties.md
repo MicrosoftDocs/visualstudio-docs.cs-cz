@@ -6,12 +6,12 @@ ms.author: ghogen
 ms.date: 08/12/2019
 ms.technology: vs-azure
 ms.topic: conceptual
-ms.openlocfilehash: 06a1c5b637ca2ed9306162ee1960c60d103e5843
-ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
+ms.openlocfilehash: 2178881c6ea0e597aef5e25074e3648162d3f6e9
+ms.sourcegitcommit: 6ae0a289f1654dec63b412bfa22035511a2ef5ad
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71185978"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71950642"
 ---
 # <a name="docker-compose-build-properties"></a>Docker Compose vlastnosti sestavení
 
@@ -19,7 +19,7 @@ Kromě vlastností, které řídí jednotlivé projekty Docker, popsaných v té
 
 ## <a name="how-to-set-the-msbuild-properties"></a>Jak nastavit vlastnosti MSBuild
 
-Chcete-li nastavit hodnotu vlastnosti, upravte soubor projektu. U Docker Compose vlastností je tento soubor projektu souborem s příponou. dcproj, pokud není uvedeno jinak v tabulce v další části. Předpokládejme například, že chcete určit, že chcete spustit prohlížeč při spuštění ladění. `DockerLaunchAction` Vlastnost můžete nastavit v souboru projektu. dcproj následujícím způsobem.
+Chcete-li nastavit hodnotu vlastnosti, upravte soubor projektu. U Docker Compose vlastností je tento soubor projektu souborem s příponou. dcproj, pokud není uvedeno jinak v tabulce v další části. Předpokládejme například, že chcete určit, že chcete spustit prohlížeč při spuštění ladění. Vlastnost `DockerLaunchAction` můžete nastavit v souboru projektu. dcproj následujícím způsobem.
 
 ```xml
 <PropertyGroup>
@@ -27,18 +27,18 @@ Chcete-li nastavit hodnotu vlastnosti, upravte soubor projektu. U Docker Compose
 </PropertyGroup>
 ```
 
-Nastavení vlastnosti můžete přidat do existujícího `PropertyGroup` prvku, nebo pokud není jedna, vytvořte nový `PropertyGroup` prvek.
+Nastavení vlastnosti můžete přidat do existujícího elementu `PropertyGroup`, nebo pokud není jedna, vytvořte nový prvek `PropertyGroup`.
 
 ## <a name="docker-compose-msbuild-properties"></a>Docker Compose vlastnosti MSBuild
 
 V následující tabulce jsou uvedeny vlastnosti MSBuild dostupné pro Docker Compose projekty.
 
-| Název vlastnosti | Umístění | Popis | Výchozí hodnota  |
+| Název vlastnosti | Location | Popis | Výchozí hodnota  |
 |---------------|----------|-------------|----------------|
-|DockerComposeBuildArguments|dcproj|Určuje další parametry, které se mají předat `docker-compose build` příkazu. Třeba `--parallel --pull`. |
-|DockerComposeDownArguments|dcproj|Určuje další parametry, které se mají předat `docker-compose down` příkazu. Třeba `--timeout 500`.|-|  
+|DockerComposeBuildArguments|dcproj|Určuje další parametry, které se mají předat příkazu `docker-compose build`. Například `--parallel --pull`. |
+|DockerComposeDownArguments|dcproj|Určuje další parametry, které se mají předat příkazu `docker-compose down`. Například `--timeout 500`.|-|  
 |DockerComposeProjectPath|CSPROJ nebo VBPROJ|Relativní cesta k souboru dcproj (Docker-psací projekt). Tuto vlastnost nastavte při publikování projektu služby, aby bylo možné najít přidružená nastavení pro sestavení imagí uložená v souboru Docker-Compose. yml.|-|
-|DockerComposeUpArguments|dcproj|Určuje další parametry, které se mají předat `docker-compose up` příkazu. Třeba `--timeout 500`.|-|
+|DockerComposeUpArguments|dcproj|Určuje další parametry, které se mají předat příkazu `docker-compose up`. Například `--timeout 500`.|-|
 |DockerLaunchAction| dcproj | Určuje akci spuštění, která se má provést na F5 nebo CTRL + F5.  Povolené hodnoty jsou None, LaunchBrowser a LaunchWCFTestClient.|Žádné|
 |DockerLaunchBrowser| dcproj | Označuje, zda se má spustit prohlížeč. Ignoruje se, pokud je zadaný DockerLaunchAction. | False |
 |DockerServiceName| dcproj|Pokud jsou zadány DockerLaunchAction nebo DockerLaunchBrowser, pak DockerServiceName je název služby, která se má spustit.  Tato vlastnost slouží k určení, který z potenciálně mnoho projektů, na který může odkazovat soubor Docker-na sestavení, se spustí.|-|
@@ -46,7 +46,7 @@ V následující tabulce jsou uvedeny vlastnosti MSBuild dostupné pro Docker Co
 |DockerTargetOS| dcproj | Cílový operační systém, který se používá při vytváření image Docker.|-|
 
 > [!NOTE]
-> DockerComposeBuildArguments, DockerComposeDownArguments a DockerComposeUpArguments jsou novinkou v aplikaci Visual Studio 2019 verze 16,3 Preview 3.
+> DockerComposeBuildArguments, DockerComposeDownArguments a DockerComposeUpArguments jsou v systému Visual Studio 2019 verze 16,3 novinkou.
 
 ## <a name="docker-compose-file-labels"></a>Docker Compose popisky souborů
 

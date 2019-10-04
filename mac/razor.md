@@ -6,12 +6,12 @@ ms.author: sayedha
 ms.date: 05/03/2018
 ms.technology: vs-ide-general
 ms.assetid: F898CB6E-05ED-44CD-8DB6-427B2592CCC6
-ms.openlocfilehash: 791182255448db01a1c43796da72bedeec9f2f96
-ms.sourcegitcommit: 9a227faafdd0bad6f017ace607dc61eb56b32d72
+ms.openlocfilehash: d9a9df56074cde8735b54c12bbbf15a79e727497
+ms.sourcegitcommit: dc12a7cb66124596089f01d3e939027ae562ede9
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/21/2019
-ms.locfileid: "71175450"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71962929"
 ---
 # <a name="create-razor-web-apps"></a>Vytváření webových aplikací Razor
 
@@ -26,7 +26,7 @@ Visual Studio pro Mac poskytuje podporu pro úpravy Razor, včetně IntelliSense
 1. Na úvodní obrazovce vyberte **Nový** a vytvořte nový projekt:
 
    ![Visual Studio pro Mac nový projekt](media/razor-new.png)
-1. V dialogovém **okně Nový projekt** , přejít do**webové aplikace** **.NET Core** > **App** > a vyberte **Další**:
+1. V dialogovém okně **Nový projekt** otevřete**webovou aplikaci**  > **aplikace** **.NET Core** >  a vyberte **Další**:
 
    ![Šablona projektu Razor](media/razor-new-project1.png)
 1. Vyberte cílové rozhraní .NET Core (doporučujeme verzi 2,2 nebo novější) a pak vyberte **Další**. Vyberte název projektu a v případě potřeby přidejte podporu Gitu. Vyberte **vytvořit** a vytvořte projekt.
@@ -36,7 +36,7 @@ Visual Studio pro Mac poskytuje podporu pro úpravy Razor, včetně IntelliSense
    Visual Studio pro Mac otevře projekt v okně rozložení kódu.
 1. Spusťte projekt bez ladění pomocí **příkazu Command + Option + F5**.
 
-   Visual Studio spustí [Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), otevře prohlížeč `https://localhost:5001`a zobrazí svou první webovou aplikaci Razor.
+   Visual Studio spustí [Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), otevře prohlížeč pro `https://localhost:5001` a zobrazí svou první webovou aplikaci Razor.
 
    ![Webová aplikace Razor v Safari](media/razor-webapp.png)
 
@@ -47,8 +47,8 @@ Webové aplikace Razor obsahují následující součásti.
 ### <a name="pages-folder"></a>Složka stránky
 
 Tato složka obsahuje webové stránky projektu spolu s kódem na pozadí pro každý:
-* Soubor * *. cshtml* pro značky HTML a syntaxe Razor.
-* Soubor * *. cshtml.cs* pro C# kód na pozadí pro zpracování událostí stránky.
+   - Soubor *@no__t -1. cshtml* pro značky HTML a syntaxe Razor.
+   - Soubor *\*.cshtml.cs* pro C# kód na pozadí pro zpracování událostí stránky.
 
 Podpůrné soubory mají názvy začínající podtržítkem. Například soubor _Layout. cshtml nakonfiguruje prvky uživatelského rozhraní společné pro všechny stránky. Tento soubor nastaví navigační nabídku v horní části stránky a oznámení o autorských právech dole. Další informace najdete v tématu [rozložení v ASP.NET Core](https://docs.microsoft.com/aspnet/core/mvc/views/layout).
 
