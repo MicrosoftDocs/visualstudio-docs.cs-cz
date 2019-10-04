@@ -11,12 +11,12 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 3576e34b52e524b88300c089c2beda0be6ed0e28
-ms.sourcegitcommit: b56dc6fadc6c924beed36bb4c2ccc16cf6bcfa1c
+ms.openlocfilehash: 15e0b45fd77096ba2227391736aad5c895014d1c
+ms.sourcegitcommit: 0554b59a2a251661e56824fb9cd6e9b1f326cef1
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68740021"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71831874"
 ---
 # <a name="step-3-use-the-interactive-repl-window"></a>Krok 3: Používání interaktivního okna REPL
 
@@ -25,7 +25,7 @@ ms.locfileid: "68740021"
 Visual Studio **interaktivní** okna pro jazyk Python poskytuje bohaté čtení vyhodnocení print-loop (REPL) prostředí, který výrazně zkracuje obvykle cyklem editovat sestavit ladit. **Interaktivní** okno nabízí všechny funkce prostředí REPL pro Python příkazového řádku. Také umožňuje velmi snadno vyměňovat kódu s zdrojové soubory v sadě Visual Studio editor, který je jinak náročné s příkazovým řádkem.
 
 > [!NOTE]
-> V případě problémů s REPL se ujistěte, že `ipython` máte `ipykernel` nainstalované a balíčky a nápovědu k instalaci balíčků najdete na [kartě balíčky prostředí Python](https://docs.microsoft.com/en-us/visualstudio/python/python-environments-window-tab-reference#packages-tab).
+> V případě problémů s REPL se ujistěte, že máte nainstalované balíčky `ipython` a `ipykernel` a nápovědu k instalaci balíčků najdete na [kartě balíčky prostředí Python](https://docs.microsoft.com/en-us/visualstudio/python/python-environments-window-tab-reference#packages-tab).
 
 1. Otevřít **interaktivní** okno kliknutím pravým tlačítkem myši prostředí projektu Pythonu v **Průzkumníku řešení** (například **Python 3.6 (32bitová verze)** ukazuje předchozí obrázek) a Výběr **otevřít interaktivní okno**. Můžete také vybrat **zobrazení** > **ostatní Windows** > **Windows interaktivní Python** z hlavní nabídky sady Visual Studio.
 
@@ -54,7 +54,7 @@ Visual Studio **interaktivní** okna pro jazyk Python poskytuje bohaté čtení 
         return ' ' * int(20 * cos(radians(x)) + 20) + 'o'
     ```
 
-1. Vyberte pouze `import` a `from` příkazů v *.py* souboru, klikněte pravým tlačítkem a vyberte **zaslat do Interactive** (nebo stiskněte klávesu **Ctrl** + **Zadejte**). Fragment kódu se okamžitě vloží do **interaktivní** okno a spustit. Teď vyberte `make_dot_string` fungovat a zopakujte stejný příkaz, který se znovu spouští tento fragment kódu. Protože kód definuje funkci, můžete rychle otestovat tuto funkci voláním párkrát:
+1. V souboru *. py* vyberte příkazy funkce `import`, `from` a `make_dot_string`, klikněte pravým tlačítkem myši a vyberte **Odeslat do interaktivního** (nebo stiskněte klávesu @no__t **CTRL**-6**ENTER**). Fragment kódu se okamžitě vloží do **interaktivní** okno a spustit. Teď vyberte `make_dot_string` fungovat a zopakujte stejný příkaz, který se znovu spouští tento fragment kódu. Protože kód definuje funkci, můžete rychle otestovat tuto funkci voláním párkrát:
 
     ![Odeslání kódu do interaktivního okna a jeho otestování.](media/vs-getting-started-python-14-interactive4.png)
 
