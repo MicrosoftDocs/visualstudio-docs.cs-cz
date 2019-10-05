@@ -12,12 +12,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 517437bb1042d052520019c10899173cbc0bf988
-ms.sourcegitcommit: 44e9b1d9230fcbbd081ee81be9d4be8a485d8502
+ms.openlocfilehash: 5bbca5e46ee83764a6a431ae13829a882b1d859f
+ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180261"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71975164"
 ---
 # <a name="learn-to-use-the-code-editor"></a>Zjistěte, jak pomocí editoru kódu
 
@@ -58,7 +58,7 @@ Začněte tím, že vytváří se nový soubor a přidat nějaký kód do něj.
 
 ::: moniker-end
 
-2. V nabídce **soubor** na řádku nabídek vyberte možnost **Nový** > **soubor**.
+2. V nabídce **soubor** na řádku nabídek zvolte **Nový** **soubor** >  nebo stiskněte **CTRL**+**N**.
 
 3. V **nový soubor** dialogovém okně **Obecné** kategorie, zvolte **třídy Visual C#** a klikněte na tlačítko **otevřít**.
 
@@ -80,7 +80,7 @@ Visual Studio poskytuje užitečné *fragmenty kódu* , že vám pomůže rychle
 
    Zobrazí `static void Main()` podpis metody nechejte se přidat do souboru. [Main()](/dotnet/csharp/programming-guide/main-and-command-args/) metoda je vstupním bodem pro aplikace C#.
 
-Fragmenty kódu k dispozici lišit pro různé programovací jazyky. Můžete si prohlédnout fragmenty kódu k dispozici pro váš jazyk výběrem **upravit** > **IntelliSense** > **Vložit fragment**a pak Výběr složky váš jazyk. Pro jazyk C# v seznamu vypadá například takto:
+Fragmenty kódu k dispozici lišit pro různé programovací jazyky. Můžete se podívat na dostupné fragmenty kódu pro váš jazyk pomocí příkazu **upravit** > **IntelliSense** > **Vložit fragment kódu** nebo stisknout **klávesu Ctrl**+**K**, **CTRL**+**X**a pak vybrat Složka vašeho jazyka. Pro jazyk C# v seznamu vypadá například takto:
 
 ![Seznam fragment kódu jazyka C#](../media/tutorial-code-snippet-list.png)
 

@@ -8,12 +8,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 182c9e37764a247ec24b4b477975ccb7b8811c4b
-ms.sourcegitcommit: 4d2620bee4688fb881e09a07ea4a264b99f0743e
+ms.openlocfilehash: e1d26886eecf09ff8195b7a38338fa62e7f1d0bf
+ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71322551"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974953"
 ---
 # <a name="inspect-xaml-properties-while-debugging"></a>Kontrola vlastností XAML při ladění
 Můžete získat přehled o běhu kódu XAML v reálném čase pomocí **živého vizuálního stromu** a nástroje **Live Property Explorer**. Tyto nástroje poskytují stromové zobrazení prvků uživatelského rozhraní vaší běžící aplikace XAML a zobrazují vlastnosti modulu runtime libovolného prvku uživatelského rozhraní, který vyberete.
@@ -71,17 +71,19 @@ private void button_Click(object sender, RoutedEventArgs e)
 
 Sestavte projekt a spusťte ladění. (Konfigurace sestavení musí být ladit, nikoli vydaná verze. Další informace o konfiguracích sestavení naleznete v tématu [Principy konfigurací sestavení](../ide/understanding-build-configurations.md).)
 
-Až se okno objeví, klikněte několikrát na tlačítko **Přidat položku** . Mělo by se zobrazit něco podobného:
+Po zobrazení okna byste měli vidět, že se ve spuštěné aplikaci zobrazí panel nástrojů ve vaší aplikaci. 
 
-![Hlavní okno aplikace](../debugger/media/livevisualtree-app.png "LiveVIsualTree – aplikace")
+![Hlavní okno aplikace](../debugger/media/livevisualtree-app.png "LiveVIsualTree-App")
 
-Nyní otevřete okno **živého vizuálního stromu** (**ladění > Windows > živého vizuálního stromu**nebo ho Najděte na levé straně rozhraní IDE). Přetáhněte ho z jeho dokovací pozice, abychom se mohli podívat na toto okno a okno **živé vlastnosti** vedle sebe. V okně **živé vizuální stromové struktury** rozbalte uzel **ContentPresenter** . Měl by obsahovat uzly pro tlačítko a pole se seznamem. Rozbalte seznam (a pak **ScrollContentPresenter** a **ItemsPresenter**) a vyhledejte položky seznamu. Okno by mělo vypadat takto:
+Nyní kliknutím na tlačítko **Přidat položku** několikrát přidejte nové položky do seznamu.
 
-![ListBoxItems ve živém vizuálním stromu](../debugger/media/livevisualtree-listboxitems.png "LiveVisualTree – ListBoxItems")
+Potom otevřete okno **živého vizuálního stromu** kliknutím na tlačítko zcela vlevo na panelu nástrojů v aplikaci (nebo v části **ladění > Windows > živý vizuální strom**). Po otevření ho přetáhněte pryč z jeho dokovací pozice, abychom se mohli podívat na toto okno a okno **živé vlastnosti** vedle sebe. V okně **živé vizuální stromové struktury** rozbalte uzel **ContentPresenter** . Měl by obsahovat uzly pro tlačítko a pole se seznamem. Rozbalte seznam (a pak **ScrollContentPresenter** a **ItemsPresenter**) a vyhledejte položky seznamu. Okno by mělo vypadat takto:
+
+![ListBoxItems v živém vizuálním stromu](../debugger/media/livevisualtree-listboxitems.png "LiveVisualTree – ListBoxItems")
 
 Vraťte se do okna aplikace a přidejte několik dalších položek. V **živém vizuálním stromu**by se měla zobrazit více položek v poli se seznamem.
 
-Nyní se podívejme na vlastnosti jedné z položek seznamu. Vyberte první položku seznamu v **živém vizuálním stromu** a na panelu nástrojů klikněte na ikonu **Zobrazit vlastnosti** . Měl by se zobrazit **Průzkumník vlastností živě** . Všimněte si, že pole **Content** je "Item1 –" a pole**Barva** **pozadí** > je **#FFFFFFE0**. Vraťte se do **živého vizuálního stromu** a vyberte položku se seznamem sekund. V **Průzkumníku živých vlastností** by se měl zobrazit, že pole **Content** je "Item2" a pole**Barva** **pozadí** > je **#FFD3D3D3**.
+Nyní se podívejme na vlastnosti jedné z položek seznamu. Vyberte první položku seznamu v **živém vizuálním stromu** a na panelu nástrojů klikněte na ikonu **Zobrazit vlastnosti** . Měl by se zobrazit **Průzkumník vlastností živě** . Všimněte si, že pole **Content** je "Item1 –" a pole**barvy** na **pozadí** >  je **#FFFFFFE0**. Vraťte se do **živého vizuálního stromu** a vyberte položku se seznamem sekund. V **Průzkumníku živých vlastností** by se měl zobrazit, že pole **Content** je "Item2" a **#FFD3D3D3**pole**barvy** na **pozadí** > .
 
 > [!NOTE]
 > Žluté ohraničení kolem vlastnosti v nástroji **Live Property Explorer** znamená, že hodnota vlastnosti je nastavena prostřednictvím vazby, například `Color = {BindingExpression}`. Zelená ohraničení znamená, že hodnota je nastavena pomocí prostředku, například `Color = {StaticResource MyBrush}`.

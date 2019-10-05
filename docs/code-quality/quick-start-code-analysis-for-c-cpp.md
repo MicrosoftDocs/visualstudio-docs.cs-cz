@@ -1,6 +1,6 @@
 ---
 title: 'Rychlý start: Analýza kódu pro C/C++'
-description: Spuštění statické analýzy C++ kódu v sadě Visual Studio ke zjištění kódování běžné problémy a chyby.
+description: Spusťte statickou analýzu C++ kódu v aplikaci Visual Studio a zjistěte běžné problémy s kódováním a vady.
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,108 +11,108 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 039ffcd1717dba8ec3c76ae1ca4a691d60851ee5
-ms.sourcegitcommit: 6196d0b7fdcb08ba6d28a8151ad36b8d1139f2cc
+ms.openlocfilehash: c3132db62de6f2775a739adb82b24c759e4767dc
+ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65226067"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974904"
 ---
 # <a name="quickstart-code-analysis-for-cc"></a>Rychlý start: Analýza kódu pro C/C++
 
-Zlepšit kvalitu vaší aplikace při spuštění analýzy kódu pravidelně na kód jazyka C nebo C++. To může pomoct najít běžné problémy, porušování programovacím vhodné nebo chyb, které je obtížné vyhledat pomocí testování. Upozornění analýzy kódu se liší od kompilátoru chyby a upozornění, protože analýza kódu hledá vzory v konkrétním kódu, které jsou platné, ale přesto vytvořit problémy pro vy nebo ostatní uživatelé, kteří používají váš kód.
+Kvalitu aplikace můžete zlepšit spuštěním analýzy kódu pravidelně na jazyku C nebo C++ kódu. To vám může pomáhat najít běžné problémy, porušení dobrého programovacího postupu nebo vady, které se obtížně zjišťují prostřednictvím testování. Upozornění analýzy kódu se liší od kompilátoru chyby a upozornění, protože analýza kódu hledá vzory v konkrétním kódu, které jsou platné, ale přesto vytvořit problémy pro vy nebo ostatní uživatelé, kteří používají váš kód.
 
-## <a name="configure-rule-sets-for-a-project"></a>Konfigurace sady pravidel pro projekt
+## <a name="configure-rule-sets-for-a-project"></a>Konfigurace sad pravidel pro projekt
 
-1. V **Průzkumníka řešení**, otevřete místní nabídku pro název projektu a klikněte na tlačítko **vlastnosti**.
+1. V **Průzkumník řešení**otevřete místní nabídku pro název projektu a pak zvolte možnost **vlastnosti**.
 
 2. Následující kroky jsou volitelné:
 
-    1. V **konfigurace** a **platformy** seznamy, zvolte sestavení konfigurace a cílovou platformu.
+    1. V seznamech **Konfigurace** a **platforma** vyberte konfigurace sestavení a cílová platforma.
 
     2. Ve výchozím nastavení analýza kódu sestavu upozornění z kódu, který je automaticky generován externí nástroje. Chcete-li zobrazit upozornění z generovaného kódu, zrušte **potlačit Výsledky generovaného kódu** zaškrtávací políčko.
 
         > [!NOTE]
-        > Tato možnost není potlačit chyby analýzy kódu a upozornění z generovaného kódu při chyby a upozornění se zobrazí ve formulářích a šablony. Můžete jak zobrazit a spravovat zdrojový kód pro formuláře nebo šablony.
+        > Tato možnost není potlačit chyby analýzy kódu a upozornění z generovaného kódu při chyby a upozornění se zobrazí ve formulářích a šablony. Zdrojový kód formuláře nebo šablony můžete zobrazit a spravovat.
 
-3. Chcete-li spustit nástroj Analýza kódu pokaždé, když se sestavení projektu použitím vybrané konfigurace, vyberte **povolit analýzu kódu pro C/C++ při sestavení** zaškrtávací políčko. Můžete také spustit analýzu kódu ručně tak, že otevřete **analyzovat** nabídky a následným výběrem možnosti **spustit analýzu kódu na** *ProjectName*.
+3. Chcete-li spustit analýzu kódu pokaždé, když je projekt sestaven pomocí vybrané konfigurace, zaškrtněte políčko **Povolit analýzu kódu proC++ sestavení C/on** . Analýzu kódu lze také spustit ručně otevřením nabídky **analyzovat** a následným výběrem možnosti **Spustit analýzu kódu v** *ProjectName*.
 
 4. V **spustit tuto sadu pravidel** seznamu, proveďte jednu z následujících akcí:
 
     - Vyberte sadu pravidel, kterou chcete použít.
 
-    - Zvolte  **\<Procházet... >** zadat sadu existujících vlastních pravidel, která se nenachází v seznamu.
+    - Zvolte **\<Browse >** a zadejte existující vlastní sadu pravidel, která není v seznamu.
 
     - Definování [vlastní sady pravidel](../code-quality/how-to-create-a-custom-rule-set.md).
 
-### <a name="standard-cc-rule-sets"></a>Sady pravidel standardním C/C++
+### <a name="standard-cc-rule-sets"></a>Standardní sady CC++ /pravidla
 
-Visual Studio obsahuje dvě standardní sady pravidel pro nativní kód:
+Sada Visual Studio obsahuje dvě standardní sady pravidel pro nativní kód:
 
 |Sada pravidel|Popis|
 |--------------|-----------------|
-|Microsoft nativní Minimální doporučená pravidla|Tato sada pravidel se soustředí na nejdůležitější problémy v nativním kódu, včetně možných bezpečnostních děr a selhání aplikace. Měli byste zahrnout tuto sadu pravidel v jakékoli vlastní sadě pravidel, že kterou vytvoříte pro vaše nativní projekty.|
-|Microsoft nativní doporučená pravidla|Tato sada pravidel obsahuje celou řadu problémů. Obsahuje všechna pravidla v Microsoft nativní Minimální doporučená pravidla.|
+|Nativní minimální doporučená pravidla společnosti Microsoft|Tato sada pravidel se zaměřuje na nejdůležitější problémy v nativním kódu, včetně možných bezpečnostních děr a chyb aplikací. Tuto sadu pravidel byste měli zahrnout v jakékoli vlastní sadě pravidel, kterou vytvoříte pro vaše nativní projekty.|
+|Nativní doporučená pravidla společnosti Microsoft|Tato sada pravidel se zabývá širokou škálou problémů. Obsahuje všechna pravidla pro nativní minimální doporučená pravidla společnosti Microsoft.|
 
-## <a name="run-code-analysis"></a>Spuštění analýzy kódu
+## <a name="run-code-analysis"></a>Spustit analýzu kódu
 
-Na stránce analýzy kódu na stránkách vlastností projektu můžete konfigurovat analýzu kódu při každém spuštění sestavení projektu. Analýza kódu můžete spustit také ručně.
+Na stránce Analýza kódu na stránkách vlastností projektu můžete nakonfigurovat analýzu kódu, která se spustí při každém sestavení projektu. Můžete také spustit analýzu kódu ručně.
 
-Spuštění analýzy kódu pro řešení:
+Spuštění analýzy kódu v řešení:
 
 - Na **sestavení** nabídce zvolte **spustit analýzu kódu na řešení**.
 
-Chcete-li spustit analýzu kódu na projektu:
+Spuštění analýzy kódu v projektu:
 
-1. V Průzkumníku řešení vyberte název projektu.
+1. V Průzkumník řešení vyberte název projektu.
 
-2. Na **sestavení** nabídce zvolte **spustit analýzu kódu na** *název projektu*.
+2. V nabídce **sestavení** vyberte možnost **Spustit analýzu kódu pro** *název projektu*.
 
-   Projekt nebo řešení je zkompilován a spuštění analýzy kódu. Výsledky se zobrazí v seznamu chyb.
+   Projekt nebo řešení jsou kompilovány a je spuštěna analýza kódu. Výsledky se zobrazí v Seznam chyb.
 
-## <a name="analyze-and-resolve-code-analysis-warnings"></a>Analýza a řešení upozornění analýzy kódu
+## <a name="analyze-and-resolve-code-analysis-warnings"></a>Analyzovat a vyřešit upozornění analýzy kódu
 
-Pokud chcete analyzovat konkrétního upozornění, vyberte záhlaví upozornění v seznamu chyb. Upozornění rozšíří a zobrazte další informace o problému. Pokud je to možné, analýza kódu zobrazuje čísla řádků a analýzy logiku, která vedla k upozornění. Podrobné informace o upozornění, včetně možná řešení problému zvolte ID upozornění zobrazíte jeho odpovídající online téma nápovědy.
+Chcete-li analyzovat konkrétní upozornění, vyberte název upozornění v Seznam chyb. Upozornění se rozbalí, aby se zobrazily další informace o problému. Pokud je to možné, analýza kódu zobrazuje čísla řádků a logiku analýzy, která vedla k upozornění. Chcete-li získat podrobné informace o upozornění, včetně možných řešení problému, vyberte ID upozornění, abyste zobrazili příslušné téma online nápovědy.
 
-Při výběru upozornění na řádek kódu, který způsobil toto upozornění je zvýrazněn v editoru kódu sady Visual Studio.
+Když vyberete upozornění, zvýrazní se řádek kódu, který způsobil upozornění, v editoru kódu sady Visual Studio.
 
-Po zjištění problému ho mohli vyřešit ve vašem kódu. Potom znovu spusťte analýzu kódu, abyste měli jistotu, že upozornění již nezobrazuje v seznamu chyb a všechna nová upozornění, že jste kód opravili správně nebyla vyvolána.
+Po zjištění problému ho mohli vyřešit ve vašem kódu. Pak znovu spusťte analýzu kódu, abyste se ujistili, že se už nezobrazuje v Seznam chyb a že vaše oprava nevyvolala žádná nová upozornění.
 
-## <a name="suppress-code-analysis-warnings"></a>Potlačení upozornění analýzy kódu
+## <a name="suppress-code-analysis-warnings"></a>Potlačit upozornění analýzy kódu
 
-Existují situace, kdy byste se mohli rozhodnot Neopravovat upozornění analýzy kódu. Můžete se rozhodnout, že řešení upozornění vyžaduje příliš mnoho nahrávání ve vztahu k pravděpodobnost, že problém vzniknou v žádné Skutečná implementace kódu. Nebo může domnívat, že je nevhodná pro konkrétní kontext, který se používá v tomto upozornění analýzy. Jednotlivá upozornění můžete potlačit tak, aby se nebude zobrazovat v seznamu chyb.
+Existují situace, kdy byste se mohli rozhodnot Neopravovat upozornění analýzy kódu. Můžete se rozhodnout, že řešení upozornění vyžaduje příliš mnoho nahrávání ve vztahu k pravděpodobnost, že problém vzniknou v žádné Skutečná implementace kódu. Nebo může domnívat, že je nevhodná pro konkrétní kontext, který se používá v tomto upozornění analýzy. Jednotlivá upozornění můžete potlačit, aby se už nezobrazovala v Seznam chyb.
 
 Chcete-li potlačit upozornění:
 
-1. Pokud se zobrazí podrobné informace, vyberte název upozornění a rozbalte ho.
+1. Pokud se nezobrazují podrobné informace, vyberte název upozornění a rozbalte ho.
 
 2. Zvolte **akce** odkaz v dolní části upozornění.
 
-3. Zvolte **potlačit zprávu** a klikněte na tlačítko **zdroje v**.
+3. Zvolte možnost **potlačit zprávu** a pak zvolte možnost **zdroj**.
 
-   Potlačení zprávy vloží `#pragma warning (disable:[warning ID])` , který potlačí případná upozornění pro řádek kódu.
+   Potlačení vložení zprávy `#pragma warning (disable:[warning ID])`, které potlačí upozornění na řádek kódu.
 
-## <a name="create-work-items-for-code-analysis-warnings"></a>Vytvoření pracovní položky pro kód upozornění analýzy
+## <a name="create-work-items-for-code-analysis-warnings"></a>Vytváření pracovních položek pro upozornění analýzy kódu
 
-Funkce sledování pracovní položky můžete použít k protokolování chyb z Visual Studia. Chcete-li tuto funkci používat, musí připojit k instanci serveru Team Foundation Server.
+Funkci sledování pracovní položky můžete použít k protokolování chyb z aplikace Visual Studio. Chcete-li použít tuto funkci, je nutné se připojit k instanci Team Foundation Server.
 
-**Chcete-li vytvořit pracovní položku pro jeden nebo více upozornění kódu C/C++**
+**Vytvoření pracovní položky pro jedno nebo více upozornění C/C++ kódu**
 
-1. V seznamu chyb rozbalte a vyberte upozornění
+1. V Seznam chyb rozbalte a vyberte upozornění.
 
-2. V místní nabídce pro upozornění, zvolte **vytvořit pracovní položku**a pak zvolte typ pracovní položky.
+2. V místní nabídce pro upozornění zvolte **vytvořit pracovní položku**a pak zvolte typ pracovní položky.
 
-3. Visual Studio vytvoří jedné pracovní položky pro vybrané upozornění a pracovní položky se zobrazí v okně dokumentu rozhraní IDE.
+3. Visual Studio vytvoří jednu pracovní položku pro vybraná upozornění a zobrazí pracovní položku v okně dokumentu integrovaného vývojového prostředí (IDE).
 
-4. Přidat žádné další informace a klikněte na tlačítko **uložit pracovní položku**.
+4. Přidejte další informace a pak zvolte **Uložit pracovní položku**.
 
-## <a name="search-and-filter-code-analysis-results"></a>Vyhledávání a filtrování výsledků analýzy kódu
+## <a name="search-and-filter-code-analysis-results"></a>Hledání a filtrování výsledků analýzy kódu
 
 Můžete hledat dlouhé seznamy varovné zprávy a upozornění v řešení vícenásobného projektu můžete filtrovat.
 
-- **Filtr upozornění podle názvu nebo id upozornění**: Do vyhledávacího pole zadejte klíčové slovo.
+- **Filtrování upozornění podle názvu nebo ID upozornění**: Do vyhledávacího pole zadejte klíčové slovo.
 
-- **Filtr upozornění podle závažnosti**: Ve výchozím nastavení, zprávy analýzy kódu jsou přiřazeny závažnost **upozornění**. Můžete přiřadit závažnost jednu nebo více zpráv jako **chyba** sada vlastních pravidel. Na **závažnost** sloupec **seznam chyb**, zvolte šipku rozevíracího seznamu a klikněte na ikonu filtru. Zvolte **upozornění** nebo **chyba** zobrazíte jen zprávy, které jsou přiřazeny příslušných závažnosti. Zvolte **Vybrat vše** zobrazíte všechny zprávy.
+- **Filtrování upozornění podle závažnosti**: Ve výchozím nastavení jsou zprávy nástroje Code Analysis přiřazeny závažnost **Upozornění**. Závažnost jedné nebo více zpráv můžete přiřadit jako **chybu** v sadě vlastních pravidel. Ve sloupci **závažnost** **Seznam chyb**klikněte na šipku rozevíracího seznamu a pak na ikonu filtru. Chcete-li zobrazit pouze zprávy, které jsou přiřazeny příslušné závažnosti, vyberte možnost **Upozornění** nebo **Chyba** . Zvolte **možnost Vybrat vše** , chcete-li zobrazit všechny zprávy.
 
 ## <a name="see-also"></a>Viz také:
 

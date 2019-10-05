@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 284f33d9d7af885958ed13101e1449edc5c8f2be
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: a09c44962b2737407a3ce7274ccb9c9664908dcf
+ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551084"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974941"
 ---
 # <a name="install-net-compiler-platform-code-analyzers"></a>Nainstalovat .NET Compiler Platform analyzátory kódu
 
@@ -26,20 +26,20 @@ Sada Visual Studio obsahuje základní sadu analyzátorů .NET Compiler Platform
 
 1. Najděte balíček analyzátoru, který chcete nainstalovat na www.nuget.org.
 
-   Například můžete chtít nainstalovat analyzátory nástroje [Microsoft FxCop](install-fxcop-analyzers.md#to-install-fxcop-analyzers-as-a-nuget-package) , abyste mohli kontrolovat kód pro problémy se zabezpečením a výkonem mimo jiné. Případně nainstalujte [StyleCopAnalyzers](https://www.nuget.org/packages/stylecop.analyzers/) a vyhledejte problémy se stylem v základu kódu.
+   Například můžete chtít [nainstalovat analyzátory nástroje Microsoft FxCop](install-fxcop-analyzers.md#nuget-package) , abyste mohli kontrolovat kód pro problémy se zabezpečením a výkonem mimo jiné. Případně nainstalujte [StyleCopAnalyzers](https://www.nuget.org/packages/stylecop.analyzers/) a vyhledejte problémy se stylem v základu kódu.
 
 2. Nainstalujte balíček v aplikaci Visual Studio pomocí [konzoly Správce balíčků](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console) nebo [uživatelského rozhraní Správce balíčků](/nuget/quickstart/install-and-use-a-package-in-visual-studio#package-manager-console).
 
    > [!NOTE]
    > Stránka www.nuget.org pro každý balíček analyzátoru zobrazuje příkaz pro vložení do **konzoly Správce balíčků**. Je k dispozici i praktické tlačítko ke zkopírování textu do schránky.
 
-   Sestavení analyzátoru jsou nainstalována a zobrazí se v **Průzkumník řešení** v části**analyzátory** **odkazů** > .
+   Sestavení analyzátoru jsou nainstalována a zobrazí se v **Průzkumník řešení** v části **odkazy** > **analyzátory**.
 
 ## <a name="to-install-vsix-analyzers"></a>Instalace analyzátorů VSIX
 
 ::: moniker range="vs-2017"
 
-1. V aplikaci Visual Studio vyberte rozšíření **nástrojů** > **a aktualizace**.
+1. V aplikaci Visual Studio vyberte **nástroje** > **rozšíření a aktualizace**.
 
    Otevře se dialogové okno **rozšíření a aktualizace** .
 
@@ -61,7 +61,7 @@ Sada Visual Studio obsahuje základní sadu analyzátorů .NET Compiler Platform
 
 2. V levém podokně rozbalte položku **online** a vyberte možnost **Visual Studio Marketplace**.
 
-3. Do vyhledávacího pole zadejte název rozšíření analyzátoru, které chcete nainstalovat. Například můžete chtít nainstalovat analyzátory nástroje [Microsoft FxCop](install-fxcop-analyzers.md#to-install-fxcop-analyzers-as-a-vsix) , abyste mohli kontrolovat kód pro problémy se zabezpečením a výkonem mimo jiné.
+3. Do vyhledávacího pole zadejte název rozšíření analyzátoru, které chcete nainstalovat. Například můžete chtít [nainstalovat analyzátory nástroje Microsoft FxCop](install-fxcop-analyzers.md#vsix) , abyste mohli kontrolovat kód pro problémy se zabezpečením a výkonem mimo jiné.
 
 4. Vyberte **Stáhnout**.
 
@@ -81,7 +81,7 @@ Sada Visual Studio obsahuje základní sadu analyzátorů .NET Compiler Platform
 
 ::: moniker range="vs-2017"
 
-Chcete-li ověřit, zda je rozšíření nainstalováno, vyberte možnost**rozšíření a aktualizace** **nástroje** > . V dialogovém okně **rozšíření a aktualizace** vyberte nainstalovanou kategorii na levé straně a potom vyhledejte rozšíření podle názvu.
+Chcete-li ověřit, zda je rozšíření nainstalováno, vyberte možnost **nástroje** > **rozšíření a aktualizace**. V dialogovém okně **rozšíření a aktualizace** vyberte **nainstalovanou** kategorii na levé straně a potom vyhledejte rozšíření podle názvu.
 
 ::: moniker-end
 

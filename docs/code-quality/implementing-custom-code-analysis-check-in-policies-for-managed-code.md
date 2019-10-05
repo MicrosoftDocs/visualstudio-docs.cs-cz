@@ -1,5 +1,5 @@
 ---
-title: Vlastní vrácení se změnami zásad vrácení analýzy kódu pro spravovaný kód
+title: Vlastní zásady vrácení se změnami analýzy kódu pro spravovaný kód
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -12,12 +12,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6619e3bb988a555fba5718f609ff3a5f0584063b
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 55294f7418de085cb4ceccd4063a4b2b55cbc6c4
+ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66260831"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71975037"
 ---
 # <a name="implement-custom-code-analysis-check-in-policies-for-managed-code"></a>Implementace vlastních zásad vracení zpět se změnami analýzy kódu pro spravovaný kód
 
@@ -110,10 +110,18 @@ Zadáte pravidlo zásad vrácení se změnami projektu nastavit jako sada pravid
 
 4. V případě potřeby klikněte na příslušné možnosti v **konfigurace** a **platformy** seznamy.
 
-5. Chcete-li spustit analýzu kódu pokaždé, když kód projekt se vytvořil pomocí zadané konfigurace, vyberte **povolit analýzu kódu na sestavení (definuje konstantu CODE_ANALYSIS)** zaškrtávací políčko.
+::: moniker range="vs-2017"
 
-6. Chcete-li ignorovat kód v součásti od jiných společností, vyberte **potlačit Výsledky generovaného kódu** zaškrtávací políčko.
+5. Chcete-li spustit analýzu kódu pokaždé, když je projekt kódu sestaven pomocí zadané konfigurace, vyberte možnost **Povolit analýzu kódu při sestavení**.
 
-7. V **spustit tuto sadu pravidel** klikněte na možnost  **\<Procházet... >** .
+::: moniker-end
 
-8. Zadejte místní verzi souboru sady pravidel zásad vrácení se změnami.
+::: moniker range=">=vs-2019"
+
+5. Chcete-li spustit analýzu kódu pokaždé, když je projekt kódu sestaven pomocí zadané konfigurace, vyberte možnost **Spustit při sestavení** v části **binární analyzátory** .
+
+::: moniker-end
+
+6. V seznamu **Spustit tuto sadu pravidel** klikněte na **\<Browse >** .
+
+8. Vyberte místní verzi souboru sady pravidel zásad vracení se změnami.

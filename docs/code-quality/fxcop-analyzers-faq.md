@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 42581e632c08550fce3cd685949401a155a060f6
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 3dc304d8d6bf844fb9c23f0e92efc5250da91e4d
+ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71253184"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71975141"
 ---
 # <a name="frequently-asked-questions-about-fxcop-and-fxcop-analyzers"></a>Nejčastější dotazy k analyzátorům FxCop a FxCop
 
@@ -24,18 +24,18 @@ Může být trochu matoucí pochopit rozdíly mezi staršími analyzátory FxCop
 
 Starší verze FxCop spustí analýzu po sestavení u zkompilovaného sestavení. Spouští se jako samostatný spustitelný soubor s názvem **FxCopCmd. exe**. FxCopCmd. exe načte zkompilované sestavení, spustí analýzu kódu a pak nahlásí výsledky (nebo *diagnostiku*).
 
-Analyzátory FxCop jsou založené na .NET Compiler Platform ("Roslyn"). [Nainstalujete je jako balíček NuGet](install-fxcop-analyzers.md#to-install-fxcop-analyzers-as-a-nuget-package) , na který se odkazuje v projektu nebo řešení. Analyzátory FxCop spouštějí analýzu založenou na zdrojovém kódu během provádění kompilátoru. Analyzátory FxCop se hostují v procesu kompilátoru, a to buď **CSc. exe** , nebo **Vbc. exe**, a při sestavení projektu se spustí analýza. Výsledky analyzátoru jsou hlášeny spolu s výsledky kompilátoru.
+Analyzátory FxCop jsou založené na .NET Compiler Platform ("Roslyn"). [Nainstalujete je jako balíček NuGet](install-fxcop-analyzers.md#nuget-package) , na který se odkazuje v projektu nebo řešení. Analyzátory FxCop spouštějí analýzu založenou na zdrojovém kódu během provádění kompilátoru. Analyzátory FxCop se hostují v procesu kompilátoru, a to buď **CSc. exe** , nebo **Vbc. exe**, a při sestavení projektu se spustí analýza. Výsledky analyzátoru jsou hlášeny spolu s výsledky kompilátoru.
 
 > [!NOTE]
-> [Analyzátory FxCop můžete nainstalovat také jako rozšíření sady Visual Studio](install-fxcop-analyzers.md#to-install-fxcop-analyzers-as-a-vsix). V tomto případě se analyzátory spustí při psaní v editoru kódu, ale nespustí se v době sestavení. Pokud chcete spustit analyzátory FxCop jako součást průběžné integrace (CI), nainstalujte je místo toho jako balíček NuGet.
+> [Analyzátory FxCop můžete nainstalovat také jako rozšíření sady Visual Studio](install-fxcop-analyzers.md#vsix). V tomto případě se analyzátory spustí při psaní v editoru kódu, ale nespustí se v době sestavení. Pokud chcete spustit analyzátory FxCop jako součást průběžné integrace (CI), nainstalujte je místo toho jako balíček NuGet.
 
 ## <a name="does-the-run-code-analysis-command-run-fxcop-analyzers"></a>Spouští se v příkazu Run Code Analysis analyzátory FxCop?
 
-Ne. Když vyberete možnost **analyzovat** > **spuštění analýzy kódu**, spustí se starší verze analýzy. **Spuštění analýzy kódu** nemá žádný vliv na analyzátory založené na Roslyn, včetně analyzátorů FxCop založených na Roslyn.
+Ne. Když vyberete možnost **analyzovat** > **Spustit analýzu kódu**, spustí se starší verze analýzy. **Spuštění analýzy kódu** nemá žádný vliv na analyzátory založené na Roslyn, včetně analyzátorů FxCop založených na Roslyn.
 
 ## <a name="does-the-runcodeanalysis-msbuild-project-property-run-analyzers"></a>Spouští se v nástroji RunCodeAnalysis MSBuild rutiny analyzátorů?
 
-Ne. Vlastnost **RunCodeAnalysis** v souboru projektu (například *. csproj*) se používá pouze ke spuštění starší verze FxCop. Spustí úlohu MSBuild po sestavení, která vyvolá **FxCopCmd. exe**. Jedná se o ekvivalent výběru možnosti **analyzovat** > **běh kódu** v aplikaci Visual Studio.
+Ne. Vlastnost **RunCodeAnalysis** v souboru projektu (například *. csproj*) se používá pouze ke spuštění starší verze FxCop. Spustí úlohu MSBuild po sestavení, která vyvolá **FxCopCmd. exe**. Jedná se o ekvivalent výběru možnosti **analyzovat** > **Spustit analýzu kódu** v aplikaci Visual Studio.
 
 ## <a name="so-how-do-i-run-fxcop-analyzers-then"></a>Jak tedy spustím analyzátory FxCop?
 

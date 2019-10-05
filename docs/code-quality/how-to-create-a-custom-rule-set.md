@@ -1,5 +1,5 @@
 ---
-title: Vytvoření sady pravidel analýzy vlastního kódu
+title: Vytvoření vlastní sady pravidel pro analýzu kódu
 ms.date: 11/02/2018
 ms.topic: conceptual
 f1_keywords:
@@ -11,74 +11,94 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f2f642ea8e41e4a9ccf2b35f432df528fc5e81d0
-ms.sourcegitcommit: 08fc78516f1107b83f46e2401888df4868bb1e40
+ms.openlocfilehash: 4b52bb573b9a98c5a797f67cdbd4608f8b8636da
+ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65676564"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71975103"
 ---
 # <a name="customize-a-rule-set"></a>Přizpůsobení sady pravidel
 
-Můžete vytvořit vlastní sadu pravidel, která podle potřeb konkrétního projektu pro analýzu kódu.
+Můžete vytvořit vlastní sadu pravidel pro splnění konkrétních potřeb projektu pro analýzu kódu.
 
-## <a name="create-a-custom-rule-set-from-an-existing-rule-set"></a>Vytvoření vlastního pravidla nastavení z existující sady pravidel
+## <a name="create-a-custom-rule-set-from-an-existing-rule-set"></a>Vytvoření vlastní sady pravidel z existující sady pravidel
 
-Chcete-li vytvořit vlastní pravidlo nastavte, můžete otevřít sadu předdefinovaných pravidel **s editorem sad pravidel**. Odtud můžete přidat nebo odebrat konkrétní pravidla a akce, která nastane, pokud došlo k porušení pravidla můžete změnit&mdash;například zobrazit upozornění nebo chybu.
+Pokud chcete vytvořit vlastní sadu pravidel, můžete v **editoru sad pravidel**otevřít integrovanou sadu pravidel. Odtud můžete přidat nebo odebrat specifická pravidla a akci, ke které dojde, když je pravidlo porušené @ no__t-0for, zobrazí se upozornění nebo chyba.
 
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt a pak vyberte **vlastnosti**.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt a pak vyberte **vlastnosti**.
 
-2. Na **vlastnosti** stránky, vyberte **analýzy kódu** kartu.
+2. Na stránkách **vlastnosti** vyberte kartu **Analýza kódu** .
 
-3. V **spustit tuto sadu pravidel** rozevíracího seznamu, proveďte jednu z následujících akcí:
+::: moniker range="vs-2017"
 
-   - Vyberte sadu pravidel, který chcete přizpůsobit.
+3. V rozevíracím seznamu **Spustit tuto sadu pravidel** proveďte jednu z následujících akcí:
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+3. V rozevíracím seznamu **aktivní pravidla** proveďte jednu z následujících akcí:
+
+::: moniker-end
+
+   - Vyberte sadu pravidel, kterou chcete upravit.
 
      \- nebo –
 
-   - Vyberte  **\<Procházet... >** zadat sadu existujících pravidel, která se nenachází v seznamu.
+   - Pokud chcete zadat existující sadu pravidel, která není v seznamu, vyberte **\<Browse >** .
 
-4. Vyberte **otevřít** zobrazíte pravidla v editoru sad pravidel.
+4. Vyberte **otevřít** a zobrazte pravidla v editoru sad pravidel.
 
 > [!NOTE]
-> Pokud máte projekt .NET Core nebo .NET Standard, proces se mírně liší, protože neexistuje žádný **analýzy kódu** kartu vlastností. Uvedený postup [zkopírujte předem definované pravidlo, nastavte do vašeho projektu a nastavte ji jako aktivní sadu pravidel](analyzer-rule-sets.md). Po zkopírování přes sadu pravidel, můžete [upravit v sadě Visual Studio s editorem sad pravidel](working-in-the-code-analysis-rule-set-editor.md) otevřením z **Průzkumníka řešení**.
+> Pokud máte projekt .NET Core nebo .NET Standard, proces je trochu odlišný, protože není k dispozici žádná karta vlastnost **Analýza kódu** . Použijte postup [Kopírování předdefinované sady pravidel do projektu a nastavte ji jako aktivní sadu pravidel](analyzer-rule-sets.md). Po zkopírování sady pravidel [ji můžete upravit v editoru sad pravidel sady Visual Studio](working-in-the-code-analysis-rule-set-editor.md) otevřením z **Průzkumník řešení**.
 
-## <a name="create-a-new-rule-set"></a>Vytvoření nové sady pravidel
+## <a name="create-a-new-rule-set"></a>Vytvořit novou sadu pravidel
 
-Můžete vytvořit nový soubor sady pravidel z **nový soubor** dialogové okno:
+V dialogovém okně **nový soubor** můžete vytvořit nový soubor sady pravidel:
 
-1. Vyberte **souboru** > **nový** > **souboru**, nebo stiskněte klávesu **Ctrl**+**N**.
+1. Vyberte **soubor** > **Nový** **soubor** >  nebo stiskněte klávesu **CTRL**+**N**.
 
-2. V **nový soubor** dialogové okno, vyberte **Obecné** kategorii na levé straně a pak vyberte **sady pravidel analýzy kódu**.
+2. V dialogovém okně **nový soubor** vyberte na levé straně kategorii **Obecné** a pak vyberte **sadu pravidel nástroje Analýza kódu**.
 
 3. Vyberte **Open** (Otevřít).
 
-   Nové *.ruleset* soubor se otevře v editoru sad pravidel.
+   Nový soubor *. ruleset* se otevře v editoru sad pravidel.
 
-## <a name="create-a-custom-rule-set-from-multiple-rule-sets"></a>Vytvoření vlastního pravidla nastavit z více sad pravidel
+## <a name="create-a-custom-rule-set-from-multiple-rule-sets"></a>Vytvoření vlastní sady pravidel z více sad pravidel
 
 > [!NOTE]
-> Následující postup se nevztahují na projekty .NET Core, které nemají **analýzy kódu** kartu vlastností.
+> Následující postup neplatí pro projekty .NET Core, které nemají kartu vlastnost **analýzy kódu** .
 
-1. V **Průzkumníka řešení**, klikněte pravým tlačítkem na projekt a pak vyberte **vlastnosti**.
+1. V **Průzkumník řešení**klikněte pravým tlačítkem na projekt a pak vyberte **vlastnosti**.
 
-2. Na **vlastnosti** stránky, vyberte **analýzy kódu** kartu.
+2. Na stránkách **vlastnosti** vyberte kartu **Analýza kódu** .
 
-3. Vyberte  **\<zvolit sady více pravidel... >** z **spustit tuto sadu pravidel**.
+::: moniker range="vs-2017"
 
-4. V **přidat nebo odebrat sady pravidel** dialogové okno, vyberte pravidlo sad, které chcete zahrnout do nové sady pravidel.
+3. Vyberte **\<Choose více sad pravidel >** z **spuštění této sady pravidel**.
 
-   ![Přidání nebo odebrání dialogové okno sady pravidel](media/add-remove-rule-sets.png)
+::: moniker-end
 
-5. Vyberte **uložit jako**, zadejte název *.ruleset* souboru a pak vyberte **Uložit**.
+::: moniker range=">=vs-2019"
 
-   Nová sada pravidel je vybrán v **spustit tuto sadu pravidel** seznamu.
+3. Vyberte **\<Choose více sad pravidel >** z **aktivních pravidel**.
 
-6. Vyberte **otevřete** otevřete novou sadu pravidel v editoru sad pravidel.
+::: moniker-end
+
+4. V dialogovém okně **Přidat nebo odebrat sady pravidel** vyberte sady pravidel, které chcete zahrnout do nové sady pravidel.
+
+   ![Dialogové okno Přidat nebo odebrat sady pravidel](media/add-remove-rule-sets.png)
+
+5. Vyberte **Uložit jako**, zadejte název souboru *. ruleset* a pak vyberte **Save (Uložit**).
+
+   V seznamu **Spustit sadu pravidel** je vybraná nová sada pravidel.
+
+6. Výběrem **otevřít** otevřete novou sadu pravidel v editoru sad pravidel.
 
 ## <a name="rule-precedence"></a>Priorita pravidla
 
-- Pokud je uvedené dva stejné pravidlo nebo víckrát v pravidle nastavit s jinou závažností, kompilátor vygeneruje chybu. Příklad:
+- Pokud je stejné pravidlo uvedeno v sadě pravidel v jednom nebo více časech s různými závažnostmi, kompilátor vygeneruje chybu. Příklad:
 
    ```xml
    <RuleSet Name="Rules for ClassLibrary21" Description="Code analysis rules for ClassLibrary21.csproj." ToolsVersion="15.0">
@@ -89,11 +109,11 @@ Můžete vytvořit nový soubor sady pravidel z **nový soubor** dialogové okno
    </RuleSet>
    ```
 
-- Pokud je uvedené dva stejné pravidlo nebo vícekrát v pravidle nastavit s *stejné* závažnost, může zobrazit následující upozornění v **seznam chyb**:
+- Pokud je stejné pravidlo uvedeno v sadě *pravidel se stejnou závažností* dvakrát nebo vícekrát, může se v **Seznam chyb**zobrazit následující upozornění:
 
-   **CA0063: Nepovedlo se načíst soubor sady pravidel '\[vaše] .ruleset ' nebo jeden z jeho závislých pravidlo nastavit soubory. Soubor neodpovídá schématu sady pravidel.**
+   @NO__T – 0CA0063: Nepodařilo se načíst soubor sady pravidel ' \[your]. ruleset ' nebo jeden z jeho závislých souborů sady pravidel. Soubor není v souladu se schématem sady pravidel. **
 
-- Pokud sada pravidel obsahuje podřízeným pravidlem nastavení s použitím **zahrnout** značky i podřízené a nadřazené sady pravidel seznamu stejné pravidlo, ale s jinou závažností, pak závažnost v nadřazené sadě pravidel má přednost. Příklad:
+- Pokud sada pravidel obsahuje podřízenou sadu pravidel pomocí tagu **include** a podřízené a nadřazené pravidlo nastaví stejné pravidlo, ale s různou závažností, má přednost i závažnost v nadřazené sadě pravidel. Příklad:
 
    ```xml
    <!-- Parent rule set -->
@@ -116,16 +136,16 @@ Můžete vytvořit nový soubor sady pravidel z **nový soubor** dialogové okno
 
 ## <a name="name-and-description"></a>Název a popis
 
-Chcete-li změnit zobrazovaný název sady pravidel, která je otevřená v editoru, otevřete **vlastnosti** okna tak, že vyberete **zobrazení** > **okno vlastností** na řádku nabídek. Zadejte zobrazovaný název v **název** pole. Můžete také zadat popis sady pravidel.
+Chcete-li změnit zobrazovaný název sady pravidel otevřené v editoru, otevřete okno **vlastnosti** výběrem možnosti **Zobrazit** > **okno vlastností** na řádku nabídek. Do pole **název** zadejte zobrazovaný název. Můžete také zadat popis sady pravidel.
 
 ## <a name="next-steps"></a>Další kroky
 
-Teď, když máte sadu pravidel, dalším krokem je přizpůsobit pravidla přidáváním nebo odebíráním pravidel nebo změna závažnosti porušení pravidel.
+Teď, když máte nastavené pravidlo, je dalším krokem přizpůsobení pravidel přidáním nebo odebráním pravidel nebo úpravou závažnosti porušení pravidel.
 
 > [!div class="nextstepaction"]
 > [Úprava pravidel v editoru sad pravidel](../code-quality/working-in-the-code-analysis-rule-set-editor.md)
 
 ## <a name="see-also"></a>Viz také:
 
-- [Postupy: Konfigurace analýzy kódu pro spravovaný projekt kódu](../code-quality/how-to-configure-code-analysis-for-a-managed-code-project.md)
+- [Postupy: Konfigurace analýzy kódu pro projekt spravovaného kódu @ no__t-0
 - [Referenční dokumentace sady pravidel nástroje Analýza kódu](../code-quality/rule-set-reference.md)

@@ -13,21 +13,19 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a1b09b77eb051d32a3aabb929e9058786215cfb4
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 86aa308369ef93792126c7f8da5f59f94ef0c02a
+ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551048"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71975106"
 ---
 # <a name="how-to-configure-legacy-analysis-for-managed-code"></a>Postupy: Konfigurace starší verze analýzy pro spravovaný kód
 
 V sadě Visual Studio můžete zvolit ze seznamu [sad pravidel](../code-quality/rule-set-reference.md) analýzy kódu, které se mají použít pro projekt spravovaného kódu. Ve výchozím nastavení **Microsoft Minimální doporučená pravidla** je vybraná sada pravidel, můžete ale použít jinou sadu v případě potřeby pravidel. Sady pravidel lze použít na jeden nebo více projektů v řešení.
 
-Informace o tom, jak nakonfigurovat sadu pravidel pro webové aplikace v ASP.NET, najdete [v tématu How to: Konfigurace analýzy kódu pro webovou aplikaci](../code-quality/how-to-configure-code-analysis-for-an-aspnet-web-application.md)v ASP.NET.
-
 > [!NOTE]
-> Tento článek se vztahuje na verzi Analysis pro starší verze, nikoli na [.NET Compiler Platform analyzátory kódu založené na](use-roslyn-analyzers.md)kódu, které po sestavení nespouštějí analýzu kódu.
+> Tento článek se týká starší verze analýzy a [ne.NET Compiler Platform analyzátorů kódu na základě](use-roslyn-analyzers.md).
 
 ## <a name="configure-a-rule-set-for-a-net-framework-project"></a>Konfigurace sady pravidel pro .NET Framework projekt
 
@@ -37,20 +35,40 @@ Informace o tom, jak nakonfigurovat sadu pravidel pro webové aplikace v ASP.NET
 
    - Klikněte pravým tlačítkem na projekt v **Průzkumníka řešení** a vyberte **vlastnosti**a pak vyberte **analýzy kódu** kartu.
 
-1. V **konfigurace** a **platformy** seznamy, vyberte sestavení konfigurace a cílovou platformu.
+2. V **konfigurace** a **platformy** seznamy, vyberte sestavení konfigurace a cílovou platformu.
 
-1. Chcete-li spustit nástroj Analýza kódu pokaždé, když se sestavení projektu použitím vybrané konfigurace, vyberte **povolit analýzu kódu na sestavení** zaškrtávací políčko. Můžete také spustit analýzu kódu ručně tak, že vyberete **analyzovat** > **spustit analýzu kódu** > **spustit analýzu kódu na \<projectname >** .
+::: moniker range="vs-2017"
 
-1. Ve výchozím nastavení analýza kódu sestavu upozornění z kódu, který je automaticky generován externí nástroje. Chcete-li zobrazit upozornění z generovaného kódu, zrušte **potlačit Výsledky generovaného kódu** zaškrtávací políčko.
+3. Chcete-li spustit analýzu kódu pokaždé, když je projekt sestaven pomocí vybrané konfigurace, vyberte možnost **Povolit analýzu kódu při sestavení**. Můžete také spustit analýzu kódu ručně tak, že vyberete **analyzovat** > **spustit analýzu kódu** > **spustit analýzu kódu na \<projectname >** .
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+3. Chcete-li spustit analýzu kódu pokaždé, když je projekt sestaven pomocí vybrané konfigurace, vyberte možnost **Spustit při sestavení** v části **binární analyzátory** . Můžete také spustit analýzu kódu ručně tak, že vyberete **analyzovat** > **spustit analýzu kódu** > **spustit analýzu kódu na \<projectname >** .
+
+::: moniker-end
+
+4. Chcete-li zobrazit upozornění z generovaného kódu, zrušte **potlačit Výsledky generovaného kódu** zaškrtávací políčko.
 
     > [!NOTE]
-    > Tato možnost není potlačit chyby analýzy kódu a upozornění z generovaného kódu při chyby a upozornění se zobrazí ve formulářích a šablony. Můžete jak zobrazit a spravovat zdrojový kód pro formuláře nebo šablony, aniž by ji přepsat.
+    > Tato možnost není potlačit chyby analýzy kódu a upozornění z generovaného kódu při chyby a upozornění se zobrazí ve formulářích a šablony. Zdrojový kód formuláře nebo šablony lze zobrazit a udržovat a nebude přepsán.
 
-1. V **spustit tuto sadu pravidel** seznamu, proveďte jednu z následujících akcí:
+::: moniker range="vs-2017"
+
+5. V **spustit tuto sadu pravidel** seznamu, proveďte jednu z následujících akcí:
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+5. V seznamu **aktivní pravidla** proveďte jednu z následujících akcí:
+
+::: moniker-end
 
     - Vyberte sadu pravidel, který chcete použít.
 
-    - Vyberte  **\<Procházet... >** najít stávající vlastní sadu pravidel, která se nenachází v seznamu.
+    - Pokud chcete najít existující sadu vlastních pravidel, která není v seznamu, vyberte **\<Browse >** .
 
     - Definování [vlastní sady pravidel](../code-quality/how-to-create-a-custom-rule-set.md).
 
@@ -77,4 +95,3 @@ Ve výchozím nastavení, jsou přiřazeny všechny spravované projekty z řeš
 ## <a name="see-also"></a>Viz také:
 
 - [Referenční dokumentace sady pravidel nástroje Analýza kódu](../code-quality/rule-set-reference.md)
-- [Postupy: Konfigurace analýzy kódu pro webovou aplikaci v ASP.NET](../code-quality/how-to-configure-code-analysis-for-an-aspnet-web-application.md)

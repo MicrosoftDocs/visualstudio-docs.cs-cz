@@ -1,5 +1,5 @@
 ---
-title: Povolení a zákaz úplné analýzy řešení pro spravovaný kód
+title: Povolit & zakázání úplné analýzy řešení pro spravovaný kód
 ms.date: 03/23/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,41 +9,39 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a445439014e3b1f68b634865265089eb68e790a6
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 0b192b29190d530d22943e8ba2a396ae1fe9ad87
+ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66260875"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71975130"
 ---
 # <a name="how-to-enable-and-disable-full-solution-analysis-for-managed-code"></a>Postupy: Povolení a zákaz úplné analýzy řešení pro spravovaný kód
 
-*Úplné analýzy řešení* je funkce sady Visual Studio, která vám umožní zobrazit problémy s analýzou kódu pouze ve Vizuálu otevřete C# nebo Visual Basic souborů ve vašem řešení, nebo také v souborů s kódy, které jsou uzavřeny. Ve výchozím nastavení, je úplné analýzy řešení *povolené* v jazyce Visual Basic a *zakázané* vizuálu C#.
+*Úplná analýza řešení* znamená, že analýza kódu prověřuje všechny C# soubory nebo Visual Basic v řešení, bez ohledu na to, zda jsou otevřeny v editoru nebo nikoli. Ve výchozím nastavení je úplná analýza řešení *povolena* pro Visual Basic a *zakázáno* pro C#.
 
-Může být užitečné zjistit všechny problémy ve všech souborech, ale může také působit rušivě. Pokud vaše řešení je moc velká, nebo má mnoho souborů je Visual Studio může zpomalit. Pokud chcete omezit počet problémů zobrazí a zlepšení výkonu sady Visual Studio, můžete zakázat úplné analýzy řešení. V případě potřeby můžete snadno znovu povolit tuto funkci.
+Může být užitečné zobrazit všechny problémy ve všech souborech, ale může to být také rušivé. Zpomaluje aplikaci Visual Studio, pokud je vaše řešení velmi velké nebo má mnoho souborů. Pokud chcete omezit počet zobrazených problémů a zvýšit výkon sady Visual Studio, můžete zakázat kompletní analýzu řešení. V případě potřeby můžete tuto funkci snadno znovu povolit.
 
-## <a name="to-toggle-full-solution-analysis"></a>Chcete-li přepnout úplné analýzy řešení
+Na následujícím obrázku je povolena kompletní analýza řešení. Zobrazí se problémy s kompilátorem a analýzou kódu ve všech souborech v řešení, a to i v případě, že nejsou otevřeny.
 
-1. Chcete-li otevřít **možnosti** dialogové okno, v panelu nabídek v sadě Visual Studio zvolte **nástroje** > **možnosti**.
+![Úplná analýza řešení je povolena.](../code-quality/media/fsa_enabled.png)
 
-1. V **možnosti** dialogového okna zvolte **textový Editor**  >  **C#** nebo **základní**  >  **Advanced**.
+Následující obrázek znázorňuje výsledky ze stejného řešení po zakázání úplné analýzy řešení. V Seznam chyb se zobrazují jenom chyby kompilátoru a problémy analýzy kódu v otevřených souborech řešení.
 
-1. Vyberte **povolení úplné analýzy řešení** zaškrtávací políčko pro povolení úplné analýzy řešení, nebo zrušte zaškrtnutí políčka pro jeho zakázání. Zvolte **OK** po dokončení.
+![Úplná analýza řešení je zakázaná.](../code-quality/media/fsa_disabled.png)
 
-    ![Povolte úplné řešení analýzy zaškrtávací políčko.](../code-quality/media/options-enable-full-solution-analysis.png)
+## <a name="toggle-full-solution-analysis"></a>Přepnout úplnou analýzu řešení
 
-## <a name="results-of-enabling-and-disabling-full-solution-analysis"></a>Výsledky povolení a zakázání úplné analýzy řešení
+1. Chcete-li otevřít dialogové okno **Možnosti** , na panelu nabídek v aplikaci Visual Studio vyberte možnost **nástroje** > **Možnosti**.
 
-Na následujícím snímku obrazovky vidíte výsledky při úplné analýzy řešení je povolené. Všechny chyby a problémy s analýzou kódu v *všechny* souborů v řešení se zobrazí, bez ohledu na to, zda jsou dané soubory otevřeny nebo ne.
+1. V dialogovém okně **Možnosti** vyberte možnost **textový editor** > **C#** nebo **Basic** > **Advanced**.
 
-![Úplná analýza řešení povolené.](../code-quality/media/fsa_enabled.png)
+1. Zaškrtnutím políčka **Povolit úplnou analýzu řešení** povolíte úplnou analýzu řešení, nebo zaškrtnutím políčka zakážete. Až skončíte, klikněte na **OK** .
 
-Následující snímek obrazovky ukazuje výsledky ze stejného řešení po zakázání úplné analýzy řešení. Pouze chyby a problémy s analýzou kódu v souborech otevřít řešení se zobrazí v **seznam chyb**.
+   ![Zaškrtněte políčko úplná analýza řešení.](../code-quality/media/options-enable-full-solution-analysis.png)
 
-![Úplné analýzy řešení zakázáno.](../code-quality/media/fsa_disabled.png)
+## <a name="automatically-disable-full-solution-analysis"></a>Automaticky zakázat kompletní analýzu řešení
 
-## <a name="automatically-disable-full-solution-analysis"></a>Automaticky zákaz úplné analýzy řešení
-
-Pokud aplikace Visual Studio zjistí, že 200 MB nebo méně paměti systému, je k dispozici, se automaticky zakáže úplné analýzy řešení (a některé další funkce) Pokud je povolené. V tomto případě se zobrazí výstraha oznamující, že Visual Studio zakázal některé funkce. Tlačítko umožňuje znovu povolit úplné analýzy řešení, pokud chcete.
+Pokud aplikace Visual Studio zjistí, že je k dispozici 200 MB nebo méně systémové paměti, automaticky zakáže úplnou analýzu řešení (a další funkce), pokud je povolená. V takovém případě se zobrazí výstraha informující o tom, že aplikace Visual Studio zakázala některé funkce. Tlačítko umožňuje znovu povolit úplnou analýzu řešení, pokud chcete.
 
 ![Upozornění text pozastavení úplné analýzy řešení](../code-quality/media/fsa_alert.png)
