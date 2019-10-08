@@ -14,16 +14,16 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 146d98701f144aacf0ff073c3099b2239ebd1872
-ms.sourcegitcommit: 85d66dc9fea3fa49018263064876b15aeb6f9584
+ms.openlocfilehash: 9f121c4a95d719074e3004ee21e0d49d71e4c243
+ms.sourcegitcommit: 7825d4163e52d724e59f6c0da209af5fbef673f7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68461458"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72000205"
 ---
 # <a name="build-page-project-designer-c"></a>Stránka Sestavení, návrhář projektu (C#)
 
-Pomocí stránky **sestavení** **Návrháře projektu** Určete vlastnosti konfigurace sestavení projektu. Tato stránka se vztahuje [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] pouze na projekty.
+Pomocí stránky **sestavení** **Návrháře projektu** Určete vlastnosti konfigurace sestavení projektu. Tato stránka se vztahuje pouze na projekty [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)].
 
 Pro přístup na stránku **sestavení** vyberte uzel projektu (nikoli uzel **řešení** ) v **Průzkumník řešení**. Pak v nabídce zvolte možnost **zobrazení**, **stránky vlastností** . Když se zobrazí Návrhář projektu, klikněte na kartu **sestavení** .
 
@@ -34,7 +34,7 @@ Pro přístup na stránku **sestavení** vyberte uzel projektu (nikoli uzel **ř
 Následující možnosti umožňují vybrat konfiguraci a platformu pro zobrazení nebo úpravu.
 
 > [!NOTE]
-> V případě zjednodušených konfigurací sestavení Určuje projektový systém, zda má být vytvořena verze ladění nebo vydání. Proto tyto možnosti nejsou zobrazeny. Další informace najdete v tématu [jak: Nastavte konfiguraci](../../debugger/how-to-set-debug-and-release-configurations.md)ladění a vydání.
+> V případě zjednodušených konfigurací sestavení Určuje projektový systém, zda má být vytvořena verze ladění nebo vydání. Proto tyto možnosti nejsou zobrazeny. Další informace najdete v tématu [jak: Nastavte konfigurace ladění a vydaných verzí @ no__t-0.
 
 **Konfigurace**
 
@@ -42,7 +42,7 @@ Určuje, která nastavení konfigurace se mají zobrazit nebo upravit. Nastaven�
 
 **Platformy**
 
-Určuje, která nastavení platformy se mají zobrazit nebo upravit. Výchozí nastavení je **aktivní (libovolný procesor)** . Aktivní platformu můžete změnit pomocí **Configuration Manager**. Další informace najdete v tématu [jak: Vytvářejte a upravujte konfigurace](../../ide/how-to-create-and-edit-configurations.md).
+Určuje, která nastavení platformy se mají zobrazit nebo upravit. Výchozí nastavení je **aktivní (libovolný procesor)** . Aktivní platformu můžete změnit pomocí **Configuration Manager**. Další informace najdete v tématu [jak: Vytvoření a úprava konfigurací @ no__t-0.
 
 ## <a name="general"></a>Obecné
 
@@ -54,11 +54,11 @@ Určuje symboly, na kterých se má provést Podmíněná kompilace. Symboly odd
 
 **Definovat konstantu DEBUG**
 
-Definuje ladění jako symbol ve všech souborech zdrojového kódu ve vaší aplikaci. Výběr této možnosti je stejný jako při `/define:DEBUG` použití možnosti příkazového řádku.
+Definuje ladění jako symbol ve všech souborech zdrojového kódu ve vaší aplikaci. Výběr je stejný jako při použití možnosti příkazového řádku `/define:DEBUG`.
 
 **Definovat konstantu TRACE**
 
-Definuje TRACE jako symbol ve všech souborech zdrojového kódu ve vaší aplikaci. Výběr této možnosti je stejný jako při `/define:TRACE` použití možnosti příkazového řádku.
+Definuje TRACE jako symbol ve všech souborech zdrojového kódu ve vaší aplikaci. Výběr je stejný jako při použití možnosti příkazového řádku `/define:TRACE`.
 
 **Cíl platformy**
 
@@ -104,17 +104,14 @@ Blokuje schopnost kompilátoru generovat jedno nebo více upozornění. Více č
 
 Následující nastavení slouží k určení, která upozornění jsou považována za chyby. Vyberte jednu z následujících možností, která určuje, za jakých podmínek se má v případě, že se při sestavení vyskytne upozornění, vrátit chybu. Další informace naleznete v tématu [/warnaserror (C# možnosti kompilátoru)](/dotnet/csharp/language-reference/compiler-options/warnaserror-compiler-option).
 
-**Žádné**
+**None** – nezpracovává žádné výstrahy jako chyby.
 
-Nezpracovává žádná upozornění jako chyby.
+**Vše** – zpracovává všechna upozornění jako chyby.
 
-**Konkrétní upozornění**
+**Specifická upozornění** – zachází s zadanými upozorněními jako s chybami. Více čísel upozornění oddělte čárkou nebo středníkem.
 
-Zpracovává zadaná upozornění jako chyby. Více čísel upozornění oddělte čárkou nebo středníkem.
-
-**Vše**
-
-Zpracovává všechna upozornění jako chyby.
+> [!TIP]
+> Pokud nechcete, aby upozornění analýzy kódu byla považována za chyby, přečtěte si téma [Nejčastější dotazy k analýze kódu](../../code-quality/analyzers-faq.md#treat-warnings-as-errors).
 
 ## <a name="output"></a>Výstup
 
@@ -122,7 +119,7 @@ Následující nastavení se používají ke konfiguraci možností výstupu pro
 
 **Výstupní cesta**
 
-Určuje umístění výstupních souborů pro tuto konfiguraci projektu. Do tohoto pole zadejte cestu k výstupu sestavení nebo klikněte na tlačítko **Procházet** a zadejte cestu. Cesta je relativní; Pokud zadáte absolutní cestu, bude uložena jako relativní. Výchozí cesta je bin\Debug nebo bin\Release\\.
+Určuje umístění výstupních souborů pro tuto konfiguraci projektu. Do tohoto pole zadejte cestu k výstupu sestavení nebo klikněte na tlačítko **Procházet** a zadejte cestu. Cesta je relativní; Pokud zadáte absolutní cestu, bude uložena jako relativní. Výchozí cesta je bin\Debug nebo bin\Release @ no__t-0.
 
 V případě zjednodušených konfigurací sestavení Určuje projektový systém, zda má být vytvořena verze ladění nebo vydání. Příkaz **Build** z nabídky **ladění** (F5) vloží sestavení do umístění ladění bez ohledu na **výstupní cestu** , kterou zadáte. Příkaz **Build** v nabídce **sestavení** však vloží do umístění, které zadáte. Další informace najdete v tématu [Principy konfigurací sestavení](../../ide/understanding-build-configurations.md).
 
@@ -132,11 +129,11 @@ Určuje název souboru, do kterého se budou zpracovávat komentáře k dokument
 
 **Registrovat pro zprostředkovatele komunikace s objekty COM**
 
-Označuje, že vaše spravovaná aplikace bude vystavovat objekt COM (obálka s možnou sadou COM), která umožňuje objektu COM pracovat s vaší spravovanou aplikací. Vlastnost **Typ výstupu** na [stránce aplikace](../../ide/reference/application-page-project-designer-visual-basic.md) **Návrháře projektu** pro tuto aplikaci je nutné nastavit na **knihovnu tříd** , aby byla k dispozici vlastnost **Register pro zprostředkovatele komunikace s objekty COM** . Pro ukázkovou třídu, kterou můžete zahrnout do [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] aplikace a zveřejnit jako objekt modelu COM, viz [příklad třídy com](/dotnet/csharp/programming-guide/interop/example-com-class).
+Označuje, že vaše spravovaná aplikace bude vystavovat objekt COM (obálka s možnou sadou COM), která umožňuje objektu COM pracovat s vaší spravovanou aplikací. Vlastnost **Typ výstupu** na [stránce aplikace](../../ide/reference/application-page-project-designer-visual-basic.md) **Návrháře projektu** pro tuto aplikaci je nutné nastavit na **knihovnu tříd** , aby byla k dispozici vlastnost **Register pro zprostředkovatele komunikace s objekty COM** . Příklad třídy, kterou můžete zahrnout do vaší aplikace [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] a zpřístupnit jako objekt modelu COM, naleznete v tématu [example com Class](/dotnet/csharp/programming-guide/interop/example-com-class).
 
 **Generovat sestavení serializace**
 
-Určuje, zda kompilátor použije XML Serializer Generator Tool (Sgen. exe) k vytvoření sestavení serializace XML. Sestavení serializace mohou zlepšit výkon <xref:System.Xml.Serialization.XmlSerializer> při spuštění v případě, že jste tuto třídu použili k serializaci typů ve vašem kódu. Ve výchozím nastavení je tato možnost nastavena na hodnotu **auto**, která určuje, že sestavení serializace budou generována pouze <xref:System.Xml.Serialization.XmlSerializer> v případě, že jste použili ke kódování typů v kódu do XML. **Off** určuje, že sestavení serializace nikdy nebyla vygenerována bez ohledu na to <xref:System.Xml.Serialization.XmlSerializer>, zda váš kód používá. **V** určuje, zda mají být sestavení serializace vždy vygenerována. Sestavení serializace jsou `TypeName`pojmenována. XmlSerializers. dll. Další informace najdete v tématu [XML Serializer Generator Tool (Sgen. exe)](/dotnet/framework/serialization/xml-serializer-generator-tool-sgen-exe).
+Určuje, zda kompilátor použije XML Serializer Generator Tool (Sgen. exe) k vytvoření sestavení serializace XML. Sestavení serializace mohou zlepšit výkon při spuštění <xref:System.Xml.Serialization.XmlSerializer>, pokud jste tuto třídu použili k serializaci typů ve vašem kódu. Ve výchozím nastavení je tato možnost nastavena na hodnotu **auto**, která určuje, že sestavení serializace budou generována pouze v případě, že jste použili <xref:System.Xml.Serialization.XmlSerializer> ke kódování typů v kódu do XML. **Off** určuje, že sestavení serializace nikdy nebyla vygenerována bez ohledu na to, zda váš kód používá <xref:System.Xml.Serialization.XmlSerializer>. **V** určuje, zda mají být sestavení serializace vždy vygenerována. Sestavení serializace jsou pojmenována `TypeName`. XmlSerializers. dll. Další informace najdete v tématu [XML Serializer Generator Tool (Sgen. exe)](/dotnet/framework/serialization/xml-serializer-generator-tool-sgen-exe).
 
 **Pokročilé**
 

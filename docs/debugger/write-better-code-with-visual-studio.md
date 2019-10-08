@@ -1,6 +1,6 @@
 ---
 title: Techniky ladění a související nástroje
-description: Vytvářejte lepší kód s využitím méně chyb pomocí sady Visual Studio Pokud chcete vyřešit výjimky, opravte chyby a zlepšování kódu
+description: Pomocí sady Visual Studio můžete napsat lepší kód s méně chybami, aby se opravily výjimky, opravili chyby a vylepšili váš kód.
 ms.custom:
 - debug-experiment
 - seodec18
@@ -13,43 +13,43 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b34e23b1bc7972563d6d8d014ba0728dc637b34
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: b1fe0a9bb1e966bd1451bb5d816eaab814071fb5
+ms.sourcegitcommit: 7825d4163e52d724e59f6c0da209af5fbef673f7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66262134"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72000172"
 ---
-# <a name="debugging-techniques-and-tools-to-help-you-write-better-code"></a>Ladění technik a nástrojů, který pomáhá psát lepší kód
+# <a name="debugging-techniques-and-tools-to-help-you-write-better-code"></a>Techniky a nástroje ladění, které vám pomůžou psát lepší kód
 
-Oprava chyby a chyby v kódu může být časově – a někdy náročný – úkol. Může zabrat určitý čas zjistěte, jak efektivně ladit, ale výkonné prostředí IDE, jako je Visual Studio může být vaše úloha mnohem snazší. Integrované vývojové prostředí můžou pomoct, opravte chyby a ladit kód rychleji a nejen toto, ale to můžete také psát lepší kód s menším počtem chyb nápovědy. Naše cíle v tomto článku je poskytnout komplexní pohled na "Opravit chybu" procesu, tak budete vědět, kdy použít nástroje code analyzer, kdy použít ladicí program, jak vyřešit výjimky a tom, jak kód záměr. Pokud už znáte, budete muset ladicího programu, najdete v tématu [nejdřív se podívejte na ladicí program](../debugger/debugger-feature-tour.md).
+Oprava chyb a chyb v kódu může být časově náročná a někdy frustrujícíá. Může zabrat určitý čas zjistěte, jak efektivně ladit, ale výkonné prostředí IDE, jako je Visual Studio může být vaše úloha mnohem snazší. Integrované vývojové prostředí (IDE) vám může pomoct opravovat chyby a ladit kód rychleji a nejen to, ale může také pomoct psát lepší kód s méně chybami. Naším cílem v tomto článku je poskytnout holistický zobrazení procesu "opravování chyb", takže budete znát, kdy použít analyzátor kódu, kdy použít ladicí program, jak opravit výjimky a jak provést kód pro záměr. Pokud už víte, že potřebujete použít ladicí program, přečtěte si téma [první pohled na ladicí program](../debugger/debugger-feature-tour.md).
 
-V tomto článku mluvíme o využití integrovaného vývojového prostředí pro psaní kódu relace produktivnější. Jsme dotykového ovládání na několik úloh, jako například:
+V tomto článku se seznámíme s využitím integrovaného vývojového prostředí (IDE) k zajištění vyšší produktivity vašich relací kódování. Jsme dotykového ovládání na několik úloh, jako například:
 
 * Připravte váš kód pro ladění s využitím analyzátor kódu rozhraní IDE
 
 * Jak vyřešit výjimky (– chyby za běhu)
 
-* Jak chcete-li minimalizovat chyby v kódování pro záměr (použití metody assert)
+* Jak minimalizovat chyby pomocí kódování pro záměr (pomocí vyhodnocení)
 
 * Kdy použít ladicí program
 
 Abychom si předvedli tyto úlohy, vám ukážeme některé z nejběžnějších typů chyb a chyb, ke které dojde při pokusu o ladění aplikací. I když ukázkový kód je C#koncepční informace je obecně platný pro jazyk JavaScript, C++, Visual Basic, a podporuje další jazyky sady Visual Studio (Pokud není uvedeno jinak). Snímky obrazovky jsou v jazyce C#.
 
-## <a name="create-a-sample-app-with-some-bugs-and-errors-in-it"></a>Vytvořte ukázkovou aplikaci s určitými chyby a chyby v ní
+## <a name="create-a-sample-app-with-some-bugs-and-errors-in-it"></a>Vytvoření ukázkové aplikace s některými chybami a chybami
 
 Následující kód obsahuje chyby, které můžete vyřešit pomocí integrovaného vývojového prostředí sady Visual Studio. Tady aplikace je jednoduchá aplikace, která simuluje získávání dat JSON z některé operace, deserializaci datového objektu a jednoduchý seznam se aktualizuje s novými daty.
 
-Pokud chcete vytvořit aplikaci:
+Vytvoření aplikace:
 
-1. Otevřít Visual Studio a zvolte **souboru** > **nový** > **projektu**. V části **Visual C#** , zvolte **Windows Desktop** nebo **.NET Core**a potom v prostředním podokně vyberte **konzolovou aplikaci**.
+1. Otevřete Visual Studio a vyberte **soubor** > **Nový** **projekt** > . V části **Visual C#** , zvolte **Windows Desktop** nebo **.NET Core**a potom v prostředním podokně vyberte **konzolovou aplikaci**.
 
     > [!NOTE]
     > Pokud se nezobrazí **konzolovou aplikaci** šablony projektu, klikněte na tlačítko **otevřít instalační program Visual Studio** odkaz v levém podokně **nový projekt** dialogové okno. Spustí se instalační program pro Visual Studio. Zvolte **vývoj desktopových aplikací .NET** nebo **vývoj pro různé platformy .NET Core** úloh, klikněte na tlačítko **změnit**.
 
-2. V **název** zadejte **Console_Parse_JSON** a klikněte na tlačítko **OK**. Visual Studio vytvoří projekt.
+2. Do pole **název** zadejte **Console_Parse_JSON** a klikněte na **OK**. Visual Studio vytvoří projekt.
 
-3. Nahraďte kód v projektu *Program.cs* soubor s níže uvedený ukázkový kód.
+3. Nahraďte výchozí kód v souboru *program.cs* projektu následujícím ukázkovým kódem.
 
 ```csharp
 using System;
@@ -192,9 +192,9 @@ Všimněte si, že tato chyba zobrazuje ikonou žárovky do levé dolní části
 
 Po kliknutí na tuto položku, sada Visual Studio přidá `using System.Text` příkazu v horní části *Program.cs* souboru a červená vlnovka zmizí. (Pokud si nejste jistí, jakou navrhované opravy funkci, zvolte **náhled změn** odkaz na pravé straně před použitím opravy.)
 
-Předchozí chybu je běžné, která obvykle opravit tak, že přidáte nový `using` příkaz do vašeho kódu. Existuje několik běžných, podobně jako chyby k tomuto jako ```The type or namespace `Name` cannot be found.``` tyto druhy chyb může znamenat chybějící odkaz na sestavení (klikněte pravým tlačítkem na projekt, zvolte **přidat** > **odkaz**), názvu překlepy nebo chybějící knihovnu, která je potřeba přidat (pro C#, klikněte pravým tlačítkem na projekt a zvolte **spravovat balíčky NuGet**).
+Předchozí chybu je běžné, která obvykle opravit tak, že přidáte nový `using` příkaz do vašeho kódu. Existuje několik běžných podobných chyb, například ```The type or namespace `Name` cannot be found.``` tyto druhy chyb mohou označovat chybějící odkaz na sestavení (klikněte pravým tlačítkem myši na projekt, vyberte možnost **Přidat** **odkaz** > ), nesprávně napsaný název nebo chybějící knihovna, kterou potřebujete. Chcete-li přidat C#(pro, klikněte pravým tlačítkem myši na projekt a vyberte možnost **Spravovat balíčky NuGet**).
 
-## <a name="fix-the-remaining-errors-and-warnings"></a>Oprava zbývající chyby a upozornění
+## <a name="fix-the-remaining-errors-and-warnings"></a>Oprava zbývajících chyb a upozornění
 
 Existuje několik další podtržení vlnovkou podívat se na tento kód. Tady vidíte běžné Chyba převodu typu. Když najedete myší vlnovka, uvidíte, že se kód pokouší o převedení řetězce na typ int, což není podporováno, není-li přidat explicitní kódu k provedení převodu.
 
@@ -218,7 +218,7 @@ internal int points;
 
 Červená vlnovka řádků v editoru kódu zmizet.
 
-V dalším kroku při najetí myší nad zelenou vlnovkou v deklaraci `points` datový člen. Analyzátor kódu zjistíte, že proměnná nikdy přiřazena hodnota.
+Dále umístěte ukazatel myši na zelenou vlnovku v deklaraci datového členu `points`. Analyzátor kódu zjistíte, že proměnná nikdy přiřazena hodnota.
 
 ![Upozornění pro Nepřiřazené proměnnou](../debugger/media/write-better-code-warning-message.png)
 
@@ -255,7 +255,7 @@ Až se dostanete k výjimce, potřebujete (a odpovědí) několik otázek:
 
 * Je tato výjimka něco, co vaši uživatelé setkat?
 
-Pokud je první, opravte chyby. (V ukázkové aplikaci, která znamená, že oprava chybná data.) Pokud je ten, můžete potřebovat pro zpracování výjimek v kódu pomocí `try/catch` blok (podíváme na další možné strategie v další části). V ukázkové aplikaci nahraďte následujícím kódem:
+Pokud je první, opravte chyby. (V ukázkové aplikaci, která znamená, že oprava chybná data.) Pokud je to druhá, může být nutné zpracovat výjimku v kódu pomocí bloku `try/catch` (v další části se podíváme na další možné strategie). V ukázkové aplikaci nahraďte následujícím kódem:
 
 ```csharp
 users = ser.ReadObject(ms) as User[];
@@ -294,7 +294,7 @@ Tady je několik důležitých tipů pro zpracování výjimek:
     }
     ```
 
-* Neznámé funkce, které zahrnují ve své aplikaci zvlášť ty interakci s externími daty (například webové žádosti) najdete v dokumentaci, jaké výjimky funkce je pravděpodobně vyvolá výjimku. To může být důležité informace pro zpracování chyb správné a pro ladění vaší aplikace.
+* V případě neznámých funkcí, které zahrnete do aplikace, zejména při interakci s externími daty (například webovými požadavky), Projděte si dokumentaci, kde najdete výjimky, které funkce může vyvolat. To může být důležité informace pro zpracování chyb správné a pro ladění vaší aplikace.
 
 Ukázkovou aplikaci, opravte `SerializationException` v `GetJsonData` metodu tak, že změníte `4o` k `40`.
 

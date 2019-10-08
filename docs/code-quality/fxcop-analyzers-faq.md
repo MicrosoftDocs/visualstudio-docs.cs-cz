@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3dc304d8d6bf844fb9c23f0e92efc5250da91e4d
-ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
+ms.openlocfilehash: 277155bdab713ec12daa380fc2721a31b5d932a2
+ms.sourcegitcommit: 7825d4163e52d724e59f6c0da209af5fbef673f7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71975141"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72000115"
 ---
 # <a name="frequently-asked-questions-about-fxcop-and-fxcop-analyzers"></a>Nejčastější dotazy k analyzátorům FxCop a FxCop
 
@@ -52,6 +52,10 @@ Pokud jste nainstalovali analyzátory FxCop, ale nadále se zobrazí upozorněn�
 ## <a name="which-rules-have-been-ported-to-fxcop-analyzers"></a>Která pravidla se rozšířila na analyzátory FxCop?
 
 Informace o tom, která pravidla analýzy starší verze byly [PřeFxCopa na analyzátory](install-fxcop-analyzers.md), najdete v tématu [stav portu FxCop pravidla](fxcop-rule-port-status.md).
+
+## <a name="code-analysis-warnings-are-treated-as-errors"></a>Upozornění analýzy kódu jsou považována za chyby.
+
+Pokud váš projekt používá možnost sestavení k ponechání upozornění jako chyby, může se zobrazit upozornění analyzátoru FxCop jako chyby. Chcete-li zabránit tomu, aby upozornění analýzy kódu byla považována za chyby, postupujte podle pokynů v [části Nejčastější dotazy k analýze kódu](../code-quality/analyzers-faq.md#treat-warnings-as-errors).
 
 ## <a name="see-also"></a>Viz také:
 

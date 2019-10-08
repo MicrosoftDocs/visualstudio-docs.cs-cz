@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 30ee7364ba925eebb18d66fc8ede2b7983d46116
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 331c346e7322543bef0814818a776c705b773846
+ms.sourcegitcommit: 7825d4163e52d724e59f6c0da209af5fbef673f7
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211368"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72000189"
 ---
 # <a name="make-code-work-in-visual-studio"></a>Udělejte v aplikaci Visual Studio práci s kódem
 
@@ -26,7 +26,7 @@ Načetli jste Editor a vytvořili nějaký kód. Nyní se chcete ujistit, že k�
 
 Existují dva základní typy konfigurace sestavení: **Ladění** a **vydaná verze**. Konfigurace **ladění** vytváří pomalejší a větší spustitelný soubor, který umožňuje bohatší interaktivní prostředí ladění za běhu. Spustitelný soubor **ladění** by nikdy neměl být dodán. Konfigurace **vydané verze** vytváří rychlejší a optimalizovaný spustitelný soubor, který je vhodný k odeslání (alespoň z perspektivy kompilátoru). Výchozí konfigurace sestavení **ladění**.
 
-Nejjednodušší způsob, jak sestavit projekt, je stisknout **F7**, ale sestavení můžete spustit také tak, že v hlavní nabídce vyberete **sestavit** > **sestavení sestavení** .
+Nejjednodušší způsob, jak sestavit projekt, je stisknout klávesu **F7**, ale můžete také spustit sestavení výběrem možnosti **sestavit** > **Sestavit řešení** z hlavní nabídky.
 
 ![Výběr nabídky projektu Visual Studio Build](../ide/media/vs_ide_gs_debug_build_menu_item.png)
 
@@ -44,13 +44,13 @@ Pokud jste neudělali žádné úpravy kódu, který jste předtím a úspěšn�
 
 ![Výstup a Seznam chyb sady Visual Studio](../ide/media/vs_ide_gs_debug_bad_build_error_list.png)
 
-Kliknutím na chybový řádek v okně **Seznam chyb** přejdete na řádek, ve kterém se nachází chyba. (Nebo zapněte čísla řádků stisknutím **kombinace kláves CTRL**+**Q**, zadáním **čísel řádků**a výběrem možnosti **zapnout nebo vypnout čísla řádků** z výsledků. Toto je nejrychlejší způsob, jak se dostat do dialogového okna **Možnosti** , kde můžete zapnout čísla řádků.)
+Kliknutím na chybový řádek v okně **Seznam chyb** přejdete na řádek, ve kterém se nachází chyba. (Nebo zapněte čísla řádků stisknutím **kombinace kláves Ctrl**@no__t-**1 Q**, zadáním **čísel řádků**a výběrem možnosti **zapnout nebo vypnout čísla řádků** z výsledků. Toto je nejrychlejší způsob, jak se dostat do dialogového okna **Možnosti** , kde můžete zapnout čísla řádků.)
 
 ![Editor sady Visual Studio s čísly řádků](../ide/media/vs_ide_gs_debug_line_numbers.png)
 
 ![Možnost čísel řádků sady Visual Studio](../ide/media/vs_ide_gs_debug_options_line_numbers.png)
 
-Stisknutím **kombinace kláves CTRL**+**G** můžete rychle přejít na číslo řádku, kde došlo k chybě.
+Stisknutím **kombinace kláves Ctrl**+**G** můžete rychle přejít na číslo řádku, kde došlo k chybě.
 
 Chyba je identifikována podtržením červené "vlnovce". Najeďte myší nad ním další podrobnosti. Ujistěte se, oprava a jeho přestane být zobrazována, i když zavádíte novou chybu s opravou. (Tato možnost se nazývá "regrese".)
 
@@ -74,13 +74,13 @@ Analyzátory kódu hledají běžné problémy s kódem, které mohou vést k ch
 
 ### <a name="c-and-visual-basic-code-analysis"></a>C#a Visual Basic analýzy kódu
 
-Sada Visual Studio obsahuje integrovanou sadu [.NET Compiler Platform analyzátorů](../code-quality/roslyn-analyzers-overview.md) , které při psaní C# procházejí a Visual Basic kód. Můžete nainstalovat další analyzátory jako rozšíření sady Visual Studio nebo jako balíček NuGet. Pokud jsou porušení pravidel nalezena, jsou uvedena v editoru kódu jako vlnovka pod problematickým kódem a v **Seznam chyb**.
+Sada Visual Studio obsahuje integrovanou sadu [.NET Compiler Platform analyzátorů](../code-quality/roslyn-analyzers-overview.md) , které při psaní C# procházejí a Visual Basic kód. Můžete nainstalovat další analyzátory jako rozšíření sady Visual Studio nebo jako balíček NuGet. Pokud jsou porušení pravidel nalezena, jsou uvedena v Seznam chyb a v editoru kódu jako vlnovka pod problematickým kódem.
 
 ### <a name="c-code-analysis"></a>C++Analýza kódu
 
 Chcete- C++ li analyzovat kód, spusťte [statickou analýzu kódu](../code-quality/quick-start-code-analysis-for-c-cpp.md). Buďte ve chvíli, kdy jste vyčistili zjevné chyby, které brání úspěšnému sestavení, a nějakou dobu chvíli vyřešíte, aby se zobrazila upozornění, která může vytvořit. Ušetříte si pár souvisejícím problémům správou po silnici a můžete se seznámit s několika technikami stylu kódu.
 
-Stiskněte **ALT**+**F11** (nebo vyberte **analyzovat** > **Spustit analýzu kódu v rámci řešení** v horní nabídce) a spusťte tak statickou analýzu kódu.
+Stiskněte **Alt**+**F11** (nebo vyberte **analyzovat** > **Spustit analýzu kódu v rámci řešení** v horní nabídce) a spusťte statickou analýzu kódu.
 
 ![Položka nabídky analýzy Visual Studio Code](../ide/media/vs_ide_gs_debug_run_code_analysis.png)
 
@@ -90,7 +90,7 @@ Všechna nová nebo aktualizovaná upozornění se zobrazí na kartě **Seznam c
 
 ## <a name="use-quick-actions-to-fix-or-refactor-code"></a>Použití rychlých akcí k opravě nebo refaktorování kódu
 
-[Rychlé akce](../ide/quick-actions.md), které jsou k dispozici na žárovku nebo ikoně Screwdriver, umožňují refaktorování vloženého kódu. Představují snadný způsob, jak rychle a efektivně řešit běžná upozornění v C#, C++a Visual Basic kódu. Pokud k nim chcete přistupovat, klikněte pravým tlačítkem na vlnovku upozornění a vyberte **rychlé akce a refaktoring**. Nebo, pokud je kurzor na řádku s barevným vlnovkou, stiskněte klávesu **CTRL**+ **.** nebo v okraji vyberte žárovku, chybovou žárovku nebo ikonu Screwdriver. Zobrazí se seznam možných oprav nebo refaktoringů, které můžete použít na tento řádek kódu.
+[Rychlé akce](../ide/quick-actions.md), které jsou k dispozici na žárovku nebo ikoně Screwdriver, umožňují refaktorování vloženého kódu. Představují snadný způsob, jak rychle a efektivně řešit běžná upozornění v C#, C++a Visual Basic kódu. Pokud k nim chcete přistupovat, klikněte pravým tlačítkem na vlnovku upozornění a vyberte **rychlé akce a refaktoring**. Pokud je kurzor na řádku s barevným vlnovkou, stiskněte klávesu **Ctrl**+ **.** nebo v okraji vyberte žárovku, chybovou žárovku nebo ikonu Screwdriver. Zobrazí se seznam možných oprav nebo refaktoringů, které můžete použít na tento řádek kódu.
 
 ![Ukázková žárovka sady Visual Studio – Preview](../ide/media/quick-actions-options.png)
 
@@ -98,7 +98,7 @@ Rychlé akce lze použít všude, kde analyzátory kódu určují možnost oprav
 
 ![Text k dispozici nejsou žádné rychlé akce.](../ide/media/vs_ide_gs_debug_light_bulb_no_options.png)
 
-Díky prostředí můžete rychle používat klávesy se šipkami a **CTRL**+ **.** pro kontrolu jednoduchých příležitostí refaktoringu a vyčištění kódu!
+Díky prostředí můžete rychle použít klávesy se šipkami a **Ctrl**+ **.** pro kontrolu jednoduchých příležitostí refaktoringu a vyčištění kódu!
 
 ::: moniker range="vs-2019"
 
@@ -114,11 +114,11 @@ Kromě formátování souboru pro prostory, odsazení, et zajistila, **Vyčišt�
 
 ## <a name="debug-your-running-code"></a>Ladění spuštěného kódu
 
-Teď, když jste úspěšně vytvořili kód a provedli trochu vyčištění, spusťte ho stisknutím klávesy **F5** nebo výběrem **ladění** > **Spustit ladění**. Tím spustíte aplikaci v ladicím prostředí, abyste mohli sledovat její chování podrobněji. Prostředí Visual Studio IDE se změní během vaší aplikace: okno **výstup** je nahrazeno dvěma novými (ve výchozí konfiguraci okna), okna **Automatické hodnoty/místní hodnoty a kukátko** a **zásobník volání, zarážky/nastavení výjimek/výstup** okno s kartami Tato okna mají několik karet, které umožňují kontrolovat a vyhodnocovat proměnné aplikace, vlákna, zásobníky volání a různá další chování při jejich spuštění.
+Teď, když jste úspěšně vytvořili kód a provedli trochu vyčištění, spusťte ho stisknutím klávesy **F5** nebo výběrem možnosti **ladění** > **Spustit ladění**. Tím spustíte aplikaci v ladicím prostředí, abyste mohli sledovat její chování podrobněji. Prostředí Visual Studio IDE se změní během vaší aplikace: okno **výstup** je nahrazeno dvěma novými (ve výchozí konfiguraci okna), okna **Automatické hodnoty/místní hodnoty a kukátko** a **zásobník volání, zarážky/nastavení výjimek/výstup** okno s kartami Tato okna mají několik karet, které umožňují kontrolovat a vyhodnocovat proměnné aplikace, vlákna, zásobníky volání a různá další chování při jejich spuštění.
 
 ![Okna Automatické hodnoty a zásobník volání sady Visual Studio](../ide/media/vs_ide_gs_debug_autos_and_call_stack.png)
 
-Zastavte aplikaci stisknutím **klávesy SHIFT**+**F5** nebo kliknutím na tlačítko **zastavit** . Nebo můžete pouze Zavřít hlavní okno aplikace (nebo dialogové okno příkazového řádku).
+Zastavte aplikaci stisknutím klávesy **Shift**+**F5** nebo kliknutím na tlačítko **zastavit** . Nebo můžete pouze Zavřít hlavní okno aplikace (nebo dialogové okno příkazového řádku).
 
 Pokud váš kód běžel dokonale a přesně tak, jak bylo očekáváno, Blahopřejeme! Pokud se ale přestala nebo došlo k chybě nebo vám poskytla nějaké neobvyklé výsledky, bude nutné najít zdroje těchto problémů a opravit chyby.
 
@@ -158,7 +158,7 @@ Pokud chcete zobrazit aktuální hodnotu a odkazy, najeďte myší na proměnnou
 
 Kromě toho Visual Studio zobrazí okno **diagnostické nástroje** , kde můžete sledovat využití procesoru a paměti vaší aplikace v průběhu času. Později ve vývoji aplikací můžete pomocí těchto nástrojů vyhledat neočekávané vysoké využití procesoru nebo přidělení paměti. Použijte ji ve spojení s oknem **kukátka** a zarážkami k určení toho, co způsobuje neočekávané vysoké využití nebo uvolnění prostředků. Další informace najdete v tématu [prohlídka funkcí profilace](../profiling/profiling-feature-tour.md).
 
-## <a name="run-unit-tests"></a>Spuštění testů jednotek
+## <a name="run-unit-tests"></a>Spouštění testů jednotek
 
 Testování částí jsou vaše první linií obrany proti chybám kódu, protože při správném provedení otestuje jednu "jednotku" kódu, obvykle jedinou funkci a je snazší ladit než úplný program. Visual Studio nainstaluje architektury testování částí od společnosti Microsoft pro spravovaný i nativní kód. Použití jednotkových testů vytvořit testy jednotek, spustit je a ohlásí výsledky těchto testů. Po provedení změn znovu spusťte testy jednotek, abyste otestovali, že váš kód stále pracuje správně. Pomocí edice Visual Studio Enterprise můžete testy spouštět automaticky po každém sestavení.
 
