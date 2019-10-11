@@ -1,46 +1,42 @@
 ---
-title: Představujeme Live Unit Testing
-description: Další informace o výhodách Live Unit Testing a jak ji používat při své projekty testování částí.
+title: Úvod Live Unit Testing
+description: Přečtěte si o výhodách Live Unit Testing a o tom, jak je používat při testování jednotek v projektech.
 ms.date: 09/11/2017
 ms.topic: conceptual
 helpviewer_keywords:
-- Visual Studio ALM
 - Live Unit Testing
-author: rpetrusha
-ms.author: ronpet
+author: gewarren
+ms.author: gewarren
+manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a5acf1857309236727cd0bab4d9d981d814292b9
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
-ms.translationtype: HT
+ms.openlocfilehash: 87242c99fe2692b799ff6a5d965249ad5d944cf9
+ms.sourcegitcommit: 1a3c2ca995fd44fc72741b3a100c6e57f4f8702c
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62786078"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72262300"
 ---
-# <a name="live-unit-testing-introduction"></a>Live Unit Testing Úvod
+# <a name="live-unit-testing-overview"></a>Přehled Live Unit Testing
 
-Live Unit Testing je technologie, která byla zavedena v sadě Visual Studio 2017. To spustí testy jednotky automaticky v reálném čase při provádění změn kódu.
+Live Unit Testing provede testy jednotek automaticky a v reálném čase, když provedete změny kódu. To vám umožní Refaktorovat a měnit kód s větší jistotou. Live Unit Testing automaticky spustí všechny ovlivněné testy při úpravách kódu, aby se zajistilo, že vaše změny nezavádí regrese.
 
-Live Unit Testing:
+Live Unit Testing určuje, zda vaše testování jednotek vhodně pokrývá váš kód. Graficky znázorňuje pokrytí kódu v reálném čase. Vidíte na první pohled, kolik testů pokrývá jednotlivé řádky kódu a které řádky nejsou pokryty žádnými testy jednotek.
 
-- Umožňuje Refaktorujte a změna kódu s větší jistotou. Live Unit Testing automaticky spustí všechny ovlivněné testy, při úpravě kódu k zajištění, že vaše změny nenaruší testy.
-
-- Určuje, jestli testování částí adekvátní pokrytí kódu a zobrazuje kód není pokrytá testování částí. Live Unit Testing graficky znázorňuje pokrytí kódu v reálném čase, takže můžete na první pohled vidět počet testů, pokrytí všech řádků kódu a řádky, které nejsou pokryty všemi testy jednotek.
-
-Pokud máte řešení, která obsahuje jeden nebo více projektů testů jednotek, můžete povolit Live Unit Testing tak, že vyberete **testování** > **Live Unit Testing** > **Start**  z nejvyšší úrovně nabídky sady Visual Studio.
+Máte-li řešení, které obsahuje jeden nebo více projektů testování částí, můžete povolit Live Unit Testing výběrem možnosti **test** > **Live Unit Testing** > **Start** z panelu nabídek nejvyšší úrovně v aplikaci Visual Studio.
 
 > [!NOTE]
 > Live Unit Testing je k dispozici pouze v edici Visual Studio Enterprise.
 
 Další informace o Live Unit Testing:
 
-- Projděte si úvodní kurz [začít pracovat s Live Unit Testing](live-unit-testing-start.md).
+- Vyzkoušejte úvodní kurz: [Začínáme s Live Unit Testing](live-unit-testing-start.md).
 
-- Přečtěte si podrobné dokumentaci [pomocí Live Unit Testing s Visual Studio Enterprise Edition](live-unit-testing.md).
+- Přečtěte si podrobnou dokumentaci: [Pro Visual Studio Enterprise Edition použijte Live Unit Testing](live-unit-testing.md).
 
-- Přečtěte si [Live Unit Testing – nejčastější dotazy](live-unit-testing-faq.md) se dozvíte, co je nového v Live Unit Testing, jakož i informace o tipy a techniky.
+- Přečtěte si část [Live Unit Testing – Nejčastější dotazy](live-unit-testing-faq.md) , kde se dozvíte, co je nového v Live Unit Testing a také tipy a techniky.
 
-- Podívejte se na video Channel 9 přehled Live Unit Testing a jeho funkcí. </p>
+- Podívejte se na video o kanálu 9, kde můžete zobrazit přehled Live Unit Testing a jeho funkcí.</p>
 
    > [!VIDEO https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T105/player]
 

@@ -8,12 +8,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1131f9cf0e77fd4fe68e4bc5c033491aa6dd34e1
-ms.sourcegitcommit: b83fefa8177c5554cbe2c59c4d102cbc534f7cc6
+ms.openlocfilehash: 85bf4e140b3a379221c3b7e5a05428b29e3a985b
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69585187"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018377"
 ---
 # <a name="security-rules-rule-set-for-managed-code"></a>Sada pravidel Pravidla zabezpečení pro spravovaný kód
 
@@ -64,25 +64,25 @@ Pomocí sady pravidel zabezpečení společnosti Microsoft pro analýzu kódu st
 |[CA2147](../code-quality/ca2147-transparent-methods-may-not-use-security-asserts.md)|Transparentní metody nemusí používat kontrolní příkazy zabezpečení|
 |[CA2149](../code-quality/ca2149-transparent-methods-must-not-call-into-native-code.md)|Transparentní metody nesmí provádět volání nativního kódu|
 |[CA2210](../code-quality/ca2210-assemblies-should-have-valid-strong-names.md)|Sestavení by měla mít platné silné názvy|
-|[CA2300](ca2300-do-not-use-insecure-deserializer-binaryformatter.md)|Nepoužívat nezabezpečený deserializátor BinaryFormatter|
-|[CA2301](ca2301-do-not-call-binaryformatter-deserialize-without-first-setting-binaryformatter-binder.md)|Nevolat BinaryFormatter.Deserialize dříve, než se nastaví BinaryFormatter.Binder|
-|[CA2302](ca2302-ensure-binaryformatter-binder-is-set-before-calling-binaryformatter-deserialize.md)|Než zavoláte BinaryFormatter.Deserialize, ujistěte se, že je nastavený BinaryFormatter.Binder|
-|[CA2305](ca2305-do-not-use-insecure-deserializer-losformatter.md)|Nepoužívat nezabezpečený deserializátor LosFormatter|
-|[CA2310](ca2310-do-not-use-insecure-deserializer-netdatacontractserializer.md)|Nepoužívat nezabezpečený deserializátor NetDataContractSerializer|
-|[CA2311](ca2311-do-not-deserialize-without-first-setting-netdatacontractserializer-binder.md)|Nedeserializovat dříve, než se nastaví NetDataContractSerializer.Binder|
-|[CA2312](ca2312-ensure-netdatacontractserializer-binder-is-set-before-deserializing.md)|Před deserializací se ujistěte, že je nastavený NetDataContractSerializer.Binder|
-|[CA2315](ca2315-do-not-use-insecure-deserializer-objectstateformatter.md)|Nepoužívat nezabezpečený deserializátor ObjectStateFormatter|
+|[CA2300](ca2300.md)|Nepoužívat nezabezpečený deserializátor BinaryFormatter|
+|[CA2301](ca2301.md)|Nevolat BinaryFormatter.Deserialize dříve, než se nastaví BinaryFormatter.Binder|
+|[CA2302](ca2302.md)|Než zavoláte BinaryFormatter.Deserialize, ujistěte se, že je nastavený BinaryFormatter.Binder|
+|[CA2305](ca2305.md)|Nepoužívat nezabezpečený deserializátor LosFormatter|
+|[CA2310](ca2310.md)|Nepoužívat nezabezpečený deserializátor NetDataContractSerializer|
+|[CA2311](ca2311.md)|Nedeserializovat dříve, než se nastaví NetDataContractSerializer.Binder|
+|[CA2312](ca2312.md)|Před deserializací se ujistěte, že je nastavený NetDataContractSerializer.Binder|
+|[CA2315](ca2315.md)|Nepoužívat nezabezpečený deserializátor ObjectStateFormatter|
 |[CA2321](ca2321.md)|Nedeserializovat se třídou JavaScriptSerializer pomocí třídy SimpleTypeResolver|
 |[CA2322](ca2322.md)|Před deserializaci se ujistěte se, že třída JavaScriptSerializer není inicializována pomocí třídy SimpleTypeResolver|
-|[CA3001](../code-quality/ca3001-review-code-for-sql-injection-vulnerabilities.md)|Zkontrolujte ohrožení zabezpečení injektáží SQL v kódu|
-|[CA3002](../code-quality/ca3002-review-code-for-xss-vulnerabilities.md)|Zkontrolujte ohrožení zabezpečení proti XSS v kódu|
-|[CA3003](../code-quality/ca3003-review-code-for-file-path-injection-vulnerabilities.md)|Zkontrolujte ohrožení zabezpečení injektáží cesty k souboru v kódu|
-|[CA3004](../code-quality/ca3004-review-code-for-information-disclosure-vulnerabilities.md)|Zkontrolujte ohrožení zabezpečení zpřístupněním informací v kódu|
-|[CA3005](../code-quality/ca3005-review-code-for-ldap-injection-vulnerabilities.md)|Zkontrolujte ohrožení zabezpečení injektáží protokolu LDAP v kódu|
-|[CA3006](../code-quality/ca3006-review-code-for-process-command-injection-vulnerabilities.md)|Zkontrolujte ohrožení zabezpečení injektáží příkazu procesu v kódu|
-|[CA3007](../code-quality/ca3007-review-code-for-open-redirect-vulnerabilities.md)|Zkontrolujte ohrožení zabezpečení otevřeným přesměrováním v kódu|
-|[CA3008](../code-quality/ca3008-review-code-for-xpath-injection-vulnerabilities.md)|Zkontrolujte ohrožení zabezpečení injektáží XPath v kódu|
-|[CA3009](../code-quality/ca3009-review-code-for-xml-injection-vulnerabilities.md)|Zkontrolujte ohrožení zabezpečení injektáží XML v kódu|
-|[CA3010](../code-quality/ca3010-review-code-for-xaml-injection-vulnerabilities.md)|Zkontrolujte ohrožení zabezpečení injektáží XAML v kódu|
-|[CA3011](../code-quality/ca3011-review-code-for-dll-injection-vulnerabilities.md)|Zkontrolujte ohrožení zabezpečení injektáží knihovny DLL v kódu|
-|[CA3012](../code-quality/ca3012-review-code-for-regex-injection-vulnerabilities.md)|Zkontrolujte ohrožení zabezpečení injektáží regulárního výrazu v kódu|
+|[CA3001](../code-quality/ca3001.md)|Zkontrolujte ohrožení zabezpečení injektáží SQL v kódu|
+|[CA3002](../code-quality/ca3002.md)|Zkontrolujte ohrožení zabezpečení proti XSS v kódu|
+|[CA3003](../code-quality/ca3003.md)|Zkontrolujte ohrožení zabezpečení injektáží cesty k souboru v kódu|
+|[CA3004](../code-quality/ca3004.md)|Zkontrolujte ohrožení zabezpečení zpřístupněním informací v kódu|
+|[CA3005](../code-quality/ca3005.md)|Zkontrolujte ohrožení zabezpečení injektáží protokolu LDAP v kódu|
+|[CA3006](../code-quality/ca3006.md)|Zkontrolujte ohrožení zabezpečení injektáží příkazu procesu v kódu|
+|[CA3007](../code-quality/ca3007.md)|Zkontrolujte ohrožení zabezpečení otevřeným přesměrováním v kódu|
+|[CA3008](../code-quality/ca3008.md)|Zkontrolujte ohrožení zabezpečení injektáží XPath v kódu|
+|[CA3009](../code-quality/ca3009.md)|Zkontrolujte ohrožení zabezpečení injektáží XML v kódu|
+|[CA3010](../code-quality/ca3010.md)|Zkontrolujte ohrožení zabezpečení injektáží XAML v kódu|
+|[CA3011](../code-quality/ca3011.md)|Zkontrolujte ohrožení zabezpečení injektáží knihovny DLL v kódu|
+|[CA3012](../code-quality/ca3012.md)|Zkontrolujte ohrožení zabezpečení injektáží regulárního výrazu v kódu|

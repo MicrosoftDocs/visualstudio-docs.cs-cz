@@ -29,15 +29,15 @@ f1_keywords:
 ms.assetid: 07769c25-9b97-4ab7-b175-d1c450308d7a
 author: mikeblome
 ms.author: mblome
-manager: wpickett
+manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 68e57a10b9bd36b07a2d4993626604f2a00558ca
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 976a66901ae60bd6edc053d5acbb516aa87c1a7c
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68919580"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72016001"
 ---
 # <a name="annotating-locking-behavior"></a>Zadávání poznámek o chování při zamykání
 Aby nedocházelo k chybám souběžnosti v programu s více vlákny, vždy postupujte podle příslušného pravidla uzamykání a použijte poznámky SAL.
@@ -66,24 +66,24 @@ V následující tabulce jsou uvedeny anotace zamykání.
 
 |Poznámka|Popis|
 |----------------|-----------------|
-|`_Acquires_exclusive_lock_(expr)`|Přidá do funkce poznámku a určí, že ve stavu post funkce se zvýší o jeden a exkluzivní počet zámků objektu zámku, který je pojmenován `expr`pomocí.|
-|`_Acquires_lock_(expr)`|Přidá do funkce poznámku a určí, že ve stavu post funkce se zvýší o jeden počet zámků objektu zámku, který je pojmenován pomocí `expr`.|
-|`_Acquires_nonreentrant_lock_(expr)`|Zámek, který je pojmenován `expr` pomocí, získá.  Pokud je zámek již uložen, je hlášena chyba.|
-|`_Acquires_shared_lock_(expr)`|Přidá do funkce poznámku a určí, že ve stavu post funkce přiroste o jeden sdílený počet zámků objektu zámku, který je pojmenován pomocí `expr`.|
+|`_Acquires_exclusive_lock_(expr)`|Přidá do funkce poznámku a určí, že ve stavu post se funkce zvýší o jeden a exkluzivní počet zámků objektu zámku, který je pojmenován `expr`.|
+|`_Acquires_lock_(expr)`|Přidá do funkce poznámku a určí, že ve stavu post funkce se zvýší o jeden počet zámků objektu zámku, který je pojmenován `expr`.|
+|`_Acquires_nonreentrant_lock_(expr)`|Získá se zámek s názvem `expr`.  Pokud je zámek již uložen, je hlášena chyba.|
+|`_Acquires_shared_lock_(expr)`|Přidá do funkce poznámku a určí, že ve stavu post se funkce zvýší o jeden sdílený počet zámků objektu zámku, který je pojmenován `expr`.|
 |`_Create_lock_level_(name)`|Příkaz, který deklaruje symbol `name` jako úroveň zámku, aby mohl být použit v poznámkách `_Has_Lock_level_` a `_Lock_level_order_`.|
-|`_Has_lock_kind_(kind)`|Připíše libovolný objekt k upřesnění informací o typu objektu prostředku. Někdy se používá společný typ pro různé druhy prostředků a přetížený typ není dostačující pro odlišení sémantických požadavků mezi různými prostředky. Tady je seznam předem definovaných `kind` parametrů:<br /><br /> `_Lock_kind_mutex_`<br /> ID typu zámku pro mutexy<br /><br /> `_Lock_kind_event_`<br /> ID typu zámku pro události<br /><br /> `_Lock_kind_semaphore_`<br /> ID typu zámku pro semafory.<br /><br /> `_Lock_kind_spin_lock_`<br /> ID typu zámku pro zámky<br /><br /> `_Lock_kind_critical_section_`<br /> ID typu zámku pro kritické oddíly|
-|`_Has_lock_level_(name)`|Přikáže uzamčenému objektu a poskytne mu úroveň `name`zámku.|
-|`_Lock_level_order_(name1, name2)`|Příkaz, který poskytuje řazení zámku mezi `name1` a. `name2`|
-|`_Post_same_lock_(expr1, expr2)`|Označí funkci jako poznámku a označuje, že ve stavu post jsou dvě `expr1` zámky `expr2`a, se považují za, jako by se jednalo o stejný objekt zámku.|
-|`_Releases_exclusive_lock_(expr)`|Doplní funkci a určí, že ve stavu post je funkce snížena o jeden a exkluzivní počet zámků objektu zámku, který je pojmenován `expr`pomocí.|
-|`_Releases_lock_(expr)`|Doplní funkci a určí, že ve stavu post je funkce snížena o jeden počet zámků objektu zámku, který je pojmenován pomocí `expr`.|
-|`_Releases_nonreentrant_lock_(expr)`|Zámek s názvem by `expr` byl vydán. Pokud zámek momentálně není držen, je hlášena chyba.|
-|`_Releases_shared_lock_(expr)`|Doplní funkci a určí, že ve stavu post je funkce snížena o jeden sdílený počet zámků objektu zámku, který je pojmenován pomocí `expr`.|
-|`_Requires_lock_held_(expr)`|Doplní funkci a určí, že v předběžném stavu je počet zámků objektu, který je `expr` pojmenován pomocí, aspoň jeden.|
-|`_Requires_lock_not_held_(expr)`|Doplní funkci a určí, že v předběžném stavu `expr` je počet zámků objektu, který je pojmenován na hodnotu nula.|
+|`_Has_lock_kind_(kind)`|Připíše libovolný objekt k upřesnění informací o typu objektu prostředku. Někdy se používá společný typ pro různé druhy prostředků a přetížený typ není dostačující pro odlišení sémantických požadavků mezi různými prostředky. Tady je seznam předdefinovaných parametrů `kind`:<br /><br /> `_Lock_kind_mutex_`<br /> ID typu zámku pro mutexy<br /><br /> `_Lock_kind_event_`<br /> ID typu zámku pro události<br /><br /> `_Lock_kind_semaphore_`<br /> ID typu zámku pro semafory.<br /><br /> `_Lock_kind_spin_lock_`<br /> ID typu zámku pro zámky<br /><br /> `_Lock_kind_critical_section_`<br /> ID typu zámku pro kritické oddíly|
+|`_Has_lock_level_(name)`|Přikáže uzamčenému objektu a nastaví úroveň zámku `name`.|
+|`_Lock_level_order_(name1, name2)`|Příkaz, který poskytuje řazení zámku mezi `name1` a `name2`.|
+|`_Post_same_lock_(expr1, expr2)`|Označí funkci jako poznámku a určí, že ve stavu post budou dvě zámky `expr1` a `expr2` považovány za, jako by se jednalo o stejný objekt zámku.|
+|`_Releases_exclusive_lock_(expr)`|Doplní funkci a určí, že ve stavu post je funkce snížena o jeden a exkluzivní počet zámků objektu zámku, který je pojmenován `expr`.|
+|`_Releases_lock_(expr)`|Doplní funkci a určí, že ve stavu post je funkce snížena o jeden počet zámků objektu zámku, který je pojmenován `expr`.|
+|`_Releases_nonreentrant_lock_(expr)`|Zámek s názvem `expr` je uvolněn. Pokud zámek momentálně není držen, je hlášena chyba.|
+|`_Releases_shared_lock_(expr)`|Označí funkci jako poznámku a určí, že ve stavu post je funkce snížena o jeden sdílený počet zámků objektu zámku, který je pojmenován `expr`.|
+|`_Requires_lock_held_(expr)`|Doplní funkci a určí, že v předběžném stavu je počet zámků objektu s názvem `expr` aspoň jeden.|
+|`_Requires_lock_not_held_(expr)`|Označí funkci jako poznámku a určí, že v předběžném stavu je počet zámků objektu, který je pojmenován `expr`, nula.|
 |`_Requires_no_locks_held_`|Označí funkci jako poznámku a indikuje, že počet zámků všech zámků, které jsou pro tuto kontrolu známy, je nula.|
-|`_Requires_shared_lock_held_(expr)`|Označí funkci jako poznámku a označuje, že v předběžné verzi se sdíleným počtem zámků objektu, který `expr` je pojmenován, nachází alespoň jeden.|
-|`_Requires_exclusive_lock_held_(expr)`|Doplní funkci a určí, že v předběžné verzi objektu, který je pojmenován pomocí `expr` , je alespoň jeden.|
+|`_Requires_shared_lock_held_(expr)`|Označí funkci jako poznámku a určí, že v předběžném stavu je sdílený počet zámků objektu s názvem `expr` aspoň jeden.|
+|`_Requires_exclusive_lock_held_(expr)`|Doplní funkci a určí, že v předběžném stavu má výhradní zámek objektu s názvem `expr` aspoň jeden.|
 
 ## <a name="sal-intrinsics-for-unexposed-locking-objects"></a>Vnitřní prvky SAL pro neexponované uzamčené objekty
 Některé objekty zámku nejsou zpřístupněny implementací přidružených funkcí zamykání.  V následující tabulce jsou uvedeny vnitřní proměnné SAL, které umožňují poznámky k funkcím, které pracují s těmito nevystavenými objekty zámku.
@@ -100,22 +100,22 @@ V následující tabulce jsou uvedeny poznámky pro přístup ke sdíleným dat�
 
 |Poznámka|Popis|
 |----------------|-----------------|
-|`_Guarded_by_(expr)`|Označí proměnnou jako poznámku a určí, že pokaždé, když je k proměnné přistupovat, je počet zámků objektu zámku, `expr` který je pojmenován pomocí, aspoň jeden.|
-|`_Interlocked_`|Označí proměnnou jako poznámku a je ekvivalentní `_Guarded_by_(_Global_interlock_)`.|
+|`_Guarded_by_(expr)`|Označí proměnnou jako poznámku a určí, že pokaždé, když je k proměnné přistupovat, je počet zámků objektu zámku, který je pojmenován `expr`, aspoň jeden.|
+|`_Interlocked_`|Doznámí proměnnou a je ekvivalentní `_Guarded_by_(_Global_interlock_)`.|
 |`_Interlocked_operand_`|Parametr funkce s poznámkou je cílovým operandem jedné z různých vzájemně propojených funkcí.  Tyto operandy musí mít konkrétní další vlastnosti.|
-|`_Write_guarded_by_(expr)`|Označí proměnnou jako poznámku a určí, že pokaždé, když je upravena proměnná, je počet zámků objektu zámku, `expr` který je pojmenován pomocí, aspoň jeden.|
+|`_Write_guarded_by_(expr)`|Označí proměnnou jako poznámku a určí, že pokaždé, když je upravena proměnná, je počet zámků objektu zámku, který je pojmenován `expr`, aspoň jeden.|
 
 ## <a name="smart-lock-and-raii-annotations"></a>Poznámky Smart Lock a RAII
-Inteligentní Zámky obvykle zabalí Nativní zámky a spravují jejich životnost. V následující tabulce jsou uvedeny poznámky, které lze použít s inteligentními zámky a vzory kódování RAII `move` s podporou sémantiky.
+Inteligentní Zámky obvykle zabalí Nativní zámky a spravují jejich životnost. V následující tabulce jsou uvedeny poznámky, které lze použít s inteligentními zámky a vzory kódování RAII s podporou sémantiky `move`.
 
 |Poznámka|Popis|
 |----------------|-----------------|
 |`_Analysis_assume_smart_lock_acquired_`|Dává analyzátoru pokyn, aby předpokládal, že byl získán inteligentní zámek. Tato poznámka očekává jako svůj parametr typ zámku odkazu.|
 |`_Analysis_assume_smart_lock_released_`|Dává analyzátoru pokyn, aby předpokládal, že byl vydán inteligentní zámek. Tato poznámka očekává jako svůj parametr typ zámku odkazu.|
-|`_Moves_lock_(target, source)`|Popisuje `move constructor` operaci, která přenáší stav zámku `source` z objektu na `target`. Je považován za nově vytvořený objekt, takže všechny stavy, které byly před, budou ztraceny a nahrazeny `source` stavem. `target` `source` Dojde také k resetování na čistý stav bez počtu zámků nebo cíle aliasu, ale aliasy ukazující na něj zůstanou beze změny.|
-|`_Replaces_lock_(target, source)`|Popisuje `move assignment operator` sémantiku, kde je uvolněn cílový zámek před přenosem stavu ze zdroje. To je možné považovat za kombinaci `_Moves_lock_(target, source)` předchází. `_Releases_lock_(target)`|
-|`_Swaps_locks_(left, right)`|Popisuje standardní `swap` chování, které předpokládá, že `left` objekty `right` a vyměňují jejich stav. Výměna stavu zahrnuje počet zámků a cíl aliasů, pokud je k dispozici. Aliasy, které odkazují `left` na `right` objekty a, zůstávají beze změny.|
-|`_Detaches_lock_(detached, lock)`|Popisuje scénář, ve kterém typ zámku obálky umožňuje zrušení bylo s jeho obsaženým prostředkem. To se podobá tomu `std::unique_ptr` , jak funguje s vnitřním ukazatelem: umožňuje programátorům extrahovat ukazatel a opustit jeho kontejner inteligentního ukazatele v čistém stavu. Podobná logika je podporována `std::unique_lock` nástrojem a může být implementována ve vlastních obálkách zámku. Odpojený zámek si zachová svůj stav (počet zámků a cíl aliasů), zatímco obálka je resetována tak, aby obsahovala nulový počet zámků a žádný cíl pro vytváření aliasů a současně si zachovává vlastní aliasy. Neexistují žádné operace na počtu zámků (uvolnění a získání). Tato poznámka se chová přesně `_Moves_lock_` s tím rozdílem, že odpojený argument by měl být `return` spíše než `this`.|
+|`_Moves_lock_(target, source)`|Popisuje operaci `move constructor`, která přenáší stav zámku z objektu `source` do `target`. @No__t-0 se považuje za nově vytvořený objekt, takže všechny stavy, které dříve existovaly, jsou ztraceny a nahrazeny stavem `source`. @No__t-0 se také resetuje na čistý stav bez počtu zámků nebo cíle aliasu, ale aliasy ukazující na něj zůstanou beze změny.|
+|`_Replaces_lock_(target, source)`|Popisuje sémantiku `move assignment operator`, kde je cílový zámek vydán před přenosem stavu ze zdroje. To lze považovat za kombinaci `_Moves_lock_(target, source)` předchází `_Releases_lock_(target)`.|
+|`_Swaps_locks_(left, right)`|Popisuje standardní chování @no__t 0, které předpokládá, že objekty `left` a `right` vyměňují svůj stav. Výměna stavu zahrnuje počet zámků a cíl aliasů, pokud je k dispozici. Aliasy, které odkazují na objekty @no__t 0 a `right` zůstanou beze změny.|
+|`_Detaches_lock_(detached, lock)`|Popisuje scénář, ve kterém typ zámku obálky umožňuje zrušení bylo s jeho obsaženým prostředkem. To se podobá tomu, jak `std::unique_ptr` funguje s vnitřním ukazatelem: umožňuje programátorům extrahovat ukazatel a opustit jeho kontejner inteligentních ukazatelů v čistém stavu. Podobná logika je podporována `std::unique_lock` a lze ji implementovat ve vlastních obálkách zámku. Odpojený zámek si zachová svůj stav (počet zámků a cíl aliasů), zatímco obálka je resetována tak, aby obsahovala nulový počet zámků a žádný cíl pro vytváření aliasů a současně si zachovává vlastní aliasy. Neexistují žádné operace na počtu zámků (uvolnění a získání). Tato anotace se chová přesně jako `_Moves_lock_` s tím rozdílem, že odpojený argument by měl být `return` místo `this`.|
 
 ## <a name="see-also"></a>Viz také
 

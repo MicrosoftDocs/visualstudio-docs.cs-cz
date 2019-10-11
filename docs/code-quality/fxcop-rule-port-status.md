@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 07a5130edd534008b4343ab439bf20bf63bc3cde
-ms.sourcegitcommit: 2db01751deeee7b2bdb1db25419ea6706e6fcdf8
+ms.openlocfilehash: 04a4738181c579617711150da4eb99e08aeb039c
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71062403"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018420"
 ---
 # <a name="fxcop-rule-port-status"></a>Stav portu pravidla FxCop
 
@@ -27,7 +27,7 @@ Pokud jste dříve používali analýzu statického kódu v aplikaci Visual Stud
 
 Od data na této stránce seznam pravidel FxCop, která byla předaná do [analyzátorů FxCop](install-fxcop-analyzers.md) , zahrnují:
 
-ID pravidla | Název
+ID pravidla | Titul
 --------|---------
 [CA1000](ca1000-do-not-declare-static-members-on-generic-types.md) | Nedeklarujte statické členy v obecných typech
 [CA1001](ca1001-types-that-own-disposable-fields-should-be-disposable.md) | Typy, které vlastní uvolnitelné pole, by měly být uvolnitelné
@@ -67,10 +67,10 @@ ID pravidla | Název
 [CA1063](ca1063-implement-idisposable-correctly.md) | Implementovat správně IDisposable
 [CA1064](ca1064-exceptions-should-be-public.md) | Výjimky by měly být veřejné
 [CA1065](ca1065-do-not-raise-exceptions-in-unexpected-locations.md) | Nevyvolávejte výjimky v neočekávaných umístěních
-CA1066 | Typ {0} by měl implementovat\<IEquatable T >, protože přepisuje rovnost
-CA1067 | Přepsat Object. Equals (objekt) při implementaci IEquatable\<T >
-[CA1068](ca1068.md) | Parametry CancellationToken se musí nacházet jako poslední.
-CA1200 | Nepoužívejte značky cref s předponou.
+CA1066 | Typ {0} by měl implementovat IEquatable @ no__t-1T >, protože přepisuje rovnost
+CA1067 | Přepsat Object. Equals (objekt) při implementaci IEquatable @ no__t-0T >
+[CA1068](ca1068.md) | Parametry CancellationToken musí být poslední.
+CA1200 | Nepoužívejte značky cref s předponou
 [CA1303](ca1303-do-not-pass-literals-as-localized-parameters.md) | Nepředávejte literály jako lokalizované parametry
 [CA1304](ca1304-specify-cultureinfo.md) | Určete CultureInfo
 [CA1305](ca1305-specify-iformatprovider.md) | Určete IFormatProvider
@@ -149,28 +149,28 @@ CA2010 | Vždycky spotřebovat hodnotu vrácenou metodami označenými pomocí t
 [CA2242](ca2242-test-for-nan-correctly.md) | Testujte správně NaN
 [CA2243](ca2243-attribute-string-literals-should-parse-correctly.md) | Řetězcové literály atributů by se měly správně parsovat
 CA2244 | Neduplikovat inicializace indexovaných elementů
-[CA2300](ca2300-do-not-use-insecure-deserializer-binaryformatter.md) | Nepoužívat nezabezpečený deserializátor BinaryFormatter
-[CA2301](ca2301-do-not-call-binaryformatter-deserialize-without-first-setting-binaryformatter-binder.md) | Nevolat BinaryFormatter.Deserialize dříve, než se nastaví BinaryFormatter.Binder
-[CA2302](ca2302-ensure-binaryformatter-binder-is-set-before-calling-binaryformatter-deserialize.md) | Než zavoláte BinaryFormatter.Deserialize, ujistěte se, že je nastavený BinaryFormatter.Binder
-[CA2305](ca2305-do-not-use-insecure-deserializer-losformatter.md) | Nepoužívat nezabezpečený deserializátor LosFormatter
-[CA2310](ca2310-do-not-use-insecure-deserializer-netdatacontractserializer.md) | Nepoužívat nezabezpečený deserializátor NetDataContractSerializer
-[CA2311](ca2311-do-not-deserialize-without-first-setting-netdatacontractserializer-binder.md) | Nedeserializovat dříve, než se nastaví NetDataContractSerializer.Binder
-[CA2312](ca2312-ensure-netdatacontractserializer-binder-is-set-before-deserializing.md) | Před deserializací se ujistěte, že je nastavený NetDataContractSerializer.Binder
-[CA2315](ca2315-do-not-use-insecure-deserializer-objectstateformatter.md) | Nepoužívat nezabezpečený deserializátor ObjectStateFormatter
+[CA2300](ca2300.md) | Nepoužívat nezabezpečený deserializátor BinaryFormatter
+[CA2301](ca2301.md) | Nevolat BinaryFormatter.Deserialize dříve, než se nastaví BinaryFormatter.Binder
+[CA2302](ca2302.md) | Než zavoláte BinaryFormatter.Deserialize, ujistěte se, že je nastavený BinaryFormatter.Binder
+[CA2305](ca2305.md) | Nepoužívat nezabezpečený deserializátor LosFormatter
+[CA2310](ca2310.md) | Nepoužívat nezabezpečený deserializátor NetDataContractSerializer
+[CA2311](ca2311.md) | Nedeserializovat dříve, než se nastaví NetDataContractSerializer.Binder
+[CA2312](ca2312.md) | Před deserializací se ujistěte, že je nastavený NetDataContractSerializer.Binder
+[CA2315](ca2315.md) | Nepoužívat nezabezpečený deserializátor ObjectStateFormatter
 [CA2321](ca2321.md) | Nedeserializovat se třídou JavaScriptSerializer pomocí třídy SimpleTypeResolver
 [CA2322](ca2322.md) | Před deserializaci se ujistěte se, že třída JavaScriptSerializer není inicializována pomocí třídy SimpleTypeResolver
-[CA3001](ca3001-review-code-for-sql-injection-vulnerabilities.md) | Zkontrolujte ohrožení zabezpečení injektáží SQL v kódu
-[CA3002](ca3002-review-code-for-xss-vulnerabilities.md) | Zkontrolujte ohrožení zabezpečení proti XSS v kódu
-[CA3003](ca3003-review-code-for-file-path-injection-vulnerabilities.md) | Zkontrolujte ohrožení zabezpečení injektáží cesty k souboru v kódu
-[CA3004](ca3004-review-code-for-information-disclosure-vulnerabilities.md) | Zkontrolujte ohrožení zabezpečení zpřístupněním informací v kódu
-[CA3005](ca3005-review-code-for-ldap-injection-vulnerabilities.md) | Zkontrolujte ohrožení zabezpečení injektáží protokolu LDAP v kódu
-[CA3006](ca3006-review-code-for-process-command-injection-vulnerabilities.md) | Zkontrolujte ohrožení zabezpečení injektáží příkazu procesu v kódu
-[CA3007](ca3007-review-code-for-open-redirect-vulnerabilities.md) | Zkontrolujte ohrožení zabezpečení otevřeným přesměrováním v kódu
-[CA3008](ca3008-review-code-for-xpath-injection-vulnerabilities.md) | Zkontrolujte ohrožení zabezpečení injektáží XPath v kódu
-[CA3009](ca3009-review-code-for-xml-injection-vulnerabilities.md) | Zkontrolujte ohrožení zabezpečení injektáží XML v kódu
-[CA3010](ca3010-review-code-for-xaml-injection-vulnerabilities.md) | Zkontrolujte ohrožení zabezpečení injektáží XAML v kódu
-[CA3011](ca3011-review-code-for-dll-injection-vulnerabilities.md) | Zkontrolujte ohrožení zabezpečení injektáží knihovny DLL v kódu
-[CA3012](ca3012-review-code-for-regex-injection-vulnerabilities.md) | Zkontrolujte ohrožení zabezpečení injektáží regulárního výrazu v kódu
+[CA3001](ca3001.md) | Zkontrolujte ohrožení zabezpečení injektáží SQL v kódu
+[CA3002](ca3002.md) | Zkontrolujte ohrožení zabezpečení proti XSS v kódu
+[CA3003](ca3003.md) | Zkontrolujte ohrožení zabezpečení injektáží cesty k souboru v kódu
+[CA3004](ca3004.md) | Zkontrolujte ohrožení zabezpečení zpřístupněním informací v kódu
+[CA3005](ca3005.md) | Zkontrolujte ohrožení zabezpečení injektáží protokolu LDAP v kódu
+[CA3006](ca3006.md) | Zkontrolujte ohrožení zabezpečení injektáží příkazu procesu v kódu
+[CA3007](ca3007.md) | Zkontrolujte ohrožení zabezpečení otevřeným přesměrováním v kódu
+[CA3008](ca3008.md) | Zkontrolujte ohrožení zabezpečení injektáží XPath v kódu
+[CA3009](ca3009.md) | Zkontrolujte ohrožení zabezpečení injektáží XML v kódu
+[CA3010](ca3010.md) | Zkontrolujte ohrožení zabezpečení injektáží XAML v kódu
+[CA3011](ca3011.md) | Zkontrolujte ohrožení zabezpečení injektáží knihovny DLL v kódu
+[CA3012](ca3012.md) | Zkontrolujte ohrožení zabezpečení injektáží regulárního výrazu v kódu
 CA3061 | Nepřidávat schéma podle adresy URL
 [CA3075](ca3075-insecure-dtd-processing.md) | Nezabezpečené zpracování DTD v XML
 [CA3076](ca3076-insecure-xslt-script-execution.md) | Nezabezpečené zpracování skriptu XSLT

@@ -9,25 +9,25 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7619b040343720198e190f551741f565e62fa145
-ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
+ms.openlocfilehash: 62dd64dfe4e801f91731b1ed569e3a809156d0d1
+ms.sourcegitcommit: b23d73c86ec7720c4cd9a58050860bc559623a3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71186395"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172795"
 ---
 # <a name="configure-fxcop-analyzers"></a>Konfigurace analyzátorů FxCop
 
 [Balíček analyzátorů FxCop](install-fxcop-analyzers.md) se skládá z nejdůležitějších pravidel "FxCop" z analyzátoru starších verzí převedených na analyzátory kódu založené na .NET Compiler Platform. U určitých pravidel FxCop můžete upřesnit, které části základu kódu by měly být aplikovány na [Konfigurovatelné možnosti](fxcop-analyzer-options.md). Každá možnost je určena přidáním páru klíč-hodnota k souboru [EditorConfig](https://editorconfig.org) . Konfigurační soubor může být [specifický pro projekt](#per-project-configuration) nebo může být [sdílen](#shared-configuration) mezi dvěma nebo více projekty.
 
 > [!TIP]
-> Do projektu můžete přidat soubor. editorconfig tak, že kliknete pravým tlačítkem na projekt v **Průzkumník řešení** a vyberete **Přidat** > **novou položku**. V okně **Přidat novou položku** do vyhledávacího pole zadejte **editorconfig** . Vyberte šablonu **soubor editorconfig (výchozí)** a zvolte **Přidat**.
+> Kliknutím pravým tlačítkem myši na projekt v **Průzkumník řešení** a vybráním **přidat** **novou položku** >  přidejte do projektu soubor. editorconfig. V okně **Přidat novou položku** do vyhledávacího pole zadejte **editorconfig** . Vyberte šablonu **soubor editorconfig (výchozí)** a zvolte **Přidat**.
 >
 > ![Přidat soubor editorconfig do projektu v aplikaci Visual Studio](media/add-editorconfig-file.png)
 
 ::: moniker range=">=vs-2019"
 
-Informace o konfiguraci závažnosti pravidla (například o tom, jestli se jedná o chybu nebo upozornění) najdete v tématu [nastavení závažnosti pravidla v souboru EditorConfig](use-roslyn-analyzers.md#set-rule-severity-in-an-editorconfig-file). Nebo můžete vybrat některou z předdefinovaných [sad pravidel](analyzer-rule-sets.md) , abyste mohli rychle povolit nebo zakázat kategorii pravidel.
+Informace o konfiguraci závažnosti pravidla (například o tom, jestli se jedná o chybu nebo upozornění) najdete v tématu [nastavení závažnosti pravidla v souboru EditorConfig](use-roslyn-analyzers.md#set-rule-severity-in-an-editorconfig-file). Případně můžete vybrat jeden z předdefinovaných [EditorConfig souborů nebo sad pravidel](analyzer-rule-sets.md) a rychle povolit nebo zakázat kategorii pravidel.
 
 ::: moniker-end
 

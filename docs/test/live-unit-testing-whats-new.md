@@ -1,64 +1,64 @@
 ---
-title: Co je nového v Live Unit Testing v sadě Visual Studio 2017
+title: Co je nového v Live Unit Testing v aplikaci Visual Studio 2017
 titleSuffix: ''
 ms.date: 10/11/2017
 ms.topic: conceptual
 helpviewer_keywords:
 - Live Unit Testing
 - Live Unit Testing What's New
-author: rpetrusha
-ms.author: ronpet
+author: gewarren
+ms.author: gewarren
 ms.workload:
 - dotnet
 monikerRange: vs-2017
-ms.openlocfilehash: 86ed90e6a4fe211d162f12785b0f3f555802ad17
-ms.sourcegitcommit: 75807551ea14c5a37aa07dd93a170b02fc67bc8c
+ms.openlocfilehash: 6a96089de8f9998c12cbc2e12765d128b1d2195b
+ms.sourcegitcommit: 1a3c2ca995fd44fc72741b3a100c6e57f4f8702c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67823758"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72262280"
 ---
 # <a name="whats-new-in-live-unit-testing-for-visual-studio-2017"></a>Co je nového v Live Unit Testing pro Visual Studio 2017
 
-Toto téma obsahuje seznam nových funkcí pro Live Unit Testing v každé verzi sady Visual Studio od verze Visual Studio 2017 verze 15.3. Přehled o tom, jak používat Live Unit Testing, naleznete v tématu [pomocí sady Visual Studio Live Unit Testing](live-unit-testing.md).
+Toto téma obsahuje seznam nových funkcí přidaných do Live Unit Testing v každé verzi sady Visual Studio počínaje verzí Visual Studio 2017 verze 15,3. Přehled použití Live Unit Testing naleznete v tématu [Live Unit Testing se sadou Visual Studio](live-unit-testing.md).
 
-## <a name="version-154"></a>Verze 15.4
+## <a name="version-154"></a>Verze 15,4
 
-Od verze Visual Studio 2017 verze 15.4, Live Unit Testing obsahuje vylepšení v různých oblastech:
+Počínaje verzí Visual Studio 2017 verze 15,4 Live Unit Testing obsahuje vylepšení a vylepšení v různých oblastech:
 
-- **Vylepšené možnosti rozpoznání**. Pro uživatele, kteří neznáte, které Live Unit Testing funkce existuje, integrovaném vývojovém prostředí sady Visual Studio zobrazuje zlatý pruh, který uvádí Live Unit Testing pokaždé, když uživatel otevře řešení, která obsahuje testy jednotek, ale Live Unit Testing není povolená. Informace uváděné v zlatý pruh umožňuje uživateli získat další informace o Live Unit Testing a chcete ho povolit. Zlatý pruh také zobrazí informace, pokud Live Unit Testing požadavky nejsou splněny. Zde jsou některé z nich:
+- **Vylepšení zjistitelnosti**. Pro uživatele, kteří neví, že existuje funkce Live Unit Testing, se v integrovaném vývojovém prostředí sady Visual Studio zobrazí zlatý pruh, který označuje Live Unit Testing pokaždé, když uživatel otevře řešení, které zahrnuje testy jednotek, ale Live Unit Testing není povolené. Informace zobrazené na zlatým panelu umožňují uživateli získat další informace o Live Unit Testing a jeho povolení. Zlatý pruh také zobrazuje informace, když Live Unit Testing požadavky nejsou splněny. Mezi ně patří:
 
-  - Adaptéry testu nebyly nalezeny.
-  - Starší verze adaptéry testu jsou k dispozici.
-  - Je potřeba obnovit balíčky NuGet odkazované řešení.
+  - Testovací adaptéry chybí.
+  - K dispozici jsou starší verze testovacích adaptérů.
+  - Je potřeba obnovit balíčky NuGet, na které se odkazuje řešení.
 
-- **Integrace s oznámeními Centrum úkolů**. Integrované vývojové prostředí sady Visual Studio teď zobrazují Live Unit Testing zpracování na pozadí oznámení v centru úloh tak, aby uživatelé mohli snadno určit, co se děje při zapnuté funkci Live Unit Testing. To řeší klíče problém spouští se Live Unit Testing na velkých projektech. Dříve pár minut dokud ikony pokrytí objevily, uživatelé nelze určit, jestli se ve skutečnosti povolená Live Unit Testing a určuje, zda byla práce. Už ne.
+- **Integrace s oznámeními centra úloh**. Integrované vývojové prostředí (IDE) sady Visual Studio teď zobrazuje Live Unit Testing oznámení o zpracování na pozadí v centru úloh, aby uživatelé mohli snadno zjistit, co se děje, když je Live Unit Testing povolený. To řeší klíčovou potíž spuštění Live Unit Testing ve velkém řešení. Předtím, než se na ikonu pokrytí objevily ikony pokrytí, nemohli uživatelé určit, jestli je Live Unit Testing skutečně povolená a jestli fungovala. Již není!
 
-- **Podpora pro MSTest verze 1 framework**: Live Unit Testing už spolupracuje s tři testovací architektury oblíbených částí: xUnit, NUnit a MSTest. Dříve Live Unit Testing pouze spolupráci při použití MS Test version 2 projektů testů jednotek MSTest. Od verze Visual Studio 2017 verze 15.4, teď podporuje také MSTest verze 1 i.
+- **Podpora pro rozhraní MSTest Framework verze 1**: Live Unit Testing už funguje se třemi oblíbenými architekturami testování částí: xUnit, NUnit a MSTest. Dříve Live Unit Testing pracovali pouze v případě, že projekty testů jednotek MSTest používají MS test verze 2. Počínaje verzí Visual Studio 2017 verze 15,4 teď podporuje i MSTest verze 1.
 
-- **Spolehlivost a výkon**: Live Unit Testing nyní zajistí, že systém můžete lépe rozpoznat, kdy se projekty nebyly dokončeny načítání plně a zabraňuje padá Live Unit Testing. Výkon sestavení vylepšení také vyhnout reevaluating projekty MSBuild, když systém ví, že nic v projektu soubor se změnil.
+- **Spolehlivost & výkonu**: Live Unit Testing nyní zajistí, že systém může lépe rozpoznat, kdy se projekty zcela nedokončily, a vyhnout se selhání Live Unit Testing. Vylepšení výkonu sestavení také vyhněte opětovnému vyhodnocování projektů MSBuild v případě, že systém ví, že se nic v souboru projektu nezměnilo.
 
-- **Různé uživatelské rozhraní upřesnění**:  Matoucí **Live nastavit Test – zahrnout/vyloučit** gesta kliknutí pravým tlačítkem na možnost byl přejmenován na **Live Unit Testing Include/Exclude**. **Resetování čištění** možnost **testovací** > **Live Unit Testing** nabídky se odebrala. Je teď dostupné tak, že vyberete **nástroje** > **možnosti** > **Live Unit Testing** a vyberete **odstranit trvalá Data** .
+- **Různá vylepšení uživatelského rozhraní**:  Volba nematoucího **živého testu – zahrnout/vyloučit** z gesta pravého kliknutí byla přejmenována na **Live Unit Testing zahrnout/vyloučit**. Byla odstraněna možnost **obnovit vyčištění** v nabídce**Live Unit Testing** **test** > . Nyní je k dispozici výběrem **nástrojů**@no__t**možností**-1  > **Live Unit Testing** a výběrem možnosti **Odstranit trvalá data**.
 
-## <a name="version-153"></a>Verze 15.3
+## <a name="version-153"></a>Verze 15,3
 
-Od verze Visual Studio 2017 verze 15.3, Live Unit Testing vylepšení funkcí a vylepšení v dvě hlavní oblasti:
+Počínaje sadou Visual Studio 2017 verze 15,3 Live Unit Testing vylepšení funkcí a vylepšení ve dvou hlavních oblastech:
 
-- Podpora .NET Core a .NET Standard. Live Unit Testing můžete použít na .NET Core a .NET Standard řešeními napsanými v jazyce C# nebo Visual Basic.
+- Podpora pro .NET Core a .NET Standard. Můžete použít Live Unit Testing pro .NET Core a .NET Standard řešení napsaná v C# nebo Visual Basic.
 
-- Byl vylepšen výkon. Můžete si všimnout, že výkon je výrazně rychlejší po první celé sestavení a spuštění testů v rámci Live Unit Testing. Všimněte si také významné výkonnostní zlepšení v následných spustí z Live Unit Testing ve stejném řešení. Jsme teď uchování dat vygenerovaných vašimi Live Unit Testing a znovu ji co nejlépe s aktuální kontroly použít.
+- Byl vylepšen výkon. Všimněte si, že výkon je výrazně rychlejší po prvním úplném sestavení a spuštění testů v rámci Live Unit Testing. Také si všimnete významného zlepšení výkonu při dalších spuštěních Live Unit Testing ve stejném řešení. Nyní zachováváme data vygenerovaná Live Unit Testing a co nejvíc znovu použijeme s aktuálními kontrolami.
 
-Kromě těchto hlavními dodatky Live Unit Testing zahrnuje následující vylepšení:
+Kromě těchto hlavních doplňků Live Unit Testing zahrnuje následující vylepšení:
 
-- Nová ikona kádinky se teď používá k rozlišení testovací metodu z běžné metody. Ikona prázdný kádinky označuje, že konkrétní test není zahrnutý v Live Unit Testing.
+- Nová ikona kádinky se teď používá k rozlišení testovací metody od běžných metod. Prázdná ikona kádinky indikuje, že konkrétní test není zahrnutý v Live Unit Testing.
 
-- Když kliknete na testovací metodu se v místním okně uživatelského rozhraní pokrytí ikony Live Unit Testing, máte nyní možnost ladit test přímo z daného kontextu okna uživatelského rozhraní a bez nutnosti opustit editor kódu. To je užitečné, když se díváte selhání testu.
+- Když kliknete na testovací metodu z překryvného okna uživatelského rozhraní ikony Live Unit Testing, teď máte možnost ladit test přímo z tohoto kontextu v okně uživatelského rozhraní a bez nutnosti opustit Editor kódu. To je užitečné hlavně v případě, že se díváte na neúspěšný test.
 
-- Bylo přidáno několik dalších možností konfigurovatelné nástroje/Možnosti/Live Unit Testing / Obecné. Můžete limit paměti používané pro Live Unit Testing. Můžete také zadat cestu k souboru trvalých dat. Live Unit Testing pro otevřené řešení.
+- Do nástroje/Možnosti/Live Unit Testing/obecné bylo přidáno několik dalších konfigurovatelných možností. Můžete nastavit paměť, která se používá pro Live Unit Testing. Můžete také zadat cestu k souboru pro trvalá Live Unit Testing data pro otevřené řešení.
 
-- Bylo přidáno několik další položky nabídky v části do nabídky panelu z testu/Live Unit Testing. **Resetovat Vyčistit** trvalá data odstraní a znovu se generuje. **Možnost** přejde k nástroje/Možnosti/Live Unit Testing / Obecné.
+- V řádku nabídek test/Live Unit Testing bylo přidáno několik dalších položek nabídky. **Resetovat vyčistit** odstraní trvalá data a znovu ji vygeneruje. **Možnost** přejde na Nástroje/možnosti/Live Unit Testing/Obecné.
 
-- Následující atributy můžete nyní použít k určení ve zdrojovém kódu, že chcete vyloučit z Live Unit Testing cílové testovací metody:
+- Nyní můžete použít následující atributy k určení ve zdrojovém kódu, který chcete vyloučit cílené testovací metody z Live Unit Testing:
 
   - Pro xUnit: `[Trait("Category", "SkipWhenLiveUnitTesting")]`
   - Pro NUnit: `[Category("SkipWhenLiveUnitTesting")]`
@@ -67,4 +67,4 @@ Kromě těchto hlavními dodatky Live Unit Testing zahrnuje následující vylep
 ## <a name="see-also"></a>Viz také:
 
 - [Představení funkce Live Unit Testing](live-unit-testing-intro.md)
-- [Live Unit Testing pomocí sady Visual Studio](live-unit-testing.md)
+- [Live Unit Testing se sadou Visual Studio](live-unit-testing.md)

@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: c50eadf9c26eaca4c5495dfbc55a1b266aecdb90
-ms.sourcegitcommit: 7825d4163e52d724e59f6c0da209af5fbef673f7
+ms.openlocfilehash: a4c7d0aa4da7e672db06675c65e008d1f71f8bc7
+ms.sourcegitcommit: b23d73c86ec7720c4cd9a58050860bc559623a3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71999997"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172807"
 ---
 # <a name="use-code-analyzers"></a>Použití analyzátorů kódu
 
@@ -138,7 +138,7 @@ Visual Studio nabízí pohodlný způsob konfigurace závažnosti pravidla z nab
 
 ![Soubor sady pravidel v Průzkumník řešení](media/ruleset-in-solution-explorer.png)
 
-1. Otevřete aktivní soubor [sady pravidel](analyzer-rule-sets.md) tak, že na **Průzkumník řešení**něj dvakrát kliknete a vyberete **Otevřít aktivní sadu pravidel** v místní**nabídce uzlu** **odkazy** > , nebo výběrem možnosti **otevřít** na  **Stránka vlastností analýzy kódu** pro projekt
+1. Otevřete aktivní soubor sady pravidel tak, že na **Průzkumník řešení**něj dvakrát kliknete a vyberete **Otevřít aktivní sadu pravidel** v místní**nabídce uzlu** **odkazy** > , nebo výběrem možnosti **otevřít** v **kódu.** Stránka vlastností analýzy projektu
 
    Pokud se jedná o první úpravu sady pravidel, sada Visual Studio vytvoří kopii výchozího souboru sady pravidel a pojmenuje ji *\<projectname >. ruleset*a přidá je do projektu. Tato vlastní sada pravidel se také stal aktivní sadou pravidel pro váš projekt.
 

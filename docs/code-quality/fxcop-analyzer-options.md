@@ -7,18 +7,26 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 27d254ac50b8127ab5cef9ba4cf914d14c0cfba5
-ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
+ms.openlocfilehash: c6eb32357998f0867b00a5ef0e9119c3c357ed1b
+ms.sourcegitcommit: b23d73c86ec7720c4cd9a58050860bc559623a3d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71186380"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72172746"
 ---
 # <a name="rule-scope-options-for-fxcop-analyzers"></a>Možnosti oboru pravidla pro analyzátory FxCop
 
 Některá pravidla analyzátoru FxCop umožňují Upřesnit, na které části základů kódu by se měly použít. Tato stránka obsahuje seznam dostupných možností konfigurace oboru, jejich povolených hodnot a pravidla, na která lze použít. Chcete-li použít tyto možnosti, zadejte je do [souboru EditorConfig](../ide/create-portable-custom-editor-options.md#add-an-editorconfig-file-to-a-project).
 
 Tyto možnosti konfigurace jsou k dispozici od verze 2.6.3 balíčku NuGet [Microsoft. CodeAnalysis. FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers) .
+
+> [!TIP]
+> Úplný seznam možností, které jsou k dispozici pro danou verzi balíčku FxCopAnalyzers, najdete v souboru *analyzátoru Configuration.MD* ve složce *dokumentace* pro daný balíček. Soubor je umístěn v umístění *% USERPROFILE% \\. nuget\packages\microsoft.CodeAnalysis.fxcopanalyzers @ no__t-2 @ no__t-3version @ no__t-4\documentation\Analyzer Configuration.MD*. Tento soubor dokumentace konfigurace je součástí každé verze balíčku počínaje verzí 2.6.5. Tady je příklad, jak je možnost popsána v souboru *analyzátoru Configuration.MD* :
+>
+> Název možnosti: `sufficient_IterationCount_for_weak_KDF_algorithm` @ no__t-1
+> Hodnoty možností: integrální hodnoty \
+> Výchozí hodnota: Specifické pro každé konfigurovatelné pravidlo (ve výchozím nastavení je to pro většinu pravidel "100000") \
+> Příklad: `dotnet_code_quality.CA5387.sufficient_IterationCount_for_weak_KDF_algorithm = 100000`
 
 ## <a name="api_surface"></a>api_surface
 
@@ -39,7 +47,7 @@ Tyto možnosti konfigurace jsou k dispozici od verze 2.6.3 balíčku NuGet [Micr
 
 | Popis | Povolené hodnoty | Výchozí hodnota | Konfigurovatelná pravidla |
 | - | - | - | - |
-| Určuje, zda mají být z pravidla vyloučeny [parametry typu](/dotnet/csharp/programming-guide/generics/generic-type-parameters) s jedním znakem `S` , například v`Collection<S>` | `true`<br/>`false` | `false` | [CA1715](ca1715-identifiers-should-have-correct-prefix.md) |
+| Určuje, zda mají být z pravidla vyloučeny [parametry typu](/dotnet/csharp/programming-guide/generics/generic-type-parameters) s jedním znakem, například `S` v `Collection<S>`. | `true`<br/>`false` | `false` | [CA1715](ca1715-identifiers-should-have-correct-prefix.md) |
 
 > [!NOTE]
 > Ve verzi 2.6.3 a starším balíčku analyzátoru byla tato možnost pojmenována `allow_single_letter_type_parameters`.
@@ -48,4 +56,4 @@ Tyto možnosti konfigurace jsou k dispozici od verze 2.6.3 balíčku NuGet [Micr
 
 | Popis | Povolené hodnoty | Výchozí hodnota | Konfigurovatelná pravidla |
 | - | - | - | - |
-| Určuje, že se má analyzovat kód v projektu, který generuje tento typ sestavení. | Jedno nebo více polí <xref:Microsoft.CodeAnalysis.OutputKind> výčtu<br/><br/>Více hodnot oddělte čárkou (,). | Všechny druhy výstupu | [CA2007](ca2007-do-not-directly-await-task.md) |
+| Určuje, že se má analyzovat kód v projektu, který generuje tento typ sestavení. | Jedno nebo více polí výčtu <xref:Microsoft.CodeAnalysis.OutputKind><br/><br/>Více hodnot oddělte čárkou (,). | Všechny druhy výstupu | [CA2007](ca2007-do-not-directly-await-task.md) |

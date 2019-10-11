@@ -7,12 +7,12 @@ manager: jillfra
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: bdf67f78d1a4cc7e2d17336a7272b919fcc6fba9
-ms.sourcegitcommit: d3e423a9a4ed773a54d14b247e1b5bfc95de8816
+ms.openlocfilehash: 4194a392eee1d5c9beaa0640f4006d1f01ebbace
+ms.sourcegitcommit: 1a3c2ca995fd44fc72741b3a100c6e57f4f8702c
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71693030"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72262312"
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>Konfigurace testů jednotek pomocí souboru *. runsettings*
 
@@ -28,7 +28,7 @@ Soubory parametrů spuštění lze použít ke konfiguraci testů, které jsou s
 
 ::: moniker range="vs-2017"
 
-Chcete-li zadat soubor parametrů běhu v rozhraní IDE, vyberte možnost **test** > **Nastavení** > testu **Vybrat soubor nastavení testu**a pak vyberte soubor *. runsettings* .
+Chcete-li v integrovaném vývojovém prostředí zadat soubor parametrů spuštění, vyberte možnost **test** > **nastavení testu** > **Vyberte soubor nastavení testu**a pak vyberte soubor *. runsettings* .
 
 ![Výběr nabídky soubor nastavení testu v aplikaci Visual Studio 2017](media/select-test-settings-file.png)
 
@@ -91,7 +91,7 @@ K přizpůsobení testů pomocí souboru *. runsettings* použijte následujíc�
 
 ::: moniker range="vs-2017"
 
-3. V nabídce **test** zvolte možnost **Nastavení** > testu**Vybrat soubor nastavení testu**. Přejděte k souboru *. runsettings* , který jste vytvořili, a pak vyberte **OK**.
+3. V nabídce **test** zvolte možnost **nastavení testu** > **Vyberte soubor nastavení testu**. Přejděte k souboru *. runsettings* , který jste vytvořili, a pak vyberte **OK**.
 
 ::: moniker-end
 
@@ -211,7 +211,7 @@ Element **RunConfiguration** může obsahovat následující prvky:
 |Uzel|Výchozí|Hodnoty|
 |-|-|-|
 |**ResultsDirectory**||Adresář, ve kterém jsou umístěny výsledky testů.|
-|**TargetFrameworkVersion**|Framework40|`FrameworkCore10`pro zdroje `FrameworkUap10` .NET Core pro zdroje založené na technologii UWP, `Framework45` pro .NET Framework 4,5 a vyšší, `Framework40` pro .NET Framework 4,0 a `Framework35` pro .NET Framework 3,5.<br /><br />Toto nastavení určuje verzi testovacího rozhraní jednotky, která se používá ke zjišťování a provádění testů. Může se lišit od verze platformy .NET, kterou jste zadali ve vlastnostech sestavení projektu testování částí.<br /><br />Vynecháte `TargetFrameworkVersion` -li prvek ze souboru *. runsettings* , platforma automaticky určí verzi rozhraní na základě sestavených binárních souborů.|
+|**TargetFrameworkVersion**|Framework40|`FrameworkCore10` pro zdroje .NET Core `FrameworkUap10` pro zdroje založené na technologii UWP, `Framework45` pro .NET Framework 4,5 a vyšší, `Framework40` pro .NET Framework 4,0 a `Framework35` pro .NET Framework 3,5.<br /><br />Toto nastavení určuje verzi testovacího rozhraní jednotky, která se používá ke zjišťování a provádění testů. Může se lišit od verze platformy .NET, kterou jste zadali ve vlastnostech sestavení projektu testování částí.<br /><br />Vynecháte-li prvek `TargetFrameworkVersion` ze souboru *. runsettings* , platforma automaticky určí verzi rozhraní na základě sestavených binárních souborů.|
 |**TargetPlatform**|x86|x86, x64|
 |**TreatTestAdapterErrorsAsWarnings**|false|false, true|
 |**TestAdaptersPaths**||Jedna nebo více cest k adresáři, kde se nachází TestAdapters|
@@ -252,12 +252,11 @@ Chcete-li přizpůsobit jakýkoli jiný typ adaptérů diagnostických dat, pou�
 ```xml
 <TestRunParameters>
     <Parameter name="webAppUrl" value="http://localhost" />
-    <Parameter name="webAppUserName" value="Admin" />
-    <Parameter name="webAppPassword" value="Password" />
+    <Parameter name="docsUrl" value="https://docs.microsoft.com" />
 </TestRunParameters>
 ```
 
-Parametry testovacího běhu poskytují způsob, jak definovat proměnné a hodnoty, které jsou k dispozici pro testy v době běhu. Přístup k parametrům pomocí <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.Properties%2A?displayProperty=nameWithType> vlastnosti:
+Parametry testovacího běhu poskytují způsob, jak definovat proměnné a hodnoty, které jsou k dispozici pro testy v době běhu. Přístup k parametrům pomocí vlastnosti <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.Properties%2A?displayProperty=nameWithType>:
 
 ```csharp
 [TestMethod]
@@ -267,7 +266,7 @@ public void HomePageTest()
 }
 ```
 
-Chcete-li použít parametry testovacího běhu, <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext> přidejte soukromé pole a <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext> veřejnou vlastnost do vaší třídy testu.
+Chcete-li použít parametry testovacího běhu, přidejte do vaší třídy testu privátní pole <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext> a veřejnou vlastnost <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext>.
 
 ### <a name="mstest-run-settings"></a>MSTest nastavení spuštění
 
@@ -283,7 +282,7 @@ Chcete-li použít parametry testovacího běhu, <xref:Microsoft.VisualStudio.Te
 </MSTest>
 ```
 
-Tato nastavení jsou specifická pro testovací adaptér, který spouští testovací metody, které mají <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> atribut.
+Tato nastavení jsou specifická pro testovací adaptér, který spouští testovací metody, které mají atribut <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute>.
 
 |Konfiguraci|Výchozí|Hodnoty|
 |-|-|-|

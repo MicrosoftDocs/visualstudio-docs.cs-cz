@@ -13,12 +13,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: db5c1a244ce74985df25f31f5e554ad77b9bb8ae
-ms.sourcegitcommit: d370bdc430fb9fc7549158dfb0ddd7a12b513a0e
-ms.translationtype: HT
+ms.openlocfilehash: 4d26c0b464341bee7bce0b46bfdbcc89e0248a81
+ms.sourcegitcommit: e95dd8cedcd180e0bce6a75c86cf861757918290
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/08/2019
-ms.locfileid: "72036646"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72163122"
 ---
 # <a name="invoke-text-transformation-in-the-build-process"></a>Vyvolat transformaci textu v procesu sestavení
 
@@ -303,13 +303,13 @@ Pokud aktualizujete zahrnutý soubor nebo jiný soubor načtený šablonou, Visu
 
 ::: moniker range="vs-2017"
 
-- V šabloně nástroje MSbuild v *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017\Community\msbuild\Microsoft\VisualStudio\v15.0\TextTemplating\Microsoft.TextTemplating.targets* je dobré doprovodné materiály.
+- V šabloně pro MSbuild je dobré doprovodné materiály na `%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\msbuild\Microsoft\VisualStudio\v15.0\TextTemplating\Microsoft.TextTemplating.targets`
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-- V šabloně nástroje MSbuild v *% ProgramFiles (x86)% \ Microsoft Visual Studio\2019\Community\msbuild\Microsoft\VisualStudio\v16.0\TextTemplating\Microsoft.TextTemplating.targets* je dobré doprovodné materiály.
+- V šabloně pro MSbuild je dobré doprovodné materiály na `%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\msbuild\Microsoft\VisualStudio\v16.0\TextTemplating\Microsoft.TextTemplating.targets`
 
 ::: moniker-end
 

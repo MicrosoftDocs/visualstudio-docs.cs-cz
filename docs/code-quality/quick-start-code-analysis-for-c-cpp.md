@@ -11,12 +11,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b14737c09cf7ff2b14eda1f61408b531b9c22c14
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
-ms.translationtype: HT
+ms.openlocfilehash: 2c68bb94a66be2c9fc1da4365cb77adf8d1330a1
+ms.sourcegitcommit: e95dd8cedcd180e0bce6a75c86cf861757918290
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018367"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72163022"
 ---
 # <a name="quickstart-code-analysis-for-cc"></a>Rychlý start: Analýza kódu pro C/C++
 
@@ -26,24 +26,11 @@ Kvalitu aplikace můžete zlepšit spuštěním analýzy kódu pravidelně na ja
 
 1. V **Průzkumník řešení**otevřete místní nabídku pro název projektu a pak zvolte možnost **vlastnosti**.
 
-2. Následující kroky jsou volitelné:
+2. Volitelně můžete v seznamech **Konfigurace** a **platforma** zvolit konfigurace sestavení a cílovou platformu.
 
-    1. V seznamech **Konfigurace** a **platforma** vyberte konfigurace sestavení a cílová platforma.
+3. Chcete-li spustit nástroj Analýza kódu pokaždé, když se sestavení projektu použitím vybrané konfigurace, vyberte **povolit analýzu kódu na sestavení** zaškrtávací políčko. Můžete také spustit analýzu kódu ručně otevřením nabídky **analyzovat** a následným výběrem možnosti **Spustit analýzu kódu v** *ProjectName* nebo **Spustit analýzu kódu v souboru**.
 
-    2. Ve výchozím nastavení analýza kódu sestavu upozornění z kódu, který je automaticky generován externí nástroje. Chcete-li zobrazit upozornění z generovaného kódu, zrušte **potlačit Výsledky generovaného kódu** zaškrtávací políčko.
-
-        > [!NOTE]
-        > Tato možnost není potlačit chyby analýzy kódu a upozornění z generovaného kódu při chyby a upozornění se zobrazí ve formulářích a šablony. Zdrojový kód formuláře nebo šablony můžete zobrazit a spravovat.
-
-3. Chcete-li spustit analýzu kódu pokaždé, když je projekt sestaven pomocí vybrané konfigurace, zaškrtněte políčko **Povolit analýzu kódu proC++ sestavení C/on** . Analýzu kódu lze také spustit ručně otevřením nabídky **analyzovat** a následným výběrem možnosti **Spustit analýzu kódu v** *ProjectName*.
-
-4. V **spustit tuto sadu pravidel** seznamu, proveďte jednu z následujících akcí:
-
-    - Vyberte sadu pravidel, kterou chcete použít.
-
-    - Zvolte **\<Browse >** a zadejte existující vlastní sadu pravidel, která není v seznamu.
-
-    - Definování [vlastní sady pravidel](../code-quality/how-to-create-a-custom-rule-set.md).
+4. Vyberte [sadu pravidel](../code-quality/using-rule-sets-to-specify-the-cpp-rules-to-run.md) , kterou chcete použít, nebo vytvořte [vlastní sadu pravidel](../code-quality/how-to-create-a-custom-rule-set.md). Pokud používáte LLVM/Clang-CL, přečtěte si téma [použití Clang-uklizený v aplikaci Visual Studio](../code-quality/clang-tidy.md) ke konfiguraci možností analýzy Clang-uklizený.
 
 ### <a name="standard-cc-rule-sets"></a>Standardní sady CC++ /pravidla
 
@@ -56,17 +43,23 @@ Sada Visual Studio obsahuje dvě standardní sady pravidel pro nativní kód:
 
 ## <a name="run-code-analysis"></a>Spustit analýzu kódu
 
-Na stránce Analýza kódu na stránkách vlastností projektu můžete nakonfigurovat analýzu kódu, která se spustí při každém sestavení projektu. Můžete také spustit analýzu kódu ručně.
+Na stránce Analýza kódu stránky vlastností projektu lze konfigurovat analýzu kódu pro spuštění při každém sestavení projektu. Můžete také spustit analýzu kódu ručně.
 
 Spuštění analýzy kódu v řešení:
 
-- Na **sestavení** nabídce zvolte **spustit analýzu kódu na řešení**.
+- V nabídce **sestavení** vyberte možnost **Spustit analýzu kódu v řešení**.
 
 Spuštění analýzy kódu v projektu:
 
 1. V Průzkumník řešení vyberte název projektu.
 
 2. V nabídce **sestavení** vyberte možnost **Spustit analýzu kódu pro** *název projektu*.
+
+Spuštění analýzy kódu v souboru:
+
+1. V Průzkumník řešení vyberte název souboru.
+
+2. V nabídce **sestavení** zvolte možnost **Spustit analýzu kódu v souboru** nebo stiskněte **kombinaci kláves CTRL + SHIFT + ALT + F7**.
 
    Projekt nebo řešení jsou kompilovány a je spuštěna analýza kódu. Výsledky se zobrazí v Seznam chyb.
 
@@ -116,4 +109,4 @@ Můžete hledat dlouhé seznamy varovné zprávy a upozornění v řešení víc
 
 ## <a name="see-also"></a>Viz také:
 
-[Analýza kódu pro C/C++](../code-quality/code-analysis-for-c-cpp-overview.md)
+- [Analýza kódu pro C/C++](../code-quality/code-analysis-for-c-cpp-overview.md)
