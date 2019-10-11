@@ -2,23 +2,25 @@
 title: Použití sad pravidel k určování pravidel C++ pro spuštění
 ms.date: 04/28/2018
 ms.topic: conceptual
+f1_keywords:
+- vs.codeanalysis.rulesets.native
 author: mikeblome
 ms.author: mblome
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 061b52a683992bdc2fe5792ab05e00f788434a0f
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
-ms.translationtype: HT
+ms.openlocfilehash: 64421350f74a2fadcb8a4d4845d8aa00a5f5813b
+ms.sourcegitcommit: e95dd8cedcd180e0bce6a75c86cf861757918290
+ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018219"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72163091"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>Pomocí sad pravidel určete C++ pravidla, která se mají spustit.
 
 V sadě Visual Studio můžete vytvořit a upravit vlastní *sadu pravidel* tak, aby splňovala konkrétní požadavky projektu spojené s analýzou kódu. Výchozí sady pravidel jsou uložené v `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets`.
 
-**Visual Studio 2017 verze 15,7 a novější** Vlastní sady pravidel můžete vytvořit pomocí libovolného textového editoru a použít je v sestavách příkazového řádku bez ohledu na to, jaký systém sestavení používáte. Další informace naleznete v tématu [/analyze: RuleSet](/cpp/build/reference/analyze-code-analysis).
+**Visual Studio 2017 verze 15,7 a novější:** Vlastní sady pravidel můžete vytvořit pomocí libovolného textového editoru a použít je v sestavách příkazového řádku bez ohledu na to, jaký systém sestavení používáte. Další informace naleznete v tématu [/analyze: RuleSet](/cpp/build/reference/analyze-code-analysis).
 
 Chcete-li vytvořit C++ vlastní sadu pravidel v sadě Visual Studio, musíC++ být v integrovaném vývojovém prostředí sady Visual Studio otevřený projekt C/Project. Pak otevřete standardní sadu pravidel v editoru sad pravidel a pak přidejte nebo odeberte specifická pravidla a volitelně změňte akci, ke které dojde, když analýza kódu zjistí, že pravidlo bylo porušeno.
 
@@ -36,7 +38,7 @@ Pokud chcete vytvořit novou vlastní sadu pravidel, uložte ji pomocí nového 
 
      \- nebo –
 
-   - Chcete-li zadat existující sadu pravidel, která není v seznamu, zvolte možnost **\<Browse >** .
+   - Vyberte **@no__t – 1Browse... >** k určení existující sady pravidel, která není v seznamu.
 
 4. Zvolením možnosti **otevřít** zobrazte pravidla v editoru sad pravidel.
 
@@ -50,9 +52,11 @@ Pokud chcete vytvořit novou vlastní sadu pravidel, uložte ji pomocí nového 
 
 - Chcete-li změnit akci povedenou při porušení pravidla při analýze kódu, zvolte pole **Akce** pro pravidlo a pak zvolte jednu z následujících hodnot:
 
-     **Warn** – vygeneruje upozornění.
+     **Upozornění** – vygeneruje upozornění.
 
      **Chyba** – vygeneruje chybu.
+     
+     **Info** – vygeneruje zprávu.
 
      **None** – zakáže pravidlo. Tato akce je stejná jako odebrání pravidla ze sady pravidel.
 
