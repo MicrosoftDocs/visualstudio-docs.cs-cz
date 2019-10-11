@@ -13,14 +13,14 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: b3d61a5bcd530afb951f98f84f1f4e38e36f96d6
-ms.sourcegitcommit: 9cfd3ef6c65f671a26322320818212a1ed5955fe
-ms.translationtype: MT
+ms.openlocfilehash: db5c1a244ce74985df25f31f5e554ad77b9bb8ae
+ms.sourcegitcommit: d370bdc430fb9fc7549158dfb0ddd7a12b513a0e
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68533301"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72036646"
 ---
-# <a name="code-generation-in-a-build-process"></a>Generování kódu v procesu sestavení
+# <a name="invoke-text-transformation-in-the-build-process"></a>Vyvolat transformaci textu v procesu sestavení
 
 [Transformaci textu](../modeling/code-generation-and-t4-text-templates.md) lze vyvolat jako součást [procesu sestavení](/azure/devops/pipelines/index) řešení sady Visual Studio. Některé úlohy sestavení se specializují na transformaci textu. Úlohy sestavení T4 spouštějí textové šablony návrhu a rovněž kompilují textové šablony běhu (předzpracované).
 
@@ -32,30 +32,26 @@ Pokud chcete povolit úlohy sestavení ve vývojovém počítači, nainstalujte 
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-Pokud je [Server sestavení](/azure/devops/pipelines/agents/agents) spuštěn v počítači, na kterém není nainstalována aplikace Visual Studio, zkopírujte následující soubory do počítače sestavení z vývojového počítače. Nahradí nejnovější čísla verzí hvězdičkou (*).
+Pokud je [Server sestavení](/azure/devops/pipelines/agents/agents) spuštěn v počítači, ve kterém není nainstalována aplikace Visual Studio, zkopírujte následující soubory do počítače sestavení z vývojového počítače:
 
-- $(ProgramFiles)\MSBuild\Microsoft\VisualStudio\v*.0\TextTemplating
+- % ProgramFiles (x86)% \ Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VisualStudio\v16.0\TextTemplating
 
-  - Microsoft.VisualStudio.TextTemplating.Sdk.Host.*.0.dll
-
+  - Microsoft. VisualStudio. TextTemplating. SDK. Host. 15.0. dll
   - Microsoft.TextTemplating.Build.Tasks.dll
-
   - Microsoft.TextTemplating.targets
 
-- $(ProgramFiles)\Microsoft Visual Studio *.0\VSSDK\VisualStudioIntegration\Common\Assemblies\v4.0
+- % ProgramFiles (x86)% \ Microsoft Visual Studio\2019\Community\VSSDK\VisualStudioIntegration\Common\Assemblies\v4.0
 
-  - Microsoft.VisualStudio.TextTemplating.*.0.dll
+  - Microsoft. VisualStudio. TextTemplating. 15.0. dll
+  - Microsoft. VisualStudio. TextTemplating. Interfaces. 15.0. dll
+  - Microsoft. VisualStudio. TextTemplating. VSHost. 15.0. dll
 
-  - Microsoft.VisualStudio.TextTemplating.Interfaces.*.0.dll (several files)
+- % ProgramFiles (x86)% \ Microsoft Visual Studio\2019\Community\Common7\IDE\PublicAssemblies
 
-  - Microsoft.VisualStudio.TextTemplating.VSHost.*.0.dll
-
-- $ (ProgramFiles) \Microsoft Visual Studio *. 0 \ Common7\IDE\PublicAssemblies\
-
-  - Microsoft.VisualStudio.TextTemplating.Modeling.*.0.dll
+  - Microsoft. VisualStudio. TextTemplating. Modeling. 15.0. dll
   
 > [!TIP]
-> Pokud při spouštění cílů `MissingMethodException` sestavení TextTemplating na serveru sestavení získáte pro metodu Microsoft. CodeAnalysis, ujistěte se, že jsou sestavení Roslyn v adresáři s názvem *Roslyn* , který je ve stejném adresáři jako spustitelný soubor sestavení (například *MSBuild. exe*).
+> Pokud při spouštění cílů sestavení TextTemplating na serveru sestavení získáte `MissingMethodException` pro metodu Microsoft. CodeAnalysis, ujistěte se, že jsou sestavení Roslyn v adresáři s názvem *Roslyn* , který je ve stejném adresáři jako spustitelný soubor sestavení (například  *MSBuild. exe*).
 
 ## <a name="edit-the-project-file"></a>Upravit soubor projektu
 
@@ -75,18 +71,21 @@ V souboru .vbproj nebo .csproj vyhledejte řádek podobný následujícímu:
 
 Za tento řádek vložte import šablonování textu:
 
-```xml
-<!-- Optionally make the import portable across VS versions -->
-  <PropertyGroup>
-    <!-- Get the Visual Studio version: -->
-    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">16.0</VisualStudioVersion>
-    <!-- Keep the next element all on one line: -->
-    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
-  </PropertyGroup>
+::: moniker range=">=vs-2019"
 
-<!-- This is the important line: -->
-  <Import Project="$(VSToolsPath)\TextTemplating\Microsoft.TextTemplating.targets" />
+```xml
+<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v16.0\TextTemplating\Microsoft.TextTemplating.targets" />
 ```
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+```xml
+<Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v15.0\TextTemplating\Microsoft.TextTemplating.targets" />
+```
+
+::: moniker-end
 
 ## <a name="transform-templates-in-a-build"></a>Transformace šablon v sestavení
 
@@ -148,7 +147,7 @@ Pokud neprovedete přizpůsobení kroku postprocessing, při přepisování soub
 
 ## <a name="customize-the-build-process"></a>Přizpůsobení procesu sestavení
 
-Transformace textu se provede před všemi ostatními úlohami v procesu sestavení. Můžete definovat úkoly, které jsou vyvolány před a po transformaci, nastavením `$(BeforeTransform)` vlastností `$(AfterTransform)`a:
+Transformace textu se provede před všemi ostatními úlohami v procesu sestavení. Můžete definovat úkoly, které jsou vyvolány před a po transformaci, nastavením vlastností `$(BeforeTransform)` a `$(AfterTransform)`:
 
 ```xml
 <PropertyGroup>
@@ -163,9 +162,9 @@ Transformace textu se provede před všemi ostatními úlohami v procesu sestav
   </Target>
 ```
 
-V `AfterTransform`nástroji můžete odkazovat na seznamy souborů:
+V `AfterTransform` můžete odkazovat na seznamy souborů:
 
-- GeneratedFiles – seznam souborů zapsaných procesem. U souborů, které přepsaly existující soubory jen pro čtení `%(GeneratedFiles.ReadOnlyFileOverwritten)` , bude true. Tyto soubory lze rezervovat ze správy zdrojového kódu.
+- GeneratedFiles – seznam souborů zapsaných procesem. Pro soubory, které přepsaly existující soubory jen pro čtení, `%(GeneratedFiles.ReadOnlyFileOverwritten)` budou pravdivé. Tyto soubory lze rezervovat ze správy zdrojového kódu.
 
 - NonGeneratedFiles – seznam souborů určených jen pro čtení, které nebyly přepsány.
 
@@ -253,7 +252,7 @@ Dim value = Host.ResolveParameterValue("-", "-", "parameterName")
 ```
 
 > [!NOTE]
-> `ResolveParameterValue`získává data `T4ParameterValues` pouze při použití nástroje MSBuild. Při transformaci šablony pomocí sady Visual Studio mají parametry výchozí hodnoty.
+> `ResolveParameterValue` načte data z `T4ParameterValues` pouze při použití nástroje MSBuild. Při transformaci šablony pomocí sady Visual Studio mají parametry výchozí hodnoty.
 
 ## <a name="msbuild"></a>Použít vlastnosti projektu v direktivách Assembly a include
 
@@ -286,7 +285,7 @@ Tyto direktivy získají z T4parameterValues hodnoty v hostitelích MSBuild i�
 
 ## <a name="q--a"></a>Dotazy a odpovědi
 
-**Proč bych chtěl transformovat šablony na serveru sestavení? V aplikaci Visual Studio už byly transformované šablony před vrácením kódu se změnami**
+**Why chcete transformovat šablony na serveru sestavení? V aplikaci Visual Studio už byly transformované šablony před vrácením kódu se změnami.**
 
 Pokud aktualizujete zahrnutý soubor nebo jiný soubor načtený šablonou, Visual Studio soubor netransformuje automaticky. Transformace šablon v rámci sestavení zajistí, že vše je aktuální.
 
@@ -298,19 +297,19 @@ Pokud aktualizujete zahrnutý soubor nebo jiný soubor načtený šablonou, Visu
 
 - [Textové šablony návrhu](../modeling/design-time-code-generation-by-using-t4-text-templates.md) jsou transformovány pomocí sady Visual Studio.
 
-- [Textové šablony běhu](../modeling/run-time-text-generation-with-t4-text-templates.md) jsou transformované v době běhu aplikace.
+- [Běhové textové šablony](../modeling/run-time-text-generation-with-t4-text-templates.md) se transformují za běhu ve vaší aplikaci.
 
 ## <a name="see-also"></a>Viz také:
 
 ::: moniker range="vs-2017"
 
-- V šabloně nástroje MSbuild v *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017\Enterprise\msbuild\Microsoft\VisualStudio\v15.0\TextTemplating\Microsoft.TextTemplating.targets* je dobré doprovodné materiály.
+- V šabloně nástroje MSbuild v *% ProgramFiles (x86)% \ Microsoft Visual Studio\2017\Community\msbuild\Microsoft\VisualStudio\v15.0\TextTemplating\Microsoft.TextTemplating.targets* je dobré doprovodné materiály.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-- V šabloně nástroje MSbuild v *% ProgramFiles (x86)% \ Microsoft Visual Studio\2019\Enterprise\msbuild\Microsoft\VisualStudio\v16.0\TextTemplating\Microsoft.TextTemplating.targets* je dobré doprovodné materiály.
+- V šabloně nástroje MSbuild v *% ProgramFiles (x86)% \ Microsoft Visual Studio\2019\Community\msbuild\Microsoft\VisualStudio\v16.0\TextTemplating\Microsoft.TextTemplating.targets* je dobré doprovodné materiály.
 
 ::: moniker-end
 
