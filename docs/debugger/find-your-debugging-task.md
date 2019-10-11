@@ -1,5 +1,5 @@
 ---
-title: Najít úlohu ladění
+title: Nalezení úlohy ladění
 description: Identifikujte funkci ladicího programu, která vám pomůže s laděním aplikace
 ms.custom: ''
 ms.date: 10/01/2019
@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f8d971792fb55789fb6dcd7e0d90829ac723ba6
-ms.sourcegitcommit: 8a3545329a58e446672181cfed2083f850e1ad14
+ms.openlocfilehash: 21ce539296f02599a1f8afa0344413fb556eea45
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71817522"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018776"
 ---
 # <a name="find-your-debugging-task-in-visual-studio"></a>Hledání úlohy ladění v aplikaci Visual Studio
 
@@ -34,7 +34,10 @@ Vyzkoušejte podmíněný bod přerušení pro řízení, kde a kdy se zarážka
 
 ### <a name="pause-code-only-when-a-specific-objects-property-or-value-changes"></a>Pozastavit kód pouze v případě, že dojde ke změně vlastnosti nebo hodnoty konkrétního objektu
 
-Pro C++nastavte [datovou zarážku](using-breakpoints.md#BKMK_set_a_data_breakpoint_native_cplusplus). Pro aplikace využívající .NET Core 3 můžete také nastavit [datovou zarážku](using-breakpoints.md#BKMK_set_a_data_breakpoint_managed).
+Pro C++nastavte [datovou zarážku](using-breakpoints.md#BKMK_set_a_data_breakpoint_native_cplusplus). 
+::: moniker range=">= vs-2019"
+Pro aplikace využívající .NET Core 3 můžete také nastavit [datovou zarážku](using-breakpoints.md#BKMK_set_a_data_breakpoint_managed).
+::: moniker-end
 
 V opačném C# případě F# můžete pro a jenom [sledovat ID objektu s podmíněnou zarážkou](using-breakpoints.md#using-object-ids-in-breakpoint-conditions-c-and-f).
 

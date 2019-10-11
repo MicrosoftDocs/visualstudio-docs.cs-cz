@@ -9,85 +9,85 @@ helpviewer_keywords:
 - code analysis tool, walkthroughs
 author: mikeblome
 ms.author: mblome
-manager: wpickett
+manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: acfa1e274b7c0744c2d9968682960b1cd50e0044
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: bdb99cf487995859b9623f11b3559f1b5e7e3ca7
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62820334"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018337"
 ---
 # <a name="walkthrough-analyzing-cc-code-for-defects"></a>Návod: Analýza defektů v kódu C/C++
 
-Tento návod ukazuje, jak analýza kódu C/C++ pro potenciální závady kódu pomocí nástroje Analýza kódu pro kód C/C++.
+Tento návod ukazuje, jak analyzovat kód CC++ /Code pro potenciální nedostatky v kódu pomocí nástroje Analýza kódu pro C/C++ Code.
 
-- Spustíte analýzu kódu na nativní kód.
-- Analýza upozornění vad kódu.
+- Spusťte analýzu kódu v nativním kódu.
+- Analyzuje upozornění na vady kódu.
 - Považovat upozornění za chybu.
-- Popis zdrojového kódu ke zlepšení chyb analýzy kódu.
+- Opatřit zdrojový kód poznámkami, aby se zlepšila analýza vad kódu.
 
 ## <a name="prerequisites"></a>Požadavky
 
-- Kopie [demonstrační ukázka](../code-quality/demo-sample.md).
-- Základní znalosti jazyka C/C++.
+- Kopie [ukázkové ukázky](../code-quality/demo-sample.md).
+- Základní porozumění C/C++.
 
-### <a name="to-run-code-defect-analysis-on-native-code"></a>Pro spuštění analýzy vadu kódu v nativním kódu
+### <a name="to-run-code-defect-analysis-on-native-code"></a>Spuštění analýzy vad kódu v nativním kódu
 
-1. Ukázka řešení otevřít v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
+1. Otevřete ukázkové řešení v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)].
 
-     Ukázka řešení nyní naplní **Průzkumníka řešení**.
+     Ukázkové řešení nyní naplňuje **Průzkumník řešení**.
 
 2. Na **sestavení** nabídky, klikněte na tlačítko **znovu sestavit řešení**.
 
-     Řešení je sestaveno bez jakýchkoli chyb nebo upozornění.
+     Řešení se sestaví bez chyb nebo upozornění.
 
-3. V **Průzkumníka řešení**, vyberte projekt CodeDefects.
+3. V **Průzkumník řešení**vyberte projekt CodeDefects.
 
-4. Na **projektu** nabídky, klikněte na tlačítko **vlastnosti**.
+4. V nabídce **projekt** klikněte na příkaz **vlastnosti**.
 
-     **Stránky vlastností CodeDefects** se zobrazí dialogové okno.
+     Zobrazí se dialogové okno **stránky vlastností CodeDefects** .
 
-5. Klikněte na tlačítko **analýza kódu**.
+5. Klikněte na **Analýza kódu**.
 
-6. Klikněte na tlačítko **povolit analýzu kódu pro C/C++ při sestavení** zaškrtávací políčko.
+6. Klikněte na zaškrtávací políčko **Povolit analýzu kódu proC++ sestavení C/on** .
 
 7. Znovu sestavte projekt CodeDefects.
 
-     Upozornění analýzy kódu se zobrazují v **seznam chyb**.
+     Upozornění analýzy kódu se zobrazují v **Seznam chyb**.
 
-### <a name="to-analyze-code-defect-warnings"></a>K analýze upozornění vad kódu
+### <a name="to-analyze-code-defect-warnings"></a>Analýza upozornění na vady kódu
 
-1. Na **zobrazení** nabídky, klikněte na tlačítko **seznam chyb**.
+1. V nabídce **zobrazení** klikněte na příkaz **Seznam chyb**.
 
-     V závislosti na profil pro vývojáře, který jste zvolili v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], možná budete muset odkazovat na **ostatní Windows** na **zobrazení** nabídky a pak klikněte na tlačítko **seznam chyb**.
+     V závislosti na profilu vývojáře, který jste zvolili v [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], bude pravděpodobně nutné Ukázat na **jiné okna** v nabídce **zobrazení** a pak kliknout na tlačítko **Seznam chyb**.
 
-2. V **seznam chyb**, dvakrát klikněte na následující upozornění:
+2. V **Seznam chyb**dvakrát klikněte na následující upozornění:
 
-     upozornění C6230: Implicitní přetypování mezi sémanticky odlišnými typy: použití HRESULT v kontextu logické hodnoty.
+     Upozornění C6230: Implicitní přetypování mezi sémanticky odlišnými typy: používá HRESULT v logickém kontextu.
 
-     Editor kódu zobrazí řádek, který způsobil toto upozornění ve funkci `bool ProcessDomain()`. Toto upozornění signalizuje, že hodnotu HRESULT se používá v příkazu "if" kde se očekává výsledek s logickou hodnotu.
+     Editor kódu zobrazí řádek, který způsobil upozornění ve funkci `bool ProcessDomain()`. Toto upozornění označuje, že se v příkazu if používá HRESULT, kde se očekává logický výsledek.
 
-3. Použití makra SUCCEEDED opravte toto upozornění. Váš kód by měl vypadat následovně:
+3. Opravte toto upozornění pomocí makra úspěšné. Váš kód by měl vypadat podobně jako následující kód:
 
    ```cpp
    if (SUCCEEDED (ReadUserAccount()) )
    ```
 
-4. V **seznam chyb**, dvakrát klikněte na následující upozornění:
+4. V **Seznam chyb**dvakrát klikněte na následující upozornění:
 
-     upozornění C6282: Nesprávný operátor: přiřazení konstanty v kontextu testu. Byl == očekávání?
+     Upozornění C6282: Nesprávný operátor: přiřazení k konstantě v kontextu testu. Bylo = = zamýšleno?
 
-5. Opravte toto upozornění při testování rovnosti. Váš kód by měl vypadat podobně jako následující kód:
+5. Opravte toto upozornění pomocí testování rovnosti. Váš kód by měl vypadat podobně jako následující kód:
 
    ```cpp
    if ((len == ACCOUNT_DOMAIN_LEN) || (g_userAccount[len] != '\\'))
    ```
 
-### <a name="to-treat-warning-as-an-error"></a>Považovat upozornění za chybu
+### <a name="to-treat-warning-as-an-error"></a>Zpracování upozornění jako chyby
 
-1. V souboru Bug.cpp, přidejte následující `#pragma` příkaz na začátek souboru, který se upozornění C6001 považovat za chybu:
+1. V souboru Error. cpp přidejte následující příkaz `#pragma` na začátek souboru, aby se upozornění C6001 jako chyba:
 
    ```cpp
    #pragma warning (error: 6001)
@@ -95,37 +95,37 @@ Tento návod ukazuje, jak analýza kódu C/C++ pro potenciální závady kódu p
 
 2. Znovu sestavte projekt CodeDefects.
 
-     V **seznam chyb**, C6001 se teď zobrazí jako chyba.
+     V **Seznam chyb**se teď jako chyba zobrazuje C6001.
 
-3. Opravte chyby zbývající dva C6001 v **seznam chyb** podle inicializace `i` a `j` na hodnotu 0.
+3. Opravte zbývající dvě chyby C6001 v **Seznam chyb** tím, že inicializujete `i` a `j` na hodnotu 0.
 
 4. Znovu sestavte projekt CodeDefects.
 
-     Projekt se sestaví bez žádná upozornění ani chyby.
+     Projekt se vytváří bez upozornění a chyb.
 
-### <a name="to-correct-the-source-code-annotation-warnings-in-annotationc"></a>Chcete-li opravit upozornění anotace zdrojového kódu v annotation.c
+### <a name="to-correct-the-source-code-annotation-warnings-in-annotationc"></a>Oprava upozornění pro poznámky zdrojového kódu v poznámce. c
 
-1. V Průzkumníku řešení vyberte projekt poznámky.
+1. V Průzkumník řešení vyberte projekt poznámky.
 
-2. Na **projektu** nabídky, klikněte na tlačítko **vlastnosti**.
+2. V nabídce **projekt** klikněte na příkaz **vlastnosti**.
 
-     **Stránky vlastností poznámky** se zobrazí dialogové okno.
+     Zobrazí se dialogové okno **stránky vlastností poznámky** .
 
-3. Klikněte na tlačítko **analýza kódu**.
+3. Klikněte na **Analýza kódu**.
 
-4. Vyberte **povolit analýzu kódu pro C/C++ při sestavení** zaškrtávací políčko.
+4. Zaškrtněte zaškrtávací políčko **Povolit analýzu kódu pro sestaveníC++ C/on** .
 
 5. Znovu sestavte projekt poznámky.
 
-6. V **seznam chyb**, dvakrát klikněte na následující upozornění:
+6. V **Seznam chyb**dvakrát klikněte na následující upozornění:
 
-     upozornění C6011: Přesměrování ukazatele NULL "newNode".
+     Upozornění C6011: Přesměrování NULOVÉho ukazatele ' newNode '.
 
-     Toto upozornění znamená selhání volajícího zkontrolovat návratovou hodnotu. V tomto případě volání **AllocateNode** může vrátit hodnotu NULL (viz annotations.h hlavičkový soubor pro deklaraci funkce pro AllocateNode).
+     Toto upozornění signalizuje selhání volajícímu, aby zkontroloval vrácenou hodnotu. V takovém případě volání **AllocateNode** může vracet hodnotu null (viz hlavičkový soubor poznámky. h pro deklaraci funkce pro AllocateNode).
 
-7. Otevřete soubor annotations.cpp.
+7. Otevřete soubor poznámky. cpp.
 
-8. Chcete-li opravit toto upozornění, použijte k testování hodnotu vrácenou příkazem 'if'. Váš kód by měl vypadat následovně:
+8. Chcete-li toto upozornění opravit, použijte příkaz if pro otestování návratové hodnoty. Váš kód by měl vypadat podobně jako následující kód:
 
    ```cpp
    if (NULL != newNode)
@@ -138,11 +138,11 @@ Tento návod ukazuje, jak analýza kódu C/C++ pro potenciální závady kódu p
 
 9. Znovu sestavte projekt poznámky.
 
-     Projekt se sestaví bez žádná upozornění ani chyby.
+     Projekt se vytváří bez upozornění a chyb.
 
-### <a name="to-use-source-code-annotation"></a>Použití poznámek zdrojového kódu
+### <a name="to-use-source-code-annotation"></a>Použití poznámky ke zdrojovému kódu
 
-1. Přidat poznámku formální parametry a vrátí hodnotu funkce `AddTail` s použitím podmínky hodnocením před kurzem a příspěvku, jak je znázorněno v tomto příkladu:
+1. Zadejte do pole formální parametry a návratovou hodnotu funkce `AddTail` pomocí podmínek pre a post, jak je znázorněno v následujícím příkladu:
 
    ```cpp
    [returnvalue:SA_Post (Null=SA_Maybe)] LinkedList* AddTail
@@ -152,15 +152,15 @@ Tento návod ukazuje, jak analýza kódu C/C++ pro potenciální závady kódu p
    )
    ```
 
-2. Znovu sestavte projekt poznámky.
+2. Znovu sestavit projekt poznámek.
 
-3. V **seznam chyb**, dvakrát klikněte na následující upozornění:
+3. V **Seznam chyb**dvakrát klikněte na následující upozornění:
 
-     upozornění C6011: Přesměrování ukazatele NULL "uzel".
+     Upozornění C6011: Přesměrování NULOVÉho ukazatele "Node".
 
-     Toto upozornění označuje, že uzel předaného do funkce může mít hodnotu null a označuje číslo řádku, které upozornění vygenerovalo.
+     Toto upozornění znamená, že uzel předaný do funkce může mít hodnotu null a označuje číslo řádku, kde bylo upozornění vyvoláno.
 
-4. Chcete-li opravit toto upozornění, použijte k testování hodnotu vrácenou příkazem 'if'. Váš kód by měl vypadat následovně:
+4. Chcete-li toto upozornění opravit, použijte příkaz if pro otestování návratové hodnoty. Váš kód by měl vypadat podobně jako následující kód:
 
    ```cpp
    . . .
@@ -172,11 +172,10 @@ Tento návod ukazuje, jak analýza kódu C/C++ pro potenciální závady kódu p
    }
    ```
 
-5. Znovu sestavte projekt poznámky.
+5. Znovu sestavit projekt poznámek.
 
-     Projekt se sestaví bez žádná upozornění ani chyby.
+     Projekt se vytváří bez upozornění a chyb.
 
 ## <a name="see-also"></a>Viz také:
 
-[Návod: Analýza spravovaného kódu na výskyt závad kódu](../code-quality/walkthrough-analyzing-managed-code-for-code-defects.md)
-[analýza kódu pro C/C++](../code-quality/code-analysis-for-c-cpp-overview.md)
+[Návod: Analýza spravovaného kódu pro vady kódu @ no__t-0 @ no__t-1[Analýza kódu pro CC++ /](../code-quality/code-analysis-for-c-cpp-overview.md)

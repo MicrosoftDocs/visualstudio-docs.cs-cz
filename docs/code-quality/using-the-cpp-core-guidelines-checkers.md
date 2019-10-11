@@ -4,15 +4,15 @@ ms.date: 08/14/2018
 ms.topic: conceptual
 author: mikeblome
 ms.author: mblome
-manager: wpickett
+manager: markl
 dev_langs:
 - CPP
-ms.openlocfilehash: 9be0d47bd9779fea2fa0eae2aedfe428ce2c84b0
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
+ms.openlocfilehash: 57c8d6daf75987bfb5c6a6642b89f198693a5dce
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68923764"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018416"
 ---
 # <a name="use-the-c-core-guidelines-checkers"></a>Použití kontrolních mechanismů C++ Core Guidelines
 
@@ -73,18 +73,18 @@ c:\users\username\documents\visual studio 2015\projects\corecheckexample\coreche
 ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
 ```
 
-C++ Základní pokyny jsou tam, kde vám pomůžou psát lepší a bezpečnější kód. Pokud však máte instanci, kde pravidlo nebo profil nepoužijete, je snadné ho potlačit přímo v kódu. `gsl::suppress` Atribut můžete použít k udržení C++ základní kontroly při zjišťování a vytváření sestav o porušení pravidla v následujícím bloku kódu. Jednotlivé příkazy můžete označit pro potlačení specifických pravidel. Můžete dokonce potlačit celý profil s mezemi, a `[[gsl::suppress(bounds)]]` to tak, že zapíšete bez konkrétního čísla pravidla.
+C++ Základní pokyny jsou tam, kde vám pomůžou psát lepší a bezpečnější kód. Pokud však máte instanci, kde pravidlo nebo profil nepoužijete, je snadné ho potlačit přímo v kódu. Můžete použít atribut `gsl::suppress`, chcete-li C++ , aby základní kontroly zjistily a nahlášeny jakékoli porušení pravidla v následujícím bloku kódu. Jednotlivé příkazy můžete označit pro potlačení specifických pravidel. Můžete dokonce potlačit celý profil s mezemi, a to tak, že zapíšete `[[gsl::suppress(bounds)]]` bez zahrnutí konkrétního čísla pravidla.
 
 ## <a name="supported-rule-sets"></a>Podporované sady pravidel
 Při přidání nových pravidel do nástroje pro C++ kontrolu základních pokynů se může zvýšit počet upozornění vytvořených pro stávající kód. Předdefinované sady pravidel můžete použít k filtrování, které typy pravidel se mají povolit.
 Referenční témata pro většinu pravidel najdete v části [základní C++ informace o kontrole sady Visual Studio](code-analysis-for-cpp-corecheck.md).
 
 Od verze Visual Studio 2017 verze 15,3 jsou podporované sady pravidel:
-- **Pravidla ukazatele vlastníka** vynutila [kontroly správy prostředků související s\<Owner T > ze C++ základních pokynů](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management).
+- **Pravidla ukazatele vlastníka** vynutila [kontroly správy prostředků související s vlastníkem @ no__t-2T > ze C++ základních pokynů](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management).
 
-- **Konstantní pravidla** vynutila [kontroly související s const C++ podle základních pokynů](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con-constants-and-immutability).
+- **Konstantní pravidla** vynutila [kontroly související s const podle C++ základních pokynů](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con-constants-and-immutability).
 
-- **Pravidla nezpracovaných ukazatelů** vynutila [kontroly C++ správy prostředků související s nezpracovanými ukazateli podle základních pokynů](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management).
+- **Pravidla nezpracovaných ukazatelů** vynutila [kontroly správy prostředků související s nezpracovanými ukazateli podle C++ základních pokynů](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management).
 
 - **Pravidla jedinečných ukazatelů** vynutila [kontroly správy prostředků související s typy se sémantikou jedinečných C++ ukazatelů z hlavních pokynů](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management).
 
@@ -97,13 +97,13 @@ Od verze Visual Studio 2017 verze 15,3 jsou podporované sady pravidel:
 - **Pravidla třídy** Několik pravidel, která se zaměřují na správné používání speciálních členských funkcí a virtuálních specifikací. Toto je podmnožina kontrol doporučených pro [třídy a hierarchie tříd](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-class).
 - **Pravidla souběžnosti** Jediné pravidlo, které zachycuje nesprávně deklarované objekty Guard. Další informace najdete v tématu [pokyny týkající se souběžnosti](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-concurrency).
 - **Pravidla deklarace** Několik pravidel z [pokynů rozhraní](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-interfaces) , které se zaměřují na to, jak jsou deklarovány globální proměnné.
-- **Pravidla funkcí** Dvě kontroly, které vám pomůžou s `noexcept` přijetím specifikátoru. Toto je součást pokynů pro [vymazání návrhu a implementace funkcí](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-functions).
+- **Pravidla funkcí** Dvě kontroly, které vám pomůžou s přijetím specifikátoru `noexcept`. Toto je součást pokynů pro [vymazání návrhu a implementace funkcí](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-functions).
 - **Pravidla sdílených ukazatelů** V rámci vynucování pokynů [pro správu prostředků](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-resource) jsme přidali několik pravidel, která jsou specifická pro to, jak se sdílené ukazatele předávají do funkcí nebo se používají místně.
 - **Pravidla stylu** Jedna jednoduchá, ale důležitá kontrolu, která zakazuje používání příkazu [goto](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-goto). Toto je první krok při vylepšení stylu kódování a použití výrazů a příkazů v C++.
 
 **Visual Studio 2017 verze 15,6**:
 
-- **Aritmetická pravidla** Pravidla pro detekci [](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-overflow)aritmetického přetečení, podepsaných a nepodepsaných [operací](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-unsigned) a [manipulace](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-nonnegative)s přenosem.
+- **Aritmetická pravidla** Pravidla pro detekci aritmetického [přetečení](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-overflow), [podepsaných a nepodepsaných operací](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-unsigned) a [manipulace s přenosem](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-nonnegative).
 
 Můžete omezit upozornění jenom na jednu nebo několik skupin. **Nativní minimální** a **nativní Doporučené** sady pravidel zahrnují C++ kromě dalších předrychlých kontrol i základní pravidla kontroly. Chcete-li zobrazit dostupné sady pravidel, otevřete dialogové okno Vlastnosti projektu, vyberte možnost **Code Analysis\General**, otevřete rozevírací nabídku v poli se seznamem **sady pravidel** a vyberte **možnost zvolit více sad pravidel**. Další informace o použití sad pravidel v sadě Visual Studio najdete v tématu [použití sad pravidel k seskupení pravidel analýzy kódu](using-rule-sets-to-group-code-analysis-rules.md).
 
@@ -169,12 +169,12 @@ Pomocí možnosti příkazového řádku můžete dočasně zakázat veškerou a
 
 V některých případech může být užitečné provádět analýzu kódu a dál používat Visual Studio IDE. Následující vzorový scénář lze použít pro velké projekty pro uložení času sestavení a pro snadnější filtrování výsledků:
 
-1. V příkazovém prostředí nastavte `esp.extension` proměnné prostředí a. `esp.annotationbuildlevel`
+1. V příkazovém prostředí nastavte proměnné prostředí `esp.extension` a `esp.annotationbuildlevel`.
 2. Chcete-li tyto proměnné zdědit, otevřete aplikaci Visual Studio z příkazového prostředí.
 3. Načtěte projekt a otevřete jeho vlastnosti.
 4. Povolte analýzu kódu, vyberte příslušné sady pravidel, ale nepovolujte rozšíření pro analýzu kódu.
 5. Do souboru, který chcete analyzovat, použijte kontrolu C++ základních pokynů a otevřete jeho vlastnosti.
-6. Zvolit **Možnosti řádkuC++C/\command** a přidat`/analyze:plugin EspXEngine.dll`
+6. Zvolit **možnostiC++\command čáry** a přidat `/analyze:plugin EspXEngine.dll`
 7. Zakázat použití předkompilované hlavičky (**hlavičky C/C++\Precompiled**). To je nezbytné, protože modul rozšíření se může pokusit přečíst své interní informace z předkompilované hlavičky (PCH); Pokud se soubor PCH zkompiluje s výchozími možnostmi projektu, nebude kompatibilní.
 8. Znovu sestavte projekt. Společné kontroly před rychlým spuštěním by se měly spouštět na všech souborech. Vzhledem k C++ tomu, že kontrola základních pokynů není ve výchozím nastavení povolená, měla by běžet jenom pro soubor, který je nakonfigurovaný tak, aby ho používal.
 
@@ -223,15 +223,15 @@ Použijete-li systém sestavení, který nespoléhá na nástroj MSBuild, může
 Je nutné nastavit několik proměnných prostředí a použít pro kompilátor správné možnosti příkazového řádku. Je lepší pracovat v prostředí "nativní nástroje" příkazového řádku, takže nemusíte hledat konkrétní cesty pro kompilátor, zahrnout adresáře atd.
 
 1. **Proměnné prostředí**
-   - `set esp.extensions=cppcorecheck.dll`Tím se modul upozorní, že modul C++ načte základní pokyny.
-   - `set esp.annotationbuildlevel=ignore`Tím se zakáže logika, která zpracovává poznámky SAL. Poznámky neovlivňují analýzu kódu v nástroji C++ kontrola základních pokynů, jejich zpracování ale trvá čas (někdy dlouhou dobu). Toto nastavení je volitelné, ale důrazně se doporučuje.
-   - `set caexcludepath=%include%`Důrazně doporučujeme, abyste zakázali upozornění, která se aktivují ve standardních hlavičkách. Sem můžete přidat další cesty, například cestu k běžným hlavičkám v projektu.
+   - `set esp.extensions=cppcorecheck.dll` znamená to, že modul načte C++ základní pokyny.
+   - @no__t – 0 tím zakážete logiku, která zpracovává poznámky SAL. Poznámky neovlivňují analýzu kódu v nástroji C++ kontrola základních pokynů, jejich zpracování ale trvá čas (někdy dlouhou dobu). Toto nastavení je volitelné, ale důrazně se doporučuje.
+   - @no__t – 0 důrazně doporučujeme, abyste zakázali upozornění, která se aktivují ve standardních hlavičkách. Sem můžete přidat další cesty, například cestu k běžným hlavičkám v projektu.
 2. **Možnosti příkazového řádku**
-   - `/analyze`Povolí analýzu kódu (Zvažte také použití/analyze: Only a/analyze: quiet).
-   - `/analyze:plugin EspXEngine.dll`Tato možnost načte modul rozšíření analýzy kódu do rychlého režimu. Tento modul zase načte základní pokyny pro C++ kontrolu.
+   - `/analyze` povolí analýzu kódu (Zvažte také použití/analyze: Only a/analyze: quiet).
+   - `/analyze:plugin EspXEngine.dll` Tato možnost načte modul rozšíření analýzy kódu do rychlého režimu. Tento modul zase načte základní pokyny pro C++ kontrolu.
 
 ## <a name="use-the-guideline-support-library"></a>Použití knihovny podpory zásad
-Knihovna podpory směrnic je navržená tak, aby vám pomohla postupovat podle základních pokynů. GSL obsahuje definice, které umožňují nahradit konstrukce náchylné k chybám s bezpečnějšími alternativami. Můžete například nahradit `T*, length` dvojici parametrů `span<T>` typem. GSL je k dispozici [http://www.nuget.org/packages/Microsoft.Gsl](http://www.nuget.org/packages/Microsoft.Gsl)na adrese. Knihovna je open source, takže můžete zobrazit zdroje, vytvářet komentáře nebo přispívat. Projekt najdete na adrese [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL).
+Knihovna podpory směrnic je navržená tak, aby vám pomohla postupovat podle základních pokynů. GSL obsahuje definice, které umožňují nahradit konstrukce náchylné k chybám s bezpečnějšími alternativami. Můžete například nahradit pár parametrů `T*, length` pomocí typu `span<T>`. GSL je k dispozici na adrese [http://www.nuget.org/packages/Microsoft.Gsl](http://www.nuget.org/packages/Microsoft.Gsl). Knihovna je open source, takže můžete zobrazit zdroje, vytvářet komentáře nebo přispívat. Projekt najdete na adrese [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL).
 
 ## <a name="vs2015_corecheck"></a>Použití C++ základních pokynů pro kontrolu v projektech sady Visual Studio 2015
 

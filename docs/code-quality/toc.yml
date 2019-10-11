@@ -33,7 +33,7 @@
                   href: configure-fxcop-analyzers.md
                 - name: Možnosti oboru
                   href: fxcop-analyzer-options.md
-                - name: Předdefinované sady pravidel
+                - name: Povolení kategorie pravidel
                   href: analyzer-rule-sets.md
             - name: Nejčastější dotazy
               href: fxcop-analyzers-faq.md
@@ -532,30 +532,30 @@
                   displayName: portability warnings
                   href: portability-warnings.md
                 - name: 'CA1900: Pole typů hodnot by měla být přenosná'
-                  href: ca1900-value-type-fields-should-be-portable.md
+                  href: ca1900.md
                 - name: 'CA1901: Deklarace volání nespravovaného kódu by měla být přenosná'
-                  href: ca1901-p-invoke-declarations-should-be-portable.md
+                  href: ca1901.md
                 - name: 'CA1903: Používejte jen rozhraní API z cílové architektury'
-                  href: ca1903-use-only-api-from-targeted-framework.md
+                  href: ca1903.md
             - name: Upozornění spolehlivosti
               items:
                 - name: Přehled
                   displayName: reliability warnings
                   href: reliability-warnings.md
                 - name: 'CA2000: Uvolňujte objekty před ztrátou oboru'
-                  href: ca2000-dispose-objects-before-losing-scope.md
+                  href: ca2000.md
                 - name: 'CA2001: Vyhněte se volání problematických metod'
-                  href: ca2001-avoid-calling-problematic-methods.md
+                  href: ca2001.md
                 - name: 'CA2002: Nepoužívejte zámky u objektů se slabou identitou'
-                  href: ca2002-do-not-lock-on-objects-with-weak-identity.md
+                  href: ca2002.md
                 - name: 'CA2003: Nezacházejte s vlákénky jako s vlákny'
-                  href: ca2003-do-not-treat-fibers-as-threads.md
+                  href: ca2003.md
                 - name: 'CA2004: Odeberte volání GC.KeepAlive'
-                  href: ca2004-remove-calls-to-gc-keepalive.md
+                  href: ca2004.md
                 - name: 'CA2006: Použijte SafeHandle k zapouzdření nativních prostředků'
-                  href: ca2006-use-safehandle-to-encapsulate-native-resources.md
+                  href: ca2006.md
                 - name: 'CA2007: Nečekejte přímo na úlohu'
-                  href: ca2007-do-not-directly-await-task.md
+                  href: ca2007.md
             - name: Upozornění zabezpečení
               items:
                 - name: Přehled
@@ -652,21 +652,21 @@
                 - name: 'CA2153: Vyhněte se zpracování výjimek v poškozeném stavu'
                   href: ca2153-avoid-handling-corrupted-state-exceptions.md
                 - name: 'CA2300: Nepoužívat nezabezpečený deserializátor BinaryFormatter'
-                  href: ca2300-do-not-use-insecure-deserializer-binaryformatter.md
+                  href: ca2300.md
                 - name: 'CA2301: Nevolat BinaryFormatter.Deserialize dříve, než se nastaví BinaryFormatter.Binder'
-                  href: ca2301-do-not-call-binaryformatter-deserialize-without-first-setting-binaryformatter-binder.md
+                  href: ca2301.md
                 - name: 'CA2302: Než zavoláte BinaryFormatter.Deserialize, ujistěte se, že je nastavený BinaryFormatter.Binder'
-                  href: ca2302-ensure-binaryformatter-binder-is-set-before-calling-binaryformatter-deserialize.md
+                  href: ca2302.md
                 - name: 'CA2305: Nepoužívat nezabezpečený deserializátor LosFormatter'
-                  href: ca2305-do-not-use-insecure-deserializer-losformatter.md
+                  href: ca2305.md
                 - name: 'CA2310: Nepoužívat nezabezpečený deserializátor NetDataContractSerializer'
-                  href: ca2310-do-not-use-insecure-deserializer-netdatacontractserializer.md
+                  href: ca2310.md
                 - name: 'CA2311: Nedeserializovat dříve, než se nastaví NetDataContractSerializer.Binder'
-                  href: ca2311-do-not-deserialize-without-first-setting-netdatacontractserializer-binder.md
+                  href: ca2311.md
                 - name: 'CA2312: Před deserializací se ujistěte, že je nastavený NetDataContractSerializer.Binder'
-                  href: ca2312-ensure-netdatacontractserializer-binder-is-set-before-deserializing.md
+                  href: ca2312.md
                 - name: 'CA2315: Nepoužívat nezabezpečený deserializátor ObjectStateFormatter'
-                  href: ca2315-do-not-use-insecure-deserializer-objectstateformatter.md
+                  href: ca2315.md
                 - name: 'CA2321: Nedeserializovat se třídou JavaScriptSerializer pomocí třídy SimpleTypeResolver'
                   href: ca2321.md
                 - name: 'CA2322: Před deserializaci se ujistěte se, že třída JavaScriptSerializer není inicializována pomocí třídy SimpleTypeResolver'
@@ -682,29 +682,29 @@
                 - name: 'CA2330: Ujistěte se, že JsonSerializer má při deserializaci zabezpečenou konfiguraci'
                   href: ca2330.md
                 - name: 'CA3001: Zkontrolujte ohrožení zabezpečení injektáží SQL v kódu'
-                  href: ca3001-review-code-for-sql-injection-vulnerabilities.md
+                  href: ca3001.md
                 - name: 'CA3002: Zkontrolujte ohrožení zabezpečení proti XSS v kódu'
-                  href: ca3002-review-code-for-xss-vulnerabilities.md
+                  href: ca3002.md
                 - name: 'CA3003: Zkontrolujte ohrožení zabezpečení injektáží cesty k souboru v kódu'
-                  href: ca3003-review-code-for-file-path-injection-vulnerabilities.md
+                  href: ca3003.md
                 - name: 'CA3004: Zkontrolujte ohrožení zabezpečení zpřístupněním informací v kódu'
-                  href: ca3004-review-code-for-information-disclosure-vulnerabilities.md
+                  href: ca3004.md
                 - name: 'CA3005: Zkontrolujte ohrožení zabezpečení injektáží protokolu LDAP v kódu'
-                  href: ca3005-review-code-for-ldap-injection-vulnerabilities.md
+                  href: ca3005.md
                 - name: 'CA3006: Zkontrolujte ohrožení zabezpečení injektáží příkazu procesu v kódu'
-                  href: ca3006-review-code-for-process-command-injection-vulnerabilities.md
+                  href: ca3006.md
                 - name: 'CA3007: Zkontrolujte ohrožení zabezpečení otevřeným přesměrováním v kódu'
-                  href: ca3007-review-code-for-open-redirect-vulnerabilities.md
+                  href: ca3007.md
                 - name: 'CA3008: Zkontrolujte ohrožení zabezpečení injektáží XPath v kódu'
-                  href: ca3008-review-code-for-xpath-injection-vulnerabilities.md
+                  href: ca3008.md
                 - name: 'CA3009: Zkontrolujte ohrožení zabezpečení injektáží XML v kódu'
-                  href: ca3009-review-code-for-xml-injection-vulnerabilities.md
+                  href: ca3009.md
                 - name: 'CA3010: Zkontrolujte ohrožení zabezpečení injektáží XAML v kódu'
-                  href: ca3010-review-code-for-xaml-injection-vulnerabilities.md
+                  href: ca3010.md
                 - name: 'CA3011: Zkontrolujte ohrožení zabezpečení injektáží knihovny DLL v kódu'
-                  href: ca3011-review-code-for-dll-injection-vulnerabilities.md
+                  href: ca3011.md
                 - name: 'CA3012: Zkontrolujte ohrožení zabezpečení injektáží regulárního výrazu v kódu'
-                  href: ca3012-review-code-for-regex-injection-vulnerabilities.md
+                  href: ca3012.md
                 - name: 'CA3061: Nepřidávat schéma podle adresy URL'
                   href: ca3061.md
                 - name: 'CA3075: Zpracování nezabezpečené specifikace DTD'
@@ -847,7 +847,7 @@
       href: quick-start-code-analysis-for-c-cpp.md
     - name: Analýza defektů v kódu C/C++
       href: walkthrough-analyzing-c-cpp-code-for-defects.md
-    - name: Demonstrační ukázka
+    - name: Ukázkový projekt
       href: demo-sample.md
     - name: Použití kontrolních mechanismů C++ Core Guidelines
       href: using-the-cpp-core-guidelines-checkers.md
@@ -855,6 +855,8 @@
       href: how-to-set-code-analysis-properties-for-c-cpp-projects.md
     - name: Sady pravidel pro kód C++
       href: using-rule-sets-to-specify-the-cpp-rules-to-run.md
+    - name: Používání Clang-Tidy
+      href: clang-tidy.md
     - name: Použití anotací SAL k omezení defektů kódu
       items:
         - name: Přehled

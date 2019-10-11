@@ -4,22 +4,22 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 author: mikeblome
 ms.author: mblome
-manager: wpickett
+manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 27570e282c230d4bec47e70aa1bcdd053b75597c
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: cd5e07f1e9ce83f36e6ecfbae148c84d18f40ff1
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236749"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72015951"
 ---
 # <a name="best-practices-and-examples-sal"></a>Doporučené postupy a příklady (poznámky SAL)
 Tady je několik způsobů, jak využít jazyk pro poznámky ke zdrojovému kódu (SAL) a vyhnout se některým běžným problémům.
 
-## <a name="_in_"></a>\_Pro\_
+## <a name="_in_"></a>@no__t – 0In @ no__t-1
 
-Pokud má být funkce zapsána do prvku, použijte `_Inout_` `_In_`místo. To je zvlášť důležité v případech automatizovaného převodu ze starších maker do SAL. Před Sal, mnoho programátorů použili makra jako komentáře – makra, která byla `IN`pojmenována `IN_OUT`, `OUT`, nebo varianty těchto názvů. I když doporučujeme převést tato makra na SAL, doporučujeme vám, abyste byli opatrní při jejich převodu, protože došlo ke změně kódu od chvíle, kdy byl napsán původní prototyp, a staré makro již nemusí odrážet, co kód dělá. Buďte obzvláště opatrní na `OPTIONAL` makru komentáře, protože je často nesprávně umístěný – například na nesprávné straně čárky.
+Pokud má být funkce zapsána do prvku, použijte `_Inout_` místo `_In_`. To je zvlášť důležité v případech automatizovaného převodu ze starších maker do SAL. Před SAL, mnoho programátorů použili makra jako komentáře – makra s názvem `IN`, `OUT`, `IN_OUT` nebo varianty těchto názvů. I když doporučujeme převést tato makra na SAL, doporučujeme vám, abyste byli opatrní při jejich převodu, protože došlo ke změně kódu od chvíle, kdy byl napsán původní prototyp, a staré makro již nemusí odrážet, co kód dělá. Buďte obzvláště opatrní na makru s komentářem `OPTIONAL`, protože je často nesprávně umístěný – například na nesprávné straně čárky.
 
 ```cpp
 
@@ -42,9 +42,9 @@ void Func2(_Inout_ PCHAR p1)
 }
 ```
 
-## <a name="_opt_"></a>\_přihlásit\_
+## <a name="_opt_"></a>@no__t – 0opt @ no__t-1
 
-Pokud volajícímu není povoleno předat ukazatel s hodnotou null `_In_` , použijte nebo `_Out_` místo `_In_opt_` nebo `_Out_opt_`. To platí i pro funkci, která kontroluje jeho parametry a vrátí chybu, pokud má hodnotu NULL, pokud by neměla být. I když funkce vrátí svůj parametr pro neočekávanou hodnotu NULL a řádným návratem je dobrý postup kódování obrannou linií, neznamená to, že anotace parametru může být volitelného typu (`_*Xxx*_opt_`).
+Pokud volajícímu nepovoluje předat ukazatel s hodnotou null, použijte `_In_` nebo `_Out_` namísto `_In_opt_` nebo `_Out_opt_`. To platí i pro funkci, která kontroluje jeho parametry a vrátí chybu, pokud má hodnotu NULL, pokud by neměla být. I když funkce vrátí svůj parametr pro neočekávanou hodnotu NULL a řádným návratem je dobrý postup kódování obrannou linií, neznamená to, že anotace parametru může být volitelného typu (`_*Xxx*_opt_`).
 
 ```cpp
 
@@ -61,11 +61,11 @@ void Func2(_Out_ int *p1)
 }
 ```
 
-## <a name="_pre_defensive_-and-_post_defensive_"></a>\_Pre\_obrannou linií\_ a post\_obrannou linií\_\_
+## <a name="_pre_defensive_-and-_post_defensive_"></a>\_Pre @ no__t-1defensive @ no__t-2 a \_Post @ no__t-4defensive @ no__t-5
 
-Pokud se funkce objeví na hranici vztahu důvěryhodnosti, doporučujeme použít `_Pre_defensive_` poznámku.  Modifikátor "obrannou linií" mění určité poznámky, což znamená, že v bodě volání by mělo být rozhraní kontrolováno striktně, ale v těle implementace by mělo předpokládat, že mohou být předány nesprávné parametry. V takovém případě `_In_ _Pre_defensive_` je preferován na hranici vztahu důvěryhodnosti, aby označoval, že i když se volající dostane chyba, pokud se pokusí předat hodnotu null, tělo funkce se analyzuje, jako by parametr může mít hodnotu null, a všechny pokusy o zrušení odkazu na ukazatel bez předchozího zaškrtnutí pro hodnotu NULL bude označeno příznakem.  `_Post_defensive_` Poznámka je k dispozici také pro použití ve zpětných voláních, kde se důvěryhodná strana považuje za volající a nedůvěryhodný kód je pojmenovaný kód.
+Pokud se funkce objeví na hranici vztahu důvěryhodnosti, doporučujeme použít `_Pre_defensive_` anotace.  Modifikátor "obrannou linií" mění určité poznámky, což znamená, že v bodě volání by mělo být rozhraní kontrolováno striktně, ale v těle implementace by mělo předpokládat, že mohou být předány nesprávné parametry. V takovém případě je `_In_ _Pre_defensive_` upřednostňována na hranici vztahu důvěryhodnosti, což znamená, že i když se volající dostane chyba, pokud se pokusí předat hodnotu NULL, text funkce se analyzuje, jako by parametr mohl mít hodnotu NULL, a všechny pokusy o zrušení odkazu na ukazatel bez předchozího zaškrtnutí pro hodnotu NULL bude označeno příznakem.  K dispozici je také anotace `_Post_defensive_`, která se používá ve zpětných voláních, kde se považuje důvěryhodná strana jako volající a nedůvěryhodný kód je pojmenovaný kód.
 
-## <a name="_out_writes_"></a>\_Zápisy ven\_\_
+## <a name="_out_writes_"></a>\_Out @ no__t-1writes @ no__t-2
 
 Následující příklad ukazuje běžné zneužití `_Out_writes_`.
 
@@ -77,7 +77,7 @@ void Func1(_Out_writes_(size) CHAR *pb,
 );
 ```
 
-Poznámka `_Out_writes_` znamená, že máte vyrovnávací paměť. Má `cb` přidělené bajty a první bajt inicializovaný při ukončení. Tato poznámka není výhradně chybná a je užitečné vyjádřit přidělenou velikost. Ale nesděluje, kolik prvků je funkcí inicializováno.
+Poznámka `_Out_writes_` znamená, že máte vyrovnávací paměť. Má `cb` přidělených bajtů a první bajt inicializovaný při ukončení. Tato poznámka není výhradně chybná a je užitečné vyjádřit přidělenou velikost. Ale nesděluje, kolik prvků je funkcí inicializováno.
 
 Následující příklad ukazuje tři správné způsoby, jak plně určit přesnou velikost inicializované části vyrovnávací paměti.
 
@@ -98,7 +98,7 @@ void Func3(_Out_writes_(size) PSTR pb,
 );
 ```
 
-## <a name="_out_-pstr"></a>\_\_ PSTR
+## <a name="_out_-pstr"></a>\_Out @ no__t-1 PSTR
 
 Použití `_Out_ PSTR` je téměř vždy chybné. To je interpretováno jako výstupní parametr, který odkazuje na vyrovnávací paměť znaků a je zakončený hodnotou NULL.
 
@@ -111,11 +111,11 @@ void Func1(_Out_ PSTR pFileName, size_t n);
 void Func2(_Out_writes_(n) PSTR wszFileName, size_t n);
 ```
 
-Poznámka jako `_In_ PCSTR` je společná a užitečná. Odkazuje na vstupní řetězec, který má nulové ukončení, protože představa `_In_` umožňuje rozpoznávání řetězce zakončeného hodnotou null.
+Poznámka, jako je například `_In_ PCSTR`, je společná a užitečná. Odkazuje na vstupní řetězec, který má nulové ukončení, protože představa `_In_` umožňuje rozpoznání řetězce zakončeného hodnotou NULL.
 
-## <a name="_in_-wchar-p"></a>\_V\_ WCHAR * p
+## <a name="_in_-wchar-p"></a>\_In @ no__t-1 WCHAR * p
 
-`_In_ WCHAR* p`říká, že je vstupní ukazatel `p` , který odkazuje na jeden znak. Ve většině případů to však není pravděpodobně specifikace, která je určena. Místo toho, co je pravděpodobně určeno, je specifikace pole zakončeného hodnotou NULL; k tomu použijte `_In_ PWSTR`.
+`_In_ WCHAR* p` znamená, že existuje vstupní ukazatel `p`, který odkazuje na jeden znak. Ve většině případů to však není pravděpodobně specifikace, která je určena. Místo toho, co je pravděpodobně určeno, je specifikace pole zakončeného hodnotou NULL; k tomu použijte `_In_ PWSTR`.
 
 ```cpp
 
@@ -126,7 +126,7 @@ void Func1(_In_ WCHAR* wszFileName);
 void Func2(_In_ PWSTR wszFileName);
 ```
 
-Není k dispozici správná specifikace ukončení hodnoty NULL je běžné. Použijte odpovídající `STR` verzi k nahrazení typu, jak je znázorněno v následujícím příkladu.
+Není k dispozici správná specifikace ukončení hodnoty NULL je běžné. Použijte příslušnou verzi `STR` k nahrazení typu, jak je znázorněno v následujícím příkladu.
 
 ```cpp
 
@@ -143,9 +143,9 @@ BOOL StrEquals2(_In_ PSTR p1, _In_ PSTR p2)
 }
 ```
 
-## <a name="_out_range_"></a>\_Rozsah\_mimo oblast\_
+## <a name="_out_range_"></a>\_Out @ no__t-1range @ no__t-2
 
-Pokud je parametr ukazatel a chcete vyjádřit rozsah hodnoty prvku, na který ukazuje ukazatel, použijte `_Deref_out_range_` `_Out_range_`místo. V následujícím příkladu je vyjádřena rozsah * pcbFilled, ne pcbFilled.
+Pokud je parametr ukazatel a chcete vyjádřit rozsah hodnoty prvku, na který ukazuje ukazatel, použijte `_Deref_out_range_` namísto `_Out_range_`. V následujícím příkladu je vyjádřena rozsah * pcbFilled, ne pcbFilled.
 
 ```cpp
 
@@ -164,11 +164,11 @@ void Func2(
 );
 ```
 
-`_Deref_out_range_(0, cbSize)`není bezpodmínečně nutné pro některé nástroje, protože může být odvozena z `_Out_writes_to_(cbSize,*pcbFilled)`, ale je zde uvedena pro úplnost.
+`_Deref_out_range_(0, cbSize)` není bezpodmínečně nutné pro některé nástroje, protože může být odvozena z `_Out_writes_to_(cbSize,*pcbFilled)`, ale je zde uvedena pro úplnost.
 
-## <a name="wrong-context-in-_when_"></a>Chybný kontext v \_případě, kdy\_
+## <a name="wrong-context-in-_when_"></a>Chybný kontext v \_When @ no__t-1
 
-Další běžnou chybou je použití vyhodnocení po stavu pro předběžné podmínky. V následujícím příkladu `_Requires_lock_held_` je předběžnou podmínkou.
+Další běžnou chybou je použití vyhodnocení po stavu pro předběžné podmínky. V následujícím příkladu je `_Requires_lock_held_` Předběžná podmínka.
 
 ```cpp
 
@@ -183,9 +183,9 @@ int Func2(_In_ MyData *p, int flag);
 
 Výraz `result` odkazuje na hodnotu po stavu, která není k dispozici v předběžném stavu.
 
-## <a name="true-in-_success_"></a>Pravda v \_úspěchu\_
+## <a name="true-in-_success_"></a>TRUE v \_Success @ no__t-1
 
-Pokud je funkce úspěšná, když je vrácená hodnota nenulová, použijte `return != 0` jako podmínku úspěch `return == TRUE`místo. Nenulové hodnota nutně neznamená rovnocennosti s skutečnou hodnotou, pro `TRUE`kterou kompilátor poskytuje. Parametr `_Success_` na je výraz a následující výrazy jsou vyhodnoceny jako ekvivalentní: `return != false` `return != 0`, `return != FALSE`, a `return` bez parametrů nebo porovnání.
+Pokud je funkce úspěšná, když je vrácená hodnota nenulová, místo `return == TRUE` použijte `return != 0` jako podmínku úspěch. Nenulové hodnota nutně neznamená rovnocennosti skutečné hodnoty, kterou kompilátor poskytuje pro `TRUE`. Parametr pro `_Success_` je výraz a následující výrazy jsou vyhodnoceny jako ekvivalentní: `return != 0`, `return != false`, `return != FALSE` a `return` bez parametrů nebo porovnání.
 
 ```cpp
 
@@ -204,7 +204,7 @@ BOOL WINAPI TryEnterCriticalSection(
 
 ## <a name="reference-variable"></a>Referenční proměnná
 
-V případě referenční proměnné předchozí verze Sal použila implicitní ukazatel jako cíl poznámky a vyžadoval přidání `__deref` do poznámek, které jsou připojeny k referenční proměnné. Tato verze používá samotný objekt a nevyžaduje další `_Deref_`.
+V případě referenční proměnné předchozí verze SAL použila implicitní ukazatel jako cíl poznámky a vyžadoval přidání `__deref` k poznámkám, které jsou připojeny k referenční proměnné. Tato verze používá samotný objekt a nevyžaduje další `_Deref_`.
 
 ```cpp
 
@@ -234,7 +234,7 @@ _Out_opt_ void *MightReturnNullPtr1();
 _Ret_maybenull_ void *MightReturnNullPtr2();
 ```
 
-V tomto příkladu `_Out_opt_` říká, že ukazatel může mít hodnotu null jako součást předběžné podmínky. Pro návratovou hodnotu však nelze použít předběžné podmínky. V takovém případě je `_Ret_maybenull_`správná Poznámka.
+V tomto příkladu `_Out_opt_` říká, že ukazatel může mít hodnotu NULL jako součást předpodmínky. Pro návratovou hodnotu však nelze použít předběžné podmínky. V takovém případě je správná Poznámka `_Ret_maybenull_`.
 
 ## <a name="see-also"></a>Viz také:
 

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 81f0c9e8-f471-4de5-aac4-99db336a8809
 author: mikeblome
 ms.author: mblome
-manager: wpickett
+manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f7b0e29f6a9a502054b59fc7313c3eff0565f938
-ms.sourcegitcommit: 5216c15e9f24d1d5db9ebe204ee0e7ad08705347
-ms.translationtype: MT
+ms.openlocfilehash: 493db26aed1a4e5f41acdd054dba266577159809
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68919890"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018486"
 ---
 # <a name="code-analysis-for-cc-overview"></a>Analýza kódu pro C/C++ přehled
 
@@ -50,7 +50,7 @@ C:\>cl /analyze Sample.cpp
 
 ## <a name="pragma-support"></a>Podpora #pragma
 
-Pomocí této `#pragma` direktivy můžete zacházet s upozorněními jako s chybami, povolit nebo zakázat upozornění a potlačit upozornění pro jednotlivé řádky kódu. Další informace naleznete v tématu [direktivy pragma a klíčové slovo __pragma](https://docs.microsoft.com/cpp/preprocessor/pragma-directives-and-the-pragma-keyword).
+Pomocí direktivy `#pragma` můžete zacházet s upozorněními jako s chybami. Povolit nebo zakázat upozornění a potlačit upozornění pro jednotlivé řádky kódu. Další informace naleznete v tématu [direktivy pragma a klíčové slovo __pragma](https://docs.microsoft.com/cpp/preprocessor/pragma-directives-and-the-pragma-keyword).
 
 ## <a name="annotation-support"></a>Podpora poznámek
 
@@ -62,12 +62,12 @@ Možná budete chtít vyžadovat, aby všechna vrácení se změnami zdrojového
 
 ## <a name="team-build-integration"></a>Integrace sestavení týmu
 
-Pomocí integrovaných funkcí systému sestavení lze nástroj pro analýzu kódu spustit jako krok [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)] procesu sestavení. Další informace najdete v tématu [kanály Azure](/azure/devops/pipelines/index?view=vsts).
+Pomocí integrovaných funkcí systému sestavení lze nástroj pro analýzu kódu spustit jako krok procesu sestavení [!INCLUDE[esprtfs](../code-quality/includes/esprtfs_md.md)]. Další informace najdete v tématu [kanály Azure](/azure/devops/pipelines/index?view=vsts).
 
 ## <a name="see-also"></a>Viz také:
 
 - [Rychlý start: Analýza kódu pro C/C++](quick-start-code-analysis-for-c-cpp.md)
-- [Návod: Analyzovat C/C++ kód pro vady](walkthrough-analyzing-c-cpp-code-for-defects.md)
+- [Návod: Analyzovat C/C++ kód pro vady @ no__t-1
 - [Upozornění Analýzy kódu pro C/C++](code-analysis-for-c-cpp-warnings.md)
 - [Použití kontrolních mechanismů C++ Core Guidelines](using-the-cpp-core-guidelines-checkers.md)
 - [C++Reference k základní kontrole – referenční pokyny](code-analysis-for-cpp-corecheck.md)

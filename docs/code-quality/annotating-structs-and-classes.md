@@ -21,45 +21,45 @@ f1_keywords:
 ms.assetid: b8278a4a-c86e-4845-aa2a-70da21a1dd52
 author: mikeblome
 ms.author: mblome
-manager: wpickett
+manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 35be465064c9524eb0e1339794b6a19b7a595da1
-ms.sourcegitcommit: d2b234e0a4a875c3cba09321cdf246842670d872
+ms.openlocfilehash: 1cff36760a84821a33dcdb1ee4cc6842cd40aee0
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67493639"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72015964"
 ---
 # <a name="annotating-structs-and-classes"></a>Zadávání poznámek ke strukturám a třídám
 
-Členy struktury a třídy může opatřit poznámkami pomocí poznámek, které fungují jako výstupních podmínek, jsou považovány za na hodnotu true v jakékoli volání funkce nebo funkce zahájení/ukončení, která zahrnuje ohraničující struktuře jako parametr nebo je výsledná hodnota.
+Členy struktury a třídy lze opatřit poznámkami pomocí anotací, které fungují jako invariantní – jsou považovány za pravdivé při jakémkoli volání funkce nebo vstupní/výstupní funkci, která zahrnuje ohraničující strukturu jako parametr nebo výslednou hodnotu.
 
-## <a name="struct-and-class-annotations"></a>Struktury a třídy poznámky
+## <a name="struct-and-class-annotations"></a>Poznámky ke struktuře a třídě
 
 - `_Field_range_(low, high)`
 
-     Pole je v rozsahu (včetně) z `low` k `high`.  Ekvivalentní `_Satisfies_(_Curr_ >= low && _Curr_ <= high)` u objektu s poznámkami pomocí vhodných podmínek před nebo po.
+     Pole je v rozsahu (včetně) od `low` do `high`.  Ekvivalent `_Satisfies_(_Curr_ >= low && _Curr_ <= high)` aplikovaný na objekt s poznámkou pomocí příslušných podmínek před nebo po odeslání.
 
 - `_Field_size_(size)`, `_Field_size_opt_(size)`, `_Field_size_bytes_(size)`, `_Field_size_bytes_opt_(size)`
 
-     Pole, které má zapisovatelná velikost elementů (nebo bajtů) jako určené `size`.
+     Pole, které má zapisovatelné velikosti v prvcích (nebo bajtech), jak je určeno `size`.
 
 - `_Field_size_part_(size, count)`, `_Field_size_part_opt_(size, count)`,         `_Field_size_bytes_part_(size, count)`, `_Field_size_bytes_part_opt_(size, count)`
 
-     Pole, které má zapisovatelná velikost elementů (nebo bajtů) jako určené `size`a `count` elementů (v bajtech), které čitelné.
+     Pole, které má zapisovatelné velikosti v prvcích (nebo bajtech), jak je určeno `size` a `count` z těchto prvků (bajtů), které jsou čitelné.
 
 - `_Field_size_full_(size)`, `_Field_size_full_opt_(size)`, `_Field_size_bytes_full_(size)`, `_Field_size_bytes_full_opt_(size)`
 
-     Pole, které má parametr readable i writable velikost elementů (nebo bajtů) jako určené `size`.
+     Pole, které má čitelné i zapisovatelné velikosti v elementech (nebo bajtech), jak je určeno `size`.
 
 - `_Field_z_`
 
-     Pole, které obsahuje řetězec zakončený hodnotou null.
+     Pole, které má řetězec zakončený hodnotou null.
 
 - `_Struct_size_bytes_(size)`
 
-     Platí pro deklaraci třídy nebo struktury.  Označuje, že platný objekt daného typu může být větší než deklarovaného typu, s počtem bajtů se určené `size`.  Příklad:
+     Platí pro strukturu nebo deklaraci třídy.  Označuje, že platný objekt tohoto typu může být větší než deklarovaný typ, s počtem bajtů určených parametrem `size`.  Příklad:
 
     ```cpp
 
@@ -71,7 +71,7 @@ ms.locfileid: "67493639"
 
     ```
 
-     Velikost vyrovnávací paměti v bajtech parametr `pM` typu `MyStruct *` pak slov za:
+     Velikost vyrovnávací paměti v bajtech parametru `pM` typu `MyStruct *` je pak provedena:
 
     ```cpp
     min(pM->nSize, sizeof(MyStruct))
@@ -104,11 +104,11 @@ struct MyBuffer
 };
 ```
 
-Poznámky v tomto příkladu:
+Poznámky k tomuto příkladu:
 
-- `_Field_z_` je ekvivalentní `_Null_terminated_`.  `_Field_z_` Název pole určuje, že pole název je řetězec zakončený hodnotou null.
-- `_Field_range_` pro `bufferSize` Určuje, že hodnota `bufferSize` by měla být v rámci 1 a `MaxBufferSize` (obojí včetně).
-- Výsledky end `_Struct_size_bytes_` a `_Field_size_` poznámky jsou ekvivalentní. Pro struktury nebo třídy, které mají podobné rozložení `_Field_size_` je snadněji čte i údržbu, protože má menší počet odkazů a výpočty, než ekvivalentní `_Struct_size_bytes_` poznámky. `_Field_size_` nevyžaduje převod na velikost v bajtech. Pokud velikost v bajtech je jedinou možností, například pro pole ukazatelů void, `_Field_size_bytes_` lze použít. Pokud mají oba `_Struct_size_bytes_` a `_Field_size_` neexistuje, jak budou mít k dispozici nástroje. Je nástroj pro co dělat, když dva poznámky Nesouhlasím.
+- `_Field_z_` je ekvivalentem `_Null_terminated_`.  `_Field_z_` pro pole název určuje, že pole název je řetězec zakončený hodnotou null.
+- `_Field_range_` pro `bufferSize` určuje, že hodnota `bufferSize` by měla být v rozmezí od 1 do `MaxBufferSize` (včetně).
+- Konečné výsledky `_Struct_size_bytes_` a poznámky `_Field_size_` jsou ekvivalentní. U struktur nebo tříd, které mají podobné rozložení, je `_Field_size_` snazší si je přečíst a udržovat, protože má méně odkazů a výpočtů než ekvivalentní anotace `_Struct_size_bytes_`. `_Field_size_` nevyžaduje převod na velikost bajtu. Je-li velikost bajtu jedinou možností, například pro pole ukazatele void, lze použít `_Field_size_bytes_`. Pokud existují oba `_Struct_size_bytes_` i `_Field_size_`, budou k dispozici obě nástroje. V případě nesouhlasu dvou poznámek se jedná o nástroj.
 
 ## <a name="see-also"></a>Viz také
 

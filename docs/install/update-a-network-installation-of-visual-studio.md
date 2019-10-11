@@ -1,7 +1,7 @@
 ---
 title: Aktualizace síťové instalace
 description: Zjistěte, jak aktualizovat síťové instalace sady Visual Studio pomocí příkazu--rozložení
-ms.date: 03/30/2019
+ms.date: 10/07/2019
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: fd7277c4c42856ceea5e4da0a45d54613bf66c74
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 2157a6142f95b6ffe34503a8ee80419fcb9ca506
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62971365"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018821"
 ---
 # <a name="update-a-network-based-installation-of-visual-studio"></a>Aktualizace síťové instalace sady Visual Studio
 
@@ -28,11 +28,11 @@ Je možné k aktualizaci rozložení síťové instalace sady Visual Studio s ne
 
 ## <a name="how-to-update-a-network-layout"></a>Jak aktualizovat síťový diagram
 
-Chcete-li aktualizovat vaší síťové sdílené složky instalace tak, že obsahují nejnovější aktualizace, spusťte `--layout` příkaz, který přírůstkově stáhnout aktualizované balíčky.
+Pokud chcete sdílenou síťovou instalaci aktualizovat tak, aby obsahovala nejnovější aktualizace, spusťte příkaz `--layout` a postupně stáhněte aktualizované balíčky.
 
 ::: moniker range="vs-2017"
 
-**Novinka v 15.3**: Pokud jste vybrali částečné rozložení, při prvním vytvoření rozložení sítě, se uloží. Všechny příkazy budoucí rozložení použít předchozí možnosti plus všechny nové možnosti, které zadáte. Ale pokud použijete rozložení starší verzi, měli byste použít stejné parametry příkazového řádku, které jste použili při prvním vytvoření rozložení instalace sítě (jinými slovy, stejné úlohy a jazyky) a aktualizovat jeho obsah.
+**Novinka v 15,3**: Pokud jste vybrali částečné rozložení, při prvním vytvoření rozložení sítě, se uloží. Všechny příkazy budoucí rozložení použít předchozí možnosti plus všechny nové možnosti, které zadáte. Pokud ale používáte rozložení starší verze, měli byste použít stejné parametry příkazového řádku, které jste použili při prvním vytvoření rozložení instalace sítě (jinými slovy, stejné úlohy a jazyky) k aktualizaci jejího obsahu.
 
 ::: moniker-end
 
@@ -42,9 +42,9 @@ Pokud jste vybrali částečné rozložení, při prvním vytvoření rozložen�
 
 ::: moniker-end
 
-Pokud hostujete rozložení ve sdílené složce, by měl aktualizovat soukromou kopii rozložení (například c:\vsoffline) a pak po stažení všechny aktualizace obsahu, zkopírujte ho do sdílené složky (například \\server\products\VS). Pokud to neuděláte, existuje větší riziko, že všichni uživatelé, kteří spusťte instalační program, když aktualizujete rozložení nebudou moct získat veškerý obsah z rozložení, protože není dosud aktualizovat úplně.
+Pokud hostete rozložení sdílené složky, měli byste aktualizovat soukromou kopii rozložení (například c:\VSLayout) a potom po stažení veškerého aktualizovaného obsahu ho zkopírovat do sdílené složky (například \\Server \ Products \ VS). Pokud to neuděláte, existuje větší riziko, že všichni uživatelé, kteří spusťte instalační program, když aktualizujete rozložení nebudou moct získat veškerý obsah z rozložení, protože není dosud aktualizovat úplně.
 
-Pojďme si projít pár příkladů, jak vytvořit a pak aktualizujte rozložení:
+Pojďme si projít několik příkladů, jak vytvořit a následně aktualizovat rozložení:
 
 * Nejprve tady je příklad toho, jak vytvořit rozložení se sadou jeden pro angličtinu pouze:
 
@@ -64,18 +64,18 @@ Pojďme si projít pár příkladů, jak vytvořit a pak aktualizujte rozložen�
   vs_enterprise.exe --layout c:\VSLayout --passive
   ```
 
-* Tady je postup pro přidání dalšímu zatížení a lokalizovaný jazyk.  (Tento příkaz přidá *vývoj pro Azure* úlohy.)  Teď Managed Desktop i Azure jsou zahrnuté v tomto rozvržení.  Jazykové prostředky pro angličtinu a němčina jsou také zahrnuté pro všechny tyto úlohy.  A rozložení se aktualizuje na nejnovější dostupnou verzi.
+* Tady je postup pro přidání dalšímu zatížení a lokalizovaný jazyk.  (Tento příkaz přidá úlohu *vývoj pro Azure* .)  Teď Managed Desktop i Azure jsou zahrnuté v tomto rozvržení.  Jazykové prostředky pro angličtinu a němčina jsou také zahrnuté pro všechny tyto úlohy.  A rozložení se aktualizuje na nejnovější dostupnou verzi.
 
   ```cmd
   vs_enterprise.exe --layout c:\VSLayout --add Microsoft.VisualStudio.Workload.Azure --lang de-DE
   ```
 
     > [!IMPORTANT]
-    > Operace aktualizace neinstaluje nově přidané volitelné součásti, i v případě, že zahrnují tyto součásti v sekci "Přidání" [soubor odpovědí](automated-installation-with-response-file.md). K tomu dochází, protože operace přidání se během aktualizace nepoužívá.
+    > Operace aktualizace neinstaluje nově přidané volitelné součásti, i když tyto součásti zahrnete do oddílu "Přidání" v [souboru odpovědí](automated-installation-with-response-file.md). K tomu dochází, protože se během aktualizace nepoužívá operace přidání.
     >
-    > **Alternativní řešení**: Spusťte samostatnou změnu operaci po upgradu na chybějící součásti nainstalovat.
+    > **Alternativní řešení**: Po upgradu na instalaci chybějících součástí spusťte samostatnou operaci úprav.
 
-* A konečně, tady je postup přidejte další úlohy a lokalizovaných bez aktualizace na verzi. (Tento příkaz přidá *vývoj pro ASP.NET a web* úlohy.)  Managed Desktop, Azure a ASP.NET a Web Development úlohy jsou teď součástí toto rozložení. Jazykové prostředky pro angličtinu, němčinu a francouzštinu jsou také zahrnuté pro všechny tyto úlohy.  Rozložení však nebyl aktualizován na nejnovější dostupnou verzi, při spuštění tohoto příkazu. Zůstane na existující verze.
+* A konečně, tady je postup přidejte další úlohy a lokalizovaných bez aktualizace na verzi. (Tento příkaz přidá úlohu *vývoje ASP.NET a webu* .)  V tomto rozložení jsou teď součástí spravovaných úloh Desktop, Azure a ASP.NET & Web Development. Jazykové prostředky pro angličtinu, němčinu a francouzštinu jsou také zahrnuté pro všechny tyto úlohy.  Rozložení však nebyl aktualizován na nejnovější dostupnou verzi, při spuštění tohoto příkazu. Zůstane na existující verze.
 
   ```cmd
   vs_enterprise.exe --layout c:\VSLayout --add Microsoft.VisualStudio.Workload.NetWeb --lang fr-FR --keepLayoutVersion
@@ -127,11 +127,11 @@ Může být vyvolána vs_enterprise.exe uvnitř layoutDir.
 Microsoft pravidelně, dodává aktualizace sady Visual Studio tak nové rozložení, který vytvoříte nemusí mít stejnou verzi jako počáteční rozložení.
 
 > [!NOTE]
-> Ověření funguje pouze pro nejnovější verzi konkrétní dílčí verze sady Visual Studio. Co nejdříve po vydání nové verze, ověřování nebudou fungovat pro starší verze úrovni oprav stejné verze, podverze.
+> Ověřování funguje pouze pro nejnovější verzi konkrétní dílčí verze sady Visual Studio. Jakmile se uvolní nová verze, ověřování nebude fungovat pro předchozí verze na úrovni opravy stejné dílčí verze.
 
 ## <a name="how-to-fix-a-layout"></a>K vyřešení rozložení
 
-Použití `--fix` se provede ověření stejné jako `--verify` a také se pokusí opravit zjištěné problémy. `--fix` Potřebuje připojení k Internetu, takže Ujistěte se, že váš počítač připojený k Internetu, předtím, než je zapotřebí vyvolat `--fix`.
+Použití `--fix` se provede ověření stejné jako `--verify` a také se pokusí opravit zjištěné problémy. Proces `--fix` potřebuje připojení k Internetu, proto se před vyvoláním `--fix` Ujistěte, že je počítač připojený k Internetu.
 
 ```cmd
 vs_enterprise.exe --layout <layoutDir> --fix
@@ -174,4 +174,4 @@ Při spuštění tohoto příkazu analyzuje instalaci složky offline mezipamět
 * [Instalace sady Visual Studio s použitím parametrů příkazového řádku](use-command-line-parameters-to-install-visual-studio.md)
 * [Nástroje pro zjišťování a správu instancí sady Visual Studio](tools-for-managing-visual-studio-instances.md)
 * [Řízení aktualizací nasazení sady Visual Studio založené na síti](controlling-updates-to-visual-studio-deployments.md)
-* [Životního cyklu produktu Visual Studio a údržba](/visualstudio/releases/2019/servicing/)
+* [Životní cyklus produktu Visual Studio a údržba](/visualstudio/releases/2019/servicing/)
