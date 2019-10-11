@@ -62,13 +62,14 @@
           href: using-the-assert-classes.md
         - name: Napodobeniny Microsoft
           items:
-            - name: Izolace testovaného kódu pomocí Napodobenin Microsoft
+            - name: Izolace testovaného kódu
+              displayName: 'shim, stub, fakes'
               href: isolating-code-under-test-with-microsoft-fakes.md
-            - name: Vzájemná izolace částí aplikace pomocí zástupných procedur za účelem testování částí
+            - name: Izolace částí aplikace pomocí zástupných procedur
               href: using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing.md
-            - name: Izolace aplikace od jiných sestavení pomocí testů shim za účelem testování částí
+            - name: Izolace aplikace od jiných sestavení pomocí testů shim
               href: using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md
-            - name: 'Vytváření, kompilace a konvence pojmenování kódu v Napodobeniny Microsoft'
+            - name: Generování a kompilace kódu a konvence pojmenování
               href: code-generation-compilation-and-naming-conventions-in-microsoft-fakes.md
         - name: Testy jednotek řízené daty
           items:

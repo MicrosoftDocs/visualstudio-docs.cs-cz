@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 28f3fda6-35e8-485b-9755-1991aaccec3f
 author: mikeblome
 ms.author: mblome
-manager: wpickett
+manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc3f09575085039986a0b2fbbf3eb386ee5f5e1b
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a8a1c77a7db2a16b05c1b6b0eeb5e02abef4c9c3
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62540778"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018470"
 ---
 # <a name="code-analysis-for-cc-warnings"></a>Upozornění Analýzy kódu pro C/C++
-Tato část obsahuje seznam upozornění analýzy kódu C/C++ s výjimkou těch, které jsou generovány [C++ Core pokyny pro tyto moduly pro kontrolu](code-analysis-for-cpp-corecheck.md). Informace o analýze kódu naleznete v tématu [/ analyze (Analýza kódu)](/cpp/build/reference/analyze-code-analysis) a [rychlý Start: Analýza kódu pro C/C++](../code-quality/quick-start-code-analysis-for-c-cpp.md).
+Tato část obsahuje seznam upozorněníC++ analýzy kódu C/s, s výjimkou těch, které jsou vyvolány pomocí [ C++ kontrol základních pokynů](code-analysis-for-cpp-corecheck.md). Informace o analýze kódu naleznete v tématu [/analyze (Code Analysis)](/cpp/build/reference/analyze-code-analysis) a [Quick Start: Analýza kódu pro C/C++](../code-quality/quick-start-code-analysis-for-c-cpp.md).
 
 ## <a name="see-also"></a>Viz také
 

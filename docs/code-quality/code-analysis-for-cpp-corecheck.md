@@ -7,24 +7,24 @@ helpviewer_keywords:
 ms.assetid: f1429463-136e-41ed-8a75-a8dbf0b4fd89
 author: mikeblome
 ms.author: mblome
-manager: wpickett
+manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b725d0ee49590062ebdde9a1ef27f838678ccf5
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fc6c7c1dbc5009129e9e793f3b8eea1f7927b2bb
+ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62540791"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72018447"
 ---
 # <a name="c-core-guidelines-checker-reference"></a>Referenční dokumentace pro kontrolu požadovaných součástí C++ Core Guidelines
 
-Tato část obsahuje seznam upozornění kontrola C++ Core pokyny. Informace o analýze kódu naleznete v tématu [/ analyze (Analýza kódu)](/cpp/build/reference/analyze-code-analysis) a [rychlý Start: Analýza kódu pro C/C++](../code-quality/quick-start-code-analysis-for-c-cpp.md).
+Tato část obsahuje seznam upozornění kontrola C++ Core pokyny. Informace o analýze kódu naleznete v tématu [/analyze (Code Analysis)](/cpp/build/reference/analyze-code-analysis) a [Quick Start: Analýza kódu pro C/C++](../code-quality/quick-start-code-analysis-for-c-cpp.md).
 
 > [!NOTE]
 > Upozornění patřit do více než jedné skupiny, a ne všechna upozornění mají úplnou referenční téma.
 
-## <a name="ownerpointer-group"></a>OWNER_POINTER skupiny
+## <a name="owner_pointer-group"></a>OWNER_POINTER skupiny
 
 [C26402 DONT_HEAP_ALLOCATE_MOVABLE_RESULT](C26402.md) vraťte objektu namísto alokovaného haldou vymezený objekt, pokud obsahuje konstruktor přesunu. Zobrazit [C++ Core Guidelines R.3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rr-ptr).
 
@@ -44,7 +44,7 @@ Tato část obsahuje seznam upozornění kontrola C++ Core pokyny. Informace o a
 
 [C26431 DONT_TEST_NOTNULL](C26431.md) typ výrazu "% výraz" je už gsl::not_null. Netestujte ho hodnotu Null. Zobrazit [C++ Core Guidelines F.23](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#f23-use-a-not_nullt-to-indicate-that-null-is-not-a-valid-value).
 
-## <a name="rawpointer-group"></a>RAW_POINTER skupiny
+## <a name="raw_pointer-group"></a>RAW_POINTER skupiny
 
 [C26400 NO_RAW_POINTER_ASSIGNMENT](c26400.md) nepřiřazujte výsledek alokace nebo volání funkce s vlastníkem\<T > k nezpracovanému ukazateli vracet hodnotu; použijte owner\<T > místo toho. Zobrazit [C++ Core Guidelines I.11](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Ri-raw).
 
@@ -65,9 +65,9 @@ Tato část obsahuje seznam upozornění kontrola C++ Core pokyny. Informace o a
 [C26481 NO_POINTER_ARITHMETIC](C26481.md) nepoužívejte aritmetiku ukazatele. Místo toho použijte span. Zobrazit [Bounds.1 pokyny pro jádro C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds).
 
 [C26485 NO_ARRAY_TO_POINTER_DECAY](C26485.md).
-Výrazu "% expr": Rozklad pole na ukazatel. Zobrazit [Bounds.3 pokyny pro jádro C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds).
+Výraz% expr%: Žádné pole pro ukazatel Decay. Zobrazit [Bounds.3 pokyny pro jádro C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds).
 
-## <a name="uniquepointer-group"></a>UNIQUE_POINTER skupiny
+## <a name="unique_pointer-group"></a>UNIQUE_POINTER skupiny
 
 [C26410 NO_REF_TO_CONST_UNIQUE_PTR](C26410.md) parametr % parametr %' je odkaz na `const` jedinečný ukazatel, použijte const T * nebo const T & místo. Zobrazit [C++ Core Guidelines R.32](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rr-uniqueptrparam).
 
@@ -77,7 +77,7 @@ Výrazu "% expr": Rozklad pole na ukazatel. Zobrazit [Bounds.3 pokyny pro jádro
 
 [C26415 SMART_PTR_NOT_NEEDED](C26415.md) parametr inteligentního ukazatele % symbol %' slouží pouze k přístupu k omezením ukazatele. Použijte T * nebo T & místo. Zobrazit [C++ Core Guidelines R.30](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rr-smartptrparam).
 
-## <a name="sharedpointer-group"></a>SHARED_POINTER skupiny
+## <a name="shared_pointer-group"></a>SHARED_POINTER skupiny
 
 [C26414 RESET_LOCAL_SMART_PTR](C26414.md) přesunout, zkopírujte, znovu přiřadit nebo resetujte místní inteligentní ukazatel "symbol %". Zobrazit [C++ Core Guidelines R.5](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rr-scoped).
 
@@ -95,21 +95,21 @@ Výrazu "% expr": Rozklad pole na ukazatel. Zobrazit [Bounds.3 pokyny pro jádro
 
 [C26427 NO_GLOBAL_INIT_EXTERNS](C26427.md) globální inicializační výraz přistupuje k externímu objektu "% symbol". Zobrazit [C++ Core Guidelines I.22](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#i22-avoid-complex-initialization-of-global-objects).
 
-[C26444 NO_UNNAMED_RAII_OBJECTS](c26444.md) nepoužívejte nepojmenované objekty s vlastní konstrukcí a destrukcí. Zobrazit [ES.84: (Nedoporučujeme) deklarování místní proměnné bez názvu](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md).
+[C26444 NO_UNNAMED_RAII_OBJECTS](c26444.md) nepoužívejte nepojmenované objekty s vlastní konstrukcí a destrukcí. Viz [ES. 84: Nepokoušejte se (zkusit) deklarovat místní proměnnou bez názvu @ no__t-0.
 
 ## <a name="class-group"></a>Třída skupiny
 
 [C26432 DEFINE_OR_DELETE_SPECIAL_OPS](C26432.md) Pokud definujete nebo odstraníte jakoukoli výchozí operaci v typu '% symbol %', definujte nebo odstraňte je všechny. Zobrazit [C++ Core Guidelines C.21](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#c21-if-you-define-or-delete-any-default-operation-define-or-delete-them-all).
 
-[C26433 OVERRIDE_EXPLICITLY](c26433.md) funkce "% symbol" by měly být označené 'override'. Zobrazit [C.128: Virtuální funkce by měla určovat právě jedno z virtual, override nebo konečné](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#c128-virtual-functions-should-specify-exactly-one-of-virtual-override-or-final).
+[C26433 OVERRIDE_EXPLICITLY](c26433.md) funkce "% symbol" by měly být označené 'override'. Viz [C. 128: Virtuální funkce by měly určovat přesně jednu z funkcí Virtual, override nebo Final @ no__t-0.
 
 [C26434 DONT_HIDE_METHODS](C26434.md) funkce 'symbol_1 %' skrývá nevirtuální funkce "% symbol_2". Zobrazit [C++ Core Guidelines C.128](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#c128-virtual-functions-should-specify-exactly-one-of-virtual-override-or-final).
 
-[C26435 SINGLE_VIRTUAL_SPECIFICATION](c26435.md) funkce 'symbol %' by měla určovat právě jeden z 'virtual', 'override' nebo 'final. Zobrazit [C.128: Virtuální funkce by měla určovat právě jedno z virtual, override nebo konečné](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md).
+[C26435 SINGLE_VIRTUAL_SPECIFICATION](c26435.md) funkce 'symbol %' by měla určovat právě jeden z 'virtual', 'override' nebo 'final. Viz [C. 128: Virtuální funkce by měly určovat přesně jednu z funkcí Virtual, override nebo Final @ no__t-0.
 
 [C26436 NEED_VIRTUAL_DTOR](C26436.md) typ '% symbol %' s virtuální funkcí potřebuje buď veřejný virtuální, nebo chráněný nevirtuální destruktor. Zobrazit [C++ Core Guidelines C.35](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#c35-a-base-class-destructor-should-be-either-public-and-virtual-or-protected-and-nonvirtual).
 
-[C26443 NO_EXPLICIT_DTOR_OVERRIDE](c26443.md) potlačení destruktoru by neměl používat explicitní 'override' nebo 'virtual' specifikátorů. Zobrazit [C.128: Virtuální funkce by měla určovat právě jedno z virtual, override nebo konečné](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md).
+[C26443 NO_EXPLICIT_DTOR_OVERRIDE](c26443.md) potlačení destruktoru by neměl používat explicitní 'override' nebo 'virtual' specifikátorů. Viz [C. 128: Virtuální funkce by měly určovat přesně jednu z funkcí Virtual, override nebo Final @ no__t-0.
 
 ## <a name="type-group"></a>Typ skupiny
 
@@ -126,7 +126,7 @@ Výrazu "% expr": Rozklad pole na ukazatel. Zobrazit [Bounds.3 pokyny pro jádro
 [C26440 DECLARE_NOEXCEPT](C26440.md) funkce % symbol %' mohou být deklarovány `noexcept`. Zobrazit [C++ Core Guidelines F.6](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#f6-if-your-function-may-not-throw-declare-it-noexcept).
 
 [C26447 DONT_THROW_IN_NOEXCEPT](c26447.md) funkce je deklarována **noexcept** ale volá funkci, která může vyvolat výjimky.
-Zobrazit [C++ Core Guidelines:  F.6: Pokud vaše funkce nemusí vyvolat, deklarujte ho jako noexcept](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#f6-if-your-function-may-not-throw-declare-it-noexcept).
+Viz pokyny @no__t-C++ 0 Core:  F. 6: Pokud funkce nemůže vyvolat výjimku, deklarujte ji s výjimkou @ no__t-0.
 
 ## <a name="concurrency-group"></a>Skupiny SOUBĚŽNOSTI
 
@@ -136,7 +136,7 @@ Zobrazit [C++ Core Guidelines:  F.6: Pokud vaše funkce nemusí vyvolat, deklaru
 
 [C26460 USE_CONST_REFERENCE_ARGUMENTS](c26460.md) argument odkazu '% argumentu %' pro funkci '% funkce' může být označený jako `const`. Zobrazit [con.3 pokyny pro jádro C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rconst-ref).
 
-[C26461 USE_CONST_POINTER_ARGUMENTS](c26461.md): Argument ukazatele: % argumentu %' pro funkci '% funkce' může být označený jako ukazatel na `const`. Zobrazit [con.3 pokyny pro jádro C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rconst-ref).
+[C26461 USE_CONST_POINTER_ARGUMENTS](c26461.md): Argument ukazatele% argumentu% pro funkci% Function% může být označený jako ukazatel na `const`. Zobrazit [con.3 pokyny pro jádro C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Rconst-ref).
 
 [C26462 USE_CONST_POINTER_FOR_VARIABLE](c26462.md) hodnota, na které odkazuje % variable % je přiřazená jen jednou, označte ji jako ukazatel na `const`. Zobrazit [con.4 pokyny pro jádro C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con4-use-const-to-define-objects-with-values-that-do-not-change-after-construction).
 
@@ -180,7 +180,7 @@ Zobrazit [C++ Core Guidelines:  F.6: Pokud vaše funkce nemusí vyvolat, deklaru
 
 ## <a name="bounds-group"></a>Skupiny hranic
 
-[C26446 USE_GSL_AT](c26446.md) dávají přednost používání `gsl::at()` místo Nekontrolovaná operátor dolního indexu. Zobrazit [C++ Core Guidelines:  Bounds.4: Nepoužívejte funkce standardní knihovny a typy, které nejsou zaškrtnuté políčko hranice](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile).
+[C26446 USE_GSL_AT](c26446.md) dávají přednost používání `gsl::at()` místo Nekontrolovaná operátor dolního indexu. Viz pokyny @no__t-C++ 0 Core:  Meze. 4: Nepoužívejte funkce a typy standardní knihovny, které nejsou vázané na hranice-Checked @ no__t-0.
 
 [C26481 NO_POINTER_ARITHMETIC](C26481.md).
 Nepoužívejte aritmetiku ukazatele. Místo toho použijte span. Zobrazit [Bounds.1 pokyny pro jádro C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)
@@ -189,19 +189,19 @@ Nepoužívejte aritmetiku ukazatele. Místo toho použijte span. Zobrazit [Bound
 
 [C26483 STATIC_INDEX_OUT_OF_RANGE](c26483.md) hodnotu % hodnotu % je mimo rozsah (0, vázaná %) proměnné % variable %. Budou indexovat jen pomocí výrazů konstant, které jsou uvnitř mezí pole. Zobrazit [Bounds.2 pokyny pro jádro C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)
 
-[C26485 NO_ARRAY_TO_POINTER_DECAY](C26485.md) výraz "% expr": Rozklad pole na ukazatel. Zobrazit [Bounds.3 pokyny pro jádro C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)
+[C26485 NO_ARRAY_TO_POINTER_DECAY](C26485.md) Výraz% expr%: Žádné pole pro ukazatel Decay. Zobrazit [Bounds.3 pokyny pro jádro C++](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)
 
 ## <a name="gsl-group"></a>Skupiny GSL
 
 [C26445 NO_SPAN_REF](c26445.md) odkaz na `gsl::span` nebo `std::string_view` může být známkou problému s dobou života.
-Zobrazit [GSL.view pokyny pro jádro C++: Zobrazení](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#gslview-views)
+Viz pokyny @no__t-C++ 0 Core GSL. View: Zobrazení @ no__t-0
 
-[C26446 USE_GSL_AT](c26446.md) dávají přednost používání `gsl::at()` místo Nekontrolovaná operátor dolního indexu. Zobrazit [C++ Core Guidelines:  Bounds.4: Nepoužívejte funkce standardní knihovny a typy, které nejsou zaškrtnuté políčko hranice](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile).
+[C26446 USE_GSL_AT](c26446.md) dávají přednost používání `gsl::at()` místo Nekontrolovaná operátor dolního indexu. Viz pokyny @no__t-C++ 0 Core:  Meze. 4: Nepoužívejte funkce a typy standardní knihovny, které nejsou vázané na hranice-Checked @ no__t-0.
 
-[C26448 USE_GSL_FINALLY](c26448.md) zvažte použití `gsl::finally` Pokud poslední akce. Zobrazit [C++ Core Guidelines:  GSL.util: Nástroje](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-utilities).
+[C26448 USE_GSL_FINALLY](c26448.md) Pokud je konečná akce určena, zvažte použití `gsl::finally`. Viz pokyny @no__t-C++ 0 Core:  GSL.util: Pomůcky @ no__t-0.
 
 [C26449 NO_SPAN_FROM_TEMPORARY](c26449.md) 
- `gsl::span` nebo `std::string_view` vytvořené z dočasného budou mít neplatná při dočasný zneplatněna. Zobrazit [C++ Core Guidelines: GSL.view: Zobrazení](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#gslview-views).
+ `gsl::span` nebo `std::string_view` vytvořené z dočasného budou mít neplatná při dočasný zneplatněna. Viz pokyny @no__t-C++ 0 Core: GSL. View: Zobrazení @ no__t-0.
 
 ## <a name="deprecated-warnings"></a>Upozornění na zastaralé
 
