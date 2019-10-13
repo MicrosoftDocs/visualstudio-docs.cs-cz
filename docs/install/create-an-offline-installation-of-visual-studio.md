@@ -1,7 +1,7 @@
 ---
 title: Vytvoření offline instalace
 description: Zjistěte, jak v režimu offline instalace sady Visual Studio, když máte nespolehlivým připojení k Internetu nebo s malou šířkou pásma.
-ms.date: 10/07/2019
+ms.date: 10/11/2019
 ms.custom: seodec18
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +16,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 28351407e80c723c0b60640b7e56177c85c2a476
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: 3a39f1b89cd8a0e0bbf27742688bcaec3da6f912
+ms.sourcegitcommit: a5a54b147e772dc39e519da74ec41a0c25d99628
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018844"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289621"
 ---
 # <a name="create-an-offline-installation-of-visual-studio"></a>Vytvoření offline instalace sady Visual Studio
 
@@ -79,7 +79,7 @@ Musíte mít internetové připojení k dokončení tohoto kroku.
 
 Další informace o tom, jak to udělat, najdete na stránce pro stažení [předchozích verzí sady Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/) , kde můžete získat zaváděcí nástroj pro visual Studio 2017.
 
-Instalační program @ no__t-0or, který by měl být konkrétnější, se souborem zaváděcího nástroje @ no__t-1should porovnává jedna z následujících hodnot.
+Instalační program @ no__t-0or, který by měl být konkrétnější, soubor zaváděcího nástroje @ no__t-1should odpovídá nebo se podobá jednomu z následujících.
 
 | Edice | Bitmap |
 |-------------|-----------------------|
@@ -102,6 +102,9 @@ Začněte tím, že stažení zaváděcího nástroje Visual Studio pro vaši zv
 | Visual Studio Build Tools   | [vs_buildtools. exe](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=buildtools&rel=16&utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=offline+install&utm_content=download+vs2019)     |
 
 ::: moniker-end
+
+>[!TIP]
+>Pokud jste dříve stáhli soubor zaváděcího nástroje a chcete ověřit jeho verzi, tady je postup. V systému Windows otevřete Průzkumníka souborů, klikněte pravým tlačítkem na soubor zaváděcího nástroje, zvolte **vlastnosti**, klikněte na kartu **Podrobnosti** a pak zobrazte číslo **verze produktu** . Chcete-li toto číslo porovnat s vydáním sady Visual Studio, přejděte na stránku [čísla sestavení sady Visual Studio a data verzí](visual-studio-build-numbers-and-release-dates.md) .
 
 ### <a name="step-2---create-a-local-install-cache"></a>Krok 2: vytvoření mezipaměti místní instalace
 

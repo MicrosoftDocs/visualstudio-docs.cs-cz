@@ -10,12 +10,12 @@ metadata:
   monikerRange: '>=vs-2017'
   f1_keywords:
   - MSDNSTART
-  ms.openlocfilehash: f754d62f95dee9531429f9421571982307af9966
-  ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+  ms.openlocfilehash: 753172144647fcbf699ddc85328dd5e2a94ae87b
+  ms.sourcegitcommit: a5a54b147e772dc39e519da74ec41a0c25d99628
   ms.translationtype: MT
   ms.contentlocale: cs-CZ
-  ms.lasthandoff: 09/24/2019
-  ms.locfileid: "71238130"
+  ms.lasthandoff: 10/12/2019
+  ms.locfileid: "72289581"
 highlightedContent:
   items:
   - title: Nastavení a instalace
@@ -56,7 +56,7 @@ conceptualContent:
     - text: Přístup k datům místně nebo v cloudu
       itemType: tutorial
       url: data-tools/create-a-sql-database-by-using-a-designer.md
-  - title: Postup v kurzu
+  - title: Postupujte podle kurzu
     links:
     - text: C#
       url: /visualstudio/get-started/csharp
@@ -76,7 +76,7 @@ conceptualContent:
     - text: JavaScript
       url: /visualstudio/javascript
       itemType: get-started
-  - title: Vytvoření aplikace
+  - title: Vytvoření nové aplikace
     links:
     - text: Desktopová aplikace pro Windows
       itemType: tutorial
@@ -84,7 +84,7 @@ conceptualContent:
     - text: Univerzální aplikace pro Windows
       itemType: tutorial
       url: /visualstudio/get-started/csharp/tutorial-uwp
-    - text: mobilní aplikace
+    - text: Mobilní aplikace
       itemType: overview
       url: /visualstudio/cross-platform/cross-platform-mobile-development-in-visual-studio
     - text: Hra Unity
@@ -94,7 +94,7 @@ conceptualContent:
       itemType: quickstart
       url: /aspnet/core/tutorials/razor-pages/razor-pages-start
 tools:
-  title: Jazyky
+  title: Languages
   items:
   - title: C++
     imageSrc: https://docs.microsoft.com/media/logos/logo_Cplusplus.svg
@@ -122,7 +122,7 @@ tools:
     url: /visualstudio/rtvs/?view=vs-2017
 additionalContent:
   sections:
-  - title: Úkoly
+  - title: Úlohy
     items:
     - title: Vývoj
       summary: Zapisovat a spravovat kód pomocí editoru kódu.
@@ -141,7 +141,7 @@ additionalContent:
       url: deployment/index.yml
     - title: Správa verzí
       summary: Sdílení kódu pomocí technologie pro řízení verze jako je Git a TFVC.
-      url: version-control/index.md
+      url: /azure/devops/repos/index
     - title: DevOps
       summary: Průběžné sestavování a vydávání aplikací v cloudu a implementovat agilní postupy DevOps službami Azure.
       url: /azure/devops
@@ -207,4 +207,4 @@ additionalContent:
         url: /cpp/linux/
       - text: Vývoj pro různé platformy .NET core
         url: /dotnet/core/
-  footer: '[Webblogy](https://devblogs.microsoft.com/visualstudio/) - –[Twitter](https://twitter.com/VisualStudio)[](https://stackoverflow.com/questions/tagged/visual-studio)[](ide/talk-to-us.md) - [](https://developercommunity.visualstudio.com/spaces/8/index.html) Stack Overflowkomunitavývojářůprovytváření - sestav - '
+  footer: '[Blogy](https://devblogs.microsoft.com/visualstudio/) - [Twitter](https://twitter.com/VisualStudio) - [Stack Overflow](https://stackoverflow.com/questions/tagged/visual-studio) - [hlášení problémů](ide/talk-to-us.md) -  –[komunita vývojářů](https://developercommunity.visualstudio.com/spaces/8/index.html)'

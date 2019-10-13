@@ -11,16 +11,16 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 8d71f9e145d78d1d1bf7f6e9bb132e9fc084afd0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: cd8ebd706d9228d23eb5d5ce3b1429063bae55e5
+ms.sourcegitcommit: a5a54b147e772dc39e519da74ec41a0c25d99628
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62810470"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289716"
 ---
-# <a name="step-6-work-with-git"></a>Krok 6: Práce s Gitem
+# <a name="step-6-work-with-git"></a>Krok 6: Práce s Git
 
-**Předchozí krok: [Instalovat balíčky a správa prostředí Pythonu](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)**
+@no__t – 0Previous krok: [Instalace balíčků a Správa prostředí pythonu](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)**
 
 Visual Studio poskytuje přímou integraci se místní úložiště Git a Vzdálená úložiště na služby, jako je GitHub a úložiště Azure. Integrace zahrnuje klonování úložiště, potvrzení změn a správa větví.
 
@@ -54,9 +54,9 @@ Tento článek obsahuje základní přehled vytvořit místní úložiště Git 
 
 ## <a name="go-deeper"></a>Seznamte se blíž
 
-Krátký návod k vytvoření projektu ze vzdáleného úložiště Git, naleznete v tématu [rychlý start: Naklonujte úložiště kódu v Pythonu v sadě Visual Studio](quickstart-03-python-in-visual-studio-project-from-repository.md).
+Krátký návod, jak vytvořit projekt ze vzdáleného úložiště Git, najdete v článku [Quickstart: Naklonujte úložiště kódu Pythonu v aplikaci Visual Studio @ no__t-0.
 
-Mnohem komplexnější kurz, včetně zpracování konfliktů při sloučení, revize kódu s žádostmi o přijetí změn, probíhá přenesení změn a vybírání změny mezi větvemi, najdete v tématu [Začínáme s Git a úložiště Azure](/azure/devops/repos/git/gitquickstart?toc=/visualstudio/version-control/toc.json&bc=/azure/devops/repos/git/breadcrumb/vc/toc.json&view=vsts&tabs=visual-studio).
+Mnohem komplexnější kurz, včetně zpracování konfliktů při sloučení, revize kódu s žádostmi o přijetí změn, probíhá přenesení změn a vybírání změny mezi větvemi, najdete v tématu [Začínáme s Git a úložiště Azure](/azure/devops/repos/git/gitquickstart).
 
 ## <a name="tutorial-review"></a>Kurz revize
 

@@ -1,7 +1,7 @@
 ---
 title: Vytvoření síťové instalace
 description: Zjistěte, jak vytvořit bod instalace sítě pro nasazení sady Visual Studio v rámci organizace.
-ms.date: 10/07/2019
+ms.date: 10/11/2019
 ms.custom: seodec18
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: b297e99c3fbaaabed178930dfad1ac13d5ab1cd8
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: 521b29f87db6379a011a0b46dfd1405b374ab9ba
+ms.sourcegitcommit: a5a54b147e772dc39e519da74ec41a0c25d99628
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018874"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289656"
 ---
 # <a name="create-a-network-installation-of-visual-studio"></a>Vytvoření síťové instalace sady Visual Studio
 
@@ -39,7 +39,7 @@ Stáhněte si soubor zaváděcího nástroje pro edici sady Visual Studio, ktero
 
 Další informace o tom, jak to udělat, najdete na stránce pro stažení [předchozích verzí sady Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/) , kde můžete získat zaváděcí nástroj pro visual Studio 2017.
 
-Instalační program @ no__t-0or, který by měl být konkrétnější, se souborem zaváděcího nástroje @ no__t-1should porovnává jedna z následujících hodnot.
+Instalační program @ no__t-0or, který by měl být konkrétnější, soubor zaváděcího nástroje @ no__t-1should odpovídá nebo se podobá jednomu z následujících.
 
 | Edice | Bitmap |
 |-------------|-----------------------|
@@ -53,7 +53,7 @@ Mezi další podporované zaváděcí nástroje patří **vs_feedbackclient. exe
 
 ::: moniker range="vs-2019"
 
-Nastavení spustitelných&mdash;nebo na konkrétnější, soubor zaváděcí nástroj&mdash;by měl odpovídat jedné z následujících akcí.
+Instalační program @ no__t-0or, který by měl být konkrétnější, soubor zaváděcího nástroje @ no__t-1should odpovídá nebo se podobá jednomu z následujících.
 
 |Edice | Stáhnout|
 |-------------|-----------------------|
@@ -64,6 +64,9 @@ Nastavení spustitelných&mdash;nebo na konkrétnější, soubor zaváděcí ná
 Mezi další podporované zaváděcí nástroje patří [vs_TeamExplorer. exe](https://aka.ms/vs/16/release/vs_teamexplorer.exe), [vs_testagent. exe](https://aka.ms/vs/16/release/vs_testagent.exe)a [vs_testcontroller. exe](https://aka.ms/vs/16/release/vs_testcontroller.exe).
 
 ::: moniker-end
+
+>[!TIP]
+>Pokud jste dříve stáhli soubor zaváděcího nástroje a chcete ověřit jeho verzi, tady je postup. V systému Windows otevřete Průzkumníka souborů, klikněte pravým tlačítkem na soubor zaváděcího nástroje, zvolte **vlastnosti**, klikněte na kartu **Podrobnosti** a pak zobrazte číslo **verze produktu** . Chcete-li toto číslo porovnat s vydáním sady Visual Studio, přejděte na stránku [čísla sestavení sady Visual Studio a data verzí](visual-studio-build-numbers-and-release-dates.md) .
 
 ## <a name="create-an-offline-installation-folder"></a>Vytvořte složku offline instalace
 
