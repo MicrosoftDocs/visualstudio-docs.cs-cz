@@ -10,12 +10,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 04a4738181c579617711150da4eb99e08aeb039c
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: e784627f0c9c6aa865d53db49d6ea43c4e49d0eb
+ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018420"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305787"
 ---
 # <a name="fxcop-rule-port-status"></a>Stav portu pravidla FxCop
 
@@ -98,21 +98,21 @@ CA1509 | Neplatný záznam v souboru specifikace pravidla metrik kódu
 [CA1721](ca1721-property-names-should-not-match-get-methods.md) | Názvy vlastností by se neměly shodovat s metodami Get
 [CA1724](ca1724-type-names-should-not-match-namespaces.md) | Názvy typů by neměly odpovídat oborům názvů
 [CA1725](ca1725-parameter-names-should-match-base-declaration.md) | Názvy parametrů by měly odpovídat základní deklaraci
-[CA1801](ca1801-review-unused-parameters.md) | Zkontrolujte nepoužité parametry
-[CA1802](ca1802-use-literals-where-appropriate.md) | Použijte literály, kde je to vhodné
-[CA1806](ca1806-do-not-ignore-method-results.md) | Neignorujte výsledky metody
-[CA1810](ca1810-initialize-reference-type-static-fields-inline.md) | Inicializujte odkazový typ statického pole vloženě
-[CA1812](ca1812-avoid-uninstantiated-internal-classes.md) | Vyhněte se nevytvořeným instancím interních tříd
-[CA1813](ca1813-avoid-unsealed-attributes.md) | Vyhněte se nezapečetěným atributům
-[CA1814](ca1814-prefer-jagged-arrays-over-multidimensional.md) | Upřednostněte vícenásobná pole před multidimenzionálními
-[CA1815](ca1815-override-equals-and-operator-equals-on-value-types.md) | Přepište rovnosti a operátory rovnosti u typů hodnot
-[CA1816](ca1816-call-gc-suppressfinalize-correctly.md) | Metody Dispose by měly volat SuppressFinalize
-[CA1819](ca1819-properties-should-not-return-arrays.md) | Vlastnosti by neměly vracet pole
-[CA1820](ca1820-test-for-empty-strings-using-string-length.md) | Testujte prázdné řetězce pomocí délky řetězce
-[CA1821](ca1821-remove-empty-finalizers.md) | Odebrat prázdné finalizační metody
-[CA1822](ca1822-mark-members-as-static.md) | Označte členy jako statické
-[CA1823](ca1823-avoid-unused-private-fields.md) | Vyhněte se nepoužitým privátním polím
-[CA1824](ca1824-mark-assemblies-with-neutralresourceslanguageattribute.md) | Označte sestavení pomocí NeutralResourcesLanguageAttribute
+[CA1801](ca1801.md) | Zkontrolujte nepoužité parametry
+[CA1802](ca1802.md) | Použijte literály, kde je to vhodné
+[CA1806](ca1806.md) | Neignorujte výsledky metody
+[CA1810](ca1810.md) | Inicializujte odkazový typ statického pole vloženě
+[CA1812](ca1812.md) | Vyhněte se nevytvořeným instancím interních tříd
+[CA1813](ca1813.md) | Vyhněte se nezapečetěným atributům
+[CA1814](ca1814.md) | Upřednostněte vícenásobná pole před multidimenzionálními
+[CA1815](ca1815.md) | Přepište rovnosti a operátory rovnosti u typů hodnot
+[CA1816](ca1816.md) | Metody Dispose by měly volat SuppressFinalize
+[CA1819](ca1819.md) | Vlastnosti by neměly vracet pole
+[CA1820](ca1820.md) | Testujte prázdné řetězce pomocí délky řetězce
+[CA1821](ca1821.md) | Odebrat prázdné finalizační metody
+[CA1822](ca1822.md) | Označte členy jako statické
+[CA1823](ca1823.md) | Vyhněte se nepoužitým privátním polím
+[CA1824](ca1824.md) | Označte sestavení pomocí NeutralResourcesLanguageAttribute
 CA1825 | Vyhněte se přidělení pole s nulovou délkou.
 CA1826 | Nepoužívejte vyčíslitelné metody pro indexované kolekce. Místo toho použijte kolekci přímo
 [CA2000](ca2000-dispose-objects-before-losing-scope.md) | Uvolňujte objekty před ztrátou oboru
@@ -252,8 +252,8 @@ ID pravidla | Problém sledování
 [CA1719](ca1719-parameter-names-should-not-match-member-names.md) | [https://github.com/dotnet/roslyn-analyzers/issues/453](https://github.com/dotnet/roslyn-analyzers/issues/453)
 [CA1722](ca1722-identifiers-should-not-have-incorrect-prefix.md) | [https://github.com/dotnet/roslyn-analyzers/issues/455](https://github.com/dotnet/roslyn-analyzers/issues/455)
 [CA1726](ca1726-use-preferred-terms.md) | [https://github.com/dotnet/roslyn-analyzers/issues/458](https://github.com/dotnet/roslyn-analyzers/issues/458)
-[CA1804](ca1804-remove-unused-locals.md) | [https://github.com/dotnet/roslyn-analyzers/issues/461](https://github.com/dotnet/roslyn-analyzers/issues/461)
-[CA1811](ca1811-avoid-uncalled-private-code.md) | [https://github.com/dotnet/roslyn-analyzers/issues/464](https://github.com/dotnet/roslyn-analyzers/issues/464)
+[CA1804](ca1804.md) | [https://github.com/dotnet/roslyn-analyzers/issues/461](https://github.com/dotnet/roslyn-analyzers/issues/461)
+[CA1811](ca1811.md) | [https://github.com/dotnet/roslyn-analyzers/issues/464](https://github.com/dotnet/roslyn-analyzers/issues/464)
 [CA1900](ca1900-value-type-fields-should-be-portable.md) | [https://github.com/dotnet/roslyn-analyzers/issues/474](https://github.com/dotnet/roslyn-analyzers/issues/474)
 [CA2001](ca2001-avoid-calling-problematic-methods.md) | [https://github.com/dotnet/roslyn-analyzers/issues/477](https://github.com/dotnet/roslyn-analyzers/issues/477)
 [CA2004](ca2004-remove-calls-to-gc-keepalive.md) | [https://github.com/dotnet/roslyn-analyzers/issues/479](https://github.com/dotnet/roslyn-analyzers/issues/479)
@@ -288,8 +288,8 @@ Následující starší pravidla analýzy FxCop jsou zastaralá a nebudou implem
 - [CA1701](ca1701-resource-string-compound-words-should-be-cased-correctly.md)
 - [CA1702](ca1702-compound-words-should-be-cased-correctly.md)
 - [CA1703](ca1703-resource-strings-should-be-spelled-correctly.md)
-- [CA1800](ca1800-do-not-cast-unnecessarily.md)
-- [CA1809](ca1809-avoid-excessive-locals.md)
+- [CA1800](ca1800.md)
+- [CA1809](ca1809.md)
 - [CA1901](ca1901-p-invoke-declarations-should-be-portable.md)
 - [CA1903](ca1903-use-only-api-from-targeted-framework.md)
 - [CA2003](ca2003-do-not-treat-fibers-as-threads.md)

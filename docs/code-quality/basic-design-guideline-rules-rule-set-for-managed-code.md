@@ -8,12 +8,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: d51796f7575e3dd5766655661927dfd520935c02
-ms.sourcegitcommit: b83fefa8177c5554cbe2c59c4d102cbc534f7cc6
+ms.openlocfilehash: 90464052d0ba4f02b6b971adbacda8a29f3b0b2c
+ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69585082"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305457"
 ---
 # <a name="basic-design-guideline-rules-rule-set-for-managed-code"></a>Sada pravidel Základní pravidla obecných zásad návrhu pro spravovaný kód
 
@@ -42,7 +42,7 @@ V následující tabulce jsou popsána všechna pravidla v sadě pravidel zákla
 |[CA1405](../code-quality/ca1405-com-visible-type-base-types-should-be-com-visible.md)|Základní typy viditelného typu modelu COM by měly být viditelné modelu COM|
 |[CA1410](../code-quality/ca1410-com-registration-methods-should-be-matched.md)|Metody registrace modelu COM by si měly odpovídat|
 |[CA1415](../code-quality/ca1415-declare-p-invokes-correctly.md)|Deklarujte správně volání nespravovaných kódů|
-|[CA1821](../code-quality/ca1821-remove-empty-finalizers.md)|Odeberte prázdné finalizační metody|
+|[CA1821](../code-quality/ca1821.md)|Odeberte prázdné finalizační metody|
 |[CA1900](../code-quality/ca1900-value-type-fields-should-be-portable.md)|Pole typů hodnot by měla být přenosná|
 |[CA1901](../code-quality/ca1901-p-invoke-declarations-should-be-portable.md)|Deklarace volání nespravovaného kódu by měla být přenosná|
 |[CA2002](../code-quality/ca2002-do-not-lock-on-objects-with-weak-identity.md)|Nepoužívejte zámky u objektů se slabou identitou|
@@ -138,19 +138,19 @@ V následující tabulce jsou popsána všechna pravidla v sadě pravidel zákla
 |[CA1502](../code-quality/ca1502-avoid-excessive-complexity.md)|Vyhněte se nadměrné složitosti|
 |[CA1708](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)|Identifikátory by se měly lišit více než použitím malých a velkých písmen|
 |[CA1716](../code-quality/ca1716-identifiers-should-not-match-keywords.md)|Identifikátory by se neměly shodovat s klíčovými slovy|
-|[CA1801](../code-quality/ca1801-review-unused-parameters.md)|Zkontrolujte nepoužité parametry|
-|[CA1804](../code-quality/ca1804-remove-unused-locals.md)|Odeberte nepoužívané lokální hodnoty|
-|[CA1809](../code-quality/ca1809-avoid-excessive-locals.md)|Vyhněte se nadměrným lokálním hodnotám|
-|[CA1810](../code-quality/ca1810-initialize-reference-type-static-fields-inline.md)|Inicializujte odkazový typ statického pole vloženě|
-|[CA1811](../code-quality/ca1811-avoid-uncalled-private-code.md)|Vyhněte se nevolanému privátnímu kódu|
-|[CA1812](../code-quality/ca1812-avoid-uninstantiated-internal-classes.md)|Vyhněte se nevytvořeným instancím interních tříd|
-|[CA1813](../code-quality/ca1813-avoid-unsealed-attributes.md)|Vyhněte se nezapečetěným atributům|
-|[CA1814](../code-quality/ca1814-prefer-jagged-arrays-over-multidimensional.md)|Upřednostněte vícenásobná pole před multidimenzionálními|
-|[CA1815](../code-quality/ca1815-override-equals-and-operator-equals-on-value-types.md)|Přepište rovnosti a operátory rovnosti u typů hodnot|
-|[CA1819](../code-quality/ca1819-properties-should-not-return-arrays.md)|Vlastnosti by neměly vracet pole|
-|[CA1820](../code-quality/ca1820-test-for-empty-strings-using-string-length.md)|Testujte prázdné řetězce pomocí délky řetězce|
-|[CA1822](../code-quality/ca1822-mark-members-as-static.md)|Označte členy jako statické|
-|[CA1823](../code-quality/ca1823-avoid-unused-private-fields.md)|Vyhněte se nepoužitým privátním polím|
+|[CA1801](../code-quality/ca1801.md)|Zkontrolujte nepoužité parametry|
+|[CA1804](../code-quality/ca1804.md)|Odeberte nepoužívané lokální hodnoty|
+|[CA1809](../code-quality/ca1809.md)|Vyhněte se nadměrným lokálním hodnotám|
+|[CA1810](../code-quality/ca1810.md)|Inicializujte odkazový typ statického pole vloženě|
+|[CA1811](../code-quality/ca1811.md)|Vyhněte se nevolanému privátnímu kódu|
+|[CA1812](../code-quality/ca1812.md)|Vyhněte se nevytvořeným instancím interních tříd|
+|[CA1813](../code-quality/ca1813.md)|Vyhněte se nezapečetěným atributům|
+|[CA1814](../code-quality/ca1814.md)|Upřednostněte vícenásobná pole před multidimenzionálními|
+|[CA1815](../code-quality/ca1815.md)|Přepište rovnosti a operátory rovnosti u typů hodnot|
+|[CA1819](../code-quality/ca1819.md)|Vlastnosti by neměly vracet pole|
+|[CA1820](../code-quality/ca1820.md)|Testujte prázdné řetězce pomocí délky řetězce|
+|[CA1822](../code-quality/ca1822.md)|Označte členy jako statické|
+|[CA1823](../code-quality/ca1823.md)|Vyhněte se nepoužitým privátním polím|
 |[CA2201](../code-quality/ca2201-do-not-raise-reserved-exception-types.md)|Nevyvolávejte vyhrazené typy výjimek|
 |[CA2205](../code-quality/ca2205-use-managed-equivalents-of-win32-api.md)|Použijte spravované ekvivalenty rozhraní Win32 API|
 |[CA2208](../code-quality/ca2208-instantiate-argument-exceptions-correctly.md)|Vytvořte správně instance výjimky argumentu|

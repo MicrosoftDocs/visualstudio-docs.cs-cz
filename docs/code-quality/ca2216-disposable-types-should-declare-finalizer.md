@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 1616e889b3892aa656692a3e5b0895d4b131b7f1
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 3ac52bdb17aeb7d04e434d2b02ff9a905eab49a2
+ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71231258"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305925"
 ---
 # <a name="ca2216-disposable-types-should-declare-finalizer"></a>CA2216: Uvolnitelné typy by měly deklarovat finalizační metodu
 
@@ -27,12 +27,12 @@ ms.locfileid: "71231258"
 |-|-|
 |TypeName|DisposableTypesShouldDeclareFinalizer|
 |CheckId|CA2216|
-|Kategorie|Microsoft.Usage|
+|Category|Microsoft.Usage|
 |Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
 
-Typ, který implementuje <xref:System.IDisposable?displayProperty=fullName>a obsahuje pole, která navrhují použití nespravovaných prostředků, neimplementuje finalizační metodu, jak je popsáno <xref:System.Object.Finalize%2A?displayProperty=fullName>v.
+Typ, který implementuje <xref:System.IDisposable?displayProperty=fullName> a obsahuje pole, která navrhují použití nespravovaných prostředků, neimplementuje finalizační metodu, jak je popsáno v <xref:System.Object.Finalize%2A?displayProperty=fullName>.
 
 ## <a name="rule-description"></a>Popis pravidla
 
@@ -46,11 +46,11 @@ Porušení tohoto pravidla je hlášeno, pokud typ mimo použití obsahuje pole 
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, implementujte finalizační metodu, která volá <xref:System.IDisposable.Dispose%2A> vaši metodu.
+Chcete-li opravit porušení tohoto pravidla, implementujte finalizační metodu, která volá vaši metodu <xref:System.IDisposable.Dispose%2A>.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Je bezpečné potlačit upozornění z tohoto pravidla, pokud typ neimplementuje <xref:System.IDisposable> pro účely uvolnění nespravovaných prostředků.
+Je bezpečné potlačit upozornění od tohoto pravidla, pokud typ neimplementuje <xref:System.IDisposable> pro účely uvolňování nespravovaných prostředků.
 
 ## <a name="example"></a>Příklad
 
@@ -60,11 +60,11 @@ Následující příklad ukazuje typ, který je v rozporu s tímto pravidlem.
 
 ## <a name="related-rules"></a>Související pravidla
 
-[CA2115: Vyvolejte GC. Udržení naživu při použití nativních prostředků](../code-quality/ca2115-call-gc-keepalive-when-using-native-resources.md)
+[CA2115: Vyvolejte GC. Udržení naživu při použití nativních prostředků @ no__t-0
 
-[CA1816: Vyvolejte GC. SuppressFinalize správně](../code-quality/ca1816-call-gc-suppressfinalize-correctly.md)
+[CA1816: Vyvolejte GC. SuppressFinalize správně @ no__t-0
 
-[CA1049: Typy, které vlastní nativní prostředky by měly být na jedno použití](../code-quality/ca1049-types-that-own-native-resources-should-be-disposable.md)
+[CA1049: Typy, které vlastní nativní prostředky by měly být na jedno použití @ no__t-0
 
 ## <a name="see-also"></a>Viz také:
 

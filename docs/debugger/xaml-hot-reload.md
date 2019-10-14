@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ff5e70d4ec2831df18ce1b100e70730e2978201e
-ms.sourcegitcommit: 88f576ac32af31613c1a10c1548275e1ce029f4f
+ms.openlocfilehash: 5e49049d05a285889c54906534200acadaf2397e
+ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71186568"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72306205"
 ---
 # <a name="write-and-debug-running-xaml-code-with-xaml-hot-reload-in-visual-studio"></a>Zápis a ladění spuštěného kódu XAML pomocí programu XAML Hot reloading v aplikaci Visual Studio
 
@@ -47,13 +47,14 @@ Následující ilustrace znázorňuje použití živého vizuálního stromu pro
 
 Níže jsou známá omezení pro opětovné načtení kódu XAML. Chcete-li obejít jakékoli omezení, které je třeba spustit, stačí zastavit ladicí program a operaci dokončit.
 
-|Omezené|WPF|UWP|Poznámky|
+|Omezení|WPF|UWP|Poznámky|
 |-|-|-|-|
-|Události zapojení do ovládacích prvků, když je aplikace spuštěná|Nepodporováno|Není podporováno|Zobrazit chybu: *Zajistěte, aby došlo k chybě události*. Všimněte si, že v WPF můžete odkazovat na existující obslužnou rutinu události. V aplikacích pro UWP není odkaz na existující obslužnou rutinu události podporovaný.|
-|Vytváření objektů prostředků ve slovníku prostředků, jako jsou například v rámci stránky nebo okna vaší aplikace nebo souboru *App. XAML*|Podporováno od aktualizace Visual Studio 2019 Update 2|Podporováno|Příklad: přidání `SolidColorBrush` do slovníku prostředků pro použití `StaticResource`jako.</br>Poznámka: Statické prostředky, převaděče stylu a další elementy zapsané do slovníku prostředků lze použít nebo použít při použití kódu XAML Hot reloading. Nepodporují se jenom vytváření prostředků.</br> Změna vlastnosti slovníku `Source` prostředků.|
+|Události zapojení do ovládacích prvků, když je aplikace spuštěná|Nepodporováno|Nepodporuje se|Zobrazit chybu: *Zajistěte, aby došlo k chybě události*. Všimněte si, že v WPF můžete odkazovat na existující obslužnou rutinu události. V aplikacích pro UWP není odkaz na existující obslužnou rutinu události podporovaný.|
+|Vytváření objektů prostředků ve slovníku prostředků, jako jsou například v rámci stránky nebo okna vaší aplikace nebo souboru *App. XAML*|Podporováno od aktualizace Visual Studio 2019 Update 2|Podporováno|Příklad: Přidání `SolidColorBrush` do slovníku prostředků pro použití jako `StaticResource`.</br>Poznámka: Statické prostředky, převaděče stylu a další elementy zapsané do slovníku prostředků lze použít nebo použít při použití kódu XAML Hot reloading. Nepodporují se jenom vytváření prostředků.</br> Změna vlastnosti @no__t 0 slovníku prostředků|
 |Přidání nových ovládacích prvků, tříd, oken nebo jiných souborů do projektu v době, kdy aplikace běží|Nepodporováno|Nepodporováno|Žádné|
 |Správa balíčků NuGet (přidávání/odebírání a aktualizace balíčků)|Nepodporováno|Nepodporováno|Žádné|
-|Změna datové vazby, která používá rozšíření značek {x:Bind}|Není k dispozici|Podporováno od sady Visual Studio 2019|To vyžaduje Windows 10 verze 1809 (Build 10.0.17763). Nepodporováno v aplikaci Visual Studio 2017 nebo v předchozích verzích.|
+|Změna datové vazby, která používá rozšíření značek {x:Bind}|neuvedeno|Podporováno od sady Visual Studio 2019|To vyžaduje Windows 10 verze 1809 (Build 10.0.17763). Nepodporováno v aplikaci Visual Studio 2017 nebo v předchozích verzích.|
+|Změna direktiv X:UID – se nepodporuje.|neuvedeno|Nepodporováno|Žádné|
 
 ## <a name="error-messages"></a>Chybové zprávy
 

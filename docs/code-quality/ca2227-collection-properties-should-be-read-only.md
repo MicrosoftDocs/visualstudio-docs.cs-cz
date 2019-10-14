@@ -18,12 +18,12 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d097a67c9a62a6847ff6ab0bb882257c082ca6f
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: be864812cc7355f80700bd3e270178c9626d4180
+ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71231301"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305894"
 ---
 # <a name="ca2227-collection-properties-should-be-read-only"></a>CA2227: Vlastnosti kolekce by měly být pouze pro čtení
 
@@ -31,18 +31,18 @@ ms.locfileid: "71231301"
 |-|-|
 |TypeName|CollectionPropertiesShouldBeReadOnly|
 |CheckId|CA2227|
-|Kategorie|Microsoft.Usage|
+|Category|Microsoft.Usage|
 |Zásadní změna|Narušující|
 
-## <a name="cause"></a>příčina
+## <a name="cause"></a>Příčina
 
 Externě viditelná vlastnost s možností zápisu je typu, který implementuje <xref:System.Collections.ICollection?displayProperty=fullName>. Toto pravidlo ignoruje pole, indexery (vlastnosti s názvem Item) a sady oprávnění.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Vlastnost zapisovatelné kolekce umožňuje uživateli nahradit kolekci zcela jinou kolekcí. Vlastnost jen pro čtení zastaví vyměnění kolekce, ale stále umožňuje nastavit jednotlivé členy. Pokud nahradíte kolekci cílem, preferovaný vzor návrhu je zahrnout metodu pro odebrání všech prvků z kolekce a metodu pro přeplnění kolekce. Příklad tohoto vzoru <xref:System.Collections.ArrayList.AddRange%2A> naleznete v metodách <xref:System.Collections.ArrayList?displayProperty=fullName>atřídy. <xref:System.Collections.ArrayList.Clear%2A>
+Vlastnost zapisovatelné kolekce umožňuje uživateli nahradit kolekci zcela jinou kolekcí. Vlastnost jen pro čtení zastaví vyměnění kolekce, ale stále umožňuje nastavit jednotlivé členy. Pokud nahradíte kolekci cílem, preferovaný vzor návrhu je zahrnout metodu pro odebrání všech prvků z kolekce a metodu pro přeplnění kolekce. Příklad tohoto vzoru naleznete v tématu metody @no__t 0 a <xref:System.Collections.ArrayList.AddRange%2A> třídy <xref:System.Collections.ArrayList?displayProperty=fullName>.
 
-Binární i XML serializace podporují vlastnosti jen pro čtení, které jsou kolekcemi. Třída má specifické požadavky pro typy, které implementují <xref:System.Collections.IEnumerable?displayProperty=fullName> <xref:System.Collections.ICollection> a mají být serializovatelný. <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName>
+Binární i XML serializace podporují vlastnosti jen pro čtení, které jsou kolekcemi. Třída <xref:System.Xml.Serialization.XmlSerializer?displayProperty=fullName> má specifické požadavky pro typy, které implementují <xref:System.Collections.ICollection> a <xref:System.Collections.IEnumerable?displayProperty=fullName>, aby bylo možné serializovat.
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
@@ -56,7 +56,7 @@ V opačném případě potlačí upozornění z tohoto pravidla.
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje typ s zapisovatelnou vlastností Collection a ukazuje, jak lze kolekci nahradit přímo. Kromě toho zobrazuje preferovaný způsob nahrazení vlastnosti kolekce jen pro čtení pomocí `Clear` metod a. `AddRange`
+Následující příklad ukazuje typ s zapisovatelnou vlastností Collection a ukazuje, jak lze kolekci nahradit přímo. Kromě toho zobrazuje preferovaný způsob nahrazení vlastnosti kolekce jen pro čtení pomocí metod `Clear` a `AddRange`.
 
 [!code-csharp[FxCop.Usage.PropertiesReturningCollections#1](../code-quality/codesnippet/CSharp/ca2227-collection-properties-should-be-read-only_1.cs)]
 [!code-vb[FxCop.Usage.PropertiesReturningCollections#1](../code-quality/codesnippet/VisualBasic/ca2227-collection-properties-should-be-read-only_1.vb)]
@@ -64,4 +64,4 @@ Následující příklad ukazuje typ s zapisovatelnou vlastností Collection a u
 
 ## <a name="related-rules"></a>Související pravidla
 
-- [CA1819: Vlastnosti by neměly vracet pole](../code-quality/ca1819-properties-should-not-return-arrays.md)
+- [CA1819: Vlastnosti by neměly vracet pole @ no__t-0

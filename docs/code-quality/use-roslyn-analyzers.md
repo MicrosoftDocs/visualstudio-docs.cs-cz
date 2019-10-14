@@ -11,12 +11,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a4c7d0aa4da7e672db06675c65e008d1f71f8bc7
-ms.sourcegitcommit: b23d73c86ec7720c4cd9a58050860bc559623a3d
+ms.openlocfilehash: 81c1c200ba9ab0a50381192b34bad5e9b221fb29
+ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72172807"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305668"
 ---
 # <a name="use-code-analyzers"></a>Použití analyzátorů kódu
 
@@ -93,7 +93,7 @@ Nastavení závažnosti pravidla v souboru EditorConfig má přednost před jako
 
 1. Pokud ještě nemáte soubor EditorConfig pro váš projekt, [přidejte ho](../ide/create-portable-custom-editor-options.md#add-an-editorconfig-file-to-a-project).
 
-2. Přidejte položku pro každé pravidlo, které chcete konfigurovat v odpovídající příponě souboru. Pokud třeba chcete nastavit závažnost pro [CA1822](ca1822-mark-members-as-static.md) na `error` pro C# soubory, bude položka vypadat takto:
+2. Přidejte položku pro každé pravidlo, které chcete konfigurovat v odpovídající příponě souboru. Pokud třeba chcete nastavit závažnost pro [CA1822](ca1822.md) na `error` pro C# soubory, bude položka vypadat takto:
 
    ```ini
    [*.cs]

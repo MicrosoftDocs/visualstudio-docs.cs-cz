@@ -8,12 +8,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a83a9619084feb3346f5fe421530227a2cca7f9
-ms.sourcegitcommit: b83fefa8177c5554cbe2c59c4d102cbc534f7cc6
+ms.openlocfilehash: ed996aa19f9fda1310dccc117f8abfb6efa29e1f
+ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69585291"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305543"
 ---
 # <a name="mixed-minimum-rules-rule-set"></a>Sada pravidel Smíšená minimální pravidla
 
@@ -86,13 +86,13 @@ Zahrňte tuto sadu pravidel v jakékoli vlastní sadě pravidel, kterou vytvoř�
 |[C28182](../code-quality/c28182.md)|Přesměrování ukazatele NULL. Ukazatel obsahuje tutéž hodnotu NULL jako jiný ukazatel.|
 |[C28202](../code-quality/c28202.md)|Neplatný odkaz na Nestatický člen|
 |[C28203](../code-quality/c28203.md)|Nejednoznačný odkaz na člena třídy.|
-|[C28205](../code-quality/c28205.md)|\_Úspěch\_ nebo \_při\_selhánípřipoužitívneplatnémkontextu\_|
+|[C28205](../code-quality/c28205.md)|\_Success @ no__t-1 nebo \_On @ no__t-3failure @ no__t-4 použito v neplatném kontextu|
 |[C28206](../code-quality/c28206.md)|Levý operand ukazuje na strukturu, použijte "->"|
 |[C28207](../code-quality/c28207.md)|Levý operand je struktura, použijte "."|
 |[C28210](../code-quality/c28210.md)|Poznámky pro kontext __on_failure nesmí být v explicitním předkontextu|
 |[C28211](../code-quality/c28211.md)|Pro SAL_context se očekává název statického kontextu|
 |[C28212](../code-quality/c28212.md)|Očekávaný výraz ukazatele pro poznámku|
-|[C28213](../code-quality/c28213.md)|Poznámka k\_prohlášení o \_\_použití se musí použít k odkazování na předchozí deklaraci bez úprav.\_|
+|[C28213](../code-quality/c28213.md)|Anotace \_Use @ no__t-1decl @ no__t-2annotations @ no__t-3 se musí použít k odkazování na předchozí deklaraci beze změny.|
 |[C28214](../code-quality/c28214.md)|Názvy atributových parametrů musí být p1... p9|
 |[C28215](../code-quality/c28215.md)|Typefix nelze použít pro parametr, který již poznámku typefix obsahuje|
 |[C28216](../code-quality/c28216.md)|Poznámka checkreturn se vztahuje pouze k následným podmínkám specifických parametrů funkcí.|
@@ -134,7 +134,7 @@ Zahrňte tuto sadu pravidel v jakékoli vlastní sadě pravidel, kterou vytvoř�
 |[C28267](../code-quality/c28267.md)|Poznámky v funkce byla nalezena chyba syntaxe v poznámkách.|
 |[C28272](../code-quality/c28272.md)|Poznámka pro funkci, je parametr při zkoumání nekonzistentní s deklarací funkce|
 |[C28273](../code-quality/c28273.md)|Pro funkci nejsou konzistentní s deklarací funkce|
-|[C28275](../code-quality/c28275.md)|Parametr k \_hodnotě\_makra\_ je null.|
+|[C28275](../code-quality/c28275.md)|Parametr pro \_Macro @ no__t-1value @ no__t-2 je null.|
 |[C28279](../code-quality/c28279.md)|Pro symbol "begin" bylo nalezeno bez odpovídajícího "end"|
 |[C28280](../code-quality/c28280.md)|Pro symbol bylo nalezeno "end" bez odpovídajícího "begin"|
 |[C28282](../code-quality/c28282.md)|Řetězce formátu musí být v předběžných podmínkách|
@@ -154,6 +154,6 @@ Zahrňte tuto sadu pravidel v jakékoli vlastní sadě pravidel, kterou vytvoř�
 |[C28350](../code-quality/c28350.md)|Poznámka popisuje situaci, která není podmíněně použitelná.|
 |[C28351](../code-quality/c28351.md)|Poznámka popisuje, kde dynamickou hodnotu (proměnnou) nelze použít v podmínce.|
 |[CA1001](../code-quality/ca1001-types-that-own-disposable-fields-should-be-disposable.md)|Typy, které vlastní uvolnitelné pole, by měly být uvolnitelné|
-|[CA1821](../code-quality/ca1821-remove-empty-finalizers.md)|Odeberte prázdné finalizační metody|
+|[CA1821](../code-quality/ca1821.md)|Odeberte prázdné finalizační metody|
 |[CA2213](../code-quality/ca2213-disposable-fields-should-be-disposed.md)|Uvolnitelná pole by měla být uvolněna|
 |[CA2231](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)|Přetižte operátor rovnosti při přetížení ValueType.Equals|

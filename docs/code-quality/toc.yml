@@ -493,37 +493,43 @@
                   displayName: performance warnings
                   href: performance-warnings.md
                 - name: 'CA1800: Nepřetypujte zbytečně'
-                  href: ca1800-do-not-cast-unnecessarily.md
+                  href: ca1800.md
+                - name: 'CA1801: Zkontrolujte nepoužité parametry'
+                  href: ca1801.md
                 - name: 'CA1802: Použijte literály, kde je to vhodné'
-                  href: ca1802-use-literals-where-appropriate.md
+                  href: ca1802.md
                 - name: 'CA1804: Odeberte nepoužívané lokální hodnoty'
-                  href: ca1804-remove-unused-locals.md
+                  href: ca1804.md
+                - name: 'CA1806: Neignorujte výsledky metody'
+                  href: ca1806.md
                 - name: 'CA1809: Vyhněte se nadměrným lokálním hodnotám'
-                  href: ca1809-avoid-excessive-locals.md
+                  href: ca1809.md
                 - name: 'CA1810: Inicializujte odkazový typ statického pole vloženě'
-                  href: ca1810-initialize-reference-type-static-fields-inline.md
+                  href: ca1810.md
                 - name: 'CA1811: Vyhněte se nevolanému privátnímu kódu'
-                  href: ca1811-avoid-uncalled-private-code.md
+                  href: ca1811.md
                 - name: 'CA1812: Vyhněte se nevytvořeným instancím interních tříd'
-                  href: ca1812-avoid-uninstantiated-internal-classes.md
+                  href: ca1812.md
                 - name: 'CA1813: Vyhněte se nezapečetěným atributům'
-                  href: ca1813-avoid-unsealed-attributes.md
+                  href: ca1813.md
                 - name: 'CA1814: Upřednostněte vícenásobná pole před multidimenzionálními'
-                  href: ca1814-prefer-jagged-arrays-over-multidimensional.md
+                  href: ca1814.md
                 - name: 'CA1815: Přepište rovnosti a operátory rovnosti u typů hodnot'
-                  href: ca1815-override-equals-and-operator-equals-on-value-types.md
+                  href: ca1815.md
+                - name: 'CA1816: Volejte správně GC.SuppressFinalize'
+                  href: ca1816.md
                 - name: 'CA1819: Vlastnosti by neměly vracet pole'
-                  href: ca1819-properties-should-not-return-arrays.md
+                  href: ca1819.md
                 - name: 'CA1820: Testujte prázdné řetězce pomocí délky řetězce'
-                  href: ca1820-test-for-empty-strings-using-string-length.md
+                  href: ca1820.md
                 - name: 'CA1821: Odeberte prázdné finalizační metody'
-                  href: ca1821-remove-empty-finalizers.md
+                  href: ca1821.md
                 - name: 'CA1822: Označte členy jako statické'
-                  href: ca1822-mark-members-as-static.md
+                  href: ca1822.md
                 - name: 'CA1823: Vyhněte se nepoužitým privátním polím'
-                  href: ca1823-avoid-unused-private-fields.md
+                  href: ca1823.md
                 - name: 'CA1824: Označte sestavení pomocí NeutralResourcesLanguageAttribute'
-                  href: ca1824-mark-assemblies-with-neutralresourceslanguageattribute.md
+                  href: ca1824.md
                 - name: 'CA1825: Vyhněte se přidělení pole s nulovou délkou.'
                   href: ca1825.md
             - name: Upozornění přenositelnosti
@@ -751,11 +757,11 @@
                   displayName: usage warnings
                   href: usage-warnings.md
                 - name: 'CA1801: Zkontrolujte nepoužité parametry'
-                  href: ca1801-review-unused-parameters.md
+                  href: ca1801.md
                 - name: 'CA1806: Neignorujte výsledky metody'
-                  href: ca1806-do-not-ignore-method-results.md
+                  href: ca1806.md
                 - name: 'CA1816: Volejte správně GC.SuppressFinalize'
-                  href: ca1816-call-gc-suppressfinalize-correctly.md
+                  href: ca1816.md
                 - name: 'CA2200: Znovu vyvolejte pro zachování podrobností zásobníku'
                   href: ca2200-rethrow-to-preserve-stack-details.md
                 - name: 'CA2201: Nevyvolávejte vyhrazené typy výjimek'

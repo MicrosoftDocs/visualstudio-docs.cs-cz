@@ -7,12 +7,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 4401417aba2055e7b2189db6bf33503668c2a658
-ms.sourcegitcommit: b83fefa8177c5554cbe2c59c4d102cbc534f7cc6
+ms.openlocfilehash: 2602ad4c8f6ea3b5ca8d2b6f57c4148964b17a6c
+ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69585327"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305590"
 ---
 # <a name="mixed-recommended-rules-rule-set"></a>Sada pravidel Smíšená doporučená pravidla
 
@@ -151,7 +151,7 @@ Zahrňte tuto sadu pravidel v jakékoli vlastní sadě pravidel, kterou vytvoř�
 |[C28020](../code-quality/c28020.md)|Výraz není na tomto volání pravdivý.|
 |[C28021](../code-quality/c28021.md)|Anotovaný parametr musí být ukazatel|
 |[C28022](../code-quality/c28022.md)|Třídy funkcí této funkce se neshodují s třídami Functions na definici TypeDef použitou k jejímu definování.|
-|[C28023](../code-quality/c28023.md)|Přiřazená nebo předaná funkce by měla mít \_anotaci\_ třídy funkce\_pro alespoň jednu ze tříd (ES).|
+|[C28023](../code-quality/c28023.md)|Přiřazená nebo předaná funkce by měla mít anotaci \_Function @ no__t-1class @ no__t-2 pro alespoň jednu ze tříd (ES).|
 |[C28024](../code-quality/c28024.md)|Ukazatel funkce, ke kterému se přiřazuje, je opatřen poznámkou se třídou Function, která není obsažena v seznamu tříd funkcí.|
 |[C28039](../code-quality/c28039.md)|Typ skutečného parametru by měl přesně odpovídat typu|
 |[C28112](../code-quality/c28112.md)|K proměnné, ke které se dá přistupovat přes propojenou funkci, se musí vždycky přistupovat prostřednictvím propojené funkce.|
@@ -169,14 +169,14 @@ Zahrňte tuto sadu pravidel v jakékoli vlastní sadě pravidel, kterou vytvoř�
 |[C28196](../code-quality/c28196.md)|Požadavek není splněn. (Výraz se nevyhodnotí jako true.)|
 |[C28202](../code-quality/c28202.md)|Neplatný odkaz na Nestatický člen|
 |[C28203](../code-quality/c28203.md)|Nejednoznačný odkaz na člena třídy.|
-|[C28205](../code-quality/c28205.md)|\_Úspěch\_ nebo \_při\_selhánípřipoužitívneplatnémkontextu\_|
+|[C28205](../code-quality/c28205.md)|\_Success @ no__t-1 nebo \_On @ no__t-3failure @ no__t-4 použito v neplatném kontextu|
 |[C28206](../code-quality/c28206.md)|Levý operand ukazuje na strukturu, použijte "->"|
 |[C28207](../code-quality/c28207.md)|Levý operand je struktura, použijte "."|
 |[C28209](../code-quality/c28209.md)|Deklarace pro symbol má konfliktní deklaraci.|
 |[C28210](../code-quality/c28210.md)|Poznámky pro kontext __on_failure nesmí být v explicitním předkontextu|
 |[C28211](../code-quality/c28211.md)|Pro SAL_context se očekává název statického kontextu|
 |[C28212](../code-quality/c28212.md)|Očekávaný výraz ukazatele pro poznámku|
-|[C28213](../code-quality/c28213.md)|Poznámka k\_prohlášení o \_\_použití se musí použít k odkazování na předchozí deklaraci bez úprav.\_|
+|[C28213](../code-quality/c28213.md)|Anotace \_Use @ no__t-1decl @ no__t-2annotations @ no__t-3 se musí použít k odkazování na předchozí deklaraci beze změny.|
 |[C28214](../code-quality/c28214.md)|Názvy atributových parametrů musí být p1... p9|
 |[C28215](../code-quality/c28215.md)|Typefix nelze použít pro parametr, který již poznámku typefix obsahuje|
 |[C28216](../code-quality/c28216.md)|Poznámka checkreturn se vztahuje pouze k následným podmínkám specifických parametrů funkcí.|
@@ -219,7 +219,7 @@ Zahrňte tuto sadu pravidel v jakékoli vlastní sadě pravidel, kterou vytvoř�
 |[C28267](../code-quality/c28267.md)|Poznámky v funkce byla nalezena chyba syntaxe v poznámkách.|
 |[C28272](../code-quality/c28272.md)|Poznámka pro funkci, je parametr při zkoumání nekonzistentní s deklarací funkce|
 |[C28273](../code-quality/c28273.md)|Pro funkci nejsou konzistentní s deklarací funkce|
-|[C28275](../code-quality/c28275.md)|Parametr k \_hodnotě\_makra\_ je null.|
+|[C28275](../code-quality/c28275.md)|Parametr pro \_Macro @ no__t-1value @ no__t-2 je null.|
 |[C28279](../code-quality/c28279.md)|Pro symbol "begin" bylo nalezeno bez odpovídajícího "end"|
 |[C28280](../code-quality/c28280.md)|Pro symbol bylo nalezeno "end" bez odpovídajícího "begin"|
 |[C28282](../code-quality/c28282.md)|Řetězce formátu musí být v předběžných podmínkách|
@@ -257,7 +257,7 @@ Zahrňte tuto sadu pravidel v jakékoli vlastní sadě pravidel, kterou vytvoř�
 |[CA1405](../code-quality/ca1405-com-visible-type-base-types-should-be-com-visible.md)|Základní typy viditelného typu modelu COM by měly být viditelné modelu COM|
 |[CA1410](../code-quality/ca1410-com-registration-methods-should-be-matched.md)|Metody registrace modelu COM by si měly odpovídat|
 |[CA1415](../code-quality/ca1415-declare-p-invokes-correctly.md)|Deklarujte správně volání nespravovaných kódů|
-|[CA1821](../code-quality/ca1821-remove-empty-finalizers.md)|Odeberte prázdné finalizační metody|
+|[CA1821](../code-quality/ca1821.md)|Odeberte prázdné finalizační metody|
 |[CA1900](../code-quality/ca1900-value-type-fields-should-be-portable.md)|Pole typů hodnot by měla být přenosná|
 |[CA1901](../code-quality/ca1901-p-invoke-declarations-should-be-portable.md)|Deklarace volání nespravovaného kódu by měla být přenosná|
 |[CA2002](../code-quality/ca2002-do-not-lock-on-objects-with-weak-identity.md)|Nepoužívejte zámky u objektů se slabou identitou|
