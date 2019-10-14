@@ -120,13 +120,13 @@
     - name: Úvod
       displayName: Live Unit Testing introduction
       href: live-unit-testing-intro.md
-    - name: Novinky funkce Live Unit Testing
+    - name: Co je nového
       href: live-unit-testing-whats-new.md
-    - name: Začínáme s funkcí Live Unit Testing
+    - name: Začínáme
       href: live-unit-testing-start.md
-    - name: Použití funkce Live Unit Testing v edici Enterprise
+    - name: Konfigurace a použití
       href: live-unit-testing.md
-    - name: Nejčastější dotazy k funkci Live Unit Testing
+    - name: Nejčastější dotazy
       href: live-unit-testing-faq.md
 - name: "Testování výkonu webů a\_zátěžové testování"
   items:
