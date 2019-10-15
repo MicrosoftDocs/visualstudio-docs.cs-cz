@@ -336,7 +336,7 @@
                 - name: 'CA1068: Parametry CancellationToken musí být poslední.'
                   href: ca1068.md
                 - name: 'CA2210: Sestavení by měla mít platné silné názvy'
-                  href: ca2210-assemblies-should-have-valid-strong-names.md
+                  href: ca2210.md
             - name: Upozornění k dokumentaci
               items:
                 - name: Přehled
@@ -763,85 +763,85 @@
                 - name: 'CA1816: Volejte správně GC.SuppressFinalize'
                   href: ca1816.md
                 - name: 'CA2200: Znovu vyvolejte pro zachování podrobností zásobníku'
-                  href: ca2200-rethrow-to-preserve-stack-details.md
+                  href: ca2200.md
                 - name: 'CA2201: Nevyvolávejte vyhrazené typy výjimek'
-                  href: ca2201-do-not-raise-reserved-exception-types.md
+                  href: ca2201.md
                 - name: 'CA2202: Neuvolňujte objekty několikrát'
-                  href: ca2202-do-not-dispose-objects-multiple-times.md
+                  href: ca2202.md
                 - name: 'CA2204: Literály by měly být zadány správně'
-                  href: ca2204-literals-should-be-spelled-correctly.md
+                  href: ca2204.md
                 - name: 'CA2205: Použijte spravované ekvivalenty rozhraní Win32 API'
-                  href: ca2205-use-managed-equivalents-of-win32-api.md
+                  href: ca2205.md
                 - name: 'CA2207: Inicializujte statická pole s typem hodnoty vloženě'
-                  href: ca2207-initialize-value-type-static-fields-inline.md
+                  href: ca2207.md
                 - name: 'CA2208: Vytvořte správně instance výjimky argumentu'
-                  href: ca2208-instantiate-argument-exceptions-correctly.md
+                  href: ca2208.md
                 - name: 'CA2211: Nekonstantní pole by neměla být viditelná'
-                  href: ca2211-non-constant-fields-should-not-be-visible.md
+                  href: ca2211.md
                 - name: 'CA2212: Neoznačujte obsluhované komponenty pomocí WebMethod'
-                  href: ca2212-do-not-mark-serviced-components-with-webmethod.md
+                  href: ca2212.md
                 - name: 'CA2213: Uvolnitelná pole by měla být uvolněna'
-                  href: ca2213-disposable-fields-should-be-disposed.md
+                  href: ca2213.md
                 - name: 'CA2214: Nevolejte přepisovatelné metody v konstruktorech'
-                  href: ca2214-do-not-call-overridable-methods-in-constructors.md
+                  href: ca2214.md
                 - name: 'CA2215: Metody Dispose by měly volat uvolnění základní třídy'
-                  href: ca2215-dispose-methods-should-call-base-class-dispose.md
+                  href: ca2215.md
                 - name: 'CA2216: Uvolnitelné typy by měly deklarovat finalizační metodu'
-                  href: ca2216-disposable-types-should-declare-finalizer.md
+                  href: ca2216.md
                 - name: 'CA2217: Neoznačujte výčty pomocí FlagsAttribute'
-                  href: ca2217-do-not-mark-enums-with-flagsattribute.md
+                  href: ca2217.md
                 - name: 'CA2218: Přepište GetHashCode při přepsání Equals'
-                  href: ca2218-override-gethashcode-on-overriding-equals.md
+                  href: ca2218.md
                 - name: 'CA2219: Nevyvolávejte výjimky v klauzulích výjimky'
-                  href: ca2219-do-not-raise-exceptions-in-exception-clauses.md
+                  href: ca2219.md
                 - name: 'CA2220: Finalizační metody by měly volat finalizační metodu základní třídy'
-                  href: ca2220-finalizers-should-call-base-class-finalizer.md
+                  href: ca2220.md
                 - name: 'CA2221: Finalizační metody by měly být chráněné'
-                  href: ca2221-finalizers-should-be-protected.md
+                  href: ca2221.md
                 - name: 'CA2222: Nesnižujte viditelnost zděděného členu'
-                  href: ca2222-do-not-decrease-inherited-member-visibility.md
+                  href: ca2222.md
                 - name: 'CA2223: Členy by se měly lišit více než návratovým typem'
-                  href: ca2223-members-should-differ-by-more-than-return-type.md
+                  href: ca2223.md
                 - name: 'CA2224: Přepište Equals při přetížení operátoru rovnosti'
-                  href: ca2224-override-equals-on-overloading-operator-equals.md
+                  href: ca2224.md
                 - name: 'CA2225: Přetížení operátoru mají pojmenované alternativy'
-                  href: ca2225-operator-overloads-have-named-alternates.md
+                  href: ca2225.md
                 - name: 'CA2226: Operátory by měly mít symetrická přetížení'
-                  href: ca2226-operators-should-have-symmetrical-overloads.md
+                  href: ca2226.md
                 - name: 'CA2227: Vlastnosti kolekce by měly být pouze pro čtení'
-                  href: ca2227-collection-properties-should-be-read-only.md
+                  href: ca2227.md
                 - name: 'CA2228: Nedodávejte nevydané formáty prostředku'
-                  href: ca2228-do-not-ship-unreleased-resource-formats.md
+                  href: ca2228.md
                 - name: 'CA2229: Implementujte serializační konstruktory'
-                  href: ca2229-implement-serialization-constructors.md
+                  href: ca2229.md
                 - name: 'CA2230: Použijte parametry pro proměnné argumenty'
-                  href: ca2230-use-params-for-variable-arguments.md
+                  href: ca2230.md
                 - name: 'CA2231: Přetižte operátor rovnosti při přetížení ValueType.Equals'
-                  href: ca2231-overload-operator-equals-on-overriding-valuetype-equals.md
+                  href: ca2231.md
                 - name: 'CA2232: Označte vstupní body modelu Windows Forms pomocí STAThread'
-                  href: ca2232-mark-windows-forms-entry-points-with-stathread.md
+                  href: ca2232.md
                 - name: 'CA2233: Operace by neměly přetéct'
-                  href: ca2233-operations-should-not-overflow.md
+                  href: ca2233.md
                 - name: 'CA2234: Předejte objekty System.Uri namísto řetězců'
-                  href: ca2234-pass-system-uri-objects-instead-of-strings.md
+                  href: ca2234.md
                 - name: 'CA2235: Označte všechna neserializovatelná pole'
-                  href: ca2235-mark-all-non-serializable-fields.md
+                  href: ca2235.md
                 - name: 'CA2236: Volejte metody základní třídy u typů ISerializable'
-                  href: ca2236-call-base-class-methods-on-iserializable-types.md
+                  href: ca2236.md
                 - name: 'CA2237: Označte typy ISerializable pomocí SerializableAttribute'
-                  href: ca2237-mark-iserializable-types-with-serializableattribute.md
+                  href: ca2237.md
                 - name: 'CA2238: Implementujte správně metody serializace'
-                  href: ca2238-implement-serialization-methods-correctly.md
+                  href: ca2238.md
                 - name: 'CA2239: Zadejte metody deserializace pro nepovinná pole'
-                  href: ca2239-provide-deserialization-methods-for-optional-fields.md
+                  href: ca2239.md
                 - name: 'CA2240: Implementujte správně ISerializable'
-                  href: ca2240-implement-iserializable-correctly.md
+                  href: ca2240.md
                 - name: 'CA2241: Zadejte správné argumenty pro metody formátování'
-                  href: ca2241-provide-correct-arguments-to-formatting-methods.md
+                  href: ca2241.md
                 - name: 'CA2242: Testujte správně NaN'
-                  href: ca2242-test-for-nan-correctly.md
+                  href: ca2242.md
                 - name: 'CA2243: Řetězcové literály atributů by se měly správně parsovat'
-                  href: ca2243-attribute-string-literals-should-parse-correctly.md
+                  href: ca2243.md
             - name: Automatické pozastavení funkce
               href: automatic-feature-suspension.md
 - name: Analýza kódu C/C++
