@@ -1,5 +1,5 @@
 ---
-title: 'CA1300: Určete MessageBoxOptions'
+title: 'CA1300: Zadejte možnosti MessageBoxOptions'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,33 +17,33 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 746475e60bbe72c4ebfc51f13d0b2d4d0552ff62
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 4403b1f565698ae170bbccf152d5866250c0f114
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235197"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444455"
 ---
-# <a name="ca1300-specify-messageboxoptions"></a>CA1300: Určete MessageBoxOptions
+# <a name="ca1300-specify-messageboxoptions"></a>CA1300: Zadejte možnosti MessageBoxOptions
 
 |||
 |-|-|
 |TypeName|SpecifyMessageBoxOptions|
 |CheckId|CA1300|
-|Kategorie|Microsoft.Globalization|
+|Kategorie|Microsoft. Globalization|
 |Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
 
-Metoda volá přetížení <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=fullName> metody, která <xref:System.Windows.Forms.MessageBoxOptions?displayProperty=fullName> nepřijímá argument.
+Metoda volá přetížení metody <xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=fullName>, která nepřijímá argument <xref:System.Windows.Forms.MessageBoxOptions?displayProperty=fullName>.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Chcete-li zobrazit okno se zprávou pro jazykové verze, které používají pořadí čtení zprava doleva, předejte do <xref:System.Windows.Forms.MessageBox.Show%2A> metody pole [MessageBoxOptions. RightAlign](<xref:System.Windows.Forms.MessageBoxOptions.RightAlign>) a [MessageBoxOptions. RtlReading](<xref:System.Windows.Forms.MessageBoxOptions.RtlReading>) . <xref:System.Windows.Forms.Control.RightToLeft%2A?displayProperty=fullName> Zkontrolujte vlastnost obsahujícího ovládacího prvku, abyste zjistili, jestli chcete použít směr čtení zprava doleva.
+Chcete-li zobrazit okno se zprávou správně pro jazykové verze, které používají pořadí čtení zprava doleva, předejte pole [MessageBoxOptions. RightAlign](<xref:System.Windows.Forms.MessageBoxOptions.RightAlign>) a [MessageBoxOptions. RtlReading](<xref:System.Windows.Forms.MessageBoxOptions.RtlReading>) do metody <xref:System.Windows.Forms.MessageBox.Show%2A>. Zkontrolujte vlastnost <xref:System.Windows.Forms.Control.RightToLeft%2A?displayProperty=fullName> nadřazeného ovládacího prvku, abyste zjistili, jestli chcete použít směr čtení zprava doleva.
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, zavolejte přetížení <xref:System.Windows.Forms.MessageBox.Show%2A> metody, která <xref:System.Windows.Forms.MessageBoxOptions> přijímá argument.
+Chcete-li opravit porušení tohoto pravidla, zavolejte přetížení metody <xref:System.Windows.Forms.MessageBox.Show%2A>, která přebírá argument <xref:System.Windows.Forms.MessageBoxOptions>.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 

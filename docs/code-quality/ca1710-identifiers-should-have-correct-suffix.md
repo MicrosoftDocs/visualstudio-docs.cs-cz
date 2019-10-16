@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 50c67c614c4ece8f1925f4133f749a1c5747fe31
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: d52b9dd3eaf6312ece4939d3bdf1b64574bc21da
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234172"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72439837"
 ---
 # <a name="ca1710-identifiers-should-have-correct-suffix"></a>CA1710: Identifikátory by měly mít správnou příponu
 
@@ -27,7 +27,7 @@ ms.locfileid: "71234172"
 |-|-|
 |TypeName|IdentifiersShouldHaveCorrectSuffix|
 |CheckId|CA1710|
-|Kategorie|Microsoft.Naming|
+|Kategorie|Microsoft. pojmenování|
 |Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
@@ -63,11 +63,11 @@ Následující tabulka uvádí základní typy a rozhraní, které mají přidru
 |<xref:System.Security.Policy.IMembershipCondition?displayProperty=fullName>|Podmínka|
 |Delegát obslužné rutiny události.|EventHandler|
 
-Typy, které <xref:System.Collections.ICollection> implementují a jsou zobecněný typ datové struktury, jako je slovník, zásobník nebo fronta, jsou povoleny názvy, které poskytují smysluplnější informace o zamýšleném využití typu.
+Typy, které implementují <xref:System.Collections.ICollection> a jsou zobecněným typem datové struktury, jako je slovník, zásobník nebo fronta, jsou povoleny názvy, které poskytují smysluplnější informace o zamýšleném využití typu.
 
-Typy, které <xref:System.Collections.ICollection> implementují a jsou kolekce konkrétních položek, mají názvy končící slovem ' Collection '. Například kolekce <xref:System.Collections.Queue> objektů by měla mít název QueueCollection. Přípona ' Collection ' znamená, že členy kolekce lze vyčíslit pomocí `foreach` příkazu (`For Each` in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]).
+Typy, které implementují <xref:System.Collections.ICollection> a jsou kolekce konkrétních položek, jejichž názvy končí slovem ' Collection '. Například kolekce objektů <xref:System.Collections.Queue> by měla mít název QueueCollection. Přípona ' Collection ' znamená, že členy kolekce lze vyčíslit pomocí příkazu `foreach` (`For Each` v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]).
 
-Typy, které <xref:System.Collections.IDictionary> implementují názvy končící slovem Dictionary, i když typ také implementuje <xref:System.Collections.IEnumerable> nebo <xref:System.Collections.ICollection>. Konvence pojmenování přípon kolekcí a slovníku umožňují uživatelům rozlišovat následující dva vzory výčtu.
+Typy, které implementují <xref:System.Collections.IDictionary> mají názvy končící slovem Dictionary, a to i v případě, že typ také implementuje <xref:System.Collections.IEnumerable> nebo <xref:System.Collections.ICollection>. Konvence pojmenování přípon kolekcí a slovníku umožňují uživatelům rozlišovat následující dva vzory výčtu.
 
 Typy s příponou Collection se řídí tímto vzorem výčtu.
 
@@ -81,7 +81,7 @@ Typy s příponou Dictionary následují po tomto vzoru výčtu.
 foreach(SomeType x in SomeDictionary.Values) { }
 ```
 
-Objekt se skládá z <xref:System.Data.DataTable> kolekce objektů, <xref:System.Data.DataColumn?displayProperty=fullName> které se skládají z kolekcí objektů a <xref:System.Data.DataRow?displayProperty=fullName> , mimo jiné. <xref:System.Data.DataSet> Tyto kolekce jsou <xref:System.Collections.ICollection> implementovány prostřednictvím <xref:System.Data.InternalDataCollectionBase?displayProperty=fullName> základní třídy.
+Objekt <xref:System.Data.DataSet> se skládá z kolekce objektů <xref:System.Data.DataTable>, které se skládají z kolekcí objektů <xref:System.Data.DataColumn?displayProperty=fullName> a <xref:System.Data.DataRow?displayProperty=fullName>, mimo jiné. Tyto kolekce implementují <xref:System.Collections.ICollection> prostřednictvím základní třídy <xref:System.Data.InternalDataCollectionBase?displayProperty=fullName>.
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
@@ -89,7 +89,7 @@ Přejmenujte typ tak, aby se najmenoval správným termínem.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Pokud je typ zobecněnou datovou strukturou, která může být rozšířená nebo která bude obsahovat libovolnou sadu různých položek, je bezpečné potlačit upozornění na použití přípony kolekce. V tomto případě je název, který poskytuje smysluplné informace o implementaci, výkonu nebo dalších vlastnostech struktury dat, smyslem (například BinaryTree). V případech, kdy typ představuje kolekci konkrétního typu (například StringCollection), potlačíte upozornění z tohoto pravidla, protože přípona označuje, že typ lze vytvořit pomocí `foreach` příkazu.
+Pokud je typ zobecněnou datovou strukturou, která může být rozšířená nebo která bude obsahovat libovolnou sadu různých položek, je bezpečné potlačit upozornění na použití přípony kolekce. V tomto případě je název, který poskytuje smysluplné informace o implementaci, výkonu nebo dalších vlastnostech struktury dat, smyslem (například BinaryTree). V případech, kdy typ představuje kolekci určitého typu (například StringCollection), potlačíte upozornění z tohoto pravidla, protože přípona označuje, že typ může být vytvořen pomocí příkazu `foreach`.
 
 U jiných přípon potlačíte upozornění z tohoto pravidla. Přípona umožňuje, aby bylo zamýšlené použití zřejmé z názvu typu.
 

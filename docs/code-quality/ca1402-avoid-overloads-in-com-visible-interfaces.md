@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: fdbb6012fb1252c90014ba91caf8ad7dacf901c2
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 1617ad2d5132f22da3c25565e6310977b286eaef
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234851"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444335"
 ---
 # <a name="ca1402-avoid-overloads-in-com-visible-interfaces"></a>CA1402: Vyhněte se přetížení ve viditelných rozhraních modelu COM
 
@@ -56,7 +56,7 @@ void SomeMethod_3(int valueOne, int valueTwo);
 Klienti modelu COM Visual Basic 6 nemohou implementovat metody rozhraní pomocí podtržítka v názvu.
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
-Chcete-li opravit porušení tohoto pravidla, přejmenujte přetížené metody tak, aby názvy byly jedinečné. Alternativně můžete nastavit rozhraní jako neviditelné na modelu COM změnou dostupnosti `internal` na`Friend` ( [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]v) nebo použitím <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> atributu nastaveného na `false`.
+Chcete-li opravit porušení tohoto pravidla, přejmenujte přetížené metody tak, aby názvy byly jedinečné. Alternativně můžete nastavit rozhraní jako neviditelné na modelu COM změnou přístupnosti na `internal` (`Friend` v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) nebo použitím atributu <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> nastaveného na `false`.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 Nepotlačujte upozornění na toto pravidlo.
@@ -68,11 +68,11 @@ Následující příklad ukazuje rozhraní, které porušuje pravidlo a rozhran�
 [!code-csharp[FxCop.Interoperability.OverloadsInterface#1](../code-quality/codesnippet/CSharp/ca1402-avoid-overloads-in-com-visible-interfaces_1.cs)]
 
 ## <a name="related-rules"></a>Související pravidla
-[CA1413: Vyhněte se neveřejným polím v viditelných hodnotových typech modelu COM](../code-quality/ca1413-avoid-non-public-fields-in-com-visible-value-types.md)
+[CA1413: Vyhněte se neveřejným polím v hodnotách viditelných modulem COM](../code-quality/ca1413-avoid-non-public-fields-in-com-visible-value-types.md)
 
 [CA1407: Vyhněte se statickým členům ve viditelných typech modelu COM](../code-quality/ca1407-avoid-static-members-in-com-visible-types.md)
 
-[CA1017: Označte sestavení pomocí ComVisibleAttribute](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)
+[CA1017: Označte sestavení pomocí atributu ComVisibleAttribute](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)
 
 ## <a name="see-also"></a>Viz také:
 

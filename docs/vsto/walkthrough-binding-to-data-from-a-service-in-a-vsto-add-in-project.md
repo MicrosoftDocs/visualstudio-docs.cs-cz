@@ -14,25 +14,25 @@ ms.author: johnhart
 manager: jillfra
 ms.workload:
 - office
-ms.openlocfilehash: 74a43a0c601fa8a96c8737644bf5bd0261f59796
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 75d984617b56525e640a74aa4badd6f520c0b892
+ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71254059"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381321"
 ---
-# <a name="walkthrough-bind-to-data-from-a-service-in-a-vsto-add-in-project"></a>Návod: Vytvoření vazby na data ze služby v projektu doplňku VSTO
+# <a name="walkthrough-bind-to-data-from-a-service-in-a-vsto-add-in-project"></a>Návod: vytvoření vazby na data ze služby v projektu doplňku VSTO
   Data můžete navazovat na hostitelské ovládací prvky v projektech doplňku VSTO. Tento návod ukazuje, jak přidat ovládací prvky do dokumentu aplikace systém Microsoft Office Word, navazovat ovládací prvky na data získaná ze služby obsahu MSDN a reagovat na události v době běhu.
 
  **Platí pro:** Informace v tomto tématu se vztahují na projekty na úrovni aplikace ve Wordu 2010. Další informace najdete v tématu [Dostupné funkce podle aplikace Office a typu projektu](../vsto/features-available-by-office-application-and-project-type.md).
 
  Tento návod znázorňuje následující úlohy:
 
-- <xref:Microsoft.Office.Tools.Word.RichTextContentControl> Přidání ovládacího prvku do dokumentu v době běhu.
+- Přidání ovládacího prvku <xref:Microsoft.Office.Tools.Word.RichTextContentControl> do dokumentu v době běhu.
 
-- Navázání <xref:Microsoft.Office.Tools.Word.RichTextContentControl> ovládacího prvku na data z webové služby.
+- Navázání ovládacího prvku <xref:Microsoft.Office.Tools.Word.RichTextContentControl> na data z webové služby.
 
-- Reakce na <xref:Microsoft.Office.Tools.Word.ContentControlBase.Entering> událost <xref:Microsoft.Office.Tools.Word.RichTextContentControl> ovládacího prvku.
+- Reagování na událost <xref:Microsoft.Office.Tools.Word.ContentControlBase.Entering> ovládacího prvku <xref:Microsoft.Office.Tools.Word.RichTextContentControl>
 
   [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
@@ -41,7 +41,7 @@ ms.locfileid: "71254059"
 
 - [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]
 
-- [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)]nebo [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)].
+- [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] nebo [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)].
 
 ## <a name="create-a-new-project"></a>Vytvoření nového projektu
  Prvním krokem je vytvoření projektu doplňku VSTO aplikace Word.
@@ -50,9 +50,9 @@ ms.locfileid: "71254059"
 
 1. Vytvořte projekt doplňku VSTO pro Word s názvem **služba obsahu MTPS Content**, a to pomocí Visual Basic nebo C#.
 
-     Další informace najdete v tématu [jak: Vytváření projektů Office v sadě Visual](../vsto/how-to-create-office-projects-in-visual-studio.md)Studio.
+     Další informace najdete v tématu [Postupy: vytváření projektů pro systém Office v sadě Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md).
 
-     Visual Studio otevře `ThisAddIn.vb` soubor nebo `ThisAddIn.cs` a přidá projekt do **Průzkumník řešení**.
+     Visual Studio otevře soubor `ThisAddIn.vb` nebo `ThisAddIn.cs` a přidá projekt do **Průzkumník řešení**.
 
 ## <a name="add-a-web-service"></a>Přidat webovou službu
  Pro tento návod použijte webovou službu s názvem MTPS Content Service. Tato webová služba vrátí informace ze zadaného článku na webu MSDN ve formě řetězce XML nebo prostého textu. V pozdějším kroku se dozvíte, jak zobrazit vrácené informace v ovládacím prvku obsahu.
@@ -65,9 +65,9 @@ ms.locfileid: "71254059"
 
 3. Do pole **adresa** zadejte následující adresu URL:
 
-     **http:\//Services.MSDN.Microsoft.com/ContentServices/contentservice.asmx**
+   `http://services.msdn.microsoft.com/ContentServices/ContentService.asmx`
 
-4. Klikněte na tlačítko **Přejít**.
+4. Klikněte na **Přejít**.
 
 5. Do pole **obor názvů** zadejte **contentservice**a klikněte na **OK**.
 
@@ -78,17 +78,17 @@ ms.locfileid: "71254059"
 
 ### <a name="to-add-a-content-control-and-bind-to-data"></a>Přidání ovládacího prvku obsahu a vytvoření vazby na data
 
-1. `ThisAddIn` Ve třídě deklarujte proměnné pro službu obsahu MTPS, ovládací prvek obsahu a datovou vazbu.
+1. Ve třídě `ThisAddIn` deklarujte proměnné pro službu obsahu MTPS, ovládací prvek obsahu a datovou vazbu.
 
      [!code-csharp[Trin_WordAddIn_BindingDataToContentControl#2](../vsto/codesnippet/CSharp/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.cs#2)]
      [!code-vb[Trin_WordAddIn_BindingDataToContentControl#2](../vsto/codesnippet/VisualBasic/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.vb#2)]
 
-2. Do `ThisAddIn` třídy přidejte následující metodu. Tato metoda vytvoří ovládací prvek obsahu na začátku aktivního dokumentu.
+2. Přidejte následující metodu do třídy `ThisAddIn`. Tato metoda vytvoří ovládací prvek obsahu na začátku aktivního dokumentu.
 
      [!code-csharp[Trin_WordAddIn_BindingDataToContentControl#4](../vsto/codesnippet/CSharp/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.cs#4)]
      [!code-vb[Trin_WordAddIn_BindingDataToContentControl#4](../vsto/codesnippet/VisualBasic/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.vb#4)]
 
-3. Do `ThisAddIn` třídy přidejte následující metodu. Tato metoda inicializuje objekty potřebné k vytvoření a odeslání žádosti webové službě.
+3. Přidejte následující metodu do třídy `ThisAddIn`. Tato metoda inicializuje objekty potřebné k vytvoření a odeslání žádosti webové službě.
 
      [!code-csharp[Trin_WordAddIn_BindingDataToContentControl#6](../vsto/codesnippet/CSharp/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.cs#6)]
      [!code-vb[Trin_WordAddIn_BindingDataToContentControl#6](../vsto/codesnippet/VisualBasic/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.vb#6)]
@@ -98,13 +98,13 @@ ms.locfileid: "71254059"
      [!code-csharp[Trin_WordAddIn_BindingDataToContentControl#5](../vsto/codesnippet/CSharp/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.cs#5)]
      [!code-vb[Trin_WordAddIn_BindingDataToContentControl#5](../vsto/codesnippet/VisualBasic/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.vb#5)]
 
-5. Zavolejte metody `AddRichTextControlAtRange` a `InitializeServiceObjects` z`ThisAddIn_Startup` metody. Pro C# programátory přidejte obslužnou rutinu události.
+5. Volání metod `AddRichTextControlAtRange` a `InitializeServiceObjects` z metody `ThisAddIn_Startup`. Pro C# programátory přidejte obslužnou rutinu události.
 
      [!code-csharp[Trin_WordAddIn_BindingDataToContentControl#3](../vsto/codesnippet/CSharp/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.cs#3)]
      [!code-vb[Trin_WordAddIn_BindingDataToContentControl#3](../vsto/codesnippet/VisualBasic/trin_wordaddin_bindingdatatocontentcontrol/ThisAddIn.vb#3)]
 
 ## <a name="test-the-add-in"></a>Test doplňku
- Po otevření aplikace Word <xref:Microsoft.Office.Tools.Word.RichTextContentControl> se zobrazí ovládací prvek. Text v ovládacím prvku se změní po kliknutí dovnitř.
+ Při otevření aplikace Word se zobrazí ovládací prvek <xref:Microsoft.Office.Tools.Word.RichTextContentControl>. Text v ovládacím prvku se změní po kliknutí dovnitř.
 
 ### <a name="to-test-the-vsto-add-in"></a>Test doplňku VSTO
 

@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 82a8b1ea389c37dc63a9fe7366208a2a3028efb8
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 7ebf218b15dcb4048129e308822042efa5f6b0c9
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234797"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72440510"
 ---
 # <a name="ca1406-avoid-int64-arguments-for-visual-basic-6-clients"></a>CA1406: Vyhněte se argumentům Int64 pro klienty jazyka Visual Basic 6
 
@@ -34,15 +34,15 @@ ms.locfileid: "71234797"
 |Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
-Typ, který je konkrétně označen jako viditelný pro model COM (Component Object Model), deklaruje člen, který přijímá <xref:System.Int64?displayProperty=fullName> argument.
+Typ, který je konkrétně označen jako viditelný pro model COM (Component Object Model), deklaruje člen, který přebírá argument <xref:System.Int64?displayProperty=fullName>.
 
 ## <a name="rule-description"></a>Popis pravidla
-Klienty modulu COM jazyka Visual Basic 6 nemohou přistupovat k 64bitová celá čísla.
+Klienti modelu COM Visual Basic 6 nemají přístup k 64 celých čísel.
 
-Ve výchozím nastavení jsou následující prvky viditelné v modelu COM: sestavení, veřejné typy, členy veřejné instance ve veřejných typech a všechny členy typů veřejné hodnoty. Chcete-li však omezit falešně pozitivní hodnoty, toto pravidlo vyžaduje explicitní zadání viditelnosti typu COM; obsahující <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> sestavení musí být označeno nastavením na `false` a typ <xref:System.Runtime.InteropServices.ComVisibleAttribute> musí být označen nastavením na `true`.
+Ve výchozím nastavení jsou následující prvky viditelné v modelu COM: sestavení, veřejné typy, členy veřejné instance ve veřejných typech a všechny členy typů veřejné hodnoty. Chcete-li však omezit falešně pozitivní hodnoty, toto pravidlo vyžaduje explicitní zadání viditelnosti typu COM; obsahující sestavení musí být označeno s <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> nastavenou na `false` a typ musí být označený jako <xref:System.Runtime.InteropServices.ComVisibleAttribute> nastavený na `true`.
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
-Chcete-li opravit porušení tohoto pravidla pro parametr, jehož hodnota může být vždy vyjádřena jako 32 bitová integrál, změňte typ parametru na <xref:System.Int32?displayProperty=fullName>. Pokud hodnota parametru může být větší, než může být vyjádřena jako 32-bit integrál, změňte typ parametru na <xref:System.Decimal?displayProperty=fullName>. Všimněte si, <xref:System.Single?displayProperty=fullName> že <xref:System.Double?displayProperty=fullName> obě a ztrácejí přesnost v horních rozsahech <xref:System.Int64> datového typu. Pokud člen nemá být viditelný pro model COM, označte jej pomocí <xref:System.Runtime.InteropServices.ComVisibleAttribute> příkazu Set to. `false`
+Chcete-li opravit porušení tohoto pravidla pro parametr, jehož hodnota může být vždy vyjádřena jako 32 bitová integrál, změňte typ parametru na <xref:System.Int32?displayProperty=fullName>. Pokud hodnota parametru může být větší, než může být vyjádřena jako 32-bit integrál, změňte typ parametru na <xref:System.Decimal?displayProperty=fullName>. Všimněte si, že <xref:System.Single?displayProperty=fullName> a <xref:System.Double?displayProperty=fullName> ztratí přesnost v horních rozsahech datového typu <xref:System.Int64>. Pokud člen nemá být viditelný pro model COM, označte ho pomocí <xref:System.Runtime.InteropServices.ComVisibleAttribute> nastaveného na `false`.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 Z tohoto pravidla je bezpečné potlačit upozornění, pokud je jisté, že Visual Basic 6 klientů modelu COM nebude přistupovat k tomuto typu.
@@ -54,11 +54,11 @@ Následující příklad ukazuje typ, který je v rozporu s pravidlem.
 [!code-vb[FxCop.Interoperability.LongArgument#1](../code-quality/codesnippet/VisualBasic/ca1406-avoid-int64-arguments-for-visual-basic-6-clients_1.vb)]
 
 ## <a name="related-rules"></a>Související pravidla
-[CA1413: Vyhněte se neveřejným polím v viditelných hodnotových typech modelu COM](../code-quality/ca1413-avoid-non-public-fields-in-com-visible-value-types.md)
+[CA1413: Vyhněte se neveřejným polím v hodnotách viditelných modulem COM](../code-quality/ca1413-avoid-non-public-fields-in-com-visible-value-types.md)
 
 [CA1407: Vyhněte se statickým členům ve viditelných typech modelu COM](../code-quality/ca1407-avoid-static-members-in-com-visible-types.md)
 
-[CA1017: Označte sestavení pomocí ComVisibleAttribute](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)
+[CA1017: Označte sestavení pomocí atributu ComVisibleAttribute](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)
 
 ## <a name="see-also"></a>Viz také:
 

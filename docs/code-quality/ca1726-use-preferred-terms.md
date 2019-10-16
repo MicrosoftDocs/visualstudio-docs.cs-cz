@@ -13,12 +13,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 3f359f7aa24ada0edf2c98a7d527ed715df85086
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: e9842e52607af0d7ec886660a14450ea89c23459
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71233925"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72438908"
 ---
 # <a name="ca1726-use-preferred-terms"></a>CA1726: Použijte upřednostňované výrazy
 
@@ -26,7 +26,7 @@ ms.locfileid: "71233925"
 |-|-|
 |TypeName|UsePreferredTerms|
 |CheckId|CA1726|
-|Kategorie|Microsoft.Naming|
+|Kategorie|Microsoft. pojmenování|
 |Zásadní změna|Přerušení – při vyvolání u sestavení<br /><br /> Nerozdělitelné – při vyvolání u parametrů typu|
 
 ## <a name="cause"></a>příčina
@@ -47,7 +47,7 @@ Toto pravidlo analyzuje identifikátor na tokeny. Každý token a Každá souvis
 |`Didnt`|`DidNot`|
 |`Doesnt`|`DoesNot`|
 |`Dont`|`DoNot`|
-|`Flag` Nebo `Flags`|Neexistuje žádný náhradní termín. Nepoužívejte.|
+|`Flag` nebo `Flags`|Neexistuje žádný náhradní termín. Nepoužívejte.|
 |`Hadnt`|`HadNot`|
 |`Hasnt`|`HasNot`|
 |`Havent`|`HaveNot`|

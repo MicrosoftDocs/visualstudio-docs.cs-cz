@@ -18,12 +18,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 4f26faf16cc8a9a8235596aef68e5af5c3b4401e
-ms.sourcegitcommit: e98db44f3a33529b0ba188d24390efd09e548191
+ms.openlocfilehash: 8eaaaa8b810e79b2bd1a4da0ab1d9887c8a46380
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71253306"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72440125"
 ---
 # <a name="ca1502-avoid-excessive-complexity"></a>CA1502: Vyhněte se nadměrné složitosti
 
@@ -56,15 +56,15 @@ Chcete-li opravit porušení tohoto pravidla, refaktorujte metodu pro snížení
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Z tohoto pravidla je bezpečné potlačit upozornění, pokud složitost nelze snadno snížit a metodu je snadné pochopit, otestovat a udržovat. Konkrétně metoda, která obsahuje velký `switch` (`Select` v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) příkaz, je kandidátem pro vyloučení. Riziko, že destabilizující základ kódu v cyklu vývoje nebo Představujeme neočekávanou změnu v průběhu doby běhu v dříve dodaném kódu, může převážit výhody udržovatelnosti refaktoringu kódu.
+Z tohoto pravidla je bezpečné potlačit upozornění, pokud složitost nelze snadno snížit a metodu je snadné pochopit, otestovat a udržovat. Konkrétně metoda, která obsahuje velký `switch` (`Select` v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]), je kandidátem pro vyloučení. Riziko, že destabilizující základ kódu v cyklu vývoje nebo Představujeme neočekávanou změnu v průběhu doby běhu v dříve dodaném kódu, může převážit výhody udržovatelnosti refaktoringu kódu.
 
 ## <a name="how-cyclomatic-complexity-is-calculated"></a>Jak se počítá složitost cyklomatická
 
 Složitost cyklomatická se počítá přidáním 1 k následujícím akcím:
 
-- Počet větví (například `if`, `while`a `do`)
+- Počet větví (například `if`, `while` a `do`)
 
-- `case` Počet příkazů v`switch`
+- Počet příkazů `case` v `switch`
 
 ## <a name="example"></a>Příklad
 

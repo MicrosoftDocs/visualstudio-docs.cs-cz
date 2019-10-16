@@ -1,5 +1,5 @@
 ---
-title: 'CA1304: Určete CultureInfo'
+title: 'CA1304: Zadejte možnosti CultureInfo'
 ms.date: 06/30/2018
 ms.topic: reference
 f1_keywords:
@@ -14,25 +14,25 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2539cef9e6b2fe20513943f686aeaa1ff7a79013
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 50f4726b21b51b963074ee9ae1c161872f6a5e5a
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235104"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444434"
 ---
-# <a name="ca1304-specify-cultureinfo"></a>CA1304: Určete CultureInfo
+# <a name="ca1304-specify-cultureinfo"></a>CA1304: Zadejte možnosti CultureInfo
 
 |||
 |-|-|
 |TypeName|SpecifyCultureInfo|
 |CheckId|CA1304|
-|Kategorie|Microsoft.Globalization|
+|Kategorie|Microsoft. Globalization|
 |Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
 
-Metoda nebo konstruktor volá člen, který má přetížení, které přijímá <xref:System.Globalization.CultureInfo?displayProperty=nameWithType> parametr, a metoda nebo konstruktor nevolá přetížení, které <xref:System.Globalization.CultureInfo> přijímá parametr. Toto pravidlo ignoruje volání následujících metod:
+Metoda nebo konstruktor volá člen, který má přetížení, které přijímá parametr <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>, a metoda nebo konstruktor nevolá přetížení, které přijímá parametr <xref:System.Globalization.CultureInfo>. Toto pravidlo ignoruje volání následujících metod:
 
 - <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType>
 - <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=nameWithType>
@@ -40,7 +40,7 @@ Metoda nebo konstruktor volá člen, který má přetížení, které přijímá
 
 ## <a name="rule-description"></a>Popis pravidla
 
-V případě, <xref:System.IFormatProvider?displayProperty=nameWithType> že objekt nebonenízadán,nemusímítvýchozíhodnota,kterájeposkytnutapřetíženýmčlenem,efekt,kterýchcetevevšechnárodníchprostředích.<xref:System.Globalization.CultureInfo> Kromě toho členové rozhraní .NET zvolí výchozí jazykovou verzi a formátování na základě předpokladů, které nemusí být pro váš kód správné. Chcete-li zajistit, aby kód pro vaše scénáře fungoval podle očekávání, měli byste doručovat informace specifické pro jazykovou verzi podle následujících pokynů:
+Pokud není zadán objekt <xref:System.Globalization.CultureInfo> nebo <xref:System.IFormatProvider?displayProperty=nameWithType>, výchozí hodnota, která je poskytnuta přetíženým členem, nemusí mít v všech národních prostředích požadovaný efekt. Kromě toho členové rozhraní .NET zvolí výchozí jazykovou verzi a formátování na základě předpokladů, které nemusí být pro váš kód správné. Chcete-li zajistit, aby kód pro vaše scénáře fungoval podle očekávání, měli byste doručovat informace specifické pro jazykovou verzi podle následujících pokynů:
 
 - Pokud se hodnota zobrazí uživateli, použijte aktuální jazykovou verzi. Viz <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>.
 
@@ -51,11 +51,11 @@ V případě, <xref:System.IFormatProvider?displayProperty=nameWithType> že obj
 I v případě, že je výchozí chování přetíženého členu vhodné pro vaše potřeby, je lepší explicitně volat přetížení specifické pro jazykovou verzi, aby váš kód byl vlastní dokument a snadněji se udržoval.
 
 > [!NOTE]
-> <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType>slouží pouze k načtení lokalizovaných prostředků pomocí instance <xref:System.Resources.ResourceManager?displayProperty=nameWithType> třídy.
+> <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> slouží pouze k načtení lokalizovaných prostředků pomocí instance třídy <xref:System.Resources.ResourceManager?displayProperty=nameWithType>.
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, použijte přetížení, které přijímá <xref:System.Globalization.CultureInfo> argument.
+Chcete-li opravit porušení tohoto pravidla, použijte přetížení, které přebírá @no__t argument-0.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
@@ -63,13 +63,13 @@ Je bezpečné potlačit upozornění z tohoto pravidla, pokud je jisté, že vý
 
 ## <a name="example-showing-how-to-fix-violations"></a>Příklad ukazující, jak opravit porušení
 
-V následujícím příkladu `BadMethod` způsobí dvě porušení tohoto pravidla. `GoodMethod`opraví první porušení předáním invariantní jazykové verze k <xref:System.String.Compare%2A?displayProperty=nameWithType>a opraví druhé porušení předáním aktuální jazykové verze do <xref:System.String.ToLower%2A?displayProperty=nameWithType> , protože `string3` se zobrazí uživateli.
+V následujícím příkladu `BadMethod` způsobí dvě porušení tohoto pravidla. `GoodMethod` opravuje první porušení předáním invariantní jazykové verze do <xref:System.String.Compare%2A?displayProperty=nameWithType> a opraví druhé porušení předáním aktuální jazykové verze do <xref:System.String.ToLower%2A?displayProperty=nameWithType>, protože uživateli se zobrazí `string3`.
 
 [!code-csharp[FxCop.Globalization.CultureInfo#1](../code-quality/codesnippet/CSharp/ca1304-specify-cultureinfo_1.cs)]
 
 ## <a name="example-showing-formatted-output"></a>Příklad znázorňující formátovaný výstup
 
-Následující příklad ukazuje účinek aktuální jazykové verze ve výchozím nastavení <xref:System.IFormatProvider> , které je vybráno <xref:System.DateTime> typem.
+Následující příklad ukazuje účinek aktuální jazykové verze na výchozí <xref:System.IFormatProvider>, který je vybrán typem <xref:System.DateTime>.
 
 [!code-csharp[FxCop.Globalization.IFormatProvider#1](../code-quality/codesnippet/CSharp/ca1304-specify-cultureinfo_2.cs)]
 
@@ -82,7 +82,7 @@ Tento příklad vytvoří následující výstup:
 
 ## <a name="related-rules"></a>Související pravidla
 
-- [CA1305: Zadat IFormatProvider](../code-quality/ca1305-specify-iformatprovider.md)
+- [CA1305: Zadejte možnosti IFormatProvider](../code-quality/ca1305-specify-iformatprovider.md)
 
 ## <a name="see-also"></a>Viz také:
 

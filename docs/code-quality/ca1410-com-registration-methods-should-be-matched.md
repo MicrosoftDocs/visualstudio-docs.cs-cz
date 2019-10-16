@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: bca9e06c861ab2bcaceead8bf8ee195b64e45c83
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: c7c7c20ece08bc5167887727e423a3f7cdf7ee19
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234739"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72440201"
 ---
 # <a name="ca1410-com-registration-methods-should-be-matched"></a>CA1410: Metody registrace modelu COM by si měly odpovídat
 
@@ -35,11 +35,11 @@ ms.locfileid: "71234739"
 
 ## <a name="cause"></a>příčina
 
-Typ deklaruje metodu, která je označena <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute?displayProperty=fullName> atributem, ale nedeklaruje metodu, která je označena <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=fullName> atributem, nebo naopak.
+Typ deklaruje metodu, která je označena atributem <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute?displayProperty=fullName>, ale nedeklaruje metodu, která je označena atributem <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute?displayProperty=fullName> nebo naopak.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Pro klienty modelu COM (Component Object Model) pro vytvoření typu .NET musí být tento typ nejprve zaregistrován. Je-li k dispozici, metoda, která je označena <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute> atributem, je volána během procesu registrace pro spuštění kódu zadaného uživatelem. Odpovídající metoda, která je označena <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute> atributem, je volána během procesu zrušení registrace pro vrácení operací registrační metody.
+Pro klienty modelu COM (Component Object Model) pro vytvoření typu .NET musí být tento typ nejprve zaregistrován. Pokud je k dispozici, metoda, která je označena atributem <xref:System.Runtime.InteropServices.ComRegisterFunctionAttribute>, je volána během procesu registrace pro spuštění kódu zadaného uživatelem. Odpovídající metoda, která je označena atributem <xref:System.Runtime.InteropServices.ComUnregisterFunctionAttribute>, je volána během procesu zrušení registrace pro vrácení operací registrační metody.
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 

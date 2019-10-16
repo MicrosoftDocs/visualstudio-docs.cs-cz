@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: caaae787d5e4801f3fc3b8d881b386595fb2eca4
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 227cc5c47a2001cd6c3b71718ae2a29032bed71c
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234680"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444194"
 ---
 # <a name="ca1412-mark-comsource-interfaces-as-idispatch"></a>CA1412: Označte rozhraní ComSource jako IDispatch
 
@@ -35,15 +35,15 @@ ms.locfileid: "71234680"
 
 ## <a name="cause"></a>příčina
 
-Typ je označen <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> atributem a alespoň jedno zadané rozhraní není označeno <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> atributem nastaveným na `InterfaceIsDispatch` hodnotu.
+Typ je označen atributem <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> a alespoň jedno zadané rozhraní není označeno atributem <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> nastaveným na hodnotu `InterfaceIsDispatch`.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-<xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute>slouží k identifikaci rozhraní události, které třída zveřejňuje klientům modelu COM (Component Object Model). Tato rozhraní musí být vystavena `InterfaceIsIDispatch` , aby umožnila Visual Basic 6 klientů modelu COM, aby přijímala oznámení o událostech. Ve výchozím nastavení, pokud rozhraní není označeno <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> atributem, je vystaveno jako duální rozhraní.
+<xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> slouží k identifikaci rozhraní události, které třída zveřejňuje klientům modelu COM (Component Object Model). Tato rozhraní musí být vystavena jako `InterfaceIsIDispatch` a povolit tak Visual Basic 6 klientů modelu COM pro příjem oznámení události. Ve výchozím nastavení, pokud rozhraní není označeno atributem <xref:System.Runtime.InteropServices.InterfaceTypeAttribute>, je vystaveno jako duální rozhraní.
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, přidejte nebo upravte <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> atribut tak, aby byla jeho hodnota nastavena na InterfaceIsIDispatch pro všechna rozhraní, která jsou zadána <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute> s atributem.
+Chcete-li opravit porušení tohoto pravidla, přidejte nebo upravte atribut <xref:System.Runtime.InteropServices.InterfaceTypeAttribute> tak, aby byla jeho hodnota nastavena na InterfaceIsIDispatch pro všechna rozhraní, která jsou zadána s atributem <xref:System.Runtime.InteropServices.ComSourceInterfacesAttribute>.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
@@ -58,7 +58,7 @@ Následující příklad ukazuje třídu, kde jedno z rozhraní je v rozporu s p
 
 ## <a name="related-rules"></a>Související pravidla
 
-[CA1408: Nepoužívat AutoDual ClassInterfaceType](../code-quality/ca1408-do-not-use-autodual-classinterfacetype.md)
+[CA1408: Nepoužívejte AutoDual ClassInterfaceType](../code-quality/ca1408-do-not-use-autodual-classinterfacetype.md)
 
 ## <a name="see-also"></a>Viz také:
 

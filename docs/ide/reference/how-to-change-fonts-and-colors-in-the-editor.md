@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b1eb807143e7ee5c3283a88cff12f13515486fb
-ms.sourcegitcommit: ce1ab8a25c66a83e60eab80ed8e1596fe66dd85c
+ms.openlocfilehash: ee1fced0b04ae058f05dc46e4414b76b0f506213
+ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68605411"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381004"
 ---
 # <a name="how-to-change-fonts-and-colors-for-the-editor-in-visual-studio"></a>Postupy: Změna písma a barev pro Editor v aplikaci Visual Studio
 
@@ -29,13 +29,11 @@ Můžete změnit výchozí řez písma, upravit velikost písma a změnit barvy 
 
 - Názvy písem s pevnou šířkou jsou uvedeny tučně.
 
-- Můžete nastavit možnosti **popředí položky**, **pozadí položky**a **tučné písmo** pro každý typ textového prvku. Například pokud změníte barvy a vyberete tučné pro  **Komentáře** a **záložky**, jiné typy textových prvků nebudou nijak ovlivněny.
+- Můžete nastavit možnosti **popředí položky**, **pozadí položky**a **tučné písmo** pro každý typ textového prvku. Například pokud změníte barvy a vyberete **tučné** pro **Komentáře** a **záložky**, jiné typy textových prvků nebudou nijak ovlivněny.
 
 ## <a name="change-the-default-font-face-size-and-colors"></a>Změna výchozího vzhledu písma, velikosti a barev
 
-1. V nabídce **nástroje** vyberte **Možnosti** a ve složce **prostředí** vyberte **písma a barvy**.
-
-     Otevře se [dialogové okno písma a barvy, prostředí, možnosti](../../ide/reference/fonts-and-colors-environment-options-dialog-box.md) .
+1. V nabídce **nástroje** vyberte **možnost možnosti** . V části **prostředí**vyberte [písma a barvy](../../ide/reference/fonts-and-colors-environment-options-dialog-box.md).
 
 2. V **zobrazení zobrazit nastavení pro**vyberte **textový editor**.
 
@@ -46,7 +44,7 @@ Můžete změnit výchozí řez písma, upravit velikost písma a změnit barvy 
     > [!TIP]
     > Kliknutím na **použít výchozí** obnovíte výchozí nastavení.
 
-5. Klikněte na **OK**.
+5. Klikněte na tlačítko **OK**.
 
 ## <a name="see-also"></a>Viz také:
 
