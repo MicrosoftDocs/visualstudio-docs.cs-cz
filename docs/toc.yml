@@ -170,8 +170,8 @@
   items:
     - name: Vývoj
       items:
-        - name: 'Rejstřík: Psaní kódu pomocí integrovaného vývojového prostředí'
-          href: ide/index-writing-code.md
+        - name: Začínáme
+          href: ide/index-writing-code.yml
         - name: Pohyb v integrovaném vývojovém prostředí
           href: ide/how-to-move-around-in-the-visual-studio-ide.md
         - name: Řešení a projekty
