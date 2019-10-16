@@ -44,8 +44,6 @@
       items:
         - name: Použití zarážek
           href: using-breakpoints.md
-        - name: Použití zarážek s trasováním
-          href: using-tracepoints.md
         - name: Řešení potíží se zarážkami
           href: troubleshooting-breakpoints.md
     - name: Kontrola dat
@@ -138,6 +136,8 @@
               href: xaml-hot-reload-troubleshooting.md
         - name: 'Nepodporovaná operace Upravit a pokračovat v F#'
           href: edit-and-continue-not-supported-for-f-hash.md
+    - name: Protokolování do okna Výstup
+      href: using-tracepoints.md
     - name: Zobrazení dat ladicího programu
       items:
         - name: Moduly
@@ -238,7 +238,7 @@
                   href: visual-cpp-custom-visualizer-compatibility.md
             - name: Vlastní zobrazení (spravovaná)
               items:
-                - name: Vytváření vlastních zobrazení objektů
+                - name: Vytváření vlastních zobrazení spravovaných objektů
                   href: create-custom-views-of-dot-managed-objects.md
                 - name: 'Instruování ladicího programu, co se má zobrazit'
                   href: using-the-debuggerdisplay-attribute.md
