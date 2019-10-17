@@ -28,9 +28,6 @@
         - name: Nasazení
           tocHref: /visualstudio/deployment/
           topicHref: /visualstudio/deployment/deploying-applications-services-and-components
-        - name: Návrháři
-          tocHref: /visualstudio/designers/
-          topicHref: /visualstudio/designers/designing-user-interfaces
         - name: Rozšiřitelnost
           tocHref: /visualstudio/extensibility/
           topicHref: /visualstudio/extensibility/index
@@ -85,6 +82,9 @@
         - name: Návrhář postupu provádění
           tocHref: /visualstudio/workflow-designer/
           topicHref: /visualstudio/workflow-designer/developing-applications-with-the-workflow-designer
+        - name: Nástroje XAML
+          tocHref: /visualstudio/xaml-tools/
+          topicHref: /visualstudio/xaml-tools/
         - name: Nástroje XML
           tocHref: /visualstudio/xml-tools/
           topicHref: /visualstudio/xml-tools/xml-tools-in-visual-studio

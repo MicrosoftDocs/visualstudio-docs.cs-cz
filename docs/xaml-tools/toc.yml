@@ -1,0 +1,114 @@
+- name: Nástroje XAML v sadě Visual Studio
+  href: index.yml
+- name: Přehled XAML
+  href: xaml-overview.md
+- name: Návrhář XAML
+  items:
+    - name: Návrh XAML v sadě Visual Studio a Blendu
+      href: designing-xaml-in-visual-studio.md
+    - name: Přehled Návrháře XAML
+      href: creating-a-ui-by-using-xaml-designer-in-visual-studio.md
+    - name: Práce s elementy
+      href: working-with-elements-in-xaml-designer.md
+    - name: Uspořádání objektů do kontejnerů rozložení
+      href: organize-objects-into-layout-containers-in-xaml-designer.md
+    - name: Vytvoření a použití prostředku
+      href: how-to-create-and-apply-a-resource.md
+    - name: 'Návod: Vytvoření vazby na data'
+      href: walkthrough-binding-to-data-in-xaml-designer.md
+    - name: Ladění nebo zakázání kódu projektu
+      href: debugging-or-disabling-project-code-in-xaml-designer.md
+    - name: Blend for Visual Studio
+      items:
+        - name: Přehled
+          href: creating-a-ui-by-using-blend-for-visual-studio.md
+        - name: Kreslení tvarů a cest
+          href: draw-shapes-and-paths.md
+        - name: Úpravy stylu objektů
+          href: modify-the-style-of-objects-in-blend.md
+        - name: Animace objektů
+          href: animate-objects-in-xaml-designer.md
+        - name: Zobrazení dat
+          href: display-data-in-blend.md
+    - name: Odkaz
+      items:
+        - name: Chyby a upozornění XAML
+          href: xaml-errors-warnings.md
+        - name: Klávesové zkratky pro Návrhář XAML
+          href: keyboard-shortcuts-for-xaml-designer.md
+        - name: Klávesové zkratky pro Blend
+          href: keyboard-shortcuts-in-blend.md
+        - name: Modifikační klávesy návrhové plochy (Blend)
+          href: artboard-modifier-keys-in-blend.md
+        - name: Modifikační klávesy nástroje Pero (Blend)
+          href: pen-tool-modifier-keys-in-blend.md
+        - name: Modifikační klávesy nástroje Přímý výběr (Blend)
+          href: direct-selection-tool-modifier-keys-in-blend.md
+- name: Ladění kódu XAML
+  items:
+    - name: Kontrola vlastností XAML při ladění
+      href: inspect-xaml-properties-while-debugging.md
+    - name: Opětovné načítání XAML za provozu
+      items:
+        - name: Psaní a ladění spuštěného kódu XAML
+          href: xaml-hot-reload.md
+        - name: Řešení potíží
+          href: xaml-hot-reload-troubleshooting.md
+    - name: Ladění kódu XAML v programu Blend
+      href: debug-xaml-in-blend.md
+    - name: Ladění aplikací pro UPW >>
+      href: ../debugger/debugging-windows-store-and-windows-universal-apps.md
+- name: Windows Presentation Foundation (WPF)
+  items:
+    - name: Začínáme
+      displayName: Windows Presentation Foundation (WPF)
+      href: ../designers/getting-started-with-wpf.md
+    - name: Přehled grafického subsystému WPF (Windows Presentation Foundation)
+      href: ../designers/introduction-to-wpf.md
+    - name: Datová vazba
+      items:
+        - name: Datová vazba WPF s LINQ to XML
+          href: ../designers/wpf-data-binding-with-linq-to-xml-overview.md
+        - name: Dynamické vlastnosti LINQ to XML
+          items:
+            - name: Přehled
+              displayName: LINQ to XML dynamic properties
+              href: ../designers/linq-to-xml-dynamic-properties.md
+            - name: Dynamické vlastnosti třídy XAttribute
+              items:
+                - name: Value (dynamická vlastnost XAttribute)
+                  href: ../designers/value-xattribute-dynamic-property.md
+            - name: Dynamické vlastnosti třídy XElement
+              items:
+                - name: Attribute (dynamická vlastnost XElement)
+                  href: ../designers/attribute-xelement-dynamic-property.md
+                - name: Element (dynamická vlastnost XElement)
+                  href: ../designers/element-xelement-dynamic-property.md
+                - name: Elements (dynamická vlastnost XElement)
+                  href: ../designers/elements-xelement-dynamic-property.md
+                - name: Descendants (dynamická vlastnost XElement)
+                  href: ../designers/descendants-xelement-dynamic-property.md
+                - name: Value (dynamická vlastnost XElement)
+                  href: ../designers/value-xelement-dynamic-property.md
+                - name: Xml (dynamická vlastnost XElement)
+                  href: ../designers/xml-xelement-dynamic-property.md
+            - name: Příklady
+              items:
+                - name: Datová vazba WPF pomocí LINQ to XML
+                  href: ../designers/wpf-data-binding-using-linq-to-xml-example.md
+                - name: 'Postupy: Sestavení a spuštění příkladu LinqToXmlDataBinding'
+                  href: ../designers/how-to-build-and-run-the-linqtoxmldatabinding-example.md
+                - name: 'Návod: Datová vazba LINQ to XML'
+                  href: ../designers/walkthrough-linqtoxmldatabinding-example.md
+                - name: Zdrojový kód L2DBForm.xaml
+                  href: ../designers/l2dbform-xaml-source-code.md
+                - name: Zdrojový kód L2DBForm.xaml.cs
+                  href: ../designers/l2dbform-xaml-cs-source-code.md
+    - name: Ladění aplikací pro WPF
+      items:
+        - name: Ladění WPF
+          href: ../debugger/debugging-wpf.md?toc=/visualstudio/xaml-tools/toc.json
+        - name: Použití vizualizéru stromu WPF
+          href: ../debugger/how-to-use-the-wpf-tree-visualizer.md?toc=/visualstudio/xaml-tools/toc.json
+        - name: Zobrazení informací o trasování WPF
+          href: ../debugger/how-to-display-wpf-trace-information.md?toc=/visualstudio/xaml-tools/toc.json

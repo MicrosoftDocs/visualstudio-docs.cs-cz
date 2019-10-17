@@ -12,12 +12,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e2a11d62500424db7fd1969ade840b2d3484a83
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: 5b7d17b90ab195e41a5b3dacb3b2ab4985dce245
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018261"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72448745"
 ---
 # <a name="using-sal-annotations-to-reduce-cc-code-defects"></a>Použití poznámek SAL k snížení míry výskytu závad kódu C/C++
 SAL je jazyk poznámky ke zdrojovému kódu společnosti Microsoft. Pomocí poznámek zdrojového kódu můžete provést explicitní záměr za kódem. Tyto poznámky také umožňují automatizované statické analytické nástroje k přesnější analýze kódu, s podstatně menším počtem falešně pozitivních a falešně negativních hodnot.

@@ -91,7 +91,7 @@
         - name: Zobrazení paměti proměnných
           href: memory-windows.md
         - name: Kontrola vlastností XAML při ladění
-          href: inspect-xaml-properties-while-debugging.md
+          href: ../xaml-tools/inspect-xaml-properties-while-debugging.md?toc=/visualstudio/debugger/toc.json
     - name: Zásobník volání
       items:
         - name: Zobrazení zásobníku volání
@@ -108,9 +108,9 @@
           href: how-to-enable-and-disable-edit-and-continue.md
         - name: Zastavení změn kódu
           href: how-to-stop-code-changes.md
-        - name: Upravit a pokračovat (Visual C++)
+        - name: Upravit a pokračovat (C++)
           items:
-            - name: Operace Upravit a pokračovat pro Visual C++
+            - name: Operace Upravit a pokračovat pro C++
               href: edit-and-continue-visual-cpp.md
             - name: Podporované změny kódu (C++)
               href: supported-code-changes-cpp.md
@@ -131,9 +131,9 @@
         - name: Opětovné načítání XAML za provozu
           items:
             - name: Psaní a ladění spuštěného kódu XAML
-              href: xaml-hot-reload.md
+              href: ../xaml-tools/xaml-hot-reload.md?toc=/visualstudio/debugger/toc.json
             - name: Řešení potíží s opětovným načítáním XAML za provozu
-              href: xaml-hot-reload-troubleshooting.md
+              href: ../xaml-tools/xaml-hot-reload-troubleshooting.md?toc=/visualstudio/debugger/toc.json
         - name: 'Nepodporovaná operace Upravit a pokračovat v F#'
           href: edit-and-continue-not-supported-for-f-hash.md
     - name: Protokolování do okna Výstup
@@ -202,7 +202,7 @@
                   items:
                     - name: Nastavení projektu pro konfiguraci ladění jazyka C++
                       href: project-settings-for-a-cpp-debug-configuration.md
-                    - name: Povolení funkcí ladění v jazyce Visual C++ (/D_DEBUG)
+                    - name: Povolení funkcí ladění v jazyce C++ (/D_DEBUG)
                       href: enabling-debug-features-in-visual-cpp-d-debug.md
                 - name: Nastavení stránek s vlastnostmi webových projektů
                   href: property-pages-settings-for-web-projects.md
@@ -234,7 +234,7 @@
               items:
                 - name: Vytváření vlastních zobrazení objektů C++
                   href: create-custom-views-of-native-objects.md
-                - name: Kompatibilita vlastních vizualizérů Visual C++
+                - name: Kompatibilita vlastních vizualizérů C++
                   href: visual-cpp-custom-visualizer-compatibility.md
             - name: Vlastní zobrazení (spravovaná)
               items:
@@ -435,7 +435,7 @@
             - name: Ladění balíčku nainstalované aplikace
               href: debug-installed-app-package.md
             - name: Ladění kódu XAML v programu Blend
-              href: debug-xaml-in-blend.md
+              href: ../xaml-tools/debug-xaml-in-blend.md?toc=/visualstudio/debugger/toc.json
             - name: HTML a CSS
               items:
                 - name: Ladění kódu HTML a CSS
@@ -500,7 +500,7 @@
           items:
             - name: Ladění nativního kódu
               href: debugging-native-code.md
-            - name: 'Příprava ladění: Typy projektů Visual C++'
+            - name: 'Příprava ladění: Typy projektů C++'
               href: debugging-preparation-visual-cpp-project-types.md
             - name: Ladění optimalizovaného kódu
               href: how-to-debug-optimized-code.md
