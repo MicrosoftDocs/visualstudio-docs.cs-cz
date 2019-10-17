@@ -212,127 +212,127 @@
                   displayName: design warnings
                   href: design-warnings.md
                 - name: 'CA1000: Nedeklarujte statické členy v obecných typech'
-                  href: ca1000-do-not-declare-static-members-on-generic-types.md
+                  href: ca1000.md
                 - name: 'CA1001: Typy, které vlastní uvolnitelné pole, by měly být uvolnitelné'
-                  href: ca1001-types-that-own-disposable-fields-should-be-disposable.md
+                  href: ca1001.md
                 - name: 'CA1002: Nezveřejňujte obecné seznamy'
-                  href: ca1002-do-not-expose-generic-lists.md
+                  href: ca1002.md
                 - name: 'CA1003: Použijte instance obecných obslužných rutin události'
-                  href: ca1003-use-generic-event-handler-instances.md
+                  href: ca1003.md
                 - name: 'CA1004: Obecné metody by měly poskytnout parametr typu'
-                  href: ca1004-generic-methods-should-provide-type-parameter.md
+                  href: ca1004.md
                 - name: 'CA1005: Vyhněte se nadbytečným parametrům u obecných typů'
-                  href: ca1005-avoid-excessive-parameters-on-generic-types.md
+                  href: ca1005.md
                 - name: 'CA1006: Nevnořujte obecné typy do signatur členu'
-                  href: ca1006-do-not-nest-generic-types-in-member-signatures.md
+                  href: ca1006.md
                 - name: 'CA1007: Použijte obecné typy, kde je to vhodné'
-                  href: ca1007-use-generics-where-appropriate.md
+                  href: ca1007.md
                 - name: 'CA1008: Výčty by měly mít nulovou hodnotu'
-                  href: ca1008-enums-should-have-zero-value.md
+                  href: ca1008.md
                 - name: 'CA1009: Deklarujte správně obslužné rutiny událostí'
-                  href: ca1009-declare-event-handlers-correctly.md
+                  href: ca1009.md
                 - name: 'CA1010: Kolekce musí implementovat obecné rozhraní'
-                  href: ca1010-collections-should-implement-generic-interface.md
+                  href: ca1010.md
                 - name: 'CA1011: Zvažte předání základních typů jako parametrů'
-                  href: ca1011-consider-passing-base-types-as-parameters.md
+                  href: ca1011.md
                 - name: 'CA1012: Abstraktní typy by neměly mít konstruktory'
-                  href: ca1012-abstract-types-should-not-have-constructors.md
+                  href: ca1012.md
                 - name: 'CA1013: Přetižte operátor rovnosti společně s přetížením operátorů sčítání a odečítání'
-                  href: ca1013-overload-operator-equals-on-overloading-add-and-subtract.md
+                  href: ca1013.md
                 - name: 'CA1014: Označte sestavení pomocí CLSCompliantAttribute'
-                  href: ca1014-mark-assemblies-with-clscompliantattribute.md
+                  href: ca1014.md
                 - name: 'CA1016: Označte sestavení pomocí AssemblyVersionAttribute'
-                  href: ca1016-mark-assemblies-with-assemblyversionattribute.md
+                  href: ca1016.md
                 - name: 'CA1017: Označte sestavení pomocí ComVisibleAttribute'
-                  href: ca1017-mark-assemblies-with-comvisibleattribute.md
+                  href: ca1017.md
                 - name: 'CA1018: Označte atributy pomocí AttributeUsageAttribute'
-                  href: ca1018-mark-attributes-with-attributeusageattribute.md
+                  href: ca1018.md
                 - name: 'CA1019: Definujte přístupové objekty pro argumenty atributů'
-                  href: ca1019-define-accessors-for-attribute-arguments.md
+                  href: ca1019.md
                 - name: 'CA1020: Vyhněte se oborům názvu s malým množstvím typů'
-                  href: ca1020-avoid-namespaces-with-few-types.md
+                  href: ca1020.md
                 - name: 'CA1021: Vyhněte se výstupním parametrům'
-                  href: ca1021-avoid-out-parameters.md
+                  href: ca1021.md
                 - name: 'CA1023: Indexery by neměly být multidimenzionální'
-                  href: ca1023-indexers-should-not-be-multidimensional.md
+                  href: ca1023.md
                 - name: 'CA1024: Použijte vlastnosti, kde je to vhodné'
-                  href: ca1024-use-properties-where-appropriate.md
+                  href: ca1024.md
                 - name: 'CA1025: Nahraďte opakované argumenty polem parametrů'
-                  href: ca1025-replace-repetitive-arguments-with-params-array.md
+                  href: ca1025.md
                 - name: 'CA1026: Neměly by být použity výchozí parametry'
-                  href: ca1026-default-parameters-should-not-be-used.md
+                  href: ca1026.md
                 - name: 'CA1027: Označte výčty pomocí FlagsAttribute'
-                  href: ca1027-mark-enums-with-flagsattribute.md
+                  href: ca1027.md
                 - name: 'CA1028: Úložiště výčtu by mělo být Int32'
-                  href: ca1028-enum-storage-should-be-int32.md
+                  href: ca1028.md
                 - name: 'CA1030: Použijte události, kde je to vhodné'
-                  href: ca1030-use-events-where-appropriate.md
+                  href: ca1030.md
                 - name: 'CA1031: Nezachycujte výjimky obecného typu'
-                  href: ca1031-do-not-catch-general-exception-types.md
+                  href: ca1031.md
                 - name: 'CA1032: Implementujte standardní konstruktory výjimky'
-                  href: ca1032-implement-standard-exception-constructors.md
+                  href: ca1032.md
                 - name: 'CA1033: Metody rozhraní by měly být volatelné podřízenými typy'
-                  href: ca1033-interface-methods-should-be-callable-by-child-types.md
+                  href: ca1033.md
                 - name: 'CA1034: Vnořené typy by neměly být viditelné'
-                  href: ca1034-nested-types-should-not-be-visible.md
+                  href: ca1034.md
                 - name: 'CA1035: Implementace ICollection mají členy silného typu'
-                  href: ca1035-icollection-implementations-have-strongly-typed-members.md
+                  href: ca1035.md
                 - name: 'CA1036: Přepište metody u srovnatelných typů'
-                  href: ca1036-override-methods-on-comparable-types.md
+                  href: ca1036.md
                 - name: 'CA1038: Enumerátory by měly být silného typu'
-                  href: ca1038-enumerators-should-be-strongly-typed.md
+                  href: ca1038.md
                 - name: 'CA1039: Seznamy jsou silného typu'
-                  href: ca1039-lists-are-strongly-typed.md
+                  href: ca1039.md
                 - name: 'CA1040: Vyhněte se prázdným rozhraním'
-                  href: ca1040-avoid-empty-interfaces.md
+                  href: ca1040.md
                 - name: 'CA1041: Poskytněte zprávu ObsoleteAttribute'
-                  href: ca1041-provide-obsoleteattribute-message.md
+                  href: ca1041.md
                 - name: 'CA1043: Použijte celočíselný nebo řetězcový argument pro indexery'
-                  href: ca1043-use-integral-or-string-argument-for-indexers.md
+                  href: ca1043.md
                 - name: 'CA1044: Vlastnosti by neměly být pouze pro zápis'
-                  href: ca1044-properties-should-not-be-write-only.md
+                  href: ca1044.md
                 - name: 'CA1045: Nepředávejte typy odkazem'
-                  href: ca1045-do-not-pass-types-by-reference.md
+                  href: ca1045.md
                 - name: 'CA1046: Nepřetěžujte operátory rovnosti u odkazových typů'
-                  href: ca1046-do-not-overload-operator-equals-on-reference-types.md
+                  href: ca1046.md
                 - name: 'CA1047: Nedeklarujte chráněné členy v zapečetěných typech'
-                  href: ca1047-do-not-declare-protected-members-in-sealed-types.md
+                  href: ca1047.md
                 - name: 'CA1048: Nedeklarujte virtuální členy v zapečetěných typech'
-                  href: ca1048-do-not-declare-virtual-members-in-sealed-types.md
+                  href: ca1048.md
                 - name: 'CA1049: Typy, které vlastní nativní prostředky, by měly být uvolnitelné'
-                  href: ca1049-types-that-own-native-resources-should-be-disposable.md
+                  href: ca1049.md
                 - name: 'CA1050: Deklarujte typy v oborech názvů'
-                  href: ca1050-declare-types-in-namespaces.md
+                  href: ca1050.md
                 - name: 'CA1051: Nedeklarujte viditelná pole instance'
-                  href: ca1051-do-not-declare-visible-instance-fields.md
+                  href: ca1051.md
                 - name: 'CA1052: Statické typy vlastníků by měly být zapečetěné'
-                  href: ca1052-static-holder-types-should-be-sealed.md
+                  href: ca1052.md
                 - name: 'CA1053: Statické typy vlastníků by neměly mít konstruktory'
-                  href: ca1053-static-holder-types-should-not-have-constructors.md
+                  href: ca1053.md
                 - name: 'CA1054: Parametry identifikátoru URI by neměly být řetězce'
-                  href: ca1054-uri-parameters-should-not-be-strings.md
+                  href: ca1054.md
                 - name: 'CA1055: Návratové hodnoty identifikátoru URI by neměly být řetězce'
-                  href: ca1055-uri-return-values-should-not-be-strings.md
+                  href: ca1055.md
                 - name: 'CA1056: Vlastnosti identifikátoru URI by neměly být řetězce'
-                  href: ca1056-uri-properties-should-not-be-strings.md
+                  href: ca1056.md
                 - name: 'CA1057: Přetížení řetězce identifikátoru URI volají přetížení System.Uri'
-                  href: ca1057-string-uri-overloads-call-system-uri-overloads.md
+                  href: ca1057.md
                 - name: 'CA1058: Typy by neměly rozšiřovat určité základní typy'
-                  href: ca1058-types-should-not-extend-certain-base-types.md
+                  href: ca1058.md
                 - name: 'CA1059: Členy by neměly zveřejňovat určité konkrétní typy'
-                  href: ca1059-members-should-not-expose-certain-concrete-types.md
+                  href: ca1059.md
                 - name: 'CA1060: Přesuňte volání nespravovaných kódů do třídy NativeMethods'
-                  href: ca1060-move-p-invokes-to-nativemethods-class.md
+                  href: ca1060.md
                 - name: 'CA1061: Neskrývejte metody základní třídy'
-                  href: ca1061-do-not-hide-base-class-methods.md
+                  href: ca1061.md
                 - name: 'CA1062: Ověřte argumenty veřejných metod'
-                  href: ca1062-validate-arguments-of-public-methods.md
+                  href: ca1062.md
                 - name: 'CA1063: Implementuje správně IDisposable'
-                  href: ca1063-implement-idisposable-correctly.md
+                  href: ca1063.md
                 - name: 'CA1064: Výjimky by měly být veřejné'
-                  href: ca1064-exceptions-should-be-public.md
+                  href: ca1064.md
                 - name: 'CA1065: Nevyvolávejte výjimky v neočekávaných umístěních'
-                  href: ca1065-do-not-raise-exceptions-in-unexpected-locations.md
+                  href: ca1065.md
                 - name: 'CA1068: Parametry CancellationToken musí být poslední.'
                   href: ca1068.md
                 - name: 'CA2210: Sestavení by měla mít platné silné názvy'
@@ -350,25 +350,25 @@
                   displayName: globalization warnings
                   href: globalization-warnings.md
                 - name: 'CA1300: Určete MessageBoxOptions'
-                  href: ca1300-specify-messageboxoptions.md
+                  href: ca1300.md
                 - name: 'CA1301: Vyhněte se duplicitním akcelerátorům'
-                  href: ca1301-avoid-duplicate-accelerators.md
+                  href: ca1301.md
                 - name: 'CA1302: Nekódujte pevně řetězce závislé na národním prostředí'
-                  href: ca1302-do-not-hardcode-locale-specific-strings.md
+                  href: ca1302.md
                 - name: 'CA1303: Nepředávejte literály jako lokalizované parametry'
-                  href: ca1303-do-not-pass-literals-as-localized-parameters.md
+                  href: ca1303.md
                 - name: 'CA1304: Určete CultureInfo'
-                  href: ca1304-specify-cultureinfo.md
+                  href: ca1304.md
                 - name: 'CA1305: Určete IFormatProvider'
-                  href: ca1305-specify-iformatprovider.md
+                  href: ca1305.md
                 - name: 'CA1306: Nastavte národního prostředí pro datové typy'
-                  href: ca1306-set-locale-for-data-types.md
+                  href: ca1306.md
                 - name: 'CA1307: Určete StringComparison'
-                  href: ca1307-specify-stringcomparison.md
+                  href: ca1307.md
                 - name: 'CA1308: Normalizujte řetězce na velká písmena'
-                  href: ca1308-normalize-strings-to-uppercase.md
+                  href: ca1308.md
                 - name: 'CA1309: Použijte řadový StringComparison'
-                  href: ca1309-use-ordinal-stringcomparison.md
+                  href: ca1309.md
                 - name: 'CA2101: Určete zařazování pro argumenty řetězce volání nespravovaného kódu'
                   href: ca2101.md
             - name: Upozornění interoperability
@@ -377,54 +377,54 @@
                   displayName: interoperability warnings
                   href: interoperability-warnings.md
                 - name: 'CA1400: Vstupní body volání nespravovaného kódu by měly existovat'
-                  href: ca1400-p-invoke-entry-points-should-exist.md
+                  href: ca1400.md
                 - name: 'CA1401: Volání nespravovaných kódů by neměla být viditelná'
-                  href: ca1401-p-invokes-should-not-be-visible.md
+                  href: ca1401.md
                 - name: 'CA1402: Vyhněte se přetížení ve viditelných rozhraních modelu COM'
-                  href: ca1402-avoid-overloads-in-com-visible-interfaces.md
+                  href: ca1402.md
                 - name: 'CA1403: Typy automatického rozložení by neměly být viditelné modelu COM'
-                  href: ca1403-auto-layout-types-should-not-be-com-visible.md
+                  href: ca1403.md
                 - name: 'CA1404: Volejte GetLastError ihned po volání nespravovaného kódu'
-                  href: ca1404-call-getlasterror-immediately-after-p-invoke.md
+                  href: ca1404.md
                 - name: 'CA1405: Základní typy viditelného typu modelu COM by měly být viditelné modelu COM'
-                  href: ca1405-com-visible-type-base-types-should-be-com-visible.md
+                  href: ca1405.md
                 - name: 'CA1406: Vyhněte se argumentům Int64 pro klienty jazyka Visual Basic 6'
-                  href: ca1406-avoid-int64-arguments-for-visual-basic-6-clients.md
+                  href: ca1406.md
                 - name: 'CA1407: Vyhněte se statickým členům ve viditelných typech modelu COM'
-                  href: ca1407-avoid-static-members-in-com-visible-types.md
+                  href: ca1407.md
                 - name: 'CA1408: Nepoužívejte typ AutoDual ClassInterface'
-                  href: ca1408-do-not-use-autodual-classinterfacetype.md
+                  href: ca1408.md
                 - name: 'CA1409: Viditelné typy modelu COM by měly být vytvořitelné'
-                  href: ca1409-com-visible-types-should-be-creatable.md
+                  href: ca1409.md
                 - name: 'CA1410: Metody registrace modelu COM by si měly odpovídat'
-                  href: ca1410-com-registration-methods-should-be-matched.md
+                  href: ca1410.md
                 - name: 'CA1411: Metody registrace modelu COM by neměly být viditelné'
-                  href: ca1411-com-registration-methods-should-not-be-visible.md
+                  href: ca1411.md
                 - name: 'CA1412: Označte rozhraní ComSource jako IDispatch'
-                  href: ca1412-mark-comsource-interfaces-as-idispatch.md
+                  href: ca1412.md
                 - name: 'CA1413: Vyhněte se neveřejným polím v typech hodnot viditelných modulem COM'
-                  href: ca1413-avoid-non-public-fields-in-com-visible-value-types.md
+                  href: ca1413.md
                 - name: 'CA1414: Označte logické argumenty volání nespravovaného kódu pomocí MarshalAs'
-                  href: ca1414-mark-boolean-p-invoke-arguments-with-marshalas.md
+                  href: ca1414.md
                 - name: 'CA1415: Deklarujte správně volání nespravovaných kódů'
-                  href: ca1415-declare-p-invokes-correctly.md
+                  href: ca1415.md
             - name: Upozornění udržovatelnosti
               items:
                 - name: Přehled
                   displayName: maintainability warnings
                   href: maintainability-warnings.md
                 - name: 'CA1500: Názvy proměnných by neměly odpovídat názvům polí'
-                  href: ca1500-variable-names-should-not-match-field-names.md
+                  href: ca1500.md
                 - name: 'CA1501: Vyhněte se nadměrné dědičnosti'
-                  href: ca1501-avoid-excessive-inheritance.md
+                  href: ca1501.md
                 - name: 'CA1502: Vyhněte se nadměrné složitosti'
-                  href: ca1502-avoid-excessive-complexity.md
+                  href: ca1502.md
                 - name: 'CA1504: Zkontrolujte zavádějící názvy polí'
-                  href: ca1504-review-misleading-field-names.md
+                  href: ca1504.md
                 - name: 'CA1505: Vyhněte se neudržovatelnému kódu'
-                  href: ca1505-avoid-unmaintainable-code.md
+                  href: ca1505.md
                 - name: 'CA1506: Vyhněte se nadměrnému párování tříd'
-                  href: ca1506-avoid-excessive-class-coupling.md
+                  href: ca1506.md
                 - name: 'CA1507: Místo řetězce použijte výraz nameof.'
                   href: ca1507.md
             - name: Upozornění mobility
@@ -433,60 +433,60 @@
                   displayName: mobility warnings
                   href: mobility-warnings.md
                 - name: 'CA1600: Nepoužívejte prioritu nečinného procesu'
-                  href: ca1600-do-not-use-idle-process-priority.md
+                  href: ca1600.md
                 - name: 'CA1601: Nepoužívejte časovače, které zabraňují změně stavu napájení'
-                  href: ca1601-do-not-use-timers-that-prevent-power-state-changes.md
+                  href: ca1601.md
             - name: Upozornění na pojmenování
               items:
                 - name: Přehled
                   displayName: naming warnings
                   href: naming-warnings.md
                 - name: 'CA1700: Nepojmenovávejte výčty hodnot ''Reserved'''
-                  href: ca1700-do-not-name-enum-values-reserved.md
+                  href: ca1700.md
                 - name: 'CA1701: Malá a velká písmena složených slov řetězců prostředků by měla být použita správně'
-                  href: ca1701-resource-string-compound-words-should-be-cased-correctly.md
+                  href: ca1701.md
                 - name: 'CA1702: Malá a velká písmena složených slov by měla být použita správně'
-                  href: ca1702-compound-words-should-be-cased-correctly.md
+                  href: ca1702.md
                 - name: 'CA1703: Řetězce prostředků by měly být zadány správně'
-                  href: ca1703-resource-strings-should-be-spelled-correctly.md
+                  href: ca1703.md
                 - name: 'CA1704: Identifikátory by měly být zadány správně'
-                  href: ca1704-identifiers-should-be-spelled-correctly.md
+                  href: ca1704.md
                 - name: 'CA1707: Identifikátory by neměly obsahovat podtržítka'
-                  href: ca1707-identifiers-should-not-contain-underscores.md
+                  href: ca1707.md
                 - name: 'CA1708: Identifikátory by se měly lišit více než použitím malých a velkých písmen'
-                  href: ca1708-identifiers-should-differ-by-more-than-case.md
+                  href: ca1708.md
                 - name: 'CA1709: Malá a velká písmena identifikátorů by měla být použita správně'
-                  href: ca1709-identifiers-should-be-cased-correctly.md
+                  href: ca1709.md
                 - name: 'CA1710: Identifikátory by měly mít správnou příponu'
-                  href: ca1710-identifiers-should-have-correct-suffix.md
+                  href: ca1710.md
                 - name: 'CA1711: Identifikátory by neměly mít nesprávnou příponu'
-                  href: ca1711-identifiers-should-not-have-incorrect-suffix.md
+                  href: ca1711.md
                 - name: 'CA1712: Nezačínejte hodnoty výčtu názvem typu'
-                  href: ca1712-do-not-prefix-enum-values-with-type-name.md
+                  href: ca1712.md
                 - name: 'CA1713: Události by neměly mít předponu před nebo po'
-                  href: ca1713-events-should-not-have-before-or-after-prefix.md
+                  href: ca1713.md
                 - name: 'CA1714: Výčty příznaků by neměly mít názvy v množném čísle'
-                  href: ca1714-flags-enums-should-have-plural-names.md
+                  href: ca1714.md
                 - name: 'CA1715: Identifikátory by měly mít správnou předponu'
-                  href: ca1715-identifiers-should-have-correct-prefix.md
+                  href: ca1715.md
                 - name: 'CA1716: Identifikátory by se neměly shodovat s klíčovými slovy'
-                  href: ca1716-identifiers-should-not-match-keywords.md
+                  href: ca1716.md
                 - name: 'CA1717: Pouze výčty FlagsAttribute by měly mít názvy v množném čísle'
-                  href: ca1717-only-flagsattribute-enums-should-have-plural-names.md
+                  href: ca1717.md
                 - name: 'CA1719: Názvy parametrů by se neměly shodovat s názvy členů'
-                  href: ca1719-parameter-names-should-not-match-member-names.md
+                  href: ca1719.md
                 - name: 'CA1720: Identifikátory by neměly obsahovat názvy typů'
-                  href: ca1720-identifiers-should-not-contain-type-names.md
+                  href: ca1720.md
                 - name: 'CA1721: Názvy vlastností by se neměly shodovat s metodami Get'
-                  href: ca1721-property-names-should-not-match-get-methods.md
+                  href: ca1721.md
                 - name: 'CA1722: Identifikátory by neměly mít nesprávnou předponu'
-                  href: ca1722-identifiers-should-not-have-incorrect-prefix.md
+                  href: ca1722.md
                 - name: 'CA1725: Názvy parametrů by měly odpovídat základní deklaraci'
-                  href: ca1725-parameter-names-should-match-base-declaration.md
+                  href: ca1725.md
                 - name: 'CA1724: Názvy typů by se neměly shodovat s obory názvů'
-                  href: ca1724-type-names-should-not-match-namespaces.md
+                  href: ca1724.md
                 - name: 'CA1726: Použijte upřednostňované výrazy'
-                  href: ca1726-use-preferred-terms.md
+                  href: ca1726.md
             - name: Upozornění výkonu
               items:
                 - name: Přehled
