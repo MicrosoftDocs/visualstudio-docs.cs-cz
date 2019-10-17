@@ -1,5 +1,5 @@
 ---
-title: Spuštění ladicí relace pro aplikace pro UPW | Dokumentace Microsoftu
+title: Spuštění ladicí relace pro aplikaci pro UWP | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/20/2018
 ms.topic: conceptual
@@ -35,186 +35,187 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - uwp
-ms.openlocfilehash: 7c65662d054b8c3dd9e650fe088f7048cc3b4071
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: c4504dda362c8a50f33168a12839e894a14316d7
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62930046"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72436016"
 ---
 # <a name="start-a-debugging-session-for-a-uwp-app"></a>Spuštění ladicí relace aplikace pro UPW
 
-Tento článek popisuje způsob spuštění ladicí relace pro aplikace univerzální platformy Windows (UPW) sady Visual Studio. U aplikací pro UPW je možné psát v XAML, C++ a XAML a C#/Visual Basic. Pro spuštění ladění aplikace pro UPW, nakonfigurujte relaci ladění a zvolte způsob, jak spustit aplikaci.
+Tento článek popisuje, jak spustit relaci ladění sady Visual Studio pro aplikaci Univerzální platforma Windows (UWP). Aplikace pro UWP můžou být napsané v C++jazyce XAML a C#, XAML a webový Basic. Pokud chcete začít ladit aplikaci UWP, nakonfigurujte relaci ladění a vyberte způsob, jak aplikaci spustit.
 
 ::: moniker range=">=vs-2019"
 > [!NOTE]
-> Od verze Visual Studio 2019, aplikací pro UPW pro HTML a JavaScript již nejsou podporovány.
+> Od sady Visual Studio 2019 se aplikace pro UWP pro HTML a JavaScript už nepodporují.
 ::: moniker-end
 ::: moniker range="vs-2017"
-V sadě Visual Studio 2017 většina příkazů a možností uvedených v tomto článku platí také pro aplikace UPW pro HTML a JavaScript. Příkazy se liší mezi spravovanými a aplikací v jazyce C++, JavaScript aplikace jsou obvykle stejné jako příkazy pro aplikace C++ UWP.
+V aplikaci Visual Studio 2017 většina příkazů a možností, které jsou uvedené v tomto článku, platí taky pro aplikace pro UWP v HTML a JavaScriptu. V případě, že se příkazy pro C++ správu a aplikace liší, jsou obvykle aplikace JavaScriptu stejné jako C++ příkazy pro aplikace UWP.
 ::: moniker-end
 
-## <a name="BKMK_The_easy_way_to_start_debugging"></a>Spuštění ladění z panelu nástrojů sady Visual Studio
+## <a name="BKMK_The_easy_way_to_start_debugging"></a>Spustit ladění na panelu nástrojů sady Visual Studio
 
-Nejjednodušší způsob, jak nakonfigurovat a spustit ladění je z panelu nástrojů standardní sady Visual Studio.
+Nejjednodušší způsob, jak nakonfigurovat a spustit ladění, je ze standardního panelu nástrojů sady Visual Studio.
 
-![Ladění na panelu nástrojů](../debugger/media/vsrun_select_target_device.png)
+![Ladění z panelu nástrojů](../debugger/media/vsrun_select_target_device.png)
 
-1. Z **konfigurace** rozevírací seznam pro **standardní** nástrojů vyberte **ladění**.
+1. V rozevíracím seznamu **Konfigurace** na **standardním** panelu nástrojů vyberte **ladit**.
 
-1. Z **platformy** rozevíracím seznamu vyberte cílovou platformu pro vytváření pro.
+1. V rozevíracím seznamu **platforma** vyberte cílovou platformu, pro kterou chcete vytvořit.
 
-1. Z rozevíracího seznamu vedle na zelenou šipku vyberte cíl ladění. Můžete vybrat místní počítač, přímo připojená zařízení, místní simulátor aplikace Visual Studio, vzdálené zařízení nebo emulátoru.
+1. Z rozevíracího seznamu vedle zelené šipky vyberte cíl ladění. Můžete zvolit místní počítač, zařízení s přímým připojením, místní simulátor sady Visual Studio, vzdálené zařízení nebo emulátor.
 
-1. Chcete-li spustit ladění, vyberte zelené **Start** šipku na panelu nástrojů nebo vyberte **ladění** > **spustit ladění**, nebo stiskněte klávesu **F5**.
+1. Chcete-li spustit ladění, vyberte zelenou šipku **Start** na panelu nástrojů nebo vyberte možnost **ladění** > **Spustit ladění**nebo stiskněte klávesu **F5**.
 
-   Visual Studio vytvoří a spustí aplikaci s připojeným ladícím nástrojem.
+   Visual Studio vytvoří a spustí aplikaci pomocí připojeného ladicího programu.
 
-Ladění pokračuje, dokud není dosaženo zarážky, můžete ručně pozastavení provádění, dojde k neošetřené výjimce nebo ukončení aplikace.
+Ladění pokračuje, dokud není dosaženo zarážky, ručním zastavením spuštění, neošetřené výjimky nebo ukončení aplikace.
 
-### <a name="BKMK_Choose_the_deployment_target"></a> Target – možnosti nasazení
+### <a name="BKMK_Choose_the_deployment_target"></a>Možnosti cíle nasazení
 
-Můžete nastavit cíl ladění na panelu nástrojů sady Visual Studio nebo projekt je ladění stránku vlastností. Vyberte jednu z následujících možností:
+Můžete nastavit cíl ladění na panelu nástrojů sady Visual Studio nebo na stránce vlastností ladění projektu. Vyberte jednu z následujících možností:
 
 |||
 |-|-|
-|**Místní počítač**|Ladění aplikace v aktuální relaci na místním počítači.|
-|**Simulátor**|Ladění aplikace v simulátoru sady Visual Studio pro aplikace pro UPW. Simulátor není okno klasické pracovní plochy, která simuluje zařízení funkce, jako je touch gesta a otočení obrazovky, který neexistuje v místním počítači. Simulátor možnost je dostupná pouze tehdy, pokud vaše aplikace **Min cílové platformy. Verze** je menší než nebo rovna operačního systému na místním počítači. Další informace najdete v tématu [aplikace spustit UWP v simulátoru](../debugger/run-windows-store-apps-in-the-simulator.md).|
-|**Vzdálený počítač**|Ladění aplikace v zařízení připojeném do místního počítače prostřednictvím sítě nebo kabelu Ethernet. Remote Tools for Visual Studio musí být nainstalovaná a spuštěná na vzdáleném zařízení. Další informace najdete v tématu [aplikací pro UWP spuštění na vzdáleném počítači](../debugger/run-windows-store-apps-on-a-remote-machine.md).|
-|**zařízení**|Ladění aplikací na zařízení připojená přes USB. Zařízení musí být odemčené pro vývojáře a odemknutí obrazovky.|
-|**Mobilní emulátor**|Spuštění emulátoru zadaný v názvu emulátor, nasaďte aplikaci a spusťte ladění. Emulátory jsou dostupné pouze pro počítače Hyper-V povolena.|
+|**Místní počítač**|Ladit aplikaci v aktuální relaci na místním počítači.|
+|**Simulátor**|Ladit aplikaci v simulátoru sady Visual Studio pro aplikace pro UWP Simulátor je okno plochy, které simuluje funkce zařízení, jako jsou dotyková gesta a rotace zařízení, které na místním počítači pravděpodobně neexistují. Možnost simulátoru je dostupná jenom v případě, že je **Minimální verze cílové platformy** vaší aplikace menší než nebo se rovná operačnímu systému v místním počítači. Další informace najdete v tématu [spouštění aplikací pro UWP v simulátoru](../debugger/run-windows-store-apps-in-the-simulator.md).|
+|**Vzdálený počítač**|Ladit aplikaci na zařízení připojeném k místnímu počítači přes síť nebo síťový kabel Ethernet. Na vzdáleném zařízení musí být nainstalovaná a spuštěná Remote Tools for Visual Studio. Další informace najdete v tématu [spouštění aplikací pro UWP na vzdáleném počítači](../debugger/run-windows-store-apps-on-a-remote-machine.md).|
+|**Zařízení**|Ladit aplikaci na zařízení připojeném k USB. Zařízení musí být odemknuté vývojářem a obrazovka je odemčená.|
+|**Mobilní emulátor**|Spusťte emulátor zadaný v názvu emulátoru, nasaďte aplikaci a spusťte ladění. Emulátory jsou k dispozici pouze na počítačích s podporou technologie Hyper-V.|
 
-## <a name="BKMK_Open_the_debugging_property_page_for_the_project"></a> Konfigurovat ladění na stránce vlastností projektu
+## <a name="BKMK_Open_the_debugging_property_page_for_the_project"></a>Konfigurace ladění na stránce vlastností projektu
 
-Pokud chcete nakonfigurovat další možnosti ladění, použijte stránky vlastnosti ladění projektu.
+Chcete-li nakonfigurovat další možnosti ladění, použijte stránku vlastnosti ladění projektu.
 
 **Chcete-li otevřít vlastnosti ladění:**
 
-1. V **Průzkumníka řešení**, vyberte projekt a pak vyberte **vlastnosti** ikonu, nebo klikněte pravým tlačítkem na projekt a vyberte **vlastnosti**.
+1. V **Průzkumník řešení**vyberte projekt a pak vyberte ikonu **vlastnosti** , nebo klikněte pravým tlačítkem na projekt a vyberte **vlastnosti**.
 
-1. Na levé straně **vlastnosti** podokna:
+1. Na levé straně podokna **vlastnosti** :
 
-   - Pro C# a Visual Basic aplikací, vyberte **ladění**.
+   - Pro C# aplikace a Visual Basic vyberte **ladit**.
 
-     ![C#a stránky vlastnosti ladění projektu jazyka Visual Basic](../debugger/media/dbg_csvb_debugpropertypage.png)
+     ![C#a Visual Basic stránce vlastností ladění projektu](../debugger/media/dbg_csvb_debugpropertypage.png)
 
-   - U aplikací C++, vyberte **vlastnosti konfigurace** > **ladění**.
+   - Pro C++ aplikace vyberte možnost **Vlastnosti konfigurace** > **ladění**.
 
-     ![Stránka vlastností ladění aplikace C++ UWP](../debugger/media/dbg_cpp_debugpropertypage.png)
+     ![C++Stránka vlastností ladění aplikace UWP](../debugger/media/dbg_cpp_debugpropertypage.png)
 
-### <a name="BKMK_Choose_the_debugger_to_use"></a> Zvolte možnost použít ladicí program
+### <a name="BKMK_Choose_the_debugger_to_use"></a>Vyberte ladicí program, který se má použít.
 
-Pro C# a aplikace Visual Basic, Visual Studio ladí spravovaného kódu ve výchozím nastavení. Můžete ladit kód jiné nebo další typy. Můžete také nastavit **typ ladicího programu** hodnoty pro všechny úlohy na pozadí, které jsou součástí projektu.
+Pro C# aplikace a Visual Basic aplikace Visual Studio ve výchozím nastavení ladit spravovaný kód. Můžete zvolit ladění dalších nebo dalších typů kódu. Můžete také nastavit hodnoty **typu ladicího programu** pro všechny úlohy na pozadí, které jsou součástí projektu.
 
-V aplikacích jazyka C++ Visual Studio ladí nativního kódu ve výchozím nastavení. Můžete ladit konkrétní typy kódu místo nebo kromě nativní kód.
+V C++ aplikacích Visual Studio ve výchozím nastavení ladit nativní kód. Můžete se rozhodnout ladit konkrétní typy kódu namísto nebo kromě nativního kódu.
 
 **Chcete-li určit typy kódu k ladění:**
 
-- Pro C# a Visual Basic aplikací, vyberte jednu z následujících ladicí programy z **typ aplikace** a **typ procesu na pozadí** rozevírací seznamy v části **typ ladicího programu** na **ladění** stránku vlastností.
+- Pro C# a Visual Basic aplikace vyberte v rozevíracím seznamu typ **ladicího programu** na stránce vlastností **ladění** jeden z následujících ladicích programů z nabídky **Typ aplikace** a **typ procesu na pozadí** .
 
-- Pro aplikace v C++, vyberte jednu z následujících ladicí programy z **typ ladicího programu** rozevírací seznam pro **ladění** stránku vlastností.
+- V C++ případě aplikací vyberte jednu z následujících ladicích programů z rozevíracího seznamu **Typ ladicího programu** na stránce vlastností **ladění** .
 
 |||
 |-|-|
-|**Režim pouze spravovaný**|Ladit spravovaný kód ve vaší aplikaci. Kód jazyka JavaScript a nativního kódu C/C++ jsou ignorovány.|
-|**Pouze nativní**|Ladění nativního kódu C/C++ v aplikaci. Spravovaný kód a kód jazyka JavaScript jsou ignorovány.|
-|**Smíšený (spravovaný a nativní)**|Ladění nativního kódu C/C++ a spravovaném kódu ve vaší aplikaci. Kód jazyka JavaScript se ignoruje. V projektech C++, je tato možnost volat **spravovaný a nativní**.|
-|**skript**|Ladění kódu JavaScript ve vaší aplikaci. Nativní a spravovaný kód jsou ignorovány.|
-|**Nativní pomocí skriptu**|Ladění nativního kódu C/C++ a jazyka JavaScript v aplikaci. Spravovaný kód se ignoruje. K dispozici v projektech C++ nebo pouze úlohy na pozadí.|
-|**Jenom grafický procesor (C++ AMP)**|Ladění nativního kódu C++, na které poběží grafický procesor (GPU). K dispozici v pouze projekty C++.|
+|**Jenom spravovaná**|Ladění spravovaného kódu ve vaší aplikaci. Kód jazyka JavaScript a nativníC++ kód jazyka C jsou ignorovány.|
+|**Pouze nativní**|Ladění nativního jazykaC++ C/kódu ve vaší aplikaci. Spravovaný kód a kód jazyka JavaScript jsou ignorovány.|
+|**Smíšený (spravovaný a nativní)**|Ladění nativního kóduC++ C/kódu a spravovaného kódu ve vaší aplikaci. JavaScriptový kód se ignoruje. V C++ projektech je tato možnost označována jako **spravovaná a nativní**.|
+|**Pravidel**|Ladění kódu JavaScriptu ve vaší aplikaci. Spravovaný kód a nativní kód jsou ignorovány.|
+|**Nativní se skriptem**|Ladění nativního kóduC++ C/kódu a JavaScriptu ve vaší aplikaci. Spravovaný kód se ignoruje. K dispozici pouze v projektech nebo úlohách na C++ pozadí.|
+|**Pouze GPU (C++ amp)**|Ladění nativního C++ kódu, který běží na grafické jednotce procesoru (GPU). K dispozici pouze v C++ projektech.|
 
-### <a name="BKMK__Optional__Disable_network_loopbacks"></a> Zakázat network vytváření zpětných smyček (volitelné)
+### <a name="BKMK__Optional__Disable_network_loopbacks"></a>Zakázat zpětné smyčky sítě (volitelné)
 
- Pro zabezpečení nemůže aplikace pro UPW, který je nainstalován standardním způsobem provádět síťových voláních do zařízení, ve kterých je nainstalované. Visual Studio stanoví nasazené aplikace toto pravidlo ve výchozím nastavení, abyste mohli otestovat postupy komunikace na jednom počítači. Před vydáním aplikace, měli byste otestovat vaši aplikaci bez výjimky.
+ V případě zabezpečení aplikace UWP, která je nainstalovaná standardním způsobem, nemůže v zařízení provádět síťová volání do zařízení, na kterém je nainstalovaná. Visual Studio ve výchozím nastavení nezbavuje nasazené aplikace od tohoto pravidla, takže můžete testovat komunikační postupy na jednom počítači. Před vydáním aplikace byste měli aplikaci otestovat bez výjimky.
 
-**Chcete-li odebrat výjimku zpětnou smyčku sítě:**
+**Odebrání výjimky zpětné smyčky sítě:**
 
-- Pro C# a zrušte zaškrtnutí možnosti aplikace Visual Basic **povolit zpětnou smyčku místní sítě** zaškrtávací políčko v oblasti **možnosti spuštění** na **ladění** stránku vlastností.
+- Pro C# aplikace a Visual Basic zrušte zaškrtnutí políčka **Povolení zpětné smyčky v místní síti** v části **Možnosti spuštění** na stránce vlastností **ladění** .
 
-- U aplikací v jazyce Visual C++, vyberte **ne** z **povolit zpětnou smyčku místní sítě** rozevírací seznam pro **ladění** stránku vlastností.
+- V C++ případě aplikací vyberte v rozevíracím seznamu zapnout **zpětnou smyčku místní sítě** na stránce vlastností **ladění** možnost **ne** .
 
-### <a name="BKMK__Optional__Reinstall_the_app_when_you_start_debugging"></a> Nainstalujte aplikaci znovu při spuštění ladění (volitelné)
- Diagnostikovat problémy instalace s C# nebo na aplikaci Visual Basic, vyberte **odinstalovat a přeinstalovat Můj balíček** na **ladění** stránku vlastností. Tato možnost obnoví původní instalace při zahájení ladění. Tato možnost není k dispozici pro projekty C++.
+### <a name="BKMK__Optional__Reinstall_the_app_when_you_start_debugging"></a>Přeinstalace aplikace při spuštění ladění (volitelné)
+ Chcete-li diagnostikovat problémy C# s instalací aplikace nebo Visual Basic, vyberte možnost **odinstalovat a poté znovu nainstalovat balíček** na stránce vlastností **ladění** . Tato možnost po spuštění ladění znovu vytvoří původní instalaci. Tato možnost není k dispozici pro C++ projekty.
 
-### <a name="BKMK__Optional__Disable_authentication_requirement_to_start_the_remote_debugger"></a> Nastavit možnosti ověřování pro vzdálené ladění
+### <a name="BKMK__Optional__Disable_authentication_requirement_to_start_the_remote_debugger"></a>Nastavení možností ověřování pro vzdálené ladění
 
-Ve výchozím nastavení, musíte zadat přihlašovací údaje Windows pro spuštění vzdáleného ladicího programu při výběru **vzdálený počítač** jako cíl nasazení. Požadavek na ověření můžete změnit.
+Ve výchozím nastavení je nutné zadat přihlašovací údaje systému Windows pro spuštění vzdáleného ladicího programu, když jako cíl nasazení vyberete možnost **vzdálený počítač** . Požadavek na ověření můžete změnit.
 
-**Univerzální (nešifrovaný protokol)** režim ověřování je pro zařízení IoT a Xbox, HoloLens a autora Update nebo novější počítače s Windows 10.
+**Univerzální (nešifrovaný protokol)** režim ověřování je pro zařízení IoT, Xbox a HoloLens a pro počítače s Windows 10, které jsou k nebo novější.
 
-**Chcete-li změnit metodu ověřování:**
+**Postup změny metody ověřování:**
 
-- Pro C# a Visual Basic aplikací, na **ladění** stránky vlastností, vyberte **vzdálený počítač** jako **cílové zařízení**. Vyberte **žádný** nebo **univerzální (nešifrovaný protokol)** pro **režim ověřování**.
+- Pro C# a Visual Basic aplikace na stránce vlastností **ladění** vyberte jako **cílové zařízení**možnost **vzdálený počítač** . Potom pro **režim ověřování**vyberte možnost **žádný** nebo **univerzální (nešifrovaný protokol)** .
 
-- U aplikací C++, vyberte **vzdálený počítač** pod **ladicí program ke spuštění** na **ladění** stránku vlastností. Vyberte **bez ověřování** nebo **univerzální (nešifrovaný protokol)** pro **typ ověřování**.
+- Pro C++ aplikace vyberte na stránce vlastností **ladění** možnost **vzdálený počítač** v části **ladicí program, který se má spustit** . Pak pro **typ ověřování**vyberte možnost **bez ověřování** nebo **univerzální (nešifrovaný protokol)** .
 
 > [!CAUTION]
-> Neexistuje žádné zabezpečení sítě při spuštění vzdáleného ladicího programu v **žádný** nebo **univerzální (nešifrovaný protokol)** režimy. Zvolte těchto režimech jenom v důvěryhodných sítích, které jste jisti nejsou riziko zneužití škodlivým kódem nebo nebezpečný provoz.
+> Při spuštění vzdáleného ladicího programu v režimu **žádného** nebo **univerzálního (nešifrovaného protokolu)** nedochází k zabezpečení sítě. Tyto režimy vyberte pouze v důvěryhodných sítích, u kterých jste si jisti, že nehrozí riziko škodlivého kódu nebo nepřátelských přenosů.
 
-## <a name="BKMK_Start_the_debugging_session"></a> Možnosti spuštění ladění
+## <a name="BKMK_Start_the_debugging_session"></a>Možnosti spuštění ladění
 
-Když vyberete **ladění** > **spustit ladění** nebo stiskněte klávesu **F5**, Visual Studio spustí aplikaci s připojeným ladícím nástrojem. Provádění pokračuje, dokud není dosaženo zarážky, můžete ručně pozastavení provádění, dojde k neošetřené výjimce nebo ukončení aplikace.
+Když vyberete možnost **ladění** > **Spustit ladění** nebo stisknout klávesu **F5**, aplikace Visual Studio spustí aplikaci pomocí připojeného ladicího programu. Spuštění pokračuje, dokud není dosaženo zarážky, ručním zastavením spuštění, neošetřené výjimky nebo ukončení aplikace.
 
-### <a name="BKMK_Start_debugging__F5__but_delay_the_app_start"></a> Spuštění ladění ale zpoždění spuštění aplikace
+### <a name="BKMK_Start_debugging__F5__but_delay_the_app_start"></a>Spustit ladění, ale zpozdit začátek aplikace
 
-Visual Studio ve výchozím nastavení spustí aplikaci hned po spuštění ladění. Můžete také nastavit aplikace ke spuštění v režimu ladění, ale spustí aplikaci mimo ladicí program. Například můžete chtít ladit spuštění aplikace z Windows **Start** nabídky nebo ladicí proces na pozadí v aplikaci. Pokud zvolíte tuto možnost, spuštění v ladicím programu při spuštění aplikace.
+Ve výchozím nastavení Visual Studio spustí aplikaci ihned po spuštění ladění. Aplikaci můžete také nastavit tak, aby běžela v režimu ladění, ale spouštěla aplikaci mimo ladicí program. Například můžete chtít ladit spuštění aplikace z nabídky **Start** systému Windows nebo ladit proces na pozadí v aplikaci. Pokud zvolíte tuto možnost, aplikace se spustí při spuštění ladicího programu.
 
-**Chcete-li zakázat automatické aplikace při spuštění:**
+**Zakázání automatického spuštění aplikace:**
 
-- Pro C# a Visual Basic aplikací, vyberte **nespouštět, ale ladit můj kód při spuštění** pod **možnosti spuštění** na **ladění** stránku vlastností.
+- Pro C# a Visual Basic aplikace vyberte možnost **nespouštět, ale ladit můj kód při spuštění** v části **Možnosti spuštění** na stránce vlastností **ladění** .
 
-- U aplikací C++, vyberte **ne** z **spustit aplikaci** rozevírací seznam pro **ladění** stránku vlastností.
+- V C++ rozevíracím seznamu **Spustit aplikaci** na stránce vlastností **ladění** vyberte v části aplikace možnost **ne** .
 
-Další informace o ladění úlohy na pozadí, naleznete v tématu [aktivační události pozastavení, obnovení a událostí na pozadí pro aplikace UWP](../debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md).
+Další informace o ladění úloh na pozadí najdete v tématu [triggery pro pozastavení, obnovení a události na pozadí pro aplikace pro UWP](../debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md).
 
-### <a name="BKMK_Start_an_installed_app_in_the_debugger"></a> Ladit aplikaci UPW nainstalován nebo není spuštěn
+### <a name="BKMK_Start_an_installed_app_in_the_debugger"></a>Ladění nainstalované nebo spuštěné aplikace UWP
 
-Můžete použít **ladit nainstalovaný balíček aplikace** ladit aplikace pro UPW, která je již nainstalována nebo spuštěna na místním nebo vzdáleném zařízení. Aplikace může být nainstalována z Microsoft Store nebo nemusí být projekt sady Visual Studio. Například aplikace může mít vlastní sestavovací systém, který nepoužívá sady Visual Studio.
+Pomocí **ladění nainstalovaného balíčku aplikace** můžete LADIT aplikaci UWP, která je už nainstalovaná nebo spuštěná na místním nebo vzdáleném zařízení. Je možné, že je aplikace nainstalovaná z Microsoft Store nebo se nejedná o projekt sady Visual Studio. Aplikace může mít například vlastní systém sestavení, který nepoužívá aplikaci Visual Studio.
 
-Nainstalovanou aplikaci mohou spustit okamžitě, nebo můžete nastavit jeho spouštění v ladicím programu, když se spustí s jinou metodu. Další informace najdete v tématu [aktivační události pozastavení, obnovení a událostí na pozadí pro aplikace UPW)](../debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md).
+Nainstalovanou aplikaci můžete okamžitě spustit, nebo ji můžete nastavit tak, aby běžela v ladicím programu při spuštění s jinou metodou. Další informace najdete v tématu [triggerování, obnovení a události na pozadí pro aplikace pro UWP](../debugger/how-to-trigger-suspend-resume-and-background-events-for-windows-store-apps-in-visual-studio.md).
 
-Chcete-li spustit aplikaci UPW nainstalován nebo není spuštěn v ladicím programu, vyberte **ladění** > **jiné cíle ladění** > **ladit nainstalovaný balíček aplikace**. Další pokyny najdete v tématu [ladění balíčku nainstalované aplikace](../debugger/debug-installed-app-package.md).
+Pokud chcete spustit nainstalovanou nebo spuštěnou aplikaci UWP v ladicím programu, vyberte **ladit** > **další cíle ladění** > **ladění nainstalovaného balíčku aplikace**. Další pokyny najdete v tématu [ladění nainstalovaného balíčku aplikace](../debugger/debug-installed-app-package.md).
 
-### <a name="BKMK_Attach_the_debugger_to_a_running_app_"></a> Připojit ladicí modul k běžící aplikaci Windows 8.x
+### <a name="BKMK_Attach_the_debugger_to_a_running_app_"></a>Připojení ladicího programu k běžící aplikaci Windows 8. x
 
-Připojit ladicí program [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] aplikace, musíte použít laditelný Správce balíčků pro nastavení aplikace pro spuštění v režimu ladění. Laditelný Správce balíčků se instaluje s nástroji Remote Tools for Visual Studio.
+Chcete-li připojit ladicí program k aplikaci [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)], je nutné použít Správce balíčků, který lze ladit, a nastavit aplikaci tak, aby běžela v režimu ladění. Správce balíčku, který lze ladit, je nainstalován s Remote Tools for Visual Studio.
 
-1. Instalovat nástroje Remote Tools for Visual Studio na zařízení, ve kterém je aplikace nainstalovaná. Další informace najdete v tématu [instalace vzdálených nástrojů](../debugger/remote-debugging.md).
+1. Nainstalujte Remote Tools for Visual Studio do zařízení, ve kterém je aplikace nainstalovaná. Další informace najdete v tématu [Instalace nástrojů Remote Tools](../debugger/remote-debugging.md).
 
-1. V Windows **Start** obrazovky, vyhledejte a spusťte **správce Laditelného balíku**.
+1. Na obrazovce **Start** systému Windows vyhledejte a spusťte **laditelné správce balíčků**.
 
-   Zobrazí se okno prostředí PowerShell správně nakonfigurovaný pro rutiny AppxDebug.
+   Zobrazí se okno PowerShellu správně nakonfigurované pro rutinu AppxDebug.
 
-1. Zadejte identifikátor Úplnýnázevbalíčku aplikace.
+1. Zadejte identifikátor PackageFullName aplikace.
 
-   1. Chcete-li zobrazit seznam, který zahrnuje Úplnýnázevbalíčku všechny aplikace, zadejte `Get-AppxPackage` řádku Powershellu.
+   1. Pokud chcete zobrazit seznam, který obsahuje PackageFullName všech aplikací, zadejte do příkazového řádku PowerShellu `Get-AppxPackage`.
 
-   1. Na příkazovém řádku tento příkaz prostředí PowerShell, zadejte `Enable-AppxDebug <PackageFullName>`, kde \<Celynazevbalicku > je identifikátor Úplnýnázevbalíčku aplikace.
+   1. Na příkazovém řádku PowerShellu zadejte `Enable-AppxDebug <PackageFullName>`, kde \<PackageFullName > je PackageFullName identifikátor aplikace.
 
-1. Vyberte **ladění** > **připojit k procesu**.
+1. Vyberte možnost **ladění** > **připojit k procesu**.
 
-1. V **připojit k procesu** dialogového okna zadejte vzdáleného zařízení **cíl připojení** pole.
+1. V dialogovém okně **připojit k procesu** zadejte vzdálené zařízení do pole **cíl připojení** .
 
-   Můžete zadat název zařízení, vyberte z rozevíracího seznamu v **cíl připojení** pole, nebo vyberte **najít** vyhledat v zařízení **vzdálená připojení** dialogové okno.
+   Můžete zadat název zařízení, vybrat ho z rozevíracího seznamu v poli **cíl připojení** nebo vybrat **Najít** pro vyhledání zařízení v dialogovém okně **vzdálené připojení** .
 
-1. Chcete-li určit typ kódu, který chcete ladit, vedle položky **připojit k** vyberte **vyberte**.
+1. Chcete-li zadat typ kódu, který chcete ladit, vyberte vedle pole **připojit k** možnost **Vybrat**.
 
-1. V **vybrat typ kódu** dialogové okno Vyberte buď:
-   - **Automaticky určit typ kódu k ladění**, nebo
-   - **Ladit tyto typy kódu**a pak ze seznamu vyberte jeden nebo více typů kódu.
+1. V dialogovém okně **Vybrat typ kódu** vyberte jednu z těchto akcí:
+   - **Automaticky určit typ kódu pro ladění**, nebo
+   - Proveďte **ladění těchto typů kódu**a potom v seznamu vyberte jeden nebo více typů kódu.
 
-1. V **procesy k dispozici** vyberte aplikaci proces pro ladění.
+1. V seznamu **procesy k dispozici** vyberte proces aplikace, který se má ladit.
 
 1. Vyberte **připojit**.
 
- Visual Studio připojí ladicí program k procesu. Provádění pokračuje, dokud není dosaženo zarážky, můžete ručně pozastavení provádění, dojde k neošetřené výjimce nebo ukončení aplikace.
+ Visual Studio připojí ladicí program k procesu. Spuštění pokračuje, dokud není dosaženo zarážky, ručním zastavením spuštění, neošetřené výjimky nebo ukončení aplikace.
 
 ::: moniker range="vs-2017"
 > [!NOTE]
-> Spouštění aplikací jazyka JavaScript v instanci *wwahost.exe* procesu. Pokud je více než jeden JavaScript aplikace spuštěná, musíte znát id číselné procesu (PID) vaší aplikace *wwahost.exe* proces pro připojení k němu.
+> Aplikace JavaScriptu běží v instanci procesu *wwahost. exe* . Pokud je spuštěná víc než jedna aplikace JavaScriptu, budete muset znát číslo ID procesu (PID) procesu *wwahost. exe* vaší aplikace, abyste se k němu připojili.
 >
-> Zavřete všechny ostatní aplikace jazyka JavaScript je nejjednodušší způsob, jak se připojit k vaší aplikaci pro JavaScript. Nebo jste si PID spuštění *wwahost.exe* procesy ve Windows Správce úloh před spuštěním vaší aplikace. Při spuštění aplikace, jeho *wwahost.exe* PID bude ten, který se liší od těch, které jste si předtím poznamenali.
+> Nejjednodušší způsob, jak se připojit k aplikaci JavaScriptu, je zavřít všechny ostatní aplikace JavaScriptu. Můžete si také všimnout, že se PID spouštění procesů *wwahost. exe* ve Správci úloh systému Windows před zahájením aplikace poznamenat. Při spuštění aplikace bude *wwahost. exe* PID ten, který se liší od dříve popsaných.
 ::: moniker-end
 
 ## <a name="see-also"></a>Viz také:
-- [Ladění aplikací v sadě Visual Studio](/visualstudio/debugger/debugging-windows-store-and-windows-universal-apps)
+
+- [Ladění aplikací v sadě Visual Studio](../debugger/debugging-windows-store-and-windows-universal-apps.md)

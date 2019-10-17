@@ -1,5 +1,5 @@
 ---
-title: 'CA1014: Označte sestavení pomocí CLSCompliantAttribute'
+title: 'CA1014: Označte sestavení pomocí atributu CLSCompliantAttribute'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,27 +18,27 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 387eb464959fba522e31f9586998335cb306d844
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: c615015fac5e8e9b60425679e116b8c7680ea637
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236328"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72441639"
 ---
-# <a name="ca1014-mark-assemblies-with-clscompliantattribute"></a>CA1014: Označte sestavení pomocí CLSCompliantAttribute
+# <a name="ca1014-mark-assemblies-with-clscompliantattribute"></a>CA1014: Označte sestavení pomocí atributu CLSCompliantAttribute
 
 |||
 |-|-|
 |TypeName|MarkAssembliesWithClsCompliant|
 |CheckId|CA1014|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
-Pro sestavení není <xref:System.CLSCompliantAttribute?displayProperty=fullName> použit atribut.
+V sestavení není použit atribut <xref:System.CLSCompliantAttribute?displayProperty=fullName>.
 
 ## <a name="rule-description"></a>Popis pravidla
-Specifikace Common Language Specification (CLS) definuje omezení názvů, datové typy a pravidla, která musí sestavení dodržovat, pokud budou použita napříč programovacími jazyky. Dobrý návrh určuje, že všechna sestavení explicitně označují dodržování specifikace CLS <xref:System.CLSCompliantAttribute>pomocí. Pokud atribut není v sestavení přítomen, sestavení nedodržuje předpisy.
+Specifikace Common Language Specification (CLS) definuje omezení názvů, datové typy a pravidla, která musí sestavení dodržovat, pokud budou použita napříč programovacími jazyky. Dobrý návrh určuje, že všechna sestavení explicitně označují dodržování specifikace CLS pomocí <xref:System.CLSCompliantAttribute>. Pokud atribut není v sestavení přítomen, sestavení nedodržuje předpisy.
 
 Sestavení kompatibilní se specifikací CLS může obsahovat typy nebo členy typu, které nedodržují předpisy.
 
@@ -49,7 +49,7 @@ Chcete-li opravit porušení tohoto pravidla, přidejte atribut do sestavení. M
 Nepotlačujte upozornění na toto pravidlo. Pokud nechcete, aby sestavení bylo kompatibilní, použijte atribut a nastavte jeho hodnotu na `false`.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje sestavení, které má <xref:System.CLSCompliantAttribute?displayProperty=fullName> atribut použit, který deklaruje specifikaci kompatibilní se specifikací CLS.
+Následující příklad ukazuje sestavení s použitým atributem <xref:System.CLSCompliantAttribute?displayProperty=fullName>, který deklaruje kompatibilní s IT specifikací CLS.
 
 [!code-csharp[FxCop.Design.AssembliesCls#1](../code-quality/codesnippet/CSharp/ca1014-mark-assemblies-with-clscompliantattribute_1.cs)]
 [!code-cpp[FxCop.Design.AssembliesCls#1](../code-quality/codesnippet/CPP/ca1014-mark-assemblies-with-clscompliantattribute_1.cpp)]

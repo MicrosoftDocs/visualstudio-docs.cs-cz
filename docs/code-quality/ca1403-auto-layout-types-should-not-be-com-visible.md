@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 4e590514247444d32d0d9a31b2bbc409434cf53c
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 8329c51e58478e1902f64232f4f2546418639e34
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234823"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72440533"
 ---
 # <a name="ca1403-auto-layout-types-should-not-be-com-visible"></a>CA1403: Typy automatického rozložení by neměly být viditelné modelu COM
 
@@ -35,17 +35,17 @@ ms.locfileid: "71234823"
 
 ## <a name="cause"></a>příčina
 
-Typ hodnoty zobrazený v modelu COM (Component Object Model) je označen <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=fullName> atributem nastaveným na <xref:System.Runtime.InteropServices.LayoutKind.Auto?displayProperty=fullName>hodnotu.
+Typ hodnoty zobrazený v modelu COM (Component Object Model) je označen atributem <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=fullName> nastaveným na hodnotu <xref:System.Runtime.InteropServices.LayoutKind.Auto?displayProperty=fullName>.
 
 ## <a name="rule-description"></a>Popis pravidla
 
-<xref:System.Runtime.InteropServices.LayoutKind>typy rozložení jsou spravovány modulem CLR (Common Language Runtime). Rozložení těchto typů se může měnit mezi verzemi rozhraní .NET, což přerušuje klienty modelu COM, kteří očekávají konkrétní rozložení. Pokud atribut není C#zadán, kompilátor, Visual Basic a C++ kompilátory určují hodnoty [LayoutKind. auto](<xref:System.Runtime.InteropServices.LayoutKind.Auto>) pro typy hodnot. <xref:System.Runtime.InteropServices.StructLayoutAttribute>
+typy rozložení <xref:System.Runtime.InteropServices.LayoutKind> jsou spravovány modulem CLR (Common Language Runtime). Rozložení těchto typů se může měnit mezi verzemi rozhraní .NET, což přerušuje klienty modelu COM, kteří očekávají konkrétní rozložení. Pokud není zadán atribut <xref:System.Runtime.InteropServices.StructLayoutAttribute>, kompilátor C#, Visual Basic a C++ kompilátory určují [LayoutKind. auto](<xref:System.Runtime.InteropServices.LayoutKind.Auto>) pro hodnoty typu.
 
-Pokud není uvedeno jinak, jsou všechny veřejné, neobecné typy viditelné modelu COM a všechny neveřejné a obecné typy jsou neviditelné v modelu COM. Chcete-li však omezit falešně pozitivní hodnoty, toto pravidlo vyžaduje explicitní stanovení viditelnosti typu modelu COM. Obsahující <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> sestavení musí být označeno nastavením na `false` a typ <xref:System.Runtime.InteropServices.ComVisibleAttribute> musí být označen nastavením na `true`.
+Pokud není uvedeno jinak, jsou všechny veřejné, neobecné typy viditelné modelu COM a všechny neveřejné a obecné typy jsou neviditelné v modelu COM. Chcete-li však omezit falešně pozitivní hodnoty, toto pravidlo vyžaduje explicitní stanovení viditelnosti typu modelu COM. Obsahující sestavení musí být označeno s <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> nastavenou na `false` a typ musí být označený jako <xref:System.Runtime.InteropServices.ComVisibleAttribute> nastavený na `true`.
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, změňte hodnotu <xref:System.Runtime.InteropServices.StructLayoutAttribute> atributu na [LayoutKind. Explicit](<xref:System.Runtime.InteropServices.LayoutKind.Explicit>) nebo [LayoutKind. sekvenční](<xref:System.Runtime.InteropServices.LayoutKind.Sequential>), nebo nastavte typ jako neviditelný na com.
+Chcete-li opravit porušení tohoto pravidla, změňte hodnotu atributu <xref:System.Runtime.InteropServices.StructLayoutAttribute> na [LayoutKind. Explicit](<xref:System.Runtime.InteropServices.LayoutKind.Explicit>) nebo [LayoutKind. sekvenční](<xref:System.Runtime.InteropServices.LayoutKind.Sequential>)nebo nastavte typ jako neviditelný na com.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
@@ -60,7 +60,7 @@ Následující příklad ukazuje typ, který porušuje pravidlo a typ, který sp
 
 ## <a name="related-rules"></a>Související pravidla
 
-[CA1408: Nepoužívat AutoDual ClassInterfaceType](../code-quality/ca1408-do-not-use-autodual-classinterfacetype.md)
+[CA1408: Nepoužívejte AutoDual ClassInterfaceType](../code-quality/ca1408-do-not-use-autodual-classinterfacetype.md)
 
 ## <a name="see-also"></a>Viz také:
 

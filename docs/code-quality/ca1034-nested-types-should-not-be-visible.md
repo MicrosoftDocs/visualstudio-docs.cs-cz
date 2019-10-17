@@ -18,12 +18,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: ead932af202bd1a44464025a1b09baa698acb7b1
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 0726b6f02de37c9a5537db59b264802c3dad9a07
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236039"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72440859"
 ---
 # <a name="ca1034-nested-types-should-not-be-visible"></a>CA1034: Vnořené typy by neměly být viditelné
 
@@ -31,7 +31,7 @@ ms.locfileid: "71236039"
 |-|-|
 |TypeName|NestedTypesShouldNotBeVisible|
 |CheckId|CA1034|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina

@@ -18,12 +18,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 6620ac646c7fe20de856185708effc9e1a331e57
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 51427ec499c223c50fbe72523a3be44ed0ce9094
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235857"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72449215"
 ---
 # <a name="ca1041-provide-obsoleteattribute-message"></a>CA1041: Poskytněte zprávu ObsoleteAttribute
 
@@ -31,26 +31,26 @@ ms.locfileid: "71235857"
 |-|-|
 |TypeName|ProvideObsoleteAttributeMessage|
 |CheckId|CA1041|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
 
-Typ nebo člen je označen pomocí <xref:System.ObsoleteAttribute?displayProperty=fullName> atributu, který <xref:System.ObsoleteAttribute.Message%2A?displayProperty=fullName> nemá zadanou vlastnost.
+Typ nebo člen je označený pomocí atributu <xref:System.ObsoleteAttribute?displayProperty=fullName>, který nemá zadanou vlastnost <xref:System.ObsoleteAttribute.Message%2A?displayProperty=fullName>.
 
 Ve výchozím nastavení toto pravidlo vyhledává pouze externě viditelné typy a členy, ale je možné jej [nakonfigurovat](#configurability).
 
 ## <a name="rule-description"></a>Popis pravidla
 
-<xref:System.ObsoleteAttribute>slouží k označení zastaralých typů a členů knihovny. Příjemci knihovny by se měli vyhnout použití libovolného typu nebo člena, který je označený jako zastaralý. Důvodem je to, že nemusí být podporován a nakonec bude odebrán z novějších verzí knihovny. Je-li typ nebo člen označený pomocí <xref:System.ObsoleteAttribute> je zkompilován <xref:System.ObsoleteAttribute.Message%2A> , je zobrazena vlastnost atributu. To uživateli poskytuje informace o zastaralém typu nebo členu. Tyto informace obecně zahrnují, jak dlouho bude zastaralý typ nebo člen podporovaný Návrháři knihovny a upřednostňovanou náhradou, která se má použít.
+<xref:System.ObsoleteAttribute> slouží k označení zastaralých typů a členů knihovny. Příjemci knihovny by se měli vyhnout použití libovolného typu nebo člena, který je označený jako zastaralý. Důvodem je to, že nemusí být podporován a nakonec bude odebrán z novějších verzí knihovny. Je-li typ nebo člen označený pomocí <xref:System.ObsoleteAttribute> kompilován, je zobrazena vlastnost <xref:System.ObsoleteAttribute.Message%2A> atributu. To uživateli poskytuje informace o zastaralém typu nebo členu. Tyto informace obecně zahrnují, jak dlouho bude zastaralý typ nebo člen podporovaný Návrháři knihovny a upřednostňovanou náhradou, která se má použít.
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, přidejte `message` parametr <xref:System.ObsoleteAttribute> do konstruktoru.
+Chcete-li opravit porušení tohoto pravidla, přidejte do konstruktoru <xref:System.ObsoleteAttribute> parametr `message`.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Potlačí upozornění z tohoto pravidla, <xref:System.ObsoleteAttribute.Message%2A> protože vlastnost poskytuje kritické informace o zastaralém typu nebo členu.
+Potlačí upozornění z tohoto pravidla, protože vlastnost <xref:System.ObsoleteAttribute.Message%2A> poskytuje kritické informace o zastaralém typu nebo členu.
 
 ## <a name="configurability"></a>Konfigurovatelnost
 
@@ -64,7 +64,7 @@ Tuto možnost můžete nakonfigurovat jenom pro toto pravidlo, pro všechna prav
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje zastaralý člen, který má správně deklarovaný <xref:System.ObsoleteAttribute>.
+Následující příklad ukazuje zastaralého člena, který má správně deklarovaný <xref:System.ObsoleteAttribute>.
 
 [!code-cpp[FxCop.Design.ObsoleteAttributeOnMember#1](../code-quality/codesnippet/CPP/ca1041-provide-obsoleteattribute-message_1.cpp)]
 [!code-csharp[FxCop.Design.ObsoleteAttributeOnMember#1](../code-quality/codesnippet/CSharp/ca1041-provide-obsoleteattribute-message_1.cs)]

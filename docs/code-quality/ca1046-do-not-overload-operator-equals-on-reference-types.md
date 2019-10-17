@@ -1,5 +1,5 @@
 ---
-title: 'CA1046: Nepřetěžujte operátory rovnosti u odkazových typů'
+title: 'CA1046: Nepřetěžujte operátory rovnosti na odkazových typech'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,20 +14,20 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 23358d104c891ff9e230f0daad0f5e6ca57b46c2
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 31fd841117e3036cfb9068523914abd2d5f7797a
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235769"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72449164"
 ---
-# <a name="ca1046-do-not-overload-operator-equals-on-reference-types"></a>CA1046: Nepřetěžujte operátory rovnosti u odkazových typů
+# <a name="ca1046-do-not-overload-operator-equals-on-reference-types"></a>CA1046: Nepřetěžujte operátory rovnosti na odkazových typech
 
 |||
 |-|-|
 |TypeName|DoNotOverloadOperatorEqualsOnReferenceTypes|
 |CheckId|CA1046|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
@@ -64,7 +64,7 @@ c and a are == ? Yes
 
 ## <a name="related-rules"></a>Související pravidla
 
-[CA1013: Operátor přetížení se rovná při přetížení metody sčítání a odečítání.](../code-quality/ca1013-overload-operator-equals-on-overloading-add-and-subtract.md)
+[CA1013: Přetižte operátor rovnosti společně s přetížením operátorů sčítání a odečítání](../code-quality/ca1013-overload-operator-equals-on-overloading-add-and-subtract.md)
 
 ## <a name="see-also"></a>Viz také:
 

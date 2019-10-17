@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e04487a9bfcd8ef9a0e9a15bc76a93b221f9ce1
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 1a2ae438091c55c9e0e6b14350ca2527907ab33c
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234142"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72443917"
 ---
 # <a name="ca1711-identifiers-should-not-have-incorrect-suffix"></a>CA1711: Identifikátory by neměly mít nesprávnou příponu
 
@@ -27,7 +27,7 @@ ms.locfileid: "71234142"
 |-|-|
 |TypeName|IdentifiersShouldNotHaveIncorrectSuffix|
 |CheckId|CA1711|
-|Kategorie|Microsoft.Naming|
+|Kategorie|Microsoft. pojmenování|
 |Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
@@ -61,9 +61,9 @@ Kromě **toho by se neměly používat** následující přípony:
 
 - `Enum`
 
-- `Impl`(místo `Core` toho použijte)
+- `Impl` (místo toho použijte `Core`)
 
-- `Ex`nebo podobná přípona pro odlišení od starší verze stejného typu
+- `Ex` nebo podobná přípona pro odlišení od dřívější verze stejného typu
 
 Zásady vytváření názvů poskytují běžný vzhled pro knihovny, které cílí na modul CLR (Common Language Runtime). Tím se zmenší výuková křivka, která je požadována pro nové knihovny softwaru, a zvyšuje důvěru zákazníků, že knihovna byla vyvinuta někým, kdo má zkušenosti s vývojem spravovaného kódu.
 

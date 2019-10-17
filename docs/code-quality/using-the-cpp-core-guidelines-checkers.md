@@ -7,12 +7,12 @@ ms.author: mblome
 manager: markl
 dev_langs:
 - CPP
-ms.openlocfilehash: 57c8d6daf75987bfb5c6a6642b89f198693a5dce
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: fee4478f52cd107d2173919617aca8acd07234eb
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018416"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72445653"
 ---
 # <a name="use-the-c-core-guidelines-checkers"></a>Použití kontrolních mechanismů C++ Core Guidelines
 
@@ -55,11 +55,11 @@ int main()
 
 Tento příklad ukazuje několik upozornění, která mohou C++ základní pravidla kontroly najít:
 
-- C26494 je typ pravidla. 5: Vždy objekt inicializujte.
+- C26494 je typ pravidla. 5: vždy Inicializujte objekt.
 
-- C26485 je vázáno na pravidlo. 3: Žádné Decay pole na ukazatel.
+- C26485 je vázáno na pravidlo. 3: žádné Decay pole na ukazatel.
 
-- C26481 je rozsahy pravidel. 1: Nepoužívejte aritmetiku ukazatele. Místo nich se používá `span`.
+- C26481 je rozsahy pravidel. 1: Nepoužívejte aritmetický ukazatel. Místo nich se používá `span`.
 
 Pokud je C++ při kompilování tohoto kódu nainstalována a povolená základní analýza kódu RuleSets, první dvě upozornění jsou výstup, ale třetí se potlačí. Zde je výstup sestavení z příkladu kódu:
 

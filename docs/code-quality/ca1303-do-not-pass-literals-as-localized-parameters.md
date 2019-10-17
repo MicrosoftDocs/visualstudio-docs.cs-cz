@@ -19,12 +19,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 2700dc2ade7ba901f15f67045e3170e2bbb40ff8
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 443fec0c9f20148d775a734137941cd7c78da889
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235119"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444397"
 ---
 # <a name="ca1303-do-not-pass-literals-as-localized-parameters"></a>CA1303: Nepředávejte literály jako lokalizované parametry
 
@@ -32,7 +32,7 @@ ms.locfileid: "71235119"
 |-|-|
 |TypeName|DoNotPassLiteralsAsLocalizedParameters|
 |CheckId|CA1303|
-|Kategorie|Microsoft.Globalization|
+|Kategorie|Microsoft. Globalization|
 |Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
@@ -41,7 +41,7 @@ Metoda předává řetězcový literál jako parametr konstruktoru nebo metodě 
 
 Toto upozornění je vyvoláno, když je řetězcový literál předán jako hodnota parametru nebo vlastnosti a jeden nebo více z následujících případů je pravda:
 
-- <xref:System.ComponentModel.LocalizableAttribute> Atribut parametru nebo vlastnosti je nastaven na hodnotu true.
+- Atribut <xref:System.ComponentModel.LocalizableAttribute> parametru nebo vlastnosti je nastaven na hodnotu true.
 
 - Název parametru nebo vlastnosti obsahuje text "text", "zpráva" nebo "titulek".
 
@@ -53,7 +53,7 @@ Toto upozornění je vyvoláno, když je řetězcový literál předán jako hod
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, nahraďte řetězcový literál řetězcem načteným prostřednictvím instance <xref:System.Resources.ResourceManager> třídy.
+Chcete-li opravit porušení tohoto pravidla, nahraďte řetězcový literál řetězcem načteným pomocí instance třídy <xref:System.Resources.ResourceManager>.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
@@ -63,7 +63,7 @@ Uživatelé mohou odstranit šum proti metodám, které by neměly být předán
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje metodu, která vyvolá výjimku, pokud některý z jejích dvou argumentů je mimo rozsah. Pro první argument je konstruktoru výjimky předán literální řetězec, který porušuje toto pravidlo. Pro druhý argument je konstruktor správně předán pomocí řetězce načteného prostřednictvím <xref:System.Resources.ResourceManager>.
+Následující příklad ukazuje metodu, která vyvolá výjimku, pokud některý z jejích dvou argumentů je mimo rozsah. Pro první argument je konstruktoru výjimky předán literální řetězec, který porušuje toto pravidlo. Pro druhý argument je konstruktor správně předán řetězec načtený pomocí <xref:System.Resources.ResourceManager>.
 
 [!code-cpp[FxCop.Globalization.DoNotPassLiterals#1](../code-quality/codesnippet/CPP/ca1303-do-not-pass-literals-as-localized-parameters_1.cpp)]
 [!code-vb[FxCop.Globalization.DoNotPassLiterals#1](../code-quality/codesnippet/VisualBasic/ca1303-do-not-pass-literals-as-localized-parameters_1.vb)]

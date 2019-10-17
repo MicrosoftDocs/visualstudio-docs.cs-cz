@@ -1,5 +1,5 @@
 ---
-title: 'CA1016: Označte sestavení pomocí AssemblyVersionAttribute'
+title: 'CA1016: Označte sestavení pomocí atributu AssemblyVersionAttribute'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,20 +18,20 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 140037b025db88230762bc0d540d933cec7a5119
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 85a8d2d9efe83f62bd0bd40021ffe0e752cf4666
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236314"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72441602"
 ---
-# <a name="ca1016-mark-assemblies-with-assemblyversionattribute"></a>CA1016: Označte sestavení pomocí AssemblyVersionAttribute
+# <a name="ca1016-mark-assemblies-with-assemblyversionattribute"></a>CA1016: Označte sestavení pomocí atributu AssemblyVersionAttribute
 
 |||
 |-|-|
 |TypeName|MarkAssembliesWithAssemblyVersion|
 |CheckId|CA1016|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
@@ -46,7 +46,7 @@ Identita sestavení se skládá z následujících informací:
 
 - Číslo verze
 
-- Jazyková verze
+- jazykových
 
 - Veřejný klíč (pro silně pojmenovaná sestavení).
 
@@ -54,7 +54,7 @@ Rozhraní .NET používá číslo verze k jednoznačné identifikaci sestavení 
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, přidejte do sestavení číslo verze pomocí <xref:System.Reflection.AssemblyVersionAttribute?displayProperty=fullName> atributu.
+Chcete-li opravit porušení tohoto pravidla, přidejte do sestavení číslo verze pomocí atributu <xref:System.Reflection.AssemblyVersionAttribute?displayProperty=fullName>.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
@@ -62,7 +62,7 @@ Potlačit upozornění z tohoto pravidla pro sestavení, která používají tř
 
 ## <a name="example"></a>Příklad
 
-Následující příklad ukazuje sestavení, které má <xref:System.Reflection.AssemblyVersionAttribute> atribut použit.
+Následující příklad ukazuje sestavení, které má atribut <xref:System.Reflection.AssemblyVersionAttribute> použit.
 
 [!code-csharp[FxCop.Design.AssembliesVersion#1](../code-quality/codesnippet/CSharp/ca1016-mark-assemblies-with-assemblyversionattribute_1.cs)]
 [!code-vb[FxCop.Design.AssembliesVersion#1](../code-quality/codesnippet/VisualBasic/ca1016-mark-assemblies-with-assemblyversionattribute_1.vb)]
@@ -71,4 +71,4 @@ Následující příklad ukazuje sestavení, které má <xref:System.Reflection.
 ## <a name="see-also"></a>Viz také:
 
 - [Správa verzí sestavení](/dotnet/framework/app-domains/assembly-versioning)
-- [Postupy: Vytvoření zásady vydavatele](/dotnet/framework/configure-apps/how-to-create-a-publisher-policy)
+- [Postupy: vytvoření zásady vydavatele](/dotnet/framework/configure-apps/how-to-create-a-publisher-policy)

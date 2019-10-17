@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: cfa705654a5cc4122e5ee554fe050722d7883970
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: da4713c32e4e9313a55ea2944bf4990a0b9c29c3
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235483"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72440819"
 ---
 # <a name="ca1060-move-pinvokes-to-nativemethods-class"></a>CA1060: Přesuňte volání nespravovaných kódů do třídy NativeMethods
 
@@ -30,7 +30,7 @@ ms.locfileid: "71235483"
 |-|-|
 |TypeName|MovePInvokesToNativeMethodsClass|
 |CheckId|CA1060|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
@@ -39,15 +39,15 @@ Metoda používá služby vyvolání platformy pro přístup k nespravovanému k
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Metody vyvolání platformy, například ty, které jsou označeny pomocí <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> atributu nebo metody, které jsou definovány `Declare` pomocí klíčového slova v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], přistupuje k nespravovanému kódu. Tyto metody by měly být v jedné z následujících tříd:
+Metody vyvolání platformy, například ty, které jsou označeny pomocí atributu <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName>, nebo metody, které jsou definovány pomocí klíčového slova `Declare` v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)], mají přístup k nespravovanému kódu. Tyto metody by měly být v jedné z následujících tříd:
 
-- **NativeMethods** – Tato třída potlačí procházení zásobníku pro oprávnění nespravovaného kódu. (<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> nesmí být použito pro tuto třídu.) Tato třída je určena pro metody, které lze použít kdekoli, protože bude provedeno procházení zásobníku.
+- **NativeMethods** – Tato třída potlačí procházení zásobníku pro oprávnění nespravovaného kódu. (<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> nesmí být použita na tuto třídu.) Tato třída je určena pro metody, které lze použít kdekoli, protože bude provedeno procházení zásobníku.
 
-- **SafeNativeMethods** – Tato třída potlačí procházení zásobníku pro oprávnění nespravovaného kódu. (<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> je použito pro tuto třídu.) Tato třída je určena pro metody, které jsou bezpečné pro všechny volání. Volající z těchto metod nejsou vyžadováni k provedení úplné kontroly zabezpečení, aby bylo zajištěno, že je používání bezpečné, protože metody jsou pro libovolného volajícího neškodné.
+- **SafeNativeMethods** – Tato třída potlačí procházení zásobníku pro oprávnění nespravovaného kódu. (<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> se aplikuje na tuto třídu.) Tato třída je určena pro metody, které jsou bezpečné pro všechny volání. Volající z těchto metod nejsou vyžadováni k provedení úplné kontroly zabezpečení, aby bylo zajištěno, že je používání bezpečné, protože metody jsou pro libovolného volajícího neškodné.
 
-- **UnsafeNativeMethods** – Tato třída potlačí procházení zásobníku pro oprávnění nespravovaného kódu. (<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> je použito pro tuto třídu.) Tato třída je určena pro metody, které jsou potenciálně nebezpečné. Každý volající těchto metod musí provést úplnou kontrolu zabezpečení, aby bylo zajištěno, že je použití zabezpečené, protože se neprovede žádné procházení zásobníku.
+- **UnsafeNativeMethods** – Tato třída potlačí procházení zásobníku pro oprávnění nespravovaného kódu. (<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> se aplikuje na tuto třídu.) Tato třída je určena pro metody, které jsou potenciálně nebezpečné. Každý volající těchto metod musí provést úplnou kontrolu zabezpečení, aby bylo zajištěno, že je použití zabezpečené, protože se neprovede žádné procházení zásobníku.
 
-Tyto třídy jsou deklarovány `internal` jako`Friend`(, v Visual Basic) a deklaraci soukromého konstruktoru, aby se zabránilo vytváření nových instancí. Metody v těchto třídách by měly `static` být `internal` a`Shared` ( `Friend` a v Visual Basic).
+Tyto třídy jsou deklarovány jako `internal` (`Friend`, v Visual Basic) a deklaraci soukromého konstruktoru, aby se zabránilo vytváření nových instancí. Metody v těchto třídách by měly být `static` a `internal` (`Shared` a `Friend` v Visual Basic).
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 Chcete-li opravit porušení tohoto pravidla, přesuňte metodu do příslušné třídy **NativeMethods** . Pro většinu aplikací je k dispozici pouze přesun volání nespravovaného volání do nové třídy s názvem **NativeMethods** .
@@ -92,7 +92,7 @@ Následující příklad ukazuje vlastnost **prostředí. TickCount** , která z
 ## <a name="unsafenativemethods-example"></a>Příklad UnsafeNativeMethods
 
 ### <a name="description"></a>Popis
-Metody volání, které nelze bezpečně volat a které by mohly způsobit vedlejší účinky, by měly být umístěny ve třídě s názvem **UnsafeNativeMethods**. Tyto metody by měly být přísně kontrolovány, aby se zajistilo, že nejsou uživateli k úmyslu nevystaveni. Pravidlo [CA2118: Kontrola využití](../code-quality/ca2118-review-suppressunmanagedcodesecurityattribute-usage.md) SuppressUnmanagedCodeSecurityAttribute vám může s tímto. Další možností je, že metody by měly mít jiné oprávnění, které je **požadováno namísto nejenom při jejich** použití.
+Metody volání, které nelze bezpečně volat a které by mohly způsobit vedlejší účinky, by měly být umístěny ve třídě s názvem **UnsafeNativeMethods**. Tyto metody by měly být přísně kontrolovány, aby se zajistilo, že nejsou uživateli k úmyslu nevystaveni. Pravidlo [CA2118: Zkontrolujte použití SuppressUnmanagedCodeSecurityAttribute](../code-quality/ca2118.md) , které vám může s tímto. Další možností je, že metody by měly mít jiné oprávnění, které je **požadováno namísto nejenom při jejich** použití.
 
 Následující příklad ukazuje metodu **Cursor. Hide** , která zabalí funkci **ShowCursor** z User32. dll.
 

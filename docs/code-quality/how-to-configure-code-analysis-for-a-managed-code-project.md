@@ -13,50 +13,50 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 86aa308369ef93792126c7f8da5f59f94ef0c02a
-ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
+ms.openlocfilehash: f1bfa8c6e5260fb4afd20b882e2bdfc718647f4b
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71975106"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72448978"
 ---
 # <a name="how-to-configure-legacy-analysis-for-managed-code"></a>Postupy: Konfigurace starší verze analýzy pro spravovaný kód
 
-V sadě Visual Studio můžete zvolit ze seznamu [sad pravidel](../code-quality/rule-set-reference.md) analýzy kódu, které se mají použít pro projekt spravovaného kódu. Ve výchozím nastavení **Microsoft Minimální doporučená pravidla** je vybraná sada pravidel, můžete ale použít jinou sadu v případě potřeby pravidel. Sady pravidel lze použít na jeden nebo více projektů v řešení.
+V sadě Visual Studio můžete zvolit ze seznamu [sad pravidel](../code-quality/rule-set-reference.md) analýzy kódu, které se mají použít pro projekt spravovaného kódu. Ve výchozím nastavení je vybraná sada pravidel **Minimální doporučená pravidla společnosti Microsoft** , ale v případě potřeby můžete použít jinou sadu pravidel. Sady pravidel lze použít pro jeden nebo více projektů v řešení.
 
 > [!NOTE]
 > Tento článek se týká starší verze analýzy a [ne.NET Compiler Platform analyzátorů kódu na základě](use-roslyn-analyzers.md).
 
 ## <a name="configure-a-rule-set-for-a-net-framework-project"></a>Konfigurace sady pravidel pro .NET Framework projekt
 
-1. Otevřít **analýzy kódu** karty na stránkách vlastností projektu. Můžete to provést v jednom z následujících způsobů:
+1. Otevřete kartu **Analýza kódu** na stránkách vlastností projektu. Můžete to udělat jedním z těchto způsobů:
 
-   - V **Průzkumníka řešení**, vyberte projekt. Na panelu nabídek vyberte **analyzovat** > **konfigurovat analýzu kódu** > **pro \<projectname >** .
+   - V **Průzkumník řešení**vyberte projekt. Na panelu nabídek vyberte položku **analyzovat** > **Konfigurace kódu** > **pro \<projectname >** .
 
-   - Klikněte pravým tlačítkem na projekt v **Průzkumníka řešení** a vyberte **vlastnosti**a pak vyberte **analýzy kódu** kartu.
+   - Klikněte pravým tlačítkem na projekt v **Průzkumník řešení** a vyberte **vlastnosti**a pak vyberte kartu **Analýza kódu** .
 
-2. V **konfigurace** a **platformy** seznamy, vyberte sestavení konfigurace a cílovou platformu.
+2. V seznamech **Konfigurace** a **platforma** vyberte položku konfigurace sestavení a cílová platforma.
 
 ::: moniker range="vs-2017"
 
-3. Chcete-li spustit analýzu kódu pokaždé, když je projekt sestaven pomocí vybrané konfigurace, vyberte možnost **Povolit analýzu kódu při sestavení**. Můžete také spustit analýzu kódu ručně tak, že vyberete **analyzovat** > **spustit analýzu kódu** > **spustit analýzu kódu na \<projectname >** .
+3. Chcete-li spustit analýzu kódu pokaždé, když je projekt sestaven pomocí vybrané konfigurace, vyberte možnost **Povolit analýzu kódu při sestavení**. Analýzu kódu lze také spustit ručně výběrem možnosti **analyzovat** > **spustit analýzu kódu** > **Spusťte analýzu kódu na \<projectname >** .
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2019"
 
-3. Chcete-li spustit analýzu kódu pokaždé, když je projekt sestaven pomocí vybrané konfigurace, vyberte možnost **Spustit při sestavení** v části **binární analyzátory** . Můžete také spustit analýzu kódu ručně tak, že vyberete **analyzovat** > **spustit analýzu kódu** > **spustit analýzu kódu na \<projectname >** .
+3. Chcete-li spustit analýzu kódu pokaždé, když je projekt sestaven pomocí vybrané konfigurace, vyberte možnost **Spustit při sestavení** v části **binární analyzátory** . Analýzu kódu lze také spustit ručně výběrem možnosti **analyzovat** > **spustit analýzu kódu** > **Spusťte analýzu kódu na \<projectname >** .
 
 ::: moniker-end
 
-4. Chcete-li zobrazit upozornění z generovaného kódu, zrušte **potlačit Výsledky generovaného kódu** zaškrtávací políčko.
+4. Chcete-li zobrazit upozornění z vygenerovaného kódu, zrušte zaškrtnutí políčka **Potlačit výsledky z vygenerovaného kódu** .
 
     > [!NOTE]
-    > Tato možnost není potlačit chyby analýzy kódu a upozornění z generovaného kódu při chyby a upozornění se zobrazí ve formulářích a šablony. Zdrojový kód formuláře nebo šablony lze zobrazit a udržovat a nebude přepsán.
+    > Tato možnost potlačí chyby a upozornění analýzy kódu z generovaného kódu, pokud se chyby a upozornění zobrazují ve formulářích a šablonách. Zdrojový kód formuláře nebo šablony lze zobrazit a udržovat a nebude přepsán.
 
 ::: moniker range="vs-2017"
 
-5. V **spustit tuto sadu pravidel** seznamu, proveďte jednu z následujících akcí:
+5. V seznamu **Spustit tuto sadu pravidel** proveďte jednu z následujících akcí:
 
 ::: moniker-end
 
@@ -66,31 +66,31 @@ V sadě Visual Studio můžete zvolit ze seznamu [sad pravidel](../code-quality/
 
 ::: moniker-end
 
-    - Vyberte sadu pravidel, který chcete použít.
+    - Vyberte sadu pravidel, kterou chcete použít.
 
     - Pokud chcete najít existující sadu vlastních pravidel, která není v seznamu, vyberte **\<Browse >** .
 
-    - Definování [vlastní sady pravidel](../code-quality/how-to-create-a-custom-rule-set.md).
+    - Definujte [vlastní sadu pravidel](../code-quality/how-to-create-a-custom-rule-set.md).
 
 ## <a name="specify-rule-sets-for-multiple-projects-in-a-solution"></a>Určení sad pravidel pro více projektů v řešení
 
-Ve výchozím nastavení, jsou přiřazeny všechny spravované projekty z řešení *Microsoft Minimální doporučená pravidla* sada pravidel analýzy kódu. Sady pravidel, které jsou přiřazeny k projektům v řešení můžete změnit **vlastnosti** dialogové okno pro řešení.
+Ve výchozím nastavení se všechny spravované projekty řešení přiřazují do sady pravidel *Microsoft minima pravidla* analýzy kódu. Můžete změnit sady pravidel, které jsou přiřazeny k projektům řešení v dialogovém okně **vlastnosti** pro dané řešení.
 
 1. Otevřete řešení v sadě Visual Studio.
 
-2. Na **analyzovat** nabídce vyberte možnost **konfigurovat analýzu kódu pro řešení**.
+2. V nabídce **analyzovat** vyberte možnost **Konfigurovat analýzu kódu pro řešení**.
 
-3. V případě potřeby rozbalit **společné vlastnosti**a pak vyberte **nastavení analýzy kódu**.
+3. V případě potřeby rozbalte **společné vlastnosti**a pak vyberte **nastavení analýzy kódu**.
 
-4. Můžete určit sadu pravidel pro jeden nebo více projektů:
+4. Pro jeden nebo více projektů můžete zadat sadu pravidel:
 
-    - Chcete-li určit sadu pravidel pro individuální projekt, vyberte název projektu.
+    - Chcete-li zadat sadu pravidel pro jednotlivé projekty, vyberte název projektu.
 
-    - Chcete-li určit sadu pravidel pro více projektů, podržte **Ctrl** a vyberte název projektu.
+    - Chcete-li zadat sadu pravidel pro více projektů, podržte stisknutou **klávesu CTRL** a vyberte názvy projektů.
 
-    - Chcete-li určit všechny projekty v řešení, podržte **Shift** a klikněte na tlačítko v seznamu projektu.
+    - Chcete-li zadat všechny projekty v řešení, podržte klávesu **SHIFT** a klikněte v seznamu projektu.
 
-5. Vyberte **sady pravidel** pole projektu a pak vyberte název pravidla nastavit, že chcete použít.
+5. Vyberte pole **sada pravidel** projektu a potom vyberte název sady pravidel, kterou chcete použít.
 
 ## <a name="see-also"></a>Viz také:
 

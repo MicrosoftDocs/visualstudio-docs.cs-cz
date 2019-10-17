@@ -1,5 +1,5 @@
 ---
-title: Příprava na ladění projektů konzoly | Dokumentace Microsoftu
+title: Příprava na ladění projektů konzoly | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
 ms.topic: reference
@@ -18,49 +18,49 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: be22786a78c16dc9ffa05aba38075e4762485d2d
-ms.sourcegitcommit: 9cfd3ef6c65f671a26322320818212a1ed5955fe
+ms.openlocfilehash: ddfc17d4f9bcb1f4f2585aa91319f06be6936e6f
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68533323"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72431469"
 ---
-# <a name="debugging-preparation-console-projects-c-c-visual-basic-f"></a>Příprava ladění: Projekty konzoly (C#, C++, Visual Basic, F#)
+# <a name="debugging-preparation-console-projects-c-c-visual-basic-f"></a>Příprava ladění: projekty konzoly (C#, C++, Visual Basic, F#)
 
-Příprava na ladění projektu konzoly je podobná přípravě ladění projektu Windows, s některými dalšími hledisky, jako je například nastavení argumentů příkazového řádku a Postup pozastavení aplikace pro ladění. Další informace naleznete v tématu [model Windows Forms aplikace](../debugger/debugging-preparation-windows-forms-applications.md)a [Příprava ladění: Model Windows Forms aplikace (.NET)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/sez9z95a(v=vs.100)). Z důvodu podobnosti všechny konzolové aplikace Toto téma popisuje následující typy projektů:
+Příprava na ladění projektu konzoly je podobná přípravě ladění projektu Windows, s některými dalšími hledisky, jako je například nastavení argumentů příkazového řádku a Postup pozastavení aplikace pro ladění. Další informace najdete v tématech [model Windows Forms aplikace](../debugger/debugging-preparation-windows-forms-applications.md)a [příprava ladění: model Windows Forms aplikace (.NET)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/sez9z95a(v=vs.100)). Z důvodu podobnosti všech konzolových aplikací toto téma popisuje následující typy projektů:
 
 - C#, Visual Basic a F# konzolové aplikace
 
-- C++ Konzolová aplikace (.NET)
+- C++Konzolová aplikace (.NET)
 
-- Aplikace konzoly C++ (Win32)
+- C++Konzolová aplikace (Win32)
 
-  Využívá konzolovou aplikaci **konzoly** okna tak, aby přijímal vstupní a výstupní zprávy zobrazíte. Zapsat do **konzoly** okno, musí vaše aplikace používat **konzoly** objektu namísto objektu Debug. Zapsat do **výstup Visual Studia** okně pomocí objektu Debug jako obvykle. Ujistěte se, že víte, kde vaše aplikace zapisuje nebo jste možná hledáte zprávy ve špatné místo. Další informace najdete v tématu [konzoly třídy](/dotnet/api/system.console), [ladit třídy](/dotnet/api/system.diagnostics.debug), a [okno výstup](../ide/reference/output-window.md).
+  Konzolová aplikace používá okno **konzoly** k přijetí vstupu a zobrazení výstupních zpráv. Chcete-li zapisovat do okna **konzoly** , aplikace musí místo objektu Debug použít objekt **konzoly** . Chcete-li zapisovat do okna **výstup aplikace Visual Studio** , použijte objekt ladění, jako obvykle. Ujistěte se, že víte, kam vaše aplikace píšete, nebo že chcete zprávy vyhledat na nesprávném místě. Další informace naleznete v tématu [Třída konzoly](/dotnet/api/system.console), [třída ladění](/dotnet/api/system.diagnostics.debug)a [okno výstup](../ide/reference/output-window.md).
 
 ## <a name="set-command-line-arguments"></a>Nastavit argumenty příkazového řádku
 
-Budete muset zadat argumenty příkazového řádku pro konzolové aplikace. Další informace najdete v tématu [nastavení projektu pro konfiguraci ladění jazyka C++](../debugger/project-settings-for-a-cpp-debug-configuration.md), [nastavení projektu pro konfiguraci ladění jazyka Visual Basic](../debugger/project-settings-for-a-visual-basic-debug-configuration.md), nebo [nastavení projektu pro ladění konfigurace jazyka C# ](../debugger/project-settings-for-csharp-debug-configurations.md).
+Možná budete muset zadat argumenty příkazového řádku pro konzolovou aplikaci. Další informace naleznete v tématu [nastavení projektu pro konfiguraci C++ ladění](../debugger/project-settings-for-a-cpp-debug-configuration.md), [nastavení projektu pro Visual Basic konfiguraci ladění](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)nebo [nastavení projektu pro C# konfiguraci ladění](../debugger/project-settings-for-csharp-debug-configurations.md).
 
-Stejně jako všechny vlastnosti projektu, tyto argumenty zachovat mezi relacemi ladění a mezi relacemi aplikace Visual Studio. Proto pokud konzolové aplikace je ten, který jste dříve ladit, mějte na paměti, že může být argumenty ze zadaného v předchozích relacích  **\<Projekt > stránky vlastností** dialogové okno.
+Stejně jako všechny vlastnosti projektu jsou tyto argumenty trvalé mezi relacemi ladění a mezi relacemi sady Visual Studio. Proto pokud je Konzolová aplikace ta, kterou jste dříve laděni, pamatujte na to, že v dialogovém okně **\<Project > stránky vlastností** se můžou zadat argumenty z předchozích relací.
 
 ## <a name="start-the-application"></a>Spuštění aplikace
 
- Když se některé aplikace konzoly, doběhla do konce a poté ukončete. Toto chování nemusí poskytnout dostatek času spuštění a ladění. Aby bylo možné ladit aplikaci, použijte jednu z následujících postupů spusťte aplikaci:
+ Po spuštění některých konzolových aplikací se jejich spuštění dokončí a pak se ukončí. K tomuto chování nemusí dodávat dostatek času k přerušení provádění a ladění. Aby bylo možné ladit aplikaci, použijte jeden z následujících postupů pro spuštění aplikace:
 
 - Nastavte zarážku v kódu a spusťte aplikaci.
 
-- Spusťte aplikaci pomocí **F10** (**ladění** > **Krokovat s přeskočením**) nebo **F11** (**ladění**  >  **Krokovat s vnořením**) a potom navigace v kódu pomocí dalších možností, jako **běžet do kliknutí**.
+- Spusťte aplikaci pomocí nástroje **F10** (**ladění** > **Krok přes**) nebo **F11** (**ladění** > **kroku do**) a pak procházením kódu pomocí dalších možností, jako je například **Run, klikněte na tlačítko spustit**.
 
-- V editoru kódu, klikněte pravým tlačítkem na řádku a vyberte **spustit ke kurzoru**.
+- V editoru kódu klikněte pravým tlačítkem myši na řádek a vyberte možnost **Spustit ke kurzoru**.
 
-  Když ladíte konzolovou aplikaci, můžete aplikaci spustit z příkazového řádku, spíše než ze sady Visual Studio. V takovém případě můžete spustit aplikaci z příkazového řádku a k němu připojit ladicí program sady Visual Studio. Další informace najdete v tématu [připojení k běžící procesy](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).
+  Při ladění konzolové aplikace je vhodné spustit aplikaci z příkazového řádku, nikoli ze sady Visual Studio. V takovém případě můžete aplikaci spustit z příkazového řádku a připojit k ní ladicí program sady Visual Studio. Další informace najdete v tématu [připojení ke spuštěným procesům](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md).
 
-  Při spuštění aplikace konzoly z aplikace Visual Studio **konzoly** někdy okno za okno sady Visual Studio. Pokud se pokusíte spustit konzolovou aplikaci v sadě Visual Studio, ale nic zdá se, že se stát, zkuste přesunout okno sady Visual Studio.
+  Při spuštění konzolové aplikace ze sady Visual Studio se okno **konzoly** někdy zobrazuje v okně sady Visual Studio. Pokud se pokusíte spustit konzolovou aplikaci ze sady Visual Studio a nic se nestane, zkuste přesunout okno aplikace Visual Studio.
 
 ## <a name="see-also"></a>Viz také
 - [Ladění nativního kódu](../debugger/debugging-native-code.md)
 - [Ladění spravovaného kódu](../debugger/debugging-managed-code.md)
-- [Typy projektů Visual C++](../debugger/debugging-preparation-visual-cpp-project-types.md)
+- [Příprava na ladění C++ projektů](../debugger/debugging-preparation-visual-cpp-project-types.md)
 - [Typy projektů jazyka C#, F# a Visual Basic](../debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types.md)
 - [Nastavení projektu pro konfiguraci ladění jazyka C++](../debugger/project-settings-for-a-cpp-debug-configuration.md)
 - [Zabezpečení ladicího programu](../debugger/debugger-security.md)

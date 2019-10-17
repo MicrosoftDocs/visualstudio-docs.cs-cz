@@ -1,5 +1,5 @@
 ---
-title: 'CA1052: Statické typy držitelů by měly být statické nebo NotInheritable.'
+title: 'CA1052: statické typy držitelů by měly být statické nebo NotInheritable'
 ms.date: 07/25/2019
 ms.topic: reference
 f1_keywords:
@@ -18,20 +18,20 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 757b6b46e0c0892f5eb4c868b15654b29cd51c0e
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 7fb332a293e30bfba38e1487576d5a28b1a3be36
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235620"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72446596"
 ---
-# <a name="ca1052-static-holder-types-should-be-static-or-notinheritable"></a>CA1052: Statické typy držitelů by měly být statické nebo NotInheritable.
+# <a name="ca1052-static-holder-types-should-be-static-or-notinheritable"></a>CA1052: statické typy držitelů by měly být statické nebo NotInheritable
 
 |||
 |-|-|
 |TypeName|StaticHolderTypesAnalyzer|
 |CheckId|CA1052|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
@@ -42,7 +42,7 @@ Ve výchozím nastavení toto pravidlo vyhledává pouze externě viditelné typ
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Pravidlo CA1052 předpokládá, že typ, který obsahuje pouze statické členy, není navržen tak, aby byl zděděn, protože typ neposkytuje žádné funkce, které mohou být přepsány v odvozeném typu. Typ, který není určen k dědění, by měl být označen `static` modifikátorem v C# , aby bylo možné jeho použití jako základní typ zakázat. Kromě toho by měl být odebrán jeho výchozí konstruktor. V Visual Basic musí být třída převedena na [modul](/dotnet/visual-basic/language-reference/statements/module-statement).
+Pravidlo CA1052 předpokládá, že typ, který obsahuje pouze statické členy, není navržen tak, aby byl zděděn, protože typ neposkytuje žádné funkce, které mohou být přepsány v odvozeném typu. Typ, který není určen k dědění, by měl být označen modifikátorem `static` v C# , aby bylo možné jeho použití jako základní typ zakázat. Kromě toho by měl být odebrán jeho výchozí konstruktor. V Visual Basic musí být třída převedena na [modul](/dotnet/visual-basic/language-reference/statements/module-statement).
 
 Toto pravidlo se neaktivuje u abstraktních tříd nebo tříd, které mají základní třídu. Pravidlo však aktivuje třídy, které podporují prázdné rozhraní.
 
@@ -51,11 +51,11 @@ Toto pravidlo se neaktivuje u abstraktních tříd nebo tříd, které mají zá
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, označte typ jako `static` a odeberte výchozí konstruktor (C#) nebo jej převeďte na modul (Visual Basic).
+Chcete-li opravit porušení tohoto pravidla, označte typ jako `static` a odeberte výchozí konstruktor (C#), nebo jej převeďte na modul (Visual Basic).
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Potlačí upozornění z tohoto pravidla pouze v případě, že je typ navržen tak, aby byl zděděn. Absence `static` modifikátoru naznačuje, že typ je užitečný jako základní typ.
+Potlačí upozornění z tohoto pravidla pouze v případě, že je typ navržen tak, aby byl zděděn. Absence modifikátoru `static` naznačuje, že typ je užitečný jako základní typ.
 
 ## <a name="configurability"></a>Konfigurovatelnost
 
@@ -77,7 +77,7 @@ Následující příklad ukazuje typ, který je v rozporu s pravidlem:
 
 ## <a name="fix-with-the-static-modifier"></a>Oprava pomocí modifikátoru static
 
-Následující příklad ukazuje, jak opravit porušení tohoto pravidla označením typu s `static` modifikátorem v: C#
+Následující příklad ukazuje, jak opravit porušení tohoto pravidla označením typu s modifikátorem `static` v C#:
 
 ```csharp
 public static class StaticMembers

@@ -9,14 +9,14 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0b192b29190d530d22943e8ba2a396ae1fe9ad87
-ms.sourcegitcommit: 39a04f42d23597b70053686d7e927ba78f38a9a8
+ms.openlocfilehash: 26cd267f80f8c7c220771a5c2220d22b66929051
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71975130"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72448923"
 ---
-# <a name="how-to-enable-and-disable-full-solution-analysis-for-managed-code"></a>Postupy: Povolení a zákaz úplné analýzy řešení pro spravovaný kód
+# <a name="how-to-enable-and-disable-full-solution-analysis-for-managed-code"></a>Postupy: povolení a zákaz úplné analýzy řešení pro spravovaný kód
 
 *Úplná analýza řešení* znamená, že analýza kódu prověřuje všechny C# soubory nebo Visual Basic v řešení, bez ohledu na to, zda jsou otevřeny v editoru nebo nikoli. Ve výchozím nastavení je úplná analýza řešení *povolena* pro Visual Basic a *zakázáno* pro C#.
 
@@ -44,4 +44,4 @@ Následující obrázek znázorňuje výsledky ze stejného řešení po zakáz�
 
 Pokud aplikace Visual Studio zjistí, že je k dispozici 200 MB nebo méně systémové paměti, automaticky zakáže úplnou analýzu řešení (a další funkce), pokud je povolená. V takovém případě se zobrazí výstraha informující o tom, že aplikace Visual Studio zakázala některé funkce. Tlačítko umožňuje znovu povolit úplnou analýzu řešení, pokud chcete.
 
-![Upozornění text pozastavení úplné analýzy řešení](../code-quality/media/fsa_alert.png)
+![Text výstrahy, která pozastavuje úplnou analýzu řešení](../code-quality/media/fsa_alert.png)

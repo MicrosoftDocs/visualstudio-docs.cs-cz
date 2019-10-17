@@ -1,5 +1,5 @@
 ---
-title: 'CA1033: Metody rozhraní by měly být volatelné podřízenými typy'
+title: 'CA1033: Metody rozhraní by měla být volatelné podřízenými typy'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -14,29 +14,29 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a0ed38a713f9e9a2ab95ad7e1062c6d5d9ab541d
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: bc9cd160afa9b882ebb979b6000d2ab277143abe
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236107"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72449267"
 ---
-# <a name="ca1033-interface-methods-should-be-callable-by-child-types"></a>CA1033: Metody rozhraní by měly být volatelné podřízenými typy
+# <a name="ca1033-interface-methods-should-be-callable-by-child-types"></a>CA1033: Metody rozhraní by měla být volatelné podřízenými typy
 
 |||
 |-|-|
 |TypeName|InterfaceMethodsShouldBeCallableByChildTypes|
 |CheckId|CA1033|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
 Nezapečetěný externě viditelný typ poskytuje explicitní implementaci metod veřejného rozhraní a neposkytuje alternativní externě viditelnou metodu stejného názvu.
 
 ## <a name="rule-description"></a>Popis pravidla
-Vezměte v úvahu základní typ, který explicitně implementuje metodu veřejného rozhraní. Typ, který je odvozen od základního typu, má přístup k zděděné metodě rozhraní pouze prostřednictvím odkazu na aktuální instanci (`this` v C#), která je převedena na rozhraní. Pokud odvozený typ znovu implementuje (explicitně) zděděnou metodu rozhraní, k základní implementaci již nelze přivodit. Volání prostřednictvím aktuální reference instance vyvolá odvozenou implementaci; To způsobí rekurzi a případné přetečení zásobníku.
+Vezměte v úvahu základní typ, který explicitně implementuje metodu veřejného rozhraní. Typ, který je odvozen od základního typu, může přistupovat k zděděné metodě rozhraní pouze prostřednictvím odkazu na aktuální instanci (`this` v C#), která je převedena na rozhraní. Pokud odvozený typ znovu implementuje (explicitně) zděděnou metodu rozhraní, k základní implementaci již nelze přivodit. Volání prostřednictvím aktuální reference instance vyvolá odvozenou implementaci; To způsobí rekurzi a případné přetečení zásobníku.
 
-Toto pravidlo neoznamuje porušení explicitní implementace, <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> Pokud je k dispozici externě viditelný `Close()` nebo `System.IDisposable.Dispose(Boolean)` metoda.
+Toto pravidlo neoznamuje porušení explicitní implementace <xref:System.IDisposable.Dispose%2A?displayProperty=fullName>, pokud je k dispozici externě viditelný `Close()` nebo `System.IDisposable.Dispose(Boolean)` metoda.
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 Chcete-li opravit porušení tohoto pravidla, implementujte novou metodu, která zveřejňuje stejnou funkci a je viditelná pro odvozené typy nebo se změní na neexplicitní implementaci. V případě, že je zásadní změna přijatelné, alternativou je vytvořit zapečetěný typ.
@@ -45,7 +45,7 @@ Chcete-li opravit porušení tohoto pravidla, implementujte novou metodu, která
 Je bezpečné potlačit upozornění z tohoto pravidla, pokud je k dispozici externě viditelná metoda, která má stejnou funkci, ale jiný název než explicitně implementovaná metoda.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje typ, `ViolatingBase`, který porušuje pravidlo a typ, `FixedBase`,, který ukazuje opravu pro porušení.
+Následující příklad ukazuje typ, `ViolatingBase`, který porušuje pravidlo a typ `FixedBase`, který ukazuje opravu pro porušení.
 
 [!code-csharp[FxCop.Design.ExplicitMethodImplementations#1](../code-quality/codesnippet/CSharp/ca1033-interface-methods-should-be-callable-by-child-types_1.cs)]
 

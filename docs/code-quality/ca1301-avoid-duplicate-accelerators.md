@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f50be12f4d601161ec20659bbb6b710e5a7cf24
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 1970eefee70fa14179c77566f23f213f09026646
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235168"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444392"
 ---
 # <a name="ca1301-avoid-duplicate-accelerators"></a>CA1301: Vyhněte se duplicitním akcelerátorům
 
@@ -27,7 +27,7 @@ ms.locfileid: "71235168"
 |-|-|
 |TypeName|AvoidDuplicateAccelerators|
 |CheckId|CA1301|
-|Kategorie|Microsoft.Globalization|
+|Kategorie|Microsoft. Globalization|
 |Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
@@ -46,7 +46,7 @@ Chcete-li opravit porušení tohoto pravidla, definujte jedinečné přístupov�
 Nepotlačujte upozornění na toto pravidlo.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje minimální formulář, který obsahuje dva ovládací prvky, které mají stejné přístupové klíče. Klíče jsou uloženy v souboru prostředků, který není zobrazen. Jejich hodnoty se ale zobrazí v `checkBox.Text` řádcích s komentářem. Chování duplicitních akcelerátorů lze prozkoumat výměnou `checkBox.Text` řádků pomocí jejich přihlašování ke svým protějškům. V tomto případě se ale v tomto příkladu z pravidla negeneruje upozornění.
+Následující příklad ukazuje minimální formulář, který obsahuje dva ovládací prvky, které mají stejné přístupové klíče. Klíče jsou uloženy v souboru prostředků, který není zobrazen. Jejich hodnoty se ale zobrazí v řádku s komentářem `checkBox.Text`. Chování duplicitních akcelerátorů se dá prozkoumat vyvoláním `checkBox.Text` řádků s jejich přidanými protějšky. V tomto případě se ale v tomto příkladu z pravidla negeneruje upozornění.
 
 [!code-csharp[FxCop.Globalization.AvoidDuplicateAccels#1](../code-quality/codesnippet/CSharp/ca1301-avoid-duplicate-accelerators_1.cs)]
 

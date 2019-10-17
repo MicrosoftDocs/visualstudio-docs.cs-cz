@@ -1,5 +1,5 @@
 ---
-title: 'CA1017: Označte sestavení pomocí ComVisibleAttribute'
+title: 'CA1017: Označte sestavení pomocí atributu ComVisibleAttribute'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,24 +18,24 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 073332738a01cb299b2b185c6fca20131222f981
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: daf9da821178e9e17ed5f0693d4d268b04ca337c
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236259"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72441619"
 ---
-# <a name="ca1017-mark-assemblies-with-comvisibleattribute"></a>CA1017: Označte sestavení pomocí ComVisibleAttribute
+# <a name="ca1017-mark-assemblies-with-comvisibleattribute"></a>CA1017: Označte sestavení pomocí atributu ComVisibleAttribute
 
 |||
 |-|-|
 |TypeName|MarkAssembliesWithComVisible|
 |CheckId|CA1017|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
-Pro sestavení není <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName> použit atribut.
+V sestavení není použit atribut <xref:System.Runtime.InteropServices.ComVisibleAttribute?displayProperty=fullName>.
 
 ## <a name="rule-description"></a>Popis pravidla
 Atribut <xref:System.Runtime.InteropServices.ComVisibleAttribute> určuje, jak klienti modelu COM přistupují ke spravovanému kódu. Dobrý návrh přikazuje, aby sestavení explicitně uvedla viditelnost modelu COM. Viditelnost modelu COM lze nastavit pro celé sestavení a následně přepsat pro jednotlivé typy a členy typu. Pokud atribut není přítomen, obsah sestavení je viditelný pro klienty modelu COM.
@@ -47,7 +47,7 @@ Chcete-li opravit porušení tohoto pravidla, přidejte atribut do sestavení. P
 Nepotlačujte upozornění na toto pravidlo. Chcete-li, aby bylo sestavení viditelné, použijte atribut a nastavte jeho hodnotu na `true`.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje sestavení, které má <xref:System.Runtime.InteropServices.ComVisibleAttribute> atribut použit, aby se zabránilo jeho viditelnému klientům modelu COM.
+Následující příklad ukazuje sestavení s použitým atributem <xref:System.Runtime.InteropServices.ComVisibleAttribute>, aby se zabránilo jeho viditelnému klientům modelu COM.
 
 [!code-cpp[FxCop.Design.AssembliesCom#1](../code-quality/codesnippet/CPP/ca1017-mark-assemblies-with-comvisibleattribute_1.cpp)]
 [!code-vb[FxCop.Design.AssembliesCom#1](../code-quality/codesnippet/VisualBasic/ca1017-mark-assemblies-with-comvisibleattribute_1.vb)]

@@ -18,12 +18,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 7323fd044675eda2f528788ffc40943d071bf12b
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 875e0b4052cdc7287b264899620d4e083ac6b153
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234081"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72443870"
 ---
 # <a name="ca1715-identifiers-should-have-correct-prefix"></a>CA1715: Identifikátory by měly mít správnou předponu
 
@@ -31,7 +31,7 @@ ms.locfileid: "71234081"
 |-|-|
 |TypeName|IdentifiersShouldHaveCorrectPrefix|
 |CheckId|CA1715|
-|Kategorie|Microsoft.Naming|
+|Kategorie|Microsoft. pojmenování|
 |Zásadní změna|Přerušení – při vyvolání na rozhraní.<br /><br /> Nerozdělitelné – při vyvolání v parametrech obecného typu.|
 
 ## <a name="cause"></a>příčina
@@ -71,7 +71,7 @@ dotnet_code_quality.CA2007.allow_single_letter_type_parameters = true
 ```
 
 > [!NOTE]
-> Toto pravidlo se nikdy neaktivuje pro parametr `T`typu s názvem, `Collection<T>`například.
+> Toto pravidlo se nikdy neaktivuje pro parametr typu s názvem `T`, například `Collection<T>`.
 
 ### <a name="api-surface"></a>Plocha rozhraní API
 

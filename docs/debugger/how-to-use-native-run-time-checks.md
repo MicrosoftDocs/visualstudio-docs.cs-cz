@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Použití nativních kontrol za běhu | Microsoft Docs'
+title: 'Postupy: použití nativních kontrol za běhu | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -37,15 +37,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aeebdd8a86cb8ca6ffc1358a8558654d1e4d0b92
-ms.sourcegitcommit: ea182703e922c74725045afc251bcebac305068a
+ms.openlocfilehash: 3cef755721a9c5b917b080fa10f1819055a18ed7
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71211040"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72430552"
 ---
 # <a name="how-to-use-native-run-time-checks"></a>Postupy: Použití nativních kontrol za běhu
-V jazyce C++Visual můžete použít nativní [runtime_checks](/cpp/preprocessor/runtime-checks) k zachycení běžných chyb za běhu, jako například:
+V projektu sady Visual C++ Studio můžete použít nativní [runtime_checks](/cpp/preprocessor/runtime-checks) k zachycení běžných chyb za běhu, jako například:
 
 - Poškození ukazatele zásobníku
 
@@ -57,7 +57,7 @@ V jazyce C++Visual můžete použít nativní [runtime_checks](/cpp/preprocessor
 
 - Ztráta dat u přiřazení do kratší proměnné.
 
-  Použijete-li **/RTC** s optimalizovaným sestavením ( **/o**), dojde k chybě kompilátoru. Použijete- `runtime_checks` li direktivu pragma v rámci optimalizovaného sestavení, tato direktiva pragma nemá žádný vliv.
+  Použijete-li **/RTC** s optimalizovaným sestavením ( **/o**), dojde k chybě kompilátoru. Použijete-li direktivu pragma `runtime_checks` v optimalizovaném sestavení, direktiva pragma nemá žádný vliv.
 
   Když ladíte program, který má povolenou kontrolu za běhu, je výchozí akcí pro program zastavení a přerušení ladicího programu v případě, že dojde k chybě za běhu. Toto výchozí chování můžete změnit pro jakoukoli kontrolu za běhu. Další informace naleznete v tématu [Správa výjimek pomocí ladicího programu](../debugger/managing-exceptions-with-the-debugger.md).
 
@@ -75,7 +75,7 @@ V jazyce C++Visual můžete použít nativní [runtime_checks](/cpp/preprocessor
 
 ### <a name="to-modify-native-run-time-check-behavior"></a>Postup změny nativního chování při kontrole za běhu
 
-- `runtime_checks` Použijte direktivu pragma.
+- Použijte direktivu pragma `runtime_checks`.
 
 ## <a name="see-also"></a>Viz také
 - [Ladění v sadě Visual Studio](../debugger/index.yml)

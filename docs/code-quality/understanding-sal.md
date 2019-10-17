@@ -8,12 +8,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 61a1f74d964c2d6f43608f23b9898054048bb86b
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: e3740b9a7544d6cc6d5b9eceb548ae66e7d3f474
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018247"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72445596"
 ---
 # <a name="understanding-sal"></a>Porozumění SAL
 
@@ -82,7 +82,7 @@ Tato implementace obsahuje běžnou chybu mimo jednu. Naštěstí autor kódu za
 ### <a name="sal-basics"></a>Základy SAL
 SAL definuje čtyři základní druhy parametrů, které jsou zařazeny do kategorií podle vzorce použití.
 
-|Category|Anotace parametru|Popis|
+|Kategorie|Anotace parametru|Popis|
 |--------------|--------------------------|-----------------|
 |**Vstup do volané funkce**|`_In_`|Data se předávají volané funkci a jsou považována za jen pro čtení.|
 |**Vstup na volanou funkci a výstup do volajícího**|`_Inout_`|Použitelná data se předávají do funkce a můžou se změnit.|
@@ -118,7 +118,7 @@ V příkladech se nástroj Visual Studio Code Analysis používá společně s p
 
     > **C6387 neplatná hodnota parametru** ' pInt ' může být ' 0 ': to nedodržuje specifikace pro funkci ' InCallee '.
 
-### <a name="example-the-_in_-annotation"></a>Příklad: Anotace \_In @ no__t-1
+### <a name="example-the-_in_-annotation"></a>Příklad: anotace \_In @ no__t-1
 
 Poznámka `_In_` znamená, že:
 
@@ -156,7 +156,7 @@ void BadInCaller()
 
 Použijete-li analýzu Visual Studio Code v tomto příkladu, ověří, že volající přecházejí ukazatel, který není null, do inicializované vyrovnávací paměti pro `pInt`. V takovém případě ukazatel `pInt` nemůže mít hodnotu NULL.
 
-### <a name="example-the-_in_opt_-annotation"></a>Příklad: Anotace \_In @ no__t-1opt @ no__t-2
+### <a name="example-the-_in_opt_-annotation"></a>Příklad: anotace \_In @ no__t-1opt @ no__t-2
 
 `_In_opt_` je stejný jako `_In_` s tím rozdílem, že vstupní parametr může mít hodnotu NULL a proto by tato funkce měla kontrolu.
 
@@ -184,7 +184,7 @@ void InOptCaller()
 
 Analýza Visual Studio Code ověří, že funkce před přístupem k vyrovnávací paměti kontroluje hodnotu NULL.
 
-### <a name="example-the-_out_-annotation"></a>Příklad: Anotace \_Out @ no__t-1
+### <a name="example-the-_out_-annotation"></a>Příklad: anotace \_Out @ no__t-1
 
 `_Out_` podporuje běžný scénář, ve kterém je předán ukazatel bez hodnoty NULL, který odkazuje na vyrovnávací paměť elementu, a funkce inicializuje element. Volající nemusí před voláním inicializovat vyrovnávací paměť; volaná funkce příslibů k jejímu inicializaci, než se vrátí.
 
@@ -210,7 +210,7 @@ void OutCaller()
 
 Nástroj pro analýzu Visual Studio Code ověřuje, zda volající předává ukazatel bez hodnoty NULL do vyrovnávací paměti pro `pInt` a zda je vyrovnávací paměť inicializována funkcí před tím, než se vrátí.
 
-### <a name="example-the-_out_opt_-annotation"></a>Příklad: Anotace \_Out @ no__t-1opt @ no__t-2
+### <a name="example-the-_out_opt_-annotation"></a>Příklad: anotace \_Out @ no__t-1opt @ no__t-2
 
 `_Out_opt_` je stejný jako `_Out_` s tím rozdílem, že parametr může mít hodnotu NULL a proto by tato funkce měla kontrolu.
 
@@ -237,7 +237,7 @@ void OutOptCaller()
 
 Visual Studio Code Analysis ověří, že tato funkce kontroluje hodnotu NULL před tím, než `pInt` je zpětně odkazovaná, a pokud `pInt` nemá hodnotu NULL, je vyrovnávací paměť inicializována funkcí před tím, než se vrátí.
 
-### <a name="example-the-_inout_-annotation"></a>Příklad: Anotace \_Inout @ no__t-1
+### <a name="example-the-_inout_-annotation"></a>Příklad: anotace \_Inout @ no__t-1
 
 `_Inout_` slouží k zadání poznámky k parametru ukazatele, který může být změněn funkcí. Ukazatel musí před voláním ukazovat na platná inicializovaná data a i když se změní, musí mít při návratu stále platnou hodnotu. Poznámka určuje, že funkce může volně číst a zapisovat do vyrovnávací paměti s jedním prvkem. Volající musí poskytnout vyrovnávací paměť a inicializovat ji.
 
@@ -268,7 +268,7 @@ void BadInOutCaller()
 
 Visual Studio Code Analysis ověřuje, že volající přecházejí ukazatel, který není NULL, do inicializované vyrovnávací paměti pro `pInt` a to před vrácením, `pInt` je stále NULL a je inicializována vyrovnávací paměť.
 
-### <a name="example-the-_inout_opt_-annotation"></a>Příklad: Anotace \_Inout @ no__t-1opt @ no__t-2
+### <a name="example-the-_inout_opt_-annotation"></a>Příklad: anotace \_Inout @ no__t-1opt @ no__t-2
 
 `_Inout_opt_` je stejný jako `_Inout_` s tím rozdílem, že vstupní parametr může mít hodnotu NULL a proto by tato funkce měla kontrolu.
 
@@ -297,7 +297,7 @@ void InOutOptCaller()
 
 Analýza Visual Studio Code ověří, že tato funkce před přístupem k vyrovnávací paměti kontroluje hodnotu NULL, a pokud `pInt` není NULL, tato vyrovnávací paměť je inicializována funkcí před tím, než se vrátí.
 
-### <a name="example-the-_outptr_-annotation"></a>Příklad: Anotace \_Outptr @ no__t-1
+### <a name="example-the-_outptr_-annotation"></a>Příklad: anotace \_Outptr @ no__t-1
 
 `_Outptr_` slouží k přidání poznámky k parametru, který je určen k vrácení ukazatele.  Samotný parametr by neměl mít hodnotu NULL a volaná funkce vrátí ukazatel, který není NULL, a tento ukazatel ukazuje na inicializovaná data.
 
@@ -327,7 +327,7 @@ void OutPtrCaller()
 
 Analýza Visual Studio Code ověřuje, že volající předává ukazatel bez hodnoty NULL pro `*pInt` a že je vyrovnávací paměť inicializována funkcí před tím, než se vrátí.
 
-### <a name="example-the-_outptr_opt_-annotation"></a>Příklad: Anotace \_Outptr @ no__t-1opt @ no__t-2
+### <a name="example-the-_outptr_opt_-annotation"></a>Příklad: anotace \_Outptr @ no__t-1opt @ no__t-2
 
 `_Outptr_opt_` je stejný jako `_Outptr_` s tím rozdílem, že parametr je nepovinný – volající může předat ukazatel s hodnotou NULL pro parametr.
 
@@ -359,7 +359,7 @@ void OutPtrOptCaller()
 
 Analýza Visual Studio Code ověřuje, že tato funkce kontroluje hodnotu NULL před tím, než se odhlásí `*pInt` a že je vyrovnávací paměť inicializována funkcí, než se vrátí.
 
-### <a name="example-the-_success_-annotation-in-combination-with-_out_"></a>Příklad: Anotace \_Success @ no__t-1 v kombinaci s \_Out @ no__t-3
+### <a name="example-the-_success_-annotation-in-combination-with-_out_"></a>Příklad: anotace \_Success @ no__t-1 v kombinaci s \_Out @ no__t-3
 
 Poznámky lze použít pro většinu objektů.  Konkrétně můžete opatřit poznámkami celou funkci.  Jednou z nejoblíbenějších vlastností funkce je, že může být úspěšná nebo neúspěšná. Ale podobně jako asociace mezi vyrovnávací pamětí a její velikostí, CC++ /nemůže vyjádřit úspěch nebo neúspěch funkce. Pomocí anotace `_Success_` můžete říci, jakou úspěšnost funkce vypadá jako.  Parametr anotace `_Success_` je pouze výraz, který při hodnotě true označuje, že funkce byla úspěšná. Výraz může být cokoli, co může analyzátor poznámek zpracovat. Účinky poznámek po návratu funkce jsou použitelné pouze v případě, že funkce bude úspěšná. Tento příklad ukazuje, jak `_Success_` interaktivně pracovat s `_Out_`, aby to mělo správnou věc. Můžete použít klíčové slovo `return` pro reprezentaci návratové hodnoty.
 

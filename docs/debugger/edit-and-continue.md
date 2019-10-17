@@ -1,5 +1,5 @@
 ---
-title: Kód upravit a pokračovat v ladění | Dokumentace Microsoftu
+title: Upravit kód a pokračovat v ladění | Microsoft Docs
 ms.custom: seodec18
 ms.date: 05/31/2018
 ms.topic: conceptual
@@ -21,23 +21,23 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 008dde8239c2b4b70220159275b12066b8cf70bb
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: f11a170878e3efefc123ad7d61d0889f5bd95c12
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62851020"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72435726"
 ---
-# <a name="edit-code-and-continue-debugging-in-visual-studio-c-vb-c"></a>Úprava kódu a pokračování ladění v sadě Visual Studio (C#, VB, C++)
-Upravit a pokračovat, je funkce ušetří čas, který umožní vám provádět změny zdrojového kódu, zatímco je v režimu pozastavení. Při obnovení provádění programu výběrem příkazu ke spuštění jako **pokračovat** nebo **krok**, upravit a pokračovat automaticky použije změny kódu s určitými omezeními. To umožňuje provést změny kódu během relace ladění, namísto nutnosti zastavit a znovu zkompilovat celý váš program, restartujte relaci ladění.
+# <a name="edit-code-and-continue-debugging-in-visual-studio-c-vb-c"></a>Úprava kódu a pokračování v ladění v aplikaci VisualC#Studio (, C++VB,)
+Funkce upravit a pokračovat je funkcí pro ukládání času, která umožňuje provádět změny zdrojového kódu v době, kdy je program v režimu pozastavení. Když budete pokračovat v provádění programu tak, že vyberete příkaz pro spuštění, například **pokračovat** nebo **Krok**, upravit a pokračovat automaticky aplikuje změny kódu s některými omezeními. To vám umožňuje provádět změny v kódu během relace ladění, namísto nutnosti zastavit, znovu kompilovat celý program a restartovat ladicí relaci.
 
  Tento oddíl obsahuje následující témata:
 
- [Postupy: Povolení a zakázání operace Upravit a pokračovat](../debugger/how-to-enable-and-disable-edit-and-continue.md)
+ [Postupy: Povolení a zákaz operace Upravit a pokračovat](../debugger/how-to-enable-and-disable-edit-and-continue.md)
 
  [Postupy: Zastavení změn kódu](../debugger/how-to-stop-code-changes.md)
 
- [Upravit a pokračovat (Visual C#)](../debugger/edit-and-continue-visual-cpp.md)
+ [Upravit a pokračovat (C++)](../debugger/edit-and-continue-visual-cpp.md)
 
  [Upravit a pokračovat (Visual C#)](../debugger/edit-and-continue-visual-csharp.md)
 

@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: d312618c80abb6a4ce6e1a2676903d85867f4989
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 2ba4a7a16675bf6da0aa465a515b73c907aa80ac
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236161"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72449295"
 ---
 # <a name="ca1024-use-properties-where-appropriate"></a>CA1024: Použijte vlastnosti, kde je to vhodné
 
@@ -30,7 +30,7 @@ ms.locfileid: "71236161"
 |-|-|
 |TypeName|UsePropertiesWhereAppropriate|
 |CheckId|CA1024|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
@@ -85,7 +85,7 @@ Tuto možnost můžete nakonfigurovat jenom pro toto pravidlo, pro všechna prav
 
 Jedním z důvodů, proč programátoři nepoužívají vlastnost, je, že nechtějí, aby ladicí program automaticky rozbalí. Například vlastnost může zahrnovat přidělení velkého objektu nebo volání volání nespravovaného objektu, ale nemusí mít ve skutečnosti žádné pozorovatelné vedlejší účinky.
 
-Ladicímu programu můžete zabránit v automaticky rozbalování vlastností, a <xref:System.Diagnostics.DebuggerBrowsableAttribute?displayProperty=fullName>to použitím. Následující příklad ukazuje tento atribut aplikovaný na vlastnost instance.
+Ladicímu programu můžete zabránit v automatického rozbalování vlastností použitím <xref:System.Diagnostics.DebuggerBrowsableAttribute?displayProperty=fullName>. Následující příklad ukazuje tento atribut aplikovaný na vlastnost instance.
 
 ```vb
 Imports System

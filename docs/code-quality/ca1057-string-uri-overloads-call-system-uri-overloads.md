@@ -1,5 +1,5 @@
 ---
-title: 'CA1057: Přetížení řetězce identifikátoru URI volají přetížení System.Uri'
+title: 'CA1057: Řetězcové přetížení identifikátoru URI volá přetížení System.Uri'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -18,31 +18,31 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: e6bd77a49690979ea7ab3c4619fdd578a80bb77c
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 92990533b77d27f38296f8519c00840ff1f8c8b1
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235513"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72449087"
 ---
-# <a name="ca1057-string-uri-overloads-call-systemuri-overloads"></a>CA1057: Přetížení řetězce identifikátoru URI volají přetížení System.Uri
+# <a name="ca1057-string-uri-overloads-call-systemuri-overloads"></a>CA1057: Řetězcové přetížení identifikátoru URI volá přetížení System.Uri
 
 |||
 |-|-|
 |TypeName|StringUriOverloadsCallSystemUriOverloads|
 |CheckId|CA1057|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
 
-Typ deklaruje přetížení metod, které se liší pouze nahrazením řetězcového parametru <xref:System.Uri?displayProperty=fullName> parametrem a přetížení, které přijímá řetězcový parametr, nevolá přetížení, které <xref:System.Uri> přijímá parametr.
+Typ deklaruje přetížení metod, které se liší pouze nahrazením řetězcového parametru parametrem <xref:System.Uri?displayProperty=fullName> a přetížení, které přijímá řetězcový parametr, nevolá přetížení, které přijímá parametr <xref:System.Uri>.
 
 ## <a name="rule-description"></a>Popis pravidla
-Vzhledem k tomu, že přetížení se liší pouze řetězcem <xref:System.Uri> nebo parametrem, předpokládá se, že řetězec představuje identifikátor URI (Uniform Resource Identifier). Řetězcová reprezentace identifikátoru URI je náchylná k chybám analýzy a kódování a může vést k ohrožení bezpečnosti. <xref:System.Uri> Třída poskytuje tyto služby bezpečným a bezpečným způsobem. Chcete-li těžit výhody <xref:System.Uri> třídy, přetížení řetězce by mělo <xref:System.Uri> volat přetížení pomocí řetězcového argumentu.
+Vzhledem k tomu, že přetížení se liší pouze parametrem String nebo <xref:System.Uri>, předpokládá se, že řetězec představuje identifikátor URI (Uniform Resource Identifier). Řetězcová reprezentace identifikátoru URI je náchylná k chybám analýzy a kódování a může vést k ohrožení bezpečnosti. Třída <xref:System.Uri> poskytuje tyto služby bezpečným a bezpečným způsobem. Chcete-li těžit výhody třídy <xref:System.Uri>, přetížení řetězce by mělo volat přetížení <xref:System.Uri> pomocí řetězcového argumentu.
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
-Znovu Implementujte metodu, která používá řetězcovou reprezentaci identifikátoru URI, aby vytvořila instanci <xref:System.Uri> třídy pomocí řetězcového argumentu a poté <xref:System.Uri> předá objekt přetížení, které má <xref:System.Uri> parametr.
+Znovu Implementujte metodu, která používá řetězcovou reprezentaci identifikátoru URI, aby vytvořila instanci třídy <xref:System.Uri> pomocí řetězcového argumentu a poté předá objekt <xref:System.Uri> k přetížení, které má parametr <xref:System.Uri>.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 Pokud parametr řetězce nepředstavuje identifikátor URI, je bezpečné potlačit upozornění od tohoto pravidla.
@@ -55,7 +55,7 @@ Následující příklad ukazuje správně implementované přetížení řetěz
 [!code-vb[FxCop.Design.CallUriOverload#1](../code-quality/codesnippet/VisualBasic/ca1057-string-uri-overloads-call-system-uri-overloads_1.vb)]
 
 ## <a name="related-rules"></a>Související pravidla
-[CA2234: Předejte objekty System. URI místo řetězců.](../code-quality/ca2234-pass-system-uri-objects-instead-of-strings.md)
+[CA2234: Předejte objekty System.Uri namísto řetězců](../code-quality/ca2234.md)
 
 [CA1056: Vlastnosti identifikátoru URI by neměly být řetězce](../code-quality/ca1056-uri-properties-should-not-be-strings.md)
 

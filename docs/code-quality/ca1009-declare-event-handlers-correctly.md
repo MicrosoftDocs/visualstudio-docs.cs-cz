@@ -18,12 +18,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: e923730213ca31a4429d8547fdaaf980692f9a96
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: a7a91388c6f75043c92a053da3f5a8fb22ae82b9
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236480"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72446869"
 ---
 # <a name="ca1009-declare-event-handlers-correctly"></a>CA1009: Deklarujte správně obslužné rutiny událostí
 
@@ -31,16 +31,16 @@ ms.locfileid: "71236480"
 |-|-|
 |TypeName|DeclareEventHandlersCorrectly|
 |CheckId|CA1009|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
 Delegát, který zpracovává veřejnou nebo chráněnou událost, nemá správný podpis, návratový typ nebo názvy parametrů.
 
 ## <a name="rule-description"></a>Popis pravidla
-Metody zpracování událostí přebírají dva parametry. První je typu <xref:System.Object?displayProperty=fullName> a má název Sender. Je jím objekt, který vyvolal událost. Druhý parametr je typu <xref:System.EventArgs?displayProperty=fullName> a má název "e". Představuje data přidružená k události. Například pokud je událost vyvolána při každém otevření souboru, data události obvykle obsahují název souboru.
+Metody zpracování událostí přebírají dva parametry. První je typu <xref:System.Object?displayProperty=fullName> a nazývá odesílatel. Je jím objekt, který vyvolal událost. Druhý parametr je typu <xref:System.EventArgs?displayProperty=fullName> a má název "e". Představuje data přidružená k události. Například pokud je událost vyvolána při každém otevření souboru, data události obvykle obsahují název souboru.
 
-Metody obslužné rutiny událostí by neměly vracet hodnotu. V C# programovacím jazyce je tento typ označen návratovým typem `void`. Obslužná rutina události může vyvolat více metod ve více objektech. Pokud metody mohly vracet hodnotu, pro každou událost by se měly vyskytovat více návratových hodnot a k dispozici je jenom hodnota posledního vyvolané metody.
+Metody obslužné rutiny událostí by neměly vracet hodnotu. V C# programovacím jazyce je tato volba označena návratovým typem `void`. Obslužná rutina události může vyvolat více metod ve více objektech. Pokud metody mohly vracet hodnotu, pro každou událost by se měly vyskytovat více návratových hodnot a k dispozici je jenom hodnota posledního vyvolané metody.
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 Chcete-li opravit porušení tohoto pravidla, opravte podpis, návratový typ nebo názvy parametrů delegáta. Podrobnosti najdete v následujícím příkladu.
@@ -49,14 +49,14 @@ Chcete-li opravit porušení tohoto pravidla, opravte podpis, návratový typ ne
 Nepotlačujte upozornění na toto pravidlo.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje delegáta, který je vhodný pro zpracování událostí. Metody, které mohou být vyvolány touto obslužnou rutinou události, jsou v rozporu s signaturou, která je uvedena v pokynech pro návrh. `AlarmEventHandler`je název typu delegáta. `AlarmEventArgs`je odvozen ze základní třídy pro data <xref:System.EventArgs>události a obsahuje data události alarmu.
+Následující příklad ukazuje delegáta, který je vhodný pro zpracování událostí. Metody, které mohou být vyvolány touto obslužnou rutinou události, jsou v rozporu s signaturou, která je uvedena v pokynech pro návrh. `AlarmEventHandler` je název typu delegáta. `AlarmEventArgs` je odvozen ze základní třídy pro data události, <xref:System.EventArgs> a obsahuje data události alarmu.
 
 [!code-cpp[FxCop.Design.EventsTwoParams#1](../code-quality/codesnippet/CPP/ca1009-declare-event-handlers-correctly_1.cpp)]
 [!code-csharp[FxCop.Design.EventsTwoParams#1](../code-quality/codesnippet/CSharp/ca1009-declare-event-handlers-correctly_1.cs)]
 [!code-vb[FxCop.Design.EventsTwoParams#1](../code-quality/codesnippet/VisualBasic/ca1009-declare-event-handlers-correctly_1.vb)]
 
 ## <a name="related-rules"></a>Související pravidla
-[CA2109: Kontrola viditelných obslužných rutin událostí](../code-quality/ca2109-review-visible-event-handlers.md)
+[CA2109: Revize viditelných obslužných rutin událostí](../code-quality/ca2109.md)
 
 ## <a name="see-also"></a>Viz také:
 

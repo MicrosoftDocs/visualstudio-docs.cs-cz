@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 257100be0eb2766ef413854795c934b230e29370
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 93233f4c4fe7d718b128d569ae2fa55858f2453b
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235248"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72440594"
 ---
 # <a name="ca1065-do-not-raise-exceptions-in-unexpected-locations"></a>CA1065: Nevyvolávejte výjimky v neočekávaných umístěních
 
@@ -27,7 +27,7 @@ ms.locfileid: "71235248"
 |-|-|
 |TypeName|DoNotRaiseExceptionsInUnexpectedLocations|
 |CheckId|CA1065|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
@@ -66,13 +66,13 @@ Vlastnosti jsou v podstatě inteligentní pole. Proto by se měly chovat jako po
 
 Následující výjimky mohou být vyvolány z metody Get vlastnosti:
 
-- <xref:System.InvalidOperationException?displayProperty=fullName>a všechny odvozené (včetně <xref:System.ObjectDisposedException?displayProperty=fullName>)
+- <xref:System.InvalidOperationException?displayProperty=fullName> a všechny deriváty (včetně <xref:System.ObjectDisposedException?displayProperty=fullName>)
 
-- <xref:System.NotSupportedException?displayProperty=fullName>a všechny deriváty
+- <xref:System.NotSupportedException?displayProperty=fullName> a všechny deriváty
 
-- <xref:System.ArgumentException?displayProperty=fullName>(jenom z indexovaného Get)
+- <xref:System.ArgumentException?displayProperty=fullName> (pouze z indexovaného Get)
 
-- <xref:System.Collections.Generic.KeyNotFoundException>(jenom z indexovaného Get)
+- <xref:System.Collections.Generic.KeyNotFoundException> (pouze z indexovaného Get)
 
 ### <a name="event-accessor-methods"></a>Metody přístupového objektu události
 
@@ -80,11 +80,11 @@ Přístupové objekty událostí by měly být jednoduché operace, které nevyv
 
 Následující výjimky mohou být vyvolány z přístupového objektu události:
 
-- <xref:System.InvalidOperationException?displayProperty=fullName>a všechny odvozené (včetně <xref:System.ObjectDisposedException?displayProperty=fullName>)
+- <xref:System.InvalidOperationException?displayProperty=fullName> a všechny deriváty (včetně <xref:System.ObjectDisposedException?displayProperty=fullName>)
 
-- <xref:System.NotSupportedException?displayProperty=fullName>a všechny deriváty
+- <xref:System.NotSupportedException?displayProperty=fullName> a všechny deriváty
 
-- <xref:System.ArgumentException>a deriváty
+- <xref:System.ArgumentException> a deriváty
 
 ### <a name="equals-methods"></a>Equals – metody
 
@@ -94,7 +94,7 @@ Následující metody **Equals** by neměly vyvolat výjimky:
 
 - <xref:System.IEquatable%601.Equals%2A>
 
-Metoda **Equals** by měla vracet `true` nebo `false` namísto vyvolání výjimky. Například pokud se rovná se předává dvěma neodpovídajícím typům, měl by se `false` vracet pouze místo <xref:System.ArgumentException>vyvolání.
+Metoda **Equals** by měla vracet `true` nebo `false` namísto vyvolání výjimky. Například pokud se rovná se předává dvěma neodpovídajícím typům, by měl vrátit `false` namísto vyvolání <xref:System.ArgumentException>.
 
 ### <a name="gethashcode-methods"></a>Metody GetHashCode
 
@@ -110,7 +110,7 @@ Verze **GetHashCode** , které přebírají argument, mohou vyvolat <xref:System
 
 ### <a name="tostring-methods"></a>Metody ToString
 
-Ladicí program používá <xref:System.Object.ToString%2A?displayProperty=fullName> k zobrazení informací o objektech ve formátu řetězce. Proto by **ToString** neměl měnit stav objektu a neměl by vyvolat výjimky.
+Ladicí program používá <xref:System.Object.ToString%2A?displayProperty=fullName> pro zobrazení informací o objektech ve formátu řetězce. Proto by **ToString** neměl měnit stav objektu a neměl by vyvolat výjimky.
 
 ### <a name="static-constructors"></a>Statické konstruktory
 
@@ -122,13 +122,13 @@ Vyvolání výjimky z finalizační metody způsobí, že modul CLR nebude úsp�
 
 ### <a name="dispose-methods"></a>Metody Dispose
 
-<xref:System.IDisposable.Dispose%2A?displayProperty=fullName> Metoda by neměla vyvolat výjimku. Dispose se často volá jako součást logiky čištění v `finally` klauzuli. Proto explicitní vyvolání výjimky z Dispose vynutí uživatele přidat zpracování výjimek uvnitř `finally` klauzule.
+Metoda <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> by neměla vyvolat výjimku. Dispose se často volá jako součást logiky čištění v klauzuli `finally`. Proto explicitní vyvolání výjimky z Dispose vynutí uživatele přidat zpracování výjimek v klauzuli `finally`.
 
 Cesta kódu **Dispose (false)** by nikdy neměla vyvolat výjimky, protože Dispose je téměř vždy voláno z finalizační metody.
 
 ### <a name="equality-operators--"></a>Operátory rovnosti (= =,! =)
 
-Podobně jako metody Equals by operátory rovnosti měli `true` vracet `false`buď nebo, a neměly by vyvolat výjimky.
+Podobně jako metody Equals by operátory rovnosti měly vracet buď `true` nebo `false`, a neměly by vyvolávat výjimky.
 
 ### <a name="implicit-cast-operators"></a>Operátory implicitního přetypování
 
@@ -146,7 +146,7 @@ Pokud bylo porušení způsobeno deklarací výjimky místo vyvolané výjimky, 
 
 ## <a name="related-rules"></a>Související pravidla
 
-- [CA2219 Nevyvolávání výjimek v klauzulích výjimky](../code-quality/ca2219-do-not-raise-exceptions-in-exception-clauses.md)
+- [CA2219: Nevyvolávejte výjimky v klauzulích výjimky](../code-quality/ca2219.md)
 
 ## <a name="see-also"></a>Viz také:
 

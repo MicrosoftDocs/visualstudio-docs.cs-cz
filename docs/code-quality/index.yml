@@ -1,0 +1,61 @@
+### YamlMime:Landing
+title: Analýza kódu v aplikaci Visual Studio
+summary: Visual Studio poskytuje několik různých nástrojů pro analýzu a vylepšení kvality kódu.
+metadata:
+  title: Analyzátory kódu
+  description: Přečtěte si, jak vám může Visual Studio při analýze kvality kódu.
+  ms.prod: visual-studio-windows
+  ms.technology: vs-ide-general
+  ms.topic: landing-page
+  author: gewarren
+  ms.author: gewarren
+  ms.date: 10/15/2019
+  ms.openlocfilehash: eb7be803a8c9751550f46880cfd485dac2850527
+  ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+  ms.translationtype: MT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 10/16/2019
+  ms.locfileid: "72450721"
+landingContent:
+- title: Analýza jazyka C C++ a kódu
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Analýza jazyka C C++ a kódu
+      url: code-analysis-for-c-cpp-overview.md
+  - linkListType: reference
+    links:
+    - text: C++upozornění analýzy kódu
+      url: code-analysis-for-c-cpp-warnings.md
+- title: Analýza kvality spravovaného kódu
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Zdrojová analýza
+      url: roslyn-analyzers-overview.md
+    - text: Starší verze analýzy
+      url: static-code-analysis-for-managed-code-overview.md
+  - linkListType: concept
+    links:
+    - text: Nejčastější dotazy
+      url: analyzers-faq.md
+  - linkListType: how-to-guide
+    links:
+    - text: Instalace analyzátorů FxCop
+      url: install-fxcop-analyzers.md
+  - linkListType: reference
+    links:
+    - text: Upozornění analýzy spravovaného kódu
+      url: code-analysis-for-managed-code-warnings.md
+- title: Analýza spravovaného stylu kódu
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Analyzovat styl kódu
+      url: ../ide/create-portable-custom-editor-options.md
+- title: Měření složitosti kódu
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Metriky kódu
+      url: code-metrics-values.md

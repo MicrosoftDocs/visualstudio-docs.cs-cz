@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: d4a0a1c001407d947988497c422fdb8e88dd7c83
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: b06aa26b046743b06f8fdd274da7a804a5ec06f6
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234900"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72440719"
 ---
 # <a name="ca1401-pinvokes-should-not-be-visible"></a>CA1401: Volání nespravovaných kódů by neměla být viditelná
 
@@ -34,10 +34,10 @@ ms.locfileid: "71234900"
 |Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
-Veřejná nebo chráněná metoda ve veřejném typu má <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> atribut (také implementováno `Declare` klíčovým slovem [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]v).
+Veřejná nebo chráněná metoda ve veřejném typu má atribut <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName> (je implementován také klíčovým slovem `Declare` v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]).
 
 ## <a name="rule-description"></a>Popis pravidla
-Metody označené <xref:System.Runtime.InteropServices.DllImportAttribute> atributem (nebo metodami, které jsou definovány `Declare` pomocí klíčového slova v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) používají pro přístup k nespravovanému kódu služby vyvolání platformy. Tyto metody by neměly být vystaveny. Udržováním těchto metod jako soukromých nebo interních se ujistěte, že vaše knihovna nemůže být použita k porušení zabezpečení tím, že umožňuje volajícím přístup k nespravovaným rozhraním API, která by nemohly volat jinak.
+Metody označené atributem <xref:System.Runtime.InteropServices.DllImportAttribute> (nebo metody, které jsou definovány pomocí klíčového slova `Declare` v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) používají pro přístup k nespravovanému kódu služby volání platformy. Tyto metody by neměly být vystaveny. Udržováním těchto metod jako soukromých nebo interních se ujistěte, že vaše knihovna nemůže být použita k porušení zabezpečení tím, že umožňuje volajícím přístup k nespravovaným rozhraním API, která by nemohly volat jinak.
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 Chcete-li opravit porušení tohoto pravidla, změňte úroveň přístupu metody.

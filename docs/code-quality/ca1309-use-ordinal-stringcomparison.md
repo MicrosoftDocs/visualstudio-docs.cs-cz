@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: eff846cfacb30d97c28cadd14b86f7724b1d2ce4
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: e5274352a867c4c25c5fc68fd674c1e4c4855c2d
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234927"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72440613"
 ---
 # <a name="ca1309-use-ordinal-stringcomparison"></a>CA1309: Použijte řadový StringComparison
 
@@ -27,20 +27,20 @@ ms.locfileid: "71234927"
 |-|-|
 |TypeName|UseOrdinalStringComparison|
 |CheckId|CA1309|
-|Kategorie|Microsoft.Globalization|
+|Kategorie|Microsoft. Globalization|
 |Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
 
-Operace porovnání řetězců, která je nelingvistická, nenastavuje <xref:System.StringComparison> parametr buď na **ordinální** , nebo na **OrdinalIgnoreCase**.
+Operace porovnání řetězců, která je nelingvistická, nenastavuje parametr <xref:System.StringComparison> buď na **Ordinal** , nebo na **OrdinalIgnoreCase**.
 
 ## <a name="rule-description"></a>Popis pravidla
-Mnohé řetězcové operace, nejdůležitější <xref:System.String.Compare%2A?displayProperty=fullName> metody a <xref:System.String.Equals%2A?displayProperty=fullName> , nyní poskytují přetížení, které přijímá <xref:System.StringComparison?displayProperty=fullName> hodnotu výčtu jako parametr.
+Mnohé řetězcové operace, nejdůležitější metody <xref:System.String.Compare%2A?displayProperty=fullName> a <xref:System.String.Equals%2A?displayProperty=fullName>, nyní poskytují přetížení, které přijímá hodnotu výčtu <xref:System.StringComparison?displayProperty=fullName> jako parametr.
 
 Když zadáte buď **StringComparison. Ordinal** nebo **StringComparison. OrdinalIgnoreCase**, porovnávání řetězců je nelingvistické. To znamená, že funkce, které jsou specifické pro přirozený jazyk, se při rozhodování o porovnávání ignorují. Ignorování funkcí přirozeného jazyka znamená, že rozhodnutí jsou založena na jednoduchých porovnáních bajtů, nikoli v tabulkách s použitím malých a velkých písmen nebo rovnocenných hodnot, které jsou parametrizované pomocí jazykové V důsledku toho explicitním nastavením parametru buď na **StringComparison. Ordinal** nebo **StringComparison. OrdinalIgnoreCase**, váš kód často získává rychlost, zvyšuje správnost a je spolehlivější.
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
-Chcete-li opravit porušení tohoto pravidla, změňte metodu porovnání řetězců na přetížení, které přijímá <xref:System.StringComparison?displayProperty=fullName> výčet jako parametr, a zadejte buď **pořadové číslo** nebo **OrdinalIgnoreCase**. Například změňte `String.Compare(str1, str2)` na `String.Compare(str1, str2, StringComparison.Ordinal)`.
+Chcete-li opravit porušení tohoto pravidla, změňte metodu porovnání řetězců na přetížení, které přijímá výčet <xref:System.StringComparison?displayProperty=fullName> jako parametr a zadejte buď **Ordinal** , nebo **OrdinalIgnoreCase**. Například změňte `String.Compare(str1, str2)` na `String.Compare(str1, str2, StringComparison.Ordinal)`.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 Je bezpečné potlačit upozornění z tohoto pravidla, je-li knihovna nebo aplikace určena pro omezené místní cílovou skupinu, nebo pokud by měla být použita sémantika aktuální jazykové verze.
@@ -48,4 +48,4 @@ Je bezpečné potlačit upozornění z tohoto pravidla, je-li knihovna nebo apli
 ## <a name="see-also"></a>Viz také:
 
 - [Upozornění globalizace](../code-quality/globalization-warnings.md)
-- [CA1307: Zadat StringComparison](../code-quality/ca1307-specify-stringcomparison.md)
+- [CA1307: Zadejte možnosti StringComparison](../code-quality/ca1307-specify-stringcomparison.md)

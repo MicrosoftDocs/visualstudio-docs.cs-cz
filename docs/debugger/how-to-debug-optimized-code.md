@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Ladění optimalizovaného kódu | Dokumentace Microsoftu'
+title: 'Postupy: Ladění optimalizovaného kódu | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -21,73 +21,73 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 9b498bdb491e3a15dddf005d43435d84b837fcd0
-ms.sourcegitcommit: 47eeeeadd84c879636e9d48747b615de69384356
+ms.openlocfilehash: 590925a894f1bf9bfe70d9dd1bf6142fcb6a2e34
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63387749"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72430662"
 ---
 # <a name="how-to-debug-optimized-code"></a>Postupy: Ladění optimalizovaného kódu
 
 > [!NOTE]
-> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, zvolte nastavení importu a exportu v nabídce Nástroje. Další informace najdete v tématu [Resetovat nastavení](../ide/environment-settings.md#reset-settings).
+> Dialogová okna a příkazy nabídek, které vidíte, se mohou lišit od těch popsaných v nápovědě v závislosti na aktivních nastaveních nebo edici. Chcete-li změnit nastavení, v nabídce Nástroje klikněte na položku Nastavení importu a exportu. Další informace najdete v tématu [resetování nastavení](../ide/environment-settings.md#reset-settings).
 
 > [!NOTE]
-> [/Zo (vylepšit optimalizované ladění)](/cpp/build/reference/zo-enhance-optimized-debugging)– možnost kompilátoru (představíme v sadě Visual Studio Update 3) generuje rozsáhlejší informace ladění pro optimalizovaný kód (projekty, které nejsou sestaveny s **/Od** – možnost kompilátoru. Zobrazit [/O možnosti (Optimalizace kódu)](/cpp/build/reference/o-options-optimize-code)). To zahrnuje Vylepšená podpora ladění lokálních proměnných a vložené funkce.
+> Možnost kompilátoru [/Zo (vylepšit optimalizované ladění)](/cpp/build/reference/zo-enhance-optimized-debugging)(představená v aktualizaci Visual Studio Update 3) generuje bohatší informace ladění pro optimalizovaný kód (projekty, které nejsou sestavené pomocí možnosti kompilátoru **/od** . Viz [Možnosti/o (optimalizace kódu)](/cpp/build/reference/o-options-optimize-code)). To zahrnuje vylepšenou podporu pro ladění místních proměnných a vložené funkce.
 >
-> [Upravit a pokračovat](../debugger/edit-and-continue-visual-csharp.md) vypnutá při **/Zo** ocompiler možnost se používá.
+> Možnost [Upravit a pokračovat](../debugger/edit-and-continue-visual-csharp.md) je zakázána při použití možnosti **/Zo** ocompiler.
 
- Když kompilátor optimalizuje kód, přemístí a změní uspořádání pokyny. Výsledkem je účinnější zkompilovaný kód. Z důvodu této změny uspořádání ladicí program nemůže vždy identifikovat zdrojový kód, který odpovídá sadu pokynů.
+ Když kompilátor optimalizuje kód, přemístí a reorganizuje pokyny. Výsledkem je efektivnější zkompilovaný kód. Kvůli této změně uspořádání nemůže ladicí program vždy identifikovat zdrojový kód, který odpovídá sadě instrukcí.
 
- Může mít vliv na optimalizace:
+ Optimalizace může ovlivnit:
 
-- Lokální proměnné, které mohou být odebrána optimalizátorem nebo přesunout do umístění, které ladicí program nerozumí.
+- Místní proměnné, které lze odebrat optimalizátorem nebo přesunout do umístění, které ladicí program nerozumí.
 
-- Pozice uvnitř funkce, které se mění při Optimalizátor sloučí bloky kódu.
+- Pozice uvnitř funkce, které se změní, když Optimalizátor slučuje bloky kódu.
 
-- Názvy funkcí pro rámce v zásobníku volání, které mohou být další potíže, pokud Optimalizátor Sloučí dvě funkce.
+- Názvy funkcí pro rámce v zásobníku volání, které mohou být nesprávné, pokud Optimalizátor sloučí dvě funkce.
 
-  Rámce, které se zobrazí v zásobníku volání jsou téměř vždy správná, ale za předpokladu, že máte symbolů pro všechny snímky. Pokud máte poškození zásobníku, pokud máte funkce v jazyce sestavení, nebo pokud jsou snímky operačního systému bez odpovídající symboly v zásobníku volání, bude nesprávný rámce v zásobníku volání.
+  Rámce, které vidíte v zásobníku volání, jsou téměř vždy správné, ale za předpokladu, že máte symboly pro všechny snímky. Snímky v zásobníku volání budou nesprávné, pokud máte poškozený zásobník, pokud máte funkce napsané v jazyce sestavení nebo pokud existují snímky operačního systému bez odpovídajícího symbolu v zásobníku volání.
 
-  Globální a statické proměnné jsou vždy uvedeny správně. Proto je rozložení struktury. Pokud máte ukazatel na strukturu a hodnota ukazatele je správné, bude každé členské proměnné struktury zobrazení správné hodnoty.
+  Globální a statické proměnné jsou vždy zobrazeny správně. Takže je rozložení struktury. Pokud máte ukazatel na strukturu a hodnota ukazatele je správná, zobrazí se v každé členské proměnné struktury správná hodnota.
 
-  Kvůli těmto omezením by měl ladit, pokud možno používá neoptimalizované verzi programu. Ve výchozím nastavení optimalizace je vypnuta konfigurace ladění programu v jazyce Visual C++ a zapnuté v konfiguraci vydané verze.
+  Z důvodu těchto omezení byste měli ladit pomocí neoptimalizované verze programu, pokud je to možné. Ve výchozím nastavení je optimalizace vypnuta v konfiguraci ladění C++ programu a je zapnuta v konfiguraci vydané verze.
 
-  Chyba může být však zobrazí pouze v optimalizovanou verzi programu. V takovém případě musíte ladit optimalizovaný kód.
+  Chyba se však může zobrazit pouze v optimalizované verzi programu. V takovém případě je nutné ladit optimalizovaný kód.
 
-## <a name="to-turn-on-optimization-in-a-debug-build-configuration"></a>Chcete-li konfiguraci sestavení optimalizace ladění
+## <a name="to-turn-on-optimization-in-a-debug-build-configuration"></a>Zapnutí optimalizace v konfiguraci sestavení ladění
 
-1. Když vytvoříte nový projekt, vyberte `Win32 Debug` cíl. Použití `Win32``Debug` cílit, dokud se plně ladění programu a jste připraveni k sestavení `Win32 Release` cíl. Kompilátor neoptimalizuje `Win32 Debug` cíl.
+1. Při vytváření nového projektu vyberte `Win32 Debug` cíl. Použijte cíl `Win32``Debug`, dokud nebude program plně laděn a jste připraveni sestavit `Win32 Release` cíl. Kompilátor neoptimalizuje `Win32 Debug` cíl.
 
-2. Vyberte projekt v Průzkumníku řešení.
+2. Vyberte projekt v Průzkumník řešení.
 
-3. Na **zobrazení** nabídky, klikněte na tlačítko **stránky vlastností**.
+3. V nabídce **zobrazení** klikněte na položku **stránky vlastností**.
 
-4. V **stránky vlastností** dialogové okno pole, ujistěte se, že `Debug` výběru v **konfigurace** rozevíracího seznamu.
+4. V dialogovém okně **stránky vlastností** se ujistěte, že je v rozevíracím seznamu **konfigurace** vybraná možnost `Debug`.
 
-5. V zobrazení složky na levé straně vyberte **C/C++** složky.
+5. V zobrazení složky na levé straně vyberte složku **C/aC++**  .
 
-6. V části **C++** složky, vyberte `Optimization`.
+6. V části **C++** složka vyberte `Optimization`.
 
-7. V seznamu vlastnosti na pravé straně najít `Optimization`. Nastavení vedle sebe pravděpodobně říká `Disabled (` [/Od](/cpp/build/reference/od-disable-debug)`)`. Vyberte jednu z dalších možností (`Minimum Size``(`[/O1](/cpp/build/reference/o1-o2-minimize-size-maximize-speed)`)`, `Maximum Speed``(` [/O2](/cpp/build/reference/o1-o2-minimize-size-maximize-speed)`)`, `Full Optimization``(` [/Ox](/cpp/build/reference/ox-full-optimization) `)`, nebo `Custom`).
+7. V seznamu vlastností vpravo Najděte `Optimization`. Nastavení vedle něho pravděpodobně říká `Disabled (`[/Od](/cpp/build/reference/od-disable-debug)`)`. Vyberte jednu z dalších možností (`Minimum Size``(`[/O1](/cpp/build/reference/o1-o2-minimize-size-maximize-speed)`)`, `Maximum Speed``(`[/O2](/cpp/build/reference/o1-o2-minimize-size-maximize-speed)`)`, `Full Optimization``(`[/Ox](/cpp/build/reference/ox-full-optimization)`)` nebo `Custom`).
 
-8. Pokud jste zvolili `Custom` možnost `Optimization`, teď můžete nastavit možnosti pro všechny ostatní vlastnosti zobrazené v seznamu vlastností.
+8. Pokud jste pro `Optimization` zvolili možnost `Custom`, teď můžete nastavit možnosti pro kteroukoli z dalších vlastností zobrazených v seznamu vlastností.
 
-9. Vyberte vlastnosti konfigurace, C/C++, uzel příkazového řádku na stránce Vlastnosti projektu a přidejte `(` [/Zo](/cpp/build/reference/zo-enhance-optimized-debugging) `)` k **další možnosti** textového pole.
+9. Vyberte položku Vlastnosti konfigurace, uzel CC++/, příkazový řádek stránky vlastností projektu a přidejte do textového pole **Další možnosti** `(`[/Zo](/cpp/build/reference/zo-enhance-optimized-debugging)`)`.
 
     > [!WARNING]
-    > `/Zo` vyžaduje Visual Studio 2013 Update 3 nebo novější.
+    > `/Zo` vyžaduje Visual Studio 2013 Update 3 nebo novější verzi.
     >
-    >  Přidání `/Zo` dojde k zakázání [upravit a pokračovat](../debugger/edit-and-continue-visual-csharp.md).
+    >  Přidáním `/Zo` zakážete příkaz [Upravit a pokračovat](../debugger/edit-and-continue-visual-csharp.md).
 
-   Když ladíte optimalizovaný kód, použijte **zpětný překlad** okně zobrazíte pokyny, které jsou ve skutečnosti vytvářejí a. Při nastavení zarážek, je potřeba vědět, že zarážka může být přesunout společně s instrukce. Zvažte například následující kód:
+   Při ladění optimalizovaného kódu použijte okno **zpětný překlad** k zobrazení pokynů, které jsou skutečně vytvořeny a provedeny. Při nastavování zarážek je nutné znát, zda se zarážka může pohybovat spolu s instrukcí. Zvažte například následující kód:
 
 ```cpp
 for (x=0; x<10; x++)
 ```
 
- Předpokládejme, že jste nastavili zarážku na tomto řádku. Očekáváte zarážce 10krát, ale pokud je optimalizovaný kód, zarážka se projeví pouze jednou. Důvodem je, že první instrukce nastaví hodnotu `x` na hodnotu 0. Kompilátor rozpozná, že to jenom je třeba provést jednou a přesouvá ji ze smyčky. Zarážka se přesune s ním. Pokyny, které porovnání a zvýší `x` zůstávají uvnitř smyčky. Při prohlížení **zpětný překlad** okně [jednotku kroku](/previous-versions/visualstudio/visual-studio-2010/ek13f001(v=vs.100)) se automaticky nastaví na instrukci pro větší kontrolu, což je užitečné, když krokovat optimalizovaný kód.
+ Předpokládejme, že jste na tomto řádku nastavili zarážku. Můžete očekávat, že zarážka bude dosaženo 10 krát, ale pokud je kód optimalizován, zarážka se narazí pouze jednou. Důvodem je, že první instrukce nastaví hodnotu `x` na 0. Kompilátor rozpozná, že je nutné provést pouze jednou a přesune ho mimo smyčku. Zarážka se přesune s ním. Pokyny pro porovnání a zvýšení `x` zůstávají uvnitř smyčky. Když zobrazíte okno **zpětný překlad** , [jednotka kroku](/previous-versions/visualstudio/visual-studio-2010/ek13f001(v=vs.100)) je automaticky nastavena na instrukci pro větší kontrolu, což je užitečné při Krokovat s použitím optimalizovaného kódu.
 
 ## <a name="see-also"></a>Viz také:
 

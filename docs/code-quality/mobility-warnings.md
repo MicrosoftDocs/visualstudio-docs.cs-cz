@@ -14,15 +14,15 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 170caf52999fb687c040c2e9212d1a1ed2e154a0
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 5bf1d9402294980a2202bbd3ab99c03b5e438eaa
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62820671"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72448857"
 ---
 # <a name="mobility-warnings"></a>Upozornění mobility
-Upozornění mobility podporovat efektivní spotřeby energie.
+Upozornění mobility podporují efektivní využívání energie.
 
 ## <a name="in-this-section"></a>V tomto oddílu
 

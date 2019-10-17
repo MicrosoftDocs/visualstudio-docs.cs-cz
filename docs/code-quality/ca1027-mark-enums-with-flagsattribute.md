@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8375d2096417948b19a228d8a4f02accac7c0b5f
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 9fc9dde4aeb3363e542e475c253b292047f5c1c2
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236117"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72441377"
 ---
 # <a name="ca1027-mark-enums-with-flagsattribute"></a>CA1027: Označte výčty pomocí FlagsAttribute
 
@@ -27,24 +27,24 @@ ms.locfileid: "71236117"
 |-|-|
 |TypeName|MarkEnumsWithFlags|
 |CheckId|CA1027|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
 
-Hodnoty výčtu jsou mocninami dvou nebo jsou kombinací jiných hodnot, které jsou definovány ve výčtu, a <xref:System.FlagsAttribute?displayProperty=fullName> atribut není k dispozici. Pro snížení falešně pozitivních hodnot toto pravidlo neoznamuje porušení výčtů, které mají sousedící hodnoty.
+Hodnoty výčtu jsou mocninami dvou nebo jsou kombinací jiných hodnot, které jsou definovány ve výčtu, a atribut <xref:System.FlagsAttribute?displayProperty=fullName> není k dispozici. Pro snížení falešně pozitivních hodnot toto pravidlo neoznamuje porušení výčtů, které mají sousedící hodnoty.
 
 Ve výchozím nastavení toto pravidlo vyhledává pouze veřejné výčty, ale je možné jej [nakonfigurovat](#configurability).
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Výčet je typ hodnoty, který definuje množinu souvisejících pojmenovaných konstant. Platí <xref:System.FlagsAttribute> pro výčet, pokud se jeho pojmenované konstanty dají smysluplně kombinovat. Představte si například výčet dnů v týdnu v aplikaci, který uchovává přehled o dostupných prostředcích. Pokud je dostupnost každého prostředku kódována pomocí výčtu, který <xref:System.FlagsAttribute> je k dispozici, lze reprezentovat libovolnou kombinaci dnů. Bez atributu lze reprezentovat pouze jeden den v týdnu.
+Výčet je typ hodnoty, který definuje množinu souvisejících pojmenovaných konstant. Aplikuje <xref:System.FlagsAttribute> na výčet, pokud se jeho pojmenované konstanty dají smysluplně kombinovat. Představte si například výčet dnů v týdnu v aplikaci, který uchovává přehled o dostupných prostředcích. Pokud je dostupnost každého prostředku kódována pomocí výčtu, který obsahuje <xref:System.FlagsAttribute>, lze reprezentovat libovolnou kombinaci dnů. Bez atributu lze reprezentovat pouze jeden den v týdnu.
 
 Pro pole, která ukládají kombinovatelné výčty, jsou jednotlivé hodnoty výčtu považovány za skupiny bitů v poli. Proto se tato pole někdy označují jako *Bitová pole*. Pro kombinování hodnot výčtu pro úložiště v bitovém poli použijte logické podmíněné operátory. Chcete-li otestovat bitové pole k určení, zda je zadána konkrétní hodnota výčtu, použijte logické logické operátory. Pro bitové pole pro uložení a načtení kombinovaných hodnot výčtu správně musí být každá hodnota, která je definována ve výčtu, Mocnina dvou. Pokud to tak není, logické operátory logických operátorů nebudou moci extrahovat jednotlivé hodnoty výčtu, které jsou uloženy v poli.
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, přidejte <xref:System.FlagsAttribute> do výčtu.
+Chcete-li opravit porušení tohoto pravidla, přidejte do výčtu <xref:System.FlagsAttribute>.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
@@ -62,13 +62,13 @@ Tuto možnost můžete nakonfigurovat jenom pro toto pravidlo, pro všechna prav
 
 ## <a name="example"></a>Příklad
 
-V následujícím příkladu `DaysEnumNeedsFlags` je výčet, který splňuje požadavky na použití <xref:System.FlagsAttribute> , ale nemá je. Výčet nemá hodnoty, které jsou mocninou dvou, ale nesprávně určují <xref:System.FlagsAttribute>. `ColorEnumShouldNotHaveFlag` To porušuje CA2217 [pravidla: Neoznačujte výčty pomocí FlagsAttribute](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md).
+V následujícím příkladu je `DaysEnumNeedsFlags` výčet, který splňuje požadavky na použití <xref:System.FlagsAttribute>, ale nemá je. Výčet `ColorEnumShouldNotHaveFlag` nemá hodnoty, které jsou mocninou dvou, ale nesprávně určují <xref:System.FlagsAttribute>. To porušuje pravidlo [CA2217: neoznačujte výčty pomocí FlagsAttribute](../code-quality/ca2217.md).
 
 [!code-csharp[FxCop.Design.EnumFlags#1](../code-quality/codesnippet/CSharp/ca1027-mark-enums-with-flagsattribute_1.cs)]
 
 ## <a name="related-rules"></a>Související pravidla
 
-- [CA2217: Neoznačujte výčty pomocí FlagsAttribute](../code-quality/ca2217-do-not-mark-enums-with-flagsattribute.md)
+- [CA2217: Neoznačujte výčty pomocí FlagsAttribute](../code-quality/ca2217.md)
 
 ## <a name="see-also"></a>Viz také:
 

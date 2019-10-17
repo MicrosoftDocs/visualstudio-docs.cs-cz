@@ -1,5 +1,5 @@
 ---
-title: Ladění chyb a dialogových oknech upozornění | Dokumentace Microsoftu
+title: Ladění chyb a dialogových oken s upozorněním | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -21,15 +21,15 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e13d6d323264136c6cab4c753ba53d40acd5a628
-ms.sourcegitcommit: da4079f5b6ec884baf3108cbd0519d20cb64c70b
+ms.openlocfilehash: f261eac1c3cbc73bb12323c089ae88f4ffc6b120
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67852227"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72431673"
 ---
 # <a name="debugging-errors-and-warning-dialog-boxes"></a>Ladění chyb a dialogových oken s upozorněním
-V následující tabulce jsou chyby a upozornění dialogová okna, které můžete narazit při ladění aplikace.
+Níže jsou uvedená dialogová okna chyby a varování, se kterými se můžete setkat při ladění aplikace.
 
 ## <a name="in-this-section"></a>V tomto oddílu
  [Dialogové okno Kontrolní výraz je neplatný](../debugger/assertion-failed-dialog-box.md)
@@ -38,15 +38,15 @@ V následující tabulce jsou chyby a upozornění dialogová okna, které můž
 
  [Ladicí program nemůže zobrazit zdrojový kód nebo zpětný překlad](../debugger/debugger-cannot-display-source-code-or-disassembly.md)
  
- [Ladicí program služby nemá dostatek paměti](../debugger/error-debugger-services-no-memory.md)
+ [Nedostatek paměti pro služby ladicího programu](../debugger/error-debugger-services-no-memory.md)
 
  [Dialogové okno Spustitelný soubor pro relaci ladění](../debugger/executable-for-debugging-session-dialog-box.md)
 
- [Nepodařilo se použít změny kódu – dialogové okno](../debugger/edit-and-continue-dialog-box-cpp.md)
+ [Nepovedlo se použít změny kódu – dialogové okno](../debugger/edit-and-continue-dialog-box-cpp.md)
 
  [Dialogové okno programu Microsoft Visual Studio Debugger (vyvolána výjimka)](../debugger/microsoft-visual-studio-debugger-exception-thrown-dialog-box.md)
 
- [Žádný zdrojový kód k dispozici pro aktuální umístění dialogových oken](../debugger/no-source-available.md)
+ [Pro dialogové okno aktuální umístění není k dispozici žádný zdrojový kód.](../debugger/no-source-available.md)
 
  [Dialogové okno žádné symbolické informace](https://msdn.microsoft.com/library/18de4888-9cca-4059-a165-48b135fee4c9)
 
@@ -54,19 +54,19 @@ V následující tabulce jsou chyby a upozornění dialogová okna, které můž
 
  [Dialogové okno Upozornění na starý kód](../debugger/stale-code-warning-dialog-box.md)
 
- [Nelze se připojit k počítači](../debugger/error-unable-to-connect-to-the-machine-name-the-machine-cannot-be-found-on-the-network.md)
+ [Nepovedlo se připojit k počítači.](../debugger/error-unable-to-connect-to-the-machine-name-the-machine-cannot-be-found-on-the-network.md)
 
- [Chyba: Ladění není možné, protože v systému je povolen ladicí program jádra.](../debugger/error-debugging-isn-t-possible-because-a-kernel-debugger-is-enabled-on-the-system.md)
+ [Chyba: Ladění není možné, protože v systému je povolený ladicí program protokolu Kernel.](../debugger/error-debugging-isn-t-possible-because-a-kernel-debugger-is-enabled-on-the-system.md)
 
 ## <a name="related-sections"></a>Související oddíly
- [Ladění skriptů a Web: Chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md)
+ [Ladění skriptů a webu: chyby a řešení potíží](../debugger/debugging-web-applications-errors-and-troubleshooting.md)
 
- [Chyby při vzdáleném ladění](../debugger/remote-debugging-errors-and-troubleshooting.md)
+ [Chyby vzdáleného ladění](../debugger/remote-debugging-errors-and-troubleshooting.md)
 
- [Chybami připojení](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/8dbb3we5(v=vs.100))
+ [Chyby připojení](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/8dbb3we5(v=vs.100))
 
- [Řešení potíží s SQL, instalační program pro ladění](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/s7ahaxtd(v=vs.100))
+ [Řešení potíží s nastavením ladění SQL](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/s7ahaxtd(v=vs.100))
 
- [Ladění nejčastější dotazy k aplikaci Visual C++](../debugger/debugging-native-code-faqs.md)
+ [Nejčastější dotazy k ladění nativního kódu](../debugger/debugging-native-code-faqs.md)
 
  [Zabezpečení ladicího programu](../debugger/debugger-security.md)

@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 066b9d013847f5362ee0dd712002cf8578fb57a6
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: d3e50fb93e8cdfe6f65fe1b2de1da54b58a6a8c9
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236444"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72449306"
 ---
 # <a name="ca1010-collections-should-implement-generic-interface"></a>CA1010: Kolekce musí implementovat obecné rozhraní
 
@@ -27,12 +27,12 @@ ms.locfileid: "71236444"
 |-|-|
 |TypeName|CollectionsShouldImplementGenericInterface|
 |CheckId|CA1010|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
 
-Typ implementuje <xref:System.Collections.IEnumerable?displayProperty=fullName> rozhraní, ale <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> neimplementuje rozhraní a nadřazené sestavení cílí na rozhraní .NET. Toto pravidlo ignoruje typy, <xref:System.Collections.IDictionary?displayProperty=fullName>které implementují.
+Typ implementuje rozhraní <xref:System.Collections.IEnumerable?displayProperty=fullName>, ale neimplementuje rozhraní <xref:System.Collections.Generic.IEnumerable%601?displayProperty=fullName> a nadřazené sestavení cílí na rozhraní .NET. Toto pravidlo ignoruje typy, které implementují <xref:System.Collections.IDictionary?displayProperty=fullName>.
 
 Ve výchozím nastavení toto pravidlo vyhledává pouze externě viditelné typy, ale je možné jej [nakonfigurovat](#configurability).
 
@@ -68,18 +68,18 @@ Tuto možnost můžete nakonfigurovat jenom pro toto pravidlo, pro všechna prav
 
 ## <a name="example-violation"></a>Příklad porušení
 
-Následující příklad ukazuje třídu (typ odkazu), která je odvozena od neobecné `CollectionBase` třídy, která toto pravidlo porušuje.
+Následující příklad ukazuje třídu (typ odkazu), která je odvozena od neobecné třídy `CollectionBase`, která je v rozporu s tímto pravidlem.
 
 [!code-csharp[FxCop.Design.CollectionsGenericViolation#1](../code-quality/codesnippet/CSharp/ca1010-collections-should-implement-generic-interface_1.cs)]
 
 Chcete-li opravit porušení tohoto pravidla, proveďte jednu z následujících akcí:
 
 - Implementujte Obecná rozhraní.
-- Změňte základní třídu na typ, který již implementuje obecná i neobecná rozhraní, jako je `Collection<T>` například třída.
+- Změňte základní třídu na typ, který již implementuje jak obecná, tak i neobecná rozhraní, jako je například třída `Collection<T>`.
 
 ## <a name="fix-by-base-class-change"></a>Opravit se změnou základní třídy
 
-Následující příklad opravuje porušení změnou základní třídy kolekce z neobecné `CollectionBase` třídy na obecnou `Collection<T>` třídu (`Collection(Of T)` v Visual Basic).
+Následující příklad opravuje porušení změnou základní třídy kolekce z neobecné třídy `CollectionBase` na obecnou `Collection<T>` (`Collection(Of T)` v Visual Basic) třídě.
 
 [!code-csharp[FxCop.Design.CollectionsGenericBase#1](../code-quality/codesnippet/CSharp/ca1010-collections-should-implement-generic-interface_2.cs)]
 
@@ -87,18 +87,18 @@ Změna základní třídy již vydané třídy je považována za zásadní změ
 
 ## <a name="fix-by-interface-implementation"></a>Oprava podle implementace rozhraní
 
-Následující příklad opravuje porušení implementací těchto obecných rozhraní `IEnumerable<T>`:, `ICollection<T>`, `IList(Of T)` a `IList<T>` (`IEnumerable(Of T)`, `ICollection(Of T)`a v Visual Basic).
+Následující příklad opravuje porušení implementací těchto obecných rozhraní: `IEnumerable<T>`, `ICollection<T>` a `IList<T>` (`IEnumerable(Of T)`, `ICollection(Of T)` a `IList(Of T)` v Visual Basic).
 
 [!code-csharp[FxCop.Design.CollectionsGenericInterface#1](../code-quality/codesnippet/CSharp/ca1010-collections-should-implement-generic-interface_3.cs)]
 
 ## <a name="related-rules"></a>Související pravidla
 
-- [CA1005: Vyhnout se nadměrnému počtu parametrů u obecných typů](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)
+- [CA1005: Vyhněte se nadbytečným parametrům na obecných typech](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)
 - [CA1000: Nedeklarujte statické členy v obecných typech](../code-quality/ca1000-do-not-declare-static-members-on-generic-types.md)
-- [CA1002 Nezveřejňujte obecné seznamy](../code-quality/ca1002-do-not-expose-generic-lists.md)
-- [CA1006 Nevnořovat obecné typy v signaturách členů](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)
+- [CA1002: Nezveřejňujte obecné seznamy](../code-quality/ca1002-do-not-expose-generic-lists.md)
+- [CA1006: Nevnořujte obecné typy v signaturách členu](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)
 - [CA1004: Obecné metody by měly poskytnout parametr typu](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)
-- [CA1003: Použití instancí obecných obslužných rutin událostí](../code-quality/ca1003-use-generic-event-handler-instances.md)
+- [CA1003: Použijte instance obecných obslužných rutin události](../code-quality/ca1003-use-generic-event-handler-instances.md)
 - [CA1007: Použijte obecné typy, kde je to vhodné](../code-quality/ca1007-use-generics-where-appropriate.md)
 
 ## <a name="see-also"></a>Viz také:

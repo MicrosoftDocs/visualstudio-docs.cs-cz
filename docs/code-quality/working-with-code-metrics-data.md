@@ -13,100 +13,100 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bbe2c216a9293ddc8c5c1212957c2987924d14e1
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 126360a5cbc39653405d83362ae150edba401fb8
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62825068"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72448694"
 ---
-# <a name="use-the-code-metrics-results-window"></a>Použijte okno výsledků metrik kódu
+# <a name="use-the-code-metrics-results-window"></a>Použití okna výsledků metrik kódu
 
-**Výsledků metrik kódu** okně se zobrazí data, která je vygenerován nástrojem analýza kódu metriky. Další informace o hodnoty dat metrik kódu najdete v tématu [hodnoty metrik kódu](../code-quality/code-metrics-values.md).
+Okno **Výsledky metrik kódu** zobrazuje data generovaná analýzou metrik kódu. Další informace o hodnotách dat metrik kódu naleznete v tématu [hodnoty metrik kódu](../code-quality/code-metrics-values.md).
 
-## <a name="display-code-metrics-results"></a>Zobrazení výsledků metrik kódu
+## <a name="display-code-metrics-results"></a>Zobrazit výsledky metrik kódu
 
-**Výsledků metrik kódu** okno se automaticky zobrazí při generování výsledků metrik kódu. Kdykoli můžete také zobrazit okna.
+Okno **Výsledky metrik kódu** se zobrazí automaticky při generování výsledků metrik kódu. Okno můžete také kdykoli zobrazit.
 
-Okno výsledků metrik kódu pomocí jedné z následujících pořadí nabídky můžete zobrazit:
+Můžete zobrazit okno výsledků metrik kódu pomocí jedné z následujících sekvencí nabídky:
 
-- Na **analyzovat** nabídce zvolte **Windows** > **výsledků metrik kódu**.
+- V nabídce **analyzovat** vyberte**Výsledky metrik kódu** **Windows** > .
 
-- Na **zobrazení** nabídce zvolte **ostatní Windows** > **výsledků metrik kódu**.
+- V nabídce **zobrazení** vyberte jiné**Výsledky metrik kódu** **Windows** > .
 
-**Výsledků metrik kódu** otevře se okno, i v případě, že neobsahuje žádné výsledky.
+Otevře se okno **výsledků metrik kódu** , a to i v případě, že neobsahuje žádné výsledky.
 
-### <a name="to-view-code-metrics-details"></a>Chcete-li zobrazit podrobnosti metrik kódu
+### <a name="to-view-code-metrics-details"></a>Zobrazení podrobností o metrikách kódu
 
-Pokud byly vytvořeny výsledky metrik kódu, rozbalte ve stromu v **hierarchie** sloupce.
+Pokud byly vygenerovány Výsledky metrik kódu, rozbalte strom ve sloupci **hierarchie** .
 
 ## <a name="filter-code-metrics-results"></a>Filtrování výsledků metrik kódu
 
-Můžete filtrovat výsledky, které jsou zobrazeny v **výsledků metrik kódu** pomocí panelu nástrojů v horní části okna. Například můžete chtít zobrazit pouze výsledky, které mají index udržovatelnosti pod 65.
+Výsledky, které se zobrazí v okně **výsledků metrik kódu** , můžete filtrovat pomocí panelu nástrojů v horní části. Například můžete chtít zobrazit pouze výsledky, které mají index udržovatelnosti pod 65.
 
-**Filtr** rozevírací seznam obsahuje názvy sloupců výsledky. Když je definována filtr, přidá se do dolní části seznamu spolu s odsazení. Seznam může obsahovat posledních 10 filtry, které byly definovány.
+Rozevírací seznam **filtru** obsahuje názvy sloupců výsledků. Když je definovaný filtr, přidá se do dolní části seznamu spolu s odsazením. Seznam může obsahovat posledních 10 filtrů, které byly definovány.
 
-### <a name="to-filter-the-code-metrics-results"></a>K filtrování výsledků metrik kódu
+### <a name="to-filter-the-code-metrics-results"></a>Filtrování výsledků metrik kódu
 
-1. Z **filtr** seznamu, vyberte název sloupce.
+1. V seznamu **Filtr** vyberte název sloupce.
 
-2. V **Min**, zadejte minimální hodnotu, který se má zobrazit.
+2. V poli **min**zadejte minimální hodnotu, která se má zobrazit.
 
-3. V **maximální**, zadejte maximální hodnotu, který se má zobrazit.
+3. V poli **Max**(maximální) zadejte maximální hodnotu, která se má zobrazit.
 
-4. Klikněte na tlačítko **použít filtr** tlačítko.
+4. Klikněte na tlačítko **použít filtr** .
 
-5. Pokud chcete zobrazit podrobnosti výsledku, rozbalte stromovou strukturu hierarchie.
+5. Chcete-li zobrazit podrobnosti výsledku, rozbalte strom hierarchie.
 
-## <a name="add-remove-and-rearrange-data-columns"></a>Přidání, odebrání a změna uspořádání dat sloupců
+## <a name="add-remove-and-rearrange-data-columns"></a>Přidat, odebrat a změnit uspořádání sloupců dat
 
-Můžete přidat nebo odebrat výsledky ze sloupce **výsledků metrik kódu** okna. Kromě toho můžete změnit uspořádání sloupců výsledky tak, aby byly zobrazeny v pořadí, ve kterém chcete.
+Můžete přidat nebo odebrat sloupce výsledků z okna **výsledků metrik kódu** . Kromě toho můžete změnit uspořádání sloupců výsledků tak, aby se zobrazily v pořadí, které chcete.
 
-### <a name="add-or-remove-a-column"></a>Přidat nebo odebrat sloupce
+### <a name="add-or-remove-a-column"></a>Přidat nebo odebrat sloupec
 
-1. Klikněte na tlačítko **Přidat/odebrat sloupce** tlačítko, nebo klikněte pravým tlačítkem na záhlaví libovolného sloupce a potom klikněte na tlačítko **Přidat/odebrat sloupce**.
+1. Klikněte na tlačítko **Přidat nebo odebrat sloupce** nebo klikněte pravým tlačítkem na záhlaví sloupce a potom klikněte na **Přidat nebo odebrat sloupce**.
 
-1. V **Přidat/odebrat sloupce** dialogové okno, zaškrtněte nebo zrušte zaškrtnutí políčka pro sloupec, který chcete přidat nebo odebrat a pak zvolte **OK**.
+1. V dialogovém okně **Přidat nebo odebrat sloupce** zaškrtněte nebo zrušte zaškrtnutí políčka u sloupce, který chcete přidat nebo odebrat, a pak zvolte **OK**.
 
 ### <a name="rearrange-columns"></a>Změnit uspořádání sloupců
 
-1. Klikněte na tlačítko **Přidat/odebrat sloupce** tlačítko.
+1. Klikněte na tlačítko **Přidat nebo odebrat sloupce** .
 
-1. V **Přidat/odebrat sloupce** dialogového okna, vyberte sloupec, který chcete přesunout a pak zvolte šipku nahoru nebo šipku dolů.
+1. V dialogovém okně **Přidat nebo odebrat sloupce** vyberte sloupec, který chcete přesunout, a pak zvolte buď šipku nahoru nebo šipka dolů.
 
-1. Když sloupec je umístěn, kam chcete, zvolte **OK**.
+1. Když je sloupec umístěný tam, kde chcete, klikněte na **tlačítko OK**.
 
-## <a name="copy-data-to-the-clipboard-or-excel"></a>Kopírování dat do schránky nebo aplikace Excel
+## <a name="copy-data-to-the-clipboard-or-excel"></a>Kopírovat data do schránky nebo Excelu
 
-Můžete vybrat a kopírovat vybraného řádku dat metrik kódu do schránky jako textový řetězec, který obsahuje jeden řádek pro název a hodnotu každého sloupce data. Můžete také kliknout na **otevřít výběr v aplikaci Microsoft Excel** exportovat všechny výsledky metrik kódu do Excelové tabulky.
+Vybraný řádek dat metriky kódu můžete vybrat a zkopírovat do schránky jako textový řetězec, který obsahuje jeden řádek pro název a hodnotu každého sloupce dat. Můžete také kliknout na **otevřít výběr v aplikaci Microsoft Excel** a exportovat výsledky metriky kódu do excelové tabulky.
 
-## <a name="create-a-work-item-based-on-code-metric-results"></a>Vytvoření pracovní položky na základě výsledků metrik kódu
+## <a name="create-a-work-item-based-on-code-metric-results"></a>Vytvořit pracovní položku na základě výsledků metrik kódu
 
-Můžete vytvořit [panely Azure](/azure/devops/boards/index?view=vsts) výsledkem pracovní položku, která je založena na **výsledků metrik kódu** okna. Po vytvoření pracovní položky sady Visual Studio automaticky zadá název **název** pole a kód dat metrik v části **historie** kartu.
+Můžete vytvořit [Azure boards](/azure/devops/boards/index?view=vsts) pracovní položku, která je založena na výsledcích v okně **výsledků metrik kódu** . Když je pracovní položka vytvořena, Visual Studio automaticky zadá název do pole **název** a data metriky kódu na kartě **Historie** .
 
-Další informace o Azure panelů pracovní položky, naleznete v tématu [pracovní položky](/azure/devops/boards/work-items/index?view=vsts).
+Další informace o Azure Boards pracovních položek naleznete v tématu [work items](/azure/devops/boards/work-items/index?view=vsts).
 
-### <a name="to-create-a-work-item-based-on-a-result"></a>Chcete-li vytvořit pracovní položku podle výsledku
+### <a name="to-create-a-work-item-based-on-a-result"></a>Vytvoření pracovní položky na základě výsledku
 
 1. Klikněte pravým tlačítkem na výsledek.
 
-2. Přejděte na **vytvořit pracovní položku**a potom klikněte na typ pracovní položky, kterou chcete vytvořit (**chyb**, **úloh**a tak dále).
+2. Přejděte na **vytvořit pracovní položku**a potom klikněte na typ pracovní položky, kterou chcete vytvořit (**Chyba**, **úkol**a tak dále).
 
-3. Vyplňte formulář pracovní položky vyplnění všech povinných polích.
+3. Vyplňte formulář pracovní položky vyplněním všech povinných polí.
 
-4. Na **souboru** nabídky, klikněte na tlačítko **Uložit vše** k uložení pracovní položky.
+4. V nabídce **soubor** klikněte na **Uložit vše** a uložte pracovní položku.
 
-### <a name="to-create-a-bug-based-on-a-result"></a>Vytvořit chybu na základě výsledku
+### <a name="to-create-a-bug-based-on-a-result"></a>Vytvoření chyby na základě výsledku
 
-1. Klikněte na výsledek a vyberte ji.
+1. Kliknutím vyberte výsledek.
 
-2. Klikněte na tlačítko **vytvořit pracovní položku** tlačítko.
+2. Klikněte na tlačítko **vytvořit pracovní položku** .
 
-3. Vyplňte formulář pracovní položky vyplnění všech povinných polích.
+3. Vyplňte formulář pracovní položky vyplněním všech povinných polí.
 
-4. Na **souboru** nabídky, klikněte na tlačítko **Uložit vše** k uložení pracovní položky.
+4. V nabídce **soubor** klikněte na **Uložit vše** a uložte pracovní položku.
 
 ## <a name="see-also"></a>Viz také:
 
 - [Hodnoty metrik kódu](../code-quality/code-metrics-values.md)
-- [Postupy: Vygenerování dat metrik kódu](../code-quality/how-to-generate-code-metrics-data.md)
+- [Postupy: generování dat metrik kódu](../code-quality/how-to-generate-code-metrics-data.md)

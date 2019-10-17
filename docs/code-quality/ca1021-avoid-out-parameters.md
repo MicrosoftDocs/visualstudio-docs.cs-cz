@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: e333e53fea1b965b250bdc97924e93728d55805a
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 2b07c987bdaa2d037c8c6dc95a37d5e77069dea5
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236182"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72449333"
 ---
 # <a name="ca1021-avoid-out-parameters"></a>CA1021: Vyhněte se výstupním parametrům
 
@@ -27,20 +27,20 @@ ms.locfileid: "71236182"
 |-|-|
 |TypeName|AvoidOutParameters|
 |CheckId|CA1021|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
-Veřejná nebo chráněná metoda ve veřejném typu má `out` parametr.
+Veřejná nebo chráněná metoda ve veřejném typu má parametr `out`.
 
 ## <a name="rule-description"></a>Popis pravidla
-Předávání typů odkazem (pomocí `out` nebo `ref`) vyžaduje zkušenosti s ukazateli, porozumění způsobu, jakým se liší typy hodnot a typy odkazů, a metody zpracování s více návratových hodnot. Také rozdíl mezi `out` parametry a `ref` není široce srozumitelný.
+Předávání typů odkazem (pomocí `out` nebo `ref`) vyžaduje zkušenosti s ukazateli, porozumění způsobu, jakým se liší typy hodnot a referenční typy, a metody zpracování s více návratových hodnot. Rozdíl mezi parametry `out` a `ref` se navíc nepovažují za široce.
 
 Pokud je odkazový typ předán "odkazem", metoda zamýšlí použít parametr pro návrat jiné instance objektu. Předání typu odkazu odkazem je také známo, že používá dvojité ukazatele, ukazatel na ukazatel nebo dvojitou indirekce. Pomocí výchozí konvence volání, která je předána "podle hodnoty", parametr, který přebírá odkazový typ již obdrží ukazatel na objekt. Ukazatel, nikoli objekt, na který odkazuje, je předán podle hodnoty. Hodnota Pass by znamená, že metoda nemůže změnit ukazatel tak, aby odkazovala na novou instanci typu odkazu. Může však změnit obsah objektu, na který odkazuje. Pro většinu aplikací je to dostačující a vede k požadovanému chování.
 
-Pokud metoda musí vracet jinou instanci, použijte k tomu vrácenou hodnotu metody. Podívejte se <xref:System.String?displayProperty=fullName> na třídu pro různé metody, které pracují s řetězci a vracejí novou instanci řetězce. Při použití tohoto modelu musí volající rozhodnout, zda je původní objekt zachován.
+Pokud metoda musí vracet jinou instanci, použijte k tomu vrácenou hodnotu metody. V případě různých metod, které pracují s řetězci a návratové nové instance řetězce, se podívejte na třídu <xref:System.String?displayProperty=fullName>. Při použití tohoto modelu musí volající rozhodnout, zda je původní objekt zachován.
 
-I když návratové hodnoty jsou maloobchodech a silně využívány, `out` správné `ref` použití parametrů a vyžaduje pokročilou návrh a kódování. Architekti knihoven, kteří navrhují pro obecnou cílovou skupinu, by neměli očekávat `out` , `ref` že uživatelé budou hlavní pracovat s parametry nebo.
+I když jsou návratové hodnoty maloobchodech a silně využívány, správné použití parametrů `out` a `ref` vyžaduje průběžné navrhování a kódování. Architekti knihoven, kteří navrhují pro obecnou cílovou skupinu, by neměli očekávat, že uživatelé budou hlavní pracovat s parametry `out` nebo `ref`.
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 Chcete-li opravit porušení tohoto pravidla, které je způsobeno typem hodnoty, je třeba, aby metoda vracela objekt jako vrácenou hodnotu. Pokud metoda musí vracet více hodnot, změňte její návrh a vraťte jednu instanci objektu, který obsahuje hodnoty.
@@ -51,17 +51,17 @@ Chcete-li opravit porušení tohoto pravidla, která je způsobena odkazovým ty
 Z tohoto pravidla je bezpečné potlačit upozornění. Tento návrh ale může způsobit problémy s použitelností.
 
 ## <a name="example"></a>Příklad
-Následující knihovna ukazuje dvě implementace třídy, které generují odpovědi na zpětnou vazbu uživatele. První implementace (`BadRefAndOut`) vynutí, aby uživatel knihovny spravoval tři návratové hodnoty. Druhá implementace (`RedesignedRefAndOut`) zjednodušuje uživatelské prostředí vrácením instance třídy kontejneru (`ReplyData`), která spravuje data jako jednu jednotku.
+Následující knihovna ukazuje dvě implementace třídy, které generují odpovědi na zpětnou vazbu uživatele. První implementace (`BadRefAndOut`) přinutí uživateli knihovny spravovat tři návratové hodnoty. Druhá implementace (`RedesignedRefAndOut`) zjednodušuje uživatelské prostředí vrácením instance třídy kontejneru (`ReplyData`), která spravuje data jako jednu jednotku.
 
 [!code-csharp[FxCop.Design.NoRefOrOut#1](../code-quality/codesnippet/CSharp/ca1021-avoid-out-parameters_1.cs)]
 
 ## <a name="example"></a>Příklad
-Následující aplikace znázorňuje prostředí uživatele. Volání přepracované knihovny (`UseTheSimplifiedClass` metoda) je jednodušší a informace vrácené metodou lze snadno spravovat. Výstup ze dvou metod je stejný.
+Následující aplikace znázorňuje prostředí uživatele. Volání přepracované knihovny (metoda `UseTheSimplifiedClass`) je jednodušší a informace vrácené metodou se dají snadno spravovat. Výstup ze dvou metod je stejný.
 
 [!code-csharp[FxCop.Design.TestNoRefOrOut#1](../code-quality/codesnippet/CSharp/ca1021-avoid-out-parameters_2.cs)]
 
 ## <a name="example"></a>Příklad
-Následující příklad knihovny ukazuje, jak `ref` se používají parametry pro typy odkazů, a ukazuje lepší způsob implementace této funkce.
+Následující příklad knihovny ukazuje, jak se používají parametry `ref` pro typy odkazů, a ukazuje lepší způsob implementace této funkce.
 
 [!code-csharp[FxCop.Design.RefByRefNo#1](../code-quality/codesnippet/CSharp/ca1021-avoid-out-parameters_3.cs)]
 
@@ -86,7 +86,7 @@ Passing by return value:
 ## <a name="try-pattern-methods"></a>Vyzkoušet metody vzoru
 
 ### <a name="description"></a>Popis
-Metody, které implementují <xref:System.Int32.TryParse%2A?displayProperty=fullName>vzorec **Try\<>** , například, nevyvolávají toto porušení. Následující příklad ukazuje strukturu (typ hodnoty), která implementuje <xref:System.Int32.TryParse%2A?displayProperty=fullName> metodu.
+Metody, které implementují vzor **Try @ no__t-1Something >** , jako je například <xref:System.Int32.TryParse%2A?displayProperty=fullName>, nevyvolávají toto porušení. Následující příklad ukazuje strukturu (typ hodnoty), která implementuje metodu <xref:System.Int32.TryParse%2A?displayProperty=fullName>.
 
 ### <a name="code"></a>Kód
 [!code-csharp[FxCop.Design.TryPattern#1](../code-quality/codesnippet/CSharp/ca1021-avoid-out-parameters_5.cs)]

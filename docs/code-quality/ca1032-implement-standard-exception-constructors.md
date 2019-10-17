@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 06fdc566abd9bd16758f224f8a9fe805cddb2c61
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: a73a615c08b538f4580a8d40765dcd7603722aa1
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236050"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72446716"
 ---
 # <a name="ca1032-implement-standard-exception-constructors"></a>CA1032: Implementujte standardní konstruktory výjimky
 
@@ -27,18 +27,18 @@ ms.locfileid: "71236050"
 |-|-|
 |TypeName|ImplementStandardExceptionConstructors|
 |CheckId|CA1032|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
 
-Typ rozšiřuje <xref:System.Exception?displayProperty=fullName> , ale nedeklaruje všechny požadované konstruktory.
+Typ rozšiřuje <xref:System.Exception?displayProperty=fullName>, ale nedeklaruje všechny požadované konstruktory.
 
 ## <a name="rule-description"></a>Popis pravidla
 
 Typy výjimek musí implementovat následující tři konstruktory:
 
-- public NewException()
+- veřejné NewException ()
 
 - Public NewException (řetězec)
 
@@ -48,9 +48,9 @@ Kromě toho, pokud používáte starší analýzu FxCop na rozdíl od [analyzát
 
 - Protected nebo Private NewException (SerializationInfo, StreamingContext)
 
-Není-li dodána úplná sada konstruktorů, může být obtížné správně ošetřit výjimky. Například konstruktor, který má signaturu `NewException(string, Exception)` , slouží k vytváření výjimek, které jsou způsobeny jinými výjimkami. Bez tohoto konstruktoru nemůžete vytvořit a vyvolat instanci vlastní výjimky, která obsahuje vnitřní (vnořenou) výjimku, která by měla v takové situaci dělat spravovaný kód.
+Není-li dodána úplná sada konstruktorů, může být obtížné správně ošetřit výjimky. Například konstruktor, který má signaturu `NewException(string, Exception)`, slouží k vytváření výjimek, které jsou způsobeny jinými výjimkami. Bez tohoto konstruktoru nemůžete vytvořit a vyvolat instanci vlastní výjimky, která obsahuje vnitřní (vnořenou) výjimku, která by měla v takové situaci dělat spravovaný kód.
 
-První tři konstruktory výjimky jsou veřejnými úmluvami. Čtvrtý konstruktor je chráněn v nezapečetěných třídách a soukromý v zapečetěných třídách. Další informace najdete v tématu [CA2229: Implementujte konstruktory](../code-quality/ca2229-implement-serialization-constructors.md)serializace.
+První tři konstruktory výjimky jsou veřejnými úmluvami. Čtvrtý konstruktor je chráněn v nezapečetěných třídách a soukromý v zapečetěných třídách. Další informace naleznete v tématu [CA2229: implementace serializacch konstruktorů](../code-quality/ca2229.md).
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
@@ -58,7 +58,7 @@ Chcete-li opravit porušení tohoto pravidla, přidejte do výjimky chybějící
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Pokud je porušení způsobeno použitím jiné úrovně přístupu pro veřejné konstruktory, je bezpečné potlačit upozornění od tohoto pravidla. Kromě toho je v pořádku potlačit upozornění pro `NewException(SerializationInfo, StreamingContext)` konstruktor při vytváření přenositelné knihovny tříd (PCL).
+Pokud je porušení způsobeno použitím jiné úrovně přístupu pro veřejné konstruktory, je bezpečné potlačit upozornění od tohoto pravidla. Kromě toho je v pořádku potlačit upozornění pro konstruktor `NewException(SerializationInfo, StreamingContext)`, pokud vytváříte přenosnou knihovnu tříd (PCL).
 
 ## <a name="example"></a>Příklad
 
@@ -68,4 +68,4 @@ Následující příklad obsahuje typ výjimky, který porušuje toto pravidlo a
 
 ## <a name="see-also"></a>Viz také:
 
-[CA2229: Implementovat konstruktory serializace](../code-quality/ca2229-implement-serialization-constructors.md)
+[CA2229: Implementovat serializační konstruktory](../code-quality/ca2229.md)

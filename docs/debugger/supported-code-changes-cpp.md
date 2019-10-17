@@ -1,5 +1,5 @@
 ---
-title: Podporované změny kódu (C++) | Dokumentace Microsoftu
+title: Podporované změny kódu (C++) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -20,36 +20,36 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d029d5cb3deb886faa4423d24ae8d5282f80e6a
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 8e38123be6b780aa9f37dc2b329ec36e3f18e793
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62901958"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72430579"
 ---
 # <a name="supported-code-changes-c"></a>Podporované změny kódu (C++)
-Upravit a pokračovat jazyka Visual C++ zpracovává většinu typů změn kódu. Nicméně některé změny nejde použít při provádění programu. Pokud chcete tyto změny použít, musíte zastavit provádění a vytvářet nové verze kódu.
+Upravit a pokračovat pro C++ projekty zpracovává většinu typů změn kódu. V průběhu provádění programu však nelze některé změny použít. Chcete-li tyto změny použít, je nutné zastavit provádění a vytvořit novou verzi kódu.
 
- Zobrazit [upravit a pokračovat (Visual C++)](../debugger/edit-and-continue-visual-cpp.md) informace o práci s upravit a pokračovat jazyka C++ v sadě Visual Studio.
+ Informace o práci s úpravou a pokračováním C++ v aplikaci Visual Studio naleznete v tématu [Upravit a pokračovat (C++)](../debugger/edit-and-continue-visual-cpp.md) .
 
-## <a name="BKMK_Unsupported_changes"></a> Nepodporované změny
- Následující změny C/C++ nemohou být provedeny během relace ladění:
+## <a name="BKMK_Unsupported_changes"></a>Nepodporované změny
+ Během relace ladění nelzeC++ použít následující C/změny:
 
-- Většina změn globální nebo statická data.
+- Většina změn globálních nebo statických dat.
 
-- Změny spustitelné soubory, které jsou zkopírovány z jiného počítače a nebyl sestaven místně.
+- Změny spustitelných souborů, které jsou zkopírovány z jiného počítače a nejsou vytvořeny místně.
 
-- Změny na datový typ, které ovlivňují rozložení objektu, například datové členy třídy.
+- Změny datového typu, které ovlivňují rozložení objektu, například datových členů třídy.
 
-- Přidání více než 64 kB nový kód nebo data.
+- Přidání více než 64kb bajtů nového kódu nebo dat.
 
-- Přidání proměnné, které vyžadují konstruktor v okamžiku před ukazatele na instrukci.
+- Přidání proměnných, které vyžadují konstruktor v bodě před ukazatelem na instrukci.
 
-- Změny, které ovlivňují kód, který vyžaduje inicializace za běhu.
+- Změny ovlivňující kód, který vyžaduje inicializaci za běhu.
 
 - Přidání obslužných rutin výjimek, v některých případech.
 
-- Změny v souborech prostředků.
+- Změny souborů prostředků.
 
 - Změny kódu v souborech jen pro čtení.
 
@@ -57,84 +57,84 @@ Upravit a pokračovat jazyka Visual C++ zpracovává většinu typů změn kódu
 
 - Změny kódu, který nemá žádný soubor objektu.
 
-  Pokud jeden z těchto změn a pokuste se použít změny kódu, chyby nebo upozornění se zobrazí v **výstup** okna.
+  Pokud uděláte jednu z těchto změn a pokusíte se použít změny kódu, zobrazí se v okně **výstup** chybová zpráva nebo zpráva s upozorněním.
 
-- Upravit a pokračovat se neaktualizuje statických knihoven. Pokud provedete změny ve statické knihovně, provádění pokračuje ve starší verzi a žádné upozornění.
+- Upravit a pokračovat neprovede aktualizace statických knihoven. Pokud provedete změnu ve statické knihovně, vykonání pokračuje ve staré verzi a nebude vydáno žádné upozornění.
 
-## <a name="BKMK_Unsupported_scenarios"></a> Nepodporované scénáře
+## <a name="BKMK_Unsupported_scenarios"></a>Nepodporované scénáře
  Upravit a pokračovat pro C/C++ není k dispozici v následujících scénářích ladění:
 
-- Ladění nativní aplikace kompilována s [/Zo (vylepšit optimalizované ladění)](/cpp/build/reference/zo-enhance-optimized-debugging)
+- Ladění nativních aplikací kompilovaných pomocí [/Zo (rozšířené optimalizované ladění)](/cpp/build/reference/zo-enhance-optimized-debugging)
 
-- Ve verzích sady Visual Studio před Visual Studio 2015 Update 1, ladění aplikací pro UWP nebo komponenty. Od verze Visual Studio 2015 Update 1, můžete upravit a pokračovat v UWP C++ a aplikací rozhraní DirectX, protože teď podporuje `/ZI` přepínač kompilátoru se `/bigobj` přepnout. Můžete také upravit a pokračovat s binárními soubory zkompilovaná `/FASTLINK` přepnout.
+- Ve verzích sady Visual Studio předcházejících aktualizaci Visual Studio 2015 Update 1 ladí aplikace nebo komponenty UWP. Počínaje verzí Visual Studio 2015 Update 1 můžete použít možnost upravit a pokračovat v aplikacích pro C++ UWP a DirectX, protože teď podporuje přepínač kompilátoru `/ZI` s přepínačem `/bigobj`. Můžete také použít příkaz Upravit a pokračovat v binárních souborech kompilovaných s přepínačem `/FASTLINK`.
 
-- Ladění na Windows 98.
+- Ladění ve Windows 98.
 
-- Ladění ve smíšeném režimu (nativní a spravovaná).
+- Ladění ve smíšeném režimu (nativní/spravované)
 
-- Ladění jazyka JavaScript.
+- Ladění JavaScriptu.
 
 - Ladění SQL.
 
-- Ladění souboru výpisu paměti.
+- Ladění souboru s výpisem paměti.
 
-- Úpravy kódu po neošetřené výjimky, když **vrátit zásobník volání v případě neošetřených výjimek** možnost není vybraná.
+- Úprava kódu po neošetřené výjimce, pokud není vybrána možnost **unwind zásobníku volání při neošetřených výjimkách** .
 
-- Ladění aplikace s použitím **připojit k** místo spouštění aplikace výběrem **Start** na **ladění** nabídky.
+- Ladění aplikace pomocí možnosti **připojit** místo spuštění aplikace, a to tak, že v nabídce **ladění** kliknete na možnost **Spustit** .
 
 - Ladění optimalizovaného kódu.
 
-- Ladění starou verzi kódu po nové verze se nepovedlo sestavit kvůli chybám sestavení.
+- Ladění staré verze kódu po neúspěšném sestavení nové verze z důvodu chyb sestavení.
 
-## <a name="BKMK_Linking_limitations"></a> Omezení propojení
+## <a name="BKMK_Linking_limitations"></a>Omezení propojení
 
-### <a name="BKMK_Linker_options_that_disable_Edit_and_Continue"></a> Možnosti linkeru, které zákaz operace upravit a pokračovat
- Následující možnosti linkeru zákaz operace upravit a pokračovat:
+### <a name="BKMK_Linker_options_that_disable_Edit_and_Continue"></a>Možnosti linkeru, které zakazují úpravu a pokračování
+ Následující možnosti linkeru zakazují možnost upravit a pokračovat:
 
-- Nastavení **OPT**, **/OPT:ICF**, nebo **/incremental: No** zakáže upravit a pokračovat s následujícím upozorněním:
+- Nastavení **/OPT: ref**, **/OPT: ICF**nebo **/incremental: žádné** zakáže příkaz Upravit a pokračovat s následujícím upozorněním:
 
-     ODKAZ: upozornění LNK4075: ignoruje se neignoruje kvůli/OPT
-
-     specifikace
-
-- Nastavení **/ORDER**, **/RELEASE**, nebo **/FORCE** zakáže upravit a pokračovat se toto upozornění:
-
-     ODKAZ: upozornění LNK4075: ignoruje se parametr/incremental kvůli/Option
+     ODKAZ: upozornění LINKERŮ LNK4075: ignoruje se/EDITANDCONTINUE z důvodu/OPT
 
      specifikace
 
-- Nastavení možnosti, které brání vytvoření souboru databáze (PDB) programu zakáže upravit a pokračovat v žádné konkrétní upozornění.
+- Nastavením **/Order**, **/release**nebo **/Force** zakážete funkci upravit a pokračovat s tímto upozorněním:
 
-### <a name="BKMK_Auto_relinking_limitations"></a> Automatického opakovaného propojování omezení
- Ve výchozím nastavení upravit a pokračovat relinks programu na konci vytvoří spustitelný aktuální relace ladění.
+     ODKAZ: upozornění LINKERŮ LNK4075: ignoruje se/INCREMENTAL z důvodu/Option
 
- Upravit a pokračovat nemůže znovu programu, pokud ladíte z jiného umístění než původní umístění sestavení. Zobrazí se zpráva, že je potřeba ručně znovu sestavit.
+     specifikace
 
- Upravit a pokračovat není znovu sestavit statických knihoven. Pokud provedete změny na statickou knihovnu použitím funkce upravit a pokračovat, budete muset ručně znovu vytvořit knihovnu a znovu připojit aplikace používat.
+- Nastavení jakékoli možnosti, která znemožňuje vytvoření souboru databáze programu (PDB), zakáže příkaz Upravit a pokračovat bez konkrétního upozornění.
+
+### <a name="BKMK_Auto_relinking_limitations"></a>Omezení automatického přepojování
+ Ve výchozím nastavení příkaz Upravit a pokračovat znovu propojí na konci relace ladění a vytvoří aktuální spustitelný soubor.
+
+ Upravit a pokračovat nemůže znovu propojit program, pokud ho ladíte z jiného umístění, než je původní umístění sestavení. Zobrazí se zpráva s informacemi o tom, že je potřeba znovu sestavit ručně.
+
+ Při úpravě a pokračování nedojde k opakovanému sestavování statických knihoven. Pokud provedete změny statické knihovny pomocí upravit a pokračovat, budete muset ručně znovu sestavit knihovnu a znovu propojit aplikace, které ji používají.
 
  Funkce Upravit a pokračovat nevyvolává vlastní kroky sestavení. Pokud program používá vlastní kroky sestavení, je nutné provést ruční opětovné sestavení, aby se vyvolaly vlastní kroky sestavení. V tom případě je možné vypnout propojování po funkci Upravit a pokračovat, aby bylo zaručeno, že budete vyzváni, abyste provedli ruční znovu sestavení.
 
- **Chcete-li zakázat opakovaného propojování po funkci upravit a pokračovat**
+ **Zakázání přepojování po úpravě a pokračování**
 
-1. Na **ladění** nabídce zvolte **možnosti a nastavení**.
+1. V nabídce **ladění** vyberte **Možnosti a nastavení**.
 
-2. V **možnosti** dialogovém okně **ladění** uzel a vyberte **upravit a pokračovat** uzlu.
+2. V dialogovém okně **Možnosti** pod uzlem **ladění** a vyberte uzel **Upravit a pokračovat** .
 
-3. Zrušte **po ladění znovu propojit změny kódu** zaškrtávací políčko.
+3. Zrušte zaškrtnutí políčka **znovu propojit změny kódu po ladění** .
 
-## <a name="BKMK_Precompiled_Header_Limitations"></a> Omezení předkompilované hlavičky
- Ve výchozím nastavení upravit a pokračovat zatížení a procesy předkompilované hlavičky pro zrychlení zpracování změn kódu na pozadí. Načtení předkompilovaných hlaviček vyžaduje alokaci fyzické paměti, což může být problém, pokud kompilace probíhá na počítači s omezeným množstvím paměti RAM. Můžete určit, pokud to může být problém s použitím Správce úloh Windows ke zjištění dostupné fyzické paměti během ladění. Pokud je tato hodnota vyšší než velikost předkompilovaných hlaviček, pak by funkce Upravit a pokračovat neměla mít problém. Pokud je tato hodnota menší než velikost předkompilovaných hlaviček, můžete zabránit upravit a pokračovat v načtení předkompilovaných hlaviček na pozadí.
+## <a name="BKMK_Precompiled_Header_Limitations"></a>Omezení předkompilované hlavičky
+ Ve výchozím nastavení se při úpravách a pokračování načte a zpracovává předkompilovaných hlaviček na pozadí, aby se urychlilo zpracování změn kódu. Načtení předkompilovaných hlaviček vyžaduje přidělení fyzické paměti, což může být problém, pokud kompilujete na počítači s omezeným pamětí RAM. Můžete určit, zda se jedná o problém pomocí Správce úloh systému Windows k určení množství dostupné fyzické paměti při ladění. Pokud je tato hodnota vyšší než velikost předkompilovaných hlaviček, pak by funkce Upravit a pokračovat neměla mít problém. Pokud je velikost menší než velikost předkompilovaných hlaviček, můžete zabránit možnostem upravit a pokračovat v načítání předkompilovaných hlaviček na pozadí.
 
- **Chcete-li zakázat načítání předkompilovaných hlaviček na pozadí pro funkce upravit a pokračovat**
+ **Zakázání načítání předkompilovaných hlaviček na pozadí pro úpravy a pokračování**
 
-1. Na **ladění** nabídce zvolte **možnosti a nastavení**.
+1. V nabídce **ladění** vyberte **Možnosti a nastavení**.
 
-2. V **možnosti** dialogovém okně **ladění** uzel a vyberte **upravit a pokračovat** uzlu.
+2. V dialogovém okně **Možnosti** pod uzlem **ladění** a vyberte uzel **Upravit a pokračovat** .
 
-3. Zrušte **povolit předkompilování** zaškrtávací políčko.
+3. Zrušte zaškrtnutí políčka **Povol předkompilování** .
 
-## <a name="BKMK_IDL_Attribute_Limitations"></a> Omezení atributu IDL
- Upravit a pokračovat neobnoví soubory rozhraní definice (IDL). Proto se změny IDL – atributy neprojeví během ladění. Pokud chcete zobrazit výsledek změny IDL – atributy, musí zastavit ladění a znovu sestavte aplikaci. Upravit a pokračovat nevygeneruje chybu nebo upozornění Pokud se změnily atributy IDL. Další informace najdete v tématu [IDL – atributy](/cpp/windows/idl-attributes).
+## <a name="BKMK_IDL_Attribute_Limitations"></a>Omezení atributů IDL
+ Upravit a pokračovat negeneruje znovu negenerované soubory definice rozhraní (IDL). Proto se změny atributů IDL nebudou odrazit při ladění. Chcete-li zobrazit výsledek změn atributů IDL, je nutné zastavit ladění a znovu sestavit aplikaci. Upravit a pokračovat negeneruje chybu nebo upozornění, pokud se změnily atributy IDL. Další informace naleznete v tématu [IDL – atributy](/cpp/windows/idl-attributes).
 
 ## <a name="see-also"></a>Viz také
-- [Upravit a pokračovat (Visual C#)](../debugger/edit-and-continue-visual-cpp.md)
+- [Upravit a pokračovat (C++)](../debugger/edit-and-continue-visual-cpp.md)

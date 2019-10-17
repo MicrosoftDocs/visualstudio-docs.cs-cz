@@ -11,62 +11,62 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 768efb3e874f6427cd23f63f14671aa2db1bea71
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 738bb1bcf14d5b3459f325fe13eb3c4b0119e562
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62816354"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72448964"
 ---
-# <a name="how-to-create-or-update-standard-code-analysis-check-in-policies"></a>Postupy: Vytváření nebo aktualizace standardních zásad vracení zpět se změnami analýzy kódu
+# <a name="how-to-create-or-update-standard-code-analysis-check-in-policies"></a>Postupy: Vytváření nebo aktualizace standardních zásad vracení se změnami Analýzy kódu
 
-Může vyžadovat spustit analýzu kódu na všechny projekty kódu v projektu Azure DevOps s využitím zásad vrácení se změnami kód analýzy. Vyžadování analýzy kódu můžete zlepšit kvalitu kódu, který je vrácen do báze kódu.
+Můžete vyžadovat, aby se analýza kódu spouštěla na všech projektech kódu v projektu Azure DevOps pomocí zásad vrácení se změnami analýzy kódu. Vyžadování analýzy kódu může zlepšit kvalitu kódu, který je vrácen do základu kódu.
 
 > [!NOTE]
-> Tato funkce je dostupná jenom v případě, že používáte Team Foundation Server.
+> Tato funkce je k dispozici pouze v případě, že používáte Team Foundation Server.
 
-Zásady vrácení se změnami analýzy kódu se nastavují v nastavení projektu a platí pro každý projekt kódu. Spuštění analýzy kódu jsou nakonfigurované pro projekty kódu v souboru projektu (.xxproj) pro projekt kódu. Spuštění analýzy kódu jsou prováděny v místním počítači. Pokud povolíte zásady analýzy kódu vrácení se změnami, musí být zkompilovány soubory v projektu kódu, které se mají být vráceny se změnami po jejich poslední úpravy a analýza kódu spuštění, který obsahuje minimálně pravidla v nastavení projektu musí být provedeny v počítači kde změna byly provedeny s.
+Zásady vrácení se změnami analýzy kódu jsou nastaveny v nastavení projektu a platí pro každý projekt kódu. Spuštění analýzy kódu je konfigurováno pro projekty kódu v souboru projektu (. xxproj) pro projekt kódu. Spuštění analýzy kódu se provádí v místním počítači. Pokud povolíte zásadu vrácení se změnami analýzy kódu, soubory v projektu kódu, které mají být vráceny se změnami, musí být zkompilovány po poslední úpravě a spuštění analýzy kódu, který obsahuje minimálně pravidla v nastavení projektu musí být provedena v počítači, kde změna byl proveden tento počet.
 
-- Pro spravovaný kód, nastavíte tak, že určíte zásady vrácení se změnami *sada pravidel, která* , která obsahuje podmnožinu pravidel analýzy kódu.
+- Pro spravovaný kód nastavíte zásadu vrácení se změnami zadáním *sady pravidel* , která obsahuje podmnožinu pravidel analýzy kódu.
 
-- Pro kód C/C++ v sadě Visual Studio 2017 verze 15.6 a starší vyžaduje zásady vrácení se změnami, spuštění všech pravidel analýzy kódu. Můžete přidat processoru direktivy zakázat konkrétní pravidla pro jednotlivé projekty v projektu Azure DevOps. Ve verzi 15.7 nebo novější, můžete použít **/ analyze: ruleset** lze určit pravidla, které ke spuštění. Další informace najdete v tématu [pomocí sad pravidel k určování pravidel C++ pro spuštění](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
+- V případě jazykaC++ C/kódu v aplikaci Visual Studio 2017 verze 15,6 a dřívější zásada vracení se změnami vyžaduje, aby byla spuštěna všechna pravidla analýzy kódu. Můžete přidat direktivy pre-Processor, které zakazují specifická pravidla pro jednotlivé projekty kódu v projektu Azure DevOps. V 15,7 a novějších verzích můžete pomocí **/analyze: RuleSet** určit, která pravidla se mají spustit. Další informace najdete v tématu [použití sad pravidel k určení C++ pravidel ke spuštění](using-rule-sets-to-specify-the-cpp-rules-to-run.md).
 
-Po zadání zásad vrácení se změnami pro spravovaný kód, členové týmu můžete synchronizovat svoje nastavení analýzy kódu pro projekty kódu mají nastavení zásad Azure DevOps project.
+Až zadáte zásadu vrácení se změnami pro spravovaný kód, členové týmu mohou synchronizovat nastavení analýzy kódu pro projekty kódu do nastavení zásad projektu Azure DevOps.
 
-## <a name="to-open-the-check-in-policy-editor"></a>Otevřete editor zásad vrácení se změnami
+## <a name="to-open-the-check-in-policy-editor"></a>Otevření editoru zásad vracení se změnami
 
-1. V Průzkumníku týmových projektů, klikněte pravým tlačítkem na název projektu, přejděte na **nastavení projektu**a potom klikněte na tlačítko **správy zdrojových kódů**.
+1. V Team Explorer klikněte pravým tlačítkem myši na název projektu, přejděte na **nastavení projektu**a pak klikněte na **Správa zdrojového kódu**.
 
-1. V **správy zdrojových kódů** dialogové okno, vyberte **zásad vrácení se změnami** kartu.
+1. V dialogovém okně **Správa zdrojového kódu** vyberte kartu **Zásady vracení se změnami** .
 
 1. Proveďte jednu z těchto akcí:
 
-    - Klikněte na tlačítko **přidat** k vytvoření nové zásady vrácení se změnami.
+    - Kliknutím na tlačítko **Přidat** vytvořte novou zásadu vrácení se změnami.
 
-    - Dvakrát klikněte na existující **analýzy kódu** položky v **typ zásad** seznamu můžete změnit zásady.
+    - Pokud chcete zásadu změnit, poklikejte na existující položku **analýzy kódu** v seznamu **typ zásad** .
 
-## <a name="to-set-policy-options"></a>Chcete-li nastavit možnosti zásad
+## <a name="to-set-policy-options"></a>Nastavení možností zásad
 
-Zaškrtněte nebo zrušte tyto možnosti:
+Zaškrtněte nebo zrušte zaškrtnutí následujících možností:
 
 |Možnost|Popis|
 |------------|-----------------|
-|**Vynuťte vrácení se změnami obsahovat soubory, které jsou součástí aktuálního řešení.**|Analýza kódu lze spustit pouze na soubory zadané v konfiguračních souborech na řešení a projektu. Tato zásada zaručuje, že se analyzují veškerý kód, který je součástí řešení.|
-|**Vynutit analýzu kódu C/C++ (/ analyze)**|Vyžaduje sestavit všechny projekty jazyka C nebo C++ pomocí / analyze – možnost kompilátoru pro spuštění analýzy kódu před jejich mohou být vráceny se změnami.|
-|**Vynutit analýzu kódu pro spravovaný kód**|Vyžaduje, aby všechny spravované projekty spustit analýzu kódu a sestavení, než se mohou být vráceny se změnami.|
+|**Vyvynuťte vrácení se změnami tak, aby obsahovalo pouze soubory, které jsou součástí aktuálního řešení.**|Analýza kódu se dá spustit jenom pro soubory zadané v konfiguračních souborech řešení a projektu. Tato zásada zaručuje, že veškerý kód, který je součástí řešení, je analyzován.|
+|**Vyhovět analýzeC++ C/kódu (/Analyze)**|Vyžaduje, aby všechny projekty C++ C nebo projekty byly sestaveny pomocí možnosti kompilátoru/Analyze pro spuštění analýzy kódu předtím, než mohou být vráceny se změnami.|
+|**Vynutila analýzu kódu pro spravovaný kód**|Vyžaduje, aby všechny spravované projekty spouštěly analýzu kódu a sestavování předtím, než mohou být vráceny se změnami.|
 
-## <a name="to-specify-a-managed-rule-set"></a>Chcete-li určit sada pravidel spravovaná
+## <a name="to-specify-a-managed-rule-set"></a>Určení spravované sady pravidel
 
-Z **spustit tuto sadu pravidel** seznamu, použijte jednu z následujících metod:
+V seznamu **Spustit tuto sadu pravidel** použijte jednu z následujících metod:
 
-- Vyberte sadu standardních pravidel společnosti Microsoft.
+- Vyberte standardní sadu pravidel společnosti Microsoft.
 
-- Vyberte vlastní pravidlo. Klepnutím na  **\<vybrat sadu pravidel ze správy zdrojového kódu... >** . Zadejte cestu správy verzí sady pravidel, která v prohlížeči zdrojového ovládacího prvku. Syntaxe cestu správy verzí je následující:
+- Vyberte sadu vlastních pravidel kliknutím na **\<Select sadu pravidel ze správy zdrojového kódu... >** . Pak zadejte cestu správy verzí sady pravidel v prohlížeči správy zdrojového kódu. Syntaxe cesty správy verzí je:
 
    **$/** `TeamProjectName` **/** `VersionControlPath`
 
-Další informace o tom, jak vytvořit a implementovat vlastní zásady vrácení se změnami sady, naleznete v tématu [implementace vlastních zásad vrácení se změnami pro spravovaný kód](../code-quality/implementing-custom-code-analysis-check-in-policies-for-managed-code.md).
+Další informace o tom, jak vytvořit a implementovat sadu pravidel pro vlastní vracení se změnami, najdete v tématu [implementace vlastních zásad vrácení se změnami pro spravovaný kód](../code-quality/implementing-custom-code-analysis-check-in-policies-for-managed-code.md).
 
 ## <a name="see-also"></a>Viz také:
 
-- [Vytváření a používání zásad vrácení se změnami analýzy kódu](../code-quality/how-to-create-or-update-standard-code-analysis-check-in-policies.md)
+- [Vytvoření a použití zásad vrácení se změnami analýzy kódu](../code-quality/how-to-create-or-update-standard-code-analysis-check-in-policies.md)

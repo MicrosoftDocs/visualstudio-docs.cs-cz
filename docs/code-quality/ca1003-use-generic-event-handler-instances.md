@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: c654da177e4a9cf820887cf74977a4c3da5a57b6
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 42e40acfc8034f27c8b9131b6d5c8f8bb2f95dcb
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236645"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72441729"
 ---
 # <a name="ca1003-use-generic-event-handler-instances"></a>CA1003: Použijte instance obecných obslužných rutin události
 
@@ -30,7 +30,7 @@ ms.locfileid: "71236645"
 |-|-|
 |TypeName|UseGenericEventHandlerInstances|
 |CheckId|CA1003|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
@@ -41,13 +41,13 @@ Ve výchozím nastavení toto pravidlo vyhledává pouze externě viditelné typ
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Před rozhraním .NET, aby bylo možné předat vlastní informace obslužné rutině události, bylo nutné deklarovat nového delegáta, který zadal třídu odvozenou od <xref:System.EventArgs?displayProperty=fullName> třídy. V rozhraní .NET obecného <xref:System.EventHandler%601?displayProperty=fullName> delegáta umožňuje použití libovolné třídy odvozené z <xref:System.EventArgs> , která je použita společně s obslužnou rutinou události.
+Před rozhraním .NET, aby bylo možné předat vlastní informace obslužné rutině události, bylo nutné deklarovat nového delegáta, který zadal třídu odvozenou od třídy <xref:System.EventArgs?displayProperty=fullName>. V rozhraní .NET obecný delegát <xref:System.EventHandler%601?displayProperty=fullName> umožňuje použití jakékoli třídy odvozené od <xref:System.EventArgs> společně s obslužnou rutinou události.
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, odeberte delegáta a nahraďte jeho použití pomocí <xref:System.EventHandler%601?displayProperty=fullName> delegáta.
+Chcete-li opravit porušení tohoto pravidla, odeberte delegáta a nahraďte jeho použití pomocí delegáta <xref:System.EventHandler%601?displayProperty=fullName>.
 
-Pokud je delegát automaticky vygenerován kompilátorem Visual Basic, změňte syntaxi deklarace události pro použití <xref:System.EventHandler%601?displayProperty=fullName> delegáta.
+Pokud je delegát automaticky vygenerován kompilátorem Visual Basic, změňte syntaxi deklarace události na použití delegáta <xref:System.EventHandler%601?displayProperty=fullName>.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
@@ -70,17 +70,17 @@ Následující příklad ukazuje delegáta, který porušuje pravidlo. V příkl
 [!code-vb[FxCop.Design.CustomEventHandler#1](../code-quality/codesnippet/VisualBasic/ca1003-use-generic-event-handler-instances_1.vb)]
 [!code-csharp[FxCop.Design.CustomEventHandler#1](../code-quality/codesnippet/CSharp/ca1003-use-generic-event-handler-instances_1.cs)]
 
-Následující fragment kódu odebere deklaraci delegáta z předchozího příkladu, který splňuje pravidlo. Nahrazuje použití v `ClassThatRaisesEvent` metodách a `ClassThatHandlesEvent` pomocí <xref:System.EventHandler%601?displayProperty=fullName> delegáta.
+Následující fragment kódu odebere deklaraci delegáta z předchozího příkladu, který splňuje pravidlo. Nahrazuje jeho použití v metodách `ClassThatRaisesEvent` a `ClassThatHandlesEvent` pomocí delegáta <xref:System.EventHandler%601?displayProperty=fullName>.
 
 [!code-csharp[FxCop.Design.GenericEventHandler#1](../code-quality/codesnippet/CSharp/ca1003-use-generic-event-handler-instances_2.cs)]
 
 ## <a name="related-rules"></a>Související pravidla
 
-- [CA1005: Vyhnout se nadměrnému počtu parametrů u obecných typů](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)
-- [CA1010: Kolekce by měly implementovat obecné rozhraní](../code-quality/ca1010-collections-should-implement-generic-interface.md)
+- [CA1005: Vyhněte se nadbytečným parametrům na obecných typech](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)
+- [CA1010: Kolekce musí implementovat obecné rozhraní](../code-quality/ca1010-collections-should-implement-generic-interface.md)
 - [CA1000: Nedeklarujte statické členy v obecných typech](../code-quality/ca1000-do-not-declare-static-members-on-generic-types.md)
-- [CA1002 Nezveřejňujte obecné seznamy](../code-quality/ca1002-do-not-expose-generic-lists.md)
-- [CA1006 Nevnořovat obecné typy v signaturách členů](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)
+- [CA1002: Nezveřejňujte obecné seznamy](../code-quality/ca1002-do-not-expose-generic-lists.md)
+- [CA1006: Nevnořujte obecné typy v signaturách členu](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)
 - [CA1004: Obecné metody by měly poskytnout parametr typu](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)
 - [CA1007: Použijte obecné typy, kde je to vhodné](../code-quality/ca1007-use-generics-where-appropriate.md)
 

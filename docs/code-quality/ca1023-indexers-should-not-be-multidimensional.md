@@ -18,12 +18,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: f788ded21ef5dd9c84d218cedb55ec8dcf7eff2d
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 9b9488d3f28567e3e39f86355b353f6d1d9d84d9
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236168"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72441422"
 ---
 # <a name="ca1023-indexers-should-not-be-multidimensional"></a>CA1023: Indexery by neměly být multidimenzionální
 
@@ -31,7 +31,7 @@ ms.locfileid: "71236168"
 |-|-|
 |TypeName|IndexersShouldNotBeMultidimensional|
 |CheckId|CA1023|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
@@ -47,13 +47,13 @@ Chcete-li opravit porušení tohoto pravidla, změňte návrh tak, aby používa
 Potlačí upozornění z tohoto pravidla až po pečlivém zvážení nutnosti nestandardního indexeru.
 
 ## <a name="example"></a>Příklad
-Následující příklad ukazuje typ `DayOfWeek03`s multidimenzionálním indexerem, který porušuje pravidlo. Indexer se může zobrazit jako typ převodu, a proto je lépe přístupný jako metoda. Typ je přepracován v `RedesignedDayOfWeek03` pro splnění pravidla.
+Následující příklad ukazuje typ, `DayOfWeek03` s multidimenzionálním indexerem, který porušuje pravidlo. Indexer se může zobrazit jako typ převodu, a proto je lépe přístupný jako metoda. Typ je přepracován v `RedesignedDayOfWeek03` pro splnění pravidla.
 
 [!code-vb[FxCop.Design.OneDimensionForIndexer#1](../code-quality/codesnippet/VisualBasic/ca1023-indexers-should-not-be-multidimensional_1.vb)]
 [!code-cpp[FxCop.Design.OneDimensionForIndexer#1](../code-quality/codesnippet/CPP/ca1023-indexers-should-not-be-multidimensional_1.cpp)]
 [!code-csharp[FxCop.Design.OneDimensionForIndexer#1](../code-quality/codesnippet/CSharp/ca1023-indexers-should-not-be-multidimensional_1.cs)]
 
 ## <a name="related-rules"></a>Související pravidla
-[CA1043: Použít celočíselný nebo řetězcový argument pro indexery](../code-quality/ca1043-use-integral-or-string-argument-for-indexers.md)
+[CA1043: Použijte celočíselný nebo řetězcový argument pro indexery](../code-quality/ca1043-use-integral-or-string-argument-for-indexers.md)
 
 [CA1024: Použijte vlastnosti, kde je to vhodné](../code-quality/ca1024-use-properties-where-appropriate.md)

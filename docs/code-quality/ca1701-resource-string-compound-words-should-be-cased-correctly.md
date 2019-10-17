@@ -1,5 +1,5 @@
 ---
-title: 'CA1701: Malá a velká písmena složených slov řetězců prostředků by měla být použita správně'
+title: 'CA1701: Malá a velká písmena složených slov prostředku řetězců by měla být použita správně'
 ms.date: 03/28/2018
 ms.topic: reference
 f1_keywords:
@@ -14,20 +14,20 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: ed5ae8c0845755fe626e7e801f500389f9263cf5
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: c5d7aa3c29ca8ba82f6c50b070c5210cf10d1884
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234366"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72443926"
 ---
-# <a name="ca1701-resource-string-compound-words-should-be-cased-correctly"></a>CA1701: Malá a velká písmena složených slov řetězců prostředků by měla být použita správně
+# <a name="ca1701-resource-string-compound-words-should-be-cased-correctly"></a>CA1701: Malá a velká písmena složených slov prostředku řetězců by měla být použita správně
 
 |||
 |-|-|
 |TypeName|ResourceStringCompoundWordsShouldBeCasedCorrectly|
 |CheckId|CA1701|
-|Kategorie|Microsoft.Naming|
+|Kategorie|Microsoft. pojmenování|
 |Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
@@ -49,7 +49,7 @@ Změňte slovo tak, aby se použita správně.
 Ve výchozím nastavení se používá anglická (EN) verze kontroly pravopisu. Pokud chcete změnit jazyk kontroly pravopisu, můžete to udělat tak, že do souboru *AssemblyInfo.cs* nebo *AssemblyInfo. vb* přidáte jeden z následujících atributů:
 
 - Použijte <xref:System.Reflection.AssemblyCultureAttribute> k určení jazykové verze, pokud jsou prostředky v satelitním sestavení.
-- Použijte <xref:System.Resources.NeutralResourcesLanguageAttribute> k určení *neutrální jazykové verze* sestavení, pokud jsou prostředky ve stejném sestavení jako váš kód.
+- K určení *neutrální jazykové verze* sestavení použijte <xref:System.Resources.NeutralResourcesLanguageAttribute>, pokud jsou prostředky ve stejném sestavení jako váš kód.
 
 > [!IMPORTANT]
 > Pokud nastavíte jazykovou verzi na jinou než anglickou jazykovou verzi, toto pravidlo analýzy kódu je tiše zakázané.
@@ -58,13 +58,13 @@ Ve výchozím nastavení se používá anglická (EN) verze kontroly pravopisu. 
 
 Z tohoto pravidla je bezpečné potlačit upozornění, pokud slovník pravopisu rozpozná obě části složeného slova a záměr je použít dvě slova.
 
-Pro kontrolu pravopisu můžete také přidat složená slova do vlastního slovníku. Slova ve vlastním slovníku nezpůsobují porušení. Další informace najdete v tématu [jak: Přizpůsobení slovníku](../code-quality/how-to-customize-the-code-analysis-dictionary.md)analýzy kódu.
+Pro kontrolu pravopisu můžete také přidat složená slova do vlastního slovníku. Slova ve vlastním slovníku nezpůsobují porušení. Další informace najdete v tématu [Postup: přizpůsobení slovníku analýzy kódu](../code-quality/how-to-customize-the-code-analysis-dictionary.md).
 
 ## <a name="related-rules"></a>Související pravidla
 
-- [CA1702: Složená slova by se měla použita správně.](../code-quality/ca1702-compound-words-should-be-cased-correctly.md)
-- [CA1709: Identifikátory by se měly použita správně.](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
-- [CA1708: Identifikátory by se měly lišit o více než malých písmenech](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
+- [CA1702: Malá a velká písmena složených slov by měla být použita správně](../code-quality/ca1702-compound-words-should-be-cased-correctly.md)
+- [CA1709: Malá a velká písmena identifikátorů by měla být použita správně](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+- [CA1708: Identifikátory by se měly lišit více než použitím malých a velkých písmen](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
 
 ## <a name="see-also"></a>Viz také:
 

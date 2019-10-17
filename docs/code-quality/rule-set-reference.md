@@ -9,12 +9,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0222dab568ce421c3bd87474b956c82aab4d2683
-ms.sourcegitcommit: b83fefa8177c5554cbe2c59c4d102cbc534f7cc6
+ms.openlocfilehash: da0d70af989d759df94eb2d22606ad90373936ad
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69585239"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72448830"
 ---
 # <a name="code-analysis-rule-set-reference"></a>Referenční dokumentace sady pravidel nástroje Analýza kódu
 
@@ -23,9 +23,9 @@ Při konfiguraci starší verze analýzy pro projekty spravovaného kódu v sad�
 > [!NOTE]
 > Sady pravidel v této části se týkají starší verze analýzy. Informace o sadách pravidel dostupných pro balíčky analyzátoru kódu najdete v tématu [použití sad pravidel s analyzátory kódu](analyzer-rule-sets.md).
 
-Můžete použít jednu z těchto sad předdefinovaných pravidel, nebo se dají [přizpůsobování sady vlastních pravidel](../code-quality/how-to-create-a-custom-rule-set.md) podle svých požadavků projektu. Pokud zahrnete několik sad pravidel, které obsahují stejné pravidlo, v sadě vlastních pravidel, toto pravidlo se v sadě vlastních pravidel zobrazí jenom jednou.
+Můžete použít jednu z těchto předdefinovaných sad pravidel nebo můžete [přizpůsobit sadu pravidel](../code-quality/how-to-create-a-custom-rule-set.md) tak, aby vyhovovala vašim požadavkům na projekt. Pokud zahrnete několik sad pravidel, které obsahují stejné pravidlo, v sadě vlastních pravidel, toto pravidlo se v sadě vlastních pravidel zobrazí jenom jednou.
 
-Témata v této části popisují předdefinovaných pravidel sady a pravidel (nebo upozornění), které obsahují.
+Témata v této části popisují předdefinované sady pravidel a pravidla (nebo upozornění), která obsahují.
 
 | Sada pravidel | Zahrnutá pravidla |
 | - | - |

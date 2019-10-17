@@ -11,16 +11,16 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c68bb94a66be2c9fc1da4365cb77adf8d1330a1
-ms.sourcegitcommit: e95dd8cedcd180e0bce6a75c86cf861757918290
+ms.openlocfilehash: 4beaff14e896eae15d4ce68acf35331d03203246
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72163022"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72445645"
 ---
 # <a name="quickstart-code-analysis-for-cc"></a>Rychlý start: Analýza kódu pro C/C++
 
-Kvalitu aplikace můžete zlepšit spuštěním analýzy kódu pravidelně na jazyku C nebo C++ kódu. To vám může pomáhat najít běžné problémy, porušení dobrého programovacího postupu nebo vady, které se obtížně zjišťují prostřednictvím testování. Upozornění analýzy kódu se liší od kompilátoru chyby a upozornění, protože analýza kódu hledá vzory v konkrétním kódu, které jsou platné, ale přesto vytvořit problémy pro vy nebo ostatní uživatelé, kteří používají váš kód.
+Kvalitu aplikace můžete zlepšit spuštěním analýzy kódu pravidelně na jazyku C nebo C++ kódu. To vám může pomáhat najít běžné problémy, porušení dobrého programovacího postupu nebo vady, které se obtížně zjišťují prostřednictvím testování. Upozornění analýzy kódu se liší od chyb kompilátoru a upozornění, protože analýza kódu hledá konkrétní vzorové kódy, které jsou platné, ale může stále vytvářet problémy pro vás nebo jiné uživatele, kteří používají váš kód.
 
 ## <a name="configure-rule-sets-for-a-project"></a>Konfigurace sad pravidel pro projekt
 
@@ -28,7 +28,7 @@ Kvalitu aplikace můžete zlepšit spuštěním analýzy kódu pravidelně na ja
 
 2. Volitelně můžete v seznamech **Konfigurace** a **platforma** zvolit konfigurace sestavení a cílovou platformu.
 
-3. Chcete-li spustit nástroj Analýza kódu pokaždé, když se sestavení projektu použitím vybrané konfigurace, vyberte **povolit analýzu kódu na sestavení** zaškrtávací políčko. Můžete také spustit analýzu kódu ručně otevřením nabídky **analyzovat** a následným výběrem možnosti **Spustit analýzu kódu v** *ProjectName* nebo **Spustit analýzu kódu v souboru**.
+3. Chcete-li spustit analýzu kódu pokaždé, když je projekt sestaven pomocí vybrané konfigurace, zaškrtněte políčko **Povolit analýzu kódu při sestavení** . Můžete také spustit analýzu kódu ručně otevřením nabídky **analyzovat** a následným výběrem možnosti **Spustit analýzu kódu v** *ProjectName* nebo **Spustit analýzu kódu v souboru**.
 
 4. Vyberte [sadu pravidel](../code-quality/using-rule-sets-to-specify-the-cpp-rules-to-run.md) , kterou chcete použít, nebo vytvořte [vlastní sadu pravidel](../code-quality/how-to-create-a-custom-rule-set.md). Pokud používáte LLVM/Clang-CL, přečtěte si téma [použití Clang-uklizený v aplikaci Visual Studio](../code-quality/clang-tidy.md) ke konfiguraci možností analýzy Clang-uklizený.
 
@@ -69,17 +69,17 @@ Chcete-li analyzovat konkrétní upozornění, vyberte název upozornění v Sez
 
 Když vyberete upozornění, zvýrazní se řádek kódu, který způsobil upozornění, v editoru kódu sady Visual Studio.
 
-Po zjištění problému ho mohli vyřešit ve vašem kódu. Pak znovu spusťte analýzu kódu, abyste se ujistili, že se už nezobrazuje v Seznam chyb a že vaše oprava nevyvolala žádná nová upozornění.
+Po pochopení problému ho můžete vyřešit ve svém kódu. Pak znovu spusťte analýzu kódu, abyste se ujistili, že se už nezobrazuje v Seznam chyb a že vaše oprava nevyvolala žádná nová upozornění.
 
 ## <a name="suppress-code-analysis-warnings"></a>Potlačit upozornění analýzy kódu
 
-Existují situace, kdy byste se mohli rozhodnot Neopravovat upozornění analýzy kódu. Můžete se rozhodnout, že řešení upozornění vyžaduje příliš mnoho nahrávání ve vztahu k pravděpodobnost, že problém vzniknou v žádné Skutečná implementace kódu. Nebo může domnívat, že je nevhodná pro konkrétní kontext, který se používá v tomto upozornění analýzy. Jednotlivá upozornění můžete potlačit, aby se už nezobrazovala v Seznam chyb.
+Existují situace, kdy se můžete rozhodnout, že nechcete opravit upozornění analýzy kódu. Můžete se rozhodnout, že vyřešení upozornění vyžaduje příliš mnoho překódování ve vztahu k pravděpodobnosti, že problém nastane v jakékoli implementaci kódu reálného světa. Nebo se můžete domnívat, že analýza, která se používá v upozornění, je pro konkrétní kontext nevhodná. Jednotlivá upozornění můžete potlačit, aby se už nezobrazovala v Seznam chyb.
 
 Chcete-li potlačit upozornění:
 
 1. Pokud se nezobrazují podrobné informace, vyberte název upozornění a rozbalte ho.
 
-2. Zvolte **akce** odkaz v dolní části upozornění.
+2. V dolní části upozornění klikněte na odkaz **Akce** .
 
 3. Zvolte možnost **potlačit zprávu** a pak zvolte možnost **zdroj**.
 
@@ -101,11 +101,11 @@ Funkci sledování pracovní položky můžete použít k protokolování chyb z
 
 ## <a name="search-and-filter-code-analysis-results"></a>Hledání a filtrování výsledků analýzy kódu
 
-Můžete hledat dlouhé seznamy varovné zprávy a upozornění v řešení vícenásobného projektu můžete filtrovat.
+Můžete vyhledávat dlouhé seznamy varovných zpráv a můžete filtrovat upozornění v řešeních s více projekty.
 
-- **Filtrování upozornění podle názvu nebo ID upozornění**: Do vyhledávacího pole zadejte klíčové slovo.
+- **Filtrování upozornění podle názvu nebo ID upozornění**: zadejte klíčové slovo do vyhledávacího pole.
 
-- **Filtrování upozornění podle závažnosti**: Ve výchozím nastavení jsou zprávy nástroje Code Analysis přiřazeny závažnost **Upozornění**. Závažnost jedné nebo více zpráv můžete přiřadit jako **chybu** v sadě vlastních pravidel. Ve sloupci **závažnost** **Seznam chyb**klikněte na šipku rozevíracího seznamu a pak na ikonu filtru. Chcete-li zobrazit pouze zprávy, které jsou přiřazeny příslušné závažnosti, vyberte možnost **Upozornění** nebo **Chyba** . Zvolte **možnost Vybrat vše** , chcete-li zobrazit všechny zprávy.
+- **Filtrování upozornění podle závažnosti**: ve výchozím nastavení se zprávám analýzy kódu přiřadí závažnost **Upozornění**. Závažnost jedné nebo více zpráv můžete přiřadit jako **chybu** v sadě vlastních pravidel. Ve sloupci **závažnost** **Seznam chyb**klikněte na šipku rozevíracího seznamu a pak na ikonu filtru. Chcete-li zobrazit pouze zprávy, které jsou přiřazeny příslušné závažnosti, vyberte možnost **Upozornění** nebo **Chyba** . Zvolte **možnost Vybrat vše** , chcete-li zobrazit všechny zprávy.
 
 ## <a name="see-also"></a>Viz také:
 

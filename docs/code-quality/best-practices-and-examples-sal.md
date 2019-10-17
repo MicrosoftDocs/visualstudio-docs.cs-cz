@@ -7,12 +7,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: cd5e07f1e9ce83f36e6ecfbae148c84d18f40ff1
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: ccb18a704c2e8a2c185d3751483736631b0bba68
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72015951"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72448640"
 ---
 # <a name="best-practices-and-examples-sal"></a>Doporučené postupy a příklady (poznámky SAL)
 Tady je několik způsobů, jak využít jazyk pro poznámky ke zdrojovému kódu (SAL) a vyhnout se některým běžným problémům.
@@ -245,4 +245,4 @@ V tomto příkladu `_Out_opt_` říká, že ukazatel může mít hodnotu NULL ja
 [Zadávání poznámek ke strukturám a třídám](../code-quality/annotating-structs-and-classes.md)  
 [Zadávání poznámek o chování při zamykání](../code-quality/annotating-locking-behavior.md)  
 [Určení, kdy a kde se má poznámka použít](../code-quality/specifying-when-and-where-an-annotation-applies.md)  
-[Vnitřní funkce](../code-quality/intrinsic-functions.md)  
+[Vnitřní funkce](../code-quality/intrinsic-functions.md)

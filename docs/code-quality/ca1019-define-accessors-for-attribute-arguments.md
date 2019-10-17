@@ -1,5 +1,5 @@
 ---
-title: 'CA1019: Definujte přístupové objekty pro argumenty atributů'
+title: 'CA1019: Definujte přístupové vlastnosti pro argumenty atributu'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,23 +17,23 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: c53fe96163a3913c024eefeb5deb8a47df691e1f
-ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
+ms.openlocfilehash: 96e001287efa743e21deff85c00d945f9f6bb9ee
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72306143"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72441599"
 ---
-# <a name="ca1019-define-accessors-for-attribute-arguments"></a>CA1019: Definujte přístupové objekty pro argumenty atributů
+# <a name="ca1019-define-accessors-for-attribute-arguments"></a>CA1019: Definujte přístupové vlastnosti pro argumenty atributu
 
 |||
 |-|-|
 |TypeName|DefineAccessorsForAttributeArguments|
 |CheckId|CA1019|
-|Category|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 V konstruktoru definuje atribut argumenty, které nemají odpovídající vlastnosti.
 
 ## <a name="rule-description"></a>Popis pravidla
@@ -69,7 +69,7 @@ Následující příklad ukazuje, jak použít vlastní atribut na dvě vlastnos
 [!code-csharp[FxCop.Design.AttributeAccessorsNamedApplied#1](../code-quality/codesnippet/CSharp/ca1019-define-accessors-for-attribute-arguments_3.cs)]
 
 ## <a name="related-rules"></a>Související pravidla
-[CA1813: Vyhněte se nezapečetěným atributům @ no__t-0
+[CA1813: Vyhněte se nezapečetěným atributům](../code-quality/ca1813.md)
 
 ## <a name="see-also"></a>Viz také:
 [Atributy](/dotnet/standard/design-guidelines/attributes)

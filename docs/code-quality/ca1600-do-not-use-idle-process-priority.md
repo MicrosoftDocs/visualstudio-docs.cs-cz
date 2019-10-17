@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 686929471ee8b6b5d1896f61bcbcd97a59135462
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 2075918672452e222ba4becae915712ba20ff0d0
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234369"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72440026"
 ---
 # <a name="ca1600-do-not-use-idle-process-priority"></a>CA1600: Nepoužívejte prioritu nečinného procesu
 
@@ -27,14 +27,14 @@ ms.locfileid: "71234369"
 |-|-|
 |TypeName|DoNotUseIdleProcessPriority|
 |CheckId|CA1600|
-|Kategorie|Microsoft.Mobility|
+|Kategorie|Microsoft. mobility|
 |Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
-Toto pravidlo nastane, pokud jsou procesy nastaveny `ProcessPriorityClass.Idle`na.
+K tomuto pravidlu dochází, když jsou procesy nastavené na `ProcessPriorityClass.Idle`.
 
 ## <a name="rule-description"></a>Popis pravidla
-Nenastavujte prioritu procesu na Neaktivní. Procesy, které `System.Diagnostics.ProcessPriorityClass.Idle` budou zabírat procesor, pokud by jinak byly nečinné, a zablokují proto pohotovostní režim.
+Nenastavujte prioritu procesu na Neaktivní. Procesy, které mají `System.Diagnostics.ProcessPriorityClass.Idle`, budou CPU zabírat, pokud by jinak byly nečinné, a zablokují proto úsporný režim.
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 Nastavte procesy na `ProcessPriorityClass.BelowNormal`.

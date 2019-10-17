@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 0fb424627d88ede6c0677b8c45de4aab487ae498
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 6a3eb46adbf0eabc18adb423209c09b6e1a63c18
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235819"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72449208"
 ---
 # <a name="ca1044-properties-should-not-be-write-only"></a>CA1044: Vlastnosti by neměly být pouze pro zápis
 
@@ -30,7 +30,7 @@ ms.locfileid: "71235819"
 |-|-|
 |TypeName|PropertiesShouldNotBeWriteOnly|
 |CheckId|CA1044|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
@@ -63,7 +63,7 @@ Tuto možnost můžete nakonfigurovat jenom pro toto pravidlo, pro všechna prav
 
 ## <a name="example"></a>Příklad
 
-V následujícím příkladu `BadClassWithWriteOnlyProperty` je typ s vlastností pouze pro zápis. `GoodClassWithReadWriteProperty`obsahuje opravený kód.
+V následujícím příkladu je `BadClassWithWriteOnlyProperty` typem s vlastností pouze pro zápis. `GoodClassWithReadWriteProperty` obsahuje opravený kód.
 
 [!code-vb[FxCop.Design.PropertiesNotWriteOnly#1](../code-quality/codesnippet/VisualBasic/ca1044-properties-should-not-be-write-only_1.vb)]
 [!code-csharp[FxCop.Design.PropertiesNotWriteOnly#1](../code-quality/codesnippet/CSharp/ca1044-properties-should-not-be-write-only_1.cs)]

@@ -1,5 +1,5 @@
 ---
-title: Kontrolní výrazy jazyka C/C++ | Dokumentace Microsoftu
+title: Výrazy CC++ /vyhodnocení | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -28,92 +28,92 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e2d416bd932f1334468bfb3d43e050b3e71d2ec
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 154abe3d73fa71ac897f0442697196cd859f32bd
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62564109"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72435891"
 ---
 # <a name="cc-assertions"></a>Kontrolní výrazy jazyka C/C++
-Příkaz kontrolní výraz určuje podmínku, která očekáváte, že na hodnotu true na místě v aplikaci. Pokud tato podmínka není splněna, výraz se nezdaří, dojde k přerušení provádění programu a [chyba kontrolního výrazu dialogovému oknu](../debugger/assertion-failed-dialog-box.md) se zobrazí.
+Příkaz kontrolního výrazu Určuje podmínku, kterou očekáváte, že bude platit v bodě programu. Pokud tato podmínka není pravdivá, kontrolní výraz se nezdařil, provádění programu je přerušeno a zobrazí se [dialogové okno kontrolní výraz selhal](../debugger/assertion-failed-dialog-box.md) .
 
-Jazyk Visual C++ podporuje kontrolní výraz příkazy, které jsou založeny na jaké konstrukty jsou následující:
+Visual Studio podporuje C++ příkazy kontrolního výrazu, které jsou založeny na následujících konstrukcích:
 
-- Kontrolní výrazy knihovny MFC pro programy MFC.
+- Kontrolní výrazy MFC pro programy MFC.
 
-- [ATLASSERT](/cpp/atl/reference/debugging-and-error-reporting-macros#atlassert) pro programy, které používají knihovnu ATL.
+- [ATLASSERT](/cpp/atl/reference/debugging-and-error-reporting-macros#atlassert) pro programy, které používají ATL.
 
-- Kontrolní výrazy CRT pro programy, které používají knihovny run-time C.
+- Kontrolní výrazy CRT pro programy, které používají knihovnu run-time jazyka C.
 
-- ANSI [vyhodnocení funkce](/cpp/c-runtime-library/reference/assert-macro-assert-wassert) pro programy C/C++.
+- [Funkce kontrolního výrazu](/cpp/c-runtime-library/reference/assert-macro-assert-wassert) ANSI pro ostatní programyC++ C/.
 
-  Kontrolní výrazy můžete zachytávat chyby logiky, zkontrolujte výsledky operace a testování chybové stavy, které by měl zpracovat.
+  Můžete použít kontrolní výrazy k zachycení logických chyb, kontrole výsledků operace a podmínek testování chyb, které by měly být zpracovány.
 
-## <a name="BKMK_In_this_topic"></a> V tomto tématu
+## <a name="BKMK_In_this_topic"></a>V tomto tématu
 [Jak fungují kontrolní výrazy](#BKMK_How_assertions_work)
 
-[Kontrolní výrazy v sestavení ladění a vydání](#BKMK_Assertions_in_Debug_and_Release_builds)
+[Kontrolní výrazy v sestaveních pro ladění a vydání](#BKMK_Assertions_in_Debug_and_Release_builds)
 
 [Vedlejší účinky použití kontrolních výrazů](#BKMK_Side_effects_of_using_assertions)
 
 [Kontrolní výrazy CRT](#BKMK_CRT_assertions)
 
-[Kontrolní výrazy s MFC](#BKMK_MFC_assertions)
+[Kontrolní výrazy MFC](#BKMK_MFC_assertions)
 
-- [MFC ASSERT_VALID a CObject::AssertValid](#BKMK_MFC_ASSERT_VALID_and_CObject__AssertValid)
+- [MFC ASSERT_VALID a CObject:: AssertValid](#BKMK_MFC_ASSERT_VALID_and_CObject__AssertValid)
 
 - [Omezení AssertValid](#BKMK_Limitations_of_AssertValid)
 
   [Použití kontrolních výrazů](#BKMK_Using_assertions)
 
-- [Zachytávání logické chyby](#BKMK_Catching_logic_errors)
+- [Zachycení chyb logiky](#BKMK_Catching_logic_errors)
 
 - [Kontrola výsledků](#BKMK_Checking_results_)
 
-- [Zjištění neošetřené chyby](#BKMK_Testing_error_conditions_)
+- [Hledají se neošetřené chyby.](#BKMK_Testing_error_conditions_)
 
-## <a name="BKMK_How_assertions_work"></a> Jak fungují kontrolní výrazy
-Pokud ladicí program zastaví z důvodu knihovny run-time kontrolní výraz knihovny MFC nebo knihovny jazyka C, pak pokud zdrojem je k dispozici, ladicí program přejde do bodu ve zdrojovém souboru, kde došlo k chybě kontrolního výrazu. Kontrolní výraz zpráva se zobrazí v obou [okno výstup](../ide/reference/output-window.md) a **chyba kontrolního výrazu** dialogové okno. Můžete zkopírovat zprávu kontrolní výraz **výstup** okno do textového okna, pokud chcete uložit pro pozdější použití. **Výstup** okna může obsahovat další chybové zprávy. Prozkoumejte tyto zprávy opatrně, protože poskytují příčiny na příčinu selhání kontrolního výrazu.
+## <a name="BKMK_How_assertions_work"></a>Jak fungují kontrolní výrazy
+Pokud se ladicí program zastaví z důvodu kontrolního výrazu běhové knihovny MFC nebo C, pak ladicí program přejde do bodu ve zdrojovém souboru, kde došlo k kontrolnímu výrazu. Zpráva kontrolního výrazu se zobrazí jak v [okně výstup](../ide/reference/output-window.md) , tak v dialogovém okně **kontrolního výrazu se nezdařilo** . Můžete zkopírovat zprávu kontrolního výrazu z okna **výstup** do textového okna, pokud ho chcete uložit pro pozdější použití. Okno **výstup** může obsahovat také další chybové zprávy. Pečlivě zkontrolujte tyto zprávy, protože poskytují zprávy o příčině selhání kontrolního výrazu.
 
-Kontrolní výrazy použijte ke zjištění chyby během vývoje. Jako pravidlo použijte jeden výraz pro každý předpokladů. Například pokud budete předpokládat, že argument není NULL, použijte kontrolní výraz k otestování tohoto předpokladu.
+Použijte kontrolní výrazy k detekci chyb během vývoje. Jako pravidlo použijte jeden kontrolní výraz pro každý předpoklad. Například pokud předpokládáte, že argument není NULL, použijte k otestování tohoto předpokladu kontrolní výraz.
 
 [V tomto tématu](#BKMK_In_this_topic)
 
-## <a name="BKMK_Assertions_in_Debug_and_Release_builds"></a> Kontrolní výrazy v sestavení ladění a vydání
-Kontrolní výraz příkazy zkompilovat pouze v případě `_DEBUG` je definována. V opačném případě kompilátor považuje za kontrolní výrazy příkazy null. Proto kontrolní výraz příkazy Uložit bez režie nebo výkonu nákladů v konečné verzi programu a umožňují vyhnout `#ifdef` direktivy.
+## <a name="BKMK_Assertions_in_Debug_and_Release_builds"></a>Kontrolní výrazy v sestaveních pro ladění a vydání
+Příkazy kontrolního výrazu lze zkompilovat pouze v případě, že je definována hodnota `_DEBUG`. V opačném případě kompilátor považuje kontrolní výrazy za příkazy null. Proto příkazy kontrolního výrazu nedovolují žádné režijní náklady ani náklady na výkon v konečném programu pro vydávání verzí a umožňují vyhnout se použití direktiv `#ifdef`.
 
-## <a name="BKMK_Side_effects_of_using_assertions"></a> Vedlejší účinky použití kontrolních výrazů
-Když přidáte kontrolní výrazy do kódu, nezapomeňte že kontrolní výrazy nemají vedlejší účinky. Zvažte například následující výraz, který mění `nM` hodnotu:
+## <a name="BKMK_Side_effects_of_using_assertions"></a>Vedlejší účinky použití kontrolních výrazů
+Pokud přidáte kontrolní výrazy do kódu, ujistěte se, že kontrolní výrazy nemají vedlejší účinky. Zvažte například následující kontrolní výraz, který upravuje hodnotu `nM`:
 
 ```cpp
 ASSERT(nM++ > 0); // Don't do this!
 ```
 
-Vzhledem k tomu, `ASSERT` výraz není vyhodnocen ve vydané verzi programu, `nM` budou mít různé hodnoty v ladění a vydání verze. Chcete-li předejít tomuto problému knihovny MFC, můžete použít [OVĚŘTE](/cpp/mfc/reference/diagnostic-services#verify) – makro místo `ASSERT`. `VERIFY` vyhodnotí výraz ve všech verzích ale nekontroluje výsledek ve vydané verzi.
+Vzhledem k tomu, že ve verzi programu není vyhodnocen výraz `ASSERT`, budou mít `nM` ve verzích pro ladění a vydání jiné hodnoty. Chcete-li se tomuto problému v knihovně MFC vyhnout, můžete místo `ASSERT` použít makro [verify](/cpp/mfc/reference/diagnostic-services#verify) . `VERIFY` vyhodnotí výraz ve všech verzích, ale nevrátí výsledek ve vydané verzi.
 
-Být zejména opatrní při použití volání funkce v příkazech kontrolní výraz, protože vyhodnocení funkce může mít neočekávané vedlejší účinky.
+Buďte obzvláště opatrní při použití volání funkcí v příkazech kontrolního výrazu, protože vyhodnocení funkce může mít neočekávané vedlejší účinky.
 
 ```cpp
 ASSERT ( myFnctn(0)==1 ) // unsafe if myFnctn has side effects
 VERIFY ( myFnctn(0)==1 ) // safe
 ```
 
-`VERIFY` volání `myFnctn` v ladění i vydání verze, takže je nepřijatelné využívat. Avšak použití `VERIFY` ukládá režii volání funkce zbytečné ve vydané verzi.
+`VERIFY` volá v ladicí verzi i ve verzi `myFnctn`, takže je přijatelné použít. Použití `VERIFY` však nepředstavuje režii zbytečného volání funkce ve vydané verzi.
 
 [V tomto tématu](#BKMK_In_this_topic)
 
-## <a name="BKMK_CRT_assertions"></a> Kontrolní výrazy CRT
-CRTDBG. Definuje soubor hlaviček H [_ASSERT a _asserte – makra](/cpp/c-runtime-library/reference/assert-asserte-assert-expr-macros) kontroly kontrolní výraz.
+## <a name="BKMK_CRT_assertions"></a>Kontrolní výrazy CRT
+SOUBORU Crtdbg. Soubor hlaviček H definuje [makra _ASSERT a _ASSERTE](/cpp/c-runtime-library/reference/assert-asserte-assert-expr-macros) pro kontrolu kontrolního výrazu.
 
-| – Makro | Výsledek |
+| Podokně | Výsledek |
 |------------| - |
-| `_ASSERT` | Pokud se zadaný výraz nevyhodnotí jako FALSE, souboru název a číslo řádku `_ASSERT`. |
-| `_ASSERTE` | Stejné jako `_ASSERT`, plus řetězcovou reprezentaci výrazu, která byla uplatněna. |
+| `_ASSERT` | Pokud se zadaný výraz vyhodnotí jako FALSE, název souboru a číslo řádku `_ASSERT`. |
+| `_ASSERTE` | Stejné jako `_ASSERT` a také řetězcové vyjádření výrazu, který byl uplatněn. |
 
-`_ASSERTE` je výkonnější, protože zprávy s potvrzením výraz, který je FALSE. To může být, aby bylo možné identifikovat problém bez odkazující na zdrojový kód. Nicméně ladicí verze aplikace bude obsahovat konstantu řetězce pro každý výraz s prohlašovanou pomocí `_ASSERTE`. Pokud budete používat mnoho `_ASSERTE` makra, tyto výrazy řetězec spotřebovávat značné množství paměti. Pokud je to nějaký problém, použijte `_ASSERT` uložit paměti.
+`_ASSERTE` je výkonnější, protože oznamuje výraz, který je vyměněn jako nepravdivý. To může být dostačující k identifikaci problému bez odkazování na zdrojový kód. Ladicí verze aplikace však bude obsahovat řetězcovou konstantu pro každý výraz vyhodnotit pomocí `_ASSERTE`. Použijete-li mnoho maker `_ASSERTE`, tyto řetězcové výrazy zabírají značnou velikost paměti. Pokud se to ukáže jako problém, použijte `_ASSERT` k uložení paměti.
 
-Při `_DEBUG` je definován, `_ASSERTE` – makro je definovaná následujícím způsobem:
+Je-li definována hodnota `_DEBUG`, je makro `_ASSERTE` definováno následujícím způsobem:
 
 ```cpp
 #define _ASSERTE(expr) \
@@ -124,30 +124,30 @@ Při `_DEBUG` je definován, `_ASSERTE` – makro je definovaná následujícím
     } while (0)
 ```
 
-Pokud s potvrzením výraz nevyhodnotí jako FALSE, [_CrtDbgReport](/cpp/c-runtime-library/reference/crtdbgreport-crtdbgreportw) je volána k hlášení selhání kontrolního výrazu (pomocí dialogového okna zprávy ve výchozím nastavení). Pokud se rozhodnete **opakujte** v dialogovém okně zpráva `_CrtDbgReport` vrátí hodnotu 1 a `_CrtDbgBreak` volá ladicí program prostřednictvím `DebugBreak`.
+Pokud je výraz ASSERT vyhodnocen jako FALSE, je volána metoda [_CrtDbgReport](/cpp/c-runtime-library/reference/crtdbgreport-crtdbgreportw) k nahlášení selhání kontrolního výrazu (pomocí dialogového okna zprávy ve výchozím nastavení). Pokud v dialogovém okně zpráva zvolíte **Opakovat** , `_CrtDbgReport` vrátí hodnotu 1 a `_CrtDbgBreak` volání ladicího programu prostřednictvím `DebugBreak`.
 
-### <a name="checking-for-heap-corruption"></a>Vyhledání poškození haldy
+### <a name="checking-for-heap-corruption"></a>Kontroluje se poškození haldy.
 Následující příklad používá [_CrtCheckMemory](/cpp/c-runtime-library/reference/crtcheckmemory) ke kontrole poškození haldy:
 
 ```cpp
 _ASSERTE(_CrtCheckMemory());
 ```
 
-### <a name="checking-pointer-validity"></a>Kontrola platnosti ukazatele
-Následující příklad používá [_crtisvalidpointer –](/cpp/c-runtime-library/reference/crtisvalidpointer) k ověření, že rozsah danou paměť je platná pro čtení nebo zápis.
+### <a name="checking-pointer-validity"></a>Kontroluje se platnost ukazatele.
+Následující příklad používá [_CrtIsValidPointer](/cpp/c-runtime-library/reference/crtisvalidpointer) k ověření, že daný rozsah paměti je platný pro čtení nebo zápis.
 
 ```cpp
 _ASSERTE(_CrtIsValidPointer( address, size, TRUE );
 ```
 
-Následující příklad používá [_crtisvalidheappointer –](/cpp/c-runtime-library/reference/crtisvalidheappointer) ověření ukazatel odkazuje na paměť v lokální haldy (haldy vytvořen a spravován společností této instance knihovny run-time jazyka C – knihovna DLL může mít svoji vlastní instanci knihovny, a proto vlastní haldy, mimo haldy aplikace). Tento kontrolní výraz zachytí není pouze hodnotu null nebo celočíselných adres, ale také ukazatelů na statické proměnné, proměnné zásobníku a další nemístní paměti.
+Následující příklad používá [_CrtIsValidHeapPointer](/cpp/c-runtime-library/reference/crtisvalidheappointer) k ověření ukazatele na paměť v lokální haldě (halda vytvořená a spravovaná touto instancí knihovny run-time jazyka C – knihovna DLL může mít svou vlastní instanci knihovny), a proto vlastní haldu, mimo haldu aplikace). Tento kontrolní výraz zachytí pouze adresy null nebo mimo rozsah, ale také ukazatele na statické proměnné, proměnné zásobníku a jakoukoli jinou nemístní paměť.
 
 ```cpp
 _ASSERTE(_CrtIsValidPointer( myData );
 ```
 
 ### <a name="checking-a-memory-block"></a>Kontrola bloku paměti
-Následující příklad používá [_crtismemoryblock –](/cpp/c-runtime-library/reference/crtismemoryblock) k ověření, že blok paměti v haldě, místní a má platný blok typu.
+Následující příklad používá [_CrtIsMemoryBlock](/cpp/c-runtime-library/reference/crtismemoryblock) k ověření, že je blok paměti v místní haldě a má platný typ bloku.
 
 ```cpp
 _ASSERTE(_CrtIsMemoryBlock (myData, size, &requestNumber, &filename, &linenumber));
@@ -155,32 +155,32 @@ _ASSERTE(_CrtIsMemoryBlock (myData, size, &requestNumber, &filename, &linenumber
 
 [V tomto tématu](#BKMK_In_this_topic)
 
-## <a name="BKMK_MFC_assertions"></a> MFC assertions
-Definuje MFC [ASSERT](https://msdn.microsoft.com/Library/1e70902d-d58c-4e7b-9f69-2aeb6cbe476c) – makro kontroly kontrolní výraz. Definuje také `MFC ASSERT_VALID` a `CObject::AssertValid` metody kontroly vnitřní stav `CObject`-odvozenému objektu.
+## <a name="BKMK_MFC_assertions"></a>Kontrolní výrazy MFC
+MFC definuje makro [kontrolního](https://msdn.microsoft.com/Library/1e70902d-d58c-4e7b-9f69-2aeb6cbe476c) výrazu pro kontrolu kontrolního výrazu. Definuje také metody `MFC ASSERT_VALID` a `CObject::AssertValid` pro kontrolu vnitřního stavu @no__t objektu odvozeného od -2.
 
-Pokud argument MFC `ASSERT` – makro vyhodnocen jako nula nebo hodnotu NEPRAVDA, makro zastaví provádění programu a zobrazí uživateli výstrahu; v opačném případě pokračuje.
+Pokud je argument makra `ASSERT` vyhodnocen jako nula nebo false, makro zastaví spuštění programu a upozorní uživatele. v opačném případě se provádění pokračuje.
 
-Pokud kontrolní výraz selže, zprávy dialogové okno zobrazí název zdrojového souboru a číslo řádku výrazu. Pokud vyberete možnost opakovat v dialogovém okně pole, volání [afxdebugbreak –](/cpp/mfc/reference/diagnostic-services#afxdebugbreak) způsobí spuštění řízení ladicímu programu. V tomto okamžiku můžete prozkoumat zásobník volání a použít jiné zařízení pro ladicí program k určení, proč kontrolní výraz je neplatný. Pokud jste povolili [Just-in-time ladění](../debugger/just-in-time-debugging-in-visual-studio.md)a ladicí program se už běží, dialogové okno můžete spustit ladicí program.
+V případě neúspěchu kontrolního výrazu se zobrazí dialogové okno zpráva s názvem zdrojového souboru a číslem řádku kontrolního výrazu. Pokud v dialogovém okně kliknete na tlačítko Opakovat, volání [AfxDebugBreak](/cpp/mfc/reference/diagnostic-services#afxdebugbreak) způsobí přerušení provádění do ladicího programu. V tomto okamžiku můžete prostudovat zásobník volání a použít další pomůcky ladicího programu k určení příčiny selhání kontrolního výrazu. Pokud jste povolili [ladění za běhu](../debugger/just-in-time-debugging-in-visual-studio.md)a ladicí program ještě nebyl spuštěn, dialogové okno může spustit ladicí program.
 
-Následující příklad ukazuje, jak používat `ASSERT` zkontrolovat návratovou hodnotu funkce:
+Následující příklad ukazuje, jak použít `ASSERT` ke kontrole návratové hodnoty funkce:
 
 ```cpp
 int x = SomeFunc(y);
 ASSERT(x >= 0);   //  Assertion fails if x is negative
 ```
 
-Můžete použít kontrolní VÝRAZ s [IsKindOf](https://docs.microsoft.com/cpp/mfc/reference/cobject-class#iskindof) funkce poskytují kontrolu typů argumentů funkce:
+Můžete použít ASSERT s funkcí [IsKindOf](https://docs.microsoft.com/cpp/mfc/reference/cobject-class#iskindof) k poskytnutí kontroly typu argumentů funkce:
 
 ```cpp
 ASSERT( pObject1->IsKindOf( RUNTIME_CLASS( CPerson ) ) );
 ```
 
-`ASSERT` – Makro nevygeneruje žádný kód ve vydané verzi. Pokud potřebujete k vyhodnocení výrazu ve vydané verzi, použijte [OVĚŘTE](https://msdn.microsoft.com/library/s8c29sw2.aspx#verify) – makro místo ASSERT.
+Makro `ASSERT` negeneruje ve vydané verzi žádný kód. Pokud potřebujete vyhodnotit výraz ve vydané verzi, použijte místo výrazu ASSERT makro [verify](https://msdn.microsoft.com/library/s8c29sw2.aspx#verify) .
 
-### <a name="BKMK_MFC_ASSERT_VALID_and_CObject__AssertValid"></a> MFC ASSERT_VALID a CObject::AssertValid
-[CObject::AssertValid](https://docs.microsoft.com/cpp/mfc/reference/cobject-class#assertvalid) metoda poskytuje vnitřní stav objektu se kontroly za běhu. I když není nutné přepsat `AssertValid` Pokud odvodit třídu z `CObject`, můžete provést vaší třídy spolehlivější tímto způsobem. `AssertValid` na všechny proměnné členů objektu k ověření, že obsahují platné hodnoty by měl provést kontrolní výrazy. Například by měl zkontrolovat, že členské proměnné ukazatele nemají hodnotu NULL.
+### <a name="BKMK_MFC_ASSERT_VALID_and_CObject__AssertValid"></a>MFC ASSERT_VALID a CObject:: AssertValid
+Metoda [CObject:: AssertValid](https://docs.microsoft.com/cpp/mfc/reference/cobject-class#assertvalid) zajišťuje kontroly vnitřního stavu objektu v době běhu. I když nemusíte přepsat `AssertValid` při odvozování vaší třídy z `CObject`, můžete tuto třídu lépe spolehlivit. `AssertValid` by měl provádět kontrolní výrazy pro všechny členské proměnné objektu pro ověření, že obsahují platné hodnoty. Například by měla kontrolovat, že proměnné členů ukazatele nejsou NULL.
 
-Následující příklad ukazuje, jak deklarovat `AssertValid` funkce:
+Následující příklad ukazuje, jak deklarovat funkci `AssertValid`:
 
 ```cpp
 class CPerson : public CObject
@@ -197,7 +197,7 @@ public:
 };
 ```
 
-Při přepsání `AssertValid`, volat základní třídy verzi `AssertValid` předtím, než provedete vlastní kontroly. Potom pomocí makra ASSERT zkontrolujte členy, které jsou jedinečné pro odvozenou třídu, jak je znázorněno zde:
+Pokud přepíšete `AssertValid`, před provedením vlastních kontrol volejte verzi `AssertValid` třídy Base. Pak použijte makro ASSERT pro kontrolu členů, které jsou jedinečné pro vaši odvozenou třídu, jak je znázorněno zde:
 
 ```cpp
 #ifdef _DEBUG
@@ -215,9 +215,9 @@ void CPerson::AssertValid() const
 #endif
 ```
 
-Pokud některý z členské proměnné ukládat objekty, můžete použít `ASSERT_VALID` – makro otestovat jejich interní platnosti (pokud jejich třídám přepsat `AssertValid`).
+Pokud některý z vašich členských proměnných ukládá objekty, můžete použít makro `ASSERT_VALID` k otestování své vnitřní platnosti (pokud jejich třídy přepisují `AssertValid`).
 
-Představte si třeba třídu `CMyData`, které obchody [coblist –](/cpp/mfc/reference/coblist-class) v jednom z jeho členské proměnné. `CObList` Proměnnou, `m_DataList`, uloží kolekci `CPerson` objekty. Zkrácený deklarace `CMyData` vypadá přibližně takto:
+Například zvažte třídu `CMyData`, která ukládá [CObList](/cpp/mfc/reference/coblist-class) do jedné z jeho členských proměnných. Proměnná `CObList`, `m_DataList`, ukládá kolekci objektů `CPerson`. Zkrácená deklarace `CMyData` vypadá takto:
 
 ```cpp
 class CMyData : public CObject
@@ -235,7 +235,7 @@ class CMyData : public CObject
 };
 ```
 
-`AssertValid` Přepsat v `CMyData` vypadá přibližně takto:
+Přepsání `AssertValid` v `CMyData` vypadá takto:
 
 ```cpp
 #ifdef _DEBUG
@@ -250,44 +250,44 @@ void CMyData::AssertValid( ) const
 #endif
 ```
 
-`CMyData` používá `AssertValid` mechanismus pro testování platnosti objektů uložených v jeho datový člen. Přepsání `AssertValid` z `CMyData` vyvolá `ASSERT_VALID` – makro pro vlastní m_pDataList členské proměnné.
+`CMyData` používá mechanismus `AssertValid` k otestování platnosti objektů uložených ve svém datovém členu. Přepsání `AssertValid` `CMyData` vyvolá makro `ASSERT_VALID` pro vlastní členskou proměnnou m_pDataList.
 
-Testování platnosti nezastaví na této úrovni protože třídu `CObList` také přepisuje `AssertValid`. Toto přepsání provádí další platnosti testování na vnitřní stav seznamu. Díky tomu se platnost testovat na `CMyData` objekt vede k další platnosti testy pro interní stavy uloženou `CObList` objekt seznamu.
+Testování platnosti se na této úrovni nezastaví, protože třída `CObList` také přepisuje `AssertValid`. Toto přepsání provede další testování platnosti v interním stavu seznamu. Proto test platnosti objektu `CMyData` vede k dalším testům platnosti pro vnitřní stavy uloženého objektu seznamu `CObList`.
 
-Některé další práci, můžete přidat testy platnosti pro `CPerson` objektů uložených v seznamu také. Může odvodit třídu `CPersonList` z `CObList` a přepsat `AssertValid`. V přepsání, volání `CObject::AssertValid` a potom iteraci v rámci seznamu volání `AssertValid` na každém `CPerson` objekt uložený v seznamu. `CPerson` Třídy uvedené na začátku tohoto tématu již přepíše `AssertValid`.
+S nějakou další prací můžete přidat testy platnosti pro objekty `CPerson` uložené v seznamu také. Třídu `CPersonList` můžete odvodit z `CObList` a přepsat `AssertValid`. V přepsání byste volali `CObject::AssertValid` a pak iterovat v seznamu, volání `AssertValid` u každého objektu `CPerson`, který je uložen v seznamu. Třída `CPerson` zobrazená na začátku tohoto tématu již Přepisuje `AssertValid`.
 
-Jedná se o efektivní mechanismus při sestavení pro ladění. Když následně sestavení pro vydání, mechanismu, který je automaticky vypnutý.
+Toto je účinný mechanismus při sestavování pro ladění. Při následném sestavení pro vydanou verzi je mechanismus automaticky vypnut.
 
-### <a name="BKMK_Limitations_of_AssertValid"></a> Omezení AssertValid
-Kontrolní výraz aktivovaných označuje, že objekt je jednoznačně chybný a zastaví provádění. Však nedostatku kontrolní výraz značí pouze, že nebyly nalezeny žádné potíže, ale objekt není zaručeno, že bezproblémový.
+### <a name="BKMK_Limitations_of_AssertValid"></a>Omezení AssertValid
+Aktivovaný kontrolní výraz indikuje, že objekt je jednoznačně špatný a spuštění se zastaví. Chybějící kontrolní výraz však indikuje pouze, že nebyl nalezen žádný problém, ale objekt není zaručený jako dobrý.
 
 [V tomto tématu](#BKMK_In_this_topic)
 
-## <a name="BKMK_Using_assertions"></a> Použití kontrolních výrazů
+## <a name="BKMK_Using_assertions"></a>Použití kontrolních výrazů
 
-### <a name="BKMK_Catching_logic_errors"></a> Zachytávání logické chyby
-Kontrolní výraz můžete nastavit na podmínku, která musí být splněny podle logiky aplikace. Výraz nemá žádný vliv, pokud dojde k logické chybě.
+### <a name="BKMK_Catching_logic_errors"></a>Zachycení chyb logiky
+Můžete nastavit kontrolní výraz pro podmínku, která musí být pravdivá podle logiky programu. Kontrolní výraz nemá žádný vliv, pokud dojde k chybě logiky.
 
-Předpokládejme například, že je budete jen simulovat plynu přenosů v kontejneru a proměnná `numMols` představuje celkový počet přenosů. Toto číslo nemůže být menší než nula, tak může zahrnovat příkazem MFC kontrolního výrazu takto:
+Předpokládejme například, že simulujete molekuly plynu v kontejneru a proměnná `numMols` představuje celkový počet molekul. Toto číslo nemůže být menší než nula, takže můžete zahrnout příkaz kontrolního výrazu MFC takto:
 
 ```cpp
 ASSERT(numMols >= 0);
 ```
 
-Nebo může zahrnovat kontrolní výraz CRT takto:
+Nebo můžete zahrnout kontrolní výraz CRT podobný tomuto:
 
 ```cpp
 _ASSERT(numMols >= 0);
 ```
 
-Tyto příkazy Neprovádět žádnou akci, pokud váš program pracuje správně. Pokud logická chyba způsobí, že `numMols` být menší než nula, ale výraz zastaví provádění programu a zobrazí [kontrolního výrazu se nezdařilo dialogovému oknu](../debugger/assertion-failed-dialog-box.md).
+Tyto příkazy nedělají nic, pokud program funguje správně. Pokud však logická chyba způsobí, že `numMols` bude menší než nula, kontrolní výraz zastaví provádění programu a zobrazí [dialogové okno neúspěšného kontrolního výrazu](../debugger/assertion-failed-dialog-box.md).
 
 [V tomto tématu](#BKMK_In_this_topic)
 
-### <a name="BKMK_Checking_results_"></a> Kontrola výsledků
-Kontrolní výrazy jsou velmi cennou pomůckou pro testování operace, jejichž výsledky nejsou zřejmé z rychlého vizuální kontrolu.
+### <a name="BKMK_Checking_results_"></a>Kontrola výsledků
+Kontrolní výrazy jsou cenné pro testovací operace, jejichž výsledky nejsou zjevnější od rychlé kontroly vizuálu.
 
-Zvažte například následující kód, který aktualizuje proměnné `iMols` na základě obsahu propojeného seznamu, na které odkazuje `mols`:
+Zvažte například následující kód, který aktualizuje proměnnou `iMols` na základě obsahu propojeného seznamu, na který odkazuje `mols`:
 
 ```cpp
 /* This code assumes that type has overloaded the != operator
@@ -303,12 +303,12 @@ ASSERT(iMols<=numMols); // MFC version
 _ASSERT(iMols<=numMols); // CRT version
 ```
 
-Počet přenosů spočítaných podle `iMols` musí být vždy nižší než celkový počet přenosů, `numMols`. Vizuální kontrolu smyčky není uveden, že to nutně bude v případě, takže příkaz kontrolního výrazu po smyčce slouží k otestování pro tuto podmínku.
+Počet molekul počítaných hodnotou `iMols` musí být vždy menší nebo roven celkovému počtu molekul, `numMols`. Vizuální kontrola smyčky neukazuje, že se jedná o tento případ, takže se použije příkaz kontrolního výrazu po smyčce k otestování této podmínky.
 
 [V tomto tématu](#BKMK_In_this_topic)
 
-### <a name="BKMK_Testing_error_conditions_"></a> Zjištění neošetřené chyby
-Kontrolní výrazy můžete použít k testování pro chybové podmínky v místě v kódu kde všechny chyby by měl být manipulováno. V následujícím příkladu grafického rutina vrátí kód chyby nebo 0 pro úspěch.
+### <a name="BKMK_Testing_error_conditions_"></a>Hledají se neošetřené chyby.
+Kontrolní výrazy můžete použít k otestování chybových podmínek v určitém bodě v kódu, kde byly zpracovány případné chyby. V následujícím příkladu grafická rutina vrátí chybový kód nebo nula pro úspěch.
 
 ```cpp
 myErr = myGraphRoutine(a, b);
@@ -320,9 +320,9 @@ ASSERT(!myErr); -- MFC version
 _ASSERT(!myErr); -- CRT version
 ```
 
-Pokud kód pro zpracování chyb funguje správně, by měla chyba zpracována a `myErr` resetování na nulu, než je dosaženo kontrolního výrazu. Pokud `myErr` má jinou hodnotu, kontrolní výraz selže, zastaví programu a [kontrolního výrazu se nezdařilo dialogovému oknu](../debugger/assertion-failed-dialog-box.md) se zobrazí.
+Pokud kód pro zpracování chyb funguje správně, měla by se chyba zpracovat a `myErr` obnovit na nulu před dosažením kontrolního výrazu. Pokud má `myErr` jinou hodnotu, kontrolní výraz se nezdařil, program se zastaví a zobrazí se [dialogové okno kontrolní výraz nebylo úspěšné](../debugger/assertion-failed-dialog-box.md) .
 
-Kontrolní výraz příkazy však nejsou náhradou za kód pro zpracování chyb. Následující příklad ukazuje příkaz kontrolní výraz, který může vést k problémům v konečné verzi kódu:
+Příkazy kontrolního výrazu nejsou náhradou za kód pro zpracování chyb, ale. Následující příklad ukazuje příkaz kontrolního výrazu, který může vést k problémům v konečném kódu verze:
 
 ```cpp
 myErr = myGraphRoutine(a, b);
@@ -333,7 +333,7 @@ ASSERT(!myErr); // Don't do this!
 _ASSERT(!myErr); // Don't do this, either!
 ```
 
-Tento kód závisí na kontrolní výraz příkazu pro zpracování chybového stavu. V důsledku toho libovolný kód chyby vrácený `myGraphRoutine` bude není ošetřená v konečné verzi kódu.
+Tento kód spoléhá na příkaz kontrolního výrazu, který zpracovává chybový stav. V důsledku toho bude veškerý chybový kód vrácený `myGraphRoutine` v konečném kódu verze nezpracován.
 
 [V tomto tématu](#BKMK_In_this_topic)
 

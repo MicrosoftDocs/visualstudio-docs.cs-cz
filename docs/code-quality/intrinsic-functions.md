@@ -15,17 +15,17 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: e5b754f32edb86d10b4dd722ea7c6486f8179af6
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: b9236a5135d1339f46aeb6f2dd1a11658adf01c2
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018734"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72445702"
 ---
 # <a name="intrinsic-functions"></a>Vnitřní funkce
 Výraz v SAL může být výraz C/C++ , pokud se jedná o výraz, který nemá vedlejší účinky, například + +,--, a volání funkcí mají v tomto kontextu vedlejší účinky.  SAL však poskytuje některé objekty podobné funkcím a některé vyhrazené symboly, které lze použít ve výrazech SAL. Ty jsou označovány jako *vnitřní funkce*.
 
-## <a name="general-purpose"></a>Obecné použití
+## <a name="general-purpose"></a>Pro obecné účely
 Následující poznámky k funkcím instrinsic poskytují obecný nástroj pro SAL.
 
 |Poznámka|Popis|

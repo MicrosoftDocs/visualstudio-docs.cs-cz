@@ -9,12 +9,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 64421350f74a2fadcb8a4d4845d8aa00a5f5813b
-ms.sourcegitcommit: e95dd8cedcd180e0bce6a75c86cf861757918290
+ms.openlocfilehash: 8e25e28c2ff20a628058d5dfa71de0368fbe9249
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72163091"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72445609"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>Pomocí sad pravidel určete C++ pravidla, která se mají spustit.
 
@@ -36,7 +36,7 @@ Pokud chcete vytvořit novou vlastní sadu pravidel, uložte ji pomocí nového 
 
    - Vyberte sadu pravidel, kterou chcete upravit.
 
-     \- nebo –
+     \- nebo-
 
    - Vyberte **@no__t – 1Browse... >** k určení existující sady pravidel, která není v seznamu.
 

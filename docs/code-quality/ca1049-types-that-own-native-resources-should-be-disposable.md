@@ -1,5 +1,5 @@
 ---
-title: 'CA1049: Typy, které vlastní nativní prostředky, by měly být uvolnitelné'
+title: 'CA1049: Typy, které vlastní nativní prostředky by měly být uvolnitelné'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -17,23 +17,23 @@ dev_langs:
 - VB
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03b8d222fc2349022ef324c9905279677fc86849
-ms.sourcegitcommit: 034c503ae04e22cf840ccb9770bffd012e40fb2d
+ms.openlocfilehash: c685e0d12ebb8f76d61687dd138e90c51a9cc8f5
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/14/2019
-ms.locfileid: "72306114"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72440824"
 ---
-# <a name="ca1049-types-that-own-native-resources-should-be-disposable"></a>CA1049: Typy, které vlastní nativní prostředky, by měly být uvolnitelné
+# <a name="ca1049-types-that-own-native-resources-should-be-disposable"></a>CA1049: Typy, které vlastní nativní prostředky by měly být uvolnitelné
 
 |||
 |-|-|
 |TypeName|TypesThatOwnNativeResourcesShouldBeDisposable|
 |CheckId|CA1049|
-|Category|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Zásadní změna|Nenarušující|
 
-## <a name="cause"></a>Příčina
+## <a name="cause"></a>příčina
 
 Typ odkazuje na pole <xref:System.IntPtr?displayProperty=fullName>, pole <xref:System.UIntPtr?displayProperty=fullName> nebo pole <xref:System.Runtime.InteropServices.HandleRef?displayProperty=fullName>, ale neimplementuje <xref:System.IDisposable?displayProperty=fullName>.
 
@@ -56,13 +56,13 @@ Následující příklad ukazuje typ, který implementuje <xref:System.IDisposab
 [!code-vb[FxCop.Design.UnmanagedResources#1](../code-quality/codesnippet/VisualBasic/ca1049-types-that-own-native-resources-should-be-disposable_1.vb)]
 
 ## <a name="related-rules"></a>Související pravidla
-[CA2115: Vyvolejte GC. Udržení naživu při použití nativních prostředků @ no__t-0
+[CA2115: Volejte GC.KeepAlive při použití nativních zdrojů](../code-quality/ca2115.md)
 
-[CA1816: Vyvolejte GC. SuppressFinalize správně @ no__t-0
+[CA1816: Volejte správně GC.SuppressFinalize](../code-quality/ca1816.md)
 
-[CA2216: Typy na jedno použití by měly deklarovat finalizační metodu @ no__t-0.
+[CA2216: Uvolnitelné typy by měly deklarovat finalizační metodu](../code-quality/ca2216.md)
 
-[CA1001: Typy, které vlastní pole na jedno použití, by měly být na jedno použití @ no__t-0
+[CA1001: Typy vlastních uvolnitelných polí, které by měly být uvolnitelné](../code-quality/ca1001-types-that-own-disposable-fields-should-be-disposable.md)
 
 ## <a name="see-also"></a>Viz také:
 

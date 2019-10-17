@@ -1,0 +1,61 @@
+### YamlMime:Landing
+title: Úprava kódu v aplikaci Visual Studio
+summary: Přečtěte si o úpravách úkolů, jako je například otevření projektu, použití funkcí editoru kódu a zachování konzistentního stylu kódu.
+metadata:
+  title: Funkce editoru kódu
+  description: Přečtěte si o funkcích pro úpravu kódu v aplikaci Visual Studio.
+  ms.prod: visual-studio-windows
+  ms.technology: vs-ide-general
+  ms.topic: landing-page
+  author: gewarren
+  ms.author: gewarren
+  ms.date: 10/15/2019
+  ms.openlocfilehash: 275ac40ff1c2edf70a8388b09e50fc3d496e8050
+  ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
+  ms.translationtype: MT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 10/16/2019
+  ms.locfileid: "72391461"
+landingContent:
+- title: Otevřete nebo vytvořte projekt
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Vytvoření nového projektu
+      url: create-new-project.md
+    - text: Otevření projektu z úložiště
+      url: ../get-started/tutorial-open-project-from-repo.md
+  - linkListType: how-to-guide
+    links:
+    - text: Použití sady Visual Studio bez projektů nebo řešení
+      url: develop-code-in-visual-studio-without-projects-or-solutions.md
+- title: Použití funkcí pro úpravy
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Použití editoru kódu
+      url: writing-code-in-the-code-and-text-editor.md
+    - text: Navigace v kódu
+      url: navigating-code.md
+    - text: Generování a oprava kódu
+      url: code-generation-in-visual-studio.md
+    - text: Použití IntelliSense k dokončování kódu
+      url: using-intellisense.md
+    - text: Spravovat předvolby stylu kódu
+      url: code-styles-and-code-cleanup.md
+    - text: Analýza kódu
+      url: ../code-quality/roslyn-analyzers-overview.md
+- title: Začínáme s programovacími jazyky
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Začínáme s C# a ASP.NET Core v aplikaci Visual Studio
+      url: tutorial-csharp-aspnet-core.md
+    - text: Vytvoření C++ konzolové aplikace v aplikaci Visual Studio
+      url: /cpp/get-started/tutorial-console-cpp
+    - text: Začínáme s Pythonem v aplikaci Visual Studio
+      url: quickstart-python.md
+    - text: Vytvoření konzolové aplikace pomocí Visual Basic
+      url: quickstart-visual-basic-console.md
+    - text: Vytvoření webové aplikace s využitím Node. js
+      url: quickstart-nodejs.md

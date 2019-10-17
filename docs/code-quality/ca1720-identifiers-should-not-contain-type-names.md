@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: a2677c2ef5342b795bb684f3ab06bc7cf5195cf7
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 64fd1aee2a778c72a81f82a0d435ce37d408c9a5
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71233899"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72443802"
 ---
 # <a name="ca1720-identifiers-should-not-contain-type-names"></a>CA1720: Identifikátory by neměly obsahovat názvy typů
 
@@ -27,7 +27,7 @@ ms.locfileid: "71233899"
 |-|-|
 |TypeName|IdentifiersShouldNotContainTypeNames|
 |CheckId|CA1720|
-|Kategorie|Microsoft.Naming|
+|Kategorie|Microsoft. pojmenování|
 |Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
@@ -42,25 +42,25 @@ Ve výchozím nastavení toto pravidlo vypadá pouze u externě viditelných čl
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Názvy parametrů a členů jsou lépe použity ke sdělení jejich významu, než aby bylo možné popsat jejich typ, který je třeba poskytnout pomocí vývojářských nástrojů. V případě názvů členů, pokud je třeba použít název datového typu, použijte název nezávislá na jazyce, nikoli na konkrétní jazyk. Například namísto názvu C# `int`typu použijte název datového typu nezávislý na jazyku,. `Int32`
+Názvy parametrů a členů jsou lépe použity ke sdělení jejich významu, než aby bylo možné popsat jejich typ, který je třeba poskytnout pomocí vývojářských nástrojů. V případě názvů členů, pokud je třeba použít název datového typu, použijte název nezávislá na jazyce, nikoli na konkrétní jazyk. Například namísto názvu C# typu `int` použijte název datového typu nezávislý na jazyku `Int32`.
 
 Všechny diskrétní tokeny v názvu parametru nebo členu jsou zkontrolovány proti následujícím jazykově specifickým názvům datových typů při nerozlišování velkých a malých písmen:
 
-- Bool
+- Logick
 - WChar
 - Int8
 - UInt8
-- Krátké
+- Dostatečná
 - UShort
-- Int
+- Hmot
 - UInt
 - Integer
 - UInteger –
-- Dlouhé
+- Dlouhou
 - ULong
 - Celé
 - Podpisy
-- Float
+- Plovák
 - Float32
 - Float64
 
@@ -81,7 +81,7 @@ Kromě toho názvy parametrů jsou také zkontrolovány proti následujícím ja
 - Int64
 - UInt64
 - IntPtr
-- střed
+- Střed
 - Ukazatele
 - UInptr
 - UPtr
@@ -89,7 +89,7 @@ Kromě toho názvy parametrů jsou také zkontrolovány proti následujícím ja
 - Single
 - Double
 - Desetinné číslo
-- Guid
+- Hlavních
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
@@ -117,7 +117,7 @@ Tuto možnost můžete nakonfigurovat jenom pro toto pravidlo, pro všechna prav
 
 ## <a name="related-rules"></a>Související pravidla
 
-- [CA1709: Identifikátory by se měly použita správně.](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
-- [CA1708: Identifikátory by se měly lišit o více než malých písmenech](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
+- [CA1709: Malá a velká písmena identifikátorů by měla být použita správně](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)
+- [CA1708: Identifikátory by se měly lišit více než použitím malých a velkých písmen](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)
 - [CA1707: Identifikátory by neměly obsahovat podtržítka](../code-quality/ca1707-identifiers-should-not-contain-underscores.md)
 - [CA1719: Názvy parametrů by neměly odpovídat názvům členů](../code-quality/ca1719-parameter-names-should-not-match-member-names.md)

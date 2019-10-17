@@ -1,5 +1,5 @@
 ---
-title: 'CA1058: Typy by neměly rozšiřovat určité základní typy'
+title: 'CA1058: Typy by neměly rozšířit určité základní typy'
 ms.date: 03/11/2019
 ms.topic: reference
 f1_keywords:
@@ -14,20 +14,20 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: fa1ffbb393700647f12c455c8d1307a77548f2d1
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 8bec913e5352c0028859f03ebda7c5f112db654f
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235498"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72446547"
 ---
-# <a name="ca1058-types-should-not-extend-certain-base-types"></a>CA1058: Typy by neměly rozšiřovat určité základní typy
+# <a name="ca1058-types-should-not-extend-certain-base-types"></a>CA1058: Typy by neměly rozšířit určité základní typy
 
 |||
 |-|-|
 |TypeName|TypesShouldNotExtendCertainBaseTypes|
 |CheckId|CA1058|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Zásadní změna|Narušující|
 
 ## <a name="cause"></a>příčina
@@ -47,9 +47,9 @@ Ve výchozím nastavení toto pravidlo vyhledává pouze externě viditelné typ
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Výjimky by měly odvozovat z <xref:System.Exception?displayProperty=fullName> nebo jedné z jejích podtříd <xref:System> v oboru názvů.
+Výjimky by měly být odvozeny od <xref:System.Exception?displayProperty=fullName> nebo jedné z jejích podtříd v oboru názvů <xref:System>.
 
-Nevytvářejte podtřídu, <xref:System.Xml.XmlDocument> Pokud chcete vytvořit zobrazení XML základního objektového modelu nebo zdroje dat.
+Nevytvářejte podtřídu <xref:System.Xml.XmlDocument>, pokud chcete vytvořit zobrazení XML základního objektového modelu nebo zdroje dat.
 
 ### <a name="non-generic-collections"></a>Neobecné kolekce
 
@@ -85,7 +85,7 @@ Chcete-li opravit porušení tohoto pravidla, odvodit typ z jiného základního
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
-Potlačit upozornění z tohoto pravidla pro porušení <xref:System.ApplicationException>. Z tohoto pravidla je bezpečné potlačit upozornění, které se týká <xref:System.Xml.XmlDocument>porušení. Je bezpečné potlačit upozornění na neobecnou kolekci, pokud byl kód vydaný dříve.
+Potlačit upozornění z tohoto pravidla na porušení <xref:System.ApplicationException>. Z tohoto pravidla je bezpečné potlačit upozornění na porušení <xref:System.Xml.XmlDocument>. Je bezpečné potlačit upozornění na neobecnou kolekci, pokud byl kód vydaný dříve.
 
 ## <a name="configurability"></a>Konfigurovatelnost
 

@@ -1,7 +1,7 @@
 ---
-title: Python v sadě Visual Studio kurz – krok 3, interaktivní okno REPL
+title: Python v aplikaci Visual Studio – Krok 3, interaktivní REPL
 titleSuffix: ''
-description: Krok 3 průvodce základní funkce Pythonu v sadě Visual Studio, pokrývající okno REPL interaktivní Python.
+description: Krok 3 základního návodu k funkcím Pythonu v aplikaci Visual Studio, pokrývající interaktivní REPL okno Pythonu.
 ms.date: 01/28/2019
 ms.topic: tutorial
 author: JoshuaPartlow
@@ -11,42 +11,42 @@ ms.custom: seodec18
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 15e0b45fd77096ba2227391736aad5c895014d1c
-ms.sourcegitcommit: 0554b59a2a251661e56824fb9cd6e9b1f326cef1
+ms.openlocfilehash: 7b2de511b0d24df9c4e156ccef37ff053005af98
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71831874"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72450443"
 ---
-# <a name="step-3-use-the-interactive-repl-window"></a>Krok 3: Používání interaktivního okna REPL
+# <a name="step-3-use-the-interactive-repl-window"></a>Krok 3: použití interaktivního okna REPL
 
-**Předchozí krok: [Zápis a spuštění kódu](tutorial-working-with-python-in-visual-studio-step-02-writing-code.md)**
+**Předchozí krok: [zápis a spuštění kódu](tutorial-working-with-python-in-visual-studio-step-02-writing-code.md)**
 
-Visual Studio **interaktivní** okna pro jazyk Python poskytuje bohaté čtení vyhodnocení print-loop (REPL) prostředí, který výrazně zkracuje obvykle cyklem editovat sestavit ladit. **Interaktivní** okno nabízí všechny funkce prostředí REPL pro Python příkazového řádku. Také umožňuje velmi snadno vyměňovat kódu s zdrojové soubory v sadě Visual Studio editor, který je jinak náročné s příkazovým řádkem.
+**Interaktivní** okno sady Visual Studio pro Python poskytuje bohatá prostředí pro čtení a hodnocení REPL (Read-Evaluate-Print-Loop), které výrazně zkracuje běžný cyklus úprav-Build-ladění. **Interaktivní** okno poskytuje všechny možnosti REPLho prostředí v příkazovém řádku Pythonu. Také je velmi snadné vyměňovat kód se zdrojovými soubory v editoru sady Visual Studio, který je jinak náročný na příkazový řádek.
 
 > [!NOTE]
 > V případě problémů s REPL se ujistěte, že máte nainstalované balíčky `ipython` a `ipykernel` a nápovědu k instalaci balíčků najdete na [kartě balíčky prostředí Python](https://docs.microsoft.com/en-us/visualstudio/python/python-environments-window-tab-reference#packages-tab).
 
-1. Otevřít **interaktivní** okno kliknutím pravým tlačítkem myši prostředí projektu Pythonu v **Průzkumníku řešení** (například **Python 3.6 (32bitová verze)** ukazuje předchozí obrázek) a Výběr **otevřít interaktivní okno**. Můžete také vybrat **zobrazení** > **ostatní Windows** > **Windows interaktivní Python** z hlavní nabídky sady Visual Studio.
+1. Otevřete **interaktivní** okno kliknutím pravým tlačítkem myši na prostředí Python projektu v **Průzkumník řešení** (například **Python 3,6 (32-bit)** zobrazené v předchozí grafice) a výběrem možnosti **otevřít interaktivní okno**. V hlavní nabídce sady Visual Studio můžete alternativně vybrat možnost **zobrazení** >  další**interaktivní okna** **Windows** >  Python.
 
-1. **Interaktivní** níže se standardem editoru se otevře okno **>>>** řádku REPL pro Python. **Prostředí** rozevíracího seznamu můžete vybrat konkrétní interpret pro práci s. Často budete chtít také zajistit **interaktivní** okno větší, což lze provést tak, že přetáhnete oddělovač mezi dvěma okny:
+1. **Interaktivní** okno se otevře pod editorem s výzvou standard **>>>** Python REPL. Rozevírací seznam **prostředí** vám umožňuje vybrat konkrétní Interpret, se kterým chcete pracovat. Často také, že chcete, aby **interaktivní** okno bylo větší, což můžete udělat přetažením oddělovače mezi dvěma okny:
 
-    ![Interaktivní okno Pythonu a tažením změnit velikost](media/vs-getting-started-python-11-interactive1b.png)
+    ![Interaktivní okno Pythonu a přetahování na velikost](media/vs-getting-started-python-11-interactive1b.png)
 
     > [!Tip]
-    > Všechna okna v sadě Visual Studio můžete nastavit velikost přetažením příhraničních oddělovače. Lze také přetáhnout windows nezávisle na rámci sady Visual Studio a změnit jejich pořadí, ale chcete v rámci. Úplné podrobnosti najdete v tématu [přizpůsobení rozložení oken](../ide/customizing-window-layouts-in-visual-studio.md).
+    > Můžete změnit velikost všech oken v aplikaci Visual Studio přetažením oddělovačů ohraničení. Můžete také přetáhnout systém Windows nezávisle na rámci rámce sady Visual Studio a změnit jejich uspořádání v rámci rámečku. Úplné podrobnosti najdete v tématu [přizpůsobení rozložení oken](../ide/customizing-window-layouts-in-visual-studio.md).
 
-1. Zadejte několik příkazů jako `print("Hello, Visual Studio")` a výrazy, jako jsou `123/456` okamžitou výsledky:
+1. Zadejte několik příkazů, jako je například `print("Hello, Visual Studio")` a výrazy jako `123/456` pro zobrazení okamžitých výsledků:
 
-    ![Okamžitou výsledky interaktivní okno Pythonu](media/vs-getting-started-python-12-interactive2.png)
+    ![Okamžité výsledky interaktivního okna Pythonu](media/vs-getting-started-python-12-interactive2.png)
 
-1. Když začnete psát víceřádkové příkazu, jako jsou definice funkce, **interaktivní** okno zobrazuje Python **...**  výzva k pokračování řádků, které na rozdíl od příkazového řádku REPL, poskytuje automatické odsazení:
+1. Když začnete psát víceřádkový příkaz, jako je definice funkce, **interaktivní** okno zobrazuje v jazyce Python **...** prompt pro pokračování řádků, které na rozdíl od REPL příkazového řádku poskytuje automatické odsazení:
 
-    ![Interaktivní okno Pythonu s pokračováním – příkaz](media/vs-getting-started-python-13-interactive3.png)
+    ![Interaktivní okno Pythonu s pokračováním příkazu](media/vs-getting-started-python-13-interactive3.png)
 
-1. **Interaktivní** okno poskytuje úplnou historii všechno, co jste zadali a dále to vylepšuje REPL příkazového řádku s položkami víceřádkové historie. Například můžete snadno odvolat celou definici `f` fungovala jako jeden celek a snadno změnit název, který má `make_double`, ne znovu vytvořit funkci řádek po řádku.
+1. **Interaktivní** okno poskytuje úplnou historii všeho, co jste zadali, a zlepšuje se na PŘÍKAZOVÉM řádku REPL s položkami víceřádkové historie. Můžete například snadno vyvolat celou definici funkce `f` jako jednu jednotku a snadno změnit název na `make_double` místo opětovného vytváření funkce řádek po řádku.
 
-1. Visual Studio můžete odeslat více řádků kódu v okně editoru pro **interaktivní** okna. Tato funkce umožňuje udržovat kódu ve zdrojovém souboru a snadno odesílat vybírat části tak, **interaktivní** okno. Pak můžete pracovat s tyto fragmenty kódu v rychlé prostředí REPL namísto nutnosti spuštění celého programu. Pokud chcete zobrazit tuto funkci, nejprve nahraďte `for` smyčky v *PythonApplication1.py* souboru následujícím kódem:
+1. Visual Studio může odeslat více řádků kódu z okna editoru do **interaktivního** okna. Tato funkce umožňuje zachovat kód ve zdrojovém souboru a snadno odeslat vybrané části do **interaktivního** okna. Pak můžete pracovat s takovými fragmenty kódu v prostředí Rapid REPL, ale nemusíte spouštět celý program. Chcete-li zobrazit tuto funkci, nahraďte nejprve smyčku `for` v souboru *PythonApplication1.py* následujícím způsobem:
 
     ```python
     # Create a string with spaces proportional to a cosine of x in degrees
@@ -54,14 +54,14 @@ Visual Studio **interaktivní** okna pro jazyk Python poskytuje bohaté čtení 
         return ' ' * int(20 * cos(radians(x)) + 20) + 'o'
     ```
 
-1. V souboru *. py* vyberte příkazy funkce `import`, `from` a `make_dot_string`, klikněte pravým tlačítkem myši a vyberte **Odeslat do interaktivního** (nebo stiskněte klávesu @no__t **CTRL**-6**ENTER**). Fragment kódu se okamžitě vloží do **interaktivní** okno a spustit. Teď vyberte `make_dot_string` fungovat a zopakujte stejný příkaz, který se znovu spouští tento fragment kódu. Protože kód definuje funkci, můžete rychle otestovat tuto funkci voláním párkrát:
+1. V souboru *. py* vyberte příkazy funkce `import`, `from` a `make_dot_string`, klikněte pravým tlačítkem myši a vyberte **Odeslat do interaktivního** (nebo stiskněte klávesu @no__t **CTRL**-6**ENTER**). Fragment kódu se hned vloží do **interaktivního** okna a spustí se. Vzhledem k tomu, že kód definoval funkci, můžete tuto funkci rychle otestovat tak, že ji zavoláte několikrát:
 
-    ![Odeslání kódu do interaktivního okna a jeho otestování.](media/vs-getting-started-python-14-interactive4.png)
+    ![Odeslání kódu do interaktivního okna a jeho testování](media/vs-getting-started-python-14-interactive4.png)
 
     > [!Tip]
-    > Pomocí **Ctrl**+**Enter** v editoru *bez* spouští aktuální řádek kódu ve výběru **interaktivní** okno a automaticky umístí blikající kurzor na další řádek. Díky této funkci klávesy **Ctrl**+**Enter** opakovaně poskytuje pohodlný způsob, jak procházet kódem, který není možné z Pythonu příkazového řádku. Také umožňuje procházet kódem bez spuštění ladicího programu a bez nutně od začátku spuštění programu.
+    > Pomocí **kombinace kláves Ctrl**+**Zadejte** v editoru *bez* výběru spustí aktuální řádek kódu v **interaktivním** okně a automaticky umístí blikající kurzor na další řádek. Pomocí této funkce můžete stisknout **kombinaci kláves Ctrl**@no__t **-1 a** opakovaně poskytovat pohodlný způsob, jak procházet kód, který není možné pouze pomocí příkazového řádku Pythonu. Umožňuje také procházet kód bez spuštění ladicího programu a bez nutnosti spustit program od začátku.
 
-1. Můžete také zkopírovat a vložit více řádků kódu do **interaktivní** okno z jakéhokoli zdroje, jako je například následující fragment kódu, které je obtížné provést pomocí příkazového řádku REPL. Pythonu Při vložení, **interaktivní** okna ICT tento kód, jako kdyby měl ji v zadali:
+1. Do **interaktivního** okna můžete také zkopírovat a vložit více řádků kódu z libovolného zdroje, jako je například fragment kódu, který se obtížně provede s REPL příkazového řádku Pythonu. Po vložení **interaktivní** okno spustí tento kód, jako kdybyste ho zadali v:
 
     ```python
     for i in range(360):
@@ -69,19 +69,19 @@ Visual Studio **interaktivní** okna pro jazyk Python poskytuje bohaté čtení 
         print(s)
     ```
 
-    ![Vložením několika řádků kódu pomocí odesílání interaktivní](media/vs-getting-started-python-15-interactive5.png)
+    ![Vložení více řádků kódu pomocí interaktivního odesílání](media/vs-getting-started-python-15-interactive5.png)
 
-1. Jak je vidět, tento kód funguje správně, ale není velmi inspirující svůj výstup. Hodnotu do jiné kroku `for` smyčky, který by zobrazil informace kosinus wave. Naštěstí protože celý `for` smyčky je v historii REPL jako celek, lze snadno vrátit a jakékoli změny můžete chtít a k testování funkce znovu. Stisknutím klávesy šipka nahoru první odvolání `for` smyčky. Pak pomocí šipek doleva nebo doprava start navigace v kódu (dokud Uděláte to tak, nahoru a dolů šipkami nadále cyklicky procházet historii). Přejít na a změnit `range` specifikace `range(0, 360, 12)`. Stiskněte klávesu **Ctrl**+**Enter** (kdekoli v kódu) pro spuštění celý příkaz znovu:
+1. Jak vidíte, tento kód funguje správně, ale jeho výstup není velmi inspirativní. Jinou hodnotou kroku ve smyčce `for` by se zobrazilo více z kosinusového Wave. Naštěstí vzhledem k tomu, že celý cyklus `for` je v historii REPL jako jedna jednotka, snadno se vrátíte a provedete libovolné změny a pak znovu otestujete funkci. Stisknutím šipky nahoru napřed zavoláte smyčku `for`. Potom stisknutím levé nebo pravé šipky spusťte navigaci v kódu (dokud to neuděláte, šipky nahoru a dolů budou dál cyklicky procházet historii). Přejděte na adresu a změňte specifikaci `range` na `range(0, 360, 12)`. Pak stiskněte klávesu **Ctrl**+**ENTER** (kdekoli v kódu) pro opětovné spuštění celého příkazu:
 
-    ![Úpravy předchozí příkaz v interaktivním okně](media/vs-getting-started-python-16-interactive6.png)
+    ![Úprava předchozího příkazu v interaktivním okně](media/vs-getting-started-python-16-interactive6.png)
 
-1. Postupujte stejně jako můžete experimentovat s nastavením jiné kroku až do nalezení hodnoty, které vám nejvíc vyhovuje. Můžete provést také vlny opakování prodlužte rozsahu, například `range(0, 1800, 12)`.
+1. Opakujte postup pro experimentování s různými nastaveními kroku, dokud nenajdete hodnotu, kterou byste chtěli nejlépe. Vlnovkou můžete také vytvořit tak, že prodloužíte rozsah, například `range(0, 1800, 12)`.
 
-1. Až budete spokojeni s tím jsou napsaná v kódu **interaktivní** okna, vyberte ho, klikněte pravým tlačítkem a vyberte **kopírování kódu** (**Ctrl** + **Shift**+**C**) a vložte do editoru. Všimněte si, jak tato speciální funkce sady Visual Studio automaticky vynechá jakýkoli výstup, jakož i `>>>` a `...` zobrazí výzvu. Například následující obrázek ukazuje použití **kopírování kódu** na výběr, který zahrnuje výzvy a výstup příkazu:
+1. Až budete spokojeni s kódem, který jste napsali v **interaktivním** okně, vyberte ho, klikněte pravým tlačítkem a vyberte **Kopírovat kód** (**Ctrl**+**SHIFT**+**C**) a pak vložte do editoru. Všimněte si, že tato speciální funkce sady Visual Studio automaticky vynechá jakýkoliv výstup i `>>>` a výzvy `...`. Například následující obrázek ukazuje použití příkazu **Kopírovat kód** na výběr, který obsahuje výzvy a výstup:
 
-    ![Interaktivní okno kopírování kódu příkaz na výběru s výzvami a výstup](media/vs-getting-started-python-17-interactive7.png)
+    ![Interaktivní okno – příkaz Kopírovat kód na výběr s výzvami a výstupem](media/vs-getting-started-python-17-interactive7.png)
 
-    Když vložíte do editoru, získáte jenom kód:
+    Při vložení do editoru získáte pouze kód:
 
     ```python
     for i in range(0, 1800, 12):
@@ -89,16 +89,16 @@ Visual Studio **interaktivní** okna pro jazyk Python poskytuje bohaté čtení 
         print(s)
     ```
 
-    Pokud chcete zkopírovat obsah **interaktivní** okna, včetně pokynů a výstup, stačí použít standardní **kopírování** příkazu.
+    Pokud chcete zkopírovat přesný obsah **interaktivního** okna, včetně výzev a výstupu, stačí použít standardní příkaz **Kopírovat** .
 
-1. Co jste právě provedli je použít rychlé prostředí REPL **interaktivní** okno umožní zjistit podrobné informace o malou část kódu, potom pohodlně přidán tento kód ke zdrojovému souboru projektu. Když nyní spustíte kód znovu s **Ctrl**+**F5** (nebo **ladění** > **spustit bez ladění**), můžete přesné výsledky, které jste chtěli zobrazit.
+1. To, co jste právě provedli, je použít rychlé prostředí REPL **interaktivního** okna pro práci s podrobnostmi malého kódu, a poté jste pohodlným přidáním tohoto kódu do zdrojového souboru projektu. Když teď znovu spustíte kód pomocí **Ctrl**+**F5** (nebo **ladění** > **začíná bez ladění**), zobrazí se přesně požadované výsledky.
 
 ## <a name="next-step"></a>Další krok
 
 > [!div class="nextstepaction"]
 > [Spuštění kódu v ladicím programu](tutorial-working-with-python-in-visual-studio-step-04-debugging.md)
 
-## <a name="go-deeper"></a>Seznamte se blíž
+## <a name="go-deeper"></a>Přejít hlouběji
 
-- [Pomocí interaktivního okna](python-interactive-repl-in-visual-studio.md)
-- [Použití Ipythonu REPL](interactive-repl-ipython.md)
+- [Použití interaktivního okna](python-interactive-repl-in-visual-studio.md)
+- [Použití IPython REPL](interactive-repl-ipython.md)

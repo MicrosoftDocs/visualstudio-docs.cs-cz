@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: fbc3fbeac6d01b718af2022a09bddb92e9c7c2c6
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 3f7e8b0021fc3c318389aa3d6d3f53391b71351f
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71234574"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72443963"
 ---
 # <a name="ca1500-variable-names-should-not-match-field-names"></a>CA1500: Názvy proměnných by neměly odpovídat názvům polí
 
@@ -39,7 +39,7 @@ Metoda instance deklaruje parametr nebo místní proměnnou, jejíž název odpo
 
 ## <a name="rule-description"></a>Popis pravidla
 
-V případě, že název pole instance odpovídá parametru nebo názvu místní proměnné, je pole instance dostupné pomocí `this` klíčového slova (`Me` in [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]), které je uvnitř těla metody. Při údržbě kódu je snadné tento rozdíl zapomenout a předpokládat, že parametr nebo místní proměnná odkazují na pole instance, které vede k chybám. To je užitečné hlavně v případě dlouhých těla metod.
+Když název pole instance odpovídá parametru nebo názvu místní proměnné, je k poli instance přistupovaná pomocí klíčového slova `this` (`Me` v [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]) v těle metody. Při údržbě kódu je snadné tento rozdíl zapomenout a předpokládat, že parametr nebo místní proměnná odkazují na pole instance, které vede k chybám. To je užitečné hlavně v případě dlouhých těla metod.
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 

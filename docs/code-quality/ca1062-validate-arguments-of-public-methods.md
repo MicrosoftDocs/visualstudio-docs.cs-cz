@@ -17,12 +17,12 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 8106a4c0244cbd79e88a2bdc50e04ea74627dab4
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: 6019956d37d420b72275223148c2a3468a820884
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71235339"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72440704"
 ---
 # <a name="ca1062-validate-arguments-of-public-methods"></a>CA1062: Ověřte argumenty veřejných metod
 
@@ -30,22 +30,22 @@ ms.locfileid: "71235339"
 |-|-|
 |TypeName|ValidateArgumentsOfPublicMethods|
 |CheckId|CA1062|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
 
-Externě viditelná metoda odkazuje na jeden z jeho referenčních argumentů bez ověření, zda je `null` tento argument (`Nothing` v Visual Basic).
+Externě viditelná metoda odkazuje na jeden z jejích odkazů, aniž by bylo nutné ověřit, zda je tento argument `null` (`Nothing` v Visual Basic).
 
 ## <a name="rule-description"></a>Popis pravidla
 
-Všechny argumenty odkazů, které jsou předány externě viditelným metodám, by `null`měly být zkontrolovány proti. V případě potřeby vyvolejte <xref:System.ArgumentNullException> a, pokud je `null`argumentem.
+Všechny argumenty odkazů, které jsou předány externě viditelným metodám, by měly být zkontrolovány proti `null`. V případě potřeby vyvolejte <xref:System.ArgumentNullException>, pokud je argument `null`.
 
-Pokud metoda může být volána z neznámého sestavení, protože je deklarována jako veřejná nebo chráněná, měli byste ověřit všechny parametry metody. Pokud je metoda navržena tak, aby byla volána pouze pomocí známých sestavení, měli byste provést interní metodu a použít <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> atribut na sestavení, které obsahuje metodu.
+Pokud metoda může být volána z neznámého sestavení, protože je deklarována jako veřejná nebo chráněná, měli byste ověřit všechny parametry metody. Pokud je metoda navržena tak, aby byla volána pouze pomocí známých sestavení, měli byste provést interní metodu a použít atribut <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> na sestavení, které obsahuje metodu.
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 
-Chcete-li opravit porušení tohoto pravidla, ověřte každý argument odkazu proti `null`.
+Chcete-li opravit porušení tohoto pravidla, ověřte každý argument odkazu na `null`.
 
 ## <a name="when-to-suppress-warnings"></a>Kdy potlačit upozornění
 
@@ -76,7 +76,7 @@ namespace DesignLibrary
         {
             if (input == null)
             {
-                throw new ArgumentNullException("input");
+                throw new ArgumentNullException(nameof(input));
             }
             if (input.Length != 0)
             {
@@ -107,7 +107,7 @@ Namespace DesignLibrary
         Sub Validate(ByVal input As String)
 
             If input Is Nothing Then
-                Throw New ArgumentNullException("input")
+                Throw New ArgumentNullException(NameOf(input))
             End If
 
             If input.Length <> 0 Then
@@ -125,7 +125,7 @@ End Namespace
 
 Kopírovací konstruktory, které naplní pole nebo vlastnosti odkazující na objekty, mohou také porušovat pravidlo CA1062. K porušení dojde, protože zkopírovaný objekt, který je předán konstruktoru kopírování, může být `null` (`Nothing` v Visual Basic). Chcete-li vyřešit porušení, použijte metodu static (Shared in Visual Basic) pro kontrolu, zda kopírovaný objekt není null.
 
-V následujícím `Person` příkladu `other` třídy může `Person` být`null`objekt předaný konstruktoru kopírování.
+V následujícím příkladu třídy `Person` může být objekt `other` předaný konstruktoru kopírování `Person` `null`.
 
 ```csharp
 public class Person
@@ -150,7 +150,7 @@ public class Person
 
 ## <a name="example"></a>Příklad
 
-V následujícím změněném `Person` příkladu je `other` objekt, který je předán kopírovacímu konstruktoru, nejprve `PassThroughNonNull` zkontrolován na hodnotu null v metodě.
+V následujícím opraveném příkladu `Person` je objekt `other`, který je předán konstruktoru Copy, nejprve zkontrolován na hodnotu null v metodě `PassThroughNonNull`.
 
 ```csharp
 public class Person
@@ -175,7 +175,7 @@ public class Person
     private static Person PassThroughNonNull(Person person)
     {
         if (person == null)
-            throw new ArgumentNullException("person");
+            throw new ArgumentNullException(nameof(person));
         return person;
     }
 }

@@ -14,12 +14,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: f65d64dd4e881c41b17cd7cb9dc072a6fe800766
-ms.sourcegitcommit: 0c2523d975d48926dd2b35bcd2d32a8ae14c06d8
+ms.openlocfilehash: a6b6c45a8a56cab3927355fc4f03c541bcffc1cf
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71236137"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72446684"
 ---
 # <a name="ca1025-replace-repetitive-arguments-with-params-array"></a>CA1025: Nahraďte opakované argumenty polem parametrů
 
@@ -27,14 +27,14 @@ ms.locfileid: "71236137"
 |-|-|
 |TypeName|ReplaceRepetitiveArgumentsWithParamsArray|
 |CheckId|CA1025|
-|Kategorie|Microsoft.Design|
+|Kategorie|Microsoft. Design|
 |Zásadní změna|Nenarušující|
 
 ## <a name="cause"></a>příčina
 Veřejná nebo chráněná metoda ve veřejném typu má více než tři parametry a jejich poslední tři parametry jsou stejného typu.
 
 ## <a name="rule-description"></a>Popis pravidla
-Použijte pole parametrů namísto opakovaných argumentů, pokud je přesný počet argumentů neznámý a argumenty proměnných jsou stejného typu nebo mohou být předány jako stejný typ. Například <xref:System.Console.WriteLine%2A> metoda poskytuje přetížení pro obecné účely, které používá pole parametrů k přijetí libovolného <xref:System.Object> počtu argumentů.
+Použijte pole parametrů namísto opakovaných argumentů, pokud je přesný počet argumentů neznámý a argumenty proměnných jsou stejného typu nebo mohou být předány jako stejný typ. Například metoda <xref:System.Console.WriteLine%2A> poskytuje přetížení pro obecné účely, které používá pole parametrů k přijetí libovolného počtu argumentů <xref:System.Object>.
 
 ## <a name="how-to-fix-violations"></a>Jak opravit porušení
 Chcete-li opravit porušení tohoto pravidla, nahraďte opakované argumenty polem parametrů.

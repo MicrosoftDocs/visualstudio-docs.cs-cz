@@ -24,12 +24,12 @@ ms.author: mblome
 manager: markl
 ms.workload:
 - multiple
-ms.openlocfilehash: 1cff36760a84821a33dcdb1ee4cc6842cd40aee0
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: ac3d6225bc765ec404784589d2faa06f155265ab
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72015964"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72446294"
 ---
 # <a name="annotating-structs-and-classes"></a>Zadávání poznámek ke strukturám a třídám
 
@@ -41,15 +41,15 @@ ms.locfileid: "72015964"
 
      Pole je v rozsahu (včetně) od `low` do `high`.  Ekvivalent `_Satisfies_(_Curr_ >= low && _Curr_ <= high)` aplikovaný na objekt s poznámkou pomocí příslušných podmínek před nebo po odeslání.
 
-- `_Field_size_(size)`, `_Field_size_opt_(size)`, `_Field_size_bytes_(size)`, `_Field_size_bytes_opt_(size)`
+- `_Field_size_(size)`, `_Field_size_opt_(size)` `_Field_size_bytes_(size)`, `_Field_size_bytes_opt_(size)`
 
      Pole, které má zapisovatelné velikosti v prvcích (nebo bajtech), jak je určeno `size`.
 
-- `_Field_size_part_(size, count)`, `_Field_size_part_opt_(size, count)`,         `_Field_size_bytes_part_(size, count)`, `_Field_size_bytes_part_opt_(size, count)`
+- `_Field_size_part_(size, count)`, `_Field_size_part_opt_(size, count)` `_Field_size_bytes_part_(size, count)`, `_Field_size_bytes_part_opt_(size, count)`
 
      Pole, které má zapisovatelné velikosti v prvcích (nebo bajtech), jak je určeno `size` a `count` z těchto prvků (bajtů), které jsou čitelné.
 
-- `_Field_size_full_(size)`, `_Field_size_full_opt_(size)`, `_Field_size_bytes_full_(size)`, `_Field_size_bytes_full_opt_(size)`
+- `_Field_size_full_(size)`, `_Field_size_full_opt_(size)` `_Field_size_bytes_full_(size)`, `_Field_size_bytes_full_opt_(size)`
 
      Pole, které má čitelné i zapisovatelné velikosti v elementech (nebo bajtech), jak je určeno `size`.
 

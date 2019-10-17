@@ -8,21 +8,21 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ee4e3df94e46b4d3cc996a23fc1e40401195e21
-ms.sourcegitcommit: 209ed0fcbb8daa1685e8d6b9a97f3857a4ce1152
+ms.openlocfilehash: 54b33eb92cec82a5a0327bac92f2a8909519784d
+ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69551133"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72448897"
 ---
-# <a name="how-to-suppress-code-analysis-warnings-for-generated-code"></a>Postupy: Potlačení upozornění analýzy kódu pro vygenerovaný kód
+# <a name="how-to-suppress-code-analysis-warnings-for-generated-code"></a>Postupy: potlačení upozornění analýzy kódu pro generovaný kód
 
 Generovaný kód zahrnuje kód, který je přidán do projektu pomocí kompilátorů spravovaného kódu nebo nástrojů třetích stran. Je možné, že budete chtít zobrazit porušení pravidel, která analýza kódu zjistí v generovaném kódu. Vzhledem k tomu, že nemůžete zobrazit a udržovat kód, který obsahuje porušení, možná je nechcete zobrazit.
 
 Zaškrtávací políčko **Potlačit výsledky z vygenerovaného kódu** na stránce vlastností analýza kódu projektu umožňuje vybrat, zda se má zobrazit upozornění analýzy kódu z kódu generovaného nástrojem třetí strany.
 
 > [!NOTE]
-> Tato možnost není potlačit chyby analýzy kódu a upozornění z generovaného kódu při chyby a upozornění se zobrazí ve formulářích a šablony. Zdrojový kód formuláře nebo šablony můžete zobrazit a spravovat.
+> Tato možnost potlačí chyby a upozornění analýzy kódu z generovaného kódu, pokud se chyby a upozornění zobrazují ve formulářích a šablonách. Zdrojový kód formuláře nebo šablony můžete zobrazit a spravovat.
 
 ### <a name="to-suppress-warnings-for-generated-code-in-a-project"></a>Potlačení upozornění pro generovaný kód v projektu
 
@@ -33,4 +33,4 @@ Zaškrtávací políčko **Potlačit výsledky z vygenerovaného kódu** na str�
 3. Zaškrtněte políčko **Potlačit výsledky z generovaného kódu** .
 
 > [!NOTE]
-> Upozornění můžete potlačit jenom z analýz starší verze. V současné době nemůžete potlačit upozornění [](roslyn-analyzers-overview.md)analýzy kódu z analyzátorů.
+> Upozornění můžete potlačit jenom z analýz starší verze. V současné době nemůžete potlačit upozornění analýzy kódu z [analyzátorů](roslyn-analyzers-overview.md).
