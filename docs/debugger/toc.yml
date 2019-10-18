@@ -239,7 +239,7 @@
             - name: Vlastní zobrazení (spravovaná)
               items:
                 - name: Vytváření vlastních zobrazení spravovaných objektů
-                  href: create-custom-views-of-dot-managed-objects.md
+                  href: create-custom-views-of-managed-objects.md
                 - name: 'Instruování ladicího programu, co se má zobrazit'
                   href: using-the-debuggerdisplay-attribute.md
                 - name: 'Instruování ladicího programu, jaký typ se má zobrazit'
