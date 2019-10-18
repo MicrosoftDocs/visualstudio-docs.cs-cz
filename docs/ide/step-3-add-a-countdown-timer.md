@@ -1,5 +1,5 @@
 ---
-title: 'Krok 3: Přidání časovače odpočítávání'
+title: 'Krok 3: přidejte časovač odpočítávání'
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -13,20 +13,20 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 197a52894a8c0ed3c2c38b9036a521a558c1005d
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
+ms.openlocfilehash: f5ee65126fb89f2725b69d196e0659c622d9c389
+ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118781"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314107"
 ---
-# <a name="step-3-add-a-countdown-timer"></a>Krok 3: Přidání časovače odpočítávání
+# <a name="step-3-add-a-countdown-timer"></a>Krok 3: přidejte časovač odpočítávání
 
 V třetí části tohoto kurzu přidáte časovač odpočítávání za účelem sledování počtu sekund, které zbývá pro dokončení příjemce kvízu.
 
 > [!NOTE]
 > Toto téma je součástí série kurzů o základních konceptech kódování.
-> - Přehled tohoto kurzu najdete v [kurzu 2: Vytvoření časovaného matematického](../ide/tutorial-2-create-a-timed-math-quiz.md)kvízu
+> - Přehled tohoto kurzu najdete v tématu [kurz 2: vytvoření časovaného matematického kvízu](../ide/tutorial-2-create-a-timed-math-quiz.md).
 > - Chcete-li stáhnout dokončenou verzi kódu, přečtěte si [ukázku kurzu dokončení matematického kvízu](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).
 
 ## <a name="to-add-a-countdown-timer"></a>Přidání časovače odpočítávání
@@ -36,18 +36,17 @@ V třetí části tohoto kurzu přidáte časovač odpočítávání za účelem
      [!code-vb[VbExpressTutorial3Step3#5](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_1.vb)]
      [!code-csharp[VbExpressTutorial3Step3#5](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_1.cs)]
 
-   > [!IMPORTANT]
-   > Pomocí ovládacího prvku programovací jazyk v pravém horním rohu této stránky můžete zobrazit fragment C# kódu nebo Visual Basic fragment kódu.<br><br>![Řízení programovacího jazyka pro Docs.Microsoft.com](../ide/media/docs-programming-language-control.png)
+     [!INCLUDE [devlang-control-csharp-vb](./includes/devlang-control-csharp-vb.md)]
 
      Nyní potřebujete metodu, která ve skutečnosti počítá sekundy, jako je například časovač, který po dobu, kterou určíte, vyvolá událost.
 
-2. V okně návrh přesuňte <xref:System.Windows.Forms.Timer> ovládací prvek z kategorie **součásti** sady **nástrojů** do formuláře.
+2. V okně návrh přesuňte ovládací prvek <xref:System.Windows.Forms.Timer> z kategorie **součásti** sady **nástrojů** do formuláře.
 
      Ovládací prvek se zobrazí v šedé oblasti v dolní části okna návrhu.
 
 3. Ve formuláři vyberte ikonu **Timer1** , kterou jste právě přidali, a nastavte její vlastnost **interval** na **1000**.
 
-     Vzhledem k tomu, že hodnota intervalu je milisekunda, hodnota 1000 <xref:System.Windows.Forms.Timer.Tick> způsobí, že se událost aktivuje každou sekundu.
+     Vzhledem k tomu, že hodnota intervalu je milisekund, hodnota 1000 způsobí, že se událost <xref:System.Windows.Forms.Timer.Tick> vyvolá každou sekundu.
 
 4. Na formuláři dvakrát klikněte na ovládací prvek **časovač** , nebo ho vyberte a pak stiskněte klávesu **ENTER** .
 
@@ -62,7 +61,7 @@ V třetí části tohoto kurzu přidáte časovač odpočítávání za účelem
 
      Pokud žádný čas nezůstane, časovač se zastaví a změní text ovládacího prvku **timeLabel** tak, aby se zobrazil **čas.** Okno se zprávou oznamuje, že kvíz je nad a odpověď je odhalena – v tomto případě přidáním addend1 a addend2. Vlastnost **Enabled** ovládacího prvku **startButton** je nastavena na **hodnotu true** , aby příjemce kvízu mohl spustit jiný kvíz.
 
-     Právě jste přidali `if else` příkaz, což je způsob, jak říct programům rozhodování. `if else` Příkaz vypadá následovně.
+     Právě jste přidali příkaz `if else`, což je způsob, jak říct programům, aby mohli provádět rozhodnutí. Příkaz `if else` vypadá takto.
 
     > [!NOTE]
     > Následující příklad je pouze pro ukázku – Nepřidávat ho do projektu.
@@ -90,31 +89,31 @@ V třetí části tohoto kurzu přidáte časovač odpočítávání za účelem
     }
     ```
 
-     Prohlédněte si úzce na příkazu, který jste přidali `else` v bloku, abyste zobrazili odpověď na problém sčítání.
+     Prohlédněte si úzce na příkazu, který jste přidali v bloku `else`, aby se zobrazila odpověď na problém sčítání.
 
      [!code-vb[VbExpressTutorial3Step3#24](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_3.vb)]
      [!code-csharp[VbExpressTutorial3Step3#24](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_3.cs)]
 
      Příkaz `addend1 + addend2` sečte hodnoty dvou proměnných dohromady. První část (`sum.Value`) používá vlastnost **Value** součtového ovládacího prvku NumericUpDown k zobrazení správné odpovědi. Stejnou vlastnost použijete později ke kontrole odpovědí pro kvíz.
 
-     Kvíz uživatelé vyplňující může snadněji zadat čísla pomocí <xref:System.Windows.Forms.NumericUpDown> ovládacího prvku, což je důvod, proč ho použijete pro odpovědi na matematické problémy. Všechny možné odpovědi jsou celá čísla od 0 do 100. Ponecháním výchozích hodnot vlastností **minimum**, **Maximum**a **počet desetinných míst** zajistíte, že uživatelé vyplňující kvízu nemůže vstupovat do desetinných míst, záporná čísla nebo čísla, která jsou příliš vysoká. (Pokud jste chtěli uživatelé vyplňující kvízu zadat 3,141, ale ne 3,1415, mohli byste nastavit vlastnost **počet desetinných míst** na 3.)
+     Uživatelé vyplňující kvízu může snadno zadat čísla pomocí ovládacího prvku <xref:System.Windows.Forms.NumericUpDown>, což je důvod, proč ho použijete pro odpovědi na matematické problémy. Všechny možné odpovědi jsou celá čísla od 0 do 100. Ponecháním výchozích hodnot vlastností **minimum**, **Maximum**a **počet desetinných míst** zajistíte, že uživatelé vyplňující kvízu nemůže vstupovat do desetinných míst, záporná čísla nebo čísla, která jsou příliš vysoká. (Pokud jste chtěli uživatelé vyplňující kvízu zadat 3,141, ale ne 3,1415, mohli byste nastavit vlastnost **počet desetinných míst** na 3.)
 
-6. Přidejte tři řádky na konec `StartTheQuiz()` metody, aby kód vypadal jako následující.
+6. Přidejte tři řádky na konec metody `StartTheQuiz()`, takže kód vypadá následovně.
 
      [!code-vb[VbExpressTutorial3Step3#7](../ide/codesnippet/VisualBasic/step-3-add-a-countdown-timer_4.vb)]
      [!code-csharp[VbExpressTutorial3Step3#7](../ide/codesnippet/CSharp/step-3-add-a-countdown-timer_4.cs)]
 
-     Teď, když se kvíz spustí, proměnná **TimeLeft** je nastavená na 30 a vlastnost **text** ovládacího prvku **timeLabel** je nastavená na 30 sekund. <xref:System.Windows.Forms.Timer.Start> Pak metoda ovládacího prvku Timer spustí odpočítávání. (Kvíz ještě nekontroluje odpověď – to je dál.)
+     Teď, když se kvíz spustí, proměnná **TimeLeft** je nastavená na 30 a vlastnost **text** ovládacího prvku **timeLabel** je nastavená na 30 sekund. Pak metoda <xref:System.Windows.Forms.Timer.Start> ovládacího prvku Timer spustí odpočítávání. (Kvíz ještě nekontroluje odpověď – to je dál.)
 
 7. Uložte program, spusťte jej a pak klikněte na tlačítko **Start** ve formuláři.
 
      Časovač se začne počítat. Když čas vyprší, kvíz skončí a odpověď se zobrazí. Následující ilustrace znázorňuje kvíz probíhá.
 
-     ![Probíhá Matematický kvíz.](../ide/media/express_addcountdown.png)<br/>
+     probíhá ![Math kvízu ](../ide/media/express_addcountdown.png)<br/>
 *Probíhá Matematický kvíz.*
 
 ## <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
 
-- Pokud chcete přejít na další krok kurzu, přečtěte si  **[krok 4: Přidejte metodu](../ide/step-4-add-the-checktheanswer-parens-method.md)** metodu CheckTheAnswer ().
+- Pokud chcete přejít na další krok kurzu, přečtěte si **[Krok 4: Přidání metody metodu CheckTheAnswer ()](../ide/step-4-add-the-checktheanswer-parens-method.md)** .
 
-- Pokud se chcete vrátit k předchozímu kroku kurzu [, přečtěte si článek krok 2: Vytvoří náhodný problém](../ide/step-2-create-a-random-addition-problem.md)sčítání.
+- Pokud se chcete vrátit k předchozímu kroku kurzu, přečtěte si [článek krok 2: vytvoření náhodného problému přidání](../ide/step-2-create-a-random-addition-problem.md).

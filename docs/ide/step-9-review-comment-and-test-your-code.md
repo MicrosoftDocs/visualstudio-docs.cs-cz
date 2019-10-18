@@ -1,5 +1,5 @@
 ---
-title: 'Krok 9: Kontrola, okomentování a otestování kódu'
+title: 'Krok 9: kontrola, komentář a testování kódu'
 ms.date: 08/30/2019
 ms.assetid: f26f79ba-c91b-4164-b87f-679a1b231c09
 ms.topic: tutorial
@@ -13,14 +13,14 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d0504f994c05ed9c924b3758a7f83838c67df44
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
-ms.translationtype: MT
+ms.openlocfilehash: 31a66556e9476631fa0372b14e73eb8c6241fc63
+ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118716"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314198"
 ---
-# <a name="step-9-review-comment-and-test-your-code"></a>Krok 9: Kontrola, okomentování a otestování kódu
+# <a name="step-9-review-comment-and-test-your-code"></a>Krok 9: kontrola, komentář a testování kódu
 
 Dál přidáte komentář k vašemu kódu. Komentář je Poznámka, která nemění způsob, jakým se aplikace chová. Usnadňuje někomu, kdo čte váš kód, abychom pochopili, co dělá. Přidání komentářů do kódu je dobrým příznakem, který se má dostat do.
 
@@ -30,9 +30,9 @@ Právě jste vytvořili něco, co funguje, a i když ještě není hotové, mů�
 
 - Po dvojitém kliknutí na tlačítko **Zobrazit obrázek** v **Návrhář formulářů**rozhraní IDE automaticky přidalo do kódu programu *metodu* .
 
-- Metody slouží k uspořádání kódu: Je to způsob seskupení kódu dohromady.
+- Metody slouží k uspořádání kódu: Jedná se o způsob seskupení kódu dohromady.
 
-- Ve většině případů metoda dělá malý počet věcí v určitém pořadí, například jak vaše `showButton_Click()` metoda (nebo `ShowButton_Click()`) zobrazuje dialogové okno a následně načítá obrázek.
+- Ve většině případů metoda dělá malý počet věcí v určitém pořadí, například způsob, jakým metoda `showButton_Click()` (nebo `ShowButton_Click()`) zobrazuje dialogové okno a následně načte obrázek.
 
 - Metoda je tvořena *příkazy*kódu nebo řádky kódu. Metodu můžete představit jako způsob, jak seskupit příkazy kódu dohromady.
 
@@ -48,38 +48,37 @@ Právě jste vytvořili něco, co funguje, a i když ještě není hotové, mů�
   pictureBox1.Load(openFileDialog1.FileName)
   ```
 
-   Příkazy jsou to, co dělají vaše programy. V C#příkazu, příkaz vždy končí středníkem. V Visual Basic konec řádku je konec příkazu. (V Visual Basic není potřeba žádný středník.) Předchozí příkaz oznamuje vašemu <xref:System.Windows.Forms.PictureBox> ovládacímu prvku, aby načetl soubor, který uživatel vybral pomocí komponenty **OpenFileDialog** .
+   Příkazy jsou to, co dělají vaše programy. V C#příkazu, příkaz vždy končí středníkem. V Visual Basic konec řádku je konec příkazu. (V Visual Basic není potřeba žádný středník.) Předchozí příkaz oznamuje vašemu ovládacímu prvku <xref:System.Windows.Forms.PictureBox>, aby načetl soubor, který uživatel vybral pomocí komponenty **OpenFileDialog** .
 
 ## <a name="to-add-comments"></a>Přidání komentářů
 
 1. Přidejte následující komentář do kódu.
 
-    > [!IMPORTANT]
-    > Pomocí ovládacího prvku programovací jazyk v pravém horním rohu této stránky můžete zobrazit fragment C# kódu nebo Visual Basic fragment kódu.<br><br>![Řízení programovacího jazyka pro Docs.Microsoft.com](../ide/media/docs-programming-language-control.png)
+     [!INCLUDE [devlang-control-csharp-vb](./includes/devlang-control-csharp-vb.md)]
 
      [!code-csharp[VbExpressTutorial1Step9_10#1](../ide/codesnippet/CSharp/step-9-review-comment-and-test-your-code_1.cs)]
 
      [!code-vb[VbExpressTutorial1Step9_10#1](../ide/codesnippet/VisualBasic/step-9-review-comment-and-test-your-code_1.vb)]
 
-    Obslužná rutina <xref:System.Windows.Forms.Control.Click> události tlačítka showButton je teď dokončená a funguje. Začali jste psát kód, počínaje `if` příkazem. `if` Příkaz je způsob, jakým vaše aplikace poznáte, "Podívejte se na tuto jednu věc a pokud ano, udělejte tyto akce." V tomto případě určíte, aby aplikace otevřela dialogové okno **otevřít soubor** , a pokud uživatel vybere soubor a klikne na tlačítko **OK** , načte tento soubor do **ovládacího prvku PictureBox**.
+    Obslužná rutina události <xref:System.Windows.Forms.Control.Click> tlačítka pro **showButton** je teď dokončená a funguje. Začali jste psát kód, počínaje příkazem `if`. Příkaz `if` je způsob, jakým aplikaci poznáte, "Podívejte se na tuto jednu věc a pokud je to pravda, udělejte tyto akce." V tomto případě určíte, aby aplikace otevřela dialogové okno **otevřít soubor** , a pokud uživatel vybere soubor a klikne na tlačítko **OK** , načte tento soubor do **ovládacího prvku PictureBox**.
 
     > [!TIP]
     > Rozhraní IDE je sestaveno tak, aby bylo snadné psát kód a *fragmenty kódu* jsou jedním ze způsobů, jak to provést. Fragment kódu je zástupce, který se rozšíří na malý blok kódu.
     >
-    >  Můžete zobrazit všechny dostupné fragmenty kódu. Na řádku nabídek klikněte na **nástroje** > **Správce fragmentů kódu**. Pro je fragment kódu ve **vizuálu C# .** C# `if` Pro Visual Basic `if` jsou fragmenty ve**vzorcích** **podmíněného** > kódu a smyčky. Pomocí tohoto správce můžete procházet existující fragmenty nebo přidávat vlastní fragmenty kódu.
+    >  Můžete zobrazit všechny dostupné fragmenty kódu. Na panelu nabídek vyberte **nástroje**  > **Správce fragmentů kódů**. Pro C#je fragment kódu `if` v **jazyce Visual C#**  . Pro Visual Basic jsou fragmenty `if` v **podmíněných a smyčekch**  > **vzory kódu**. Pomocí tohoto správce můžete procházet existující fragmenty nebo přidávat vlastní fragmenty kódu.
     >
-    >  Chcete-li aktivovat fragment při psaní kódu, zadejte jej a vyberte klávesu **TAB** . Mnoho fragmentů kódu se zobrazí v okně **technologie IntelliSense** , což je důvod, proč si vyberete klávesu **TAB** dvakrát: nejprve vyberte fragment kódu z okna **technologie IntelliSense** a potom pro určení rozhraní IDE, aby používal fragment. (Technologie IntelliSense podporuje `if` fragment, ale `ifelse` ne fragment.)
+    >  Chcete-li aktivovat fragment při psaní kódu, zadejte jej a vyberte klávesu **TAB** . Mnoho fragmentů kódu se zobrazí v okně **technologie IntelliSense** , což je důvod, proč si vyberete klávesu **TAB** dvakrát: nejprve vyberte fragment kódu z okna **technologie IntelliSense** a potom pro určení rozhraní IDE, aby používal fragment. (Technologie IntelliSense podporuje fragment `if`, ale ne fragment `ifelse`.)
 
 1. Před spuštěním aplikace uložte aplikaci tak, že kliknete na tlačítko **Uložit vše** na panelu nástrojů, které by mělo vypadat podobně jako na následujícím snímku obrazovky.
 
-     ![Tlačítko Uložit vše na panelu nástrojů](../ide/media/express_iconsaveall.png)<br>
-***Uložit vše*** *tlačítko*
+     tlačítko ![Save všechna tlačítka panelu nástrojů ](../ide/media/express_iconsaveall.png)<br>
+*Tlačítko* ***Uložit vše***
 
-     Pokud chcete aplikaci uložit, zvolte **soubor** > **Uložit vše** z panelu nabídek (nebo stiskněte klávesy **CTRL**+**SHIFT**+**S**). Osvědčeným postupem je ukládat včas a často.
+     Chcete-li uložit aplikaci, zvolte možnost **soubor**  > **Uložit vše** z panelu nabídek (nebo stiskněte klávesy **CTRL** +**SHIFT** +**S**). Osvědčeným postupem je ukládat včas a často.
 
      Když je spuštěný, váš program by měl vypadat jako na následujícím obrázku.
 
-     ![Prohlížeč obrázků](../ide/media/express_pictureviewerdonerun.png)<br>***Prohlížeč obrázků***
+     ](../ide/media/express_pictureviewerdonerun.png) ![Picture Viewer<br>***Prohlížeč obrázků***
 
 ## <a name="to-test-your-app"></a>Testování aplikace
 
@@ -88,19 +87,19 @@ Právě jste vytvořili něco, co funguje, a i když ještě není hotové, mů�
 1. Kliknutím na tlačítko **Zobrazit obrázek** spusťte kód, který jste právě napsali. Nejprve aplikace otevře dialogové okno **otevřít soubor** . Ověřte, že se filtry zobrazí v rozevíracím seznamu **soubory typu** v dolní části dialogového okna. Pak přejděte na obrázek a otevřete ho. Ukázkové obrázky, které se dodávají s operačním systémem Windows, můžete obvykle najít ve složce *dokumenty* ve složce *Moje Pictures\Sample obrázky* .
 
     > [!TIP]
-    > Pokud se v dialogovém okně **Vybrat soubor s obrázkem** nezobrazí žádné obrázky, ujistěte se, že je v rozevíracím seznamu v pravé dolní části dialogového okna vybrán filtr **všechny soubory (*.\*)** .
+    > Pokud v dialogovém okně **Vybrat soubor obrázku** nevidíte žádné obrázky, ujistěte se, že je v rozevíracím seznamu v pravé dolní části dialogového okna vybraná možnost filtr **všechny soubory (*. \*)** .
 
-1. Načtěte obrázek, který se zobrazí v ovládacím prvku PictureBox. Pak zkuste změnit velikost formuláře přetažením jeho ohraničení. Vzhledem k tomu, že máte ovládací prvek PictureBox ukotven uvnitř kontejneru TableLayoutPanel, který je umístěn uvnitř formuláře, změní se vaše oblast obrázku tak, aby byla stejná jako forma formuláře, a vyplní horní 90 procent formuláře. To je důvod, proč jste <xref:System.Windows.Forms.TableLayoutPanel> použili <xref:System.Windows.Forms.FlowLayoutPanel> kontejnery a: Ponechá správnou velikost formuláře, když ho uživatel změní.
+1. Načtěte obrázek, který se zobrazí v ovládacím prvku PictureBox. Pak zkuste změnit velikost formuláře přetažením jeho ohraničení. Vzhledem k tomu, že máte ovládací prvek PictureBox ukotven uvnitř kontejneru TableLayoutPanel, který je umístěn uvnitř formuláře, změní se vaše oblast obrázku tak, aby byla stejná jako forma formuláře, a vyplní horní 90 procent formuláře. To je důvod, proč jste použili <xref:System.Windows.Forms.TableLayoutPanel> a kontejnery <xref:System.Windows.Forms.FlowLayoutPanel>: při změně velikosti uživatele udržují vaši formu správnou velikost.
 
      Nyní větší obrázky přecházejí nad hranicemi prohlížeče obrázků. V dalším kroku přidáte kód, který zajistí přizpůsobení obrázků v okně.
 
 ## <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
 
-- Pokud chcete přejít na další krok kurzu, přečtěte si  **[krok 10: Napište kód pro další tlačítka a zaškrtávací políčko](../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md).**
+- Pokud chcete přejít na další krok kurzu, přečtěte si téma **[Krok 10: zápis kódu pro další tlačítka a zaškrtávací políčko](../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md)** .
 
-- Pokud se chcete vrátit k předchozímu kroku kurzu [, přečtěte si krok 8: Napište kód pro zobrazení obslužné rutiny](../ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md)události tlačítka Zobrazit obrázek.
+- Chcete-li se vrátit k předchozímu kroku kurzu, přečtěte si [Krok 8: napište kód pro zobrazení obslužné rutiny události tlačítka Zobrazit obrázek](../ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md).
 
 ## <a name="see-also"></a>Viz také:
 
-* [Kurz 2: Vytvoření časovaného matematického kvízu](tutorial-2-create-a-timed-math-quiz.md)
-* [Kurz 3: Vytvořit porovnávací hru](tutorial-3-create-a-matching-game.md)
+* [Kurz 2: vytvoření časovaného matematického kvízu](tutorial-2-create-a-timed-math-quiz.md)
+* [Kurz 3: vytvoření porovnávací hry](tutorial-3-create-a-matching-game.md)

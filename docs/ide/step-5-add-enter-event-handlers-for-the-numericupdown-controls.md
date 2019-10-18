@@ -1,5 +1,5 @@
 ---
-title: 'Krok 5: Přidat obslužné rutiny událostí Enter pro ovládací prvky NumericUpDown'
+title: 'Krok 5: přidejte obslužné rutiny událostí Enter pro ovládací prvky NumericUpDown'
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -13,20 +13,20 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 8edebff5af7affebf166ea07ca7aa813037c13c2
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
+ms.openlocfilehash: 7de9fafa32922792e21eb672df0aa9128c25dbe2
+ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118746"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314115"
 ---
-# <a name="step-5-add-enter-event-handlers-for-the-numericupdown-controls"></a>Krok 5: Přidání obslužných rutin událostí Enter pro ovládací prvky NumericUpDown
+# <a name="step-5-add-enter-event-handlers-for-the-numericupdown-controls"></a>Krok 5: přidejte obslužné rutiny událostí Enter pro ovládací prvky NumericUpDown
 
-V páté části tohoto kurzu přidáte <xref:System.Windows.Forms.Control.Enter> obslužné rutiny událostí, aby bylo možné zadat odpovědi na otázky kvízu, které jsou poněkud jednodušší. Tento kód vybere a vymaže aktuální hodnotu v každém <xref:System.Windows.Forms.NumericUpDown> ovládacím prvku, jakmile ho si ten vybere a začne zadat jinou hodnotu.
+V páté části tohoto kurzu přidáte <xref:System.Windows.Forms.Control.Enter> obslužných rutin událostí, aby bylo možné zadat odpovědi na otázky kvízu, které jsou poněkud jednodušší. Tento kód vybere a vymaže aktuální hodnotu v každém ovládacím prvku <xref:System.Windows.Forms.NumericUpDown>, jakmile ho autor kvízu zvolí a začne zadat jinou hodnotu.
 
 > [!NOTE]
 > Toto téma je součástí série kurzů o základních konceptech kódování.
-> - Přehled tohoto kurzu najdete v [kurzu 2: Vytvoření časovaného matematického](../ide/tutorial-2-create-a-timed-math-quiz.md)kvízu
+> - Přehled tohoto kurzu najdete v tématu [kurz 2: vytvoření časovaného matematického kvízu](../ide/tutorial-2-create-a-timed-math-quiz.md).
 > - Chcete-li stáhnout dokončenou verzi kódu, přečtěte si [ukázku kurzu dokončení matematického kvízu](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).
 
 ## <a name="to-verify-the-default-behavior"></a>Ověření výchozího chování
@@ -51,7 +51,7 @@ V páté části tohoto kurzu přidáte <xref:System.Windows.Forms.Control.Enter
 
    Karta **události** v dialogovém okně **vlastnosti** zobrazí všechny události, na které můžete reagovat (popisovač) pro položku, kterou zvolíte ve formuláři. Vzhledem k tomu, že jste zvolili ovládací prvek NumericUpDown, vztahují se na něj všechny uvedené události.
 
-2. Zvolte událost **ENTER** , zadejte `answer_Enter`a potom stiskněte klávesu **ENTER** .
+2. Zvolte událost **ENTER** , zadejte `answer_Enter` a potom stiskněte klávesu **ENTER** .
 
    ![Zadejte název metody obslužné rutiny události.](media/enter-event.png)
 
@@ -62,8 +62,7 @@ V páté části tohoto kurzu přidáte <xref:System.Windows.Forms.Control.Enter
      [!code-vb[VbExpressTutorial3Step5_6#11](../ide/codesnippet/VisualBasic/step-5-add-enter-event-handlers-for-the-numericupdown-controls_1.vb)]
      [!code-csharp[VbExpressTutorial3Step5_6#11](../ide/codesnippet/CSharp/step-5-add-enter-event-handlers-for-the-numericupdown-controls_1.cs)]
 
-     > [!IMPORTANT]
-     > Pomocí ovládacího prvku programovací jazyk v pravém horním rohu této stránky můžete zobrazit fragment C# kódu nebo Visual Basic fragment kódu.<br><br>![Řízení programovacího jazyka pro Docs.Microsoft.com](../ide/media/docs-programming-language-control.png)
+     [!INCLUDE [devlang-control-csharp-vb](./includes/devlang-control-csharp-vb.md)]
 
      Tento kód může vypadat složitě, ale můžete ho pochopit, pokud se podíváte na krok za krokem. Nejprve se podívejte na horní část metody: `object sender` v C# nebo `sender As System.Object` v Visual Basic. Tento parametr odkazuje na objekt, jehož událost se vyvolává, což se označuje jako odesilatel. V tomto případě je objekt odesílatel ovládacího prvku NumericUpDown. Takže v prvním řádku metody určíte, že odesílatel není pouze obecný objekt, ale konkrétně ovládací prvek NumericUpDown. (Každý ovládací prvek NumericUpDown je objekt, ale ne každý objekt je ovládací prvek NumericUpDown.) Ovládací prvek NumericUpDown má v této metodě název **answerBox** , protože bude použit pro všechny ovládací prvky NumericUpDown ve formuláři, nikoli pouze pro součet ovládacího prvku NumericUpDown. Vzhledem k tomu, že v této metodě deklarujete proměnnou answerBox, její obor se vztahuje pouze na tuto metodu. Jinými slovy proměnné lze použít pouze v rámci této metody.
 
@@ -71,7 +70,7 @@ V páté části tohoto kurzu přidáte <xref:System.Windows.Forms.Control.Enter
 
 4. V **Návrhář formulářů**vyberte rozdílový ovládací prvek **NumericUpDown** .
 
-5. Na stránce **události** v dialogovém okně **vlastnosti** se posuňte dolů k události **ENTER** , klikněte na šipku rozevíracího seznamu na konci řádku a zvolte `answer_Enter` obslužnou rutinu události, kterou jste právě přidali.
+5. Na stránce **události** v dialogovém okně **vlastnosti** se posuňte dolů k události **ENTER** , klikněte na šipku rozevíracího seznamu na konci řádku a vyberte obslužnou rutinu události `answer_Enter`, kterou jste právě přidali.
 
 6. Opakujte předchozí krok pro produkt a podíl ovládacího prvku NumericUpDown.
 
@@ -81,6 +80,6 @@ V páté části tohoto kurzu přidáte <xref:System.Windows.Forms.Control.Enter
 
 ## <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
 
-- Pokud chcete přejít na další krok kurzu, přečtěte si  **[krok 6: Přidejte problém](../ide/step-6-add-a-subtraction-problem.md)** odčítání.
+- Chcete-li přejít k dalšímu kroku kurzu, přečtěte si **[článek krok 6: Přidání problému odčítání](../ide/step-6-add-a-subtraction-problem.md)** .
 
-- Pokud se chcete vrátit k předchozímu kroku kurzu [, přečtěte si krok 4: Přidejte metodu](../ide/step-4-add-the-checktheanswer-parens-method.md)metodu CheckTheAnswer ().
+- Chcete-li se vrátit k předchozímu kroku kurzu, přečtěte si [Krok 4: Přidání metody metodu CheckTheAnswer ()](../ide/step-4-add-the-checktheanswer-parens-method.md).

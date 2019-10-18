@@ -11,12 +11,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 21ce539296f02599a1f8afa0344413fb556eea45
-ms.sourcegitcommit: 535ef05b1e553f0fc66082cd2e0998817eb2a56a
+ms.openlocfilehash: a4667fc630d86691d95e9dc9cd205b29f7b0f525
+ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72018776"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72349707"
 ---
 # <a name="find-your-debugging-task-in-visual-studio"></a>Hledání úlohy ladění v aplikaci Visual Studio
 
@@ -65,6 +65,12 @@ Pokud chcete pozastavit a ladit kód při kontrole toku spuštění nebo zobraze
 
 To lze provést [nastavením zarážky z okna](using-breakpoints.md#BKMK_Set_a_breakpoint_from_debugger_windows)zpětného překladu.
 
+## <a name="execute-code"></a>Spustit kód
+
+### <a name="learn-the-commands-to-step-through-your-code-while-debugging"></a>Přečtěte si příkazy pro procházení kódu během ladění.
+
+Další informace naleznete v tématu [Navigace v kódu pomocí ladicího programu](navigating-through-code-with-the-debugger.md).
+
 ## <a name="inspect-data"></a>Kontrola dat
 
 ### <a name="check-the-value-of-variables-while-running-your-app"></a>Kontrolovat hodnotu proměnných při spuštění aplikace
@@ -79,19 +85,7 @@ Nastavte kukátko pro proměnnou. Další informace najdete v tématu [Nastaven�
 
 Při ladění otevřete vestavěný [Vizualizér řetězců](view-strings-visualizer.md) .
 
-## <a name="additional-tasks"></a>Další úkoly
-
-### <a name="learn-the-commands-to-step-through-your-code-while-debugging"></a>Přečtěte si příkazy pro procházení kódu během ladění.
-
-Další informace naleznete v tématu [Navigace v kódu pomocí ladicího programu](navigating-through-code-with-the-debugger.md).
-
-### <a name="edit-code-during-a-debugging-session"></a>Úprava kódu během relace ladění
-
-Použijte [Upravit a pokračovat](edit-and-continue.md). Pro XAML použijte [Hot reloading XAML](xaml-hot-reload.md).
-
-### <a name="send-messages-to-the-output-window-without-modifying-code"></a>Odeslat zprávy do okna výstupu beze změny kódu
-
-Nastavte zarážka s trasováním. Další informace najdete v tématu [použití trasováním](using-tracepoints.md).
+## <a name="configure-debugging"></a>Konfigurace ladění
 
 ### <a name="customize-information-shown-in-the-debugger"></a>Přizpůsobení informací zobrazených v ladicím programu
 
@@ -103,9 +97,19 @@ Pro nativní C++použijte [architekturu NatVis](create-custom-views-of-native-ob
 
 Konfigurace možností ladicího programu a nastavení projektu ladicího programu naleznete v tématu [nastavení a příprava ladicího](debugger-settings-and-preparation.md)programu.
 
+## <a name="additional-tasks"></a>Další úkoly
+
+### <a name="edit-code-during-a-debugging-session"></a>Úprava kódu během relace ladění
+
+Použijte [Upravit a pokračovat](edit-and-continue.md). Pro XAML použijte [Hot reloading XAML](xaml-hot-reload.md).
+
+### <a name="send-messages-to-the-output-window-without-modifying-code"></a>Odeslat zprávy do okna výstupu beze změny kódu
+
+Nastavte zarážka s trasováním. Další informace najdete v tématu [použití trasováním](using-tracepoints.md).
+
 ### <a name="debug-on-remote-machines"></a>Ladit na vzdálených počítačích
 
-Zobrazit [vzdálené ladění](remote-debugging.md).
+Viz téma [vzdálené ladění](remote-debugging.md).
 
 ### <a name="debug-an-app-that-is-already-running"></a>Ladění aplikace, která je již spuštěna
 

@@ -1,5 +1,5 @@
 ---
-title: 'Krok 2: Vytvoření úlohy sčítání náhodných čísel'
+title: 'Krok 2: vytvoření náhodného přidání problému'
 ms.date: 11/04/2016
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -13,41 +13,40 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d35d807cbe849e4b5385f7bf63e15760b0e4b3a5
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
-ms.translationtype: MT
+ms.openlocfilehash: 460eb832b94a1826d2d8f990b76a2afe90f992c8
+ms.sourcegitcommit: 98b02f87c7aa1f5eb7f0d1c86bfa36efa8580c57
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118821"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314099"
 ---
-# <a name="step-2-create-a-random-addition-problem"></a>Krok 2: Vytvoření úlohy sčítání náhodných čísel
+# <a name="step-2-create-a-random-addition-problem"></a>Krok 2: vytvoření náhodného přidání problému
 
-V druhé části tohoto kurzu uděláte nenáročný kvíz přidáním matematických problémů, které jsou založeny na náhodných číslech. Také vytvoříte metodu s názvem `StartTheQuiz()` , která vyplní problémy a spustí časovač odpočítávání. Později v tomto kurzu přidáte problémy odčítání, násobení a dělení.
+V druhé části tohoto kurzu uděláte nenáročný kvíz přidáním matematických problémů, které jsou založeny na náhodných číslech. Také vytvoříte metodu s názvem `StartTheQuiz()`, která vyplní problémy a spustí časovač odpočítávání. Později v tomto kurzu přidáte problémy odčítání, násobení a dělení.
 
 > [!NOTE]
 > Toto téma je součástí série kurzů o základních konceptech kódování.
-> - Přehled tohoto kurzu najdete v [kurzu 2: Vytvoření časovaného matematického](../ide/tutorial-2-create-a-timed-math-quiz.md)kvízu
+> - Přehled tohoto kurzu najdete v tématu [kurz 2: vytvoření časovaného matematického kvízu](../ide/tutorial-2-create-a-timed-math-quiz.md).
 > - Chcete-li stáhnout dokončenou verzi kódu, přečtěte si [ukázku kurzu dokončení matematického kvízu](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).
 
 ## <a name="to-create-a-random-addition-problem"></a>Postup vytvoření náhodného přidání problému
 
 1. V návrháři formuláře vyberte formulář (**Form1**).
 
-2. Na panelu nabídek vyberte možnost **Zobrazit** > **kód**.
+2. Na panelu nabídek vyberte možnost **zobrazit**  > **kód**.
 
      *Form1.cs* nebo *Form1. vb* se zobrazí v závislosti na programovacím jazyku, který používáte, abyste mohli zobrazit kód za formulářem.
 
-3. <xref:System.Random> Vytvořte objekt`new` přidáním příkazu poblíž horní části kódu, podobně jako následující.
+3. Vytvořte objekt <xref:System.Random> přidáním příkazu `new` v horní části kódu, podobně jako v následujícím textu.
 
      [!code-csharp[VbExpressTutorial3Step2#1](../ide/codesnippet/CSharp/step-2-create-a-random-addition-problem_1.cs)]
      [!code-vb[VbExpressTutorial3Step2#1](../ide/codesnippet/VisualBasic/step-2-create-a-random-addition-problem_1.vb)]
 
-   > [!IMPORTANT]
-   > Pomocí ovládacího prvku programovací jazyk v pravém horním rohu této stránky můžete zobrazit fragment C# kódu nebo Visual Basic fragment kódu.<br><br>![Řízení programovacího jazyka pro Docs.Microsoft.com](../ide/media/docs-programming-language-control.png)
+     [!INCLUDE [devlang-control-csharp-vb](./includes/devlang-control-csharp-vb.md)]
 
      Přidali jste do formuláře náhodný objekt a pojmenovali jste objekt **randomizer**.
 
-     `Random`je označován jako objekt. Pravděpodobně jste si toto slovo už slyšeli a v dalším kurzu se dozvíte víc o tom, co znamená pro programování. Prozatím zapamatujte na to, že můžete `new` použít příkazy k vytváření tlačítek, popisků, panelů, openfiledialogch, barev, SoundPlayers, náhodných objektů a dokonce i forem a tyto položky se nazývají objekty. Když spustíte program, formulář se spustí a kód za ním vytvoří náhodný objekt a pojmenuje ho **randomizer**.
+     `Random` se označuje jako objekt. Pravděpodobně jste si toto slovo už slyšeli a v dalším kurzu se dozvíte víc o tom, co znamená pro programování. Prozatím zapamatujte na to, že je možné použít příkazy `new` k vytváření tlačítek, popisků, panelů, OpenFileDialogch, barev, SoundPlayers, náhodných objektů a dokonce i forem. tyto položky jsou označovány jako objekty. Když spustíte program, formulář se spustí a kód za ním vytvoří náhodný objekt a pojmenuje ho **randomizer**.
 
      Brzy sestavíte metodu pro kontrolu odpovědí, takže kvíz musí používat proměnné k ukládání náhodných čísel, která generuje pro každý problém. Viz [proměnné](/dotnet/visual-basic/programming-guide/language-features/variables/index) nebo [typy](/dotnet/csharp/programming-guide/types/index). Aby bylo možné správné používání proměnných, je nutné je deklarovat, což znamená, že obsahuje seznam názvů a datových typů.
 
@@ -61,27 +60,27 @@ V druhé části tohoto kurzu uděláte nenáročný kvíz přidáním matematic
      [!code-csharp[VbExpressTutorial3Step2#2](../ide/codesnippet/CSharp/step-2-create-a-random-addition-problem_2.cs)]
      [!code-vb[VbExpressTutorial3Step2#2](../ide/codesnippet/VisualBasic/step-2-create-a-random-addition-problem_2.vb)]
 
-5. Přidejte metodu s názvem `StartTheQuiz()` a, která používá <xref:System.Random.Next> metodu náhodného objektu k zobrazení náhodných čísel v popiscích. `StartTheQuiz()`nakonec vyplní všechny problémy a potom spustí časovač, takže přidejte komentář. Funkce by měla vypadat nějak takto.
+5. Přidejte metodu s názvem `StartTheQuiz()` a, která používá metodu <xref:System.Random.Next> náhodného objektu k zobrazení náhodných čísel v popiscích. `StartTheQuiz()` nakonec vyplní všechny problémy a potom spustí časovač, takže přidejte komentář. Funkce by měla vypadat nějak takto.
 
      [!code-csharp[VbExpressTutorial3Step2#3](../ide/codesnippet/CSharp/step-2-create-a-random-addition-problem_3.cs)]
      [!code-vb[VbExpressTutorial3Step2#3](../ide/codesnippet/VisualBasic/step-2-create-a-random-addition-problem_3.vb)]
 
-     Všimněte si, že při zadání tečky (.) `randomizer` po v kódu se otevře okno IntelliSense a zobrazí se všechny metody náhodného objektu, které lze volat. Například IntelliSense Vypíše `Next()` metodu následujícím způsobem.
+     Všimněte si, že při zadání tečky (.) po `randomizer` v kódu se otevře okno IntelliSense a zobrazí se všechny metody náhodného objektu, které lze volat. Například IntelliSense zobrazí `Next()` metodu následujícím způsobem.
 
-     ![Next – metoda](../ide/media/express_randomwhite.png)<br/>
+     Metoda ![Next ](../ide/media/express_randomwhite.png)<br/>
 *Next – metoda*
 
      Když zadáte tečku po objektu, IntelliSense zobrazí seznam členů objektu, jako jsou vlastnosti, metody a události.
 
     > [!NOTE]
-    > Při použití `Next()` metody `Random` s objektem, například při volání `randomizer.Next(50)`, získáte náhodné číslo, které je menší než 50 (od 0 do 49). V tomto příkladu jste volali `randomizer.Next(51)`. Použili jste 51 a ne 50, aby se dvě náhodná čísla přidala k odpovědi, která je od 0 do 100. Pokud `Next()` metodě předáte 50, zvolí číslo od 0 do 49, takže nejvyšší možná odpověď je 98, ne 100. Po prvním dvou příkazech, které jsou spuštěny v metodě, každá z těchto dvou celočíselných proměnných, **addend1** a **addend2**, drží náhodné číslo od 0 do 50. Tento snímek obrazovky ukazuje C# vizuální kód, ale IntelliSense funguje stejným způsobem jako Visual Basic.
+    > Při použití metody `Next()` s objektem `Random`, například při volání `randomizer.Next(50)`, získáte náhodné číslo, které je menší než 50 (od 0 do 49). V tomto příkladu jste volali `randomizer.Next(51)`. Použili jste 51 a ne 50, aby se dvě náhodná čísla přidala k odpovědi, která je od 0 do 100. Pokud předáte 50 metodě `Next()`, zvolí číslo od 0 do 49, takže nejvyšší možná odpověď je 98, ne 100. Po prvním dvou příkazech, které jsou spuštěny v metodě, každá z těchto dvou celočíselných proměnných, **addend1** a **addend2**, drží náhodné číslo od 0 do 50. Tento snímek obrazovky ukazuje C# vizuální kód, ale IntelliSense funguje stejným způsobem jako Visual Basic.
 
      Prohlédněte si blíže tyto příkazy.
 
      [!code-csharp[VbExpressTutorial3Step2#18](../ide/codesnippet/CSharp/step-2-create-a-random-addition-problem_4.cs)]
      [!code-vb[VbExpressTutorial3Step2#18](../ide/codesnippet/VisualBasic/step-2-create-a-random-addition-problem_4.vb)]
 
-     Příkazy nastaví vlastnosti **textu** pro **plusLeftLabel** a **plusRightLabel** tak, aby zobrazovaly dvě náhodná čísla. Pro převod čísel na text je `ToString()` nutné použít metodu celého čísla. (V programování řetězec znamená text. Ovládací prvky Label zobrazují pouze text, nikoli čísla.
+     Příkazy nastaví vlastnosti **textu** pro **plusLeftLabel** a **plusRightLabel** tak, aby zobrazovaly dvě náhodná čísla. Chcete-li převést čísla na text, je nutné použít metodu `ToString()` celého čísla. (V programování řetězec znamená text. Ovládací prvky Label zobrazují pouze text, nikoli čísla.
 
 6. V okně návrh dvakrát klikněte na tlačítko **Start** , nebo zvolte příkaz a stiskněte klávesu **ENTER** .
 
@@ -92,19 +91,19 @@ V druhé části tohoto kurzu uděláte nenáročný kvíz přidáním matematic
      [!code-csharp[VbExpressTutorial3Step2#4](../ide/codesnippet/CSharp/step-2-create-a-random-addition-problem_5.cs)]
      [!code-vb[VbExpressTutorial3Step2#4](../ide/codesnippet/VisualBasic/step-2-create-a-random-addition-problem_5.vb)]
 
-     První příkaz volá novou `StartTheQuiz()` metodu. Druhý příkaz nastaví vlastnost **Enabled** ovládacího prvku **StartButton** na **hodnotu false** , aby autor kvízu nemohl tlačítko vybrat během kvízu.
+     První příkaz volá novou metodu `StartTheQuiz()`. Druhý příkaz nastaví vlastnost **Enabled** ovládacího prvku **StartButton** na **hodnotu false** , aby autor kvízu nemohl tlačítko vybrat během kvízu.
 
 8. Uložte kód, spusťte jej a pak klikněte na tlačítko **Start** .
 
      Zobrazí se náhodný problém sčítání, jak je znázorněno na následujícím snímku obrazovky.
 
-     ![Náhodný problém sčítání](../ide/media/express_additionproblem.png)<br/>
+     problém s ![Randomým načtením ](../ide/media/express_additionproblem.png)<br/>
 *Náhodný problém sčítání*
 
      V dalším kroku kurzu přidáte součet.
 
 ## <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
 
-- Pokud chcete přejít na další krok kurzu,  **[přejděte na krok 3: Přidejte časovač](../ide/step-3-add-a-countdown-timer.md)** odpočítávání.
+- Pokud chcete přejít na další krok kurzu, přečtěte si **[článek krok 3: Přidání časovače odpočítávání](../ide/step-3-add-a-countdown-timer.md)** .
 
-- Pokud se chcete vrátit k předchozímu kroku kurzu [, přečtěte si téma krok 1: Vytvořte projekt a přidejte do svého formuláře](../ide/step-1-create-a-project-and-add-labels-to-your-form.md)popisky.
+- Pokud se chcete vrátit k předchozímu kroku kurzu, přečtěte si téma [Krok 1: vytvoření projektu a Přidání popisků do formuláře](../ide/step-1-create-a-project-and-add-labels-to-your-form.md).
