@@ -10,12 +10,12 @@ ms.author: midumont
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: 79855f6915bbb0ed15bfd09f99fab0403290f09e
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: ab1e0b890d6241742770ed38ff61fc1c2c0ed2f4
+ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72448715"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72535704"
 ---
 # <a name="walkthrough-use-static-code-analysis-to-find-code-defects"></a>Návod: použití statické analýzy kódu k vyhledání vad kódu
 
@@ -93,25 +93,25 @@ Tento článek vás provede procesem použití starší verze analýzy k analýz
 
 1. Upozornění můžete opravit pomocí následujících tipů:
 
-   [CA1014: Označte sestavení pomocí CLSCompliantAttribute](../code-quality/ca1014-mark-assemblies-with-clscompliantattribute.md): přidejte kód `[assembly: CLSCompliant(true)]` na konec souboru AssemblyInfo.cs.
+   [CA1014: Označte sestavení pomocí CLSCompliantAttribute](../code-quality/ca1014.md): přidejte kód `[assembly: CLSCompliant(true)]` na konec souboru AssemblyInfo.cs.
 
-   [CA1032: Implementujte standardní konstruktory výjimky](../code-quality/ca1032-implement-standard-exception-constructors.md): přidejte konstruktor `public demo (String s) : base(s) { }` do třídy `demo`.
+   [CA1032: Implementujte standardní konstruktory výjimky](../code-quality/ca1032.md): přidejte konstruktor `public demo (String s) : base(s) { }` do třídy `demo`.
 
-   [CA1032: Implementujte standardní konstruktory výjimky](../code-quality/ca1032-implement-standard-exception-constructors.md): přidejte konstruktor `public demo (String s, Exception e) : base(s, e) { }` do třídy `demo`.
+   [CA1032: Implementujte standardní konstruktory výjimky](../code-quality/ca1032.md): přidejte konstruktor `public demo (String s, Exception e) : base(s, e) { }` do třídy `demo`.
 
-   [CA1032: Implementujte standardní konstruktory výjimky](../code-quality/ca1032-implement-standard-exception-constructors.md): přidejte konstruktor `protected demo (SerializationInfo info, StreamingContext context) : base(info, context) { }` do ukázky třídy. Také budete muset přidat příkaz `using` pro <xref:System.Runtime.Serialization?displayProperty=fullName>.
+   [CA1032: Implementujte standardní konstruktory výjimky](../code-quality/ca1032.md): přidejte konstruktor `protected demo (SerializationInfo info, StreamingContext context) : base(info, context) { }` do ukázky třídy. Také budete muset přidat příkaz `using` pro <xref:System.Runtime.Serialization?displayProperty=fullName>.
 
-   [CA1032: Implementujte standardní konstruktory výjimky](../code-quality/ca1032-implement-standard-exception-constructors.md): přidejte konstruktor `public demo () : base() { }` do třídy `demo`.
+   [CA1032: Implementujte standardní konstruktory výjimky](../code-quality/ca1032.md): přidejte konstruktor `public demo () : base() { }` do třídy `demo`.
 
-   [CA1709: identifikátory by měly být správně použita](../code-quality/ca1709-identifiers-should-be-cased-correctly.md): Změňte velikost písmen oboru názvů `testCode` na `TestCode`.
+   [CA1709: identifikátory by měly být správně použita](../code-quality/ca1709.md): Změňte velikost písmen oboru názvů `testCode` na `TestCode`.
 
-   [CA1709: identifikátory by se měly použita správně](../code-quality/ca1709-identifiers-should-be-cased-correctly.md): Změňte název členu na `Demo`.
+   [CA1709: identifikátory by se měly použita správně](../code-quality/ca1709.md): Změňte název členu na `Demo`.
 
-   [CA1709: identifikátory by se měly použita správně](../code-quality/ca1709-identifiers-should-be-cased-correctly.md): Změňte název členu na `Item`.
+   [CA1709: identifikátory by se měly použita správně](../code-quality/ca1709.md): Změňte název členu na `Item`.
 
-   [CA1710: identifikátory by měly mít správnou příponu](../code-quality/ca1710-identifiers-should-have-correct-suffix.md): Změňte název třídy a její konstruktory na `DemoException`.
+   [CA1710: identifikátory by měly mít správnou příponu](../code-quality/ca1710.md): Změňte název třídy a její konstruktory na `DemoException`.
 
-   [CA2237: Označte typy ISerializable pomocí SerializableAttribute](../code-quality/ca2237.md): přidejte atribut `[Serializable ()]` do třídy `demo`.
+   [CA2237: Označte typy ISerializable pomocí SerializableAttribute](../code-quality/ca2237.md): do `demo` třídy přidejte atribut `[Serializable ()]`.
 
    [CA2210: sestavení musí mít platné silné názvy](../code-quality/ca2210.md): Sign ' CodeAnalysisManagedDemo ' se silným názvem klíče:
 

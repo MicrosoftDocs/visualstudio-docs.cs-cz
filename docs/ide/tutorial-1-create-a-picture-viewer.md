@@ -1,6 +1,6 @@
 ---
-title: 'Kurz 1: Vytvoření prohlížeče obrázků'
-ms.date: 08/30/2019
+title: 'Kurz 1: vytvoření prohlížeče obrázků'
+ms.date: 10/16/2019
 ms.assetid: 3071d6df-2b2f-4e95-ab68-bef727323136
 ms.topic: tutorial
 ms.prod: visual-studio-windows
@@ -10,19 +10,19 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 7d9a525ef9da6583a37d5e4d26bfec7d0558cde4
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
+ms.openlocfilehash: 9c751f6b55bc50a064473468d95c07a54aba76ae
+ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118671"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72516632"
 ---
-# <a name="tutorial-1-create-a-picture-viewer"></a>Kurz 1: Vytvoření prohlížeče obrázků
+# <a name="tutorial-1-create-a-picture-viewer"></a>Kurz 1: vytvoření prohlížeče obrázků
 
 V tomto kurzu sestavíte aplikaci, která načte obrázek ze souboru a zobrazí se v okně. Naučíte se, jak pomocí **Návrhář formulářů** přetahovat ovládací prvky jako tlačítka a pole obrázků do formuláře, nastavit jejich vlastnosti a plynule změnit velikost formuláře pomocí kontejnerů. Můžete také začít psát kód.
 
 > [!NOTE]
-> Tento kurz se zabývá vizuálů C# i Visual Basic, takže se zaměřte na informace, které jsou specifické pro programovací jazyk, který používáte.
+> Tento kurz se zabývá C# i Visual Basic, takže se zaměřte na informace, které jsou specifické pro programovací jazyk, který používáte.
 
 Tento kurz vás provede následujícími úlohami:
 
@@ -48,21 +48,23 @@ Až skončíte, aplikace by měla vypadat podobně jako na následujícím obrá
 
 |Název|Popis|
 |-----------|-----------------|
-|[Krok 1: Vytvoření projektu aplikace model Windows Forms](../ide/step-1-create-a-windows-forms-application-project.md)|Začněte vytvořením projektu aplikace model Windows Forms.|
-|[Krok 2: Spuštění aplikace pro prohlížeč obrázků](../ide/step-2-run-your-program.md)|Spusťte projekt aplikace model Windows Forms, který jste vytvořili v předchozím kroku.|
-|[Krok 3: Nastavení vlastností formuláře](../ide/step-3-set-your-form-properties.md)|Změňte vzhled formuláře pomocí okna **vlastnosti** .|
-|[Krok 4: Rozložení formuláře pomocí ovládacího prvku TableLayoutPanel](../ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md)|`TableLayoutPanel` Přidejte ovládací prvek do formuláře.|
-|[Krok 5: Přidání ovládacích prvků do formuláře](../ide/step-5-add-controls-to-your-form.md)|Přidejte ovládací prvky, například `PictureBox` ovládací prvek `CheckBox` a ovládací prvek, do formuláře. Přidejte tlačítka do formuláře.|
-|[Krok 6: Pojmenovat vaše ovládací prvky tlačítka](../ide/step-6-name-your-button-controls.md)|Přejmenujte tlačítka na smysluplnější.|
-|[Krok 7: Přidání součástí dialogového okna do formuláře](../ide/step-7-add-dialog-components-to-your-form.md)|`OpenFileDialog` Přidejte komponentu`ColorDialog` a komponentu do formuláře.|
-|[Krok 8: Napsat kód pro zobrazení obslužné rutiny události tlačítka Zobrazit obrázek](../ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md)|Pište kód pomocí nástroje IntelliSense.|
-|[Krok 9: Kontrola, komentář a testování kódu](../ide/step-9-review-comment-and-test-your-code.md)|Zkontrolujte a otestujte svůj kód. Přidejte komentáře podle potřeby.|
-|[Krok 10: Psaní kódu pro další tlačítka a zaškrtávací políčko](../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md)|Napíšete kód pro nastavení dalších tlačítek a zaškrtávací políčko v práci pomocí technologie IntelliSense.|
-|[Krok 11: Spusťte aplikaci a zkuste jiné funkce.](../ide/step-11-run-your-program-and-try-other-features.md)|Spusťte aplikaci a nastavte barvu pozadí. Vyzkoušejte jiné funkce, jako je například změna barev, písem a ohraničení.|
+|[Krok 1: vytvoření projektu aplikace model Windows Forms](../ide/step-1-create-a-windows-forms-application-project.md)|Začněte vytvořením projektu aplikace model Windows Forms.|
+|[Krok 2: spuštění aplikace pro prohlížeč obrázků](../ide/step-2-run-your-program.md)|Spusťte projekt aplikace model Windows Forms, který jste vytvořili v předchozím kroku.|
+|[Krok 3: nastavení vlastností formuláře](../ide/step-3-set-your-form-properties.md)|Změňte vzhled formuláře pomocí okna **vlastnosti** .|
+|[Krok 4: rozložení formuláře pomocí ovládacího prvku TableLayoutPanel](../ide/step-4-lay-out-your-form-with-a-tablelayoutpanel-control.md)|Přidejte ovládací prvek `TableLayoutPanel` do formuláře.|
+|[Krok 5: Přidání ovládacích prvků do formuláře](../ide/step-5-add-controls-to-your-form.md)|Do formuláře přidejte ovládací prvky, například ovládací prvek `PictureBox` a ovládací prvek `CheckBox`. Přidejte tlačítka do formuláře.|
+|[Krok 6: Pojmenujte své ovládací prvky tlačítek](../ide/step-6-name-your-button-controls.md)|Přejmenujte tlačítka na smysluplnější.|
+|[Krok 7: přidejte do svého formuláře komponenty dialogových oken](../ide/step-7-add-dialog-components-to-your-form.md)|Přidejte komponentu `OpenFileDialog` a `ColorDialog` komponentu do formuláře.|
+|[Krok 8: Zapište kód pro obslužnou rutinu události zobrazit tlačítko obrázku](../ide/step-8-write-code-for-the-show-a-picture-button-event-handler.md)|Pište kód pomocí nástroje IntelliSense.|
+|[Krok 9: kontrola, komentář a testování kódu](../ide/step-9-review-comment-and-test-your-code.md)|Zkontrolujte a otestujte svůj kód. Přidejte komentáře podle potřeby.|
+|[Krok 10: napište kód pro další tlačítka a zaškrtávací políčko](../ide/step-10-write-code-for-additional-buttons-and-a-check-box.md)|Napíšete kód pro nastavení dalších tlačítek a zaškrtávací políčko v práci pomocí technologie IntelliSense.|
+|[Krok 11: spuštění aplikace a vyzkoušení dalších funkcí](../ide/step-11-run-your-program-and-try-other-features.md)|Spusťte aplikaci a nastavte barvu pozadí. Vyzkoušejte jiné funkce, jako je například změna barev, písem a ohraničení.|
+
+K dispozici jsou také skvělé a bezplatné studijní materiály pro video. Další informace o programování v C#nástroji najdete v tématu [ C# základy: vývoj pro absolutní začátečníky](https://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners). Další informace o programování v Visual Basic najdete v tématu [Visual Basic základy: vývoj pro absolutní začátečníky](https://channel9.msdn.com/Series/Visual-Basic-Development-for-Absolute-Beginners).
 
 ## <a name="next-steps"></a>Další kroky
 
-Pokud chcete začít s kurzem, **začněte v [kroku 1: Vytvořte projekt](../ide/step-1-create-a-windows-forms-application-project.md)** aplikace model Windows Forms.
+Chcete-li začít s kurzem, začněte v **[kroku 1: vytvoření projektu aplikace model Windows Forms](../ide/step-1-create-a-windows-forms-application-project.md)** .
 
 ## <a name="see-also"></a>Viz také:
 

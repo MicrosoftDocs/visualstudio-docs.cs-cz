@@ -8,12 +8,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: bc279f0ae9e0420810e12c21f5f7cf29de0d15e7
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 636443a65922e72bfcede09d5692e441c6c2cb36
+ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72449154"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72535911"
 ---
 # <a name="extended-correctness-rules-rule-set-for-managed-code"></a>Sada pravidel Rozšířená pravidla správnosti pro spravovaný kód
 
@@ -25,23 +25,23 @@ V následující tabulce jsou popsána všechna pravidla v sadě pravidel Rozš�
 
 |Pravidlo|Popis|
 |----------|-----------------|
-|[CA1001](../code-quality/ca1001-types-that-own-disposable-fields-should-be-disposable.md)|Typy, které vlastní uvolnitelné pole, by měly být uvolnitelné|
-|[CA1009](../code-quality/ca1009-declare-event-handlers-correctly.md)|Deklarujte správně obslužné rutiny událostí|
-|[CA1016](../code-quality/ca1016-mark-assemblies-with-assemblyversionattribute.md)|Označte sestavení pomocí AssemblyVersionAttribute|
-|[CA1033](../code-quality/ca1033-interface-methods-should-be-callable-by-child-types.md)|Metody rozhraní by měly být volatelné podřízenými typy|
-|[CA1049](../code-quality/ca1049-types-that-own-native-resources-should-be-disposable.md)|Typy, které vlastní nativní prostředky, by měly být uvolnitelné|
-|[CA1060](../code-quality/ca1060-move-p-invokes-to-nativemethods-class.md)|Přesuňte volání nespravovaných kódů do třídy NativeMethods|
-|[CA1061](../code-quality/ca1061-do-not-hide-base-class-methods.md)|Neskrývejte metody základní třídy|
-|[CA1063](../code-quality/ca1063-implement-idisposable-correctly.md)|Implementuje správně IDisposable|
-|[CA1065](../code-quality/ca1065-do-not-raise-exceptions-in-unexpected-locations.md)|Nevyvolávejte výjimky v neočekávaných umístěních|
-|[CA1301](../code-quality/ca1301-avoid-duplicate-accelerators.md)|Vyhněte se duplicitním akcelerátorům|
-|[CA1400](../code-quality/ca1400-p-invoke-entry-points-should-exist.md)|Vstupní body volání nespravovaného kódu by měly existovat|
-|[CA1401](../code-quality/ca1401-p-invokes-should-not-be-visible.md)|Volání nespravovaných kódů by neměla být viditelná|
-|[CA1403](../code-quality/ca1403-auto-layout-types-should-not-be-com-visible.md)|Typy automatického rozložení by neměly být viditelné modelu COM|
-|[CA1404](../code-quality/ca1404-call-getlasterror-immediately-after-p-invoke.md)|Volejte GetLastError ihned po volání nespravovaného kódu|
-|[CA1405](../code-quality/ca1405-com-visible-type-base-types-should-be-com-visible.md)|Základní typy viditelného typu modelu COM by měly být viditelné modelu COM|
-|[CA1410](../code-quality/ca1410-com-registration-methods-should-be-matched.md)|Metody registrace modelu COM by si měly odpovídat|
-|[CA1415](../code-quality/ca1415-declare-p-invokes-correctly.md)|Deklarujte správně volání nespravovaných kódů|
+|[CA1001](../code-quality/ca1001.md)|Typy, které vlastní uvolnitelné pole, by měly být uvolnitelné|
+|[CA1009](../code-quality/ca1009.md)|Deklarujte správně obslužné rutiny událostí|
+|[CA1016](../code-quality/ca1016.md)|Označte sestavení pomocí AssemblyVersionAttribute|
+|[CA1033](../code-quality/ca1033.md)|Metody rozhraní by měly být volatelné podřízenými typy|
+|[CA1049](../code-quality/ca1049.md)|Typy, které vlastní nativní prostředky, by měly být uvolnitelné|
+|[CA1060](../code-quality/ca1060.md)|Přesuňte volání nespravovaných kódů do třídy NativeMethods|
+|[CA1061](../code-quality/ca1061.md)|Neskrývejte metody základní třídy|
+|[CA1063](../code-quality/ca1063.md)|Implementuje správně IDisposable|
+|[CA1065](../code-quality/ca1065.md)|Nevyvolávejte výjimky v neočekávaných umístěních|
+|[CA1301](../code-quality/ca1301.md)|Vyhněte se duplicitním akcelerátorům|
+|[CA1400](../code-quality/ca1400.md)|Vstupní body volání nespravovaného kódu by měly existovat|
+|[CA1401](../code-quality/ca1401.md)|Volání nespravovaných kódů by neměla být viditelná|
+|[CA1403](../code-quality/ca1403.md)|Typy automatického rozložení by neměly být viditelné modelu COM|
+|[CA1404](../code-quality/ca1404.md)|Volejte GetLastError ihned po volání nespravovaného kódu|
+|[CA1405](../code-quality/ca1405.md)|Základní typy viditelného typu modelu COM by měly být viditelné modelu COM|
+|[CA1410](../code-quality/ca1410.md)|Metody registrace modelu COM by si měly odpovídat|
+|[CA1415](../code-quality/ca1415.md)|Deklarujte správně volání nespravovaných kódů|
 |[CA1821](../code-quality/ca1821.md)|Odeberte prázdné finalizační metody|
 |[CA1900](../code-quality/ca1900.md)|Pole typů hodnot by měla být přenosná|
 |[CA1901](../code-quality/ca1901.md)|Deklarace volání nespravovaného kódu by měla být přenosná|
@@ -87,10 +87,10 @@ V následující tabulce jsou popsána všechna pravidla v sadě pravidel Rozš�
 |[CA2240](../code-quality/ca2240.md)|Implementujte správně ISerializable|
 |[CA2241](../code-quality/ca2241.md)|Zadejte správné argumenty pro metody formátování|
 |[CA2242](../code-quality/ca2242.md)|Testujte správně NaN|
-|[CA1008](../code-quality/ca1008-enums-should-have-zero-value.md)|Výčty by měly mít nulovou hodnotu|
-|[CA1013](../code-quality/ca1013-overload-operator-equals-on-overloading-add-and-subtract.md)|Přetižte operátor rovnosti společně s přetížením operátorů sčítání a odečítání|
-|[CA1303](../code-quality/ca1303-do-not-pass-literals-as-localized-parameters.md)|Nepředávejte literály jako lokalizované parametry|
-|[CA1308](../code-quality/ca1308-normalize-strings-to-uppercase.md)|Normalizujte řetězce na velká písmena|
+|[CA1008](../code-quality/ca1008.md)|Výčty by měly mít nulovou hodnotu|
+|[CA1013](../code-quality/ca1013.md)|Přetižte operátor rovnosti společně s přetížením operátorů sčítání a odečítání|
+|[CA1303](../code-quality/ca1303.md)|Nepředávejte literály jako lokalizované parametry|
+|[CA1308](../code-quality/ca1308.md)|Normalizujte řetězce na velká písmena|
 |[CA1806](../code-quality/ca1806.md)|Neignorujte výsledky metody|
 |[CA1816](../code-quality/ca1816.md)|Volejte správně GC.SuppressFinalize|
 |[CA1819](../code-quality/ca1819.md)|Vlastnosti by neměly vracet pole|
@@ -116,22 +116,22 @@ V následující tabulce jsou popsána všechna pravidla v sadě pravidel Rozš�
 |[CA2226](../code-quality/ca2226.md)|Operátory by měly mít symetrická přetížení|
 |[CA2227](../code-quality/ca2227.md)|Vlastnosti kolekce by měly být pouze pro čtení|
 |[CA2239](../code-quality/ca2239.md)|Zadejte metody deserializace pro nepovinná pole|
-|[CA1032](../code-quality/ca1032-implement-standard-exception-constructors.md)|Implementujte standardní konstruktory výjimky|
-|[CA1054](../code-quality/ca1054-uri-parameters-should-not-be-strings.md)|Parametry identifikátoru URI by neměly být řetězce|
-|[CA1055](../code-quality/ca1055-uri-return-values-should-not-be-strings.md)|Návratové hodnoty identifikátoru URI by neměly být řetězce|
-|[CA1056](../code-quality/ca1056-uri-properties-should-not-be-strings.md)|Vlastnosti identifikátoru URI by neměly být řetězce|
-|[CA1057](../code-quality/ca1057-string-uri-overloads-call-system-uri-overloads.md)|Přetížení řetězce identifikátoru URI volají přetížení System.Uri|
-|[CA1402](../code-quality/ca1402-avoid-overloads-in-com-visible-interfaces.md)|Vyhněte se přetížení ve viditelných rozhraních modelu COM|
-|[CA1406](../code-quality/ca1406-avoid-int64-arguments-for-visual-basic-6-clients.md)|Vyhněte se argumentům Int64 pro klienty jazyka Visual Basic 6|
-|[CA1407](../code-quality/ca1407-avoid-static-members-in-com-visible-types.md)|Vyhněte se statickým členům ve viditelných typech modelu COM|
-|[CA1408](../code-quality/ca1408-do-not-use-autodual-classinterfacetype.md)|Nepoužívejte typ AutoDual ClassInterface|
-|[CA1409](../code-quality/ca1409-com-visible-types-should-be-creatable.md)|Viditelné typy modelu COM by měly být vytvořitelné|
-|[CA1411](../code-quality/ca1411-com-registration-methods-should-not-be-visible.md)|Metody registrace modelu COM by neměly být viditelné|
-|[CA1412](../code-quality/ca1412-mark-comsource-interfaces-as-idispatch.md)|Označte rozhraní ComSource jako IDispatch|
-|[CA1413](../code-quality/ca1413-avoid-non-public-fields-in-com-visible-value-types.md)|Vyhněte se neveřejným polím v typech hodnot viditelných modulem COM|
-|[CA1414](../code-quality/ca1414-mark-boolean-p-invoke-arguments-with-marshalas.md)|Označte logické argumenty volání nespravovaného kódu pomocí MarshalAs|
-|[CA1600](../code-quality/ca1600-do-not-use-idle-process-priority.md)|Nepoužívejte prioritu nečinného procesu|
-|[CA1601](../code-quality/ca1601-do-not-use-timers-that-prevent-power-state-changes.md)|Nepoužívejte časovače, které zabraňují změně stavu napájení|
+|[CA1032](../code-quality/ca1032.md)|Implementujte standardní konstruktory výjimky|
+|[CA1054](../code-quality/ca1054.md)|Parametry identifikátoru URI by neměly být řetězce|
+|[CA1055](../code-quality/ca1055.md)|Návratové hodnoty identifikátoru URI by neměly být řetězce|
+|[CA1056](../code-quality/ca1056.md)|Vlastnosti identifikátoru URI by neměly být řetězce|
+|[CA1057](../code-quality/ca1057.md)|Přetížení řetězce identifikátoru URI volají přetížení System.Uri|
+|[CA1402](../code-quality/ca1402.md)|Vyhněte se přetížení ve viditelných rozhraních modelu COM|
+|[CA1406](../code-quality/ca1406.md)|Vyhněte se argumentům Int64 pro klienty jazyka Visual Basic 6|
+|[CA1407](../code-quality/ca1407.md)|Vyhněte se statickým členům ve viditelných typech modelu COM|
+|[CA1408](../code-quality/ca1408.md)|Nepoužívejte typ AutoDual ClassInterface|
+|[CA1409](../code-quality/ca1409.md)|Viditelné typy modelu COM by měly být vytvořitelné|
+|[CA1411](../code-quality/ca1411.md)|Metody registrace modelu COM by neměly být viditelné|
+|[CA1412](../code-quality/ca1412.md)|Označte rozhraní ComSource jako IDispatch|
+|[CA1413](../code-quality/ca1413.md)|Vyhněte se neveřejným polím v typech hodnot viditelných modulem COM|
+|[CA1414](../code-quality/ca1414.md)|Označte logické argumenty volání nespravovaného kódu pomocí MarshalAs|
+|[CA1600](../code-quality/ca1600.md)|Nepoužívejte prioritu nečinného procesu|
+|[CA1601](../code-quality/ca1601.md)|Nepoužívejte časovače, které zabraňují změně stavu napájení|
 |[CA1824](../code-quality/ca1824.md)|Označte sestavení pomocí NeutralResourcesLanguageAttribute|
 |[CA2001](../code-quality/ca2001.md)|Vyhněte se volání problematických metod|
 |[CA2003](../code-quality/ca2003.md)|Nezacházejte s vlákénky jako s vlákny|

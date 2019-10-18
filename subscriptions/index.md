@@ -7,12 +7,12 @@ layout: LandingPage
 ms.date: 06/25/2018
 ms.topic: landing-page
 description: Vítá vás Visual Studio Subscriptions
-ms.openlocfilehash: 9c2981ddf109a253f55e4c72dd4e88ceb2c820ff
-ms.sourcegitcommit: 9f11537a721e69879a612979a1aca98f40bb4d4d
+ms.openlocfilehash: 5848ccca0468b6293f7e31785944f5cb8b14a17c
+ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383704"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72516858"
 ---
 # <a name="visual-studio-subscriptions"></a>Předplatná sady Visual Studio
 
@@ -20,8 +20,8 @@ Předplatná sady Visual Studio jsou komplexní sada prostředků, pomocí kter�
 
 ## <a name="get-started"></a>Začínáme
 
-Správci se přihlásí [https://manage.visualstudio.com](https://manage.visualstudio.com) k přiřazení předplatných týmu.<br>
-Předplatitelé se [https://my.visualstudio.com](https://my.visualstudio.com) přihlásí, aby měli přístup k výhodám předplatného.
+Správci se přihlásí k [https://manage.visualstudio.com](https://manage.visualstudio.com) a přiřadí k vašemu týmu odběry.<br>
+Předplatitelé se přihlásí k [https://my.visualstudio.com](https://my.visualstudio.com) pro přístup k výhodám předplatného.
 
 <!-- markdownlint-disable MD033 -->
 <ul class="panelContent cardsFTitle">
@@ -175,7 +175,7 @@ Aby bylo předplatné ještě užitečnější, doporučujeme vám často přid�
                             <li><a href="/visualstudio/subscriptions/vs-vsts">Služby Azure DevOps</a></li>
                             <li><a href="/visualstudio/subscriptions/vs-office-dev">Předplatné pro vývojáře pro Office 365</a></li>
                             <li><a href="/visualstudio/subscriptions/vs-pbi">Vývojářský účet pro Windows</a></li>
-                            <li>PowerBI Pro</li>
+                            <li>PowerBI pro</li>
                         </ul>
                     </div>
                 </div>
@@ -190,11 +190,10 @@ Aby bylo předplatné ještě užitečnější, doporučujeme vám často přid�
                         <h3>Školení a podpora</h3>
                         <p>Předplatná sady Visual Studio zahrnují výhody technického a profesionálního školení prostřednictvím Microsoftu a našich partnerů. Školicí obsah zahrnuje nejnovější kurzy týkající se technologických témat a profesionálních kurzů pro váš pokračující technologický vývoj. Získejte odbornou pomoc pro řešení problémů a zodpovězení otázek. Vaše předplatné může zahrnovat:</p>
                         <ul>
-                            <li><a href="/visualstudio/subscriptions/vs-linkedin-learning">LinkedIn – Premium</a> (Business, Tech a Creative)</li>
+                            <li><a href="/visualstudio/subscriptions/vs-linkedin-learning">LinkedIn Premium</a> (firmy, Tech a Creative)</li>
                             <li><a href="/visualstudio/subscriptions/vs-pluralsight">Pluralsight</a> (Cloud, návrh, mobilní zařízení a data)</li>
                             <li><a href="/visualstudio/subscriptions/vs-datacamp">Data Camp</a> (datové vědy a AI)</li>
                             <li><a href="/visualstudio/subscriptions/vs-tech-support">Incidenty technické podpory společnosti Microsoft Professional</a></li>
-                            <li><a href="/visualstudio/subscriptions/vs-azure-advisory-chat">Chat s poradcem pro Azure</a></li>
                             <li><a href="/visualstudio/subscriptions/vs-azure-community">Komunita Azure</a></li>
                         </ul>
                     </div>

@@ -7,12 +7,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 2ce642ee57112561ba687b7ebe962150ce4e268e
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 1940680af30928b46dbb73616569d0db318dac18
+ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72446533"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72535736"
 ---
 # <a name="mixed-recommended-rules-rule-set"></a>Sada pravidel Smíšená doporučená pravidla
 
@@ -151,7 +151,7 @@ Zahrňte tuto sadu pravidel v jakékoli vlastní sadě pravidel, kterou vytvoř�
 |[C28020](../code-quality/c28020.md)|Výraz není na tomto volání pravdivý.|
 |[C28021](../code-quality/c28021.md)|Parametr, který se dá opatřit poznámkami, musí být ukazatelem.|
 |[C28022](../code-quality/c28022.md)|Třídy funkcí této funkce se neshodují s třídami Functions na definici TypeDef použitou k jejímu definování.|
-|[C28023](../code-quality/c28023.md)|Přiřazená nebo předaná funkce by měla mít anotaci \_Function @ no__t-1class @ no__t-2 pro alespoň jednu ze tříd (ES).|
+|[C28023](../code-quality/c28023.md)|Přiřazená nebo předaná funkce by měla mít \_Function \_class \_ anotaci pro alespoň jednu ze tříd (ES).|
 |[C28024](../code-quality/c28024.md)|Ukazatel funkce, ke kterému se přiřazuje, je opatřen poznámkou se třídou Function, která není obsažena v seznamu tříd funkcí.|
 |[C28039](../code-quality/c28039.md)|Typ skutečného parametru by měl přesně odpovídat typu|
 |[C28112](../code-quality/c28112.md)|K proměnné, ke které se dá přistupovat přes propojenou funkci, se musí vždycky přistupovat prostřednictvím propojené funkce.|
@@ -169,14 +169,14 @@ Zahrňte tuto sadu pravidel v jakékoli vlastní sadě pravidel, kterou vytvoř�
 |[C28196](../code-quality/c28196.md)|Požadavek není splněn. (Výraz se nevyhodnotí jako true.)|
 |[C28202](../code-quality/c28202.md)|Neplatný odkaz na nestatický člen|
 |[C28203](../code-quality/c28203.md)|Nejednoznačný odkaz na člena třídy.|
-|[C28205](../code-quality/c28205.md)|\_Success @ no__t-1 nebo \_On @ no__t-3failure @ no__t-4 použito v neplatném kontextu|
+|[C28205](../code-quality/c28205.md)|\_Success \_ nebo \_On \_failure \_ použito v neplatném kontextu|
 |[C28206](../code-quality/c28206.md)|Levý operand ukazuje na strukturu, použijte '-> '|
 |[C28207](../code-quality/c28207.md)|Levý operand je struktura, použijte '. '|
 |[C28209](../code-quality/c28209.md)|Deklarace pro symbol má konfliktní deklaraci.|
 |[C28210](../code-quality/c28210.md)|Poznámky pro kontext __on_failure nesmí být v explicitním předběžném kontextu.|
 |[C28211](../code-quality/c28211.md)|Pro SAL_context se očekává název statického kontextu.|
 |[C28212](../code-quality/c28212.md)|U poznámky se očekává výraz ukazatele.|
-|[C28213](../code-quality/c28213.md)|Anotace \_Use @ no__t-1decl @ no__t-2annotations @ no__t-3 se musí použít k odkazování na předchozí deklaraci beze změny.|
+|[C28213](../code-quality/c28213.md)|@No__t_0Use \_decl \_annotations \_ anotace musí být použita k odkazování na předchozí deklaraci beze změny.|
 |[C28214](../code-quality/c28214.md)|Názvy parametrů atributu musí být P1... P9|
 |[C28215](../code-quality/c28215.md)|Typefix nelze použít na parametr, který již má typefix|
 |[C28216](../code-quality/c28216.md)|Anotace Poznámka checkreturn se vztahuje pouze na následné podmínky pro konkrétní parametr funkce.|
@@ -185,7 +185,7 @@ Zahrňte tuto sadu pravidel v jakékoli vlastní sadě pravidel, kterou vytvoř�
 |[C28219](../code-quality/c28219.md)|Pro anotaci parametru v poznámce je očekáván člen výčtu.|
 |[C28220](../code-quality/c28220.md)|Pro anotaci parametru v poznámce je očekáván celočíselný výraz.|
 |[C28221](../code-quality/c28221.md)|Pro parametr v poznámce je očekáván řetězcový výraz.|
-|[C28222](../code-quality/c28222.md)|pro anotaci se očekává __yes, @no__t -0 _No nebo @no__t -1 _maybe.|
+|[C28222](../code-quality/c28222.md)|pro anotaci se očekává __yes, \__no nebo \__maybe.|
 |[C28223](../code-quality/c28223.md)|Nebyl nalezen očekávaný token/identifikátor pro anotaci, parametr|
 |[C28224](../code-quality/c28224.md)|Poznámka vyžaduje parametry.|
 |[C28225](../code-quality/c28225.md)|Nebyl nalezen správný počet požadovaných parametrů v poznámce|
@@ -219,44 +219,44 @@ Zahrňte tuto sadu pravidel v jakékoli vlastní sadě pravidel, kterou vytvoř�
 |[C28267](../code-quality/c28267.md)|Ve funkci byla nalezena Poznámka s chybou syntaxe v poznámkách.|
 |[C28272](../code-quality/c28272.md)|Poznámka pro funkci, parametr při zkoumání je nekonzistentní s deklarací funkce|
 |[C28273](../code-quality/c28273.md)|V případě funkcí jsou změny nekonzistentní s deklarací funkce|
-|[C28275](../code-quality/c28275.md)|Parametr pro \_Macro @ no__t-1value @ no__t-2 je null.|
+|[C28275](../code-quality/c28275.md)|Parametr pro \_Macro \_value \_ má hodnotu null.|
 |[C28279](../code-quality/c28279.md)|Pro symbol byl nalezen prvek Begin bez odpovídajícího příkazu end.|
 |[C28280](../code-quality/c28280.md)|Pro symbol byl nalezen znak end bez odpovídajícího prvku Begin.|
 |[C28282](../code-quality/c28282.md)|Řetězce formátu musí být v předběžných podmínkách.|
 |[C28285](../code-quality/c28285.md)|Pro funkci, Chyba syntaxe v parametru|
 |[C28286](../code-quality/c28286.md)|Pro funkci se chyba syntaxe blíží konci.|
-|[C28287](../code-quality/c28287.md)|Pro funkci, Chyba syntaxe v \_At @ no__t-1 () anotace (nerozpoznaný název parametru)|
-|[C28288](../code-quality/c28288.md)|Pro funkci, Chyba syntaxe v \_At @ no__t-1 () anotace (neplatný název parametru)|
+|[C28287](../code-quality/c28287.md)|Pro funkci, Chyba syntaxe v \_At anotace \_ () (nerozpoznaný název parametru)|
+|[C28288](../code-quality/c28288.md)|Pro funkci, Chyba syntaxe v \_At anotace \_ () (neplatný název parametru)|
 |[C28289](../code-quality/c28289.md)|Funkce: ReadableTo nebo Writableto nebyl neobsahovala omezení-spec jako parametr.|
 |[C28290](../code-quality/c28290.md)|Anotace for Function obsahuje více externích typů, než je skutečný počet parametrů.|
 |[C28291](../code-quality/c28291.md)|Hodnota post null/NotNull na DEREF Level 0 nemá význam pro funkci.|
 |[C28300](../code-quality/c28300.md)|Operandy výrazu nekompatibilních typů pro operátor|
 |[C28301](../code-quality/c28301.md)|Žádné poznámky pro první deklaraci funkce|
-|[C28302](../code-quality/c28302.md)|V poznámce byl nalezen další operátor \_Deref @ no__t-1.|
-|[C28303](../code-quality/c28303.md)|V poznámce byl nalezen dvojznačný operátor @no__t 0Deref @ no__t-1.|
-|[C28304](../code-quality/c28304.md)|V tokenu byl použit nesprávně umístěný operátor \_Notref @ no__t-1.|
+|[C28302](../code-quality/c28302.md)|V poznámce byl nalezen operátor nadbytečné \_Deref \_.|
+|[C28303](../code-quality/c28303.md)|V poznámce byl nalezen nejednoznačný \_Deref operátor \_.|
+|[C28304](../code-quality/c28304.md)|Byl nalezen nesprávně umístěný \_Notref operátor \_ použit na token.|
 |[C28305](../code-quality/c28305.md)|Zjistila se chyba při analýze tokenu.|
 |[C28306](../code-quality/c28306.md)|Poznámka k parametru je zastarávající|
 |[C28307](../code-quality/c28307.md)|Poznámka k parametru je zastarávající|
 |[C28350](../code-quality/c28350.md)|Poznámka popisuje situaci, která není podmíněně platná.|
 |[C28351](../code-quality/c28351.md)|Poznámka popisuje, kde v podmínce nelze použít dynamickou hodnotu (proměnnou).|
-|[CA1001](../code-quality/ca1001-types-that-own-disposable-fields-should-be-disposable.md)|Typy, které vlastní uvolnitelné pole, by měly být uvolnitelné|
-|[CA1009](../code-quality/ca1009-declare-event-handlers-correctly.md)|Deklarujte správně obslužné rutiny událostí|
-|[CA1016](../code-quality/ca1016-mark-assemblies-with-assemblyversionattribute.md)|Označte sestavení pomocí AssemblyVersionAttribute|
-|[CA1033](../code-quality/ca1033-interface-methods-should-be-callable-by-child-types.md)|Metody rozhraní by měly být volatelné podřízenými typy|
-|[CA1049](../code-quality/ca1049-types-that-own-native-resources-should-be-disposable.md)|Typy, které vlastní nativní prostředky, by měly být uvolnitelné|
-|[CA1060](../code-quality/ca1060-move-p-invokes-to-nativemethods-class.md)|Přesuňte volání nespravovaných kódů do třídy NativeMethods|
-|[CA1061](../code-quality/ca1061-do-not-hide-base-class-methods.md)|Neskrývejte metody základní třídy|
-|[CA1063](../code-quality/ca1063-implement-idisposable-correctly.md)|Implementuje správně IDisposable|
-|[CA1065](../code-quality/ca1065-do-not-raise-exceptions-in-unexpected-locations.md)|Nevyvolávejte výjimky v neočekávaných umístěních|
-|[CA1301](../code-quality/ca1301-avoid-duplicate-accelerators.md)|Vyhněte se duplicitním akcelerátorům|
-|[CA1400](../code-quality/ca1400-p-invoke-entry-points-should-exist.md)|Vstupní body volání nespravovaného kódu by měly existovat|
-|[CA1401](../code-quality/ca1401-p-invokes-should-not-be-visible.md)|Volání nespravovaných kódů by neměla být viditelná|
-|[CA1403](../code-quality/ca1403-auto-layout-types-should-not-be-com-visible.md)|Typy automatického rozložení by neměly být viditelné modelu COM|
-|[CA1404](../code-quality/ca1404-call-getlasterror-immediately-after-p-invoke.md)|Volejte GetLastError ihned po volání nespravovaného kódu|
-|[CA1405](../code-quality/ca1405-com-visible-type-base-types-should-be-com-visible.md)|Základní typy viditelného typu modelu COM by měly být viditelné modelu COM|
-|[CA1410](../code-quality/ca1410-com-registration-methods-should-be-matched.md)|Metody registrace modelu COM by si měly odpovídat|
-|[CA1415](../code-quality/ca1415-declare-p-invokes-correctly.md)|Deklarujte správně volání nespravovaných kódů|
+|[CA1001](../code-quality/ca1001.md)|Typy, které vlastní uvolnitelné pole, by měly být uvolnitelné|
+|[CA1009](../code-quality/ca1009.md)|Deklarujte správně obslužné rutiny událostí|
+|[CA1016](../code-quality/ca1016.md)|Označte sestavení pomocí AssemblyVersionAttribute|
+|[CA1033](../code-quality/ca1033.md)|Metody rozhraní by měly být volatelné podřízenými typy|
+|[CA1049](../code-quality/ca1049.md)|Typy, které vlastní nativní prostředky, by měly být uvolnitelné|
+|[CA1060](../code-quality/ca1060.md)|Přesuňte volání nespravovaných kódů do třídy NativeMethods|
+|[CA1061](../code-quality/ca1061.md)|Neskrývejte metody základní třídy|
+|[CA1063](../code-quality/ca1063.md)|Implementuje správně IDisposable|
+|[CA1065](../code-quality/ca1065.md)|Nevyvolávejte výjimky v neočekávaných umístěních|
+|[CA1301](../code-quality/ca1301.md)|Vyhněte se duplicitním akcelerátorům|
+|[CA1400](../code-quality/ca1400.md)|Vstupní body volání nespravovaného kódu by měly existovat|
+|[CA1401](../code-quality/ca1401.md)|Volání nespravovaných kódů by neměla být viditelná|
+|[CA1403](../code-quality/ca1403.md)|Typy automatického rozložení by neměly být viditelné modelu COM|
+|[CA1404](../code-quality/ca1404.md)|Volejte GetLastError ihned po volání nespravovaného kódu|
+|[CA1405](../code-quality/ca1405.md)|Základní typy viditelného typu modelu COM by měly být viditelné modelu COM|
+|[CA1410](../code-quality/ca1410.md)|Metody registrace modelu COM by si měly odpovídat|
+|[CA1415](../code-quality/ca1415.md)|Deklarujte správně volání nespravovaných kódů|
 |[CA1821](../code-quality/ca1821.md)|Odeberte prázdné finalizační metody|
 |[CA1900](../code-quality/ca1900.md)|Pole typů hodnot by měla být přenosná|
 |[CA1901](../code-quality/ca1901.md)|Deklarace volání nespravovaného kódu by měla být přenosná|

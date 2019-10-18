@@ -1,5 +1,5 @@
 ---
-title: Určení verze rozhraní .NET Framework pro ladění | Dokumentace Microsoftu
+title: Zadejte verzi .NET Framework pro ladění | Microsoft Docs
 ms.custom: seodec18
 ms.date: 11/04/2016
 ms.topic: conceptual
@@ -17,52 +17,52 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: bfe17100fcdcb0d475a7467233caa51ba7895225
-ms.sourcegitcommit: 12f2851c8c9bd36a6ab00bf90a020c620b364076
+ms.openlocfilehash: d612c3f0a542fe30e9241b43c1df5d82a09832fd
+ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66747476"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72535970"
 ---
-# <a name="how-to-specify-a-net-framework-version-for-debugging-c-visual-basic-f"></a>Postupy: Určení verze rozhraní .NET Framework pro ladění (C#, Visual Basic, F#)
+# <a name="specify-an-older-net-framework-version-for-debugging-c-visual-basic-f"></a>Zadejte starší verzi .NET Framework pro ladění (C#, Visual Basic, F#).
 
-Ladicí program sady Visual Studio podporuje ladění starších verzí rozhraní Microsoft .NET Framework a také v aktuální verzi. Pokud spouštíte aplikaci ze sady Visual Studio, ladicí program může vždy identifikovat správnou verzi rozhraní .NET Framework pro aplikace, kterou ladíte. Nicméně pokud aplikace je již spuštěn a spustit ladění pomocí **připojit k**, ladicí program, nemusí být vždy schopen identifikovat starší verzi rozhraní .NET Framework. Pokud k tomu dojde, zobrazí se chybová zpráva s upozorněním,
+Ladicí program sady Visual Studio podporuje ladění starších verzí Microsoft .NET Framework a aktuální verze. Pokud spustíte aplikaci ze sady Visual Studio, ladicí program může vždy identifikovat správnou verzi .NET Framework pro aplikaci, kterou ladíte. Pokud je však aplikace již spuštěna a spustíte ladění pomocí možnosti **připojit k**, ladicí program nemusí vždy identifikovat starší verzi .NET Framework. V takovém případě se zobrazí chybová zpráva s informacemi o tom,
 
 ``` cmd
 The debugger has made an incorrect assumption about the .NET Framework version your application is going to use.
 ```
 
-Ve výjimečných případech, kde se zobrazí tato chyba můžete nastavit klíče registru k označení k ladicímu programu, které verze se má použít.
+Ve výjimečných případech, kdy se zobrazí tato chyba, můžete nastavit klíč registru, který bude označovat ladicímu programu, které verze se má použít.
 
-### <a name="to-specify-a-net-framework-version-for-debugging"></a>Chcete-li určit verzi rozhraní .NET Framework pro ladění
+### <a name="to-specify-a-net-framework-version-for-debugging"></a>Určení verze .NET Framework pro ladění
 
-1. Hledejte v adresáři Windows\Microsoft.NET\Framework vyhledání verzí rozhraní .NET Framework nainstalované v počítači. Čísla verzí vypadat přibližně takto:
+1. Vyhledejte v adresáři Windows\Microsoft.NET\Framework verze .NET Framework nainstalované na vašem počítači. Čísla verzí vypadají přibližně takto:
 
     `V1.1.4322`
 
-    Identifikujte na správné číslo verze a poznamenejte si ho.
+    Identifikujte správné číslo verze a poznamenejte si ho.
 
-2. Spustit **Editor registru** (regedit).
+2. Spusťte **Editor registru** (Regedit).
 
-3. V **Editor registru**, otevřete složku HKEY_LOCAL_MACHINE.
+3. V **Editoru registru**otevřete složku HKEY_LOCAL_MACHINE.
 
-4. Přejděte do: HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\10.0\AD7Metrics\Engine\\{449EC4CC-30D2-4032-9256-EE18EB41B62B}
+4. Přejít na: HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\10.0\AD7Metrics\Engine \\ {449EC4CC-30D2-4032-9256-EE18EB41B62B}
 
-    Pokud klíč neexistuje, klikněte pravým tlačítkem na HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\10.0\AD7Metrics\Engine a klikněte na tlačítko **nový klíč**. Pojmenujte nový klíč `{449EC4CC-30D2-4032-9256-EE18EB41B62B}`.
+    Pokud klíč neexistuje, klikněte pravým tlačítkem na HKEY_LOCAL_MACHINE\Software\Microsoft\VisualStudio\10.0\AD7Metrics\Engine a klikněte na **nový klíč**. Pojmenujte nový klíč `{449EC4CC-30D2-4032-9256-EE18EB41B62B}`.
 
-5. Po přejití do {449EC4CC-30D2-4032-9256-EE18EB41B62B}, podívejte se **název** sloupce a najít CLRVersionForDebugging klíč.
+5. Po přechodu na {449EC4CC-30D2-4032-9256-EE18EB41B62B} se podívejte do sloupce **název** a vyhledejte klíč CLRVersionForDebugging.
 
-   1. Pokud klíč neexistuje, klikněte pravým tlačítkem na {449EC4CC-30D2-4032-9256-EE18EB41B62B} a klikněte na tlačítko **novou řetězcovou hodnotu**. Klikněte pravým tlačítkem na novou řetězcovou hodnotu, klikněte na tlačítko **přejmenovat**a typ `CLRVersionForDebugging`.
+   1. Pokud klíč neexistuje, klikněte pravým tlačítkem na {449EC4CC-30D2-4032-9256-EE18EB41B62B} a pak klikněte na **Nová hodnota řetězce**. Pak klikněte pravým tlačítkem na novou řetězcovou hodnotu, klikněte na **Přejmenovat**a zadejte `CLRVersionForDebugging`.
 
-6. Dvakrát klikněte na panel **CLRVersionForDebugging**.
+6. Dvakrát klikněte na **CLRVersionForDebugging**.
 
-7. V **Upravit řetězec** zadejte číslo verze rozhraní .NET Framework v **hodnotu** pole. Příklad: V1.1.4322
+7. Do pole **Upravit řetězec** zadejte .NET Framework číslo verze do pole **hodnota** . Příklad: V 1.1.4322
 
-8. Klikněte na **OK**.
+8. Klikněte na tlačítko **OK**.
 
-9. Zavřít **Editor registru**.
+9. Zavřete **Editor registru**.
 
-     Pokud se stále zobrazí chybová zpráva při zahájení ladění, ověřte, že zadáte číslo verze správně v registru. Dál ověřte, že používáte verzi rozhraní .NET Framework podporuje Visual Studio. Ladicí program je kompatibilní s aktuální verze rozhraní .NET Framework a předchozími verzemi, ale možná není dopředně kompatibilní s budoucí verze.
+     Pokud se vám při zahájení ladění stále zobrazí chybová zpráva, ověřte, že jste v registru zadali číslo verze správně. Ověřte také, že používáte verzi .NET Framework, kterou podporuje aplikace Visual Studio. Ladicí program je kompatibilní s aktuální verzí .NET Framework a předchozími verzemi, ale nemusí být dopředný kompatibilní s budoucími verzemi.
 
 ## <a name="see-also"></a>Viz také
 - [Nastavení a příprava ladicího programu](../debugger/debugger-settings-and-preparation.md)

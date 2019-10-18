@@ -15,12 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: da4da0a106d37b081e0a7c57fe905048f3314174
-ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
+ms.openlocfilehash: fcc4a3d3d99deab62971c40b26c9a4252367438f
+ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381080"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72516331"
 ---
 # <a name="create-a-network-installation-of-visual-studio"></a>Vytvoření síťové instalace sady Visual Studio
 
@@ -39,7 +39,7 @@ Stáhněte si soubor zaváděcího nástroje pro edici sady Visual Studio, ktero
 
 Další informace o tom, jak to udělat, najdete na stránce pro stažení [předchozích verzí sady Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/) , kde můžete získat zaváděcí nástroj pro visual Studio 2017.
 
-Instalační program @ no__t-0or, který by měl být konkrétnější, soubor zaváděcího nástroje @ no__t-1should odpovídá nebo se podobá jednomu z následujících.
+Spustitelný soubor instalačního programu &mdash;or tak, aby byl konkrétnější, &mdash;should soubor zaváděcího nástroje se shodují nebo se podobá jednomu z následujících.
 
 | Edice | Bitmap |
 |-------------|-----------------------|
@@ -53,7 +53,7 @@ Mezi další podporované zaváděcí nástroje patří **vs_feedbackclient. exe
 
 ::: moniker range="vs-2019"
 
-Instalační program @ no__t-0or, který by měl být konkrétnější, soubor zaváděcího nástroje @ no__t-1should odpovídá nebo se podobá jednomu z následujících.
+Spustitelný soubor instalačního programu &mdash;or tak, aby byl konkrétnější, soubor zaváděcího nástroje &mdash;should shodný s jedním z následujících způsobů.
 
 |Edice | Stáhnout|
 |-------------|-----------------------|
@@ -221,7 +221,7 @@ Správci mohou do klientských pracovních stanic nasadit sadu Visual Studio jak
 > Aby se zabránilo chybě, ujistěte se, že cesta k celému rozložení má méně než 80 znaků.
 >
 > [!TIP]
-> Když se spustí jako součást dávkového souboru, možnost `--wait` zajistí, že proces `vs_enterprise.exe` počká, dokud nebude instalace dokončena, než vrátí ukončovací kód.
+> Při spuštění jako součást dávkového souboru zajistí možnost `--wait`, že proces `vs_enterprise.exe` počká, dokud nebude instalace dokončena, než vrátí ukončovací kód.
 >
 > To je užitečné v případě, že podnikový správce chce provést další akce při dokončené instalaci (například při [použití kódu Product Key pro úspěšnou instalaci](automatically-apply-product-keys-when-deploying-visual-studio.md)), ale musí počkat na dokončení instalace pro zpracování návratového kódu z zařízením.
 >
@@ -229,9 +229,9 @@ Správci mohou do klientských pracovních stanic nasadit sadu Visual Studio jak
 >
 
 ::: moniker range="vs-2019"
-
-> V případě offline instalací se zobrazí chybová zpráva s informacemi o tom, že projekt odpovídající následujícím parametrům nebyl nalezen, ujistěte se, že používáte přepínač--NoWeb s verzí 16.3.5 nebo novější.
-
+> [!IMPORTANT]
+> V případě instalace offline se zobrazí chybová zpráva s informacemi o tom, že produkt odpovídající následujícím parametrům nebyl nalezen, ujistěte se, že používáte přepínač `--noweb` s verzí 16.3.5 nebo novější.
+>
 ::: moniker-end
 
 Při instalaci z rozložení je obsah, který se instaluje, získaný z rozložení. Pokud však vyberete komponentu, která není v rozložení, bude získána z Internetu.  Pokud chcete, aby instalační program sady Visual Studio nestáhl obsah, který ve vašem rozložení chybí, použijte možnost `--noWeb`. Pokud se použije `--noWeb` a v rozložení chybí žádný obsah, který je vybraný k instalaci, instalace se nepovede.
@@ -241,7 +241,7 @@ Při instalaci z rozložení je obsah, který se instaluje, získaný z rozlože
 
 ### <a name="error-codes"></a>Kódy chyb
 
-Pokud jste použili parametr `--wait` a v závislosti na výsledku operace je proměnná prostředí `%ERRORLEVEL%` nastavena na jednu z následujících hodnot:
+Pokud jste použili parametr `--wait` a v závislosti na výsledku operace je proměnná prostředí `%ERRORLEVEL%` nastavená na jednu z následujících hodnot:
 
 [!INCLUDE[install-error-codes-md](includes/install-error-codes-md.md)]
 

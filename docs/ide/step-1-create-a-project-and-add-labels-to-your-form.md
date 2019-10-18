@@ -1,6 +1,6 @@
 ---
-title: 'Krok 1: Vytvoření projektu a přidání popisků do formuláře'
-ms.date: 05/31/2019
+title: 'Krok 1: vytvoření projektu a Přidání popisků do formuláře'
+ms.date: 10/15/2019
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
@@ -10,27 +10,27 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: b52851ce3e344293faede243413fc796e9882196
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
+ms.openlocfilehash: 0fdda615ceea11434a4533fa2a5071a5a999c1c4
+ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71119052"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72516682"
 ---
-# <a name="step-1-create-a-project-and-add-labels-to-your-form"></a>Krok 1: Vytvoření projektu a přidání popisků do formuláře
+# <a name="step-1-create-a-project-and-add-labels-to-your-form"></a>Krok 1: vytvoření projektu a Přidání popisků do formuláře
 
 Jako první kroky při vývoji tohoto kvízu vytvoříte projekt a přidáte popisky, tlačítko a další ovládací prvky do formuláře. Nastavili jste také vlastnosti pro každý ovládací prvek, který přidáte. Projekt bude obsahovat formulář, ovládací prvky a (dále v tomto kurzu) kódu. Tlačítko spustí kvíz, jmenovky zobrazí problémy kvízu a ostatní ovládací prvky zobrazí odpovědi kvízu a čas, který zbývá k dokončení kvízu.
 
 > [!NOTE]
 > Toto téma je součástí série kurzů o základních konceptech kódování. 
-> - Přehled tohoto kurzu najdete v [kurzu 2: Vytvoření časovaného matematického](../ide/tutorial-2-create-a-timed-math-quiz.md)kvízu 
+> - Přehled tohoto kurzu najdete v tématu [kurz 2: vytvoření časovaného matematického kvízu](../ide/tutorial-2-create-a-timed-math-quiz.md). 
 > - Chcete-li stáhnout dokončenou verzi kódu, přečtěte si [ukázku kurzu dokončení matematického kvízu](https://code.msdn.microsoft.com/Complete-Math-Quiz-8581813c).
 
 ## <a name="to-create-a-project-for-a-form"></a>Vytvoření projektu pro formulář
 
 ::: moniker range="vs-2017"
 
-1. Na panelu nabídek vyberte **soubor** > **Nový** > **projekt**.
+1. Na panelu nabídek vyberte možnost **soubor** > **Nový** > **projekt**.
 
 1. Na levé straně dialogového okna **Nový projekt** vyberte buď **vizuál C#**  , nebo **Visual Basic** , a pak zvolte **Windows Desktop**.
 
@@ -39,7 +39,7 @@ Jako první kroky při vývoji tohoto kvízu vytvoříte projekt a přidáte pop
     Zobrazí se formulář s názvem *Form1.cs* nebo *Form1. vb* v závislosti na zvoleném programovacím jazyce.
 
    > [!NOTE]
-   > Pokud nevidíte šablonu **aplikace model Windows Forms App (.NET Framework)** , nainstalujte úlohu **vývoj desktopových aplikací .NET** pomocí instalační program pro Visual Studio.<br/><br/>![Úloha vývoj desktopových aplikací .NET v Instalační program pro Visual Studio](../ide/media/dot-net-desktop-dev-workload.png)<br/><br/> Další informace najdete na stránce [instalace sady Visual Studio](../install/install-visual-studio.md) .
+   > Pokud nevidíte šablonu **aplikace model Windows Forms App (.NET Framework)** , nainstalujte úlohu **vývoj desktopových aplikací .NET** pomocí instalační program pro Visual Studio.<br/><br/>![ úlohy vývoj desktopových aplikací .NET v Instalační program pro Visual Studio ](../ide/media/dot-net-desktop-dev-workload.png)<br/><br/> Další informace najdete na stránce [instalace sady Visual Studio](../install/install-visual-studio.md) .
 
 ::: moniker-end
 
@@ -49,11 +49,11 @@ Jako první kroky při vývoji tohoto kvízu vytvoříte projekt a přidáte pop
 
    ![Zobrazit okno vytvořit nový projekt](../get-started/media/vs-2019/create-new-project-dark-theme.png)
 
-1. V okně **vytvořit nový projekt** zadejte nebo zadejte *model Windows Forms* do vyhledávacího pole.
+1. V okně **vytvořit nový projekt** zadejte nebo zadejte *model Windows Forms* do vyhledávacího pole. V dalším kroku vyberte možnost **plocha** ze seznamu **typ projektu** .
 
-1. Zvolte šablonu **aplikace model Windows Forms App (.NET Framework)** a klikněte na tlačítko **Další**.
+   Po použití filtru **typu projektu** zvolte šablonu **aplikace model Windows Forms (.NET Framework)** pro buď C# nebo Visual Basic, a pak zvolte možnost **Další**.
 
-   ![Vyberte šablonu Visual Basic pro aplikaci model Windows Forms (.NET Framework).](../get-started/visual-basic/media/vs-2019/vb-create-new-project-search-winforms-filtered.png)
+   ![Vyberte šablonu C# nebo Visual Basic pro aplikaci model Windows Forms (.NET Framework).](./media/create-new-project-search-winforms-filtered.png)
 
    > [!NOTE]
    > Pokud nevidíte šablonu **aplikace model Windows Forms App (.NET Framework)** , můžete ji nainstalovat z okna **vytvořit nový projekt** . V části **nenajít, co hledáte?** klikněte na odkaz **instalovat další nástroje a funkce** .
@@ -62,7 +62,7 @@ Jako první kroky při vývoji tohoto kvízu vytvoříte projekt a přidáte pop
    >
    > V části Instalační program pro Visual Studio klikněte na možnost zvolit úlohu **vývoj desktopových aplikací .NET** .
    >
-   > ![Úlohy .NET core v instalačním programu sady Visual Studio](../ide/media/install-dot-net-desktop-env.png)
+   > ![Zatížení .NET Core v Instalační program pro Visual Studio](../ide/media/install-dot-net-desktop-env.png)
    >
    > Potom klikněte na tlačítko **Upravit** v instalační program pro Visual Studio. Může se zobrazit výzva k uložení práce; Pokud ano, udělejte to. V dalším kroku vyberte **pokračovat** a nainstalujte úlohu.
 
@@ -86,7 +86,7 @@ Jako první kroky při vývoji tohoto kvízu vytvoříte projekt a přidáte pop
 
 ## <a name="to-create-the-time-remaining-box"></a>Vytvoření pole pro zbývající čas
 
-1. Přidejte ovládací prvek z **panelu nástrojů**a pak nastavte jeho vlastnost **(Name)** na hodnotu **timeLabel.** <xref:System.Windows.Forms.Label>
+1. Do **panelu nástrojů**přidejte ovládací prvek <xref:System.Windows.Forms.Label> a nastavte jeho vlastnost **(Name)** na hodnotu **timeLabel**.
 
      Tento popisek se stane polem v pravém horním rohu, které zobrazuje počet sekund, které zůstanou v kvízu.
 
@@ -102,7 +102,7 @@ Jako první kroky při vývoji tohoto kvízu vytvoříte projekt a přidáte pop
 
 6. V okně **vlastnosti** zvolte vlastnost **text** a potom stiskněte klávesu **BACKSPACE** a vymažte její hodnotu.
 
-7. Zvolte znaménko plus ( **+** ) vedle vlastnosti **Font** a pak změňte hodnotu vlastnosti **Size** na **15,75**.
+7. Vedle vlastnosti **Font** zvolte znaménko plus ( **+** ) a pak změňte hodnotu vlastnosti **Size** na **15,75**.
 
      Můžete změnit několik vlastností písma, jak ukazuje následující snímek obrazovky.
 
@@ -130,9 +130,9 @@ Jako první kroky při vývoji tohoto kvízu vytvoříte projekt a přidáte pop
 
 7. Nastavte vlastnost **(Name)** na **plusLeftLabel**.
 
-8. Zvolte popisek **plusLeftLabel** a pak zvolte **buď**+klávesovou zkratku**C** , nebo příkaz **Kopírovat** v nabídce **Upravit** .
+8. Zvolte popisek **plusLeftLabel** a pak vyberte buď klávesy **CTRL** +**C** nebo **Kopírovat** z nabídky **Upravit** .
 
-9. Vložte popisek třikrát tak, že vyberete buď klávesy **CTRL**+**v** , nebo **Vložit** v nabídce **Upravit** .
+9. Vložte popisek třikrát tak, že vyberete buď klávesy **Ctrl** +**V** , nebo **Vložit** v nabídce **Upravit** .
 
 10. Uspořádejte tři nové popisky tak, aby byly v řádku napravo od popisku **plusLeftLabel** .
 
@@ -144,7 +144,7 @@ Jako první kroky při vývoji tohoto kvízu vytvoříte projekt a přidáte pop
 
 13. Nastavte hodnotu vlastnosti **text** čtvrtého popisku na **=** (symbol rovná se).
 
-14. Přidejte ovládací prvek ze sady **nástrojů**, nastavte jeho velikost písma na **18**a nastavte jeho šířku na **100.** <xref:System.Windows.Forms.NumericUpDown>
+14. Přidejte ovládací prvek <xref:System.Windows.Forms.NumericUpDown> ze sady **nástrojů**, nastavte jeho velikost písma na **18**a nastavte jeho šířku na **100**.
 
      O tomto druhu řízení se dozvíte později.
 
@@ -166,7 +166,7 @@ Jako první kroky při vývoji tohoto kvízu vytvoříte projekt a přidáte pop
 
      Oddělovací čáry můžete použít k poskytnutí dostatečné vzdálenosti mezi dvěma řádky.
 
-3. Změňte hodnotu vlastnosti **text** pro druhý popisek na **-** (minus znaménko).
+3. Změňte hodnotu vlastnosti **text** pro druhý popisek na **-** (znaménko mínus).
 
 4. Pojmenujte první popisek otazníku **minusLeftLabel**.
 
@@ -185,7 +185,7 @@ Jako první kroky při vývoji tohoto kvízu vytvoříte projekt a přidáte pop
 
 ## <a name="to-add-a-start-button-and-set-the-tab-index-order"></a>Přidání tlačítka Start a nastavení pořadí indexů karet
 
-1. Přidejte ovládací prvek z **panelu nástrojů**a potom nastavte jeho vlastnost **(Name)** na **startButton.** <xref:System.Windows.Forms.Button>
+1. Přidejte ovládací prvek <xref:System.Windows.Forms.Button> z **panelu nástrojů**a potom nastavte jeho vlastnost **(Name)** na **startButton**.
 
 2. Nastavte vlastnost **text** na hodnotu **spustit kvíz**.
 
@@ -198,7 +198,7 @@ Jako první kroky při vývoji tohoto kvízu vytvoříte projekt a přidáte pop
 6. Nastavte hodnotu vlastnosti **TabIndex** ovládacího prvku **startButton** na hodnotu **1**.
 
     > [!NOTE]
-    > Vlastnost **TabIndex** nastaví pořadí ovládacích prvků, když si autor kvízu zvolí klávesu **TAB** . Pokud chcete zjistit, jak to funguje, otevřete libovolné dialogové okno (například na panelu nabídek, zvolte**otevřít** **soubor** > ) a pak několikrát zvolte klávesu **TAB** . Sledujte, jak se kurzor pohybuje od ovládacího prvku a řídí se pokaždé, když vyberete klávesu **TAB** . Programátor určil pořadí při vytváření tohoto formuláře.
+    > Vlastnost **TabIndex** nastaví pořadí ovládacích prvků, když si autor kvízu zvolí klávesu **TAB** . Chcete-li zjistit, jak to funguje, otevřete libovolné dialogové okno (například na panelu nabídek zvolte **soubor**  > **otevřít**) a pak několikrát zvolte klávesu **TAB** . Sledujte, jak se kurzor pohybuje od ovládacího prvku a řídí se pokaždé, když vyberete klávesu **TAB** . Programátor určil pořadí při vytváření tohoto formuláře.
 
 7. Nastavte hodnotu vlastnosti **TabIndex** pro ovládací prvek NumericUpDown suma na **2**, pro ovládací prvek rozdíl na **3**, pro řízení produktu na **4**a pro řízení podílu na **5**.
 
@@ -206,10 +206,10 @@ Jako první kroky při vývoji tohoto kvízu vytvoříte projekt a přidáte pop
 
      ![Počáteční formulář matematického kvízu](../ide/media/express_formlaidout.png)
 
-8. Chcete-li ověřit, zda vlastnost **TabIndex** funguje podle očekávání, uložte a spusťte program tak, že zvolíte klávesu **F5** , nebo > kliknutím na tlačítko**Spustit ladění** na panelu nabídek a pak několikrát vyberte klávesu **TAB** . .
+8. Chcete-li ověřit, zda vlastnost **TabIndex** funguje podle očekávání, uložte a spusťte program výběrem klávesy **F5** nebo výběrem možnosti **ladění**  > **Spustit ladění** na panelu nabídek a pak několikrát vyberte klávesu **TAB** .
 
 ## <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
 
-- Pokud chcete přejít na další krok kurzu, přečtěte si  **[článek krok 2: Vytvoří náhodný problém](../ide/step-2-create-a-random-addition-problem.md)** sčítání.
+- Pokud chcete přejít na další krok kurzu, přečtěte si **[článek krok 2: vytvoření náhodného problému s přidáním](../ide/step-2-create-a-random-addition-problem.md)** .
 
-- Pokud se chcete vrátit k tématu Přehled, [Přečtěte si kurz 2: Vytvoření časovaného matematického](../ide/tutorial-2-create-a-timed-math-quiz.md)kvízu
+- Pokud se chcete vrátit k tématu Přehled, přečtěte si článek [kurz 2: vytvoření časovaného matematického kvízu](../ide/tutorial-2-create-a-timed-math-quiz.md).

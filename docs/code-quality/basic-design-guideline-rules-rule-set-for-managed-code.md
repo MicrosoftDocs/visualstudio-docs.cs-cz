@@ -8,12 +8,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: a8f34a8b98433642ab9d5eb087eacac0061ba96c
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 4100ee49cf4735a05693ec2a76d7407af8cac7f3
+ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72450339"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72534592"
 ---
 # <a name="basic-design-guideline-rules-rule-set-for-managed-code"></a>Sada pravidel Základní pravidla obecných zásad návrhu pro spravovaný kód
 
@@ -25,24 +25,88 @@ V následující tabulce jsou popsána všechna pravidla v sadě pravidel zákla
 
 |Pravidlo|Popis|
 |----------|-----------------|
-|[CA1001](../code-quality/ca1001-types-that-own-disposable-fields-should-be-disposable.md)|Typy, které vlastní uvolnitelné pole, by měly být uvolnitelné|
-|[CA1009](../code-quality/ca1009-declare-event-handlers-correctly.md)|Deklarujte správně obslužné rutiny událostí|
-|[CA1016](../code-quality/ca1016-mark-assemblies-with-assemblyversionattribute.md)|Označte sestavení pomocí AssemblyVersionAttribute|
-|[CA1033](../code-quality/ca1033-interface-methods-should-be-callable-by-child-types.md)|Metody rozhraní by měly být volatelné podřízenými typy|
-|[CA1049](../code-quality/ca1049-types-that-own-native-resources-should-be-disposable.md)|Typy, které vlastní nativní prostředky, by měly být uvolnitelné|
-|[CA1060](../code-quality/ca1060-move-p-invokes-to-nativemethods-class.md)|Přesuňte volání nespravovaných kódů do třídy NativeMethods|
-|[CA1061](../code-quality/ca1061-do-not-hide-base-class-methods.md)|Neskrývejte metody základní třídy|
-|[CA1063](../code-quality/ca1063-implement-idisposable-correctly.md)|Implementuje správně IDisposable|
-|[CA1065](../code-quality/ca1065-do-not-raise-exceptions-in-unexpected-locations.md)|Nevyvolávejte výjimky v neočekávaných umístěních|
-|[CA1301](../code-quality/ca1301-avoid-duplicate-accelerators.md)|Vyhněte se duplicitním akcelerátorům|
-|[CA1400](../code-quality/ca1400-p-invoke-entry-points-should-exist.md)|Vstupní body volání nespravovaného kódu by měly existovat|
-|[CA1401](../code-quality/ca1401-p-invokes-should-not-be-visible.md)|Volání nespravovaných kódů by neměla být viditelná|
-|[CA1403](../code-quality/ca1403-auto-layout-types-should-not-be-com-visible.md)|Typy automatického rozložení by neměly být viditelné modelu COM|
-|[CA1404](../code-quality/ca1404-call-getlasterror-immediately-after-p-invoke.md)|Volejte GetLastError ihned po volání nespravovaného kódu|
-|[CA1405](../code-quality/ca1405-com-visible-type-base-types-should-be-com-visible.md)|Základní typy viditelného typu modelu COM by měly být viditelné modelu COM|
-|[CA1410](../code-quality/ca1410-com-registration-methods-should-be-matched.md)|Metody registrace modelu COM by si měly odpovídat|
-|[CA1415](../code-quality/ca1415-declare-p-invokes-correctly.md)|Deklarujte správně volání nespravovaných kódů|
+|[CA1000](../code-quality/ca1000.md)|Nedeklarujte statické členy v obecných typech|
+|[CA1001](../code-quality/ca1001.md)|Typy, které vlastní uvolnitelné pole, by měly být uvolnitelné|
+|[CA1002](../code-quality/ca1002.md)|Nezveřejňujte obecné seznamy|
+|[CA1003](../code-quality/ca1003.md)|Použijte instance obecných obslužných rutin události|
+|[CA1004](../code-quality/ca1004.md)|Obecné metody by měly poskytnout parametr typu|
+|[CA1005](../code-quality/ca1005.md)|Vyhněte se nadbytečným parametrům u obecných typů|
+|[CA1006](../code-quality/ca1006.md)|Nevnořujte obecné typy do signatur členu|
+|[CA1007](../code-quality/ca1007.md)|Použijte obecné typy, kde je to vhodné|
+|[CA1008](../code-quality/ca1008.md)|Výčty by měly mít nulovou hodnotu|
+|[CA1009](../code-quality/ca1009.md)|Deklarujte správně obslužné rutiny událostí|
+|[CA1010](../code-quality/ca1010.md)|Kolekce musí implementovat obecné rozhraní|
+|[CA1011](../code-quality/ca1011.md)|Zvažte předání základních typů jako parametrů|
+|[CA1012](../code-quality/ca1012.md)|Abstraktní typy by neměly mít konstruktory|
+|[CA1013](../code-quality/ca1013.md)|Přetižte operátor rovnosti společně s přetížením operátorů sčítání a odečítání|
+|[CA1014](../code-quality/ca1014.md)|Označte sestavení pomocí CLSCompliantAttribute|
+|[CA1016](../code-quality/ca1016.md)|Označte sestavení pomocí AssemblyVersionAttribute|
+|[CA1017](../code-quality/ca1017.md)|Označte sestavení pomocí ComVisibleAttribute|
+|[CA1018](../code-quality/ca1018.md)|Označte atributy pomocí AttributeUsageAttribute|
+|[CA1019](../code-quality/ca1019.md)|Definujte přístupové objekty pro argumenty atributů|
+|[CA1023](../code-quality/ca1023.md)|Indexery by neměly být multidimenzionální|
+|[CA1024](../code-quality/ca1024.md)|Použijte vlastnosti, kde je to vhodné|
+|[CA1025](../code-quality/ca1025.md)|Nahraďte opakované argumenty polem parametrů|
+|[CA1026](../code-quality/ca1026.md)|Neměly by být použity výchozí parametry|
+|[CA1027](../code-quality/ca1027.md)|Označte výčty pomocí FlagsAttribute|
+|[CA1028](../code-quality/ca1028.md)|Úložiště výčtu by mělo být Int32|
+|[CA1030](../code-quality/ca1030.md)|Použijte události, kde je to vhodné|
+|[CA1031](../code-quality/ca1031.md)|Nezachycujte výjimky obecného typu|
+|[CA1032](../code-quality/ca1032.md)|Implementujte standardní konstruktory výjimky|
+|[CA1033](../code-quality/ca1033.md)|Metody rozhraní by měly být volatelné podřízenými typy|
+|[CA1034](../code-quality/ca1034.md)|Vnořené typy by neměly být viditelné|
+|[CA1035](../code-quality/ca1035.md)|Implementace ICollection mají členy silného typu|
+|[CA1036](../code-quality/ca1036.md)|Přepište metody u srovnatelných typů|
+|[CA1038](../code-quality/ca1038.md)|Enumerátory by měly být silného typu|
+|[CA1039](../code-quality/ca1039.md)|Seznamy jsou silného typu|
+|[CA1041](../code-quality/ca1041.md)|Poskytněte zprávu ObsoleteAttribute|
+|[CA1043](../code-quality/ca1043.md)|Použijte celočíselný nebo řetězcový argument pro indexery|
+|[CA1044](../code-quality/ca1044.md)|Vlastnosti by neměly být pouze pro zápis|
+|[CA1046](../code-quality/ca1046.md)|Nepřetěžujte operátory rovnosti u odkazových typů|
+|[CA1047](../code-quality/ca1047.md)|Nedeklarujte chráněné členy v zapečetěných typech|
+|[CA1048](../code-quality/ca1048.md)|Nedeklarujte virtuální členy v zapečetěných typech|
+|[CA1049](../code-quality/ca1049.md)|Typy, které vlastní nativní prostředky, by měly být uvolnitelné|
+|[CA1050](../code-quality/ca1050.md)|Deklarujte typy v oborech názvů|
+|[CA1051](../code-quality/ca1051.md)|Nedeklarujte viditelná pole instance|
+|[CA1052](../code-quality/ca1052.md)|Statické typy vlastníků by měly být zapečetěné|
+|[CA1053](../code-quality/ca1053.md)|Statické typy vlastníků by neměly mít konstruktory|
+|[CA1054](../code-quality/ca1054.md)|Parametry identifikátoru URI by neměly být řetězce|
+|[CA1055](../code-quality/ca1055.md)|Návratové hodnoty identifikátoru URI by neměly být řetězce|
+|[CA1056](../code-quality/ca1056.md)|Vlastnosti identifikátoru URI by neměly být řetězce|
+|[CA1057](../code-quality/ca1057.md)|Přetížení řetězce identifikátoru URI volají přetížení System.Uri|
+|[CA1058](../code-quality/ca1058.md)|Typy by neměly rozšiřovat určité základní typy|
+|[CA1059](../code-quality/ca1059.md)|Členy by neměly zveřejňovat určité konkrétní typy|
+|[CA1060](../code-quality/ca1060.md)|Přesuňte volání nespravovaných kódů do třídy NativeMethods|
+|[CA1061](../code-quality/ca1061.md)|Neskrývejte metody základní třídy|
+|[CA1063](../code-quality/ca1063.md)|Implementuje správně IDisposable|
+|[CA1064](../code-quality/ca1064.md)|Výjimky by měly být veřejné|
+|[CA1065](../code-quality/ca1065.md)|Nevyvolávejte výjimky v neočekávaných umístěních|
+|[CA1301](../code-quality/ca1301.md)|Vyhněte se duplicitním akcelerátorům|
+|[CA1400](../code-quality/ca1400.md)|Vstupní body volání nespravovaného kódu by měly existovat|
+|[CA1401](../code-quality/ca1401.md)|Volání nespravovaných kódů by neměla být viditelná|
+|[CA1403](../code-quality/ca1403.md)|Typy automatického rozložení by neměly být viditelné modelu COM|
+|[CA1404](../code-quality/ca1404.md)|Volejte GetLastError ihned po volání nespravovaného kódu|
+|[CA1405](../code-quality/ca1405.md)|Základní typy viditelného typu modelu COM by měly být viditelné modelu COM|
+|[CA1410](../code-quality/ca1410.md)|Metody registrace modelu COM by si měly odpovídat|
+|[CA1415](../code-quality/ca1415.md)|Deklarujte správně volání nespravovaných kódů|
+|[CA1500](../code-quality/ca1500.md)|Názvy proměnných by neměly odpovídat názvům polí|
+|[CA1502](../code-quality/ca1502.md)|Vyhněte se nadměrné složitosti|
+|[CA1708](../code-quality/ca1708.md)|Identifikátory by se měly lišit více než použitím malých a velkých písmen|
+|[CA1716](../code-quality/ca1716.md)|Identifikátory by se neměly shodovat s klíčovými slovy|
+|[CA1801](../code-quality/ca1801.md)|Zkontrolujte nepoužité parametry|
+|[CA1804](../code-quality/ca1804.md)|Odeberte nepoužívané lokální hodnoty|
+|[CA1809](../code-quality/ca1809.md)|Vyhněte se nadměrným lokálním hodnotám|
+|[CA1810](../code-quality/ca1810.md)|Inicializujte odkazový typ statického pole vloženě|
+|[CA1811](../code-quality/ca1811.md)|Vyhněte se nevolanému privátnímu kódu|
+|[CA1812](../code-quality/ca1812.md)|Vyhněte se nevytvořeným instancím interních tříd|
+|[CA1813](../code-quality/ca1813.md)|Vyhněte se nezapečetěným atributům|
+|[CA1814](../code-quality/ca1814.md)|Upřednostněte vícenásobná pole před multidimenzionálními|
+|[CA1815](../code-quality/ca1815.md)|Přepište rovnosti a operátory rovnosti u typů hodnot|
+|[CA1819](../code-quality/ca1819.md)|Vlastnosti by neměly vracet pole|
+|[CA1820](../code-quality/ca1820.md)|Testujte prázdné řetězce pomocí délky řetězce|
 |[CA1821](../code-quality/ca1821.md)|Odeberte prázdné finalizační metody|
+|[CA1822](../code-quality/ca1822.md)|Označte členy jako statické|
+|[CA1823](../code-quality/ca1823.md)|Vyhněte se nepoužitým privátním polím|
 |[CA1900](../code-quality/ca1900.md)|Pole typů hodnot by měla být přenosná|
 |[CA1901](../code-quality/ca1901.md)|Deklarace volání nespravovaného kódu by měla být přenosná|
 |[CA2002](../code-quality/ca2002.md)|Nepoužívejte zámky u objektů se slabou identitou|
@@ -70,93 +134,19 @@ V následující tabulce jsou popsána všechna pravidla v sadě pravidel zákla
 |[CA2147](../code-quality/ca2147.md)|Transparentní metody nemusí používat kontrolní příkazy zabezpečení|
 |[CA2149](../code-quality/ca2149.md)|Transparentní metody nesmí provádět volání nativního kódu|
 |[CA2200](../code-quality/ca2200.md)|Znovu vyvolejte pro zachování podrobností zásobníku|
+|[CA2201](../code-quality/ca2201.md)|Nevyvolávejte vyhrazené typy výjimek|
 |[CA2202](../code-quality/ca2202.md)|Neuvolňujte objekty několikrát|
+|[CA2205](../code-quality/ca2205.md)|Použijte spravované ekvivalenty rozhraní Win32 API|
 |[CA2207](../code-quality/ca2207.md)|Inicializujte statická pole s typem hodnoty vloženě|
+|[CA2208](../code-quality/ca2208.md)|Vytvořte správně instance výjimky argumentu|
+|[CA2211](../code-quality/ca2211.md)|Nekonstantní pole by neměla být viditelná|
 |[CA2212](../code-quality/ca2212.md)|Neoznačujte obsluhované komponenty pomocí WebMethod|
 |[CA2213](../code-quality/ca2213.md)|Uvolnitelná pole by měla být uvolněna|
 |[CA2214](../code-quality/ca2214.md)|Nevolejte přepisovatelné metody v konstruktorech|
 |[CA2216](../code-quality/ca2216.md)|Uvolnitelné typy by měly deklarovat finalizační metodu|
-|[CA2220](../code-quality/ca2220.md)|Finalizační metody by měly volat finalizační metodu základní třídy|
-|[CA2229](../code-quality/ca2229.md)|Implementujte serializační konstruktory|
-|[CA2231](../code-quality/ca2231.md)|Přetižte operátor rovnosti při přetížení ValueType.Equals|
-|[CA2232](../code-quality/ca2232.md)|Označte vstupní body modelu Windows Forms pomocí STAThread|
-|[CA2235](../code-quality/ca2235.md)|Označte všechna neserializovatelná pole|
-|[CA2236](../code-quality/ca2236.md)|Volejte metody základní třídy u typů ISerializable|
-|[CA2237](../code-quality/ca2237.md)|Označte typy ISerializable pomocí SerializableAttribute|
-|[CA2238](../code-quality/ca2238.md)|Implementujte správně metody serializace|
-|[CA2240](../code-quality/ca2240.md)|Implementujte správně ISerializable|
-|[CA2241](../code-quality/ca2241.md)|Zadejte správné argumenty pro metody formátování|
-|[CA2242](../code-quality/ca2242.md)|Testujte správně NaN|
-|[CA1000](../code-quality/ca1000-do-not-declare-static-members-on-generic-types.md)|Nedeklarujte statické členy v obecných typech|
-|[CA1002](../code-quality/ca1002-do-not-expose-generic-lists.md)|Nezveřejňujte obecné seznamy|
-|[CA1003](../code-quality/ca1003-use-generic-event-handler-instances.md)|Použijte instance obecných obslužných rutin události|
-|[CA1004](../code-quality/ca1004-generic-methods-should-provide-type-parameter.md)|Obecné metody by měly poskytnout parametr typu|
-|[CA1005](../code-quality/ca1005-avoid-excessive-parameters-on-generic-types.md)|Vyhněte se nadbytečným parametrům u obecných typů|
-|[CA1006](../code-quality/ca1006-do-not-nest-generic-types-in-member-signatures.md)|Nevnořujte obecné typy do signatur členu|
-|[CA1007](../code-quality/ca1007-use-generics-where-appropriate.md)|Použijte obecné typy, kde je to vhodné|
-|[CA1008](../code-quality/ca1008-enums-should-have-zero-value.md)|Výčty by měly mít nulovou hodnotu|
-|[CA1010](../code-quality/ca1010-collections-should-implement-generic-interface.md)|Kolekce musí implementovat obecné rozhraní|
-|[CA1011](../code-quality/ca1011-consider-passing-base-types-as-parameters.md)|Zvažte předání základních typů jako parametrů|
-|[CA1012](../code-quality/ca1012-abstract-types-should-not-have-constructors.md)|Abstraktní typy by neměly mít konstruktory|
-|[CA1013](../code-quality/ca1013-overload-operator-equals-on-overloading-add-and-subtract.md)|Přetižte operátor rovnosti společně s přetížením operátorů sčítání a odečítání|
-|[CA1014](../code-quality/ca1014-mark-assemblies-with-clscompliantattribute.md)|Označte sestavení pomocí CLSCompliantAttribute|
-|[CA1017](../code-quality/ca1017-mark-assemblies-with-comvisibleattribute.md)|Označte sestavení pomocí ComVisibleAttribute|
-|[CA1018](../code-quality/ca1018-mark-attributes-with-attributeusageattribute.md)|Označte atributy pomocí AttributeUsageAttribute|
-|[CA1019](../code-quality/ca1019-define-accessors-for-attribute-arguments.md)|Definujte přístupové objekty pro argumenty atributů|
-|[CA1023](../code-quality/ca1023-indexers-should-not-be-multidimensional.md)|Indexery by neměly být multidimenzionální|
-|[CA1024](../code-quality/ca1024-use-properties-where-appropriate.md)|Použijte vlastnosti, kde je to vhodné|
-|[CA1025](../code-quality/ca1025-replace-repetitive-arguments-with-params-array.md)|Nahraďte opakované argumenty polem parametrů|
-|[CA1026](../code-quality/ca1026-default-parameters-should-not-be-used.md)|Neměly by být použity výchozí parametry|
-|[CA1027](../code-quality/ca1027-mark-enums-with-flagsattribute.md)|Označte výčty pomocí FlagsAttribute|
-|[CA1028](../code-quality/ca1028-enum-storage-should-be-int32.md)|Úložiště výčtu by mělo být Int32|
-|[CA1030](../code-quality/ca1030-use-events-where-appropriate.md)|Použijte události, kde je to vhodné|
-|[CA1031](../code-quality/ca1031-do-not-catch-general-exception-types.md)|Nezachycujte výjimky obecného typu|
-|[CA1032](../code-quality/ca1032-implement-standard-exception-constructors.md)|Implementujte standardní konstruktory výjimky|
-|[CA1034](../code-quality/ca1034-nested-types-should-not-be-visible.md)|Vnořené typy by neměly být viditelné|
-|[CA1035](../code-quality/ca1035-icollection-implementations-have-strongly-typed-members.md)|Implementace ICollection mají členy silného typu|
-|[CA1036](../code-quality/ca1036-override-methods-on-comparable-types.md)|Přepište metody u srovnatelných typů|
-|[CA1038](../code-quality/ca1038-enumerators-should-be-strongly-typed.md)|Enumerátory by měly být silného typu|
-|[CA1039](../code-quality/ca1039-lists-are-strongly-typed.md)|Seznamy jsou silného typu|
-|[CA1041](../code-quality/ca1041-provide-obsoleteattribute-message.md)|Poskytněte zprávu ObsoleteAttribute|
-|[CA1043](../code-quality/ca1043-use-integral-or-string-argument-for-indexers.md)|Použijte celočíselný nebo řetězcový argument pro indexery|
-|[CA1044](../code-quality/ca1044-properties-should-not-be-write-only.md)|Vlastnosti by neměly být pouze pro zápis|
-|[CA1046](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)|Nepřetěžujte operátory rovnosti u odkazových typů|
-|[CA1047](../code-quality/ca1047-do-not-declare-protected-members-in-sealed-types.md)|Nedeklarujte chráněné členy v zapečetěných typech|
-|[CA1048](../code-quality/ca1048-do-not-declare-virtual-members-in-sealed-types.md)|Nedeklarujte virtuální členy v zapečetěných typech|
-|[CA1050](../code-quality/ca1050-declare-types-in-namespaces.md)|Deklarujte typy v oborech názvů|
-|[CA1051](../code-quality/ca1051-do-not-declare-visible-instance-fields.md)|Nedeklarujte viditelná pole instance|
-|[CA1052](../code-quality/ca1052-static-holder-types-should-be-sealed.md)|Statické typy vlastníků by měly být zapečetěné|
-|[CA1053](../code-quality/ca1053-static-holder-types-should-not-have-constructors.md)|Statické typy vlastníků by neměly mít konstruktory|
-|[CA1054](../code-quality/ca1054-uri-parameters-should-not-be-strings.md)|Parametry identifikátoru URI by neměly být řetězce|
-|[CA1055](../code-quality/ca1055-uri-return-values-should-not-be-strings.md)|Návratové hodnoty identifikátoru URI by neměly být řetězce|
-|[CA1056](../code-quality/ca1056-uri-properties-should-not-be-strings.md)|Vlastnosti identifikátoru URI by neměly být řetězce|
-|[CA1057](../code-quality/ca1057-string-uri-overloads-call-system-uri-overloads.md)|Přetížení řetězce identifikátoru URI volají přetížení System.Uri|
-|[CA1058](../code-quality/ca1058-types-should-not-extend-certain-base-types.md)|Typy by neměly rozšiřovat určité základní typy|
-|[CA1059](../code-quality/ca1059-members-should-not-expose-certain-concrete-types.md)|Členy by neměly zveřejňovat určité konkrétní typy|
-|[CA1064](../code-quality/ca1064-exceptions-should-be-public.md)|Výjimky by měly být veřejné|
-|[CA1500](../code-quality/ca1500-variable-names-should-not-match-field-names.md)|Názvy proměnných by neměly odpovídat názvům polí|
-|[CA1502](../code-quality/ca1502-avoid-excessive-complexity.md)|Vyhněte se nadměrné složitosti|
-|[CA1708](../code-quality/ca1708-identifiers-should-differ-by-more-than-case.md)|Identifikátory by se měly lišit více než použitím malých a velkých písmen|
-|[CA1716](../code-quality/ca1716-identifiers-should-not-match-keywords.md)|Identifikátory by se neměly shodovat s klíčovými slovy|
-|[CA1801](../code-quality/ca1801.md)|Zkontrolujte nepoužité parametry|
-|[CA1804](../code-quality/ca1804.md)|Odeberte nepoužívané lokální hodnoty|
-|[CA1809](../code-quality/ca1809.md)|Vyhněte se nadměrným lokálním hodnotám|
-|[CA1810](../code-quality/ca1810.md)|Inicializujte odkazový typ statického pole vloženě|
-|[CA1811](../code-quality/ca1811.md)|Vyhněte se nevolanému privátnímu kódu|
-|[CA1812](../code-quality/ca1812.md)|Vyhněte se nevytvořeným instancím interních tříd|
-|[CA1813](../code-quality/ca1813.md)|Vyhněte se nezapečetěným atributům|
-|[CA1814](../code-quality/ca1814.md)|Upřednostněte vícenásobná pole před multidimenzionálními|
-|[CA1815](../code-quality/ca1815.md)|Přepište rovnosti a operátory rovnosti u typů hodnot|
-|[CA1819](../code-quality/ca1819.md)|Vlastnosti by neměly vracet pole|
-|[CA1820](../code-quality/ca1820.md)|Testujte prázdné řetězce pomocí délky řetězce|
-|[CA1822](../code-quality/ca1822.md)|Označte členy jako statické|
-|[CA1823](../code-quality/ca1823.md)|Vyhněte se nepoužitým privátním polím|
-|[CA2201](../code-quality/ca2201.md)|Nevyvolávejte vyhrazené typy výjimek|
-|[CA2205](../code-quality/ca2205.md)|Použijte spravované ekvivalenty rozhraní Win32 API|
-|[CA2208](../code-quality/ca2208.md)|Vytvořte správně instance výjimky argumentu|
-|[CA2211](../code-quality/ca2211.md)|Nekonstantní pole by neměla být viditelná|
 |[CA2217](../code-quality/ca2217.md)|Neoznačujte výčty pomocí FlagsAttribute|
 |[CA2219](../code-quality/ca2219.md)|Nevyvolávejte výjimky v klauzulích výjimky|
+|[CA2220](../code-quality/ca2220.md)|Finalizační metody by měly volat finalizační metodu základní třídy|
 |[CA2221](../code-quality/ca2221.md)|Finalizační metody by měly být chráněné|
 |[CA2222](../code-quality/ca2222.md)|Nesnižujte viditelnost zděděného členu|
 |[CA2223](../code-quality/ca2223.md)|Členy by se měly lišit více než návratovým typem|
@@ -164,6 +154,16 @@ V následující tabulce jsou popsána všechna pravidla v sadě pravidel zákla
 |[CA2225](../code-quality/ca2225.md)|Přetížení operátoru mají pojmenované alternativy|
 |[CA2226](../code-quality/ca2226.md)|Operátory by měly mít symetrická přetížení|
 |[CA2227](../code-quality/ca2227.md)|Vlastnosti kolekce by měly být pouze pro čtení|
+|[CA2229](../code-quality/ca2229.md)|Implementujte serializační konstruktory|
 |[CA2230](../code-quality/ca2230.md)|Použijte parametry pro proměnné argumenty|
+|[CA2231](../code-quality/ca2231.md)|Přetižte operátor rovnosti při přetížení ValueType.Equals|
+|[CA2232](../code-quality/ca2232.md)|Označte vstupní body modelu Windows Forms pomocí STAThread|
 |[CA2234](../code-quality/ca2234.md)|Předejte objekty System.Uri namísto řetězců|
+|[CA2235](../code-quality/ca2235.md)|Označte všechna neserializovatelná pole|
+|[CA2236](../code-quality/ca2236.md)|Volejte metody základní třídy u typů ISerializable|
+|[CA2237](../code-quality/ca2237.md)|Označte typy ISerializable pomocí SerializableAttribute|
+|[CA2238](../code-quality/ca2238.md)|Implementujte správně metody serializace|
 |[CA2239](../code-quality/ca2239.md)|Zadejte metody deserializace pro nepovinná pole|
+|[CA2240](../code-quality/ca2240.md)|Implementujte správně ISerializable|
+|[CA2241](../code-quality/ca2241.md)|Zadejte správné argumenty pro metody formátování|
+|[CA2242](../code-quality/ca2242.md)|Testujte správně NaN|

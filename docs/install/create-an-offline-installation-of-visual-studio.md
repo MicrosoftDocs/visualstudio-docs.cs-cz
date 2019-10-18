@@ -16,24 +16,24 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-windows
 ms.technology: vs-installation
-ms.openlocfilehash: 2268d71f9119cc36bdb18161a62fbe930a37b2ff
-ms.sourcegitcommit: e82baa50bf5a65858c410882c2e86a552c2c1921
+ms.openlocfilehash: b9c8b60914e814ab6957ee9ec9307b12d9c3d1ba
+ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72381097"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72516878"
 ---
 # <a name="create-an-offline-installation-of-visual-studio"></a>Vytvoření offline instalace sady Visual Studio
 
 ::: moniker range="vs-2017"
 
-Navrhli jsme sadu Visual Studio 2017, aby dobře fungovala v nejrůznějších konfiguracích sítě a počítačů. Doporučujeme vám, abyste si vyzkoušeli [webový instalační program sady Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads)&mdash;which je malý soubor a máte možnost zůstat aktuální se všemi nejnovějšími opravami a funkcemi @ no__t-2we pochopit, že nemůžete být schopni.
+Navrhli jsme sadu Visual Studio 2017, aby dobře fungovala v nejrůznějších konfiguracích sítě a počítačů. Doporučujeme, abyste si vyzkoušeli [webový instalační program sady Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads) , &mdash;which je malý soubor a máte možnost zůstat ve stávajícím prostředí se všemi nejnovějšími opravami a funkcemi &mdash;we pochopit, že nemůžete být schopni.
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Navrhli jsme sadu Visual Studio 2019, aby dobře fungovala v nejrůznějších konfiguracích sítě a počítačů. Doporučujeme vám, abyste si vyzkoušeli [webový instalační program sady Visual Studio](https://visualstudio.microsoft.com/downloads)&mdash;which je malý soubor a máte možnost zůstat aktuální se všemi nejnovějšími opravami a funkcemi @ no__t-2we pochopit, že nemůžete být schopni.
+Navrhli jsme sadu Visual Studio 2019, aby dobře fungovala v nejrůznějších konfiguracích sítě a počítačů. Doporučujeme, abyste si vyzkoušeli [webový instalační program sady Visual Studio](https://visualstudio.microsoft.com/downloads) , &mdash;which je malý soubor a máte možnost zůstat ve stávajícím prostředí se všemi nejnovějšími opravami a funkcemi &mdash;we pochopit, že nemůžete být schopni.
 
 ::: moniker-end
 
@@ -79,7 +79,7 @@ K dokončení tohoto kroku je nutné připojení k Internetu.
 
 Další informace o tom, jak to udělat, najdete na stránce pro stažení [předchozích verzí sady Visual Studio](https://visualstudio.microsoft.com/vs/older-downloads/) , kde můžete získat zaváděcí nástroj pro visual Studio 2017.
 
-Instalační program @ no__t-0or, který by měl být konkrétnější, soubor zaváděcího nástroje @ no__t-1should odpovídá nebo se podobá jednomu z následujících.
+Spustitelný soubor instalačního programu &mdash;or tak, aby byl konkrétnější, &mdash;should soubor zaváděcího nástroje se shodují nebo se podobá jednomu z následujících.
 
 | Edice | Bitmap |
 |-------------|-----------------------|
@@ -92,7 +92,7 @@ Instalační program @ no__t-0or, který by měl být konkrétnější, soubor z
 
 ::: moniker range="vs-2019"
 
-Začněte stažením zaváděcího nástroje sady Visual Studio pro zvolenou edici sady Visual Studio. Instalační soubor @ no__t-0or, zaváděcí nástroj @ no__t-1will, nebo by měl být podobný jednomu z následujících.
+Začněte stažením zaváděcího nástroje sady Visual Studio pro zvolenou edici sady Visual Studio. Instalační soubor &mdash;or &mdash;will se shoduje s jedním z následujících způsobů.
 
 | Edice                    | Soubor                                                                    |
 |----------------------------|-------------------------------------------------------------------------|
@@ -136,7 +136,7 @@ Otevřete příkazový řádek a použijte jeden z příkazů z následujících
     vs_community.exe --layout c:\vslayout --add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended --lang en-US
     ```
 
-- Pokud chcete vytvořit úplné místní rozložení se všemi funkcemi (to může trvat dlouhou dobu, @ no__t-0we má _spoustu_ funkcí!), spusťte:
+- Pokud chcete vytvořit úplné místní rozložení se všemi funkcemi (to může trvat dlouhou dobu &mdash;we bude mít _spoustu_ funkcí!), spusťte:
 
    ```cmd
     vs_community.exe --layout c:\vslayout --lang en-US
@@ -164,9 +164,9 @@ Pokud chcete nainstalovat jiný jazyk než angličtinu, změňte `en-US` na nár
 > Při spuštění z místní mezipaměti instalace používá instalační program místní verze každého z těchto souborů. Pokud ale během instalace vyberete komponenty, které nejsou v mezipaměti, pokusí se instalační program stáhnout z Internetu.
 
 ::: moniker range="vs-2019"
-
-> Pokud při instalaci a aktualizaci pomocí 16,1 a novějších se zobrazí chyba s názvem "produkt s vyhovujícími následujícími parametry" nelze nalézt "v offline systémech, použijte přepínač--NoWeb s 16.3.5 nebo novějším.
-
+> [!IMPORTANT]
+> V případě instalace offline se zobrazí chybová zpráva s informacemi o tom, že produkt odpovídající následujícím parametrům nebyl nalezen, ujistěte se, že používáte přepínač `--noweb` s verzí 16.3.5 nebo novější.
+>
 ::: moniker-end
 
 Abyste měli jistotu, že nainstalujete jenom soubory, které jste stáhli dříve, použijte stejné možnosti příkazového řádku, které jste použili k vytvoření mezipaměti rozložení. Například pokud jste vytvořili mezipaměť rozložení pomocí následujícího příkazu:

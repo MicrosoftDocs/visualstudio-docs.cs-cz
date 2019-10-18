@@ -8,12 +8,12 @@ ms.author: gewarren
 manager: jillfra
 ms.workload:
 - dotnet
-ms.openlocfilehash: bf26a04f5db5ed3e3f2710a5421dece6cf6cc0c7
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
+ms.openlocfilehash: 8f48b2d60feb9743529de8ed80b80365ffb815d1
+ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72450348"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72534599"
 ---
 # <a name="basic-correctness-rules-rule-set-for-managed-code"></a>Sada pravidel Základní pravidla správnosti pro spravovaný kód
 
@@ -23,23 +23,23 @@ V následující tabulce jsou popsána všechna pravidla v sadě pravidel zákla
 
 |Pravidlo|Popis|
 |----------|-----------------|
-|[CA1001](../code-quality/ca1001-types-that-own-disposable-fields-should-be-disposable.md)|Typy, které vlastní uvolnitelné pole, by měly být uvolnitelné|
-|[CA1009](../code-quality/ca1009-declare-event-handlers-correctly.md)|Deklarujte správně obslužné rutiny událostí|
-|[CA1016](../code-quality/ca1016-mark-assemblies-with-assemblyversionattribute.md)|Označte sestavení pomocí AssemblyVersionAttribute|
-|[CA1033](../code-quality/ca1033-interface-methods-should-be-callable-by-child-types.md)|Metody rozhraní by měly být volatelné podřízenými typy|
-|[CA1049](../code-quality/ca1049-types-that-own-native-resources-should-be-disposable.md)|Typy, které vlastní nativní prostředky, by měly být uvolnitelné|
-|[CA1060](../code-quality/ca1060-move-p-invokes-to-nativemethods-class.md)|Přesuňte volání nespravovaných kódů do třídy NativeMethods|
-|[CA1061](../code-quality/ca1061-do-not-hide-base-class-methods.md)|Neskrývejte metody základní třídy|
-|[CA1063](../code-quality/ca1063-implement-idisposable-correctly.md)|Implementuje správně IDisposable|
-|[CA1065](../code-quality/ca1065-do-not-raise-exceptions-in-unexpected-locations.md)|Nevyvolávejte výjimky v neočekávaných umístěních|
-|[CA1301](../code-quality/ca1301-avoid-duplicate-accelerators.md)|Vyhněte se duplicitním akcelerátorům|
-|[CA1400](../code-quality/ca1400-p-invoke-entry-points-should-exist.md)|Vstupní body volání nespravovaného kódu by měly existovat|
-|[CA1401](../code-quality/ca1401-p-invokes-should-not-be-visible.md)|Volání nespravovaných kódů by neměla být viditelná|
-|[CA1403](../code-quality/ca1403-auto-layout-types-should-not-be-com-visible.md)|Typy automatického rozložení by neměly být viditelné modelu COM|
-|[CA1404](../code-quality/ca1404-call-getlasterror-immediately-after-p-invoke.md)|Volejte GetLastError ihned po volání nespravovaného kódu|
-|[CA1405](../code-quality/ca1405-com-visible-type-base-types-should-be-com-visible.md)|Základní typy viditelného typu modelu COM by měly být viditelné modelu COM|
-|[CA1410](../code-quality/ca1410-com-registration-methods-should-be-matched.md)|Metody registrace modelu COM by si měly odpovídat|
-|[CA1415](../code-quality/ca1415-declare-p-invokes-correctly.md)|Deklarujte správně volání nespravovaných kódů|
+|[CA1001](../code-quality/ca1001.md)|Typy, které vlastní uvolnitelné pole, by měly být uvolnitelné|
+|[CA1009](../code-quality/ca1009.md)|Deklarujte správně obslužné rutiny událostí|
+|[CA1016](../code-quality/ca1016.md)|Označte sestavení pomocí AssemblyVersionAttribute|
+|[CA1033](../code-quality/ca1033.md)|Metody rozhraní by měly být volatelné podřízenými typy|
+|[CA1049](../code-quality/ca1049.md)|Typy, které vlastní nativní prostředky, by měly být uvolnitelné|
+|[CA1060](../code-quality/ca1060.md)|Přesuňte volání nespravovaných kódů do třídy NativeMethods|
+|[CA1061](../code-quality/ca1061.md)|Neskrývejte metody základní třídy|
+|[CA1063](../code-quality/ca1063.md)|Implementuje správně IDisposable|
+|[CA1065](../code-quality/ca1065.md)|Nevyvolávejte výjimky v neočekávaných umístěních|
+|[CA1301](../code-quality/ca1301.md)|Vyhněte se duplicitním akcelerátorům|
+|[CA1400](../code-quality/ca1400.md)|Vstupní body volání nespravovaného kódu by měly existovat|
+|[CA1401](../code-quality/ca1401.md)|Volání nespravovaných kódů by neměla být viditelná|
+|[CA1403](../code-quality/ca1403.md)|Typy automatického rozložení by neměly být viditelné modelu COM|
+|[CA1404](../code-quality/ca1404.md)|Volejte GetLastError ihned po volání nespravovaného kódu|
+|[CA1405](../code-quality/ca1405.md)|Základní typy viditelného typu modelu COM by měly být viditelné modelu COM|
+|[CA1410](../code-quality/ca1410.md)|Metody registrace modelu COM by si měly odpovídat|
+|[CA1415](../code-quality/ca1415.md)|Deklarujte správně volání nespravovaných kódů|
 |[CA1821](../code-quality/ca1821.md)|Odeberte prázdné finalizační metody|
 |[CA1900](../code-quality/ca1900.md)|Pole typů hodnot by měla být přenosná|
 |[CA1901](../code-quality/ca1901.md)|Deklarace volání nespravovaného kódu by měla být přenosná|
@@ -85,10 +85,10 @@ V následující tabulce jsou popsána všechna pravidla v sadě pravidel zákla
 |[CA2240](../code-quality/ca2240.md)|Implementujte správně ISerializable|
 |[CA2241](../code-quality/ca2241.md)|Zadejte správné argumenty pro metody formátování|
 |[CA2242](../code-quality/ca2242.md)|Testujte správně NaN|
-|[CA1008](../code-quality/ca1008-enums-should-have-zero-value.md)|Výčty by měly mít nulovou hodnotu|
-|[CA1013](../code-quality/ca1013-overload-operator-equals-on-overloading-add-and-subtract.md)|Přetižte operátor rovnosti společně s přetížením operátorů sčítání a odečítání|
-|[CA1303](../code-quality/ca1303-do-not-pass-literals-as-localized-parameters.md)|Nepředávejte literály jako lokalizované parametry|
-|[CA1308](../code-quality/ca1308-normalize-strings-to-uppercase.md)|Normalizujte řetězce na velká písmena|
+|[CA1008](../code-quality/ca1008.md)|Výčty by měly mít nulovou hodnotu|
+|[CA1013](../code-quality/ca1013.md)|Přetižte operátor rovnosti společně s přetížením operátorů sčítání a odečítání|
+|[CA1303](../code-quality/ca1303.md)|Nepředávejte literály jako lokalizované parametry|
+|[CA1308](../code-quality/ca1308.md)|Normalizujte řetězce na velká písmena|
 |[CA1806](../code-quality/ca1806.md)|Neignorujte výsledky metody|
 |[CA1816](../code-quality/ca1816.md)|Volejte správně GC.SuppressFinalize|
 |[CA1819](../code-quality/ca1819.md)|Vlastnosti by neměly vracet pole|

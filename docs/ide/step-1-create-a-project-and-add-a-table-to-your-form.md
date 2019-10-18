@@ -1,6 +1,6 @@
 ---
-title: 'Krok 1: Vytvoření projektu a přidání tabulky do formuláře'
-ms.date: 05/31/2019
+title: 'Krok 1: vytvoření projektu a přidání tabulky do formuláře'
+ms.date: 10/15/2019
 ms.topic: tutorial
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-general
@@ -10,14 +10,14 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: 0562588fe81780b7bb5787c4ec0b9861fd4c9408
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
+ms.openlocfilehash: b63a0b1801b0a3b559281959975a1faaa5bb99a5
+ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71119066"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72516779"
 ---
-# <a name="step-1-create-a-project-and-add-a-table-to-your-form"></a>Krok 1: Vytvoření projektu a přidání tabulky do formuláře
+# <a name="step-1-create-a-project-and-add-a-table-to-your-form"></a>Krok 1: vytvoření projektu a přidání tabulky do formuláře
 
 Prvním krokem při vytváření porovnávací hry je vytvořit projekt a přidat tabulku do formuláře. Tabulka pomáhá zarovnat ikony do mřížky 4x4. Nastavením několika vlastností můžete také vylepšit vzhled hrací plochy.
 
@@ -25,7 +25,7 @@ Prvním krokem při vytváření porovnávací hry je vytvořit projekt a přida
 
 ::: moniker range="vs-2017"
 
-1. Na panelu nabídek vyberte **soubor** > **Nový** > **projekt**.
+1. Na panelu nabídek vyberte možnost **soubor** > **Nový** > **projekt**.
 
 1. Na levé straně dialogového okna **Nový projekt** vyberte buď **vizuál C#**  , nebo **Visual Basic** , a pak zvolte **Windows Desktop**.
 
@@ -34,7 +34,7 @@ Prvním krokem při vytváření porovnávací hry je vytvořit projekt a přida
     Zobrazí se formulář s názvem *Form1.cs* nebo *Form1. vb* v závislosti na zvoleném programovacím jazyce.
 
    > [!NOTE]
-   > Pokud nevidíte šablonu **aplikace model Windows Forms App (.NET Framework)** , nainstalujte úlohu **vývoj desktopových aplikací .NET** pomocí instalační program pro Visual Studio.<br/><br/>![Úloha vývoj desktopových aplikací .NET v Instalační program pro Visual Studio](../ide/media/dot-net-desktop-dev-workload.png)<br/><br/> Další informace najdete na stránce [instalace sady Visual Studio](../install/install-visual-studio.md) .
+   > Pokud nevidíte šablonu **aplikace model Windows Forms App (.NET Framework)** , nainstalujte úlohu **vývoj desktopových aplikací .NET** pomocí instalační program pro Visual Studio.<br/><br/>![ úlohy vývoj desktopových aplikací .NET v Instalační program pro Visual Studio ](../ide/media/dot-net-desktop-dev-workload.png)<br/><br/> Další informace najdete na stránce [instalace sady Visual Studio](../install/install-visual-studio.md) .
 
 ::: moniker-end
 
@@ -44,11 +44,11 @@ Prvním krokem při vytváření porovnávací hry je vytvořit projekt a přida
 
    ![Zobrazit okno vytvořit nový projekt](../get-started/media/vs-2019/create-new-project-dark-theme.png)
 
-1. V okně **vytvořit nový projekt** zadejte nebo zadejte *model Windows Forms* do vyhledávacího pole.
+1. V okně **vytvořit nový projekt** zadejte nebo zadejte *model Windows Forms* do vyhledávacího pole. V dalším kroku vyberte možnost **plocha** ze seznamu **typ projektu** .
 
-1. Zvolte šablonu **aplikace model Windows Forms App (.NET Framework)** a klikněte na tlačítko **Další**.
+   Po použití filtru **typu projektu** zvolte šablonu **aplikace model Windows Forms (.NET Framework)** pro buď C# nebo Visual Basic, a pak zvolte možnost **Další**.
 
-   ![Vyberte šablonu Visual Basic pro aplikaci model Windows Forms (.NET Framework).](../get-started/visual-basic/media/vs-2019/vb-create-new-project-search-winforms-filtered.png)
+   ![Vyberte šablonu C# nebo Visual Basic pro aplikaci model Windows Forms (.NET Framework).](./media/create-new-project-search-winforms-filtered.png)
 
    > [!NOTE]
    > Pokud nevidíte šablonu **aplikace model Windows Forms App (.NET Framework)** , můžete ji nainstalovat z okna **vytvořit nový projekt** . V části **nenajít, co hledáte?** klikněte na odkaz **instalovat další nástroje a funkce** .
@@ -57,7 +57,7 @@ Prvním krokem při vytváření porovnávací hry je vytvořit projekt a přida
    >
    > V části Instalační program pro Visual Studio klikněte na možnost zvolit úlohu **vývoj desktopových aplikací .NET** .
    >
-   > ![Úlohy .NET core v instalačním programu sady Visual Studio](../ide/media/install-dot-net-desktop-env.png)
+   > ![Zatížení .NET Core v Instalační program pro Visual Studio](../ide/media/install-dot-net-desktop-env.png)
    >
    > Potom klikněte na tlačítko **Upravit** v instalační program pro Visual Studio. Může se zobrazit výzva k uložení práce; Pokud ano, udělejte to. V dalším kroku vyberte **pokračovat** a nainstalujte úlohu.
 
@@ -75,7 +75,7 @@ Prvním krokem při vytváření porovnávací hry je vytvořit projekt a přida
 
 2. Zobrazení panelu nástrojů výběrem karty **panelu nástrojů** na levé straně rozhraní IDE.
 
-3. Přetáhněte ovládací prvek z kategorie kontejnery v sadě nástrojů a nastavte pro něj následující vlastnosti. <xref:System.Windows.Forms.TableLayoutPanel>
+3. Přetáhněte ovládací prvek <xref:System.Windows.Forms.TableLayoutPanel> z kategorie **kontejnery** v sadě nástrojů a nastavte pro něj následující vlastnosti.
 
    1. Nastavte vlastnost **BackColor** na **hodnotu CornflowerBlue**. Chcete-li to provést, otevřete dialogové okno **BackColor** výběrem šipky rozevíracího seznamu vedle vlastnosti **BackColor** v okně **vlastnosti** .  Pak zvolte kartu **Web** v dialogovém okně **BackColor** , abyste zobrazili seznam dostupných názvů barev.
 
@@ -96,7 +96,7 @@ Prvním krokem při vytváření porovnávací hry je vytvořit projekt a přida
 
 4. Kontejner TableLayoutPanel musí být vybrán v editoru formuláře. Pokud to chcete ověřit, měli byste vidět **tableLayoutPanel1** v horní části okna **vlastnosti** . Pokud není vybrána, vyberte kontejner TableLayoutPanel ve formuláři nebo ho vyberte v ovládacím prvku rozevírací seznam v horní části okna **vlastnosti** .
 
-    Když je kontejner TableLayoutPanel vybrán, otevřete sadu nástrojů a přidejte <xref:System.Windows.Forms.Label> ovládací prvek (umístěný v kategorii **běžné ovládací prvky** ) do levé horní buňky kontejneru TableLayoutPanel. Ovládací prvek popisek by teď měl být vybraný v integrovaném vývojovém prostředí. Nastavte pro něj následující vlastnosti.
+    Když je kontejner TableLayoutPanel vybrán, otevřete sadu nástrojů a přidejte ovládací prvek <xref:System.Windows.Forms.Label> (umístěný v kategorii **běžné ovládací prvky** ) do levé horní buňky kontejneru TableLayoutPanel. Ovládací prvek popisek by teď měl být vybraný v integrovaném vývojovém prostředí. Nastavte pro něj následující vlastnosti.
 
    1. Ujistěte se, že vlastnost **BackColor** popisku je nastavená na **hodnotu CornflowerBlue**.
 
@@ -117,17 +117,17 @@ Prvním krokem při vytváření porovnávací hry je vytvořit projekt a přida
        > [!NOTE]
        > Písmo Webdings je písmo ikon dodávané s operačním systémem Windows. Ve vaší porovnávací hře musí hráči hledat dvojice ikon, takže toto písmo použijete k zobrazení ikon, které mají být spárovány. Místo vložení **c** do vlastnosti **text** zkuste zadat různá písmena, abyste viděli, jaké ikony se zobrazí. Vykřičník je pavouk, velké písmeno N je oko a čárka je čili paprička.
 
-5. Vyberte ovládací prvek popisku a zkopírujte jej na další buňku v kontejneru TableLayoutPanel. (**Vyberte klávesy** **CTRL +** +nebo na panelu nabídek vyberte možnost **Upravit** > **kopii**.) Potom jej vložte. (Stiskněte klávesy **CTRL**+**v** nebo na panelu nabídek vyberte možnost **Upravit** > **vložení**.) Kopie prvního popisku se zobrazí v druhé buňce kontejneru TableLayoutPanel. Vložte ho znovu a pod třetí buňku se zobrazí další popisek. Nechejte vkládat ovládací prvky popisku, dokud nebudou všechny buňky vyplněny.
+5. Vyberte ovládací prvek popisku a zkopírujte jej na další buňku v kontejneru TableLayoutPanel. (Vyberte klávesy **Ctrl** +**C** nebo na panelu nabídek vyberte **Upravit**  > **Kopírovat**.) Pak jej vložte. (Vyberte klávesy **Ctrl** +**v** nebo na panelu nabídek vyberte **Upravit**  > **Vložit**.) Kopie prvního popisku se zobrazí v druhé buňce kontejneru TableLayoutPanel. Vložte ho znovu a pod třetí buňku se zobrazí další popisek. Nechejte vkládat ovládací prvky popisku, dokud nebudou všechny buňky vyplněny.
 
    > [!NOTE]
-   > Pokud vložíte příliš mnoho časů, rozhraní IDE přidá nový řádek do kontejneru TableLayoutPanel, aby měl místo pro přidání nového ovládacího prvku popisek. Akci můžete vrátit zpět. Chcete-li novou buňku odebrat, **stiskněte klávesy CTRL**+**Z** nebo na panelu nabídek vyberte možnost **Upravit** > **zpět**.
+   > Pokud vložíte příliš mnoho časů, rozhraní IDE přidá nový řádek do kontejneru TableLayoutPanel, aby měl místo pro přidání nového ovládacího prvku popisek. Akci můžete vrátit zpět. Chcete-li novou buňku odebrat, **stiskněte klávesy Ctrl** +**Z** nebo na panelu nabídek vyberte možnost **Upravit**  > **zpět**.
 
-    Rozvržení vašeho formuláře je nyní hotovo. Měl by vypadat podobně jako na následujícím obrázku.
+    Teď je váš formulář rozložený. Měl by vypadat podobně jako na následujícím obrázku.
 
-    ![Formulář počáteční vyhovující hry](../ide/media/express_tut4step1.png)<br/>*Formulář počáteční vyhovující hry*
+    ](../ide/media/express_tut4step1.png) ![Initial odpovídající hernímu formuláři<br/>*Formulář počáteční vyhovující hry*
 
 ## <a name="to-continue-or-review"></a>Chcete-li pokračovat nebo přezkoumat
 
-- Pokud chcete přejít na další krok kurzu, přečtěte si [článek krok 2: Přidejte náhodný objekt a seznam ikon](../ide/step-2-add-a-random-object-and-a-list-of-icons.md).
+- Pokud chcete přejít na další krok kurzu, přečtěte si [článek krok 2: Přidání náhodného objektu a seznamu ikon](../ide/step-2-add-a-random-object-and-a-list-of-icons.md).
 
-- Pokud se chcete vrátit k tématu Přehled, [Přečtěte si kurz 3: Vytvořte porovnávací hru](../ide/tutorial-3-create-a-matching-game.md).
+- Pokud se chcete vrátit k tématu Přehled, přečtěte si [kurz 3: vytvoření vyhovující hry](../ide/tutorial-3-create-a-matching-game.md).

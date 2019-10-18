@@ -1,5 +1,5 @@
 ---
-title: Pseudoproměnné | Dokumentace Microsoftu
+title: Pseudoproměnné | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,56 +17,56 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: dbfd275625e949e87e2b4109e1d56eaeaf9d7e3c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 6b6856517a680809ccc802c02dc880b6349eadc5
+ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62903643"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72535957"
 ---
 # <a name="pseudovariables-in-the-visual-studio-debugger"></a>Pseudoproměnné v ladicím programu sady Visual Studio
-Pseudoproměnné jsou podmínky, které slouží k zobrazení určitých informací v okně proměnné nebo **QuickWatch** dialogové okno. Pseudoproměnnou můžete zadat stejným způsobem, zadali byste jako běžné proměnné. Pseudoproměnné nejsou proměnné, ale a nemusí odpovídat názvům proměnných v programu.
+Pseudoproměnné jsou výrazy používané k zobrazení určitých informací v okně proměnných nebo v dialogovém okně **QuickWatch** . Pseudoproměnnou můžete zadat stejným způsobem, jako byste zadali normální proměnnou. Pseudoproměnné nejsou proměnné, ale neodpovídají názvům proměnných v programu.
 
 ## <a name="example"></a>Příklad
- Předpokládejme, že píšete aplikaci v nativním kódu a chcete zjistit počet popisovačů přidělených v aplikaci. V **Watch** okna, můžete zadat následující pseudoproměnnou **název** sloupce, poté stiskem klávesy ENTER ji vyhodnotit:
+ Předpokládejme, že píšete aplikaci nativního kódu a chcete zobrazit počet popisovačů přidělených ve vaší aplikaci. V okně **kukátko** můžete do sloupce **název** zadat následující pseudoproměnnou a pak ho vyhodnotit stisknutím klávesy ENTER:
 
 `$handles`
 
- V nativním kódu můžete použít pseudoproměnné uvedené v následující tabulce:
+ V nativním kódu můžete použít Pseudoproměnné uvedené v následující tabulce:
 
 |Pseudoproměnnou|Funkce|
 |--------------------|--------------|
-|`$err`|Zobrazí poslední chybovou hodnotu nastavenou pomocí funkce SetLastError. Zobrazená hodnota představuje, co by vrátila Funkce GetLastError.<br /><br /> Použití `$err,hr` Chcete-li zobrazit dekódovanou formu této hodnoty. Například, pokud byla poslední chyba 3 `$err,hr` zobrazí `ERROR_PATH_NOT_FOUND : The system cannot find the path specified.`|
-|`$handles`|Zobrazí počet popisovačů přidělených v aplikaci.|
-|`$vframe`|Zobrazí adresu aktuální rámec zásobníku.|
-|`$tid`|Zobrazí identifikátor ID vlákna pro aktuální vlákno.|
-|`$env`|Zobrazí zadaný blok prostředí v prohlížeči řetězce.|
+|`$err`|Zobrazí poslední chybovou hodnotu nastavenou funkcí SetLastError. Zobrazená hodnota představuje to, co by Funkce GetLastError vrátila.<br /><br /> Pro zobrazení Dekódovatelné formy této hodnoty použijte `$err,hr`. Pokud například poslední chyba byla 3, `$err,hr` by se zobrazila `ERROR_PATH_NOT_FOUND : The system cannot find the path specified.`|
+|`$handles`|Zobrazuje počet popisovačů přidělených ve vaší aplikaci.|
+|`$vframe`|Zobrazí adresu aktuálního rámce zásobníku.|
+|`$tid`|Zobrazuje ID vlákna pro aktuální vlákno.|
+|`$env`|Zobrazí blok prostředí v prohlížeči řetězců.|
 |`$cmdline`|Zobrazí řetězec příkazového řádku, který spustil program.|
-|`$pid`|Zobrazuje id procesu.|
-|`$` *registername –*<br /><br /> or<br /><br /> `@` *registername –*|Zobrazí obsah registru *registername –*.<br /><br /> Obsah registru za normálních okolností lze zobrazit pouze zadáním názvu registru. Je třeba použít tuto syntaxi se pouze když název registru přetíží název proměnné. Pokud název registru je stejný jako název proměnné v aktuálním oboru, ladicí program interpretuje název jako název proměnné. Právě to `$` *registername –* nebo `@` *registername –* se hodí.|
-|`$clk`|Zobrazí čas v hodinových cyklech.|
-|`$user`|Zobrazí se struktura s informacemi o účtu pro účet, který spouští aplikaci. Z bezpečnostních důvodů nejsou informace heslu zobrazeny.|
-|`$exceptionstack`|Zobrazí trasování zásobníku aktuální výjimky prostředí Windows Runtime. `$ exceptionstack` funguje pouze v aplikacích pro UPW. `$ exceptionstack` není podporováno pro výjimky C++ a SEH|
-|`$returnvalue`|Zobrazuje hodnotu vrácenou metody rozhraní .NET Framework.|
+|`$pid`|Zobrazí ID procesu.|
+|`$` *registru*<br /><br /> or<br /><br /> `@` *registru*|Zobrazí *obsah registru Register.*<br /><br /> V normálním případě lze obsah registru zobrazit pouze zadáním názvu registru. Jedinou dobu, kterou potřebujete použít k použití této syntaxe, je, když název registru převede název proměnné. Pokud je název registru stejný jako název proměnné v aktuálním oboru, ladicí program interpretuje název jako název proměnné. To je v případě, že se `$`*registru* nebo `@`*registru* nachází v praktických případech.|
+|`$clk`|Zobrazí čas v časovém cyklu.|
+|`$user`|Zobrazí strukturu s informacemi o účtu pro účet, na kterém je aplikace spuštěná. Z bezpečnostních důvodů se nezobrazuje informace o hesle.|
+|`$exceptionstack`|Zobrazí trasování zásobníku aktuální výjimky prostředí Windows Runtime. `$ exceptionstack` funguje jenom v aplikacích pro UWP. `$ exceptionstack` se nepodporuje pro C++ výjimky a SEH.|
+|`$returnvalue`|Zobrazuje návratovou hodnotu metody .NET.|
 
- V C# můžete použít pseudoproměnné uvedené v následující tabulce:
-
-|Pseudoproměnnou|Funkce|
-|--------------------|--------------|
-|`$exception`|Zobrazí informace o poslední výjimce. Pokud k žádné výjimce, hodnocení `$exception` zobrazí chybovou zprávu.<br /><br /> Pokud je zakázán Pomocník pro výjimky, `$exception` se automaticky přidá do **lokální** okno, když dojde k výjimce.|
-|`$user`|Zobrazí se struktura s informacemi o účtu pro účet, který spouští aplikaci. Z bezpečnostních důvodů nejsou informace heslu zobrazeny.|
-|`$returnvalue`|Zobrazuje hodnotu vrácenou metody rozhraní .NET Framework.|
-
- V jazyce Visual Basic můžete použít pseudoproměnné uvedené v následující tabulce:
+ V C# nástroji můžete použít Pseudoproměnné uvedené v následující tabulce:
 
 |Pseudoproměnnou|Funkce|
 |--------------------|--------------|
-|`$exception`|Zobrazí informace o poslední výjimce. Pokud k žádné výjimce, hodnocení `$exception` zobrazí chybovou zprávu.|
-|`$delete` Nebo `$$delete`|Odstraní implicitní proměnné, který byl vytvořen v **okamžité** okna. Syntaxe je `$delete,` *proměnnou* nebo`$delete,` *proměnné*`.`|
-|`$objectids` Nebo `$listobjectids`|Zobrazí všechny aktivní ID objektů jako podřízené položky, z určeného výrazu. Syntaxe je `$objectid,` *výraz* nebo`$listobjectids,` *výraz*`.`|
-|`$` *N* `#`|Zobrazí objekt s ID objektu rovna *N*.|
-|`$dynamic`|Zobrazí zvláštní **dynamického zobrazení** uzlu pro objekt, který implementuje `IDynamicMetaObjectProvider`. rozhraní. Syntaxe je `$dynamic,` *objekt*. Tato funkce se vztahuje pouze na kód, který používá rozhraní .NET Framework verze 4.|
+|`$exception`|Zobrazí informace o poslední výjimce. Pokud nedošlo k žádné výjimce, vyhodnocení `$exception` zobrazí chybovou zprávu.<br /><br /> Pokud je pomocník výjimek zakázán, `$exception` je automaticky přidán do okna **místní** hodnoty, když dojde k výjimce.|
+|`$user`|Zobrazí strukturu s informacemi o účtu pro účet, na kterém je aplikace spuštěná. Z bezpečnostních důvodů se nezobrazuje informace o hesle.|
+|`$returnvalue`|Zobrazuje návratovou hodnotu metody .NET.|
+
+ V Visual Basic můžete použít Pseudoproměnné uvedené v následující tabulce:
+
+|Pseudoproměnnou|Funkce|
+|--------------------|--------------|
+|`$exception`|Zobrazí informace o poslední výjimce. Pokud nedošlo k žádné výjimce, vyhodnocení `$exception` zobrazí chybovou zprávu.|
+|`$delete` nebo `$$delete`|Odstraní implicitní proměnnou, která byla vytvořena v **příkazovém** okně. Syntaxe je `$delete,` *proměnnou* nebo `$delete,` *proměnnou* `.`|
+|`$objectids` nebo `$listobjectids`|Zobrazí všechna aktivní ID objektů jako podřízené objekty určeného výrazu. Syntaxe je `$objectid,` *výraz* nebo *výraz* `$listobjectids,` `.`|
+|`$` *N* `#`|Zobrazí objekt s ID objektu větším než *N*.|
+|`$dynamic`|Zobrazí speciální uzel **dynamického zobrazení** pro objekt, který implementuje `IDynamicMetaObjectProvider`. Prostředí. Syntaxe je `$dynamic,` *objekt*. Tato funkce se vztahuje pouze na kód, který používá .NET Framework verze 4 nebo novější.|
 
 ## <a name="see-also"></a>Viz také
 - [Okna Kukátko a Rychlé kukátko](../debugger/watch-and-quickwatch-windows.md)
-- [Proměnné Windows](../debugger/debugger-windows.md)
+- [Okna proměnných](../debugger/debugger-windows.md)

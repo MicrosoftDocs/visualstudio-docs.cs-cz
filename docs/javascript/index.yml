@@ -1,90 +1,58 @@
-### YamlMime:YamlDocument
-documentType: LandingData
-title: Visual Studio | JavaScript a TypeScript
+### YamlMime:Landing
+title: Kurzy pro Visual Studio | JavaScript a TypeScript
+summary: Vytváření aplikací pro JavaScript a TypeScript pomocí sady Visual Studio
 metadata:
-  title: JavaScript a TypeScript vývoj pomocí sady Visual Studio | Dokumentace Microsoftu
-  meta.description: Tutorials and conceptual articles about developing JavaScript and TypeScript apps with Visual Studio.
-  author: mikejo5000
-  manager: jillfra
-  ms.prod: visual-studio-windows
-  ms.technology: vs-javascript
+  title: JavaScript a TypeScript v aplikaci Visual Studio
+  description: Naučte se používat Visual Studio k vytváření aplikací pro JavaScript a TypeScript.
   ms.topic: landing-page
-  ms.date: 01/15/2019
+  author: mikejo5000
   ms.author: mikejo
-  dev_langs:
-    - JavaScript
-    - TypeScript
-sections:
-  - title: Začínáme se sadou Visual Studio
-    items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: ../install/install-visual-studio.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_setup.svg'
-            title: Instalace sady Visual Studio
-          - href: ../javascript/quickstart-ide-orientation-js.md
-            html: <p></p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_visual-studio.svg'
-            title: Prohlídka integrovaného vývojového prostředí sady Visual Studio
-  - title: Kurzy
-    items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: tutorial-nodejs.md
-            html: <p>Vytvoření webové aplikace s využitím Node.js a Express</p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_nodejs.svg'
-          - href: tutorial-nodejs-with-react-and-jsx.md
-            html: <p>Vytvoření webové aplikace s využitím Node.js a React</p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_React.svg'
-          - href: quickstart-vuejs-with-nodejs.md
-            html: <p>Vytvoření webové aplikace s využitím Node.js a Vue.js</p>
-            image:
-              src: ../javascript/media/logo-vuejs.png
-          - href: publish-nodejs-app-azure.md
-            html: <p>Publikování aplikace v Node.js do služby App Service v Linuxu</p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_linux-color.svg'
-  - title: Vývoj aplikací
-    items:
-      - type: paragraph
-        text: Další informace o použití sady Visual Studio pro úlohy vývoje.
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - href: write-and-edit-code.md
-            html: <p>Psaní kódu a jeho úpravy</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_code-edit.svg'
-          - href: nodejs-interactive-repl.md
-            html: <p>Použití interaktivního okna REPL v Node.js</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_cligeneric.svg'
-          - href: npm-package-management.md
-            html: <p>Správa balíčků npm</p>
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_npm.svg'
-          - href: debug-nodejs.md
-            html: <p>Ladění kódu</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_debug.svg'
-          - href: develop-javascript-code-without-solutions-projects.md
-            html: <p>Vývoj kódu bez projektů nebo řešení</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_code-edit.svg'
-          - href: unit-testing-javascript-with-visual-studio.md
-            html: <p>Psání a spouštění testů jednotek</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_unit-testing.svg'
+  manager: jillfra
+  ms.date: 10/15/2019
+  ms.openlocfilehash: 1bdf2530d8e6513f57b515680410b9111cec87c6
+  ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
+  ms.translationtype: MT
+  ms.contentlocale: cs-CZ
+  ms.lasthandoff: 10/17/2019
+  ms.locfileid: "72517113"
+landingContent:
+- title: Začínáme
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: JavaScript a TypeScript v aplikaci Visual Studio
+      url: javascript-in-vs-2019.md
+  - linkListType: how-to-guide
+    links:
+    - text: Instalace sady Visual Studio
+      url: ../install/install-visual-studio.md
+  - linkListType: get-started
+    links:
+    - text: Spustit prohlídku s asistencí
+      url: quickstart-ide-orientation-js.md
+- title: Vytváření aplikací pro JavaScript a TypeScript
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Vytvoření webové aplikace s využitím Node. js a Express
+      url: tutorial-nodejs.md
+    - text: Vytvoření webové aplikace s využitím Node. js a reakce
+      url: tutorial-nodejs-with-react-and-jsx.md
+    - text: Vytvoření webové aplikace s využitím Node. js a Vue. js
+      url: quickstart-vuejs-with-nodejs.md
+- title: Poznejte Visual Studio
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Psaní kódu a jeho úpravy
+      url: write-and-edit-code.md
+    - text: Správa balíčků npm
+      url: npm-package-management.md
+    - text: Použití interaktivního okna REPL v Node.js
+      url: nodejs-interactive-repl.md
+    - text: Ladění kódu
+      url: debug-nodejs.md
+    - text: Vývoj kódu bez projektů nebo řešení
+      url: develop-javascript-code-without-solutions-projects.md
+    - text: Zápis a spouštění testů jednotek
+      url: unit-testing-javascript-with-visual-studio.md

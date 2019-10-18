@@ -1,5 +1,5 @@
 ---
-title: 'Krok 1: Vytvoření projektu aplikace modelu Windows Forms'
+title: 'Krok 1: vytvoření projektu aplikace model Windows Forms'
 ms.date: 08/30/2019
 ms.assetid: 16ac2422-e720-4e3a-b511-bc2a54201a86
 ms.topic: tutorial
@@ -10,37 +10,37 @@ ms.author: tglee
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: be7b9bd67ed88b9f59ed279211bf15c96ae59569
-ms.sourcegitcommit: 6eed0372976c0167b9a6d42ba443f9a474b8bb91
+ms.openlocfilehash: 897c4ba0bfa46e73115f8288770d088346498dee
+ms.sourcegitcommit: 6244689e742e551e7b6933959bd42df56928ece3
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71119009"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72516695"
 ---
-# <a name="step-1-create-a-windows-forms-app-project"></a>Krok 1: Vytvoření projektu aplikace modelu Windows Forms
+# <a name="step-1-create-a-windows-forms-app-project"></a>Krok 1: vytvoření projektu aplikace model Windows Forms
 
 Při vytváření prohlížeče obrázků je prvním krokem vytvoření projektu aplikace model Windows Forms.
 
 ::: moniker range="vs-2017"
 
-## <a name="open-visual-studio-2017"></a>Open Visual Studio 2017
+## <a name="open-visual-studio-2017"></a>Otevřete Visual Studio 2017
 
-1. V panelu nabídky zvolte **souboru** > **nový** > **projektu**. Dialogové okno by mělo vypadat podobně jako na následujícím snímku obrazovky.
+1. Na panelu nabídek vyberte možnost **soubor**  > **Nový**  > **projekt**. Dialogové okno by mělo vypadat podobně jako na následujícím snímku obrazovky.
 
-     ![Dialog Nový projekt](../ide/media/newprojectdialogcallouts.png)<br/>***Nový projekt*** *dialogové okno*
+     dialog ![New projektu ](../ide/media/newprojectdialogcallouts.png)<br/>***Nový projekt*** – *dialogové okno*
 
 2. Na levé straně dialogového okna **Nový projekt** vyberte možnost **vizuál C#**  nebo **Visual Basic**a pak zvolte možnost **plocha systému Windows**.
 
 3. V seznamu šablony projektu vyberte možnost **model Windows Forms aplikace (.NET Framework)** . Pojmenujte novou formu *PictureViewer*a pak klikněte na tlačítko **OK** .
 
     >[!NOTE]
-    >Pokud nevidíte šablonu **aplikace model Windows Forms App (.NET Framework)** , nainstalujte úlohu **vývoj desktopových aplikací .NET** pomocí instalační program pro Visual Studio.<br/><br/>![Úloha vývoj desktopových aplikací .NET v Instalační program pro Visual Studio](../ide/media/dot-net-desktop-dev-workload.png)<br/><br/> Další informace najdete na stránce [instalace sady Visual Studio](../install/install-visual-studio.md) .
+    >Pokud nevidíte šablonu **aplikace model Windows Forms App (.NET Framework)** , nainstalujte úlohu **vývoj desktopových aplikací .NET** pomocí instalační program pro Visual Studio.<br/><br/>![ úlohy vývoj desktopových aplikací .NET v Instalační program pro Visual Studio ](../ide/media/dot-net-desktop-dev-workload.png)<br/><br/> Další informace najdete na stránce [instalace sady Visual Studio](../install/install-visual-studio.md) .
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-## <a name="open-visual-studio-2019"></a>Open Visual Studio 2019
+## <a name="open-visual-studio-2019"></a>Otevřete Visual Studio 2019
 
 1. V okně Start vyberte možnost **vytvořit nový projekt**.
 
@@ -50,7 +50,7 @@ Při vytváření prohlížeče obrázků je prvním krokem vytvoření projektu
 
    Po použití filtru **typu projektu** zvolte šablonu **aplikace model Windows Forms (.NET Framework)** pro buď C# nebo Visual Basic, a pak zvolte možnost **Další**.
 
-   ![Zvolit C# šablonu pro aplikaci model Windows Forms (.NET Framework)](./media/create-new-project-search-winforms-filtered.png)
+   ![Vyberte šablonu C# nebo Visual Basic pro aplikaci model Windows Forms (.NET Framework).](./media/create-new-project-search-winforms-filtered.png)
 
    > [!NOTE]
    > Pokud nevidíte šablonu **aplikace model Windows Forms App (.NET Framework)** , můžete ji nainstalovat z okna **vytvořit nový projekt** . V části **nenajít, co hledáte?** klikněte na odkaz **instalovat další nástroje a funkce** .
@@ -59,7 +59,7 @@ Při vytváření prohlížeče obrázků je prvním krokem vytvoření projektu
    >
    > V části Instalační program pro Visual Studio klikněte na možnost zvolit úlohu **vývoj desktopových aplikací .NET** .
    >
-   > ![Úlohy .NET core v instalačním programu sady Visual Studio](../ide/media/install-dot-net-desktop-env.png)
+   > ![Zatížení .NET Core v Instalační program pro Visual Studio](../ide/media/install-dot-net-desktop-env.png)
    >
    > Potom klikněte na tlačítko **Upravit** v instalační program pro Visual Studio. Může se zobrazit výzva k uložení práce; Pokud ano, udělejte to. V dalším kroku vyberte **pokračovat** a nainstalujte úlohu.
 
@@ -73,9 +73,9 @@ Visual Studio vytvoří řešení pro vaši aplikaci. Řešení funguje jako kon
 
 1. Vývojové prostředí obsahuje tři okna: hlavní okno, **Průzkumník řešení**a okno **vlastnosti** .
 
-     Pokud chybí některá z těchto oken, můžete obnovit výchozí rozložení okna. Na panelu nabídek vyberte **okno** > **obnovit rozložení okna**.
+     Pokud chybí některá z těchto oken, můžete obnovit výchozí rozložení okna. Na panelu nabídek vyberte možnost **okno**  > **obnovit rozložení okna**.
 
-     Okna můžete zobrazit také pomocí příkazů nabídky. Na panelu nabídek vyberte možnost **Zobrazit** > **okno vlastností** nebo **Průzkumník řešení**.
+     Okna můžete zobrazit také pomocí příkazů nabídky. Na panelu nabídek vyberte možnost **zobrazit**  > **vlastnosti okno** nebo **Průzkumník řešení**.
 
      Pokud jsou ostatní okna otevřená, zavřete je kliknutím na tlačítko **Zavřít** (x) v pravém horním rohu.
 
@@ -100,22 +100,22 @@ Visual Studio vytvoří řešení pro vaši aplikaci. Řešení funguje jako kon
       > [!NOTE]
       > Horní řádek v **Průzkumník řešení** zobrazuje **řešení ' PictureViewer ' (1 projekt)** , což znamená, že Visual Studio vytvořilo řešení za vás. Řešení může obsahovat více než jeden projekt, ale v současnosti budete pracovat s řešeními, která obsahují pouze jeden projekt.
 
-1. V řádku nabídek vyberte **soubor** > **Uložit vše**.
+1. Na panelu nabídek vyberte možnost **soubor**  > **Uložit vše**.
 
      Jako alternativu klikněte na tlačítko **Uložit vše** na panelu nástrojů, které ukazuje následující obrázek.
 
-     ![Tlačítko Uložit vše na panelu nástrojů](../ide/media/express_iconsaveall.png)<br/>
-     ***Uložit vše*** *tlačítko panelu nástrojů*
+     tlačítko ![Save všechna tlačítka panelu nástrojů ](../ide/media/express_iconsaveall.png)<br/>
+     Tlačítko ***Uložit vše*** na *panelu nástrojů*
 
      Visual Studio automaticky vyplní název složky a název projektu a pak projekt uloží ve složce Projects.
 
 ## <a name="next-steps"></a>Další kroky
 
-* Pokud chcete přejít na další krok kurzu, přečtěte si  **[článek krok 2: Spusťte aplikaci](../ide/step-2-run-your-program.md).**
+* Pokud chcete přejít na další krok kurzu, přečtěte si **[článek krok 2: spuštění vaší aplikace](../ide/step-2-run-your-program.md)** .
 
-* Pokud se chcete vrátit k tématu Přehled, [Přečtěte si kurz 1: Vytvoření prohlížeče](../ide/tutorial-1-create-a-picture-viewer.md)obrázků
+* Pokud se chcete vrátit k tématu Přehled, přečtěte si téma [kurz 1: vytvoření prohlížeče obrázků](../ide/tutorial-1-create-a-picture-viewer.md).
 
 ## <a name="see-also"></a>Viz také:
 
-* [Kurz 2: Vytvoření časovaného matematického kvízu](tutorial-2-create-a-timed-math-quiz.md)
-* [Kurz 3: Vytvořit porovnávací hru](tutorial-3-create-a-matching-game.md)
+* [Kurz 2: vytvoření časovaného matematického kvízu](tutorial-2-create-a-timed-math-quiz.md)
+* [Kurz 3: vytvoření porovnávací hry](tutorial-3-create-a-matching-game.md)

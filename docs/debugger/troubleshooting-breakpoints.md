@@ -1,5 +1,5 @@
 ---
-title: Řešení potíží s body přerušení v ladicím programu | Dokumentace Microsoftu
+title: Řešení potíží se zarážkami v ladicím programu | Microsoft Docs
 ms.custom: seodec18
 ms.date: 01/23/2018
 ms.topic: troubleshooting
@@ -8,54 +8,54 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: bbcda5eef8ac6ac6aa20c6f487dfc94beb10866c
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 7c11741cb9bb9a0b0c64b9452b54daa6ac226b92
+ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62929663"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72535926"
 ---
-# <a name="troubleshoot-breakpoints-in-the-visual-studio-debugger"></a>Řešení potíží s body přerušení v ladicím programu sady Visual Studio
+# <a name="troubleshoot-breakpoints-in-the-visual-studio-debugger"></a>Řešení potíží se zarážkami v ladicím programu sady Visual Studio
 
 ## <a name="breakpoint-warnings"></a>Upozornění zarážky
 
-Při ladění, zarážka má dva možné stavy visual: solid červeného kruhu a prázdný (bílý vyplněné) kruh. Pokud ladicí program je schopen úspěšně nastavte zarážku v cílovém procesu, zůstane solid červený kruh. Je-li zarážku na prázdný kruh, je zakázaná zarážka nebo upozornění došlo k chybě při pokusu o nastavení zarážky. K určení rozdílu, najeďte myší zarážku a jestli je upozornění.
+Při ladění má zarážka dva možné vizuální stavy: plný červený kruh a prázdný (bílý plný) kruh. Pokud ladicí program může úspěšně nastavit zarážku v cílovém procesu, zůstane plný červený kruh. Pokud je zarážka prázdný kroužek, je při pokusu o nastavení zarážky buď zakázaná zarážka, nebo došlo k upozornění. Chcete-li určit rozdíl, najeďte myší na zarážku a podívejte se, zda došlo k upozornění.
 
-V následujících dvou částech viditelného upozornění a jak je opravit.
+V následujících dvou oddílech jsou popsána výrazné upozornění a jejich oprava.
 
-### <a name="no-symbols-have-been-loaded-for-this-document"></a>"Mít byla se nenačetly žádné symboly pro tento dokument"
+### <a name="no-symbols-have-been-loaded-for-this-document"></a>Pro tento dokument se načetly žádné symboly.
 
-Přejděte **moduly** okno (**ladění** > **Windows** > **moduly**) a zkontrolujte, zda je modul načíst.
-* Pokud je načten modul, zkontrolujte, **Status symbolu** sloupec a zjistěte, zda byly načteny symboly.
-  * Pokud nejsou načteny symboly, zkontrolujte stav symbolů k diagnostice problému. Z místní nabídky v modulu v **moduly** okna, klikněte na tlačítko **informace o načítání symbolů...**  zobrazíte, ve kterém se ladicí program hledá a zkuste načíst symboly. Další informace o načítání symbolů, naleznete v tématu [zadejte symbolu (.pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
-  * Pokud jsou načteny symboly, neobsahuje informace o zdrojových souborech PDB. Jde o několik možných příčin:
-    * Pokud zdrojové soubory nebyly nedávno přidali, potvrďte, že se načítá aktuální verze modulu.
-    * Je možné vytvořit pomocí odřapíkovaného soubory PDB **/PDBSTRIPPED** – možnost linkeru. Neúplný PDB neobsahují informace o zdrojovém souboru. Potvrďte, že pracujete s úplný soubor PDB a nikoli o neúplný soubor PDB.
-    * Soubor PDB je částečně poškozený. Odstraňte soubor a proveďte čisté sestavení modulu pro pokus o vyřešení problému.
+V okně **moduly** (**ladění**  > **moduly** > **Windows** ) a ověřte, jestli je váš modul načtený.
+* Pokud je váš modul načtený, zkontrolujte sloupec **stav symbolu** , abyste viděli, zda byly symboly načteny.
+  * Pokud symboly nejsou načteny, zkontrolujte stav symbolu a Diagnostikujte problém. V kontextové nabídce v modulu v okně **moduly** klikněte na možnost **informace o načtení symbolů...** a zjistěte, kde se ladicí program pokusil vyzkoušet a načíst symboly. Další informace o načítání symbolů naleznete v tématu [určení symbolu (. pdb) a zdrojových souborů](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md).
+  * Pokud jsou symboly načteny, soubor PDB neobsahuje informace o zdrojových souborech. Jedná se o několik možných příčin:
+    * Pokud byly zdrojové soubory přidány do poslední doby, zkontrolujte, zda je načtena aktuální verze modulu.
+    * Je možné vytvořit soubory PDB pomocí možnosti linkeru **/PDBSTRIPPED** . Soubory PDB neobsahuje informace o zdrojovém souboru. Potvrďte, že pracujete s úplným PDB a nikoli s odstraněným PDB.
+    * Soubor PDB je částečně poškozený. Odstraňte soubor a proveďte čisté sestavení modulu a pokuste se problém vyřešit.
 
-* Pokud není načten modul, zkontrolujte následující najít příčinu.
+* Pokud váš modul není načtený, zjistěte příčinu příčiny následujícím způsobem:
   * Potvrďte, že ladíte správný proces.
-  * Zkontrolujte, že ladíte vhodných typů kódu. Můžete zjistit, jaký typ ladicí program je nakonfigurován pro ladění v kódu **procesy** okno (**ladění** > **Windows**  >  **Procesy**). Například se v případě, že se pokoušíte ladit kód v C#, potvrďte, že ladicí program je nakonfigurován pro příslušný typ rozhraní .NET Framework (například Managed (v4\*) versus spravované (verze 2\*/v3\*) versus spravované (CoreCLR)).
+  * Zkontrolujte, že ladíte správný druh kódu. Můžete zjistit, jaký typ kódu ladicí program je nakonfigurován pro ladění v okně **procesy** (**ladění**  >   > **procesy** **Windows** ). Například, pokud se pokoušíte ladit C# kód, zkontrolujte, že je váš ladicí program nakonfigurován pro příslušný typ a verzi rozhraní .NET (například spravované (v4 \*) versus Managed (v2 \*/V3 \*) oproti spravovanému (CoreCLR)).
 
-### <a name="-the-current-source-code-is-different-from-the-version-built-into"></a>"… aktuální zdrojový kód se liší od verze sestavené do..."
+### <a name="-the-current-source-code-is-different-from-the-version-built-into"></a>"... aktuální zdrojový kód se liší od verze integrované do... "
 
-Pokud došlo ke změně zdrojového souboru a zdroj již neodpovídá kódu, který ladíte, ladicí program nebude nastavit zarážky v kódu ve výchozím nastavení. Za normálních okolností tento problém se stane, když zdrojový soubor se změnil, ale nebyl znovu vytvořen, zdrojový kód. Chcete tento problém vyřešit, sestavte projekt znovu. Pokud systém sestavení předpokládá, že projekt je již aktuální i v případě, že tomu tak není, můžete vynutit systém projektu znovu buď uložit zdrojový soubor znovu sestavit nebo podle čištění projektu sestavit výstup před sestavením.
+Pokud se zdrojový soubor změnil a zdroj se už neshoduje s kódem, který ladíte, ladicí program ve výchozím nastavení nenastaví zarážky v kódu. Obvykle k tomuto problému dochází, když se změní zdrojový soubor, ale zdrojový kód se znovu nesestavil. Chcete-li tento problém vyřešit, znovu sestavte projekt. Pokud systém sestavení považuje projekt za již aktuální, i když není, můžete vynutit, aby se systém projektu znovu sestavil uložením zdrojového souboru, nebo vyčištěním výstupu sestavení projektu před sestavením.
 
-Ve výjimečných případech můžete chtít ladit bez nutnosti odpovídající zdrojový kód. Ladění bez odpovídajícího zdrojový kód můžete zájemce matoucí ladění, proto se ujistěte, že toto je, jak chcete pokračovat.
+Ve výjimečných scénářích můžete chtít ladit bez odpovídajícího zdrojového kódu. Ladění bez odpovídajícího zdrojového kódu může vést k matoucímu prostředí ladění, takže se ujistěte, že se jedná o způsob, jakým chcete pokračovat.
 
-Pokud chcete zakázat tyto bezpečnostní kontroly, proveďte jednu z následujících akcí:
-* Upravit zarážku jeden, najeďte myší na ikonu zarážku v editoru a klikněte na ikonu nastavení (ozubené kolo). Okno náhledu se přidá do editoru. V horní části okna Náhled je hypertextový odkaz, který označuje umístění zarážky. Klikněte na hypertextový odkaz na povolit úpravy umístění zarážky a zkontrolovat **povolit zdrojový kód lišil od původního**.
-* Chcete-li změnit toto nastavení pro všechny zarážky, přejděte na **ladění** > **možnosti a nastavení**. Na **ladění/Obecné** zrušte **vyžaduje zdrojové soubory přesně shodovaly s originály** možnost. Ujistěte se, že po dokončení opětovné povolení této možnosti ladění.
+Chcete-li zakázat tyto bezpečnostní kontroly, proveďte jednu z následujících akcí:
+* Chcete-li upravit jednu zarážku, najeďte myší na ikonu zarážky v editoru a klikněte na ikonu nastavení (ozubené kolo). Do editoru je přidáno okno náhledu. V horní části okna náhledu je k dispozici hypertextový odkaz, který označuje umístění zarážky. Kliknutím na hypertextový odkaz povolíte změnu umístění zarážky a zaškrtněte políčko **umožňuje, aby se zdrojový kód lišil od původního**.
+* Chcete-li změnit toto nastavení pro všechny zarážky, použijte možnost **ladění**  > **Možnosti a nastavení**. Na stránce **ladění/obecné** zrušte zaškrtnutí políčka **vyžadovat zdrojové soubory, které přesně odpovídají původní verzi** . Po dokončení ladění nezapomeňte tuto možnost znovu povolit.
 
-## <a name="the-breakpoint-was-successfully-set-no-warning-but-didnt-hit"></a>Zarážka byla úspěšně nastavena (bez upozornění), ale neměli přístupů
+## <a name="the-breakpoint-was-successfully-set-no-warning-but-didnt-hit"></a>Zarážka se úspěšně nastavila (bez upozornění), ale nedosáhla se.
 
-Tato část obsahuje informace o řešení potíží, když ladicí program se nezobrazuje všechna upozornění – k zarážce je plná červené kolečko při aktivním ladění, ale není se zarážka dosažena.
+Tato část poskytuje informace o řešení problémů, když ladicí program nezobrazuje žádná upozornění – zarážka je plný červený kruh při aktivním ladění, ale zarážka není přivolána.
 
-Tady je pár věcí zkontrolovat:
-1. Pokud váš kód běží v procesu více než jeden nebo více než jednom počítači, ujistěte se, že ladíte správný proces nebo počítače.
-2. Potvrďte, že váš kód běží. Chcete-li otestovat, jestli váš kód běží, přidejte volání `System.Diagnostics.Debugger.Break` (C# /VB) nebo `__debugbreak` (C++) na řádek kódu, kde se pokoušíte nastavit zarážku a pak znovu sestavit projekt.
-3. Pokud ladíte optimalizovaný kód, ujistěte se, že funkce, kde nastavit zarážku není vložená do jiné funkce. `Debugger.Break` Test popsaný v předchozí kontrola může pracovat pro testování a tento problém.
+Tady je několik věcí ke kontrole:
+1. Pokud je váš kód spuštěn ve více než jednom procesu nebo více než jednom počítači, ujistěte se, že ladíte správný proces nebo počítač.
+2. Potvrďte, že váš kód běží. Chcete-li otestovat, zda je váš kód spuštěn, přidejte volání `System.Diagnostics.Debugger.Break`C#(/VB) nebo `__debugbreak`C++() na řádek kódu, kde se pokoušíte nastavit zarážku, a poté znovu sestavte projekt.
+3. Pokud ladíte optimalizovaný kód, ujistěte se, že funkce, ve které je zarážka nastavena, není vložena do jiné funkce. Test `Debugger.Break` popsaný v předchozí kontrole může fungovat i při testování tohoto problému.
 
-## <a name="i-deleted-a-breakpoint-but-i-continue-to-hit-it-when-i-start-debugging-again"></a>Odstraněné zarážky, ale I nadále přístupů je při spuštění ladění znovu
+## <a name="i-deleted-a-breakpoint-but-i-continue-to-hit-it-when-i-start-debugging-again"></a>Odstranil (a) jsem zarážku, ale po opětovném spuštění ladění se I nadále narazí
 
-Pokud jste odstranili zarážce při ladění, pravděpodobně dostanete k zarážce znovu při příštím spuštění ladění. Pokud chcete zastavit dosažení této zarážky, ujistěte se, že všechny instance této zarážky se odeberou z **zarážky** okna.
+Pokud jste při ladění odstranili zarážku, můžete zarážku začít znovu při příštím spuštění ladění. Chcete-li ukončit tuto zarážku, zajistěte, aby všechny instance zarážky byly odebrány z okna **zarážky** .

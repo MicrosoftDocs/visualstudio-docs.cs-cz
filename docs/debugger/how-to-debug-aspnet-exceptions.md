@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Ladění výjimek ASP.NET | Dokumentace Microsoftu'
+title: 'Postupy: ladění výjimek ASP.NET | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,35 +17,35 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - aspnet
-ms.openlocfilehash: 6a9c6d2c2159ca21f227beb2f8bd1a98b9420328
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: 3289fd82f8a3b99bf49ee796e49a285ffb93793c
+ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894336"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72536010"
 ---
 # <a name="how-to-debug-aspnet-exceptions"></a>Postupy: Ladění výjimek ASP.NET
-Výjimky ladění jsou důležitou součástí vývoje robustní [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] aplikace. Obecné informace o tom, jak ladit výjimky je v [Správa výjimek pomocí ladicího programu](../debugger/managing-exceptions-with-the-debugger.md).
+Výjimky ladění jsou důležitou součástí vývoje robustní aplikace [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)]. Obecné informace o ladění výjimek naleznete v tématu [Správa výjimek pomocí ladicího programu](../debugger/managing-exceptions-with-the-debugger.md).
 
- Chcete-li ladit neošetřené [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] výjimky, ujistěte se, že nich ladicí program zastavuje. [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] Runtime obsahuje obslužnou rutinu výjimky nejvyšší úrovně. Proto se ladicí program nikdy nezastaví na neošetřené výjimce ve výchozím nastavení. Pokud chcete přerušit do ladicího programu, pokud je vyvolána výjimka, musíte vybrat **přerušit, když výjimka je: Vyvolána** nastavení pro tuto specifickou výjimku v **výjimky** dialogové okno.
+ Chcete-li ladit neošetřené výjimky [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)], je nutné zajistit, aby byl ladicí program pro ně ukončen. Modul runtime [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] má obslužnou rutinu výjimky nejvyšší úrovně. Proto ladicí program se ve výchozím nastavení nikdy nerozdělí na neošetřené výjimky. Chcete-li přerušit ladicí program, pokud je vyvolána výjimka, je nutné vybrat možnost **přerušit, pokud je výjimka: vyvoláno** nastavení pro tuto konkrétní výjimku v dialogovém okně **výjimky** .
 
- Pokud jste povolili funkce pouze můj kód, **přerušit, když výjimka je: Vyvolána** nezpůsobí okamžité přerušení, pokud je vyvolána výjimka v metodě rozhraní .NET Framework nebo jiném kódu systému ladicí program. Místo toho provádění pokračuje, dokud ladicí program narazí na nesystémové kódu, a to naruší. V důsledku toho není nutné krokovat kód systému, pokud dojde k výjimce.
+ Pokud jste povolili Pouze můj kód, **přerušit, pokud je výjimka: vyvolána** nezpůsobí přerušení ladicího programu, pokud je vyvolána výjimka v metodě .NET nebo jiném systémovém kódu. Místo toho se provádění pokračuje, dokud ladicí program nedosáhne kódu, který není systémovým kódem, a pak se přeruší. V důsledku toho není nutné krokovat kód systému, pokud dojde k výjimce.
 
- Pouze můj kód poskytuje další možnost, která může být ještě užitečnější: **Přerušit, když výjimka je: Uživatelem neošetřené**. Pokud vyberete toto nastavení se pro výjimku, ladicí program přeruší provádění v uživatelském kódu, ale pouze v případě, výjimka není odchycena a zpracována uživatelským kódem. Toto nastavení Neguje působení na nejvyšší úrovni [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] obslužná rutina výjimky, protože tato obslužná rutina v neuživatelském kódu.
+ Pouze můj kód poskytuje další možnost, která může být ještě užitečnější: **přerušit, pokud je výjimka: Neošetřená uživatelem**. Pokud pro výjimku zvolíte toto nastavení, ladicí program přeruší provádění v uživatelském kódu, ale pouze v případě, že výjimka není zachycena a zpracována uživatelským kódem. Toto nastavení negace efektu obslužné rutiny výjimky [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] nejvyšší úrovně, protože tato obslužná rutina je v neuživatelském kódu.
 
-### <a name="to-enable-debugging-of-aspnet-exceptions-with-just-my-code"></a>Pokud chcete povolit ladění výjimek ASP.NET s jen můj kód
+### <a name="to-enable-debugging-of-aspnet-exceptions-with-just-my-code"></a>Povolení ladění výjimek ASP.NET pomocí Pouze můj kód
 
-1. Na **ladění** nabídky, klikněte na tlačítko **výjimky**.
+1. V nabídce **ladění** klikněte na **výjimky**.
 
-     **Výjimky** zobrazí se dialogové okno.
+     Zobrazí se dialogové okno **výjimky** .
 
-2. Na **výjimky modulu Common Language Runtime** řádek, vyberte **vyvolání** nebo **uživatelem neošetřené**.
+2. Na řádku **výjimky společného jazykového modulu runtime** vyberte možnost **vyvoláno** nebo **neošetřeno uživatelem**.
 
-     Použít **uživatelem neošetřené** nastavení **pouze můj kód** musí být povolené...
+     Chcete-li použít nastavení **neošetřené uživatelem** , **pouze můj kód** nutné povolit.
 
-### <a name="to-use-best-practices-for-aspnet-exception-handling"></a>Použití doporučených postupů pro zpracování výjimek technologie ASP.NET
+### <a name="to-use-best-practices-for-aspnet-exception-handling"></a>Použití osvědčených postupů pro zpracování výjimek ASP.NET
 
-- Místo `try ... catch` okolo kódu, který může vyvolat výjimky, které lze předvídat a vědět, jak zpracovat. Například pokud aplikace volá do webové služby XML nebo přímo do systému SQL Server, tento kód by měl být v **try... catch** blokuje, protože existuje množství výjimek, které se mohou vyskytnout.
+- Umístěte `try ... catch` bloky kolem kódu, který může vyvolat výjimky, které můžete odhadnout a zjistit, jak se má zpracovat. Například pokud aplikace provádí volání webové služby XML nebo přímo do SQL Server, měl by být tento kód v rámci **Try... bloky catch** , protože existuje mnoho výjimek, ke kterým může dojít.
 
 ## <a name="see-also"></a>Viz také
 - [Ladění aplikací ASP.NET](../debugger/how-to-enable-debugging-for-aspnet-applications.md)

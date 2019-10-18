@@ -28,7 +28,7 @@
           href: deploy-app-service.md
         - name: Nasazení do Docker Hubu
           href: deploy-docker-hub.md
-        - name: Zobrazení a diagnostika kontejnerů
+        - name: Zobrazení a diagnostika kontejnerů a imagí
           href: view-and-diagnose-containers.md
         - name: Konfigurace Nástrojů kontejneru
           href: container-tools-configure.md

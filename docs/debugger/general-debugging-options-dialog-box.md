@@ -21,12 +21,12 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - multiple
-ms.openlocfilehash: d3fa7ae62c19a7af45188bab08ce9b3144032b7d
-ms.sourcegitcommit: 485ffaedb1ade71490f11cf05962add1718945cc
-ms.translationtype: MT
+ms.openlocfilehash: cd90cb5eb55143a4a1916dfcee3f108ba7afb759
+ms.sourcegitcommit: 08c144d290da373df841f04fc799e3133540a541
+ms.translationtype: HT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72435717"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72536041"
 ---
 # <a name="general-debugging-options"></a>Obecné možnosti ladění
 
@@ -99,7 +99,7 @@ V podmínkách 2 a 3 je výjimka někdy zachycena spravovaným kódem v `mscorli
 
 **Potlačit optimalizaci JIT při načtení modulu (pouze spravované)** : ZAKÁŽE optimalizaci JIT spravovaného kódu při načtení modulu a kompilaci JIT při připojení ladicího programu. Zakázáním optimalizace může být snazší ladit některé problémy, i když na úkor výkonu. Pokud používáte Pouze můj kód, potlačení optimalizace JIT může způsobit, že se neuživatelský kód zobrazí jako uživatelský kód ("můj kód"). Další informace najdete v tématu [optimalizace a ladění JIT](../debugger/jit-optimization-and-debugging.md).
 
-**Povolit ladění JavaScriptu pro ASP.NET (Chrome, Edge a IE)** : povolí ladicí program skriptu pro aplikace ASP.NET. Při prvním použití v Chrome se možná budete muset přihlásit do prohlížeče a povolit rozšíření Chrome, která jste nainstalovali. Vypnutím této možnosti obnovíte původní chování.
+**Povolit ladění JavaScriptu pro ASP.NET (Chrome, Microsoft Edge a IE)** : povolí ladicí program skriptu pro aplikace ASP.NET. Při prvním použití v Chrome se možná budete muset přihlásit do prohlížeče a povolit rozšíření Chrome, která jste nainstalovali. Vypnutím této možnosti obnovíte původní chování.
 
 **Povolit Edge vývojářské nástroje pro aplikace JavaScriptu pro UWP (experimentální)** : povolí vývojářské nástroje pro aplikace JAVASCRIPTU pro UWP v Microsoft Edge.
 
@@ -117,7 +117,7 @@ Chcete-li zjistit, jaké symboly jsou k dispozici v exportní tabulce knihovny D
 
 **Použít spravovaný režim kompatibility**: nahradí výchozí ladicí stroj starší verzí, aby bylo možné tyto scénáře povolit:
 
-- Používáte .NET Framework jazyk jiný než C#, Visual Basic nebo F# , který poskytuje svůj vlastní vyhodnocovací filtr výrazů (zahrnuje C++/CLI).
+- Používáte jiný jazyk rozhraní .NET, než C#Visual Basic, nebo F# který poskytuje svůj vlastní vyhodnocovací filtr výrazů (zahrnuje C++/CLI).
 
 - Chcete povolit možnost upravit a pokračovat pro C++ projekty během ladění ve smíšeném režimu.
 
