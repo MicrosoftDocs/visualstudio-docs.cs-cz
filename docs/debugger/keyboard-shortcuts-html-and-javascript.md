@@ -1,69 +1,64 @@
 ---
-title: Klávesové zkratky (HTML a JavaScriptu) | Dokumentace Microsoftu
-ms.date: 03/28/2019
+title: Klávesové zkratky (HTML a JavaScript) | Microsoft Docs
+ms.date: 10/17/2019
 ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
 - FSharp
 - C++
-ms.assetid: 8d44425a-6584-477d-932e-4e10d5e79511
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - multiple
-ms.openlocfilehash: 4af3ddb3d04b3a864a26149f88fa15960d2c2b2d
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: e7f800a74fb1cb9d0909bd1f95571eb7a3c27b06
+ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62905588"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72588971"
 ---
 # <a name="keyboard-shortcuts-html-and-javascript"></a>Klávesové zkratky (HTML a JavaScript)
 
-::: moniker range=">=vs-2019"
- Klávesové zkratky v sadě Visual Studio pro ladění aplikací Node.js v sadě Visual Studio s **vývoj v Node.js** nainstalovaná úloha.
-::: moniker-end
-::: moniker range="vs-2017"
- Klávesové zkratky v sadě Visual Studio pro ladění aplikací pro UWP pomocí HTML a JavaScriptu.
-::: moniker-end
+Klávesové zkratky v aplikaci Visual Studio pro ladění aplikací pro UWP pomocí HTML a JavaScriptu.
 
-## <a name="general-shortcuts"></a>Obecné klávesové zkratky
+## <a name="general-shortcuts"></a>Obecné zkratky
 
- Tyto zkratky fungují všechny nástroje pro aplikace pro UPW pomocí HTML a JavaScriptu.
+ Tyto klávesové zkratky fungují napříč všemi nástroji pro aplikace pro UWP pomocí HTML a JavaScriptu.
 
 |Akce|Zástupce|
 |------------|--------------|
-|Aktualizovat aplikaci Windows|Ctrl+Shift+R|
-|Restartujte aplikaci Windows|Ctrl+Shift+F5|
+|Aktualizovat aplikaci pro Windows|Ctrl+Shift+R|
+|Restartovat aplikaci pro Windows|Ctrl+Shift+F5|
 |Zastavit ladění|Shift+F5|
-|Otevřete rozbočovači výkon a Diagnostika|Alt+F2|
+|Otevřít Centrum pro výkon a diagnostiku|Alt+F2|
 
-## <a name="javascript-console-shortcuts"></a>Zástupce konzoly jazyka JavaScript
+## <a name="javascript-console-shortcuts"></a>Zkratky konzoly JavaScriptu
 
- Použijte tyto klávesové zkratky v okně konzoly jazyka JavaScript.
+ Tyto klávesové zkratky použijte v okně konzoly JavaScriptu.
 
 |Akce|Zástupce|
 |------------|--------------|
 |Spuštění příkazu konzoly|Enter|
 |Vymazat konzolu|Esc|
-|Přepínání mezi režimem jedním řádkem a více řádky|Ctrl+Alt+M|
+|Přepínání mezi jedním řádkem a víceřádkovým režimem|CTRL + ALT + M|
 
-## <a name="dom-explorer-shortcuts"></a>Klávesové zkratky Průzkumníka modelu DOM
+## <a name="dom-explorer-shortcuts"></a>Zástupci Průzkumníka modelu DOM
 
- V Průzkumníku modelu DOM použijte tyto klávesové zkratky.
+ Tyto klávesové zkratky použijte v Průzkumníku modelu DOM.
 
 |Akce|Zástupce|
 |------------|--------------|
 |Vybrat element|Ctrl+B|
-|Přepnout mezi zobrazení a skrytí pole zvýraznění webových stránek, při použití **vybrat Element**|Ctrl+Shift+I|
-|Potvrďte změny pomocí **upravit jako HTML**|Ctrl+Enter|
-|Zahodit změny pomocí **upravit jako HTML**|Esc|
-|Zvýšit o 1 vybraná hodnota šablon stylů CSS|Šipka nahoru|
-|Zmenšit o 1 vybraná hodnota šablon stylů CSS|Šipka dolů|
+|Přepínání mezi zobrazením a skrytím zvýrazněných polí webových stránek při použití **elementu Select**|Ctrl+Shift+I|
+|Potvrdit změny pomocí **úpravy jako HTML**|Ctrl+Enter|
+|Zahodit změny pomocí **úpravy jako HTML**|Esc|
+|Zvýšit vybranou hodnotu CSS o 1|Šipka nahoru|
+|Snížit vybranou hodnotu CSS o 1|Šipka dolů|
 
 ## <a name="see-also"></a>Viz také
-- [Příkazy konzoly jazyka JavaScript](../debugger/javascript-console-commands.md)
+- [Příkazy konzoly jazyka JavaScript](../debugger/javascript-console-commands.md?view=vs-2017)
 - [Rychlý start: Ladění kódu HTML a CSS](../debugger/quickstart-debug-html-and-css.md?view=vs-2017)
 - [Rychlý start: Ladění JavaScriptu](../debugger/quickstart-debug-javascript-using-the-console.md?view=vs-2017)

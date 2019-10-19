@@ -1,7 +1,7 @@
 ---
-title: Příkazy konzoly jazyka JavaScript | Dokumentace Microsoftu
+title: Příkazy konzoly JavaScriptu | Microsoft Docs
 ms.custom: ''
-ms.date: 03/28/2019
+ms.date: 10/17/2019
 ms.topic: reference
 helpviewer_keywords:
 - JavaScript Console commands [UWP apps]
@@ -10,77 +10,74 @@ helpviewer_keywords:
 author: mikejo5000
 ms.author: mikejo
 manager: jillfra
+monikerRange: vs-2017
 ms.workload:
 - uwp
 - cordova
-ms.openlocfilehash: 40e32250378d92ac63e4a057a59ee847de6af810
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: fead28e60116acb7b2ae311d98e5475c5da3ec35
+ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62905671"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72588983"
 ---
-# <a name="javascript-console-commands-in-visual-studio"></a>Příkazy konzoly jazyka JavaScript v sadě Visual Studio
+# <a name="javascript-console-commands-in-visual-studio"></a>Příkazy konzoly JavaScriptu v aplikaci Visual Studio
 
-::: moniker range=">=vs-2019"
-Příkazy můžete použít k odesílání zpráv a provádění dalších úloh v okně konzoly jazyka JavaScript sady Visual Studio. Informace v tomto tématu se vztahují na vytvořené pomocí sady Visual Studio s aplikací v Node.js **vývoj v Node.js** nainstalovaná úloha.
-::: moniker-end
-::: moniker range="vs-2017"
-Příkazy můžete použít k odesílání zpráv a provádění dalších úloh v okně konzoly jazyka JavaScript sady Visual Studio. Příklady, které ukazují, jak pomocí tohoto okna najdete v tématu [rychlý start: Ladění JavaScriptu](../debugger/quickstart-debug-javascript-using-the-console.md?view=vs-2017). Informace v tomto tématu se vztahují na aplikace v Node.js, UPW aplikace a aplikace vytvořené pomocí nástrojů Visual Studio pro Apache Cordova. Informace o podporovaných konzole příkazy v aplikace Cordova, naleznete v tématu [Debug Your App](https://taco.visualstudio.com/en-us/docs/debug-using-visual-studio/).
-::: moniker-end
+Můžete použít příkazy k posílání zpráv a provádění dalších úloh v okně konzoly JavaScriptu sady Visual Studio. Příklady, které ukazují, jak používat toto okno, najdete v tématu [rychlý Start: ladění JavaScriptu](../debugger/quickstart-debug-javascript-using-the-console.md?view=vs-2017). Informace v tomto tématu se vztahují na aplikaci Node. js, aplikace UWP a aplikace vytvořené pomocí Visual Studio Tools pro Apache Cordova.
 
-Pokud je zavření okna konzoly jazyka JavaScript, lze jej otevřít při ladění v sadě Visual Studio výběrem **ladění** > **Windows** > **jazyka JavaScript Konzola**.
+Pokud je okno konzoly JavaScriptu zavřené, můžete ho otevřít při ladění v aplikaci Visual Studio tak, že vyberete **ladění**  >  konzole**Windows**  > **JavaScript**.
 
 > [!NOTE]
-> Pokud okno není k dispozici během relace ladění, ujistěte se, že typ ladicího programu je nastaven na **skript** ve vlastnostech ladění pro projekt.
+> Pokud okno není během ladicí relace k dispozici, ujistěte se, že typ ladicího programu je nastaven na **skript** ve vlastnostech ladění projektu.
 
-Informace o použití konzoly v nástrojích pro vývojáře Microsoft Edge, najdete v části [v tomto tématu](/microsoft-edge/devtools-guide).
+Informace o používání konzoly nástroje Microsoft Edge Developer Tools najdete v [tomto tématu](/microsoft-edge/devtools-guide).
 
-## <a name="console-object-commands"></a>příkazy konzoly objektu
-Tato tabulka ukazuje syntaxi `console` objekt příkazy, můžete použít v okně konzoly jazyka JavaScript nebo, že můžete použít k odesílání zpráv do konzoly z vašeho kódu. Tento objekt obsahuje počtem formulářů, aby mohl rozlišit mezi informační zprávy a chybové zprávy, pokud chcete.
+## <a name="console-object-commands"></a>příkazy objektů konzoly
 
-Můžete použít delší formě v příkazu `window.console.[command]` potřebujete nedocházelo k záměnám možné s místní objekty s názvem konzoly.
+Tato tabulka zobrazuje syntaxi pro příkazy `console` objektů, které lze použít v okně konzoly JavaScriptu nebo které můžete použít k posílání zpráv do konzoly z vašeho kódu. Tento objekt poskytuje několik forem, takže můžete v případě potřeby rozlišovat mezi informačními zprávami a chybovými zprávami.
+
+Pokud potřebujete zabránit možnému nejasnostem v místních objektech s názvem Console, můžete použít formulář příkazu delší `window.console.[command]`.
 
 > [!TIP]
-> Starší verze sady Visual Studio nepodporují kompletní sadu příkazů. Pomocí IntelliSense na objekt konzoly a získat rychlé informace o podporovaných příkazů.
+> Starší verze sady Visual Studio nepodporují kompletní sadu příkazů. Pomocí technologie IntelliSense na objektu konzoly můžete získat rychlé informace o podporovaných příkazech.
 
 |Příkaz|Popis|Příklad|
 |-------------|-----------------|-------------|
-|`assert(expression, message)`|Odešle zprávu, pokud `expression` vyhodnotí jako **false**.|`console.assert((x == 1), "assert message: x != 1");`|
-|`clear()`|Vymaže zprávy z okna konzoly, včetně skriptu chybové zprávy a vymaže skript, který se zobrazí v okně konzoly. Nerušte zaškrtnutí políčka skript, který jste zadali do konzoly zadejte řádku.|`console.clear();`|
-|`count(title)`|Počet případů, kdy byl volán příkaz počet odešle do okna konzoly. Každé volání count je jedinečně identifikovaný nepovinný `title`.<br /><br /> Je identifikována existující položku v okně konzoly `title` parametr (pokud existuje) a aktualizovat pomocí příkazu count. Není vytvořena nová položka.|`console.count();`<br /><br /> `console.count("inner loop");`|
-|`debug(message)`|Odešle `message` do okna konzoly.<br /><br /> Tento příkaz se shoduje s console.log.<br /><br /> Objekty, které se předávají pomocí příkazu jsou převedeny na hodnotu řetězce.|`console.debug("logging message");`|
-|`dir(object)`|Odešle zadaný objekt do okna konzoly a zobrazí jej v vizualizéru objektu. Vizualizér můžete použít ke kontrole vlastností v okně konzoly.|`console.dir(obj);`|
-|`dirxml(object)`|Odešle zadaný uzel XML `object` do okna konzoly a zobrazí ho jako uzel stromu XML.|`console.dirxaml(xmlNode);`|
-|`error(message)`|Odešle `message` do okna konzoly. Text zprávy je červené a začíná symbolem k chybě.<br /><br /> Objekty, které se předávají pomocí příkazu jsou převedeny na hodnotu řetězce.|`console.error("error message");`|
-|`group(title)`|Spustí seskupení pro zprávy odeslané do okna konzoly a odešle nepovinný `title` jako popisek skupiny. Skupiny mohou být vnořené a zobrazí ve stromovém zobrazení v okně konzoly.<br /><br /> Příkazy skupiny * může usnadnit zobrazit výstup okna konzoly v některých případech, například když komponenta model se používá.|`console.group("Level 2 Header");` <br /> `console.log("Level 2");` <br /> `console.group();` <br /> `console.log("Level 3");` <br /> `console.warn("More of level 3");` <br /> `console.groupEnd();` <br /> `console.log("Back to level 2");` <br /> `console.groupEnd();` <br /> `console.debug("Back to the outer level");`|
-|`groupCollapsed(title)`|Spustí seskupení pro zprávy odeslané do okna konzoly a odešle nepovinný `title` jako popisek skupiny. Skupiny, které jsou odeslány pomocí `groupCollapsed` ve výchozím nastavení se nezobrazí v sbalené zobrazení. Skupiny mohou být vnořené a zobrazí ve stromovém zobrazení v okně konzoly.|Využití je stejný jako `group` příkazu.<br /><br /> Podívejte se na příklad pro `group` příkazu.|
-|`groupEnd()`|Ukončí aktuální skupinu.<br /><br /> Požadavky:<br /><br /> Visual Studio 2013|Podívejte se na příklad pro `group` příkazu.|
-|`info(message)`|Odešle `message` do okna konzoly. Zpráva je uvedena informace symbol.|`console.info("info message");`<br /><br /> Další příklady najdete v tématu [formátování výstupu console.log](#ConsoleLog) dále v tomto tématu.|
-|`log(message)`|Odešle `message` do okna konzoly.<br /><br /> Pokud předáte objektu, tento příkaz odešle tento objekt do okna konzoly a zobrazí jej v vizualizéru objektu. Vizualizér můžete použít ke kontrole vlastností v okně konzoly.|`console.log("logging message");`|
-|`msIsIndependentlyComposed(element)`|Používá se ve službě web apps. Není podporováno v aplikacích pro UWP pomocí jazyka JavaScript.|Není podporováno.|
-|`profile(reportName)`|Používá se ve službě web apps. Není podporováno v aplikacích pro UWP pomocí jazyka JavaScript.|Není podporováno.|
-|`profileEnd()`|Používá se ve službě web apps. Není podporováno v aplikacích pro UWP pomocí jazyka JavaScript.|Není podporováno.|
-|`select(element)`|Vybere zadané HTML `element` v [Průzkumníka modelu DOM](../debugger/quickstart-debug-html-and-css.md).|Console.Select(element);|
-|`time (name)`|Spustí časovač, který je identifikován tak volitelného `name` parametru. Při použití s `console.timeEnd`, vypočítá čas, který uplyne mezi `time` a `timeEnd`a odešle výsledek (měřeno v ms) pomocí konzoly `name` řetězec jako předpony. Umožňuje povolit instrumentaci kód aplikace pro měření výkonu.|`console.time("app start");  app.start();  console.timeEnd("app start");`|
-|`timeEnd(name)`|Zastaví časovač, který je identifikován nepovinný `name` parametru. Zobrazit `time` příkazu konzoly.|`console.time("app start"); app.start(); console.timeEnd("app start");`|
-|`trace()`|Odešle trasování zásobníku v okně konzoly. Trasování obsahuje úplný zásobník volání a obsahuje informace, třeba číslo sloupce, název souboru a číslo řádku.|`console.trace();`|
-|`warn(message)`|Odešle `message` do okna konzoly uvedena symbolem upozornění.<br /><br /> Objekty, které se předávají pomocí příkazu jsou převedeny na hodnotu řetězce.|`console.warn("warning message");`|
+|`assert(expression, message)`|Pošle zprávu, pokud se `expression` vyhodnotí jako **false**.|`console.assert((x == 1), "assert message: x != 1");`|
+|`clear()`|Vymaže zprávy z okna konzoly, včetně chybových zpráv skriptu, a také vymaže skript, který se zobrazí v okně konzoly. Nevymaže skript, který jste zadali do vstupní výzvy konzoly.|`console.clear();`|
+|`count(title)`|Odesílá počet volání příkazu Count do okna konzoly. Každé volání Count je jednoznačně identifikováno nepovinným `title`.<br /><br /> Existující položka v okně konzoly je identifikována parametrem `title` (Pokud je k dispozici) a aktualizována příkazem Count. Není vytvořena nová položka.|`console.count();`<br /><br /> `console.count("inner loop");`|
+|`debug(message)`|Odesílá `message` do okna konzoly.<br /><br /> Tento příkaz je stejný jako Console. log.<br /><br /> Objekty, které jsou předány pomocí příkazu, jsou převedeny na hodnotu řetězce.|`console.debug("logging message");`|
+|`dir(object)`|Odešle zadaný objekt oknu konzoly a zobrazí ho v Vizualizér objektů. K prozkoumání vlastností v okně konzoly můžete použít Vizualizér.|`console.dir(obj);`|
+|`dirxml(object)`|Odešle zadaný uzel XML `object` do okna konzoly a zobrazí jej jako strom uzlu XML.|`console.dirxaml(xmlNode);`|
+|`error(message)`|Odesílá `message` do okna konzoly. Text zprávy je červený a je uvozen symbolem chyby.<br /><br /> Objekty, které jsou předány pomocí příkazu, jsou převedeny na hodnotu řetězce.|`console.error("error message");`|
+|`group(title)`|Spustí seskupení zpráv, které jsou odesílány do okna konzoly, a odešle volitelné `title` jako popisek skupiny. Skupiny mohou být vnořené a v okně konzoly se zobrazí ve stromovém zobrazení.<br /><br /> Příkazy Group * mohou zjednodušit zobrazení výstupu okna konzoly v některých scénářích, například při použití modelu komponenty.|`console.group("Level 2 Header");` <br /> `console.log("Level 2");` <br /> `console.group();` <br /> `console.log("Level 3");` <br /> `console.warn("More of level 3");` <br /> `console.groupEnd();` <br /> `console.log("Back to level 2");` <br /> `console.groupEnd();` <br /> `console.debug("Back to the outer level");`|
+|`groupCollapsed(title)`|Spustí seskupení zpráv, které jsou odesílány do okna konzoly, a odešle volitelné `title` jako popisek skupiny. Skupiny, které se odesílají pomocí `groupCollapsed`, se ve výchozím nastavení zobrazí ve sbaleném zobrazení. Skupiny mohou být vnořené a v okně konzoly se zobrazí ve stromovém zobrazení.|Použití je stejné jako příkaz `group`.<br /><br /> Podívejte se na příklad `group` příkazu.|
+|`groupEnd()`|Ukončí aktuální skupinu.<br /><br /> Požadavků<br /><br /> Visual Studio 2013|Podívejte se na příklad `group` příkazu.|
+|`info(message)`|Odesílá `message` do okna konzoly. Zpráva je uvozena symbolem informací.|`console.info("info message");`<br /><br /> Další příklady najdete v části [formátování výstupu konzoly. log](#ConsoleLog) dále v tomto tématu.|
+|`log(message)`|Odesílá `message` do okna konzoly.<br /><br /> Pokud předáte objekt, tento příkaz odešle objekt do okna konzoly a zobrazí jej v Vizualizér objektů. K prozkoumání vlastností v okně konzoly můžete použít Vizualizér.|`console.log("logging message");`|
+|`msIsIndependentlyComposed(element)`|Používá se ve webových aplikacích. Nepodporuje se v aplikacích pro UWP pomocí JavaScriptu.|Není podporováno.|
+|`profile(reportName)`|Používá se ve webových aplikacích. Nepodporuje se v aplikacích pro UWP pomocí JavaScriptu.|Není podporováno.|
+|`profileEnd()`|Používá se ve webových aplikacích. Nepodporuje se v aplikacích pro UWP pomocí JavaScriptu.|Není podporováno.|
+|`select(element)`|Vybere zadaný HTML `element` v [Průzkumníku modelu DOM](../debugger/quickstart-debug-html-and-css.md).|Console. Select (element);|
+|`time (name)`|Spustí časovač, který je identifikován volitelným parametrem `name`. Při použití s `console.timeEnd` vypočítá čas, který uplyne mezi `time` a `timeEnd`, a odešle výsledek (měřeno v MS) do konzoly pomocí řetězce `name` jako předpony. Slouží k povolení instrumentace kódu aplikace pro měření výkonu.|`console.time("app start");  app.start();  console.timeEnd("app start");`|
+|`timeEnd(name)`|Zastaví časovač, který je identifikován volitelným parametrem `name`. Viz příkaz `time` Console.|`console.time("app start"); app.start(); console.timeEnd("app start");`|
+|`trace()`|Odešle trasování zásobníku do okna konzoly. Trasování zahrnuje kompletní zásobník volání a obsahuje informace, jako je název souboru, číslo řádku a číslo sloupce.|`console.trace();`|
+|`warn(message)`|Odesílá `message` do okna konzoly, na kterém představí symbol upozornění.<br /><br /> Objekty, které jsou předány pomocí příkazu, jsou převedeny na hodnotu řetězce.|`console.warn("warning message");`|
 
-## <a name="miscellaneous-commands"></a>Další příkazy
-Tyto příkazy jsou k dispozici také v okně konzoly jazyka JavaScript (nejsou k dispozici z kódu).
+## <a name="miscellaneous-commands"></a>Různé příkazy
+Tyto příkazy jsou také k dispozici v okně konzoly JavaScriptu (nejsou k dispozici z kódu).
 
 |Příkaz|Popis|Příklad|
 |-------------|-----------------|-------------|
-|`$0`, `$1`, `$2`, `$3`, `$4`|Vrátí zadaný element v okně konzoly. `$0` Vrátí aktuálně vybraný v Průzkumníku modelu DOM, prvek `$1` vrátí dříve vybraný v Průzkumníku modelu DOM a tak dále, až na čtvrtý prvek dříve vybraný prvek.|$3|
-|`$(id)`|Vrátí element s ID. Jedná se o místní příkaz pro `document.getElementById(id)`, kde `id` je řetězec, který představuje ID elementu.|`$("contenthost")`|
-|`$$(selector)`|Vrátí pole prvků, které odpovídají zadaným selektor pomocí syntaxe selektor šablon stylů CSS. Jedná se o místní příkaz pro `document.querySelectorAll()`.|`$$(".itemlist")`|
-|`cd()`<br /><br /> `cd(window)`|Umožňuje změnit kontext pro vyhodnocení výrazu v okně zadaného rámce z okna nejvyšší úrovně výchozí stránky. Volání `cd()` bez parametrů vrátí kontext do okna nejvyšší úrovně.|`cd();`<br /><br /> `cd(myframe);`|
-|`select(element)`|Zadaný element v vybere [Průzkumníka modelu DOM](../debugger/quickstart-debug-html-and-css.md).|`select(document.getElementById("element"));`<br /><br /> `select($("element"));`<br /><br /> `select($1);`|
-|`dir(object)`|Vrátí vizualizér pro zadaný objekt. Vizualizér můžete použít ke kontrole vlastností v okně konzoly.|`dir(obj);`|
+|`$0`, `$1`, `$2`, `$3` `$4`|Vrátí zadaný prvek do okna konzoly. `$0` vrátí prvek aktuálně vybraný v Průzkumníku modelu DOM, `$1` vrátí prvek dříve vybraný v Průzkumníku modelu DOM a tak dále, až do čtvrtého dříve vybraného prvku.|$3|
+|`$(id)`|Vrátí prvek podle ID. Toto je příkaz zástupce pro `document.getElementById(id)`, kde `id` je řetězec, který představuje ID elementu.|`$("contenthost")`|
+|`$$(selector)`|Vrátí pole prvků, které odpovídají zadanému selektoru pomocí syntaxe selektoru šablon stylů CSS. Toto je příkaz zástupce pro `document.querySelectorAll()`.|`$$(".itemlist")`|
+|`cd()`<br /><br /> `cd(window)`|Umožňuje změnit kontext pro vyhodnocení výrazu z výchozího okna nejvyšší úrovně stránky na okno zadaného rámečku. Volání `cd()` bez parametrů vrátí kontext do okna nejvyšší úrovně.|`cd();`<br /><br /> `cd(myframe);`|
+|`select(element)`|Vybere zadaný prvek v [Průzkumníku modelu DOM](../debugger/quickstart-debug-html-and-css.md).|`select(document.getElementById("element"));`<br /><br /> `select($("element"));`<br /><br /> `select($1);`|
+|`dir(object)`|Vrátí Vizualizér pro zadaný objekt. K prozkoumání vlastností v okně konzoly můžete použít Vizualizér.|`dir(obj);`|
 
-## <a name="checking-whether-a-console-command-exists"></a>Kontroluje, zda existuje příkaz konzoly
-Můžete zkontrolovat, jestli existuje ke konkrétnímu příkazu. před pokusem o jeho použití. Tento příklad kontroluje existenci `console.log` příkazu. Pokud `console.log` existuje, volá kód.
+## <a name="checking-whether-a-console-command-exists"></a>Kontroluje se, jestli existuje příkaz konzoly.
+Před tím, než se pokusíte ho použít, můžete ověřit, zda určitý příkaz existuje. Tento příklad kontroluje existenci `console.log` příkazu. Pokud `console.log` existuje, kód ho zavolá.
 
 ```javascript
 if (console && console.log) {
@@ -89,11 +86,11 @@ if (console && console.log) {
 
 ```
 
-## <a name="examining-objects-in-the-javascript-console-window"></a>Zkoumání objektů v okně konzoly jazyka JavaScript
-Budete moct setkat s libovolný objekt, který je v oboru při použití okna konzoly jazyka JavaScript. Chcete-li prověřit objekt mimo obor v okně konzoly, použijte `console.log` , `console.dir`, nebo dalších příkazů v kódu. Alternativně můžete pracovat s objektem z okna konzoly i když je v oboru, nastavením zarážky v kódu (**zarážku** > **vložit zarážku**).
+## <a name="examining-objects-in-the-javascript-console-window"></a>Kontrola objektů v okně konzoly JavaScriptu
+Můžete pracovat s libovolným objektem, který je v oboru při použití okna konzoly jazyka JavaScript. Chcete-li zkontrolovat objekt mimo rozsah v okně konzoly, použijte `console.log`, `console.dir` nebo jiné příkazy z kódu. Alternativně můžete s objektem pracovat z okna konzoly, pokud je v rozsahu, nastavením zarážky v kódu (**zarážka**  > **Vložit zarážku**).
 
-## <a name="ConsoleLog"></a> Formátování výstupu console.log
-Pokud předáte více argumentů `console.log`, bude považovat za pole argumentů a zřetězení výstup konzole.
+## <a name="ConsoleLog"></a>Formátování výstupu konzoly. log
+Pokud do `console.log` předáte více argumentů, bude konzola považovat argumenty za pole a zřetězit výstup.
 
 ```javascript
 var user = new Object();
@@ -106,13 +103,13 @@ console.log(user.first, user.last);
 
 ```
 
-`console.log` také podporuje "printf" nahrazení způsoby formátování výstupu. Pokud používáte vzory pro nahrazení v prvním argumentu, další argumenty se použije k nahrazení zadaného vzorů v pořadí, ve kterém se používají.
+`console.log` také podporuje substituční vzory "printf" k formátování výstupu. Pokud v prvním argumentu použijete substituční vzory, použijí se k nahrazení zadaných vzorů v pořadí, ve kterém se používají, další argumenty.
 
- Podporují se následující vzory pro nahrazení:
+ Podporují se tyto substituční vzory:
 
-- %s - object - celé číslo %d – celé číslo %f - float %o – řetězec %i %b - binární %x - šestnáctkové %e - exponent
+- % s-řetězec% i-Integer% d – celé číslo% f-float% o-Object% b-Binary% x-šestnáctková hodnota% e-exponent
 
-  Tady je několik příkladů použití vzorů pro nahrazení v `console.log`:
+  Tady je několik příkladů použití vzorů pro nahrazování v `console.log`:
 
 ```javascript
 var user = new Object();

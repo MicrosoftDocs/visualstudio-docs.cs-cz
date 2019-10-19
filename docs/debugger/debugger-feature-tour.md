@@ -13,10 +13,10 @@ manager: jillfra
 ms.workload:
 - multiple
 ms.openlocfilehash: 06665aa6a30d67e27f654e92029dcbd3d2aea2ef
-ms.sourcegitcommit: 1507baf3a336bbb6511d4c3ce73653674831501b
+ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "72349762"
 ---
 # <a name="first-look-at-the-visual-studio-debugger"></a>První pohled na ladicí program sady Visual Studio
@@ -31,9 +31,9 @@ Pro ladění musíte aplikaci spustit pomocí ladicího programu připojeného k
 
 Pokud máte otevřený soubor v editoru kódu, můžete nastavit zarážku kliknutím na okraj nalevo od řádku kódu.
 
-![Nastavit zarážku](../debugger/media/dbg-tour-set-a-breakpoint.gif "nastavenou na zarážku")
+![Nastavit zarážku](../debugger/media/dbg-tour-set-a-breakpoint.gif "Nastavení zarážky")
 
-Stiskněte klávesu **F5** (**ladění > Spustit ladění**) nebo tlačítko **Spustit ladění** ![Spustit]ladění(../debugger/media/dbg-tour-start-debugging.png "Spustit ladění") na panelu nástrojů ladění a ladicí program se spustí na první zarážku, ke které dojde. Pokud aplikace ještě není spuštěná, spustí F5 ladicí program a zastaví se na první zarážce.
+Stiskněte **F5** (**ladění > Spustit ladění**) nebo tlačítko **Spustit ladění** ![Spustit ladění](../debugger/media/dbg-tour-start-debugging.png "Spustit ladění") na panelu nástrojů ladění a ladicí program se spustí na první zarážku, ke které dojde. Pokud aplikace ještě není spuštěná, spustí F5 ladicí program a zastaví se na první zarážce.
 
 Zarážky jsou užitečnou funkcí, když znáte řádek kódu nebo oddíl kódu, který chcete podrobně prošetřit.
 
@@ -43,7 +43,7 @@ Klávesové zkratky pro většinu příkazů poskytujeme, protože usnadňují n
 
 Pokud chcete aplikaci spustit pomocí připojeného ladicího programu, stiskněte klávesu **F11** (**ladění > krokovat do**). Klávesa F11 je **Krok do** příkazu a aplikace pokračuje v jednom příkazu v jednom okamžiku. Při spuštění aplikace pomocí klávesy F11 se ladicí program ukončí na prvním příkazu, který se spustí.
 
-Klávesa ![F11 do](../debugger/media/dbg-tour-f11.png "klávesy F11 krok do")
+![F11 Krokovat s vnořením](../debugger/media/dbg-tour-f11.png "F11 Krokovat s vnořením")
 
 Žlutá šipka představuje příkaz, na kterém je ladicí program pozastaven, což také pozastavuje spuštění aplikace ve stejném bodě (Tento příkaz ještě nebyl proveden).
 
@@ -64,17 +64,17 @@ Jak bylo zmíněno dříve, ladicí program ve výchozím nastavení přeskočí
 
 Klikněte pravým tlačítkem na vlastnost nebo pole a zvolte **Krok do konkrétní**a pak zvolte jednu z dostupných možností.
 
-![Krokovat krok do]konkrétního(../debugger/media/dbg-tour-step-into-specific.png "kroku")
+![Krokovat do konkrétního](../debugger/media/dbg-tour-step-into-specific.png "Krokovat do konkrétního")
 
 V tomto příkladu se **Krok do konkrétní** dostane do kódu pro `Path.set`.
 
-![Krokovat krok do]konkrétního(../debugger/media/dbg-tour-step-into-specific-2.png "kroku")
+![Krokovat do konkrétního](../debugger/media/dbg-tour-step-into-specific-2.png "Krokovat do konkrétního")
 
 ## <a name="run-to-a-point-in-your-code-quickly-using-the-mouse"></a>Rychlé spuštění s bodem v kódu pomocí myši
 
-Když jste v ladicím programu, najeďte myší na řádek kódu, dokud nekliknete na tlačítko spustit **kliknutím** (spustit do této části) ![a kliknete]na tlačítko(../debugger/media/dbg-tour-run-to-click.png "RunToClick") na levé straně.
+Když jste v ladicím programu, najeďte myší na řádek kódu, dokud **na něj** ![kliknete](../debugger/media/dbg-tour-run-to-click.png "RunToClick") na tlačítko Spustit a kliknutím na tlačítko Zobrazit na levé straně.
 
-Kliknutím na spustit ![klikněte na](../debugger/media/dbg-tour-run-to-click-2.png "Spustit") .
+![Spustit kliknutím](../debugger/media/dbg-tour-run-to-click-2.png "Běžet do kliknutí")
 
 > [!NOTE]
 > Tlačítko **spustit do klikněte** na tlačítko (spustit do tohoto umístění) je k dispozici od [!include[vs_dev15](../misc/includes/vs_dev15_md.md)].
@@ -93,11 +93,11 @@ Tento příkaz obnoví spuštění aplikace (a ladicí program posune), dokud ak
 
 ## <a name="run-to-cursor"></a>Spustit ke kurzoru
 
-Kliknutím na tlačítko **Zastavit ladění** červeně ukončete ladicí program ![Zastavit ladění](../debugger/media/dbg-tour-stop-debugging.png "nebo") **SHIFT**  + **F5**.
+Ukončete ladicí program stisknutím tlačítka **Zastavit ladění** červeně ![Zastavit ladění](../debugger/media/dbg-tour-stop-debugging.png "Zastavit ladění") nebo **SHIFT**  + **F5**.
 
 Klikněte pravým tlačítkem na řádek kódu v aplikaci a vyberte možnost **Spustit ke kurzoru**. Tento příkaz spustí ladění a nastaví dočasnou zarážku na aktuálním řádku kódu.
 
-![Spustit ke](../debugger/media/dbg-tour-run-to-cursor.png "kurzoru") kurzoru
+![Spustit ke kurzoru](../debugger/media/dbg-tour-run-to-cursor.png "Spustit ke kurzoru")
 
 Pokud jste nastavili zarážky, ladicí program se pozastaví na první zarážce, ke které má narazí.
 
@@ -110,11 +110,11 @@ Tento příkaz je užitečný při úpravách kódu a chcete rychle nastavit do�
 
 ## <a name="restart-your-app-quickly"></a>Rychlé restartování aplikace
 
-Klikněte na **tlačítko restartovat znovu** ![](../debugger/media/dbg-tour-restart.png "aplikaci") aplikace na panelu nástrojů ladění (**CTRL + SHIFT + F5**).
+Klikněte na tlačítko **restartovat** ![aplikaci](../debugger/media/dbg-tour-restart.png "Restartovat aplikaci") na panelu nástrojů ladění (**CTRL + SHIFT + F5**).
 
 Po stisknutí tlačítka **restartovat**ušetří čas oproti zastavování aplikace a restartování ladicího programu. Ladicí program se pozastaví na první zarážce, která je dosaženo spuštěním kódu.
 
-Pokud chcete zastavit ladicí program a vrátit se zpět do editoru kódu, můžete stisknout červené zastavení ![Zastavit ladění]tlačítko(../debugger/media/dbg-tour-stop-debugging.png "Zastavit ladění") namísto **restartu**.
+Pokud chcete zastavit ladicí program a vrátit se zpět do editoru kódu, můžete stisknout červené tlačítko Zastavit ![ladění](../debugger/media/dbg-tour-stop-debugging.png "Zastavit ladění") namísto **restartu**.
 
 ## <a name="edit-your-code-and-continue-debugging-c-vb-c-xaml"></a>Úprava kódu a pokračování ladění (C#, VB, C++, XAML)
 
@@ -132,7 +132,7 @@ Když teď víte, že jste trochu, měli byste mít dobrou možnost začít kont
 
 Při pozastavení v ladicím programu, najeďte myší na objekt pomocí myši a zobrazí se jeho výchozí hodnota vlastnosti (v tomto příkladu je název souboru `market 031.jpg` výchozí hodnotou vlastnosti).
 
-![Zobrazit datový]Tip(../debugger/media/dbg-tour-data-tips.gif "zobrazení") dat
+![Zobrazit Tip pro data](../debugger/media/dbg-tour-data-tips.gif "Zobrazit Tip pro data")
 
 Rozbalením objektu zobrazíte všechny jeho vlastnosti (například vlastnost `FullPath` v tomto příkladu).
 
@@ -145,7 +145,7 @@ Rozbalením objektu zobrazíte všechny jeho vlastnosti (například vlastnost `
 
 Během ladění se v dolní části editoru kódu podívejte na okno **Automatické** hodnoty.
 
-![](../debugger/media/dbg-tour-autos-window.png "Okno") automatické hodnoty okna Automatické hodnoty
+![Okno Automatické hodnoty](../debugger/media/dbg-tour-autos-window.png "Automatické hodnoty – okno")
 
 V okně **Automatické** hodnoty vidíte proměnné spolu s jejich aktuální hodnotou a jejich typem. Okno **Automatické** hodnoty zobrazuje všechny proměnné použité na aktuálním řádku nebo na předchozím řádku (v C++okně se zobrazí proměnné v předchozích třech řádcích kódu. Podívejte se na dokumentaci pro specifické chování jazyka).
 
@@ -154,7 +154,7 @@ V okně **Automatické** hodnoty vidíte proměnné spolu s jejich aktuální ho
 
 Potom se podívejte do okna **místní** hodnoty. V okně **místní** hodnoty se zobrazí proměnné, které jsou aktuálně v oboru.
 
-(../debugger/media/dbg-tour-locals-window.png "Okno") místních hodnot ![okna místních]hodnot
+![Okno místních hodnot](../debugger/media/dbg-tour-locals-window.png "Místní hodnoty – okno")
 
 V tomto příkladu je objekt `this` a objekt `f` v oboru. Další informace najdete v tématu [Kontrola proměnných v oknech automatické hodnoty a místní](../debugger/autos-and-locals-windows.md)hodnoty.
 
@@ -164,7 +164,7 @@ Okno **kukátka** můžete použít k určení proměnné (nebo výrazu), pro kt
 
 Při ladění klikněte pravým tlačítkem myši na objekt a vyberte možnost **Přidat kukátko**.
 
-![Okno kukátka](../debugger/media/dbg-tour-watch-window.png "okno kukátko")
+![Okno kukátka](../debugger/media/dbg-tour-watch-window.png "Kukátko – okno")
 
 V tomto příkladu máte nastavenou kukátko pro objekt `f` a při přesunu prostřednictvím ladicího programu můžete zobrazit jeho změnu hodnoty. Na rozdíl od ostatních oken proměnných se v oknech **kukátka** vždy zobrazují proměnné, které sledujete (v případě nedostatku rozsahu jsou šedé).
 
@@ -174,7 +174,7 @@ Další informace najdete v tématu [Nastavení kukátka pomocí oken kukátka a
 
 Při ladění klikněte na okno **zásobník volání** , což je ve výchozím nastavení otevřené v pravém dolním podokně.
 
-![Kontrola]zásobníku volání(../debugger/media/dbg-tour-call-stack.png "prohlédnutí zásobníku volání")
+![Kontrola zásobníku volání](../debugger/media/dbg-tour-call-stack.png "Kontrola zásobníku volání")
 
 Okno **zásobník volání** zobrazuje pořadí, ve kterém jsou metody a funkce volány. V horním řádku se zobrazuje aktuální funkce (metoda `Update` v tomto příkladu). Druhý řádek ukazuje, že `Update` bylo voláno z vlastnosti `Path.set` atd. Zásobník volání je dobrým způsobem, jak prostudovat a pochopit tok spuštění aplikace.
 
@@ -189,7 +189,7 @@ Můžete také použít nabídky kliknutím pravým tlačítkem z okna **zásobn
 
 Když vaše aplikace vyvolá výjimku, ladicí program přejde na řádek kódu, který vyvolal výjimku.
 
-Pomocná(../debugger/media/dbg-tour-exception-helper.png "výjimka") ![pomocníka]výjimky
+![Pomocník pro výjimky](../debugger/media/dbg-tour-exception-helper.png "Pomocník pro výjimky")
 
 V tomto příkladu Pomocník pro **výjimky** ukazuje výjimku `System.Argument` a chybovou zprávu, která říká, že cesta není právním formulářem. Proto víme, že k chybě došlo v argumentu metody nebo funkce.
 
@@ -208,13 +208,13 @@ Můžete nakonfigurovat projekt tak, aby se vytvořil jako [Konfigurace ladění
 
 Vlastnosti ladění jsou specifické pro každý typ projektu. Můžete například zadat argument, který má být aplikaci předána při jejím spuštění. K vlastnostem specifickým pro projekt máte přístup kliknutím pravým tlačítkem myši na projekt v Průzkumník řešení a výběrem **vlastností**. Vlastnosti ladění obvykle se zobrazí na kartě **sestavení** nebo **ladění** v závislosti na konkrétním typu projektu.
 
-![Vlastnosti projektu]– vlastnosti(../debugger/media/dbg-tour-project-properties.png "projektu")
+![Vlastnosti projektu](../debugger/media/dbg-tour-project-properties.png "Vlastnosti projektu")
 
 ## <a name="debug-live-aspnet-apps-in-azure-app-service"></a>Ladění živých aplikací ASP.NET v Azure App Service
 
 **Snapshot Debugger** pořizování snímku vašich aplikací v produkčním prostředí, když máte spuštěný kód. Chcete-li ladicímu programu dát pokyn k pořízení snímku, nastavte snímkovací body a protokolovacích bodů ve svém kódu. Ladicí program vám umožní zobrazit přesně to, co se nepovedlo, aniž by to ovlivnilo provoz vaší produkční aplikace. Snapshot Debugger vám může výrazně zkrátit dobu potřebnou k vyřešení problémů, ke kterým dochází v produkčních prostředích.
 
-![Spuštění ladicího programu snímků](../debugger/media/snapshot-launch.png "spuštění ladicího programu snímků")
+![Spustit ladicí program snímků](../debugger/media/snapshot-launch.png "Spustit ladicí program snímků")
 
 Kolekce snímků je k dispozici pro aplikace ASP.NET běžící v Azure App Service. ASP.NET aplikace musí běžet na .NET Framework 4.6.1 nebo novějším. ASP.NET Core aplikace musí běžet na .NET Core 2,0 nebo novějším ve Windows.
 
@@ -226,7 +226,7 @@ Další informace najdete v tématu [ladění živých aplikací ASP.NET pomocí
 
 Snímky můžete procházet a zobrazovat pomocí tlačítek **krok zpět** a **krok vpřed** na panelu nástrojů ladění. Tato tlačítka přecházejí na události, které se zobrazí na kartě **události** v okně **diagnostické nástroje** .
 
-Krok ![zpět a dopředu tlačítka](../debugger/media/intellitrace-step-back-icons-description.png  "krok zpět a dopředu")
+![Krokovat tlačítka zpět a dopředu](../debugger/media/intellitrace-step-back-icons-description.png  "Krokovat tlačítka zpět a dopředu")
 
 Další informace najdete v tématu [Kontrola stavů předchozích aplikací pomocí stránky IntelliTrace](../debugger/view-historical-application-state.md) .
 

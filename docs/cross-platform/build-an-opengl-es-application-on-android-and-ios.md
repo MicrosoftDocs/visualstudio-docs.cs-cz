@@ -1,7 +1,7 @@
 ---
 title: Sestavení aplikace OpenGL ES v Androidu a iOS | Microsoft Docs
 ms.custom: ''
-ms.date: 09/17/2019
+ms.date: 10/09/2019
 ms.technology: vs-ide-mobile
 ms.topic: conceptual
 dev_langs:
@@ -12,12 +12,12 @@ ms.author: corob
 manager: jillfra
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 259092668c336a90758a669efdc4b154b2097cab
-ms.sourcegitcommit: 541a0556958201ad6626bc8638406ad02640f764
+ms.openlocfilehash: a15902278e9a73488b315729a2db6e8fb5d53935
+ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71079271"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72588925"
 ---
 # <a name="build-an-opengl-es-application-on-android-and-ios"></a>Sestavení aplikace OpenGL ES v Androidu a iOS
 
@@ -25,19 +25,19 @@ Můžete vytvářet řešení a projekty sady Visual Studio pro aplikace pro iOS
 
 ## <a name="requirements"></a>Požadavky
 
-Než budete moct vytvořit aplikaci OpenGL ES pro iOS a Android, ujistěte se, že jste splnili všechny požadavky na systém. Pokud jste to ještě neudělali, nainstalujte si C++ vývoj pro mobilní zařízení pomocí úlohy v instalační program pro Visual Studio. Při sestavování pro iOS zahrňte C++ volitelné vývojové nástroje pro iOS. Pro sestavení pro Android Nainstalujte nástroje pro C++ vývoj pro Android a požadované nástroje třetích stran: Android NDK, Apache Ant a Google Android Emulator. Pro lepší výkon emulátoru na platformách Intel doporučujeme také nainstalovat Intel Hardware Accelerated Execution Manager (modul HAXM). Dále nakonfigurujte Intel modul HAXM a Android Emulator pro spuštění ve vašem systému. Další informace a podrobné pokyny najdete v tématu [instalace vizuálu C++ pro vývoj mobilních aplikací pro různé platformy](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md).
+Než budete moct vytvořit aplikaci OpenGL ES pro iOS a Android, ujistěte se, že jste splnili všechny požadavky na systém. Pokud jste to ještě neudělali, nainstalujte si C++ vývoj pro mobilní zařízení pomocí úlohy v instalační program pro Visual Studio. Chcete-li získat šablony OpenGL ES a sestavit pro iOS, zahrňte volitelné C++ vývojové nástroje pro iOS. Pokud chcete sestavit Android, nainstalujte nástroje C++ pro vývoj pro Android a požadované nástroje třetích stran: Android NDK, Apache Ant a Google Android Emulator. Pro lepší výkon emulátoru na platformách Intel doporučujeme také nainstalovat Intel Hardware Accelerated Execution Manager (modul HAXM). Dále nakonfigurujte Intel modul HAXM a Android Emulator pro spuštění ve vašem systému. Další informace a podrobné pokyny najdete v tématu [instalace vývoje mobilních aplikací pro různé platformy C++pomocí ](../cross-platform/install-visual-cpp-for-cross-platform-mobile-development.md).
 
 K sestavení a otestování aplikace pro iOS budete potřebovat počítač Mac, který je nastavený podle pokynů k instalaci. Další informace o tom, jak nastavit pro vývoj pro iOS, najdete v tématu [instalace a konfigurace nástrojů pro sestavení pomocí iOS](../cross-platform/install-and-configure-tools-to-build-using-ios.md).
 
 ## <a name="create-a-new-opengles-application-project"></a>Vytvoření nového projektu aplikace OpenGL
 
-V tomto kurzu nejprve vytvoříte nový projekt aplikace OpenGL ES. a potom v emulátoru sady Visual Studio pro Android Sestavte a spusťte výchozí aplikaci. V dalším kroku sestavíte aplikaci pro iOS a spustíte ji na zařízení s iOS.
+V tomto kurzu nejprve vytvoříte nový projekt aplikace OpenGL ES. a potom v emulátoru Androidu Sestavte a spusťte výchozí aplikaci. V dalším kroku sestavíte aplikaci pro iOS a spustíte ji na zařízení s iOS.
 
 ::: moniker range="vs-2017"
 
 1. V aplikaci Visual Studio vyberte **soubor** > **Nový** > **projekt**.
 
-1. V dialogovém okně **Nový projekt** v části **šablony**zvolte možnost **vizuální C++**  > pro **různé platformy**a pak zvolte šablonu **aplikace OpenGL (Android, iOS)** .
+1. V dialogovém okně **Nový projekt** v části **šablony**zvolte možnost **Visual C++**  > pro **různé platformy**a pak zvolte šablonu **aplikace OpenGL (Android, iOS)** .
 
 1. Dejte aplikaci název jako *MyOpenGLESApp*a pak zvolte **OK**.
 
@@ -65,17 +65,17 @@ V tomto kurzu nejprve vytvoříte nový projekt aplikace OpenGL ES. a potom v em
 
 Nové řešení aplikace OpenGL ES zahrnuje tři projekty knihovny a dva aplikační projekty. Složka knihovny obsahuje projekt sdíleného kódu a dva projekty specifické pro platformu, které odkazují na sdílený kód:
 
-- `MyOpenGLESApp.Android.NativeActivity`obsahuje odkazy a připevnění kódu, který implementuje vaši aplikaci jako nativní aktivitu v Androidu. Vstupní body z kódu připevňování jsou implementovány v *Main. cpp*, který obsahuje společný sdílený kód v `MyOpenGLESApp.Shared`. Předkompilované hlavičky jsou v souboru *PCH. h*. Tento projekt nativní aplikace aktivity je zkompilován do sdíleného souboru knihovny ( *. so*), který je vybrán v `MyOpenGLESApp.Android.Packaging` rámci projektu.
+- `MyOpenGLESApp.Android.NativeActivity` obsahuje odkazy a připevnění kódu, který implementuje vaši aplikaci jako nativní aktivitu v Androidu. Vstupní body z kódu připevňování jsou implementovány v *Main. cpp*, který obsahuje společný sdílený kód v `MyOpenGLESApp.Shared`. Předkompilované hlavičky jsou v souboru *PCH. h*. Tento projekt nativní aplikace aktivity je zkompilován do sdíleného souboru knihovny ( *. so*), který je převzatý `MyOpenGLESApp.Android.Packaging` projektem.
 
-- `MyOpenGLESApp.iOS.StaticLibrary`Vytvoří soubor statické knihovny pro iOS ( *. a*), který obsahuje sdílený kód v `MyOpenGLESApp.Shared`. Je propojena s aplikací vytvořenou `MyOpenGLESApp.iOS.Application` projektem.
+- `MyOpenGLESApp.iOS.StaticLibrary` vytvoří soubor statické knihovny ( *. a*) iOS, který obsahuje sdílený kód v `MyOpenGLESApp.Shared`. Je propojena s aplikací vytvořenou `MyOpenGLESApp.iOS.Application` projektem.
 
-- `MyOpenGLESApp.Shared`obsahuje sdílený kód, který funguje na různých platformách. Používá makra preprocesoru pro podmíněnou kompilaci kódu specifického pro platformu. Sdílený kód je vyzvednut odkazem na projekt v `MyOpenGLESApp.Android.NativeActivity` a. `MyOpenGLESApp.iOS.StaticLibrary`
+- `MyOpenGLESApp.Shared` obsahuje sdílený kód, který funguje na různých platformách. Používá makra preprocesoru pro podmíněnou kompilaci kódu specifického pro platformu. Sdílený kód je vyzvednut odkazem na projekt v `MyOpenGLESApp.Android.NativeActivity` i `MyOpenGLESApp.iOS.StaticLibrary`.
 
 Řešení obsahuje dva projekty pro sestavování aplikací pro platformy Android a iOS:
 
-- `MyOpenGLESApp.Android.Packaging`Vytvoří soubor *. apk* pro nasazení na zařízení nebo emulátoru Androidu. Tento soubor obsahuje soubor Resources a souboru AndroidManifest. XML, ve kterém jste nastavili vlastnosti manifestu. Obsahuje také soubor *Build. XML* , který řídí proces sestavení ANT. Ve výchozím nastavení je nastaven jako spouštěný projekt, aby jej bylo možné nasadit a spustit přímo ze sady Visual Studio.
+- `MyOpenGLESApp.Android.Packaging` vytvoří soubor *. apk* pro nasazení na zařízení nebo emulátoru Androidu. Tento soubor obsahuje soubor Resources a souboru AndroidManifest. XML, ve kterém jste nastavili vlastnosti manifestu. Obsahuje také soubor *Build. XML* , který řídí proces sestavení ANT. Ve výchozím nastavení je nastaven jako spouštěný projekt, aby jej bylo možné nasadit a spustit přímo ze sady Visual Studio.
 
-- **MyOpenGLESApp. iOS. Application** obsahuje prostředky a směr-C pro vytváření aplikací pro iOS, které odkazují na kód C++ statické knihovny v. `MyOpenGLESApp.iOS.StaticLibrary` Tento projekt vytvoří balíček sestavení, který se přenese do vašeho počítače Mac pomocí sady Visual Studio a vzdáleného agenta. Při sestavování tohoto projektu Visual Studio pošle soubory a příkazy k sestavení a nasazení vaší aplikace na Macu.
+- `MyOpenGLESApp.iOS.Application` obsahuje kód prostředky a cíl-C připevnit k vytvoření aplikace pro iOS, která odkazuje na C++ kód statické knihovny v `MyOpenGLESApp.iOS.StaticLibrary`. Tento projekt vytvoří balíček sestavení, který se přenese do vašeho počítače Mac pomocí sady Visual Studio a vzdáleného agenta. Při sestavování tohoto projektu Visual Studio pošle soubory a příkazy k sestavení a nasazení vaší aplikace na Macu.
 
 ## <a name="build-and-run-the-android-app"></a>Sestavení a spuštění aplikace pro Android
 
@@ -103,7 +103,7 @@ Nové řešení aplikace OpenGL ES zahrnuje tři projekty knihovny a dva aplika�
 
    Pokud máte nainstalované další emulátory nebo zařízení s Androidem, můžete je vybrat v rozevíracím seznamu cíl nasazení. Aby bylo možné aplikaci spustit, musí být sestavená platforma řešení shodná s platformou cílového zařízení.
 
-1. Stisknutím klávesy F5 spusťte ladění, nebo stisknutím klávesy Shift + F5 spusťte bez ladění.
+1. Stisknutím klávesy **F5** spusťte ladění, nebo stisknutím **klávesy SHIFT** +**F5** spusťte bez ladění.
 
    Visual Studio spustí emulátor, což trvá několik sekund, než se načte a nasadí váš kód. Tady je postup, jak se aplikace zobrazí v emulátoru:
 
@@ -111,7 +111,7 @@ Nové řešení aplikace OpenGL ES zahrnuje tři projekty knihovny a dva aplika�
 
    Po spuštění aplikace můžete nastavit zarážky a použít ladicí program ke krokování kódu, kontrole místních hodnot a sledování hodnot.
 
-1. Pro zastavení ladění stiskněte **SHIFT**+**F5** .
+1. Stisknutím klávesy **Shift** +**F5** zastavíte ladění.
 
    Emulátor je samostatný proces, který pokračuje v běhu. Kód můžete upravovat, kompilovat a nasazovat několikrát do stejného emulátoru. Vaše aplikace se zobrazí v kolekci aplikací na emulátoru a je možné ji spustit přímo.
 
@@ -127,7 +127,7 @@ Pokud chcete nasadit aplikaci pro iOS do zařízení se systémem iOS, musíte t
 
 ### <a name="to-set-up-automatic-signing-on-xcode"></a>Nastavení automatického podepisování v Xcode
 
-1. Pokud jste to ještě neudělali, nainstalujte na Macu [Xcode](https://developer.apple.com/xcode/downloads/) verze 10.2.1 nebo novější.
+1. Pokud jste to ještě neudělali, nainstalujte [Xcode](https://developer.apple.com/xcode/) na Mac.
 
 1. Otevřete aplikaci Xcode na Macu.
 
@@ -135,7 +135,7 @@ Pokud chcete nasadit aplikaci pro iOS do zařízení se systémem iOS, musíte t
 
 1. Přidejte své Apple ID, které je zaregistrované v účtu [Apple Developer program](https://developer.apple.com/programs/) , do Xcode. Vaše Apple ID se používá jako podpisová identita k podepisování aplikací. Chcete-li přidat podpisovou identitu v Xcode, otevřete nabídku **Xcode** a vyberte možnost **Předvolby**. Vyberte **účty** a kliknutím na tlačítko Přidat (+) přidejte svoje Apple ID. Podrobné pokyny najdete v tématu [Přidání vašeho účtu Apple ID](https://help.apple.com/xcode/mac/current/#/devaf282080a).
 
-1. V nastavení "Obecné" projektu Xcode změňte hodnotu **identifikátoru sady prostředků** na `com.<NameOfVSProject>`, kde `<NameOfVSProject>` je stejný název jako projekt řešení sady Visual Studio, který jste vytvořili. Například pokud jste vytvořili projekt s názvem `MyOpenGLESApp` v sadě Visual Studio, nastavte **identifikátor sady** na. `com.MyOpenGLESApp`
+1. V nastavení "Obecné" projektu Xcode změňte hodnotu **identifikátoru sady prostředků** na `com.<NameOfVSProject>`, kde `<NameOfVSProject>` je stejný název jako projekt řešení sady Visual Studio, který jste vytvořili. Pokud jste například vytvořili projekt s názvem `MyOpenGLESApp` v sadě Visual Studio, nastavte **identifikátor sady prostředků** na `com.MyOpenGLESApp`.
 
    ![Identifikátor Xcode sady prostředků](../cross-platform/media/cppmdd-opengles-iosxcodeid.png "CPPMDD_OpenGLES_iOSXcodeId")
 
@@ -149,7 +149,7 @@ Pokud chcete nasadit aplikaci pro iOS do zařízení se systémem iOS, musíte t
 
 ### <a name="to-build-and-run-the-ios-app-on-an-ios-device"></a>Sestavení a spuštění aplikace pro iOS na zařízení s iOS
 
-1. Spusťte na Macu vzdálený agent a ověřte, že je Visual Studio spárováno se vzdáleným agentem. Vzdálený agent spustíte tak, že otevřete okno aplikace Terminal a zadáte `vcremote`. Další informace najdete v tématu [Konfigurace vzdáleného agenta v aplikaci Visual Studio](../cross-platform/install-and-configure-tools-to-build-using-ios.md#ConfigureVS).
+1. Spusťte na Macu vzdálený agent a ověřte, že je Visual Studio spárováno se vzdáleným agentem. Vzdálený agent spustíte tak, že otevřete okno terminálu aplikace a zadáte `vcremote`. Další informace najdete v tématu [Konfigurace vzdáleného agenta v aplikaci Visual Studio](../cross-platform/install-and-configure-tools-to-build-using-ios.md#ConfigureVS).
 
    ![Okno terminálu Mac se systémem vcremote](../cross-platform/media/cppmdd_common_vcremote.png "CPPMDD_common_vcremote")
 
@@ -161,11 +161,11 @@ Pokud chcete nasadit aplikaci pro iOS do zařízení se systémem iOS, musíte t
 
 1. V Průzkumník řešení otevřete místní nabídku pro projekt MyOpenGLESApp. iOS. Application a kliknutím na **Uvolnit projekt** uvolněte projekt.
 
-1. Znovu otevřete místní nabídku pro projekt MyOpenGLESApp. iOS. Application a vyberte **upravit projekt. pbxproj** a upravte soubor projektu. V souboru vyhledejte `buildSettings` atribut a přidejte `DEVELOPMENT_TEAM` ho pomocí Apple Team ID. `project.pbxproj` Níže uvedený snímek obrazovky ukazuje příklad hodnoty `123456ABC` pro ID týmu Apple. Hodnotu ID Apple Team můžete najít z Xcode. Přejděte na **nastavení sestavení** a najeďte myší na název vývojového týmu, abyste zobrazili popis. Popisek zobrazuje vaše ID týmu.
+1. Znovu otevřete místní nabídku pro projekt MyOpenGLESApp. iOS. Application a vyberte **upravit projekt. pbxproj** a upravte soubor projektu. V souboru `project.pbxproj` vyhledejte atribut `buildSettings` a přidejte `DEVELOPMENT_TEAM` pomocí ID Apple Team. Níže uvedený snímek obrazovky ukazuje příklad hodnoty `123456ABC` pro ID týmu Apple. Hodnotu ID Apple Team můžete najít z Xcode. Přejděte na **nastavení sestavení** a najeďte myší na název vývojového týmu, abyste zobrazili popis. Popisek zobrazuje vaše ID týmu.
 
    ![Nastavit vývojový tým](../cross-platform/media/cppmdd-opengles-iosdevelopmentteam.png "CPPMDD_OpenGLES_iOSDevelopmentTeam")
 
-1. Zavřete soubor a pak otevřete místní nabídku pro nenačtený projekt MyOpenGLESApp. iOS. Application a zvolte možnost **znovu načíst projekt** a znovu načíst projekt. `project.pbxproj`
+1. Zavřete soubor `project.pbxproj` a pak otevřete místní nabídku pro nenačtený projekt MyOpenGLESApp. iOS. Application a zvolte možnost **znovu načíst projekt** a znovu načíst projekt.
 
 1. Nyní Sestavte projekt MyOpenGLESApp. iOS. Application tak, že otevřete místní nabídku pro projekt a zvolíte možnost **sestavit**.
 
@@ -175,7 +175,7 @@ Pokud chcete nasadit aplikaci pro iOS do zařízení se systémem iOS, musíte t
 
    Na počítači Mac se může zobrazit výzva, abyste povolili kodesign pro přístup k řetězci klíčů. Pokračujte **výběrem možnosti** pokračovat.
 
-1. Vyberte zařízení s iOS na panelu nástrojů a spusťte aplikaci na svém zařízení připojeném k počítači Mac. Pokud se aplikace nespustí, ověřte, že zařízení uděluje oprávnění k tomu, aby se vaše nasazená aplikace spustila na zařízení. Toto oprávnění můžete nastavit tak, že v zařízení nasadíte na **Nastavení** > **Obecné** > **Správa zařízení** . Vyberte svůj účet aplikace pro vývojáře, důvěřovat účtu a ověřte aplikaci. Zkuste znovu spustit aplikaci ze sady Visual Studio.
+1. Vyberte zařízení s iOS na panelu nástrojů a spusťte aplikaci na svém zařízení připojeném k počítači Mac. Pokud se aplikace nespustí, ověřte, že zařízení uděluje oprávnění k tomu, aby se vaše nasazená aplikace spustila na zařízení. Toto oprávnění můžete nastavit tak, že v zařízení nasadíte na **nastavení**  > **Obecné**  > **správu zařízení** . Vyberte svůj účet aplikace pro vývojáře, důvěřovat účtu a ověřte aplikaci. Zkuste znovu spustit aplikaci ze sady Visual Studio.
 
    ![aplikace pro iOS na zařízení s iOS](../cross-platform/media/cppmdd-opengles-iosdevice.png "CPPMDD_OpenGLES_iOSDevice")
 
@@ -183,15 +183,15 @@ Pokud chcete nasadit aplikaci pro iOS do zařízení se systémem iOS, musíte t
 
    ![Ladicí program na zarážce v aplikaci iOS](../cross-platform/media/cppmdd_opengles_iosdebug.png "CPPMDD_OpenGLES_iOSDebug")
 
-1. Pro zastavení ladění stiskněte **SHIFT**+**F5** .
+1. Stisknutím klávesy **Shift** +**F5** zastavíte ladění.
 
-   Vygenerovaná projekty aplikace a knihovny pro iOS vloží C++ kód do statické knihovny, která implementuje pouze sdílený kód. Většina kódu aplikace je v `Application` projektu. Volání do kódu sdílené knihovny v tomto projektu šablony jsou vytvořena v souboru *GameViewController. m* . Sada Visual Studio při sestavování aplikace pro iOS používá sadu nástrojů Xcode Platform, která vyžaduje komunikaci se vzdáleným klientem, který běží na Macu.
+   Vygenerovaná projekty aplikace a knihovny pro iOS vloží C++ kód do statické knihovny, která implementuje pouze sdílený kód. Většina kódu aplikace je v projektu `Application`. Volání do kódu sdílené knihovny v tomto projektu šablony jsou vytvořena v souboru *GameViewController. m* . Sada Visual Studio při sestavování aplikace pro iOS používá sadu nástrojů Xcode Platform, která vyžaduje komunikaci se vzdáleným klientem, který běží na Macu.
 
    Visual Studio přenáší soubory projektu a pošle příkazy do vzdáleného klienta k sestavení aplikace pomocí Xcode. Vzdálený klient odesílá informace o stavu sestavení zpět do sady Visual Studio. Po úspěšném vytvoření aplikace můžete pomocí sady Visual Studio odeslat příkazy ke spuštění a ladění aplikace. Ladicí program v aplikaci Visual Studio řídí aplikaci spuštěnou na zařízení s iOS připojenou k vašemu počítači Mac. Visual Studio mapuje vlastnosti v projektu StaticLibrary na možnosti, které se používají ke kompilaci, propojení a ladění na cílové platformě iOS. Pro podrobnosti o možnosti příkazového řádku kompilátoru otevřete dialogové okno **stránky vlastností** pro projekt MyOpenGLESApp. iOS. StaticLibrary.
 
 ## <a name="customize-your-apps"></a>Přizpůsobení aplikací
 
-Můžete upravit sdílený C++ kód a přidat nebo změnit běžné funkce. Je nutné změnit volání na sdílený kód v `MyOpenGLESApp.Android.NativeActivity` projektech a `MyOpenGLESApp.iOS.Application` , aby odpovídaly. Makra preprocesoru můžete použít k určení sekcí specifických pro platformu v rámci společného kódu. Makro `__ANDROID__` preprocesoru je předdefinované při sestavování pro Android. Makro `__APPLE__` preprocesoru je předdefinované při sestavení pro iOS.
+Můžete upravit sdílený C++ kód a přidat nebo změnit běžné funkce. Je nutné změnit volání na sdílený kód v `MyOpenGLESApp.Android.NativeActivity` a `MyOpenGLESApp.iOS.Application` projektů, aby odpovídaly. Makra preprocesoru můžete použít k určení sekcí specifických pro platformu v rámci společného kódu. @No__t_0 makra preprocesoru je předdefinovaná při sestavování pro Android. @No__t_0 makra preprocesoru je předdefinovaná při sestavování pro iOS.
 
 Chcete-li zobrazit technologii IntelliSense pro konkrétní platformu projektu, vyberte projekt v rozevíracím seznamu přepínačů kontextu v navigačním panelu v horní části okna editoru.
 

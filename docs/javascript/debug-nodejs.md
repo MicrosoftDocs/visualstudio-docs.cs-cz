@@ -1,6 +1,6 @@
 ---
-title: Ladění aplikace v jazyce JavaScript nebo TypeScript
-description: Visual Studio poskytuje podporu pro ladění aplikací jazyka JavaScript a TypeScript v sadě Visual Studio
+title: Ladění JavaScriptu nebo aplikace TypeScriptu
+description: Visual Studio poskytuje podporu pro ladění aplikací JavaScript a TypeScript v aplikaci Visual Studio.
 ms.date: 12/03/2018
 ms.topic: conceptual
 ms.devlang: javascript
@@ -11,49 +11,49 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 978313276865c15672a129db601543a0ca307d5b
-ms.sourcegitcommit: 117ece52507e86c957a5fd4f28d48a0057e1f581
+ms.openlocfilehash: 47f709ae086a32c0680fca060744898251a76afd
+ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263035"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72589137"
 ---
-# <a name="debug-a-javascript-or-typescript-app-in-visual-studio"></a>Ladění aplikací v jazyce JavaScript nebo TypeScript v sadě Visual Studio
+# <a name="debug-a-javascript-or-typescript-app-in-visual-studio"></a>Ladění JavaScriptu nebo aplikace TypeScriptu v aplikaci Visual Studio
 
-Můžete ladit JavaScript a TypeScript kódu pomocí sady Visual Studio. Můžete nastavit a dosažení zarážky, připojení ladicího programu, kontrolovat proměnné, zobrazení zásobníku volání a používat další funkce ladění.
+Pomocí sady Visual Studio můžete ladit kód JavaScript a TypeScript. Můžete nastavit a spustit zarážky, připojit ladicí program, kontrolovat proměnné, zobrazit zásobník volání a používat další funkce ladění.
 
 > [!TIP]
-> Pokud jste ještě nenainstalovali aplikaci Visual Studio, přejděte [soubory ke stažení Visual Studio](https://visualstudio.microsoft.com/downloads/) stránku a nainstalovat zdarma. V závislosti na typu vývoj aplikací, které vám to jde, budete muset nainstalovat **úlohy pro vývoj Node.js** pomocí sady Visual Studio.
+> Pokud jste ještě nenainstalovali Visual Studio, navštivte stránku [ke stažení pro Visual Studio](https://visualstudio.microsoft.com/downloads/) a nainstalujte si ji zdarma. V závislosti na typu vývoje aplikací budete možná muset nainstalovat **vývojovou úlohu Node. js** pomocí sady Visual Studio.
 
-## <a name="debug-server-side-script"></a>Ladění skriptů na straně serveru
+## <a name="debug-server-side-script"></a>Ladění skriptu na straně serveru
 
-1. S svůj projekt otevřít v sadě Visual Studio, otevřete soubor jazyka JavaScript na straně serveru (například *server.js*), klikněte na ovládací prvek na levém hřbetu nastavit zarážku:
+1. Otevřete projekt v sadě Visual Studio tak, že otevřete soubor JavaScriptu na straně serveru (například *Server. js*), kliknete na hřbet na levé straně a nanastavíte zarážku:
 
     ![Nastavení zarážky](../javascript/media/tutorial-nodejs-react-set-breakpoint.png)
 
     Zarážky jsou základní a nejjednodušší funkcí spolehlivého ladění. Zarážka určuje, kde má Visual Studio spuštěný kód pozastavit, abyste mohli zkontrolovat hodnoty proměnných či chování paměti, nebo abyste zjistili, jestli se nějaká větev kódu spouští.
 
-1. Ke spuštění vaší aplikace, stiskněte klávesu **F5** (**ladění** > **spustit ladění**).
+1. Pokud chcete aplikaci spustit, stiskněte klávesu **F5** **(ladění**  > **Spustit ladění**).
 
     Ladicí program se pozastaví na zarážce, kterou jste nastavili (aktuální příkaz je označený žlutě). Teď můžete stav aplikace zkontrolovat tak, že přesunete ukazatel myši nad proměnné v aktuálním rozsahu a použijete okna ladicího programu, například okna **Místní hodnoty** a **Kukátko**.
 
 1. Pokud chcete pokračovat v aplikaci, stiskněte **F5**.
 
-1. Pokud chcete použít nástroje pro vývojáře v chromu nebo F12 Tools, stiskněte **F12**. Pomocí těchto nástrojů můžete prozkoumat model DOM a provádět interakce s aplikací pomocí konzoly jazyka JavaScript.
+1. Pokud chcete použít Vývojářské nástroje nebo nástroje F12, stiskněte klávesu **F12**. Pomocí těchto nástrojů můžete prozkoumat model DOM a provádět interakce s aplikací pomocí konzoly jazyka JavaScript.
 
-## <a name="debug-client-side-script"></a>Ladění skriptů na straně klienta
+## <a name="debug-client-side-script"></a>Ladění skriptu na straně klienta
 
-Visual Studio poskytuje podporu ladění pro Chrome a Internet Explorer pouze. V některých případech ladicí program automaticky narazí na zarážky v kódu jazyka JavaScript a TypeScript a vložené skripty na soubory ve formátu HTML.
+Visual Studio poskytuje podporu ladění pro Chrome a Internet Explorer. V některých scénářích ladicí program automaticky narazí na zarážky v kódu JavaScript a TypeScript a v vložených skriptech v souborech HTML.
 
-Pokud váš zdroj minifikovaný nebo vytvořené transpiler jako TypeScript nebo Babel, použití [zdrojového mapování](#generate_sourcemaps) se vyžaduje k zajištění nejlepšího prostředí ladění. Bez zdrojových mapování může pořád připojit ladicí modul k spuštění klientský skript. Ale může pouze budete moci nastavit a dosažení zarážky v souboru minifikovaný nebo transpiled, ne na původní zdrojový soubor. V aplikaci pro Vue.js, například minifikovaný skriptu bude předána jako řetězec `eval` příkaz, a neexistuje žádný způsob, jak projít tento kód efektivně pomocí ladicího programu sady Visual Studio, pokud nechcete použít zdrojových mapování. V některých komplexní scénáře ladění může také použít nástroje pro vývojáře v chromu nebo F12 Tools pro Microsoft Edge.
+Pokud je váš zdroj minifikovaného nebo vytvořen pomocí nástroje pro vyvýšení, jako je TypeScript nebo Babel, je pro nejlepší ladění nutné použít [zdrojové mapy](#generate_sourcemaps) . Bez map zdrojového kódu můžete ladicí program připojit ke spuštěnému skriptu na straně klienta. Je však možné pouze nastavit a spustit zarážky v souboru minifikovaného nebo provedený soubor, nikoli v původním zdrojovém souboru. Například v aplikaci Vue. js se skript minifikovaného předává jako řetězec do příkazu `eval` a neexistuje žádný způsob, jak tento kód efektivně Krokovat pomocí ladicího programu sady Visual Studio, pokud nepoužíváte zdrojové mapy. V některých složitých scénářích ladění můžete také použít nástroje Chrome Vývojářské nástroje nebo F12 pro Microsoft Edge.
 
-Připojit ladicí program sady Visual Studio a dosažení zarážky v kódu na straně klienta, ladicí program obvykle potřebuje nápovědu k identifikaci správný proces. Tady je jeden způsob, jak povolit použití Chrome.
+Chcete-li připojit ladicí program ze sady Visual Studio a zarážky volání v kódu na straně klienta, ladicí program obvykle potřebuje k identifikaci správného procesu. Tady je jeden ze způsobů, jak to povolit pomocí Chrome.
 
-### <a name="attach-the-debugger-to-client-side-script-using-chrome"></a>Připojit ladicí modul k skriptu na straně klienta s použitím Chrome
+### <a name="attach-the-debugger-to-client-side-script-using-chrome"></a>Připojení ladicího programu ke skriptu na straně klienta pomocí Chrome
 
 1. Zavřete všechna okna Chromu.
 
-    Tato akce je nutné před spuštěním Chrome v režimu ladění.
+    Tuto akci je nutné provést, aby bylo možné spustit Chrome v režimu ladění.
 
 2. Otevřete příkaz **Spustit** z tlačítka Windows **Start** (klikněte na něj pravým tlačítkem a zvolte **Spustit**) a zadejte následující příkaz:
 
@@ -64,68 +64,70 @@ Připojit ladicí program sady Visual Studio a dosažení zarážky v kódu na s
     ::: moniker range=">=vs-2019"
 
     > [!NOTE]
-    > Můžete také nastavit `--remote-debugging-port` příznak při spuštění prohlížeče tak, že vyberete **procházet s...**  > z **ladění** nástrojů, výběrem **přidat**a pak nastavení příznaku **argumenty** pole. Použít jiný popisný název pro prohlížeč například **Chrome s ladění**. Podrobnosti najdete v tématu [zpráva k vydání verze](https://docs.microsoft.com/visualstudio/releases/2019/release-notes-preview).
+    > Příznak `--remote-debugging-port` můžete nastavit také při spuštění prohlížeče, a to tak, že na panelu nástrojů **ladění** vyberete **Procházet pomocí...** > a pak zvolíte **Přidat**a pak nastavíte příznak v poli **argumenty** . Použijte jiný popisný název prohlížeče, jako je například **Chrome s laděním**. Podrobnosti najdete v [poznámkách k verzi](https://docs.microsoft.com/visualstudio/releases/2019/release-notes-preview).
 
     ::: moniker-end
 
-3. Přepněte do aplikace Visual Studio a nastavte zarážku ve zdrojovém kódu. (Nastavit zarážku do řádku kódu, který umožňuje zarážky, jako například `return` příkazu nebo `var` prohlášení).
+3. Přepněte do sady Visual Studio a nastavte zarážku ve zdrojovém kódu. (Nastavte zarážku na řádek kódu, který umožňuje zarážky, jako je například příkaz `return` nebo deklarace `var`).
 
     ![Nastavení zarážky](../javascript/media/tutorial-nodejs-react-set-breakpoint-client-code.png)
 
-    Pokud potřebujete vyhledat konkrétní kód ve velké a vygenerovaný soubor, použijte **Ctrl**+**F** (**upravit** > **najít a nahradit**  >  **Rychle najít**).
+    Pokud potřebujete najít konkrétní kód ve velkém, vygenerovaném souboru, použijte **Ctrl** +**F** (**upravit**  > **Najít a nahradit**  > **Rychlé hledání**).
 
 4. Jako cíl ladění je v sadě Visual Studio vybraný Chrome. Stisknutím **Ctrl**+**F5** (**Ladit** > **Spustit bez ladění**) spusťte aplikaci v prohlížeči.
 
     Aplikace se otevře na nové kartě prohlížeče.
 
-    Pokud je k dispozici na svém počítači Chrome, ale nezobrazí jako možnost, zvolte **procházet s** z rozevíracího seznamu cíl ladění a jako cíl výchozí prohlížeč vybrat Chrome (zvolte **nastavit jako výchozí**).
+    Pokud je v počítači k dispozici Chrome, ale nezobrazuje se jako možnost, zvolte **Procházet pomocí** v rozevíracím seznamu cíl ladění a jako výchozí cíl prohlížeče vyberte Chrome (zvolte **nastavit jako výchozí**).
 
 5. Zvolte **Ladit** > **Připojit k procesu**.
 
-6. V **připojit k procesu** dialogového okna zvolte **komponenty WebKit kód** v **připojit k** zadejte **chrome** v poli filtru pro filtrování výsledky hledání.
+6. V dialogovém okně **připojit k procesu** vyberte v poli **připojit k** možnost **WebKit Code** (připojit k), do pole Filtr zadejte **Chrome** a vyfiltrujte výsledky hledání.
 
-    **Kód komponenty WebKit** je požadovaná hodnota pro Chrome, což je prohlížeče na základě Webkit.
+    **WebKit kód** je požadovaná hodnota pro Chrome, což je prohlížeč založený na WebKit.
 
-7. Vyberte zpracování Chrome pomocí správného hostitele, portu (1337 na tomto obrázku) a vyberte **připojit**.
+7. Vyberte proces Chrome se správným portem hostitele (1337 na tomto obrázku) a vyberte **připojit**.
 
     ![Připojení k procesu](../javascript/media/tutorial-nodejs-react-attach-to-process.png)
 
-    Pokud se v sadě Visual Studio otevřely Průzkumník modelu DOM a konzola jazyka JavaScript, je ladicí program správně připojený. Tyto nástroje pro ladění jsou podobné Chrome vývojářské nástroje a nástrojích F12 Tools pro Microsoft Edge.
+    ::: moniker range="vs-2017"
+    Pokud se v sadě Visual Studio otevřely Průzkumník modelu DOM a konzola jazyka JavaScript, je ladicí program správně připojený. Tyto ladicí nástroje jsou podobné nástrojům Chrome Vývojářské nástroje a F12 pro Microsoft Edge.
+    ::: moniker-end
 
     > [!NOTE]
-    > Pokud se ladicí program nepřipojí a zobrazí se zpráva „Nelze připojit k procesu. Operace není platný v aktuálním stavu", použijte Správce úloh zavřete všechny instance chromu před zahájením Chrome v režimu ladění. Můžou být spuštěná rozšíření Chromu, která brání plnému režimu ladění.
+    > Pokud se ladicí program nepřipojí a zobrazí se zpráva „Nelze připojit k procesu. Operace není v aktuálním stavu platná, pomocí Správce úloh zavřete všechny instance Chromu před spuštěním stylu okolí v režimu ladění. Můžou být spuštěná rozšíření Chromu, která brání plnému režimu ladění.
 
-8. Pokud kód se zarážkou již spuštěn, aktualizujte stránku vašeho prohlížeče k zarážce.
+8. Pokud kód se zarážkou už provedený, aktualizujte stránku prohlížeče, aby se dosáhlo zarážky.
 
     Při pozastavení můžete v ladicím programu zkontrolovat stav aplikace tak, že přesunete ukazatel myši nad proměnné a použijete okna ladicího programu. Můžete v ladicím programu procházet kód pomocí krokování (**F5**, **F10** a **F11**).
 
-    Pro minifikovaný nebo transpiled jazyka JavaScript, můžete narazit na zarážce v buď transpiled JavaScript nebo její namapované umístění v souboru TypeScript (pomocí zdrojových mapování), v závislosti na stavu vašeho prostředí a prohlížeče. V obou případech můžete procházet kód pomocí krokování a zkoumat proměnné.
+    Pro minifikovaného nebo převedený jazyk JavaScript můžete v souboru TypeScript (pomocí map zdroje) použít zarážku buď na rozdrobnějším JavaScriptu, nebo na jeho mapované umístění (pomocí mapování zdrojového kódu), a to v závislosti na vašem prostředí a stavu prohlížeče. V obou případech můžete procházet kód pomocí krokování a zkoumat proměnné.
 
-    * Pokud potřebujete proniknout do kódu v souboru TypeScript a nemůžou to udělat, použijte **připojit k procesu** jak je popsáno v předchozích krocích připojení ladicího programu. Pak otevřete dynamicky generovaný soubor TypeScript z Průzkumníka řešení tak, že otevřete **dokumenty skriptu** > **filename.tsx**, nastavte zarážku a aktualizujte stránku v prohlížeči (nastavit Zarážka v řádku kódu, který umožňuje zarážky, například `return` příkaz nebo `var` prohlášení).
+    * Pokud potřebujete přerušit kód v souboru TypeScript a nemůžete ho provést, použijte příkaz **připojit k procesu** , jak je popsáno v předchozích krocích pro připojení ladicího programu. Pak otevřete dynamicky vygenerovaný soubor TypeScript z Průzkumník řešení otevřením **dokumentů skriptu**  > **filename. TSX**, nastavte zarážku a aktualizujte stránku v prohlížeči (nastavte zarážku na řádek kódu, který umožňuje zarážky, Například příkaz `return` nebo deklarace `var`).
 
-        Případně, pokud potřebujete proniknout do kódu v souboru TypeScript a nejde provést, použijte `debugger;` výroky TypeScript souboru, nebo místo toho nastavte zarážky v Chrome Developer Tools.
+        Případně, pokud potřebujete přerušit kód v souboru TypeScript a nemůžete to provést, zkuste použít příkaz `debugger;` v souboru TypeScript nebo nastavte zarážky v Vývojářské nástroje Chrome.
 
-    * Pokud potřebujete proniknout do kódu v souboru jazyka JavaScript transpiled (například *aplikace bundle.js*) a nemůžou to udělat, odeberte soubor zdrojového mapování *filename.js.map*.
+    * Pokud potřebujete přerušit kód v souboru JavaScriptu (například *App-Bundle. js*) a nemůžete ho provést, odeberte zdrojový soubor mapování souboru *filename. js. map*.
 
      > [!TIP]
-     > Po připojení k procesu první přihlášení pomocí následujících kroků, můžete rychle znovu připojit do stejného procesu výběrem **ladění** > **znovu připojit k procesu**.
+     > Po prvním připojení k procesu pomocí následujícího postupu se můžete rychle znovu připojit ke stejnému procesu výběrem možnosti **ladění**  >  znovu**připojit k procesu**.
 
-## <a name="generate_sourcemaps"></a> Generovat zdrojová mapování pro ladění
+## <a name="generate_sourcemaps"></a>Generovat zdrojové mapování pro ladění
 
-Visual Studio poskytuje možnost používat a generovat zdrojová mapování na zdrojové soubory jazyka JavaScript. To je často potřeba, pokud zdrojem je minifikovaný nebo vytvořené transpiler jako TypeScript nebo Babel. Dostupné možnosti závisí na typu projektu.
+Visual Studio má možnost používat a generovat zdrojové mapy ve zdrojových souborech JavaScriptu. To se často vyžaduje v případě, že je váš zdroj minifikovaného nebo vytvořen pomocí proBabelho, jako je TypeScript nebo. Dostupné možnosti závisí na typu projektu.
 
-* Ve výchozím nastavení projekt TypeScript v sadě Visual Studio generuje zdrojových mapování za vás.
+* Projekt TypeScript v aplikaci Visual Studio vygeneruje ve výchozím nastavení zdroje mapování.
 
-* V projektu jazyka JavaScript potřebujete generovat zdrojová mapování například položky bundler jako webpacku a kompilátoru jako kompilátor TypeScript (nebo v Babel), které můžete přidat do projektu. Pro kompilátor TypeScript, musíte taky přidat *tsconfig.json* souboru. Příklad, který ukazuje, jak to udělat pomocí webpacku základní konfigurace, najdete v části [vytvoření aplikace Node.js pomocí React](../javascript/tutorial-nodejs-with-react-and-jsx.md).
+* V projektu JavaScriptu potřebujete generovat zdrojová mapování pomocí sady prostředků, jako je například Webpack, a kompilátoru, jako je například kompilátor TypeScript (nebo Babel), které můžete přidat do projektu. Pro kompilátor TypeScript musíte také přidat soubor *tsconfig. JSON* . Příklad, který ukazuje, jak to provést pomocí základní konfigurace sady Webpack, najdete v tématu [Vytvoření aplikace v Node. js s odpověďmi](../javascript/tutorial-nodejs-with-react-and-jsx.md).
 
 > [!NOTE]
-> Pokud jste ještě zdrojových mapování, přečtěte si prosím [Úvod do jazyka JavaScript zdrojového mapování](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/) než budete pokračovat.
+> Pokud začínáte se zdrojovými mapami, přečtěte si [Úvod do zdrojového mapování JavaScriptu](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/) , než budete pokračovat.
 
-Konfigurace rozšířených nastavení zdrojových mapování, použijte buď *tsconfig.json* nebo nastavení projektu na projekt TypeScript, ale ne obojí.
+Pro konfiguraci rozšířených nastavení pro zdrojové mapy použijte buď *tsconfig. JSON* , nebo nastavení projektu v projektu TypeScript, ale ne obojí.
 
-### <a name="configure-source-maps-using-a-tsconfigjson-file"></a>Konfigurovat pomocí souboru tsconfig.json zdrojových mapování
+### <a name="configure-source-maps-using-a-tsconfigjson-file"></a>Konfigurace zdrojových mapování pomocí souboru tsconfig. JSON
 
-Pokud chcete přidat *tsconfig.json* soubor do projektu sady Visual Studio považuje za kořenový adresář projektu TypeScript. Chcete-li přidat soubor, klikněte pravým tlačítkem na projekt v Průzkumníku řešení a zvolte **Přidat > Nová položka > Web > Skripty > konfiguračního souboru JSON TypeScript**. A *tsconfig.json* souboru jako následující přidá do vašeho projektu.
+Pokud do projektu přidáte soubor *tsconfig. JSON* , Visual Studio považuje kořen adresáře za projekt TypeScript. Chcete-li přidat soubor, klikněte pravým tlačítkem myši na projekt v Průzkumník řešení a pak zvolte **přidat > nová položka > skripty webu > > konfigurační soubor TYPESCRIPT JSON**. Do vašeho projektu se přidá soubor *tsconfig. JSON* podobný následujícímu.
 
 ```json
 {
@@ -143,40 +145,40 @@ Pokud chcete přidat *tsconfig.json* soubor do projektu sady Visual Studio pova�
 }
 ```
 
-#### <a name="compiler-options-for-tsconfigjson"></a>Možnosti kompilátoru pro tsconfig.json
+#### <a name="compiler-options-for-tsconfigjson"></a>Možnosti kompilátoru pro tsconfig. JSON
 
-* **inlineSourceMap**: Vygeneruje jediný soubor se zdrojovými mapováními namísto vytvoření samostatného zdrojového mapování pro každý zdrojový soubor.
-* **inlineSources**: Vygeneruje zdroj spolu zdrojových mapování v rámci jednoho souboru; vyžaduje *inlineSourceMap* nebo *zdrojového mapování* nastavit.
-* **mapRoot**: Určuje umístění, kde by měl ladicí program najít zdrojové mapovámí ( *.map*) místo výchozího umístění souborů. Pomocí tohoto příznaku, pokud doba běhu *.map* soubory musí mít v jiném umístění než *js* soubory. Zadané umístění je součástí mapování zdroje pro přesměrování ladicí program na umístění *.map* soubory.
-* **sourceMap**: Generuje odpovídající *.map* souboru.
-* **sourceRoot**: Určuje umístění, kde by měl ladicí program najít soubory TypeScript namísto umístění zdroje. Tento příznak použijte, pokud za běhu zdroje musí být v jiném umístění než umístění v době návrhu. Zadané umístění se vloží do zdrojové mapovámí ke směrování ladicího programu k umístění zdrojových souborů.
+* **inlineSourceMap**: vygenerujte jeden soubor se zdrojovými mapami místo vytvoření samostatného zdrojového mapování pro každý zdrojový soubor.
+* **inlineSources**: emituje zdroj společně se zdrojovými mapami v rámci jednoho souboru; vyžaduje, aby byl nastaven *inlineSourceMap* nebo *sourceMap* .
+* **mapRoot**: Určuje umístění, kde má ladicí program najít soubory zdrojového mapování ( *. map*) místo výchozího umístění. Tento příznak použijte v případě, že soubory run-time *. map* musí být v jiném umístění než soubory *. js* . Zadané umístění je vložené ve zdrojovém mapování pro přesměrování ladicího programu do umístění souborů *. map* .
+* **sourceMap**: vygeneruje odpovídající soubor *. map* .
+* **sourceRoot**: Určuje umístění, kde by měl ladicí program najít soubory TypeScript místo zdrojových umístění. Tento příznak použijte v případě, že se zdroje za běhu musí nacházet v jiném umístění, než je umístění v době návrhu. Zadané umístění je vložené ve zdrojovém mapování pro přesměrování ladicího programu na místo, kde jsou umístěny zdrojové soubory.
 
-Další informace o možnostech kompilátoru, najdete na stránce [– možnosti kompilátoru](https://www.typescriptlang.org/docs/handbook/compiler-options.html) na příručka TypeScript.
+Další podrobnosti o možnostech kompilátoru najdete v [možnostech kompilátoru](https://www.typescriptlang.org/docs/handbook/compiler-options.html) na stránce v příručce TypeScript.
 
 ### <a name="configure-source-maps-using-project-settings"></a>Konfigurace zdrojových mapování pomocí nastavení projektu
 
-Můžete také nakonfigurovat nastavení mapování zdroje pomocí vlastnosti projektu tak, že pravým tlačítkem myši projekt a následným výběrem možnosti **projektu > Vlastnosti > sestavení TypeScript > ladění**.
+Můžete také nakonfigurovat nastavení mapování zdrojového kódu pomocí vlastností projektu kliknutím pravým tlačítkem myši na projekt a následným výběrem **Vlastnosti projektu > >m ladění TypeScript Build >** .
 
 Tato nastavení projektu jsou k dispozici.
 
-* **Generovat zdrojová mapování** (ekvivalentní **zdrojového mapování** v *tsconfig.json*): Generuje odpovídající *.map* souboru.
-* **Zadat kořenový adresář zdrojových mapování** (ekvivalentní **mapRoot** v *tsconfig.json*): Určuje umístění, kde by měl ladicí program najít soubory mapy namísto generovaných umístění. Pomocí tohoto příznaku, pokud doba běhu *.map* soubory musí být umístěné v jiném umístění než souborů .js. Zadané umístění se vloží do zdrojové mapovámí ke směrování ladicího programu k umístění souborů mapy.
-* **Zadat kořenový adresář souborů TypeScript** (ekvivalentní **sourceRoot** v *tsconfig.json*): Určuje umístění, kde by měl ladicí program najít soubory TypeScript namísto umístění zdroje. Tento příznak použijte, pokud za běhu zdrojové soubory musí být v jiném umístění než umístění v době návrhu. Zadané umístění se vloží do zdrojové mapovámí ke směrování ladicího programu k umístění zdrojových souborů.
+* **Generovat zdrojové mapy** (ekvivalentem **sourceMap** v souboru *tsconfig. JSON*): vygeneruje odpovídající soubor *. map* .
+* **Zadat kořenový adresář zdrojových mapování** (ekvivalentem **mapRoot** v souboru *tsconfig. JSON*): Určuje umístění, kde by měl ladicí program najít soubory map místo vygenerovaných umístění. Tento příznak použijte v případě, že soubory run-time *. map* musí být umístěny v jiném umístění než soubory. js. Zadané umístění je vložené ve zdrojovém mapování pro přesměrování ladicího programu na místo, kde jsou umístěny soubory map.
+* **Zadejte kořenový adresář souborů TypeScriptu** (ekvivalentní **sourceRoot** ve *tsconfig. JSON*): Určuje umístění, kde by měl ladicí program najít soubory TypeScript místo zdrojových umístění. Tento příznak použijte v případě, že zdrojové soubory za běhu musí být v jiném umístění než v době návrhu. Zadané umístění je vložené ve zdrojovém mapování pro přesměrování ladicího programu na místo, kde jsou umístěny zdrojové soubory.
 
-## <a name="debug-javascript-in-dynamic-files-using-razor-aspnet"></a>Ladění JavaScriptu v dynamické soubory pomocí syntaxe Razor (ASP.NET)
+## <a name="debug-javascript-in-dynamic-files-using-razor-aspnet"></a>Ladění JavaScriptu v dynamických souborech pomocí Razor (ASP.NET)
 
-Visual Studio poskytuje podporu ladění pro Chrome a Internet Explorer pouze. Zarážky se automaticky připojí JavaScript/TypeScript a vložené skripty na soubory ve formátu HTML.
+Visual Studio poskytuje podporu ladění pro Chrome a Internet Explorer. Automaticky připojí zarážky do JavaScriptu/TypeScript a vložené skripty v souborech HTML.
 
-Ladění dynamicky generované soubory není automatické. Nelze automaticky dosažení zarážky na soubory vygenerované se syntaxí Razor (cshtml, vbhtml). Existují dvě metody, která vám pomůže ladit tento typ souboru:
+Ladění dynamicky generovaných souborů není automatické. V souborech vygenerovaných pomocí syntaxe Razor (cshtml, VBHTML) nemůžete automaticky narazit zarážky. Existují dva přístupy, které můžete použít k ladění tohoto typu souboru:
 
-* **Místo `debugger;` příkazu, ve kterém chcete provést přerušení**: To způsobí, že dynamické skript pro zastavení spuštěného procesu a spustit ladění hned, zatímco se vytváří.
-* **Načtení stránky a dynamické dokument v sadě Visual Studio otevřete**: Je budete potřebovat dynamické otevřít při ladění, nastavte zarážku a aktualizujte stránku pro tuto metodu za účelem práce. V závislosti na tom, jestli používáte Chrome nebo Internet Explorer najdete soubor pomocí jedné z následujících strategií:
+* **Umístěte příkaz `debugger;`, kde chcete přerušit**: způsobí to, že dynamický skript zastaví provádění a spustí ladění ihned během vytváření.
+* **Načíst stránku a otevřít dynamický dokument v sadě Visual Studio**: budete muset otevřít dynamický soubor během ladění, nastavit zarážku a aktualizovat stránku, aby fungovala Tato metoda. V závislosti na tom, jestli používáte Chrome nebo Internet Explorer, najdete soubor pomocí jedné z následujících strategií:
 
-   Pro Chrome, přejděte na **Průzkumníka řešení > dokumenty skriptu > YourPageName**.
+   Pro Chrome použijte **Průzkumník řešení > dokumentů skriptů > YourPageName**.
 
     > [!NOTE]
-    > Pokud používáte Chrome, může se zobrazit zpráva **žádný zdroj není k dispozici mezi \<skript > značky**. To je v pořádku, stačí pokračovat v ladění.
+    > Pokud používáte Chrome, může se zobrazit zpráva **žádný zdroj není k dispozici mezi \<script > značek**. To je v pořádku, stačí pokračovat v ladění.
 
-   Internet Explorer, přejděte na **Průzkumníka řešení > dokumenty skriptu > Windows Internet Explorer > YourPageName**.
+   Pro Internet Explorer použijte **Průzkumník řešení > dokumentů skriptu > Windows Internet Explorer > YourPageName**.
 
-Další informace najdete v tématu [Client-side ladění projektů ASP.NET v prohlížeči Google Chrome](https://devblogs.microsoft.com/aspnet/client-side-debugging-of-asp-net-projects-in-google-chrome/).
+Další informace najdete v tématu [ladění projektů ASP.NET na straně klienta v Google Chrome](https://devblogs.microsoft.com/aspnet/client-side-debugging-of-asp-net-projects-in-google-chrome/).

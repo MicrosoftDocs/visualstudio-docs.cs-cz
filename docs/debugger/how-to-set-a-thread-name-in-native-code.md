@@ -1,5 +1,5 @@
 ---
-title: 'Postupy: Nastavení názvu vlákna v nativním kódu | Dokumentace Microsoftu'
+title: 'Postupy: nastavení názvu vlákna v nativním kódu | Microsoft Docs'
 ms.date: 12/17/2018
 ms.topic: conceptual
 dev_langs:
@@ -16,34 +16,34 @@ ms.author: mikejo
 manager: jillfra
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d37a028fb5af099484d81374e52cfd12af727f94
-ms.sourcegitcommit: 94b3a052fb1229c7e7f8804b09c1d403385c7630
+ms.openlocfilehash: a89dce28f33bef0ffdb13d6254b2ac6b86ac25db
+ms.sourcegitcommit: 8a96a65676fd7a2a03b0803d7eceae65f3fa142b
 ms.translationtype: MT
 ms.contentlocale: cs-CZ
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62847535"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72589026"
 ---
 # <a name="how-to-set-a-thread-name-in-native-code"></a>Postupy: Nastavení názvu vlákna v nativním kódu
-Pojmenování vlákna je možné v jakékoli edici sady Visual Studio. Pojmenování vláken je užitečné pro identifikaci vlákna podíl **vlákna** okno při ladění spuštěného procesu. S zřejmou názvem vláken může být také užitečné při ladění a dodatečně prostřednictvím kontroly výpisu při selhání a analýza výkonu zachycuje pomocí různých nástrojů.
+Pojmenování vlákna je možné v libovolné verzi sady Visual Studio. Pojmenovávání vláken je užitečné pro identifikaci podprocesů zájmu v okně **vlákna** při ladění spuštěného procesu. Rozpoznatelně pojmenovaná vlákna můžou být užitečná také při provádění ladění po porážce prostřednictvím kontroly výpisu stavu systému a při analýze zachycení výkonu pomocí různých nástrojů.
 
 ## <a name="ways-to-set-a-thread-name"></a>Způsoby nastavení názvu vlákna
 
-Existují dva způsoby, jak nastavení názvu vlákna. První je prostřednictvím [SetThreadDescription](https://docs.microsoft.com/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreaddescription) funkce. Druhou možností je vyvolání konkrétní výjimky, když je k procesu připojen ladicí program sady Visual Studio. Každý přístup má své výhody a upozornění.
+Existují dva způsoby, jak nastavit název vlákna. První je prostřednictvím funkce [SetThreadDescription](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreaddescription) . Druhý je vyvoláním určité výjimky, pokud je k procesu připojen ladicí program sady Visual Studio. Každý přístup má výhody a upozornění. Použití `SetThreadDescription` se podporuje od Windows 10, verze 1607 nebo Windows Server 2016.
 
-Je vhodné poznamenat, že _obě_ přístupů je použít společně, v případě potřeby, protože jsou mechanismy, které fungují nezávisle na sobě navzájem.
+Je potřeba poznamenat, že _oba_ přístupy je možné v případě potřeby použít společně, protože mechanismy, kterými pracují, jsou nezávisle na sobě.
 
-### <a name="set-a-thread-name-by-using-setthreaddescription"></a>Nastavení názvu vlákna s použitím `SetThreadDescription`
+### <a name="set-a-thread-name-by-using-setthreaddescription"></a>Nastavte název vlákna pomocí `SetThreadDescription`
 
-Výhody:
-* Názvy vláken jsou viditelné při ladění v sadě Visual Studio bez ohledu na to, zda byl připojen ladicí program k procesu v době, která je vyvolána SetThreadDescription.
-* Názvy vláken jsou viditelné při následné ladění načtením výpisu v sadě Visual Studio.
-* Názvy vláken jsou také viditelné při použití jiných nástrojů, jako [WinDbg](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugger-download-tools) ladicího programu a [Analyzátor výkonu Windows](https://docs.microsoft.com/windows-hardware/test/wpt/windows-performance-analyzer) Analyzátor výkonu.
+Výhodnější
+* Názvy vláken jsou viditelné při ladění v aplikaci Visual Studio bez ohledu na to, zda byl ladicí program připojen k procesu v době volání SetThreadDescription.
+* Po načtení výpisu stavu systému v aplikaci Visual Studio jsou názvy vláken viditelné při provádění ladění po porážce.
+* Názvy vláken jsou také viditelné při použití jiných nástrojů, jako je například ladicí program [WinDbg](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugger-download-tools) a analyzátor výkonu [Windows Performance Analyzer](https://docs.microsoft.com/windows-hardware/test/wpt/windows-performance-analyzer) .
 
-Upozornění:
-* Názvy vláken jsou viditelné pouze v sadě Visual Studio 2017 verze 15.6 a novějších verzích.
-* Pokud soubor výpisu následné chybovému ukončení ladění, názvy vláken viditelné pouze pokud selhání byl vytvořen v systému Windows 10 verze 1607, Windows Server 2016 nebo novější verze systému Windows.
+Upozornění
+* Názvy vláken jsou viditelné pouze v systému Visual Studio 2017 verze 15,6 a novějších verzích.
+* Při ladění po porážce soubor s výpisem stavu systému jsou názvy vláken viditelné pouze v případě, že byla chyba vytvořena ve Windows 10 verze 1607, Windows Server 2016 nebo novějších verzích Windows.
 
-*Příklad:*
+*Případě*
 
 ```C++
 #include <windows.h>
@@ -63,18 +63,18 @@ int main()
 
 ### <a name="set-a-thread-name-by-throwing-an-exception"></a>Nastavení názvu vlákna vyvoláním výjimky
 
-Dalším způsobem, jak nastavení názvu vlákna ve svém programu je pro komunikaci název požadovaného vlákno v ladicím programu sady Visual Studio pomocí vyvolání výjimky speciálně nakonfigurován.
+Dalším způsobem, jak nastavit název vlákna v programu, je sdělit název požadovaného vlákna ladicímu programu sady Visual Studio vyvoláním speciálně nakonfigurované výjimky.
 
-Výhody:
-* Pracuje se všemi verzemi sady Visual Studio.
+Výhodnější
+* Funguje ve všech verzích sady Visual Studio.
 
-Upozornění:
-* Funguje jenom v případě, že v době, kdy se používá metodu založenou na výjimku, je připojen ladicí program.
-* Názvy vláken nastavené pomocí této metody není k dispozici v výpisů paměti nebo nástroje pro analýzu výkonu.
+Upozornění
+* Funguje pouze v případě, že je ladicí program připojen v době, kdy je použita metoda založená na výjimce.
+* Názvy vláken nastavené pomocí této metody nebudou k dispozici ve výpisech nebo nástrojích pro analýzu výkonu.
 
-*Příklad:*
+*Případě*
 
-`SetThreadName` Funkce uvedené níže ukazuje tento přístup na základě výjimky. Mějte na paměti, že název vlákna budou automaticky kopírována do vlákna, tak, aby paměť pro `threadName` parametr, může se vydávat po dokončení `SetThreadName` dokončením volání.
+Níže uvedená funkce `SetThreadName` ukazuje tento přístup založený na výjimce. Všimněte si, že název vlákna bude automaticky zkopírován do vlákna, aby bylo možné uvolnit paměť pro parametr `threadName` po dokončení `SetThreadName` volání.
 
 ```C++
 //
